@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputDataConfig {
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public InputDataConfig withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -22,9 +23,13 @@ public class InputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryFeatures")
     public SupplementaryFeature[] supplementaryFeatures;
+
     public InputDataConfig withSupplementaryFeatures(SupplementaryFeature[] supplementaryFeatures) {
         this.supplementaryFeatures = supplementaryFeatures;
         return this;
     }
     
+    public InputDataConfig(@JsonProperty("DatasetGroupArn") String datasetGroupArn) {
+        this.datasetGroupArn = datasetGroupArn;
+  }
 }

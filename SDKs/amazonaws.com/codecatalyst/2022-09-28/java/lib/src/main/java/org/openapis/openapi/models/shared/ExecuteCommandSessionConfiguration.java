@@ -15,6 +15,7 @@ public class ExecuteCommandSessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public String[] arguments;
+
     public ExecuteCommandSessionConfiguration withArguments(String[] arguments) {
         this.arguments = arguments;
         return this;
@@ -22,9 +23,13 @@ public class ExecuteCommandSessionConfiguration {
     
     @JsonProperty("command")
     public String command;
+
     public ExecuteCommandSessionConfiguration withCommand(String command) {
         this.command = command;
         return this;
     }
     
+    public ExecuteCommandSessionConfiguration(@JsonProperty("command") String command) {
+        this.command = command;
+  }
 }

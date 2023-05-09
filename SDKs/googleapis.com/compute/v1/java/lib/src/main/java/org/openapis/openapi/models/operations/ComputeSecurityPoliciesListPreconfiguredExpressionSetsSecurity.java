@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurityOption1 option1;
+
     public ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurity withOption1(ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurityOption2 option2;
+
     public ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurity withOption2(ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurityOption3 option3;
+
     public ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurity withOption3(ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeSecurityPoliciesListPreconfiguredExpressionSetsSecurity(){}
 }

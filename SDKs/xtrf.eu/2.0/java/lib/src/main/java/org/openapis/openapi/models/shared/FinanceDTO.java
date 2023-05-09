@@ -15,6 +15,7 @@ public class FinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ROI")
     public Double roi;
+
     public FinanceDTO withRoi(Double roi) {
         this.roi = roi;
         return this;
@@ -23,6 +24,7 @@ public class FinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyId")
     public Long currencyId;
+
     public FinanceDTO withCurrencyId(Long currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -31,6 +33,7 @@ public class FinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("margin")
     public Double margin;
+
     public FinanceDTO withMargin(Double margin) {
         this.margin = margin;
         return this;
@@ -39,6 +42,7 @@ public class FinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payables")
     public ChargeDTO[] payables;
+
     public FinanceDTO withPayables(ChargeDTO[] payables) {
         this.payables = payables;
         return this;
@@ -47,6 +51,7 @@ public class FinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profit")
     public Double profit;
+
     public FinanceDTO withProfit(Double profit) {
         this.profit = profit;
         return this;
@@ -55,6 +60,7 @@ public class FinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receivables")
     public ChargeDTO[] receivables;
+
     public FinanceDTO withReceivables(ChargeDTO[] receivables) {
         this.receivables = receivables;
         return this;
@@ -63,6 +69,7 @@ public class FinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalAgreed")
     public Double totalAgreed;
+
     public FinanceDTO withTotalAgreed(Double totalAgreed) {
         this.totalAgreed = totalAgreed;
         return this;
@@ -71,9 +78,11 @@ public class FinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCost")
     public Double totalCost;
+
     public FinanceDTO withTotalCost(Double totalCost) {
         this.totalCost = totalCost;
         return this;
     }
     
+    public FinanceDTO(){}
 }

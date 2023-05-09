@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRecommendationFeedbackResponse {
@@ -12,6 +13,7 @@ public class DescribeRecommendationFeedbackResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeRecommendationFeedbackResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRecommendationFeedbackResponse {
     
     
     public String contentType;
+
     public DescribeRecommendationFeedbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRecommendationFeedbackResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRecommendationFeedbackResponse describeRecommendationFeedbackResponse;
+
     public DescribeRecommendationFeedbackResponse withDescribeRecommendationFeedbackResponse(org.openapis.openapi.models.shared.DescribeRecommendationFeedbackResponse describeRecommendationFeedbackResponse) {
         this.describeRecommendationFeedbackResponse = describeRecommendationFeedbackResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRecommendationFeedbackResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRecommendationFeedbackResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRecommendationFeedbackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRecommendationFeedbackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeRecommendationFeedbackResponse {
     
     
     public Integer statusCode;
+
     public DescribeRecommendationFeedbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRecommendationFeedbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRecommendationFeedbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeRecommendationFeedbackResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRecommendationFeedbackResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeRecommendationFeedbackResponse {
      */
     
     public Object validationException;
+
     public DescribeRecommendationFeedbackResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeRecommendationFeedbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

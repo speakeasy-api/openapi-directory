@@ -12,6 +12,7 @@ public class CompanySettingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableVOCRReporting")
     public Boolean enableVOCRReporting;
+
     public CompanySettingDto withEnableVOCRReporting(Boolean enableVOCRReporting) {
         this.enableVOCRReporting = enableVOCRReporting;
         return this;
@@ -20,6 +21,7 @@ public class CompanySettingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CompanySettingDto withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class CompanySettingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAllocations")
     public Boolean useAllocations;
+
     public CompanySettingDto withUseAllocations(Boolean useAllocations) {
         this.useAllocations = useAllocations;
         return this;
@@ -36,6 +39,7 @@ public class CompanySettingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CompanySettingDto withValue(String value) {
         this.value = value;
         return this;
@@ -44,9 +48,11 @@ public class CompanySettingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vocrSettingValue")
     public Boolean vocrSettingValue;
+
     public CompanySettingDto withVocrSettingValue(Boolean vocrSettingValue) {
         this.vocrSettingValue = vocrSettingValue;
         return this;
     }
     
+    public CompanySettingDto(){}
 }

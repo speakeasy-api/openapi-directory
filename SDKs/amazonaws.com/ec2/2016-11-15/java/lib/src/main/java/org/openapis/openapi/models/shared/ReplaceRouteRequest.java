@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReplaceRouteRequest {
     
     public String carrierGatewayId;
+
     public ReplaceRouteRequest withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -16,6 +17,7 @@ public class ReplaceRouteRequest {
     
     
     public String coreNetworkArn;
+
     public ReplaceRouteRequest withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -23,6 +25,7 @@ public class ReplaceRouteRequest {
     
     
     public String destinationCidrBlock;
+
     public ReplaceRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -30,6 +33,7 @@ public class ReplaceRouteRequest {
     
     
     public String destinationIpv6CidrBlock;
+
     public ReplaceRouteRequest withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -37,6 +41,7 @@ public class ReplaceRouteRequest {
     
     
     public String destinationPrefixListId;
+
     public ReplaceRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -44,6 +49,7 @@ public class ReplaceRouteRequest {
     
     
     public Boolean dryRun;
+
     public ReplaceRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -51,6 +57,7 @@ public class ReplaceRouteRequest {
     
     
     public String egressOnlyInternetGatewayId;
+
     public ReplaceRouteRequest withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -58,6 +65,7 @@ public class ReplaceRouteRequest {
     
     
     public String gatewayId;
+
     public ReplaceRouteRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -65,6 +73,7 @@ public class ReplaceRouteRequest {
     
     
     public String instanceId;
+
     public ReplaceRouteRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -72,6 +81,7 @@ public class ReplaceRouteRequest {
     
     
     public String localGatewayId;
+
     public ReplaceRouteRequest withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -79,6 +89,7 @@ public class ReplaceRouteRequest {
     
     
     public Boolean localTarget;
+
     public ReplaceRouteRequest withLocalTarget(Boolean localTarget) {
         this.localTarget = localTarget;
         return this;
@@ -86,6 +97,7 @@ public class ReplaceRouteRequest {
     
     
     public String natGatewayId;
+
     public ReplaceRouteRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -93,6 +105,7 @@ public class ReplaceRouteRequest {
     
     
     public String networkInterfaceId;
+
     public ReplaceRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -100,6 +113,7 @@ public class ReplaceRouteRequest {
     
     
     public String routeTableId;
+
     public ReplaceRouteRequest withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -107,6 +121,7 @@ public class ReplaceRouteRequest {
     
     
     public String transitGatewayId;
+
     public ReplaceRouteRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -114,6 +129,7 @@ public class ReplaceRouteRequest {
     
     
     public String vpcEndpointId;
+
     public ReplaceRouteRequest withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -121,9 +137,13 @@ public class ReplaceRouteRequest {
     
     
     public String vpcPeeringConnectionId;
+
     public ReplaceRouteRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public ReplaceRouteRequest(@JsonProperty("RouteTableId") String routeTableId) {
+        this.routeTableId = routeTableId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateChannelRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateChannelRequestBody requestBody;
+
     public UpdateChannelRequest withRequestBody(UpdateChannelRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateChannelRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateChannelRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateChannelRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateChannelRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateChannelRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateChannelRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateChannelRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,9 +77,14 @@ public class UpdateChannelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelName")
     public String channelName;
+
     public UpdateChannelRequest withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
     }
     
+    public UpdateChannelRequest(@JsonProperty("RequestBody") UpdateChannelRequestBody requestBody, @JsonProperty("channelName") String channelName) {
+        this.requestBody = requestBody;
+        this.channelName = channelName;
+  }
 }

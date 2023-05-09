@@ -15,6 +15,7 @@ public class ScoreDetail {
      */
     @JsonProperty("result")
     public ScoreDetailResultEnum result;
+
     public ScoreDetail withResult(ScoreDetailResultEnum result) {
         this.result = result;
         return this;
@@ -25,6 +26,7 @@ public class ScoreDetail {
      */
     @JsonProperty("score")
     public Float score;
+
     public ScoreDetail withScore(Float score) {
         this.score = score;
         return this;
@@ -35,9 +37,15 @@ public class ScoreDetail {
      */
     @JsonProperty("severity")
     public ScoreDetailSeverityEnum severity;
+
     public ScoreDetail withSeverity(ScoreDetailSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public ScoreDetail(@JsonProperty("result") ScoreDetailResultEnum result, @JsonProperty("score") Float score, @JsonProperty("severity") ScoreDetailSeverityEnum severity) {
+        this.result = result;
+        this.score = score;
+        this.severity = severity;
+  }
 }

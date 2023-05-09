@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadlineSecondsTime")
     public String deadlineSecondsTime;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput withDeadlineSecondsTime(String deadlineSecondsTime) {
         this.deadlineSecondsTime = deadlineSecondsTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputParameters")
     public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> inputParameters;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput withInputParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationVersion")
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput integrationVersion;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput withIntegrationVersion(GoogleCloudIntegrationsV1alphaIntegrationVersionInput integrationVersion) {
         this.integrationVersion = integrationVersion;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmFrontendsEventbusProtoEventParameters parameters;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput withParameters(EnterpriseCrmFrontendsEventbusProtoEventParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testMode")
     public Boolean testMode;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaTestIntegrationsRequestInput(){}
 }

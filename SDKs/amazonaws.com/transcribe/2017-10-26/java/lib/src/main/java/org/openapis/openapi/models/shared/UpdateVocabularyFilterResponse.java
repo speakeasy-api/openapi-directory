@@ -20,6 +20,7 @@ public class UpdateVocabularyFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public UpdateVocabularyFilterResponse withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -30,6 +31,7 @@ public class UpdateVocabularyFilterResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public UpdateVocabularyFilterResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -38,9 +40,11 @@ public class UpdateVocabularyFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFilterName")
     public String vocabularyFilterName;
+
     public UpdateVocabularyFilterResponse withVocabularyFilterName(String vocabularyFilterName) {
         this.vocabularyFilterName = vocabularyFilterName;
         return this;
     }
     
+    public UpdateVocabularyFilterResponse(){}
 }

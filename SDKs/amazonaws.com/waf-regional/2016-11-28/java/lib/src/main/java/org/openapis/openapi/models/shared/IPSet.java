@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IPSet {
     @JsonProperty("IPSetDescriptors")
     public IPSetDescriptor[] ipSetDescriptors;
+
     public IPSet withIPSetDescriptors(IPSetDescriptor[] ipSetDescriptors) {
         this.ipSetDescriptors = ipSetDescriptors;
         return this;
@@ -21,6 +22,7 @@ public class IPSet {
     
     @JsonProperty("IPSetId")
     public String ipSetId;
+
     public IPSet withIPSetId(String ipSetId) {
         this.ipSetId = ipSetId;
         return this;
@@ -29,9 +31,14 @@ public class IPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public IPSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IPSet(@JsonProperty("IPSetDescriptors") IPSetDescriptor[] ipSetDescriptors, @JsonProperty("IPSetId") String ipSetId) {
+        this.ipSetDescriptors = ipSetDescriptors;
+        this.ipSetId = ipSetId;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3DtmfInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digits")
     public String digits;
+
     public GoogleCloudDialogflowCxV3DtmfInput withDigits(String digits) {
         this.digits = digits;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3DtmfInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishDigit")
     public String finishDigit;
+
     public GoogleCloudDialogflowCxV3DtmfInput withFinishDigit(String finishDigit) {
         this.finishDigit = finishDigit;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3DtmfInput(){}
 }

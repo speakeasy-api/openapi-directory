@@ -12,9 +12,11 @@ public class PublicListOfValuesResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetPublicListOfValuesLink self;
+
     public PublicListOfValuesResponseLinks withSelf(LinksGetPublicListOfValuesLink self) {
         this.self = self;
         return this;
     }
     
+    public PublicListOfValuesResponseLinks(){}
 }

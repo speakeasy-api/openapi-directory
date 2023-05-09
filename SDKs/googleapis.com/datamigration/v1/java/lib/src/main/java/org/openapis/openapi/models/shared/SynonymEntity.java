@@ -18,6 +18,7 @@ public class SynonymEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public SynonymEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -29,6 +30,7 @@ public class SynonymEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceEntity")
     public String sourceEntity;
+
     public SynonymEntity withSourceEntity(String sourceEntity) {
         this.sourceEntity = sourceEntity;
         return this;
@@ -40,9 +42,11 @@ public class SynonymEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public SynonymEntitySourceTypeEnum sourceType;
+
     public SynonymEntity withSourceType(SynonymEntitySourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public SynonymEntity(){}
 }

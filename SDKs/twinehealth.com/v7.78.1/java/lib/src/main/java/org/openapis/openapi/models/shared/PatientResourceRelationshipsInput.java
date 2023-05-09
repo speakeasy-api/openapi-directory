@@ -12,6 +12,7 @@ public class PatientResourceRelationshipsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coaches")
     public PatientResourceRelationshipsCoachesInput coaches;
+
     public PatientResourceRelationshipsInput withCoaches(PatientResourceRelationshipsCoachesInput coaches) {
         this.coaches = coaches;
         return this;
@@ -19,9 +20,13 @@ public class PatientResourceRelationshipsInput {
     
     @JsonProperty("groups")
     public PatientResourceRelationshipsGroups groups;
+
     public PatientResourceRelationshipsInput withGroups(PatientResourceRelationshipsGroups groups) {
         this.groups = groups;
         return this;
     }
     
+    public PatientResourceRelationshipsInput(@JsonProperty("groups") PatientResourceRelationshipsGroups groups) {
+        this.groups = groups;
+  }
 }

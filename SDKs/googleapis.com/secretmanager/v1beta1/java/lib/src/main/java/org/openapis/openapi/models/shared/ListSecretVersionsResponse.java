@@ -18,6 +18,7 @@ public class ListSecretVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSecretVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListSecretVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListSecretVersionsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
@@ -40,9 +42,11 @@ public class ListSecretVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public SecretVersion[] versions;
+
     public ListSecretVersionsResponse withVersions(SecretVersion[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListSecretVersionsResponse(){}
 }

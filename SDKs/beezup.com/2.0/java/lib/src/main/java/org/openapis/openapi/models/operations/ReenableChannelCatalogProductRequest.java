@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReenableChannelCatalogProductRequest {
@@ -12,6 +13,7 @@ public class ReenableChannelCatalogProductRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public ReenableChannelCatalogProductRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -22,9 +24,14 @@ public class ReenableChannelCatalogProductRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public ReenableChannelCatalogProductRequest withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ReenableChannelCatalogProductRequest(@JsonProperty("channelCatalogId") String channelCatalogId, @JsonProperty("productId") String productId) {
+        this.channelCatalogId = channelCatalogId;
+        this.productId = productId;
+  }
 }

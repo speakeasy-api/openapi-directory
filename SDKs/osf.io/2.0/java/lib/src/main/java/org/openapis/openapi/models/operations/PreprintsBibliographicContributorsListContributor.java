@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PreprintsBibliographicContributorsListContributor {
     /**
@@ -12,6 +12,7 @@ public class PreprintsBibliographicContributorsListContributor {
      */
     
     public PreprintsBibliographicContributorsListContributorAttributes attributes;
+
     public PreprintsBibliographicContributorsListContributor withAttributes(PreprintsBibliographicContributorsListContributorAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class PreprintsBibliographicContributorsListContributor {
      */
     
     public String id;
+
     public PreprintsBibliographicContributorsListContributor withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PreprintsBibliographicContributorsListContributor {
      */
     
     public PreprintsBibliographicContributorsListContributorLinks links;
+
     public PreprintsBibliographicContributorsListContributor withLinks(PreprintsBibliographicContributorsListContributorLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class PreprintsBibliographicContributorsListContributor {
      */
     
     public PreprintsBibliographicContributorsListContributorRelationships relationships;
+
     public PreprintsBibliographicContributorsListContributor withRelationships(PreprintsBibliographicContributorsListContributorRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,14 @@ public class PreprintsBibliographicContributorsListContributor {
      */
     
     public String type;
+
     public PreprintsBibliographicContributorsListContributor withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PreprintsBibliographicContributorsListContributor(@JsonProperty("relationships") PreprintsBibliographicContributorsListContributorRelationships relationships, @JsonProperty("type") String type) {
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

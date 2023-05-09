@@ -12,6 +12,7 @@ public class CategoryItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badgeUrl")
     public String badgeUrl;
+
     public CategoryItems withBadgeUrl(String badgeUrl) {
         this.badgeUrl = badgeUrl;
         return this;
@@ -20,6 +21,7 @@ public class CategoryItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public CategoryItems withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -28,9 +30,11 @@ public class CategoryItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CategoryItems withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CategoryItems(){}
 }

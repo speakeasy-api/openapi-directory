@@ -12,6 +12,7 @@ public class CreateWorkspaceRequestBodyWorkspaceEnvironments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateWorkspaceRequestBodyWorkspaceEnvironments withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class CreateWorkspaceRequestBodyWorkspaceEnvironments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorkspaceRequestBodyWorkspaceEnvironments withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class CreateWorkspaceRequestBodyWorkspaceEnvironments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public CreateWorkspaceRequestBodyWorkspaceEnvironments withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public CreateWorkspaceRequestBodyWorkspaceEnvironments(){}
 }

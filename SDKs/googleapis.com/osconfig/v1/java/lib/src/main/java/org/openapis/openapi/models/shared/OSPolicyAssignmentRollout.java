@@ -18,6 +18,7 @@ public class OSPolicyAssignmentRollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruptionBudget")
     public FixedOrPercent disruptionBudget;
+
     public OSPolicyAssignmentRollout withDisruptionBudget(FixedOrPercent disruptionBudget) {
         this.disruptionBudget = disruptionBudget;
         return this;
@@ -29,9 +30,11 @@ public class OSPolicyAssignmentRollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minWaitDuration")
     public String minWaitDuration;
+
     public OSPolicyAssignmentRollout withMinWaitDuration(String minWaitDuration) {
         this.minWaitDuration = minWaitDuration;
         return this;
     }
     
+    public OSPolicyAssignmentRollout(){}
 }

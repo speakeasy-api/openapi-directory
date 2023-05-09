@@ -23,6 +23,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automation")
     public AutomationEntityAutomationEnum automation;
+
     public AutomationEntity withAutomation(AutomationEntityAutomationEnum automation) {
         this.automation = automation;
         return this;
@@ -34,6 +35,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public AutomationEntity withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -45,6 +47,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AutomationEntity withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +59,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_replace_from")
     public String destinationReplaceFrom;
+
     public AutomationEntity withDestinationReplaceFrom(String destinationReplaceFrom) {
         this.destinationReplaceFrom = destinationReplaceFrom;
         return this;
@@ -67,6 +71,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_replace_to")
     public String destinationReplaceTo;
+
     public AutomationEntity withDestinationReplaceTo(String destinationReplaceTo) {
         this.destinationReplaceTo = destinationReplaceTo;
         return this;
@@ -78,6 +83,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public String[] destinations;
+
     public AutomationEntity withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -89,6 +95,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public AutomationEntity withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -100,6 +107,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     public Integer[] groupIds;
+
     public AutomationEntity withGroupIds(Integer[] groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -111,6 +119,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public AutomationEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -122,6 +131,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public String interval;
+
     public AutomationEntity withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -135,6 +145,7 @@ public class AutomationEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_modified_at")
     public OffsetDateTime lastModifiedAt;
+
     public AutomationEntity withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -146,6 +157,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AutomationEntity withName(String name) {
         this.name = name;
         return this;
@@ -157,8 +169,21 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public AutomationEntity withPath(String path) {
         this.path = path;
+        return this;
+    }
+    
+    /**
+     * If trigger type is `daily`, this specifies a day number to run in one of the supported intervals: `week`, `month`, `quarter`, `year`.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("recurring_day")
+    public Integer recurringDay;
+
+    public AutomationEntity withRecurringDay(Integer recurringDay) {
+        this.recurringDay = recurringDay;
         return this;
     }
     
@@ -168,6 +193,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public java.util.Map<String, Object> schedule;
+
     public AutomationEntity withSchedule(java.util.Map<String, Object> schedule) {
         this.schedule = schedule;
         return this;
@@ -179,6 +205,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public AutomationEntity withSource(String source) {
         this.source = source;
         return this;
@@ -190,6 +217,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync_ids")
     public Integer[] syncIds;
+
     public AutomationEntity withSyncIds(Integer[] syncIds) {
         this.syncIds = syncIds;
         return this;
@@ -201,6 +229,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public AutomationEntityTriggerEnum trigger;
+
     public AutomationEntity withTrigger(AutomationEntityTriggerEnum trigger) {
         this.trigger = trigger;
         return this;
@@ -212,6 +241,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger_actions")
     public String[] triggerActions;
+
     public AutomationEntity withTriggerActions(String[] triggerActions) {
         this.triggerActions = triggerActions;
         return this;
@@ -223,6 +253,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Integer userId;
+
     public AutomationEntity withUserId(Integer userId) {
         this.userId = userId;
         return this;
@@ -234,6 +265,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
     public Integer[] userIds;
+
     public AutomationEntity withUserIds(Integer[] userIds) {
         this.userIds = userIds;
         return this;
@@ -245,6 +277,7 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public AutomationEntity withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
@@ -256,9 +289,11 @@ public class AutomationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_url")
     public String webhookUrl;
+
     public AutomationEntity withWebhookUrl(String webhookUrl) {
         this.webhookUrl = webhookUrl;
         return this;
     }
     
+    public AutomationEntity(){}
 }

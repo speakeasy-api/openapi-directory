@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDriversIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Driver driver;
+
     public PutDriversIdRequest withDriver(org.openapis.openapi.models.shared.Driver driver) {
         this.driver = driver;
         return this;
@@ -16,9 +18,14 @@ public class PutDriversIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutDriversIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutDriversIdRequest(@JsonProperty("Driver") org.openapis.openapi.models.shared.Driver driver, @JsonProperty("id") Long id) {
+        this.driver = driver;
+        this.id = id;
+  }
 }

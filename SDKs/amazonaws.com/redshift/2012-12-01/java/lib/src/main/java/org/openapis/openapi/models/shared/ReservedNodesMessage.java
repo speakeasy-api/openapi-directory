@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservedNodesMessage {
     
     public String marker;
+
     public ReservedNodesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class ReservedNodesMessage {
     
     
     public ReservedNodeList[] reservedNodes;
+
     public ReservedNodesMessage withReservedNodes(ReservedNodeList[] reservedNodes) {
         this.reservedNodes = reservedNodes;
         return this;
     }
     
+    public ReservedNodesMessage(){}
 }

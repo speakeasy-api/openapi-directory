@@ -21,6 +21,7 @@ public class HyperParameterTrainingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public HyperParameterTrainingJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class HyperParameterTrainingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public HyperParameterTrainingJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -37,6 +39,7 @@ public class HyperParameterTrainingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalHyperParameterTuningJobObjectiveMetric")
     public FinalHyperParameterTuningJobObjectiveMetric finalHyperParameterTuningJobObjectiveMetric;
+
     public HyperParameterTrainingJobSummary withFinalHyperParameterTuningJobObjectiveMetric(FinalHyperParameterTuningJobObjectiveMetric finalHyperParameterTuningJobObjectiveMetric) {
         this.finalHyperParameterTuningJobObjectiveMetric = finalHyperParameterTuningJobObjectiveMetric;
         return this;
@@ -45,6 +48,7 @@ public class HyperParameterTrainingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectiveStatus")
     public ObjectiveStatusEnum objectiveStatus;
+
     public HyperParameterTrainingJobSummary withObjectiveStatus(ObjectiveStatusEnum objectiveStatus) {
         this.objectiveStatus = objectiveStatus;
         return this;
@@ -55,6 +59,7 @@ public class HyperParameterTrainingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingEndTime")
     public OffsetDateTime trainingEndTime;
+
     public HyperParameterTrainingJobSummary withTrainingEndTime(OffsetDateTime trainingEndTime) {
         this.trainingEndTime = trainingEndTime;
         return this;
@@ -62,6 +67,7 @@ public class HyperParameterTrainingJobSummary {
     
     @JsonProperty("TrainingJobArn")
     public String trainingJobArn;
+
     public HyperParameterTrainingJobSummary withTrainingJobArn(String trainingJobArn) {
         this.trainingJobArn = trainingJobArn;
         return this;
@@ -70,6 +76,7 @@ public class HyperParameterTrainingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobDefinitionName")
     public String trainingJobDefinitionName;
+
     public HyperParameterTrainingJobSummary withTrainingJobDefinitionName(String trainingJobDefinitionName) {
         this.trainingJobDefinitionName = trainingJobDefinitionName;
         return this;
@@ -77,6 +84,7 @@ public class HyperParameterTrainingJobSummary {
     
     @JsonProperty("TrainingJobName")
     public String trainingJobName;
+
     public HyperParameterTrainingJobSummary withTrainingJobName(String trainingJobName) {
         this.trainingJobName = trainingJobName;
         return this;
@@ -84,6 +92,7 @@ public class HyperParameterTrainingJobSummary {
     
     @JsonProperty("TrainingJobStatus")
     public TrainingJobStatusEnum trainingJobStatus;
+
     public HyperParameterTrainingJobSummary withTrainingJobStatus(TrainingJobStatusEnum trainingJobStatus) {
         this.trainingJobStatus = trainingJobStatus;
         return this;
@@ -94,6 +103,7 @@ public class HyperParameterTrainingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingStartTime")
     public OffsetDateTime trainingStartTime;
+
     public HyperParameterTrainingJobSummary withTrainingStartTime(OffsetDateTime trainingStartTime) {
         this.trainingStartTime = trainingStartTime;
         return this;
@@ -101,6 +111,7 @@ public class HyperParameterTrainingJobSummary {
     
     @JsonProperty("TunedHyperParameters")
     public java.util.Map<String, String> tunedHyperParameters;
+
     public HyperParameterTrainingJobSummary withTunedHyperParameters(java.util.Map<String, String> tunedHyperParameters) {
         this.tunedHyperParameters = tunedHyperParameters;
         return this;
@@ -109,9 +120,17 @@ public class HyperParameterTrainingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TuningJobName")
     public String tuningJobName;
+
     public HyperParameterTrainingJobSummary withTuningJobName(String tuningJobName) {
         this.tuningJobName = tuningJobName;
         return this;
     }
     
+    public HyperParameterTrainingJobSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("TrainingJobArn") String trainingJobArn, @JsonProperty("TrainingJobName") String trainingJobName, @JsonProperty("TrainingJobStatus") TrainingJobStatusEnum trainingJobStatus, @JsonProperty("TunedHyperParameters") java.util.Map<String, String> tunedHyperParameters) {
+        this.creationTime = creationTime;
+        this.trainingJobArn = trainingJobArn;
+        this.trainingJobName = trainingJobName;
+        this.trainingJobStatus = trainingJobStatus;
+        this.tunedHyperParameters = tunedHyperParameters;
+  }
 }

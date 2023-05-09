@@ -14,6 +14,7 @@ public class Address {
      */
     @JsonProperty("administrativeAreaLevel1")
     public String administrativeAreaLevel1;
+
     public Address withAdministrativeAreaLevel1(String administrativeAreaLevel1) {
         this.administrativeAreaLevel1 = administrativeAreaLevel1;
         return this;
@@ -25,6 +26,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Address withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -35,6 +37,7 @@ public class Address {
      */
     @JsonProperty("countryName")
     public String countryName;
+
     public Address withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -45,6 +48,7 @@ public class Address {
      */
     @JsonProperty("locality")
     public String locality;
+
     public Address withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -55,6 +59,7 @@ public class Address {
      */
     @JsonProperty("localityAreaLevel1")
     public String localityAreaLevel1;
+
     public Address withLocalityAreaLevel1(String localityAreaLevel1) {
         this.localityAreaLevel1 = localityAreaLevel1;
         return this;
@@ -65,6 +70,7 @@ public class Address {
      */
     @JsonProperty("postalCode")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -75,6 +81,7 @@ public class Address {
      */
     @JsonProperty("route")
     public String route;
+
     public Address withRoute(String route) {
         this.route = route;
         return this;
@@ -85,9 +92,19 @@ public class Address {
      */
     @JsonProperty("streetNumber")
     public String streetNumber;
+
     public Address withStreetNumber(String streetNumber) {
         this.streetNumber = streetNumber;
         return this;
     }
     
+    public Address(@JsonProperty("administrativeAreaLevel1") String administrativeAreaLevel1, @JsonProperty("countryName") String countryName, @JsonProperty("locality") String locality, @JsonProperty("localityAreaLevel1") String localityAreaLevel1, @JsonProperty("postalCode") String postalCode, @JsonProperty("route") String route, @JsonProperty("streetNumber") String streetNumber) {
+        this.administrativeAreaLevel1 = administrativeAreaLevel1;
+        this.countryName = countryName;
+        this.locality = locality;
+        this.localityAreaLevel1 = localityAreaLevel1;
+        this.postalCode = postalCode;
+        this.route = route;
+        this.streetNumber = streetNumber;
+  }
 }

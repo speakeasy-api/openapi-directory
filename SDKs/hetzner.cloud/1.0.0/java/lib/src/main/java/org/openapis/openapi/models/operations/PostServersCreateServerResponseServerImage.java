@@ -14,6 +14,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("bound_to")
     public Long boundTo;
+
     public PostServersCreateServerResponseServerImage withBoundTo(Long boundTo) {
         this.boundTo = boundTo;
         return this;
@@ -24,6 +25,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("created")
     public String created;
+
     public PostServersCreateServerResponseServerImage withCreated(String created) {
         this.created = created;
         return this;
@@ -34,6 +36,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("created_from")
     public PostServersCreateServerResponseServerImageCreatedFrom createdFrom;
+
     public PostServersCreateServerResponseServerImage withCreatedFrom(PostServersCreateServerResponseServerImageCreatedFrom createdFrom) {
         this.createdFrom = createdFrom;
         return this;
@@ -44,6 +47,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("deleted")
     public String deleted;
+
     public PostServersCreateServerResponseServerImage withDeleted(String deleted) {
         this.deleted = deleted;
         return this;
@@ -54,6 +58,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public PostServersCreateServerResponseServerImage withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -64,6 +69,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("description")
     public String description;
+
     public PostServersCreateServerResponseServerImage withDescription(String description) {
         this.description = description;
         return this;
@@ -74,6 +80,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("disk_size")
     public Double diskSize;
+
     public PostServersCreateServerResponseServerImage withDiskSize(Double diskSize) {
         this.diskSize = diskSize;
         return this;
@@ -84,6 +91,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersCreateServerResponseServerImage withId(Long id) {
         this.id = id;
         return this;
@@ -94,6 +102,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("image_size")
     public Double imageSize;
+
     public PostServersCreateServerResponseServerImage withImageSize(Double imageSize) {
         this.imageSize = imageSize;
         return this;
@@ -104,6 +113,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PostServersCreateServerResponseServerImage withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -114,6 +124,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("name")
     public String name;
+
     public PostServersCreateServerResponseServerImage withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +135,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("os_flavor")
     public PostServersCreateServerResponseServerImageOsFlavorEnum osFlavor;
+
     public PostServersCreateServerResponseServerImage withOsFlavor(PostServersCreateServerResponseServerImageOsFlavorEnum osFlavor) {
         this.osFlavor = osFlavor;
         return this;
@@ -134,6 +146,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("os_version")
     public String osVersion;
+
     public PostServersCreateServerResponseServerImage withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -144,6 +157,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("protection")
     public PostServersCreateServerResponseServerImageProtection protection;
+
     public PostServersCreateServerResponseServerImage withProtection(PostServersCreateServerResponseServerImageProtection protection) {
         this.protection = protection;
         return this;
@@ -155,6 +169,7 @@ public class PostServersCreateServerResponseServerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rapid_deploy")
     public Boolean rapidDeploy;
+
     public PostServersCreateServerResponseServerImage withRapidDeploy(Boolean rapidDeploy) {
         this.rapidDeploy = rapidDeploy;
         return this;
@@ -165,6 +180,7 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("status")
     public PostServersCreateServerResponseServerImageStatusEnum status;
+
     public PostServersCreateServerResponseServerImage withStatus(PostServersCreateServerResponseServerImageStatusEnum status) {
         this.status = status;
         return this;
@@ -175,9 +191,28 @@ public class PostServersCreateServerResponseServerImage {
      */
     @JsonProperty("type")
     public PostServersCreateServerResponseServerImageTypeEnum type;
+
     public PostServersCreateServerResponseServerImage withType(PostServersCreateServerResponseServerImageTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostServersCreateServerResponseServerImage(@JsonProperty("bound_to") Long boundTo, @JsonProperty("created") String created, @JsonProperty("created_from") PostServersCreateServerResponseServerImageCreatedFrom createdFrom, @JsonProperty("deleted") String deleted, @JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("disk_size") Double diskSize, @JsonProperty("id") Long id, @JsonProperty("image_size") Double imageSize, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("os_flavor") PostServersCreateServerResponseServerImageOsFlavorEnum osFlavor, @JsonProperty("os_version") String osVersion, @JsonProperty("protection") PostServersCreateServerResponseServerImageProtection protection, @JsonProperty("status") PostServersCreateServerResponseServerImageStatusEnum status, @JsonProperty("type") PostServersCreateServerResponseServerImageTypeEnum type) {
+        this.boundTo = boundTo;
+        this.created = created;
+        this.createdFrom = createdFrom;
+        this.deleted = deleted;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.diskSize = diskSize;
+        this.id = id;
+        this.imageSize = imageSize;
+        this.labels = labels;
+        this.name = name;
+        this.osFlavor = osFlavor;
+        this.osVersion = osVersion;
+        this.protection = protection;
+        this.status = status;
+        this.type = type;
+  }
 }

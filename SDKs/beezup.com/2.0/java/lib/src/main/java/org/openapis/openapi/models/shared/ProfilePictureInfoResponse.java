@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProfilePictureInfoResponse {
     @JsonProperty("links")
     public ProfilePictureInfoResponseLinks links;
+
     public ProfilePictureInfoResponse withLinks(ProfilePictureInfoResponseLinks links) {
         this.links = links;
         return this;
@@ -19,9 +20,14 @@ public class ProfilePictureInfoResponse {
     
     @JsonProperty("profilePictureInfo")
     public ProfilePictureInfoWithDefault profilePictureInfo;
+
     public ProfilePictureInfoResponse withProfilePictureInfo(ProfilePictureInfoWithDefault profilePictureInfo) {
         this.profilePictureInfo = profilePictureInfo;
         return this;
     }
     
+    public ProfilePictureInfoResponse(@JsonProperty("links") ProfilePictureInfoResponseLinks links, @JsonProperty("profilePictureInfo") ProfilePictureInfoWithDefault profilePictureInfo) {
+        this.links = links;
+        this.profilePictureInfo = profilePictureInfo;
+  }
 }

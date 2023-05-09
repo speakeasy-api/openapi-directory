@@ -12,6 +12,7 @@ public class ContactsResponsePagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public ContactsResponsePagination withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class ContactsResponsePagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public ContactsResponsePagination withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -28,9 +30,11 @@ public class ContactsResponsePagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public ContactsResponsePagination withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ContactsResponsePagination(){}
 }

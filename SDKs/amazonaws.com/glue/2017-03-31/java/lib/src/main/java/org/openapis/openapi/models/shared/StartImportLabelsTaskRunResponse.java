@@ -15,9 +15,11 @@ public class StartImportLabelsTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRunId")
     public String taskRunId;
+
     public StartImportLabelsTaskRunResponse withTaskRunId(String taskRunId) {
         this.taskRunId = taskRunId;
         return this;
     }
     
+    public StartImportLabelsTaskRunResponse(){}
 }

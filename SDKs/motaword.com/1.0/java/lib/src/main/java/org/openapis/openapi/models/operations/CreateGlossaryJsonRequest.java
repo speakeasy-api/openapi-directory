@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGlossaryJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GlossaryUploadRequest glossaryUploadRequest;
+
     public CreateGlossaryJsonRequest withGlossaryUploadRequest(org.openapis.openapi.models.shared.GlossaryUploadRequest glossaryUploadRequest) {
         this.glossaryUploadRequest = glossaryUploadRequest;
         return this;
@@ -19,9 +21,13 @@ public class CreateGlossaryJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public CreateGlossaryJsonRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreateGlossaryJsonRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

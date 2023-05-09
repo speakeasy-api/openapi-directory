@@ -52,12 +52,10 @@ public class TransactionAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionAccountsIdResponse res = new org.openapis.openapi.models.operations.GetTransactionAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionAccountsIdResponse res = new org.openapis.openapi.models.operations.GetTransactionAccountsIdResponse(contentType, httpRes.statusCode()) {{
             transactionAccount = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,12 +98,10 @@ public class TransactionAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdTransactionAccountsResponse res = new org.openapis.openapi.models.operations.GetUsersIdTransactionAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdTransactionAccountsResponse res = new org.openapis.openapi.models.operations.GetUsersIdTransactionAccountsResponse(contentType, httpRes.statusCode()) {{
             transactionAccounts = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,12 +146,10 @@ public class TransactionAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutTransactionAccountsIdResponse res = new org.openapis.openapi.models.operations.PutTransactionAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.PutTransactionAccountsIdResponse res = new org.openapis.openapi.models.operations.PutTransactionAccountsIdResponse(contentType, httpRes.statusCode()) {{
             transactionAccount = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

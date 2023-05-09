@@ -15,6 +15,7 @@ public class ListOperationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageMarker")
     public String nextPageMarker;
+
     public ListOperationsResponse withNextPageMarker(String nextPageMarker) {
         this.nextPageMarker = nextPageMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListOperationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operations")
     public OperationSummary[] operations;
+
     public ListOperationsResponse withOperations(OperationSummary[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public ListOperationsResponse(){}
 }

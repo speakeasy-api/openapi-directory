@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetOperationDetailRequest {
     @JsonProperty("OperationId")
     public String operationId;
+
     public GetOperationDetailRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public GetOperationDetailRequest(@JsonProperty("OperationId") String operationId) {
+        this.operationId = operationId;
+  }
 }

@@ -18,9 +18,11 @@ public class DailyResourceUsageAggregationCPU {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationPercentage")
     public DailyResourceUsageAggregationStats utilizationPercentage;
+
     public DailyResourceUsageAggregationCPU withUtilizationPercentage(DailyResourceUsageAggregationStats utilizationPercentage) {
         this.utilizationPercentage = utilizationPercentage;
         return this;
     }
     
+    public DailyResourceUsageAggregationCPU(){}
 }

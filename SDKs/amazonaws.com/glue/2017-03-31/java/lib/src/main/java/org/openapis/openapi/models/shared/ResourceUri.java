@@ -15,6 +15,7 @@ public class ResourceUri {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public ResourceUri withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -23,9 +24,11 @@ public class ResourceUri {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Uri")
     public String uri;
+
     public ResourceUri withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ResourceUri(){}
 }

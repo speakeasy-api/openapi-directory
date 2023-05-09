@@ -15,6 +15,7 @@ public class AccountTransactionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public AccountTransactionList withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -26,6 +27,7 @@ public class AccountTransactionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasNextPage")
     public Boolean hasNextPage;
+
     public AccountTransactionList withHasNextPage(Boolean hasNextPage) {
         this.hasNextPage = hasNextPage;
         return this;
@@ -37,9 +39,11 @@ public class AccountTransactionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public Transaction[] transactions;
+
     public AccountTransactionList withTransactions(Transaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public AccountTransactionList(){}
 }

@@ -59,10 +59,8 @@ public class LeaderboardConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class LeaderboardConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetResponse(contentType, httpRes.statusCode()) {{
             leaderboardConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class LeaderboardConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertResponse(contentType, httpRes.statusCode()) {{
             leaderboardConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class LeaderboardConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListResponse(contentType, httpRes.statusCode()) {{
             leaderboardConfigurationListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class LeaderboardConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse res = new org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse(contentType, httpRes.statusCode()) {{
             leaderboardConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

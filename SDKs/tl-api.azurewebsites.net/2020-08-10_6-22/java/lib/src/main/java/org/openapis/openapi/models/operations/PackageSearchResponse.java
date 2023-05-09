@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PackageSearchResponse {
     
     public org.openapis.openapi.models.shared.ApiException apiException;
+
     public PackageSearchResponse withApiException(org.openapis.openapi.models.shared.ApiException apiException) {
         this.apiException = apiException;
         return this;
@@ -16,6 +18,7 @@ public class PackageSearchResponse {
     
     
     public String contentType;
+
     public PackageSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PackageSearchResponse {
     
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfListOfPackageSearchDTO defaultResponseDTOOfListOfPackageSearchDTO;
+
     public PackageSearchResponse withDefaultResponseDTOOfListOfPackageSearchDTO(org.openapis.openapi.models.shared.DefaultResponseDTOOfListOfPackageSearchDTO defaultResponseDTOOfListOfPackageSearchDTO) {
         this.defaultResponseDTOOfListOfPackageSearchDTO = defaultResponseDTOOfListOfPackageSearchDTO;
         return this;
@@ -33,6 +37,7 @@ public class PackageSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfPackageSearchDTO[] defaultResponseDTOOfPackageSearchDTOS;
+
     public PackageSearchResponse withDefaultResponseDTOOfPackageSearchDTOS(org.openapis.openapi.models.shared.DefaultResponseDTOOfPackageSearchDTO[] defaultResponseDTOOfPackageSearchDTOS) {
         this.defaultResponseDTOOfPackageSearchDTOS = defaultResponseDTOOfPackageSearchDTOS;
         return this;
@@ -40,6 +45,7 @@ public class PackageSearchResponse {
     
     
     public Integer statusCode;
+
     public PackageSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class PackageSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PackageSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PackageSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

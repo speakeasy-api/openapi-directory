@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AttachVpnGatewayRequest - Contains the parameters for AttachVpnGateway.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AttachVpnGatewayRequest {
     
     public Boolean dryRun;
+
     public AttachVpnGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class AttachVpnGatewayRequest {
     
     
     public String vpcId;
+
     public AttachVpnGatewayRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -26,9 +28,14 @@ public class AttachVpnGatewayRequest {
     
     
     public String vpnGatewayId;
+
     public AttachVpnGatewayRequest withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public AttachVpnGatewayRequest(@JsonProperty("VpcId") String vpcId, @JsonProperty("VpnGatewayId") String vpnGatewayId) {
+        this.vpcId = vpcId;
+        this.vpnGatewayId = vpnGatewayId;
+  }
 }

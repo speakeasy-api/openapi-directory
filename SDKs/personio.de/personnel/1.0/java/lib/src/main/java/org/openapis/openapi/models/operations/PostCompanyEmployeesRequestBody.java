@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PostCompanyEmployeesRequestBody {
      */
     @SpeakeasyMetadata("form:name=employee[department]")
     public String employeeDepartment;
+
     public PostCompanyEmployeesRequestBody withEmployeeDepartment(String employeeDepartment) {
         this.employeeDepartment = employeeDepartment;
         return this;
@@ -23,6 +25,7 @@ public class PostCompanyEmployeesRequestBody {
      */
     @SpeakeasyMetadata("form:name=employee[email]")
     public String employeeEmail;
+
     public PostCompanyEmployeesRequestBody withEmployeeEmail(String employeeEmail) {
         this.employeeEmail = employeeEmail;
         return this;
@@ -33,6 +36,7 @@ public class PostCompanyEmployeesRequestBody {
      */
     @SpeakeasyMetadata("form:name=employee[first_name]")
     public String employeeFirstName;
+
     public PostCompanyEmployeesRequestBody withEmployeeFirstName(String employeeFirstName) {
         this.employeeFirstName = employeeFirstName;
         return this;
@@ -43,6 +47,7 @@ public class PostCompanyEmployeesRequestBody {
      */
     @SpeakeasyMetadata("form:name=employee[gender]")
     public PostCompanyEmployeesRequestBodyEmployeeGenderEnum employeeGender;
+
     public PostCompanyEmployeesRequestBody withEmployeeGender(PostCompanyEmployeesRequestBodyEmployeeGenderEnum employeeGender) {
         this.employeeGender = employeeGender;
         return this;
@@ -53,6 +58,7 @@ public class PostCompanyEmployeesRequestBody {
      */
     @SpeakeasyMetadata("form:name=employee[hire_date]")
     public LocalDate employeeHireDate;
+
     public PostCompanyEmployeesRequestBody withEmployeeHireDate(LocalDate employeeHireDate) {
         this.employeeHireDate = employeeHireDate;
         return this;
@@ -63,6 +69,7 @@ public class PostCompanyEmployeesRequestBody {
      */
     @SpeakeasyMetadata("form:name=employee[last_name]")
     public String employeeLastName;
+
     public PostCompanyEmployeesRequestBody withEmployeeLastName(String employeeLastName) {
         this.employeeLastName = employeeLastName;
         return this;
@@ -73,6 +80,7 @@ public class PostCompanyEmployeesRequestBody {
      */
     @SpeakeasyMetadata("form:name=employee[position]")
     public String employeePosition;
+
     public PostCompanyEmployeesRequestBody withEmployeePosition(String employeePosition) {
         this.employeePosition = employeePosition;
         return this;
@@ -83,9 +91,15 @@ public class PostCompanyEmployeesRequestBody {
      */
     @SpeakeasyMetadata("form:name=employee[weekly_hours]")
     public Double employeeWeeklyHours;
+
     public PostCompanyEmployeesRequestBody withEmployeeWeeklyHours(Double employeeWeeklyHours) {
         this.employeeWeeklyHours = employeeWeeklyHours;
         return this;
     }
     
+    public PostCompanyEmployeesRequestBody(@JsonProperty("employee[email]") String employeeEmail, @JsonProperty("employee[first_name]") String employeeFirstName, @JsonProperty("employee[last_name]") String employeeLastName) {
+        this.employeeEmail = employeeEmail;
+        this.employeeFirstName = employeeFirstName;
+        this.employeeLastName = employeeLastName;
+  }
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AckMessageRequest;
 import org.openapis.openapi.models.operations.AckMessageResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AckMessageRequest req = new AckMessageRequest() {{
-                queueMessageId = "corrupti";
-                queueName = "provident";
-            }}            
+            AckMessageRequest req = new AckMessageRequest("corrupti", "provident");            
 
             AckMessageResponse res = sdk.queues.ackMessage(req);
 
-            if (res.apiResponse.isPresent()) {
+            if (res.apiResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

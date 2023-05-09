@@ -18,6 +18,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Trigger withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoEventFilter")
     public Condition[] autoEventFilter;
+
     public Trigger withAutoEventFilter(Condition[] autoEventFilter) {
         this.autoEventFilter = autoEventFilter;
         return this;
@@ -40,6 +42,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkValidation")
     public Parameter checkValidation;
+
     public Trigger withCheckValidation(Parameter checkValidation) {
         this.checkValidation = checkValidation;
         return this;
@@ -51,6 +54,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Trigger withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -62,6 +66,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuousTimeMinMilliseconds")
     public Parameter continuousTimeMinMilliseconds;
+
     public Trigger withContinuousTimeMinMilliseconds(Parameter continuousTimeMinMilliseconds) {
         this.continuousTimeMinMilliseconds = continuousTimeMinMilliseconds;
         return this;
@@ -73,6 +78,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customEventFilter")
     public Condition[] customEventFilter;
+
     public Trigger withCustomEventFilter(Condition[] customEventFilter) {
         this.customEventFilter = customEventFilter;
         return this;
@@ -84,6 +90,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public Parameter eventName;
+
     public Trigger withEventName(Parameter eventName) {
         this.eventName = eventName;
         return this;
@@ -95,6 +102,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public Condition[] filter;
+
     public Trigger withFilter(Condition[] filter) {
         this.filter = filter;
         return this;
@@ -106,6 +114,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Trigger withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -117,6 +126,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizontalScrollPercentageList")
     public Parameter horizontalScrollPercentageList;
+
     public Trigger withHorizontalScrollPercentageList(Parameter horizontalScrollPercentageList) {
         this.horizontalScrollPercentageList = horizontalScrollPercentageList;
         return this;
@@ -128,6 +138,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Parameter interval;
+
     public Trigger withInterval(Parameter interval) {
         this.interval = interval;
         return this;
@@ -139,6 +150,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalSeconds")
     public Parameter intervalSeconds;
+
     public Trigger withIntervalSeconds(Parameter intervalSeconds) {
         this.intervalSeconds = intervalSeconds;
         return this;
@@ -150,6 +162,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Parameter limit;
+
     public Trigger withLimit(Parameter limit) {
         this.limit = limit;
         return this;
@@ -161,6 +174,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTimerLengthSeconds")
     public Parameter maxTimerLengthSeconds;
+
     public Trigger withMaxTimerLengthSeconds(Parameter maxTimerLengthSeconds) {
         this.maxTimerLengthSeconds = maxTimerLengthSeconds;
         return this;
@@ -172,6 +186,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Trigger withName(String name) {
         this.name = name;
         return this;
@@ -183,6 +198,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public Parameter[] parameter;
+
     public Trigger withParameter(Parameter[] parameter) {
         this.parameter = parameter;
         return this;
@@ -194,6 +210,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFolderId")
     public String parentFolderId;
+
     public Trigger withParentFolderId(String parentFolderId) {
         this.parentFolderId = parentFolderId;
         return this;
@@ -205,6 +222,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public Parameter selector;
+
     public Trigger withSelector(Parameter selector) {
         this.selector = selector;
         return this;
@@ -216,6 +234,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalTimeMinMilliseconds")
     public Parameter totalTimeMinMilliseconds;
+
     public Trigger withTotalTimeMinMilliseconds(Parameter totalTimeMinMilliseconds) {
         this.totalTimeMinMilliseconds = totalTimeMinMilliseconds;
         return this;
@@ -227,6 +246,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public Trigger withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
@@ -238,6 +258,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TriggerTypeEnum type;
+
     public Trigger withType(TriggerTypeEnum type) {
         this.type = type;
         return this;
@@ -249,6 +270,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueTriggerId")
     public Parameter uniqueTriggerId;
+
     public Trigger withUniqueTriggerId(Parameter uniqueTriggerId) {
         this.uniqueTriggerId = uniqueTriggerId;
         return this;
@@ -260,6 +282,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verticalScrollPercentageList")
     public Parameter verticalScrollPercentageList;
+
     public Trigger withVerticalScrollPercentageList(Parameter verticalScrollPercentageList) {
         this.verticalScrollPercentageList = verticalScrollPercentageList;
         return this;
@@ -271,6 +294,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibilitySelector")
     public Parameter visibilitySelector;
+
     public Trigger withVisibilitySelector(Parameter visibilitySelector) {
         this.visibilitySelector = visibilitySelector;
         return this;
@@ -282,6 +306,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visiblePercentageMax")
     public Parameter visiblePercentageMax;
+
     public Trigger withVisiblePercentageMax(Parameter visiblePercentageMax) {
         this.visiblePercentageMax = visiblePercentageMax;
         return this;
@@ -293,6 +318,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visiblePercentageMin")
     public Parameter visiblePercentageMin;
+
     public Trigger withVisiblePercentageMin(Parameter visiblePercentageMin) {
         this.visiblePercentageMin = visiblePercentageMin;
         return this;
@@ -304,6 +330,7 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitForTags")
     public Parameter waitForTags;
+
     public Trigger withWaitForTags(Parameter waitForTags) {
         this.waitForTags = waitForTags;
         return this;
@@ -315,9 +342,11 @@ public class Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitForTagsTimeout")
     public Parameter waitForTagsTimeout;
+
     public Trigger withWaitForTagsTimeout(Parameter waitForTagsTimeout) {
         this.waitForTagsTimeout = waitForTagsTimeout;
         return this;
     }
     
+    public Trigger(){}
 }

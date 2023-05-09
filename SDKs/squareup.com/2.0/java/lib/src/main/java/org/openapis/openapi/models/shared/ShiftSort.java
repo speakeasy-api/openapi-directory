@@ -18,6 +18,7 @@ public class ShiftSort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ShiftSort withField(String field) {
         this.field = field;
         return this;
@@ -29,9 +30,11 @@ public class ShiftSort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public String order;
+
     public ShiftSort withOrder(String order) {
         this.order = order;
         return this;
     }
     
+    public ShiftSort(){}
 }

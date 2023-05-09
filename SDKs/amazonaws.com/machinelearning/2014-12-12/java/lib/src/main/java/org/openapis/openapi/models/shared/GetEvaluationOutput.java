@@ -20,6 +20,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeTime")
     public Long computeTime;
+
     public GetEvaluationOutput withComputeTime(Long computeTime) {
         this.computeTime = computeTime;
         return this;
@@ -30,6 +31,7 @@ public class GetEvaluationOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public GetEvaluationOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedByIamUser")
     public String createdByIamUser;
+
     public GetEvaluationOutput withCreatedByIamUser(String createdByIamUser) {
         this.createdByIamUser = createdByIamUser;
         return this;
@@ -46,6 +49,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationDataSourceId")
     public String evaluationDataSourceId;
+
     public GetEvaluationOutput withEvaluationDataSourceId(String evaluationDataSourceId) {
         this.evaluationDataSourceId = evaluationDataSourceId;
         return this;
@@ -54,6 +58,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationId")
     public String evaluationId;
+
     public GetEvaluationOutput withEvaluationId(String evaluationId) {
         this.evaluationId = evaluationId;
         return this;
@@ -64,6 +69,7 @@ public class GetEvaluationOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinishedAt")
     public OffsetDateTime finishedAt;
+
     public GetEvaluationOutput withFinishedAt(OffsetDateTime finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -72,6 +78,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataLocationS3")
     public String inputDataLocationS3;
+
     public GetEvaluationOutput withInputDataLocationS3(String inputDataLocationS3) {
         this.inputDataLocationS3 = inputDataLocationS3;
         return this;
@@ -82,6 +89,7 @@ public class GetEvaluationOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetEvaluationOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -90,6 +98,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUri")
     public String logUri;
+
     public GetEvaluationOutput withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
@@ -98,6 +107,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public GetEvaluationOutput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -106,6 +116,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public GetEvaluationOutput withMessage(String message) {
         this.message = message;
         return this;
@@ -114,6 +125,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetEvaluationOutput withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +134,7 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerformanceMetrics")
     public PerformanceMetrics performanceMetrics;
+
     public GetEvaluationOutput withPerformanceMetrics(PerformanceMetrics performanceMetrics) {
         this.performanceMetrics = performanceMetrics;
         return this;
@@ -132,6 +145,7 @@ public class GetEvaluationOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAt")
     public OffsetDateTime startedAt;
+
     public GetEvaluationOutput withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -140,9 +154,11 @@ public class GetEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EntityStatusEnum status;
+
     public GetEvaluationOutput withStatus(EntityStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetEvaluationOutput(){}
 }

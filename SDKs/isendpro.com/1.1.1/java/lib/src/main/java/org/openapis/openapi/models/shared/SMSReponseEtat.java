@@ -12,9 +12,11 @@ public class SMSReponseEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public SMSReponseEtatEtat[] etat;
+
     public SMSReponseEtat withEtat(SMSReponseEtatEtat[] etat) {
         this.etat = etat;
         return this;
     }
     
+    public SMSReponseEtat(){}
 }

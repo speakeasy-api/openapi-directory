@@ -15,6 +15,7 @@ public class ListOnPremisesInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceNames")
     public String[] instanceNames;
+
     public ListOnPremisesInstancesOutput withInstanceNames(String[] instanceNames) {
         this.instanceNames = instanceNames;
         return this;
@@ -23,9 +24,11 @@ public class ListOnPremisesInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListOnPremisesInstancesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListOnPremisesInstancesOutput(){}
 }

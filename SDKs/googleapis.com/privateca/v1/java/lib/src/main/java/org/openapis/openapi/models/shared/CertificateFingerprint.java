@@ -18,9 +18,11 @@ public class CertificateFingerprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256Hash")
     public String sha256Hash;
+
     public CertificateFingerprint withSha256Hash(String sha256Hash) {
         this.sha256Hash = sha256Hash;
         return this;
     }
     
+    public CertificateFingerprint(){}
 }

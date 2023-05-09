@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteVpnConnectionRouteRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteVpnConnectionRouteActionEnum action;
+
     public GETDeleteVpnConnectionRouteRequest withAction(GETDeleteVpnConnectionRouteActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteVpnConnectionRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public GETDeleteVpnConnectionRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -26,6 +29,7 @@ public class GETDeleteVpnConnectionRouteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteVpnConnectionRouteVersionEnum version;
+
     public GETDeleteVpnConnectionRouteRequest withVersion(GETDeleteVpnConnectionRouteVersionEnum version) {
         this.version = version;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteVpnConnectionRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnConnectionId")
     public String vpnConnectionId;
+
     public GETDeleteVpnConnectionRouteRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteVpnConnectionRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteVpnConnectionRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteVpnConnectionRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteVpnConnectionRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteVpnConnectionRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteVpnConnectionRouteRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteVpnConnectionRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteVpnConnectionRouteRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteVpnConnectionRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteVpnConnectionRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteVpnConnectionRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteVpnConnectionRouteRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDeleteVpnConnectionRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteVpnConnectionRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteVpnConnectionRouteRequest(@JsonProperty("Action") GETDeleteVpnConnectionRouteActionEnum action, @JsonProperty("DestinationCidrBlock") String destinationCidrBlock, @JsonProperty("Version") GETDeleteVpnConnectionRouteVersionEnum version, @JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.action = action;
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.version = version;
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

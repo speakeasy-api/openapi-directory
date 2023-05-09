@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesCountriesByCountryCodeGetRequest {
@@ -12,6 +13,7 @@ public class ReferencesCountriesByCountryCodeGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ReferencesCountriesByCountryCodeGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ReferencesCountriesByCountryCodeGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryCode")
     public String countryCode;
+
     public ReferencesCountriesByCountryCodeGetRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -32,6 +35,7 @@ public class ReferencesCountriesByCountryCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ReferencesCountriesByCountryCodeGetRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,6 +46,7 @@ public class ReferencesCountriesByCountryCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public ReferencesCountriesByCountryCodeGetRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -52,9 +57,14 @@ public class ReferencesCountriesByCountryCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ReferencesCountriesByCountryCodeGetRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public ReferencesCountriesByCountryCodeGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("countryCode") String countryCode) {
+        this.accept = accept;
+        this.countryCode = countryCode;
+  }
 }

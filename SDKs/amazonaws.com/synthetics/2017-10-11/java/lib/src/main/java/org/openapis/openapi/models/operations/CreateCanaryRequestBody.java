@@ -15,6 +15,7 @@ public class CreateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactConfig")
     public CreateCanaryRequestBodyArtifactConfig artifactConfig;
+
     public CreateCanaryRequestBody withArtifactConfig(CreateCanaryRequestBodyArtifactConfig artifactConfig) {
         this.artifactConfig = artifactConfig;
         return this;
@@ -25,6 +26,7 @@ public class CreateCanaryRequestBody {
      */
     @JsonProperty("ArtifactS3Location")
     public String artifactS3Location;
+
     public CreateCanaryRequestBody withArtifactS3Location(String artifactS3Location) {
         this.artifactS3Location = artifactS3Location;
         return this;
@@ -35,6 +37,7 @@ public class CreateCanaryRequestBody {
      */
     @JsonProperty("Code")
     public CreateCanaryRequestBodyCode code;
+
     public CreateCanaryRequestBody withCode(CreateCanaryRequestBodyCode code) {
         this.code = code;
         return this;
@@ -45,6 +48,7 @@ public class CreateCanaryRequestBody {
      */
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public CreateCanaryRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -56,6 +60,7 @@ public class CreateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureRetentionPeriodInDays")
     public Long failureRetentionPeriodInDays;
+
     public CreateCanaryRequestBody withFailureRetentionPeriodInDays(Long failureRetentionPeriodInDays) {
         this.failureRetentionPeriodInDays = failureRetentionPeriodInDays;
         return this;
@@ -66,6 +71,7 @@ public class CreateCanaryRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateCanaryRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -77,6 +83,7 @@ public class CreateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunConfig")
     public CreateCanaryRequestBodyRunConfig runConfig;
+
     public CreateCanaryRequestBody withRunConfig(CreateCanaryRequestBodyRunConfig runConfig) {
         this.runConfig = runConfig;
         return this;
@@ -87,6 +94,7 @@ public class CreateCanaryRequestBody {
      */
     @JsonProperty("RuntimeVersion")
     public String runtimeVersion;
+
     public CreateCanaryRequestBody withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
@@ -97,6 +105,7 @@ public class CreateCanaryRequestBody {
      */
     @JsonProperty("Schedule")
     public CreateCanaryRequestBodySchedule schedule;
+
     public CreateCanaryRequestBody withSchedule(CreateCanaryRequestBodySchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -108,6 +117,7 @@ public class CreateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessRetentionPeriodInDays")
     public Long successRetentionPeriodInDays;
+
     public CreateCanaryRequestBody withSuccessRetentionPeriodInDays(Long successRetentionPeriodInDays) {
         this.successRetentionPeriodInDays = successRetentionPeriodInDays;
         return this;
@@ -119,6 +129,7 @@ public class CreateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateCanaryRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -130,9 +141,18 @@ public class CreateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public CreateCanaryRequestBodyVpcConfig vpcConfig;
+
     public CreateCanaryRequestBody withVpcConfig(CreateCanaryRequestBodyVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateCanaryRequestBody(@JsonProperty("ArtifactS3Location") String artifactS3Location, @JsonProperty("Code") CreateCanaryRequestBodyCode code, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("Name") String name, @JsonProperty("RuntimeVersion") String runtimeVersion, @JsonProperty("Schedule") CreateCanaryRequestBodySchedule schedule) {
+        this.artifactS3Location = artifactS3Location;
+        this.code = code;
+        this.executionRoleArn = executionRoleArn;
+        this.name = name;
+        this.runtimeVersion = runtimeVersion;
+        this.schedule = schedule;
+  }
 }

@@ -12,6 +12,7 @@ public class DeleteTableVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteTableVersionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTableVersionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeleteTableVersionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTableVersionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DeleteTableVersionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -33,9 +36,15 @@ public class DeleteTableVersionRequest {
     
     @JsonProperty("VersionId")
     public String versionId;
+
     public DeleteTableVersionRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public DeleteTableVersionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName, @JsonProperty("VersionId") String versionId) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+        this.versionId = versionId;
+  }
 }

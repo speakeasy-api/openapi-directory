@@ -12,6 +12,7 @@ public class GetRegionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeAvailabilityZones")
     public Boolean includeAvailabilityZones;
+
     public GetRegionsRequest withIncludeAvailabilityZones(Boolean includeAvailabilityZones) {
         this.includeAvailabilityZones = includeAvailabilityZones;
         return this;
@@ -20,9 +21,11 @@ public class GetRegionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeRelationalDatabaseAvailabilityZones")
     public Boolean includeRelationalDatabaseAvailabilityZones;
+
     public GetRegionsRequest withIncludeRelationalDatabaseAvailabilityZones(Boolean includeRelationalDatabaseAvailabilityZones) {
         this.includeRelationalDatabaseAvailabilityZones = includeRelationalDatabaseAvailabilityZones;
         return this;
     }
     
+    public GetRegionsRequest(){}
 }

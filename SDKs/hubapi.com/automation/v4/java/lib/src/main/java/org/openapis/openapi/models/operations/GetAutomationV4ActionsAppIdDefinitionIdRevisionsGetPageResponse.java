@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse {
     
     public byte[] body;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse {
      */
     
     public org.openapis.openapi.models.shared.CollectionResponseActionRevisionForwardPaging collectionResponseActionRevisionForwardPaging;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse withCollectionResponseActionRevisionForwardPaging(org.openapis.openapi.models.shared.CollectionResponseActionRevisionForwardPaging collectionResponseActionRevisionForwardPaging) {
         this.collectionResponseActionRevisionForwardPaging = collectionResponseActionRevisionForwardPaging;
         return this;
@@ -26,6 +29,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse {
     
     
     public String contentType;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse {
     
     
     public Integer statusCode;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

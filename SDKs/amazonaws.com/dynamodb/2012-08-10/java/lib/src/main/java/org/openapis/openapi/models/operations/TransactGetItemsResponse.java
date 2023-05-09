@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransactGetItemsResponse {
     
     public String contentType;
+
     public TransactGetItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TransactGetItemsResponse {
      */
     
     public Object internalServerError;
+
     public TransactGetItemsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class TransactGetItemsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public TransactGetItemsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -36,6 +40,7 @@ public class TransactGetItemsResponse {
     
     
     public Integer statusCode;
+
     public TransactGetItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class TransactGetItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransactGetItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class TransactGetItemsResponse {
      */
     
     public Object requestLimitExceeded;
+
     public TransactGetItemsResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -63,6 +70,7 @@ public class TransactGetItemsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TransactGetItemsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class TransactGetItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.TransactGetItemsOutput transactGetItemsOutput;
+
     public TransactGetItemsResponse withTransactGetItemsOutput(org.openapis.openapi.models.shared.TransactGetItemsOutput transactGetItemsOutput) {
         this.transactGetItemsOutput = transactGetItemsOutput;
         return this;
@@ -83,9 +92,14 @@ public class TransactGetItemsResponse {
      */
     
     public Object transactionCanceledException;
+
     public TransactGetItemsResponse withTransactionCanceledException(Object transactionCanceledException) {
         this.transactionCanceledException = transactionCanceledException;
         return this;
     }
     
+    public TransactGetItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

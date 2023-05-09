@@ -15,6 +15,7 @@ public class QuotaPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeriodUnit")
     public PeriodUnitEnum periodUnit;
+
     public QuotaPeriod withPeriodUnit(PeriodUnitEnum periodUnit) {
         this.periodUnit = periodUnit;
         return this;
@@ -23,9 +24,11 @@ public class QuotaPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeriodValue")
     public Long periodValue;
+
     public QuotaPeriod withPeriodValue(Long periodValue) {
         this.periodValue = periodValue;
         return this;
     }
     
+    public QuotaPeriod(){}
 }

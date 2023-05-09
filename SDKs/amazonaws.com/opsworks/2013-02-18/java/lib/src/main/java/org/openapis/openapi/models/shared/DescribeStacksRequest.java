@@ -12,9 +12,11 @@ public class DescribeStacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackIds")
     public String[] stackIds;
+
     public DescribeStacksRequest withStackIds(String[] stackIds) {
         this.stackIds = stackIds;
         return this;
     }
     
+    public DescribeStacksRequest(){}
 }

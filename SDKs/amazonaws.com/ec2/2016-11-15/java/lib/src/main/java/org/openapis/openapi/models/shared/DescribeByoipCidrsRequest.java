@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeByoipCidrsRequest {
     
     public Boolean dryRun;
+
     public DescribeByoipCidrsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeByoipCidrsRequest {
     
     
     public Long maxResults;
+
     public DescribeByoipCidrsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,9 +25,13 @@ public class DescribeByoipCidrsRequest {
     
     
     public String nextToken;
+
     public DescribeByoipCidrsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeByoipCidrsRequest(@JsonProperty("MaxResults") Long maxResults) {
+        this.maxResults = maxResults;
+  }
 }

@@ -15,9 +15,11 @@ public class AssociateOpsItemRelatedItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public AssociateOpsItemRelatedItemResponse withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
     }
     
+    public AssociateOpsItemRelatedItemResponse(){}
 }

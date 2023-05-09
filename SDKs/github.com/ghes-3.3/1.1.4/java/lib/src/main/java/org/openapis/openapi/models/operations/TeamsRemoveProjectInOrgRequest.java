@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsRemoveProjectInOrgRequest {
@@ -12,6 +13,7 @@ public class TeamsRemoveProjectInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsRemoveProjectInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,6 +24,7 @@ public class TeamsRemoveProjectInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public TeamsRemoveProjectInOrgRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -32,9 +35,15 @@ public class TeamsRemoveProjectInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsRemoveProjectInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public TeamsRemoveProjectInOrgRequest(@JsonProperty("org") String org, @JsonProperty("project_id") Long projectId, @JsonProperty("team_slug") String teamSlug) {
+        this.org = org;
+        this.projectId = projectId;
+        this.teamSlug = teamSlug;
+  }
 }

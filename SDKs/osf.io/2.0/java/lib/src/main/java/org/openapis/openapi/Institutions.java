@@ -51,11 +51,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InstitutionsDetailResponse res = new org.openapis.openapi.models.operations.InstitutionsDetailResponse() {{
+        org.openapis.openapi.models.operations.InstitutionsDetailResponse res = new org.openapis.openapi.models.operations.InstitutionsDetailResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InstitutionsListResponse res = new org.openapis.openapi.models.operations.InstitutionsListResponse() {{
+        org.openapis.openapi.models.operations.InstitutionsListResponse res = new org.openapis.openapi.models.operations.InstitutionsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InstitutionsNodeListResponse res = new org.openapis.openapi.models.operations.InstitutionsNodeListResponse() {{
+        org.openapis.openapi.models.operations.InstitutionsNodeListResponse res = new org.openapis.openapi.models.operations.InstitutionsNodeListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,10 +197,8 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InstitutionsRegistrationListResponse res = new org.openapis.openapi.models.operations.InstitutionsRegistrationListResponse() {{
+        org.openapis.openapi.models.operations.InstitutionsRegistrationListResponse res = new org.openapis.openapi.models.operations.InstitutionsRegistrationListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InstitutionsUsersListResponse res = new org.openapis.openapi.models.operations.InstitutionsUsersListResponse() {{
+        org.openapis.openapi.models.operations.InstitutionsUsersListResponse res = new org.openapis.openapi.models.operations.InstitutionsUsersListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

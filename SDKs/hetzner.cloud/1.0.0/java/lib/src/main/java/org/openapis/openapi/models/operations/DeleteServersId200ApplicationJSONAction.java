@@ -12,6 +12,7 @@ public class DeleteServersId200ApplicationJSONAction {
      */
     @JsonProperty("command")
     public String command;
+
     public DeleteServersId200ApplicationJSONAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class DeleteServersId200ApplicationJSONAction {
      */
     @JsonProperty("error")
     public DeleteServersId200ApplicationJSONActionError error;
+
     public DeleteServersId200ApplicationJSONAction withError(DeleteServersId200ApplicationJSONActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class DeleteServersId200ApplicationJSONAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public DeleteServersId200ApplicationJSONAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class DeleteServersId200ApplicationJSONAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public DeleteServersId200ApplicationJSONAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class DeleteServersId200ApplicationJSONAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public DeleteServersId200ApplicationJSONAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class DeleteServersId200ApplicationJSONAction {
      */
     @JsonProperty("resources")
     public DeleteServersId200ApplicationJSONActionResources[] resources;
+
     public DeleteServersId200ApplicationJSONAction withResources(DeleteServersId200ApplicationJSONActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class DeleteServersId200ApplicationJSONAction {
      */
     @JsonProperty("started")
     public String started;
+
     public DeleteServersId200ApplicationJSONAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class DeleteServersId200ApplicationJSONAction {
      */
     @JsonProperty("status")
     public DeleteServersId200ApplicationJSONActionStatusEnum status;
+
     public DeleteServersId200ApplicationJSONAction withStatus(DeleteServersId200ApplicationJSONActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteServersId200ApplicationJSONAction(@JsonProperty("command") String command, @JsonProperty("error") DeleteServersId200ApplicationJSONActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") DeleteServersId200ApplicationJSONActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") DeleteServersId200ApplicationJSONActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeprovisionIpamPoolCidrResult {
     
     public DeprovisionIpamPoolCidrResultIpamPoolCidr ipamPoolCidr;
+
     public DeprovisionIpamPoolCidrResult withIpamPoolCidr(DeprovisionIpamPoolCidrResultIpamPoolCidr ipamPoolCidr) {
         this.ipamPoolCidr = ipamPoolCidr;
         return this;
     }
     
+    public DeprovisionIpamPoolCidrResult(){}
 }

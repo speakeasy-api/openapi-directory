@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApplicationDPUSizesResponse {
     
     public String contentType;
+
     public ListApplicationDPUSizesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListApplicationDPUSizesResponse {
      */
     
     public Object internalServerException;
+
     public ListApplicationDPUSizesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListApplicationDPUSizesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListApplicationDPUSizesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListApplicationDPUSizesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApplicationDPUSizesOutput listApplicationDPUSizesOutput;
+
     public ListApplicationDPUSizesResponse withListApplicationDPUSizesOutput(org.openapis.openapi.models.shared.ListApplicationDPUSizesOutput listApplicationDPUSizesOutput) {
         this.listApplicationDPUSizesOutput = listApplicationDPUSizesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListApplicationDPUSizesResponse {
     
     
     public Integer statusCode;
+
     public ListApplicationDPUSizesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListApplicationDPUSizesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApplicationDPUSizesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListApplicationDPUSizesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListApplicationDPUSizesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListApplicationDPUSizesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class PutManagedInsightRulesOutput {
     
     public PartialFailure[] failures;
+
     public PutManagedInsightRulesOutput withFailures(PartialFailure[] failures) {
         this.failures = failures;
         return this;
     }
     
+    public PutManagedInsightRulesOutput(){}
 }

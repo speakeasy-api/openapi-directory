@@ -20,6 +20,7 @@ public class StudioSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthMode")
     public AuthModeEnum authMode;
+
     public StudioSummary withAuthMode(AuthModeEnum authMode) {
         this.authMode = authMode;
         return this;
@@ -30,6 +31,7 @@ public class StudioSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public StudioSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class StudioSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StudioSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class StudioSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public StudioSummary withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class StudioSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioId")
     public String studioId;
+
     public StudioSummary withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
@@ -62,6 +67,7 @@ public class StudioSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public StudioSummary withUrl(String url) {
         this.url = url;
         return this;
@@ -70,9 +76,11 @@ public class StudioSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public StudioSummary withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public StudioSummary(){}
 }

@@ -15,6 +15,7 @@ public class ListFunctionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Functions")
     public FunctionConfiguration[] functions;
+
     public ListFunctionsResponse withFunctions(FunctionConfiguration[] functions) {
         this.functions = functions;
         return this;
@@ -23,9 +24,11 @@ public class ListFunctionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListFunctionsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListFunctionsResponse(){}
 }

@@ -10,11 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateFlowRequestBody {
     /**
+     * &lt;p&gt;The &lt;code&gt;clientToken&lt;/code&gt; parameter is an idempotency token. It ensures that your &lt;code&gt;CreateFlow&lt;/code&gt; request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same &lt;code&gt;clientToken&lt;/code&gt; parameter value.&lt;/p&gt; &lt;p&gt;If you omit a &lt;code&gt;clientToken&lt;/code&gt; value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.&lt;/p&gt; &lt;p&gt;If you specify input parameters that differ from your first request, an error occurs. If you use a different value for &lt;code&gt;clientToken&lt;/code&gt;, Amazon AppFlow considers it a new call to &lt;code&gt;CreateFlow&lt;/code&gt;. The token is active for 8 hours.&lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientToken")
+    public String clientToken;
+
+    public CreateFlowRequestBody withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
+    /**
      *  A description of the flow you want to create. 
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateFlowRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +38,7 @@ public class CreateFlowRequestBody {
      */
     @JsonProperty("destinationFlowConfigList")
     public org.openapis.openapi.models.shared.DestinationFlowConfig[] destinationFlowConfigList;
+
     public CreateFlowRequestBody withDestinationFlowConfigList(org.openapis.openapi.models.shared.DestinationFlowConfig[] destinationFlowConfigList) {
         this.destinationFlowConfigList = destinationFlowConfigList;
         return this;
@@ -35,6 +49,7 @@ public class CreateFlowRequestBody {
      */
     @JsonProperty("flowName")
     public String flowName;
+
     public CreateFlowRequestBody withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -46,6 +61,7 @@ public class CreateFlowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsArn")
     public String kmsArn;
+
     public CreateFlowRequestBody withKmsArn(String kmsArn) {
         this.kmsArn = kmsArn;
         return this;
@@ -57,6 +73,7 @@ public class CreateFlowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataCatalogConfig")
     public CreateFlowRequestBodyMetadataCatalogConfig metadataCatalogConfig;
+
     public CreateFlowRequestBody withMetadataCatalogConfig(CreateFlowRequestBodyMetadataCatalogConfig metadataCatalogConfig) {
         this.metadataCatalogConfig = metadataCatalogConfig;
         return this;
@@ -67,6 +84,7 @@ public class CreateFlowRequestBody {
      */
     @JsonProperty("sourceFlowConfig")
     public CreateFlowRequestBodySourceFlowConfig sourceFlowConfig;
+
     public CreateFlowRequestBody withSourceFlowConfig(CreateFlowRequestBodySourceFlowConfig sourceFlowConfig) {
         this.sourceFlowConfig = sourceFlowConfig;
         return this;
@@ -78,6 +96,7 @@ public class CreateFlowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateFlowRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -88,6 +107,7 @@ public class CreateFlowRequestBody {
      */
     @JsonProperty("tasks")
     public org.openapis.openapi.models.shared.Task[] tasks;
+
     public CreateFlowRequestBody withTasks(org.openapis.openapi.models.shared.Task[] tasks) {
         this.tasks = tasks;
         return this;
@@ -98,9 +118,17 @@ public class CreateFlowRequestBody {
      */
     @JsonProperty("triggerConfig")
     public CreateFlowRequestBodyTriggerConfig triggerConfig;
+
     public CreateFlowRequestBody withTriggerConfig(CreateFlowRequestBodyTriggerConfig triggerConfig) {
         this.triggerConfig = triggerConfig;
         return this;
     }
     
+    public CreateFlowRequestBody(@JsonProperty("destinationFlowConfigList") org.openapis.openapi.models.shared.DestinationFlowConfig[] destinationFlowConfigList, @JsonProperty("flowName") String flowName, @JsonProperty("sourceFlowConfig") CreateFlowRequestBodySourceFlowConfig sourceFlowConfig, @JsonProperty("tasks") org.openapis.openapi.models.shared.Task[] tasks, @JsonProperty("triggerConfig") CreateFlowRequestBodyTriggerConfig triggerConfig) {
+        this.destinationFlowConfigList = destinationFlowConfigList;
+        this.flowName = flowName;
+        this.sourceFlowConfig = sourceFlowConfig;
+        this.tasks = tasks;
+        this.triggerConfig = triggerConfig;
+  }
 }

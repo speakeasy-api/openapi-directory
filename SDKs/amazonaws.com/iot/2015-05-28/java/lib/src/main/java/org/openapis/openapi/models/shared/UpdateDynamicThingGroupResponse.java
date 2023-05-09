@@ -15,9 +15,11 @@ public class UpdateDynamicThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public UpdateDynamicThingGroupResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public UpdateDynamicThingGroupResponse(){}
 }

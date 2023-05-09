@@ -56,11 +56,9 @@ public class NamedTagScope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNetworkSmTargetGroupResponse res = new org.openapis.openapi.models.operations.CreateNetworkSmTargetGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateNetworkSmTargetGroupResponse res = new org.openapis.openapi.models.operations.CreateNetworkSmTargetGroupResponse(contentType, httpRes.statusCode()) {{
             createNetworkSmTargetGroup201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -96,10 +94,8 @@ public class NamedTagScope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNetworkSmTargetGroupResponse res = new org.openapis.openapi.models.operations.DeleteNetworkSmTargetGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteNetworkSmTargetGroupResponse res = new org.openapis.openapi.models.operations.DeleteNetworkSmTargetGroupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -136,11 +132,9 @@ public class NamedTagScope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmTargetGroupResponse res = new org.openapis.openapi.models.operations.GetNetworkSmTargetGroupResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmTargetGroupResponse res = new org.openapis.openapi.models.operations.GetNetworkSmTargetGroupResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmTargetGroup200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class NamedTagScope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmTargetGroups200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,11 +216,9 @@ public class NamedTagScope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSmTargetGroupResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSmTargetGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSmTargetGroupResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSmTargetGroupResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSmTargetGroup200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

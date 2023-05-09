@@ -18,9 +18,11 @@ public class StopRuntimeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public StopRuntimeRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public StopRuntimeRequest(){}
 }

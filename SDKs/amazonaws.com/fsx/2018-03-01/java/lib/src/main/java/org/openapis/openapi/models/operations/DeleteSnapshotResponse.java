@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSnapshotResponse {
@@ -12,6 +13,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object badRequest;
+
     public DeleteSnapshotResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSnapshotResponse {
     
     
     public String contentType;
+
     public DeleteSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSnapshotResponse deleteSnapshotResponse;
+
     public DeleteSnapshotResponse withDeleteSnapshotResponse(org.openapis.openapi.models.shared.DeleteSnapshotResponse deleteSnapshotResponse) {
         this.deleteSnapshotResponse = deleteSnapshotResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object internalServerError;
+
     public DeleteSnapshotResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteSnapshotResponse {
      */
     
     public Object snapshotNotFound;
+
     public DeleteSnapshotResponse withSnapshotNotFound(Object snapshotNotFound) {
         this.snapshotNotFound = snapshotNotFound;
         return this;
     }
     
+    public DeleteSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class UpdateSiteResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateSiteResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -33,6 +34,7 @@ public class UpdateSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public UpdateSiteResponse withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -44,6 +46,7 @@ public class UpdateSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateSiteResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +57,7 @@ public class UpdateSiteResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateSiteResponse withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +68,7 @@ public class UpdateSiteResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateSiteResponse withName(String name) {
         this.name = name;
         return this;
@@ -76,9 +81,16 @@ public class UpdateSiteResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public UpdateSiteResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public UpdateSiteResponse(@JsonProperty("arn") String arn, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.updatedAt = updatedAt;
+  }
 }

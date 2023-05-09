@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJobRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetJobRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetJobRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetJobRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetJobRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetJobRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetJobRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetJobRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetJobRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public GetJobRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -71,6 +80,7 @@ public class GetJobRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchName")
     public String branchName;
+
     public GetJobRequest withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -81,9 +91,15 @@ public class GetJobRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public GetJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public GetJobRequest(@JsonProperty("appId") String appId, @JsonProperty("branchName") String branchName, @JsonProperty("jobId") String jobId) {
+        this.appId = appId;
+        this.branchName = branchName;
+        this.jobId = jobId;
+  }
 }

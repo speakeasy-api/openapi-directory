@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute {
     
     public String attachmentId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForward
     
     
     public String destinationCidr;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withDestinationCidr(String destinationCidr) {
         this.destinationCidr = destinationCidr;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForward
     
     
     public String prefixListId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForward
     
     
     public String resourceId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForward
     
     
     public String resourceType;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForward
     
     
     public String routeOrigin;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withRouteOrigin(String routeOrigin) {
         this.routeOrigin = routeOrigin;
         return this;
@@ -54,9 +60,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForward
     
     
     public String state;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withState(String state) {
         this.state = state;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponentsExplanationsTransitGatewayRouteTableRoute(){}
 }

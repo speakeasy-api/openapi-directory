@@ -18,6 +18,7 @@ public class StructMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public PathSegment[] path;
+
     public StructMatcher withPath(PathSegment[] path) {
         this.path = path;
         return this;
@@ -29,9 +30,11 @@ public class StructMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public ValueMatcher value;
+
     public StructMatcher withValue(ValueMatcher value) {
         this.value = value;
         return this;
     }
     
+    public StructMatcher(){}
 }

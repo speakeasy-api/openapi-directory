@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LanguageDocumentsClassifyTextResponse {
@@ -12,6 +13,7 @@ public class LanguageDocumentsClassifyTextResponse {
      */
     
     public org.openapis.openapi.models.shared.ClassifyTextResponse classifyTextResponse;
+
     public LanguageDocumentsClassifyTextResponse withClassifyTextResponse(org.openapis.openapi.models.shared.ClassifyTextResponse classifyTextResponse) {
         this.classifyTextResponse = classifyTextResponse;
         return this;
@@ -19,6 +21,7 @@ public class LanguageDocumentsClassifyTextResponse {
     
     
     public String contentType;
+
     public LanguageDocumentsClassifyTextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class LanguageDocumentsClassifyTextResponse {
     
     
     public Integer statusCode;
+
     public LanguageDocumentsClassifyTextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LanguageDocumentsClassifyTextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LanguageDocumentsClassifyTextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LanguageDocumentsClassifyTextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

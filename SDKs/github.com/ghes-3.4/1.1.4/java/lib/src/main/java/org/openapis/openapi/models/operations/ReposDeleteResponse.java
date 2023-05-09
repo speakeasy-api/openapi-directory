@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposDeleteResponse {
     
     public String contentType;
+
     public ReposDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposDeleteResponse {
     
     
     public Integer statusCode;
+
     public ReposDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposDeleteResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposDeleteResponse {
      */
     
     public ReposDelete403ApplicationJSON reposDelete403ApplicationJSONObject;
+
     public ReposDeleteResponse withReposDelete403ApplicationJSONObject(ReposDelete403ApplicationJSON reposDelete403ApplicationJSONObject) {
         this.reposDelete403ApplicationJSONObject = reposDelete403ApplicationJSONObject;
         return this;
     }
     
+    public ReposDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

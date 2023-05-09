@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetMerchantOrderInfoV3Response {
@@ -12,6 +13,7 @@ public class SetMerchantOrderInfoV3Response {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public SetMerchantOrderInfoV3Response withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class SetMerchantOrderInfoV3Response {
     
     
     public String contentType;
+
     public SetMerchantOrderInfoV3Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SetMerchantOrderInfoV3Response {
     
     
     public Integer statusCode;
+
     public SetMerchantOrderInfoV3Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SetMerchantOrderInfoV3Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetMerchantOrderInfoV3Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SetMerchantOrderInfoV3Response {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public SetMerchantOrderInfoV3Response withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
     }
     
+    public SetMerchantOrderInfoV3Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

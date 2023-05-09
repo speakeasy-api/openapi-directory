@@ -18,6 +18,7 @@ public class ActionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public ActionInformationActionTypeEnum actionType;
+
     public ActionInformation withActionType(ActionInformationActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -29,6 +30,7 @@ public class ActionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxValue")
     public Double maxValue;
+
     public ActionInformation withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -40,6 +42,7 @@ public class ActionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinValue")
     public Double minValue;
+
     public ActionInformation withMinValue(Double minValue) {
         this.minValue = minValue;
         return this;
@@ -51,6 +54,7 @@ public class ActionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ActionInformation withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class ActionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObisCode")
     public String obisCode;
+
     public ActionInformation withObisCode(String obisCode) {
         this.obisCode = obisCode;
         return this;
     }
     
+    public ActionInformation(){}
 }

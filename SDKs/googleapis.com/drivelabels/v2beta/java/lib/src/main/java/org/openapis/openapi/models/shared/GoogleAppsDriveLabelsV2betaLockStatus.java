@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2betaLockStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public GoogleAppsDriveLabelsV2betaLockStatus withLocked(Boolean locked) {
         this.locked = locked;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaLockStatus(){}
 }

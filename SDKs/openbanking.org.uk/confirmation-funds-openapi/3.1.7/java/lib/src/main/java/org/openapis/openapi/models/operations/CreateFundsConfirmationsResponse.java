@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFundsConfirmationsResponse {
     
     public String contentType;
+
     public CreateFundsConfirmationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateFundsConfirmationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateFundsConfirmationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class CreateFundsConfirmationsResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateFundsConfirmationsResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -36,6 +40,7 @@ public class CreateFundsConfirmationsResponse {
      */
     
     public org.openapis.openapi.models.shared.OBFundsConfirmationResponse1 obFundsConfirmationResponse1;
+
     public CreateFundsConfirmationsResponse withOBFundsConfirmationResponse1(org.openapis.openapi.models.shared.OBFundsConfirmationResponse1 obFundsConfirmationResponse1) {
         this.obFundsConfirmationResponse1 = obFundsConfirmationResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateFundsConfirmationsResponse {
     
     
     public Integer statusCode;
+
     public CreateFundsConfirmationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class CreateFundsConfirmationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFundsConfirmationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateFundsConfirmationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

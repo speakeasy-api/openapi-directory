@@ -18,6 +18,7 @@ public class CreatePermissionRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public CreatePermissionRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
@@ -29,9 +30,11 @@ public class CreatePermissionRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public PermissionInput permission;
+
     public CreatePermissionRequestInput withPermission(PermissionInput permission) {
         this.permission = permission;
         return this;
     }
     
+    public CreatePermissionRequestInput(){}
 }

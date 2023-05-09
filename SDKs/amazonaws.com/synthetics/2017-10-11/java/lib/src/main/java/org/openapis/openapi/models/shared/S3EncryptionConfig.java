@@ -15,6 +15,7 @@ public class S3EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionMode")
     public EncryptionModeEnum encryptionMode;
+
     public S3EncryptionConfig withEncryptionMode(EncryptionModeEnum encryptionMode) {
         this.encryptionMode = encryptionMode;
         return this;
@@ -23,9 +24,11 @@ public class S3EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public S3EncryptionConfig withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public S3EncryptionConfig(){}
 }

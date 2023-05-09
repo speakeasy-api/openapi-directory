@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTRestoreDBClusterToPointInTimeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTRestoreDBClusterToPointInTimeActionEnum action;
+
     public POSTRestoreDBClusterToPointInTimeRequest withAction(POSTRestoreDBClusterToPointInTimeActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTRestoreDBClusterToPointInTimeRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTRestoreDBClusterToPointInTimeVersionEnum version;
+
     public POSTRestoreDBClusterToPointInTimeRequest withVersion(POSTRestoreDBClusterToPointInTimeVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTRestoreDBClusterToPointInTimeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTRestoreDBClusterToPointInTimeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTRestoreDBClusterToPointInTimeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTRestoreDBClusterToPointInTimeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTRestoreDBClusterToPointInTimeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTRestoreDBClusterToPointInTimeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTRestoreDBClusterToPointInTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTRestoreDBClusterToPointInTimeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTRestoreDBClusterToPointInTimeRequest(@JsonProperty("Action") POSTRestoreDBClusterToPointInTimeActionEnum action, @JsonProperty("Version") POSTRestoreDBClusterToPointInTimeVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

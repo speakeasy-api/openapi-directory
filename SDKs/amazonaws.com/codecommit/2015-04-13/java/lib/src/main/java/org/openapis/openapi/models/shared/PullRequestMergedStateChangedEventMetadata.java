@@ -15,6 +15,7 @@ public class PullRequestMergedStateChangedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationReference")
     public String destinationReference;
+
     public PullRequestMergedStateChangedEventMetadata withDestinationReference(String destinationReference) {
         this.destinationReference = destinationReference;
         return this;
@@ -23,6 +24,7 @@ public class PullRequestMergedStateChangedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeMetadata")
     public MergeMetadata mergeMetadata;
+
     public PullRequestMergedStateChangedEventMetadata withMergeMetadata(MergeMetadata mergeMetadata) {
         this.mergeMetadata = mergeMetadata;
         return this;
@@ -31,9 +33,11 @@ public class PullRequestMergedStateChangedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PullRequestMergedStateChangedEventMetadata withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PullRequestMergedStateChangedEventMetadata(){}
 }

@@ -18,6 +18,7 @@ public class LocalPostOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("couponCode")
     public String couponCode;
+
     public LocalPostOffer withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -29,6 +30,7 @@ public class LocalPostOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redeemOnlineUrl")
     public String redeemOnlineUrl;
+
     public LocalPostOffer withRedeemOnlineUrl(String redeemOnlineUrl) {
         this.redeemOnlineUrl = redeemOnlineUrl;
         return this;
@@ -40,9 +42,11 @@ public class LocalPostOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsConditions")
     public String termsConditions;
+
     public LocalPostOffer withTermsConditions(String termsConditions) {
         this.termsConditions = termsConditions;
         return this;
     }
     
+    public LocalPostOffer(){}
 }

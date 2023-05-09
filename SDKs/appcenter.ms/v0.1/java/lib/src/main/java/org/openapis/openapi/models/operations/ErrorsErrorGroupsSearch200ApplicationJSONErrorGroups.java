@@ -17,6 +17,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotation")
     public String annotation;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withAnnotation(String annotation) {
         this.annotation = annotation;
         return this;
@@ -25,6 +26,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appBuild")
     public String appBuild;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withAppBuild(String appBuild) {
         this.appBuild = appBuild;
         return this;
@@ -32,6 +34,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -40,6 +43,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeRaw")
     public String codeRaw;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withCodeRaw(String codeRaw) {
         this.codeRaw = codeRaw;
         return this;
@@ -47,6 +51,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     
     @JsonProperty("count")
     public Long count;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withCount(Long count) {
         this.count = count;
         return this;
@@ -54,6 +59,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     
     @JsonProperty("deviceCount")
     public Long deviceCount;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withDeviceCount(Long deviceCount) {
         this.deviceCount = deviceCount;
         return this;
@@ -61,6 +67,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     
     @JsonProperty("errorGroupId")
     public String errorGroupId;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -69,6 +76,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionAppCode")
     public Boolean exceptionAppCode;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withExceptionAppCode(Boolean exceptionAppCode) {
         this.exceptionAppCode = exceptionAppCode;
         return this;
@@ -77,6 +85,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionClassMethod")
     public Boolean exceptionClassMethod;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withExceptionClassMethod(Boolean exceptionClassMethod) {
         this.exceptionClassMethod = exceptionClassMethod;
         return this;
@@ -85,6 +94,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionClassName")
     public String exceptionClassName;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withExceptionClassName(String exceptionClassName) {
         this.exceptionClassName = exceptionClassName;
         return this;
@@ -93,6 +103,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionFile")
     public String exceptionFile;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withExceptionFile(String exceptionFile) {
         this.exceptionFile = exceptionFile;
         return this;
@@ -101,6 +112,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionLine")
     public String exceptionLine;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withExceptionLine(String exceptionLine) {
         this.exceptionLine = exceptionLine;
         return this;
@@ -109,6 +121,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionMessage")
     public String exceptionMessage;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withExceptionMessage(String exceptionMessage) {
         this.exceptionMessage = exceptionMessage;
         return this;
@@ -117,6 +130,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionMethod")
     public String exceptionMethod;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withExceptionMethod(String exceptionMethod) {
         this.exceptionMethod = exceptionMethod;
         return this;
@@ -125,6 +139,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionType")
     public String exceptionType;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withExceptionType(String exceptionType) {
         this.exceptionType = exceptionType;
         return this;
@@ -134,6 +149,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstOccurrence")
     public OffsetDateTime firstOccurrence;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withFirstOccurrence(OffsetDateTime firstOccurrence) {
         this.firstOccurrence = firstOccurrence;
         return this;
@@ -142,6 +158,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -151,6 +168,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastOccurrence")
     public OffsetDateTime lastOccurrence;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withLastOccurrence(OffsetDateTime lastOccurrence) {
         this.lastOccurrence = lastOccurrence;
         return this;
@@ -159,6 +177,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonFrames")
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFrames[] reasonFrames;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withReasonFrames(ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFrames[] reasonFrames) {
         this.reasonFrames = reasonFrames;
         return this;
@@ -166,9 +185,19 @@ public class ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups {
     
     @JsonProperty("state")
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum state;
+
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups withState(ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups(@JsonProperty("appVersion") String appVersion, @JsonProperty("count") Long count, @JsonProperty("deviceCount") Long deviceCount, @JsonProperty("errorGroupId") String errorGroupId, @JsonProperty("firstOccurrence") OffsetDateTime firstOccurrence, @JsonProperty("lastOccurrence") OffsetDateTime lastOccurrence, @JsonProperty("state") ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum state) {
+        this.appVersion = appVersion;
+        this.count = count;
+        this.deviceCount = deviceCount;
+        this.errorGroupId = errorGroupId;
+        this.firstOccurrence = firstOccurrence;
+        this.lastOccurrence = lastOccurrence;
+        this.state = state;
+  }
 }

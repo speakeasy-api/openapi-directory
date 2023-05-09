@@ -18,6 +18,7 @@ public class FundingSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public FundingSource withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class FundingSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public FundingSource withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -40,9 +42,11 @@ public class FundingSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FundingSource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FundingSource(){}
 }

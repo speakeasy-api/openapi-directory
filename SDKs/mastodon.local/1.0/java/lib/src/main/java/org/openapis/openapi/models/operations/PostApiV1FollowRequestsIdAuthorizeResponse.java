@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiV1FollowRequestsIdAuthorizeResponse {
     
     public String contentType;
+
     public PostApiV1FollowRequestsIdAuthorizeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostApiV1FollowRequestsIdAuthorizeResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostApiV1FollowRequestsIdAuthorizeResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class PostApiV1FollowRequestsIdAuthorizeResponse {
      */
     
     public org.openapis.openapi.models.shared.Relationship relationship;
+
     public PostApiV1FollowRequestsIdAuthorizeResponse withRelationship(org.openapis.openapi.models.shared.Relationship relationship) {
         this.relationship = relationship;
         return this;
@@ -36,6 +40,7 @@ public class PostApiV1FollowRequestsIdAuthorizeResponse {
     
     
     public Integer statusCode;
+
     public PostApiV1FollowRequestsIdAuthorizeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostApiV1FollowRequestsIdAuthorizeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiV1FollowRequestsIdAuthorizeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostApiV1FollowRequestsIdAuthorizeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectorIlb")
     public PacketMirroringForwardingRuleInfo collectorIlb;
+
     public PacketMirroring withCollectorIlb(PacketMirroringForwardingRuleInfo collectorIlb) {
         this.collectorIlb = collectorIlb;
         return this;
@@ -26,6 +27,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public PacketMirroring withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -37,6 +39,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PacketMirroring withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public PacketMirroringEnableEnum enable;
+
     public PacketMirroring withEnable(PacketMirroringEnableEnum enable) {
         this.enable = enable;
         return this;
@@ -56,6 +60,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public PacketMirroringFilter filter;
+
     public PacketMirroring withFilter(PacketMirroringFilter filter) {
         this.filter = filter;
         return this;
@@ -67,6 +72,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PacketMirroring withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +84,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PacketMirroring withKind(String kind) {
         this.kind = kind;
         return this;
@@ -86,6 +93,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mirroredResources")
     public PacketMirroringMirroredResourceInfo mirroredResources;
+
     public PacketMirroring withMirroredResources(PacketMirroringMirroredResourceInfo mirroredResources) {
         this.mirroredResources = mirroredResources;
         return this;
@@ -97,6 +105,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PacketMirroring withName(String name) {
         this.name = name;
         return this;
@@ -105,6 +114,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public PacketMirroringNetworkInfo network;
+
     public PacketMirroring withNetwork(PacketMirroringNetworkInfo network) {
         this.network = network;
         return this;
@@ -116,6 +126,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public PacketMirroring withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -127,6 +138,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public PacketMirroring withRegion(String region) {
         this.region = region;
         return this;
@@ -138,6 +150,7 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public PacketMirroring withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -149,9 +162,11 @@ public class PacketMirroring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public PacketMirroring withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
     }
     
+    public PacketMirroring(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInterconnectRemoteLocationsListRequest {
@@ -12,6 +13,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeInterconnectRemoteLocationsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeInterconnectRemoteLocationsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeInterconnectRemoteLocationsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeInterconnectRemoteLocationsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeInterconnectRemoteLocationsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public ComputeInterconnectRemoteLocationsListRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -72,6 +79,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeInterconnectRemoteLocationsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ComputeInterconnectRemoteLocationsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeInterconnectRemoteLocationsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ComputeInterconnectRemoteLocationsListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -112,6 +123,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ComputeInterconnectRemoteLocationsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeInterconnectRemoteLocationsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeInterconnectRemoteLocationsListRequest withProject(String project) {
         this.project = project;
         return this;
@@ -142,6 +156,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeInterconnectRemoteLocationsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnPartialSuccess")
     public Boolean returnPartialSuccess;
+
     public ComputeInterconnectRemoteLocationsListRequest withReturnPartialSuccess(Boolean returnPartialSuccess) {
         this.returnPartialSuccess = returnPartialSuccess;
         return this;
@@ -162,6 +178,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeInterconnectRemoteLocationsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,6 +189,7 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeInterconnectRemoteLocationsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -182,9 +200,13 @@ public class ComputeInterconnectRemoteLocationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeInterconnectRemoteLocationsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeInterconnectRemoteLocationsListRequest(@JsonProperty("project") String project) {
+        this.project = project;
+  }
 }

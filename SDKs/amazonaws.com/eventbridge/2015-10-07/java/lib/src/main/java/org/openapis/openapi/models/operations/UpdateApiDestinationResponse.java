@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApiDestinationResponse {
@@ -12,6 +13,7 @@ public class UpdateApiDestinationResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateApiDestinationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateApiDestinationResponse {
     
     
     public String contentType;
+
     public UpdateApiDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApiDestinationResponse {
      */
     
     public Object internalException;
+
     public UpdateApiDestinationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApiDestinationResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateApiDestinationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApiDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateApiDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateApiDestinationResponse {
     
     
     public Integer statusCode;
+
     public UpdateApiDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateApiDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApiDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateApiDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApiDestinationResponse updateApiDestinationResponse;
+
     public UpdateApiDestinationResponse withUpdateApiDestinationResponse(org.openapis.openapi.models.shared.UpdateApiDestinationResponse updateApiDestinationResponse) {
         this.updateApiDestinationResponse = updateApiDestinationResponse;
         return this;
     }
     
+    public UpdateApiDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

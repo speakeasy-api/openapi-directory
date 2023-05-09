@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AreasGetRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public AreasGetRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AreasGetRequest(@JsonProperty("version") String version) {
+        this.version = version;
+  }
 }

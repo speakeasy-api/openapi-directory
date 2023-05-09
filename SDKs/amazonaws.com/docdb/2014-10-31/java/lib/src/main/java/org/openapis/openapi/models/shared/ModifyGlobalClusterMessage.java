@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyGlobalClusterMessage - Represents the input to &lt;a&gt;ModifyGlobalCluster&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyGlobalClusterMessage {
     
     public Boolean deletionProtection;
+
     public ModifyGlobalClusterMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -19,6 +20,7 @@ public class ModifyGlobalClusterMessage {
     
     
     public String globalClusterIdentifier;
+
     public ModifyGlobalClusterMessage withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -26,9 +28,13 @@ public class ModifyGlobalClusterMessage {
     
     
     public String newGlobalClusterIdentifier;
+
     public ModifyGlobalClusterMessage withNewGlobalClusterIdentifier(String newGlobalClusterIdentifier) {
         this.newGlobalClusterIdentifier = newGlobalClusterIdentifier;
         return this;
     }
     
+    public ModifyGlobalClusterMessage(@JsonProperty("GlobalClusterIdentifier") String globalClusterIdentifier) {
+        this.globalClusterIdentifier = globalClusterIdentifier;
+  }
 }

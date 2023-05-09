@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductSearchWhoSawAlsoSawRequest {
@@ -12,6 +13,7 @@ public class ProductSearchWhoSawAlsoSawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ProductSearchWhoSawAlsoSawRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ProductSearchWhoSawAlsoSawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ProductSearchWhoSawAlsoSawRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class ProductSearchWhoSawAlsoSawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public Long productId;
+
     public ProductSearchWhoSawAlsoSawRequest withProductId(Long productId) {
         this.productId = productId;
         return this;
     }
     
+    public ProductSearchWhoSawAlsoSawRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("productId") Long productId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.productId = productId;
+  }
 }

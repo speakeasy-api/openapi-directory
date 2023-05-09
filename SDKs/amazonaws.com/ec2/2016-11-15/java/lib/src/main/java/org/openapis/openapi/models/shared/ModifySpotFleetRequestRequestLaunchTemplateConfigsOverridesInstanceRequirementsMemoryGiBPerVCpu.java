@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsMemoryGiBPerVCpu {
     
     public Double max;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsMemoryGiBPerVCpu withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public Double min;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsMemoryGiBPerVCpu withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsMemoryGiBPerVCpu(){}
 }

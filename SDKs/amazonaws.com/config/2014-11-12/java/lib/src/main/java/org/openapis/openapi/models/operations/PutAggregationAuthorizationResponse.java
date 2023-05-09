@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAggregationAuthorizationResponse {
     
     public String contentType;
+
     public PutAggregationAuthorizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutAggregationAuthorizationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutAggregationAuthorizationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class PutAggregationAuthorizationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutAggregationAuthorizationResponse putAggregationAuthorizationResponse;
+
     public PutAggregationAuthorizationResponse withPutAggregationAuthorizationResponse(org.openapis.openapi.models.shared.PutAggregationAuthorizationResponse putAggregationAuthorizationResponse) {
         this.putAggregationAuthorizationResponse = putAggregationAuthorizationResponse;
         return this;
@@ -36,6 +40,7 @@ public class PutAggregationAuthorizationResponse {
     
     
     public Integer statusCode;
+
     public PutAggregationAuthorizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PutAggregationAuthorizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAggregationAuthorizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutAggregationAuthorizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

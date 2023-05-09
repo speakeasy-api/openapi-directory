@@ -17,6 +17,7 @@ public class SendMessageRequestBody4Text {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody4TextChannelEnum channel;
+
     public SendMessageRequestBody4Text withChannel(SendMessageRequestBody4TextChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -28,6 +29,7 @@ public class SendMessageRequestBody4Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody4Text withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -39,6 +41,7 @@ public class SendMessageRequestBody4Text {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody4Text withFrom(String from) {
         this.from = from;
         return this;
@@ -49,6 +52,7 @@ public class SendMessageRequestBody4Text {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody4TextMessageTypeEnum messageType;
+
     public SendMessageRequestBody4Text withMessageType(SendMessageRequestBody4TextMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -57,6 +61,7 @@ public class SendMessageRequestBody4Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messenger")
     public SendMessageRequestBody4TextMessenger messenger;
+
     public SendMessageRequestBody4Text withMessenger(SendMessageRequestBody4TextMessenger messenger) {
         this.messenger = messenger;
         return this;
@@ -64,6 +69,7 @@ public class SendMessageRequestBody4Text {
     
     @JsonProperty("text")
     public String text;
+
     public SendMessageRequestBody4Text withText(String text) {
         this.text = text;
         return this;
@@ -75,9 +81,17 @@ public class SendMessageRequestBody4Text {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody4Text withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendMessageRequestBody4Text(@JsonProperty("channel") SendMessageRequestBody4TextChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody4TextMessageTypeEnum messageType, @JsonProperty("text") String text, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.text = text;
+        this.to = to;
+  }
 }

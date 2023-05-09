@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArchiveAssignmentResponse {
@@ -12,6 +13,7 @@ public class ArchiveAssignmentResponse {
      */
     
     public org.openapis.openapi.models.shared.Assignment assignment;
+
     public ArchiveAssignmentResponse withAssignment(org.openapis.openapi.models.shared.Assignment assignment) {
         this.assignment = assignment;
         return this;
@@ -19,6 +21,7 @@ public class ArchiveAssignmentResponse {
     
     
     public String contentType;
+
     public ArchiveAssignmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ArchiveAssignmentResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public ArchiveAssignmentResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -36,6 +40,7 @@ public class ArchiveAssignmentResponse {
     
     
     public Integer statusCode;
+
     public ArchiveAssignmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ArchiveAssignmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArchiveAssignmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ArchiveAssignmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

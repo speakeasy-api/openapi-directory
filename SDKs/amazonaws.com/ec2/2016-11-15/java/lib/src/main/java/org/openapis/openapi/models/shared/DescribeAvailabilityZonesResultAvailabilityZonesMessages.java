@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeAvailabilityZonesResultAvailabilityZonesMessages {
     
     public String message;
+
     public DescribeAvailabilityZonesResultAvailabilityZonesMessages withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeAvailabilityZonesResultAvailabilityZonesMessages(){}
 }

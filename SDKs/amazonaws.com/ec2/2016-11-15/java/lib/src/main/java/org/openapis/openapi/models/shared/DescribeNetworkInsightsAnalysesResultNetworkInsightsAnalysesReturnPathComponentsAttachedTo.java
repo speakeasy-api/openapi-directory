@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsAttachedTo {
     
     public String arn;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsAttachedTo withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String id;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsAttachedTo withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String name;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsAttachedTo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsAttachedTo(){}
 }

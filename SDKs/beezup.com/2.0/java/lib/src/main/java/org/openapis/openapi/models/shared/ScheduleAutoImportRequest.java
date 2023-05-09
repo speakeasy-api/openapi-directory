@@ -18,6 +18,7 @@ public class ScheduleAutoImportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localTimeZoneName")
     public String localTimeZoneName;
+
     public ScheduleAutoImportRequest withLocalTimeZoneName(String localTimeZoneName) {
         this.localTimeZoneName = localTimeZoneName;
         return this;
@@ -28,9 +29,13 @@ public class ScheduleAutoImportRequest {
      */
     @JsonProperty("schedules")
     public String[] schedules;
+
     public ScheduleAutoImportRequest withSchedules(String[] schedules) {
         this.schedules = schedules;
         return this;
     }
     
+    public ScheduleAutoImportRequest(@JsonProperty("schedules") String[] schedules) {
+        this.schedules = schedules;
+  }
 }

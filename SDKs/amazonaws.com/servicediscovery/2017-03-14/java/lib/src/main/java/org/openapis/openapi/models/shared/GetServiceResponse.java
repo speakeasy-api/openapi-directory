@@ -15,9 +15,11 @@ public class GetServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public Service service;
+
     public GetServiceResponse withService(Service service) {
         this.service = service;
         return this;
     }
     
+    public GetServiceResponse(){}
 }

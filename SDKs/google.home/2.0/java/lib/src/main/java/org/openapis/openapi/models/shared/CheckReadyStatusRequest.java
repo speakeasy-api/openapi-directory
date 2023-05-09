@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CheckReadyStatusRequest {
     @JsonProperty("play_ready_message")
     public Boolean playReadyMessage;
+
     public CheckReadyStatusRequest withPlayReadyMessage(Boolean playReadyMessage) {
         this.playReadyMessage = playReadyMessage;
         return this;
@@ -16,9 +17,14 @@ public class CheckReadyStatusRequest {
     
     @JsonProperty("user_id")
     public String userId;
+
     public CheckReadyStatusRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CheckReadyStatusRequest(@JsonProperty("play_ready_message") Boolean playReadyMessage, @JsonProperty("user_id") String userId) {
+        this.playReadyMessage = playReadyMessage;
+        this.userId = userId;
+  }
 }

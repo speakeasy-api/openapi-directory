@@ -15,6 +15,7 @@ public class ExecuteStatementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public ValueHolder[] parameters;
+
     public ExecuteStatementRequest withParameters(ValueHolder[] parameters) {
         this.parameters = parameters;
         return this;
@@ -22,6 +23,7 @@ public class ExecuteStatementRequest {
     
     @JsonProperty("Statement")
     public String statement;
+
     public ExecuteStatementRequest withStatement(String statement) {
         this.statement = statement;
         return this;
@@ -29,9 +31,14 @@ public class ExecuteStatementRequest {
     
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public ExecuteStatementRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public ExecuteStatementRequest(@JsonProperty("Statement") String statement, @JsonProperty("TransactionId") String transactionId) {
+        this.statement = statement;
+        this.transactionId = transactionId;
+  }
 }

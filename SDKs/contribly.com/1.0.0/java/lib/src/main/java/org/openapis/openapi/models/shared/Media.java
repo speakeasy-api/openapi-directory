@@ -15,6 +15,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Double duration;
+
     public Media withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -23,6 +24,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Media withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place")
     public Place place;
+
     public Media withPlace(Place place) {
         this.place = place;
         return this;
@@ -39,9 +42,11 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Media withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Media(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleFSubIdRequest {
@@ -13,6 +14,7 @@ public class GetSchedulesScheduleFSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSchedulesScheduleFSubIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +25,7 @@ public class GetSchedulesScheduleFSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetSchedulesScheduleFSubIdRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -33,6 +36,7 @@ public class GetSchedulesScheduleFSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSchedulesScheduleFSubIdRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -40,9 +44,14 @@ public class GetSchedulesScheduleFSubIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sub_id")
     public String subId;
+
     public GetSchedulesScheduleFSubIdRequest withSubId(String subId) {
         this.subId = subId;
         return this;
     }
     
+    public GetSchedulesScheduleFSubIdRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("sub_id") String subId) {
+        this.apiKey = apiKey;
+        this.subId = subId;
+  }
 }

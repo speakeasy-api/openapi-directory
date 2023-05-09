@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NctscResponse {
     
     public String contentType;
+
     public NctscResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class NctscResponse {
     
     
     public Integer statusCode;
+
     public NctscResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class NctscResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NctscResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class NctscResponse {
      */
     
     public Nctsc400ApplicationJSON nctsc400ApplicationJSONObject;
+
     public NctscResponse withNctsc400ApplicationJSONObject(Nctsc400ApplicationJSON nctsc400ApplicationJSONObject) {
         this.nctsc400ApplicationJSONObject = nctsc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class NctscResponse {
      */
     
     public Nctsc401ApplicationJSON nctsc401ApplicationJSONObject;
+
     public NctscResponse withNctsc401ApplicationJSONObject(Nctsc401ApplicationJSON nctsc401ApplicationJSONObject) {
         this.nctsc401ApplicationJSONObject = nctsc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class NctscResponse {
      */
     
     public Nctsc404ApplicationJSON nctsc404ApplicationJSONObject;
+
     public NctscResponse withNctsc404ApplicationJSONObject(Nctsc404ApplicationJSON nctsc404ApplicationJSONObject) {
         this.nctsc404ApplicationJSONObject = nctsc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class NctscResponse {
      */
     
     public Nctsc500ApplicationJSON nctsc500ApplicationJSONObject;
+
     public NctscResponse withNctsc500ApplicationJSONObject(Nctsc500ApplicationJSON nctsc500ApplicationJSONObject) {
         this.nctsc500ApplicationJSONObject = nctsc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class NctscResponse {
      */
     
     public Nctsc502ApplicationJSON nctsc502ApplicationJSONObject;
+
     public NctscResponse withNctsc502ApplicationJSONObject(Nctsc502ApplicationJSON nctsc502ApplicationJSONObject) {
         this.nctsc502ApplicationJSONObject = nctsc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class NctscResponse {
      */
     
     public Nctsc503ApplicationJSON nctsc503ApplicationJSONObject;
+
     public NctscResponse withNctsc503ApplicationJSONObject(Nctsc503ApplicationJSON nctsc503ApplicationJSONObject) {
         this.nctsc503ApplicationJSONObject = nctsc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class NctscResponse {
      */
     
     public Nctsc504ApplicationJSON nctsc504ApplicationJSONObject;
+
     public NctscResponse withNctsc504ApplicationJSONObject(Nctsc504ApplicationJSON nctsc504ApplicationJSONObject) {
         this.nctsc504ApplicationJSONObject = nctsc504ApplicationJSONObject;
         return this;
     }
     
+    public NctscResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

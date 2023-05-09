@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateConfigurationSetEventDestinationRequest - Represents a request to update the event destination of a configuration set. Configuration sets enable you to publish email sending events. For information about using configuration sets, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateConfigurationSetEventDestinationRequest {
     
     public String configurationSetName;
+
     public UpdateConfigurationSetEventDestinationRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,9 +20,14 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     
     public EventDestination eventDestination;
+
     public UpdateConfigurationSetEventDestinationRequest withEventDestination(EventDestination eventDestination) {
         this.eventDestination = eventDestination;
         return this;
     }
     
+    public UpdateConfigurationSetEventDestinationRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("EventDestination") EventDestination eventDestination) {
+        this.configurationSetName = configurationSetName;
+        this.eventDestination = eventDestination;
+  }
 }

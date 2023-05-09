@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListResourceSetResourcesResponse {
     @JsonProperty("Items")
     public Resource[] items;
+
     public ListResourceSetResourcesResponse withItems(Resource[] items) {
         this.items = items;
         return this;
@@ -22,9 +23,13 @@ public class ListResourceSetResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceSetResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourceSetResourcesResponse(@JsonProperty("Items") Resource[] items) {
+        this.items = items;
+  }
 }

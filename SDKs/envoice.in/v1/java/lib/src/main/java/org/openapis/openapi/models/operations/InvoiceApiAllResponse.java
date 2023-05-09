@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvoiceApiAllResponse {
     
     public byte[] body;
+
     public InvoiceApiAllResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class InvoiceApiAllResponse {
     
     
     public String contentType;
+
     public InvoiceApiAllResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class InvoiceApiAllResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResultInvoiceDetailsApiModel listResultInvoiceDetailsApiModel;
+
     public InvoiceApiAllResponse withListResultInvoiceDetailsApiModel(org.openapis.openapi.models.shared.ListResultInvoiceDetailsApiModel listResultInvoiceDetailsApiModel) {
         this.listResultInvoiceDetailsApiModel = listResultInvoiceDetailsApiModel;
         return this;
@@ -33,6 +37,7 @@ public class InvoiceApiAllResponse {
     
     
     public Integer statusCode;
+
     public InvoiceApiAllResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class InvoiceApiAllResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvoiceApiAllResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InvoiceApiAllResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

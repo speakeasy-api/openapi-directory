@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteInstanceAccessControlAttributeConfigurationRequest {
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public DeleteInstanceAccessControlAttributeConfigurationRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
     }
     
+    public DeleteInstanceAccessControlAttributeConfigurationRequest(@JsonProperty("InstanceArn") String instanceArn) {
+        this.instanceArn = instanceArn;
+  }
 }

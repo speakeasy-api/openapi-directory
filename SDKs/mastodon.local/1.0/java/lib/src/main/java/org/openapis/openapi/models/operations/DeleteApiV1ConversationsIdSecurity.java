@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1ConversationsIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearerAuth;
+
     public DeleteApiV1ConversationsIdSecurity withBearerAuth(String bearerAuth) {
         this.bearerAuth = bearerAuth;
         return this;
     }
     
+    public DeleteApiV1ConversationsIdSecurity(@JsonProperty("bearerAuth") String bearerAuth) {
+        this.bearerAuth = bearerAuth;
+  }
 }

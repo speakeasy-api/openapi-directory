@@ -18,9 +18,11 @@ public class Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Bucket withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Bucket(){}
 }

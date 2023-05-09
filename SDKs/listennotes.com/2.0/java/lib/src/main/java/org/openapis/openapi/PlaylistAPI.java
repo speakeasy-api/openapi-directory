@@ -78,11 +78,9 @@ public class PlaylistAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlaylistByIdResponse res = new org.openapis.openapi.models.operations.GetPlaylistByIdResponse() {{
+        org.openapis.openapi.models.operations.GetPlaylistByIdResponse res = new org.openapis.openapi.models.operations.GetPlaylistByIdResponse(contentType, httpRes.statusCode()) {{
             playlistResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -137,11 +135,9 @@ public class PlaylistAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlaylistsResponse res = new org.openapis.openapi.models.operations.GetPlaylistsResponse() {{
+        org.openapis.openapi.models.operations.GetPlaylistsResponse res = new org.openapis.openapi.models.operations.GetPlaylistsResponse(contentType, httpRes.statusCode()) {{
             playlistsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

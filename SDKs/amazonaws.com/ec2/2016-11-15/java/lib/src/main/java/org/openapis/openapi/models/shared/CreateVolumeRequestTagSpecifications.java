@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVolumeRequestTagSpecifications {
     
     public CreateVolumeRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateVolumeRequestTagSpecifications withResourceType(CreateVolumeRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateVolumeRequestTagSpecifications {
     
     
     public CreateVolumeRequestTagSpecificationsTags[] tags;
+
     public CreateVolumeRequestTagSpecifications withTags(CreateVolumeRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateVolumeRequestTagSpecifications(){}
 }

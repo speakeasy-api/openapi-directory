@@ -18,6 +18,7 @@ public class CategoryRatedAreasCategoryScoresRestaurant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public Double overall;
+
     public CategoryRatedAreasCategoryScoresRestaurant withOverall(Double overall) {
         this.overall = overall;
         return this;
@@ -29,9 +30,11 @@ public class CategoryRatedAreasCategoryScoresRestaurant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vegetarian")
     public Double vegetarian;
+
     public CategoryRatedAreasCategoryScoresRestaurant withVegetarian(Double vegetarian) {
         this.vegetarian = vegetarian;
         return this;
     }
     
+    public CategoryRatedAreasCategoryScoresRestaurant(){}
 }

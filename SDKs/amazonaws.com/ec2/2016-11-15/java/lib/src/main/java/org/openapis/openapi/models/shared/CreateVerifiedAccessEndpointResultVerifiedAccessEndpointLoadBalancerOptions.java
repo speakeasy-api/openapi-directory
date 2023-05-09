@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions {
     
     public String loadBalancerArn;
+
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalance
     
     
     public Long port;
+
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions withPort(Long port) {
         this.port = port;
         return this;
@@ -26,6 +28,7 @@ public class CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalance
     
     
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum protocol;
+
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions withProtocol(CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -33,9 +36,11 @@ public class CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalance
     
     
     public String[] subnetIds;
+
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions(){}
 }

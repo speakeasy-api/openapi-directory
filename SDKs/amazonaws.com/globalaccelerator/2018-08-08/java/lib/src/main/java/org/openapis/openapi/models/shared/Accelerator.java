@@ -20,6 +20,7 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public Accelerator withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
@@ -30,6 +31,7 @@ public class Accelerator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public Accelerator withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public Accelerator withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -46,6 +49,7 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DualStackDnsName")
     public String dualStackDnsName;
+
     public Accelerator withDualStackDnsName(String dualStackDnsName) {
         this.dualStackDnsName = dualStackDnsName;
         return this;
@@ -54,6 +58,7 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public Accelerator withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -62,6 +67,7 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public AcceleratorEvent[] events;
+
     public Accelerator withEvents(AcceleratorEvent[] events) {
         this.events = events;
         return this;
@@ -70,6 +76,7 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public Accelerator withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -78,6 +85,7 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpSets")
     public IpSet[] ipSets;
+
     public Accelerator withIpSets(IpSet[] ipSets) {
         this.ipSets = ipSets;
         return this;
@@ -88,6 +96,7 @@ public class Accelerator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Accelerator withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -96,6 +105,7 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Accelerator withName(String name) {
         this.name = name;
         return this;
@@ -104,9 +114,11 @@ public class Accelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AcceleratorStatusEnum status;
+
     public Accelerator withStatus(AcceleratorStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Accelerator(){}
 }

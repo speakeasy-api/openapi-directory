@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPoliciesForTargetResponse {
@@ -12,6 +13,7 @@ public class ListPoliciesForTargetResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListPoliciesForTargetResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListPoliciesForTargetResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPoliciesForTargetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class ListPoliciesForTargetResponse {
     
     
     public String contentType;
+
     public ListPoliciesForTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListPoliciesForTargetResponse {
      */
     
     public Object invalidInputException;
+
     public ListPoliciesForTargetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListPoliciesForTargetResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPoliciesForTargetResponse listPoliciesForTargetResponse;
+
     public ListPoliciesForTargetResponse withListPoliciesForTargetResponse(org.openapis.openapi.models.shared.ListPoliciesForTargetResponse listPoliciesForTargetResponse) {
         this.listPoliciesForTargetResponse = listPoliciesForTargetResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListPoliciesForTargetResponse {
      */
     
     public Object serviceException;
+
     public ListPoliciesForTargetResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class ListPoliciesForTargetResponse {
     
     
     public Integer statusCode;
+
     public ListPoliciesForTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListPoliciesForTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPoliciesForTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListPoliciesForTargetResponse {
      */
     
     public Object targetNotFoundException;
+
     public ListPoliciesForTargetResponse withTargetNotFoundException(Object targetNotFoundException) {
         this.targetNotFoundException = targetNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class ListPoliciesForTargetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListPoliciesForTargetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class ListPoliciesForTargetResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public ListPoliciesForTargetResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public ListPoliciesForTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

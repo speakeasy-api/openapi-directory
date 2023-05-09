@@ -15,6 +15,7 @@ public class ListSignalingChannelsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelNameCondition")
     public ListSignalingChannelsRequestBodyChannelNameCondition channelNameCondition;
+
     public ListSignalingChannelsRequestBody withChannelNameCondition(ListSignalingChannelsRequestBodyChannelNameCondition channelNameCondition) {
         this.channelNameCondition = channelNameCondition;
         return this;
@@ -26,6 +27,7 @@ public class ListSignalingChannelsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListSignalingChannelsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListSignalingChannelsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSignalingChannelsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSignalingChannelsRequestBody(){}
 }

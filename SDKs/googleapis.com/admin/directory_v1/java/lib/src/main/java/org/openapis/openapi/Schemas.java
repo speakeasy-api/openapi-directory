@@ -59,10 +59,8 @@ public class Schemas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectorySchemasDeleteResponse res = new org.openapis.openapi.models.operations.DirectorySchemasDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectorySchemasDeleteResponse res = new org.openapis.openapi.models.operations.DirectorySchemasDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Schemas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectorySchemasGetResponse res = new org.openapis.openapi.models.operations.DirectorySchemasGetResponse() {{
+        org.openapis.openapi.models.operations.DirectorySchemasGetResponse res = new org.openapis.openapi.models.operations.DirectorySchemasGetResponse(contentType, httpRes.statusCode()) {{
             schema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Schemas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectorySchemasInsertResponse res = new org.openapis.openapi.models.operations.DirectorySchemasInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectorySchemasInsertResponse res = new org.openapis.openapi.models.operations.DirectorySchemasInsertResponse(contentType, httpRes.statusCode()) {{
             schema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Schemas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectorySchemasListResponse res = new org.openapis.openapi.models.operations.DirectorySchemasListResponse() {{
+        org.openapis.openapi.models.operations.DirectorySchemasListResponse res = new org.openapis.openapi.models.operations.DirectorySchemasListResponse(contentType, httpRes.statusCode()) {{
             schemas = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Schemas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectorySchemasPatchResponse res = new org.openapis.openapi.models.operations.DirectorySchemasPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectorySchemasPatchResponse res = new org.openapis.openapi.models.operations.DirectorySchemasPatchResponse(contentType, httpRes.statusCode()) {{
             schema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Schemas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectorySchemasUpdateResponse res = new org.openapis.openapi.models.operations.DirectorySchemasUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectorySchemasUpdateResponse res = new org.openapis.openapi.models.operations.DirectorySchemasUpdateResponse(contentType, httpRes.statusCode()) {{
             schema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

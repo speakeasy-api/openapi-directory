@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTestGridProjectsResponse {
@@ -12,6 +13,7 @@ public class ListTestGridProjectsResponse {
      */
     
     public Object argumentException;
+
     public ListTestGridProjectsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListTestGridProjectsResponse {
     
     
     public String contentType;
+
     public ListTestGridProjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTestGridProjectsResponse {
      */
     
     public Object internalServiceException;
+
     public ListTestGridProjectsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListTestGridProjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTestGridProjectsResult listTestGridProjectsResult;
+
     public ListTestGridProjectsResponse withListTestGridProjectsResult(org.openapis.openapi.models.shared.ListTestGridProjectsResult listTestGridProjectsResult) {
         this.listTestGridProjectsResult = listTestGridProjectsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListTestGridProjectsResponse {
     
     
     public Integer statusCode;
+
     public ListTestGridProjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListTestGridProjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTestGridProjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTestGridProjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

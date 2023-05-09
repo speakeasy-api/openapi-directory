@@ -12,6 +12,7 @@ public class SplunkAssetSyncCreatedJSONRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SplunkAssetSyncCreatedJSONRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class SplunkAssetSyncCreatedJSONRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public SplunkAssetSyncCreatedJSONRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -32,9 +34,11 @@ public class SplunkAssetSyncCreatedJSONRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public Long since;
+
     public SplunkAssetSyncCreatedJSONRequest withSince(Long since) {
         this.since = since;
         return this;
     }
     
+    public SplunkAssetSyncCreatedJSONRequest(){}
 }

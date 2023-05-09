@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NetworkAccessConfiguration {
     @JsonProperty("prefixListIds")
     public String[] prefixListIds;
+
     public NetworkAccessConfiguration withPrefixListIds(String[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -19,9 +20,14 @@ public class NetworkAccessConfiguration {
     
     @JsonProperty("vpceIds")
     public String[] vpceIds;
+
     public NetworkAccessConfiguration withVpceIds(String[] vpceIds) {
         this.vpceIds = vpceIds;
         return this;
     }
     
+    public NetworkAccessConfiguration(@JsonProperty("prefixListIds") String[] prefixListIds, @JsonProperty("vpceIds") String[] vpceIds) {
+        this.prefixListIds = prefixListIds;
+        this.vpceIds = vpceIds;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTypedLinkFacetResponse {
@@ -12,6 +13,7 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTypedLinkFacetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTypedLinkFacetResponse {
     
     
     public String contentType;
+
     public DeleteTypedLinkFacetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public java.util.Map<String, Object> deleteTypedLinkFacetResponse;
+
     public DeleteTypedLinkFacetResponse withDeleteTypedLinkFacetResponse(java.util.Map<String, Object> deleteTypedLinkFacetResponse) {
         this.deleteTypedLinkFacetResponse = deleteTypedLinkFacetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public Object facetNotFoundException;
+
     public DeleteTypedLinkFacetResponse withFacetNotFoundException(Object facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteTypedLinkFacetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public Object invalidArnException;
+
     public DeleteTypedLinkFacetResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteTypedLinkFacetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteTypedLinkFacetResponse {
     
     
     public Integer statusCode;
+
     public DeleteTypedLinkFacetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteTypedLinkFacetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTypedLinkFacetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTypedLinkFacetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public Object retryableConflictException;
+
     public DeleteTypedLinkFacetResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteTypedLinkFacetResponse {
      */
     
     public Object validationException;
+
     public DeleteTypedLinkFacetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteTypedLinkFacetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class Region {
      */
     @JsonProperty("height")
     public Float height;
+
     public Region withHeight(Float height) {
         this.height = height;
         return this;
@@ -22,6 +23,7 @@ public class Region {
      */
     @JsonProperty("left")
     public Float left;
+
     public Region withLeft(Float left) {
         this.left = left;
         return this;
@@ -32,6 +34,7 @@ public class Region {
      */
     @JsonProperty("tagId")
     public String tagId;
+
     public Region withTagId(String tagId) {
         this.tagId = tagId;
         return this;
@@ -42,6 +45,7 @@ public class Region {
      */
     @JsonProperty("top")
     public Float top;
+
     public Region withTop(Float top) {
         this.top = top;
         return this;
@@ -52,9 +56,17 @@ public class Region {
      */
     @JsonProperty("width")
     public Float width;
+
     public Region withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public Region(@JsonProperty("height") Float height, @JsonProperty("left") Float left, @JsonProperty("tagId") String tagId, @JsonProperty("top") Float top, @JsonProperty("width") Float width) {
+        this.height = height;
+        this.left = left;
+        this.tagId = tagId;
+        this.top = top;
+        this.width = width;
+  }
 }

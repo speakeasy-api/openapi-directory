@@ -18,6 +18,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_token")
     public String apiToken;
+
     public RemoteServerConfigurationFileEntity withApiToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
@@ -29,6 +30,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config_version")
     public String configVersion;
+
     public RemoteServerConfigurationFileEntity withConfigVersion(String configVersion) {
         this.configVersion = configVersion;
         return this;
@@ -37,6 +39,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public RemoteServerConfigurationFileEntity withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -48,6 +51,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public RemoteServerConfigurationFileEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission_set")
     public String permissionSet;
+
     public RemoteServerConfigurationFileEntity withPermissionSet(String permissionSet) {
         this.permissionSet = permissionSet;
         return this;
@@ -67,6 +72,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public RemoteServerConfigurationFileEntity withPort(Integer port) {
         this.port = port;
         return this;
@@ -78,6 +84,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_key")
     public String privateKey;
+
     public RemoteServerConfigurationFileEntity withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -89,6 +96,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public RemoteServerConfigurationFileEntity withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -100,6 +108,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public String root;
+
     public RemoteServerConfigurationFileEntity withRoot(String root) {
         this.root = root;
         return this;
@@ -108,6 +117,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server_host_key")
     public String serverHostKey;
+
     public RemoteServerConfigurationFileEntity withServerHostKey(String serverHostKey) {
         this.serverHostKey = serverHostKey;
         return this;
@@ -119,6 +129,7 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RemoteServerConfigurationFileEntity withStatus(String status) {
         this.status = status;
         return this;
@@ -127,9 +138,11 @@ public class RemoteServerConfigurationFileEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subdomain")
     public String subdomain;
+
     public RemoteServerConfigurationFileEntity withSubdomain(String subdomain) {
         this.subdomain = subdomain;
         return this;
     }
     
+    public RemoteServerConfigurationFileEntity(){}
 }

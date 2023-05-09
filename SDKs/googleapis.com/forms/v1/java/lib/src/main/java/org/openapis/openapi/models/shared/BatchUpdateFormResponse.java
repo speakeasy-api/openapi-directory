@@ -18,6 +18,7 @@ public class BatchUpdateFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public Form form;
+
     public BatchUpdateFormResponse withForm(Form form) {
         this.form = form;
         return this;
@@ -29,6 +30,7 @@ public class BatchUpdateFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public Response[] replies;
+
     public BatchUpdateFormResponse withReplies(Response[] replies) {
         this.replies = replies;
         return this;
@@ -40,9 +42,11 @@ public class BatchUpdateFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeControl")
     public WriteControl writeControl;
+
     public BatchUpdateFormResponse withWriteControl(WriteControl writeControl) {
         this.writeControl = writeControl;
         return this;
     }
     
+    public BatchUpdateFormResponse(){}
 }

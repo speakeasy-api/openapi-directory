@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEdgePackagingJobsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListEdgePackagingJobsRequest listEdgePackagingJobsRequest;
+
     public ListEdgePackagingJobsRequest withListEdgePackagingJobsRequest(org.openapis.openapi.models.shared.ListEdgePackagingJobsRequest listEdgePackagingJobsRequest) {
         this.listEdgePackagingJobsRequest = listEdgePackagingJobsRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListEdgePackagingJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListEdgePackagingJobsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListEdgePackagingJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListEdgePackagingJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListEdgePackagingJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListEdgePackagingJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListEdgePackagingJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListEdgePackagingJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListEdgePackagingJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListEdgePackagingJobsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListEdgePackagingJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListEdgePackagingJobsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListEdgePackagingJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListEdgePackagingJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListEdgePackagingJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListEdgePackagingJobsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListEdgePackagingJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListEdgePackagingJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListEdgePackagingJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListEdgePackagingJobsXAmzTargetEnum xAmzTarget;
+
     public ListEdgePackagingJobsRequest withXAmzTarget(ListEdgePackagingJobsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListEdgePackagingJobsRequest(@JsonProperty("ListEdgePackagingJobsRequest") org.openapis.openapi.models.shared.ListEdgePackagingJobsRequest listEdgePackagingJobsRequest, @JsonProperty("X-Amz-Target") ListEdgePackagingJobsXAmzTargetEnum xAmzTarget) {
+        this.listEdgePackagingJobsRequest = listEdgePackagingJobsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

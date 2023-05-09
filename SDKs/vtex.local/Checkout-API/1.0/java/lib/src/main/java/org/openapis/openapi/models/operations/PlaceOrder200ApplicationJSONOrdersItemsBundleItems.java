@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PlaceOrder200ApplicationJSONOrdersItemsBundleItems withId(Long id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrder200ApplicationJSONOrdersItemsBundleItems withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public PlaceOrder200ApplicationJSONOrdersItemsBundleItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -48,9 +51,11 @@ public class PlaceOrder200ApplicationJSONOrdersItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PlaceOrder200ApplicationJSONOrdersItemsBundleItems withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersItemsBundleItems(){}
 }

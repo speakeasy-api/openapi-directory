@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateFromAdministratorAccountResponse {
     
     public String contentType;
+
     public DisassociateFromAdministratorAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public java.util.Map<String, Object> disassociateFromAdministratorAccountResponse;
+
     public DisassociateFromAdministratorAccountResponse withDisassociateFromAdministratorAccountResponse(java.util.Map<String, Object> disassociateFromAdministratorAccountResponse) {
         this.disassociateFromAdministratorAccountResponse = disassociateFromAdministratorAccountResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object internalException;
+
     public DisassociateFromAdministratorAccountResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object invalidAccessException;
+
     public DisassociateFromAdministratorAccountResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object invalidInputException;
+
     public DisassociateFromAdministratorAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object limitExceededException;
+
     public DisassociateFromAdministratorAccountResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateFromAdministratorAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateFromAdministratorAccountResponse {
     
     
     public Integer statusCode;
+
     public DisassociateFromAdministratorAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateFromAdministratorAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateFromAdministratorAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateFromAdministratorAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

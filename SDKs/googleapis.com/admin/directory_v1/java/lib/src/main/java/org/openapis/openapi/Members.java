@@ -59,10 +59,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMembersDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryMembersDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMembersDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryMembersDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMembersGetResponse res = new org.openapis.openapi.models.operations.DirectoryMembersGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMembersGetResponse res = new org.openapis.openapi.models.operations.DirectoryMembersGetResponse(contentType, httpRes.statusCode()) {{
             member = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMembersHasMemberResponse res = new org.openapis.openapi.models.operations.DirectoryMembersHasMemberResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMembersHasMemberResponse res = new org.openapis.openapi.models.operations.DirectoryMembersHasMemberResponse(contentType, httpRes.statusCode()) {{
             membersHasMember = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMembersInsertResponse res = new org.openapis.openapi.models.operations.DirectoryMembersInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMembersInsertResponse res = new org.openapis.openapi.models.operations.DirectoryMembersInsertResponse(contentType, httpRes.statusCode()) {{
             member = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +231,9 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMembersListResponse res = new org.openapis.openapi.models.operations.DirectoryMembersListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMembersListResponse res = new org.openapis.openapi.models.operations.DirectoryMembersListResponse(contentType, httpRes.statusCode()) {{
             members = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMembersPatchResponse res = new org.openapis.openapi.models.operations.DirectoryMembersPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMembersPatchResponse res = new org.openapis.openapi.models.operations.DirectoryMembersPatchResponse(contentType, httpRes.statusCode()) {{
             member = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,11 +323,9 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMembersUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryMembersUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMembersUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryMembersUpdateResponse(contentType, httpRes.statusCode()) {{
             member = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

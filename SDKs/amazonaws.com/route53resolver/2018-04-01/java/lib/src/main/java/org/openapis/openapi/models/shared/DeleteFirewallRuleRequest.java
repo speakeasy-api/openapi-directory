@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFirewallRuleRequest {
     @JsonProperty("FirewallDomainListId")
     public String firewallDomainListId;
+
     public DeleteFirewallRuleRequest withFirewallDomainListId(String firewallDomainListId) {
         this.firewallDomainListId = firewallDomainListId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteFirewallRuleRequest {
     
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public DeleteFirewallRuleRequest withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
     }
     
+    public DeleteFirewallRuleRequest(@JsonProperty("FirewallDomainListId") String firewallDomainListId, @JsonProperty("FirewallRuleGroupId") String firewallRuleGroupId) {
+        this.firewallDomainListId = firewallDomainListId;
+        this.firewallRuleGroupId = firewallRuleGroupId;
+  }
 }

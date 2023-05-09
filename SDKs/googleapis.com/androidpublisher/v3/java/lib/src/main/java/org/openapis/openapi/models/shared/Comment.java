@@ -18,6 +18,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerComment")
     public DeveloperComment developerComment;
+
     public Comment withDeveloperComment(DeveloperComment developerComment) {
         this.developerComment = developerComment;
         return this;
@@ -29,9 +30,11 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userComment")
     public UserComment userComment;
+
     public Comment withUserComment(UserComment userComment) {
         this.userComment = userComment;
         return this;
     }
     
+    public Comment(){}
 }

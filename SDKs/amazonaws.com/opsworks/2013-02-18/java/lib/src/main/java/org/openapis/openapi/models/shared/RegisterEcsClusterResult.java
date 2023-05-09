@@ -15,9 +15,11 @@ public class RegisterEcsClusterResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsClusterArn")
     public String ecsClusterArn;
+
     public RegisterEcsClusterResult withEcsClusterArn(String ecsClusterArn) {
         this.ecsClusterArn = ecsClusterArn;
         return this;
     }
     
+    public RegisterEcsClusterResult(){}
 }

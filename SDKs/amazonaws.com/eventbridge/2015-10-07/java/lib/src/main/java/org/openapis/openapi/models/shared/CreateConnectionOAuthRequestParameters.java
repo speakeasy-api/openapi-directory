@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionOAuthRequestParameters {
     @JsonProperty("AuthorizationEndpoint")
     public String authorizationEndpoint;
+
     public CreateConnectionOAuthRequestParameters withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -21,6 +22,7 @@ public class CreateConnectionOAuthRequestParameters {
     
     @JsonProperty("ClientParameters")
     public CreateConnectionOAuthClientRequestParameters clientParameters;
+
     public CreateConnectionOAuthRequestParameters withClientParameters(CreateConnectionOAuthClientRequestParameters clientParameters) {
         this.clientParameters = clientParameters;
         return this;
@@ -28,6 +30,7 @@ public class CreateConnectionOAuthRequestParameters {
     
     @JsonProperty("HttpMethod")
     public ConnectionOAuthHttpMethodEnum httpMethod;
+
     public CreateConnectionOAuthRequestParameters withHttpMethod(ConnectionOAuthHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -36,9 +39,15 @@ public class CreateConnectionOAuthRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OAuthHttpParameters")
     public ConnectionHttpParameters oAuthHttpParameters;
+
     public CreateConnectionOAuthRequestParameters withOAuthHttpParameters(ConnectionHttpParameters oAuthHttpParameters) {
         this.oAuthHttpParameters = oAuthHttpParameters;
         return this;
     }
     
+    public CreateConnectionOAuthRequestParameters(@JsonProperty("AuthorizationEndpoint") String authorizationEndpoint, @JsonProperty("ClientParameters") CreateConnectionOAuthClientRequestParameters clientParameters, @JsonProperty("HttpMethod") ConnectionOAuthHttpMethodEnum httpMethod) {
+        this.authorizationEndpoint = authorizationEndpoint;
+        this.clientParameters = clientParameters;
+        this.httpMethod = httpMethod;
+  }
 }

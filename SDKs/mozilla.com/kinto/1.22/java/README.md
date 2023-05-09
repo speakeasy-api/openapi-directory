@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateAttachmentRequest;
 import org.openapis.openapi.models.operations.CreateAttachmentResponse;
 
@@ -26,11 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateAttachmentRequest req = new CreateAttachmentRequest() {{
-                bucketId = "corrupti";
-                collectionId = "provident";
-                id = "distinctio";
-            }}            
+            CreateAttachmentRequest req = new CreateAttachmentRequest("corrupti", "provident", "distinctio");            
 
             CreateAttachmentResponse res = sdk.attachment.createAttachment(req);
 
@@ -40,6 +35,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,51 +44,51 @@ public class Application {
 ## Available Resources and Operations
 
 
-### attachment
+### [attachment](docs/attachment/README.md)
 
-* `createAttachment`
-* `deleteAttachment`
+* [createAttachment](docs/attachment/README.md#createattachment)
+* [deleteAttachment](docs/attachment/README.md#deleteattachment)
 
-### batch
+### [batch](docs/batch/README.md)
 
-* `batch`
+* [batch](docs/batch/README.md#batch)
 
-### buckets
+### [buckets](docs/buckets/README.md)
 
-* `getBucket`
-* `getBuckets`
+* [getBucket](docs/buckets/README.md#getbucket)
+* [getBuckets](docs/buckets/README.md#getbuckets)
 
-### changess
+### [changess](docs/changess/README.md)
 
-* `getChangess`
+* [getChangess](docs/changess/README.md#getchangess)
 
-### collectionChangeset
+### [collectionChangeset](docs/collectionchangeset/README.md)
 
-* `getCollectionChangeset`
+* [getCollectionChangeset](docs/collectionchangeset/README.md#getcollectionchangeset)
 
-### collections
+### [collections](docs/collections/README.md)
 
-* `getCollection`
-* `getCollections`
+* [getCollection](docs/collections/README.md#getcollection)
+* [getCollections](docs/collections/README.md#getcollections)
 
-### groups
+### [groups](docs/groups/README.md)
 
-* `getGroup`
-* `getGroups`
+* [getGroup](docs/groups/README.md#getgroup)
+* [getGroups](docs/groups/README.md#getgroups)
 
-### records
+### [records](docs/records/README.md)
 
-* `getRecord`
-* `getRecords`
+* [getRecord](docs/records/README.md#getrecord)
+* [getRecords](docs/records/README.md#getrecords)
 
-### utilities
+### [utilities](docs/utilities/README.md)
 
-* `heartbeat`
-* `lbheartbeat`
-* `version`
-* `contribute`
-* `getOpenapiSpec`
-* `serverInfo`
+* [heartbeat](docs/utilities/README.md#heartbeat)
+* [lbheartbeat](docs/utilities/README.md#lbheartbeat)
+* [version](docs/utilities/README.md#version)
+* [contribute](docs/utilities/README.md#contribute)
+* [getOpenapiSpec](docs/utilities/README.md#getopenapispec)
+* [serverInfo](docs/utilities/README.md#serverinfo)
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRepositoryTriggersInput {
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutRepositoryTriggersInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -19,9 +20,14 @@ public class PutRepositoryTriggersInput {
     
     @JsonProperty("triggers")
     public RepositoryTrigger[] triggers;
+
     public PutRepositoryTriggersInput withTriggers(RepositoryTrigger[] triggers) {
         this.triggers = triggers;
         return this;
     }
     
+    public PutRepositoryTriggersInput(@JsonProperty("repositoryName") String repositoryName, @JsonProperty("triggers") RepositoryTrigger[] triggers) {
+        this.repositoryName = repositoryName;
+        this.triggers = triggers;
+  }
 }

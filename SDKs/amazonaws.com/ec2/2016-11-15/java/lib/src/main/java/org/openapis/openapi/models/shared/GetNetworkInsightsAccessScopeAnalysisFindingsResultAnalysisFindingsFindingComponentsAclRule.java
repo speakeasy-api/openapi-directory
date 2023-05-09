@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule {
     
     public String cidr;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public Boolean egress;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRulePortRange portRange;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule withPortRange(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRulePortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -33,6 +36,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String protocol;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String ruleAction;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule withRuleAction(String ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -47,9 +52,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public Long ruleNumber;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule(){}
 }

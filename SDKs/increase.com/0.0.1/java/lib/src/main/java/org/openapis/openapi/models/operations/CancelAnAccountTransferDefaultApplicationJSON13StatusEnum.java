@@ -7,12 +7,12 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum CancelAnAccountTransferDefaultApplicationJSON13StatusEnum {
-    FOUR_HUNDRED_AND_TWENTY_NINE("429");
+    FOUR_HUNDRED_AND_TWENTY_NINE(429L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private CancelAnAccountTransferDefaultApplicationJSON13StatusEnum(String value) {
+    private CancelAnAccountTransferDefaultApplicationJSON13StatusEnum(Long value) {
         this.value = value;
     }
 }

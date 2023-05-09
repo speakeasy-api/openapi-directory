@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationHipRequestJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05HealthInformationHipRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05HealthInformationHipRequestJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05HealthInformationHipRequestJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIPHIRequest hiphiRequest;
+
     public PostV05HealthInformationHipRequestJsonRequest withHIPHIRequest(org.openapis.openapi.models.shared.HIPHIRequest hiphiRequest) {
         this.hiphiRequest = hiphiRequest;
         return this;
@@ -29,9 +32,15 @@ public class PostV05HealthInformationHipRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05HealthInformationHipRequestJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05HealthInformationHipRequestJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIPHIRequest") org.openapis.openapi.models.shared.HIPHIRequest hiphiRequest, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.hiphiRequest = hiphiRequest;
+        this.xHipId = xHipId;
+  }
 }

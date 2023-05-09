@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationsAddressTypesResponse {
     
     public String contentType;
+
     public GetClassificationsAddressTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationsAddressTypesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationsAddressTypesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationsAddressTypesResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationsAddressTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationsAddressTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationsAddressTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationsAddressTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.AddressType[] addressTypes;
+
     public GetClassificationsAddressTypesResponse withAddressTypes(org.openapis.openapi.models.shared.AddressType[] addressTypes) {
         this.addressTypes = addressTypes;
         return this;
@@ -50,6 +56,7 @@ public class GetClassificationsAddressTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetClassificationsAddressTypesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetClassificationsAddressTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetClassificationsAddressTypesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetClassificationsAddressTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

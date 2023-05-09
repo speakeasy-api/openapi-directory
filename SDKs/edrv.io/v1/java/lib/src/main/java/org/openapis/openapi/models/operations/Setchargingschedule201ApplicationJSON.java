@@ -15,6 +15,7 @@ public class Setchargingschedule201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public java.util.Map<String, Object> command;
+
     public Setchargingschedule201ApplicationJSON withCommand(java.util.Map<String, Object> command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class Setchargingschedule201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Setchargingschedule201ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class Setchargingschedule201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public Setchargingschedule201ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public Setchargingschedule201ApplicationJSON(){}
 }

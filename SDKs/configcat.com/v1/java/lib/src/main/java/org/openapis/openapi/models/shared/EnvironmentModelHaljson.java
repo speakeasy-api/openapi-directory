@@ -15,6 +15,7 @@ public class EnvironmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public EnvironmentModelHaljsonEmbedded embedded;
+
     public EnvironmentModelHaljson withEmbedded(EnvironmentModelHaljsonEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class EnvironmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public EnvironmentModelHaljsonLinks links;
+
     public EnvironmentModelHaljson withLinks(EnvironmentModelHaljsonLinks links) {
         this.links = links;
         return this;
@@ -31,6 +33,7 @@ public class EnvironmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public EnvironmentModelHaljson withColor(String color) {
         this.color = color;
         return this;
@@ -39,6 +42,7 @@ public class EnvironmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentModelHaljson withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class EnvironmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public EnvironmentModelHaljson withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -55,6 +60,7 @@ public class EnvironmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnvironmentModelHaljson withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class EnvironmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public EnvironmentModelHaljson withOrder(Integer order) {
         this.order = order;
         return this;
@@ -71,9 +78,11 @@ public class EnvironmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public EnvironmentModelHaljson withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public EnvironmentModelHaljson(){}
 }

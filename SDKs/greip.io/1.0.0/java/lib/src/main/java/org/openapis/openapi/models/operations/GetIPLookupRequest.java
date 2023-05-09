@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIPLookupRequest {
@@ -12,6 +13,7 @@ public class GetIPLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetIPLookupRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetIPLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public GetIPLookupRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -32,6 +35,7 @@ public class GetIPLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetIPLookupRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class GetIPLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetIPLookupRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -52,9 +57,14 @@ public class GetIPLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
     public String params;
+
     public GetIPLookupRequest withParams(String params) {
         this.params = params;
         return this;
     }
     
+    public GetIPLookupRequest(@JsonProperty("ip") String ip, @JsonProperty("key") String key) {
+        this.ip = ip;
+        this.key = key;
+  }
 }

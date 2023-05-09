@@ -18,20 +18,23 @@ public class ClassificationCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public ClassificationCategory withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
     }
     
     /**
-     * The name of the category representing the document, from the [predefined taxonomy](https://cloud.google.com/natural-language/docs/categories).
+     * The name of the category representing the document.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClassificationCategory withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ClassificationCategory(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendCheckUpdatesRead {
     @JsonProperty("destinationDefinitions")
     public Long destinationDefinitions;
+
     public WebBackendCheckUpdatesRead withDestinationDefinitions(Long destinationDefinitions) {
         this.destinationDefinitions = destinationDefinitions;
         return this;
@@ -19,9 +20,14 @@ public class WebBackendCheckUpdatesRead {
     
     @JsonProperty("sourceDefinitions")
     public Long sourceDefinitions;
+
     public WebBackendCheckUpdatesRead withSourceDefinitions(Long sourceDefinitions) {
         this.sourceDefinitions = sourceDefinitions;
         return this;
     }
     
+    public WebBackendCheckUpdatesRead(@JsonProperty("destinationDefinitions") Long destinationDefinitions, @JsonProperty("sourceDefinitions") Long sourceDefinitions) {
+        this.destinationDefinitions = destinationDefinitions;
+        this.sourceDefinitions = sourceDefinitions;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateCapacityReservationResult {
     
     public CreateCapacityReservationResultCapacityReservation capacityReservation;
+
     public CreateCapacityReservationResult withCapacityReservation(CreateCapacityReservationResultCapacityReservation capacityReservation) {
         this.capacityReservation = capacityReservation;
         return this;
     }
     
+    public CreateCapacityReservationResult(){}
 }

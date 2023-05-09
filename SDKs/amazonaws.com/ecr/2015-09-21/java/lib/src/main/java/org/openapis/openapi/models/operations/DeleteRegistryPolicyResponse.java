@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRegistryPolicyResponse {
     
     public String contentType;
+
     public DeleteRegistryPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRegistryPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRegistryPolicyResponse deleteRegistryPolicyResponse;
+
     public DeleteRegistryPolicyResponse withDeleteRegistryPolicyResponse(org.openapis.openapi.models.shared.DeleteRegistryPolicyResponse deleteRegistryPolicyResponse) {
         this.deleteRegistryPolicyResponse = deleteRegistryPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRegistryPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteRegistryPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRegistryPolicyResponse {
      */
     
     public Object registryPolicyNotFoundException;
+
     public DeleteRegistryPolicyResponse withRegistryPolicyNotFoundException(Object registryPolicyNotFoundException) {
         this.registryPolicyNotFoundException = registryPolicyNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRegistryPolicyResponse {
      */
     
     public Object serverException;
+
     public DeleteRegistryPolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteRegistryPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteRegistryPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRegistryPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRegistryPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRegistryPolicyResponse {
      */
     
     public Object validationException;
+
     public DeleteRegistryPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRegistryPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PredefinedMetricSpecification {
     @JsonProperty("PredefinedMetricType")
     public MetricTypeEnum predefinedMetricType;
+
     public PredefinedMetricSpecification withPredefinedMetricType(MetricTypeEnum predefinedMetricType) {
         this.predefinedMetricType = predefinedMetricType;
         return this;
@@ -22,9 +23,13 @@ public class PredefinedMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceLabel")
     public String resourceLabel;
+
     public PredefinedMetricSpecification withResourceLabel(String resourceLabel) {
         this.resourceLabel = resourceLabel;
         return this;
     }
     
+    public PredefinedMetricSpecification(@JsonProperty("PredefinedMetricType") MetricTypeEnum predefinedMetricType) {
+        this.predefinedMetricType = predefinedMetricType;
+  }
 }

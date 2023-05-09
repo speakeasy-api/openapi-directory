@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetAllowedActionsRepositoryRequest {
@@ -12,6 +13,7 @@ public class ActionsSetAllowedActionsRepositoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsSetAllowedActionsRepositoryRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class ActionsSetAllowedActionsRepositoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsSetAllowedActionsRepositoryRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -29,9 +32,14 @@ public class ActionsSetAllowedActionsRepositoryRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SelectedActions selectedActions;
+
     public ActionsSetAllowedActionsRepositoryRequest withSelectedActions(org.openapis.openapi.models.shared.SelectedActions selectedActions) {
         this.selectedActions = selectedActions;
         return this;
     }
     
+    public ActionsSetAllowedActionsRepositoryRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

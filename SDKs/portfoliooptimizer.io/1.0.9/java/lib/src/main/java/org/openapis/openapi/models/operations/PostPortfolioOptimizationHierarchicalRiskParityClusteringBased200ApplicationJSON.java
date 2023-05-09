@@ -15,9 +15,13 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBased200Ap
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSON(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

@@ -15,6 +15,7 @@ public class Celebrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Face")
     public ComparedFace face;
+
     public Celebrity withFace(ComparedFace face) {
         this.face = face;
         return this;
@@ -23,6 +24,7 @@ public class Celebrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Celebrity withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class Celebrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KnownGender")
     public KnownGender knownGender;
+
     public Celebrity withKnownGender(KnownGender knownGender) {
         this.knownGender = knownGender;
         return this;
@@ -42,6 +45,7 @@ public class Celebrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchConfidence")
     public Float matchConfidence;
+
     public Celebrity withMatchConfidence(Float matchConfidence) {
         this.matchConfidence = matchConfidence;
         return this;
@@ -50,6 +54,7 @@ public class Celebrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Celebrity withName(String name) {
         this.name = name;
         return this;
@@ -58,9 +63,11 @@ public class Celebrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Urls")
     public String[] urls;
+
     public Celebrity withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public Celebrity(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3PublicAccessBlockConfiguration {
     @JsonProperty("ignorePublicAcls")
     public Boolean ignorePublicAcls;
+
     public S3PublicAccessBlockConfiguration withIgnorePublicAcls(Boolean ignorePublicAcls) {
         this.ignorePublicAcls = ignorePublicAcls;
         return this;
@@ -19,9 +20,14 @@ public class S3PublicAccessBlockConfiguration {
     
     @JsonProperty("restrictPublicBuckets")
     public Boolean restrictPublicBuckets;
+
     public S3PublicAccessBlockConfiguration withRestrictPublicBuckets(Boolean restrictPublicBuckets) {
         this.restrictPublicBuckets = restrictPublicBuckets;
         return this;
     }
     
+    public S3PublicAccessBlockConfiguration(@JsonProperty("ignorePublicAcls") Boolean ignorePublicAcls, @JsonProperty("restrictPublicBuckets") Boolean restrictPublicBuckets) {
+        this.ignorePublicAcls = ignorePublicAcls;
+        this.restrictPublicBuckets = restrictPublicBuckets;
+  }
 }

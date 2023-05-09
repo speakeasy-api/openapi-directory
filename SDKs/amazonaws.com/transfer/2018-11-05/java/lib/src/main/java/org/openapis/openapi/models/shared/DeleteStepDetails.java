@@ -15,6 +15,7 @@ public class DeleteStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DeleteStepDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class DeleteStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceFileLocation")
     public String sourceFileLocation;
+
     public DeleteStepDetails withSourceFileLocation(String sourceFileLocation) {
         this.sourceFileLocation = sourceFileLocation;
         return this;
     }
     
+    public DeleteStepDetails(){}
 }

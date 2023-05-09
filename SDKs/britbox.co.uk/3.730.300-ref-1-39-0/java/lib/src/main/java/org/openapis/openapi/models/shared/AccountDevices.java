@@ -15,6 +15,7 @@ public class AccountDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deregistrationWindow")
     public DeviceRegistrationWindow deregistrationWindow;
+
     public AccountDevices withDeregistrationWindow(DeviceRegistrationWindow deregistrationWindow) {
         this.deregistrationWindow = deregistrationWindow;
         return this;
@@ -25,6 +26,7 @@ public class AccountDevices {
      */
     @JsonProperty("devices")
     public Device[] devices;
+
     public AccountDevices withDevices(Device[] devices) {
         this.devices = devices;
         return this;
@@ -39,6 +41,7 @@ public class AccountDevices {
      */
     @JsonProperty("maxRegistered")
     public Integer maxRegistered;
+
     public AccountDevices withMaxRegistered(Integer maxRegistered) {
         this.maxRegistered = maxRegistered;
         return this;
@@ -47,9 +50,14 @@ public class AccountDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationWindow")
     public DeviceRegistrationWindow registrationWindow;
+
     public AccountDevices withRegistrationWindow(DeviceRegistrationWindow registrationWindow) {
         this.registrationWindow = registrationWindow;
         return this;
     }
     
+    public AccountDevices(@JsonProperty("devices") Device[] devices, @JsonProperty("maxRegistered") Integer maxRegistered) {
+        this.devices = devices;
+        this.maxRegistered = maxRegistered;
+  }
 }

@@ -19,6 +19,7 @@ public class ListTrialsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public ListTrialsRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListTrialsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public ListTrialsRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListTrialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public ListTrialsRequest withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -45,6 +48,7 @@ public class ListTrialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTrialsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListTrialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrialsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,6 +66,7 @@ public class ListTrialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortTrialsByEnum sortBy;
+
     public ListTrialsRequest withSortBy(SortTrialsByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,6 +75,7 @@ public class ListTrialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListTrialsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -77,9 +84,11 @@ public class ListTrialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public ListTrialsRequest withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
     }
     
+    public ListTrialsRequest(){}
 }

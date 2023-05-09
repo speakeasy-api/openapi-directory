@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListUniqueProblemsRequest {
     @JsonProperty("arn")
     public String arn;
+
     public ListUniqueProblemsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,13 @@ public class ListUniqueProblemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUniqueProblemsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListUniqueProblemsRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

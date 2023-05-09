@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupIfNotExistsForUsingPOSTResponse {
     
     public String contentType;
+
     public CreateGroupIfNotExistsForUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateGroupIfNotExistsForUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupIfNotExistsForUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateGroupIfNotExistsForUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupIfNotExistsForUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateGroupIfNotExistsForUsingPOSTResponse {
      */
     
     public CreateGroupIfNotExistsForUsingPOST200ApplicationJSON createGroupIfNotExistsForUsingPOST200ApplicationJSONObject;
+
     public CreateGroupIfNotExistsForUsingPOSTResponse withCreateGroupIfNotExistsForUsingPOST200ApplicationJSONObject(CreateGroupIfNotExistsForUsingPOST200ApplicationJSON createGroupIfNotExistsForUsingPOST200ApplicationJSONObject) {
         this.createGroupIfNotExistsForUsingPOST200ApplicationJSONObject = createGroupIfNotExistsForUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateGroupIfNotExistsForUsingPOSTResponse {
      */
     
     public CreateGroupIfNotExistsForUsingPOST400ApplicationJSON createGroupIfNotExistsForUsingPOST400ApplicationJSONObject;
+
     public CreateGroupIfNotExistsForUsingPOSTResponse withCreateGroupIfNotExistsForUsingPOST400ApplicationJSONObject(CreateGroupIfNotExistsForUsingPOST400ApplicationJSON createGroupIfNotExistsForUsingPOST400ApplicationJSONObject) {
         this.createGroupIfNotExistsForUsingPOST400ApplicationJSONObject = createGroupIfNotExistsForUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateGroupIfNotExistsForUsingPOSTResponse {
      */
     
     public CreateGroupIfNotExistsForUsingPOST401ApplicationJSON createGroupIfNotExistsForUsingPOST401ApplicationJSONObject;
+
     public CreateGroupIfNotExistsForUsingPOSTResponse withCreateGroupIfNotExistsForUsingPOST401ApplicationJSONObject(CreateGroupIfNotExistsForUsingPOST401ApplicationJSON createGroupIfNotExistsForUsingPOST401ApplicationJSONObject) {
         this.createGroupIfNotExistsForUsingPOST401ApplicationJSONObject = createGroupIfNotExistsForUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateGroupIfNotExistsForUsingPOSTResponse {
      */
     
     public CreateGroupIfNotExistsForUsingPOST500ApplicationJSON createGroupIfNotExistsForUsingPOST500ApplicationJSONObject;
+
     public CreateGroupIfNotExistsForUsingPOSTResponse withCreateGroupIfNotExistsForUsingPOST500ApplicationJSONObject(CreateGroupIfNotExistsForUsingPOST500ApplicationJSON createGroupIfNotExistsForUsingPOST500ApplicationJSONObject) {
         this.createGroupIfNotExistsForUsingPOST500ApplicationJSONObject = createGroupIfNotExistsForUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CreateGroupIfNotExistsForUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

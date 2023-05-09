@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkProposalInitiatingProduct")
     public GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum linkProposalInitiatingProduct;
+
     public GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails withLinkProposalInitiatingProduct(GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum linkProposalInitiatingProduct) {
         this.linkProposalInitiatingProduct = linkProposalInitiatingProduct;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkProposalState")
     public GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum linkProposalState;
+
     public GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails withLinkProposalState(GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum linkProposalState) {
         this.linkProposalState = linkProposalState;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestorEmail")
     public String requestorEmail;
+
     public GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails withRequestorEmail(String requestorEmail) {
         this.requestorEmail = requestorEmail;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails(){}
 }

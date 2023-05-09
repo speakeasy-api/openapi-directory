@@ -18,6 +18,7 @@ public class MeshIstio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshUid")
     public String meshUid;
+
     public MeshIstio withMeshUid(String meshUid) {
         this.meshUid = meshUid;
         return this;
@@ -29,6 +30,7 @@ public class MeshIstio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public MeshIstio withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -40,9 +42,11 @@ public class MeshIstio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceNamespace")
     public String serviceNamespace;
+
     public MeshIstio withServiceNamespace(String serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public MeshIstio(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudMlV1DiskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootDiskSizeGb")
     public Integer bootDiskSizeGb;
+
     public GoogleCloudMlV1DiskConfig withBootDiskSizeGb(Integer bootDiskSizeGb) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1DiskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootDiskType")
     public String bootDiskType;
+
     public GoogleCloudMlV1DiskConfig withBootDiskType(String bootDiskType) {
         this.bootDiskType = bootDiskType;
         return this;
     }
     
+    public GoogleCloudMlV1DiskConfig(){}
 }

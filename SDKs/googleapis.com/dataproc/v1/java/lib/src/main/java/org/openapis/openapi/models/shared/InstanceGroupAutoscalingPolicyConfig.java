@@ -18,6 +18,7 @@ public class InstanceGroupAutoscalingPolicyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstances")
     public Integer maxInstances;
+
     public InstanceGroupAutoscalingPolicyConfig withMaxInstances(Integer maxInstances) {
         this.maxInstances = maxInstances;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupAutoscalingPolicyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minInstances")
     public Integer minInstances;
+
     public InstanceGroupAutoscalingPolicyConfig withMinInstances(Integer minInstances) {
         this.minInstances = minInstances;
         return this;
@@ -40,9 +42,11 @@ public class InstanceGroupAutoscalingPolicyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Integer weight;
+
     public InstanceGroupAutoscalingPolicyConfig withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public InstanceGroupAutoscalingPolicyConfig(){}
 }

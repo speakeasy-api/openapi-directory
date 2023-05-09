@@ -12,6 +12,7 @@ public class ProfilesProfilesProfileConfigLocatorsSubmit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ProfilesProfilesProfileConfigLocatorsSubmit withType(String type) {
         this.type = type;
         return this;
@@ -20,9 +21,11 @@ public class ProfilesProfilesProfileConfigLocatorsSubmit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ProfilesProfilesProfileConfigLocatorsSubmit withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProfilesProfilesProfileConfigLocatorsSubmit(){}
 }

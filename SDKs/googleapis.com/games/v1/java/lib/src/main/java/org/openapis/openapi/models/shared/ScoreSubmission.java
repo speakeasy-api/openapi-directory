@@ -18,6 +18,7 @@ public class ScoreSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ScoreSubmission withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class ScoreSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaderboardId")
     public String leaderboardId;
+
     public ScoreSubmission withLeaderboardId(String leaderboardId) {
         this.leaderboardId = leaderboardId;
         return this;
@@ -40,6 +42,7 @@ public class ScoreSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public String score;
+
     public ScoreSubmission withScore(String score) {
         this.score = score;
         return this;
@@ -51,6 +54,7 @@ public class ScoreSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoreTag")
     public String scoreTag;
+
     public ScoreSubmission withScoreTag(String scoreTag) {
         this.scoreTag = scoreTag;
         return this;
@@ -62,9 +66,11 @@ public class ScoreSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public String signature;
+
     public ScoreSubmission withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public ScoreSubmission(){}
 }

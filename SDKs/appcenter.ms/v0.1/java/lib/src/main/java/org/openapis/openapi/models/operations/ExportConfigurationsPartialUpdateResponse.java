@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportConfigurationsPartialUpdateResponse {
     
     public String contentType;
+
     public ExportConfigurationsPartialUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExportConfigurationsPartialUpdateResponse {
      */
     
     public ExportConfigurationsPartialUpdate200ApplicationJSON exportConfigurationsPartialUpdate200ApplicationJSONObject;
+
     public ExportConfigurationsPartialUpdateResponse withExportConfigurationsPartialUpdate200ApplicationJSONObject(ExportConfigurationsPartialUpdate200ApplicationJSON exportConfigurationsPartialUpdate200ApplicationJSONObject) {
         this.exportConfigurationsPartialUpdate200ApplicationJSONObject = exportConfigurationsPartialUpdate200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ExportConfigurationsPartialUpdateResponse {
      */
     
     public ExportConfigurationsPartialUpdateDefaultApplicationJSON exportConfigurationsPartialUpdateDefaultApplicationJSONObject;
+
     public ExportConfigurationsPartialUpdateResponse withExportConfigurationsPartialUpdateDefaultApplicationJSONObject(ExportConfigurationsPartialUpdateDefaultApplicationJSON exportConfigurationsPartialUpdateDefaultApplicationJSONObject) {
         this.exportConfigurationsPartialUpdateDefaultApplicationJSONObject = exportConfigurationsPartialUpdateDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ExportConfigurationsPartialUpdateResponse {
     
     
     public Integer statusCode;
+
     public ExportConfigurationsPartialUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ExportConfigurationsPartialUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportConfigurationsPartialUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExportConfigurationsPartialUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

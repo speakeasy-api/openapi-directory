@@ -15,6 +15,7 @@ public class RelationalDatabaseHardware {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuCount")
     public Long cpuCount;
+
     public RelationalDatabaseHardware withCpuCount(Long cpuCount) {
         this.cpuCount = cpuCount;
         return this;
@@ -23,6 +24,7 @@ public class RelationalDatabaseHardware {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeInGb")
     public Long diskSizeInGb;
+
     public RelationalDatabaseHardware withDiskSizeInGb(Long diskSizeInGb) {
         this.diskSizeInGb = diskSizeInGb;
         return this;
@@ -31,9 +33,11 @@ public class RelationalDatabaseHardware {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ramSizeInGb")
     public Float ramSizeInGb;
+
     public RelationalDatabaseHardware withRamSizeInGb(Float ramSizeInGb) {
         this.ramSizeInGb = ramSizeInGb;
         return this;
     }
     
+    public RelationalDatabaseHardware(){}
 }

@@ -15,6 +15,7 @@ public class FreeBetDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awardDateTime")
     public String awardDateTime;
+
     public FreeBetDetail withAwardDateTime(String awardDateTime) {
         this.awardDateTime = awardDateTime;
         return this;
@@ -26,6 +27,7 @@ public class FreeBetDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayText")
     public String displayText;
+
     public FreeBetDetail withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
@@ -37,6 +39,7 @@ public class FreeBetDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryDateTime")
     public String expiryDateTime;
+
     public FreeBetDetail withExpiryDateTime(String expiryDateTime) {
         this.expiryDateTime = expiryDateTime;
         return this;
@@ -47,6 +50,7 @@ public class FreeBetDetail {
      */
     @JsonProperty("id")
     public Long id;
+
     public FreeBetDetail withId(Long id) {
         this.id = id;
         return this;
@@ -58,6 +62,7 @@ public class FreeBetDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerDesc")
     public String offerDesc;
+
     public FreeBetDetail withOfferDesc(String offerDesc) {
         this.offerDesc = offerDesc;
         return this;
@@ -69,6 +74,7 @@ public class FreeBetDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public Long offerId;
+
     public FreeBetDetail withOfferId(Long offerId) {
         this.offerId = offerId;
         return this;
@@ -79,6 +85,7 @@ public class FreeBetDetail {
      */
     @JsonProperty("offerName")
     public String offerName;
+
     public FreeBetDetail withOfferName(String offerName) {
         this.offerName = offerName;
         return this;
@@ -90,6 +97,7 @@ public class FreeBetDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateTime")
     public String startDateTime;
+
     public FreeBetDetail withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -100,9 +108,15 @@ public class FreeBetDetail {
      */
     @JsonProperty("value")
     public Double value;
+
     public FreeBetDetail withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public FreeBetDetail(@JsonProperty("id") Long id, @JsonProperty("offerName") String offerName, @JsonProperty("value") Double value) {
+        this.id = id;
+        this.offerName = offerName;
+        this.value = value;
+  }
 }

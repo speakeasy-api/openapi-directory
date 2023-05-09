@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SocialFriendsBungieFriendRequestListResponse {
     
     public SocialFriendsBungieFriend[] incomingRequests;
+
     public SocialFriendsBungieFriendRequestListResponse withIncomingRequests(SocialFriendsBungieFriend[] incomingRequests) {
         this.incomingRequests = incomingRequests;
         return this;
@@ -16,9 +17,11 @@ public class SocialFriendsBungieFriendRequestListResponse {
     
     
     public SocialFriendsBungieFriend[] outgoingRequests;
+
     public SocialFriendsBungieFriendRequestListResponse withOutgoingRequests(SocialFriendsBungieFriend[] outgoingRequests) {
         this.outgoingRequests = outgoingRequests;
         return this;
     }
     
+    public SocialFriendsBungieFriendRequestListResponse(){}
 }

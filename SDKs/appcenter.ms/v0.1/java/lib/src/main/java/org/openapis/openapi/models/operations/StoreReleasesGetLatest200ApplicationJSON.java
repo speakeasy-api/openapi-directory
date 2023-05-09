@@ -18,6 +18,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("android_min_api_level")
     public String androidMinApiLevel;
+
     public StoreReleasesGetLatest200ApplicationJSON withAndroidMinApiLevel(String androidMinApiLevel) {
         this.androidMinApiLevel = androidMinApiLevel;
         return this;
@@ -29,6 +30,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_display_name")
     public String appDisplayName;
+
     public StoreReleasesGetLatest200ApplicationJSON withAppDisplayName(String appDisplayName) {
         this.appDisplayName = appDisplayName;
         return this;
@@ -40,6 +42,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_name")
     public String appName;
+
     public StoreReleasesGetLatest200ApplicationJSON withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -51,6 +54,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_identifier")
     public String bundleIdentifier;
+
     public StoreReleasesGetLatest200ApplicationJSON withBundleIdentifier(String bundleIdentifier) {
         this.bundleIdentifier = bundleIdentifier;
         return this;
@@ -62,6 +66,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_stores")
     public StoreReleasesGetLatest200ApplicationJSONDistributionStores[] distributionStores;
+
     public StoreReleasesGetLatest200ApplicationJSON withDistributionStores(StoreReleasesGetLatest200ApplicationJSONDistributionStores[] distributionStores) {
         this.distributionStores = distributionStores;
         return this;
@@ -73,6 +78,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public StoreReleasesGetLatest200ApplicationJSON withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -84,6 +90,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public StoreReleasesGetLatest200ApplicationJSON withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -95,6 +102,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public StoreReleasesGetLatest200ApplicationJSON withId(Double id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("install_url")
     public StoreReleasesGetLatest200ApplicationJSONInstallUrlEnum installUrl;
+
     public StoreReleasesGetLatest200ApplicationJSON withInstallUrl(StoreReleasesGetLatest200ApplicationJSONInstallUrlEnum installUrl) {
         this.installUrl = installUrl;
         return this;
@@ -117,6 +126,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_os")
     public String minOs;
+
     public StoreReleasesGetLatest200ApplicationJSON withMinOs(String minOs) {
         this.minOs = minOs;
         return this;
@@ -128,6 +138,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_notes")
     public String releaseNotes;
+
     public StoreReleasesGetLatest200ApplicationJSON withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
@@ -142,6 +153,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("short_version")
     public String shortVersion;
+
     public StoreReleasesGetLatest200ApplicationJSON withShortVersion(String shortVersion) {
         this.shortVersion = shortVersion;
         return this;
@@ -153,6 +165,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Double size;
+
     public StoreReleasesGetLatest200ApplicationJSON withSize(Double size) {
         this.size = size;
         return this;
@@ -168,6 +181,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StoreReleasesGetLatest200ApplicationJSONStatusEnum status;
+
     public StoreReleasesGetLatest200ApplicationJSON withStatus(StoreReleasesGetLatest200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -179,6 +193,7 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploaded_at")
     public String uploadedAt;
+
     public StoreReleasesGetLatest200ApplicationJSON withUploadedAt(String uploadedAt) {
         this.uploadedAt = uploadedAt;
         return this;
@@ -193,9 +208,11 @@ public class StoreReleasesGetLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public StoreReleasesGetLatest200ApplicationJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public StoreReleasesGetLatest200ApplicationJSON(){}
 }

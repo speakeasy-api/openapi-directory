@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOccupantsWithinOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetOccupantsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
     public String bbox;
+
     public GetOccupantsWithinOutputFormatRequest withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -22,6 +24,7 @@ public class GetOccupantsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
     public Boolean brief;
+
     public GetOccupantsWithinOutputFormatRequest withBrief(Boolean brief) {
         this.brief = brief;
         return this;
@@ -32,6 +35,7 @@ public class GetOccupantsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
     public GetOccupantsWithinOutputFormatLocationDescriptorEnum locationDescriptor;
+
     public GetOccupantsWithinOutputFormatRequest withLocationDescriptor(GetOccupantsWithinOutputFormatLocationDescriptorEnum locationDescriptor) {
         this.locationDescriptor = locationDescriptor;
         return this;
@@ -42,6 +46,7 @@ public class GetOccupantsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetOccupantsWithinOutputFormatRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -54,6 +59,7 @@ public class GetOccupantsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetOccupantsWithinOutputFormatOutputFormatEnum outputFormat;
+
     public GetOccupantsWithinOutputFormatRequest withOutputFormat(GetOccupantsWithinOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -64,6 +70,7 @@ public class GetOccupantsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetOccupantsWithinOutputFormatOutputSrsEnum outputSRS;
+
     public GetOccupantsWithinOutputFormatRequest withOutputSRS(GetOccupantsWithinOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -74,6 +81,7 @@ public class GetOccupantsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
     public Long setBack;
+
     public GetOccupantsWithinOutputFormatRequest withSetBack(Long setBack) {
         this.setBack = setBack;
         return this;
@@ -84,9 +92,14 @@ public class GetOccupantsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GetOccupantsWithinOutputFormatRequest withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetOccupantsWithinOutputFormatRequest(@JsonProperty("bbox") String bbox, @JsonProperty("outputFormat") GetOccupantsWithinOutputFormatOutputFormatEnum outputFormat) {
+        this.bbox = bbox;
+        this.outputFormat = outputFormat;
+  }
 }

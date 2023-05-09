@@ -15,6 +15,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent_name")
     public String agentName;
+
     public Wireless withAgentName(String agentName) {
         this.agentName = agentName;
         return this;
@@ -23,6 +24,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public String authentication;
+
     public Wireless withAuthentication(String authentication) {
         this.authentication = authentication;
         return this;
@@ -31,6 +33,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bssid")
     public String bssid;
+
     public Wireless withBssid(String bssid) {
         this.bssid = bssid;
         return this;
@@ -39,6 +42,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public String channels;
+
     public Wireless withChannels(String channels) {
         this.channels = channels;
         return this;
@@ -47,6 +51,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public Wireless withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +60,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, String> data;
+
     public Wireless withData(java.util.Map<String, String> data) {
         this.data = data;
         return this;
@@ -63,6 +69,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryption")
     public String encryption;
+
     public Wireless withEncryption(String encryption) {
         this.encryption = encryption;
         return this;
@@ -71,6 +78,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("essid")
     public String essid;
+
     public Wireless withEssid(String essid) {
         this.essid = essid;
         return this;
@@ -79,6 +87,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family")
     public String family;
+
     public Wireless withFamily(String family) {
         this.family = family;
         return this;
@@ -86,6 +95,7 @@ public class Wireless {
     
     @JsonProperty("id")
     public String id;
+
     public Wireless withId(String id) {
         this.id = id;
         return this;
@@ -94,6 +104,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interface")
     public String interface_;
+
     public Wireless withInterface(String interface_) {
         this.interface_ = interface_;
         return this;
@@ -102,6 +113,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_agent_id")
     public String lastAgentId;
+
     public Wireless withLastAgentId(String lastAgentId) {
         this.lastAgentId = lastAgentId;
         return this;
@@ -110,6 +122,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_seen")
     public Long lastSeen;
+
     public Wireless withLastSeen(Long lastSeen) {
         this.lastSeen = lastSeen;
         return this;
@@ -118,6 +131,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_task_id")
     public String lastTaskId;
+
     public Wireless withLastTaskId(String lastTaskId) {
         this.lastTaskId = lastTaskId;
         return this;
@@ -126,6 +140,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_name")
     public String orgName;
+
     public Wireless withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -134,6 +149,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     public String organizationId;
+
     public Wireless withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -142,6 +158,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signal")
     public Long signal;
+
     public Wireless withSignal(Long signal) {
         this.signal = signal;
         return this;
@@ -150,6 +167,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_id")
     public String siteId;
+
     public Wireless withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
@@ -158,6 +176,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_name")
     public String siteName;
+
     public Wireless withSiteName(String siteName) {
         this.siteName = siteName;
         return this;
@@ -166,6 +185,7 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Wireless withType(String type) {
         this.type = type;
         return this;
@@ -174,9 +194,13 @@ public class Wireless {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public Wireless withVendor(String vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public Wireless(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

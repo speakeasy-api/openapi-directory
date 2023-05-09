@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KinesisFirehoseInput {
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public KinesisFirehoseInput withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public KinesisFirehoseInput(@JsonProperty("ResourceARN") String resourceARN) {
+        this.resourceARN = resourceARN;
+  }
 }

@@ -18,6 +18,7 @@ public class PostReplies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Comment[] items;
+
     public PostReplies withItems(Comment[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class PostReplies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public PostReplies withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -40,9 +42,11 @@ public class PostReplies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public String totalItems;
+
     public PostReplies withTotalItems(String totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public PostReplies(){}
 }

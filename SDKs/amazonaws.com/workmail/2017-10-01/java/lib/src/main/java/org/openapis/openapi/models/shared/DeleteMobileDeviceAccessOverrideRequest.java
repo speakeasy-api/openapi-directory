@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMobileDeviceAccessOverrideRequest {
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public DeleteMobileDeviceAccessOverrideRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -16,6 +17,7 @@ public class DeleteMobileDeviceAccessOverrideRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteMobileDeviceAccessOverrideRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,9 +25,15 @@ public class DeleteMobileDeviceAccessOverrideRequest {
     
     @JsonProperty("UserId")
     public String userId;
+
     public DeleteMobileDeviceAccessOverrideRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DeleteMobileDeviceAccessOverrideRequest(@JsonProperty("DeviceId") String deviceId, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("UserId") String userId) {
+        this.deviceId = deviceId;
+        this.organizationId = organizationId;
+        this.userId = userId;
+  }
 }

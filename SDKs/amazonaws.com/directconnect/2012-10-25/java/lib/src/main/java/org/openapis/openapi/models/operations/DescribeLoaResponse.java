@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLoaResponse {
     
     public String contentType;
+
     public DescribeLoaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLoaResponse {
      */
     
     public Object directConnectClientException;
+
     public DescribeLoaResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLoaResponse {
      */
     
     public Object directConnectServerException;
+
     public DescribeLoaResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLoaResponse {
      */
     
     public org.openapis.openapi.models.shared.Loa loa;
+
     public DescribeLoaResponse withLoa(org.openapis.openapi.models.shared.Loa loa) {
         this.loa = loa;
         return this;
@@ -46,6 +51,7 @@ public class DescribeLoaResponse {
     
     
     public Integer statusCode;
+
     public DescribeLoaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeLoaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLoaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLoaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

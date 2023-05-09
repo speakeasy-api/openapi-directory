@@ -18,6 +18,7 @@ public class SubscriptionTaxAndComplianceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eeaWithdrawalRightType")
     public SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum eeaWithdrawalRightType;
+
     public SubscriptionTaxAndComplianceSettings withEeaWithdrawalRightType(SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum eeaWithdrawalRightType) {
         this.eeaWithdrawalRightType = eeaWithdrawalRightType;
         return this;
@@ -29,9 +30,11 @@ public class SubscriptionTaxAndComplianceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxRateInfoByRegionCode")
     public java.util.Map<String, RegionalTaxRateInfo> taxRateInfoByRegionCode;
+
     public SubscriptionTaxAndComplianceSettings withTaxRateInfoByRegionCode(java.util.Map<String, RegionalTaxRateInfo> taxRateInfoByRegionCode) {
         this.taxRateInfoByRegionCode = taxRateInfoByRegionCode;
         return this;
     }
     
+    public SubscriptionTaxAndComplianceSettings(){}
 }

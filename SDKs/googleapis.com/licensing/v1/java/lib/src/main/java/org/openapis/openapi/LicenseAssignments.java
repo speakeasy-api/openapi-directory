@@ -60,11 +60,9 @@ public class LicenseAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class LicenseAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetResponse() {{
+        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetResponse(contentType, httpRes.statusCode()) {{
             licenseAssignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class LicenseAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertResponse() {{
+        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertResponse(contentType, httpRes.statusCode()) {{
             licenseAssignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class LicenseAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductResponse() {{
+        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductResponse(contentType, httpRes.statusCode()) {{
             licenseAssignmentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class LicenseAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuResponse() {{
+        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuResponse(contentType, httpRes.statusCode()) {{
             licenseAssignmentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class LicenseAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchResponse() {{
+        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchResponse(contentType, httpRes.statusCode()) {{
             licenseAssignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class LicenseAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateResponse res = new org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateResponse(contentType, httpRes.statusCode()) {{
             licenseAssignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

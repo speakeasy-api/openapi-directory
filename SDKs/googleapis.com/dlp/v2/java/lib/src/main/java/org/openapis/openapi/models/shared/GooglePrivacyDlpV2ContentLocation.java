@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ContentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerName")
     public String containerName;
+
     public GooglePrivacyDlpV2ContentLocation withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2ContentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerTimestamp")
     public String containerTimestamp;
+
     public GooglePrivacyDlpV2ContentLocation withContainerTimestamp(String containerTimestamp) {
         this.containerTimestamp = containerTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2ContentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersion")
     public String containerVersion;
+
     public GooglePrivacyDlpV2ContentLocation withContainerVersion(String containerVersion) {
         this.containerVersion = containerVersion;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2ContentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentLocation")
     public GooglePrivacyDlpV2DocumentLocation documentLocation;
+
     public GooglePrivacyDlpV2ContentLocation withDocumentLocation(GooglePrivacyDlpV2DocumentLocation documentLocation) {
         this.documentLocation = documentLocation;
         return this;
@@ -62,6 +66,7 @@ public class GooglePrivacyDlpV2ContentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageLocation")
     public GooglePrivacyDlpV2ImageLocation imageLocation;
+
     public GooglePrivacyDlpV2ContentLocation withImageLocation(GooglePrivacyDlpV2ImageLocation imageLocation) {
         this.imageLocation = imageLocation;
         return this;
@@ -73,6 +78,7 @@ public class GooglePrivacyDlpV2ContentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataLocation")
     public GooglePrivacyDlpV2MetadataLocation metadataLocation;
+
     public GooglePrivacyDlpV2ContentLocation withMetadataLocation(GooglePrivacyDlpV2MetadataLocation metadataLocation) {
         this.metadataLocation = metadataLocation;
         return this;
@@ -84,9 +90,11 @@ public class GooglePrivacyDlpV2ContentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordLocation")
     public GooglePrivacyDlpV2RecordLocation recordLocation;
+
     public GooglePrivacyDlpV2ContentLocation withRecordLocation(GooglePrivacyDlpV2RecordLocation recordLocation) {
         this.recordLocation = recordLocation;
         return this;
     }
     
+    public GooglePrivacyDlpV2ContentLocation(){}
 }

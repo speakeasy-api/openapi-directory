@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBlueprintRunsRequest {
     @JsonProperty("BlueprintName")
     public String blueprintName;
+
     public GetBlueprintRunsRequest withBlueprintName(String blueprintName) {
         this.blueprintName = blueprintName;
         return this;
@@ -19,6 +20,7 @@ public class GetBlueprintRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetBlueprintRunsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class GetBlueprintRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetBlueprintRunsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetBlueprintRunsRequest(@JsonProperty("BlueprintName") String blueprintName) {
+        this.blueprintName = blueprintName;
+  }
 }

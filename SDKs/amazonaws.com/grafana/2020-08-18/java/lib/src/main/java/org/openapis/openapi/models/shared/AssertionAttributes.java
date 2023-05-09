@@ -15,6 +15,7 @@ public class AssertionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AssertionAttributes withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class AssertionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public String groups;
+
     public AssertionAttributes withGroups(String groups) {
         this.groups = groups;
         return this;
@@ -31,6 +33,7 @@ public class AssertionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public AssertionAttributes withLogin(String login) {
         this.login = login;
         return this;
@@ -39,6 +42,7 @@ public class AssertionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssertionAttributes withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class AssertionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org")
     public String org;
+
     public AssertionAttributes withOrg(String org) {
         this.org = org;
         return this;
@@ -55,9 +60,11 @@ public class AssertionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public AssertionAttributes withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public AssertionAttributes(){}
 }

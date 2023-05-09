@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigqueryModelsPatchResponse {
     
     public String contentType;
+
     public BigqueryModelsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryModelsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.Model model;
+
     public BigqueryModelsPatchResponse withModel(org.openapis.openapi.models.shared.Model model) {
         this.model = model;
         return this;
@@ -26,6 +29,7 @@ public class BigqueryModelsPatchResponse {
     
     
     public Integer statusCode;
+
     public BigqueryModelsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigqueryModelsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigqueryModelsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigqueryModelsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

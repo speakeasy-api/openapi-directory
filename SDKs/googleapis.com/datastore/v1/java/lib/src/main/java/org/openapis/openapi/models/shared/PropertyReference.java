@@ -18,9 +18,11 @@ public class PropertyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PropertyReference withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PropertyReference(){}
 }

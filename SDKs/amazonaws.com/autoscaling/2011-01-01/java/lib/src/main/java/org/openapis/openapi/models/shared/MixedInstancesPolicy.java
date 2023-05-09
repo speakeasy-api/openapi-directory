@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MixedInstancesPolicy {
     
     public InstancesDistribution instancesDistribution;
+
     public MixedInstancesPolicy withInstancesDistribution(InstancesDistribution instancesDistribution) {
         this.instancesDistribution = instancesDistribution;
         return this;
@@ -19,9 +20,11 @@ public class MixedInstancesPolicy {
     
     
     public LaunchTemplate launchTemplate;
+
     public MixedInstancesPolicy withLaunchTemplate(LaunchTemplate launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
     }
     
+    public MixedInstancesPolicy(){}
 }

@@ -19,6 +19,7 @@ public class ListDisputesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListDisputesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -30,6 +31,7 @@ public class ListDisputesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disputes")
     public Dispute[] disputes;
+
     public ListDisputesResponse withDisputes(Dispute[] disputes) {
         this.disputes = disputes;
         return this;
@@ -41,9 +43,11 @@ public class ListDisputesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListDisputesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ListDisputesResponse(){}
 }

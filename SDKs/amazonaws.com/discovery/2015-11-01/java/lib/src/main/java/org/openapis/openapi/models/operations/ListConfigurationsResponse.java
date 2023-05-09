@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ListConfigurationsResponse {
      */
     
     public Object authorizationErrorException;
+
     public ListConfigurationsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class ListConfigurationsResponse {
     
     
     public String contentType;
+
     public ListConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListConfigurationsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public ListConfigurationsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class ListConfigurationsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListConfigurationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListConfigurationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListConfigurationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ListConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListConfigurationsResponse listConfigurationsResponse;
+
     public ListConfigurationsResponse withListConfigurationsResponse(org.openapis.openapi.models.shared.ListConfigurationsResponse listConfigurationsResponse) {
         this.listConfigurationsResponse = listConfigurationsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListConfigurationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListConfigurationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class ListConfigurationsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public ListConfigurationsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
     }
     
+    public ListConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

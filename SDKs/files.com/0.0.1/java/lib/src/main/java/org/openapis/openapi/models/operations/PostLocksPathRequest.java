@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLocksPathRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostLocksPathRequestBody requestBody;
+
     public PostLocksPathRequest withRequestBody(PostLocksPathRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PostLocksPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public PostLocksPathRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PostLocksPathRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

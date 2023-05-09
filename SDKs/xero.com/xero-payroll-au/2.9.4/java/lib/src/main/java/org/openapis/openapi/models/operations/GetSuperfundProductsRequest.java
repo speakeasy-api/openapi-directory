@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuperfundProductsRequest {
@@ -12,6 +13,7 @@ public class GetSuperfundProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ABN")
     public String abn;
+
     public GetSuperfundProductsRequest withAbn(String abn) {
         this.abn = abn;
         return this;
@@ -22,6 +24,7 @@ public class GetSuperfundProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=USI")
     public String usi;
+
     public GetSuperfundProductsRequest withUsi(String usi) {
         this.usi = usi;
         return this;
@@ -32,9 +35,13 @@ public class GetSuperfundProductsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public GetSuperfundProductsRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetSuperfundProductsRequest(@JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

@@ -15,6 +15,7 @@ public class PutItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expected")
     public java.util.Map<String, ExpectedAttributeValue> expected;
+
     public PutItemInput withExpected(java.util.Map<String, ExpectedAttributeValue> expected) {
         this.expected = expected;
         return this;
@@ -25,6 +26,7 @@ public class PutItemInput {
      */
     @JsonProperty("Item")
     public java.util.Map<String, AttributeValue> item;
+
     public PutItemInput withItem(java.util.Map<String, AttributeValue> item) {
         this.item = item;
         return this;
@@ -36,6 +38,7 @@ public class PutItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValues")
     public ReturnValueEnum returnValues;
+
     public PutItemInput withReturnValues(ReturnValueEnum returnValues) {
         this.returnValues = returnValues;
         return this;
@@ -43,9 +46,14 @@ public class PutItemInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public PutItemInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public PutItemInput(@JsonProperty("Item") java.util.Map<String, AttributeValue> item, @JsonProperty("TableName") String tableName) {
+        this.item = item;
+        this.tableName = tableName;
+  }
 }

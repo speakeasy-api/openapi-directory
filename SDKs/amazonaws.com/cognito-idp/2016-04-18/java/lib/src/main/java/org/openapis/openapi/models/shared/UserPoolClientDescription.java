@@ -15,6 +15,7 @@ public class UserPoolClientDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public UserPoolClientDescription withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class UserPoolClientDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientName")
     public String clientName;
+
     public UserPoolClientDescription withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -31,9 +33,11 @@ public class UserPoolClientDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public UserPoolClientDescription withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public UserPoolClientDescription(){}
 }

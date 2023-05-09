@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAvailabilityConfigurationRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public DeleteAvailabilityConfigurationRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteAvailabilityConfigurationRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteAvailabilityConfigurationRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeleteAvailabilityConfigurationRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("OrganizationId") String organizationId) {
+        this.domainName = domainName;
+        this.organizationId = organizationId;
+  }
 }

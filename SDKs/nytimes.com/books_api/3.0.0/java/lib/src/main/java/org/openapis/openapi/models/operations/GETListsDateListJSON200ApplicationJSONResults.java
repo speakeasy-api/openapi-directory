@@ -12,6 +12,7 @@ public class GETListsDateListJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestsellers_date")
     public String bestsellersDate;
+
     public GETListsDateListJSON200ApplicationJSONResults withBestsellersDate(String bestsellersDate) {
         this.bestsellersDate = bestsellersDate;
         return this;
@@ -20,6 +21,7 @@ public class GETListsDateListJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("books")
     public GETListsDateListJSON200ApplicationJSONResultsBooks[] books;
+
     public GETListsDateListJSON200ApplicationJSONResults withBooks(GETListsDateListJSON200ApplicationJSONResultsBooks[] books) {
         this.books = books;
         return this;
@@ -28,6 +30,7 @@ public class GETListsDateListJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corrections")
     public java.util.Map<String, Object>[] corrections;
+
     public GETListsDateListJSON200ApplicationJSONResults withCorrections(java.util.Map<String, Object>[] corrections) {
         this.corrections = corrections;
         return this;
@@ -36,6 +39,7 @@ public class GETListsDateListJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public GETListsDateListJSON200ApplicationJSONResults withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -44,6 +48,7 @@ public class GETListsDateListJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_name")
     public String listName;
+
     public GETListsDateListJSON200ApplicationJSONResults withListName(String listName) {
         this.listName = listName;
         return this;
@@ -52,6 +57,7 @@ public class GETListsDateListJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normal_list_ends_at")
     public Long normalListEndsAt;
+
     public GETListsDateListJSON200ApplicationJSONResults withNormalListEndsAt(Long normalListEndsAt) {
         this.normalListEndsAt = normalListEndsAt;
         return this;
@@ -60,6 +66,7 @@ public class GETListsDateListJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_date")
     public String publishedDate;
+
     public GETListsDateListJSON200ApplicationJSONResults withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -68,9 +75,11 @@ public class GETListsDateListJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public String updated;
+
     public GETListsDateListJSON200ApplicationJSONResults withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public GETListsDateListJSON200ApplicationJSONResults(){}
 }

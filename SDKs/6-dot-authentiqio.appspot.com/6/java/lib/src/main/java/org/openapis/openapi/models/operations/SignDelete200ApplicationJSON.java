@@ -18,9 +18,11 @@ public class SignDelete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SignDelete200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SignDelete200ApplicationJSON(){}
 }

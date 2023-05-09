@@ -18,6 +18,7 @@ public class BackendBucketCdnPolicyCacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeHttpHeaders")
     public String[] includeHttpHeaders;
+
     public BackendBucketCdnPolicyCacheKeyPolicy withIncludeHttpHeaders(String[] includeHttpHeaders) {
         this.includeHttpHeaders = includeHttpHeaders;
         return this;
@@ -29,9 +30,11 @@ public class BackendBucketCdnPolicyCacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryStringWhitelist")
     public String[] queryStringWhitelist;
+
     public BackendBucketCdnPolicyCacheKeyPolicy withQueryStringWhitelist(String[] queryStringWhitelist) {
         this.queryStringWhitelist = queryStringWhitelist;
         return this;
     }
     
+    public BackendBucketCdnPolicyCacheKeyPolicy(){}
 }

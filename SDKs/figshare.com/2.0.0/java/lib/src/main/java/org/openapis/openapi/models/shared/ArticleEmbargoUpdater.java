@@ -17,6 +17,7 @@ public class ArticleEmbargoUpdater {
      */
     @JsonProperty("embargo_date")
     public String embargoDate;
+
     public ArticleEmbargoUpdater withEmbargoDate(String embargoDate) {
         this.embargoDate = embargoDate;
         return this;
@@ -28,6 +29,7 @@ public class ArticleEmbargoUpdater {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embargo_options")
     public java.util.Map<String, Object>[] embargoOptions;
+
     public ArticleEmbargoUpdater withEmbargoOptions(java.util.Map<String, Object>[] embargoOptions) {
         this.embargoOptions = embargoOptions;
         return this;
@@ -39,6 +41,7 @@ public class ArticleEmbargoUpdater {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embargo_reason")
     public String embargoReason;
+
     public ArticleEmbargoUpdater withEmbargoReason(String embargoReason) {
         this.embargoReason = embargoReason;
         return this;
@@ -50,6 +53,7 @@ public class ArticleEmbargoUpdater {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embargo_title")
     public String embargoTitle;
+
     public ArticleEmbargoUpdater withEmbargoTitle(String embargoTitle) {
         this.embargoTitle = embargoTitle;
         return this;
@@ -60,6 +64,7 @@ public class ArticleEmbargoUpdater {
      */
     @JsonProperty("embargo_type")
     public ArticleEmbargoUpdaterEmbargoTypeEnum embargoType;
+
     public ArticleEmbargoUpdater withEmbargoType(ArticleEmbargoUpdaterEmbargoTypeEnum embargoType) {
         this.embargoType = embargoType;
         return this;
@@ -70,9 +75,15 @@ public class ArticleEmbargoUpdater {
      */
     @JsonProperty("is_embargoed")
     public Boolean isEmbargoed;
+
     public ArticleEmbargoUpdater withIsEmbargoed(Boolean isEmbargoed) {
         this.isEmbargoed = isEmbargoed;
         return this;
     }
     
+    public ArticleEmbargoUpdater(@JsonProperty("embargo_date") String embargoDate, @JsonProperty("embargo_type") ArticleEmbargoUpdaterEmbargoTypeEnum embargoType, @JsonProperty("is_embargoed") Boolean isEmbargoed) {
+        this.embargoDate = embargoDate;
+        this.embargoType = embargoType;
+        this.isEmbargoed = isEmbargoed;
+  }
 }

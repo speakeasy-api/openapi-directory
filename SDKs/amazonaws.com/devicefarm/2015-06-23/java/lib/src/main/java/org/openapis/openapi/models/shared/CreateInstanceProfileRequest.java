@@ -12,6 +12,7 @@ public class CreateInstanceProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateInstanceProfileRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateInstanceProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeAppPackagesFromCleanup")
     public String[] excludeAppPackagesFromCleanup;
+
     public CreateInstanceProfileRequest withExcludeAppPackagesFromCleanup(String[] excludeAppPackagesFromCleanup) {
         this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;
         return this;
@@ -27,6 +29,7 @@ public class CreateInstanceProfileRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateInstanceProfileRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class CreateInstanceProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageCleanup")
     public Boolean packageCleanup;
+
     public CreateInstanceProfileRequest withPackageCleanup(Boolean packageCleanup) {
         this.packageCleanup = packageCleanup;
         return this;
@@ -43,9 +47,13 @@ public class CreateInstanceProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebootAfterUse")
     public Boolean rebootAfterUse;
+
     public CreateInstanceProfileRequest withRebootAfterUse(Boolean rebootAfterUse) {
         this.rebootAfterUse = rebootAfterUse;
         return this;
     }
     
+    public CreateInstanceProfileRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

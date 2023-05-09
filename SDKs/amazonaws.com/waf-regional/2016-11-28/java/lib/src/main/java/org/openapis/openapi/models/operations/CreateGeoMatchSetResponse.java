@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGeoMatchSetResponse {
     
     public String contentType;
+
     public CreateGeoMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGeoMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGeoMatchSetResponse createGeoMatchSetResponse;
+
     public CreateGeoMatchSetResponse withCreateGeoMatchSetResponse(org.openapis.openapi.models.shared.CreateGeoMatchSetResponse createGeoMatchSetResponse) {
         this.createGeoMatchSetResponse = createGeoMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateGeoMatchSetResponse {
     
     
     public Integer statusCode;
+
     public CreateGeoMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateGeoMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGeoMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateGeoMatchSetResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateGeoMatchSetResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -53,6 +59,7 @@ public class CreateGeoMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateGeoMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateGeoMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public CreateGeoMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -73,6 +81,7 @@ public class CreateGeoMatchSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateGeoMatchSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class CreateGeoMatchSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateGeoMatchSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateGeoMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateGeoMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public CreateGeoMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TerminateClientVpnConnectionsResult {
     
     public String clientVpnEndpointId;
+
     public TerminateClientVpnConnectionsResult withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -19,6 +20,7 @@ public class TerminateClientVpnConnectionsResult {
     
     
     public TerminateClientVpnConnectionsResultConnectionStatuses[] connectionStatuses;
+
     public TerminateClientVpnConnectionsResult withConnectionStatuses(TerminateClientVpnConnectionsResultConnectionStatuses[] connectionStatuses) {
         this.connectionStatuses = connectionStatuses;
         return this;
@@ -26,9 +28,11 @@ public class TerminateClientVpnConnectionsResult {
     
     
     public String username;
+
     public TerminateClientVpnConnectionsResult withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public TerminateClientVpnConnectionsResult(){}
 }

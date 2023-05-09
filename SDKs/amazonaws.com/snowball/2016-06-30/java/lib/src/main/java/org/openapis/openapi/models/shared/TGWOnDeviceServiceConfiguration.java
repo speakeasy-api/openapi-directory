@@ -15,6 +15,7 @@ public class TGWOnDeviceServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageLimit")
     public Long storageLimit;
+
     public TGWOnDeviceServiceConfiguration withStorageLimit(Long storageLimit) {
         this.storageLimit = storageLimit;
         return this;
@@ -23,9 +24,11 @@ public class TGWOnDeviceServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageUnit")
     public StorageUnitEnum storageUnit;
+
     public TGWOnDeviceServiceConfiguration withStorageUnit(StorageUnitEnum storageUnit) {
         this.storageUnit = storageUnit;
         return this;
     }
     
+    public TGWOnDeviceServiceConfiguration(){}
 }

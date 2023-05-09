@@ -20,6 +20,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Algorithm")
     public AlgorithmEnum algorithm;
+
     public MLModel withAlgorithm(AlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -31,6 +32,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeTime")
     public Long computeTime;
+
     public MLModel withComputeTime(Long computeTime) {
         this.computeTime = computeTime;
         return this;
@@ -41,6 +43,7 @@ public class MLModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public MLModel withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -49,6 +52,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedByIamUser")
     public String createdByIamUser;
+
     public MLModel withCreatedByIamUser(String createdByIamUser) {
         this.createdByIamUser = createdByIamUser;
         return this;
@@ -57,6 +61,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointInfo")
     public RealtimeEndpointInfo endpointInfo;
+
     public MLModel withEndpointInfo(RealtimeEndpointInfo endpointInfo) {
         this.endpointInfo = endpointInfo;
         return this;
@@ -70,6 +75,7 @@ public class MLModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinishedAt")
     public OffsetDateTime finishedAt;
+
     public MLModel withFinishedAt(OffsetDateTime finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -78,6 +84,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataLocationS3")
     public String inputDataLocationS3;
+
     public MLModel withInputDataLocationS3(String inputDataLocationS3) {
         this.inputDataLocationS3 = inputDataLocationS3;
         return this;
@@ -88,6 +95,7 @@ public class MLModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public MLModel withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -96,6 +104,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public MLModel withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -104,6 +113,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelType")
     public MLModelTypeEnum mlModelType;
+
     public MLModel withMLModelType(MLModelTypeEnum mlModelType) {
         this.mlModelType = mlModelType;
         return this;
@@ -112,6 +122,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public MLModel withMessage(String message) {
         this.message = message;
         return this;
@@ -120,6 +131,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MLModel withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +140,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreThreshold")
     public Float scoreThreshold;
+
     public MLModel withScoreThreshold(Float scoreThreshold) {
         this.scoreThreshold = scoreThreshold;
         return this;
@@ -138,6 +151,7 @@ public class MLModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScoreThresholdLastUpdatedAt")
     public OffsetDateTime scoreThresholdLastUpdatedAt;
+
     public MLModel withScoreThresholdLastUpdatedAt(OffsetDateTime scoreThresholdLastUpdatedAt) {
         this.scoreThresholdLastUpdatedAt = scoreThresholdLastUpdatedAt;
         return this;
@@ -149,6 +163,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeInBytes")
     public Long sizeInBytes;
+
     public MLModel withSizeInBytes(Long sizeInBytes) {
         this.sizeInBytes = sizeInBytes;
         return this;
@@ -162,6 +177,7 @@ public class MLModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAt")
     public OffsetDateTime startedAt;
+
     public MLModel withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -170,6 +186,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EntityStatusEnum status;
+
     public MLModel withStatus(EntityStatusEnum status) {
         this.status = status;
         return this;
@@ -178,6 +195,7 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingDataSourceId")
     public String trainingDataSourceId;
+
     public MLModel withTrainingDataSourceId(String trainingDataSourceId) {
         this.trainingDataSourceId = trainingDataSourceId;
         return this;
@@ -186,9 +204,11 @@ public class MLModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingParameters")
     public java.util.Map<String, String> trainingParameters;
+
     public MLModel withTrainingParameters(java.util.Map<String, String> trainingParameters) {
         this.trainingParameters = trainingParameters;
         return this;
     }
     
+    public MLModel(){}
 }

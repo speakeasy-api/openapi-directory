@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public GoogleRpcStatus error;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment withError(GoogleRpcStatus error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicy")
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicy firewallPolicy;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment withFirewallPolicy(GoogleCloudRecaptchaenterpriseV1FirewallPolicy firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment(){}
 }

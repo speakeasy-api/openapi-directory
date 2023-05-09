@@ -18,6 +18,7 @@ public class GoogleCloudRunV2VersionToPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public Integer mode;
+
     public GoogleCloudRunV2VersionToPath withMode(Integer mode) {
         this.mode = mode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2VersionToPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GoogleCloudRunV2VersionToPath withPath(String path) {
         this.path = path;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRunV2VersionToPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GoogleCloudRunV2VersionToPath withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GoogleCloudRunV2VersionToPath(){}
 }

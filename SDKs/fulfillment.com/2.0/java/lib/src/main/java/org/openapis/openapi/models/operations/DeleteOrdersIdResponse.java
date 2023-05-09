@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOrdersIdResponse {
     
     public String contentType;
+
     public DeleteOrdersIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteOrdersIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteOrdersIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteOrdersIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOrdersIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteOrdersIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema;
+
     public DeleteOrdersIdResponse withOneordersGetResponses404ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema) {
         this.oneordersGetResponses404ContentApplication1jsonSchema = oneordersGetResponses404ContentApplication1jsonSchema;
         return this;
@@ -43,9 +48,14 @@ public class DeleteOrdersIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OneordersPostResponses201ContentApplication1jsonSchema oneordersPostResponses201ContentApplication1jsonSchema;
+
     public DeleteOrdersIdResponse withOneordersPostResponses201ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneordersPostResponses201ContentApplication1jsonSchema oneordersPostResponses201ContentApplication1jsonSchema) {
         this.oneordersPostResponses201ContentApplication1jsonSchema = oneordersPostResponses201ContentApplication1jsonSchema;
         return this;
     }
     
+    public DeleteOrdersIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DeregisterInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public DeregisterInstanceResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public DeregisterInstanceResponse(){}
 }

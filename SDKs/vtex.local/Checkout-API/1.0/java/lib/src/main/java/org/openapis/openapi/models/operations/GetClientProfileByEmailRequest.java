@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientProfileByEmailRequest {
@@ -12,6 +13,7 @@ public class GetClientProfileByEmailRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetClientProfileByEmailRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetClientProfileByEmailRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetClientProfileByEmailRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class GetClientProfileByEmailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetClientProfileByEmailRequest withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public GetClientProfileByEmailRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("email") String email) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.email = email;
+  }
 }

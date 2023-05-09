@@ -15,9 +15,11 @@ public class GetNetworksId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public GetNetworksId200ApplicationJSONNetwork network;
+
     public GetNetworksId200ApplicationJSON withNetwork(GetNetworksId200ApplicationJSONNetwork network) {
         this.network = network;
         return this;
     }
     
+    public GetNetworksId200ApplicationJSON(){}
 }

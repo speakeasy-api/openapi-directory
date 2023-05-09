@@ -20,6 +20,7 @@ public class AccountLevelBpaSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bpaImpactsLightsail")
     public Boolean bpaImpactsLightsail;
+
     public AccountLevelBpaSync withBpaImpactsLightsail(Boolean bpaImpactsLightsail) {
         this.bpaImpactsLightsail = bpaImpactsLightsail;
         return this;
@@ -30,6 +31,7 @@ public class AccountLevelBpaSync {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSyncedAt")
     public OffsetDateTime lastSyncedAt;
+
     public AccountLevelBpaSync withLastSyncedAt(OffsetDateTime lastSyncedAt) {
         this.lastSyncedAt = lastSyncedAt;
         return this;
@@ -38,6 +40,7 @@ public class AccountLevelBpaSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public BPAStatusMessageEnum message;
+
     public AccountLevelBpaSync withMessage(BPAStatusMessageEnum message) {
         this.message = message;
         return this;
@@ -46,9 +49,11 @@ public class AccountLevelBpaSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AccountLevelBpaSyncStatusEnum status;
+
     public AccountLevelBpaSync withStatus(AccountLevelBpaSyncStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AccountLevelBpaSync(){}
 }

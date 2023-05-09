@@ -19,6 +19,7 @@ public class DependabotSecret {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public DependabotSecret withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class DependabotSecret {
      */
     @JsonProperty("name")
     public String name;
+
     public DependabotSecret withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +40,15 @@ public class DependabotSecret {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public DependabotSecret withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DependabotSecret(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("name") String name, @JsonProperty("updated_at") OffsetDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.name = name;
+        this.updatedAt = updatedAt;
+  }
 }

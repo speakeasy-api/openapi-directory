@@ -59,7 +59,8 @@ public enum ExportableInstanceFieldEnum {
     EFFECTIVE_RECOMMENDATION_PREFERENCES_INFERRED_WORKLOAD_TYPES("EffectiveRecommendationPreferencesInferredWorkloadTypes"),
     INFERRED_WORKLOAD_TYPES("InferredWorkloadTypes"),
     RECOMMENDATION_OPTIONS_MIGRATION_EFFORT("RecommendationOptionsMigrationEffort"),
-    EFFECTIVE_RECOMMENDATION_PREFERENCES_EXTERNAL_METRICS_SOURCE("EffectiveRecommendationPreferencesExternalMetricsSource");
+    EFFECTIVE_RECOMMENDATION_PREFERENCES_EXTERNAL_METRICS_SOURCE("EffectiveRecommendationPreferencesExternalMetricsSource"),
+    INSTANCE_STATE("InstanceState");
 
     @JsonValue
     public final String value;

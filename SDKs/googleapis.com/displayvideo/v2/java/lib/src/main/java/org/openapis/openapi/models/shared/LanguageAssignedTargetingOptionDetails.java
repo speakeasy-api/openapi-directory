@@ -18,6 +18,7 @@ public class LanguageAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LanguageAssignedTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class LanguageAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public LanguageAssignedTargetingOptionDetails withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -40,9 +42,11 @@ public class LanguageAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public LanguageAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public LanguageAssignedTargetingOptionDetails(){}
 }

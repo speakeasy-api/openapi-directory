@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1PolicyTagInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1PolicyTagInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1PolicyTagInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1PolicyTagInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1PolicyTagInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentPolicyTag")
     public String parentPolicyTag;
+
     public GoogleCloudDatacatalogV1PolicyTagInput withParentPolicyTag(String parentPolicyTag) {
         this.parentPolicyTag = parentPolicyTag;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1PolicyTagInput(){}
 }

@@ -15,6 +15,7 @@ public class GetSamplingStatisticSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSamplingStatisticSummariesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetSamplingStatisticSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplingStatisticSummaries")
     public SamplingStatisticSummary[] samplingStatisticSummaries;
+
     public GetSamplingStatisticSummariesResult withSamplingStatisticSummaries(SamplingStatisticSummary[] samplingStatisticSummaries) {
         this.samplingStatisticSummaries = samplingStatisticSummaries;
         return this;
     }
     
+    public GetSamplingStatisticSummariesResult(){}
 }

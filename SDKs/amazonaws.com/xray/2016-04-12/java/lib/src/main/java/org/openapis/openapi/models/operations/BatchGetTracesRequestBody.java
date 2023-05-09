@@ -15,6 +15,7 @@ public class BatchGetTracesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchGetTracesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -25,9 +26,13 @@ public class BatchGetTracesRequestBody {
      */
     @JsonProperty("TraceIds")
     public String[] traceIds;
+
     public BatchGetTracesRequestBody withTraceIds(String[] traceIds) {
         this.traceIds = traceIds;
         return this;
     }
     
+    public BatchGetTracesRequestBody(@JsonProperty("TraceIds") String[] traceIds) {
+        this.traceIds = traceIds;
+  }
 }

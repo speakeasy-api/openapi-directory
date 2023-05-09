@@ -18,6 +18,7 @@ public class Capacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public Capacity withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -29,9 +30,11 @@ public class Capacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Capacity withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Capacity(){}
 }

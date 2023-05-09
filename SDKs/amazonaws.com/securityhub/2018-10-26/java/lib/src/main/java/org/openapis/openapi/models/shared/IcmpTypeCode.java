@@ -15,6 +15,7 @@ public class IcmpTypeCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public Long code;
+
     public IcmpTypeCode withCode(Long code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class IcmpTypeCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public Long type;
+
     public IcmpTypeCode withType(Long type) {
         this.type = type;
         return this;
     }
     
+    public IcmpTypeCode(){}
 }

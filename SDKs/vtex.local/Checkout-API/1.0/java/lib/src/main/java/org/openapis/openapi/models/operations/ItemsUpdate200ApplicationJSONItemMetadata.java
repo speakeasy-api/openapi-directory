@@ -18,9 +18,11 @@ public class ItemsUpdate200ApplicationJSONItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ItemsUpdate200ApplicationJSONItemMetadataItems[] items;
+
     public ItemsUpdate200ApplicationJSONItemMetadata withItems(ItemsUpdate200ApplicationJSONItemMetadataItems[] items) {
         this.items = items;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONItemMetadata(){}
 }

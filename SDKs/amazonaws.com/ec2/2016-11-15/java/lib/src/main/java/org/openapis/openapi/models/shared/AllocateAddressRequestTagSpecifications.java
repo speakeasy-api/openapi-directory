@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AllocateAddressRequestTagSpecifications {
     
     public AllocateAddressRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public AllocateAddressRequestTagSpecifications withResourceType(AllocateAddressRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class AllocateAddressRequestTagSpecifications {
     
     
     public AllocateAddressRequestTagSpecificationsTags[] tags;
+
     public AllocateAddressRequestTagSpecifications withTags(AllocateAddressRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AllocateAddressRequestTagSpecifications(){}
 }

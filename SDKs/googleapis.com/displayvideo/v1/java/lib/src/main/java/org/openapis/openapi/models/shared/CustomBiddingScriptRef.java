@@ -18,9 +18,11 @@ public class CustomBiddingScriptRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public CustomBiddingScriptRef withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public CustomBiddingScriptRef(){}
 }

@@ -12,6 +12,7 @@ public class CreateSecurityConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateSecurityConfigRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateSecurityConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSecurityConfigRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateSecurityConfigRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateSecurityConfigRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class CreateSecurityConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlOptions")
     public SamlConfigOptions samlOptions;
+
     public CreateSecurityConfigRequest withSamlOptions(SamlConfigOptions samlOptions) {
         this.samlOptions = samlOptions;
         return this;
@@ -42,9 +46,14 @@ public class CreateSecurityConfigRequest {
     
     @JsonProperty("type")
     public SecurityConfigTypeEnum type;
+
     public CreateSecurityConfigRequest withType(SecurityConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateSecurityConfigRequest(@JsonProperty("name") String name, @JsonProperty("type") SecurityConfigTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

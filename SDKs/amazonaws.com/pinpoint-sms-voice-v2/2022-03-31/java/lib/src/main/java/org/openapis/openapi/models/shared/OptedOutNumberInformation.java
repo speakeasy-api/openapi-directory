@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class OptedOutNumberInformation {
     @JsonProperty("EndUserOptedOut")
     public Boolean endUserOptedOut;
+
     public OptedOutNumberInformation withEndUserOptedOut(Boolean endUserOptedOut) {
         this.endUserOptedOut = endUserOptedOut;
         return this;
@@ -24,6 +25,7 @@ public class OptedOutNumberInformation {
     
     @JsonProperty("OptedOutNumber")
     public String optedOutNumber;
+
     public OptedOutNumberInformation withOptedOutNumber(String optedOutNumber) {
         this.optedOutNumber = optedOutNumber;
         return this;
@@ -33,9 +35,15 @@ public class OptedOutNumberInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OptedOutTimestamp")
     public OffsetDateTime optedOutTimestamp;
+
     public OptedOutNumberInformation withOptedOutTimestamp(OffsetDateTime optedOutTimestamp) {
         this.optedOutTimestamp = optedOutTimestamp;
         return this;
     }
     
+    public OptedOutNumberInformation(@JsonProperty("EndUserOptedOut") Boolean endUserOptedOut, @JsonProperty("OptedOutNumber") String optedOutNumber, @JsonProperty("OptedOutTimestamp") OffsetDateTime optedOutTimestamp) {
+        this.endUserOptedOut = endUserOptedOut;
+        this.optedOutNumber = optedOutNumber;
+        this.optedOutTimestamp = optedOutTimestamp;
+  }
 }

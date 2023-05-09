@@ -15,6 +15,7 @@ public class EvaluationResultQualifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public EvaluationResultQualifier withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -23,6 +24,7 @@ public class EvaluationResultQualifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMode")
     public EvaluationModeEnum evaluationMode;
+
     public EvaluationResultQualifier withEvaluationMode(EvaluationModeEnum evaluationMode) {
         this.evaluationMode = evaluationMode;
         return this;
@@ -31,6 +33,7 @@ public class EvaluationResultQualifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public EvaluationResultQualifier withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -39,9 +42,11 @@ public class EvaluationResultQualifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public EvaluationResultQualifier withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public EvaluationResultQualifier(){}
 }

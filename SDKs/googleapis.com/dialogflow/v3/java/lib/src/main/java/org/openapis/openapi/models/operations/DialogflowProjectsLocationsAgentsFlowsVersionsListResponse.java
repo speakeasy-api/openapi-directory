@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsAgentsFlowsVersionsListResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsAgentsFlowsVersionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsAgentsFlowsVersionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3ListVersionsResponse googleCloudDialogflowCxV3ListVersionsResponse;
+
     public DialogflowProjectsLocationsAgentsFlowsVersionsListResponse withGoogleCloudDialogflowCxV3ListVersionsResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3ListVersionsResponse googleCloudDialogflowCxV3ListVersionsResponse) {
         this.googleCloudDialogflowCxV3ListVersionsResponse = googleCloudDialogflowCxV3ListVersionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsAgentsFlowsVersionsListResponse {
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsAgentsFlowsVersionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsAgentsFlowsVersionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsAgentsFlowsVersionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsAgentsFlowsVersionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

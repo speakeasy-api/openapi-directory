@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetSegmentResponse;
 
 public class Application {
@@ -33,6 +32,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -40,15 +41,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### segment
+### [segment](docs/segment/README.md)
 
-* `getSegment` - Get Segment
+* [getSegment](docs/segment/README.md#getsegment) - Get Segment
 
-### sessions
+### [sessions](docs/sessions/README.md)
 
-* `createnewsession` - Create new session
-* `editsession` - Edit session
-* `getSession` - Get Session
+* [createnewsession](docs/sessions/README.md#createnewsession) - Create new session
+* [editsession](docs/sessions/README.md#editsession) - Edit session
+* [getSession](docs/sessions/README.md#getsession) - Get Session
 <!-- End SDK Available Operations -->
 
 ### Maturity

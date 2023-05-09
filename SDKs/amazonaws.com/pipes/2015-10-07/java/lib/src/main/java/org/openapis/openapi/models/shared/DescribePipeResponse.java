@@ -20,6 +20,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DescribePipeResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DescribePipeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribePipeResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentState")
     public PipeStateEnum currentState;
+
     public DescribePipeResponse withCurrentState(PipeStateEnum currentState) {
         this.currentState = currentState;
         return this;
@@ -46,6 +49,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribePipeResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredState")
     public RequestedPipeStateDescribeResponseEnum desiredState;
+
     public DescribePipeResponse withDesiredState(RequestedPipeStateDescribeResponseEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -62,6 +67,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enrichment")
     public String enrichment;
+
     public DescribePipeResponse withEnrichment(String enrichment) {
         this.enrichment = enrichment;
         return this;
@@ -70,6 +76,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnrichmentParameters")
     public PipeEnrichmentParameters enrichmentParameters;
+
     public DescribePipeResponse withEnrichmentParameters(PipeEnrichmentParameters enrichmentParameters) {
         this.enrichmentParameters = enrichmentParameters;
         return this;
@@ -80,6 +87,7 @@ public class DescribePipeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribePipeResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -88,6 +96,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribePipeResponse withName(String name) {
         this.name = name;
         return this;
@@ -96,6 +105,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribePipeResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -104,6 +114,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public DescribePipeResponse withSource(String source) {
         this.source = source;
         return this;
@@ -112,6 +123,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceParameters")
     public PipeSourceParameters sourceParameters;
+
     public DescribePipeResponse withSourceParameters(PipeSourceParameters sourceParameters) {
         this.sourceParameters = sourceParameters;
         return this;
@@ -120,6 +132,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public DescribePipeResponse withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -128,6 +141,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribePipeResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -136,6 +150,7 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public DescribePipeResponse withTarget(String target) {
         this.target = target;
         return this;
@@ -144,9 +159,11 @@ public class DescribePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetParameters")
     public PipeTargetParameters targetParameters;
+
     public DescribePipeResponse withTargetParameters(PipeTargetParameters targetParameters) {
         this.targetParameters = targetParameters;
         return this;
     }
     
+    public DescribePipeResponse(){}
 }

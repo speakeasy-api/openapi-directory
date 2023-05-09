@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDeleteRoleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDeleteRoleActionEnum action;
+
     public POSTDeleteRoleRequest withAction(POSTDeleteRoleActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDeleteRoleRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDeleteRoleVersionEnum version;
+
     public POSTDeleteRoleRequest withVersion(POSTDeleteRoleVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDeleteRoleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDeleteRoleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDeleteRoleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDeleteRoleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDeleteRoleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDeleteRoleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTDeleteRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDeleteRoleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDeleteRoleRequest(@JsonProperty("Action") POSTDeleteRoleActionEnum action, @JsonProperty("Version") POSTDeleteRoleVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

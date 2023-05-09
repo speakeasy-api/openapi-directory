@@ -15,6 +15,7 @@ public class GetOrder200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public GetOrder200ApplicationJSONItemsPriceTags withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -26,6 +27,7 @@ public class GetOrder200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPercentual")
     public Boolean isPercentual;
+
     public GetOrder200ApplicationJSONItemsPriceTags withIsPercentual(Boolean isPercentual) {
         this.isPercentual = isPercentual;
         return this;
@@ -37,6 +39,7 @@ public class GetOrder200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetOrder200ApplicationJSONItemsPriceTags withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class GetOrder200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawValue")
     public Long rawValue;
+
     public GetOrder200ApplicationJSONItemsPriceTags withRawValue(Long rawValue) {
         this.rawValue = rawValue;
         return this;
@@ -59,9 +63,11 @@ public class GetOrder200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public GetOrder200ApplicationJSONItemsPriceTags withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public GetOrder200ApplicationJSONItemsPriceTags(){}
 }

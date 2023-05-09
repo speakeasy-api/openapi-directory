@@ -15,6 +15,7 @@ public class PropertyGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
     public GroupTypeEnum groupType;
+
     public PropertyGroupRequest withGroupType(GroupTypeEnum groupType) {
         this.groupType = groupType;
         return this;
@@ -23,9 +24,11 @@ public class PropertyGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyNames")
     public String[] propertyNames;
+
     public PropertyGroupRequest withPropertyNames(String[] propertyNames) {
         this.propertyNames = propertyNames;
         return this;
     }
     
+    public PropertyGroupRequest(){}
 }

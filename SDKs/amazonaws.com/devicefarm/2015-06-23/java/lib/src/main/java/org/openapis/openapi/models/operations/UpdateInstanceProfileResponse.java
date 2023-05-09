@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateInstanceProfileResponse {
@@ -12,6 +13,7 @@ public class UpdateInstanceProfileResponse {
      */
     
     public Object argumentException;
+
     public UpdateInstanceProfileResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateInstanceProfileResponse {
     
     
     public String contentType;
+
     public UpdateInstanceProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateInstanceProfileResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateInstanceProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateInstanceProfileResponse {
      */
     
     public Object notFoundException;
+
     public UpdateInstanceProfileResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateInstanceProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateInstanceProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateInstanceProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateInstanceProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateInstanceProfileResponse {
      */
     
     public Object serviceAccountException;
+
     public UpdateInstanceProfileResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateInstanceProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateInstanceProfileResult updateInstanceProfileResult;
+
     public UpdateInstanceProfileResponse withUpdateInstanceProfileResult(org.openapis.openapi.models.shared.UpdateInstanceProfileResult updateInstanceProfileResult) {
         this.updateInstanceProfileResult = updateInstanceProfileResult;
         return this;
     }
     
+    public UpdateInstanceProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

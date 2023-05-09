@@ -18,6 +18,7 @@ public class StackPack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptions")
     public java.util.Map<String, String> descriptions;
+
     public StackPack withDescriptions(java.util.Map<String, String> descriptions) {
         this.descriptions = descriptions;
         return this;
@@ -29,6 +30,7 @@ public class StackPack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconDataURL")
     public String iconDataURL;
+
     public StackPack withIconDataURL(String iconDataURL) {
         this.iconDataURL = iconDataURL;
         return this;
@@ -40,6 +42,7 @@ public class StackPack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StackPack withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class StackPack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public StackPack withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public StackPack(){}
 }

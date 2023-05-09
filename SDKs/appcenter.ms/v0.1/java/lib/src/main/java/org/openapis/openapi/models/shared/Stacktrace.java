@@ -18,6 +18,7 @@ public class Stacktrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception")
     public Exception exception;
+
     public Stacktrace withException(Exception exception) {
         this.exception = exception;
         return this;
@@ -26,6 +27,7 @@ public class Stacktrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Stacktrace withReason(String reason) {
         this.reason = reason;
         return this;
@@ -34,6 +36,7 @@ public class Stacktrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threads")
     public Thread[] threads;
+
     public Stacktrace withThreads(Thread[] threads) {
         this.threads = threads;
         return this;
@@ -42,9 +45,11 @@ public class Stacktrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Stacktrace withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Stacktrace(){}
 }

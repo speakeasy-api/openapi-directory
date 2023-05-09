@@ -15,6 +15,7 @@ public class ListVariantStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVariantStoresResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListVariantStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantStores")
     public VariantStoreItem[] variantStores;
+
     public ListVariantStoresResponse withVariantStores(VariantStoreItem[] variantStores) {
         this.variantStores = variantStores;
         return this;
     }
     
+    public ListVariantStoresResponse(){}
 }

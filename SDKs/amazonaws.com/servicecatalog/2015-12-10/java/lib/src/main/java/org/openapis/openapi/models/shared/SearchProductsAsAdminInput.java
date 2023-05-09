@@ -12,6 +12,7 @@ public class SearchProductsAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public SearchProductsAsAdminInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class SearchProductsAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public java.util.Map<String, String[]> filters;
+
     public SearchProductsAsAdminInput withFilters(java.util.Map<String, String[]> filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class SearchProductsAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public SearchProductsAsAdminInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -36,6 +39,7 @@ public class SearchProductsAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public SearchProductsAsAdminInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -44,6 +48,7 @@ public class SearchProductsAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public SearchProductsAsAdminInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -52,6 +57,7 @@ public class SearchProductsAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductSource")
     public ProductSourceEnum productSource;
+
     public SearchProductsAsAdminInput withProductSource(ProductSourceEnum productSource) {
         this.productSource = productSource;
         return this;
@@ -60,6 +66,7 @@ public class SearchProductsAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ProductViewSortByEnum sortBy;
+
     public SearchProductsAsAdminInput withSortBy(ProductViewSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -68,9 +75,11 @@ public class SearchProductsAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public SearchProductsAsAdminInput withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SearchProductsAsAdminInput(){}
 }

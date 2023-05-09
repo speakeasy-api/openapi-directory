@@ -18,6 +18,7 @@ public class GerritSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliasContext")
     public AliasContext aliasContext;
+
     public GerritSourceContext withAliasContext(AliasContext aliasContext) {
         this.aliasContext = aliasContext;
         return this;
@@ -29,6 +30,7 @@ public class GerritSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gerritProject")
     public String gerritProject;
+
     public GerritSourceContext withGerritProject(String gerritProject) {
         this.gerritProject = gerritProject;
         return this;
@@ -40,6 +42,7 @@ public class GerritSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostUri")
     public String hostUri;
+
     public GerritSourceContext withHostUri(String hostUri) {
         this.hostUri = hostUri;
         return this;
@@ -51,9 +54,11 @@ public class GerritSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public GerritSourceContext withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public GerritSourceContext(){}
 }

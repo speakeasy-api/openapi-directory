@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetWebACLRequest {
     @JsonProperty("WebACLId")
     public String webACLId;
+
     public GetWebACLRequest withWebACLId(String webACLId) {
         this.webACLId = webACLId;
         return this;
     }
     
+    public GetWebACLRequest(@JsonProperty("WebACLId") String webACLId) {
+        this.webACLId = webACLId;
+  }
 }

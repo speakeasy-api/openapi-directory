@@ -15,6 +15,7 @@ public class ArcmwRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public ArcmwRequestBodyCertificateParameters certificateParameters;
+
     public ArcmwRequestBody withCertificateParameters(ArcmwRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class ArcmwRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public ArcmwRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class ArcmwRequestBody {
      */
     @JsonProperty("format")
     public ArcmwRequestBodyFormatEnum format;
+
     public ArcmwRequestBody withFormat(ArcmwRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class ArcmwRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public ArcmwRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public ArcmwRequestBody(@JsonProperty("format") ArcmwRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

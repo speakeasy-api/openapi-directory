@@ -12,6 +12,7 @@ public class StartKeyPhrasesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartKeyPhrasesDetectionJobRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartKeyPhrasesDetectionJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartKeyPhrasesDetectionJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class StartKeyPhrasesDetectionJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartKeyPhrasesDetectionJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -34,6 +37,7 @@ public class StartKeyPhrasesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartKeyPhrasesDetectionJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -41,6 +45,7 @@ public class StartKeyPhrasesDetectionJobRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartKeyPhrasesDetectionJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -48,6 +53,7 @@ public class StartKeyPhrasesDetectionJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartKeyPhrasesDetectionJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -56,6 +62,7 @@ public class StartKeyPhrasesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartKeyPhrasesDetectionJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -64,6 +71,7 @@ public class StartKeyPhrasesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public StartKeyPhrasesDetectionJobRequest withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -72,9 +80,16 @@ public class StartKeyPhrasesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public StartKeyPhrasesDetectionJobRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public StartKeyPhrasesDetectionJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

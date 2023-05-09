@@ -18,6 +18,7 @@ public class GetTxsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagesTotal")
     public Double pagesTotal;
+
     public GetTxsResponse withPagesTotal(Double pagesTotal) {
         this.pagesTotal = pagesTotal;
         return this;
@@ -29,9 +30,11 @@ public class GetTxsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txs")
     public GetTxResponse[] txs;
+
     public GetTxsResponse withTxs(GetTxResponse[] txs) {
         this.txs = txs;
         return this;
     }
     
+    public GetTxsResponse(){}
 }

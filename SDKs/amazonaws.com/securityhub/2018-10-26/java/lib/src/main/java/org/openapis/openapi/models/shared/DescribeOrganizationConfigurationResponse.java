@@ -15,6 +15,7 @@ public class DescribeOrganizationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoEnable")
     public Boolean autoEnable;
+
     public DescribeOrganizationConfigurationResponse withAutoEnable(Boolean autoEnable) {
         this.autoEnable = autoEnable;
         return this;
@@ -23,6 +24,7 @@ public class DescribeOrganizationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoEnableStandards")
     public AutoEnableStandardsEnum autoEnableStandards;
+
     public DescribeOrganizationConfigurationResponse withAutoEnableStandards(AutoEnableStandardsEnum autoEnableStandards) {
         this.autoEnableStandards = autoEnableStandards;
         return this;
@@ -31,9 +33,11 @@ public class DescribeOrganizationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberAccountLimitReached")
     public Boolean memberAccountLimitReached;
+
     public DescribeOrganizationConfigurationResponse withMemberAccountLimitReached(Boolean memberAccountLimitReached) {
         this.memberAccountLimitReached = memberAccountLimitReached;
         return this;
     }
     
+    public DescribeOrganizationConfigurationResponse(){}
 }

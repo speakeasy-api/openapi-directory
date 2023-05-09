@@ -15,6 +15,7 @@ public class AddProductCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public AddProductCustomFieldFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class AddProductCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public AddProductCustomFieldFields withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AddProductCustomFieldFields(){}
 }

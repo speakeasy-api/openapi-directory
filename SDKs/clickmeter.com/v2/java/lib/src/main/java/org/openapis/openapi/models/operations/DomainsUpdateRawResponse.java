@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DomainsUpdateRawResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreResponsesEntityUriSystemInt64 apiCoreResponsesEntityUriSystemInt64;
+
     public DomainsUpdateRawResponse withApiCoreResponsesEntityUriSystemInt64(org.openapis.openapi.models.shared.ApiCoreResponsesEntityUriSystemInt64 apiCoreResponsesEntityUriSystemInt64) {
         this.apiCoreResponsesEntityUriSystemInt64 = apiCoreResponsesEntityUriSystemInt64;
         return this;
@@ -16,6 +18,7 @@ public class DomainsUpdateRawResponse {
     
     
     public byte[] body;
+
     public DomainsUpdateRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class DomainsUpdateRawResponse {
     
     
     public String contentType;
+
     public DomainsUpdateRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class DomainsUpdateRawResponse {
     
     
     public Integer statusCode;
+
     public DomainsUpdateRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class DomainsUpdateRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DomainsUpdateRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DomainsUpdateRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

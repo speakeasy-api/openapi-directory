@@ -12,6 +12,7 @@ public class NodesFilesListFile {
      */
     
     public NodesFilesListFileAttributes attributes;
+
     public NodesFilesListFile withAttributes(NodesFilesListFileAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesFilesListFile {
      */
     
     public String id;
+
     public NodesFilesListFile withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesFilesListFile {
      */
     
     public NodesFilesListFileLinks links;
+
     public NodesFilesListFile withLinks(NodesFilesListFileLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesFilesListFile {
      */
     
     public NodesFilesListFileRelationships relationships;
+
     public NodesFilesListFile withRelationships(NodesFilesListFileRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class NodesFilesListFile {
      */
     
     public String type;
+
     public NodesFilesListFile withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesFilesListFile(){}
 }

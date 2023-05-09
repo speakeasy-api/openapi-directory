@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateIpamResourceDiscoveryRequestTagSpecifications {
     
     public AssociateIpamResourceDiscoveryRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public AssociateIpamResourceDiscoveryRequestTagSpecifications withResourceType(AssociateIpamResourceDiscoveryRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class AssociateIpamResourceDiscoveryRequestTagSpecifications {
     
     
     public AssociateIpamResourceDiscoveryRequestTagSpecificationsTags[] tags;
+
     public AssociateIpamResourceDiscoveryRequestTagSpecifications withTags(AssociateIpamResourceDiscoveryRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AssociateIpamResourceDiscoveryRequestTagSpecifications(){}
 }

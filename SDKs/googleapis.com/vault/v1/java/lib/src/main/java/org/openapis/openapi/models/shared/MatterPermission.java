@@ -18,6 +18,7 @@ public class MatterPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public MatterPermission withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,9 +30,11 @@ public class MatterPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public MatterPermissionRoleEnum role;
+
     public MatterPermission withRole(MatterPermissionRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public MatterPermission(){}
 }

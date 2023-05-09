@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointPointDailyAstroData {
     @JsonProperty("moon")
     public PointPointDailyMoonData moon;
+
     public PointPointDailyAstroData withMoon(PointPointDailyMoonData moon) {
         this.moon = moon;
         return this;
@@ -16,9 +17,14 @@ public class PointPointDailyAstroData {
     
     @JsonProperty("sun")
     public PointPointDailySunData sun;
+
     public PointPointDailyAstroData withSun(PointPointDailySunData sun) {
         this.sun = sun;
         return this;
     }
     
+    public PointPointDailyAstroData(@JsonProperty("moon") PointPointDailyMoonData moon, @JsonProperty("sun") PointPointDailySunData sun) {
+        this.moon = moon;
+        this.sun = sun;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateDistributionBundleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public UpdateDistributionBundleRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -20,9 +21,11 @@ public class UpdateDistributionBundleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionName")
     public String distributionName;
+
     public UpdateDistributionBundleRequest withDistributionName(String distributionName) {
         this.distributionName = distributionName;
         return this;
     }
     
+    public UpdateDistributionBundleRequest(){}
 }

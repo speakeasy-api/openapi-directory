@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsPermissionsGetRequest {
@@ -12,6 +13,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TagmanagerAccountsPermissionsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TagmanagerAccountsPermissionsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public TagmanagerAccountsPermissionsGetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -42,6 +46,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TagmanagerAccountsPermissionsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TagmanagerAccountsPermissionsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TagmanagerAccountsPermissionsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TagmanagerAccountsPermissionsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TagmanagerAccountsPermissionsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionId")
     public String permissionId;
+
     public TagmanagerAccountsPermissionsGetRequest withPermissionId(String permissionId) {
         this.permissionId = permissionId;
         return this;
@@ -102,6 +112,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TagmanagerAccountsPermissionsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TagmanagerAccountsPermissionsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TagmanagerAccountsPermissionsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,9 +145,14 @@ public class TagmanagerAccountsPermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TagmanagerAccountsPermissionsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TagmanagerAccountsPermissionsGetRequest(@JsonProperty("accountId") String accountId, @JsonProperty("permissionId") String permissionId) {
+        this.accountId = accountId;
+        this.permissionId = permissionId;
+  }
 }

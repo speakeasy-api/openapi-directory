@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdTrendAnalysisRequest {
@@ -12,6 +13,7 @@ public class GetUsersIdTrendAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
     public String categories;
+
     public GetUsersIdTrendAnalysisRequest withCategories(String categories) {
         this.categories = categories;
         return this;
@@ -22,6 +24,7 @@ public class GetUsersIdTrendAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public GetUsersIdTrendAnalysisRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -32,6 +35,7 @@ public class GetUsersIdTrendAnalysisRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetUsersIdTrendAnalysisRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class GetUsersIdTrendAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
     public Long interval;
+
     public GetUsersIdTrendAnalysisRequest withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -52,6 +57,7 @@ public class GetUsersIdTrendAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public GetUsersIdTrendAnalysisPeriodEnum period;
+
     public GetUsersIdTrendAnalysisRequest withPeriod(GetUsersIdTrendAnalysisPeriodEnum period) {
         this.period = period;
         return this;
@@ -62,6 +68,7 @@ public class GetUsersIdTrendAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scenarios")
     public String scenarios;
+
     public GetUsersIdTrendAnalysisRequest withScenarios(String scenarios) {
         this.scenarios = scenarios;
         return this;
@@ -72,9 +79,19 @@ public class GetUsersIdTrendAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public GetUsersIdTrendAnalysisRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GetUsersIdTrendAnalysisRequest(@JsonProperty("categories") String categories, @JsonProperty("end_date") String endDate, @JsonProperty("id") Long id, @JsonProperty("interval") Long interval, @JsonProperty("period") GetUsersIdTrendAnalysisPeriodEnum period, @JsonProperty("scenarios") String scenarios, @JsonProperty("start_date") String startDate) {
+        this.categories = categories;
+        this.endDate = endDate;
+        this.id = id;
+        this.interval = interval;
+        this.period = period;
+        this.scenarios = scenarios;
+        this.startDate = startDate;
+  }
 }

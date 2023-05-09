@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransactionsReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public TransactionsReadRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +18,7 @@ public class TransactionsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public TransactionsReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +26,7 @@ public class TransactionsReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public TransactionsReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +34,7 @@ public class TransactionsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=line_item")
     public Long lineItem;
+
     public TransactionsReadRequest withLineItem(Long lineItem) {
         this.lineItem = lineItem;
         return this;
@@ -37,6 +42,7 @@ public class TransactionsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posted_date")
     public String postedDate;
+
     public TransactionsReadRequest withPostedDate(String postedDate) {
         this.postedDate = postedDate;
         return this;
@@ -44,9 +50,13 @@ public class TransactionsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public TransactionsReadRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public TransactionsReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

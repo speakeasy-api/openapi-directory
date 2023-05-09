@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetXrefListRequest {
@@ -12,6 +13,7 @@ public class GetGetXrefListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
     public String code;
+
     public GetGetXrefListRequest withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +21,7 @@ public class GetGetXrefListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetGetXrefListFormatEnum format;
+
     public GetGetXrefListRequest withFormat(GetGetXrefListFormatEnum format) {
         this.format = format;
         return this;
@@ -29,9 +32,14 @@ public class GetGetXrefListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
     public String pwId;
+
     public GetGetXrefListRequest withPwId(String pwId) {
         this.pwId = pwId;
         return this;
     }
     
+    public GetGetXrefListRequest(@JsonProperty("code") String code, @JsonProperty("pwId") String pwId) {
+        this.code = code;
+        this.pwId = pwId;
+  }
 }

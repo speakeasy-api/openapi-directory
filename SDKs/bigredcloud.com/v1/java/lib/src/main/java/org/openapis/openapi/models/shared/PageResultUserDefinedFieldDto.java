@@ -15,6 +15,7 @@ public class PageResultUserDefinedFieldDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultUserDefinedFieldDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultUserDefinedFieldDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public UserDefinedFieldDto[] items;
+
     public PageResultUserDefinedFieldDto withItems(UserDefinedFieldDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultUserDefinedFieldDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultUserDefinedFieldDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultUserDefinedFieldDto(){}
 }

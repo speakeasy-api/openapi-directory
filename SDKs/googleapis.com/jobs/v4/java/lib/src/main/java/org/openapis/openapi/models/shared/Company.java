@@ -18,6 +18,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("careerSiteUri")
     public String careerSiteUri;
+
     public Company withCareerSiteUri(String careerSiteUri) {
         this.careerSiteUri = careerSiteUri;
         return this;
@@ -29,6 +30,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("derivedInfo")
     public CompanyDerivedInfo derivedInfo;
+
     public Company withDerivedInfo(CompanyDerivedInfo derivedInfo) {
         this.derivedInfo = derivedInfo;
         return this;
@@ -40,6 +42,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Company withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eeoText")
     public String eeoText;
+
     public Company withEeoText(String eeoText) {
         this.eeoText = eeoText;
         return this;
@@ -62,6 +66,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public Company withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -73,6 +78,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headquartersAddress")
     public String headquartersAddress;
+
     public Company withHeadquartersAddress(String headquartersAddress) {
         this.headquartersAddress = headquartersAddress;
         return this;
@@ -84,6 +90,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiringAgency")
     public Boolean hiringAgency;
+
     public Company withHiringAgency(Boolean hiringAgency) {
         this.hiringAgency = hiringAgency;
         return this;
@@ -95,6 +102,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public Company withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -106,6 +114,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordSearchableJobCustomAttributes")
     public String[] keywordSearchableJobCustomAttributes;
+
     public Company withKeywordSearchableJobCustomAttributes(String[] keywordSearchableJobCustomAttributes) {
         this.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
         return this;
@@ -117,6 +126,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Company withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public CompanySizeEnum size;
+
     public Company withSize(CompanySizeEnum size) {
         this.size = size;
         return this;
@@ -139,6 +150,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public Company withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -150,9 +162,11 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websiteUri")
     public String websiteUri;
+
     public Company withWebsiteUri(String websiteUri) {
         this.websiteUri = websiteUri;
         return this;
     }
     
+    public Company(){}
 }

@@ -43,11 +43,9 @@ public class KeysApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeysApiCurrentResponse res = new org.openapis.openapi.models.operations.KeysApiCurrentResponse() {{
+        org.openapis.openapi.models.operations.KeysApiCurrentResponse res = new org.openapis.openapi.models.operations.KeysApiCurrentResponse(contentType, httpRes.statusCode()) {{
             keysApiCurrent200ApplicationJSONOneOf = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -75,11 +73,9 @@ public class KeysApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeysApiCustomResponse res = new org.openapis.openapi.models.operations.KeysApiCustomResponse() {{
+        org.openapis.openapi.models.operations.KeysApiCustomResponse res = new org.openapis.openapi.models.operations.KeysApiCustomResponse(contentType, httpRes.statusCode()) {{
             keysApiCustom200ApplicationOctetStreamBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +102,9 @@ public class KeysApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeysApiExpiryResponse res = new org.openapis.openapi.models.operations.KeysApiExpiryResponse() {{
+        org.openapis.openapi.models.operations.KeysApiExpiryResponse res = new org.openapis.openapi.models.operations.KeysApiExpiryResponse(contentType, httpRes.statusCode()) {{
             keysApiExpiry200ApplicationJSONOneOf = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +132,9 @@ public class KeysApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeysApiFindResponse res = new org.openapis.openapi.models.operations.KeysApiFindResponse() {{
+        org.openapis.openapi.models.operations.KeysApiFindResponse res = new org.openapis.openapi.models.operations.KeysApiFindResponse(contentType, httpRes.statusCode()) {{
             keysApiFind200ApplicationJSONOneOf = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

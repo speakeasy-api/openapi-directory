@@ -15,9 +15,11 @@ public class CreateClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public Cluster cluster;
+
     public CreateClusterResponse withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public CreateClusterResponse(){}
 }

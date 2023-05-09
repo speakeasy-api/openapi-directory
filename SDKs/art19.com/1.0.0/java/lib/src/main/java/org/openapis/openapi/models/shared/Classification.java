@@ -19,6 +19,7 @@ public class Classification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public ClassificationAttributes attributes;
+
     public Classification withAttributes(ClassificationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -27,6 +28,7 @@ public class Classification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Classification withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,11 @@ public class Classification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Classification withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Classification(){}
 }

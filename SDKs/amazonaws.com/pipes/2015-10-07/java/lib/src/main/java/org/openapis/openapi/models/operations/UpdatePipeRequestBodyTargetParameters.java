@@ -15,6 +15,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchJobParameters")
     public org.openapis.openapi.models.shared.PipeTargetBatchJobParameters batchJobParameters;
+
     public UpdatePipeRequestBodyTargetParameters withBatchJobParameters(org.openapis.openapi.models.shared.PipeTargetBatchJobParameters batchJobParameters) {
         this.batchJobParameters = batchJobParameters;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsParameters")
     public org.openapis.openapi.models.shared.PipeTargetCloudWatchLogsParameters cloudWatchLogsParameters;
+
     public UpdatePipeRequestBodyTargetParameters withCloudWatchLogsParameters(org.openapis.openapi.models.shared.PipeTargetCloudWatchLogsParameters cloudWatchLogsParameters) {
         this.cloudWatchLogsParameters = cloudWatchLogsParameters;
         return this;
@@ -31,6 +33,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsTaskParameters")
     public org.openapis.openapi.models.shared.PipeTargetEcsTaskParameters ecsTaskParameters;
+
     public UpdatePipeRequestBodyTargetParameters withEcsTaskParameters(org.openapis.openapi.models.shared.PipeTargetEcsTaskParameters ecsTaskParameters) {
         this.ecsTaskParameters = ecsTaskParameters;
         return this;
@@ -39,6 +42,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBridgeEventBusParameters")
     public org.openapis.openapi.models.shared.PipeTargetEventBridgeEventBusParameters eventBridgeEventBusParameters;
+
     public UpdatePipeRequestBodyTargetParameters withEventBridgeEventBusParameters(org.openapis.openapi.models.shared.PipeTargetEventBridgeEventBusParameters eventBridgeEventBusParameters) {
         this.eventBridgeEventBusParameters = eventBridgeEventBusParameters;
         return this;
@@ -47,6 +51,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpParameters")
     public org.openapis.openapi.models.shared.PipeTargetHttpParameters httpParameters;
+
     public UpdatePipeRequestBodyTargetParameters withHttpParameters(org.openapis.openapi.models.shared.PipeTargetHttpParameters httpParameters) {
         this.httpParameters = httpParameters;
         return this;
@@ -55,6 +60,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputTemplate")
     public String inputTemplate;
+
     public UpdatePipeRequestBodyTargetParameters withInputTemplate(String inputTemplate) {
         this.inputTemplate = inputTemplate;
         return this;
@@ -63,6 +69,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamParameters")
     public org.openapis.openapi.models.shared.PipeTargetKinesisStreamParameters kinesisStreamParameters;
+
     public UpdatePipeRequestBodyTargetParameters withKinesisStreamParameters(org.openapis.openapi.models.shared.PipeTargetKinesisStreamParameters kinesisStreamParameters) {
         this.kinesisStreamParameters = kinesisStreamParameters;
         return this;
@@ -71,6 +78,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaFunctionParameters")
     public org.openapis.openapi.models.shared.PipeTargetLambdaFunctionParameters lambdaFunctionParameters;
+
     public UpdatePipeRequestBodyTargetParameters withLambdaFunctionParameters(org.openapis.openapi.models.shared.PipeTargetLambdaFunctionParameters lambdaFunctionParameters) {
         this.lambdaFunctionParameters = lambdaFunctionParameters;
         return this;
@@ -79,6 +87,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftDataParameters")
     public org.openapis.openapi.models.shared.PipeTargetRedshiftDataParameters redshiftDataParameters;
+
     public UpdatePipeRequestBodyTargetParameters withRedshiftDataParameters(org.openapis.openapi.models.shared.PipeTargetRedshiftDataParameters redshiftDataParameters) {
         this.redshiftDataParameters = redshiftDataParameters;
         return this;
@@ -87,6 +96,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SageMakerPipelineParameters")
     public org.openapis.openapi.models.shared.PipeTargetSageMakerPipelineParameters sageMakerPipelineParameters;
+
     public UpdatePipeRequestBodyTargetParameters withSageMakerPipelineParameters(org.openapis.openapi.models.shared.PipeTargetSageMakerPipelineParameters sageMakerPipelineParameters) {
         this.sageMakerPipelineParameters = sageMakerPipelineParameters;
         return this;
@@ -95,6 +105,7 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqsQueueParameters")
     public org.openapis.openapi.models.shared.PipeTargetSqsQueueParameters sqsQueueParameters;
+
     public UpdatePipeRequestBodyTargetParameters withSqsQueueParameters(org.openapis.openapi.models.shared.PipeTargetSqsQueueParameters sqsQueueParameters) {
         this.sqsQueueParameters = sqsQueueParameters;
         return this;
@@ -103,9 +114,11 @@ public class UpdatePipeRequestBodyTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepFunctionStateMachineParameters")
     public org.openapis.openapi.models.shared.PipeTargetStateMachineParameters stepFunctionStateMachineParameters;
+
     public UpdatePipeRequestBodyTargetParameters withStepFunctionStateMachineParameters(org.openapis.openapi.models.shared.PipeTargetStateMachineParameters stepFunctionStateMachineParameters) {
         this.stepFunctionStateMachineParameters = stepFunctionStateMachineParameters;
         return this;
     }
     
+    public UpdatePipeRequestBodyTargetParameters(){}
 }

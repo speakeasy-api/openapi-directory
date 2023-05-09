@@ -15,9 +15,11 @@ public class CancellationReasonsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasons")
     public CancellationReason[] reasons;
+
     public CancellationReasonsResponse withReasons(CancellationReason[] reasons) {
         this.reasons = reasons;
         return this;
     }
     
+    public CancellationReasonsResponse(){}
 }

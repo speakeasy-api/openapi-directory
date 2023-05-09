@@ -15,9 +15,11 @@ public class RuntimeHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotHints")
     public java.util.Map<String, java.util.Map<String, RuntimeHintDetails>> slotHints;
+
     public RuntimeHints withSlotHints(java.util.Map<String, java.util.Map<String, RuntimeHintDetails>> slotHints) {
         this.slotHints = slotHints;
         return this;
     }
     
+    public RuntimeHints(){}
 }

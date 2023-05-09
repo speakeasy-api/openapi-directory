@@ -46,6 +46,7 @@ public class CreateCustomerCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public CreateCustomerCardRequest withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -63,6 +64,7 @@ public class CreateCustomerCardRequest {
      */
     @JsonProperty("card_nonce")
     public String cardNonce;
+
     public CreateCustomerCardRequest withCardNonce(String cardNonce) {
         this.cardNonce = cardNonce;
         return this;
@@ -74,6 +76,7 @@ public class CreateCustomerCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardholder_name")
     public String cardholderName;
+
     public CreateCustomerCardRequest withCardholderName(String cardholderName) {
         this.cardholderName = cardholderName;
         return this;
@@ -87,9 +90,13 @@ public class CreateCustomerCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_token")
     public String verificationToken;
+
     public CreateCustomerCardRequest withVerificationToken(String verificationToken) {
         this.verificationToken = verificationToken;
         return this;
     }
     
+    public CreateCustomerCardRequest(@JsonProperty("card_nonce") String cardNonce) {
+        this.cardNonce = cardNonce;
+  }
 }

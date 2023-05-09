@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBalanceAccountsIdResponse {
@@ -12,6 +13,7 @@ public class GetBalanceAccountsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.BalanceAccount balanceAccount;
+
     public GetBalanceAccountsIdResponse withBalanceAccount(org.openapis.openapi.models.shared.BalanceAccount balanceAccount) {
         this.balanceAccount = balanceAccount;
         return this;
@@ -19,6 +21,7 @@ public class GetBalanceAccountsIdResponse {
     
     
     public String contentType;
+
     public GetBalanceAccountsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBalanceAccountsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetBalanceAccountsIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetBalanceAccountsIdResponse {
     
     
     public Integer statusCode;
+
     public GetBalanceAccountsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetBalanceAccountsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBalanceAccountsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBalanceAccountsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

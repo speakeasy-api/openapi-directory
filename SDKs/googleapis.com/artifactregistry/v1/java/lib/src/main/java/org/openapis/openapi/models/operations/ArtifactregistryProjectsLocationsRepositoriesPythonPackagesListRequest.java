@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest {
@@ -12,6 +13,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -92,6 +101,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -102,6 +112,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -112,6 +123,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

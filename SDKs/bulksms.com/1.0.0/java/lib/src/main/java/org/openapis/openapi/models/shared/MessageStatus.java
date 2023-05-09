@@ -19,6 +19,7 @@ public class MessageStatus {
      */
     @JsonProperty("id")
     public String id;
+
     public MessageStatus withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +40,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public MessageStatusSubtypeEnum subtype;
+
     public MessageStatus withSubtype(MessageStatusSubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
@@ -60,9 +62,14 @@ public class MessageStatus {
      */
     @JsonProperty("type")
     public MessageStatusTypeEnum type;
+
     public MessageStatus withType(MessageStatusTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public MessageStatus(@JsonProperty("id") String id, @JsonProperty("type") MessageStatusTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

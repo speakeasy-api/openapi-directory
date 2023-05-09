@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateActionTargetResponse {
     
     public String contentType;
+
     public UpdateActionTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateActionTargetResponse {
      */
     
     public Object internalException;
+
     public UpdateActionTargetResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateActionTargetResponse {
      */
     
     public Object invalidAccessException;
+
     public UpdateActionTargetResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateActionTargetResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateActionTargetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateActionTargetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateActionTargetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateActionTargetResponse {
     
     
     public Integer statusCode;
+
     public UpdateActionTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateActionTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateActionTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateActionTargetResponse {
      */
     
     public java.util.Map<String, Object> updateActionTargetResponse;
+
     public UpdateActionTargetResponse withUpdateActionTargetResponse(java.util.Map<String, Object> updateActionTargetResponse) {
         this.updateActionTargetResponse = updateActionTargetResponse;
         return this;
     }
     
+    public UpdateActionTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class PerfectpdfApiBody {
      */
     @JsonProperty("api_key")
     public String apiKey;
+
     public PerfectpdfApiBody withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +23,14 @@ public class PerfectpdfApiBody {
      */
     @JsonProperty("html")
     public String html;
+
     public PerfectpdfApiBody withHtml(String html) {
         this.html = html;
         return this;
     }
     
+    public PerfectpdfApiBody(@JsonProperty("api_key") String apiKey, @JsonProperty("html") String html) {
+        this.apiKey = apiKey;
+        this.html = html;
+  }
 }

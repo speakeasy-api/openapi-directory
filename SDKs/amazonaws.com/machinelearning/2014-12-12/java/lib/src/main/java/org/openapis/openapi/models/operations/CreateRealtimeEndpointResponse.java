@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRealtimeEndpointResponse {
     
     public String contentType;
+
     public CreateRealtimeEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRealtimeEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRealtimeEndpointOutput createRealtimeEndpointOutput;
+
     public CreateRealtimeEndpointResponse withCreateRealtimeEndpointOutput(org.openapis.openapi.models.shared.CreateRealtimeEndpointOutput createRealtimeEndpointOutput) {
         this.createRealtimeEndpointOutput = createRealtimeEndpointOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateRealtimeEndpointResponse {
      */
     
     public Object internalServerException;
+
     public CreateRealtimeEndpointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRealtimeEndpointResponse {
      */
     
     public Object invalidInputException;
+
     public CreateRealtimeEndpointResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class CreateRealtimeEndpointResponse {
     
     
     public Integer statusCode;
+
     public CreateRealtimeEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateRealtimeEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRealtimeEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateRealtimeEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateRealtimeEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateRealtimeEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

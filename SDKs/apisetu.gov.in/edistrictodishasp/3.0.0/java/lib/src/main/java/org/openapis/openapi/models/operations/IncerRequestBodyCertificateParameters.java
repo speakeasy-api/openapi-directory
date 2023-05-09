@@ -12,6 +12,7 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public IncerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public IncerRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
@@ -32,6 +34,7 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("TokenNo")
     public String tokenNo;
+
     public IncerRequestBodyCertificateParameters withTokenNo(String tokenNo) {
         this.tokenNo = tokenNo;
         return this;
@@ -42,9 +45,16 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public IncerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public IncerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RefNo") String refNo, @JsonProperty("TokenNo") String tokenNo, @JsonProperty("UID") String uid) {
+        this.fullName = fullName;
+        this.refNo = refNo;
+        this.tokenNo = tokenNo;
+        this.uid = uid;
+  }
 }

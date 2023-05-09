@@ -14,7 +14,7 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * DeployedImage - &lt;p&gt;Gets the Amazon EC2 Container Registry path of the docker image of the model that is hosted in this &lt;a&gt;ProductionVariant&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;If you used the &lt;code&gt;registry/repository[:tag]&lt;/code&gt; form to specify the image path of the primary container when you created the model hosted in this &lt;code&gt;ProductionVariant&lt;/code&gt;, the path resolves to a path of the form &lt;code&gt;registry/repository[@digest]&lt;/code&gt;. A digest is a hash value that identifies a specific version of an image. For information about Amazon ECR paths, see &lt;a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html"&gt;Pulling an Image&lt;/a&gt; in the &lt;i&gt;Amazon ECR User Guide&lt;/i&gt;.&lt;/p&gt;
+ * DeployedImage - &lt;p&gt;Gets the Amazon EC2 Container Registry path of the docker image of the model that is hosted in this &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ProductionVariant.html"&gt;ProductionVariant&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;If you used the &lt;code&gt;registry/repository[:tag]&lt;/code&gt; form to specify the image path of the primary container when you created the model hosted in this &lt;code&gt;ProductionVariant&lt;/code&gt;, the path resolves to a path of the form &lt;code&gt;registry/repository[@digest]&lt;/code&gt;. A digest is a hash value that identifies a specific version of an image. For information about Amazon ECR paths, see &lt;a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html"&gt;Pulling an Image&lt;/a&gt; in the &lt;i&gt;Amazon ECR User Guide&lt;/i&gt;.&lt;/p&gt;
  */
 public class DeployedImage {
     @JsonInclude(Include.NON_ABSENT)
@@ -22,6 +22,7 @@ public class DeployedImage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ResolutionTime")
     public OffsetDateTime resolutionTime;
+
     public DeployedImage withResolutionTime(OffsetDateTime resolutionTime) {
         this.resolutionTime = resolutionTime;
         return this;
@@ -30,6 +31,7 @@ public class DeployedImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolvedImage")
     public String resolvedImage;
+
     public DeployedImage withResolvedImage(String resolvedImage) {
         this.resolvedImage = resolvedImage;
         return this;
@@ -38,9 +40,11 @@ public class DeployedImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecifiedImage")
     public String specifiedImage;
+
     public DeployedImage withSpecifiedImage(String specifiedImage) {
         this.specifiedImage = specifiedImage;
         return this;
     }
     
+    public DeployedImage(){}
 }

@@ -18,6 +18,7 @@ public class ThirdPartyLinkSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelToStoreLink")
     public ChannelToStoreLinkDetails channelToStoreLink;
+
     public ThirdPartyLinkSnippet withChannelToStoreLink(ChannelToStoreLinkDetails channelToStoreLink) {
         this.channelToStoreLink = channelToStoreLink;
         return this;
@@ -29,9 +30,11 @@ public class ThirdPartyLinkSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ThirdPartyLinkSnippetTypeEnum type;
+
     public ThirdPartyLinkSnippet withType(ThirdPartyLinkSnippetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ThirdPartyLinkSnippet(){}
 }

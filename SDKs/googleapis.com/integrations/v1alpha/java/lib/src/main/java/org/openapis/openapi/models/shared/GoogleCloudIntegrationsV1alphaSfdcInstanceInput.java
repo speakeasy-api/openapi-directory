@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authConfigId")
     public String[] authConfigId;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstanceInput withAuthConfigId(String[] authConfigId) {
         this.authConfigId = authConfigId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstanceInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstanceInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstanceInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAuthority")
     public String serviceAuthority;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstanceInput withServiceAuthority(String serviceAuthority) {
         this.serviceAuthority = serviceAuthority;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sfdcOrgId")
     public String sfdcOrgId;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstanceInput withSfdcOrgId(String sfdcOrgId) {
         this.sfdcOrgId = sfdcOrgId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSfdcInstanceInput(){}
 }

@@ -15,9 +15,11 @@ public class CreateThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CreateThesaurusResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateThesaurusResponse(){}
 }

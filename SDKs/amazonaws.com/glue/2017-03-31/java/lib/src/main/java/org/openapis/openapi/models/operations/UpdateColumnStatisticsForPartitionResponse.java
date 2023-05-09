@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateColumnStatisticsForPartitionResponse {
     
     public String contentType;
+
     public UpdateColumnStatisticsForPartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateColumnStatisticsForPartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateColumnStatisticsForPartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateColumnStatisticsForPartitionResponse {
      */
     
     public Object glueEncryptionException;
+
     public UpdateColumnStatisticsForPartitionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateColumnStatisticsForPartitionResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateColumnStatisticsForPartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateColumnStatisticsForPartitionResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateColumnStatisticsForPartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateColumnStatisticsForPartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateColumnStatisticsForPartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateColumnStatisticsForPartitionResponse {
     
     
     public Integer statusCode;
+
     public UpdateColumnStatisticsForPartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateColumnStatisticsForPartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateColumnStatisticsForPartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateColumnStatisticsForPartitionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateColumnStatisticsForPartitionResponse updateColumnStatisticsForPartitionResponse;
+
     public UpdateColumnStatisticsForPartitionResponse withUpdateColumnStatisticsForPartitionResponse(org.openapis.openapi.models.shared.UpdateColumnStatisticsForPartitionResponse updateColumnStatisticsForPartitionResponse) {
         this.updateColumnStatisticsForPartitionResponse = updateColumnStatisticsForPartitionResponse;
         return this;
     }
     
+    public UpdateColumnStatisticsForPartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

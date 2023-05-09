@@ -22,6 +22,7 @@ public class ReprocessingSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ReprocessingSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class ReprocessingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ReprocessingSummary withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,11 @@ public class ReprocessingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ReprocessingStatusEnum status;
+
     public ReprocessingSummary withStatus(ReprocessingStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReprocessingSummary(){}
 }

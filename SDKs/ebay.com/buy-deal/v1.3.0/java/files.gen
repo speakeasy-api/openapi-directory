@@ -56,4 +56,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/Coupon.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventItemSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventItem.java
+docs/sdk/README.md
+docs/dealitem/README.md
+docs/event/README.md
+docs/eventitem/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class DiffVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectSizeBytes")
     public String objectSizeBytes;
+
     public DiffVersionResponse withObjectSizeBytes(String objectSizeBytes) {
         this.objectSizeBytes = objectSizeBytes;
         return this;
@@ -29,9 +30,11 @@ public class DiffVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectVersion")
     public String objectVersion;
+
     public DiffVersionResponse withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
     }
     
+    public DiffVersionResponse(){}
 }

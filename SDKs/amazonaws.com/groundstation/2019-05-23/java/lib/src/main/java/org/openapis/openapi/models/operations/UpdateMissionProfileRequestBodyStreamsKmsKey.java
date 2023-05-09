@@ -15,6 +15,7 @@ public class UpdateMissionProfileRequestBodyStreamsKmsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsAliasArn")
     public String kmsAliasArn;
+
     public UpdateMissionProfileRequestBodyStreamsKmsKey withKmsAliasArn(String kmsAliasArn) {
         this.kmsAliasArn = kmsAliasArn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateMissionProfileRequestBodyStreamsKmsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public UpdateMissionProfileRequestBodyStreamsKmsKey withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public UpdateMissionProfileRequestBodyStreamsKmsKey(){}
 }

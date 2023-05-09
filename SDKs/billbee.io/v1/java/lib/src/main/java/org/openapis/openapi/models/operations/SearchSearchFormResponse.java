@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchSearchFormResponse {
     
     public byte[] body;
+
     public SearchSearchFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SearchSearchFormResponse {
     
     
     public String contentType;
+
     public SearchSearchFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SearchSearchFormResponse {
      */
     
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel;
+
     public SearchSearchFormResponse withRechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel) {
         this.rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel = rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel;
         return this;
@@ -33,6 +37,7 @@ public class SearchSearchFormResponse {
     
     
     public Integer statusCode;
+
     public SearchSearchFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class SearchSearchFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchSearchFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchSearchFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

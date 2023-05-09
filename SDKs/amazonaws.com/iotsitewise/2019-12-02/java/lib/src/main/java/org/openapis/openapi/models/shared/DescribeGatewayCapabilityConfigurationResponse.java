@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeGatewayCapabilityConfigurationResponse {
     @JsonProperty("capabilityConfiguration")
     public String capabilityConfiguration;
+
     public DescribeGatewayCapabilityConfigurationResponse withCapabilityConfiguration(String capabilityConfiguration) {
         this.capabilityConfiguration = capabilityConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class DescribeGatewayCapabilityConfigurationResponse {
     
     @JsonProperty("capabilityNamespace")
     public String capabilityNamespace;
+
     public DescribeGatewayCapabilityConfigurationResponse withCapabilityNamespace(String capabilityNamespace) {
         this.capabilityNamespace = capabilityNamespace;
         return this;
@@ -26,6 +28,7 @@ public class DescribeGatewayCapabilityConfigurationResponse {
     
     @JsonProperty("capabilitySyncStatus")
     public CapabilitySyncStatusEnum capabilitySyncStatus;
+
     public DescribeGatewayCapabilityConfigurationResponse withCapabilitySyncStatus(CapabilitySyncStatusEnum capabilitySyncStatus) {
         this.capabilitySyncStatus = capabilitySyncStatus;
         return this;
@@ -33,9 +36,16 @@ public class DescribeGatewayCapabilityConfigurationResponse {
     
     @JsonProperty("gatewayId")
     public String gatewayId;
+
     public DescribeGatewayCapabilityConfigurationResponse withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
     }
     
+    public DescribeGatewayCapabilityConfigurationResponse(@JsonProperty("capabilityConfiguration") String capabilityConfiguration, @JsonProperty("capabilityNamespace") String capabilityNamespace, @JsonProperty("capabilitySyncStatus") CapabilitySyncStatusEnum capabilitySyncStatus, @JsonProperty("gatewayId") String gatewayId) {
+        this.capabilityConfiguration = capabilityConfiguration;
+        this.capabilityNamespace = capabilityNamespace;
+        this.capabilitySyncStatus = capabilitySyncStatus;
+        this.gatewayId = gatewayId;
+  }
 }

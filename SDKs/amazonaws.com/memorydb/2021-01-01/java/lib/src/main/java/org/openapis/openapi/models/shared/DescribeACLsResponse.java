@@ -15,6 +15,7 @@ public class DescribeACLsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ACLs")
     public Acl[] acLs;
+
     public DescribeACLsResponse withACLs(Acl[] acLs) {
         this.acLs = acLs;
         return this;
@@ -23,9 +24,11 @@ public class DescribeACLsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeACLsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeACLsResponse(){}
 }

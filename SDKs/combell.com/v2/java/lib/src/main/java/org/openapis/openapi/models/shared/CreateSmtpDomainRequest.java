@@ -18,9 +18,11 @@ public class CreateSmtpDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public CreateSmtpDomainRequest withHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
     
+    public CreateSmtpDomainRequest(){}
 }

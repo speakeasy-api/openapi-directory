@@ -18,6 +18,7 @@ public class CopyTemplate500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public CopyTemplate500ApplicationJSON withError(String error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class CopyTemplate500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public CopyTemplate500ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public CopyTemplate500ApplicationJSON(){}
 }

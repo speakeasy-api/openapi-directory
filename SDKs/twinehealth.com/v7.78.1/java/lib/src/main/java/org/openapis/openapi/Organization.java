@@ -53,12 +53,10 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchOrganizationResponse res = new org.openapis.openapi.models.operations.FetchOrganizationResponse() {{
+        org.openapis.openapi.models.operations.FetchOrganizationResponse res = new org.openapis.openapi.models.operations.FetchOrganizationResponse(contentType, httpRes.statusCode()) {{
             fetchOrganizationResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

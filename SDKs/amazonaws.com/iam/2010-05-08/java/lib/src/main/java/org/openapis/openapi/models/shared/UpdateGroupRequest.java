@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateGroupRequest {
     
     public String groupName;
+
     public UpdateGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -16,6 +17,7 @@ public class UpdateGroupRequest {
     
     
     public String newGroupName;
+
     public UpdateGroupRequest withNewGroupName(String newGroupName) {
         this.newGroupName = newGroupName;
         return this;
@@ -23,9 +25,13 @@ public class UpdateGroupRequest {
     
     
     public String newPath;
+
     public UpdateGroupRequest withNewPath(String newPath) {
         this.newPath = newPath;
         return this;
     }
     
+    public UpdateGroupRequest(@JsonProperty("GroupName") String groupName) {
+        this.groupName = groupName;
+  }
 }

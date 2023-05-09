@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateApplicationToEntitlementResponse {
@@ -12,6 +13,7 @@ public class AssociateApplicationToEntitlementResponse {
      */
     
     public java.util.Map<String, Object> associateApplicationToEntitlementResult;
+
     public AssociateApplicationToEntitlementResponse withAssociateApplicationToEntitlementResult(java.util.Map<String, Object> associateApplicationToEntitlementResult) {
         this.associateApplicationToEntitlementResult = associateApplicationToEntitlementResult;
         return this;
@@ -19,6 +21,7 @@ public class AssociateApplicationToEntitlementResponse {
     
     
     public String contentType;
+
     public AssociateApplicationToEntitlementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateApplicationToEntitlementResponse {
      */
     
     public Object entitlementNotFoundException;
+
     public AssociateApplicationToEntitlementResponse withEntitlementNotFoundException(Object entitlementNotFoundException) {
         this.entitlementNotFoundException = entitlementNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateApplicationToEntitlementResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateApplicationToEntitlementResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateApplicationToEntitlementResponse {
      */
     
     public Object operationNotPermittedException;
+
     public AssociateApplicationToEntitlementResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateApplicationToEntitlementResponse {
     
     
     public Integer statusCode;
+
     public AssociateApplicationToEntitlementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateApplicationToEntitlementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateApplicationToEntitlementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AssociateApplicationToEntitlementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateApplicationToEntitlementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateApplicationToEntitlementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

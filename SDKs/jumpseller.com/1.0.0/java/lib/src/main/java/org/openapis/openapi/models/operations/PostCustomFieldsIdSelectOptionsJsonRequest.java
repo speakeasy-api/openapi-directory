@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomFieldsIdSelectOptionsJsonRequest {
@@ -12,6 +13,7 @@ public class PostCustomFieldsIdSelectOptionsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit;
+
     public PostCustomFieldsIdSelectOptionsJsonRequest withCustomFieldSelectOptionEdit(org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit) {
         this.customFieldSelectOptionEdit = customFieldSelectOptionEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostCustomFieldsIdSelectOptionsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostCustomFieldsIdSelectOptionsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PostCustomFieldsIdSelectOptionsJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostCustomFieldsIdSelectOptionsJsonRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PostCustomFieldsIdSelectOptionsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostCustomFieldsIdSelectOptionsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostCustomFieldsIdSelectOptionsJsonRequest(@JsonProperty("CustomFieldSelectOptionEdit") org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") String id, @JsonProperty("login") String login) {
+        this.customFieldSelectOptionEdit = customFieldSelectOptionEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

@@ -18,6 +18,7 @@ public class TableOfContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public StructuralElement[] content;
+
     public TableOfContents withContent(StructuralElement[] content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class TableOfContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public TableOfContents withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -40,9 +42,11 @@ public class TableOfContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public TableOfContents withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
     }
     
+    public TableOfContents(){}
 }

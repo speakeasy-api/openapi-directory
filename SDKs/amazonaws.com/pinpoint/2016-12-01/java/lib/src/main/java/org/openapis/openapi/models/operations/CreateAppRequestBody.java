@@ -12,9 +12,13 @@ public class CreateAppRequestBody {
      */
     @JsonProperty("CreateApplicationRequest")
     public CreateAppRequestBodyCreateApplicationRequest createApplicationRequest;
+
     public CreateAppRequestBody withCreateApplicationRequest(CreateAppRequestBodyCreateApplicationRequest createApplicationRequest) {
         this.createApplicationRequest = createApplicationRequest;
         return this;
     }
     
+    public CreateAppRequestBody(@JsonProperty("CreateApplicationRequest") CreateAppRequestBodyCreateApplicationRequest createApplicationRequest) {
+        this.createApplicationRequest = createApplicationRequest;
+  }
 }

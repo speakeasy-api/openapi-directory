@@ -15,9 +15,11 @@ public class ManagedInstanceAllInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public String revision;
+
     public ManagedInstanceAllInstancesConfig withRevision(String revision) {
         this.revision = revision;
         return this;
     }
     
+    public ManagedInstanceAllInstancesConfig(){}
 }

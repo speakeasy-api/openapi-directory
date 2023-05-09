@@ -58,11 +58,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelProductsListResponse res = new org.openapis.openapi.models.operations.CloudchannelProductsListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelProductsListResponse res = new org.openapis.openapi.models.operations.CloudchannelProductsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListProductsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelProductsSkusListResponse res = new org.openapis.openapi.models.operations.CloudchannelProductsSkusListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelProductsSkusListResponse res = new org.openapis.openapi.models.operations.CloudchannelProductsSkusListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListSkusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

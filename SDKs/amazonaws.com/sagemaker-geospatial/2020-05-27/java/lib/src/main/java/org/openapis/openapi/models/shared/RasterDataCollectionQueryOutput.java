@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * RasterDataCollectionQueryOutput - &lt;p/&gt;
+ * RasterDataCollectionQueryOutput - The output structure contains the Raster Data Collection Query input along with some additional metadata.
  */
 public class RasterDataCollectionQueryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaOfInterest")
     public AreaOfInterest areaOfInterest;
+
     public RasterDataCollectionQueryOutput withAreaOfInterest(AreaOfInterest areaOfInterest) {
         this.areaOfInterest = areaOfInterest;
         return this;
@@ -23,6 +24,7 @@ public class RasterDataCollectionQueryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertyFilters")
     public PropertyFilters propertyFilters;
+
     public RasterDataCollectionQueryOutput withPropertyFilters(PropertyFilters propertyFilters) {
         this.propertyFilters = propertyFilters;
         return this;
@@ -30,6 +32,7 @@ public class RasterDataCollectionQueryOutput {
     
     @JsonProperty("RasterDataCollectionArn")
     public String rasterDataCollectionArn;
+
     public RasterDataCollectionQueryOutput withRasterDataCollectionArn(String rasterDataCollectionArn) {
         this.rasterDataCollectionArn = rasterDataCollectionArn;
         return this;
@@ -37,16 +40,23 @@ public class RasterDataCollectionQueryOutput {
     
     @JsonProperty("RasterDataCollectionName")
     public String rasterDataCollectionName;
+
     public RasterDataCollectionQueryOutput withRasterDataCollectionName(String rasterDataCollectionName) {
         this.rasterDataCollectionName = rasterDataCollectionName;
         return this;
     }
     
     @JsonProperty("TimeRangeFilter")
-    public TimeRangeFilterInput timeRangeFilter;
-    public RasterDataCollectionQueryOutput withTimeRangeFilter(TimeRangeFilterInput timeRangeFilter) {
+    public TimeRangeFilterOutput timeRangeFilter;
+
+    public RasterDataCollectionQueryOutput withTimeRangeFilter(TimeRangeFilterOutput timeRangeFilter) {
         this.timeRangeFilter = timeRangeFilter;
         return this;
     }
     
+    public RasterDataCollectionQueryOutput(@JsonProperty("RasterDataCollectionArn") String rasterDataCollectionArn, @JsonProperty("RasterDataCollectionName") String rasterDataCollectionName, @JsonProperty("TimeRangeFilter") TimeRangeFilterOutput timeRangeFilter) {
+        this.rasterDataCollectionArn = rasterDataCollectionArn;
+        this.rasterDataCollectionName = rasterDataCollectionName;
+        this.timeRangeFilter = timeRangeFilter;
+  }
 }

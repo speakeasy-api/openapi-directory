@@ -17,6 +17,7 @@ public class DestinyDefinitionsDestinyItemVendorSourceReference {
      */
     
     public Long vendorHash;
+
     public DestinyDefinitionsDestinyItemVendorSourceReference withVendorHash(Long vendorHash) {
         this.vendorHash = vendorHash;
         return this;
@@ -27,9 +28,11 @@ public class DestinyDefinitionsDestinyItemVendorSourceReference {
      */
     
     public Integer[] vendorItemIndexes;
+
     public DestinyDefinitionsDestinyItemVendorSourceReference withVendorItemIndexes(Integer[] vendorItemIndexes) {
         this.vendorItemIndexes = vendorItemIndexes;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemVendorSourceReference(){}
 }

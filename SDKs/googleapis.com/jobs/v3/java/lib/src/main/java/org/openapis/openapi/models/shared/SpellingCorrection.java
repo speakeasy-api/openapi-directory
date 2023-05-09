@@ -18,6 +18,7 @@ public class SpellingCorrection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corrected")
     public Boolean corrected;
+
     public SpellingCorrection withCorrected(Boolean corrected) {
         this.corrected = corrected;
         return this;
@@ -29,9 +30,11 @@ public class SpellingCorrection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctedText")
     public String correctedText;
+
     public SpellingCorrection withCorrectedText(String correctedText) {
         this.correctedText = correctedText;
         return this;
     }
     
+    public SpellingCorrection(){}
 }

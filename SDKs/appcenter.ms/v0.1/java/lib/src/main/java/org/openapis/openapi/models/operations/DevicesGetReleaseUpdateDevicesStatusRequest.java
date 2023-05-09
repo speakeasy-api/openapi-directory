@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesGetReleaseUpdateDevicesStatusRequest {
@@ -12,6 +13,7 @@ public class DevicesGetReleaseUpdateDevicesStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public DevicesGetReleaseUpdateDevicesStatusRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class DevicesGetReleaseUpdateDevicesStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_provisioning_profile")
     public Boolean includeProvisioningProfile;
+
     public DevicesGetReleaseUpdateDevicesStatusRequest withIncludeProvisioningProfile(Boolean includeProvisioningProfile) {
         this.includeProvisioningProfile = includeProvisioningProfile;
         return this;
@@ -32,6 +35,7 @@ public class DevicesGetReleaseUpdateDevicesStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public DevicesGetReleaseUpdateDevicesStatusRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,6 +46,7 @@ public class DevicesGetReleaseUpdateDevicesStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public String releaseId;
+
     public DevicesGetReleaseUpdateDevicesStatusRequest withReleaseId(String releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -52,9 +57,16 @@ public class DevicesGetReleaseUpdateDevicesStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resign_id")
     public String resignId;
+
     public DevicesGetReleaseUpdateDevicesStatusRequest withResignId(String resignId) {
         this.resignId = resignId;
         return this;
     }
     
+    public DevicesGetReleaseUpdateDevicesStatusRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") String releaseId, @JsonProperty("resign_id") String resignId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+        this.resignId = resignId;
+  }
 }

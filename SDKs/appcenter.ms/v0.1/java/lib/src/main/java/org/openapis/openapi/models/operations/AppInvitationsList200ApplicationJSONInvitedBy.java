@@ -15,6 +15,7 @@ public class AppInvitationsList200ApplicationJSONInvitedBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public AppInvitationsList200ApplicationJSONInvitedBy withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -26,6 +27,7 @@ public class AppInvitationsList200ApplicationJSONInvitedBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_change_password")
     public Boolean canChangePassword;
+
     public AppInvitationsList200ApplicationJSONInvitedBy withCanChangePassword(Boolean canChangePassword) {
         this.canChangePassword = canChangePassword;
         return this;
@@ -36,6 +38,7 @@ public class AppInvitationsList200ApplicationJSONInvitedBy {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppInvitationsList200ApplicationJSONInvitedBy withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class AppInvitationsList200ApplicationJSONInvitedBy {
      */
     @JsonProperty("email")
     public String email;
+
     public AppInvitationsList200ApplicationJSONInvitedBy withEmail(String email) {
         this.email = email;
         return this;
@@ -56,6 +60,7 @@ public class AppInvitationsList200ApplicationJSONInvitedBy {
      */
     @JsonProperty("id")
     public String id;
+
     public AppInvitationsList200ApplicationJSONInvitedBy withId(String id) {
         this.id = id;
         return this;
@@ -66,6 +71,7 @@ public class AppInvitationsList200ApplicationJSONInvitedBy {
      */
     @JsonProperty("name")
     public String name;
+
     public AppInvitationsList200ApplicationJSONInvitedBy withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +82,7 @@ public class AppInvitationsList200ApplicationJSONInvitedBy {
      */
     @JsonProperty("origin")
     public AppInvitationsList200ApplicationJSONInvitedByOriginEnum origin;
+
     public AppInvitationsList200ApplicationJSONInvitedBy withOrigin(AppInvitationsList200ApplicationJSONInvitedByOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -87,9 +94,17 @@ public class AppInvitationsList200ApplicationJSONInvitedBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public AppInvitationsList200ApplicationJSONInvitedByPermissionsEnum[] permissions;
+
     public AppInvitationsList200ApplicationJSONInvitedBy withPermissions(AppInvitationsList200ApplicationJSONInvitedByPermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public AppInvitationsList200ApplicationJSONInvitedBy(@JsonProperty("display_name") String displayName, @JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") AppInvitationsList200ApplicationJSONInvitedByOriginEnum origin) {
+        this.displayName = displayName;
+        this.email = email;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+  }
 }

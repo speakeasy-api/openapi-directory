@@ -15,6 +15,7 @@ public class ModifyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public ModifyRequest withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -25,6 +26,7 @@ public class ModifyRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public ModifyRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -35,9 +37,14 @@ public class ModifyRequest {
      */
     @JsonProperty("originalReference")
     public String originalReference;
+
     public ModifyRequest withOriginalReference(String originalReference) {
         this.originalReference = originalReference;
         return this;
     }
     
+    public ModifyRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("originalReference") String originalReference) {
+        this.merchantAccount = merchantAccount;
+        this.originalReference = originalReference;
+  }
 }

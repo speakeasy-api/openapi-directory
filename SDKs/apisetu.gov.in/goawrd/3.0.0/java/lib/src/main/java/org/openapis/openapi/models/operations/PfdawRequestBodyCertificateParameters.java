@@ -12,6 +12,7 @@ public class PfdawRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public PfdawRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class PfdawRequestBodyCertificateParameters {
      */
     @JsonProperty("Registration")
     public String registration;
+
     public PfdawRequestBodyCertificateParameters withRegistration(String registration) {
         this.registration = registration;
         return this;
     }
     
+    public PfdawRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("Registration") String registration) {
+        this.fullName = fullName;
+        this.registration = registration;
+  }
 }

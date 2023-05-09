@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePrincipalMappingResponse {
@@ -12,6 +13,7 @@ public class DeletePrincipalMappingResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePrincipalMappingResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeletePrincipalMappingResponse {
      */
     
     public Object conflictException;
+
     public DeletePrincipalMappingResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePrincipalMappingResponse {
     
     
     public String contentType;
+
     public DeletePrincipalMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeletePrincipalMappingResponse {
      */
     
     public Object internalServerException;
+
     public DeletePrincipalMappingResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePrincipalMappingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePrincipalMappingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeletePrincipalMappingResponse {
     
     
     public Integer statusCode;
+
     public DeletePrincipalMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeletePrincipalMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePrincipalMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeletePrincipalMappingResponse {
      */
     
     public Object throttlingException;
+
     public DeletePrincipalMappingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeletePrincipalMappingResponse {
      */
     
     public Object validationException;
+
     public DeletePrincipalMappingResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePrincipalMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

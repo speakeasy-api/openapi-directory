@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContainerServiceRegistryLoginResponse {
@@ -12,6 +13,7 @@ public class CreateContainerServiceRegistryLoginResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateContainerServiceRegistryLoginResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateContainerServiceRegistryLoginResponse {
     
     
     public String contentType;
+
     public CreateContainerServiceRegistryLoginResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateContainerServiceRegistryLoginResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContainerServiceRegistryLoginResult createContainerServiceRegistryLoginResult;
+
     public CreateContainerServiceRegistryLoginResponse withCreateContainerServiceRegistryLoginResult(org.openapis.openapi.models.shared.CreateContainerServiceRegistryLoginResult createContainerServiceRegistryLoginResult) {
         this.createContainerServiceRegistryLoginResult = createContainerServiceRegistryLoginResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateContainerServiceRegistryLoginResponse {
      */
     
     public Object invalidInputException;
+
     public CreateContainerServiceRegistryLoginResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateContainerServiceRegistryLoginResponse {
      */
     
     public Object notFoundException;
+
     public CreateContainerServiceRegistryLoginResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateContainerServiceRegistryLoginResponse {
      */
     
     public Object serviceException;
+
     public CreateContainerServiceRegistryLoginResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateContainerServiceRegistryLoginResponse {
     
     
     public Integer statusCode;
+
     public CreateContainerServiceRegistryLoginResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateContainerServiceRegistryLoginResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContainerServiceRegistryLoginResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateContainerServiceRegistryLoginResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateContainerServiceRegistryLoginResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateContainerServiceRegistryLoginResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

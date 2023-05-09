@@ -18,9 +18,11 @@ public class EntitlementsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlement")
     public Entitlement[] entitlement;
+
     public EntitlementsListResponse withEntitlement(Entitlement[] entitlement) {
         this.entitlement = entitlement;
         return this;
     }
     
+    public EntitlementsListResponse(){}
 }

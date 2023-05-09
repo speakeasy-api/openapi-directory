@@ -18,6 +18,7 @@ public class SuggestedTagAndRegionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public StoredSuggestedTagAndRegion[] results;
+
     public SuggestedTagAndRegionQuery withResults(StoredSuggestedTagAndRegion[] results) {
         this.results = results;
         return this;
@@ -30,9 +31,11 @@ public class SuggestedTagAndRegionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public SuggestedTagAndRegionQueryToken token;
+
     public SuggestedTagAndRegionQuery withToken(SuggestedTagAndRegionQueryToken token) {
         this.token = token;
         return this;
     }
     
+    public SuggestedTagAndRegionQuery(){}
 }

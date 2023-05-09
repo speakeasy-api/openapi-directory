@@ -18,6 +18,7 @@ public class RepresentativeInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("divisions")
     public java.util.Map<String, GeographicDivision> divisions;
+
     public RepresentativeInfoResponse withDivisions(java.util.Map<String, GeographicDivision> divisions) {
         this.divisions = divisions;
         return this;
@@ -29,6 +30,7 @@ public class RepresentativeInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RepresentativeInfoResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class RepresentativeInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedInput")
     public SimpleAddressType normalizedInput;
+
     public RepresentativeInfoResponse withNormalizedInput(SimpleAddressType normalizedInput) {
         this.normalizedInput = normalizedInput;
         return this;
@@ -51,6 +54,7 @@ public class RepresentativeInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offices")
     public Office[] offices;
+
     public RepresentativeInfoResponse withOffices(Office[] offices) {
         this.offices = offices;
         return this;
@@ -62,9 +66,11 @@ public class RepresentativeInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("officials")
     public Official[] officials;
+
     public RepresentativeInfoResponse withOfficials(Official[] officials) {
         this.officials = officials;
         return this;
     }
     
+    public RepresentativeInfoResponse(){}
 }

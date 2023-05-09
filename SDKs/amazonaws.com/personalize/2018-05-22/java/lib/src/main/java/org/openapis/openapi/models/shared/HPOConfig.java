@@ -15,6 +15,7 @@ public class HPOConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithmHyperParameterRanges")
     public HyperParameterRanges algorithmHyperParameterRanges;
+
     public HPOConfig withAlgorithmHyperParameterRanges(HyperParameterRanges algorithmHyperParameterRanges) {
         this.algorithmHyperParameterRanges = algorithmHyperParameterRanges;
         return this;
@@ -23,6 +24,7 @@ public class HPOConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hpoObjective")
     public HPOObjective hpoObjective;
+
     public HPOConfig withHpoObjective(HPOObjective hpoObjective) {
         this.hpoObjective = hpoObjective;
         return this;
@@ -31,9 +33,11 @@ public class HPOConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hpoResourceConfig")
     public HPOResourceConfig hpoResourceConfig;
+
     public HPOConfig withHpoResourceConfig(HPOResourceConfig hpoResourceConfig) {
         this.hpoResourceConfig = hpoResourceConfig;
         return this;
     }
     
+    public HPOConfig(){}
 }

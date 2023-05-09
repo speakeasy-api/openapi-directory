@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGameServersResponse {
     
     public String contentType;
+
     public ListGameServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListGameServersResponse {
      */
     
     public Object internalServiceException;
+
     public ListGameServersResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListGameServersResponse {
      */
     
     public Object invalidRequestException;
+
     public ListGameServersResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListGameServersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGameServersOutput listGameServersOutput;
+
     public ListGameServersResponse withListGameServersOutput(org.openapis.openapi.models.shared.ListGameServersOutput listGameServersOutput) {
         this.listGameServersOutput = listGameServersOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListGameServersResponse {
     
     
     public Integer statusCode;
+
     public ListGameServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListGameServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGameServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListGameServersResponse {
      */
     
     public Object unauthorizedException;
+
     public ListGameServersResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListGameServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

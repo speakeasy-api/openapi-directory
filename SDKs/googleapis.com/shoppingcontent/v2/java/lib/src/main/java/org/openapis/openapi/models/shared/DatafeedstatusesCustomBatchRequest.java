@@ -15,9 +15,11 @@ public class DatafeedstatusesCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public DatafeedstatusesCustomBatchRequestEntry[] entries;
+
     public DatafeedstatusesCustomBatchRequest withEntries(DatafeedstatusesCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public DatafeedstatusesCustomBatchRequest(){}
 }

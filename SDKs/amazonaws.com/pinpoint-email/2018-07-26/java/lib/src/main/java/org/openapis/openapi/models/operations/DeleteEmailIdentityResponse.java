@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEmailIdentityResponse {
@@ -12,6 +13,7 @@ public class DeleteEmailIdentityResponse {
      */
     
     public Object badRequestException;
+
     public DeleteEmailIdentityResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteEmailIdentityResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteEmailIdentityResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEmailIdentityResponse {
     
     
     public String contentType;
+
     public DeleteEmailIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEmailIdentityResponse {
      */
     
     public java.util.Map<String, Object> deleteEmailIdentityResponse;
+
     public DeleteEmailIdentityResponse withDeleteEmailIdentityResponse(java.util.Map<String, Object> deleteEmailIdentityResponse) {
         this.deleteEmailIdentityResponse = deleteEmailIdentityResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEmailIdentityResponse {
      */
     
     public Object notFoundException;
+
     public DeleteEmailIdentityResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteEmailIdentityResponse {
     
     
     public Integer statusCode;
+
     public DeleteEmailIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteEmailIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEmailIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteEmailIdentityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteEmailIdentityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteEmailIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class AnalyticsCrashGroupCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AnalyticsCrashGroupCountsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -23,6 +25,7 @@ public class AnalyticsCrashGroupCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
     public String crashGroupId;
+
     public AnalyticsCrashGroupCountsRequest withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -33,6 +36,7 @@ public class AnalyticsCrashGroupCountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public AnalyticsCrashGroupCountsRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -43,6 +47,7 @@ public class AnalyticsCrashGroupCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AnalyticsCrashGroupCountsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -53,6 +58,7 @@ public class AnalyticsCrashGroupCountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public AnalyticsCrashGroupCountsRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -60,9 +66,17 @@ public class AnalyticsCrashGroupCountsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public AnalyticsCrashGroupCountsRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AnalyticsCrashGroupCountsRequest(@JsonProperty("app_name") String appName, @JsonProperty("crash_group_id") String crashGroupId, @JsonProperty("owner_name") String ownerName, @JsonProperty("start") OffsetDateTime start, @JsonProperty("version") String version) {
+        this.appName = appName;
+        this.crashGroupId = crashGroupId;
+        this.ownerName = ownerName;
+        this.start = start;
+        this.version = version;
+  }
 }

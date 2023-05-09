@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class QueriesConfig {
     @JsonProperty("Queries")
     public Query[] queries;
+
     public QueriesConfig withQueries(Query[] queries) {
         this.queries = queries;
         return this;
     }
     
+    public QueriesConfig(@JsonProperty("Queries") Query[] queries) {
+        this.queries = queries;
+  }
 }

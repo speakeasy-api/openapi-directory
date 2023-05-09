@@ -58,11 +58,9 @@ public class Replicas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolReplicasDeleteResponse res = new org.openapis.openapi.models.operations.ReplicapoolReplicasDeleteResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolReplicasDeleteResponse res = new org.openapis.openapi.models.operations.ReplicapoolReplicasDeleteResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Replicas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolReplicasGetResponse res = new org.openapis.openapi.models.operations.ReplicapoolReplicasGetResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolReplicasGetResponse res = new org.openapis.openapi.models.operations.ReplicapoolReplicasGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Replicas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolReplicasListResponse res = new org.openapis.openapi.models.operations.ReplicapoolReplicasListResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolReplicasListResponse res = new org.openapis.openapi.models.operations.ReplicapoolReplicasListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Replicas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolReplicasRestartResponse res = new org.openapis.openapi.models.operations.ReplicapoolReplicasRestartResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolReplicasRestartResponse res = new org.openapis.openapi.models.operations.ReplicapoolReplicasRestartResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVolumeResponse {
@@ -12,6 +13,7 @@ public class UpdateVolumeResponse {
      */
     
     public Object badRequest;
+
     public UpdateVolumeResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVolumeResponse {
     
     
     public String contentType;
+
     public UpdateVolumeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVolumeResponse {
      */
     
     public Object incompatibleParameterError;
+
     public UpdateVolumeResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -39,6 +43,7 @@ public class UpdateVolumeResponse {
      */
     
     public Object internalServerError;
+
     public UpdateVolumeResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class UpdateVolumeResponse {
      */
     
     public Object missingVolumeConfiguration;
+
     public UpdateVolumeResponse withMissingVolumeConfiguration(Object missingVolumeConfiguration) {
         this.missingVolumeConfiguration = missingVolumeConfiguration;
         return this;
@@ -56,6 +62,7 @@ public class UpdateVolumeResponse {
     
     
     public Integer statusCode;
+
     public UpdateVolumeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateVolumeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVolumeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateVolumeResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVolumeResponse updateVolumeResponse;
+
     public UpdateVolumeResponse withUpdateVolumeResponse(org.openapis.openapi.models.shared.UpdateVolumeResponse updateVolumeResponse) {
         this.updateVolumeResponse = updateVolumeResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateVolumeResponse {
      */
     
     public Object volumeNotFound;
+
     public UpdateVolumeResponse withVolumeNotFound(Object volumeNotFound) {
         this.volumeNotFound = volumeNotFound;
         return this;
     }
     
+    public UpdateVolumeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

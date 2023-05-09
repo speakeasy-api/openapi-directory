@@ -12,6 +12,7 @@ public class SingleWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public SingleWorkspace200ApplicationJSONWorkspaceCollections[] collections;
+
     public SingleWorkspace200ApplicationJSONWorkspace withCollections(SingleWorkspace200ApplicationJSONWorkspaceCollections[] collections) {
         this.collections = collections;
         return this;
@@ -20,6 +21,7 @@ public class SingleWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SingleWorkspace200ApplicationJSONWorkspace withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class SingleWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public SingleWorkspace200ApplicationJSONWorkspaceEnvironments[] environments;
+
     public SingleWorkspace200ApplicationJSONWorkspace withEnvironments(SingleWorkspace200ApplicationJSONWorkspaceEnvironments[] environments) {
         this.environments = environments;
         return this;
@@ -36,6 +39,7 @@ public class SingleWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SingleWorkspace200ApplicationJSONWorkspace withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class SingleWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SingleWorkspace200ApplicationJSONWorkspace withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +57,11 @@ public class SingleWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SingleWorkspace200ApplicationJSONWorkspace withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SingleWorkspace200ApplicationJSONWorkspace(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartInstancesResultStartingInstancesCurrentState {
     
     public Long code;
+
     public StartInstancesResultStartingInstancesCurrentState withCode(Long code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class StartInstancesResultStartingInstancesCurrentState {
     
     
     public StartInstancesResultStartingInstancesCurrentStateNameEnum name;
+
     public StartInstancesResultStartingInstancesCurrentState withName(StartInstancesResultStartingInstancesCurrentStateNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public StartInstancesResultStartingInstancesCurrentState(){}
 }

@@ -15,9 +15,11 @@ public class CreateDocumentClassifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierArn")
     public String documentClassifierArn;
+
     public CreateDocumentClassifierResponse withDocumentClassifierArn(String documentClassifierArn) {
         this.documentClassifierArn = documentClassifierArn;
         return this;
     }
     
+    public CreateDocumentClassifierResponse(){}
 }

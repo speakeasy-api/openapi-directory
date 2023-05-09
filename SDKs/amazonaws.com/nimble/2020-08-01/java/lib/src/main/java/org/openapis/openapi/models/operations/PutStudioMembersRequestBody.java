@@ -12,6 +12,7 @@ public class PutStudioMembersRequestBody {
      */
     @JsonProperty("identityStoreId")
     public String identityStoreId;
+
     public PutStudioMembersRequestBody withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -22,9 +23,14 @@ public class PutStudioMembersRequestBody {
      */
     @JsonProperty("members")
     public org.openapis.openapi.models.shared.NewStudioMember[] members;
+
     public PutStudioMembersRequestBody withMembers(org.openapis.openapi.models.shared.NewStudioMember[] members) {
         this.members = members;
         return this;
     }
     
+    public PutStudioMembersRequestBody(@JsonProperty("identityStoreId") String identityStoreId, @JsonProperty("members") org.openapis.openapi.models.shared.NewStudioMember[] members) {
+        this.identityStoreId = identityStoreId;
+        this.members = members;
+  }
 }

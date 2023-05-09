@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConnectionAliasesResponse {
@@ -12,6 +13,7 @@ public class DescribeConnectionAliasesResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeConnectionAliasesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConnectionAliasesResponse {
     
     
     public String contentType;
+
     public DescribeConnectionAliasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConnectionAliasesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConnectionAliasesResult describeConnectionAliasesResult;
+
     public DescribeConnectionAliasesResponse withDescribeConnectionAliasesResult(org.openapis.openapi.models.shared.DescribeConnectionAliasesResult describeConnectionAliasesResult) {
         this.describeConnectionAliasesResult = describeConnectionAliasesResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConnectionAliasesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DescribeConnectionAliasesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConnectionAliasesResponse {
      */
     
     public Object operationNotSupportedException;
+
     public DescribeConnectionAliasesResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeConnectionAliasesResponse {
     
     
     public Integer statusCode;
+
     public DescribeConnectionAliasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeConnectionAliasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConnectionAliasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConnectionAliasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

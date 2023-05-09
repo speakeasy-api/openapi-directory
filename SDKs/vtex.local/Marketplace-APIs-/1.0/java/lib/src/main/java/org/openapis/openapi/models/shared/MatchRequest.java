@@ -30,6 +30,7 @@ public class MatchRequest {
      */
     @JsonProperty("matchType")
     public String matchType;
+
     public MatchRequest withMatchType(String matchType) {
         this.matchType = matchType;
         return this;
@@ -40,6 +41,7 @@ public class MatchRequest {
      */
     @JsonProperty("matcherId")
     public String matcherId;
+
     public MatchRequest withMatcherId(String matcherId) {
         this.matcherId = matcherId;
         return this;
@@ -48,6 +50,7 @@ public class MatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public Product product;
+
     public MatchRequest withProduct(Product product) {
         this.product = product;
         return this;
@@ -59,6 +62,7 @@ public class MatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productRef")
     public String productRef;
+
     public MatchRequest withProductRef(String productRef) {
         this.productRef = productRef;
         return this;
@@ -77,6 +81,7 @@ public class MatchRequest {
      */
     @JsonProperty("score")
     public String score;
+
     public MatchRequest withScore(String score) {
         this.score = score;
         return this;
@@ -85,6 +90,7 @@ public class MatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public Sku sku;
+
     public MatchRequest withSku(Sku sku) {
         this.sku = sku;
         return this;
@@ -96,9 +102,15 @@ public class MatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuRef")
     public String skuRef;
+
     public MatchRequest withSkuRef(String skuRef) {
         this.skuRef = skuRef;
         return this;
     }
     
+    public MatchRequest(@JsonProperty("matchType") String matchType, @JsonProperty("matcherId") String matcherId, @JsonProperty("score") String score) {
+        this.matchType = matchType;
+        this.matcherId = matcherId;
+        this.score = score;
+  }
 }

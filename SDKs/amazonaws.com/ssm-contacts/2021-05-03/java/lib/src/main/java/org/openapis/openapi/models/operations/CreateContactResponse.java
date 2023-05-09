@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContactResponse {
@@ -12,6 +13,7 @@ public class CreateContactResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateContactResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateContactResponse {
      */
     
     public Object conflictException;
+
     public CreateContactResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateContactResponse {
     
     
     public String contentType;
+
     public CreateContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateContactResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContactResult createContactResult;
+
     public CreateContactResponse withCreateContactResult(org.openapis.openapi.models.shared.CreateContactResult createContactResult) {
         this.createContactResult = createContactResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateContactResponse {
      */
     
     public Object dataEncryptionException;
+
     public CreateContactResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -59,6 +65,7 @@ public class CreateContactResponse {
      */
     
     public Object internalServerException;
+
     public CreateContactResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class CreateContactResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateContactResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateContactResponse {
     
     
     public Integer statusCode;
+
     public CreateContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateContactResponse {
      */
     
     public Object throttlingException;
+
     public CreateContactResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateContactResponse {
      */
     
     public Object validationException;
+
     public CreateContactResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

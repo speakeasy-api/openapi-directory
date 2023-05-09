@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRulesExecutionsRequest {
@@ -12,6 +13,7 @@ public class GetRulesExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Long pageNumber;
+
     public GetRulesExecutionsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -22,6 +24,7 @@ public class GetRulesExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public GetRulesExecutionsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,9 +35,15 @@ public class GetRulesExecutionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public GetRulesExecutionsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetRulesExecutionsRequest(@JsonProperty("pageNumber") Long pageNumber, @JsonProperty("pageSize") Long pageSize, @JsonProperty("storeId") String storeId) {
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+        this.storeId = storeId;
+  }
 }

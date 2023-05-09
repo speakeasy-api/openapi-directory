@@ -15,6 +15,7 @@ public class BlogUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blog")
     public Blog blog;
+
     public BlogUserInfo withBlog(Blog blog) {
         this.blog = blog;
         return this;
@@ -23,6 +24,7 @@ public class BlogUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blog_user_info")
     public BlogPerUserInfo blogUserInfo;
+
     public BlogUserInfo withBlogUserInfo(BlogPerUserInfo blogUserInfo) {
         this.blogUserInfo = blogUserInfo;
         return this;
@@ -34,9 +36,11 @@ public class BlogUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BlogUserInfo withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BlogUserInfo(){}
 }

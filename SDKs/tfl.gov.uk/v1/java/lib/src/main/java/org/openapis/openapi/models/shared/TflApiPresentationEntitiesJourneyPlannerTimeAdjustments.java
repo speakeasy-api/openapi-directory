@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerTimeAdjustments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earlier")
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment earlier;
+
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustments withEarlier(TflApiPresentationEntitiesJourneyPlannerTimeAdjustment earlier) {
         this.earlier = earlier;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesJourneyPlannerTimeAdjustments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earliest")
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment earliest;
+
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustments withEarliest(TflApiPresentationEntitiesJourneyPlannerTimeAdjustment earliest) {
         this.earliest = earliest;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesJourneyPlannerTimeAdjustments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("later")
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment later;
+
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustments withLater(TflApiPresentationEntitiesJourneyPlannerTimeAdjustment later) {
         this.later = later;
         return this;
@@ -36,9 +39,11 @@ public class TflApiPresentationEntitiesJourneyPlannerTimeAdjustments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest")
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment latest;
+
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustments withLatest(TflApiPresentationEntitiesJourneyPlannerTimeAdjustment latest) {
         this.latest = latest;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerTimeAdjustments(){}
 }

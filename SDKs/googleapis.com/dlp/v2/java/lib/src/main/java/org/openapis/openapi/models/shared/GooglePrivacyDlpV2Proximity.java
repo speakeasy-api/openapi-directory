@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Proximity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowAfter")
     public Integer windowAfter;
+
     public GooglePrivacyDlpV2Proximity withWindowAfter(Integer windowAfter) {
         this.windowAfter = windowAfter;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Proximity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowBefore")
     public Integer windowBefore;
+
     public GooglePrivacyDlpV2Proximity withWindowBefore(Integer windowBefore) {
         this.windowBefore = windowBefore;
         return this;
     }
     
+    public GooglePrivacyDlpV2Proximity(){}
 }

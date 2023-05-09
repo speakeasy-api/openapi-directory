@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImagePipelineRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteImagePipelineRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteImagePipelineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteImagePipelineRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteImagePipelineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteImagePipelineRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteImagePipelineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteImagePipelineRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteImagePipelineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteImagePipelineRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteImagePipelineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteImagePipelineRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteImagePipelineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteImagePipelineRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,9 +69,13 @@ public class DeleteImagePipelineRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imagePipelineArn")
     public String imagePipelineArn;
+
     public DeleteImagePipelineRequest withImagePipelineArn(String imagePipelineArn) {
         this.imagePipelineArn = imagePipelineArn;
         return this;
     }
     
+    public DeleteImagePipelineRequest(@JsonProperty("imagePipelineArn") String imagePipelineArn) {
+        this.imagePipelineArn = imagePipelineArn;
+  }
 }

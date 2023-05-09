@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WafAction {
     @JsonProperty("Type")
     public WafActionTypeEnum type;
+
     public WafAction withType(WafActionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public WafAction(@JsonProperty("Type") WafActionTypeEnum type) {
+        this.type = type;
+  }
 }

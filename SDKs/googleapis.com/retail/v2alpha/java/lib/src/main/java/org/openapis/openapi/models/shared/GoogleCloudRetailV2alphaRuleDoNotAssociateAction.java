@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaRuleDoNotAssociateAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doNotAssociateTerms")
     public String[] doNotAssociateTerms;
+
     public GoogleCloudRetailV2alphaRuleDoNotAssociateAction withDoNotAssociateTerms(String[] doNotAssociateTerms) {
         this.doNotAssociateTerms = doNotAssociateTerms;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaRuleDoNotAssociateAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryTerms")
     public String[] queryTerms;
+
     public GoogleCloudRetailV2alphaRuleDoNotAssociateAction withQueryTerms(String[] queryTerms) {
         this.queryTerms = queryTerms;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2alphaRuleDoNotAssociateAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public String[] terms;
+
     public GoogleCloudRetailV2alphaRuleDoNotAssociateAction withTerms(String[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaRuleDoNotAssociateAction(){}
 }

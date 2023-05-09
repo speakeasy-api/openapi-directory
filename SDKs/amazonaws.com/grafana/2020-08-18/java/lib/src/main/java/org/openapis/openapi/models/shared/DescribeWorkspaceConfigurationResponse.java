@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeWorkspaceConfigurationResponse {
     @JsonProperty("configuration")
     public String configuration;
+
     public DescribeWorkspaceConfigurationResponse withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public DescribeWorkspaceConfigurationResponse(@JsonProperty("configuration") String configuration) {
+        this.configuration = configuration;
+  }
 }

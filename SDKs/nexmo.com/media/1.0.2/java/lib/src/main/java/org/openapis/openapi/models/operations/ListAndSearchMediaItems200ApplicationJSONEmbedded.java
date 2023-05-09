@@ -15,9 +15,11 @@ public class ListAndSearchMediaItems200ApplicationJSONEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public org.openapis.openapi.models.shared.Media[] media;
+
     public ListAndSearchMediaItems200ApplicationJSONEmbedded withMedia(org.openapis.openapi.models.shared.Media[] media) {
         this.media = media;
         return this;
     }
     
+    public ListAndSearchMediaItems200ApplicationJSONEmbedded(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPushDeviceDetailsFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.DeviceDetailsInput deviceDetailsInput;
+
     public PutPushDeviceDetailsFormRequest withDeviceDetailsInput(org.openapis.openapi.models.shared.DeviceDetailsInput deviceDetailsInput) {
         this.deviceDetailsInput = deviceDetailsInput;
         return this;
@@ -19,6 +21,7 @@ public class PutPushDeviceDetailsFormRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public PutPushDeviceDetailsFormRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -29,6 +32,7 @@ public class PutPushDeviceDetailsFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device_id")
     public String deviceId;
+
     public PutPushDeviceDetailsFormRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -39,9 +43,13 @@ public class PutPushDeviceDetailsFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public PutPushDeviceDetailsFormRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public PutPushDeviceDetailsFormRequest(@JsonProperty("device_id") String deviceId) {
+        this.deviceId = deviceId;
+  }
 }

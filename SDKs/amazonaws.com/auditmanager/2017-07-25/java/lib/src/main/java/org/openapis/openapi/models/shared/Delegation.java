@@ -20,6 +20,7 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public Delegation withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -28,6 +29,7 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public Delegation withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -36,6 +38,7 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public Delegation withComment(String comment) {
         this.comment = comment;
         return this;
@@ -44,6 +47,7 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSetId")
     public String controlSetId;
+
     public Delegation withControlSetId(String controlSetId) {
         this.controlSetId = controlSetId;
         return this;
@@ -52,6 +56,7 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public Delegation withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -62,6 +67,7 @@ public class Delegation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public Delegation withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -70,6 +76,7 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Delegation withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +87,7 @@ public class Delegation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public Delegation withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -88,6 +96,7 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public Delegation withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -96,6 +105,7 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleType")
     public RoleTypeEnum roleType;
+
     public Delegation withRoleType(RoleTypeEnum roleType) {
         this.roleType = roleType;
         return this;
@@ -104,9 +114,11 @@ public class Delegation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DelegationStatusEnum status;
+
     public Delegation withStatus(DelegationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Delegation(){}
 }

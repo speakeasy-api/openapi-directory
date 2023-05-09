@@ -12,6 +12,7 @@ public class OBCreditLine1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amount")
     public OBActiveOrHistoricCurrencyAndAmount amount;
+
     public OBCreditLine1 withAmount(OBActiveOrHistoricCurrencyAndAmount amount) {
         this.amount = amount;
         return this;
@@ -23,6 +24,7 @@ public class OBCreditLine1 {
      */
     @JsonProperty("Included")
     public Boolean included;
+
     public OBCreditLine1 withIncluded(Boolean included) {
         this.included = included;
         return this;
@@ -31,9 +33,13 @@ public class OBCreditLine1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OBExternalLimitType1CodeEnum type;
+
     public OBCreditLine1 withType(OBExternalLimitType1CodeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OBCreditLine1(@JsonProperty("Included") Boolean included) {
+        this.included = included;
+  }
 }

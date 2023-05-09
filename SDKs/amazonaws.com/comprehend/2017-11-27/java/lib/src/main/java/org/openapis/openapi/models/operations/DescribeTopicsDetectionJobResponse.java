@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTopicsDetectionJobResponse {
     
     public String contentType;
+
     public DescribeTopicsDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTopicsDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTopicsDetectionJobResponse describeTopicsDetectionJobResponse;
+
     public DescribeTopicsDetectionJobResponse withDescribeTopicsDetectionJobResponse(org.openapis.openapi.models.shared.DescribeTopicsDetectionJobResponse describeTopicsDetectionJobResponse) {
         this.describeTopicsDetectionJobResponse = describeTopicsDetectionJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTopicsDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeTopicsDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTopicsDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeTopicsDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTopicsDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public DescribeTopicsDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeTopicsDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeTopicsDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeTopicsDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTopicsDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeTopicsDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeTopicsDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeTopicsDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

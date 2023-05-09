@@ -12,9 +12,13 @@ public class PutCaseEventConfigurationRequestBody {
      */
     @JsonProperty("eventBridge")
     public PutCaseEventConfigurationRequestBodyEventBridge eventBridge;
+
     public PutCaseEventConfigurationRequestBody withEventBridge(PutCaseEventConfigurationRequestBodyEventBridge eventBridge) {
         this.eventBridge = eventBridge;
         return this;
     }
     
+    public PutCaseEventConfigurationRequestBody(@JsonProperty("eventBridge") PutCaseEventConfigurationRequestBodyEventBridge eventBridge) {
+        this.eventBridge = eventBridge;
+  }
 }

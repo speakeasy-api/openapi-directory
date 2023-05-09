@@ -16,15 +16,14 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurityOption1;
-import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurityOption2;
-import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurity;
 import org.openapis.openapi.models.operations.DatastoreProjectsExportRequest;
 import org.openapis.openapi.models.operations.DatastoreProjectsExportResponse;
+import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurity;
+import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurityOption1;
+import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest;
 import org.openapis.openapi.models.shared.GoogleDatastoreAdminV1beta1EntityFilter;
+import org.openapis.openapi.models.shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -33,55 +32,55 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DatastoreProjectsExportRequest req = new DatastoreProjectsExportRequest() {{
-                dollarXgafv = "2";
+            DatastoreProjectsExportRequest req = new DatastoreProjectsExportRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleDatastoreAdminV1beta1ExportEntitiesRequest = new GoogleDatastoreAdminV1beta1ExportEntitiesRequest() {{
                     entityFilter = new GoogleDatastoreAdminV1beta1EntityFilter() {{
                         kinds = new String[]{{
-                            add("distinctio"),
                             add("quibusdam"),
                             add("unde"),
+                            add("nulla"),
                         }};
                         namespaceIds = new String[]{{
-                            add("corrupti"),
                             add("illum"),
                             add("vel"),
                             add("error"),
                         }};
-                    }};
+                    }};;
                     labels = new java.util.HashMap<String, String>() {{
                         put("suscipit", "iure");
                         put("magnam", "debitis");
                         put("ipsa", "delectus");
                     }};
                     outputUrlPrefix = "tempora";
-                }};
+                }};;
                 accessToken = "suscipit";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "minus";
                 fields = "placeat";
                 key = "voluptatum";
                 oauthToken = "iusto";
                 prettyPrint = false;
-                projectId = "excepturi";
-                quotaUser = "nisi";
-                uploadType = "recusandae";
-                uploadProtocol = "temporibus";
-            }}            
+                quotaUser = "excepturi";
+                uploadType = "nisi";
+                uploadProtocol = "recusandae";
+            }};            
 
             DatastoreProjectsExportResponse res = sdk.projects.datastoreProjectsExport(req, new DatastoreProjectsExportSecurity() {{
-                option1 = new DatastoreProjectsExportSecurityOption1() {{
+                option1 = new DatastoreProjectsExportSecurityOption1("temporibus", "ab") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.googleLongrunningOperation.isPresent()) {
+            if (res.googleLongrunningOperation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -89,10 +88,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `datastoreProjectsExport` - Exports a copy of all or a subset of entities from Google Cloud Datastore to another storage system, such as Google Cloud Storage. Recent updates to entities may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage.
-* `datastoreProjectsImport` - Imports entities into Google Cloud Datastore. Existing entities with the same key are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportEntities operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Datastore.
+* [datastoreProjectsExport](docs/projects/README.md#datastoreprojectsexport) - Exports a copy of all or a subset of entities from Google Cloud Datastore to another storage system, such as Google Cloud Storage. Recent updates to entities may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage.
+* [datastoreProjectsImport](docs/projects/README.md#datastoreprojectsimport) - Imports entities into Google Cloud Datastore. Existing entities with the same key are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportEntities operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Datastore.
 <!-- End SDK Available Operations -->
 
 ### Maturity

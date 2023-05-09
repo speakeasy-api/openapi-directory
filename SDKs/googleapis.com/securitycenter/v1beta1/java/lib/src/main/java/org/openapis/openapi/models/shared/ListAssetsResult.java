@@ -18,6 +18,7 @@ public class ListAssetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public Asset asset;
+
     public ListAssetsResult withAsset(Asset asset) {
         this.asset = asset;
         return this;
@@ -29,9 +30,11 @@ public class ListAssetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ListAssetsResultStateEnum state;
+
     public ListAssetsResult withState(ListAssetsResultStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ListAssetsResult(){}
 }

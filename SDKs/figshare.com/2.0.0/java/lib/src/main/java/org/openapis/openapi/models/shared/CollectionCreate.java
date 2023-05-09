@@ -18,6 +18,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articles")
     public Long[] articles;
+
     public CollectionCreate withArticles(Long[] articles) {
         this.articles = articles;
         return this;
@@ -29,6 +30,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authors")
     public java.util.Map<String, Object>[] authors;
+
     public CollectionCreate withAuthors(java.util.Map<String, Object>[] authors) {
         this.authors = authors;
         return this;
@@ -40,6 +42,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Long[] categories;
+
     public CollectionCreate withCategories(Long[] categories) {
         this.categories = categories;
         return this;
@@ -51,6 +54,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories_by_source_id")
     public String[] categoriesBySourceId;
+
     public CollectionCreate withCategoriesBySourceId(String[] categoriesBySourceId) {
         this.categoriesBySourceId = categoriesBySourceId;
         return this;
@@ -62,6 +66,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public java.util.Map<String, Object> customFields;
+
     public CollectionCreate withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -73,6 +78,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields_list")
     public CustomArticleFieldAdd[] customFieldsList;
+
     public CollectionCreate withCustomFieldsList(CustomArticleFieldAdd[] customFieldsList) {
         this.customFieldsList = customFieldsList;
         return this;
@@ -84,6 +90,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CollectionCreate withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +102,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doi")
     public String doi;
+
     public CollectionCreate withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -106,6 +114,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funding")
     public String funding;
+
     public CollectionCreate withFunding(String funding) {
         this.funding = funding;
         return this;
@@ -117,6 +126,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funding_list")
     public FundingCreate[] fundingList;
+
     public CollectionCreate withFundingList(FundingCreate[] fundingList) {
         this.fundingList = fundingList;
         return this;
@@ -128,6 +138,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     public Long groupId;
+
     public CollectionCreate withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -139,6 +150,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("handle")
     public String handle;
+
     public CollectionCreate withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -150,6 +162,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public CollectionCreate withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -161,6 +174,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("references")
     public String[] references;
+
     public CollectionCreate withReferences(String[] references) {
         this.references = references;
         return this;
@@ -172,6 +186,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_doi")
     public String resourceDoi;
+
     public CollectionCreate withResourceDoi(String resourceDoi) {
         this.resourceDoi = resourceDoi;
         return this;
@@ -183,6 +198,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_id")
     public String resourceId;
+
     public CollectionCreate withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -194,6 +210,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_link")
     public String resourceLink;
+
     public CollectionCreate withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
@@ -205,6 +222,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_title")
     public String resourceTitle;
+
     public CollectionCreate withResourceTitle(String resourceTitle) {
         this.resourceTitle = resourceTitle;
         return this;
@@ -216,6 +234,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_version")
     public Long resourceVersion;
+
     public CollectionCreate withResourceVersion(Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -227,6 +246,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public CollectionCreate withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -235,6 +255,7 @@ public class CollectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeline")
     public TimelineUpdate timeline;
+
     public CollectionCreate withTimeline(TimelineUpdate timeline) {
         this.timeline = timeline;
         return this;
@@ -245,9 +266,13 @@ public class CollectionCreate {
      */
     @JsonProperty("title")
     public String title;
+
     public CollectionCreate withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CollectionCreate(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

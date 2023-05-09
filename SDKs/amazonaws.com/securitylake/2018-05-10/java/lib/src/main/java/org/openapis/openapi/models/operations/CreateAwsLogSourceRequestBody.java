@@ -15,6 +15,7 @@ public class CreateAwsLogSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAllDimensions")
     public java.util.Map<String, java.util.Map<String, String[]>> enableAllDimensions;
+
     public CreateAwsLogSourceRequestBody withEnableAllDimensions(java.util.Map<String, java.util.Map<String, String[]>> enableAllDimensions) {
         this.enableAllDimensions = enableAllDimensions;
         return this;
@@ -26,6 +27,7 @@ public class CreateAwsLogSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSingleDimension")
     public String[] enableSingleDimension;
+
     public CreateAwsLogSourceRequestBody withEnableSingleDimension(String[] enableSingleDimension) {
         this.enableSingleDimension = enableSingleDimension;
         return this;
@@ -37,6 +39,7 @@ public class CreateAwsLogSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableTwoDimensions")
     public java.util.Map<String, String[]> enableTwoDimensions;
+
     public CreateAwsLogSourceRequestBody withEnableTwoDimensions(java.util.Map<String, String[]> enableTwoDimensions) {
         this.enableTwoDimensions = enableTwoDimensions;
         return this;
@@ -47,9 +50,13 @@ public class CreateAwsLogSourceRequestBody {
      */
     @JsonProperty("inputOrder")
     public org.openapis.openapi.models.shared.DimensionEnum[] inputOrder;
+
     public CreateAwsLogSourceRequestBody withInputOrder(org.openapis.openapi.models.shared.DimensionEnum[] inputOrder) {
         this.inputOrder = inputOrder;
         return this;
     }
     
+    public CreateAwsLogSourceRequestBody(@JsonProperty("inputOrder") org.openapis.openapi.models.shared.DimensionEnum[] inputOrder) {
+        this.inputOrder = inputOrder;
+  }
 }

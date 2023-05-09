@@ -15,6 +15,7 @@ public class CreateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileArn")
     public String securityProfileArn;
+
     public CreateSecurityProfileResponse withSecurityProfileArn(String securityProfileArn) {
         this.securityProfileArn = securityProfileArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileName")
     public String securityProfileName;
+
     public CreateSecurityProfileResponse withSecurityProfileName(String securityProfileName) {
         this.securityProfileName = securityProfileName;
         return this;
     }
     
+    public CreateSecurityProfileResponse(){}
 }

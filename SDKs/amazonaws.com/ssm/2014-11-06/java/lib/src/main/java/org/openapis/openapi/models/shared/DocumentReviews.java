@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentReviews {
     @JsonProperty("Action")
     public DocumentReviewActionEnum action;
+
     public DocumentReviews withAction(DocumentReviewActionEnum action) {
         this.action = action;
         return this;
@@ -22,9 +23,13 @@ public class DocumentReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public DocumentReviewCommentSource[] comment;
+
     public DocumentReviews withComment(DocumentReviewCommentSource[] comment) {
         this.comment = comment;
         return this;
     }
     
+    public DocumentReviews(@JsonProperty("Action") DocumentReviewActionEnum action) {
+        this.action = action;
+  }
 }

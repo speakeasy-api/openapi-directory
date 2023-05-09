@@ -57,10 +57,8 @@ public class Holidays {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllHolidaysResponse res = new org.openapis.openapi.models.operations.AllHolidaysResponse() {{
+        org.openapis.openapi.models.operations.AllHolidaysResponse res = new org.openapis.openapi.models.operations.AllHolidaysResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,10 +102,8 @@ public class Holidays {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUpdateHolidayResponse res = new org.openapis.openapi.models.operations.CreateUpdateHolidayResponse() {{
+        org.openapis.openapi.models.operations.CreateUpdateHolidayResponse res = new org.openapis.openapi.models.operations.CreateUpdateHolidayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,10 +142,8 @@ public class Holidays {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HolidayResponse res = new org.openapis.openapi.models.operations.HolidayResponse() {{
+        org.openapis.openapi.models.operations.HolidayResponse res = new org.openapis.openapi.models.operations.HolidayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,10 +182,8 @@ public class Holidays {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HolidayByIdResponse res = new org.openapis.openapi.models.operations.HolidayByIdResponse() {{
+        org.openapis.openapi.models.operations.HolidayByIdResponse res = new org.openapis.openapi.models.operations.HolidayByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

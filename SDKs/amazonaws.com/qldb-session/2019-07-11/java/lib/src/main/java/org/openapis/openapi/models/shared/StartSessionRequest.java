@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartSessionRequest {
     @JsonProperty("LedgerName")
     public String ledgerName;
+
     public StartSessionRequest withLedgerName(String ledgerName) {
         this.ledgerName = ledgerName;
         return this;
     }
     
+    public StartSessionRequest(@JsonProperty("LedgerName") String ledgerName) {
+        this.ledgerName = ledgerName;
+  }
 }

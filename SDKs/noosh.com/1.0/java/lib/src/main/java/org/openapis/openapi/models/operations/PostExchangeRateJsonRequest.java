@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostExchangeRateJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MultiExchangeRatePersistListVO multiExchangeRatePersistListVO;
+
     public PostExchangeRateJsonRequest withMultiExchangeRatePersistListVO(org.openapis.openapi.models.shared.MultiExchangeRatePersistListVO multiExchangeRatePersistListVO) {
         this.multiExchangeRatePersistListVO = multiExchangeRatePersistListVO;
         return this;
@@ -16,9 +18,13 @@ public class PostExchangeRateJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PostExchangeRateJsonRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PostExchangeRateJsonRequest(@JsonProperty("workgroup_id") String workgroupId) {
+        this.workgroupId = workgroupId;
+  }
 }

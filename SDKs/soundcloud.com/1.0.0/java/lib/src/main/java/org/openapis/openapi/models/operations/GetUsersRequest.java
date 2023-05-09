@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersRequest {
@@ -12,6 +13,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String ids;
+
     public GetUsersRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -22,6 +24,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetUsersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
     public Boolean linkedPartitioning;
+
     public GetUsersRequest withLinkedPartitioning(Boolean linkedPartitioning) {
         this.linkedPartitioning = linkedPartitioning;
         return this;
@@ -39,9 +43,13 @@ public class GetUsersRequest {
     
     /**
      * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    @Deprecated
     public Long offset;
+
+    @Deprecated
     public GetUsersRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -52,9 +60,13 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetUsersRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetUsersRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appsScriptProject")
     public String appsScriptProject;
+
     public GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectRequest withAppsScriptProject(String appsScriptProject) {
         this.appsScriptProject = appsScriptProject;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authConfigId")
     public String authConfigId;
+
     public GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectRequest withAuthConfigId(String authConfigId) {
         this.authConfigId = authConfigId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUploadReleaseAssetRequest {
     @SpeakeasyMetadata("request:mediaType=*/*")
     public String requestBody;
+
     public ReposUploadReleaseAssetRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ReposUploadReleaseAssetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
     public String label;
+
     public ReposUploadReleaseAssetRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -23,6 +26,7 @@ public class ReposUploadReleaseAssetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public ReposUploadReleaseAssetRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +34,7 @@ public class ReposUploadReleaseAssetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposUploadReleaseAssetRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -40,6 +45,7 @@ public class ReposUploadReleaseAssetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReposUploadReleaseAssetRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -47,9 +53,16 @@ public class ReposUploadReleaseAssetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposUploadReleaseAssetRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposUploadReleaseAssetRequest(@JsonProperty("name") String name, @JsonProperty("owner") String owner, @JsonProperty("release_id") Long releaseId, @JsonProperty("repo") String repo) {
+        this.name = name;
+        this.owner = owner;
+        this.releaseId = releaseId;
+        this.repo = repo;
+  }
 }

@@ -18,6 +18,7 @@ public class ITunesConnectAnalytics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("at")
     public String at;
+
     public ITunesConnectAnalytics withAt(String at) {
         this.at = at;
         return this;
@@ -29,6 +30,7 @@ public class ITunesConnectAnalytics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ct")
     public String ct;
+
     public ITunesConnectAnalytics withCt(String ct) {
         this.ct = ct;
         return this;
@@ -40,6 +42,7 @@ public class ITunesConnectAnalytics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mt")
     public String mt;
+
     public ITunesConnectAnalytics withMt(String mt) {
         this.mt = mt;
         return this;
@@ -51,9 +54,11 @@ public class ITunesConnectAnalytics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pt")
     public String pt;
+
     public ITunesConnectAnalytics withPt(String pt) {
         this.pt = pt;
         return this;
     }
     
+    public ITunesConnectAnalytics(){}
 }

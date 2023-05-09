@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class KeyPair {
     
     public String keyFingerprint;
+
     public KeyPair withKeyFingerprint(String keyFingerprint) {
         this.keyFingerprint = keyFingerprint;
         return this;
@@ -19,6 +20,7 @@ public class KeyPair {
     
     
     public String keyMaterial;
+
     public KeyPair withKeyMaterial(String keyMaterial) {
         this.keyMaterial = keyMaterial;
         return this;
@@ -26,6 +28,7 @@ public class KeyPair {
     
     
     public String keyName;
+
     public KeyPair withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -33,6 +36,7 @@ public class KeyPair {
     
     
     public String keyPairId;
+
     public KeyPair withKeyPairId(String keyPairId) {
         this.keyPairId = keyPairId;
         return this;
@@ -40,9 +44,11 @@ public class KeyPair {
     
     
     public KeyPairTags[] tags;
+
     public KeyPair withTags(KeyPairTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public KeyPair(){}
 }

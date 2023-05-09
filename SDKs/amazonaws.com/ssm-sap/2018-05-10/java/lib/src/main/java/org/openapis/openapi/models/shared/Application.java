@@ -20,6 +20,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppRegistryArn")
     public String appRegistryArn;
+
     public Application withAppRegistryArn(String appRegistryArn) {
         this.appRegistryArn = appRegistryArn;
         return this;
@@ -28,6 +29,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Application withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Components")
     public String[] components;
+
     public Application withComponents(String[] components) {
         this.components = components;
         return this;
@@ -44,6 +47,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Application withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class Application {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public Application withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -62,6 +67,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ApplicationStatusEnum status;
+
     public Application withStatus(ApplicationStatusEnum status) {
         this.status = status;
         return this;
@@ -70,6 +76,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public Application withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -78,9 +85,11 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ApplicationTypeEnum type;
+
     public Application withType(ApplicationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Application(){}
 }

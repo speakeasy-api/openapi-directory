@@ -15,9 +15,11 @@ public class DeregisterAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AccountStatusEnum status;
+
     public DeregisterAccountResponse withStatus(AccountStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeregisterAccountResponse(){}
 }

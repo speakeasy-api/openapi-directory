@@ -12,6 +12,7 @@ public class UpdateMockRequestBodyMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateMockRequestBodyMock withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMockRequestBodyMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public UpdateMockRequestBodyMock withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -28,6 +30,7 @@ public class UpdateMockRequestBodyMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateMockRequestBodyMock withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class UpdateMockRequestBodyMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private")
     public Boolean private_;
+
     public UpdateMockRequestBodyMock withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -44,9 +48,11 @@ public class UpdateMockRequestBodyMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionTag")
     public String versionTag;
+
     public UpdateMockRequestBodyMock withVersionTag(String versionTag) {
         this.versionTag = versionTag;
         return this;
     }
     
+    public UpdateMockRequestBodyMock(){}
 }

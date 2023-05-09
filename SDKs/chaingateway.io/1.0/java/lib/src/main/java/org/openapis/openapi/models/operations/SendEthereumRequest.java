@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendEthereumRequest {
@@ -12,6 +13,7 @@ public class SendEthereumRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public SendEthereumRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class SendEthereumRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SendEthereumRequest sendEthereumRequest;
+
     public SendEthereumRequest withSendEthereumRequest(org.openapis.openapi.models.shared.SendEthereumRequest sendEthereumRequest) {
         this.sendEthereumRequest = sendEthereumRequest;
         return this;
     }
     
+    public SendEthereumRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("sendEthereumRequest") org.openapis.openapi.models.shared.SendEthereumRequest sendEthereumRequest) {
+        this.authorization = authorization;
+        this.sendEthereumRequest = sendEthereumRequest;
+  }
 }

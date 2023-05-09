@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class AccessDetail {
     
     public String entityPath;
+
     public AccessDetail withEntityPath(String entityPath) {
         this.entityPath = entityPath;
         return this;
@@ -19,6 +21,7 @@ public class AccessDetail {
     
     
     public OffsetDateTime lastAuthenticatedTime;
+
     public AccessDetail withLastAuthenticatedTime(OffsetDateTime lastAuthenticatedTime) {
         this.lastAuthenticatedTime = lastAuthenticatedTime;
         return this;
@@ -26,6 +29,7 @@ public class AccessDetail {
     
     
     public String region;
+
     public AccessDetail withRegion(String region) {
         this.region = region;
         return this;
@@ -33,6 +37,7 @@ public class AccessDetail {
     
     
     public String serviceName;
+
     public AccessDetail withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -40,6 +45,7 @@ public class AccessDetail {
     
     
     public String serviceNamespace;
+
     public AccessDetail withServiceNamespace(String serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -47,9 +53,14 @@ public class AccessDetail {
     
     
     public Long totalAuthenticatedEntities;
+
     public AccessDetail withTotalAuthenticatedEntities(Long totalAuthenticatedEntities) {
         this.totalAuthenticatedEntities = totalAuthenticatedEntities;
         return this;
     }
     
+    public AccessDetail(@JsonProperty("ServiceName") String serviceName, @JsonProperty("ServiceNamespace") String serviceNamespace) {
+        this.serviceName = serviceName;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

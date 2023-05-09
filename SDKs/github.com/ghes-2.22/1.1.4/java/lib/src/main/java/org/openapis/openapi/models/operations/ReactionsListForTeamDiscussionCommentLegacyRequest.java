@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionCommentLegacyRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
     public Long commentNumber;
+
     public ReactionsListForTeamDiscussionCommentLegacyRequest withCommentNumber(Long commentNumber) {
         this.commentNumber = commentNumber;
         return this;
@@ -19,6 +21,7 @@ public class ReactionsListForTeamDiscussionCommentLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
     public ReactionsListForTeamDiscussionCommentLegacyContentEnum content;
+
     public ReactionsListForTeamDiscussionCommentLegacyRequest withContent(ReactionsListForTeamDiscussionCommentLegacyContentEnum content) {
         this.content = content;
         return this;
@@ -26,6 +29,7 @@ public class ReactionsListForTeamDiscussionCommentLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public ReactionsListForTeamDiscussionCommentLegacyRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -36,6 +40,7 @@ public class ReactionsListForTeamDiscussionCommentLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReactionsListForTeamDiscussionCommentLegacyRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -46,6 +51,7 @@ public class ReactionsListForTeamDiscussionCommentLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReactionsListForTeamDiscussionCommentLegacyRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -53,9 +59,15 @@ public class ReactionsListForTeamDiscussionCommentLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public ReactionsListForTeamDiscussionCommentLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public ReactionsListForTeamDiscussionCommentLegacyRequest(@JsonProperty("comment_number") Long commentNumber, @JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("team_id") Long teamId) {
+        this.commentNumber = commentNumber;
+        this.discussionNumber = discussionNumber;
+        this.teamId = teamId;
+  }
 }

@@ -18,6 +18,7 @@ public class ConditionalFormatRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanRule")
     public BooleanRule booleanRule;
+
     public ConditionalFormatRule withBooleanRule(BooleanRule booleanRule) {
         this.booleanRule = booleanRule;
         return this;
@@ -29,6 +30,7 @@ public class ConditionalFormatRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradientRule")
     public GradientRule gradientRule;
+
     public ConditionalFormatRule withGradientRule(GradientRule gradientRule) {
         this.gradientRule = gradientRule;
         return this;
@@ -40,9 +42,11 @@ public class ConditionalFormatRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ranges")
     public GridRange[] ranges;
+
     public ConditionalFormatRule withRanges(GridRange[] ranges) {
         this.ranges = ranges;
         return this;
     }
     
+    public ConditionalFormatRule(){}
 }

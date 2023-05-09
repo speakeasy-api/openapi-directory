@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet {
     
     public String groupId;
+
     public DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet {
     
     
     public String referencingVpcId;
+
     public DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet withReferencingVpcId(String referencingVpcId) {
         this.referencingVpcId = referencingVpcId;
         return this;
@@ -26,9 +28,11 @@ public class DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet {
     
     
     public String vpcPeeringConnectionId;
+
     public DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet(){}
 }

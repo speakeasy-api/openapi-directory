@@ -12,6 +12,7 @@ public class EwcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public EwcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,9 +23,14 @@ public class EwcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DSN")
     public String dsn;
+
     public EwcerRequestBodyCertificateParameters withDsn(String dsn) {
         this.dsn = dsn;
         return this;
     }
     
+    public EwcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("DSN") String dsn) {
+        this.dob = dob;
+        this.dsn = dsn;
+  }
 }

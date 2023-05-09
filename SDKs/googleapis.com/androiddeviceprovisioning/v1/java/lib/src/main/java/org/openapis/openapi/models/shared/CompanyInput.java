@@ -18,6 +18,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminEmails")
     public String[] adminEmails;
+
     public CompanyInput withAdminEmails(String[] adminEmails) {
         this.adminEmails = adminEmails;
         return this;
@@ -29,6 +30,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public CompanyInput withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -40,6 +42,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleWorkspaceAccount")
     public GoogleWorkspaceAccountInput googleWorkspaceAccount;
+
     public CompanyInput withGoogleWorkspaceAccount(GoogleWorkspaceAccountInput googleWorkspaceAccount) {
         this.googleWorkspaceAccount = googleWorkspaceAccount;
         return this;
@@ -51,6 +54,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public CompanyInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -62,6 +66,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerEmails")
     public String[] ownerEmails;
+
     public CompanyInput withOwnerEmails(String[] ownerEmails) {
         this.ownerEmails = ownerEmails;
         return this;
@@ -73,9 +78,11 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipWelcomeEmail")
     public Boolean skipWelcomeEmail;
+
     public CompanyInput withSkipWelcomeEmail(Boolean skipWelcomeEmail) {
         this.skipWelcomeEmail = skipWelcomeEmail;
         return this;
     }
     
+    public CompanyInput(){}
 }

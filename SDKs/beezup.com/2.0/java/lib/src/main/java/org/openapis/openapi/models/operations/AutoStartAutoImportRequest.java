@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoStartAutoImportRequest {
@@ -12,9 +13,13 @@ public class AutoStartAutoImportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public AutoStartAutoImportRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public AutoStartAutoImportRequest(@JsonProperty("storeId") String storeId) {
+        this.storeId = storeId;
+  }
 }

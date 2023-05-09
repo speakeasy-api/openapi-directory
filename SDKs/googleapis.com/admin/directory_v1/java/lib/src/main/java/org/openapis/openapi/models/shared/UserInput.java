@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * UserInput - The Directory API allows you to create and manage your account's users, user aliases, and user Gmail chat profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](/admin-sdk/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](/admin-sdk/directory/v1/guides/manage-user-aliases.html).
+ * UserInput - The Directory API allows you to create and manage your account's users, user aliases, and user Google profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](/admin-sdk/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](/admin-sdk/directory/v1/guides/manage-user-aliases.html).
  */
 public class UserInput {
     /**
@@ -18,6 +18,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public Object addresses;
+
     public UserInput withAddresses(Object addresses) {
         this.addresses = addresses;
         return this;
@@ -29,6 +30,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public UserInput withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -40,6 +42,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changePasswordAtNextLogin")
     public Boolean changePasswordAtNextLogin;
+
     public UserInput withChangePasswordAtNextLogin(Boolean changePasswordAtNextLogin) {
         this.changePasswordAtNextLogin = changePasswordAtNextLogin;
         return this;
@@ -51,6 +54,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customSchemas")
     public java.util.Map<String, java.util.Map<String, Object>> customSchemas;
+
     public UserInput withCustomSchemas(java.util.Map<String, java.util.Map<String, Object>> customSchemas) {
         this.customSchemas = customSchemas;
         return this;
@@ -62,6 +66,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public Object emails;
+
     public UserInput withEmails(Object emails) {
         this.emails = emails;
         return this;
@@ -73,6 +78,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIds")
     public Object externalIds;
+
     public UserInput withExternalIds(Object externalIds) {
         this.externalIds = externalIds;
         return this;
@@ -84,6 +90,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public Object gender;
+
     public UserInput withGender(Object gender) {
         this.gender = gender;
         return this;
@@ -95,6 +102,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashFunction")
     public String hashFunction;
+
     public UserInput withHashFunction(String hashFunction) {
         this.hashFunction = hashFunction;
         return this;
@@ -106,6 +114,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UserInput withId(String id) {
         this.id = id;
         return this;
@@ -117,6 +126,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ims")
     public Object ims;
+
     public UserInput withIms(Object ims) {
         this.ims = ims;
         return this;
@@ -128,6 +138,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeInGlobalAddressList")
     public Boolean includeInGlobalAddressList;
+
     public UserInput withIncludeInGlobalAddressList(Boolean includeInGlobalAddressList) {
         this.includeInGlobalAddressList = includeInGlobalAddressList;
         return this;
@@ -139,6 +150,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipWhitelisted")
     public Boolean ipWhitelisted;
+
     public UserInput withIpWhitelisted(Boolean ipWhitelisted) {
         this.ipWhitelisted = ipWhitelisted;
         return this;
@@ -150,6 +162,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public Object keywords;
+
     public UserInput withKeywords(Object keywords) {
         this.keywords = keywords;
         return this;
@@ -161,6 +174,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public Object languages;
+
     public UserInput withLanguages(Object languages) {
         this.languages = languages;
         return this;
@@ -172,6 +186,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Object locations;
+
     public UserInput withLocations(Object locations) {
         this.locations = locations;
         return this;
@@ -180,6 +195,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public UserName name;
+
     public UserInput withName(UserName name) {
         this.name = name;
         return this;
@@ -191,6 +207,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public Object notes;
+
     public UserInput withNotes(Object notes) {
         this.notes = notes;
         return this;
@@ -202,6 +219,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitPath")
     public String orgUnitPath;
+
     public UserInput withOrgUnitPath(String orgUnitPath) {
         this.orgUnitPath = orgUnitPath;
         return this;
@@ -213,6 +231,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizations")
     public Object organizations;
+
     public UserInput withOrganizations(Object organizations) {
         this.organizations = organizations;
         return this;
@@ -224,6 +243,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public UserInput withPassword(String password) {
         this.password = password;
         return this;
@@ -235,6 +255,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phones")
     public Object phones;
+
     public UserInput withPhones(Object phones) {
         this.phones = phones;
         return this;
@@ -246,6 +267,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posixAccounts")
     public Object posixAccounts;
+
     public UserInput withPosixAccounts(Object posixAccounts) {
         this.posixAccounts = posixAccounts;
         return this;
@@ -257,6 +279,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryEmail")
     public String primaryEmail;
+
     public UserInput withPrimaryEmail(String primaryEmail) {
         this.primaryEmail = primaryEmail;
         return this;
@@ -268,6 +291,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryEmail")
     public String recoveryEmail;
+
     public UserInput withRecoveryEmail(String recoveryEmail) {
         this.recoveryEmail = recoveryEmail;
         return this;
@@ -279,6 +303,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryPhone")
     public String recoveryPhone;
+
     public UserInput withRecoveryPhone(String recoveryPhone) {
         this.recoveryPhone = recoveryPhone;
         return this;
@@ -290,6 +315,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relations")
     public Object relations;
+
     public UserInput withRelations(Object relations) {
         this.relations = relations;
         return this;
@@ -301,6 +327,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKeys")
     public Object sshPublicKeys;
+
     public UserInput withSshPublicKeys(Object sshPublicKeys) {
         this.sshPublicKeys = sshPublicKeys;
         return this;
@@ -312,6 +339,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public UserInput withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -323,9 +351,11 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websites")
     public Object websites;
+
     public UserInput withWebsites(Object websites) {
         this.websites = websites;
         return this;
     }
     
+    public UserInput(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetResourcePolicyRequest {
     @JsonProperty("SecretId")
     public String secretId;
+
     public GetResourcePolicyRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public GetResourcePolicyRequest(@JsonProperty("SecretId") String secretId) {
+        this.secretId = secretId;
+  }
 }

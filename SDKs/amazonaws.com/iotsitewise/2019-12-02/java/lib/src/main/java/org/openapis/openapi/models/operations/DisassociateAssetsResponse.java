@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateAssetsResponse {
@@ -12,6 +13,7 @@ public class DisassociateAssetsResponse {
      */
     
     public Object conflictingOperationException;
+
     public DisassociateAssetsResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateAssetsResponse {
     
     
     public String contentType;
+
     public DisassociateAssetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateAssetsResponse {
      */
     
     public Object internalFailureException;
+
     public DisassociateAssetsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateAssetsResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateAssetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateAssetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateAssetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateAssetsResponse {
     
     
     public Integer statusCode;
+
     public DisassociateAssetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateAssetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateAssetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateAssetsResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateAssetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DisassociateAssetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

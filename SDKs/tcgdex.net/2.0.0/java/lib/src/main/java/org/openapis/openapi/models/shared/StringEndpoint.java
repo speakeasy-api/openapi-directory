@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StringEndpoint {
     @JsonProperty("cards")
     public CardResume[] cards;
+
     public StringEndpoint withCards(CardResume[] cards) {
         this.cards = cards;
         return this;
@@ -19,9 +20,14 @@ public class StringEndpoint {
     
     @JsonProperty("name")
     public String name;
+
     public StringEndpoint withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StringEndpoint(@JsonProperty("cards") CardResume[] cards, @JsonProperty("name") String name) {
+        this.cards = cards;
+        this.name = name;
+  }
 }

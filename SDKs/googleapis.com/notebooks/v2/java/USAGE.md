@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesGetIamPolicySecurity;
 import org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesGetIamPolicyRequest;
 import org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesGetIamPolicyResponse;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesGetIamPolicySecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -16,32 +15,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            NotebooksProjectsLocationsInstancesGetIamPolicyRequest req = new NotebooksProjectsLocationsInstancesGetIamPolicyRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
-                optionsRequestedPolicyVersion = 847252;
+            NotebooksProjectsLocationsInstancesGetIamPolicyRequest req = new NotebooksProjectsLocationsInstancesGetIamPolicyRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                optionsRequestedPolicyVersion = 423655L;
                 prettyPrint = false;
-                quotaUser = "vel";
-                resource = "error";
+                quotaUser = "error";
                 uploadType = "deserunt";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
-            NotebooksProjectsLocationsInstancesGetIamPolicyResponse res = sdk.projects.notebooksProjectsLocationsInstancesGetIamPolicy(req, new NotebooksProjectsLocationsInstancesGetIamPolicySecurity() {{
+            NotebooksProjectsLocationsInstancesGetIamPolicyResponse res = sdk.projects.notebooksProjectsLocationsInstancesGetIamPolicy(req, new NotebooksProjectsLocationsInstancesGetIamPolicySecurity("iure", "magnam") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.policy.isPresent()) {
+            if (res.policy != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

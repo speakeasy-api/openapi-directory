@@ -15,6 +15,7 @@ public class LicensesReadLicense {
      */
     
     public LicensesReadLicenseAttributes attributes;
+
     public LicensesReadLicense withAttributes(LicensesReadLicenseAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class LicensesReadLicense {
      */
     
     public String id;
+
     public LicensesReadLicense withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class LicensesReadLicense {
      */
     
     public LicensesReadLicenseLinks links;
+
     public LicensesReadLicense withLinks(LicensesReadLicenseLinks links) {
         this.links = links;
         return this;
@@ -45,9 +48,11 @@ public class LicensesReadLicense {
      */
     
     public String type;
+
     public LicensesReadLicense withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LicensesReadLicense(){}
 }

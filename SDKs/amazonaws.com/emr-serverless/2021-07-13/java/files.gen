@@ -106,6 +106,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/MonitoringConfiguration.jav
 lib/src/main/java/org/openapis/openapi/models/shared/S3MonitoringConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/ManagedPersistenceMonitoringConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/Configuration.java
+lib/src/main/java/org/openapis/openapi/models/shared/ResourceUtilization.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListApplicationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApplicationSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListJobRunsResponse.java
@@ -114,4 +115,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResponse
 lib/src/main/java/org/openapis/openapi/models/shared/StartJobRunResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateApplicationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

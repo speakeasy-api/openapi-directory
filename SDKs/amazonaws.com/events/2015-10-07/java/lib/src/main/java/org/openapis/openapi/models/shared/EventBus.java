@@ -15,6 +15,7 @@ public class EventBus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public EventBus withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class EventBus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EventBus withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class EventBus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public EventBus withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public EventBus(){}
 }

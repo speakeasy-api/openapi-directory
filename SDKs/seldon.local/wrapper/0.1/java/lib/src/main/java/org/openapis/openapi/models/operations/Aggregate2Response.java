@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Aggregate2Response {
     
     public String contentType;
+
     public Aggregate2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class Aggregate2Response {
      */
     
     public org.openapis.openapi.models.shared.SeldonMessage seldonMessage;
+
     public Aggregate2Response withSeldonMessage(org.openapis.openapi.models.shared.SeldonMessage seldonMessage) {
         this.seldonMessage = seldonMessage;
         return this;
@@ -26,6 +29,7 @@ public class Aggregate2Response {
     
     
     public Integer statusCode;
+
     public Aggregate2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Aggregate2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Aggregate2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Aggregate2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

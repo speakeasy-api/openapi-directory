@@ -12,6 +12,7 @@ public class GetMeTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetMeTracksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetMeTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
     public Boolean linkedPartitioning;
+
     public GetMeTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
         this.linkedPartitioning = linkedPartitioning;
         return this;
     }
     
+    public GetMeTracksRequest(){}
 }

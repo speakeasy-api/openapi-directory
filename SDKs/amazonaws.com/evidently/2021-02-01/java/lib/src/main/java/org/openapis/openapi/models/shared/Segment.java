@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Segment {
     @JsonProperty("arn")
     public String arn;
+
     public Segment withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Segment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public Segment withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -36,6 +38,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Segment withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentCount")
     public Long experimentCount;
+
     public Segment withExperimentCount(Long experimentCount) {
         this.experimentCount = experimentCount;
         return this;
@@ -53,6 +57,7 @@ public class Segment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Segment withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -61,6 +66,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchCount")
     public Long launchCount;
+
     public Segment withLaunchCount(Long launchCount) {
         this.launchCount = launchCount;
         return this;
@@ -68,6 +74,7 @@ public class Segment {
     
     @JsonProperty("name")
     public String name;
+
     public Segment withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +82,7 @@ public class Segment {
     
     @JsonProperty("pattern")
     public String pattern;
+
     public Segment withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -83,9 +91,17 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Segment withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Segment(@JsonProperty("arn") String arn, @JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("name") String name, @JsonProperty("pattern") String pattern) {
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.name = name;
+        this.pattern = pattern;
+  }
 }

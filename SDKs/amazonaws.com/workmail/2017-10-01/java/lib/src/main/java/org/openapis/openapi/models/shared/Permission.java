@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Permission {
     @JsonProperty("GranteeId")
     public String granteeId;
+
     public Permission withGranteeId(String granteeId) {
         this.granteeId = granteeId;
         return this;
@@ -19,6 +20,7 @@ public class Permission {
     
     @JsonProperty("GranteeType")
     public MemberTypeEnum granteeType;
+
     public Permission withGranteeType(MemberTypeEnum granteeType) {
         this.granteeType = granteeType;
         return this;
@@ -26,9 +28,15 @@ public class Permission {
     
     @JsonProperty("PermissionValues")
     public PermissionTypeEnum[] permissionValues;
+
     public Permission withPermissionValues(PermissionTypeEnum[] permissionValues) {
         this.permissionValues = permissionValues;
         return this;
     }
     
+    public Permission(@JsonProperty("GranteeId") String granteeId, @JsonProperty("GranteeType") MemberTypeEnum granteeType, @JsonProperty("PermissionValues") PermissionTypeEnum[] permissionValues) {
+        this.granteeId = granteeId;
+        this.granteeType = granteeType;
+        this.permissionValues = permissionValues;
+  }
 }

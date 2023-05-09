@@ -15,6 +15,7 @@ public class ValidationErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ValidationError[] errors;
+
     public ValidationErrorResponse withErrors(ValidationError[] errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class ValidationErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ValidationErrorResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ValidationErrorResponse(){}
 }

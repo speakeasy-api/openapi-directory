@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSecurityPolicyResponse {
     
     public String contentType;
+
     public GetSecurityPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSecurityPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSecurityPolicyResponse getSecurityPolicyResponse;
+
     public GetSecurityPolicyResponse withGetSecurityPolicyResponse(org.openapis.openapi.models.shared.GetSecurityPolicyResponse getSecurityPolicyResponse) {
         this.getSecurityPolicyResponse = getSecurityPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSecurityPolicyResponse {
      */
     
     public Object internalServerException;
+
     public GetSecurityPolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class GetSecurityPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetSecurityPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetSecurityPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSecurityPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetSecurityPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSecurityPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class GetSecurityPolicyResponse {
      */
     
     public Object validationException;
+
     public GetSecurityPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSecurityPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

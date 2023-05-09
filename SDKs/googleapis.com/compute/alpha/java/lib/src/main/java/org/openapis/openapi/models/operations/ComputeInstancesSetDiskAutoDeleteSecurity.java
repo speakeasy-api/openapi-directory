@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstancesSetDiskAutoDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesSetDiskAutoDeleteSecurityOption1 option1;
+
     public ComputeInstancesSetDiskAutoDeleteSecurity withOption1(ComputeInstancesSetDiskAutoDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeInstancesSetDiskAutoDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesSetDiskAutoDeleteSecurityOption2 option2;
+
     public ComputeInstancesSetDiskAutoDeleteSecurity withOption2(ComputeInstancesSetDiskAutoDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeInstancesSetDiskAutoDeleteSecurity(){}
 }

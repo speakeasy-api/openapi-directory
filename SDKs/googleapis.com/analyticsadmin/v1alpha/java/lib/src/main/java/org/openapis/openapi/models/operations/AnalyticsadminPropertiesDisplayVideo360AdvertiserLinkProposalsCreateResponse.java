@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreat
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse withGoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal) {
         this.googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal = googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreat
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreat
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

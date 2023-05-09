@@ -22,6 +22,7 @@ public class StreamDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationRequestDateTime")
     public OffsetDateTime creationRequestDateTime;
+
     public StreamDescription withCreationRequestDateTime(OffsetDateTime creationRequestDateTime) {
         this.creationRequestDateTime = creationRequestDateTime;
         return this;
@@ -30,6 +31,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public StreamDescription withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -38,6 +40,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastEvaluatedShardId")
     public String lastEvaluatedShardId;
+
     public StreamDescription withLastEvaluatedShardId(String lastEvaluatedShardId) {
         this.lastEvaluatedShardId = lastEvaluatedShardId;
         return this;
@@ -46,6 +49,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shards")
     public Shard[] shards;
+
     public StreamDescription withShards(Shard[] shards) {
         this.shards = shards;
         return this;
@@ -54,6 +58,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamArn")
     public String streamArn;
+
     public StreamDescription withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
@@ -62,6 +67,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamLabel")
     public String streamLabel;
+
     public StreamDescription withStreamLabel(String streamLabel) {
         this.streamLabel = streamLabel;
         return this;
@@ -70,6 +76,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamStatus")
     public StreamStatusEnum streamStatus;
+
     public StreamDescription withStreamStatus(StreamStatusEnum streamStatus) {
         this.streamStatus = streamStatus;
         return this;
@@ -78,6 +85,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamViewType")
     public StreamViewTypeEnum streamViewType;
+
     public StreamDescription withStreamViewType(StreamViewTypeEnum streamViewType) {
         this.streamViewType = streamViewType;
         return this;
@@ -86,9 +94,11 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public StreamDescription withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public StreamDescription(){}
 }

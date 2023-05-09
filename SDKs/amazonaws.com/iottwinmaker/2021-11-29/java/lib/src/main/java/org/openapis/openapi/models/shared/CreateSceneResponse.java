@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateSceneResponse {
     @JsonProperty("arn")
     public String arn;
+
     public CreateSceneResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,9 +27,14 @@ public class CreateSceneResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CreateSceneResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
     }
     
+    public CreateSceneResponse(@JsonProperty("arn") String arn, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime) {
+        this.arn = arn;
+        this.creationDateTime = creationDateTime;
+  }
 }

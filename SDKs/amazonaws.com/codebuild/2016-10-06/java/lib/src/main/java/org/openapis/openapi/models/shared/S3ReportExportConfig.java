@@ -15,6 +15,7 @@ public class S3ReportExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public S3ReportExportConfig withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class S3ReportExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketOwner")
     public String bucketOwner;
+
     public S3ReportExportConfig withBucketOwner(String bucketOwner) {
         this.bucketOwner = bucketOwner;
         return this;
@@ -31,6 +33,7 @@ public class S3ReportExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionDisabled")
     public Boolean encryptionDisabled;
+
     public S3ReportExportConfig withEncryptionDisabled(Boolean encryptionDisabled) {
         this.encryptionDisabled = encryptionDisabled;
         return this;
@@ -39,6 +42,7 @@ public class S3ReportExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public S3ReportExportConfig withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -47,6 +51,7 @@ public class S3ReportExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packaging")
     public ReportPackagingTypeEnum packaging;
+
     public S3ReportExportConfig withPackaging(ReportPackagingTypeEnum packaging) {
         this.packaging = packaging;
         return this;
@@ -55,9 +60,11 @@ public class S3ReportExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public S3ReportExportConfig withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public S3ReportExportConfig(){}
 }

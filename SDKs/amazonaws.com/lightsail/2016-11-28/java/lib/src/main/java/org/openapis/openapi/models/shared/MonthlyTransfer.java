@@ -15,9 +15,11 @@ public class MonthlyTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gbPerMonthAllocated")
     public Long gbPerMonthAllocated;
+
     public MonthlyTransfer withGbPerMonthAllocated(Long gbPerMonthAllocated) {
         this.gbPerMonthAllocated = gbPerMonthAllocated;
         return this;
     }
     
+    public MonthlyTransfer(){}
 }

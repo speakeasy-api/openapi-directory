@@ -18,6 +18,7 @@ public class AggregationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public AggregationResultCount count;
+
     public AggregationResult withCount(AggregationResultCount count) {
         this.count = count;
         return this;
@@ -26,6 +27,7 @@ public class AggregationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public AggregationResult withField(String field) {
         this.field = field;
         return this;
@@ -37,6 +39,7 @@ public class AggregationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public AggregationResultFrequency frequency;
+
     public AggregationResult withFrequency(AggregationResultFrequency frequency) {
         this.frequency = frequency;
         return this;
@@ -48,6 +51,7 @@ public class AggregationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogram")
     public AggregationResultHistogram histogram;
+
     public AggregationResult withHistogram(AggregationResultHistogram histogram) {
         this.histogram = histogram;
         return this;
@@ -59,9 +63,11 @@ public class AggregationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public AggregationResultSum sum;
+
     public AggregationResult withSum(AggregationResultSum sum) {
         this.sum = sum;
         return this;
     }
     
+    public AggregationResult(){}
 }

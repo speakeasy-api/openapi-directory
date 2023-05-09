@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPublishTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPublishTypeActionEnum action;
+
     public GETPublishTypeRequest withAction(GETPublishTypeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPublishTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
     public String arn;
+
     public GETPublishTypeRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +32,7 @@ public class GETPublishTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicVersionNumber")
     public String publicVersionNumber;
+
     public GETPublishTypeRequest withPublicVersionNumber(String publicVersionNumber) {
         this.publicVersionNumber = publicVersionNumber;
         return this;
@@ -39,6 +43,7 @@ public class GETPublishTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public GETPublishTypeTypeEnum type;
+
     public GETPublishTypeRequest withType(GETPublishTypeTypeEnum type) {
         this.type = type;
         return this;
@@ -49,6 +54,7 @@ public class GETPublishTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
     public String typeName;
+
     public GETPublishTypeRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -56,6 +62,7 @@ public class GETPublishTypeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPublishTypeVersionEnum version;
+
     public GETPublishTypeRequest withVersion(GETPublishTypeVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETPublishTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPublishTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETPublishTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPublishTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETPublishTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPublishTypeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETPublishTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPublishTypeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETPublishTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPublishTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETPublishTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPublishTypeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETPublishTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPublishTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPublishTypeRequest(@JsonProperty("Action") GETPublishTypeActionEnum action, @JsonProperty("Version") GETPublishTypeVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnnotationConsolidationConfig {
     @JsonProperty("AnnotationConsolidationLambdaArn")
     public String annotationConsolidationLambdaArn;
+
     public AnnotationConsolidationConfig withAnnotationConsolidationLambdaArn(String annotationConsolidationLambdaArn) {
         this.annotationConsolidationLambdaArn = annotationConsolidationLambdaArn;
         return this;
     }
     
+    public AnnotationConsolidationConfig(@JsonProperty("AnnotationConsolidationLambdaArn") String annotationConsolidationLambdaArn) {
+        this.annotationConsolidationLambdaArn = annotationConsolidationLambdaArn;
+  }
 }

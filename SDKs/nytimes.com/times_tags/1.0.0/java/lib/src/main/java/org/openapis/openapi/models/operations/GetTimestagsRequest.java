@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTimestagsRequest {
@@ -13,6 +14,7 @@ public class GetTimestagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public GetTimestagsFilterEnum filter;
+
     public GetTimestagsRequest withFilter(GetTimestagsFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -23,6 +25,7 @@ public class GetTimestagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public GetTimestagsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -33,9 +36,13 @@ public class GetTimestagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetTimestagsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetTimestagsRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

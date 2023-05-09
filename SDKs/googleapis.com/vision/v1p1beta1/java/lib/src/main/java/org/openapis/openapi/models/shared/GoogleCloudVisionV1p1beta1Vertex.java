@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1Vertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Integer x;
+
     public GoogleCloudVisionV1p1beta1Vertex withX(Integer x) {
         this.x = x;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1Vertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Integer y;
+
     public GoogleCloudVisionV1p1beta1Vertex withY(Integer y) {
         this.y = y;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1Vertex(){}
 }

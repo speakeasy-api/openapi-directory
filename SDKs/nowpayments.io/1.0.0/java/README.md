@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAllTransfersRequest;
 import org.openapis.openapi.models.operations.GetAllTransfersResponse;
 
@@ -32,16 +31,18 @@ public class Application {
                 offset = "0";
                 order = "ASC";
                 status = "CREATED";
-            }}            
+            }};            
 
             GetAllTransfersResponse res = sdk.billingSubPartnerAPI.getAllTransfers(req);
 
-            if (res.getAllTransfers200ApplicationJSONObject.isPresent()) {
+            if (res.getAllTransfers200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,33 +50,33 @@ public class Application {
 ## Available Resources and Operations
 
 
-### billingSubPartnerAPI
+### [billingSubPartnerAPI](docs/billingsubpartnerapi/README.md)
 
-* `getAllTransfers` - Get all transfers
-* `getSubPartnerBalance` - Get sub-partner balance
-* `getSubPartners` - Get sub-partners
-* `getTransfer` - Get transfer
+* [getAllTransfers](docs/billingsubpartnerapi/README.md#getalltransfers) - Get all transfers
+* [getSubPartnerBalance](docs/billingsubpartnerapi/README.md#getsubpartnerbalance) - Get sub-partner balance
+* [getSubPartners](docs/billingsubpartnerapi/README.md#getsubpartners) - Get sub-partners
+* [getTransfer](docs/billingsubpartnerapi/README.md#gettransfer) - Get transfer
 
-### paymentsAPI
+### [paymentsAPI](docs/paymentsapi/README.md)
 
-* `getEstimatedPrice` - Get estimated price
-* `getListOfPayments` - Get list of payments
-* `getPaymentStatus` - Get payment status
-* `getTheMinimumPaymentAmount` - Get the minimum payment amount
-* `getUpdatePaymentEstimate` - Get/Update payment estimate
+* [getEstimatedPrice](docs/paymentsapi/README.md#getestimatedprice) - Get estimated price
+* [getListOfPayments](docs/paymentsapi/README.md#getlistofpayments) - Get list of payments
+* [getPaymentStatus](docs/paymentsapi/README.md#getpaymentstatus) - Get payment status
+* [getTheMinimumPaymentAmount](docs/paymentsapi/README.md#gettheminimumpaymentamount) - Get the minimum payment amount
+* [getUpdatePaymentEstimate](docs/paymentsapi/README.md#getupdatepaymentestimate) - Get/Update payment estimate
 
-### payoutsAPI
+### [payoutsAPI](docs/payoutsapi/README.md)
 
-* `verifyPayout` - Verify payout
+* [verifyPayout](docs/payoutsapi/README.md#verifypayout) - Verify payout
 
-### recurringPaymentsAPIEmailSubscriptionsFeature
+### [recurringPaymentsAPIEmailSubscriptionsFeature](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md)
 
-* `deleteRecurringPayment` - Delete recurring payment
-* `getManyPlans` - Get many plans
-* `getManyRecurringPayments` - Get many recurring payments
-* `getOnePlan` - Get one plan
-* `getOneRecurringPayment` - Get one recurring payment
-* `updatePlan` - Update plan
+* [deleteRecurringPayment](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#deleterecurringpayment) - Delete recurring payment
+* [getManyPlans](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#getmanyplans) - Get many plans
+* [getManyRecurringPayments](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#getmanyrecurringpayments) - Get many recurring payments
+* [getOnePlan](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#getoneplan) - Get one plan
+* [getOneRecurringPayment](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#getonerecurringpayment) - Get one recurring payment
+* [updatePlan](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#updateplan) - Update plan
 <!-- End SDK Available Operations -->
 
 ### Maturity

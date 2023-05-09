@@ -15,9 +15,11 @@ public class CreatePortfolioShareOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioShareToken")
     public String portfolioShareToken;
+
     public CreatePortfolioShareOutput withPortfolioShareToken(String portfolioShareToken) {
         this.portfolioShareToken = portfolioShareToken;
         return this;
     }
     
+    public CreatePortfolioShareOutput(){}
 }

@@ -22,6 +22,7 @@ public class GetMaintenanceWindowExecutionResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetMaintenanceWindowExecutionResult withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class GetMaintenanceWindowExecutionResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetMaintenanceWindowExecutionResult withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -40,6 +42,7 @@ public class GetMaintenanceWindowExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public MaintenanceWindowExecutionStatusEnum status;
+
     public GetMaintenanceWindowExecutionResult withStatus(MaintenanceWindowExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -48,6 +51,7 @@ public class GetMaintenanceWindowExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public GetMaintenanceWindowExecutionResult withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -56,6 +60,7 @@ public class GetMaintenanceWindowExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskIds")
     public String[] taskIds;
+
     public GetMaintenanceWindowExecutionResult withTaskIds(String[] taskIds) {
         this.taskIds = taskIds;
         return this;
@@ -64,9 +69,11 @@ public class GetMaintenanceWindowExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowExecutionId")
     public String windowExecutionId;
+
     public GetMaintenanceWindowExecutionResult withWindowExecutionId(String windowExecutionId) {
         this.windowExecutionId = windowExecutionId;
         return this;
     }
     
+    public GetMaintenanceWindowExecutionResult(){}
 }

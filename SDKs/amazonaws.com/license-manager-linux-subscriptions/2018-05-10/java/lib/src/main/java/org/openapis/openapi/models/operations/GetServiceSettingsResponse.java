@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServiceSettingsResponse {
     
     public String contentType;
+
     public GetServiceSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetServiceSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServiceSettingsResponse getServiceSettingsResponse;
+
     public GetServiceSettingsResponse withGetServiceSettingsResponse(org.openapis.openapi.models.shared.GetServiceSettingsResponse getServiceSettingsResponse) {
         this.getServiceSettingsResponse = getServiceSettingsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetServiceSettingsResponse {
      */
     
     public Object internalServerException;
+
     public GetServiceSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class GetServiceSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetServiceSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetServiceSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServiceSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetServiceSettingsResponse {
      */
     
     public Object throttlingException;
+
     public GetServiceSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class GetServiceSettingsResponse {
      */
     
     public Object validationException;
+
     public GetServiceSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetServiceSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

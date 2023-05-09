@@ -33,7 +33,7 @@ public class Users {
 	}
 
     /**
-     * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
+     * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -62,11 +62,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoUsersBulkEditAssignedUserRolesResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersBulkEditAssignedUserRolesResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoUsersBulkEditAssignedUserRolesResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersBulkEditAssignedUserRolesResponse(contentType, httpRes.statusCode()) {{
             bulkEditAssignedUserRolesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -81,7 +79,7 @@ public class Users {
     }
 
     /**
-     * Creates a new user. Returns the newly created user if successful.
+     * Creates a new user. Returns the newly created user if successful. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -110,11 +108,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoUsersCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoUsersCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersCreateResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,7 +125,7 @@ public class Users {
     }
 
     /**
-     * Deletes a user.
+     * Deletes a user. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -156,11 +152,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoUsersDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoUsersDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,7 +169,7 @@ public class Users {
     }
 
     /**
-     * Gets a user.
+     * Gets a user. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -202,11 +196,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoUsersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoUsersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersGetResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,7 +213,7 @@ public class Users {
     }
 
     /**
-     * Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other.
+     * Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -248,11 +240,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoUsersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoUsersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersListResponse(contentType, httpRes.statusCode()) {{
             listUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -267,7 +257,7 @@ public class Users {
     }
 
     /**
-     * Updates an existing user. Returns the updated user if successful.
+     * Updates an existing user. Returns the updated user if successful. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -296,11 +286,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoUsersPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoUsersPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoUsersPatchResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

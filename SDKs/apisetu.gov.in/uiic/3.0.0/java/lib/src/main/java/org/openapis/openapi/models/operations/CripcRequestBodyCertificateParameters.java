@@ -12,6 +12,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public CripcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public CripcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public CripcRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
@@ -42,6 +45,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF2")
     public String udf2;
+
     public CripcRequestBodyCertificateParameters withUdf2(String udf2) {
         this.udf2 = udf2;
         return this;
@@ -52,6 +56,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF3")
     public String udf3;
+
     public CripcRequestBodyCertificateParameters withUdf3(String udf3) {
         this.udf3 = udf3;
         return this;
@@ -62,9 +67,18 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public CripcRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public CripcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("UDF1") String udf1, @JsonProperty("UDF2") String udf2, @JsonProperty("UDF3") String udf3, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.udf1 = udf1;
+        this.udf2 = udf2;
+        this.udf3 = udf3;
+        this.uid = uid;
+  }
 }

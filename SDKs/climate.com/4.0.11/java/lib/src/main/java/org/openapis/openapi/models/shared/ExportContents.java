@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ExportContents - Partial Result
@@ -15,9 +15,13 @@ public class ExportContents {
      */
     
     public byte[] body;
+
     public ExportContents withBody(byte[] body) {
         this.body = body;
         return this;
     }
     
+    public ExportContents(@JsonProperty("body") byte[] body) {
+        this.body = body;
+  }
 }

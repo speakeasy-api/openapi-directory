@@ -15,6 +15,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_gateway")
     public String defaultGateway;
+
     public BaseVirtualMachine withDefaultGateway(String defaultGateway) {
         this.defaultGateway = defaultGateway;
         return this;
@@ -23,6 +24,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_firewall_rules")
     public RuleSet[] destinationFirewallRules;
+
     public BaseVirtualMachine withDestinationFirewallRules(RuleSet[] destinationFirewallRules) {
         this.destinationFirewallRules = destinationFirewallRules;
         return this;
@@ -31,6 +33,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public BaseVirtualMachine withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -39,6 +42,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public BaseVirtualMachine withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -47,6 +51,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_addresses")
     public IpV4Address[] ipAddresses;
+
     public BaseVirtualMachine withIpAddresses(IpV4Address[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
@@ -55,6 +60,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_sets")
     public Reference[] ipSets;
+
     public BaseVirtualMachine withIpSets(Reference[] ipSets) {
         this.ipSets = ipSets;
         return this;
@@ -63,6 +69,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BaseVirtualMachine withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("security_groups")
     public Reference[] securityGroups;
+
     public BaseVirtualMachine withSecurityGroups(Reference[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -79,6 +87,7 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_firewall_rules")
     public RuleSet[] sourceFirewallRules;
+
     public BaseVirtualMachine withSourceFirewallRules(RuleSet[] sourceFirewallRules) {
         this.sourceFirewallRules = sourceFirewallRules;
         return this;
@@ -87,9 +96,11 @@ public class BaseVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vnics")
     public Reference[] vnics;
+
     public BaseVirtualMachine withVnics(Reference[] vnics) {
         this.vnics = vnics;
         return this;
     }
     
+    public BaseVirtualMachine(){}
 }

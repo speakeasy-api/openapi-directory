@@ -38,6 +38,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/AssociatePersonasToEnti
 lib/src/main/java/org/openapis/openapi/models/operations/BatchDeleteDocumentXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchDeleteDocumentRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchDeleteDocumentResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/BatchDeleteFeaturedResultsSetXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/BatchDeleteFeaturedResultsSetRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/BatchDeleteFeaturedResultsSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchGetDocumentStatusXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchGetDocumentStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchGetDocumentStatusResponse.java
@@ -59,6 +62,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateExperienceRespons
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFaqXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFaqRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFaqResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateFeaturedResultsSetXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateFeaturedResultsSetRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateFeaturedResultsSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateIndexXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateIndexRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateIndexResponse.java
@@ -104,6 +110,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/DescribeExperienceRespo
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeFaqXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeFaqRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeFaqResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeFeaturedResultsSetXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeFeaturedResultsSetRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeFeaturedResultsSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeIndexXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeIndexRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeIndexResponse.java
@@ -152,6 +161,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListExperiencesResponse
 lib/src/main/java/org/openapis/openapi/models/operations/ListFaqsXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFaqsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFaqsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListFeaturedResultsSetsXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListFeaturedResultsSetsRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListFeaturedResultsSetsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListGroupsOlderThanOrderingIdXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListGroupsOlderThanOrderingIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListGroupsOlderThanOrderingIdResponse.java
@@ -197,6 +209,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateDataSourceRespons
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateExperienceXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateExperienceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateExperienceResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateFeaturedResultsSetXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateFeaturedResultsSetRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateFeaturedResultsSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateIndexXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateIndexRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateIndexResponse.java
@@ -223,6 +238,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/BatchDeleteDocumentResponse
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchDeleteDocumentRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataSourceSyncJobMetricTarget.java
+lib/src/main/java/org/openapis/openapi/models/shared/BatchDeleteFeaturedResultsSetResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/BatchDeleteFeaturedResultsSetError.java
+lib/src/main/java/org/openapis/openapi/models/shared/BatchDeleteFeaturedResultsSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchGetDocumentStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchGetDocumentStatusResponseError.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java
@@ -336,6 +354,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/ContentSourceConfiguration.
 lib/src/main/java/org/openapis/openapi/models/shared/CreateFaqResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateFaqRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/FaqFileFormatEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateFeaturedResultsSetResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/FeaturedResultsSet.java
+lib/src/main/java/org/openapis/openapi/models/shared/FeaturedResultsSetStatusEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/FeaturedDocument.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateFeaturedResultsSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateIndexResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateIndexRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserTokenConfiguration.java
@@ -372,6 +395,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/DescribeExperienceRequest.j
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeFaqResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FaqStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeFaqRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/DescribeFeaturedResultsSetResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/FeaturedDocumentWithMetadata.java
+lib/src/main/java/org/openapis/openapi/models/shared/FeaturedDocumentMissing.java
+lib/src/main/java/org/openapis/openapi/models/shared/DescribeFeaturedResultsSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeIndexResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/IndexStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/IndexStatistics.java
@@ -437,6 +464,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListExperiencesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListFaqsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FaqSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListFaqsRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListFeaturedResultsSetsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/FeaturedResultsSetSummary.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListFeaturedResultsSetsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListGroupsOlderThanOrderingIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GroupSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListGroupsOlderThanOrderingIdRequest.java
@@ -474,6 +504,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/HighlightTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdditionalResultAttribute.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdditionalResultAttributeValueTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdditionalResultAttributeValue.java
+lib/src/main/java/org/openapis/openapi/models/shared/FeaturedResultsItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/FacetResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentAttributeValueCountPair.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryRequest.java
@@ -497,9 +528,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/UntagResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAccessControlConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateDataSourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateExperienceRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/UpdateFeaturedResultsSetResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/UpdateFeaturedResultsSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateIndexRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateQuerySuggestionsBlockListRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateQuerySuggestionsConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateThesaurusRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

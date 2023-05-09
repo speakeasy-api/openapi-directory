@@ -14,6 +14,7 @@ public class OrderPricing {
      */
     @JsonProperty("discount")
     public Long discount;
+
     public OrderPricing withDiscount(Long discount) {
         this.discount = discount;
         return this;
@@ -21,6 +22,7 @@ public class OrderPricing {
     
     @JsonProperty("fees")
     public OrderFee fees;
+
     public OrderPricing withFees(OrderFee fees) {
         this.fees = fees;
         return this;
@@ -29,6 +31,7 @@ public class OrderPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public OrderPricing withId(Double id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class OrderPricing {
      */
     @JsonProperty("list")
     public Long list;
+
     public OrderPricing withList(Long list) {
         this.list = list;
         return this;
@@ -49,6 +53,7 @@ public class OrderPricing {
      */
     @JsonProperty("savings")
     public Long savings;
+
     public OrderPricing withSavings(Long savings) {
         this.savings = savings;
         return this;
@@ -59,6 +64,7 @@ public class OrderPricing {
      */
     @JsonProperty("subtotal")
     public Long subtotal;
+
     public OrderPricing withSubtotal(Long subtotal) {
         this.subtotal = subtotal;
         return this;
@@ -70,6 +76,7 @@ public class OrderPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxDetails")
     public LineItemPricingTaxDetail[] taxDetails;
+
     public OrderPricing withTaxDetails(LineItemPricingTaxDetail[] taxDetails) {
         this.taxDetails = taxDetails;
         return this;
@@ -80,6 +87,7 @@ public class OrderPricing {
      */
     @JsonProperty("taxes")
     public Long taxes;
+
     public OrderPricing withTaxes(Long taxes) {
         this.taxes = taxes;
         return this;
@@ -90,9 +98,19 @@ public class OrderPricing {
      */
     @JsonProperty("total")
     public Long total;
+
     public OrderPricing withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public OrderPricing(@JsonProperty("discount") Long discount, @JsonProperty("fees") OrderFee fees, @JsonProperty("list") Long list, @JsonProperty("savings") Long savings, @JsonProperty("subtotal") Long subtotal, @JsonProperty("taxes") Long taxes, @JsonProperty("total") Long total) {
+        this.discount = discount;
+        this.fees = fees;
+        this.list = list;
+        this.savings = savings;
+        this.subtotal = subtotal;
+        this.taxes = taxes;
+        this.total = total;
+  }
 }

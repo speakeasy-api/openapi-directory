@@ -22,6 +22,7 @@ public class SystemInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("builtOn")
     public OffsetDateTime builtOn;
+
     public SystemInfo withBuiltOn(OffsetDateTime builtOn) {
         this.builtOn = builtOn;
         return this;
@@ -30,6 +31,7 @@ public class SystemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SystemInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class SystemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SystemInfo withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,11 @@ public class SystemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SystemInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SystemInfo(){}
 }

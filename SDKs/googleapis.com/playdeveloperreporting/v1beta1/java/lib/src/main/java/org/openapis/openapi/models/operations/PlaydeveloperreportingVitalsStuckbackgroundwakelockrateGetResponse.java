@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse {
     
     public String contentType;
+
     public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse 
      */
     
     public org.openapis.openapi.models.shared.GooglePlayDeveloperReportingV1beta1StuckBackgroundWakelockRateMetricSet googlePlayDeveloperReportingV1beta1StuckBackgroundWakelockRateMetricSet;
+
     public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse withGooglePlayDeveloperReportingV1beta1StuckBackgroundWakelockRateMetricSet(org.openapis.openapi.models.shared.GooglePlayDeveloperReportingV1beta1StuckBackgroundWakelockRateMetricSet googlePlayDeveloperReportingV1beta1StuckBackgroundWakelockRateMetricSet) {
         this.googlePlayDeveloperReportingV1beta1StuckBackgroundWakelockRateMetricSet = googlePlayDeveloperReportingV1beta1StuckBackgroundWakelockRateMetricSet;
         return this;
@@ -26,6 +29,7 @@ public class PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse 
     
     
     public Integer statusCode;
+
     public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

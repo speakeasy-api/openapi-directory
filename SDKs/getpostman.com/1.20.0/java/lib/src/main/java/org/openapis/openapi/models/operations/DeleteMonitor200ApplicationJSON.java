@@ -15,9 +15,11 @@ public class DeleteMonitor200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitor")
     public DeleteMonitor200ApplicationJSONMonitor monitor;
+
     public DeleteMonitor200ApplicationJSON withMonitor(DeleteMonitor200ApplicationJSONMonitor monitor) {
         this.monitor = monitor;
         return this;
     }
     
+    public DeleteMonitor200ApplicationJSON(){}
 }

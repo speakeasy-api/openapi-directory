@@ -15,6 +15,7 @@ public class TargetPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accelerator")
     public TargetPlatformAcceleratorEnum accelerator;
+
     public TargetPlatform withAccelerator(TargetPlatformAcceleratorEnum accelerator) {
         this.accelerator = accelerator;
         return this;
@@ -22,6 +23,7 @@ public class TargetPlatform {
     
     @JsonProperty("Arch")
     public TargetPlatformArchEnum arch;
+
     public TargetPlatform withArch(TargetPlatformArchEnum arch) {
         this.arch = arch;
         return this;
@@ -29,9 +31,14 @@ public class TargetPlatform {
     
     @JsonProperty("Os")
     public TargetPlatformOsEnum os;
+
     public TargetPlatform withOs(TargetPlatformOsEnum os) {
         this.os = os;
         return this;
     }
     
+    public TargetPlatform(@JsonProperty("Arch") TargetPlatformArchEnum arch, @JsonProperty("Os") TargetPlatformOsEnum os) {
+        this.arch = arch;
+        this.os = os;
+  }
 }

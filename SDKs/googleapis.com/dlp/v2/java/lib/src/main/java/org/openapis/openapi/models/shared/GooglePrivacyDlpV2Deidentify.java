@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Deidentify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudStorageOutput")
     public String cloudStorageOutput;
+
     public GooglePrivacyDlpV2Deidentify withCloudStorageOutput(String cloudStorageOutput) {
         this.cloudStorageOutput = cloudStorageOutput;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2Deidentify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileTypesToTransform")
     public GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum[] fileTypesToTransform;
+
     public GooglePrivacyDlpV2Deidentify withFileTypesToTransform(GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum[] fileTypesToTransform) {
         this.fileTypesToTransform = fileTypesToTransform;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2Deidentify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformationConfig")
     public GooglePrivacyDlpV2TransformationConfig transformationConfig;
+
     public GooglePrivacyDlpV2Deidentify withTransformationConfig(GooglePrivacyDlpV2TransformationConfig transformationConfig) {
         this.transformationConfig = transformationConfig;
         return this;
@@ -51,9 +54,11 @@ public class GooglePrivacyDlpV2Deidentify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformationDetailsStorageConfig")
     public GooglePrivacyDlpV2TransformationDetailsStorageConfig transformationDetailsStorageConfig;
+
     public GooglePrivacyDlpV2Deidentify withTransformationDetailsStorageConfig(GooglePrivacyDlpV2TransformationDetailsStorageConfig transformationDetailsStorageConfig) {
         this.transformationDetailsStorageConfig = transformationDetailsStorageConfig;
         return this;
     }
     
+    public GooglePrivacyDlpV2Deidentify(){}
 }

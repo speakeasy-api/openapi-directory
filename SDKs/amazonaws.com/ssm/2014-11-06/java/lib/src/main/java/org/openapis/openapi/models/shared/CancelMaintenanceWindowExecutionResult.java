@@ -15,9 +15,11 @@ public class CancelMaintenanceWindowExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowExecutionId")
     public String windowExecutionId;
+
     public CancelMaintenanceWindowExecutionResult withWindowExecutionId(String windowExecutionId) {
         this.windowExecutionId = windowExecutionId;
         return this;
     }
     
+    public CancelMaintenanceWindowExecutionResult(){}
 }

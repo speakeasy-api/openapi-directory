@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum dataType;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withDataType(GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public GoogleCloudIntegrationsV1alphaValueType defaultValue;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withDefaultValue(GoogleCloudIntegrationsV1alphaValueType defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputOutputType")
     public GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum inputOutputType;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withInputOutputType(GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum inputOutputType) {
         this.inputOutputType = inputOutputType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTransient")
     public Boolean isTransient;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withIsTransient(Boolean isTransient) {
         this.isTransient = isTransient;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonSchema")
     public String jsonSchema;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withJsonSchema(String jsonSchema) {
         this.jsonSchema = jsonSchema;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withKey(String key) {
         this.key = key;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producer")
     public String producer;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withProducer(String producer) {
         this.producer = producer;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudIntegrationsV1alphaIntegrationParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchable")
     public Boolean searchable;
+
     public GoogleCloudIntegrationsV1alphaIntegrationParameter withSearchable(Boolean searchable) {
         this.searchable = searchable;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaIntegrationParameter(){}
 }

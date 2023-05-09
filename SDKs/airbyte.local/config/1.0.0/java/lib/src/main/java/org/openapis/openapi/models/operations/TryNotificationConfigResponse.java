@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TryNotificationConfigResponse {
     
     public String contentType;
+
     public TryNotificationConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TryNotificationConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public TryNotificationConfigResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class TryNotificationConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public TryNotificationConfigResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class TryNotificationConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.NotificationRead notificationRead;
+
     public TryNotificationConfigResponse withNotificationRead(org.openapis.openapi.models.shared.NotificationRead notificationRead) {
         this.notificationRead = notificationRead;
         return this;
@@ -46,6 +51,7 @@ public class TryNotificationConfigResponse {
     
     
     public Integer statusCode;
+
     public TryNotificationConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class TryNotificationConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TryNotificationConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TryNotificationConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson {
     @JsonProperty("data")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM[] data;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson withData(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM[] data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson {
     
     @JsonProperty("meta")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson withMeta(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson(@JsonProperty("data") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM[] data, @JsonProperty("meta") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta) {
+        this.data = data;
+        this.meta = meta;
+  }
 }

@@ -124,10 +124,8 @@ public class CrossSelling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchAccessoriesResponse res = new org.openapis.openapi.models.operations.ProductSearchAccessoriesResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchAccessoriesResponse res = new org.openapis.openapi.models.operations.ProductSearchAccessoriesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,10 +180,8 @@ public class CrossSelling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchShowTogetherResponse res = new org.openapis.openapi.models.operations.ProductSearchShowTogetherResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchShowTogetherResponse res = new org.openapis.openapi.models.operations.ProductSearchShowTogetherResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,10 +236,8 @@ public class CrossSelling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchSimilarsResponse res = new org.openapis.openapi.models.operations.ProductSearchSimilarsResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchSimilarsResponse res = new org.openapis.openapi.models.operations.ProductSearchSimilarsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,10 +292,8 @@ public class CrossSelling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchSuggestionsResponse res = new org.openapis.openapi.models.operations.ProductSearchSuggestionsResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchSuggestionsResponse res = new org.openapis.openapi.models.operations.ProductSearchSuggestionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -356,11 +348,9 @@ public class CrossSelling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtResponse res = new org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtResponse res = new org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtResponse(contentType, httpRes.statusCode()) {{
             productSearchWhoBoughtAlsoBought200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,11 +410,9 @@ public class CrossSelling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtResponse res = new org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtResponse res = new org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtResponse(contentType, httpRes.statusCode()) {{
             productSearchWhoSawAlsoBought200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +472,9 @@ public class CrossSelling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawResponse res = new org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawResponse res = new org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawResponse(contentType, httpRes.statusCode()) {{
             productSearchWhoSawAlsoSaw200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

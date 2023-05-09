@@ -12,6 +12,7 @@ public class GetFirewallsIdActionsActionsResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public GetFirewallsIdActionsActionsResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class GetFirewallsIdActionsActionsResponseAction {
      */
     @JsonProperty("error")
     public GetFirewallsIdActionsActionsResponseActionError error;
+
     public GetFirewallsIdActionsActionsResponseAction withError(GetFirewallsIdActionsActionsResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class GetFirewallsIdActionsActionsResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public GetFirewallsIdActionsActionsResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class GetFirewallsIdActionsActionsResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetFirewallsIdActionsActionsResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class GetFirewallsIdActionsActionsResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public GetFirewallsIdActionsActionsResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class GetFirewallsIdActionsActionsResponseAction {
      */
     @JsonProperty("resources")
     public GetFirewallsIdActionsActionsResponseActionResources[] resources;
+
     public GetFirewallsIdActionsActionsResponseAction withResources(GetFirewallsIdActionsActionsResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class GetFirewallsIdActionsActionsResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public GetFirewallsIdActionsActionsResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class GetFirewallsIdActionsActionsResponseAction {
      */
     @JsonProperty("status")
     public GetFirewallsIdActionsActionsResponseActionStatusEnum status;
+
     public GetFirewallsIdActionsActionsResponseAction withStatus(GetFirewallsIdActionsActionsResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetFirewallsIdActionsActionsResponseAction(@JsonProperty("command") String command, @JsonProperty("error") GetFirewallsIdActionsActionsResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") GetFirewallsIdActionsActionsResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") GetFirewallsIdActionsActionsResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

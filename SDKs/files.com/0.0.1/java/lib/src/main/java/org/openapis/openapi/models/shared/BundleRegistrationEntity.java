@@ -23,6 +23,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_code")
     public String bundleCode;
+
     public BundleRegistrationEntity withBundleCode(String bundleCode) {
         this.bundleCode = bundleCode;
         return this;
@@ -34,6 +35,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_id")
     public Integer bundleId;
+
     public BundleRegistrationEntity withBundleId(Integer bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -45,6 +47,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_recipient_id")
     public Integer bundleRecipientId;
+
     public BundleRegistrationEntity withBundleRecipientId(Integer bundleRecipientId) {
         this.bundleRecipientId = bundleRecipientId;
         return this;
@@ -56,6 +59,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickwrap_body")
     public String clickwrapBody;
+
     public BundleRegistrationEntity withClickwrapBody(String clickwrapBody) {
         this.clickwrapBody = clickwrapBody;
         return this;
@@ -67,6 +71,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public BundleRegistrationEntity withCode(String code) {
         this.code = code;
         return this;
@@ -78,6 +83,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public String company;
+
     public BundleRegistrationEntity withCompany(String company) {
         this.company = company;
         return this;
@@ -91,6 +97,7 @@ public class BundleRegistrationEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public BundleRegistrationEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -102,6 +109,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public BundleRegistrationEntity withEmail(String email) {
         this.email = email;
         return this;
@@ -113,6 +121,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_field_data")
     public java.util.Map<String, Object> formFieldData;
+
     public BundleRegistrationEntity withFormFieldData(java.util.Map<String, Object> formFieldData) {
         this.formFieldData = formFieldData;
         return this;
@@ -124,6 +133,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_field_set_id")
     public Integer formFieldSetId;
+
     public BundleRegistrationEntity withFormFieldSetId(Integer formFieldSetId) {
         this.formFieldSetId = formFieldSetId;
         return this;
@@ -135,6 +145,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbox_code")
     public String inboxCode;
+
     public BundleRegistrationEntity withInboxCode(String inboxCode) {
         this.inboxCode = inboxCode;
         return this;
@@ -146,6 +157,7 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public BundleRegistrationEntity withIp(String ip) {
         this.ip = ip;
         return this;
@@ -157,9 +169,11 @@ public class BundleRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BundleRegistrationEntity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BundleRegistrationEntity(){}
 }

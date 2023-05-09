@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse {
     
     public String contentType;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRes
      */
     
     public org.openapis.openapi.models.shared.ListVolumeRestoresResponse listVolumeRestoresResponse;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse withListVolumeRestoresResponse(org.openapis.openapi.models.shared.ListVolumeRestoresResponse listVolumeRestoresResponse) {
         this.listVolumeRestoresResponse = listVolumeRestoresResponse;
         return this;
@@ -26,6 +29,7 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRes
     
     
     public Integer statusCode;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

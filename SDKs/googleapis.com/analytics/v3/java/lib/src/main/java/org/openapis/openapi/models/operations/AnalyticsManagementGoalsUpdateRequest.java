@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementGoalsUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Goal goal;
+
     public AnalyticsManagementGoalsUpdateRequest withGoal(org.openapis.openapi.models.shared.Goal goal) {
         this.goal = goal;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementGoalsUpdateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementGoalsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementGoalsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=goalId")
     public String goalId;
+
     public AnalyticsManagementGoalsUpdateRequest withGoalId(String goalId) {
         this.goalId = goalId;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementGoalsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementGoalsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementGoalsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public AnalyticsManagementGoalsUpdateRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementGoalsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +120,7 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementGoalsUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -119,9 +131,16 @@ public class AnalyticsManagementGoalsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementGoalsUpdateRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementGoalsUpdateRequest(@JsonProperty("accountId") String accountId, @JsonProperty("goalId") String goalId, @JsonProperty("profileId") String profileId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.goalId = goalId;
+        this.profileId = profileId;
+        this.webPropertyId = webPropertyId;
+  }
 }

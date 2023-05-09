@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposListForksResponse {
     
     public String contentType;
+
     public ReposListForksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposListForksResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposListForksResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposListForksResponse {
     
     
     public Integer statusCode;
+
     public ReposListForksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposListForksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposListForksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposListForksResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposListForksResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class ReposListForksResponse {
      */
     
     public org.openapis.openapi.models.shared.MinimalRepository[] minimalRepositories;
+
     public ReposListForksResponse withMinimalRepositories(org.openapis.openapi.models.shared.MinimalRepository[] minimalRepositories) {
         this.minimalRepositories = minimalRepositories;
         return this;
@@ -60,9 +67,14 @@ public class ReposListForksResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public ReposListForksResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
     }
     
+    public ReposListForksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

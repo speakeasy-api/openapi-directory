@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2TransformationOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformationSummaries")
     public GooglePrivacyDlpV2TransformationSummary[] transformationSummaries;
+
     public GooglePrivacyDlpV2TransformationOverview withTransformationSummaries(GooglePrivacyDlpV2TransformationSummary[] transformationSummaries) {
         this.transformationSummaries = transformationSummaries;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2TransformationOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformedBytes")
     public String transformedBytes;
+
     public GooglePrivacyDlpV2TransformationOverview withTransformedBytes(String transformedBytes) {
         this.transformedBytes = transformedBytes;
         return this;
     }
     
+    public GooglePrivacyDlpV2TransformationOverview(){}
 }

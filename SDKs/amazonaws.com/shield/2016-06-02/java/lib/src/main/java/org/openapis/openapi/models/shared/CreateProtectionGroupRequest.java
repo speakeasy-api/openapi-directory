@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateProtectionGroupRequest {
     @JsonProperty("Aggregation")
     public ProtectionGroupAggregationEnum aggregation;
+
     public CreateProtectionGroupRequest withAggregation(ProtectionGroupAggregationEnum aggregation) {
         this.aggregation = aggregation;
         return this;
@@ -19,6 +20,7 @@ public class CreateProtectionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Members")
     public String[] members;
+
     public CreateProtectionGroupRequest withMembers(String[] members) {
         this.members = members;
         return this;
@@ -26,6 +28,7 @@ public class CreateProtectionGroupRequest {
     
     @JsonProperty("Pattern")
     public ProtectionGroupPatternEnum pattern;
+
     public CreateProtectionGroupRequest withPattern(ProtectionGroupPatternEnum pattern) {
         this.pattern = pattern;
         return this;
@@ -33,6 +36,7 @@ public class CreateProtectionGroupRequest {
     
     @JsonProperty("ProtectionGroupId")
     public String protectionGroupId;
+
     public CreateProtectionGroupRequest withProtectionGroupId(String protectionGroupId) {
         this.protectionGroupId = protectionGroupId;
         return this;
@@ -41,6 +45,7 @@ public class CreateProtectionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ProtectedResourceTypeEnum resourceType;
+
     public CreateProtectionGroupRequest withResourceType(ProtectedResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -49,9 +54,15 @@ public class CreateProtectionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateProtectionGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProtectionGroupRequest(@JsonProperty("Aggregation") ProtectionGroupAggregationEnum aggregation, @JsonProperty("Pattern") ProtectionGroupPatternEnum pattern, @JsonProperty("ProtectionGroupId") String protectionGroupId) {
+        this.aggregation = aggregation;
+        this.pattern = pattern;
+        this.protectionGroupId = protectionGroupId;
+  }
 }

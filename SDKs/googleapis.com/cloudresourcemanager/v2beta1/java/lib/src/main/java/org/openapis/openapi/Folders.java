@@ -61,11 +61,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersDeleteResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersDeleteResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersDeleteResponse(contentType, httpRes.statusCode()) {{
             folder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersGetResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersGetResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersGetResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersGetResponse(contentType, httpRes.statusCode()) {{
             folder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersListResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersListResponse(contentType, httpRes.statusCode()) {{
             listFoldersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersMoveResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersMoveResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersMoveResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersMoveResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersPatchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersPatchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersPatchResponse(contentType, httpRes.statusCode()) {{
             folder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSearchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSearchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSearchResponse(contentType, httpRes.statusCode()) {{
             searchFoldersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -487,11 +469,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -535,11 +515,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersUndeleteResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersUndeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersUndeleteResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersUndeleteResponse(contentType, httpRes.statusCode()) {{
             folder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

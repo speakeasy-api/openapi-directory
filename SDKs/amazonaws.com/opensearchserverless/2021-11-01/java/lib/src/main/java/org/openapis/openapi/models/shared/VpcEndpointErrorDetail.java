@@ -15,6 +15,7 @@ public class VpcEndpointErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public VpcEndpointErrorDetail withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class VpcEndpointErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public VpcEndpointErrorDetail withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class VpcEndpointErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VpcEndpointErrorDetail withId(String id) {
         this.id = id;
         return this;
     }
     
+    public VpcEndpointErrorDetail(){}
 }

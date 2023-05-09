@@ -15,6 +15,7 @@ public class IsochroneResponsePolygon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geometry")
     public Polygon geometry;
+
     public IsochroneResponsePolygon withGeometry(Polygon geometry) {
         this.geometry = geometry;
         return this;
@@ -23,6 +24,7 @@ public class IsochroneResponsePolygon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public IsochroneResponsePolygonProperties properties;
+
     public IsochroneResponsePolygon withProperties(IsochroneResponsePolygonProperties properties) {
         this.properties = properties;
         return this;
@@ -31,9 +33,11 @@ public class IsochroneResponsePolygon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public IsochroneResponsePolygon withType(String type) {
         this.type = type;
         return this;
     }
     
+    public IsochroneResponsePolygon(){}
 }

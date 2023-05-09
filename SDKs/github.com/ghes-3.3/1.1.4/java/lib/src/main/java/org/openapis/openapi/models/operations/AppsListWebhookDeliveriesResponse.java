@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsListWebhookDeliveriesResponse {
     
     public String contentType;
+
     public AppsListWebhookDeliveriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsListWebhookDeliveriesResponse {
     
     
     public Integer statusCode;
+
     public AppsListWebhookDeliveriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppsListWebhookDeliveriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsListWebhookDeliveriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppsListWebhookDeliveriesResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public AppsListWebhookDeliveriesResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class AppsListWebhookDeliveriesResponse {
      */
     
     public org.openapis.openapi.models.shared.HookDeliveryItem[] hookDeliveryItems;
+
     public AppsListWebhookDeliveriesResponse withHookDeliveryItems(org.openapis.openapi.models.shared.HookDeliveryItem[] hookDeliveryItems) {
         this.hookDeliveryItems = hookDeliveryItems;
         return this;
@@ -53,6 +59,7 @@ public class AppsListWebhookDeliveriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public AppsListWebhookDeliveriesResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
@@ -63,9 +70,14 @@ public class AppsListWebhookDeliveriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public AppsListWebhookDeliveriesResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public AppsListWebhookDeliveriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String args;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withArgs(String args) {
         this.args = args;
         return this;
@@ -23,6 +24,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public String configuration;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -31,6 +33,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSimBuild")
     public Boolean isSimBuild;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withIsSimBuild(Boolean isSimBuild) {
         this.isSimBuild = isSimBuild;
         return this;
@@ -39,6 +42,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monoVersion")
     public String monoVersion;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withMonoVersion(String monoVersion) {
         this.monoVersion = monoVersion;
         return this;
@@ -47,6 +51,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p12File")
     public String p12File;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withP12File(String p12File) {
         this.p12File = p12File;
         return this;
@@ -55,6 +60,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p12Pwd")
     public String p12Pwd;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withP12Pwd(String p12Pwd) {
         this.p12Pwd = p12Pwd;
         return this;
@@ -63,6 +69,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provProfile")
     public String provProfile;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withProvProfile(String provProfile) {
         this.provProfile = provProfile;
         return this;
@@ -71,6 +78,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkBundle")
     public String sdkBundle;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withSDKBundle(String sdkBundle) {
         this.sdkBundle = sdkBundle;
         return this;
@@ -79,6 +87,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slnPath")
     public String slnPath;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withSlnPath(String slnPath) {
         this.slnPath = slnPath;
         return this;
@@ -92,9 +101,11 @@ public class BranchConfigurationsGet200ApplicationJSONToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symlink")
     public String symlink;
+
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin withSymlink(String symlink) {
         this.symlink = symlink;
         return this;
     }
     
+    public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin(){}
 }

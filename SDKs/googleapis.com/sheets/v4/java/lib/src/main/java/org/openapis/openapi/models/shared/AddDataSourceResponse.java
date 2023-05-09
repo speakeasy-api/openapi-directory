@@ -18,6 +18,7 @@ public class AddDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataExecutionStatus")
     public DataExecutionStatus dataExecutionStatus;
+
     public AddDataSourceResponse withDataExecutionStatus(DataExecutionStatus dataExecutionStatus) {
         this.dataExecutionStatus = dataExecutionStatus;
         return this;
@@ -29,9 +30,11 @@ public class AddDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public DataSource dataSource;
+
     public AddDataSourceResponse withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
     }
     
+    public AddDataSourceResponse(){}
 }

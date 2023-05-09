@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AnalyticsDataGetSecurityOption1;
-import org.openapis.openapi.models.operations.AnalyticsDataGetSecurityOption2;
-import org.openapis.openapi.models.operations.AnalyticsDataGetSecurity;
 import org.openapis.openapi.models.operations.AnalyticsDataGetRequest;
 import org.openapis.openapi.models.operations.AnalyticsDataGetResponse;
+import org.openapis.openapi.models.operations.AnalyticsDataGetSecurity;
+import org.openapis.openapi.models.operations.AnalyticsDataGetSecurityOption1;
+import org.openapis.openapi.models.operations.AnalyticsDataGetSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -30,28 +29,24 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AnalyticsDataGetRequest req = new AnalyticsDataGetRequest() {{
-                alt = "atom";
-                dimensions = "corrupti";
-                endDate = "provident";
-                fields = "distinctio";
-                filters = "quibusdam";
-                ids = "unde";
-                key = "nulla";
-                maxResults = 544883;
-                metrics = "illum";
-                oauthToken = "vel";
+            AnalyticsDataGetRequest req = new AnalyticsDataGetRequest("corrupti", "provident", "distinctio", "quibusdam") {{
+                alt = AltEnum.ATOM;
+                dimensions = "unde";
+                fields = "nulla";
+                filters = "corrupti";
+                key = "illum";
+                maxResults = 423655L;
+                oauthToken = "error";
                 prettyPrint = false;
-                quotaUser = "error";
-                segment = "deserunt";
-                sort = "suscipit";
-                startDate = "iure";
-                startIndex = 297534;
+                quotaUser = "deserunt";
+                segment = "suscipit";
+                sort = "iure";
+                startIndex = 297534L;
                 userIp = "debitis";
-            }}            
+            }};            
 
             AnalyticsDataGetResponse res = sdk.data.analyticsDataGet(req, new AnalyticsDataGetSecurity() {{
-                option1 = new AnalyticsDataGetSecurityOption1() {{
+                option1 = new AnalyticsDataGetSecurityOption1("ipsa", "delectus") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
@@ -63,6 +58,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -70,17 +67,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### data
+### [data](docs/data/README.md)
 
-* `analyticsDataGet` - Returns Analytics report data for a view (profile).
+* [analyticsDataGet](docs/data/README.md#analyticsdataget) - Returns Analytics report data for a view (profile).
 
-### management
+### [management](docs/management/README.md)
 
-* `analyticsManagementAccountsList` - Lists all accounts to which the user has access.
-* `analyticsManagementGoalsList` - Lists goals to which the user has access.
-* `analyticsManagementProfilesList` - Lists views (profiles) to which the user has access.
-* `analyticsManagementSegmentsList` - Lists advanced segments to which the user has access.
-* `analyticsManagementWebpropertiesList` - Lists web properties to which the user has access.
+* [analyticsManagementAccountsList](docs/management/README.md#analyticsmanagementaccountslist) - Lists all accounts to which the user has access.
+* [analyticsManagementGoalsList](docs/management/README.md#analyticsmanagementgoalslist) - Lists goals to which the user has access.
+* [analyticsManagementProfilesList](docs/management/README.md#analyticsmanagementprofileslist) - Lists views (profiles) to which the user has access.
+* [analyticsManagementSegmentsList](docs/management/README.md#analyticsmanagementsegmentslist) - Lists advanced segments to which the user has access.
+* [analyticsManagementWebpropertiesList](docs/management/README.md#analyticsmanagementwebpropertieslist) - Lists web properties to which the user has access.
 <!-- End SDK Available Operations -->
 
 ### Maturity

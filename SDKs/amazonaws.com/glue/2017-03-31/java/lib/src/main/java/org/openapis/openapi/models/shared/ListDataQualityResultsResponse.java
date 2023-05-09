@@ -15,6 +15,7 @@ public class ListDataQualityResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataQualityResultsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListDataQualityResultsResponse {
     
     @JsonProperty("Results")
     public DataQualityResultDescription[] results;
+
     public ListDataQualityResultsResponse withResults(DataQualityResultDescription[] results) {
         this.results = results;
         return this;
     }
     
+    public ListDataQualityResultsResponse(@JsonProperty("Results") DataQualityResultDescription[] results) {
+        this.results = results;
+  }
 }

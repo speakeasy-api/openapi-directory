@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaIssuedByOrganization {
     
     public AcademicCertificateSchemaIssuedByOrganizationAddress address;
+
     public AcademicCertificateSchemaIssuedByOrganization withAddress(AcademicCertificateSchemaIssuedByOrganizationAddress address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class AcademicCertificateSchemaIssuedByOrganization {
     
     
     public String code;
+
     public AcademicCertificateSchemaIssuedByOrganization withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +25,7 @@ public class AcademicCertificateSchemaIssuedByOrganization {
     
     
     public String name;
+
     public AcademicCertificateSchemaIssuedByOrganization withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +33,7 @@ public class AcademicCertificateSchemaIssuedByOrganization {
     
     
     public String tin;
+
     public AcademicCertificateSchemaIssuedByOrganization withTin(String tin) {
         this.tin = tin;
         return this;
@@ -37,6 +41,7 @@ public class AcademicCertificateSchemaIssuedByOrganization {
     
     
     public String type;
+
     public AcademicCertificateSchemaIssuedByOrganization withType(String type) {
         this.type = type;
         return this;
@@ -44,9 +49,18 @@ public class AcademicCertificateSchemaIssuedByOrganization {
     
     
     public String uid;
+
     public AcademicCertificateSchemaIssuedByOrganization withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public AcademicCertificateSchemaIssuedByOrganization(@JsonProperty("Address") AcademicCertificateSchemaIssuedByOrganizationAddress address, @JsonProperty("code") String code, @JsonProperty("name") String name, @JsonProperty("tin") String tin, @JsonProperty("type") String type, @JsonProperty("uid") String uid) {
+        this.address = address;
+        this.code = code;
+        this.name = name;
+        this.tin = tin;
+        this.type = type;
+        this.uid = uid;
+  }
 }

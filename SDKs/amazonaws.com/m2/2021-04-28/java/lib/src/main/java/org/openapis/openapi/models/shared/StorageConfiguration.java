@@ -15,6 +15,7 @@ public class StorageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("efs")
     public EfsStorageConfiguration efs;
+
     public StorageConfiguration withEfs(EfsStorageConfiguration efs) {
         this.efs = efs;
         return this;
@@ -23,9 +24,11 @@ public class StorageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fsx")
     public FsxStorageConfiguration fsx;
+
     public StorageConfiguration withFsx(FsxStorageConfiguration fsx) {
         this.fsx = fsx;
         return this;
     }
     
+    public StorageConfiguration(){}
 }

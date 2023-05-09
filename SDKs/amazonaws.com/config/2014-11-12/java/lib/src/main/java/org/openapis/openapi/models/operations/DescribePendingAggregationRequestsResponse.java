@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePendingAggregationRequestsResponse {
     
     public String contentType;
+
     public DescribePendingAggregationRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePendingAggregationRequestsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePendingAggregationRequestsResponse describePendingAggregationRequestsResponse;
+
     public DescribePendingAggregationRequestsResponse withDescribePendingAggregationRequestsResponse(org.openapis.openapi.models.shared.DescribePendingAggregationRequestsResponse describePendingAggregationRequestsResponse) {
         this.describePendingAggregationRequestsResponse = describePendingAggregationRequestsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePendingAggregationRequestsResponse {
      */
     
     public Object invalidLimitException;
+
     public DescribePendingAggregationRequestsResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePendingAggregationRequestsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribePendingAggregationRequestsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePendingAggregationRequestsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribePendingAggregationRequestsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePendingAggregationRequestsResponse {
     
     
     public Integer statusCode;
+
     public DescribePendingAggregationRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribePendingAggregationRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePendingAggregationRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribePendingAggregationRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

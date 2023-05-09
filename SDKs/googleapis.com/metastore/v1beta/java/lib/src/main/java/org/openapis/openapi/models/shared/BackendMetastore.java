@@ -18,6 +18,7 @@ public class BackendMetastore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metastoreType")
     public BackendMetastoreMetastoreTypeEnum metastoreType;
+
     public BackendMetastore withMetastoreType(BackendMetastoreMetastoreTypeEnum metastoreType) {
         this.metastoreType = metastoreType;
         return this;
@@ -29,9 +30,11 @@ public class BackendMetastore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BackendMetastore withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BackendMetastore(){}
 }

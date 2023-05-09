@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelationalDatabaseSnapshotRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotRequest getRelationalDatabaseSnapshotRequest;
+
     public GetRelationalDatabaseSnapshotRequest withGetRelationalDatabaseSnapshotRequest(org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotRequest getRelationalDatabaseSnapshotRequest) {
         this.getRelationalDatabaseSnapshotRequest = getRelationalDatabaseSnapshotRequest;
         return this;
@@ -16,6 +18,7 @@ public class GetRelationalDatabaseSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetRelationalDatabaseSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetRelationalDatabaseSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetRelationalDatabaseSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetRelationalDatabaseSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetRelationalDatabaseSnapshotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetRelationalDatabaseSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetRelationalDatabaseSnapshotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetRelationalDatabaseSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetRelationalDatabaseSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetRelationalDatabaseSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetRelationalDatabaseSnapshotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetRelationalDatabaseSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetRelationalDatabaseSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetRelationalDatabaseSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetRelationalDatabaseSnapshotXAmzTargetEnum xAmzTarget;
+
     public GetRelationalDatabaseSnapshotRequest withXAmzTarget(GetRelationalDatabaseSnapshotXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetRelationalDatabaseSnapshotRequest(@JsonProperty("GetRelationalDatabaseSnapshotRequest") org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotRequest getRelationalDatabaseSnapshotRequest, @JsonProperty("X-Amz-Target") GetRelationalDatabaseSnapshotXAmzTargetEnum xAmzTarget) {
+        this.getRelationalDatabaseSnapshotRequest = getRelationalDatabaseSnapshotRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

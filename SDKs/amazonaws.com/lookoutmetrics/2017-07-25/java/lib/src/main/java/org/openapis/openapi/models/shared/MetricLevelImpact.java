@@ -15,6 +15,7 @@ public class MetricLevelImpact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContributionMatrix")
     public ContributionMatrix contributionMatrix;
+
     public MetricLevelImpact withContributionMatrix(ContributionMatrix contributionMatrix) {
         this.contributionMatrix = contributionMatrix;
         return this;
@@ -23,6 +24,7 @@ public class MetricLevelImpact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public MetricLevelImpact withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -31,9 +33,11 @@ public class MetricLevelImpact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumTimeSeries")
     public Long numTimeSeries;
+
     public MetricLevelImpact withNumTimeSeries(Long numTimeSeries) {
         this.numTimeSeries = numTimeSeries;
         return this;
     }
     
+    public MetricLevelImpact(){}
 }

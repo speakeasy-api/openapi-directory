@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETValidateTemplateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETValidateTemplateActionEnum action;
+
     public GETValidateTemplateRequest withAction(GETValidateTemplateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETValidateTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateBody")
     public String templateBody;
+
     public GETValidateTemplateRequest withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -29,6 +32,7 @@ public class GETValidateTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateURL")
     public String templateURL;
+
     public GETValidateTemplateRequest withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
@@ -36,6 +40,7 @@ public class GETValidateTemplateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETValidateTemplateVersionEnum version;
+
     public GETValidateTemplateRequest withVersion(GETValidateTemplateVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETValidateTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETValidateTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETValidateTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETValidateTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETValidateTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETValidateTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETValidateTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETValidateTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETValidateTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETValidateTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETValidateTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETValidateTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,14 @@ public class GETValidateTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETValidateTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETValidateTemplateRequest(@JsonProperty("Action") GETValidateTemplateActionEnum action, @JsonProperty("Version") GETValidateTemplateVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

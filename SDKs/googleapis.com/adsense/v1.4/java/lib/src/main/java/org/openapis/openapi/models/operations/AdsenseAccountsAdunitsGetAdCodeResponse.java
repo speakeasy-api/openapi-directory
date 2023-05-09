@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdsenseAccountsAdunitsGetAdCodeResponse {
@@ -12,6 +13,7 @@ public class AdsenseAccountsAdunitsGetAdCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.AdCode adCode;
+
     public AdsenseAccountsAdunitsGetAdCodeResponse withAdCode(org.openapis.openapi.models.shared.AdCode adCode) {
         this.adCode = adCode;
         return this;
@@ -19,6 +21,7 @@ public class AdsenseAccountsAdunitsGetAdCodeResponse {
     
     
     public String contentType;
+
     public AdsenseAccountsAdunitsGetAdCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AdsenseAccountsAdunitsGetAdCodeResponse {
     
     
     public Integer statusCode;
+
     public AdsenseAccountsAdunitsGetAdCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdsenseAccountsAdunitsGetAdCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdsenseAccountsAdunitsGetAdCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdsenseAccountsAdunitsGetAdCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

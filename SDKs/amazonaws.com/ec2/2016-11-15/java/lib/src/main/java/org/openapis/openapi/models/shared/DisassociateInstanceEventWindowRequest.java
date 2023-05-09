@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateInstanceEventWindowRequest {
     
     public InstanceEventWindowDisassociationRequest associationTarget;
+
     public DisassociateInstanceEventWindowRequest withAssociationTarget(InstanceEventWindowDisassociationRequest associationTarget) {
         this.associationTarget = associationTarget;
         return this;
@@ -16,6 +17,7 @@ public class DisassociateInstanceEventWindowRequest {
     
     
     public Boolean dryRun;
+
     public DisassociateInstanceEventWindowRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class DisassociateInstanceEventWindowRequest {
     
     
     public String instanceEventWindowId;
+
     public DisassociateInstanceEventWindowRequest withInstanceEventWindowId(String instanceEventWindowId) {
         this.instanceEventWindowId = instanceEventWindowId;
         return this;
     }
     
+    public DisassociateInstanceEventWindowRequest(@JsonProperty("AssociationTarget") InstanceEventWindowDisassociationRequest associationTarget, @JsonProperty("InstanceEventWindowId") String instanceEventWindowId) {
+        this.associationTarget = associationTarget;
+        this.instanceEventWindowId = instanceEventWindowId;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticGpuSpecifications {
     
     public String type;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticGpuSpecifications withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticGpuSpecifications(){}
 }

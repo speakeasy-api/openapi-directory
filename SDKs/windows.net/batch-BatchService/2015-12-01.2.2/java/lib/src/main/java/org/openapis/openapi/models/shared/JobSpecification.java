@@ -18,6 +18,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonEnvironmentSettings")
     public EnvironmentSetting[] commonEnvironmentSettings;
+
     public JobSpecification withCommonEnvironmentSettings(EnvironmentSetting[] commonEnvironmentSettings) {
         this.commonEnvironmentSettings = commonEnvironmentSettings;
         return this;
@@ -29,6 +30,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public JobConstraints constraints;
+
     public JobSpecification withConstraints(JobConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -40,6 +42,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public JobSpecification withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobManagerTask")
     public JobManagerTask jobManagerTask;
+
     public JobSpecification withJobManagerTask(JobManagerTask jobManagerTask) {
         this.jobManagerTask = jobManagerTask;
         return this;
@@ -62,6 +66,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobPreparationTask")
     public JobPreparationTask jobPreparationTask;
+
     public JobSpecification withJobPreparationTask(JobPreparationTask jobPreparationTask) {
         this.jobPreparationTask = jobPreparationTask;
         return this;
@@ -73,6 +78,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReleaseTask")
     public JobReleaseTask jobReleaseTask;
+
     public JobSpecification withJobReleaseTask(JobReleaseTask jobReleaseTask) {
         this.jobReleaseTask = jobReleaseTask;
         return this;
@@ -84,6 +90,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public JobSpecification withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -95,6 +102,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolInfo")
     public PoolInformation poolInfo;
+
     public JobSpecification withPoolInfo(PoolInformation poolInfo) {
         this.poolInfo = poolInfo;
         return this;
@@ -106,6 +114,7 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public JobSpecification withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -117,9 +126,11 @@ public class JobSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usesTaskDependencies")
     public Boolean usesTaskDependencies;
+
     public JobSpecification withUsesTaskDependencies(Boolean usesTaskDependencies) {
         this.usesTaskDependencies = usesTaskDependencies;
         return this;
     }
     
+    public JobSpecification(){}
 }

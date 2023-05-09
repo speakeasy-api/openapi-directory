@@ -12,6 +12,7 @@ public class ListOrganizationInvitationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListOrganizationInvitationsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -24,6 +25,7 @@ public class ListOrganizationInvitationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next")
     public String next;
+
     public ListOrganizationInvitationsRequest withNext(String next) {
         this.next = next;
         return this;
@@ -36,6 +38,7 @@ public class ListOrganizationInvitationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
     public String previous;
+
     public ListOrganizationInvitationsRequest withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -46,9 +49,11 @@ public class ListOrganizationInvitationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public ListOrganizationInvitationsRoleEnum role;
+
     public ListOrganizationInvitationsRequest withRole(ListOrganizationInvitationsRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public ListOrganizationInvitationsRequest(){}
 }

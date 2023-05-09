@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EbsBlockDeviceConfig {
     @JsonProperty("VolumeSpecification")
     public VolumeSpecification volumeSpecification;
+
     public EbsBlockDeviceConfig withVolumeSpecification(VolumeSpecification volumeSpecification) {
         this.volumeSpecification = volumeSpecification;
         return this;
@@ -22,9 +23,13 @@ public class EbsBlockDeviceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumesPerInstance")
     public Long volumesPerInstance;
+
     public EbsBlockDeviceConfig withVolumesPerInstance(Long volumesPerInstance) {
         this.volumesPerInstance = volumesPerInstance;
         return this;
     }
     
+    public EbsBlockDeviceConfig(@JsonProperty("VolumeSpecification") VolumeSpecification volumeSpecification) {
+        this.volumeSpecification = volumeSpecification;
+  }
 }

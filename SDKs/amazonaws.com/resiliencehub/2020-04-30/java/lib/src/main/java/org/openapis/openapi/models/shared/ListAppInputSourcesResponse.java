@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAppInputSourcesResponse {
     @JsonProperty("appInputSources")
     public AppInputSource[] appInputSources;
+
     public ListAppInputSourcesResponse withAppInputSources(AppInputSource[] appInputSources) {
         this.appInputSources = appInputSources;
         return this;
@@ -22,9 +23,13 @@ public class ListAppInputSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAppInputSourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppInputSourcesResponse(@JsonProperty("appInputSources") AppInputSource[] appInputSources) {
+        this.appInputSources = appInputSources;
+  }
 }

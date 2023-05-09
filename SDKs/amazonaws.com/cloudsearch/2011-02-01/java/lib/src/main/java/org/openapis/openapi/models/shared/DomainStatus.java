@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DomainStatus - The current status of the search domain.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DomainStatus {
     
     public Boolean created;
+
     public DomainStatus withCreated(Boolean created) {
         this.created = created;
         return this;
@@ -19,6 +20,7 @@ public class DomainStatus {
     
     
     public Boolean deleted;
+
     public DomainStatus withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -26,6 +28,7 @@ public class DomainStatus {
     
     
     public ServiceEndpoint docService;
+
     public DomainStatus withDocService(ServiceEndpoint docService) {
         this.docService = docService;
         return this;
@@ -36,6 +39,7 @@ public class DomainStatus {
      */
     
     public String domainId;
+
     public DomainStatus withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -46,6 +50,7 @@ public class DomainStatus {
      */
     
     public String domainName;
+
     public DomainStatus withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -53,6 +58,7 @@ public class DomainStatus {
     
     
     public Long numSearchableDocs;
+
     public DomainStatus withNumSearchableDocs(Long numSearchableDocs) {
         this.numSearchableDocs = numSearchableDocs;
         return this;
@@ -60,6 +66,7 @@ public class DomainStatus {
     
     
     public Boolean processing;
+
     public DomainStatus withProcessing(Boolean processing) {
         this.processing = processing;
         return this;
@@ -67,6 +74,7 @@ public class DomainStatus {
     
     
     public Boolean requiresIndexDocuments;
+
     public DomainStatus withRequiresIndexDocuments(Boolean requiresIndexDocuments) {
         this.requiresIndexDocuments = requiresIndexDocuments;
         return this;
@@ -74,6 +82,7 @@ public class DomainStatus {
     
     
     public Long searchInstanceCount;
+
     public DomainStatus withSearchInstanceCount(Long searchInstanceCount) {
         this.searchInstanceCount = searchInstanceCount;
         return this;
@@ -81,6 +90,7 @@ public class DomainStatus {
     
     
     public String searchInstanceType;
+
     public DomainStatus withSearchInstanceType(String searchInstanceType) {
         this.searchInstanceType = searchInstanceType;
         return this;
@@ -88,6 +98,7 @@ public class DomainStatus {
     
     
     public Long searchPartitionCount;
+
     public DomainStatus withSearchPartitionCount(Long searchPartitionCount) {
         this.searchPartitionCount = searchPartitionCount;
         return this;
@@ -95,9 +106,15 @@ public class DomainStatus {
     
     
     public ServiceEndpoint searchService;
+
     public DomainStatus withSearchService(ServiceEndpoint searchService) {
         this.searchService = searchService;
         return this;
     }
     
+    public DomainStatus(@JsonProperty("DomainId") String domainId, @JsonProperty("DomainName") String domainName, @JsonProperty("RequiresIndexDocuments") Boolean requiresIndexDocuments) {
+        this.domainId = domainId;
+        this.domainName = domainName;
+        this.requiresIndexDocuments = requiresIndexDocuments;
+  }
 }

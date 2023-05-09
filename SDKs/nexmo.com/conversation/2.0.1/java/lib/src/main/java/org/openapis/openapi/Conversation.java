@@ -68,11 +68,9 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateConversationResponse res = new org.openapis.openapi.models.operations.CreateConversationResponse() {{
+        org.openapis.openapi.models.operations.CreateConversationResponse res = new org.openapis.openapi.models.operations.CreateConversationResponse(contentType, httpRes.statusCode()) {{
             createConversation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConversationResponse res = new org.openapis.openapi.models.operations.DeleteConversationResponse() {{
+        org.openapis.openapi.models.operations.DeleteConversationResponse res = new org.openapis.openapi.models.operations.DeleteConversationResponse(contentType, httpRes.statusCode()) {{
             deleteConversation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,7 +129,9 @@ public class Conversation {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListConversationsResponse listConversations(org.openapis.openapi.models.operations.ListConversationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/conversations");
@@ -155,11 +153,9 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListConversationsResponse res = new org.openapis.openapi.models.operations.ListConversationsResponse() {{
+        org.openapis.openapi.models.operations.ListConversationsResponse res = new org.openapis.openapi.models.operations.ListConversationsResponse(contentType, httpRes.statusCode()) {{
             listConversations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,10 +207,8 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecordConversationResponse res = new org.openapis.openapi.models.operations.RecordConversationResponse() {{
+        org.openapis.openapi.models.operations.RecordConversationResponse res = new org.openapis.openapi.models.operations.RecordConversationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -246,11 +240,9 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplaceConversationResponse res = new org.openapis.openapi.models.operations.ReplaceConversationResponse() {{
+        org.openapis.openapi.models.operations.ReplaceConversationResponse res = new org.openapis.openapi.models.operations.ReplaceConversationResponse(contentType, httpRes.statusCode()) {{
             replaceConversation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +277,9 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveConversationResponse res = new org.openapis.openapi.models.operations.RetrieveConversationResponse() {{
+        org.openapis.openapi.models.operations.RetrieveConversationResponse res = new org.openapis.openapi.models.operations.RetrieveConversationResponse(contentType, httpRes.statusCode()) {{
             retrieveConversation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

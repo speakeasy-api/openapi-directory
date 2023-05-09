@@ -14,6 +14,7 @@ public class CreateApiMappingRequestBody {
      */
     @JsonProperty("apiId")
     public String apiId;
+
     public CreateApiMappingRequestBody withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -25,6 +26,7 @@ public class CreateApiMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiMappingKey")
     public String apiMappingKey;
+
     public CreateApiMappingRequestBody withApiMappingKey(String apiMappingKey) {
         this.apiMappingKey = apiMappingKey;
         return this;
@@ -35,9 +37,14 @@ public class CreateApiMappingRequestBody {
      */
     @JsonProperty("stage")
     public String stage;
+
     public CreateApiMappingRequestBody withStage(String stage) {
         this.stage = stage;
         return this;
     }
     
+    public CreateApiMappingRequestBody(@JsonProperty("apiId") String apiId, @JsonProperty("stage") String stage) {
+        this.apiId = apiId;
+        this.stage = stage;
+  }
 }

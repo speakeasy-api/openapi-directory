@@ -18,9 +18,11 @@ public class SensitiveCategoryAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedTargetingOptionId")
     public String excludedTargetingOptionId;
+
     public SensitiveCategoryAssignedTargetingOptionDetailsInput withExcludedTargetingOptionId(String excludedTargetingOptionId) {
         this.excludedTargetingOptionId = excludedTargetingOptionId;
         return this;
     }
     
+    public SensitiveCategoryAssignedTargetingOptionDetailsInput(){}
 }

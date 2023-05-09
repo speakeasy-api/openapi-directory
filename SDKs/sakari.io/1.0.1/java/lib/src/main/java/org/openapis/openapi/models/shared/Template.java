@@ -12,6 +12,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Template withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Template withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public Template withTemplate(String template) {
         this.template = template;
         return this;
@@ -36,9 +39,11 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TemplateTypeEnum type;
+
     public Template withType(TemplateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Template(){}
 }

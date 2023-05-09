@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETDeregisterInstanceEventNotificationAttributesInstanceTagAttribute {
     @SpeakeasyMetadata("queryParam:name=IncludeAllTagsOfInstance")
     public Boolean includeAllTagsOfInstance;
+
     public GETDeregisterInstanceEventNotificationAttributesInstanceTagAttribute withIncludeAllTagsOfInstance(Boolean includeAllTagsOfInstance) {
         this.includeAllTagsOfInstance = includeAllTagsOfInstance;
         return this;
@@ -19,9 +20,11 @@ public class GETDeregisterInstanceEventNotificationAttributesInstanceTagAttribut
     
     @SpeakeasyMetadata("queryParam:name=InstanceTagKeys")
     public String[] instanceTagKeys;
+
     public GETDeregisterInstanceEventNotificationAttributesInstanceTagAttribute withInstanceTagKeys(String[] instanceTagKeys) {
         this.instanceTagKeys = instanceTagKeys;
         return this;
     }
     
+    public GETDeregisterInstanceEventNotificationAttributesInstanceTagAttribute(){}
 }

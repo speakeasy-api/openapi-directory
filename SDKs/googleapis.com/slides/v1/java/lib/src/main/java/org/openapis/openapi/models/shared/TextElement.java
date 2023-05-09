@@ -18,6 +18,7 @@ public class TextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoText")
     public AutoText autoText;
+
     public TextElement withAutoText(AutoText autoText) {
         this.autoText = autoText;
         return this;
@@ -29,6 +30,7 @@ public class TextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIndex")
     public Integer endIndex;
+
     public TextElement withEndIndex(Integer endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -40,6 +42,7 @@ public class TextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraphMarker")
     public ParagraphMarker paragraphMarker;
+
     public TextElement withParagraphMarker(ParagraphMarker paragraphMarker) {
         this.paragraphMarker = paragraphMarker;
         return this;
@@ -51,6 +54,7 @@ public class TextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public TextElement withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -62,9 +66,11 @@ public class TextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textRun")
     public TextRun textRun;
+
     public TextElement withTextRun(TextRun textRun) {
         this.textRun = textRun;
         return this;
     }
     
+    public TextElement(){}
 }

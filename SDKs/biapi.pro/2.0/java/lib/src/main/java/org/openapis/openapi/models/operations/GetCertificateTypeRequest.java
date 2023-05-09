@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCertificateTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetCertificateTypeRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,9 +18,13 @@ public class GetCertificateTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public GetCertificateTypeRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetCertificateTypeRequest(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

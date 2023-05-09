@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListThingRegistrationTaskReportsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListThingRegistrationTaskReportsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ListThingRegistrationTaskReportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListThingRegistrationTaskReportsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ListThingRegistrationTaskReportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListThingRegistrationTaskReportsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ListThingRegistrationTaskReportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListThingRegistrationTaskReportsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ListThingRegistrationTaskReportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListThingRegistrationTaskReportsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ListThingRegistrationTaskReportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListThingRegistrationTaskReportsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ListThingRegistrationTaskReportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListThingRegistrationTaskReportsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ListThingRegistrationTaskReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListThingRegistrationTaskReportsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -71,6 +80,7 @@ public class ListThingRegistrationTaskReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListThingRegistrationTaskReportsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +91,7 @@ public class ListThingRegistrationTaskReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reportType")
     public ListThingRegistrationTaskReportsReportTypeEnum reportType;
+
     public ListThingRegistrationTaskReportsRequest withReportType(ListThingRegistrationTaskReportsReportTypeEnum reportType) {
         this.reportType = reportType;
         return this;
@@ -91,9 +102,14 @@ public class ListThingRegistrationTaskReportsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public ListThingRegistrationTaskReportsRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public ListThingRegistrationTaskReportsRequest(@JsonProperty("reportType") ListThingRegistrationTaskReportsReportTypeEnum reportType, @JsonProperty("taskId") String taskId) {
+        this.reportType = reportType;
+        this.taskId = taskId;
+  }
 }

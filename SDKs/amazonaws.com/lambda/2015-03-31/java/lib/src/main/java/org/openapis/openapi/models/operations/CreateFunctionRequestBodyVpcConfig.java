@@ -15,6 +15,7 @@ public class CreateFunctionRequestBodyVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public CreateFunctionRequestBodyVpcConfig withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,9 +24,11 @@ public class CreateFunctionRequestBodyVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateFunctionRequestBodyVpcConfig withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public CreateFunctionRequestBodyVpcConfig(){}
 }

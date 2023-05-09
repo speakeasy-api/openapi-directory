@@ -18,6 +18,7 @@ public class QueryInstantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public QueryInstantRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -29,6 +30,7 @@ public class QueryInstantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public QueryInstantRequest withTime(String time) {
         this.time = time;
         return this;
@@ -40,9 +42,11 @@ public class QueryInstantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public QueryInstantRequest withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public QueryInstantRequest(){}
 }

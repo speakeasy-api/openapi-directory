@@ -18,6 +18,7 @@ public class FrequencyCap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxImpressions")
     public Integer maxImpressions;
+
     public FrequencyCap withMaxImpressions(Integer maxImpressions) {
         this.maxImpressions = maxImpressions;
         return this;
@@ -29,6 +30,7 @@ public class FrequencyCap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeUnitType")
     public FrequencyCapTimeUnitTypeEnum timeUnitType;
+
     public FrequencyCap withTimeUnitType(FrequencyCapTimeUnitTypeEnum timeUnitType) {
         this.timeUnitType = timeUnitType;
         return this;
@@ -40,9 +42,11 @@ public class FrequencyCap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeUnitsCount")
     public Integer timeUnitsCount;
+
     public FrequencyCap withTimeUnitsCount(Integer timeUnitsCount) {
         this.timeUnitsCount = timeUnitsCount;
         return this;
     }
     
+    public FrequencyCap(){}
 }

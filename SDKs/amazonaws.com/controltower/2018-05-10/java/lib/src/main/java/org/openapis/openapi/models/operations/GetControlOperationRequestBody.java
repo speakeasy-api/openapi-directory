@@ -12,9 +12,13 @@ public class GetControlOperationRequestBody {
      */
     @JsonProperty("operationIdentifier")
     public String operationIdentifier;
+
     public GetControlOperationRequestBody withOperationIdentifier(String operationIdentifier) {
         this.operationIdentifier = operationIdentifier;
         return this;
     }
     
+    public GetControlOperationRequestBody(@JsonProperty("operationIdentifier") String operationIdentifier) {
+        this.operationIdentifier = operationIdentifier;
+  }
 }

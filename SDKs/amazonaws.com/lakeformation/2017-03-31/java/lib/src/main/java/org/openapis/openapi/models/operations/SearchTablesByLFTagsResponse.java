@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchTablesByLFTagsResponse {
@@ -12,6 +13,7 @@ public class SearchTablesByLFTagsResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchTablesByLFTagsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchTablesByLFTagsResponse {
     
     
     public String contentType;
+
     public SearchTablesByLFTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchTablesByLFTagsResponse {
      */
     
     public Object entityNotFoundException;
+
     public SearchTablesByLFTagsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class SearchTablesByLFTagsResponse {
      */
     
     public Object glueEncryptionException;
+
     public SearchTablesByLFTagsResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class SearchTablesByLFTagsResponse {
      */
     
     public Object internalServiceException;
+
     public SearchTablesByLFTagsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class SearchTablesByLFTagsResponse {
      */
     
     public Object invalidInputException;
+
     public SearchTablesByLFTagsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class SearchTablesByLFTagsResponse {
      */
     
     public Object operationTimeoutException;
+
     public SearchTablesByLFTagsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class SearchTablesByLFTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchTablesByLFTagsResponse searchTablesByLFTagsResponse;
+
     public SearchTablesByLFTagsResponse withSearchTablesByLFTagsResponse(org.openapis.openapi.models.shared.SearchTablesByLFTagsResponse searchTablesByLFTagsResponse) {
         this.searchTablesByLFTagsResponse = searchTablesByLFTagsResponse;
         return this;
@@ -86,6 +95,7 @@ public class SearchTablesByLFTagsResponse {
     
     
     public Integer statusCode;
+
     public SearchTablesByLFTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class SearchTablesByLFTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchTablesByLFTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchTablesByLFTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

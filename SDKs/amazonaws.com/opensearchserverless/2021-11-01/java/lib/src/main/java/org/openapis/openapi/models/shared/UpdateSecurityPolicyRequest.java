@@ -12,6 +12,7 @@ public class UpdateSecurityPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateSecurityPolicyRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class UpdateSecurityPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateSecurityPolicyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateSecurityPolicyRequest {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateSecurityPolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class UpdateSecurityPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public String policy;
+
     public UpdateSecurityPolicyRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -42,6 +46,7 @@ public class UpdateSecurityPolicyRequest {
     
     @JsonProperty("policyVersion")
     public String policyVersion;
+
     public UpdateSecurityPolicyRequest withPolicyVersion(String policyVersion) {
         this.policyVersion = policyVersion;
         return this;
@@ -49,9 +54,15 @@ public class UpdateSecurityPolicyRequest {
     
     @JsonProperty("type")
     public SecurityPolicyTypeEnum type;
+
     public UpdateSecurityPolicyRequest withType(SecurityPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateSecurityPolicyRequest(@JsonProperty("name") String name, @JsonProperty("policyVersion") String policyVersion, @JsonProperty("type") SecurityPolicyTypeEnum type) {
+        this.name = name;
+        this.policyVersion = policyVersion;
+        this.type = type;
+  }
 }

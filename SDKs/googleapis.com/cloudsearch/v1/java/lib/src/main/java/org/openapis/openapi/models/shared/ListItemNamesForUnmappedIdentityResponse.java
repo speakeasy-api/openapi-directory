@@ -15,6 +15,7 @@ public class ListItemNamesForUnmappedIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemNames")
     public String[] itemNames;
+
     public ListItemNamesForUnmappedIdentityResponse withItemNames(String[] itemNames) {
         this.itemNames = itemNames;
         return this;
@@ -26,9 +27,11 @@ public class ListItemNamesForUnmappedIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListItemNamesForUnmappedIdentityResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListItemNamesForUnmappedIdentityResponse(){}
 }

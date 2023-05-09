@@ -18,6 +18,7 @@ public class ObjectOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayOptions")
     public ObjectDisplayOptions displayOptions;
+
     public ObjectOptions withDisplayOptions(ObjectDisplayOptions displayOptions) {
         this.displayOptions = displayOptions;
         return this;
@@ -29,6 +30,7 @@ public class ObjectOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freshnessOptions")
     public FreshnessOptions freshnessOptions;
+
     public ObjectOptions withFreshnessOptions(FreshnessOptions freshnessOptions) {
         this.freshnessOptions = freshnessOptions;
         return this;
@@ -40,9 +42,11 @@ public class ObjectOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestionFilteringOperators")
     public String[] suggestionFilteringOperators;
+
     public ObjectOptions withSuggestionFilteringOperators(String[] suggestionFilteringOperators) {
         this.suggestionFilteringOperators = suggestionFilteringOperators;
         return this;
     }
     
+    public ObjectOptions(){}
 }

@@ -15,6 +15,7 @@ public class GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentBatchInline")
     public GoogleCloudDialogflowV2IntentBatchInput intentBatchInline;
+
     public GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput withIntentBatchInline(GoogleCloudDialogflowV2IntentBatchInput intentBatchInline) {
         this.intentBatchInline = intentBatchInline;
         return this;
@@ -26,6 +27,7 @@ public class GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentBatchUri")
     public String intentBatchUri;
+
     public GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput withIntentBatchUri(String intentBatchUri) {
         this.intentBatchUri = intentBatchUri;
         return this;
@@ -37,6 +39,7 @@ public class GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentView")
     public GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum intentView;
+
     public GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput withIntentView(GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum intentView) {
         this.intentView = intentView;
         return this;
@@ -48,6 +51,7 @@ public class GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -59,9 +63,11 @@ public class GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput(){}
 }

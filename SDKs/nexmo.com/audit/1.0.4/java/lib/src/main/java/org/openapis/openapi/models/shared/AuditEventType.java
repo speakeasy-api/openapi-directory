@@ -15,6 +15,7 @@ public class AuditEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AuditEventType withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class AuditEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EventTypesEnum type;
+
     public AuditEventType withType(EventTypesEnum type) {
         this.type = type;
         return this;
     }
     
+    public AuditEventType(){}
 }

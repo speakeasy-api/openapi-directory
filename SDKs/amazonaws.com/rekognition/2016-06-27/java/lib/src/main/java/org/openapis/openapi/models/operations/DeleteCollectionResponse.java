@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCollectionResponse {
@@ -12,6 +13,7 @@ public class DeleteCollectionResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteCollectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCollectionResponse {
     
     
     public String contentType;
+
     public DeleteCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCollectionResponse deleteCollectionResponse;
+
     public DeleteCollectionResponse withDeleteCollectionResponse(org.openapis.openapi.models.shared.DeleteCollectionResponse deleteCollectionResponse) {
         this.deleteCollectionResponse = deleteCollectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCollectionResponse {
      */
     
     public Object internalServerError;
+
     public DeleteCollectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCollectionResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteCollectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCollectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DeleteCollectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCollectionResponse {
     
     
     public Integer statusCode;
+
     public DeleteCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteCollectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteCollectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteCollectionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCollectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

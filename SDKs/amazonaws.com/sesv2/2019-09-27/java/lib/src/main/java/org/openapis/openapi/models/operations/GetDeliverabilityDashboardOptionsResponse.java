@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeliverabilityDashboardOptionsResponse {
@@ -12,6 +13,7 @@ public class GetDeliverabilityDashboardOptionsResponse {
      */
     
     public Object badRequestException;
+
     public GetDeliverabilityDashboardOptionsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetDeliverabilityDashboardOptionsResponse {
     
     
     public String contentType;
+
     public GetDeliverabilityDashboardOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDeliverabilityDashboardOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeliverabilityDashboardOptionsResponse getDeliverabilityDashboardOptionsResponse;
+
     public GetDeliverabilityDashboardOptionsResponse withGetDeliverabilityDashboardOptionsResponse(org.openapis.openapi.models.shared.GetDeliverabilityDashboardOptionsResponse getDeliverabilityDashboardOptionsResponse) {
         this.getDeliverabilityDashboardOptionsResponse = getDeliverabilityDashboardOptionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDeliverabilityDashboardOptionsResponse {
      */
     
     public Object limitExceededException;
+
     public GetDeliverabilityDashboardOptionsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class GetDeliverabilityDashboardOptionsResponse {
     
     
     public Integer statusCode;
+
     public GetDeliverabilityDashboardOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDeliverabilityDashboardOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeliverabilityDashboardOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDeliverabilityDashboardOptionsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetDeliverabilityDashboardOptionsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetDeliverabilityDashboardOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

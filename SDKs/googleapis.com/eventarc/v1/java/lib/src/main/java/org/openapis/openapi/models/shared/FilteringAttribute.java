@@ -18,6 +18,7 @@ public class FilteringAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public String attribute;
+
     public FilteringAttribute withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -29,6 +30,7 @@ public class FilteringAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FilteringAttribute withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class FilteringAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathPatternSupported")
     public Boolean pathPatternSupported;
+
     public FilteringAttribute withPathPatternSupported(Boolean pathPatternSupported) {
         this.pathPatternSupported = pathPatternSupported;
         return this;
@@ -51,9 +54,11 @@ public class FilteringAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public FilteringAttribute withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public FilteringAttribute(){}
 }

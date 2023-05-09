@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOpsSummaryResponse {
     
     public String contentType;
+
     public GetOpsSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOpsSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOpsSummaryResult getOpsSummaryResult;
+
     public GetOpsSummaryResponse withGetOpsSummaryResult(org.openapis.openapi.models.shared.GetOpsSummaryResult getOpsSummaryResult) {
         this.getOpsSummaryResult = getOpsSummaryResult;
         return this;
@@ -29,6 +32,7 @@ public class GetOpsSummaryResponse {
      */
     
     public Object internalServerError;
+
     public GetOpsSummaryResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetOpsSummaryResponse {
      */
     
     public Object invalidAggregatorException;
+
     public GetOpsSummaryResponse withInvalidAggregatorException(Object invalidAggregatorException) {
         this.invalidAggregatorException = invalidAggregatorException;
         return this;
@@ -49,6 +54,7 @@ public class GetOpsSummaryResponse {
      */
     
     public Object invalidFilter;
+
     public GetOpsSummaryResponse withInvalidFilter(Object invalidFilter) {
         this.invalidFilter = invalidFilter;
         return this;
@@ -59,6 +65,7 @@ public class GetOpsSummaryResponse {
      */
     
     public Object invalidNextToken;
+
     public GetOpsSummaryResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -69,6 +76,7 @@ public class GetOpsSummaryResponse {
      */
     
     public Object invalidTypeNameException;
+
     public GetOpsSummaryResponse withInvalidTypeNameException(Object invalidTypeNameException) {
         this.invalidTypeNameException = invalidTypeNameException;
         return this;
@@ -76,6 +84,7 @@ public class GetOpsSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetOpsSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetOpsSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOpsSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetOpsSummaryResponse {
      */
     
     public Object resourceDataSyncNotFoundException;
+
     public GetOpsSummaryResponse withResourceDataSyncNotFoundException(Object resourceDataSyncNotFoundException) {
         this.resourceDataSyncNotFoundException = resourceDataSyncNotFoundException;
         return this;
     }
     
+    public GetOpsSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

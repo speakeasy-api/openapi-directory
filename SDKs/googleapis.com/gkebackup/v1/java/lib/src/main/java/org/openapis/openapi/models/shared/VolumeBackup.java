@@ -18,6 +18,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeTime")
     public String completeTime;
+
     public VolumeBackup withCompleteTime(String completeTime) {
         this.completeTime = completeTime;
         return this;
@@ -29,6 +30,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public VolumeBackup withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeBytes")
     public String diskSizeBytes;
+
     public VolumeBackup withDiskSizeBytes(String diskSizeBytes) {
         this.diskSizeBytes = diskSizeBytes;
         return this;
@@ -51,6 +54,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public VolumeBackup withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public VolumeBackupFormatEnum format;
+
     public VolumeBackup withFormat(VolumeBackupFormatEnum format) {
         this.format = format;
         return this;
@@ -73,6 +78,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VolumeBackup withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePvc")
     public NamespacedName sourcePvc;
+
     public VolumeBackup withSourcePvc(NamespacedName sourcePvc) {
         this.sourcePvc = sourcePvc;
         return this;
@@ -95,6 +102,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public VolumeBackupStateEnum state;
+
     public VolumeBackup withState(VolumeBackupStateEnum state) {
         this.state = state;
         return this;
@@ -106,6 +114,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMessage")
     public String stateMessage;
+
     public VolumeBackup withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -117,6 +126,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBytes")
     public String storageBytes;
+
     public VolumeBackup withStorageBytes(String storageBytes) {
         this.storageBytes = storageBytes;
         return this;
@@ -128,6 +138,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public VolumeBackup withUid(String uid) {
         this.uid = uid;
         return this;
@@ -139,6 +150,7 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public VolumeBackup withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -150,9 +162,11 @@ public class VolumeBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeBackupHandle")
     public String volumeBackupHandle;
+
     public VolumeBackup withVolumeBackupHandle(String volumeBackupHandle) {
         this.volumeBackupHandle = volumeBackupHandle;
         return this;
     }
     
+    public VolumeBackup(){}
 }

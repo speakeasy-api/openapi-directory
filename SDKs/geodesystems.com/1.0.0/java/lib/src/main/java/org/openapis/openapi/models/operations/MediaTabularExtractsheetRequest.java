@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MediaTabularExtractsheetRequest {
@@ -12,6 +13,7 @@ public class MediaTabularExtractsheetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=arg1")
     public String arg1;
+
     public MediaTabularExtractsheetRequest withArg1(String arg1) {
         this.arg1 = arg1;
         return this;
@@ -22,6 +24,7 @@ public class MediaTabularExtractsheetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entryid")
     public String entryid;
+
     public MediaTabularExtractsheetRequest withEntryid(String entryid) {
         this.entryid = entryid;
         return this;
@@ -32,9 +35,14 @@ public class MediaTabularExtractsheetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
     public String output;
+
     public MediaTabularExtractsheetRequest withOutput(String output) {
         this.output = output;
         return this;
     }
     
+    public MediaTabularExtractsheetRequest(@JsonProperty("entryid") String entryid, @JsonProperty("output") String output) {
+        this.entryid = entryid;
+        this.output = output;
+  }
 }

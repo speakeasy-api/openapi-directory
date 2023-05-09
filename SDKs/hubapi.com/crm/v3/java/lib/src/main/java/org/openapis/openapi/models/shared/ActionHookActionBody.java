@@ -12,6 +12,7 @@ public class ActionHookActionBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmation")
     public ActionConfirmationBody confirmation;
+
     public ActionHookActionBody withConfirmation(ActionConfirmationBody confirmation) {
         this.confirmation = confirmation;
         return this;
@@ -19,6 +20,7 @@ public class ActionHookActionBody {
     
     @JsonProperty("httpMethod")
     public ActionHookActionBodyHttpMethodEnum httpMethod;
+
     public ActionHookActionBody withHttpMethod(ActionHookActionBodyHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -27,6 +29,7 @@ public class ActionHookActionBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ActionHookActionBody withLabel(String label) {
         this.label = label;
         return this;
@@ -34,6 +37,7 @@ public class ActionHookActionBody {
     
     @JsonProperty("propertyNamesIncluded")
     public String[] propertyNamesIncluded;
+
     public ActionHookActionBody withPropertyNamesIncluded(String[] propertyNamesIncluded) {
         this.propertyNamesIncluded = propertyNamesIncluded;
         return this;
@@ -41,6 +45,7 @@ public class ActionHookActionBody {
     
     @JsonProperty("type")
     public ActionHookActionBodyTypeEnum type;
+
     public ActionHookActionBody withType(ActionHookActionBodyTypeEnum type) {
         this.type = type;
         return this;
@@ -48,9 +53,16 @@ public class ActionHookActionBody {
     
     @JsonProperty("url")
     public String url;
+
     public ActionHookActionBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ActionHookActionBody(@JsonProperty("httpMethod") ActionHookActionBodyHttpMethodEnum httpMethod, @JsonProperty("propertyNamesIncluded") String[] propertyNamesIncluded, @JsonProperty("type") ActionHookActionBodyTypeEnum type, @JsonProperty("url") String url) {
+        this.httpMethod = httpMethod;
+        this.propertyNamesIncluded = propertyNamesIncluded;
+        this.type = type;
+        this.url = url;
+  }
 }

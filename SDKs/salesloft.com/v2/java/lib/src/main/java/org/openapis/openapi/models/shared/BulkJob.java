@@ -15,6 +15,7 @@ public class BulkJob {
      */
     
     public OffsetDateTime createdAt;
+
     public BulkJob withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class BulkJob {
      */
     
     public Long errors;
+
     public BulkJob withErrors(Long errors) {
         this.errors = errors;
         return this;
@@ -35,6 +37,7 @@ public class BulkJob {
      */
     
     public OffsetDateTime finishedAt;
+
     public BulkJob withFinishedAt(OffsetDateTime finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -45,6 +48,7 @@ public class BulkJob {
      */
     
     public Long id;
+
     public BulkJob withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class BulkJob {
      */
     
     public OffsetDateTime markedReadyAt;
+
     public BulkJob withMarkedReadyAt(OffsetDateTime markedReadyAt) {
         this.markedReadyAt = markedReadyAt;
         return this;
@@ -65,6 +70,7 @@ public class BulkJob {
      */
     
     public String name;
+
     public BulkJob withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class BulkJob {
      */
     
     public Long processed;
+
     public BulkJob withProcessed(Long processed) {
         this.processed = processed;
         return this;
@@ -85,6 +92,7 @@ public class BulkJob {
      */
     
     public Boolean readyToExecute;
+
     public BulkJob withReadyToExecute(Boolean readyToExecute) {
         this.readyToExecute = readyToExecute;
         return this;
@@ -95,6 +103,7 @@ public class BulkJob {
      */
     
     public Object[] scopes;
+
     public BulkJob withScopes(Object[] scopes) {
         this.scopes = scopes;
         return this;
@@ -105,6 +114,7 @@ public class BulkJob {
      */
     
     public OffsetDateTime startedAt;
+
     public BulkJob withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -115,6 +125,7 @@ public class BulkJob {
      */
     
     public String state;
+
     public BulkJob withState(String state) {
         this.state = state;
         return this;
@@ -125,6 +136,7 @@ public class BulkJob {
      */
     
     public Long total;
+
     public BulkJob withTotal(Long total) {
         this.total = total;
         return this;
@@ -135,6 +147,7 @@ public class BulkJob {
      */
     
     public String type;
+
     public BulkJob withType(String type) {
         this.type = type;
         return this;
@@ -145,9 +158,11 @@ public class BulkJob {
      */
     
     public OffsetDateTime updatedAt;
+
     public BulkJob withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public BulkJob(){}
 }

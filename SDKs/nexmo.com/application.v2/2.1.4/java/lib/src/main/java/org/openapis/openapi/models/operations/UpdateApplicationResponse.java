@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApplicationResponse {
     
     public String contentType;
+
     public UpdateApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateApplicationResponse {
     
     
     public Integer statusCode;
+
     public UpdateApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateApplicationResponse {
      */
     
     public UpdateApplication200ApplicationJSON updateApplication200ApplicationJSONObject;
+
     public UpdateApplicationResponse withUpdateApplication200ApplicationJSONObject(UpdateApplication200ApplicationJSON updateApplication200ApplicationJSONObject) {
         this.updateApplication200ApplicationJSONObject = updateApplication200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class UpdateApplicationResponse {
      */
     
     public UpdateApplication400ApplicationJSON updateApplication400ApplicationJSONObject;
+
     public UpdateApplicationResponse withUpdateApplication400ApplicationJSONObject(UpdateApplication400ApplicationJSON updateApplication400ApplicationJSONObject) {
         this.updateApplication400ApplicationJSONObject = updateApplication400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class UpdateApplicationResponse {
      */
     
     public UpdateApplication401ApplicationJSON updateApplication401ApplicationJSONObject;
+
     public UpdateApplicationResponse withUpdateApplication401ApplicationJSONObject(UpdateApplication401ApplicationJSON updateApplication401ApplicationJSONObject) {
         this.updateApplication401ApplicationJSONObject = updateApplication401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class UpdateApplicationResponse {
      */
     
     public UpdateApplication404ApplicationJSON updateApplication404ApplicationJSONObject;
+
     public UpdateApplicationResponse withUpdateApplication404ApplicationJSONObject(UpdateApplication404ApplicationJSON updateApplication404ApplicationJSONObject) {
         this.updateApplication404ApplicationJSONObject = updateApplication404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class UpdateApplicationResponse {
      */
     
     public UpdateApplication405ApplicationJSON updateApplication405ApplicationJSONObject;
+
     public UpdateApplicationResponse withUpdateApplication405ApplicationJSONObject(UpdateApplication405ApplicationJSON updateApplication405ApplicationJSONObject) {
         this.updateApplication405ApplicationJSONObject = updateApplication405ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class UpdateApplicationResponse {
      */
     
     public UpdateApplication406ApplicationJSON updateApplication406ApplicationJSONObject;
+
     public UpdateApplicationResponse withUpdateApplication406ApplicationJSONObject(UpdateApplication406ApplicationJSON updateApplication406ApplicationJSONObject) {
         this.updateApplication406ApplicationJSONObject = updateApplication406ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class UpdateApplicationResponse {
      */
     
     public UpdateApplication415ApplicationJSON updateApplication415ApplicationJSONObject;
+
     public UpdateApplicationResponse withUpdateApplication415ApplicationJSONObject(UpdateApplication415ApplicationJSON updateApplication415ApplicationJSONObject) {
         this.updateApplication415ApplicationJSONObject = updateApplication415ApplicationJSONObject;
         return this;
     }
     
+    public UpdateApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

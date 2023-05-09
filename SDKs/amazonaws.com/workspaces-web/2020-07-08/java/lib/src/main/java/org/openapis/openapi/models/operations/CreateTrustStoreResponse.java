@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTrustStoreResponse {
@@ -12,6 +13,7 @@ public class CreateTrustStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTrustStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTrustStoreResponse {
      */
     
     public Object conflictException;
+
     public CreateTrustStoreResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTrustStoreResponse {
     
     
     public String contentType;
+
     public CreateTrustStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTrustStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTrustStoreResponse createTrustStoreResponse;
+
     public CreateTrustStoreResponse withCreateTrustStoreResponse(org.openapis.openapi.models.shared.CreateTrustStoreResponse createTrustStoreResponse) {
         this.createTrustStoreResponse = createTrustStoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateTrustStoreResponse {
      */
     
     public Object internalServerException;
+
     public CreateTrustStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateTrustStoreResponse {
     
     
     public Integer statusCode;
+
     public CreateTrustStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateTrustStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTrustStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateTrustStoreResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateTrustStoreResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateTrustStoreResponse {
      */
     
     public Object throttlingException;
+
     public CreateTrustStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateTrustStoreResponse {
      */
     
     public Object validationException;
+
     public CreateTrustStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateTrustStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamSocialMediaResponse {
     
     public String contentType;
+
     public GetTeamSocialMediaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamSocialMediaResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamSocialMediaResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetTeamSocialMediaResponse {
      */
     
     public org.openapis.openapi.models.shared.Media[] media;
+
     public GetTeamSocialMediaResponse withMedia(org.openapis.openapi.models.shared.Media[] media) {
         this.media = media;
         return this;
@@ -33,6 +37,7 @@ public class GetTeamSocialMediaResponse {
     
     
     public Integer statusCode;
+
     public GetTeamSocialMediaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamSocialMediaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamSocialMediaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTeamSocialMediaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,6 +27,7 @@ public class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public FirewallPolicyRule[] rules;
+
     public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withRules(FirewallPolicyRule[] rules) {
         this.rules = rules;
         return this;
@@ -48,6 +51,7 @@ public class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -59,9 +63,11 @@ public class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicyTypeEnum type;
+
     public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withType(InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy(){}
 }

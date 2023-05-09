@@ -18,9 +18,11 @@ public class DeviceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public java.util.Map<String, String> entries;
+
     public DeviceMetadata withEntries(java.util.Map<String, String> entries) {
         this.entries = entries;
         return this;
     }
     
+    public DeviceMetadata(){}
 }

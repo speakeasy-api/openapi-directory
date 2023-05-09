@@ -15,6 +15,7 @@ public class ListAuditSuppressionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAuditSuppressionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListAuditSuppressionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressions")
     public AuditSuppression[] suppressions;
+
     public ListAuditSuppressionsResponse withSuppressions(AuditSuppression[] suppressions) {
         this.suppressions = suppressions;
         return this;
     }
     
+    public ListAuditSuppressionsResponse(){}
 }

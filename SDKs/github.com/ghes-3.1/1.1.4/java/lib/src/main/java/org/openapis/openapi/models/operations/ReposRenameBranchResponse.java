@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposRenameBranchResponse {
     
     public String contentType;
+
     public ReposRenameBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposRenameBranchResponse {
     
     
     public Integer statusCode;
+
     public ReposRenameBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposRenameBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposRenameBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposRenameBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposRenameBranchResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposRenameBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.BranchWithProtection branchWithProtection;
+
     public ReposRenameBranchResponse withBranchWithProtection(org.openapis.openapi.models.shared.BranchWithProtection branchWithProtection) {
         this.branchWithProtection = branchWithProtection;
         return this;
@@ -53,9 +59,14 @@ public class ReposRenameBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposRenameBranchResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposRenameBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

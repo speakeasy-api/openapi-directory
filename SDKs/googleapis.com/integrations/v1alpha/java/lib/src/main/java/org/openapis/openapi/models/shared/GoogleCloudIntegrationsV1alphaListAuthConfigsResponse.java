@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaListAuthConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authConfigs")
     public GoogleCloudIntegrationsV1alphaAuthConfig[] authConfigs;
+
     public GoogleCloudIntegrationsV1alphaListAuthConfigsResponse withAuthConfigs(GoogleCloudIntegrationsV1alphaAuthConfig[] authConfigs) {
         this.authConfigs = authConfigs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaListAuthConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIntegrationsV1alphaListAuthConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaListAuthConfigsResponse(){}
 }

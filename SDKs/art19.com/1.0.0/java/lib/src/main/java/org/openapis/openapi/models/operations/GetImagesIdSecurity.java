@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagesIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String apiKey;
+
     public GetImagesIdSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GetImagesIdSecurity(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeApplicationsResponse {
     
     public String contentType;
+
     public DescribeApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeApplicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeApplicationsResult describeApplicationsResult;
+
     public DescribeApplicationsResponse withDescribeApplicationsResult(org.openapis.openapi.models.shared.DescribeApplicationsResult describeApplicationsResult) {
         this.describeApplicationsResult = describeApplicationsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeApplicationsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DescribeApplicationsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeApplicationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeApplicationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeApplicationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

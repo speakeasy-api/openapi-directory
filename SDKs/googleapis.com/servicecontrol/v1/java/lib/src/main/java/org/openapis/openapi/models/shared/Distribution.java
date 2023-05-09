@@ -18,6 +18,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCounts")
     public String[] bucketCounts;
+
     public Distribution withBucketCounts(String[] bucketCounts) {
         this.bucketCounts = bucketCounts;
         return this;
@@ -29,6 +30,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public Distribution withCount(String count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemplars")
     public Exemplar[] exemplars;
+
     public Distribution withExemplars(Exemplar[] exemplars) {
         this.exemplars = exemplars;
         return this;
@@ -51,6 +54,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicitBuckets")
     public ExplicitBuckets explicitBuckets;
+
     public Distribution withExplicitBuckets(ExplicitBuckets explicitBuckets) {
         this.explicitBuckets = explicitBuckets;
         return this;
@@ -62,6 +66,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exponentialBuckets")
     public ExponentialBuckets exponentialBuckets;
+
     public Distribution withExponentialBuckets(ExponentialBuckets exponentialBuckets) {
         this.exponentialBuckets = exponentialBuckets;
         return this;
@@ -73,6 +78,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linearBuckets")
     public LinearBuckets linearBuckets;
+
     public Distribution withLinearBuckets(LinearBuckets linearBuckets) {
         this.linearBuckets = linearBuckets;
         return this;
@@ -84,6 +90,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public Double maximum;
+
     public Distribution withMaximum(Double maximum) {
         this.maximum = maximum;
         return this;
@@ -95,6 +102,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mean")
     public Double mean;
+
     public Distribution withMean(Double mean) {
         this.mean = mean;
         return this;
@@ -106,6 +114,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public Double minimum;
+
     public Distribution withMinimum(Double minimum) {
         this.minimum = minimum;
         return this;
@@ -117,9 +126,11 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sumOfSquaredDeviation")
     public Double sumOfSquaredDeviation;
+
     public Distribution withSumOfSquaredDeviation(Double sumOfSquaredDeviation) {
         this.sumOfSquaredDeviation = sumOfSquaredDeviation;
         return this;
     }
     
+    public Distribution(){}
 }

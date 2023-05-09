@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestCustomDataIdentifierResponse {
@@ -12,6 +13,7 @@ public class TestCustomDataIdentifierResponse {
      */
     
     public Object accessDeniedException;
+
     public TestCustomDataIdentifierResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class TestCustomDataIdentifierResponse {
      */
     
     public Object conflictException;
+
     public TestCustomDataIdentifierResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class TestCustomDataIdentifierResponse {
     
     
     public String contentType;
+
     public TestCustomDataIdentifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class TestCustomDataIdentifierResponse {
      */
     
     public Object internalServerException;
+
     public TestCustomDataIdentifierResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class TestCustomDataIdentifierResponse {
     
     
     public Integer statusCode;
+
     public TestCustomDataIdentifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TestCustomDataIdentifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestCustomDataIdentifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TestCustomDataIdentifierResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TestCustomDataIdentifierResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class TestCustomDataIdentifierResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public TestCustomDataIdentifierResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class TestCustomDataIdentifierResponse {
      */
     
     public org.openapis.openapi.models.shared.TestCustomDataIdentifierResponse testCustomDataIdentifierResponse;
+
     public TestCustomDataIdentifierResponse withTestCustomDataIdentifierResponse(org.openapis.openapi.models.shared.TestCustomDataIdentifierResponse testCustomDataIdentifierResponse) {
         this.testCustomDataIdentifierResponse = testCustomDataIdentifierResponse;
         return this;
@@ -93,6 +103,7 @@ public class TestCustomDataIdentifierResponse {
      */
     
     public Object throttlingException;
+
     public TestCustomDataIdentifierResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class TestCustomDataIdentifierResponse {
      */
     
     public Object validationException;
+
     public TestCustomDataIdentifierResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public TestCustomDataIdentifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

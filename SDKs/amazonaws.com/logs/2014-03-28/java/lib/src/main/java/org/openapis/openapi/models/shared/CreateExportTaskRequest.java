@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateExportTaskRequest {
     @JsonProperty("destination")
     public String destination;
+
     public CreateExportTaskRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class CreateExportTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationPrefix")
     public String destinationPrefix;
+
     public CreateExportTaskRequest withDestinationPrefix(String destinationPrefix) {
         this.destinationPrefix = destinationPrefix;
         return this;
@@ -26,6 +28,7 @@ public class CreateExportTaskRequest {
     
     @JsonProperty("from")
     public Long from;
+
     public CreateExportTaskRequest withFrom(Long from) {
         this.from = from;
         return this;
@@ -33,6 +36,7 @@ public class CreateExportTaskRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public CreateExportTaskRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -41,6 +45,7 @@ public class CreateExportTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamNamePrefix")
     public String logStreamNamePrefix;
+
     public CreateExportTaskRequest withLogStreamNamePrefix(String logStreamNamePrefix) {
         this.logStreamNamePrefix = logStreamNamePrefix;
         return this;
@@ -49,6 +54,7 @@ public class CreateExportTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskName")
     public String taskName;
+
     public CreateExportTaskRequest withTaskName(String taskName) {
         this.taskName = taskName;
         return this;
@@ -56,9 +62,16 @@ public class CreateExportTaskRequest {
     
     @JsonProperty("to")
     public Long to;
+
     public CreateExportTaskRequest withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public CreateExportTaskRequest(@JsonProperty("destination") String destination, @JsonProperty("from") Long from, @JsonProperty("logGroupName") String logGroupName, @JsonProperty("to") Long to) {
+        this.destination = destination;
+        this.from = from;
+        this.logGroupName = logGroupName;
+        this.to = to;
+  }
 }

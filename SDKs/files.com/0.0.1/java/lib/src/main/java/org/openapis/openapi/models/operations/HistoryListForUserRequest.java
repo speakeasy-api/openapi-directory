@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class HistoryListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public HistoryListForUserRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +25,7 @@ public class HistoryListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display")
     public String display;
+
     public HistoryListForUserRequest withDisplay(String display) {
         this.display = display;
         return this;
@@ -33,6 +36,7 @@ public class HistoryListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_at")
     public OffsetDateTime endAt;
+
     public HistoryListForUserRequest withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -43,6 +47,7 @@ public class HistoryListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public HistoryListForUserRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -53,6 +58,7 @@ public class HistoryListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public HistoryListForUserRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -63,6 +69,7 @@ public class HistoryListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_at")
     public OffsetDateTime startAt;
+
     public HistoryListForUserRequest withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -73,9 +80,13 @@ public class HistoryListForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Integer userId;
+
     public HistoryListForUserRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public HistoryListForUserRequest(@JsonProperty("user_id") Integer userId) {
+        this.userId = userId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBudgetActionResponse {
@@ -12,6 +13,7 @@ public class UpdateBudgetActionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateBudgetActionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBudgetActionResponse {
     
     
     public String contentType;
+
     public UpdateBudgetActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBudgetActionResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateBudgetActionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBudgetActionResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateBudgetActionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateBudgetActionResponse {
      */
     
     public Object notFoundException;
+
     public UpdateBudgetActionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateBudgetActionResponse {
     
     
     public Integer statusCode;
+
     public UpdateBudgetActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBudgetActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBudgetActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBudgetActionResponse {
      */
     
     public Object resourceLockedException;
+
     public UpdateBudgetActionResponse withResourceLockedException(Object resourceLockedException) {
         this.resourceLockedException = resourceLockedException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateBudgetActionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateBudgetActionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateBudgetActionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBudgetActionResponse updateBudgetActionResponse;
+
     public UpdateBudgetActionResponse withUpdateBudgetActionResponse(org.openapis.openapi.models.shared.UpdateBudgetActionResponse updateBudgetActionResponse) {
         this.updateBudgetActionResponse = updateBudgetActionResponse;
         return this;
     }
     
+    public UpdateBudgetActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

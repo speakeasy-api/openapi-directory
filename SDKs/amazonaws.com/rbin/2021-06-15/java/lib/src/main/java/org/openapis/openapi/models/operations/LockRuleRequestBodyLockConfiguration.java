@@ -15,9 +15,11 @@ public class LockRuleRequestBodyLockConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnlockDelay")
     public org.openapis.openapi.models.shared.UnlockDelay unlockDelay;
+
     public LockRuleRequestBodyLockConfiguration withUnlockDelay(org.openapis.openapi.models.shared.UnlockDelay unlockDelay) {
         this.unlockDelay = unlockDelay;
         return this;
     }
     
+    public LockRuleRequestBodyLockConfiguration(){}
 }

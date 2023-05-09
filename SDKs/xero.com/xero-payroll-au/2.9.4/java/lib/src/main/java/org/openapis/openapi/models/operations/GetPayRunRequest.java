@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayRunRequest {
@@ -12,6 +13,7 @@ public class GetPayRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayRunID")
     public String payRunID;
+
     public GetPayRunRequest withPayRunID(String payRunID) {
         this.payRunID = payRunID;
         return this;
@@ -22,9 +24,14 @@ public class GetPayRunRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public GetPayRunRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetPayRunRequest(@JsonProperty("PayRunID") String payRunID, @JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.payRunID = payRunID;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

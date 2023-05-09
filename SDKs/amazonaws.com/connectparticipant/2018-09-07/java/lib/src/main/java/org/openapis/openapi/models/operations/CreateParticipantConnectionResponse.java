@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateParticipantConnectionResponse {
@@ -12,6 +13,7 @@ public class CreateParticipantConnectionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateParticipantConnectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateParticipantConnectionResponse {
     
     
     public String contentType;
+
     public CreateParticipantConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateParticipantConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateParticipantConnectionResponse createParticipantConnectionResponse;
+
     public CreateParticipantConnectionResponse withCreateParticipantConnectionResponse(org.openapis.openapi.models.shared.CreateParticipantConnectionResponse createParticipantConnectionResponse) {
         this.createParticipantConnectionResponse = createParticipantConnectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateParticipantConnectionResponse {
      */
     
     public Object internalServerException;
+
     public CreateParticipantConnectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateParticipantConnectionResponse {
     
     
     public Integer statusCode;
+
     public CreateParticipantConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateParticipantConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateParticipantConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateParticipantConnectionResponse {
      */
     
     public Object throttlingException;
+
     public CreateParticipantConnectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class CreateParticipantConnectionResponse {
      */
     
     public Object validationException;
+
     public CreateParticipantConnectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateParticipantConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

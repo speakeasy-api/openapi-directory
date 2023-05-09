@@ -18,9 +18,11 @@ public class DatePropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorOptions")
     public DateOperatorOptions operatorOptions;
+
     public DatePropertyOptions withOperatorOptions(DateOperatorOptions operatorOptions) {
         this.operatorOptions = operatorOptions;
         return this;
     }
     
+    public DatePropertyOptions(){}
 }

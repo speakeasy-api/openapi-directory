@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetQuerySuggestionsRequest {
     @JsonProperty("IndexId")
     public String indexId;
+
     public GetQuerySuggestionsRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -19,6 +20,7 @@ public class GetQuerySuggestionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSuggestionsCount")
     public Long maxSuggestionsCount;
+
     public GetQuerySuggestionsRequest withMaxSuggestionsCount(Long maxSuggestionsCount) {
         this.maxSuggestionsCount = maxSuggestionsCount;
         return this;
@@ -26,9 +28,14 @@ public class GetQuerySuggestionsRequest {
     
     @JsonProperty("QueryText")
     public String queryText;
+
     public GetQuerySuggestionsRequest withQueryText(String queryText) {
         this.queryText = queryText;
         return this;
     }
     
+    public GetQuerySuggestionsRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("QueryText") String queryText) {
+        this.indexId = indexId;
+        this.queryText = queryText;
+  }
 }

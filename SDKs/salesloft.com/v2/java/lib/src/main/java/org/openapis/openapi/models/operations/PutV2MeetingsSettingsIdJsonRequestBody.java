@@ -12,6 +12,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=allow_booking_on_behalf")
     public Boolean allowBookingOnBehalf;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withAllowBookingOnBehalf(Boolean allowBookingOnBehalf) {
         this.allowBookingOnBehalf = allowBookingOnBehalf;
         return this;
@@ -22,6 +23,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=allow_booking_overtime")
     public Boolean allowBookingOvertime;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withAllowBookingOvertime(Boolean allowBookingOvertime) {
         this.allowBookingOvertime = allowBookingOvertime;
         return this;
@@ -32,6 +34,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=allow_event_overlap")
     public Boolean allowEventOverlap;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withAllowEventOverlap(Boolean allowEventOverlap) {
         this.allowEventOverlap = allowEventOverlap;
         return this;
@@ -42,6 +45,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=availability_limit")
     public Long availabilityLimit;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withAvailabilityLimit(Long availabilityLimit) {
         this.availabilityLimit = availabilityLimit;
         return this;
@@ -52,6 +56,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=availability_limit_enabled")
     public Boolean availabilityLimitEnabled;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withAvailabilityLimitEnabled(Boolean availabilityLimitEnabled) {
         this.availabilityLimitEnabled = availabilityLimitEnabled;
         return this;
@@ -62,6 +67,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=buffer_time_duration")
     public Long bufferTimeDuration;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withBufferTimeDuration(Long bufferTimeDuration) {
         this.bufferTimeDuration = bufferTimeDuration;
         return this;
@@ -72,6 +78,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=calendar_type")
     public String calendarType;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withCalendarType(String calendarType) {
         this.calendarType = calendarType;
         return this;
@@ -82,6 +89,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=default_meeting_length")
     public Long defaultMeetingLength;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withDefaultMeetingLength(Long defaultMeetingLength) {
         this.defaultMeetingLength = defaultMeetingLength;
         return this;
@@ -92,6 +100,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -102,6 +111,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=enable_calendar_sync")
     public Boolean enableCalendarSync;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withEnableCalendarSync(Boolean enableCalendarSync) {
         this.enableCalendarSync = enableCalendarSync;
         return this;
@@ -112,6 +122,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=enable_dynamic_location")
     public Boolean enableDynamicLocation;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withEnableDynamicLocation(Boolean enableDynamicLocation) {
         this.enableDynamicLocation = enableDynamicLocation;
         return this;
@@ -122,6 +133,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=location")
     public String location;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withLocation(String location) {
         this.location = location;
         return this;
@@ -132,6 +144,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=primary_calendar_connection_failed")
     public Boolean primaryCalendarConnectionFailed;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withPrimaryCalendarConnectionFailed(Boolean primaryCalendarConnectionFailed) {
         this.primaryCalendarConnectionFailed = primaryCalendarConnectionFailed;
         return this;
@@ -142,6 +155,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=primary_calendar_id")
     public String primaryCalendarId;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withPrimaryCalendarId(String primaryCalendarId) {
         this.primaryCalendarId = primaryCalendarId;
         return this;
@@ -152,8 +166,20 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=primary_calendar_name")
     public String primaryCalendarName;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withPrimaryCalendarName(String primaryCalendarName) {
         this.primaryCalendarName = primaryCalendarName;
+        return this;
+    }
+    
+    /**
+     * Determines if a user enabled reschedule meetings feature
+     */
+    @SpeakeasyMetadata("form:name=reschedule_meetings_enabled")
+    public Boolean rescheduleMeetingsEnabled;
+
+    public PutV2MeetingsSettingsIdJsonRequestBody withRescheduleMeetingsEnabled(Boolean rescheduleMeetingsEnabled) {
+        this.rescheduleMeetingsEnabled = rescheduleMeetingsEnabled;
         return this;
     }
     
@@ -162,6 +188,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=schedule_buffer_enabled")
     public Boolean scheduleBufferEnabled;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withScheduleBufferEnabled(Boolean scheduleBufferEnabled) {
         this.scheduleBufferEnabled = scheduleBufferEnabled;
         return this;
@@ -172,6 +199,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=schedule_delay")
     public Long scheduleDelay;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withScheduleDelay(Long scheduleDelay) {
         this.scheduleDelay = scheduleDelay;
         return this;
@@ -182,6 +210,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=share_event_detail")
     public Boolean shareEventDetail;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withShareEventDetail(Boolean shareEventDetail) {
         this.shareEventDetail = shareEventDetail;
         return this;
@@ -192,6 +221,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=time_zone")
     public String timeZone;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -202,6 +232,7 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=times_available,json")
     public java.util.Map<String, Object> timesAvailable;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withTimesAvailable(java.util.Map<String, Object> timesAvailable) {
         this.timesAvailable = timesAvailable;
         return this;
@@ -212,9 +243,11 @@ public class PutV2MeetingsSettingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=title")
     public String title;
+
     public PutV2MeetingsSettingsIdJsonRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PutV2MeetingsSettingsIdJsonRequestBody(){}
 }

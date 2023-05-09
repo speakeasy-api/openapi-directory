@@ -14,6 +14,7 @@ public class ListInputRoutingsRequestBody {
      */
     @JsonProperty("inputIdentifier")
     public ListInputRoutingsRequestBodyInputIdentifier inputIdentifier;
+
     public ListInputRoutingsRequestBody withInputIdentifier(ListInputRoutingsRequestBodyInputIdentifier inputIdentifier) {
         this.inputIdentifier = inputIdentifier;
         return this;
@@ -25,6 +26,7 @@ public class ListInputRoutingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListInputRoutingsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListInputRoutingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListInputRoutingsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInputRoutingsRequestBody(@JsonProperty("inputIdentifier") ListInputRoutingsRequestBodyInputIdentifier inputIdentifier) {
+        this.inputIdentifier = inputIdentifier;
+  }
 }

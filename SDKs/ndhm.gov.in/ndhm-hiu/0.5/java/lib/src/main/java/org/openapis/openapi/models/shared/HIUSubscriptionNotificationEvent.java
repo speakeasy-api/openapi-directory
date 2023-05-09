@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class HIUSubscriptionNotificationEvent {
     @JsonProperty("category")
     public SubscriptionCategoryEnum category;
+
     public HIUSubscriptionNotificationEvent withCategory(SubscriptionCategoryEnum category) {
         this.category = category;
         return this;
@@ -21,6 +22,7 @@ public class HIUSubscriptionNotificationEvent {
     
     @JsonProperty("content")
     public HIUSubscriptionEventContent content;
+
     public HIUSubscriptionNotificationEvent withContent(HIUSubscriptionEventContent content) {
         this.content = content;
         return this;
@@ -28,6 +30,7 @@ public class HIUSubscriptionNotificationEvent {
     
     @JsonProperty("id")
     public String id;
+
     public HIUSubscriptionNotificationEvent withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +43,7 @@ public class HIUSubscriptionNotificationEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("published")
     public OffsetDateTime published;
+
     public HIUSubscriptionNotificationEvent withPublished(OffsetDateTime published) {
         this.published = published;
         return this;
@@ -47,9 +51,17 @@ public class HIUSubscriptionNotificationEvent {
     
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public HIUSubscriptionNotificationEvent withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public HIUSubscriptionNotificationEvent(@JsonProperty("category") SubscriptionCategoryEnum category, @JsonProperty("content") HIUSubscriptionEventContent content, @JsonProperty("id") String id, @JsonProperty("published") OffsetDateTime published, @JsonProperty("subscriptionId") String subscriptionId) {
+        this.category = category;
+        this.content = content;
+        this.id = id;
+        this.published = published;
+        this.subscriptionId = subscriptionId;
+  }
 }

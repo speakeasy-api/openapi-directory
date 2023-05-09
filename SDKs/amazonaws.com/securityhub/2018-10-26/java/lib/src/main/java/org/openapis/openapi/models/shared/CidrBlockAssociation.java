@@ -15,6 +15,7 @@ public class CidrBlockAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public CidrBlockAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -23,6 +24,7 @@ public class CidrBlockAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrBlock")
     public String cidrBlock;
+
     public CidrBlockAssociation withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -31,9 +33,11 @@ public class CidrBlockAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrBlockState")
     public String cidrBlockState;
+
     public CidrBlockAssociation withCidrBlockState(String cidrBlockState) {
         this.cidrBlockState = cidrBlockState;
         return this;
     }
     
+    public CidrBlockAssociation(){}
 }

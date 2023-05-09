@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateAddressRequest {
     
     public String associationId;
+
     public DisassociateAddressRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -16,6 +17,7 @@ public class DisassociateAddressRequest {
     
     
     public Boolean dryRun;
+
     public DisassociateAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,11 @@ public class DisassociateAddressRequest {
     
     
     public String publicIp;
+
     public DisassociateAddressRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public DisassociateAddressRequest(){}
 }

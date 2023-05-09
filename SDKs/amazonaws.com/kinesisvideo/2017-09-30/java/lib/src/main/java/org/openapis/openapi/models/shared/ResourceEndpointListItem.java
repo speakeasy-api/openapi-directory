@@ -15,6 +15,7 @@ public class ResourceEndpointListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public ChannelProtocolEnum protocol;
+
     public ResourceEndpointListItem withProtocol(ChannelProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -23,9 +24,11 @@ public class ResourceEndpointListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceEndpoint")
     public String resourceEndpoint;
+
     public ResourceEndpointListItem withResourceEndpoint(String resourceEndpoint) {
         this.resourceEndpoint = resourceEndpoint;
         return this;
     }
     
+    public ResourceEndpointListItem(){}
 }

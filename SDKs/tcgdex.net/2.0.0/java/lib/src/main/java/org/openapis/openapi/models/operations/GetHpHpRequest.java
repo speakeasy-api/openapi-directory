@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHpHpRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hp")
     public String hp;
+
     public GetHpHpRequest withHp(String hp) {
         this.hp = hp;
         return this;
     }
     
+    public GetHpHpRequest(@JsonProperty("hp") String hp) {
+        this.hp = hp;
+  }
 }

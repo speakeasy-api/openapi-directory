@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetrulesforapricetableRequest {
@@ -12,6 +13,7 @@ public class GetrulesforapricetableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetrulesforapricetableRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetrulesforapricetableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetrulesforapricetableRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class GetrulesforapricetableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
     public String priceTableId;
+
     public GetrulesforapricetableRequest withPriceTableId(String priceTableId) {
         this.priceTableId = priceTableId;
         return this;
     }
     
+    public GetrulesforapricetableRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("priceTableId") String priceTableId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.priceTableId = priceTableId;
+  }
 }

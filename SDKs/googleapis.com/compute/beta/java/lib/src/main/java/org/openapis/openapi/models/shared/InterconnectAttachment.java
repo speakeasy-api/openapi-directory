@@ -18,6 +18,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminEnabled")
     public Boolean adminEnabled;
+
     public InterconnectAttachment withAdminEnabled(Boolean adminEnabled) {
         this.adminEnabled = adminEnabled;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidth")
     public InterconnectAttachmentBandwidthEnum bandwidth;
+
     public InterconnectAttachment withBandwidth(InterconnectAttachmentBandwidthEnum bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -40,6 +42,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidateIpv6Subnets")
     public String[] candidateIpv6Subnets;
+
     public InterconnectAttachment withCandidateIpv6Subnets(String[] candidateIpv6Subnets) {
         this.candidateIpv6Subnets = candidateIpv6Subnets;
         return this;
@@ -51,6 +54,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidateSubnets")
     public String[] candidateSubnets;
+
     public InterconnectAttachment withCandidateSubnets(String[] candidateSubnets) {
         this.candidateSubnets = candidateSubnets;
         return this;
@@ -62,6 +66,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRouterIpAddress")
     public String cloudRouterIpAddress;
+
     public InterconnectAttachment withCloudRouterIpAddress(String cloudRouterIpAddress) {
         this.cloudRouterIpAddress = cloudRouterIpAddress;
         return this;
@@ -73,6 +78,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRouterIpv6Address")
     public String cloudRouterIpv6Address;
+
     public InterconnectAttachment withCloudRouterIpv6Address(String cloudRouterIpv6Address) {
         this.cloudRouterIpv6Address = cloudRouterIpv6Address;
         return this;
@@ -84,6 +90,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRouterIpv6InterfaceId")
     public String cloudRouterIpv6InterfaceId;
+
     public InterconnectAttachment withCloudRouterIpv6InterfaceId(String cloudRouterIpv6InterfaceId) {
         this.cloudRouterIpv6InterfaceId = cloudRouterIpv6InterfaceId;
         return this;
@@ -95,6 +102,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public InterconnectAttachment withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -106,6 +114,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerRouterIpAddress")
     public String customerRouterIpAddress;
+
     public InterconnectAttachment withCustomerRouterIpAddress(String customerRouterIpAddress) {
         this.customerRouterIpAddress = customerRouterIpAddress;
         return this;
@@ -117,6 +126,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerRouterIpv6Address")
     public String customerRouterIpv6Address;
+
     public InterconnectAttachment withCustomerRouterIpv6Address(String customerRouterIpv6Address) {
         this.customerRouterIpv6Address = customerRouterIpv6Address;
         return this;
@@ -128,6 +138,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerRouterIpv6InterfaceId")
     public String customerRouterIpv6InterfaceId;
+
     public InterconnectAttachment withCustomerRouterIpv6InterfaceId(String customerRouterIpv6InterfaceId) {
         this.customerRouterIpv6InterfaceId = customerRouterIpv6InterfaceId;
         return this;
@@ -139,6 +150,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataplaneVersion")
     public Integer dataplaneVersion;
+
     public InterconnectAttachment withDataplaneVersion(Integer dataplaneVersion) {
         this.dataplaneVersion = dataplaneVersion;
         return this;
@@ -150,6 +162,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InterconnectAttachment withDescription(String description) {
         this.description = description;
         return this;
@@ -161,6 +174,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edgeAvailabilityDomain")
     public InterconnectAttachmentEdgeAvailabilityDomainEnum edgeAvailabilityDomain;
+
     public InterconnectAttachment withEdgeAvailabilityDomain(InterconnectAttachmentEdgeAvailabilityDomainEnum edgeAvailabilityDomain) {
         this.edgeAvailabilityDomain = edgeAvailabilityDomain;
         return this;
@@ -172,6 +186,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryption")
     public InterconnectAttachmentEncryptionEnum encryption;
+
     public InterconnectAttachment withEncryption(InterconnectAttachmentEncryptionEnum encryption) {
         this.encryption = encryption;
         return this;
@@ -183,6 +198,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleReferenceId")
     public String googleReferenceId;
+
     public InterconnectAttachment withGoogleReferenceId(String googleReferenceId) {
         this.googleReferenceId = googleReferenceId;
         return this;
@@ -194,6 +210,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InterconnectAttachment withId(String id) {
         this.id = id;
         return this;
@@ -205,6 +222,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnect")
     public String interconnect;
+
     public InterconnectAttachment withInterconnect(String interconnect) {
         this.interconnect = interconnect;
         return this;
@@ -216,6 +234,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipsecInternalAddresses")
     public String[] ipsecInternalAddresses;
+
     public InterconnectAttachment withIpsecInternalAddresses(String[] ipsecInternalAddresses) {
         this.ipsecInternalAddresses = ipsecInternalAddresses;
         return this;
@@ -227,6 +246,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InterconnectAttachment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -238,6 +258,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public InterconnectAttachment withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -249,6 +270,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public InterconnectAttachment withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -260,6 +282,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Integer mtu;
+
     public InterconnectAttachment withMtu(Integer mtu) {
         this.mtu = mtu;
         return this;
@@ -271,6 +294,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InterconnectAttachment withName(String name) {
         this.name = name;
         return this;
@@ -282,6 +306,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationalStatus")
     public InterconnectAttachmentOperationalStatusEnum operationalStatus;
+
     public InterconnectAttachment withOperationalStatus(InterconnectAttachmentOperationalStatusEnum operationalStatus) {
         this.operationalStatus = operationalStatus;
         return this;
@@ -293,6 +318,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pairingKey")
     public String pairingKey;
+
     public InterconnectAttachment withPairingKey(String pairingKey) {
         this.pairingKey = pairingKey;
         return this;
@@ -304,6 +330,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerAsn")
     public String partnerAsn;
+
     public InterconnectAttachment withPartnerAsn(String partnerAsn) {
         this.partnerAsn = partnerAsn;
         return this;
@@ -315,6 +342,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerMetadata")
     public InterconnectAttachmentPartnerMetadata partnerMetadata;
+
     public InterconnectAttachment withPartnerMetadata(InterconnectAttachmentPartnerMetadata partnerMetadata) {
         this.partnerMetadata = partnerMetadata;
         return this;
@@ -326,6 +354,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateInterconnectInfo")
     public InterconnectAttachmentPrivateInfo privateInterconnectInfo;
+
     public InterconnectAttachment withPrivateInterconnectInfo(InterconnectAttachmentPrivateInfo privateInterconnectInfo) {
         this.privateInterconnectInfo = privateInterconnectInfo;
         return this;
@@ -337,6 +366,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public InterconnectAttachment withRegion(String region) {
         this.region = region;
         return this;
@@ -348,6 +378,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("router")
     public String router;
+
     public InterconnectAttachment withRouter(String router) {
         this.router = router;
         return this;
@@ -359,6 +390,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public InterconnectAttachment withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -370,6 +402,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InterconnectAttachment withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -381,6 +414,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackType")
     public InterconnectAttachmentStackTypeEnum stackType;
+
     public InterconnectAttachment withStackType(InterconnectAttachmentStackTypeEnum stackType) {
         this.stackType = stackType;
         return this;
@@ -392,6 +426,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InterconnectAttachmentStateEnum state;
+
     public InterconnectAttachment withState(InterconnectAttachmentStateEnum state) {
         this.state = state;
         return this;
@@ -403,6 +438,7 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InterconnectAttachmentTypeEnum type;
+
     public InterconnectAttachment withType(InterconnectAttachmentTypeEnum type) {
         this.type = type;
         return this;
@@ -414,9 +450,11 @@ public class InterconnectAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlanTag8021q")
     public Integer vlanTag8021q;
+
     public InterconnectAttachment withVlanTag8021q(Integer vlanTag8021q) {
         this.vlanTag8021q = vlanTag8021q;
         return this;
     }
     
+    public InterconnectAttachment(){}
 }

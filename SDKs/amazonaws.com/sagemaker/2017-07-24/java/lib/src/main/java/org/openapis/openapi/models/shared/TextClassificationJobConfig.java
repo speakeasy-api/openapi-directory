@@ -15,6 +15,7 @@ public class TextClassificationJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionCriteria")
     public AutoMLJobCompletionCriteria completionCriteria;
+
     public TextClassificationJobConfig withCompletionCriteria(AutoMLJobCompletionCriteria completionCriteria) {
         this.completionCriteria = completionCriteria;
         return this;
@@ -23,6 +24,7 @@ public class TextClassificationJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentColumn")
     public String contentColumn;
+
     public TextClassificationJobConfig withContentColumn(String contentColumn) {
         this.contentColumn = contentColumn;
         return this;
@@ -31,9 +33,11 @@ public class TextClassificationJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLabelColumn")
     public String targetLabelColumn;
+
     public TextClassificationJobConfig withTargetLabelColumn(String targetLabelColumn) {
         this.targetLabelColumn = targetLabelColumn;
         return this;
     }
     
+    public TextClassificationJobConfig(){}
 }

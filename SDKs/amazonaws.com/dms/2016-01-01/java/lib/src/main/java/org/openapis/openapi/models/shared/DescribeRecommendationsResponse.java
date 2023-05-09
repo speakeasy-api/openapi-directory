@@ -15,6 +15,7 @@ public class DescribeRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recommendations")
     public Recommendation[] recommendations;
+
     public DescribeRecommendationsResponse withRecommendations(Recommendation[] recommendations) {
         this.recommendations = recommendations;
         return this;
     }
     
+    public DescribeRecommendationsResponse(){}
 }

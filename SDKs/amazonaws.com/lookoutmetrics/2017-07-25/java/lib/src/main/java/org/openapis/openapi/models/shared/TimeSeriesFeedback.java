@@ -15,6 +15,7 @@ public class TimeSeriesFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAnomaly")
     public Boolean isAnomaly;
+
     public TimeSeriesFeedback withIsAnomaly(Boolean isAnomaly) {
         this.isAnomaly = isAnomaly;
         return this;
@@ -23,9 +24,11 @@ public class TimeSeriesFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesId")
     public String timeSeriesId;
+
     public TimeSeriesFeedback withTimeSeriesId(String timeSeriesId) {
         this.timeSeriesId = timeSeriesId;
         return this;
     }
     
+    public TimeSeriesFeedback(){}
 }

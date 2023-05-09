@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions {
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -22,6 +23,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstru
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -33,9 +35,13 @@ public class GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstru
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions(@JsonProperty("investment_product_id") String investmentProductId) {
+        this.investmentProductId = investmentProductId;
+  }
 }

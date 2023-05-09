@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsListExecutionsRequest {
@@ -12,6 +13,7 @@ public class FunctionsListExecutionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
     public String functionId;
+
     public FunctionsListExecutionsRequest withFunctionId(String functionId) {
         this.functionId = functionId;
         return this;
@@ -22,6 +24,7 @@ public class FunctionsListExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FunctionsListExecutionsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class FunctionsListExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FunctionsListExecutionsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class FunctionsListExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
     public String orderType;
+
     public FunctionsListExecutionsRequest withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -52,9 +57,13 @@ public class FunctionsListExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public FunctionsListExecutionsRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public FunctionsListExecutionsRequest(@JsonProperty("functionId") String functionId) {
+        this.functionId = functionId;
+  }
 }

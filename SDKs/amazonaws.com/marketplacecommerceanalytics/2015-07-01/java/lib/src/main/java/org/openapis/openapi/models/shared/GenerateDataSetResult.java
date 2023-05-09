@@ -15,9 +15,11 @@ public class GenerateDataSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSetRequestId")
     public String dataSetRequestId;
+
     public GenerateDataSetResult withDataSetRequestId(String dataSetRequestId) {
         this.dataSetRequestId = dataSetRequestId;
         return this;
     }
     
+    public GenerateDataSetResult(){}
 }

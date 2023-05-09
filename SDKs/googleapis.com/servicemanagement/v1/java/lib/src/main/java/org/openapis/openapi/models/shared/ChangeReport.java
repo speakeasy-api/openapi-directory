@@ -18,9 +18,11 @@ public class ChangeReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configChanges")
     public ConfigChange[] configChanges;
+
     public ChangeReport withConfigChanges(ConfigChange[] configChanges) {
         this.configChanges = configChanges;
         return this;
     }
     
+    public ChangeReport(){}
 }

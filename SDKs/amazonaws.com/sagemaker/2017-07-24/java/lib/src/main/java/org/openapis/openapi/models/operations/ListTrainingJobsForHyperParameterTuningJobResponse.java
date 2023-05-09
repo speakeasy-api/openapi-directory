@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTrainingJobsForHyperParameterTuningJobResponse {
     
     public String contentType;
+
     public ListTrainingJobsForHyperParameterTuningJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTrainingJobsForHyperParameterTuningJobResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTrainingJobsForHyperParameterTuningJobResponse listTrainingJobsForHyperParameterTuningJobResponse;
+
     public ListTrainingJobsForHyperParameterTuningJobResponse withListTrainingJobsForHyperParameterTuningJobResponse(org.openapis.openapi.models.shared.ListTrainingJobsForHyperParameterTuningJobResponse listTrainingJobsForHyperParameterTuningJobResponse) {
         this.listTrainingJobsForHyperParameterTuningJobResponse = listTrainingJobsForHyperParameterTuningJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListTrainingJobsForHyperParameterTuningJobResponse {
      */
     
     public Object resourceNotFound;
+
     public ListTrainingJobsForHyperParameterTuningJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class ListTrainingJobsForHyperParameterTuningJobResponse {
     
     
     public Integer statusCode;
+
     public ListTrainingJobsForHyperParameterTuningJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListTrainingJobsForHyperParameterTuningJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTrainingJobsForHyperParameterTuningJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTrainingJobsForHyperParameterTuningJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

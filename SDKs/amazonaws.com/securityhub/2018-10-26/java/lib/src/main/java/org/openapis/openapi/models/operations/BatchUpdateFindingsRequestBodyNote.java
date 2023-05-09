@@ -15,6 +15,7 @@ public class BatchUpdateFindingsRequestBodyNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public BatchUpdateFindingsRequestBodyNote withText(String text) {
         this.text = text;
         return this;
@@ -23,9 +24,11 @@ public class BatchUpdateFindingsRequestBodyNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedBy")
     public String updatedBy;
+
     public BatchUpdateFindingsRequestBodyNote withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public BatchUpdateFindingsRequestBodyNote(){}
 }

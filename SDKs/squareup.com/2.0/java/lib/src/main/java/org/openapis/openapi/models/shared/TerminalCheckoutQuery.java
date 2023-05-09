@@ -12,6 +12,7 @@ public class TerminalCheckoutQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public TerminalCheckoutQueryFilter filter;
+
     public TerminalCheckoutQuery withFilter(TerminalCheckoutQueryFilter filter) {
         this.filter = filter;
         return this;
@@ -20,9 +21,11 @@ public class TerminalCheckoutQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public TerminalCheckoutQuerySort sort;
+
     public TerminalCheckoutQuery withSort(TerminalCheckoutQuerySort sort) {
         this.sort = sort;
         return this;
     }
     
+    public TerminalCheckoutQuery(){}
 }

@@ -52,11 +52,9 @@ public class BluetoothSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkBluetoothSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkBluetoothSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkBluetoothSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkBluetoothSettingsResponse(contentType, httpRes.statusCode()) {{
             getNetworkBluetoothSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class BluetoothSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsResponse res = new org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsResponse res = new org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsResponse(contentType, httpRes.statusCode()) {{
             updateDeviceWirelessBluetoothSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class BluetoothSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkBluetoothSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkBluetoothSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkBluetoothSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkBluetoothSettingsResponse(contentType, httpRes.statusCode()) {{
             updateNetworkBluetoothSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

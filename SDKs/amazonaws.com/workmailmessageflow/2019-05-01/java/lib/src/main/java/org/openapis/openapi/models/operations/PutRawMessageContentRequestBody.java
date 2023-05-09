@@ -12,9 +12,13 @@ public class PutRawMessageContentRequestBody {
      */
     @JsonProperty("content")
     public PutRawMessageContentRequestBodyContent content;
+
     public PutRawMessageContentRequestBody withContent(PutRawMessageContentRequestBodyContent content) {
         this.content = content;
         return this;
     }
     
+    public PutRawMessageContentRequestBody(@JsonProperty("content") PutRawMessageContentRequestBodyContent content) {
+        this.content = content;
+  }
 }

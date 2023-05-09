@@ -15,6 +15,7 @@ public class Hits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public Hits withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +24,7 @@ public class Hits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("found")
     public Long found;
+
     public Hits withFound(Long found) {
         this.found = found;
         return this;
@@ -31,6 +33,7 @@ public class Hits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hit")
     public Hit[] hit;
+
     public Hits withHit(Hit[] hit) {
         this.hit = hit;
         return this;
@@ -39,9 +42,11 @@ public class Hits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Long start;
+
     public Hits withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public Hits(){}
 }

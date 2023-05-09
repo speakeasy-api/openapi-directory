@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerDefinitions")
     public AwsEcsTaskDefinitionContainerDefinitionsDetails[] containerDefinitions;
+
     public AwsEcsTaskDefinitionDetails withContainerDefinitions(AwsEcsTaskDefinitionContainerDefinitionsDetails[] containerDefinitions) {
         this.containerDefinitions = containerDefinitions;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cpu")
     public String cpu;
+
     public AwsEcsTaskDefinitionDetails withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public AwsEcsTaskDefinitionDetails withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Family")
     public String family;
+
     public AwsEcsTaskDefinitionDetails withFamily(String family) {
         this.family = family;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceAccelerators")
     public AwsEcsTaskDefinitionInferenceAcceleratorsDetails[] inferenceAccelerators;
+
     public AwsEcsTaskDefinitionDetails withInferenceAccelerators(AwsEcsTaskDefinitionInferenceAcceleratorsDetails[] inferenceAccelerators) {
         this.inferenceAccelerators = inferenceAccelerators;
         return this;
@@ -55,6 +60,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpcMode")
     public String ipcMode;
+
     public AwsEcsTaskDefinitionDetails withIpcMode(String ipcMode) {
         this.ipcMode = ipcMode;
         return this;
@@ -63,6 +69,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public String memory;
+
     public AwsEcsTaskDefinitionDetails withMemory(String memory) {
         this.memory = memory;
         return this;
@@ -71,6 +78,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkMode")
     public String networkMode;
+
     public AwsEcsTaskDefinitionDetails withNetworkMode(String networkMode) {
         this.networkMode = networkMode;
         return this;
@@ -79,6 +87,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PidMode")
     public String pidMode;
+
     public AwsEcsTaskDefinitionDetails withPidMode(String pidMode) {
         this.pidMode = pidMode;
         return this;
@@ -87,6 +96,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementConstraints")
     public AwsEcsTaskDefinitionPlacementConstraintsDetails[] placementConstraints;
+
     public AwsEcsTaskDefinitionDetails withPlacementConstraints(AwsEcsTaskDefinitionPlacementConstraintsDetails[] placementConstraints) {
         this.placementConstraints = placementConstraints;
         return this;
@@ -95,6 +105,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProxyConfiguration")
     public AwsEcsTaskDefinitionProxyConfigurationDetails proxyConfiguration;
+
     public AwsEcsTaskDefinitionDetails withProxyConfiguration(AwsEcsTaskDefinitionProxyConfigurationDetails proxyConfiguration) {
         this.proxyConfiguration = proxyConfiguration;
         return this;
@@ -103,6 +114,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequiresCompatibilities")
     public String[] requiresCompatibilities;
+
     public AwsEcsTaskDefinitionDetails withRequiresCompatibilities(String[] requiresCompatibilities) {
         this.requiresCompatibilities = requiresCompatibilities;
         return this;
@@ -111,6 +123,7 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRoleArn")
     public String taskRoleArn;
+
     public AwsEcsTaskDefinitionDetails withTaskRoleArn(String taskRoleArn) {
         this.taskRoleArn = taskRoleArn;
         return this;
@@ -119,9 +132,11 @@ public class AwsEcsTaskDefinitionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volumes")
     public AwsEcsTaskDefinitionVolumesDetails[] volumes;
+
     public AwsEcsTaskDefinitionDetails withVolumes(AwsEcsTaskDefinitionVolumesDetails[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public AwsEcsTaskDefinitionDetails(){}
 }

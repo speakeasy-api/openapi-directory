@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRotationResult {
     @JsonProperty("RotationArn")
     public String rotationArn;
+
     public CreateRotationResult withRotationArn(String rotationArn) {
         this.rotationArn = rotationArn;
         return this;
     }
     
+    public CreateRotationResult(@JsonProperty("RotationArn") String rotationArn) {
+        this.rotationArn = rotationArn;
+  }
 }

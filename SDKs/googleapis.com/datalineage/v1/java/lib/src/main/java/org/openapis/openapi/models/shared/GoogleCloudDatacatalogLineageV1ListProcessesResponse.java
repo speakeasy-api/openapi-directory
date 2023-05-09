@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1ListProcessesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogLineageV1ListProcessesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogLineageV1ListProcessesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processes")
     public GoogleCloudDatacatalogLineageV1Process[] processes;
+
     public GoogleCloudDatacatalogLineageV1ListProcessesResponse withProcesses(GoogleCloudDatacatalogLineageV1Process[] processes) {
         this.processes = processes;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1ListProcessesResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EvaluateCodeResponse {
@@ -12,6 +13,7 @@ public class EvaluateCodeResponse {
      */
     
     public Object accessDeniedException;
+
     public EvaluateCodeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class EvaluateCodeResponse {
      */
     
     public Object badRequestException;
+
     public EvaluateCodeResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class EvaluateCodeResponse {
     
     
     public String contentType;
+
     public EvaluateCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class EvaluateCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.EvaluateCodeResponse evaluateCodeResponse;
+
     public EvaluateCodeResponse withEvaluateCodeResponse(org.openapis.openapi.models.shared.EvaluateCodeResponse evaluateCodeResponse) {
         this.evaluateCodeResponse = evaluateCodeResponse;
         return this;
@@ -49,6 +54,7 @@ public class EvaluateCodeResponse {
      */
     
     public Object internalFailureException;
+
     public EvaluateCodeResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -56,6 +62,7 @@ public class EvaluateCodeResponse {
     
     
     public Integer statusCode;
+
     public EvaluateCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class EvaluateCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EvaluateCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EvaluateCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

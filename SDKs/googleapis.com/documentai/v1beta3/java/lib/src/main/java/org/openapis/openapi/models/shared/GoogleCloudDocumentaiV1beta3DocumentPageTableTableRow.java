@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTableTableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cells")
     public GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell[] cells;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTableTableRow withCells(GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell[] cells) {
         this.cells = cells;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentPageTableTableRow(){}
 }

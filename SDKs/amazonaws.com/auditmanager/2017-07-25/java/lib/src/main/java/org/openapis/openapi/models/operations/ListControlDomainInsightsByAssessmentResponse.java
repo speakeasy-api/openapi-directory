@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListControlDomainInsightsByAssessmentResponse {
@@ -12,6 +13,7 @@ public class ListControlDomainInsightsByAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public ListControlDomainInsightsByAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListControlDomainInsightsByAssessmentResponse {
     
     
     public String contentType;
+
     public ListControlDomainInsightsByAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListControlDomainInsightsByAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public ListControlDomainInsightsByAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListControlDomainInsightsByAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.ListControlDomainInsightsByAssessmentResponse listControlDomainInsightsByAssessmentResponse;
+
     public ListControlDomainInsightsByAssessmentResponse withListControlDomainInsightsByAssessmentResponse(org.openapis.openapi.models.shared.ListControlDomainInsightsByAssessmentResponse listControlDomainInsightsByAssessmentResponse) {
         this.listControlDomainInsightsByAssessmentResponse = listControlDomainInsightsByAssessmentResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListControlDomainInsightsByAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListControlDomainInsightsByAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListControlDomainInsightsByAssessmentResponse {
     
     
     public Integer statusCode;
+
     public ListControlDomainInsightsByAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListControlDomainInsightsByAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListControlDomainInsightsByAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListControlDomainInsightsByAssessmentResponse {
      */
     
     public Object validationException;
+
     public ListControlDomainInsightsByAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListControlDomainInsightsByAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

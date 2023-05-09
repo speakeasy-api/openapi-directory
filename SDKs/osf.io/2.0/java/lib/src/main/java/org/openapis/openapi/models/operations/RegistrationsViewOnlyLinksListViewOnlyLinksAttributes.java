@@ -15,6 +15,7 @@ public class RegistrationsViewOnlyLinksListViewOnlyLinksAttributes {
      */
     
     public Boolean anonymous;
+
     public RegistrationsViewOnlyLinksListViewOnlyLinksAttributes withAnonymous(Boolean anonymous) {
         this.anonymous = anonymous;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsViewOnlyLinksListViewOnlyLinksAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public RegistrationsViewOnlyLinksListViewOnlyLinksAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsViewOnlyLinksListViewOnlyLinksAttributes {
      */
     
     public String key;
+
     public RegistrationsViewOnlyLinksListViewOnlyLinksAttributes withKey(String key) {
         this.key = key;
         return this;
@@ -45,9 +48,11 @@ public class RegistrationsViewOnlyLinksListViewOnlyLinksAttributes {
      */
     
     public String name;
+
     public RegistrationsViewOnlyLinksListViewOnlyLinksAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RegistrationsViewOnlyLinksListViewOnlyLinksAttributes(){}
 }

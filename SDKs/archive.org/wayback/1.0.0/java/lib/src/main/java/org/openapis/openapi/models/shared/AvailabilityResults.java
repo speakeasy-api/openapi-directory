@@ -15,9 +15,13 @@ public class AvailabilityResults {
      */
     @JsonProperty("results")
     public ArchivedResult[] results;
+
     public AvailabilityResults withResults(ArchivedResult[] results) {
         this.results = results;
         return this;
     }
     
+    public AvailabilityResults(@JsonProperty("results") ArchivedResult[] results) {
+        this.results = results;
+  }
 }

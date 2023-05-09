@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposListBranchesResponse {
     
     public String contentType;
+
     public ReposListBranchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposListBranchesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposListBranchesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposListBranchesResponse {
     
     
     public Integer statusCode;
+
     public ReposListBranchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposListBranchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposListBranchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposListBranchesResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposListBranchesResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class ReposListBranchesResponse {
      */
     
     public org.openapis.openapi.models.shared.ShortBranch[] shortBranches;
+
     public ReposListBranchesResponse withShortBranches(org.openapis.openapi.models.shared.ShortBranch[] shortBranches) {
         this.shortBranches = shortBranches;
         return this;
     }
     
+    public ReposListBranchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

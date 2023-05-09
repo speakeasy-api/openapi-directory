@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeEc2InstanceLimitsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeEc2InstanceLimitsInput describeEc2InstanceLimitsInput;
+
     public DescribeEc2InstanceLimitsRequest withDescribeEc2InstanceLimitsInput(org.openapis.openapi.models.shared.DescribeEc2InstanceLimitsInput describeEc2InstanceLimitsInput) {
         this.describeEc2InstanceLimitsInput = describeEc2InstanceLimitsInput;
         return this;
@@ -16,6 +18,7 @@ public class DescribeEc2InstanceLimitsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeEc2InstanceLimitsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeEc2InstanceLimitsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeEc2InstanceLimitsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeEc2InstanceLimitsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeEc2InstanceLimitsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeEc2InstanceLimitsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeEc2InstanceLimitsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeEc2InstanceLimitsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeEc2InstanceLimitsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeEc2InstanceLimitsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeEc2InstanceLimitsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeEc2InstanceLimitsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeEc2InstanceLimitsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DescribeEc2InstanceLimitsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeEc2InstanceLimitsXAmzTargetEnum xAmzTarget;
+
     public DescribeEc2InstanceLimitsRequest withXAmzTarget(DescribeEc2InstanceLimitsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeEc2InstanceLimitsRequest(@JsonProperty("DescribeEC2InstanceLimitsInput") org.openapis.openapi.models.shared.DescribeEc2InstanceLimitsInput describeEc2InstanceLimitsInput, @JsonProperty("X-Amz-Target") DescribeEc2InstanceLimitsXAmzTargetEnum xAmzTarget) {
+        this.describeEc2InstanceLimitsInput = describeEc2InstanceLimitsInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

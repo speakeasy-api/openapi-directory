@@ -98,10 +98,8 @@ public class PricesAndFixedPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUpdatePriceOrFixedPriceResponse res = new org.openapis.openapi.models.operations.CreateUpdatePriceOrFixedPriceResponse() {{
+        org.openapis.openapi.models.operations.CreateUpdatePriceOrFixedPriceResponse res = new org.openapis.openapi.models.operations.CreateUpdatePriceOrFixedPriceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,10 +138,8 @@ public class PricesAndFixedPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePriceResponse res = new org.openapis.openapi.models.operations.DeletePriceResponse() {{
+        org.openapis.openapi.models.operations.DeletePriceResponse res = new org.openapis.openapi.models.operations.DeletePriceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,10 +178,8 @@ public class PricesAndFixedPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletefixedpricesonapricetableortradepolicyResponse res = new org.openapis.openapi.models.operations.DeletefixedpricesonapricetableortradepolicyResponse() {{
+        org.openapis.openapi.models.operations.DeletefixedpricesonapricetableortradepolicyResponse res = new org.openapis.openapi.models.operations.DeletefixedpricesonapricetableortradepolicyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,11 +264,9 @@ public class PricesAndFixedPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetComputedPricebypricetableResponse res = new org.openapis.openapi.models.operations.GetComputedPricebypricetableResponse() {{
+        org.openapis.openapi.models.operations.GetComputedPricebypricetableResponse res = new org.openapis.openapi.models.operations.GetComputedPricebypricetableResponse(contentType, httpRes.statusCode()) {{
             getcomputedprice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -351,11 +343,9 @@ public class PricesAndFixedPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFixedPricesResponse res = new org.openapis.openapi.models.operations.GetFixedPricesResponse() {{
+        org.openapis.openapi.models.operations.GetFixedPricesResponse res = new org.openapis.openapi.models.operations.GetFixedPricesResponse(contentType, httpRes.statusCode()) {{
             fixedPrices = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -422,11 +412,9 @@ public class PricesAndFixedPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFixedPricesonapricetableResponse res = new org.openapis.openapi.models.operations.GetFixedPricesonapricetableResponse() {{
+        org.openapis.openapi.models.operations.GetFixedPricesonapricetableResponse res = new org.openapis.openapi.models.operations.GetFixedPricesonapricetableResponse(contentType, httpRes.statusCode()) {{
             fixedPrices = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -500,11 +488,9 @@ public class PricesAndFixedPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPriceResponse res = new org.openapis.openapi.models.operations.GetPriceResponse() {{
+        org.openapis.openapi.models.operations.GetPriceResponse res = new org.openapis.openapi.models.operations.GetPriceResponse(contentType, httpRes.statusCode()) {{
             getprice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -566,10 +552,8 @@ public class PricesAndFixedPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateorupdatefixedpricesonpricetableortradepolicyResponse res = new org.openapis.openapi.models.operations.CreateorupdatefixedpricesonpricetableortradepolicyResponse() {{
+        org.openapis.openapi.models.operations.CreateorupdatefixedpricesonpricetableortradepolicyResponse res = new org.openapis.openapi.models.operations.CreateorupdatefixedpricesonpricetableortradepolicyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

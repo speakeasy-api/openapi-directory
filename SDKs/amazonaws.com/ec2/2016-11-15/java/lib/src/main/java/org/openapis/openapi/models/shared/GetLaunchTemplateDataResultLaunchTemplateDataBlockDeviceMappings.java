@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings {
     
     public String deviceName;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,6 +20,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs ebs;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings withEbs(GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs ebs) {
         this.ebs = ebs;
         return this;
@@ -26,6 +28,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings {
     
     
     public String noDevice;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -33,9 +36,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings {
     
     
     public String virtualName;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappings(){}
 }

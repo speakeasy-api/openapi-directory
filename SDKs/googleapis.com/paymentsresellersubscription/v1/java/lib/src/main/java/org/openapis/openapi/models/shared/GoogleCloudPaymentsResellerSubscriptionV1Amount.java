@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1Amount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountMicros")
     public String amountMicros;
+
     public GoogleCloudPaymentsResellerSubscriptionV1Amount withAmountMicros(String amountMicros) {
         this.amountMicros = amountMicros;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1Amount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleCloudPaymentsResellerSubscriptionV1Amount withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1Amount(){}
 }

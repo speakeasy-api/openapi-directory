@@ -15,6 +15,7 @@ public class LendingDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public LendingDetection withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -26,6 +27,7 @@ public class LendingDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Geometry")
     public Geometry geometry;
+
     public LendingDetection withGeometry(Geometry geometry) {
         this.geometry = geometry;
         return this;
@@ -34,6 +36,7 @@ public class LendingDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectionStatus")
     public SelectionStatusEnum selectionStatus;
+
     public LendingDetection withSelectionStatus(SelectionStatusEnum selectionStatus) {
         this.selectionStatus = selectionStatus;
         return this;
@@ -42,9 +45,11 @@ public class LendingDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public LendingDetection withText(String text) {
         this.text = text;
         return this;
     }
     
+    public LendingDetection(){}
 }

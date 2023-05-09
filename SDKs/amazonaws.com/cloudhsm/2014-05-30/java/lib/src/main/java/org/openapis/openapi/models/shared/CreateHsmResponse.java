@@ -15,9 +15,11 @@ public class CreateHsmResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmArn")
     public String hsmArn;
+
     public CreateHsmResponse withHsmArn(String hsmArn) {
         this.hsmArn = hsmArn;
         return this;
     }
     
+    public CreateHsmResponse(){}
 }

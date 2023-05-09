@@ -18,6 +18,7 @@ public class GetUploadedDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentDetails")
     public DocumentDetail[] documentDetails;
+
     public GetUploadedDocumentsResponse withDocumentDetails(DocumentDetail[] documentDetails) {
         this.documentDetails = documentDetails;
         return this;
@@ -29,6 +30,7 @@ public class GetUploadedDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public GetUploadedDocumentsResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -40,6 +42,7 @@ public class GetUploadedDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetUploadedDocumentsResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -51,9 +54,11 @@ public class GetUploadedDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetUploadedDocumentsResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public GetUploadedDocumentsResponse(){}
 }

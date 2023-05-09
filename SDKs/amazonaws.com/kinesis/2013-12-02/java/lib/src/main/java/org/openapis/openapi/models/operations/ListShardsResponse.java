@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListShardsResponse {
@@ -12,6 +13,7 @@ public class ListShardsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListShardsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListShardsResponse {
     
     
     public String contentType;
+
     public ListShardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListShardsResponse {
      */
     
     public Object expiredNextTokenException;
+
     public ListShardsResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListShardsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListShardsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class ListShardsResponse {
      */
     
     public Object limitExceededException;
+
     public ListShardsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class ListShardsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListShardsOutput listShardsOutput;
+
     public ListShardsResponse withListShardsOutput(org.openapis.openapi.models.shared.ListShardsOutput listShardsOutput) {
         this.listShardsOutput = listShardsOutput;
         return this;
@@ -69,6 +76,7 @@ public class ListShardsResponse {
      */
     
     public Object resourceInUseException;
+
     public ListShardsResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -79,6 +87,7 @@ public class ListShardsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListShardsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class ListShardsResponse {
     
     
     public Integer statusCode;
+
     public ListShardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class ListShardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListShardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListShardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class OBWriteFileResponse3Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteFileResponse3DataCharges[] charges;
+
     public OBWriteFileResponse3Data withCharges(OBWriteFileResponse3DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -27,6 +28,7 @@ public class OBWriteFileResponse3Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteFileResponse3Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -41,6 +43,7 @@ public class OBWriteFileResponse3Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteFileResponse3Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteFileResponse3Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteFileResponse3Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -62,6 +66,7 @@ public class OBWriteFileResponse3Data {
      */
     @JsonProperty("FilePaymentId")
     public String filePaymentId;
+
     public OBWriteFileResponse3Data withFilePaymentId(String filePaymentId) {
         this.filePaymentId = filePaymentId;
         return this;
@@ -72,6 +77,7 @@ public class OBWriteFileResponse3Data {
      */
     @JsonProperty("Initiation")
     public OBWriteFileResponse3DataInitiation initiation;
+
     public OBWriteFileResponse3Data withInitiation(OBWriteFileResponse3DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -83,6 +89,7 @@ public class OBWriteFileResponse3Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiAuthorisation")
     public OBWriteFileResponse3DataMultiAuthorisation multiAuthorisation;
+
     public OBWriteFileResponse3Data withMultiAuthorisation(OBWriteFileResponse3DataMultiAuthorisation multiAuthorisation) {
         this.multiAuthorisation = multiAuthorisation;
         return this;
@@ -93,6 +100,7 @@ public class OBWriteFileResponse3Data {
      */
     @JsonProperty("Status")
     public OBWriteFileResponse3DataStatusEnum status;
+
     public OBWriteFileResponse3Data withStatus(OBWriteFileResponse3DataStatusEnum status) {
         this.status = status;
         return this;
@@ -107,9 +115,18 @@ public class OBWriteFileResponse3Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteFileResponse3Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteFileResponse3Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("FilePaymentId") String filePaymentId, @JsonProperty("Initiation") OBWriteFileResponse3DataInitiation initiation, @JsonProperty("Status") OBWriteFileResponse3DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.filePaymentId = filePaymentId;
+        this.initiation = initiation;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

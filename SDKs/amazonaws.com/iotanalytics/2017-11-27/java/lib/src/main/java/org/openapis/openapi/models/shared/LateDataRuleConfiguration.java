@@ -15,9 +15,11 @@ public class LateDataRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaTimeSessionWindowConfiguration")
     public DeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
+
     public LateDataRuleConfiguration withDeltaTimeSessionWindowConfiguration(DeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
         this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
         return this;
     }
     
+    public LateDataRuleConfiguration(){}
 }

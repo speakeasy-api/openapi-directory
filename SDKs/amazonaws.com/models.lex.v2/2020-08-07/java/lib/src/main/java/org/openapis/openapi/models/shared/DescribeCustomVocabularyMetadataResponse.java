@@ -20,6 +20,7 @@ public class DescribeCustomVocabularyMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DescribeCustomVocabularyMetadataResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class DescribeCustomVocabularyMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public DescribeCustomVocabularyMetadataResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -38,6 +40,7 @@ public class DescribeCustomVocabularyMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DescribeCustomVocabularyMetadataResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -46,6 +49,7 @@ public class DescribeCustomVocabularyMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customVocabularyStatus")
     public CustomVocabularyStatusEnum customVocabularyStatus;
+
     public DescribeCustomVocabularyMetadataResponse withCustomVocabularyStatus(CustomVocabularyStatusEnum customVocabularyStatus) {
         this.customVocabularyStatus = customVocabularyStatus;
         return this;
@@ -56,6 +60,7 @@ public class DescribeCustomVocabularyMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DescribeCustomVocabularyMetadataResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,9 +69,11 @@ public class DescribeCustomVocabularyMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public DescribeCustomVocabularyMetadataResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
     }
     
+    public DescribeCustomVocabularyMetadataResponse(){}
 }

@@ -12,6 +12,7 @@ public class PostServersIdActionsResetPassword201ApplicationJSONAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostServersIdActionsResetPassword201ApplicationJSONAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostServersIdActionsResetPassword201ApplicationJSONAction {
      */
     @JsonProperty("error")
     public PostServersIdActionsResetPassword201ApplicationJSONActionError error;
+
     public PostServersIdActionsResetPassword201ApplicationJSONAction withError(PostServersIdActionsResetPassword201ApplicationJSONActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostServersIdActionsResetPassword201ApplicationJSONAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostServersIdActionsResetPassword201ApplicationJSONAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostServersIdActionsResetPassword201ApplicationJSONAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersIdActionsResetPassword201ApplicationJSONAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostServersIdActionsResetPassword201ApplicationJSONAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostServersIdActionsResetPassword201ApplicationJSONAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostServersIdActionsResetPassword201ApplicationJSONAction {
      */
     @JsonProperty("resources")
     public PostServersIdActionsResetPassword201ApplicationJSONActionResources[] resources;
+
     public PostServersIdActionsResetPassword201ApplicationJSONAction withResources(PostServersIdActionsResetPassword201ApplicationJSONActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostServersIdActionsResetPassword201ApplicationJSONAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostServersIdActionsResetPassword201ApplicationJSONAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostServersIdActionsResetPassword201ApplicationJSONAction {
      */
     @JsonProperty("status")
     public PostServersIdActionsResetPassword201ApplicationJSONActionStatusEnum status;
+
     public PostServersIdActionsResetPassword201ApplicationJSONAction withStatus(PostServersIdActionsResetPassword201ApplicationJSONActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostServersIdActionsResetPassword201ApplicationJSONAction(@JsonProperty("command") String command, @JsonProperty("error") PostServersIdActionsResetPassword201ApplicationJSONActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostServersIdActionsResetPassword201ApplicationJSONActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostServersIdActionsResetPassword201ApplicationJSONActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

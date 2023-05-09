@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValuePga {
      */
     
     public String displayValue;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValuePga withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValuePga {
      */
     
     public Double value;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValuePga withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyLeaderboardEntryValuePga(){}
 }

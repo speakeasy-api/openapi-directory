@@ -18,6 +18,7 @@ public class IdentityDocumentField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public AnalyzeIDDetections type;
+
     public IdentityDocumentField withType(AnalyzeIDDetections type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class IdentityDocumentField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueDetection")
     public AnalyzeIDDetections valueDetection;
+
     public IdentityDocumentField withValueDetection(AnalyzeIDDetections valueDetection) {
         this.valueDetection = valueDetection;
         return this;
     }
     
+    public IdentityDocumentField(){}
 }

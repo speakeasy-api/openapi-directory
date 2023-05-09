@@ -15,6 +15,7 @@ public class PersonDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Person")
     public PersonDetail person;
+
     public PersonDetection withPerson(PersonDetail person) {
         this.person = person;
         return this;
@@ -23,9 +24,11 @@ public class PersonDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public Long timestamp;
+
     public PersonDetection withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PersonDetection(){}
 }

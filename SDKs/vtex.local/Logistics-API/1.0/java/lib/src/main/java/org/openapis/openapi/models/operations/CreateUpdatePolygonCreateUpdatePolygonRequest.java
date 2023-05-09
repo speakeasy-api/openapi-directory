@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdatePolygonCreateUpdatePolygonRequest {
     @JsonProperty("geoShape")
     public CreateUpdatePolygonCreateUpdatePolygonRequestGeoShape geoShape;
+
     public CreateUpdatePolygonCreateUpdatePolygonRequest withGeoShape(CreateUpdatePolygonCreateUpdatePolygonRequestGeoShape geoShape) {
         this.geoShape = geoShape;
         return this;
@@ -16,9 +17,14 @@ public class CreateUpdatePolygonCreateUpdatePolygonRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateUpdatePolygonCreateUpdatePolygonRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateUpdatePolygonCreateUpdatePolygonRequest(@JsonProperty("geoShape") CreateUpdatePolygonCreateUpdatePolygonRequestGeoShape geoShape, @JsonProperty("name") String name) {
+        this.geoShape = geoShape;
+        this.name = name;
+  }
 }

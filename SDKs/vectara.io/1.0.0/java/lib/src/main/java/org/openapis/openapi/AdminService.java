@@ -67,12 +67,10 @@ public class AdminService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCorpusResponse res = new org.openapis.openapi.models.operations.CreateCorpusResponse() {{
+        org.openapis.openapi.models.operations.CreateCorpusResponse res = new org.openapis.openapi.models.operations.CreateCorpusResponse(contentType, httpRes.statusCode()) {{
             adminCreateCorpusResponse = null;
             googlerpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,12 +125,10 @@ public class AdminService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCorpusResponse res = new org.openapis.openapi.models.operations.DeleteCorpusResponse() {{
+        org.openapis.openapi.models.operations.DeleteCorpusResponse res = new org.openapis.openapi.models.operations.DeleteCorpusResponse(contentType, httpRes.statusCode()) {{
             adminDeleteCorpusResponse = null;
             googlerpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,12 +183,10 @@ public class AdminService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCorporaResponse res = new org.openapis.openapi.models.operations.ListCorporaResponse() {{
+        org.openapis.openapi.models.operations.ListCorporaResponse res = new org.openapis.openapi.models.operations.ListCorporaResponse(contentType, httpRes.statusCode()) {{
             adminListCorporaResponse = null;
             googlerpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,12 +241,10 @@ public class AdminService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetCorpusResponse res = new org.openapis.openapi.models.operations.ResetCorpusResponse() {{
+        org.openapis.openapi.models.operations.ResetCorpusResponse res = new org.openapis.openapi.models.operations.ResetCorpusResponse(contentType, httpRes.statusCode()) {{
             adminResetCorpusResponse = null;
             googlerpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

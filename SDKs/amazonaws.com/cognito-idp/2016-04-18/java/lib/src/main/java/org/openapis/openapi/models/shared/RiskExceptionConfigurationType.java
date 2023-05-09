@@ -15,6 +15,7 @@ public class RiskExceptionConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedIPRangeList")
     public String[] blockedIPRangeList;
+
     public RiskExceptionConfigurationType withBlockedIPRangeList(String[] blockedIPRangeList) {
         this.blockedIPRangeList = blockedIPRangeList;
         return this;
@@ -23,9 +24,11 @@ public class RiskExceptionConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkippedIPRangeList")
     public String[] skippedIPRangeList;
+
     public RiskExceptionConfigurationType withSkippedIPRangeList(String[] skippedIPRangeList) {
         this.skippedIPRangeList = skippedIPRangeList;
         return this;
     }
     
+    public RiskExceptionConfigurationType(){}
 }

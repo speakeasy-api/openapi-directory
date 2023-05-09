@@ -18,6 +18,7 @@ public class Option {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Option withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Option {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public Option withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public Option(){}
 }

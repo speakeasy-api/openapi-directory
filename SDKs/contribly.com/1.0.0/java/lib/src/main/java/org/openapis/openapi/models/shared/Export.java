@@ -20,6 +20,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUrl")
     public String downloadUrl;
+
     public Export withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -30,6 +31,7 @@ public class Export {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("finished")
     public OffsetDateTime finished;
+
     public Export withFinished(OffsetDateTime finished) {
         this.finished = finished;
         return this;
@@ -37,6 +39,7 @@ public class Export {
     
     @JsonProperty("id")
     public String id;
+
     public Export withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +47,7 @@ public class Export {
     
     @JsonProperty("owner")
     public String owner;
+
     public Export withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -52,6 +56,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public Double progress;
+
     public Export withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -61,6 +66,7 @@ public class Export {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("started")
     public OffsetDateTime started;
+
     public Export withStarted(OffsetDateTime started) {
         this.started = started;
         return this;
@@ -69,9 +75,15 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step")
     public String step;
+
     public Export withStep(String step) {
         this.step = step;
         return this;
     }
     
+    public Export(@JsonProperty("id") String id, @JsonProperty("owner") String owner, @JsonProperty("started") OffsetDateTime started) {
+        this.id = id;
+        this.owner = owner;
+        this.started = started;
+  }
 }

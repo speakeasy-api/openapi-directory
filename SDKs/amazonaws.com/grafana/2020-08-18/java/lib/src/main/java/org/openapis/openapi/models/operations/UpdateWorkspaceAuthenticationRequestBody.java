@@ -14,6 +14,7 @@ public class UpdateWorkspaceAuthenticationRequestBody {
      */
     @JsonProperty("authenticationProviders")
     public org.openapis.openapi.models.shared.AuthenticationProviderTypesEnum[] authenticationProviders;
+
     public UpdateWorkspaceAuthenticationRequestBody withAuthenticationProviders(org.openapis.openapi.models.shared.AuthenticationProviderTypesEnum[] authenticationProviders) {
         this.authenticationProviders = authenticationProviders;
         return this;
@@ -25,9 +26,13 @@ public class UpdateWorkspaceAuthenticationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlConfiguration")
     public UpdateWorkspaceAuthenticationRequestBodySamlConfiguration samlConfiguration;
+
     public UpdateWorkspaceAuthenticationRequestBody withSamlConfiguration(UpdateWorkspaceAuthenticationRequestBodySamlConfiguration samlConfiguration) {
         this.samlConfiguration = samlConfiguration;
         return this;
     }
     
+    public UpdateWorkspaceAuthenticationRequestBody(@JsonProperty("authenticationProviders") org.openapis.openapi.models.shared.AuthenticationProviderTypesEnum[] authenticationProviders) {
+        this.authenticationProviders = authenticationProviders;
+  }
 }

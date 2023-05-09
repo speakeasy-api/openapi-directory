@@ -66,11 +66,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposAcceptInvitationForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposAcceptInvitationForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.ReposAcceptInvitationForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposAcceptInvitationForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -116,12 +114,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposAddAppAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposAddAppAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposAddAppAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposAddAppAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             integrations = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,13 +172,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposAddCollaboratorResponse res = new org.openapis.openapi.models.operations.ReposAddCollaboratorResponse() {{
+        org.openapis.openapi.models.operations.ReposAddCollaboratorResponse res = new org.openapis.openapi.models.operations.ReposAddCollaboratorResponse(contentType, httpRes.statusCode()) {{
             repositoryInvitation = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -236,13 +230,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposAddStatusCheckContextsResponse res = new org.openapis.openapi.models.operations.ReposAddStatusCheckContextsResponse() {{
+        org.openapis.openapi.models.operations.ReposAddStatusCheckContextsResponse res = new org.openapis.openapi.models.operations.ReposAddStatusCheckContextsResponse(contentType, httpRes.statusCode()) {{
             reposAddStatusCheckContexts200ApplicationJSONStrings = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,12 +292,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposAddTeamAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposAddTeamAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposAddTeamAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposAddTeamAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             teams = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -356,12 +346,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposAddUserAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposAddUserAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposAddUserAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposAddUserAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -406,10 +394,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCheckCollaboratorResponse res = new org.openapis.openapi.models.operations.ReposCheckCollaboratorResponse() {{
+        org.openapis.openapi.models.operations.ReposCheckCollaboratorResponse res = new org.openapis.openapi.models.operations.ReposCheckCollaboratorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -480,12 +466,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCompareCommitsResponse res = new org.openapis.openapi.models.operations.ReposCompareCommitsResponse() {{
+        org.openapis.openapi.models.operations.ReposCompareCommitsResponse res = new org.openapis.openapi.models.operations.ReposCompareCommitsResponse(contentType, httpRes.statusCode()) {{
             commitComparison = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -535,13 +519,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateCommitCommentResponse res = new org.openapis.openapi.models.operations.ReposCreateCommitCommentResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateCommitCommentResponse res = new org.openapis.openapi.models.operations.ReposCreateCommitCommentResponse(contentType, httpRes.statusCode()) {{
             commitComment = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -595,12 +577,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateCommitSignatureProtectionResponse res = new org.openapis.openapi.models.operations.ReposCreateCommitSignatureProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateCommitSignatureProtectionResponse res = new org.openapis.openapi.models.operations.ReposCreateCommitSignatureProtectionResponse(contentType, httpRes.statusCode()) {{
             protectedBranchAdminEnforced = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -650,11 +630,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateCommitStatusResponse res = new org.openapis.openapi.models.operations.ReposCreateCommitStatusResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateCommitStatusResponse res = new org.openapis.openapi.models.operations.ReposCreateCommitStatusResponse(contentType, httpRes.statusCode()) {{
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -697,12 +675,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateDeployKeyResponse res = new org.openapis.openapi.models.operations.ReposCreateDeployKeyResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateDeployKeyResponse res = new org.openapis.openapi.models.operations.ReposCreateDeployKeyResponse(contentType, httpRes.statusCode()) {{
             deployKey = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -796,13 +772,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateDeploymentResponse res = new org.openapis.openapi.models.operations.ReposCreateDeploymentResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateDeploymentResponse res = new org.openapis.openapi.models.operations.ReposCreateDeploymentResponse(contentType, httpRes.statusCode()) {{
             deployment = null;
             reposCreateDeployment202ApplicationJSONObject = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -861,12 +835,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateDeploymentStatusResponse res = new org.openapis.openapi.models.operations.ReposCreateDeploymentStatusResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateDeploymentStatusResponse res = new org.openapis.openapi.models.operations.ReposCreateDeploymentStatusResponse(contentType, httpRes.statusCode()) {{
             deploymentStatus = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -925,11 +897,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateDispatchEventResponse res = new org.openapis.openapi.models.operations.ReposCreateDispatchEventResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateDispatchEventResponse res = new org.openapis.openapi.models.operations.ReposCreateDispatchEventResponse(contentType, httpRes.statusCode()) {{
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -979,15 +949,13 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposCreateForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposCreateForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             repository = null;
             basicError = null;
             scimError = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1057,15 +1025,13 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateForkResponse res = new org.openapis.openapi.models.operations.ReposCreateForkResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateForkResponse res = new org.openapis.openapi.models.operations.ReposCreateForkResponse(contentType, httpRes.statusCode()) {{
             fullRepository = null;
             basicError = null;
             scimError = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1139,13 +1105,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateInOrgResponse res = new org.openapis.openapi.models.operations.ReposCreateInOrgResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateInOrgResponse res = new org.openapis.openapi.models.operations.ReposCreateInOrgResponse(contentType, httpRes.statusCode()) {{
             repository = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1202,13 +1166,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateOrUpdateFileContentsResponse res = new org.openapis.openapi.models.operations.ReposCreateOrUpdateFileContentsResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateOrUpdateFileContentsResponse res = new org.openapis.openapi.models.operations.ReposCreateOrUpdateFileContentsResponse(contentType, httpRes.statusCode()) {{
             fileCommit = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -1263,13 +1225,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreatePagesSiteResponse res = new org.openapis.openapi.models.operations.ReposCreatePagesSiteResponse() {{
+        org.openapis.openapi.models.operations.ReposCreatePagesSiteResponse res = new org.openapis.openapi.models.operations.ReposCreatePagesSiteResponse(contentType, httpRes.statusCode()) {{
             page = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1326,12 +1286,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateReleaseResponse res = new org.openapis.openapi.models.operations.ReposCreateReleaseResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateReleaseResponse res = new org.openapis.openapi.models.operations.ReposCreateReleaseResponse(contentType, httpRes.statusCode()) {{
             release = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1388,11 +1346,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateUsingTemplateResponse res = new org.openapis.openapi.models.operations.ReposCreateUsingTemplateResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateUsingTemplateResponse res = new org.openapis.openapi.models.operations.ReposCreateUsingTemplateResponse(contentType, httpRes.statusCode()) {{
             repository = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1433,13 +1389,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposCreateWebhookResponse res = new org.openapis.openapi.models.operations.ReposCreateWebhookResponse() {{
+        org.openapis.openapi.models.operations.ReposCreateWebhookResponse res = new org.openapis.openapi.models.operations.ReposCreateWebhookResponse(contentType, httpRes.statusCode()) {{
             hook = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1490,11 +1444,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeclineInvitationForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposDeclineInvitationForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.ReposDeclineInvitationForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposDeclineInvitationForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -1535,12 +1487,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteResponse res = new org.openapis.openapi.models.operations.ReposDeleteResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteResponse res = new org.openapis.openapi.models.operations.ReposDeleteResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             reposDelete403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1587,10 +1537,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposDeleteAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposDeleteAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1623,11 +1571,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteAdminBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposDeleteAdminBranchProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteAdminBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposDeleteAdminBranchProtectionResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1665,11 +1611,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposDeleteBranchProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposDeleteBranchProtectionResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1706,11 +1650,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteCommitCommentResponse res = new org.openapis.openapi.models.operations.ReposDeleteCommitCommentResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteCommitCommentResponse res = new org.openapis.openapi.models.operations.ReposDeleteCommitCommentResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1750,11 +1692,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteCommitSignatureProtectionResponse res = new org.openapis.openapi.models.operations.ReposDeleteCommitSignatureProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteCommitSignatureProtectionResponse res = new org.openapis.openapi.models.operations.ReposDeleteCommitSignatureProtectionResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1792,10 +1732,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteDeployKeyResponse res = new org.openapis.openapi.models.operations.ReposDeleteDeployKeyResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteDeployKeyResponse res = new org.openapis.openapi.models.operations.ReposDeleteDeployKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1833,12 +1771,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteDeploymentResponse res = new org.openapis.openapi.models.operations.ReposDeleteDeploymentResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteDeploymentResponse res = new org.openapis.openapi.models.operations.ReposDeleteDeploymentResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             validationErrorSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1894,14 +1830,12 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteFileResponse res = new org.openapis.openapi.models.operations.ReposDeleteFileResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteFileResponse res = new org.openapis.openapi.models.operations.ReposDeleteFileResponse(contentType, httpRes.statusCode()) {{
             fileCommit = null;
             basicError = null;
             validationError = null;
             reposDeleteFile503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1957,10 +1891,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteInvitationResponse res = new org.openapis.openapi.models.operations.ReposDeleteInvitationResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteInvitationResponse res = new org.openapis.openapi.models.operations.ReposDeleteInvitationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1990,12 +1922,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeletePagesSiteResponse res = new org.openapis.openapi.models.operations.ReposDeletePagesSiteResponse() {{
+        org.openapis.openapi.models.operations.ReposDeletePagesSiteResponse res = new org.openapis.openapi.models.operations.ReposDeletePagesSiteResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2040,11 +1970,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeletePullRequestReviewProtectionResponse res = new org.openapis.openapi.models.operations.ReposDeletePullRequestReviewProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposDeletePullRequestReviewProtectionResponse res = new org.openapis.openapi.models.operations.ReposDeletePullRequestReviewProtectionResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2082,10 +2010,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteReleaseResponse res = new org.openapis.openapi.models.operations.ReposDeleteReleaseResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteReleaseResponse res = new org.openapis.openapi.models.operations.ReposDeleteReleaseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2115,10 +2041,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteReleaseAssetResponse res = new org.openapis.openapi.models.operations.ReposDeleteReleaseAssetResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteReleaseAssetResponse res = new org.openapis.openapi.models.operations.ReposDeleteReleaseAssetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2148,11 +2072,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDeleteWebhookResponse res = new org.openapis.openapi.models.operations.ReposDeleteWebhookResponse() {{
+        org.openapis.openapi.models.operations.ReposDeleteWebhookResponse res = new org.openapis.openapi.models.operations.ReposDeleteWebhookResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2193,10 +2115,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDownloadTarballArchiveResponse res = new org.openapis.openapi.models.operations.ReposDownloadTarballArchiveResponse() {{
+        org.openapis.openapi.models.operations.ReposDownloadTarballArchiveResponse res = new org.openapis.openapi.models.operations.ReposDownloadTarballArchiveResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -2232,10 +2152,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposDownloadZipballArchiveResponse res = new org.openapis.openapi.models.operations.ReposDownloadZipballArchiveResponse() {{
+        org.openapis.openapi.models.operations.ReposDownloadZipballArchiveResponse res = new org.openapis.openapi.models.operations.ReposDownloadZipballArchiveResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -2270,12 +2188,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetResponse res = new org.openapis.openapi.models.operations.ReposGetResponse() {{
+        org.openapis.openapi.models.operations.ReposGetResponse res = new org.openapis.openapi.models.operations.ReposGetResponse(contentType, httpRes.statusCode()) {{
             fullRepository = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2322,12 +2238,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposGetAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposGetAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposGetAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             branchRestrictionPolicy = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2370,11 +2284,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetAdminBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetAdminBranchProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposGetAdminBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetAdminBranchProtectionResponse(contentType, httpRes.statusCode()) {{
             protectedBranchAdminEnforced = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2410,12 +2322,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetAllStatusCheckContextsResponse res = new org.openapis.openapi.models.operations.ReposGetAllStatusCheckContextsResponse() {{
+        org.openapis.openapi.models.operations.ReposGetAllStatusCheckContextsResponse res = new org.openapis.openapi.models.operations.ReposGetAllStatusCheckContextsResponse(contentType, httpRes.statusCode()) {{
             reposGetAllStatusCheckContexts200ApplicationJSONStrings = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2463,13 +2373,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetAllTopicsResponse res = new org.openapis.openapi.models.operations.ReposGetAllTopicsResponse() {{
+        org.openapis.openapi.models.operations.ReposGetAllTopicsResponse res = new org.openapis.openapi.models.operations.ReposGetAllTopicsResponse(contentType, httpRes.statusCode()) {{
             topic = null;
             basicError = null;
             reposGetAllTopics415ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2521,12 +2429,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetAppsWithAccessToProtectedBranchResponse res = new org.openapis.openapi.models.operations.ReposGetAppsWithAccessToProtectedBranchResponse() {{
+        org.openapis.openapi.models.operations.ReposGetAppsWithAccessToProtectedBranchResponse res = new org.openapis.openapi.models.operations.ReposGetAppsWithAccessToProtectedBranchResponse(contentType, httpRes.statusCode()) {{
             integrations = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2568,13 +2474,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetBranchResponse res = new org.openapis.openapi.models.operations.ReposGetBranchResponse() {{
+        org.openapis.openapi.models.operations.ReposGetBranchResponse res = new org.openapis.openapi.models.operations.ReposGetBranchResponse(contentType, httpRes.statusCode()) {{
             branchWithProtection = null;
             basicError = null;
             reposGetBranch415ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2624,12 +2528,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetBranchProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposGetBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetBranchProtectionResponse(contentType, httpRes.statusCode()) {{
             branchProtection = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2672,12 +2574,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetCodeFrequencyStatsResponse res = new org.openapis.openapi.models.operations.ReposGetCodeFrequencyStatsResponse() {{
+        org.openapis.openapi.models.operations.ReposGetCodeFrequencyStatsResponse res = new org.openapis.openapi.models.operations.ReposGetCodeFrequencyStatsResponse(contentType, httpRes.statusCode()) {{
             codeFrequencyStats = null;
             reposGetCodeFrequencyStats202ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2722,12 +2622,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetCollaboratorPermissionLevelResponse res = new org.openapis.openapi.models.operations.ReposGetCollaboratorPermissionLevelResponse() {{
+        org.openapis.openapi.models.operations.ReposGetCollaboratorPermissionLevelResponse res = new org.openapis.openapi.models.operations.ReposGetCollaboratorPermissionLevelResponse(contentType, httpRes.statusCode()) {{
             repositoryCollaboratorPermission = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2783,12 +2681,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetCombinedStatusForRefResponse res = new org.openapis.openapi.models.operations.ReposGetCombinedStatusForRefResponse() {{
+        org.openapis.openapi.models.operations.ReposGetCombinedStatusForRefResponse res = new org.openapis.openapi.models.operations.ReposGetCombinedStatusForRefResponse(contentType, httpRes.statusCode()) {{
             combinedCommitStatus = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2872,13 +2768,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetCommitResponse res = new org.openapis.openapi.models.operations.ReposGetCommitResponse() {{
+        org.openapis.openapi.models.operations.ReposGetCommitResponse res = new org.openapis.openapi.models.operations.ReposGetCommitResponse(contentType, httpRes.statusCode()) {{
             commit = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2928,12 +2822,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetCommitActivityStatsResponse res = new org.openapis.openapi.models.operations.ReposGetCommitActivityStatsResponse() {{
+        org.openapis.openapi.models.operations.ReposGetCommitActivityStatsResponse res = new org.openapis.openapi.models.operations.ReposGetCommitActivityStatsResponse(contentType, httpRes.statusCode()) {{
             commitActivities = null;
             reposGetCommitActivityStats202ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2977,12 +2869,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetCommitCommentResponse res = new org.openapis.openapi.models.operations.ReposGetCommitCommentResponse() {{
+        org.openapis.openapi.models.operations.ReposGetCommitCommentResponse res = new org.openapis.openapi.models.operations.ReposGetCommitCommentResponse(contentType, httpRes.statusCode()) {{
             commitComment = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3029,12 +2919,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetCommitSignatureProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetCommitSignatureProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposGetCommitSignatureProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetCommitSignatureProtectionResponse(contentType, httpRes.statusCode()) {{
             protectedBranchAdminEnforced = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3114,13 +3002,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetContentResponse res = new org.openapis.openapi.models.operations.ReposGetContentResponse() {{
+        org.openapis.openapi.models.operations.ReposGetContentResponse res = new org.openapis.openapi.models.operations.ReposGetContentResponse(contentType, httpRes.statusCode()) {{
             reposGetContent200ApplicationJSONOneOf = null;
             body = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3175,12 +3061,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetContributorsStatsResponse res = new org.openapis.openapi.models.operations.ReposGetContributorsStatsResponse() {{
+        org.openapis.openapi.models.operations.ReposGetContributorsStatsResponse res = new org.openapis.openapi.models.operations.ReposGetContributorsStatsResponse(contentType, httpRes.statusCode()) {{
             contributorActivities = null;
             reposGetContributorsStats202ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3224,12 +3108,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetDeployKeyResponse res = new org.openapis.openapi.models.operations.ReposGetDeployKeyResponse() {{
+        org.openapis.openapi.models.operations.ReposGetDeployKeyResponse res = new org.openapis.openapi.models.operations.ReposGetDeployKeyResponse(contentType, httpRes.statusCode()) {{
             deployKey = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3271,12 +3153,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetDeploymentResponse res = new org.openapis.openapi.models.operations.ReposGetDeploymentResponse() {{
+        org.openapis.openapi.models.operations.ReposGetDeploymentResponse res = new org.openapis.openapi.models.operations.ReposGetDeploymentResponse(contentType, httpRes.statusCode()) {{
             deployment = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3319,12 +3199,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetDeploymentStatusResponse res = new org.openapis.openapi.models.operations.ReposGetDeploymentStatusResponse() {{
+        org.openapis.openapi.models.operations.ReposGetDeploymentStatusResponse res = new org.openapis.openapi.models.operations.ReposGetDeploymentStatusResponse(contentType, httpRes.statusCode()) {{
             deploymentStatus = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3366,11 +3244,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetLatestPagesBuildResponse res = new org.openapis.openapi.models.operations.ReposGetLatestPagesBuildResponse() {{
+        org.openapis.openapi.models.operations.ReposGetLatestPagesBuildResponse res = new org.openapis.openapi.models.operations.ReposGetLatestPagesBuildResponse(contentType, httpRes.statusCode()) {{
             pageBuild = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3408,11 +3284,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetLatestReleaseResponse res = new org.openapis.openapi.models.operations.ReposGetLatestReleaseResponse() {{
+        org.openapis.openapi.models.operations.ReposGetLatestReleaseResponse res = new org.openapis.openapi.models.operations.ReposGetLatestReleaseResponse(contentType, httpRes.statusCode()) {{
             release = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3447,12 +3321,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetPagesResponse res = new org.openapis.openapi.models.operations.ReposGetPagesResponse() {{
+        org.openapis.openapi.models.operations.ReposGetPagesResponse res = new org.openapis.openapi.models.operations.ReposGetPagesResponse(contentType, httpRes.statusCode()) {{
             page = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3494,11 +3366,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetPagesBuildResponse res = new org.openapis.openapi.models.operations.ReposGetPagesBuildResponse() {{
+        org.openapis.openapi.models.operations.ReposGetPagesBuildResponse res = new org.openapis.openapi.models.operations.ReposGetPagesBuildResponse(contentType, httpRes.statusCode()) {{
             pageBuild = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3536,12 +3406,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetParticipationStatsResponse res = new org.openapis.openapi.models.operations.ReposGetParticipationStatsResponse() {{
+        org.openapis.openapi.models.operations.ReposGetParticipationStatsResponse res = new org.openapis.openapi.models.operations.ReposGetParticipationStatsResponse(contentType, httpRes.statusCode()) {{
             participationStats = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3584,11 +3452,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetPullRequestReviewProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetPullRequestReviewProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposGetPullRequestReviewProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetPullRequestReviewProtectionResponse(contentType, httpRes.statusCode()) {{
             protectedBranchPullRequestReview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3630,11 +3496,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetPunchCardStatsResponse res = new org.openapis.openapi.models.operations.ReposGetPunchCardStatsResponse() {{
+        org.openapis.openapi.models.operations.ReposGetPunchCardStatsResponse res = new org.openapis.openapi.models.operations.ReposGetPunchCardStatsResponse(contentType, httpRes.statusCode()) {{
             codeFrequencyStats = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3680,13 +3544,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetReadmeResponse res = new org.openapis.openapi.models.operations.ReposGetReadmeResponse() {{
+        org.openapis.openapi.models.operations.ReposGetReadmeResponse res = new org.openapis.openapi.models.operations.ReposGetReadmeResponse(contentType, httpRes.statusCode()) {{
             contentFile = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3744,13 +3606,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetReadmeInDirectoryResponse res = new org.openapis.openapi.models.operations.ReposGetReadmeInDirectoryResponse() {{
+        org.openapis.openapi.models.operations.ReposGetReadmeInDirectoryResponse res = new org.openapis.openapi.models.operations.ReposGetReadmeInDirectoryResponse(contentType, httpRes.statusCode()) {{
             contentFile = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3800,12 +3660,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetReleaseResponse res = new org.openapis.openapi.models.operations.ReposGetReleaseResponse() {{
+        org.openapis.openapi.models.operations.ReposGetReleaseResponse res = new org.openapis.openapi.models.operations.ReposGetReleaseResponse(contentType, httpRes.statusCode()) {{
             release = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3848,13 +3706,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetReleaseAssetResponse res = new org.openapis.openapi.models.operations.ReposGetReleaseAssetResponse() {{
+        org.openapis.openapi.models.operations.ReposGetReleaseAssetResponse res = new org.openapis.openapi.models.operations.ReposGetReleaseAssetResponse(contentType, httpRes.statusCode()) {{
             releaseAsset = null;
             basicError = null;
             reposGetReleaseAsset415ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3906,12 +3762,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetReleaseByTagResponse res = new org.openapis.openapi.models.operations.ReposGetReleaseByTagResponse() {{
+        org.openapis.openapi.models.operations.ReposGetReleaseByTagResponse res = new org.openapis.openapi.models.operations.ReposGetReleaseByTagResponse(contentType, httpRes.statusCode()) {{
             release = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3954,12 +3808,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetStatusChecksProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetStatusChecksProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposGetStatusChecksProtectionResponse res = new org.openapis.openapi.models.operations.ReposGetStatusChecksProtectionResponse(contentType, httpRes.statusCode()) {{
             statusCheckPolicy = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4004,12 +3856,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetTeamsWithAccessToProtectedBranchResponse res = new org.openapis.openapi.models.operations.ReposGetTeamsWithAccessToProtectedBranchResponse() {{
+        org.openapis.openapi.models.operations.ReposGetTeamsWithAccessToProtectedBranchResponse res = new org.openapis.openapi.models.operations.ReposGetTeamsWithAccessToProtectedBranchResponse(contentType, httpRes.statusCode()) {{
             teams = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4054,12 +3904,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetUsersWithAccessToProtectedBranchResponse res = new org.openapis.openapi.models.operations.ReposGetUsersWithAccessToProtectedBranchResponse() {{
+        org.openapis.openapi.models.operations.ReposGetUsersWithAccessToProtectedBranchResponse res = new org.openapis.openapi.models.operations.ReposGetUsersWithAccessToProtectedBranchResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4102,12 +3950,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposGetWebhookResponse res = new org.openapis.openapi.models.operations.ReposGetWebhookResponse() {{
+        org.openapis.openapi.models.operations.ReposGetWebhookResponse res = new org.openapis.openapi.models.operations.ReposGetWebhookResponse(contentType, httpRes.statusCode()) {{
             hook = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4155,12 +4001,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListBranchesResponse res = new org.openapis.openapi.models.operations.ReposListBranchesResponse() {{
+        org.openapis.openapi.models.operations.ReposListBranchesResponse res = new org.openapis.openapi.models.operations.ReposListBranchesResponse(contentType, httpRes.statusCode()) {{
             shortBranches = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4207,12 +4051,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListBranchesForHeadCommitResponse res = new org.openapis.openapi.models.operations.ReposListBranchesForHeadCommitResponse() {{
+        org.openapis.openapi.models.operations.ReposListBranchesForHeadCommitResponse res = new org.openapis.openapi.models.operations.ReposListBranchesForHeadCommitResponse(contentType, httpRes.statusCode()) {{
             branchShorts = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4265,12 +4107,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListCollaboratorsResponse res = new org.openapis.openapi.models.operations.ReposListCollaboratorsResponse() {{
+        org.openapis.openapi.models.operations.ReposListCollaboratorsResponse res = new org.openapis.openapi.models.operations.ReposListCollaboratorsResponse(contentType, httpRes.statusCode()) {{
             collaborators = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4321,11 +4161,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListCommentsForCommitResponse res = new org.openapis.openapi.models.operations.ReposListCommentsForCommitResponse() {{
+        org.openapis.openapi.models.operations.ReposListCommentsForCommitResponse res = new org.openapis.openapi.models.operations.ReposListCommentsForCommitResponse(contentType, httpRes.statusCode()) {{
             commitComments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4371,11 +4209,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListCommitCommentsForRepoResponse res = new org.openapis.openapi.models.operations.ReposListCommitCommentsForRepoResponse() {{
+        org.openapis.openapi.models.operations.ReposListCommitCommentsForRepoResponse res = new org.openapis.openapi.models.operations.ReposListCommitCommentsForRepoResponse(contentType, httpRes.statusCode()) {{
             commitComments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4421,12 +4257,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListCommitStatusesForRefResponse res = new org.openapis.openapi.models.operations.ReposListCommitStatusesForRefResponse() {{
+        org.openapis.openapi.models.operations.ReposListCommitStatusesForRefResponse res = new org.openapis.openapi.models.operations.ReposListCommitStatusesForRefResponse(contentType, httpRes.statusCode()) {{
             statuses = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4504,14 +4338,12 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListCommitsResponse res = new org.openapis.openapi.models.operations.ReposListCommitsResponse() {{
+        org.openapis.openapi.models.operations.ReposListCommitsResponse res = new org.openapis.openapi.models.operations.ReposListCommitsResponse(contentType, httpRes.statusCode()) {{
             commits = null;
             basicError = null;
             scimError = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4576,12 +4408,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListContributorsResponse res = new org.openapis.openapi.models.operations.ReposListContributorsResponse() {{
+        org.openapis.openapi.models.operations.ReposListContributorsResponse res = new org.openapis.openapi.models.operations.ReposListContributorsResponse(contentType, httpRes.statusCode()) {{
             contributors = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4633,11 +4463,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListDeployKeysResponse res = new org.openapis.openapi.models.operations.ReposListDeployKeysResponse() {{
+        org.openapis.openapi.models.operations.ReposListDeployKeysResponse res = new org.openapis.openapi.models.operations.ReposListDeployKeysResponse(contentType, httpRes.statusCode()) {{
             deployKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4681,12 +4509,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListDeploymentStatusesResponse res = new org.openapis.openapi.models.operations.ReposListDeploymentStatusesResponse() {{
+        org.openapis.openapi.models.operations.ReposListDeploymentStatusesResponse res = new org.openapis.openapi.models.operations.ReposListDeploymentStatusesResponse(contentType, httpRes.statusCode()) {{
             deploymentStatuses = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4737,11 +4563,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListDeploymentsResponse res = new org.openapis.openapi.models.operations.ReposListDeploymentsResponse() {{
+        org.openapis.openapi.models.operations.ReposListDeploymentsResponse res = new org.openapis.openapi.models.operations.ReposListDeploymentsResponse(contentType, httpRes.statusCode()) {{
             deployments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4787,13 +4611,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposListForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.ReposListForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposListForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             repositories = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4851,11 +4673,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListForOrgResponse res = new org.openapis.openapi.models.operations.ReposListForOrgResponse() {{
+        org.openapis.openapi.models.operations.ReposListForOrgResponse res = new org.openapis.openapi.models.operations.ReposListForOrgResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4899,11 +4719,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListForUserResponse res = new org.openapis.openapi.models.operations.ReposListForUserResponse() {{
+        org.openapis.openapi.models.operations.ReposListForUserResponse res = new org.openapis.openapi.models.operations.ReposListForUserResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4946,13 +4764,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListForksResponse res = new org.openapis.openapi.models.operations.ReposListForksResponse() {{
+        org.openapis.openapi.models.operations.ReposListForksResponse res = new org.openapis.openapi.models.operations.ReposListForksResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
             basicError = null;
             scimError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5008,11 +4824,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListInvitationsResponse res = new org.openapis.openapi.models.operations.ReposListInvitationsResponse() {{
+        org.openapis.openapi.models.operations.ReposListInvitationsResponse res = new org.openapis.openapi.models.operations.ReposListInvitationsResponse(contentType, httpRes.statusCode()) {{
             repositoryInvitations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5056,12 +4870,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListInvitationsForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposListInvitationsForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.ReposListInvitationsForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.ReposListInvitationsForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             repositoryInvitations = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5108,11 +4920,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListLanguagesResponse res = new org.openapis.openapi.models.operations.ReposListLanguagesResponse() {{
+        org.openapis.openapi.models.operations.ReposListLanguagesResponse res = new org.openapis.openapi.models.operations.ReposListLanguagesResponse(contentType, httpRes.statusCode()) {{
             language = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5153,11 +4963,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListPagesBuildsResponse res = new org.openapis.openapi.models.operations.ReposListPagesBuildsResponse() {{
+        org.openapis.openapi.models.operations.ReposListPagesBuildsResponse res = new org.openapis.openapi.models.operations.ReposListPagesBuildsResponse(contentType, httpRes.statusCode()) {{
             pageBuilds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5205,12 +5013,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListPublicResponse res = new org.openapis.openapi.models.operations.ReposListPublicResponse() {{
+        org.openapis.openapi.models.operations.ReposListPublicResponse res = new org.openapis.openapi.models.operations.ReposListPublicResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5263,11 +5069,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListPullRequestsAssociatedWithCommitResponse res = new org.openapis.openapi.models.operations.ReposListPullRequestsAssociatedWithCommitResponse() {{
+        org.openapis.openapi.models.operations.ReposListPullRequestsAssociatedWithCommitResponse res = new org.openapis.openapi.models.operations.ReposListPullRequestsAssociatedWithCommitResponse(contentType, httpRes.statusCode()) {{
             pullRequestSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5310,11 +5114,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListReleaseAssetsResponse res = new org.openapis.openapi.models.operations.ReposListReleaseAssetsResponse() {{
+        org.openapis.openapi.models.operations.ReposListReleaseAssetsResponse res = new org.openapis.openapi.models.operations.ReposListReleaseAssetsResponse(contentType, httpRes.statusCode()) {{
             releaseAssets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5360,12 +5162,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListReleasesResponse res = new org.openapis.openapi.models.operations.ReposListReleasesResponse() {{
+        org.openapis.openapi.models.operations.ReposListReleasesResponse res = new org.openapis.openapi.models.operations.ReposListReleasesResponse(contentType, httpRes.statusCode()) {{
             releases = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5415,11 +5215,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListTagsResponse res = new org.openapis.openapi.models.operations.ReposListTagsResponse() {{
+        org.openapis.openapi.models.operations.ReposListTagsResponse res = new org.openapis.openapi.models.operations.ReposListTagsResponse(contentType, httpRes.statusCode()) {{
             tags = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5462,11 +5260,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListTeamsResponse res = new org.openapis.openapi.models.operations.ReposListTeamsResponse() {{
+        org.openapis.openapi.models.operations.ReposListTeamsResponse res = new org.openapis.openapi.models.operations.ReposListTeamsResponse(contentType, httpRes.statusCode()) {{
             teams = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5509,12 +5305,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposListWebhooksResponse res = new org.openapis.openapi.models.operations.ReposListWebhooksResponse() {{
+        org.openapis.openapi.models.operations.ReposListWebhooksResponse res = new org.openapis.openapi.models.operations.ReposListWebhooksResponse(contentType, httpRes.statusCode()) {{
             hooks = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5563,13 +5357,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposMergeResponse res = new org.openapis.openapi.models.operations.ReposMergeResponse() {{
+        org.openapis.openapi.models.operations.ReposMergeResponse res = new org.openapis.openapi.models.operations.ReposMergeResponse(contentType, httpRes.statusCode()) {{
             commit = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -5621,11 +5413,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposPingWebhookResponse res = new org.openapis.openapi.models.operations.ReposPingWebhookResponse() {{
+        org.openapis.openapi.models.operations.ReposPingWebhookResponse res = new org.openapis.openapi.models.operations.ReposPingWebhookResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -5671,12 +5461,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposRemoveAppAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposRemoveAppAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposRemoveAppAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposRemoveAppAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             integrations = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5718,10 +5506,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposRemoveCollaboratorResponse res = new org.openapis.openapi.models.operations.ReposRemoveCollaboratorResponse() {{
+        org.openapis.openapi.models.operations.ReposRemoveCollaboratorResponse res = new org.openapis.openapi.models.operations.ReposRemoveCollaboratorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -5754,13 +5540,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposRemoveStatusCheckContextsResponse res = new org.openapis.openapi.models.operations.ReposRemoveStatusCheckContextsResponse() {{
+        org.openapis.openapi.models.operations.ReposRemoveStatusCheckContextsResponse res = new org.openapis.openapi.models.operations.ReposRemoveStatusCheckContextsResponse(contentType, httpRes.statusCode()) {{
             reposRemoveStatusCheckContexts200ApplicationJSONStrings = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5810,10 +5594,8 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposRemoveStatusCheckProtectionResponse res = new org.openapis.openapi.models.operations.ReposRemoveStatusCheckProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposRemoveStatusCheckProtectionResponse res = new org.openapis.openapi.models.operations.ReposRemoveStatusCheckProtectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -5852,12 +5634,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposRemoveTeamAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposRemoveTeamAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposRemoveTeamAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposRemoveTeamAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             teams = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5908,12 +5688,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposRemoveUserAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposRemoveUserAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposRemoveUserAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposRemoveUserAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5960,14 +5738,12 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposReplaceAllTopicsResponse res = new org.openapis.openapi.models.operations.ReposReplaceAllTopicsResponse() {{
+        org.openapis.openapi.models.operations.ReposReplaceAllTopicsResponse res = new org.openapis.openapi.models.operations.ReposReplaceAllTopicsResponse(contentType, httpRes.statusCode()) {{
             topic = null;
             basicError = null;
             reposReplaceAllTopics415ApplicationJSONObject = null;
             validationErrorSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6026,11 +5802,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposRequestPagesBuildResponse res = new org.openapis.openapi.models.operations.ReposRequestPagesBuildResponse() {{
+        org.openapis.openapi.models.operations.ReposRequestPagesBuildResponse res = new org.openapis.openapi.models.operations.ReposRequestPagesBuildResponse(contentType, httpRes.statusCode()) {{
             pageBuildStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -6068,11 +5842,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposSetAdminBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposSetAdminBranchProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposSetAdminBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposSetAdminBranchProtectionResponse(contentType, httpRes.statusCode()) {{
             protectedBranchAdminEnforced = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6116,12 +5888,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposSetAppAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposSetAppAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposSetAppAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposSetAppAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             integrations = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6166,13 +5936,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposSetStatusCheckContextsResponse res = new org.openapis.openapi.models.operations.ReposSetStatusCheckContextsResponse() {{
+        org.openapis.openapi.models.operations.ReposSetStatusCheckContextsResponse res = new org.openapis.openapi.models.operations.ReposSetStatusCheckContextsResponse(contentType, httpRes.statusCode()) {{
             reposSetStatusCheckContexts200ApplicationJSONStrings = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6230,12 +5998,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposSetTeamAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposSetTeamAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposSetTeamAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposSetTeamAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             teams = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6286,12 +6052,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposSetUserAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposSetUserAccessRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.ReposSetUserAccessRestrictionsResponse res = new org.openapis.openapi.models.operations.ReposSetUserAccessRestrictionsResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6336,11 +6100,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposTestPushWebhookResponse res = new org.openapis.openapi.models.operations.ReposTestPushWebhookResponse() {{
+        org.openapis.openapi.models.operations.ReposTestPushWebhookResponse res = new org.openapis.openapi.models.operations.ReposTestPushWebhookResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -6383,11 +6145,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposTransferResponse res = new org.openapis.openapi.models.operations.ReposTransferResponse() {{
+        org.openapis.openapi.models.operations.ReposTransferResponse res = new org.openapis.openapi.models.operations.ReposTransferResponse(contentType, httpRes.statusCode()) {{
             minimalRepository = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -6425,13 +6185,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateResponse res = new org.openapis.openapi.models.operations.ReposUpdateResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateResponse res = new org.openapis.openapi.models.operations.ReposUpdateResponse(contentType, httpRes.statusCode()) {{
             fullRepository = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6492,13 +6250,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposUpdateBranchProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateBranchProtectionResponse res = new org.openapis.openapi.models.operations.ReposUpdateBranchProtectionResponse(contentType, httpRes.statusCode()) {{
             protectedBranch = null;
             basicError = null;
             validationErrorSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6552,12 +6308,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateCommitCommentResponse res = new org.openapis.openapi.models.operations.ReposUpdateCommitCommentResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateCommitCommentResponse res = new org.openapis.openapi.models.operations.ReposUpdateCommitCommentResponse(contentType, httpRes.statusCode()) {{
             commitComment = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6605,13 +6359,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateInformationAboutPagesSiteResponse res = new org.openapis.openapi.models.operations.ReposUpdateInformationAboutPagesSiteResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateInformationAboutPagesSiteResponse res = new org.openapis.openapi.models.operations.ReposUpdateInformationAboutPagesSiteResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             scimError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -6662,11 +6414,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateInvitationResponse res = new org.openapis.openapi.models.operations.ReposUpdateInvitationResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateInvitationResponse res = new org.openapis.openapi.models.operations.ReposUpdateInvitationResponse(contentType, httpRes.statusCode()) {{
             repositoryInvitation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6708,12 +6458,10 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdatePullRequestReviewProtectionResponse res = new org.openapis.openapi.models.operations.ReposUpdatePullRequestReviewProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdatePullRequestReviewProtectionResponse res = new org.openapis.openapi.models.operations.ReposUpdatePullRequestReviewProtectionResponse(contentType, httpRes.statusCode()) {{
             protectedBranchPullRequestReview = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6758,11 +6506,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateReleaseResponse res = new org.openapis.openapi.models.operations.ReposUpdateReleaseResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateReleaseResponse res = new org.openapis.openapi.models.operations.ReposUpdateReleaseResponse(contentType, httpRes.statusCode()) {{
             release = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6800,11 +6546,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateReleaseAssetResponse res = new org.openapis.openapi.models.operations.ReposUpdateReleaseAssetResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateReleaseAssetResponse res = new org.openapis.openapi.models.operations.ReposUpdateReleaseAssetResponse(contentType, httpRes.statusCode()) {{
             releaseAsset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6844,13 +6588,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateStatusCheckProtectionResponse res = new org.openapis.openapi.models.operations.ReposUpdateStatusCheckProtectionResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateStatusCheckProtectionResponse res = new org.openapis.openapi.models.operations.ReposUpdateStatusCheckProtectionResponse(contentType, httpRes.statusCode()) {{
             statusCheckPolicy = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6905,13 +6647,11 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUpdateWebhookResponse res = new org.openapis.openapi.models.operations.ReposUpdateWebhookResponse() {{
+        org.openapis.openapi.models.operations.ReposUpdateWebhookResponse res = new org.openapis.openapi.models.operations.ReposUpdateWebhookResponse(contentType, httpRes.statusCode()) {{
             hook = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7020,11 +6760,9 @@ public class Repos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReposUploadReleaseAssetResponse res = new org.openapis.openapi.models.operations.ReposUploadReleaseAssetResponse() {{
+        org.openapis.openapi.models.operations.ReposUploadReleaseAssetResponse res = new org.openapis.openapi.models.operations.ReposUploadReleaseAssetResponse(contentType, httpRes.statusCode()) {{
             releaseAsset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

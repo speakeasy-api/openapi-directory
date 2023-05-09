@@ -15,6 +15,7 @@ public class ListTagsForResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTagsForResourceRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -25,9 +26,13 @@ public class ListTagsForResourceRequestBody {
      */
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public ListTagsForResourceRequestBody withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public ListTagsForResourceRequestBody(@JsonProperty("ResourceARN") String resourceARN) {
+        this.resourceARN = resourceARN;
+  }
 }

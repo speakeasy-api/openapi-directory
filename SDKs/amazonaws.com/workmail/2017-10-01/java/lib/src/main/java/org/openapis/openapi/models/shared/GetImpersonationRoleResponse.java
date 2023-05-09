@@ -22,6 +22,7 @@ public class GetImpersonationRoleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateCreated")
     public OffsetDateTime dateCreated;
+
     public GetImpersonationRoleResponse withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -32,6 +33,7 @@ public class GetImpersonationRoleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateModified")
     public OffsetDateTime dateModified;
+
     public GetImpersonationRoleResponse withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -40,6 +42,7 @@ public class GetImpersonationRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetImpersonationRoleResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class GetImpersonationRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImpersonationRoleId")
     public String impersonationRoleId;
+
     public GetImpersonationRoleResponse withImpersonationRoleId(String impersonationRoleId) {
         this.impersonationRoleId = impersonationRoleId;
         return this;
@@ -56,6 +60,7 @@ public class GetImpersonationRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetImpersonationRoleResponse withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class GetImpersonationRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public ImpersonationRule[] rules;
+
     public GetImpersonationRoleResponse withRules(ImpersonationRule[] rules) {
         this.rules = rules;
         return this;
@@ -72,9 +78,11 @@ public class GetImpersonationRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ImpersonationRoleTypeEnum type;
+
     public GetImpersonationRoleResponse withType(ImpersonationRoleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetImpersonationRoleResponse(){}
 }

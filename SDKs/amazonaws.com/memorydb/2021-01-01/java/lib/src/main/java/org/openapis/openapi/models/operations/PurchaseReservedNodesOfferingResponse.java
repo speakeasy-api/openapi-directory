@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PurchaseReservedNodesOfferingResponse {
     
     public String contentType;
+
     public PurchaseReservedNodesOfferingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PurchaseReservedNodesOfferingResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public PurchaseReservedNodesOfferingResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -29,6 +32,7 @@ public class PurchaseReservedNodesOfferingResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PurchaseReservedNodesOfferingResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class PurchaseReservedNodesOfferingResponse {
      */
     
     public org.openapis.openapi.models.shared.PurchaseReservedNodesOfferingResponse purchaseReservedNodesOfferingResponse;
+
     public PurchaseReservedNodesOfferingResponse withPurchaseReservedNodesOfferingResponse(org.openapis.openapi.models.shared.PurchaseReservedNodesOfferingResponse purchaseReservedNodesOfferingResponse) {
         this.purchaseReservedNodesOfferingResponse = purchaseReservedNodesOfferingResponse;
         return this;
@@ -49,6 +54,7 @@ public class PurchaseReservedNodesOfferingResponse {
      */
     
     public Object reservedNodeAlreadyExistsFault;
+
     public PurchaseReservedNodesOfferingResponse withReservedNodeAlreadyExistsFault(Object reservedNodeAlreadyExistsFault) {
         this.reservedNodeAlreadyExistsFault = reservedNodeAlreadyExistsFault;
         return this;
@@ -59,6 +65,7 @@ public class PurchaseReservedNodesOfferingResponse {
      */
     
     public Object reservedNodeQuotaExceededFault;
+
     public PurchaseReservedNodesOfferingResponse withReservedNodeQuotaExceededFault(Object reservedNodeQuotaExceededFault) {
         this.reservedNodeQuotaExceededFault = reservedNodeQuotaExceededFault;
         return this;
@@ -69,6 +76,7 @@ public class PurchaseReservedNodesOfferingResponse {
      */
     
     public Object reservedNodesOfferingNotFoundFault;
+
     public PurchaseReservedNodesOfferingResponse withReservedNodesOfferingNotFoundFault(Object reservedNodesOfferingNotFoundFault) {
         this.reservedNodesOfferingNotFoundFault = reservedNodesOfferingNotFoundFault;
         return this;
@@ -79,6 +87,7 @@ public class PurchaseReservedNodesOfferingResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public PurchaseReservedNodesOfferingResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -86,6 +95,7 @@ public class PurchaseReservedNodesOfferingResponse {
     
     
     public Integer statusCode;
+
     public PurchaseReservedNodesOfferingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PurchaseReservedNodesOfferingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PurchaseReservedNodesOfferingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class PurchaseReservedNodesOfferingResponse {
      */
     
     public Object tagQuotaPerResourceExceeded;
+
     public PurchaseReservedNodesOfferingResponse withTagQuotaPerResourceExceeded(Object tagQuotaPerResourceExceeded) {
         this.tagQuotaPerResourceExceeded = tagQuotaPerResourceExceeded;
         return this;
     }
     
+    public PurchaseReservedNodesOfferingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

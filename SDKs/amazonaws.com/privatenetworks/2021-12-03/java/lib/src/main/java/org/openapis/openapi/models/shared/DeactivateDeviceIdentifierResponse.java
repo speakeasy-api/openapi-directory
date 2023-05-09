@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeactivateDeviceIdentifierResponse {
     @JsonProperty("deviceIdentifier")
     public DeviceIdentifier deviceIdentifier;
+
     public DeactivateDeviceIdentifierResponse withDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
         this.deviceIdentifier = deviceIdentifier;
         return this;
     }
     
+    public DeactivateDeviceIdentifierResponse(@JsonProperty("deviceIdentifier") DeviceIdentifier deviceIdentifier) {
+        this.deviceIdentifier = deviceIdentifier;
+  }
 }

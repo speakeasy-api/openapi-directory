@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OptimiseByProductResponse {
@@ -12,6 +13,7 @@ public class OptimiseByProductResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public OptimiseByProductResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class OptimiseByProductResponse {
     
     
     public String contentType;
+
     public OptimiseByProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class OptimiseByProductResponse {
     
     
     public Integer statusCode;
+
     public OptimiseByProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OptimiseByProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OptimiseByProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OptimiseByProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

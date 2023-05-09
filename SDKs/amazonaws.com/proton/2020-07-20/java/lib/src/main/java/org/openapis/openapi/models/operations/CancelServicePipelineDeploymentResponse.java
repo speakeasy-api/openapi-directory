@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelServicePipelineDeploymentResponse {
@@ -12,6 +13,7 @@ public class CancelServicePipelineDeploymentResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelServicePipelineDeploymentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelServicePipelineDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelServicePipelineDeploymentOutput cancelServicePipelineDeploymentOutput;
+
     public CancelServicePipelineDeploymentResponse withCancelServicePipelineDeploymentOutput(org.openapis.openapi.models.shared.CancelServicePipelineDeploymentOutput cancelServicePipelineDeploymentOutput) {
         this.cancelServicePipelineDeploymentOutput = cancelServicePipelineDeploymentOutput;
         return this;
@@ -32,6 +35,7 @@ public class CancelServicePipelineDeploymentResponse {
      */
     
     public Object conflictException;
+
     public CancelServicePipelineDeploymentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class CancelServicePipelineDeploymentResponse {
     
     
     public String contentType;
+
     public CancelServicePipelineDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CancelServicePipelineDeploymentResponse {
      */
     
     public Object internalServerException;
+
     public CancelServicePipelineDeploymentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CancelServicePipelineDeploymentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelServicePipelineDeploymentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CancelServicePipelineDeploymentResponse {
     
     
     public Integer statusCode;
+
     public CancelServicePipelineDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CancelServicePipelineDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelServicePipelineDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CancelServicePipelineDeploymentResponse {
      */
     
     public Object throttlingException;
+
     public CancelServicePipelineDeploymentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CancelServicePipelineDeploymentResponse {
      */
     
     public Object validationException;
+
     public CancelServicePipelineDeploymentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelServicePipelineDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

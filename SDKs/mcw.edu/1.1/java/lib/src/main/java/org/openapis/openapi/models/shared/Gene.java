@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Gene {
     
     public String agrDescription;
+
     public Gene withAgrDescription(String agrDescription) {
         this.agrDescription = agrDescription;
         return this;
@@ -19,6 +20,7 @@ public class Gene {
     
     
     public String description;
+
     public Gene withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class Gene {
     
     
     public String ensemblFullName;
+
     public Gene withEnsemblFullName(String ensemblFullName) {
         this.ensemblFullName = ensemblFullName;
         return this;
@@ -33,6 +36,7 @@ public class Gene {
     
     
     public String ensemblGeneSymbol;
+
     public Gene withEnsemblGeneSymbol(String ensemblGeneSymbol) {
         this.ensemblGeneSymbol = ensemblGeneSymbol;
         return this;
@@ -40,6 +44,7 @@ public class Gene {
     
     
     public String ensemblGeneType;
+
     public Gene withEnsemblGeneType(String ensemblGeneType) {
         this.ensemblGeneType = ensemblGeneType;
         return this;
@@ -47,6 +52,7 @@ public class Gene {
     
     
     public String geneSource;
+
     public Gene withGeneSource(String geneSource) {
         this.geneSource = geneSource;
         return this;
@@ -54,6 +60,7 @@ public class Gene {
     
     
     public Integer key;
+
     public Gene withKey(Integer key) {
         this.key = key;
         return this;
@@ -61,6 +68,7 @@ public class Gene {
     
     
     public String mergedDescription;
+
     public Gene withMergedDescription(String mergedDescription) {
         this.mergedDescription = mergedDescription;
         return this;
@@ -68,6 +76,7 @@ public class Gene {
     
     
     public String name;
+
     public Gene withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +84,7 @@ public class Gene {
     
     
     public String ncbiAnnotStatus;
+
     public Gene withNcbiAnnotStatus(String ncbiAnnotStatus) {
         this.ncbiAnnotStatus = ncbiAnnotStatus;
         return this;
@@ -82,6 +92,7 @@ public class Gene {
     
     
     public OffsetDateTime nomenReviewDate;
+
     public Gene withNomenReviewDate(OffsetDateTime nomenReviewDate) {
         this.nomenReviewDate = nomenReviewDate;
         return this;
@@ -89,6 +100,7 @@ public class Gene {
     
     
     public String nomenSource;
+
     public Gene withNomenSource(String nomenSource) {
         this.nomenSource = nomenSource;
         return this;
@@ -96,6 +108,7 @@ public class Gene {
     
     
     public String notes;
+
     public Gene withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -103,6 +116,7 @@ public class Gene {
     
     
     public String refSeqStatus;
+
     public Gene withRefSeqStatus(String refSeqStatus) {
         this.refSeqStatus = refSeqStatus;
         return this;
@@ -110,6 +124,7 @@ public class Gene {
     
     
     public Integer rgdId;
+
     public Gene withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
@@ -117,6 +132,7 @@ public class Gene {
     
     
     public String soAccId;
+
     public Gene withSoAccId(String soAccId) {
         this.soAccId = soAccId;
         return this;
@@ -124,6 +140,7 @@ public class Gene {
     
     
     public Integer speciesTypeKey;
+
     public Gene withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
@@ -131,6 +148,7 @@ public class Gene {
     
     
     public String symbol;
+
     public Gene withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
@@ -138,6 +156,7 @@ public class Gene {
     
     
     public String type;
+
     public Gene withType(String type) {
         this.type = type;
         return this;
@@ -145,9 +164,11 @@ public class Gene {
     
     
     public Boolean variant;
+
     public Gene withVariant(Boolean variant) {
         this.variant = variant;
         return this;
     }
     
+    public Gene(){}
 }

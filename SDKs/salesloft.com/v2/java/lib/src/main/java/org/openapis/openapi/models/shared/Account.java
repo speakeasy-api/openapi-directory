@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Account {
     
     public EmbeddedResource accountTier;
+
     public Account withAccountTier(EmbeddedResource accountTier) {
         this.accountTier = accountTier;
         return this;
@@ -22,6 +23,7 @@ public class Account {
      */
     
     public OffsetDateTime archivedAt;
+
     public Account withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -32,6 +34,7 @@ public class Account {
      */
     
     public String city;
+
     public Account withCity(String city) {
         this.city = city;
         return this;
@@ -39,6 +42,7 @@ public class Account {
     
     
     public EmbeddedResource companyStage;
+
     public Account withCompanyStage(EmbeddedResource companyStage) {
         this.companyStage = companyStage;
         return this;
@@ -49,6 +53,7 @@ public class Account {
      */
     
     public String companyType;
+
     public Account withCompanyType(String companyType) {
         this.companyType = companyType;
         return this;
@@ -59,6 +64,7 @@ public class Account {
      */
     
     public String conversationalName;
+
     public Account withConversationalName(String conversationalName) {
         this.conversationalName = conversationalName;
         return this;
@@ -69,6 +75,7 @@ public class Account {
      */
     
     public String country;
+
     public Account withCountry(String country) {
         this.country = country;
         return this;
@@ -76,6 +83,7 @@ public class Account {
     
     
     public EmbeddedAccountCounts counts;
+
     public Account withCounts(EmbeddedAccountCounts counts) {
         this.counts = counts;
         return this;
@@ -86,6 +94,7 @@ public class Account {
      */
     
     public OffsetDateTime createdAt;
+
     public Account withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -93,6 +102,7 @@ public class Account {
     
     
     public EmbeddedResource creator;
+
     public Account withCreator(EmbeddedResource creator) {
         this.creator = creator;
         return this;
@@ -103,6 +113,7 @@ public class Account {
      */
     
     public String crmId;
+
     public Account withCrmId(String crmId) {
         this.crmId = crmId;
         return this;
@@ -113,6 +124,7 @@ public class Account {
      */
     
     public String crmObjectType;
+
     public Account withCrmObjectType(String crmObjectType) {
         this.crmObjectType = crmObjectType;
         return this;
@@ -123,6 +135,7 @@ public class Account {
      */
     
     public String crmUrl;
+
     public Account withCrmUrl(String crmUrl) {
         this.crmUrl = crmUrl;
         return this;
@@ -133,6 +146,7 @@ public class Account {
      */
     
     public java.util.Map<String, Object> customFields;
+
     public Account withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -143,6 +157,7 @@ public class Account {
      */
     
     public String description;
+
     public Account withDescription(String description) {
         this.description = description;
         return this;
@@ -153,6 +168,7 @@ public class Account {
      */
     
     public Boolean doNotContact;
+
     public Account withDoNotContact(Boolean doNotContact) {
         this.doNotContact = doNotContact;
         return this;
@@ -163,6 +179,7 @@ public class Account {
      */
     
     public String domain;
+
     public Account withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -173,6 +190,7 @@ public class Account {
      */
     
     public String founded;
+
     public Account withFounded(String founded) {
         this.founded = founded;
         return this;
@@ -183,6 +201,7 @@ public class Account {
      */
     
     public Long id;
+
     public Account withId(Long id) {
         this.id = id;
         return this;
@@ -193,6 +212,7 @@ public class Account {
      */
     
     public String industry;
+
     public Account withIndustry(String industry) {
         this.industry = industry;
         return this;
@@ -203,6 +223,7 @@ public class Account {
      */
     
     public OffsetDateTime lastContactedAt;
+
     public Account withLastContactedAt(OffsetDateTime lastContactedAt) {
         this.lastContactedAt = lastContactedAt;
         return this;
@@ -210,6 +231,7 @@ public class Account {
     
     
     public EmbeddedResource lastContactedBy;
+
     public Account withLastContactedBy(EmbeddedResource lastContactedBy) {
         this.lastContactedBy = lastContactedBy;
         return this;
@@ -217,6 +239,7 @@ public class Account {
     
     
     public EmbeddedResource lastContactedPerson;
+
     public Account withLastContactedPerson(EmbeddedResource lastContactedPerson) {
         this.lastContactedPerson = lastContactedPerson;
         return this;
@@ -227,6 +250,7 @@ public class Account {
      */
     
     public String lastContactedType;
+
     public Account withLastContactedType(String lastContactedType) {
         this.lastContactedType = lastContactedType;
         return this;
@@ -237,6 +261,7 @@ public class Account {
      */
     
     public String linkedinUrl;
+
     public Account withLinkedinUrl(String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
@@ -247,6 +272,7 @@ public class Account {
      */
     
     public String locale;
+
     public Account withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -257,6 +283,7 @@ public class Account {
      */
     
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -264,6 +291,7 @@ public class Account {
     
     
     public EmbeddedResource owner;
+
     public Account withOwner(EmbeddedResource owner) {
         this.owner = owner;
         return this;
@@ -274,6 +302,7 @@ public class Account {
      */
     
     public String ownerCrmId;
+
     public Account withOwnerCrmId(String ownerCrmId) {
         this.ownerCrmId = ownerCrmId;
         return this;
@@ -284,6 +313,7 @@ public class Account {
      */
     
     public String phone;
+
     public Account withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -294,6 +324,7 @@ public class Account {
      */
     
     public String postalCode;
+
     public Account withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -304,6 +335,7 @@ public class Account {
      */
     
     public String revenueRange;
+
     public Account withRevenueRange(String revenueRange) {
         this.revenueRange = revenueRange;
         return this;
@@ -314,6 +346,7 @@ public class Account {
      */
     
     public String size;
+
     public Account withSize(String size) {
         this.size = size;
         return this;
@@ -324,6 +357,7 @@ public class Account {
      */
     
     public String state;
+
     public Account withState(String state) {
         this.state = state;
         return this;
@@ -334,6 +368,7 @@ public class Account {
      */
     
     public String street;
+
     public Account withStreet(String street) {
         this.street = street;
         return this;
@@ -344,6 +379,7 @@ public class Account {
      */
     
     public String[] tags;
+
     public Account withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -354,6 +390,7 @@ public class Account {
      */
     
     public String twitterHandle;
+
     public Account withTwitterHandle(String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
@@ -364,6 +401,7 @@ public class Account {
      */
     
     public OffsetDateTime updatedAt;
+
     public Account withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -374,6 +412,7 @@ public class Account {
      */
     
     public java.util.Map<String, Object> userRelationships;
+
     public Account withUserRelationships(java.util.Map<String, Object> userRelationships) {
         this.userRelationships = userRelationships;
         return this;
@@ -384,9 +423,11 @@ public class Account {
      */
     
     public String website;
+
     public Account withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public Account(){}
 }

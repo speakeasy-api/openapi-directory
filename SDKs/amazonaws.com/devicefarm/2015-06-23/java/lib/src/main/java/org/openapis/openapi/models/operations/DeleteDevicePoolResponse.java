@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDevicePoolResponse {
@@ -12,6 +13,7 @@ public class DeleteDevicePoolResponse {
      */
     
     public Object argumentException;
+
     public DeleteDevicePoolResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDevicePoolResponse {
     
     
     public String contentType;
+
     public DeleteDevicePoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDevicePoolResponse {
      */
     
     public java.util.Map<String, Object> deleteDevicePoolResult;
+
     public DeleteDevicePoolResponse withDeleteDevicePoolResult(java.util.Map<String, Object> deleteDevicePoolResult) {
         this.deleteDevicePoolResult = deleteDevicePoolResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDevicePoolResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteDevicePoolResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDevicePoolResponse {
      */
     
     public Object notFoundException;
+
     public DeleteDevicePoolResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDevicePoolResponse {
      */
     
     public Object serviceAccountException;
+
     public DeleteDevicePoolResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteDevicePoolResponse {
     
     
     public Integer statusCode;
+
     public DeleteDevicePoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDevicePoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDevicePoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDevicePoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

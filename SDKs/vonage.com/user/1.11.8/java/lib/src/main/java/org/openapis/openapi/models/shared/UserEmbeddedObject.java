@@ -12,9 +12,11 @@ public class UserEmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public User data;
+
     public UserEmbeddedObject withData(User data) {
         this.data = data;
         return this;
     }
     
+    public UserEmbeddedObject(){}
 }

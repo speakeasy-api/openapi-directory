@@ -18,6 +18,7 @@ public class MobileApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public MobileApp withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,6 +30,7 @@ public class MobileApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public MobileApp withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class MobileApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public MobileAppPlatformEnum platform;
+
     public MobileApp withPlatform(MobileAppPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -51,9 +54,11 @@ public class MobileApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public MobileApp withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
     }
     
+    public MobileApp(){}
 }

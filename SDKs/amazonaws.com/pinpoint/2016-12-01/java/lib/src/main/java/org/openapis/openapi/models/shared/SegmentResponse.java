@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SegmentResponse {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public SegmentResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -21,6 +22,7 @@ public class SegmentResponse {
     
     @JsonProperty("Arn")
     public String arn;
+
     public SegmentResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +30,7 @@ public class SegmentResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public SegmentResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -36,6 +39,7 @@ public class SegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public SegmentDimensions dimensions;
+
     public SegmentResponse withDimensions(SegmentDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -43,6 +47,7 @@ public class SegmentResponse {
     
     @JsonProperty("Id")
     public String id;
+
     public SegmentResponse withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +56,7 @@ public class SegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportDefinition")
     public SegmentImportResource importDefinition;
+
     public SegmentResponse withImportDefinition(SegmentImportResource importDefinition) {
         this.importDefinition = importDefinition;
         return this;
@@ -59,6 +65,7 @@ public class SegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public SegmentResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -67,6 +74,7 @@ public class SegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SegmentResponse withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +83,7 @@ public class SegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentGroups")
     public SegmentGroupList segmentGroups;
+
     public SegmentResponse withSegmentGroups(SegmentGroupList segmentGroups) {
         this.segmentGroups = segmentGroups;
         return this;
@@ -82,6 +91,7 @@ public class SegmentResponse {
     
     @JsonProperty("SegmentType")
     public SegmentTypeEnum segmentType;
+
     public SegmentResponse withSegmentType(SegmentTypeEnum segmentType) {
         this.segmentType = segmentType;
         return this;
@@ -90,6 +100,7 @@ public class SegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public SegmentResponse withVersion(Long version) {
         this.version = version;
         return this;
@@ -98,9 +109,17 @@ public class SegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SegmentResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public SegmentResponse(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("Arn") String arn, @JsonProperty("CreationDate") String creationDate, @JsonProperty("Id") String id, @JsonProperty("SegmentType") SegmentTypeEnum segmentType) {
+        this.applicationId = applicationId;
+        this.arn = arn;
+        this.creationDate = creationDate;
+        this.id = id;
+        this.segmentType = segmentType;
+  }
 }

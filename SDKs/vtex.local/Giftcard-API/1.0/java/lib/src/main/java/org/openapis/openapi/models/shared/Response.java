@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Response {
     @JsonProperty("balance")
     public Integer balance;
+
     public Response withBalance(Integer balance) {
         this.balance = balance;
         return this;
@@ -16,6 +17,7 @@ public class Response {
     
     @JsonProperty("caption")
     public String caption;
+
     public Response withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -23,6 +25,7 @@ public class Response {
     
     @JsonProperty("emissionDate")
     public String emissionDate;
+
     public Response withEmissionDate(String emissionDate) {
         this.emissionDate = emissionDate;
         return this;
@@ -30,6 +33,7 @@ public class Response {
     
     @JsonProperty("expiringDate")
     public String expiringDate;
+
     public Response withExpiringDate(String expiringDate) {
         this.expiringDate = expiringDate;
         return this;
@@ -37,6 +41,7 @@ public class Response {
     
     @JsonProperty("id")
     public String id;
+
     public Response withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +49,7 @@ public class Response {
     
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public Response withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -51,6 +57,7 @@ public class Response {
     
     @JsonProperty("redemptionToken")
     public String redemptionToken;
+
     public Response withRedemptionToken(String redemptionToken) {
         this.redemptionToken = redemptionToken;
         return this;
@@ -58,6 +65,7 @@ public class Response {
     
     @JsonProperty("relationName")
     public String relationName;
+
     public Response withRelationName(String relationName) {
         this.relationName = relationName;
         return this;
@@ -65,9 +73,21 @@ public class Response {
     
     @JsonProperty("transactions")
     public Transactions transactions;
+
     public Response withTransactions(Transactions transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public Response(@JsonProperty("balance") Integer balance, @JsonProperty("caption") String caption, @JsonProperty("emissionDate") String emissionDate, @JsonProperty("expiringDate") String expiringDate, @JsonProperty("id") String id, @JsonProperty("redemptionCode") String redemptionCode, @JsonProperty("redemptionToken") String redemptionToken, @JsonProperty("relationName") String relationName, @JsonProperty("transactions") Transactions transactions) {
+        this.balance = balance;
+        this.caption = caption;
+        this.emissionDate = emissionDate;
+        this.expiringDate = expiringDate;
+        this.id = id;
+        this.redemptionCode = redemptionCode;
+        this.redemptionToken = redemptionToken;
+        this.relationName = relationName;
+        this.transactions = transactions;
+  }
 }

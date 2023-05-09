@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BeginTransactionResponse {
@@ -12,6 +13,7 @@ public class BeginTransactionResponse {
      */
     
     public Object accessDeniedException;
+
     public BeginTransactionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BeginTransactionResponse {
      */
     
     public Object badRequestException;
+
     public BeginTransactionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class BeginTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.BeginTransactionResponse beginTransactionResponse;
+
     public BeginTransactionResponse withBeginTransactionResponse(org.openapis.openapi.models.shared.BeginTransactionResponse beginTransactionResponse) {
         this.beginTransactionResponse = beginTransactionResponse;
         return this;
@@ -39,6 +43,7 @@ public class BeginTransactionResponse {
     
     
     public String contentType;
+
     public BeginTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BeginTransactionResponse {
      */
     
     public Object forbiddenException;
+
     public BeginTransactionResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class BeginTransactionResponse {
      */
     
     public Object internalServerErrorException;
+
     public BeginTransactionResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -66,6 +73,7 @@ public class BeginTransactionResponse {
     
     
     public Integer statusCode;
+
     public BeginTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class BeginTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BeginTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class BeginTransactionResponse {
      */
     
     public Object serviceUnavailableError;
+
     public BeginTransactionResponse withServiceUnavailableError(Object serviceUnavailableError) {
         this.serviceUnavailableError = serviceUnavailableError;
         return this;
@@ -93,9 +103,14 @@ public class BeginTransactionResponse {
      */
     
     public Object statementTimeoutException;
+
     public BeginTransactionResponse withStatementTimeoutException(Object statementTimeoutException) {
         this.statementTimeoutException = statementTimeoutException;
         return this;
     }
     
+    public BeginTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class FileAsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public FileAsData withData(String data) {
         this.data = data;
         return this;
@@ -26,9 +27,11 @@ public class FileAsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FileAsData withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FileAsData(){}
 }

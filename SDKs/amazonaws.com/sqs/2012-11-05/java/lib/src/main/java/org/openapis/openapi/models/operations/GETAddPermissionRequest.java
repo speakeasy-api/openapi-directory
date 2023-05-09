@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAddPermissionRequest {
@@ -12,6 +13,7 @@ public class GETAddPermissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccountIds")
     public String[] awsAccountIds;
+
     public GETAddPermissionRequest withAWSAccountIds(String[] awsAccountIds) {
         this.awsAccountIds = awsAccountIds;
         return this;
@@ -22,6 +24,7 @@ public class GETAddPermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
     public Long accountNumber;
+
     public GETAddPermissionRequest withAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -29,6 +32,7 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAddPermissionActionEnum action;
+
     public GETAddPermissionRequest withAction(GETAddPermissionActionEnum action) {
         this.action = action;
         return this;
@@ -39,6 +43,7 @@ public class GETAddPermissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Actions")
     public String[] actions;
+
     public GETAddPermissionRequest withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -49,6 +54,7 @@ public class GETAddPermissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Label")
     public String label;
+
     public GETAddPermissionRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -59,6 +65,7 @@ public class GETAddPermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
     public String queueName;
+
     public GETAddPermissionRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -66,6 +73,7 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAddPermissionVersionEnum version;
+
     public GETAddPermissionRequest withVersion(GETAddPermissionVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAddPermissionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAddPermissionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAddPermissionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAddPermissionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAddPermissionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAddPermissionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,19 @@ public class GETAddPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAddPermissionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAddPermissionRequest(@JsonProperty("AWSAccountIds") String[] awsAccountIds, @JsonProperty("AccountNumber") Long accountNumber, @JsonProperty("Action") GETAddPermissionActionEnum action, @JsonProperty("Actions") String[] actions, @JsonProperty("Label") String label, @JsonProperty("QueueName") String queueName, @JsonProperty("Version") GETAddPermissionVersionEnum version) {
+        this.awsAccountIds = awsAccountIds;
+        this.accountNumber = accountNumber;
+        this.action = action;
+        this.actions = actions;
+        this.label = label;
+        this.queueName = queueName;
+        this.version = version;
+  }
 }

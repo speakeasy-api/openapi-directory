@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OptionSpecification {
     
     public String namespace;
+
     public OptionSpecification withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -19,6 +20,7 @@ public class OptionSpecification {
     
     
     public String optionName;
+
     public OptionSpecification withOptionName(String optionName) {
         this.optionName = optionName;
         return this;
@@ -26,9 +28,11 @@ public class OptionSpecification {
     
     
     public String resourceName;
+
     public OptionSpecification withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public OptionSpecification(){}
 }

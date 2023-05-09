@@ -15,6 +15,7 @@ public class DeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedObjectId")
     public String deletedObjectId;
+
     public DeletionResponse withDeletedObjectId(String deletedObjectId) {
         this.deletedObjectId = deletedObjectId;
         return this;
@@ -23,6 +24,7 @@ public class DeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeletionResponse withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class DeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DeletionResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +42,7 @@ public class DeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public DeletionResponse withObject(String object) {
         this.object = object;
         return this;
@@ -47,6 +51,7 @@ public class DeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public DeletionResponse withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -55,6 +60,7 @@ public class DeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public Double progress;
+
     public DeletionResponse withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -63,6 +69,7 @@ public class DeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DeletionResponseStatusOfTheDeletionEnum status;
+
     public DeletionResponse withStatus(DeletionResponseStatusOfTheDeletionEnum status) {
         this.status = status;
         return this;
@@ -71,9 +78,11 @@ public class DeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DeletionResponseObjectThatSBeingDeletedEnum type;
+
     public DeletionResponse withType(DeletionResponseObjectThatSBeingDeletedEnum type) {
         this.type = type;
         return this;
     }
     
+    public DeletionResponse(){}
 }

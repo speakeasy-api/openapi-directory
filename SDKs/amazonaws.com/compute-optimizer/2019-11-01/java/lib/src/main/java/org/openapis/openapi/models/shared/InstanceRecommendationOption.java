@@ -15,6 +15,7 @@ public class InstanceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public InstanceRecommendationOption withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -23,6 +24,7 @@ public class InstanceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrationEffort")
     public MigrationEffortEnum migrationEffort;
+
     public InstanceRecommendationOption withMigrationEffort(MigrationEffortEnum migrationEffort) {
         this.migrationEffort = migrationEffort;
         return this;
@@ -31,6 +33,7 @@ public class InstanceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceRisk")
     public Double performanceRisk;
+
     public InstanceRecommendationOption withPerformanceRisk(Double performanceRisk) {
         this.performanceRisk = performanceRisk;
         return this;
@@ -39,6 +42,7 @@ public class InstanceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformDifferences")
     public PlatformDifferenceEnum[] platformDifferences;
+
     public InstanceRecommendationOption withPlatformDifferences(PlatformDifferenceEnum[] platformDifferences) {
         this.platformDifferences = platformDifferences;
         return this;
@@ -47,6 +51,7 @@ public class InstanceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectedUtilizationMetrics")
     public UtilizationMetric[] projectedUtilizationMetrics;
+
     public InstanceRecommendationOption withProjectedUtilizationMetrics(UtilizationMetric[] projectedUtilizationMetrics) {
         this.projectedUtilizationMetrics = projectedUtilizationMetrics;
         return this;
@@ -55,6 +60,7 @@ public class InstanceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Long rank;
+
     public InstanceRecommendationOption withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -63,9 +69,11 @@ public class InstanceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsOpportunity")
     public SavingsOpportunity savingsOpportunity;
+
     public InstanceRecommendationOption withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
         this.savingsOpportunity = savingsOpportunity;
         return this;
     }
     
+    public InstanceRecommendationOption(){}
 }

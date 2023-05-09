@@ -12,6 +12,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@context")
     public String atContext;
+
     public Subscription withAtContext(String atContext) {
         this.atContext = atContext;
         return this;
@@ -19,6 +20,7 @@ public class Subscription {
     
     @JsonProperty("active")
     public Boolean active;
+
     public Subscription withActive(Boolean active) {
         this.active = active;
         return this;
@@ -26,6 +28,7 @@ public class Subscription {
     
     @JsonProperty("id")
     public String id;
+
     public Subscription withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +37,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastEventID")
     public String lastEventID;
+
     public Subscription withLastEventID(String lastEventID) {
         this.lastEventID = lastEventID;
         return this;
@@ -42,6 +46,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public Subscription withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
@@ -49,6 +54,7 @@ public class Subscription {
     
     @JsonProperty("subscriber")
     public String subscriber;
+
     public Subscription withSubscriber(String subscriber) {
         this.subscriber = subscriber;
         return this;
@@ -56,6 +62,7 @@ public class Subscription {
     
     @JsonProperty("topic")
     public String topic;
+
     public Subscription withTopic(String topic) {
         this.topic = topic;
         return this;
@@ -63,9 +70,17 @@ public class Subscription {
     
     @JsonProperty("type")
     public String type;
+
     public Subscription withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Subscription(@JsonProperty("active") Boolean active, @JsonProperty("id") String id, @JsonProperty("subscriber") String subscriber, @JsonProperty("topic") String topic, @JsonProperty("type") String type) {
+        this.active = active;
+        this.id = id;
+        this.subscriber = subscriber;
+        this.topic = topic;
+        this.type = type;
+  }
 }

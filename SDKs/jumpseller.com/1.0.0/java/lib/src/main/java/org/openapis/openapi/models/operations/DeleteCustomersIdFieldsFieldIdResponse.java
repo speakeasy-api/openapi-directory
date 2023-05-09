@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomersIdFieldsFieldIdResponse {
     
     public String contentType;
+
     public DeleteCustomersIdFieldsFieldIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomersIdFieldsFieldIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteCustomersIdFieldsFieldIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteCustomersIdFieldsFieldIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomersIdFieldsFieldIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteCustomersIdFieldsFieldIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomersIdFieldsFieldIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteCustomersIdFieldsFieldIdResponse {
      */
     
     public String deleteCustomersIdFieldsFieldId200ApplicationJSONString;
+
     public DeleteCustomersIdFieldsFieldIdResponse withDeleteCustomersIdFieldsFieldId200ApplicationJSONString(String deleteCustomersIdFieldsFieldId200ApplicationJSONString) {
         this.deleteCustomersIdFieldsFieldId200ApplicationJSONString = deleteCustomersIdFieldsFieldId200ApplicationJSONString;
         return this;
     }
     
+    public DeleteCustomersIdFieldsFieldIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

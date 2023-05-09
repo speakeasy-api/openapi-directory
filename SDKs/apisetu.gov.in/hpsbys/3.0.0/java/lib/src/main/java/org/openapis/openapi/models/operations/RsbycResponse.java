@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RsbycResponse {
     
     public String contentType;
+
     public RsbycResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RsbycResponse {
     
     
     public Integer statusCode;
+
     public RsbycResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RsbycResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RsbycResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RsbycResponse {
      */
     
     public Rsbyc400ApplicationJSON rsbyc400ApplicationJSONObject;
+
     public RsbycResponse withRsbyc400ApplicationJSONObject(Rsbyc400ApplicationJSON rsbyc400ApplicationJSONObject) {
         this.rsbyc400ApplicationJSONObject = rsbyc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RsbycResponse {
      */
     
     public Rsbyc401ApplicationJSON rsbyc401ApplicationJSONObject;
+
     public RsbycResponse withRsbyc401ApplicationJSONObject(Rsbyc401ApplicationJSON rsbyc401ApplicationJSONObject) {
         this.rsbyc401ApplicationJSONObject = rsbyc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RsbycResponse {
      */
     
     public Rsbyc404ApplicationJSON rsbyc404ApplicationJSONObject;
+
     public RsbycResponse withRsbyc404ApplicationJSONObject(Rsbyc404ApplicationJSON rsbyc404ApplicationJSONObject) {
         this.rsbyc404ApplicationJSONObject = rsbyc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RsbycResponse {
      */
     
     public Rsbyc500ApplicationJSON rsbyc500ApplicationJSONObject;
+
     public RsbycResponse withRsbyc500ApplicationJSONObject(Rsbyc500ApplicationJSON rsbyc500ApplicationJSONObject) {
         this.rsbyc500ApplicationJSONObject = rsbyc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class RsbycResponse {
      */
     
     public Rsbyc502ApplicationJSON rsbyc502ApplicationJSONObject;
+
     public RsbycResponse withRsbyc502ApplicationJSONObject(Rsbyc502ApplicationJSON rsbyc502ApplicationJSONObject) {
         this.rsbyc502ApplicationJSONObject = rsbyc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class RsbycResponse {
      */
     
     public Rsbyc503ApplicationJSON rsbyc503ApplicationJSONObject;
+
     public RsbycResponse withRsbyc503ApplicationJSONObject(Rsbyc503ApplicationJSON rsbyc503ApplicationJSONObject) {
         this.rsbyc503ApplicationJSONObject = rsbyc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class RsbycResponse {
      */
     
     public Rsbyc504ApplicationJSON rsbyc504ApplicationJSONObject;
+
     public RsbycResponse withRsbyc504ApplicationJSONObject(Rsbyc504ApplicationJSON rsbyc504ApplicationJSONObject) {
         this.rsbyc504ApplicationJSONObject = rsbyc504ApplicationJSONObject;
         return this;
     }
     
+    public RsbycResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

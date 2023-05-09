@@ -18,6 +18,7 @@ public class PerIosVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCapacity")
     public PerIosVersionInfoDeviceCapacityEnum deviceCapacity;
+
     public PerIosVersionInfo withDeviceCapacity(PerIosVersionInfoDeviceCapacityEnum deviceCapacity) {
         this.deviceCapacity = deviceCapacity;
         return this;
@@ -29,9 +30,11 @@ public class PerIosVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public PerIosVersionInfo withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public PerIosVersionInfo(){}
 }

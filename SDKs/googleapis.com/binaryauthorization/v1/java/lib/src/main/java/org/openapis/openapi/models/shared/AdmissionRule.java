@@ -18,6 +18,7 @@ public class AdmissionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcementMode")
     public AdmissionRuleEnforcementModeEnum enforcementMode;
+
     public AdmissionRule withEnforcementMode(AdmissionRuleEnforcementModeEnum enforcementMode) {
         this.enforcementMode = enforcementMode;
         return this;
@@ -29,6 +30,7 @@ public class AdmissionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMode")
     public AdmissionRuleEvaluationModeEnum evaluationMode;
+
     public AdmissionRule withEvaluationMode(AdmissionRuleEvaluationModeEnum evaluationMode) {
         this.evaluationMode = evaluationMode;
         return this;
@@ -40,9 +42,11 @@ public class AdmissionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireAttestationsBy")
     public String[] requireAttestationsBy;
+
     public AdmissionRule withRequireAttestationsBy(String[] requireAttestationsBy) {
         this.requireAttestationsBy = requireAttestationsBy;
         return this;
     }
     
+    public AdmissionRule(){}
 }

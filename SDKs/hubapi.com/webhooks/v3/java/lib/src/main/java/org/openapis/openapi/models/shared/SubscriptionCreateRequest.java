@@ -18,6 +18,7 @@ public class SubscriptionCreateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public SubscriptionCreateRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -28,6 +29,7 @@ public class SubscriptionCreateRequest {
      */
     @JsonProperty("eventType")
     public SubscriptionCreateRequestEventTypeEnum eventType;
+
     public SubscriptionCreateRequest withEventType(SubscriptionCreateRequestEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -39,9 +41,13 @@ public class SubscriptionCreateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public SubscriptionCreateRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public SubscriptionCreateRequest(@JsonProperty("eventType") SubscriptionCreateRequestEventTypeEnum eventType) {
+        this.eventType = eventType;
+  }
 }

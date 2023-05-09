@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2SearchResponseSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudRetailV2SearchResponseSearchResult withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2SearchResponseSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingVariantCount")
     public Integer matchingVariantCount;
+
     public GoogleCloudRetailV2SearchResponseSearchResult withMatchingVariantCount(Integer matchingVariantCount) {
         this.matchingVariantCount = matchingVariantCount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2SearchResponseSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingVariantFields")
     public java.util.Map<String, String> matchingVariantFields;
+
     public GoogleCloudRetailV2SearchResponseSearchResult withMatchingVariantFields(java.util.Map<String, String> matchingVariantFields) {
         this.matchingVariantFields = matchingVariantFields;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2SearchResponseSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalLabels")
     public String[] personalLabels;
+
     public GoogleCloudRetailV2SearchResponseSearchResult withPersonalLabels(String[] personalLabels) {
         this.personalLabels = personalLabels;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2SearchResponseSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public GoogleCloudRetailV2Product product;
+
     public GoogleCloudRetailV2SearchResponseSearchResult withProduct(GoogleCloudRetailV2Product product) {
         this.product = product;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudRetailV2SearchResponseSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantRollupValues")
     public java.util.Map<String, Object> variantRollupValues;
+
     public GoogleCloudRetailV2SearchResponseSearchResult withVariantRollupValues(java.util.Map<String, Object> variantRollupValues) {
         this.variantRollupValues = variantRollupValues;
         return this;
     }
     
+    public GoogleCloudRetailV2SearchResponseSearchResult(){}
 }

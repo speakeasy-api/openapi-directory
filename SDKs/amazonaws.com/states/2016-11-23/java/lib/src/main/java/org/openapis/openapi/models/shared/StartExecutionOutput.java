@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class StartExecutionOutput {
     @JsonProperty("executionArn")
     public String executionArn;
+
     public StartExecutionOutput withExecutionArn(String executionArn) {
         this.executionArn = executionArn;
         return this;
@@ -26,9 +27,14 @@ public class StartExecutionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public StartExecutionOutput withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public StartExecutionOutput(@JsonProperty("executionArn") String executionArn, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.executionArn = executionArn;
+        this.startDate = startDate;
+  }
 }

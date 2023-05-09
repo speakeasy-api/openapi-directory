@@ -18,6 +18,7 @@ public class SyncWorkspaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeConflict")
     public MergeConflict[] mergeConflict;
+
     public SyncWorkspaceResponse withMergeConflict(MergeConflict[] mergeConflict) {
         this.mergeConflict = mergeConflict;
         return this;
@@ -29,9 +30,11 @@ public class SyncWorkspaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncStatus")
     public SyncStatus syncStatus;
+
     public SyncWorkspaceResponse withSyncStatus(SyncStatus syncStatus) {
         this.syncStatus = syncStatus;
         return this;
     }
     
+    public SyncWorkspaceResponse(){}
 }

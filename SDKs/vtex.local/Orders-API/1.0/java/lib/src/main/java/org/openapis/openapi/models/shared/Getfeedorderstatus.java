@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Getfeedorderstatus {
     @JsonProperty("currentChange")
     public String currentChange;
+
     public Getfeedorderstatus withCurrentChange(String currentChange) {
         this.currentChange = currentChange;
         return this;
@@ -16,6 +17,7 @@ public class Getfeedorderstatus {
     
     @JsonProperty("domain")
     public String domain;
+
     public Getfeedorderstatus withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -23,6 +25,7 @@ public class Getfeedorderstatus {
     
     @JsonProperty("eventId")
     public String eventId;
+
     public Getfeedorderstatus withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -30,6 +33,7 @@ public class Getfeedorderstatus {
     
     @JsonProperty("handle")
     public String handle;
+
     public Getfeedorderstatus withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -37,6 +41,7 @@ public class Getfeedorderstatus {
     
     @JsonProperty("lastChange")
     public String lastChange;
+
     public Getfeedorderstatus withLastChange(String lastChange) {
         this.lastChange = lastChange;
         return this;
@@ -44,6 +49,7 @@ public class Getfeedorderstatus {
     
     @JsonProperty("lastState")
     public String lastState;
+
     public Getfeedorderstatus withLastState(String lastState) {
         this.lastState = lastState;
         return this;
@@ -51,6 +57,7 @@ public class Getfeedorderstatus {
     
     @JsonProperty("orderId")
     public String orderId;
+
     public Getfeedorderstatus withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -58,9 +65,20 @@ public class Getfeedorderstatus {
     
     @JsonProperty("state")
     public String state;
+
     public Getfeedorderstatus withState(String state) {
         this.state = state;
         return this;
     }
     
+    public Getfeedorderstatus(@JsonProperty("currentChange") String currentChange, @JsonProperty("domain") String domain, @JsonProperty("eventId") String eventId, @JsonProperty("handle") String handle, @JsonProperty("lastChange") String lastChange, @JsonProperty("lastState") String lastState, @JsonProperty("orderId") String orderId, @JsonProperty("state") String state) {
+        this.currentChange = currentChange;
+        this.domain = domain;
+        this.eventId = eventId;
+        this.handle = handle;
+        this.lastChange = lastChange;
+        this.lastState = lastState;
+        this.orderId = orderId;
+        this.state = state;
+  }
 }

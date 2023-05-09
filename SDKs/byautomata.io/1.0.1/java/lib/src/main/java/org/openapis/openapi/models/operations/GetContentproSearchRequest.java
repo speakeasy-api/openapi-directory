@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentproSearchRequest {
@@ -12,9 +13,13 @@ public class GetContentproSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terms")
     public String terms;
+
     public GetContentproSearchRequest withTerms(String terms) {
         this.terms = terms;
         return this;
     }
     
+    public GetContentproSearchRequest(@JsonProperty("terms") String terms) {
+        this.terms = terms;
+  }
 }

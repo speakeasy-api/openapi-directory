@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionARealTimeDecisionDefaultApplicationJSON10 {
     @JsonProperty("detail")
     public String detail;
+
     public ActionARealTimeDecisionDefaultApplicationJSON10 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -16,6 +17,7 @@ public class ActionARealTimeDecisionDefaultApplicationJSON10 {
     
     @JsonProperty("status")
     public ActionARealTimeDecisionDefaultApplicationJSON10StatusEnum status;
+
     public ActionARealTimeDecisionDefaultApplicationJSON10 withStatus(ActionARealTimeDecisionDefaultApplicationJSON10StatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +25,7 @@ public class ActionARealTimeDecisionDefaultApplicationJSON10 {
     
     @JsonProperty("title")
     public String title;
+
     public ActionARealTimeDecisionDefaultApplicationJSON10 withTitle(String title) {
         this.title = title;
         return this;
@@ -30,9 +33,16 @@ public class ActionARealTimeDecisionDefaultApplicationJSON10 {
     
     @JsonProperty("type")
     public ActionARealTimeDecisionDefaultApplicationJSON10TypeEnum type;
+
     public ActionARealTimeDecisionDefaultApplicationJSON10 withType(ActionARealTimeDecisionDefaultApplicationJSON10TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ActionARealTimeDecisionDefaultApplicationJSON10(@JsonProperty("detail") String detail, @JsonProperty("status") ActionARealTimeDecisionDefaultApplicationJSON10StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") ActionARealTimeDecisionDefaultApplicationJSON10TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

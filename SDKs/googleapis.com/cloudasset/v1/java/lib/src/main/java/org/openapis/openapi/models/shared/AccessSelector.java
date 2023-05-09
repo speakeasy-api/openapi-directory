@@ -18,6 +18,7 @@ public class AccessSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public AccessSelector withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
@@ -29,9 +30,11 @@ public class AccessSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public AccessSelector withRoles(String[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public AccessSelector(){}
 }

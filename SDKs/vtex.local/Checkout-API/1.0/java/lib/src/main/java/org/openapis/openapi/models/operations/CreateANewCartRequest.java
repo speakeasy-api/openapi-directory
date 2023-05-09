@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateANewCartRequest {
@@ -12,6 +13,7 @@ public class CreateANewCartRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateANewCartRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateANewCartRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateANewCartRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,14 @@ public class CreateANewCartRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceNewCart")
     public Boolean forceNewCart;
+
     public CreateANewCartRequest withForceNewCart(Boolean forceNewCart) {
         this.forceNewCart = forceNewCart;
         return this;
     }
     
+    public CreateANewCartRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

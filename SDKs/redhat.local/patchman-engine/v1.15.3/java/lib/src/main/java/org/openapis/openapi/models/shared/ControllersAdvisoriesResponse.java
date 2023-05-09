@@ -15,6 +15,7 @@ public class ControllersAdvisoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ControllersAdvisoryItem[] data;
+
     public ControllersAdvisoriesResponse withData(ControllersAdvisoryItem[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ControllersAdvisoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ControllersLinks links;
+
     public ControllersAdvisoriesResponse withLinks(ControllersLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class ControllersAdvisoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public ControllersListMeta meta;
+
     public ControllersAdvisoriesResponse withMeta(ControllersListMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public ControllersAdvisoriesResponse(){}
 }

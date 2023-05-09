@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConnectInstanceConfigRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteConnectInstanceConfigRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteConnectInstanceConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteConnectInstanceConfigRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteConnectInstanceConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteConnectInstanceConfigRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteConnectInstanceConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteConnectInstanceConfigRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteConnectInstanceConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteConnectInstanceConfigRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteConnectInstanceConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteConnectInstanceConfigRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteConnectInstanceConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteConnectInstanceConfigRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -58,9 +66,13 @@ public class DeleteConnectInstanceConfigRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connectInstanceId")
     public String connectInstanceId;
+
     public DeleteConnectInstanceConfigRequest withConnectInstanceId(String connectInstanceId) {
         this.connectInstanceId = connectInstanceId;
         return this;
     }
     
+    public DeleteConnectInstanceConfigRequest(@JsonProperty("connectInstanceId") String connectInstanceId) {
+        this.connectInstanceId = connectInstanceId;
+  }
 }

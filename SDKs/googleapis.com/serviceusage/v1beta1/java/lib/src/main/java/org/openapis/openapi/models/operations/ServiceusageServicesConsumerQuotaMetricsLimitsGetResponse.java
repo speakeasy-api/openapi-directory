@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse {
@@ -12,6 +13,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ConsumerQuotaLimit consumerQuotaLimit;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse withConsumerQuotaLimit(org.openapis.openapi.models.shared.ConsumerQuotaLimit consumerQuotaLimit) {
         this.consumerQuotaLimit = consumerQuotaLimit;
         return this;
@@ -19,6 +21,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse {
     
     
     public String contentType;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse {
     
     
     public Integer statusCode;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

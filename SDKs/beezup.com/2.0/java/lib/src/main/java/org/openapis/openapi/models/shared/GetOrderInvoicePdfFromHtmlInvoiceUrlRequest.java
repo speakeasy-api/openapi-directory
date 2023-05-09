@@ -12,9 +12,13 @@ public class GetOrderInvoicePdfFromHtmlInvoiceUrlRequest {
      */
     @JsonProperty("orderInvoiceUri")
     public String orderInvoiceUri;
+
     public GetOrderInvoicePdfFromHtmlInvoiceUrlRequest withOrderInvoiceUri(String orderInvoiceUri) {
         this.orderInvoiceUri = orderInvoiceUri;
         return this;
     }
     
+    public GetOrderInvoicePdfFromHtmlInvoiceUrlRequest(@JsonProperty("orderInvoiceUri") String orderInvoiceUri) {
+        this.orderInvoiceUri = orderInvoiceUri;
+  }
 }

@@ -20,6 +20,7 @@ public class DeleteConfigurationSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetArn")
     public String configurationSetArn;
+
     public DeleteConfigurationSetResult withConfigurationSetArn(String configurationSetArn) {
         this.configurationSetArn = configurationSetArn;
         return this;
@@ -28,6 +29,7 @@ public class DeleteConfigurationSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public DeleteConfigurationSetResult withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -38,6 +40,7 @@ public class DeleteConfigurationSetResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public DeleteConfigurationSetResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -46,6 +49,7 @@ public class DeleteConfigurationSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultMessageType")
     public MessageTypeEnum defaultMessageType;
+
     public DeleteConfigurationSetResult withDefaultMessageType(MessageTypeEnum defaultMessageType) {
         this.defaultMessageType = defaultMessageType;
         return this;
@@ -54,6 +58,7 @@ public class DeleteConfigurationSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSenderId")
     public String defaultSenderId;
+
     public DeleteConfigurationSetResult withDefaultSenderId(String defaultSenderId) {
         this.defaultSenderId = defaultSenderId;
         return this;
@@ -62,9 +67,11 @@ public class DeleteConfigurationSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDestinations")
     public EventDestination[] eventDestinations;
+
     public DeleteConfigurationSetResult withEventDestinations(EventDestination[] eventDestinations) {
         this.eventDestinations = eventDestinations;
         return this;
     }
     
+    public DeleteConfigurationSetResult(){}
 }

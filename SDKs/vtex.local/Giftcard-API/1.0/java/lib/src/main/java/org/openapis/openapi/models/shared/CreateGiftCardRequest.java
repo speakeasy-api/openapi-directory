@@ -14,6 +14,7 @@ public class CreateGiftCardRequest {
      */
     @JsonProperty("caption")
     public String caption;
+
     public CreateGiftCardRequest withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -24,6 +25,7 @@ public class CreateGiftCardRequest {
      */
     @JsonProperty("expiringDate")
     public String expiringDate;
+
     public CreateGiftCardRequest withExpiringDate(String expiringDate) {
         this.expiringDate = expiringDate;
         return this;
@@ -35,6 +37,7 @@ public class CreateGiftCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipleCredits")
     public Boolean multipleCredits;
+
     public CreateGiftCardRequest withMultipleCredits(Boolean multipleCredits) {
         this.multipleCredits = multipleCredits;
         return this;
@@ -46,6 +49,7 @@ public class CreateGiftCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipleRedemptions")
     public Boolean multipleRedemptions;
+
     public CreateGiftCardRequest withMultipleRedemptions(Boolean multipleRedemptions) {
         this.multipleRedemptions = multipleRedemptions;
         return this;
@@ -56,6 +60,7 @@ public class CreateGiftCardRequest {
      */
     @JsonProperty("profileId")
     public String profileId;
+
     public CreateGiftCardRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -66,6 +71,7 @@ public class CreateGiftCardRequest {
      */
     @JsonProperty("relationName")
     public String relationName;
+
     public CreateGiftCardRequest withRelationName(String relationName) {
         this.relationName = relationName;
         return this;
@@ -77,9 +83,16 @@ public class CreateGiftCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedToOwner")
     public Boolean restrictedToOwner;
+
     public CreateGiftCardRequest withRestrictedToOwner(Boolean restrictedToOwner) {
         this.restrictedToOwner = restrictedToOwner;
         return this;
     }
     
+    public CreateGiftCardRequest(@JsonProperty("caption") String caption, @JsonProperty("expiringDate") String expiringDate, @JsonProperty("profileId") String profileId, @JsonProperty("relationName") String relationName) {
+        this.caption = caption;
+        this.expiringDate = expiringDate;
+        this.profileId = profileId;
+        this.relationName = relationName;
+  }
 }

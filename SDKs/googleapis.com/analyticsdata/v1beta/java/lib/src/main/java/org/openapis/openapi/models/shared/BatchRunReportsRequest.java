@@ -18,9 +18,11 @@ public class BatchRunReportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public RunReportRequest[] requests;
+
     public BatchRunReportsRequest withRequests(RunReportRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchRunReportsRequest(){}
 }

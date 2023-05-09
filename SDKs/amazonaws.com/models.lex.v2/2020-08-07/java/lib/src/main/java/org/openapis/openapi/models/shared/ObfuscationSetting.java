@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ObfuscationSetting {
     @JsonProperty("obfuscationSettingType")
     public ObfuscationSettingTypeEnum obfuscationSettingType;
+
     public ObfuscationSetting withObfuscationSettingType(ObfuscationSettingTypeEnum obfuscationSettingType) {
         this.obfuscationSettingType = obfuscationSettingType;
         return this;
     }
     
+    public ObfuscationSetting(@JsonProperty("obfuscationSettingType") ObfuscationSettingTypeEnum obfuscationSettingType) {
+        this.obfuscationSettingType = obfuscationSettingType;
+  }
 }

@@ -20,6 +20,7 @@ public class WorldGenerationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public WorldGenerationJobSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class WorldGenerationJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public WorldGenerationJobSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class WorldGenerationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedWorldCount")
     public Long failedWorldCount;
+
     public WorldGenerationJobSummary withFailedWorldCount(Long failedWorldCount) {
         this.failedWorldCount = failedWorldCount;
         return this;
@@ -46,6 +49,7 @@ public class WorldGenerationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorldGenerationJobStatusEnum status;
+
     public WorldGenerationJobSummary withStatus(WorldGenerationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -54,6 +58,7 @@ public class WorldGenerationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("succeededWorldCount")
     public Long succeededWorldCount;
+
     public WorldGenerationJobSummary withSucceededWorldCount(Long succeededWorldCount) {
         this.succeededWorldCount = succeededWorldCount;
         return this;
@@ -62,6 +67,7 @@ public class WorldGenerationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public WorldGenerationJobSummary withTemplate(String template) {
         this.template = template;
         return this;
@@ -70,9 +76,11 @@ public class WorldGenerationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worldCount")
     public WorldCount worldCount;
+
     public WorldGenerationJobSummary withWorldCount(WorldCount worldCount) {
         this.worldCount = worldCount;
         return this;
     }
     
+    public WorldGenerationJobSummary(){}
 }

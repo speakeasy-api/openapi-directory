@@ -15,6 +15,7 @@ public class ListWorkerConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorkerConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWorkerConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfigurations")
     public WorkerConfigurationSummary[] workerConfigurations;
+
     public ListWorkerConfigurationsResponse withWorkerConfigurations(WorkerConfigurationSummary[] workerConfigurations) {
         this.workerConfigurations = workerConfigurations;
         return this;
     }
     
+    public ListWorkerConfigurationsResponse(){}
 }

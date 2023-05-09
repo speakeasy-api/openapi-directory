@@ -3,16 +3,15 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DigitalassetlinksAssetlinksBulkCheckRequest;
 import org.openapis.openapi.models.operations.DigitalassetlinksAssetlinksBulkCheckResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.BulkCheckRequest;
-import org.openapis.openapi.models.shared.StatementTemplate;
-import org.openapis.openapi.models.shared.Asset;
-import org.openapis.openapi.models.shared.WebAsset;
 import org.openapis.openapi.models.shared.AndroidAppAsset;
+import org.openapis.openapi.models.shared.Asset;
+import org.openapis.openapi.models.shared.BulkCheckRequest;
 import org.openapis.openapi.models.shared.CertificateInfo;
+import org.openapis.openapi.models.shared.StatementTemplate;
+import org.openapis.openapi.models.shared.WebAsset;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -22,7 +21,7 @@ public class Application {
                 .build();
 
             DigitalassetlinksAssetlinksBulkCheckRequest req = new DigitalassetlinksAssetlinksBulkCheckRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 bulkCheckRequest = new BulkCheckRequest() {{
                     allowGoogleInternalDataSources = false;
                     defaultRelation = "provident";
@@ -30,24 +29,24 @@ public class Application {
                         androidApp = new AndroidAppAsset() {{
                             certificate = new CertificateInfo() {{
                                 sha256Fingerprint = "distinctio";
-                            }};
+                            }};;
                             packageName = "quibusdam";
-                        }};
+                        }};;
                         web = new WebAsset() {{
                             site = "unde";
-                        }};
-                    }};
+                        }};;
+                    }};;
                     defaultTarget = new Asset() {{
                         androidApp = new AndroidAppAsset() {{
                             certificate = new CertificateInfo() {{
                                 sha256Fingerprint = "nulla";
-                            }};
+                            }};;
                             packageName = "corrupti";
-                        }};
+                        }};;
                         web = new WebAsset() {{
                             site = "illum";
-                        }};
-                    }};
+                        }};;
+                    }};;
                     skipCacheLookup = false;
                     statements = new org.openapis.openapi.models.shared.StatementTemplate[]{{
                         add(new StatementTemplate() {{
@@ -101,9 +100,9 @@ public class Application {
                             }};
                         }}),
                     }};
-                }};
+                }};;
                 accessToken = "iusto";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "nisi";
                 fields = "recusandae";
                 key = "temporibus";
@@ -112,15 +111,17 @@ public class Application {
                 quotaUser = "quis";
                 uploadType = "veritatis";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             DigitalassetlinksAssetlinksBulkCheckResponse res = sdk.assetlinks.digitalassetlinksAssetlinksBulkCheck(req);
 
-            if (res.bulkCheckResponse.isPresent()) {
+            if (res.bulkCheckResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

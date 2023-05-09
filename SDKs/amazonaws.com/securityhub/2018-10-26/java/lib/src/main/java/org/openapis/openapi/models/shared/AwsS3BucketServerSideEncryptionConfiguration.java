@@ -15,9 +15,11 @@ public class AwsS3BucketServerSideEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public AwsS3BucketServerSideEncryptionRule[] rules;
+
     public AwsS3BucketServerSideEncryptionConfiguration withRules(AwsS3BucketServerSideEncryptionRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public AwsS3BucketServerSideEncryptionConfiguration(){}
 }

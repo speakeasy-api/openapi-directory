@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations {
     
     public String ipamArn;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withIpamArn(String ipamArn) {
         this.ipamArn = ipamArn;
         return this;
@@ -19,6 +20,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public String ipamId;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public String ipamRegion;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withIpamRegion(String ipamRegion) {
         this.ipamRegion = ipamRegion;
         return this;
@@ -33,6 +36,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public String ipamResourceDiscoveryAssociationArn;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withIpamResourceDiscoveryAssociationArn(String ipamResourceDiscoveryAssociationArn) {
         this.ipamResourceDiscoveryAssociationArn = ipamResourceDiscoveryAssociationArn;
         return this;
@@ -40,6 +44,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public String ipamResourceDiscoveryAssociationId;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withIpamResourceDiscoveryAssociationId(String ipamResourceDiscoveryAssociationId) {
         this.ipamResourceDiscoveryAssociationId = ipamResourceDiscoveryAssociationId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public String ipamResourceDiscoveryId;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public Boolean isDefault;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -61,6 +68,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public String ownerId;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociationsResourceDiscoveryStatusEnum resourceDiscoveryStatus;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withResourceDiscoveryStatus(DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociationsResourceDiscoveryStatusEnum resourceDiscoveryStatus) {
         this.resourceDiscoveryStatus = resourceDiscoveryStatus;
         return this;
@@ -75,6 +84,7 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociationsStateEnum state;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withState(DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociationsStateEnum state) {
         this.state = state;
         return this;
@@ -82,9 +92,11 @@ public class DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscover
     
     
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociationsTags[] tags;
+
     public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations withTags(DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeIpamResourceDiscoveryAssociationsResultIpamResourceDiscoveryAssociations(){}
 }

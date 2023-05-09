@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AbortVaultLockResponse {
     
     public String contentType;
+
     public AbortVaultLockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AbortVaultLockResponse {
      */
     
     public Object invalidParameterValueException;
+
     public AbortVaultLockResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class AbortVaultLockResponse {
      */
     
     public Object missingParameterValueException;
+
     public AbortVaultLockResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class AbortVaultLockResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AbortVaultLockResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class AbortVaultLockResponse {
     
     
     public Integer statusCode;
+
     public AbortVaultLockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AbortVaultLockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AbortVaultLockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class AbortVaultLockResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AbortVaultLockResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public AbortVaultLockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

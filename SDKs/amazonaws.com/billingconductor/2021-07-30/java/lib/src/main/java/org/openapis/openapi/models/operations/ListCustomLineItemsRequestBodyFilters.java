@@ -15,6 +15,7 @@ public class ListCustomLineItemsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arns")
     public String[] arns;
+
     public ListCustomLineItemsRequestBodyFilters withArns(String[] arns) {
         this.arns = arns;
         return this;
@@ -23,6 +24,7 @@ public class ListCustomLineItemsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingGroups")
     public String[] billingGroups;
+
     public ListCustomLineItemsRequestBodyFilters withBillingGroups(String[] billingGroups) {
         this.billingGroups = billingGroups;
         return this;
@@ -31,9 +33,11 @@ public class ListCustomLineItemsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public ListCustomLineItemsRequestBodyFilters withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public ListCustomLineItemsRequestBodyFilters(){}
 }

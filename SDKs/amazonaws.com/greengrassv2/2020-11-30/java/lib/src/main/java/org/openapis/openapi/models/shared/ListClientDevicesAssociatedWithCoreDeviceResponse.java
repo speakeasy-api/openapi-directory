@@ -15,6 +15,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedClientDevices")
     public AssociatedClientDevice[] associatedClientDevices;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withAssociatedClientDevices(AssociatedClientDevice[] associatedClientDevices) {
         this.associatedClientDevices = associatedClientDevices;
         return this;
@@ -23,9 +24,11 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListClientDevicesAssociatedWithCoreDeviceResponse(){}
 }

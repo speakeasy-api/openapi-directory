@@ -15,6 +15,7 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamActionDefinition")
     public IamActionDefinition iamActionDefinition;
+
     public Definition withIamActionDefinition(IamActionDefinition iamActionDefinition) {
         this.iamActionDefinition = iamActionDefinition;
         return this;
@@ -23,6 +24,7 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScpActionDefinition")
     public ScpActionDefinition scpActionDefinition;
+
     public Definition withScpActionDefinition(ScpActionDefinition scpActionDefinition) {
         this.scpActionDefinition = scpActionDefinition;
         return this;
@@ -31,9 +33,11 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SsmActionDefinition")
     public SsmActionDefinition ssmActionDefinition;
+
     public Definition withSsmActionDefinition(SsmActionDefinition ssmActionDefinition) {
         this.ssmActionDefinition = ssmActionDefinition;
         return this;
     }
     
+    public Definition(){}
 }

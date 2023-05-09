@@ -18,6 +18,7 @@ public class MemberRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member")
     public String member;
+
     public MemberRelation withMember(String member) {
         this.member = member;
         return this;
@@ -29,6 +30,7 @@ public class MemberRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMemberKey")
     public EntityKey[] preferredMemberKey;
+
     public MemberRelation withPreferredMemberKey(EntityKey[] preferredMemberKey) {
         this.preferredMemberKey = preferredMemberKey;
         return this;
@@ -40,6 +42,7 @@ public class MemberRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationType")
     public MemberRelationRelationTypeEnum relationType;
+
     public MemberRelation withRelationType(MemberRelationRelationTypeEnum relationType) {
         this.relationType = relationType;
         return this;
@@ -51,9 +54,11 @@ public class MemberRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public TransitiveMembershipRole[] roles;
+
     public MemberRelation withRoles(TransitiveMembershipRole[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public MemberRelation(){}
 }

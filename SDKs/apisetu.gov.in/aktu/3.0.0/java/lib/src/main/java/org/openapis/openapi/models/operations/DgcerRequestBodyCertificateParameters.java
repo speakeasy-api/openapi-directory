@@ -12,6 +12,7 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public DgcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("EnrollmentNo")
     public String enrollmentNo;
+
     public DgcerRequestBodyCertificateParameters withEnrollmentNo(String enrollmentNo) {
         this.enrollmentNo = enrollmentNo;
         return this;
@@ -32,6 +34,7 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public DgcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -42,6 +45,7 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RollNo")
     public String rollNo;
+
     public DgcerRequestBodyCertificateParameters withRollNo(String rollNo) {
         this.rollNo = rollNo;
         return this;
@@ -52,9 +56,17 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public DgcerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public DgcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("EnrollmentNo") String enrollmentNo, @JsonProperty("FullName") String fullName, @JsonProperty("RollNo") String rollNo, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.enrollmentNo = enrollmentNo;
+        this.fullName = fullName;
+        this.rollNo = rollNo;
+        this.uid = uid;
+  }
 }

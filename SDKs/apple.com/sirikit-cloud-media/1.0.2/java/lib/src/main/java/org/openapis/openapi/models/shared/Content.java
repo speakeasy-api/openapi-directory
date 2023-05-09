@@ -12,6 +12,7 @@ public class Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public ContentAttributes attributes;
+
     public Content withAttributes(ContentAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public Content withControl(String control) {
         this.control = control;
         return this;
@@ -27,6 +29,7 @@ public class Content {
     
     @JsonProperty("identifier")
     public String identifier;
+
     public Content withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -35,6 +38,7 @@ public class Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLive")
     public Boolean isLive;
+
     public Content withIsLive(Boolean isLive) {
         this.isLive = isLive;
         return this;
@@ -43,6 +47,7 @@ public class Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playIndex")
     public Long playIndex;
+
     public Content withPlayIndex(Long playIndex) {
         this.playIndex = playIndex;
         return this;
@@ -51,9 +56,13 @@ public class Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Content withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Content(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

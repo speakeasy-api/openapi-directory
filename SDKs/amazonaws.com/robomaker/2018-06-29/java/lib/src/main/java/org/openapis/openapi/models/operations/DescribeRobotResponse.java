@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRobotResponse {
     
     public String contentType;
+
     public DescribeRobotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRobotResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRobotResponse describeRobotResponse;
+
     public DescribeRobotResponse withDescribeRobotResponse(org.openapis.openapi.models.shared.DescribeRobotResponse describeRobotResponse) {
         this.describeRobotResponse = describeRobotResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRobotResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRobotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRobotResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeRobotResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRobotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRobotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeRobotResponse {
     
     
     public Integer statusCode;
+
     public DescribeRobotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRobotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRobotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeRobotResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRobotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeRobotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

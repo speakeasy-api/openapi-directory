@@ -75,12 +75,10 @@ public class StatusUpdates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStatusForObjectResponse res = new org.openapis.openapi.models.operations.CreateStatusForObjectResponse() {{
+        org.openapis.openapi.models.operations.CreateStatusForObjectResponse res = new org.openapis.openapi.models.operations.CreateStatusForObjectResponse(contentType, httpRes.statusCode()) {{
             createStatusForObject201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -131,12 +129,10 @@ public class StatusUpdates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStatusResponse res = new org.openapis.openapi.models.operations.DeleteStatusResponse() {{
+        org.openapis.openapi.models.operations.DeleteStatusResponse res = new org.openapis.openapi.models.operations.DeleteStatusResponse(contentType, httpRes.statusCode()) {{
             deleteStatus200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,12 +181,10 @@ public class StatusUpdates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatusResponse res = new org.openapis.openapi.models.operations.GetStatusResponse() {{
+        org.openapis.openapi.models.operations.GetStatusResponse res = new org.openapis.openapi.models.operations.GetStatusResponse(contentType, httpRes.statusCode()) {{
             getStatus200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,12 +233,10 @@ public class StatusUpdates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatusesForObjectResponse res = new org.openapis.openapi.models.operations.GetStatusesForObjectResponse() {{
+        org.openapis.openapi.models.operations.GetStatusesForObjectResponse res = new org.openapis.openapi.models.operations.GetStatusesForObjectResponse(contentType, httpRes.statusCode()) {{
             getStatusesForObject200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

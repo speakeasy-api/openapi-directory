@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEndpointResponse {
@@ -12,6 +13,7 @@ public class CreateEndpointResponse {
      */
     
     public Object accessDeniedFault;
+
     public CreateEndpointResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class CreateEndpointResponse {
     
     
     public String contentType;
+
     public CreateEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEndpointResponse createEndpointResponse;
+
     public CreateEndpointResponse withCreateEndpointResponse(org.openapis.openapi.models.shared.CreateEndpointResponse createEndpointResponse) {
         this.createEndpointResponse = createEndpointResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateEndpointResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public CreateEndpointResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateEndpointResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public CreateEndpointResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -59,6 +65,7 @@ public class CreateEndpointResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public CreateEndpointResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -69,6 +76,7 @@ public class CreateEndpointResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public CreateEndpointResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
@@ -76,6 +84,7 @@ public class CreateEndpointResponse {
     
     
     public Integer statusCode;
+
     public CreateEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateEndpointResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public CreateEndpointResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -103,9 +114,14 @@ public class CreateEndpointResponse {
      */
     
     public Object s3AccessDeniedFault;
+
     public CreateEndpointResponse withS3AccessDeniedFault(Object s3AccessDeniedFault) {
         this.s3AccessDeniedFault = s3AccessDeniedFault;
         return this;
     }
     
+    public CreateEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class RecordStopParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public RecordStopParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -25,9 +27,14 @@ public class RecordStopParameters {
      */
     @SpeakeasyMetadata("form:name=RecordFile")
     public String recordFile;
+
     public RecordStopParameters withRecordFile(String recordFile) {
         this.recordFile = recordFile;
         return this;
     }
     
+    public RecordStopParameters(@JsonProperty("CallUUID") String callUUID, @JsonProperty("RecordFile") String recordFile) {
+        this.callUUID = callUUID;
+        this.recordFile = recordFile;
+  }
 }

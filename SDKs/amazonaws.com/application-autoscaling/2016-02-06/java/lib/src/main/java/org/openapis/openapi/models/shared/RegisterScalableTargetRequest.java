@@ -12,6 +12,7 @@ public class RegisterScalableTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Long maxCapacity;
+
     public RegisterScalableTargetRequest withMaxCapacity(Long maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -20,6 +21,7 @@ public class RegisterScalableTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinCapacity")
     public Long minCapacity;
+
     public RegisterScalableTargetRequest withMinCapacity(Long minCapacity) {
         this.minCapacity = minCapacity;
         return this;
@@ -27,6 +29,7 @@ public class RegisterScalableTargetRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public RegisterScalableTargetRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -35,6 +38,7 @@ public class RegisterScalableTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public RegisterScalableTargetRequest withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -42,6 +46,7 @@ public class RegisterScalableTargetRequest {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public RegisterScalableTargetRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -49,6 +54,7 @@ public class RegisterScalableTargetRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public RegisterScalableTargetRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -57,6 +63,7 @@ public class RegisterScalableTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuspendedState")
     public SuspendedState suspendedState;
+
     public RegisterScalableTargetRequest withSuspendedState(SuspendedState suspendedState) {
         this.suspendedState = suspendedState;
         return this;
@@ -65,9 +72,15 @@ public class RegisterScalableTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public RegisterScalableTargetRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public RegisterScalableTargetRequest(@JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

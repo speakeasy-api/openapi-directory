@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateHostHeaderRequest {
@@ -12,6 +13,7 @@ public class CreateHostHeaderRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddHostHeaderRequest addHostHeaderRequest;
+
     public CreateHostHeaderRequest withAddHostHeaderRequest(org.openapis.openapi.models.shared.AddHostHeaderRequest addHostHeaderRequest) {
         this.addHostHeaderRequest = addHostHeaderRequest;
         return this;
@@ -22,6 +24,7 @@ public class CreateHostHeaderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public CreateHostHeaderRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -32,6 +35,7 @@ public class CreateHostHeaderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public CreateHostHeaderRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -42,6 +46,7 @@ public class CreateHostHeaderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteName")
     public String siteNamePathParameter;
+
     public CreateHostHeaderRequest withSiteNamePathParameter(String siteNamePathParameter) {
         this.siteNamePathParameter = siteNamePathParameter;
         return this;
@@ -52,9 +57,16 @@ public class CreateHostHeaderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_name")
     public String siteNameQueryParameter;
+
     public CreateHostHeaderRequest withSiteNameQueryParameter(String siteNameQueryParameter) {
         this.siteNameQueryParameter = siteNameQueryParameter;
         return this;
     }
     
+    public CreateHostHeaderRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("siteNamePathParameter") String siteNamePathParameter, @JsonProperty("site_nameQueryParameter") String siteNameQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.siteNamePathParameter = siteNamePathParameter;
+        this.siteNameQueryParameter = siteNameQueryParameter;
+  }
 }

@@ -23,6 +23,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargeBearer")
     public OBChargeBearerType1CodeEnum chargeBearer;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withChargeBearer(OBChargeBearerType1CodeEnum chargeBearer) {
         this.chargeBearer = chargeBearer;
         return this;
@@ -34,6 +35,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Creditor")
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiationCreditor creditor;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withCreditor(OBWriteInternationalStandingOrderConsentResponse7DataInitiationCreditor creditor) {
         this.creditor = creditor;
         return this;
@@ -44,6 +46,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withCreditorAccount(OBWriteInternationalStandingOrderConsentResponse7DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -56,6 +59,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorAgent")
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiationCreditorAgent creditorAgent;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withCreditorAgent(OBWriteInternationalStandingOrderConsentResponse7DataInitiationCreditorAgent creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -66,6 +70,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
      */
     @JsonProperty("CurrencyOfTransfer")
     public String currencyOfTransfer;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withCurrencyOfTransfer(String currencyOfTransfer) {
         this.currencyOfTransfer = currencyOfTransfer;
         return this;
@@ -77,6 +82,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withDebtorAccount(OBWriteInternationalStandingOrderConsentResponse7DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -88,6 +94,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCountryCode")
     public String destinationCountryCode;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withDestinationCountryCode(String destinationCountryCode) {
         this.destinationCountryCode = destinationCountryCode;
         return this;
@@ -99,6 +106,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedPurpose")
     public String extendedPurpose;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withExtendedPurpose(String extendedPurpose) {
         this.extendedPurpose = extendedPurpose;
         return this;
@@ -114,6 +122,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinalPaymentDateTime")
     public OffsetDateTime finalPaymentDateTime;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withFinalPaymentDateTime(OffsetDateTime finalPaymentDateTime) {
         this.finalPaymentDateTime = finalPaymentDateTime;
         return this;
@@ -128,6 +137,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FirstPaymentDateTime")
     public OffsetDateTime firstPaymentDateTime;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withFirstPaymentDateTime(OffsetDateTime firstPaymentDateTime) {
         this.firstPaymentDateTime = firstPaymentDateTime;
         return this;
@@ -163,6 +173,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
      */
     @JsonProperty("Frequency")
     public String frequency;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -174,6 +185,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withInstructedAmount(OBWriteInternationalStandingOrderConsentResponse7DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -185,6 +197,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfPayments")
     public String numberOfPayments;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withNumberOfPayments(String numberOfPayments) {
         this.numberOfPayments = numberOfPayments;
         return this;
@@ -198,6 +211,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Purpose")
     public String purpose;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -211,6 +225,7 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withReference(String reference) {
         this.reference = reference;
         return this;
@@ -222,9 +237,17 @@ public class OBWriteInternationalStandingOrderConsentResponse7DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteInternationalStandingOrderConsentResponse7DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteInternationalStandingOrderConsentResponse7DataInitiation(@JsonProperty("CreditorAccount") OBWriteInternationalStandingOrderConsentResponse7DataInitiationCreditorAccount creditorAccount, @JsonProperty("CurrencyOfTransfer") String currencyOfTransfer, @JsonProperty("FirstPaymentDateTime") OffsetDateTime firstPaymentDateTime, @JsonProperty("Frequency") String frequency, @JsonProperty("InstructedAmount") OBWriteInternationalStandingOrderConsentResponse7DataInitiationInstructedAmount instructedAmount) {
+        this.creditorAccount = creditorAccount;
+        this.currencyOfTransfer = currencyOfTransfer;
+        this.firstPaymentDateTime = firstPaymentDateTime;
+        this.frequency = frequency;
+        this.instructedAmount = instructedAmount;
+  }
 }

@@ -18,6 +18,7 @@ public class Indicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public Indicator withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -29,6 +30,7 @@ public class Indicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddresses")
     public String[] ipAddresses;
+
     public Indicator withIpAddresses(String[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
@@ -40,6 +42,7 @@ public class Indicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatures")
     public ProcessSignature[] signatures;
+
     public Indicator withSignatures(ProcessSignature[] signatures) {
         this.signatures = signatures;
         return this;
@@ -51,9 +54,11 @@ public class Indicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public String[] uris;
+
     public Indicator withUris(String[] uris) {
         this.uris = uris;
         return this;
     }
     
+    public Indicator(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateOpsItemResponse {
     
     public String contentType;
+
     public UpdateOpsItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateOpsItemResponse {
      */
     
     public Object internalServerError;
+
     public UpdateOpsItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateOpsItemResponse {
      */
     
     public Object opsItemAccessDeniedException;
+
     public UpdateOpsItemResponse withOpsItemAccessDeniedException(Object opsItemAccessDeniedException) {
         this.opsItemAccessDeniedException = opsItemAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateOpsItemResponse {
      */
     
     public Object opsItemAlreadyExistsException;
+
     public UpdateOpsItemResponse withOpsItemAlreadyExistsException(Object opsItemAlreadyExistsException) {
         this.opsItemAlreadyExistsException = opsItemAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateOpsItemResponse {
      */
     
     public Object opsItemInvalidParameterException;
+
     public UpdateOpsItemResponse withOpsItemInvalidParameterException(Object opsItemInvalidParameterException) {
         this.opsItemInvalidParameterException = opsItemInvalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateOpsItemResponse {
      */
     
     public Object opsItemLimitExceededException;
+
     public UpdateOpsItemResponse withOpsItemLimitExceededException(Object opsItemLimitExceededException) {
         this.opsItemLimitExceededException = opsItemLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateOpsItemResponse {
      */
     
     public Object opsItemNotFoundException;
+
     public UpdateOpsItemResponse withOpsItemNotFoundException(Object opsItemNotFoundException) {
         this.opsItemNotFoundException = opsItemNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateOpsItemResponse {
     
     
     public Integer statusCode;
+
     public UpdateOpsItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateOpsItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateOpsItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateOpsItemResponse {
      */
     
     public java.util.Map<String, Object> updateOpsItemResponse;
+
     public UpdateOpsItemResponse withUpdateOpsItemResponse(java.util.Map<String, Object> updateOpsItemResponse) {
         this.updateOpsItemResponse = updateOpsItemResponse;
         return this;
     }
     
+    public UpdateOpsItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

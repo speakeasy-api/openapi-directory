@@ -17,6 +17,7 @@ public class DestinyResponsesDestinyProfileResponseProfileCurrencies {
      */
     
     public DestinyEntitiesInventoryDestinyInventoryComponent data;
+
     public DestinyResponsesDestinyProfileResponseProfileCurrencies withData(DestinyEntitiesInventoryDestinyInventoryComponent data) {
         this.data = data;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyProfileResponseProfileCurrencies {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseProfileCurrencies withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -34,9 +36,11 @@ public class DestinyResponsesDestinyProfileResponseProfileCurrencies {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseProfileCurrencies withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseProfileCurrencies(){}
 }

@@ -15,6 +15,7 @@ public class AgentNetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public AgentNetworkInfo withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -23,9 +24,11 @@ public class AgentNetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public AgentNetworkInfo withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
     }
     
+    public AgentNetworkInfo(){}
 }

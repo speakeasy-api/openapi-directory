@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationSuccess")
     public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccess conversationSuccess;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withConversationSuccess(GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccess conversationSuccess) {
         this.conversationSuccess = conversationSuccess;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endInteraction")
     public java.util.Map<String, Object> endInteraction;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withEndInteraction(java.util.Map<String, Object> endInteraction) {
         this.endInteraction = endInteraction;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveAgentHandoff")
     public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff liveAgentHandoff;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withLiveAgentHandoff(GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff liveAgentHandoff) {
         this.liveAgentHandoff = liveAgentHandoff;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mixedAudio")
     public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioInput mixedAudio;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withMixedAudio(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioInput mixedAudio) {
         this.mixedAudio = mixedAudio;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioText")
     public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextInput outputAudioText;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withOutputAudioText(GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextInput outputAudioText) {
         this.outputAudioText = outputAudioText;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playAudio")
     public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioInput playAudio;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withPlayAudio(GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioInput playAudio) {
         this.playAudio = playAudio;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephonyTransferCall")
     public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCall telephonyTransferCall;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withTelephonyTransferCall(GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCall telephonyTransferCall) {
         this.telephonyTransferCall = telephonyTransferCall;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public GoogleCloudDialogflowCxV3beta1ResponseMessageTextInput text;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput withText(GoogleCloudDialogflowCxV3beta1ResponseMessageTextInput text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageInput(){}
 }

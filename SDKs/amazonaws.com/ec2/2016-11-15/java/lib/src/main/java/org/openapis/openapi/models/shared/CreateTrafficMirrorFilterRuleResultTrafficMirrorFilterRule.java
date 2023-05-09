@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     public String description;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public String destinationCidrBlock;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -26,6 +28,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange destinationPortRange;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withDestinationPortRange(CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange destinationPortRange) {
         this.destinationPortRange = destinationPortRange;
         return this;
@@ -33,6 +36,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public Long protocol;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withProtocol(Long protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum ruleAction;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withRuleAction(CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -47,6 +52,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public Long ruleNumber;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
@@ -54,6 +60,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public String sourceCidrBlock;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withSourceCidrBlock(String sourceCidrBlock) {
         this.sourceCidrBlock = sourceCidrBlock;
         return this;
@@ -61,6 +68,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange sourcePortRange;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withSourcePortRange(CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
@@ -68,6 +76,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum trafficDirection;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withTrafficDirection(CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum trafficDirection) {
         this.trafficDirection = trafficDirection;
         return this;
@@ -75,6 +84,7 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public String trafficMirrorFilterId;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
@@ -82,9 +92,11 @@ public class CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule {
     
     
     public String trafficMirrorFilterRuleId;
+
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule withTrafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
         this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
         return this;
     }
     
+    public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule(){}
 }

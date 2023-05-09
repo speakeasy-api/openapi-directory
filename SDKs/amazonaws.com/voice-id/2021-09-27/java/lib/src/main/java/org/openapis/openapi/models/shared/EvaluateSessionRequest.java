@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EvaluateSessionRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public EvaluateSessionRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -16,9 +17,14 @@ public class EvaluateSessionRequest {
     
     @JsonProperty("SessionNameOrId")
     public String sessionNameOrId;
+
     public EvaluateSessionRequest withSessionNameOrId(String sessionNameOrId) {
         this.sessionNameOrId = sessionNameOrId;
         return this;
     }
     
+    public EvaluateSessionRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("SessionNameOrId") String sessionNameOrId) {
+        this.domainId = domainId;
+        this.sessionNameOrId = sessionNameOrId;
+  }
 }

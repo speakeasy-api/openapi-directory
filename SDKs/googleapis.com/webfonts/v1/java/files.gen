@@ -30,11 +30,15 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
+lib/src/main/java/org/openapis/openapi/models/operations/WebfontsWebfontsListCapabilityEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/WebfontsWebfontsListSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/WebfontsWebfontsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/WebfontsWebfontsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebfontList.java
 lib/src/main/java/org/openapis/openapi/models/shared/Webfont.java
+lib/src/main/java/org/openapis/openapi/models/shared/Axis.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/webfonts/README.md
 USAGE.md

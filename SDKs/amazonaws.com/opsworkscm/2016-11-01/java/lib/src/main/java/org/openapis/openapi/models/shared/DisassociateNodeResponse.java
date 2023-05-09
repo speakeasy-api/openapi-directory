@@ -15,9 +15,11 @@ public class DisassociateNodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeAssociationStatusToken")
     public String nodeAssociationStatusToken;
+
     public DisassociateNodeResponse withNodeAssociationStatusToken(String nodeAssociationStatusToken) {
         this.nodeAssociationStatusToken = nodeAssociationStatusToken;
         return this;
     }
     
+    public DisassociateNodeResponse(){}
 }

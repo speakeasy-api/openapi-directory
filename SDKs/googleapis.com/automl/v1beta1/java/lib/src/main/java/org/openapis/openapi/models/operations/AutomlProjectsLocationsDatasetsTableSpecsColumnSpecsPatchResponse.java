@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse {
@@ -12,6 +13,7 @@ public class AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.ColumnSpec columnSpec;
+
     public AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse withColumnSpec(org.openapis.openapi.models.shared.ColumnSpec columnSpec) {
         this.columnSpec = columnSpec;
         return this;
@@ -19,6 +21,7 @@ public class AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse {
     
     
     public String contentType;
+
     public AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse {
     
     
     public Integer statusCode;
+
     public AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

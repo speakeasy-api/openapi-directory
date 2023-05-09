@@ -18,6 +18,7 @@ public class ContainerThreatDetectionSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public java.util.Map<String, Config> modules;
+
     public ContainerThreatDetectionSettingsInput withModules(java.util.Map<String, Config> modules) {
         this.modules = modules;
         return this;
@@ -29,6 +30,7 @@ public class ContainerThreatDetectionSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerThreatDetectionSettingsInput withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ContainerThreatDetectionSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceEnablementState")
     public ContainerThreatDetectionSettingsServiceEnablementStateEnum serviceEnablementState;
+
     public ContainerThreatDetectionSettingsInput withServiceEnablementState(ContainerThreatDetectionSettingsServiceEnablementStateEnum serviceEnablementState) {
         this.serviceEnablementState = serviceEnablementState;
         return this;
     }
     
+    public ContainerThreatDetectionSettingsInput(){}
 }

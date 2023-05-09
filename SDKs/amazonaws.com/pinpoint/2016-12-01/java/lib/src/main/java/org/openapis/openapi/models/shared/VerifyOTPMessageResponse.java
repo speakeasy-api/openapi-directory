@@ -15,9 +15,13 @@ public class VerifyOTPMessageResponse {
      */
     @JsonProperty("VerificationResponse")
     public VerificationResponse verificationResponse;
+
     public VerifyOTPMessageResponse withVerificationResponse(VerificationResponse verificationResponse) {
         this.verificationResponse = verificationResponse;
         return this;
     }
     
+    public VerifyOTPMessageResponse(@JsonProperty("VerificationResponse") VerificationResponse verificationResponse) {
+        this.verificationResponse = verificationResponse;
+  }
 }

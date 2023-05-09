@@ -15,6 +15,7 @@ public class Armtw404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Armtw404ApplicationJSONErrorEnum error;
+
     public Armtw404ApplicationJSON withError(Armtw404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Armtw404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Armtw404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Armtw404ApplicationJSON withErrorDescription(Armtw404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Armtw404ApplicationJSON(){}
 }

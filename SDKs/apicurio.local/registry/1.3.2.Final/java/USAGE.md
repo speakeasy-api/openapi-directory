@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateArtifactRuleRequest;
 import org.openapis.openapi.models.operations.CreateArtifactRuleResponse;
 import org.openapis.openapi.models.shared.Rule;
@@ -15,13 +14,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateArtifactRuleRequest req = new CreateArtifactRuleRequest() {{
-                rule = new Rule() {{
-                    config = "corrupti";
-                    type = "VALIDITY";
-                }};
-                artifactId = "provident";
-            }}            
+            CreateArtifactRuleRequest req = new CreateArtifactRuleRequest(                new Rule("corrupti") {{
+                                type = RuleTypeEnum.VALIDITY;
+                            }};, "provident");            
 
             CreateArtifactRuleResponse res = sdk.artifactRules.createArtifactRule(req);
 
@@ -31,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

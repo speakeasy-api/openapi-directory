@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateStackInput - The input for &lt;a&gt;CreateStack&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateStackInput {
     
     public CapabilityEnum[] capabilities;
+
     public CreateStackInput withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -19,6 +20,7 @@ public class CreateStackInput {
     
     
     public String clientRequestToken;
+
     public CreateStackInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -26,6 +28,7 @@ public class CreateStackInput {
     
     
     public Boolean disableRollback;
+
     public CreateStackInput withDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
@@ -33,6 +36,7 @@ public class CreateStackInput {
     
     
     public Boolean enableTerminationProtection;
+
     public CreateStackInput withEnableTerminationProtection(Boolean enableTerminationProtection) {
         this.enableTerminationProtection = enableTerminationProtection;
         return this;
@@ -40,6 +44,7 @@ public class CreateStackInput {
     
     
     public String[] notificationARNs;
+
     public CreateStackInput withNotificationARNs(String[] notificationARNs) {
         this.notificationARNs = notificationARNs;
         return this;
@@ -47,6 +52,7 @@ public class CreateStackInput {
     
     
     public OnFailureEnum onFailure;
+
     public CreateStackInput withOnFailure(OnFailureEnum onFailure) {
         this.onFailure = onFailure;
         return this;
@@ -54,6 +60,7 @@ public class CreateStackInput {
     
     
     public Parameter[] parameters;
+
     public CreateStackInput withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -61,6 +68,7 @@ public class CreateStackInput {
     
     
     public String[] resourceTypes;
+
     public CreateStackInput withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -68,6 +76,7 @@ public class CreateStackInput {
     
     
     public String roleARN;
+
     public CreateStackInput withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -75,6 +84,7 @@ public class CreateStackInput {
     
     
     public RollbackConfiguration rollbackConfiguration;
+
     public CreateStackInput withRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
         this.rollbackConfiguration = rollbackConfiguration;
         return this;
@@ -82,6 +92,7 @@ public class CreateStackInput {
     
     
     public String stackName;
+
     public CreateStackInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -89,6 +100,7 @@ public class CreateStackInput {
     
     
     public String stackPolicyBody;
+
     public CreateStackInput withStackPolicyBody(String stackPolicyBody) {
         this.stackPolicyBody = stackPolicyBody;
         return this;
@@ -96,6 +108,7 @@ public class CreateStackInput {
     
     
     public String stackPolicyURL;
+
     public CreateStackInput withStackPolicyURL(String stackPolicyURL) {
         this.stackPolicyURL = stackPolicyURL;
         return this;
@@ -103,6 +116,7 @@ public class CreateStackInput {
     
     
     public Tag[] tags;
+
     public CreateStackInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -110,6 +124,7 @@ public class CreateStackInput {
     
     
     public String templateBody;
+
     public CreateStackInput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -117,6 +132,7 @@ public class CreateStackInput {
     
     
     public String templateURL;
+
     public CreateStackInput withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
@@ -124,9 +140,13 @@ public class CreateStackInput {
     
     
     public Long timeoutInMinutes;
+
     public CreateStackInput withTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
     
+    public CreateStackInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

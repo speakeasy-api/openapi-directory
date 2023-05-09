@@ -18,6 +18,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnHeader")
     public ColumnHeader columnHeader;
+
     public Report withColumnHeader(ColumnHeader columnHeader) {
         this.columnHeader = columnHeader;
         return this;
@@ -29,6 +30,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ReportData data;
+
     public Report withData(ReportData data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Report withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public Report(){}
 }

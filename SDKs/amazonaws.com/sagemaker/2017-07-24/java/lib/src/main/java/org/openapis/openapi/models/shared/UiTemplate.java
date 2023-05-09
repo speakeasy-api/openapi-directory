@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UiTemplate {
     @JsonProperty("Content")
     public String content;
+
     public UiTemplate withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public UiTemplate(@JsonProperty("Content") String content) {
+        this.content = content;
+  }
 }

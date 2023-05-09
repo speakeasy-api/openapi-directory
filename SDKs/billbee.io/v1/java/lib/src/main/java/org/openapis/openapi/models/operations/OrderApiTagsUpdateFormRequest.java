@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiTagsUpdateFormRequest {
@@ -12,6 +13,7 @@ public class OrderApiTagsUpdateFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderTagCreate rechnungsdruckWebAppControllersApiOrderTagCreate;
+
     public OrderApiTagsUpdateFormRequest withRechnungsdruckWebAppControllersApiOrderTagCreate(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderTagCreate rechnungsdruckWebAppControllersApiOrderTagCreate) {
         this.rechnungsdruckWebAppControllersApiOrderTagCreate = rechnungsdruckWebAppControllersApiOrderTagCreate;
         return this;
@@ -22,9 +24,14 @@ public class OrderApiTagsUpdateFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiTagsUpdateFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OrderApiTagsUpdateFormRequest(@JsonProperty("Rechnungsdruck.WebApp.Controllers.Api.OrderTagCreate") org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderTagCreate rechnungsdruckWebAppControllersApiOrderTagCreate, @JsonProperty("id") Long id) {
+        this.rechnungsdruckWebAppControllersApiOrderTagCreate = rechnungsdruckWebAppControllersApiOrderTagCreate;
+        this.id = id;
+  }
 }

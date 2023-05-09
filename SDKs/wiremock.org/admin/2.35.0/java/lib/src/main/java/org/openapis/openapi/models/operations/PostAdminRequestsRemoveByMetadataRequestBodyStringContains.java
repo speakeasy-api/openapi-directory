@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAdminRequestsRemoveByMetadataRequestBodyStringContains {
     @JsonProperty("contains")
     public String contains;
+
     public PostAdminRequestsRemoveByMetadataRequestBodyStringContains withContains(String contains) {
         this.contains = contains;
         return this;
     }
     
+    public PostAdminRequestsRemoveByMetadataRequestBodyStringContains(@JsonProperty("contains") String contains) {
+        this.contains = contains;
+  }
 }

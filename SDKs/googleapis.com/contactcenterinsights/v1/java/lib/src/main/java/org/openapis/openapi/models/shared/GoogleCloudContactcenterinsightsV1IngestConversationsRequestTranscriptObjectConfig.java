@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum medium;
+
     public GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig withMedium(GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum medium) {
         this.medium = medium;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig(){}
 }

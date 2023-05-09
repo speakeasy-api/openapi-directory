@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentStats")
     public GoogleCloudContactcenterinsightsV1IssueModelLabelStats currentStats;
+
     public GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse withCurrentStats(GoogleCloudContactcenterinsightsV1IssueModelLabelStats currentStats) {
         this.currentStats = currentStats;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse(){}
 }

@@ -15,6 +15,7 @@ public class BatchExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public BatchExecuteStatementInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -22,9 +23,13 @@ public class BatchExecuteStatementInput {
     
     @JsonProperty("Statements")
     public BatchStatementRequest[] statements;
+
     public BatchExecuteStatementInput withStatements(BatchStatementRequest[] statements) {
         this.statements = statements;
         return this;
     }
     
+    public BatchExecuteStatementInput(@JsonProperty("Statements") BatchStatementRequest[] statements) {
+        this.statements = statements;
+  }
 }

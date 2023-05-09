@@ -57,12 +57,10 @@ public class AnalyticsStatistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreReportByCategoryResponse res = new org.openapis.openapi.models.operations.GetStoreReportByCategoryResponse() {{
+        org.openapis.openapi.models.operations.GetStoreReportByCategoryResponse res = new org.openapis.openapi.models.operations.GetStoreReportByCategoryResponse(contentType, httpRes.statusCode()) {{
             reportByCategoryResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class AnalyticsStatistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreReportByChannelResponse res = new org.openapis.openapi.models.operations.GetStoreReportByChannelResponse() {{
+        org.openapis.openapi.models.operations.GetStoreReportByChannelResponse res = new org.openapis.openapi.models.operations.GetStoreReportByChannelResponse(contentType, httpRes.statusCode()) {{
             reportByChannelResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,12 +157,10 @@ public class AnalyticsStatistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreReportByDayResponse res = new org.openapis.openapi.models.operations.GetStoreReportByDayResponse() {{
+        org.openapis.openapi.models.operations.GetStoreReportByDayResponse res = new org.openapis.openapi.models.operations.GetStoreReportByDayResponse(contentType, httpRes.statusCode()) {{
             reportByDayResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,12 +207,10 @@ public class AnalyticsStatistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreReportByDayPerStoreResponse res = new org.openapis.openapi.models.operations.GetStoreReportByDayPerStoreResponse() {{
+        org.openapis.openapi.models.operations.GetStoreReportByDayPerStoreResponse res = new org.openapis.openapi.models.operations.GetStoreReportByDayPerStoreResponse(contentType, httpRes.statusCode()) {{
             reportByDayPerStoreResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,12 +257,10 @@ public class AnalyticsStatistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreReportByProductResponse res = new org.openapis.openapi.models.operations.GetStoreReportByProductResponse() {{
+        org.openapis.openapi.models.operations.GetStoreReportByProductResponse res = new org.openapis.openapi.models.operations.GetStoreReportByProductResponse(contentType, httpRes.statusCode()) {{
             reportByProductResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

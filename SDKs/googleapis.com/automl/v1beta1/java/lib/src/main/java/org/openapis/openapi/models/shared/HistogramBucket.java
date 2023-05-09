@@ -18,6 +18,7 @@ public class HistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public HistogramBucket withCount(String count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class HistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Double max;
+
     public HistogramBucket withMax(Double max) {
         this.max = max;
         return this;
@@ -40,9 +42,11 @@ public class HistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public Double min;
+
     public HistogramBucket withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public HistogramBucket(){}
 }

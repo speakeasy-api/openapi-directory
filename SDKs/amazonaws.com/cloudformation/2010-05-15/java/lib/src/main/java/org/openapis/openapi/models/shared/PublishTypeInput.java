@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class PublishTypeInput {
     
     public String arn;
+
     public PublishTypeInput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,6 +17,7 @@ public class PublishTypeInput {
     
     
     public String publicVersionNumber;
+
     public PublishTypeInput withPublicVersionNumber(String publicVersionNumber) {
         this.publicVersionNumber = publicVersionNumber;
         return this;
@@ -23,6 +25,7 @@ public class PublishTypeInput {
     
     
     public ThirdPartyTypeEnum type;
+
     public PublishTypeInput withType(ThirdPartyTypeEnum type) {
         this.type = type;
         return this;
@@ -30,9 +33,11 @@ public class PublishTypeInput {
     
     
     public String typeName;
+
     public PublishTypeInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public PublishTypeInput(){}
 }

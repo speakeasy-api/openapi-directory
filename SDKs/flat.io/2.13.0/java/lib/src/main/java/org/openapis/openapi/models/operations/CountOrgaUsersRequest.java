@@ -12,6 +12,7 @@ public class CountOrgaUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String[] group;
+
     public CountOrgaUsersRequest withGroup(String[] group) {
         this.group = group;
         return this;
@@ -22,6 +23,7 @@ public class CountOrgaUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=noActiveLicense")
     public Boolean noActiveLicense;
+
     public CountOrgaUsersRequest withNoActiveLicense(Boolean noActiveLicense) {
         this.noActiveLicense = noActiveLicense;
         return this;
@@ -32,6 +34,7 @@ public class CountOrgaUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public CountOrgaUsersRequest withQ(String q) {
         this.q = q;
         return this;
@@ -42,9 +45,11 @@ public class CountOrgaUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public org.openapis.openapi.models.shared.RoleEnum[] role;
+
     public CountOrgaUsersRequest withRole(org.openapis.openapi.models.shared.RoleEnum[] role) {
         this.role = role;
         return this;
     }
     
+    public CountOrgaUsersRequest(){}
 }

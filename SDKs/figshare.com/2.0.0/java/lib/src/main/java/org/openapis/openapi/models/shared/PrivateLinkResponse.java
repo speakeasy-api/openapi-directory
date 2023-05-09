@@ -15,6 +15,7 @@ public class PrivateLinkResponse {
      */
     @JsonProperty("html_location")
     public String htmlLocation;
+
     public PrivateLinkResponse withHtmlLocation(String htmlLocation) {
         this.htmlLocation = htmlLocation;
         return this;
@@ -25,6 +26,7 @@ public class PrivateLinkResponse {
      */
     @JsonProperty("location")
     public String location;
+
     public PrivateLinkResponse withLocation(String location) {
         this.location = location;
         return this;
@@ -35,9 +37,15 @@ public class PrivateLinkResponse {
      */
     @JsonProperty("token")
     public String token;
+
     public PrivateLinkResponse withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PrivateLinkResponse(@JsonProperty("html_location") String htmlLocation, @JsonProperty("location") String location, @JsonProperty("token") String token) {
+        this.htmlLocation = htmlLocation;
+        this.location = location;
+        this.token = token;
+  }
 }

@@ -15,9 +15,11 @@ public class InputParallelism {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public InputParallelism withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public InputParallelism(){}
 }

@@ -18,9 +18,11 @@ public class CloudEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public CloudEndpoints withService(String service) {
         this.service = service;
         return this;
     }
     
+    public CloudEndpoints(){}
 }

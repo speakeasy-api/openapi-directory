@@ -18,6 +18,7 @@ public class GetAccountSegments400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, String> fields;
+
     public GetAccountSegments400ApplicationJSONErrors withFields(java.util.Map<String, String> fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class GetAccountSegments400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GetAccountSegments400ApplicationJSONErrorsParameters parameters;
+
     public GetAccountSegments400ApplicationJSONErrors withParameters(GetAccountSegments400ApplicationJSONErrorsParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GetAccountSegments400ApplicationJSONErrors(){}
 }

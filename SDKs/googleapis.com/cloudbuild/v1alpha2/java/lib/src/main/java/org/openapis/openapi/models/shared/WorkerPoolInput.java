@@ -18,6 +18,7 @@ public class WorkerPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfig")
     public NetworkConfig networkConfig;
+
     public WorkerPoolInput withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -29,6 +30,7 @@ public class WorkerPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public WorkerPoolInput withRegion(String region) {
         this.region = region;
         return this;
@@ -40,9 +42,11 @@ public class WorkerPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfig")
     public WorkerConfig workerConfig;
+
     public WorkerPoolInput withWorkerConfig(WorkerConfig workerConfig) {
         this.workerConfig = workerConfig;
         return this;
     }
     
+    public WorkerPoolInput(){}
 }

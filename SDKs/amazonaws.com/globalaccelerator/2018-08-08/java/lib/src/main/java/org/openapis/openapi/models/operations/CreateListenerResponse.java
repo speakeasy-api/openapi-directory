@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateListenerResponse {
@@ -12,6 +13,7 @@ public class CreateListenerResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public CreateListenerResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class CreateListenerResponse {
     
     
     public String contentType;
+
     public CreateListenerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateListenerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateListenerResponse createListenerResponse;
+
     public CreateListenerResponse withCreateListenerResponse(org.openapis.openapi.models.shared.CreateListenerResponse createListenerResponse) {
         this.createListenerResponse = createListenerResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateListenerResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateListenerResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class CreateListenerResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateListenerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class CreateListenerResponse {
      */
     
     public Object invalidPortRangeException;
+
     public CreateListenerResponse withInvalidPortRangeException(Object invalidPortRangeException) {
         this.invalidPortRangeException = invalidPortRangeException;
         return this;
@@ -69,6 +76,7 @@ public class CreateListenerResponse {
      */
     
     public Object limitExceededException;
+
     public CreateListenerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateListenerResponse {
     
     
     public Integer statusCode;
+
     public CreateListenerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateListenerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateListenerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateListenerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaPresenceEstimationHistogram")
     public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket[] deltaPresenceEstimationHistogram;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationResult withDeltaPresenceEstimationHistogram(GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket[] deltaPresenceEstimationHistogram) {
         this.deltaPresenceEstimationHistogram = deltaPresenceEstimationHistogram;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeltaPresenceEstimationResult(){}
 }

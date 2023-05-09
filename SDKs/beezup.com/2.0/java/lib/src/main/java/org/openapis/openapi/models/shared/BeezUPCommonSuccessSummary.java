@@ -12,6 +12,7 @@ public class BeezUPCommonSuccessSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectName")
     public String objectName;
+
     public BeezUPCommonSuccessSummary withObjectName(String objectName) {
         this.objectName = objectName;
         return this;
@@ -20,6 +21,7 @@ public class BeezUPCommonSuccessSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public BeezUPCommonSuccessSummary withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -28,6 +30,7 @@ public class BeezUPCommonSuccessSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyValue")
     public String propertyValue;
+
     public BeezUPCommonSuccessSummary withPropertyValue(String propertyValue) {
         this.propertyValue = propertyValue;
         return this;
@@ -36,6 +39,7 @@ public class BeezUPCommonSuccessSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successArguments")
     public java.util.Map<String, String> successArguments;
+
     public BeezUPCommonSuccessSummary withSuccessArguments(java.util.Map<String, String> successArguments) {
         this.successArguments = successArguments;
         return this;
@@ -44,6 +48,7 @@ public class BeezUPCommonSuccessSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successCode")
     public String successCode;
+
     public BeezUPCommonSuccessSummary withSuccessCode(String successCode) {
         this.successCode = successCode;
         return this;
@@ -52,9 +57,11 @@ public class BeezUPCommonSuccessSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successMessage")
     public String successMessage;
+
     public BeezUPCommonSuccessSummary withSuccessMessage(String successMessage) {
         this.successMessage = successMessage;
         return this;
     }
     
+    public BeezUPCommonSuccessSummary(){}
 }

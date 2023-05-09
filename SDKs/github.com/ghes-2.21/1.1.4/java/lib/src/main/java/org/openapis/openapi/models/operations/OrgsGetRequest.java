@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsGetRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsGetRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public OrgsGetRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

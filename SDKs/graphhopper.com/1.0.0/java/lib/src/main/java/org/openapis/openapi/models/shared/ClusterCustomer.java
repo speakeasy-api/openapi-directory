@@ -12,6 +12,7 @@ public class ClusterCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ClusterCustomerAddress address;
+
     public ClusterCustomer withAddress(ClusterCustomerAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class ClusterCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ClusterCustomer withId(String id) {
         this.id = id;
         return this;
@@ -34,9 +36,11 @@ public class ClusterCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Double quantity;
+
     public ClusterCustomer withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public ClusterCustomer(){}
 }

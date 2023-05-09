@@ -20,6 +20,7 @@ public class AllowListSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public AllowListSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class AllowListSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AllowListSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class AllowListSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AllowListSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class AllowListSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AllowListSummary withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class AllowListSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AllowListSummary withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class AllowListSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public AllowListSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AllowListSummary(){}
 }

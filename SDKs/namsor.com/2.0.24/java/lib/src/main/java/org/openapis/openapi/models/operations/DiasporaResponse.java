@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiasporaResponse {
     
     public String contentType;
+
     public DiasporaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiasporaResponse {
      */
     
     public org.openapis.openapi.models.shared.FirstLastNameDiasporaedOut firstLastNameDiasporaedOut;
+
     public DiasporaResponse withFirstLastNameDiasporaedOut(org.openapis.openapi.models.shared.FirstLastNameDiasporaedOut firstLastNameDiasporaedOut) {
         this.firstLastNameDiasporaedOut = firstLastNameDiasporaedOut;
         return this;
@@ -26,6 +29,7 @@ public class DiasporaResponse {
     
     
     public Integer statusCode;
+
     public DiasporaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DiasporaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiasporaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiasporaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

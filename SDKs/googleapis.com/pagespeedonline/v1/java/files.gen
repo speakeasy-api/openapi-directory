@@ -48,4 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ResultScreenshot.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResultVersion.java
 lib/src/main/java/org/openapis/openapi/models/shared/Result.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
+docs/sdk/README.md
+docs/pagespeedapi/README.md
 USAGE.md

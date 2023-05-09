@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Network {
     @JsonProperty("ASName")
     public String asName;
+
     public Network withASName(String asName) {
         this.asName = asName;
         return this;
@@ -19,9 +20,14 @@ public class Network {
     
     @JsonProperty("ASNumber")
     public Long asNumber;
+
     public Network withASNumber(Long asNumber) {
         this.asNumber = asNumber;
         return this;
     }
     
+    public Network(@JsonProperty("ASName") String asName, @JsonProperty("ASNumber") Long asNumber) {
+        this.asName = asName;
+        this.asNumber = asNumber;
+  }
 }

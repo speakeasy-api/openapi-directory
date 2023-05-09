@@ -18,6 +18,7 @@ public class CarrierAndIspTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CarrierAndIspTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class CarrierAndIspTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CarrierAndIspTargetingOptionDetailsTypeEnum type;
+
     public CarrierAndIspTargetingOptionDetails withType(CarrierAndIspTargetingOptionDetailsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CarrierAndIspTargetingOptionDetails(){}
 }

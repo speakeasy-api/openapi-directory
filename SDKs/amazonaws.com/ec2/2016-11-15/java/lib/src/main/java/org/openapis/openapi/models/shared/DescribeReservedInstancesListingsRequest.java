@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesListingsRequest {
     
     public DescribeReservedInstancesListingsRequestFilters[] filters;
+
     public DescribeReservedInstancesListingsRequest withFilters(DescribeReservedInstancesListingsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesListingsRequest {
     
     
     public String reservedInstancesId;
+
     public DescribeReservedInstancesListingsRequest withReservedInstancesId(String reservedInstancesId) {
         this.reservedInstancesId = reservedInstancesId;
         return this;
@@ -26,9 +28,11 @@ public class DescribeReservedInstancesListingsRequest {
     
     
     public String reservedInstancesListingId;
+
     public DescribeReservedInstancesListingsRequest withReservedInstancesListingId(String reservedInstancesListingId) {
         this.reservedInstancesListingId = reservedInstancesListingId;
         return this;
     }
     
+    public DescribeReservedInstancesListingsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse {
     
     public String contentType;
+
     public GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse {
     
     
     public Integer statusCode;
+
     public GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse {
      */
     
     public String getRadiodnsSpi31IdFqdnSidDatePIXML200ApplicationXMLRadioDNSProgramInformationPIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection7String;
+
     public GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse withGetRadiodnsSpi31IdFqdnSidDatePIXML200ApplicationXMLRadioDNSProgramInformationPIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection7String(String getRadiodnsSpi31IdFqdnSidDatePIXML200ApplicationXMLRadioDNSProgramInformationPIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection7String) {
         this.getRadiodnsSpi31IdFqdnSidDatePIXML200ApplicationXMLRadioDNSProgramInformationPIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection7String = getRadiodnsSpi31IdFqdnSidDatePIXML200ApplicationXMLRadioDNSProgramInformationPIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection7String;
         return this;
     }
     
+    public GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

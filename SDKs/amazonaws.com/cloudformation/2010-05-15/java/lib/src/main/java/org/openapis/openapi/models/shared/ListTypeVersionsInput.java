@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListTypeVersionsInput {
     
     public String arn;
+
     public ListTypeVersionsInput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,6 +17,7 @@ public class ListTypeVersionsInput {
     
     
     public DeprecatedStatusEnum deprecatedStatus;
+
     public ListTypeVersionsInput withDeprecatedStatus(DeprecatedStatusEnum deprecatedStatus) {
         this.deprecatedStatus = deprecatedStatus;
         return this;
@@ -23,6 +25,7 @@ public class ListTypeVersionsInput {
     
     
     public Long maxResults;
+
     public ListTypeVersionsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class ListTypeVersionsInput {
     
     
     public String nextToken;
+
     public ListTypeVersionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +41,7 @@ public class ListTypeVersionsInput {
     
     
     public String publisherId;
+
     public ListTypeVersionsInput withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -44,6 +49,7 @@ public class ListTypeVersionsInput {
     
     
     public RegistryTypeEnum type;
+
     public ListTypeVersionsInput withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +57,11 @@ public class ListTypeVersionsInput {
     
     
     public String typeName;
+
     public ListTypeVersionsInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public ListTypeVersionsInput(){}
 }

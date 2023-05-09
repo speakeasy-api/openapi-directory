@@ -23,6 +23,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     public String closedAt;
+
     public Order withClosedAt(String closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -34,6 +35,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Order withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -50,6 +52,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public Order withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -70,6 +73,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discounts")
     public OrderLineItemDiscount[] discounts;
+
     public Order withDiscounts(OrderLineItemDiscount[] discounts) {
         this.discounts = discounts;
         return this;
@@ -84,6 +88,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillments")
     public OrderFulfillment[] fulfillments;
+
     public Order withFulfillments(OrderFulfillment[] fulfillments) {
         this.fulfillments = fulfillments;
         return this;
@@ -95,6 +100,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Order withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +112,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_items")
     public OrderLineItem[] lineItems;
+
     public Order withLineItems(OrderLineItem[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -116,6 +123,7 @@ public class Order {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public Order withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -144,6 +152,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public Order withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -155,6 +164,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_amounts")
     public OrderMoneyAmounts netAmounts;
+
     public Order withNetAmounts(OrderMoneyAmounts netAmounts) {
         this.netAmounts = netAmounts;
         return this;
@@ -168,6 +178,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_options")
     public OrderPricingOptions pricingOptions;
+
     public Order withPricingOptions(OrderPricingOptions pricingOptions) {
         this.pricingOptions = pricingOptions;
         return this;
@@ -180,6 +191,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public Order withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -191,6 +203,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunds")
     public Refund[] refunds;
+
     public Order withRefunds(Refund[] refunds) {
         this.refunds = refunds;
         return this;
@@ -202,6 +215,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_amounts")
     public OrderMoneyAmounts returnAmounts;
+
     public Order withReturnAmounts(OrderMoneyAmounts returnAmounts) {
         this.returnAmounts = returnAmounts;
         return this;
@@ -215,6 +229,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returns")
     public OrderReturn[] returns;
+
     public Order withReturns(OrderReturn[] returns) {
         this.returns = returns;
         return this;
@@ -226,6 +241,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rewards")
     public OrderReward[] rewards;
+
     public Order withRewards(OrderReward[] rewards) {
         this.rewards = rewards;
         return this;
@@ -238,6 +254,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rounding_adjustment")
     public OrderRoundingAdjustment roundingAdjustment;
+
     public Order withRoundingAdjustment(OrderRoundingAdjustment roundingAdjustment) {
         this.roundingAdjustment = roundingAdjustment;
         return this;
@@ -249,6 +266,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_charges")
     public OrderServiceCharge[] serviceCharges;
+
     public Order withServiceCharges(OrderServiceCharge[] serviceCharges) {
         this.serviceCharges = serviceCharges;
         return this;
@@ -260,6 +278,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public OrderSource source;
+
     public Order withSource(OrderSource source) {
         this.source = source;
         return this;
@@ -271,6 +290,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Order withState(String state) {
         this.state = state;
         return this;
@@ -292,6 +312,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public OrderLineItemTax[] taxes;
+
     public Order withTaxes(OrderLineItemTax[] taxes) {
         this.taxes = taxes;
         return this;
@@ -303,6 +324,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenders")
     public Tender[] tenders;
+
     public Order withTenders(Tender[] tenders) {
         this.tenders = tenders;
         return this;
@@ -319,6 +341,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_discount_money")
     public Money totalDiscountMoney;
+
     public Order withTotalDiscountMoney(Money totalDiscountMoney) {
         this.totalDiscountMoney = totalDiscountMoney;
         return this;
@@ -335,6 +358,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public Money totalMoney;
+
     public Order withTotalMoney(Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
@@ -351,6 +375,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_service_charge_money")
     public Money totalServiceChargeMoney;
+
     public Order withTotalServiceChargeMoney(Money totalServiceChargeMoney) {
         this.totalServiceChargeMoney = totalServiceChargeMoney;
         return this;
@@ -367,6 +392,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_tax_money")
     public Money totalTaxMoney;
+
     public Order withTotalTaxMoney(Money totalTaxMoney) {
         this.totalTaxMoney = totalTaxMoney;
         return this;
@@ -383,6 +409,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_tip_money")
     public Money totalTipMoney;
+
     public Order withTotalTipMoney(Money totalTipMoney) {
         this.totalTipMoney = totalTipMoney;
         return this;
@@ -394,6 +421,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Order withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -409,9 +437,13 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Order withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Order(@JsonProperty("location_id") String locationId) {
+        this.locationId = locationId;
+  }
 }

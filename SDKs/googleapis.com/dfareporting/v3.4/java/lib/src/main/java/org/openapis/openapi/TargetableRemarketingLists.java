@@ -58,11 +58,9 @@ public class TargetableRemarketingLists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetResponse res = new org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetResponse res = new org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetResponse(contentType, httpRes.statusCode()) {{
             targetableRemarketingList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class TargetableRemarketingLists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListResponse res = new org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListResponse res = new org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListResponse(contentType, httpRes.statusCode()) {{
             targetableRemarketingListsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class GroupRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GroupRelation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GroupRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public GroupRelation withGroup(String group) {
         this.group = group;
         return this;
@@ -40,6 +42,7 @@ public class GroupRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupKey")
     public EntityKey groupKey;
+
     public GroupRelation withGroupKey(EntityKey groupKey) {
         this.groupKey = groupKey;
         return this;
@@ -51,6 +54,7 @@ public class GroupRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GroupRelation withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class GroupRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationType")
     public GroupRelationRelationTypeEnum relationType;
+
     public GroupRelation withRelationType(GroupRelationRelationTypeEnum relationType) {
         this.relationType = relationType;
         return this;
@@ -73,9 +78,11 @@ public class GroupRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public TransitiveMembershipRole[] roles;
+
     public GroupRelation withRoles(TransitiveMembershipRole[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public GroupRelation(){}
 }

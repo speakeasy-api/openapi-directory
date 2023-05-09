@@ -15,6 +15,7 @@ public class AccountSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineCodebuildRoleArn")
     public String pipelineCodebuildRoleArn;
+
     public AccountSettings withPipelineCodebuildRoleArn(String pipelineCodebuildRoleArn) {
         this.pipelineCodebuildRoleArn = pipelineCodebuildRoleArn;
         return this;
@@ -23,6 +24,7 @@ public class AccountSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineProvisioningRepository")
     public RepositoryBranch pipelineProvisioningRepository;
+
     public AccountSettings withPipelineProvisioningRepository(RepositoryBranch pipelineProvisioningRepository) {
         this.pipelineProvisioningRepository = pipelineProvisioningRepository;
         return this;
@@ -31,9 +33,11 @@ public class AccountSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineServiceRoleArn")
     public String pipelineServiceRoleArn;
+
     public AccountSettings withPipelineServiceRoleArn(String pipelineServiceRoleArn) {
         this.pipelineServiceRoleArn = pipelineServiceRoleArn;
         return this;
     }
     
+    public AccountSettings(){}
 }

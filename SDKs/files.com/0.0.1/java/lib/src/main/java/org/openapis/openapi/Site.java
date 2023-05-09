@@ -55,11 +55,9 @@ public class Site {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSiteResponse res = new org.openapis.openapi.models.operations.GetSiteResponse() {{
+        org.openapis.openapi.models.operations.GetSiteResponse res = new org.openapis.openapi.models.operations.GetSiteResponse(contentType, httpRes.statusCode()) {{
             siteEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Site {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSiteApiKeysResponse res = new org.openapis.openapi.models.operations.GetSiteApiKeysResponse() {{
+        org.openapis.openapi.models.operations.GetSiteApiKeysResponse res = new org.openapis.openapi.models.operations.GetSiteApiKeysResponse(contentType, httpRes.statusCode()) {{
             apiKeyEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,11 +145,9 @@ public class Site {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSiteDnsRecordsResponse res = new org.openapis.openapi.models.operations.GetSiteDnsRecordsResponse() {{
+        org.openapis.openapi.models.operations.GetSiteDnsRecordsResponse res = new org.openapis.openapi.models.operations.GetSiteDnsRecordsResponse(contentType, httpRes.statusCode()) {{
             dnsRecordEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Site {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSiteIpAddressesResponse res = new org.openapis.openapi.models.operations.GetSiteIpAddressesResponse() {{
+        org.openapis.openapi.models.operations.GetSiteIpAddressesResponse res = new org.openapis.openapi.models.operations.GetSiteIpAddressesResponse(contentType, httpRes.statusCode()) {{
             ipAddressEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,11 +228,9 @@ public class Site {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSiteUsageResponse res = new org.openapis.openapi.models.operations.GetSiteUsageResponse() {{
+        org.openapis.openapi.models.operations.GetSiteUsageResponse res = new org.openapis.openapi.models.operations.GetSiteUsageResponse(contentType, httpRes.statusCode()) {{
             usageSnapshotEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -279,11 +269,9 @@ public class Site {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchSiteResponse res = new org.openapis.openapi.models.operations.PatchSiteResponse() {{
+        org.openapis.openapi.models.operations.PatchSiteResponse res = new org.openapis.openapi.models.operations.PatchSiteResponse(contentType, httpRes.statusCode()) {{
             siteEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,11 +310,9 @@ public class Site {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSiteApiKeysResponse res = new org.openapis.openapi.models.operations.PostSiteApiKeysResponse() {{
+        org.openapis.openapi.models.operations.PostSiteApiKeysResponse res = new org.openapis.openapi.models.operations.PostSiteApiKeysResponse(contentType, httpRes.statusCode()) {{
             apiKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -368,11 +354,9 @@ public class Site {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSiteTestWebhookResponse res = new org.openapis.openapi.models.operations.PostSiteTestWebhookResponse() {{
+        org.openapis.openapi.models.operations.PostSiteTestWebhookResponse res = new org.openapis.openapi.models.operations.PostSiteTestWebhookResponse(contentType, httpRes.statusCode()) {{
             statusEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

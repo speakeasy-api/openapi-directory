@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity;
 import org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest;
 import org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse;
+import org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,32 +28,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest req = new SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                name = "corrupti";
+            SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest req = new SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
                 oauthToken = "illum";
                 prettyPrint = false;
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse res = sdk.projects.securitycenterProjectsLocationsClustersGetContainerThreatDetectionSettings(req, new SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity() {{
+            SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse res = sdk.projects.securitycenterProjectsLocationsClustersGetContainerThreatDetectionSettings(req, new SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.containerThreatDetectionSettings.isPresent()) {
+            if (res.containerThreatDetectionSettings != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,11 +62,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `securitycenterProjectsLocationsClustersGetContainerThreatDetectionSettings` - Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
-* `securitycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings` - Update the ContainerThreatDetectionSettings resource.
-* `securitycenterProjectsWebSecurityScannerSettingsCalculate` - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
+* [securitycenterProjectsLocationsClustersGetContainerThreatDetectionSettings](docs/projects/README.md#securitycenterprojectslocationsclustersgetcontainerthreatdetectionsettings) - Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
+* [securitycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings](docs/projects/README.md#securitycenterprojectslocationsclustersupdatecontainerthreatdetectionsettings) - Update the ContainerThreatDetectionSettings resource.
+* [securitycenterProjectsWebSecurityScannerSettingsCalculate](docs/projects/README.md#securitycenterprojectswebsecurityscannersettingscalculate) - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
 <!-- End SDK Available Operations -->
 
 ### Maturity

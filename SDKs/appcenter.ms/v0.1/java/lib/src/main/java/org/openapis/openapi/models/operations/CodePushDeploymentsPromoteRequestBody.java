@@ -15,6 +15,7 @@ public class CodePushDeploymentsPromoteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CodePushDeploymentsPromoteRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class CodePushDeploymentsPromoteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_disabled")
     public Boolean isDisabled;
+
     public CodePushDeploymentsPromoteRequestBody withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -31,6 +33,7 @@ public class CodePushDeploymentsPromoteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_mandatory")
     public Boolean isMandatory;
+
     public CodePushDeploymentsPromoteRequestBody withIsMandatory(Boolean isMandatory) {
         this.isMandatory = isMandatory;
         return this;
@@ -39,6 +42,7 @@ public class CodePushDeploymentsPromoteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CodePushDeploymentsPromoteRequestBody withLabel(String label) {
         this.label = label;
         return this;
@@ -47,6 +51,7 @@ public class CodePushDeploymentsPromoteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public Long rollout;
+
     public CodePushDeploymentsPromoteRequestBody withRollout(Long rollout) {
         this.rollout = rollout;
         return this;
@@ -55,9 +60,11 @@ public class CodePushDeploymentsPromoteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_binary_range")
     public String targetBinaryRange;
+
     public CodePushDeploymentsPromoteRequestBody withTargetBinaryRange(String targetBinaryRange) {
         this.targetBinaryRange = targetBinaryRange;
         return this;
     }
     
+    public CodePushDeploymentsPromoteRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDocumentBlockResponse {
@@ -12,6 +13,7 @@ public class ListDocumentBlockResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public ListDocumentBlockResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class ListDocumentBlockResponse {
     
     
     public String contentType;
+
     public ListDocumentBlockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDocumentBlockResponse {
      */
     
     public org.openapis.openapi.models.shared.DocumentBlockList documentBlockList;
+
     public ListDocumentBlockResponse withDocumentBlockList(org.openapis.openapi.models.shared.DocumentBlockList documentBlockList) {
         this.documentBlockList = documentBlockList;
         return this;
@@ -36,6 +40,7 @@ public class ListDocumentBlockResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ListDocumentBlockResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -46,6 +51,7 @@ public class ListDocumentBlockResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public ListDocumentBlockResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListDocumentBlockResponse {
     
     
     public Integer statusCode;
+
     public ListDocumentBlockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class ListDocumentBlockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDocumentBlockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class ListDocumentBlockResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public ListDocumentBlockResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public ListDocumentBlockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

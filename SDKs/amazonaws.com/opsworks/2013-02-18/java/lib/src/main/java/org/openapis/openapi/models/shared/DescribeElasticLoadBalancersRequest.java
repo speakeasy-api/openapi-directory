@@ -12,6 +12,7 @@ public class DescribeElasticLoadBalancersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerIds")
     public String[] layerIds;
+
     public DescribeElasticLoadBalancersRequest withLayerIds(String[] layerIds) {
         this.layerIds = layerIds;
         return this;
@@ -20,9 +21,11 @@ public class DescribeElasticLoadBalancersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeElasticLoadBalancersRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeElasticLoadBalancersRequest(){}
 }

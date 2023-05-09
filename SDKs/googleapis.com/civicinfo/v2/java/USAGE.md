@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CivicinfoDivisionsSearchRequest;
 import org.openapis.openapi.models.operations.CivicinfoDivisionsSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -16,9 +15,9 @@ public class Application {
                 .build();
 
             CivicinfoDivisionsSearchRequest req = new CivicinfoDivisionsSearchRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
@@ -28,15 +27,17 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             CivicinfoDivisionsSearchResponse res = sdk.divisions.civicinfoDivisionsSearch(req);
 
-            if (res.divisionSearchResponse.isPresent()) {
+            if (res.divisionSearchResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

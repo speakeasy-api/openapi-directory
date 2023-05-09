@@ -15,6 +15,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAttributes")
     public AdditionalResultAttribute[] additionalAttributes;
+
     public QueryResultItem withAdditionalAttributes(AdditionalResultAttribute[] additionalAttributes) {
         this.additionalAttributes = additionalAttributes;
         return this;
@@ -23,6 +24,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentAttributes")
     public DocumentAttribute[] documentAttributes;
+
     public QueryResultItem withDocumentAttributes(DocumentAttribute[] documentAttributes) {
         this.documentAttributes = documentAttributes;
         return this;
@@ -31,6 +33,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentExcerpt")
     public TextWithHighlights documentExcerpt;
+
     public QueryResultItem withDocumentExcerpt(TextWithHighlights documentExcerpt) {
         this.documentExcerpt = documentExcerpt;
         return this;
@@ -39,6 +42,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentId")
     public String documentId;
+
     public QueryResultItem withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -47,6 +51,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitle")
     public TextWithHighlights documentTitle;
+
     public QueryResultItem withDocumentTitle(TextWithHighlights documentTitle) {
         this.documentTitle = documentTitle;
         return this;
@@ -55,6 +60,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentURI")
     public String documentURI;
+
     public QueryResultItem withDocumentURI(String documentURI) {
         this.documentURI = documentURI;
         return this;
@@ -63,6 +69,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackToken")
     public String feedbackToken;
+
     public QueryResultItem withFeedbackToken(String feedbackToken) {
         this.feedbackToken = feedbackToken;
         return this;
@@ -71,6 +78,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public QueryResultFormatEnum format;
+
     public QueryResultItem withFormat(QueryResultFormatEnum format) {
         this.format = format;
         return this;
@@ -79,6 +87,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public QueryResultItem withId(String id) {
         this.id = id;
         return this;
@@ -87,6 +96,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreAttributes")
     public ScoreAttributes scoreAttributes;
+
     public QueryResultItem withScoreAttributes(ScoreAttributes scoreAttributes) {
         this.scoreAttributes = scoreAttributes;
         return this;
@@ -95,6 +105,7 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableExcerpt")
     public TableExcerpt tableExcerpt;
+
     public QueryResultItem withTableExcerpt(TableExcerpt tableExcerpt) {
         this.tableExcerpt = tableExcerpt;
         return this;
@@ -103,9 +114,11 @@ public class QueryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public QueryResultTypeEnum type;
+
     public QueryResultItem withType(QueryResultTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public QueryResultItem(){}
 }

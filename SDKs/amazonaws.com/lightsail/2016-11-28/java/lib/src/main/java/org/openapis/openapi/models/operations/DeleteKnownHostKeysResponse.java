@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteKnownHostKeysResponse {
@@ -12,6 +13,7 @@ public class DeleteKnownHostKeysResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteKnownHostKeysResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteKnownHostKeysResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DeleteKnownHostKeysResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteKnownHostKeysResponse {
     
     
     public String contentType;
+
     public DeleteKnownHostKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteKnownHostKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteKnownHostKeysResult deleteKnownHostKeysResult;
+
     public DeleteKnownHostKeysResponse withDeleteKnownHostKeysResult(org.openapis.openapi.models.shared.DeleteKnownHostKeysResult deleteKnownHostKeysResult) {
         this.deleteKnownHostKeysResult = deleteKnownHostKeysResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteKnownHostKeysResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteKnownHostKeysResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteKnownHostKeysResponse {
      */
     
     public Object notFoundException;
+
     public DeleteKnownHostKeysResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteKnownHostKeysResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteKnownHostKeysResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteKnownHostKeysResponse {
      */
     
     public Object serviceException;
+
     public DeleteKnownHostKeysResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteKnownHostKeysResponse {
     
     
     public Integer statusCode;
+
     public DeleteKnownHostKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteKnownHostKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteKnownHostKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteKnownHostKeysResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteKnownHostKeysResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteKnownHostKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

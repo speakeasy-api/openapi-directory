@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventMatchTimeseriesRequest {
@@ -12,6 +13,7 @@ public class GetEventMatchTimeseriesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetEventMatchTimeseriesRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,9 +24,13 @@ public class GetEventMatchTimeseriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_key")
     public String eventKey;
+
     public GetEventMatchTimeseriesRequest withEventKey(String eventKey) {
         this.eventKey = eventKey;
         return this;
     }
     
+    public GetEventMatchTimeseriesRequest(@JsonProperty("event_key") String eventKey) {
+        this.eventKey = eventKey;
+  }
 }

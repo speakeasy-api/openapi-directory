@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClearorderFormMessagesResponse {
@@ -12,6 +13,7 @@ public class ClearorderFormMessagesResponse {
      */
     
     public ClearorderFormMessages200ApplicationJSON clearorderFormMessages200ApplicationJSONObject;
+
     public ClearorderFormMessagesResponse withClearorderFormMessages200ApplicationJSONObject(ClearorderFormMessages200ApplicationJSON clearorderFormMessages200ApplicationJSONObject) {
         this.clearorderFormMessages200ApplicationJSONObject = clearorderFormMessages200ApplicationJSONObject;
         return this;
@@ -19,6 +21,7 @@ public class ClearorderFormMessagesResponse {
     
     
     public String contentType;
+
     public ClearorderFormMessagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClearorderFormMessagesResponse {
     
     
     public Integer statusCode;
+
     public ClearorderFormMessagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClearorderFormMessagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClearorderFormMessagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClearorderFormMessagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public TwipcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,9 +23,14 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("polno")
     public String polno;
+
     public TwipcRequestBodyCertificateParameters withPolno(String polno) {
         this.polno = polno;
         return this;
     }
     
+    public TwipcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("polno") String polno) {
+        this.dob = dob;
+        this.polno = polno;
+  }
 }

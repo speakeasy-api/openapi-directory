@@ -15,9 +15,11 @@ public class NodeGroupsAddNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalNodeCount")
     public Integer additionalNodeCount;
+
     public NodeGroupsAddNodesRequest withAdditionalNodeCount(Integer additionalNodeCount) {
         this.additionalNodeCount = additionalNodeCount;
         return this;
     }
     
+    public NodeGroupsAddNodesRequest(){}
 }

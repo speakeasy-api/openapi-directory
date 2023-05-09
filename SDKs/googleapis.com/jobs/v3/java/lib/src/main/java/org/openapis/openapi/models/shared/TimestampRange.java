@@ -18,6 +18,7 @@ public class TimestampRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public TimestampRange withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class TimestampRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public TimestampRange withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimestampRange(){}
 }

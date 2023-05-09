@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteConnectionResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteConnectionResponse batchDeleteConnectionResponse;
+
     public BatchDeleteConnectionResponse withBatchDeleteConnectionResponse(org.openapis.openapi.models.shared.BatchDeleteConnectionResponse batchDeleteConnectionResponse) {
         this.batchDeleteConnectionResponse = batchDeleteConnectionResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDeleteConnectionResponse {
     
     
     public String contentType;
+
     public BatchDeleteConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteConnectionResponse {
      */
     
     public Object internalServiceException;
+
     public BatchDeleteConnectionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteConnectionResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchDeleteConnectionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -46,6 +51,7 @@ public class BatchDeleteConnectionResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class BatchDeleteConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDeleteConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

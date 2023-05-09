@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteRiddleSecurity;
 import org.openapis.openapi.models.operations.DeleteRiddleRequest;
 import org.openapis.openapi.models.operations.DeleteRiddleResponse;
+import org.openapis.openapi.models.operations.DeleteRiddleSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,11 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteRiddleRequest req = new DeleteRiddleRequest() {{
-                id = "corrupti";
-            }}            
+            DeleteRiddleRequest req = new DeleteRiddleRequest("corrupti");            
 
-            DeleteRiddleResponse res = sdk.privateRiddles.deleteRiddle(req, new DeleteRiddleSecurity() {{
+            DeleteRiddleResponse res = sdk.privateRiddles.deleteRiddle(req, new DeleteRiddleSecurity("provident") {{
                 xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -28,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

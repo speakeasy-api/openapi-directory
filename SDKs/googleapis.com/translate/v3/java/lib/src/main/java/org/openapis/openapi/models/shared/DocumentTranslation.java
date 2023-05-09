@@ -18,6 +18,7 @@ public class DocumentTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byteStreamOutputs")
     public String[] byteStreamOutputs;
+
     public DocumentTranslation withByteStreamOutputs(String[] byteStreamOutputs) {
         this.byteStreamOutputs = byteStreamOutputs;
         return this;
@@ -29,6 +30,7 @@ public class DocumentTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguageCode")
     public String detectedLanguageCode;
+
     public DocumentTranslation withDetectedLanguageCode(String detectedLanguageCode) {
         this.detectedLanguageCode = detectedLanguageCode;
         return this;
@@ -40,9 +42,11 @@ public class DocumentTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public DocumentTranslation withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public DocumentTranslation(){}
 }

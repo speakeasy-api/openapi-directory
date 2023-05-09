@@ -18,6 +18,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countriesOriginTop")
     public String[] countriesOriginTop;
+
     public FirstLastNameOriginedOut withCountriesOriginTop(String[] countriesOriginTop) {
         this.countriesOriginTop = countriesOriginTop;
         return this;
@@ -29,6 +30,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryOrigin")
     public String countryOrigin;
+
     public FirstLastNameOriginedOut withCountryOrigin(String countryOrigin) {
         this.countryOrigin = countryOrigin;
         return this;
@@ -40,6 +42,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryOriginAlt")
     public String countryOriginAlt;
+
     public FirstLastNameOriginedOut withCountryOriginAlt(String countryOriginAlt) {
         this.countryOriginAlt = countryOriginAlt;
         return this;
@@ -51,6 +54,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public FirstLastNameOriginedOut withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -59,6 +63,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirstLastNameOriginedOut withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +75,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public FirstLastNameOriginedOut withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -81,6 +87,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityAltCalibrated")
     public Double probabilityAltCalibrated;
+
     public FirstLastNameOriginedOut withProbabilityAltCalibrated(Double probabilityAltCalibrated) {
         this.probabilityAltCalibrated = probabilityAltCalibrated;
         return this;
@@ -92,6 +99,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityCalibrated")
     public Double probabilityCalibrated;
+
     public FirstLastNameOriginedOut withProbabilityCalibrated(Double probabilityCalibrated) {
         this.probabilityCalibrated = probabilityCalibrated;
         return this;
@@ -103,6 +111,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionOrigin")
     public String regionOrigin;
+
     public FirstLastNameOriginedOut withRegionOrigin(String regionOrigin) {
         this.regionOrigin = regionOrigin;
         return this;
@@ -114,6 +123,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public FirstLastNameOriginedOut withScore(Double score) {
         this.score = score;
         return this;
@@ -122,6 +132,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public FirstLastNameOriginedOut withScript(String script) {
         this.script = script;
         return this;
@@ -133,6 +144,7 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subRegionOrigin")
     public String subRegionOrigin;
+
     public FirstLastNameOriginedOut withSubRegionOrigin(String subRegionOrigin) {
         this.subRegionOrigin = subRegionOrigin;
         return this;
@@ -144,9 +156,11 @@ public class FirstLastNameOriginedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topRegionOrigin")
     public String topRegionOrigin;
+
     public FirstLastNameOriginedOut withTopRegionOrigin(String topRegionOrigin) {
         this.topRegionOrigin = topRegionOrigin;
         return this;
     }
     
+    public FirstLastNameOriginedOut(){}
 }

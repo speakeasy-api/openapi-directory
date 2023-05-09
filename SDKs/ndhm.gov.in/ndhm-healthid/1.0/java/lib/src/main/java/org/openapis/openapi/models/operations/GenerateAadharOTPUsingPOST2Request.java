@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateAadharOTPUsingPOST2Request {
@@ -12,6 +13,7 @@ public class GenerateAadharOTPUsingPOST2Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad;
+
     public GenerateAadharOTPUsingPOST2Request withAadharOtpGenerateRequestPayLoad(org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad) {
         this.aadharOtpGenerateRequestPayLoad = aadharOtpGenerateRequestPayLoad;
         return this;
@@ -19,9 +21,13 @@ public class GenerateAadharOTPUsingPOST2Request {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public GenerateAadharOTPUsingPOST2Request withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    public GenerateAadharOTPUsingPOST2Request(@JsonProperty("AadharOtpGenerateRequestPayLoad") org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad) {
+        this.aadharOtpGenerateRequestPayLoad = aadharOtpGenerateRequestPayLoad;
+  }
 }

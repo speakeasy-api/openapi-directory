@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteAccountAliasRequest {
@@ -12,6 +13,7 @@ public class GETDeleteAccountAliasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountAlias")
     public String accountAlias;
+
     public GETDeleteAccountAliasRequest withAccountAlias(String accountAlias) {
         this.accountAlias = accountAlias;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteAccountAliasActionEnum action;
+
     public GETDeleteAccountAliasRequest withAction(GETDeleteAccountAliasActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +29,7 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteAccountAliasVersionEnum version;
+
     public GETDeleteAccountAliasRequest withVersion(GETDeleteAccountAliasVersionEnum version) {
         this.version = version;
         return this;
@@ -33,6 +37,7 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteAccountAliasRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -40,6 +45,7 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteAccountAliasRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -47,6 +53,7 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteAccountAliasRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -54,6 +61,7 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteAccountAliasRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -61,6 +69,7 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteAccountAliasRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -68,6 +77,7 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteAccountAliasRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -75,9 +85,15 @@ public class GETDeleteAccountAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteAccountAliasRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteAccountAliasRequest(@JsonProperty("AccountAlias") String accountAlias, @JsonProperty("Action") GETDeleteAccountAliasActionEnum action, @JsonProperty("Version") GETDeleteAccountAliasVersionEnum version) {
+        this.accountAlias = accountAlias;
+        this.action = action;
+        this.version = version;
+  }
 }

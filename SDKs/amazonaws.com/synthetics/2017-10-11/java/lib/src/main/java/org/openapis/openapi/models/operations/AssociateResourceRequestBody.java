@@ -12,9 +12,13 @@ public class AssociateResourceRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public AssociateResourceRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public AssociateResourceRequestBody(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTestRenderTemplateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETTestRenderTemplateActionEnum action;
+
     public GETTestRenderTemplateRequest withAction(GETTestRenderTemplateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETTestRenderTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateData")
     public String templateData;
+
     public GETTestRenderTemplateRequest withTemplateData(String templateData) {
         this.templateData = templateData;
         return this;
@@ -29,6 +32,7 @@ public class GETTestRenderTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
     public String templateName;
+
     public GETTestRenderTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -36,6 +40,7 @@ public class GETTestRenderTemplateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETTestRenderTemplateVersionEnum version;
+
     public GETTestRenderTemplateRequest withVersion(GETTestRenderTemplateVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETTestRenderTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETTestRenderTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETTestRenderTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETTestRenderTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETTestRenderTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETTestRenderTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETTestRenderTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETTestRenderTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETTestRenderTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETTestRenderTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETTestRenderTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETTestRenderTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETTestRenderTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETTestRenderTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETTestRenderTemplateRequest(@JsonProperty("Action") GETTestRenderTemplateActionEnum action, @JsonProperty("TemplateData") String templateData, @JsonProperty("TemplateName") String templateName, @JsonProperty("Version") GETTestRenderTemplateVersionEnum version) {
+        this.action = action;
+        this.templateData = templateData;
+        this.templateName = templateName;
+        this.version = version;
+  }
 }

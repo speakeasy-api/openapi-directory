@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListCoreDevicesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListCoreDevicesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +17,7 @@ public class ListCoreDevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListCoreDevicesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +25,7 @@ public class ListCoreDevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListCoreDevicesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +33,7 @@ public class ListCoreDevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListCoreDevicesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +41,7 @@ public class ListCoreDevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListCoreDevicesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +49,7 @@ public class ListCoreDevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListCoreDevicesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +57,7 @@ public class ListCoreDevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListCoreDevicesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +68,7 @@ public class ListCoreDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListCoreDevicesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -71,6 +79,7 @@ public class ListCoreDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListCoreDevicesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +90,7 @@ public class ListCoreDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ListCoreDevicesStatusEnum status;
+
     public ListCoreDevicesRequest withStatus(ListCoreDevicesStatusEnum status) {
         this.status = status;
         return this;
@@ -91,9 +101,11 @@ public class ListCoreDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thingGroupArn")
     public String thingGroupArn;
+
     public ListCoreDevicesRequest withThingGroupArn(String thingGroupArn) {
         this.thingGroupArn = thingGroupArn;
         return this;
     }
     
+    public ListCoreDevicesRequest(){}
 }

@@ -18,6 +18,7 @@ public class HostHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public HostHeader withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,9 +30,11 @@ public class HostHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HostHeader withName(String name) {
         this.name = name;
         return this;
     }
     
+    public HostHeader(){}
 }

@@ -12,6 +12,7 @@ public class UpdateRoutingControlStatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SafetyRulesToOverride")
     public String[] safetyRulesToOverride;
+
     public UpdateRoutingControlStatesRequest withSafetyRulesToOverride(String[] safetyRulesToOverride) {
         this.safetyRulesToOverride = safetyRulesToOverride;
         return this;
@@ -19,9 +20,13 @@ public class UpdateRoutingControlStatesRequest {
     
     @JsonProperty("UpdateRoutingControlStateEntries")
     public UpdateRoutingControlStateEntry[] updateRoutingControlStateEntries;
+
     public UpdateRoutingControlStatesRequest withUpdateRoutingControlStateEntries(UpdateRoutingControlStateEntry[] updateRoutingControlStateEntries) {
         this.updateRoutingControlStateEntries = updateRoutingControlStateEntries;
         return this;
     }
     
+    public UpdateRoutingControlStatesRequest(@JsonProperty("UpdateRoutingControlStateEntries") UpdateRoutingControlStateEntry[] updateRoutingControlStateEntries) {
+        this.updateRoutingControlStateEntries = updateRoutingControlStateEntries;
+  }
 }

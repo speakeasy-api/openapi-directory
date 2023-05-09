@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFragmentsResponse {
@@ -12,6 +13,7 @@ public class ListFragmentsResponse {
      */
     
     public Object clientLimitExceededException;
+
     public ListFragmentsResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class ListFragmentsResponse {
     
     
     public String contentType;
+
     public ListFragmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFragmentsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListFragmentsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListFragmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFragmentsOutput listFragmentsOutput;
+
     public ListFragmentsResponse withListFragmentsOutput(org.openapis.openapi.models.shared.ListFragmentsOutput listFragmentsOutput) {
         this.listFragmentsOutput = listFragmentsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListFragmentsResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListFragmentsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class ListFragmentsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFragmentsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListFragmentsResponse {
     
     
     public Integer statusCode;
+
     public ListFragmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListFragmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFragmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListFragmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

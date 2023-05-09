@@ -15,6 +15,7 @@ public class GetResourcePoliciesResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public GetResourcePoliciesResponseEntry withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -23,6 +24,7 @@ public class GetResourcePoliciesResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyHash")
     public String policyHash;
+
     public GetResourcePoliciesResponseEntry withPolicyHash(String policyHash) {
         this.policyHash = policyHash;
         return this;
@@ -31,9 +33,11 @@ public class GetResourcePoliciesResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public GetResourcePoliciesResponseEntry withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public GetResourcePoliciesResponseEntry(){}
 }

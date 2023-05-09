@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifySubnetAttributeRequest {
     
     public AttributeBooleanValue assignIpv6AddressOnCreation;
+
     public ModifySubnetAttributeRequest withAssignIpv6AddressOnCreation(AttributeBooleanValue assignIpv6AddressOnCreation) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         return this;
@@ -16,6 +17,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public String customerOwnedIpv4Pool;
+
     public ModifySubnetAttributeRequest withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         return this;
@@ -23,6 +25,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public AttributeBooleanValue disableLniAtDeviceIndex;
+
     public ModifySubnetAttributeRequest withDisableLniAtDeviceIndex(AttributeBooleanValue disableLniAtDeviceIndex) {
         this.disableLniAtDeviceIndex = disableLniAtDeviceIndex;
         return this;
@@ -30,6 +33,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public AttributeBooleanValue enableDns64;
+
     public ModifySubnetAttributeRequest withEnableDns64(AttributeBooleanValue enableDns64) {
         this.enableDns64 = enableDns64;
         return this;
@@ -37,6 +41,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public Long enableLniAtDeviceIndex;
+
     public ModifySubnetAttributeRequest withEnableLniAtDeviceIndex(Long enableLniAtDeviceIndex) {
         this.enableLniAtDeviceIndex = enableLniAtDeviceIndex;
         return this;
@@ -44,6 +49,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public AttributeBooleanValue enableResourceNameDnsAAAARecordOnLaunch;
+
     public ModifySubnetAttributeRequest withEnableResourceNameDnsAAAARecordOnLaunch(AttributeBooleanValue enableResourceNameDnsAAAARecordOnLaunch) {
         this.enableResourceNameDnsAAAARecordOnLaunch = enableResourceNameDnsAAAARecordOnLaunch;
         return this;
@@ -51,6 +57,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public AttributeBooleanValue enableResourceNameDnsARecordOnLaunch;
+
     public ModifySubnetAttributeRequest withEnableResourceNameDnsARecordOnLaunch(AttributeBooleanValue enableResourceNameDnsARecordOnLaunch) {
         this.enableResourceNameDnsARecordOnLaunch = enableResourceNameDnsARecordOnLaunch;
         return this;
@@ -58,6 +65,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public AttributeBooleanValue mapCustomerOwnedIpOnLaunch;
+
     public ModifySubnetAttributeRequest withMapCustomerOwnedIpOnLaunch(AttributeBooleanValue mapCustomerOwnedIpOnLaunch) {
         this.mapCustomerOwnedIpOnLaunch = mapCustomerOwnedIpOnLaunch;
         return this;
@@ -65,6 +73,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public AttributeBooleanValue mapPublicIpOnLaunch;
+
     public ModifySubnetAttributeRequest withMapPublicIpOnLaunch(AttributeBooleanValue mapPublicIpOnLaunch) {
         this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
         return this;
@@ -72,6 +81,7 @@ public class ModifySubnetAttributeRequest {
     
     
     public HostnameTypeEnum privateDnsHostnameTypeOnLaunch;
+
     public ModifySubnetAttributeRequest withPrivateDnsHostnameTypeOnLaunch(HostnameTypeEnum privateDnsHostnameTypeOnLaunch) {
         this.privateDnsHostnameTypeOnLaunch = privateDnsHostnameTypeOnLaunch;
         return this;
@@ -79,9 +89,13 @@ public class ModifySubnetAttributeRequest {
     
     
     public String subnetId;
+
     public ModifySubnetAttributeRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public ModifySubnetAttributeRequest(@JsonProperty("SubnetId") String subnetId) {
+        this.subnetId = subnetId;
+  }
 }

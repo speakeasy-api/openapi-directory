@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintsContributorsCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PreprintsContributorsCreateContributorInput requestBody;
+
     public PreprintsContributorsCreateRequest withRequestBody(PreprintsContributorsCreateContributorInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class PreprintsContributorsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_id")
     public String preprintId;
+
     public PreprintsContributorsCreateRequest withPreprintId(String preprintId) {
         this.preprintId = preprintId;
         return this;
     }
     
+    public PreprintsContributorsCreateRequest(@JsonProperty("RequestBody") PreprintsContributorsCreateContributorInput requestBody, @JsonProperty("preprint_id") String preprintId) {
+        this.requestBody = requestBody;
+        this.preprintId = preprintId;
+  }
 }

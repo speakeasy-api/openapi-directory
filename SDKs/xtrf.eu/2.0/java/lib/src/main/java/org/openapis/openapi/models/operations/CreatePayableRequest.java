@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePayableRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PayableCreateDTO payableCreateDTO;
+
     public CreatePayableRequest withPayableCreateDTO(org.openapis.openapi.models.shared.PayableCreateDTO payableCreateDTO) {
         this.payableCreateDTO = payableCreateDTO;
         return this;
@@ -19,9 +21,14 @@ public class CreatePayableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public CreatePayableRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreatePayableRequest(@JsonProperty("PayableCreateDTO") org.openapis.openapi.models.shared.PayableCreateDTO payableCreateDTO, @JsonProperty("projectId") String projectId) {
+        this.payableCreateDTO = payableCreateDTO;
+        this.projectId = projectId;
+  }
 }

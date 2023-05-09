@@ -20,6 +20,7 @@ public class CustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CustomDataIdentifierSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class CustomDataIdentifierSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CustomDataIdentifierSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class CustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CustomDataIdentifierSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class CustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CustomDataIdentifierSummary withId(String id) {
         this.id = id;
         return this;
@@ -54,9 +58,11 @@ public class CustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomDataIdentifierSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CustomDataIdentifierSummary(){}
 }

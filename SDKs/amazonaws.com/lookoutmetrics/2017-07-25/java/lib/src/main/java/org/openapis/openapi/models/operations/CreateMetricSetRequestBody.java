@@ -14,6 +14,7 @@ public class CreateMetricSetRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public CreateMetricSetRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -25,6 +26,7 @@ public class CreateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionFilterList")
     public org.openapis.openapi.models.shared.MetricSetDimensionFilter[] dimensionFilterList;
+
     public CreateMetricSetRequestBody withDimensionFilterList(org.openapis.openapi.models.shared.MetricSetDimensionFilter[] dimensionFilterList) {
         this.dimensionFilterList = dimensionFilterList;
         return this;
@@ -36,6 +38,7 @@ public class CreateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionList")
     public String[] dimensionList;
+
     public CreateMetricSetRequestBody withDimensionList(String[] dimensionList) {
         this.dimensionList = dimensionList;
         return this;
@@ -46,6 +49,7 @@ public class CreateMetricSetRequestBody {
      */
     @JsonProperty("MetricList")
     public org.openapis.openapi.models.shared.Metric[] metricList;
+
     public CreateMetricSetRequestBody withMetricList(org.openapis.openapi.models.shared.Metric[] metricList) {
         this.metricList = metricList;
         return this;
@@ -57,6 +61,7 @@ public class CreateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetDescription")
     public String metricSetDescription;
+
     public CreateMetricSetRequestBody withMetricSetDescription(String metricSetDescription) {
         this.metricSetDescription = metricSetDescription;
         return this;
@@ -68,6 +73,7 @@ public class CreateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetFrequency")
     public CreateMetricSetRequestBodyMetricSetFrequencyEnum metricSetFrequency;
+
     public CreateMetricSetRequestBody withMetricSetFrequency(CreateMetricSetRequestBodyMetricSetFrequencyEnum metricSetFrequency) {
         this.metricSetFrequency = metricSetFrequency;
         return this;
@@ -78,6 +84,7 @@ public class CreateMetricSetRequestBody {
      */
     @JsonProperty("MetricSetName")
     public String metricSetName;
+
     public CreateMetricSetRequestBody withMetricSetName(String metricSetName) {
         this.metricSetName = metricSetName;
         return this;
@@ -88,6 +95,7 @@ public class CreateMetricSetRequestBody {
      */
     @JsonProperty("MetricSource")
     public CreateMetricSetRequestBodyMetricSource metricSource;
+
     public CreateMetricSetRequestBody withMetricSource(CreateMetricSetRequestBodyMetricSource metricSource) {
         this.metricSource = metricSource;
         return this;
@@ -99,6 +107,7 @@ public class CreateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Offset")
     public Long offset;
+
     public CreateMetricSetRequestBody withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -110,6 +119,7 @@ public class CreateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateMetricSetRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -121,6 +131,7 @@ public class CreateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampColumn")
     public CreateMetricSetRequestBodyTimestampColumn timestampColumn;
+
     public CreateMetricSetRequestBody withTimestampColumn(CreateMetricSetRequestBodyTimestampColumn timestampColumn) {
         this.timestampColumn = timestampColumn;
         return this;
@@ -132,9 +143,16 @@ public class CreateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public CreateMetricSetRequestBody withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public CreateMetricSetRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn, @JsonProperty("MetricList") org.openapis.openapi.models.shared.Metric[] metricList, @JsonProperty("MetricSetName") String metricSetName, @JsonProperty("MetricSource") CreateMetricSetRequestBodyMetricSource metricSource) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+        this.metricList = metricList;
+        this.metricSetName = metricSetName;
+        this.metricSource = metricSource;
+  }
 }

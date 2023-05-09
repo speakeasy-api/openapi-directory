@@ -397,4 +397,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateStackResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateStackRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/StackAttributeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

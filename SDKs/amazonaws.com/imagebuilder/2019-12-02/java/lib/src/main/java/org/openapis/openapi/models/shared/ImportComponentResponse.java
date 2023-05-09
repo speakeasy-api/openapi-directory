@@ -15,6 +15,7 @@ public class ImportComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public ImportComponentResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class ImportComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentBuildVersionArn")
     public String componentBuildVersionArn;
+
     public ImportComponentResponse withComponentBuildVersionArn(String componentBuildVersionArn) {
         this.componentBuildVersionArn = componentBuildVersionArn;
         return this;
@@ -31,9 +33,11 @@ public class ImportComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ImportComponentResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ImportComponentResponse(){}
 }

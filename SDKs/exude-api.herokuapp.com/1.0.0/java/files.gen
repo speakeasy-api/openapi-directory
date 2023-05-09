@@ -38,4 +38,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FilterStoppingsRequest.
 lib/src/main/java/org/openapis/openapi/models/operations/FilterStoppingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExudeResponseBean.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExudeBean.java
+docs/sdk/README.md
+docs/exude/README.md
 USAGE.md

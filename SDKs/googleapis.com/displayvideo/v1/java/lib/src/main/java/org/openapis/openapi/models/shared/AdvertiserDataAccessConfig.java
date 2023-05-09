@@ -18,9 +18,11 @@ public class AdvertiserDataAccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdfConfig")
     public AdvertiserSdfConfig sdfConfig;
+
     public AdvertiserDataAccessConfig withSdfConfig(AdvertiserSdfConfig sdfConfig) {
         this.sdfConfig = sdfConfig;
         return this;
     }
     
+    public AdvertiserDataAccessConfig(){}
 }

@@ -15,6 +15,7 @@ public class ListGiftCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListGiftCardsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -25,6 +26,7 @@ public class ListGiftCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer_id")
     public String customerId;
+
     public ListGiftCardsRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -36,6 +38,7 @@ public class ListGiftCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListGiftCardsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -48,6 +51,7 @@ public class ListGiftCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public ListGiftCardsRequest withState(String state) {
         this.state = state;
         return this;
@@ -60,9 +64,11 @@ public class ListGiftCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public ListGiftCardsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ListGiftCardsRequest(){}
 }

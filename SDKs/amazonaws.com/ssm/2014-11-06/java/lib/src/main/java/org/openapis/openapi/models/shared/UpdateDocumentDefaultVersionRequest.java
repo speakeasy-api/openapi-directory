@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDocumentDefaultVersionRequest {
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public UpdateDocumentDefaultVersionRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -16,9 +17,14 @@ public class UpdateDocumentDefaultVersionRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateDocumentDefaultVersionRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateDocumentDefaultVersionRequest(@JsonProperty("DocumentVersion") String documentVersion, @JsonProperty("Name") String name) {
+        this.documentVersion = documentVersion;
+        this.name = name;
+  }
 }

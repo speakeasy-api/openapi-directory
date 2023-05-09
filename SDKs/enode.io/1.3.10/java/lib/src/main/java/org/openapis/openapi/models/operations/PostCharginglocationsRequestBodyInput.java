@@ -15,6 +15,7 @@ public class PostCharginglocationsRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public PostCharginglocationsRequestBodyInput withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -26,6 +27,7 @@ public class PostCharginglocationsRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public PostCharginglocationsRequestBodyInput withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -37,9 +39,11 @@ public class PostCharginglocationsRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostCharginglocationsRequestBodyInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostCharginglocationsRequestBodyInput(){}
 }

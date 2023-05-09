@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRetainedMessagesResponse {
     
     public String contentType;
+
     public ListRetainedMessagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRetainedMessagesResponse {
      */
     
     public Object internalFailureException;
+
     public ListRetainedMessagesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListRetainedMessagesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListRetainedMessagesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListRetainedMessagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRetainedMessagesResponse listRetainedMessagesResponse;
+
     public ListRetainedMessagesResponse withListRetainedMessagesResponse(org.openapis.openapi.models.shared.ListRetainedMessagesResponse listRetainedMessagesResponse) {
         this.listRetainedMessagesResponse = listRetainedMessagesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListRetainedMessagesResponse {
      */
     
     public Object methodNotAllowedException;
+
     public ListRetainedMessagesResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class ListRetainedMessagesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListRetainedMessagesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class ListRetainedMessagesResponse {
     
     
     public Integer statusCode;
+
     public ListRetainedMessagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListRetainedMessagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRetainedMessagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListRetainedMessagesResponse {
      */
     
     public Object throttlingException;
+
     public ListRetainedMessagesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListRetainedMessagesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListRetainedMessagesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListRetainedMessagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

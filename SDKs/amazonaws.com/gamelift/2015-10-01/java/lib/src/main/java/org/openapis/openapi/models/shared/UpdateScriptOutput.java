@@ -15,9 +15,11 @@ public class UpdateScriptOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Script")
     public Script script;
+
     public UpdateScriptOutput withScript(Script script) {
         this.script = script;
         return this;
     }
     
+    public UpdateScriptOutput(){}
 }

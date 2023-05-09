@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetPrivateIpAddressesDetail
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Primary")
     public Boolean primary;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetPrivateIpAddressesDetails withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetPrivateIpAddressesDetail
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIpAddress")
     public String privateIpAddress;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetPrivateIpAddressesDetails withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataNetworkInterfaceSetPrivateIpAddressesDetails(){}
 }

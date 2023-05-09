@@ -15,6 +15,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public String alias;
+
     public WorkspaceDirectory withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -23,6 +24,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateBasedAuthProperties")
     public CertificateBasedAuthProperties certificateBasedAuthProperties;
+
     public WorkspaceDirectory withCertificateBasedAuthProperties(CertificateBasedAuthProperties certificateBasedAuthProperties) {
         this.certificateBasedAuthProperties = certificateBasedAuthProperties;
         return this;
@@ -31,6 +33,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerUserName")
     public String customerUserName;
+
     public WorkspaceDirectory withCustomerUserName(String customerUserName) {
         this.customerUserName = customerUserName;
         return this;
@@ -39,6 +42,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public WorkspaceDirectory withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -47,6 +51,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryName")
     public String directoryName;
+
     public WorkspaceDirectory withDirectoryName(String directoryName) {
         this.directoryName = directoryName;
         return this;
@@ -55,6 +60,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryType")
     public WorkspaceDirectoryTypeEnum directoryType;
+
     public WorkspaceDirectory withDirectoryType(WorkspaceDirectoryTypeEnum directoryType) {
         this.directoryType = directoryType;
         return this;
@@ -63,6 +69,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsIpAddresses")
     public String[] dnsIpAddresses;
+
     public WorkspaceDirectory withDnsIpAddresses(String[] dnsIpAddresses) {
         this.dnsIpAddresses = dnsIpAddresses;
         return this;
@@ -71,6 +78,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleId")
     public String iamRoleId;
+
     public WorkspaceDirectory withIamRoleId(String iamRoleId) {
         this.iamRoleId = iamRoleId;
         return this;
@@ -79,6 +87,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrationCode")
     public String registrationCode;
+
     public WorkspaceDirectory withRegistrationCode(String registrationCode) {
         this.registrationCode = registrationCode;
         return this;
@@ -87,6 +96,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamlProperties")
     public SamlProperties samlProperties;
+
     public WorkspaceDirectory withSamlProperties(SamlProperties samlProperties) {
         this.samlProperties = samlProperties;
         return this;
@@ -95,6 +105,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfservicePermissions")
     public SelfservicePermissions selfservicePermissions;
+
     public WorkspaceDirectory withSelfservicePermissions(SelfservicePermissions selfservicePermissions) {
         this.selfservicePermissions = selfservicePermissions;
         return this;
@@ -103,6 +114,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkspaceDirectoryStateEnum state;
+
     public WorkspaceDirectory withState(WorkspaceDirectoryStateEnum state) {
         this.state = state;
         return this;
@@ -111,6 +123,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public WorkspaceDirectory withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -119,6 +132,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tenancy")
     public TenancyEnum tenancy;
+
     public WorkspaceDirectory withTenancy(TenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
@@ -127,6 +141,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceAccessProperties")
     public WorkspaceAccessProperties workspaceAccessProperties;
+
     public WorkspaceDirectory withWorkspaceAccessProperties(WorkspaceAccessProperties workspaceAccessProperties) {
         this.workspaceAccessProperties = workspaceAccessProperties;
         return this;
@@ -135,6 +150,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceCreationProperties")
     public DefaultWorkspaceCreationProperties workspaceCreationProperties;
+
     public WorkspaceDirectory withWorkspaceCreationProperties(DefaultWorkspaceCreationProperties workspaceCreationProperties) {
         this.workspaceCreationProperties = workspaceCreationProperties;
         return this;
@@ -143,6 +159,7 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceSecurityGroupId")
     public String workspaceSecurityGroupId;
+
     public WorkspaceDirectory withWorkspaceSecurityGroupId(String workspaceSecurityGroupId) {
         this.workspaceSecurityGroupId = workspaceSecurityGroupId;
         return this;
@@ -151,9 +168,11 @@ public class WorkspaceDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipGroupIds")
     public String[] ipGroupIds;
+
     public WorkspaceDirectory withIpGroupIds(String[] ipGroupIds) {
         this.ipGroupIds = ipGroupIds;
         return this;
     }
     
+    public WorkspaceDirectory(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribePatchGroupStateRequest {
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public DescribePatchGroupStateRequest withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
     }
     
+    public DescribePatchGroupStateRequest(@JsonProperty("PatchGroup") String patchGroup) {
+        this.patchGroup = patchGroup;
+  }
 }

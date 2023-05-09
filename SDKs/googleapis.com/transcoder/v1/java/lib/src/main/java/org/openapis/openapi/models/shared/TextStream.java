@@ -18,6 +18,7 @@ public class TextStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public String codec;
+
     public TextStream withCodec(String codec) {
         this.codec = codec;
         return this;
@@ -29,6 +30,7 @@ public class TextStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public TextStream withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class TextStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public TextStream withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,9 +54,11 @@ public class TextStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping")
     public TextMapping[] mapping;
+
     public TextStream withMapping(TextMapping[] mapping) {
         this.mapping = mapping;
         return this;
     }
     
+    public TextStream(){}
 }

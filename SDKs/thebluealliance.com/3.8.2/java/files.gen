@@ -281,4 +281,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/ZebraTeam.java
 lib/src/main/java/org/openapis/openapi/models/shared/MediaTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Media.java
 lib/src/main/java/org/openapis/openapi/models/shared/TeamRobot.java
+docs/sdk/README.md
+docs/tba/README.md
+docs/district/README.md
+docs/event/README.md
+docs/list/README.md
+docs/match/README.md
+docs/team/README.md
 USAGE.md

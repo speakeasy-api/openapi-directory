@@ -15,6 +15,7 @@ public class DescribeTaskDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public DescribeTaskDefinitionResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -23,9 +24,11 @@ public class DescribeTaskDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinition")
     public TaskDefinition taskDefinition;
+
     public DescribeTaskDefinitionResponse withTaskDefinition(TaskDefinition taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
     }
     
+    public DescribeTaskDefinitionResponse(){}
 }

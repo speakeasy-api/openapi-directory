@@ -16,6 +16,7 @@ public class SslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate_type")
     public SslCertificateTypeEnum certificateType;
+
     public SslCertificateRequest withCertificateType(SslCertificateTypeEnum certificateType) {
         this.certificateType = certificateType;
         return this;
@@ -27,6 +28,7 @@ public class SslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common_name")
     public String commonName;
+
     public SslCertificateRequest withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -38,6 +40,7 @@ public class SslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public SslCertificateRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -49,6 +52,7 @@ public class SslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_code")
     public String orderCode;
+
     public SslCertificateRequest withOrderCode(String orderCode) {
         this.orderCode = orderCode;
         return this;
@@ -61,6 +65,7 @@ public class SslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation_level")
     public SslCertificateValidationLevelEnum validationLevel;
+
     public SslCertificateRequest withValidationLevel(SslCertificateValidationLevelEnum validationLevel) {
         this.validationLevel = validationLevel;
         return this;
@@ -72,9 +77,11 @@ public class SslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public SslCertificateVendorEnum vendor;
+
     public SslCertificateRequest withVendor(SslCertificateVendorEnum vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public SslCertificateRequest(){}
 }

@@ -18,9 +18,11 @@ public class ComplyWithGuidelines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationReason")
     public ComplyWithGuidelinesRecommendationReasonEnum recommendationReason;
+
     public ComplyWithGuidelines withRecommendationReason(ComplyWithGuidelinesRecommendationReasonEnum recommendationReason) {
         this.recommendationReason = recommendationReason;
         return this;
     }
     
+    public ComplyWithGuidelines(){}
 }

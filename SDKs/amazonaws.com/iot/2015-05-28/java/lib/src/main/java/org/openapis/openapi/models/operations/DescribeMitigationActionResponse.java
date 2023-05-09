@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMitigationActionResponse {
     
     public String contentType;
+
     public DescribeMitigationActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMitigationActionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMitigationActionResponse describeMitigationActionResponse;
+
     public DescribeMitigationActionResponse withDescribeMitigationActionResponse(org.openapis.openapi.models.shared.DescribeMitigationActionResponse describeMitigationActionResponse) {
         this.describeMitigationActionResponse = describeMitigationActionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMitigationActionResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeMitigationActionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMitigationActionResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeMitigationActionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMitigationActionResponse {
     
     
     public Integer statusCode;
+
     public DescribeMitigationActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeMitigationActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMitigationActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeMitigationActionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeMitigationActionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeMitigationActionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeMitigationActionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeMitigationActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

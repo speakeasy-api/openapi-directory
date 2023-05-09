@@ -15,6 +15,7 @@ public class Country {
      */
     @JsonProperty("code")
     public String code;
+
     public Country withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class Country {
      */
     @JsonProperty("name")
     public String name;
+
     public Country withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Country(@JsonProperty("code") String code, @JsonProperty("name") String name) {
+        this.code = code;
+        this.name = name;
+  }
 }

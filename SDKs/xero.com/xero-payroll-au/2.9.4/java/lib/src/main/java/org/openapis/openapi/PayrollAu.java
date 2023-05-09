@@ -69,11 +69,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEmployeeResponse res = new org.openapis.openapi.models.operations.CreateEmployeeResponse() {{
+        org.openapis.openapi.models.operations.CreateEmployeeResponse res = new org.openapis.openapi.models.operations.CreateEmployeeResponse(contentType, httpRes.statusCode()) {{
             employees = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLeaveApplicationResponse res = new org.openapis.openapi.models.operations.CreateLeaveApplicationResponse() {{
+        org.openapis.openapi.models.operations.CreateLeaveApplicationResponse res = new org.openapis.openapi.models.operations.CreateLeaveApplicationResponse(contentType, httpRes.statusCode()) {{
             leaveApplications = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +175,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePayItemResponse res = new org.openapis.openapi.models.operations.CreatePayItemResponse() {{
+        org.openapis.openapi.models.operations.CreatePayItemResponse res = new org.openapis.openapi.models.operations.CreatePayItemResponse(contentType, httpRes.statusCode()) {{
             payItems = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +228,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePayRunResponse res = new org.openapis.openapi.models.operations.CreatePayRunResponse() {{
+        org.openapis.openapi.models.operations.CreatePayRunResponse res = new org.openapis.openapi.models.operations.CreatePayRunResponse(contentType, httpRes.statusCode()) {{
             payRuns = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +281,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePayrollCalendarResponse res = new org.openapis.openapi.models.operations.CreatePayrollCalendarResponse() {{
+        org.openapis.openapi.models.operations.CreatePayrollCalendarResponse res = new org.openapis.openapi.models.operations.CreatePayrollCalendarResponse(contentType, httpRes.statusCode()) {{
             payrollCalendars = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +334,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSuperfundResponse res = new org.openapis.openapi.models.operations.CreateSuperfundResponse() {{
+        org.openapis.openapi.models.operations.CreateSuperfundResponse res = new org.openapis.openapi.models.operations.CreateSuperfundResponse(contentType, httpRes.statusCode()) {{
             superFunds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -399,11 +387,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTimesheetResponse res = new org.openapis.openapi.models.operations.CreateTimesheetResponse() {{
+        org.openapis.openapi.models.operations.CreateTimesheetResponse res = new org.openapis.openapi.models.operations.CreateTimesheetResponse(contentType, httpRes.statusCode()) {{
             timesheets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -449,11 +435,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEmployeeResponse res = new org.openapis.openapi.models.operations.GetEmployeeResponse() {{
+        org.openapis.openapi.models.operations.GetEmployeeResponse res = new org.openapis.openapi.models.operations.GetEmployeeResponse(contentType, httpRes.statusCode()) {{
             employees = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -503,12 +487,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEmployeesResponse res = new org.openapis.openapi.models.operations.GetEmployeesResponse() {{
+        org.openapis.openapi.models.operations.GetEmployeesResponse res = new org.openapis.openapi.models.operations.GetEmployeesResponse(contentType, httpRes.statusCode()) {{
             employees = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -559,11 +541,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLeaveApplicationResponse res = new org.openapis.openapi.models.operations.GetLeaveApplicationResponse() {{
+        org.openapis.openapi.models.operations.GetLeaveApplicationResponse res = new org.openapis.openapi.models.operations.GetLeaveApplicationResponse(contentType, httpRes.statusCode()) {{
             leaveApplications = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -613,12 +593,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLeaveApplicationsResponse res = new org.openapis.openapi.models.operations.GetLeaveApplicationsResponse() {{
+        org.openapis.openapi.models.operations.GetLeaveApplicationsResponse res = new org.openapis.openapi.models.operations.GetLeaveApplicationsResponse(contentType, httpRes.statusCode()) {{
             leaveApplications = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -675,12 +653,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayItemsResponse res = new org.openapis.openapi.models.operations.GetPayItemsResponse() {{
+        org.openapis.openapi.models.operations.GetPayItemsResponse res = new org.openapis.openapi.models.operations.GetPayItemsResponse(contentType, httpRes.statusCode()) {{
             payItems = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -731,11 +707,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayRunResponse res = new org.openapis.openapi.models.operations.GetPayRunResponse() {{
+        org.openapis.openapi.models.operations.GetPayRunResponse res = new org.openapis.openapi.models.operations.GetPayRunResponse(contentType, httpRes.statusCode()) {{
             payRuns = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -785,12 +759,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayRunsResponse res = new org.openapis.openapi.models.operations.GetPayRunsResponse() {{
+        org.openapis.openapi.models.operations.GetPayRunsResponse res = new org.openapis.openapi.models.operations.GetPayRunsResponse(contentType, httpRes.statusCode()) {{
             payRuns = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -841,12 +813,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayrollCalendarResponse res = new org.openapis.openapi.models.operations.GetPayrollCalendarResponse() {{
+        org.openapis.openapi.models.operations.GetPayrollCalendarResponse res = new org.openapis.openapi.models.operations.GetPayrollCalendarResponse(contentType, httpRes.statusCode()) {{
             payrollCalendars = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -903,12 +873,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayrollCalendarsResponse res = new org.openapis.openapi.models.operations.GetPayrollCalendarsResponse() {{
+        org.openapis.openapi.models.operations.GetPayrollCalendarsResponse res = new org.openapis.openapi.models.operations.GetPayrollCalendarsResponse(contentType, httpRes.statusCode()) {{
             payrollCalendars = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -959,11 +927,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayslipResponse res = new org.openapis.openapi.models.operations.GetPayslipResponse() {{
+        org.openapis.openapi.models.operations.GetPayslipResponse res = new org.openapis.openapi.models.operations.GetPayslipResponse(contentType, httpRes.statusCode()) {{
             payslipObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1007,11 +973,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsResponse res = new org.openapis.openapi.models.operations.GetSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsResponse res = new org.openapis.openapi.models.operations.GetSettingsResponse(contentType, httpRes.statusCode()) {{
             settingsObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1055,11 +1019,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSuperfundResponse res = new org.openapis.openapi.models.operations.GetSuperfundResponse() {{
+        org.openapis.openapi.models.operations.GetSuperfundResponse res = new org.openapis.openapi.models.operations.GetSuperfundResponse(contentType, httpRes.statusCode()) {{
             superFunds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1109,12 +1071,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSuperfundProductsResponse res = new org.openapis.openapi.models.operations.GetSuperfundProductsResponse() {{
+        org.openapis.openapi.models.operations.GetSuperfundProductsResponse res = new org.openapis.openapi.models.operations.GetSuperfundProductsResponse(contentType, httpRes.statusCode()) {{
             superFundProducts = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1171,12 +1131,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSuperfundsResponse res = new org.openapis.openapi.models.operations.GetSuperfundsResponse() {{
+        org.openapis.openapi.models.operations.GetSuperfundsResponse res = new org.openapis.openapi.models.operations.GetSuperfundsResponse(contentType, httpRes.statusCode()) {{
             superFunds = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1227,11 +1185,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimesheetResponse res = new org.openapis.openapi.models.operations.GetTimesheetResponse() {{
+        org.openapis.openapi.models.operations.GetTimesheetResponse res = new org.openapis.openapi.models.operations.GetTimesheetResponse(contentType, httpRes.statusCode()) {{
             timesheetObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1281,12 +1237,10 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimesheetsResponse res = new org.openapis.openapi.models.operations.GetTimesheetsResponse() {{
+        org.openapis.openapi.models.operations.GetTimesheetsResponse res = new org.openapis.openapi.models.operations.GetTimesheetsResponse(contentType, httpRes.statusCode()) {{
             timesheets = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1340,11 +1294,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEmployeeResponse res = new org.openapis.openapi.models.operations.UpdateEmployeeResponse() {{
+        org.openapis.openapi.models.operations.UpdateEmployeeResponse res = new org.openapis.openapi.models.operations.UpdateEmployeeResponse(contentType, httpRes.statusCode()) {{
             employees = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1393,11 +1345,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLeaveApplicationResponse res = new org.openapis.openapi.models.operations.UpdateLeaveApplicationResponse() {{
+        org.openapis.openapi.models.operations.UpdateLeaveApplicationResponse res = new org.openapis.openapi.models.operations.UpdateLeaveApplicationResponse(contentType, httpRes.statusCode()) {{
             leaveApplications = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1446,11 +1396,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePayRunResponse res = new org.openapis.openapi.models.operations.UpdatePayRunResponse() {{
+        org.openapis.openapi.models.operations.UpdatePayRunResponse res = new org.openapis.openapi.models.operations.UpdatePayRunResponse(contentType, httpRes.statusCode()) {{
             payRuns = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1497,11 +1445,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePayslipResponse res = new org.openapis.openapi.models.operations.UpdatePayslipResponse() {{
+        org.openapis.openapi.models.operations.UpdatePayslipResponse res = new org.openapis.openapi.models.operations.UpdatePayslipResponse(contentType, httpRes.statusCode()) {{
             payslips = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1548,11 +1494,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSuperfundResponse res = new org.openapis.openapi.models.operations.UpdateSuperfundResponse() {{
+        org.openapis.openapi.models.operations.UpdateSuperfundResponse res = new org.openapis.openapi.models.operations.UpdateSuperfundResponse(contentType, httpRes.statusCode()) {{
             superFunds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1599,11 +1543,9 @@ public class PayrollAu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTimesheetResponse res = new org.openapis.openapi.models.operations.UpdateTimesheetResponse() {{
+        org.openapis.openapi.models.operations.UpdateTimesheetResponse res = new org.openapis.openapi.models.operations.UpdateTimesheetResponse(contentType, httpRes.statusCode()) {{
             timesheets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

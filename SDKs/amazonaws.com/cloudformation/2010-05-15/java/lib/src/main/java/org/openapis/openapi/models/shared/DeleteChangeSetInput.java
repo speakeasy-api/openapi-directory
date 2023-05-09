@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteChangeSetInput - The input for the &lt;a&gt;DeleteChangeSet&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteChangeSetInput {
     
     public String changeSetName;
+
     public DeleteChangeSetInput withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -19,9 +20,13 @@ public class DeleteChangeSetInput {
     
     
     public String stackName;
+
     public DeleteChangeSetInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public DeleteChangeSetInput(@JsonProperty("ChangeSetName") String changeSetName) {
+        this.changeSetName = changeSetName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkspaceSnapshotsResponse {
@@ -12,6 +13,7 @@ public class DescribeWorkspaceSnapshotsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeWorkspaceSnapshotsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkspaceSnapshotsResponse {
     
     
     public String contentType;
+
     public DescribeWorkspaceSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorkspaceSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorkspaceSnapshotsResult describeWorkspaceSnapshotsResult;
+
     public DescribeWorkspaceSnapshotsResponse withDescribeWorkspaceSnapshotsResult(org.openapis.openapi.models.shared.DescribeWorkspaceSnapshotsResult describeWorkspaceSnapshotsResult) {
         this.describeWorkspaceSnapshotsResult = describeWorkspaceSnapshotsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWorkspaceSnapshotsResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DescribeWorkspaceSnapshotsResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeWorkspaceSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkspaceSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeWorkspaceSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkspaceSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeWorkspaceSnapshotsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWorkspaceSnapshotsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeWorkspaceSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

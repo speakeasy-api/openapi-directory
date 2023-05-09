@@ -18,9 +18,11 @@ public class TextClassificationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationType")
     public TextClassificationModelMetadataClassificationTypeEnum classificationType;
+
     public TextClassificationModelMetadata withClassificationType(TextClassificationModelMetadataClassificationTypeEnum classificationType) {
         this.classificationType = classificationType;
         return this;
     }
     
+    public TextClassificationModelMetadata(){}
 }

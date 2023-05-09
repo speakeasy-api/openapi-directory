@@ -15,9 +15,11 @@ public class DescribeEventSourcesConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSources")
     public EventSourcesConfig eventSources;
+
     public DescribeEventSourcesConfigResponse withEventSources(EventSourcesConfig eventSources) {
         this.eventSources = eventSources;
         return this;
     }
     
+    public DescribeEventSourcesConfigResponse(){}
 }

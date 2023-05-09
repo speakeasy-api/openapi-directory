@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelQueryResponse {
     @JsonProperty("QueryId")
     public String queryId;
+
     public CancelQueryResponse withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -19,9 +20,14 @@ public class CancelQueryResponse {
     
     @JsonProperty("QueryStatus")
     public QueryStatusEnum queryStatus;
+
     public CancelQueryResponse withQueryStatus(QueryStatusEnum queryStatus) {
         this.queryStatus = queryStatus;
         return this;
     }
     
+    public CancelQueryResponse(@JsonProperty("QueryId") String queryId, @JsonProperty("QueryStatus") QueryStatusEnum queryStatus) {
+        this.queryId = queryId;
+        this.queryStatus = queryStatus;
+  }
 }

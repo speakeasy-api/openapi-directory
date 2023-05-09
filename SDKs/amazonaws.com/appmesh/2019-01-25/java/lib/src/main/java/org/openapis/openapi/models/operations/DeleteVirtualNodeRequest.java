@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVirtualNodeRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteVirtualNodeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteVirtualNodeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteVirtualNodeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteVirtualNodeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteVirtualNodeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteVirtualNodeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteVirtualNodeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DeleteVirtualNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meshName")
     public String meshName;
+
     public DeleteVirtualNodeRequest withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -71,6 +80,7 @@ public class DeleteVirtualNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meshOwner")
     public String meshOwner;
+
     public DeleteVirtualNodeRequest withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -81,9 +91,14 @@ public class DeleteVirtualNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=virtualNodeName")
     public String virtualNodeName;
+
     public DeleteVirtualNodeRequest withVirtualNodeName(String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
         return this;
     }
     
+    public DeleteVirtualNodeRequest(@JsonProperty("meshName") String meshName, @JsonProperty("virtualNodeName") String virtualNodeName) {
+        this.meshName = meshName;
+        this.virtualNodeName = virtualNodeName;
+  }
 }

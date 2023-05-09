@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestGdprExportAccountsResponse {
     
     public String contentType;
+
     public TestGdprExportAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TestGdprExportAccountsResponse {
     
     
     public Integer statusCode;
+
     public TestGdprExportAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TestGdprExportAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestGdprExportAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TestGdprExportAccountsResponse {
      */
     
     public TestGdprExportAccounts200ApplicationJSON testGdprExportAccounts200ApplicationJSONObject;
+
     public TestGdprExportAccountsResponse withTestGdprExportAccounts200ApplicationJSONObject(TestGdprExportAccounts200ApplicationJSON testGdprExportAccounts200ApplicationJSONObject) {
         this.testGdprExportAccounts200ApplicationJSONObject = testGdprExportAccounts200ApplicationJSONObject;
         return this;
     }
     
+    public TestGdprExportAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

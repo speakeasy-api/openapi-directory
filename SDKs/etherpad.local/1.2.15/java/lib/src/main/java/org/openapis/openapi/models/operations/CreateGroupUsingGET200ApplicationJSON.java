@@ -15,6 +15,7 @@ public class CreateGroupUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public CreateGroupUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class CreateGroupUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CreateGroupUsingGET200ApplicationJSONData data;
+
     public CreateGroupUsingGET200ApplicationJSON withData(CreateGroupUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class CreateGroupUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateGroupUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateGroupUsingGET200ApplicationJSON(){}
 }

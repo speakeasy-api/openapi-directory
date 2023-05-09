@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProfilesResponse {
     
     public String contentType;
+
     public ListProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProfilesResponse {
      */
     
     public Object internalServiceError;
+
     public ListProfilesResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListProfilesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListProfilesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListProfilesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListProfilesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListProfilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProfilesResponse listProfilesResponse;
+
     public ListProfilesResponse withListProfilesResponse(org.openapis.openapi.models.shared.ListProfilesResponse listProfilesResponse) {
         this.listProfilesResponse = listProfilesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListProfilesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProfilesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListProfilesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListProfilesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListProfilesResponse {
     
     
     public Integer statusCode;
+
     public ListProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

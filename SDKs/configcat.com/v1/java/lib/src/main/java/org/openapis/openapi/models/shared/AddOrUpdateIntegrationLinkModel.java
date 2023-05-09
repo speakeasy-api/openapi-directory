@@ -12,6 +12,7 @@ public class AddOrUpdateIntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AddOrUpdateIntegrationLinkModel withDescription(String description) {
         this.description = description;
         return this;
@@ -20,9 +21,11 @@ public class AddOrUpdateIntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AddOrUpdateIntegrationLinkModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AddOrUpdateIntegrationLinkModel(){}
 }

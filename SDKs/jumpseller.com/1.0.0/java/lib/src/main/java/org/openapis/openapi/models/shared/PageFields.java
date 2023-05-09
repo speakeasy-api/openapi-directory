@@ -15,6 +15,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public PageFields withBody(String body) {
         this.body = body;
         return this;
@@ -26,6 +27,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public PageCategory[] categories;
+
     public PageFields withCategories(PageCategory[] categories) {
         this.categories = categories;
         return this;
@@ -37,6 +39,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PageFields withId(Long id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public PageFieldsImage image;
+
     public PageFields withImage(PageFieldsImage image) {
         this.image = image;
         return this;
@@ -59,6 +63,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legal")
     public Boolean legal;
+
     public PageFields withLegal(Boolean legal) {
         this.legal = legal;
         return this;
@@ -70,6 +75,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_description")
     public String metaDescription;
+
     public PageFields withMetaDescription(String metaDescription) {
         this.metaDescription = metaDescription;
         return this;
@@ -81,6 +87,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_title")
     public String pageTitle;
+
     public PageFields withPageTitle(String pageTitle) {
         this.pageTitle = pageTitle;
         return this;
@@ -92,6 +99,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink")
     public String permalink;
+
     public PageFields withPermalink(String permalink) {
         this.permalink = permalink;
         return this;
@@ -103,6 +111,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PageFieldsStatusEnum status;
+
     public PageFields withStatus(PageFieldsStatusEnum status) {
         this.status = status;
         return this;
@@ -114,6 +123,7 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public PageTemplate template;
+
     public PageFields withTemplate(PageTemplate template) {
         this.template = template;
         return this;
@@ -125,9 +135,11 @@ public class PageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PageFields withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PageFields(){}
 }

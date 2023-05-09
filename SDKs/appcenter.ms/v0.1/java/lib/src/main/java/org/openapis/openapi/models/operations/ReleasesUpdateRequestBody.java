@@ -15,6 +15,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public ReleasesUpdateRequestBodyBuild build;
+
     public ReleasesUpdateRequestBody withBuild(ReleasesUpdateRequestBodyBuild build) {
         this.build = build;
         return this;
@@ -25,6 +26,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public String destinationId;
+
     public ReleasesUpdateRequestBody withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -35,6 +37,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public String destinationName;
+
     public ReleasesUpdateRequestBody withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -45,6 +48,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public String destinationType;
+
     public ReleasesUpdateRequestBody withDestinationType(String destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -55,6 +59,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public ReleasesUpdateRequestBodyDestinations[] destinations;
+
     public ReleasesUpdateRequestBody withDestinations(ReleasesUpdateRequestBodyDestinations[] destinations) {
         this.destinations = destinations;
         return this;
@@ -65,6 +70,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public String distributionGroupId;
+
     public ReleasesUpdateRequestBody withDistributionGroupId(String distributionGroupId) {
         this.distributionGroupId = distributionGroupId;
         return this;
@@ -75,6 +81,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public String distributionGroupName;
+
     public ReleasesUpdateRequestBody withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -85,6 +92,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public Boolean mandatoryUpdate;
+
     public ReleasesUpdateRequestBody withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
@@ -95,6 +103,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public ReleasesUpdateRequestBodyMetadata metadata;
+
     public ReleasesUpdateRequestBody withMetadata(ReleasesUpdateRequestBodyMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -105,6 +114,7 @@ public class ReleasesUpdateRequestBody {
      */
     
     public Boolean notifyTesters;
+
     public ReleasesUpdateRequestBody withNotifyTesters(Boolean notifyTesters) {
         this.notifyTesters = notifyTesters;
         return this;
@@ -115,9 +125,11 @@ public class ReleasesUpdateRequestBody {
      */
     
     public String releaseNotes;
+
     public ReleasesUpdateRequestBody withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
     }
     
+    public ReleasesUpdateRequestBody(){}
 }

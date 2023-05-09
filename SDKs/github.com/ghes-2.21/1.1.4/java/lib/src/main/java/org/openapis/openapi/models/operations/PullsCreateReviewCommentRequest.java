@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsCreateReviewCommentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PullsCreateReviewCommentRequestBody requestBody;
+
     public PullsCreateReviewCommentRequest withRequestBody(PullsCreateReviewCommentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PullsCreateReviewCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsCreateReviewCommentRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -23,6 +26,7 @@ public class PullsCreateReviewCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
     public Long pullNumber;
+
     public PullsCreateReviewCommentRequest withPullNumber(Long pullNumber) {
         this.pullNumber = pullNumber;
         return this;
@@ -30,9 +34,16 @@ public class PullsCreateReviewCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsCreateReviewCommentRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public PullsCreateReviewCommentRequest(@JsonProperty("RequestBody") PullsCreateReviewCommentRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("pull_number") Long pullNumber, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.pullNumber = pullNumber;
+        this.repo = repo;
+  }
 }

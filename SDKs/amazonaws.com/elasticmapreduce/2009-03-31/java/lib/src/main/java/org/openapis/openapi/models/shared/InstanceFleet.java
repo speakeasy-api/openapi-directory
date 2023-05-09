@@ -15,6 +15,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public InstanceFleet withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFleetType")
     public InstanceFleetTypeEnum instanceFleetType;
+
     public InstanceFleet withInstanceFleetType(InstanceFleetTypeEnum instanceFleetType) {
         this.instanceFleetType = instanceFleetType;
         return this;
@@ -31,6 +33,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceTypeSpecifications")
     public InstanceTypeSpecification[] instanceTypeSpecifications;
+
     public InstanceFleet withInstanceTypeSpecifications(InstanceTypeSpecification[] instanceTypeSpecifications) {
         this.instanceTypeSpecifications = instanceTypeSpecifications;
         return this;
@@ -39,6 +42,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchSpecifications")
     public InstanceFleetProvisioningSpecifications launchSpecifications;
+
     public InstanceFleet withLaunchSpecifications(InstanceFleetProvisioningSpecifications launchSpecifications) {
         this.launchSpecifications = launchSpecifications;
         return this;
@@ -47,6 +51,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InstanceFleet withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedOnDemandCapacity")
     public Long provisionedOnDemandCapacity;
+
     public InstanceFleet withProvisionedOnDemandCapacity(Long provisionedOnDemandCapacity) {
         this.provisionedOnDemandCapacity = provisionedOnDemandCapacity;
         return this;
@@ -63,6 +69,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedSpotCapacity")
     public Long provisionedSpotCapacity;
+
     public InstanceFleet withProvisionedSpotCapacity(Long provisionedSpotCapacity) {
         this.provisionedSpotCapacity = provisionedSpotCapacity;
         return this;
@@ -71,6 +78,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResizeSpecifications")
     public InstanceFleetResizingSpecifications resizeSpecifications;
+
     public InstanceFleet withResizeSpecifications(InstanceFleetResizingSpecifications resizeSpecifications) {
         this.resizeSpecifications = resizeSpecifications;
         return this;
@@ -79,6 +87,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InstanceFleetStatus status;
+
     public InstanceFleet withStatus(InstanceFleetStatus status) {
         this.status = status;
         return this;
@@ -87,6 +96,7 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetOnDemandCapacity")
     public Long targetOnDemandCapacity;
+
     public InstanceFleet withTargetOnDemandCapacity(Long targetOnDemandCapacity) {
         this.targetOnDemandCapacity = targetOnDemandCapacity;
         return this;
@@ -95,9 +105,11 @@ public class InstanceFleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetSpotCapacity")
     public Long targetSpotCapacity;
+
     public InstanceFleet withTargetSpotCapacity(Long targetSpotCapacity) {
         this.targetSpotCapacity = targetSpotCapacity;
         return this;
     }
     
+    public InstanceFleet(){}
 }

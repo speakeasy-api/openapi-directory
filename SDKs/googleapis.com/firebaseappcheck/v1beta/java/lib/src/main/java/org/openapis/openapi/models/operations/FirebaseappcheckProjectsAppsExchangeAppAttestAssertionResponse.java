@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse {
     
     public String contentType;
+
     public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaAppCheckToken googleFirebaseAppcheckV1betaAppCheckToken;
+
     public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse withGoogleFirebaseAppcheckV1betaAppCheckToken(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaAppCheckToken googleFirebaseAppcheckV1betaAppCheckToken) {
         this.googleFirebaseAppcheckV1betaAppCheckToken = googleFirebaseAppcheckV1betaAppCheckToken;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse {
     
     
     public Integer statusCode;
+
     public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

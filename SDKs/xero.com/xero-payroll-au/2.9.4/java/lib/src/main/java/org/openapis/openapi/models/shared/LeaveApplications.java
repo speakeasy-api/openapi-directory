@@ -15,9 +15,11 @@ public class LeaveApplications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveApplications")
     public LeaveApplication[] leaveApplications;
+
     public LeaveApplications withLeaveApplications(LeaveApplication[] leaveApplications) {
         this.leaveApplications = leaveApplications;
         return this;
     }
     
+    public LeaveApplications(){}
 }

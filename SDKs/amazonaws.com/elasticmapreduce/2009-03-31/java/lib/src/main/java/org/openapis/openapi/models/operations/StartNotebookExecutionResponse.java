@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartNotebookExecutionResponse {
     
     public String contentType;
+
     public StartNotebookExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartNotebookExecutionResponse {
      */
     
     public Object internalServerException;
+
     public StartNotebookExecutionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartNotebookExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public StartNotebookExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartNotebookExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartNotebookExecutionOutput startNotebookExecutionOutput;
+
     public StartNotebookExecutionResponse withStartNotebookExecutionOutput(org.openapis.openapi.models.shared.StartNotebookExecutionOutput startNotebookExecutionOutput) {
         this.startNotebookExecutionOutput = startNotebookExecutionOutput;
         return this;
@@ -46,6 +51,7 @@ public class StartNotebookExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartNotebookExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class StartNotebookExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartNotebookExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartNotebookExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

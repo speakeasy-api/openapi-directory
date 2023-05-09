@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnumApiGetPaymentTypesResponse {
     
     public String contentType;
+
     public EnumApiGetPaymentTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnumApiGetPaymentTypesResponse {
      */
     
     public java.util.Map<String, Object> enumApiGetPaymentTypes200ApplicationJSONObject;
+
     public EnumApiGetPaymentTypesResponse withEnumApiGetPaymentTypes200ApplicationJSONObject(java.util.Map<String, Object> enumApiGetPaymentTypes200ApplicationJSONObject) {
         this.enumApiGetPaymentTypes200ApplicationJSONObject = enumApiGetPaymentTypes200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class EnumApiGetPaymentTypesResponse {
      */
     
     public java.util.Map<String, Object> enumApiGetPaymentTypes200TextJSONObject;
+
     public EnumApiGetPaymentTypesResponse withEnumApiGetPaymentTypes200TextJSONObject(java.util.Map<String, Object> enumApiGetPaymentTypes200TextJSONObject) {
         this.enumApiGetPaymentTypes200TextJSONObject = enumApiGetPaymentTypes200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class EnumApiGetPaymentTypesResponse {
     
     
     public Integer statusCode;
+
     public EnumApiGetPaymentTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class EnumApiGetPaymentTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnumApiGetPaymentTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnumApiGetPaymentTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

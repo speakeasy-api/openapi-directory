@@ -15,9 +15,11 @@ public class RegistrationsIdentifiersListIdentifierLinks {
      */
     
     public String self;
+
     public RegistrationsIdentifiersListIdentifierLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationsIdentifiersListIdentifierLinks(){}
 }

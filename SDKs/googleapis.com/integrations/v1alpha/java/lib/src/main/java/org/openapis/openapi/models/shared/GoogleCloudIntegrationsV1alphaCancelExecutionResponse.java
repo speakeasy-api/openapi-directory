@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaCancelExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCanceled")
     public Boolean isCanceled;
+
     public GoogleCloudIntegrationsV1alphaCancelExecutionResponse withIsCanceled(Boolean isCanceled) {
         this.isCanceled = isCanceled;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCancelExecutionResponse(){}
 }

@@ -14,6 +14,7 @@ public class PlaceOrderFromExistingOrderFormRequestBody {
      */
     @JsonProperty("interestValue")
     public Long interestValue;
+
     public PlaceOrderFromExistingOrderFormRequestBody withInterestValue(Long interestValue) {
         this.interestValue = interestValue;
         return this;
@@ -25,6 +26,7 @@ public class PlaceOrderFromExistingOrderFormRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optinNewsLetter")
     public Boolean optinNewsLetter;
+
     public PlaceOrderFromExistingOrderFormRequestBody withOptinNewsLetter(Boolean optinNewsLetter) {
         this.optinNewsLetter = optinNewsLetter;
         return this;
@@ -35,6 +37,7 @@ public class PlaceOrderFromExistingOrderFormRequestBody {
      */
     @JsonProperty("referenceId")
     public String referenceId;
+
     public PlaceOrderFromExistingOrderFormRequestBody withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -45,6 +48,7 @@ public class PlaceOrderFromExistingOrderFormRequestBody {
      */
     @JsonProperty("referenceValue")
     public Long referenceValue;
+
     public PlaceOrderFromExistingOrderFormRequestBody withReferenceValue(Long referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -56,6 +60,7 @@ public class PlaceOrderFromExistingOrderFormRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savePersonalData")
     public Boolean savePersonalData;
+
     public PlaceOrderFromExistingOrderFormRequestBody withSavePersonalData(Boolean savePersonalData) {
         this.savePersonalData = savePersonalData;
         return this;
@@ -66,9 +71,16 @@ public class PlaceOrderFromExistingOrderFormRequestBody {
      */
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrderFromExistingOrderFormRequestBody withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrderFromExistingOrderFormRequestBody(@JsonProperty("interestValue") Long interestValue, @JsonProperty("referenceId") String referenceId, @JsonProperty("referenceValue") Long referenceValue, @JsonProperty("value") Long value) {
+        this.interestValue = interestValue;
+        this.referenceId = referenceId;
+        this.referenceValue = referenceValue;
+        this.value = value;
+  }
 }

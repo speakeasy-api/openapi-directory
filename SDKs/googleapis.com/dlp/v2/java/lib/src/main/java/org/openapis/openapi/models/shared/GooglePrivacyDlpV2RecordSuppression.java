@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2RecordSuppression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public GooglePrivacyDlpV2RecordCondition condition;
+
     public GooglePrivacyDlpV2RecordSuppression withCondition(GooglePrivacyDlpV2RecordCondition condition) {
         this.condition = condition;
         return this;
     }
     
+    public GooglePrivacyDlpV2RecordSuppression(){}
 }

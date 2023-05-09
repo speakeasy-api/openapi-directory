@@ -15,6 +15,7 @@ public class VoiceTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public VoiceTemplateResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class VoiceTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public VoiceTemplateResponse withBody(String body) {
         this.body = body;
         return this;
@@ -30,6 +32,7 @@ public class VoiceTemplateResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public VoiceTemplateResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +41,7 @@ public class VoiceTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public VoiceTemplateResponse withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -46,6 +50,7 @@ public class VoiceTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public VoiceTemplateResponse withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -53,6 +58,7 @@ public class VoiceTemplateResponse {
     
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public VoiceTemplateResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -61,6 +67,7 @@ public class VoiceTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public VoiceTemplateResponse withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -68,6 +75,7 @@ public class VoiceTemplateResponse {
     
     @JsonProperty("TemplateName")
     public String templateName;
+
     public VoiceTemplateResponse withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -75,6 +83,7 @@ public class VoiceTemplateResponse {
     
     @JsonProperty("TemplateType")
     public TemplateTypeEnum templateType;
+
     public VoiceTemplateResponse withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
@@ -83,6 +92,7 @@ public class VoiceTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public VoiceTemplateResponse withVersion(String version) {
         this.version = version;
         return this;
@@ -91,6 +101,7 @@ public class VoiceTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoiceId")
     public String voiceId;
+
     public VoiceTemplateResponse withVoiceId(String voiceId) {
         this.voiceId = voiceId;
         return this;
@@ -99,9 +110,16 @@ public class VoiceTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public VoiceTemplateResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public VoiceTemplateResponse(@JsonProperty("CreationDate") String creationDate, @JsonProperty("LastModifiedDate") String lastModifiedDate, @JsonProperty("TemplateName") String templateName, @JsonProperty("TemplateType") TemplateTypeEnum templateType) {
+        this.creationDate = creationDate;
+        this.lastModifiedDate = lastModifiedDate;
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

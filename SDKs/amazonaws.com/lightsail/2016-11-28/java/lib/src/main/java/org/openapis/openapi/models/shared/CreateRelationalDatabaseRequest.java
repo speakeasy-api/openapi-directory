@@ -12,6 +12,7 @@ public class CreateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public CreateRelationalDatabaseRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class CreateRelationalDatabaseRequest {
     
     @JsonProperty("masterDatabaseName")
     public String masterDatabaseName;
+
     public CreateRelationalDatabaseRequest withMasterDatabaseName(String masterDatabaseName) {
         this.masterDatabaseName = masterDatabaseName;
         return this;
@@ -27,6 +29,7 @@ public class CreateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterUserPassword")
     public String masterUserPassword;
+
     public CreateRelationalDatabaseRequest withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -34,6 +37,7 @@ public class CreateRelationalDatabaseRequest {
     
     @JsonProperty("masterUsername")
     public String masterUsername;
+
     public CreateRelationalDatabaseRequest withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -42,6 +46,7 @@ public class CreateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredBackupWindow")
     public String preferredBackupWindow;
+
     public CreateRelationalDatabaseRequest withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -50,6 +55,7 @@ public class CreateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public CreateRelationalDatabaseRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -58,6 +64,7 @@ public class CreateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Boolean publiclyAccessible;
+
     public CreateRelationalDatabaseRequest withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -65,6 +72,7 @@ public class CreateRelationalDatabaseRequest {
     
     @JsonProperty("relationalDatabaseBlueprintId")
     public String relationalDatabaseBlueprintId;
+
     public CreateRelationalDatabaseRequest withRelationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
         this.relationalDatabaseBlueprintId = relationalDatabaseBlueprintId;
         return this;
@@ -72,6 +80,7 @@ public class CreateRelationalDatabaseRequest {
     
     @JsonProperty("relationalDatabaseBundleId")
     public String relationalDatabaseBundleId;
+
     public CreateRelationalDatabaseRequest withRelationalDatabaseBundleId(String relationalDatabaseBundleId) {
         this.relationalDatabaseBundleId = relationalDatabaseBundleId;
         return this;
@@ -79,6 +88,7 @@ public class CreateRelationalDatabaseRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public CreateRelationalDatabaseRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
@@ -87,9 +97,17 @@ public class CreateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateRelationalDatabaseRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRelationalDatabaseRequest(@JsonProperty("masterDatabaseName") String masterDatabaseName, @JsonProperty("masterUsername") String masterUsername, @JsonProperty("relationalDatabaseBlueprintId") String relationalDatabaseBlueprintId, @JsonProperty("relationalDatabaseBundleId") String relationalDatabaseBundleId, @JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.masterDatabaseName = masterDatabaseName;
+        this.masterUsername = masterUsername;
+        this.relationalDatabaseBlueprintId = relationalDatabaseBlueprintId;
+        this.relationalDatabaseBundleId = relationalDatabaseBundleId;
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

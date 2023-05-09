@@ -22,6 +22,7 @@ public class ServiceEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ServiceEvent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ServiceEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ServiceEvent withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,11 @@ public class ServiceEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ServiceEvent withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ServiceEvent(){}
 }

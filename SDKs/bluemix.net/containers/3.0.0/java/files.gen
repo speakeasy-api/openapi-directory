@@ -181,4 +181,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/HostConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/ContainerId.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateContainer.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateVolume.java
+docs/sdk/README.md
+docs/apiinfo/README.md
+docs/authentication/README.md
+docs/containergroups/README.md
+docs/fileshares/README.md
+docs/images/README.md
+docs/privatedockerimagesregistry/README.md
+docs/publicipaddresses/README.md
+docs/quota/README.md
+docs/singlecontainers/README.md
+docs/volumes/README.md
 USAGE.md

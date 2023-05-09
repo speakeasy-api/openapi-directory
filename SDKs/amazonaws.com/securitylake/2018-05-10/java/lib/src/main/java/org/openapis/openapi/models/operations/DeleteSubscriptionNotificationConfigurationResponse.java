@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSubscriptionNotificationConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSubscriptionNotificationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
      */
     
     public Object accountNotFoundException;
+
     public DeleteSubscriptionNotificationConfigurationResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteSubscriptionNotificationConfigurationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteSubscriptionNotificationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteSubscriptionNotificationConfigurationResponse;
+
     public DeleteSubscriptionNotificationConfigurationResponse withDeleteSubscriptionNotificationConfigurationResponse(java.util.Map<String, Object> deleteSubscriptionNotificationConfigurationResponse) {
         this.deleteSubscriptionNotificationConfigurationResponse = deleteSubscriptionNotificationConfigurationResponse;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSubscriptionNotificationConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteSubscriptionNotificationConfigurationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteSubscriptionNotificationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSubscriptionNotificationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSubscriptionNotificationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteSubscriptionNotificationConfigurationResponse {
      */
     
     public Object validationException;
+
     public DeleteSubscriptionNotificationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSubscriptionNotificationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

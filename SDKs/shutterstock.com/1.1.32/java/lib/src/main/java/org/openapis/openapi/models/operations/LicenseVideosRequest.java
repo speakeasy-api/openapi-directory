@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicenseVideosRequest {
@@ -12,6 +13,7 @@ public class LicenseVideosRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LicenseVideoRequest licenseVideoRequest;
+
     public LicenseVideosRequest withLicenseVideoRequest(org.openapis.openapi.models.shared.LicenseVideoRequest licenseVideoRequest) {
         this.licenseVideoRequest = licenseVideoRequest;
         return this;
@@ -22,6 +24,7 @@ public class LicenseVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
     public String searchId;
+
     public LicenseVideosRequest withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -32,6 +35,7 @@ public class LicenseVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public LicenseVideosSizeEnum size;
+
     public LicenseVideosRequest withSize(LicenseVideosSizeEnum size) {
         this.size = size;
         return this;
@@ -42,9 +46,13 @@ public class LicenseVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subscription_id")
     public String subscriptionId;
+
     public LicenseVideosRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public LicenseVideosRequest(@JsonProperty("LicenseVideoRequest") org.openapis.openapi.models.shared.LicenseVideoRequest licenseVideoRequest) {
+        this.licenseVideoRequest = licenseVideoRequest;
+  }
 }

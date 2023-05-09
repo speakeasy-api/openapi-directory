@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSearchVersionNumberGeometryFilterExtRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostSearchVersionNumberGeometryFilterExtRequestBody requestBody;
+
     public PostSearchVersionNumberGeometryFilterExtRequest withRequestBody(PostSearchVersionNumberGeometryFilterExtRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostSearchVersionNumberGeometryFilterExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public PostSearchVersionNumberGeometryFilterExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -29,9 +32,14 @@ public class PostSearchVersionNumberGeometryFilterExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public PostSearchVersionNumberGeometryFilterExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public PostSearchVersionNumberGeometryFilterExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.versionNumber = versionNumber;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelExportTaskResponse {
     
     public String contentType;
+
     public CancelExportTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CancelExportTaskResponse {
      */
     
     public Object invalidOperationException;
+
     public CancelExportTaskResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -29,6 +32,7 @@ public class CancelExportTaskResponse {
      */
     
     public Object invalidParameterException;
+
     public CancelExportTaskResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class CancelExportTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelExportTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class CancelExportTaskResponse {
     
     
     public Integer statusCode;
+
     public CancelExportTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CancelExportTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelExportTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CancelExportTaskResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CancelExportTaskResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CancelExportTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

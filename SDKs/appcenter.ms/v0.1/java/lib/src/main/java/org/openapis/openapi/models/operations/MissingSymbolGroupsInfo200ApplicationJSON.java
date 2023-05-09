@@ -15,9 +15,13 @@ public class MissingSymbolGroupsInfo200ApplicationJSON {
      */
     @JsonProperty("total_crash_count")
     public Long totalCrashCount;
+
     public MissingSymbolGroupsInfo200ApplicationJSON withTotalCrashCount(Long totalCrashCount) {
         this.totalCrashCount = totalCrashCount;
         return this;
     }
     
+    public MissingSymbolGroupsInfo200ApplicationJSON(@JsonProperty("total_crash_count") Long totalCrashCount) {
+        this.totalCrashCount = totalCrashCount;
+  }
 }

@@ -15,6 +15,7 @@ public class DocumentUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public byte[] documents;
+
     public DocumentUploadRequest withDocuments(byte[] documents) {
         this.documents = documents;
         return this;
@@ -26,6 +27,7 @@ public class DocumentUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemes")
     public String schemes;
+
     public DocumentUploadRequest withSchemes(String schemes) {
         this.schemes = schemes;
         return this;
@@ -34,9 +36,11 @@ public class DocumentUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source-link")
     public LinkedSourceDocument sourceLink;
+
     public DocumentUploadRequest withSourceLink(LinkedSourceDocument sourceLink) {
         this.sourceLink = sourceLink;
         return this;
     }
     
+    public DocumentUploadRequest(){}
 }

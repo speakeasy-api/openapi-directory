@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMitigationActionResponse {
     
     public String contentType;
+
     public CreateMitigationActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMitigationActionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMitigationActionResponse createMitigationActionResponse;
+
     public CreateMitigationActionResponse withCreateMitigationActionResponse(org.openapis.openapi.models.shared.CreateMitigationActionResponse createMitigationActionResponse) {
         this.createMitigationActionResponse = createMitigationActionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateMitigationActionResponse {
      */
     
     public Object internalFailureException;
+
     public CreateMitigationActionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMitigationActionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateMitigationActionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMitigationActionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMitigationActionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateMitigationActionResponse {
     
     
     public Integer statusCode;
+
     public CreateMitigationActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateMitigationActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMitigationActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateMitigationActionResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateMitigationActionResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateMitigationActionResponse {
      */
     
     public Object throttlingException;
+
     public CreateMitigationActionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateMitigationActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

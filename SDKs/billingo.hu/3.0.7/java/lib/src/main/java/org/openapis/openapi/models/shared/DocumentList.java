@@ -15,6 +15,7 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_page")
     public Long currentPage;
+
     public DocumentList withCurrentPage(Long currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -23,6 +24,7 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Document[] data;
+
     public DocumentList withData(Document[] data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_page")
     public Long lastPage;
+
     public DocumentList withLastPage(Long lastPage) {
         this.lastPage = lastPage;
         return this;
@@ -39,6 +42,7 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_page_url")
     public String nextPageUrl;
+
     public DocumentList withNextPageUrl(String nextPageUrl) {
         this.nextPageUrl = nextPageUrl;
         return this;
@@ -47,6 +51,7 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public DocumentList withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -55,6 +60,7 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev_page_url")
     public String prevPageUrl;
+
     public DocumentList withPrevPageUrl(String prevPageUrl) {
         this.prevPageUrl = prevPageUrl;
         return this;
@@ -63,9 +69,11 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public DocumentList withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public DocumentList(){}
 }

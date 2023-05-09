@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse {
     
     public String contentType;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchRe
      */
     
     public org.openapis.openapi.models.shared.CryptoKeyVersion cryptoKeyVersion;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse withCryptoKeyVersion(org.openapis.openapi.models.shared.CryptoKeyVersion cryptoKeyVersion) {
         this.cryptoKeyVersion = cryptoKeyVersion;
         return this;
@@ -26,6 +29,7 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchRe
     
     
     public Integer statusCode;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

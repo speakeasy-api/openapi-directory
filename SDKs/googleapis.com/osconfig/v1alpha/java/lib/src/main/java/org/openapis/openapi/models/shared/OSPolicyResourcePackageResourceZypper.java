@@ -18,9 +18,11 @@ public class OSPolicyResourcePackageResourceZypper {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OSPolicyResourcePackageResourceZypper withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OSPolicyResourcePackageResourceZypper(){}
 }

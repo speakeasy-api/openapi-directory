@@ -21,6 +21,7 @@ public class CreateOrderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateOrderResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -37,9 +38,11 @@ public class CreateOrderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Order order;
+
     public CreateOrderResponse withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public CreateOrderResponse(){}
 }

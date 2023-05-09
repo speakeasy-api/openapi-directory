@@ -15,6 +15,7 @@ public class ProvisioningArtifactPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetAccounts")
     public String[] stackSetAccounts;
+
     public ProvisioningArtifactPreferences withStackSetAccounts(String[] stackSetAccounts) {
         this.stackSetAccounts = stackSetAccounts;
         return this;
@@ -23,9 +24,11 @@ public class ProvisioningArtifactPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetRegions")
     public String[] stackSetRegions;
+
     public ProvisioningArtifactPreferences withStackSetRegions(String[] stackSetRegions) {
         this.stackSetRegions = stackSetRegions;
         return this;
     }
     
+    public ProvisioningArtifactPreferences(){}
 }

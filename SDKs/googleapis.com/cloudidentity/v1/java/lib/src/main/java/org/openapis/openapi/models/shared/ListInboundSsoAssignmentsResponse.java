@@ -18,6 +18,7 @@ public class ListInboundSsoAssignmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundSsoAssignments")
     public InboundSsoAssignment[] inboundSsoAssignments;
+
     public ListInboundSsoAssignmentsResponse withInboundSsoAssignments(InboundSsoAssignment[] inboundSsoAssignments) {
         this.inboundSsoAssignments = inboundSsoAssignments;
         return this;
@@ -29,9 +30,11 @@ public class ListInboundSsoAssignmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListInboundSsoAssignmentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListInboundSsoAssignmentsResponse(){}
 }

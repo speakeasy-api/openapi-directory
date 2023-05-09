@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GetSessionTokenRequest {
     
     public Long durationSeconds;
+
     public GetSessionTokenRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -16,6 +17,7 @@ public class GetSessionTokenRequest {
     
     
     public String serialNumber;
+
     public GetSessionTokenRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -23,9 +25,11 @@ public class GetSessionTokenRequest {
     
     
     public String tokenCode;
+
     public GetSessionTokenRequest withTokenCode(String tokenCode) {
         this.tokenCode = tokenCode;
         return this;
     }
     
+    public GetSessionTokenRequest(){}
 }

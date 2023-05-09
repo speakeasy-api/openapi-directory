@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateFromManifestRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
     public String code;
+
     public AppsCreateFromManifestRequest withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public AppsCreateFromManifestRequest(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

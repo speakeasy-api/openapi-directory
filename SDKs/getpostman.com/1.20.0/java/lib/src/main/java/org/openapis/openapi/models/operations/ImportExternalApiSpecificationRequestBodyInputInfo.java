@@ -12,6 +12,7 @@ public class ImportExternalApiSpecificationRequestBodyInputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public ImportExternalApiSpecificationRequestBodyInputInfoLicense license;
+
     public ImportExternalApiSpecificationRequestBodyInputInfo withLicense(ImportExternalApiSpecificationRequestBodyInputInfoLicense license) {
         this.license = license;
         return this;
@@ -20,6 +21,7 @@ public class ImportExternalApiSpecificationRequestBodyInputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ImportExternalApiSpecificationRequestBodyInputInfo withTitle(String title) {
         this.title = title;
         return this;
@@ -28,9 +30,11 @@ public class ImportExternalApiSpecificationRequestBodyInputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ImportExternalApiSpecificationRequestBodyInputInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputInfo(){}
 }

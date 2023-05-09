@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutTransactionWrapper {
     @JsonProperty("transaction")
     public SaveTransaction transaction;
+
     public PutTransactionWrapper withTransaction(SaveTransaction transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public PutTransactionWrapper(@JsonProperty("transaction") SaveTransaction transaction) {
+        this.transaction = transaction;
+  }
 }

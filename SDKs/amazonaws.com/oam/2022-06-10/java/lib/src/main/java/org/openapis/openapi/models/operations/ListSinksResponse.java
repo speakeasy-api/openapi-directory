@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSinksResponse {
     
     public String contentType;
+
     public ListSinksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSinksResponse {
      */
     
     public Object internalServiceFault;
+
     public ListSinksResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -29,6 +32,7 @@ public class ListSinksResponse {
      */
     
     public Object invalidParameterException;
+
     public ListSinksResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListSinksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSinksOutput listSinksOutput;
+
     public ListSinksResponse withListSinksOutput(org.openapis.openapi.models.shared.ListSinksOutput listSinksOutput) {
         this.listSinksOutput = listSinksOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListSinksResponse {
     
     
     public Integer statusCode;
+
     public ListSinksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSinksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSinksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListSinksResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSinksResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListSinksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

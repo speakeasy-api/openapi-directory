@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalResponse {
     
     public String contentType;
+
     public NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalRespon
      */
     
     public org.openapis.openapi.models.shared.RefreshRuntimeTokenInternalResponse refreshRuntimeTokenInternalResponse;
+
     public NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalResponse withRefreshRuntimeTokenInternalResponse(org.openapis.openapi.models.shared.RefreshRuntimeTokenInternalResponse refreshRuntimeTokenInternalResponse) {
         this.refreshRuntimeTokenInternalResponse = refreshRuntimeTokenInternalResponse;
         return this;
@@ -26,6 +29,7 @@ public class NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalRespon
     
     
     public Integer statusCode;
+
     public NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

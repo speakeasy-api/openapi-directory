@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBlockPublicAccessConfigurationResponse {
     
     public String contentType;
+
     public GetBlockPublicAccessConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBlockPublicAccessConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBlockPublicAccessConfigurationOutput getBlockPublicAccessConfigurationOutput;
+
     public GetBlockPublicAccessConfigurationResponse withGetBlockPublicAccessConfigurationOutput(org.openapis.openapi.models.shared.GetBlockPublicAccessConfigurationOutput getBlockPublicAccessConfigurationOutput) {
         this.getBlockPublicAccessConfigurationOutput = getBlockPublicAccessConfigurationOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetBlockPublicAccessConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetBlockPublicAccessConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetBlockPublicAccessConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public GetBlockPublicAccessConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetBlockPublicAccessConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetBlockPublicAccessConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetBlockPublicAccessConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBlockPublicAccessConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBlockPublicAccessConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

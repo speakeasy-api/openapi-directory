@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSourceServiceOfferingsResponse {
     
     public String contentType;
+
     public ListSourceServiceOfferingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSourceServiceOfferingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorNotFound errorNotFound;
+
     public ListSourceServiceOfferingsResponse withErrorNotFound(org.openapis.openapi.models.shared.ErrorNotFound errorNotFound) {
         this.errorNotFound = errorNotFound;
         return this;
@@ -29,6 +32,7 @@ public class ListSourceServiceOfferingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceOfferingsCollection serviceOfferingsCollection;
+
     public ListSourceServiceOfferingsResponse withServiceOfferingsCollection(org.openapis.openapi.models.shared.ServiceOfferingsCollection serviceOfferingsCollection) {
         this.serviceOfferingsCollection = serviceOfferingsCollection;
         return this;
@@ -36,6 +40,7 @@ public class ListSourceServiceOfferingsResponse {
     
     
     public Integer statusCode;
+
     public ListSourceServiceOfferingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListSourceServiceOfferingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSourceServiceOfferingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSourceServiceOfferingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

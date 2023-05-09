@@ -18,6 +18,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionAbsent")
     public MetricAbsence conditionAbsent;
+
     public Condition withConditionAbsent(MetricAbsence conditionAbsent) {
         this.conditionAbsent = conditionAbsent;
         return this;
@@ -29,6 +30,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionMatchedLog")
     public LogMatch conditionMatchedLog;
+
     public Condition withConditionMatchedLog(LogMatch conditionMatchedLog) {
         this.conditionMatchedLog = conditionMatchedLog;
         return this;
@@ -40,6 +42,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionMonitoringQueryLanguage")
     public MonitoringQueryLanguageCondition conditionMonitoringQueryLanguage;
+
     public Condition withConditionMonitoringQueryLanguage(MonitoringQueryLanguageCondition conditionMonitoringQueryLanguage) {
         this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
         return this;
@@ -51,6 +54,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionThreshold")
     public MetricThreshold conditionThreshold;
+
     public Condition withConditionThreshold(MetricThreshold conditionThreshold) {
         this.conditionThreshold = conditionThreshold;
         return this;
@@ -62,6 +66,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Condition withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,9 +78,11 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Condition withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Condition(){}
 }

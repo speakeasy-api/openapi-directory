@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateNodeResponse {
     
     public String contentType;
+
     public DisassociateNodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateNodeResponse disassociateNodeResponse;
+
     public DisassociateNodeResponse withDisassociateNodeResponse(org.openapis.openapi.models.shared.DisassociateNodeResponse disassociateNodeResponse) {
         this.disassociateNodeResponse = disassociateNodeResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateNodeResponse {
      */
     
     public Object invalidStateException;
+
     public DisassociateNodeResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -36,6 +40,7 @@ public class DisassociateNodeResponse {
     
     
     public Integer statusCode;
+
     public DisassociateNodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DisassociateNodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateNodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateNodeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateNodeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateNodeResponse {
      */
     
     public Object validationException;
+
     public DisassociateNodeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateNodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

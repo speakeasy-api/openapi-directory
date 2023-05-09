@@ -51,10 +51,8 @@ public class SubUser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubUserDeleteResponse res = new org.openapis.openapi.models.operations.SubUserDeleteResponse() {{
+        org.openapis.openapi.models.operations.SubUserDeleteResponse res = new org.openapis.openapi.models.operations.SubUserDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -83,14 +81,12 @@ public class SubUser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubUserGetResponse res = new org.openapis.openapi.models.operations.SubUserGetResponse() {{
+        org.openapis.openapi.models.operations.SubUserGetResponse res = new org.openapis.openapi.models.operations.SubUserGetResponse(contentType, httpRes.statusCode()) {{
             subUserData = null;
             subUserData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,10 +138,8 @@ public class SubUser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubUserPostFormResponse res = new org.openapis.openapi.models.operations.SubUserPostFormResponse() {{
+        org.openapis.openapi.models.operations.SubUserPostFormResponse res = new org.openapis.openapi.models.operations.SubUserPostFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -179,10 +173,8 @@ public class SubUser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubUserPostJsonResponse res = new org.openapis.openapi.models.operations.SubUserPostJsonResponse() {{
+        org.openapis.openapi.models.operations.SubUserPostJsonResponse res = new org.openapis.openapi.models.operations.SubUserPostJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -216,10 +208,8 @@ public class SubUser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubUserPostRawResponse res = new org.openapis.openapi.models.operations.SubUserPostRawResponse() {{
+        org.openapis.openapi.models.operations.SubUserPostRawResponse res = new org.openapis.openapi.models.operations.SubUserPostRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

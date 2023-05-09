@@ -12,9 +12,13 @@ public class PutDialRequestBatchRequestBody {
      */
     @JsonProperty("dialRequests")
     public org.openapis.openapi.models.shared.DialRequest[] dialRequests;
+
     public PutDialRequestBatchRequestBody withDialRequests(org.openapis.openapi.models.shared.DialRequest[] dialRequests) {
         this.dialRequests = dialRequests;
         return this;
     }
     
+    public PutDialRequestBatchRequestBody(@JsonProperty("dialRequests") org.openapis.openapi.models.shared.DialRequest[] dialRequests) {
+        this.dialRequests = dialRequests;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsDestinyGearArtArrangementReference {
     
     public Long artArrangementHash;
+
     public DestinyDefinitionsDestinyGearArtArrangementReference withArtArrangementHash(Long artArrangementHash) {
         this.artArrangementHash = artArrangementHash;
         return this;
@@ -16,9 +17,11 @@ public class DestinyDefinitionsDestinyGearArtArrangementReference {
     
     
     public Long classHash;
+
     public DestinyDefinitionsDestinyGearArtArrangementReference withClassHash(Long classHash) {
         this.classHash = classHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyGearArtArrangementReference(){}
 }

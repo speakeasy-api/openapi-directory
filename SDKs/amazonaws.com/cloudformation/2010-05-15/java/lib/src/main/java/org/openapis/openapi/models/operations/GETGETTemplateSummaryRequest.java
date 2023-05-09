@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETTemplateSummaryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETTemplateSummaryActionEnum action;
+
     public GETGETTemplateSummaryRequest withAction(GETGETTemplateSummaryActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETTemplateSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
     public GETGETTemplateSummaryCallAsEnum callAs;
+
     public GETGETTemplateSummaryRequest withCallAs(GETGETTemplateSummaryCallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -29,6 +32,7 @@ public class GETGETTemplateSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
     public String stackName;
+
     public GETGETTemplateSummaryRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -39,6 +43,7 @@ public class GETGETTemplateSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
     public String stackSetName;
+
     public GETGETTemplateSummaryRequest withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -49,6 +54,7 @@ public class GETGETTemplateSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateBody")
     public String templateBody;
+
     public GETGETTemplateSummaryRequest withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -59,6 +65,7 @@ public class GETGETTemplateSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateURL")
     public String templateURL;
+
     public GETGETTemplateSummaryRequest withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
@@ -66,6 +73,7 @@ public class GETGETTemplateSummaryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETTemplateSummaryVersionEnum version;
+
     public GETGETTemplateSummaryRequest withVersion(GETGETTemplateSummaryVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETGETTemplateSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETTemplateSummaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETGETTemplateSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETTemplateSummaryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETGETTemplateSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETTemplateSummaryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETGETTemplateSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETTemplateSummaryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETGETTemplateSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETTemplateSummaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETGETTemplateSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETTemplateSummaryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,14 @@ public class GETGETTemplateSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETTemplateSummaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETTemplateSummaryRequest(@JsonProperty("Action") GETGETTemplateSummaryActionEnum action, @JsonProperty("Version") GETGETTemplateSummaryVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

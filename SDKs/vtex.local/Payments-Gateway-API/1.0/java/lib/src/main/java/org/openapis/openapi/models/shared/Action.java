@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Action {
     @JsonProperty("connectorResponse")
     public String connectorResponse;
+
     public Action withConnectorResponse(String connectorResponse) {
         this.connectorResponse = connectorResponse;
         return this;
@@ -16,6 +17,7 @@ public class Action {
     
     @JsonProperty("date")
     public String date;
+
     public Action withDate(String date) {
         this.date = date;
         return this;
@@ -23,6 +25,7 @@ public class Action {
     
     @JsonProperty("payment")
     public Payment1 payment;
+
     public Action withPayment(Payment1 payment) {
         this.payment = payment;
         return this;
@@ -30,6 +33,7 @@ public class Action {
     
     @JsonProperty("paymentId")
     public String paymentId;
+
     public Action withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -37,6 +41,7 @@ public class Action {
     
     @JsonProperty("type")
     public String type;
+
     public Action withType(String type) {
         this.type = type;
         return this;
@@ -44,9 +49,18 @@ public class Action {
     
     @JsonProperty("value")
     public Integer value;
+
     public Action withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public Action(@JsonProperty("connectorResponse") String connectorResponse, @JsonProperty("date") String date, @JsonProperty("payment") Payment1 payment, @JsonProperty("paymentId") String paymentId, @JsonProperty("type") String type, @JsonProperty("value") Integer value) {
+        this.connectorResponse = connectorResponse;
+        this.date = date;
+        this.payment = payment;
+        this.paymentId = paymentId;
+        this.type = type;
+        this.value = value;
+  }
 }

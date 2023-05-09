@@ -20,6 +20,7 @@ public class EvaluationResultIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationResultQualifier")
     public EvaluationResultQualifier evaluationResultQualifier;
+
     public EvaluationResultIdentifier withEvaluationResultQualifier(EvaluationResultQualifier evaluationResultQualifier) {
         this.evaluationResultQualifier = evaluationResultQualifier;
         return this;
@@ -30,6 +31,7 @@ public class EvaluationResultIdentifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OrderingTimestamp")
     public OffsetDateTime orderingTimestamp;
+
     public EvaluationResultIdentifier withOrderingTimestamp(OffsetDateTime orderingTimestamp) {
         this.orderingTimestamp = orderingTimestamp;
         return this;
@@ -38,9 +40,11 @@ public class EvaluationResultIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceEvaluationId")
     public String resourceEvaluationId;
+
     public EvaluationResultIdentifier withResourceEvaluationId(String resourceEvaluationId) {
         this.resourceEvaluationId = resourceEvaluationId;
         return this;
     }
     
+    public EvaluationResultIdentifier(){}
 }

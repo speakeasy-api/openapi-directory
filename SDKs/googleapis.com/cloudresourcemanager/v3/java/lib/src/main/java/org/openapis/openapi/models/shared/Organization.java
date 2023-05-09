@@ -18,6 +18,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Organization withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public Organization withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -40,6 +42,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directoryCustomerId")
     public String directoryCustomerId;
+
     public Organization withDirectoryCustomerId(String directoryCustomerId) {
         this.directoryCustomerId = directoryCustomerId;
         return this;
@@ -51,6 +54,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Organization withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Organization withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -73,6 +78,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Organization withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public OrganizationStateEnum state;
+
     public Organization withState(OrganizationStateEnum state) {
         this.state = state;
         return this;
@@ -95,9 +102,11 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Organization withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Organization(){}
 }

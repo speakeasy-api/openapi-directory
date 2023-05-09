@@ -18,9 +18,11 @@ public class SchemaEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public SchemaEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
     }
     
+    public SchemaEntity(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenPriceRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenId")
     public String tokenId;
+
     public GetTokenPriceRequest withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public GetTokenPriceRequest(@JsonProperty("tokenId") String tokenId) {
+        this.tokenId = tokenId;
+  }
 }

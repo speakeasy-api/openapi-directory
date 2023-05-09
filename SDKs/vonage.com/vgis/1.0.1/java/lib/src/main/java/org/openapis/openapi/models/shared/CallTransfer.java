@@ -15,9 +15,13 @@ public class CallTransfer {
      */
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public CallTransfer withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public CallTransfer(@JsonProperty("phoneNumber") String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+  }
 }

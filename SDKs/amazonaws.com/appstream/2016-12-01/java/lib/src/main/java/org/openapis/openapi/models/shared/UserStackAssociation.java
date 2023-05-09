@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserStackAssociation {
     @JsonProperty("AuthenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public UserStackAssociation withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -22,6 +23,7 @@ public class UserStackAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendEmailNotification")
     public Boolean sendEmailNotification;
+
     public UserStackAssociation withSendEmailNotification(Boolean sendEmailNotification) {
         this.sendEmailNotification = sendEmailNotification;
         return this;
@@ -29,6 +31,7 @@ public class UserStackAssociation {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public UserStackAssociation withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -36,9 +39,15 @@ public class UserStackAssociation {
     
     @JsonProperty("UserName")
     public String userName;
+
     public UserStackAssociation withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UserStackAssociation(@JsonProperty("AuthenticationType") AuthenticationTypeEnum authenticationType, @JsonProperty("StackName") String stackName, @JsonProperty("UserName") String userName) {
+        this.authenticationType = authenticationType;
+        this.stackName = stackName;
+        this.userName = userName;
+  }
 }

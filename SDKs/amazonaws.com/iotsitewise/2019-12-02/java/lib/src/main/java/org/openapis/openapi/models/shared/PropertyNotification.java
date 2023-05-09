@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PropertyNotification {
     @JsonProperty("state")
     public PropertyNotificationStateEnum state;
+
     public PropertyNotification withState(PropertyNotificationStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,14 @@ public class PropertyNotification {
     
     @JsonProperty("topic")
     public String topic;
+
     public PropertyNotification withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public PropertyNotification(@JsonProperty("state") PropertyNotificationStateEnum state, @JsonProperty("topic") String topic) {
+        this.state = state;
+        this.topic = topic;
+  }
 }

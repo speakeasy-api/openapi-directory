@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMLTransformRequest {
     @JsonProperty("TransformId")
     public String transformId;
+
     public DeleteMLTransformRequest withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public DeleteMLTransformRequest(@JsonProperty("TransformId") String transformId) {
+        this.transformId = transformId;
+  }
 }

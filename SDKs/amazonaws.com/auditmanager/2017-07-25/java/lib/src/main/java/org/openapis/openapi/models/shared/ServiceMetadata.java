@@ -15,6 +15,7 @@ public class ServiceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public ServiceMetadata withCategory(String category) {
         this.category = category;
         return this;
@@ -23,6 +24,7 @@ public class ServiceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ServiceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ServiceMetadata withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,9 +42,11 @@ public class ServiceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ServiceMetadata(){}
 }

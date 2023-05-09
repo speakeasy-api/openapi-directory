@@ -15,9 +15,11 @@ public class VendorEarningStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public VendorEarningStats withTotal(Float total) {
         this.total = total;
         return this;
     }
     
+    public VendorEarningStats(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NotifyMigrationTaskStateResponse {
@@ -12,6 +13,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object accessDeniedException;
+
     public NotifyMigrationTaskStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class NotifyMigrationTaskStateResponse {
     
     
     public String contentType;
+
     public NotifyMigrationTaskStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object dryRunOperation;
+
     public NotifyMigrationTaskStateResponse withDryRunOperation(Object dryRunOperation) {
         this.dryRunOperation = dryRunOperation;
         return this;
@@ -39,6 +43,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public NotifyMigrationTaskStateResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object internalServerError;
+
     public NotifyMigrationTaskStateResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object invalidInputException;
+
     public NotifyMigrationTaskStateResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public java.util.Map<String, Object> notifyMigrationTaskStateResult;
+
     public NotifyMigrationTaskStateResponse withNotifyMigrationTaskStateResult(java.util.Map<String, Object> notifyMigrationTaskStateResult) {
         this.notifyMigrationTaskStateResult = notifyMigrationTaskStateResult;
         return this;
@@ -76,6 +84,7 @@ public class NotifyMigrationTaskStateResponse {
     
     
     public Integer statusCode;
+
     public NotifyMigrationTaskStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class NotifyMigrationTaskStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NotifyMigrationTaskStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public NotifyMigrationTaskStateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public NotifyMigrationTaskStateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,6 +125,7 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object throttlingException;
+
     public NotifyMigrationTaskStateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class NotifyMigrationTaskStateResponse {
      */
     
     public Object unauthorizedOperation;
+
     public NotifyMigrationTaskStateResponse withUnauthorizedOperation(Object unauthorizedOperation) {
         this.unauthorizedOperation = unauthorizedOperation;
         return this;
     }
     
+    public NotifyMigrationTaskStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

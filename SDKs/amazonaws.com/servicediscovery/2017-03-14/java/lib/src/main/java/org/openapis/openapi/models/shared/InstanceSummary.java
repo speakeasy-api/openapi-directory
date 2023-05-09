@@ -15,6 +15,7 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public InstanceSummary withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public InstanceSummary withId(String id) {
         this.id = id;
         return this;
     }
     
+    public InstanceSummary(){}
 }

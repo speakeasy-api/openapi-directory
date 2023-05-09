@@ -15,6 +15,7 @@ public class ListLongTermPricingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongTermPricingEntries")
     public LongTermPricingListEntry[] longTermPricingEntries;
+
     public ListLongTermPricingResult withLongTermPricingEntries(LongTermPricingListEntry[] longTermPricingEntries) {
         this.longTermPricingEntries = longTermPricingEntries;
         return this;
@@ -23,9 +24,11 @@ public class ListLongTermPricingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLongTermPricingResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLongTermPricingResult(){}
 }

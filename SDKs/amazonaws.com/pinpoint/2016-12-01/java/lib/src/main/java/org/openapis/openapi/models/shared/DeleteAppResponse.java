@@ -15,9 +15,13 @@ public class DeleteAppResponse {
      */
     @JsonProperty("ApplicationResponse")
     public ApplicationResponse applicationResponse;
+
     public DeleteAppResponse withApplicationResponse(ApplicationResponse applicationResponse) {
         this.applicationResponse = applicationResponse;
         return this;
     }
     
+    public DeleteAppResponse(@JsonProperty("ApplicationResponse") ApplicationResponse applicationResponse) {
+        this.applicationResponse = applicationResponse;
+  }
 }

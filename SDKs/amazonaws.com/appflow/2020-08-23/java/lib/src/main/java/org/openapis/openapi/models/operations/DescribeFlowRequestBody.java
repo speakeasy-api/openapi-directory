@@ -12,9 +12,13 @@ public class DescribeFlowRequestBody {
      */
     @JsonProperty("flowName")
     public String flowName;
+
     public DescribeFlowRequestBody withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
     }
     
+    public DescribeFlowRequestBody(@JsonProperty("flowName") String flowName) {
+        this.flowName = flowName;
+  }
 }

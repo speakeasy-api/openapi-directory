@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumesResultVolumesTags {
     
     public String key;
+
     public DescribeVolumesResultVolumesTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVolumesResultVolumesTags {
     
     
     public String value;
+
     public DescribeVolumesResultVolumesTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVolumesResultVolumesTags(){}
 }

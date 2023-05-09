@@ -12,9 +12,13 @@ public class UsersAddEmailForAuthenticatedRequestBody1 {
      */
     @JsonProperty("emails")
     public String[] emails;
+
     public UsersAddEmailForAuthenticatedRequestBody1 withEmails(String[] emails) {
         this.emails = emails;
         return this;
     }
     
+    public UsersAddEmailForAuthenticatedRequestBody1(@JsonProperty("emails") String[] emails) {
+        this.emails = emails;
+  }
 }

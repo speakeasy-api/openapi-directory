@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopes {
     
     public OffsetDateTime createdDate;
+
     public DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopes withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScope
     
     
     public String networkInsightsAccessScopeArn;
+
     public DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopes withNetworkInsightsAccessScopeArn(String networkInsightsAccessScopeArn) {
         this.networkInsightsAccessScopeArn = networkInsightsAccessScopeArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScope
     
     
     public String networkInsightsAccessScopeId;
+
     public DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopes withNetworkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScope
     
     
     public DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopesTags[] tags;
+
     public DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopes withTags(DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopesTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,9 +44,11 @@ public class DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScope
     
     
     public OffsetDateTime updatedDate;
+
     public DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopes withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
     }
     
+    public DescribeNetworkInsightsAccessScopesResultNetworkInsightsAccessScopes(){}
 }

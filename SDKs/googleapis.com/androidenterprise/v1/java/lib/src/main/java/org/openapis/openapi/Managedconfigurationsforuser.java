@@ -59,10 +59,8 @@ public class Managedconfigurationsforuser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Managedconfigurationsforuser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetResponse(contentType, httpRes.statusCode()) {{
             managedConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Managedconfigurationsforuser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListResponse(contentType, httpRes.statusCode()) {{
             managedConfigurationsForUserListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Managedconfigurationsforuser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateResponse(contentType, httpRes.statusCode()) {{
             managedConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class BeezUPCommonPaginationResult {
      */
     @JsonProperty("entryCount")
     public Long entryCount;
+
     public BeezUPCommonPaginationResult withEntryCount(Long entryCount) {
         this.entryCount = entryCount;
         return this;
@@ -22,6 +23,7 @@ public class BeezUPCommonPaginationResult {
      */
     @JsonProperty("links")
     public BeezUPCommonPaginationResultLinks links;
+
     public BeezUPCommonPaginationResult withLinks(BeezUPCommonPaginationResultLinks links) {
         this.links = links;
         return this;
@@ -32,6 +34,7 @@ public class BeezUPCommonPaginationResult {
      */
     @JsonProperty("pageCount")
     public Long pageCount;
+
     public BeezUPCommonPaginationResult withPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
@@ -42,9 +45,16 @@ public class BeezUPCommonPaginationResult {
      */
     @JsonProperty("totalEntryCount")
     public Long totalEntryCount;
+
     public BeezUPCommonPaginationResult withTotalEntryCount(Long totalEntryCount) {
         this.totalEntryCount = totalEntryCount;
         return this;
     }
     
+    public BeezUPCommonPaginationResult(@JsonProperty("entryCount") Long entryCount, @JsonProperty("links") BeezUPCommonPaginationResultLinks links, @JsonProperty("pageCount") Long pageCount, @JsonProperty("totalEntryCount") Long totalEntryCount) {
+        this.entryCount = entryCount;
+        this.links = links;
+        this.pageCount = pageCount;
+        this.totalEntryCount = totalEntryCount;
+  }
 }

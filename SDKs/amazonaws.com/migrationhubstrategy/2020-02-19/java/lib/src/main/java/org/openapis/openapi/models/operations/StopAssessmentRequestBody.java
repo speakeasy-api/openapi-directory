@@ -12,9 +12,13 @@ public class StopAssessmentRequestBody {
      */
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public StopAssessmentRequestBody withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
     }
     
+    public StopAssessmentRequestBody(@JsonProperty("assessmentId") String assessmentId) {
+        this.assessmentId = assessmentId;
+  }
 }

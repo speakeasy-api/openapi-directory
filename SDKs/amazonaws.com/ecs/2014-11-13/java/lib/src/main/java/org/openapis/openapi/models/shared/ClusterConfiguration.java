@@ -15,9 +15,11 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executeCommandConfiguration")
     public ExecuteCommandConfiguration executeCommandConfiguration;
+
     public ClusterConfiguration withExecuteCommandConfiguration(ExecuteCommandConfiguration executeCommandConfiguration) {
         this.executeCommandConfiguration = executeCommandConfiguration;
         return this;
     }
     
+    public ClusterConfiguration(){}
 }

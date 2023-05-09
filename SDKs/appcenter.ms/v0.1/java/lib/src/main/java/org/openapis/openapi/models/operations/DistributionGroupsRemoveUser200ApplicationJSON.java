@@ -15,6 +15,7 @@ public class DistributionGroupsRemoveUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public DistributionGroupsRemoveUser200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class DistributionGroupsRemoveUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public Long message;
+
     public DistributionGroupsRemoveUser200ApplicationJSON withMessage(Long message) {
         this.message = message;
         return this;
@@ -36,6 +38,7 @@ public class DistributionGroupsRemoveUser200ApplicationJSON {
      */
     @JsonProperty("status")
     public Long status;
+
     public DistributionGroupsRemoveUser200ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
@@ -47,9 +50,13 @@ public class DistributionGroupsRemoveUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_email")
     public String userEmail;
+
     public DistributionGroupsRemoveUser200ApplicationJSON withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public DistributionGroupsRemoveUser200ApplicationJSON(@JsonProperty("status") Long status) {
+        this.status = status;
+  }
 }

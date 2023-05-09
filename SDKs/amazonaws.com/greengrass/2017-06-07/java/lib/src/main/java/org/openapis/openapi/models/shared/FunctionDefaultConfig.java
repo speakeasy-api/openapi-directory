@@ -18,9 +18,11 @@ public class FunctionDefaultConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Execution")
     public FunctionDefaultExecutionConfig execution;
+
     public FunctionDefaultConfig withExecution(FunctionDefaultExecutionConfig execution) {
         this.execution = execution;
         return this;
     }
     
+    public FunctionDefaultConfig(){}
 }

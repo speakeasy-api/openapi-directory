@@ -15,6 +15,7 @@ public class InstanceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public InstanceState withCode(Long code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class InstanceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceState withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InstanceState(){}
 }

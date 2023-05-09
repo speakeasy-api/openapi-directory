@@ -15,6 +15,7 @@ public class ProjectDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualDeliveryDate")
     public TimeDTO actualDeliveryDate;
+
     public ProjectDatesDTO withActualDeliveryDate(TimeDTO actualDeliveryDate) {
         this.actualDeliveryDate = actualDeliveryDate;
         return this;
@@ -23,6 +24,7 @@ public class ProjectDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualStartDate")
     public TimeDTO actualStartDate;
+
     public ProjectDatesDTO withActualStartDate(TimeDTO actualStartDate) {
         this.actualStartDate = actualStartDate;
         return this;
@@ -31,6 +33,7 @@ public class ProjectDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadline")
     public TimeDTO deadline;
+
     public ProjectDatesDTO withDeadline(TimeDTO deadline) {
         this.deadline = deadline;
         return this;
@@ -39,9 +42,11 @@ public class ProjectDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public TimeDTO startDate;
+
     public ProjectDatesDTO withStartDate(TimeDTO startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public ProjectDatesDTO(){}
 }

@@ -15,6 +15,7 @@ public class ContinuousProjectProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costs")
     public ContinuousProjectCosts costs;
+
     public ContinuousProjectProgress withCosts(ContinuousProjectCosts costs) {
         this.costs = costs;
         return this;
@@ -23,6 +24,7 @@ public class ContinuousProjectProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public Progress progress;
+
     public ContinuousProjectProgress withProgress(Progress progress) {
         this.progress = progress;
         return this;
@@ -31,9 +33,11 @@ public class ContinuousProjectProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_counts")
     public ContinuousProjectWordCounts wordCounts;
+
     public ContinuousProjectProgress withWordCounts(ContinuousProjectWordCounts wordCounts) {
         this.wordCounts = wordCounts;
         return this;
     }
     
+    public ContinuousProjectProgress(){}
 }

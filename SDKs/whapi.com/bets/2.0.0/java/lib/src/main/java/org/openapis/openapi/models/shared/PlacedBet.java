@@ -10,21 +10,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PlacedBet {
     /**
-     * The cash in value of the bet. For example \u00a30.88. When no value is given or no value is present, no cash in is available
+     * The cash in value of the bet. For example £0.88. When no value is given or no value is present, no cash in is available
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cashinValue")
     public Double cashinValue;
+
     public PlacedBet withCashinValue(Double cashinValue) {
         this.cashinValue = cashinValue;
         return this;
     }
     
     /**
-     * The estimated value of the returns if the bet is successful. Note: when an estimated return isn\u2019t available, as in the case of a bet placed on a horse at SP (starting price) where the actual price is unknown when the bet is placed, \u2018NOT_AVAILABLE\u2019 will appear in the response field.
+     * The estimated value of the returns if the bet is successful. Note: when an estimated return isn’t available, as in the case of a bet placed on a horse at SP (starting price) where the actual price is unknown when the bet is placed, ‘NOT_AVAILABLE’ will appear in the response field.
      */
     @JsonProperty("estimatedReturns")
     public Double estimatedReturns;
+
     public PlacedBet withEstimatedReturns(Double estimatedReturns) {
         this.estimatedReturns = estimatedReturns;
         return this;
@@ -36,6 +38,7 @@ public class PlacedBet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeBetValue")
     public Double freeBetValue;
+
     public PlacedBet withFreeBetValue(Double freeBetValue) {
         this.freeBetValue = freeBetValue;
         return this;
@@ -46,6 +49,7 @@ public class PlacedBet {
      */
     @JsonProperty("id")
     public String id;
+
     public PlacedBet withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class PlacedBet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legs")
     public PlacedBetLeg[] legs;
+
     public PlacedBet withLegs(PlacedBetLeg[] legs) {
         this.legs = legs;
         return this;
@@ -65,6 +70,7 @@ public class PlacedBet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numLines")
     public Long numLines;
+
     public PlacedBet withNumLines(Long numLines) {
         this.numLines = numLines;
         return this;
@@ -76,6 +82,7 @@ public class PlacedBet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numSelections")
     public Long numSelections;
+
     public PlacedBet withNumSelections(Long numSelections) {
         this.numSelections = numSelections;
         return this;
@@ -87,6 +94,7 @@ public class PlacedBet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receipt")
     public String receipt;
+
     public PlacedBet withReceipt(String receipt) {
         this.receipt = receipt;
         return this;
@@ -97,27 +105,30 @@ public class PlacedBet {
      */
     @JsonProperty("settled")
     public Boolean settled;
+
     public PlacedBet withSettled(Boolean settled) {
         this.settled = settled;
         return this;
     }
     
     /**
-     * The bet stake, which represents the total value of the bet. For example: \u00a3 12.34
+     * The bet stake, which represents the total value of the bet. For example: £ 12.34
      */
     @JsonProperty("stake")
     public Double stake;
+
     public PlacedBet withStake(Double stake) {
         this.stake = stake;
         return this;
     }
     
     /**
-     * The individual stake on each line of the bet. For example: \u00a3 6.17
+     * The individual stake on each line of the bet. For example: £ 6.17
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stakePerLine")
     public Double stakePerLine;
+
     public PlacedBet withStakePerLine(Double stakePerLine) {
         this.stakePerLine = stakePerLine;
         return this;
@@ -128,6 +139,7 @@ public class PlacedBet {
      */
     @JsonProperty("status")
     public String status;
+
     public PlacedBet withStatus(String status) {
         this.status = status;
         return this;
@@ -138,6 +150,7 @@ public class PlacedBet {
      */
     @JsonProperty("transDateTime")
     public String transDateTime;
+
     public PlacedBet withTransDateTime(String transDateTime) {
         this.transDateTime = transDateTime;
         return this;
@@ -148,6 +161,7 @@ public class PlacedBet {
      */
     @JsonProperty("typeCode")
     public String typeCode;
+
     public PlacedBet withTypeCode(String typeCode) {
         this.typeCode = typeCode;
         return this;
@@ -158,6 +172,7 @@ public class PlacedBet {
      */
     @JsonProperty("typeName")
     public String typeName;
+
     public PlacedBet withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -168,9 +183,21 @@ public class PlacedBet {
      */
     @JsonProperty("winnings")
     public Double winnings;
+
     public PlacedBet withWinnings(Double winnings) {
         this.winnings = winnings;
         return this;
     }
     
+    public PlacedBet(@JsonProperty("estimatedReturns") Double estimatedReturns, @JsonProperty("id") String id, @JsonProperty("settled") Boolean settled, @JsonProperty("stake") Double stake, @JsonProperty("status") String status, @JsonProperty("transDateTime") String transDateTime, @JsonProperty("typeCode") String typeCode, @JsonProperty("typeName") String typeName, @JsonProperty("winnings") Double winnings) {
+        this.estimatedReturns = estimatedReturns;
+        this.id = id;
+        this.settled = settled;
+        this.stake = stake;
+        this.status = status;
+        this.transDateTime = transDateTime;
+        this.typeCode = typeCode;
+        this.typeName = typeName;
+        this.winnings = winnings;
+  }
 }

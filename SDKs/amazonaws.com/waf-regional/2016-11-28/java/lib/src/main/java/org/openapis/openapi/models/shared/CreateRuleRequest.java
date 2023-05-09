@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRuleRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateRuleRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -18,6 +19,7 @@ public class CreateRuleRequest {
     
     @JsonProperty("MetricName")
     public String metricName;
+
     public CreateRuleRequest withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -25,6 +27,7 @@ public class CreateRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,15 @@ public class CreateRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateRuleRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRuleRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("MetricName") String metricName, @JsonProperty("Name") String name) {
+        this.changeToken = changeToken;
+        this.metricName = metricName;
+        this.name = name;
+  }
 }

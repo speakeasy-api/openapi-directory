@@ -15,6 +15,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childPolicy")
     public ChildPolicyEnum childPolicy;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withChildPolicy(ChildPolicyEnum childPolicy) {
         this.childPolicy = childPolicy;
         return this;
@@ -23,6 +24,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStartToCloseTimeout")
     public String executionStartToCloseTimeout;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withExecutionStartToCloseTimeout(String executionStartToCloseTimeout) {
         this.executionStartToCloseTimeout = executionStartToCloseTimeout;
         return this;
@@ -31,6 +33,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -39,6 +42,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaRole")
     public String lambdaRole;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withLambdaRole(String lambdaRole) {
         this.lambdaRole = lambdaRole;
         return this;
@@ -47,6 +51,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagList")
     public String[] tagList;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withTagList(String[] tagList) {
         this.tagList = tagList;
         return this;
@@ -55,6 +60,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskList")
     public TaskList taskList;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withTaskList(TaskList taskList) {
         this.taskList = taskList;
         return this;
@@ -63,6 +69,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskPriority")
     public String taskPriority;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withTaskPriority(String taskPriority) {
         this.taskPriority = taskPriority;
         return this;
@@ -71,6 +78,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStartToCloseTimeout")
     public String taskStartToCloseTimeout;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withTaskStartToCloseTimeout(String taskStartToCloseTimeout) {
         this.taskStartToCloseTimeout = taskStartToCloseTimeout;
         return this;
@@ -79,9 +87,11 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowTypeVersion")
     public String workflowTypeVersion;
+
     public ContinueAsNewWorkflowExecutionDecisionAttributes withWorkflowTypeVersion(String workflowTypeVersion) {
         this.workflowTypeVersion = workflowTypeVersion;
         return this;
     }
     
+    public ContinueAsNewWorkflowExecutionDecisionAttributes(){}
 }

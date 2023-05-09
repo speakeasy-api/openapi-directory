@@ -15,6 +15,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Action withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Action withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, ActionParameter> parameters;
+
     public Action withParameters(java.util.Map<String, ActionParameter> parameters) {
         this.parameters = parameters;
         return this;
@@ -39,6 +42,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Action withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -47,9 +51,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public java.util.Map<String, ActionTarget> targets;
+
     public Action withTargets(java.util.Map<String, ActionTarget> targets) {
         this.targets = targets;
         return this;
     }
     
+    public Action(){}
 }

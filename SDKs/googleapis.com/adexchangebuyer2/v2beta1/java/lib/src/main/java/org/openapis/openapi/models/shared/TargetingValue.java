@@ -18,6 +18,7 @@ public class TargetingValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeSizeValue")
     public CreativeSize creativeSizeValue;
+
     public TargetingValue withCreativeSizeValue(CreativeSize creativeSizeValue) {
         this.creativeSizeValue = creativeSizeValue;
         return this;
@@ -29,6 +30,7 @@ public class TargetingValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayPartTargetingValue")
     public DayPartTargeting dayPartTargetingValue;
+
     public TargetingValue withDayPartTargetingValue(DayPartTargeting dayPartTargetingValue) {
         this.dayPartTargetingValue = dayPartTargetingValue;
         return this;
@@ -40,6 +42,7 @@ public class TargetingValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longValue")
     public String longValue;
+
     public TargetingValue withLongValue(String longValue) {
         this.longValue = longValue;
         return this;
@@ -51,9 +54,11 @@ public class TargetingValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public TargetingValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public TargetingValue(){}
 }

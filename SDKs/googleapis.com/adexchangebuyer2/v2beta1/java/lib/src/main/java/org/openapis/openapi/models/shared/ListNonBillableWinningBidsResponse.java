@@ -18,6 +18,7 @@ public class ListNonBillableWinningBidsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListNonBillableWinningBidsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListNonBillableWinningBidsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonBillableWinningBidStatusRows")
     public NonBillableWinningBidStatusRow[] nonBillableWinningBidStatusRows;
+
     public ListNonBillableWinningBidsResponse withNonBillableWinningBidStatusRows(NonBillableWinningBidStatusRow[] nonBillableWinningBidStatusRows) {
         this.nonBillableWinningBidStatusRows = nonBillableWinningBidStatusRows;
         return this;
     }
     
+    public ListNonBillableWinningBidsResponse(){}
 }

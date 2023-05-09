@@ -15,6 +15,7 @@ public class BatchGetResourceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseConfigurationItems")
     public BaseConfigurationItem[] baseConfigurationItems;
+
     public BatchGetResourceConfigResponse withBaseConfigurationItems(BaseConfigurationItem[] baseConfigurationItems) {
         this.baseConfigurationItems = baseConfigurationItems;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetResourceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unprocessedResourceKeys")
     public ResourceKey[] unprocessedResourceKeys;
+
     public BatchGetResourceConfigResponse withUnprocessedResourceKeys(ResourceKey[] unprocessedResourceKeys) {
         this.unprocessedResourceKeys = unprocessedResourceKeys;
         return this;
     }
     
+    public BatchGetResourceConfigResponse(){}
 }

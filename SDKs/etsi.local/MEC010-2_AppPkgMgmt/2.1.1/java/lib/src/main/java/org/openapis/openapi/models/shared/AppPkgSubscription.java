@@ -15,6 +15,7 @@ public class AppPkgSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appPkgFilter")
     public String[] appPkgFilter;
+
     public AppPkgSubscription withAppPkgFilter(String[] appPkgFilter) {
         this.appPkgFilter = appPkgFilter;
         return this;
@@ -25,6 +26,7 @@ public class AppPkgSubscription {
      */
     @JsonProperty("callbackUri")
     public String callbackUri;
+
     public AppPkgSubscription withCallbackUri(String callbackUri) {
         this.callbackUri = callbackUri;
         return this;
@@ -35,9 +37,14 @@ public class AppPkgSubscription {
      */
     @JsonProperty("subsctiptionType")
     public SubsctiptionTypeAppPkgEnum subsctiptionType;
+
     public AppPkgSubscription withSubsctiptionType(SubsctiptionTypeAppPkgEnum subsctiptionType) {
         this.subsctiptionType = subsctiptionType;
         return this;
     }
     
+    public AppPkgSubscription(@JsonProperty("callbackUri") String callbackUri, @JsonProperty("subsctiptionType") SubsctiptionTypeAppPkgEnum subsctiptionType) {
+        this.callbackUri = callbackUri;
+        this.subsctiptionType = subsctiptionType;
+  }
 }

@@ -15,9 +15,11 @@ public class CancellationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCode")
     public String reasonCode;
+
     public CancellationRequest withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
     }
     
+    public CancellationRequest(){}
 }

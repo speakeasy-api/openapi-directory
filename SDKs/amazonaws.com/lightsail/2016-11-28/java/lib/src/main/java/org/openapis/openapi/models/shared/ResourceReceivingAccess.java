@@ -15,6 +15,7 @@ public class ResourceReceivingAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceReceivingAccess withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class ResourceReceivingAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ResourceReceivingAccess withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceReceivingAccess(){}
 }

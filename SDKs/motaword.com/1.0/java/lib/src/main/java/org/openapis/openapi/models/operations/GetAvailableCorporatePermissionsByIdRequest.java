@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAvailableCorporatePermissionsByIdRequest {
@@ -12,9 +13,13 @@ public class GetAvailableCorporatePermissionsByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=corporateId")
     public Long corporateId;
+
     public GetAvailableCorporatePermissionsByIdRequest withCorporateId(Long corporateId) {
         this.corporateId = corporateId;
         return this;
     }
     
+    public GetAvailableCorporatePermissionsByIdRequest(@JsonProperty("corporateId") Long corporateId) {
+        this.corporateId = corporateId;
+  }
 }

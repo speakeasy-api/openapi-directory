@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConnectionResponse {
     
     public String contentType;
+
     public CreateConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConnectionOutput createConnectionOutput;
+
     public CreateConnectionResponse withCreateConnectionOutput(org.openapis.openapi.models.shared.CreateConnectionOutput createConnectionOutput) {
         this.createConnectionOutput = createConnectionOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateConnectionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateConnectionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class CreateConnectionResponse {
      */
     
     public Object resourceUnavailableException;
+
     public CreateConnectionResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class CreateConnectionResponse {
     
     
     public Integer statusCode;
+
     public CreateConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateConnectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateConnectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

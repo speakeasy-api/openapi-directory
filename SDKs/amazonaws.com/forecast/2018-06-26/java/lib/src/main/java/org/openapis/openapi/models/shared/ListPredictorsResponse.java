@@ -15,6 +15,7 @@ public class ListPredictorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPredictorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPredictorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Predictors")
     public PredictorSummary[] predictors;
+
     public ListPredictorsResponse withPredictors(PredictorSummary[] predictors) {
         this.predictors = predictors;
         return this;
     }
     
+    public ListPredictorsResponse(){}
 }

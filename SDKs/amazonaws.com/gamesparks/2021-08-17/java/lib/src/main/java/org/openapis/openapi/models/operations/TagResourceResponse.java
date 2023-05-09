@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagResourceResponse {
     
     public String contentType;
+
     public TagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagResourceResponse {
      */
     
     public Object internalServerException;
+
     public TagResourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class TagResourceResponse {
     
     
     public Integer statusCode;
+
     public TagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class TagResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TagResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class TagResourceResponse {
      */
     
     public java.util.Map<String, Object> tagResourceResult;
+
     public TagResourceResponse withTagResourceResult(java.util.Map<String, Object> tagResourceResult) {
         this.tagResourceResult = tagResourceResult;
         return this;
@@ -63,9 +70,14 @@ public class TagResourceResponse {
      */
     
     public Object validationException;
+
     public TagResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public TagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

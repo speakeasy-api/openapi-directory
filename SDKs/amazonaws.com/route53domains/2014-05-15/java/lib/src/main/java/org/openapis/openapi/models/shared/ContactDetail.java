@@ -15,6 +15,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine1")
     public String addressLine1;
+
     public ContactDetail withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -23,6 +24,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine2")
     public String addressLine2;
+
     public ContactDetail withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -31,6 +33,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public ContactDetail withCity(String city) {
         this.city = city;
         return this;
@@ -39,6 +42,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactType")
     public ContactTypeEnum contactType;
+
     public ContactDetail withContactType(ContactTypeEnum contactType) {
         this.contactType = contactType;
         return this;
@@ -47,6 +51,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryCode")
     public CountryCodeEnum countryCode;
+
     public ContactDetail withCountryCode(CountryCodeEnum countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -55,6 +60,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public ContactDetail withEmail(String email) {
         this.email = email;
         return this;
@@ -63,6 +69,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraParams")
     public ExtraParam[] extraParams;
+
     public ContactDetail withExtraParams(ExtraParam[] extraParams) {
         this.extraParams = extraParams;
         return this;
@@ -71,6 +78,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fax")
     public String fax;
+
     public ContactDetail withFax(String fax) {
         this.fax = fax;
         return this;
@@ -79,6 +87,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public ContactDetail withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -87,6 +96,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public ContactDetail withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -95,6 +105,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationName")
     public String organizationName;
+
     public ContactDetail withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
@@ -103,6 +114,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public ContactDetail withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -111,6 +123,7 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public ContactDetail withState(String state) {
         this.state = state;
         return this;
@@ -119,9 +132,11 @@ public class ContactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZipCode")
     public String zipCode;
+
     public ContactDetail withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public ContactDetail(){}
 }

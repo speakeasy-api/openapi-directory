@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScorePga
      */
     
     public String displayValue;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScorePga withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScorePga
      */
     
     public Double value;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScorePga withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScorePga(){}
 }

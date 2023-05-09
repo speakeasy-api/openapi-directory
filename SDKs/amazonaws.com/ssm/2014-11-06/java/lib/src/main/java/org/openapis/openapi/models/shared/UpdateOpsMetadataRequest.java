@@ -12,6 +12,7 @@ public class UpdateOpsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeysToDelete")
     public String[] keysToDelete;
+
     public UpdateOpsMetadataRequest withKeysToDelete(String[] keysToDelete) {
         this.keysToDelete = keysToDelete;
         return this;
@@ -20,6 +21,7 @@ public class UpdateOpsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataToUpdate")
     public java.util.Map<String, MetadataValue> metadataToUpdate;
+
     public UpdateOpsMetadataRequest withMetadataToUpdate(java.util.Map<String, MetadataValue> metadataToUpdate) {
         this.metadataToUpdate = metadataToUpdate;
         return this;
@@ -27,9 +29,13 @@ public class UpdateOpsMetadataRequest {
     
     @JsonProperty("OpsMetadataArn")
     public String opsMetadataArn;
+
     public UpdateOpsMetadataRequest withOpsMetadataArn(String opsMetadataArn) {
         this.opsMetadataArn = opsMetadataArn;
         return this;
     }
     
+    public UpdateOpsMetadataRequest(@JsonProperty("OpsMetadataArn") String opsMetadataArn) {
+        this.opsMetadataArn = opsMetadataArn;
+  }
 }

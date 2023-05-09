@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCompanyAttendancesResponse {
     
     public String contentType;
+
     public PostCompanyAttendancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostCompanyAttendancesResponse {
      */
     
     public org.openapis.openapi.models.shared.DetailedErrorResponse detailedErrorResponse;
+
     public PostCompanyAttendancesResponse withDetailedErrorResponse(org.openapis.openapi.models.shared.DetailedErrorResponse detailedErrorResponse) {
         this.detailedErrorResponse = detailedErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostCompanyAttendancesResponse {
      */
     
     public org.openapis.openapi.models.shared.NewAttendancePeriodResponse newAttendancePeriodResponse;
+
     public PostCompanyAttendancesResponse withNewAttendancePeriodResponse(org.openapis.openapi.models.shared.NewAttendancePeriodResponse newAttendancePeriodResponse) {
         this.newAttendancePeriodResponse = newAttendancePeriodResponse;
         return this;
@@ -36,6 +40,7 @@ public class PostCompanyAttendancesResponse {
     
     
     public Integer statusCode;
+
     public PostCompanyAttendancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostCompanyAttendancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCompanyAttendancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCompanyAttendancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

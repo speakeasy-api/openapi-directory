@@ -15,6 +15,7 @@ public class ClientPolicyTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public ClientTlsCertificate certificate;
+
     public ClientPolicyTls withCertificate(ClientTlsCertificate certificate) {
         this.certificate = certificate;
         return this;
@@ -23,6 +24,7 @@ public class ClientPolicyTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforce")
     public Boolean enforce;
+
     public ClientPolicyTls withEnforce(Boolean enforce) {
         this.enforce = enforce;
         return this;
@@ -31,6 +33,7 @@ public class ClientPolicyTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public Long[] ports;
+
     public ClientPolicyTls withPorts(Long[] ports) {
         this.ports = ports;
         return this;
@@ -38,9 +41,13 @@ public class ClientPolicyTls {
     
     @JsonProperty("validation")
     public TlsValidationContext validation;
+
     public ClientPolicyTls withValidation(TlsValidationContext validation) {
         this.validation = validation;
         return this;
     }
     
+    public ClientPolicyTls(@JsonProperty("validation") TlsValidationContext validation) {
+        this.validation = validation;
+  }
 }

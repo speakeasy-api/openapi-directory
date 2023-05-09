@@ -12,6 +12,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroups")
     public Long[][] assetsGroups;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withAssetsGroups(Long[][] assetsGroups) {
         this.assetsGroups = assetsGroups;
         return this;
@@ -23,6 +24,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroupsMatrix")
     public Double[][] assetsGroupsMatrix;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withAssetsGroupsMatrix(Double[][] assetsGroupsMatrix) {
         this.assetsGroupsMatrix = assetsGroupsMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaReturn")
     public Double deltaReturn;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withDeltaReturn(Double deltaReturn) {
         this.deltaReturn = deltaReturn;
         return this;
@@ -45,6 +48,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaVolatility")
     public Double deltaVolatility;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withDeltaVolatility(Double deltaVolatility) {
         this.deltaVolatility = deltaVolatility;
         return this;
@@ -56,6 +60,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsGroupsWeights")
     public Double[] maximumAssetsGroupsWeights;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withMaximumAssetsGroupsWeights(Double[] maximumAssetsGroupsWeights) {
         this.maximumAssetsGroupsWeights = maximumAssetsGroupsWeights;
         return this;
@@ -67,6 +72,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsWeights")
     public Double[] maximumAssetsWeights;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withMaximumAssetsWeights(Double[] maximumAssetsWeights) {
         this.maximumAssetsWeights = maximumAssetsWeights;
         return this;
@@ -78,6 +84,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPortfolioExposure")
     public Double maximumPortfolioExposure;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withMaximumPortfolioExposure(Double maximumPortfolioExposure) {
         this.maximumPortfolioExposure = maximumPortfolioExposure;
         return this;
@@ -89,6 +96,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumAssetsWeights")
     public Double[] minimumAssetsWeights;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withMinimumAssetsWeights(Double[] minimumAssetsWeights) {
         this.minimumAssetsWeights = minimumAssetsWeights;
         return this;
@@ -100,6 +108,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumPortfolioExposure")
     public Double minimumPortfolioExposure;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withMinimumPortfolioExposure(Double minimumPortfolioExposure) {
         this.minimumPortfolioExposure = minimumPortfolioExposure;
         return this;
@@ -111,6 +120,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolioReturn")
     public Double portfolioReturn;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withPortfolioReturn(Double portfolioReturn) {
         this.portfolioReturn = portfolioReturn;
         return this;
@@ -122,6 +132,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolioVolatility")
     public Double portfolioVolatility;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withPortfolioVolatility(Double portfolioVolatility) {
         this.portfolioVolatility = portfolioVolatility;
         return this;
@@ -133,9 +144,11 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riskTolerance")
     public Double riskTolerance;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints withRiskTolerance(Double riskTolerance) {
         this.riskTolerance = riskTolerance;
         return this;
     }
     
+    public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints(){}
 }

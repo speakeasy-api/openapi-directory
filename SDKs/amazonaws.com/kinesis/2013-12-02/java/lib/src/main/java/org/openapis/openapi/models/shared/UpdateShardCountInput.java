@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateShardCountInput {
     @JsonProperty("ScalingType")
     public ScalingTypeEnum scalingType;
+
     public UpdateShardCountInput withScalingType(ScalingTypeEnum scalingType) {
         this.scalingType = scalingType;
         return this;
@@ -19,6 +20,7 @@ public class UpdateShardCountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UpdateShardCountInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -27,6 +29,7 @@ public class UpdateShardCountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public UpdateShardCountInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -34,9 +37,14 @@ public class UpdateShardCountInput {
     
     @JsonProperty("TargetShardCount")
     public Long targetShardCount;
+
     public UpdateShardCountInput withTargetShardCount(Long targetShardCount) {
         this.targetShardCount = targetShardCount;
         return this;
     }
     
+    public UpdateShardCountInput(@JsonProperty("ScalingType") ScalingTypeEnum scalingType, @JsonProperty("TargetShardCount") Long targetShardCount) {
+        this.scalingType = scalingType;
+        this.targetShardCount = targetShardCount;
+  }
 }

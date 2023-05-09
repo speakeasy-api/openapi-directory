@@ -53,10 +53,8 @@ public class WriteCreateUpdateDelete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse() {{
+        org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,8 @@ public class WriteCreateUpdateDelete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSaveCurationTagResponse res = new org.openapis.openapi.models.operations.GetSaveCurationTagResponse() {{
+        org.openapis.openapi.models.operations.GetSaveCurationTagResponse res = new org.openapis.openapi.models.operations.GetSaveCurationTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +125,8 @@ public class WriteCreateUpdateDelete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSaveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetSaveOntologyTagResponse() {{
+        org.openapis.openapi.models.operations.GetSaveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetSaveOntologyTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,10 +161,8 @@ public class WriteCreateUpdateDelete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUpdatePathwayResponse res = new org.openapis.openapi.models.operations.GetUpdatePathwayResponse() {{
+        org.openapis.openapi.models.operations.GetUpdatePathwayResponse res = new org.openapis.openapi.models.operations.GetUpdatePathwayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,10 +197,8 @@ public class WriteCreateUpdateDelete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCreatePathwayResponse res = new org.openapis.openapi.models.operations.PostCreatePathwayResponse() {{
+        org.openapis.openapi.models.operations.PostCreatePathwayResponse res = new org.openapis.openapi.models.operations.PostCreatePathwayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

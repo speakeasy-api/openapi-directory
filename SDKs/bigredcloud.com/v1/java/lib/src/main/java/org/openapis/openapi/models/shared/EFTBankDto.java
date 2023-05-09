@@ -12,6 +12,7 @@ public class EFTBankDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public EFTBankDto withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -20,6 +21,7 @@ public class EFTBankDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public EFTBankDto withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class EFTBankDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EFTBankDto withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class EFTBankDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortCode")
     public String sortCode;
+
     public EFTBankDto withSortCode(String sortCode) {
         this.sortCode = sortCode;
         return this;
     }
     
+    public EFTBankDto(){}
 }

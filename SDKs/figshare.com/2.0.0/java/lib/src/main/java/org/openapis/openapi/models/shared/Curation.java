@@ -15,6 +15,7 @@ public class Curation {
      */
     @JsonProperty("account_id")
     public Long accountId;
+
     public Curation withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class Curation {
      */
     @JsonProperty("article_id")
     public Long articleId;
+
     public Curation withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -35,6 +37,7 @@ public class Curation {
      */
     @JsonProperty("assigned_to")
     public Long assignedTo;
+
     public Curation withAssignedTo(Long assignedTo) {
         this.assignedTo = assignedTo;
         return this;
@@ -45,6 +48,7 @@ public class Curation {
      */
     @JsonProperty("comments_count")
     public Long commentsCount;
+
     public Curation withCommentsCount(Long commentsCount) {
         this.commentsCount = commentsCount;
         return this;
@@ -55,6 +59,7 @@ public class Curation {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public Curation withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -65,6 +70,7 @@ public class Curation {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public Curation withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -75,6 +81,7 @@ public class Curation {
      */
     @JsonProperty("id")
     public Long id;
+
     public Curation withId(Long id) {
         this.id = id;
         return this;
@@ -85,6 +92,7 @@ public class Curation {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public Curation withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -95,6 +103,7 @@ public class Curation {
      */
     @JsonProperty("review_date")
     public String reviewDate;
+
     public Curation withReviewDate(String reviewDate) {
         this.reviewDate = reviewDate;
         return this;
@@ -105,6 +114,7 @@ public class Curation {
      */
     @JsonProperty("status")
     public CurationStatusEnum status;
+
     public Curation withStatus(CurationStatusEnum status) {
         this.status = status;
         return this;
@@ -115,9 +125,23 @@ public class Curation {
      */
     @JsonProperty("version")
     public Long version;
+
     public Curation withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Curation(@JsonProperty("account_id") Long accountId, @JsonProperty("article_id") Long articleId, @JsonProperty("assigned_to") Long assignedTo, @JsonProperty("comments_count") Long commentsCount, @JsonProperty("created_date") String createdDate, @JsonProperty("group_id") Long groupId, @JsonProperty("id") Long id, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("review_date") String reviewDate, @JsonProperty("status") CurationStatusEnum status, @JsonProperty("version") Long version) {
+        this.accountId = accountId;
+        this.articleId = articleId;
+        this.assignedTo = assignedTo;
+        this.commentsCount = commentsCount;
+        this.createdDate = createdDate;
+        this.groupId = groupId;
+        this.id = id;
+        this.modifiedDate = modifiedDate;
+        this.reviewDate = reviewDate;
+        this.status = status;
+        this.version = version;
+  }
 }

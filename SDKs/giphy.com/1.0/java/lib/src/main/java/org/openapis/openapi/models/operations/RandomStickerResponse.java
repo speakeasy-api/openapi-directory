@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RandomStickerResponse {
     
     public String contentType;
+
     public RandomStickerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RandomStickerResponse {
     
     
     public Integer statusCode;
+
     public RandomStickerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RandomStickerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RandomStickerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class RandomStickerResponse {
     
     
     public RandomSticker200ApplicationJSON randomSticker200ApplicationJSONObject;
+
     public RandomStickerResponse withRandomSticker200ApplicationJSONObject(RandomSticker200ApplicationJSON randomSticker200ApplicationJSONObject) {
         this.randomSticker200ApplicationJSONObject = randomSticker200ApplicationJSONObject;
         return this;
     }
     
+    public RandomStickerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byAccount")
     public java.util.Map<String, Double> byAccount;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageBuildServiceCurrentUsagePeriod withByAccount(java.util.Map<String, Double> byAccount) {
         this.byAccount = byAccount;
         return this;
@@ -29,6 +30,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byApp")
     public java.util.Map<String, java.util.Map<String, Double>> byApp;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageBuildServiceCurrentUsagePeriod withByApp(java.util.Map<String, java.util.Map<String, Double>> byApp) {
         this.byApp = byApp;
         return this;
@@ -40,6 +42,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageBuildServiceCurrentUsagePeriod withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,9 +54,11 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageBuildServiceCurrentUsagePeriod withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageBuildServiceCurrentUsagePeriod(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdatePartnerStatusInputMessage {
     
     public String accountId;
+
     public UpdatePartnerStatusInputMessage withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +17,7 @@ public class UpdatePartnerStatusInputMessage {
     
     
     public String clusterIdentifier;
+
     public UpdatePartnerStatusInputMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class UpdatePartnerStatusInputMessage {
     
     
     public String databaseName;
+
     public UpdatePartnerStatusInputMessage withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -30,6 +33,7 @@ public class UpdatePartnerStatusInputMessage {
     
     
     public String partnerName;
+
     public UpdatePartnerStatusInputMessage withPartnerName(String partnerName) {
         this.partnerName = partnerName;
         return this;
@@ -37,6 +41,7 @@ public class UpdatePartnerStatusInputMessage {
     
     
     public PartnerIntegrationStatusEnum status;
+
     public UpdatePartnerStatusInputMessage withStatus(PartnerIntegrationStatusEnum status) {
         this.status = status;
         return this;
@@ -44,9 +49,17 @@ public class UpdatePartnerStatusInputMessage {
     
     
     public String statusMessage;
+
     public UpdatePartnerStatusInputMessage withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public UpdatePartnerStatusInputMessage(@JsonProperty("AccountId") String accountId, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartnerName") String partnerName, @JsonProperty("Status") PartnerIntegrationStatusEnum status) {
+        this.accountId = accountId;
+        this.clusterIdentifier = clusterIdentifier;
+        this.databaseName = databaseName;
+        this.partnerName = partnerName;
+        this.status = status;
+  }
 }

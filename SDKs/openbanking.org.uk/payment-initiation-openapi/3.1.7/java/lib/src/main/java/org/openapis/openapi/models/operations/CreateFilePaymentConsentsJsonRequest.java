@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFilePaymentConsentsJsonRequest {
@@ -12,6 +13,7 @@ public class CreateFilePaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CreateFilePaymentConsentsJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class CreateFilePaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OBWriteFileConsent3 obWriteFileConsent3;
+
     public CreateFilePaymentConsentsJsonRequest withOBWriteFileConsent3(org.openapis.openapi.models.shared.OBWriteFileConsent3 obWriteFileConsent3) {
         this.obWriteFileConsent3 = obWriteFileConsent3;
         return this;
@@ -32,6 +35,7 @@ public class CreateFilePaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public CreateFilePaymentConsentsJsonRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class CreateFilePaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public CreateFilePaymentConsentsJsonRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class CreateFilePaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public CreateFilePaymentConsentsJsonRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,6 +70,7 @@ public class CreateFilePaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateFilePaymentConsentsJsonRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
@@ -76,6 +83,7 @@ public class CreateFilePaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
     public String xIdempotencyKey;
+
     public CreateFilePaymentConsentsJsonRequest withXIdempotencyKey(String xIdempotencyKey) {
         this.xIdempotencyKey = xIdempotencyKey;
         return this;
@@ -86,9 +94,16 @@ public class CreateFilePaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
     public String xJwsSignature;
+
     public CreateFilePaymentConsentsJsonRequest withXJwsSignature(String xJwsSignature) {
         this.xJwsSignature = xJwsSignature;
         return this;
     }
     
+    public CreateFilePaymentConsentsJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("OBWriteFileConsent3") org.openapis.openapi.models.shared.OBWriteFileConsent3 obWriteFileConsent3, @JsonProperty("x-idempotency-key") String xIdempotencyKey, @JsonProperty("x-jws-signature") String xJwsSignature) {
+        this.authorization = authorization;
+        this.obWriteFileConsent3 = obWriteFileConsent3;
+        this.xIdempotencyKey = xIdempotencyKey;
+        this.xJwsSignature = xJwsSignature;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashedAccountId")
     public String hashedAccountId;
+
     public GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership withHashedAccountId(String hashedAccountId) {
         this.hashedAccountId = hashedAccountId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership(){}
 }

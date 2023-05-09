@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public GoogleSecuritySafebrowsingV4ClientInfo client;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest withClient(GoogleSecuritySafebrowsingV4ClientInfo client) {
         this.client = client;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listUpdateRequests")
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest[] listUpdateRequests;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest withListUpdateRequests(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest[] listUpdateRequests) {
         this.listUpdateRequests = listUpdateRequests;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse {
     
     public String contentType;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResp
     
     
     public java.util.Map<String, String[]> headers;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResp
     
     
     public Integer statusCode;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResp
      */
     
     public org.openapis.openapi.models.shared.Authorization authorization;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse withAuthorization(org.openapis.openapi.models.shared.Authorization authorization) {
         this.authorization = authorization;
         return this;
@@ -50,9 +56,14 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResp
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

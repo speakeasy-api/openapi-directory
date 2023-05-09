@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateIpGroupsRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DisassociateIpGroupsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -16,9 +17,14 @@ public class DisassociateIpGroupsRequest {
     
     @JsonProperty("GroupIds")
     public String[] groupIds;
+
     public DisassociateIpGroupsRequest withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
     }
     
+    public DisassociateIpGroupsRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("GroupIds") String[] groupIds) {
+        this.directoryId = directoryId;
+        this.groupIds = groupIds;
+  }
 }

@@ -20,6 +20,7 @@ public class Pricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capCostType")
     public PricingCapCostTypeEnum capCostType;
+
     public Pricing withCapCostType(PricingCapCostTypeEnum capCostType) {
         this.capCostType = capCostType;
         return this;
@@ -29,6 +30,7 @@ public class Pricing {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public Pricing withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -40,6 +42,7 @@ public class Pricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flights")
     public Flight[] flights;
+
     public Pricing withFlights(Flight[] flights) {
         this.flights = flights;
         return this;
@@ -51,6 +54,7 @@ public class Pricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
     public PricingGroupTypeEnum groupType;
+
     public Pricing withGroupType(PricingGroupTypeEnum groupType) {
         this.groupType = groupType;
         return this;
@@ -62,6 +66,7 @@ public class Pricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingType")
     public PricingPricingTypeEnum pricingType;
+
     public Pricing withPricingType(PricingPricingTypeEnum pricingType) {
         this.pricingType = pricingType;
         return this;
@@ -71,9 +76,11 @@ public class Pricing {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public Pricing withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public Pricing(){}
 }

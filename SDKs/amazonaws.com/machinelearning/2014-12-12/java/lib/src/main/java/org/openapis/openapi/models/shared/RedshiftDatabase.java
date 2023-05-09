@@ -15,6 +15,7 @@ public class RedshiftDatabase {
      */
     @JsonProperty("ClusterIdentifier")
     public String clusterIdentifier;
+
     public RedshiftDatabase withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -25,9 +26,14 @@ public class RedshiftDatabase {
      */
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public RedshiftDatabase withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     
+    public RedshiftDatabase(@JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("DatabaseName") String databaseName) {
+        this.clusterIdentifier = clusterIdentifier;
+        this.databaseName = databaseName;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeFileSystemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemIds")
     public String[] fileSystemIds;
+
     public DescribeFileSystemsRequest withFileSystemIds(String[] fileSystemIds) {
         this.fileSystemIds = fileSystemIds;
         return this;
@@ -23,6 +24,7 @@ public class DescribeFileSystemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeFileSystemsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -31,9 +33,11 @@ public class DescribeFileSystemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFileSystemsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFileSystemsRequest(){}
 }

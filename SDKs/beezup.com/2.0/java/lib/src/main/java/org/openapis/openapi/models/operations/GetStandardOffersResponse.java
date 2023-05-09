@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStandardOffersResponse {
@@ -12,6 +13,7 @@ public class GetStandardOffersResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetStandardOffersResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetStandardOffersResponse {
     
     
     public String contentType;
+
     public GetStandardOffersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetStandardOffersResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetStandardOffersResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetStandardOffersResponse {
     
     
     public Integer statusCode;
+
     public GetStandardOffersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetStandardOffersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStandardOffersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetStandardOffersResponse {
      */
     
     public org.openapis.openapi.models.shared.StandardOffers standardOffers;
+
     public GetStandardOffersResponse withStandardOffers(org.openapis.openapi.models.shared.StandardOffers standardOffers) {
         this.standardOffers = standardOffers;
         return this;
     }
     
+    public GetStandardOffersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

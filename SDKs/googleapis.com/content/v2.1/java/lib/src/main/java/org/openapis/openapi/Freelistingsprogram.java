@@ -59,11 +59,9 @@ public class Freelistingsprogram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentFreelistingsprogramGetResponse res = new org.openapis.openapi.models.operations.ContentFreelistingsprogramGetResponse() {{
+        org.openapis.openapi.models.operations.ContentFreelistingsprogramGetResponse res = new org.openapis.openapi.models.operations.ContentFreelistingsprogramGetResponse(contentType, httpRes.statusCode()) {{
             freeListingsProgramStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Freelistingsprogram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentFreelistingsprogramRequestreviewResponse res = new org.openapis.openapi.models.operations.ContentFreelistingsprogramRequestreviewResponse() {{
+        org.openapis.openapi.models.operations.ContentFreelistingsprogramRequestreviewResponse res = new org.openapis.openapi.models.operations.ContentFreelistingsprogramRequestreviewResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

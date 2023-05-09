@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegistryDeleteApiDeploymentResponse {
     
     public String contentType;
+
     public RegistryDeleteApiDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegistryDeleteApiDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Status status;
+
     public RegistryDeleteApiDeploymentResponse withStatus(org.openapis.openapi.models.shared.Status status) {
         this.status = status;
         return this;
@@ -26,6 +29,7 @@ public class RegistryDeleteApiDeploymentResponse {
     
     
     public Integer statusCode;
+
     public RegistryDeleteApiDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RegistryDeleteApiDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegistryDeleteApiDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegistryDeleteApiDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

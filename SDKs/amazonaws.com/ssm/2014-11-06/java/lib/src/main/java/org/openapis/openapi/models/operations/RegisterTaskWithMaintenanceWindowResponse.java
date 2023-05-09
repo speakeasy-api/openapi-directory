@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterTaskWithMaintenanceWindowResponse {
     
     public String contentType;
+
     public RegisterTaskWithMaintenanceWindowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterTaskWithMaintenanceWindowResponse {
      */
     
     public Object doesNotExistException;
+
     public RegisterTaskWithMaintenanceWindowResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterTaskWithMaintenanceWindowResponse {
      */
     
     public Object featureNotAvailableException;
+
     public RegisterTaskWithMaintenanceWindowResponse withFeatureNotAvailableException(Object featureNotAvailableException) {
         this.featureNotAvailableException = featureNotAvailableException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterTaskWithMaintenanceWindowResponse {
      */
     
     public Object idempotentParameterMismatch;
+
     public RegisterTaskWithMaintenanceWindowResponse withIdempotentParameterMismatch(Object idempotentParameterMismatch) {
         this.idempotentParameterMismatch = idempotentParameterMismatch;
         return this;
@@ -49,6 +54,7 @@ public class RegisterTaskWithMaintenanceWindowResponse {
      */
     
     public Object internalServerError;
+
     public RegisterTaskWithMaintenanceWindowResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class RegisterTaskWithMaintenanceWindowResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterTaskWithMaintenanceWindowResult registerTaskWithMaintenanceWindowResult;
+
     public RegisterTaskWithMaintenanceWindowResponse withRegisterTaskWithMaintenanceWindowResult(org.openapis.openapi.models.shared.RegisterTaskWithMaintenanceWindowResult registerTaskWithMaintenanceWindowResult) {
         this.registerTaskWithMaintenanceWindowResult = registerTaskWithMaintenanceWindowResult;
         return this;
@@ -66,6 +73,7 @@ public class RegisterTaskWithMaintenanceWindowResponse {
     
     
     public Integer statusCode;
+
     public RegisterTaskWithMaintenanceWindowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RegisterTaskWithMaintenanceWindowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterTaskWithMaintenanceWindowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class RegisterTaskWithMaintenanceWindowResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public RegisterTaskWithMaintenanceWindowResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
     }
     
+    public RegisterTaskWithMaintenanceWindowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

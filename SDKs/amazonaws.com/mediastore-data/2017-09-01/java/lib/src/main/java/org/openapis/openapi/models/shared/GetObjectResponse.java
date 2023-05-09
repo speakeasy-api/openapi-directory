@@ -15,6 +15,7 @@ public class GetObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public GetObjectResponse withBody(String body) {
         this.body = body;
         return this;
@@ -23,9 +24,11 @@ public class GetObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public GetObjectResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public GetObjectResponse(){}
 }

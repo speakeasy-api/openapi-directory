@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToggleCallBroadcastRecipientsStatusRequest {
@@ -12,6 +13,7 @@ public class ToggleCallBroadcastRecipientsStatusRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Recipient[] requestBody;
+
     public ToggleCallBroadcastRecipientsStatusRequest withRequestBody(org.openapis.openapi.models.shared.Recipient[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class ToggleCallBroadcastRecipientsStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable")
     public Boolean enable;
+
     public ToggleCallBroadcastRecipientsStatusRequest withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -32,9 +35,13 @@ public class ToggleCallBroadcastRecipientsStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public ToggleCallBroadcastRecipientsStatusRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public ToggleCallBroadcastRecipientsStatusRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

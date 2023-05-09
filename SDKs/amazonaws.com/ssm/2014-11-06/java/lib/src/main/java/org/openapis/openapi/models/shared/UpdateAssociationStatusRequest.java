@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAssociationStatusRequest {
     @JsonProperty("AssociationStatus")
     public AssociationStatus associationStatus;
+
     public UpdateAssociationStatusRequest withAssociationStatus(AssociationStatus associationStatus) {
         this.associationStatus = associationStatus;
         return this;
@@ -16,6 +17,7 @@ public class UpdateAssociationStatusRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public UpdateAssociationStatusRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -23,9 +25,15 @@ public class UpdateAssociationStatusRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateAssociationStatusRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateAssociationStatusRequest(@JsonProperty("AssociationStatus") AssociationStatus associationStatus, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Name") String name) {
+        this.associationStatus = associationStatus;
+        this.instanceId = instanceId;
+        this.name = name;
+  }
 }

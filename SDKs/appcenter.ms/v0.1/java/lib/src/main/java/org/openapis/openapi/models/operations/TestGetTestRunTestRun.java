@@ -18,6 +18,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersion")
     public String appVersion;
+
     public TestGetTestRunTestRun withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -29,6 +30,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public TestGetTestRunTestRun withDate(String date) {
         this.date = date;
         return this;
@@ -40,6 +42,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TestGetTestRunTestRun withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestGetTestRunTestRun withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public TestGetTestRunTestRun withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -73,6 +78,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultStatus")
     public String resultStatus;
+
     public TestGetTestRunTestRun withResultStatus(String resultStatus) {
         this.resultStatus = resultStatus;
         return this;
@@ -84,6 +90,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runStatus")
     public String runStatus;
+
     public TestGetTestRunTestRun withRunStatus(String runStatus) {
         this.runStatus = runStatus;
         return this;
@@ -95,6 +102,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public TestGetTestRunTestRun withState(String state) {
         this.state = state;
         return this;
@@ -106,6 +114,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public TestGetTestRunTestRunTestRunStatistics stats;
+
     public TestGetTestRunTestRun withStats(TestGetTestRunTestRunTestRunStatistics stats) {
         this.stats = stats;
         return this;
@@ -117,6 +126,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TestGetTestRunTestRun withStatus(String status) {
         this.status = status;
         return this;
@@ -128,6 +138,7 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSeries")
     public String testSeries;
+
     public TestGetTestRunTestRun withTestSeries(String testSeries) {
         this.testSeries = testSeries;
         return this;
@@ -139,9 +150,11 @@ public class TestGetTestRunTestRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testType")
     public String testType;
+
     public TestGetTestRunTestRun withTestType(String testType) {
         this.testType = testType;
         return this;
     }
     
+    public TestGetTestRunTestRun(){}
 }

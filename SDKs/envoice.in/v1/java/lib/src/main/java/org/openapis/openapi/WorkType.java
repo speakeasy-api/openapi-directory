@@ -60,15 +60,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiAllResponse res = new org.openapis.openapi.models.operations.WorkTypeApiAllResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiAllResponse res = new org.openapis.openapi.models.operations.WorkTypeApiAllResponse(contentType, httpRes.statusCode()) {{
             workTypeDetailsApiModels = null;
             workTypeDetailsApiModels = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,15 +130,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiDeleteFormResponse res = new org.openapis.openapi.models.operations.WorkTypeApiDeleteFormResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiDeleteFormResponse res = new org.openapis.openapi.models.operations.WorkTypeApiDeleteFormResponse(contentType, httpRes.statusCode()) {{
             workTypeApiDeleteForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             workTypeApiDeleteForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,15 +200,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.WorkTypeApiDeleteJsonResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.WorkTypeApiDeleteJsonResponse(contentType, httpRes.statusCode()) {{
             workTypeApiDeleteJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             workTypeApiDeleteJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,15 +270,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiDeleteRawResponse res = new org.openapis.openapi.models.operations.WorkTypeApiDeleteRawResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiDeleteRawResponse res = new org.openapis.openapi.models.operations.WorkTypeApiDeleteRawResponse(contentType, httpRes.statusCode()) {{
             workTypeApiDeleteRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             workTypeApiDeleteRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,15 +341,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiDetailsResponse res = new org.openapis.openapi.models.operations.WorkTypeApiDetailsResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiDetailsResponse res = new org.openapis.openapi.models.operations.WorkTypeApiDetailsResponse(contentType, httpRes.statusCode()) {{
             workTypeDetailsApiModel = null;
             workTypeDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -421,15 +411,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiNewFormResponse res = new org.openapis.openapi.models.operations.WorkTypeApiNewFormResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiNewFormResponse res = new org.openapis.openapi.models.operations.WorkTypeApiNewFormResponse(contentType, httpRes.statusCode()) {{
             workTypeApiNewForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             workTypeApiNewForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -493,15 +481,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiNewJsonResponse res = new org.openapis.openapi.models.operations.WorkTypeApiNewJsonResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiNewJsonResponse res = new org.openapis.openapi.models.operations.WorkTypeApiNewJsonResponse(contentType, httpRes.statusCode()) {{
             workTypeApiNewJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             workTypeApiNewJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -565,15 +551,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiNewRawResponse res = new org.openapis.openapi.models.operations.WorkTypeApiNewRawResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiNewRawResponse res = new org.openapis.openapi.models.operations.WorkTypeApiNewRawResponse(contentType, httpRes.statusCode()) {{
             workTypeApiNewRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             workTypeApiNewRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -638,15 +622,13 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiSearchResponse res = new org.openapis.openapi.models.operations.WorkTypeApiSearchResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiSearchResponse res = new org.openapis.openapi.models.operations.WorkTypeApiSearchResponse(contentType, httpRes.statusCode()) {{
             workTypeDetailsApiModels = null;
             workTypeDetailsApiModels = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -710,10 +692,8 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiUpdateFormResponse res = new org.openapis.openapi.models.operations.WorkTypeApiUpdateFormResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiUpdateFormResponse res = new org.openapis.openapi.models.operations.WorkTypeApiUpdateFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -755,10 +735,8 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.WorkTypeApiUpdateJsonResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.WorkTypeApiUpdateJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -800,10 +778,8 @@ public class WorkType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkTypeApiUpdateRawResponse res = new org.openapis.openapi.models.operations.WorkTypeApiUpdateRawResponse() {{
+        org.openapis.openapi.models.operations.WorkTypeApiUpdateRawResponse res = new org.openapis.openapi.models.operations.WorkTypeApiUpdateRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

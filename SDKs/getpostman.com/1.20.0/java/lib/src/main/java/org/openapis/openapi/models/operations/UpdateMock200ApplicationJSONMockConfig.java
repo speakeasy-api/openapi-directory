@@ -12,6 +12,7 @@ public class UpdateMock200ApplicationJSONMockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public Object[] headers;
+
     public UpdateMock200ApplicationJSONMockConfig withHeaders(Object[] headers) {
         this.headers = headers;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMock200ApplicationJSONMockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchBody")
     public Boolean matchBody;
+
     public UpdateMock200ApplicationJSONMockConfig withMatchBody(Boolean matchBody) {
         this.matchBody = matchBody;
         return this;
@@ -28,6 +30,7 @@ public class UpdateMock200ApplicationJSONMockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchQueryParams")
     public Boolean matchQueryParams;
+
     public UpdateMock200ApplicationJSONMockConfig withMatchQueryParams(Boolean matchQueryParams) {
         this.matchQueryParams = matchQueryParams;
         return this;
@@ -36,9 +39,11 @@ public class UpdateMock200ApplicationJSONMockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchWildcards")
     public Boolean matchWildcards;
+
     public UpdateMock200ApplicationJSONMockConfig withMatchWildcards(Boolean matchWildcards) {
         this.matchWildcards = matchWildcards;
         return this;
     }
     
+    public UpdateMock200ApplicationJSONMockConfig(){}
 }

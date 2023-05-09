@@ -18,6 +18,7 @@ public class SharedconnectionConnections200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialType")
     public SharedconnectionConnections200ApplicationJSONCredentialTypeEnum credentialType;
+
     public SharedconnectionConnections200ApplicationJSON withCredentialType(SharedconnectionConnections200ApplicationJSONCredentialTypeEnum credentialType) {
         this.credentialType = credentialType;
         return this;
@@ -28,6 +29,7 @@ public class SharedconnectionConnections200ApplicationJSON {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public SharedconnectionConnections200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,9 +40,14 @@ public class SharedconnectionConnections200ApplicationJSON {
      */
     @JsonProperty("serviceType")
     public SharedconnectionConnections200ApplicationJSONServiceTypeEnum serviceType;
+
     public SharedconnectionConnections200ApplicationJSON withServiceType(SharedconnectionConnections200ApplicationJSONServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public SharedconnectionConnections200ApplicationJSON(@JsonProperty("displayName") String displayName, @JsonProperty("serviceType") SharedconnectionConnections200ApplicationJSONServiceTypeEnum serviceType) {
+        this.displayName = displayName;
+        this.serviceType = serviceType;
+  }
 }

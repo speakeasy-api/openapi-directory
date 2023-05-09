@@ -12,6 +12,7 @@ public class UpdateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionEnum action;
+
     public UpdateFirewallRuleRequest withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +21,7 @@ public class UpdateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideDnsType")
     public BlockOverrideDnsTypeEnum blockOverrideDnsType;
+
     public UpdateFirewallRuleRequest withBlockOverrideDnsType(BlockOverrideDnsTypeEnum blockOverrideDnsType) {
         this.blockOverrideDnsType = blockOverrideDnsType;
         return this;
@@ -28,6 +30,7 @@ public class UpdateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideDomain")
     public String blockOverrideDomain;
+
     public UpdateFirewallRuleRequest withBlockOverrideDomain(String blockOverrideDomain) {
         this.blockOverrideDomain = blockOverrideDomain;
         return this;
@@ -36,6 +39,7 @@ public class UpdateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideTtl")
     public Long blockOverrideTtl;
+
     public UpdateFirewallRuleRequest withBlockOverrideTtl(Long blockOverrideTtl) {
         this.blockOverrideTtl = blockOverrideTtl;
         return this;
@@ -44,6 +48,7 @@ public class UpdateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockResponse")
     public BlockResponseEnum blockResponse;
+
     public UpdateFirewallRuleRequest withBlockResponse(BlockResponseEnum blockResponse) {
         this.blockResponse = blockResponse;
         return this;
@@ -51,6 +56,7 @@ public class UpdateFirewallRuleRequest {
     
     @JsonProperty("FirewallDomainListId")
     public String firewallDomainListId;
+
     public UpdateFirewallRuleRequest withFirewallDomainListId(String firewallDomainListId) {
         this.firewallDomainListId = firewallDomainListId;
         return this;
@@ -58,6 +64,7 @@ public class UpdateFirewallRuleRequest {
     
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public UpdateFirewallRuleRequest withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
@@ -66,6 +73,7 @@ public class UpdateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateFirewallRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -74,9 +82,14 @@ public class UpdateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public UpdateFirewallRuleRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public UpdateFirewallRuleRequest(@JsonProperty("FirewallDomainListId") String firewallDomainListId, @JsonProperty("FirewallRuleGroupId") String firewallRuleGroupId) {
+        this.firewallDomainListId = firewallDomainListId;
+        this.firewallRuleGroupId = firewallRuleGroupId;
+  }
 }

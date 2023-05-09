@@ -15,9 +15,11 @@ public class ProtectedQueryStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDurationInMillis")
     public Long totalDurationInMillis;
+
     public ProtectedQueryStatistics withTotalDurationInMillis(Long totalDurationInMillis) {
         this.totalDurationInMillis = totalDurationInMillis;
         return this;
     }
     
+    public ProtectedQueryStatistics(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteKeyPairRequest {
     
     public Boolean dryRun;
+
     public DeleteKeyPairRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DeleteKeyPairRequest {
     
     
     public String keyName;
+
     public DeleteKeyPairRequest withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -23,9 +25,11 @@ public class DeleteKeyPairRequest {
     
     
     public String keyPairId;
+
     public DeleteKeyPairRequest withKeyPairId(String keyPairId) {
         this.keyPairId = keyPairId;
         return this;
     }
     
+    public DeleteKeyPairRequest(){}
 }

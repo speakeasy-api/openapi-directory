@@ -18,6 +18,7 @@ public class SyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentUserId")
     public String agentUserId;
+
     public SyncRequest withAgentUserId(String agentUserId) {
         this.agentUserId = agentUserId;
         return this;
@@ -29,9 +30,11 @@ public class SyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public SyncRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public SyncRequest(){}
 }

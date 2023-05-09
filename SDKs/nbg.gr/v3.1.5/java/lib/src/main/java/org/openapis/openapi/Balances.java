@@ -60,14 +60,12 @@ public class Balances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdBalancesResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdBalancesResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdBalancesResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdBalancesResponse(contentType, httpRes.statusCode()) {{
             obReadBalance1 = null;
             obReadBalance1 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

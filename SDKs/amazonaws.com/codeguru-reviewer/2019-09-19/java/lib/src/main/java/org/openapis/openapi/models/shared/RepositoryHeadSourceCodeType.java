@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositoryHeadSourceCodeType {
     @JsonProperty("BranchName")
     public String branchName;
+
     public RepositoryHeadSourceCodeType withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
     }
     
+    public RepositoryHeadSourceCodeType(@JsonProperty("BranchName") String branchName) {
+        this.branchName = branchName;
+  }
 }

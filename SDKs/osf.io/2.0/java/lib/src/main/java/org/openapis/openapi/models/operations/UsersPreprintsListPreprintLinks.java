@@ -15,6 +15,7 @@ public class UsersPreprintsListPreprintLinks {
      */
     
     public String doi;
+
     public UsersPreprintsListPreprintLinks withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -25,6 +26,7 @@ public class UsersPreprintsListPreprintLinks {
      */
     
     public String html;
+
     public UsersPreprintsListPreprintLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -35,6 +37,7 @@ public class UsersPreprintsListPreprintLinks {
      */
     
     public String preprintDoi;
+
     public UsersPreprintsListPreprintLinks withPreprintDoi(String preprintDoi) {
         this.preprintDoi = preprintDoi;
         return this;
@@ -45,9 +48,11 @@ public class UsersPreprintsListPreprintLinks {
      */
     
     public String self;
+
     public UsersPreprintsListPreprintLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public UsersPreprintsListPreprintLinks(){}
 }

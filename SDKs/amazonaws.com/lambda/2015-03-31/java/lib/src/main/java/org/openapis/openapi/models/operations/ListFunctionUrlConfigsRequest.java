@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFunctionUrlConfigsRequest {
@@ -12,6 +13,7 @@ public class ListFunctionUrlConfigsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
     public String functionName;
+
     public ListFunctionUrlConfigsRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -22,6 +24,7 @@ public class ListFunctionUrlConfigsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public ListFunctionUrlConfigsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -32,6 +35,7 @@ public class ListFunctionUrlConfigsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public ListFunctionUrlConfigsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -39,6 +43,7 @@ public class ListFunctionUrlConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListFunctionUrlConfigsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class ListFunctionUrlConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListFunctionUrlConfigsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class ListFunctionUrlConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListFunctionUrlConfigsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class ListFunctionUrlConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListFunctionUrlConfigsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class ListFunctionUrlConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListFunctionUrlConfigsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class ListFunctionUrlConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListFunctionUrlConfigsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,13 @@ public class ListFunctionUrlConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListFunctionUrlConfigsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListFunctionUrlConfigsRequest(@JsonProperty("FunctionName") String functionName) {
+        this.functionName = functionName;
+  }
 }

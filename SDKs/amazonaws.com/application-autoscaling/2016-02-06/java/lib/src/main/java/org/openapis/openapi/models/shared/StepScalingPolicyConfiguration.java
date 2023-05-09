@@ -15,6 +15,7 @@ public class StepScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdjustmentType")
     public AdjustmentTypeEnum adjustmentType;
+
     public StepScalingPolicyConfiguration withAdjustmentType(AdjustmentTypeEnum adjustmentType) {
         this.adjustmentType = adjustmentType;
         return this;
@@ -23,6 +24,7 @@ public class StepScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cooldown")
     public Long cooldown;
+
     public StepScalingPolicyConfiguration withCooldown(Long cooldown) {
         this.cooldown = cooldown;
         return this;
@@ -31,6 +33,7 @@ public class StepScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricAggregationType")
     public MetricAggregationTypeEnum metricAggregationType;
+
     public StepScalingPolicyConfiguration withMetricAggregationType(MetricAggregationTypeEnum metricAggregationType) {
         this.metricAggregationType = metricAggregationType;
         return this;
@@ -39,6 +42,7 @@ public class StepScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinAdjustmentMagnitude")
     public Long minAdjustmentMagnitude;
+
     public StepScalingPolicyConfiguration withMinAdjustmentMagnitude(Long minAdjustmentMagnitude) {
         this.minAdjustmentMagnitude = minAdjustmentMagnitude;
         return this;
@@ -47,9 +51,11 @@ public class StepScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepAdjustments")
     public StepAdjustment[] stepAdjustments;
+
     public StepScalingPolicyConfiguration withStepAdjustments(StepAdjustment[] stepAdjustments) {
         this.stepAdjustments = stepAdjustments;
         return this;
     }
     
+    public StepScalingPolicyConfiguration(){}
 }

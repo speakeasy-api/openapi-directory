@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTCreateDBSnapshotRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTCreateDBSnapshotActionEnum action;
+
     public POSTCreateDBSnapshotRequest withAction(POSTCreateDBSnapshotActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTCreateDBSnapshotRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTCreateDBSnapshotVersionEnum version;
+
     public POSTCreateDBSnapshotRequest withVersion(POSTCreateDBSnapshotVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTCreateDBSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTCreateDBSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTCreateDBSnapshotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTCreateDBSnapshotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTCreateDBSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTCreateDBSnapshotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTCreateDBSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTCreateDBSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTCreateDBSnapshotRequest(@JsonProperty("Action") POSTCreateDBSnapshotActionEnum action, @JsonProperty("Version") POSTCreateDBSnapshotVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

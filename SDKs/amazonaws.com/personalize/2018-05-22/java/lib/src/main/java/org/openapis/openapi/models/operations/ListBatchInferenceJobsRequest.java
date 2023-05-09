@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBatchInferenceJobsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListBatchInferenceJobsRequest listBatchInferenceJobsRequest;
+
     public ListBatchInferenceJobsRequest withListBatchInferenceJobsRequest(org.openapis.openapi.models.shared.ListBatchInferenceJobsRequest listBatchInferenceJobsRequest) {
         this.listBatchInferenceJobsRequest = listBatchInferenceJobsRequest;
         return this;
@@ -16,6 +18,7 @@ public class ListBatchInferenceJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListBatchInferenceJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListBatchInferenceJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListBatchInferenceJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListBatchInferenceJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListBatchInferenceJobsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListBatchInferenceJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListBatchInferenceJobsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListBatchInferenceJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListBatchInferenceJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListBatchInferenceJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListBatchInferenceJobsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListBatchInferenceJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListBatchInferenceJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class ListBatchInferenceJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListBatchInferenceJobsXAmzTargetEnum xAmzTarget;
+
     public ListBatchInferenceJobsRequest withXAmzTarget(ListBatchInferenceJobsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class ListBatchInferenceJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListBatchInferenceJobsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -85,9 +96,14 @@ public class ListBatchInferenceJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListBatchInferenceJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBatchInferenceJobsRequest(@JsonProperty("ListBatchInferenceJobsRequest") org.openapis.openapi.models.shared.ListBatchInferenceJobsRequest listBatchInferenceJobsRequest, @JsonProperty("X-Amz-Target") ListBatchInferenceJobsXAmzTargetEnum xAmzTarget) {
+        this.listBatchInferenceJobsRequest = listBatchInferenceJobsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

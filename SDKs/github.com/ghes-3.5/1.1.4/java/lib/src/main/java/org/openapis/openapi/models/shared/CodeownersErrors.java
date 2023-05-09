@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeownersErrors {
     @JsonProperty("errors")
     public CodeownersErrorsErrors[] errors;
+
     public CodeownersErrors withErrors(CodeownersErrorsErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CodeownersErrors(@JsonProperty("errors") CodeownersErrorsErrors[] errors) {
+        this.errors = errors;
+  }
 }

@@ -15,6 +15,7 @@ public class EmailConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public EmailContent content;
+
     public EmailConfiguration withContent(EmailContent content) {
         this.content = content;
         return this;
@@ -22,6 +23,7 @@ public class EmailConfiguration {
     
     @JsonProperty("from")
     public String from;
+
     public EmailConfiguration withFrom(String from) {
         this.from = from;
         return this;
@@ -29,9 +31,14 @@ public class EmailConfiguration {
     
     @JsonProperty("recipients")
     public EmailRecipients recipients;
+
     public EmailConfiguration withRecipients(EmailRecipients recipients) {
         this.recipients = recipients;
         return this;
     }
     
+    public EmailConfiguration(@JsonProperty("from") String from, @JsonProperty("recipients") EmailRecipients recipients) {
+        this.from = from;
+        this.recipients = recipients;
+  }
 }

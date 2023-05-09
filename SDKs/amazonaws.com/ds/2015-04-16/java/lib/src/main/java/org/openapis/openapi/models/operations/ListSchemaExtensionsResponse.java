@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSchemaExtensionsResponse {
@@ -12,6 +13,7 @@ public class ListSchemaExtensionsResponse {
      */
     
     public Object clientException;
+
     public ListSchemaExtensionsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListSchemaExtensionsResponse {
     
     
     public String contentType;
+
     public ListSchemaExtensionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSchemaExtensionsResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public ListSchemaExtensionsResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class ListSchemaExtensionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListSchemaExtensionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListSchemaExtensionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSchemaExtensionsResult listSchemaExtensionsResult;
+
     public ListSchemaExtensionsResponse withListSchemaExtensionsResult(org.openapis.openapi.models.shared.ListSchemaExtensionsResult listSchemaExtensionsResult) {
         this.listSchemaExtensionsResult = listSchemaExtensionsResult;
         return this;
@@ -59,6 +65,7 @@ public class ListSchemaExtensionsResponse {
      */
     
     public Object serviceException;
+
     public ListSchemaExtensionsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class ListSchemaExtensionsResponse {
     
     
     public Integer statusCode;
+
     public ListSchemaExtensionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListSchemaExtensionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSchemaExtensionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSchemaExtensionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

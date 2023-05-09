@@ -12,6 +12,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Currency withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public Currency withId(Integer id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Currency withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Symbol")
     public String symbol;
+
     public Currency withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
@@ -44,9 +48,11 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public Currency withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Currency(){}
 }

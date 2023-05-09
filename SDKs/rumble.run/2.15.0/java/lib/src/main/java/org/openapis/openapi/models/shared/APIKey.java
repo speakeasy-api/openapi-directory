@@ -15,6 +15,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public APIKey withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public APIKey withComment(String comment) {
         this.comment = comment;
         return this;
@@ -31,6 +33,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counter")
     public Long counter;
+
     public APIKey withCounter(Long counter) {
         this.counter = counter;
         return this;
@@ -39,6 +42,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public APIKey withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +51,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public APIKey withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -54,6 +59,7 @@ public class APIKey {
     
     @JsonProperty("id")
     public String id;
+
     public APIKey withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +68,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inactive")
     public Boolean inactive;
+
     public APIKey withInactive(Boolean inactive) {
         this.inactive = inactive;
         return this;
@@ -70,6 +77,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_used_at")
     public Long lastUsedAt;
+
     public APIKey withLastUsedAt(Long lastUsedAt) {
         this.lastUsedAt = lastUsedAt;
         return this;
@@ -78,6 +86,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_used_ip")
     public String lastUsedIp;
+
     public APIKey withLastUsedIp(String lastUsedIp) {
         this.lastUsedIp = lastUsedIp;
         return this;
@@ -86,6 +95,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_used_ua")
     public String lastUsedUa;
+
     public APIKey withLastUsedUa(String lastUsedUa) {
         this.lastUsedUa = lastUsedUa;
         return this;
@@ -94,6 +104,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     public String organizationId;
+
     public APIKey withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -102,6 +113,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public APIKey withToken(String token) {
         this.token = token;
         return this;
@@ -110,6 +122,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public APIKey withType(String type) {
         this.type = type;
         return this;
@@ -118,6 +131,7 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage_limit")
     public Long usageLimit;
+
     public APIKey withUsageLimit(Long usageLimit) {
         this.usageLimit = usageLimit;
         return this;
@@ -126,9 +140,13 @@ public class APIKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage_today")
     public Long usageToday;
+
     public APIKey withUsageToday(Long usageToday) {
         this.usageToday = usageToday;
         return this;
     }
     
+    public APIKey(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

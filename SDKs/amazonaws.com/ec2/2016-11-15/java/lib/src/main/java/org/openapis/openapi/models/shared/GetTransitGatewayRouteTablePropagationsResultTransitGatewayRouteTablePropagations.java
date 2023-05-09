@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagations {
     
     public String resourceId;
+
     public GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagations withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTab
     
     
     public GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum resourceType;
+
     public GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagations withResourceType(GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,6 +28,7 @@ public class GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTab
     
     
     public GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum state;
+
     public GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagations withState(GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTab
     
     
     public String transitGatewayAttachmentId;
+
     public GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagations withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -40,9 +44,11 @@ public class GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTab
     
     
     public String transitGatewayRouteTableAnnouncementId;
+
     public GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagations withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
     }
     
+    public GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagations(){}
 }

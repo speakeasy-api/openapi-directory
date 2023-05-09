@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutProtocolsListRequest {
     @JsonProperty("ProtocolsList")
     public ProtocolsListData protocolsList;
+
     public PutProtocolsListRequest withProtocolsList(ProtocolsListData protocolsList) {
         this.protocolsList = protocolsList;
         return this;
@@ -19,9 +20,13 @@ public class PutProtocolsListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagList")
     public Tag[] tagList;
+
     public PutProtocolsListRequest withTagList(Tag[] tagList) {
         this.tagList = tagList;
         return this;
     }
     
+    public PutProtocolsListRequest(@JsonProperty("ProtocolsList") ProtocolsListData protocolsList) {
+        this.protocolsList = protocolsList;
+  }
 }

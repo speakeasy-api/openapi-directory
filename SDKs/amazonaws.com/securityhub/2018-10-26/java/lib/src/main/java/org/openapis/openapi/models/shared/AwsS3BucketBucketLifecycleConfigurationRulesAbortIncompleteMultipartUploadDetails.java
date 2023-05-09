@@ -15,9 +15,11 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesAbortIncompleteMultipar
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DaysAfterInitiation")
     public Long daysAfterInitiation;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadDetails withDaysAfterInitiation(Long daysAfterInitiation) {
         this.daysAfterInitiation = daysAfterInitiation;
         return this;
     }
     
+    public AwsS3BucketBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadDetails(){}
 }

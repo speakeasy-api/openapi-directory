@@ -12,9 +12,11 @@ public class ListHsmsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHsmsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHsmsRequest(){}
 }

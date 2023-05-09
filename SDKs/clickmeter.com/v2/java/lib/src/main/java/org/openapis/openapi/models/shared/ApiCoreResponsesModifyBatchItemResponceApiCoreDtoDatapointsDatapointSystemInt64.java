@@ -12,6 +12,7 @@ public class ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapoin
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityData")
     public ApiCoreDtoDatapointsDatapoint entityData;
+
     public ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 withEntityData(ApiCoreDtoDatapointsDatapoint entityData) {
         this.entityData = entityData;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapoin
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ClickMeterInfrastructureValidationValidationFailure[] errors;
+
     public ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 withErrors(ClickMeterInfrastructureValidationValidationFailure[] errors) {
         this.errors = errors;
         return this;
@@ -28,6 +30,7 @@ public class ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapoin
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ApiCoreResponsesEntityUriSystemInt64 result;
+
     public ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 withResult(ApiCoreResponsesEntityUriSystemInt64 result) {
         this.result = result;
         return this;
@@ -36,9 +39,11 @@ public class ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapoin
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ApiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64(){}
 }

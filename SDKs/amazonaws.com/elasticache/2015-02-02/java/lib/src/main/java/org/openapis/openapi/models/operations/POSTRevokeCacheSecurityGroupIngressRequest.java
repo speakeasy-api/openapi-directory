@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTRevokeCacheSecurityGroupIngressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTRevokeCacheSecurityGroupIngressActionEnum action;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withAction(POSTRevokeCacheSecurityGroupIngressActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTRevokeCacheSecurityGroupIngressVersionEnum version;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withVersion(POSTRevokeCacheSecurityGroupIngressVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTRevokeCacheSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTRevokeCacheSecurityGroupIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTRevokeCacheSecurityGroupIngressRequest(@JsonProperty("Action") POSTRevokeCacheSecurityGroupIngressActionEnum action, @JsonProperty("Version") POSTRevokeCacheSecurityGroupIngressVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

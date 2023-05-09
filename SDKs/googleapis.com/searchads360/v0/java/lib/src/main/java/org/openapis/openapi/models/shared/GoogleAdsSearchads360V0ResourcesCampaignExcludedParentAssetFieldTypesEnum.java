@@ -33,7 +33,9 @@ public enum GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldType
     LANDSCAPE_LOGO("LANDSCAPE_LOGO"),
     VIDEO("VIDEO"),
     CALL_TO_ACTION_SELECTION("CALL_TO_ACTION_SELECTION"),
-    AD_IMAGE("AD_IMAGE");
+    AD_IMAGE("AD_IMAGE"),
+    BUSINESS_LOGO("BUSINESS_LOGO"),
+    HOTEL_PROPERTY("HOTEL_PROPERTY");
 
     @JsonValue
     public final String value;

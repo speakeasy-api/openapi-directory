@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableContinuousRun")
     public Boolean enableContinuousRun;
+
     public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig withEnableContinuousRun(Boolean enableContinuousRun) {
         this.enableContinuousRun = enableContinuousRun;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePredeploymentRun")
     public Boolean enablePredeploymentRun;
+
     public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig withEnablePredeploymentRun(Boolean enablePredeploymentRun) {
         this.enablePredeploymentRun = enablePredeploymentRun;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCases")
     public String[] testCases;
+
     public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig withTestCases(String[] testCases) {
         this.testCases = testCases;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig(){}
 }

@@ -18,6 +18,7 @@ public class AccountListNodeAgentSkusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public AccountListNodeAgentSkusResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class AccountListNodeAgentSkusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public NodeAgentSku[] value;
+
     public AccountListNodeAgentSkusResult withValue(NodeAgentSku[] value) {
         this.value = value;
         return this;
     }
     
+    public AccountListNodeAgentSkusResult(){}
 }

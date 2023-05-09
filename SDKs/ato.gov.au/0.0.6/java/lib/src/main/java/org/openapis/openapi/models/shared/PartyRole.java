@@ -25,6 +25,7 @@ public class PartyRole {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public PartyRole withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -36,6 +37,7 @@ public class PartyRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PartyRole withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +49,7 @@ public class PartyRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partyRoleType")
     public PartyRolePartyRoleTypeEnum partyRoleType;
+
     public PartyRole withPartyRoleType(PartyRolePartyRoleTypeEnum partyRoleType) {
         this.partyRoleType = partyRoleType;
         return this;
@@ -57,6 +60,7 @@ public class PartyRole {
      */
     @JsonProperty("relatedPartyId")
     public String relatedPartyId;
+
     public PartyRole withRelatedPartyId(String relatedPartyId) {
         this.relatedPartyId = relatedPartyId;
         return this;
@@ -68,6 +72,7 @@ public class PartyRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedPartyRoleType")
     public PartyRoleRelatedPartyRoleTypeEnum relatedPartyRoleType;
+
     public PartyRole withRelatedPartyRoleType(PartyRoleRelatedPartyRoleTypeEnum relatedPartyRoleType) {
         this.relatedPartyRoleType = relatedPartyRoleType;
         return this;
@@ -78,6 +83,7 @@ public class PartyRole {
      */
     @JsonProperty("relationshipType")
     public PartyRoleRelationshipTypeEnum relationshipType;
+
     public PartyRole withRelationshipType(PartyRoleRelationshipTypeEnum relationshipType) {
         this.relationshipType = relationshipType;
         return this;
@@ -91,9 +97,14 @@ public class PartyRole {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public PartyRole withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public PartyRole(@JsonProperty("relatedPartyId") String relatedPartyId, @JsonProperty("relationshipType") PartyRoleRelationshipTypeEnum relationshipType) {
+        this.relatedPartyId = relatedPartyId;
+        this.relationshipType = relationshipType;
+  }
 }

@@ -15,6 +15,7 @@ public class SearchGameSessionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessions")
     public GameSession[] gameSessions;
+
     public SearchGameSessionsOutput withGameSessions(GameSession[] gameSessions) {
         this.gameSessions = gameSessions;
         return this;
@@ -23,9 +24,11 @@ public class SearchGameSessionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchGameSessionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchGameSessionsOutput(){}
 }

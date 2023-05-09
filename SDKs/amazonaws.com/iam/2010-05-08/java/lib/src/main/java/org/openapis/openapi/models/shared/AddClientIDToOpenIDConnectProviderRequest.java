@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddClientIDToOpenIDConnectProviderRequest {
     
     public String clientID;
+
     public AddClientIDToOpenIDConnectProviderRequest withClientID(String clientID) {
         this.clientID = clientID;
         return this;
@@ -16,9 +17,14 @@ public class AddClientIDToOpenIDConnectProviderRequest {
     
     
     public String openIDConnectProviderArn;
+
     public AddClientIDToOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
     }
     
+    public AddClientIDToOpenIDConnectProviderRequest(@JsonProperty("ClientID") String clientID, @JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn) {
+        this.clientID = clientID;
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+  }
 }

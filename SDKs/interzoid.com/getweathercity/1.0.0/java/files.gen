@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetweatherRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getweather200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetweatherResponse.java
+docs/sdk/README.md
+docs/weatherbycityandstate/README.md
 USAGE.md

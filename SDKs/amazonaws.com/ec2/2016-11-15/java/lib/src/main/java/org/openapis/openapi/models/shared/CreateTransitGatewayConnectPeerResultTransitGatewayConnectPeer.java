@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer {
     
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration connectPeerConfiguration;
+
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer withConnectPeerConfiguration(CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration connectPeerConfiguration) {
         this.connectPeerConfiguration = connectPeerConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer {
     
     
     public OffsetDateTime creationTime;
+
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +28,7 @@ public class CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer {
     
     
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum state;
+
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer withState(CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer {
     
     
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerTags[] tags;
+
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer withTags(CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,6 +44,7 @@ public class CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer {
     
     
     public String transitGatewayAttachmentId;
+
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -47,9 +52,11 @@ public class CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer {
     
     
     public String transitGatewayConnectPeerId;
+
     public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer withTransitGatewayConnectPeerId(String transitGatewayConnectPeerId) {
         this.transitGatewayConnectPeerId = transitGatewayConnectPeerId;
         return this;
     }
     
+    public CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer(){}
 }

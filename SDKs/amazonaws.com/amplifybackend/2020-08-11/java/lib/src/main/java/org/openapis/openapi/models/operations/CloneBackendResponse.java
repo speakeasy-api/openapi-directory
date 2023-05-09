@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloneBackendResponse {
@@ -12,6 +13,7 @@ public class CloneBackendResponse {
      */
     
     public Object badRequestException;
+
     public CloneBackendResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CloneBackendResponse {
      */
     
     public org.openapis.openapi.models.shared.CloneBackendResponse cloneBackendResponse;
+
     public CloneBackendResponse withCloneBackendResponse(org.openapis.openapi.models.shared.CloneBackendResponse cloneBackendResponse) {
         this.cloneBackendResponse = cloneBackendResponse;
         return this;
@@ -29,6 +32,7 @@ public class CloneBackendResponse {
     
     
     public String contentType;
+
     public CloneBackendResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CloneBackendResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public CloneBackendResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class CloneBackendResponse {
      */
     
     public Object notFoundException;
+
     public CloneBackendResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CloneBackendResponse {
     
     
     public Integer statusCode;
+
     public CloneBackendResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CloneBackendResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloneBackendResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CloneBackendResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CloneBackendResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CloneBackendResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

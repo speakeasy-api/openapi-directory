@@ -20,6 +20,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public ConnectionLog withError(String error) {
         this.error = error;
         return this;
@@ -31,6 +32,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_message")
     public String errorMessage;
+
     public ConnectionLog withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -42,6 +44,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_uid")
     public String errorUid;
+
     public ConnectionLog withErrorUid(String errorUid) {
         this.errorUid = errorUid;
         return this;
@@ -53,6 +56,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public ConnectionLog withFields(String fields) {
         this.fields = fields;
         return this;
@@ -63,6 +67,7 @@ public class ConnectionLog {
      */
     @JsonProperty("id")
     public Long id;
+
     public ConnectionLog withId(Long id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class ConnectionLog {
      */
     @JsonProperty("id_connection")
     public Long idConnection;
+
     public ConnectionLog withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -84,6 +90,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_connector")
     public Long idConnector;
+
     public ConnectionLog withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -95,6 +102,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_source")
     public Long idSource;
+
     public ConnectionLog withIdSource(Long idSource) {
         this.idSource = idSource;
         return this;
@@ -106,6 +114,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_user")
     public Long idUser;
+
     public ConnectionLog withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -117,6 +126,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public ConnectionLog withLogin(String login) {
         this.login = login;
         return this;
@@ -128,6 +138,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nb_accounts")
     public Long nbAccounts;
+
     public ConnectionLog withNbAccounts(Long nbAccounts) {
         this.nbAccounts = nbAccounts;
         return this;
@@ -141,6 +152,7 @@ public class ConnectionLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("next_try")
     public OffsetDateTime nextTry;
+
     public ConnectionLog withNextTry(OffsetDateTime nextTry) {
         this.nextTry = nextTry;
         return this;
@@ -152,6 +164,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session_folder_id")
     public String sessionFolderId;
+
     public ConnectionLog withSessionFolderId(String sessionFolderId) {
         this.sessionFolderId = sessionFolderId;
         return this;
@@ -165,6 +178,7 @@ public class ConnectionLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start")
     public OffsetDateTime start;
+
     public ConnectionLog withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -176,6 +190,7 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statut")
     public Long statut;
+
     public ConnectionLog withStatut(Long statut) {
         this.statut = statut;
         return this;
@@ -188,6 +203,7 @@ public class ConnectionLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ConnectionLog withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -199,9 +215,15 @@ public class ConnectionLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worker")
     public String worker;
+
     public ConnectionLog withWorker(String worker) {
         this.worker = worker;
         return this;
     }
     
+    public ConnectionLog(@JsonProperty("id") Long id, @JsonProperty("id_connection") Long idConnection, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.id = id;
+        this.idConnection = idConnection;
+        this.timestamp = timestamp;
+  }
 }

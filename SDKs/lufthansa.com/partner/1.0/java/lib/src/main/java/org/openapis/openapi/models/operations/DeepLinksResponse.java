@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeepLinksResponse {
     
     public String contentType;
+
     public DeepLinksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeepLinksResponse {
     
     
     public String deepLinks200ApplicationJSONString;
+
     public DeepLinksResponse withDeepLinks200ApplicationJSONString(String deepLinks200ApplicationJSONString) {
         this.deepLinks200ApplicationJSONString = deepLinks200ApplicationJSONString;
         return this;
@@ -23,6 +26,7 @@ public class DeepLinksResponse {
     
     
     public Integer statusCode;
+
     public DeepLinksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DeepLinksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeepLinksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeepLinksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

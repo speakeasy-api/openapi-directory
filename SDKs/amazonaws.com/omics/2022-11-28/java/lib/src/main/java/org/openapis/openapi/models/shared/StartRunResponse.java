@@ -15,6 +15,7 @@ public class StartRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StartRunResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class StartRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StartRunResponse withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class StartRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RunStatusEnum status;
+
     public StartRunResponse withStatus(RunStatusEnum status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class StartRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartRunResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartRunResponse(){}
 }

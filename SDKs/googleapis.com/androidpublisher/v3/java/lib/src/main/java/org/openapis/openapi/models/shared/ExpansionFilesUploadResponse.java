@@ -18,9 +18,11 @@ public class ExpansionFilesUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expansionFile")
     public ExpansionFile expansionFile;
+
     public ExpansionFilesUploadResponse withExpansionFile(ExpansionFile expansionFile) {
         this.expansionFile = expansionFile;
         return this;
     }
     
+    public ExpansionFilesUploadResponse(){}
 }

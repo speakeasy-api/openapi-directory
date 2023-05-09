@@ -15,6 +15,7 @@ public class DeploymentOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Failed")
     public Long failed;
+
     public DeploymentOverview withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -23,6 +24,7 @@ public class DeploymentOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InProgress")
     public Long inProgress;
+
     public DeploymentOverview withInProgress(Long inProgress) {
         this.inProgress = inProgress;
         return this;
@@ -31,6 +33,7 @@ public class DeploymentOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pending")
     public Long pending;
+
     public DeploymentOverview withPending(Long pending) {
         this.pending = pending;
         return this;
@@ -39,6 +42,7 @@ public class DeploymentOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ready")
     public Long ready;
+
     public DeploymentOverview withReady(Long ready) {
         this.ready = ready;
         return this;
@@ -47,6 +51,7 @@ public class DeploymentOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Skipped")
     public Long skipped;
+
     public DeploymentOverview withSkipped(Long skipped) {
         this.skipped = skipped;
         return this;
@@ -55,9 +60,11 @@ public class DeploymentOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Succeeded")
     public Long succeeded;
+
     public DeploymentOverview withSucceeded(Long succeeded) {
         this.succeeded = succeeded;
         return this;
     }
     
+    public DeploymentOverview(){}
 }

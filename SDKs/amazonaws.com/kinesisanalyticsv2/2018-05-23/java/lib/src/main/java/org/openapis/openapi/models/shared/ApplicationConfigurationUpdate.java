@@ -15,6 +15,7 @@ public class ApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationCodeConfigurationUpdate")
     public ApplicationCodeConfigurationUpdate applicationCodeConfigurationUpdate;
+
     public ApplicationConfigurationUpdate withApplicationCodeConfigurationUpdate(ApplicationCodeConfigurationUpdate applicationCodeConfigurationUpdate) {
         this.applicationCodeConfigurationUpdate = applicationCodeConfigurationUpdate;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSnapshotConfigurationUpdate")
     public ApplicationSnapshotConfigurationUpdate applicationSnapshotConfigurationUpdate;
+
     public ApplicationConfigurationUpdate withApplicationSnapshotConfigurationUpdate(ApplicationSnapshotConfigurationUpdate applicationSnapshotConfigurationUpdate) {
         this.applicationSnapshotConfigurationUpdate = applicationSnapshotConfigurationUpdate;
         return this;
@@ -31,6 +33,7 @@ public class ApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentPropertyUpdates")
     public EnvironmentPropertyUpdates environmentPropertyUpdates;
+
     public ApplicationConfigurationUpdate withEnvironmentPropertyUpdates(EnvironmentPropertyUpdates environmentPropertyUpdates) {
         this.environmentPropertyUpdates = environmentPropertyUpdates;
         return this;
@@ -39,6 +42,7 @@ public class ApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlinkApplicationConfigurationUpdate")
     public FlinkApplicationConfigurationUpdate flinkApplicationConfigurationUpdate;
+
     public ApplicationConfigurationUpdate withFlinkApplicationConfigurationUpdate(FlinkApplicationConfigurationUpdate flinkApplicationConfigurationUpdate) {
         this.flinkApplicationConfigurationUpdate = flinkApplicationConfigurationUpdate;
         return this;
@@ -47,6 +51,7 @@ public class ApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqlApplicationConfigurationUpdate")
     public SqlApplicationConfigurationUpdate sqlApplicationConfigurationUpdate;
+
     public ApplicationConfigurationUpdate withSqlApplicationConfigurationUpdate(SqlApplicationConfigurationUpdate sqlApplicationConfigurationUpdate) {
         this.sqlApplicationConfigurationUpdate = sqlApplicationConfigurationUpdate;
         return this;
@@ -55,6 +60,7 @@ public class ApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfigurationUpdates")
     public VpcConfigurationUpdate[] vpcConfigurationUpdates;
+
     public ApplicationConfigurationUpdate withVpcConfigurationUpdates(VpcConfigurationUpdate[] vpcConfigurationUpdates) {
         this.vpcConfigurationUpdates = vpcConfigurationUpdates;
         return this;
@@ -63,9 +69,11 @@ public class ApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZeppelinApplicationConfigurationUpdate")
     public ZeppelinApplicationConfigurationUpdate zeppelinApplicationConfigurationUpdate;
+
     public ApplicationConfigurationUpdate withZeppelinApplicationConfigurationUpdate(ZeppelinApplicationConfigurationUpdate zeppelinApplicationConfigurationUpdate) {
         this.zeppelinApplicationConfigurationUpdate = zeppelinApplicationConfigurationUpdate;
         return this;
     }
     
+    public ApplicationConfigurationUpdate(){}
 }

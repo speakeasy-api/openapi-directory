@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveNearEarthObjectByIdRequest {
@@ -12,9 +13,13 @@ public class RetrieveNearEarthObjectByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asteroid_id")
     public String asteroidId;
+
     public RetrieveNearEarthObjectByIdRequest withAsteroidId(String asteroidId) {
         this.asteroidId = asteroidId;
         return this;
     }
     
+    public RetrieveNearEarthObjectByIdRequest(@JsonProperty("asteroid_id") String asteroidId) {
+        this.asteroidId = asteroidId;
+  }
 }

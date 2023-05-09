@@ -12,6 +12,7 @@ public class TopLevelActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Object primary;
+
     public TopLevelActions withPrimary(Object primary) {
         this.primary = primary;
         return this;
@@ -19,6 +20,7 @@ public class TopLevelActions {
     
     @JsonProperty("secondary")
     public Object[] secondary;
+
     public TopLevelActions withSecondary(Object[] secondary) {
         this.secondary = secondary;
         return this;
@@ -27,9 +29,13 @@ public class TopLevelActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public IFrameActionBody settings;
+
     public TopLevelActions withSettings(IFrameActionBody settings) {
         this.settings = settings;
         return this;
     }
     
+    public TopLevelActions(@JsonProperty("secondary") Object[] secondary) {
+        this.secondary = secondary;
+  }
 }

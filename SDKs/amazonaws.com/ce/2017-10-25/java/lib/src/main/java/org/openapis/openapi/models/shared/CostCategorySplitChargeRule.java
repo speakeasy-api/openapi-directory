@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CostCategorySplitChargeRule {
     @JsonProperty("Method")
     public CostCategorySplitChargeMethodEnum method;
+
     public CostCategorySplitChargeRule withMethod(CostCategorySplitChargeMethodEnum method) {
         this.method = method;
         return this;
@@ -22,6 +23,7 @@ public class CostCategorySplitChargeRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public CostCategorySplitChargeRuleParameter[] parameters;
+
     public CostCategorySplitChargeRule withParameters(CostCategorySplitChargeRuleParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -29,6 +31,7 @@ public class CostCategorySplitChargeRule {
     
     @JsonProperty("Source")
     public String source;
+
     public CostCategorySplitChargeRule withSource(String source) {
         this.source = source;
         return this;
@@ -36,9 +39,15 @@ public class CostCategorySplitChargeRule {
     
     @JsonProperty("Targets")
     public String[] targets;
+
     public CostCategorySplitChargeRule withTargets(String[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public CostCategorySplitChargeRule(@JsonProperty("Method") CostCategorySplitChargeMethodEnum method, @JsonProperty("Source") String source, @JsonProperty("Targets") String[] targets) {
+        this.method = method;
+        this.source = source;
+        this.targets = targets;
+  }
 }

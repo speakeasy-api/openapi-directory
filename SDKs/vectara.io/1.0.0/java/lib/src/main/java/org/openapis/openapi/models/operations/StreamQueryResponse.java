@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StreamQueryResponse {
     
     public String contentType;
+
     public StreamQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StreamQueryResponse {
     
     
     public Integer statusCode;
+
     public StreamQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class StreamQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StreamQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class StreamQueryResponse {
      */
     
     public StreamQueryStreamResultOfServingResponseSet streamResultOfServingResponseSet;
+
     public StreamQueryResponse withStreamResultOfServingResponseSet(StreamQueryStreamResultOfServingResponseSet streamResultOfServingResponseSet) {
         this.streamResultOfServingResponseSet = streamResultOfServingResponseSet;
         return this;
@@ -43,9 +48,14 @@ public class StreamQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglerpcStatus googlerpcStatus;
+
     public StreamQueryResponse withGooglerpcStatus(org.openapis.openapi.models.shared.GooglerpcStatus googlerpcStatus) {
         this.googlerpcStatus = googlerpcStatus;
         return this;
     }
     
+    public StreamQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

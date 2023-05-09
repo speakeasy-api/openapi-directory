@@ -12,6 +12,7 @@ public class MrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CERT_TYPE")
     public String certType;
+
     public MrcerRequestBodyCertificateParameters withCertType(String certType) {
         this.certType = certType;
         return this;
@@ -22,6 +23,7 @@ public class MrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public MrcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,9 +34,15 @@ public class MrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public MrcerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
     }
     
+    public MrcerRequestBodyCertificateParameters(@JsonProperty("CERT_TYPE") String certType, @JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll) {
+        this.certType = certType;
+        this.fullName = fullName;
+        this.rroll = rroll;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsOfferingIdLearnersPendingSubmissionResponse {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdLearnersPendingSubmissionResponse {
      */
     
     public org.openapis.openapi.models.shared.AssessmentPendingSubmission[] assessmentPendingSubmissions;
+
     public GetOfferingsOfferingIdLearnersPendingSubmissionResponse withAssessmentPendingSubmissions(org.openapis.openapi.models.shared.AssessmentPendingSubmission[] assessmentPendingSubmissions) {
         this.assessmentPendingSubmissions = assessmentPendingSubmissions;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsOfferingIdLearnersPendingSubmissionResponse {
     
     
     public String contentType;
+
     public GetOfferingsOfferingIdLearnersPendingSubmissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsOfferingIdLearnersPendingSubmissionResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsOfferingIdLearnersPendingSubmissionResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsOfferingIdLearnersPendingSubmissionResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingsOfferingIdLearnersPendingSubmissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsOfferingIdLearnersPendingSubmissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsOfferingIdLearnersPendingSubmissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsOfferingIdLearnersPendingSubmissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

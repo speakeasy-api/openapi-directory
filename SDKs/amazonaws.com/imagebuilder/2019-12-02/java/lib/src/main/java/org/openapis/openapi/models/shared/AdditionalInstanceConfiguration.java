@@ -15,6 +15,7 @@ public class AdditionalInstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemsManagerAgent")
     public SystemsManagerAgent systemsManagerAgent;
+
     public AdditionalInstanceConfiguration withSystemsManagerAgent(SystemsManagerAgent systemsManagerAgent) {
         this.systemsManagerAgent = systemsManagerAgent;
         return this;
@@ -23,9 +24,11 @@ public class AdditionalInstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDataOverride")
     public String userDataOverride;
+
     public AdditionalInstanceConfiguration withUserDataOverride(String userDataOverride) {
         this.userDataOverride = userDataOverride;
         return this;
     }
     
+    public AdditionalInstanceConfiguration(){}
 }

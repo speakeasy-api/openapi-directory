@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EventInfoMapList {
     
     public String[] eventCategories;
+
     public EventInfoMapList withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -19,6 +20,7 @@ public class EventInfoMapList {
     
     
     public String eventDescription;
+
     public EventInfoMapList withEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
         return this;
@@ -26,6 +28,7 @@ public class EventInfoMapList {
     
     
     public String eventId;
+
     public EventInfoMapList withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -33,9 +36,11 @@ public class EventInfoMapList {
     
     
     public String severity;
+
     public EventInfoMapList withSeverity(String severity) {
         this.severity = severity;
         return this;
     }
     
+    public EventInfoMapList(){}
 }

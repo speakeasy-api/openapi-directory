@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TlsValidationContextFileTrust {
     @JsonProperty("certificateChain")
     public String certificateChain;
+
     public TlsValidationContextFileTrust withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
     }
     
+    public TlsValidationContextFileTrust(@JsonProperty("certificateChain") String certificateChain) {
+        this.certificateChain = certificateChain;
+  }
 }

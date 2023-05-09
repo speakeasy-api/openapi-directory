@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PriceTag {
     @JsonProperty("name")
     public String name;
+
     public PriceTag withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class PriceTag {
     
     @JsonProperty("value")
     public Integer value;
+
     public PriceTag withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public PriceTag(@JsonProperty("name") String name, @JsonProperty("value") Integer value) {
+        this.name = name;
+        this.value = value;
+  }
 }

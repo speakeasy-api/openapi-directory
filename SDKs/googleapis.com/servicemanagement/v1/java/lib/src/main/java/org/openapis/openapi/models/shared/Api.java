@@ -18,6 +18,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methods")
     public Method[] methods;
+
     public Api withMethods(Method[] methods) {
         this.methods = methods;
         return this;
@@ -29,6 +30,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mixins")
     public Mixin[] mixins;
+
     public Api withMixins(Mixin[] mixins) {
         this.mixins = mixins;
         return this;
@@ -40,6 +42,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Api withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Option[] options;
+
     public Api withOptions(Option[] options) {
         this.options = options;
         return this;
@@ -62,6 +66,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceContext")
     public SourceContext sourceContext;
+
     public Api withSourceContext(SourceContext sourceContext) {
         this.sourceContext = sourceContext;
         return this;
@@ -73,6 +78,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syntax")
     public ApiSyntaxEnum syntax;
+
     public Api withSyntax(ApiSyntaxEnum syntax) {
         this.syntax = syntax;
         return this;
@@ -84,9 +90,11 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Api withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Api(){}
 }

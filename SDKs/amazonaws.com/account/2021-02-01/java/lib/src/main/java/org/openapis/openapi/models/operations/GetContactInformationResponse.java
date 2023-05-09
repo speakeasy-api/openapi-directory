@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContactInformationResponse {
@@ -12,6 +13,7 @@ public class GetContactInformationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContactInformationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetContactInformationResponse {
     
     
     public String contentType;
+
     public GetContactInformationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContactInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContactInformationResponse getContactInformationResponse;
+
     public GetContactInformationResponse withGetContactInformationResponse(org.openapis.openapi.models.shared.GetContactInformationResponse getContactInformationResponse) {
         this.getContactInformationResponse = getContactInformationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetContactInformationResponse {
      */
     
     public Object internalServerException;
+
     public GetContactInformationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetContactInformationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetContactInformationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetContactInformationResponse {
     
     
     public Integer statusCode;
+
     public GetContactInformationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetContactInformationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContactInformationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetContactInformationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetContactInformationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class GetContactInformationResponse {
      */
     
     public Object validationException;
+
     public GetContactInformationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetContactInformationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateOrganizationSamlRoleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public UpdateOrganizationSamlRoleRequestBodyNetworks[] networks;
+
     public UpdateOrganizationSamlRoleRequestBody withNetworks(UpdateOrganizationSamlRoleRequestBodyNetworks[] networks) {
         this.networks = networks;
         return this;
@@ -26,6 +27,7 @@ public class UpdateOrganizationSamlRoleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgAccess")
     public String orgAccess;
+
     public UpdateOrganizationSamlRoleRequestBody withOrgAccess(String orgAccess) {
         this.orgAccess = orgAccess;
         return this;
@@ -37,6 +39,7 @@ public class UpdateOrganizationSamlRoleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public UpdateOrganizationSamlRoleRequestBody withRole(String role) {
         this.role = role;
         return this;
@@ -48,9 +51,11 @@ public class UpdateOrganizationSamlRoleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public UpdateOrganizationSamlRoleRequestBodyTags[] tags;
+
     public UpdateOrganizationSamlRoleRequestBody withTags(UpdateOrganizationSamlRoleRequestBodyTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateOrganizationSamlRoleRequestBody(){}
 }

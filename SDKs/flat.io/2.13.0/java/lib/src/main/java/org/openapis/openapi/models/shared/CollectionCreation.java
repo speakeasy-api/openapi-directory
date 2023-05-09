@@ -14,6 +14,7 @@ public class CollectionCreation {
      */
     @JsonProperty("privacy")
     public CollectionPrivacyEnum privacy;
+
     public CollectionCreation withPrivacy(CollectionPrivacyEnum privacy) {
         this.privacy = privacy;
         return this;
@@ -24,9 +25,14 @@ public class CollectionCreation {
      */
     @JsonProperty("title")
     public String title;
+
     public CollectionCreation withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CollectionCreation(@JsonProperty("privacy") CollectionPrivacyEnum privacy, @JsonProperty("title") String title) {
+        this.privacy = privacy;
+        this.title = title;
+  }
 }

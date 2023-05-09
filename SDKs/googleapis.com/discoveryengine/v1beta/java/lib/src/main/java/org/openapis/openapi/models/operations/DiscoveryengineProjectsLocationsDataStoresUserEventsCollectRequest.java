@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest {
@@ -12,6 +13,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ets")
     public String ets;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withEts(String ets) {
         this.ets = ets;
         return this;
@@ -62,6 +68,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -102,6 +112,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,6 +156,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uri")
     public String uri;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withUri(String uri) {
         this.uri = uri;
         return this;
@@ -152,9 +167,13 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userEvent")
     public String userEvent;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withUserEvent(String userEvent) {
         this.userEvent = userEvent;
         return this;
     }
     
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

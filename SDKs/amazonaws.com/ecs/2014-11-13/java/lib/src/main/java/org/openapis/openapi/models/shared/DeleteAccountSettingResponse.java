@@ -15,9 +15,11 @@ public class DeleteAccountSettingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting")
     public Setting setting;
+
     public DeleteAccountSettingResponse withSetting(Setting setting) {
         this.setting = setting;
         return this;
     }
     
+    public DeleteAccountSettingResponse(){}
 }

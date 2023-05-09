@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetChannelRequest {
     @JsonProperty("Channel")
     public String channel;
+
     public GetChannelRequest withChannel(String channel) {
         this.channel = channel;
         return this;
     }
     
+    public GetChannelRequest(@JsonProperty("Channel") String channel) {
+        this.channel = channel;
+  }
 }

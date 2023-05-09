@@ -7,14 +7,64 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * ModifyVerifiedAccessTrustProviderOidcOptions - OpenID Connect options for an &lt;code&gt;oidc&lt;/code&gt;-type, user-identity based trust provider.
+ * ModifyVerifiedAccessTrustProviderOidcOptions - Options for an OpenID Connect-compatible user-identity trust provider.
  */
 public class ModifyVerifiedAccessTrustProviderOidcOptions {
     
+    public String authorizationEndpoint;
+
+    public ModifyVerifiedAccessTrustProviderOidcOptions withAuthorizationEndpoint(String authorizationEndpoint) {
+        this.authorizationEndpoint = authorizationEndpoint;
+        return this;
+    }
+    
+    
+    public String clientId;
+
+    public ModifyVerifiedAccessTrustProviderOidcOptions withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    
+    public String clientSecret;
+
+    public ModifyVerifiedAccessTrustProviderOidcOptions withClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+        return this;
+    }
+    
+    
+    public String issuer;
+
+    public ModifyVerifiedAccessTrustProviderOidcOptions withIssuer(String issuer) {
+        this.issuer = issuer;
+        return this;
+    }
+    
+    
     public String scope;
+
     public ModifyVerifiedAccessTrustProviderOidcOptions withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    
+    public String tokenEndpoint;
+
+    public ModifyVerifiedAccessTrustProviderOidcOptions withTokenEndpoint(String tokenEndpoint) {
+        this.tokenEndpoint = tokenEndpoint;
+        return this;
+    }
+    
+    
+    public String userInfoEndpoint;
+
+    public ModifyVerifiedAccessTrustProviderOidcOptions withUserInfoEndpoint(String userInfoEndpoint) {
+        this.userInfoEndpoint = userInfoEndpoint;
+        return this;
+    }
+    
+    public ModifyVerifiedAccessTrustProviderOidcOptions(){}
 }

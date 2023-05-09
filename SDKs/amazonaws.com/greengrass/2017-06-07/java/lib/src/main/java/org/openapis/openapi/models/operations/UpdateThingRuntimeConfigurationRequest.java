@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateThingRuntimeConfigurationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateThingRuntimeConfigurationRequestBody requestBody;
+
     public UpdateThingRuntimeConfigurationRequest withRequestBody(UpdateThingRuntimeConfigurationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class UpdateThingRuntimeConfigurationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ThingName")
     public String thingName;
+
     public UpdateThingRuntimeConfigurationRequest withThingName(String thingName) {
         this.thingName = thingName;
         return this;
@@ -26,6 +29,7 @@ public class UpdateThingRuntimeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateThingRuntimeConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class UpdateThingRuntimeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateThingRuntimeConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class UpdateThingRuntimeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateThingRuntimeConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class UpdateThingRuntimeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateThingRuntimeConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class UpdateThingRuntimeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateThingRuntimeConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class UpdateThingRuntimeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateThingRuntimeConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class UpdateThingRuntimeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateThingRuntimeConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateThingRuntimeConfigurationRequest(@JsonProperty("RequestBody") UpdateThingRuntimeConfigurationRequestBody requestBody, @JsonProperty("ThingName") String thingName) {
+        this.requestBody = requestBody;
+        this.thingName = thingName;
+  }
 }

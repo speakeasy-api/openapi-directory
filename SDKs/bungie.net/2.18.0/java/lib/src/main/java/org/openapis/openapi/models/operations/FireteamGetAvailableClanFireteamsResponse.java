@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FireteamGetAvailableClanFireteamsResponse {
     
     public byte[] body;
+
     public FireteamGetAvailableClanFireteamsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class FireteamGetAvailableClanFireteamsResponse {
     
     
     public String contentType;
+
     public FireteamGetAvailableClanFireteamsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class FireteamGetAvailableClanFireteamsResponse {
     
     
     public Integer statusCode;
+
     public FireteamGetAvailableClanFireteamsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class FireteamGetAvailableClanFireteamsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FireteamGetAvailableClanFireteamsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FireteamGetAvailableClanFireteamsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

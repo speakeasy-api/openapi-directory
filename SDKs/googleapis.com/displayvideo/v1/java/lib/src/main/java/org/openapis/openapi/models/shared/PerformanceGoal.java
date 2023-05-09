@@ -18,6 +18,7 @@ public class PerformanceGoal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceGoalAmountMicros")
     public String performanceGoalAmountMicros;
+
     public PerformanceGoal withPerformanceGoalAmountMicros(String performanceGoalAmountMicros) {
         this.performanceGoalAmountMicros = performanceGoalAmountMicros;
         return this;
@@ -29,6 +30,7 @@ public class PerformanceGoal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceGoalPercentageMicros")
     public String performanceGoalPercentageMicros;
+
     public PerformanceGoal withPerformanceGoalPercentageMicros(String performanceGoalPercentageMicros) {
         this.performanceGoalPercentageMicros = performanceGoalPercentageMicros;
         return this;
@@ -40,6 +42,7 @@ public class PerformanceGoal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceGoalString")
     public String performanceGoalString;
+
     public PerformanceGoal withPerformanceGoalString(String performanceGoalString) {
         this.performanceGoalString = performanceGoalString;
         return this;
@@ -51,9 +54,11 @@ public class PerformanceGoal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceGoalType")
     public PerformanceGoalPerformanceGoalTypeEnum performanceGoalType;
+
     public PerformanceGoal withPerformanceGoalType(PerformanceGoalPerformanceGoalTypeEnum performanceGoalType) {
         this.performanceGoalType = performanceGoalType;
         return this;
     }
     
+    public PerformanceGoal(){}
 }

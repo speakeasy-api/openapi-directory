@@ -18,6 +18,7 @@ public class BinLogCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binLogFileName")
     public String binLogFileName;
+
     public BinLogCoordinates withBinLogFileName(String binLogFileName) {
         this.binLogFileName = binLogFileName;
         return this;
@@ -29,6 +30,7 @@ public class BinLogCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binLogPosition")
     public String binLogPosition;
+
     public BinLogCoordinates withBinLogPosition(String binLogPosition) {
         this.binLogPosition = binLogPosition;
         return this;
@@ -40,9 +42,11 @@ public class BinLogCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BinLogCoordinates withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BinLogCoordinates(){}
 }

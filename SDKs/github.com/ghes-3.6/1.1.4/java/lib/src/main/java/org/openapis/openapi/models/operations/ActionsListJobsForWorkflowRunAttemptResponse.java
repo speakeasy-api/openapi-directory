@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListJobsForWorkflowRunAttemptResponse {
     
     public String contentType;
+
     public ActionsListJobsForWorkflowRunAttemptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListJobsForWorkflowRunAttemptResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActionsListJobsForWorkflowRunAttemptResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListJobsForWorkflowRunAttemptResponse {
     
     
     public Integer statusCode;
+
     public ActionsListJobsForWorkflowRunAttemptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActionsListJobsForWorkflowRunAttemptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListJobsForWorkflowRunAttemptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ActionsListJobsForWorkflowRunAttemptResponse {
      */
     
     public ActionsListJobsForWorkflowRunAttempt200ApplicationJSON actionsListJobsForWorkflowRunAttempt200ApplicationJSONObject;
+
     public ActionsListJobsForWorkflowRunAttemptResponse withActionsListJobsForWorkflowRunAttempt200ApplicationJSONObject(ActionsListJobsForWorkflowRunAttempt200ApplicationJSON actionsListJobsForWorkflowRunAttempt200ApplicationJSONObject) {
         this.actionsListJobsForWorkflowRunAttempt200ApplicationJSONObject = actionsListJobsForWorkflowRunAttempt200ApplicationJSONObject;
         return this;
@@ -50,9 +56,14 @@ public class ActionsListJobsForWorkflowRunAttemptResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActionsListJobsForWorkflowRunAttemptResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public ActionsListJobsForWorkflowRunAttemptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

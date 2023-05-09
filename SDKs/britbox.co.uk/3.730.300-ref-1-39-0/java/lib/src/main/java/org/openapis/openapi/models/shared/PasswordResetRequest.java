@@ -15,6 +15,7 @@ public class PasswordResetRequest {
      */
     @JsonProperty("password")
     public String password;
+
     public PasswordResetRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -25,9 +26,14 @@ public class PasswordResetRequest {
      */
     @JsonProperty("resetToken")
     public String resetToken;
+
     public PasswordResetRequest withResetToken(String resetToken) {
         this.resetToken = resetToken;
         return this;
     }
     
+    public PasswordResetRequest(@JsonProperty("password") String password, @JsonProperty("resetToken") String resetToken) {
+        this.password = password;
+        this.resetToken = resetToken;
+  }
 }

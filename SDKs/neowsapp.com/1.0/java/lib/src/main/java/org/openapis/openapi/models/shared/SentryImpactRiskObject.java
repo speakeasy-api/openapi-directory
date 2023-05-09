@@ -15,6 +15,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Palermo_scale_max")
     public String palermoScaleMax;
+
     public SentryImpactRiskObject withPalermoScaleMax(String palermoScaleMax) {
         this.palermoScaleMax = palermoScaleMax;
         return this;
@@ -23,6 +24,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absolute_magnitude")
     public String absoluteMagnitude;
+
     public SentryImpactRiskObject withAbsoluteMagnitude(String absoluteMagnitude) {
         this.absoluteMagnitude = absoluteMagnitude;
         return this;
@@ -31,6 +33,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_lunar_distance")
     public Double averageLunarDistance;
+
     public SentryImpactRiskObject withAverageLunarDistance(Double averageLunarDistance) {
         this.averageLunarDistance = averageLunarDistance;
         return this;
@@ -39,6 +42,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("designation")
     public String designation;
+
     public SentryImpactRiskObject withDesignation(String designation) {
         this.designation = designation;
         return this;
@@ -47,6 +51,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_diameter")
     public String estimatedDiameter;
+
     public SentryImpactRiskObject withEstimatedDiameter(String estimatedDiameter) {
         this.estimatedDiameter = estimatedDiameter;
         return this;
@@ -55,6 +60,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullname")
     public String fullname;
+
     public SentryImpactRiskObject withFullname(String fullname) {
         this.fullname = fullname;
         return this;
@@ -63,6 +69,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impact_probability")
     public String impactProbability;
+
     public SentryImpactRiskObject withImpactProbability(String impactProbability) {
         this.impactProbability = impactProbability;
         return this;
@@ -71,6 +78,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active_sentry_object")
     public Boolean isActiveSentryObject;
+
     public SentryImpactRiskObject withIsActiveSentryObject(Boolean isActiveSentryObject) {
         this.isActiveSentryObject = isActiveSentryObject;
         return this;
@@ -79,6 +87,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_obs")
     public String lastObs;
+
     public SentryImpactRiskObject withLastObs(String lastObs) {
         this.lastObs = lastObs;
         return this;
@@ -87,6 +96,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_obs_jd")
     public String lastObsJd;
+
     public SentryImpactRiskObject withLastObsJd(String lastObsJd) {
         this.lastObsJd = lastObsJd;
         return this;
@@ -95,6 +105,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("palermo_scale_ave")
     public String palermoScaleAve;
+
     public SentryImpactRiskObject withPalermoScaleAve(String palermoScaleAve) {
         this.palermoScaleAve = palermoScaleAve;
         return this;
@@ -103,6 +114,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("potential_impacts")
     public String potentialImpacts;
+
     public SentryImpactRiskObject withPotentialImpacts(String potentialImpacts) {
         this.potentialImpacts = potentialImpacts;
         return this;
@@ -111,6 +123,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removal_date")
     public String removalDate;
+
     public SentryImpactRiskObject withRemovalDate(String removalDate) {
         this.removalDate = removalDate;
         return this;
@@ -119,6 +132,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentryId")
     public String sentryId;
+
     public SentryImpactRiskObject withSentryId(String sentryId) {
         this.sentryId = sentryId;
         return this;
@@ -127,6 +141,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("torino_scale")
     public String torinoScale;
+
     public SentryImpactRiskObject withTorinoScale(String torinoScale) {
         this.torinoScale = torinoScale;
         return this;
@@ -135,6 +150,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v_infinity")
     public String vInfinity;
+
     public SentryImpactRiskObject withVInfinity(String vInfinity) {
         this.vInfinity = vInfinity;
         return this;
@@ -143,6 +159,7 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_range_max")
     public String yearRangeMax;
+
     public SentryImpactRiskObject withYearRangeMax(String yearRangeMax) {
         this.yearRangeMax = yearRangeMax;
         return this;
@@ -151,9 +168,11 @@ public class SentryImpactRiskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_range_min")
     public String yearRangeMin;
+
     public SentryImpactRiskObject withYearRangeMin(String yearRangeMin) {
         this.yearRangeMin = yearRangeMin;
         return this;
     }
     
+    public SentryImpactRiskObject(){}
 }

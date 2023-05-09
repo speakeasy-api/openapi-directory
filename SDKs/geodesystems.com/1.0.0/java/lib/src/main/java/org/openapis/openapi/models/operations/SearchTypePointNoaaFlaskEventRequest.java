@@ -13,6 +13,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchTypePointNoaaFlaskEventRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchTypePointNoaaFlaskEventRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchTypePointNoaaFlaskEventRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchTypePointNoaaFlaskEventRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchTypePointNoaaFlaskEventRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchTypePointNoaaFlaskEventRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchTypePointNoaaFlaskEventRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchTypePointNoaaFlaskEventRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchTypePointNoaaFlaskEventRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchTypePointNoaaFlaskEventRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchTypePointNoaaFlaskEventRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchTypePointNoaaFlaskEventRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchTypePointNoaaFlaskEventRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchTypePointNoaaFlaskEventRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_event.lab_id_number")
     public String searchTypePointNoaaFlaskEventLabIdNumber;
+
     public SearchTypePointNoaaFlaskEventRequest withSearchTypePointNoaaFlaskEventLabIdNumber(String searchTypePointNoaaFlaskEventLabIdNumber) {
         this.searchTypePointNoaaFlaskEventLabIdNumber = searchTypePointNoaaFlaskEventLabIdNumber;
         return this;
@@ -163,6 +178,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_event.measurement_group")
     public String searchTypePointNoaaFlaskEventMeasurementGroup;
+
     public SearchTypePointNoaaFlaskEventRequest withSearchTypePointNoaaFlaskEventMeasurementGroup(String searchTypePointNoaaFlaskEventMeasurementGroup) {
         this.searchTypePointNoaaFlaskEventMeasurementGroup = searchTypePointNoaaFlaskEventMeasurementGroup;
         return this;
@@ -173,6 +189,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_event.parameter")
     public String searchTypePointNoaaFlaskEventParameter;
+
     public SearchTypePointNoaaFlaskEventRequest withSearchTypePointNoaaFlaskEventParameter(String searchTypePointNoaaFlaskEventParameter) {
         this.searchTypePointNoaaFlaskEventParameter = searchTypePointNoaaFlaskEventParameter;
         return this;
@@ -183,6 +200,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_event.project")
     public String searchTypePointNoaaFlaskEventProject;
+
     public SearchTypePointNoaaFlaskEventRequest withSearchTypePointNoaaFlaskEventProject(String searchTypePointNoaaFlaskEventProject) {
         this.searchTypePointNoaaFlaskEventProject = searchTypePointNoaaFlaskEventProject;
         return this;
@@ -193,6 +211,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_event.site_id")
     public String searchTypePointNoaaFlaskEventSiteId;
+
     public SearchTypePointNoaaFlaskEventRequest withSearchTypePointNoaaFlaskEventSiteId(String searchTypePointNoaaFlaskEventSiteId) {
         this.searchTypePointNoaaFlaskEventSiteId = searchTypePointNoaaFlaskEventSiteId;
         return this;
@@ -203,6 +222,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchTypePointNoaaFlaskEventRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -213,6 +233,7 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTypePointNoaaFlaskEventRequest withText(String text) {
         this.text = text;
         return this;
@@ -223,9 +244,11 @@ public class SearchTypePointNoaaFlaskEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchTypePointNoaaFlaskEventRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchTypePointNoaaFlaskEventRequest(){}
 }

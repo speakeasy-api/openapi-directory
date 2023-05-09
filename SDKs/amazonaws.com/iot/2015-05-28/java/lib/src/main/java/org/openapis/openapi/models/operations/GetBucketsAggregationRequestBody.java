@@ -14,6 +14,7 @@ public class GetBucketsAggregationRequestBody {
      */
     @JsonProperty("aggregationField")
     public String aggregationField;
+
     public GetBucketsAggregationRequestBody withAggregationField(String aggregationField) {
         this.aggregationField = aggregationField;
         return this;
@@ -24,6 +25,7 @@ public class GetBucketsAggregationRequestBody {
      */
     @JsonProperty("bucketsAggregationType")
     public GetBucketsAggregationRequestBodyBucketsAggregationType bucketsAggregationType;
+
     public GetBucketsAggregationRequestBody withBucketsAggregationType(GetBucketsAggregationRequestBodyBucketsAggregationType bucketsAggregationType) {
         this.bucketsAggregationType = bucketsAggregationType;
         return this;
@@ -35,6 +37,7 @@ public class GetBucketsAggregationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexName")
     public String indexName;
+
     public GetBucketsAggregationRequestBody withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -45,6 +48,7 @@ public class GetBucketsAggregationRequestBody {
      */
     @JsonProperty("queryString")
     public String queryString;
+
     public GetBucketsAggregationRequestBody withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -56,9 +60,15 @@ public class GetBucketsAggregationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVersion")
     public String queryVersion;
+
     public GetBucketsAggregationRequestBody withQueryVersion(String queryVersion) {
         this.queryVersion = queryVersion;
         return this;
     }
     
+    public GetBucketsAggregationRequestBody(@JsonProperty("aggregationField") String aggregationField, @JsonProperty("bucketsAggregationType") GetBucketsAggregationRequestBodyBucketsAggregationType bucketsAggregationType, @JsonProperty("queryString") String queryString) {
+        this.aggregationField = aggregationField;
+        this.bucketsAggregationType = bucketsAggregationType;
+        this.queryString = queryString;
+  }
 }

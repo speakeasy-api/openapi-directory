@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLoggingConfigurationRequest {
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public GetLoggingConfigurationRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public GetLoggingConfigurationRequest(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

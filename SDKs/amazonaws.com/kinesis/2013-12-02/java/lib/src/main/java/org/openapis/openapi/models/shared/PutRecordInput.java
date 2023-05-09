@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRecordInput {
     @JsonProperty("Data")
     public String data;
+
     public PutRecordInput withData(String data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class PutRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplicitHashKey")
     public String explicitHashKey;
+
     public PutRecordInput withExplicitHashKey(String explicitHashKey) {
         this.explicitHashKey = explicitHashKey;
         return this;
@@ -29,6 +31,7 @@ public class PutRecordInput {
     
     @JsonProperty("PartitionKey")
     public String partitionKey;
+
     public PutRecordInput withPartitionKey(String partitionKey) {
         this.partitionKey = partitionKey;
         return this;
@@ -37,6 +40,7 @@ public class PutRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SequenceNumberForOrdering")
     public String sequenceNumberForOrdering;
+
     public PutRecordInput withSequenceNumberForOrdering(String sequenceNumberForOrdering) {
         this.sequenceNumberForOrdering = sequenceNumberForOrdering;
         return this;
@@ -45,6 +49,7 @@ public class PutRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public PutRecordInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -53,9 +58,14 @@ public class PutRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public PutRecordInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public PutRecordInput(@JsonProperty("Data") String data, @JsonProperty("PartitionKey") String partitionKey) {
+        this.data = data;
+        this.partitionKey = partitionKey;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SpeechSpeechLongrunningrecognizeResponse {
     
     public String contentType;
+
     public SpeechSpeechLongrunningrecognizeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SpeechSpeechLongrunningrecognizeResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public SpeechSpeechLongrunningrecognizeResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class SpeechSpeechLongrunningrecognizeResponse {
     
     
     public Integer statusCode;
+
     public SpeechSpeechLongrunningrecognizeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SpeechSpeechLongrunningrecognizeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SpeechSpeechLongrunningrecognizeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SpeechSpeechLongrunningrecognizeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

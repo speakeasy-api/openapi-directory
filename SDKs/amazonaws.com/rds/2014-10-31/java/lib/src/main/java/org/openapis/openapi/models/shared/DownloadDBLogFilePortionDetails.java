@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DownloadDBLogFilePortionDetails {
     
     public Boolean additionalDataPending;
+
     public DownloadDBLogFilePortionDetails withAdditionalDataPending(Boolean additionalDataPending) {
         this.additionalDataPending = additionalDataPending;
         return this;
@@ -19,6 +20,7 @@ public class DownloadDBLogFilePortionDetails {
     
     
     public String logFileData;
+
     public DownloadDBLogFilePortionDetails withLogFileData(String logFileData) {
         this.logFileData = logFileData;
         return this;
@@ -26,9 +28,11 @@ public class DownloadDBLogFilePortionDetails {
     
     
     public String marker;
+
     public DownloadDBLogFilePortionDetails withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DownloadDBLogFilePortionDetails(){}
 }

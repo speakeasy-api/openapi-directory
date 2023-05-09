@@ -15,9 +15,11 @@ public class AccountRecoverySettingType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecoveryMechanisms")
     public RecoveryOptionType[] recoveryMechanisms;
+
     public AccountRecoverySettingType withRecoveryMechanisms(RecoveryOptionType[] recoveryMechanisms) {
         this.recoveryMechanisms = recoveryMechanisms;
         return this;
     }
     
+    public AccountRecoverySettingType(){}
 }

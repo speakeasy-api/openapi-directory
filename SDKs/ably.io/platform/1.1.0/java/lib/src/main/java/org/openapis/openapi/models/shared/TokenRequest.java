@@ -14,6 +14,7 @@ public class TokenRequest {
      */
     @JsonProperty("capability")
     public java.util.Map<String, Object> capability;
+
     public TokenRequest withCapability(java.util.Map<String, Object> capability) {
         this.capability = capability;
         return this;
@@ -25,6 +26,7 @@ public class TokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public TokenRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -35,6 +37,7 @@ public class TokenRequest {
      */
     @JsonProperty("keyName")
     public String keyName;
+
     public TokenRequest withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -45,6 +48,7 @@ public class TokenRequest {
      */
     @JsonProperty("nonce")
     public String nonce;
+
     public TokenRequest withNonce(String nonce) {
         this.nonce = nonce;
         return this;
@@ -55,9 +59,16 @@ public class TokenRequest {
      */
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public TokenRequest withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TokenRequest(@JsonProperty("capability") java.util.Map<String, Object> capability, @JsonProperty("keyName") String keyName, @JsonProperty("nonce") String nonce, @JsonProperty("timestamp") Long timestamp) {
+        this.capability = capability;
+        this.keyName = keyName;
+        this.nonce = nonce;
+        this.timestamp = timestamp;
+  }
 }

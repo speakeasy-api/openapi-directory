@@ -98,4 +98,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleSecuritySafebrowsingV
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleSecuritySafebrowsingV4ThreatListDescriptor.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleSecuritySafebrowsingV4FindThreatMatchesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleSecuritySafebrowsingV4FindThreatMatchesRequest.java
+docs/sdk/README.md
+docs/encodedfullhashes/README.md
+docs/encodedupdates/README.md
+docs/fullhashes/README.md
+docs/threathits/README.md
+docs/threatlistupdates/README.md
+docs/threatlists/README.md
+docs/threatmatches/README.md
 USAGE.md

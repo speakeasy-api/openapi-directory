@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GamesLeaderboardsGetResponse {
     
     public String contentType;
+
     public GamesLeaderboardsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GamesLeaderboardsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Leaderboard leaderboard;
+
     public GamesLeaderboardsGetResponse withLeaderboard(org.openapis.openapi.models.shared.Leaderboard leaderboard) {
         this.leaderboard = leaderboard;
         return this;
@@ -26,6 +29,7 @@ public class GamesLeaderboardsGetResponse {
     
     
     public Integer statusCode;
+
     public GamesLeaderboardsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GamesLeaderboardsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GamesLeaderboardsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GamesLeaderboardsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

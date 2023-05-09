@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadCertificateRequest {
@@ -13,6 +14,7 @@ public class DownloadCertificateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_format")
     public org.openapis.openapi.models.shared.SslCertificateFileFormatEnum fileFormat;
+
     public DownloadCertificateRequest withFileFormat(org.openapis.openapi.models.shared.SslCertificateFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -23,6 +25,7 @@ public class DownloadCertificateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
     public String password;
+
     public DownloadCertificateRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -33,6 +36,7 @@ public class DownloadCertificateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha1Fingerprint")
     public String sha1FingerprintPathParameter;
+
     public DownloadCertificateRequest withSha1FingerprintPathParameter(String sha1FingerprintPathParameter) {
         this.sha1FingerprintPathParameter = sha1FingerprintPathParameter;
         return this;
@@ -43,9 +47,16 @@ public class DownloadCertificateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sha1_fingerprint")
     public String sha1FingerprintQueryParameter;
+
     public DownloadCertificateRequest withSha1FingerprintQueryParameter(String sha1FingerprintQueryParameter) {
         this.sha1FingerprintQueryParameter = sha1FingerprintQueryParameter;
         return this;
     }
     
+    public DownloadCertificateRequest(@JsonProperty("file_format") org.openapis.openapi.models.shared.SslCertificateFileFormatEnum fileFormat, @JsonProperty("password") String password, @JsonProperty("sha1FingerprintPathParameter") String sha1FingerprintPathParameter, @JsonProperty("sha1_fingerprintQueryParameter") String sha1FingerprintQueryParameter) {
+        this.fileFormat = fileFormat;
+        this.password = password;
+        this.sha1FingerprintPathParameter = sha1FingerprintPathParameter;
+        this.sha1FingerprintQueryParameter = sha1FingerprintQueryParameter;
+  }
 }

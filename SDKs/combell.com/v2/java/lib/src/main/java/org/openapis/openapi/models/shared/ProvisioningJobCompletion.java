@@ -18,6 +18,7 @@ public class ProvisioningJobCompletion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProvisioningJobCompletion withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class ProvisioningJobCompletion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_links")
     public String[] resourceLinks;
+
     public ProvisioningJobCompletion withResourceLinks(String[] resourceLinks) {
         this.resourceLinks = resourceLinks;
         return this;
     }
     
+    public ProvisioningJobCompletion(){}
 }

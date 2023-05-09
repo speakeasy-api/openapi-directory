@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateTransitGatewayConnectRequestOptions - The options for a Connect attachment.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayConnectRequestOptions {
     
     public ProtocolValueEnum protocol;
+
     public CreateTransitGatewayConnectRequestOptions withProtocol(ProtocolValueEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public CreateTransitGatewayConnectRequestOptions(@JsonProperty("Protocol") ProtocolValueEnum protocol) {
+        this.protocol = protocol;
+  }
 }

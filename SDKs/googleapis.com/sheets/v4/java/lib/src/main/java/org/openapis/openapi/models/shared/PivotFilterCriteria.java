@@ -18,6 +18,7 @@ public class PivotFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public BooleanCondition condition;
+
     public PivotFilterCriteria withCondition(BooleanCondition condition) {
         this.condition = condition;
         return this;
@@ -29,6 +30,7 @@ public class PivotFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibleByDefault")
     public Boolean visibleByDefault;
+
     public PivotFilterCriteria withVisibleByDefault(Boolean visibleByDefault) {
         this.visibleByDefault = visibleByDefault;
         return this;
@@ -40,9 +42,11 @@ public class PivotFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibleValues")
     public String[] visibleValues;
+
     public PivotFilterCriteria withVisibleValues(String[] visibleValues) {
         this.visibleValues = visibleValues;
         return this;
     }
     
+    public PivotFilterCriteria(){}
 }

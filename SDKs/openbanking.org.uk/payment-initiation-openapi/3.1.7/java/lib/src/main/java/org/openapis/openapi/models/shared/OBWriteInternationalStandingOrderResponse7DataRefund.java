@@ -14,6 +14,7 @@ public class OBWriteInternationalStandingOrderResponse7DataRefund {
      */
     @JsonProperty("Account")
     public OBWriteInternationalStandingOrderResponse7DataRefundAccount account;
+
     public OBWriteInternationalStandingOrderResponse7DataRefund withAccount(OBWriteInternationalStandingOrderResponse7DataRefundAccount account) {
         this.account = account;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteInternationalStandingOrderResponse7DataRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Agent")
     public OBWriteInternationalStandingOrderResponse7DataRefundAgent agent;
+
     public OBWriteInternationalStandingOrderResponse7DataRefund withAgent(OBWriteInternationalStandingOrderResponse7DataRefundAgent agent) {
         this.agent = agent;
         return this;
@@ -36,9 +38,13 @@ public class OBWriteInternationalStandingOrderResponse7DataRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Creditor")
     public OBWriteInternationalStandingOrderResponse7DataRefundCreditor creditor;
+
     public OBWriteInternationalStandingOrderResponse7DataRefund withCreditor(OBWriteInternationalStandingOrderResponse7DataRefundCreditor creditor) {
         this.creditor = creditor;
         return this;
     }
     
+    public OBWriteInternationalStandingOrderResponse7DataRefund(@JsonProperty("Account") OBWriteInternationalStandingOrderResponse7DataRefundAccount account) {
+        this.account = account;
+  }
 }

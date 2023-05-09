@@ -12,6 +12,7 @@ public class ActionMetricValidationsMaximum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ActionMetricValidationsMaximum withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -20,9 +21,11 @@ public class ActionMetricValidationsMaximum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public ActionMetricValidationsMaximum withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ActionMetricValidationsMaximum(){}
 }

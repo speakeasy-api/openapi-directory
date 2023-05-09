@@ -15,6 +15,7 @@ public class CreateSafetyRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssertionRule")
     public AssertionRule assertionRule;
+
     public CreateSafetyRuleResponse withAssertionRule(AssertionRule assertionRule) {
         this.assertionRule = assertionRule;
         return this;
@@ -23,9 +24,11 @@ public class CreateSafetyRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatingRule")
     public GatingRule gatingRule;
+
     public CreateSafetyRuleResponse withGatingRule(GatingRule gatingRule) {
         this.gatingRule = gatingRule;
         return this;
     }
     
+    public CreateSafetyRuleResponse(){}
 }

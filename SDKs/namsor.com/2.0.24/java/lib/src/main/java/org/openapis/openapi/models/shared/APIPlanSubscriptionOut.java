@@ -18,6 +18,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public String apiKey;
+
     public APIPlanSubscriptionOut withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -29,6 +30,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public APIPlanSubscriptionOut withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -40,6 +42,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyFactor")
     public Double currencyFactor;
+
     public APIPlanSubscriptionOut withCurrencyFactor(Double currencyFactor) {
         this.currencyFactor = currencyFactor;
         return this;
@@ -51,6 +54,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planBaseFeesKey")
     public String planBaseFeesKey;
+
     public APIPlanSubscriptionOut withPlanBaseFeesKey(String planBaseFeesKey) {
         this.planBaseFeesKey = planBaseFeesKey;
         return this;
@@ -62,6 +66,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planEnded")
     public Long planEnded;
+
     public APIPlanSubscriptionOut withPlanEnded(Long planEnded) {
         this.planEnded = planEnded;
         return this;
@@ -73,6 +78,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planName")
     public String planName;
+
     public APIPlanSubscriptionOut withPlanName(String planName) {
         this.planName = planName;
         return this;
@@ -84,6 +90,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planQuota")
     public Long planQuota;
+
     public APIPlanSubscriptionOut withPlanQuota(Long planQuota) {
         this.planQuota = planQuota;
         return this;
@@ -95,6 +102,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planStarted")
     public Long planStarted;
+
     public APIPlanSubscriptionOut withPlanStarted(Long planStarted) {
         this.planStarted = planStarted;
         return this;
@@ -106,6 +114,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planStatus")
     public String planStatus;
+
     public APIPlanSubscriptionOut withPlanStatus(String planStatus) {
         this.planStatus = planStatus;
         return this;
@@ -117,6 +126,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public APIPlanSubscriptionOut withPrice(Double price) {
         this.price = price;
         return this;
@@ -128,6 +138,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceOverage")
     public Double priceOverage;
+
     public APIPlanSubscriptionOut withPriceOverage(Double priceOverage) {
         this.priceOverage = priceOverage;
         return this;
@@ -139,6 +150,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceOverageUSD")
     public Double priceOverageUSD;
+
     public APIPlanSubscriptionOut withPriceOverageUSD(Double priceOverageUSD) {
         this.priceOverageUSD = priceOverageUSD;
         return this;
@@ -150,6 +162,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceUSD")
     public Double priceUSD;
+
     public APIPlanSubscriptionOut withPriceUSD(Double priceUSD) {
         this.priceUSD = priceUSD;
         return this;
@@ -161,6 +174,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorPlanStarted")
     public Long priorPlanStarted;
+
     public APIPlanSubscriptionOut withPriorPlanStarted(Long priorPlanStarted) {
         this.priorPlanStarted = priorPlanStarted;
         return this;
@@ -172,6 +186,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeCustomerId")
     public String stripeCustomerId;
+
     public APIPlanSubscriptionOut withStripeCustomerId(String stripeCustomerId) {
         this.stripeCustomerId = stripeCustomerId;
         return this;
@@ -183,6 +198,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeStatus")
     public String stripeStatus;
+
     public APIPlanSubscriptionOut withStripeStatus(String stripeStatus) {
         this.stripeStatus = stripeStatus;
         return this;
@@ -194,6 +210,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeSubscription")
     public String stripeSubscription;
+
     public APIPlanSubscriptionOut withStripeSubscription(String stripeSubscription) {
         this.stripeSubscription = stripeSubscription;
         return this;
@@ -205,6 +222,7 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxRate")
     public Double taxRate;
+
     public APIPlanSubscriptionOut withTaxRate(Double taxRate) {
         this.taxRate = taxRate;
         return this;
@@ -216,9 +234,11 @@ public class APIPlanSubscriptionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public APIPlanSubscriptionOut withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public APIPlanSubscriptionOut(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MeteringPostResponse {
     
     public String contentType;
+
     public MeteringPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MeteringPostResponse {
     
     
     public Integer statusCode;
+
     public MeteringPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MeteringPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MeteringPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class MeteringPostResponse {
      */
     
     public MeteringPost200ApplicationJSON meteringPost200ApplicationJSONObject;
+
     public MeteringPostResponse withMeteringPost200ApplicationJSONObject(MeteringPost200ApplicationJSON meteringPost200ApplicationJSONObject) {
         this.meteringPost200ApplicationJSONObject = meteringPost200ApplicationJSONObject;
         return this;
     }
     
+    public MeteringPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

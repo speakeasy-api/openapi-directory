@@ -15,6 +15,7 @@ public class TableReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public TableReference withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -26,6 +27,7 @@ public class TableReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public TableReference withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -37,9 +39,11 @@ public class TableReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public TableReference withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public TableReference(){}
 }

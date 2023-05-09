@@ -15,6 +15,7 @@ public class MetaUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public MetaUser[] collection;
+
     public MetaUsers withCollection(MetaUser[] collection) {
         this.collection = collection;
         return this;
@@ -23,9 +24,11 @@ public class MetaUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_href")
     public String nextHref;
+
     public MetaUsers withNextHref(String nextHref) {
         this.nextHref = nextHref;
         return this;
     }
     
+    public MetaUsers(){}
 }

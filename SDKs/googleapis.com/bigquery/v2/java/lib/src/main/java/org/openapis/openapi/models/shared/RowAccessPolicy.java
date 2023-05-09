@@ -18,6 +18,7 @@ public class RowAccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public RowAccessPolicy withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class RowAccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public RowAccessPolicy withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class RowAccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterPredicate")
     public String filterPredicate;
+
     public RowAccessPolicy withFilterPredicate(String filterPredicate) {
         this.filterPredicate = filterPredicate;
         return this;
@@ -51,6 +54,7 @@ public class RowAccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public RowAccessPolicy withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -59,9 +63,11 @@ public class RowAccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowAccessPolicyReference")
     public RowAccessPolicyReference rowAccessPolicyReference;
+
     public RowAccessPolicy withRowAccessPolicyReference(RowAccessPolicyReference rowAccessPolicyReference) {
         this.rowAccessPolicyReference = rowAccessPolicyReference;
         return this;
     }
     
+    public RowAccessPolicy(){}
 }

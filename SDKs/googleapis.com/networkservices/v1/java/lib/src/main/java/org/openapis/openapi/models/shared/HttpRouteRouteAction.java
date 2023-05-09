@@ -18,6 +18,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corsPolicy")
     public HttpRouteCorsPolicy corsPolicy;
+
     public HttpRouteRouteAction withCorsPolicy(HttpRouteCorsPolicy corsPolicy) {
         this.corsPolicy = corsPolicy;
         return this;
@@ -29,6 +30,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public HttpRouteDestination[] destinations;
+
     public HttpRouteRouteAction withDestinations(HttpRouteDestination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -40,6 +42,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faultInjectionPolicy")
     public HttpRouteFaultInjectionPolicy faultInjectionPolicy;
+
     public HttpRouteRouteAction withFaultInjectionPolicy(HttpRouteFaultInjectionPolicy faultInjectionPolicy) {
         this.faultInjectionPolicy = faultInjectionPolicy;
         return this;
@@ -51,6 +54,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect")
     public HttpRouteRedirect redirect;
+
     public HttpRouteRouteAction withRedirect(HttpRouteRedirect redirect) {
         this.redirect = redirect;
         return this;
@@ -62,6 +66,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestHeaderModifier")
     public HttpRouteHeaderModifier requestHeaderModifier;
+
     public HttpRouteRouteAction withRequestHeaderModifier(HttpRouteHeaderModifier requestHeaderModifier) {
         this.requestHeaderModifier = requestHeaderModifier;
         return this;
@@ -73,6 +78,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMirrorPolicy")
     public HttpRouteRequestMirrorPolicy requestMirrorPolicy;
+
     public HttpRouteRouteAction withRequestMirrorPolicy(HttpRouteRequestMirrorPolicy requestMirrorPolicy) {
         this.requestMirrorPolicy = requestMirrorPolicy;
         return this;
@@ -84,6 +90,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseHeaderModifier")
     public HttpRouteHeaderModifier responseHeaderModifier;
+
     public HttpRouteRouteAction withResponseHeaderModifier(HttpRouteHeaderModifier responseHeaderModifier) {
         this.responseHeaderModifier = responseHeaderModifier;
         return this;
@@ -95,6 +102,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPolicy")
     public HttpRouteRetryPolicy retryPolicy;
+
     public HttpRouteRouteAction withRetryPolicy(HttpRouteRetryPolicy retryPolicy) {
         this.retryPolicy = retryPolicy;
         return this;
@@ -106,6 +114,7 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public HttpRouteRouteAction withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
@@ -117,9 +126,11 @@ public class HttpRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlRewrite")
     public HttpRouteURLRewrite urlRewrite;
+
     public HttpRouteRouteAction withUrlRewrite(HttpRouteURLRewrite urlRewrite) {
         this.urlRewrite = urlRewrite;
         return this;
     }
     
+    public HttpRouteRouteAction(){}
 }

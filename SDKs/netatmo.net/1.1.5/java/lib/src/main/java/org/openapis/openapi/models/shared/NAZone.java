@@ -12,6 +12,7 @@ public class NAZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public NAZone withId(Integer id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class NAZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NAZone withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class NAZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temp")
     public Float temp;
+
     public NAZone withTemp(Float temp) {
         this.temp = temp;
         return this;
@@ -36,9 +39,11 @@ public class NAZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Integer type;
+
     public NAZone withType(Integer type) {
         this.type = type;
         return this;
     }
     
+    public NAZone(){}
 }

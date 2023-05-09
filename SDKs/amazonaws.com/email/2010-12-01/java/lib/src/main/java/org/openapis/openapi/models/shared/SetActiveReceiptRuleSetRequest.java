@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SetActiveReceiptRuleSetRequest {
     
     public String ruleSetName;
+
     public SetActiveReceiptRuleSetRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public SetActiveReceiptRuleSetRequest(){}
 }

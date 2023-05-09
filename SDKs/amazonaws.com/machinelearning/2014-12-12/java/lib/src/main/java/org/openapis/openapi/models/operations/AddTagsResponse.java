@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsResponse {
@@ -12,6 +13,7 @@ public class AddTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.AddTagsOutput addTagsOutput;
+
     public AddTagsResponse withAddTagsOutput(org.openapis.openapi.models.shared.AddTagsOutput addTagsOutput) {
         this.addTagsOutput = addTagsOutput;
         return this;
@@ -19,6 +21,7 @@ public class AddTagsResponse {
     
     
     public String contentType;
+
     public AddTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddTagsResponse {
      */
     
     public Object internalServerException;
+
     public AddTagsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class AddTagsResponse {
      */
     
     public Object invalidInputException;
+
     public AddTagsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class AddTagsResponse {
      */
     
     public Object invalidTagException;
+
     public AddTagsResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -56,6 +62,7 @@ public class AddTagsResponse {
     
     
     public Integer statusCode;
+
     public AddTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AddTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AddTagsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddTagsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class AddTagsResponse {
      */
     
     public Object tagLimitExceededException;
+
     public AddTagsResponse withTagLimitExceededException(Object tagLimitExceededException) {
         this.tagLimitExceededException = tagLimitExceededException;
         return this;
     }
     
+    public AddTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

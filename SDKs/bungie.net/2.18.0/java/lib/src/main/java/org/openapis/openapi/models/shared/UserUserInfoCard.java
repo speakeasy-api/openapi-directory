@@ -16,6 +16,7 @@ public class UserUserInfoCard {
      */
     
     public Integer[] applicableMembershipTypes;
+
     public UserUserInfoCard withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -26,6 +27,7 @@ public class UserUserInfoCard {
      */
     
     public String bungieGlobalDisplayName;
+
     public UserUserInfoCard withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -36,6 +38,7 @@ public class UserUserInfoCard {
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public UserUserInfoCard withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -46,6 +49,7 @@ public class UserUserInfoCard {
      */
     
     public Integer crossSaveOverride;
+
     public UserUserInfoCard withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -56,6 +60,7 @@ public class UserUserInfoCard {
      */
     
     public String displayName;
+
     public UserUserInfoCard withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -66,6 +71,7 @@ public class UserUserInfoCard {
      */
     
     public String iconPath;
+
     public UserUserInfoCard withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -76,6 +82,7 @@ public class UserUserInfoCard {
      */
     
     public Boolean isPublic;
+
     public UserUserInfoCard withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -86,6 +93,7 @@ public class UserUserInfoCard {
      */
     
     public Long membershipId;
+
     public UserUserInfoCard withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -96,6 +104,7 @@ public class UserUserInfoCard {
      */
     
     public Integer membershipType;
+
     public UserUserInfoCard withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -106,9 +115,11 @@ public class UserUserInfoCard {
      */
     
     public String supplementalDisplayName;
+
     public UserUserInfoCard withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
     }
     
+    public UserUserInfoCard(){}
 }

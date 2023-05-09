@@ -18,6 +18,7 @@ public class PartyRoleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partyRoleType")
     public PartyRolePartyRoleTypeEnum partyRoleType;
+
     public PartyRoleInput withPartyRoleType(PartyRolePartyRoleTypeEnum partyRoleType) {
         this.partyRoleType = partyRoleType;
         return this;
@@ -28,6 +29,7 @@ public class PartyRoleInput {
      */
     @JsonProperty("relatedPartyId")
     public String relatedPartyId;
+
     public PartyRoleInput withRelatedPartyId(String relatedPartyId) {
         this.relatedPartyId = relatedPartyId;
         return this;
@@ -39,6 +41,7 @@ public class PartyRoleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedPartyRoleType")
     public PartyRoleRelatedPartyRoleTypeEnum relatedPartyRoleType;
+
     public PartyRoleInput withRelatedPartyRoleType(PartyRoleRelatedPartyRoleTypeEnum relatedPartyRoleType) {
         this.relatedPartyRoleType = relatedPartyRoleType;
         return this;
@@ -49,9 +52,14 @@ public class PartyRoleInput {
      */
     @JsonProperty("relationshipType")
     public PartyRoleRelationshipTypeEnum relationshipType;
+
     public PartyRoleInput withRelationshipType(PartyRoleRelationshipTypeEnum relationshipType) {
         this.relationshipType = relationshipType;
         return this;
     }
     
+    public PartyRoleInput(@JsonProperty("relatedPartyId") String relatedPartyId, @JsonProperty("relationshipType") PartyRoleRelationshipTypeEnum relationshipType) {
+        this.relatedPartyId = relatedPartyId;
+        this.relationshipType = relationshipType;
+  }
 }

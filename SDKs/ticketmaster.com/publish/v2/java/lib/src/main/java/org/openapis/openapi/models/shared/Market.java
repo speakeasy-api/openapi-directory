@@ -18,9 +18,11 @@ public class Market {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Market withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Market(){}
 }

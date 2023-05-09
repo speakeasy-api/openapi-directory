@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutUserPermissionsBoundaryRequest {
     
     public String permissionsBoundary;
+
     public PutUserPermissionsBoundaryRequest withPermissionsBoundary(String permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -16,9 +17,14 @@ public class PutUserPermissionsBoundaryRequest {
     
     
     public String userName;
+
     public PutUserPermissionsBoundaryRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public PutUserPermissionsBoundaryRequest(@JsonProperty("PermissionsBoundary") String permissionsBoundary, @JsonProperty("UserName") String userName) {
+        this.permissionsBoundary = permissionsBoundary;
+        this.userName = userName;
+  }
 }

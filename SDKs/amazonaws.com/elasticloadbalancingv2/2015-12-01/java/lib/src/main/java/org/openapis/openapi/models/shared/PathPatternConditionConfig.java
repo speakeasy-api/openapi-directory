@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class PathPatternConditionConfig {
     
     public String[] values;
+
     public PathPatternConditionConfig withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PathPatternConditionConfig(){}
 }

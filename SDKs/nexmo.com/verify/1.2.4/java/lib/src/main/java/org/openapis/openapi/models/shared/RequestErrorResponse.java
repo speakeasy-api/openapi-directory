@@ -18,6 +18,7 @@ public class RequestErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_text")
     public String errorText;
+
     public RequestErrorResponse withErrorText(String errorText) {
         this.errorText = errorText;
         return this;
@@ -29,6 +30,7 @@ public class RequestErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public RequestErrorResponse withNetwork(String network) {
         this.network = network;
         return this;
@@ -40,6 +42,7 @@ public class RequestErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public RequestErrorResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -67,9 +70,11 @@ public class RequestErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RequestErrorResponseStatusEnum status;
+
     public RequestErrorResponse withStatus(RequestErrorResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RequestErrorResponse(){}
 }

@@ -12,9 +12,13 @@ public class ArchiveWaveRequestBody {
      */
     @JsonProperty("waveID")
     public String waveID;
+
     public ArchiveWaveRequestBody withWaveID(String waveID) {
         this.waveID = waveID;
         return this;
     }
     
+    public ArchiveWaveRequestBody(@JsonProperty("waveID") String waveID) {
+        this.waveID = waveID;
+  }
 }

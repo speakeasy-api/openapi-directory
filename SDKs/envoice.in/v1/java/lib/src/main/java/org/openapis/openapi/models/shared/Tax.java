@@ -12,6 +12,7 @@ public class Tax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public Tax withId(Integer id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class Tax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Tax withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class Tax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public Double percentage;
+
     public Tax withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
@@ -36,9 +39,11 @@ public class Tax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public Integer userId;
+
     public Tax withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public Tax(){}
 }

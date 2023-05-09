@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DeidentifyTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deidentifyConfig")
     public GooglePrivacyDlpV2DeidentifyConfig deidentifyConfig;
+
     public GooglePrivacyDlpV2DeidentifyTemplateInput withDeidentifyConfig(GooglePrivacyDlpV2DeidentifyConfig deidentifyConfig) {
         this.deidentifyConfig = deidentifyConfig;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2DeidentifyTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GooglePrivacyDlpV2DeidentifyTemplateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2DeidentifyTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GooglePrivacyDlpV2DeidentifyTemplateInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeidentifyTemplateInput(){}
 }

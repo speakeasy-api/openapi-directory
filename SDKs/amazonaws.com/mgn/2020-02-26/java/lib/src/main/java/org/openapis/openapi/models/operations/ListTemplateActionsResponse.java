@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTemplateActionsResponse {
     
     public String contentType;
+
     public ListTemplateActionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTemplateActionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTemplateActionsResponse listTemplateActionsResponse;
+
     public ListTemplateActionsResponse withListTemplateActionsResponse(org.openapis.openapi.models.shared.ListTemplateActionsResponse listTemplateActionsResponse) {
         this.listTemplateActionsResponse = listTemplateActionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListTemplateActionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTemplateActionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class ListTemplateActionsResponse {
     
     
     public Integer statusCode;
+
     public ListTemplateActionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListTemplateActionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTemplateActionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListTemplateActionsResponse {
      */
     
     public Object uninitializedAccountException;
+
     public ListTemplateActionsResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public ListTemplateActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

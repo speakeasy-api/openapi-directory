@@ -40,6 +40,7 @@ public class UpsertCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object")
     public CatalogObject catalogObject;
+
     public UpsertCatalogObjectResponse withCatalogObject(CatalogObject catalogObject) {
         this.catalogObject = catalogObject;
         return this;
@@ -51,6 +52,7 @@ public class UpsertCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public UpsertCatalogObjectResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -62,9 +64,11 @@ public class UpsertCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_mappings")
     public CatalogIdMapping[] idMappings;
+
     public UpsertCatalogObjectResponse withIdMappings(CatalogIdMapping[] idMappings) {
         this.idMappings = idMappings;
         return this;
     }
     
+    public UpsertCatalogObjectResponse(){}
 }

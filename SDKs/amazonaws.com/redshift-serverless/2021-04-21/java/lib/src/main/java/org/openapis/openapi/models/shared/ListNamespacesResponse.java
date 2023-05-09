@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListNamespacesResponse {
     @JsonProperty("namespaces")
     public Namespace[] namespaces;
+
     public ListNamespacesResponse withNamespaces(Namespace[] namespaces) {
         this.namespaces = namespaces;
         return this;
@@ -22,9 +23,13 @@ public class ListNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListNamespacesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNamespacesResponse(@JsonProperty("namespaces") Namespace[] namespaces) {
+        this.namespaces = namespaces;
+  }
 }

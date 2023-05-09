@@ -18,6 +18,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affinityCookieTtlSec")
     public Integer affinityCookieTtlSec;
+
     public BackendService withAffinityCookieTtlSec(Integer affinityCookieTtlSec) {
         this.affinityCookieTtlSec = affinityCookieTtlSec;
         return this;
@@ -29,6 +30,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backends")
     public Backend[] backends;
+
     public BackendService withBackends(Backend[] backends) {
         this.backends = backends;
         return this;
@@ -40,6 +42,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cdnPolicy")
     public BackendServiceCdnPolicy cdnPolicy;
+
     public BackendService withCdnPolicy(BackendServiceCdnPolicy cdnPolicy) {
         this.cdnPolicy = cdnPolicy;
         return this;
@@ -51,6 +54,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("circuitBreakers")
     public CircuitBreakers circuitBreakers;
+
     public BackendService withCircuitBreakers(CircuitBreakers circuitBreakers) {
         this.circuitBreakers = circuitBreakers;
         return this;
@@ -62,6 +66,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressionMode")
     public BackendServiceCompressionModeEnum compressionMode;
+
     public BackendService withCompressionMode(BackendServiceCompressionModeEnum compressionMode) {
         this.compressionMode = compressionMode;
         return this;
@@ -73,6 +78,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionDraining")
     public ConnectionDraining connectionDraining;
+
     public BackendService withConnectionDraining(ConnectionDraining connectionDraining) {
         this.connectionDraining = connectionDraining;
         return this;
@@ -84,6 +90,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionTrackingPolicy")
     public BackendServiceConnectionTrackingPolicy connectionTrackingPolicy;
+
     public BackendService withConnectionTrackingPolicy(BackendServiceConnectionTrackingPolicy connectionTrackingPolicy) {
         this.connectionTrackingPolicy = connectionTrackingPolicy;
         return this;
@@ -95,6 +102,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consistentHash")
     public ConsistentHashLoadBalancerSettings consistentHash;
+
     public BackendService withConsistentHash(ConsistentHashLoadBalancerSettings consistentHash) {
         this.consistentHash = consistentHash;
         return this;
@@ -106,6 +114,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public BackendService withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -117,6 +126,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customRequestHeaders")
     public String[] customRequestHeaders;
+
     public BackendService withCustomRequestHeaders(String[] customRequestHeaders) {
         this.customRequestHeaders = customRequestHeaders;
         return this;
@@ -128,6 +138,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customResponseHeaders")
     public String[] customResponseHeaders;
+
     public BackendService withCustomResponseHeaders(String[] customResponseHeaders) {
         this.customResponseHeaders = customResponseHeaders;
         return this;
@@ -139,6 +150,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BackendService withDescription(String description) {
         this.description = description;
         return this;
@@ -150,6 +162,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edgeSecurityPolicy")
     public String edgeSecurityPolicy;
+
     public BackendService withEdgeSecurityPolicy(String edgeSecurityPolicy) {
         this.edgeSecurityPolicy = edgeSecurityPolicy;
         return this;
@@ -161,6 +174,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableCDN")
     public Boolean enableCDN;
+
     public BackendService withEnableCDN(Boolean enableCDN) {
         this.enableCDN = enableCDN;
         return this;
@@ -172,6 +186,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failoverPolicy")
     public BackendServiceFailoverPolicy failoverPolicy;
+
     public BackendService withFailoverPolicy(BackendServiceFailoverPolicy failoverPolicy) {
         this.failoverPolicy = failoverPolicy;
         return this;
@@ -183,6 +198,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public BackendService withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -194,6 +210,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthChecks")
     public String[] healthChecks;
+
     public BackendService withHealthChecks(String[] healthChecks) {
         this.healthChecks = healthChecks;
         return this;
@@ -205,6 +222,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iap")
     public BackendServiceIAP iap;
+
     public BackendService withIap(BackendServiceIAP iap) {
         this.iap = iap;
         return this;
@@ -216,6 +234,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BackendService withId(String id) {
         this.id = id;
         return this;
@@ -227,6 +246,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BackendService withKind(String kind) {
         this.kind = kind;
         return this;
@@ -238,6 +258,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancingScheme")
     public BackendServiceLoadBalancingSchemeEnum loadBalancingScheme;
+
     public BackendService withLoadBalancingScheme(BackendServiceLoadBalancingSchemeEnum loadBalancingScheme) {
         this.loadBalancingScheme = loadBalancingScheme;
         return this;
@@ -249,6 +270,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localityLbPolicies")
     public BackendServiceLocalityLoadBalancingPolicyConfig[] localityLbPolicies;
+
     public BackendService withLocalityLbPolicies(BackendServiceLocalityLoadBalancingPolicyConfig[] localityLbPolicies) {
         this.localityLbPolicies = localityLbPolicies;
         return this;
@@ -260,6 +282,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localityLbPolicy")
     public BackendServiceLocalityLbPolicyEnum localityLbPolicy;
+
     public BackendService withLocalityLbPolicy(BackendServiceLocalityLbPolicyEnum localityLbPolicy) {
         this.localityLbPolicy = localityLbPolicy;
         return this;
@@ -271,6 +294,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public BackendServiceLogConfig logConfig;
+
     public BackendService withLogConfig(BackendServiceLogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -282,6 +306,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStreamDuration")
     public Duration maxStreamDuration;
+
     public BackendService withMaxStreamDuration(Duration maxStreamDuration) {
         this.maxStreamDuration = maxStreamDuration;
         return this;
@@ -293,6 +318,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BackendService withName(String name) {
         this.name = name;
         return this;
@@ -304,6 +330,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public BackendService withNetwork(String network) {
         this.network = network;
         return this;
@@ -315,6 +342,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outlierDetection")
     public OutlierDetection outlierDetection;
+
     public BackendService withOutlierDetection(OutlierDetection outlierDetection) {
         this.outlierDetection = outlierDetection;
         return this;
@@ -326,6 +354,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public BackendService withPort(Integer port) {
         this.port = port;
         return this;
@@ -337,6 +366,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portName")
     public String portName;
+
     public BackendService withPortName(String portName) {
         this.portName = portName;
         return this;
@@ -348,6 +378,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public BackendServiceProtocolEnum protocol;
+
     public BackendService withProtocol(BackendServiceProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -359,6 +390,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public BackendService withRegion(String region) {
         this.region = region;
         return this;
@@ -370,6 +402,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicy")
     public String securityPolicy;
+
     public BackendService withSecurityPolicy(String securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
@@ -381,6 +414,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securitySettings")
     public SecuritySettings securitySettings;
+
     public BackendService withSecuritySettings(SecuritySettings securitySettings) {
         this.securitySettings = securitySettings;
         return this;
@@ -392,6 +426,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public BackendService withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -403,6 +438,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceBindings")
     public String[] serviceBindings;
+
     public BackendService withServiceBindings(String[] serviceBindings) {
         this.serviceBindings = serviceBindings;
         return this;
@@ -414,6 +450,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAffinity")
     public BackendServiceSessionAffinityEnum sessionAffinity;
+
     public BackendService withSessionAffinity(BackendServiceSessionAffinityEnum sessionAffinity) {
         this.sessionAffinity = sessionAffinity;
         return this;
@@ -425,6 +462,7 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetting")
     public Subsetting subsetting;
+
     public BackendService withSubsetting(Subsetting subsetting) {
         this.subsetting = subsetting;
         return this;
@@ -436,9 +474,11 @@ public class BackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSec")
     public Integer timeoutSec;
+
     public BackendService withTimeoutSec(Integer timeoutSec) {
         this.timeoutSec = timeoutSec;
         return this;
     }
     
+    public BackendService(){}
 }

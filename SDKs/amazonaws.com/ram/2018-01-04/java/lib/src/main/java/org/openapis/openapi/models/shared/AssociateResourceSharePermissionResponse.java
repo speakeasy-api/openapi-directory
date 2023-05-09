@@ -15,6 +15,7 @@ public class AssociateResourceSharePermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public AssociateResourceSharePermissionResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,9 +24,11 @@ public class AssociateResourceSharePermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnValue")
     public Boolean returnValue;
+
     public AssociateResourceSharePermissionResponse withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public AssociateResourceSharePermissionResponse(){}
 }

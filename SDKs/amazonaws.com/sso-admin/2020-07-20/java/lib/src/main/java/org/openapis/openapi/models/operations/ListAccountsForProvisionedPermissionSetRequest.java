@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccountsForProvisionedPermissionSetRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListAccountsForProvisionedPermissionSetRequest listAccountsForProvisionedPermissionSetRequest;
+
     public ListAccountsForProvisionedPermissionSetRequest withListAccountsForProvisionedPermissionSetRequest(org.openapis.openapi.models.shared.ListAccountsForProvisionedPermissionSetRequest listAccountsForProvisionedPermissionSetRequest) {
         this.listAccountsForProvisionedPermissionSetRequest = listAccountsForProvisionedPermissionSetRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListAccountsForProvisionedPermissionSetRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListAccountsForProvisionedPermissionSetRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAccountsForProvisionedPermissionSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAccountsForProvisionedPermissionSetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAccountsForProvisionedPermissionSetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAccountsForProvisionedPermissionSetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAccountsForProvisionedPermissionSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAccountsForProvisionedPermissionSetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAccountsForProvisionedPermissionSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListAccountsForProvisionedPermissionSetXAmzTargetEnum xAmzTarget;
+
     public ListAccountsForProvisionedPermissionSetRequest withXAmzTarget(ListAccountsForProvisionedPermissionSetXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListAccountsForProvisionedPermissionSetRequest(@JsonProperty("ListAccountsForProvisionedPermissionSetRequest") org.openapis.openapi.models.shared.ListAccountsForProvisionedPermissionSetRequest listAccountsForProvisionedPermissionSetRequest, @JsonProperty("X-Amz-Target") ListAccountsForProvisionedPermissionSetXAmzTargetEnum xAmzTarget) {
+        this.listAccountsForProvisionedPermissionSetRequest = listAccountsForProvisionedPermissionSetRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

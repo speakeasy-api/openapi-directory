@@ -15,6 +15,7 @@ public class ScalableTargetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Long maxCapacity;
+
     public ScalableTargetAction withMaxCapacity(Long maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -23,9 +24,11 @@ public class ScalableTargetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinCapacity")
     public Long minCapacity;
+
     public ScalableTargetAction withMinCapacity(Long minCapacity) {
         this.minCapacity = minCapacity;
         return this;
     }
     
+    public ScalableTargetAction(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListThingsResponse {
     
     public String contentType;
+
     public ListThingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListThingsResponse {
      */
     
     public Object internalFailureException;
+
     public ListThingsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListThingsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListThingsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListThingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListThingsResponse listThingsResponse;
+
     public ListThingsResponse withListThingsResponse(org.openapis.openapi.models.shared.ListThingsResponse listThingsResponse) {
         this.listThingsResponse = listThingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListThingsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListThingsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListThingsResponse {
     
     
     public Integer statusCode;
+
     public ListThingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListThingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListThingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListThingsResponse {
      */
     
     public Object throttlingException;
+
     public ListThingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListThingsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListThingsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListThingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

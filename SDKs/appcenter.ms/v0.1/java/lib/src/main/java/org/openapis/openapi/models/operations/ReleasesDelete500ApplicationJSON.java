@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReleasesDelete500ApplicationJSON {
     @JsonProperty("code")
     public ReleasesDelete500ApplicationJSONCodeEnum code;
+
     public ReleasesDelete500ApplicationJSON withCode(ReleasesDelete500ApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -21,9 +22,14 @@ public class ReleasesDelete500ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public ReleasesDelete500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReleasesDelete500ApplicationJSON(@JsonProperty("code") ReleasesDelete500ApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

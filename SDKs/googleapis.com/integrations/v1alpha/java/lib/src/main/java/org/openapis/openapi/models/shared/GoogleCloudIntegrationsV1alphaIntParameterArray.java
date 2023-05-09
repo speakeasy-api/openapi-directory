@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaIntParameterArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValues")
     public String[] intValues;
+
     public GoogleCloudIntegrationsV1alphaIntParameterArray withIntValues(String[] intValues) {
         this.intValues = intValues;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaIntParameterArray(){}
 }

@@ -21,6 +21,7 @@ public class DescribeTrackerResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public DescribeTrackerResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -28,6 +29,7 @@ public class DescribeTrackerResponse {
     
     @JsonProperty("Description")
     public String description;
+
     public DescribeTrackerResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class DescribeTrackerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DescribeTrackerResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -44,6 +47,7 @@ public class DescribeTrackerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionFiltering")
     public PositionFilteringEnum positionFiltering;
+
     public DescribeTrackerResponse withPositionFiltering(PositionFilteringEnum positionFiltering) {
         this.positionFiltering = positionFiltering;
         return this;
@@ -52,6 +56,7 @@ public class DescribeTrackerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public DescribeTrackerResponsePricingPlanEnum pricingPlan;
+
     public DescribeTrackerResponse withPricingPlan(DescribeTrackerResponsePricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -60,6 +65,7 @@ public class DescribeTrackerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanDataSource")
     public String pricingPlanDataSource;
+
     public DescribeTrackerResponse withPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
         return this;
@@ -68,6 +74,7 @@ public class DescribeTrackerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeTrackerResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -75,6 +82,7 @@ public class DescribeTrackerResponse {
     
     @JsonProperty("TrackerArn")
     public String trackerArn;
+
     public DescribeTrackerResponse withTrackerArn(String trackerArn) {
         this.trackerArn = trackerArn;
         return this;
@@ -82,6 +90,7 @@ public class DescribeTrackerResponse {
     
     @JsonProperty("TrackerName")
     public String trackerName;
+
     public DescribeTrackerResponse withTrackerName(String trackerName) {
         this.trackerName = trackerName;
         return this;
@@ -91,9 +100,17 @@ public class DescribeTrackerResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public DescribeTrackerResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribeTrackerResponse(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("Description") String description, @JsonProperty("TrackerArn") String trackerArn, @JsonProperty("TrackerName") String trackerName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.description = description;
+        this.trackerArn = trackerArn;
+        this.trackerName = trackerName;
+        this.updateTime = updateTime;
+  }
 }

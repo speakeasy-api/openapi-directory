@@ -18,9 +18,11 @@ public class BooleanPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforced")
     public Boolean enforced;
+
     public BooleanPolicy withEnforced(Boolean enforced) {
         this.enforced = enforced;
         return this;
     }
     
+    public BooleanPolicy(){}
 }

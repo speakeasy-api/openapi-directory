@@ -18,6 +18,7 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovalRules")
     public PatchRuleGroup approvalRules;
+
     public BaselineOverride withApprovalRules(PatchRuleGroup approvalRules) {
         this.approvalRules = approvalRules;
         return this;
@@ -26,6 +27,7 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatches")
     public String[] approvedPatches;
+
     public BaselineOverride withApprovedPatches(String[] approvedPatches) {
         this.approvedPatches = approvedPatches;
         return this;
@@ -34,6 +36,7 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatchesComplianceLevel")
     public PatchComplianceLevelEnum approvedPatchesComplianceLevel;
+
     public BaselineOverride withApprovedPatchesComplianceLevel(PatchComplianceLevelEnum approvedPatchesComplianceLevel) {
         this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
         return this;
@@ -42,6 +45,7 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
+
     public BaselineOverride withApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
         this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
         return this;
@@ -53,6 +57,7 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalFilters")
     public PatchFilterGroup globalFilters;
+
     public BaselineOverride withGlobalFilters(PatchFilterGroup globalFilters) {
         this.globalFilters = globalFilters;
         return this;
@@ -61,6 +66,7 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public BaselineOverride withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -69,6 +75,7 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RejectedPatches")
     public String[] rejectedPatches;
+
     public BaselineOverride withRejectedPatches(String[] rejectedPatches) {
         this.rejectedPatches = rejectedPatches;
         return this;
@@ -77,6 +84,7 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RejectedPatchesAction")
     public PatchActionEnum rejectedPatchesAction;
+
     public BaselineOverride withRejectedPatchesAction(PatchActionEnum rejectedPatchesAction) {
         this.rejectedPatchesAction = rejectedPatchesAction;
         return this;
@@ -85,9 +93,11 @@ public class BaselineOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sources")
     public PatchSource[] sources;
+
     public BaselineOverride withSources(PatchSource[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public BaselineOverride(){}
 }

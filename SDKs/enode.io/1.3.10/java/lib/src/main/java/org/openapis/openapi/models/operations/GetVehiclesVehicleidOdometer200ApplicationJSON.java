@@ -20,6 +20,7 @@ public class GetVehiclesVehicleidOdometer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Double distance;
+
     public GetVehiclesVehicleidOdometer200ApplicationJSON withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -32,9 +33,11 @@ public class GetVehiclesVehicleidOdometer200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastUpdated")
     public LocalDate lastUpdated;
+
     public GetVehiclesVehicleidOdometer200ApplicationJSON withLastUpdated(LocalDate lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
     }
     
+    public GetVehiclesVehicleidOdometer200ApplicationJSON(){}
 }

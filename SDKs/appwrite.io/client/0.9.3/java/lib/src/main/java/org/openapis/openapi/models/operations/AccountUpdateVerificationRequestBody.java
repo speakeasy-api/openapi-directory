@@ -12,6 +12,7 @@ public class AccountUpdateVerificationRequestBody {
      */
     @JsonProperty("secret")
     public String secret;
+
     public AccountUpdateVerificationRequestBody withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -22,9 +23,14 @@ public class AccountUpdateVerificationRequestBody {
      */
     @JsonProperty("userId")
     public String userId;
+
     public AccountUpdateVerificationRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AccountUpdateVerificationRequestBody(@JsonProperty("secret") String secret, @JsonProperty("userId") String userId) {
+        this.secret = secret;
+        this.userId = userId;
+  }
 }

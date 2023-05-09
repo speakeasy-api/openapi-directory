@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SelfManagedActiveDirectoryConfiguration {
     @JsonProperty("DnsIps")
     public String[] dnsIps;
+
     public SelfManagedActiveDirectoryConfiguration withDnsIps(String[] dnsIps) {
         this.dnsIps = dnsIps;
         return this;
@@ -21,6 +22,7 @@ public class SelfManagedActiveDirectoryConfiguration {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public SelfManagedActiveDirectoryConfiguration withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,6 +31,7 @@ public class SelfManagedActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemAdministratorsGroup")
     public String fileSystemAdministratorsGroup;
+
     public SelfManagedActiveDirectoryConfiguration withFileSystemAdministratorsGroup(String fileSystemAdministratorsGroup) {
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
         return this;
@@ -37,6 +40,7 @@ public class SelfManagedActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitDistinguishedName")
     public String organizationalUnitDistinguishedName;
+
     public SelfManagedActiveDirectoryConfiguration withOrganizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
         return this;
@@ -44,6 +48,7 @@ public class SelfManagedActiveDirectoryConfiguration {
     
     @JsonProperty("Password")
     public String password;
+
     public SelfManagedActiveDirectoryConfiguration withPassword(String password) {
         this.password = password;
         return this;
@@ -51,9 +56,16 @@ public class SelfManagedActiveDirectoryConfiguration {
     
     @JsonProperty("UserName")
     public String userName;
+
     public SelfManagedActiveDirectoryConfiguration withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public SelfManagedActiveDirectoryConfiguration(@JsonProperty("UserName") String userName, @JsonProperty("Password") String password, @JsonProperty("DnsIps") String[] dnsIps, @JsonProperty("DomainName") String domainName) {
+        this.userName = userName;
+        this.password = password;
+        this.dnsIps = dnsIps;
+        this.domainName = domainName;
+  }
 }

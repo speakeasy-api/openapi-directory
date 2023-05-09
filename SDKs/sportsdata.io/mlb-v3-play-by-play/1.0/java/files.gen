@@ -42,4 +42,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Game.java
 lib/src/main/java/org/openapis/openapi/models/shared/Series.java
 lib/src/main/java/org/openapis/openapi/models/shared/Inning.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDeveloperAccountsDeveloperAccountIdRequest {
@@ -12,6 +13,7 @@ public class PatchDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PatchDeveloperAccountsDeveloperAccountIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -22,6 +24,7 @@ public class PatchDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerAccountId")
     public String developerAccountId;
+
     public PatchDeveloperAccountsDeveloperAccountIdRequest withDeveloperAccountId(String developerAccountId) {
         this.developerAccountId = developerAccountId;
         return this;
@@ -32,6 +35,7 @@ public class PatchDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public PatchDeveloperAccountsDeveloperAccountIdRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -42,6 +46,7 @@ public class PatchDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public PatchDeveloperAccountsDeveloperAccountIdRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -52,9 +57,14 @@ public class PatchDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public PatchDeveloperAccountsDeveloperAccountIdRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PatchDeveloperAccountsDeveloperAccountIdRequest(@JsonProperty("developerAccountId") String developerAccountId, @JsonProperty("developerId") String developerId) {
+        this.developerAccountId = developerAccountId;
+        this.developerId = developerId;
+  }
 }

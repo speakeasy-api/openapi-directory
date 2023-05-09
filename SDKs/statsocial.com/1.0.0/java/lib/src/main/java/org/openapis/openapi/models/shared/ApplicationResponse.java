@@ -12,6 +12,7 @@ public class ApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remaining_count")
     public Long remainingCount;
+
     public ApplicationResponse withRemainingCount(Long remainingCount) {
         this.remainingCount = remainingCount;
         return this;
@@ -20,6 +21,7 @@ public class ApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reports")
     public ReportInfo reports;
+
     public ApplicationResponse withReports(ReportInfo reports) {
         this.reports = reports;
         return this;
@@ -28,6 +30,7 @@ public class ApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_reports_count")
     public Long totalReportsCount;
+
     public ApplicationResponse withTotalReportsCount(Long totalReportsCount) {
         this.totalReportsCount = totalReportsCount;
         return this;
@@ -36,9 +39,11 @@ public class ApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_reports_done")
     public Long totalReportsDone;
+
     public ApplicationResponse withTotalReportsDone(Long totalReportsDone) {
         this.totalReportsDone = totalReportsDone;
         return this;
     }
     
+    public ApplicationResponse(){}
 }

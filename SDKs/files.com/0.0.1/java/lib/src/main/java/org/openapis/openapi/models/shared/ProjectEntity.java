@@ -18,6 +18,7 @@ public class ProjectEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("global_access")
     public ProjectEntityGlobalAccessEnum globalAccess;
+
     public ProjectEntity withGlobalAccess(ProjectEntityGlobalAccessEnum globalAccess) {
         this.globalAccess = globalAccess;
         return this;
@@ -29,9 +30,11 @@ public class ProjectEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ProjectEntity withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public ProjectEntity(){}
 }

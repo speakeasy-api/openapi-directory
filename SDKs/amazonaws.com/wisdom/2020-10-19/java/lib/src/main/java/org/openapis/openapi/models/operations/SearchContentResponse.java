@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchContentResponse {
@@ -12,6 +13,7 @@ public class SearchContentResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchContentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchContentResponse {
     
     
     public String contentType;
+
     public SearchContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchContentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchContentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class SearchContentResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchContentResponse searchContentResponse;
+
     public SearchContentResponse withSearchContentResponse(org.openapis.openapi.models.shared.SearchContentResponse searchContentResponse) {
         this.searchContentResponse = searchContentResponse;
         return this;
@@ -46,6 +51,7 @@ public class SearchContentResponse {
     
     
     public Integer statusCode;
+
     public SearchContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SearchContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class SearchContentResponse {
      */
     
     public Object validationException;
+
     public SearchContentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

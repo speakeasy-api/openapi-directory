@@ -12,6 +12,7 @@ public class InviteAccountToOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public InviteAccountToOrganizationRequest withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -20,6 +21,7 @@ public class InviteAccountToOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public InviteAccountToOrganizationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -27,9 +29,13 @@ public class InviteAccountToOrganizationRequest {
     
     @JsonProperty("Target")
     public HandshakeParty target;
+
     public InviteAccountToOrganizationRequest withTarget(HandshakeParty target) {
         this.target = target;
         return this;
     }
     
+    public InviteAccountToOrganizationRequest(@JsonProperty("Target") HandshakeParty target) {
+        this.target = target;
+  }
 }

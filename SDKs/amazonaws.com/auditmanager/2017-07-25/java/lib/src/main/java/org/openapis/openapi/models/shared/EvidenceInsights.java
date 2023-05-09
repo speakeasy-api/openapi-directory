@@ -15,6 +15,7 @@ public class EvidenceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compliantEvidenceCount")
     public Long compliantEvidenceCount;
+
     public EvidenceInsights withCompliantEvidenceCount(Long compliantEvidenceCount) {
         this.compliantEvidenceCount = compliantEvidenceCount;
         return this;
@@ -23,6 +24,7 @@ public class EvidenceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inconclusiveEvidenceCount")
     public Long inconclusiveEvidenceCount;
+
     public EvidenceInsights withInconclusiveEvidenceCount(Long inconclusiveEvidenceCount) {
         this.inconclusiveEvidenceCount = inconclusiveEvidenceCount;
         return this;
@@ -31,9 +33,11 @@ public class EvidenceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noncompliantEvidenceCount")
     public Long noncompliantEvidenceCount;
+
     public EvidenceInsights withNoncompliantEvidenceCount(Long noncompliantEvidenceCount) {
         this.noncompliantEvidenceCount = noncompliantEvidenceCount;
         return this;
     }
     
+    public EvidenceInsights(){}
 }

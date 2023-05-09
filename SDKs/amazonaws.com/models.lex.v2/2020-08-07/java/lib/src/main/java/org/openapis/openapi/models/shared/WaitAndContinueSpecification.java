@@ -15,6 +15,7 @@ public class WaitAndContinueSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public WaitAndContinueSpecification withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,6 +23,7 @@ public class WaitAndContinueSpecification {
     
     @JsonProperty("continueResponse")
     public ResponseSpecification continueResponse;
+
     public WaitAndContinueSpecification withContinueResponse(ResponseSpecification continueResponse) {
         this.continueResponse = continueResponse;
         return this;
@@ -30,6 +32,7 @@ public class WaitAndContinueSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stillWaitingResponse")
     public StillWaitingResponseSpecification stillWaitingResponse;
+
     public WaitAndContinueSpecification withStillWaitingResponse(StillWaitingResponseSpecification stillWaitingResponse) {
         this.stillWaitingResponse = stillWaitingResponse;
         return this;
@@ -37,9 +40,14 @@ public class WaitAndContinueSpecification {
     
     @JsonProperty("waitingResponse")
     public ResponseSpecification waitingResponse;
+
     public WaitAndContinueSpecification withWaitingResponse(ResponseSpecification waitingResponse) {
         this.waitingResponse = waitingResponse;
         return this;
     }
     
+    public WaitAndContinueSpecification(@JsonProperty("continueResponse") ResponseSpecification continueResponse, @JsonProperty("waitingResponse") ResponseSpecification waitingResponse) {
+        this.continueResponse = continueResponse;
+        this.waitingResponse = waitingResponse;
+  }
 }

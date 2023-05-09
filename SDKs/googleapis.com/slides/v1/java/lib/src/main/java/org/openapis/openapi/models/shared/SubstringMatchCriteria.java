@@ -18,6 +18,7 @@ public class SubstringMatchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchCase")
     public Boolean matchCase;
+
     public SubstringMatchCriteria withMatchCase(Boolean matchCase) {
         this.matchCase = matchCase;
         return this;
@@ -29,9 +30,11 @@ public class SubstringMatchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public SubstringMatchCriteria withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SubstringMatchCriteria(){}
 }

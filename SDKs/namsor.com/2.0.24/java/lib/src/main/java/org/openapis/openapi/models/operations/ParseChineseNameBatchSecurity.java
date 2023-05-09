@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ParseChineseNameBatchSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-KEY")
     public String apiKey;
+
     public ParseChineseNameBatchSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public ParseChineseNameBatchSecurity(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

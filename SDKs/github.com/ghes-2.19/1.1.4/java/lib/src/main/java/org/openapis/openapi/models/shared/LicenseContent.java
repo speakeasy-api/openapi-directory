@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LicenseContent {
     @JsonProperty("_links")
     public LicenseContentLinks links;
+
     public LicenseContent withLinks(LicenseContentLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class LicenseContent {
     
     @JsonProperty("content")
     public String content;
+
     public LicenseContent withContent(String content) {
         this.content = content;
         return this;
@@ -26,6 +28,7 @@ public class LicenseContent {
     
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public LicenseContent withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -33,6 +36,7 @@ public class LicenseContent {
     
     @JsonProperty("encoding")
     public String encoding;
+
     public LicenseContent withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -40,6 +44,7 @@ public class LicenseContent {
     
     @JsonProperty("git_url")
     public String gitUrl;
+
     public LicenseContent withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -47,6 +52,7 @@ public class LicenseContent {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public LicenseContent withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -57,6 +63,7 @@ public class LicenseContent {
      */
     @JsonProperty("license")
     public NullableLicenseSimple license;
+
     public LicenseContent withLicense(NullableLicenseSimple license) {
         this.license = license;
         return this;
@@ -64,6 +71,7 @@ public class LicenseContent {
     
     @JsonProperty("name")
     public String name;
+
     public LicenseContent withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +79,7 @@ public class LicenseContent {
     
     @JsonProperty("path")
     public String path;
+
     public LicenseContent withPath(String path) {
         this.path = path;
         return this;
@@ -78,6 +87,7 @@ public class LicenseContent {
     
     @JsonProperty("sha")
     public String sha;
+
     public LicenseContent withSha(String sha) {
         this.sha = sha;
         return this;
@@ -85,6 +95,7 @@ public class LicenseContent {
     
     @JsonProperty("size")
     public Long size;
+
     public LicenseContent withSize(Long size) {
         this.size = size;
         return this;
@@ -92,6 +103,7 @@ public class LicenseContent {
     
     @JsonProperty("type")
     public String type;
+
     public LicenseContent withType(String type) {
         this.type = type;
         return this;
@@ -99,9 +111,25 @@ public class LicenseContent {
     
     @JsonProperty("url")
     public String url;
+
     public LicenseContent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LicenseContent(@JsonProperty("_links") LicenseContentLinks links, @JsonProperty("content") String content, @JsonProperty("download_url") String downloadUrl, @JsonProperty("encoding") String encoding, @JsonProperty("git_url") String gitUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("license") NullableLicenseSimple license, @JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("sha") String sha, @JsonProperty("size") Long size, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.links = links;
+        this.content = content;
+        this.downloadUrl = downloadUrl;
+        this.encoding = encoding;
+        this.gitUrl = gitUrl;
+        this.htmlUrl = htmlUrl;
+        this.license = license;
+        this.name = name;
+        this.path = path;
+        this.sha = sha;
+        this.size = size;
+        this.type = type;
+        this.url = url;
+  }
 }

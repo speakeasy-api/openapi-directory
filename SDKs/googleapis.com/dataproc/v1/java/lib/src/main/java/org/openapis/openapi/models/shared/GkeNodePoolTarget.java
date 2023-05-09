@@ -18,6 +18,7 @@ public class GkeNodePoolTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePool")
     public String nodePool;
+
     public GkeNodePoolTarget withNodePool(String nodePool) {
         this.nodePool = nodePool;
         return this;
@@ -29,6 +30,7 @@ public class GkeNodePoolTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolConfig")
     public GkeNodePoolConfig nodePoolConfig;
+
     public GkeNodePoolTarget withNodePoolConfig(GkeNodePoolConfig nodePoolConfig) {
         this.nodePoolConfig = nodePoolConfig;
         return this;
@@ -40,9 +42,11 @@ public class GkeNodePoolTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public GkeNodePoolTargetRolesEnum[] roles;
+
     public GkeNodePoolTarget withRoles(GkeNodePoolTargetRolesEnum[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public GkeNodePoolTarget(){}
 }

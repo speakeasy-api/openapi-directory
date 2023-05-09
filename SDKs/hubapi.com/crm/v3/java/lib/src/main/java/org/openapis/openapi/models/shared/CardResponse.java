@@ -22,6 +22,7 @@ public class CardResponse {
      */
     @JsonProperty("actions")
     public CardActions actions;
+
     public CardResponse withActions(CardActions actions) {
         this.actions = actions;
         return this;
@@ -35,6 +36,7 @@ public class CardResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CardResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +47,7 @@ public class CardResponse {
      */
     @JsonProperty("display")
     public CardDisplayBody display;
+
     public CardResponse withDisplay(CardDisplayBody display) {
         this.display = display;
         return this;
@@ -55,6 +58,7 @@ public class CardResponse {
      */
     @JsonProperty("fetch")
     public CardFetchBody fetch;
+
     public CardResponse withFetch(CardFetchBody fetch) {
         this.fetch = fetch;
         return this;
@@ -65,6 +69,7 @@ public class CardResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public CardResponse withId(String id) {
         this.id = id;
         return this;
@@ -75,6 +80,7 @@ public class CardResponse {
      */
     @JsonProperty("title")
     public String title;
+
     public CardResponse withTitle(String title) {
         this.title = title;
         return this;
@@ -88,9 +94,17 @@ public class CardResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public CardResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CardResponse(@JsonProperty("actions") CardActions actions, @JsonProperty("display") CardDisplayBody display, @JsonProperty("fetch") CardFetchBody fetch, @JsonProperty("id") String id, @JsonProperty("title") String title) {
+        this.actions = actions;
+        this.display = display;
+        this.fetch = fetch;
+        this.id = id;
+        this.title = title;
+  }
 }

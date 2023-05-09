@@ -18,9 +18,11 @@ public class AssignmentCreationGoogleClassroom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicId")
     public String topicId;
+
     public AssignmentCreationGoogleClassroom withTopicId(String topicId) {
         this.topicId = topicId;
         return this;
     }
     
+    public AssignmentCreationGoogleClassroom(){}
 }

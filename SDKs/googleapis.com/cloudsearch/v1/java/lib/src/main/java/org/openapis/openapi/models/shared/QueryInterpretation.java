@@ -12,6 +12,7 @@ public class QueryInterpretation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpretationType")
     public QueryInterpretationInterpretationTypeEnum interpretationType;
+
     public QueryInterpretation withInterpretationType(QueryInterpretationInterpretationTypeEnum interpretationType) {
         this.interpretationType = interpretationType;
         return this;
@@ -23,6 +24,7 @@ public class QueryInterpretation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpretedQuery")
     public String interpretedQuery;
+
     public QueryInterpretation withInterpretedQuery(String interpretedQuery) {
         this.interpretedQuery = interpretedQuery;
         return this;
@@ -34,9 +36,11 @@ public class QueryInterpretation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public QueryInterpretationReasonEnum reason;
+
     public QueryInterpretation withReason(QueryInterpretationReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public QueryInterpretation(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutoTerminationPolicyResponse {
     
     public String contentType;
+
     public GetAutoTerminationPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAutoTerminationPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAutoTerminationPolicyOutput getAutoTerminationPolicyOutput;
+
     public GetAutoTerminationPolicyResponse withGetAutoTerminationPolicyOutput(org.openapis.openapi.models.shared.GetAutoTerminationPolicyOutput getAutoTerminationPolicyOutput) {
         this.getAutoTerminationPolicyOutput = getAutoTerminationPolicyOutput;
         return this;
@@ -26,6 +29,7 @@ public class GetAutoTerminationPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetAutoTerminationPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAutoTerminationPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutoTerminationPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAutoTerminationPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

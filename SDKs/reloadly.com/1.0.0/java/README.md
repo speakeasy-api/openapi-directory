@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateANewQuestionRequestBody;
 import org.openapis.openapi.models.operations.CreateANewQuestionResponse;
 
@@ -33,7 +32,7 @@ public class Application {
                     add("quibusdam"),
                 }};
                 question = "unde";
-            }}            
+            }};            
 
             CreateANewQuestionResponse res = sdk.createANewQuestion(req);
 
@@ -43,16 +42,18 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createANewQuestion` - Create a New Question
-* `listAllQuestions` - List All Questions
+* [createANewQuestion](docs/sdk/README.md#createanewquestion) - Create a New Question
+* [listAllQuestions](docs/sdk/README.md#listallquestions) - List All Questions
 <!-- End SDK Available Operations -->
 
 ### Maturity

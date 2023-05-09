@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FourDoauthorizationRequest {
     @JsonProperty("prepareForRecurrency")
     public Boolean prepareForRecurrency;
+
     public FourDoauthorizationRequest withPrepareForRecurrency(Boolean prepareForRecurrency) {
         this.prepareForRecurrency = prepareForRecurrency;
         return this;
@@ -16,6 +17,7 @@ public class FourDoauthorizationRequest {
     
     @JsonProperty("softDescriptor")
     public String softDescriptor;
+
     public FourDoauthorizationRequest withSoftDescriptor(String softDescriptor) {
         this.softDescriptor = softDescriptor;
         return this;
@@ -23,9 +25,15 @@ public class FourDoauthorizationRequest {
     
     @JsonProperty("transactionId")
     public String transactionId;
+
     public FourDoauthorizationRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public FourDoauthorizationRequest(@JsonProperty("prepareForRecurrency") Boolean prepareForRecurrency, @JsonProperty("softDescriptor") String softDescriptor, @JsonProperty("transactionId") String transactionId) {
+        this.prepareForRecurrency = prepareForRecurrency;
+        this.softDescriptor = softDescriptor;
+        this.transactionId = transactionId;
+  }
 }

@@ -21,9 +21,11 @@ public class SearchOrdersSourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_names")
     public String[] sourceNames;
+
     public SearchOrdersSourceFilter withSourceNames(String[] sourceNames) {
         this.sourceNames = sourceNames;
         return this;
     }
     
+    public SearchOrdersSourceFilter(){}
 }

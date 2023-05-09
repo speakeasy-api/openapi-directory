@@ -18,6 +18,7 @@ public class IamPolicyAnalysisQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessSelector")
     public AccessSelector accessSelector;
+
     public IamPolicyAnalysisQuery withAccessSelector(AccessSelector accessSelector) {
         this.accessSelector = accessSelector;
         return this;
@@ -29,6 +30,7 @@ public class IamPolicyAnalysisQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionContext")
     public ConditionContext conditionContext;
+
     public IamPolicyAnalysisQuery withConditionContext(ConditionContext conditionContext) {
         this.conditionContext = conditionContext;
         return this;
@@ -40,6 +42,7 @@ public class IamPolicyAnalysisQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identitySelector")
     public IdentitySelector identitySelector;
+
     public IamPolicyAnalysisQuery withIdentitySelector(IdentitySelector identitySelector) {
         this.identitySelector = identitySelector;
         return this;
@@ -51,6 +54,7 @@ public class IamPolicyAnalysisQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Options options;
+
     public IamPolicyAnalysisQuery withOptions(Options options) {
         this.options = options;
         return this;
@@ -62,6 +66,7 @@ public class IamPolicyAnalysisQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSelector")
     public ResourceSelector resourceSelector;
+
     public IamPolicyAnalysisQuery withResourceSelector(ResourceSelector resourceSelector) {
         this.resourceSelector = resourceSelector;
         return this;
@@ -73,9 +78,11 @@ public class IamPolicyAnalysisQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public IamPolicyAnalysisQuery withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public IamPolicyAnalysisQuery(){}
 }

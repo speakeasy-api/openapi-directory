@@ -15,6 +15,7 @@ public class DeleteAwsLogSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public String[] failed;
+
     public DeleteAwsLogSourceResponse withFailed(String[] failed) {
         this.failed = failed;
         return this;
@@ -23,9 +24,11 @@ public class DeleteAwsLogSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing")
     public String[] processing;
+
     public DeleteAwsLogSourceResponse withProcessing(String[] processing) {
         this.processing = processing;
         return this;
     }
     
+    public DeleteAwsLogSourceResponse(){}
 }

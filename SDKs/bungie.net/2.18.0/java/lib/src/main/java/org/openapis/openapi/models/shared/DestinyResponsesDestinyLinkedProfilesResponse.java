@@ -17,6 +17,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponse {
      */
     
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership bnetMembership;
+
     public DestinyResponsesDestinyLinkedProfilesResponse withBnetMembership(DestinyResponsesDestinyLinkedProfilesResponseBnetMembership bnetMembership) {
         this.bnetMembership = bnetMembership;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponse {
      */
     
     public DestinyResponsesDestinyProfileUserInfoCard[] profiles;
+
     public DestinyResponsesDestinyLinkedProfilesResponse withProfiles(DestinyResponsesDestinyProfileUserInfoCard[] profiles) {
         this.profiles = profiles;
         return this;
@@ -37,9 +39,11 @@ public class DestinyResponsesDestinyLinkedProfilesResponse {
      */
     
     public DestinyResponsesDestinyErrorProfile[] profilesWithErrors;
+
     public DestinyResponsesDestinyLinkedProfilesResponse withProfilesWithErrors(DestinyResponsesDestinyErrorProfile[] profilesWithErrors) {
         this.profilesWithErrors = profilesWithErrors;
         return this;
     }
     
+    public DestinyResponsesDestinyLinkedProfilesResponse(){}
 }

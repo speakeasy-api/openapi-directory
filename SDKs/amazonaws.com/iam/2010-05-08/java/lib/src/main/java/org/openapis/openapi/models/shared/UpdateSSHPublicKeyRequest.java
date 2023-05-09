@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateSSHPublicKeyRequest {
     
     public String sshPublicKeyId;
+
     public UpdateSSHPublicKeyRequest withSSHPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateSSHPublicKeyRequest {
     
     
     public StatusTypeEnum status;
+
     public UpdateSSHPublicKeyRequest withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -23,9 +25,15 @@ public class UpdateSSHPublicKeyRequest {
     
     
     public String userName;
+
     public UpdateSSHPublicKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UpdateSSHPublicKeyRequest(@JsonProperty("SSHPublicKeyId") String sshPublicKeyId, @JsonProperty("Status") StatusTypeEnum status, @JsonProperty("UserName") String userName) {
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.status = status;
+        this.userName = userName;
+  }
 }

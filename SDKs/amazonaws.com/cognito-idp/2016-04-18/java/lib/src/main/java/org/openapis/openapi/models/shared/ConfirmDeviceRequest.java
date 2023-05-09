@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfirmDeviceRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public ConfirmDeviceRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -21,6 +22,7 @@ public class ConfirmDeviceRequest {
     
     @JsonProperty("DeviceKey")
     public String deviceKey;
+
     public ConfirmDeviceRequest withDeviceKey(String deviceKey) {
         this.deviceKey = deviceKey;
         return this;
@@ -29,6 +31,7 @@ public class ConfirmDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public ConfirmDeviceRequest withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -37,9 +40,14 @@ public class ConfirmDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceSecretVerifierConfig")
     public DeviceSecretVerifierConfigType deviceSecretVerifierConfig;
+
     public ConfirmDeviceRequest withDeviceSecretVerifierConfig(DeviceSecretVerifierConfigType deviceSecretVerifierConfig) {
         this.deviceSecretVerifierConfig = deviceSecretVerifierConfig;
         return this;
     }
     
+    public ConfirmDeviceRequest(@JsonProperty("AccessToken") String accessToken, @JsonProperty("DeviceKey") String deviceKey) {
+        this.accessToken = accessToken;
+        this.deviceKey = deviceKey;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateVolumeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volume")
     public Volume volume;
+
     public CreateVolumeResponse withVolume(Volume volume) {
         this.volume = volume;
         return this;
     }
     
+    public CreateVolumeResponse(){}
 }

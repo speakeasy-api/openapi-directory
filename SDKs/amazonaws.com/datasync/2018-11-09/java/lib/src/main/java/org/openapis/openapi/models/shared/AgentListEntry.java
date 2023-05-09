@@ -15,6 +15,7 @@ public class AgentListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentArn")
     public String agentArn;
+
     public AgentListEntry withAgentArn(String agentArn) {
         this.agentArn = agentArn;
         return this;
@@ -23,6 +24,7 @@ public class AgentListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AgentListEntry withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class AgentListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AgentStatusEnum status;
+
     public AgentListEntry withStatus(AgentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AgentListEntry(){}
 }

@@ -12,9 +12,11 @@ public class ArticleDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ArticleId")
     public Integer articleId;
+
     public ArticleDeleteRequest withArticleId(Integer articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public ArticleDeleteRequest(){}
 }

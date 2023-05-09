@@ -60,11 +60,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListResponse(contentType, httpRes.statusCode()) {{
             listAuctionPackagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeResponse(contentType, httpRes.statusCode()) {{
             auctionPackage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClientsResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClientsResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClientsResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClientsResponse(contentType, httpRes.statusCode()) {{
             auctionPackage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeResponse(contentType, httpRes.statusCode()) {{
             auctionPackage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClientsResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClientsResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClientsResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClientsResponse(contentType, httpRes.statusCode()) {{
             auctionPackage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsCreateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsCreateResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsCreateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsCreateResponse(contentType, httpRes.statusCode()) {{
             client = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsListResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsListResponse(contentType, httpRes.statusCode()) {{
             listClientsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersActivateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersActivateResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersActivateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersActivateResponse(contentType, httpRes.statusCode()) {{
             clientUser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,11 +426,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersCreateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersCreateResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersCreateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersCreateResponse(contentType, httpRes.statusCode()) {{
             clientUser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -490,11 +472,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateResponse(contentType, httpRes.statusCode()) {{
             clientUser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -536,11 +516,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeleteResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeleteResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeleteResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,11 +560,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersListResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersClientsUsersListResponse(contentType, httpRes.statusCode()) {{
             listClientUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreativeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreativeResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreativeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreativeResponse(contentType, httpRes.statusCode()) {{
             finalizedDeal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsListResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsListResponse(contentType, httpRes.statusCode()) {{
             listFinalizedDealsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,11 +696,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseResponse(contentType, httpRes.statusCode()) {{
             finalizedDeal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -772,11 +742,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse(contentType, httpRes.statusCode()) {{
             finalizedDeal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -820,11 +788,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeResponse(contentType, httpRes.statusCode()) {{
             finalizedDeal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -868,11 +834,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsAcceptResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsAcceptResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsAcceptResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsAcceptResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -916,11 +880,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsAddNoteResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsAddNoteResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsAddNoteResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsAddNoteResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -964,11 +926,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1012,11 +972,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdateResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             batchUpdateDealsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1058,11 +1016,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse(contentType, httpRes.statusCode()) {{
             listDealsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1106,11 +1062,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsPatchResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsPatchResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsPatchResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsPatchResponse(contentType, httpRes.statusCode()) {{
             deal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1152,11 +1106,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsListResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsListResponse(contentType, httpRes.statusCode()) {{
             listProposalsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1200,11 +1152,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsSendRfpResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsSendRfpResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsSendRfpResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersProposalsSendRfpResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1246,11 +1196,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesGetResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesGetResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesGetResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesGetResponse(contentType, httpRes.statusCode()) {{
             publisherProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1292,11 +1240,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesListResponse() {{
+        org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesListResponse res = new org.openapis.openapi.models.operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesListResponse(contentType, httpRes.statusCode()) {{
             listPublisherProfilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

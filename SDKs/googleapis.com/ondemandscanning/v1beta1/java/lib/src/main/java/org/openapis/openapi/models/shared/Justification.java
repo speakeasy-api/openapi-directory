@@ -18,6 +18,7 @@ public class Justification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public Justification withDetails(String details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class Justification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("justificationType")
     public JustificationJustificationTypeEnum justificationType;
+
     public Justification withJustificationType(JustificationJustificationTypeEnum justificationType) {
         this.justificationType = justificationType;
         return this;
     }
     
+    public Justification(){}
 }

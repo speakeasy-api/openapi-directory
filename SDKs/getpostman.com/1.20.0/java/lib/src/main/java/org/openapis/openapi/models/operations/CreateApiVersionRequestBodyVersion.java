@@ -12,6 +12,7 @@ public class CreateApiVersionRequestBodyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateApiVersionRequestBodyVersion withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class CreateApiVersionRequestBodyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public CreateApiVersionRequestBodyVersionSource source;
+
     public CreateApiVersionRequestBodyVersion withSource(CreateApiVersionRequestBodyVersionSource source) {
         this.source = source;
         return this;
     }
     
+    public CreateApiVersionRequestBodyVersion(){}
 }

@@ -15,6 +15,7 @@ public class UsageByAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public CurrencyEnum currency;
+
     public UsageByAccount withCurrency(CurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -23,6 +24,7 @@ public class UsageByAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedCost")
     public String estimatedCost;
+
     public UsageByAccount withEstimatedCost(String estimatedCost) {
         this.estimatedCost = estimatedCost;
         return this;
@@ -31,6 +33,7 @@ public class UsageByAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceLimit")
     public ServiceLimit serviceLimit;
+
     public UsageByAccount withServiceLimit(ServiceLimit serviceLimit) {
         this.serviceLimit = serviceLimit;
         return this;
@@ -39,9 +42,11 @@ public class UsageByAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UsageTypeEnum type;
+
     public UsageByAccount withType(UsageTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UsageByAccount(){}
 }

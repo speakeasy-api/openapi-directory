@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BrowseCSVRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=additionalOrder")
     public String additionalOrder;
+
     public BrowseCSVRequest withAdditionalOrder(String additionalOrder) {
         this.additionalOrder = additionalOrder;
         return this;
@@ -19,6 +20,7 @@ public class BrowseCSVRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondarySeparator")
     public String secondarySeparator;
+
     public BrowseCSVRequest withSecondarySeparator(String secondarySeparator) {
         this.secondarySeparator = secondarySeparator;
         return this;
@@ -29,6 +31,7 @@ public class BrowseCSVRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=separator")
     public String separator;
+
     public BrowseCSVRequest withSeparator(String separator) {
         this.separator = separator;
         return this;
@@ -39,9 +42,11 @@ public class BrowseCSVRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=viewId")
     public Long viewId;
+
     public BrowseCSVRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public BrowseCSVRequest(){}
 }

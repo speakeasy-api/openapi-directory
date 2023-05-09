@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SublabsListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public SublabsListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,9 +17,11 @@ public class SublabsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public SublabsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public SublabsListRequest(){}
 }

@@ -17,6 +17,7 @@ public class DestinationRead {
      */
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public DestinationRead withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -24,6 +25,7 @@ public class DestinationRead {
     
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationRead withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -31,6 +33,7 @@ public class DestinationRead {
     
     @JsonProperty("destinationId")
     public String destinationId;
+
     public DestinationRead withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -38,6 +41,7 @@ public class DestinationRead {
     
     @JsonProperty("destinationName")
     public String destinationName;
+
     public DestinationRead withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -46,6 +50,7 @@ public class DestinationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public DestinationRead withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -53,6 +58,7 @@ public class DestinationRead {
     
     @JsonProperty("name")
     public String name;
+
     public DestinationRead withName(String name) {
         this.name = name;
         return this;
@@ -60,9 +66,18 @@ public class DestinationRead {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public DestinationRead withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DestinationRead(@JsonProperty("connectionConfiguration") Object connectionConfiguration, @JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("destinationId") String destinationId, @JsonProperty("destinationName") String destinationName, @JsonProperty("name") String name, @JsonProperty("workspaceId") String workspaceId) {
+        this.connectionConfiguration = connectionConfiguration;
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.destinationId = destinationId;
+        this.destinationName = destinationName;
+        this.name = name;
+        this.workspaceId = workspaceId;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointPointDailyAllDayData {
     @JsonProperty("cloud_cover")
     public PointPointDailyAllDayCloudCoverData cloudCover;
+
     public PointPointDailyAllDayData withCloudCover(PointPointDailyAllDayCloudCoverData cloudCover) {
         this.cloudCover = cloudCover;
         return this;
@@ -22,6 +23,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dew_point")
     public Double dewPoint;
+
     public PointPointDailyAllDayData withDewPoint(Double dewPoint) {
         this.dewPoint = dewPoint;
         return this;
@@ -33,6 +35,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dew_point_max")
     public Double dewPointMax;
+
     public PointPointDailyAllDayData withDewPointMax(Double dewPointMax) {
         this.dewPointMax = dewPointMax;
         return this;
@@ -44,6 +47,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dew_point_min")
     public Double dewPointMin;
+
     public PointPointDailyAllDayData withDewPointMin(Double dewPointMin) {
         this.dewPointMin = dewPointMin;
         return this;
@@ -55,6 +59,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feels_like")
     public Double feelsLike;
+
     public PointPointDailyAllDayData withFeelsLike(Double feelsLike) {
         this.feelsLike = feelsLike;
         return this;
@@ -66,6 +71,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feels_like_max")
     public Double feelsLikeMax;
+
     public PointPointDailyAllDayData withFeelsLikeMax(Double feelsLikeMax) {
         this.feelsLikeMax = feelsLikeMax;
         return this;
@@ -77,6 +83,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feels_like_min")
     public Double feelsLikeMin;
+
     public PointPointDailyAllDayData withFeelsLikeMin(Double feelsLikeMin) {
         this.feelsLikeMin = feelsLikeMin;
         return this;
@@ -89,6 +96,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humidity")
     public Long humidity;
+
     public PointPointDailyAllDayData withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -139,6 +147,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public Long icon;
+
     public PointPointDailyAllDayData withIcon(Long icon) {
         this.icon = icon;
         return this;
@@ -151,6 +160,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ozone")
     public Double ozone;
+
     public PointPointDailyAllDayData withOzone(Double ozone) {
         this.ozone = ozone;
         return this;
@@ -158,6 +168,7 @@ public class PointPointDailyAllDayData {
     
     @JsonProperty("precipitation")
     public PointPointDailyAllDayPrecipitationData precipitation;
+
     public PointPointDailyAllDayData withPrecipitation(PointPointDailyAllDayPrecipitationData precipitation) {
         this.precipitation = precipitation;
         return this;
@@ -170,6 +181,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pressure")
     public Double pressure;
+
     public PointPointDailyAllDayData withPressure(Double pressure) {
         this.pressure = pressure;
         return this;
@@ -177,6 +189,7 @@ public class PointPointDailyAllDayData {
     
     @JsonProperty("probability")
     public PointPointDailyAllDayProbData probability;
+
     public PointPointDailyAllDayData withProbability(PointPointDailyAllDayProbData probability) {
         this.probability = probability;
         return this;
@@ -189,6 +202,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snow_depth")
     public Double snowDepth;
+
     public PointPointDailyAllDayData withSnowDepth(Double snowDepth) {
         this.snowDepth = snowDepth;
         return this;
@@ -200,6 +214,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soil_temperature")
     public Double soilTemperature;
+
     public PointPointDailyAllDayData withSoilTemperature(Double soilTemperature) {
         this.soilTemperature = soilTemperature;
         return this;
@@ -211,6 +226,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soil_temperature_max")
     public Double soilTemperatureMax;
+
     public PointPointDailyAllDayData withSoilTemperatureMax(Double soilTemperatureMax) {
         this.soilTemperatureMax = soilTemperatureMax;
         return this;
@@ -222,6 +238,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soil_temperature_min")
     public Double soilTemperatureMin;
+
     public PointPointDailyAllDayData withSoilTemperatureMin(Double soilTemperatureMin) {
         this.soilTemperatureMin = soilTemperatureMin;
         return this;
@@ -233,6 +250,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surface_temperature")
     public Double surfaceTemperature;
+
     public PointPointDailyAllDayData withSurfaceTemperature(Double surfaceTemperature) {
         this.surfaceTemperature = surfaceTemperature;
         return this;
@@ -244,6 +262,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surface_temperature_max")
     public Double surfaceTemperatureMax;
+
     public PointPointDailyAllDayData withSurfaceTemperatureMax(Double surfaceTemperatureMax) {
         this.surfaceTemperatureMax = surfaceTemperatureMax;
         return this;
@@ -255,6 +274,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surface_temperature_min")
     public Double surfaceTemperatureMin;
+
     public PointPointDailyAllDayData withSurfaceTemperatureMin(Double surfaceTemperatureMin) {
         this.surfaceTemperatureMin = surfaceTemperatureMin;
         return this;
@@ -267,30 +287,31 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Double temperature;
+
     public PointPointDailyAllDayData withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
     }
     
     /**
-     * Temperature 2 metres above ground. (allday max)
      * Units: metric = \u00b0C, us = \u00b0F, uk = \u00b0C, ca = \u00b0C
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature_max")
     public Double temperatureMax;
+
     public PointPointDailyAllDayData withTemperatureMax(Double temperatureMax) {
         this.temperatureMax = temperatureMax;
         return this;
     }
     
     /**
-     * Temperature 2 metres above ground. (allday min)
      * Units: metric = \u00b0C, us = \u00b0F, uk = \u00b0C, ca = \u00b0C
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature_min")
     public Double temperatureMin;
+
     public PointPointDailyAllDayData withTemperatureMin(Double temperatureMin) {
         this.temperatureMin = temperatureMin;
         return this;
@@ -303,6 +324,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public Double visibility;
+
     public PointPointDailyAllDayData withVisibility(Double visibility) {
         this.visibility = visibility;
         return this;
@@ -314,6 +336,7 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weather")
     public String weather;
+
     public PointPointDailyAllDayData withWeather(String weather) {
         this.weather = weather;
         return this;
@@ -321,6 +344,7 @@ public class PointPointDailyAllDayData {
     
     @JsonProperty("wind")
     public PointPointDailyAllDayWindData wind;
+
     public PointPointDailyAllDayData withWind(PointPointDailyAllDayWindData wind) {
         this.wind = wind;
         return this;
@@ -333,33 +357,40 @@ public class PointPointDailyAllDayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_chill")
     public Double windChill;
+
     public PointPointDailyAllDayData withWindChill(Double windChill) {
         this.windChill = windChill;
         return this;
     }
     
     /**
-     * Temperature 2 metres above ground. (allday max)
      * Units: metric = \u00b0C, us = \u00b0F, uk = \u00b0C, ca = \u00b0C
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_chill_max")
     public Double windChillMax;
+
     public PointPointDailyAllDayData withWindChillMax(Double windChillMax) {
         this.windChillMax = windChillMax;
         return this;
     }
     
     /**
-     * Temperature 2 metres above ground. (allday min)
      * Units: metric = \u00b0C, us = \u00b0F, uk = \u00b0C, ca = \u00b0C
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_chill_min")
     public Double windChillMin;
+
     public PointPointDailyAllDayData withWindChillMin(Double windChillMin) {
         this.windChillMin = windChillMin;
         return this;
     }
     
+    public PointPointDailyAllDayData(@JsonProperty("cloud_cover") PointPointDailyAllDayCloudCoverData cloudCover, @JsonProperty("precipitation") PointPointDailyAllDayPrecipitationData precipitation, @JsonProperty("probability") PointPointDailyAllDayProbData probability, @JsonProperty("wind") PointPointDailyAllDayWindData wind) {
+        this.cloudCover = cloudCover;
+        this.precipitation = precipitation;
+        this.probability = probability;
+        this.wind = wind;
+  }
 }

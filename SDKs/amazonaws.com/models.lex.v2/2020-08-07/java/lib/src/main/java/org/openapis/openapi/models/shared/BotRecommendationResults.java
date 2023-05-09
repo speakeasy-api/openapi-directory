@@ -15,6 +15,7 @@ public class BotRecommendationResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedTranscriptsUrl")
     public String associatedTranscriptsUrl;
+
     public BotRecommendationResults withAssociatedTranscriptsUrl(String associatedTranscriptsUrl) {
         this.associatedTranscriptsUrl = associatedTranscriptsUrl;
         return this;
@@ -23,6 +24,7 @@ public class BotRecommendationResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleExportUrl")
     public String botLocaleExportUrl;
+
     public BotRecommendationResults withBotLocaleExportUrl(String botLocaleExportUrl) {
         this.botLocaleExportUrl = botLocaleExportUrl;
         return this;
@@ -31,9 +33,11 @@ public class BotRecommendationResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public BotRecommendationResultStatistics statistics;
+
     public BotRecommendationResults withStatistics(BotRecommendationResultStatistics statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public BotRecommendationResults(){}
 }

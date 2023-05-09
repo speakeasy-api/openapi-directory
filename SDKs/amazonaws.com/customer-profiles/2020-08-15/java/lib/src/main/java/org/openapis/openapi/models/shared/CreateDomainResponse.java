@@ -21,6 +21,7 @@ public class CreateDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public CreateDomainResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class CreateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterQueueUrl")
     public String deadLetterQueueUrl;
+
     public CreateDomainResponse withDeadLetterQueueUrl(String deadLetterQueueUrl) {
         this.deadLetterQueueUrl = deadLetterQueueUrl;
         return this;
@@ -37,6 +39,7 @@ public class CreateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultEncryptionKey")
     public String defaultEncryptionKey;
+
     public CreateDomainResponse withDefaultEncryptionKey(String defaultEncryptionKey) {
         this.defaultEncryptionKey = defaultEncryptionKey;
         return this;
@@ -44,6 +47,7 @@ public class CreateDomainResponse {
     
     @JsonProperty("DefaultExpirationDays")
     public Long defaultExpirationDays;
+
     public CreateDomainResponse withDefaultExpirationDays(Long defaultExpirationDays) {
         this.defaultExpirationDays = defaultExpirationDays;
         return this;
@@ -51,6 +55,7 @@ public class CreateDomainResponse {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public CreateDomainResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -60,6 +65,7 @@ public class CreateDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public CreateDomainResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -68,6 +74,7 @@ public class CreateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Matching")
     public MatchingResponse matching;
+
     public CreateDomainResponse withMatching(MatchingResponse matching) {
         this.matching = matching;
         return this;
@@ -76,9 +83,16 @@ public class CreateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateDomainResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDomainResponse(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("DefaultExpirationDays") Long defaultExpirationDays, @JsonProperty("DomainName") String domainName, @JsonProperty("LastUpdatedAt") OffsetDateTime lastUpdatedAt) {
+        this.createdAt = createdAt;
+        this.defaultExpirationDays = defaultExpirationDays;
+        this.domainName = domainName;
+        this.lastUpdatedAt = lastUpdatedAt;
+  }
 }

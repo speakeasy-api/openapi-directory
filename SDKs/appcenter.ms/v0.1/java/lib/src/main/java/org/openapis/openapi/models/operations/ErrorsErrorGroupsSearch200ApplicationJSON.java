@@ -15,6 +15,7 @@ public class ErrorsErrorGroupsSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorGroups")
     public ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups[] errorGroups;
+
     public ErrorsErrorGroupsSearch200ApplicationJSON withErrorGroups(ErrorsErrorGroupsSearch200ApplicationJSONErrorGroups[] errorGroups) {
         this.errorGroups = errorGroups;
         return this;
@@ -23,9 +24,11 @@ public class ErrorsErrorGroupsSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMoreResults")
     public Boolean hasMoreResults;
+
     public ErrorsErrorGroupsSearch200ApplicationJSON withHasMoreResults(Boolean hasMoreResults) {
         this.hasMoreResults = hasMoreResults;
         return this;
     }
     
+    public ErrorsErrorGroupsSearch200ApplicationJSON(){}
 }

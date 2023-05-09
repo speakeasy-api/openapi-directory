@@ -12,6 +12,7 @@ public class ActionsReviewPendingDeploymentsForRunRequestBody {
      */
     @JsonProperty("comment")
     public String comment;
+
     public ActionsReviewPendingDeploymentsForRunRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -22,6 +23,7 @@ public class ActionsReviewPendingDeploymentsForRunRequestBody {
      */
     @JsonProperty("environment_ids")
     public Long[] environmentIds;
+
     public ActionsReviewPendingDeploymentsForRunRequestBody withEnvironmentIds(Long[] environmentIds) {
         this.environmentIds = environmentIds;
         return this;
@@ -32,9 +34,15 @@ public class ActionsReviewPendingDeploymentsForRunRequestBody {
      */
     @JsonProperty("state")
     public ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum state;
+
     public ActionsReviewPendingDeploymentsForRunRequestBody withState(ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ActionsReviewPendingDeploymentsForRunRequestBody(@JsonProperty("comment") String comment, @JsonProperty("environment_ids") Long[] environmentIds, @JsonProperty("state") ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum state) {
+        this.comment = comment;
+        this.environmentIds = environmentIds;
+        this.state = state;
+  }
 }

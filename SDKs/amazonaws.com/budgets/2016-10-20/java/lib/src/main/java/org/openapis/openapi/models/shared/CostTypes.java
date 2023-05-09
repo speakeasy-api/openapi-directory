@@ -15,6 +15,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeCredit")
     public Boolean includeCredit;
+
     public CostTypes withIncludeCredit(Boolean includeCredit) {
         this.includeCredit = includeCredit;
         return this;
@@ -23,6 +24,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeDiscount")
     public Boolean includeDiscount;
+
     public CostTypes withIncludeDiscount(Boolean includeDiscount) {
         this.includeDiscount = includeDiscount;
         return this;
@@ -31,6 +33,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeOtherSubscription")
     public Boolean includeOtherSubscription;
+
     public CostTypes withIncludeOtherSubscription(Boolean includeOtherSubscription) {
         this.includeOtherSubscription = includeOtherSubscription;
         return this;
@@ -39,6 +42,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeRecurring")
     public Boolean includeRecurring;
+
     public CostTypes withIncludeRecurring(Boolean includeRecurring) {
         this.includeRecurring = includeRecurring;
         return this;
@@ -47,6 +51,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeRefund")
     public Boolean includeRefund;
+
     public CostTypes withIncludeRefund(Boolean includeRefund) {
         this.includeRefund = includeRefund;
         return this;
@@ -55,6 +60,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeSubscription")
     public Boolean includeSubscription;
+
     public CostTypes withIncludeSubscription(Boolean includeSubscription) {
         this.includeSubscription = includeSubscription;
         return this;
@@ -63,6 +69,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeSupport")
     public Boolean includeSupport;
+
     public CostTypes withIncludeSupport(Boolean includeSupport) {
         this.includeSupport = includeSupport;
         return this;
@@ -71,6 +78,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeTax")
     public Boolean includeTax;
+
     public CostTypes withIncludeTax(Boolean includeTax) {
         this.includeTax = includeTax;
         return this;
@@ -79,6 +87,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeUpfront")
     public Boolean includeUpfront;
+
     public CostTypes withIncludeUpfront(Boolean includeUpfront) {
         this.includeUpfront = includeUpfront;
         return this;
@@ -87,6 +96,7 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseAmortized")
     public Boolean useAmortized;
+
     public CostTypes withUseAmortized(Boolean useAmortized) {
         this.useAmortized = useAmortized;
         return this;
@@ -95,9 +105,11 @@ public class CostTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseBlended")
     public Boolean useBlended;
+
     public CostTypes withUseBlended(Boolean useBlended) {
         this.useBlended = useBlended;
         return this;
     }
     
+    public CostTypes(){}
 }

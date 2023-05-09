@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDatasetResponse {
@@ -12,6 +13,7 @@ public class DescribeDatasetResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeDatasetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDatasetResponse {
     
     
     public String contentType;
+
     public DescribeDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDatasetResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDatasetResponse describeDatasetResponse;
+
     public DescribeDatasetResponse withDescribeDatasetResponse(org.openapis.openapi.models.shared.DescribeDatasetResponse describeDatasetResponse) {
         this.describeDatasetResponse = describeDatasetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDatasetResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDatasetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDatasetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDatasetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDatasetResponse {
     
     
     public Integer statusCode;
+
     public DescribeDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDatasetResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDatasetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDatasetResponse {
      */
     
     public Object validationException;
+
     public DescribeDatasetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

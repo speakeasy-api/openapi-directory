@@ -18,9 +18,11 @@ public class LaunchFlexTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public LaunchFlexTemplateResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public LaunchFlexTemplateResponse(){}
 }

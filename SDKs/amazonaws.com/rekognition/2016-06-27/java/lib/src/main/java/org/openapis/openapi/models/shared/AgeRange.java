@@ -15,6 +15,7 @@ public class AgeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("High")
     public Long high;
+
     public AgeRange withHigh(Long high) {
         this.high = high;
         return this;
@@ -23,9 +24,11 @@ public class AgeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Low")
     public Long low;
+
     public AgeRange withLow(Long low) {
         this.low = low;
         return this;
     }
     
+    public AgeRange(){}
 }

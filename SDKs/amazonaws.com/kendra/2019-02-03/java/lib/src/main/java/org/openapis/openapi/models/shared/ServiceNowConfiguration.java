@@ -15,6 +15,7 @@ public class ServiceNowConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationType")
     public ServiceNowAuthenticationTypeEnum authenticationType;
+
     public ServiceNowConfiguration withAuthenticationType(ServiceNowAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -22,6 +23,7 @@ public class ServiceNowConfiguration {
     
     @JsonProperty("HostUrl")
     public String hostUrl;
+
     public ServiceNowConfiguration withHostUrl(String hostUrl) {
         this.hostUrl = hostUrl;
         return this;
@@ -30,6 +32,7 @@ public class ServiceNowConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KnowledgeArticleConfiguration")
     public ServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration;
+
     public ServiceNowConfiguration withKnowledgeArticleConfiguration(ServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
         this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
         return this;
@@ -37,6 +40,7 @@ public class ServiceNowConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public ServiceNowConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -45,6 +49,7 @@ public class ServiceNowConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCatalogConfiguration")
     public ServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
+
     public ServiceNowConfiguration withServiceCatalogConfiguration(ServiceNowServiceCatalogConfiguration serviceCatalogConfiguration) {
         this.serviceCatalogConfiguration = serviceCatalogConfiguration;
         return this;
@@ -52,9 +57,15 @@ public class ServiceNowConfiguration {
     
     @JsonProperty("ServiceNowBuildVersion")
     public ServiceNowBuildVersionTypeEnum serviceNowBuildVersion;
+
     public ServiceNowConfiguration withServiceNowBuildVersion(ServiceNowBuildVersionTypeEnum serviceNowBuildVersion) {
         this.serviceNowBuildVersion = serviceNowBuildVersion;
         return this;
     }
     
+    public ServiceNowConfiguration(@JsonProperty("HostUrl") String hostUrl, @JsonProperty("SecretArn") String secretArn, @JsonProperty("ServiceNowBuildVersion") ServiceNowBuildVersionTypeEnum serviceNowBuildVersion) {
+        this.hostUrl = hostUrl;
+        this.secretArn = secretArn;
+        this.serviceNowBuildVersion = serviceNowBuildVersion;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateResourceResponse {
@@ -12,6 +13,7 @@ public class DisassociateResourceResponse {
      */
     
     public Object conflictException;
+
     public DisassociateResourceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateResourceResponse {
     
     
     public String contentType;
+
     public DisassociateResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateResourceResponse {
      */
     
     public java.util.Map<String, Object> disassociateResourceResponse;
+
     public DisassociateResourceResponse withDisassociateResourceResponse(java.util.Map<String, Object> disassociateResourceResponse) {
         this.disassociateResourceResponse = disassociateResourceResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateResourceResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateResourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateResourceResponse {
     
     
     public Integer statusCode;
+
     public DisassociateResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateResourceResponse {
      */
     
     public Object validationException;
+
     public DisassociateResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

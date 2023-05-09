@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartAssociationsOnceRequest {
     @JsonProperty("AssociationIds")
     public String[] associationIds;
+
     public StartAssociationsOnceRequest withAssociationIds(String[] associationIds) {
         this.associationIds = associationIds;
         return this;
     }
     
+    public StartAssociationsOnceRequest(@JsonProperty("AssociationIds") String[] associationIds) {
+        this.associationIds = associationIds;
+  }
 }

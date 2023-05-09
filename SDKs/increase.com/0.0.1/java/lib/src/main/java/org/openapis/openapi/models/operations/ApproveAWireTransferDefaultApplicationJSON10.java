@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApproveAWireTransferDefaultApplicationJSON10 {
     @JsonProperty("detail")
     public String detail;
+
     public ApproveAWireTransferDefaultApplicationJSON10 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -16,6 +17,7 @@ public class ApproveAWireTransferDefaultApplicationJSON10 {
     
     @JsonProperty("status")
     public ApproveAWireTransferDefaultApplicationJSON10StatusEnum status;
+
     public ApproveAWireTransferDefaultApplicationJSON10 withStatus(ApproveAWireTransferDefaultApplicationJSON10StatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +25,7 @@ public class ApproveAWireTransferDefaultApplicationJSON10 {
     
     @JsonProperty("title")
     public String title;
+
     public ApproveAWireTransferDefaultApplicationJSON10 withTitle(String title) {
         this.title = title;
         return this;
@@ -30,9 +33,16 @@ public class ApproveAWireTransferDefaultApplicationJSON10 {
     
     @JsonProperty("type")
     public ApproveAWireTransferDefaultApplicationJSON10TypeEnum type;
+
     public ApproveAWireTransferDefaultApplicationJSON10 withType(ApproveAWireTransferDefaultApplicationJSON10TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ApproveAWireTransferDefaultApplicationJSON10(@JsonProperty("detail") String detail, @JsonProperty("status") ApproveAWireTransferDefaultApplicationJSON10StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") ApproveAWireTransferDefaultApplicationJSON10TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

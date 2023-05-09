@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption1 option1;
+
     public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity withOption1(DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption2 option2;
+
     public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity withOption2(DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption3 option3;
+
     public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity withOption3(DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption4 option4;
+
     public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity withOption4(DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity(){}
 }

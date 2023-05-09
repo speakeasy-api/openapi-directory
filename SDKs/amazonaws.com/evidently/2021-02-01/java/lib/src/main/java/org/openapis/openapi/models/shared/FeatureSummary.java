@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class FeatureSummary {
     @JsonProperty("arn")
     public String arn;
+
     public FeatureSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class FeatureSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public FeatureSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -36,6 +38,7 @@ public class FeatureSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVariation")
     public String defaultVariation;
+
     public FeatureSummary withDefaultVariation(String defaultVariation) {
         this.defaultVariation = defaultVariation;
         return this;
@@ -44,6 +47,7 @@ public class FeatureSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationRules")
     public EvaluationRule[] evaluationRules;
+
     public FeatureSummary withEvaluationRules(EvaluationRule[] evaluationRules) {
         this.evaluationRules = evaluationRules;
         return this;
@@ -51,6 +55,7 @@ public class FeatureSummary {
     
     @JsonProperty("evaluationStrategy")
     public FeatureEvaluationStrategyEnum evaluationStrategy;
+
     public FeatureSummary withEvaluationStrategy(FeatureEvaluationStrategyEnum evaluationStrategy) {
         this.evaluationStrategy = evaluationStrategy;
         return this;
@@ -60,6 +65,7 @@ public class FeatureSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public FeatureSummary withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -67,6 +73,7 @@ public class FeatureSummary {
     
     @JsonProperty("name")
     public String name;
+
     public FeatureSummary withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +82,7 @@ public class FeatureSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public FeatureSummary withProject(String project) {
         this.project = project;
         return this;
@@ -82,6 +90,7 @@ public class FeatureSummary {
     
     @JsonProperty("status")
     public FeatureStatusEnum status;
+
     public FeatureSummary withStatus(FeatureStatusEnum status) {
         this.status = status;
         return this;
@@ -90,9 +99,18 @@ public class FeatureSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public FeatureSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public FeatureSummary(@JsonProperty("arn") String arn, @JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("evaluationStrategy") FeatureEvaluationStrategyEnum evaluationStrategy, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("name") String name, @JsonProperty("status") FeatureStatusEnum status) {
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.evaluationStrategy = evaluationStrategy;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.name = name;
+        this.status = status;
+  }
 }

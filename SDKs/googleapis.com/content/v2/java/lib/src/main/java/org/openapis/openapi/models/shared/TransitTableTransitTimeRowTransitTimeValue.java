@@ -15,6 +15,7 @@ public class TransitTableTransitTimeRowTransitTimeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTransitTimeInDays")
     public Long maxTransitTimeInDays;
+
     public TransitTableTransitTimeRowTransitTimeValue withMaxTransitTimeInDays(Long maxTransitTimeInDays) {
         this.maxTransitTimeInDays = maxTransitTimeInDays;
         return this;
@@ -26,9 +27,11 @@ public class TransitTableTransitTimeRowTransitTimeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTransitTimeInDays")
     public Long minTransitTimeInDays;
+
     public TransitTableTransitTimeRowTransitTimeValue withMinTransitTimeInDays(Long minTransitTimeInDays) {
         this.minTransitTimeInDays = minTransitTimeInDays;
         return this;
     }
     
+    public TransitTableTransitTimeRowTransitTimeValue(){}
 }

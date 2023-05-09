@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLookupSha1Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha1")
     public String sha1;
+
     public GetLookupSha1Request withSha1(String sha1) {
         this.sha1 = sha1;
         return this;
     }
     
+    public GetLookupSha1Request(@JsonProperty("sha1") String sha1) {
+        this.sha1 = sha1;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1beta1GcsFilesetSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePatterns")
     public String[] filePatterns;
+
     public GoogleCloudDatacatalogV1beta1GcsFilesetSpecInput withFilePatterns(String[] filePatterns) {
         this.filePatterns = filePatterns;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1GcsFilesetSpecInput(){}
 }

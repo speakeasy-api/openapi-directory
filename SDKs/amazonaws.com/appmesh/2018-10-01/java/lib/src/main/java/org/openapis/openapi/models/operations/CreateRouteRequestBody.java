@@ -16,6 +16,7 @@ public class CreateRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateRouteRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateRouteRequestBody {
      */
     @JsonProperty("routeName")
     public String routeName;
+
     public CreateRouteRequestBody withRouteName(String routeName) {
         this.routeName = routeName;
         return this;
@@ -36,9 +38,14 @@ public class CreateRouteRequestBody {
      */
     @JsonProperty("spec")
     public CreateRouteRequestBodySpec spec;
+
     public CreateRouteRequestBody withSpec(CreateRouteRequestBodySpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public CreateRouteRequestBody(@JsonProperty("routeName") String routeName, @JsonProperty("spec") CreateRouteRequestBodySpec spec) {
+        this.routeName = routeName;
+        this.spec = spec;
+  }
 }

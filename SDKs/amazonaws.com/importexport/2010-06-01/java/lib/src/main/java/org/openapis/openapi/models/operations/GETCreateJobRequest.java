@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateJobRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=APIVersion")
     public String apiVersion;
+
     public GETCreateJobRequest withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -16,6 +18,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public GETCreateJobRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -23,6 +26,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateJobActionEnum action;
+
     public GETCreateJobRequest withAction(GETCreateJobActionEnum action) {
         this.action = action;
         return this;
@@ -33,6 +37,7 @@ public class GETCreateJobRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=JobType")
     public GETCreateJobJobTypeEnum jobType;
+
     public GETCreateJobRequest withJobType(GETCreateJobJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -40,6 +45,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Manifest")
     public String manifest;
+
     public GETCreateJobRequest withManifest(String manifest) {
         this.manifest = manifest;
         return this;
@@ -47,6 +53,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManifestAddendum")
     public String manifestAddendum;
+
     public GETCreateJobRequest withManifestAddendum(String manifestAddendum) {
         this.manifestAddendum = manifestAddendum;
         return this;
@@ -54,6 +61,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
     public GETCreateJobOperationEnum operation;
+
     public GETCreateJobRequest withOperation(GETCreateJobOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -61,6 +69,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public GETCreateJobRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -68,6 +77,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public GETCreateJobRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -75,6 +85,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public GETCreateJobRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -82,6 +93,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public GETCreateJobRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -89,6 +101,7 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValidateOnly")
     public Boolean validateOnly;
+
     public GETCreateJobRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
@@ -96,9 +109,23 @@ public class GETCreateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateJobVersionEnum version;
+
     public GETCreateJobRequest withVersion(GETCreateJobVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public GETCreateJobRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") GETCreateJobActionEnum action, @JsonProperty("JobType") GETCreateJobJobTypeEnum jobType, @JsonProperty("Manifest") String manifest, @JsonProperty("Operation") GETCreateJobOperationEnum operation, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("ValidateOnly") Boolean validateOnly, @JsonProperty("Version") GETCreateJobVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.jobType = jobType;
+        this.manifest = manifest;
+        this.operation = operation;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.validateOnly = validateOnly;
+        this.version = version;
+  }
 }

@@ -15,6 +15,7 @@ public class ViasPersonalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfBirth")
     public String dateOfBirth;
+
     public ViasPersonalData withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -25,8 +26,9 @@ public class ViasPersonalData {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentData")
-    public PersonalDocumentData[] documentData;
-    public ViasPersonalData withDocumentData(PersonalDocumentData[] documentData) {
+    public PersonalDocumentDataWrapper[] documentData;
+
+    public ViasPersonalData withDocumentData(PersonalDocumentDataWrapper[] documentData) {
         this.documentData = documentData;
         return this;
     }
@@ -37,6 +39,7 @@ public class ViasPersonalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idNumber")
     public String idNumber;
+
     public ViasPersonalData withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -49,9 +52,11 @@ public class ViasPersonalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationality")
     public String nationality;
+
     public ViasPersonalData withNationality(String nationality) {
         this.nationality = nationality;
         return this;
     }
     
+    public ViasPersonalData(){}
 }

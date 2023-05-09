@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeExclusionsResponse {
     @JsonProperty("exclusions")
     public java.util.Map<String, Exclusion> exclusions;
+
     public DescribeExclusionsResponse withExclusions(java.util.Map<String, Exclusion> exclusions) {
         this.exclusions = exclusions;
         return this;
@@ -19,9 +20,14 @@ public class DescribeExclusionsResponse {
     
     @JsonProperty("failedItems")
     public java.util.Map<String, FailedItemDetails> failedItems;
+
     public DescribeExclusionsResponse withFailedItems(java.util.Map<String, FailedItemDetails> failedItems) {
         this.failedItems = failedItems;
         return this;
     }
     
+    public DescribeExclusionsResponse(@JsonProperty("exclusions") java.util.Map<String, Exclusion> exclusions, @JsonProperty("failedItems") java.util.Map<String, FailedItemDetails> failedItems) {
+        this.exclusions = exclusions;
+        this.failedItems = failedItems;
+  }
 }

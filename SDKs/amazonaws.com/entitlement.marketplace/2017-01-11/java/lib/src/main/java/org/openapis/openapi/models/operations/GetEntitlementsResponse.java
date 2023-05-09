@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEntitlementsResponse {
     
     public String contentType;
+
     public GetEntitlementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEntitlementsResult getEntitlementsResult;
+
     public GetEntitlementsResponse withGetEntitlementsResult(org.openapis.openapi.models.shared.GetEntitlementsResult getEntitlementsResult) {
         this.getEntitlementsResult = getEntitlementsResult;
         return this;
@@ -29,6 +32,7 @@ public class GetEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceErrorException internalServiceErrorException;
+
     public GetEntitlementsResponse withInternalServiceErrorException(org.openapis.openapi.models.shared.InternalServiceErrorException internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidParameterException invalidParameterException;
+
     public GetEntitlementsResponse withInvalidParameterException(org.openapis.openapi.models.shared.InvalidParameterException invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetEntitlementsResponse {
     
     
     public Integer statusCode;
+
     public GetEntitlementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetEntitlementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEntitlementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.ThrottlingException throttlingException;
+
     public GetEntitlementsResponse withThrottlingException(org.openapis.openapi.models.shared.ThrottlingException throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetEntitlementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

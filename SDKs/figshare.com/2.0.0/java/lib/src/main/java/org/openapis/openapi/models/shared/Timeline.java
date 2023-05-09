@@ -12,6 +12,7 @@ public class Timeline {
      */
     @JsonProperty("firstOnline")
     public String firstOnline;
+
     public Timeline withFirstOnline(String firstOnline) {
         this.firstOnline = firstOnline;
         return this;
@@ -22,6 +23,7 @@ public class Timeline {
      */
     @JsonProperty("posted")
     public String posted;
+
     public Timeline withPosted(String posted) {
         this.posted = posted;
         return this;
@@ -32,6 +34,7 @@ public class Timeline {
      */
     @JsonProperty("publisherAcceptance")
     public String publisherAcceptance;
+
     public Timeline withPublisherAcceptance(String publisherAcceptance) {
         this.publisherAcceptance = publisherAcceptance;
         return this;
@@ -42,6 +45,7 @@ public class Timeline {
      */
     @JsonProperty("publisherPublication")
     public String publisherPublication;
+
     public Timeline withPublisherPublication(String publisherPublication) {
         this.publisherPublication = publisherPublication;
         return this;
@@ -52,6 +56,7 @@ public class Timeline {
      */
     @JsonProperty("revision")
     public String revision;
+
     public Timeline withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -62,9 +67,18 @@ public class Timeline {
      */
     @JsonProperty("submission")
     public String submission;
+
     public Timeline withSubmission(String submission) {
         this.submission = submission;
         return this;
     }
     
+    public Timeline(@JsonProperty("firstOnline") String firstOnline, @JsonProperty("posted") String posted, @JsonProperty("publisherAcceptance") String publisherAcceptance, @JsonProperty("publisherPublication") String publisherPublication, @JsonProperty("revision") String revision, @JsonProperty("submission") String submission) {
+        this.firstOnline = firstOnline;
+        this.posted = posted;
+        this.publisherAcceptance = publisherAcceptance;
+        this.publisherPublication = publisherPublication;
+        this.revision = revision;
+        this.submission = submission;
+  }
 }

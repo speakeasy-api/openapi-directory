@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchGlobalConfigResponse {
     
     public String contentType;
+
     public PatchGlobalConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PatchGlobalConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GlobalConfig globalConfig;
+
     public PatchGlobalConfigResponse withGlobalConfig(org.openapis.openapi.models.shared.GlobalConfig globalConfig) {
         this.globalConfig = globalConfig;
         return this;
@@ -26,6 +29,7 @@ public class PatchGlobalConfigResponse {
     
     
     public Integer statusCode;
+
     public PatchGlobalConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PatchGlobalConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchGlobalConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchGlobalConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

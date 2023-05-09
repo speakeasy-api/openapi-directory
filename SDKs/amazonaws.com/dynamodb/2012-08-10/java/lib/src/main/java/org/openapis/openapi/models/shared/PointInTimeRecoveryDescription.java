@@ -22,6 +22,7 @@ public class PointInTimeRecoveryDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EarliestRestorableDateTime")
     public OffsetDateTime earliestRestorableDateTime;
+
     public PointInTimeRecoveryDescription withEarliestRestorableDateTime(OffsetDateTime earliestRestorableDateTime) {
         this.earliestRestorableDateTime = earliestRestorableDateTime;
         return this;
@@ -32,6 +33,7 @@ public class PointInTimeRecoveryDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestRestorableDateTime")
     public OffsetDateTime latestRestorableDateTime;
+
     public PointInTimeRecoveryDescription withLatestRestorableDateTime(OffsetDateTime latestRestorableDateTime) {
         this.latestRestorableDateTime = latestRestorableDateTime;
         return this;
@@ -40,9 +42,11 @@ public class PointInTimeRecoveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointInTimeRecoveryStatus")
     public PointInTimeRecoveryStatusEnum pointInTimeRecoveryStatus;
+
     public PointInTimeRecoveryDescription withPointInTimeRecoveryStatus(PointInTimeRecoveryStatusEnum pointInTimeRecoveryStatus) {
         this.pointInTimeRecoveryStatus = pointInTimeRecoveryStatus;
         return this;
     }
     
+    public PointInTimeRecoveryDescription(){}
 }

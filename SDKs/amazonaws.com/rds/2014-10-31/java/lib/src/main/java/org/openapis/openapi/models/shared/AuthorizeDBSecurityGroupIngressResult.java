@@ -15,9 +15,11 @@ public class AuthorizeDBSecurityGroupIngressResult {
      */
     
     public DBSecurityGroup dbSecurityGroup;
+
     public AuthorizeDBSecurityGroupIngressResult withDBSecurityGroup(DBSecurityGroup dbSecurityGroup) {
         this.dbSecurityGroup = dbSecurityGroup;
         return this;
     }
     
+    public AuthorizeDBSecurityGroupIngressResult(){}
 }

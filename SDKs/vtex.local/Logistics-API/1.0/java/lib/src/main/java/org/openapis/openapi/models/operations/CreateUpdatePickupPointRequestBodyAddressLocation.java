@@ -12,6 +12,7 @@ public class CreateUpdatePickupPointRequestBodyAddressLocation {
      */
     @JsonProperty("latitude")
     public Double latitude;
+
     public CreateUpdatePickupPointRequestBodyAddressLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -22,9 +23,14 @@ public class CreateUpdatePickupPointRequestBodyAddressLocation {
      */
     @JsonProperty("longitude")
     public Double longitude;
+
     public CreateUpdatePickupPointRequestBodyAddressLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public CreateUpdatePickupPointRequestBodyAddressLocation(@JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

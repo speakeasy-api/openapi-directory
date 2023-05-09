@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody;
+
     public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest withRequestBody(DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,9 +32,15 @@ public class DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest(@JsonProperty("RequestBody") DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody, @JsonProperty("channelId") String channelId, @JsonProperty("offeringId") String offeringId) {
+        this.requestBody = requestBody;
+        this.channelId = channelId;
+        this.offeringId = offeringId;
+  }
 }

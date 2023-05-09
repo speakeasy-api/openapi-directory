@@ -15,9 +15,11 @@ public class PutLifecycleEventHookExecutionStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleEventHookExecutionId")
     public String lifecycleEventHookExecutionId;
+
     public PutLifecycleEventHookExecutionStatusOutput withLifecycleEventHookExecutionId(String lifecycleEventHookExecutionId) {
         this.lifecycleEventHookExecutionId = lifecycleEventHookExecutionId;
         return this;
     }
     
+    public PutLifecycleEventHookExecutionStatusOutput(){}
 }

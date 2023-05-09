@@ -22,6 +22,7 @@ public class GetSamplingTargetsResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastRuleModification")
     public OffsetDateTime lastRuleModification;
+
     public GetSamplingTargetsResult withLastRuleModification(OffsetDateTime lastRuleModification) {
         this.lastRuleModification = lastRuleModification;
         return this;
@@ -30,6 +31,7 @@ public class GetSamplingTargetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplingTargetDocuments")
     public SamplingTargetDocument[] samplingTargetDocuments;
+
     public GetSamplingTargetsResult withSamplingTargetDocuments(SamplingTargetDocument[] samplingTargetDocuments) {
         this.samplingTargetDocuments = samplingTargetDocuments;
         return this;
@@ -38,9 +40,11 @@ public class GetSamplingTargetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedStatistics")
     public UnprocessedStatistics[] unprocessedStatistics;
+
     public GetSamplingTargetsResult withUnprocessedStatistics(UnprocessedStatistics[] unprocessedStatistics) {
         this.unprocessedStatistics = unprocessedStatistics;
         return this;
     }
     
+    public GetSamplingTargetsResult(){}
 }

@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2ExcludeInfoTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoTypes")
     public GooglePrivacyDlpV2InfoType[] infoTypes;
+
     public GooglePrivacyDlpV2ExcludeInfoTypes withInfoTypes(GooglePrivacyDlpV2InfoType[] infoTypes) {
         this.infoTypes = infoTypes;
         return this;
     }
     
+    public GooglePrivacyDlpV2ExcludeInfoTypes(){}
 }

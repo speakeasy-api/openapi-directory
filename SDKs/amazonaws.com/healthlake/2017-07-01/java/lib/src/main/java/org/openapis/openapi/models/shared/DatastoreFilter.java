@@ -22,6 +22,7 @@ public class DatastoreFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public DatastoreFilter withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class DatastoreFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public DatastoreFilter withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,6 +42,7 @@ public class DatastoreFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatastoreName")
     public String datastoreName;
+
     public DatastoreFilter withDatastoreName(String datastoreName) {
         this.datastoreName = datastoreName;
         return this;
@@ -48,9 +51,11 @@ public class DatastoreFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatastoreStatus")
     public DatastoreStatusEnum datastoreStatus;
+
     public DatastoreFilter withDatastoreStatus(DatastoreStatusEnum datastoreStatus) {
         this.datastoreStatus = datastoreStatus;
         return this;
     }
     
+    public DatastoreFilter(){}
 }

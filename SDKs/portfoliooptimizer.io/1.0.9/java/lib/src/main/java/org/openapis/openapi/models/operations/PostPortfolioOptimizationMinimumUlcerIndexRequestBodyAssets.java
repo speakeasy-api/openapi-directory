@@ -12,9 +12,13 @@ public class PostPortfolioOptimizationMinimumUlcerIndexRequestBodyAssets {
      */
     @JsonProperty("assetPrices")
     public Double[] assetPrices;
+
     public PostPortfolioOptimizationMinimumUlcerIndexRequestBodyAssets withAssetPrices(Double[] assetPrices) {
         this.assetPrices = assetPrices;
         return this;
     }
     
+    public PostPortfolioOptimizationMinimumUlcerIndexRequestBodyAssets(@JsonProperty("assetPrices") Double[] assetPrices) {
+        this.assetPrices = assetPrices;
+  }
 }

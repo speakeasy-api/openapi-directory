@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountingResponse {
@@ -12,6 +13,7 @@ public class GetAccountingResponse {
      */
     
     public GetAccountingAccountingArrayV2 accountingArrayV2;
+
     public GetAccountingResponse withAccountingArrayV2(GetAccountingAccountingArrayV2 accountingArrayV2) {
         this.accountingArrayV2 = accountingArrayV2;
         return this;
@@ -19,6 +21,7 @@ public class GetAccountingResponse {
     
     
     public String contentType;
+
     public GetAccountingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAccountingResponse {
     
     
     public Integer statusCode;
+
     public GetAccountingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAccountingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAccountingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

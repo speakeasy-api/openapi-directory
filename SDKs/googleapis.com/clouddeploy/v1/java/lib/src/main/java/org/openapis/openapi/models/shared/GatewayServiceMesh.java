@@ -18,6 +18,7 @@ public class GatewayServiceMesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment")
     public String deployment;
+
     public GatewayServiceMesh withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -29,6 +30,7 @@ public class GatewayServiceMesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRoute")
     public String httpRoute;
+
     public GatewayServiceMesh withHttpRoute(String httpRoute) {
         this.httpRoute = httpRoute;
         return this;
@@ -40,9 +42,11 @@ public class GatewayServiceMesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public GatewayServiceMesh withService(String service) {
         this.service = service;
         return this;
     }
     
+    public GatewayServiceMesh(){}
 }

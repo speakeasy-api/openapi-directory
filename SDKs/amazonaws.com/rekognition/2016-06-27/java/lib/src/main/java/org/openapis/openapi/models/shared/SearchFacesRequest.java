@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchFacesRequest {
     @JsonProperty("CollectionId")
     public String collectionId;
+
     public SearchFacesRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -18,6 +19,7 @@ public class SearchFacesRequest {
     
     @JsonProperty("FaceId")
     public String faceId;
+
     public SearchFacesRequest withFaceId(String faceId) {
         this.faceId = faceId;
         return this;
@@ -26,6 +28,7 @@ public class SearchFacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceMatchThreshold")
     public Float faceMatchThreshold;
+
     public SearchFacesRequest withFaceMatchThreshold(Float faceMatchThreshold) {
         this.faceMatchThreshold = faceMatchThreshold;
         return this;
@@ -34,9 +37,14 @@ public class SearchFacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFaces")
     public Long maxFaces;
+
     public SearchFacesRequest withMaxFaces(Long maxFaces) {
         this.maxFaces = maxFaces;
         return this;
     }
     
+    public SearchFacesRequest(@JsonProperty("CollectionId") String collectionId, @JsonProperty("FaceId") String faceId) {
+        this.collectionId = collectionId;
+        this.faceId = faceId;
+  }
 }

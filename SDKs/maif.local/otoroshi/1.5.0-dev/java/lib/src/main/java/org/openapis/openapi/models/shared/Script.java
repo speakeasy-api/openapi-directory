@@ -15,6 +15,7 @@ public class Script {
      */
     @JsonProperty("code")
     public java.util.Map<String, String> code;
+
     public Script withCode(java.util.Map<String, String> code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class Script {
      */
     @JsonProperty("desc")
     public java.util.Map<String, String> desc;
+
     public Script withDesc(java.util.Map<String, String> desc) {
         this.desc = desc;
         return this;
@@ -35,6 +37,7 @@ public class Script {
      */
     @JsonProperty("id")
     public String id;
+
     public Script withId(String id) {
         this.id = id;
         return this;
@@ -45,9 +48,16 @@ public class Script {
      */
     @JsonProperty("name")
     public String name;
+
     public Script withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Script(@JsonProperty("code") java.util.Map<String, String> code, @JsonProperty("desc") java.util.Map<String, String> desc, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.code = code;
+        this.desc = desc;
+        this.id = id;
+        this.name = name;
+  }
 }

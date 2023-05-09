@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdGroupsRequest {
@@ -12,6 +13,7 @@ public class GetUsersUserIdGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetUsersUserIdGroupsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetUsersUserIdGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
     public Integer groupId;
+
     public GetUsersUserIdGroupsRequest withGroupId(Integer groupId) {
         this.groupId = groupId;
         return this;
@@ -32,6 +35,7 @@ public class GetUsersUserIdGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetUsersUserIdGroupsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,13 @@ public class GetUsersUserIdGroupsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Integer userId;
+
     public GetUsersUserIdGroupsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdGroupsRequest(@JsonProperty("user_id") Integer userId) {
+        this.userId = userId;
+  }
 }

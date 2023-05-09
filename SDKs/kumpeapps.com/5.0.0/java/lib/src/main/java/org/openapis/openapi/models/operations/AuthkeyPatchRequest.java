@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthkeyPatchRequest {
@@ -12,6 +13,7 @@ public class AuthkeyPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth_key")
     public String authKey;
+
     public AuthkeyPatchRequest withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -22,9 +24,13 @@ public class AuthkeyPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=comments")
     public String comments;
+
     public AuthkeyPatchRequest withComments(String comments) {
         this.comments = comments;
         return this;
     }
     
+    public AuthkeyPatchRequest(@JsonProperty("auth_key") String authKey) {
+        this.authKey = authKey;
+  }
 }

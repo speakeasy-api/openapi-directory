@@ -12,6 +12,7 @@ public class UsersListForOrg200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public UsersListForOrg200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -22,6 +23,7 @@ public class UsersListForOrg200ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public UsersListForOrg200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +34,7 @@ public class UsersListForOrg200ApplicationJSON {
      */
     @JsonProperty("joined_at")
     public String joinedAt;
+
     public UsersListForOrg200ApplicationJSON withJoinedAt(String joinedAt) {
         this.joinedAt = joinedAt;
         return this;
@@ -42,6 +45,7 @@ public class UsersListForOrg200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public UsersListForOrg200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +56,17 @@ public class UsersListForOrg200ApplicationJSON {
      */
     @JsonProperty("role")
     public String role;
+
     public UsersListForOrg200ApplicationJSON withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public UsersListForOrg200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("email") String email, @JsonProperty("joined_at") String joinedAt, @JsonProperty("name") String name, @JsonProperty("role") String role) {
+        this.displayName = displayName;
+        this.email = email;
+        this.joinedAt = joinedAt;
+        this.name = name;
+        this.role = role;
+  }
 }

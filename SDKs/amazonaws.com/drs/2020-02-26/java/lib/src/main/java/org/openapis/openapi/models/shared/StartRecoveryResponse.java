@@ -15,9 +15,11 @@ public class StartRecoveryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public StartRecoveryResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public StartRecoveryResponse(){}
 }

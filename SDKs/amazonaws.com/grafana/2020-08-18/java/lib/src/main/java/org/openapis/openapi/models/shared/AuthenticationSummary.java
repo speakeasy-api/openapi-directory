@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthenticationSummary {
     @JsonProperty("providers")
     public AuthenticationProviderTypesEnum[] providers;
+
     public AuthenticationSummary withProviders(AuthenticationProviderTypesEnum[] providers) {
         this.providers = providers;
         return this;
@@ -22,9 +23,13 @@ public class AuthenticationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlConfigurationStatus")
     public SamlConfigurationStatusEnum samlConfigurationStatus;
+
     public AuthenticationSummary withSamlConfigurationStatus(SamlConfigurationStatusEnum samlConfigurationStatus) {
         this.samlConfigurationStatus = samlConfigurationStatus;
         return this;
     }
     
+    public AuthenticationSummary(@JsonProperty("providers") AuthenticationProviderTypesEnum[] providers) {
+        this.providers = providers;
+  }
 }

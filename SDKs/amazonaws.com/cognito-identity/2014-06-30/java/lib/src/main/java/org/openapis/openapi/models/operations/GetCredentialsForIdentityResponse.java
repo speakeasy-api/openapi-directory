@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCredentialsForIdentityResponse {
     
     public String contentType;
+
     public GetCredentialsForIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public Object externalServiceException;
+
     public GetCredentialsForIdentityResponse withExternalServiceException(Object externalServiceException) {
         this.externalServiceException = externalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCredentialsForIdentityResponse getCredentialsForIdentityResponse;
+
     public GetCredentialsForIdentityResponse withGetCredentialsForIdentityResponse(org.openapis.openapi.models.shared.GetCredentialsForIdentityResponse getCredentialsForIdentityResponse) {
         this.getCredentialsForIdentityResponse = getCredentialsForIdentityResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public Object internalErrorException;
+
     public GetCredentialsForIdentityResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public Object invalidIdentityPoolConfigurationException;
+
     public GetCredentialsForIdentityResponse withInvalidIdentityPoolConfigurationException(Object invalidIdentityPoolConfigurationException) {
         this.invalidIdentityPoolConfigurationException = invalidIdentityPoolConfigurationException;
         return this;
@@ -59,6 +65,7 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public Object invalidParameterException;
+
     public GetCredentialsForIdentityResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetCredentialsForIdentityResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -76,6 +84,7 @@ public class GetCredentialsForIdentityResponse {
     
     
     public Integer statusCode;
+
     public GetCredentialsForIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetCredentialsForIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCredentialsForIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public Object resourceConflictException;
+
     public GetCredentialsForIdentityResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -103,6 +114,7 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCredentialsForIdentityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class GetCredentialsForIdentityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetCredentialsForIdentityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetCredentialsForIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyCustomDBEngineVersionMessage {
     
     public String description;
+
     public ModifyCustomDBEngineVersionMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class ModifyCustomDBEngineVersionMessage {
     
     
     public String engine;
+
     public ModifyCustomDBEngineVersionMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -23,6 +25,7 @@ public class ModifyCustomDBEngineVersionMessage {
     
     
     public String engineVersion;
+
     public ModifyCustomDBEngineVersionMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -30,9 +33,14 @@ public class ModifyCustomDBEngineVersionMessage {
     
     
     public CustomEngineVersionStatusEnum status;
+
     public ModifyCustomDBEngineVersionMessage withStatus(CustomEngineVersionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ModifyCustomDBEngineVersionMessage(@JsonProperty("Engine") String engine, @JsonProperty("EngineVersion") String engineVersion) {
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+  }
 }

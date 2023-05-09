@@ -20,6 +20,7 @@ public class DescribeDimensionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DescribeDimensionResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DescribeDimensionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public DescribeDimensionResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -40,6 +42,7 @@ public class DescribeDimensionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public DescribeDimensionResponse withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -48,6 +51,7 @@ public class DescribeDimensionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeDimensionResponse withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class DescribeDimensionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValues")
     public String[] stringValues;
+
     public DescribeDimensionResponse withStringValues(String[] stringValues) {
         this.stringValues = stringValues;
         return this;
@@ -64,9 +69,11 @@ public class DescribeDimensionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DimensionTypeEnum type;
+
     public DescribeDimensionResponse withType(DimensionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeDimensionResponse(){}
 }

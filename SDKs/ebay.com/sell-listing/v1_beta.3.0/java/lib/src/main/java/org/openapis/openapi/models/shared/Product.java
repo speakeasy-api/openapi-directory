@@ -18,6 +18,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspects")
     public Aspect[] aspects;
+
     public Product withAspects(Aspect[] aspects) {
         this.aspects = aspects;
         return this;
@@ -29,6 +30,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public Product withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -40,6 +42,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Product withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epid")
     public String epid;
+
     public Product withEpid(String epid) {
         this.epid = epid;
         return this;
@@ -62,6 +66,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrls")
     public String[] imageUrls;
+
     public Product withImageUrls(String[] imageUrls) {
         this.imageUrls = imageUrls;
         return this;
@@ -73,9 +78,11 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Product withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Product(){}
 }

@@ -63,11 +63,9 @@ public class Tag {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagsResponse res = new org.openapis.openapi.models.operations.GetTagsResponse() {{
+        org.openapis.openapi.models.operations.GetTagsResponse res = new org.openapis.openapi.models.operations.GetTagsResponse(contentType, httpRes.statusCode()) {{
             tags = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Tag {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagsIdResponse res = new org.openapis.openapi.models.operations.GetTagsIdResponse() {{
+        org.openapis.openapi.models.operations.GetTagsIdResponse res = new org.openapis.openapi.models.operations.GetTagsIdResponse(contentType, httpRes.statusCode()) {{
             tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Tag {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagsetsResponse res = new org.openapis.openapi.models.operations.GetTagsetsResponse() {{
+        org.openapis.openapi.models.operations.GetTagsetsResponse res = new org.openapis.openapi.models.operations.GetTagsetsResponse(contentType, httpRes.statusCode()) {{
             tagSets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class Tag {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagsetsIdResponse res = new org.openapis.openapi.models.operations.GetTagsetsIdResponse() {{
+        org.openapis.openapi.models.operations.GetTagsetsIdResponse res = new org.openapis.openapi.models.operations.GetTagsetsIdResponse(contentType, httpRes.statusCode()) {{
             tagSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,12 +227,10 @@ public class Tag {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTagsResponse res = new org.openapis.openapi.models.operations.PostTagsResponse() {{
+        org.openapis.openapi.models.operations.PostTagsResponse res = new org.openapis.openapi.models.operations.PostTagsResponse(contentType, httpRes.statusCode()) {{
             tag = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,11 +276,9 @@ public class Tag {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTagsetsResponse res = new org.openapis.openapi.models.operations.PostTagsetsResponse() {{
+        org.openapis.openapi.models.operations.PostTagsetsResponse res = new org.openapis.openapi.models.operations.PostTagsetsResponse(contentType, httpRes.statusCode()) {{
             tagSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

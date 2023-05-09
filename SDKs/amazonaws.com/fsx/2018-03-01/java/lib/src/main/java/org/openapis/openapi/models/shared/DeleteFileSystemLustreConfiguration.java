@@ -15,6 +15,7 @@ public class DeleteFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupTags")
     public Tag[] finalBackupTags;
+
     public DeleteFileSystemLustreConfiguration withFinalBackupTags(Tag[] finalBackupTags) {
         this.finalBackupTags = finalBackupTags;
         return this;
@@ -23,9 +24,11 @@ public class DeleteFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkipFinalBackup")
     public Boolean skipFinalBackup;
+
     public DeleteFileSystemLustreConfiguration withSkipFinalBackup(Boolean skipFinalBackup) {
         this.skipFinalBackup = skipFinalBackup;
         return this;
     }
     
+    public DeleteFileSystemLustreConfiguration(){}
 }

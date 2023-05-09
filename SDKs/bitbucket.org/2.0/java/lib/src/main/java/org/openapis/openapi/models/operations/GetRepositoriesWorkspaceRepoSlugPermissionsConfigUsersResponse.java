@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedRepositoryUserPermissions paginatedRepositoryUserPermissions;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse withPaginatedRepositoryUserPermissions(org.openapis.openapi.models.shared.PaginatedRepositoryUserPermissions paginatedRepositoryUserPermissions) {
         this.paginatedRepositoryUserPermissions = paginatedRepositoryUserPermissions;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

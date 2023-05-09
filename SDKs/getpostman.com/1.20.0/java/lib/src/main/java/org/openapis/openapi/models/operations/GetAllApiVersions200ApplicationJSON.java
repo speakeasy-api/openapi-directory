@@ -15,9 +15,11 @@ public class GetAllApiVersions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public GetAllApiVersions200ApplicationJSONVersions[] versions;
+
     public GetAllApiVersions200ApplicationJSON withVersions(GetAllApiVersions200ApplicationJSONVersions[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public GetAllApiVersions200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkRequest {
@@ -12,9 +13,13 @@ public class DeleteNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nid")
     public String nid;
+
     public DeleteNetworkRequest withNid(String nid) {
         this.nid = nid;
         return this;
     }
     
+    public DeleteNetworkRequest(@JsonProperty("nid") String nid) {
+        this.nid = nid;
+  }
 }

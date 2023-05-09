@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AutoMLChannel - &lt;p&gt;A channel is a named input source that training algorithms can consume. The validation dataset size is limited to less than 2 GB. The training dataset size must be less than 100 GB. For more information, see &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Channel.html"&gt; Channel&lt;/a&gt; &lt;/code&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;A validation dataset must contain the same headers as the training dataset.&lt;/p&gt; &lt;/note&gt; &lt;p/&gt;
+ * AutoMLChannel - &lt;p&gt;A channel is a named input source that training algorithms can consume. The validation dataset size is limited to less than 2 GB. The training dataset size must be less than 100 GB. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Channel.html"&gt; Channel&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;A validation dataset must contain the same headers as the training dataset.&lt;/p&gt; &lt;/note&gt; &lt;p/&gt;
  */
 public class AutoMLChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelType")
     public AutoMLChannelTypeEnum channelType;
+
     public AutoMLChannel withChannelType(AutoMLChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -23,6 +24,7 @@ public class AutoMLChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionType")
     public CompressionTypeEnum compressionType;
+
     public AutoMLChannel withCompressionType(CompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -31,6 +33,7 @@ public class AutoMLChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public AutoMLChannel withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -38,6 +41,7 @@ public class AutoMLChannel {
     
     @JsonProperty("DataSource")
     public AutoMLDataSource dataSource;
+
     public AutoMLChannel withDataSource(AutoMLDataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -45,9 +49,14 @@ public class AutoMLChannel {
     
     @JsonProperty("TargetAttributeName")
     public String targetAttributeName;
+
     public AutoMLChannel withTargetAttributeName(String targetAttributeName) {
         this.targetAttributeName = targetAttributeName;
         return this;
     }
     
+    public AutoMLChannel(@JsonProperty("DataSource") AutoMLDataSource dataSource, @JsonProperty("TargetAttributeName") String targetAttributeName) {
+        this.dataSource = dataSource;
+        this.targetAttributeName = targetAttributeName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPiiEntitiesDetectionJobResponse {
     
     public String contentType;
+
     public StopPiiEntitiesDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopPiiEntitiesDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StopPiiEntitiesDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopPiiEntitiesDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopPiiEntitiesDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopPiiEntitiesDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public StopPiiEntitiesDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopPiiEntitiesDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StopPiiEntitiesDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopPiiEntitiesDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPiiEntitiesDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopPiiEntitiesDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopPiiEntitiesDetectionJobResponse stopPiiEntitiesDetectionJobResponse;
+
     public StopPiiEntitiesDetectionJobResponse withStopPiiEntitiesDetectionJobResponse(org.openapis.openapi.models.shared.StopPiiEntitiesDetectionJobResponse stopPiiEntitiesDetectionJobResponse) {
         this.stopPiiEntitiesDetectionJobResponse = stopPiiEntitiesDetectionJobResponse;
         return this;
     }
     
+    public StopPiiEntitiesDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

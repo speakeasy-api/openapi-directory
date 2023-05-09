@@ -15,6 +15,7 @@ public class UpdateJobQueueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEnvironmentOrder")
     public org.openapis.openapi.models.shared.ComputeEnvironmentOrder[] computeEnvironmentOrder;
+
     public UpdateJobQueueRequestBody withComputeEnvironmentOrder(org.openapis.openapi.models.shared.ComputeEnvironmentOrder[] computeEnvironmentOrder) {
         this.computeEnvironmentOrder = computeEnvironmentOrder;
         return this;
@@ -25,6 +26,7 @@ public class UpdateJobQueueRequestBody {
      */
     @JsonProperty("jobQueue")
     public String jobQueue;
+
     public UpdateJobQueueRequestBody withJobQueue(String jobQueue) {
         this.jobQueue = jobQueue;
         return this;
@@ -36,6 +38,7 @@ public class UpdateJobQueueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public UpdateJobQueueRequestBody withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -47,6 +50,7 @@ public class UpdateJobQueueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPolicyArn")
     public String schedulingPolicyArn;
+
     public UpdateJobQueueRequestBody withSchedulingPolicyArn(String schedulingPolicyArn) {
         this.schedulingPolicyArn = schedulingPolicyArn;
         return this;
@@ -58,9 +62,13 @@ public class UpdateJobQueueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public UpdateJobQueueRequestBodyStateEnum state;
+
     public UpdateJobQueueRequestBody withState(UpdateJobQueueRequestBodyStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public UpdateJobQueueRequestBody(@JsonProperty("jobQueue") String jobQueue) {
+        this.jobQueue = jobQueue;
+  }
 }

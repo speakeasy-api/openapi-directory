@@ -15,6 +15,7 @@ public class DeleteSamplingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleARN")
     public String ruleARN;
+
     public DeleteSamplingRuleRequestBody withRuleARN(String ruleARN) {
         this.ruleARN = ruleARN;
         return this;
@@ -26,9 +27,11 @@ public class DeleteSamplingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleName")
     public String ruleName;
+
     public DeleteSamplingRuleRequestBody withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }
     
+    public DeleteSamplingRuleRequestBody(){}
 }

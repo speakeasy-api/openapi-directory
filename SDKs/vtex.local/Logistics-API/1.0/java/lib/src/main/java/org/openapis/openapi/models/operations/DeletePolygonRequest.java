@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePolygonRequest {
@@ -12,6 +13,7 @@ public class DeletePolygonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DeletePolygonRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class DeletePolygonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public DeletePolygonRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class DeletePolygonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=polygonName")
     public String polygonName;
+
     public DeletePolygonRequest withPolygonName(String polygonName) {
         this.polygonName = polygonName;
         return this;
     }
     
+    public DeletePolygonRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("polygonName") String polygonName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.polygonName = polygonName;
+  }
 }

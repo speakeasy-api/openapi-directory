@@ -22,6 +22,7 @@ public class DestinyResponsesDestinyItemResponseTalentGrid {
      */
     
     public DestinyEntitiesItemsDestinyItemTalentGridComponent data;
+
     public DestinyResponsesDestinyItemResponseTalentGrid withData(DestinyEntitiesItemsDestinyItemTalentGridComponent data) {
         this.data = data;
         return this;
@@ -32,6 +33,7 @@ public class DestinyResponsesDestinyItemResponseTalentGrid {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyItemResponseTalentGrid withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -39,9 +41,11 @@ public class DestinyResponsesDestinyItemResponseTalentGrid {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyItemResponseTalentGrid withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyItemResponseTalentGrid(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaAccessQuotaStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumed")
     public Integer consumed;
+
     public GoogleAnalyticsAdminV1betaAccessQuotaStatus withConsumed(Integer consumed) {
         this.consumed = consumed;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1betaAccessQuotaStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remaining")
     public Integer remaining;
+
     public GoogleAnalyticsAdminV1betaAccessQuotaStatus withRemaining(Integer remaining) {
         this.remaining = remaining;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccessQuotaStatus(){}
 }

@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeResponse() {{
+        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeResponse(contentType, httpRes.statusCode()) {{
             googleCloudEssentialcontactsV1ComputeContactsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsCreateResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsCreateResponse() {{
+        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsCreateResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudEssentialcontactsV1Contact = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsDeleteResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsDeleteResponse() {{
+        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsDeleteResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsGetResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsGetResponse() {{
+        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsGetResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudEssentialcontactsV1Contact = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsListResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsListResponse() {{
+        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsListResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudEssentialcontactsV1ListContactsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsPatchResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsPatchResponse() {{
+        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsPatchResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudEssentialcontactsV1Contact = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsSendTestMessageResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsSendTestMessageResponse() {{
+        org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsSendTestMessageResponse res = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsSendTestMessageResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

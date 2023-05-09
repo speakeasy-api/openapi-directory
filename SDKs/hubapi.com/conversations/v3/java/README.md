@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity;
 import org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse;
+import org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity;
 import org.openapis.openapi.models.shared.IdentificationTokenGenerationRequest;
 
 public class Application {
@@ -27,22 +26,23 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.IdentificationTokenGenerationRequest req = new IdentificationTokenGenerationRequest() {{
-                email = "Larue_Rau85@yahoo.com";
-                firstName = "Karley";
-                lastName = "Stamm";
-            }}            
+            org.openapis.openapi.models.shared.IdentificationTokenGenerationRequest req = new IdentificationTokenGenerationRequest("corrupti") {{
+                firstName = "Larue";
+                lastName = "Rau";
+            }};            
 
             PostVisitorIdentificationV3TokensCreateGenerateTokenResponse res = sdk.generate.postVisitorIdentificationV3TokensCreateGenerateToken(req, new PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity() {{
                 hapikey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.identificationTokenResponse.isPresent()) {
+            if (res.identificationTokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,9 +50,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### generate
+### [generate](docs/generate/README.md)
 
-* `postVisitorIdentificationV3TokensCreateGenerateToken` - Generate a token
+* [postVisitorIdentificationV3TokensCreateGenerateToken](docs/generate/README.md#postvisitoridentificationv3tokenscreategeneratetoken) - Generate a token
 <!-- End SDK Available Operations -->
 
 ### Maturity

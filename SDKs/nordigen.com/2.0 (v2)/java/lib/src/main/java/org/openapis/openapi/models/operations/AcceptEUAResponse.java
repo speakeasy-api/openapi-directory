@@ -4,21 +4,24 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptEUAResponse {
     
     public String contentType;
+
     public AcceptEUAResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
     /**
-     * EUA
+     * Accept end user agreement
      */
     
     public org.openapis.openapi.models.shared.EndUserAgreement endUserAgreement;
+
     public AcceptEUAResponse withEndUserAgreement(org.openapis.openapi.models.shared.EndUserAgreement endUserAgreement) {
         this.endUserAgreement = endUserAgreement;
         return this;
@@ -26,6 +29,7 @@ public class AcceptEUAResponse {
     
     
     public Integer statusCode;
+
     public AcceptEUAResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AcceptEUAResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptEUAResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class AcceptEUAResponse {
      */
     
     public java.util.Map<String, Object> acceptEUA400ApplicationJSONObject;
+
     public AcceptEUAResponse withAcceptEUA400ApplicationJSONObject(java.util.Map<String, Object> acceptEUA400ApplicationJSONObject) {
         this.acceptEUA400ApplicationJSONObject = acceptEUA400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AcceptEUAResponse {
      */
     
     public java.util.Map<String, Object> acceptEUA401ApplicationJSONObject;
+
     public AcceptEUAResponse withAcceptEUA401ApplicationJSONObject(java.util.Map<String, Object> acceptEUA401ApplicationJSONObject) {
         this.acceptEUA401ApplicationJSONObject = acceptEUA401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class AcceptEUAResponse {
      */
     
     public java.util.Map<String, Object> acceptEUA403ApplicationJSONObject;
+
     public AcceptEUAResponse withAcceptEUA403ApplicationJSONObject(java.util.Map<String, Object> acceptEUA403ApplicationJSONObject) {
         this.acceptEUA403ApplicationJSONObject = acceptEUA403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class AcceptEUAResponse {
      */
     
     public java.util.Map<String, Object> acceptEUA404ApplicationJSONObject;
+
     public AcceptEUAResponse withAcceptEUA404ApplicationJSONObject(java.util.Map<String, Object> acceptEUA404ApplicationJSONObject) {
         this.acceptEUA404ApplicationJSONObject = acceptEUA404ApplicationJSONObject;
         return this;
@@ -83,9 +92,25 @@ public class AcceptEUAResponse {
      */
     
     public java.util.Map<String, Object> acceptEUA405ApplicationJSONObject;
+
     public AcceptEUAResponse withAcceptEUA405ApplicationJSONObject(java.util.Map<String, Object> acceptEUA405ApplicationJSONObject) {
         this.acceptEUA405ApplicationJSONObject = acceptEUA405ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> acceptEUA429ApplicationJSONObject;
+
+    public AcceptEUAResponse withAcceptEUA429ApplicationJSONObject(java.util.Map<String, Object> acceptEUA429ApplicationJSONObject) {
+        this.acceptEUA429ApplicationJSONObject = acceptEUA429ApplicationJSONObject;
+        return this;
+    }
+    
+    public AcceptEUAResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReadabilityAssessmentResponse {
     
     public String contentType;
+
     public ReadabilityAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReadabilityAssessmentResponse {
     
     
     public Integer statusCode;
+
     public ReadabilityAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class ReadabilityAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReadabilityAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReadabilityAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

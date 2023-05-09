@@ -15,9 +15,11 @@ public class MultiExchangeRatePersistListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange_rates")
     public MultiExchangeRatePersisitVO[] exchangeRates;
+
     public MultiExchangeRatePersistListVO withExchangeRates(MultiExchangeRatePersisitVO[] exchangeRates) {
         this.exchangeRates = exchangeRates;
         return this;
     }
     
+    public MultiExchangeRatePersistListVO(){}
 }

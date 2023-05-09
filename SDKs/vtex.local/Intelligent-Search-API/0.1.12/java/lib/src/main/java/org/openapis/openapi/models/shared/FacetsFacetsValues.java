@@ -15,6 +15,7 @@ public class FacetsFacetsValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FacetsFacetsValues withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class FacetsFacetsValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public FacetsFacetsValues withKey(String key) {
         this.key = key;
         return this;
@@ -37,6 +39,7 @@ public class FacetsFacetsValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FacetsFacetsValues withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class FacetsFacetsValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Double quantity;
+
     public FacetsFacetsValues withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -59,6 +63,7 @@ public class FacetsFacetsValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected")
     public Boolean selected;
+
     public FacetsFacetsValues withSelected(Boolean selected) {
         this.selected = selected;
         return this;
@@ -70,9 +75,11 @@ public class FacetsFacetsValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FacetsFacetsValues withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FacetsFacetsValues(){}
 }

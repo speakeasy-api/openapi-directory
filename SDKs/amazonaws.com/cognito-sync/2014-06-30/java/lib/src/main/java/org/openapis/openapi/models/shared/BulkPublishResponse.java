@@ -15,9 +15,11 @@ public class BulkPublishResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public BulkPublishResponse withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
     }
     
+    public BulkPublishResponse(){}
 }

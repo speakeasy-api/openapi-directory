@@ -15,6 +15,7 @@ public class RecommendationPreferencesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedInfrastructureMetrics")
     public EnhancedInfrastructureMetricsEnum enhancedInfrastructureMetrics;
+
     public RecommendationPreferencesDetail withEnhancedInfrastructureMetrics(EnhancedInfrastructureMetricsEnum enhancedInfrastructureMetrics) {
         this.enhancedInfrastructureMetrics = enhancedInfrastructureMetrics;
         return this;
@@ -23,6 +24,7 @@ public class RecommendationPreferencesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalMetricsPreference")
     public ExternalMetricsPreference externalMetricsPreference;
+
     public RecommendationPreferencesDetail withExternalMetricsPreference(ExternalMetricsPreference externalMetricsPreference) {
         this.externalMetricsPreference = externalMetricsPreference;
         return this;
@@ -31,6 +33,7 @@ public class RecommendationPreferencesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredWorkloadTypes")
     public InferredWorkloadTypesPreferenceEnum inferredWorkloadTypes;
+
     public RecommendationPreferencesDetail withInferredWorkloadTypes(InferredWorkloadTypesPreferenceEnum inferredWorkloadTypes) {
         this.inferredWorkloadTypes = inferredWorkloadTypes;
         return this;
@@ -39,6 +42,7 @@ public class RecommendationPreferencesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public RecommendationPreferencesDetail withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,9 +51,11 @@ public class RecommendationPreferencesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public Scope scope;
+
     public RecommendationPreferencesDetail withScope(Scope scope) {
         this.scope = scope;
         return this;
     }
     
+    public RecommendationPreferencesDetail(){}
 }

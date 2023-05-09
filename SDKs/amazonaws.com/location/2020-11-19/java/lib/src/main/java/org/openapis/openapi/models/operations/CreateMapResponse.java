@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMapResponse {
@@ -12,6 +13,7 @@ public class CreateMapResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateMapResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateMapResponse {
      */
     
     public Object conflictException;
+
     public CreateMapResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateMapResponse {
     
     
     public String contentType;
+
     public CreateMapResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateMapResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMapResponse createMapResponse;
+
     public CreateMapResponse withCreateMapResponse(org.openapis.openapi.models.shared.CreateMapResponse createMapResponse) {
         this.createMapResponse = createMapResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateMapResponse {
      */
     
     public Object internalServerException;
+
     public CreateMapResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateMapResponse {
     
     
     public Integer statusCode;
+
     public CreateMapResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateMapResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMapResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateMapResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateMapResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateMapResponse {
      */
     
     public Object throttlingException;
+
     public CreateMapResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateMapResponse {
      */
     
     public Object validationException;
+
     public CreateMapResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateMapResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

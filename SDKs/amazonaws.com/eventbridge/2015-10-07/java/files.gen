@@ -377,4 +377,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateConnectionApiKeyAuthR
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateEndpointResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateEndpointRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

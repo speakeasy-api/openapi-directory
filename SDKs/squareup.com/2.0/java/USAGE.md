@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.RegisterDomainSecurity;
 import org.openapis.openapi.models.operations.RegisterDomainResponse;
+import org.openapis.openapi.models.operations.RegisterDomainSecurity;
 import org.openapis.openapi.models.shared.RegisterDomainRequest;
 
 public class Application {
@@ -14,19 +13,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.RegisterDomainRequest req = new RegisterDomainRequest() {{
-                domainName = "corrupti";
-            }}            
+            org.openapis.openapi.models.shared.RegisterDomainRequest req = new RegisterDomainRequest("corrupti");            
 
-            RegisterDomainResponse res = sdk.applePay.registerDomain(req, new RegisterDomainSecurity() {{
+            RegisterDomainResponse res = sdk.applePay.registerDomain(req, new RegisterDomainSecurity("provident") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.registerDomainResponse.isPresent()) {
+            if (res.registerDomainResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

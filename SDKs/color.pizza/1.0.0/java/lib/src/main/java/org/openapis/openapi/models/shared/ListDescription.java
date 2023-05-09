@@ -12,6 +12,7 @@ public class ListDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorCount")
     public Long colorCount;
+
     public ListDescription withColorCount(Long colorCount) {
         this.colorCount = colorCount;
         return this;
@@ -20,6 +21,7 @@ public class ListDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ListDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class ListDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ListDescription withKey(String key) {
         this.key = key;
         return this;
@@ -36,6 +39,7 @@ public class ListDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public String license;
+
     public ListDescription withLicense(String license) {
         this.license = license;
         return this;
@@ -44,6 +48,7 @@ public class ListDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public ListDescription withSource(String source) {
         this.source = source;
         return this;
@@ -52,6 +57,7 @@ public class ListDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ListDescription withTitle(String title) {
         this.title = title;
         return this;
@@ -60,9 +66,11 @@ public class ListDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ListDescription withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ListDescription(){}
 }

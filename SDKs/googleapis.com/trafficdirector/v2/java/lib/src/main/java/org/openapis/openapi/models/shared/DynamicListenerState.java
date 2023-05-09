@@ -15,6 +15,7 @@ public class DynamicListenerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdated")
     public String lastUpdated;
+
     public DynamicListenerState withLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -26,6 +27,7 @@ public class DynamicListenerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listener")
     public java.util.Map<String, Object> listener;
+
     public DynamicListenerState withListener(java.util.Map<String, Object> listener) {
         this.listener = listener;
         return this;
@@ -37,9 +39,11 @@ public class DynamicListenerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionInfo")
     public String versionInfo;
+
     public DynamicListenerState withVersionInfo(String versionInfo) {
         this.versionInfo = versionInfo;
         return this;
     }
     
+    public DynamicListenerState(){}
 }

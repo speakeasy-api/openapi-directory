@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1EvaluationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBoxEvaluationOptions")
     public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions boundingBoxEvaluationOptions;
+
     public GoogleCloudDatalabelingV1beta1EvaluationConfig withBoundingBoxEvaluationOptions(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions boundingBoxEvaluationOptions) {
         this.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1EvaluationConfig(){}
 }

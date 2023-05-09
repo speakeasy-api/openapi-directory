@@ -15,9 +15,11 @@ public class UpdateRuntimeConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeConfiguration")
     public RuntimeConfiguration runtimeConfiguration;
+
     public UpdateRuntimeConfigurationOutput withRuntimeConfiguration(RuntimeConfiguration runtimeConfiguration) {
         this.runtimeConfiguration = runtimeConfiguration;
         return this;
     }
     
+    public UpdateRuntimeConfigurationOutput(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateVPCEConfigurationRequest {
     @JsonProperty("serviceDnsName")
     public String serviceDnsName;
+
     public CreateVPCEConfigurationRequest withServiceDnsName(String serviceDnsName) {
         this.serviceDnsName = serviceDnsName;
         return this;
@@ -19,6 +20,7 @@ public class CreateVPCEConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpceConfigurationDescription")
     public String vpceConfigurationDescription;
+
     public CreateVPCEConfigurationRequest withVpceConfigurationDescription(String vpceConfigurationDescription) {
         this.vpceConfigurationDescription = vpceConfigurationDescription;
         return this;
@@ -26,6 +28,7 @@ public class CreateVPCEConfigurationRequest {
     
     @JsonProperty("vpceConfigurationName")
     public String vpceConfigurationName;
+
     public CreateVPCEConfigurationRequest withVpceConfigurationName(String vpceConfigurationName) {
         this.vpceConfigurationName = vpceConfigurationName;
         return this;
@@ -33,9 +36,15 @@ public class CreateVPCEConfigurationRequest {
     
     @JsonProperty("vpceServiceName")
     public String vpceServiceName;
+
     public CreateVPCEConfigurationRequest withVpceServiceName(String vpceServiceName) {
         this.vpceServiceName = vpceServiceName;
         return this;
     }
     
+    public CreateVPCEConfigurationRequest(@JsonProperty("serviceDnsName") String serviceDnsName, @JsonProperty("vpceConfigurationName") String vpceConfigurationName, @JsonProperty("vpceServiceName") String vpceServiceName) {
+        this.serviceDnsName = serviceDnsName;
+        this.vpceConfigurationName = vpceConfigurationName;
+        this.vpceServiceName = vpceServiceName;
+  }
 }

@@ -18,9 +18,11 @@ public class ListReturnPolicyOnlineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicies")
     public ReturnPolicyOnline[] returnPolicies;
+
     public ListReturnPolicyOnlineResponse withReturnPolicies(ReturnPolicyOnline[] returnPolicies) {
         this.returnPolicies = returnPolicies;
         return this;
     }
     
+    public ListReturnPolicyOnlineResponse(){}
 }

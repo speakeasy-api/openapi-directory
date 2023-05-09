@@ -157,4 +157,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/OSPolicyAssignmentInstanceF
 lib/src/main/java/org/openapis/openapi/models/shared/OSPolicyAssignmentLabelSet.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOSPolicyAssignmentsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOSPolicyAssignmentRevisionsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderInvoiceDesignSettingsPreviewResponse {
@@ -12,6 +13,7 @@ public class GetOrderInvoiceDesignSettingsPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderInvoiceDesignSettingsPreviewResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderInvoiceDesignSettingsPreviewResponse {
     
     
     public String contentType;
+
     public GetOrderInvoiceDesignSettingsPreviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrderInvoiceDesignSettingsPreviewResponse {
     
     
     public Integer statusCode;
+
     public GetOrderInvoiceDesignSettingsPreviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetOrderInvoiceDesignSettingsPreviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderInvoiceDesignSettingsPreviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetOrderInvoiceDesignSettingsPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public GetOrderInvoiceDesignSettingsPreviewResponse withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
@@ -53,9 +59,14 @@ public class GetOrderInvoiceDesignSettingsPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOrderInvoiceDesignPreviewResponse getOrderInvoiceDesignPreviewResponse;
+
     public GetOrderInvoiceDesignSettingsPreviewResponse withGetOrderInvoiceDesignPreviewResponse(org.openapis.openapi.models.shared.GetOrderInvoiceDesignPreviewResponse getOrderInvoiceDesignPreviewResponse) {
         this.getOrderInvoiceDesignPreviewResponse = getOrderInvoiceDesignPreviewResponse;
         return this;
     }
     
+    public GetOrderInvoiceDesignSettingsPreviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

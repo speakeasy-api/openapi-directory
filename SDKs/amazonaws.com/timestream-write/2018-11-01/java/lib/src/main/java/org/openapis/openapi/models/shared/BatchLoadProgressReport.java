@@ -15,6 +15,7 @@ public class BatchLoadProgressReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesMetered")
     public Long bytesMetered;
+
     public BatchLoadProgressReport withBytesMetered(Long bytesMetered) {
         this.bytesMetered = bytesMetered;
         return this;
@@ -23,6 +24,7 @@ public class BatchLoadProgressReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFailures")
     public Long fileFailures;
+
     public BatchLoadProgressReport withFileFailures(Long fileFailures) {
         this.fileFailures = fileFailures;
         return this;
@@ -31,6 +33,7 @@ public class BatchLoadProgressReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParseFailures")
     public Long parseFailures;
+
     public BatchLoadProgressReport withParseFailures(Long parseFailures) {
         this.parseFailures = parseFailures;
         return this;
@@ -39,6 +42,7 @@ public class BatchLoadProgressReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordIngestionFailures")
     public Long recordIngestionFailures;
+
     public BatchLoadProgressReport withRecordIngestionFailures(Long recordIngestionFailures) {
         this.recordIngestionFailures = recordIngestionFailures;
         return this;
@@ -47,6 +51,7 @@ public class BatchLoadProgressReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordsIngested")
     public Long recordsIngested;
+
     public BatchLoadProgressReport withRecordsIngested(Long recordsIngested) {
         this.recordsIngested = recordsIngested;
         return this;
@@ -55,9 +60,11 @@ public class BatchLoadProgressReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordsProcessed")
     public Long recordsProcessed;
+
     public BatchLoadProgressReport withRecordsProcessed(Long recordsProcessed) {
         this.recordsProcessed = recordsProcessed;
         return this;
     }
     
+    public BatchLoadProgressReport(){}
 }

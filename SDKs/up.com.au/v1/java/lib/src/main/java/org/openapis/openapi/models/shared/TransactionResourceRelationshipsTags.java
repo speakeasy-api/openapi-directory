@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransactionResourceRelationshipsTags {
     @JsonProperty("data")
     public TransactionResourceRelationshipsTagsData[] data;
+
     public TransactionResourceRelationshipsTags withData(TransactionResourceRelationshipsTagsData[] data) {
         this.data = data;
         return this;
@@ -19,9 +20,13 @@ public class TransactionResourceRelationshipsTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public TransactionResourceRelationshipsTagsLinks links;
+
     public TransactionResourceRelationshipsTags withLinks(TransactionResourceRelationshipsTagsLinks links) {
         this.links = links;
         return this;
     }
     
+    public TransactionResourceRelationshipsTags(@JsonProperty("data") TransactionResourceRelationshipsTagsData[] data) {
+        this.data = data;
+  }
 }

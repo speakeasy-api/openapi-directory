@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RedisProjectsLocationsInstancesListResponse {
     
     public String contentType;
+
     public RedisProjectsLocationsInstancesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RedisProjectsLocationsInstancesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInstancesResponse listInstancesResponse;
+
     public RedisProjectsLocationsInstancesListResponse withListInstancesResponse(org.openapis.openapi.models.shared.ListInstancesResponse listInstancesResponse) {
         this.listInstancesResponse = listInstancesResponse;
         return this;
@@ -26,6 +29,7 @@ public class RedisProjectsLocationsInstancesListResponse {
     
     
     public Integer statusCode;
+
     public RedisProjectsLocationsInstancesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RedisProjectsLocationsInstancesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RedisProjectsLocationsInstancesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RedisProjectsLocationsInstancesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

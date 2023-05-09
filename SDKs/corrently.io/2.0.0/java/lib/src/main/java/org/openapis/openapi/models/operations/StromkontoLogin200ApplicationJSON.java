@@ -18,9 +18,11 @@ public class StromkontoLogin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StromkontoLogin200ApplicationJSONStatusEnum status;
+
     public StromkontoLogin200ApplicationJSON withStatus(StromkontoLogin200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StromkontoLogin200ApplicationJSON(){}
 }

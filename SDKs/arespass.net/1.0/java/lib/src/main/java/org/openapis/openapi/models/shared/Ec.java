@@ -21,6 +21,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alphabetSequence")
     public EcAlphabetSequence[] alphabetSequence;
+
     public Ec withAlphabetSequence(EcAlphabetSequence[] alphabetSequence) {
         this.alphabetSequence = alphabetSequence;
         return this;
@@ -33,6 +34,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public Ec withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -45,6 +47,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedKeyboard")
     public String detectedKeyboard;
+
     public Ec withDetectedKeyboard(String detectedKeyboard) {
         this.detectedKeyboard = detectedKeyboard;
         return this;
@@ -59,6 +62,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("efficiency")
     public Double efficiency;
+
     public Ec withEfficiency(Double efficiency) {
         this.efficiency = efficiency;
         return this;
@@ -73,6 +77,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entropy")
     public Double entropy;
+
     public Ec withEntropy(Double entropy) {
         this.entropy = entropy;
         return this;
@@ -85,6 +90,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entropyDistribution")
     public EcEntropyDistribution[] entropyDistribution;
+
     public Ec withEntropyDistribution(EcEntropyDistribution[] entropyDistribution) {
         this.entropyDistribution = entropyDistribution;
         return this;
@@ -101,6 +107,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idealEntropy")
     public Double idealEntropy;
+
     public Ec withIdealEntropy(Double idealEntropy) {
         this.idealEntropy = idealEntropy;
         return this;
@@ -115,6 +122,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyboardSequence")
     public EcKeyboardSequence[] keyboardSequence;
+
     public Ec withKeyboardSequence(EcKeyboardSequence[] keyboardSequence) {
         this.keyboardSequence = keyboardSequence;
         return this;
@@ -126,6 +134,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l33tPassword")
     public String l33tPassword;
+
     public Ec withL33tPassword(String l33tPassword) {
         this.l33tPassword = l33tPassword;
         return this;
@@ -140,6 +149,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonUniformEntropyDistributionPenalty")
     public Double nonUniformEntropyDistributionPenalty;
+
     public Ec withNonUniformEntropyDistributionPenalty(Double nonUniformEntropyDistributionPenalty) {
         this.nonUniformEntropyDistributionPenalty = nonUniformEntropyDistributionPenalty;
         return this;
@@ -154,6 +164,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberSequence")
     public EcNumberSequence[] numberSequence;
+
     public Ec withNumberSequence(EcNumberSequence[] numberSequence) {
         this.numberSequence = numberSequence;
         return this;
@@ -165,6 +176,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public Ec withPassword(String password) {
         this.password = password;
         return this;
@@ -176,6 +188,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordLength")
     public Long passwordLength;
+
     public Ec withPasswordLength(Long passwordLength) {
         this.passwordLength = passwordLength;
         return this;
@@ -192,6 +205,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("penalty")
     public Double penalty;
+
     public Ec withPenalty(Double penalty) {
         this.penalty = penalty;
         return this;
@@ -206,6 +220,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeatedChars")
     public EcRepeatedChars[] repeatedChars;
+
     public Ec withRepeatedChars(EcRepeatedChars[] repeatedChars) {
         this.repeatedChars = repeatedChars;
         return this;
@@ -218,6 +233,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public Ec withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -232,6 +248,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestTimestamp")
     public Double requestTimestamp;
+
     public Ec withRequestTimestamp(Double requestTimestamp) {
         this.requestTimestamp = requestTimestamp;
         return this;
@@ -240,6 +257,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String[] summary;
+
     public Ec withSummary(String[] summary) {
         this.summary = summary;
         return this;
@@ -254,6 +272,7 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public EcTotal[] total;
+
     public Ec withTotal(EcTotal[] total) {
         this.total = total;
         return this;
@@ -268,9 +287,11 @@ public class Ec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words")
     public EcWords[] words;
+
     public Ec withWords(EcWords[] words) {
         this.words = words;
         return this;
     }
     
+    public Ec(){}
 }

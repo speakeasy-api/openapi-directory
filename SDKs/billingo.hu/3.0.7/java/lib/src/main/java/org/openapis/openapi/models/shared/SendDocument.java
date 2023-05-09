@@ -15,9 +15,11 @@ public class SendDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public SendDocument withEmails(String[] emails) {
         this.emails = emails;
         return this;
     }
     
+    public SendDocument(){}
 }

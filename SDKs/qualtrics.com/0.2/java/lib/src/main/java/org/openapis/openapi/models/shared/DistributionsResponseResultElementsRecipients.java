@@ -12,6 +12,7 @@ public class DistributionsResponseResultElementsRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactId")
     public Object contactId;
+
     public DistributionsResponseResultElementsRecipients withContactId(Object contactId) {
         this.contactId = contactId;
         return this;
@@ -20,6 +21,7 @@ public class DistributionsResponseResultElementsRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("libraryId")
     public String libraryId;
+
     public DistributionsResponseResultElementsRecipients withLibraryId(String libraryId) {
         this.libraryId = libraryId;
         return this;
@@ -28,6 +30,7 @@ public class DistributionsResponseResultElementsRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailingListId")
     public String mailingListId;
+
     public DistributionsResponseResultElementsRecipients withMailingListId(String mailingListId) {
         this.mailingListId = mailingListId;
         return this;
@@ -36,9 +39,11 @@ public class DistributionsResponseResultElementsRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleId")
     public Object sampleId;
+
     public DistributionsResponseResultElementsRecipients withSampleId(Object sampleId) {
         this.sampleId = sampleId;
         return this;
     }
     
+    public DistributionsResponseResultElementsRecipients(){}
 }

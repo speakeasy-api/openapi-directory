@@ -18,9 +18,11 @@ public class ListFoldersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folders")
     public Folder[] folders;
+
     public ListFoldersResponse withFolders(Folder[] folders) {
         this.folders = folders;
         return this;
     }
     
+    public ListFoldersResponse(){}
 }

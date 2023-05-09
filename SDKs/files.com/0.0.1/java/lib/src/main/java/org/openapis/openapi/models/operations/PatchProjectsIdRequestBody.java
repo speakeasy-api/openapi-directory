@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchProjectsIdRequestBody {
@@ -12,9 +13,13 @@ public class PatchProjectsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=global_access")
     public String globalAccess;
+
     public PatchProjectsIdRequestBody withGlobalAccess(String globalAccess) {
         this.globalAccess = globalAccess;
         return this;
     }
     
+    public PatchProjectsIdRequestBody(@JsonProperty("global_access") String globalAccess) {
+        this.globalAccess = globalAccess;
+  }
 }

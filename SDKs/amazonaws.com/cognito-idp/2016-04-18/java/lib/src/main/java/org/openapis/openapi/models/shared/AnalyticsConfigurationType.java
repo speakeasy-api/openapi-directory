@@ -15,6 +15,7 @@ public class AnalyticsConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationArn")
     public String applicationArn;
+
     public AnalyticsConfigurationType withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -23,6 +24,7 @@ public class AnalyticsConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public AnalyticsConfigurationType withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -31,6 +33,7 @@ public class AnalyticsConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public AnalyticsConfigurationType withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -39,6 +42,7 @@ public class AnalyticsConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AnalyticsConfigurationType withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -47,9 +51,11 @@ public class AnalyticsConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserDataShared")
     public Boolean userDataShared;
+
     public AnalyticsConfigurationType withUserDataShared(Boolean userDataShared) {
         this.userDataShared = userDataShared;
         return this;
     }
     
+    public AnalyticsConfigurationType(){}
 }

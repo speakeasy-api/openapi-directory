@@ -15,6 +15,7 @@ public class OrganizationManagedRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public OrganizationManagedRuleMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class OrganizationManagedRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputParameters")
     public String inputParameters;
+
     public OrganizationManagedRuleMetadata withInputParameters(String inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -31,6 +33,7 @@ public class OrganizationManagedRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumExecutionFrequency")
     public MaximumExecutionFrequencyEnum maximumExecutionFrequency;
+
     public OrganizationManagedRuleMetadata withMaximumExecutionFrequency(MaximumExecutionFrequencyEnum maximumExecutionFrequency) {
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         return this;
@@ -39,6 +42,7 @@ public class OrganizationManagedRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdScope")
     public String resourceIdScope;
+
     public OrganizationManagedRuleMetadata withResourceIdScope(String resourceIdScope) {
         this.resourceIdScope = resourceIdScope;
         return this;
@@ -47,6 +51,7 @@ public class OrganizationManagedRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypesScope")
     public String[] resourceTypesScope;
+
     public OrganizationManagedRuleMetadata withResourceTypesScope(String[] resourceTypesScope) {
         this.resourceTypesScope = resourceTypesScope;
         return this;
@@ -54,6 +59,7 @@ public class OrganizationManagedRuleMetadata {
     
     @JsonProperty("RuleIdentifier")
     public String ruleIdentifier;
+
     public OrganizationManagedRuleMetadata withRuleIdentifier(String ruleIdentifier) {
         this.ruleIdentifier = ruleIdentifier;
         return this;
@@ -62,6 +68,7 @@ public class OrganizationManagedRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKeyScope")
     public String tagKeyScope;
+
     public OrganizationManagedRuleMetadata withTagKeyScope(String tagKeyScope) {
         this.tagKeyScope = tagKeyScope;
         return this;
@@ -70,9 +77,13 @@ public class OrganizationManagedRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValueScope")
     public String tagValueScope;
+
     public OrganizationManagedRuleMetadata withTagValueScope(String tagValueScope) {
         this.tagValueScope = tagValueScope;
         return this;
     }
     
+    public OrganizationManagedRuleMetadata(@JsonProperty("RuleIdentifier") String ruleIdentifier) {
+        this.ruleIdentifier = ruleIdentifier;
+  }
 }

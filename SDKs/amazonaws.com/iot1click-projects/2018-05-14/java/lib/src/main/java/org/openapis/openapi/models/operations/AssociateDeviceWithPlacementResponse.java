@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateDeviceWithPlacementResponse {
@@ -12,6 +13,7 @@ public class AssociateDeviceWithPlacementResponse {
      */
     
     public java.util.Map<String, Object> associateDeviceWithPlacementResponse;
+
     public AssociateDeviceWithPlacementResponse withAssociateDeviceWithPlacementResponse(java.util.Map<String, Object> associateDeviceWithPlacementResponse) {
         this.associateDeviceWithPlacementResponse = associateDeviceWithPlacementResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateDeviceWithPlacementResponse {
     
     
     public String contentType;
+
     public AssociateDeviceWithPlacementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateDeviceWithPlacementResponse {
      */
     
     public Object internalFailureException;
+
     public AssociateDeviceWithPlacementResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateDeviceWithPlacementResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateDeviceWithPlacementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateDeviceWithPlacementResponse {
     
     
     public Integer statusCode;
+
     public AssociateDeviceWithPlacementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AssociateDeviceWithPlacementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateDeviceWithPlacementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AssociateDeviceWithPlacementResponse {
      */
     
     public Object resourceConflictException;
+
     public AssociateDeviceWithPlacementResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -73,9 +81,14 @@ public class AssociateDeviceWithPlacementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateDeviceWithPlacementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateDeviceWithPlacementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

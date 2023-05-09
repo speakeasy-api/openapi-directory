@@ -57,10 +57,8 @@ public class TypeBioSfPdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchBioSfPdbResponse res = new org.openapis.openapi.models.operations.SearchBioSfPdbResponse() {{
+        org.openapis.openapi.models.operations.SearchBioSfPdbResponse res = new org.openapis.openapi.models.operations.SearchBioSfPdbResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

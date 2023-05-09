@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsPersonalizationEnabled")
     public Boolean adsPersonalizationEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal withAdsPersonalizationEnabled(Boolean adsPersonalizationEnabled) {
         this.adsPersonalizationEnabled = adsPersonalizationEnabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserDisplayName")
     public String advertiserDisplayName;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal withAdvertiserDisplayName(String advertiserDisplayName) {
         this.advertiserDisplayName = advertiserDisplayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignDataSharingEnabled")
     public Boolean campaignDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal withCampaignDataSharingEnabled(Boolean campaignDataSharingEnabled) {
         this.campaignDataSharingEnabled = campaignDataSharingEnabled;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costDataSharingEnabled")
     public Boolean costDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal withCostDataSharingEnabled(Boolean costDataSharingEnabled) {
         this.costDataSharingEnabled = costDataSharingEnabled;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkProposalStatusDetails")
     public GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails linkProposalStatusDetails;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal withLinkProposalStatusDetails(GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails linkProposalStatusDetails) {
         this.linkProposalStatusDetails = linkProposalStatusDetails;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal withName(String name) {
         this.name = name;
         return this;
@@ -95,9 +102,11 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationEmail")
     public String validationEmail;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal withValidationEmail(String validationEmail) {
         this.validationEmail = validationEmail;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal(){}
 }

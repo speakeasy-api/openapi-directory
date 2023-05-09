@@ -15,9 +15,11 @@ public class APIError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public APIErrorErrors[] errors;
+
     public APIError withErrors(APIErrorErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public APIError(){}
 }

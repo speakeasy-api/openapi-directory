@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionInstantSnapshotsTestIamPermissionsResponse {
     
     public String contentType;
+
     public ComputeRegionInstantSnapshotsTestIamPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ComputeRegionInstantSnapshotsTestIamPermissionsResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionInstantSnapshotsTestIamPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ComputeRegionInstantSnapshotsTestIamPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionInstantSnapshotsTestIamPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionInstantSnapshotsTestIamPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.TestPermissionsResponse testPermissionsResponse;
+
     public ComputeRegionInstantSnapshotsTestIamPermissionsResponse withTestPermissionsResponse(org.openapis.openapi.models.shared.TestPermissionsResponse testPermissionsResponse) {
         this.testPermissionsResponse = testPermissionsResponse;
         return this;
     }
     
+    public ComputeRegionInstantSnapshotsTestIamPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

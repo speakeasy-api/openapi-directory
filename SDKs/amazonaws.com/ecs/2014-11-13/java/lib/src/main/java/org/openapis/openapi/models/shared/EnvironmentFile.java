@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnvironmentFile {
     @JsonProperty("type")
     public EnvironmentFileTypeEnum type;
+
     public EnvironmentFile withType(EnvironmentFileTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class EnvironmentFile {
     
     @JsonProperty("value")
     public String value;
+
     public EnvironmentFile withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EnvironmentFile(@JsonProperty("type") EnvironmentFileTypeEnum type, @JsonProperty("value") String value) {
+        this.type = type;
+        this.value = value;
+  }
 }

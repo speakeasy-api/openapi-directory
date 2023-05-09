@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFirewallConfigResponse {
@@ -12,6 +13,7 @@ public class GetFirewallConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFirewallConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetFirewallConfigResponse {
     
     
     public String contentType;
+
     public GetFirewallConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFirewallConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFirewallConfigResponse getFirewallConfigResponse;
+
     public GetFirewallConfigResponse withGetFirewallConfigResponse(org.openapis.openapi.models.shared.GetFirewallConfigResponse getFirewallConfigResponse) {
         this.getFirewallConfigResponse = getFirewallConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetFirewallConfigResponse {
      */
     
     public Object internalServiceErrorException;
+
     public GetFirewallConfigResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetFirewallConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFirewallConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetFirewallConfigResponse {
     
     
     public Integer statusCode;
+
     public GetFirewallConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetFirewallConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFirewallConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetFirewallConfigResponse {
      */
     
     public Object throttlingException;
+
     public GetFirewallConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetFirewallConfigResponse {
      */
     
     public Object validationException;
+
     public GetFirewallConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetFirewallConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

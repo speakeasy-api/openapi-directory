@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ViewOnlyLinksNodeListNode {
     /**
@@ -12,6 +12,7 @@ public class ViewOnlyLinksNodeListNode {
      */
     
     public ViewOnlyLinksNodeListNodeAttributes attributes;
+
     public ViewOnlyLinksNodeListNode withAttributes(ViewOnlyLinksNodeListNodeAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class ViewOnlyLinksNodeListNode {
      */
     
     public String id;
+
     public ViewOnlyLinksNodeListNode withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class ViewOnlyLinksNodeListNode {
      */
     
     public ViewOnlyLinksNodeListNodeLinks links;
+
     public ViewOnlyLinksNodeListNode withLinks(ViewOnlyLinksNodeListNodeLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class ViewOnlyLinksNodeListNode {
      */
     
     public ViewOnlyLinksNodeListNodeRelationships relationships;
+
     public ViewOnlyLinksNodeListNode withRelationships(ViewOnlyLinksNodeListNodeRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,14 @@ public class ViewOnlyLinksNodeListNode {
      */
     
     public String type;
+
     public ViewOnlyLinksNodeListNode withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ViewOnlyLinksNodeListNode(@JsonProperty("attributes") ViewOnlyLinksNodeListNodeAttributes attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

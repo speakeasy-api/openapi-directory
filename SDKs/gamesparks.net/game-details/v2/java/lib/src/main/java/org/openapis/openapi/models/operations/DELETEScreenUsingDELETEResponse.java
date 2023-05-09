@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DELETEScreenUsingDELETEResponse {
     
     public String contentType;
+
     public DELETEScreenUsingDELETEResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DELETEScreenUsingDELETEResponse {
      */
     
     public org.openapis.openapi.models.shared.ManageResult manageResult;
+
     public DELETEScreenUsingDELETEResponse withManageResult(org.openapis.openapi.models.shared.ManageResult manageResult) {
         this.manageResult = manageResult;
         return this;
@@ -29,6 +32,7 @@ public class DELETEScreenUsingDELETEResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public DELETEScreenUsingDELETEResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class DELETEScreenUsingDELETEResponse {
     
     
     public Integer statusCode;
+
     public DELETEScreenUsingDELETEResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DELETEScreenUsingDELETEResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DELETEScreenUsingDELETEResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DELETEScreenUsingDELETEResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

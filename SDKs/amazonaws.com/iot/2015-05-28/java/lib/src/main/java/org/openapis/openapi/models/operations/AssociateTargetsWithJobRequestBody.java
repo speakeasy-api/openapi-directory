@@ -15,6 +15,7 @@ public class AssociateTargetsWithJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public AssociateTargetsWithJobRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -25,9 +26,13 @@ public class AssociateTargetsWithJobRequestBody {
      */
     @JsonProperty("targets")
     public String[] targets;
+
     public AssociateTargetsWithJobRequestBody withTargets(String[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public AssociateTargetsWithJobRequestBody(@JsonProperty("targets") String[] targets) {
+        this.targets = targets;
+  }
 }

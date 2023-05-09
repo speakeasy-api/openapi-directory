@@ -18,6 +18,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public FirewallRuleActionEnum action;
+
     public FirewallRule withAction(FirewallRuleActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FirewallRule withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public FirewallRule withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -51,9 +54,11 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRange")
     public String sourceRange;
+
     public FirewallRule withSourceRange(String sourceRange) {
         this.sourceRange = sourceRange;
         return this;
     }
     
+    public FirewallRule(){}
 }

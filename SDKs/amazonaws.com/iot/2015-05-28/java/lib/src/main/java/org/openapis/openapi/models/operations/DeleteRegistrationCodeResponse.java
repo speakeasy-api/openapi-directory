@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRegistrationCodeResponse {
     
     public String contentType;
+
     public DeleteRegistrationCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRegistrationCodeResponse {
      */
     
     public java.util.Map<String, Object> deleteRegistrationCodeResponse;
+
     public DeleteRegistrationCodeResponse withDeleteRegistrationCodeResponse(java.util.Map<String, Object> deleteRegistrationCodeResponse) {
         this.deleteRegistrationCodeResponse = deleteRegistrationCodeResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRegistrationCodeResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteRegistrationCodeResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRegistrationCodeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRegistrationCodeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRegistrationCodeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteRegistrationCodeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteRegistrationCodeResponse {
     
     
     public Integer statusCode;
+
     public DeleteRegistrationCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRegistrationCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRegistrationCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRegistrationCodeResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRegistrationCodeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteRegistrationCodeResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteRegistrationCodeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteRegistrationCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

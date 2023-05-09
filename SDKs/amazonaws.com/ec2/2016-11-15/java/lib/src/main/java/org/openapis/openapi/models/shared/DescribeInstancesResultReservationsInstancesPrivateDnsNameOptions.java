@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesPrivateDnsNameOptions {
     
     public Boolean enableResourceNameDnsAAAARecord;
+
     public DescribeInstancesResultReservationsInstancesPrivateDnsNameOptions withEnableResourceNameDnsAAAARecord(Boolean enableResourceNameDnsAAAARecord) {
         this.enableResourceNameDnsAAAARecord = enableResourceNameDnsAAAARecord;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesResultReservationsInstancesPrivateDnsNameOptions {
     
     
     public Boolean enableResourceNameDnsARecord;
+
     public DescribeInstancesResultReservationsInstancesPrivateDnsNameOptions withEnableResourceNameDnsARecord(Boolean enableResourceNameDnsARecord) {
         this.enableResourceNameDnsARecord = enableResourceNameDnsARecord;
         return this;
@@ -26,9 +28,11 @@ public class DescribeInstancesResultReservationsInstancesPrivateDnsNameOptions {
     
     
     public DescribeInstancesResultReservationsInstancesPrivateDnsNameOptionsHostnameTypeEnum hostnameType;
+
     public DescribeInstancesResultReservationsInstancesPrivateDnsNameOptions withHostnameType(DescribeInstancesResultReservationsInstancesPrivateDnsNameOptionsHostnameTypeEnum hostnameType) {
         this.hostnameType = hostnameType;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesPrivateDnsNameOptions(){}
 }

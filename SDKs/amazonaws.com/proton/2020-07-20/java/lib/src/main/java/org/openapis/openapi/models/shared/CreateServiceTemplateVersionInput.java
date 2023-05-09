@@ -12,6 +12,7 @@ public class CreateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateServiceTemplateVersionInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateServiceTemplateVersionInput {
     
     @JsonProperty("compatibleEnvironmentTemplates")
     public CompatibleEnvironmentTemplateInput[] compatibleEnvironmentTemplates;
+
     public CreateServiceTemplateVersionInput withCompatibleEnvironmentTemplates(CompatibleEnvironmentTemplateInput[] compatibleEnvironmentTemplates) {
         this.compatibleEnvironmentTemplates = compatibleEnvironmentTemplates;
         return this;
@@ -27,6 +29,7 @@ public class CreateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateServiceTemplateVersionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class CreateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public CreateServiceTemplateVersionInput withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -42,6 +46,7 @@ public class CreateServiceTemplateVersionInput {
     
     @JsonProperty("source")
     public TemplateVersionSourceInput source;
+
     public CreateServiceTemplateVersionInput withSource(TemplateVersionSourceInput source) {
         this.source = source;
         return this;
@@ -50,6 +55,7 @@ public class CreateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedComponentSources")
     public ServiceTemplateSupportedComponentSourceTypeEnum[] supportedComponentSources;
+
     public CreateServiceTemplateVersionInput withSupportedComponentSources(ServiceTemplateSupportedComponentSourceTypeEnum[] supportedComponentSources) {
         this.supportedComponentSources = supportedComponentSources;
         return this;
@@ -58,6 +64,7 @@ public class CreateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateServiceTemplateVersionInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -65,9 +72,15 @@ public class CreateServiceTemplateVersionInput {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public CreateServiceTemplateVersionInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public CreateServiceTemplateVersionInput(@JsonProperty("compatibleEnvironmentTemplates") CompatibleEnvironmentTemplateInput[] compatibleEnvironmentTemplates, @JsonProperty("source") TemplateVersionSourceInput source, @JsonProperty("templateName") String templateName) {
+        this.compatibleEnvironmentTemplates = compatibleEnvironmentTemplates;
+        this.source = source;
+        this.templateName = templateName;
+  }
 }

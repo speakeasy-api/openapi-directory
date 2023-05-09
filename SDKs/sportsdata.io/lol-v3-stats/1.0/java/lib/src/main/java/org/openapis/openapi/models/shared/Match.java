@@ -12,6 +12,7 @@ public class Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameId")
     public Long gameId;
+
     public Match withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -20,6 +21,7 @@ public class Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameVersion")
     public String gameVersion;
+
     public Match withGameVersion(String gameVersion) {
         this.gameVersion = gameVersion;
         return this;
@@ -28,6 +30,7 @@ public class Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MapName")
     public String mapName;
+
     public Match withMapName(String mapName) {
         this.mapName = mapName;
         return this;
@@ -36,6 +39,7 @@ public class Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchBans")
     public MatchBan[] matchBans;
+
     public Match withMatchBans(MatchBan[] matchBans) {
         this.matchBans = matchBans;
         return this;
@@ -44,6 +48,7 @@ public class Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public Match withNumber(Long number) {
         this.number = number;
         return this;
@@ -52,6 +57,7 @@ public class Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerMatches")
     public PlayerMatch[] playerMatches;
+
     public Match withPlayerMatches(PlayerMatch[] playerMatches) {
         this.playerMatches = playerMatches;
         return this;
@@ -60,6 +66,7 @@ public class Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamMatches")
     public TeamMatch[] teamMatches;
+
     public Match withTeamMatches(TeamMatch[] teamMatches) {
         this.teamMatches = teamMatches;
         return this;
@@ -68,9 +75,11 @@ public class Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WinningTeamId")
     public Long winningTeamId;
+
     public Match withWinningTeamId(Long winningTeamId) {
         this.winningTeamId = winningTeamId;
         return this;
     }
     
+    public Match(){}
 }

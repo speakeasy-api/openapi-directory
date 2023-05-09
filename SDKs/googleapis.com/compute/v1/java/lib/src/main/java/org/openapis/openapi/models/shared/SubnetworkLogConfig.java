@@ -18,6 +18,7 @@ public class SubnetworkLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationInterval")
     public SubnetworkLogConfigAggregationIntervalEnum aggregationInterval;
+
     public SubnetworkLogConfig withAggregationInterval(SubnetworkLogConfigAggregationIntervalEnum aggregationInterval) {
         this.aggregationInterval = aggregationInterval;
         return this;
@@ -29,6 +30,7 @@ public class SubnetworkLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public SubnetworkLogConfig withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -40,6 +42,7 @@ public class SubnetworkLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterExpr")
     public String filterExpr;
+
     public SubnetworkLogConfig withFilterExpr(String filterExpr) {
         this.filterExpr = filterExpr;
         return this;
@@ -51,6 +54,7 @@ public class SubnetworkLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowSampling")
     public Float flowSampling;
+
     public SubnetworkLogConfig withFlowSampling(Float flowSampling) {
         this.flowSampling = flowSampling;
         return this;
@@ -62,6 +66,7 @@ public class SubnetworkLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SubnetworkLogConfigMetadataEnum metadata;
+
     public SubnetworkLogConfig withMetadata(SubnetworkLogConfigMetadataEnum metadata) {
         this.metadata = metadata;
         return this;
@@ -73,9 +78,11 @@ public class SubnetworkLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataFields")
     public String[] metadataFields;
+
     public SubnetworkLogConfig withMetadataFields(String[] metadataFields) {
         this.metadataFields = metadataFields;
         return this;
     }
     
+    public SubnetworkLogConfig(){}
 }

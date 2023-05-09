@@ -12,6 +12,7 @@ public class MessageMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public MessageMedia withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -20,6 +21,7 @@ public class MessageMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MessageMedia withType(String type) {
         this.type = type;
         return this;
@@ -28,9 +30,11 @@ public class MessageMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public MessageMedia withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MessageMedia(){}
 }

@@ -18,6 +18,7 @@ public class ListAdminOverridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAdminOverridesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListAdminOverridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public QuotaOverride[] overrides;
+
     public ListAdminOverridesResponse withOverrides(QuotaOverride[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public ListAdminOverridesResponse(){}
 }

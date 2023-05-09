@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUniversalDoNotContactsResponse {
     
     public String contentType;
+
     public GetUniversalDoNotContactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUniversalDoNotContactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetUniversalDoNotContactsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetUniversalDoNotContactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ItemListUniversalDoNotContact itemListUniversalDoNotContact;
+
     public GetUniversalDoNotContactsResponse withItemListUniversalDoNotContact(org.openapis.openapi.models.shared.ItemListUniversalDoNotContact itemListUniversalDoNotContact) {
         this.itemListUniversalDoNotContact = itemListUniversalDoNotContact;
         return this;
@@ -36,6 +40,7 @@ public class GetUniversalDoNotContactsResponse {
     
     
     public Integer statusCode;
+
     public GetUniversalDoNotContactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetUniversalDoNotContactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUniversalDoNotContactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUniversalDoNotContactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

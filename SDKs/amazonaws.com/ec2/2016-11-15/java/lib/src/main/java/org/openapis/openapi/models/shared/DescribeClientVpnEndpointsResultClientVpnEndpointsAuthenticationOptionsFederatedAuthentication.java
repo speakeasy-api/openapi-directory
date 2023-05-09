@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsFederatedAuthentication {
     
     public String samlProviderArn;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsFederatedAuthentication withSamlProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOpt
     
     
     public String selfServiceSamlProviderArn;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsFederatedAuthentication withSelfServiceSamlProviderArn(String selfServiceSamlProviderArn) {
         this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsFederatedAuthentication(){}
 }

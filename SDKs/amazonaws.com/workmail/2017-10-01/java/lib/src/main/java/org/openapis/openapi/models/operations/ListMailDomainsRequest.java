@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMailDomainsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListMailDomainsRequest listMailDomainsRequest;
+
     public ListMailDomainsRequest withListMailDomainsRequest(org.openapis.openapi.models.shared.ListMailDomainsRequest listMailDomainsRequest) {
         this.listMailDomainsRequest = listMailDomainsRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListMailDomainsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListMailDomainsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListMailDomainsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListMailDomainsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListMailDomainsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListMailDomainsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListMailDomainsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListMailDomainsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListMailDomainsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListMailDomainsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListMailDomainsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListMailDomainsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListMailDomainsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListMailDomainsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListMailDomainsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListMailDomainsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListMailDomainsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListMailDomainsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListMailDomainsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListMailDomainsXAmzTargetEnum xAmzTarget;
+
     public ListMailDomainsRequest withXAmzTarget(ListMailDomainsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListMailDomainsRequest(@JsonProperty("ListMailDomainsRequest") org.openapis.openapi.models.shared.ListMailDomainsRequest listMailDomainsRequest, @JsonProperty("X-Amz-Target") ListMailDomainsXAmzTargetEnum xAmzTarget) {
+        this.listMailDomainsRequest = listMailDomainsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

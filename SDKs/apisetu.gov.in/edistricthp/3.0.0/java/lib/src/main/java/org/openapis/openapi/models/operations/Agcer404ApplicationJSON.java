@@ -15,6 +15,7 @@ public class Agcer404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Agcer404ApplicationJSONErrorEnum error;
+
     public Agcer404ApplicationJSON withError(Agcer404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Agcer404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Agcer404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Agcer404ApplicationJSON withErrorDescription(Agcer404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Agcer404ApplicationJSON(){}
 }

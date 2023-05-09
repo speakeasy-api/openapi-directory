@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCustomLineItemResponse {
@@ -12,6 +13,7 @@ public class UpdateCustomLineItemResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateCustomLineItemResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCustomLineItemResponse {
     
     
     public String contentType;
+
     public UpdateCustomLineItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCustomLineItemResponse {
      */
     
     public Object internalServerException;
+
     public UpdateCustomLineItemResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateCustomLineItemResponse {
     
     
     public Integer statusCode;
+
     public UpdateCustomLineItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCustomLineItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCustomLineItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCustomLineItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCustomLineItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCustomLineItemResponse {
      */
     
     public Object throttlingException;
+
     public UpdateCustomLineItemResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateCustomLineItemResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCustomLineItemOutput updateCustomLineItemOutput;
+
     public UpdateCustomLineItemResponse withUpdateCustomLineItemOutput(org.openapis.openapi.models.shared.UpdateCustomLineItemOutput updateCustomLineItemOutput) {
         this.updateCustomLineItemOutput = updateCustomLineItemOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCustomLineItemResponse {
      */
     
     public Object validationException;
+
     public UpdateCustomLineItemResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateCustomLineItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

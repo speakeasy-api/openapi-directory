@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkAclEntryRequestPortRange {
     
     public Long from;
+
     public CreateNetworkAclEntryRequestPortRange withFrom(Long from) {
         this.from = from;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkAclEntryRequestPortRange {
     
     
     public Long to;
+
     public CreateNetworkAclEntryRequestPortRange withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public CreateNetworkAclEntryRequestPortRange(){}
 }

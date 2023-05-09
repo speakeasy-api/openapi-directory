@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSnapshotRequest {
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public DeleteSnapshotRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public DeleteSnapshotRequest(@JsonProperty("SnapshotId") String snapshotId) {
+        this.snapshotId = snapshotId;
+  }
 }

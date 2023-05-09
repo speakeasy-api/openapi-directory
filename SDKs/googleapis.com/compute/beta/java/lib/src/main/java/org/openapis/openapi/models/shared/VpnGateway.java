@@ -18,6 +18,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public VpnGateway withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,8 +30,21 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public VpnGateway withDescription(String description) {
         this.description = description;
+        return this;
+    }
+    
+    /**
+     * The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("gatewayIpVersion")
+    public VpnGatewayGatewayIpVersionEnum gatewayIpVersion;
+
+    public VpnGateway withGatewayIpVersion(VpnGatewayGatewayIpVersionEnum gatewayIpVersion) {
+        this.gatewayIpVersion = gatewayIpVersion;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VpnGateway withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +66,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VpnGateway withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +78,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public VpnGateway withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -73,6 +90,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public VpnGateway withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +102,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VpnGateway withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +114,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public VpnGateway withNetwork(String network) {
         this.network = network;
         return this;
@@ -106,6 +126,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public VpnGateway withRegion(String region) {
         this.region = region;
         return this;
@@ -117,6 +138,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public VpnGateway withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -128,6 +150,7 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackType")
     public VpnGatewayStackTypeEnum stackType;
+
     public VpnGateway withStackType(VpnGatewayStackTypeEnum stackType) {
         this.stackType = stackType;
         return this;
@@ -139,9 +162,11 @@ public class VpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnInterfaces")
     public VpnGatewayVpnGatewayInterface[] vpnInterfaces;
+
     public VpnGateway withVpnInterfaces(VpnGatewayVpnGatewayInterface[] vpnInterfaces) {
         this.vpnInterfaces = vpnInterfaces;
         return this;
     }
     
+    public VpnGateway(){}
 }

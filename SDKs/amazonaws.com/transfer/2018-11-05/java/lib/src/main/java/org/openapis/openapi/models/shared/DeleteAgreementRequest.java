@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAgreementRequest {
     @JsonProperty("AgreementId")
     public String agreementId;
+
     public DeleteAgreementRequest withAgreementId(String agreementId) {
         this.agreementId = agreementId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteAgreementRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public DeleteAgreementRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public DeleteAgreementRequest(@JsonProperty("AgreementId") String agreementId, @JsonProperty("ServerId") String serverId) {
+        this.agreementId = agreementId;
+        this.serverId = serverId;
+  }
 }

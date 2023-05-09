@@ -12,6 +12,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ErrorCodeEnum code;
+
     public Error withCode(ErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Error withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public Error(){}
 }

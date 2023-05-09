@@ -57,10 +57,8 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoryResponse res = new org.openapis.openapi.models.operations.GetCategoryResponse() {{
+        org.openapis.openapi.models.operations.GetCategoryResponse res = new org.openapis.openapi.models.operations.GetCategoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -100,10 +98,8 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoryDocsResponse res = new org.openapis.openapi.models.operations.GetCategoryDocsResponse() {{
+        org.openapis.openapi.models.operations.GetCategoryDocsResponse res = new org.openapis.openapi.models.operations.GetCategoryDocsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {

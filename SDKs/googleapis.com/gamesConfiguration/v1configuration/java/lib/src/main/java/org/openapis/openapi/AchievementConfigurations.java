@@ -59,10 +59,8 @@ public class AchievementConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class AchievementConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsGetResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsGetResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsGetResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsGetResponse(contentType, httpRes.statusCode()) {{
             achievementConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class AchievementConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsInsertResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsInsertResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsInsertResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsInsertResponse(contentType, httpRes.statusCode()) {{
             achievementConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class AchievementConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsListResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsListResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsListResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsListResponse(contentType, httpRes.statusCode()) {{
             achievementConfigurationListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class AchievementConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsUpdateResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsUpdateResponse() {{
+        org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsUpdateResponse res = new org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsUpdateResponse(contentType, httpRes.statusCode()) {{
             achievementConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

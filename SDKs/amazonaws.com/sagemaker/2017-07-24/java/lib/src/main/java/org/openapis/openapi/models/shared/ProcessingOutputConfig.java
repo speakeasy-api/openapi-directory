@@ -15,6 +15,7 @@ public class ProcessingOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ProcessingOutputConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class ProcessingOutputConfig {
     
     @JsonProperty("Outputs")
     public ProcessingOutput[] outputs;
+
     public ProcessingOutputConfig withOutputs(ProcessingOutput[] outputs) {
         this.outputs = outputs;
         return this;
     }
     
+    public ProcessingOutputConfig(@JsonProperty("Outputs") ProcessingOutput[] outputs) {
+        this.outputs = outputs;
+  }
 }

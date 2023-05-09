@@ -7,11 +7,12 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
- * GETModifyVerifiedAccessEndpointNetworkInterfaceOptions - Options for a network-interface type Verified Access endpoint.
+ * GETModifyVerifiedAccessEndpointNetworkInterfaceOptions - Describes the options when modifying a Verified Access endpoint with the &lt;code&gt;network-interface&lt;/code&gt; type.
  */
 public class GETModifyVerifiedAccessEndpointNetworkInterfaceOptions {
     @SpeakeasyMetadata("queryParam:name=Port")
     public Long port;
+
     public GETModifyVerifiedAccessEndpointNetworkInterfaceOptions withPort(Long port) {
         this.port = port;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyVerifiedAccessEndpointNetworkInterfaceOptions {
     
     @SpeakeasyMetadata("queryParam:name=Protocol")
     public org.openapis.openapi.models.shared.VerifiedAccessEndpointProtocolEnum protocol;
+
     public GETModifyVerifiedAccessEndpointNetworkInterfaceOptions withProtocol(org.openapis.openapi.models.shared.VerifiedAccessEndpointProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public GETModifyVerifiedAccessEndpointNetworkInterfaceOptions(){}
 }

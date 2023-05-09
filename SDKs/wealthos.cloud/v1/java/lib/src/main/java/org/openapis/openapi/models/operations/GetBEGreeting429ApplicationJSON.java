@@ -18,6 +18,7 @@ public class GetBEGreeting429ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetBEGreeting429ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetBEGreeting429ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetBEGreeting429ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetBEGreeting429ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

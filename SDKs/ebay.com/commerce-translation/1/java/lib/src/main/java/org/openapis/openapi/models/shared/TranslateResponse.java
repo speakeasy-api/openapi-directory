@@ -18,9 +18,11 @@ public class TranslateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Translation[] translations;
+
     public TranslateResponse withTranslations(Translation[] translations) {
         this.translations = translations;
         return this;
     }
     
+    public TranslateResponse(){}
 }

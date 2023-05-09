@@ -15,6 +15,7 @@ public class ListProvisioningTemplateVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListProvisioningTemplateVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProvisioningTemplateVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public ProvisioningTemplateVersionSummary[] versions;
+
     public ListProvisioningTemplateVersionsResponse withVersions(ProvisioningTemplateVersionSummary[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListProvisioningTemplateVersionsResponse(){}
 }

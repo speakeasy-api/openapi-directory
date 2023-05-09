@@ -18,9 +18,11 @@ public class BucketBilling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requesterPays")
     public Boolean requesterPays;
+
     public BucketBilling withRequesterPays(Boolean requesterPays) {
         this.requesterPays = requesterPays;
         return this;
     }
     
+    public BucketBilling(){}
 }

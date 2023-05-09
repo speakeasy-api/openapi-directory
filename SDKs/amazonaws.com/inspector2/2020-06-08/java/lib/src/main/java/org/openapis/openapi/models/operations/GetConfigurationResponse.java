@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConfigurationResponse {
     
     public String contentType;
+
     public GetConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConfigurationResponse getConfigurationResponse;
+
     public GetConfigurationResponse withGetConfigurationResponse(org.openapis.openapi.models.shared.GetConfigurationResponse getConfigurationResponse) {
         this.getConfigurationResponse = getConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

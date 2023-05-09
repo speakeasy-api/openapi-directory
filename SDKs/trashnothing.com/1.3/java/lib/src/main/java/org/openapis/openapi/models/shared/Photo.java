@@ -16,6 +16,7 @@ public class Photo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blurhash")
     public String blurhash;
+
     public Photo withBlurhash(String blurhash) {
         this.blurhash = blurhash;
         return this;
@@ -27,6 +28,7 @@ public class Photo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public PhotoImages[] images;
+
     public Photo withImages(PhotoImages[] images) {
         this.images = images;
         return this;
@@ -35,6 +37,7 @@ public class Photo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photo_id")
     public String photoId;
+
     public Photo withPhotoId(String photoId) {
         this.photoId = photoId;
         return this;
@@ -46,6 +49,7 @@ public class Photo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public Photo withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -57,9 +61,11 @@ public class Photo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Photo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Photo(){}
 }

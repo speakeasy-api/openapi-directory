@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AutoResumeAutoImportResponse {
@@ -12,6 +13,7 @@ public class AutoResumeAutoImportResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public AutoResumeAutoImportResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class AutoResumeAutoImportResponse {
     
     
     public String contentType;
+
     public AutoResumeAutoImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AutoResumeAutoImportResponse {
     
     
     public Integer statusCode;
+
     public AutoResumeAutoImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AutoResumeAutoImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AutoResumeAutoImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AutoResumeAutoImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

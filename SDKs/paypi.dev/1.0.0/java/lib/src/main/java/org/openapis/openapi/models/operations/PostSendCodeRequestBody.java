@@ -12,9 +12,11 @@ public class PostSendCodeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PostSendCodeRequestBody withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public PostSendCodeRequestBody(){}
 }

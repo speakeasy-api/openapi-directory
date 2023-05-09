@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUnsecuredSmeLoansResponse {
@@ -12,6 +13,7 @@ public class GetUnsecuredSmeLoansResponse {
      */
     
     public GetUnsecuredSmeLoans400ErrorObject fourHundredErrorObject;
+
     public GetUnsecuredSmeLoansResponse withFourHundredErrorObject(GetUnsecuredSmeLoans400ErrorObject fourHundredErrorObject) {
         this.fourHundredErrorObject = fourHundredErrorObject;
         return this;
@@ -22,6 +24,7 @@ public class GetUnsecuredSmeLoansResponse {
      */
     
     public GetUnsecuredSmeLoans408ErrorObject fourHundredAndEightErrorObject;
+
     public GetUnsecuredSmeLoansResponse withFourHundredAndEightErrorObject(GetUnsecuredSmeLoans408ErrorObject fourHundredAndEightErrorObject) {
         this.fourHundredAndEightErrorObject = fourHundredAndEightErrorObject;
         return this;
@@ -32,6 +35,7 @@ public class GetUnsecuredSmeLoansResponse {
      */
     
     public GetUnsecuredSmeLoans429ErrorObject fourHundredAndTwentyNineErrorObject;
+
     public GetUnsecuredSmeLoansResponse withFourHundredAndTwentyNineErrorObject(GetUnsecuredSmeLoans429ErrorObject fourHundredAndTwentyNineErrorObject) {
         this.fourHundredAndTwentyNineErrorObject = fourHundredAndTwentyNineErrorObject;
         return this;
@@ -42,6 +46,7 @@ public class GetUnsecuredSmeLoansResponse {
      */
     
     public GetUnsecuredSmeLoans500ErrorObject fiveHundredErrorObject;
+
     public GetUnsecuredSmeLoansResponse withFiveHundredErrorObject(GetUnsecuredSmeLoans500ErrorObject fiveHundredErrorObject) {
         this.fiveHundredErrorObject = fiveHundredErrorObject;
         return this;
@@ -52,6 +57,7 @@ public class GetUnsecuredSmeLoansResponse {
      */
     
     public GetUnsecuredSmeLoans503ErrorObject fiveHundredAndThreeErrorObject;
+
     public GetUnsecuredSmeLoansResponse withFiveHundredAndThreeErrorObject(GetUnsecuredSmeLoans503ErrorObject fiveHundredAndThreeErrorObject) {
         this.fiveHundredAndThreeErrorObject = fiveHundredAndThreeErrorObject;
         return this;
@@ -59,6 +65,7 @@ public class GetUnsecuredSmeLoansResponse {
     
     
     public String contentType;
+
     public GetUnsecuredSmeLoansResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class GetUnsecuredSmeLoansResponse {
      */
     
     public GetUnsecuredSmeLoansErrorObject errorObject;
+
     public GetUnsecuredSmeLoansResponse withErrorObject(GetUnsecuredSmeLoansErrorObject errorObject) {
         this.errorObject = errorObject;
         return this;
@@ -76,6 +84,7 @@ public class GetUnsecuredSmeLoansResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetUnsecuredSmeLoansResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -83,6 +92,7 @@ public class GetUnsecuredSmeLoansResponse {
     
     
     public Integer statusCode;
+
     public GetUnsecuredSmeLoansResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -90,6 +100,7 @@ public class GetUnsecuredSmeLoansResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUnsecuredSmeLoansResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -100,9 +111,14 @@ public class GetUnsecuredSmeLoansResponse {
      */
     
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject;
+
     public GetUnsecuredSmeLoansResponse withGetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject) {
         this.getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject;
         return this;
     }
     
+    public GetUnsecuredSmeLoansResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

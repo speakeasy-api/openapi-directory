@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolUploadsListRequest {
@@ -12,6 +13,7 @@ public class SymbolUploadsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public SymbolUploadsListRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class SymbolUploadsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public SymbolUploadsListRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -33,6 +36,7 @@ public class SymbolUploadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public SymbolUploadsListStatusEnum status;
+
     public SymbolUploadsListRequest withStatus(SymbolUploadsListStatusEnum status) {
         this.status = status;
         return this;
@@ -43,6 +47,7 @@ public class SymbolUploadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=symbol_type")
     public SymbolUploadsListSymbolTypeEnum symbolType;
+
     public SymbolUploadsListRequest withSymbolType(SymbolUploadsListSymbolTypeEnum symbolType) {
         this.symbolType = symbolType;
         return this;
@@ -53,9 +58,14 @@ public class SymbolUploadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
     public Long top;
+
     public SymbolUploadsListRequest withTop(Long top) {
         this.top = top;
         return this;
     }
     
+    public SymbolUploadsListRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

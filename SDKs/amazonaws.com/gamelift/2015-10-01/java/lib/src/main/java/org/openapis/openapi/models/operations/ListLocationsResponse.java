@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLocationsResponse {
     
     public String contentType;
+
     public ListLocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListLocationsResponse {
      */
     
     public Object internalServiceException;
+
     public ListLocationsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListLocationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListLocationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLocationsOutput listLocationsOutput;
+
     public ListLocationsResponse withListLocationsOutput(org.openapis.openapi.models.shared.ListLocationsOutput listLocationsOutput) {
         this.listLocationsOutput = listLocationsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListLocationsResponse {
     
     
     public Integer statusCode;
+
     public ListLocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListLocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListLocationsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListLocationsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListLocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

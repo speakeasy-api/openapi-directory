@@ -20,6 +20,7 @@ public class BotAliasHistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public BotAliasHistoryEvent withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -30,6 +31,7 @@ public class BotAliasHistoryEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public BotAliasHistoryEvent withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -40,9 +42,11 @@ public class BotAliasHistoryEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public BotAliasHistoryEvent withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public BotAliasHistoryEvent(){}
 }

@@ -15,9 +15,13 @@ public class GetSmsChannelResponse {
      */
     @JsonProperty("SMSChannelResponse")
     public SMSChannelResponse smsChannelResponse;
+
     public GetSmsChannelResponse withSMSChannelResponse(SMSChannelResponse smsChannelResponse) {
         this.smsChannelResponse = smsChannelResponse;
         return this;
     }
     
+    public GetSmsChannelResponse(@JsonProperty("SMSChannelResponse") SMSChannelResponse smsChannelResponse) {
+        this.smsChannelResponse = smsChannelResponse;
+  }
 }

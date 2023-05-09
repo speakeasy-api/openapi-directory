@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyDBClusterServerlessV2ScalingConfiguration {
     @SpeakeasyMetadata("queryParam:name=MaxCapacity")
     public Double maxCapacity;
+
     public GETModifyDBClusterServerlessV2ScalingConfiguration withMaxCapacity(Double maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyDBClusterServerlessV2ScalingConfiguration {
     
     @SpeakeasyMetadata("queryParam:name=MinCapacity")
     public Double minCapacity;
+
     public GETModifyDBClusterServerlessV2ScalingConfiguration withMinCapacity(Double minCapacity) {
         this.minCapacity = minCapacity;
         return this;
     }
     
+    public GETModifyDBClusterServerlessV2ScalingConfiguration(){}
 }

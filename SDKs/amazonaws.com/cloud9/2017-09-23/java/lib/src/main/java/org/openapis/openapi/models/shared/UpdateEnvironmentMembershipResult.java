@@ -15,9 +15,11 @@ public class UpdateEnvironmentMembershipResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership")
     public EnvironmentMember membership;
+
     public UpdateEnvironmentMembershipResult withMembership(EnvironmentMember membership) {
         this.membership = membership;
         return this;
     }
     
+    public UpdateEnvironmentMembershipResult(){}
 }

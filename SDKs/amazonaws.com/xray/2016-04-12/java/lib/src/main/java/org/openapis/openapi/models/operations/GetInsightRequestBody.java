@@ -12,9 +12,13 @@ public class GetInsightRequestBody {
      */
     @JsonProperty("InsightId")
     public String insightId;
+
     public GetInsightRequestBody withInsightId(String insightId) {
         this.insightId = insightId;
         return this;
     }
     
+    public GetInsightRequestBody(@JsonProperty("InsightId") String insightId) {
+        this.insightId = insightId;
+  }
 }

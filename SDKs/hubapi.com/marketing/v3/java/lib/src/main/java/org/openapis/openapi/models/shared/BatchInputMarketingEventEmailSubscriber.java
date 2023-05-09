@@ -15,9 +15,13 @@ public class BatchInputMarketingEventEmailSubscriber {
      */
     @JsonProperty("inputs")
     public MarketingEventEmailSubscriber[] inputs;
+
     public BatchInputMarketingEventEmailSubscriber withInputs(MarketingEventEmailSubscriber[] inputs) {
         this.inputs = inputs;
         return this;
     }
     
+    public BatchInputMarketingEventEmailSubscriber(@JsonProperty("inputs") MarketingEventEmailSubscriber[] inputs) {
+        this.inputs = inputs;
+  }
 }

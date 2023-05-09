@@ -18,6 +18,7 @@ public class VideoTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevantTopicIds")
     public String[] relevantTopicIds;
+
     public VideoTopicDetails withRelevantTopicIds(String[] relevantTopicIds) {
         this.relevantTopicIds = relevantTopicIds;
         return this;
@@ -29,6 +30,7 @@ public class VideoTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicCategories")
     public String[] topicCategories;
+
     public VideoTopicDetails withTopicCategories(String[] topicCategories) {
         this.topicCategories = topicCategories;
         return this;
@@ -40,9 +42,11 @@ public class VideoTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicIds")
     public String[] topicIds;
+
     public VideoTopicDetails withTopicIds(String[] topicIds) {
         this.topicIds = topicIds;
         return this;
     }
     
+    public VideoTopicDetails(){}
 }

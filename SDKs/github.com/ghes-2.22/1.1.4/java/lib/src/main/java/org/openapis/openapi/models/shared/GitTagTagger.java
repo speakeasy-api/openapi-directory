@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GitTagTagger {
     @JsonProperty("date")
     public String date;
+
     public GitTagTagger withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +17,7 @@ public class GitTagTagger {
     
     @JsonProperty("email")
     public String email;
+
     public GitTagTagger withEmail(String email) {
         this.email = email;
         return this;
@@ -23,9 +25,15 @@ public class GitTagTagger {
     
     @JsonProperty("name")
     public String name;
+
     public GitTagTagger withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GitTagTagger(@JsonProperty("date") String date, @JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.date = date;
+        this.email = email;
+        this.name = name;
+  }
 }

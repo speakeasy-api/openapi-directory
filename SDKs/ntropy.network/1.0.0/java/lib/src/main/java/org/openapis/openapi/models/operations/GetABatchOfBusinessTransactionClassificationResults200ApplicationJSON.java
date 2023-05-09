@@ -15,6 +15,7 @@ public class GetABatchOfBusinessTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class GetABatchOfBusinessTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public Double progress;
+
     public GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -31,6 +33,7 @@ public class GetABatchOfBusinessTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GetABatchOfBusinessTransactionClassificationResults200ApplicationJSONResults[] results;
+
     public GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON withResults(GetABatchOfBusinessTransactionClassificationResults200ApplicationJSONResults[] results) {
         this.results = results;
         return this;
@@ -39,6 +42,7 @@ public class GetABatchOfBusinessTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class GetABatchOfBusinessTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON(){}
 }

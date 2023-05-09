@@ -18,6 +18,7 @@ public class DynamicGroupQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public DynamicGroupQuery withQuery(String query) {
         this.query = query;
         return this;
@@ -29,9 +30,11 @@ public class DynamicGroupQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public DynamicGroupQueryResourceTypeEnum resourceType;
+
     public DynamicGroupQuery withResourceType(DynamicGroupQueryResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public DynamicGroupQuery(){}
 }

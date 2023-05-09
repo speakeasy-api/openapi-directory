@@ -12,6 +12,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creation_date")
     public String creationDate;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -20,6 +21,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_internal")
     public String fileInternal;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement withFileInternal(String fileInternal) {
         this.fileInternal = fileInternal;
         return this;
@@ -36,6 +39,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -44,6 +48,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement withSize(Long size) {
         this.size = size;
         return this;
@@ -60,6 +66,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("src_ip_address")
     public String srcIpAddress;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement withSrcIpAddress(String srcIpAddress) {
         this.srcIpAddress = srcIpAddress;
         return this;
@@ -68,9 +75,11 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncementUrl url;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement withUrl(OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncementUrl url) {
         this.url = url;
         return this;
     }
     
+    public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement(){}
 }

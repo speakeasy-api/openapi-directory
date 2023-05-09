@@ -15,6 +15,7 @@ public class StyleGuideList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public StyleGuideList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class StyleGuideList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("styleguides")
     public StyleGuide[] styleguides;
+
     public StyleGuideList withStyleguides(StyleGuide[] styleguides) {
         this.styleguides = styleguides;
         return this;
     }
     
+    public StyleGuideList(){}
 }

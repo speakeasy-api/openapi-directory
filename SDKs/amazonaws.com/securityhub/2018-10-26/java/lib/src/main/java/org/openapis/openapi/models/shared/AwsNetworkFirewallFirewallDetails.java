@@ -15,6 +15,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteProtection")
     public Boolean deleteProtection;
+
     public AwsNetworkFirewallFirewallDetails withDeleteProtection(Boolean deleteProtection) {
         this.deleteProtection = deleteProtection;
         return this;
@@ -23,6 +24,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsNetworkFirewallFirewallDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public AwsNetworkFirewallFirewallDetails withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -39,6 +42,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallId")
     public String firewallId;
+
     public AwsNetworkFirewallFirewallDetails withFirewallId(String firewallId) {
         this.firewallId = firewallId;
         return this;
@@ -47,6 +51,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public AwsNetworkFirewallFirewallDetails withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -55,6 +60,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyArn")
     public String firewallPolicyArn;
+
     public AwsNetworkFirewallFirewallDetails withFirewallPolicyArn(String firewallPolicyArn) {
         this.firewallPolicyArn = firewallPolicyArn;
         return this;
@@ -63,6 +69,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyChangeProtection")
     public Boolean firewallPolicyChangeProtection;
+
     public AwsNetworkFirewallFirewallDetails withFirewallPolicyChangeProtection(Boolean firewallPolicyChangeProtection) {
         this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
         return this;
@@ -71,6 +78,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetChangeProtection")
     public Boolean subnetChangeProtection;
+
     public AwsNetworkFirewallFirewallDetails withSubnetChangeProtection(Boolean subnetChangeProtection) {
         this.subnetChangeProtection = subnetChangeProtection;
         return this;
@@ -79,6 +87,7 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetMappings")
     public AwsNetworkFirewallFirewallSubnetMappingsDetails[] subnetMappings;
+
     public AwsNetworkFirewallFirewallDetails withSubnetMappings(AwsNetworkFirewallFirewallSubnetMappingsDetails[] subnetMappings) {
         this.subnetMappings = subnetMappings;
         return this;
@@ -87,9 +96,11 @@ public class AwsNetworkFirewallFirewallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsNetworkFirewallFirewallDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsNetworkFirewallFirewallDetails(){}
 }

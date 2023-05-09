@@ -18,6 +18,7 @@ public class CreateFeedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feed")
     public Feed feed;
+
     public CreateFeedRequest withFeed(Feed feed) {
         this.feed = feed;
         return this;
@@ -29,9 +30,11 @@ public class CreateFeedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedId")
     public String feedId;
+
     public CreateFeedRequest withFeedId(String feedId) {
         this.feedId = feedId;
         return this;
     }
     
+    public CreateFeedRequest(){}
 }

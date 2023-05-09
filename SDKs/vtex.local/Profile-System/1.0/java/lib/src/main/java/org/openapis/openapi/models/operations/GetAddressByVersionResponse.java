@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAddressByVersionResponse {
     
     public String contentType;
+
     public GetAddressByVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAddressByVersionResponse {
      */
     
     public java.util.Map<String, Object> getAddressByVersion200ApplicationJSONObject;
+
     public GetAddressByVersionResponse withGetAddressByVersion200ApplicationJSONObject(java.util.Map<String, Object> getAddressByVersion200ApplicationJSONObject) {
         this.getAddressByVersion200ApplicationJSONObject = getAddressByVersion200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class GetAddressByVersionResponse {
     
     
     public Integer statusCode;
+
     public GetAddressByVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAddressByVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAddressByVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAddressByVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

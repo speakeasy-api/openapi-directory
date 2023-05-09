@@ -20,6 +20,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCriteria")
     public S3BucketCriteriaForJob bucketCriteria;
+
     public JobSummary withBucketCriteria(S3BucketCriteriaForJob bucketCriteria) {
         this.bucketCriteria = bucketCriteria;
         return this;
@@ -28,6 +29,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketDefinitions")
     public S3BucketDefinitionForJob[] bucketDefinitions;
+
     public JobSummary withBucketDefinitions(S3BucketDefinitionForJob[] bucketDefinitions) {
         this.bucketDefinitions = bucketDefinitions;
         return this;
@@ -38,6 +40,7 @@ public class JobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public JobSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public JobSummary withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -54,6 +58,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobStatus")
     public JobStatusEnum jobStatus;
+
     public JobSummary withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -62,6 +67,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public JobTypeEnum jobType;
+
     public JobSummary withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -70,6 +76,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRunErrorStatus")
     public LastRunErrorStatus lastRunErrorStatus;
+
     public JobSummary withLastRunErrorStatus(LastRunErrorStatus lastRunErrorStatus) {
         this.lastRunErrorStatus = lastRunErrorStatus;
         return this;
@@ -78,6 +85,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobSummary withName(String name) {
         this.name = name;
         return this;
@@ -86,9 +94,11 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPausedDetails")
     public UserPausedDetails userPausedDetails;
+
     public JobSummary withUserPausedDetails(UserPausedDetails userPausedDetails) {
         this.userPausedDetails = userPausedDetails;
         return this;
     }
     
+    public JobSummary(){}
 }

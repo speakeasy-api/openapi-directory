@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class DiaryControllerGetAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentType")
     public String appointmentType;
+
     public DiaryControllerGetAllocationsRequest withAppointmentType(String appointmentType) {
         this.appointmentType = appointmentType;
         return this;
@@ -23,6 +25,7 @@ public class DiaryControllerGetAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branchID")
     public String branchID;
+
     public DiaryControllerGetAllocationsRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -33,6 +36,7 @@ public class DiaryControllerGetAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
     public Boolean lettings;
+
     public DiaryControllerGetAllocationsRequest withLettings(Boolean lettings) {
         this.lettings = lettings;
         return this;
@@ -43,6 +47,7 @@ public class DiaryControllerGetAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preferredDate")
     public OffsetDateTime preferredDate;
+
     public DiaryControllerGetAllocationsRequest withPreferredDate(OffsetDateTime preferredDate) {
         this.preferredDate = preferredDate;
         return this;
@@ -53,6 +58,7 @@ public class DiaryControllerGetAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyIdentifier")
     public String propertyIdentifier;
+
     public DiaryControllerGetAllocationsRequest withPropertyIdentifier(String propertyIdentifier) {
         this.propertyIdentifier = propertyIdentifier;
         return this;
@@ -63,9 +69,15 @@ public class DiaryControllerGetAllocationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerGetAllocationsRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerGetAllocationsRequest(@JsonProperty("appointmentType") String appointmentType, @JsonProperty("preferredDate") OffsetDateTime preferredDate, @JsonProperty("shortName") String shortName) {
+        this.appointmentType = appointmentType;
+        this.preferredDate = preferredDate;
+        this.shortName = shortName;
+  }
 }

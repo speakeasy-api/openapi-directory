@@ -15,9 +15,11 @@ public class AcceptSharedDirectoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedDirectory")
     public SharedDirectory sharedDirectory;
+
     public AcceptSharedDirectoryResult withSharedDirectory(SharedDirectory sharedDirectory) {
         this.sharedDirectory = sharedDirectory;
         return this;
     }
     
+    public AcceptSharedDirectoryResult(){}
 }

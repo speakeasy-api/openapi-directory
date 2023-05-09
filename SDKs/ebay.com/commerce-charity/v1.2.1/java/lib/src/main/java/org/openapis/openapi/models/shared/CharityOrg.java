@@ -18,6 +18,7 @@ public class CharityOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("charityOrgId")
     public String charityOrgId;
+
     public CharityOrg withCharityOrgId(String charityOrgId) {
         this.charityOrgId = charityOrgId;
         return this;
@@ -29,6 +30,7 @@ public class CharityOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CharityOrg withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CharityOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public CharityOrg withLocation(Location location) {
         this.location = location;
         return this;
@@ -48,6 +51,7 @@ public class CharityOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoImage")
     public Image logoImage;
+
     public CharityOrg withLogoImage(Image logoImage) {
         this.logoImage = logoImage;
         return this;
@@ -59,6 +63,7 @@ public class CharityOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionStatement")
     public String missionStatement;
+
     public CharityOrg withMissionStatement(String missionStatement) {
         this.missionStatement = missionStatement;
         return this;
@@ -70,6 +75,7 @@ public class CharityOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CharityOrg withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class CharityOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationId")
     public String registrationId;
+
     public CharityOrg withRegistrationId(String registrationId) {
         this.registrationId = registrationId;
         return this;
@@ -92,9 +99,11 @@ public class CharityOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public CharityOrg withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public CharityOrg(){}
 }

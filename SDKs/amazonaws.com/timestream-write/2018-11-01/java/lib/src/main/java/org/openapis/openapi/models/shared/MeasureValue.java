@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MeasureValue {
     @JsonProperty("Name")
     public String name;
+
     public MeasureValue withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class MeasureValue {
     
     @JsonProperty("Type")
     public MeasureValueTypeEnum type;
+
     public MeasureValue withType(MeasureValueTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +28,15 @@ public class MeasureValue {
     
     @JsonProperty("Value")
     public String value;
+
     public MeasureValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MeasureValue(@JsonProperty("Name") String name, @JsonProperty("Type") MeasureValueTypeEnum type, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.type = type;
+        this.value = value;
+  }
 }

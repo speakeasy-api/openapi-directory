@@ -22,6 +22,7 @@ public class DescribeEventConfigurationsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public DescribeEventConfigurationsResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class DescribeEventConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventConfigurations")
     public java.util.Map<String, Configuration> eventConfigurations;
+
     public DescribeEventConfigurationsResponse withEventConfigurations(java.util.Map<String, Configuration> eventConfigurations) {
         this.eventConfigurations = eventConfigurations;
         return this;
@@ -40,9 +42,11 @@ public class DescribeEventConfigurationsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public DescribeEventConfigurationsResponse withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
     }
     
+    public DescribeEventConfigurationsResponse(){}
 }

@@ -15,6 +15,7 @@ public class OpsItemDataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OpsItemDataTypeEnum type;
+
     public OpsItemDataValue withType(OpsItemDataTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class OpsItemDataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public OpsItemDataValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public OpsItemDataValue(){}
 }

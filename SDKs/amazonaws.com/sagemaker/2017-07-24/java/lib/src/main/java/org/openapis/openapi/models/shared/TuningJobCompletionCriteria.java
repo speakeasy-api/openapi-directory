@@ -15,6 +15,7 @@ public class TuningJobCompletionCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BestObjectiveNotImproving")
     public BestObjectiveNotImproving bestObjectiveNotImproving;
+
     public TuningJobCompletionCriteria withBestObjectiveNotImproving(BestObjectiveNotImproving bestObjectiveNotImproving) {
         this.bestObjectiveNotImproving = bestObjectiveNotImproving;
         return this;
@@ -23,6 +24,7 @@ public class TuningJobCompletionCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConvergenceDetected")
     public ConvergenceDetected convergenceDetected;
+
     public TuningJobCompletionCriteria withConvergenceDetected(ConvergenceDetected convergenceDetected) {
         this.convergenceDetected = convergenceDetected;
         return this;
@@ -31,9 +33,11 @@ public class TuningJobCompletionCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetObjectiveMetricValue")
     public Float targetObjectiveMetricValue;
+
     public TuningJobCompletionCriteria withTargetObjectiveMetricValue(Float targetObjectiveMetricValue) {
         this.targetObjectiveMetricValue = targetObjectiveMetricValue;
         return this;
     }
     
+    public TuningJobCompletionCriteria(){}
 }

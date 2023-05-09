@@ -15,9 +15,11 @@ public class InitiateVaultLockRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public InitiateVaultLockRequestBodyPolicy policy;
+
     public InitiateVaultLockRequestBody withPolicy(InitiateVaultLockRequestBodyPolicy policy) {
         this.policy = policy;
         return this;
     }
     
+    public InitiateVaultLockRequestBody(){}
 }

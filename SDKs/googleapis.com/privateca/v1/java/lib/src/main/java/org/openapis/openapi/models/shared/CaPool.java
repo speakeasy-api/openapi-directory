@@ -18,6 +18,7 @@ public class CaPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuancePolicy")
     public IssuancePolicy issuancePolicy;
+
     public CaPool withIssuancePolicy(IssuancePolicy issuancePolicy) {
         this.issuancePolicy = issuancePolicy;
         return this;
@@ -29,6 +30,7 @@ public class CaPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public CaPool withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class CaPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CaPool withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class CaPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishingOptions")
     public PublishingOptions publishingOptions;
+
     public CaPool withPublishingOptions(PublishingOptions publishingOptions) {
         this.publishingOptions = publishingOptions;
         return this;
@@ -62,9 +66,11 @@ public class CaPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public CaPoolTierEnum tier;
+
     public CaPool withTier(CaPoolTierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public CaPool(){}
 }

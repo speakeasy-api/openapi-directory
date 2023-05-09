@@ -12,6 +12,7 @@ public class ProductCreateModify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public Object custom;
+
     public ProductCreateModify withCustom(Object custom) {
         this.custom = custom;
         return this;
@@ -20,6 +21,7 @@ public class ProductCreateModify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ProductCreateModify withKey(String key) {
         this.key = key;
         return this;
@@ -28,6 +30,7 @@ public class ProductCreateModify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductCreateModify withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class ProductCreateModify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serial")
     public String serial;
+
     public ProductCreateModify withSerial(String serial) {
         this.serial = serial;
         return this;
     }
     
+    public ProductCreateModify(){}
 }

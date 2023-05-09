@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * DatabaseEncryptionStateEnum - Denotes the state of etcd encryption.
+ * DatabaseEncryptionStateEnum - The desired state of etcd encryption.
  */
 public enum DatabaseEncryptionStateEnum {
     UNKNOWN("UNKNOWN"),

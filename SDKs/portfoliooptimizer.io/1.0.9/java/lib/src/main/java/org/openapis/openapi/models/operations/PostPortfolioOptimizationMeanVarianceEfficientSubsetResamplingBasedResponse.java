@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
      */
     
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSON postPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSONObject;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse withPostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSONObject(PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSON postPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSONObject) {
         this.postPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSONObject = postPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

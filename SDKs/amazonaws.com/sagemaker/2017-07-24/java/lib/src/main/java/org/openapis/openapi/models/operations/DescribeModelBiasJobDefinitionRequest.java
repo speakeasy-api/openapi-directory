@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeModelBiasJobDefinitionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeModelBiasJobDefinitionRequest describeModelBiasJobDefinitionRequest;
+
     public DescribeModelBiasJobDefinitionRequest withDescribeModelBiasJobDefinitionRequest(org.openapis.openapi.models.shared.DescribeModelBiasJobDefinitionRequest describeModelBiasJobDefinitionRequest) {
         this.describeModelBiasJobDefinitionRequest = describeModelBiasJobDefinitionRequest;
         return this;
@@ -16,6 +18,7 @@ public class DescribeModelBiasJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeModelBiasJobDefinitionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeModelBiasJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeModelBiasJobDefinitionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeModelBiasJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeModelBiasJobDefinitionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeModelBiasJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeModelBiasJobDefinitionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeModelBiasJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeModelBiasJobDefinitionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeModelBiasJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeModelBiasJobDefinitionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeModelBiasJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeModelBiasJobDefinitionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DescribeModelBiasJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeModelBiasJobDefinitionXAmzTargetEnum xAmzTarget;
+
     public DescribeModelBiasJobDefinitionRequest withXAmzTarget(DescribeModelBiasJobDefinitionXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeModelBiasJobDefinitionRequest(@JsonProperty("DescribeModelBiasJobDefinitionRequest") org.openapis.openapi.models.shared.DescribeModelBiasJobDefinitionRequest describeModelBiasJobDefinitionRequest, @JsonProperty("X-Amz-Target") DescribeModelBiasJobDefinitionXAmzTargetEnum xAmzTarget) {
+        this.describeModelBiasJobDefinitionRequest = describeModelBiasJobDefinitionRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

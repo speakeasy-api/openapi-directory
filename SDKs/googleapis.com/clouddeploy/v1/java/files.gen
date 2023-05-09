@@ -169,6 +169,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DeployJobRunFailureCauseEnu
 lib/src/main/java/org/openapis/openapi/models/shared/DeployJobRun.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeployJobRunMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/CloudRunMetadata.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeployArtifact.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateChildRolloutJobRun.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdvanceChildRolloutJobRun.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListRolloutsResponse.java
@@ -193,4 +194,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTargetsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

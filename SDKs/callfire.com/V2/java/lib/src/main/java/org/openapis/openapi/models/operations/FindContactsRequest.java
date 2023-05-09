@@ -12,6 +12,7 @@ public class FindContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactListId")
     public Long contactListId;
+
     public FindContactsRequest withContactListId(Long contactListId) {
         this.contactListId = contactListId;
         return this;
@@ -22,6 +23,7 @@ public class FindContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindContactsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +34,7 @@ public class FindContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Long[] id;
+
     public FindContactsRequest withId(Long[] id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class FindContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindContactsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +56,7 @@ public class FindContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public String[] number;
+
     public FindContactsRequest withNumber(String[] number) {
         this.number = number;
         return this;
@@ -62,6 +67,7 @@ public class FindContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindContactsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -72,6 +78,7 @@ public class FindContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyName")
     public String propertyName;
+
     public FindContactsRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -82,9 +89,11 @@ public class FindContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyValue")
     public String propertyValue;
+
     public FindContactsRequest withPropertyValue(String propertyValue) {
         this.propertyValue = propertyValue;
         return this;
     }
     
+    public FindContactsRequest(){}
 }

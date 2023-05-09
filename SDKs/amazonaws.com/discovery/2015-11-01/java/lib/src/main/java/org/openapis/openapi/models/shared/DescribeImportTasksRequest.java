@@ -12,6 +12,7 @@ public class DescribeImportTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ImportTaskFilter[] filters;
+
     public DescribeImportTasksRequest withFilters(ImportTaskFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeImportTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeImportTasksRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class DescribeImportTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeImportTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeImportTasksRequest(){}
 }

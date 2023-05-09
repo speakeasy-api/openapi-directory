@@ -15,6 +15,7 @@ public class GetBlueprintRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlueprintRuns")
     public BlueprintRun[] blueprintRuns;
+
     public GetBlueprintRunsResponse withBlueprintRuns(BlueprintRun[] blueprintRuns) {
         this.blueprintRuns = blueprintRuns;
         return this;
@@ -23,9 +24,11 @@ public class GetBlueprintRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetBlueprintRunsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetBlueprintRunsResponse(){}
 }

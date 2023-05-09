@@ -12,6 +12,7 @@ public class ScheduleApiTriggeredCanvasesRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("at_optimal_time")
     public Boolean atOptimalTime;
+
     public ScheduleApiTriggeredCanvasesRequestBodySchedule withAtOptimalTime(Boolean atOptimalTime) {
         this.atOptimalTime = atOptimalTime;
         return this;
@@ -20,6 +21,7 @@ public class ScheduleApiTriggeredCanvasesRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_local_time")
     public Boolean inLocalTime;
+
     public ScheduleApiTriggeredCanvasesRequestBodySchedule withInLocalTime(Boolean inLocalTime) {
         this.inLocalTime = inLocalTime;
         return this;
@@ -28,9 +30,11 @@ public class ScheduleApiTriggeredCanvasesRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public ScheduleApiTriggeredCanvasesRequestBodySchedule withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public ScheduleApiTriggeredCanvasesRequestBodySchedule(){}
 }

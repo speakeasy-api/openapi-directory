@@ -12,6 +12,7 @@ public class AppointmentSimpleReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AppointmentSimpleReminder withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class AppointmentSimpleReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduled_time")
     public String scheduledTime;
+
     public AppointmentSimpleReminder withScheduledTime(String scheduledTime) {
         this.scheduledTime = scheduledTime;
         return this;
@@ -28,9 +30,11 @@ public class AppointmentSimpleReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AppointmentSimpleReminderTypeEnum type;
+
     public AppointmentSimpleReminder withType(AppointmentSimpleReminderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AppointmentSimpleReminder(){}
 }

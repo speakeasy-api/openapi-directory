@@ -18,6 +18,7 @@ public class Detection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binary")
     public String binary;
+
     public Detection withBinary(String binary) {
         this.binary = binary;
         return this;
@@ -29,9 +30,11 @@ public class Detection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentPagesMatched")
     public Double percentPagesMatched;
+
     public Detection withPercentPagesMatched(Double percentPagesMatched) {
         this.percentPagesMatched = percentPagesMatched;
         return this;
     }
     
+    public Detection(){}
 }

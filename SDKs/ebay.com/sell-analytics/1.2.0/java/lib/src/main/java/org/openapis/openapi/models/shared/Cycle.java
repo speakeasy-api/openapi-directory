@@ -18,6 +18,7 @@ public class Cycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycleType")
     public String cycleType;
+
     public Cycle withCycleType(String cycleType) {
         this.cycleType = cycleType;
         return this;
@@ -29,6 +30,7 @@ public class Cycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationDate")
     public String evaluationDate;
+
     public Cycle withEvaluationDate(String evaluationDate) {
         this.evaluationDate = evaluationDate;
         return this;
@@ -40,9 +42,11 @@ public class Cycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMonth")
     public String evaluationMonth;
+
     public Cycle withEvaluationMonth(String evaluationMonth) {
         this.evaluationMonth = evaluationMonth;
         return this;
     }
     
+    public Cycle(){}
 }

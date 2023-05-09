@@ -23,6 +23,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public RemarketingAudience withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -34,6 +35,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audienceDefinition")
     public RemarketingAudienceAudienceDefinition audienceDefinition;
+
     public RemarketingAudience withAudienceDefinition(RemarketingAudienceAudienceDefinition audienceDefinition) {
         this.audienceDefinition = audienceDefinition;
         return this;
@@ -45,6 +47,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audienceType")
     public String audienceType;
+
     public RemarketingAudience withAudienceType(String audienceType) {
         this.audienceType = audienceType;
         return this;
@@ -58,6 +61,7 @@ public class RemarketingAudience {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public RemarketingAudience withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -69,6 +73,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RemarketingAudience withDescription(String description) {
         this.description = description;
         return this;
@@ -80,6 +85,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RemarketingAudience withId(String id) {
         this.id = id;
         return this;
@@ -91,6 +97,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalWebPropertyId")
     public String internalWebPropertyId;
+
     public RemarketingAudience withInternalWebPropertyId(String internalWebPropertyId) {
         this.internalWebPropertyId = internalWebPropertyId;
         return this;
@@ -102,6 +109,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RemarketingAudience withKind(String kind) {
         this.kind = kind;
         return this;
@@ -113,6 +121,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedAdAccounts")
     public LinkedForeignAccount[] linkedAdAccounts;
+
     public RemarketingAudience withLinkedAdAccounts(LinkedForeignAccount[] linkedAdAccounts) {
         this.linkedAdAccounts = linkedAdAccounts;
         return this;
@@ -124,6 +133,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedViews")
     public String[] linkedViews;
+
     public RemarketingAudience withLinkedViews(String[] linkedViews) {
         this.linkedViews = linkedViews;
         return this;
@@ -135,6 +145,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RemarketingAudience withName(String name) {
         this.name = name;
         return this;
@@ -146,6 +157,7 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateBasedAudienceDefinition")
     public RemarketingAudienceStateBasedAudienceDefinition stateBasedAudienceDefinition;
+
     public RemarketingAudience withStateBasedAudienceDefinition(RemarketingAudienceStateBasedAudienceDefinition stateBasedAudienceDefinition) {
         this.stateBasedAudienceDefinition = stateBasedAudienceDefinition;
         return this;
@@ -159,6 +171,7 @@ public class RemarketingAudience {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public RemarketingAudience withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
@@ -170,9 +183,11 @@ public class RemarketingAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyId")
     public String webPropertyId;
+
     public RemarketingAudience withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public RemarketingAudience(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDeliveryStreamResponse {
     
     public String contentType;
+
     public CreateDeliveryStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDeliveryStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDeliveryStreamOutput createDeliveryStreamOutput;
+
     public CreateDeliveryStreamResponse withCreateDeliveryStreamOutput(org.openapis.openapi.models.shared.CreateDeliveryStreamOutput createDeliveryStreamOutput) {
         this.createDeliveryStreamOutput = createDeliveryStreamOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateDeliveryStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateDeliveryStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDeliveryStreamResponse {
      */
     
     public Object invalidKMSResourceException;
+
     public CreateDeliveryStreamResponse withInvalidKMSResourceException(Object invalidKMSResourceException) {
         this.invalidKMSResourceException = invalidKMSResourceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDeliveryStreamResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDeliveryStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDeliveryStreamResponse {
     
     
     public Integer statusCode;
+
     public CreateDeliveryStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDeliveryStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDeliveryStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateDeliveryStreamResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateDeliveryStreamResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
     }
     
+    public CreateDeliveryStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

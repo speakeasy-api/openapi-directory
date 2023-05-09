@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContactChannelResponse {
@@ -12,6 +13,7 @@ public class CreateContactChannelResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateContactChannelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateContactChannelResponse {
      */
     
     public Object conflictException;
+
     public CreateContactChannelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateContactChannelResponse {
     
     
     public String contentType;
+
     public CreateContactChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateContactChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContactChannelResult createContactChannelResult;
+
     public CreateContactChannelResponse withCreateContactChannelResult(org.openapis.openapi.models.shared.CreateContactChannelResult createContactChannelResult) {
         this.createContactChannelResult = createContactChannelResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateContactChannelResponse {
      */
     
     public Object dataEncryptionException;
+
     public CreateContactChannelResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -59,6 +65,7 @@ public class CreateContactChannelResponse {
      */
     
     public Object internalServerException;
+
     public CreateContactChannelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -66,6 +73,7 @@ public class CreateContactChannelResponse {
     
     
     public Integer statusCode;
+
     public CreateContactChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateContactChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContactChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateContactChannelResponse {
      */
     
     public Object throttlingException;
+
     public CreateContactChannelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateContactChannelResponse {
      */
     
     public Object validationException;
+
     public CreateContactChannelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateContactChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

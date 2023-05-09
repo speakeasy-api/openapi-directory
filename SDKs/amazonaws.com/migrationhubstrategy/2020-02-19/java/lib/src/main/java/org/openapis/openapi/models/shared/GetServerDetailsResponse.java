@@ -15,6 +15,7 @@ public class GetServerDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedApplications")
     public AssociatedApplication[] associatedApplications;
+
     public GetServerDetailsResponse withAssociatedApplications(AssociatedApplication[] associatedApplications) {
         this.associatedApplications = associatedApplications;
         return this;
@@ -23,6 +24,7 @@ public class GetServerDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetServerDetailsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class GetServerDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverDetail")
     public ServerDetail serverDetail;
+
     public GetServerDetailsResponse withServerDetail(ServerDetail serverDetail) {
         this.serverDetail = serverDetail;
         return this;
     }
     
+    public GetServerDetailsResponse(){}
 }

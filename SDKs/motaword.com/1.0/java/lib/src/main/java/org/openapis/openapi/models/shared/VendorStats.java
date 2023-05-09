@@ -12,6 +12,7 @@ public class VendorStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earnings")
     public VendorEarningStats earnings;
+
     public VendorStats withEarnings(VendorEarningStats earnings) {
         this.earnings = earnings;
         return this;
@@ -20,6 +21,7 @@ public class VendorStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public VendorProjectStats projects;
+
     public VendorStats withProjects(VendorProjectStats projects) {
         this.projects = projects;
         return this;
@@ -28,9 +30,11 @@ public class VendorStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words")
     public VendorWordStats words;
+
     public VendorStats withWords(VendorWordStats words) {
         this.words = words;
         return this;
     }
     
+    public VendorStats(){}
 }

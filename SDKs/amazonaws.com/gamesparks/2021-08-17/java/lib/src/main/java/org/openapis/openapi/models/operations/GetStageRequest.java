@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStageRequest {
@@ -12,6 +13,7 @@ public class GetStageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GameName")
     public String gameName;
+
     public GetStageRequest withGameName(String gameName) {
         this.gameName = gameName;
         return this;
@@ -22,6 +24,7 @@ public class GetStageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StageName")
     public String stageName;
+
     public GetStageRequest withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -29,6 +32,7 @@ public class GetStageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetStageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -36,6 +40,7 @@ public class GetStageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetStageRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -43,6 +48,7 @@ public class GetStageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetStageRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -50,6 +56,7 @@ public class GetStageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetStageRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -57,6 +64,7 @@ public class GetStageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetStageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -64,6 +72,7 @@ public class GetStageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetStageRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -71,9 +80,14 @@ public class GetStageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetStageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GetStageRequest(@JsonProperty("GameName") String gameName, @JsonProperty("StageName") String stageName) {
+        this.gameName = gameName;
+        this.stageName = stageName;
+  }
 }

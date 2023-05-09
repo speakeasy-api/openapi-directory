@@ -15,6 +15,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -26,6 +27,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryChannels")
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels[] deliveryChannels;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo withDeliveryChannels(AddCoupons200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels[] deliveryChannels) {
         this.deliveryChannels = deliveryChannels;
         return this;
@@ -37,6 +39,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -48,6 +51,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIndex")
     public Long itemIndex;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -59,6 +63,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedDeliveryChannel")
     public String selectedDeliveryChannel;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo withSelectedDeliveryChannel(String selectedDeliveryChannel) {
         this.selectedDeliveryChannel = selectedDeliveryChannel;
         return this;
@@ -70,6 +75,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedSla")
     public String selectedSla;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo withSelectedSla(String selectedSla) {
         this.selectedSla = selectedSla;
         return this;
@@ -81,6 +87,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipsTo")
     public String[] shipsTo;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo withShipsTo(String[] shipsTo) {
         this.shipsTo = shipsTo;
         return this;
@@ -92,9 +99,11 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slas")
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlas[] slas;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo withSlas(AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlas[] slas) {
         this.slas = slas;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONShippingDataLogisticsInfo(){}
 }

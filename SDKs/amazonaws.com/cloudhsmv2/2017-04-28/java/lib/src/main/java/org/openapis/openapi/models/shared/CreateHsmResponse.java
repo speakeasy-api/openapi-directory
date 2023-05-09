@@ -15,9 +15,11 @@ public class CreateHsmResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hsm")
     public Hsm hsm;
+
     public CreateHsmResponse withHsm(Hsm hsm) {
         this.hsm = hsm;
         return this;
     }
     
+    public CreateHsmResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTaskDefinitionFamiliesResponse {
@@ -12,6 +13,7 @@ public class ListTaskDefinitionFamiliesResponse {
      */
     
     public Object clientException;
+
     public ListTaskDefinitionFamiliesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListTaskDefinitionFamiliesResponse {
     
     
     public String contentType;
+
     public ListTaskDefinitionFamiliesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTaskDefinitionFamiliesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListTaskDefinitionFamiliesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListTaskDefinitionFamiliesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTaskDefinitionFamiliesResponse listTaskDefinitionFamiliesResponse;
+
     public ListTaskDefinitionFamiliesResponse withListTaskDefinitionFamiliesResponse(org.openapis.openapi.models.shared.ListTaskDefinitionFamiliesResponse listTaskDefinitionFamiliesResponse) {
         this.listTaskDefinitionFamiliesResponse = listTaskDefinitionFamiliesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListTaskDefinitionFamiliesResponse {
      */
     
     public Object serverException;
+
     public ListTaskDefinitionFamiliesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class ListTaskDefinitionFamiliesResponse {
     
     
     public Integer statusCode;
+
     public ListTaskDefinitionFamiliesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListTaskDefinitionFamiliesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTaskDefinitionFamiliesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTaskDefinitionFamiliesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

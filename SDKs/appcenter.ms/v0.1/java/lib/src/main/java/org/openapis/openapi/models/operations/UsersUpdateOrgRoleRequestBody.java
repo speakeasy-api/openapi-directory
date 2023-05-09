@@ -15,9 +15,11 @@ public class UsersUpdateOrgRoleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public UsersUpdateOrgRoleRequestBodyRoleEnum role;
+
     public UsersUpdateOrgRoleRequestBody withRole(UsersUpdateOrgRoleRequestBodyRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public UsersUpdateOrgRoleRequestBody(){}
 }

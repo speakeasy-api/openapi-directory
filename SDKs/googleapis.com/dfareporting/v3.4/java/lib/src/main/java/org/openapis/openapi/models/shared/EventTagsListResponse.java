@@ -18,6 +18,7 @@ public class EventTagsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTags")
     public EventTag[] eventTags;
+
     public EventTagsListResponse withEventTags(EventTag[] eventTags) {
         this.eventTags = eventTags;
         return this;
@@ -29,9 +30,11 @@ public class EventTagsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventTagsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public EventTagsListResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AWSSessionCredentials {
     @JsonProperty("accessKeyId")
     public String accessKeyId;
+
     public AWSSessionCredentials withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,6 +20,7 @@ public class AWSSessionCredentials {
     
     @JsonProperty("secretAccessKey")
     public String secretAccessKey;
+
     public AWSSessionCredentials withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -26,9 +28,15 @@ public class AWSSessionCredentials {
     
     @JsonProperty("sessionToken")
     public String sessionToken;
+
     public AWSSessionCredentials withSessionToken(String sessionToken) {
         this.sessionToken = sessionToken;
         return this;
     }
     
+    public AWSSessionCredentials(@JsonProperty("accessKeyId") String accessKeyId, @JsonProperty("secretAccessKey") String secretAccessKey, @JsonProperty("sessionToken") String sessionToken) {
+        this.accessKeyId = accessKeyId;
+        this.secretAccessKey = secretAccessKey;
+        this.sessionToken = sessionToken;
+  }
 }

@@ -17,6 +17,7 @@ public class ScoutingObservationAttachment {
      */
     @JsonProperty("contentType")
     public String contentType;
+
     public ScoutingObservationAttachment withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +28,7 @@ public class ScoutingObservationAttachment {
      */
     @JsonProperty("id")
     public String id;
+
     public ScoutingObservationAttachment withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class ScoutingObservationAttachment {
      */
     @JsonProperty("length")
     public Long length;
+
     public ScoutingObservationAttachment withLength(Long length) {
         this.length = length;
         return this;
@@ -47,6 +50,7 @@ public class ScoutingObservationAttachment {
      */
     @JsonProperty("status")
     public ScoutingObservationAttachmentStatusEnum status;
+
     public ScoutingObservationAttachment withStatus(ScoutingObservationAttachmentStatusEnum status) {
         this.status = status;
         return this;
@@ -62,9 +66,17 @@ public class ScoutingObservationAttachment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public ScoutingObservationAttachment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ScoutingObservationAttachment(@JsonProperty("contentType") String contentType, @JsonProperty("id") String id, @JsonProperty("length") Long length, @JsonProperty("status") ScoutingObservationAttachmentStatusEnum status, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.contentType = contentType;
+        this.id = id;
+        this.length = length;
+        this.status = status;
+        this.updatedAt = updatedAt;
+  }
 }

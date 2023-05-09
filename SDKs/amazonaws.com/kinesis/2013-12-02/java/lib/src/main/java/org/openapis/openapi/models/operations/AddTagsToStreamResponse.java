@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsToStreamResponse {
@@ -12,6 +13,7 @@ public class AddTagsToStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public AddTagsToStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class AddTagsToStreamResponse {
     
     
     public String contentType;
+
     public AddTagsToStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddTagsToStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public AddTagsToStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class AddTagsToStreamResponse {
      */
     
     public Object limitExceededException;
+
     public AddTagsToStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class AddTagsToStreamResponse {
      */
     
     public Object resourceInUseException;
+
     public AddTagsToStreamResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class AddTagsToStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddTagsToStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AddTagsToStreamResponse {
     
     
     public Integer statusCode;
+
     public AddTagsToStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class AddTagsToStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsToStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddTagsToStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

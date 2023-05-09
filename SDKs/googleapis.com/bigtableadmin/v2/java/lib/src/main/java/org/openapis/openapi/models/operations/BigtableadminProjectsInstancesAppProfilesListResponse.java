@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigtableadminProjectsInstancesAppProfilesListResponse {
     
     public String contentType;
+
     public BigtableadminProjectsInstancesAppProfilesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BigtableadminProjectsInstancesAppProfilesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppProfilesResponse listAppProfilesResponse;
+
     public BigtableadminProjectsInstancesAppProfilesListResponse withListAppProfilesResponse(org.openapis.openapi.models.shared.ListAppProfilesResponse listAppProfilesResponse) {
         this.listAppProfilesResponse = listAppProfilesResponse;
         return this;
@@ -26,6 +29,7 @@ public class BigtableadminProjectsInstancesAppProfilesListResponse {
     
     
     public Integer statusCode;
+
     public BigtableadminProjectsInstancesAppProfilesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigtableadminProjectsInstancesAppProfilesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigtableadminProjectsInstancesAppProfilesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigtableadminProjectsInstancesAppProfilesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

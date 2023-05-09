@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PurchaseTokenRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizationToken")
     public String authorizationToken;
+
     public PurchaseTokenRequest withAuthorizationToken(String authorizationToken) {
         this.authorizationToken = authorizationToken;
         return this;
@@ -16,9 +18,13 @@ public class PurchaseTokenRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomerTokenCreationRequest customerTokenCreationRequest;
+
     public PurchaseTokenRequest withCustomerTokenCreationRequest(org.openapis.openapi.models.shared.CustomerTokenCreationRequest customerTokenCreationRequest) {
         this.customerTokenCreationRequest = customerTokenCreationRequest;
         return this;
     }
     
+    public PurchaseTokenRequest(@JsonProperty("authorizationToken") String authorizationToken) {
+        this.authorizationToken = authorizationToken;
+  }
 }

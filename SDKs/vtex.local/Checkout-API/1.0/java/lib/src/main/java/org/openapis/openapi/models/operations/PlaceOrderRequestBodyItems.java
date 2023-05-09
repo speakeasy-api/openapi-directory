@@ -15,6 +15,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public String[] attachments;
+
     public PlaceOrderRequestBodyItems withAttachments(String[] attachments) {
         this.attachments = attachments;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleItems")
     public PlaceOrderRequestBodyItemsBundleItems[] bundleItems;
+
     public PlaceOrderRequestBodyItems withBundleItems(PlaceOrderRequestBodyItemsBundleItems[] bundleItems) {
         this.bundleItems = bundleItems;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commission")
     public Long commission;
+
     public PlaceOrderRequestBodyItems withCommission(Long commission) {
         this.commission = commission;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freightCommission")
     public Long freightCommission;
+
     public PlaceOrderRequestBodyItems withFreightCommission(Long freightCommission) {
         this.freightCommission = freightCommission;
         return this;
@@ -58,6 +62,7 @@ public class PlaceOrderRequestBodyItems {
      */
     @JsonProperty("id")
     public String id;
+
     public PlaceOrderRequestBodyItems withId(String id) {
         this.id = id;
         return this;
@@ -69,6 +74,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isGift")
     public Boolean isGift;
+
     public PlaceOrderRequestBodyItems withIsGift(Boolean isGift) {
         this.isGift = isGift;
         return this;
@@ -80,6 +86,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemAttachment")
     public PlaceOrderRequestBodyItemsItemAttachment itemAttachment;
+
     public PlaceOrderRequestBodyItems withItemAttachment(PlaceOrderRequestBodyItemsItemAttachment itemAttachment) {
         this.itemAttachment = itemAttachment;
         return this;
@@ -91,6 +98,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public PlaceOrderRequestBodyItems withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -102,6 +110,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public PlaceOrderRequestBodyItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -113,6 +122,7 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceTags")
     public PlaceOrderRequestBodyItemsPriceTags[] priceTags;
+
     public PlaceOrderRequestBodyItems withPriceTags(PlaceOrderRequestBodyItemsPriceTags[] priceTags) {
         this.priceTags = priceTags;
         return this;
@@ -123,6 +133,7 @@ public class PlaceOrderRequestBodyItems {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public PlaceOrderRequestBodyItems withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -133,6 +144,7 @@ public class PlaceOrderRequestBodyItems {
      */
     @JsonProperty("seller")
     public String seller;
+
     public PlaceOrderRequestBodyItems withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -144,9 +156,15 @@ public class PlaceOrderRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitMultiplier")
     public Long unitMultiplier;
+
     public PlaceOrderRequestBodyItems withUnitMultiplier(Long unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public PlaceOrderRequestBodyItems(@JsonProperty("id") String id, @JsonProperty("quantity") Integer quantity, @JsonProperty("seller") String seller) {
+        this.id = id;
+        this.quantity = quantity;
+        this.seller = seller;
+  }
 }

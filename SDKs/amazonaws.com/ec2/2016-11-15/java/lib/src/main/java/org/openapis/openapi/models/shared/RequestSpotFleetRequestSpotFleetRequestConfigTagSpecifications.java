@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigTagSpecifications {
     
     public RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum resourceType;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigTagSpecifications withResourceType(RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigTagSpecifications {
     
     
     public RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsTags[] tags;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigTagSpecifications withTags(RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigTagSpecifications(){}
 }

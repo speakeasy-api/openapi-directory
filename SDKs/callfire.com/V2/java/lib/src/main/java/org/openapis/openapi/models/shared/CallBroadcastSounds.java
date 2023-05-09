@@ -18,6 +18,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dncDigit")
     public String dncDigit;
+
     public CallBroadcastSounds withDncDigit(String dncDigit) {
         this.dncDigit = dncDigit;
         return this;
@@ -29,6 +30,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dncSoundId")
     public Long dncSoundId;
+
     public CallBroadcastSounds withDncSoundId(Long dncSoundId) {
         this.dncSoundId = dncSoundId;
         return this;
@@ -40,6 +42,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dncSoundText")
     public String dncSoundText;
+
     public CallBroadcastSounds withDncSoundText(String dncSoundText) {
         this.dncSoundText = dncSoundText;
         return this;
@@ -51,6 +54,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dncSoundTextVoice")
     public CallBroadcastSoundsDncSoundTextVoiceEnum dncSoundTextVoice;
+
     public CallBroadcastSounds withDncSoundTextVoice(CallBroadcastSoundsDncSoundTextVoiceEnum dncSoundTextVoice) {
         this.dncSoundTextVoice = dncSoundTextVoice;
         return this;
@@ -62,6 +66,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveSoundId")
     public Long liveSoundId;
+
     public CallBroadcastSounds withLiveSoundId(Long liveSoundId) {
         this.liveSoundId = liveSoundId;
         return this;
@@ -73,6 +78,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveSoundText")
     public String liveSoundText;
+
     public CallBroadcastSounds withLiveSoundText(String liveSoundText) {
         this.liveSoundText = liveSoundText;
         return this;
@@ -84,6 +90,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveSoundTextVoice")
     public CallBroadcastSoundsLiveSoundTextVoiceEnum liveSoundTextVoice;
+
     public CallBroadcastSounds withLiveSoundTextVoice(CallBroadcastSoundsLiveSoundTextVoiceEnum liveSoundTextVoice) {
         this.liveSoundTextVoice = liveSoundTextVoice;
         return this;
@@ -95,6 +102,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineSoundId")
     public Long machineSoundId;
+
     public CallBroadcastSounds withMachineSoundId(Long machineSoundId) {
         this.machineSoundId = machineSoundId;
         return this;
@@ -106,6 +114,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineSoundText")
     public String machineSoundText;
+
     public CallBroadcastSounds withMachineSoundText(String machineSoundText) {
         this.machineSoundText = machineSoundText;
         return this;
@@ -117,6 +126,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineSoundTextVoice")
     public CallBroadcastSoundsMachineSoundTextVoiceEnum machineSoundTextVoice;
+
     public CallBroadcastSounds withMachineSoundTextVoice(CallBroadcastSoundsMachineSoundTextVoiceEnum machineSoundTextVoice) {
         this.machineSoundTextVoice = machineSoundTextVoice;
         return this;
@@ -128,6 +138,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferDigit")
     public String transferDigit;
+
     public CallBroadcastSounds withTransferDigit(String transferDigit) {
         this.transferDigit = transferDigit;
         return this;
@@ -139,6 +150,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferNumber")
     public String transferNumber;
+
     public CallBroadcastSounds withTransferNumber(String transferNumber) {
         this.transferNumber = transferNumber;
         return this;
@@ -150,6 +162,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferSoundId")
     public Long transferSoundId;
+
     public CallBroadcastSounds withTransferSoundId(Long transferSoundId) {
         this.transferSoundId = transferSoundId;
         return this;
@@ -161,6 +174,7 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferSoundText")
     public String transferSoundText;
+
     public CallBroadcastSounds withTransferSoundText(String transferSoundText) {
         this.transferSoundText = transferSoundText;
         return this;
@@ -172,9 +186,11 @@ public class CallBroadcastSounds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferSoundTextVoice")
     public CallBroadcastSoundsTransferSoundTextVoiceEnum transferSoundTextVoice;
+
     public CallBroadcastSounds withTransferSoundTextVoice(CallBroadcastSoundsTransferSoundTextVoiceEnum transferSoundTextVoice) {
         this.transferSoundTextVoice = transferSoundTextVoice;
         return this;
     }
     
+    public CallBroadcastSounds(){}
 }

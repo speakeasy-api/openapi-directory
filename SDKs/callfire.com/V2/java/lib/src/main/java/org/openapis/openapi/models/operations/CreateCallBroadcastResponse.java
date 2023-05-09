@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCallBroadcastResponse {
     
     public String contentType;
+
     public CreateCallBroadcastResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCallBroadcastResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public CreateCallBroadcastResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateCallBroadcastResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceId resourceId;
+
     public CreateCallBroadcastResponse withResourceId(org.openapis.openapi.models.shared.ResourceId resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -36,6 +40,7 @@ public class CreateCallBroadcastResponse {
     
     
     public Integer statusCode;
+
     public CreateCallBroadcastResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateCallBroadcastResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCallBroadcastResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCallBroadcastResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

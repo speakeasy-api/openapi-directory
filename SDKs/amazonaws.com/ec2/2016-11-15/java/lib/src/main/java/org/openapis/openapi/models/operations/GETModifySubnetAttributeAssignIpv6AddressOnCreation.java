@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifySubnetAttributeAssignIpv6AddressOnCreation {
     @SpeakeasyMetadata("queryParam:name=Value")
     public Boolean value;
+
     public GETModifySubnetAttributeAssignIpv6AddressOnCreation withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public GETModifySubnetAttributeAssignIpv6AddressOnCreation(){}
 }

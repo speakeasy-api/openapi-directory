@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEndpointsOutput {
     @JsonProperty("Endpoints")
     public EndpointSummary[] endpoints;
+
     public ListEndpointsOutput withEndpoints(EndpointSummary[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -22,9 +23,13 @@ public class ListEndpointsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEndpointsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEndpointsOutput(@JsonProperty("Endpoints") EndpointSummary[] endpoints) {
+        this.endpoints = endpoints;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JsonTokenTypeConfiguration {
     @JsonProperty("GroupAttributeField")
     public String groupAttributeField;
+
     public JsonTokenTypeConfiguration withGroupAttributeField(String groupAttributeField) {
         this.groupAttributeField = groupAttributeField;
         return this;
@@ -19,9 +20,14 @@ public class JsonTokenTypeConfiguration {
     
     @JsonProperty("UserNameAttributeField")
     public String userNameAttributeField;
+
     public JsonTokenTypeConfiguration withUserNameAttributeField(String userNameAttributeField) {
         this.userNameAttributeField = userNameAttributeField;
         return this;
     }
     
+    public JsonTokenTypeConfiguration(@JsonProperty("GroupAttributeField") String groupAttributeField, @JsonProperty("UserNameAttributeField") String userNameAttributeField) {
+        this.groupAttributeField = groupAttributeField;
+        this.userNameAttributeField = userNameAttributeField;
+  }
 }

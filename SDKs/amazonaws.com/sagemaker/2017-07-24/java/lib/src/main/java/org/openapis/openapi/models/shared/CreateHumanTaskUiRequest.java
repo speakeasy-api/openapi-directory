@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHumanTaskUiRequest {
     @JsonProperty("HumanTaskUiName")
     public String humanTaskUiName;
+
     public CreateHumanTaskUiRequest withHumanTaskUiName(String humanTaskUiName) {
         this.humanTaskUiName = humanTaskUiName;
         return this;
@@ -19,6 +20,7 @@ public class CreateHumanTaskUiRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateHumanTaskUiRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -29,9 +31,14 @@ public class CreateHumanTaskUiRequest {
      */
     @JsonProperty("UiTemplate")
     public UiTemplate uiTemplate;
+
     public CreateHumanTaskUiRequest withUiTemplate(UiTemplate uiTemplate) {
         this.uiTemplate = uiTemplate;
         return this;
     }
     
+    public CreateHumanTaskUiRequest(@JsonProperty("HumanTaskUiName") String humanTaskUiName, @JsonProperty("UiTemplate") UiTemplate uiTemplate) {
+        this.humanTaskUiName = humanTaskUiName;
+        this.uiTemplate = uiTemplate;
+  }
 }

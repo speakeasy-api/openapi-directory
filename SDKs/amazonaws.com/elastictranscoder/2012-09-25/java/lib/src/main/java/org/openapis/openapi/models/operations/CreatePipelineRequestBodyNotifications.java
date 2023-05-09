@@ -15,6 +15,7 @@ public class CreatePipelineRequestBodyNotifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Completed")
     public String completed;
+
     public CreatePipelineRequestBodyNotifications withCompleted(String completed) {
         this.completed = completed;
         return this;
@@ -23,6 +24,7 @@ public class CreatePipelineRequestBodyNotifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public CreatePipelineRequestBodyNotifications withError(String error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class CreatePipelineRequestBodyNotifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Progressing")
     public String progressing;
+
     public CreatePipelineRequestBodyNotifications withProgressing(String progressing) {
         this.progressing = progressing;
         return this;
@@ -39,9 +42,11 @@ public class CreatePipelineRequestBodyNotifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warning")
     public String warning;
+
     public CreatePipelineRequestBodyNotifications withWarning(String warning) {
         this.warning = warning;
         return this;
     }
     
+    public CreatePipelineRequestBodyNotifications(){}
 }

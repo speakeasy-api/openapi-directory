@@ -18,6 +18,7 @@ public class CollectionPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstDate")
     public Date firstDate;
+
     public CollectionPeriod withFirstDate(Date firstDate) {
         this.firstDate = firstDate;
         return this;
@@ -29,9 +30,11 @@ public class CollectionPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDate")
     public Date lastDate;
+
     public CollectionPeriod withLastDate(Date lastDate) {
         this.lastDate = lastDate;
         return this;
     }
     
+    public CollectionPeriod(){}
 }

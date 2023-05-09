@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyExportEnabled")
     public Boolean dailyExportEnabled;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withDailyExportEnabled(Boolean dailyExportEnabled) {
         this.dailyExportEnabled = dailyExportEnabled;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedEvents")
     public String[] excludedEvents;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withExcludedEvents(String[] excludedEvents) {
         this.excludedEvents = excludedEvents;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportStreams")
     public String[] exportStreams;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withExportStreams(String[] exportStreams) {
         this.exportStreams = exportStreams;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeAdvertisingId")
     public Boolean includeAdvertisingId;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withIncludeAdvertisingId(Boolean includeAdvertisingId) {
         this.includeAdvertisingId = includeAdvertisingId;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intradayExportEnabled")
     public Boolean intradayExportEnabled;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withIntradayExportEnabled(Boolean intradayExportEnabled) {
         this.intradayExportEnabled = intradayExportEnabled;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withProject(String project) {
         this.project = project;
         return this;
@@ -106,9 +114,11 @@ public class GoogleAnalyticsAdminV1alphaBigQueryLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingExportEnabled")
     public Boolean streamingExportEnabled;
+
     public GoogleAnalyticsAdminV1alphaBigQueryLink withStreamingExportEnabled(Boolean streamingExportEnabled) {
         this.streamingExportEnabled = streamingExportEnabled;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaBigQueryLink(){}
 }

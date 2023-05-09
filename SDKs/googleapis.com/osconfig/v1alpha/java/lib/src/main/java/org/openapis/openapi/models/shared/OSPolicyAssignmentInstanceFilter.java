@@ -18,6 +18,7 @@ public class OSPolicyAssignmentInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all")
     public Boolean all;
+
     public OSPolicyAssignmentInstanceFilter withAll(Boolean all) {
         this.all = all;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyAssignmentInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionLabels")
     public OSPolicyAssignmentLabelSet[] exclusionLabels;
+
     public OSPolicyAssignmentInstanceFilter withExclusionLabels(OSPolicyAssignmentLabelSet[] exclusionLabels) {
         this.exclusionLabels = exclusionLabels;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyAssignmentInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusionLabels")
     public OSPolicyAssignmentLabelSet[] inclusionLabels;
+
     public OSPolicyAssignmentInstanceFilter withInclusionLabels(OSPolicyAssignmentLabelSet[] inclusionLabels) {
         this.inclusionLabels = inclusionLabels;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyAssignmentInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventories")
     public OSPolicyAssignmentInstanceFilterInventory[] inventories;
+
     public OSPolicyAssignmentInstanceFilter withInventories(OSPolicyAssignmentInstanceFilterInventory[] inventories) {
         this.inventories = inventories;
         return this;
@@ -62,9 +66,11 @@ public class OSPolicyAssignmentInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osShortNames")
     public String[] osShortNames;
+
     public OSPolicyAssignmentInstanceFilter withOsShortNames(String[] osShortNames) {
         this.osShortNames = osShortNames;
         return this;
     }
     
+    public OSPolicyAssignmentInstanceFilter(){}
 }

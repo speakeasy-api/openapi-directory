@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFargateProfileResponse {
@@ -12,6 +13,7 @@ public class DeleteFargateProfileResponse {
      */
     
     public Object clientException;
+
     public DeleteFargateProfileResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFargateProfileResponse {
     
     
     public String contentType;
+
     public DeleteFargateProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFargateProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFargateProfileResponse deleteFargateProfileResponse;
+
     public DeleteFargateProfileResponse withDeleteFargateProfileResponse(org.openapis.openapi.models.shared.DeleteFargateProfileResponse deleteFargateProfileResponse) {
         this.deleteFargateProfileResponse = deleteFargateProfileResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFargateProfileResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteFargateProfileResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteFargateProfileResponse {
     
     
     public Integer statusCode;
+
     public DeleteFargateProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteFargateProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFargateProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFargateProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFargateProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteFargateProfileResponse {
      */
     
     public Object serverException;
+
     public DeleteFargateProfileResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DeleteFargateProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

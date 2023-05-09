@@ -18,6 +18,7 @@ public class MemoryHashSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryFamily")
     public String binaryFamily;
+
     public MemoryHashSignature withBinaryFamily(String binaryFamily) {
         this.binaryFamily = binaryFamily;
         return this;
@@ -29,9 +30,11 @@ public class MemoryHashSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detections")
     public Detection[] detections;
+
     public MemoryHashSignature withDetections(Detection[] detections) {
         this.detections = detections;
         return this;
     }
     
+    public MemoryHashSignature(){}
 }

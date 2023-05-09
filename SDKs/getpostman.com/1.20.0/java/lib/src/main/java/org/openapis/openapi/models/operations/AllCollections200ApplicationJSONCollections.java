@@ -12,6 +12,7 @@ public class AllCollections200ApplicationJSONCollections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AllCollections200ApplicationJSONCollections withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class AllCollections200ApplicationJSONCollections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AllCollections200ApplicationJSONCollections withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class AllCollections200ApplicationJSONCollections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public AllCollections200ApplicationJSONCollections withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -36,9 +39,11 @@ public class AllCollections200ApplicationJSONCollections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public AllCollections200ApplicationJSONCollections withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public AllCollections200ApplicationJSONCollections(){}
 }

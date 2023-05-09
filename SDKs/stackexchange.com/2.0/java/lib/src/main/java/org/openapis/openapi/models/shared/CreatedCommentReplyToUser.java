@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreatedCommentReplyToUser {
     
     public Long acceptRate;
+
     public CreatedCommentReplyToUser withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class CreatedCommentReplyToUser {
     
     
     public CreatedCommentReplyToUserBadgeCounts badgeCounts;
+
     public CreatedCommentReplyToUser withBadgeCounts(CreatedCommentReplyToUserBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class CreatedCommentReplyToUser {
     
     
     public String displayName;
+
     public CreatedCommentReplyToUser withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class CreatedCommentReplyToUser {
     
     
     public String link;
+
     public CreatedCommentReplyToUser withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class CreatedCommentReplyToUser {
     
     
     public String profileImage;
+
     public CreatedCommentReplyToUser withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class CreatedCommentReplyToUser {
     
     
     public Long reputation;
+
     public CreatedCommentReplyToUser withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class CreatedCommentReplyToUser {
     
     
     public Long userId;
+
     public CreatedCommentReplyToUser withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class CreatedCommentReplyToUser {
     
     
     public String userType;
+
     public CreatedCommentReplyToUser withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public CreatedCommentReplyToUser(){}
 }

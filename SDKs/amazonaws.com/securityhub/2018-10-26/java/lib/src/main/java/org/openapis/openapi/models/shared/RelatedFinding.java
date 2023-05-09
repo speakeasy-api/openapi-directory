@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RelatedFinding {
     @JsonProperty("Id")
     public String id;
+
     public RelatedFinding withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class RelatedFinding {
     
     @JsonProperty("ProductArn")
     public String productArn;
+
     public RelatedFinding withProductArn(String productArn) {
         this.productArn = productArn;
         return this;
     }
     
+    public RelatedFinding(@JsonProperty("Id") String id, @JsonProperty("ProductArn") String productArn) {
+        this.id = id;
+        this.productArn = productArn;
+  }
 }

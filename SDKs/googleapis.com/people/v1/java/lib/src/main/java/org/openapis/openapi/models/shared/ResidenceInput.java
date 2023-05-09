@@ -18,6 +18,7 @@ public class ResidenceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public Boolean current;
+
     public ResidenceInput withCurrent(Boolean current) {
         this.current = current;
         return this;
@@ -29,6 +30,7 @@ public class ResidenceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadataInput metadata;
+
     public ResidenceInput withMetadata(FieldMetadataInput metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class ResidenceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ResidenceInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResidenceInput(){}
 }

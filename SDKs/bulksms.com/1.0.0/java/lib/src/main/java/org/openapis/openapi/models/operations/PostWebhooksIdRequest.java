@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksIdRequest {
@@ -13,6 +14,7 @@ public class PostWebhooksIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WebhookEntry webhookEntry;
+
     public PostWebhooksIdRequest withWebhookEntry(org.openapis.openapi.models.shared.WebhookEntry webhookEntry) {
         this.webhookEntry = webhookEntry;
         return this;
@@ -23,9 +25,14 @@ public class PostWebhooksIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostWebhooksIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostWebhooksIdRequest(@JsonProperty("WebhookEntry") org.openapis.openapi.models.shared.WebhookEntry webhookEntry, @JsonProperty("id") String id) {
+        this.webhookEntry = webhookEntry;
+        this.id = id;
+  }
 }

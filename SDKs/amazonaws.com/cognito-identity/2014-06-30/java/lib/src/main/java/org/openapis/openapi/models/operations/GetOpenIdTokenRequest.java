@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOpenIdTokenRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetOpenIdTokenInput getOpenIdTokenInput;
+
     public GetOpenIdTokenRequest withGetOpenIdTokenInput(org.openapis.openapi.models.shared.GetOpenIdTokenInput getOpenIdTokenInput) {
         this.getOpenIdTokenInput = getOpenIdTokenInput;
         return this;
@@ -16,6 +18,7 @@ public class GetOpenIdTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetOpenIdTokenRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetOpenIdTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetOpenIdTokenRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetOpenIdTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetOpenIdTokenRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetOpenIdTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetOpenIdTokenRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetOpenIdTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetOpenIdTokenRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetOpenIdTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetOpenIdTokenRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetOpenIdTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetOpenIdTokenRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetOpenIdTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetOpenIdTokenXAmzTargetEnum xAmzTarget;
+
     public GetOpenIdTokenRequest withXAmzTarget(GetOpenIdTokenXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetOpenIdTokenRequest(@JsonProperty("GetOpenIdTokenInput") org.openapis.openapi.models.shared.GetOpenIdTokenInput getOpenIdTokenInput, @JsonProperty("X-Amz-Target") GetOpenIdTokenXAmzTargetEnum xAmzTarget) {
+        this.getOpenIdTokenInput = getOpenIdTokenInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

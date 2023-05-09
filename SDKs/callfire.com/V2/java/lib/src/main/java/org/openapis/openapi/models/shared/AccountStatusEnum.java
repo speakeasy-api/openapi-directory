@@ -13,6 +13,7 @@ public enum AccountStatusEnum {
     ACTIVE("ACTIVE"),
     PENDING_CANCELLED("PENDING_CANCELLED"),
     CANCELLED("CANCELLED"),
+    ARCHIVING("ARCHIVING"),
     ARCHIVED("ARCHIVED");
 
     @JsonValue

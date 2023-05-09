@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MlProjectsLocationsStudiesTrialsAddMeasurementResponse {
     
     public String contentType;
+
     public MlProjectsLocationsStudiesTrialsAddMeasurementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MlProjectsLocationsStudiesTrialsAddMeasurementResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudMlV1Trial googleCloudMlV1Trial;
+
     public MlProjectsLocationsStudiesTrialsAddMeasurementResponse withGoogleCloudMlV1Trial(org.openapis.openapi.models.shared.GoogleCloudMlV1Trial googleCloudMlV1Trial) {
         this.googleCloudMlV1Trial = googleCloudMlV1Trial;
         return this;
@@ -26,6 +29,7 @@ public class MlProjectsLocationsStudiesTrialsAddMeasurementResponse {
     
     
     public Integer statusCode;
+
     public MlProjectsLocationsStudiesTrialsAddMeasurementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MlProjectsLocationsStudiesTrialsAddMeasurementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MlProjectsLocationsStudiesTrialsAddMeasurementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MlProjectsLocationsStudiesTrialsAddMeasurementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

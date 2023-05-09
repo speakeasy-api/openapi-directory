@@ -12,6 +12,7 @@ public class UpdateWorkforceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OidcConfig")
     public OidcConfig oidcConfig;
+
     public UpdateWorkforceRequest withOidcConfig(OidcConfig oidcConfig) {
         this.oidcConfig = oidcConfig;
         return this;
@@ -20,6 +21,7 @@ public class UpdateWorkforceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIpConfig")
     public SourceIpConfig sourceIpConfig;
+
     public UpdateWorkforceRequest withSourceIpConfig(SourceIpConfig sourceIpConfig) {
         this.sourceIpConfig = sourceIpConfig;
         return this;
@@ -27,6 +29,7 @@ public class UpdateWorkforceRequest {
     
     @JsonProperty("WorkforceName")
     public String workforceName;
+
     public UpdateWorkforceRequest withWorkforceName(String workforceName) {
         this.workforceName = workforceName;
         return this;
@@ -35,9 +38,13 @@ public class UpdateWorkforceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkforceVpcConfig")
     public WorkforceVpcConfigRequest workforceVpcConfig;
+
     public UpdateWorkforceRequest withWorkforceVpcConfig(WorkforceVpcConfigRequest workforceVpcConfig) {
         this.workforceVpcConfig = workforceVpcConfig;
         return this;
     }
     
+    public UpdateWorkforceRequest(@JsonProperty("WorkforceName") String workforceName) {
+        this.workforceName = workforceName;
+  }
 }

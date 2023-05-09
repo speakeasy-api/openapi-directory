@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportPackageSystemsRequest {
@@ -12,6 +13,7 @@ public class ExportPackageSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
     public String[] filterSystemProfileSapSidsIn;
+
     public ExportPackageSystemsRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
         this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
         return this;
@@ -22,6 +24,7 @@ public class ExportPackageSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
     public String filterSystemProfileSapSystem;
+
     public ExportPackageSystemsRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
         this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
         return this;
@@ -32,6 +35,7 @@ public class ExportPackageSystemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
     public String packageName;
+
     public ExportPackageSystemsRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -42,9 +46,13 @@ public class ExportPackageSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String[] tags;
+
     public ExportPackageSystemsRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ExportPackageSystemsRequest(@JsonProperty("package_name") String packageName) {
+        this.packageName = packageName;
+  }
 }

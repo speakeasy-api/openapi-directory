@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SuspendGameServerGroupInput {
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public SuspendGameServerGroupInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -16,9 +17,14 @@ public class SuspendGameServerGroupInput {
     
     @JsonProperty("SuspendActions")
     public GameServerGroupActionEnum[] suspendActions;
+
     public SuspendGameServerGroupInput withSuspendActions(GameServerGroupActionEnum[] suspendActions) {
         this.suspendActions = suspendActions;
         return this;
     }
     
+    public SuspendGameServerGroupInput(@JsonProperty("GameServerGroupName") String gameServerGroupName, @JsonProperty("SuspendActions") GameServerGroupActionEnum[] suspendActions) {
+        this.gameServerGroupName = gameServerGroupName;
+        this.suspendActions = suspendActions;
+  }
 }

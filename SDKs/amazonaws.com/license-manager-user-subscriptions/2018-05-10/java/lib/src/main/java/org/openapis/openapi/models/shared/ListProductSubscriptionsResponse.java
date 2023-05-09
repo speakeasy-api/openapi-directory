@@ -15,6 +15,7 @@ public class ListProductSubscriptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProductSubscriptionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProductSubscriptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductUserSummaries")
     public ProductUserSummary[] productUserSummaries;
+
     public ListProductSubscriptionsResponse withProductUserSummaries(ProductUserSummary[] productUserSummaries) {
         this.productUserSummaries = productUserSummaries;
         return this;
     }
     
+    public ListProductSubscriptionsResponse(){}
 }

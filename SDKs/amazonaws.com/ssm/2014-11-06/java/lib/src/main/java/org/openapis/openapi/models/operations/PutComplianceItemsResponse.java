@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutComplianceItemsResponse {
@@ -12,6 +13,7 @@ public class PutComplianceItemsResponse {
      */
     
     public Object complianceTypeCountLimitExceededException;
+
     public PutComplianceItemsResponse withComplianceTypeCountLimitExceededException(Object complianceTypeCountLimitExceededException) {
         this.complianceTypeCountLimitExceededException = complianceTypeCountLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class PutComplianceItemsResponse {
     
     
     public String contentType;
+
     public PutComplianceItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutComplianceItemsResponse {
      */
     
     public Object internalServerError;
+
     public PutComplianceItemsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class PutComplianceItemsResponse {
      */
     
     public Object invalidItemContentException;
+
     public PutComplianceItemsResponse withInvalidItemContentException(Object invalidItemContentException) {
         this.invalidItemContentException = invalidItemContentException;
         return this;
@@ -49,6 +54,7 @@ public class PutComplianceItemsResponse {
      */
     
     public Object invalidResourceId;
+
     public PutComplianceItemsResponse withInvalidResourceId(Object invalidResourceId) {
         this.invalidResourceId = invalidResourceId;
         return this;
@@ -59,6 +65,7 @@ public class PutComplianceItemsResponse {
      */
     
     public Object invalidResourceType;
+
     public PutComplianceItemsResponse withInvalidResourceType(Object invalidResourceType) {
         this.invalidResourceType = invalidResourceType;
         return this;
@@ -69,6 +76,7 @@ public class PutComplianceItemsResponse {
      */
     
     public Object itemSizeLimitExceededException;
+
     public PutComplianceItemsResponse withItemSizeLimitExceededException(Object itemSizeLimitExceededException) {
         this.itemSizeLimitExceededException = itemSizeLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PutComplianceItemsResponse {
      */
     
     public java.util.Map<String, Object> putComplianceItemsResult;
+
     public PutComplianceItemsResponse withPutComplianceItemsResult(java.util.Map<String, Object> putComplianceItemsResult) {
         this.putComplianceItemsResult = putComplianceItemsResult;
         return this;
@@ -86,6 +95,7 @@ public class PutComplianceItemsResponse {
     
     
     public Integer statusCode;
+
     public PutComplianceItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutComplianceItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutComplianceItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class PutComplianceItemsResponse {
      */
     
     public Object totalSizeLimitExceededException;
+
     public PutComplianceItemsResponse withTotalSizeLimitExceededException(Object totalSizeLimitExceededException) {
         this.totalSizeLimitExceededException = totalSizeLimitExceededException;
         return this;
     }
     
+    public PutComplianceItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

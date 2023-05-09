@@ -15,9 +15,11 @@ public class CompositeSlotTypeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSlots")
     public SubSlotTypeComposition[] subSlots;
+
     public CompositeSlotTypeSetting withSubSlots(SubSlotTypeComposition[] subSlots) {
         this.subSlots = subSlots;
         return this;
     }
     
+    public CompositeSlotTypeSetting(){}
 }

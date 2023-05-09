@@ -15,9 +15,11 @@ public class UpdateEntitlementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entitlement")
     public Entitlement entitlement;
+
     public UpdateEntitlementResult withEntitlement(Entitlement entitlement) {
         this.entitlement = entitlement;
         return this;
     }
     
+    public UpdateEntitlementResult(){}
 }

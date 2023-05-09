@@ -6,6 +6,9 @@ package org.openapis.openapi.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
+/**
+ * RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum - The type of Load Balancer specified by this target. Must match the configuration of the Load Balancer located at the LoadBalancerTarget's IP address/port and region.
+ */
 public enum RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum {
     NONE("none"),
     REGIONAL_L4ILB("regionalL4ilb");

@@ -18,6 +18,7 @@ public class AdminFilterAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AdminFilterAttribute withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class AdminFilterAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexed")
     public Boolean indexed;
+
     public AdminFilterAttribute withIndexed(Boolean indexed) {
         this.indexed = indexed;
         return this;
@@ -37,6 +39,7 @@ public class AdminFilterAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public AdminFilterAttributeLevelEnum level;
+
     public AdminFilterAttribute withLevel(AdminFilterAttributeLevelEnum level) {
         this.level = level;
         return this;
@@ -48,6 +51,7 @@ public class AdminFilterAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdminFilterAttribute withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,11 @@ public class AdminFilterAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AdminFilterAttributeTypeEnum type;
+
     public AdminFilterAttribute withType(AdminFilterAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AdminFilterAttribute(){}
 }

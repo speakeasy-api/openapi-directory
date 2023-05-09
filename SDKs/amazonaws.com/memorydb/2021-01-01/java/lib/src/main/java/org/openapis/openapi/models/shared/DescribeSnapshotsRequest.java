@@ -12,6 +12,7 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public DescribeSnapshotsRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -20,6 +21,7 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeSnapshotsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSnapshotsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShowDetail")
     public Boolean showDetail;
+
     public DescribeSnapshotsRequest withShowDetail(Boolean showDetail) {
         this.showDetail = showDetail;
         return this;
@@ -44,6 +48,7 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotName")
     public String snapshotName;
+
     public DescribeSnapshotsRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -52,9 +57,11 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public DescribeSnapshotsRequest withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public DescribeSnapshotsRequest(){}
 }

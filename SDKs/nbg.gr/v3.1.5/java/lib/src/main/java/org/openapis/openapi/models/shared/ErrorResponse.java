@@ -15,9 +15,11 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ErrorResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public ErrorResponse(){}
 }

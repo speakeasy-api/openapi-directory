@@ -12,9 +12,11 @@ public class PatientIdentificationRequestQueryPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PatientIdentificationRequestQueryPatient withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PatientIdentificationRequestQueryPatient(){}
 }

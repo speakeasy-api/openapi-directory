@@ -18,6 +18,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTime")
     public String activityTime;
+
     public Activity withActivityTime(String activityTime) {
         this.activityTime = activityTime;
         return this;
@@ -29,6 +30,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityType")
     public ActivityActivityTypeEnum activityType;
+
     public Activity withActivityType(ActivityActivityTypeEnum activityType) {
         this.activityType = activityType;
         return this;
@@ -37,6 +39,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appview")
     public ScreenviewData appview;
+
     public Activity withAppview(ScreenviewData appview) {
         this.appview = appview;
         return this;
@@ -48,6 +51,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign")
     public String campaign;
+
     public Activity withCampaign(String campaign) {
         this.campaign = campaign;
         return this;
@@ -59,6 +63,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelGrouping")
     public String channelGrouping;
+
     public Activity withChannelGrouping(String channelGrouping) {
         this.channelGrouping = channelGrouping;
         return this;
@@ -70,6 +75,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDimension")
     public CustomDimension[] customDimension;
+
     public Activity withCustomDimension(CustomDimension[] customDimension) {
         this.customDimension = customDimension;
         return this;
@@ -81,6 +87,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecommerce")
     public EcommerceData ecommerce;
+
     public Activity withEcommerce(EcommerceData ecommerce) {
         this.ecommerce = ecommerce;
         return this;
@@ -92,6 +99,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public EventData event;
+
     public Activity withEvent(EventData event) {
         this.event = event;
         return this;
@@ -103,6 +111,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goals")
     public GoalSetData goals;
+
     public Activity withGoals(GoalSetData goals) {
         this.goals = goals;
         return this;
@@ -114,6 +123,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public Activity withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -125,6 +135,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword")
     public String keyword;
+
     public Activity withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -136,6 +147,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("landingPagePath")
     public String landingPagePath;
+
     public Activity withLandingPagePath(String landingPagePath) {
         this.landingPagePath = landingPagePath;
         return this;
@@ -147,6 +159,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public String medium;
+
     public Activity withMedium(String medium) {
         this.medium = medium;
         return this;
@@ -158,6 +171,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageview")
     public PageviewData pageview;
+
     public Activity withPageview(PageviewData pageview) {
         this.pageview = pageview;
         return this;
@@ -169,9 +183,11 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public Activity withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public Activity(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAggregateDiscoveredResourcesRequest {
     @JsonProperty("ConfigurationAggregatorName")
     public String configurationAggregatorName;
+
     public ListAggregateDiscoveredResourcesRequest withConfigurationAggregatorName(String configurationAggregatorName) {
         this.configurationAggregatorName = configurationAggregatorName;
         return this;
@@ -19,6 +20,7 @@ public class ListAggregateDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ResourceFilters filters;
+
     public ListAggregateDiscoveredResourcesRequest withFilters(ResourceFilters filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class ListAggregateDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListAggregateDiscoveredResourcesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +38,7 @@ public class ListAggregateDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAggregateDiscoveredResourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class ListAggregateDiscoveredResourcesRequest {
     
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public ListAggregateDiscoveredResourcesRequest withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListAggregateDiscoveredResourcesRequest(@JsonProperty("ConfigurationAggregatorName") String configurationAggregatorName, @JsonProperty("ResourceType") ResourceTypeEnum resourceType) {
+        this.configurationAggregatorName = configurationAggregatorName;
+        this.resourceType = resourceType;
+  }
 }

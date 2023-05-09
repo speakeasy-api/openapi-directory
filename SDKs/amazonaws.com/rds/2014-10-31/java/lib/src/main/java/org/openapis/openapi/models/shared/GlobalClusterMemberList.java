@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GlobalClusterMemberList {
     
     public String dbClusterArn;
+
     public GlobalClusterMemberList withDBClusterArn(String dbClusterArn) {
         this.dbClusterArn = dbClusterArn;
         return this;
@@ -19,6 +20,7 @@ public class GlobalClusterMemberList {
     
     
     public WriteForwardingStatusEnum globalWriteForwardingStatus;
+
     public GlobalClusterMemberList withGlobalWriteForwardingStatus(WriteForwardingStatusEnum globalWriteForwardingStatus) {
         this.globalWriteForwardingStatus = globalWriteForwardingStatus;
         return this;
@@ -26,6 +28,7 @@ public class GlobalClusterMemberList {
     
     
     public Boolean isWriter;
+
     public GlobalClusterMemberList withIsWriter(Boolean isWriter) {
         this.isWriter = isWriter;
         return this;
@@ -33,9 +36,11 @@ public class GlobalClusterMemberList {
     
     
     public String[] readers;
+
     public GlobalClusterMemberList withReaders(String[] readers) {
         this.readers = readers;
         return this;
     }
     
+    public GlobalClusterMemberList(){}
 }

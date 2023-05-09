@@ -15,6 +15,7 @@ public class GetClassifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classifiers")
     public Classifier[] classifiers;
+
     public GetClassifiersResponse withClassifiers(Classifier[] classifiers) {
         this.classifiers = classifiers;
         return this;
@@ -23,9 +24,11 @@ public class GetClassifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetClassifiersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetClassifiersResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionsIdViewsPostRequest {
@@ -12,6 +13,7 @@ public class SessionsIdViewsPostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public SessionsIdViewsPostRequiredParametersToCreateAView requestBody;
+
     public SessionsIdViewsPostRequest withRequestBody(SessionsIdViewsPostRequiredParametersToCreateAView requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class SessionsIdViewsPostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=session_id")
     public String sessionId;
+
     public SessionsIdViewsPostRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public SessionsIdViewsPostRequest(@JsonProperty("RequestBody") SessionsIdViewsPostRequiredParametersToCreateAView requestBody, @JsonProperty("session_id") String sessionId) {
+        this.requestBody = requestBody;
+        this.sessionId = sessionId;
+  }
 }

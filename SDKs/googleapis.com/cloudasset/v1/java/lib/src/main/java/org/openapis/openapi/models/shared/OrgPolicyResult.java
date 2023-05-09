@@ -18,6 +18,7 @@ public class OrgPolicyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consolidatedPolicy")
     public AnalyzerOrgPolicy consolidatedPolicy;
+
     public OrgPolicyResult withConsolidatedPolicy(AnalyzerOrgPolicy consolidatedPolicy) {
         this.consolidatedPolicy = consolidatedPolicy;
         return this;
@@ -29,9 +30,11 @@ public class OrgPolicyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyBundle")
     public AnalyzerOrgPolicy[] policyBundle;
+
     public OrgPolicyResult withPolicyBundle(AnalyzerOrgPolicy[] policyBundle) {
         this.policyBundle = policyBundle;
         return this;
     }
     
+    public OrgPolicyResult(){}
 }

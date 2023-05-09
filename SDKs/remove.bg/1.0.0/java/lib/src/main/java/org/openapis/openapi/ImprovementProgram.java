@@ -53,11 +53,9 @@ public class ImprovementProgram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostImproveFormResponse res = new org.openapis.openapi.models.operations.PostImproveFormResponse() {{
+        org.openapis.openapi.models.operations.PostImproveFormResponse res = new org.openapis.openapi.models.operations.PostImproveFormResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {
@@ -96,11 +94,9 @@ public class ImprovementProgram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostImproveJsonResponse res = new org.openapis.openapi.models.operations.PostImproveJsonResponse() {{
+        org.openapis.openapi.models.operations.PostImproveJsonResponse res = new org.openapis.openapi.models.operations.PostImproveJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {
@@ -139,11 +135,9 @@ public class ImprovementProgram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostImproveMultipartResponse res = new org.openapis.openapi.models.operations.PostImproveMultipartResponse() {{
+        org.openapis.openapi.models.operations.PostImproveMultipartResponse res = new org.openapis.openapi.models.operations.PostImproveMultipartResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsLoadBalancerTarget {
     
     public String address;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsLoadBalancerTarget withAddress(String address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public String availabilityZone;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsLoadBalancerTarget withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsLoadBalancerTargetInstance instance;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsLoadBalancerTarget withInstance(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsLoadBalancerTargetInstance instance) {
         this.instance = instance;
         return this;
@@ -33,9 +36,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public Long port;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsLoadBalancerTarget withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsLoadBalancerTarget(){}
 }

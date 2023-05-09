@@ -18,6 +18,7 @@ public class DisableServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkIfServiceHasUsage")
     public DisableServiceRequestCheckIfServiceHasUsageEnum checkIfServiceHasUsage;
+
     public DisableServiceRequest withCheckIfServiceHasUsage(DisableServiceRequestCheckIfServiceHasUsageEnum checkIfServiceHasUsage) {
         this.checkIfServiceHasUsage = checkIfServiceHasUsage;
         return this;
@@ -29,9 +30,11 @@ public class DisableServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableDependentServices")
     public Boolean disableDependentServices;
+
     public DisableServiceRequest withDisableDependentServices(Boolean disableDependentServices) {
         this.disableDependentServices = disableDependentServices;
         return this;
     }
     
+    public DisableServiceRequest(){}
 }

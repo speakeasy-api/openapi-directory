@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewRequest {
@@ -12,6 +13,7 @@ public class NewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
     public String ip;
+
     public NewRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -22,6 +24,7 @@ public class NewRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Triplet[] requestBody;
+
     public NewRequest withRequestBody(org.openapis.openapi.models.shared.Triplet[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -32,9 +35,15 @@ public class NewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public NewRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public NewRequest(@JsonProperty("IP") String ip, @JsonProperty("RequestBody") org.openapis.openapi.models.shared.Triplet[] requestBody, @JsonProperty("agentNum") Integer agentNum) {
+        this.ip = ip;
+        this.requestBody = requestBody;
+        this.agentNum = agentNum;
+  }
 }

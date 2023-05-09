@@ -67,14 +67,12 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatsResponse res = new org.openapis.openapi.models.operations.GetStatsResponse() {{
+        org.openapis.openapi.models.operations.GetStatsResponse res = new org.openapis.openapi.models.operations.GetStatsResponse(contentType, httpRes.statusCode()) {{
             getStats2XXApplicationJSONObject = null;
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -139,7 +137,7 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimeResponse res = new org.openapis.openapi.models.operations.GetTimeResponse() {{
+        org.openapis.openapi.models.operations.GetTimeResponse res = new org.openapis.openapi.models.operations.GetTimeResponse(contentType, httpRes.statusCode()) {{
             getTime2XXApplicationJSONIntegers = null;
             body = null;
             getTime2XXTextHTMLString = null;
@@ -147,8 +145,6 @@ public class Stats {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

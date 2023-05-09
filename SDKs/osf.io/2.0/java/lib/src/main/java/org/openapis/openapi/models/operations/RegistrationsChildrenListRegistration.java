@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegistrationsChildrenListRegistration {
     /**
@@ -12,6 +12,7 @@ public class RegistrationsChildrenListRegistration {
      */
     
     public RegistrationsChildrenListRegistrationAttributes attributes;
+
     public RegistrationsChildrenListRegistration withAttributes(RegistrationsChildrenListRegistrationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsChildrenListRegistration {
      */
     
     public String id;
+
     public RegistrationsChildrenListRegistration withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsChildrenListRegistration {
      */
     
     public RegistrationsChildrenListRegistrationLinks links;
+
     public RegistrationsChildrenListRegistration withLinks(RegistrationsChildrenListRegistrationLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class RegistrationsChildrenListRegistration {
      */
     
     public RegistrationsChildrenListRegistrationRelationships relationships;
+
     public RegistrationsChildrenListRegistration withRelationships(RegistrationsChildrenListRegistrationRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,17 @@ public class RegistrationsChildrenListRegistration {
      */
     
     public String type;
+
     public RegistrationsChildrenListRegistration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsChildrenListRegistration(@JsonProperty("attributes") RegistrationsChildrenListRegistrationAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") RegistrationsChildrenListRegistrationLinks links, @JsonProperty("relationships") RegistrationsChildrenListRegistrationRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

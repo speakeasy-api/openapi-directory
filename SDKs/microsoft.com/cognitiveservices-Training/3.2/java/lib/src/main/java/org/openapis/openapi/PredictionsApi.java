@@ -59,11 +59,9 @@ public class PredictionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePredictionResponse res = new org.openapis.openapi.models.operations.DeletePredictionResponse() {{
+        org.openapis.openapi.models.operations.DeletePredictionResponse res = new org.openapis.openapi.models.operations.DeletePredictionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -104,7 +102,7 @@ public class PredictionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QueryPredictionsFormResponse res = new org.openapis.openapi.models.operations.QueryPredictionsFormResponse() {{
+        org.openapis.openapi.models.operations.QueryPredictionsFormResponse res = new org.openapis.openapi.models.operations.QueryPredictionsFormResponse(contentType, httpRes.statusCode()) {{
             predictionQueryResult = null;
             body = null;
             body = null;
@@ -112,8 +110,6 @@ public class PredictionsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,7 +172,7 @@ public class PredictionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QueryPredictionsJsonResponse res = new org.openapis.openapi.models.operations.QueryPredictionsJsonResponse() {{
+        org.openapis.openapi.models.operations.QueryPredictionsJsonResponse res = new org.openapis.openapi.models.operations.QueryPredictionsJsonResponse(contentType, httpRes.statusCode()) {{
             predictionQueryResult = null;
             body = null;
             body = null;
@@ -184,8 +180,6 @@ public class PredictionsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,7 +242,7 @@ public class PredictionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QueryPredictionsRawResponse res = new org.openapis.openapi.models.operations.QueryPredictionsRawResponse() {{
+        org.openapis.openapi.models.operations.QueryPredictionsRawResponse res = new org.openapis.openapi.models.operations.QueryPredictionsRawResponse(contentType, httpRes.statusCode()) {{
             predictionQueryResult = null;
             body = null;
             body = null;
@@ -256,8 +250,6 @@ public class PredictionsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -326,7 +318,7 @@ public class PredictionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuickTestImageResponse res = new org.openapis.openapi.models.operations.QuickTestImageResponse() {{
+        org.openapis.openapi.models.operations.QuickTestImageResponse res = new org.openapis.openapi.models.operations.QuickTestImageResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             body = null;
             body = null;
@@ -334,8 +326,6 @@ public class PredictionsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -404,7 +394,7 @@ public class PredictionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuickTestImageUrlFormResponse res = new org.openapis.openapi.models.operations.QuickTestImageUrlFormResponse() {{
+        org.openapis.openapi.models.operations.QuickTestImageUrlFormResponse res = new org.openapis.openapi.models.operations.QuickTestImageUrlFormResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             body = null;
             body = null;
@@ -412,8 +402,6 @@ public class PredictionsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,7 +470,7 @@ public class PredictionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuickTestImageUrlJsonResponse res = new org.openapis.openapi.models.operations.QuickTestImageUrlJsonResponse() {{
+        org.openapis.openapi.models.operations.QuickTestImageUrlJsonResponse res = new org.openapis.openapi.models.operations.QuickTestImageUrlJsonResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             body = null;
             body = null;
@@ -490,8 +478,6 @@ public class PredictionsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -560,7 +546,7 @@ public class PredictionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuickTestImageUrlRawResponse res = new org.openapis.openapi.models.operations.QuickTestImageUrlRawResponse() {{
+        org.openapis.openapi.models.operations.QuickTestImageUrlRawResponse res = new org.openapis.openapi.models.operations.QuickTestImageUrlRawResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             body = null;
             body = null;
@@ -568,8 +554,6 @@ public class PredictionsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

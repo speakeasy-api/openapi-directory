@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateTransitGatewayMulticastDomainRequest {
     
     public Boolean dryRun;
+
     public AssociateTransitGatewayMulticastDomainRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class AssociateTransitGatewayMulticastDomainRequest {
     
     
     public String[] subnetIds;
+
     public AssociateTransitGatewayMulticastDomainRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -23,6 +25,7 @@ public class AssociateTransitGatewayMulticastDomainRequest {
     
     
     public String transitGatewayAttachmentId;
+
     public AssociateTransitGatewayMulticastDomainRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -30,9 +33,15 @@ public class AssociateTransitGatewayMulticastDomainRequest {
     
     
     public String transitGatewayMulticastDomainId;
+
     public AssociateTransitGatewayMulticastDomainRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
     }
     
+    public AssociateTransitGatewayMulticastDomainRequest(@JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId, @JsonProperty("TransitGatewayMulticastDomainId") String transitGatewayMulticastDomainId) {
+        this.subnetIds = subnetIds;
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+        this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
+  }
 }

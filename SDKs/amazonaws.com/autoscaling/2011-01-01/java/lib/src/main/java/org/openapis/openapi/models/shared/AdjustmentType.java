@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AdjustmentType {
     
     public String adjustmentType;
+
     public AdjustmentType withAdjustmentType(String adjustmentType) {
         this.adjustmentType = adjustmentType;
         return this;
     }
     
+    public AdjustmentType(){}
 }

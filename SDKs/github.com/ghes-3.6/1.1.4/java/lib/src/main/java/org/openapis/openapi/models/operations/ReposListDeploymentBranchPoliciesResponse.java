@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposListDeploymentBranchPoliciesResponse {
     
     public String contentType;
+
     public ReposListDeploymentBranchPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposListDeploymentBranchPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ReposListDeploymentBranchPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposListDeploymentBranchPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposListDeploymentBranchPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ReposListDeploymentBranchPoliciesResponse {
      */
     
     public ReposListDeploymentBranchPolicies200ApplicationJSON reposListDeploymentBranchPolicies200ApplicationJSONObject;
+
     public ReposListDeploymentBranchPoliciesResponse withReposListDeploymentBranchPolicies200ApplicationJSONObject(ReposListDeploymentBranchPolicies200ApplicationJSON reposListDeploymentBranchPolicies200ApplicationJSONObject) {
         this.reposListDeploymentBranchPolicies200ApplicationJSONObject = reposListDeploymentBranchPolicies200ApplicationJSONObject;
         return this;
     }
     
+    public ReposListDeploymentBranchPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

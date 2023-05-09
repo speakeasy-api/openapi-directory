@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEventSelectorsResponse {
@@ -12,6 +13,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public PutEventSelectorsResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -19,6 +21,7 @@ public class PutEventSelectorsResponse {
     
     
     public String contentType;
+
     public PutEventSelectorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public PutEventSelectorsResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -39,6 +43,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object invalidEventSelectorsException;
+
     public PutEventSelectorsResponse withInvalidEventSelectorsException(Object invalidEventSelectorsException) {
         this.invalidEventSelectorsException = invalidEventSelectorsException;
         return this;
@@ -49,6 +54,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object invalidHomeRegionException;
+
     public PutEventSelectorsResponse withInvalidHomeRegionException(Object invalidHomeRegionException) {
         this.invalidHomeRegionException = invalidHomeRegionException;
         return this;
@@ -59,6 +65,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object invalidTrailNameException;
+
     public PutEventSelectorsResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -69,6 +76,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public PutEventSelectorsResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -79,6 +87,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public PutEventSelectorsResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -89,6 +98,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public PutEventSelectorsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -99,6 +109,7 @@ public class PutEventSelectorsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutEventSelectorsResponse putEventSelectorsResponse;
+
     public PutEventSelectorsResponse withPutEventSelectorsResponse(org.openapis.openapi.models.shared.PutEventSelectorsResponse putEventSelectorsResponse) {
         this.putEventSelectorsResponse = putEventSelectorsResponse;
         return this;
@@ -106,6 +117,7 @@ public class PutEventSelectorsResponse {
     
     
     public Integer statusCode;
+
     public PutEventSelectorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class PutEventSelectorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEventSelectorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class PutEventSelectorsResponse {
      */
     
     public Object trailNotFoundException;
+
     public PutEventSelectorsResponse withTrailNotFoundException(Object trailNotFoundException) {
         this.trailNotFoundException = trailNotFoundException;
         return this;
@@ -133,9 +147,14 @@ public class PutEventSelectorsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public PutEventSelectorsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public PutEventSelectorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

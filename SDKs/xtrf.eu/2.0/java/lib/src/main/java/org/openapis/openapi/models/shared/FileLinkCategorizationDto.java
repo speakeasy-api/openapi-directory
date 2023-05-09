@@ -12,6 +12,7 @@ public class FileLinkCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public FileLinkCategorizationDto withCategory(String category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class FileLinkCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalInfo")
     public java.util.Map<String, String> externalInfo;
+
     public FileLinkCategorizationDto withExternalInfo(java.util.Map<String, String> externalInfo) {
         this.externalInfo = externalInfo;
         return this;
@@ -28,6 +30,7 @@ public class FileLinkCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public FileLinkCategorizationDto withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -36,6 +39,7 @@ public class FileLinkCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombinationIds")
     public LanguageCombinationDto[] languageCombinationIds;
+
     public FileLinkCategorizationDto withLanguageCombinationIds(LanguageCombinationDto[] languageCombinationIds) {
         this.languageCombinationIds = languageCombinationIds;
         return this;
@@ -44,6 +48,7 @@ public class FileLinkCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageIds")
     public Long[] languageIds;
+
     public FileLinkCategorizationDto withLanguageIds(Long[] languageIds) {
         this.languageIds = languageIds;
         return this;
@@ -52,6 +57,7 @@ public class FileLinkCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toBeGenerated")
     public Boolean toBeGenerated;
+
     public FileLinkCategorizationDto withToBeGenerated(Boolean toBeGenerated) {
         this.toBeGenerated = toBeGenerated;
         return this;
@@ -60,9 +66,11 @@ public class FileLinkCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FileLinkCategorizationDto withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FileLinkCategorizationDto(){}
 }

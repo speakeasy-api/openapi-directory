@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PreprocessingGetPageAngleResponse {
     
     public byte[] body;
+
     public PreprocessingGetPageAngleResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PreprocessingGetPageAngleResponse {
     
     
     public String contentType;
+
     public PreprocessingGetPageAngleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PreprocessingGetPageAngleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPageAngleResult getPageAngleResult;
+
     public PreprocessingGetPageAngleResponse withGetPageAngleResult(org.openapis.openapi.models.shared.GetPageAngleResult getPageAngleResult) {
         this.getPageAngleResult = getPageAngleResult;
         return this;
@@ -33,6 +37,7 @@ public class PreprocessingGetPageAngleResponse {
     
     
     public Integer statusCode;
+
     public PreprocessingGetPageAngleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PreprocessingGetPageAngleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PreprocessingGetPageAngleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PreprocessingGetPageAngleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PropertyDifference - Information about a resource property whose actual value differs from its expected value, as defined in the stack template and any values specified as template parameters. These will be present only for resources whose &lt;code&gt;StackResourceDriftStatus&lt;/code&gt; is &lt;code&gt;MODIFIED&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html"&gt;Detecting Unregulated Configuration Changes to Stacks and Resources&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PropertyDifference {
     
     public String actualValue;
+
     public PropertyDifference withActualValue(String actualValue) {
         this.actualValue = actualValue;
         return this;
@@ -19,6 +20,7 @@ public class PropertyDifference {
     
     
     public DifferenceTypeEnum differenceType;
+
     public PropertyDifference withDifferenceType(DifferenceTypeEnum differenceType) {
         this.differenceType = differenceType;
         return this;
@@ -26,6 +28,7 @@ public class PropertyDifference {
     
     
     public String expectedValue;
+
     public PropertyDifference withExpectedValue(String expectedValue) {
         this.expectedValue = expectedValue;
         return this;
@@ -33,9 +36,16 @@ public class PropertyDifference {
     
     
     public String propertyPath;
+
     public PropertyDifference withPropertyPath(String propertyPath) {
         this.propertyPath = propertyPath;
         return this;
     }
     
+    public PropertyDifference(@JsonProperty("ActualValue") String actualValue, @JsonProperty("DifferenceType") DifferenceTypeEnum differenceType, @JsonProperty("ExpectedValue") String expectedValue, @JsonProperty("PropertyPath") String propertyPath) {
+        this.actualValue = actualValue;
+        this.differenceType = differenceType;
+        this.expectedValue = expectedValue;
+        this.propertyPath = propertyPath;
+  }
 }

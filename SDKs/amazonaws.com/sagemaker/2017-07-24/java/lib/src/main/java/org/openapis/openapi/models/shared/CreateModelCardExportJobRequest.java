@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateModelCardExportJobRequest {
     @JsonProperty("ModelCardExportJobName")
     public String modelCardExportJobName;
+
     public CreateModelCardExportJobRequest withModelCardExportJobName(String modelCardExportJobName) {
         this.modelCardExportJobName = modelCardExportJobName;
         return this;
@@ -18,6 +19,7 @@ public class CreateModelCardExportJobRequest {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public CreateModelCardExportJobRequest withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -26,6 +28,7 @@ public class CreateModelCardExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardVersion")
     public Long modelCardVersion;
+
     public CreateModelCardExportJobRequest withModelCardVersion(Long modelCardVersion) {
         this.modelCardVersion = modelCardVersion;
         return this;
@@ -33,9 +36,15 @@ public class CreateModelCardExportJobRequest {
     
     @JsonProperty("OutputConfig")
     public ModelCardExportOutputConfig outputConfig;
+
     public CreateModelCardExportJobRequest withOutputConfig(ModelCardExportOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public CreateModelCardExportJobRequest(@JsonProperty("ModelCardExportJobName") String modelCardExportJobName, @JsonProperty("ModelCardName") String modelCardName, @JsonProperty("OutputConfig") ModelCardExportOutputConfig outputConfig) {
+        this.modelCardExportJobName = modelCardExportJobName;
+        this.modelCardName = modelCardName;
+        this.outputConfig = outputConfig;
+  }
 }

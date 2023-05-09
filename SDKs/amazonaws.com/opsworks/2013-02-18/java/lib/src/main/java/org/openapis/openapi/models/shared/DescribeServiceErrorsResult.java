@@ -15,9 +15,11 @@ public class DescribeServiceErrorsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceErrors")
     public ServiceError[] serviceErrors;
+
     public DescribeServiceErrorsResult withServiceErrors(ServiceError[] serviceErrors) {
         this.serviceErrors = serviceErrors;
         return this;
     }
     
+    public DescribeServiceErrorsResult(){}
 }

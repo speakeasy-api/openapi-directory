@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MemcacheProjectsLocationsInstancesUpdateParametersResponse {
     
     public String contentType;
+
     public MemcacheProjectsLocationsInstancesUpdateParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MemcacheProjectsLocationsInstancesUpdateParametersResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public MemcacheProjectsLocationsInstancesUpdateParametersResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class MemcacheProjectsLocationsInstancesUpdateParametersResponse {
     
     
     public Integer statusCode;
+
     public MemcacheProjectsLocationsInstancesUpdateParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MemcacheProjectsLocationsInstancesUpdateParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MemcacheProjectsLocationsInstancesUpdateParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MemcacheProjectsLocationsInstancesUpdateParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class DocumentReviewerResponseSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public DocumentReviewCommentSource[] comment;
+
     public DocumentReviewerResponseSource withComment(DocumentReviewCommentSource[] comment) {
         this.comment = comment;
         return this;
@@ -30,6 +31,7 @@ public class DocumentReviewerResponseSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public DocumentReviewerResponseSource withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class DocumentReviewerResponseSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewStatus")
     public ReviewStatusEnum reviewStatus;
+
     public DocumentReviewerResponseSource withReviewStatus(ReviewStatusEnum reviewStatus) {
         this.reviewStatus = reviewStatus;
         return this;
@@ -46,6 +49,7 @@ public class DocumentReviewerResponseSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reviewer")
     public String reviewer;
+
     public DocumentReviewerResponseSource withReviewer(String reviewer) {
         this.reviewer = reviewer;
         return this;
@@ -56,9 +60,11 @@ public class DocumentReviewerResponseSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTime")
     public OffsetDateTime updatedTime;
+
     public DocumentReviewerResponseSource withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
     }
     
+    public DocumentReviewerResponseSource(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations {
     
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum bgpStatus;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations withBgpStatus(DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum bgpStatus) {
         this.bgpStatus = bgpStatus;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConne
     
     
     public String peerAddress;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations withPeerAddress(String peerAddress) {
         this.peerAddress = peerAddress;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConne
     
     
     public Long peerAsn;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations withPeerAsn(Long peerAsn) {
         this.peerAsn = peerAsn;
         return this;
@@ -33,6 +36,7 @@ public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConne
     
     
     public String transitGatewayAddress;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations withTransitGatewayAddress(String transitGatewayAddress) {
         this.transitGatewayAddress = transitGatewayAddress;
         return this;
@@ -40,9 +44,11 @@ public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConne
     
     
     public Long transitGatewayAsn;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations withTransitGatewayAsn(Long transitGatewayAsn) {
         this.transitGatewayAsn = transitGatewayAsn;
         return this;
     }
     
+    public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations(){}
 }

@@ -58,11 +58,9 @@ public class Publications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteResponse res = new org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteResponse() {{
+        org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteResponse res = new org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteResponse(contentType, httpRes.statusCode()) {{
             deleteReaderResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Publications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsResponse res = new org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsResponse() {{
+        org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsResponse res = new org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsResponse(contentType, httpRes.statusCode()) {{
             readerEntitlements = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Publications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsResponse res = new org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsResponse() {{
+        org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsResponse res = new org.openapis.openapi.models.operations.ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsResponse(contentType, httpRes.statusCode()) {{
             readerEntitlements = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

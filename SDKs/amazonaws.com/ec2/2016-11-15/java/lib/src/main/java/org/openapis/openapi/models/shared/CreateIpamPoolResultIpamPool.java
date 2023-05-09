@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamPoolResultIpamPool {
     
     public CreateIpamPoolResultIpamPoolAddressFamilyEnum addressFamily;
+
     public CreateIpamPoolResultIpamPool withAddressFamily(CreateIpamPoolResultIpamPoolAddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -19,6 +20,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public Long allocationDefaultNetmaskLength;
+
     public CreateIpamPoolResultIpamPool withAllocationDefaultNetmaskLength(Long allocationDefaultNetmaskLength) {
         this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
         return this;
@@ -26,6 +28,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public Long allocationMaxNetmaskLength;
+
     public CreateIpamPoolResultIpamPool withAllocationMaxNetmaskLength(Long allocationMaxNetmaskLength) {
         this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
         return this;
@@ -33,6 +36,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public Long allocationMinNetmaskLength;
+
     public CreateIpamPoolResultIpamPool withAllocationMinNetmaskLength(Long allocationMinNetmaskLength) {
         this.allocationMinNetmaskLength = allocationMinNetmaskLength;
         return this;
@@ -40,6 +44,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public CreateIpamPoolResultIpamPoolAllocationResourceTags[] allocationResourceTags;
+
     public CreateIpamPoolResultIpamPool withAllocationResourceTags(CreateIpamPoolResultIpamPoolAllocationResourceTags[] allocationResourceTags) {
         this.allocationResourceTags = allocationResourceTags;
         return this;
@@ -47,6 +52,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public Boolean autoImport;
+
     public CreateIpamPoolResultIpamPool withAutoImport(Boolean autoImport) {
         this.autoImport = autoImport;
         return this;
@@ -54,6 +60,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public CreateIpamPoolResultIpamPoolAwsServiceEnum awsService;
+
     public CreateIpamPoolResultIpamPool withAwsService(CreateIpamPoolResultIpamPoolAwsServiceEnum awsService) {
         this.awsService = awsService;
         return this;
@@ -61,6 +68,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String description;
+
     public CreateIpamPoolResultIpamPool withDescription(String description) {
         this.description = description;
         return this;
@@ -68,6 +76,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String ipamArn;
+
     public CreateIpamPoolResultIpamPool withIpamArn(String ipamArn) {
         this.ipamArn = ipamArn;
         return this;
@@ -75,6 +84,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String ipamPoolArn;
+
     public CreateIpamPoolResultIpamPool withIpamPoolArn(String ipamPoolArn) {
         this.ipamPoolArn = ipamPoolArn;
         return this;
@@ -82,6 +92,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String ipamPoolId;
+
     public CreateIpamPoolResultIpamPool withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -89,6 +100,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String ipamRegion;
+
     public CreateIpamPoolResultIpamPool withIpamRegion(String ipamRegion) {
         this.ipamRegion = ipamRegion;
         return this;
@@ -96,6 +108,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String ipamScopeArn;
+
     public CreateIpamPoolResultIpamPool withIpamScopeArn(String ipamScopeArn) {
         this.ipamScopeArn = ipamScopeArn;
         return this;
@@ -103,6 +116,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public CreateIpamPoolResultIpamPoolIpamScopeTypeEnum ipamScopeType;
+
     public CreateIpamPoolResultIpamPool withIpamScopeType(CreateIpamPoolResultIpamPoolIpamScopeTypeEnum ipamScopeType) {
         this.ipamScopeType = ipamScopeType;
         return this;
@@ -110,6 +124,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String locale;
+
     public CreateIpamPoolResultIpamPool withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -117,6 +132,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String ownerId;
+
     public CreateIpamPoolResultIpamPool withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -124,6 +140,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public Long poolDepth;
+
     public CreateIpamPoolResultIpamPool withPoolDepth(Long poolDepth) {
         this.poolDepth = poolDepth;
         return this;
@@ -131,6 +148,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public CreateIpamPoolResultIpamPoolPublicIpSourceEnum publicIpSource;
+
     public CreateIpamPoolResultIpamPool withPublicIpSource(CreateIpamPoolResultIpamPoolPublicIpSourceEnum publicIpSource) {
         this.publicIpSource = publicIpSource;
         return this;
@@ -138,6 +156,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public Boolean publiclyAdvertisable;
+
     public CreateIpamPoolResultIpamPool withPubliclyAdvertisable(Boolean publiclyAdvertisable) {
         this.publiclyAdvertisable = publiclyAdvertisable;
         return this;
@@ -145,6 +164,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String sourceIpamPoolId;
+
     public CreateIpamPoolResultIpamPool withSourceIpamPoolId(String sourceIpamPoolId) {
         this.sourceIpamPoolId = sourceIpamPoolId;
         return this;
@@ -152,6 +172,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public CreateIpamPoolResultIpamPoolStateEnum state;
+
     public CreateIpamPoolResultIpamPool withState(CreateIpamPoolResultIpamPoolStateEnum state) {
         this.state = state;
         return this;
@@ -159,6 +180,7 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public String stateMessage;
+
     public CreateIpamPoolResultIpamPool withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -166,9 +188,11 @@ public class CreateIpamPoolResultIpamPool {
     
     
     public CreateIpamPoolResultIpamPoolTags[] tags;
+
     public CreateIpamPoolResultIpamPool withTags(CreateIpamPoolResultIpamPoolTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateIpamPoolResultIpamPool(){}
 }

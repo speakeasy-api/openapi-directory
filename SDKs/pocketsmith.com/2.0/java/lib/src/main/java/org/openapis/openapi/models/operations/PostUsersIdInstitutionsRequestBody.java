@@ -12,6 +12,7 @@ public class PostUsersIdInstitutionsRequestBody {
      */
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public PostUsersIdInstitutionsRequestBody withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -22,9 +23,14 @@ public class PostUsersIdInstitutionsRequestBody {
      */
     @JsonProperty("title")
     public String title;
+
     public PostUsersIdInstitutionsRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostUsersIdInstitutionsRequestBody(@JsonProperty("currency_code") String currencyCode, @JsonProperty("title") String title) {
+        this.currencyCode = currencyCode;
+        this.title = title;
+  }
 }

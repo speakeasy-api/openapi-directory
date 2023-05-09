@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReplaceRouteRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETReplaceRouteActionEnum action;
+
     public GETReplaceRouteRequest withAction(GETReplaceRouteActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CarrierGatewayId")
     public String carrierGatewayId;
+
     public GETReplaceRouteRequest withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -29,6 +32,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CoreNetworkArn")
     public String coreNetworkArn;
+
     public GETReplaceRouteRequest withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -39,6 +43,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public GETReplaceRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -49,6 +54,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationIpv6CidrBlock")
     public String destinationIpv6CidrBlock;
+
     public GETReplaceRouteRequest withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -59,6 +65,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
     public String destinationPrefixListId;
+
     public GETReplaceRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -69,6 +76,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETReplaceRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -79,6 +87,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EgressOnlyInternetGatewayId")
     public String egressOnlyInternetGatewayId;
+
     public GETReplaceRouteRequest withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -89,6 +98,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GatewayId")
     public String gatewayId;
+
     public GETReplaceRouteRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -99,6 +109,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETReplaceRouteRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -109,6 +120,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayId")
     public String localGatewayId;
+
     public GETReplaceRouteRequest withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -119,6 +131,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalTarget")
     public Boolean localTarget;
+
     public GETReplaceRouteRequest withLocalTarget(Boolean localTarget) {
         this.localTarget = localTarget;
         return this;
@@ -129,6 +142,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NatGatewayId")
     public String natGatewayId;
+
     public GETReplaceRouteRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -139,6 +153,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
     public String networkInterfaceId;
+
     public GETReplaceRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -149,6 +164,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RouteTableId")
     public String routeTableId;
+
     public GETReplaceRouteRequest withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -159,6 +175,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayId")
     public String transitGatewayId;
+
     public GETReplaceRouteRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -166,6 +183,7 @@ public class GETReplaceRouteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETReplaceRouteVersionEnum version;
+
     public GETReplaceRouteRequest withVersion(GETReplaceRouteVersionEnum version) {
         this.version = version;
         return this;
@@ -176,6 +194,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcEndpointId")
     public String vpcEndpointId;
+
     public GETReplaceRouteRequest withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -186,6 +205,7 @@ public class GETReplaceRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcPeeringConnectionId")
     public String vpcPeeringConnectionId;
+
     public GETReplaceRouteRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
@@ -193,6 +213,7 @@ public class GETReplaceRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETReplaceRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -200,6 +221,7 @@ public class GETReplaceRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETReplaceRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -207,6 +229,7 @@ public class GETReplaceRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETReplaceRouteRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -214,6 +237,7 @@ public class GETReplaceRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETReplaceRouteRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -221,6 +245,7 @@ public class GETReplaceRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETReplaceRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -228,6 +253,7 @@ public class GETReplaceRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETReplaceRouteRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -235,9 +261,15 @@ public class GETReplaceRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETReplaceRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETReplaceRouteRequest(@JsonProperty("Action") GETReplaceRouteActionEnum action, @JsonProperty("RouteTableId") String routeTableId, @JsonProperty("Version") GETReplaceRouteVersionEnum version) {
+        this.action = action;
+        this.routeTableId = routeTableId;
+        this.version = version;
+  }
 }

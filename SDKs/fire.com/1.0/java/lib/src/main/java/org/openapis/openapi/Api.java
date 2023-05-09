@@ -61,11 +61,9 @@ public class Api {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateApiApplicationResponse res = new org.openapis.openapi.models.operations.CreateApiApplicationResponse() {{
+        org.openapis.openapi.models.operations.CreateApiApplicationResponse res = new org.openapis.openapi.models.operations.CreateApiApplicationResponse(contentType, httpRes.statusCode()) {{
             apiApplication = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAssetsCorrelationMatrixResponse {
     
     public String contentType;
+
     public PostAssetsCorrelationMatrixResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAssetsCorrelationMatrixResponse {
     
     
     public Integer statusCode;
+
     public PostAssetsCorrelationMatrixResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAssetsCorrelationMatrixResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAssetsCorrelationMatrixResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAssetsCorrelationMatrixResponse {
      */
     
     public PostAssetsCorrelationMatrix200ApplicationJSON postAssetsCorrelationMatrix200ApplicationJSONObject;
+
     public PostAssetsCorrelationMatrixResponse withPostAssetsCorrelationMatrix200ApplicationJSONObject(PostAssetsCorrelationMatrix200ApplicationJSON postAssetsCorrelationMatrix200ApplicationJSONObject) {
         this.postAssetsCorrelationMatrix200ApplicationJSONObject = postAssetsCorrelationMatrix200ApplicationJSONObject;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

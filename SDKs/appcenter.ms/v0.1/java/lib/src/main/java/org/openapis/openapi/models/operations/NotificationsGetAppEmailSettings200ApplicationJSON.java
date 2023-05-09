@@ -18,6 +18,7 @@ public class NotificationsGetAppEmailSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public NotificationsGetAppEmailSettings200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,6 +30,7 @@ public class NotificationsGetAppEmailSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public NotificationsGetAppEmailSettings200ApplicationJSON withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -39,6 +41,7 @@ public class NotificationsGetAppEmailSettings200ApplicationJSON {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public NotificationsGetAppEmailSettings200ApplicationJSON withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -49,6 +52,7 @@ public class NotificationsGetAppEmailSettings200ApplicationJSON {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public NotificationsGetAppEmailSettings200ApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -59,6 +63,7 @@ public class NotificationsGetAppEmailSettings200ApplicationJSON {
      */
     @JsonProperty("settings")
     public NotificationsGetAppEmailSettings200ApplicationJSONSettings[] settings;
+
     public NotificationsGetAppEmailSettings200ApplicationJSON withSettings(NotificationsGetAppEmailSettings200ApplicationJSONSettings[] settings) {
         this.settings = settings;
         return this;
@@ -70,6 +75,7 @@ public class NotificationsGetAppEmailSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public NotificationsGetAppEmailSettings200ApplicationJSON withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -80,9 +86,16 @@ public class NotificationsGetAppEmailSettings200ApplicationJSON {
      */
     @JsonProperty("user_enabled")
     public Boolean userEnabled;
+
     public NotificationsGetAppEmailSettings200ApplicationJSON withUserEnabled(Boolean userEnabled) {
         this.userEnabled = userEnabled;
         return this;
     }
     
+    public NotificationsGetAppEmailSettings200ApplicationJSON(@JsonProperty("enabled") Boolean enabled, @JsonProperty("request_id") String requestId, @JsonProperty("settings") NotificationsGetAppEmailSettings200ApplicationJSONSettings[] settings, @JsonProperty("user_enabled") Boolean userEnabled) {
+        this.enabled = enabled;
+        this.requestId = requestId;
+        this.settings = settings;
+        this.userEnabled = userEnabled;
+  }
 }

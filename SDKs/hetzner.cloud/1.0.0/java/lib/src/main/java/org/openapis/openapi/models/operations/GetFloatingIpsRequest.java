@@ -12,6 +12,7 @@ public class GetFloatingIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
     public String labelSelector;
+
     public GetFloatingIpsRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -22,6 +23,7 @@ public class GetFloatingIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetFloatingIpsRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,11 @@ public class GetFloatingIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetFloatingIpsSortEnum sort;
+
     public GetFloatingIpsRequest withSort(GetFloatingIpsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetFloatingIpsRequest(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Audio {
     @JsonProperty("digital")
     public Boolean digital;
+
     public Audio withDigital(Boolean digital) {
         this.digital = digital;
         return this;
     }
     
+    public Audio(@JsonProperty("digital") Boolean digital) {
+        this.digital = digital;
+  }
 }

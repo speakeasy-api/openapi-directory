@@ -15,9 +15,11 @@ public class TransferCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferredCertificateArn")
     public String transferredCertificateArn;
+
     public TransferCertificateResponse withTransferredCertificateArn(String transferredCertificateArn) {
         this.transferredCertificateArn = transferredCertificateArn;
         return this;
     }
     
+    public TransferCertificateResponse(){}
 }

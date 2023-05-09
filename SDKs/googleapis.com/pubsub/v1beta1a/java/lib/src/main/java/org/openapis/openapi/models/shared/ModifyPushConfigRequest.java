@@ -18,6 +18,7 @@ public class ModifyPushConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushConfig")
     public PushConfig pushConfig;
+
     public ModifyPushConfigRequest withPushConfig(PushConfig pushConfig) {
         this.pushConfig = pushConfig;
         return this;
@@ -29,9 +30,11 @@ public class ModifyPushConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public String subscription;
+
     public ModifyPushConfigRequest withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public ModifyPushConfigRequest(){}
 }

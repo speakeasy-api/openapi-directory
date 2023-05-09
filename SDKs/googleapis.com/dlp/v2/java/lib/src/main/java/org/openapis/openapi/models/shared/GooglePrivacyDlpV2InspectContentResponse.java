@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2InspectContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GooglePrivacyDlpV2InspectResult result;
+
     public GooglePrivacyDlpV2InspectContentResponse withResult(GooglePrivacyDlpV2InspectResult result) {
         this.result = result;
         return this;
     }
     
+    public GooglePrivacyDlpV2InspectContentResponse(){}
 }

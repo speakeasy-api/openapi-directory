@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeDeviceFleetRequest {
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public DescribeDeviceFleetRequest withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
     }
     
+    public DescribeDeviceFleetRequest(@JsonProperty("DeviceFleetName") String deviceFleetName) {
+        this.deviceFleetName = deviceFleetName;
+  }
 }

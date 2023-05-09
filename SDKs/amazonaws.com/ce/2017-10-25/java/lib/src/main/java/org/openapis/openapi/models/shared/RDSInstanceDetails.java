@@ -15,6 +15,7 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentGeneration")
     public Boolean currentGeneration;
+
     public RDSInstanceDetails withCurrentGeneration(Boolean currentGeneration) {
         this.currentGeneration = currentGeneration;
         return this;
@@ -23,6 +24,7 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseEdition")
     public String databaseEdition;
+
     public RDSInstanceDetails withDatabaseEdition(String databaseEdition) {
         this.databaseEdition = databaseEdition;
         return this;
@@ -31,6 +33,7 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseEngine")
     public String databaseEngine;
+
     public RDSInstanceDetails withDatabaseEngine(String databaseEngine) {
         this.databaseEngine = databaseEngine;
         return this;
@@ -39,6 +42,7 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentOption")
     public String deploymentOption;
+
     public RDSInstanceDetails withDeploymentOption(String deploymentOption) {
         this.deploymentOption = deploymentOption;
         return this;
@@ -47,6 +51,7 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Family")
     public String family;
+
     public RDSInstanceDetails withFamily(String family) {
         this.family = family;
         return this;
@@ -55,6 +60,7 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public RDSInstanceDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -63,6 +69,7 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseModel")
     public String licenseModel;
+
     public RDSInstanceDetails withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -71,6 +78,7 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public RDSInstanceDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -79,9 +87,11 @@ public class RDSInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeFlexEligible")
     public Boolean sizeFlexEligible;
+
     public RDSInstanceDetails withSizeFlexEligible(Boolean sizeFlexEligible) {
         this.sizeFlexEligible = sizeFlexEligible;
         return this;
     }
     
+    public RDSInstanceDetails(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateIntegrationWorkflowResponse {
     @JsonProperty("Message")
     public String message;
+
     public CreateIntegrationWorkflowResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class CreateIntegrationWorkflowResponse {
     
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public CreateIntegrationWorkflowResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public CreateIntegrationWorkflowResponse(@JsonProperty("Message") String message, @JsonProperty("WorkflowId") String workflowId) {
+        this.message = message;
+        this.workflowId = workflowId;
+  }
 }

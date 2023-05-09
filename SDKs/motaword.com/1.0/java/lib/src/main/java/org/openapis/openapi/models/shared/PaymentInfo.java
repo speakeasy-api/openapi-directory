@@ -15,6 +15,7 @@ public class PaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing")
     public BillingAddress billing;
+
     public PaymentInfo withBilling(BillingAddress billing) {
         this.billing = billing;
         return this;
@@ -23,6 +24,7 @@ public class PaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public CreditCard card;
+
     public PaymentInfo withCard(CreditCard card) {
         this.card = card;
         return this;
@@ -31,6 +33,7 @@ public class PaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public CreditCard[] cards;
+
     public PaymentInfo withCards(CreditCard[] cards) {
         this.cards = cards;
         return this;
@@ -39,6 +42,7 @@ public class PaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporate")
     public PaymentInfoCorporate corporate;
+
     public PaymentInfo withCorporate(PaymentInfoCorporate corporate) {
         this.corporate = corporate;
         return this;
@@ -47,9 +51,11 @@ public class PaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_card")
     public CreditCard sharedCard;
+
     public PaymentInfo withSharedCard(CreditCard sharedCard) {
         this.sharedCard = sharedCard;
         return this;
     }
     
+    public PaymentInfo(){}
 }

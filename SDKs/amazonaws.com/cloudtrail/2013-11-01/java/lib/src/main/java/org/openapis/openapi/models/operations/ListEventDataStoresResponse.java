@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEventDataStoresResponse {
     
     public String contentType;
+
     public ListEventDataStoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEventDataStoresResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public ListEventDataStoresResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -29,6 +32,7 @@ public class ListEventDataStoresResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListEventDataStoresResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListEventDataStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEventDataStoresResponse listEventDataStoresResponse;
+
     public ListEventDataStoresResponse withListEventDataStoresResponse(org.openapis.openapi.models.shared.ListEventDataStoresResponse listEventDataStoresResponse) {
         this.listEventDataStoresResponse = listEventDataStoresResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListEventDataStoresResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public ListEventDataStoresResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -59,6 +65,7 @@ public class ListEventDataStoresResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListEventDataStoresResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class ListEventDataStoresResponse {
     
     
     public Integer statusCode;
+
     public ListEventDataStoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListEventDataStoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEventDataStoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListEventDataStoresResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListEventDataStoresResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListEventDataStoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

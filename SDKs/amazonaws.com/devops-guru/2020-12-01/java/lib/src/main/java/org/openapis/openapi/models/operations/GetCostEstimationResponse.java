@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCostEstimationResponse {
@@ -12,6 +13,7 @@ public class GetCostEstimationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCostEstimationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCostEstimationResponse {
     
     
     public String contentType;
+
     public GetCostEstimationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCostEstimationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCostEstimationResponse getCostEstimationResponse;
+
     public GetCostEstimationResponse withGetCostEstimationResponse(org.openapis.openapi.models.shared.GetCostEstimationResponse getCostEstimationResponse) {
         this.getCostEstimationResponse = getCostEstimationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCostEstimationResponse {
      */
     
     public Object internalServerException;
+
     public GetCostEstimationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetCostEstimationResponse {
     
     
     public Integer statusCode;
+
     public GetCostEstimationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCostEstimationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCostEstimationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetCostEstimationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCostEstimationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetCostEstimationResponse {
      */
     
     public Object throttlingException;
+
     public GetCostEstimationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetCostEstimationResponse {
      */
     
     public Object validationException;
+
     public GetCostEstimationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCostEstimationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

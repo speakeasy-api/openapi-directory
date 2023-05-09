@@ -15,6 +15,7 @@ public class ListQueryExecutionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListQueryExecutionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListQueryExecutionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryExecutionIds")
     public String[] queryExecutionIds;
+
     public ListQueryExecutionsOutput withQueryExecutionIds(String[] queryExecutionIds) {
         this.queryExecutionIds = queryExecutionIds;
         return this;
     }
     
+    public ListQueryExecutionsOutput(){}
 }

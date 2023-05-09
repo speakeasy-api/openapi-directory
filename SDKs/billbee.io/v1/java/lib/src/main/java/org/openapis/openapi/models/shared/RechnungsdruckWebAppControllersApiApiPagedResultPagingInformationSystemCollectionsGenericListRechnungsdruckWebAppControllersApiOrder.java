@@ -12,6 +12,7 @@ public class RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSy
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Integer page;
+
     public RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSystemCollectionsGenericListRechnungsdruckWebAppControllersApiOrder withPage(Integer page) {
         this.page = page;
         return this;
@@ -20,6 +21,7 @@ public class RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSy
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Integer pageSize;
+
     public RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSystemCollectionsGenericListRechnungsdruckWebAppControllersApiOrder withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,6 +30,7 @@ public class RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSy
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPages")
     public Integer totalPages;
+
     public RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSystemCollectionsGenericListRechnungsdruckWebAppControllersApiOrder withTotalPages(Integer totalPages) {
         this.totalPages = totalPages;
         return this;
@@ -36,9 +39,11 @@ public class RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSy
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRows")
     public Integer totalRows;
+
     public RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSystemCollectionsGenericListRechnungsdruckWebAppControllersApiOrder withTotalRows(Integer totalRows) {
         this.totalRows = totalRows;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiApiPagedResultPagingInformationSystemCollectionsGenericListRechnungsdruckWebAppControllersApiOrder(){}
 }

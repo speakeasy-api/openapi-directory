@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListExplainabilityExportsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListExplainabilityExportsRequest listExplainabilityExportsRequest;
+
     public ListExplainabilityExportsRequest withListExplainabilityExportsRequest(org.openapis.openapi.models.shared.ListExplainabilityExportsRequest listExplainabilityExportsRequest) {
         this.listExplainabilityExportsRequest = listExplainabilityExportsRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListExplainabilityExportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListExplainabilityExportsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListExplainabilityExportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListExplainabilityExportsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListExplainabilityExportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListExplainabilityExportsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListExplainabilityExportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListExplainabilityExportsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListExplainabilityExportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListExplainabilityExportsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListExplainabilityExportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListExplainabilityExportsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListExplainabilityExportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListExplainabilityExportsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListExplainabilityExportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListExplainabilityExportsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListExplainabilityExportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListExplainabilityExportsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListExplainabilityExportsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListExplainabilityExportsXAmzTargetEnum xAmzTarget;
+
     public ListExplainabilityExportsRequest withXAmzTarget(ListExplainabilityExportsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListExplainabilityExportsRequest(@JsonProperty("ListExplainabilityExportsRequest") org.openapis.openapi.models.shared.ListExplainabilityExportsRequest listExplainabilityExportsRequest, @JsonProperty("X-Amz-Target") ListExplainabilityExportsXAmzTargetEnum xAmzTarget) {
+        this.listExplainabilityExportsRequest = listExplainabilityExportsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

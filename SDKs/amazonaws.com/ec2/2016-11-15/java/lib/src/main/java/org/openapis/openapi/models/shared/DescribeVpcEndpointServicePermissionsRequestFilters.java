@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServicePermissionsRequestFilters {
     
     public String name;
+
     public DescribeVpcEndpointServicePermissionsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointServicePermissionsRequestFilters {
     
     
     public String[] values;
+
     public DescribeVpcEndpointServicePermissionsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVpcEndpointServicePermissionsRequestFilters(){}
 }

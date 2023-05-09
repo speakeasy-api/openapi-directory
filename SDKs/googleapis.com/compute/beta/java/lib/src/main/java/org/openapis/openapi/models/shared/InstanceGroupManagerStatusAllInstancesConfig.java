@@ -15,6 +15,7 @@ public class InstanceGroupManagerStatusAllInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRevision")
     public String currentRevision;
+
     public InstanceGroupManagerStatusAllInstancesConfig withCurrentRevision(String currentRevision) {
         this.currentRevision = currentRevision;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagerStatusAllInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective")
     public Boolean effective;
+
     public InstanceGroupManagerStatusAllInstancesConfig withEffective(Boolean effective) {
         this.effective = effective;
         return this;
     }
     
+    public InstanceGroupManagerStatusAllInstancesConfig(){}
 }

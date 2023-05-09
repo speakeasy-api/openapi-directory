@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * MapMatchingConfig - &lt;p/&gt;
+ * MapMatchingConfig - The input structure for Map Matching operation type.
  */
 public class MapMatchingConfig {
     @JsonProperty("IdAttributeName")
     public String idAttributeName;
+
     public MapMatchingConfig withIdAttributeName(String idAttributeName) {
         this.idAttributeName = idAttributeName;
         return this;
@@ -19,6 +20,7 @@ public class MapMatchingConfig {
     
     @JsonProperty("TimestampAttributeName")
     public String timestampAttributeName;
+
     public MapMatchingConfig withTimestampAttributeName(String timestampAttributeName) {
         this.timestampAttributeName = timestampAttributeName;
         return this;
@@ -26,6 +28,7 @@ public class MapMatchingConfig {
     
     @JsonProperty("XAttributeName")
     public String xAttributeName;
+
     public MapMatchingConfig withXAttributeName(String xAttributeName) {
         this.xAttributeName = xAttributeName;
         return this;
@@ -33,9 +36,16 @@ public class MapMatchingConfig {
     
     @JsonProperty("YAttributeName")
     public String yAttributeName;
+
     public MapMatchingConfig withYAttributeName(String yAttributeName) {
         this.yAttributeName = yAttributeName;
         return this;
     }
     
+    public MapMatchingConfig(@JsonProperty("IdAttributeName") String idAttributeName, @JsonProperty("TimestampAttributeName") String timestampAttributeName, @JsonProperty("XAttributeName") String xAttributeName, @JsonProperty("YAttributeName") String yAttributeName) {
+        this.idAttributeName = idAttributeName;
+        this.timestampAttributeName = timestampAttributeName;
+        this.xAttributeName = xAttributeName;
+        this.yAttributeName = yAttributeName;
+  }
 }

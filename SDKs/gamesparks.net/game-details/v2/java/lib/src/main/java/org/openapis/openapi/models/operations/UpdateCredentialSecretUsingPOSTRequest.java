@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCredentialSecretUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class UpdateCredentialSecretUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public UpdateCredentialSecretUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class UpdateCredentialSecretUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credentialName")
     public String credentialName;
+
     public UpdateCredentialSecretUsingPOSTRequest withCredentialName(String credentialName) {
         this.credentialName = credentialName;
         return this;
     }
     
+    public UpdateCredentialSecretUsingPOSTRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("credentialName") String credentialName) {
+        this.apiKey = apiKey;
+        this.credentialName = credentialName;
+  }
 }

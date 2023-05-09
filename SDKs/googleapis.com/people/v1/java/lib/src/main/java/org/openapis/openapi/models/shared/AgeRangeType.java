@@ -18,6 +18,7 @@ public class AgeRangeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageRange")
     public AgeRangeTypeAgeRangeEnum ageRange;
+
     public AgeRangeType withAgeRange(AgeRangeTypeAgeRangeEnum ageRange) {
         this.ageRange = ageRange;
         return this;
@@ -29,9 +30,11 @@ public class AgeRangeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public AgeRangeType withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public AgeRangeType(){}
 }

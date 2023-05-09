@@ -18,9 +18,11 @@ public class PaymentLinkUriApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public PaymentLinkUriApiModel withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public PaymentLinkUriApiModel(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoadBalancerTypesIdResponse {
     
     public String contentType;
+
     public GetLoadBalancerTypesIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetLoadBalancerTypesIdResponse {
     
     
     public Integer statusCode;
+
     public GetLoadBalancerTypesIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetLoadBalancerTypesIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoadBalancerTypesIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetLoadBalancerTypesIdResponse {
      */
     
     public GetLoadBalancerTypesId200ApplicationJSON getLoadBalancerTypesId200ApplicationJSONObject;
+
     public GetLoadBalancerTypesIdResponse withGetLoadBalancerTypesId200ApplicationJSONObject(GetLoadBalancerTypesId200ApplicationJSON getLoadBalancerTypesId200ApplicationJSONObject) {
         this.getLoadBalancerTypesId200ApplicationJSONObject = getLoadBalancerTypesId200ApplicationJSONObject;
         return this;
     }
     
+    public GetLoadBalancerTypesIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

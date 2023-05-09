@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
- * EndUserAgreementRequest - EndUserAgreement.
+ * EndUserAgreementRequest - Represents an end-user agreement.
  */
 public class EndUserAgreementRequest {
     /**
@@ -20,6 +20,7 @@ public class EndUserAgreementRequest {
     @JsonProperty("access_scope")
     @SpeakeasyMetadata("form:name=access_scope,json multipartForm:name=access_scope,json")
     public Object[][] accessScope;
+
     public EndUserAgreementRequest withAccessScope(Object[][] accessScope) {
         this.accessScope = accessScope;
         return this;
@@ -32,6 +33,7 @@ public class EndUserAgreementRequest {
     @JsonProperty("access_valid_for_days")
     @SpeakeasyMetadata("form:name=access_valid_for_days multipartForm:name=access_valid_for_days")
     public Long accessValidForDays;
+
     public EndUserAgreementRequest withAccessValidForDays(Long accessValidForDays) {
         this.accessValidForDays = accessValidForDays;
         return this;
@@ -43,6 +45,7 @@ public class EndUserAgreementRequest {
     @JsonProperty("institution_id")
     @SpeakeasyMetadata("form:name=institution_id multipartForm:name=institution_id")
     public String institutionId;
+
     public EndUserAgreementRequest withInstitutionId(String institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -55,9 +58,13 @@ public class EndUserAgreementRequest {
     @JsonProperty("max_historical_days")
     @SpeakeasyMetadata("form:name=max_historical_days multipartForm:name=max_historical_days")
     public Long maxHistoricalDays;
+
     public EndUserAgreementRequest withMaxHistoricalDays(Long maxHistoricalDays) {
         this.maxHistoricalDays = maxHistoricalDays;
         return this;
     }
     
+    public EndUserAgreementRequest(@JsonProperty("institution_id") String institutionId) {
+        this.institutionId = institutionId;
+  }
 }

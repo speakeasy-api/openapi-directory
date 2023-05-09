@@ -12,6 +12,7 @@ public class WeakCert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_hash")
     public String fileHash;
+
     public WeakCert withFileHash(String fileHash) {
         this.fileHash = fileHash;
         return this;
@@ -20,6 +21,7 @@ public class WeakCert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public WeakCert withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -28,6 +30,7 @@ public class WeakCert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sign_algorithm")
     public String signAlgorithm;
+
     public WeakCert withSignAlgorithm(String signAlgorithm) {
         this.signAlgorithm = signAlgorithm;
         return this;
@@ -36,6 +39,7 @@ public class WeakCert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject_name")
     public String subjectName;
+
     public WeakCert withSubjectName(String subjectName) {
         this.subjectName = subjectName;
         return this;
@@ -44,6 +48,7 @@ public class WeakCert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumb_print")
     public String thumbPrint;
+
     public WeakCert withThumbPrint(String thumbPrint) {
         this.thumbPrint = thumbPrint;
         return this;
@@ -52,6 +57,7 @@ public class WeakCert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_from")
     public String validFrom;
+
     public WeakCert withValidFrom(String validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -60,9 +66,11 @@ public class WeakCert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_to")
     public String validTo;
+
     public WeakCert withValidTo(String validTo) {
         this.validTo = validTo;
         return this;
     }
     
+    public WeakCert(){}
 }

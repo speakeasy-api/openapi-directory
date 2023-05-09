@@ -18,6 +18,7 @@ public class LabelValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public LabelValue withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -29,6 +30,7 @@ public class LabelValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("int64Value")
     public String int64Value;
+
     public LabelValue withInt64Value(String int64Value) {
         this.int64Value = int64Value;
         return this;
@@ -40,9 +42,11 @@ public class LabelValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public LabelValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public LabelValue(){}
 }

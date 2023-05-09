@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushAcquisitionUpdateCheckResponse {
     
     public String contentType;
+
     public CodePushAcquisitionUpdateCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushAcquisitionUpdateCheckResponse {
     
     
     public Integer statusCode;
+
     public CodePushAcquisitionUpdateCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushAcquisitionUpdateCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushAcquisitionUpdateCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushAcquisitionUpdateCheckResponse {
      */
     
     public CodePushAcquisitionUpdateCheck200ApplicationJSON codePushAcquisitionUpdateCheck200ApplicationJSONObject;
+
     public CodePushAcquisitionUpdateCheckResponse withCodePushAcquisitionUpdateCheck200ApplicationJSONObject(CodePushAcquisitionUpdateCheck200ApplicationJSON codePushAcquisitionUpdateCheck200ApplicationJSONObject) {
         this.codePushAcquisitionUpdateCheck200ApplicationJSONObject = codePushAcquisitionUpdateCheck200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CodePushAcquisitionUpdateCheckResponse {
      */
     
     public CodePushAcquisitionUpdateCheckDefaultApplicationJSON codePushAcquisitionUpdateCheckDefaultApplicationJSONObject;
+
     public CodePushAcquisitionUpdateCheckResponse withCodePushAcquisitionUpdateCheckDefaultApplicationJSONObject(CodePushAcquisitionUpdateCheckDefaultApplicationJSON codePushAcquisitionUpdateCheckDefaultApplicationJSONObject) {
         this.codePushAcquisitionUpdateCheckDefaultApplicationJSONObject = codePushAcquisitionUpdateCheckDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushAcquisitionUpdateCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

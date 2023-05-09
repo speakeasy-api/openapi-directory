@@ -18,6 +18,7 @@ public class AccessApprovalSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeKeyVersion")
     public String activeKeyVersion;
+
     public AccessApprovalSettingsInput withActiveKeyVersion(String activeKeyVersion) {
         this.activeKeyVersion = activeKeyVersion;
         return this;
@@ -29,6 +30,7 @@ public class AccessApprovalSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrolledServices")
     public EnrolledService[] enrolledServices;
+
     public AccessApprovalSettingsInput withEnrolledServices(EnrolledService[] enrolledServices) {
         this.enrolledServices = enrolledServices;
         return this;
@@ -40,6 +42,7 @@ public class AccessApprovalSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessApprovalSettingsInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,35 @@ public class AccessApprovalSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationEmails")
     public String[] notificationEmails;
+
     public AccessApprovalSettingsInput withNotificationEmails(String[] notificationEmails) {
         this.notificationEmails = notificationEmails;
         return this;
     }
     
+    /**
+     * This preference is communicated to Google personnel when sending an approval request but can be overridden if necessary.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preferNoBroadApprovalRequests")
+    public Boolean preferNoBroadApprovalRequests;
+
+    public AccessApprovalSettingsInput withPreferNoBroadApprovalRequests(Boolean preferNoBroadApprovalRequests) {
+        this.preferNoBroadApprovalRequests = preferNoBroadApprovalRequests;
+        return this;
+    }
+    
+    /**
+     * This preference is shared with Google personnel, but can be overridden if said personnel deems necessary. The approver ultimately can set the expiration at approval time.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preferredRequestExpirationDays")
+    public Integer preferredRequestExpirationDays;
+
+    public AccessApprovalSettingsInput withPreferredRequestExpirationDays(Integer preferredRequestExpirationDays) {
+        this.preferredRequestExpirationDays = preferredRequestExpirationDays;
+        return this;
+    }
+    
+    public AccessApprovalSettingsInput(){}
 }

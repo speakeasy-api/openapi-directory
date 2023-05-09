@@ -15,9 +15,11 @@ public class StatefulPolicyPreservedStateDiskDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDelete")
     public StatefulPolicyPreservedStateDiskDeviceAutoDeleteEnum autoDelete;
+
     public StatefulPolicyPreservedStateDiskDevice withAutoDelete(StatefulPolicyPreservedStateDiskDeviceAutoDeleteEnum autoDelete) {
         this.autoDelete = autoDelete;
         return this;
     }
     
+    public StatefulPolicyPreservedStateDiskDevice(){}
 }

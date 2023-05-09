@@ -3,16 +3,16 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateConversationRequestBody;
 import org.openapis.openapi.models.operations.CreateConversationResponse;
 import org.openapis.openapi.models.shared.ConversationProperties;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
@@ -23,16 +23,18 @@ public class Application {
                 name = "customer_chat";
                 properties = new ConversationProperties() {{
                     ttl = 60;
-                }};
-            }}            
+                }};;
+            }};            
 
             CreateConversationResponse res = sdk.conversation.createConversation(req);
 
-            if (res.createConversation200ApplicationJSONObject.isPresent()) {
+            if (res.createConversation200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

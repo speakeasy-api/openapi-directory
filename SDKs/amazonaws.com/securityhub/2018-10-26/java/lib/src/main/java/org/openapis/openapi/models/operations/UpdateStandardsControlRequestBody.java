@@ -15,6 +15,7 @@ public class UpdateStandardsControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlStatus")
     public UpdateStandardsControlRequestBodyControlStatusEnum controlStatus;
+
     public UpdateStandardsControlRequestBody withControlStatus(UpdateStandardsControlRequestBodyControlStatusEnum controlStatus) {
         this.controlStatus = controlStatus;
         return this;
@@ -26,9 +27,11 @@ public class UpdateStandardsControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisabledReason")
     public String disabledReason;
+
     public UpdateStandardsControlRequestBody withDisabledReason(String disabledReason) {
         this.disabledReason = disabledReason;
         return this;
     }
     
+    public UpdateStandardsControlRequestBody(){}
 }

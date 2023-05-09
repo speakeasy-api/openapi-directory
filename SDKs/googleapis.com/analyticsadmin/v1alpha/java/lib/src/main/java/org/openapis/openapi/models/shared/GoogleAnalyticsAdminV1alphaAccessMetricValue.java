@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaAccessMetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleAnalyticsAdminV1alphaAccessMetricValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessMetricValue(){}
 }

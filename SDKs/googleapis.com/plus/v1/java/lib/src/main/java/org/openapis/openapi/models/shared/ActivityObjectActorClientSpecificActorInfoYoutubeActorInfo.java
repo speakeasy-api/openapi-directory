@@ -18,9 +18,11 @@ public class ActivityObjectActorClientSpecificActorInfoYoutubeActorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public ActivityObjectActorClientSpecificActorInfoYoutubeActorInfo withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
     
+    public ActivityObjectActorClientSpecificActorInfoYoutubeActorInfo(){}
 }

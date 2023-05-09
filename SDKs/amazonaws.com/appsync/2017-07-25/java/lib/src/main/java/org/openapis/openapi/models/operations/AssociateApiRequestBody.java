@@ -12,9 +12,13 @@ public class AssociateApiRequestBody {
      */
     @JsonProperty("apiId")
     public String apiId;
+
     public AssociateApiRequestBody withApiId(String apiId) {
         this.apiId = apiId;
         return this;
     }
     
+    public AssociateApiRequestBody(@JsonProperty("apiId") String apiId) {
+        this.apiId = apiId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLeaveApplicationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LeaveApplicationInput[] requestBody;
+
     public CreateLeaveApplicationRequest withRequestBody(org.openapis.openapi.models.shared.LeaveApplicationInput[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CreateLeaveApplicationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public CreateLeaveApplicationRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public CreateLeaveApplicationRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.LeaveApplicationInput[] requestBody, @JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.requestBody = requestBody;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

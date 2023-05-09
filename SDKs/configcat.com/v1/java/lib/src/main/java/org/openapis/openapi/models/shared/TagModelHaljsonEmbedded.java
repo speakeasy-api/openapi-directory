@@ -12,9 +12,11 @@ public class TagModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public TagModelHaljsonEmbeddedProduct product;
+
     public TagModelHaljsonEmbedded withProduct(TagModelHaljsonEmbeddedProduct product) {
         this.product = product;
         return this;
     }
     
+    public TagModelHaljsonEmbedded(){}
 }

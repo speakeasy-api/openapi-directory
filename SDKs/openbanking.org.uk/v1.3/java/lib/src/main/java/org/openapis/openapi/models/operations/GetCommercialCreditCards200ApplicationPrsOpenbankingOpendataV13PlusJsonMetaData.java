@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData {
     @JsonProperty("Agreement")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withAgreement(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement) {
         this.agreement = agreement;
         return this;
@@ -23,6 +24,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -33,6 +35,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("License")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withLicense(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license) {
         this.license = license;
         return this;
@@ -43,6 +46,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("TermsOfUse")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withTermsOfUse(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse) {
         this.termsOfUse = termsOfUse;
         return this;
@@ -50,9 +54,17 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     
     @JsonProperty("TotalResults")
     public Long totalResults;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withTotalResults(Long totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData(@JsonProperty("Agreement") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement, @JsonProperty("LastUpdated") OffsetDateTime lastUpdated, @JsonProperty("License") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license, @JsonProperty("TermsOfUse") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse, @JsonProperty("TotalResults") Long totalResults) {
+        this.agreement = agreement;
+        this.lastUpdated = lastUpdated;
+        this.license = license;
+        this.termsOfUse = termsOfUse;
+        this.totalResults = totalResults;
+  }
 }

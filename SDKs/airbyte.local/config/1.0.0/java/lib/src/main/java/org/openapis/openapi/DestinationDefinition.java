@@ -56,12 +56,10 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomDestinationDefinitionResponse res = new org.openapis.openapi.models.operations.CreateCustomDestinationDefinitionResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomDestinationDefinitionResponse res = new org.openapis.openapi.models.operations.CreateCustomDestinationDefinitionResponse(contentType, httpRes.statusCode()) {{
             destinationDefinitionRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDestinationDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteDestinationDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DeleteDestinationDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteDestinationDefinitionResponse(contentType, httpRes.statusCode()) {{
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -160,13 +156,11 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDestinationDefinitionResponse res = new org.openapis.openapi.models.operations.GetDestinationDefinitionResponse() {{
+        org.openapis.openapi.models.operations.GetDestinationDefinitionResponse res = new org.openapis.openapi.models.operations.GetDestinationDefinitionResponse(contentType, httpRes.statusCode()) {{
             destinationDefinitionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,13 +213,11 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDestinationDefinitionForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetDestinationDefinitionForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.GetDestinationDefinitionForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetDestinationDefinitionForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             destinationDefinitionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,13 +270,11 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GrantDestinationDefinitionToWorkspaceResponse res = new org.openapis.openapi.models.operations.GrantDestinationDefinitionToWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.GrantDestinationDefinitionToWorkspaceResponse res = new org.openapis.openapi.models.operations.GrantDestinationDefinitionToWorkspaceResponse(contentType, httpRes.statusCode()) {{
             privateDestinationDefinitionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -331,11 +321,9 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDestinationDefinitionsResponse res = new org.openapis.openapi.models.operations.ListDestinationDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListDestinationDefinitionsResponse res = new org.openapis.openapi.models.operations.ListDestinationDefinitionsResponse(contentType, httpRes.statusCode()) {{
             destinationDefinitionReadList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -371,11 +359,9 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDestinationDefinitionsForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListDestinationDefinitionsForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.ListDestinationDefinitionsForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListDestinationDefinitionsForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             destinationDefinitionReadList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,11 +395,9 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLatestDestinationDefinitionsResponse res = new org.openapis.openapi.models.operations.ListLatestDestinationDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListLatestDestinationDefinitionsResponse res = new org.openapis.openapi.models.operations.ListLatestDestinationDefinitionsResponse(contentType, httpRes.statusCode()) {{
             destinationDefinitionReadList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -449,11 +433,9 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPrivateDestinationDefinitionsResponse res = new org.openapis.openapi.models.operations.ListPrivateDestinationDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListPrivateDestinationDefinitionsResponse res = new org.openapis.openapi.models.operations.ListPrivateDestinationDefinitionsResponse(contentType, httpRes.statusCode()) {{
             privateDestinationDefinitionReadList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -492,12 +474,10 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RevokeDestinationDefinitionFromWorkspaceResponse res = new org.openapis.openapi.models.operations.RevokeDestinationDefinitionFromWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.RevokeDestinationDefinitionFromWorkspaceResponse res = new org.openapis.openapi.models.operations.RevokeDestinationDefinitionFromWorkspaceResponse(contentType, httpRes.statusCode()) {{
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -545,13 +525,11 @@ public class DestinationDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDestinationDefinitionResponse res = new org.openapis.openapi.models.operations.UpdateDestinationDefinitionResponse() {{
+        org.openapis.openapi.models.operations.UpdateDestinationDefinitionResponse res = new org.openapis.openapi.models.operations.UpdateDestinationDefinitionResponse(contentType, httpRes.statusCode()) {{
             destinationDefinitionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

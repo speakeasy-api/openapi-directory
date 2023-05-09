@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RebootWorkspacesRequest {
     @JsonProperty("RebootWorkspaceRequests")
     public RebootRequest[] rebootWorkspaceRequests;
+
     public RebootWorkspacesRequest withRebootWorkspaceRequests(RebootRequest[] rebootWorkspaceRequests) {
         this.rebootWorkspaceRequests = rebootWorkspaceRequests;
         return this;
     }
     
+    public RebootWorkspacesRequest(@JsonProperty("RebootWorkspaceRequests") RebootRequest[] rebootWorkspaceRequests) {
+        this.rebootWorkspaceRequests = rebootWorkspaceRequests;
+  }
 }

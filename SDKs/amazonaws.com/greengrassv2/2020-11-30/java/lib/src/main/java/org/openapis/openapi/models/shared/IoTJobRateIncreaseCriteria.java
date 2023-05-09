@@ -15,6 +15,7 @@ public class IoTJobRateIncreaseCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfNotifiedThings")
     public Long numberOfNotifiedThings;
+
     public IoTJobRateIncreaseCriteria withNumberOfNotifiedThings(Long numberOfNotifiedThings) {
         this.numberOfNotifiedThings = numberOfNotifiedThings;
         return this;
@@ -23,9 +24,11 @@ public class IoTJobRateIncreaseCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfSucceededThings")
     public Long numberOfSucceededThings;
+
     public IoTJobRateIncreaseCriteria withNumberOfSucceededThings(Long numberOfSucceededThings) {
         this.numberOfSucceededThings = numberOfSucceededThings;
         return this;
     }
     
+    public IoTJobRateIncreaseCriteria(){}
 }

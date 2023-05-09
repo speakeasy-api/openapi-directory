@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelProjectRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CancelProjectRequest cancelProjectRequest;
+
     public CancelProjectRequest withCancelProjectRequest(org.openapis.openapi.models.shared.CancelProjectRequest cancelProjectRequest) {
         this.cancelProjectRequest = cancelProjectRequest;
         return this;
@@ -19,9 +21,13 @@ public class CancelProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public CancelProjectRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public CancelProjectRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

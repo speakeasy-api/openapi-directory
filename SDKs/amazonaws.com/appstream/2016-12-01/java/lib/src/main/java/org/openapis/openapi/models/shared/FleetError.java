@@ -15,6 +15,7 @@ public class FleetError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public FleetErrorCodeEnum errorCode;
+
     public FleetError withErrorCode(FleetErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,9 +24,11 @@ public class FleetError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public FleetError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public FleetError(){}
 }

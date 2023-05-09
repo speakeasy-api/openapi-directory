@@ -16,9 +16,13 @@ public class LoyaltyProgramExpirationPolicy {
      */
     @JsonProperty("expiration_duration")
     public String expirationDuration;
+
     public LoyaltyProgramExpirationPolicy withExpirationDuration(String expirationDuration) {
         this.expirationDuration = expirationDuration;
         return this;
     }
     
+    public LoyaltyProgramExpirationPolicy(@JsonProperty("expiration_duration") String expirationDuration) {
+        this.expirationDuration = expirationDuration;
+  }
 }

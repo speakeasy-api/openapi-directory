@@ -15,6 +15,7 @@ public class DescribeCustomerMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agreements")
     public CustomerAgreement[] agreements;
+
     public DescribeCustomerMetadataResponse withAgreements(CustomerAgreement[] agreements) {
         this.agreements = agreements;
         return this;
@@ -23,9 +24,11 @@ public class DescribeCustomerMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nniPartnerType")
     public NniPartnerTypeEnum nniPartnerType;
+
     public DescribeCustomerMetadataResponse withNniPartnerType(NniPartnerTypeEnum nniPartnerType) {
         this.nniPartnerType = nniPartnerType;
         return this;
     }
     
+    public DescribeCustomerMetadataResponse(){}
 }

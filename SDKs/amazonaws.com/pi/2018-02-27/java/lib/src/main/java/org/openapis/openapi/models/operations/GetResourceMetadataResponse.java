@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceMetadataResponse {
     
     public String contentType;
+
     public GetResourceMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceMetadataResponse getResourceMetadataResponse;
+
     public GetResourceMetadataResponse withGetResourceMetadataResponse(org.openapis.openapi.models.shared.GetResourceMetadataResponse getResourceMetadataResponse) {
         this.getResourceMetadataResponse = getResourceMetadataResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceMetadataResponse {
      */
     
     public Object internalServiceError;
+
     public GetResourceMetadataResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceMetadataResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetResourceMetadataResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceMetadataResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetResourceMetadataResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class GetResourceMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetResourceMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetResourceMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourceMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

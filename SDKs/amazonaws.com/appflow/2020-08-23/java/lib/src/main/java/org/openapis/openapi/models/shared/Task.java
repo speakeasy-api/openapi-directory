@@ -15,6 +15,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorOperator")
     public ConnectorOperator connectorOperator;
+
     public Task withConnectorOperator(ConnectorOperator connectorOperator) {
         this.connectorOperator = connectorOperator;
         return this;
@@ -23,6 +24,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationField")
     public String destinationField;
+
     public Task withDestinationField(String destinationField) {
         this.destinationField = destinationField;
         return this;
@@ -30,6 +32,7 @@ public class Task {
     
     @JsonProperty("sourceFields")
     public String[] sourceFields;
+
     public Task withSourceFields(String[] sourceFields) {
         this.sourceFields = sourceFields;
         return this;
@@ -38,6 +41,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskProperties")
     public java.util.Map<String, String> taskProperties;
+
     public Task withTaskProperties(java.util.Map<String, String> taskProperties) {
         this.taskProperties = taskProperties;
         return this;
@@ -45,9 +49,14 @@ public class Task {
     
     @JsonProperty("taskType")
     public TaskTypeEnum taskType;
+
     public Task withTaskType(TaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public Task(@JsonProperty("sourceFields") String[] sourceFields, @JsonProperty("taskType") TaskTypeEnum taskType) {
+        this.sourceFields = sourceFields;
+        this.taskType = taskType;
+  }
 }

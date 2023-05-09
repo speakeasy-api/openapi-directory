@@ -16,6 +16,7 @@ public class CreateMySqlUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateMySqlUser withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +29,11 @@ public class CreateMySqlUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CreateMySqlUser withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public CreateMySqlUser(){}
 }

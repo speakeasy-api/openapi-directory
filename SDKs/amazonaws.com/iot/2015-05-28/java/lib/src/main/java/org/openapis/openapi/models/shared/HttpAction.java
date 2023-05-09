@@ -15,6 +15,7 @@ public class HttpAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth")
     public HttpAuthorization auth;
+
     public HttpAction withAuth(HttpAuthorization auth) {
         this.auth = auth;
         return this;
@@ -23,6 +24,7 @@ public class HttpAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationUrl")
     public String confirmationUrl;
+
     public HttpAction withConfirmationUrl(String confirmationUrl) {
         this.confirmationUrl = confirmationUrl;
         return this;
@@ -31,6 +33,7 @@ public class HttpAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public HttpActionHeader[] headers;
+
     public HttpAction withHeaders(HttpActionHeader[] headers) {
         this.headers = headers;
         return this;
@@ -38,9 +41,13 @@ public class HttpAction {
     
     @JsonProperty("url")
     public String url;
+
     public HttpAction withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public HttpAction(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

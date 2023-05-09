@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRobotApplicationVersionResponse {
     
     public String contentType;
+
     public CreateRobotApplicationVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRobotApplicationVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRobotApplicationVersionResponse createRobotApplicationVersionResponse;
+
     public CreateRobotApplicationVersionResponse withCreateRobotApplicationVersionResponse(org.openapis.openapi.models.shared.CreateRobotApplicationVersionResponse createRobotApplicationVersionResponse) {
         this.createRobotApplicationVersionResponse = createRobotApplicationVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateRobotApplicationVersionResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateRobotApplicationVersionResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRobotApplicationVersionResponse {
      */
     
     public Object internalServerException;
+
     public CreateRobotApplicationVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateRobotApplicationVersionResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateRobotApplicationVersionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRobotApplicationVersionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRobotApplicationVersionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateRobotApplicationVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateRobotApplicationVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateRobotApplicationVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRobotApplicationVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateRobotApplicationVersionResponse {
      */
     
     public Object throttlingException;
+
     public CreateRobotApplicationVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateRobotApplicationVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

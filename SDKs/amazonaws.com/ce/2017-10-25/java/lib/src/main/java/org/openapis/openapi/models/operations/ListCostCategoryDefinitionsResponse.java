@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCostCategoryDefinitionsResponse {
     
     public String contentType;
+
     public ListCostCategoryDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCostCategoryDefinitionsResponse {
      */
     
     public Object limitExceededException;
+
     public ListCostCategoryDefinitionsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class ListCostCategoryDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCostCategoryDefinitionsResponse listCostCategoryDefinitionsResponse;
+
     public ListCostCategoryDefinitionsResponse withListCostCategoryDefinitionsResponse(org.openapis.openapi.models.shared.ListCostCategoryDefinitionsResponse listCostCategoryDefinitionsResponse) {
         this.listCostCategoryDefinitionsResponse = listCostCategoryDefinitionsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListCostCategoryDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public ListCostCategoryDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListCostCategoryDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCostCategoryDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCostCategoryDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

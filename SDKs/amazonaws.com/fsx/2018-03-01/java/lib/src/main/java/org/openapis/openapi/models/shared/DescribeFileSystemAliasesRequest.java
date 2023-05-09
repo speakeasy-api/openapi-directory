@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class DescribeFileSystemAliasesRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public DescribeFileSystemAliasesRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,6 +26,7 @@ public class DescribeFileSystemAliasesRequest {
     
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public DescribeFileSystemAliasesRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -33,6 +35,7 @@ public class DescribeFileSystemAliasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeFileSystemAliasesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -41,9 +44,13 @@ public class DescribeFileSystemAliasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFileSystemAliasesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFileSystemAliasesRequest(@JsonProperty("FileSystemId") String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+  }
 }

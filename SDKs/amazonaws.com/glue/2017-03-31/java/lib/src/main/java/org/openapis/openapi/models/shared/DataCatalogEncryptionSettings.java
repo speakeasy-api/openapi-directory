@@ -15,6 +15,7 @@ public class DataCatalogEncryptionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionPasswordEncryption")
     public ConnectionPasswordEncryption connectionPasswordEncryption;
+
     public DataCatalogEncryptionSettings withConnectionPasswordEncryption(ConnectionPasswordEncryption connectionPasswordEncryption) {
         this.connectionPasswordEncryption = connectionPasswordEncryption;
         return this;
@@ -23,9 +24,11 @@ public class DataCatalogEncryptionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionAtRest")
     public EncryptionAtRest encryptionAtRest;
+
     public DataCatalogEncryptionSettings withEncryptionAtRest(EncryptionAtRest encryptionAtRest) {
         this.encryptionAtRest = encryptionAtRest;
         return this;
     }
     
+    public DataCatalogEncryptionSettings(){}
 }

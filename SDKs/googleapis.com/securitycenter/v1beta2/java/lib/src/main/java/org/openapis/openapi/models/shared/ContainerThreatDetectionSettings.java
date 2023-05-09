@@ -18,6 +18,7 @@ public class ContainerThreatDetectionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public java.util.Map<String, Config> modules;
+
     public ContainerThreatDetectionSettings withModules(java.util.Map<String, Config> modules) {
         this.modules = modules;
         return this;
@@ -29,6 +30,7 @@ public class ContainerThreatDetectionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerThreatDetectionSettings withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class ContainerThreatDetectionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public ContainerThreatDetectionSettings withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -51,6 +54,7 @@ public class ContainerThreatDetectionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceEnablementState")
     public ContainerThreatDetectionSettingsServiceEnablementStateEnum serviceEnablementState;
+
     public ContainerThreatDetectionSettings withServiceEnablementState(ContainerThreatDetectionSettingsServiceEnablementStateEnum serviceEnablementState) {
         this.serviceEnablementState = serviceEnablementState;
         return this;
@@ -62,9 +66,11 @@ public class ContainerThreatDetectionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ContainerThreatDetectionSettings withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ContainerThreatDetectionSettings(){}
 }

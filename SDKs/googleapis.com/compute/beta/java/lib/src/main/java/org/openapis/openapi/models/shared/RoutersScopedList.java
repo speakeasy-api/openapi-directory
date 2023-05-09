@@ -15,6 +15,7 @@ public class RoutersScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routers")
     public Router[] routers;
+
     public RoutersScopedList withRouters(Router[] routers) {
         this.routers = routers;
         return this;
@@ -26,9 +27,11 @@ public class RoutersScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public RoutersScopedListWarning warning;
+
     public RoutersScopedList withWarning(RoutersScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public RoutersScopedList(){}
 }

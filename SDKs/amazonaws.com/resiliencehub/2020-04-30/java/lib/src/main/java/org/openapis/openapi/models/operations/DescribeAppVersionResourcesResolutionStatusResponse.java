@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAppVersionResourcesResolutionStatusResponse {
@@ -12,6 +13,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
     
     
     public String contentType;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAppVersionResourcesResolutionStatusResponse describeAppVersionResourcesResolutionStatusResponse;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withDescribeAppVersionResourcesResolutionStatusResponse(org.openapis.openapi.models.shared.DescribeAppVersionResourcesResolutionStatusResponse describeAppVersionResourcesResolutionStatusResponse) {
         this.describeAppVersionResourcesResolutionStatusResponse = describeAppVersionResourcesResolutionStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
      */
     
     public Object validationException;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAppVersionResourcesResolutionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

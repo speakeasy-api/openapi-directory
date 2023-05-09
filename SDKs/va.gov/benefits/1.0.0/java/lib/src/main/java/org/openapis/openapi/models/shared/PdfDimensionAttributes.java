@@ -12,6 +12,7 @@ public class PdfDimensionAttributes {
      */
     @JsonProperty("height")
     public Long height;
+
     public PdfDimensionAttributes withHeight(Long height) {
         this.height = height;
         return this;
@@ -22,6 +23,7 @@ public class PdfDimensionAttributes {
      */
     @JsonProperty("oversized_pdf")
     public Boolean oversizedPdf;
+
     public PdfDimensionAttributes withOversizedPdf(Boolean oversizedPdf) {
         this.oversizedPdf = oversizedPdf;
         return this;
@@ -32,9 +34,15 @@ public class PdfDimensionAttributes {
      */
     @JsonProperty("width")
     public Long width;
+
     public PdfDimensionAttributes withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public PdfDimensionAttributes(@JsonProperty("height") Long height, @JsonProperty("oversized_pdf") Boolean oversizedPdf, @JsonProperty("width") Long width) {
+        this.height = height;
+        this.oversizedPdf = oversizedPdf;
+        this.width = width;
+  }
 }

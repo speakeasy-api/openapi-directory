@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDomesticPaymentConsentsJsonRequest {
@@ -12,6 +13,7 @@ public class CreateDomesticPaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CreateDomesticPaymentConsentsJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class CreateDomesticPaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OBWriteDomesticConsent4 obWriteDomesticConsent4;
+
     public CreateDomesticPaymentConsentsJsonRequest withOBWriteDomesticConsent4(org.openapis.openapi.models.shared.OBWriteDomesticConsent4 obWriteDomesticConsent4) {
         this.obWriteDomesticConsent4 = obWriteDomesticConsent4;
         return this;
@@ -32,6 +35,7 @@ public class CreateDomesticPaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public CreateDomesticPaymentConsentsJsonRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class CreateDomesticPaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public CreateDomesticPaymentConsentsJsonRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class CreateDomesticPaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public CreateDomesticPaymentConsentsJsonRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,6 +70,7 @@ public class CreateDomesticPaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateDomesticPaymentConsentsJsonRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
@@ -76,6 +83,7 @@ public class CreateDomesticPaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
     public String xIdempotencyKey;
+
     public CreateDomesticPaymentConsentsJsonRequest withXIdempotencyKey(String xIdempotencyKey) {
         this.xIdempotencyKey = xIdempotencyKey;
         return this;
@@ -86,9 +94,16 @@ public class CreateDomesticPaymentConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
     public String xJwsSignature;
+
     public CreateDomesticPaymentConsentsJsonRequest withXJwsSignature(String xJwsSignature) {
         this.xJwsSignature = xJwsSignature;
         return this;
     }
     
+    public CreateDomesticPaymentConsentsJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("OBWriteDomesticConsent4") org.openapis.openapi.models.shared.OBWriteDomesticConsent4 obWriteDomesticConsent4, @JsonProperty("x-idempotency-key") String xIdempotencyKey, @JsonProperty("x-jws-signature") String xJwsSignature) {
+        this.authorization = authorization;
+        this.obWriteDomesticConsent4 = obWriteDomesticConsent4;
+        this.xIdempotencyKey = xIdempotencyKey;
+        this.xJwsSignature = xJwsSignature;
+  }
 }

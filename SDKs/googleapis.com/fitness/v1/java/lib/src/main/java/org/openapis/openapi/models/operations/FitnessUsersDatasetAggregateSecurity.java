@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FitnessUsersDatasetAggregateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption1 option1;
+
     public FitnessUsersDatasetAggregateSecurity withOption1(FitnessUsersDatasetAggregateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption10 option10;
+
     public FitnessUsersDatasetAggregateSecurity withOption10(FitnessUsersDatasetAggregateSecurityOption10 option10) {
         this.option10 = option10;
         return this;
@@ -23,6 +25,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption11 option11;
+
     public FitnessUsersDatasetAggregateSecurity withOption11(FitnessUsersDatasetAggregateSecurityOption11 option11) {
         this.option11 = option11;
         return this;
@@ -30,6 +33,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption12 option12;
+
     public FitnessUsersDatasetAggregateSecurity withOption12(FitnessUsersDatasetAggregateSecurityOption12 option12) {
         this.option12 = option12;
         return this;
@@ -37,6 +41,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption13 option13;
+
     public FitnessUsersDatasetAggregateSecurity withOption13(FitnessUsersDatasetAggregateSecurityOption13 option13) {
         this.option13 = option13;
         return this;
@@ -44,6 +49,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption14 option14;
+
     public FitnessUsersDatasetAggregateSecurity withOption14(FitnessUsersDatasetAggregateSecurityOption14 option14) {
         this.option14 = option14;
         return this;
@@ -51,6 +57,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption15 option15;
+
     public FitnessUsersDatasetAggregateSecurity withOption15(FitnessUsersDatasetAggregateSecurityOption15 option15) {
         this.option15 = option15;
         return this;
@@ -58,6 +65,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption16 option16;
+
     public FitnessUsersDatasetAggregateSecurity withOption16(FitnessUsersDatasetAggregateSecurityOption16 option16) {
         this.option16 = option16;
         return this;
@@ -65,6 +73,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption17 option17;
+
     public FitnessUsersDatasetAggregateSecurity withOption17(FitnessUsersDatasetAggregateSecurityOption17 option17) {
         this.option17 = option17;
         return this;
@@ -72,6 +81,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption18 option18;
+
     public FitnessUsersDatasetAggregateSecurity withOption18(FitnessUsersDatasetAggregateSecurityOption18 option18) {
         this.option18 = option18;
         return this;
@@ -79,6 +89,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption19 option19;
+
     public FitnessUsersDatasetAggregateSecurity withOption19(FitnessUsersDatasetAggregateSecurityOption19 option19) {
         this.option19 = option19;
         return this;
@@ -86,6 +97,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption2 option2;
+
     public FitnessUsersDatasetAggregateSecurity withOption2(FitnessUsersDatasetAggregateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -93,6 +105,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption20 option20;
+
     public FitnessUsersDatasetAggregateSecurity withOption20(FitnessUsersDatasetAggregateSecurityOption20 option20) {
         this.option20 = option20;
         return this;
@@ -100,6 +113,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption21 option21;
+
     public FitnessUsersDatasetAggregateSecurity withOption21(FitnessUsersDatasetAggregateSecurityOption21 option21) {
         this.option21 = option21;
         return this;
@@ -107,6 +121,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption22 option22;
+
     public FitnessUsersDatasetAggregateSecurity withOption22(FitnessUsersDatasetAggregateSecurityOption22 option22) {
         this.option22 = option22;
         return this;
@@ -114,6 +129,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption3 option3;
+
     public FitnessUsersDatasetAggregateSecurity withOption3(FitnessUsersDatasetAggregateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -121,6 +137,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption4 option4;
+
     public FitnessUsersDatasetAggregateSecurity withOption4(FitnessUsersDatasetAggregateSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -128,6 +145,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption5 option5;
+
     public FitnessUsersDatasetAggregateSecurity withOption5(FitnessUsersDatasetAggregateSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -135,6 +153,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption6 option6;
+
     public FitnessUsersDatasetAggregateSecurity withOption6(FitnessUsersDatasetAggregateSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -142,6 +161,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption7 option7;
+
     public FitnessUsersDatasetAggregateSecurity withOption7(FitnessUsersDatasetAggregateSecurityOption7 option7) {
         this.option7 = option7;
         return this;
@@ -149,6 +169,7 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption8 option8;
+
     public FitnessUsersDatasetAggregateSecurity withOption8(FitnessUsersDatasetAggregateSecurityOption8 option8) {
         this.option8 = option8;
         return this;
@@ -156,9 +177,11 @@ public class FitnessUsersDatasetAggregateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDatasetAggregateSecurityOption9 option9;
+
     public FitnessUsersDatasetAggregateSecurity withOption9(FitnessUsersDatasetAggregateSecurityOption9 option9) {
         this.option9 = option9;
         return this;
     }
     
+    public FitnessUsersDatasetAggregateSecurity(){}
 }

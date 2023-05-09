@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteAccessPointInput - Contains the parameters for DeleteLoadBalancer.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteAccessPointInput {
     
     public String loadBalancerName;
+
     public DeleteAccessPointInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public DeleteAccessPointInput(@JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+  }
 }

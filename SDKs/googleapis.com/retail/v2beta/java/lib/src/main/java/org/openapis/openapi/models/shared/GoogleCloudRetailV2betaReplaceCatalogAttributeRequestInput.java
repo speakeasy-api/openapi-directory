@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaReplaceCatalogAttributeRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogAttribute")
     public GoogleCloudRetailV2betaCatalogAttributeInput catalogAttribute;
+
     public GoogleCloudRetailV2betaReplaceCatalogAttributeRequestInput withCatalogAttribute(GoogleCloudRetailV2betaCatalogAttributeInput catalogAttribute) {
         this.catalogAttribute = catalogAttribute;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaReplaceCatalogAttributeRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleCloudRetailV2betaReplaceCatalogAttributeRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleCloudRetailV2betaReplaceCatalogAttributeRequestInput(){}
 }

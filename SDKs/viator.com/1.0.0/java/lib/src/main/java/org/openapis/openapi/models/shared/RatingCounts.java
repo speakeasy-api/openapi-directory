@@ -23,6 +23,7 @@ public class RatingCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("1")
     public Double one;
+
     public RatingCounts withOne(Double one) {
         this.one = one;
         return this;
@@ -34,6 +35,7 @@ public class RatingCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("2")
     public Double two;
+
     public RatingCounts withTwo(Double two) {
         this.two = two;
         return this;
@@ -45,6 +47,7 @@ public class RatingCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("3")
     public Double three;
+
     public RatingCounts withThree(Double three) {
         this.three = three;
         return this;
@@ -56,6 +59,7 @@ public class RatingCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("4")
     public Double four;
+
     public RatingCounts withFour(Double four) {
         this.four = four;
         return this;
@@ -67,9 +71,11 @@ public class RatingCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("5")
     public Double five;
+
     public RatingCounts withFive(Double five) {
         this.five = five;
         return this;
     }
     
+    public RatingCounts(){}
 }

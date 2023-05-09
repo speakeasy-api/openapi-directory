@@ -16,50 +16,49 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateNewCustomerAddressRequest;
 import org.openapis.openapi.models.operations.CreateNewCustomerAddressResponse;
 import org.openapis.openapi.models.shared.CreateUpdateAddressRequests;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateNewCustomerAddressRequest req = new CreateNewCustomerAddressRequest() {{
-                accept = "application/json";
-                contentType = "application/json";
+            CreateNewCustomerAddressRequest req = new CreateNewCustomerAddressRequest("application/json", "application/json",                 new CreateUpdateAddressRequests() {{
+                                addressName = "My house";
+                                addressType = "residential";
+                                city = "Rio de Janeiro";
+                                complement = "3rd floor";
+                                country = "BRA";
+                                neighborhood = "Botafogo";
+                                number = "300";
+                                postalCode = "12345-000";
+                                receiverName = "Clark Kent.";
+                                reference = "Grey building";
+                                state = "Rio de Janeiro";
+                                street = "Praia de Botafogo";
+                                userId = "7e03m794-a33a-11e9-84rt6-0adfa64s5a8e";
+                            }};) {{
                 schema = "schema";
-                createUpdateAddressRequests = new CreateUpdateAddressRequests() {{
-                    addressName = "My house";
-                    addressType = "residential";
-                    city = "Rio de Janeiro";
-                    complement = "3rd floor";
-                    country = "BRA";
-                    neighborhood = "Botafogo";
-                    number = "300";
-                    postalCode = "12345-000";
-                    receiverName = "Clark Kent.";
-                    reference = "Grey building";
-                    state = "Rio de Janeiro";
-                    street = "Praia de Botafogo";
-                    userId = "7e03m794-a33a-11e9-84rt6-0adfa64s5a8e";
-                }};
-            }}            
+            }};            
 
             CreateNewCustomerAddressResponse res = sdk.addresses.createNewCustomerAddress(req);
 
-            if (res.documentResponse.isPresent()) {
+            if (res.documentResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -67,58 +66,58 @@ public class Application {
 ## Available Resources and Operations
 
 
-### addresses
+### [addresses](docs/addresses/README.md)
 
-* `createNewCustomerAddress` - Create new customer address
-* `deleteCustomerAddress` - Delete customer address
-* `updateCustomerAddress` - Update customer address
+* [createNewCustomerAddress](docs/addresses/README.md#createnewcustomeraddress) - Create new customer address
+* [deleteCustomerAddress](docs/addresses/README.md#deletecustomeraddress) - Delete customer address
+* [updateCustomerAddress](docs/addresses/README.md#updatecustomeraddress) - Update customer address
 
-### clusters
+### [clusters](docs/clusters/README.md)
 
-* `validatedocumentbyclusters` - Validate document by clusters
+* [validatedocumentbyclusters](docs/clusters/README.md#validatedocumentbyclusters) - Validate document by clusters
 
-### customerProfiles
+### [customerProfiles](docs/customerprofiles/README.md)
 
-* `createNewCustomerProfilev2` - Create new customer profile
-* `deleteCustomerProfile` - Delete customer profile
-* `updateCustomerProfile` - Update customer profile
+* [createNewCustomerProfilev2](docs/customerprofiles/README.md#createnewcustomerprofilev2) - Create new customer profile
+* [deleteCustomerProfile](docs/customerprofiles/README.md#deletecustomerprofile) - Delete customer profile
+* [updateCustomerProfile](docs/customerprofiles/README.md#updatecustomerprofile) - Update customer profile
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `createnewdocument` - Create new document
-* `createorupdatepartialdocument` - Create partial document
-* `deletedocument` - Delete document
-* `getdocument` - Get document
-* `updateentiredocument` - Update entire document
-* `updatepartialdocument` - Update partial document
+* [createnewdocument](docs/documents/README.md#createnewdocument) - Create new document
+* [createorupdatepartialdocument](docs/documents/README.md#createorupdatepartialdocument) - Create partial document
+* [deletedocument](docs/documents/README.md#deletedocument) - Delete document
+* [getdocument](docs/documents/README.md#getdocument) - Get document
+* [updateentiredocument](docs/documents/README.md#updateentiredocument) - Update entire document
+* [updatepartialdocument](docs/documents/README.md#updatepartialdocument) - Update partial document
 
-### indices
+### [indices](docs/indices/README.md)
 
-* `deleteindexbyname` - Delete index by name
-* `getindexbyname` - Get index by name
-* `getindices` - Get indices
-* `putindices` - Put indices
+* [deleteindexbyname](docs/indices/README.md#deleteindexbyname) - Delete index by name
+* [getindexbyname](docs/indices/README.md#getindexbyname) - Get index by name
+* [getindices](docs/indices/README.md#getindices) - Get indices
+* [putindices](docs/indices/README.md#putindices) - Put indices
 
-### schemas
+### [schemas](docs/schemas/README.md)
 
-* `deleteschemabyname` - Delete schema by name
-* `getschemabyname` - Get schema by name
-* `getschemas` - Get schemas
-* `saveschemabyname` - Save schema by name
+* [deleteschemabyname](docs/schemas/README.md#deleteschemabyname) - Delete schema by name
+* [getschemabyname](docs/schemas/README.md#getschemabyname) - Get schema by name
+* [getschemas](docs/schemas/README.md#getschemas) - Get schemas
+* [saveschemabyname](docs/schemas/README.md#saveschemabyname) - Save schema by name
 
-### scroll
+### [scroll](docs/scroll/README.md)
 
-* `scrolldocuments` - Scroll documents
+* [scrolldocuments](docs/scroll/README.md#scrolldocuments) - Scroll documents
 
-### search
+### [search](docs/search/README.md)
 
-* `searchdocuments` - Search documents
+* [searchdocuments](docs/search/README.md#searchdocuments) - Search documents
 
-### versions
+### [versions](docs/versions/README.md)
 
-* `getversion` - Get version
-* `listversions` - List versions
-* `putversion` - Put version
+* [getversion](docs/versions/README.md#getversion) - Get version
+* [listversions](docs/versions/README.md#listversions) - List versions
+* [putversion](docs/versions/README.md#putversion) - Put version
 <!-- End SDK Available Operations -->
 
 ### Maturity

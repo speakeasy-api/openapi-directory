@@ -15,6 +15,7 @@ public class ChannelCatalogMarketplaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public BeezUPCommonInfoSummaries info;
+
     public ChannelCatalogMarketplaceProperties withInfo(BeezUPCommonInfoSummaries info) {
         this.info = info;
         return this;
@@ -22,6 +23,7 @@ public class ChannelCatalogMarketplaceProperties {
     
     @JsonProperty("links")
     public ChannelCatalogMarketplacePropertiesLinks links;
+
     public ChannelCatalogMarketplaceProperties withLinks(ChannelCatalogMarketplacePropertiesLinks links) {
         this.links = links;
         return this;
@@ -32,9 +34,14 @@ public class ChannelCatalogMarketplaceProperties {
      */
     @JsonProperty("propertyGroups")
     public ChannelCatalogMarketplacePropertyGroup[] propertyGroups;
+
     public ChannelCatalogMarketplaceProperties withPropertyGroups(ChannelCatalogMarketplacePropertyGroup[] propertyGroups) {
         this.propertyGroups = propertyGroups;
         return this;
     }
     
+    public ChannelCatalogMarketplaceProperties(@JsonProperty("links") ChannelCatalogMarketplacePropertiesLinks links, @JsonProperty("propertyGroups") ChannelCatalogMarketplacePropertyGroup[] propertyGroups) {
+        this.links = links;
+        this.propertyGroups = propertyGroups;
+  }
 }

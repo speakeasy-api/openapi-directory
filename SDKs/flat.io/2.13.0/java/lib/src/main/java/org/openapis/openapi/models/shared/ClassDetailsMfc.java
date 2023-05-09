@@ -18,6 +18,7 @@ public class ClassDetailsMfc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternateLink")
     public String alternateLink;
+
     public ClassDetailsMfc withAlternateLink(String alternateLink) {
         this.alternateLink = alternateLink;
         return this;
@@ -29,9 +30,11 @@ public class ClassDetailsMfc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ClassDetailsMfc withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ClassDetailsMfc(){}
 }

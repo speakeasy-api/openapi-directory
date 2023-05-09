@@ -15,6 +15,7 @@ public class RecordError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public RecordError withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class RecordError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RecordError withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public RecordError(){}
 }

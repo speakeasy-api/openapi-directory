@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetGameRegionUsingPOSTResponse {
     
     public String contentType;
+
     public SetGameRegionUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetGameRegionUsingPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public SetGameRegionUsingPOSTResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -29,6 +32,7 @@ public class SetGameRegionUsingPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.RegionResult regionResult;
+
     public SetGameRegionUsingPOSTResponse withRegionResult(org.openapis.openapi.models.shared.RegionResult regionResult) {
         this.regionResult = regionResult;
         return this;
@@ -36,6 +40,7 @@ public class SetGameRegionUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public SetGameRegionUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class SetGameRegionUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetGameRegionUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SetGameRegionUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

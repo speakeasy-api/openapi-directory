@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InventoryFilter {
     @JsonProperty("Key")
     public String key;
+
     public InventoryFilter withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +23,7 @@ public class InventoryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public InventoryQueryOperatorTypeEnum type;
+
     public InventoryFilter withType(InventoryQueryOperatorTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +31,14 @@ public class InventoryFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public InventoryFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public InventoryFilter(@JsonProperty("Key") String key, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

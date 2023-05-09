@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetcitystandardRequest;
 import org.openapis.openapi.models.operations.GetcitystandardResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetcitystandardRequest req = new GetcitystandardRequest() {{
-                city = "Laruecester";
-                license = "quibusdam";
-            }}            
+            GetcitystandardRequest req = new GetcitystandardRequest("corrupti", "provident");            
 
             GetcitystandardResponse res = sdk.cityDataStandardization.getcitystandard(req);
 
-            if (res.getcitystandard200ApplicationJSONObject.isPresent()) {
+            if (res.getcitystandard200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### cityDataStandardization
+### [cityDataStandardization](docs/citydatastandardization/README.md)
 
-* `getcitystandard` - Gets a city name standard for US and international cities
+* [getcitystandard](docs/citydatastandardization/README.md#getcitystandard) - Gets a city name standard for US and international cities
 <!-- End SDK Available Operations -->
 
 ### Maturity

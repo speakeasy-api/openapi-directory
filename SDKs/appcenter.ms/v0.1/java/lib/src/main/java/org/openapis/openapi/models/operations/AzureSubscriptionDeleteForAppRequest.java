@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AzureSubscriptionDeleteForAppRequest {
@@ -12,6 +13,7 @@ public class AzureSubscriptionDeleteForAppRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AzureSubscriptionDeleteForAppRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class AzureSubscriptionDeleteForAppRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=azure_subscription_id")
     public String azureSubscriptionId;
+
     public AzureSubscriptionDeleteForAppRequest withAzureSubscriptionId(String azureSubscriptionId) {
         this.azureSubscriptionId = azureSubscriptionId;
         return this;
@@ -32,9 +35,15 @@ public class AzureSubscriptionDeleteForAppRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AzureSubscriptionDeleteForAppRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public AzureSubscriptionDeleteForAppRequest(@JsonProperty("app_name") String appName, @JsonProperty("azure_subscription_id") String azureSubscriptionId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.azureSubscriptionId = azureSubscriptionId;
+        this.ownerName = ownerName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DoCreateBabelBoxResponse {
     
     public byte[] body;
+
     public DoCreateBabelBoxResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DoCreateBabelBoxResponse {
     
     
     public String contentType;
+
     public DoCreateBabelBoxResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DoCreateBabelBoxResponse {
     
     
     public Integer statusCode;
+
     public DoCreateBabelBoxResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DoCreateBabelBoxResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DoCreateBabelBoxResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DoCreateBabelBoxResponse {
      */
     
     public String doCreateBabelBox400WildcardString;
+
     public DoCreateBabelBoxResponse withDoCreateBabelBox400WildcardString(String doCreateBabelBox400WildcardString) {
         this.doCreateBabelBox400WildcardString = doCreateBabelBox400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class DoCreateBabelBoxResponse {
      */
     
     public String doCreateBabelBox401WildcardString;
+
     public DoCreateBabelBoxResponse withDoCreateBabelBox401WildcardString(String doCreateBabelBox401WildcardString) {
         this.doCreateBabelBox401WildcardString = doCreateBabelBox401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class DoCreateBabelBoxResponse {
      */
     
     public String doCreateBabelBox404WildcardString;
+
     public DoCreateBabelBoxResponse withDoCreateBabelBox404WildcardString(String doCreateBabelBox404WildcardString) {
         this.doCreateBabelBox404WildcardString = doCreateBabelBox404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class DoCreateBabelBoxResponse {
      */
     
     public String doCreateBabelBox409WildcardString;
+
     public DoCreateBabelBoxResponse withDoCreateBabelBox409WildcardString(String doCreateBabelBox409WildcardString) {
         this.doCreateBabelBox409WildcardString = doCreateBabelBox409WildcardString;
         return this;
     }
     
+    public DoCreateBabelBoxResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

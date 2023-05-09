@@ -15,6 +15,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaSquareMiles")
     public String areaSquareMiles;
+
     public Getzipcodeinfo200ApplicationJSON withAreaSquareMiles(String areaSquareMiles) {
         this.areaSquareMiles = areaSquareMiles;
         return this;
@@ -23,6 +24,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Getzipcodeinfo200ApplicationJSON withCity(String city) {
         this.city = city;
         return this;
@@ -31,6 +33,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getzipcodeinfo200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -39,6 +42,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getzipcodeinfo200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -47,6 +51,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElderlyHouseholdPercent")
     public String elderlyHouseholdPercent;
+
     public Getzipcodeinfo200ApplicationJSON withElderlyHouseholdPercent(String elderlyHouseholdPercent) {
         this.elderlyHouseholdPercent = elderlyHouseholdPercent;
         return this;
@@ -55,6 +60,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FarmerHouseholdPercent")
     public String farmerHouseholdPercent;
+
     public Getzipcodeinfo200ApplicationJSON withFarmerHouseholdPercent(String farmerHouseholdPercent) {
         this.farmerHouseholdPercent = farmerHouseholdPercent;
         return this;
@@ -63,6 +69,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncomePercent100k")
     public String incomePercent100k;
+
     public Getzipcodeinfo200ApplicationJSON withIncomePercent100k(String incomePercent100k) {
         this.incomePercent100k = incomePercent100k;
         return this;
@@ -71,6 +78,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncomePercent200k")
     public String incomePercent200k;
+
     public Getzipcodeinfo200ApplicationJSON withIncomePercent200k(String incomePercent200k) {
         this.incomePercent200k = incomePercent200k;
         return this;
@@ -79,6 +87,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncomePercent50k")
     public String incomePercent50k;
+
     public Getzipcodeinfo200ApplicationJSON withIncomePercent50k(String incomePercent50k) {
         this.incomePercent50k = incomePercent50k;
         return this;
@@ -87,6 +96,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Latitude")
     public String latitude;
+
     public Getzipcodeinfo200ApplicationJSON withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -95,6 +105,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Longitude")
     public String longitude;
+
     public Getzipcodeinfo200ApplicationJSON withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
@@ -103,6 +114,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MarriedHouseholdPercent")
     public String marriedHouseholdPercent;
+
     public Getzipcodeinfo200ApplicationJSON withMarriedHouseholdPercent(String marriedHouseholdPercent) {
         this.marriedHouseholdPercent = marriedHouseholdPercent;
         return this;
@@ -111,6 +123,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Population")
     public String population;
+
     public Getzipcodeinfo200ApplicationJSON withPopulation(String population) {
         this.population = population;
         return this;
@@ -119,6 +132,7 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Getzipcodeinfo200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
@@ -127,9 +141,11 @@ public class Getzipcodeinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZipCode")
     public String zipCode;
+
     public Getzipcodeinfo200ApplicationJSON withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public Getzipcodeinfo200ApplicationJSON(){}
 }

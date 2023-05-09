@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentModelsContentTypePropertySection {
     
     public Boolean collapsed;
+
     public ContentModelsContentTypePropertySection withCollapsed(Boolean collapsed) {
         this.collapsed = collapsed;
         return this;
@@ -16,6 +17,7 @@ public class ContentModelsContentTypePropertySection {
     
     
     public String name;
+
     public ContentModelsContentTypePropertySection withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +25,11 @@ public class ContentModelsContentTypePropertySection {
     
     
     public String readableName;
+
     public ContentModelsContentTypePropertySection withReadableName(String readableName) {
         this.readableName = readableName;
         return this;
     }
     
+    public ContentModelsContentTypePropertySection(){}
 }

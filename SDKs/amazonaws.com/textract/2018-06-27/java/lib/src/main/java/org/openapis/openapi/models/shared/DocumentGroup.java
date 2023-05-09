@@ -15,6 +15,7 @@ public class DocumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectedSignatures")
     public DetectedSignature[] detectedSignatures;
+
     public DocumentGroup withDetectedSignatures(DetectedSignature[] detectedSignatures) {
         this.detectedSignatures = detectedSignatures;
         return this;
@@ -23,6 +24,7 @@ public class DocumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplitDocuments")
     public SplitDocument[] splitDocuments;
+
     public DocumentGroup withSplitDocuments(SplitDocument[] splitDocuments) {
         this.splitDocuments = splitDocuments;
         return this;
@@ -31,6 +33,7 @@ public class DocumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DocumentGroup withType(String type) {
         this.type = type;
         return this;
@@ -39,9 +42,11 @@ public class DocumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UndetectedSignatures")
     public UndetectedSignature[] undetectedSignatures;
+
     public DocumentGroup withUndetectedSignatures(UndetectedSignature[] undetectedSignatures) {
         this.undetectedSignatures = undetectedSignatures;
         return this;
     }
     
+    public DocumentGroup(){}
 }

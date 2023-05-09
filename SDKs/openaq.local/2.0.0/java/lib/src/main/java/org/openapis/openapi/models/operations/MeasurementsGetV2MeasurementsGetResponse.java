@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MeasurementsGetV2MeasurementsGetResponse {
     
     public String contentType;
+
     public MeasurementsGetV2MeasurementsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MeasurementsGetV2MeasurementsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public MeasurementsGetV2MeasurementsGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class MeasurementsGetV2MeasurementsGetResponse {
     
     
     public Integer statusCode;
+
     public MeasurementsGetV2MeasurementsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class MeasurementsGetV2MeasurementsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MeasurementsGetV2MeasurementsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class MeasurementsGetV2MeasurementsGetResponse {
      */
     
     public Object measurementsGetV2MeasurementsGet200ApplicationJSONAny;
+
     public MeasurementsGetV2MeasurementsGetResponse withMeasurementsGetV2MeasurementsGet200ApplicationJSONAny(Object measurementsGetV2MeasurementsGet200ApplicationJSONAny) {
         this.measurementsGetV2MeasurementsGet200ApplicationJSONAny = measurementsGetV2MeasurementsGet200ApplicationJSONAny;
         return this;
     }
     
+    public MeasurementsGetV2MeasurementsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

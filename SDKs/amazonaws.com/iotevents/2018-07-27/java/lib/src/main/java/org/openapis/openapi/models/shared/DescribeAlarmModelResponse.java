@@ -20,6 +20,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmCapabilities")
     public AlarmCapabilities alarmCapabilities;
+
     public DescribeAlarmModelResponse withAlarmCapabilities(AlarmCapabilities alarmCapabilities) {
         this.alarmCapabilities = alarmCapabilities;
         return this;
@@ -28,6 +29,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmEventActions")
     public AlarmEventActions alarmEventActions;
+
     public DescribeAlarmModelResponse withAlarmEventActions(AlarmEventActions alarmEventActions) {
         this.alarmEventActions = alarmEventActions;
         return this;
@@ -36,6 +38,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelArn")
     public String alarmModelArn;
+
     public DescribeAlarmModelResponse withAlarmModelArn(String alarmModelArn) {
         this.alarmModelArn = alarmModelArn;
         return this;
@@ -44,6 +47,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelDescription")
     public String alarmModelDescription;
+
     public DescribeAlarmModelResponse withAlarmModelDescription(String alarmModelDescription) {
         this.alarmModelDescription = alarmModelDescription;
         return this;
@@ -52,6 +56,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public DescribeAlarmModelResponse withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -60,6 +65,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelVersion")
     public String alarmModelVersion;
+
     public DescribeAlarmModelResponse withAlarmModelVersion(String alarmModelVersion) {
         this.alarmModelVersion = alarmModelVersion;
         return this;
@@ -68,6 +74,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmNotification")
     public AlarmNotification alarmNotification;
+
     public DescribeAlarmModelResponse withAlarmNotification(AlarmNotification alarmNotification) {
         this.alarmNotification = alarmNotification;
         return this;
@@ -76,6 +83,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmRule")
     public AlarmRule alarmRule;
+
     public DescribeAlarmModelResponse withAlarmRule(AlarmRule alarmRule) {
         this.alarmRule = alarmRule;
         return this;
@@ -86,6 +94,7 @@ public class DescribeAlarmModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DescribeAlarmModelResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -94,6 +103,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DescribeAlarmModelResponse withKey(String key) {
         this.key = key;
         return this;
@@ -104,6 +114,7 @@ public class DescribeAlarmModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public DescribeAlarmModelResponse withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -112,6 +123,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DescribeAlarmModelResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -120,6 +132,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public Long severity;
+
     public DescribeAlarmModelResponse withSeverity(Long severity) {
         this.severity = severity;
         return this;
@@ -128,6 +141,7 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AlarmModelVersionStatusEnum status;
+
     public DescribeAlarmModelResponse withStatus(AlarmModelVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -136,9 +150,11 @@ public class DescribeAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public DescribeAlarmModelResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public DescribeAlarmModelResponse(){}
 }

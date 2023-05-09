@@ -15,6 +15,7 @@ public class AssociateRepositoryRequestBodyRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bitbucket")
     public org.openapis.openapi.models.shared.ThirdPartySourceRepository bitbucket;
+
     public AssociateRepositoryRequestBodyRepository withBitbucket(org.openapis.openapi.models.shared.ThirdPartySourceRepository bitbucket) {
         this.bitbucket = bitbucket;
         return this;
@@ -23,6 +24,7 @@ public class AssociateRepositoryRequestBodyRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeCommit")
     public org.openapis.openapi.models.shared.CodeCommitRepository codeCommit;
+
     public AssociateRepositoryRequestBodyRepository withCodeCommit(org.openapis.openapi.models.shared.CodeCommitRepository codeCommit) {
         this.codeCommit = codeCommit;
         return this;
@@ -31,6 +33,7 @@ public class AssociateRepositoryRequestBodyRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GitHubEnterpriseServer")
     public org.openapis.openapi.models.shared.ThirdPartySourceRepository gitHubEnterpriseServer;
+
     public AssociateRepositoryRequestBodyRepository withGitHubEnterpriseServer(org.openapis.openapi.models.shared.ThirdPartySourceRepository gitHubEnterpriseServer) {
         this.gitHubEnterpriseServer = gitHubEnterpriseServer;
         return this;
@@ -42,9 +45,11 @@ public class AssociateRepositoryRequestBodyRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Bucket")
     public org.openapis.openapi.models.shared.S3Repository s3Bucket;
+
     public AssociateRepositoryRequestBodyRepository withS3Bucket(org.openapis.openapi.models.shared.S3Repository s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
     }
     
+    public AssociateRepositoryRequestBodyRepository(){}
 }

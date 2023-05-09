@@ -18,6 +18,7 @@ public class ReplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatic")
     public AutomaticStatus automatic;
+
     public ReplicationStatus withAutomatic(AutomaticStatus automatic) {
         this.automatic = automatic;
         return this;
@@ -29,9 +30,11 @@ public class ReplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userManaged")
     public UserManagedStatus userManaged;
+
     public ReplicationStatus withUserManaged(UserManagedStatus userManaged) {
         this.userManaged = userManaged;
         return this;
     }
     
+    public ReplicationStatus(){}
 }

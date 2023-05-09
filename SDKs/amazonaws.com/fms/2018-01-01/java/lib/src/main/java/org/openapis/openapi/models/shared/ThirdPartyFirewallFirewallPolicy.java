@@ -15,6 +15,7 @@ public class ThirdPartyFirewallFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyId")
     public String firewallPolicyId;
+
     public ThirdPartyFirewallFirewallPolicy withFirewallPolicyId(String firewallPolicyId) {
         this.firewallPolicyId = firewallPolicyId;
         return this;
@@ -23,9 +24,11 @@ public class ThirdPartyFirewallFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyName")
     public String firewallPolicyName;
+
     public ThirdPartyFirewallFirewallPolicy withFirewallPolicyName(String firewallPolicyName) {
         this.firewallPolicyName = firewallPolicyName;
         return this;
     }
     
+    public ThirdPartyFirewallFirewallPolicy(){}
 }

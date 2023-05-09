@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ExudeBean {
     @SpeakeasyMetadata("multipartForm:name=data")
     public String data;
+
     public ExudeBean withData(String data) {
         this.data = data;
         return this;
@@ -19,9 +20,11 @@ public class ExudeBean {
     
     @SpeakeasyMetadata("multipartForm:name=links")
     public String[] links;
+
     public ExudeBean withLinks(String[] links) {
         this.links = links;
         return this;
     }
     
+    public ExudeBean(){}
 }

@@ -15,6 +15,7 @@ public class SegmentGroupList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public SegmentGroup[] groups;
+
     public SegmentGroupList withGroups(SegmentGroup[] groups) {
         this.groups = groups;
         return this;
@@ -23,9 +24,11 @@ public class SegmentGroupList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Include")
     public IncludeEnum include;
+
     public SegmentGroupList withInclude(IncludeEnum include) {
         this.include = include;
         return this;
     }
     
+    public SegmentGroupList(){}
 }

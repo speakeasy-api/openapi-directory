@@ -15,6 +15,7 @@ public class DescribeConnectorProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileDetails")
     public ConnectorProfile[] connectorProfileDetails;
+
     public DescribeConnectorProfilesResponse withConnectorProfileDetails(ConnectorProfile[] connectorProfileDetails) {
         this.connectorProfileDetails = connectorProfileDetails;
         return this;
@@ -23,9 +24,11 @@ public class DescribeConnectorProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeConnectorProfilesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConnectorProfilesResponse(){}
 }

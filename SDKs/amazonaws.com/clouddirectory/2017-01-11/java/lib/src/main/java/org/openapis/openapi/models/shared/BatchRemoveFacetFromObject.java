@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchRemoveFacetFromObject {
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchRemoveFacetFromObject withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
@@ -19,9 +20,14 @@ public class BatchRemoveFacetFromObject {
     
     @JsonProperty("SchemaFacet")
     public SchemaFacet schemaFacet;
+
     public BatchRemoveFacetFromObject withSchemaFacet(SchemaFacet schemaFacet) {
         this.schemaFacet = schemaFacet;
         return this;
     }
     
+    public BatchRemoveFacetFromObject(@JsonProperty("ObjectReference") ObjectReference objectReference, @JsonProperty("SchemaFacet") SchemaFacet schemaFacet) {
+        this.objectReference = objectReference;
+        this.schemaFacet = schemaFacet;
+  }
 }

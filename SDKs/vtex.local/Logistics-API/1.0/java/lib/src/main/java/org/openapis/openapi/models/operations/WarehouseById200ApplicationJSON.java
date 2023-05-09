@@ -15,6 +15,7 @@ public class WarehouseById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WarehouseById200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class WarehouseById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public WarehouseById200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -34,6 +36,7 @@ public class WarehouseById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WarehouseById200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class WarehouseById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupPointIds")
     public Object[] pickupPointIds;
+
     public WarehouseById200ApplicationJSON withPickupPointIds(Object[] pickupPointIds) {
         this.pickupPointIds = pickupPointIds;
         return this;
@@ -56,6 +60,7 @@ public class WarehouseById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public WarehouseById200ApplicationJSON withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -64,9 +69,11 @@ public class WarehouseById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouseDocks")
     public WarehouseById200ApplicationJSONWarehouseDock1[] warehouseDocks;
+
     public WarehouseById200ApplicationJSON withWarehouseDocks(WarehouseById200ApplicationJSONWarehouseDock1[] warehouseDocks) {
         this.warehouseDocks = warehouseDocks;
         return this;
     }
     
+    public WarehouseById200ApplicationJSON(){}
 }

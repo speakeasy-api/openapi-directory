@@ -15,6 +15,7 @@ public class Continent {
      */
     @JsonProperty("code")
     public String code;
+
     public Continent withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class Continent {
      */
     @JsonProperty("name")
     public String name;
+
     public Continent withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Continent(@JsonProperty("code") String code, @JsonProperty("name") String name) {
+        this.code = code;
+        this.name = name;
+  }
 }

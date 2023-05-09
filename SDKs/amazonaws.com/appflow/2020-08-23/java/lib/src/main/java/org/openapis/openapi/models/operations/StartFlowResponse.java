@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartFlowResponse {
@@ -12,6 +13,7 @@ public class StartFlowResponse {
      */
     
     public Object conflictException;
+
     public StartFlowResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartFlowResponse {
     
     
     public String contentType;
+
     public StartFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartFlowResponse {
      */
     
     public Object internalServerException;
+
     public StartFlowResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartFlowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartFlowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartFlowResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartFlowResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartFlowResponse {
      */
     
     public org.openapis.openapi.models.shared.StartFlowResponse startFlowResponse;
+
     public StartFlowResponse withStartFlowResponse(org.openapis.openapi.models.shared.StartFlowResponse startFlowResponse) {
         this.startFlowResponse = startFlowResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartFlowResponse {
     
     
     public Integer statusCode;
+
     public StartFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class StartFlowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartFlowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartFlowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

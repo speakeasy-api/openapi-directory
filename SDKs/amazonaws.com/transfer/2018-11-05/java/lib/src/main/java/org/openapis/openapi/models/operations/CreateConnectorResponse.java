@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConnectorResponse {
     
     public String contentType;
+
     public CreateConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConnectorResponse createConnectorResponse;
+
     public CreateConnectorResponse withCreateConnectorResponse(org.openapis.openapi.models.shared.CreateConnectorResponse createConnectorResponse) {
         this.createConnectorResponse = createConnectorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateConnectorResponse {
      */
     
     public Object internalServiceError;
+
     public CreateConnectorResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class CreateConnectorResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateConnectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateConnectorResponse {
      */
     
     public Object resourceExistsException;
+
     public CreateConnectorResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConnectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateConnectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateConnectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateConnectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class CreateConnectorResponse {
     
     
     public Integer statusCode;
+
     public CreateConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateConnectorResponse {
      */
     
     public Object throttlingException;
+
     public CreateConnectorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

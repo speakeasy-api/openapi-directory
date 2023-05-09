@@ -18,6 +18,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProvi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Facebook")
     public BackendAuthSocialProviderConfig facebook;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings withFacebook(BackendAuthSocialProviderConfig facebook) {
         this.facebook = facebook;
         return this;
@@ -29,6 +30,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProvi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Google")
     public BackendAuthSocialProviderConfig google;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings withGoogle(BackendAuthSocialProviderConfig google) {
         this.google = google;
         return this;
@@ -40,6 +42,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProvi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoginWithAmazon")
     public BackendAuthSocialProviderConfig loginWithAmazon;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings withLoginWithAmazon(BackendAuthSocialProviderConfig loginWithAmazon) {
         this.loginWithAmazon = loginWithAmazon;
         return this;
@@ -51,9 +54,11 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProvi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SignInWithApple")
     public BackendAuthAppleProviderConfig signInWithApple;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings withSignInWithApple(BackendAuthAppleProviderConfig signInWithApple) {
         this.signInWithApple = signInWithApple;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings(){}
 }

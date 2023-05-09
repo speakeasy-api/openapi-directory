@@ -17,6 +17,7 @@ public class ComputerVisionError {
      */
     @JsonProperty("code")
     public ComputerVisionErrorCodeEnum code;
+
     public ComputerVisionError withCode(ComputerVisionErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -27,6 +28,7 @@ public class ComputerVisionError {
      */
     @JsonProperty("message")
     public String message;
+
     public ComputerVisionError withMessage(String message) {
         this.message = message;
         return this;
@@ -38,9 +40,14 @@ public class ComputerVisionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ComputerVisionError withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ComputerVisionError(@JsonProperty("code") ComputerVisionErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

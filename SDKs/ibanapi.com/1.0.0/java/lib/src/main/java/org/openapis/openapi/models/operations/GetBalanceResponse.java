@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBalanceResponse {
@@ -12,6 +13,7 @@ public class GetBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundred fourHundred;
+
     public GetBalanceResponse withFourHundred(org.openapis.openapi.models.shared.FourHundred fourHundred) {
         this.fourHundred = fourHundred;
         return this;
@@ -22,6 +24,7 @@ public class GetBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOne fourHundredAndOne;
+
     public GetBalanceResponse withFourHundredAndOne(org.openapis.openapi.models.shared.FourHundredAndOne fourHundredAndOne) {
         this.fourHundredAndOne = fourHundredAndOne;
         return this;
@@ -32,6 +35,7 @@ public class GetBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThree fourHundredAndThree;
+
     public GetBalanceResponse withFourHundredAndThree(org.openapis.openapi.models.shared.FourHundredAndThree fourHundredAndThree) {
         this.fourHundredAndThree = fourHundredAndThree;
         return this;
@@ -42,6 +46,7 @@ public class GetBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndTwentyTwo fourHundredAndTwentyTwo;
+
     public GetBalanceResponse withFourHundredAndTwentyTwo(org.openapis.openapi.models.shared.FourHundredAndTwentyTwo fourHundredAndTwentyTwo) {
         this.fourHundredAndTwentyTwo = fourHundredAndTwentyTwo;
         return this;
@@ -52,6 +57,7 @@ public class GetBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.BalanceResponse balanceResponse;
+
     public GetBalanceResponse withBalanceResponse(org.openapis.openapi.models.shared.BalanceResponse balanceResponse) {
         this.balanceResponse = balanceResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetBalanceResponse {
     
     
     public String contentType;
+
     public GetBalanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -66,6 +73,7 @@ public class GetBalanceResponse {
     
     
     public Integer statusCode;
+
     public GetBalanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetBalanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBalanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBalanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

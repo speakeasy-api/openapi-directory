@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTemplateRequest {
@@ -12,6 +13,7 @@ public class UpdateTemplateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TemplateDefinitionNew templateDefinitionNew;
+
     public UpdateTemplateRequest withTemplateDefinitionNew(org.openapis.openapi.models.shared.TemplateDefinitionNew templateDefinitionNew) {
         this.templateDefinitionNew = templateDefinitionNew;
         return this;
@@ -22,9 +24,14 @@ public class UpdateTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
     public Long templateId;
+
     public UpdateTemplateRequest withTemplateId(Long templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public UpdateTemplateRequest(@JsonProperty("TemplateDefinitionNew") org.openapis.openapi.models.shared.TemplateDefinitionNew templateDefinitionNew, @JsonProperty("templateId") Long templateId) {
+        this.templateDefinitionNew = templateDefinitionNew;
+        this.templateId = templateId;
+  }
 }

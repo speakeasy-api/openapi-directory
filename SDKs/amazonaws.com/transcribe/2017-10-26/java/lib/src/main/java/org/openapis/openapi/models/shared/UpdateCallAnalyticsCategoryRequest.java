@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCallAnalyticsCategoryRequest {
     @JsonProperty("CategoryName")
     public String categoryName;
+
     public UpdateCallAnalyticsCategoryRequest withCategoryName(String categoryName) {
         this.categoryName = categoryName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateCallAnalyticsCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputType")
     public InputTypeEnum inputType;
+
     public UpdateCallAnalyticsCategoryRequest withInputType(InputTypeEnum inputType) {
         this.inputType = inputType;
         return this;
@@ -26,9 +28,14 @@ public class UpdateCallAnalyticsCategoryRequest {
     
     @JsonProperty("Rules")
     public Rule[] rules;
+
     public UpdateCallAnalyticsCategoryRequest withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public UpdateCallAnalyticsCategoryRequest(@JsonProperty("CategoryName") String categoryName, @JsonProperty("Rules") Rule[] rules) {
+        this.categoryName = categoryName;
+        this.rules = rules;
+  }
 }

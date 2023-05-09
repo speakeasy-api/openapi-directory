@@ -15,6 +15,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Beleg-Codes")
     public String[] belegCodes;
+
     public Beleg withBelegCodes(String[] belegCodes) {
         this.belegCodes = belegCodes;
         return this;
@@ -23,6 +24,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Beleg-Typen")
     public BelegBelegTypenEnum[] belegTypen;
+
     public Beleg withBelegTypen(BelegBelegTypenEnum[] belegTypen) {
         this.belegTypen = belegTypen;
         return this;
@@ -34,6 +36,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Belegdaten")
     public SignierteBelegdaten belegdaten;
+
     public Beleg withBelegdaten(SignierteBelegdaten belegdaten) {
         this.belegdaten = belegdaten;
         return this;
@@ -45,6 +48,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JWS")
     public String jws;
+
     public Beleg withJws(String jws) {
         this.jws = jws;
         return this;
@@ -56,6 +60,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QR")
     public String qr;
+
     public Beleg withQr(String qr) {
         this.qr = qr;
         return this;
@@ -67,6 +72,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QR-Link")
     public String qrLink;
+
     public Beleg withQRLink(String qrLink) {
         this.qrLink = qrLink;
         return this;
@@ -78,6 +84,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Registrierkasse-UUID")
     public String registrierkasseUUID;
+
     public Beleg withRegistrierkasseUUID(String registrierkasseUUID) {
         this.registrierkasseUUID = registrierkasseUUID;
         return this;
@@ -89,6 +96,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Signaturerstellungseinheit-UUID")
     public String signaturerstellungseinheitUUID;
+
     public Beleg withSignaturerstellungseinheitUUID(String signaturerstellungseinheitUUID) {
         this.signaturerstellungseinheitUUID = signaturerstellungseinheitUUID;
         return this;
@@ -100,6 +108,7 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_href")
     public String href;
+
     public Beleg withHref(String href) {
         this.href = href;
         return this;
@@ -111,9 +120,11 @@ public class Beleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_uuid")
     public String uuid;
+
     public Beleg withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public Beleg(){}
 }

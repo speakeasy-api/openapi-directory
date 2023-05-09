@@ -22,9 +22,11 @@ public class StopLaunchResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endedTime")
     public OffsetDateTime endedTime;
+
     public StopLaunchResponse withEndedTime(OffsetDateTime endedTime) {
         this.endedTime = endedTime;
         return this;
     }
     
+    public StopLaunchResponse(){}
 }

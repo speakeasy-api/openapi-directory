@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVerifiedAccessTrustProviderRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVerifiedAccessTrustProviderActionEnum action;
+
     public GETModifyVerifiedAccessTrustProviderRequest withAction(GETModifyVerifiedAccessTrustProviderActionEnum action) {
         this.action = action;
         return this;
@@ -19,16 +21,18 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETModifyVerifiedAccessTrustProviderRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
     /**
-     * A description for the Amazon Web Services Verified Access trust provider.
+     * A description for the Verified Access trust provider.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
     public String description;
+
     public GETModifyVerifiedAccessTrustProviderRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -39,26 +43,29 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVerifiedAccessTrustProviderRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
     /**
-     * The OpenID Connect details for an &lt;code&gt;oidc&lt;/code&gt;-type, user-identity based trust provider.
+     * The options for an OpenID Connect-compatible user-identity trust provider.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OidcOptions")
     public GETModifyVerifiedAccessTrustProviderOidcOptions oidcOptions;
+
     public GETModifyVerifiedAccessTrustProviderRequest withOidcOptions(GETModifyVerifiedAccessTrustProviderOidcOptions oidcOptions) {
         this.oidcOptions = oidcOptions;
         return this;
     }
     
     /**
-     * The ID of the Amazon Web Services Verified Access trust provider.
+     * The ID of the Verified Access trust provider.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedAccessTrustProviderId")
     public String verifiedAccessTrustProviderId;
+
     public GETModifyVerifiedAccessTrustProviderRequest withVerifiedAccessTrustProviderId(String verifiedAccessTrustProviderId) {
         this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
         return this;
@@ -66,6 +73,7 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVerifiedAccessTrustProviderVersionEnum version;
+
     public GETModifyVerifiedAccessTrustProviderRequest withVersion(GETModifyVerifiedAccessTrustProviderVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVerifiedAccessTrustProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVerifiedAccessTrustProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVerifiedAccessTrustProviderRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVerifiedAccessTrustProviderRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVerifiedAccessTrustProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVerifiedAccessTrustProviderRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETModifyVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVerifiedAccessTrustProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVerifiedAccessTrustProviderRequest(@JsonProperty("Action") GETModifyVerifiedAccessTrustProviderActionEnum action, @JsonProperty("VerifiedAccessTrustProviderId") String verifiedAccessTrustProviderId, @JsonProperty("Version") GETModifyVerifiedAccessTrustProviderVersionEnum version) {
+        this.action = action;
+        this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
+        this.version = version;
+  }
 }

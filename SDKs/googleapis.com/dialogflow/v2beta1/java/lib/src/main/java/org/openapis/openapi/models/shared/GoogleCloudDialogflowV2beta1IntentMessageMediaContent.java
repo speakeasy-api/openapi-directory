@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageMediaContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaObjects")
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject[] mediaObjects;
+
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContent withMediaObjects(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject[] mediaObjects) {
         this.mediaObjects = mediaObjects;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageMediaContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaType")
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentMediaTypeEnum mediaType;
+
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContent withMediaType(GoogleCloudDialogflowV2beta1IntentMessageMediaContentMediaTypeEnum mediaType) {
         this.mediaType = mediaType;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageMediaContent(){}
 }

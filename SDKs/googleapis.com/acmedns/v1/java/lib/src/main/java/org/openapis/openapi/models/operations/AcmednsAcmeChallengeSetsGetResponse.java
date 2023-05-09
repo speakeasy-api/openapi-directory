@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcmednsAcmeChallengeSetsGetResponse {
@@ -12,6 +13,7 @@ public class AcmednsAcmeChallengeSetsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.AcmeChallengeSet acmeChallengeSet;
+
     public AcmednsAcmeChallengeSetsGetResponse withAcmeChallengeSet(org.openapis.openapi.models.shared.AcmeChallengeSet acmeChallengeSet) {
         this.acmeChallengeSet = acmeChallengeSet;
         return this;
@@ -19,6 +21,7 @@ public class AcmednsAcmeChallengeSetsGetResponse {
     
     
     public String contentType;
+
     public AcmednsAcmeChallengeSetsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AcmednsAcmeChallengeSetsGetResponse {
     
     
     public Integer statusCode;
+
     public AcmednsAcmeChallengeSetsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AcmednsAcmeChallengeSetsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcmednsAcmeChallengeSetsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AcmednsAcmeChallengeSetsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

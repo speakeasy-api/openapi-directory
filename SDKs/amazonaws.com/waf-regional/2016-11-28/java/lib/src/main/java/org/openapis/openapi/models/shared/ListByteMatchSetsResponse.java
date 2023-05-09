@@ -15,6 +15,7 @@ public class ListByteMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ByteMatchSets")
     public ByteMatchSetSummary[] byteMatchSets;
+
     public ListByteMatchSetsResponse withByteMatchSets(ByteMatchSetSummary[] byteMatchSets) {
         this.byteMatchSets = byteMatchSets;
         return this;
@@ -23,9 +24,11 @@ public class ListByteMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListByteMatchSetsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListByteMatchSetsResponse(){}
 }

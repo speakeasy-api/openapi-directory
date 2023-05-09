@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1BusinessContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public GoogleCloudDatacatalogV1Contacts contacts;
+
     public GoogleCloudDatacatalogV1BusinessContext withContacts(GoogleCloudDatacatalogV1Contacts contacts) {
         this.contacts = contacts;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1BusinessContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryOverview")
     public GoogleCloudDatacatalogV1EntryOverview entryOverview;
+
     public GoogleCloudDatacatalogV1BusinessContext withEntryOverview(GoogleCloudDatacatalogV1EntryOverview entryOverview) {
         this.entryOverview = entryOverview;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1BusinessContext(){}
 }

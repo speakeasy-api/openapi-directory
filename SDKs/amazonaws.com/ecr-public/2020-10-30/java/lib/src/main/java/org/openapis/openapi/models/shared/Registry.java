@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Registry {
     @JsonProperty("aliases")
     public RegistryAlias[] aliases;
+
     public Registry withAliases(RegistryAlias[] aliases) {
         this.aliases = aliases;
         return this;
@@ -19,6 +20,7 @@ public class Registry {
     
     @JsonProperty("registryArn")
     public String registryArn;
+
     public Registry withRegistryArn(String registryArn) {
         this.registryArn = registryArn;
         return this;
@@ -26,6 +28,7 @@ public class Registry {
     
     @JsonProperty("registryId")
     public String registryId;
+
     public Registry withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -33,6 +36,7 @@ public class Registry {
     
     @JsonProperty("registryUri")
     public String registryUri;
+
     public Registry withRegistryUri(String registryUri) {
         this.registryUri = registryUri;
         return this;
@@ -40,9 +44,17 @@ public class Registry {
     
     @JsonProperty("verified")
     public Boolean verified;
+
     public Registry withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public Registry(@JsonProperty("aliases") RegistryAlias[] aliases, @JsonProperty("registryArn") String registryArn, @JsonProperty("registryId") String registryId, @JsonProperty("registryUri") String registryUri, @JsonProperty("verified") Boolean verified) {
+        this.aliases = aliases;
+        this.registryArn = registryArn;
+        this.registryId = registryId;
+        this.registryUri = registryUri;
+        this.verified = verified;
+  }
 }

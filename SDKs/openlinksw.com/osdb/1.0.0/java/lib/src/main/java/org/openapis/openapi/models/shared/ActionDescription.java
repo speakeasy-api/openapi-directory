@@ -14,6 +14,7 @@ public class ActionDescription {
      */
     @JsonProperty("action_id")
     public String actionId;
+
     public ActionDescription withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -25,6 +26,7 @@ public class ActionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ActionDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -32,9 +34,14 @@ public class ActionDescription {
     
     @JsonProperty("entry_point")
     public EntryPoint entryPoint;
+
     public ActionDescription withEntryPoint(EntryPoint entryPoint) {
         this.entryPoint = entryPoint;
         return this;
     }
     
+    public ActionDescription(@JsonProperty("action_id") String actionId, @JsonProperty("entry_point") EntryPoint entryPoint) {
+        this.actionId = actionId;
+        this.entryPoint = entryPoint;
+  }
 }

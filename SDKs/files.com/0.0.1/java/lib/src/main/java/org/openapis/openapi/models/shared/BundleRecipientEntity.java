@@ -23,6 +23,7 @@ public class BundleRecipientEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public String company;
+
     public BundleRecipientEntity withCompany(String company) {
         this.company = company;
         return this;
@@ -34,6 +35,7 @@ public class BundleRecipientEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BundleRecipientEntity withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +47,7 @@ public class BundleRecipientEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public BundleRecipientEntity withNote(String note) {
         this.note = note;
         return this;
@@ -56,6 +59,7 @@ public class BundleRecipientEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient")
     public String recipient;
+
     public BundleRecipientEntity withRecipient(String recipient) {
         this.recipient = recipient;
         return this;
@@ -69,9 +73,11 @@ public class BundleRecipientEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("sent_at")
     public OffsetDateTime sentAt;
+
     public BundleRecipientEntity withSentAt(OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
     }
     
+    public BundleRecipientEntity(){}
 }

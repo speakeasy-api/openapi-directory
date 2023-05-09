@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterMemberList {
     
     public String dbClusterParameterGroupStatus;
+
     public DBClusterMemberList withDBClusterParameterGroupStatus(String dbClusterParameterGroupStatus) {
         this.dbClusterParameterGroupStatus = dbClusterParameterGroupStatus;
         return this;
@@ -19,6 +20,7 @@ public class DBClusterMemberList {
     
     
     public String dbInstanceIdentifier;
+
     public DBClusterMemberList withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class DBClusterMemberList {
     
     
     public Boolean isClusterWriter;
+
     public DBClusterMemberList withIsClusterWriter(Boolean isClusterWriter) {
         this.isClusterWriter = isClusterWriter;
         return this;
@@ -33,9 +36,11 @@ public class DBClusterMemberList {
     
     
     public Long promotionTier;
+
     public DBClusterMemberList withPromotionTier(Long promotionTier) {
         this.promotionTier = promotionTier;
         return this;
     }
     
+    public DBClusterMemberList(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferenceExecutionConfig {
     @JsonProperty("Mode")
     public InferenceExecutionModeEnum mode;
+
     public InferenceExecutionConfig withMode(InferenceExecutionModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public InferenceExecutionConfig(@JsonProperty("Mode") InferenceExecutionModeEnum mode) {
+        this.mode = mode;
+  }
 }

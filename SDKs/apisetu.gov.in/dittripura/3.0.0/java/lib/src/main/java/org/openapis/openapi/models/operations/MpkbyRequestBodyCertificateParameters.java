@@ -12,6 +12,7 @@ public class MpkbyRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public MpkbyRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
@@ -22,9 +23,14 @@ public class MpkbyRequestBodyCertificateParameters {
      */
     @JsonProperty("TokenNo")
     public String tokenNo;
+
     public MpkbyRequestBodyCertificateParameters withTokenNo(String tokenNo) {
         this.tokenNo = tokenNo;
         return this;
     }
     
+    public MpkbyRequestBodyCertificateParameters(@JsonProperty("RefNo") String refNo, @JsonProperty("TokenNo") String tokenNo) {
+        this.refNo = refNo;
+        this.tokenNo = tokenNo;
+  }
 }

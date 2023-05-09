@@ -12,9 +12,11 @@ public class GetApiV1FollowRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1FollowRequestsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetApiV1FollowRequestsRequest(){}
 }

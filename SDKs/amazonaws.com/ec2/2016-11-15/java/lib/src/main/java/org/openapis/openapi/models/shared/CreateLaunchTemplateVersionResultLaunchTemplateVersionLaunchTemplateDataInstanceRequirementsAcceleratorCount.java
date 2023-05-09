@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorCount {
     
     public Long max;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Long min;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorCount(){}
 }

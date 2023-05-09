@@ -18,6 +18,7 @@ public class CodeScanningSarifsStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyses_url")
     public String analysesUrl;
+
     public CodeScanningSarifsStatus withAnalysesUrl(String analysesUrl) {
         this.analysesUrl = analysesUrl;
         return this;
@@ -29,6 +30,7 @@ public class CodeScanningSarifsStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public String[] errors;
+
     public CodeScanningSarifsStatus withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class CodeScanningSarifsStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_status")
     public CodeScanningSarifsStatusProcessingStatusEnum processingStatus;
+
     public CodeScanningSarifsStatus withProcessingStatus(CodeScanningSarifsStatusProcessingStatusEnum processingStatus) {
         this.processingStatus = processingStatus;
         return this;
     }
     
+    public CodeScanningSarifsStatus(){}
 }

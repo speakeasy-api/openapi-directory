@@ -15,6 +15,7 @@ public class QuoteGeneratingInvoiceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteId")
     public Long quoteId;
+
     public QuoteGeneratingInvoiceDto withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -23,9 +24,11 @@ public class QuoteGeneratingInvoiceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saleInvoice")
     public SalesInvoiceCreditNoteDto saleInvoice;
+
     public QuoteGeneratingInvoiceDto withSaleInvoice(SalesInvoiceCreditNoteDto saleInvoice) {
         this.saleInvoice = saleInvoice;
         return this;
     }
     
+    public QuoteGeneratingInvoiceDto(){}
 }

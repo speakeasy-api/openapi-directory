@@ -14,6 +14,7 @@ public class GetClipRequestBody {
      */
     @JsonProperty("ClipFragmentSelector")
     public GetClipRequestBodyClipFragmentSelector clipFragmentSelector;
+
     public GetClipRequestBody withClipFragmentSelector(GetClipRequestBodyClipFragmentSelector clipFragmentSelector) {
         this.clipFragmentSelector = clipFragmentSelector;
         return this;
@@ -25,6 +26,7 @@ public class GetClipRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetClipRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -36,9 +38,13 @@ public class GetClipRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public GetClipRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public GetClipRequestBody(@JsonProperty("ClipFragmentSelector") GetClipRequestBodyClipFragmentSelector clipFragmentSelector) {
+        this.clipFragmentSelector = clipFragmentSelector;
+  }
 }

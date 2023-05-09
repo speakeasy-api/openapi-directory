@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTasksResponse {
@@ -12,6 +13,7 @@ public class ListTasksResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTasksResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTasksResponse {
     
     
     public String contentType;
+
     public ListTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTasksResponse {
      */
     
     public Object internalServerException;
+
     public ListTasksResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTasksOutput listTasksOutput;
+
     public ListTasksResponse withListTasksOutput(org.openapis.openapi.models.shared.ListTasksOutput listTasksOutput) {
         this.listTasksOutput = listTasksOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListTasksResponse {
     
     
     public Integer statusCode;
+
     public ListTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTasksResponse {
      */
     
     public Object throttlingException;
+
     public ListTasksResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListTasksResponse {
      */
     
     public Object validationException;
+
     public ListTasksResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

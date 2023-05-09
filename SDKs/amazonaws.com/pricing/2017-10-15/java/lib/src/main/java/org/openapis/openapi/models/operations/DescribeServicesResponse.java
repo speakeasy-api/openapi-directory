@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeServicesResponse {
     
     public String contentType;
+
     public DescribeServicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeServicesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeServicesResponse describeServicesResponse;
+
     public DescribeServicesResponse withDescribeServicesResponse(org.openapis.openapi.models.shared.DescribeServicesResponse describeServicesResponse) {
         this.describeServicesResponse = describeServicesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeServicesResponse {
      */
     
     public Object expiredNextTokenException;
+
     public DescribeServicesResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeServicesResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeServicesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeServicesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeServicesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeServicesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeServicesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeServicesResponse {
      */
     
     public Object notFoundException;
+
     public DescribeServicesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeServicesResponse {
     
     
     public Integer statusCode;
+
     public DescribeServicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeServicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeServicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeServicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

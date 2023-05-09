@@ -15,9 +15,11 @@ public class StartMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartMailboxExportJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartMailboxExportJobResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EstimationApiAllRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.page")
     public Integer queryOptionsPage;
+
     public EstimationApiAllRequest withQueryOptionsPage(Integer queryOptionsPage) {
         this.queryOptionsPage = queryOptionsPage;
         return this;
@@ -16,6 +18,7 @@ public class EstimationApiAllRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.pageSize")
     public Integer queryOptionsPageSize;
+
     public EstimationApiAllRequest withQueryOptionsPageSize(Integer queryOptionsPageSize) {
         this.queryOptionsPageSize = queryOptionsPageSize;
         return this;
@@ -23,6 +26,7 @@ public class EstimationApiAllRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public EstimationApiAllRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -30,9 +34,14 @@ public class EstimationApiAllRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public EstimationApiAllRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public EstimationApiAllRequest(@JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

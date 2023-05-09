@@ -14,6 +14,7 @@ public class CreateComputeEnvironmentRequestBody {
      */
     @JsonProperty("computeEnvironmentName")
     public String computeEnvironmentName;
+
     public CreateComputeEnvironmentRequestBody withComputeEnvironmentName(String computeEnvironmentName) {
         this.computeEnvironmentName = computeEnvironmentName;
         return this;
@@ -25,6 +26,7 @@ public class CreateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeResources")
     public CreateComputeEnvironmentRequestBodyComputeResources computeResources;
+
     public CreateComputeEnvironmentRequestBody withComputeResources(CreateComputeEnvironmentRequestBodyComputeResources computeResources) {
         this.computeResources = computeResources;
         return this;
@@ -36,6 +38,7 @@ public class CreateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksConfiguration")
     public CreateComputeEnvironmentRequestBodyEksConfiguration eksConfiguration;
+
     public CreateComputeEnvironmentRequestBody withEksConfiguration(CreateComputeEnvironmentRequestBodyEksConfiguration eksConfiguration) {
         this.eksConfiguration = eksConfiguration;
         return this;
@@ -47,6 +50,7 @@ public class CreateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRole")
     public String serviceRole;
+
     public CreateComputeEnvironmentRequestBody withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -58,6 +62,7 @@ public class CreateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CreateComputeEnvironmentRequestBodyStateEnum state;
+
     public CreateComputeEnvironmentRequestBody withState(CreateComputeEnvironmentRequestBodyStateEnum state) {
         this.state = state;
         return this;
@@ -69,6 +74,7 @@ public class CreateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateComputeEnvironmentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -79,6 +85,7 @@ public class CreateComputeEnvironmentRequestBody {
      */
     @JsonProperty("type")
     public CreateComputeEnvironmentRequestBodyTypeEnum type;
+
     public CreateComputeEnvironmentRequestBody withType(CreateComputeEnvironmentRequestBodyTypeEnum type) {
         this.type = type;
         return this;
@@ -90,9 +97,14 @@ public class CreateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmanagedvCpus")
     public Long unmanagedvCpus;
+
     public CreateComputeEnvironmentRequestBody withUnmanagedvCpus(Long unmanagedvCpus) {
         this.unmanagedvCpus = unmanagedvCpus;
         return this;
     }
     
+    public CreateComputeEnvironmentRequestBody(@JsonProperty("computeEnvironmentName") String computeEnvironmentName, @JsonProperty("type") CreateComputeEnvironmentRequestBodyTypeEnum type) {
+        this.computeEnvironmentName = computeEnvironmentName;
+        this.type = type;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateManagedInstanceRoleResponse {
     
     public String contentType;
+
     public UpdateManagedInstanceRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateManagedInstanceRoleResponse {
      */
     
     public Object internalServerError;
+
     public UpdateManagedInstanceRoleResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateManagedInstanceRoleResponse {
      */
     
     public Object invalidInstanceId;
+
     public UpdateManagedInstanceRoleResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -36,6 +40,7 @@ public class UpdateManagedInstanceRoleResponse {
     
     
     public Integer statusCode;
+
     public UpdateManagedInstanceRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateManagedInstanceRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateManagedInstanceRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateManagedInstanceRoleResponse {
      */
     
     public java.util.Map<String, Object> updateManagedInstanceRoleResult;
+
     public UpdateManagedInstanceRoleResponse withUpdateManagedInstanceRoleResult(java.util.Map<String, Object> updateManagedInstanceRoleResult) {
         this.updateManagedInstanceRoleResult = updateManagedInstanceRoleResult;
         return this;
     }
     
+    public UpdateManagedInstanceRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

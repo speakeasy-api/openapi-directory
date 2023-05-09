@@ -18,6 +18,7 @@ public class OSPolicyResourceFileGcs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public OSPolicyResourceFileGcs withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceFileGcs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generation")
     public String generation;
+
     public OSPolicyResourceFileGcs withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -40,9 +42,11 @@ public class OSPolicyResourceFileGcs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public OSPolicyResourceFileGcs withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public OSPolicyResourceFileGcs(){}
 }

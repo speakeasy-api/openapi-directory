@@ -22,6 +22,7 @@ public class ResourcePolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ResourcePolicy withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -30,6 +31,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyDocument")
     public String policyDocument;
+
     public ResourcePolicy withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -38,6 +40,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyName")
     public String policyName;
+
     public ResourcePolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -46,9 +49,11 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRevisionId")
     public String policyRevisionId;
+
     public ResourcePolicy withPolicyRevisionId(String policyRevisionId) {
         this.policyRevisionId = policyRevisionId;
         return this;
     }
     
+    public ResourcePolicy(){}
 }

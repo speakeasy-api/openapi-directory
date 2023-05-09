@@ -12,9 +12,13 @@ public class AccountStyleGuideUploadRequest {
      */
     @JsonProperty("styleguide")
     public byte[] styleguide;
+
     public AccountStyleGuideUploadRequest withStyleguide(byte[] styleguide) {
         this.styleguide = styleguide;
         return this;
     }
     
+    public AccountStyleGuideUploadRequest(@JsonProperty("styleguide") byte[] styleguide) {
+        this.styleguide = styleguide;
+  }
 }

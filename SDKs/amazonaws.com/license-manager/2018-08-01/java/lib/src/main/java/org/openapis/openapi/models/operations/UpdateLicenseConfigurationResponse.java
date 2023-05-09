@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLicenseConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateLicenseConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLicenseConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLicenseConfigurationResponse {
      */
     
     public Object authorizationException;
+
     public UpdateLicenseConfigurationResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLicenseConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateLicenseConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLicenseConfigurationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateLicenseConfigurationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateLicenseConfigurationResponse {
      */
     
     public Object rateLimitExceededException;
+
     public UpdateLicenseConfigurationResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateLicenseConfigurationResponse {
      */
     
     public Object serverInternalException;
+
     public UpdateLicenseConfigurationResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateLicenseConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateLicenseConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateLicenseConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLicenseConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateLicenseConfigurationResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public UpdateLicenseConfigurationResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateLicenseConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateLicenseConfigurationResponse;
+
     public UpdateLicenseConfigurationResponse withUpdateLicenseConfigurationResponse(java.util.Map<String, Object> updateLicenseConfigurationResponse) {
         this.updateLicenseConfigurationResponse = updateLicenseConfigurationResponse;
         return this;
     }
     
+    public UpdateLicenseConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

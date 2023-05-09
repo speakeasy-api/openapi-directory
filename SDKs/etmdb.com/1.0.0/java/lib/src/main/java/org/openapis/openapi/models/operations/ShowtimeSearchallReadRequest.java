@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShowtimeSearchallReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=param")
     public String param;
+
     public ShowtimeSearchallReadRequest withParam(String param) {
         this.param = param;
         return this;
     }
     
+    public ShowtimeSearchallReadRequest(@JsonProperty("param") String param) {
+        this.param = param;
+  }
 }

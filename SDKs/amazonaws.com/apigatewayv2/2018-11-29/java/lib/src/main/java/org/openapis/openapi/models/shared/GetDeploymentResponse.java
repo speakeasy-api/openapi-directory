@@ -20,6 +20,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoDeployed")
     public Boolean autoDeployed;
+
     public GetDeploymentResponse withAutoDeployed(Boolean autoDeployed) {
         this.autoDeployed = autoDeployed;
         return this;
@@ -30,6 +31,7 @@ public class GetDeploymentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public GetDeploymentResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -38,6 +40,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public GetDeploymentResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -46,6 +49,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatus")
     public GetDeploymentResponseDeploymentStatusEnum deploymentStatus;
+
     public GetDeploymentResponse withDeploymentStatus(GetDeploymentResponseDeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -54,6 +58,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public GetDeploymentResponse withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -62,9 +67,11 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetDeploymentResponse withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetDeploymentResponse(){}
 }

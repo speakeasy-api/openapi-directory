@@ -15,9 +15,11 @@ public class ModelDashboardIndicatorAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public ModelDashboardIndicatorAction withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ModelDashboardIndicatorAction(){}
 }

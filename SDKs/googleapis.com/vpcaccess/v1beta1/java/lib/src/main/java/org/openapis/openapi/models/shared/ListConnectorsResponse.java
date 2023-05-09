@@ -18,6 +18,7 @@ public class ListConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectors")
     public Connector[] connectors;
+
     public ListConnectorsResponse withConnectors(Connector[] connectors) {
         this.connectors = connectors;
         return this;
@@ -29,9 +30,11 @@ public class ListConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListConnectorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListConnectorsResponse(){}
 }

@@ -15,9 +15,11 @@ public class CapacityUsageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CIDRs")
     public CIDRSummary cidRs;
+
     public CapacityUsageSummary withCIDRs(CIDRSummary cidRs) {
         this.cidRs = cidRs;
         return this;
     }
     
+    public CapacityUsageSummary(){}
 }

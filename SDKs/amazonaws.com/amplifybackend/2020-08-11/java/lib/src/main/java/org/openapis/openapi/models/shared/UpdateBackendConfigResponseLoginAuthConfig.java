@@ -15,6 +15,7 @@ public class UpdateBackendConfigResponseLoginAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsCognitoIdentityPoolId")
     public String awsCognitoIdentityPoolId;
+
     public UpdateBackendConfigResponseLoginAuthConfig withAwsCognitoIdentityPoolId(String awsCognitoIdentityPoolId) {
         this.awsCognitoIdentityPoolId = awsCognitoIdentityPoolId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBackendConfigResponseLoginAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsCognitoRegion")
     public String awsCognitoRegion;
+
     public UpdateBackendConfigResponseLoginAuthConfig withAwsCognitoRegion(String awsCognitoRegion) {
         this.awsCognitoRegion = awsCognitoRegion;
         return this;
@@ -31,6 +33,7 @@ public class UpdateBackendConfigResponseLoginAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsUserPoolsId")
     public String awsUserPoolsId;
+
     public UpdateBackendConfigResponseLoginAuthConfig withAwsUserPoolsId(String awsUserPoolsId) {
         this.awsUserPoolsId = awsUserPoolsId;
         return this;
@@ -39,9 +42,11 @@ public class UpdateBackendConfigResponseLoginAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsUserPoolsWebClientId")
     public String awsUserPoolsWebClientId;
+
     public UpdateBackendConfigResponseLoginAuthConfig withAwsUserPoolsWebClientId(String awsUserPoolsWebClientId) {
         this.awsUserPoolsWebClientId = awsUserPoolsWebClientId;
         return this;
     }
     
+    public UpdateBackendConfigResponseLoginAuthConfig(){}
 }

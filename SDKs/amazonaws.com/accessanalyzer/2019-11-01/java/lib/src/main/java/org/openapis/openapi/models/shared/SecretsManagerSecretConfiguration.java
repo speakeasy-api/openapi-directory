@@ -15,6 +15,7 @@ public class SecretsManagerSecretConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public SecretsManagerSecretConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,9 +24,11 @@ public class SecretsManagerSecretConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretPolicy")
     public String secretPolicy;
+
     public SecretsManagerSecretConfiguration withSecretPolicy(String secretPolicy) {
         this.secretPolicy = secretPolicy;
         return this;
     }
     
+    public SecretsManagerSecretConfiguration(){}
 }

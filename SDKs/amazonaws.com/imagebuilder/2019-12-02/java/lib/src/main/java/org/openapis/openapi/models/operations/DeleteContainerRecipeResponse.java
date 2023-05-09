@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteContainerRecipeResponse {
@@ -12,6 +13,7 @@ public class DeleteContainerRecipeResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public DeleteContainerRecipeResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteContainerRecipeResponse {
      */
     
     public Object clientException;
+
     public DeleteContainerRecipeResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteContainerRecipeResponse {
     
     
     public String contentType;
+
     public DeleteContainerRecipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteContainerRecipeResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteContainerRecipeResponse deleteContainerRecipeResponse;
+
     public DeleteContainerRecipeResponse withDeleteContainerRecipeResponse(org.openapis.openapi.models.shared.DeleteContainerRecipeResponse deleteContainerRecipeResponse) {
         this.deleteContainerRecipeResponse = deleteContainerRecipeResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteContainerRecipeResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteContainerRecipeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteContainerRecipeResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteContainerRecipeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteContainerRecipeResponse {
      */
     
     public Object serviceException;
+
     public DeleteContainerRecipeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteContainerRecipeResponse {
     
     
     public Integer statusCode;
+
     public DeleteContainerRecipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteContainerRecipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteContainerRecipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteContainerRecipeResponse {
      */
     
     public Object resourceDependencyException;
+
     public DeleteContainerRecipeResponse withResourceDependencyException(Object resourceDependencyException) {
         this.resourceDependencyException = resourceDependencyException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteContainerRecipeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteContainerRecipeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteContainerRecipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

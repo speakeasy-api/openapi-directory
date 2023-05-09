@@ -15,6 +15,7 @@ public class DiscoverPollEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public DiscoverPollEndpointResponse withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -23,6 +24,7 @@ public class DiscoverPollEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConnectEndpoint")
     public String serviceConnectEndpoint;
+
     public DiscoverPollEndpointResponse withServiceConnectEndpoint(String serviceConnectEndpoint) {
         this.serviceConnectEndpoint = serviceConnectEndpoint;
         return this;
@@ -31,9 +33,11 @@ public class DiscoverPollEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telemetryEndpoint")
     public String telemetryEndpoint;
+
     public DiscoverPollEndpointResponse withTelemetryEndpoint(String telemetryEndpoint) {
         this.telemetryEndpoint = telemetryEndpoint;
         return this;
     }
     
+    public DiscoverPollEndpointResponse(){}
 }

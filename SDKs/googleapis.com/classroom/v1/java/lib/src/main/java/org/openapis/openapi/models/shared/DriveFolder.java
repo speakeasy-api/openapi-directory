@@ -18,6 +18,7 @@ public class DriveFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternateLink")
     public String alternateLink;
+
     public DriveFolder withAlternateLink(String alternateLink) {
         this.alternateLink = alternateLink;
         return this;
@@ -29,6 +30,7 @@ public class DriveFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DriveFolder withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class DriveFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DriveFolder withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DriveFolder(){}
 }

@@ -12,6 +12,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_thread")
     public String thread;
+
     public ActionResourceAttributesInput withThread(String thread) {
         this.thread = thread;
         return this;
@@ -20,6 +21,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public java.util.Map<String, Object> details;
+
     public ActionResourceAttributesInput withDetails(java.util.Map<String, Object> details) {
         this.details = details;
         return this;
@@ -27,6 +29,7 @@ public class ActionResourceAttributesInput {
     
     @JsonProperty("effective_from")
     public String effectiveFrom;
+
     public ActionResourceAttributesInput withEffectiveFrom(String effectiveFrom) {
         this.effectiveFrom = effectiveFrom;
         return this;
@@ -35,6 +38,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective_to")
     public String effectiveTo;
+
     public ActionResourceAttributesInput withEffectiveTo(String effectiveTo) {
         this.effectiveTo = effectiveTo;
         return this;
@@ -43,6 +47,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency_goal")
     public ActionResourceAttributesFrequencyGoal frequencyGoal;
+
     public ActionResourceAttributesInput withFrequencyGoal(ActionResourceAttributesFrequencyGoal frequencyGoal) {
         this.frequencyGoal = frequencyGoal;
         return this;
@@ -51,6 +56,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifiers")
     public Identifier[] identifiers;
+
     public ActionResourceAttributesInput withIdentifiers(Identifier[] identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -59,6 +65,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intake")
     public java.util.Map<String, Object> intake;
+
     public ActionResourceAttributesInput withIntake(java.util.Map<String, Object> intake) {
         this.intake = intake;
         return this;
@@ -67,6 +74,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric_required")
     public Boolean metricRequired;
+
     public ActionResourceAttributesInput withMetricRequired(Boolean metricRequired) {
         this.metricRequired = metricRequired;
         return this;
@@ -75,6 +83,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public ActionMetric[] metrics;
+
     public ActionResourceAttributesInput withMetrics(ActionMetric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -82,6 +91,7 @@ public class ActionResourceAttributesInput {
     
     @JsonProperty("title")
     public String title;
+
     public ActionResourceAttributesInput withTitle(String title) {
         this.title = title;
         return this;
@@ -90,6 +100,7 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking")
     public Boolean tracking;
+
     public ActionResourceAttributesInput withTracking(Boolean tracking) {
         this.tracking = tracking;
         return this;
@@ -97,6 +108,7 @@ public class ActionResourceAttributesInput {
     
     @JsonProperty("type")
     public ActionResourceAttributesTypeEnum type;
+
     public ActionResourceAttributesInput withType(ActionResourceAttributesTypeEnum type) {
         this.type = type;
         return this;
@@ -105,9 +117,15 @@ public class ActionResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windows")
     public ActionWindow[] windows;
+
     public ActionResourceAttributesInput withWindows(ActionWindow[] windows) {
         this.windows = windows;
         return this;
     }
     
+    public ActionResourceAttributesInput(@JsonProperty("effective_from") String effectiveFrom, @JsonProperty("title") String title, @JsonProperty("type") ActionResourceAttributesTypeEnum type) {
+        this.effectiveFrom = effectiveFrom;
+        this.title = title;
+        this.type = type;
+  }
 }

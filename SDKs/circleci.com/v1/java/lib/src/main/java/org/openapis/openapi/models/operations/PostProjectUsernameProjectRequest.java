@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostProjectUsernameProjectRequestBody requestBody;
+
     public PostProjectUsernameProjectRequest withRequestBody(PostProjectUsernameProjectRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -20,6 +22,7 @@ public class PostProjectUsernameProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public PostProjectUsernameProjectRequest withProject(String project) {
         this.project = project;
         return this;
@@ -31,9 +34,14 @@ public class PostProjectUsernameProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public PostProjectUsernameProjectRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostProjectUsernameProjectRequest(@JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.project = project;
+        this.username = username;
+  }
 }

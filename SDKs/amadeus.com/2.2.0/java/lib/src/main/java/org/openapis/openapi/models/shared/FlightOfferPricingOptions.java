@@ -15,6 +15,7 @@ public class FlightOfferPricingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fareType")
     public PricingOptionsFareTypeEnum[] fareType;
+
     public FlightOfferPricingOptions withFareType(PricingOptionsFareTypeEnum[] fareType) {
         this.fareType = fareType;
         return this;
@@ -26,6 +27,7 @@ public class FlightOfferPricingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedCheckedBagsOnly")
     public Boolean includedCheckedBagsOnly;
+
     public FlightOfferPricingOptions withIncludedCheckedBagsOnly(Boolean includedCheckedBagsOnly) {
         this.includedCheckedBagsOnly = includedCheckedBagsOnly;
         return this;
@@ -37,6 +39,7 @@ public class FlightOfferPricingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noPenaltyFare")
     public Boolean noPenaltyFare;
+
     public FlightOfferPricingOptions withNoPenaltyFare(Boolean noPenaltyFare) {
         this.noPenaltyFare = noPenaltyFare;
         return this;
@@ -48,6 +51,7 @@ public class FlightOfferPricingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noRestrictionFare")
     public Boolean noRestrictionFare;
+
     public FlightOfferPricingOptions withNoRestrictionFare(Boolean noRestrictionFare) {
         this.noRestrictionFare = noRestrictionFare;
         return this;
@@ -59,9 +63,11 @@ public class FlightOfferPricingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundableFare")
     public Boolean refundableFare;
+
     public FlightOfferPricingOptions withRefundableFare(Boolean refundableFare) {
         this.refundableFare = refundableFare;
         return this;
     }
     
+    public FlightOfferPricingOptions(){}
 }

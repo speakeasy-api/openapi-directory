@@ -20,6 +20,7 @@ public class GatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public GatewayDetails withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
@@ -28,6 +29,7 @@ public class GatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayDisplayName")
     public String gatewayDisplayName;
+
     public GatewayDetails withGatewayDisplayName(String gatewayDisplayName) {
         this.gatewayDisplayName = gatewayDisplayName;
         return this;
@@ -36,6 +38,7 @@ public class GatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayType")
     public GatewayTypeEnum gatewayType;
+
     public GatewayDetails withGatewayType(GatewayTypeEnum gatewayType) {
         this.gatewayType = gatewayType;
         return this;
@@ -44,6 +47,7 @@ public class GatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorId")
     public String hypervisorId;
+
     public GatewayDetails withHypervisorId(String hypervisorId) {
         this.hypervisorId = hypervisorId;
         return this;
@@ -54,6 +58,7 @@ public class GatewayDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSeenTime")
     public OffsetDateTime lastSeenTime;
+
     public GatewayDetails withLastSeenTime(OffsetDateTime lastSeenTime) {
         this.lastSeenTime = lastSeenTime;
         return this;
@@ -62,6 +67,7 @@ public class GatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaintenanceStartTime")
     public MaintenanceStartTime maintenanceStartTime;
+
     public GatewayDetails withMaintenanceStartTime(MaintenanceStartTime maintenanceStartTime) {
         this.maintenanceStartTime = maintenanceStartTime;
         return this;
@@ -72,6 +78,7 @@ public class GatewayDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NextUpdateAvailabilityTime")
     public OffsetDateTime nextUpdateAvailabilityTime;
+
     public GatewayDetails withNextUpdateAvailabilityTime(OffsetDateTime nextUpdateAvailabilityTime) {
         this.nextUpdateAvailabilityTime = nextUpdateAvailabilityTime;
         return this;
@@ -80,9 +87,11 @@ public class GatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpoint")
     public String vpcEndpoint;
+
     public GatewayDetails withVpcEndpoint(String vpcEndpoint) {
         this.vpcEndpoint = vpcEndpoint;
         return this;
     }
     
+    public GatewayDetails(){}
 }

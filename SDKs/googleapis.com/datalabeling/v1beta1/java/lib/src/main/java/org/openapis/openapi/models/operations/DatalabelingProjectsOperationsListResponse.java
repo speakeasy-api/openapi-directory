@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatalabelingProjectsOperationsListResponse {
     
     public String contentType;
+
     public DatalabelingProjectsOperationsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatalabelingProjectsOperationsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleLongrunningListOperationsResponse googleLongrunningListOperationsResponse;
+
     public DatalabelingProjectsOperationsListResponse withGoogleLongrunningListOperationsResponse(org.openapis.openapi.models.shared.GoogleLongrunningListOperationsResponse googleLongrunningListOperationsResponse) {
         this.googleLongrunningListOperationsResponse = googleLongrunningListOperationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatalabelingProjectsOperationsListResponse {
     
     
     public Integer statusCode;
+
     public DatalabelingProjectsOperationsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatalabelingProjectsOperationsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatalabelingProjectsOperationsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatalabelingProjectsOperationsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

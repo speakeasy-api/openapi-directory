@@ -18,9 +18,11 @@ public class MobileAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public MobileAppInput withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public MobileAppInput(){}
 }

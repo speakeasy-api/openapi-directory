@@ -15,6 +15,7 @@ public class ThumbnailConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordingMode")
     public RecordingModeEnum recordingMode;
+
     public ThumbnailConfiguration withRecordingMode(RecordingModeEnum recordingMode) {
         this.recordingMode = recordingMode;
         return this;
@@ -23,9 +24,11 @@ public class ThumbnailConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIntervalSeconds")
     public Long targetIntervalSeconds;
+
     public ThumbnailConfiguration withTargetIntervalSeconds(Long targetIntervalSeconds) {
         this.targetIntervalSeconds = targetIntervalSeconds;
         return this;
     }
     
+    public ThumbnailConfiguration(){}
 }

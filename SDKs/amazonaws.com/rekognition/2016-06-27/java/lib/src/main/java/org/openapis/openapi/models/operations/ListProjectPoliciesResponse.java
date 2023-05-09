@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProjectPoliciesResponse {
@@ -12,6 +13,7 @@ public class ListProjectPoliciesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListProjectPoliciesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListProjectPoliciesResponse {
     
     
     public String contentType;
+
     public ListProjectPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListProjectPoliciesResponse {
      */
     
     public Object internalServerError;
+
     public ListProjectPoliciesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class ListProjectPoliciesResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListProjectPoliciesResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListProjectPoliciesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListProjectPoliciesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ListProjectPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProjectPoliciesResponse listProjectPoliciesResponse;
+
     public ListProjectPoliciesResponse withListProjectPoliciesResponse(org.openapis.openapi.models.shared.ListProjectPoliciesResponse listProjectPoliciesResponse) {
         this.listProjectPoliciesResponse = listProjectPoliciesResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListProjectPoliciesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public ListProjectPoliciesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ListProjectPoliciesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProjectPoliciesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class ListProjectPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ListProjectPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListProjectPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProjectPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListProjectPoliciesResponse {
      */
     
     public Object throttlingException;
+
     public ListProjectPoliciesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListProjectPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

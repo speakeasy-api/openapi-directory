@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateChannelResponse {
@@ -12,6 +13,7 @@ public class CreateChannelResponse {
      */
     
     public Object channelAlreadyExistsException;
+
     public CreateChannelResponse withChannelAlreadyExistsException(Object channelAlreadyExistsException) {
         this.channelAlreadyExistsException = channelAlreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateChannelResponse {
      */
     
     public Object channelMaxLimitExceededException;
+
     public CreateChannelResponse withChannelMaxLimitExceededException(Object channelMaxLimitExceededException) {
         this.channelMaxLimitExceededException = channelMaxLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class CreateChannelResponse {
     
     
     public String contentType;
+
     public CreateChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateChannelResponse createChannelResponse;
+
     public CreateChannelResponse withCreateChannelResponse(org.openapis.openapi.models.shared.CreateChannelResponse createChannelResponse) {
         this.createChannelResponse = createChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateChannelResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public CreateChannelResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -59,6 +65,7 @@ public class CreateChannelResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public CreateChannelResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateChannelResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public CreateChannelResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -79,6 +87,7 @@ public class CreateChannelResponse {
      */
     
     public Object invalidEventDataStoreCategoryException;
+
     public CreateChannelResponse withInvalidEventDataStoreCategoryException(Object invalidEventDataStoreCategoryException) {
         this.invalidEventDataStoreCategoryException = invalidEventDataStoreCategoryException;
         return this;
@@ -89,6 +98,7 @@ public class CreateChannelResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateChannelResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -99,6 +109,7 @@ public class CreateChannelResponse {
      */
     
     public Object invalidSourceException;
+
     public CreateChannelResponse withInvalidSourceException(Object invalidSourceException) {
         this.invalidSourceException = invalidSourceException;
         return this;
@@ -109,6 +120,7 @@ public class CreateChannelResponse {
      */
     
     public Object invalidTagParameterException;
+
     public CreateChannelResponse withInvalidTagParameterException(Object invalidTagParameterException) {
         this.invalidTagParameterException = invalidTagParameterException;
         return this;
@@ -119,6 +131,7 @@ public class CreateChannelResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateChannelResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -126,6 +139,7 @@ public class CreateChannelResponse {
     
     
     public Integer statusCode;
+
     public CreateChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class CreateChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class CreateChannelResponse {
      */
     
     public Object tagsLimitExceededException;
+
     public CreateChannelResponse withTagsLimitExceededException(Object tagsLimitExceededException) {
         this.tagsLimitExceededException = tagsLimitExceededException;
         return this;
@@ -153,9 +169,14 @@ public class CreateChannelResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateChannelResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

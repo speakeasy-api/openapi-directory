@@ -57,11 +57,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEventResponse res = new org.openapis.openapi.models.operations.CreateEventResponse() {{
+        org.openapis.openapi.models.operations.CreateEventResponse res = new org.openapis.openapi.models.operations.CreateEventResponse(contentType, httpRes.statusCode()) {{
             createEvent201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -96,11 +94,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEventResponse res = new org.openapis.openapi.models.operations.DeleteEventResponse() {{
+        org.openapis.openapi.models.operations.DeleteEventResponse res = new org.openapis.openapi.models.operations.DeleteEventResponse(contentType, httpRes.statusCode()) {{
             deleteEvent200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventResponse res = new org.openapis.openapi.models.operations.GetEventResponse() {{
+        org.openapis.openapi.models.operations.GetEventResponse res = new org.openapis.openapi.models.operations.GetEventResponse(contentType, httpRes.statusCode()) {{
             eventRetrieved = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,7 +153,9 @@ public class Event {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetEventsResponse getEvents(org.openapis.openapi.models.operations.GetEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsRequest.class, baseUrl, "/conversations/{conversation_id}/events", request, null);
@@ -175,11 +171,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse() {{
+        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse(contentType, httpRes.statusCode()) {{
             eventRetrieveds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

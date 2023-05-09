@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteNamespaceResponse {
     
     public String contentType;
+
     public DeleteNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteNamespaceResponse deleteNamespaceResponse;
+
     public DeleteNamespaceResponse withDeleteNamespaceResponse(org.openapis.openapi.models.shared.DeleteNamespaceResponse deleteNamespaceResponse) {
         this.deleteNamespaceResponse = deleteNamespaceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteNamespaceResponse {
      */
     
     public Object duplicateRequest;
+
     public DeleteNamespaceResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -39,6 +43,7 @@ public class DeleteNamespaceResponse {
      */
     
     public Object invalidInput;
+
     public DeleteNamespaceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteNamespaceResponse {
      */
     
     public Object namespaceNotFound;
+
     public DeleteNamespaceResponse withNamespaceNotFound(Object namespaceNotFound) {
         this.namespaceNotFound = namespaceNotFound;
         return this;
@@ -56,6 +62,7 @@ public class DeleteNamespaceResponse {
     
     
     public Integer statusCode;
+
     public DeleteNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteNamespaceResponse {
      */
     
     public Object resourceInUse;
+
     public DeleteNamespaceResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
     }
     
+    public DeleteNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AvailabilityZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public AvailabilityZone withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -23,9 +24,11 @@ public class AvailabilityZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZoneName")
     public String zoneName;
+
     public AvailabilityZone withZoneName(String zoneName) {
         this.zoneName = zoneName;
         return this;
     }
     
+    public AvailabilityZone(){}
 }

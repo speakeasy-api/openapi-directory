@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceComplexBetRequest {
@@ -12,6 +13,7 @@ public class PlaceComplexBetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PlaceComplexBetRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class PlaceComplexBetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiSecret")
     public String apiSecret;
+
     public PlaceComplexBetRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class PlaceComplexBetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiTicket")
     public String apiTicket;
+
     public PlaceComplexBetRequest withApiTicket(String apiTicket) {
         this.apiTicket = apiTicket;
         return this;
@@ -42,6 +46,7 @@ public class PlaceComplexBetRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ComplexBetRequestBody complexBetRequestBody;
+
     public PlaceComplexBetRequest withComplexBetRequestBody(org.openapis.openapi.models.shared.ComplexBetRequestBody complexBetRequestBody) {
         this.complexBetRequestBody = complexBetRequestBody;
         return this;
@@ -52,6 +57,7 @@ public class PlaceComplexBetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=exclude")
     public String[] exclude;
+
     public PlaceComplexBetRequest withExclude(String[] exclude) {
         this.exclude = exclude;
         return this;
@@ -62,6 +68,7 @@ public class PlaceComplexBetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=fields")
     public String[] fields;
+
     public PlaceComplexBetRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -72,9 +79,16 @@ public class PlaceComplexBetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=include")
     public String[] include;
+
     public PlaceComplexBetRequest withInclude(String[] include) {
         this.include = include;
         return this;
     }
     
+    public PlaceComplexBetRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("apiSecret") String apiSecret, @JsonProperty("apiTicket") String apiTicket, @JsonProperty("complexBetRequestBody") org.openapis.openapi.models.shared.ComplexBetRequestBody complexBetRequestBody) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.apiTicket = apiTicket;
+        this.complexBetRequestBody = complexBetRequestBody;
+  }
 }

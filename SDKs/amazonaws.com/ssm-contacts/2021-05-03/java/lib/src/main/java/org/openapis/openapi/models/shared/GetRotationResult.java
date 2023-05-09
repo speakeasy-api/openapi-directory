@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetRotationResult {
     @JsonProperty("ContactIds")
     public String[] contactIds;
+
     public GetRotationResult withContactIds(String[] contactIds) {
         this.contactIds = contactIds;
         return this;
@@ -24,6 +25,7 @@ public class GetRotationResult {
     
     @JsonProperty("Name")
     public String name;
+
     public GetRotationResult withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class GetRotationResult {
     
     @JsonProperty("Recurrence")
     public RecurrenceSettings recurrence;
+
     public GetRotationResult withRecurrence(RecurrenceSettings recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -38,6 +41,7 @@ public class GetRotationResult {
     
     @JsonProperty("RotationArn")
     public String rotationArn;
+
     public GetRotationResult withRotationArn(String rotationArn) {
         this.rotationArn = rotationArn;
         return this;
@@ -47,6 +51,7 @@ public class GetRotationResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetRotationResult withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -54,9 +59,18 @@ public class GetRotationResult {
     
     @JsonProperty("TimeZoneId")
     public String timeZoneId;
+
     public GetRotationResult withTimeZoneId(String timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
     }
     
+    public GetRotationResult(@JsonProperty("ContactIds") String[] contactIds, @JsonProperty("Name") String name, @JsonProperty("Recurrence") RecurrenceSettings recurrence, @JsonProperty("RotationArn") String rotationArn, @JsonProperty("StartTime") OffsetDateTime startTime, @JsonProperty("TimeZoneId") String timeZoneId) {
+        this.contactIds = contactIds;
+        this.name = name;
+        this.recurrence = recurrence;
+        this.rotationArn = rotationArn;
+        this.startTime = startTime;
+        this.timeZoneId = timeZoneId;
+  }
 }

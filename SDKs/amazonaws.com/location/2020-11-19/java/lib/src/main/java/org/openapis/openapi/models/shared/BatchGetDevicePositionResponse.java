@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetDevicePositionResponse {
     @JsonProperty("DevicePositions")
     public DevicePosition[] devicePositions;
+
     public BatchGetDevicePositionResponse withDevicePositions(DevicePosition[] devicePositions) {
         this.devicePositions = devicePositions;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetDevicePositionResponse {
     
     @JsonProperty("Errors")
     public BatchGetDevicePositionError[] errors;
+
     public BatchGetDevicePositionResponse withErrors(BatchGetDevicePositionError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchGetDevicePositionResponse(@JsonProperty("DevicePositions") DevicePosition[] devicePositions, @JsonProperty("Errors") BatchGetDevicePositionError[] errors) {
+        this.devicePositions = devicePositions;
+        this.errors = errors;
+  }
 }

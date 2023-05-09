@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AgeUsdInfo - OK
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AgeUsdInfo {
     
     public Long reserveRatio;
+
     public AgeUsdInfo withReserveRatio(Long reserveRatio) {
         this.reserveRatio = reserveRatio;
         return this;
@@ -19,6 +20,7 @@ public class AgeUsdInfo {
     
     
     public Long sigRsvPrice;
+
     public AgeUsdInfo withSigRsvPrice(Long sigRsvPrice) {
         this.sigRsvPrice = sigRsvPrice;
         return this;
@@ -26,9 +28,15 @@ public class AgeUsdInfo {
     
     
     public Long sigUsdPrice;
+
     public AgeUsdInfo withSigUsdPrice(Long sigUsdPrice) {
         this.sigUsdPrice = sigUsdPrice;
         return this;
     }
     
+    public AgeUsdInfo(@JsonProperty("reserveRatio") Long reserveRatio, @JsonProperty("sigRsvPrice") Long sigRsvPrice, @JsonProperty("sigUsdPrice") Long sigUsdPrice) {
+        this.reserveRatio = reserveRatio;
+        this.sigRsvPrice = sigRsvPrice;
+        this.sigUsdPrice = sigUsdPrice;
+  }
 }

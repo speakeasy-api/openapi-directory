@@ -15,6 +15,7 @@ public class EffectivePatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Patch")
     public Patch patch;
+
     public EffectivePatch withPatch(Patch patch) {
         this.patch = patch;
         return this;
@@ -23,9 +24,11 @@ public class EffectivePatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchStatus")
     public PatchStatus patchStatus;
+
     public EffectivePatch withPatchStatus(PatchStatus patchStatus) {
         this.patchStatus = patchStatus;
         return this;
     }
     
+    public EffectivePatch(){}
 }

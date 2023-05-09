@@ -18,6 +18,7 @@ public class RRSetRoutingPolicyGeoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableFencing")
     public Boolean enableFencing;
+
     public RRSetRoutingPolicyGeoPolicy withEnableFencing(Boolean enableFencing) {
         this.enableFencing = enableFencing;
         return this;
@@ -29,6 +30,7 @@ public class RRSetRoutingPolicyGeoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RRSetRoutingPolicyGeoPolicyGeoPolicyItem[] items;
+
     public RRSetRoutingPolicyGeoPolicy withItems(RRSetRoutingPolicyGeoPolicyGeoPolicyItem[] items) {
         this.items = items;
         return this;
@@ -37,9 +39,11 @@ public class RRSetRoutingPolicyGeoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RRSetRoutingPolicyGeoPolicy withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public RRSetRoutingPolicyGeoPolicy(){}
 }

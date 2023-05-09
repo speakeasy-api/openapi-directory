@@ -14,6 +14,7 @@ public class CreateModerationRequest {
      */
     @JsonProperty("input")
     public Object input;
+
     public CreateModerationRequest withInput(Object input) {
         this.input = input;
         return this;
@@ -28,9 +29,13 @@ public class CreateModerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public CreateModerationRequest withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public CreateModerationRequest(@JsonProperty("input") Object input) {
+        this.input = input;
+  }
 }

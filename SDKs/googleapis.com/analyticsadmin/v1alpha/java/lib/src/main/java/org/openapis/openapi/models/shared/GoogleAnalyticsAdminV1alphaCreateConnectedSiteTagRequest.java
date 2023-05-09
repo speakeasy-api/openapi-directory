@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectedSiteTag")
     public GoogleAnalyticsAdminV1alphaConnectedSiteTag connectedSiteTag;
+
     public GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest withConnectedSiteTag(GoogleAnalyticsAdminV1alphaConnectedSiteTag connectedSiteTag) {
         this.connectedSiteTag = connectedSiteTag;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest withProperty(String property) {
         this.property = property;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest(){}
 }

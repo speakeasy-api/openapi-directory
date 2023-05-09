@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePresignedDomainUrlResponse {
     
     public String contentType;
+
     public CreatePresignedDomainUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePresignedDomainUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePresignedDomainUrlResponse createPresignedDomainUrlResponse;
+
     public CreatePresignedDomainUrlResponse withCreatePresignedDomainUrlResponse(org.openapis.openapi.models.shared.CreatePresignedDomainUrlResponse createPresignedDomainUrlResponse) {
         this.createPresignedDomainUrlResponse = createPresignedDomainUrlResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreatePresignedDomainUrlResponse {
      */
     
     public Object resourceNotFound;
+
     public CreatePresignedDomainUrlResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class CreatePresignedDomainUrlResponse {
     
     
     public Integer statusCode;
+
     public CreatePresignedDomainUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreatePresignedDomainUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePresignedDomainUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreatePresignedDomainUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

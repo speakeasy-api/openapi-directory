@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListKeyPhrasesDetectionJobsResponse {
     
     public String contentType;
+
     public ListKeyPhrasesDetectionJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListKeyPhrasesDetectionJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListKeyPhrasesDetectionJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListKeyPhrasesDetectionJobsResponse {
      */
     
     public Object invalidFilterException;
+
     public ListKeyPhrasesDetectionJobsResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListKeyPhrasesDetectionJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListKeyPhrasesDetectionJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListKeyPhrasesDetectionJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListKeyPhrasesDetectionJobsResponse listKeyPhrasesDetectionJobsResponse;
+
     public ListKeyPhrasesDetectionJobsResponse withListKeyPhrasesDetectionJobsResponse(org.openapis.openapi.models.shared.ListKeyPhrasesDetectionJobsResponse listKeyPhrasesDetectionJobsResponse) {
         this.listKeyPhrasesDetectionJobsResponse = listKeyPhrasesDetectionJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListKeyPhrasesDetectionJobsResponse {
     
     
     public Integer statusCode;
+
     public ListKeyPhrasesDetectionJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListKeyPhrasesDetectionJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListKeyPhrasesDetectionJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListKeyPhrasesDetectionJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListKeyPhrasesDetectionJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListKeyPhrasesDetectionJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

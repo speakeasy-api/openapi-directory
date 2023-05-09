@@ -18,9 +18,11 @@ public class ConfigManagementPolicyControllerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ConfigManagementPolicyControllerVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ConfigManagementPolicyControllerVersion(){}
 }

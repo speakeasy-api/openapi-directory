@@ -15,6 +15,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aggregate")
     public Aggregate aggregate;
+
     public CodeGenConfigurationNode withAggregate(Aggregate aggregate) {
         this.aggregate = aggregate;
         return this;
@@ -23,6 +24,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyMapping")
     public ApplyMapping applyMapping;
+
     public CodeGenConfigurationNode withApplyMapping(ApplyMapping applyMapping) {
         this.applyMapping = applyMapping;
         return this;
@@ -31,6 +33,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AthenaConnectorSource")
     public AthenaConnectorSource athenaConnectorSource;
+
     public CodeGenConfigurationNode withAthenaConnectorSource(AthenaConnectorSource athenaConnectorSource) {
         this.athenaConnectorSource = athenaConnectorSource;
         return this;
@@ -39,6 +42,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogDeltaSource")
     public CatalogDeltaSource catalogDeltaSource;
+
     public CodeGenConfigurationNode withCatalogDeltaSource(CatalogDeltaSource catalogDeltaSource) {
         this.catalogDeltaSource = catalogDeltaSource;
         return this;
@@ -47,6 +51,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogHudiSource")
     public CatalogHudiSource catalogHudiSource;
+
     public CodeGenConfigurationNode withCatalogHudiSource(CatalogHudiSource catalogHudiSource) {
         this.catalogHudiSource = catalogHudiSource;
         return this;
@@ -55,6 +60,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogKafkaSource")
     public CatalogKafkaSource catalogKafkaSource;
+
     public CodeGenConfigurationNode withCatalogKafkaSource(CatalogKafkaSource catalogKafkaSource) {
         this.catalogKafkaSource = catalogKafkaSource;
         return this;
@@ -63,6 +69,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogKinesisSource")
     public CatalogKinesisSource catalogKinesisSource;
+
     public CodeGenConfigurationNode withCatalogKinesisSource(CatalogKinesisSource catalogKinesisSource) {
         this.catalogKinesisSource = catalogKinesisSource;
         return this;
@@ -71,6 +78,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogSource")
     public CatalogSource catalogSource;
+
     public CodeGenConfigurationNode withCatalogSource(CatalogSource catalogSource) {
         this.catalogSource = catalogSource;
         return this;
@@ -79,6 +87,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogTarget")
     public BasicCatalogTarget catalogTarget;
+
     public CodeGenConfigurationNode withCatalogTarget(BasicCatalogTarget catalogTarget) {
         this.catalogTarget = catalogTarget;
         return this;
@@ -87,6 +96,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomCode")
     public CustomCode customCode;
+
     public CodeGenConfigurationNode withCustomCode(CustomCode customCode) {
         this.customCode = customCode;
         return this;
@@ -98,6 +108,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectJDBCSource")
     public DirectJDBCSource directJDBCSource;
+
     public CodeGenConfigurationNode withDirectJDBCSource(DirectJDBCSource directJDBCSource) {
         this.directJDBCSource = directJDBCSource;
         return this;
@@ -106,6 +117,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectKafkaSource")
     public DirectKafkaSource directKafkaSource;
+
     public CodeGenConfigurationNode withDirectKafkaSource(DirectKafkaSource directKafkaSource) {
         this.directKafkaSource = directKafkaSource;
         return this;
@@ -114,6 +126,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectKinesisSource")
     public DirectKinesisSource directKinesisSource;
+
     public CodeGenConfigurationNode withDirectKinesisSource(DirectKinesisSource directKinesisSource) {
         this.directKinesisSource = directKinesisSource;
         return this;
@@ -122,6 +135,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DropDuplicates")
     public DropDuplicates dropDuplicates;
+
     public CodeGenConfigurationNode withDropDuplicates(DropDuplicates dropDuplicates) {
         this.dropDuplicates = dropDuplicates;
         return this;
@@ -130,6 +144,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DropFields")
     public DropFields dropFields;
+
     public CodeGenConfigurationNode withDropFields(DropFields dropFields) {
         this.dropFields = dropFields;
         return this;
@@ -138,6 +153,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DropNullFields")
     public DropNullFields dropNullFields;
+
     public CodeGenConfigurationNode withDropNullFields(DropNullFields dropNullFields) {
         this.dropNullFields = dropNullFields;
         return this;
@@ -146,6 +162,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamicTransform")
     public DynamicTransform dynamicTransform;
+
     public CodeGenConfigurationNode withDynamicTransform(DynamicTransform dynamicTransform) {
         this.dynamicTransform = dynamicTransform;
         return this;
@@ -154,6 +171,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamoDBCatalogSource")
     public DynamoDBCatalogSource dynamoDBCatalogSource;
+
     public CodeGenConfigurationNode withDynamoDBCatalogSource(DynamoDBCatalogSource dynamoDBCatalogSource) {
         this.dynamoDBCatalogSource = dynamoDBCatalogSource;
         return this;
@@ -162,6 +180,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluateDataQuality")
     public EvaluateDataQuality evaluateDataQuality;
+
     public CodeGenConfigurationNode withEvaluateDataQuality(EvaluateDataQuality evaluateDataQuality) {
         this.evaluateDataQuality = evaluateDataQuality;
         return this;
@@ -170,6 +189,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FillMissingValues")
     public FillMissingValues fillMissingValues;
+
     public CodeGenConfigurationNode withFillMissingValues(FillMissingValues fillMissingValues) {
         this.fillMissingValues = fillMissingValues;
         return this;
@@ -178,6 +198,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Filter filter;
+
     public CodeGenConfigurationNode withFilter(Filter filter) {
         this.filter = filter;
         return this;
@@ -186,6 +207,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GovernedCatalogSource")
     public GovernedCatalogSource governedCatalogSource;
+
     public CodeGenConfigurationNode withGovernedCatalogSource(GovernedCatalogSource governedCatalogSource) {
         this.governedCatalogSource = governedCatalogSource;
         return this;
@@ -194,6 +216,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GovernedCatalogTarget")
     public GovernedCatalogTarget governedCatalogTarget;
+
     public CodeGenConfigurationNode withGovernedCatalogTarget(GovernedCatalogTarget governedCatalogTarget) {
         this.governedCatalogTarget = governedCatalogTarget;
         return this;
@@ -202,6 +225,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JDBCConnectorSource")
     public JDBCConnectorSource jdbcConnectorSource;
+
     public CodeGenConfigurationNode withJDBCConnectorSource(JDBCConnectorSource jdbcConnectorSource) {
         this.jdbcConnectorSource = jdbcConnectorSource;
         return this;
@@ -210,6 +234,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JDBCConnectorTarget")
     public JDBCConnectorTarget jdbcConnectorTarget;
+
     public CodeGenConfigurationNode withJDBCConnectorTarget(JDBCConnectorTarget jdbcConnectorTarget) {
         this.jdbcConnectorTarget = jdbcConnectorTarget;
         return this;
@@ -218,6 +243,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Join")
     public Join join;
+
     public CodeGenConfigurationNode withJoin(Join join) {
         this.join = join;
         return this;
@@ -226,6 +252,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Merge")
     public Merge merge;
+
     public CodeGenConfigurationNode withMerge(Merge merge) {
         this.merge = merge;
         return this;
@@ -234,6 +261,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MicrosoftSQLServerCatalogSource")
     public MicrosoftSQLServerCatalogSource microsoftSQLServerCatalogSource;
+
     public CodeGenConfigurationNode withMicrosoftSQLServerCatalogSource(MicrosoftSQLServerCatalogSource microsoftSQLServerCatalogSource) {
         this.microsoftSQLServerCatalogSource = microsoftSQLServerCatalogSource;
         return this;
@@ -242,6 +270,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MicrosoftSQLServerCatalogTarget")
     public MicrosoftSQLServerCatalogTarget microsoftSQLServerCatalogTarget;
+
     public CodeGenConfigurationNode withMicrosoftSQLServerCatalogTarget(MicrosoftSQLServerCatalogTarget microsoftSQLServerCatalogTarget) {
         this.microsoftSQLServerCatalogTarget = microsoftSQLServerCatalogTarget;
         return this;
@@ -250,6 +279,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MySQLCatalogSource")
     public MySQLCatalogSource mySQLCatalogSource;
+
     public CodeGenConfigurationNode withMySQLCatalogSource(MySQLCatalogSource mySQLCatalogSource) {
         this.mySQLCatalogSource = mySQLCatalogSource;
         return this;
@@ -258,6 +288,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MySQLCatalogTarget")
     public MySQLCatalogTarget mySQLCatalogTarget;
+
     public CodeGenConfigurationNode withMySQLCatalogTarget(MySQLCatalogTarget mySQLCatalogTarget) {
         this.mySQLCatalogTarget = mySQLCatalogTarget;
         return this;
@@ -266,6 +297,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OracleSQLCatalogSource")
     public OracleSQLCatalogSource oracleSQLCatalogSource;
+
     public CodeGenConfigurationNode withOracleSQLCatalogSource(OracleSQLCatalogSource oracleSQLCatalogSource) {
         this.oracleSQLCatalogSource = oracleSQLCatalogSource;
         return this;
@@ -274,6 +306,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OracleSQLCatalogTarget")
     public OracleSQLCatalogTarget oracleSQLCatalogTarget;
+
     public CodeGenConfigurationNode withOracleSQLCatalogTarget(OracleSQLCatalogTarget oracleSQLCatalogTarget) {
         this.oracleSQLCatalogTarget = oracleSQLCatalogTarget;
         return this;
@@ -282,6 +315,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PIIDetection")
     public PIIDetection piiDetection;
+
     public CodeGenConfigurationNode withPIIDetection(PIIDetection piiDetection) {
         this.piiDetection = piiDetection;
         return this;
@@ -290,6 +324,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostgreSQLCatalogSource")
     public PostgreSQLCatalogSource postgreSQLCatalogSource;
+
     public CodeGenConfigurationNode withPostgreSQLCatalogSource(PostgreSQLCatalogSource postgreSQLCatalogSource) {
         this.postgreSQLCatalogSource = postgreSQLCatalogSource;
         return this;
@@ -298,6 +333,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostgreSQLCatalogTarget")
     public PostgreSQLCatalogTarget postgreSQLCatalogTarget;
+
     public CodeGenConfigurationNode withPostgreSQLCatalogTarget(PostgreSQLCatalogTarget postgreSQLCatalogTarget) {
         this.postgreSQLCatalogTarget = postgreSQLCatalogTarget;
         return this;
@@ -306,6 +342,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftSource")
     public RedshiftSource redshiftSource;
+
     public CodeGenConfigurationNode withRedshiftSource(RedshiftSource redshiftSource) {
         this.redshiftSource = redshiftSource;
         return this;
@@ -314,6 +351,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftTarget")
     public RedshiftTarget redshiftTarget;
+
     public CodeGenConfigurationNode withRedshiftTarget(RedshiftTarget redshiftTarget) {
         this.redshiftTarget = redshiftTarget;
         return this;
@@ -322,6 +360,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationalCatalogSource")
     public RelationalCatalogSource relationalCatalogSource;
+
     public CodeGenConfigurationNode withRelationalCatalogSource(RelationalCatalogSource relationalCatalogSource) {
         this.relationalCatalogSource = relationalCatalogSource;
         return this;
@@ -330,6 +369,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RenameField")
     public RenameField renameField;
+
     public CodeGenConfigurationNode withRenameField(RenameField renameField) {
         this.renameField = renameField;
         return this;
@@ -338,6 +378,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3CatalogDeltaSource")
     public S3CatalogDeltaSource s3CatalogDeltaSource;
+
     public CodeGenConfigurationNode withS3CatalogDeltaSource(S3CatalogDeltaSource s3CatalogDeltaSource) {
         this.s3CatalogDeltaSource = s3CatalogDeltaSource;
         return this;
@@ -346,6 +387,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3CatalogHudiSource")
     public S3CatalogHudiSource s3CatalogHudiSource;
+
     public CodeGenConfigurationNode withS3CatalogHudiSource(S3CatalogHudiSource s3CatalogHudiSource) {
         this.s3CatalogHudiSource = s3CatalogHudiSource;
         return this;
@@ -354,6 +396,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3CatalogSource")
     public S3CatalogSource s3CatalogSource;
+
     public CodeGenConfigurationNode withS3CatalogSource(S3CatalogSource s3CatalogSource) {
         this.s3CatalogSource = s3CatalogSource;
         return this;
@@ -362,6 +405,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3CatalogTarget")
     public S3CatalogTarget s3CatalogTarget;
+
     public CodeGenConfigurationNode withS3CatalogTarget(S3CatalogTarget s3CatalogTarget) {
         this.s3CatalogTarget = s3CatalogTarget;
         return this;
@@ -370,6 +414,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3CsvSource")
     public S3CsvSource s3CsvSource;
+
     public CodeGenConfigurationNode withS3CsvSource(S3CsvSource s3CsvSource) {
         this.s3CsvSource = s3CsvSource;
         return this;
@@ -378,6 +423,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DeltaCatalogTarget")
     public S3DeltaCatalogTarget s3DeltaCatalogTarget;
+
     public CodeGenConfigurationNode withS3DeltaCatalogTarget(S3DeltaCatalogTarget s3DeltaCatalogTarget) {
         this.s3DeltaCatalogTarget = s3DeltaCatalogTarget;
         return this;
@@ -386,6 +432,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DeltaDirectTarget")
     public S3DeltaDirectTarget s3DeltaDirectTarget;
+
     public CodeGenConfigurationNode withS3DeltaDirectTarget(S3DeltaDirectTarget s3DeltaDirectTarget) {
         this.s3DeltaDirectTarget = s3DeltaDirectTarget;
         return this;
@@ -394,6 +441,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DeltaSource")
     public S3DeltaSource s3DeltaSource;
+
     public CodeGenConfigurationNode withS3DeltaSource(S3DeltaSource s3DeltaSource) {
         this.s3DeltaSource = s3DeltaSource;
         return this;
@@ -402,6 +450,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DirectTarget")
     public S3DirectTarget s3DirectTarget;
+
     public CodeGenConfigurationNode withS3DirectTarget(S3DirectTarget s3DirectTarget) {
         this.s3DirectTarget = s3DirectTarget;
         return this;
@@ -410,6 +459,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3GlueParquetTarget")
     public S3GlueParquetTarget s3GlueParquetTarget;
+
     public CodeGenConfigurationNode withS3GlueParquetTarget(S3GlueParquetTarget s3GlueParquetTarget) {
         this.s3GlueParquetTarget = s3GlueParquetTarget;
         return this;
@@ -418,6 +468,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3HudiCatalogTarget")
     public S3HudiCatalogTarget s3HudiCatalogTarget;
+
     public CodeGenConfigurationNode withS3HudiCatalogTarget(S3HudiCatalogTarget s3HudiCatalogTarget) {
         this.s3HudiCatalogTarget = s3HudiCatalogTarget;
         return this;
@@ -426,6 +477,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3HudiDirectTarget")
     public S3HudiDirectTarget s3HudiDirectTarget;
+
     public CodeGenConfigurationNode withS3HudiDirectTarget(S3HudiDirectTarget s3HudiDirectTarget) {
         this.s3HudiDirectTarget = s3HudiDirectTarget;
         return this;
@@ -434,6 +486,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3HudiSource")
     public S3HudiSource s3HudiSource;
+
     public CodeGenConfigurationNode withS3HudiSource(S3HudiSource s3HudiSource) {
         this.s3HudiSource = s3HudiSource;
         return this;
@@ -442,6 +495,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3JsonSource")
     public S3JsonSource s3JsonSource;
+
     public CodeGenConfigurationNode withS3JsonSource(S3JsonSource s3JsonSource) {
         this.s3JsonSource = s3JsonSource;
         return this;
@@ -450,6 +504,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3ParquetSource")
     public S3ParquetSource s3ParquetSource;
+
     public CodeGenConfigurationNode withS3ParquetSource(S3ParquetSource s3ParquetSource) {
         this.s3ParquetSource = s3ParquetSource;
         return this;
@@ -458,6 +513,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectFields")
     public SelectFields selectFields;
+
     public CodeGenConfigurationNode withSelectFields(SelectFields selectFields) {
         this.selectFields = selectFields;
         return this;
@@ -466,6 +522,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectFromCollection")
     public SelectFromCollection selectFromCollection;
+
     public CodeGenConfigurationNode withSelectFromCollection(SelectFromCollection selectFromCollection) {
         this.selectFromCollection = selectFromCollection;
         return this;
@@ -474,6 +531,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SparkConnectorSource")
     public SparkConnectorSource sparkConnectorSource;
+
     public CodeGenConfigurationNode withSparkConnectorSource(SparkConnectorSource sparkConnectorSource) {
         this.sparkConnectorSource = sparkConnectorSource;
         return this;
@@ -482,6 +540,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SparkConnectorTarget")
     public SparkConnectorTarget sparkConnectorTarget;
+
     public CodeGenConfigurationNode withSparkConnectorTarget(SparkConnectorTarget sparkConnectorTarget) {
         this.sparkConnectorTarget = sparkConnectorTarget;
         return this;
@@ -490,6 +549,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SparkSQL")
     public SparkSQL sparkSQL;
+
     public CodeGenConfigurationNode withSparkSQL(SparkSQL sparkSQL) {
         this.sparkSQL = sparkSQL;
         return this;
@@ -498,6 +558,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Spigot")
     public Spigot spigot;
+
     public CodeGenConfigurationNode withSpigot(Spigot spigot) {
         this.spigot = spigot;
         return this;
@@ -506,6 +567,7 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplitFields")
     public SplitFields splitFields;
+
     public CodeGenConfigurationNode withSplitFields(SplitFields splitFields) {
         this.splitFields = splitFields;
         return this;
@@ -514,9 +576,11 @@ public class CodeGenConfigurationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Union")
     public Union union;
+
     public CodeGenConfigurationNode withUnion(Union union) {
         this.union = union;
         return this;
     }
     
+    public CodeGenConfigurationNode(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFileCampaignSoundRequestBody {
@@ -12,6 +13,7 @@ public class PostFileCampaignSoundRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PostFileCampaignSoundRequestBodyFile file;
+
     public PostFileCampaignSoundRequestBody withFile(PostFileCampaignSoundRequestBodyFile file) {
         this.file = file;
         return this;
@@ -22,9 +24,13 @@ public class PostFileCampaignSoundRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostFileCampaignSoundRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostFileCampaignSoundRequestBody(@JsonProperty("file") PostFileCampaignSoundRequestBodyFile file) {
+        this.file = file;
+  }
 }

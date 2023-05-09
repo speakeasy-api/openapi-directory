@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeVpnTunnelsTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeVpnTunnelsTestIamPermissionsSecurityOption1 option1;
+
     public ComputeVpnTunnelsTestIamPermissionsSecurity withOption1(ComputeVpnTunnelsTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeVpnTunnelsTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeVpnTunnelsTestIamPermissionsSecurityOption2 option2;
+
     public ComputeVpnTunnelsTestIamPermissionsSecurity withOption2(ComputeVpnTunnelsTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeVpnTunnelsTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeVpnTunnelsTestIamPermissionsSecurityOption3 option3;
+
     public ComputeVpnTunnelsTestIamPermissionsSecurity withOption3(ComputeVpnTunnelsTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeVpnTunnelsTestIamPermissionsSecurity(){}
 }

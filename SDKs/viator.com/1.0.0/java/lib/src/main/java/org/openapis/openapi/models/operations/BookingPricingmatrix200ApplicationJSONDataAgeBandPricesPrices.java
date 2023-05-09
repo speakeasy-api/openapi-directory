@@ -15,6 +15,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -28,6 +29,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPrice")
     public Double merchantNetPrice;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices withMerchantNetPrice(Double merchantNetPrice) {
         this.merchantNetPrice = merchantNetPrice;
         return this;
@@ -41,6 +43,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPriceFormatted")
     public String merchantNetPriceFormatted;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices withMerchantNetPriceFormatted(String merchantNetPriceFormatted) {
         this.merchantNetPriceFormatted = merchantNetPriceFormatted;
         return this;
@@ -52,6 +55,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNoOfTravellersRequiredForPrice")
     public Long minNoOfTravellersRequiredForPrice;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices withMinNoOfTravellersRequiredForPrice(Long minNoOfTravellersRequiredForPrice) {
         this.minNoOfTravellersRequiredForPrice = minNoOfTravellersRequiredForPrice;
         return this;
@@ -65,6 +69,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices withPrice(Double price) {
         this.price = price;
         return this;
@@ -78,6 +83,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceFormatted")
     public String priceFormatted;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices withPriceFormatted(String priceFormatted) {
         this.priceFormatted = priceFormatted;
         return this;
@@ -89,9 +95,11 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public String sortOrder;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices(){}
 }

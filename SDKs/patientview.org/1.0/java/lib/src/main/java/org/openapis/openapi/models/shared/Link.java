@@ -19,6 +19,7 @@ public class Link {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Link withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayOrder")
     public Integer displayOrder;
+
     public Link withDisplayOrder(Integer displayOrder) {
         this.displayOrder = displayOrder;
         return this;
@@ -35,6 +37,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Link withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class Link {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public Link withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -53,6 +57,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Link withLink(String link) {
         this.link = link;
         return this;
@@ -61,6 +66,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkType")
     public Lookup linkType;
+
     public Link withLinkType(Lookup linkType) {
         this.linkType = linkType;
         return this;
@@ -69,9 +75,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Link withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Link(){}
 }

@@ -15,6 +15,7 @@ public class OwnerDirectoryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public OwnerDirectoryDescription withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class OwnerDirectoryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public OwnerDirectoryDescription withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -31,6 +33,7 @@ public class OwnerDirectoryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsIpAddrs")
     public String[] dnsIpAddrs;
+
     public OwnerDirectoryDescription withDnsIpAddrs(String[] dnsIpAddrs) {
         this.dnsIpAddrs = dnsIpAddrs;
         return this;
@@ -39,6 +42,7 @@ public class OwnerDirectoryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RadiusSettings")
     public RadiusSettings radiusSettings;
+
     public OwnerDirectoryDescription withRadiusSettings(RadiusSettings radiusSettings) {
         this.radiusSettings = radiusSettings;
         return this;
@@ -47,6 +51,7 @@ public class OwnerDirectoryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RadiusStatus")
     public RadiusStatusEnum radiusStatus;
+
     public OwnerDirectoryDescription withRadiusStatus(RadiusStatusEnum radiusStatus) {
         this.radiusStatus = radiusStatus;
         return this;
@@ -55,9 +60,11 @@ public class OwnerDirectoryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcSettings")
     public DirectoryVpcSettingsDescription vpcSettings;
+
     public OwnerDirectoryDescription withVpcSettings(DirectoryVpcSettingsDescription vpcSettings) {
         this.vpcSettings = vpcSettings;
         return this;
     }
     
+    public OwnerDirectoryDescription(){}
 }

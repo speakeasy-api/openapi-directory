@@ -15,6 +15,7 @@ public class ComponentPropertyGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
     public GroupTypeEnum groupType;
+
     public ComponentPropertyGroupRequest withGroupType(GroupTypeEnum groupType) {
         this.groupType = groupType;
         return this;
@@ -23,6 +24,7 @@ public class ComponentPropertyGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyNames")
     public String[] propertyNames;
+
     public ComponentPropertyGroupRequest withPropertyNames(String[] propertyNames) {
         this.propertyNames = propertyNames;
         return this;
@@ -31,9 +33,11 @@ public class ComponentPropertyGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateType")
     public PropertyGroupUpdateTypeEnum updateType;
+
     public ComponentPropertyGroupRequest withUpdateType(PropertyGroupUpdateTypeEnum updateType) {
         this.updateType = updateType;
         return this;
     }
     
+    public ComponentPropertyGroupRequest(){}
 }

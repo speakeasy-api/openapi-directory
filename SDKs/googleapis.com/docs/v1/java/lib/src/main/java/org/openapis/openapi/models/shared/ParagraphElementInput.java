@@ -18,6 +18,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoText")
     public AutoText autoText;
+
     public ParagraphElementInput withAutoText(AutoText autoText) {
         this.autoText = autoText;
         return this;
@@ -29,6 +30,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnBreak")
     public ColumnBreak columnBreak;
+
     public ParagraphElementInput withColumnBreak(ColumnBreak columnBreak) {
         this.columnBreak = columnBreak;
         return this;
@@ -40,6 +42,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIndex")
     public Integer endIndex;
+
     public ParagraphElementInput withEndIndex(Integer endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -51,6 +54,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equation")
     public Equation equation;
+
     public ParagraphElementInput withEquation(Equation equation) {
         this.equation = equation;
         return this;
@@ -62,6 +66,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footnoteReference")
     public FootnoteReference footnoteReference;
+
     public ParagraphElementInput withFootnoteReference(FootnoteReference footnoteReference) {
         this.footnoteReference = footnoteReference;
         return this;
@@ -73,6 +78,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizontalRule")
     public HorizontalRule horizontalRule;
+
     public ParagraphElementInput withHorizontalRule(HorizontalRule horizontalRule) {
         this.horizontalRule = horizontalRule;
         return this;
@@ -84,6 +90,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineObjectElement")
     public InlineObjectElement inlineObjectElement;
+
     public ParagraphElementInput withInlineObjectElement(InlineObjectElement inlineObjectElement) {
         this.inlineObjectElement = inlineObjectElement;
         return this;
@@ -95,6 +102,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageBreak")
     public PageBreak pageBreak;
+
     public ParagraphElementInput withPageBreak(PageBreak pageBreak) {
         this.pageBreak = pageBreak;
         return this;
@@ -106,6 +114,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public PersonInput person;
+
     public ParagraphElementInput withPerson(PersonInput person) {
         this.person = person;
         return this;
@@ -117,6 +126,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("richLink")
     public RichLinkInput richLink;
+
     public ParagraphElementInput withRichLink(RichLinkInput richLink) {
         this.richLink = richLink;
         return this;
@@ -128,6 +138,7 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public ParagraphElementInput withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -139,9 +150,11 @@ public class ParagraphElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textRun")
     public TextRun textRun;
+
     public ParagraphElementInput withTextRun(TextRun textRun) {
         this.textRun = textRun;
         return this;
     }
     
+    public ParagraphElementInput(){}
 }

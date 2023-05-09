@@ -15,6 +15,7 @@ public class FilesVersionDetailFileVersionLinks {
      */
     
     public String html;
+
     public FilesVersionDetailFileVersionLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class FilesVersionDetailFileVersionLinks {
      */
     
     public String self;
+
     public FilesVersionDetailFileVersionLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public FilesVersionDetailFileVersionLinks(){}
 }

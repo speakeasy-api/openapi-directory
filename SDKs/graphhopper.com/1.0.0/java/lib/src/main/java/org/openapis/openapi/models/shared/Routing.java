@@ -18,6 +18,7 @@ public class Routing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calc_points")
     public Boolean calcPoints;
+
     public Routing withCalcPoints(Boolean calcPoints) {
         this.calcPoints = calcPoints;
         return this;
@@ -29,6 +30,7 @@ public class Routing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consider_traffic")
     public Boolean considerTraffic;
+
     public Routing withConsiderTraffic(Boolean considerTraffic) {
         this.considerTraffic = considerTraffic;
         return this;
@@ -40,6 +42,7 @@ public class Routing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("curbside_strictness")
     public RoutingCurbsideStrictnessEnum curbsideStrictness;
+
     public Routing withCurbsideStrictness(RoutingCurbsideStrictnessEnum curbsideStrictness) {
         this.curbsideStrictness = curbsideStrictness;
         return this;
@@ -51,6 +54,7 @@ public class Routing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fail_fast")
     public Boolean failFast;
+
     public Routing withFailFast(Boolean failFast) {
         this.failFast = failFast;
         return this;
@@ -62,6 +66,7 @@ public class Routing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network_data_provider")
     public RoutingNetworkDataProviderEnum networkDataProvider;
+
     public Routing withNetworkDataProvider(RoutingNetworkDataProviderEnum networkDataProvider) {
         this.networkDataProvider = networkDataProvider;
         return this;
@@ -73,6 +78,7 @@ public class Routing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_snapped_waypoints")
     public Boolean returnSnappedWaypoints;
+
     public Routing withReturnSnappedWaypoints(Boolean returnSnappedWaypoints) {
         this.returnSnappedWaypoints = returnSnappedWaypoints;
         return this;
@@ -84,9 +90,11 @@ public class Routing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snap_preventions")
     public RoutingSnapPreventionsEnum[] snapPreventions;
+
     public Routing withSnapPreventions(RoutingSnapPreventionsEnum[] snapPreventions) {
         this.snapPreventions = snapPreventions;
         return this;
     }
     
+    public Routing(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendMessageResponse {
@@ -12,6 +13,7 @@ public class SendMessageResponse {
      */
     
     public Object accessDeniedException;
+
     public SendMessageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SendMessageResponse {
     
     
     public String contentType;
+
     public SendMessageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendMessageResponse {
      */
     
     public Object internalServerException;
+
     public SendMessageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class SendMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.SendMessageResponse sendMessageResponse;
+
     public SendMessageResponse withSendMessageResponse(org.openapis.openapi.models.shared.SendMessageResponse sendMessageResponse) {
         this.sendMessageResponse = sendMessageResponse;
         return this;
@@ -46,6 +51,7 @@ public class SendMessageResponse {
     
     
     public Integer statusCode;
+
     public SendMessageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SendMessageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendMessageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class SendMessageResponse {
      */
     
     public Object throttlingException;
+
     public SendMessageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class SendMessageResponse {
      */
     
     public Object validationException;
+
     public SendMessageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SendMessageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

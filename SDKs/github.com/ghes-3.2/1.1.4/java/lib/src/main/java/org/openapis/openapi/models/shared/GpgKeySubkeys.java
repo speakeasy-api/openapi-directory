@@ -12,6 +12,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_certify")
     public Boolean canCertify;
+
     public GpgKeySubkeys withCanCertify(Boolean canCertify) {
         this.canCertify = canCertify;
         return this;
@@ -20,6 +21,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_encrypt_comms")
     public Boolean canEncryptComms;
+
     public GpgKeySubkeys withCanEncryptComms(Boolean canEncryptComms) {
         this.canEncryptComms = canEncryptComms;
         return this;
@@ -28,6 +30,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_encrypt_storage")
     public Boolean canEncryptStorage;
+
     public GpgKeySubkeys withCanEncryptStorage(Boolean canEncryptStorage) {
         this.canEncryptStorage = canEncryptStorage;
         return this;
@@ -36,6 +39,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_sign")
     public Boolean canSign;
+
     public GpgKeySubkeys withCanSign(Boolean canSign) {
         this.canSign = canSign;
         return this;
@@ -44,6 +48,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public GpgKeySubkeys withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -52,6 +57,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public Object[] emails;
+
     public GpgKeySubkeys withEmails(Object[] emails) {
         this.emails = emails;
         return this;
@@ -60,6 +66,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public GpgKeySubkeys withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -68,6 +75,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GpgKeySubkeys withId(Long id) {
         this.id = id;
         return this;
@@ -76,6 +84,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key_id")
     public String keyId;
+
     public GpgKeySubkeys withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -84,6 +93,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_key_id")
     public Long primaryKeyId;
+
     public GpgKeySubkeys withPrimaryKeyId(Long primaryKeyId) {
         this.primaryKeyId = primaryKeyId;
         return this;
@@ -92,6 +102,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public GpgKeySubkeys withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -100,6 +111,7 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw_key")
     public String rawKey;
+
     public GpgKeySubkeys withRawKey(String rawKey) {
         this.rawKey = rawKey;
         return this;
@@ -108,9 +120,11 @@ public class GpgKeySubkeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subkeys")
     public Object[] subkeys;
+
     public GpgKeySubkeys withSubkeys(Object[] subkeys) {
         this.subkeys = subkeys;
         return this;
     }
     
+    public GpgKeySubkeys(){}
 }

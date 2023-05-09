@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoScheduleAutoImportRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ScheduleAutoImportRequest scheduleAutoImportRequest;
+
     public AutoScheduleAutoImportRequest withScheduleAutoImportRequest(org.openapis.openapi.models.shared.ScheduleAutoImportRequest scheduleAutoImportRequest) {
         this.scheduleAutoImportRequest = scheduleAutoImportRequest;
         return this;
@@ -19,9 +21,14 @@ public class AutoScheduleAutoImportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public AutoScheduleAutoImportRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public AutoScheduleAutoImportRequest(@JsonProperty("scheduleAutoImportRequest") org.openapis.openapi.models.shared.ScheduleAutoImportRequest scheduleAutoImportRequest, @JsonProperty("storeId") String storeId) {
+        this.scheduleAutoImportRequest = scheduleAutoImportRequest;
+        this.storeId = storeId;
+  }
 }

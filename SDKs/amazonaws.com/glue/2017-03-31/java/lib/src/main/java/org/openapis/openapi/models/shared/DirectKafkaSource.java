@@ -15,6 +15,7 @@ public class DirectKafkaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataPreviewOptions")
     public StreamingDataPreviewOptions dataPreviewOptions;
+
     public DirectKafkaSource withDataPreviewOptions(StreamingDataPreviewOptions dataPreviewOptions) {
         this.dataPreviewOptions = dataPreviewOptions;
         return this;
@@ -23,6 +24,7 @@ public class DirectKafkaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectSchema")
     public Boolean detectSchema;
+
     public DirectKafkaSource withDetectSchema(Boolean detectSchema) {
         this.detectSchema = detectSchema;
         return this;
@@ -30,6 +32,7 @@ public class DirectKafkaSource {
     
     @JsonProperty("Name")
     public String name;
+
     public DirectKafkaSource withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +41,7 @@ public class DirectKafkaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingOptions")
     public KafkaStreamingSourceOptions streamingOptions;
+
     public DirectKafkaSource withStreamingOptions(KafkaStreamingSourceOptions streamingOptions) {
         this.streamingOptions = streamingOptions;
         return this;
@@ -46,9 +50,13 @@ public class DirectKafkaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowSize")
     public Long windowSize;
+
     public DirectKafkaSource withWindowSize(Long windowSize) {
         this.windowSize = windowSize;
         return this;
     }
     
+    public DirectKafkaSource(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

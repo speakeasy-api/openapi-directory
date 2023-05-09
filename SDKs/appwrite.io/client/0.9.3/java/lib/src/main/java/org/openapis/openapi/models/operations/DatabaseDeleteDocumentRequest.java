@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseDeleteDocumentRequest {
@@ -12,6 +13,7 @@ public class DatabaseDeleteDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
     public String collectionId;
+
     public DatabaseDeleteDocumentRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -22,9 +24,14 @@ public class DatabaseDeleteDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public String documentId;
+
     public DatabaseDeleteDocumentRequest withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
     }
     
+    public DatabaseDeleteDocumentRequest(@JsonProperty("collectionId") String collectionId, @JsonProperty("documentId") String documentId) {
+        this.collectionId = collectionId;
+        this.documentId = documentId;
+  }
 }

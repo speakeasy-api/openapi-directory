@@ -12,6 +12,7 @@ public class CreateDiskFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOns")
     public AddOnRequest[] addOns;
+
     public CreateDiskFromSnapshotRequest withAddOns(AddOnRequest[] addOns) {
         this.addOns = addOns;
         return this;
@@ -19,6 +20,7 @@ public class CreateDiskFromSnapshotRequest {
     
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public CreateDiskFromSnapshotRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class CreateDiskFromSnapshotRequest {
     
     @JsonProperty("diskName")
     public String diskName;
+
     public CreateDiskFromSnapshotRequest withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
@@ -34,6 +37,7 @@ public class CreateDiskFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSnapshotName")
     public String diskSnapshotName;
+
     public CreateDiskFromSnapshotRequest withDiskSnapshotName(String diskSnapshotName) {
         this.diskSnapshotName = diskSnapshotName;
         return this;
@@ -42,6 +46,7 @@ public class CreateDiskFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restoreDate")
     public String restoreDate;
+
     public CreateDiskFromSnapshotRequest withRestoreDate(String restoreDate) {
         this.restoreDate = restoreDate;
         return this;
@@ -49,6 +54,7 @@ public class CreateDiskFromSnapshotRequest {
     
     @JsonProperty("sizeInGb")
     public Long sizeInGb;
+
     public CreateDiskFromSnapshotRequest withSizeInGb(Long sizeInGb) {
         this.sizeInGb = sizeInGb;
         return this;
@@ -57,6 +63,7 @@ public class CreateDiskFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDiskName")
     public String sourceDiskName;
+
     public CreateDiskFromSnapshotRequest withSourceDiskName(String sourceDiskName) {
         this.sourceDiskName = sourceDiskName;
         return this;
@@ -65,6 +72,7 @@ public class CreateDiskFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateDiskFromSnapshotRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -73,9 +81,15 @@ public class CreateDiskFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useLatestRestorableAutoSnapshot")
     public Boolean useLatestRestorableAutoSnapshot;
+
     public CreateDiskFromSnapshotRequest withUseLatestRestorableAutoSnapshot(Boolean useLatestRestorableAutoSnapshot) {
         this.useLatestRestorableAutoSnapshot = useLatestRestorableAutoSnapshot;
         return this;
     }
     
+    public CreateDiskFromSnapshotRequest(@JsonProperty("availabilityZone") String availabilityZone, @JsonProperty("diskName") String diskName, @JsonProperty("sizeInGb") Long sizeInGb) {
+        this.availabilityZone = availabilityZone;
+        this.diskName = diskName;
+        this.sizeInGb = sizeInGb;
+  }
 }

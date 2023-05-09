@@ -15,6 +15,7 @@ public class S3DeltaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalDeltaOptions")
     public java.util.Map<String, String> additionalDeltaOptions;
+
     public S3DeltaSource withAdditionalDeltaOptions(java.util.Map<String, String> additionalDeltaOptions) {
         this.additionalDeltaOptions = additionalDeltaOptions;
         return this;
@@ -23,6 +24,7 @@ public class S3DeltaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public S3DirectSourceAdditionalOptions additionalOptions;
+
     public S3DeltaSource withAdditionalOptions(S3DirectSourceAdditionalOptions additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -30,6 +32,7 @@ public class S3DeltaSource {
     
     @JsonProperty("Name")
     public String name;
+
     public S3DeltaSource withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +41,7 @@ public class S3DeltaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public S3DeltaSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -45,9 +49,14 @@ public class S3DeltaSource {
     
     @JsonProperty("Paths")
     public String[] paths;
+
     public S3DeltaSource withPaths(String[] paths) {
         this.paths = paths;
         return this;
     }
     
+    public S3DeltaSource(@JsonProperty("Name") String name, @JsonProperty("Paths") String[] paths) {
+        this.name = name;
+        this.paths = paths;
+  }
 }

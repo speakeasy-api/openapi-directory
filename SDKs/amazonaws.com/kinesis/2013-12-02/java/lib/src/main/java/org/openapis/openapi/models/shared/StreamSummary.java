@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class StreamSummary {
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public StreamSummary withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -29,6 +30,7 @@ public class StreamSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StreamCreationTimestamp")
     public OffsetDateTime streamCreationTimestamp;
+
     public StreamSummary withStreamCreationTimestamp(OffsetDateTime streamCreationTimestamp) {
         this.streamCreationTimestamp = streamCreationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamModeDetails")
     public StreamModeDetails streamModeDetails;
+
     public StreamSummary withStreamModeDetails(StreamModeDetails streamModeDetails) {
         this.streamModeDetails = streamModeDetails;
         return this;
@@ -47,6 +50,7 @@ public class StreamSummary {
     
     @JsonProperty("StreamName")
     public String streamName;
+
     public StreamSummary withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -54,9 +58,15 @@ public class StreamSummary {
     
     @JsonProperty("StreamStatus")
     public StreamStatusEnum streamStatus;
+
     public StreamSummary withStreamStatus(StreamStatusEnum streamStatus) {
         this.streamStatus = streamStatus;
         return this;
     }
     
+    public StreamSummary(@JsonProperty("StreamARN") String streamARN, @JsonProperty("StreamName") String streamName, @JsonProperty("StreamStatus") StreamStatusEnum streamStatus) {
+        this.streamARN = streamARN;
+        this.streamName = streamName;
+        this.streamStatus = streamStatus;
+  }
 }

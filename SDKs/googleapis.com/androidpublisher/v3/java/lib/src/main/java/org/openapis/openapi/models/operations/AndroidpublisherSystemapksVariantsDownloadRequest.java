@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherSystemapksVariantsDownloadRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,6 +134,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -132,6 +145,7 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variantId")
     public Long variantId;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withVariantId(Long variantId) {
         this.variantId = variantId;
         return this;
@@ -142,9 +156,15 @@ public class AndroidpublisherSystemapksVariantsDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionCode")
     public String versionCode;
+
     public AndroidpublisherSystemapksVariantsDownloadRequest withVersionCode(String versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public AndroidpublisherSystemapksVariantsDownloadRequest(@JsonProperty("packageName") String packageName, @JsonProperty("variantId") Long variantId, @JsonProperty("versionCode") String versionCode) {
+        this.packageName = packageName;
+        this.variantId = variantId;
+        this.versionCode = versionCode;
+  }
 }

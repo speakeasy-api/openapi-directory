@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOnPremisesInstanceResponse {
     
     public String contentType;
+
     public GetOnPremisesInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOnPremisesInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOnPremisesInstanceOutput getOnPremisesInstanceOutput;
+
     public GetOnPremisesInstanceResponse withGetOnPremisesInstanceOutput(org.openapis.openapi.models.shared.GetOnPremisesInstanceOutput getOnPremisesInstanceOutput) {
         this.getOnPremisesInstanceOutput = getOnPremisesInstanceOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetOnPremisesInstanceResponse {
      */
     
     public Object instanceNameRequiredException;
+
     public GetOnPremisesInstanceResponse withInstanceNameRequiredException(Object instanceNameRequiredException) {
         this.instanceNameRequiredException = instanceNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class GetOnPremisesInstanceResponse {
      */
     
     public Object instanceNotRegisteredException;
+
     public GetOnPremisesInstanceResponse withInstanceNotRegisteredException(Object instanceNotRegisteredException) {
         this.instanceNotRegisteredException = instanceNotRegisteredException;
         return this;
@@ -49,6 +54,7 @@ public class GetOnPremisesInstanceResponse {
      */
     
     public Object invalidInstanceNameException;
+
     public GetOnPremisesInstanceResponse withInvalidInstanceNameException(Object invalidInstanceNameException) {
         this.invalidInstanceNameException = invalidInstanceNameException;
         return this;
@@ -56,6 +62,7 @@ public class GetOnPremisesInstanceResponse {
     
     
     public Integer statusCode;
+
     public GetOnPremisesInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetOnPremisesInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOnPremisesInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOnPremisesInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

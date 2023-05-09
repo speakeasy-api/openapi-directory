@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class ContentSearchContentWithText200Wildcard {
     
     public String detailedErrorTrace;
+
     public ContentSearchContentWithText200Wildcard withDetailedErrorTrace(String detailedErrorTrace) {
         this.detailedErrorTrace = detailedErrorTrace;
         return this;
@@ -19,6 +20,7 @@ public class ContentSearchContentWithText200Wildcard {
     
     
     public Integer errorCode;
+
     public ContentSearchContentWithText200Wildcard withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,6 +28,7 @@ public class ContentSearchContentWithText200Wildcard {
     
     
     public String errorStatus;
+
     public ContentSearchContentWithText200Wildcard withErrorStatus(String errorStatus) {
         this.errorStatus = errorStatus;
         return this;
@@ -33,6 +36,7 @@ public class ContentSearchContentWithText200Wildcard {
     
     
     public String message;
+
     public ContentSearchContentWithText200Wildcard withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +44,7 @@ public class ContentSearchContentWithText200Wildcard {
     
     
     public java.util.Map<String, String> messageData;
+
     public ContentSearchContentWithText200Wildcard withMessageData(java.util.Map<String, String> messageData) {
         this.messageData = messageData;
         return this;
@@ -47,6 +52,7 @@ public class ContentSearchContentWithText200Wildcard {
     
     
     public org.openapis.openapi.models.shared.SearchResultOfContentItemPublicContract response;
+
     public ContentSearchContentWithText200Wildcard withResponse(org.openapis.openapi.models.shared.SearchResultOfContentItemPublicContract response) {
         this.response = response;
         return this;
@@ -54,9 +60,11 @@ public class ContentSearchContentWithText200Wildcard {
     
     
     public Integer throttleSeconds;
+
     public ContentSearchContentWithText200Wildcard withThrottleSeconds(Integer throttleSeconds) {
         this.throttleSeconds = throttleSeconds;
         return this;
     }
     
+    public ContentSearchContentWithText200Wildcard(){}
 }

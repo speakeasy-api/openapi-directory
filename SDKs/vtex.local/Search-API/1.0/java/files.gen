@@ -182,4 +182,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/Searchbyproducturl200Ap
 lib/src/main/java/org/openapis/openapi/models/operations/Searchbyproducturl200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchbyproducturlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/autocomplete/README.md
+docs/crossselling/README.md
+docs/facets/README.md
+docs/offers/README.md
+docs/search/README.md
 USAGE.md

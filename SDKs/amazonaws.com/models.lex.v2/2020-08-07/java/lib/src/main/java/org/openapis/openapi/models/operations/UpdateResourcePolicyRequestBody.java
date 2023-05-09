@@ -12,9 +12,13 @@ public class UpdateResourcePolicyRequestBody {
      */
     @JsonProperty("policy")
     public String policy;
+
     public UpdateResourcePolicyRequestBody withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public UpdateResourcePolicyRequestBody(@JsonProperty("policy") String policy) {
+        this.policy = policy;
+  }
 }

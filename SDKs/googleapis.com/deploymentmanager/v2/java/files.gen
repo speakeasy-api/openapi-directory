@@ -195,4 +195,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/ResourceAccessControl.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResourcesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TypesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Type.java
+docs/sdk/README.md
+docs/deployments/README.md
+docs/manifests/README.md
+docs/operations/README.md
+docs/resources/README.md
+docs/types/README.md
 USAGE.md

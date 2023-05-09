@@ -15,6 +15,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public FirewallRuleGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public FirewallRuleGroup withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +33,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public FirewallRuleGroup withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -39,6 +42,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public FirewallRuleGroup withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModificationTime")
     public String modificationTime;
+
     public FirewallRuleGroup withModificationTime(String modificationTime) {
         this.modificationTime = modificationTime;
         return this;
@@ -55,6 +60,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FirewallRuleGroup withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public FirewallRuleGroup withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -71,6 +78,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleCount")
     public Long ruleCount;
+
     public FirewallRuleGroup withRuleCount(Long ruleCount) {
         this.ruleCount = ruleCount;
         return this;
@@ -79,6 +87,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareStatus")
     public ShareStatusEnum shareStatus;
+
     public FirewallRuleGroup withShareStatus(ShareStatusEnum shareStatus) {
         this.shareStatus = shareStatus;
         return this;
@@ -87,6 +96,7 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FirewallRuleGroupStatusEnum status;
+
     public FirewallRuleGroup withStatus(FirewallRuleGroupStatusEnum status) {
         this.status = status;
         return this;
@@ -95,9 +105,11 @@ public class FirewallRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public FirewallRuleGroup withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public FirewallRuleGroup(){}
 }

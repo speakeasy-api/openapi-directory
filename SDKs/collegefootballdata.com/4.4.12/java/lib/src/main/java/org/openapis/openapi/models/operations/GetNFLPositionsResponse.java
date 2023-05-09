@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNFLPositionsResponse {
     
     public String contentType;
+
     public GetNFLPositionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNFLPositionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DraftPosition[] draftPositions;
+
     public GetNFLPositionsResponse withDraftPositions(org.openapis.openapi.models.shared.DraftPosition[] draftPositions) {
         this.draftPositions = draftPositions;
         return this;
@@ -26,6 +29,7 @@ public class GetNFLPositionsResponse {
     
     
     public Integer statusCode;
+
     public GetNFLPositionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetNFLPositionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNFLPositionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNFLPositionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

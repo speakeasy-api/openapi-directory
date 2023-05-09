@@ -14,6 +14,7 @@ public class GetCaseRequestBody {
      */
     @JsonProperty("fields")
     public org.openapis.openapi.models.shared.FieldIdentifier[] fields;
+
     public GetCaseRequestBody withFields(org.openapis.openapi.models.shared.FieldIdentifier[] fields) {
         this.fields = fields;
         return this;
@@ -25,9 +26,13 @@ public class GetCaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetCaseRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetCaseRequestBody(@JsonProperty("fields") org.openapis.openapi.models.shared.FieldIdentifier[] fields) {
+        this.fields = fields;
+  }
 }

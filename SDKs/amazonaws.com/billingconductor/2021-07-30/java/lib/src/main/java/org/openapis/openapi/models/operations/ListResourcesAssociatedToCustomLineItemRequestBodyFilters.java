@@ -15,9 +15,11 @@ public class ListResourcesAssociatedToCustomLineItemRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Relationship")
     public org.openapis.openapi.models.shared.CustomLineItemRelationshipEnum relationship;
+
     public ListResourcesAssociatedToCustomLineItemRequestBodyFilters withRelationship(org.openapis.openapi.models.shared.CustomLineItemRelationshipEnum relationship) {
         this.relationship = relationship;
         return this;
     }
     
+    public ListResourcesAssociatedToCustomLineItemRequestBodyFilters(){}
 }

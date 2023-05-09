@@ -18,6 +18,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Canary")
     public Canary canary;
+
     public ImportExportServiceDescriptors withCanary(Canary canary) {
         this.canary = canary;
         return this;
@@ -29,6 +30,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalHeaders")
     public java.util.Map<String, String> additionalHeaders;
+
     public ImportExportServiceDescriptors withAdditionalHeaders(java.util.Map<String, String> additionalHeaders) {
         this.additionalHeaders = additionalHeaders;
         return this;
@@ -40,6 +42,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public ExposedApi api;
+
     public ImportExportServiceDescriptors withApi(ExposedApi api) {
         this.api = api;
         return this;
@@ -51,6 +54,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authConfigRef")
     public String authConfigRef;
+
     public ImportExportServiceDescriptors withAuthConfigRef(String authConfigRef) {
         this.authConfigRef = authConfigRef;
         return this;
@@ -61,6 +65,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("buildMode")
     public Boolean buildMode;
+
     public ImportExportServiceDescriptors withBuildMode(Boolean buildMode) {
         this.buildMode = buildMode;
         return this;
@@ -72,6 +77,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chaosConfig")
     public ChaosConfig chaosConfig;
+
     public ImportExportServiceDescriptors withChaosConfig(ChaosConfig chaosConfig) {
         this.chaosConfig = chaosConfig;
         return this;
@@ -83,6 +89,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientConfig")
     public ClientConfig clientConfig;
+
     public ImportExportServiceDescriptors withClientConfig(ClientConfig clientConfig) {
         this.clientConfig = clientConfig;
         return this;
@@ -94,6 +101,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientValidatorRef")
     public String clientValidatorRef;
+
     public ImportExportServiceDescriptors withClientValidatorRef(String clientValidatorRef) {
         this.clientValidatorRef = clientValidatorRef;
         return this;
@@ -105,6 +113,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cors")
     public CorsSettings cors;
+
     public ImportExportServiceDescriptors withCors(CorsSettings cors) {
         this.cors = cors;
         return this;
@@ -115,6 +124,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("domain")
     public String domain;
+
     public ImportExportServiceDescriptors withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -125,6 +135,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ImportExportServiceDescriptors withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -135,6 +146,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("enforceSecureCommunication")
     public Boolean enforceSecureCommunication;
+
     public ImportExportServiceDescriptors withEnforceSecureCommunication(Boolean enforceSecureCommunication) {
         this.enforceSecureCommunication = enforceSecureCommunication;
         return this;
@@ -145,6 +157,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("env")
     public String env;
+
     public ImportExportServiceDescriptors withEnv(String env) {
         this.env = env;
         return this;
@@ -155,6 +168,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("forceHttps")
     public Boolean forceHttps;
+
     public ImportExportServiceDescriptors withForceHttps(Boolean forceHttps) {
         this.forceHttps = forceHttps;
         return this;
@@ -165,6 +179,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("groups")
     public String[] groups;
+
     public ImportExportServiceDescriptors withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -176,6 +191,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gzip")
     public Gzip gzip;
+
     public ImportExportServiceDescriptors withGzip(Gzip gzip) {
         this.gzip = gzip;
         return this;
@@ -187,6 +203,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headersVerification")
     public java.util.Map<String, String> headersVerification;
+
     public ImportExportServiceDescriptors withHeadersVerification(java.util.Map<String, String> headersVerification) {
         this.headersVerification = headersVerification;
         return this;
@@ -198,6 +215,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public HealthCheck healthCheck;
+
     public ImportExportServiceDescriptors withHealthCheck(HealthCheck healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -208,6 +226,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("id")
     public String id;
+
     public ImportExportServiceDescriptors withId(String id) {
         this.id = id;
         return this;
@@ -219,6 +238,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipFiltering")
     public IpFiltering ipFiltering;
+
     public ImportExportServiceDescriptors withIpFiltering(IpFiltering ipFiltering) {
         this.ipFiltering = ipFiltering;
         return this;
@@ -227,6 +247,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtVerifier")
     public Object jwtVerifier;
+
     public ImportExportServiceDescriptors withJwtVerifier(Object jwtVerifier) {
         this.jwtVerifier = jwtVerifier;
         return this;
@@ -238,6 +259,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localHost")
     public String localHost;
+
     public ImportExportServiceDescriptors withLocalHost(String localHost) {
         this.localHost = localHost;
         return this;
@@ -249,6 +271,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localScheme")
     public String localScheme;
+
     public ImportExportServiceDescriptors withLocalScheme(String localScheme) {
         this.localScheme = localScheme;
         return this;
@@ -259,6 +282,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("maintenanceMode")
     public Boolean maintenanceMode;
+
     public ImportExportServiceDescriptors withMaintenanceMode(Boolean maintenanceMode) {
         this.maintenanceMode = maintenanceMode;
         return this;
@@ -270,6 +294,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingHeaders")
     public java.util.Map<String, String> matchingHeaders;
+
     public ImportExportServiceDescriptors withMatchingHeaders(java.util.Map<String, String> matchingHeaders) {
         this.matchingHeaders = matchingHeaders;
         return this;
@@ -281,6 +306,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingRoot")
     public String matchingRoot;
+
     public ImportExportServiceDescriptors withMatchingRoot(String matchingRoot) {
         this.matchingRoot = matchingRoot;
         return this;
@@ -292,6 +318,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public ImportExportServiceDescriptors withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -302,6 +329,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("name")
     public String name;
+
     public ImportExportServiceDescriptors withName(String name) {
         this.name = name;
         return this;
@@ -313,6 +341,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideHost")
     public Boolean overrideHost;
+
     public ImportExportServiceDescriptors withOverrideHost(Boolean overrideHost) {
         this.overrideHost = overrideHost;
         return this;
@@ -323,6 +352,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("privateApp")
     public Boolean privateApp;
+
     public ImportExportServiceDescriptors withPrivateApp(Boolean privateApp) {
         this.privateApp = privateApp;
         return this;
@@ -334,6 +364,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privatePatterns")
     public String[] privatePatterns;
+
     public ImportExportServiceDescriptors withPrivatePatterns(String[] privatePatterns) {
         this.privatePatterns = privatePatterns;
         return this;
@@ -345,6 +376,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicPatterns")
     public String[] publicPatterns;
+
     public ImportExportServiceDescriptors withPublicPatterns(String[] publicPatterns) {
         this.publicPatterns = publicPatterns;
         return this;
@@ -356,6 +388,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectToLocal")
     public Boolean redirectToLocal;
+
     public ImportExportServiceDescriptors withRedirectToLocal(Boolean redirectToLocal) {
         this.redirectToLocal = redirectToLocal;
         return this;
@@ -367,6 +400,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirection")
     public RedirectionSettings redirection;
+
     public ImportExportServiceDescriptors withRedirection(RedirectionSettings redirection) {
         this.redirection = redirection;
         return this;
@@ -377,6 +411,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("root")
     public String root;
+
     public ImportExportServiceDescriptors withRoot(String root) {
         this.root = root;
         return this;
@@ -388,6 +423,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secComExcludedPatterns")
     public String[] secComExcludedPatterns;
+
     public ImportExportServiceDescriptors withSecComExcludedPatterns(String[] secComExcludedPatterns) {
         this.secComExcludedPatterns = secComExcludedPatterns;
         return this;
@@ -396,6 +432,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secComSettings")
     public Object secComSettings;
+
     public ImportExportServiceDescriptors withSecComSettings(Object secComSettings) {
         this.secComSettings = secComSettings;
         return this;
@@ -407,6 +444,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendOtoroshiHeadersBack")
     public Boolean sendOtoroshiHeadersBack;
+
     public ImportExportServiceDescriptors withSendOtoroshiHeadersBack(Boolean sendOtoroshiHeadersBack) {
         this.sendOtoroshiHeadersBack = sendOtoroshiHeadersBack;
         return this;
@@ -418,6 +456,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statsdConfig")
     public StatsdConfig statsdConfig;
+
     public ImportExportServiceDescriptors withStatsdConfig(StatsdConfig statsdConfig) {
         this.statsdConfig = statsdConfig;
         return this;
@@ -428,6 +467,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("subdomain")
     public String subdomain;
+
     public ImportExportServiceDescriptors withSubdomain(String subdomain) {
         this.subdomain = subdomain;
         return this;
@@ -438,6 +478,7 @@ public class ImportExportServiceDescriptors {
      */
     @JsonProperty("targets")
     public Target[] targets;
+
     public ImportExportServiceDescriptors withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -449,6 +490,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformerRef")
     public String transformerRef;
+
     public ImportExportServiceDescriptors withTransformerRef(String transformerRef) {
         this.transformerRef = transformerRef;
         return this;
@@ -460,6 +502,7 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userFacing")
     public Boolean userFacing;
+
     public ImportExportServiceDescriptors withUserFacing(Boolean userFacing) {
         this.userFacing = userFacing;
         return this;
@@ -471,9 +514,26 @@ public class ImportExportServiceDescriptors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xForwardedHeaders")
     public Boolean xForwardedHeaders;
+
     public ImportExportServiceDescriptors withXForwardedHeaders(Boolean xForwardedHeaders) {
         this.xForwardedHeaders = xForwardedHeaders;
         return this;
     }
     
+    public ImportExportServiceDescriptors(@JsonProperty("buildMode") Boolean buildMode, @JsonProperty("domain") String domain, @JsonProperty("enabled") Boolean enabled, @JsonProperty("enforceSecureCommunication") Boolean enforceSecureCommunication, @JsonProperty("env") String env, @JsonProperty("forceHttps") Boolean forceHttps, @JsonProperty("groups") String[] groups, @JsonProperty("id") String id, @JsonProperty("maintenanceMode") Boolean maintenanceMode, @JsonProperty("name") String name, @JsonProperty("privateApp") Boolean privateApp, @JsonProperty("root") String root, @JsonProperty("subdomain") String subdomain, @JsonProperty("targets") Target[] targets) {
+        this.buildMode = buildMode;
+        this.domain = domain;
+        this.enabled = enabled;
+        this.enforceSecureCommunication = enforceSecureCommunication;
+        this.env = env;
+        this.forceHttps = forceHttps;
+        this.groups = groups;
+        this.id = id;
+        this.maintenanceMode = maintenanceMode;
+        this.name = name;
+        this.privateApp = privateApp;
+        this.root = root;
+        this.subdomain = subdomain;
+        this.targets = targets;
+  }
 }

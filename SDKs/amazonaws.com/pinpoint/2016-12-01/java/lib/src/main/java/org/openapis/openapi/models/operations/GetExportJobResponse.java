@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExportJobResponse {
@@ -12,6 +13,7 @@ public class GetExportJobResponse {
      */
     
     public Object badRequestException;
+
     public GetExportJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetExportJobResponse {
     
     
     public String contentType;
+
     public GetExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetExportJobResponse {
      */
     
     public Object forbiddenException;
+
     public GetExportJobResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetExportJobResponse getExportJobResponse;
+
     public GetExportJobResponse withGetExportJobResponse(org.openapis.openapi.models.shared.GetExportJobResponse getExportJobResponse) {
         this.getExportJobResponse = getExportJobResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetExportJobResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetExportJobResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetExportJobResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetExportJobResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetExportJobResponse {
      */
     
     public Object notFoundException;
+
     public GetExportJobResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetExportJobResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetExportJobResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetExportJobResponse {
     
     
     public Integer statusCode;
+
     public GetExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetExportJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetExportJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

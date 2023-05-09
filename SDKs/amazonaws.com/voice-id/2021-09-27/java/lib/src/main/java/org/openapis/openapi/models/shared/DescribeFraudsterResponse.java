@@ -15,9 +15,11 @@ public class DescribeFraudsterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fraudster")
     public Fraudster fraudster;
+
     public DescribeFraudsterResponse withFraudster(Fraudster fraudster) {
         this.fraudster = fraudster;
         return this;
     }
     
+    public DescribeFraudsterResponse(){}
 }

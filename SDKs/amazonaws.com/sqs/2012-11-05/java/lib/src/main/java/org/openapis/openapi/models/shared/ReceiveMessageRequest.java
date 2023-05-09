@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ReceiveMessageRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReceiveMessageRequest {
     
     public AttributeNameListEnum[] attributeNames;
+
     public ReceiveMessageRequest withAttributeNames(AttributeNameListEnum[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -19,6 +20,7 @@ public class ReceiveMessageRequest {
     
     
     public Long maxNumberOfMessages;
+
     public ReceiveMessageRequest withMaxNumberOfMessages(Long maxNumberOfMessages) {
         this.maxNumberOfMessages = maxNumberOfMessages;
         return this;
@@ -26,6 +28,7 @@ public class ReceiveMessageRequest {
     
     
     public String[] messageAttributeNames;
+
     public ReceiveMessageRequest withMessageAttributeNames(String[] messageAttributeNames) {
         this.messageAttributeNames = messageAttributeNames;
         return this;
@@ -33,6 +36,7 @@ public class ReceiveMessageRequest {
     
     
     public String queueUrl;
+
     public ReceiveMessageRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
@@ -40,6 +44,7 @@ public class ReceiveMessageRequest {
     
     
     public String receiveRequestAttemptId;
+
     public ReceiveMessageRequest withReceiveRequestAttemptId(String receiveRequestAttemptId) {
         this.receiveRequestAttemptId = receiveRequestAttemptId;
         return this;
@@ -47,6 +52,7 @@ public class ReceiveMessageRequest {
     
     
     public Long visibilityTimeout;
+
     public ReceiveMessageRequest withVisibilityTimeout(Long visibilityTimeout) {
         this.visibilityTimeout = visibilityTimeout;
         return this;
@@ -54,9 +60,13 @@ public class ReceiveMessageRequest {
     
     
     public Long waitTimeSeconds;
+
     public ReceiveMessageRequest withWaitTimeSeconds(Long waitTimeSeconds) {
         this.waitTimeSeconds = waitTimeSeconds;
         return this;
     }
     
+    public ReceiveMessageRequest(@JsonProperty("QueueUrl") String queueUrl) {
+        this.queueUrl = queueUrl;
+  }
 }

@@ -12,6 +12,7 @@ public class ScoreboardGameHomeTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public String classification;
+
     public ScoreboardGameHomeTeam withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -20,6 +21,7 @@ public class ScoreboardGameHomeTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public ScoreboardGameHomeTeam withConference(String conference) {
         this.conference = conference;
         return this;
@@ -28,6 +30,7 @@ public class ScoreboardGameHomeTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ScoreboardGameHomeTeam withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class ScoreboardGameHomeTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScoreboardGameHomeTeam withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class ScoreboardGameHomeTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Long points;
+
     public ScoreboardGameHomeTeam withPoints(Long points) {
         this.points = points;
         return this;
     }
     
+    public ScoreboardGameHomeTeam(){}
 }

@@ -12,6 +12,7 @@ public class PatientPlanSummaryResourceRelationshipsActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PatientPlanSummaryResourceRelationshipsActionsData[] data;
+
     public PatientPlanSummaryResourceRelationshipsActions withData(PatientPlanSummaryResourceRelationshipsActionsData[] data) {
         this.data = data;
         return this;
@@ -20,9 +21,11 @@ public class PatientPlanSummaryResourceRelationshipsActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public PatientPlanSummaryResourceRelationshipsActionsLinks links;
+
     public PatientPlanSummaryResourceRelationshipsActions withLinks(PatientPlanSummaryResourceRelationshipsActionsLinks links) {
         this.links = links;
         return this;
     }
     
+    public PatientPlanSummaryResourceRelationshipsActions(){}
 }

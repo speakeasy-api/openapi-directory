@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesUserLinksBatchUpdateResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesUserLinksBatchUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesUserLinksBatchUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaBatchUpdateUserLinksResponse googleAnalyticsAdminV1alphaBatchUpdateUserLinksResponse;
+
     public AnalyticsadminPropertiesUserLinksBatchUpdateResponse withGoogleAnalyticsAdminV1alphaBatchUpdateUserLinksResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaBatchUpdateUserLinksResponse googleAnalyticsAdminV1alphaBatchUpdateUserLinksResponse) {
         this.googleAnalyticsAdminV1alphaBatchUpdateUserLinksResponse = googleAnalyticsAdminV1alphaBatchUpdateUserLinksResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesUserLinksBatchUpdateResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesUserLinksBatchUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesUserLinksBatchUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesUserLinksBatchUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesUserLinksBatchUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

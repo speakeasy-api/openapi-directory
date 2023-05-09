@@ -18,6 +18,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TimeZone withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public TimeZone withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public TimeZone(){}
 }

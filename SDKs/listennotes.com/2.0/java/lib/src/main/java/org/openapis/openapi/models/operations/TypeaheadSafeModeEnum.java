@@ -11,13 +11,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  */
 public enum TypeaheadSafeModeEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private TypeaheadSafeModeEnum(String value) {
+    private TypeaheadSafeModeEnum(Long value) {
         this.value = value;
     }
 }

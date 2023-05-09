@@ -15,6 +15,7 @@ public class AnomalyGroupStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationStartDate")
     public String evaluationStartDate;
+
     public AnomalyGroupStatistics withEvaluationStartDate(String evaluationStartDate) {
         this.evaluationStartDate = evaluationStartDate;
         return this;
@@ -23,6 +24,7 @@ public class AnomalyGroupStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemizedMetricStatsList")
     public ItemizedMetricStats[] itemizedMetricStatsList;
+
     public AnomalyGroupStatistics withItemizedMetricStatsList(ItemizedMetricStats[] itemizedMetricStatsList) {
         this.itemizedMetricStatsList = itemizedMetricStatsList;
         return this;
@@ -31,9 +33,11 @@ public class AnomalyGroupStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Long totalCount;
+
     public AnomalyGroupStatistics withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public AnomalyGroupStatistics(){}
 }

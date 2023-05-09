@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
      */
     @JsonProperty("portfolioSharpeRatioMinimumTrackRecordLength")
     public Double portfolioSharpeRatioMinimumTrackRecordLength;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength200ApplicationJSONPortfolios withPortfolioSharpeRatioMinimumTrackRecordLength(Double portfolioSharpeRatioMinimumTrackRecordLength) {
         this.portfolioSharpeRatioMinimumTrackRecordLength = portfolioSharpeRatioMinimumTrackRecordLength;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength200ApplicationJSONPortfolios(@JsonProperty("portfolioSharpeRatioMinimumTrackRecordLength") Double portfolioSharpeRatioMinimumTrackRecordLength) {
+        this.portfolioSharpeRatioMinimumTrackRecordLength = portfolioSharpeRatioMinimumTrackRecordLength;
+  }
 }

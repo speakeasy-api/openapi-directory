@@ -12,6 +12,7 @@ public class UpdateResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BookingOptions")
     public BookingOptions bookingOptions;
+
     public UpdateResourceRequest withBookingOptions(BookingOptions bookingOptions) {
         this.bookingOptions = bookingOptions;
         return this;
@@ -20,6 +21,7 @@ public class UpdateResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateResourceRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class UpdateResourceRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public UpdateResourceRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -34,9 +37,14 @@ public class UpdateResourceRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public UpdateResourceRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public UpdateResourceRequest(@JsonProperty("OrganizationId") String organizationId, @JsonProperty("ResourceId") String resourceId) {
+        this.organizationId = organizationId;
+        this.resourceId = resourceId;
+  }
 }

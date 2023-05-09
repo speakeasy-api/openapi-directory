@@ -18,6 +18,7 @@ public class LightSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public Color color;
+
     public LightSettings withColor(Color color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class LightSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lightOffDuration")
     public String lightOffDuration;
+
     public LightSettings withLightOffDuration(String lightOffDuration) {
         this.lightOffDuration = lightOffDuration;
         return this;
@@ -40,9 +42,11 @@ public class LightSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lightOnDuration")
     public String lightOnDuration;
+
     public LightSettings withLightOnDuration(String lightOnDuration) {
         this.lightOnDuration = lightOnDuration;
         return this;
     }
     
+    public LightSettings(){}
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2HybridInspectStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortedCount")
     public String abortedCount;
+
     public GooglePrivacyDlpV2HybridInspectStatistics withAbortedCount(String abortedCount) {
         this.abortedCount = abortedCount;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2HybridInspectStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingCount")
     public String pendingCount;
+
     public GooglePrivacyDlpV2HybridInspectStatistics withPendingCount(String pendingCount) {
         this.pendingCount = pendingCount;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2HybridInspectStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processedCount")
     public String processedCount;
+
     public GooglePrivacyDlpV2HybridInspectStatistics withProcessedCount(String processedCount) {
         this.processedCount = processedCount;
         return this;
     }
     
+    public GooglePrivacyDlpV2HybridInspectStatistics(){}
 }

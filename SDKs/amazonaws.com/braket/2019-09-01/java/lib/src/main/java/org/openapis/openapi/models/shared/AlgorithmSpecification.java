@@ -15,6 +15,7 @@ public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImage")
     public ContainerImage containerImage;
+
     public AlgorithmSpecification withContainerImage(ContainerImage containerImage) {
         this.containerImage = containerImage;
         return this;
@@ -23,9 +24,11 @@ public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptModeConfig")
     public ScriptModeConfig scriptModeConfig;
+
     public AlgorithmSpecification withScriptModeConfig(ScriptModeConfig scriptModeConfig) {
         this.scriptModeConfig = scriptModeConfig;
         return this;
     }
     
+    public AlgorithmSpecification(){}
 }

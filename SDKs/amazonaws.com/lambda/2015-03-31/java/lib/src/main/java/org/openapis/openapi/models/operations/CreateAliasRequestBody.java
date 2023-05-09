@@ -15,6 +15,7 @@ public class CreateAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateAliasRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateAliasRequestBody {
      */
     @JsonProperty("FunctionVersion")
     public String functionVersion;
+
     public CreateAliasRequestBody withFunctionVersion(String functionVersion) {
         this.functionVersion = functionVersion;
         return this;
@@ -35,6 +37,7 @@ public class CreateAliasRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateAliasRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,14 @@ public class CreateAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingConfig")
     public CreateAliasRequestBodyRoutingConfig routingConfig;
+
     public CreateAliasRequestBody withRoutingConfig(CreateAliasRequestBodyRoutingConfig routingConfig) {
         this.routingConfig = routingConfig;
         return this;
     }
     
+    public CreateAliasRequestBody(@JsonProperty("FunctionVersion") String functionVersion, @JsonProperty("Name") String name) {
+        this.functionVersion = functionVersion;
+        this.name = name;
+  }
 }

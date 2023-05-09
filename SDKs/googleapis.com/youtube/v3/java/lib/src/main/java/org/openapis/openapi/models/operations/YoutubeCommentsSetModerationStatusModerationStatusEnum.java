@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * YoutubeCommentsSetModerationStatusModerationStatusEnum - Specifies the requested moderation status. Note, comments can be in statuses, which are not available through this call. For example, this call does not allow to mark a comment as 'likely spam'. Valid values: MODERATION_STATUS_PUBLISHED, MODERATION_STATUS_HELD_FOR_REVIEW, MODERATION_STATUS_REJECTED.
+ * YoutubeCommentsSetModerationStatusModerationStatusEnum - Specifies the requested moderation status. Note, comments can be in statuses, which are not available through this call. For example, this call does not allow to mark a comment as 'likely spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
  */
 public enum YoutubeCommentsSetModerationStatusModerationStatusEnum {
     PUBLISHED("published"),

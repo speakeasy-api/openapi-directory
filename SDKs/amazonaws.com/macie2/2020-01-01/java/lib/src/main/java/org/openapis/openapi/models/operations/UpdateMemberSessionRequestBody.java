@@ -12,9 +12,13 @@ public class UpdateMemberSessionRequestBody {
      */
     @JsonProperty("status")
     public UpdateMemberSessionRequestBodyStatusEnum status;
+
     public UpdateMemberSessionRequestBody withStatus(UpdateMemberSessionRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateMemberSessionRequestBody(@JsonProperty("status") UpdateMemberSessionRequestBodyStatusEnum status) {
+        this.status = status;
+  }
 }

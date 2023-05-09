@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAccountSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateAccountSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAccountSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateAccountSettingsResponse {
      */
     
     public Object conflictException;
+
     public UpdateAccountSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAccountSettingsResponse {
     
     
     public String contentType;
+
     public UpdateAccountSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAccountSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAccountSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAccountSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateAccountSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAccountSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAccountSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAccountSettingsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAccountSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAccountSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAccountSettingsOutput updateAccountSettingsOutput;
+
     public UpdateAccountSettingsResponse withUpdateAccountSettingsOutput(org.openapis.openapi.models.shared.UpdateAccountSettingsOutput updateAccountSettingsOutput) {
         this.updateAccountSettingsOutput = updateAccountSettingsOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAccountSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateAccountSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAccountSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

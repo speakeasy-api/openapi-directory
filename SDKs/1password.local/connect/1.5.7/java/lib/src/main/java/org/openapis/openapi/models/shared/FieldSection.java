@@ -12,9 +12,11 @@ public class FieldSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FieldSection withId(String id) {
         this.id = id;
         return this;
     }
     
+    public FieldSection(){}
 }

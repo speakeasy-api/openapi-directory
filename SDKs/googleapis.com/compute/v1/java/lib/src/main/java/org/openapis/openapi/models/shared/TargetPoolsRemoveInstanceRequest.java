@@ -15,9 +15,11 @@ public class TargetPoolsRemoveInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public InstanceReference[] instances;
+
     public TargetPoolsRemoveInstanceRequest withInstances(InstanceReference[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public TargetPoolsRemoveInstanceRequest(){}
 }

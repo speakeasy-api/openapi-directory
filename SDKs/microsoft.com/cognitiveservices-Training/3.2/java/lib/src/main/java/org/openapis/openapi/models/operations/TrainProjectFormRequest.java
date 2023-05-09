@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrainProjectFormRequest {
@@ -12,6 +13,7 @@ public class TrainProjectFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.TrainingParameters trainingParameters;
+
     public TrainProjectFormRequest withTrainingParameters(org.openapis.openapi.models.shared.TrainingParameters trainingParameters) {
         this.trainingParameters = trainingParameters;
         return this;
@@ -22,6 +24,7 @@ public class TrainProjectFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceTrain")
     public Boolean forceTrain;
+
     public TrainProjectFormRequest withForceTrain(Boolean forceTrain) {
         this.forceTrain = forceTrain;
         return this;
@@ -32,6 +35,7 @@ public class TrainProjectFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notificationEmailAddress")
     public String notificationEmailAddress;
+
     public TrainProjectFormRequest withNotificationEmailAddress(String notificationEmailAddress) {
         this.notificationEmailAddress = notificationEmailAddress;
         return this;
@@ -42,6 +46,7 @@ public class TrainProjectFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public TrainProjectFormRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -52,6 +57,7 @@ public class TrainProjectFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reservedBudgetInHours")
     public Integer reservedBudgetInHours;
+
     public TrainProjectFormRequest withReservedBudgetInHours(Integer reservedBudgetInHours) {
         this.reservedBudgetInHours = reservedBudgetInHours;
         return this;
@@ -62,9 +68,13 @@ public class TrainProjectFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trainingType")
     public TrainProjectFormTrainingTypeEnum trainingType;
+
     public TrainProjectFormRequest withTrainingType(TrainProjectFormTrainingTypeEnum trainingType) {
         this.trainingType = trainingType;
         return this;
     }
     
+    public TrainProjectFormRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

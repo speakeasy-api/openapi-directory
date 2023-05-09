@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributorRequest {
@@ -12,6 +13,7 @@ public class GetContributorRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public GetContributorRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
@@ -22,9 +24,13 @@ public class GetContributorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contributorId")
     public String contributorId;
+
     public GetContributorRequest withContributorId(String contributorId) {
         this.contributorId = contributorId;
         return this;
     }
     
+    public GetContributorRequest(@JsonProperty("contributorId") String contributorId) {
+        this.contributorId = contributorId;
+  }
 }

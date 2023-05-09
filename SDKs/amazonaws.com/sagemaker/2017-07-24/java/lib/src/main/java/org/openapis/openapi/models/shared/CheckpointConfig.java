@@ -15,6 +15,7 @@ public class CheckpointConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPath")
     public String localPath;
+
     public CheckpointConfig withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -22,9 +23,13 @@ public class CheckpointConfig {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public CheckpointConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public CheckpointConfig(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

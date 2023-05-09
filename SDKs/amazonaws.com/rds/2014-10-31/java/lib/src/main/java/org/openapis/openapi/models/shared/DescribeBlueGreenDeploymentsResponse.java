@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeBlueGreenDeploymentsResponse {
     
     public BlueGreenDeployment[] blueGreenDeployments;
+
     public DescribeBlueGreenDeploymentsResponse withBlueGreenDeployments(BlueGreenDeployment[] blueGreenDeployments) {
         this.blueGreenDeployments = blueGreenDeployments;
         return this;
@@ -19,9 +20,11 @@ public class DescribeBlueGreenDeploymentsResponse {
     
     
     public String marker;
+
     public DescribeBlueGreenDeploymentsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeBlueGreenDeploymentsResponse(){}
 }

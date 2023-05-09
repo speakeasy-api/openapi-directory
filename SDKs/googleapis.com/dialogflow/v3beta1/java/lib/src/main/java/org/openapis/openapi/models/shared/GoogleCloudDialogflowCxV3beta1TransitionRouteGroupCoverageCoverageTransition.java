@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageTransition {
     /**
-     * Whether or not the transition route is covered by at least one of the agent's test cases.
+     * Whether the transition route is covered by at least one of the agent's test cases.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("covered")
     public Boolean covered;
+
     public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageTransition withCovered(Boolean covered) {
         this.covered = covered;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageT
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionRoute")
     public GoogleCloudDialogflowCxV3beta1TransitionRoute transitionRoute;
+
     public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageTransition withTransitionRoute(GoogleCloudDialogflowCxV3beta1TransitionRoute transitionRoute) {
         this.transitionRoute = transitionRoute;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageTransition(){}
 }

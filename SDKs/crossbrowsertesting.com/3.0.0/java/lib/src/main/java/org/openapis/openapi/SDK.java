@@ -119,6 +119,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -151,11 +156,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse res = new org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse() {{
+        org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse res = new org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse(contentType, httpRes.statusCode()) {{
             singleComparisonTests = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,11 +201,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdResponse res = new org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdResponse() {{
+        org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdResponse res = new org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdResponse(contentType, httpRes.statusCode()) {{
             fullComparisonTest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +246,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse res = new org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse() {{
+        org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse res = new org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse(contentType, httpRes.statusCode()) {{
             singleComparisonTest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

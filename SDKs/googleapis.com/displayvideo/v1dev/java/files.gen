@@ -51,4 +51,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Operation.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java
+docs/sdk/README.md
+docs/media/README.md
+docs/sdfdownloadtasks/README.md
 USAGE.md

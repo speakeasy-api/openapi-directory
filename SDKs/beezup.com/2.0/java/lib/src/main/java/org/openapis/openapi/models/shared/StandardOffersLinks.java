@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StandardOffersLinks {
     @JsonProperty("self")
     public LinksGetStandardOffersLink self;
+
     public StandardOffersLinks withSelf(LinksGetStandardOffersLink self) {
         this.self = self;
         return this;
     }
     
+    public StandardOffersLinks(@JsonProperty("self") LinksGetStandardOffersLink self) {
+        this.self = self;
+  }
 }

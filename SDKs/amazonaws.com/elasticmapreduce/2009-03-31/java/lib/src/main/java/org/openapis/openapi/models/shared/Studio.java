@@ -20,6 +20,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthMode")
     public AuthModeEnum authMode;
+
     public Studio withAuthMode(AuthModeEnum authMode) {
         this.authMode = authMode;
         return this;
@@ -30,6 +31,7 @@ public class Studio {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Studio withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultS3Location")
     public String defaultS3Location;
+
     public Studio withDefaultS3Location(String defaultS3Location) {
         this.defaultS3Location = defaultS3Location;
         return this;
@@ -46,6 +49,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Studio withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineSecurityGroupId")
     public String engineSecurityGroupId;
+
     public Studio withEngineSecurityGroupId(String engineSecurityGroupId) {
         this.engineSecurityGroupId = engineSecurityGroupId;
         return this;
@@ -62,6 +67,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdpAuthUrl")
     public String idpAuthUrl;
+
     public Studio withIdpAuthUrl(String idpAuthUrl) {
         this.idpAuthUrl = idpAuthUrl;
         return this;
@@ -70,6 +76,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdpRelayStateParameterName")
     public String idpRelayStateParameterName;
+
     public Studio withIdpRelayStateParameterName(String idpRelayStateParameterName) {
         this.idpRelayStateParameterName = idpRelayStateParameterName;
         return this;
@@ -78,6 +85,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Studio withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public Studio withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -94,6 +103,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioArn")
     public String studioArn;
+
     public Studio withStudioArn(String studioArn) {
         this.studioArn = studioArn;
         return this;
@@ -102,6 +112,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioId")
     public String studioId;
+
     public Studio withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
@@ -110,6 +121,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public Studio withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -118,6 +130,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Studio withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -126,6 +139,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public Studio withUrl(String url) {
         this.url = url;
         return this;
@@ -134,6 +148,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserRole")
     public String userRole;
+
     public Studio withUserRole(String userRole) {
         this.userRole = userRole;
         return this;
@@ -142,6 +157,7 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public Studio withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -150,9 +166,11 @@ public class Studio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceSecurityGroupId")
     public String workspaceSecurityGroupId;
+
     public Studio withWorkspaceSecurityGroupId(String workspaceSecurityGroupId) {
         this.workspaceSecurityGroupId = workspaceSecurityGroupId;
         return this;
     }
     
+    public Studio(){}
 }

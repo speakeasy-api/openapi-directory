@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostHooksJsonRequest {
@@ -12,6 +13,7 @@ public class PostHooksJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HookEdit hookEdit;
+
     public PostHooksJsonRequest withHookEdit(org.openapis.openapi.models.shared.HookEdit hookEdit) {
         this.hookEdit = hookEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostHooksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostHooksJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,9 +35,15 @@ public class PostHooksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostHooksJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostHooksJsonRequest(@JsonProperty("HookEdit") org.openapis.openapi.models.shared.HookEdit hookEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.hookEdit = hookEdit;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

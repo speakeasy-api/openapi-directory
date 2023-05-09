@@ -12,6 +12,7 @@ public class OffersPerSalesChannel {
      */
     @JsonProperty("AvailableQuantity")
     public Integer availableQuantity;
+
     public OffersPerSalesChannel withAvailableQuantity(Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
@@ -22,6 +23,7 @@ public class OffersPerSalesChannel {
      */
     @JsonProperty("ListPrice")
     public Integer listPrice;
+
     public OffersPerSalesChannel withListPrice(Integer listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -32,6 +34,7 @@ public class OffersPerSalesChannel {
      */
     @JsonProperty("Price")
     public Integer price;
+
     public OffersPerSalesChannel withPrice(Integer price) {
         this.price = price;
         return this;
@@ -42,6 +45,7 @@ public class OffersPerSalesChannel {
      */
     @JsonProperty("PriceWithoutDiscount")
     public Integer priceWithoutDiscount;
+
     public OffersPerSalesChannel withPriceWithoutDiscount(Integer priceWithoutDiscount) {
         this.priceWithoutDiscount = priceWithoutDiscount;
         return this;
@@ -52,9 +56,17 @@ public class OffersPerSalesChannel {
      */
     @JsonProperty("SaleChannel")
     public Integer saleChannel;
+
     public OffersPerSalesChannel withSaleChannel(Integer saleChannel) {
         this.saleChannel = saleChannel;
         return this;
     }
     
+    public OffersPerSalesChannel(@JsonProperty("AvailableQuantity") Integer availableQuantity, @JsonProperty("ListPrice") Integer listPrice, @JsonProperty("Price") Integer price, @JsonProperty("PriceWithoutDiscount") Integer priceWithoutDiscount, @JsonProperty("SaleChannel") Integer saleChannel) {
+        this.availableQuantity = availableQuantity;
+        this.listPrice = listPrice;
+        this.price = price;
+        this.priceWithoutDiscount = priceWithoutDiscount;
+        this.saleChannel = saleChannel;
+  }
 }

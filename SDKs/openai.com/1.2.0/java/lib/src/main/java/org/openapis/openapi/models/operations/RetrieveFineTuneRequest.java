@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveFineTuneRequest {
@@ -13,9 +14,13 @@ public class RetrieveFineTuneRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fine_tune_id")
     public String fineTuneId;
+
     public RetrieveFineTuneRequest withFineTuneId(String fineTuneId) {
         this.fineTuneId = fineTuneId;
         return this;
     }
     
+    public RetrieveFineTuneRequest(@JsonProperty("fine_tune_id") String fineTuneId) {
+        this.fineTuneId = fineTuneId;
+  }
 }

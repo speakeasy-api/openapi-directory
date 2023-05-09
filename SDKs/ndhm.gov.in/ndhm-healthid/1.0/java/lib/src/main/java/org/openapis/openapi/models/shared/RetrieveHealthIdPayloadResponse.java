@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RetrieveHealthIdPayloadResponse {
     
     public String healthId;
+
     public RetrieveHealthIdPayloadResponse withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -19,9 +20,11 @@ public class RetrieveHealthIdPayloadResponse {
     
     
     public String healthIdNumber;
+
     public RetrieveHealthIdPayloadResponse withHealthIdNumber(String healthIdNumber) {
         this.healthIdNumber = healthIdNumber;
         return this;
     }
     
+    public RetrieveHealthIdPayloadResponse(){}
 }

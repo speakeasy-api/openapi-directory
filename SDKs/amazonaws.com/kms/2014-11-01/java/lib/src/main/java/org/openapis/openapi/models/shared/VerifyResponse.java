@@ -15,6 +15,7 @@ public class VerifyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public VerifyResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -23,6 +24,7 @@ public class VerifyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SignatureValid")
     public Boolean signatureValid;
+
     public VerifyResponse withSignatureValid(Boolean signatureValid) {
         this.signatureValid = signatureValid;
         return this;
@@ -31,9 +33,11 @@ public class VerifyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningAlgorithm")
     public SigningAlgorithmSpecEnum signingAlgorithm;
+
     public VerifyResponse withSigningAlgorithm(SigningAlgorithmSpecEnum signingAlgorithm) {
         this.signingAlgorithm = signingAlgorithm;
         return this;
     }
     
+    public VerifyResponse(){}
 }

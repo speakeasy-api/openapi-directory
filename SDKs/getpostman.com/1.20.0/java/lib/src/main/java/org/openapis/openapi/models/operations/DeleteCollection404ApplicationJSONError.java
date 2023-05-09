@@ -12,6 +12,7 @@ public class DeleteCollection404ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public DeleteCollection404ApplicationJSONErrorDetails details;
+
     public DeleteCollection404ApplicationJSONError withDetails(DeleteCollection404ApplicationJSONErrorDetails details) {
         this.details = details;
         return this;
@@ -20,6 +21,7 @@ public class DeleteCollection404ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DeleteCollection404ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
@@ -28,9 +30,11 @@ public class DeleteCollection404ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeleteCollection404ApplicationJSONError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteCollection404ApplicationJSONError(){}
 }

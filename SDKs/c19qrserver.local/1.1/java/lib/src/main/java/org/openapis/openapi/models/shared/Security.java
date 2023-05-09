@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=token")
     public String tokenHeader;
+
     public Security withTokenHeader(String tokenHeader) {
         this.tokenHeader = tokenHeader;
         return this;
     }
     
+    public Security(@JsonProperty("TokenHeader") String tokenHeader) {
+        this.tokenHeader = tokenHeader;
+  }
 }

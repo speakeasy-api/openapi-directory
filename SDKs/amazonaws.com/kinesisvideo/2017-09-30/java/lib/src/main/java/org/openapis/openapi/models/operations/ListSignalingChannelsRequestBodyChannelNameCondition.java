@@ -15,6 +15,7 @@ public class ListSignalingChannelsRequestBodyChannelNameCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComparisonOperator")
     public org.openapis.openapi.models.shared.ComparisonOperatorEnum comparisonOperator;
+
     public ListSignalingChannelsRequestBodyChannelNameCondition withComparisonOperator(org.openapis.openapi.models.shared.ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -23,9 +24,11 @@ public class ListSignalingChannelsRequestBodyChannelNameCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComparisonValue")
     public String comparisonValue;
+
     public ListSignalingChannelsRequestBodyChannelNameCondition withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
     }
     
+    public ListSignalingChannelsRequestBodyChannelNameCondition(){}
 }

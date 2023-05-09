@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * ImportDataFileFormatEnum - The payload format.
+ * ImportDataFileFormatEnum - Required. The payload format.
  */
 public enum ImportDataFileFormatEnum {
     IMPORT_JOB_FORMAT_UNSPECIFIED("IMPORT_JOB_FORMAT_UNSPECIFIED"),

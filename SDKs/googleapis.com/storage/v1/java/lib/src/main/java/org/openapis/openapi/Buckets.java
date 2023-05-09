@@ -60,10 +60,8 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsDeleteResponse res = new org.openapis.openapi.models.operations.StorageBucketsDeleteResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsDeleteResponse res = new org.openapis.openapi.models.operations.StorageBucketsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsGetResponse res = new org.openapis.openapi.models.operations.StorageBucketsGetResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsGetResponse res = new org.openapis.openapi.models.operations.StorageBucketsGetResponse(contentType, httpRes.statusCode()) {{
             bucket = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.StorageBucketsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.StorageBucketsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsInsertResponse res = new org.openapis.openapi.models.operations.StorageBucketsInsertResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsInsertResponse res = new org.openapis.openapi.models.operations.StorageBucketsInsertResponse(contentType, httpRes.statusCode()) {{
             bucket = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsListResponse res = new org.openapis.openapi.models.operations.StorageBucketsListResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsListResponse res = new org.openapis.openapi.models.operations.StorageBucketsListResponse(contentType, httpRes.statusCode()) {{
             buckets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,11 +276,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsLockRetentionPolicyResponse res = new org.openapis.openapi.models.operations.StorageBucketsLockRetentionPolicyResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsLockRetentionPolicyResponse res = new org.openapis.openapi.models.operations.StorageBucketsLockRetentionPolicyResponse(contentType, httpRes.statusCode()) {{
             bucket = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsPatchResponse res = new org.openapis.openapi.models.operations.StorageBucketsPatchResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsPatchResponse res = new org.openapis.openapi.models.operations.StorageBucketsPatchResponse(contentType, httpRes.statusCode()) {{
             bucket = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +368,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.StorageBucketsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.StorageBucketsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,11 +412,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.StorageBucketsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.StorageBucketsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,11 +458,9 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageBucketsUpdateResponse res = new org.openapis.openapi.models.operations.StorageBucketsUpdateResponse() {{
+        org.openapis.openapi.models.operations.StorageBucketsUpdateResponse res = new org.openapis.openapi.models.operations.StorageBucketsUpdateResponse(contentType, httpRes.statusCode()) {{
             bucket = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

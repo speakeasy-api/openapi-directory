@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTableResponse {
@@ -12,6 +13,7 @@ public class DeleteTableResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteTableResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTableResponse {
     
     
     public String contentType;
+
     public DeleteTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTableResponse {
      */
     
     public java.util.Map<String, Object> deleteTableResponse;
+
     public DeleteTableResponse withDeleteTableResponse(java.util.Map<String, Object> deleteTableResponse) {
         this.deleteTableResponse = deleteTableResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTableResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteTableResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTableResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteTableResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTableResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteTableResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteTableResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteTableResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteTableResponse {
      */
     
     public Object resourceNotReadyException;
+
     public DeleteTableResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteTableResponse {
     
     
     public Integer statusCode;
+
     public DeleteTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DeleteTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

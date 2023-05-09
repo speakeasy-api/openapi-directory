@@ -15,6 +15,7 @@ public class StorageVirtualMachineFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public StorageVirtualMachineFilterNameEnum name;
+
     public StorageVirtualMachineFilter withName(StorageVirtualMachineFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class StorageVirtualMachineFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public StorageVirtualMachineFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public StorageVirtualMachineFilter(){}
 }

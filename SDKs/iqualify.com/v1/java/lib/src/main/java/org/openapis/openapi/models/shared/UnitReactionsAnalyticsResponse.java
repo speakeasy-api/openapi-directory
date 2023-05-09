@@ -12,6 +12,7 @@ public class UnitReactionsAnalyticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedback")
     public UnitReactionsFeedback feedback;
+
     public UnitReactionsAnalyticsResponse withFeedback(UnitReactionsFeedback feedback) {
         this.feedback = feedback;
         return this;
@@ -20,9 +21,11 @@ public class UnitReactionsAnalyticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageId")
     public Boolean pageId;
+
     public UnitReactionsAnalyticsResponse withPageId(Boolean pageId) {
         this.pageId = pageId;
         return this;
     }
     
+    public UnitReactionsAnalyticsResponse(){}
 }

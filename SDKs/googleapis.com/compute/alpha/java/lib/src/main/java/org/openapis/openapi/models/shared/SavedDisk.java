@@ -18,6 +18,7 @@ public class SavedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public SavedDiskArchitectureEnum architecture;
+
     public SavedDisk withArchitecture(SavedDiskArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class SavedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SavedDisk withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class SavedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDisk")
     public String sourceDisk;
+
     public SavedDisk withSourceDisk(String sourceDisk) {
         this.sourceDisk = sourceDisk;
         return this;
@@ -51,6 +54,7 @@ public class SavedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBytes")
     public String storageBytes;
+
     public SavedDisk withStorageBytes(String storageBytes) {
         this.storageBytes = storageBytes;
         return this;
@@ -62,9 +66,11 @@ public class SavedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBytesStatus")
     public SavedDiskStorageBytesStatusEnum storageBytesStatus;
+
     public SavedDisk withStorageBytesStatus(SavedDiskStorageBytesStatusEnum storageBytesStatus) {
         this.storageBytesStatus = storageBytesStatus;
         return this;
     }
     
+    public SavedDisk(){}
 }

@@ -13,6 +13,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
     public OffsetDateTime createdAtDollarGte;
+
     public GetLocationsRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
         this.createdAtDollarGte = createdAtDollarGte;
         return this;
@@ -23,6 +24,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
     public OffsetDateTime createdAtDollarLte;
+
     public GetLocationsRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
         this.createdAtDollarLte = createdAtDollarLte;
         return this;
@@ -33,6 +35,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetLocationsRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
@@ -43,6 +46,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
     public Boolean paginateEnabled;
+
     public GetLocationsRequest withPaginateEnabled(Boolean paginateEnabled) {
         this.paginateEnabled = paginateEnabled;
         return this;
@@ -53,6 +57,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
     public Long paginateLimit;
+
     public GetLocationsRequest withPaginateLimit(Long paginateLimit) {
         this.paginateLimit = paginateLimit;
         return this;
@@ -63,6 +68,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
     public String paginatePage;
+
     public GetLocationsRequest withPaginatePage(String paginatePage) {
         this.paginatePage = paginatePage;
         return this;
@@ -73,6 +79,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetLocationsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -83,6 +90,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+
     public GetLocationsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -93,6 +101,7 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
     public OffsetDateTime updatedAtDollarGte;
+
     public GetLocationsRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
         this.updatedAtDollarGte = updatedAtDollarGte;
         return this;
@@ -103,9 +112,11 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
     public OffsetDateTime updatedAtDollarLte;
+
     public GetLocationsRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
         this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     
+    public GetLocationsRequest(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DraftRegistrationsCreateDraftRegistrationLinks - URLs to alternative representations of the draft registration entity.
@@ -15,9 +15,13 @@ public class DraftRegistrationsCreateDraftRegistrationLinks {
      */
     
     public String html;
+
     public DraftRegistrationsCreateDraftRegistrationLinks withHtml(String html) {
         this.html = html;
         return this;
     }
     
+    public DraftRegistrationsCreateDraftRegistrationLinks(@JsonProperty("html") String html) {
+        this.html = html;
+  }
 }

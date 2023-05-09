@@ -12,6 +12,7 @@ public class ArtifactFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public ArtifactFormat withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -20,6 +21,7 @@ public class ArtifactFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileExtension")
     public String fileExtension;
+
     public ArtifactFormat withFileExtension(String fileExtension) {
         this.fileExtension = fileExtension;
         return this;
@@ -28,6 +30,7 @@ public class ArtifactFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forContentType")
     public String forContentType;
+
     public ArtifactFormat withForContentType(String forContentType) {
         this.forContentType = forContentType;
         return this;
@@ -36,6 +39,7 @@ public class ArtifactFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ArtifactFormat withLabel(String label) {
         this.label = label;
         return this;
@@ -44,6 +48,7 @@ public class ArtifactFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveAspectRatio")
     public Boolean preserveAspectRatio;
+
     public ArtifactFormat withPreserveAspectRatio(Boolean preserveAspectRatio) {
         this.preserveAspectRatio = preserveAspectRatio;
         return this;
@@ -52,6 +57,7 @@ public class ArtifactFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public ArtifactFormat withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -60,9 +66,11 @@ public class ArtifactFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upscaleAllowed")
     public Boolean upscaleAllowed;
+
     public ArtifactFormat withUpscaleAllowed(Boolean upscaleAllowed) {
         this.upscaleAllowed = upscaleAllowed;
         return this;
     }
     
+    public ArtifactFormat(){}
 }

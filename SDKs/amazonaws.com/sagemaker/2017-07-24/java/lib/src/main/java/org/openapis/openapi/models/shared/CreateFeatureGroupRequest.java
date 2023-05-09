@@ -12,6 +12,7 @@ public class CreateFeatureGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateFeatureGroupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateFeatureGroupRequest {
     
     @JsonProperty("EventTimeFeatureName")
     public String eventTimeFeatureName;
+
     public CreateFeatureGroupRequest withEventTimeFeatureName(String eventTimeFeatureName) {
         this.eventTimeFeatureName = eventTimeFeatureName;
         return this;
@@ -26,6 +28,7 @@ public class CreateFeatureGroupRequest {
     
     @JsonProperty("FeatureDefinitions")
     public FeatureDefinition[] featureDefinitions;
+
     public CreateFeatureGroupRequest withFeatureDefinitions(FeatureDefinition[] featureDefinitions) {
         this.featureDefinitions = featureDefinitions;
         return this;
@@ -33,6 +36,7 @@ public class CreateFeatureGroupRequest {
     
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public CreateFeatureGroupRequest withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -41,6 +45,7 @@ public class CreateFeatureGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfflineStoreConfig")
     public OfflineStoreConfig offlineStoreConfig;
+
     public CreateFeatureGroupRequest withOfflineStoreConfig(OfflineStoreConfig offlineStoreConfig) {
         this.offlineStoreConfig = offlineStoreConfig;
         return this;
@@ -49,6 +54,7 @@ public class CreateFeatureGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnlineStoreConfig")
     public OnlineStoreConfig onlineStoreConfig;
+
     public CreateFeatureGroupRequest withOnlineStoreConfig(OnlineStoreConfig onlineStoreConfig) {
         this.onlineStoreConfig = onlineStoreConfig;
         return this;
@@ -56,6 +62,7 @@ public class CreateFeatureGroupRequest {
     
     @JsonProperty("RecordIdentifierFeatureName")
     public String recordIdentifierFeatureName;
+
     public CreateFeatureGroupRequest withRecordIdentifierFeatureName(String recordIdentifierFeatureName) {
         this.recordIdentifierFeatureName = recordIdentifierFeatureName;
         return this;
@@ -64,6 +71,7 @@ public class CreateFeatureGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateFeatureGroupRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -72,9 +80,16 @@ public class CreateFeatureGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFeatureGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFeatureGroupRequest(@JsonProperty("EventTimeFeatureName") String eventTimeFeatureName, @JsonProperty("FeatureDefinitions") FeatureDefinition[] featureDefinitions, @JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("RecordIdentifierFeatureName") String recordIdentifierFeatureName) {
+        this.eventTimeFeatureName = eventTimeFeatureName;
+        this.featureDefinitions = featureDefinitions;
+        this.featureGroupName = featureGroupName;
+        this.recordIdentifierFeatureName = recordIdentifierFeatureName;
+  }
 }

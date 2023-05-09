@@ -15,9 +15,11 @@ public class GetAnalyzedResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public AnalyzedResource resource;
+
     public GetAnalyzedResourceResponse withResource(AnalyzedResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public GetAnalyzedResourceResponse(){}
 }

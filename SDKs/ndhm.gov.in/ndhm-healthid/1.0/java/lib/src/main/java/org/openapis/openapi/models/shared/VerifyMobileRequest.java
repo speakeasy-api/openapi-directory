@@ -15,6 +15,7 @@ public class VerifyMobileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otp")
     public String otp;
+
     public VerifyMobileRequest withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -23,9 +24,11 @@ public class VerifyMobileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnId")
     public String txnId;
+
     public VerifyMobileRequest withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public VerifyMobileRequest(){}
 }

@@ -15,9 +15,11 @@ public class AcknowledgeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public AcknowledgeActionConfiguration withNote(String note) {
         this.note = note;
         return this;
     }
     
+    public AcknowledgeActionConfiguration(){}
 }

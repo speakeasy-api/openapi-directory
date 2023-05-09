@@ -25,6 +25,7 @@ public class ClientProfileNpsLast {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completion_date")
     public OffsetDateTime completionDate;
+
     public ClientProfileNpsLast withCompletionDate(OffsetDateTime completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -36,9 +37,11 @@ public class ClientProfileNpsLast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public ClientProfileNpsLast withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public ClientProfileNpsLast(){}
 }

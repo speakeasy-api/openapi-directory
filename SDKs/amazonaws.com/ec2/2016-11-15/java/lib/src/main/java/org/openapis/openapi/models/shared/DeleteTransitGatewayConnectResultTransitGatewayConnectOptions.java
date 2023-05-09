@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayConnectResultTransitGatewayConnectOptions {
     
     public DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum protocol;
+
     public DeleteTransitGatewayConnectResultTransitGatewayConnectOptions withProtocol(DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public DeleteTransitGatewayConnectResultTransitGatewayConnectOptions(){}
 }

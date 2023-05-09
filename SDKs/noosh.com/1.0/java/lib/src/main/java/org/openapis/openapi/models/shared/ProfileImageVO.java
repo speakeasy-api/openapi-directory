@@ -15,6 +15,7 @@ public class ProfileImageVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileImgUrl")
     public String profileImgUrl;
+
     public ProfileImageVO withProfileImgUrl(String profileImgUrl) {
         this.profileImgUrl = profileImgUrl;
         return this;
@@ -23,6 +24,7 @@ public class ProfileImageVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public ProfileImageVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class ProfileImageVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public ProfileImageVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ProfileImageVO(){}
 }

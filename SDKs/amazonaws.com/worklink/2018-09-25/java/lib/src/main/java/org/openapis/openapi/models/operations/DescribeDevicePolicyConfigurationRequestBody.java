@@ -12,9 +12,13 @@ public class DescribeDevicePolicyConfigurationRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DescribeDevicePolicyConfigurationRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public DescribeDevicePolicyConfigurationRequestBody(@JsonProperty("FleetArn") String fleetArn) {
+        this.fleetArn = fleetArn;
+  }
 }

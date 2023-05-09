@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatetimeRange {
     @JsonProperty("Begin")
     public String begin;
+
     public DatetimeRange withBegin(String begin) {
         this.begin = begin;
         return this;
@@ -22,9 +23,13 @@ public class DatetimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("End")
     public String end;
+
     public DatetimeRange withEnd(String end) {
         this.end = end;
         return this;
     }
     
+    public DatetimeRange(@JsonProperty("Begin") String begin) {
+        this.begin = begin;
+  }
 }

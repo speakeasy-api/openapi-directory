@@ -63,11 +63,9 @@ public class MeteringDecorator {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeteringGetResponse res = new org.openapis.openapi.models.operations.MeteringGetResponse() {{
+        org.openapis.openapi.models.operations.MeteringGetResponse res = new org.openapis.openapi.models.operations.MeteringGetResponse(contentType, httpRes.statusCode()) {{
             meteringGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class MeteringDecorator {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeteringPostResponse res = new org.openapis.openapi.models.operations.MeteringPostResponse() {{
+        org.openapis.openapi.models.operations.MeteringPostResponse res = new org.openapis.openapi.models.operations.MeteringPostResponse(contentType, httpRes.statusCode()) {{
             meteringPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

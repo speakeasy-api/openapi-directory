@@ -13,8 +13,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rootVolume")
+    public Boolean rootVolume;
+
+    public VolumeConfiguration withRootVolume(Boolean rootVolume) {
+        this.rootVolume = rootVolume;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeBaselineIOPS")
     public Long volumeBaselineIOPS;
+
     public VolumeConfiguration withVolumeBaselineIOPS(Long volumeBaselineIOPS) {
         this.volumeBaselineIOPS = volumeBaselineIOPS;
         return this;
@@ -23,6 +33,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeBaselineThroughput")
     public Long volumeBaselineThroughput;
+
     public VolumeConfiguration withVolumeBaselineThroughput(Long volumeBaselineThroughput) {
         this.volumeBaselineThroughput = volumeBaselineThroughput;
         return this;
@@ -31,6 +42,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeBurstIOPS")
     public Long volumeBurstIOPS;
+
     public VolumeConfiguration withVolumeBurstIOPS(Long volumeBurstIOPS) {
         this.volumeBurstIOPS = volumeBurstIOPS;
         return this;
@@ -39,6 +51,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeBurstThroughput")
     public Long volumeBurstThroughput;
+
     public VolumeConfiguration withVolumeBurstThroughput(Long volumeBurstThroughput) {
         this.volumeBurstThroughput = volumeBurstThroughput;
         return this;
@@ -47,6 +60,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeSize")
     public Long volumeSize;
+
     public VolumeConfiguration withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -55,9 +69,11 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeType")
     public String volumeType;
+
     public VolumeConfiguration withVolumeType(String volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public VolumeConfiguration(){}
 }

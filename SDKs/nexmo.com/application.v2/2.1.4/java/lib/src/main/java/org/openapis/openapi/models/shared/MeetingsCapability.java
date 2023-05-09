@@ -15,9 +15,11 @@ public class MeetingsCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhooks")
     public MeetingsCapabilityWebhooks webhooks;
+
     public MeetingsCapability withWebhooks(MeetingsCapabilityWebhooks webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public MeetingsCapability(){}
 }

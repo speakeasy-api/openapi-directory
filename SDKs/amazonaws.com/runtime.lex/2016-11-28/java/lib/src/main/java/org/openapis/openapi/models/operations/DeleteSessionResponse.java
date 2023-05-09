@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSessionResponse {
@@ -12,6 +13,7 @@ public class DeleteSessionResponse {
      */
     
     public Object badRequestException;
+
     public DeleteSessionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSessionResponse {
      */
     
     public Object conflictException;
+
     public DeleteSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSessionResponse {
     
     
     public String contentType;
+
     public DeleteSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSessionResponse deleteSessionResponse;
+
     public DeleteSessionResponse withDeleteSessionResponse(org.openapis.openapi.models.shared.DeleteSessionResponse deleteSessionResponse) {
         this.deleteSessionResponse = deleteSessionResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSessionResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteSessionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSessionResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteSessionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteSessionResponse {
      */
     
     public Object notFoundException;
+
     public DeleteSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteSessionResponse {
     
     
     public Integer statusCode;
+
     public DeleteSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

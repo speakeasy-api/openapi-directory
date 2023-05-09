@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransportationIncentivesLawsIdRequest {
@@ -12,6 +13,7 @@ public class TransportationIncentivesLawsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public TransportationIncentivesLawsIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class TransportationIncentivesLawsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expired")
     public Boolean expired;
+
     public TransportationIncentivesLawsIdRequest withExpired(Boolean expired) {
         this.expired = expired;
         return this;
@@ -32,6 +35,7 @@ public class TransportationIncentivesLawsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public TransportationIncentivesLawsIdRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class TransportationIncentivesLawsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=output_format")
     public TransportationIncentivesLawsIdOutputFormatEnum outputFormat;
+
     public TransportationIncentivesLawsIdRequest withOutputFormat(TransportationIncentivesLawsIdOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -52,9 +57,15 @@ public class TransportationIncentivesLawsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=poc")
     public Boolean poc;
+
     public TransportationIncentivesLawsIdRequest withPoc(Boolean poc) {
         this.poc = poc;
         return this;
     }
     
+    public TransportationIncentivesLawsIdRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("id") Long id, @JsonProperty("output_format") TransportationIncentivesLawsIdOutputFormatEnum outputFormat) {
+        this.apiKey = apiKey;
+        this.id = id;
+        this.outputFormat = outputFormat;
+  }
 }

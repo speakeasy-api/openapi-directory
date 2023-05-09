@@ -15,6 +15,7 @@ public class RoleListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public RoleSimpleVO[] result;
+
     public RoleListVO withResult(RoleSimpleVO[] result) {
         this.result = result;
         return this;
@@ -23,6 +24,7 @@ public class RoleListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public RoleListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class RoleListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public RoleListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public RoleListVO(){}
 }

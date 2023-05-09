@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2SaveFindings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public GooglePrivacyDlpV2OutputStorageConfig outputConfig;
+
     public GooglePrivacyDlpV2SaveFindings withOutputConfig(GooglePrivacyDlpV2OutputStorageConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public GooglePrivacyDlpV2SaveFindings(){}
 }

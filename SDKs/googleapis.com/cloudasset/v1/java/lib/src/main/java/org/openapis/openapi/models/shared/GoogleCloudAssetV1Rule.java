@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAll")
     public Boolean allowAll;
+
     public GoogleCloudAssetV1Rule withAllowAll(Boolean allowAll) {
         this.allowAll = allowAll;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public Expr condition;
+
     public GoogleCloudAssetV1Rule withCondition(Expr condition) {
         this.condition = condition;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("denyAll")
     public Boolean denyAll;
+
     public GoogleCloudAssetV1Rule withDenyAll(Boolean denyAll) {
         this.denyAll = denyAll;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudAssetV1Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforce")
     public Boolean enforce;
+
     public GoogleCloudAssetV1Rule withEnforce(Boolean enforce) {
         this.enforce = enforce;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudAssetV1Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public GoogleCloudAssetV1StringValues values;
+
     public GoogleCloudAssetV1Rule withValues(GoogleCloudAssetV1StringValues values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudAssetV1Rule(){}
 }

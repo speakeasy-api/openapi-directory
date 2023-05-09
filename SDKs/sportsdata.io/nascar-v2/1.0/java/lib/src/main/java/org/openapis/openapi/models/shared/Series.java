@@ -12,6 +12,7 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Series withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeriesID")
     public Long seriesID;
+
     public Series withSeriesID(Long seriesID) {
         this.seriesID = seriesID;
         return this;
     }
     
+    public Series(){}
 }

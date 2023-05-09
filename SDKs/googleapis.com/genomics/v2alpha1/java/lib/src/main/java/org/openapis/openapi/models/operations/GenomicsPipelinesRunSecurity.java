@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GenomicsPipelinesRunSecurity {
     @SpeakeasyMetadata("security:option=true")
     public GenomicsPipelinesRunSecurityOption1 option1;
+
     public GenomicsPipelinesRunSecurity withOption1(GenomicsPipelinesRunSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class GenomicsPipelinesRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public GenomicsPipelinesRunSecurityOption2 option2;
+
     public GenomicsPipelinesRunSecurity withOption2(GenomicsPipelinesRunSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public GenomicsPipelinesRunSecurity(){}
 }

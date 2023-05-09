@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReplicationGroupMessage {
     
     public String marker;
+
     public ReplicationGroupMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class ReplicationGroupMessage {
     
     
     public ReplicationGroupList[] replicationGroups;
+
     public ReplicationGroupMessage withReplicationGroups(ReplicationGroupList[] replicationGroups) {
         this.replicationGroups = replicationGroups;
         return this;
     }
     
+    public ReplicationGroupMessage(){}
 }

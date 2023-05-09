@@ -15,6 +15,7 @@ public class DescribeOrderableReplicationInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeOrderableReplicationInstancesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class DescribeOrderableReplicationInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderableReplicationInstances")
     public OrderableReplicationInstance[] orderableReplicationInstances;
+
     public DescribeOrderableReplicationInstancesResponse withOrderableReplicationInstances(OrderableReplicationInstance[] orderableReplicationInstances) {
         this.orderableReplicationInstances = orderableReplicationInstances;
         return this;
     }
     
+    public DescribeOrderableReplicationInstancesResponse(){}
 }

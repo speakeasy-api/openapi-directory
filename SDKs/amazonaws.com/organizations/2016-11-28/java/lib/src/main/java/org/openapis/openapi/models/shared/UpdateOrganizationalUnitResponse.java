@@ -15,9 +15,11 @@ public class UpdateOrganizationalUnitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnit")
     public OrganizationalUnit organizationalUnit;
+
     public UpdateOrganizationalUnitResponse withOrganizationalUnit(OrganizationalUnit organizationalUnit) {
         this.organizationalUnit = organizationalUnit;
         return this;
     }
     
+    public UpdateOrganizationalUnitResponse(){}
 }

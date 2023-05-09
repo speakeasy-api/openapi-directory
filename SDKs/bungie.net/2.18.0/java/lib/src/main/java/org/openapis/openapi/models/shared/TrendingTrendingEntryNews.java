@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class TrendingTrendingEntryNews {
     
     public ContentContentItemPublicContract article;
+
     public TrendingTrendingEntryNews withArticle(ContentContentItemPublicContract article) {
         this.article = article;
         return this;
     }
     
+    public TrendingTrendingEntryNews(){}
 }

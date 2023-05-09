@@ -52,4 +52,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/ApiResponseListPublishedWri
 lib/src/main/java/org/openapis/openapi/models/shared/PublishedWrittenQuestionQuestionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublishedWrittenQuestion.java
 lib/src/main/java/org/openapis/openapi/models/shared/MemberForDate.java
+docs/sdk/README.md
+docs/earlydaymotions/README.md
+docs/oralquestiontimes/README.md
+docs/oralquestions/README.md
 USAGE.md

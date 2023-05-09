@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActivityTypeDetail {
     @JsonProperty("configuration")
     public ActivityTypeConfiguration configuration;
+
     public ActivityTypeDetail withConfiguration(ActivityTypeConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -19,9 +20,14 @@ public class ActivityTypeDetail {
     
     @JsonProperty("typeInfo")
     public ActivityTypeInfo typeInfo;
+
     public ActivityTypeDetail withTypeInfo(ActivityTypeInfo typeInfo) {
         this.typeInfo = typeInfo;
         return this;
     }
     
+    public ActivityTypeDetail(@JsonProperty("configuration") ActivityTypeConfiguration configuration, @JsonProperty("typeInfo") ActivityTypeInfo typeInfo) {
+        this.configuration = configuration;
+        this.typeInfo = typeInfo;
+  }
 }

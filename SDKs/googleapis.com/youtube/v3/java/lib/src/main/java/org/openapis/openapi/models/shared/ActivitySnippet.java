@@ -23,6 +23,7 @@ public class ActivitySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public ActivitySnippet withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -34,6 +35,7 @@ public class ActivitySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelTitle")
     public String channelTitle;
+
     public ActivitySnippet withChannelTitle(String channelTitle) {
         this.channelTitle = channelTitle;
         return this;
@@ -45,6 +47,7 @@ public class ActivitySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ActivitySnippet withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +59,7 @@ public class ActivitySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public String groupId;
+
     public ActivitySnippet withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -69,6 +73,7 @@ public class ActivitySnippet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishedAt")
     public OffsetDateTime publishedAt;
+
     public ActivitySnippet withPublishedAt(OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -80,6 +85,7 @@ public class ActivitySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnails")
     public ThumbnailDetails thumbnails;
+
     public ActivitySnippet withThumbnails(ThumbnailDetails thumbnails) {
         this.thumbnails = thumbnails;
         return this;
@@ -91,6 +97,7 @@ public class ActivitySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ActivitySnippet withTitle(String title) {
         this.title = title;
         return this;
@@ -102,9 +109,11 @@ public class ActivitySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ActivitySnippetTypeEnum type;
+
     public ActivitySnippet withType(ActivitySnippetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ActivitySnippet(){}
 }

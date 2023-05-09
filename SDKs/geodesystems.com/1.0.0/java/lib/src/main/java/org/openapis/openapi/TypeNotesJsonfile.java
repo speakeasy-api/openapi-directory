@@ -57,10 +57,8 @@ public class TypeNotesJsonfile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchNotesJsonfileResponse res = new org.openapis.openapi.models.operations.SearchNotesJsonfileResponse() {{
+        org.openapis.openapi.models.operations.SearchNotesJsonfileResponse res = new org.openapis.openapi.models.operations.SearchNotesJsonfileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

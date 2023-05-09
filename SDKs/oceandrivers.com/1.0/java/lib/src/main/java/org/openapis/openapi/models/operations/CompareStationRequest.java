@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompareStationRequest {
@@ -12,9 +13,13 @@ public class CompareStationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stationName")
     public String stationName;
+
     public CompareStationRequest withStationName(String stationName) {
         this.stationName = stationName;
         return this;
     }
     
+    public CompareStationRequest(@JsonProperty("stationName") String stationName) {
+        this.stationName = stationName;
+  }
 }

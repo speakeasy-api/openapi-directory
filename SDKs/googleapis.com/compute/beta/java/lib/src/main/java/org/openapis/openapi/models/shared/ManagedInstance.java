@@ -15,6 +15,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allInstancesConfig")
     public ManagedInstanceAllInstancesConfig allInstancesConfig;
+
     public ManagedInstance withAllInstancesConfig(ManagedInstanceAllInstancesConfig allInstancesConfig) {
         this.allInstancesConfig = allInstancesConfig;
         return this;
@@ -26,6 +27,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentAction")
     public ManagedInstanceCurrentActionEnum currentAction;
+
     public ManagedInstance withCurrentAction(ManagedInstanceCurrentActionEnum currentAction) {
         this.currentAction = currentAction;
         return this;
@@ -37,6 +39,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ManagedInstance withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public ManagedInstance withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -59,6 +63,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceHealth")
     public ManagedInstanceInstanceHealth[] instanceHealth;
+
     public ManagedInstance withInstanceHealth(ManagedInstanceInstanceHealth[] instanceHealth) {
         this.instanceHealth = instanceHealth;
         return this;
@@ -70,6 +75,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceStatus")
     public ManagedInstanceInstanceStatusEnum instanceStatus;
+
     public ManagedInstance withInstanceStatus(ManagedInstanceInstanceStatusEnum instanceStatus) {
         this.instanceStatus = instanceStatus;
         return this;
@@ -78,6 +84,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastAttempt")
     public ManagedInstanceLastAttempt lastAttempt;
+
     public ManagedInstance withLastAttempt(ManagedInstanceLastAttempt lastAttempt) {
         this.lastAttempt = lastAttempt;
         return this;
@@ -89,6 +96,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preservedStateFromConfig")
     public PreservedState preservedStateFromConfig;
+
     public ManagedInstance withPreservedStateFromConfig(PreservedState preservedStateFromConfig) {
         this.preservedStateFromConfig = preservedStateFromConfig;
         return this;
@@ -100,6 +108,7 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preservedStateFromPolicy")
     public PreservedState preservedStateFromPolicy;
+
     public ManagedInstance withPreservedStateFromPolicy(PreservedState preservedStateFromPolicy) {
         this.preservedStateFromPolicy = preservedStateFromPolicy;
         return this;
@@ -108,9 +117,11 @@ public class ManagedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public ManagedInstanceVersion version;
+
     public ManagedInstance withVersion(ManagedInstanceVersion version) {
         this.version = version;
         return this;
     }
     
+    public ManagedInstance(){}
 }

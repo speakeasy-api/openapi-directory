@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDiscoveryengineV1betaDocument = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDeleteResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDeleteResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImportResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImportResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImportResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDiscoveryengineV1betaListDocumentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudDiscoveryengineV1betaDocument = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,6 +252,52 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1betaDocument out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1betaDocument.class);
                 res.googleCloudDiscoveryengineV1betaDocument = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the request is valid, the removal will be enquired and processed offlines. Depending on the number of Documents, this operation could take hours to complete. Before the operation completes, some Documents may still be returned by DocumentService.GetDocument or DocumentService.ListDocuments. To get a sample of Documents that would be deleted, set PurgeDocumentsRequest.force to false.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeResponse discoveryengineProjectsLocationsDataStoresBranchesDocumentsPurge(org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeRequest request, org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeRequest.class, baseUrl, "/v1beta/{parent}/documents:purge", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDiscoveryengineV1betaPurgeDocumentsRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeResponse(contentType, httpRes.statusCode()) {{
+            googleLongrunningOperation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleLongrunningOperation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleLongrunningOperation.class);
+                res.googleLongrunningOperation = out;
             }
         }
 
@@ -298,11 +334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendResponse(contentType, httpRes.statusCode()) {{
             googleCloudDiscoveryengineV1betaRecommendResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse(contentType, httpRes.statusCode()) {{
             googleApiHttpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsImportResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsImportResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsImportResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsWriteResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsWriteResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsWriteResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresUserEventsWriteResponse(contentType, httpRes.statusCode()) {{
             googleCloudDiscoveryengineV1betaUserEvent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoveryengineProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DiscoveryengineProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.DiscoveryengineProjectsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

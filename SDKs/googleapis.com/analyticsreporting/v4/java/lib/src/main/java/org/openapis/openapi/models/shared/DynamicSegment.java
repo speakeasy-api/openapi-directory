@@ -18,6 +18,7 @@ public class DynamicSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DynamicSegment withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class DynamicSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionSegment")
     public SegmentDefinition sessionSegment;
+
     public DynamicSegment withSessionSegment(SegmentDefinition sessionSegment) {
         this.sessionSegment = sessionSegment;
         return this;
@@ -40,9 +42,11 @@ public class DynamicSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSegment")
     public SegmentDefinition userSegment;
+
     public DynamicSegment withUserSegment(SegmentDefinition userSegment) {
         this.userSegment = userSegment;
         return this;
     }
     
+    public DynamicSegment(){}
 }

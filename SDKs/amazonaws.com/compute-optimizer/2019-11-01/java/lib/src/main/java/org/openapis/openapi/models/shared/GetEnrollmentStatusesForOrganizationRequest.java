@@ -12,6 +12,7 @@ public class GetEnrollmentStatusesForOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public EnrollmentFilter[] filters;
+
     public GetEnrollmentStatusesForOrganizationRequest withFilters(EnrollmentFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class GetEnrollmentStatusesForOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetEnrollmentStatusesForOrganizationRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class GetEnrollmentStatusesForOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetEnrollmentStatusesForOrganizationRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetEnrollmentStatusesForOrganizationRequest(){}
 }

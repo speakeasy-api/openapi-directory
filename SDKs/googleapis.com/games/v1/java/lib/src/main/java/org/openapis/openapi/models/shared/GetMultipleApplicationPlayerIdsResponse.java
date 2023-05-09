@@ -18,9 +18,11 @@ public class GetMultipleApplicationPlayerIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playerIds")
     public ApplicationPlayerId[] playerIds;
+
     public GetMultipleApplicationPlayerIdsResponse withPlayerIds(ApplicationPlayerId[] playerIds) {
         this.playerIds = playerIds;
         return this;
     }
     
+    public GetMultipleApplicationPlayerIdsResponse(){}
 }

@@ -15,9 +15,11 @@ public class Messages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhooks")
     public MessagesWebhooks[] webhooks;
+
     public Messages withWebhooks(MessagesWebhooks[] webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public Messages(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartFaceDetectionResponse {
@@ -12,6 +13,7 @@ public class StartFaceDetectionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartFaceDetectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartFaceDetectionResponse {
     
     
     public String contentType;
+
     public StartFaceDetectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartFaceDetectionResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartFaceDetectionResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class StartFaceDetectionResponse {
      */
     
     public Object internalServerError;
+
     public StartFaceDetectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class StartFaceDetectionResponse {
      */
     
     public Object invalidParameterException;
+
     public StartFaceDetectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class StartFaceDetectionResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public StartFaceDetectionResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -69,6 +76,7 @@ public class StartFaceDetectionResponse {
      */
     
     public Object limitExceededException;
+
     public StartFaceDetectionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartFaceDetectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartFaceDetectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -89,6 +98,7 @@ public class StartFaceDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartFaceDetectionResponse startFaceDetectionResponse;
+
     public StartFaceDetectionResponse withStartFaceDetectionResponse(org.openapis.openapi.models.shared.StartFaceDetectionResponse startFaceDetectionResponse) {
         this.startFaceDetectionResponse = startFaceDetectionResponse;
         return this;
@@ -96,6 +106,7 @@ public class StartFaceDetectionResponse {
     
     
     public Integer statusCode;
+
     public StartFaceDetectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class StartFaceDetectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartFaceDetectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class StartFaceDetectionResponse {
      */
     
     public Object throttlingException;
+
     public StartFaceDetectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class StartFaceDetectionResponse {
      */
     
     public Object videoTooLargeException;
+
     public StartFaceDetectionResponse withVideoTooLargeException(Object videoTooLargeException) {
         this.videoTooLargeException = videoTooLargeException;
         return this;
     }
     
+    public StartFaceDetectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

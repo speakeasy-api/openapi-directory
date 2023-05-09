@@ -15,9 +15,11 @@ public class ElasticInferenceAcceleratorHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ElasticInferenceAcceleratorHealth withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ElasticInferenceAcceleratorHealth(){}
 }

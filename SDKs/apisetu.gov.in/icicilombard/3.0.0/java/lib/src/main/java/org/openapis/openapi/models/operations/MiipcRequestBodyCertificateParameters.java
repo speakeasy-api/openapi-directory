@@ -12,6 +12,7 @@ public class MiipcRequestBodyCertificateParameters {
      */
     @JsonProperty("InsuredDob")
     public String insuredDob;
+
     public MiipcRequestBodyCertificateParameters withInsuredDob(String insuredDob) {
         this.insuredDob = insuredDob;
         return this;
@@ -22,9 +23,14 @@ public class MiipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public MiipcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
     }
     
+    public MiipcRequestBodyCertificateParameters(@JsonProperty("InsuredDob") String insuredDob, @JsonProperty("PolicyNo") String policyNo) {
+        this.insuredDob = insuredDob;
+        this.policyNo = policyNo;
+  }
 }

@@ -12,6 +12,7 @@ public class RetrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=algorithm")
     public String algorithm;
+
     public RetrainRequestBody withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -22,6 +23,7 @@ public class RetrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=epochs")
     public Integer epochs;
+
     public RetrainRequestBody withEpochs(Integer epochs) {
         this.epochs = epochs;
         return this;
@@ -32,6 +34,7 @@ public class RetrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=learningRate")
     public Float learningRate;
+
     public RetrainRequestBody withLearningRate(Float learningRate) {
         this.learningRate = learningRate;
         return this;
@@ -42,6 +45,7 @@ public class RetrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=modelId")
     public String modelId;
+
     public RetrainRequestBody withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -52,9 +56,11 @@ public class RetrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=trainParams,json")
     public org.openapis.openapi.models.shared.V2LanguageTrainParams trainParams;
+
     public RetrainRequestBody withTrainParams(org.openapis.openapi.models.shared.V2LanguageTrainParams trainParams) {
         this.trainParams = trainParams;
         return this;
     }
     
+    public RetrainRequestBody(){}
 }

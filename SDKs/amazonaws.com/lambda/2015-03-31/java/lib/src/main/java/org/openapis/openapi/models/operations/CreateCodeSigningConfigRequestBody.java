@@ -14,6 +14,7 @@ public class CreateCodeSigningConfigRequestBody {
      */
     @JsonProperty("AllowedPublishers")
     public CreateCodeSigningConfigRequestBodyAllowedPublishers allowedPublishers;
+
     public CreateCodeSigningConfigRequestBody withAllowedPublishers(CreateCodeSigningConfigRequestBodyAllowedPublishers allowedPublishers) {
         this.allowedPublishers = allowedPublishers;
         return this;
@@ -25,6 +26,7 @@ public class CreateCodeSigningConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSigningPolicies")
     public CreateCodeSigningConfigRequestBodyCodeSigningPolicies codeSigningPolicies;
+
     public CreateCodeSigningConfigRequestBody withCodeSigningPolicies(CreateCodeSigningConfigRequestBodyCodeSigningPolicies codeSigningPolicies) {
         this.codeSigningPolicies = codeSigningPolicies;
         return this;
@@ -36,9 +38,13 @@ public class CreateCodeSigningConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateCodeSigningConfigRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public CreateCodeSigningConfigRequestBody(@JsonProperty("AllowedPublishers") CreateCodeSigningConfigRequestBodyAllowedPublishers allowedPublishers) {
+        this.allowedPublishers = allowedPublishers;
+  }
 }

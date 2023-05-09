@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest {
@@ -12,6 +13,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.V1Beta1QuotaOverride v1Beta1QuotaOverride;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withV1Beta1QuotaOverride(org.openapis.openapi.models.shared.V1Beta1QuotaOverride v1Beta1QuotaOverride) {
         this.v1Beta1QuotaOverride = v1Beta1QuotaOverride;
         return this;
@@ -29,6 +32,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
     public Boolean force;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -79,6 +87,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceOnly")
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateForceOnlyEnum[] forceOnly;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withForceOnly(ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateForceOnlyEnum[] forceOnly) {
         this.forceOnly = forceOnly;
         return this;
@@ -89,6 +98,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -119,6 +131,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

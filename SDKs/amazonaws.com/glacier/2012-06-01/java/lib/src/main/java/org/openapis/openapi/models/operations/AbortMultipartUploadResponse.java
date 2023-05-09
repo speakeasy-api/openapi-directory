@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AbortMultipartUploadResponse {
     
     public String contentType;
+
     public AbortMultipartUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AbortMultipartUploadResponse {
      */
     
     public Object invalidParameterValueException;
+
     public AbortMultipartUploadResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class AbortMultipartUploadResponse {
      */
     
     public Object missingParameterValueException;
+
     public AbortMultipartUploadResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class AbortMultipartUploadResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AbortMultipartUploadResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class AbortMultipartUploadResponse {
     
     
     public Integer statusCode;
+
     public AbortMultipartUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AbortMultipartUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AbortMultipartUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class AbortMultipartUploadResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AbortMultipartUploadResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public AbortMultipartUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

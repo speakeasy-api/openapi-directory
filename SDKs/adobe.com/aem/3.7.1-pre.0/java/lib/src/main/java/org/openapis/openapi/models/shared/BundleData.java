@@ -15,6 +15,7 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public BundleData withCategory(String category) {
         this.category = category;
         return this;
@@ -26,6 +27,7 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fragment")
     public Boolean fragment;
+
     public BundleData withFragment(Boolean fragment) {
         this.fragment = fragment;
         return this;
@@ -37,6 +39,7 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BundleData withId(Long id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BundleData withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("props")
     public BundleDataProp[] props;
+
     public BundleData withProps(BundleDataProp[] props) {
         this.props = props;
         return this;
@@ -67,6 +72,7 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public BundleData withState(String state) {
         this.state = state;
         return this;
@@ -78,6 +84,7 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateRaw")
     public Long stateRaw;
+
     public BundleData withStateRaw(Long stateRaw) {
         this.stateRaw = stateRaw;
         return this;
@@ -89,6 +96,7 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbolicName")
     public String symbolicName;
+
     public BundleData withSymbolicName(String symbolicName) {
         this.symbolicName = symbolicName;
         return this;
@@ -100,9 +108,11 @@ public class BundleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public BundleData withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public BundleData(){}
 }

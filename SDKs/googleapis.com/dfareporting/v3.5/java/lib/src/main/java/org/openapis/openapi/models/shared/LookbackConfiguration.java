@@ -18,6 +18,7 @@ public class LookbackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickDuration")
     public Integer clickDuration;
+
     public LookbackConfiguration withClickDuration(Integer clickDuration) {
         this.clickDuration = clickDuration;
         return this;
@@ -29,9 +30,11 @@ public class LookbackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postImpressionActivitiesDuration")
     public Integer postImpressionActivitiesDuration;
+
     public LookbackConfiguration withPostImpressionActivitiesDuration(Integer postImpressionActivitiesDuration) {
         this.postImpressionActivitiesDuration = postImpressionActivitiesDuration;
         return this;
     }
     
+    public LookbackConfiguration(){}
 }

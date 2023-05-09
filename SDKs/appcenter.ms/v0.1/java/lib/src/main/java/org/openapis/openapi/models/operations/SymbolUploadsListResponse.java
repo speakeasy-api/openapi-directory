@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SymbolUploadsListResponse {
     
     public String contentType;
+
     public SymbolUploadsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SymbolUploadsListResponse {
     
     
     public Integer statusCode;
+
     public SymbolUploadsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SymbolUploadsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SymbolUploadsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SymbolUploadsListResponse {
      */
     
     public SymbolUploadsList200ApplicationJSON[] symbolUploadsList200ApplicationJSONObjects;
+
     public SymbolUploadsListResponse withSymbolUploadsList200ApplicationJSONObjects(SymbolUploadsList200ApplicationJSON[] symbolUploadsList200ApplicationJSONObjects) {
         this.symbolUploadsList200ApplicationJSONObjects = symbolUploadsList200ApplicationJSONObjects;
         return this;
@@ -43,6 +48,7 @@ public class SymbolUploadsListResponse {
      */
     
     public SymbolUploadsList403ApplicationJSON symbolUploadsList403ApplicationJSONObject;
+
     public SymbolUploadsListResponse withSymbolUploadsList403ApplicationJSONObject(SymbolUploadsList403ApplicationJSON symbolUploadsList403ApplicationJSONObject) {
         this.symbolUploadsList403ApplicationJSONObject = symbolUploadsList403ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class SymbolUploadsListResponse {
      */
     
     public SymbolUploadsList500ApplicationJSON symbolUploadsList500ApplicationJSONObject;
+
     public SymbolUploadsListResponse withSymbolUploadsList500ApplicationJSONObject(SymbolUploadsList500ApplicationJSON symbolUploadsList500ApplicationJSONObject) {
         this.symbolUploadsList500ApplicationJSONObject = symbolUploadsList500ApplicationJSONObject;
         return this;
     }
     
+    public SymbolUploadsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

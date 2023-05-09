@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AttachLoadBalancerTargetGroupsType {
     
     public String autoScalingGroupName;
+
     public AttachLoadBalancerTargetGroupsType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,14 @@ public class AttachLoadBalancerTargetGroupsType {
     
     
     public String[] targetGroupARNs;
+
     public AttachLoadBalancerTargetGroupsType withTargetGroupARNs(String[] targetGroupARNs) {
         this.targetGroupARNs = targetGroupARNs;
         return this;
     }
     
+    public AttachLoadBalancerTargetGroupsType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("TargetGroupARNs") String[] targetGroupARNs) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.targetGroupARNs = targetGroupARNs;
+  }
 }

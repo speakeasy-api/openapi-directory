@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SampleUtterance {
     @JsonProperty("utterance")
     public String utterance;
+
     public SampleUtterance withUtterance(String utterance) {
         this.utterance = utterance;
         return this;
     }
     
+    public SampleUtterance(@JsonProperty("utterance") String utterance) {
+        this.utterance = utterance;
+  }
 }

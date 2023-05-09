@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateIpAddress {
     @JsonProperty("IpId")
     public String ipId;
+
     public UpdateIpAddress withIpId(String ipId) {
         this.ipId = ipId;
         return this;
@@ -19,9 +20,14 @@ public class UpdateIpAddress {
     
     @JsonProperty("Ipv6")
     public String ipv6;
+
     public UpdateIpAddress withIpv6(String ipv6) {
         this.ipv6 = ipv6;
         return this;
     }
     
+    public UpdateIpAddress(@JsonProperty("IpId") String ipId, @JsonProperty("Ipv6") String ipv6) {
+        this.ipId = ipId;
+        this.ipv6 = ipv6;
+  }
 }

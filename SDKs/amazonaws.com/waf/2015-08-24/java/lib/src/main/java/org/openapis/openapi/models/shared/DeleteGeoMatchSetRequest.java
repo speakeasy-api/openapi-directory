@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteGeoMatchSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteGeoMatchSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,9 +17,14 @@ public class DeleteGeoMatchSetRequest {
     
     @JsonProperty("GeoMatchSetId")
     public String geoMatchSetId;
+
     public DeleteGeoMatchSetRequest withGeoMatchSetId(String geoMatchSetId) {
         this.geoMatchSetId = geoMatchSetId;
         return this;
     }
     
+    public DeleteGeoMatchSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("GeoMatchSetId") String geoMatchSetId) {
+        this.changeToken = changeToken;
+        this.geoMatchSetId = geoMatchSetId;
+  }
 }

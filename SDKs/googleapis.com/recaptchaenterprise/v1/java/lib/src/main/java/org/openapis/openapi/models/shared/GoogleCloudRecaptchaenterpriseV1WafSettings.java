@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1WafSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wafFeature")
     public GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum wafFeature;
+
     public GoogleCloudRecaptchaenterpriseV1WafSettings withWafFeature(GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum wafFeature) {
         this.wafFeature = wafFeature;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1WafSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wafService")
     public GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum wafService;
+
     public GoogleCloudRecaptchaenterpriseV1WafSettings withWafService(GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum wafService) {
         this.wafService = wafService;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1WafSettings(){}
 }

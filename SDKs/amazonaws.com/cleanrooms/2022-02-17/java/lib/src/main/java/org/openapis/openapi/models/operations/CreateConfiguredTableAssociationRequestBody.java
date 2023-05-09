@@ -14,6 +14,7 @@ public class CreateConfiguredTableAssociationRequestBody {
      */
     @JsonProperty("configuredTableIdentifier")
     public String configuredTableIdentifier;
+
     public CreateConfiguredTableAssociationRequestBody withConfiguredTableIdentifier(String configuredTableIdentifier) {
         this.configuredTableIdentifier = configuredTableIdentifier;
         return this;
@@ -25,6 +26,7 @@ public class CreateConfiguredTableAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateConfiguredTableAssociationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class CreateConfiguredTableAssociationRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateConfiguredTableAssociationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class CreateConfiguredTableAssociationRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateConfiguredTableAssociationRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -56,9 +60,15 @@ public class CreateConfiguredTableAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateConfiguredTableAssociationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConfiguredTableAssociationRequestBody(@JsonProperty("configuredTableIdentifier") String configuredTableIdentifier, @JsonProperty("name") String name, @JsonProperty("roleArn") String roleArn) {
+        this.configuredTableIdentifier = configuredTableIdentifier;
+        this.name = name;
+        this.roleArn = roleArn;
+  }
 }

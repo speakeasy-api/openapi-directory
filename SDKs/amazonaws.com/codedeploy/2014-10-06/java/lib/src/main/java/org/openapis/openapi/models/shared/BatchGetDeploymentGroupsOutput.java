@@ -15,6 +15,7 @@ public class BatchGetDeploymentGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentGroupsInfo")
     public DeploymentGroupInfo[] deploymentGroupsInfo;
+
     public BatchGetDeploymentGroupsOutput withDeploymentGroupsInfo(DeploymentGroupInfo[] deploymentGroupsInfo) {
         this.deploymentGroupsInfo = deploymentGroupsInfo;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetDeploymentGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchGetDeploymentGroupsOutput withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public BatchGetDeploymentGroupsOutput(){}
 }

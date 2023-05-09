@@ -18,6 +18,7 @@ public class EventReminders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public EventReminder[] overrides;
+
     public EventReminders withOverrides(EventReminder[] overrides) {
         this.overrides = overrides;
         return this;
@@ -29,9 +30,11 @@ public class EventReminders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDefault")
     public Boolean useDefault;
+
     public EventReminders withUseDefault(Boolean useDefault) {
         this.useDefault = useDefault;
         return this;
     }
     
+    public EventReminders(){}
 }

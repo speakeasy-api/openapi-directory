@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamMediaByTagYearRequest {
@@ -12,6 +13,7 @@ public class GetTeamMediaByTagYearRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetTeamMediaByTagYearRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,6 +24,7 @@ public class GetTeamMediaByTagYearRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=media_tag")
     public String mediaTag;
+
     public GetTeamMediaByTagYearRequest withMediaTag(String mediaTag) {
         this.mediaTag = mediaTag;
         return this;
@@ -32,6 +35,7 @@ public class GetTeamMediaByTagYearRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_key")
     public String teamKey;
+
     public GetTeamMediaByTagYearRequest withTeamKey(String teamKey) {
         this.teamKey = teamKey;
         return this;
@@ -42,9 +46,15 @@ public class GetTeamMediaByTagYearRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public Long year;
+
     public GetTeamMediaByTagYearRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetTeamMediaByTagYearRequest(@JsonProperty("media_tag") String mediaTag, @JsonProperty("team_key") String teamKey, @JsonProperty("year") Long year) {
+        this.mediaTag = mediaTag;
+        this.teamKey = teamKey;
+        this.year = year;
+  }
 }

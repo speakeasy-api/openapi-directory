@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ScoutingObservationAttachmentContents - OK
@@ -15,9 +15,13 @@ public class ScoutingObservationAttachmentContents {
      */
     
     public byte[] body;
+
     public ScoutingObservationAttachmentContents withBody(byte[] body) {
         this.body = body;
         return this;
     }
     
+    public ScoutingObservationAttachmentContents(@JsonProperty("body") byte[] body) {
+        this.body = body;
+  }
 }

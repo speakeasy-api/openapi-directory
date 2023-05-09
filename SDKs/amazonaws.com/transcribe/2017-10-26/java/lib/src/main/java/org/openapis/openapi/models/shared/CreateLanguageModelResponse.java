@@ -15,6 +15,7 @@ public class CreateLanguageModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseModelName")
     public BaseModelNameEnum baseModelName;
+
     public CreateLanguageModelResponse withBaseModelName(BaseModelNameEnum baseModelName) {
         this.baseModelName = baseModelName;
         return this;
@@ -23,6 +24,7 @@ public class CreateLanguageModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public CreateLanguageModelResponse withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -31,6 +33,7 @@ public class CreateLanguageModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public CLMLanguageCodeEnum languageCode;
+
     public CreateLanguageModelResponse withLanguageCode(CLMLanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -39,6 +42,7 @@ public class CreateLanguageModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public CreateLanguageModelResponse withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -47,9 +51,11 @@ public class CreateLanguageModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelStatus")
     public ModelStatusEnum modelStatus;
+
     public CreateLanguageModelResponse withModelStatus(ModelStatusEnum modelStatus) {
         this.modelStatus = modelStatus;
         return this;
     }
     
+    public CreateLanguageModelResponse(){}
 }

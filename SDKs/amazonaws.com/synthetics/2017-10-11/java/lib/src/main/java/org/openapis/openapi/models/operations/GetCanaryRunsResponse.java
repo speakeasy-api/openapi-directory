@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCanaryRunsResponse {
     
     public String contentType;
+
     public GetCanaryRunsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCanaryRunsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCanaryRunsResponse getCanaryRunsResponse;
+
     public GetCanaryRunsResponse withGetCanaryRunsResponse(org.openapis.openapi.models.shared.GetCanaryRunsResponse getCanaryRunsResponse) {
         this.getCanaryRunsResponse = getCanaryRunsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCanaryRunsResponse {
      */
     
     public Object internalServerException;
+
     public GetCanaryRunsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetCanaryRunsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCanaryRunsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetCanaryRunsResponse {
     
     
     public Integer statusCode;
+
     public GetCanaryRunsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCanaryRunsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCanaryRunsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetCanaryRunsResponse {
      */
     
     public Object validationException;
+
     public GetCanaryRunsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCanaryRunsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

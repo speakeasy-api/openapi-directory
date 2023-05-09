@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perimeterType")
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum perimeterType;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter withPerimeterType(GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum perimeterType) {
         this.perimeterType = perimeterType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig spec;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter withSpec(GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig spec) {
         this.spec = spec;
         return this;
@@ -62,6 +66,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig status;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter withStatus(GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig status) {
         this.status = status;
         return this;
@@ -73,6 +78,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter withTitle(String title) {
         this.title = title;
         return this;
@@ -84,9 +90,11 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useExplicitDryRunSpec")
     public Boolean useExplicitDryRunSpec;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter withUseExplicitDryRunSpec(Boolean useExplicitDryRunSpec) {
         this.useExplicitDryRunSpec = useExplicitDryRunSpec;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1ServicePerimeter(){}
 }

@@ -20,6 +20,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountsWithProvisionedRestoreAccess")
     public String[] accountsWithProvisionedRestoreAccess;
+
     public Snapshot withAccountsWithProvisionedRestoreAccess(String[] accountsWithProvisionedRestoreAccess) {
         this.accountsWithProvisionedRestoreAccess = accountsWithProvisionedRestoreAccess;
         return this;
@@ -28,6 +29,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountsWithRestoreAccess")
     public String[] accountsWithRestoreAccess;
+
     public Snapshot withAccountsWithRestoreAccess(String[] accountsWithRestoreAccess) {
         this.accountsWithRestoreAccess = accountsWithRestoreAccess;
         return this;
@@ -36,6 +38,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualIncrementalBackupSizeInMegaBytes")
     public Double actualIncrementalBackupSizeInMegaBytes;
+
     public Snapshot withActualIncrementalBackupSizeInMegaBytes(Double actualIncrementalBackupSizeInMegaBytes) {
         this.actualIncrementalBackupSizeInMegaBytes = actualIncrementalBackupSizeInMegaBytes;
         return this;
@@ -44,6 +47,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUsername")
     public String adminUsername;
+
     public Snapshot withAdminUsername(String adminUsername) {
         this.adminUsername = adminUsername;
         return this;
@@ -52,6 +56,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupProgressInMegaBytes")
     public Double backupProgressInMegaBytes;
+
     public Snapshot withBackupProgressInMegaBytes(Double backupProgressInMegaBytes) {
         this.backupProgressInMegaBytes = backupProgressInMegaBytes;
         return this;
@@ -60,6 +65,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBackupRateInMegaBytesPerSecond")
     public Double currentBackupRateInMegaBytesPerSecond;
+
     public Snapshot withCurrentBackupRateInMegaBytesPerSecond(Double currentBackupRateInMegaBytesPerSecond) {
         this.currentBackupRateInMegaBytesPerSecond = currentBackupRateInMegaBytesPerSecond;
         return this;
@@ -68,6 +74,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elapsedTimeInSeconds")
     public Long elapsedTimeInSeconds;
+
     public Snapshot withElapsedTimeInSeconds(Long elapsedTimeInSeconds) {
         this.elapsedTimeInSeconds = elapsedTimeInSeconds;
         return this;
@@ -76,6 +83,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedSecondsToCompletion")
     public Long estimatedSecondsToCompletion;
+
     public Snapshot withEstimatedSecondsToCompletion(Long estimatedSecondsToCompletion) {
         this.estimatedSecondsToCompletion = estimatedSecondsToCompletion;
         return this;
@@ -84,6 +92,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public Snapshot withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -92,6 +101,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceArn")
     public String namespaceArn;
+
     public Snapshot withNamespaceArn(String namespaceArn) {
         this.namespaceArn = namespaceArn;
         return this;
@@ -100,6 +110,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public Snapshot withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -108,6 +119,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public Snapshot withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -116,6 +128,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotArn")
     public String snapshotArn;
+
     public Snapshot withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -126,6 +139,7 @@ public class Snapshot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("snapshotCreateTime")
     public OffsetDateTime snapshotCreateTime;
+
     public Snapshot withSnapshotCreateTime(OffsetDateTime snapshotCreateTime) {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
@@ -134,6 +148,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public Snapshot withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -142,6 +157,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotRemainingDays")
     public Long snapshotRemainingDays;
+
     public Snapshot withSnapshotRemainingDays(Long snapshotRemainingDays) {
         this.snapshotRemainingDays = snapshotRemainingDays;
         return this;
@@ -150,6 +166,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotRetentionPeriod")
     public Long snapshotRetentionPeriod;
+
     public Snapshot withSnapshotRetentionPeriod(Long snapshotRetentionPeriod) {
         this.snapshotRetentionPeriod = snapshotRetentionPeriod;
         return this;
@@ -160,6 +177,7 @@ public class Snapshot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("snapshotRetentionStartTime")
     public OffsetDateTime snapshotRetentionStartTime;
+
     public Snapshot withSnapshotRetentionStartTime(OffsetDateTime snapshotRetentionStartTime) {
         this.snapshotRetentionStartTime = snapshotRetentionStartTime;
         return this;
@@ -168,6 +186,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SnapshotStatusEnum status;
+
     public Snapshot withStatus(SnapshotStatusEnum status) {
         this.status = status;
         return this;
@@ -176,9 +195,11 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBackupSizeInMegaBytes")
     public Double totalBackupSizeInMegaBytes;
+
     public Snapshot withTotalBackupSizeInMegaBytes(Double totalBackupSizeInMegaBytes) {
         this.totalBackupSizeInMegaBytes = totalBackupSizeInMegaBytes;
         return this;
     }
     
+    public Snapshot(){}
 }

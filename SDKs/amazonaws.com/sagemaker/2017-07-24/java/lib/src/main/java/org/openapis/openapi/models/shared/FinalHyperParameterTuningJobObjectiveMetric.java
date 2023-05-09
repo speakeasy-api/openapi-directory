@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * FinalHyperParameterTuningJobObjectiveMetric - Shows the latest objective metric emitted by a training job that was launched by a hyperparameter tuning job. You define the objective metric in the &lt;code&gt;HyperParameterTuningJobObjective&lt;/code&gt; parameter of &lt;a&gt;HyperParameterTuningJobConfig&lt;/a&gt;.
+ * FinalHyperParameterTuningJobObjectiveMetric - Shows the latest objective metric emitted by a training job that was launched by a hyperparameter tuning job. You define the objective metric in the &lt;code&gt;HyperParameterTuningJobObjective&lt;/code&gt; parameter of &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobConfig.html"&gt;HyperParameterTuningJobConfig&lt;/a&gt;.
  */
 public class FinalHyperParameterTuningJobObjectiveMetric {
     @JsonProperty("MetricName")
     public String metricName;
+
     public FinalHyperParameterTuningJobObjectiveMetric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -22,6 +23,7 @@ public class FinalHyperParameterTuningJobObjectiveMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public HyperParameterTuningJobObjectiveTypeEnum type;
+
     public FinalHyperParameterTuningJobObjectiveMetric withType(HyperParameterTuningJobObjectiveTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +31,14 @@ public class FinalHyperParameterTuningJobObjectiveMetric {
     
     @JsonProperty("Value")
     public Float value;
+
     public FinalHyperParameterTuningJobObjectiveMetric withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public FinalHyperParameterTuningJobObjectiveMetric(@JsonProperty("MetricName") String metricName, @JsonProperty("Value") Float value) {
+        this.metricName = metricName;
+        this.value = value;
+  }
 }

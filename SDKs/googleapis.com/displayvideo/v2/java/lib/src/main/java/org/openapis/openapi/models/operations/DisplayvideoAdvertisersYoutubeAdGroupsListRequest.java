@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,16 +68,18 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
     /**
-     * Allows filtering by custom YouTube ad group fields. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by `AND` and `OR`. Only the restrictions for * the same field can be combined by `OR`. A sequence of restrictions * implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported properties: - `adGroupId` - `displayName` - `entityStatus` - `lineItemId` - `adGroupFormat` Examples: * All ad groups under an line item: `lineItemId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM` ad groups under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND adGroupFormat="YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM"` The length of this field should be no more than 500 characters.
+     * Allows filtering by custom YouTube ad group fields. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by `AND` and `OR`. A sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported properties: * `adGroupId` * `displayName` * `entityStatus` * `lineItemId` * `adGroupFormat` Examples: * All ad groups under an line item: `lineItemId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` `YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM` ad groups under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND adGroupFormat="YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM"` The length of this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -82,6 +90,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -112,6 +123,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,6 +134,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +145,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +178,13 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoAdvertisersYoutubeAdGroupsListRequest(@JsonProperty("advertiserId") String advertiserId) {
+        this.advertiserId = advertiserId;
+  }
 }

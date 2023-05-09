@@ -57,14 +57,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceGetResponse res = new org.openapis.openapi.models.operations.PlaceGetResponse() {{
+        org.openapis.openapi.models.operations.PlaceGetResponse res = new org.openapis.openapi.models.operations.PlaceGetResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaces = null;
             tflApiPresentationEntitiesPlaces = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,14 +115,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceGetAtResponse res = new org.openapis.openapi.models.operations.PlaceGetAtResponse() {{
+        org.openapis.openapi.models.operations.PlaceGetAtResponse res = new org.openapis.openapi.models.operations.PlaceGetAtResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,14 +173,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceGetByGeoResponse res = new org.openapis.openapi.models.operations.PlaceGetByGeoResponse() {{
+        org.openapis.openapi.models.operations.PlaceGetByGeoResponse res = new org.openapis.openapi.models.operations.PlaceGetByGeoResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPoints = null;
             tflApiPresentationEntitiesStopPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,14 +231,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceGetByTypeResponse res = new org.openapis.openapi.models.operations.PlaceGetByTypeResponse() {{
+        org.openapis.openapi.models.operations.PlaceGetByTypeResponse res = new org.openapis.openapi.models.operations.PlaceGetByTypeResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaces = null;
             tflApiPresentationEntitiesPlaces = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,14 +289,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceGetOverlayResponse res = new org.openapis.openapi.models.operations.PlaceGetOverlayResponse() {{
+        org.openapis.openapi.models.operations.PlaceGetOverlayResponse res = new org.openapis.openapi.models.operations.PlaceGetOverlayResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -357,14 +347,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceGetStreetsByPostCodeResponse res = new org.openapis.openapi.models.operations.PlaceGetStreetsByPostCodeResponse() {{
+        org.openapis.openapi.models.operations.PlaceGetStreetsByPostCodeResponse res = new org.openapis.openapi.models.operations.PlaceGetStreetsByPostCodeResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,14 +398,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceMetaCategoriesResponse res = new org.openapis.openapi.models.operations.PlaceMetaCategoriesResponse() {{
+        org.openapis.openapi.models.operations.PlaceMetaCategoriesResponse res = new org.openapis.openapi.models.operations.PlaceMetaCategoriesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaceCategories = null;
             tflApiPresentationEntitiesPlaceCategories = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -463,14 +449,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceMetaPlaceTypesResponse res = new org.openapis.openapi.models.operations.PlaceMetaPlaceTypesResponse() {{
+        org.openapis.openapi.models.operations.PlaceMetaPlaceTypesResponse res = new org.openapis.openapi.models.operations.PlaceMetaPlaceTypesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaceCategories = null;
             tflApiPresentationEntitiesPlaceCategories = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -523,14 +507,12 @@ public class Place {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceSearchResponse res = new org.openapis.openapi.models.operations.PlaceSearchResponse() {{
+        org.openapis.openapi.models.operations.PlaceSearchResponse res = new org.openapis.openapi.models.operations.PlaceSearchResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaces = null;
             tflApiPresentationEntitiesPlaces = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

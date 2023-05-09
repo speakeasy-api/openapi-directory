@@ -12,6 +12,7 @@ public class HvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HvcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class HvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public HvcerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -32,9 +34,15 @@ public class HvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("YEAR")
     public String year;
+
     public HvcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public HvcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll, @JsonProperty("YEAR") String year) {
+        this.fullName = fullName;
+        this.rroll = rroll;
+        this.year = year;
+  }
 }

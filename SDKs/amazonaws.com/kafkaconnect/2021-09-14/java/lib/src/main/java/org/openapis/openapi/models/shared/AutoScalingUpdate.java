@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoScalingUpdate {
     @JsonProperty("maxWorkerCount")
     public Long maxWorkerCount;
+
     public AutoScalingUpdate withMaxWorkerCount(Long maxWorkerCount) {
         this.maxWorkerCount = maxWorkerCount;
         return this;
@@ -19,6 +20,7 @@ public class AutoScalingUpdate {
     
     @JsonProperty("mcuCount")
     public Long mcuCount;
+
     public AutoScalingUpdate withMcuCount(Long mcuCount) {
         this.mcuCount = mcuCount;
         return this;
@@ -26,6 +28,7 @@ public class AutoScalingUpdate {
     
     @JsonProperty("minWorkerCount")
     public Long minWorkerCount;
+
     public AutoScalingUpdate withMinWorkerCount(Long minWorkerCount) {
         this.minWorkerCount = minWorkerCount;
         return this;
@@ -33,6 +36,7 @@ public class AutoScalingUpdate {
     
     @JsonProperty("scaleInPolicy")
     public ScaleInPolicyUpdate scaleInPolicy;
+
     public AutoScalingUpdate withScaleInPolicy(ScaleInPolicyUpdate scaleInPolicy) {
         this.scaleInPolicy = scaleInPolicy;
         return this;
@@ -40,9 +44,17 @@ public class AutoScalingUpdate {
     
     @JsonProperty("scaleOutPolicy")
     public ScaleOutPolicyUpdate scaleOutPolicy;
+
     public AutoScalingUpdate withScaleOutPolicy(ScaleOutPolicyUpdate scaleOutPolicy) {
         this.scaleOutPolicy = scaleOutPolicy;
         return this;
     }
     
+    public AutoScalingUpdate(@JsonProperty("maxWorkerCount") Long maxWorkerCount, @JsonProperty("mcuCount") Long mcuCount, @JsonProperty("minWorkerCount") Long minWorkerCount, @JsonProperty("scaleInPolicy") ScaleInPolicyUpdate scaleInPolicy, @JsonProperty("scaleOutPolicy") ScaleOutPolicyUpdate scaleOutPolicy) {
+        this.maxWorkerCount = maxWorkerCount;
+        this.mcuCount = mcuCount;
+        this.minWorkerCount = minWorkerCount;
+        this.scaleInPolicy = scaleInPolicy;
+        this.scaleOutPolicy = scaleOutPolicy;
+  }
 }

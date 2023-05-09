@@ -15,6 +15,7 @@ public class DescribePatchBaselinesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineIdentities")
     public PatchBaselineIdentity[] baselineIdentities;
+
     public DescribePatchBaselinesResult withBaselineIdentities(PatchBaselineIdentity[] baselineIdentities) {
         this.baselineIdentities = baselineIdentities;
         return this;
@@ -23,9 +24,11 @@ public class DescribePatchBaselinesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePatchBaselinesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribePatchBaselinesResult(){}
 }

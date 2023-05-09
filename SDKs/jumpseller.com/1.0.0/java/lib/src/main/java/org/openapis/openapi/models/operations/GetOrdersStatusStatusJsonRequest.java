@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrdersStatusStatusJsonRequest {
@@ -12,6 +13,7 @@ public class GetOrdersStatusStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetOrdersStatusStatusJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetOrdersStatusStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetOrdersStatusStatusJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -32,9 +35,15 @@ public class GetOrdersStatusStatusJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=status")
     public GetOrdersStatusStatusJsonStatusEnum status;
+
     public GetOrdersStatusStatusJsonRequest withStatus(GetOrdersStatusStatusJsonStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetOrdersStatusStatusJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login, @JsonProperty("status") GetOrdersStatusStatusJsonStatusEnum status) {
+        this.authtoken = authtoken;
+        this.login = login;
+        this.status = status;
+  }
 }

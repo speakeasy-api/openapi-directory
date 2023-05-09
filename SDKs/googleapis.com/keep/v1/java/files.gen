@@ -71,4 +71,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/BatchCreatePermissionsRespo
 lib/src/main/java/org/openapis/openapi/models/shared/BatchCreatePermissionsRequestInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreatePermissionRequestInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchDeletePermissionsRequest.java
+docs/sdk/README.md
+docs/notes/README.md
 USAGE.md

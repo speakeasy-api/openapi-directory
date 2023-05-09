@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse {
@@ -12,6 +13,7 @@ public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse
      */
     
     public org.openapis.openapi.models.shared.CalendarAuthViewModel calendarAuthViewModel;
+
     public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse withCalendarAuthViewModel(org.openapis.openapi.models.shared.CalendarAuthViewModel calendarAuthViewModel) {
         this.calendarAuthViewModel = calendarAuthViewModel;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse
     
     
     public String contentType;
+
     public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse
     
     
     public Integer statusCode;
+
     public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

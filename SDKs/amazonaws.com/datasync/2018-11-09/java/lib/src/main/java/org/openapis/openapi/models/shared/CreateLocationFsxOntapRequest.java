@@ -14,6 +14,7 @@ public class CreateLocationFsxOntapRequest {
      */
     @JsonProperty("Protocol")
     public FsxProtocol protocol;
+
     public CreateLocationFsxOntapRequest withProtocol(FsxProtocol protocol) {
         this.protocol = protocol;
         return this;
@@ -21,6 +22,7 @@ public class CreateLocationFsxOntapRequest {
     
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public CreateLocationFsxOntapRequest withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -28,6 +30,7 @@ public class CreateLocationFsxOntapRequest {
     
     @JsonProperty("StorageVirtualMachineArn")
     public String storageVirtualMachineArn;
+
     public CreateLocationFsxOntapRequest withStorageVirtualMachineArn(String storageVirtualMachineArn) {
         this.storageVirtualMachineArn = storageVirtualMachineArn;
         return this;
@@ -36,6 +39,7 @@ public class CreateLocationFsxOntapRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationFsxOntapRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -44,9 +48,15 @@ public class CreateLocationFsxOntapRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationFsxOntapRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocationFsxOntapRequest(@JsonProperty("Protocol") FsxProtocol protocol, @JsonProperty("SecurityGroupArns") String[] securityGroupArns, @JsonProperty("StorageVirtualMachineArn") String storageVirtualMachineArn) {
+        this.protocol = protocol;
+        this.securityGroupArns = securityGroupArns;
+        this.storageVirtualMachineArn = storageVirtualMachineArn;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEntityRecognizerResponse {
     
     public String contentType;
+
     public DeleteEntityRecognizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEntityRecognizerResponse {
      */
     
     public java.util.Map<String, Object> deleteEntityRecognizerResponse;
+
     public DeleteEntityRecognizerResponse withDeleteEntityRecognizerResponse(java.util.Map<String, Object> deleteEntityRecognizerResponse) {
         this.deleteEntityRecognizerResponse = deleteEntityRecognizerResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEntityRecognizerResponse {
      */
     
     public Object internalServerException;
+
     public DeleteEntityRecognizerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEntityRecognizerResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteEntityRecognizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEntityRecognizerResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteEntityRecognizerResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEntityRecognizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEntityRecognizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteEntityRecognizerResponse {
     
     
     public Integer statusCode;
+
     public DeleteEntityRecognizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteEntityRecognizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEntityRecognizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteEntityRecognizerResponse {
      */
     
     public Object resourceUnavailableException;
+
     public DeleteEntityRecognizerResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteEntityRecognizerResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteEntityRecognizerResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteEntityRecognizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

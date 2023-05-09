@@ -18,6 +18,7 @@ public class CustomBiddingModelReadinessState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public CustomBiddingModelReadinessState withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,9 +30,11 @@ public class CustomBiddingModelReadinessState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readinessState")
     public CustomBiddingModelReadinessStateReadinessStateEnum readinessState;
+
     public CustomBiddingModelReadinessState withReadinessState(CustomBiddingModelReadinessStateReadinessStateEnum readinessState) {
         this.readinessState = readinessState;
         return this;
     }
     
+    public CustomBiddingModelReadinessState(){}
 }

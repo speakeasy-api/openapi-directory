@@ -18,6 +18,7 @@ public class WeightedTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualNode")
     public String virtualNode;
+
     public WeightedTarget withVirtualNode(String virtualNode) {
         this.virtualNode = virtualNode;
         return this;
@@ -26,9 +27,11 @@ public class WeightedTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Long weight;
+
     public WeightedTarget withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public WeightedTarget(){}
 }

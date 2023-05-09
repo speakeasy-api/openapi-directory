@@ -18,6 +18,7 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averages")
     public String[] averages;
+
     public AdsenseReportsGenerateResponse withAverages(String[] averages) {
         this.averages = averages;
         return this;
@@ -29,6 +30,7 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public AdsenseReportsGenerateResponse withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -40,6 +42,7 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public AdsenseReportsGenerateResponseHeaders[] headers;
+
     public AdsenseReportsGenerateResponse withHeaders(AdsenseReportsGenerateResponseHeaders[] headers) {
         this.headers = headers;
         return this;
@@ -51,6 +54,7 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AdsenseReportsGenerateResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public String[][] rows;
+
     public AdsenseReportsGenerateResponse withRows(String[][] rows) {
         this.rows = rows;
         return this;
@@ -73,6 +78,7 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public AdsenseReportsGenerateResponse withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -84,6 +90,7 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalMatchedRows")
     public String totalMatchedRows;
+
     public AdsenseReportsGenerateResponse withTotalMatchedRows(String totalMatchedRows) {
         this.totalMatchedRows = totalMatchedRows;
         return this;
@@ -95,6 +102,7 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totals")
     public String[] totals;
+
     public AdsenseReportsGenerateResponse withTotals(String[] totals) {
         this.totals = totals;
         return this;
@@ -106,9 +114,11 @@ public class AdsenseReportsGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public String[] warnings;
+
     public AdsenseReportsGenerateResponse withWarnings(String[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public AdsenseReportsGenerateResponse(){}
 }

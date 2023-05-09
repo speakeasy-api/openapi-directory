@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GkehubProjectsLocationsOperationsGetResponse {
     
     public String contentType;
+
     public GkehubProjectsLocationsOperationsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GkehubProjectsLocationsOperationsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public GkehubProjectsLocationsOperationsGetResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class GkehubProjectsLocationsOperationsGetResponse {
     
     
     public Integer statusCode;
+
     public GkehubProjectsLocationsOperationsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GkehubProjectsLocationsOperationsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GkehubProjectsLocationsOperationsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GkehubProjectsLocationsOperationsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

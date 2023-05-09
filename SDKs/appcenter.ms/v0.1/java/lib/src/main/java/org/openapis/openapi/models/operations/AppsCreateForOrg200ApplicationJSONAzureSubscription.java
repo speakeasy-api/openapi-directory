@@ -15,6 +15,7 @@ public class AppsCreateForOrg200ApplicationJSONAzureSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     public Boolean isBillable;
+
     public AppsCreateForOrg200ApplicationJSONAzureSubscription withIsBillable(Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
@@ -26,6 +27,7 @@ public class AppsCreateForOrg200ApplicationJSONAzureSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billing")
     public Boolean isBilling;
+
     public AppsCreateForOrg200ApplicationJSONAzureSubscription withIsBilling(Boolean isBilling) {
         this.isBilling = isBilling;
         return this;
@@ -37,6 +39,7 @@ public class AppsCreateForOrg200ApplicationJSONAzureSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_microsoft_internal")
     public Boolean isMicrosoftInternal;
+
     public AppsCreateForOrg200ApplicationJSONAzureSubscription withIsMicrosoftInternal(Boolean isMicrosoftInternal) {
         this.isMicrosoftInternal = isMicrosoftInternal;
         return this;
@@ -47,6 +50,7 @@ public class AppsCreateForOrg200ApplicationJSONAzureSubscription {
      */
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public AppsCreateForOrg200ApplicationJSONAzureSubscription withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -57,6 +61,7 @@ public class AppsCreateForOrg200ApplicationJSONAzureSubscription {
      */
     @JsonProperty("subscription_name")
     public String subscriptionName;
+
     public AppsCreateForOrg200ApplicationJSONAzureSubscription withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -67,9 +72,15 @@ public class AppsCreateForOrg200ApplicationJSONAzureSubscription {
      */
     @JsonProperty("tenant_id")
     public String tenantId;
+
     public AppsCreateForOrg200ApplicationJSONAzureSubscription withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public AppsCreateForOrg200ApplicationJSONAzureSubscription(@JsonProperty("subscription_id") String subscriptionId, @JsonProperty("subscription_name") String subscriptionName, @JsonProperty("tenant_id") String tenantId) {
+        this.subscriptionId = subscriptionId;
+        this.subscriptionName = subscriptionName;
+        this.tenantId = tenantId;
+  }
 }

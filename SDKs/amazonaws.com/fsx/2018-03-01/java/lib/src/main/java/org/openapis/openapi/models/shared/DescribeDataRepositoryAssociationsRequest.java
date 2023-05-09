@@ -12,6 +12,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationIds")
     public String[] associationIds;
+
     public DescribeDataRepositoryAssociationsRequest withAssociationIds(String[] associationIds) {
         this.associationIds = associationIds;
         return this;
@@ -23,6 +24,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribeDataRepositoryAssociationsRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -31,6 +33,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeDataRepositoryAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -42,9 +45,11 @@ public class DescribeDataRepositoryAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDataRepositoryAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDataRepositoryAssociationsRequest(){}
 }

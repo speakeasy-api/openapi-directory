@@ -18,6 +18,7 @@ public class UpdateParagraphStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public TableCellLocation cellLocation;
+
     public UpdateParagraphStyleRequest withCellLocation(TableCellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -29,6 +30,7 @@ public class UpdateParagraphStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateParagraphStyleRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class UpdateParagraphStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateParagraphStyleRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -51,6 +54,7 @@ public class UpdateParagraphStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public ParagraphStyle style;
+
     public UpdateParagraphStyleRequest withStyle(ParagraphStyle style) {
         this.style = style;
         return this;
@@ -62,9 +66,11 @@ public class UpdateParagraphStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textRange")
     public Range textRange;
+
     public UpdateParagraphStyleRequest withTextRange(Range textRange) {
         this.textRange = textRange;
         return this;
     }
     
+    public UpdateParagraphStyleRequest(){}
 }

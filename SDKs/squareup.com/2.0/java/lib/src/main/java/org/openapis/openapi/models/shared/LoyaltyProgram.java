@@ -19,6 +19,7 @@ public class LoyaltyProgram {
      */
     @JsonProperty("accrual_rules")
     public LoyaltyProgramAccrualRule[] accrualRules;
+
     public LoyaltyProgram withAccrualRules(LoyaltyProgramAccrualRule[] accrualRules) {
         this.accrualRules = accrualRules;
         return this;
@@ -29,6 +30,7 @@ public class LoyaltyProgram {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public LoyaltyProgram withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class LoyaltyProgram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_policy")
     public LoyaltyProgramExpirationPolicy expirationPolicy;
+
     public LoyaltyProgram withExpirationPolicy(LoyaltyProgramExpirationPolicy expirationPolicy) {
         this.expirationPolicy = expirationPolicy;
         return this;
@@ -51,6 +54,7 @@ public class LoyaltyProgram {
      */
     @JsonProperty("id")
     public String id;
+
     public LoyaltyProgram withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +65,7 @@ public class LoyaltyProgram {
      */
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public LoyaltyProgram withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
@@ -71,6 +76,7 @@ public class LoyaltyProgram {
      */
     @JsonProperty("reward_tiers")
     public LoyaltyProgramRewardTier[] rewardTiers;
+
     public LoyaltyProgram withRewardTiers(LoyaltyProgramRewardTier[] rewardTiers) {
         this.rewardTiers = rewardTiers;
         return this;
@@ -81,6 +87,7 @@ public class LoyaltyProgram {
      */
     @JsonProperty("status")
     public String status;
+
     public LoyaltyProgram withStatus(String status) {
         this.status = status;
         return this;
@@ -91,6 +98,7 @@ public class LoyaltyProgram {
      */
     @JsonProperty("terminology")
     public LoyaltyProgramTerminology terminology;
+
     public LoyaltyProgram withTerminology(LoyaltyProgramTerminology terminology) {
         this.terminology = terminology;
         return this;
@@ -101,9 +109,20 @@ public class LoyaltyProgram {
      */
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public LoyaltyProgram withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public LoyaltyProgram(@JsonProperty("accrual_rules") LoyaltyProgramAccrualRule[] accrualRules, @JsonProperty("created_at") String createdAt, @JsonProperty("id") String id, @JsonProperty("location_ids") String[] locationIds, @JsonProperty("reward_tiers") LoyaltyProgramRewardTier[] rewardTiers, @JsonProperty("status") String status, @JsonProperty("terminology") LoyaltyProgramTerminology terminology, @JsonProperty("updated_at") String updatedAt) {
+        this.accrualRules = accrualRules;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.locationIds = locationIds;
+        this.rewardTiers = rewardTiers;
+        this.status = status;
+        this.terminology = terminology;
+        this.updatedAt = updatedAt;
+  }
 }

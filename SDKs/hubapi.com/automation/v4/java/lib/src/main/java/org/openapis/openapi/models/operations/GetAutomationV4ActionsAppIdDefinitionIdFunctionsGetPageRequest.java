@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -19,9 +21,14 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
     public String definitionId;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
     }
     
+    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest(@JsonProperty("appId") Integer appId, @JsonProperty("definitionId") String definitionId) {
+        this.appId = appId;
+        this.definitionId = definitionId;
+  }
 }

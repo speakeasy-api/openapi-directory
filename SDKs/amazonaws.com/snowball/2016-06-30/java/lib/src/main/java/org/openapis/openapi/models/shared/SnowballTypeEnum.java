@@ -14,7 +14,8 @@ public enum SnowballTypeEnum {
     EDGE_S("EDGE_S"),
     SNC1_HDD("SNC1_HDD"),
     SNC1_SSD("SNC1_SSD"),
-    V35_C("V3_5C");
+    V35_C("V3_5C"),
+    V35_S("V3_5S");
 
     @JsonValue
     public final String value;

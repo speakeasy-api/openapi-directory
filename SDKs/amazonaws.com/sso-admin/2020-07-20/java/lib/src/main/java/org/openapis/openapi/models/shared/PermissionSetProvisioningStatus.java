@@ -20,6 +20,7 @@ public class PermissionSetProvisioningStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public PermissionSetProvisioningStatus withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class PermissionSetProvisioningStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public PermissionSetProvisioningStatus withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -38,6 +40,7 @@ public class PermissionSetProvisioningStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public PermissionSetProvisioningStatus withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class PermissionSetProvisioningStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public PermissionSetProvisioningStatus withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
@@ -54,6 +58,7 @@ public class PermissionSetProvisioningStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public PermissionSetProvisioningStatus withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -62,9 +67,11 @@ public class PermissionSetProvisioningStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusValuesEnum status;
+
     public PermissionSetProvisioningStatus withStatus(StatusValuesEnum status) {
         this.status = status;
         return this;
     }
     
+    public PermissionSetProvisioningStatus(){}
 }

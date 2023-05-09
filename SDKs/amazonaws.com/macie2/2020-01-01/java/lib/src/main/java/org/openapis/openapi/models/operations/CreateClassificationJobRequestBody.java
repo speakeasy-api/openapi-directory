@@ -15,6 +15,7 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowListIds")
     public String[] allowListIds;
+
     public CreateClassificationJobRequestBody withAllowListIds(String[] allowListIds) {
         this.allowListIds = allowListIds;
         return this;
@@ -25,6 +26,7 @@ public class CreateClassificationJobRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateClassificationJobRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,6 +38,7 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDataIdentifierIds")
     public String[] customDataIdentifierIds;
+
     public CreateClassificationJobRequestBody withCustomDataIdentifierIds(String[] customDataIdentifierIds) {
         this.customDataIdentifierIds = customDataIdentifierIds;
         return this;
@@ -47,6 +50,7 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateClassificationJobRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +62,7 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialRun")
     public Boolean initialRun;
+
     public CreateClassificationJobRequestBody withInitialRun(Boolean initialRun) {
         this.initialRun = initialRun;
         return this;
@@ -68,6 +73,7 @@ public class CreateClassificationJobRequestBody {
      */
     @JsonProperty("jobType")
     public CreateClassificationJobRequestBodyJobTypeEnum jobType;
+
     public CreateClassificationJobRequestBody withJobType(CreateClassificationJobRequestBodyJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -79,6 +85,7 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDataIdentifierIds")
     public String[] managedDataIdentifierIds;
+
     public CreateClassificationJobRequestBody withManagedDataIdentifierIds(String[] managedDataIdentifierIds) {
         this.managedDataIdentifierIds = managedDataIdentifierIds;
         return this;
@@ -90,6 +97,7 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDataIdentifierSelector")
     public CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum managedDataIdentifierSelector;
+
     public CreateClassificationJobRequestBody withManagedDataIdentifierSelector(CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum managedDataIdentifierSelector) {
         this.managedDataIdentifierSelector = managedDataIdentifierSelector;
         return this;
@@ -100,6 +108,7 @@ public class CreateClassificationJobRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateClassificationJobRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -110,6 +119,7 @@ public class CreateClassificationJobRequestBody {
      */
     @JsonProperty("s3JobDefinition")
     public CreateClassificationJobRequestBodyS3JobDefinition s3JobDefinition;
+
     public CreateClassificationJobRequestBody withS3JobDefinition(CreateClassificationJobRequestBodyS3JobDefinition s3JobDefinition) {
         this.s3JobDefinition = s3JobDefinition;
         return this;
@@ -121,6 +131,7 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samplingPercentage")
     public Long samplingPercentage;
+
     public CreateClassificationJobRequestBody withSamplingPercentage(Long samplingPercentage) {
         this.samplingPercentage = samplingPercentage;
         return this;
@@ -132,6 +143,7 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleFrequency")
     public CreateClassificationJobRequestBodyScheduleFrequency scheduleFrequency;
+
     public CreateClassificationJobRequestBody withScheduleFrequency(CreateClassificationJobRequestBodyScheduleFrequency scheduleFrequency) {
         this.scheduleFrequency = scheduleFrequency;
         return this;
@@ -143,9 +155,16 @@ public class CreateClassificationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateClassificationJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClassificationJobRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("jobType") CreateClassificationJobRequestBodyJobTypeEnum jobType, @JsonProperty("name") String name, @JsonProperty("s3JobDefinition") CreateClassificationJobRequestBodyS3JobDefinition s3JobDefinition) {
+        this.clientToken = clientToken;
+        this.jobType = jobType;
+        this.name = name;
+        this.s3JobDefinition = s3JobDefinition;
+  }
 }

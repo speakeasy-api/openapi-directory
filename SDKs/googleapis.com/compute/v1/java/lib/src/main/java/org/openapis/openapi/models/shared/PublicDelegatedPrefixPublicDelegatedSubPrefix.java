@@ -18,6 +18,7 @@ public class PublicDelegatedPrefixPublicDelegatedSubPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegateeProject")
     public String delegateeProject;
+
     public PublicDelegatedPrefixPublicDelegatedSubPrefix withDelegateeProject(String delegateeProject) {
         this.delegateeProject = delegateeProject;
         return this;
@@ -29,6 +30,7 @@ public class PublicDelegatedPrefixPublicDelegatedSubPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PublicDelegatedPrefixPublicDelegatedSubPrefix withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class PublicDelegatedPrefixPublicDelegatedSubPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public PublicDelegatedPrefixPublicDelegatedSubPrefix withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -51,6 +54,7 @@ public class PublicDelegatedPrefixPublicDelegatedSubPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAddress")
     public Boolean isAddress;
+
     public PublicDelegatedPrefixPublicDelegatedSubPrefix withIsAddress(Boolean isAddress) {
         this.isAddress = isAddress;
         return this;
@@ -62,6 +66,7 @@ public class PublicDelegatedPrefixPublicDelegatedSubPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PublicDelegatedPrefixPublicDelegatedSubPrefix withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class PublicDelegatedPrefixPublicDelegatedSubPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public PublicDelegatedPrefixPublicDelegatedSubPrefix withRegion(String region) {
         this.region = region;
         return this;
@@ -84,9 +90,11 @@ public class PublicDelegatedPrefixPublicDelegatedSubPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PublicDelegatedPrefixPublicDelegatedSubPrefixStatusEnum status;
+
     public PublicDelegatedPrefixPublicDelegatedSubPrefix withStatus(PublicDelegatedPrefixPublicDelegatedSubPrefixStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PublicDelegatedPrefixPublicDelegatedSubPrefix(){}
 }

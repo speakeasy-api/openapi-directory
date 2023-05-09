@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RequestServiceQuotaIncreaseResponse {
@@ -12,6 +13,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object accessDeniedException;
+
     public RequestServiceQuotaIncreaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RequestServiceQuotaIncreaseResponse {
     
     
     public String contentType;
+
     public RequestServiceQuotaIncreaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object dependencyAccessDeniedException;
+
     public RequestServiceQuotaIncreaseResponse withDependencyAccessDeniedException(Object dependencyAccessDeniedException) {
         this.dependencyAccessDeniedException = dependencyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object illegalArgumentException;
+
     public RequestServiceQuotaIncreaseResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object invalidResourceStateException;
+
     public RequestServiceQuotaIncreaseResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -59,6 +65,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object noSuchResourceException;
+
     public RequestServiceQuotaIncreaseResponse withNoSuchResourceException(Object noSuchResourceException) {
         this.noSuchResourceException = noSuchResourceException;
         return this;
@@ -69,6 +76,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object quotaExceededException;
+
     public RequestServiceQuotaIncreaseResponse withQuotaExceededException(Object quotaExceededException) {
         this.quotaExceededException = quotaExceededException;
         return this;
@@ -79,6 +87,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public org.openapis.openapi.models.shared.RequestServiceQuotaIncreaseResponse requestServiceQuotaIncreaseResponse;
+
     public RequestServiceQuotaIncreaseResponse withRequestServiceQuotaIncreaseResponse(org.openapis.openapi.models.shared.RequestServiceQuotaIncreaseResponse requestServiceQuotaIncreaseResponse) {
         this.requestServiceQuotaIncreaseResponse = requestServiceQuotaIncreaseResponse;
         return this;
@@ -89,6 +98,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object serviceException;
+
     public RequestServiceQuotaIncreaseResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class RequestServiceQuotaIncreaseResponse {
     
     
     public Integer statusCode;
+
     public RequestServiceQuotaIncreaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class RequestServiceQuotaIncreaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RequestServiceQuotaIncreaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public RequestServiceQuotaIncreaseResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -123,9 +136,14 @@ public class RequestServiceQuotaIncreaseResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RequestServiceQuotaIncreaseResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public RequestServiceQuotaIncreaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

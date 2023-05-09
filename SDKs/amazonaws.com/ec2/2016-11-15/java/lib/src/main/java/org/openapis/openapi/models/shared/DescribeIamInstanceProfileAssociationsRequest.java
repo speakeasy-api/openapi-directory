@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIamInstanceProfileAssociationsRequest {
     
     public String[] associationIds;
+
     public DescribeIamInstanceProfileAssociationsRequest withAssociationIds(String[] associationIds) {
         this.associationIds = associationIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeIamInstanceProfileAssociationsRequest {
     
     
     public DescribeIamInstanceProfileAssociationsRequestFilters[] filters;
+
     public DescribeIamInstanceProfileAssociationsRequest withFilters(DescribeIamInstanceProfileAssociationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeIamInstanceProfileAssociationsRequest {
     
     
     public Long maxResults;
+
     public DescribeIamInstanceProfileAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,11 @@ public class DescribeIamInstanceProfileAssociationsRequest {
     
     
     public String nextToken;
+
     public DescribeIamInstanceProfileAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeIamInstanceProfileAssociationsRequest(){}
 }

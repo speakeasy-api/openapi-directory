@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCmsV3DomainsDomainIdGetByIdResponse {
     
     public byte[] body;
+
     public GetCmsV3DomainsDomainIdGetByIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetCmsV3DomainsDomainIdGetByIdResponse {
     
     
     public String contentType;
+
     public GetCmsV3DomainsDomainIdGetByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCmsV3DomainsDomainIdGetByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Domain domain;
+
     public GetCmsV3DomainsDomainIdGetByIdResponse withDomain(org.openapis.openapi.models.shared.Domain domain) {
         this.domain = domain;
         return this;
@@ -33,6 +37,7 @@ public class GetCmsV3DomainsDomainIdGetByIdResponse {
     
     
     public Integer statusCode;
+
     public GetCmsV3DomainsDomainIdGetByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetCmsV3DomainsDomainIdGetByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCmsV3DomainsDomainIdGetByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCmsV3DomainsDomainIdGetByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

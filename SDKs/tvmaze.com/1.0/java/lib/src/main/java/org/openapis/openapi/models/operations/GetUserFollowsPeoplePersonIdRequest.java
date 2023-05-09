@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserFollowsPeoplePersonIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=person_id")
     public Long personId;
+
     public GetUserFollowsPeoplePersonIdRequest withPersonId(Long personId) {
         this.personId = personId;
         return this;
     }
     
+    public GetUserFollowsPeoplePersonIdRequest(@JsonProperty("person_id") Long personId) {
+        this.personId = personId;
+  }
 }

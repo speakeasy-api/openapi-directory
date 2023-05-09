@@ -18,6 +18,7 @@ public class CreateApplication201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public org.openapis.openapi.models.shared.Capabilities capabilities;
+
     public CreateApplication201ApplicationJSON withCapabilities(org.openapis.openapi.models.shared.Capabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -29,6 +30,7 @@ public class CreateApplication201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateApplication201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class CreateApplication201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public CreateApplication201ApplicationJSONKeys keys;
+
     public CreateApplication201ApplicationJSON withKeys(CreateApplication201ApplicationJSONKeys keys) {
         this.keys = keys;
         return this;
@@ -48,6 +51,7 @@ public class CreateApplication201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateApplication201ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,11 @@ public class CreateApplication201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public CreateApplication201ApplicationJSONPrivacy privacy;
+
     public CreateApplication201ApplicationJSON withPrivacy(CreateApplication201ApplicationJSONPrivacy privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public CreateApplication201ApplicationJSON(){}
 }

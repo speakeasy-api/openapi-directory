@@ -12,6 +12,7 @@ public class FileCommitContentLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("git")
     public String git;
+
     public FileCommitContentLinks withGit(String git) {
         this.git = git;
         return this;
@@ -20,6 +21,7 @@ public class FileCommitContentLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public String html;
+
     public FileCommitContentLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -28,9 +30,11 @@ public class FileCommitContentLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public FileCommitContentLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public FileCommitContentLinks(){}
 }

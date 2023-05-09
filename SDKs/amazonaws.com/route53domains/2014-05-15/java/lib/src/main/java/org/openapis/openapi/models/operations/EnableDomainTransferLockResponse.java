@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableDomainTransferLockResponse {
     
     public String contentType;
+
     public EnableDomainTransferLockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnableDomainTransferLockResponse {
      */
     
     public Object duplicateRequest;
+
     public EnableDomainTransferLockResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class EnableDomainTransferLockResponse {
      */
     
     public org.openapis.openapi.models.shared.EnableDomainTransferLockResponse enableDomainTransferLockResponse;
+
     public EnableDomainTransferLockResponse withEnableDomainTransferLockResponse(org.openapis.openapi.models.shared.EnableDomainTransferLockResponse enableDomainTransferLockResponse) {
         this.enableDomainTransferLockResponse = enableDomainTransferLockResponse;
         return this;
@@ -39,6 +43,7 @@ public class EnableDomainTransferLockResponse {
      */
     
     public Object invalidInput;
+
     public EnableDomainTransferLockResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -49,6 +54,7 @@ public class EnableDomainTransferLockResponse {
      */
     
     public Object operationLimitExceeded;
+
     public EnableDomainTransferLockResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -56,6 +62,7 @@ public class EnableDomainTransferLockResponse {
     
     
     public Integer statusCode;
+
     public EnableDomainTransferLockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class EnableDomainTransferLockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableDomainTransferLockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class EnableDomainTransferLockResponse {
      */
     
     public Object tldRulesViolation;
+
     public EnableDomainTransferLockResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -83,9 +92,14 @@ public class EnableDomainTransferLockResponse {
      */
     
     public Object unsupportedTLD;
+
     public EnableDomainTransferLockResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public EnableDomainTransferLockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

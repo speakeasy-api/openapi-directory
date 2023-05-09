@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDeauthorizeDataShareRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDeauthorizeDataShareActionEnum action;
+
     public POSTDeauthorizeDataShareRequest withAction(POSTDeauthorizeDataShareActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDeauthorizeDataShareRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDeauthorizeDataShareVersionEnum version;
+
     public POSTDeauthorizeDataShareRequest withVersion(POSTDeauthorizeDataShareVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDeauthorizeDataShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDeauthorizeDataShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDeauthorizeDataShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDeauthorizeDataShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDeauthorizeDataShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDeauthorizeDataShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDeauthorizeDataShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDeauthorizeDataShareRequest(@JsonProperty("Action") POSTDeauthorizeDataShareActionEnum action, @JsonProperty("Version") POSTDeauthorizeDataShareVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

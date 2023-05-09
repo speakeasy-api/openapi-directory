@@ -12,9 +12,13 @@ public class CreateDirectoryRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateDirectoryRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateDirectoryRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

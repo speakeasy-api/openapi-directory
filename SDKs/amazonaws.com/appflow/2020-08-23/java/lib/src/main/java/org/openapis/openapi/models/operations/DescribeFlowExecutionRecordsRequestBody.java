@@ -14,6 +14,7 @@ public class DescribeFlowExecutionRecordsRequestBody {
      */
     @JsonProperty("flowName")
     public String flowName;
+
     public DescribeFlowExecutionRecordsRequestBody withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -25,6 +26,7 @@ public class DescribeFlowExecutionRecordsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeFlowExecutionRecordsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class DescribeFlowExecutionRecordsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeFlowExecutionRecordsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFlowExecutionRecordsRequestBody(@JsonProperty("flowName") String flowName) {
+        this.flowName = flowName;
+  }
 }

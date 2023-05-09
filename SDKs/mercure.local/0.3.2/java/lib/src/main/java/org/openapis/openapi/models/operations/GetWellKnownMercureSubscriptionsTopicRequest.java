@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWellKnownMercureSubscriptionsTopicRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topic")
     public String topic;
+
     public GetWellKnownMercureSubscriptionsTopicRequest withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public GetWellKnownMercureSubscriptionsTopicRequest(@JsonProperty("topic") String topic) {
+        this.topic = topic;
+  }
 }

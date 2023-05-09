@@ -12,6 +12,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gust_angle")
     public Double gustAngle;
+
     public NAMeasure withGustAngle(Double gustAngle) {
         this.gustAngle = gustAngle;
         return this;
@@ -20,6 +21,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gust_strength")
     public Double gustStrength;
+
     public NAMeasure withGustStrength(Double gustStrength) {
         this.gustStrength = gustStrength;
         return this;
@@ -28,6 +30,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rain_24h")
     public Double rain24h;
+
     public NAMeasure withRain24h(Double rain24h) {
         this.rain24h = rain24h;
         return this;
@@ -36,6 +39,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rain_60min")
     public Double rain60min;
+
     public NAMeasure withRain60min(Double rain60min) {
         this.rain60min = rain60min;
         return this;
@@ -44,6 +48,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rain_live")
     public Double rainLive;
+
     public NAMeasure withRainLive(Double rainLive) {
         this.rainLive = rainLive;
         return this;
@@ -52,6 +57,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rain_utc")
     public Long rainUtc;
+
     public NAMeasure withRainUtc(Long rainUtc) {
         this.rainUtc = rainUtc;
         return this;
@@ -60,6 +66,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("res")
     public java.util.Map<String, Double[]> res;
+
     public NAMeasure withRes(java.util.Map<String, Double[]> res) {
         this.res = res;
         return this;
@@ -68,6 +75,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String[] type;
+
     public NAMeasure withType(String[] type) {
         this.type = type;
         return this;
@@ -76,6 +84,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_angle")
     public Double windAngle;
+
     public NAMeasure withWindAngle(Double windAngle) {
         this.windAngle = windAngle;
         return this;
@@ -84,6 +93,7 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_strength")
     public Double windStrength;
+
     public NAMeasure withWindStrength(Double windStrength) {
         this.windStrength = windStrength;
         return this;
@@ -92,9 +102,11 @@ public class NAMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_timeutc\"")
     public Long windTimeutc;
+
     public NAMeasure withWindTimeutc(Long windTimeutc) {
         this.windTimeutc = windTimeutc;
         return this;
     }
     
+    public NAMeasure(){}
 }

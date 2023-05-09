@@ -156,4 +156,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/AuthorizationProviderTypeEn
 lib/src/main/java/org/openapis/openapi/models/shared/ListWebsiteCertificateAuthoritiesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebsiteCaSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

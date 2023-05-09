@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutocompleteRequest {
@@ -12,6 +13,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetAutocompleteRequest withQ(String q) {
         this.q = q;
         return this;
@@ -22,9 +24,13 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public GetAutocompleteRequest withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public GetAutocompleteRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

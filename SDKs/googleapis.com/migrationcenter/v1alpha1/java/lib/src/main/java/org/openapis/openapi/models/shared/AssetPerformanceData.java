@@ -18,9 +18,11 @@ public class AssetPerformanceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyResourceUsageAggregations")
     public DailyResourceUsageAggregation[] dailyResourceUsageAggregations;
+
     public AssetPerformanceData withDailyResourceUsageAggregations(DailyResourceUsageAggregation[] dailyResourceUsageAggregations) {
         this.dailyResourceUsageAggregations = dailyResourceUsageAggregations;
         return this;
     }
     
+    public AssetPerformanceData(){}
 }

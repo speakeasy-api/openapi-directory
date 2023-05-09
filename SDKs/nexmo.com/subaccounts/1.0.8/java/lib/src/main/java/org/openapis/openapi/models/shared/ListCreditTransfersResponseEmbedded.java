@@ -12,9 +12,11 @@ public class ListCreditTransfersResponseEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credit-transfers")
     public TransferCreditResponse[] creditTransfers;
+
     public ListCreditTransfersResponseEmbedded withCreditTransfers(TransferCreditResponse[] creditTransfers) {
         this.creditTransfers = creditTransfers;
         return this;
     }
     
+    public ListCreditTransfersResponseEmbedded(){}
 }

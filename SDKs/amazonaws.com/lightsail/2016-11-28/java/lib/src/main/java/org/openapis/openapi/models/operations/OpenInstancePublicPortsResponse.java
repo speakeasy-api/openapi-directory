@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OpenInstancePublicPortsResponse {
@@ -12,6 +13,7 @@ public class OpenInstancePublicPortsResponse {
      */
     
     public Object accessDeniedException;
+
     public OpenInstancePublicPortsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class OpenInstancePublicPortsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public OpenInstancePublicPortsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class OpenInstancePublicPortsResponse {
     
     
     public String contentType;
+
     public OpenInstancePublicPortsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class OpenInstancePublicPortsResponse {
      */
     
     public Object invalidInputException;
+
     public OpenInstancePublicPortsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class OpenInstancePublicPortsResponse {
      */
     
     public Object notFoundException;
+
     public OpenInstancePublicPortsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class OpenInstancePublicPortsResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenInstancePublicPortsResult openInstancePublicPortsResult;
+
     public OpenInstancePublicPortsResponse withOpenInstancePublicPortsResult(org.openapis.openapi.models.shared.OpenInstancePublicPortsResult openInstancePublicPortsResult) {
         this.openInstancePublicPortsResult = openInstancePublicPortsResult;
         return this;
@@ -69,6 +76,7 @@ public class OpenInstancePublicPortsResponse {
      */
     
     public Object operationFailureException;
+
     public OpenInstancePublicPortsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class OpenInstancePublicPortsResponse {
      */
     
     public Object serviceException;
+
     public OpenInstancePublicPortsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class OpenInstancePublicPortsResponse {
     
     
     public Integer statusCode;
+
     public OpenInstancePublicPortsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class OpenInstancePublicPortsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OpenInstancePublicPortsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class OpenInstancePublicPortsResponse {
      */
     
     public Object unauthenticatedException;
+
     public OpenInstancePublicPortsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public OpenInstancePublicPortsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

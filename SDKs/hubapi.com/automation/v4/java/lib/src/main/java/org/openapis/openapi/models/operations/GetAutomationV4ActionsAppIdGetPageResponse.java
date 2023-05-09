@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomationV4ActionsAppIdGetPageResponse {
     
     public byte[] body;
+
     public GetAutomationV4ActionsAppIdGetPageResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationV4ActionsAppIdGetPageResponse {
      */
     
     public org.openapis.openapi.models.shared.CollectionResponseExtensionActionDefinitionForwardPaging collectionResponseExtensionActionDefinitionForwardPaging;
+
     public GetAutomationV4ActionsAppIdGetPageResponse withCollectionResponseExtensionActionDefinitionForwardPaging(org.openapis.openapi.models.shared.CollectionResponseExtensionActionDefinitionForwardPaging collectionResponseExtensionActionDefinitionForwardPaging) {
         this.collectionResponseExtensionActionDefinitionForwardPaging = collectionResponseExtensionActionDefinitionForwardPaging;
         return this;
@@ -26,6 +29,7 @@ public class GetAutomationV4ActionsAppIdGetPageResponse {
     
     
     public String contentType;
+
     public GetAutomationV4ActionsAppIdGetPageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetAutomationV4ActionsAppIdGetPageResponse {
     
     
     public Integer statusCode;
+
     public GetAutomationV4ActionsAppIdGetPageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetAutomationV4ActionsAppIdGetPageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomationV4ActionsAppIdGetPageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAutomationV4ActionsAppIdGetPageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

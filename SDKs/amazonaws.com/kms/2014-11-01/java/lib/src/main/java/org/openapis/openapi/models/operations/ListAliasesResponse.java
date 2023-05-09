@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAliasesResponse {
     
     public String contentType;
+
     public ListAliasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAliasesResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public ListAliasesResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class ListAliasesResponse {
      */
     
     public Object invalidArnException;
+
     public ListAliasesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class ListAliasesResponse {
      */
     
     public Object invalidMarkerException;
+
     public ListAliasesResponse withInvalidMarkerException(Object invalidMarkerException) {
         this.invalidMarkerException = invalidMarkerException;
         return this;
@@ -49,6 +54,7 @@ public class ListAliasesResponse {
      */
     
     public Object kmsInternalException;
+
     public ListAliasesResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class ListAliasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAliasesResponse listAliasesResponse;
+
     public ListAliasesResponse withListAliasesResponse(org.openapis.openapi.models.shared.ListAliasesResponse listAliasesResponse) {
         this.listAliasesResponse = listAliasesResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListAliasesResponse {
      */
     
     public Object notFoundException;
+
     public ListAliasesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ListAliasesResponse {
     
     
     public Integer statusCode;
+
     public ListAliasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListAliasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAliasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAliasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

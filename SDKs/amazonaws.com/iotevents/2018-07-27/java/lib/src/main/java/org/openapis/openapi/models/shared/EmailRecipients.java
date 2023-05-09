@@ -15,9 +15,11 @@ public class EmailRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public RecipientDetail[] to;
+
     public EmailRecipients withTo(RecipientDetail[] to) {
         this.to = to;
         return this;
     }
     
+    public EmailRecipients(){}
 }

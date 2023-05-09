@@ -12,6 +12,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
     public String dateRange;
+
     public GetQueryJsonRequest withDateRange(String dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -22,6 +23,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=elevation")
     public Long elevation;
+
     public GetQueryJsonRequest withElevation(Long elevation) {
         this.elevation = elevation;
         return this;
@@ -32,6 +34,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facets")
     public GetQueryJsonFacetsEnum facets;
+
     public GetQueryJsonRequest withFacets(GetQueryJsonFacetsEnum facets) {
         this.facets = facets;
         return this;
@@ -43,6 +46,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetQueryJsonRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -54,6 +58,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
     public String latitude;
+
     public GetQueryJsonRequest withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -64,6 +69,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetQueryJsonRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -74,6 +80,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
     public String longitude;
+
     public GetQueryJsonRequest withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
@@ -84,6 +91,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetQueryJsonRequest withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +102,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetQueryJsonRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -105,6 +114,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetQueryJsonRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -116,6 +126,7 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetQueryJsonRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -126,9 +137,11 @@ public class GetQueryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sw")
     public String sw;
+
     public GetQueryJsonRequest withSw(String sw) {
         this.sw = sw;
         return this;
     }
     
+    public GetQueryJsonRequest(){}
 }

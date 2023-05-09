@@ -15,6 +15,7 @@ public class PreprintProviderListPreprintProvidersLinks {
      */
     
     public String externalUrl;
+
     public PreprintProviderListPreprintProvidersLinks withExternalUrl(String externalUrl) {
         this.externalUrl = externalUrl;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProviderListPreprintProvidersLinks {
      */
     
     public String preprints;
+
     public PreprintProviderListPreprintProvidersLinks withPreprints(String preprints) {
         this.preprints = preprints;
         return this;
@@ -35,9 +37,11 @@ public class PreprintProviderListPreprintProvidersLinks {
      */
     
     public String self;
+
     public PreprintProviderListPreprintProvidersLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public PreprintProviderListPreprintProvidersLinks(){}
 }

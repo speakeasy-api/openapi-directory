@@ -15,6 +15,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public ReadOptions withComment(String comment) {
         this.comment = comment;
         return this;
@@ -23,6 +24,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public ReadOptions withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -31,6 +33,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("escape")
     public String escape;
+
     public ReadOptions withEscape(String escape) {
         this.escape = escape;
         return this;
@@ -39,6 +42,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("escapeQuotes")
     public Boolean escapeQuotes;
+
     public ReadOptions withEscapeQuotes(Boolean escapeQuotes) {
         this.escapeQuotes = escapeQuotes;
         return this;
@@ -47,6 +51,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public Boolean header;
+
     public ReadOptions withHeader(Boolean header) {
         this.header = header;
         return this;
@@ -55,6 +60,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineSep")
     public String lineSep;
+
     public ReadOptions withLineSep(String lineSep) {
         this.lineSep = lineSep;
         return this;
@@ -63,6 +69,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote")
     public String quote;
+
     public ReadOptions withQuote(String quote) {
         this.quote = quote;
         return this;
@@ -71,6 +78,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteAll")
     public Boolean quoteAll;
+
     public ReadOptions withQuoteAll(Boolean quoteAll) {
         this.quoteAll = quoteAll;
         return this;
@@ -79,9 +87,11 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sep")
     public String sep;
+
     public ReadOptions withSep(String sep) {
         this.sep = sep;
         return this;
     }
     
+    public ReadOptions(){}
 }

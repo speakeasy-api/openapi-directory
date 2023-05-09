@@ -12,6 +12,7 @@ public class LanguageRelationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombinations")
     public LanguageCombinationDto[] languageCombinations;
+
     public LanguageRelationDto withLanguageCombinations(LanguageCombinationDto[] languageCombinations) {
         this.languageCombinations = languageCombinations;
         return this;
@@ -20,9 +21,11 @@ public class LanguageRelationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public Long[] languages;
+
     public LanguageRelationDto withLanguages(Long[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public LanguageRelationDto(){}
 }

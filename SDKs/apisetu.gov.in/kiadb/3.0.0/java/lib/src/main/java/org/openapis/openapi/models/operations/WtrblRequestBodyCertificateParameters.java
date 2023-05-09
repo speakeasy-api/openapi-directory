@@ -12,6 +12,7 @@ public class WtrblRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public WtrblRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class WtrblRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public WtrblRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class WtrblRequestBodyCertificateParameters {
      */
     @JsonProperty("RegNum")
     public String regNum;
+
     public WtrblRequestBodyCertificateParameters withRegNum(String regNum) {
         this.regNum = regNum;
         return this;
@@ -42,9 +45,16 @@ public class WtrblRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public WtrblRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public WtrblRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RegNum") String regNum, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.regNum = regNum;
+        this.uid = uid;
+  }
 }

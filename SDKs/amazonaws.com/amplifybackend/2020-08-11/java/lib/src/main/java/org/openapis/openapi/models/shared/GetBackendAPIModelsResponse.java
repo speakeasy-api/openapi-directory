@@ -15,6 +15,7 @@ public class GetBackendAPIModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelIntrospectionSchema")
     public String modelIntrospectionSchema;
+
     public GetBackendAPIModelsResponse withModelIntrospectionSchema(String modelIntrospectionSchema) {
         this.modelIntrospectionSchema = modelIntrospectionSchema;
         return this;
@@ -23,6 +24,7 @@ public class GetBackendAPIModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Models")
     public String models;
+
     public GetBackendAPIModelsResponse withModels(String models) {
         this.models = models;
         return this;
@@ -31,9 +33,11 @@ public class GetBackendAPIModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public GetBackendAPIModelsResponseStatusEnum status;
+
     public GetBackendAPIModelsResponse withStatus(GetBackendAPIModelsResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetBackendAPIModelsResponse(){}
 }

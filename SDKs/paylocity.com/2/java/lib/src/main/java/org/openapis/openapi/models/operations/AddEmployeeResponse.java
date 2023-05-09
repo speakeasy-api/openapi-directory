@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddEmployeeResponse {
     
     public String contentType;
+
     public AddEmployeeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AddEmployeeResponse {
     
     
     public Integer statusCode;
+
     public AddEmployeeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AddEmployeeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddEmployeeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AddEmployeeResponse {
      */
     
     public org.openapis.openapi.models.shared.EmployeeIdResponse employeeIdResponse;
+
     public AddEmployeeResponse withEmployeeIdResponse(org.openapis.openapi.models.shared.EmployeeIdResponse employeeIdResponse) {
         this.employeeIdResponse = employeeIdResponse;
         return this;
@@ -43,9 +48,14 @@ public class AddEmployeeResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public AddEmployeeResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public AddEmployeeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

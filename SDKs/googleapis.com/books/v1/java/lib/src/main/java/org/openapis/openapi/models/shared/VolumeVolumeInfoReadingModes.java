@@ -15,6 +15,7 @@ public class VolumeVolumeInfoReadingModes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Boolean image;
+
     public VolumeVolumeInfoReadingModes withImage(Boolean image) {
         this.image = image;
         return this;
@@ -23,9 +24,11 @@ public class VolumeVolumeInfoReadingModes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public Boolean text;
+
     public VolumeVolumeInfoReadingModes withText(Boolean text) {
         this.text = text;
         return this;
     }
     
+    public VolumeVolumeInfoReadingModes(){}
 }

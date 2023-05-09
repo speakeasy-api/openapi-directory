@@ -12,6 +12,7 @@ public class DetachFromIndexRequestBody {
      */
     @JsonProperty("IndexReference")
     public DetachFromIndexRequestBodyIndexReference indexReference;
+
     public DetachFromIndexRequestBody withIndexReference(DetachFromIndexRequestBodyIndexReference indexReference) {
         this.indexReference = indexReference;
         return this;
@@ -22,9 +23,14 @@ public class DetachFromIndexRequestBody {
      */
     @JsonProperty("TargetReference")
     public DetachFromIndexRequestBodyTargetReference targetReference;
+
     public DetachFromIndexRequestBody withTargetReference(DetachFromIndexRequestBodyTargetReference targetReference) {
         this.targetReference = targetReference;
         return this;
     }
     
+    public DetachFromIndexRequestBody(@JsonProperty("IndexReference") DetachFromIndexRequestBodyIndexReference indexReference, @JsonProperty("TargetReference") DetachFromIndexRequestBodyTargetReference targetReference) {
+        this.indexReference = indexReference;
+        this.targetReference = targetReference;
+  }
 }

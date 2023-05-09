@@ -7,7 +7,8 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * CreditorAccountWriteRequestTypeEnum - Creditor account type
+ * CreditorAccountWriteRequestTypeEnum - * `IBAN` - IBAN
+ * * `SCAN` - SortCodeAccountNumber
  */
 public enum CreditorAccountWriteRequestTypeEnum {
     IBAN("IBAN"),

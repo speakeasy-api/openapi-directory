@@ -15,6 +15,7 @@ public class GetClicksModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clicks")
     public ClickModel[] clicks;
+
     public GetClicksModel withClicks(ClickModel[] clicks) {
         this.clicks = clicks;
         return this;
@@ -23,9 +24,11 @@ public class GetClicksModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastId")
     public String lastId;
+
     public GetClicksModel withLastId(String lastId) {
         this.lastId = lastId;
         return this;
     }
     
+    public GetClicksModel(){}
 }

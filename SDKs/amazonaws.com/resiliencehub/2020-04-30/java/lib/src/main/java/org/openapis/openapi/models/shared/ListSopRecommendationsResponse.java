@@ -15,6 +15,7 @@ public class ListSopRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSopRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListSopRecommendationsResponse {
     
     @JsonProperty("sopRecommendations")
     public SopRecommendation[] sopRecommendations;
+
     public ListSopRecommendationsResponse withSopRecommendations(SopRecommendation[] sopRecommendations) {
         this.sopRecommendations = sopRecommendations;
         return this;
     }
     
+    public ListSopRecommendationsResponse(@JsonProperty("sopRecommendations") SopRecommendation[] sopRecommendations) {
+        this.sopRecommendations = sopRecommendations;
+  }
 }

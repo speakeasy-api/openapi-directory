@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAlternateContactResponse {
@@ -12,6 +13,7 @@ public class DeleteAlternateContactResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAlternateContactResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAlternateContactResponse {
     
     
     public String contentType;
+
     public DeleteAlternateContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAlternateContactResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAlternateContactResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAlternateContactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAlternateContactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAlternateContactResponse {
     
     
     public Integer statusCode;
+
     public DeleteAlternateContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAlternateContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAlternateContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAlternateContactResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteAlternateContactResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteAlternateContactResponse {
      */
     
     public Object validationException;
+
     public DeleteAlternateContactResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAlternateContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

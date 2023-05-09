@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetSASReportRequest {
@@ -12,6 +13,7 @@ public class LandlordControllerGetSASReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public LandlordControllerGetSASReportRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -22,6 +24,7 @@ public class LandlordControllerGetSASReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public LandlordControllerGetSASReportRequest withToken(String token) {
         this.token = token;
         return this;
@@ -32,9 +35,15 @@ public class LandlordControllerGetSASReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=yearEnd")
     public Integer yearEnd;
+
     public LandlordControllerGetSASReportRequest withYearEnd(Integer yearEnd) {
         this.yearEnd = yearEnd;
         return this;
     }
     
+    public LandlordControllerGetSASReportRequest(@JsonProperty("shortName") String shortName, @JsonProperty("token") String token, @JsonProperty("yearEnd") Integer yearEnd) {
+        this.shortName = shortName;
+        this.token = token;
+        this.yearEnd = yearEnd;
+  }
 }

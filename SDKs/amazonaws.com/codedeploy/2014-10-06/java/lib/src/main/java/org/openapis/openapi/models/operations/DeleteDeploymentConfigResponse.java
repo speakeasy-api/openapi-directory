@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDeploymentConfigResponse {
     
     public String contentType;
+
     public DeleteDeploymentConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDeploymentConfigResponse {
      */
     
     public Object deploymentConfigInUseException;
+
     public DeleteDeploymentConfigResponse withDeploymentConfigInUseException(Object deploymentConfigInUseException) {
         this.deploymentConfigInUseException = deploymentConfigInUseException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDeploymentConfigResponse {
      */
     
     public Object deploymentConfigNameRequiredException;
+
     public DeleteDeploymentConfigResponse withDeploymentConfigNameRequiredException(Object deploymentConfigNameRequiredException) {
         this.deploymentConfigNameRequiredException = deploymentConfigNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDeploymentConfigResponse {
      */
     
     public Object invalidDeploymentConfigNameException;
+
     public DeleteDeploymentConfigResponse withInvalidDeploymentConfigNameException(Object invalidDeploymentConfigNameException) {
         this.invalidDeploymentConfigNameException = invalidDeploymentConfigNameException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDeploymentConfigResponse {
      */
     
     public Object invalidOperationException;
+
     public DeleteDeploymentConfigResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteDeploymentConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteDeploymentConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteDeploymentConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDeploymentConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDeploymentConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

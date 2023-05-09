@@ -12,6 +12,7 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
     public String city;
+
     public FindNumberRegionsRequest withCity(String city) {
         this.city = city;
         return this;
@@ -22,6 +23,7 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cityPrefix")
     public String cityPrefix;
+
     public FindNumberRegionsRequest withCityPrefix(String cityPrefix) {
         this.cityPrefix = cityPrefix;
         return this;
@@ -32,6 +34,7 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public FindNumberRegionsRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -42,6 +45,7 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindNumberRegionsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +56,7 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindNumberRegionsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -62,6 +67,7 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindNumberRegionsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -72,6 +78,7 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
     public String prefix;
+
     public FindNumberRegionsRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -82,6 +89,7 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public FindNumberRegionsRequest withState(String state) {
         this.state = state;
         return this;
@@ -92,9 +100,11 @@ public class FindNumberRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zipcode")
     public String zipcode;
+
     public FindNumberRegionsRequest withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public FindNumberRegionsRequest(){}
 }

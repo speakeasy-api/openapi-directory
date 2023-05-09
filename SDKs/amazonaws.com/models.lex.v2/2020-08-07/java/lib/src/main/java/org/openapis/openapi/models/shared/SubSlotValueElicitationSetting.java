@@ -18,6 +18,7 @@ public class SubSlotValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValueSpecification")
     public SlotDefaultValueSpecification defaultValueSpecification;
+
     public SubSlotValueElicitationSetting withDefaultValueSpecification(SlotDefaultValueSpecification defaultValueSpecification) {
         this.defaultValueSpecification = defaultValueSpecification;
         return this;
@@ -28,6 +29,7 @@ public class SubSlotValueElicitationSetting {
      */
     @JsonProperty("promptSpecification")
     public PromptSpecification promptSpecification;
+
     public SubSlotValueElicitationSetting withPromptSpecification(PromptSpecification promptSpecification) {
         this.promptSpecification = promptSpecification;
         return this;
@@ -36,6 +38,7 @@ public class SubSlotValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleUtterances")
     public SampleUtterance[] sampleUtterances;
+
     public SubSlotValueElicitationSetting withSampleUtterances(SampleUtterance[] sampleUtterances) {
         this.sampleUtterances = sampleUtterances;
         return this;
@@ -47,9 +50,13 @@ public class SubSlotValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitAndContinueSpecification")
     public WaitAndContinueSpecification waitAndContinueSpecification;
+
     public SubSlotValueElicitationSetting withWaitAndContinueSpecification(WaitAndContinueSpecification waitAndContinueSpecification) {
         this.waitAndContinueSpecification = waitAndContinueSpecification;
         return this;
     }
     
+    public SubSlotValueElicitationSetting(@JsonProperty("promptSpecification") PromptSpecification promptSpecification) {
+        this.promptSpecification = promptSpecification;
+  }
 }

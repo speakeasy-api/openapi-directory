@@ -18,6 +18,7 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSource")
     public GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource configSource;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation withConfigSource(GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource configSource) {
         this.configSource = configSource;
         return this;
@@ -26,6 +27,7 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public java.util.Map<String, Object> environment;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation withEnvironment(java.util.Map<String, Object> environment) {
         this.environment = environment;
         return this;
@@ -34,9 +36,11 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation(){}
 }

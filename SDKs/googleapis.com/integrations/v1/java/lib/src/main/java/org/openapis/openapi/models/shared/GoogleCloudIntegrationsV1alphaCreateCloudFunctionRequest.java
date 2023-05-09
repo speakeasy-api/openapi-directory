@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionName")
     public String functionName;
+
     public GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionRegion")
     public String functionRegion;
+
     public GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest withFunctionRegion(String functionRegion) {
         this.functionRegion = functionRegion;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest(){}
 }

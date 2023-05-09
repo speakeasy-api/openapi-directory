@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateOpsItemRelatedItemResponse {
     
     public String contentType;
+
     public DisassociateOpsItemRelatedItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateOpsItemRelatedItemResponse {
      */
     
     public java.util.Map<String, Object> disassociateOpsItemRelatedItemResponse;
+
     public DisassociateOpsItemRelatedItemResponse withDisassociateOpsItemRelatedItemResponse(java.util.Map<String, Object> disassociateOpsItemRelatedItemResponse) {
         this.disassociateOpsItemRelatedItemResponse = disassociateOpsItemRelatedItemResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateOpsItemRelatedItemResponse {
      */
     
     public Object internalServerError;
+
     public DisassociateOpsItemRelatedItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateOpsItemRelatedItemResponse {
      */
     
     public Object opsItemInvalidParameterException;
+
     public DisassociateOpsItemRelatedItemResponse withOpsItemInvalidParameterException(Object opsItemInvalidParameterException) {
         this.opsItemInvalidParameterException = opsItemInvalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateOpsItemRelatedItemResponse {
      */
     
     public Object opsItemNotFoundException;
+
     public DisassociateOpsItemRelatedItemResponse withOpsItemNotFoundException(Object opsItemNotFoundException) {
         this.opsItemNotFoundException = opsItemNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateOpsItemRelatedItemResponse {
      */
     
     public Object opsItemRelatedItemAssociationNotFoundException;
+
     public DisassociateOpsItemRelatedItemResponse withOpsItemRelatedItemAssociationNotFoundException(Object opsItemRelatedItemAssociationNotFoundException) {
         this.opsItemRelatedItemAssociationNotFoundException = opsItemRelatedItemAssociationNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateOpsItemRelatedItemResponse {
     
     
     public Integer statusCode;
+
     public DisassociateOpsItemRelatedItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateOpsItemRelatedItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateOpsItemRelatedItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateOpsItemRelatedItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

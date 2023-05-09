@@ -49,4 +49,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Line.java
 lib/src/main/java/org/openapis/openapi/models/shared/Did.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationErrorsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DetailedInvalidParam.java
+docs/sdk/README.md
 USAGE.md

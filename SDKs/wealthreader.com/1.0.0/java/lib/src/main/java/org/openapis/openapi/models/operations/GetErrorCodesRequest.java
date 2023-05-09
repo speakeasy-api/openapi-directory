@@ -12,9 +12,11 @@ public class GetErrorCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public GetErrorCodesLangEnum lang;
+
     public GetErrorCodesRequest withLang(GetErrorCodesLangEnum lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetErrorCodesRequest(){}
 }

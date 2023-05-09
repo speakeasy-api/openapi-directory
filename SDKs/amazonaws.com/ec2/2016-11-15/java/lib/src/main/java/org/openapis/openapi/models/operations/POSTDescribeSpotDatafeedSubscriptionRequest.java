@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDescribeSpotDatafeedSubscriptionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDescribeSpotDatafeedSubscriptionActionEnum action;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withAction(POSTDescribeSpotDatafeedSubscriptionActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDescribeSpotDatafeedSubscriptionVersionEnum version;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withVersion(POSTDescribeSpotDatafeedSubscriptionVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTDescribeSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDescribeSpotDatafeedSubscriptionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDescribeSpotDatafeedSubscriptionRequest(@JsonProperty("Action") POSTDescribeSpotDatafeedSubscriptionActionEnum action, @JsonProperty("Version") POSTDescribeSpotDatafeedSubscriptionVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

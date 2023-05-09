@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ListConversationDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationDatasets")
     public GoogleCloudDialogflowV2ConversationDataset[] conversationDatasets;
+
     public GoogleCloudDialogflowV2ListConversationDatasetsResponse withConversationDatasets(GoogleCloudDialogflowV2ConversationDataset[] conversationDatasets) {
         this.conversationDatasets = conversationDatasets;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2ListConversationDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2ListConversationDatasetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ListConversationDatasetsResponse(){}
 }

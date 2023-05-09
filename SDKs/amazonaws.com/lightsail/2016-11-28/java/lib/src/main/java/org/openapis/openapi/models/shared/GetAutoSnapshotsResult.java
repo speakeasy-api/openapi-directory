@@ -15,6 +15,7 @@ public class GetAutoSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoSnapshots")
     public AutoSnapshotDetails[] autoSnapshots;
+
     public GetAutoSnapshotsResult withAutoSnapshots(AutoSnapshotDetails[] autoSnapshots) {
         this.autoSnapshots = autoSnapshots;
         return this;
@@ -23,6 +24,7 @@ public class GetAutoSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GetAutoSnapshotsResult withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -31,9 +33,11 @@ public class GetAutoSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public GetAutoSnapshotsResult withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GetAutoSnapshotsResult(){}
 }

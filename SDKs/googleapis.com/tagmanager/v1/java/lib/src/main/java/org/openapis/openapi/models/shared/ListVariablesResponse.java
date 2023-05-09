@@ -18,9 +18,11 @@ public class ListVariablesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variables")
     public Variable[] variables;
+
     public ListVariablesResponse withVariables(Variable[] variables) {
         this.variables = variables;
         return this;
     }
     
+    public ListVariablesResponse(){}
 }

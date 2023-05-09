@@ -18,6 +18,7 @@ public class InstanceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceReference withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class InstanceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public InstanceReference withProject(String project) {
         this.project = project;
         return this;
@@ -40,9 +42,11 @@ public class InstanceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public InstanceReference withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public InstanceReference(){}
 }

@@ -15,6 +15,7 @@ public class DescribeTrustsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeTrustsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeTrustsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trusts")
     public Trust[] trusts;
+
     public DescribeTrustsResult withTrusts(Trust[] trusts) {
         this.trusts = trusts;
         return this;
     }
     
+    public DescribeTrustsResult(){}
 }

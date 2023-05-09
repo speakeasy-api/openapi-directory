@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ClientData {
     
     public String comment;
+
     public ClientData withComment(String comment) {
         this.comment = comment;
         return this;
@@ -19,6 +20,7 @@ public class ClientData {
     
     
     public OffsetDateTime uploadEnd;
+
     public ClientData withUploadEnd(OffsetDateTime uploadEnd) {
         this.uploadEnd = uploadEnd;
         return this;
@@ -26,6 +28,7 @@ public class ClientData {
     
     
     public Double uploadSize;
+
     public ClientData withUploadSize(Double uploadSize) {
         this.uploadSize = uploadSize;
         return this;
@@ -33,9 +36,11 @@ public class ClientData {
     
     
     public OffsetDateTime uploadStart;
+
     public ClientData withUploadStart(OffsetDateTime uploadStart) {
         this.uploadStart = uploadStart;
         return this;
     }
     
+    public ClientData(){}
 }

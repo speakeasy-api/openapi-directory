@@ -12,6 +12,7 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("LPGID")
     public String lpgid;
+
     public LpgsvRequestBodyCertificateParameters withLpgid(String lpgid) {
         this.lpgid = lpgid;
         return this;
@@ -22,9 +23,14 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("SVID")
     public String svid;
+
     public LpgsvRequestBodyCertificateParameters withSvid(String svid) {
         this.svid = svid;
         return this;
     }
     
+    public LpgsvRequestBodyCertificateParameters(@JsonProperty("LPGID") String lpgid, @JsonProperty("SVID") String svid) {
+        this.lpgid = lpgid;
+        this.svid = svid;
+  }
 }

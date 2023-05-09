@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SparkSubmit {
     @JsonProperty("entryPoint")
     public String entryPoint;
+
     public SparkSubmit withEntryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -22,6 +23,7 @@ public class SparkSubmit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPointArguments")
     public String[] entryPointArguments;
+
     public SparkSubmit withEntryPointArguments(String[] entryPointArguments) {
         this.entryPointArguments = entryPointArguments;
         return this;
@@ -30,9 +32,13 @@ public class SparkSubmit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSubmitParameters")
     public String sparkSubmitParameters;
+
     public SparkSubmit withSparkSubmitParameters(String sparkSubmitParameters) {
         this.sparkSubmitParameters = sparkSubmitParameters;
         return this;
     }
     
+    public SparkSubmit(@JsonProperty("entryPoint") String entryPoint) {
+        this.entryPoint = entryPoint;
+  }
 }

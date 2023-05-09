@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyEntitySearchResult {
      */
     
     public DestinyDefinitionsDestinyEntitySearchResultResults results;
+
     public DestinyDefinitionsDestinyEntitySearchResult withResults(DestinyDefinitionsDestinyEntitySearchResultResults results) {
         this.results = results;
         return this;
@@ -25,9 +26,11 @@ public class DestinyDefinitionsDestinyEntitySearchResult {
      */
     
     public String[] suggestedWords;
+
     public DestinyDefinitionsDestinyEntitySearchResult withSuggestedWords(String[] suggestedWords) {
         this.suggestedWords = suggestedWords;
         return this;
     }
     
+    public DestinyDefinitionsDestinyEntitySearchResult(){}
 }

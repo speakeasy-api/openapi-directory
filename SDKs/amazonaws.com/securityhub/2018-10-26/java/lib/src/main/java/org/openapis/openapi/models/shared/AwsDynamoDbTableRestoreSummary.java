@@ -15,6 +15,7 @@ public class AwsDynamoDbTableRestoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestoreDateTime")
     public String restoreDateTime;
+
     public AwsDynamoDbTableRestoreSummary withRestoreDateTime(String restoreDateTime) {
         this.restoreDateTime = restoreDateTime;
         return this;
@@ -23,6 +24,7 @@ public class AwsDynamoDbTableRestoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestoreInProgress")
     public Boolean restoreInProgress;
+
     public AwsDynamoDbTableRestoreSummary withRestoreInProgress(Boolean restoreInProgress) {
         this.restoreInProgress = restoreInProgress;
         return this;
@@ -31,6 +33,7 @@ public class AwsDynamoDbTableRestoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBackupArn")
     public String sourceBackupArn;
+
     public AwsDynamoDbTableRestoreSummary withSourceBackupArn(String sourceBackupArn) {
         this.sourceBackupArn = sourceBackupArn;
         return this;
@@ -39,9 +42,11 @@ public class AwsDynamoDbTableRestoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTableArn")
     public String sourceTableArn;
+
     public AwsDynamoDbTableRestoreSummary withSourceTableArn(String sourceTableArn) {
         this.sourceTableArn = sourceTableArn;
         return this;
     }
     
+    public AwsDynamoDbTableRestoreSummary(){}
 }

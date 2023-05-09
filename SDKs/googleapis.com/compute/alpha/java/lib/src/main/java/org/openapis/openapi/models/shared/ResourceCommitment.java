@@ -18,6 +18,7 @@ public class ResourceCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public ResourceCommitment withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -29,6 +30,7 @@ public class ResourceCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public String amount;
+
     public ResourceCommitment withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -40,9 +42,11 @@ public class ResourceCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ResourceCommitmentTypeEnum type;
+
     public ResourceCommitment withType(ResourceCommitmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ResourceCommitment(){}
 }

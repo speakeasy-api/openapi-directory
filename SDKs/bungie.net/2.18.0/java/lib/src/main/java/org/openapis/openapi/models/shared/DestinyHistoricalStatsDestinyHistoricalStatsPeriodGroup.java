@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup {
      */
     
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails activityDetails;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup withActivityDetails(DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails activityDetails) {
         this.activityDetails = activityDetails;
         return this;
@@ -22,6 +23,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup {
      */
     
     public OffsetDateTime period;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup withPeriod(OffsetDateTime period) {
         this.period = period;
         return this;
@@ -32,9 +34,11 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup {
      */
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup withValues(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values) {
         this.values = values;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup(){}
 }

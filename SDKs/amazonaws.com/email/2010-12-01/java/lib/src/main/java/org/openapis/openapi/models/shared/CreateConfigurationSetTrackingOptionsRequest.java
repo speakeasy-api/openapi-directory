@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateConfigurationSetTrackingOptionsRequest - Represents a request to create an open and click tracking option object in a configuration set. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateConfigurationSetTrackingOptionsRequest {
     
     public String configurationSetName;
+
     public CreateConfigurationSetTrackingOptionsRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -22,9 +23,14 @@ public class CreateConfigurationSetTrackingOptionsRequest {
      */
     
     public TrackingOptions trackingOptions;
+
     public CreateConfigurationSetTrackingOptionsRequest withTrackingOptions(TrackingOptions trackingOptions) {
         this.trackingOptions = trackingOptions;
         return this;
     }
     
+    public CreateConfigurationSetTrackingOptionsRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("TrackingOptions") TrackingOptions trackingOptions) {
+        this.configurationSetName = configurationSetName;
+        this.trackingOptions = trackingOptions;
+  }
 }

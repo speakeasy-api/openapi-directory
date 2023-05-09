@@ -12,6 +12,7 @@ public class QueryWhatIfForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public QueryWhatIfForecastRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -19,6 +20,7 @@ public class QueryWhatIfForecastRequest {
     
     @JsonProperty("Filters")
     public java.util.Map<String, String> filters;
+
     public QueryWhatIfForecastRequest withFilters(java.util.Map<String, String> filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class QueryWhatIfForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public QueryWhatIfForecastRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,6 +38,7 @@ public class QueryWhatIfForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public QueryWhatIfForecastRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -42,9 +46,14 @@ public class QueryWhatIfForecastRequest {
     
     @JsonProperty("WhatIfForecastArn")
     public String whatIfForecastArn;
+
     public QueryWhatIfForecastRequest withWhatIfForecastArn(String whatIfForecastArn) {
         this.whatIfForecastArn = whatIfForecastArn;
         return this;
     }
     
+    public QueryWhatIfForecastRequest(@JsonProperty("Filters") java.util.Map<String, String> filters, @JsonProperty("WhatIfForecastArn") String whatIfForecastArn) {
+        this.filters = filters;
+        this.whatIfForecastArn = whatIfForecastArn;
+  }
 }

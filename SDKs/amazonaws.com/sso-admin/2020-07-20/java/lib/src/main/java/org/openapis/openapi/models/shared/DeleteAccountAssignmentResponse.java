@@ -15,9 +15,11 @@ public class DeleteAccountAssignmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountAssignmentDeletionStatus")
     public AccountAssignmentOperationStatus accountAssignmentDeletionStatus;
+
     public DeleteAccountAssignmentResponse withAccountAssignmentDeletionStatus(AccountAssignmentOperationStatus accountAssignmentDeletionStatus) {
         this.accountAssignmentDeletionStatus = accountAssignmentDeletionStatus;
         return this;
     }
     
+    public DeleteAccountAssignmentResponse(){}
 }

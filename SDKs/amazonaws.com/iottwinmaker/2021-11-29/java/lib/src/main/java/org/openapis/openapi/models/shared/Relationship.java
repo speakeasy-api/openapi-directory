@@ -15,6 +15,7 @@ public class Relationship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipType")
     public String relationshipType;
+
     public Relationship withRelationshipType(String relationshipType) {
         this.relationshipType = relationshipType;
         return this;
@@ -23,9 +24,11 @@ public class Relationship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetComponentTypeId")
     public String targetComponentTypeId;
+
     public Relationship withTargetComponentTypeId(String targetComponentTypeId) {
         this.targetComponentTypeId = targetComponentTypeId;
         return this;
     }
     
+    public Relationship(){}
 }

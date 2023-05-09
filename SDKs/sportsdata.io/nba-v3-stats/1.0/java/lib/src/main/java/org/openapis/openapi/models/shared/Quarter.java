@@ -12,6 +12,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayScore")
     public Long awayScore;
+
     public Quarter withAwayScore(Long awayScore) {
         this.awayScore = awayScore;
         return this;
@@ -20,6 +21,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public Quarter withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -28,6 +30,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeScore")
     public Long homeScore;
+
     public Quarter withHomeScore(Long homeScore) {
         this.homeScore = homeScore;
         return this;
@@ -36,6 +39,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Quarter withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public Quarter withNumber(Long number) {
         this.number = number;
         return this;
@@ -52,9 +57,11 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterID")
     public Long quarterID;
+
     public Quarter withQuarterID(Long quarterID) {
         this.quarterID = quarterID;
         return this;
     }
     
+    public Quarter(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProjectResponse {
@@ -12,6 +13,7 @@ public class DeleteProjectResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteProjectResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProjectResponse {
     
     
     public String contentType;
+
     public DeleteProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteProjectResponse deleteProjectResponse;
+
     public DeleteProjectResponse withDeleteProjectResponse(org.openapis.openapi.models.shared.DeleteProjectResponse deleteProjectResponse) {
         this.deleteProjectResponse = deleteProjectResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProjectResponse {
      */
     
     public Object internalServerError;
+
     public DeleteProjectResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProjectResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteProjectResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteProjectResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DeleteProjectResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteProjectResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteProjectResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteProjectResponse {
     
     
     public Integer statusCode;
+
     public DeleteProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteProjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteProjectResponse {
      */
     
     public Object throttlingException;
+
     public DeleteProjectResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConfigurationSetResponse {
@@ -12,6 +13,7 @@ public class DeleteConfigurationSetResponse {
      */
     
     public Object badRequestException;
+
     public DeleteConfigurationSetResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteConfigurationSetResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteConfigurationSetResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConfigurationSetResponse {
     
     
     public String contentType;
+
     public DeleteConfigurationSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConfigurationSetResponse {
      */
     
     public java.util.Map<String, Object> deleteConfigurationSetResponse;
+
     public DeleteConfigurationSetResponse withDeleteConfigurationSetResponse(java.util.Map<String, Object> deleteConfigurationSetResponse) {
         this.deleteConfigurationSetResponse = deleteConfigurationSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteConfigurationSetResponse {
      */
     
     public Object notFoundException;
+
     public DeleteConfigurationSetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteConfigurationSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteConfigurationSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteConfigurationSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConfigurationSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteConfigurationSetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteConfigurationSetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteConfigurationSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMostRecentSourceActorCatalogResponse {
@@ -12,6 +13,7 @@ public class GetMostRecentSourceActorCatalogResponse {
      */
     
     public org.openapis.openapi.models.shared.ActorCatalogWithUpdatedAt actorCatalogWithUpdatedAt;
+
     public GetMostRecentSourceActorCatalogResponse withActorCatalogWithUpdatedAt(org.openapis.openapi.models.shared.ActorCatalogWithUpdatedAt actorCatalogWithUpdatedAt) {
         this.actorCatalogWithUpdatedAt = actorCatalogWithUpdatedAt;
         return this;
@@ -19,6 +21,7 @@ public class GetMostRecentSourceActorCatalogResponse {
     
     
     public String contentType;
+
     public GetMostRecentSourceActorCatalogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMostRecentSourceActorCatalogResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetMostRecentSourceActorCatalogResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class GetMostRecentSourceActorCatalogResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetMostRecentSourceActorCatalogResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -46,6 +51,7 @@ public class GetMostRecentSourceActorCatalogResponse {
     
     
     public Integer statusCode;
+
     public GetMostRecentSourceActorCatalogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetMostRecentSourceActorCatalogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMostRecentSourceActorCatalogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMostRecentSourceActorCatalogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

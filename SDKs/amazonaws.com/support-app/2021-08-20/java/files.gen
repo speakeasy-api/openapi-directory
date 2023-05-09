@@ -69,4 +69,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RegisterSlackWorkspaceForOr
 lib/src/main/java/org/openapis/openapi/models/shared/AccountTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSlackChannelConfigurationResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

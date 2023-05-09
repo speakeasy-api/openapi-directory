@@ -12,6 +12,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games_count")
     public Long gamesCount;
+
     public Tag withGamesCount(Long gamesCount) {
         this.gamesCount = gamesCount;
         return this;
@@ -20,6 +21,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Tag withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_background")
     public String imageBackground;
+
     public Tag withImageBackground(String imageBackground) {
         this.imageBackground = imageBackground;
         return this;
@@ -36,6 +39,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Tag withLanguage(String language) {
         this.language = language;
         return this;
@@ -43,6 +47,7 @@ public class Tag {
     
     @JsonProperty("name")
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,13 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Tag withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public Tag(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

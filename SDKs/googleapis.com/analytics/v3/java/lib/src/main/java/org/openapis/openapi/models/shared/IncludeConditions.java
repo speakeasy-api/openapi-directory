@@ -18,6 +18,7 @@ public class IncludeConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysToLookBack")
     public Integer daysToLookBack;
+
     public IncludeConditions withDaysToLookBack(Integer daysToLookBack) {
         this.daysToLookBack = daysToLookBack;
         return this;
@@ -29,6 +30,7 @@ public class IncludeConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSmartList")
     public Boolean isSmartList;
+
     public IncludeConditions withIsSmartList(Boolean isSmartList) {
         this.isSmartList = isSmartList;
         return this;
@@ -40,6 +42,7 @@ public class IncludeConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public IncludeConditions withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class IncludeConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipDurationDays")
     public Integer membershipDurationDays;
+
     public IncludeConditions withMembershipDurationDays(Integer membershipDurationDays) {
         this.membershipDurationDays = membershipDurationDays;
         return this;
@@ -62,9 +66,11 @@ public class IncludeConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment")
     public String segment;
+
     public IncludeConditions withSegment(String segment) {
         this.segment = segment;
         return this;
     }
     
+    public IncludeConditions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeRecommendationFeedbackRequest {
@@ -12,6 +13,7 @@ public class DescribeRecommendationFeedbackRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CodeReviewArn")
     public String codeReviewArn;
+
     public DescribeRecommendationFeedbackRequest withCodeReviewArn(String codeReviewArn) {
         this.codeReviewArn = codeReviewArn;
         return this;
@@ -22,6 +24,7 @@ public class DescribeRecommendationFeedbackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RecommendationId")
     public String recommendationId;
+
     public DescribeRecommendationFeedbackRequest withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
@@ -32,6 +35,7 @@ public class DescribeRecommendationFeedbackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserId")
     public String userId;
+
     public DescribeRecommendationFeedbackRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRecommendationFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeRecommendationFeedbackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRecommendationFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeRecommendationFeedbackRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class DescribeRecommendationFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeRecommendationFeedbackRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class DescribeRecommendationFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeRecommendationFeedbackRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class DescribeRecommendationFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeRecommendationFeedbackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class DescribeRecommendationFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeRecommendationFeedbackRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,14 @@ public class DescribeRecommendationFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeRecommendationFeedbackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DescribeRecommendationFeedbackRequest(@JsonProperty("CodeReviewArn") String codeReviewArn, @JsonProperty("RecommendationId") String recommendationId) {
+        this.codeReviewArn = codeReviewArn;
+        this.recommendationId = recommendationId;
+  }
 }

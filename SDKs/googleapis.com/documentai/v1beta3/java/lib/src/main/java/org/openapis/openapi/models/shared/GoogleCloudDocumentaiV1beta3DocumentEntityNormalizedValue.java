@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressValue")
     public GoogleTypePostalAddress addressValue;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue withAddressValue(GoogleTypePostalAddress addressValue) {
         this.addressValue = addressValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateValue")
     public GoogleTypeDate dateValue;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue withDateValue(GoogleTypeDate dateValue) {
         this.dateValue = dateValue;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datetimeValue")
     public GoogleTypeDateTime datetimeValue;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue withDatetimeValue(GoogleTypeDateTime datetimeValue) {
         this.datetimeValue = datetimeValue;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floatValue")
     public Float floatValue;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue withFloatValue(Float floatValue) {
         this.floatValue = floatValue;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public Integer integerValue;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue withIntegerValue(Integer integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moneyValue")
     public GoogleTypeMoney moneyValue;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue withMoneyValue(GoogleTypeMoney moneyValue) {
         this.moneyValue = moneyValue;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue(){}
 }

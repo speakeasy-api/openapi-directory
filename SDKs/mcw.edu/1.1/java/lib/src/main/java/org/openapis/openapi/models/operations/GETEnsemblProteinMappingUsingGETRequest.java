@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnsemblProteinMappingUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETEnsemblProteinMappingUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
     public Integer rgdId;
+
     public GETEnsemblProteinMappingUsingGETRequest withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
     }
     
+    public GETEnsemblProteinMappingUsingGETRequest(@JsonProperty("rgdId") Integer rgdId) {
+        this.rgdId = rgdId;
+  }
 }

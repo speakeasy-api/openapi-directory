@@ -15,6 +15,7 @@ public class SAPODataConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicAuthCredentials")
     public BasicAuthCredentials basicAuthCredentials;
+
     public SAPODataConnectorProfileCredentials withBasicAuthCredentials(BasicAuthCredentials basicAuthCredentials) {
         this.basicAuthCredentials = basicAuthCredentials;
         return this;
@@ -23,9 +24,11 @@ public class SAPODataConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthCredentials")
     public OAuthCredentials oAuthCredentials;
+
     public SAPODataConnectorProfileCredentials withOAuthCredentials(OAuthCredentials oAuthCredentials) {
         this.oAuthCredentials = oAuthCredentials;
         return this;
     }
     
+    public SAPODataConnectorProfileCredentials(){}
 }

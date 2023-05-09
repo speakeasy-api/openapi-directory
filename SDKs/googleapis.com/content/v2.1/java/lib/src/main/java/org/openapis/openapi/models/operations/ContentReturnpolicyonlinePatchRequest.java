@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentReturnpolicyonlinePatchRequest {
@@ -12,6 +13,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContentReturnpolicyonlinePatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ContentReturnpolicyonlinePatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ReturnPolicyOnlineInput returnPolicyOnlineInput;
+
     public ContentReturnpolicyonlinePatchRequest withReturnPolicyOnlineInput(org.openapis.openapi.models.shared.ReturnPolicyOnlineInput returnPolicyOnlineInput) {
         this.returnPolicyOnlineInput = returnPolicyOnlineInput;
         return this;
@@ -29,6 +32,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContentReturnpolicyonlinePatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContentReturnpolicyonlinePatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContentReturnpolicyonlinePatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContentReturnpolicyonlinePatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContentReturnpolicyonlinePatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public ContentReturnpolicyonlinePatchRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -89,6 +98,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContentReturnpolicyonlinePatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContentReturnpolicyonlinePatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContentReturnpolicyonlinePatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=returnPolicyId")
     public String returnPolicyId;
+
     public ContentReturnpolicyonlinePatchRequest withReturnPolicyId(String returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
         return this;
@@ -129,6 +142,7 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContentReturnpolicyonlinePatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class ContentReturnpolicyonlinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContentReturnpolicyonlinePatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ContentReturnpolicyonlinePatchRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("returnPolicyId") String returnPolicyId) {
+        this.merchantId = merchantId;
+        this.returnPolicyId = returnPolicyId;
+  }
 }

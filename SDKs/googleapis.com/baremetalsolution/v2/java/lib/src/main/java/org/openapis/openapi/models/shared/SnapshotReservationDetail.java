@@ -18,6 +18,7 @@ public class SnapshotReservationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedSpaceGib")
     public String reservedSpaceGib;
+
     public SnapshotReservationDetail withReservedSpaceGib(String reservedSpaceGib) {
         this.reservedSpaceGib = reservedSpaceGib;
         return this;
@@ -29,6 +30,7 @@ public class SnapshotReservationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedSpacePercent")
     public Integer reservedSpacePercent;
+
     public SnapshotReservationDetail withReservedSpacePercent(Integer reservedSpacePercent) {
         this.reservedSpacePercent = reservedSpacePercent;
         return this;
@@ -40,6 +42,7 @@ public class SnapshotReservationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedSpaceRemainingGib")
     public String reservedSpaceRemainingGib;
+
     public SnapshotReservationDetail withReservedSpaceRemainingGib(String reservedSpaceRemainingGib) {
         this.reservedSpaceRemainingGib = reservedSpaceRemainingGib;
         return this;
@@ -51,9 +54,11 @@ public class SnapshotReservationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedSpaceUsedPercent")
     public Integer reservedSpaceUsedPercent;
+
     public SnapshotReservationDetail withReservedSpaceUsedPercent(Integer reservedSpaceUsedPercent) {
         this.reservedSpaceUsedPercent = reservedSpaceUsedPercent;
         return this;
     }
     
+    public SnapshotReservationDetail(){}
 }

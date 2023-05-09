@@ -12,6 +12,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CivicinfoDivisionsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CivicinfoDivisionsSearchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CivicinfoDivisionsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CivicinfoDivisionsSearchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CivicinfoDivisionsSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CivicinfoDivisionsSearchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CivicinfoDivisionsSearchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CivicinfoDivisionsSearchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +100,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public CivicinfoDivisionsSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -102,6 +111,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CivicinfoDivisionsSearchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +122,7 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CivicinfoDivisionsSearchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,9 +133,11 @@ public class CivicinfoDivisionsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CivicinfoDivisionsSearchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CivicinfoDivisionsSearchRequest(){}
 }

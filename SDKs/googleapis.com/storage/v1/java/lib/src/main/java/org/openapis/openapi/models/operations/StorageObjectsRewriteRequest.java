@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsRewriteRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Object object;
+
     public StorageObjectsRewriteRequest withObject(org.openapis.openapi.models.shared.Object object) {
         this.object = object;
         return this;
@@ -19,6 +21,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageObjectsRewriteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationBucket")
     public String destinationBucket;
+
     public StorageObjectsRewriteRequest withDestinationBucket(String destinationBucket) {
         this.destinationBucket = destinationBucket;
         return this;
@@ -39,6 +43,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationKmsKeyName")
     public String destinationKmsKeyName;
+
     public StorageObjectsRewriteRequest withDestinationKmsKeyName(String destinationKmsKeyName) {
         this.destinationKmsKeyName = destinationKmsKeyName;
         return this;
@@ -49,6 +54,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationObject")
     public String destinationObject;
+
     public StorageObjectsRewriteRequest withDestinationObject(String destinationObject) {
         this.destinationObject = destinationObject;
         return this;
@@ -59,6 +65,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationPredefinedAcl")
     public StorageObjectsRewriteDestinationPredefinedACLEnum destinationPredefinedAcl;
+
     public StorageObjectsRewriteRequest withDestinationPredefinedAcl(StorageObjectsRewriteDestinationPredefinedACLEnum destinationPredefinedAcl) {
         this.destinationPredefinedAcl = destinationPredefinedAcl;
         return this;
@@ -69,6 +76,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageObjectsRewriteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
     public String ifGenerationMatch;
+
     public StorageObjectsRewriteRequest withIfGenerationMatch(String ifGenerationMatch) {
         this.ifGenerationMatch = ifGenerationMatch;
         return this;
@@ -89,6 +98,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
     public String ifGenerationNotMatch;
+
     public StorageObjectsRewriteRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
         this.ifGenerationNotMatch = ifGenerationNotMatch;
         return this;
@@ -99,6 +109,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
     public String ifMetagenerationMatch;
+
     public StorageObjectsRewriteRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
         this.ifMetagenerationMatch = ifMetagenerationMatch;
         return this;
@@ -109,6 +120,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
     public String ifMetagenerationNotMatch;
+
     public StorageObjectsRewriteRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
         this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
         return this;
@@ -119,6 +131,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceGenerationMatch")
     public String ifSourceGenerationMatch;
+
     public StorageObjectsRewriteRequest withIfSourceGenerationMatch(String ifSourceGenerationMatch) {
         this.ifSourceGenerationMatch = ifSourceGenerationMatch;
         return this;
@@ -129,6 +142,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceGenerationNotMatch")
     public String ifSourceGenerationNotMatch;
+
     public StorageObjectsRewriteRequest withIfSourceGenerationNotMatch(String ifSourceGenerationNotMatch) {
         this.ifSourceGenerationNotMatch = ifSourceGenerationNotMatch;
         return this;
@@ -139,6 +153,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceMetagenerationMatch")
     public String ifSourceMetagenerationMatch;
+
     public StorageObjectsRewriteRequest withIfSourceMetagenerationMatch(String ifSourceMetagenerationMatch) {
         this.ifSourceMetagenerationMatch = ifSourceMetagenerationMatch;
         return this;
@@ -149,6 +164,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceMetagenerationNotMatch")
     public String ifSourceMetagenerationNotMatch;
+
     public StorageObjectsRewriteRequest withIfSourceMetagenerationNotMatch(String ifSourceMetagenerationNotMatch) {
         this.ifSourceMetagenerationNotMatch = ifSourceMetagenerationNotMatch;
         return this;
@@ -159,6 +175,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageObjectsRewriteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -169,6 +186,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxBytesRewrittenPerCall")
     public String maxBytesRewrittenPerCall;
+
     public StorageObjectsRewriteRequest withMaxBytesRewrittenPerCall(String maxBytesRewrittenPerCall) {
         this.maxBytesRewrittenPerCall = maxBytesRewrittenPerCall;
         return this;
@@ -179,6 +197,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageObjectsRewriteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -189,6 +208,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageObjectsRewriteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -199,6 +219,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public StorageObjectsRewriteProjectionEnum projection;
+
     public StorageObjectsRewriteRequest withProjection(StorageObjectsRewriteProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -209,6 +230,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageObjectsRewriteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -219,6 +241,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rewriteToken")
     public String rewriteToken;
+
     public StorageObjectsRewriteRequest withRewriteToken(String rewriteToken) {
         this.rewriteToken = rewriteToken;
         return this;
@@ -229,6 +252,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceBucket")
     public String sourceBucket;
+
     public StorageObjectsRewriteRequest withSourceBucket(String sourceBucket) {
         this.sourceBucket = sourceBucket;
         return this;
@@ -239,6 +263,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceGeneration")
     public String sourceGeneration;
+
     public StorageObjectsRewriteRequest withSourceGeneration(String sourceGeneration) {
         this.sourceGeneration = sourceGeneration;
         return this;
@@ -249,6 +274,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceObject")
     public String sourceObject;
+
     public StorageObjectsRewriteRequest withSourceObject(String sourceObject) {
         this.sourceObject = sourceObject;
         return this;
@@ -259,6 +285,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageObjectsRewriteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -269,6 +296,7 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageObjectsRewriteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -279,9 +307,16 @@ public class StorageObjectsRewriteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageObjectsRewriteRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageObjectsRewriteRequest(@JsonProperty("destinationBucket") String destinationBucket, @JsonProperty("destinationObject") String destinationObject, @JsonProperty("sourceBucket") String sourceBucket, @JsonProperty("sourceObject") String sourceObject) {
+        this.destinationBucket = destinationBucket;
+        this.destinationObject = destinationObject;
+        this.sourceBucket = sourceBucket;
+        this.sourceObject = sourceObject;
+  }
 }

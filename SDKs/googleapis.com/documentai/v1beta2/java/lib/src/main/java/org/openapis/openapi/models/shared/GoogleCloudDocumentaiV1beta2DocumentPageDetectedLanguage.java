@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage(){}
 }

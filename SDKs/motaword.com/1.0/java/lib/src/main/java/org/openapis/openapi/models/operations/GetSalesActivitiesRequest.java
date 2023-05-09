@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSalesActivitiesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeOwner")
     public String excludeOwner;
+
     public GetSalesActivitiesRequest withExcludeOwner(String excludeOwner) {
         this.excludeOwner = excludeOwner;
         return this;
@@ -19,6 +21,7 @@ public class GetSalesActivitiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetSalesActivitiesRequest withId(Long id) {
         this.id = id;
         return this;
@@ -26,9 +29,13 @@ public class GetSalesActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public org.openapis.openapi.models.shared.SalesActivityTypeEnum type;
+
     public GetSalesActivitiesRequest withType(org.openapis.openapi.models.shared.SalesActivityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetSalesActivitiesRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class InstanceTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BidPrice")
     public String bidPrice;
+
     public InstanceTypeConfig withBidPrice(String bidPrice) {
         this.bidPrice = bidPrice;
         return this;
@@ -23,6 +24,7 @@ public class InstanceTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BidPriceAsPercentageOfOnDemandPrice")
     public Double bidPriceAsPercentageOfOnDemandPrice;
+
     public InstanceTypeConfig withBidPriceAsPercentageOfOnDemandPrice(Double bidPriceAsPercentageOfOnDemandPrice) {
         this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
         return this;
@@ -31,6 +33,7 @@ public class InstanceTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public Configuration[] configurations;
+
     public InstanceTypeConfig withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -39,6 +42,7 @@ public class InstanceTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomAmiId")
     public String customAmiId;
+
     public InstanceTypeConfig withCustomAmiId(String customAmiId) {
         this.customAmiId = customAmiId;
         return this;
@@ -47,6 +51,7 @@ public class InstanceTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsConfiguration")
     public EbsConfiguration ebsConfiguration;
+
     public InstanceTypeConfig withEbsConfiguration(EbsConfiguration ebsConfiguration) {
         this.ebsConfiguration = ebsConfiguration;
         return this;
@@ -54,6 +59,7 @@ public class InstanceTypeConfig {
     
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public InstanceTypeConfig withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -62,9 +68,13 @@ public class InstanceTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeightedCapacity")
     public Long weightedCapacity;
+
     public InstanceTypeConfig withWeightedCapacity(Long weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public InstanceTypeConfig(@JsonProperty("InstanceType") String instanceType) {
+        this.instanceType = instanceType;
+  }
 }

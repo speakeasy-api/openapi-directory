@@ -14,6 +14,7 @@ public class CreateOrderRequestBody {
      */
     @JsonProperty("LineItems")
     public org.openapis.openapi.models.shared.LineItemRequest[] lineItems;
+
     public CreateOrderRequestBody withLineItems(org.openapis.openapi.models.shared.LineItemRequest[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -24,6 +25,7 @@ public class CreateOrderRequestBody {
      */
     @JsonProperty("OutpostIdentifier")
     public String outpostIdentifier;
+
     public CreateOrderRequestBody withOutpostIdentifier(String outpostIdentifier) {
         this.outpostIdentifier = outpostIdentifier;
         return this;
@@ -34,6 +36,7 @@ public class CreateOrderRequestBody {
      */
     @JsonProperty("PaymentOption")
     public CreateOrderRequestBodyPaymentOptionEnum paymentOption;
+
     public CreateOrderRequestBody withPaymentOption(CreateOrderRequestBodyPaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -45,9 +48,15 @@ public class CreateOrderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentTerm")
     public CreateOrderRequestBodyPaymentTermEnum paymentTerm;
+
     public CreateOrderRequestBody withPaymentTerm(CreateOrderRequestBodyPaymentTermEnum paymentTerm) {
         this.paymentTerm = paymentTerm;
         return this;
     }
     
+    public CreateOrderRequestBody(@JsonProperty("LineItems") org.openapis.openapi.models.shared.LineItemRequest[] lineItems, @JsonProperty("OutpostIdentifier") String outpostIdentifier, @JsonProperty("PaymentOption") CreateOrderRequestBodyPaymentOptionEnum paymentOption) {
+        this.lineItems = lineItems;
+        this.outpostIdentifier = outpostIdentifier;
+        this.paymentOption = paymentOption;
+  }
 }

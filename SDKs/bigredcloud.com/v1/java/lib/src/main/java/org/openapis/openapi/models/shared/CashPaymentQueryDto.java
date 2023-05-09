@@ -17,6 +17,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acCode")
     public String acCode;
+
     public CashPaymentQueryDto withAcCode(String acCode) {
         this.acCode = acCode;
         return this;
@@ -25,6 +26,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acEntries")
     public AcEntryDto[] acEntries;
+
     public CashPaymentQueryDto withAcEntries(AcEntryDto[] acEntries) {
         this.acEntries = acEntries;
         return this;
@@ -33,6 +35,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountCode")
     public String bankAccountCode;
+
     public CashPaymentQueryDto withBankAccountCode(String bankAccountCode) {
         this.bankAccountCode = bankAccountCode;
         return this;
@@ -41,6 +44,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountId")
     public Long bankAccountId;
+
     public CashPaymentQueryDto withBankAccountId(Long bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -49,6 +53,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTranTypeId")
     public Long bookTranTypeId;
+
     public CashPaymentQueryDto withBookTranTypeId(Long bookTranTypeId) {
         this.bookTranTypeId = bookTranTypeId;
         return this;
@@ -57,6 +62,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public AcudfValueDto[] customFields;
+
     public CashPaymentQueryDto withCustomFields(AcudfValueDto[] customFields) {
         this.customFields = customFields;
         return this;
@@ -65,6 +71,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailCollection")
     public String[] detailCollection;
+
     public CashPaymentQueryDto withDetailCollection(String[] detailCollection) {
         this.detailCollection = detailCollection;
         return this;
@@ -73,6 +80,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public Double discount;
+
     public CashPaymentQueryDto withDiscount(Double discount) {
         this.discount = discount;
         return this;
@@ -83,6 +91,7 @@ public class CashPaymentQueryDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("entryDate")
     public OffsetDateTime entryDate;
+
     public CashPaymentQueryDto withEntryDate(OffsetDateTime entryDate) {
         this.entryDate = entryDate;
         return this;
@@ -91,6 +100,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CashPaymentQueryDto withId(Long id) {
         this.id = id;
         return this;
@@ -99,6 +109,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ledger")
     public Double ledger;
+
     public CashPaymentQueryDto withLedger(Double ledger) {
         this.ledger = ledger;
         return this;
@@ -107,6 +118,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lodgement")
     public Double lodgement;
+
     public CashPaymentQueryDto withLodgement(Double lodgement) {
         this.lodgement = lodgement;
         return this;
@@ -115,6 +127,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public CashPaymentQueryDto withNote(String note) {
         this.note = note;
         return this;
@@ -123,6 +136,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plaidTransactionId")
     public String plaidTransactionId;
+
     public CashPaymentQueryDto withPlaidTransactionId(String plaidTransactionId) {
         this.plaidTransactionId = plaidTransactionId;
         return this;
@@ -133,6 +147,7 @@ public class CashPaymentQueryDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public CashPaymentQueryDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
@@ -141,6 +156,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplierId")
     public Long supplierId;
+
     public CashPaymentQueryDto withSupplierId(Long supplierId) {
         this.supplierId = supplierId;
         return this;
@@ -149,6 +165,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public CashPaymentQueryDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -157,6 +174,7 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public CashPaymentQueryDto withTotal(Double total) {
         this.total = total;
         return this;
@@ -165,9 +183,11 @@ public class CashPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unallocated")
     public Double unallocated;
+
     public CashPaymentQueryDto withUnallocated(Double unallocated) {
         this.unallocated = unallocated;
         return this;
     }
     
+    public CashPaymentQueryDto(){}
 }

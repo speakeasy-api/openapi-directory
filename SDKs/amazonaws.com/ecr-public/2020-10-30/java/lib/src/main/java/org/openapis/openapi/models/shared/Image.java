@@ -15,6 +15,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public ImageIdentifier imageId;
+
     public Image withImageId(ImageIdentifier imageId) {
         this.imageId = imageId;
         return this;
@@ -23,6 +24,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageManifest")
     public String imageManifest;
+
     public Image withImageManifest(String imageManifest) {
         this.imageManifest = imageManifest;
         return this;
@@ -31,6 +33,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageManifestMediaType")
     public String imageManifestMediaType;
+
     public Image withImageManifestMediaType(String imageManifestMediaType) {
         this.imageManifestMediaType = imageManifestMediaType;
         return this;
@@ -39,6 +42,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public Image withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -47,9 +51,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public Image withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public Image(){}
 }

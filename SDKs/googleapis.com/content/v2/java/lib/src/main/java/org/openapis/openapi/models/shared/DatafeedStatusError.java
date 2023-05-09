@@ -18,6 +18,7 @@ public class DatafeedStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public DatafeedStatusError withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class DatafeedStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public DatafeedStatusError withCount(String count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class DatafeedStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("examples")
     public DatafeedStatusExample[] examples;
+
     public DatafeedStatusError withExamples(DatafeedStatusExample[] examples) {
         this.examples = examples;
         return this;
@@ -51,9 +54,11 @@ public class DatafeedStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DatafeedStatusError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DatafeedStatusError(){}
 }

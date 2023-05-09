@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopCrawlerResponse {
     
     public String contentType;
+
     public StopCrawlerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopCrawlerResponse {
      */
     
     public Object crawlerNotRunningException;
+
     public StopCrawlerResponse withCrawlerNotRunningException(Object crawlerNotRunningException) {
         this.crawlerNotRunningException = crawlerNotRunningException;
         return this;
@@ -29,6 +32,7 @@ public class StopCrawlerResponse {
      */
     
     public Object crawlerStoppingException;
+
     public StopCrawlerResponse withCrawlerStoppingException(Object crawlerStoppingException) {
         this.crawlerStoppingException = crawlerStoppingException;
         return this;
@@ -39,6 +43,7 @@ public class StopCrawlerResponse {
      */
     
     public Object entityNotFoundException;
+
     public StopCrawlerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StopCrawlerResponse {
      */
     
     public Object operationTimeoutException;
+
     public StopCrawlerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class StopCrawlerResponse {
     
     
     public Integer statusCode;
+
     public StopCrawlerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopCrawlerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopCrawlerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopCrawlerResponse {
      */
     
     public java.util.Map<String, Object> stopCrawlerResponse;
+
     public StopCrawlerResponse withStopCrawlerResponse(java.util.Map<String, Object> stopCrawlerResponse) {
         this.stopCrawlerResponse = stopCrawlerResponse;
         return this;
     }
     
+    public StopCrawlerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

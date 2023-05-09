@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Update1Request {
@@ -12,6 +13,7 @@ public class Update1Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomerPersonDTO customerPersonDTO;
+
     public Update1Request withCustomerPersonDTO(org.openapis.openapi.models.shared.CustomerPersonDTO customerPersonDTO) {
         this.customerPersonDTO = customerPersonDTO;
         return this;
@@ -22,9 +24,14 @@ public class Update1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
     public Long personId;
+
     public Update1Request withPersonId(Long personId) {
         this.personId = personId;
         return this;
     }
     
+    public Update1Request(@JsonProperty("CustomerPersonDTO") org.openapis.openapi.models.shared.CustomerPersonDTO customerPersonDTO, @JsonProperty("personId") Long personId) {
+        this.customerPersonDTO = customerPersonDTO;
+        this.personId = personId;
+  }
 }

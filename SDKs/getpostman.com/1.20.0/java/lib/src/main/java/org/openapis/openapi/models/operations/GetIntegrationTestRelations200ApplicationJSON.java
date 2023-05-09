@@ -15,9 +15,11 @@ public class GetIntegrationTestRelations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationtest")
     public GetIntegrationTestRelations200ApplicationJSONIntegrationtest[] integrationtest;
+
     public GetIntegrationTestRelations200ApplicationJSON withIntegrationtest(GetIntegrationTestRelations200ApplicationJSONIntegrationtest[] integrationtest) {
         this.integrationtest = integrationtest;
         return this;
     }
     
+    public GetIntegrationTestRelations200ApplicationJSON(){}
 }

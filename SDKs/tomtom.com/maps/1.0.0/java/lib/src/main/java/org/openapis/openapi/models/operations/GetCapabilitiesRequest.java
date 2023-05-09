@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCapabilitiesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request")
     public GetCapabilitiesRequestEnum request;
+
     public GetCapabilitiesRequest withRequest(GetCapabilitiesRequestEnum request) {
         this.request = request;
         return this;
@@ -16,6 +18,7 @@ public class GetCapabilitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public GetCapabilitiesServiceEnum service;
+
     public GetCapabilitiesRequest withService(GetCapabilitiesServiceEnum service) {
         this.service = service;
         return this;
@@ -26,6 +29,7 @@ public class GetCapabilitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public GetCapabilitiesVersionEnum version;
+
     public GetCapabilitiesRequest withVersion(GetCapabilitiesVersionEnum version) {
         this.version = version;
         return this;
@@ -33,9 +37,15 @@ public class GetCapabilitiesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public GetCapabilitiesVersionNumberEnum versionNumber;
+
     public GetCapabilitiesRequest withVersionNumber(GetCapabilitiesVersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetCapabilitiesRequest(@JsonProperty("request") GetCapabilitiesRequestEnum request, @JsonProperty("service") GetCapabilitiesServiceEnum service, @JsonProperty("versionNumber") GetCapabilitiesVersionNumberEnum versionNumber) {
+        this.request = request;
+        this.service = service;
+        this.versionNumber = versionNumber;
+  }
 }

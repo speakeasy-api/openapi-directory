@@ -17,6 +17,7 @@ public class CreateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ftp_password")
     public String ftpPassword;
+
     public CreateAccount withFtpPassword(String ftpPassword) {
         this.ftpPassword = ftpPassword;
         return this;
@@ -29,6 +30,7 @@ public class CreateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public CreateAccount withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -40,9 +42,11 @@ public class CreateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicepack_id")
     public Integer servicepackId;
+
     public CreateAccount withServicepackId(Integer servicepackId) {
         this.servicepackId = servicepackId;
         return this;
     }
     
+    public CreateAccount(){}
 }

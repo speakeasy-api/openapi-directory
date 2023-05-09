@@ -19,6 +19,7 @@ public class Error429AISAdditionalErrors {
      */
     @JsonProperty("code")
     public MessageCode429AISEnum code;
+
     public Error429AISAdditionalErrors withCode(MessageCode429AISEnum code) {
         this.code = code;
         return this;
@@ -33,6 +34,7 @@ public class Error429AISAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error429AISAdditionalErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -47,9 +49,13 @@ public class Error429AISAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error429AISAdditionalErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error429AISAdditionalErrors(@JsonProperty("code") MessageCode429AISEnum code) {
+        this.code = code;
+  }
 }

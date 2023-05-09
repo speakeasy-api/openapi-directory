@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAlertResponse {
@@ -12,6 +13,7 @@ public class DeleteAlertResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAlertResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAlertResponse {
     
     
     public String contentType;
+
     public DeleteAlertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAlertResponse {
      */
     
     public java.util.Map<String, Object> deleteAlertResponse;
+
     public DeleteAlertResponse withDeleteAlertResponse(java.util.Map<String, Object> deleteAlertResponse) {
         this.deleteAlertResponse = deleteAlertResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAlertResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAlertResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAlertResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAlertResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAlertResponse {
     
     
     public Integer statusCode;
+
     public DeleteAlertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAlertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAlertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAlertResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteAlertResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAlertResponse {
      */
     
     public Object validationException;
+
     public DeleteAlertResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAlertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

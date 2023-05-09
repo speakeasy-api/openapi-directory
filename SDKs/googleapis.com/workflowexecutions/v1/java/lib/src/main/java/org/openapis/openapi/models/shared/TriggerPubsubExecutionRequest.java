@@ -18,6 +18,7 @@ public class TriggerPubsubExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GCPCloudEventsMode")
     public String gcpCloudEventsMode;
+
     public TriggerPubsubExecutionRequest withGCPCloudEventsMode(String gcpCloudEventsMode) {
         this.gcpCloudEventsMode = gcpCloudEventsMode;
         return this;
@@ -29,6 +30,7 @@ public class TriggerPubsubExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public PubsubMessage message;
+
     public TriggerPubsubExecutionRequest withMessage(PubsubMessage message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class TriggerPubsubExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public String subscription;
+
     public TriggerPubsubExecutionRequest withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public TriggerPubsubExecutionRequest(){}
 }

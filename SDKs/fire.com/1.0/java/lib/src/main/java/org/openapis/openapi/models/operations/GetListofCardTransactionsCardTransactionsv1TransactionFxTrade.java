@@ -18,6 +18,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionFxTrade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyAmount")
     public Long buyAmount;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade withBuyAmount(Long buyAmount) {
         this.buyAmount = buyAmount;
         return this;
@@ -29,6 +30,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionFxTrade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyCurrency")
     public String buyCurrency;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade withBuyCurrency(String buyCurrency) {
         this.buyCurrency = buyCurrency;
         return this;
@@ -40,6 +42,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionFxTrade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedSide")
     public String fixedSide;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade withFixedSide(String fixedSide) {
         this.fixedSide = fixedSide;
         return this;
@@ -51,6 +54,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionFxTrade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -62,6 +66,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionFxTrade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate4d")
     public Long rate4d;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade withRate4d(Long rate4d) {
         this.rate4d = rate4d;
         return this;
@@ -73,6 +78,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionFxTrade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellAmount")
     public Long sellAmount;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade withSellAmount(Long sellAmount) {
         this.sellAmount = sellAmount;
         return this;
@@ -84,9 +90,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionFxTrade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellCurrency")
     public String sellCurrency;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade withSellCurrency(String sellCurrency) {
         this.sellCurrency = sellCurrency;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade(){}
 }

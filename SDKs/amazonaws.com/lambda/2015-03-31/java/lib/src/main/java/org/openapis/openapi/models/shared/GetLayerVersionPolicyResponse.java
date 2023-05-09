@@ -15,6 +15,7 @@ public class GetLayerVersionPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public GetLayerVersionPolicyResponse withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -23,9 +24,11 @@ public class GetLayerVersionPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RevisionId")
     public String revisionId;
+
     public GetLayerVersionPolicyResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public GetLayerVersionPolicyResponse(){}
 }

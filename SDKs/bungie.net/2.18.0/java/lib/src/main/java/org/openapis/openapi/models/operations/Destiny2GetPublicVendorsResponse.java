@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Destiny2GetPublicVendorsResponse {
     
     public byte[] body;
+
     public Destiny2GetPublicVendorsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class Destiny2GetPublicVendorsResponse {
     
     
     public String contentType;
+
     public Destiny2GetPublicVendorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class Destiny2GetPublicVendorsResponse {
     
     
     public Integer statusCode;
+
     public Destiny2GetPublicVendorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class Destiny2GetPublicVendorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Destiny2GetPublicVendorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Destiny2GetPublicVendorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

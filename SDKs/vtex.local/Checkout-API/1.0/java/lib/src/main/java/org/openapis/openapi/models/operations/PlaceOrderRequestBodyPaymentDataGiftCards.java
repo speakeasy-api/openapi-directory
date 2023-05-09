@@ -15,6 +15,7 @@ public class PlaceOrderRequestBodyPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public PlaceOrderRequestBodyPaymentDataGiftCards withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrderRequestBodyPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrderRequestBodyPaymentDataGiftCards withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrderRequestBodyPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inUse")
     public Boolean inUse;
+
     public PlaceOrderRequestBodyPaymentDataGiftCards withInUse(Boolean inUse) {
         this.inUse = inUse;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrderRequestBodyPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSpecialCard")
     public Boolean isSpecialCard;
+
     public PlaceOrderRequestBodyPaymentDataGiftCards withIsSpecialCard(Boolean isSpecialCard) {
         this.isSpecialCard = isSpecialCard;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrderRequestBodyPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrderRequestBodyPaymentDataGiftCards withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +74,7 @@ public class PlaceOrderRequestBodyPaymentDataGiftCards {
      */
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public PlaceOrderRequestBodyPaymentDataGiftCards withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -79,9 +85,14 @@ public class PlaceOrderRequestBodyPaymentDataGiftCards {
      */
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrderRequestBodyPaymentDataGiftCards withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrderRequestBodyPaymentDataGiftCards(@JsonProperty("redemptionCode") String redemptionCode, @JsonProperty("value") Long value) {
+        this.redemptionCode = redemptionCode;
+        this.value = value;
+  }
 }

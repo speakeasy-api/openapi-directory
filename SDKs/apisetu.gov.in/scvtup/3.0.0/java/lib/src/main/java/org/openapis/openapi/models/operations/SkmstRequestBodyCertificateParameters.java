@@ -12,6 +12,7 @@ public class SkmstRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SkmstRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class SkmstRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SkmstRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class SkmstRequestBodyCertificateParameters {
      */
     @JsonProperty("RollNumber")
     public String rollNumber;
+
     public SkmstRequestBodyCertificateParameters withRollNumber(String rollNumber) {
         this.rollNumber = rollNumber;
         return this;
@@ -42,6 +45,7 @@ public class SkmstRequestBodyCertificateParameters {
      */
     @JsonProperty("Sem")
     public String sem;
+
     public SkmstRequestBodyCertificateParameters withSem(String sem) {
         this.sem = sem;
         return this;
@@ -52,9 +56,17 @@ public class SkmstRequestBodyCertificateParameters {
      */
     @JsonProperty("Session")
     public String session;
+
     public SkmstRequestBodyCertificateParameters withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public SkmstRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RollNumber") String rollNumber, @JsonProperty("Sem") String sem, @JsonProperty("Session") String session) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.rollNumber = rollNumber;
+        this.sem = sem;
+        this.session = session;
+  }
 }

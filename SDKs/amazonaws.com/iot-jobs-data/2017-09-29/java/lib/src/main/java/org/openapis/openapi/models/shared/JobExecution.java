@@ -15,6 +15,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approximateSecondsBeforeTimedOut")
     public Long approximateSecondsBeforeTimedOut;
+
     public JobExecution withApproximateSecondsBeforeTimedOut(Long approximateSecondsBeforeTimedOut) {
         this.approximateSecondsBeforeTimedOut = approximateSecondsBeforeTimedOut;
         return this;
@@ -23,6 +24,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionNumber")
     public Long executionNumber;
+
     public JobExecution withExecutionNumber(Long executionNumber) {
         this.executionNumber = executionNumber;
         return this;
@@ -31,6 +33,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDocument")
     public String jobDocument;
+
     public JobExecution withJobDocument(String jobDocument) {
         this.jobDocument = jobDocument;
         return this;
@@ -39,6 +42,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public JobExecution withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -47,6 +51,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedAt")
     public Long lastUpdatedAt;
+
     public JobExecution withLastUpdatedAt(Long lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -55,6 +60,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedAt")
     public Long queuedAt;
+
     public JobExecution withQueuedAt(Long queuedAt) {
         this.queuedAt = queuedAt;
         return this;
@@ -63,6 +69,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedAt")
     public Long startedAt;
+
     public JobExecution withStartedAt(Long startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -71,6 +78,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobExecutionStatusEnum status;
+
     public JobExecution withStatus(JobExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -79,6 +87,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDetails")
     public java.util.Map<String, String> statusDetails;
+
     public JobExecution withStatusDetails(java.util.Map<String, String> statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -87,6 +96,7 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public JobExecution withThingName(String thingName) {
         this.thingName = thingName;
         return this;
@@ -95,9 +105,11 @@ public class JobExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionNumber")
     public Long versionNumber;
+
     public JobExecution withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public JobExecution(){}
 }

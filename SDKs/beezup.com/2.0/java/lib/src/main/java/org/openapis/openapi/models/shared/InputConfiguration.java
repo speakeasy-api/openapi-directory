@@ -17,6 +17,7 @@ public class InputConfiguration {
      */
     @JsonProperty("files")
     public InputFileConfiguration[] files;
+
     public InputConfiguration withFiles(InputFileConfiguration[] files) {
         this.files = files;
         return this;
@@ -28,9 +29,13 @@ public class InputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformFileUrl")
     public String transformFileUrl;
+
     public InputConfiguration withTransformFileUrl(String transformFileUrl) {
         this.transformFileUrl = transformFileUrl;
         return this;
     }
     
+    public InputConfiguration(@JsonProperty("files") InputFileConfiguration[] files) {
+        this.files = files;
+  }
 }

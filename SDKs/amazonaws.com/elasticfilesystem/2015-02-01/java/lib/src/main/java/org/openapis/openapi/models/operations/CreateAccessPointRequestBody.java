@@ -14,6 +14,7 @@ public class CreateAccessPointRequestBody {
      */
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateAccessPointRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -24,6 +25,7 @@ public class CreateAccessPointRequestBody {
      */
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public CreateAccessPointRequestBody withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -35,6 +37,7 @@ public class CreateAccessPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PosixUser")
     public CreateAccessPointRequestBodyPosixUser posixUser;
+
     public CreateAccessPointRequestBody withPosixUser(CreateAccessPointRequestBodyPosixUser posixUser) {
         this.posixUser = posixUser;
         return this;
@@ -46,6 +49,7 @@ public class CreateAccessPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootDirectory")
     public CreateAccessPointRequestBodyRootDirectory rootDirectory;
+
     public CreateAccessPointRequestBody withRootDirectory(CreateAccessPointRequestBodyRootDirectory rootDirectory) {
         this.rootDirectory = rootDirectory;
         return this;
@@ -57,9 +61,14 @@ public class CreateAccessPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateAccessPointRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAccessPointRequestBody(@JsonProperty("ClientToken") String clientToken, @JsonProperty("FileSystemId") String fileSystemId) {
+        this.clientToken = clientToken;
+        this.fileSystemId = fileSystemId;
+  }
 }

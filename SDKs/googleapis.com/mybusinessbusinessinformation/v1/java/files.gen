@@ -125,4 +125,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/AttributeValueTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Attribute.java
 lib/src/main/java/org/openapis/openapi/models/shared/UriAttributeValue.java
 lib/src/main/java/org/openapis/openapi/models/shared/RepeatedEnumAttributeValue.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/attributes/README.md
+docs/categories/README.md
+docs/chains/README.md
+docs/googlelocations/README.md
+docs/locations/README.md
 USAGE.md

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDevicesIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Device device;
+
     public PutDevicesIdRequest withDevice(org.openapis.openapi.models.shared.Device device) {
         this.device = device;
         return this;
@@ -16,9 +18,14 @@ public class PutDevicesIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutDevicesIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutDevicesIdRequest(@JsonProperty("Device") org.openapis.openapi.models.shared.Device device, @JsonProperty("id") Long id) {
+        this.device = device;
+        this.id = id;
+  }
 }

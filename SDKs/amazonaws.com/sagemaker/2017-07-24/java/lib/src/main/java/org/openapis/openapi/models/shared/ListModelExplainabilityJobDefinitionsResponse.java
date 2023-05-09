@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListModelExplainabilityJobDefinitionsResponse {
     @JsonProperty("JobDefinitionSummaries")
     public MonitoringJobDefinitionSummary[] jobDefinitionSummaries;
+
     public ListModelExplainabilityJobDefinitionsResponse withJobDefinitionSummaries(MonitoringJobDefinitionSummary[] jobDefinitionSummaries) {
         this.jobDefinitionSummaries = jobDefinitionSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListModelExplainabilityJobDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelExplainabilityJobDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListModelExplainabilityJobDefinitionsResponse(@JsonProperty("JobDefinitionSummaries") MonitoringJobDefinitionSummary[] jobDefinitionSummaries) {
+        this.jobDefinitionSummaries = jobDefinitionSummaries;
+  }
 }

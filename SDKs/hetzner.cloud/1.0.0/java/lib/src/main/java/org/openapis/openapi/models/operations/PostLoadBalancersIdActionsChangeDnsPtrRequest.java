@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLoadBalancersIdActionsChangeDnsPtrRequest {
@@ -12,6 +13,7 @@ public class PostLoadBalancersIdActionsChangeDnsPtrRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest requestBody;
+
     public PostLoadBalancersIdActionsChangeDnsPtrRequest withRequestBody(PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class PostLoadBalancersIdActionsChangeDnsPtrRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PostLoadBalancersIdActionsChangeDnsPtrRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostLoadBalancersIdActionsChangeDnsPtrRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

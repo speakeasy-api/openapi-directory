@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OptionsContractResponse {
     
     public String contentType;
+
     public OptionsContractResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OptionsContractResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public OptionsContractResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class OptionsContractResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OptionsContractResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class OptionsContractResponse {
     
     
     public Integer statusCode;
+
     public OptionsContractResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class OptionsContractResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OptionsContractResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OptionsContractResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

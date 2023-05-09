@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubscriptionsGETResponse {
@@ -12,6 +13,7 @@ public class SubscriptionsGETResponse {
      */
     
     public org.openapis.openapi.models.shared.AppPkgSubscriptionLinkList appPkgSubscriptionLinkList;
+
     public SubscriptionsGETResponse withAppPkgSubscriptionLinkList(org.openapis.openapi.models.shared.AppPkgSubscriptionLinkList appPkgSubscriptionLinkList) {
         this.appPkgSubscriptionLinkList = appPkgSubscriptionLinkList;
         return this;
@@ -19,6 +21,7 @@ public class SubscriptionsGETResponse {
     
     
     public String contentType;
+
     public SubscriptionsGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SubscriptionsGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ProblemDetails problemDetails;
+
     public SubscriptionsGETResponse withProblemDetails(org.openapis.openapi.models.shared.ProblemDetails problemDetails) {
         this.problemDetails = problemDetails;
         return this;
@@ -36,6 +40,7 @@ public class SubscriptionsGETResponse {
     
     
     public Integer statusCode;
+
     public SubscriptionsGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class SubscriptionsGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubscriptionsGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SubscriptionsGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

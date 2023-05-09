@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetLoginProfileRequest {
     
     public String userName;
+
     public GetLoginProfileRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GetLoginProfileRequest(@JsonProperty("UserName") String userName) {
+        this.userName = userName;
+  }
 }

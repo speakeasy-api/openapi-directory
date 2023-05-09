@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1PhraseMatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig config;
+
     public GoogleCloudContactcenterinsightsV1PhraseMatchRule withConfig(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig config) {
         this.config = config;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1PhraseMatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negated")
     public Boolean negated;
+
     public GoogleCloudContactcenterinsightsV1PhraseMatchRule withNegated(Boolean negated) {
         this.negated = negated;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudContactcenterinsightsV1PhraseMatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public GoogleCloudContactcenterinsightsV1PhraseMatchRule withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1PhraseMatchRule(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobRead {
     @JsonProperty("configId")
     public String configId;
+
     public JobRead withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -18,6 +19,7 @@ public class JobRead {
     
     @JsonProperty("configType")
     public JobConfigTypeEnum configType;
+
     public JobRead withConfigType(JobConfigTypeEnum configType) {
         this.configType = configType;
         return this;
@@ -25,6 +27,7 @@ public class JobRead {
     
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public JobRead withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +35,7 @@ public class JobRead {
     
     @JsonProperty("id")
     public Long id;
+
     public JobRead withId(Long id) {
         this.id = id;
         return this;
@@ -43,6 +47,7 @@ public class JobRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetConfig")
     public ResetConfig resetConfig;
+
     public JobRead withResetConfig(ResetConfig resetConfig) {
         this.resetConfig = resetConfig;
         return this;
@@ -51,6 +56,7 @@ public class JobRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedAt")
     public Long startedAt;
+
     public JobRead withStartedAt(Long startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -58,6 +64,7 @@ public class JobRead {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public JobRead withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -65,9 +72,18 @@ public class JobRead {
     
     @JsonProperty("updatedAt")
     public Long updatedAt;
+
     public JobRead withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public JobRead(@JsonProperty("configId") String configId, @JsonProperty("configType") JobConfigTypeEnum configType, @JsonProperty("createdAt") Long createdAt, @JsonProperty("id") Long id, @JsonProperty("status") JobStatusEnum status, @JsonProperty("updatedAt") Long updatedAt) {
+        this.configId = configId;
+        this.configType = configType;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.status = status;
+        this.updatedAt = updatedAt;
+  }
 }

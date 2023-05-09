@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public Boolean defaultVisible;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withDefaultVisible(Boolean defaultVisible) {
         this.defaultVisible = defaultVisible;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public Boolean hidePerksInItemTooltip;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withHidePerksInItemTooltip(Boolean hidePerksInItemTooltip) {
         this.hidePerksInItemTooltip = hidePerksInItemTooltip;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public Integer plugSources;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withPlugSources(Integer plugSources) {
         this.plugSources = plugSources;
         return this;
@@ -46,6 +49,7 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public Boolean preventInitializationOnVendorPurchase;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withPreventInitializationOnVendorPurchase(Boolean preventInitializationOnVendorPurchase) {
         this.preventInitializationOnVendorPurchase = preventInitializationOnVendorPurchase;
         return this;
@@ -57,6 +61,7 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public Long randomizedPlugSetHash;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withRandomizedPlugSetHash(Long randomizedPlugSetHash) {
         this.randomizedPlugSetHash = randomizedPlugSetHash;
         return this;
@@ -68,6 +73,7 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition[] reusablePlugItems;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withReusablePlugItems(DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition[] reusablePlugItems) {
         this.reusablePlugItems = reusablePlugItems;
         return this;
@@ -79,6 +85,7 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public Long reusablePlugSetHash;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withReusablePlugSetHash(Long reusablePlugSetHash) {
         this.reusablePlugSetHash = reusablePlugSetHash;
         return this;
@@ -89,6 +96,7 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public Long singleInitialItemHash;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withSingleInitialItemHash(Long singleInitialItemHash) {
         this.singleInitialItemHash = singleInitialItemHash;
         return this;
@@ -99,9 +107,11 @@ public class DestinyDefinitionsDestinyItemSocketEntryDefinition {
      */
     
     public Long socketTypeHash;
+
     public DestinyDefinitionsDestinyItemSocketEntryDefinition withSocketTypeHash(Long socketTypeHash) {
         this.socketTypeHash = socketTypeHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemSocketEntryDefinition(){}
 }

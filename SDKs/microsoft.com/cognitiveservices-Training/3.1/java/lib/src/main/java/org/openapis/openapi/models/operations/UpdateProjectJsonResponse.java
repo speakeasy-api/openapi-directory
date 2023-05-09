@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProjectJsonResponse {
     
     public byte[] body;
+
     public UpdateProjectJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class UpdateProjectJsonResponse {
     
     
     public String contentType;
+
     public UpdateProjectJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdateProjectJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public UpdateProjectJsonResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class UpdateProjectJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Project project;
+
     public UpdateProjectJsonResponse withProject(org.openapis.openapi.models.shared.Project project) {
         this.project = project;
         return this;
@@ -43,6 +48,7 @@ public class UpdateProjectJsonResponse {
     
     
     public Integer statusCode;
+
     public UpdateProjectJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class UpdateProjectJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProjectJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateProjectJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

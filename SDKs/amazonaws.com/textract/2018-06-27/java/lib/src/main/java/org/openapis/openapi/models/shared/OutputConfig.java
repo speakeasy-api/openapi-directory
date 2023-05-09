@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OutputConfig {
     @JsonProperty("S3Bucket")
     public String s3Bucket;
+
     public OutputConfig withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -22,9 +23,13 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Prefix")
     public String s3Prefix;
+
     public OutputConfig withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
     }
     
+    public OutputConfig(@JsonProperty("S3Bucket") String s3Bucket) {
+        this.s3Bucket = s3Bucket;
+  }
 }

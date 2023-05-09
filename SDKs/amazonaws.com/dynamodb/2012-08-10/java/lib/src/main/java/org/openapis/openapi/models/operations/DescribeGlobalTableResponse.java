@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGlobalTableResponse {
     
     public String contentType;
+
     public DescribeGlobalTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGlobalTableResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGlobalTableOutput describeGlobalTableOutput;
+
     public DescribeGlobalTableResponse withDescribeGlobalTableOutput(org.openapis.openapi.models.shared.DescribeGlobalTableOutput describeGlobalTableOutput) {
         this.describeGlobalTableOutput = describeGlobalTableOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGlobalTableResponse {
      */
     
     public Object globalTableNotFoundException;
+
     public DescribeGlobalTableResponse withGlobalTableNotFoundException(Object globalTableNotFoundException) {
         this.globalTableNotFoundException = globalTableNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGlobalTableResponse {
      */
     
     public Object internalServerError;
+
     public DescribeGlobalTableResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeGlobalTableResponse {
     
     
     public Integer statusCode;
+
     public DescribeGlobalTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeGlobalTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGlobalTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeGlobalTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

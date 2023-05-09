@@ -17,6 +17,7 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public ChannelCatalogProductInfo withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -27,6 +28,7 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("excluded")
     public Boolean excluded;
+
     public ChannelCatalogProductInfo withExcluded(Boolean excluded) {
         this.excluded = excluded;
         return this;
@@ -35,6 +37,7 @@ public class ChannelCatalogProductInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedBy")
     public String[] excludedBy;
+
     public ChannelCatalogProductInfo withExcludedBy(String[] excludedBy) {
         this.excludedBy = excludedBy;
         return this;
@@ -45,6 +48,7 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("links")
     public ChannelCatalogProductInfoLinks links;
+
     public ChannelCatalogProductInfo withLinks(ChannelCatalogProductInfoLinks links) {
         this.links = links;
         return this;
@@ -55,6 +59,7 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("overrides")
     public java.util.Map<String, ProductOverrideWithCatalogValue> overrides;
+
     public ChannelCatalogProductInfo withOverrides(java.util.Map<String, ProductOverrideWithCatalogValue> overrides) {
         this.overrides = overrides;
         return this;
@@ -65,6 +70,7 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("productExists")
     public Boolean productExists;
+
     public ChannelCatalogProductInfo withProductExists(Boolean productExists) {
         this.productExists = productExists;
         return this;
@@ -75,6 +81,7 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("productId")
     public String productId;
+
     public ChannelCatalogProductInfo withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -86,6 +93,7 @@ public class ChannelCatalogProductInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productImageUrl")
     public String productImageUrl;
+
     public ChannelCatalogProductInfo withProductImageUrl(String productImageUrl) {
         this.productImageUrl = productImageUrl;
         return this;
@@ -96,6 +104,7 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("productSku")
     public String productSku;
+
     public ChannelCatalogProductInfo withProductSku(String productSku) {
         this.productSku = productSku;
         return this;
@@ -106,6 +115,7 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("productTitle")
     public String productTitle;
+
     public ChannelCatalogProductInfo withProductTitle(String productTitle) {
         this.productTitle = productTitle;
         return this;
@@ -116,9 +126,21 @@ public class ChannelCatalogProductInfo {
      */
     @JsonProperty("uncategorized")
     public Boolean uncategorized;
+
     public ChannelCatalogProductInfo withUncategorized(Boolean uncategorized) {
         this.uncategorized = uncategorized;
         return this;
     }
     
+    public ChannelCatalogProductInfo(@JsonProperty("disabled") Boolean disabled, @JsonProperty("excluded") Boolean excluded, @JsonProperty("links") ChannelCatalogProductInfoLinks links, @JsonProperty("overrides") java.util.Map<String, ProductOverrideWithCatalogValue> overrides, @JsonProperty("productExists") Boolean productExists, @JsonProperty("productId") String productId, @JsonProperty("productSku") String productSku, @JsonProperty("productTitle") String productTitle, @JsonProperty("uncategorized") Boolean uncategorized) {
+        this.disabled = disabled;
+        this.excluded = excluded;
+        this.links = links;
+        this.overrides = overrides;
+        this.productExists = productExists;
+        this.productId = productId;
+        this.productSku = productSku;
+        this.productTitle = productTitle;
+        this.uncategorized = uncategorized;
+  }
 }

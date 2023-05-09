@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCollaborationOutput {
     @JsonProperty("collaboration")
     public Collaboration collaboration;
+
     public CreateCollaborationOutput withCollaboration(Collaboration collaboration) {
         this.collaboration = collaboration;
         return this;
     }
     
+    public CreateCollaborationOutput(@JsonProperty("collaboration") Collaboration collaboration) {
+        this.collaboration = collaboration;
+  }
 }

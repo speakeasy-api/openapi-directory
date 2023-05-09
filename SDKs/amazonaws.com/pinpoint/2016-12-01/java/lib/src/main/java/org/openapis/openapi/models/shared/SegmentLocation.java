@@ -15,6 +15,7 @@ public class SegmentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public SetDimension country;
+
     public SegmentLocation withCountry(SetDimension country) {
         this.country = country;
         return this;
@@ -23,9 +24,11 @@ public class SegmentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GPSPoint")
     public GPSPointDimension gpsPoint;
+
     public SegmentLocation withGPSPoint(GPSPointDimension gpsPoint) {
         this.gpsPoint = gpsPoint;
         return this;
     }
     
+    public SegmentLocation(){}
 }

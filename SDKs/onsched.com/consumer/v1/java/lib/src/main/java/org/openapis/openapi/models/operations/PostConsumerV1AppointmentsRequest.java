@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostConsumerV1AppointmentsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AppointmentInitialModel appointmentInitialModel;
+
     public PostConsumerV1AppointmentsRequest withAppointmentInitialModel(org.openapis.openapi.models.shared.AppointmentInitialModel appointmentInitialModel) {
         this.appointmentInitialModel = appointmentInitialModel;
         return this;
@@ -19,9 +20,11 @@ public class PostConsumerV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completeBooking")
     public String completeBooking;
+
     public PostConsumerV1AppointmentsRequest withCompleteBooking(String completeBooking) {
         this.completeBooking = completeBooking;
         return this;
     }
     
+    public PostConsumerV1AppointmentsRequest(){}
 }

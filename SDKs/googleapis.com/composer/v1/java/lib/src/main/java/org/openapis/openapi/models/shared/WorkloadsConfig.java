@@ -18,6 +18,7 @@ public class WorkloadsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduler")
     public SchedulerResource scheduler;
+
     public WorkloadsConfig withScheduler(SchedulerResource scheduler) {
         this.scheduler = scheduler;
         return this;
@@ -29,6 +30,7 @@ public class WorkloadsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webServer")
     public WebServerResource webServer;
+
     public WorkloadsConfig withWebServer(WebServerResource webServer) {
         this.webServer = webServer;
         return this;
@@ -40,9 +42,11 @@ public class WorkloadsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worker")
     public WorkerResource worker;
+
     public WorkloadsConfig withWorker(WorkerResource worker) {
         this.worker = worker;
         return this;
     }
     
+    public WorkloadsConfig(){}
 }

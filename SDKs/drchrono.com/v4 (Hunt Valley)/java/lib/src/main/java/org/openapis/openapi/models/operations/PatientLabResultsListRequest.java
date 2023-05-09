@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PatientLabResultsListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public PatientLabResultsListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class PatientLabResultsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public PatientLabResultsListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class PatientLabResultsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering_doctor")
     public Long orderingDoctor;
+
     public PatientLabResultsListRequest withOrderingDoctor(Long orderingDoctor) {
         this.orderingDoctor = orderingDoctor;
         return this;
@@ -30,6 +33,7 @@ public class PatientLabResultsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PatientLabResultsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -37,6 +41,7 @@ public class PatientLabResultsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public PatientLabResultsListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -44,9 +49,11 @@ public class PatientLabResultsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public PatientLabResultsListRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public PatientLabResultsListRequest(){}
 }

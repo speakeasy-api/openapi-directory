@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
@@ -12,6 +13,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceIds")
     public String[] deviceIds;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withDeviceIds(String[] deviceIds) {
         this.deviceIds = deviceIds;
         return this;
@@ -62,6 +68,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceNumIds")
     public String[] deviceNumIds;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withDeviceNumIds(String[] deviceNumIds) {
         this.deviceNumIds = deviceNumIds;
         return this;
@@ -72,6 +79,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldMask")
     public String fieldMask;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withFieldMask(String fieldMask) {
         this.fieldMask = fieldMask;
         return this;
@@ -82,6 +90,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +101,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gatewayListOptions.associationsDeviceId")
     public String gatewayListOptionsAssociationsDeviceId;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withGatewayListOptionsAssociationsDeviceId(String gatewayListOptionsAssociationsDeviceId) {
         this.gatewayListOptionsAssociationsDeviceId = gatewayListOptionsAssociationsDeviceId;
         return this;
@@ -102,6 +112,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gatewayListOptions.associationsGatewayId")
     public String gatewayListOptionsAssociationsGatewayId;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withGatewayListOptionsAssociationsGatewayId(String gatewayListOptionsAssociationsGatewayId) {
         this.gatewayListOptionsAssociationsGatewayId = gatewayListOptionsAssociationsGatewayId;
         return this;
@@ -112,6 +123,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gatewayListOptions.gatewayType")
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum gatewayListOptionsGatewayType;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withGatewayListOptionsGatewayType(CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum gatewayListOptionsGatewayType) {
         this.gatewayListOptionsGatewayType = gatewayListOptionsGatewayType;
         return this;
@@ -122,6 +134,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -132,6 +145,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -142,6 +156,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -152,6 +167,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -162,6 +178,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -172,6 +189,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -182,6 +200,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -192,6 +211,7 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -202,9 +222,13 @@ public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

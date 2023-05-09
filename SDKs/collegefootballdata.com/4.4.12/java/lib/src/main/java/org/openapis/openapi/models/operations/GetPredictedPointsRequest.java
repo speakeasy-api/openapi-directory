@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPredictedPointsRequest {
@@ -12,6 +13,7 @@ public class GetPredictedPointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance")
     public Long distance;
+
     public GetPredictedPointsRequest withDistance(Long distance) {
         this.distance = distance;
         return this;
@@ -22,9 +24,14 @@ public class GetPredictedPointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=down")
     public Long down;
+
     public GetPredictedPointsRequest withDown(Long down) {
         this.down = down;
         return this;
     }
     
+    public GetPredictedPointsRequest(@JsonProperty("distance") Long distance, @JsonProperty("down") Long down) {
+        this.distance = distance;
+        this.down = down;
+  }
 }

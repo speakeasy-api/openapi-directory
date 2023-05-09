@@ -20,6 +20,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetWorkflowResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetWorkflowResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public GetWorkflowResponse withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -46,6 +49,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetWorkflowResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public GetWorkflowResponse withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -62,6 +67,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine")
     public WorkflowEngineEnum engine;
+
     public GetWorkflowResponse withEngine(WorkflowEngineEnum engine) {
         this.engine = engine;
         return this;
@@ -70,6 +76,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetWorkflowResponse withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +85,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("main")
     public String main;
+
     public GetWorkflowResponse withMain(String main) {
         this.main = main;
         return this;
@@ -86,6 +94,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetWorkflowResponse withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterTemplate")
     public java.util.Map<String, WorkflowParameter> parameterTemplate;
+
     public GetWorkflowResponse withParameterTemplate(java.util.Map<String, WorkflowParameter> parameterTemplate) {
         this.parameterTemplate = parameterTemplate;
         return this;
@@ -102,6 +112,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorkflowStatusEnum status;
+
     public GetWorkflowResponse withStatus(WorkflowStatusEnum status) {
         this.status = status;
         return this;
@@ -110,6 +121,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetWorkflowResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -118,6 +130,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageCapacity")
     public Long storageCapacity;
+
     public GetWorkflowResponse withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -126,6 +139,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetWorkflowResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -134,9 +148,11 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public WorkflowTypeEnum type;
+
     public GetWorkflowResponse withType(WorkflowTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetWorkflowResponse(){}
 }

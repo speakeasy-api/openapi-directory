@@ -18,6 +18,7 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Header withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +30,7 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Header withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public HeaderTypeEnum type;
+
     public Header withType(HeaderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Header(){}
 }

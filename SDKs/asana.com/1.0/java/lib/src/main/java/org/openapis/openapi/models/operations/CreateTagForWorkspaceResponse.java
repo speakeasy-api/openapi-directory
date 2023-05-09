@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTagForWorkspaceResponse {
     
     public String contentType;
+
     public CreateTagForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateTagForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public CreateTagForWorkspaceResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateTagForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public CreateTagForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateTagForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTagForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CreateTagForWorkspaceResponse {
      */
     
     public CreateTagForWorkspace201ApplicationJSON createTagForWorkspace201ApplicationJSONObject;
+
     public CreateTagForWorkspaceResponse withCreateTagForWorkspace201ApplicationJSONObject(CreateTagForWorkspace201ApplicationJSON createTagForWorkspace201ApplicationJSONObject) {
         this.createTagForWorkspace201ApplicationJSONObject = createTagForWorkspace201ApplicationJSONObject;
         return this;
     }
     
+    public CreateTagForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

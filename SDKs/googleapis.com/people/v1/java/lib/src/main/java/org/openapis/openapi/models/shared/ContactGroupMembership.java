@@ -18,6 +18,7 @@ public class ContactGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactGroupId")
     public String contactGroupId;
+
     public ContactGroupMembership withContactGroupId(String contactGroupId) {
         this.contactGroupId = contactGroupId;
         return this;
@@ -29,9 +30,11 @@ public class ContactGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactGroupResourceName")
     public String contactGroupResourceName;
+
     public ContactGroupMembership withContactGroupResourceName(String contactGroupResourceName) {
         this.contactGroupResourceName = contactGroupResourceName;
         return this;
     }
     
+    public ContactGroupMembership(){}
 }

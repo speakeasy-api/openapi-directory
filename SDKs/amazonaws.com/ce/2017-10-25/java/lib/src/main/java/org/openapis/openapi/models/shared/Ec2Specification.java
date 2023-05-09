@@ -15,9 +15,11 @@ public class Ec2Specification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfferingClass")
     public OfferingClassEnum offeringClass;
+
     public Ec2Specification withOfferingClass(OfferingClassEnum offeringClass) {
         this.offeringClass = offeringClass;
         return this;
     }
     
+    public Ec2Specification(){}
 }

@@ -12,9 +12,11 @@ public class ScheduleApiTriggeredCanvasesRequestBodyAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AND")
     public ScheduleApiTriggeredCanvasesRequestBodyAudienceAND[] and;
+
     public ScheduleApiTriggeredCanvasesRequestBodyAudience withAnd(ScheduleApiTriggeredCanvasesRequestBodyAudienceAND[] and) {
         this.and = and;
         return this;
     }
     
+    public ScheduleApiTriggeredCanvasesRequestBodyAudience(){}
 }

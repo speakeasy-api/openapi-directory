@@ -12,6 +12,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public ExecuteStatementInput withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -20,6 +21,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ExecuteStatementInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ExecuteStatementInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public AttributeValue[] parameters;
+
     public ExecuteStatementInput withParameters(AttributeValue[] parameters) {
         this.parameters = parameters;
         return this;
@@ -47,6 +51,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public ExecuteStatementInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -54,9 +59,13 @@ public class ExecuteStatementInput {
     
     @JsonProperty("Statement")
     public String statement;
+
     public ExecuteStatementInput withStatement(String statement) {
         this.statement = statement;
         return this;
     }
     
+    public ExecuteStatementInput(@JsonProperty("Statement") String statement) {
+        this.statement = statement;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TestRenderTemplateRequest {
     
     public String templateData;
+
     public TestRenderTemplateRequest withTemplateData(String templateData) {
         this.templateData = templateData;
         return this;
@@ -16,9 +17,14 @@ public class TestRenderTemplateRequest {
     
     
     public String templateName;
+
     public TestRenderTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public TestRenderTemplateRequest(@JsonProperty("TemplateData") String templateData, @JsonProperty("TemplateName") String templateName) {
+        this.templateData = templateData;
+        this.templateName = templateName;
+  }
 }

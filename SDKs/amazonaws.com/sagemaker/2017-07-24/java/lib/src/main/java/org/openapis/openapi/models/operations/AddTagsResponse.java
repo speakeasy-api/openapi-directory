@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsResponse {
@@ -12,6 +13,7 @@ public class AddTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.AddTagsOutput addTagsOutput;
+
     public AddTagsResponse withAddTagsOutput(org.openapis.openapi.models.shared.AddTagsOutput addTagsOutput) {
         this.addTagsOutput = addTagsOutput;
         return this;
@@ -19,6 +21,7 @@ public class AddTagsResponse {
     
     
     public String contentType;
+
     public AddTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AddTagsResponse {
     
     
     public Integer statusCode;
+
     public AddTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AddTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

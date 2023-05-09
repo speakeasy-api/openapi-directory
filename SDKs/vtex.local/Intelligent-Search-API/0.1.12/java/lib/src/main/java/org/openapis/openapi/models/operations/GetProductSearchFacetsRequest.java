@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductSearchFacetsRequest {
@@ -12,6 +13,7 @@ public class GetProductSearchFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Double count;
+
     public GetProductSearchFacetsRequest withCount(Double count) {
         this.count = count;
         return this;
@@ -39,6 +41,7 @@ public class GetProductSearchFacetsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=facets")
     public String facets;
+
     public GetProductSearchFacetsRequest withFacets(String facets) {
         this.facets = facets;
         return this;
@@ -49,6 +52,7 @@ public class GetProductSearchFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hideUnavailableItems")
     public Boolean hideUnavailableItems;
+
     public GetProductSearchFacetsRequest withHideUnavailableItems(Boolean hideUnavailableItems) {
         this.hideUnavailableItems = hideUnavailableItems;
         return this;
@@ -59,6 +63,7 @@ public class GetProductSearchFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetProductSearchFacetsRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -69,6 +74,7 @@ public class GetProductSearchFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Double page;
+
     public GetProductSearchFacetsRequest withPage(Double page) {
         this.page = page;
         return this;
@@ -79,6 +85,7 @@ public class GetProductSearchFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetProductSearchFacetsRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -93,6 +100,7 @@ public class GetProductSearchFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=simulationBehavior")
     public GetProductSearchFacetsSimulationBehaviorEnum simulationBehavior;
+
     public GetProductSearchFacetsRequest withSimulationBehavior(GetProductSearchFacetsSimulationBehaviorEnum simulationBehavior) {
         this.simulationBehavior = simulationBehavior;
         return this;
@@ -103,9 +111,13 @@ public class GetProductSearchFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetProductSearchFacetsSortEnum sort;
+
     public GetProductSearchFacetsRequest withSort(GetProductSearchFacetsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetProductSearchFacetsRequest(@JsonProperty("facets") String facets) {
+        this.facets = facets;
+  }
 }

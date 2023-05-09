@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetScheduleTemplatesResponse {
     
     public String contentType;
+
     public GetScheduleTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetScheduleTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ScheduleTemplateCollection scheduleTemplateCollection;
+
     public GetScheduleTemplatesResponse withScheduleTemplateCollection(org.openapis.openapi.models.shared.ScheduleTemplateCollection scheduleTemplateCollection) {
         this.scheduleTemplateCollection = scheduleTemplateCollection;
         return this;
@@ -26,6 +29,7 @@ public class GetScheduleTemplatesResponse {
     
     
     public Integer statusCode;
+
     public GetScheduleTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetScheduleTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetScheduleTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetScheduleTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutFindingsPublicationConfigurationResponse {
@@ -12,6 +13,7 @@ public class PutFindingsPublicationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public PutFindingsPublicationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutFindingsPublicationConfigurationResponse {
      */
     
     public Object conflictException;
+
     public PutFindingsPublicationConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutFindingsPublicationConfigurationResponse {
     
     
     public String contentType;
+
     public PutFindingsPublicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutFindingsPublicationConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public PutFindingsPublicationConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutFindingsPublicationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> putFindingsPublicationConfigurationResponse;
+
     public PutFindingsPublicationConfigurationResponse withPutFindingsPublicationConfigurationResponse(java.util.Map<String, Object> putFindingsPublicationConfigurationResponse) {
         this.putFindingsPublicationConfigurationResponse = putFindingsPublicationConfigurationResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutFindingsPublicationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutFindingsPublicationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutFindingsPublicationConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public PutFindingsPublicationConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class PutFindingsPublicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutFindingsPublicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutFindingsPublicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutFindingsPublicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class PutFindingsPublicationConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public PutFindingsPublicationConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class PutFindingsPublicationConfigurationResponse {
      */
     
     public Object validationException;
+
     public PutFindingsPublicationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutFindingsPublicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

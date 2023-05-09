@@ -12,9 +12,11 @@ public class DescribeConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public DescribeConnectionsRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
+    public DescribeConnectionsRequest(){}
 }

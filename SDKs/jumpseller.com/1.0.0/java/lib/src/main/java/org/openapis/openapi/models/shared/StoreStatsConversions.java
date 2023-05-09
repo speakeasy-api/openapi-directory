@@ -15,6 +15,7 @@ public class StoreStatsConversions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("added_to_cart")
     public Float addedToCart;
+
     public StoreStatsConversions withAddedToCart(Float addedToCart) {
         this.addedToCart = addedToCart;
         return this;
@@ -26,6 +27,7 @@ public class StoreStatsConversions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout")
     public Float checkout;
+
     public StoreStatsConversions withCheckout(Float checkout) {
         this.checkout = checkout;
         return this;
@@ -37,9 +39,11 @@ public class StoreStatsConversions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid")
     public Float paid;
+
     public StoreStatsConversions withPaid(Float paid) {
         this.paid = paid;
         return this;
     }
     
+    public StoreStatsConversions(){}
 }

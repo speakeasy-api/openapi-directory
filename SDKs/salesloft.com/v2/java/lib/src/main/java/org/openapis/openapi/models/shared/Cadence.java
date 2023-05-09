@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Cadence {
     
     public EmbeddedResource addedStage;
+
     public Cadence withAddedStage(EmbeddedResource addedStage) {
         this.addedStage = addedStage;
         return this;
@@ -22,6 +23,7 @@ public class Cadence {
      */
     
     public OffsetDateTime archivedAt;
+
     public Cadence withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -29,6 +31,7 @@ public class Cadence {
     
     
     public EmbeddedResource bouncedStage;
+
     public Cadence withBouncedStage(EmbeddedResource bouncedStage) {
         this.bouncedStage = bouncedStage;
         return this;
@@ -39,6 +42,7 @@ public class Cadence {
      */
     
     public Long cadenceFrameworkId;
+
     public Cadence withCadenceFrameworkId(Long cadenceFrameworkId) {
         this.cadenceFrameworkId = cadenceFrameworkId;
         return this;
@@ -58,6 +62,7 @@ public class Cadence {
      */
     
     public String cadenceFunction;
+
     public Cadence withCadenceFunction(String cadenceFunction) {
         this.cadenceFunction = cadenceFunction;
         return this;
@@ -65,6 +70,7 @@ public class Cadence {
     
     
     public EmbeddedResource cadencePriority;
+
     public Cadence withCadencePriority(EmbeddedResource cadencePriority) {
         this.cadencePriority = cadencePriority;
         return this;
@@ -72,6 +78,7 @@ public class Cadence {
     
     
     public CadenceCounts counts;
+
     public Cadence withCounts(CadenceCounts counts) {
         this.counts = counts;
         return this;
@@ -82,6 +89,7 @@ public class Cadence {
      */
     
     public OffsetDateTime createdAt;
+
     public Cadence withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -89,6 +97,7 @@ public class Cadence {
     
     
     public EmbeddedResource creator;
+
     public Cadence withCreator(EmbeddedResource creator) {
         this.creator = creator;
         return this;
@@ -99,6 +108,7 @@ public class Cadence {
      */
     
     public Boolean draft;
+
     public Cadence withDraft(Boolean draft) {
         this.draft = draft;
         return this;
@@ -109,6 +119,7 @@ public class Cadence {
      */
     
     public String externalIdentifier;
+
     public Cadence withExternalIdentifier(String externalIdentifier) {
         this.externalIdentifier = externalIdentifier;
         return this;
@@ -116,6 +127,7 @@ public class Cadence {
     
     
     public EmbeddedResource finishedStage;
+
     public Cadence withFinishedStage(EmbeddedResource finishedStage) {
         this.finishedStage = finishedStage;
         return this;
@@ -126,6 +138,7 @@ public class Cadence {
      */
     
     public EmbeddedResource[] groups;
+
     public Cadence withGroups(EmbeddedResource[] groups) {
         this.groups = groups;
         return this;
@@ -136,6 +149,7 @@ public class Cadence {
      */
     
     public Long id;
+
     public Cadence withId(Long id) {
         this.id = id;
         return this;
@@ -146,6 +160,7 @@ public class Cadence {
      */
     
     public String name;
+
     public Cadence withName(String name) {
         this.name = name;
         return this;
@@ -156,6 +171,7 @@ public class Cadence {
      */
     
     public Boolean optOutLinkIncluded;
+
     public Cadence withOptOutLinkIncluded(Boolean optOutLinkIncluded) {
         this.optOutLinkIncluded = optOutLinkIncluded;
         return this;
@@ -163,6 +179,7 @@ public class Cadence {
     
     
     public EmbeddedResource owner;
+
     public Cadence withOwner(EmbeddedResource owner) {
         this.owner = owner;
         return this;
@@ -173,6 +190,7 @@ public class Cadence {
      */
     
     public Boolean removeBouncesEnabled;
+
     public Cadence withRemoveBouncesEnabled(Boolean removeBouncesEnabled) {
         this.removeBouncesEnabled = removeBouncesEnabled;
         return this;
@@ -183,6 +201,7 @@ public class Cadence {
      */
     
     public Boolean removeRepliesEnabled;
+
     public Cadence withRemoveRepliesEnabled(Boolean removeRepliesEnabled) {
         this.removeRepliesEnabled = removeRepliesEnabled;
         return this;
@@ -190,6 +209,7 @@ public class Cadence {
     
     
     public EmbeddedResource repliedStage;
+
     public Cadence withRepliedStage(EmbeddedResource repliedStage) {
         this.repliedStage = repliedStage;
         return this;
@@ -200,6 +220,7 @@ public class Cadence {
      */
     
     public Boolean shared;
+
     public Cadence withShared(Boolean shared) {
         this.shared = shared;
         return this;
@@ -210,6 +231,7 @@ public class Cadence {
      */
     
     public String[] tags;
+
     public Cadence withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -220,6 +242,7 @@ public class Cadence {
      */
     
     public Boolean teamCadence;
+
     public Cadence withTeamCadence(Boolean teamCadence) {
         this.teamCadence = teamCadence;
         return this;
@@ -230,9 +253,11 @@ public class Cadence {
      */
     
     public OffsetDateTime updatedAt;
+
     public Cadence withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Cadence(){}
 }

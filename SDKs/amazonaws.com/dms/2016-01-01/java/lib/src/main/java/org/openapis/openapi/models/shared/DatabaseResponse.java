@@ -15,6 +15,7 @@ public class DatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Collectors")
     public CollectorShortInfoResponse[] collectors;
+
     public DatabaseResponse withCollectors(CollectorShortInfoResponse[] collectors) {
         this.collectors = collectors;
         return this;
@@ -23,6 +24,7 @@ public class DatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public DatabaseResponse withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -31,6 +33,7 @@ public class DatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DatabaseResponse withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,6 +42,7 @@ public class DatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public DatabaseResponse withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -47,6 +51,7 @@ public class DatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfSchemas")
     public Long numberOfSchemas;
+
     public DatabaseResponse withNumberOfSchemas(Long numberOfSchemas) {
         this.numberOfSchemas = numberOfSchemas;
         return this;
@@ -55,6 +60,7 @@ public class DatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Server")
     public ServerShortInfoResponse server;
+
     public DatabaseResponse withServer(ServerShortInfoResponse server) {
         this.server = server;
         return this;
@@ -63,9 +69,11 @@ public class DatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoftwareDetails")
     public DatabaseInstanceSoftwareDetailsResponse softwareDetails;
+
     public DatabaseResponse withSoftwareDetails(DatabaseInstanceSoftwareDetailsResponse softwareDetails) {
         this.softwareDetails = softwareDetails;
         return this;
     }
     
+    public DatabaseResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemFilesRequest {
@@ -12,6 +13,7 @@ public class GetItemFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inline_files")
     public Boolean inlineFiles;
+
     public GetItemFilesRequest withInlineFiles(Boolean inlineFiles) {
         this.inlineFiles = inlineFiles;
         return this;
@@ -22,6 +24,7 @@ public class GetItemFilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
     public String itemUuid;
+
     public GetItemFilesRequest withItemUuid(String itemUuid) {
         this.itemUuid = itemUuid;
         return this;
@@ -32,9 +35,14 @@ public class GetItemFilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
     public String vaultUuid;
+
     public GetItemFilesRequest withVaultUuid(String vaultUuid) {
         this.vaultUuid = vaultUuid;
         return this;
     }
     
+    public GetItemFilesRequest(@JsonProperty("itemUuid") String itemUuid, @JsonProperty("vaultUuid") String vaultUuid) {
+        this.itemUuid = itemUuid;
+        this.vaultUuid = vaultUuid;
+  }
 }

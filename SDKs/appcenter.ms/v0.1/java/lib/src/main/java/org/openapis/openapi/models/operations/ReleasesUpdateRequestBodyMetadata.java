@@ -15,6 +15,7 @@ public class ReleasesUpdateRequestBodyMetadata {
      */
     
     public String dsaSignature;
+
     public ReleasesUpdateRequestBodyMetadata withDsaSignature(String dsaSignature) {
         this.dsaSignature = dsaSignature;
         return this;
@@ -25,9 +26,11 @@ public class ReleasesUpdateRequestBodyMetadata {
      */
     
     public String edSignature;
+
     public ReleasesUpdateRequestBodyMetadata withEdSignature(String edSignature) {
         this.edSignature = edSignature;
         return this;
     }
     
+    public ReleasesUpdateRequestBodyMetadata(){}
 }

@@ -16,34 +16,33 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurityOption1;
-import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurityOption2;
-import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurity;
 import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateRequest;
 import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateResponse;
-import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.AlertPolicyCombinerEnum;
-import org.openapis.openapi.models.shared.AlertPolicy;
-import org.openapis.openapi.models.shared.Status;
-import org.openapis.openapi.models.shared.MutationRecord;
-import org.openapis.openapi.models.shared.Documentation;
-import org.openapis.openapi.models.shared.Condition;
-import org.openapis.openapi.models.shared.MetricThresholdComparisonEnum;
-import org.openapis.openapi.models.shared.MetricThresholdEvaluationMissingDataEnum;
-import org.openapis.openapi.models.shared.MetricThreshold;
-import org.openapis.openapi.models.shared.Trigger;
-import org.openapis.openapi.models.shared.ForecastOptions;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurity;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurityOption1;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurityOption2;
+import org.openapis.openapi.models.shared.Aggregation;
 import org.openapis.openapi.models.shared.AggregationCrossSeriesReducerEnum;
 import org.openapis.openapi.models.shared.AggregationPerSeriesAlignerEnum;
-import org.openapis.openapi.models.shared.Aggregation;
-import org.openapis.openapi.models.shared.MonitoringQueryLanguageConditionEvaluationMissingDataEnum;
-import org.openapis.openapi.models.shared.MonitoringQueryLanguageCondition;
+import org.openapis.openapi.models.shared.AlertPolicy;
+import org.openapis.openapi.models.shared.AlertPolicyCombinerEnum;
+import org.openapis.openapi.models.shared.AlertStrategy;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.Condition;
+import org.openapis.openapi.models.shared.Documentation;
+import org.openapis.openapi.models.shared.ForecastOptions;
 import org.openapis.openapi.models.shared.LogMatch;
 import org.openapis.openapi.models.shared.MetricAbsence;
-import org.openapis.openapi.models.shared.AlertStrategy;
-import org.openapis.openapi.models.shared.NotificationRateLimit;
+import org.openapis.openapi.models.shared.MetricThreshold;
+import org.openapis.openapi.models.shared.MetricThresholdComparisonEnum;
+import org.openapis.openapi.models.shared.MetricThresholdEvaluationMissingDataEnum;
+import org.openapis.openapi.models.shared.MonitoringQueryLanguageCondition;
+import org.openapis.openapi.models.shared.MonitoringQueryLanguageConditionEvaluationMissingDataEnum;
+import org.openapis.openapi.models.shared.MutationRecord;
 import org.openapis.openapi.models.shared.NotificationChannelStrategy;
+import org.openapis.openapi.models.shared.NotificationRateLimit;
+import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.Trigger;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -52,15 +51,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MonitoringProjectsAlertPoliciesCreateRequest req = new MonitoringProjectsAlertPoliciesCreateRequest() {{
-                dollarXgafv = "2";
+            MonitoringProjectsAlertPoliciesCreateRequest req = new MonitoringProjectsAlertPoliciesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 alertPolicy = new AlertPolicy() {{
                     alertStrategy = new AlertStrategy() {{
-                        autoClose = "provident";
+                        autoClose = "distinctio";
                         notificationChannelStrategy = new org.openapis.openapi.models.shared.NotificationChannelStrategy[]{{
                             add(new NotificationChannelStrategy() {{
                                 notificationChannelNames = new String[]{{
-                                    add("unde"),
                                     add("nulla"),
                                     add("corrupti"),
                                     add("illum"),
@@ -84,37 +82,40 @@ public class Application {
                                 }};
                                 renotifyInterval = "molestiae";
                             }}),
+                            add(new NotificationChannelStrategy() {{
+                                notificationChannelNames = new String[]{{
+                                    add("placeat"),
+                                    add("voluptatum"),
+                                    add("iusto"),
+                                    add("excepturi"),
+                                }};
+                                renotifyInterval = "nisi";
+                            }}),
                         }};
                         notificationRateLimit = new NotificationRateLimit() {{
-                            period = "minus";
-                        }};
-                    }};
-                    combiner = "AND_WITH_MATCHING_RESOURCE";
+                            period = "recusandae";
+                        }};;
+                    }};;
+                    combiner = AlertPolicyCombinerEnum.AND_WITH_MATCHING_RESOURCE;
                     conditions = new org.openapis.openapi.models.shared.Condition[]{{
                         add(new Condition() {{
                             conditionAbsent = new MetricAbsence() {{
                                 aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
                                     add(new Aggregation() {{
-                                        alignmentPeriod = "excepturi";
-                                        crossSeriesReducer = "REDUCE_STDDEV";
+                                        alignmentPeriod = "veritatis";
+                                        crossSeriesReducer = AggregationCrossSeriesReducerEnum.REDUCE_FRACTION_TRUE;
                                         groupByFields = new String[]{{
-                                            add("temporibus"),
-                                            add("ab"),
-                                            add("quis"),
-                                            add("veritatis"),
+                                            add("ipsam"),
                                         }};
-                                        perSeriesAligner = "ALIGN_COUNT_FALSE";
+                                        perSeriesAligner = AggregationPerSeriesAlignerEnum.ALIGN_PERCENTILE95;
                                     }}),
                                     add(new Aggregation() {{
-                                        alignmentPeriod = "perferendis";
-                                        crossSeriesReducer = "REDUCE_STDDEV";
+                                        alignmentPeriod = "sapiente";
+                                        crossSeriesReducer = AggregationCrossSeriesReducerEnum.REDUCE_PERCENTILE99;
                                         groupByFields = new String[]{{
-                                            add("sapiente"),
-                                            add("quo"),
-                                            add("odit"),
                                             add("at"),
                                         }};
-                                        perSeriesAligner = "ALIGN_PERCENTILE_50";
+                                        perSeriesAligner = AggregationPerSeriesAlignerEnum.ALIGN_PERCENTILE50;
                                     }}),
                                 }};
                                 duration = "maiores";
@@ -134,7 +135,7 @@ public class Application {
                             }};
                             conditionMonitoringQueryLanguage = new MonitoringQueryLanguageCondition() {{
                                 duration = "fugit";
-                                evaluationMissingData = "EVALUATION_MISSING_DATA_ACTIVE";
+                                evaluationMissingData = MonitoringQueryLanguageConditionEvaluationMissingDataEnum.EVALUATION_MISSING_DATA_ACTIVE;
                                 query = "hic";
                                 trigger = new Trigger() {{
                                     count = 758616;
@@ -145,28 +146,28 @@ public class Application {
                                 aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
                                     add(new Aggregation() {{
                                         alignmentPeriod = "commodi";
-                                        crossSeriesReducer = "REDUCE_COUNT";
+                                        crossSeriesReducer = AggregationCrossSeriesReducerEnum.REDUCE_COUNT;
                                         groupByFields = new String[]{{
                                             add("qui"),
                                             add("impedit"),
                                         }};
-                                        perSeriesAligner = "ALIGN_PERCENTILE_99";
+                                        perSeriesAligner = AggregationPerSeriesAlignerEnum.ALIGN_PERCENTILE99;
                                     }}),
                                 }};
-                                comparison = "COMPARISON_LT";
+                                comparison = MetricThresholdComparisonEnum.COMPARISON_LT;
                                 denominatorAggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
                                     add(new Aggregation() {{
                                         alignmentPeriod = "excepturi";
-                                        crossSeriesReducer = "REDUCE_MEAN";
+                                        crossSeriesReducer = AggregationCrossSeriesReducerEnum.REDUCE_MEAN;
                                         groupByFields = new String[]{{
                                             add("ad"),
                                         }};
-                                        perSeriesAligner = "ALIGN_COUNT_TRUE";
+                                        perSeriesAligner = AggregationPerSeriesAlignerEnum.ALIGN_COUNT_TRUE;
                                     }}),
                                 }};
                                 denominatorFilter = "sed";
                                 duration = "iste";
-                                evaluationMissingData = "EVALUATION_MISSING_DATA_UNSPECIFIED";
+                                evaluationMissingData = MetricThresholdEvaluationMissingDataEnum.EVALUATION_MISSING_DATA_UNSPECIFIED;
                                 filter = "natus";
                                 forecastOptions = new ForecastOptions() {{
                                     forecastHorizon = "laboriosam";
@@ -178,353 +179,82 @@ public class Application {
                                 }};
                             }};
                             displayName = "in";
-                            name = "corporis";
-                        }}),
-                        add(new Condition() {{
-                            conditionAbsent = new MetricAbsence() {{
-                                aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "iure";
-                                        crossSeriesReducer = "REDUCE_PERCENTILE_50";
-                                        groupByFields = new String[]{{
-                                            add("architecto"),
-                                            add("ipsa"),
-                                            add("reiciendis"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_COUNT_FALSE";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "mollitia";
-                                        crossSeriesReducer = "REDUCE_FRACTION_TRUE";
-                                        groupByFields = new String[]{{
-                                            add("dolorem"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_MAX";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "explicabo";
-                                        crossSeriesReducer = "REDUCE_PERCENTILE_99";
-                                        groupByFields = new String[]{{
-                                            add("omnis"),
-                                            add("nemo"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_MAX";
-                                    }}),
-                                }};
-                                duration = "excepturi";
-                                filter = "accusantium";
-                                trigger = new Trigger() {{
-                                    count = 438601;
-                                    percent = 6342.74;
-                                }};
-                            }};
-                            conditionMatchedLog = new LogMatch() {{
-                                filter = "doloribus";
-                                labelExtractors = new java.util.HashMap<String, String>() {{
-                                    put("architecto", "mollitia");
-                                    put("dolorem", "culpa");
-                                    put("consequuntur", "repellat");
-                                    put("mollitia", "occaecati");
-                                }};
-                            }};
-                            conditionMonitoringQueryLanguage = new MonitoringQueryLanguageCondition() {{
-                                duration = "numquam";
-                                evaluationMissingData = "EVALUATION_MISSING_DATA_INACTIVE";
-                                query = "quam";
-                                trigger = new Trigger() {{
-                                    count = 474697;
-                                    percent = 2444.25;
-                                }};
-                            }};
-                            conditionThreshold = new MetricThreshold() {{
-                                aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "quia";
-                                        crossSeriesReducer = "REDUCE_SUM";
-                                        groupByFields = new String[]{{
-                                            add("laborum"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_COUNT_FALSE";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "enim";
-                                        crossSeriesReducer = "REDUCE_MEAN";
-                                        groupByFields = new String[]{{
-                                            add("sequi"),
-                                            add("tenetur"),
-                                            add("ipsam"),
-                                            add("id"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_PERCENTILE_95";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "aut";
-                                        crossSeriesReducer = "REDUCE_MEAN";
-                                        groupByFields = new String[]{{
-                                            add("temporibus"),
-                                            add("laborum"),
-                                            add("quasi"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_PERCENT_CHANGE";
-                                    }}),
-                                }};
-                                comparison = "COMPARISON_NE";
-                                denominatorAggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "nihil";
-                                        crossSeriesReducer = "REDUCE_COUNT_TRUE";
-                                        groupByFields = new String[]{{
-                                            add("ipsa"),
-                                            add("omnis"),
-                                            add("voluptate"),
-                                            add("cum"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_NONE";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "doloremque";
-                                        crossSeriesReducer = "REDUCE_COUNT";
-                                        groupByFields = new String[]{{
-                                            add("maiores"),
-                                            add("dicta"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_MAX";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "dolore";
-                                        crossSeriesReducer = "REDUCE_COUNT";
-                                        groupByFields = new String[]{{
-                                            add("harum"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_MAX";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "accusamus";
-                                        crossSeriesReducer = "REDUCE_STDDEV";
-                                        groupByFields = new String[]{{
-                                            add("quae"),
-                                            add("ipsum"),
-                                            add("quidem"),
-                                            add("molestias"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_STDDEV";
-                                    }}),
-                                }};
-                                denominatorFilter = "pariatur";
-                                duration = "modi";
-                                evaluationMissingData = "EVALUATION_MISSING_DATA_ACTIVE";
-                                filter = "rem";
-                                forecastOptions = new ForecastOptions() {{
-                                    forecastHorizon = "voluptates";
-                                }};
-                                thresholdValue = 939.4;
-                                trigger = new Trigger() {{
-                                    count = 921158;
-                                    percent = 5759.47;
-                                }};
-                            }};
-                            displayName = "veritatis";
-                            name = "itaque";
-                        }}),
-                        add(new Condition() {{
-                            conditionAbsent = new MetricAbsence() {{
-                                aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "enim";
-                                        crossSeriesReducer = "REDUCE_NONE";
-                                        groupByFields = new String[]{{
-                                            add("quibusdam"),
-                                            add("explicabo"),
-                                            add("deserunt"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_FRACTION_TRUE";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "quibusdam";
-                                        crossSeriesReducer = "REDUCE_SUM";
-                                        groupByFields = new String[]{{
-                                            add("qui"),
-                                            add("aliquid"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_COUNT_TRUE";
-                                    }}),
-                                }};
-                                duration = "quos";
-                                filter = "perferendis";
-                                trigger = new Trigger() {{
-                                    count = 164940;
-                                    percent = 8289.4;
-                                }};
-                            }};
-                            conditionMatchedLog = new LogMatch() {{
-                                filter = "ipsam";
-                                labelExtractors = new java.util.HashMap<String, String>() {{
-                                    put("fugit", "dolorum");
-                                }};
-                            }};
-                            conditionMonitoringQueryLanguage = new MonitoringQueryLanguageCondition() {{
-                                duration = "excepturi";
-                                evaluationMissingData = "EVALUATION_MISSING_DATA_INACTIVE";
-                                query = "facilis";
-                                trigger = new Trigger() {{
-                                    count = 735194;
-                                    percent = 2884.76;
-                                }};
-                            }};
-                            conditionThreshold = new MetricThreshold() {{
-                                aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "eum";
-                                        crossSeriesReducer = "REDUCE_MAX";
-                                        groupByFields = new String[]{{
-                                            add("sint"),
-                                            add("aliquid"),
-                                            add("provident"),
-                                            add("necessitatibus"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_STDDEV";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "officia";
-                                        crossSeriesReducer = "REDUCE_MAX";
-                                        groupByFields = new String[]{{
-                                            add("a"),
-                                            add("dolorum"),
-                                            add("in"),
-                                            add("in"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_PERCENTILE_50";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "maiores";
-                                        crossSeriesReducer = "REDUCE_FRACTION_TRUE";
-                                        groupByFields = new String[]{{
-                                            add("magnam"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_PERCENTILE_99";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "facere";
-                                        crossSeriesReducer = "REDUCE_STDDEV";
-                                        groupByFields = new String[]{{
-                                            add("laborum"),
-                                            add("accusamus"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_NEXT_OLDER";
-                                    }}),
-                                }};
-                                comparison = "COMPARISON_LE";
-                                denominatorAggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "accusamus";
-                                        crossSeriesReducer = "REDUCE_PERCENTILE_05";
-                                        groupByFields = new String[]{{
-                                            add("provident"),
-                                            add("nam"),
-                                            add("id"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_SUM";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "deleniti";
-                                        crossSeriesReducer = "REDUCE_PERCENTILE_05";
-                                        groupByFields = new String[]{{
-                                            add("deserunt"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_MEAN";
-                                    }}),
-                                }};
-                                denominatorFilter = "vel";
-                                duration = "natus";
-                                evaluationMissingData = "EVALUATION_MISSING_DATA_ACTIVE";
-                                filter = "molestiae";
-                                forecastOptions = new ForecastOptions() {{
-                                    forecastHorizon = "perferendis";
-                                }};
-                                thresholdValue = 4701.32;
-                                trigger = new Trigger() {{
-                                    count = 301575;
-                                    percent = 7160.75;
-                                }};
-                            }};
-                            displayName = "id";
-                            name = "labore";
+                            name = "Sheryl Kertzmann";
                         }}),
                     }};
                     creationRecord = new MutationRecord() {{
-                        mutateTime = "labore";
-                        mutatedBy = "suscipit";
-                    }};
-                    displayName = "natus";
+                        mutateTime = "architecto";
+                        mutatedBy = "ipsa";
+                    }};;
+                    displayName = "reiciendis";
                     documentation = new Documentation() {{
-                        content = "nobis";
-                        mimeType = "eum";
-                    }};
+                        content = "est";
+                        mimeType = "mollitia";
+                    }};;
                     enabled = false;
                     mutationRecord = new MutationRecord() {{
-                        mutateTime = "vero";
-                        mutatedBy = "aspernatur";
-                    }};
-                    name = "architecto";
+                        mutateTime = "laborum";
+                        mutatedBy = "dolores";
+                    }};;
+                    name = "Stacy Champlin";
                     notificationChannels = new String[]{{
-                        add("et"),
+                        add("nemo"),
+                        add("minima"),
                         add("excepturi"),
                     }};
                     userLabels = new java.util.HashMap<String, String>() {{
-                        put("provident", "quos");
-                        put("sint", "accusantium");
+                        put("iure", "culpa");
                     }};
                     validity = new Status() {{
-                        code = 653201;
+                        code = 988374;
                         details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("ad", "eum");
-                                put("dolor", "necessitatibus");
-                                put("odit", "nemo");
+                                put("mollitia", "dolorem");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("iure", "doloribus");
+                                put("consequuntur", "repellat");
+                                put("mollitia", "occaecati");
+                                put("numquam", "commodi");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("eius", "maxime");
-                                put("deleniti", "facilis");
-                                put("in", "architecto");
-                                put("architecto", "repudiandae");
+                                put("molestiae", "velit");
+                                put("error", "quia");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("expedita", "nihil");
-                                put("repellat", "quibusdam");
+                                put("vitae", "laborum");
+                                put("animi", "enim");
                             }}),
                         }};
-                        message = "sed";
-                    }};
-                }};
-                accessToken = "saepe";
-                alt = "proto";
-                callback = "accusantium";
-                fields = "consequuntur";
-                key = "praesentium";
-                name = "natus";
-                oauthToken = "magni";
+                        message = "odit";
+                    }};;
+                }};;
+                accessToken = "quo";
+                alt = AltEnum.JSON;
+                callback = "tenetur";
+                fields = "ipsam";
+                key = "id";
+                oauthToken = "possimus";
                 prettyPrint = false;
-                quotaUser = "sunt";
-                uploadType = "quo";
-                uploadProtocol = "illum";
-            }}            
+                quotaUser = "aut";
+                uploadType = "quasi";
+                uploadProtocol = "error";
+            }};            
 
             MonitoringProjectsAlertPoliciesCreateResponse res = sdk.projects.monitoringProjectsAlertPoliciesCreate(req, new MonitoringProjectsAlertPoliciesCreateSecurity() {{
-                option1 = new MonitoringProjectsAlertPoliciesCreateSecurityOption1() {{
+                option1 = new MonitoringProjectsAlertPoliciesCreateSecurityOption1("temporibus", "laborum") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.alertPolicy.isPresent()) {
+            if (res.alertPolicy != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -532,46 +262,46 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `monitoringProjectsAlertPoliciesCreate` - Creates a new alerting policy.Design your application to single-thread API calls that modify the state of alerting policies in a single project. This includes calls to CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
-* `monitoringProjectsAlertPoliciesList` - Lists the existing alerting policies for the workspace.
-* `monitoringProjectsCollectdTimeSeriesCreate` - Cloud Monitoring Agent only: Creates a new time series.This method is only for use by the Cloud Monitoring Agent. Use projects.timeSeries.create instead.
-* `monitoringProjectsGroupsCreate` - Creates a new group.
-* `monitoringProjectsGroupsList` - Lists the existing groups.
-* `monitoringProjectsGroupsMembersList` - Lists the monitored resources that are members of a group.
-* `monitoringProjectsGroupsUpdate` - Updates an existing group. You can change any group attributes except name.
-* `monitoringProjectsMetricDescriptorsCreate` - Creates a new metric descriptor. The creation is executed asynchronously. User-created metric descriptors define custom metrics (https://cloud.google.com/monitoring/custom-metrics). The metric descriptor is updated if it already exists, except that metric labels are never removed.
-* `monitoringProjectsMetricDescriptorsList` - Lists metric descriptors that match a filter.
-* `monitoringProjectsMonitoredResourceDescriptorsList` - Lists monitored resource descriptors that match a filter.
-* `monitoringProjectsNotificationChannelDescriptorsList` - Lists the descriptors for supported channel types. The use of descriptors makes it possible for new channel types to be dynamically added.
-* `monitoringProjectsNotificationChannelsCreate` - Creates a new notification channel, representing a single notification endpoint such as an email address, SMS number, or PagerDuty service.Design your application to single-thread API calls that modify the state of notification channels in a single project. This includes calls to CreateNotificationChannel, DeleteNotificationChannel and UpdateNotificationChannel.
-* `monitoringProjectsNotificationChannelsGetVerificationCode` - Requests a verification code for an already verified channel that can then be used in a call to VerifyNotificationChannel() on a different channel with an equivalent identity in the same or in a different project. This makes it possible to copy a channel between projects without requiring manual reverification of the channel. If the channel is not in the verified state, this method will fail (in other words, this may only be used if the SendNotificationChannelVerificationCode and VerifyNotificationChannel paths have already been used to put the given channel into the verified state).There is no guarantee that the verification codes returned by this method will be of a similar structure or form as the ones that are delivered to the channel via SendNotificationChannelVerificationCode; while VerifyNotificationChannel() will recognize both the codes delivered via SendNotificationChannelVerificationCode() and returned from GetNotificationChannelVerificationCode(), it is typically the case that the verification codes delivered via SendNotificationChannelVerificationCode() will be shorter and also have a shorter expiration (e.g. codes such as "G-123456") whereas GetVerificationCode() will typically return a much longer, websafe base 64 encoded string that has a longer expiration time.
-* `monitoringProjectsNotificationChannelsList` - Lists the notification channels that have been created for the project.
-* `monitoringProjectsNotificationChannelsSendVerificationCode` - Causes a verification code to be delivered to the channel. The code can then be supplied in VerifyNotificationChannel to verify the channel.
-* `monitoringProjectsNotificationChannelsVerify` - Verifies a NotificationChannel by proving receipt of the code delivered to the channel as a result of calling SendNotificationChannelVerificationCode.
-* `monitoringProjectsSnoozesCreate` - Creates a Snooze that will prevent alerts, which match the provided criteria, from being opened. The Snooze applies for a specific time interval.
-* `monitoringProjectsSnoozesList` - Lists the Snoozes associated with a project. Can optionally pass in filter, which specifies predicates to match Snoozes.
-* `monitoringProjectsTimeSeriesCreate` - Creates or adds data to one or more time series. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response.
-* `monitoringProjectsTimeSeriesCreateService` - Creates or adds data to one or more service time series. A service time series is a time series for a metric from a Google Cloud service. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response. This endpoint rejects writes to user-defined metrics. This method is only for use by Google Cloud services. Use projects.timeSeries.create instead.
-* `monitoringProjectsTimeSeriesList` - Lists time series that match a filter.
-* `monitoringProjectsTimeSeriesQuery` - Queries time series using Monitoring Query Language.
-* `monitoringProjectsUptimeCheckConfigsCreate` - Creates a new Uptime check configuration.
-* `monitoringProjectsUptimeCheckConfigsList` - Lists the existing valid Uptime check configurations for the project (leaving out any invalid configurations).
+* [monitoringProjectsAlertPoliciesCreate](docs/projects/README.md#monitoringprojectsalertpoliciescreate) - Creates a new alerting policy.Design your application to single-thread API calls that modify the state of alerting policies in a single project. This includes calls to CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
+* [monitoringProjectsAlertPoliciesList](docs/projects/README.md#monitoringprojectsalertpolicieslist) - Lists the existing alerting policies for the workspace.
+* [monitoringProjectsCollectdTimeSeriesCreate](docs/projects/README.md#monitoringprojectscollectdtimeseriescreate) - Cloud Monitoring Agent only: Creates a new time series.This method is only for use by the Cloud Monitoring Agent. Use projects.timeSeries.create instead.
+* [monitoringProjectsGroupsCreate](docs/projects/README.md#monitoringprojectsgroupscreate) - Creates a new group.
+* [monitoringProjectsGroupsList](docs/projects/README.md#monitoringprojectsgroupslist) - Lists the existing groups.
+* [monitoringProjectsGroupsMembersList](docs/projects/README.md#monitoringprojectsgroupsmemberslist) - Lists the monitored resources that are members of a group.
+* [monitoringProjectsGroupsUpdate](docs/projects/README.md#monitoringprojectsgroupsupdate) - Updates an existing group. You can change any group attributes except name.
+* [monitoringProjectsMetricDescriptorsCreate](docs/projects/README.md#monitoringprojectsmetricdescriptorscreate) - Creates a new metric descriptor. The creation is executed asynchronously. User-created metric descriptors define custom metrics (https://cloud.google.com/monitoring/custom-metrics). The metric descriptor is updated if it already exists, except that metric labels are never removed.
+* [monitoringProjectsMetricDescriptorsList](docs/projects/README.md#monitoringprojectsmetricdescriptorslist) - Lists metric descriptors that match a filter.
+* [monitoringProjectsMonitoredResourceDescriptorsList](docs/projects/README.md#monitoringprojectsmonitoredresourcedescriptorslist) - Lists monitored resource descriptors that match a filter.
+* [monitoringProjectsNotificationChannelDescriptorsList](docs/projects/README.md#monitoringprojectsnotificationchanneldescriptorslist) - Lists the descriptors for supported channel types. The use of descriptors makes it possible for new channel types to be dynamically added.
+* [monitoringProjectsNotificationChannelsCreate](docs/projects/README.md#monitoringprojectsnotificationchannelscreate) - Creates a new notification channel, representing a single notification endpoint such as an email address, SMS number, or PagerDuty service.Design your application to single-thread API calls that modify the state of notification channels in a single project. This includes calls to CreateNotificationChannel, DeleteNotificationChannel and UpdateNotificationChannel.
+* [monitoringProjectsNotificationChannelsGetVerificationCode](docs/projects/README.md#monitoringprojectsnotificationchannelsgetverificationcode) - Requests a verification code for an already verified channel that can then be used in a call to VerifyNotificationChannel() on a different channel with an equivalent identity in the same or in a different project. This makes it possible to copy a channel between projects without requiring manual reverification of the channel. If the channel is not in the verified state, this method will fail (in other words, this may only be used if the SendNotificationChannelVerificationCode and VerifyNotificationChannel paths have already been used to put the given channel into the verified state).There is no guarantee that the verification codes returned by this method will be of a similar structure or form as the ones that are delivered to the channel via SendNotificationChannelVerificationCode; while VerifyNotificationChannel() will recognize both the codes delivered via SendNotificationChannelVerificationCode() and returned from GetNotificationChannelVerificationCode(), it is typically the case that the verification codes delivered via SendNotificationChannelVerificationCode() will be shorter and also have a shorter expiration (e.g. codes such as "G-123456") whereas GetVerificationCode() will typically return a much longer, websafe base 64 encoded string that has a longer expiration time.
+* [monitoringProjectsNotificationChannelsList](docs/projects/README.md#monitoringprojectsnotificationchannelslist) - Lists the notification channels that have been created for the project. To list the types of notification channels that are supported, use the ListNotificationChannelDescriptors method.
+* [monitoringProjectsNotificationChannelsSendVerificationCode](docs/projects/README.md#monitoringprojectsnotificationchannelssendverificationcode) - Causes a verification code to be delivered to the channel. The code can then be supplied in VerifyNotificationChannel to verify the channel.
+* [monitoringProjectsNotificationChannelsVerify](docs/projects/README.md#monitoringprojectsnotificationchannelsverify) - Verifies a NotificationChannel by proving receipt of the code delivered to the channel as a result of calling SendNotificationChannelVerificationCode.
+* [monitoringProjectsSnoozesCreate](docs/projects/README.md#monitoringprojectssnoozescreate) - Creates a Snooze that will prevent alerts, which match the provided criteria, from being opened. The Snooze applies for a specific time interval.
+* [monitoringProjectsSnoozesList](docs/projects/README.md#monitoringprojectssnoozeslist) - Lists the Snoozes associated with a project. Can optionally pass in filter, which specifies predicates to match Snoozes.
+* [monitoringProjectsTimeSeriesCreate](docs/projects/README.md#monitoringprojectstimeseriescreate) - Creates or adds data to one or more time series. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response.
+* [monitoringProjectsTimeSeriesCreateService](docs/projects/README.md#monitoringprojectstimeseriescreateservice) - Creates or adds data to one or more service time series. A service time series is a time series for a metric from a Google Cloud service. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response. This endpoint rejects writes to user-defined metrics. This method is only for use by Google Cloud services. Use projects.timeSeries.create instead.
+* [monitoringProjectsTimeSeriesList](docs/projects/README.md#monitoringprojectstimeserieslist) - Lists time series that match a filter.
+* [monitoringProjectsTimeSeriesQuery](docs/projects/README.md#monitoringprojectstimeseriesquery) - Queries time series using Monitoring Query Language.
+* [monitoringProjectsUptimeCheckConfigsCreate](docs/projects/README.md#monitoringprojectsuptimecheckconfigscreate) - Creates a new Uptime check configuration.
+* [monitoringProjectsUptimeCheckConfigsList](docs/projects/README.md#monitoringprojectsuptimecheckconfigslist) - Lists the existing valid Uptime check configurations for the project (leaving out any invalid configurations).
 
-### services
+### [services](docs/services/README.md)
 
-* `monitoringServicesCreate` - Create a Service.
-* `monitoringServicesList` - List Services for this Metrics Scope.
-* `monitoringServicesServiceLevelObjectivesCreate` - Create a ServiceLevelObjective for the given Service.
-* `monitoringServicesServiceLevelObjectivesDelete` - Delete the given ServiceLevelObjective.
-* `monitoringServicesServiceLevelObjectivesGet` - Get a ServiceLevelObjective by name.
-* `monitoringServicesServiceLevelObjectivesList` - List the ServiceLevelObjectives for the given Service.
-* `monitoringServicesServiceLevelObjectivesPatch` - Update the given ServiceLevelObjective.
+* [monitoringServicesCreate](docs/services/README.md#monitoringservicescreate) - Create a Service.
+* [monitoringServicesList](docs/services/README.md#monitoringserviceslist) - List Services for this Metrics Scope.
+* [monitoringServicesServiceLevelObjectivesCreate](docs/services/README.md#monitoringservicesservicelevelobjectivescreate) - Create a ServiceLevelObjective for the given Service.
+* [monitoringServicesServiceLevelObjectivesDelete](docs/services/README.md#monitoringservicesservicelevelobjectivesdelete) - Delete the given ServiceLevelObjective.
+* [monitoringServicesServiceLevelObjectivesGet](docs/services/README.md#monitoringservicesservicelevelobjectivesget) - Get a ServiceLevelObjective by name.
+* [monitoringServicesServiceLevelObjectivesList](docs/services/README.md#monitoringservicesservicelevelobjectiveslist) - List the ServiceLevelObjectives for the given Service.
+* [monitoringServicesServiceLevelObjectivesPatch](docs/services/README.md#monitoringservicesservicelevelobjectivespatch) - Update the given ServiceLevelObjective.
 
-### uptimeCheckIps
+### [uptimeCheckIps](docs/uptimecheckips/README.md)
 
-* `monitoringUptimeCheckIpsList` - Returns the list of IP addresses that checkers run from
+* [monitoringUptimeCheckIpsList](docs/uptimecheckips/README.md#monitoringuptimecheckipslist) - Returns the list of IP addresses that checkers run from
 <!-- End SDK Available Operations -->
 
 ### Maturity

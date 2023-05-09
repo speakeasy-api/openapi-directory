@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CapacityUnitsConfiguration {
     @JsonProperty("QueryCapacityUnits")
     public Long queryCapacityUnits;
+
     public CapacityUnitsConfiguration withQueryCapacityUnits(Long queryCapacityUnits) {
         this.queryCapacityUnits = queryCapacityUnits;
         return this;
@@ -19,9 +20,14 @@ public class CapacityUnitsConfiguration {
     
     @JsonProperty("StorageCapacityUnits")
     public Long storageCapacityUnits;
+
     public CapacityUnitsConfiguration withStorageCapacityUnits(Long storageCapacityUnits) {
         this.storageCapacityUnits = storageCapacityUnits;
         return this;
     }
     
+    public CapacityUnitsConfiguration(@JsonProperty("QueryCapacityUnits") Long queryCapacityUnits, @JsonProperty("StorageCapacityUnits") Long storageCapacityUnits) {
+        this.queryCapacityUnits = queryCapacityUnits;
+        this.storageCapacityUnits = storageCapacityUnits;
+  }
 }

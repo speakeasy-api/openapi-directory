@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIntegrationsTokenResponse {
     
     public String contentType;
+
     public GetIntegrationsTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetIntegrationsTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetIntegrationsTokenResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetIntegrationsTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.IntegrationsToken integrationsToken;
+
     public GetIntegrationsTokenResponse withIntegrationsToken(org.openapis.openapi.models.shared.IntegrationsToken integrationsToken) {
         this.integrationsToken = integrationsToken;
         return this;
@@ -36,6 +40,7 @@ public class GetIntegrationsTokenResponse {
     
     
     public Integer statusCode;
+
     public GetIntegrationsTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetIntegrationsTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIntegrationsTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetIntegrationsTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

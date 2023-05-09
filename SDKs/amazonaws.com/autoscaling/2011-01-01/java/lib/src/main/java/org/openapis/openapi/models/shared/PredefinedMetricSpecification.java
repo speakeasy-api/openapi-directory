@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PredefinedMetricSpecification - Represents a predefined metric for a target tracking scaling policy to use with Amazon EC2 Auto Scaling.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PredefinedMetricSpecification {
     
     public MetricTypeEnum predefinedMetricType;
+
     public PredefinedMetricSpecification withPredefinedMetricType(MetricTypeEnum predefinedMetricType) {
         this.predefinedMetricType = predefinedMetricType;
         return this;
@@ -19,9 +20,13 @@ public class PredefinedMetricSpecification {
     
     
     public String resourceLabel;
+
     public PredefinedMetricSpecification withResourceLabel(String resourceLabel) {
         this.resourceLabel = resourceLabel;
         return this;
     }
     
+    public PredefinedMetricSpecification(@JsonProperty("PredefinedMetricType") MetricTypeEnum predefinedMetricType) {
+        this.predefinedMetricType = predefinedMetricType;
+  }
 }

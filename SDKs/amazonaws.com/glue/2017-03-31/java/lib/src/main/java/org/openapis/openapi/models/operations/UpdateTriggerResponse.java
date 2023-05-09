@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTriggerResponse {
@@ -12,6 +13,7 @@ public class UpdateTriggerResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateTriggerResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTriggerResponse {
     
     
     public String contentType;
+
     public UpdateTriggerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTriggerResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateTriggerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTriggerResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateTriggerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTriggerResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateTriggerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateTriggerResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateTriggerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateTriggerResponse {
     
     
     public Integer statusCode;
+
     public UpdateTriggerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateTriggerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTriggerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateTriggerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTriggerResponse updateTriggerResponse;
+
     public UpdateTriggerResponse withUpdateTriggerResponse(org.openapis.openapi.models.shared.UpdateTriggerResponse updateTriggerResponse) {
         this.updateTriggerResponse = updateTriggerResponse;
         return this;
     }
     
+    public UpdateTriggerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

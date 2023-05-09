@@ -15,6 +15,7 @@ public class RegionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RegionViewModel withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class RegionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RegionViewModel withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class RegionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public RegionViewModel withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public RegionViewModel(){}
 }

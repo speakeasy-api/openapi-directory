@@ -90,6 +90,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpr
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1FirewallPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1FirewallAction.java
@@ -135,4 +136,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpr
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

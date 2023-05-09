@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailWorkflowExecutionFailedEventAttributes {
     @JsonProperty("cause")
     public FailWorkflowExecutionFailedCauseEnum cause;
+
     public FailWorkflowExecutionFailedEventAttributes withCause(FailWorkflowExecutionFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -19,9 +20,14 @@ public class FailWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public FailWorkflowExecutionFailedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
     }
     
+    public FailWorkflowExecutionFailedEventAttributes(@JsonProperty("cause") FailWorkflowExecutionFailedCauseEnum cause, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId) {
+        this.cause = cause;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+  }
 }

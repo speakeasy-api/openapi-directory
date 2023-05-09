@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeInstancePatchStatesForPatchGroupResponse {
     
     public String contentType;
+
     public DescribeInstancePatchStatesForPatchGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeInstancePatchStatesForPatchGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeInstancePatchStatesForPatchGroupResult describeInstancePatchStatesForPatchGroupResult;
+
     public DescribeInstancePatchStatesForPatchGroupResponse withDescribeInstancePatchStatesForPatchGroupResult(org.openapis.openapi.models.shared.DescribeInstancePatchStatesForPatchGroupResult describeInstancePatchStatesForPatchGroupResult) {
         this.describeInstancePatchStatesForPatchGroupResult = describeInstancePatchStatesForPatchGroupResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeInstancePatchStatesForPatchGroupResponse {
      */
     
     public Object internalServerError;
+
     public DescribeInstancePatchStatesForPatchGroupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeInstancePatchStatesForPatchGroupResponse {
      */
     
     public Object invalidFilter;
+
     public DescribeInstancePatchStatesForPatchGroupResponse withInvalidFilter(Object invalidFilter) {
         this.invalidFilter = invalidFilter;
         return this;
@@ -49,6 +54,7 @@ public class DescribeInstancePatchStatesForPatchGroupResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeInstancePatchStatesForPatchGroupResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -56,6 +62,7 @@ public class DescribeInstancePatchStatesForPatchGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeInstancePatchStatesForPatchGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeInstancePatchStatesForPatchGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeInstancePatchStatesForPatchGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeInstancePatchStatesForPatchGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

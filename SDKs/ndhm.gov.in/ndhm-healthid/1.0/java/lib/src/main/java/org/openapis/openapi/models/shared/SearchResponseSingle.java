@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchResponseSingle {
     
     public SearchResponseSingleAuthMethodsEnum[] authMethods;
+
     public SearchResponseSingle withAuthMethods(SearchResponseSingleAuthMethodsEnum[] authMethods) {
         this.authMethods = authMethods;
         return this;
@@ -19,6 +20,7 @@ public class SearchResponseSingle {
     
     
     public String healthId;
+
     public SearchResponseSingle withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -26,6 +28,7 @@ public class SearchResponseSingle {
     
     
     public String healthIdNumber;
+
     public SearchResponseSingle withHealthIdNumber(String healthIdNumber) {
         this.healthIdNumber = healthIdNumber;
         return this;
@@ -33,6 +36,7 @@ public class SearchResponseSingle {
     
     
     public String name;
+
     public SearchResponseSingle withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +44,11 @@ public class SearchResponseSingle {
     
     
     public java.util.Map<String, String> tags;
+
     public SearchResponseSingle withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public SearchResponseSingle(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RotatePagesV1Response {
     
     public String contentType;
+
     public RotatePagesV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RotatePagesV1Response {
     
     
     public Integer statusCode;
+
     public RotatePagesV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RotatePagesV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RotatePagesV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RotatePagesV1Response {
      */
     
     public byte[] rotatePagesV1200ApplicationPdfBinaryString;
+
     public RotatePagesV1Response withRotatePagesV1200ApplicationPdfBinaryString(byte[] rotatePagesV1200ApplicationPdfBinaryString) {
         this.rotatePagesV1200ApplicationPdfBinaryString = rotatePagesV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class RotatePagesV1Response {
      */
     
     public RotatePagesV14XXApplicationProblemPlusJson rotatePagesV14XXApplicationProblemPlusJsonObject;
+
     public RotatePagesV1Response withRotatePagesV14XXApplicationProblemPlusJsonObject(RotatePagesV14XXApplicationProblemPlusJson rotatePagesV14XXApplicationProblemPlusJsonObject) {
         this.rotatePagesV14XXApplicationProblemPlusJsonObject = rotatePagesV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public RotatePagesV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

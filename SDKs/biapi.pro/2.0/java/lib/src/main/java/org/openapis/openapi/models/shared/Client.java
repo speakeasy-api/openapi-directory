@@ -18,6 +18,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public String config;
+
     public Client withConfig(String config) {
         this.config = config;
         return this;
@@ -25,6 +26,7 @@ public class Client {
     
     @JsonProperty("id")
     public Long id;
+
     public Client withId(Long id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_logo")
     public Long idLogo;
+
     public Client withIdLogo(Long idLogo) {
         this.idLogo = idLogo;
         return this;
@@ -40,6 +43,7 @@ public class Client {
     
     @JsonProperty("name")
     public String name;
+
     public Client withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +52,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_key")
     public String privateKey;
+
     public Client withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -58,6 +63,7 @@ public class Client {
      */
     @JsonProperty("pro")
     public Boolean pro;
+
     public Client withPro(Boolean pro) {
         this.pro = pro;
         return this;
@@ -66,6 +72,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public Client withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -73,6 +80,7 @@ public class Client {
     
     @JsonProperty("redirect_uris")
     public String redirectUris;
+
     public Client withRedirectUris(String redirectUris) {
         this.redirectUris = redirectUris;
         return this;
@@ -80,9 +88,17 @@ public class Client {
     
     @JsonProperty("secret")
     public String secret;
+
     public Client withSecret(String secret) {
         this.secret = secret;
         return this;
     }
     
+    public Client(@JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("pro") Boolean pro, @JsonProperty("redirect_uris") String redirectUris, @JsonProperty("secret") String secret) {
+        this.id = id;
+        this.name = name;
+        this.pro = pro;
+        this.redirectUris = redirectUris;
+        this.secret = secret;
+  }
 }

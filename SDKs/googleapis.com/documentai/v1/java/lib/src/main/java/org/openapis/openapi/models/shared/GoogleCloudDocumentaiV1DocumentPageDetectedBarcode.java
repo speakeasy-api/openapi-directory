@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentPageDetectedBarcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcode")
     public GoogleCloudDocumentaiV1Barcode barcode;
+
     public GoogleCloudDocumentaiV1DocumentPageDetectedBarcode withBarcode(GoogleCloudDocumentaiV1Barcode barcode) {
         this.barcode = barcode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1DocumentPageDetectedBarcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1DocumentPageDetectedBarcode withLayout(GoogleCloudDocumentaiV1DocumentPageLayout layout) {
         this.layout = layout;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentPageDetectedBarcode(){}
 }

@@ -23,6 +23,7 @@ public class UpdatePaymentRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public UpdatePaymentRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -34,9 +35,13 @@ public class UpdatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment")
     public Payment payment;
+
     public UpdatePaymentRequest withPayment(Payment payment) {
         this.payment = payment;
         return this;
     }
     
+    public UpdatePaymentRequest(@JsonProperty("idempotency_key") String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
+  }
 }

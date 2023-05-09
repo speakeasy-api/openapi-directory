@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1ListFeedbackReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedbackReports")
     public GoogleFirebaseAppdistroV1FeedbackReport[] feedbackReports;
+
     public GoogleFirebaseAppdistroV1ListFeedbackReportsResponse withFeedbackReports(GoogleFirebaseAppdistroV1FeedbackReport[] feedbackReports) {
         this.feedbackReports = feedbackReports;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppdistroV1ListFeedbackReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirebaseAppdistroV1ListFeedbackReportsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1ListFeedbackReportsResponse(){}
 }

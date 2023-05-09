@@ -20,6 +20,7 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DescribeRescoreExecutionPlanResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityUnits")
     public CapacityUnitsConfiguration capacityUnits;
+
     public DescribeRescoreExecutionPlanResponse withCapacityUnits(CapacityUnitsConfiguration capacityUnits) {
         this.capacityUnits = capacityUnits;
         return this;
@@ -38,6 +40,7 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeRescoreExecutionPlanResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeRescoreExecutionPlanResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeRescoreExecutionPlanResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -62,6 +67,7 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeRescoreExecutionPlanResponse withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeRescoreExecutionPlanResponse withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RescoreExecutionPlanStatusEnum status;
+
     public DescribeRescoreExecutionPlanResponse withStatus(RescoreExecutionPlanStatusEnum status) {
         this.status = status;
         return this;
@@ -88,9 +96,11 @@ public class DescribeRescoreExecutionPlanResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeRescoreExecutionPlanResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DescribeRescoreExecutionPlanResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoryPipelineCacheRequest {
@@ -12,6 +13,7 @@ public class DeleteRepositoryPipelineCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cache_uuid")
     public String cacheUuid;
+
     public DeleteRepositoryPipelineCacheRequest withCacheUuid(String cacheUuid) {
         this.cacheUuid = cacheUuid;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRepositoryPipelineCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeleteRepositoryPipelineCacheRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,9 +35,15 @@ public class DeleteRepositoryPipelineCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteRepositoryPipelineCacheRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteRepositoryPipelineCacheRequest(@JsonProperty("cache_uuid") String cacheUuid, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.cacheUuid = cacheUuid;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

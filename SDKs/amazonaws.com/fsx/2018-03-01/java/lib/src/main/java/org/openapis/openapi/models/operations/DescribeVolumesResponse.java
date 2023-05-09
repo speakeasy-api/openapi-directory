@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVolumesResponse {
@@ -12,6 +13,7 @@ public class DescribeVolumesResponse {
      */
     
     public Object badRequest;
+
     public DescribeVolumesResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVolumesResponse {
     
     
     public String contentType;
+
     public DescribeVolumesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVolumesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVolumesResponse describeVolumesResponse;
+
     public DescribeVolumesResponse withDescribeVolumesResponse(org.openapis.openapi.models.shared.DescribeVolumesResponse describeVolumesResponse) {
         this.describeVolumesResponse = describeVolumesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVolumesResponse {
      */
     
     public Object internalServerError;
+
     public DescribeVolumesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeVolumesResponse {
     
     
     public Integer statusCode;
+
     public DescribeVolumesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeVolumesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVolumesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeVolumesResponse {
      */
     
     public Object volumeNotFound;
+
     public DescribeVolumesResponse withVolumeNotFound(Object volumeNotFound) {
         this.volumeNotFound = volumeNotFound;
         return this;
     }
     
+    public DescribeVolumesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

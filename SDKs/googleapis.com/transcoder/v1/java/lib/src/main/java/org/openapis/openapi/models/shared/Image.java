@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Image - Overlaid jpeg image.
+ * Image - Overlaid image.
  */
 public class Image {
     /**
@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alpha")
     public Double alpha;
+
     public Image withAlpha(Double alpha) {
         this.alpha = alpha;
         return this;
@@ -29,20 +30,23 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public NormalizedCoordinate resolution;
+
     public Image withResolution(NormalizedCoordinate resolution) {
         this.resolution = resolution;
         return this;
     }
     
     /**
-     * Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
+     * Required. URI of the image in Cloud Storage. For example, `gs://bucket/inputs/image.png`. Only PNG and JPEG images are supported.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Image withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Image(){}
 }

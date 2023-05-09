@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ServiceUpdateList {
     
     public Boolean autoUpdateAfterRecommendedApplyByDate;
+
     public ServiceUpdateList withAutoUpdateAfterRecommendedApplyByDate(Boolean autoUpdateAfterRecommendedApplyByDate) {
         this.autoUpdateAfterRecommendedApplyByDate = autoUpdateAfterRecommendedApplyByDate;
         return this;
@@ -19,6 +20,7 @@ public class ServiceUpdateList {
     
     
     public String engine;
+
     public ServiceUpdateList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -26,6 +28,7 @@ public class ServiceUpdateList {
     
     
     public String engineVersion;
+
     public ServiceUpdateList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -33,6 +36,7 @@ public class ServiceUpdateList {
     
     
     public String estimatedUpdateTime;
+
     public ServiceUpdateList withEstimatedUpdateTime(String estimatedUpdateTime) {
         this.estimatedUpdateTime = estimatedUpdateTime;
         return this;
@@ -40,6 +44,7 @@ public class ServiceUpdateList {
     
     
     public String serviceUpdateDescription;
+
     public ServiceUpdateList withServiceUpdateDescription(String serviceUpdateDescription) {
         this.serviceUpdateDescription = serviceUpdateDescription;
         return this;
@@ -47,6 +52,7 @@ public class ServiceUpdateList {
     
     
     public OffsetDateTime serviceUpdateEndDate;
+
     public ServiceUpdateList withServiceUpdateEndDate(OffsetDateTime serviceUpdateEndDate) {
         this.serviceUpdateEndDate = serviceUpdateEndDate;
         return this;
@@ -54,6 +60,7 @@ public class ServiceUpdateList {
     
     
     public String serviceUpdateName;
+
     public ServiceUpdateList withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -61,6 +68,7 @@ public class ServiceUpdateList {
     
     
     public OffsetDateTime serviceUpdateRecommendedApplyByDate;
+
     public ServiceUpdateList withServiceUpdateRecommendedApplyByDate(OffsetDateTime serviceUpdateRecommendedApplyByDate) {
         this.serviceUpdateRecommendedApplyByDate = serviceUpdateRecommendedApplyByDate;
         return this;
@@ -68,6 +76,7 @@ public class ServiceUpdateList {
     
     
     public OffsetDateTime serviceUpdateReleaseDate;
+
     public ServiceUpdateList withServiceUpdateReleaseDate(OffsetDateTime serviceUpdateReleaseDate) {
         this.serviceUpdateReleaseDate = serviceUpdateReleaseDate;
         return this;
@@ -75,6 +84,7 @@ public class ServiceUpdateList {
     
     
     public ServiceUpdateSeverityEnum serviceUpdateSeverity;
+
     public ServiceUpdateList withServiceUpdateSeverity(ServiceUpdateSeverityEnum serviceUpdateSeverity) {
         this.serviceUpdateSeverity = serviceUpdateSeverity;
         return this;
@@ -82,6 +92,7 @@ public class ServiceUpdateList {
     
     
     public ServiceUpdateStatusEnum serviceUpdateStatus;
+
     public ServiceUpdateList withServiceUpdateStatus(ServiceUpdateStatusEnum serviceUpdateStatus) {
         this.serviceUpdateStatus = serviceUpdateStatus;
         return this;
@@ -89,9 +100,11 @@ public class ServiceUpdateList {
     
     
     public ServiceUpdateTypeEnum serviceUpdateType;
+
     public ServiceUpdateList withServiceUpdateType(ServiceUpdateTypeEnum serviceUpdateType) {
         this.serviceUpdateType = serviceUpdateType;
         return this;
     }
     
+    public ServiceUpdateList(){}
 }

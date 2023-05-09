@@ -25,6 +25,7 @@ public class ScoreRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autosave")
     public Boolean autosave;
+
     public ScoreRevision withAutosave(Boolean autosave) {
         this.autosave = autosave;
         return this;
@@ -33,6 +34,7 @@ public class ScoreRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collaborators")
     public String[] collaborators;
+
     public ScoreRevision withCollaborators(String[] collaborators) {
         this.collaborators = collaborators;
         return this;
@@ -46,6 +48,7 @@ public class ScoreRevision {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public ScoreRevision withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -57,6 +60,7 @@ public class ScoreRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScoreRevision withDescription(String description) {
         this.description = description;
         return this;
@@ -68,6 +72,7 @@ public class ScoreRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public ScoreRevision withEvent(String event) {
         this.event = event;
         return this;
@@ -79,6 +84,7 @@ public class ScoreRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ScoreRevision withId(String id) {
         this.id = id;
         return this;
@@ -91,6 +97,7 @@ public class ScoreRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public ScoreRevisionStatistics statistics;
+
     public ScoreRevision withStatistics(ScoreRevisionStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -102,9 +109,11 @@ public class ScoreRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public ScoreRevision withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public ScoreRevision(){}
 }

@@ -12,6 +12,7 @@ public class CurrentContractInfoLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable")
     public LinksTerminateCurrentContractLink disable;
+
     public CurrentContractInfoLinks withDisable(LinksTerminateCurrentContractLink disable) {
         this.disable = disable;
         return this;
@@ -20,9 +21,11 @@ public class CurrentContractInfoLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reenable")
     public LinksReactivateCurrentContractLink reenable;
+
     public CurrentContractInfoLinks withReenable(LinksReactivateCurrentContractLink reenable) {
         this.reenable = reenable;
         return this;
     }
     
+    public CurrentContractInfoLinks(){}
 }

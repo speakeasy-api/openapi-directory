@@ -12,6 +12,7 @@ public class ProjectLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public Href documents;
+
     public ProjectLinks withDocuments(Href documents) {
         this.documents = documents;
         return this;
@@ -20,6 +21,7 @@ public class ProjectLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glossaries")
     public Href glossaries;
+
     public ProjectLinks withGlossaries(Href glossaries) {
         this.glossaries = glossaries;
         return this;
@@ -28,6 +30,7 @@ public class ProjectLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment")
     public Href payment;
+
     public ProjectLinks withPayment(Href payment) {
         this.payment = payment;
         return this;
@@ -36,6 +39,7 @@ public class ProjectLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote-pdf")
     public Href quotePdf;
+
     public ProjectLinks withQuotePdf(Href quotePdf) {
         this.quotePdf = quotePdf;
         return this;
@@ -44,6 +48,7 @@ public class ProjectLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Href self;
+
     public ProjectLinks withSelf(Href self) {
         this.self = self;
         return this;
@@ -52,9 +57,11 @@ public class ProjectLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("styleguides")
     public Href styleguides;
+
     public ProjectLinks withStyleguides(Href styleguides) {
         this.styleguides = styleguides;
         return this;
     }
     
+    public ProjectLinks(){}
 }

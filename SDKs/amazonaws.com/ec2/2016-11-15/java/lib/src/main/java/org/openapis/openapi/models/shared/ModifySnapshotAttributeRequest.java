@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifySnapshotAttributeRequest {
     
     public SnapshotAttributeNameEnum attribute;
+
     public ModifySnapshotAttributeRequest withAttribute(SnapshotAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class ModifySnapshotAttributeRequest {
     
     
     public CreateVolumePermissionModifications createVolumePermission;
+
     public ModifySnapshotAttributeRequest withCreateVolumePermission(CreateVolumePermissionModifications createVolumePermission) {
         this.createVolumePermission = createVolumePermission;
         return this;
@@ -23,6 +25,7 @@ public class ModifySnapshotAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ModifySnapshotAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ModifySnapshotAttributeRequest {
     
     
     public String[] groupNames;
+
     public ModifySnapshotAttributeRequest withGroupNames(String[] groupNames) {
         this.groupNames = groupNames;
         return this;
@@ -37,6 +41,7 @@ public class ModifySnapshotAttributeRequest {
     
     
     public OperationTypeEnum operationType;
+
     public ModifySnapshotAttributeRequest withOperationType(OperationTypeEnum operationType) {
         this.operationType = operationType;
         return this;
@@ -44,6 +49,7 @@ public class ModifySnapshotAttributeRequest {
     
     
     public String snapshotId;
+
     public ModifySnapshotAttributeRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -51,9 +57,13 @@ public class ModifySnapshotAttributeRequest {
     
     
     public String[] userIds;
+
     public ModifySnapshotAttributeRequest withUserIds(String[] userIds) {
         this.userIds = userIds;
         return this;
     }
     
+    public ModifySnapshotAttributeRequest(@JsonProperty("SnapshotId") String snapshotId) {
+        this.snapshotId = snapshotId;
+  }
 }

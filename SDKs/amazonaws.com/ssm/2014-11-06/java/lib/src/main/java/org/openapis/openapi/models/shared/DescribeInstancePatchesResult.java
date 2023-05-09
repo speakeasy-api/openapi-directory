@@ -15,6 +15,7 @@ public class DescribeInstancePatchesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstancePatchesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeInstancePatchesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Patches")
     public PatchComplianceData[] patches;
+
     public DescribeInstancePatchesResult withPatches(PatchComplianceData[] patches) {
         this.patches = patches;
         return this;
     }
     
+    public DescribeInstancePatchesResult(){}
 }

@@ -15,6 +15,7 @@ public class MonitorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public MonitorInfo withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -23,9 +24,11 @@ public class MonitorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public MonitorInfo withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public MonitorInfo(){}
 }

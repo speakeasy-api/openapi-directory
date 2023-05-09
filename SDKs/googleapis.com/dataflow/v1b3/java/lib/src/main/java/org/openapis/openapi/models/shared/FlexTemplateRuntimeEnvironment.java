@@ -18,6 +18,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalExperiments")
     public String[] additionalExperiments;
+
     public FlexTemplateRuntimeEnvironment withAdditionalExperiments(String[] additionalExperiments) {
         this.additionalExperiments = additionalExperiments;
         return this;
@@ -29,6 +30,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalUserLabels")
     public java.util.Map<String, String> additionalUserLabels;
+
     public FlexTemplateRuntimeEnvironment withAdditionalUserLabels(java.util.Map<String, String> additionalUserLabels) {
         this.additionalUserLabels = additionalUserLabels;
         return this;
@@ -40,6 +42,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalingAlgorithm")
     public FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum autoscalingAlgorithm;
+
     public FlexTemplateRuntimeEnvironment withAutoscalingAlgorithm(FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum autoscalingAlgorithm) {
         this.autoscalingAlgorithm = autoscalingAlgorithm;
         return this;
@@ -51,6 +54,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public Integer diskSizeGb;
+
     public FlexTemplateRuntimeEnvironment withDiskSizeGb(Integer diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -62,6 +66,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dumpHeapOnOom")
     public Boolean dumpHeapOnOom;
+
     public FlexTemplateRuntimeEnvironment withDumpHeapOnOom(Boolean dumpHeapOnOom) {
         this.dumpHeapOnOom = dumpHeapOnOom;
         return this;
@@ -73,6 +78,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableLauncherVmSerialPortLogging")
     public Boolean enableLauncherVmSerialPortLogging;
+
     public FlexTemplateRuntimeEnvironment withEnableLauncherVmSerialPortLogging(Boolean enableLauncherVmSerialPortLogging) {
         this.enableLauncherVmSerialPortLogging = enableLauncherVmSerialPortLogging;
         return this;
@@ -84,6 +90,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableStreamingEngine")
     public Boolean enableStreamingEngine;
+
     public FlexTemplateRuntimeEnvironment withEnableStreamingEngine(Boolean enableStreamingEngine) {
         this.enableStreamingEngine = enableStreamingEngine;
         return this;
@@ -95,6 +102,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flexrsGoal")
     public FlexTemplateRuntimeEnvironmentFlexrsGoalEnum flexrsGoal;
+
     public FlexTemplateRuntimeEnvironment withFlexrsGoal(FlexTemplateRuntimeEnvironmentFlexrsGoalEnum flexrsGoal) {
         this.flexrsGoal = flexrsGoal;
         return this;
@@ -106,6 +114,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipConfiguration")
     public FlexTemplateRuntimeEnvironmentIpConfigurationEnum ipConfiguration;
+
     public FlexTemplateRuntimeEnvironment withIpConfiguration(FlexTemplateRuntimeEnvironmentIpConfigurationEnum ipConfiguration) {
         this.ipConfiguration = ipConfiguration;
         return this;
@@ -117,6 +126,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public FlexTemplateRuntimeEnvironment withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -128,6 +138,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launcherMachineType")
     public String launcherMachineType;
+
     public FlexTemplateRuntimeEnvironment withLauncherMachineType(String launcherMachineType) {
         this.launcherMachineType = launcherMachineType;
         return this;
@@ -139,6 +150,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public FlexTemplateRuntimeEnvironment withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -150,6 +162,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWorkers")
     public Integer maxWorkers;
+
     public FlexTemplateRuntimeEnvironment withMaxWorkers(Integer maxWorkers) {
         this.maxWorkers = maxWorkers;
         return this;
@@ -161,6 +174,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public FlexTemplateRuntimeEnvironment withNetwork(String network) {
         this.network = network;
         return this;
@@ -172,6 +186,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numWorkers")
     public Integer numWorkers;
+
     public FlexTemplateRuntimeEnvironment withNumWorkers(Integer numWorkers) {
         this.numWorkers = numWorkers;
         return this;
@@ -183,6 +198,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saveHeapDumpsToGcsPath")
     public String saveHeapDumpsToGcsPath;
+
     public FlexTemplateRuntimeEnvironment withSaveHeapDumpsToGcsPath(String saveHeapDumpsToGcsPath) {
         this.saveHeapDumpsToGcsPath = saveHeapDumpsToGcsPath;
         return this;
@@ -194,6 +210,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkContainerImage")
     public String sdkContainerImage;
+
     public FlexTemplateRuntimeEnvironment withSDKContainerImage(String sdkContainerImage) {
         this.sdkContainerImage = sdkContainerImage;
         return this;
@@ -205,6 +222,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public FlexTemplateRuntimeEnvironment withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
@@ -216,6 +234,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingLocation")
     public String stagingLocation;
+
     public FlexTemplateRuntimeEnvironment withStagingLocation(String stagingLocation) {
         this.stagingLocation = stagingLocation;
         return this;
@@ -227,6 +246,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public FlexTemplateRuntimeEnvironment withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -238,6 +258,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tempLocation")
     public String tempLocation;
+
     public FlexTemplateRuntimeEnvironment withTempLocation(String tempLocation) {
         this.tempLocation = tempLocation;
         return this;
@@ -249,6 +270,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerRegion")
     public String workerRegion;
+
     public FlexTemplateRuntimeEnvironment withWorkerRegion(String workerRegion) {
         this.workerRegion = workerRegion;
         return this;
@@ -260,6 +282,7 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerZone")
     public String workerZone;
+
     public FlexTemplateRuntimeEnvironment withWorkerZone(String workerZone) {
         this.workerZone = workerZone;
         return this;
@@ -271,9 +294,11 @@ public class FlexTemplateRuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public FlexTemplateRuntimeEnvironment withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public FlexTemplateRuntimeEnvironment(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BudgetSummaryResponseData {
     @JsonProperty("budgets")
     public BudgetSummary[] budgets;
+
     public BudgetSummaryResponseData withBudgets(BudgetSummary[] budgets) {
         this.budgets = budgets;
         return this;
@@ -19,9 +20,13 @@ public class BudgetSummaryResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_budget")
     public BudgetSummary defaultBudget;
+
     public BudgetSummaryResponseData withDefaultBudget(BudgetSummary defaultBudget) {
         this.defaultBudget = defaultBudget;
         return this;
     }
     
+    public BudgetSummaryResponseData(@JsonProperty("budgets") BudgetSummary[] budgets) {
+        this.budgets = budgets;
+  }
 }

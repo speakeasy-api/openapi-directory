@@ -15,6 +15,7 @@ public class NewDeviceMetadataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceGroupKey")
     public String deviceGroupKey;
+
     public NewDeviceMetadataType withDeviceGroupKey(String deviceGroupKey) {
         this.deviceGroupKey = deviceGroupKey;
         return this;
@@ -23,9 +24,11 @@ public class NewDeviceMetadataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceKey")
     public String deviceKey;
+
     public NewDeviceMetadataType withDeviceKey(String deviceKey) {
         this.deviceKey = deviceKey;
         return this;
     }
     
+    public NewDeviceMetadataType(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 {
     @JsonProperty("height")
     public Double height;
+
     public CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 withHeight(Double height) {
         this.height = height;
         return this;
@@ -16,6 +17,7 @@ public class CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 {
     
     @JsonProperty("length")
     public Double length;
+
     public CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 withLength(Double length) {
         this.length = length;
         return this;
@@ -23,6 +25,7 @@ public class CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 {
     
     @JsonProperty("maxSumDimension")
     public Double maxSumDimension;
+
     public CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 withMaxSumDimension(Double maxSumDimension) {
         this.maxSumDimension = maxSumDimension;
         return this;
@@ -30,6 +33,7 @@ public class CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 {
     
     @JsonProperty("weight")
     public Double weight;
+
     public CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 withWeight(Double weight) {
         this.weight = weight;
         return this;
@@ -37,9 +41,17 @@ public class CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 {
     
     @JsonProperty("width")
     public Double width;
+
     public CreateReservation200ApplicationJSONSlaRequestItem1Dimension1 withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public CreateReservation200ApplicationJSONSlaRequestItem1Dimension1(@JsonProperty("height") Double height, @JsonProperty("length") Double length, @JsonProperty("maxSumDimension") Double maxSumDimension, @JsonProperty("weight") Double weight, @JsonProperty("width") Double width) {
+        this.height = height;
+        this.length = length;
+        this.maxSumDimension = maxSumDimension;
+        this.weight = weight;
+        this.width = width;
+  }
 }

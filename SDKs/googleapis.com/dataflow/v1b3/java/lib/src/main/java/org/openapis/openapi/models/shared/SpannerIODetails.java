@@ -18,6 +18,7 @@ public class SpannerIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseId")
     public String databaseId;
+
     public SpannerIODetails withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -29,6 +30,7 @@ public class SpannerIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public SpannerIODetails withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,9 +42,11 @@ public class SpannerIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SpannerIODetails withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public SpannerIODetails(){}
 }

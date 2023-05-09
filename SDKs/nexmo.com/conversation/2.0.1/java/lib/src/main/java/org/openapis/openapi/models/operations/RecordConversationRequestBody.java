@@ -17,6 +17,7 @@ public class RecordConversationRequestBody {
      */
     @JsonProperty("action")
     public org.openapis.openapi.models.shared.ActionEnum action;
+
     public RecordConversationRequestBody withAction(org.openapis.openapi.models.shared.ActionEnum action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class RecordConversationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_method")
     public String eventMethod;
+
     public RecordConversationRequestBody withEventMethod(String eventMethod) {
         this.eventMethod = eventMethod;
         return this;
@@ -39,6 +41,7 @@ public class RecordConversationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_url")
     public String[] eventUrl;
+
     public RecordConversationRequestBody withEventUrl(String[] eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -50,6 +53,7 @@ public class RecordConversationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public RecordConversationRequestBody withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
@@ -61,9 +65,13 @@ public class RecordConversationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("split")
     public String split;
+
     public RecordConversationRequestBody withSplit(String split) {
         this.split = split;
         return this;
     }
     
+    public RecordConversationRequestBody(@JsonProperty("action") org.openapis.openapi.models.shared.ActionEnum action) {
+        this.action = action;
+  }
 }

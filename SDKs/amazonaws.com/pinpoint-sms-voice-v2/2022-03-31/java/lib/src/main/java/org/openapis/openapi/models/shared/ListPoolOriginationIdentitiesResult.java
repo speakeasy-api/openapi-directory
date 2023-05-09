@@ -15,6 +15,7 @@ public class ListPoolOriginationIdentitiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPoolOriginationIdentitiesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListPoolOriginationIdentitiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationIdentities")
     public OriginationIdentityMetadata[] originationIdentities;
+
     public ListPoolOriginationIdentitiesResult withOriginationIdentities(OriginationIdentityMetadata[] originationIdentities) {
         this.originationIdentities = originationIdentities;
         return this;
@@ -31,6 +33,7 @@ public class ListPoolOriginationIdentitiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolArn")
     public String poolArn;
+
     public ListPoolOriginationIdentitiesResult withPoolArn(String poolArn) {
         this.poolArn = poolArn;
         return this;
@@ -39,9 +42,11 @@ public class ListPoolOriginationIdentitiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolId")
     public String poolId;
+
     public ListPoolOriginationIdentitiesResult withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public ListPoolOriginationIdentitiesResult(){}
 }

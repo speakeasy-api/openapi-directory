@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagePerformanceCountRequest {
@@ -12,6 +13,7 @@ public class GetImagePerformanceCountRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public GetImagePerformanceCountRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -22,6 +24,7 @@ public class GetImagePerformanceCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
     public String iterationId;
+
     public GetImagePerformanceCountRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -32,6 +35,7 @@ public class GetImagePerformanceCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetImagePerformanceCountRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -42,9 +46,15 @@ public class GetImagePerformanceCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
     public String[] tagIds;
+
     public GetImagePerformanceCountRequest withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
     }
     
+    public GetImagePerformanceCountRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("iterationId") String iterationId, @JsonProperty("projectId") String projectId) {
+        this.trainingKey = trainingKey;
+        this.iterationId = iterationId;
+        this.projectId = projectId;
+  }
 }

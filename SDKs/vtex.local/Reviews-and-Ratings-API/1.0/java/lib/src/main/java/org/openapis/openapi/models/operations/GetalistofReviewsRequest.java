@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetalistofReviewsRequest {
@@ -12,6 +13,7 @@ public class GetalistofReviewsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetalistofReviewsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetalistofReviewsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetalistofReviewsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetalistofReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public String from;
+
     public GetalistofReviewsRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -42,6 +46,7 @@ public class GetalistofReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public String orderBy;
+
     public GetalistofReviewsRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -52,6 +57,7 @@ public class GetalistofReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_id")
     public String productId;
+
     public GetalistofReviewsRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -62,6 +68,7 @@ public class GetalistofReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_term")
     public String searchTerm;
+
     public GetalistofReviewsRequest withSearchTerm(String searchTerm) {
         this.searchTerm = searchTerm;
         return this;
@@ -72,6 +79,7 @@ public class GetalistofReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public Boolean status;
+
     public GetalistofReviewsRequest withStatus(Boolean status) {
         this.status = status;
         return this;
@@ -82,9 +90,20 @@ public class GetalistofReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public String to;
+
     public GetalistofReviewsRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public GetalistofReviewsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("from") String from, @JsonProperty("order_by") String orderBy, @JsonProperty("product_id") String productId, @JsonProperty("search_term") String searchTerm, @JsonProperty("status") Boolean status, @JsonProperty("to") String to) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.from = from;
+        this.orderBy = orderBy;
+        this.productId = productId;
+        this.searchTerm = searchTerm;
+        this.status = status;
+        this.to = to;
+  }
 }

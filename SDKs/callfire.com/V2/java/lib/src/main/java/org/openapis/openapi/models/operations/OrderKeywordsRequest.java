@@ -12,6 +12,7 @@ public class OrderKeywordsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.KeywordPurchaseRequest keywordPurchaseRequest;
+
     public OrderKeywordsRequest withKeywordPurchaseRequest(org.openapis.openapi.models.shared.KeywordPurchaseRequest keywordPurchaseRequest) {
         this.keywordPurchaseRequest = keywordPurchaseRequest;
         return this;
@@ -22,9 +23,11 @@ public class OrderKeywordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public OrderKeywordsRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public OrderKeywordsRequest(){}
 }

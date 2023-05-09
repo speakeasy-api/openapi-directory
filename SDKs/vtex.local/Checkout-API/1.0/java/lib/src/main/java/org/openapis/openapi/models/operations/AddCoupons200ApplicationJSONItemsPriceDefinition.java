@@ -18,6 +18,7 @@ public class AddCoupons200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculatedSellingPrice")
     public Long calculatedSellingPrice;
+
     public AddCoupons200ApplicationJSONItemsPriceDefinition withCalculatedSellingPrice(Long calculatedSellingPrice) {
         this.calculatedSellingPrice = calculatedSellingPrice;
         return this;
@@ -29,6 +30,7 @@ public class AddCoupons200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrices")
     public AddCoupons200ApplicationJSONItemsPriceDefinitionSellingPrices[] sellingPrices;
+
     public AddCoupons200ApplicationJSONItemsPriceDefinition withSellingPrices(AddCoupons200ApplicationJSONItemsPriceDefinitionSellingPrices[] sellingPrices) {
         this.sellingPrices = sellingPrices;
         return this;
@@ -40,9 +42,11 @@ public class AddCoupons200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public AddCoupons200ApplicationJSONItemsPriceDefinition withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONItemsPriceDefinition(){}
 }

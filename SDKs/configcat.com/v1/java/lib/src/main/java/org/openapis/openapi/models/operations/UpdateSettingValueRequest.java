@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSettingValueRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput;
+
     public UpdateSettingValueRequest withJsonPatchInput(org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput) {
         this.jsonPatchInput = jsonPatchInput;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSettingValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
     public String environmentId;
+
     public UpdateSettingValueRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSettingValueRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public UpdateSettingValueRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -39,9 +43,15 @@ public class UpdateSettingValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
     public Integer settingId;
+
     public UpdateSettingValueRequest withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public UpdateSettingValueRequest(@JsonProperty("JsonPatchInput") org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput, @JsonProperty("environmentId") String environmentId, @JsonProperty("settingId") Integer settingId) {
+        this.jsonPatchInput = jsonPatchInput;
+        this.environmentId = environmentId;
+        this.settingId = settingId;
+  }
 }

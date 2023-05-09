@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReleaseIpamPoolAllocationRequest {
     
     public String cidr;
+
     public ReleaseIpamPoolAllocationRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +17,7 @@ public class ReleaseIpamPoolAllocationRequest {
     
     
     public Boolean dryRun;
+
     public ReleaseIpamPoolAllocationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ReleaseIpamPoolAllocationRequest {
     
     
     public String ipamPoolAllocationId;
+
     public ReleaseIpamPoolAllocationRequest withIpamPoolAllocationId(String ipamPoolAllocationId) {
         this.ipamPoolAllocationId = ipamPoolAllocationId;
         return this;
@@ -30,9 +33,15 @@ public class ReleaseIpamPoolAllocationRequest {
     
     
     public String ipamPoolId;
+
     public ReleaseIpamPoolAllocationRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
     }
     
+    public ReleaseIpamPoolAllocationRequest(@JsonProperty("Cidr") String cidr, @JsonProperty("IpamPoolAllocationId") String ipamPoolAllocationId, @JsonProperty("IpamPoolId") String ipamPoolId) {
+        this.cidr = cidr;
+        this.ipamPoolAllocationId = ipamPoolAllocationId;
+        this.ipamPoolId = ipamPoolId;
+  }
 }

@@ -18,6 +18,7 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_ids")
     public String[] categoryIds;
+
     public SearchCatalogItemsRequest withCategoryIds(String[] categoryIds) {
         this.categoryIds = categoryIds;
         return this;
@@ -29,6 +30,7 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchCatalogItemsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -42,6 +44,7 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_attribute_filters")
     public CustomAttributeFilter[] customAttributeFilters;
+
     public SearchCatalogItemsRequest withCustomAttributeFilters(CustomAttributeFilter[] customAttributeFilters) {
         this.customAttributeFilters = customAttributeFilters;
         return this;
@@ -53,6 +56,7 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled_location_ids")
     public String[] enabledLocationIds;
+
     public SearchCatalogItemsRequest withEnabledLocationIds(String[] enabledLocationIds) {
         this.enabledLocationIds = enabledLocationIds;
         return this;
@@ -64,6 +68,7 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchCatalogItemsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -75,6 +80,7 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_types")
     public String[] productTypes;
+
     public SearchCatalogItemsRequest withProductTypes(String[] productTypes) {
         this.productTypes = productTypes;
         return this;
@@ -86,6 +92,7 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_order")
     public String sortOrder;
+
     public SearchCatalogItemsRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -97,6 +104,7 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock_levels")
     public String[] stockLevels;
+
     public SearchCatalogItemsRequest withStockLevels(String[] stockLevels) {
         this.stockLevels = stockLevels;
         return this;
@@ -110,9 +118,11 @@ public class SearchCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_filter")
     public String textFilter;
+
     public SearchCatalogItemsRequest withTextFilter(String textFilter) {
         this.textFilter = textFilter;
         return this;
     }
     
+    public SearchCatalogItemsRequest(){}
 }

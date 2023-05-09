@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyCharacterResponseProgressions {
      */
     
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent data;
+
     public DestinyResponsesDestinyCharacterResponseProgressions withData(DestinyEntitiesCharactersDestinyCharacterProgressionComponent data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class DestinyResponsesDestinyCharacterResponseProgressions {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyCharacterResponseProgressions withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -33,9 +35,11 @@ public class DestinyResponsesDestinyCharacterResponseProgressions {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyCharacterResponseProgressions withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponseProgressions(){}
 }

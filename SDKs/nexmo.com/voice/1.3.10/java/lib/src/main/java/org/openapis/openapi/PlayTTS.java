@@ -58,11 +58,9 @@ public class PlayTTS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartTalkResponse res = new org.openapis.openapi.models.operations.StartTalkResponse() {{
+        org.openapis.openapi.models.operations.StartTalkResponse res = new org.openapis.openapi.models.operations.StartTalkResponse(contentType, httpRes.statusCode()) {{
             startTalkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class PlayTTS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopTalkResponse res = new org.openapis.openapi.models.operations.StopTalkResponse() {{
+        org.openapis.openapi.models.operations.StopTalkResponse res = new org.openapis.openapi.models.operations.StopTalkResponse(contentType, httpRes.statusCode()) {{
             stopTalkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

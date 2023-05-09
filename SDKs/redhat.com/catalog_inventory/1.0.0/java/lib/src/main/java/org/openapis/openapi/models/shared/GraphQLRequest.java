@@ -18,6 +18,7 @@ public class GraphQLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationName")
     public String operationName;
+
     public GraphQLRequest withOperationName(String operationName) {
         this.operationName = operationName;
         return this;
@@ -28,6 +29,7 @@ public class GraphQLRequest {
      */
     @JsonProperty("query")
     public String query;
+
     public GraphQLRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -39,9 +41,13 @@ public class GraphQLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variables")
     public java.util.Map<String, Object> variables;
+
     public GraphQLRequest withVariables(java.util.Map<String, Object> variables) {
         this.variables = variables;
         return this;
     }
     
+    public GraphQLRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

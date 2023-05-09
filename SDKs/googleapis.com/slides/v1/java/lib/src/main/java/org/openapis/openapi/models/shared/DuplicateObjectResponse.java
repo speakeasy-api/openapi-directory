@@ -18,9 +18,11 @@ public class DuplicateObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public DuplicateObjectResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public DuplicateObjectResponse(){}
 }

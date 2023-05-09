@@ -15,6 +15,7 @@ public class DeactivationReasonVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivation_reason_id")
     public Long deactivationReasonId;
+
     public DeactivationReasonVO withDeactivationReasonId(Long deactivationReasonId) {
         this.deactivationReasonId = deactivationReasonId;
         return this;
@@ -23,9 +24,11 @@ public class DeactivationReasonVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivation_reason_name")
     public String deactivationReasonName;
+
     public DeactivationReasonVO withDeactivationReasonName(String deactivationReasonName) {
         this.deactivationReasonName = deactivationReasonName;
         return this;
     }
     
+    public DeactivationReasonVO(){}
 }

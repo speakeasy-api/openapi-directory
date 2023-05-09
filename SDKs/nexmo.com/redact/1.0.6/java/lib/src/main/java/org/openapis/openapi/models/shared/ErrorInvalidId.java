@@ -15,6 +15,7 @@ public class ErrorInvalidId {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorInvalidId withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,6 +26,7 @@ public class ErrorInvalidId {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorInvalidId withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -35,6 +37,7 @@ public class ErrorInvalidId {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorInvalidId withTitle(String title) {
         this.title = title;
         return this;
@@ -45,9 +48,16 @@ public class ErrorInvalidId {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorInvalidId withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorInvalidId(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

@@ -12,6 +12,7 @@ public class ClaimGameServerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerData")
     public String gameServerData;
+
     public ClaimGameServerInput withGameServerData(String gameServerData) {
         this.gameServerData = gameServerData;
         return this;
@@ -19,6 +20,7 @@ public class ClaimGameServerInput {
     
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public ClaimGameServerInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -27,9 +29,13 @@ public class ClaimGameServerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerId")
     public String gameServerId;
+
     public ClaimGameServerInput withGameServerId(String gameServerId) {
         this.gameServerId = gameServerId;
         return this;
     }
     
+    public ClaimGameServerInput(@JsonProperty("GameServerGroupName") String gameServerGroupName) {
+        this.gameServerGroupName = gameServerGroupName;
+  }
 }

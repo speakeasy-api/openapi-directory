@@ -12,6 +12,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public KgsearchEntitiesSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public KgsearchEntitiesSearchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public KgsearchEntitiesSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public KgsearchEntitiesSearchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public KgsearchEntitiesSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public KgsearchEntitiesSearchRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -72,6 +78,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=indent")
     public Boolean indent;
+
     public KgsearchEntitiesSearchRequest withIndent(Boolean indent) {
         this.indent = indent;
         return this;
@@ -82,6 +89,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public KgsearchEntitiesSearchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +100,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languages")
     public String[] languages;
+
     public KgsearchEntitiesSearchRequest withLanguages(String[] languages) {
         this.languages = languages;
         return this;
@@ -102,6 +111,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public KgsearchEntitiesSearchRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -112,6 +122,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public KgsearchEntitiesSearchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +133,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
     public Boolean prefix;
+
     public KgsearchEntitiesSearchRequest withPrefix(Boolean prefix) {
         this.prefix = prefix;
         return this;
@@ -132,6 +144,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public KgsearchEntitiesSearchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +155,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public KgsearchEntitiesSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -152,6 +166,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public KgsearchEntitiesSearchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +177,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
     public String[] types;
+
     public KgsearchEntitiesSearchRequest withTypes(String[] types) {
         this.types = types;
         return this;
@@ -172,6 +188,7 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public KgsearchEntitiesSearchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +199,11 @@ public class KgsearchEntitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public KgsearchEntitiesSearchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public KgsearchEntitiesSearchRequest(){}
 }

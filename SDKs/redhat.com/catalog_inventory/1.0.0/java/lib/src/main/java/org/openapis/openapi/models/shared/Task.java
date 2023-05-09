@@ -22,6 +22,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("archived_at")
     public OffsetDateTime archivedAt;
+
     public Task withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -30,6 +31,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("child_task_id")
     public String childTaskId;
+
     public Task withChildTaskId(String childTaskId) {
         this.childTaskId = childTaskId;
         return this;
@@ -40,6 +42,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completed_at")
     public OffsetDateTime completedAt;
+
     public Task withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -48,6 +51,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controller_message_id")
     public String controllerMessageId;
+
     public Task withControllerMessageId(String controllerMessageId) {
         this.controllerMessageId = controllerMessageId;
         return this;
@@ -58,6 +62,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Task withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -69,6 +74,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Task withId(String id) {
         this.id = id;
         return this;
@@ -77,6 +83,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public java.util.Map<String, Object> input;
+
     public Task withInput(java.util.Map<String, Object> input) {
         this.input = input;
         return this;
@@ -85,6 +92,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Task withMessage(String message) {
         this.message = message;
         return this;
@@ -93,6 +101,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Task withName(String name) {
         this.name = name;
         return this;
@@ -101,6 +110,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public java.util.Map<String, Object> output;
+
     public Task withOutput(java.util.Map<String, Object> output) {
         this.output = output;
         return this;
@@ -109,6 +119,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public Task withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -120,6 +131,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_id")
     public String sourceId;
+
     public Task withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -128,6 +140,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public TaskStateEnum state;
+
     public Task withState(TaskStateEnum state) {
         this.state = state;
         return this;
@@ -136,6 +149,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TaskStatusEnum status;
+
     public Task withStatus(TaskStatusEnum status) {
         this.status = status;
         return this;
@@ -144,6 +158,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_source_ref")
     public String targetSourceRef;
+
     public Task withTargetSourceRef(String targetSourceRef) {
         this.targetSourceRef = targetSourceRef;
         return this;
@@ -152,6 +167,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_type")
     public String targetType;
+
     public Task withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -160,6 +176,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Task withType(String type) {
         this.type = type;
         return this;
@@ -170,9 +187,11 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Task withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Task(){}
 }

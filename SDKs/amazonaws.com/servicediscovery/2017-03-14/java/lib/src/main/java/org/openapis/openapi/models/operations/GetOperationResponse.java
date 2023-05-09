@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOperationResponse {
     
     public String contentType;
+
     public GetOperationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOperationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOperationResponse getOperationResponse;
+
     public GetOperationResponse withGetOperationResponse(org.openapis.openapi.models.shared.GetOperationResponse getOperationResponse) {
         this.getOperationResponse = getOperationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetOperationResponse {
      */
     
     public Object invalidInput;
+
     public GetOperationResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class GetOperationResponse {
      */
     
     public Object operationNotFound;
+
     public GetOperationResponse withOperationNotFound(Object operationNotFound) {
         this.operationNotFound = operationNotFound;
         return this;
@@ -46,6 +51,7 @@ public class GetOperationResponse {
     
     
     public Integer statusCode;
+
     public GetOperationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetOperationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOperationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOperationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

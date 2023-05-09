@@ -15,6 +15,7 @@ public class S3GlueParquetTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compression")
     public ParquetCompressionTypeEnum compression;
+
     public S3GlueParquetTarget withCompression(ParquetCompressionTypeEnum compression) {
         this.compression = compression;
         return this;
@@ -22,6 +23,7 @@ public class S3GlueParquetTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public S3GlueParquetTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -29,6 +31,7 @@ public class S3GlueParquetTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public S3GlueParquetTarget withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class S3GlueParquetTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public String[][] partitionKeys;
+
     public S3GlueParquetTarget withPartitionKeys(String[][] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -44,6 +48,7 @@ public class S3GlueParquetTarget {
     
     @JsonProperty("Path")
     public String path;
+
     public S3GlueParquetTarget withPath(String path) {
         this.path = path;
         return this;
@@ -52,9 +57,15 @@ public class S3GlueParquetTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaChangePolicy")
     public DirectSchemaChangePolicy schemaChangePolicy;
+
     public S3GlueParquetTarget withSchemaChangePolicy(DirectSchemaChangePolicy schemaChangePolicy) {
         this.schemaChangePolicy = schemaChangePolicy;
         return this;
     }
     
+    public S3GlueParquetTarget(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Path") String path) {
+        this.inputs = inputs;
+        this.name = name;
+        this.path = path;
+  }
 }

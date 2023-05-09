@@ -12,6 +12,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[created]")
     public String filterCreated;
+
     public ListSystemsRequest withFilterCreated(String filterCreated) {
         this.filterCreated = filterCreated;
         return this;
@@ -22,6 +23,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[culled_timestamp]")
     public String filterCulledTimestamp;
+
     public ListSystemsRequest withFilterCulledTimestamp(String filterCulledTimestamp) {
         this.filterCulledTimestamp = filterCulledTimestamp;
         return this;
@@ -32,6 +34,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[display_name]")
     public String filterDisplayName;
+
     public ListSystemsRequest withFilterDisplayName(String filterDisplayName) {
         this.filterDisplayName = filterDisplayName;
         return this;
@@ -42,6 +45,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[id]")
     public String filterId;
+
     public ListSystemsRequest withFilterId(String filterId) {
         this.filterId = filterId;
         return this;
@@ -52,6 +56,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[insights_id]")
     public String filterInsightsId;
+
     public ListSystemsRequest withFilterInsightsId(String filterInsightsId) {
         this.filterInsightsId = filterInsightsId;
         return this;
@@ -62,6 +67,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[last_evaluation]")
     public String filterLastEvaluation;
+
     public ListSystemsRequest withFilterLastEvaluation(String filterLastEvaluation) {
         this.filterLastEvaluation = filterLastEvaluation;
         return this;
@@ -72,6 +78,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[last_upload]")
     public String filterLastUpload;
+
     public ListSystemsRequest withFilterLastUpload(String filterLastUpload) {
         this.filterLastUpload = filterLastUpload;
         return this;
@@ -82,6 +89,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[other_count]")
     public String filterOtherCount;
+
     public ListSystemsRequest withFilterOtherCount(String filterOtherCount) {
         this.filterOtherCount = filterOtherCount;
         return this;
@@ -92,6 +100,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[packages_installed]")
     public String filterPackagesInstalled;
+
     public ListSystemsRequest withFilterPackagesInstalled(String filterPackagesInstalled) {
         this.filterPackagesInstalled = filterPackagesInstalled;
         return this;
@@ -102,6 +111,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[packages_updatable]")
     public String filterPackagesUpdatable;
+
     public ListSystemsRequest withFilterPackagesUpdatable(String filterPackagesUpdatable) {
         this.filterPackagesUpdatable = filterPackagesUpdatable;
         return this;
@@ -112,6 +122,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhba_count]")
     public String filterRhbaCount;
+
     public ListSystemsRequest withFilterRhbaCount(String filterRhbaCount) {
         this.filterRhbaCount = filterRhbaCount;
         return this;
@@ -122,6 +133,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhea_count]")
     public String filterRheaCount;
+
     public ListSystemsRequest withFilterRheaCount(String filterRheaCount) {
         this.filterRheaCount = filterRheaCount;
         return this;
@@ -132,6 +144,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhsa_count]")
     public String filterRhsaCount;
+
     public ListSystemsRequest withFilterRhsaCount(String filterRhsaCount) {
         this.filterRhsaCount = filterRhsaCount;
         return this;
@@ -142,6 +155,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[stale]")
     public String filterStale;
+
     public ListSystemsRequest withFilterStale(String filterStale) {
         this.filterStale = filterStale;
         return this;
@@ -152,6 +166,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[stale_timestamp]")
     public String filterStaleTimestamp;
+
     public ListSystemsRequest withFilterStaleTimestamp(String filterStaleTimestamp) {
         this.filterStaleTimestamp = filterStaleTimestamp;
         return this;
@@ -162,6 +177,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[stale_warning_timestamp]")
     public String filterStaleWarningTimestamp;
+
     public ListSystemsRequest withFilterStaleWarningTimestamp(String filterStaleWarningTimestamp) {
         this.filterStaleWarningTimestamp = filterStaleWarningTimestamp;
         return this;
@@ -172,6 +188,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
     public String[] filterSystemProfileSapSidsIn;
+
     public ListSystemsRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
         this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
         return this;
@@ -182,6 +199,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
     public String filterSystemProfileSapSystem;
+
     public ListSystemsRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
         this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
         return this;
@@ -192,6 +210,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListSystemsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -202,6 +221,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListSystemsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -212,6 +232,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ListSystemsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -222,6 +243,7 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ListSystemsSortEnum sort;
+
     public ListSystemsRequest withSort(ListSystemsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -232,9 +254,11 @@ public class ListSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String[] tags;
+
     public ListSystemsRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListSystemsRequest(){}
 }

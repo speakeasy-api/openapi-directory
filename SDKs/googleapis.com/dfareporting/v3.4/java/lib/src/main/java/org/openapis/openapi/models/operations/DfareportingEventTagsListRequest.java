@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingEventTagsListRequest {
@@ -12,6 +13,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingEventTagsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingEventTagsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adId")
     public String adId;
+
     public DfareportingEventTagsListRequest withAdId(String adId) {
         this.adId = adId;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DfareportingEventTagsListRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingEventTagsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingEventTagsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
     public String campaignId;
+
     public DfareportingEventTagsListRequest withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=definitionsOnly")
     public Boolean definitionsOnly;
+
     public DfareportingEventTagsListRequest withDefinitionsOnly(Boolean definitionsOnly) {
         this.definitionsOnly = definitionsOnly;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enabled")
     public Boolean enabled;
+
     public DfareportingEventTagsListRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventTagTypes")
     public DfareportingEventTagsListEventTagTypesEnum[] eventTagTypes;
+
     public DfareportingEventTagsListRequest withEventTagTypes(DfareportingEventTagsListEventTagTypesEnum[] eventTagTypes) {
         this.eventTagTypes = eventTagTypes;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingEventTagsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public DfareportingEventTagsListRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingEventTagsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingEventTagsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingEventTagsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -162,6 +178,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingEventTagsListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -172,6 +189,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingEventTagsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -182,6 +200,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
     public String searchString;
+
     public DfareportingEventTagsListRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
@@ -192,6 +211,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public DfareportingEventTagsListSortFieldEnum sortField;
+
     public DfareportingEventTagsListRequest withSortField(DfareportingEventTagsListSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -202,6 +222,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DfareportingEventTagsListSortOrderEnum sortOrder;
+
     public DfareportingEventTagsListRequest withSortOrder(DfareportingEventTagsListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -212,6 +233,7 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingEventTagsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -222,9 +244,13 @@ public class DfareportingEventTagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingEventTagsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingEventTagsListRequest(@JsonProperty("profileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

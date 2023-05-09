@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVisualCrossingWebServicesRestServicesTimelineLocationRequest {
@@ -12,6 +13,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
     public String contentType;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public String include;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withInclude(String include) {
         this.include = include;
         return this;
@@ -29,6 +32,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withKey(String key) {
         this.key = key;
         return this;
@@ -39,6 +43,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -49,6 +54,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -56,9 +62,14 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitGroup")
     public String unitGroup;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withUnitGroup(String unitGroup) {
         this.unitGroup = unitGroup;
         return this;
     }
     
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest(@JsonProperty("key") String key, @JsonProperty("location") String location) {
+        this.key = key;
+        this.location = location;
+  }
 }

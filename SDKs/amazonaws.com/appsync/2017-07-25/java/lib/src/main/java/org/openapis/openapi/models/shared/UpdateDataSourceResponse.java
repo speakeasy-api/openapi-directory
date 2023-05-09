@@ -15,9 +15,11 @@ public class UpdateDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public DataSource dataSource;
+
     public UpdateDataSourceResponse withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
     }
     
+    public UpdateDataSourceResponse(){}
 }

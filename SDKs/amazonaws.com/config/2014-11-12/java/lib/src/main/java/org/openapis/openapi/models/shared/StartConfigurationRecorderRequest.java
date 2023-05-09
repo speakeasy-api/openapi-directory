@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartConfigurationRecorderRequest {
     @JsonProperty("ConfigurationRecorderName")
     public String configurationRecorderName;
+
     public StartConfigurationRecorderRequest withConfigurationRecorderName(String configurationRecorderName) {
         this.configurationRecorderName = configurationRecorderName;
         return this;
     }
     
+    public StartConfigurationRecorderRequest(@JsonProperty("ConfigurationRecorderName") String configurationRecorderName) {
+        this.configurationRecorderName = configurationRecorderName;
+  }
 }

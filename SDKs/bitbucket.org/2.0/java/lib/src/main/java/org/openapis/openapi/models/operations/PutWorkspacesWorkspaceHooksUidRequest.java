@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspacesWorkspaceHooksUidRequest {
@@ -12,6 +13,7 @@ public class PutWorkspacesWorkspaceHooksUidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uid")
     public String uid;
+
     public PutWorkspacesWorkspaceHooksUidRequest withUid(String uid) {
         this.uid = uid;
         return this;
@@ -24,9 +26,14 @@ public class PutWorkspacesWorkspaceHooksUidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PutWorkspacesWorkspaceHooksUidRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PutWorkspacesWorkspaceHooksUidRequest(@JsonProperty("uid") String uid, @JsonProperty("workspace") String workspace) {
+        this.uid = uid;
+        this.workspace = workspace;
+  }
 }

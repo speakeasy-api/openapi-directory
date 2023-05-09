@@ -18,6 +18,7 @@ public class ServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appAssociation")
     public ServingConfigAppAssociationEnum appAssociation;
+
     public ServingConfig withAppAssociation(ServingConfigAppAssociationEnum appAssociation) {
         this.appAssociation = appAssociation;
         return this;
@@ -29,6 +30,7 @@ public class ServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cleanUrls")
     public Boolean cleanUrls;
+
     public ServingConfig withCleanUrls(Boolean cleanUrls) {
         this.cleanUrls = cleanUrls;
         return this;
@@ -40,6 +42,7 @@ public class ServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public Header[] headers;
+
     public ServingConfig withHeaders(Header[] headers) {
         this.headers = headers;
         return this;
@@ -51,6 +54,7 @@ public class ServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("i18n")
     public I18nConfig i18n;
+
     public ServingConfig withI18n(I18nConfig i18n) {
         this.i18n = i18n;
         return this;
@@ -62,6 +66,7 @@ public class ServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirects")
     public Redirect[] redirects;
+
     public ServingConfig withRedirects(Redirect[] redirects) {
         this.redirects = redirects;
         return this;
@@ -73,6 +78,7 @@ public class ServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rewrites")
     public Rewrite[] rewrites;
+
     public ServingConfig withRewrites(Rewrite[] rewrites) {
         this.rewrites = rewrites;
         return this;
@@ -84,9 +90,11 @@ public class ServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trailingSlashBehavior")
     public ServingConfigTrailingSlashBehaviorEnum trailingSlashBehavior;
+
     public ServingConfig withTrailingSlashBehavior(ServingConfigTrailingSlashBehaviorEnum trailingSlashBehavior) {
         this.trailingSlashBehavior = trailingSlashBehavior;
         return this;
     }
     
+    public ServingConfig(){}
 }

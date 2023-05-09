@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectoryDomainsGetRequest {
@@ -12,6 +13,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DirectoryDomainsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DirectoryDomainsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DirectoryDomainsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DirectoryDomainsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer")
     public String customer;
+
     public DirectoryDomainsGetRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -62,6 +68,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainName;
+
     public DirectoryDomainsGetRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -72,6 +79,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DirectoryDomainsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DirectoryDomainsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DirectoryDomainsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DirectoryDomainsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DirectoryDomainsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DirectoryDomainsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,9 +145,14 @@ public class DirectoryDomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DirectoryDomainsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DirectoryDomainsGetRequest(@JsonProperty("customer") String customer, @JsonProperty("domainName") String domainName) {
+        this.customer = customer;
+        this.domainName = domainName;
+  }
 }

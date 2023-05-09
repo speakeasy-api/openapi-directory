@@ -16,41 +16,34 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateAccountRequest;
 import org.openapis.openapi.models.operations.CreateAccountResponse;
+import org.openapis.openapi.models.shared.AccountTypeEnum;
 import org.openapis.openapi.models.shared.PostAccountWrapper;
 import org.openapis.openapi.models.shared.SaveAccount;
-import org.openapis.openapi.models.shared.AccountTypeEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     bearer = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateAccountRequest req = new CreateAccountRequest() {{
-                postAccountWrapper = new PostAccountWrapper() {{
-                    account = new SaveAccount() {{
-                        balance = 548814;
-                        name = "provident";
-                        type = "studentLoan";
-                    }};
-                }};
-                budgetId = "quibusdam";
-            }}            
+            CreateAccountRequest req = new CreateAccountRequest(                new PostAccountWrapper(                new SaveAccount(592845L, "distinctio", AccountTypeEnum.PERSONAL_LOAN););, "unde");            
 
             CreateAccountResponse res = sdk.accounts.createAccount(req);
 
-            if (res.accountResponse.isPresent()) {
+            if (res.accountResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -58,66 +51,66 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `createAccount` - Create a new account
-* `getAccountById` - Single account
-* `getAccounts` - Account list
+* [createAccount](docs/accounts/README.md#createaccount) - Create a new account
+* [getAccountById](docs/accounts/README.md#getaccountbyid) - Single account
+* [getAccounts](docs/accounts/README.md#getaccounts) - Account list
 
-### budgets
+### [budgets](docs/budgets/README.md)
 
-* `getBudgetById` - Single budget
-* `getBudgetSettingsById` - Budget Settings
-* `getBudgets` - List budgets
+* [getBudgetById](docs/budgets/README.md#getbudgetbyid) - Single budget
+* [getBudgetSettingsById](docs/budgets/README.md#getbudgetsettingsbyid) - Budget Settings
+* [getBudgets](docs/budgets/README.md#getbudgets) - List budgets
 
-### categories
+### [categories](docs/categories/README.md)
 
-* `getCategories` - List categories
-* `getCategoryById` - Single category
-* `getMonthCategoryById` - Single category for a specific budget month
-* `updateMonthCategory` - Update a category for a specific month
+* [getCategories](docs/categories/README.md#getcategories) - List categories
+* [getCategoryById](docs/categories/README.md#getcategorybyid) - Single category
+* [getMonthCategoryById](docs/categories/README.md#getmonthcategorybyid) - Single category for a specific budget month
+* [updateMonthCategory](docs/categories/README.md#updatemonthcategory) - Update a category for a specific month
 
-### deprecated
+### [deprecated](docs/deprecated/README.md)
 
-* `bulkCreateTransactions` - Bulk create transactions
+* [bulkCreateTransactions](docs/deprecated/README.md#bulkcreatetransactions) - Bulk create transactions
 
-### months
+### [months](docs/months/README.md)
 
-* `getBudgetMonth` - Single budget month
-* `getBudgetMonths` - List budget months
+* [getBudgetMonth](docs/months/README.md#getbudgetmonth) - Single budget month
+* [getBudgetMonths](docs/months/README.md#getbudgetmonths) - List budget months
 
-### payeeLocations
+### [payeeLocations](docs/payeelocations/README.md)
 
-* `getPayeeLocationById` - Single payee location
-* `getPayeeLocations` - List payee locations
-* `getPayeeLocationsByPayee` - List locations for a payee
+* [getPayeeLocationById](docs/payeelocations/README.md#getpayeelocationbyid) - Single payee location
+* [getPayeeLocations](docs/payeelocations/README.md#getpayeelocations) - List payee locations
+* [getPayeeLocationsByPayee](docs/payeelocations/README.md#getpayeelocationsbypayee) - List locations for a payee
 
-### payees
+### [payees](docs/payees/README.md)
 
-* `getPayeeById` - Single payee
-* `getPayees` - List payees
+* [getPayeeById](docs/payees/README.md#getpayeebyid) - Single payee
+* [getPayees](docs/payees/README.md#getpayees) - List payees
 
-### scheduledTransactions
+### [scheduledTransactions](docs/scheduledtransactions/README.md)
 
-* `getScheduledTransactionById` - Single scheduled transaction
-* `getScheduledTransactions` - List scheduled transactions
+* [getScheduledTransactionById](docs/scheduledtransactions/README.md#getscheduledtransactionbyid) - Single scheduled transaction
+* [getScheduledTransactions](docs/scheduledtransactions/README.md#getscheduledtransactions) - List scheduled transactions
 
-### transactions
+### [transactions](docs/transactions/README.md)
 
-* `createTransaction` - Create a single transaction or multiple transactions
-* `deleteTransaction` - Deletes an existing transaction
-* `getTransactionById` - Single transaction
-* `getTransactions` - List transactions
-* `getTransactionsByAccount` - List account transactions
-* `getTransactionsByCategory` - List category transactions
-* `getTransactionsByPayee` - List payee transactions
-* `importTransactions` - Import transactions
-* `updateTransaction` - Updates an existing transaction
-* `updateTransactions` - Update multiple transactions
+* [createTransaction](docs/transactions/README.md#createtransaction) - Create a single transaction or multiple transactions
+* [deleteTransaction](docs/transactions/README.md#deletetransaction) - Deletes an existing transaction
+* [getTransactionById](docs/transactions/README.md#gettransactionbyid) - Single transaction
+* [getTransactions](docs/transactions/README.md#gettransactions) - List transactions
+* [getTransactionsByAccount](docs/transactions/README.md#gettransactionsbyaccount) - List account transactions
+* [getTransactionsByCategory](docs/transactions/README.md#gettransactionsbycategory) - List category transactions
+* [getTransactionsByPayee](docs/transactions/README.md#gettransactionsbypayee) - List payee transactions
+* [importTransactions](docs/transactions/README.md#importtransactions) - Import transactions
+* [updateTransaction](docs/transactions/README.md#updatetransaction) - Updates an existing transaction
+* [updateTransactions](docs/transactions/README.md#updatetransactions) - Update multiple transactions
 
-### user
+### [user](docs/user/README.md)
 
-* `getUser` - User info
+* [getUser](docs/user/README.md#getuser) - User info
 <!-- End SDK Available Operations -->
 
 ### Maturity

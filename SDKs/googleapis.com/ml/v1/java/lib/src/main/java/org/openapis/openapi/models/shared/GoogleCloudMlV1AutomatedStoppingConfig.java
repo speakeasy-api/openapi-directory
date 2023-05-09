@@ -15,6 +15,7 @@ public class GoogleCloudMlV1AutomatedStoppingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decayCurveStoppingConfig")
     public GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig decayCurveStoppingConfig;
+
     public GoogleCloudMlV1AutomatedStoppingConfig withDecayCurveStoppingConfig(GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig decayCurveStoppingConfig) {
         this.decayCurveStoppingConfig = decayCurveStoppingConfig;
         return this;
@@ -26,9 +27,11 @@ public class GoogleCloudMlV1AutomatedStoppingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medianAutomatedStoppingConfig")
     public GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig medianAutomatedStoppingConfig;
+
     public GoogleCloudMlV1AutomatedStoppingConfig withMedianAutomatedStoppingConfig(GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig medianAutomatedStoppingConfig) {
         this.medianAutomatedStoppingConfig = medianAutomatedStoppingConfig;
         return this;
     }
     
+    public GoogleCloudMlV1AutomatedStoppingConfig(){}
 }

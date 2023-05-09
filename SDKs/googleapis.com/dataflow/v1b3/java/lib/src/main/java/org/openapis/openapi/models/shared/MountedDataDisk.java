@@ -18,9 +18,11 @@ public class MountedDataDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDisk")
     public String dataDisk;
+
     public MountedDataDisk withDataDisk(String dataDisk) {
         this.dataDisk = dataDisk;
         return this;
     }
     
+    public MountedDataDisk(){}
 }

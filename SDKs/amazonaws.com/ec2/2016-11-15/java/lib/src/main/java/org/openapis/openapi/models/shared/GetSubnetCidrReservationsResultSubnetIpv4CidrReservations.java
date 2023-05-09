@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetSubnetCidrReservationsResultSubnetIpv4CidrReservations {
     
     public String cidr;
+
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class GetSubnetCidrReservationsResultSubnetIpv4CidrReservations {
     
     
     public String description;
+
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class GetSubnetCidrReservationsResultSubnetIpv4CidrReservations {
     
     
     public String ownerId;
+
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class GetSubnetCidrReservationsResultSubnetIpv4CidrReservations {
     
     
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum reservationType;
+
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations withReservationType(GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum reservationType) {
         this.reservationType = reservationType;
         return this;
@@ -40,6 +44,7 @@ public class GetSubnetCidrReservationsResultSubnetIpv4CidrReservations {
     
     
     public String subnetCidrReservationId;
+
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations withSubnetCidrReservationId(String subnetCidrReservationId) {
         this.subnetCidrReservationId = subnetCidrReservationId;
         return this;
@@ -47,6 +52,7 @@ public class GetSubnetCidrReservationsResultSubnetIpv4CidrReservations {
     
     
     public String subnetId;
+
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -54,9 +60,11 @@ public class GetSubnetCidrReservationsResultSubnetIpv4CidrReservations {
     
     
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsTags[] tags;
+
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations withTags(GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations(){}
 }

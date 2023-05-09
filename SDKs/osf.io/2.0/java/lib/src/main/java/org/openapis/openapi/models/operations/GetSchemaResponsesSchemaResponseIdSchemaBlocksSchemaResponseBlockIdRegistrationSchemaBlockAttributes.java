@@ -15,6 +15,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributesBlockTypeEnum blockType;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes withBlockType(GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributesBlockTypeEnum blockType) {
         this.blockType = blockType;
         return this;
@@ -25,6 +26,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public String displayText;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
@@ -35,6 +37,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public String exampleText;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes withExampleText(String exampleText) {
         this.exampleText = exampleText;
         return this;
@@ -45,6 +48,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public Long index;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes withIndex(Long index) {
         this.index = index;
         return this;
@@ -55,6 +59,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public String registrationResponseKey;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes withRegistrationResponseKey(String registrationResponseKey) {
         this.registrationResponseKey = registrationResponseKey;
         return this;
@@ -65,6 +70,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public Boolean required;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -75,9 +81,11 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public String schemaBlockGroupKey;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes withSchemaBlockGroupKey(String schemaBlockGroupKey) {
         this.schemaBlockGroupKey = schemaBlockGroupKey;
         return this;
     }
     
+    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes(){}
 }

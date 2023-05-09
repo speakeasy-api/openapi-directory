@@ -18,6 +18,7 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceThreshold")
     public Double confidenceThreshold;
+
     public ConfusionMatrix withConfidenceThreshold(Double confidenceThreshold) {
         this.confidenceThreshold = confidenceThreshold;
         return this;
@@ -29,9 +30,11 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Row[] rows;
+
     public ConfusionMatrix withRows(Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public ConfusionMatrix(){}
 }

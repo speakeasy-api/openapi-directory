@@ -18,6 +18,7 @@ public class CaPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuancePolicy")
     public IssuancePolicy issuancePolicy;
+
     public CaPoolInput withIssuancePolicy(IssuancePolicy issuancePolicy) {
         this.issuancePolicy = issuancePolicy;
         return this;
@@ -29,6 +30,7 @@ public class CaPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public CaPoolInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class CaPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishingOptions")
     public PublishingOptions publishingOptions;
+
     public CaPoolInput withPublishingOptions(PublishingOptions publishingOptions) {
         this.publishingOptions = publishingOptions;
         return this;
@@ -51,9 +54,11 @@ public class CaPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public CaPoolTierEnum tier;
+
     public CaPoolInput withTier(CaPoolTierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public CaPoolInput(){}
 }

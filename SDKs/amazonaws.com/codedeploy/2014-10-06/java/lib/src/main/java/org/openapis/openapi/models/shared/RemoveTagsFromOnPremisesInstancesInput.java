@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveTagsFromOnPremisesInstancesInput {
     @JsonProperty("instanceNames")
     public String[] instanceNames;
+
     public RemoveTagsFromOnPremisesInstancesInput withInstanceNames(String[] instanceNames) {
         this.instanceNames = instanceNames;
         return this;
@@ -19,9 +20,14 @@ public class RemoveTagsFromOnPremisesInstancesInput {
     
     @JsonProperty("tags")
     public Tag[] tags;
+
     public RemoveTagsFromOnPremisesInstancesInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RemoveTagsFromOnPremisesInstancesInput(@JsonProperty("instanceNames") String[] instanceNames, @JsonProperty("tags") Tag[] tags) {
+        this.instanceNames = instanceNames;
+        this.tags = tags;
+  }
 }

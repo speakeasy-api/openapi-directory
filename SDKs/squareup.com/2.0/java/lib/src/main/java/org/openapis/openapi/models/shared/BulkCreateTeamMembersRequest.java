@@ -15,9 +15,13 @@ public class BulkCreateTeamMembersRequest {
      */
     @JsonProperty("team_members")
     public java.util.Map<String, CreateTeamMemberRequest> teamMembers;
+
     public BulkCreateTeamMembersRequest withTeamMembers(java.util.Map<String, CreateTeamMemberRequest> teamMembers) {
         this.teamMembers = teamMembers;
         return this;
     }
     
+    public BulkCreateTeamMembersRequest(@JsonProperty("team_members") java.util.Map<String, CreateTeamMemberRequest> teamMembers) {
+        this.teamMembers = teamMembers;
+  }
 }

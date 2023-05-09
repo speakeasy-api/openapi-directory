@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCourseMappingsOfferingIdExternalCourseIdResponse {
     
     public String contentType;
+
     public DeleteCourseMappingsOfferingIdExternalCourseIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCourseMappingsOfferingIdExternalCourseIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteCourseMappingsOfferingIdExternalCourseIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DeleteCourseMappingsOfferingIdExternalCourseIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteCourseMappingsOfferingIdExternalCourseIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteCourseMappingsOfferingIdExternalCourseIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCourseMappingsOfferingIdExternalCourseIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteCourseMappingsOfferingIdExternalCourseIdResponse {
      */
     
     public String[] deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings;
+
     public DeleteCourseMappingsOfferingIdExternalCourseIdResponse withDeleteCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings(String[] deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings) {
         this.deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings = deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings;
         return this;
     }
     
+    public DeleteCourseMappingsOfferingIdExternalCourseIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

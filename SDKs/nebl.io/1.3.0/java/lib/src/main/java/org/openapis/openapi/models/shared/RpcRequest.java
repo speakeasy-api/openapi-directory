@@ -12,6 +12,7 @@ public class RpcRequest {
      */
     @JsonProperty("id")
     public String id;
+
     public RpcRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class RpcRequest {
      */
     @JsonProperty("jsonrpc")
     public String jsonrpc;
+
     public RpcRequest withJsonrpc(String jsonrpc) {
         this.jsonrpc = jsonrpc;
         return this;
@@ -32,6 +34,7 @@ public class RpcRequest {
      */
     @JsonProperty("method")
     public String method;
+
     public RpcRequest withMethod(String method) {
         this.method = method;
         return this;
@@ -42,9 +45,16 @@ public class RpcRequest {
      */
     @JsonProperty("params")
     public String[] params;
+
     public RpcRequest withParams(String[] params) {
         this.params = params;
         return this;
     }
     
+    public RpcRequest(@JsonProperty("id") String id, @JsonProperty("jsonrpc") String jsonrpc, @JsonProperty("method") String method, @JsonProperty("params") String[] params) {
+        this.id = id;
+        this.jsonrpc = jsonrpc;
+        this.method = method;
+        this.params = params;
+  }
 }

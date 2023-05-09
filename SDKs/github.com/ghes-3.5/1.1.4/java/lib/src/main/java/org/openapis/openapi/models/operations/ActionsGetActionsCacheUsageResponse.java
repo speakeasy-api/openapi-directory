@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetActionsCacheUsageResponse {
     
     public String contentType;
+
     public ActionsGetActionsCacheUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetActionsCacheUsageResponse {
     
     
     public Integer statusCode;
+
     public ActionsGetActionsCacheUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetActionsCacheUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetActionsCacheUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsGetActionsCacheUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionsCacheUsageByRepository actionsCacheUsageByRepository;
+
     public ActionsGetActionsCacheUsageResponse withActionsCacheUsageByRepository(org.openapis.openapi.models.shared.ActionsCacheUsageByRepository actionsCacheUsageByRepository) {
         this.actionsCacheUsageByRepository = actionsCacheUsageByRepository;
         return this;
     }
     
+    public ActionsGetActionsCacheUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

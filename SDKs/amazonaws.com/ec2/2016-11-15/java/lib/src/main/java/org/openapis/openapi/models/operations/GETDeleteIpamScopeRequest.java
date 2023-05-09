@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteIpamScopeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteIpamScopeActionEnum action;
+
     public GETDeleteIpamScopeRequest withAction(GETDeleteIpamScopeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteIpamScopeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteIpamScopeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteIpamScopeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamScopeId")
     public String ipamScopeId;
+
     public GETDeleteIpamScopeRequest withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteIpamScopeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteIpamScopeVersionEnum version;
+
     public GETDeleteIpamScopeRequest withVersion(GETDeleteIpamScopeVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteIpamScopeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteIpamScopeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteIpamScopeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteIpamScopeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteIpamScopeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteIpamScopeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeleteIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteIpamScopeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteIpamScopeRequest(@JsonProperty("Action") GETDeleteIpamScopeActionEnum action, @JsonProperty("IpamScopeId") String ipamScopeId, @JsonProperty("Version") GETDeleteIpamScopeVersionEnum version) {
+        this.action = action;
+        this.ipamScopeId = ipamScopeId;
+        this.version = version;
+  }
 }

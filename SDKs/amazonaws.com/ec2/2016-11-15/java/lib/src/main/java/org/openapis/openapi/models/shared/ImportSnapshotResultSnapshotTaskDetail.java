@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportSnapshotResultSnapshotTaskDetail {
     
     public String description;
+
     public ImportSnapshotResultSnapshotTaskDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public Double diskImageSize;
+
     public ImportSnapshotResultSnapshotTaskDetail withDiskImageSize(Double diskImageSize) {
         this.diskImageSize = diskImageSize;
         return this;
@@ -26,6 +28,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public Boolean encrypted;
+
     public ImportSnapshotResultSnapshotTaskDetail withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -33,6 +36,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public String format;
+
     public ImportSnapshotResultSnapshotTaskDetail withFormat(String format) {
         this.format = format;
         return this;
@@ -40,6 +44,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public String kmsKeyId;
+
     public ImportSnapshotResultSnapshotTaskDetail withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -47,6 +52,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public String progress;
+
     public ImportSnapshotResultSnapshotTaskDetail withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -54,6 +60,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public String snapshotId;
+
     public ImportSnapshotResultSnapshotTaskDetail withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -61,6 +68,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public String status;
+
     public ImportSnapshotResultSnapshotTaskDetail withStatus(String status) {
         this.status = status;
         return this;
@@ -68,6 +76,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public String statusMessage;
+
     public ImportSnapshotResultSnapshotTaskDetail withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -75,6 +84,7 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public String url;
+
     public ImportSnapshotResultSnapshotTaskDetail withUrl(String url) {
         this.url = url;
         return this;
@@ -82,9 +92,11 @@ public class ImportSnapshotResultSnapshotTaskDetail {
     
     
     public ImportSnapshotResultSnapshotTaskDetailUserBucket userBucket;
+
     public ImportSnapshotResultSnapshotTaskDetail withUserBucket(ImportSnapshotResultSnapshotTaskDetailUserBucket userBucket) {
         this.userBucket = userBucket;
         return this;
     }
     
+    public ImportSnapshotResultSnapshotTaskDetail(){}
 }

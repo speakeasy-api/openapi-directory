@@ -12,9 +12,11 @@ public class GetMeFavoritesIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetMeFavoritesIdsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetMeFavoritesIdsRequest(){}
 }

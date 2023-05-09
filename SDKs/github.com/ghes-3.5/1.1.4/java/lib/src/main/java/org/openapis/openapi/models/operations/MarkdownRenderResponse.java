@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MarkdownRenderResponse {
     
     public String contentType;
+
     public MarkdownRenderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MarkdownRenderResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public MarkdownRenderResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class MarkdownRenderResponse {
     
     
     public Integer statusCode;
+
     public MarkdownRenderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class MarkdownRenderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MarkdownRenderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class MarkdownRenderResponse {
      */
     
     public String markdownRender200TextHTMLString;
+
     public MarkdownRenderResponse withMarkdownRender200TextHTMLString(String markdownRender200TextHTMLString) {
         this.markdownRender200TextHTMLString = markdownRender200TextHTMLString;
         return this;
     }
     
+    public MarkdownRenderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class PatchInstanceFilterGroupLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PatchInstanceFilterGroupLabel withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public PatchInstanceFilterGroupLabel(){}
 }

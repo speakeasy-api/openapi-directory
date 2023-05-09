@@ -18,6 +18,7 @@ public class ListInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public Instance[] instances;
+
     public ListInstancesResponse withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -29,9 +30,11 @@ public class ListInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListInstancesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListInstancesResponse(){}
 }

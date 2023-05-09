@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoadBalancersIdRequest {
@@ -12,9 +13,13 @@ public class GetLoadBalancersIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetLoadBalancersIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetLoadBalancersIdRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

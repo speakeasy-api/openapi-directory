@@ -15,6 +15,7 @@ public class GetMailDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DkimVerificationStatus")
     public DnsRecordVerificationStatusEnum dkimVerificationStatus;
+
     public GetMailDomainResponse withDkimVerificationStatus(DnsRecordVerificationStatusEnum dkimVerificationStatus) {
         this.dkimVerificationStatus = dkimVerificationStatus;
         return this;
@@ -23,6 +24,7 @@ public class GetMailDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDefault")
     public Boolean isDefault;
+
     public GetMailDomainResponse withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -31,6 +33,7 @@ public class GetMailDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsTestDomain")
     public Boolean isTestDomain;
+
     public GetMailDomainResponse withIsTestDomain(Boolean isTestDomain) {
         this.isTestDomain = isTestDomain;
         return this;
@@ -39,6 +42,7 @@ public class GetMailDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnershipVerificationStatus")
     public DnsRecordVerificationStatusEnum ownershipVerificationStatus;
+
     public GetMailDomainResponse withOwnershipVerificationStatus(DnsRecordVerificationStatusEnum ownershipVerificationStatus) {
         this.ownershipVerificationStatus = ownershipVerificationStatus;
         return this;
@@ -47,9 +51,11 @@ public class GetMailDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Records")
     public DnsRecord[] records;
+
     public GetMailDomainResponse withRecords(DnsRecord[] records) {
         this.records = records;
         return this;
     }
     
+    public GetMailDomainResponse(){}
 }

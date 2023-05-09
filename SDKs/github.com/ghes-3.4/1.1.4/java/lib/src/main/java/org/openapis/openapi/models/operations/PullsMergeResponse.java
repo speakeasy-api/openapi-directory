@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsMergeResponse {
     
     public String contentType;
+
     public PullsMergeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsMergeResponse {
     
     
     public Integer statusCode;
+
     public PullsMergeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PullsMergeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsMergeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PullsMergeResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public PullsMergeResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class PullsMergeResponse {
      */
     
     public org.openapis.openapi.models.shared.PullRequestMergeResult pullRequestMergeResult;
+
     public PullsMergeResponse withPullRequestMergeResult(org.openapis.openapi.models.shared.PullRequestMergeResult pullRequestMergeResult) {
         this.pullRequestMergeResult = pullRequestMergeResult;
         return this;
@@ -53,6 +59,7 @@ public class PullsMergeResponse {
      */
     
     public PullsMerge405ApplicationJSON pullsMerge405ApplicationJSONObject;
+
     public PullsMergeResponse withPullsMerge405ApplicationJSONObject(PullsMerge405ApplicationJSON pullsMerge405ApplicationJSONObject) {
         this.pullsMerge405ApplicationJSONObject = pullsMerge405ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PullsMergeResponse {
      */
     
     public PullsMerge409ApplicationJSON pullsMerge409ApplicationJSONObject;
+
     public PullsMergeResponse withPullsMerge409ApplicationJSONObject(PullsMerge409ApplicationJSON pullsMerge409ApplicationJSONObject) {
         this.pullsMerge409ApplicationJSONObject = pullsMerge409ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class PullsMergeResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public PullsMergeResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public PullsMergeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

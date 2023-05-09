@@ -12,9 +12,13 @@ public class UpdateConnectorRequestBody {
      */
     @JsonProperty("capacity")
     public UpdateConnectorRequestBodyCapacity capacity;
+
     public UpdateConnectorRequestBody withCapacity(UpdateConnectorRequestBodyCapacity capacity) {
         this.capacity = capacity;
         return this;
     }
     
+    public UpdateConnectorRequestBody(@JsonProperty("capacity") UpdateConnectorRequestBodyCapacity capacity) {
+        this.capacity = capacity;
+  }
 }

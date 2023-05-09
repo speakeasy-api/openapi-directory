@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionMode
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public java.util.Map<String, Object> configuration;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withConfiguration(java.util.Map<String, Object> configuration) {
         this.configuration = configuration;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionMode
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionMode
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsNullable")
     public Boolean isNullable;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withIsNullable(Boolean isNullable) {
         this.isNullable = isNullable;
         return this;
@@ -36,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionMode
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionMode
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum type;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withType(BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel(){}
 }

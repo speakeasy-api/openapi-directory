@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2ImportConversationDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudDialogflowV2InputConfig inputConfig;
+
     public GoogleCloudDialogflowV2ImportConversationDataRequest withInputConfig(GoogleCloudDialogflowV2InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ImportConversationDataRequest(){}
 }

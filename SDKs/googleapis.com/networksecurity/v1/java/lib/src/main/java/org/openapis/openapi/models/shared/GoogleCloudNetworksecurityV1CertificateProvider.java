@@ -18,6 +18,7 @@ public class GoogleCloudNetworksecurityV1CertificateProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateProviderInstance")
     public CertificateProviderInstance certificateProviderInstance;
+
     public GoogleCloudNetworksecurityV1CertificateProvider withCertificateProviderInstance(CertificateProviderInstance certificateProviderInstance) {
         this.certificateProviderInstance = certificateProviderInstance;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudNetworksecurityV1CertificateProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcEndpoint")
     public GoogleCloudNetworksecurityV1GrpcEndpoint grpcEndpoint;
+
     public GoogleCloudNetworksecurityV1CertificateProvider withGrpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpoint grpcEndpoint) {
         this.grpcEndpoint = grpcEndpoint;
         return this;
     }
     
+    public GoogleCloudNetworksecurityV1CertificateProvider(){}
 }

@@ -19,6 +19,7 @@ public class LoyaltyEventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_time_filter")
     public LoyaltyEventDateTimeFilter dateTimeFilter;
+
     public LoyaltyEventFilter withDateTimeFilter(LoyaltyEventDateTimeFilter dateTimeFilter) {
         this.dateTimeFilter = dateTimeFilter;
         return this;
@@ -30,6 +31,7 @@ public class LoyaltyEventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_filter")
     public LoyaltyEventLocationFilter locationFilter;
+
     public LoyaltyEventFilter withLocationFilter(LoyaltyEventLocationFilter locationFilter) {
         this.locationFilter = locationFilter;
         return this;
@@ -41,6 +43,7 @@ public class LoyaltyEventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loyalty_account_filter")
     public LoyaltyEventLoyaltyAccountFilter loyaltyAccountFilter;
+
     public LoyaltyEventFilter withLoyaltyAccountFilter(LoyaltyEventLoyaltyAccountFilter loyaltyAccountFilter) {
         this.loyaltyAccountFilter = loyaltyAccountFilter;
         return this;
@@ -52,6 +55,7 @@ public class LoyaltyEventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_filter")
     public LoyaltyEventOrderFilter orderFilter;
+
     public LoyaltyEventFilter withOrderFilter(LoyaltyEventOrderFilter orderFilter) {
         this.orderFilter = orderFilter;
         return this;
@@ -63,9 +67,11 @@ public class LoyaltyEventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_filter")
     public LoyaltyEventTypeFilter typeFilter;
+
     public LoyaltyEventFilter withTypeFilter(LoyaltyEventTypeFilter typeFilter) {
         this.typeFilter = typeFilter;
         return this;
     }
     
+    public LoyaltyEventFilter(){}
 }

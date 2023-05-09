@@ -18,6 +18,7 @@ public class OperationProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public OperationProgress withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -29,6 +30,7 @@ public class OperationProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OperationProgress withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class OperationProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stages")
     public OperationProgress[] stages;
+
     public OperationProgress withStages(OperationProgress[] stages) {
         this.stages = stages;
         return this;
@@ -51,9 +54,11 @@ public class OperationProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OperationProgressStatusEnum status;
+
     public OperationProgress withStatus(OperationProgressStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OperationProgress(){}
 }

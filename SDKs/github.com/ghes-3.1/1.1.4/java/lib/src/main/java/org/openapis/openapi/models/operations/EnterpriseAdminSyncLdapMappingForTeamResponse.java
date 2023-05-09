@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminSyncLdapMappingForTeamResponse {
     
     public String contentType;
+
     public EnterpriseAdminSyncLdapMappingForTeamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminSyncLdapMappingForTeamResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminSyncLdapMappingForTeamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminSyncLdapMappingForTeamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminSyncLdapMappingForTeamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminSyncLdapMappingForTeamResponse {
      */
     
     public EnterpriseAdminSyncLdapMappingForTeam201ApplicationJSON enterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject;
+
     public EnterpriseAdminSyncLdapMappingForTeamResponse withEnterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject(EnterpriseAdminSyncLdapMappingForTeam201ApplicationJSON enterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject) {
         this.enterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject = enterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject;
         return this;
     }
     
+    public EnterpriseAdminSyncLdapMappingForTeamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

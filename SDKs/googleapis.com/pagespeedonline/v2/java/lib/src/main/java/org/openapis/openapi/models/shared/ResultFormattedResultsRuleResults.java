@@ -15,6 +15,7 @@ public class ResultFormattedResultsRuleResults {
      */
     
     public String[] groups;
+
     public ResultFormattedResultsRuleResults withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -25,6 +26,7 @@ public class ResultFormattedResultsRuleResults {
      */
     
     public String localizedRuleName;
+
     public ResultFormattedResultsRuleResults withLocalizedRuleName(String localizedRuleName) {
         this.localizedRuleName = localizedRuleName;
         return this;
@@ -35,6 +37,7 @@ public class ResultFormattedResultsRuleResults {
      */
     
     public Double ruleImpact;
+
     public ResultFormattedResultsRuleResults withRuleImpact(Double ruleImpact) {
         this.ruleImpact = ruleImpact;
         return this;
@@ -42,6 +45,7 @@ public class ResultFormattedResultsRuleResults {
     
     
     public PagespeedApiFormatStringV2 summary;
+
     public ResultFormattedResultsRuleResults withSummary(PagespeedApiFormatStringV2 summary) {
         this.summary = summary;
         return this;
@@ -52,9 +56,11 @@ public class ResultFormattedResultsRuleResults {
      */
     
     public ResultFormattedResultsRuleResultsUrlBlocks[] urlBlocks;
+
     public ResultFormattedResultsRuleResults withUrlBlocks(ResultFormattedResultsRuleResultsUrlBlocks[] urlBlocks) {
         this.urlBlocks = urlBlocks;
         return this;
     }
     
+    public ResultFormattedResultsRuleResults(){}
 }

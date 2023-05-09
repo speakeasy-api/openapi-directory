@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationSettingsResponse {
@@ -12,6 +13,7 @@ public class GetApplicationSettingsResponse {
      */
     
     public Object badRequestException;
+
     public GetApplicationSettingsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetApplicationSettingsResponse {
     
     
     public String contentType;
+
     public GetApplicationSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetApplicationSettingsResponse {
      */
     
     public Object forbiddenException;
+
     public GetApplicationSettingsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetApplicationSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApplicationSettingsResponse getApplicationSettingsResponse;
+
     public GetApplicationSettingsResponse withGetApplicationSettingsResponse(org.openapis.openapi.models.shared.GetApplicationSettingsResponse getApplicationSettingsResponse) {
         this.getApplicationSettingsResponse = getApplicationSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetApplicationSettingsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetApplicationSettingsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetApplicationSettingsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetApplicationSettingsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetApplicationSettingsResponse {
      */
     
     public Object notFoundException;
+
     public GetApplicationSettingsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetApplicationSettingsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetApplicationSettingsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetApplicationSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetApplicationSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetApplicationSettingsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetApplicationSettingsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetApplicationSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

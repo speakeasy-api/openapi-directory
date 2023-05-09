@@ -61,11 +61,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesAddAccessConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesAddAccessConfigResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesAddAccessConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesAddAccessConfigResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesAddResourcePoliciesResponse res = new org.openapis.openapi.models.operations.ComputeInstancesAddResourcePoliciesResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesAddResourcePoliciesResponse res = new org.openapis.openapi.models.operations.ComputeInstancesAddResourcePoliciesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeInstancesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeInstancesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             instanceAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesAttachDiskResponse res = new org.openapis.openapi.models.operations.ComputeInstancesAttachDiskResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesAttachDiskResponse res = new org.openapis.openapi.models.operations.ComputeInstancesAttachDiskResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesBulkInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstancesBulkInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesBulkInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstancesBulkInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +287,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstancesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstancesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesDeleteAccessConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesDeleteAccessConfigResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesDeleteAccessConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesDeleteAccessConfigResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesDetachDiskResponse res = new org.openapis.openapi.models.operations.ComputeInstancesDetachDiskResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesDetachDiskResponse res = new org.openapis.openapi.models.operations.ComputeInstancesDetachDiskResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +419,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesGetResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesGetResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetResponse(contentType, httpRes.statusCode()) {{
             instance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,11 +463,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesGetEffectiveFirewallsResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetEffectiveFirewallsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesGetEffectiveFirewallsResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetEffectiveFirewallsResponse(contentType, httpRes.statusCode()) {{
             instancesGetEffectiveFirewallsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,11 +507,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesGetGuestAttributesResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetGuestAttributesResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesGetGuestAttributesResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetGuestAttributesResponse(contentType, httpRes.statusCode()) {{
             guestAttributes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -573,11 +551,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -619,11 +595,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesGetScreenshotResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetScreenshotResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesGetScreenshotResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetScreenshotResponse(contentType, httpRes.statusCode()) {{
             screenshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -665,11 +639,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesGetSerialPortOutputResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetSerialPortOutputResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesGetSerialPortOutputResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetSerialPortOutputResponse(contentType, httpRes.statusCode()) {{
             serialPortOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -711,11 +683,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesGetShieldedInstanceIdentityResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetShieldedInstanceIdentityResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesGetShieldedInstanceIdentityResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetShieldedInstanceIdentityResponse(contentType, httpRes.statusCode()) {{
             shieldedInstanceIdentity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -757,11 +727,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesGetShieldedVmIdentityResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetShieldedVmIdentityResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesGetShieldedVmIdentityResponse res = new org.openapis.openapi.models.operations.ComputeInstancesGetShieldedVmIdentityResponse(contentType, httpRes.statusCode()) {{
             shieldedVmIdentity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -805,11 +773,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstancesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstancesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -851,11 +817,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesListResponse res = new org.openapis.openapi.models.operations.ComputeInstancesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesListResponse res = new org.openapis.openapi.models.operations.ComputeInstancesListResponse(contentType, httpRes.statusCode()) {{
             instanceList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -897,11 +861,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesListReferrersResponse res = new org.openapis.openapi.models.operations.ComputeInstancesListReferrersResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesListReferrersResponse res = new org.openapis.openapi.models.operations.ComputeInstancesListReferrersResponse(contentType, httpRes.statusCode()) {{
             instanceListReferrers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -945,11 +907,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesRemoveResourcePoliciesResponse res = new org.openapis.openapi.models.operations.ComputeInstancesRemoveResourcePoliciesResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesRemoveResourcePoliciesResponse res = new org.openapis.openapi.models.operations.ComputeInstancesRemoveResourcePoliciesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -991,11 +951,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesResetResponse res = new org.openapis.openapi.models.operations.ComputeInstancesResetResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesResetResponse res = new org.openapis.openapi.models.operations.ComputeInstancesResetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1039,11 +997,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesResumeResponse res = new org.openapis.openapi.models.operations.ComputeInstancesResumeResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesResumeResponse res = new org.openapis.openapi.models.operations.ComputeInstancesResumeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1085,10 +1041,8 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSendDiagnosticInterruptResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSendDiagnosticInterruptResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSendDiagnosticInterruptResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSendDiagnosticInterruptResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1125,11 +1079,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetDeletionProtectionResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetDeletionProtectionResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetDeletionProtectionResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetDeletionProtectionResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1171,11 +1123,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetDiskAutoDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetDiskAutoDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetDiskAutoDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetDiskAutoDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1219,11 +1169,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1267,11 +1215,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1315,11 +1261,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetMachineResourcesResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetMachineResourcesResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetMachineResourcesResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetMachineResourcesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1363,11 +1307,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetMachineTypeResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetMachineTypeResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetMachineTypeResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetMachineTypeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1411,11 +1353,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetMetadataResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetMetadataResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetMetadataResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetMetadataResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1459,11 +1399,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetMinCpuPlatformResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetMinCpuPlatformResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetMinCpuPlatformResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetMinCpuPlatformResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1507,11 +1445,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetNameResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetNameResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetNameResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetNameResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1555,11 +1491,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetSchedulingResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetSchedulingResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetSchedulingResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetSchedulingResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1603,11 +1537,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetServiceAccountResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetServiceAccountResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetServiceAccountResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetServiceAccountResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1651,11 +1583,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetShieldedInstanceIntegrityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetShieldedInstanceIntegrityPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetShieldedInstanceIntegrityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetShieldedInstanceIntegrityPolicyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1699,11 +1629,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetShieldedVmIntegrityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetShieldedVmIntegrityPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetShieldedVmIntegrityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetShieldedVmIntegrityPolicyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1747,11 +1675,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSetTagsResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetTagsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSetTagsResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSetTagsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1793,11 +1719,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSimulateMaintenanceEventResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSimulateMaintenanceEventResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSimulateMaintenanceEventResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSimulateMaintenanceEventResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1839,11 +1763,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesStartResponse res = new org.openapis.openapi.models.operations.ComputeInstancesStartResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesStartResponse res = new org.openapis.openapi.models.operations.ComputeInstancesStartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1887,11 +1809,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesStartWithEncryptionKeyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesStartWithEncryptionKeyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesStartWithEncryptionKeyResponse res = new org.openapis.openapi.models.operations.ComputeInstancesStartWithEncryptionKeyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1933,11 +1853,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesStopResponse res = new org.openapis.openapi.models.operations.ComputeInstancesStopResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesStopResponse res = new org.openapis.openapi.models.operations.ComputeInstancesStopResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1979,11 +1897,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesSuspendResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSuspendResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesSuspendResponse res = new org.openapis.openapi.models.operations.ComputeInstancesSuspendResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2027,11 +1943,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeInstancesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeInstancesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2075,11 +1989,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesUpdateResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesUpdateResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2123,11 +2035,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesUpdateAccessConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateAccessConfigResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesUpdateAccessConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateAccessConfigResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2171,11 +2081,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesUpdateDisplayDeviceResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateDisplayDeviceResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesUpdateDisplayDeviceResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateDisplayDeviceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2219,11 +2127,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesUpdateNetworkInterfaceResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateNetworkInterfaceResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesUpdateNetworkInterfaceResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateNetworkInterfaceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2267,11 +2173,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesUpdateShieldedInstanceConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateShieldedInstanceConfigResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesUpdateShieldedInstanceConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateShieldedInstanceConfigResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2315,11 +2219,9 @@ public class Instances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstancesUpdateShieldedVmConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateShieldedVmConfigResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstancesUpdateShieldedVmConfigResponse res = new org.openapis.openapi.models.operations.ComputeInstancesUpdateShieldedVmConfigResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

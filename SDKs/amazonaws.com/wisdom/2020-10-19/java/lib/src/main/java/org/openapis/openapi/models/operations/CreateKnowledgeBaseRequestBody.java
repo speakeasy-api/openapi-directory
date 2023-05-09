@@ -15,6 +15,7 @@ public class CreateKnowledgeBaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateKnowledgeBaseRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateKnowledgeBaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateKnowledgeBaseRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateKnowledgeBaseRequestBody {
      */
     @JsonProperty("knowledgeBaseType")
     public CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum knowledgeBaseType;
+
     public CreateKnowledgeBaseRequestBody withKnowledgeBaseType(CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum knowledgeBaseType) {
         this.knowledgeBaseType = knowledgeBaseType;
         return this;
@@ -46,6 +49,7 @@ public class CreateKnowledgeBaseRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateKnowledgeBaseRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +61,7 @@ public class CreateKnowledgeBaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingConfiguration")
     public CreateKnowledgeBaseRequestBodyRenderingConfiguration renderingConfiguration;
+
     public CreateKnowledgeBaseRequestBody withRenderingConfiguration(CreateKnowledgeBaseRequestBodyRenderingConfiguration renderingConfiguration) {
         this.renderingConfiguration = renderingConfiguration;
         return this;
@@ -68,6 +73,7 @@ public class CreateKnowledgeBaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverSideEncryptionConfiguration")
     public CreateKnowledgeBaseRequestBodyServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public CreateKnowledgeBaseRequestBody withServerSideEncryptionConfiguration(CreateKnowledgeBaseRequestBodyServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -79,6 +85,7 @@ public class CreateKnowledgeBaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConfiguration")
     public CreateKnowledgeBaseRequestBodySourceConfiguration sourceConfiguration;
+
     public CreateKnowledgeBaseRequestBody withSourceConfiguration(CreateKnowledgeBaseRequestBodySourceConfiguration sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
@@ -90,9 +97,14 @@ public class CreateKnowledgeBaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateKnowledgeBaseRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateKnowledgeBaseRequestBody(@JsonProperty("knowledgeBaseType") CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum knowledgeBaseType, @JsonProperty("name") String name) {
+        this.knowledgeBaseType = knowledgeBaseType;
+        this.name = name;
+  }
 }

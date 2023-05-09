@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPresetsResponse {
@@ -12,6 +13,7 @@ public class ListPresetsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPresetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPresetsResponse {
     
     
     public String contentType;
+
     public ListPresetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPresetsResponse {
      */
     
     public Object incompatibleVersionException;
+
     public ListPresetsResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -39,6 +43,7 @@ public class ListPresetsResponse {
      */
     
     public Object internalServiceException;
+
     public ListPresetsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListPresetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPresetsResponse listPresetsResponse;
+
     public ListPresetsResponse withListPresetsResponse(org.openapis.openapi.models.shared.ListPresetsResponse listPresetsResponse) {
         this.listPresetsResponse = listPresetsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListPresetsResponse {
     
     
     public Integer statusCode;
+
     public ListPresetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPresetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPresetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListPresetsResponse {
      */
     
     public Object validationException;
+
     public ListPresetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPresetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

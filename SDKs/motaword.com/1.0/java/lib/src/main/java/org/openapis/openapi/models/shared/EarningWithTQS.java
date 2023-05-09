@@ -17,6 +17,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Float amount;
+
     public EarningWithTQS withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public EarningWithTQS withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -38,6 +40,7 @@ public class EarningWithTQS {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("due_date")
     public OffsetDateTime dueDate;
+
     public EarningWithTQS withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -49,6 +52,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_above_average")
     public Boolean isAboveAverage;
+
     public EarningWithTQS withIsAboveAverage(Boolean isAboveAverage) {
         this.isAboveAverage = isAboveAverage;
         return this;
@@ -57,6 +61,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public Long projectId;
+
     public EarningWithTQS withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -65,6 +70,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public EarningWithTQS withScore(Float score) {
         this.score = score;
         return this;
@@ -73,6 +79,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EarningWithTQSStatusEnum status;
+
     public EarningWithTQS withStatus(EarningWithTQSStatusEnum status) {
         this.status = status;
         return this;
@@ -84,6 +91,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strings_edited")
     public Long stringsEdited;
+
     public EarningWithTQS withStringsEdited(Long stringsEdited) {
         this.stringsEdited = stringsEdited;
         return this;
@@ -95,6 +103,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strings_translated")
     public Long stringsTranslated;
+
     public EarningWithTQS withStringsTranslated(Long stringsTranslated) {
         this.stringsTranslated = stringsTranslated;
         return this;
@@ -103,6 +112,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words")
     public Long words;
+
     public EarningWithTQS withWords(Long words) {
         this.words = words;
         return this;
@@ -111,6 +121,7 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words_approved")
     public Long wordsApproved;
+
     public EarningWithTQS withWordsApproved(Long wordsApproved) {
         this.wordsApproved = wordsApproved;
         return this;
@@ -119,9 +130,11 @@ public class EarningWithTQS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words_translated")
     public Long wordsTranslated;
+
     public EarningWithTQS withWordsTranslated(Long wordsTranslated) {
         this.wordsTranslated = wordsTranslated;
         return this;
     }
     
+    public EarningWithTQS(){}
 }

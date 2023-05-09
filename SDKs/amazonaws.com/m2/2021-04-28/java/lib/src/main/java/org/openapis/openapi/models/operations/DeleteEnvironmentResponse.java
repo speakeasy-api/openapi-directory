@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEnvironmentResponse {
@@ -12,6 +13,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteEnvironmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object conflictException;
+
     public DeleteEnvironmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEnvironmentResponse {
     
     
     public String contentType;
+
     public DeleteEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public java.util.Map<String, Object> deleteEnvironmentResponse;
+
     public DeleteEnvironmentResponse withDeleteEnvironmentResponse(java.util.Map<String, Object> deleteEnvironmentResponse) {
         this.deleteEnvironmentResponse = deleteEnvironmentResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object internalServerException;
+
     public DeleteEnvironmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object throttlingException;
+
     public DeleteEnvironmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object validationException;
+
     public DeleteEnvironmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

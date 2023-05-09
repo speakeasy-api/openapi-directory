@@ -15,6 +15,7 @@ public class MergedUpstream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_branch")
     public String baseBranch;
+
     public MergedUpstream withBaseBranch(String baseBranch) {
         this.baseBranch = baseBranch;
         return this;
@@ -23,6 +24,7 @@ public class MergedUpstream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merge_type")
     public MergedUpstreamMergeTypeEnum mergeType;
+
     public MergedUpstream withMergeType(MergedUpstreamMergeTypeEnum mergeType) {
         this.mergeType = mergeType;
         return this;
@@ -31,9 +33,11 @@ public class MergedUpstream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MergedUpstream withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public MergedUpstream(){}
 }

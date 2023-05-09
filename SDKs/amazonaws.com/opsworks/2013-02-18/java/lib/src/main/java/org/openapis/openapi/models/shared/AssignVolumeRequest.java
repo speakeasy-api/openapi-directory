@@ -12,6 +12,7 @@ public class AssignVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public AssignVolumeRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,9 +20,13 @@ public class AssignVolumeRequest {
     
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public AssignVolumeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public AssignVolumeRequest(@JsonProperty("VolumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

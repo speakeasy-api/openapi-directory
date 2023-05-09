@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSavingsPlanResponse {
     
     public String contentType;
+
     public CreateSavingsPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSavingsPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSavingsPlanResponse createSavingsPlanResponse;
+
     public CreateSavingsPlanResponse withCreateSavingsPlanResponse(org.openapis.openapi.models.shared.CreateSavingsPlanResponse createSavingsPlanResponse) {
         this.createSavingsPlanResponse = createSavingsPlanResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSavingsPlanResponse {
      */
     
     public Object internalServerException;
+
     public CreateSavingsPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSavingsPlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSavingsPlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSavingsPlanResponse {
     
     
     public Integer statusCode;
+
     public CreateSavingsPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateSavingsPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSavingsPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateSavingsPlanResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSavingsPlanResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,9 +81,14 @@ public class CreateSavingsPlanResponse {
      */
     
     public Object validationException;
+
     public CreateSavingsPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSavingsPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

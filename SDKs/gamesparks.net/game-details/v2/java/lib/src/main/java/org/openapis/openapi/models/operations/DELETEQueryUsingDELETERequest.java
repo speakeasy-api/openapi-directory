@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DELETEQueryUsingDELETERequest {
@@ -12,6 +13,7 @@ public class DELETEQueryUsingDELETERequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public DELETEQueryUsingDELETERequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class DELETEQueryUsingDELETERequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
     public String shortCode;
+
     public DELETEQueryUsingDELETERequest withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
     }
     
+    public DELETEQueryUsingDELETERequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("shortCode") String shortCode) {
+        this.apiKey = apiKey;
+        this.shortCode = shortCode;
+  }
 }

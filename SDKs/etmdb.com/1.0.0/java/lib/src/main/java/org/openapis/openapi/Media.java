@@ -55,10 +55,8 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MediaSearchReadResponse res = new org.openapis.openapi.models.operations.MediaSearchReadResponse() {{
+        org.openapis.openapi.models.operations.MediaSearchReadResponse res = new org.openapis.openapi.models.operations.MediaSearchReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,10 +95,8 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MediaSearchallReadResponse res = new org.openapis.openapi.models.operations.MediaSearchallReadResponse() {{
+        org.openapis.openapi.models.operations.MediaSearchallReadResponse res = new org.openapis.openapi.models.operations.MediaSearchallReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

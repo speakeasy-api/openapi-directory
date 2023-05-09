@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MembershipsRecentlyChangedRequest {
@@ -12,6 +13,7 @@ public class MembershipsRecentlyChangedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=days")
     public String days;
+
     public MembershipsRecentlyChangedRequest withDays(String days) {
         this.days = days;
         return this;
@@ -22,9 +24,14 @@ public class MembershipsRecentlyChangedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public MembershipsRecentlyChangedFormatEnum format;
+
     public MembershipsRecentlyChangedRequest withFormat(MembershipsRecentlyChangedFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public MembershipsRecentlyChangedRequest(@JsonProperty("days") String days, @JsonProperty("format") MembershipsRecentlyChangedFormatEnum format) {
+        this.days = days;
+        this.format = format;
+  }
 }

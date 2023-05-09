@@ -18,6 +18,7 @@ public class NoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public NoContent withError(String error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class NoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NoContent withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class NoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public NoContent withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public NoContent(){}
 }

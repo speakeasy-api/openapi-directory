@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchImportFindingsResponse {
     @JsonProperty("FailedCount")
     public Long failedCount;
+
     public BatchImportFindingsResponse withFailedCount(Long failedCount) {
         this.failedCount = failedCount;
         return this;
@@ -22,6 +23,7 @@ public class BatchImportFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedFindings")
     public ImportFindingsError[] failedFindings;
+
     public BatchImportFindingsResponse withFailedFindings(ImportFindingsError[] failedFindings) {
         this.failedFindings = failedFindings;
         return this;
@@ -29,9 +31,14 @@ public class BatchImportFindingsResponse {
     
     @JsonProperty("SuccessCount")
     public Long successCount;
+
     public BatchImportFindingsResponse withSuccessCount(Long successCount) {
         this.successCount = successCount;
         return this;
     }
     
+    public BatchImportFindingsResponse(@JsonProperty("FailedCount") Long failedCount, @JsonProperty("SuccessCount") Long successCount) {
+        this.failedCount = failedCount;
+        this.successCount = successCount;
+  }
 }

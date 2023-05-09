@@ -12,9 +12,13 @@ public class StopFailbackRequestBody {
      */
     @JsonProperty("recoveryInstanceID")
     public String recoveryInstanceID;
+
     public StopFailbackRequestBody withRecoveryInstanceID(String recoveryInstanceID) {
         this.recoveryInstanceID = recoveryInstanceID;
         return this;
     }
     
+    public StopFailbackRequestBody(@JsonProperty("recoveryInstanceID") String recoveryInstanceID) {
+        this.recoveryInstanceID = recoveryInstanceID;
+  }
 }

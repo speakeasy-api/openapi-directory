@@ -18,6 +18,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ReviewObject[] data;
+
     public ProductReviews200ApplicationJSON withData(org.openapis.openapi.models.shared.ReviewObject[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateStamp")
     public String dateStamp;
+
     public ProductReviews200ApplicationJSON withDateStamp(String dateStamp) {
         this.dateStamp = dateStamp;
         return this;
@@ -42,6 +44,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCodes")
     public String[] errorCodes;
+
     public ProductReviews200ApplicationJSON withErrorCodes(String[] errorCodes) {
         this.errorCodes = errorCodes;
         return this;
@@ -53,6 +56,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public Object[] errorMessage;
+
     public ProductReviews200ApplicationJSON withErrorMessage(Object[] errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -64,6 +68,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessageText")
     public String errorMessageText;
+
     public ProductReviews200ApplicationJSON withErrorMessageText(String errorMessageText) {
         this.errorMessageText = errorMessageText;
         return this;
@@ -75,6 +80,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorName")
     public String errorName;
+
     public ProductReviews200ApplicationJSON withErrorName(String errorName) {
         this.errorName = errorName;
         return this;
@@ -86,6 +92,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorReference")
     public String errorReference;
+
     public ProductReviews200ApplicationJSON withErrorReference(String errorReference) {
         this.errorReference = errorReference;
         return this;
@@ -97,6 +104,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public String errorType;
+
     public ProductReviews200ApplicationJSON withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -108,6 +116,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraInfo")
     public java.util.Map<String, Object> extraInfo;
+
     public ProductReviews200ApplicationJSON withExtraInfo(java.util.Map<String, Object> extraInfo) {
         this.extraInfo = extraInfo;
         return this;
@@ -119,6 +128,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraObject")
     public java.util.Map<String, Object> extraObject;
+
     public ProductReviews200ApplicationJSON withExtraObject(java.util.Map<String, Object> extraObject) {
         this.extraObject = extraObject;
         return this;
@@ -133,6 +143,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ProductReviews200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -145,6 +156,7 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public ProductReviews200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -156,9 +168,11 @@ public class ProductReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmid")
     public String vmid;
+
     public ProductReviews200ApplicationJSON withVmid(String vmid) {
         this.vmid = vmid;
         return this;
     }
     
+    public ProductReviews200ApplicationJSON(){}
 }

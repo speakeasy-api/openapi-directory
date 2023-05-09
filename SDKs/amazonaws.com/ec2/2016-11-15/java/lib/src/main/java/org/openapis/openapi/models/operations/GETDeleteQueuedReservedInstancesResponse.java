@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteQueuedReservedInstancesResponse {
     
     public byte[] body;
+
     public GETDeleteQueuedReservedInstancesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteQueuedReservedInstancesResponse {
     
     
     public String contentType;
+
     public GETDeleteQueuedReservedInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteQueuedReservedInstancesResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteQueuedReservedInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteQueuedReservedInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteQueuedReservedInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteQueuedReservedInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

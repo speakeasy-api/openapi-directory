@@ -18,6 +18,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionName")
     public String regionName;
+
     public Region withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -29,9 +30,11 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionType")
     public String regionType;
+
     public Region withRegionType(String regionType) {
         this.regionType = regionType;
         return this;
     }
     
+    public Region(){}
 }

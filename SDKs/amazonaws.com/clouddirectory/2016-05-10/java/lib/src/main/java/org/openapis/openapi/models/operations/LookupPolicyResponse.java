@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LookupPolicyResponse {
@@ -12,6 +13,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public LookupPolicyResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class LookupPolicyResponse {
     
     
     public String contentType;
+
     public LookupPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException;
+
     public LookupPolicyResponse withDirectoryNotEnabledException(org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public LookupPolicyResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public LookupPolicyResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException;
+
     public LookupPolicyResponse withInvalidNextTokenException(org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public LookupPolicyResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.LookupPolicyResponse lookupPolicyResponse;
+
     public LookupPolicyResponse withLookupPolicyResponse(org.openapis.openapi.models.shared.LookupPolicyResponse lookupPolicyResponse) {
         this.lookupPolicyResponse = lookupPolicyResponse;
         return this;
@@ -86,6 +95,7 @@ public class LookupPolicyResponse {
     
     
     public Integer statusCode;
+
     public LookupPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class LookupPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LookupPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public LookupPolicyResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public LookupPolicyResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class LookupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public LookupPolicyResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public LookupPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

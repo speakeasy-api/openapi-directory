@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateInstitutionAccountsUpdateRequest {
@@ -12,6 +13,7 @@ public class PrivateInstitutionAccountsUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AccountUpdate accountUpdate;
+
     public PrivateInstitutionAccountsUpdateRequest withAccountUpdate(org.openapis.openapi.models.shared.AccountUpdate accountUpdate) {
         this.accountUpdate = accountUpdate;
         return this;
@@ -22,9 +24,14 @@ public class PrivateInstitutionAccountsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public Long accountId;
+
     public PrivateInstitutionAccountsUpdateRequest withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public PrivateInstitutionAccountsUpdateRequest(@JsonProperty("AccountUpdate") org.openapis.openapi.models.shared.AccountUpdate accountUpdate, @JsonProperty("account_id") Long accountId) {
+        this.accountUpdate = accountUpdate;
+        this.accountId = accountId;
+  }
 }

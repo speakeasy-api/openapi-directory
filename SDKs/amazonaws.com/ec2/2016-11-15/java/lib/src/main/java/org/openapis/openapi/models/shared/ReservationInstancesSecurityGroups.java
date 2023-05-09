@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesSecurityGroups {
     
     public String groupId;
+
     public ReservationInstancesSecurityGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class ReservationInstancesSecurityGroups {
     
     
     public String groupName;
+
     public ReservationInstancesSecurityGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public ReservationInstancesSecurityGroups(){}
 }

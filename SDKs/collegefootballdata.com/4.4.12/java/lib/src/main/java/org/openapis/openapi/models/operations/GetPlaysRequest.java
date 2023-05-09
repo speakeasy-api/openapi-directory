@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaysRequest {
@@ -12,6 +13,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
     public String classification;
+
     public GetPlaysRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -22,6 +24,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetPlaysRequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -32,6 +35,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defense")
     public String defense;
+
     public GetPlaysRequest withDefense(String defense) {
         this.defense = defense;
         return this;
@@ -42,6 +46,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defenseConference")
     public String defenseConference;
+
     public GetPlaysRequest withDefenseConference(String defenseConference) {
         this.defenseConference = defenseConference;
         return this;
@@ -52,6 +57,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offense")
     public String offense;
+
     public GetPlaysRequest withOffense(String offense) {
         this.offense = offense;
         return this;
@@ -62,6 +68,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offenseConference")
     public String offenseConference;
+
     public GetPlaysRequest withOffenseConference(String offenseConference) {
         this.offenseConference = offenseConference;
         return this;
@@ -72,6 +79,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=playType")
     public Long playType;
+
     public GetPlaysRequest withPlayType(Long playType) {
         this.playType = playType;
         return this;
@@ -82,6 +90,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
     public String seasonType;
+
     public GetPlaysRequest withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -92,6 +101,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetPlaysRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -102,6 +112,7 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetPlaysRequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -112,9 +123,14 @@ public class GetPlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetPlaysRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetPlaysRequest(@JsonProperty("week") Long week, @JsonProperty("year") Long year) {
+        this.week = week;
+        this.year = year;
+  }
 }

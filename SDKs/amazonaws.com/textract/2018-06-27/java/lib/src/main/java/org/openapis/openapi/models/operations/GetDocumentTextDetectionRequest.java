@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentTextDetectionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetDocumentTextDetectionRequest getDocumentTextDetectionRequest;
+
     public GetDocumentTextDetectionRequest withGetDocumentTextDetectionRequest(org.openapis.openapi.models.shared.GetDocumentTextDetectionRequest getDocumentTextDetectionRequest) {
         this.getDocumentTextDetectionRequest = getDocumentTextDetectionRequest;
         return this;
@@ -16,6 +18,7 @@ public class GetDocumentTextDetectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetDocumentTextDetectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetDocumentTextDetectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetDocumentTextDetectionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetDocumentTextDetectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetDocumentTextDetectionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetDocumentTextDetectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetDocumentTextDetectionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetDocumentTextDetectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetDocumentTextDetectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetDocumentTextDetectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetDocumentTextDetectionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetDocumentTextDetectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetDocumentTextDetectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetDocumentTextDetectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetDocumentTextDetectionXAmzTargetEnum xAmzTarget;
+
     public GetDocumentTextDetectionRequest withXAmzTarget(GetDocumentTextDetectionXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetDocumentTextDetectionRequest(@JsonProperty("GetDocumentTextDetectionRequest") org.openapis.openapi.models.shared.GetDocumentTextDetectionRequest getDocumentTextDetectionRequest, @JsonProperty("X-Amz-Target") GetDocumentTextDetectionXAmzTargetEnum xAmzTarget) {
+        this.getDocumentTextDetectionRequest = getDocumentTextDetectionRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

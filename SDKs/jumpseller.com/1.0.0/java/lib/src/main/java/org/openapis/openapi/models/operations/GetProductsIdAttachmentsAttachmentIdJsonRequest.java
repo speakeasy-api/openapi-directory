@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdAttachmentsAttachmentIdJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsIdAttachmentsAttachmentIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachment_id")
     public Integer attachmentId;
+
     public GetProductsIdAttachmentsAttachmentIdJsonRequest withAttachmentId(Integer attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsIdAttachmentsAttachmentIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsIdAttachmentsAttachmentIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class GetProductsIdAttachmentsAttachmentIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetProductsIdAttachmentsAttachmentIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class GetProductsIdAttachmentsAttachmentIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsIdAttachmentsAttachmentIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetProductsIdAttachmentsAttachmentIdJsonRequest(@JsonProperty("attachment_id") Integer attachmentId, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.attachmentId = attachmentId;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

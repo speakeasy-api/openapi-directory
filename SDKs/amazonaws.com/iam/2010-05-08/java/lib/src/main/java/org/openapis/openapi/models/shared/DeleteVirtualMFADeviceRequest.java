@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteVirtualMFADeviceRequest {
     
     public String serialNumber;
+
     public DeleteVirtualMFADeviceRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
     }
     
+    public DeleteVirtualMFADeviceRequest(@JsonProperty("SerialNumber") String serialNumber) {
+        this.serialNumber = serialNumber;
+  }
 }

@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBacktrackDBClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETBacktrackDBClusterActionEnum action;
+
     public GETBacktrackDBClusterRequest withAction(GETBacktrackDBClusterActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETBacktrackDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BacktrackTo")
     public OffsetDateTime backtrackTo;
+
     public GETBacktrackDBClusterRequest withBacktrackTo(OffsetDateTime backtrackTo) {
         this.backtrackTo = backtrackTo;
         return this;
@@ -30,6 +33,7 @@ public class GETBacktrackDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
     public String dbClusterIdentifier;
+
     public GETBacktrackDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class GETBacktrackDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Force")
     public Boolean force;
+
     public GETBacktrackDBClusterRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -50,6 +55,7 @@ public class GETBacktrackDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UseEarliestTimeOnPointInTimeUnavailable")
     public Boolean useEarliestTimeOnPointInTimeUnavailable;
+
     public GETBacktrackDBClusterRequest withUseEarliestTimeOnPointInTimeUnavailable(Boolean useEarliestTimeOnPointInTimeUnavailable) {
         this.useEarliestTimeOnPointInTimeUnavailable = useEarliestTimeOnPointInTimeUnavailable;
         return this;
@@ -57,6 +63,7 @@ public class GETBacktrackDBClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETBacktrackDBClusterVersionEnum version;
+
     public GETBacktrackDBClusterRequest withVersion(GETBacktrackDBClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -64,6 +71,7 @@ public class GETBacktrackDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETBacktrackDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -71,6 +79,7 @@ public class GETBacktrackDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETBacktrackDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -78,6 +87,7 @@ public class GETBacktrackDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETBacktrackDBClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -85,6 +95,7 @@ public class GETBacktrackDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETBacktrackDBClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -92,6 +103,7 @@ public class GETBacktrackDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETBacktrackDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -99,6 +111,7 @@ public class GETBacktrackDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETBacktrackDBClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -106,9 +119,16 @@ public class GETBacktrackDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETBacktrackDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETBacktrackDBClusterRequest(@JsonProperty("Action") GETBacktrackDBClusterActionEnum action, @JsonProperty("BacktrackTo") OffsetDateTime backtrackTo, @JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("Version") GETBacktrackDBClusterVersionEnum version) {
+        this.action = action;
+        this.backtrackTo = backtrackTo;
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.version = version;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomFieldSettingsForProjectResponse {
     
     public String contentType;
+
     public GetCustomFieldSettingsForProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCustomFieldSettingsForProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetCustomFieldSettingsForProjectResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetCustomFieldSettingsForProjectResponse {
     
     
     public Integer statusCode;
+
     public GetCustomFieldSettingsForProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetCustomFieldSettingsForProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomFieldSettingsForProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetCustomFieldSettingsForProjectResponse {
      */
     
     public GetCustomFieldSettingsForProject200ApplicationJSON getCustomFieldSettingsForProject200ApplicationJSONObject;
+
     public GetCustomFieldSettingsForProjectResponse withGetCustomFieldSettingsForProject200ApplicationJSONObject(GetCustomFieldSettingsForProject200ApplicationJSON getCustomFieldSettingsForProject200ApplicationJSONObject) {
         this.getCustomFieldSettingsForProject200ApplicationJSONObject = getCustomFieldSettingsForProject200ApplicationJSONObject;
         return this;
     }
     
+    public GetCustomFieldSettingsForProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

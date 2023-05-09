@@ -15,9 +15,11 @@ public class WafAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public WafAction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public WafAction(){}
 }

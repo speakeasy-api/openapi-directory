@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCheckoutCustomFieldsIdJsonResponse {
     
     public String contentType;
+
     public DeleteCheckoutCustomFieldsIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCheckoutCustomFieldsIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteCheckoutCustomFieldsIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteCheckoutCustomFieldsIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteCheckoutCustomFieldsIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteCheckoutCustomFieldsIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCheckoutCustomFieldsIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteCheckoutCustomFieldsIdJsonResponse {
      */
     
     public String deleteCheckoutCustomFieldsIdJSON200ApplicationJSONString;
+
     public DeleteCheckoutCustomFieldsIdJsonResponse withDeleteCheckoutCustomFieldsIdJSON200ApplicationJSONString(String deleteCheckoutCustomFieldsIdJSON200ApplicationJSONString) {
         this.deleteCheckoutCustomFieldsIdJSON200ApplicationJSONString = deleteCheckoutCustomFieldsIdJSON200ApplicationJSONString;
         return this;
     }
     
+    public DeleteCheckoutCustomFieldsIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

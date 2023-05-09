@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCrashGroupOperatingSystemCountsRequest {
@@ -12,6 +13,7 @@ public class AnalyticsCrashGroupOperatingSystemCountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
     public Long dollarTop;
+
     public AnalyticsCrashGroupOperatingSystemCountsRequest withDollarTop(Long dollarTop) {
         this.dollarTop = dollarTop;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsCrashGroupOperatingSystemCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AnalyticsCrashGroupOperatingSystemCountsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsCrashGroupOperatingSystemCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
     public String crashGroupId;
+
     public AnalyticsCrashGroupOperatingSystemCountsRequest withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -42,6 +46,7 @@ public class AnalyticsCrashGroupOperatingSystemCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AnalyticsCrashGroupOperatingSystemCountsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -49,9 +54,16 @@ public class AnalyticsCrashGroupOperatingSystemCountsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public AnalyticsCrashGroupOperatingSystemCountsRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AnalyticsCrashGroupOperatingSystemCountsRequest(@JsonProperty("app_name") String appName, @JsonProperty("crash_group_id") String crashGroupId, @JsonProperty("owner_name") String ownerName, @JsonProperty("version") String version) {
+        this.appName = appName;
+        this.crashGroupId = crashGroupId;
+        this.ownerName = ownerName;
+        this.version = version;
+  }
 }

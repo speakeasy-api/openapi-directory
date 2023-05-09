@@ -22,6 +22,7 @@ public class PayOrderRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public PayOrderRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -33,6 +34,7 @@ public class PayOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_version")
     public Long orderVersion;
+
     public PayOrderRequest withOrderVersion(Long orderVersion) {
         this.orderVersion = orderVersion;
         return this;
@@ -45,9 +47,13 @@ public class PayOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_ids")
     public String[] paymentIds;
+
     public PayOrderRequest withPaymentIds(String[] paymentIds) {
         this.paymentIds = paymentIds;
         return this;
     }
     
+    public PayOrderRequest(@JsonProperty("idempotency_key") String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
+  }
 }

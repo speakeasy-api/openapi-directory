@@ -59,10 +59,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePropertiesDeleteResponse res = new org.openapis.openapi.models.operations.DrivePropertiesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DrivePropertiesDeleteResponse res = new org.openapis.openapi.models.operations.DrivePropertiesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePropertiesGetResponse res = new org.openapis.openapi.models.operations.DrivePropertiesGetResponse() {{
+        org.openapis.openapi.models.operations.DrivePropertiesGetResponse res = new org.openapis.openapi.models.operations.DrivePropertiesGetResponse(contentType, httpRes.statusCode()) {{
             property = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePropertiesInsertResponse res = new org.openapis.openapi.models.operations.DrivePropertiesInsertResponse() {{
+        org.openapis.openapi.models.operations.DrivePropertiesInsertResponse res = new org.openapis.openapi.models.operations.DrivePropertiesInsertResponse(contentType, httpRes.statusCode()) {{
             property = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePropertiesListResponse res = new org.openapis.openapi.models.operations.DrivePropertiesListResponse() {{
+        org.openapis.openapi.models.operations.DrivePropertiesListResponse res = new org.openapis.openapi.models.operations.DrivePropertiesListResponse(contentType, httpRes.statusCode()) {{
             propertyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePropertiesPatchResponse res = new org.openapis.openapi.models.operations.DrivePropertiesPatchResponse() {{
+        org.openapis.openapi.models.operations.DrivePropertiesPatchResponse res = new org.openapis.openapi.models.operations.DrivePropertiesPatchResponse(contentType, httpRes.statusCode()) {{
             property = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePropertiesUpdateResponse res = new org.openapis.openapi.models.operations.DrivePropertiesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DrivePropertiesUpdateResponse res = new org.openapis.openapi.models.operations.DrivePropertiesUpdateResponse(contentType, httpRes.statusCode()) {{
             property = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

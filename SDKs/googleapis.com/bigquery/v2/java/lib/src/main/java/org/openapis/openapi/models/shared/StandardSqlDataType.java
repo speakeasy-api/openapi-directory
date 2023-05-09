@@ -18,6 +18,7 @@ public class StandardSqlDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayElementType")
     public StandardSqlDataType arrayElementType;
+
     public StandardSqlDataType withArrayElementType(StandardSqlDataType arrayElementType) {
         this.arrayElementType = arrayElementType;
         return this;
@@ -26,6 +27,7 @@ public class StandardSqlDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structType")
     public StandardSqlStructType structType;
+
     public StandardSqlDataType withStructType(StandardSqlStructType structType) {
         this.structType = structType;
         return this;
@@ -37,9 +39,11 @@ public class StandardSqlDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeKind")
     public StandardSqlDataTypeTypeKindEnum typeKind;
+
     public StandardSqlDataType withTypeKind(StandardSqlDataTypeTypeKindEnum typeKind) {
         this.typeKind = typeKind;
         return this;
     }
     
+    public StandardSqlDataType(){}
 }

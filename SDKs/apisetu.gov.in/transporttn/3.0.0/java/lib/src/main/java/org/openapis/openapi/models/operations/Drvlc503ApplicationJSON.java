@@ -15,6 +15,7 @@ public class Drvlc503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Drvlc503ApplicationJSONErrorEnum error;
+
     public Drvlc503ApplicationJSON withError(Drvlc503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Drvlc503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Drvlc503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Drvlc503ApplicationJSON withErrorDescription(Drvlc503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Drvlc503ApplicationJSON(){}
 }

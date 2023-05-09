@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFleetResponse {
     
     public String contentType;
+
     public DeleteFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFleetResponse {
      */
     
     public java.util.Map<String, Object> deleteFleetResponse;
+
     public DeleteFleetResponse withDeleteFleetResponse(java.util.Map<String, Object> deleteFleetResponse) {
         this.deleteFleetResponse = deleteFleetResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFleetResponse {
      */
     
     public Object internalServerException;
+
     public DeleteFleetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFleetResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteFleetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteFleetResponse {
     
     
     public Integer statusCode;
+
     public DeleteFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteFleetResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFleetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

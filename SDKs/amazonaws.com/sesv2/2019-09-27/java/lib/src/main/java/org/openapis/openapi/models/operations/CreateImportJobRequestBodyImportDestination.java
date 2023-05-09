@@ -15,6 +15,7 @@ public class CreateImportJobRequestBodyImportDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactListDestination")
     public org.openapis.openapi.models.shared.ContactListDestination contactListDestination;
+
     public CreateImportJobRequestBodyImportDestination withContactListDestination(org.openapis.openapi.models.shared.ContactListDestination contactListDestination) {
         this.contactListDestination = contactListDestination;
         return this;
@@ -23,9 +24,11 @@ public class CreateImportJobRequestBodyImportDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuppressionListDestination")
     public org.openapis.openapi.models.shared.SuppressionListDestination suppressionListDestination;
+
     public CreateImportJobRequestBodyImportDestination withSuppressionListDestination(org.openapis.openapi.models.shared.SuppressionListDestination suppressionListDestination) {
         this.suppressionListDestination = suppressionListDestination;
         return this;
     }
     
+    public CreateImportJobRequestBodyImportDestination(){}
 }

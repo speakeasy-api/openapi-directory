@@ -61,13 +61,11 @@ public class PolicyAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePolicyModuleResponse res = new org.openapis.openapi.models.operations.DeletePolicyModuleResponse() {{
+        org.openapis.openapi.models.operations.DeletePolicyModuleResponse res = new org.openapis.openapi.models.operations.DeletePolicyModuleResponse(contentType, httpRes.statusCode()) {{
             deletePolicyModule200ApplicationJSONObject = null;
             fourHundred = null;
             fourHundredAndFour = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,12 +120,10 @@ public class PolicyAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPoliciesResponse res = new org.openapis.openapi.models.operations.GetPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetPoliciesResponse res = new org.openapis.openapi.models.operations.GetPoliciesResponse(contentType, httpRes.statusCode()) {{
             twoHundredResult = null;
             fourHundred = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,13 +171,11 @@ public class PolicyAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPolicyModuleResponse res = new org.openapis.openapi.models.operations.GetPolicyModuleResponse() {{
+        org.openapis.openapi.models.operations.GetPolicyModuleResponse res = new org.openapis.openapi.models.operations.GetPolicyModuleResponse(contentType, httpRes.statusCode()) {{
             twoHundredResult = null;
             fourHundredAndFour = null;
             fourHundred = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,12 +255,10 @@ public class PolicyAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPolicyModuleResponse res = new org.openapis.openapi.models.operations.PutPolicyModuleResponse() {{
+        org.openapis.openapi.models.operations.PutPolicyModuleResponse res = new org.openapis.openapi.models.operations.PutPolicyModuleResponse(contentType, httpRes.statusCode()) {{
             twoHundredResult = null;
             fourHundred = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

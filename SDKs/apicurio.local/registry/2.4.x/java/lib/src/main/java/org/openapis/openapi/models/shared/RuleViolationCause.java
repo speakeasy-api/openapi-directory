@@ -12,6 +12,7 @@ public class RuleViolationCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public String context;
+
     public RuleViolationCause withContext(String context) {
         this.context = context;
         return this;
@@ -20,9 +21,11 @@ public class RuleViolationCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RuleViolationCause withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public RuleViolationCause(){}
 }

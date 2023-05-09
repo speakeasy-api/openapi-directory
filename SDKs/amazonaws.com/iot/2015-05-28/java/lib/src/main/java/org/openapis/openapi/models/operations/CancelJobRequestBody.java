@@ -15,6 +15,7 @@ public class CancelJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public CancelJobRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -26,9 +27,11 @@ public class CancelJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCode")
     public String reasonCode;
+
     public CancelJobRequestBody withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
     }
     
+    public CancelJobRequestBody(){}
 }

@@ -21,9 +21,13 @@ public class GiftCardActivityImport {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public GiftCardActivityImport withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
     }
     
+    public GiftCardActivityImport(@JsonProperty("amount_money") Money amountMoney) {
+        this.amountMoney = amountMoney;
+  }
 }

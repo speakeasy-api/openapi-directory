@@ -12,9 +12,13 @@ public class GetSamplingTargetsRequestBody {
      */
     @JsonProperty("SamplingStatisticsDocuments")
     public org.openapis.openapi.models.shared.SamplingStatisticsDocument[] samplingStatisticsDocuments;
+
     public GetSamplingTargetsRequestBody withSamplingStatisticsDocuments(org.openapis.openapi.models.shared.SamplingStatisticsDocument[] samplingStatisticsDocuments) {
         this.samplingStatisticsDocuments = samplingStatisticsDocuments;
         return this;
     }
     
+    public GetSamplingTargetsRequestBody(@JsonProperty("SamplingStatisticsDocuments") org.openapis.openapi.models.shared.SamplingStatisticsDocument[] samplingStatisticsDocuments) {
+        this.samplingStatisticsDocuments = samplingStatisticsDocuments;
+  }
 }

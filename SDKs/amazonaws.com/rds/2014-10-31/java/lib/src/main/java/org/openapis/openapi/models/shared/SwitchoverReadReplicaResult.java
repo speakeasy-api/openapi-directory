@@ -15,9 +15,11 @@ public class SwitchoverReadReplicaResult {
      */
     
     public DBInstance dbInstance;
+
     public SwitchoverReadReplicaResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public SwitchoverReadReplicaResult(){}
 }

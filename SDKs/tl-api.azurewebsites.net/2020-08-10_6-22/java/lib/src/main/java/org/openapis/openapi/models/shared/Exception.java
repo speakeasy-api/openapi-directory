@@ -12,6 +12,7 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InnerException")
     public Object innerException;
+
     public Exception withInnerException(Object innerException) {
         this.innerException = innerException;
         return this;
@@ -20,6 +21,7 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public Exception withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +30,7 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public Exception withSource(String source) {
         this.source = source;
         return this;
@@ -36,9 +39,11 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackTrace")
     public String stackTrace;
+
     public Exception withStackTrace(String stackTrace) {
         this.stackTrace = stackTrace;
         return this;
     }
     
+    public Exception(){}
 }

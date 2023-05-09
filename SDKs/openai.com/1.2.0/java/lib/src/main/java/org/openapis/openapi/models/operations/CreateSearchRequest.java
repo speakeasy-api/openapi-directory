@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSearchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateSearchRequest createSearchRequest;
+
     public CreateSearchRequest withCreateSearchRequest(org.openapis.openapi.models.shared.CreateSearchRequest createSearchRequest) {
         this.createSearchRequest = createSearchRequest;
         return this;
@@ -19,9 +21,14 @@ public class CreateSearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=engine_id")
     public String engineId;
+
     public CreateSearchRequest withEngineId(String engineId) {
         this.engineId = engineId;
         return this;
     }
     
+    public CreateSearchRequest(@JsonProperty("CreateSearchRequest") org.openapis.openapi.models.shared.CreateSearchRequest createSearchRequest, @JsonProperty("engine_id") String engineId) {
+        this.createSearchRequest = createSearchRequest;
+        this.engineId = engineId;
+  }
 }

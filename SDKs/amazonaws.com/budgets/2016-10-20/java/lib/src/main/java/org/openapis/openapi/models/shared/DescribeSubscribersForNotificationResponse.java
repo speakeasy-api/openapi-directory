@@ -15,6 +15,7 @@ public class DescribeSubscribersForNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSubscribersForNotificationResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSubscribersForNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subscribers")
     public Subscriber[] subscribers;
+
     public DescribeSubscribersForNotificationResponse withSubscribers(Subscriber[] subscribers) {
         this.subscribers = subscribers;
         return this;
     }
     
+    public DescribeSubscribersForNotificationResponse(){}
 }

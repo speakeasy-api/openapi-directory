@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse {
     
     public String contentType;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse
      */
     
     public org.openapis.openapi.models.shared.ListItemNamesForUnmappedIdentityResponse listItemNamesForUnmappedIdentityResponse;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse withListItemNamesForUnmappedIdentityResponse(org.openapis.openapi.models.shared.ListItemNamesForUnmappedIdentityResponse listItemNamesForUnmappedIdentityResponse) {
         this.listItemNamesForUnmappedIdentityResponse = listItemNamesForUnmappedIdentityResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse
     
     
     public Integer statusCode;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

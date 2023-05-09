@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaGoogleAdsLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsPersonalizationEnabled")
     public Boolean adsPersonalizationEnabled;
+
     public GoogleAnalyticsAdminV1alphaGoogleAdsLinkInput withAdsPersonalizationEnabled(Boolean adsPersonalizationEnabled) {
         this.adsPersonalizationEnabled = adsPersonalizationEnabled;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaGoogleAdsLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public GoogleAnalyticsAdminV1alphaGoogleAdsLinkInput withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaGoogleAdsLinkInput(){}
 }

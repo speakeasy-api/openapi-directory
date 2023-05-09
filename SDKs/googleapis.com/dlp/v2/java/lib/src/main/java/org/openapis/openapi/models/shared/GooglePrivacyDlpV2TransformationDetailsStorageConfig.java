@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2TransformationDetailsStorageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public GooglePrivacyDlpV2BigQueryTable table;
+
     public GooglePrivacyDlpV2TransformationDetailsStorageConfig withTable(GooglePrivacyDlpV2BigQueryTable table) {
         this.table = table;
         return this;
     }
     
+    public GooglePrivacyDlpV2TransformationDetailsStorageConfig(){}
 }

@@ -18,9 +18,11 @@ public class CreateVideoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateVideoResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public CreateVideoResponse(){}
 }

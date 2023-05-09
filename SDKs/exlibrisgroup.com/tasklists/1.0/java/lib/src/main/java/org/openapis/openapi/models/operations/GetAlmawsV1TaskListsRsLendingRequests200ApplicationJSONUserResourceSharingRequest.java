@@ -25,6 +25,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_barcode")
     public String[] additionalBarcode;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withAdditionalBarcode(String[] additionalBarcode) {
         this.additionalBarcode = additionalBarcode;
         return this;
@@ -36,6 +37,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_person_name")
     public String additionalPersonName;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withAdditionalPersonName(String additionalPersonName) {
         this.additionalPersonName = additionalPersonName;
         return this;
@@ -47,6 +49,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agree_to_copyright_terms")
     public Boolean agreeToCopyrightTerms;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withAgreeToCopyrightTerms(Boolean agreeToCopyrightTerms) {
         this.agreeToCopyrightTerms = agreeToCopyrightTerms;
         return this;
@@ -58,6 +61,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_other_formats")
     public Boolean allowOtherFormats;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withAllowOtherFormats(Boolean allowOtherFormats) {
         this.allowOtherFormats = allowOtherFormats;
         return this;
@@ -69,6 +73,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withAuthor(String author) {
         this.author = author;
         return this;
@@ -80,6 +85,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_initials")
     public String authorInitials;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withAuthorInitials(String authorInitials) {
         this.authorInitials = authorInitials;
         return this;
@@ -91,6 +97,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcode")
     public String barcode;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withBarcode(String barcode) {
         this.barcode = barcode;
         return this;
@@ -102,6 +109,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bib_note")
     public String bibNote;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withBibNote(String bibNote) {
         this.bibNote = bibNote;
         return this;
@@ -113,6 +121,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call_number")
     public String callNumber;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withCallNumber(String callNumber) {
         this.callNumber = callNumber;
         return this;
@@ -124,6 +133,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chapter")
     public String chapter;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withChapter(String chapter) {
         this.chapter = chapter;
         return this;
@@ -135,6 +145,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chapter_author")
     public String chapterAuthor;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withChapterAuthor(String chapterAuthor) {
         this.chapterAuthor = chapterAuthor;
         return this;
@@ -146,6 +157,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chapter_title")
     public String chapterTitle;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withChapterTitle(String chapterTitle) {
         this.chapterTitle = chapterTitle;
         return this;
@@ -157,6 +169,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("citation_type")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestCitationType citationType;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withCitationType(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestCitationType citationType) {
         this.citationType = citationType;
         return this;
@@ -168,6 +181,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright_status")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestCopyrightStatus copyrightStatus;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withCopyrightStatus(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestCopyrightStatus copyrightStatus) {
         this.copyrightStatus = copyrightStatus;
         return this;
@@ -180,6 +194,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("created_date")
     public LocalDate createdDate;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -193,6 +208,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_time")
     public OffsetDateTime createdTime;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -204,6 +220,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doi")
     public String doi;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -215,6 +232,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edition")
     public String edition;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withEdition(String edition) {
         this.edition = edition;
         return this;
@@ -226,6 +244,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editor")
     public String editor;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withEditor(String editor) {
         this.editor = editor;
         return this;
@@ -237,6 +256,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_page")
     public String endPage;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withEndPage(String endPage) {
         this.endPage = endPage;
         return this;
@@ -248,6 +268,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_id")
     public String externalId;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -259,6 +280,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestFormat format;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withFormat(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestFormat format) {
         this.format = format;
         return this;
@@ -270,6 +292,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fund")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestFund fund;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withFund(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestFund fund) {
         this.fund = fund;
         return this;
@@ -281,6 +304,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_active_notes")
     public Boolean hasActiveNotes;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withHasActiveNotes(Boolean hasActiveNotes) {
         this.hasActiveNotes = hasActiveNotes;
         return this;
@@ -292,6 +316,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbn")
     public String isbn;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withIsbn(String isbn) {
         this.isbn = isbn;
         return this;
@@ -303,6 +328,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issn")
     public String issn;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withIssn(String issn) {
         this.issn = issn;
         return this;
@@ -314,6 +340,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public String issue;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withIssue(String issue) {
         this.issue = issue;
         return this;
@@ -325,6 +352,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("journal_title")
     public String journalTitle;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withJournalTitle(String journalTitle) {
         this.journalTitle = journalTitle;
         return this;
@@ -337,6 +365,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_interest_date")
     public LocalDate lastInterestDate;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withLastInterestDate(LocalDate lastInterestDate) {
         this.lastInterestDate = lastInterestDate;
         return this;
@@ -349,6 +378,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_modified_date")
     public LocalDate lastModifiedDate;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withLastModifiedDate(LocalDate lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -362,6 +392,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_modified_time")
     public OffsetDateTime lastModifiedTime;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -373,6 +404,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lcc_number")
     public String lccNumber;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withLccNumber(String lccNumber) {
         this.lccNumber = lccNumber;
         return this;
@@ -384,6 +416,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level_of_service")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestLevelOfService levelOfService;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withLevelOfService(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestLevelOfService levelOfService) {
         this.levelOfService = levelOfService;
         return this;
@@ -392,6 +425,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lost_damaged_fee")
     public org.openapis.openapi.models.shared.Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPropertiesShippingCost lostDamagedFee;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withLostDamagedFee(org.openapis.openapi.models.shared.Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPropertiesShippingCost lostDamagedFee) {
         this.lostDamagedFee = lostDamagedFee;
         return this;
@@ -403,6 +437,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum_fee")
     public Float maximumFee;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withMaximumFee(Float maximumFee) {
         this.maximumFee = maximumFee;
         return this;
@@ -414,6 +449,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mms_id")
     public String mmsId;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withMmsId(String mmsId) {
         this.mmsId = mmsId;
         return this;
@@ -425,6 +461,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("need_patron_info")
     public Boolean needPatronInfo;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withNeedPatronInfo(Boolean needPatronInfo) {
         this.needPatronInfo = needPatronInfo;
         return this;
@@ -436,6 +473,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withNote(String note) {
         this.note = note;
         return this;
@@ -447,6 +485,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oclc_number")
     public String oclcNumber;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withOclcNumber(String oclcNumber) {
         this.oclcNumber = oclcNumber;
         return this;
@@ -458,6 +497,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_standard_id")
     public String otherStandardId;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withOtherStandardId(String otherStandardId) {
         this.otherStandardId = otherStandardId;
         return this;
@@ -469,6 +509,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -480,6 +521,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public String pages;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPages(String pages) {
         this.pages = pages;
         return this;
@@ -491,6 +533,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("part")
     public String part;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPart(String part) {
         this.part = part;
         return this;
@@ -502,6 +545,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partner")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestPartner partner;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPartner(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestPartner partner) {
         this.partner = partner;
         return this;
@@ -513,6 +557,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickup_location")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestPickupLocation pickupLocation;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPickupLocation(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestPickupLocation pickupLocation) {
         this.pickupLocation = pickupLocation;
         return this;
@@ -524,6 +569,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickup_location_type")
     public String pickupLocationType;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPickupLocationType(String pickupLocationType) {
         this.pickupLocationType = pickupLocationType;
         return this;
@@ -535,6 +581,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place_of_publication")
     public String placeOfPublication;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPlaceOfPublication(String placeOfPublication) {
         this.placeOfPublication = placeOfPublication;
         return this;
@@ -546,6 +593,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pmid")
     public String pmid;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPmid(String pmid) {
         this.pmid = pmid;
         return this;
@@ -557,6 +605,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred_send_method")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestPreferredSendMethod preferredSendMethod;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPreferredSendMethod(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestPreferredSendMethod preferredSendMethod) {
         this.preferredSendMethod = preferredSendMethod;
         return this;
@@ -568,6 +617,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printed")
     public Boolean printed;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPrinted(Boolean printed) {
         this.printed = printed;
         return this;
@@ -579,6 +629,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -590,6 +641,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reading_room")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestReadingRoom readingRoom;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withReadingRoom(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestReadingRoom readingRoom) {
         this.readingRoom = readingRoom;
         return this;
@@ -598,6 +650,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receive_cost")
     public org.openapis.openapi.models.shared.Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPropertiesShippingCost receiveCost;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withReceiveCost(org.openapis.openapi.models.shared.Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPropertiesShippingCost receiveCost) {
         this.receiveCost = receiveCost;
         return this;
@@ -609,6 +662,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remote_record_id")
     public String remoteRecordId;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withRemoteRecordId(String remoteRecordId) {
         this.remoteRecordId = remoteRecordId;
         return this;
@@ -620,6 +674,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reported")
     public Boolean reported;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withReported(Boolean reported) {
         this.reported = reported;
         return this;
@@ -628,6 +683,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_cost")
     public org.openapis.openapi.models.shared.Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPropertiesShippingCost requestCost;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withRequestCost(org.openapis.openapi.models.shared.Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPropertiesShippingCost requestCost) {
         this.requestCost = requestCost;
         return this;
@@ -639,6 +695,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -650,6 +707,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_language")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRequestedLanguage requestedLanguage;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withRequestedLanguage(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRequestedLanguage requestedLanguage) {
         this.requestedLanguage = requestedLanguage;
         return this;
@@ -661,6 +719,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_media")
     public String requestedMedia;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withRequestedMedia(String requestedMedia) {
         this.requestedMedia = requestedMedia;
         return this;
@@ -672,6 +731,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requester")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRequester requester;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withRequester(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRequester requester) {
         this.requester = requester;
         return this;
@@ -683,6 +743,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rs_note")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRsNote[] rsNote;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withRsNote(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRsNote[] rsNote) {
         this.rsNote = rsNote;
         return this;
@@ -694,6 +755,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series_title_number")
     public String seriesTitleNumber;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withSeriesTitleNumber(String seriesTitleNumber) {
         this.seriesTitleNumber = seriesTitleNumber;
         return this;
@@ -702,6 +764,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_cost")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestShippingCost shippingCost;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withShippingCost(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestShippingCost shippingCost) {
         this.shippingCost = shippingCost;
         return this;
@@ -713,6 +776,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withSource(String source) {
         this.source = source;
         return this;
@@ -724,6 +788,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specific_edition")
     public Boolean specificEdition;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withSpecificEdition(Boolean specificEdition) {
         this.specificEdition = specificEdition;
         return this;
@@ -735,6 +800,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_page")
     public String startPage;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withStartPage(String startPage) {
         this.startPage = startPage;
         return this;
@@ -746,6 +812,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestStatus status;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withStatus(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestStatus status) {
         this.status = status;
         return this;
@@ -757,6 +824,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplied_format")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestSuppliedFormat suppliedFormat;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withSuppliedFormat(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestSuppliedFormat suppliedFormat) {
         this.suppliedFormat = suppliedFormat;
         return this;
@@ -768,6 +836,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_email")
     public String textEmail;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withTextEmail(String textEmail) {
         this.textEmail = textEmail;
         return this;
@@ -779,6 +848,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_postal_1")
     public String textPostal1;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withTextPostal1(String textPostal1) {
         this.textPostal1 = textPostal1;
         return this;
@@ -790,6 +860,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_postal_2")
     public String textPostal2;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withTextPostal2(String textPostal2) {
         this.textPostal2 = textPostal2;
         return this;
@@ -801,6 +872,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_postal_3")
     public String textPostal3;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withTextPostal3(String textPostal3) {
         this.textPostal3 = textPostal3;
         return this;
@@ -812,6 +884,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_postal_4")
     public String textPostal4;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withTextPostal4(String textPostal4) {
         this.textPostal4 = textPostal4;
         return this;
@@ -823,6 +896,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -834,6 +908,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_alternative_address")
     public Boolean useAlternativeAddress;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withUseAlternativeAddress(Boolean useAlternativeAddress) {
         this.useAlternativeAddress = useAlternativeAddress;
         return this;
@@ -845,6 +920,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_request")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestUserRequest userRequest;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withUserRequest(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestUserRequest userRequest) {
         this.userRequest = userRequest;
         return this;
@@ -856,6 +932,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volume")
     public String volume;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withVolume(String volume) {
         this.volume = volume;
         return this;
@@ -867,6 +944,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("willing_to_pay")
     public Boolean willingToPay;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withWillingToPay(Boolean willingToPay) {
         this.willingToPay = willingToPay;
         return this;
@@ -878,9 +956,11 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public String year;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest(){}
 }

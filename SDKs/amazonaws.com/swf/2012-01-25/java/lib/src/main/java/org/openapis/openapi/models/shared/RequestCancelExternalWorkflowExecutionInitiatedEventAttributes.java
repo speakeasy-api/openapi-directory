@@ -15,6 +15,7 @@ public class RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public RequestCancelExternalWorkflowExecutionInitiatedEventAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -22,6 +23,7 @@ public class RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public RequestCancelExternalWorkflowExecutionInitiatedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -30,6 +32,7 @@ public class RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public RequestCancelExternalWorkflowExecutionInitiatedEventAttributes withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -37,9 +40,14 @@ public class RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public RequestCancelExternalWorkflowExecutionInitiatedEventAttributes withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public RequestCancelExternalWorkflowExecutionInitiatedEventAttributes(@JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("workflowId") String workflowId) {
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.workflowId = workflowId;
+  }
 }

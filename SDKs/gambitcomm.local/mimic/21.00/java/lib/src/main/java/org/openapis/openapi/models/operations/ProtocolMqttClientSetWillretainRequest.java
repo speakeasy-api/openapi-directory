@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetWillretainRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSetWillretainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSetWillretainRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientSetWillretainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=retain")
     public String retain;
+
     public ProtocolMqttClientSetWillretainRequest withRetain(String retain) {
         this.retain = retain;
         return this;
     }
     
+    public ProtocolMqttClientSetWillretainRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("retain") String retain) {
+        this.agentNum = agentNum;
+        this.retain = retain;
+  }
 }

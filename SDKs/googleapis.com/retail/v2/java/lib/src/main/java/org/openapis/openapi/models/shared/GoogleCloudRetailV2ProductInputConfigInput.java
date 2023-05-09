@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2ProductInputConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigQuerySource")
     public GoogleCloudRetailV2BigQuerySource bigQuerySource;
+
     public GoogleCloudRetailV2ProductInputConfigInput withBigQuerySource(GoogleCloudRetailV2BigQuerySource bigQuerySource) {
         this.bigQuerySource = bigQuerySource;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2ProductInputConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudRetailV2GcsSource gcsSource;
+
     public GoogleCloudRetailV2ProductInputConfigInput withGcsSource(GoogleCloudRetailV2GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2ProductInputConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productInlineSource")
     public GoogleCloudRetailV2ProductInlineSourceInput productInlineSource;
+
     public GoogleCloudRetailV2ProductInputConfigInput withProductInlineSource(GoogleCloudRetailV2ProductInlineSourceInput productInlineSource) {
         this.productInlineSource = productInlineSource;
         return this;
     }
     
+    public GoogleCloudRetailV2ProductInputConfigInput(){}
 }

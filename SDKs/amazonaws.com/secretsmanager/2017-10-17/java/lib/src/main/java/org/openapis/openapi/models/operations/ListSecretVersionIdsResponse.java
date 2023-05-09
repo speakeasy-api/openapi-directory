@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSecretVersionIdsResponse {
     
     public String contentType;
+
     public ListSecretVersionIdsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSecretVersionIdsResponse {
      */
     
     public Object internalServiceError;
+
     public ListSecretVersionIdsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListSecretVersionIdsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListSecretVersionIdsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListSecretVersionIdsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListSecretVersionIdsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListSecretVersionIdsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSecretVersionIdsResponse listSecretVersionIdsResponse;
+
     public ListSecretVersionIdsResponse withListSecretVersionIdsResponse(org.openapis.openapi.models.shared.ListSecretVersionIdsResponse listSecretVersionIdsResponse) {
         this.listSecretVersionIdsResponse = listSecretVersionIdsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListSecretVersionIdsResponse {
     
     
     public Integer statusCode;
+
     public ListSecretVersionIdsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListSecretVersionIdsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSecretVersionIdsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListSecretVersionIdsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSecretVersionIdsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListSecretVersionIdsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

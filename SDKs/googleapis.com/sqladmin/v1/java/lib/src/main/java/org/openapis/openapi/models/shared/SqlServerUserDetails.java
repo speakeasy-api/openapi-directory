@@ -18,6 +18,7 @@ public class SqlServerUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public SqlServerUserDetails withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -29,9 +30,11 @@ public class SqlServerUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverRoles")
     public String[] serverRoles;
+
     public SqlServerUserDetails withServerRoles(String[] serverRoles) {
         this.serverRoles = serverRoles;
         return this;
     }
     
+    public SqlServerUserDetails(){}
 }

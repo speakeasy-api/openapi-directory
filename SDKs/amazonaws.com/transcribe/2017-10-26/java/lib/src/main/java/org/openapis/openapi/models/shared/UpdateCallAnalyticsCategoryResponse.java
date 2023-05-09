@@ -15,9 +15,11 @@ public class UpdateCallAnalyticsCategoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CategoryProperties")
     public CategoryProperties categoryProperties;
+
     public UpdateCallAnalyticsCategoryResponse withCategoryProperties(CategoryProperties categoryProperties) {
         this.categoryProperties = categoryProperties;
         return this;
     }
     
+    public UpdateCallAnalyticsCategoryResponse(){}
 }

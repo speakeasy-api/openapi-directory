@@ -18,6 +18,7 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildConfig")
     public BuildConfig buildConfig;
+
     public Function withBuildConfig(BuildConfig buildConfig) {
         this.buildConfig = buildConfig;
         return this;
@@ -29,6 +30,7 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Function withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public FunctionEnvironmentEnum environment;
+
     public Function withEnvironment(FunctionEnvironmentEnum environment) {
         this.environment = environment;
         return this;
@@ -51,17 +54,19 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTrigger")
     public EventTrigger eventTrigger;
+
     public Function withEventTrigger(EventTrigger eventTrigger) {
         this.eventTrigger = eventTrigger;
         return this;
     }
     
     /**
-     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+     * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public Function withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -73,6 +78,7 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Function withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,17 +90,19 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Function withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+     * Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConfig")
     public ServiceConfig serviceConfig;
+
     public Function withServiceConfig(ServiceConfig serviceConfig) {
         this.serviceConfig = serviceConfig;
         return this;
@@ -106,6 +114,7 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public FunctionStateEnum state;
+
     public Function withState(FunctionStateEnum state) {
         this.state = state;
         return this;
@@ -117,6 +126,7 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMessages")
     public GoogleCloudFunctionsV2betaStateMessage[] stateMessages;
+
     public Function withStateMessages(GoogleCloudFunctionsV2betaStateMessage[] stateMessages) {
         this.stateMessages = stateMessages;
         return this;
@@ -128,20 +138,11 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Function withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
-    /**
-     * Output only. The deployed url for the function.
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("url")
-    public String url;
-    public Function withUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    
+    public Function(){}
 }

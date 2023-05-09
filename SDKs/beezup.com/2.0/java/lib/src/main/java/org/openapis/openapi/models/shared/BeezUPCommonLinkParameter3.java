@@ -15,6 +15,7 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BeezUPCommonLinkParameter3 withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class BeezUPCommonLinkParameter3 {
      */
     @JsonProperty("in")
     public BeezUPCommonParameterInEnum in;
+
     public BeezUPCommonLinkParameter3 withIn(BeezUPCommonParameterInEnum in) {
         this.in = in;
         return this;
@@ -40,6 +42,7 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public BeezUPCommonLinkParameter3 withLabel(String label) {
         this.label = label;
         return this;
@@ -51,6 +54,7 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovLink")
     public BeezUPCommonLOVLink3 lovLink;
+
     public BeezUPCommonLinkParameter3 withLovLink(BeezUPCommonLOVLink3 lovLink) {
         this.lovLink = lovLink;
         return this;
@@ -62,6 +66,7 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovRequired")
     public Boolean lovRequired;
+
     public BeezUPCommonLinkParameter3 withLovRequired(Boolean lovRequired) {
         this.lovRequired = lovRequired;
         return this;
@@ -73,6 +78,7 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, BeezUPCommonLinkParameterProperty3> properties;
+
     public BeezUPCommonLinkParameter3 withProperties(java.util.Map<String, BeezUPCommonLinkParameterProperty3> properties) {
         this.properties = properties;
         return this;
@@ -81,6 +87,7 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public BeezUPCommonLinkParameter3 withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -92,6 +99,7 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public BeezUPCommonLinkParameter3 withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -103,6 +111,7 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BeezUPCommonParameterTypeEnum type;
+
     public BeezUPCommonLinkParameter3 withType(BeezUPCommonParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -114,9 +123,13 @@ public class BeezUPCommonLinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public BeezUPCommonLinkParameter3 withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public BeezUPCommonLinkParameter3(@JsonProperty("in") BeezUPCommonParameterInEnum in) {
+        this.in = in;
+  }
 }

@@ -17,6 +17,7 @@ public class ApiCoreDtoDomainsDomain {
     @JsonProperty("custom404")
     @SpeakeasyMetadata("form:name=custom404")
     public String custom404;
+
     public ApiCoreDtoDomainsDomain withCustom404(String custom404) {
         this.custom404 = custom404;
         return this;
@@ -26,6 +27,7 @@ public class ApiCoreDtoDomainsDomain {
     @JsonProperty("customHomepage")
     @SpeakeasyMetadata("form:name=customHomepage")
     public String customHomepage;
+
     public ApiCoreDtoDomainsDomain withCustomHomepage(String customHomepage) {
         this.customHomepage = customHomepage;
         return this;
@@ -35,6 +37,7 @@ public class ApiCoreDtoDomainsDomain {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public Long id;
+
     public ApiCoreDtoDomainsDomain withId(Long id) {
         this.id = id;
         return this;
@@ -44,6 +47,7 @@ public class ApiCoreDtoDomainsDomain {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ApiCoreDtoDomainsDomain withName(String name) {
         this.name = name;
         return this;
@@ -53,9 +57,11 @@ public class ApiCoreDtoDomainsDomain {
     @JsonProperty("type")
     @SpeakeasyMetadata("form:name=type")
     public ApiCoreDtoDomainsDomainTypeEnum type;
+
     public ApiCoreDtoDomainsDomain withType(ApiCoreDtoDomainsDomainTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ApiCoreDtoDomainsDomain(){}
 }

@@ -15,6 +15,7 @@ public class TensorBoardOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPath")
     public String localPath;
+
     public TensorBoardOutputConfig withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -22,9 +23,13 @@ public class TensorBoardOutputConfig {
     
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public TensorBoardOutputConfig withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public TensorBoardOutputConfig(@JsonProperty("S3OutputPath") String s3OutputPath) {
+        this.s3OutputPath = s3OutputPath;
+  }
 }

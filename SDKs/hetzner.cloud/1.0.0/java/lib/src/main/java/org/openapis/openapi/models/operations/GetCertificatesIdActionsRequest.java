@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCertificatesIdActionsRequest {
@@ -12,6 +13,7 @@ public class GetCertificatesIdActionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetCertificatesIdActionsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetCertificatesIdActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetCertificatesIdActionsSortParameterSortEnum sort;
+
     public GetCertificatesIdActionsRequest withSort(GetCertificatesIdActionsSortParameterSortEnum sort) {
         this.sort = sort;
         return this;
@@ -32,9 +35,13 @@ public class GetCertificatesIdActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetCertificatesIdActionsStatusParameterStatusEnum status;
+
     public GetCertificatesIdActionsRequest withStatus(GetCertificatesIdActionsStatusParameterStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetCertificatesIdActionsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

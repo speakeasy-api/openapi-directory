@@ -15,9 +15,11 @@ public class DeliverConfigSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSnapshotId")
     public String configSnapshotId;
+
     public DeliverConfigSnapshotResponse withConfigSnapshotId(String configSnapshotId) {
         this.configSnapshotId = configSnapshotId;
         return this;
     }
     
+    public DeliverConfigSnapshotResponse(){}
 }

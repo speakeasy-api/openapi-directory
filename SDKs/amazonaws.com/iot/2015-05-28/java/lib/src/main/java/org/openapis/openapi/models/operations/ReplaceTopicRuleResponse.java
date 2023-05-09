@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReplaceTopicRuleResponse {
@@ -12,6 +13,7 @@ public class ReplaceTopicRuleResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public ReplaceTopicRuleResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class ReplaceTopicRuleResponse {
     
     
     public String contentType;
+
     public ReplaceTopicRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ReplaceTopicRuleResponse {
      */
     
     public Object internalException;
+
     public ReplaceTopicRuleResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ReplaceTopicRuleResponse {
      */
     
     public Object invalidRequestException;
+
     public ReplaceTopicRuleResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ReplaceTopicRuleResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ReplaceTopicRuleResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -59,6 +65,7 @@ public class ReplaceTopicRuleResponse {
      */
     
     public Object sqlParseException;
+
     public ReplaceTopicRuleResponse withSqlParseException(Object sqlParseException) {
         this.sqlParseException = sqlParseException;
         return this;
@@ -66,6 +73,7 @@ public class ReplaceTopicRuleResponse {
     
     
     public Integer statusCode;
+
     public ReplaceTopicRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ReplaceTopicRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReplaceTopicRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ReplaceTopicRuleResponse {
      */
     
     public Object unauthorizedException;
+
     public ReplaceTopicRuleResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ReplaceTopicRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

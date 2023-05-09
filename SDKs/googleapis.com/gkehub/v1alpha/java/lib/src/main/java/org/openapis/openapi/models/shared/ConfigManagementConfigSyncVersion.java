@@ -18,6 +18,7 @@ public class ConfigManagementConfigSyncVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admissionWebhook")
     public String admissionWebhook;
+
     public ConfigManagementConfigSyncVersion withAdmissionWebhook(String admissionWebhook) {
         this.admissionWebhook = admissionWebhook;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementConfigSyncVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitSync")
     public String gitSync;
+
     public ConfigManagementConfigSyncVersion withGitSync(String gitSync) {
         this.gitSync = gitSync;
         return this;
@@ -40,6 +42,7 @@ public class ConfigManagementConfigSyncVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importer")
     public String importer;
+
     public ConfigManagementConfigSyncVersion withImporter(String importer) {
         this.importer = importer;
         return this;
@@ -51,6 +54,7 @@ public class ConfigManagementConfigSyncVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitor")
     public String monitor;
+
     public ConfigManagementConfigSyncVersion withMonitor(String monitor) {
         this.monitor = monitor;
         return this;
@@ -62,6 +66,7 @@ public class ConfigManagementConfigSyncVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconcilerManager")
     public String reconcilerManager;
+
     public ConfigManagementConfigSyncVersion withReconcilerManager(String reconcilerManager) {
         this.reconcilerManager = reconcilerManager;
         return this;
@@ -73,6 +78,7 @@ public class ConfigManagementConfigSyncVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootReconciler")
     public String rootReconciler;
+
     public ConfigManagementConfigSyncVersion withRootReconciler(String rootReconciler) {
         this.rootReconciler = rootReconciler;
         return this;
@@ -84,9 +90,11 @@ public class ConfigManagementConfigSyncVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncer")
     public String syncer;
+
     public ConfigManagementConfigSyncVersion withSyncer(String syncer) {
         this.syncer = syncer;
         return this;
     }
     
+    public ConfigManagementConfigSyncVersion(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetUsernameRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSetUsernameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSetUsernameRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientSetUsernameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public ProtocolMqttClientSetUsernameRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ProtocolMqttClientSetUsernameRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("username") String username) {
+        this.agentNum = agentNum;
+        this.username = username;
+  }
 }

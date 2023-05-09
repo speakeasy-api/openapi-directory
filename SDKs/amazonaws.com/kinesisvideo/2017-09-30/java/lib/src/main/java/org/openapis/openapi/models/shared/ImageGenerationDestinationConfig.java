@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImageGenerationDestinationConfig {
     @JsonProperty("DestinationRegion")
     public String destinationRegion;
+
     public ImageGenerationDestinationConfig withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -19,9 +20,14 @@ public class ImageGenerationDestinationConfig {
     
     @JsonProperty("Uri")
     public String uri;
+
     public ImageGenerationDestinationConfig withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ImageGenerationDestinationConfig(@JsonProperty("DestinationRegion") String destinationRegion, @JsonProperty("Uri") String uri) {
+        this.destinationRegion = destinationRegion;
+        this.uri = uri;
+  }
 }

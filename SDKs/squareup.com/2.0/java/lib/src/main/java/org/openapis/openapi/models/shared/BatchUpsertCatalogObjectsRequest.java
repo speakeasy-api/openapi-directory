@@ -36,6 +36,7 @@ public class BatchUpsertCatalogObjectsRequest {
      */
     @JsonProperty("batches")
     public CatalogObjectBatch[] batches;
+
     public BatchUpsertCatalogObjectsRequest withBatches(CatalogObjectBatch[] batches) {
         this.batches = batches;
         return this;
@@ -55,9 +56,14 @@ public class BatchUpsertCatalogObjectsRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public BatchUpsertCatalogObjectsRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public BatchUpsertCatalogObjectsRequest(@JsonProperty("batches") CatalogObjectBatch[] batches, @JsonProperty("idempotency_key") String idempotencyKey) {
+        this.batches = batches;
+        this.idempotencyKey = idempotencyKey;
+  }
 }

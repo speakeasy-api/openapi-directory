@@ -12,6 +12,7 @@ public class CCTotalsByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public CCTotalsByCandidatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class CCTotalsByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public CCTotalsByCandidate[] results;
+
     public CCTotalsByCandidatePage withResults(CCTotalsByCandidate[] results) {
         this.results = results;
         return this;
     }
     
+    public CCTotalsByCandidatePage(){}
 }

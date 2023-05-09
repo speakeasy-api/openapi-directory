@@ -15,6 +15,7 @@ public class GetDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public GetDeviceRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,9 +23,13 @@ public class GetDeviceRequest {
     
     @JsonProperty("DeviceKey")
     public String deviceKey;
+
     public GetDeviceRequest withDeviceKey(String deviceKey) {
         this.deviceKey = deviceKey;
         return this;
     }
     
+    public GetDeviceRequest(@JsonProperty("DeviceKey") String deviceKey) {
+        this.deviceKey = deviceKey;
+  }
 }

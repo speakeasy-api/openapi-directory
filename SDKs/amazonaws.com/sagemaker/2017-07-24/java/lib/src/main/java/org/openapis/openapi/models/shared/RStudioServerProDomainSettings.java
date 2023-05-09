@@ -18,6 +18,7 @@ public class RStudioServerProDomainSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultResourceSpec")
     public ResourceSpec defaultResourceSpec;
+
     public RStudioServerProDomainSettings withDefaultResourceSpec(ResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
         return this;
@@ -25,6 +26,7 @@ public class RStudioServerProDomainSettings {
     
     @JsonProperty("DomainExecutionRoleArn")
     public String domainExecutionRoleArn;
+
     public RStudioServerProDomainSettings withDomainExecutionRoleArn(String domainExecutionRoleArn) {
         this.domainExecutionRoleArn = domainExecutionRoleArn;
         return this;
@@ -33,6 +35,7 @@ public class RStudioServerProDomainSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RStudioConnectUrl")
     public String rStudioConnectUrl;
+
     public RStudioServerProDomainSettings withRStudioConnectUrl(String rStudioConnectUrl) {
         this.rStudioConnectUrl = rStudioConnectUrl;
         return this;
@@ -41,9 +44,13 @@ public class RStudioServerProDomainSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RStudioPackageManagerUrl")
     public String rStudioPackageManagerUrl;
+
     public RStudioServerProDomainSettings withRStudioPackageManagerUrl(String rStudioPackageManagerUrl) {
         this.rStudioPackageManagerUrl = rStudioPackageManagerUrl;
         return this;
     }
     
+    public RStudioServerProDomainSettings(@JsonProperty("DomainExecutionRoleArn") String domainExecutionRoleArn) {
+        this.domainExecutionRoleArn = domainExecutionRoleArn;
+  }
 }

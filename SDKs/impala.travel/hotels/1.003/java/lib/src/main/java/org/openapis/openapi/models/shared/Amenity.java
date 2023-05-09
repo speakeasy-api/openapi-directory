@@ -577,6 +577,7 @@ public class Amenity {
      */
     @JsonProperty("code")
     public Double code;
+
     public Amenity withCode(Double code) {
         this.code = code;
         return this;
@@ -587,9 +588,14 @@ public class Amenity {
      */
     @JsonProperty("formatted")
     public String formatted;
+
     public Amenity withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
     }
     
+    public Amenity(@JsonProperty("code") Double code, @JsonProperty("formatted") String formatted) {
+        this.code = code;
+        this.formatted = formatted;
+  }
 }

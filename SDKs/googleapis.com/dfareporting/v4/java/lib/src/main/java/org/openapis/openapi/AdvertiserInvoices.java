@@ -58,11 +58,9 @@ public class AdvertiserInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdvertiserInvoicesListResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserInvoicesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdvertiserInvoicesListResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserInvoicesListResponse(contentType, httpRes.statusCode()) {{
             advertiserInvoicesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

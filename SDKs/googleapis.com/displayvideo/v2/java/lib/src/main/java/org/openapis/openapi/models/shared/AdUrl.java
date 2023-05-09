@@ -18,6 +18,7 @@ public class AdUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AdUrlTypeEnum type;
+
     public AdUrl withType(AdUrlTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class AdUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AdUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AdUrl(){}
 }

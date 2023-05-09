@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyIpamScopeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyIpamScopeActionEnum action;
+
     public GETModifyIpamScopeRequest withAction(GETModifyIpamScopeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyIpamScopeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
     public String description;
+
     public GETModifyIpamScopeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyIpamScopeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyIpamScopeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyIpamScopeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamScopeId")
     public String ipamScopeId;
+
     public GETModifyIpamScopeRequest withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyIpamScopeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyIpamScopeVersionEnum version;
+
     public GETModifyIpamScopeRequest withVersion(GETModifyIpamScopeVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyIpamScopeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyIpamScopeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyIpamScopeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyIpamScopeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyIpamScopeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyIpamScopeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETModifyIpamScopeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyIpamScopeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyIpamScopeRequest(@JsonProperty("Action") GETModifyIpamScopeActionEnum action, @JsonProperty("IpamScopeId") String ipamScopeId, @JsonProperty("Version") GETModifyIpamScopeVersionEnum version) {
+        this.action = action;
+        this.ipamScopeId = ipamScopeId;
+        this.version = version;
+  }
 }

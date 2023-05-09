@@ -18,20 +18,23 @@ public class GkeCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterMissing")
     public Boolean clusterMissing;
+
     public GkeCluster withClusterMissing(Boolean clusterMissing) {
         this.clusterMissing = clusterMissing;
         return this;
     }
     
     /**
-     * Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+     * Immutable. Self-link of the Google Cloud resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public GkeCluster withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public GkeCluster(){}
 }

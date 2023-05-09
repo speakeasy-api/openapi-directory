@@ -10,15 +10,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * NotificationsGetUserEmailSettingsDefaultApplicationJSONCodeEnum - The status code return by the API. It can be 400 or 404 or 409 or 500.
  */
 public enum NotificationsGetUserEmailSettingsDefaultApplicationJSONCodeEnum {
-    FOUR_HUNDRED("400"),
-    FOUR_HUNDRED_AND_FOUR("404"),
-    FOUR_HUNDRED_AND_NINE("409"),
-    FIVE_HUNDRED("500");
+    FOUR_HUNDRED(400L),
+    FOUR_HUNDRED_AND_FOUR(404L),
+    FOUR_HUNDRED_AND_NINE(409L),
+    FIVE_HUNDRED(500L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private NotificationsGetUserEmailSettingsDefaultApplicationJSONCodeEnum(String value) {
+    private NotificationsGetUserEmailSettingsDefaultApplicationJSONCodeEnum(Long value) {
         this.value = value;
     }
 }

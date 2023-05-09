@@ -15,6 +15,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("TrademarkID")
     public String trademarkID;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand withTrademarkID(String trademarkID) {
         this.trademarkID = trademarkID;
         return this;
@@ -25,9 +26,14 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("TrademarkIPOCode")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand withTrademarkIPOCode(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode) {
         this.trademarkIPOCode = trademarkIPOCode;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand(@JsonProperty("TrademarkID") String trademarkID, @JsonProperty("TrademarkIPOCode") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode) {
+        this.trademarkID = trademarkID;
+        this.trademarkIPOCode = trademarkIPOCode;
+  }
 }

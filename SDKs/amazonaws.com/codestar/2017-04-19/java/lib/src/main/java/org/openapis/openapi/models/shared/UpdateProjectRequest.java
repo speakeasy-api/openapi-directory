@@ -12,6 +12,7 @@ public class UpdateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateProjectRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateProjectRequest {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateProjectRequest withId(String id) {
         this.id = id;
         return this;
@@ -27,9 +29,13 @@ public class UpdateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateProjectRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateProjectRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

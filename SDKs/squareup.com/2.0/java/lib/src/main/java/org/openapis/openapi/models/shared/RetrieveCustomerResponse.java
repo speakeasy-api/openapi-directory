@@ -21,6 +21,7 @@ public class RetrieveCustomerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public Customer customer;
+
     public RetrieveCustomerResponse withCustomer(Customer customer) {
         this.customer = customer;
         return this;
@@ -32,9 +33,11 @@ public class RetrieveCustomerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveCustomerResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveCustomerResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotsByRefrerenceUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETAnnotsByRefrerenceUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=refRgdId")
     public Integer refRgdId;
+
     public GETAnnotsByRefrerenceUsingGETRequest withRefRgdId(Integer refRgdId) {
         this.refRgdId = refRgdId;
         return this;
     }
     
+    public GETAnnotsByRefrerenceUsingGETRequest(@JsonProperty("refRgdId") Integer refRgdId) {
+        this.refRgdId = refRgdId;
+  }
 }

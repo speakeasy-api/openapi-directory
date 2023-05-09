@@ -15,6 +15,7 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public CreateUpdateProfileRequests withDocument(String document) {
         this.document = document;
         return this;
@@ -26,6 +27,7 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentType")
     public String documentType;
+
     public CreateUpdateProfileRequests withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -37,6 +39,7 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateUpdateProfileRequests withEmail(String email) {
         this.email = email;
         return this;
@@ -48,6 +51,7 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public CreateUpdateProfileRequests withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -59,6 +63,7 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCorporate")
     public Boolean isCorporate;
+
     public CreateUpdateProfileRequests withIsCorporate(Boolean isCorporate) {
         this.isCorporate = isCorporate;
         return this;
@@ -70,6 +75,7 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isNewsletterOptIn")
     public Boolean isNewsletterOptIn;
+
     public CreateUpdateProfileRequests withIsNewsletterOptIn(Boolean isNewsletterOptIn) {
         this.isNewsletterOptIn = isNewsletterOptIn;
         return this;
@@ -81,6 +87,7 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public CreateUpdateProfileRequests withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -92,6 +99,7 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeDefault")
     public String localeDefault;
+
     public CreateUpdateProfileRequests withLocaleDefault(String localeDefault) {
         this.localeDefault = localeDefault;
         return this;
@@ -103,9 +111,11 @@ public class CreateUpdateProfileRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public CreateUpdateProfileRequests withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public CreateUpdateProfileRequests(){}
 }

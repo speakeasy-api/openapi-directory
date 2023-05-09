@@ -12,6 +12,7 @@ public class ReportByDayGlobalByChannel {
      */
     @JsonProperty("channel")
     public BeezUPCommonChannelBasicInfo channel;
+
     public ReportByDayGlobalByChannel withChannel(BeezUPCommonChannelBasicInfo channel) {
         this.channel = channel;
         return this;
@@ -22,9 +23,14 @@ public class ReportByDayGlobalByChannel {
      */
     @JsonProperty("performanceIndicator")
     public Double performanceIndicator;
+
     public ReportByDayGlobalByChannel withPerformanceIndicator(Double performanceIndicator) {
         this.performanceIndicator = performanceIndicator;
         return this;
     }
     
+    public ReportByDayGlobalByChannel(@JsonProperty("channel") BeezUPCommonChannelBasicInfo channel, @JsonProperty("performanceIndicator") Double performanceIndicator) {
+        this.channel = channel;
+        this.performanceIndicator = performanceIndicator;
+  }
 }

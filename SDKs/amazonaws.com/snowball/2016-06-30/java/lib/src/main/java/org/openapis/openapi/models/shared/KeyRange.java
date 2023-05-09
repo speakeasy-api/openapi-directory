@@ -15,6 +15,7 @@ public class KeyRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginMarker")
     public String beginMarker;
+
     public KeyRange withBeginMarker(String beginMarker) {
         this.beginMarker = beginMarker;
         return this;
@@ -23,9 +24,11 @@ public class KeyRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndMarker")
     public String endMarker;
+
     public KeyRange withEndMarker(String endMarker) {
         this.endMarker = endMarker;
         return this;
     }
     
+    public KeyRange(){}
 }

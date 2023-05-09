@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateByteMatchSetResponse {
     
     public String contentType;
+
     public CreateByteMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateByteMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateByteMatchSetResponse createByteMatchSetResponse;
+
     public CreateByteMatchSetResponse withCreateByteMatchSetResponse(org.openapis.openapi.models.shared.CreateByteMatchSetResponse createByteMatchSetResponse) {
         this.createByteMatchSetResponse = createByteMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateByteMatchSetResponse {
     
     
     public Integer statusCode;
+
     public CreateByteMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateByteMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateByteMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateByteMatchSetResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateByteMatchSetResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -53,6 +59,7 @@ public class CreateByteMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateByteMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateByteMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public CreateByteMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -73,6 +81,7 @@ public class CreateByteMatchSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateByteMatchSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class CreateByteMatchSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateByteMatchSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateByteMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateByteMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public CreateByteMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

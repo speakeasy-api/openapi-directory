@@ -15,9 +15,11 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMess
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsMessage")
     public String smsMessage;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageSmsSettings withSmsMessage(String smsMessage) {
         this.smsMessage = smsMessage;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageSmsSettings(){}
 }

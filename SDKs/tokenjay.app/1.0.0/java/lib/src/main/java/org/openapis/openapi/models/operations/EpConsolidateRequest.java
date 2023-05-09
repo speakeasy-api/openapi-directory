@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EpConsolidateRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=p2pkaddress")
     public String p2pkaddress;
+
     public EpConsolidateRequest withP2pkaddress(String p2pkaddress) {
         this.p2pkaddress = p2pkaddress;
         return this;
     }
     
+    public EpConsolidateRequest(@JsonProperty("p2pkaddress") String p2pkaddress) {
+        this.p2pkaddress = p2pkaddress;
+  }
 }

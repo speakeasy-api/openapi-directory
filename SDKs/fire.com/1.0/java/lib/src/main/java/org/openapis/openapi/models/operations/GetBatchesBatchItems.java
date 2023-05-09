@@ -15,6 +15,7 @@ public class GetBatchesBatchItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GetBatchesBatchItemsBatchItem[] items;
+
     public GetBatchesBatchItems withItems(GetBatchesBatchItemsBatchItem[] items) {
         this.items = items;
         return this;
@@ -26,9 +27,11 @@ public class GetBatchesBatchItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GetBatchesBatchItems withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetBatchesBatchItems(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyAssignmentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssignmentCopy assignmentCopy;
+
     public CopyAssignmentRequest withAssignmentCopy(org.openapis.openapi.models.shared.AssignmentCopy assignmentCopy) {
         this.assignmentCopy = assignmentCopy;
         return this;
@@ -19,6 +21,7 @@ public class CopyAssignmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
     public String assignment;
+
     public CopyAssignmentRequest withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -29,9 +32,15 @@ public class CopyAssignmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public CopyAssignmentRequest withClass(String class_) {
         this.class_ = class_;
         return this;
     }
     
+    public CopyAssignmentRequest(@JsonProperty("AssignmentCopy") org.openapis.openapi.models.shared.AssignmentCopy assignmentCopy, @JsonProperty("assignment") String assignment, @JsonProperty("class") String class_) {
+        this.assignmentCopy = assignmentCopy;
+        this.assignment = assignment;
+        this.class_ = class_;
+  }
 }

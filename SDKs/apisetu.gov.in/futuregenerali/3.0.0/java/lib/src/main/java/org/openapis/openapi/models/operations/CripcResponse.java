@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CripcResponse {
     
     public String contentType;
+
     public CripcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CripcResponse {
     
     
     public Integer statusCode;
+
     public CripcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CripcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CripcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CripcResponse {
      */
     
     public Cripc400ApplicationJSON cripc400ApplicationJSONObject;
+
     public CripcResponse withCripc400ApplicationJSONObject(Cripc400ApplicationJSON cripc400ApplicationJSONObject) {
         this.cripc400ApplicationJSONObject = cripc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CripcResponse {
      */
     
     public Cripc401ApplicationJSON cripc401ApplicationJSONObject;
+
     public CripcResponse withCripc401ApplicationJSONObject(Cripc401ApplicationJSON cripc401ApplicationJSONObject) {
         this.cripc401ApplicationJSONObject = cripc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CripcResponse {
      */
     
     public Cripc404ApplicationJSON cripc404ApplicationJSONObject;
+
     public CripcResponse withCripc404ApplicationJSONObject(Cripc404ApplicationJSON cripc404ApplicationJSONObject) {
         this.cripc404ApplicationJSONObject = cripc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CripcResponse {
      */
     
     public Cripc500ApplicationJSON cripc500ApplicationJSONObject;
+
     public CripcResponse withCripc500ApplicationJSONObject(Cripc500ApplicationJSON cripc500ApplicationJSONObject) {
         this.cripc500ApplicationJSONObject = cripc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CripcResponse {
      */
     
     public Cripc502ApplicationJSON cripc502ApplicationJSONObject;
+
     public CripcResponse withCripc502ApplicationJSONObject(Cripc502ApplicationJSON cripc502ApplicationJSONObject) {
         this.cripc502ApplicationJSONObject = cripc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CripcResponse {
      */
     
     public Cripc503ApplicationJSON cripc503ApplicationJSONObject;
+
     public CripcResponse withCripc503ApplicationJSONObject(Cripc503ApplicationJSON cripc503ApplicationJSONObject) {
         this.cripc503ApplicationJSONObject = cripc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CripcResponse {
      */
     
     public Cripc504ApplicationJSON cripc504ApplicationJSONObject;
+
     public CripcResponse withCripc504ApplicationJSONObject(Cripc504ApplicationJSON cripc504ApplicationJSONObject) {
         this.cripc504ApplicationJSONObject = cripc504ApplicationJSONObject;
         return this;
     }
     
+    public CripcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

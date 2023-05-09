@@ -14,6 +14,7 @@ public class CreateCustomLineItemRequestBody {
      */
     @JsonProperty("BillingGroupArn")
     public String billingGroupArn;
+
     public CreateCustomLineItemRequestBody withBillingGroupArn(String billingGroupArn) {
         this.billingGroupArn = billingGroupArn;
         return this;
@@ -25,6 +26,7 @@ public class CreateCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriodRange")
     public CreateCustomLineItemRequestBodyBillingPeriodRange billingPeriodRange;
+
     public CreateCustomLineItemRequestBody withBillingPeriodRange(CreateCustomLineItemRequestBodyBillingPeriodRange billingPeriodRange) {
         this.billingPeriodRange = billingPeriodRange;
         return this;
@@ -35,6 +37,7 @@ public class CreateCustomLineItemRequestBody {
      */
     @JsonProperty("ChargeDetails")
     public CreateCustomLineItemRequestBodyChargeDetails chargeDetails;
+
     public CreateCustomLineItemRequestBody withChargeDetails(CreateCustomLineItemRequestBodyChargeDetails chargeDetails) {
         this.chargeDetails = chargeDetails;
         return this;
@@ -45,6 +48,7 @@ public class CreateCustomLineItemRequestBody {
      */
     @JsonProperty("Description")
     public String description;
+
     public CreateCustomLineItemRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +59,7 @@ public class CreateCustomLineItemRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateCustomLineItemRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -66,9 +71,16 @@ public class CreateCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateCustomLineItemRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCustomLineItemRequestBody(@JsonProperty("BillingGroupArn") String billingGroupArn, @JsonProperty("ChargeDetails") CreateCustomLineItemRequestBodyChargeDetails chargeDetails, @JsonProperty("Description") String description, @JsonProperty("Name") String name) {
+        this.billingGroupArn = billingGroupArn;
+        this.chargeDetails = chargeDetails;
+        this.description = description;
+        this.name = name;
+  }
 }

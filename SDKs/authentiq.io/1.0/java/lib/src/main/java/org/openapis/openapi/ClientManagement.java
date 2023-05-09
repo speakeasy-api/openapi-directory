@@ -36,10 +36,11 @@ public class ClientManagement {
      * List clients
      * Retrieve a list of clients.
      * 
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClientResponse client() throws Exception {
+    public org.openapis.openapi.models.operations.ClientResponse client(org.openapis.openapi.models.operations.ClientSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/client");
         
@@ -48,20 +49,19 @@ public class ClientManagement {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientResponse res = new org.openapis.openapi.models.operations.ClientResponse() {{
+        org.openapis.openapi.models.operations.ClientResponse res = new org.openapis.openapi.models.operations.ClientResponse(contentType, httpRes.statusCode()) {{
             clients = null;
             oAuth2Error = null;
             oAuth2Error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,14 +120,12 @@ public class ClientManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientClientIdResponse res = new org.openapis.openapi.models.operations.ClientClientIdResponse() {{
+        org.openapis.openapi.models.operations.ClientClientIdResponse res = new org.openapis.openapi.models.operations.ClientClientIdResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
             problemDetail = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -188,14 +186,12 @@ public class ClientManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateClientResponse res = new org.openapis.openapi.models.operations.CreateClientResponse() {{
+        org.openapis.openapi.models.operations.CreateClientResponse res = new org.openapis.openapi.models.operations.CreateClientResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
             problemDetail = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -251,15 +247,13 @@ public class ClientManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClientResponse res = new org.openapis.openapi.models.operations.GetClientResponse() {{
+        org.openapis.openapi.models.operations.GetClientResponse res = new org.openapis.openapi.models.operations.GetClientResponse(contentType, httpRes.statusCode()) {{
             client = null;
             oAuth2Error = null;
             oAuth2Error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,15 +317,13 @@ public class ClientManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClientResponse res = new org.openapis.openapi.models.operations.UpdateClientResponse() {{
+        org.openapis.openapi.models.operations.UpdateClientResponse res = new org.openapis.openapi.models.operations.UpdateClientResponse(contentType, httpRes.statusCode()) {{
             client = null;
             problemDetail = null;
             problemDetail = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

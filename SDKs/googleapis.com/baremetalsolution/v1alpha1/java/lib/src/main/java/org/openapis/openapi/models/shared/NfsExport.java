@@ -18,6 +18,7 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowDev")
     public Boolean allowDev;
+
     public NfsExport withAllowDev(Boolean allowDev) {
         this.allowDev = allowDev;
         return this;
@@ -29,6 +30,7 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowSuid")
     public Boolean allowSuid;
+
     public NfsExport withAllowSuid(Boolean allowSuid) {
         this.allowSuid = allowSuid;
         return this;
@@ -40,6 +42,7 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidr")
     public String cidr;
+
     public NfsExport withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -51,6 +54,7 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineId")
     public String machineId;
+
     public NfsExport withMachineId(String machineId) {
         this.machineId = machineId;
         return this;
@@ -62,6 +66,7 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkId")
     public String networkId;
+
     public NfsExport withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -73,6 +78,7 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noRootSquash")
     public Boolean noRootSquash;
+
     public NfsExport withNoRootSquash(Boolean noRootSquash) {
         this.noRootSquash = noRootSquash;
         return this;
@@ -84,9 +90,11 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public NfsExportPermissionsEnum permissions;
+
     public NfsExport withPermissions(NfsExportPermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public NfsExport(){}
 }

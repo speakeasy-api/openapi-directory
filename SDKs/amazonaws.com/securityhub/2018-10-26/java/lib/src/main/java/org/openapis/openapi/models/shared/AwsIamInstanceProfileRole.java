@@ -15,6 +15,7 @@ public class AwsIamInstanceProfileRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsIamInstanceProfileRole withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class AwsIamInstanceProfileRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssumeRolePolicyDocument")
     public String assumeRolePolicyDocument;
+
     public AwsIamInstanceProfileRole withAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
         return this;
@@ -31,6 +33,7 @@ public class AwsIamInstanceProfileRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateDate")
     public String createDate;
+
     public AwsIamInstanceProfileRole withCreateDate(String createDate) {
         this.createDate = createDate;
         return this;
@@ -39,6 +42,7 @@ public class AwsIamInstanceProfileRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public AwsIamInstanceProfileRole withPath(String path) {
         this.path = path;
         return this;
@@ -47,6 +51,7 @@ public class AwsIamInstanceProfileRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleId")
     public String roleId;
+
     public AwsIamInstanceProfileRole withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
@@ -55,9 +60,11 @@ public class AwsIamInstanceProfileRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleName")
     public String roleName;
+
     public AwsIamInstanceProfileRole withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public AwsIamInstanceProfileRole(){}
 }

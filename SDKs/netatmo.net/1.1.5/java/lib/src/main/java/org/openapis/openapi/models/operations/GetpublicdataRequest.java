@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetpublicdataRequest {
@@ -12,6 +13,7 @@ public class GetpublicdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public Boolean filter;
+
     public GetpublicdataRequest withFilter(Boolean filter) {
         this.filter = filter;
         return this;
@@ -22,6 +24,7 @@ public class GetpublicdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat_ne")
     public Integer latNe;
+
     public GetpublicdataRequest withLatNe(Integer latNe) {
         this.latNe = latNe;
         return this;
@@ -32,6 +35,7 @@ public class GetpublicdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat_sw")
     public Integer latSw;
+
     public GetpublicdataRequest withLatSw(Integer latSw) {
         this.latSw = latSw;
         return this;
@@ -42,6 +46,7 @@ public class GetpublicdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon_ne")
     public Integer lonNe;
+
     public GetpublicdataRequest withLonNe(Integer lonNe) {
         this.lonNe = lonNe;
         return this;
@@ -52,6 +57,7 @@ public class GetpublicdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon_sw")
     public Integer lonSw;
+
     public GetpublicdataRequest withLonSw(Integer lonSw) {
         this.lonSw = lonSw;
         return this;
@@ -62,9 +68,16 @@ public class GetpublicdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=required_data")
     public GetpublicdataRequiredDataEnum[] requiredData;
+
     public GetpublicdataRequest withRequiredData(GetpublicdataRequiredDataEnum[] requiredData) {
         this.requiredData = requiredData;
         return this;
     }
     
+    public GetpublicdataRequest(@JsonProperty("lat_ne") Integer latNe, @JsonProperty("lat_sw") Integer latSw, @JsonProperty("lon_ne") Integer lonNe, @JsonProperty("lon_sw") Integer lonSw) {
+        this.latNe = latNe;
+        this.latSw = latSw;
+        this.lonNe = lonNe;
+        this.lonSw = lonSw;
+  }
 }

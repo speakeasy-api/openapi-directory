@@ -12,7 +12,7 @@ import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
 
 /**
- * When you enter a transaction and specify a payee on the YNAB mobile apps, the GPS coordinates for that location are stored, with your permission, so that the next time you are in the same place (like the Grocery store) we can pre-populate nearby payees for you!  It\u2019s handy and saves you time.  This resource makes these locations available.  Locations will not be available for all payees.
+ * When you enter a transaction and specify a payee on the YNAB mobile apps, the GPS coordinates for that location are stored, with your permission, so that the next time you are in the same place (like the Grocery store) we can pre-populate nearby payees for you!  It’s handy and saves you time.  This resource makes these locations available.  Locations will not be available for all payees.
  */
 public class PayeeLocations {
 	
@@ -54,12 +54,10 @@ public class PayeeLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayeeLocationByIdResponse res = new org.openapis.openapi.models.operations.GetPayeeLocationByIdResponse() {{
+        org.openapis.openapi.models.operations.GetPayeeLocationByIdResponse res = new org.openapis.openapi.models.operations.GetPayeeLocationByIdResponse(contentType, httpRes.statusCode()) {{
             payeeLocationResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,12 +100,10 @@ public class PayeeLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayeeLocationsResponse res = new org.openapis.openapi.models.operations.GetPayeeLocationsResponse() {{
+        org.openapis.openapi.models.operations.GetPayeeLocationsResponse res = new org.openapis.openapi.models.operations.GetPayeeLocationsResponse(contentType, httpRes.statusCode()) {{
             payeeLocationsResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,12 +146,10 @@ public class PayeeLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayeeLocationsByPayeeResponse res = new org.openapis.openapi.models.operations.GetPayeeLocationsByPayeeResponse() {{
+        org.openapis.openapi.models.operations.GetPayeeLocationsByPayeeResponse res = new org.openapis.openapi.models.operations.GetPayeeLocationsByPayeeResponse(contentType, httpRes.statusCode()) {{
             payeeLocationsResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

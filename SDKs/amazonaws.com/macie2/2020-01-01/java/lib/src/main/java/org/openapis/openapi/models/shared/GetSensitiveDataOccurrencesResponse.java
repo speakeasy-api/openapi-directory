@@ -15,6 +15,7 @@ public class GetSensitiveDataOccurrencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public GetSensitiveDataOccurrencesResponse withError(String error) {
         this.error = error;
         return this;
@@ -23,6 +24,7 @@ public class GetSensitiveDataOccurrencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitiveDataOccurrences")
     public java.util.Map<String, DetectedDataDetails[]> sensitiveDataOccurrences;
+
     public GetSensitiveDataOccurrencesResponse withSensitiveDataOccurrences(java.util.Map<String, DetectedDataDetails[]> sensitiveDataOccurrences) {
         this.sensitiveDataOccurrences = sensitiveDataOccurrences;
         return this;
@@ -31,9 +33,11 @@ public class GetSensitiveDataOccurrencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RevealRequestStatusEnum status;
+
     public GetSensitiveDataOccurrencesResponse withStatus(RevealRequestStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetSensitiveDataOccurrencesResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSectionsForTeacherRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_before")
     public String endingBefore;
+
     public GetSectionsForTeacherRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -16,6 +18,7 @@ public class GetSectionsForTeacherRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSectionsForTeacherRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class GetSectionsForTeacherRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSectionsForTeacherRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -30,9 +34,13 @@ public class GetSectionsForTeacherRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
     public String startingAfter;
+
     public GetSectionsForTeacherRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
     }
     
+    public GetSectionsForTeacherRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

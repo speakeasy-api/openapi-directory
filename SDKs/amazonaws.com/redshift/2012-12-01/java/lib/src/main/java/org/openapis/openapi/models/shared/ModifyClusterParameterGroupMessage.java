@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyClusterParameterGroupMessage - Describes a modify cluster parameter group operation. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyClusterParameterGroupMessage {
     
     public String parameterGroupName;
+
     public ModifyClusterParameterGroupMessage withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
@@ -19,9 +20,14 @@ public class ModifyClusterParameterGroupMessage {
     
     
     public ParametersList[] parameters;
+
     public ModifyClusterParameterGroupMessage withParameters(ParametersList[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ModifyClusterParameterGroupMessage(@JsonProperty("ParameterGroupName") String parameterGroupName, @JsonProperty("Parameters") ParametersList[] parameters) {
+        this.parameterGroupName = parameterGroupName;
+        this.parameters = parameters;
+  }
 }

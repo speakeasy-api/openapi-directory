@@ -18,6 +18,7 @@ public class AuditLogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AuditLogAction withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class AuditLogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public AuditLogAction withLabel(String label) {
         this.label = label;
         return this;
@@ -40,9 +42,11 @@ public class AuditLogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuditLogAction withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AuditLogAction(){}
 }

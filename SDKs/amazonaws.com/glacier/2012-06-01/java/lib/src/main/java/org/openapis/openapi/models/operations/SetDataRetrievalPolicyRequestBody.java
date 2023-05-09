@@ -15,9 +15,11 @@ public class SetDataRetrievalPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public SetDataRetrievalPolicyRequestBodyPolicy policy;
+
     public SetDataRetrievalPolicyRequestBody withPolicy(SetDataRetrievalPolicyRequestBodyPolicy policy) {
         this.policy = policy;
         return this;
     }
     
+    public SetDataRetrievalPolicyRequestBody(){}
 }

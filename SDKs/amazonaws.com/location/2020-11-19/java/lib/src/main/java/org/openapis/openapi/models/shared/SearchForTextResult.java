@@ -15,6 +15,7 @@ public class SearchForTextResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Distance")
     public Double distance;
+
     public SearchForTextResult withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -22,6 +23,7 @@ public class SearchForTextResult {
     
     @JsonProperty("Place")
     public Place place;
+
     public SearchForTextResult withPlace(Place place) {
         this.place = place;
         return this;
@@ -30,6 +32,7 @@ public class SearchForTextResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlaceId")
     public String placeId;
+
     public SearchForTextResult withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -38,9 +41,13 @@ public class SearchForTextResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Relevance")
     public Double relevance;
+
     public SearchForTextResult withRelevance(Double relevance) {
         this.relevance = relevance;
         return this;
     }
     
+    public SearchForTextResult(@JsonProperty("Place") Place place) {
+        this.place = place;
+  }
 }

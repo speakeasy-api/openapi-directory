@@ -12,9 +12,11 @@ public class RunAMonitor200ApplicationJSONRunFailuresAssertion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status code is 400")
     public Boolean statusCodeIs400;
+
     public RunAMonitor200ApplicationJSONRunFailuresAssertion withStatusCodeIs400(Boolean statusCodeIs400) {
         this.statusCodeIs400 = statusCodeIs400;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunFailuresAssertion(){}
 }

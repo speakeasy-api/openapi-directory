@@ -12,6 +12,7 @@ public class GetPayoutSummaryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetPayoutSummaryRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,9 +23,11 @@ public class GetPayoutSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetPayoutSummaryRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public GetPayoutSummaryRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDisputeEvidenceRequest {
@@ -14,6 +15,7 @@ public class ListDisputeEvidenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListDisputeEvidenceRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -24,9 +26,13 @@ public class ListDisputeEvidenceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
     public String disputeId;
+
     public ListDisputeEvidenceRequest withDisputeId(String disputeId) {
         this.disputeId = disputeId;
         return this;
     }
     
+    public ListDisputeEvidenceRequest(@JsonProperty("dispute_id") String disputeId) {
+        this.disputeId = disputeId;
+  }
 }

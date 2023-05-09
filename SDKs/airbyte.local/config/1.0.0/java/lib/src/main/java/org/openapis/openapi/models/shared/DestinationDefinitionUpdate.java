@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationDefinitionUpdate {
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationDefinitionUpdate withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -19,6 +20,7 @@ public class DestinationDefinitionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerImageTag")
     public String dockerImageTag;
+
     public DestinationDefinitionUpdate withDockerImageTag(String dockerImageTag) {
         this.dockerImageTag = dockerImageTag;
         return this;
@@ -30,9 +32,13 @@ public class DestinationDefinitionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ActorDefinitionResourceRequirements resourceRequirements;
+
     public DestinationDefinitionUpdate withResourceRequirements(ActorDefinitionResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
     }
     
+    public DestinationDefinitionUpdate(@JsonProperty("destinationDefinitionId") String destinationDefinitionId) {
+        this.destinationDefinitionId = destinationDefinitionId;
+  }
 }

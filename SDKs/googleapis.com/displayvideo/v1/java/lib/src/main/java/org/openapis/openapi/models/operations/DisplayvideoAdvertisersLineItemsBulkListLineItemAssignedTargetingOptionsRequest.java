@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,16 +68,18 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
     /**
-     * Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500 characters.
+     * Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType` * `inheritance` Examples: * `AssignedTargetingOption` resources of targeting type `TARGETING_TYPE_PROXIMITY_LOCATION_LIST` or `TARGETING_TYPE_CHANNEL`: `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -82,6 +90,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lineItemId")
     public String lineItemId;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -102,6 +112,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -122,6 +134,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -132,6 +145,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -142,6 +156,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,14 @@ public class DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest(@JsonProperty("advertiserId") String advertiserId, @JsonProperty("lineItemId") String lineItemId) {
+        this.advertiserId = advertiserId;
+        this.lineItemId = lineItemId;
+  }
 }

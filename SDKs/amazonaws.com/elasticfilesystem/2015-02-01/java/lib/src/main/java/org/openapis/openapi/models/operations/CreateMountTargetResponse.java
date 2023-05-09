@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMountTargetResponse {
@@ -12,6 +13,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object availabilityZonesMismatch;
+
     public CreateMountTargetResponse withAvailabilityZonesMismatch(Object availabilityZonesMismatch) {
         this.availabilityZonesMismatch = availabilityZonesMismatch;
         return this;
@@ -22,6 +24,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object badRequest;
+
     public CreateMountTargetResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class CreateMountTargetResponse {
     
     
     public String contentType;
+
     public CreateMountTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateMountTargetResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object incorrectFileSystemLifeCycleState;
+
     public CreateMountTargetResponse withIncorrectFileSystemLifeCycleState(Object incorrectFileSystemLifeCycleState) {
         this.incorrectFileSystemLifeCycleState = incorrectFileSystemLifeCycleState;
         return this;
@@ -59,6 +65,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object internalServerError;
+
     public CreateMountTargetResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object ipAddressInUse;
+
     public CreateMountTargetResponse withIpAddressInUse(Object ipAddressInUse) {
         this.ipAddressInUse = ipAddressInUse;
         return this;
@@ -79,6 +87,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object mountTargetConflict;
+
     public CreateMountTargetResponse withMountTargetConflict(Object mountTargetConflict) {
         this.mountTargetConflict = mountTargetConflict;
         return this;
@@ -89,6 +98,7 @@ public class CreateMountTargetResponse {
      */
     
     public org.openapis.openapi.models.shared.MountTargetDescription mountTargetDescription;
+
     public CreateMountTargetResponse withMountTargetDescription(org.openapis.openapi.models.shared.MountTargetDescription mountTargetDescription) {
         this.mountTargetDescription = mountTargetDescription;
         return this;
@@ -99,6 +109,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object networkInterfaceLimitExceeded;
+
     public CreateMountTargetResponse withNetworkInterfaceLimitExceeded(Object networkInterfaceLimitExceeded) {
         this.networkInterfaceLimitExceeded = networkInterfaceLimitExceeded;
         return this;
@@ -109,6 +120,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object noFreeAddressesInSubnet;
+
     public CreateMountTargetResponse withNoFreeAddressesInSubnet(Object noFreeAddressesInSubnet) {
         this.noFreeAddressesInSubnet = noFreeAddressesInSubnet;
         return this;
@@ -119,6 +131,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object securityGroupLimitExceeded;
+
     public CreateMountTargetResponse withSecurityGroupLimitExceeded(Object securityGroupLimitExceeded) {
         this.securityGroupLimitExceeded = securityGroupLimitExceeded;
         return this;
@@ -129,6 +142,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object securityGroupNotFound;
+
     public CreateMountTargetResponse withSecurityGroupNotFound(Object securityGroupNotFound) {
         this.securityGroupNotFound = securityGroupNotFound;
         return this;
@@ -136,6 +150,7 @@ public class CreateMountTargetResponse {
     
     
     public Integer statusCode;
+
     public CreateMountTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class CreateMountTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMountTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,6 +169,7 @@ public class CreateMountTargetResponse {
      */
     
     public Object subnetNotFound;
+
     public CreateMountTargetResponse withSubnetNotFound(Object subnetNotFound) {
         this.subnetNotFound = subnetNotFound;
         return this;
@@ -163,9 +180,14 @@ public class CreateMountTargetResponse {
      */
     
     public Object unsupportedAvailabilityZone;
+
     public CreateMountTargetResponse withUnsupportedAvailabilityZone(Object unsupportedAvailabilityZone) {
         this.unsupportedAvailabilityZone = unsupportedAvailabilityZone;
         return this;
     }
     
+    public CreateMountTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

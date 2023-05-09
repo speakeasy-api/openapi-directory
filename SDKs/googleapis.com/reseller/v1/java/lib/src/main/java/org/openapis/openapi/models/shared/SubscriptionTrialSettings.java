@@ -18,6 +18,7 @@ public class SubscriptionTrialSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInTrial")
     public Boolean isInTrial;
+
     public SubscriptionTrialSettings withIsInTrial(Boolean isInTrial) {
         this.isInTrial = isInTrial;
         return this;
@@ -29,9 +30,11 @@ public class SubscriptionTrialSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialEndTime")
     public String trialEndTime;
+
     public SubscriptionTrialSettings withTrialEndTime(String trialEndTime) {
         this.trialEndTime = trialEndTime;
         return this;
     }
     
+    public SubscriptionTrialSettings(){}
 }

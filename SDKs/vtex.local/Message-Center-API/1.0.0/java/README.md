@@ -16,32 +16,32 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateDKIMRequest;
 import org.openapis.openapi.models.operations.CreateDKIMResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateDKIMRequest req = new CreateDKIMRequest() {{
-                emailProvider = "corrupti";
-            }}            
+            CreateDKIMRequest req = new CreateDKIMRequest("distinctio");            
 
             CreateDKIMResponse res = sdk.dkimConfiguration.createDKIM(req);
 
-            if (res.twoHundredOK.isPresent()) {
+            if (res.twoHundredOK != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,9 +49,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### dkimConfiguration
+### [dkimConfiguration](docs/dkimconfiguration/README.md)
 
-* `createDKIM` - Generate DKIM keys
+* [createDKIM](docs/dkimconfiguration/README.md#createdkim) - Generate DKIM keys
 <!-- End SDK Available Operations -->
 
 ### Maturity

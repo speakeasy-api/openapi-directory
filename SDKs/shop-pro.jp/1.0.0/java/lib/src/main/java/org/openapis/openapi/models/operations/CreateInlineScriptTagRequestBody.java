@@ -15,9 +15,11 @@ public class CreateInlineScriptTagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inline_script_tag")
     public CreateInlineScriptTagRequestBodyInlineScriptTag inlineScriptTag;
+
     public CreateInlineScriptTagRequestBody withInlineScriptTag(CreateInlineScriptTagRequestBodyInlineScriptTag inlineScriptTag) {
         this.inlineScriptTag = inlineScriptTag;
         return this;
     }
     
+    public CreateInlineScriptTagRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class EeCreatePinResponse {
      */
     @JsonProperty("pinReference")
     public String pinReference;
+
     public EeCreatePinResponse withPinReference(String pinReference) {
         this.pinReference = pinReference;
         return this;
@@ -25,9 +26,14 @@ public class EeCreatePinResponse {
      */
     @JsonProperty("trackingHeader")
     public String trackingHeader;
+
     public EeCreatePinResponse withTrackingHeader(String trackingHeader) {
         this.trackingHeader = trackingHeader;
         return this;
     }
     
+    public EeCreatePinResponse(@JsonProperty("pinReference") String pinReference, @JsonProperty("trackingHeader") String trackingHeader) {
+        this.pinReference = pinReference;
+        this.trackingHeader = trackingHeader;
+  }
 }

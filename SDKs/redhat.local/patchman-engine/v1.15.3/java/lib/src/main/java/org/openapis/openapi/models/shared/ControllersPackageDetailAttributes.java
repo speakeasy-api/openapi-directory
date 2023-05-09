@@ -12,6 +12,7 @@ public class ControllersPackageDetailAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisory_id")
     public String advisoryId;
+
     public ControllersPackageDetailAttributes withAdvisoryId(String advisoryId) {
         this.advisoryId = advisoryId;
         return this;
@@ -20,6 +21,7 @@ public class ControllersPackageDetailAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ControllersPackageDetailAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class ControllersPackageDetailAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ControllersPackageDetailAttributes withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class ControllersPackageDetailAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public ControllersPackageDetailAttributes withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -44,9 +48,11 @@ public class ControllersPackageDetailAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ControllersPackageDetailAttributes withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ControllersPackageDetailAttributes(){}
 }

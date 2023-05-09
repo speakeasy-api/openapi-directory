@@ -18,6 +18,7 @@ public class CreateManagedShortLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedShortLink")
     public ManagedShortLink managedShortLink;
+
     public CreateManagedShortLinkResponse withManagedShortLink(ManagedShortLink managedShortLink) {
         this.managedShortLink = managedShortLink;
         return this;
@@ -29,6 +30,7 @@ public class CreateManagedShortLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previewLink")
     public String previewLink;
+
     public CreateManagedShortLinkResponse withPreviewLink(String previewLink) {
         this.previewLink = previewLink;
         return this;
@@ -40,9 +42,11 @@ public class CreateManagedShortLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public DynamicLinkWarning[] warning;
+
     public CreateManagedShortLinkResponse withWarning(DynamicLinkWarning[] warning) {
         this.warning = warning;
         return this;
     }
     
+    public CreateManagedShortLinkResponse(){}
 }

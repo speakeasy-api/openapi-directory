@@ -18,9 +18,11 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routing")
     public Routing routing;
+
     public Configuration withRouting(Routing routing) {
         this.routing = routing;
         return this;
     }
     
+    public Configuration(){}
 }

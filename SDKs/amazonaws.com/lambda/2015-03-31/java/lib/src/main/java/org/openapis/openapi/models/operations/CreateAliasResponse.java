@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAliasResponse {
@@ -12,6 +13,7 @@ public class CreateAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.AliasConfiguration aliasConfiguration;
+
     public CreateAliasResponse withAliasConfiguration(org.openapis.openapi.models.shared.AliasConfiguration aliasConfiguration) {
         this.aliasConfiguration = aliasConfiguration;
         return this;
@@ -19,6 +21,7 @@ public class CreateAliasResponse {
     
     
     public String contentType;
+
     public CreateAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAliasResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateAliasResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAliasResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateAliasResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAliasResponse {
      */
     
     public Object serviceException;
+
     public CreateAliasResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAliasResponse {
     
     
     public Integer statusCode;
+
     public CreateAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateAliasResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateAliasResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

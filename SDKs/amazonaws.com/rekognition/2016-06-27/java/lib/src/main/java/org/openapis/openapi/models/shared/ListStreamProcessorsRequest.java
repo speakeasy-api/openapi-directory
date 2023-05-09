@@ -12,6 +12,7 @@ public class ListStreamProcessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListStreamProcessorsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,9 +21,11 @@ public class ListStreamProcessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStreamProcessorsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListStreamProcessorsRequest(){}
 }

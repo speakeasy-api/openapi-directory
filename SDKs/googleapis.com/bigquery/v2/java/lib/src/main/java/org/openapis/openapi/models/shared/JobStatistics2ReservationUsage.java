@@ -15,6 +15,7 @@ public class JobStatistics2ReservationUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobStatistics2ReservationUsage withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class JobStatistics2ReservationUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotMs")
     public String slotMs;
+
     public JobStatistics2ReservationUsage withSlotMs(String slotMs) {
         this.slotMs = slotMs;
         return this;
     }
     
+    public JobStatistics2ReservationUsage(){}
 }

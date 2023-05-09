@@ -18,9 +18,11 @@ public class ContentStreamTypeAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public ContentStreamTypeAssignedTargetingOptionDetailsInput withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public ContentStreamTypeAssignedTargetingOptionDetailsInput(){}
 }

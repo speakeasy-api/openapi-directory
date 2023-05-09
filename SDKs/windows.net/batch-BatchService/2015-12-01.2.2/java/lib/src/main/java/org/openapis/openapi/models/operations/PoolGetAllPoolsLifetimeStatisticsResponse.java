@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PoolGetAllPoolsLifetimeStatisticsResponse {
@@ -12,6 +13,7 @@ public class PoolGetAllPoolsLifetimeStatisticsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public PoolGetAllPoolsLifetimeStatisticsResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class PoolGetAllPoolsLifetimeStatisticsResponse {
     
     
     public String contentType;
+
     public PoolGetAllPoolsLifetimeStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PoolGetAllPoolsLifetimeStatisticsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PoolGetAllPoolsLifetimeStatisticsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class PoolGetAllPoolsLifetimeStatisticsResponse {
     
     
     public org.openapis.openapi.models.shared.PoolStatistics poolStatistics;
+
     public PoolGetAllPoolsLifetimeStatisticsResponse withPoolStatistics(org.openapis.openapi.models.shared.PoolStatistics poolStatistics) {
         this.poolStatistics = poolStatistics;
         return this;
@@ -40,6 +45,7 @@ public class PoolGetAllPoolsLifetimeStatisticsResponse {
     
     
     public Integer statusCode;
+
     public PoolGetAllPoolsLifetimeStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class PoolGetAllPoolsLifetimeStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PoolGetAllPoolsLifetimeStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PoolGetAllPoolsLifetimeStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

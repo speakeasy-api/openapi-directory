@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProgressResponse {
     
     public String contentType;
+
     public GetProgressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProgressResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetProgressResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetProgressResponse {
      */
     
     public org.openapis.openapi.models.shared.Progress progress;
+
     public GetProgressResponse withProgress(org.openapis.openapi.models.shared.Progress progress) {
         this.progress = progress;
         return this;
@@ -36,6 +40,7 @@ public class GetProgressResponse {
     
     
     public Integer statusCode;
+
     public GetProgressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetProgressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProgressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProgressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

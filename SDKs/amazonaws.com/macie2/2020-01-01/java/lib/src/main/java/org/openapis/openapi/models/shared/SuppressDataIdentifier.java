@@ -15,6 +15,7 @@ public class SuppressDataIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SuppressDataIdentifier withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class SuppressDataIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DataIdentifierTypeEnum type;
+
     public SuppressDataIdentifier withType(DataIdentifierTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SuppressDataIdentifier(){}
 }

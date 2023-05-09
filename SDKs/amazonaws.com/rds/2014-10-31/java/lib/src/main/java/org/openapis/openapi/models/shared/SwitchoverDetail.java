@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SwitchoverDetail {
     
     public String sourceMember;
+
     public SwitchoverDetail withSourceMember(String sourceMember) {
         this.sourceMember = sourceMember;
         return this;
@@ -19,6 +20,7 @@ public class SwitchoverDetail {
     
     
     public String status;
+
     public SwitchoverDetail withStatus(String status) {
         this.status = status;
         return this;
@@ -26,9 +28,11 @@ public class SwitchoverDetail {
     
     
     public String targetMember;
+
     public SwitchoverDetail withTargetMember(String targetMember) {
         this.targetMember = targetMember;
         return this;
     }
     
+    public SwitchoverDetail(){}
 }

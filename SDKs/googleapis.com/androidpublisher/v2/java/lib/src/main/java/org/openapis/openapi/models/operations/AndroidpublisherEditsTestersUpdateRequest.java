@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsTestersUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Testers testers;
+
     public AndroidpublisherEditsTestersUpdateRequest withTesters(org.openapis.openapi.models.shared.Testers testers) {
         this.testers = testers;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherEditsTestersUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
     public String editId;
+
     public AndroidpublisherEditsTestersUpdateRequest withEditId(String editId) {
         this.editId = editId;
         return this;
@@ -39,6 +43,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherEditsTestersUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherEditsTestersUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherEditsTestersUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherEditsTestersUpdateRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherEditsTestersUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherEditsTestersUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track")
     public String track;
+
     public AndroidpublisherEditsTestersUpdateRequest withTrack(String track) {
         this.track = track;
         return this;
@@ -109,9 +120,15 @@ public class AndroidpublisherEditsTestersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherEditsTestersUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherEditsTestersUpdateRequest(@JsonProperty("editId") String editId, @JsonProperty("packageName") String packageName, @JsonProperty("track") String track) {
+        this.editId = editId;
+        this.packageName = packageName;
+        this.track = track;
+  }
 }

@@ -14,6 +14,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee")
     public String assignee;
+
     public GetTasksRequest withAssignee(String assignee) {
         this.assignee = assignee;
         return this;
@@ -24,6 +25,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_since")
     public OffsetDateTime completedSince;
+
     public GetTasksRequest withCompletedSince(OffsetDateTime completedSince) {
         this.completedSince = completedSince;
         return this;
@@ -35,6 +37,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTasksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,6 +55,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_since")
     public OffsetDateTime modifiedSince;
+
     public GetTasksRequest withModifiedSince(OffsetDateTime modifiedSince) {
         this.modifiedSince = modifiedSince;
         return this;
@@ -64,6 +68,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetTasksRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -76,6 +81,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetTasksRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -87,6 +93,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetTasksRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -97,6 +104,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
     public String project;
+
     public GetTasksRequest withProject(String project) {
         this.project = project;
         return this;
@@ -108,6 +116,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=section")
     public String section;
+
     public GetTasksRequest withSection(String section) {
         this.section = section;
         return this;
@@ -119,9 +128,11 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetTasksRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetTasksRequest(){}
 }

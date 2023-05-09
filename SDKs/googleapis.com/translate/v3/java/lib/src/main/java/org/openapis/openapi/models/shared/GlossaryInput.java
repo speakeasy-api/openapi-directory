@@ -18,6 +18,7 @@ public class GlossaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GlossaryInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GlossaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GlossaryInputConfig inputConfig;
+
     public GlossaryInput withInputConfig(GlossaryInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -40,6 +42,7 @@ public class GlossaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCodesSet")
     public LanguageCodesSet languageCodesSet;
+
     public GlossaryInput withLanguageCodesSet(LanguageCodesSet languageCodesSet) {
         this.languageCodesSet = languageCodesSet;
         return this;
@@ -51,6 +54,7 @@ public class GlossaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languagePair")
     public LanguageCodePair languagePair;
+
     public GlossaryInput withLanguagePair(LanguageCodePair languagePair) {
         this.languagePair = languagePair;
         return this;
@@ -62,9 +66,11 @@ public class GlossaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GlossaryInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GlossaryInput(){}
 }

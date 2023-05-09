@@ -12,9 +12,11 @@ public class GETAuthorNameUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public GETAuthorNameUsingGET200ApplicationJSONDataInfo info;
+
     public GETAuthorNameUsingGET200ApplicationJSONData withInfo(GETAuthorNameUsingGET200ApplicationJSONDataInfo info) {
         this.info = info;
         return this;
     }
     
+    public GETAuthorNameUsingGET200ApplicationJSONData(){}
 }

@@ -18,6 +18,7 @@ public class AgentOtherDeviceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentId")
     public String agentId;
+
     public AgentOtherDeviceId withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -29,9 +30,11 @@ public class AgentOtherDeviceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public AgentOtherDeviceId withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public AgentOtherDeviceId(){}
 }

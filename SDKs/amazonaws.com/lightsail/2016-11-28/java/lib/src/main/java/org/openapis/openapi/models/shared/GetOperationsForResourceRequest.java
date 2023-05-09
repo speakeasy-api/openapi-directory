@@ -12,6 +12,7 @@ public class GetOperationsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetOperationsForResourceRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -19,9 +20,13 @@ public class GetOperationsForResourceRequest {
     
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GetOperationsForResourceRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GetOperationsForResourceRequest(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

@@ -15,6 +15,7 @@ public class ParameterizedStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public AttributeValue[] parameters;
+
     public ParameterizedStatement withParameters(AttributeValue[] parameters) {
         this.parameters = parameters;
         return this;
@@ -22,9 +23,13 @@ public class ParameterizedStatement {
     
     @JsonProperty("Statement")
     public String statement;
+
     public ParameterizedStatement withStatement(String statement) {
         this.statement = statement;
         return this;
     }
     
+    public ParameterizedStatement(@JsonProperty("Statement") String statement) {
+        this.statement = statement;
+  }
 }

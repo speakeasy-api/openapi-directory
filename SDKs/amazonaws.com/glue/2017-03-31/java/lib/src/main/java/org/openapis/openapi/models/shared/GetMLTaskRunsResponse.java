@@ -15,6 +15,7 @@ public class GetMLTaskRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetMLTaskRunsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetMLTaskRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRuns")
     public TaskRun[] taskRuns;
+
     public GetMLTaskRunsResponse withTaskRuns(TaskRun[] taskRuns) {
         this.taskRuns = taskRuns;
         return this;
     }
     
+    public GetMLTaskRunsResponse(){}
 }

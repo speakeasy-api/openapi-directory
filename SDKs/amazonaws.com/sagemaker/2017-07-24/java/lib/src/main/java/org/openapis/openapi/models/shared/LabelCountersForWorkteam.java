@@ -15,6 +15,7 @@ public class LabelCountersForWorkteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLabeled")
     public Long humanLabeled;
+
     public LabelCountersForWorkteam withHumanLabeled(Long humanLabeled) {
         this.humanLabeled = humanLabeled;
         return this;
@@ -23,6 +24,7 @@ public class LabelCountersForWorkteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingHuman")
     public Long pendingHuman;
+
     public LabelCountersForWorkteam withPendingHuman(Long pendingHuman) {
         this.pendingHuman = pendingHuman;
         return this;
@@ -31,9 +33,11 @@ public class LabelCountersForWorkteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Long total;
+
     public LabelCountersForWorkteam withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public LabelCountersForWorkteam(){}
 }

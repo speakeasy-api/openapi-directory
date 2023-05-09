@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherPurchasesCancelRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherPurchasesCancelRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherPurchasesCancelRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherPurchasesCancelRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherPurchasesCancelRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherPurchasesCancelRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherPurchasesCancelRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherPurchasesCancelRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
     public String subscriptionId;
+
     public AndroidpublisherPurchasesCancelRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public AndroidpublisherPurchasesCancelRequest withToken(String token) {
         this.token = token;
         return this;
@@ -102,9 +112,15 @@ public class AndroidpublisherPurchasesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherPurchasesCancelRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherPurchasesCancelRequest(@JsonProperty("packageName") String packageName, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("token") String token) {
+        this.packageName = packageName;
+        this.subscriptionId = subscriptionId;
+        this.token = token;
+  }
 }

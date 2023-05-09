@@ -12,6 +12,7 @@ public class DeregisterIdentityProviderRequestBody {
      */
     @JsonProperty("IdentityProvider")
     public DeregisterIdentityProviderRequestBodyIdentityProvider identityProvider;
+
     public DeregisterIdentityProviderRequestBody withIdentityProvider(DeregisterIdentityProviderRequestBodyIdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -22,9 +23,14 @@ public class DeregisterIdentityProviderRequestBody {
      */
     @JsonProperty("Product")
     public String product;
+
     public DeregisterIdentityProviderRequestBody withProduct(String product) {
         this.product = product;
         return this;
     }
     
+    public DeregisterIdentityProviderRequestBody(@JsonProperty("IdentityProvider") DeregisterIdentityProviderRequestBodyIdentityProvider identityProvider, @JsonProperty("Product") String product) {
+        this.identityProvider = identityProvider;
+        this.product = product;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsIamInstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsIamInstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class AwsIamInstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateDate")
     public String createDate;
+
     public AwsIamInstanceProfile withCreateDate(String createDate) {
         this.createDate = createDate;
         return this;
@@ -31,6 +33,7 @@ public class AwsIamInstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceProfileId")
     public String instanceProfileId;
+
     public AwsIamInstanceProfile withInstanceProfileId(String instanceProfileId) {
         this.instanceProfileId = instanceProfileId;
         return this;
@@ -39,6 +42,7 @@ public class AwsIamInstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceProfileName")
     public String instanceProfileName;
+
     public AwsIamInstanceProfile withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -47,6 +51,7 @@ public class AwsIamInstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public AwsIamInstanceProfile withPath(String path) {
         this.path = path;
         return this;
@@ -55,9 +60,11 @@ public class AwsIamInstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Roles")
     public AwsIamInstanceProfileRole[] roles;
+
     public AwsIamInstanceProfile withRoles(AwsIamInstanceProfileRole[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public AwsIamInstanceProfile(){}
 }

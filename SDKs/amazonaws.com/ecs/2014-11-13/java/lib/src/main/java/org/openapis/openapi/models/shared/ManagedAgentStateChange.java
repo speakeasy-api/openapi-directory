@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ManagedAgentStateChange {
     @JsonProperty("containerName")
     public String containerName;
+
     public ManagedAgentStateChange withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -21,6 +22,7 @@ public class ManagedAgentStateChange {
     
     @JsonProperty("managedAgentName")
     public ManagedAgentNameEnum managedAgentName;
+
     public ManagedAgentStateChange withManagedAgentName(ManagedAgentNameEnum managedAgentName) {
         this.managedAgentName = managedAgentName;
         return this;
@@ -29,6 +31,7 @@ public class ManagedAgentStateChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ManagedAgentStateChange withReason(String reason) {
         this.reason = reason;
         return this;
@@ -36,9 +39,15 @@ public class ManagedAgentStateChange {
     
     @JsonProperty("status")
     public String status;
+
     public ManagedAgentStateChange withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ManagedAgentStateChange(@JsonProperty("containerName") String containerName, @JsonProperty("managedAgentName") ManagedAgentNameEnum managedAgentName, @JsonProperty("status") String status) {
+        this.containerName = containerName;
+        this.managedAgentName = managedAgentName;
+        this.status = status;
+  }
 }

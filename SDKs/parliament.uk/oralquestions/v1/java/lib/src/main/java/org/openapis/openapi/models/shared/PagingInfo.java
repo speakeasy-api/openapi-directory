@@ -12,6 +12,7 @@ public class PagingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalStatusCounts")
     public StatusCount[] globalStatusCounts;
+
     public PagingInfo withGlobalStatusCounts(StatusCount[] globalStatusCounts) {
         this.globalStatusCounts = globalStatusCounts;
         return this;
@@ -20,6 +21,7 @@ public class PagingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTotal")
     public Integer globalTotal;
+
     public PagingInfo withGlobalTotal(Integer globalTotal) {
         this.globalTotal = globalTotal;
         return this;
@@ -28,6 +30,7 @@ public class PagingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Skip")
     public Integer skip;
+
     public PagingInfo withSkip(Integer skip) {
         this.skip = skip;
         return this;
@@ -36,6 +39,7 @@ public class PagingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCounts")
     public StatusCount[] statusCounts;
+
     public PagingInfo withStatusCounts(StatusCount[] statusCounts) {
         this.statusCounts = statusCounts;
         return this;
@@ -44,6 +48,7 @@ public class PagingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Take")
     public Integer take;
+
     public PagingInfo withTake(Integer take) {
         this.take = take;
         return this;
@@ -52,9 +57,11 @@ public class PagingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Integer total;
+
     public PagingInfo withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public PagingInfo(){}
 }

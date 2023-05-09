@@ -18,6 +18,7 @@ public class ListServiceLevelObjectivesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListServiceLevelObjectivesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListServiceLevelObjectivesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceLevelObjectives")
     public ServiceLevelObjective[] serviceLevelObjectives;
+
     public ListServiceLevelObjectivesResponse withServiceLevelObjectives(ServiceLevelObjective[] serviceLevelObjectives) {
         this.serviceLevelObjectives = serviceLevelObjectives;
         return this;
     }
     
+    public ListServiceLevelObjectivesResponse(){}
 }

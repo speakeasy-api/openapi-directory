@@ -15,6 +15,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color_border")
     public String colorBorder;
+
     public Options withColorBorder(String colorBorder) {
         this.colorBorder = colorBorder;
         return this;
@@ -26,6 +27,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color_border_selected")
     public String colorBorderSelected;
+
     public Options withColorBorderSelected(String colorBorderSelected) {
         this.colorBorderSelected = colorBorderSelected;
         return this;
@@ -37,6 +39,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color_details")
     public String colorDetails;
+
     public Options withColorDetails(String colorDetails) {
         this.colorDetails = colorDetails;
         return this;
@@ -48,6 +51,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color_text")
     public String colorText;
+
     public Options withColorText(String colorText) {
         this.colorText = colorText;
         return this;
@@ -59,9 +63,11 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radius_border")
     public String radiusBorder;
+
     public Options withRadiusBorder(String radiusBorder) {
         this.radiusBorder = radiusBorder;
         return this;
     }
     
+    public Options(){}
 }

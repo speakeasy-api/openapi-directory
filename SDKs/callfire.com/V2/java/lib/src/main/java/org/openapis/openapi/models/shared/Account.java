@@ -23,6 +23,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public Account withActive(Boolean active) {
         this.active = active;
         return this;
@@ -34,6 +35,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Account withAddress(String address) {
         this.address = address;
         return this;
@@ -45,6 +47,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("age")
     public Duration age;
+
     public Account withAge(Duration age) {
         this.age = age;
         return this;
@@ -56,6 +59,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agencyManagedAccounts")
     public Boolean agencyManagedAccounts;
+
     public Account withAgencyManagedAccounts(Boolean agencyManagedAccounts) {
         this.agencyManagedAccounts = agencyManagedAccounts;
         return this;
@@ -67,6 +71,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedToCreateCampaign")
     public Boolean allowedToCreateCampaign;
+
     public Account withAllowedToCreateCampaign(Boolean allowedToCreateCampaign) {
         this.allowedToCreateCampaign = allowedToCreateCampaign;
         return this;
@@ -78,6 +83,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCallLimit")
     public Integer apiCallLimit;
+
     public Account withApiCallLimit(Integer apiCallLimit) {
         this.apiCallLimit = apiCallLimit;
         return this;
@@ -89,6 +95,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public Account withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -100,6 +107,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoAddDoNotContact")
     public Boolean autoAddDoNotContact;
+
     public Account withAutoAddDoNotContact(Boolean autoAddDoNotContact) {
         this.autoAddDoNotContact = autoAddDoNotContact;
         return this;
@@ -111,6 +119,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public AccountBrandEnum brand;
+
     public Account withBrand(AccountBrandEnum brand) {
         this.brand = brand;
         return this;
@@ -122,6 +131,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled")
     public Boolean canceled;
+
     public Account withCanceled(Boolean canceled) {
         this.canceled = canceled;
         return this;
@@ -133,6 +143,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceledOrArchived")
     public Boolean canceledOrArchived;
+
     public Account withCanceledOrArchived(Boolean canceledOrArchived) {
         this.canceledOrArchived = canceledOrArchived;
         return this;
@@ -144,6 +155,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Account withCity(String city) {
         this.city = city;
         return this;
@@ -155,6 +167,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public Account withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -166,6 +179,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public AccountCountryEnum country;
+
     public Account withCountry(AccountCountryEnum country) {
         this.country = country;
         return this;
@@ -177,6 +191,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryOrDefault")
     public AccountCountryOrDefaultEnum countryOrDefault;
+
     public Account withCountryOrDefault(AccountCountryOrDefaultEnum countryOrDefault) {
         this.countryOrDefault = countryOrDefault;
         return this;
@@ -190,6 +205,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Account withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -201,6 +217,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTimeZone")
     public DateTimeZone dateTimeZone;
+
     public Account withDateTimeZone(DateTimeZone dateTimeZone) {
         this.dateTimeZone = dateTimeZone;
         return this;
@@ -212,6 +229,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultNotificationTtlMillis")
     public Long defaultNotificationTtlMillis;
+
     public Account withDefaultNotificationTtlMillis(Long defaultNotificationTtlMillis) {
         this.defaultNotificationTtlMillis = defaultNotificationTtlMillis;
         return this;
@@ -223,6 +241,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultNumberId")
     public Long defaultNumberId;
+
     public Account withDefaultNumberId(Long defaultNumberId) {
         this.defaultNumberId = defaultNumberId;
         return this;
@@ -234,6 +253,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ein")
     public String ein;
+
     public Account withEin(String ein) {
         this.ein = ein;
         return this;
@@ -245,6 +265,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public AccountEntityTypeEnum entityType;
+
     public Account withEntityType(AccountEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -256,6 +277,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ez")
     public Boolean ez;
+
     public Account withEz(Boolean ez) {
         this.ez = ez;
         return this;
@@ -267,6 +289,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedVerificationAttempts")
     public Integer failedVerificationAttempts;
+
     public Account withFailedVerificationAttempts(Integer failedVerificationAttempts) {
         this.failedVerificationAttempts = failedVerificationAttempts;
         return this;
@@ -278,6 +301,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumberPool")
     public String fromNumberPool;
+
     public Account withFromNumberPool(String fromNumberPool) {
         this.fromNumberPool = fromNumberPool;
         return this;
@@ -289,6 +313,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Account withId(Long id) {
         this.id = id;
         return this;
@@ -300,6 +325,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industry")
     public AccountIndustryEnum industry;
+
     public Account withIndustry(AccountIndustryEnum industry) {
         this.industry = industry;
         return this;
@@ -311,6 +337,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industryName")
     public String industryName;
+
     public Account withIndustryName(String industryName) {
         this.industryName = industryName;
         return this;
@@ -322,6 +349,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Account withKey(String key) {
         this.key = key;
         return this;
@@ -333,6 +361,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localTimeZoneRestriction")
     public LocalTimeZoneRestriction localTimeZoneRestriction;
+
     public Account withLocalTimeZoneRestriction(LocalTimeZoneRestriction localTimeZoneRestriction) {
         this.localTimeZoneRestriction = localTimeZoneRestriction;
         return this;
@@ -344,6 +373,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public Locale locale;
+
     public Account withLocale(Locale locale) {
         this.locale = locale;
         return this;
@@ -355,6 +385,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAgents")
     public Integer maxAgents;
+
     public Account withMaxAgents(Integer maxAgents) {
         this.maxAgents = maxAgents;
         return this;
@@ -366,6 +397,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageClass")
     public String messageClass;
+
     public Account withMessageClass(String messageClass) {
         this.messageClass = messageClass;
         return this;
@@ -377,6 +409,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageFlows")
     public String[] messageFlows;
+
     public Account withMessageFlows(String[] messageFlows) {
         this.messageFlows = messageFlows;
         return this;
@@ -388,6 +421,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -399,6 +433,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outboundThreshold")
     public Integer outboundThreshold;
+
     public Account withOutboundThreshold(Integer outboundThreshold) {
         this.outboundThreshold = outboundThreshold;
         return this;
@@ -410,6 +445,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverPeriodCall")
     public Integer receiverPeriodCall;
+
     public Account withReceiverPeriodCall(Integer receiverPeriodCall) {
         this.receiverPeriodCall = receiverPeriodCall;
         return this;
@@ -421,6 +457,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverPeriodEnabled")
     public Boolean receiverPeriodEnabled;
+
     public Account withReceiverPeriodEnabled(Boolean receiverPeriodEnabled) {
         this.receiverPeriodEnabled = receiverPeriodEnabled;
         return this;
@@ -432,6 +469,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverPeriodGlobal")
     public Integer receiverPeriodGlobal;
+
     public Account withReceiverPeriodGlobal(Integer receiverPeriodGlobal) {
         this.receiverPeriodGlobal = receiverPeriodGlobal;
         return this;
@@ -443,6 +481,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverPeriodText")
     public Integer receiverPeriodText;
+
     public Account withReceiverPeriodText(Integer receiverPeriodText) {
         this.receiverPeriodText = receiverPeriodText;
         return this;
@@ -454,6 +493,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverPeriodTimeUnit")
     public AccountReceiverPeriodTimeUnitEnum receiverPeriodTimeUnit;
+
     public Account withReceiverPeriodTimeUnit(AccountReceiverPeriodTimeUnitEnum receiverPeriodTimeUnit) {
         this.receiverPeriodTimeUnit = receiverPeriodTimeUnit;
         return this;
@@ -465,6 +505,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retainOnlyMetadata")
     public Boolean retainOnlyMetadata;
+
     public Account withRetainOnlyMetadata(Boolean retainOnlyMetadata) {
         this.retainOnlyMetadata = retainOnlyMetadata;
         return this;
@@ -476,6 +517,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retainOnlyMetadataLastDetailRecordId")
     public Long retainOnlyMetadataLastDetailRecordId;
+
     public Account withRetainOnlyMetadataLastDetailRecordId(Long retainOnlyMetadataLastDetailRecordId) {
         this.retainOnlyMetadataLastDetailRecordId = retainOnlyMetadataLastDetailRecordId;
         return this;
@@ -489,6 +531,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("retainOnlyMetadataLastModified")
     public OffsetDateTime retainOnlyMetadataLastModified;
+
     public Account withRetainOnlyMetadataLastModified(OffsetDateTime retainOnlyMetadataLastModified) {
         this.retainOnlyMetadataLastModified = retainOnlyMetadataLastModified;
         return this;
@@ -500,6 +543,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scrub")
     public Boolean scrub;
+
     public Account withScrub(Boolean scrub) {
         this.scrub = scrub;
         return this;
@@ -511,6 +555,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedShortCodeAllowed")
     public Boolean sharedShortCodeAllowed;
+
     public Account withSharedShortCodeAllowed(Boolean sharedShortCodeAllowed) {
         this.sharedShortCodeAllowed = sharedShortCodeAllowed;
         return this;
@@ -522,6 +567,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedShortCodeId")
     public Long sharedShortCodeId;
+
     public Account withSharedShortCodeId(Long sharedShortCodeId) {
         this.sharedShortCodeId = sharedShortCodeId;
         return this;
@@ -533,6 +579,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soaAccount")
     public Account soaAccount;
+
     public Account withSoaAccount(Account soaAccount) {
         this.soaAccount = soaAccount;
         return this;
@@ -544,6 +591,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startCapable")
     public Boolean startCapable;
+
     public Account withStartCapable(Boolean startCapable) {
         this.startCapable = startCapable;
         return this;
@@ -555,6 +603,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Account withState(String state) {
         this.state = state;
         return this;
@@ -566,6 +615,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AccountStatusEnum status;
+
     public Account withStatus(AccountStatusEnum status) {
         this.status = status;
         return this;
@@ -577,6 +627,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textOutboundThreshold")
     public Integer textOutboundThreshold;
+
     public Account withTextOutboundThreshold(Integer textOutboundThreshold) {
         this.textOutboundThreshold = textOutboundThreshold;
         return this;
@@ -588,6 +639,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public TimeZone timeZone;
+
     public Account withTimeZone(TimeZone timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -599,6 +651,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneId")
     public ZoneId timeZoneId;
+
     public Account withTimeZoneId(ZoneId timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
@@ -610,6 +663,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustLevel")
     public AccountTrustLevelEnum trustLevel;
+
     public Account withTrustLevel(AccountTrustLevelEnum trustLevel) {
         this.trustLevel = trustLevel;
         return this;
@@ -623,6 +677,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("tsrAgreement")
     public OffsetDateTime tsrAgreement;
+
     public Account withTsrAgreement(OffsetDateTime tsrAgreement) {
         this.tsrAgreement = tsrAgreement;
         return this;
@@ -634,6 +689,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tsrInitials")
     public String tsrInitials;
+
     public Account withTsrInitials(String tsrInitials) {
         this.tsrInitials = tsrInitials;
         return this;
@@ -645,6 +701,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uiContext")
     public String uiContext;
+
     public Account withUiContext(String uiContext) {
         this.uiContext = uiContext;
         return this;
@@ -656,6 +713,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("universal")
     public Boolean universal;
+
     public Account withUniversal(Boolean universal) {
         this.universal = universal;
         return this;
@@ -667,6 +725,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public Account withWebsite(String website) {
         this.website = website;
         return this;
@@ -678,9 +737,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipcode")
     public String zipcode;
+
     public Account withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public Account(){}
 }

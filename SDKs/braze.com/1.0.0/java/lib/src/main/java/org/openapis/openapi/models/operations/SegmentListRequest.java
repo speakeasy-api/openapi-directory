@@ -14,6 +14,7 @@ public class SegmentListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public SegmentListRequest withPage(String page) {
         this.page = page;
         return this;
@@ -26,9 +27,11 @@ public class SegmentListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public SegmentListRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public SegmentListRequest(){}
 }

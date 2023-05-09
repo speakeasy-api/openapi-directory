@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCertificatesResponse {
@@ -12,6 +13,7 @@ public class ListCertificatesResponse {
      */
     
     public Object clientException;
+
     public ListCertificatesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListCertificatesResponse {
     
     
     public String contentType;
+
     public ListCertificatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCertificatesResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public ListCertificatesResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class ListCertificatesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCertificatesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListCertificatesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListCertificatesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ListCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCertificatesResult listCertificatesResult;
+
     public ListCertificatesResponse withListCertificatesResult(org.openapis.openapi.models.shared.ListCertificatesResult listCertificatesResult) {
         this.listCertificatesResult = listCertificatesResult;
         return this;
@@ -66,6 +73,7 @@ public class ListCertificatesResponse {
     
     
     public Integer statusCode;
+
     public ListCertificatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListCertificatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCertificatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListCertificatesResponse {
      */
     
     public Object serviceException;
+
     public ListCertificatesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,9 +103,14 @@ public class ListCertificatesResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListCertificatesResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListCertificatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

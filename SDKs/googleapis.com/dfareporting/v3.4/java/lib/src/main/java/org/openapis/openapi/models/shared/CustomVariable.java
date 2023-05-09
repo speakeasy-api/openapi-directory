@@ -18,6 +18,7 @@ public class CustomVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public String index;
+
     public CustomVariable withIndex(String index) {
         this.index = index;
         return this;
@@ -29,6 +30,7 @@ public class CustomVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CustomVariable withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class CustomVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomVariable withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomVariable(){}
 }

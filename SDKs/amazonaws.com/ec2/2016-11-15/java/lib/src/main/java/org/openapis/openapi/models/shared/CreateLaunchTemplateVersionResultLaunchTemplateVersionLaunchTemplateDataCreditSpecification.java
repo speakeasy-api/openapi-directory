@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCreditSpecification {
     
     public String cpuCredits;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCreditSpecification withCpuCredits(String cpuCredits) {
         this.cpuCredits = cpuCredits;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCreditSpecification(){}
 }

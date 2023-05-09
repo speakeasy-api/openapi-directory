@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsPathsRequest {
     
     public Boolean dryRun;
+
     public DescribeNetworkInsightsPathsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeNetworkInsightsPathsRequest {
     
     
     public DescribeNetworkInsightsPathsRequestFilters[] filters;
+
     public DescribeNetworkInsightsPathsRequest withFilters(DescribeNetworkInsightsPathsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeNetworkInsightsPathsRequest {
     
     
     public Long maxResults;
+
     public DescribeNetworkInsightsPathsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeNetworkInsightsPathsRequest {
     
     
     public String[] networkInsightsPathIds;
+
     public DescribeNetworkInsightsPathsRequest withNetworkInsightsPathIds(String[] networkInsightsPathIds) {
         this.networkInsightsPathIds = networkInsightsPathIds;
         return this;
@@ -37,9 +41,11 @@ public class DescribeNetworkInsightsPathsRequest {
     
     
     public String nextToken;
+
     public DescribeNetworkInsightsPathsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkInsightsPathsRequest(){}
 }

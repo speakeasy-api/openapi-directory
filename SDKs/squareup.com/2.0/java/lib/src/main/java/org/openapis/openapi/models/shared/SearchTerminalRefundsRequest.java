@@ -21,6 +21,7 @@ public class SearchTerminalRefundsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchTerminalRefundsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +33,7 @@ public class SearchTerminalRefundsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchTerminalRefundsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -40,9 +42,11 @@ public class SearchTerminalRefundsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public TerminalRefundQuery query;
+
     public SearchTerminalRefundsRequest withQuery(TerminalRefundQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchTerminalRefundsRequest(){}
 }

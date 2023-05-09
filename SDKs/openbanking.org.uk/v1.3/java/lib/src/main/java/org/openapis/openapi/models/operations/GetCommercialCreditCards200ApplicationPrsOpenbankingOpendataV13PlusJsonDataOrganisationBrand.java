@@ -15,6 +15,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("TrademarkID")
     public String trademarkID;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand withTrademarkID(String trademarkID) {
         this.trademarkID = trademarkID;
         return this;
@@ -25,9 +26,14 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("TrademarkIPOCode")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand withTrademarkIPOCode(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode) {
         this.trademarkIPOCode = trademarkIPOCode;
         return this;
     }
     
+    public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand(@JsonProperty("TrademarkID") String trademarkID, @JsonProperty("TrademarkIPOCode") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode) {
+        this.trademarkID = trademarkID;
+        this.trademarkIPOCode = trademarkIPOCode;
+  }
 }

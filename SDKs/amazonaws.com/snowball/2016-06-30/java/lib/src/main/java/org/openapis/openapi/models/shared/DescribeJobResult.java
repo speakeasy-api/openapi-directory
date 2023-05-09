@@ -15,6 +15,7 @@ public class DescribeJobResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobMetadata")
     public JobMetadata jobMetadata;
+
     public DescribeJobResult withJobMetadata(JobMetadata jobMetadata) {
         this.jobMetadata = jobMetadata;
         return this;
@@ -23,9 +24,11 @@ public class DescribeJobResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubJobMetadata")
     public JobMetadata[] subJobMetadata;
+
     public DescribeJobResult withSubJobMetadata(JobMetadata[] subJobMetadata) {
         this.subJobMetadata = subJobMetadata;
         return this;
     }
     
+    public DescribeJobResult(){}
 }

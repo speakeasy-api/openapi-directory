@@ -15,6 +15,7 @@ public class ListMedicalTranscriptionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MedicalTranscriptionJobSummaries")
     public MedicalTranscriptionJobSummary[] medicalTranscriptionJobSummaries;
+
     public ListMedicalTranscriptionJobsResponse withMedicalTranscriptionJobSummaries(MedicalTranscriptionJobSummary[] medicalTranscriptionJobSummaries) {
         this.medicalTranscriptionJobSummaries = medicalTranscriptionJobSummaries;
         return this;
@@ -23,6 +24,7 @@ public class ListMedicalTranscriptionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMedicalTranscriptionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListMedicalTranscriptionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TranscriptionJobStatusEnum status;
+
     public ListMedicalTranscriptionJobsResponse withStatus(TranscriptionJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListMedicalTranscriptionJobsResponse(){}
 }

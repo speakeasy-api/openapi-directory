@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailResponse {
@@ -12,6 +13,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     
     public org.openapis.openapi.models.shared.BatchResponseSubscriberEmailResponse batchResponseSubscriberEmailResponse;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailResponse withBatchResponseSubscriberEmailResponse(org.openapis.openapi.models.shared.BatchResponseSubscriberEmailResponse batchResponseSubscriberEmailResponse) {
         this.batchResponseSubscriberEmailResponse = batchResponseSubscriberEmailResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
     
     
     public byte[] body;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
     
     
     public String contentType;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
     
     
     public Integer statusCode;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

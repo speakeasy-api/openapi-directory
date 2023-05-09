@@ -18,6 +18,7 @@ public class PriceProblemCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelSuspendedCount")
     public String hotelSuspendedCount;
+
     public PriceProblemCountDetails withHotelSuspendedCount(String hotelSuspendedCount) {
         this.hotelSuspendedCount = hotelSuspendedCount;
         return this;
@@ -29,6 +30,7 @@ public class PriceProblemCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceUnusuallyHighCount")
     public String priceUnusuallyHighCount;
+
     public PriceProblemCountDetails withPriceUnusuallyHighCount(String priceUnusuallyHighCount) {
         this.priceUnusuallyHighCount = priceUnusuallyHighCount;
         return this;
@@ -40,6 +42,7 @@ public class PriceProblemCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceUnusuallyLowCount")
     public String priceUnusuallyLowCount;
+
     public PriceProblemCountDetails withPriceUnusuallyLowCount(String priceUnusuallyLowCount) {
         this.priceUnusuallyLowCount = priceUnusuallyLowCount;
         return this;
@@ -51,9 +54,11 @@ public class PriceProblemCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxesAndFeesMissingCount")
     public String taxesAndFeesMissingCount;
+
     public PriceProblemCountDetails withTaxesAndFeesMissingCount(String taxesAndFeesMissingCount) {
         this.taxesAndFeesMissingCount = taxesAndFeesMissingCount;
         return this;
     }
     
+    public PriceProblemCountDetails(){}
 }

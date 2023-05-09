@@ -12,6 +12,7 @@ public class UltimateParentCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ViasAddress address;
+
     public UltimateParentCompany withAddress(ViasAddress address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class UltimateParentCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessDetails")
     public UltimateParentCompanyBusinessDetails businessDetails;
+
     public UltimateParentCompany withBusinessDetails(UltimateParentCompanyBusinessDetails businessDetails) {
         this.businessDetails = businessDetails;
         return this;
@@ -31,9 +33,11 @@ public class UltimateParentCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateParentCompanyCode")
     public String ultimateParentCompanyCode;
+
     public UltimateParentCompany withUltimateParentCompanyCode(String ultimateParentCompanyCode) {
         this.ultimateParentCompanyCode = ultimateParentCompanyCode;
         return this;
     }
     
+    public UltimateParentCompany(){}
 }

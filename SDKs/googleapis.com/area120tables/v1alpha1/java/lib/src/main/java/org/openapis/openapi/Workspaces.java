@@ -58,11 +58,9 @@ public class Workspaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesWorkspacesGetResponse res = new org.openapis.openapi.models.operations.Area120tablesWorkspacesGetResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesWorkspacesGetResponse res = new org.openapis.openapi.models.operations.Area120tablesWorkspacesGetResponse(contentType, httpRes.statusCode()) {{
             workspace = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Workspaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesWorkspacesListResponse res = new org.openapis.openapi.models.operations.Area120tablesWorkspacesListResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesWorkspacesListResponse res = new org.openapis.openapi.models.operations.Area120tablesWorkspacesListResponse(contentType, httpRes.statusCode()) {{
             listWorkspacesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

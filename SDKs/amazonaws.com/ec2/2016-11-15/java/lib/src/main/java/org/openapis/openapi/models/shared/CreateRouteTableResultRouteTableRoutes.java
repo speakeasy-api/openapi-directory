@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateRouteTableResultRouteTableRoutes {
     
     public String carrierGatewayId;
+
     public CreateRouteTableResultRouteTableRoutes withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String coreNetworkArn;
+
     public CreateRouteTableResultRouteTableRoutes withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String destinationCidrBlock;
+
     public CreateRouteTableResultRouteTableRoutes withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -33,6 +36,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String destinationIpv6CidrBlock;
+
     public CreateRouteTableResultRouteTableRoutes withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -40,6 +44,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String destinationPrefixListId;
+
     public CreateRouteTableResultRouteTableRoutes withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -47,6 +52,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String egressOnlyInternetGatewayId;
+
     public CreateRouteTableResultRouteTableRoutes withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -54,6 +60,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String gatewayId;
+
     public CreateRouteTableResultRouteTableRoutes withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -61,6 +68,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String instanceId;
+
     public CreateRouteTableResultRouteTableRoutes withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -68,6 +76,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String instanceOwnerId;
+
     public CreateRouteTableResultRouteTableRoutes withInstanceOwnerId(String instanceOwnerId) {
         this.instanceOwnerId = instanceOwnerId;
         return this;
@@ -75,6 +84,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String localGatewayId;
+
     public CreateRouteTableResultRouteTableRoutes withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -82,6 +92,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String natGatewayId;
+
     public CreateRouteTableResultRouteTableRoutes withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -89,6 +100,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String networkInterfaceId;
+
     public CreateRouteTableResultRouteTableRoutes withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -96,6 +108,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public CreateRouteTableResultRouteTableRoutesOriginEnum origin;
+
     public CreateRouteTableResultRouteTableRoutes withOrigin(CreateRouteTableResultRouteTableRoutesOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -103,6 +116,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public CreateRouteTableResultRouteTableRoutesStateEnum state;
+
     public CreateRouteTableResultRouteTableRoutes withState(CreateRouteTableResultRouteTableRoutesStateEnum state) {
         this.state = state;
         return this;
@@ -110,6 +124,7 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String transitGatewayId;
+
     public CreateRouteTableResultRouteTableRoutes withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -117,9 +132,11 @@ public class CreateRouteTableResultRouteTableRoutes {
     
     
     public String vpcPeeringConnectionId;
+
     public CreateRouteTableResultRouteTableRoutes withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public CreateRouteTableResultRouteTableRoutes(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AlarmStateInformation {
     @JsonProperty("Name")
     public String name;
+
     public AlarmStateInformation withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class AlarmStateInformation {
     
     @JsonProperty("State")
     public ExternalAlarmStateEnum state;
+
     public AlarmStateInformation withState(ExternalAlarmStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AlarmStateInformation(@JsonProperty("Name") String name, @JsonProperty("State") ExternalAlarmStateEnum state) {
+        this.name = name;
+        this.state = state;
+  }
 }

@@ -15,6 +15,7 @@ public class RecordMarkerDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public RecordMarkerDecisionAttributes withDetails(String details) {
         this.details = details;
         return this;
@@ -22,9 +23,13 @@ public class RecordMarkerDecisionAttributes {
     
     @JsonProperty("markerName")
     public String markerName;
+
     public RecordMarkerDecisionAttributes withMarkerName(String markerName) {
         this.markerName = markerName;
         return this;
     }
     
+    public RecordMarkerDecisionAttributes(@JsonProperty("markerName") String markerName) {
+        this.markerName = markerName;
+  }
 }

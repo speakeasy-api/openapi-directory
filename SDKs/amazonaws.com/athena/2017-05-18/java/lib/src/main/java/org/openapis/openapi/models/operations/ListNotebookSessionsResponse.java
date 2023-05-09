@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListNotebookSessionsResponse {
     
     public String contentType;
+
     public ListNotebookSessionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListNotebookSessionsResponse {
      */
     
     public Object internalServerException;
+
     public ListNotebookSessionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListNotebookSessionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListNotebookSessionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListNotebookSessionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListNotebookSessionsResponse listNotebookSessionsResponse;
+
     public ListNotebookSessionsResponse withListNotebookSessionsResponse(org.openapis.openapi.models.shared.ListNotebookSessionsResponse listNotebookSessionsResponse) {
         this.listNotebookSessionsResponse = listNotebookSessionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListNotebookSessionsResponse {
     
     
     public Integer statusCode;
+
     public ListNotebookSessionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListNotebookSessionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListNotebookSessionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListNotebookSessionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListNotebookSessionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListNotebookSessionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

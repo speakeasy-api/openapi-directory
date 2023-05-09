@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricDefinition {
     @JsonProperty("Name")
     public String name;
+
     public MetricDefinition withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class MetricDefinition {
     
     @JsonProperty("Regex")
     public String regex;
+
     public MetricDefinition withRegex(String regex) {
         this.regex = regex;
         return this;
     }
     
+    public MetricDefinition(@JsonProperty("Name") String name, @JsonProperty("Regex") String regex) {
+        this.name = name;
+        this.regex = regex;
+  }
 }

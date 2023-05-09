@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class QuestionsMigratedFromOtherSite {
     
     public Object[] aliases;
+
     public QuestionsMigratedFromOtherSite withAliases(Object[] aliases) {
         this.aliases = aliases;
         return this;
@@ -16,6 +17,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String apiSiteParameter;
+
     public QuestionsMigratedFromOtherSite withApiSiteParameter(String apiSiteParameter) {
         this.apiSiteParameter = apiSiteParameter;
         return this;
@@ -23,6 +25,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String audience;
+
     public QuestionsMigratedFromOtherSite withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -30,6 +33,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public Long closedBetaDate;
+
     public QuestionsMigratedFromOtherSite withClosedBetaDate(Long closedBetaDate) {
         this.closedBetaDate = closedBetaDate;
         return this;
@@ -37,6 +41,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String faviconUrl;
+
     public QuestionsMigratedFromOtherSite withFaviconUrl(String faviconUrl) {
         this.faviconUrl = faviconUrl;
         return this;
@@ -44,6 +49,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String highResolutionIconUrl;
+
     public QuestionsMigratedFromOtherSite withHighResolutionIconUrl(String highResolutionIconUrl) {
         this.highResolutionIconUrl = highResolutionIconUrl;
         return this;
@@ -51,6 +57,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String iconUrl;
+
     public QuestionsMigratedFromOtherSite withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -58,6 +65,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public Long launchDate;
+
     public QuestionsMigratedFromOtherSite withLaunchDate(Long launchDate) {
         this.launchDate = launchDate;
         return this;
@@ -65,6 +73,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String logoUrl;
+
     public QuestionsMigratedFromOtherSite withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -72,6 +81,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public Object[] markdownExtensions;
+
     public QuestionsMigratedFromOtherSite withMarkdownExtensions(Object[] markdownExtensions) {
         this.markdownExtensions = markdownExtensions;
         return this;
@@ -79,6 +89,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String name;
+
     public QuestionsMigratedFromOtherSite withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +97,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public Long openBetaDate;
+
     public QuestionsMigratedFromOtherSite withOpenBetaDate(Long openBetaDate) {
         this.openBetaDate = openBetaDate;
         return this;
@@ -93,6 +105,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public Object[] relatedSites;
+
     public QuestionsMigratedFromOtherSite withRelatedSites(Object[] relatedSites) {
         this.relatedSites = relatedSites;
         return this;
@@ -100,6 +113,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String siteState;
+
     public QuestionsMigratedFromOtherSite withSiteState(String siteState) {
         this.siteState = siteState;
         return this;
@@ -107,6 +121,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String siteType;
+
     public QuestionsMigratedFromOtherSite withSiteType(String siteType) {
         this.siteType = siteType;
         return this;
@@ -114,6 +129,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String siteUrl;
+
     public QuestionsMigratedFromOtherSite withSiteUrl(String siteUrl) {
         this.siteUrl = siteUrl;
         return this;
@@ -121,6 +137,7 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public QuestionsMigratedFromOtherSiteStyling styling;
+
     public QuestionsMigratedFromOtherSite withStyling(QuestionsMigratedFromOtherSiteStyling styling) {
         this.styling = styling;
         return this;
@@ -128,9 +145,11 @@ public class QuestionsMigratedFromOtherSite {
     
     
     public String twitterAccount;
+
     public QuestionsMigratedFromOtherSite withTwitterAccount(String twitterAccount) {
         this.twitterAccount = twitterAccount;
         return this;
     }
     
+    public QuestionsMigratedFromOtherSite(){}
 }

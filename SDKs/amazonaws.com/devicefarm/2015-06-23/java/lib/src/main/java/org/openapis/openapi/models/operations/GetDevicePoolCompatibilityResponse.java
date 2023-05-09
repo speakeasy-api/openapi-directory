@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDevicePoolCompatibilityResponse {
@@ -12,6 +13,7 @@ public class GetDevicePoolCompatibilityResponse {
      */
     
     public Object argumentException;
+
     public GetDevicePoolCompatibilityResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetDevicePoolCompatibilityResponse {
     
     
     public String contentType;
+
     public GetDevicePoolCompatibilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDevicePoolCompatibilityResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDevicePoolCompatibilityResult getDevicePoolCompatibilityResult;
+
     public GetDevicePoolCompatibilityResponse withGetDevicePoolCompatibilityResult(org.openapis.openapi.models.shared.GetDevicePoolCompatibilityResult getDevicePoolCompatibilityResult) {
         this.getDevicePoolCompatibilityResult = getDevicePoolCompatibilityResult;
         return this;
@@ -39,6 +43,7 @@ public class GetDevicePoolCompatibilityResponse {
      */
     
     public Object limitExceededException;
+
     public GetDevicePoolCompatibilityResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetDevicePoolCompatibilityResponse {
      */
     
     public Object notFoundException;
+
     public GetDevicePoolCompatibilityResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDevicePoolCompatibilityResponse {
      */
     
     public Object serviceAccountException;
+
     public GetDevicePoolCompatibilityResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetDevicePoolCompatibilityResponse {
     
     
     public Integer statusCode;
+
     public GetDevicePoolCompatibilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDevicePoolCompatibilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDevicePoolCompatibilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDevicePoolCompatibilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

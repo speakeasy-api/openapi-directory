@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPolicyVersionResponse {
     
     public String contentType;
+
     public GetPolicyVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPolicyVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPolicyVersionResponse getPolicyVersionResponse;
+
     public GetPolicyVersionResponse withGetPolicyVersionResponse(org.openapis.openapi.models.shared.GetPolicyVersionResponse getPolicyVersionResponse) {
         this.getPolicyVersionResponse = getPolicyVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetPolicyVersionResponse {
      */
     
     public Object internalFailureException;
+
     public GetPolicyVersionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetPolicyVersionResponse {
      */
     
     public Object invalidRequestException;
+
     public GetPolicyVersionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetPolicyVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPolicyVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetPolicyVersionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetPolicyVersionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class GetPolicyVersionResponse {
     
     
     public Integer statusCode;
+
     public GetPolicyVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetPolicyVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPolicyVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetPolicyVersionResponse {
      */
     
     public Object throttlingException;
+
     public GetPolicyVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetPolicyVersionResponse {
      */
     
     public Object unauthorizedException;
+
     public GetPolicyVersionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetPolicyVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

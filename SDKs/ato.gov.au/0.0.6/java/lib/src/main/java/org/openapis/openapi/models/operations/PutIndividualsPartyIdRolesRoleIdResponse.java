@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutIndividualsPartyIdRolesRoleIdResponse {
     
     public String contentType;
+
     public PutIndividualsPartyIdRolesRoleIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutIndividualsPartyIdRolesRoleIdResponse {
     
     
     public Integer statusCode;
+
     public PutIndividualsPartyIdRolesRoleIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutIndividualsPartyIdRolesRoleIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutIndividualsPartyIdRolesRoleIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutIndividualsPartyIdRolesRoleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PutIndividualsPartyIdRolesRoleIdResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -43,6 +48,7 @@ public class PutIndividualsPartyIdRolesRoleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutIndividualsPartyIdRolesRoleIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -53,6 +59,7 @@ public class PutIndividualsPartyIdRolesRoleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.PartyRole partyRole;
+
     public PutIndividualsPartyIdRolesRoleIdResponse withPartyRole(org.openapis.openapi.models.shared.PartyRole partyRole) {
         this.partyRole = partyRole;
         return this;
@@ -63,9 +70,14 @@ public class PutIndividualsPartyIdRolesRoleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PutIndividualsPartyIdRolesRoleIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PutIndividualsPartyIdRolesRoleIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAvailableChannelsResponse {
     
     public String contentType;
+
     public GetAvailableChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAvailableChannelsResponse {
     
     
     public Integer statusCode;
+
     public GetAvailableChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAvailableChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAvailableChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetAvailableChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelHeader[] channelHeaders;
+
     public GetAvailableChannelsResponse withChannelHeaders(org.openapis.openapi.models.shared.ChannelHeader[] channelHeaders) {
         this.channelHeaders = channelHeaders;
         return this;
     }
     
+    public GetAvailableChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

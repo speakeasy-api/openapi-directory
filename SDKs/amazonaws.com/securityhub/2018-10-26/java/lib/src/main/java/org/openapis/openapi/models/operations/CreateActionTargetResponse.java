@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateActionTargetResponse {
     
     public String contentType;
+
     public CreateActionTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateActionTargetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateActionTargetResponse createActionTargetResponse;
+
     public CreateActionTargetResponse withCreateActionTargetResponse(org.openapis.openapi.models.shared.CreateActionTargetResponse createActionTargetResponse) {
         this.createActionTargetResponse = createActionTargetResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateActionTargetResponse {
      */
     
     public Object internalException;
+
     public CreateActionTargetResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateActionTargetResponse {
      */
     
     public Object invalidAccessException;
+
     public CreateActionTargetResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class CreateActionTargetResponse {
      */
     
     public Object invalidInputException;
+
     public CreateActionTargetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateActionTargetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateActionTargetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateActionTargetResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateActionTargetResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -76,6 +84,7 @@ public class CreateActionTargetResponse {
     
     
     public Integer statusCode;
+
     public CreateActionTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateActionTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateActionTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateActionTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

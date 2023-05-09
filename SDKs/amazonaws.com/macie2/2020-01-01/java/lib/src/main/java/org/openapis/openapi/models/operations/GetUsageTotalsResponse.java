@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsageTotalsResponse {
@@ -12,6 +13,7 @@ public class GetUsageTotalsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetUsageTotalsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetUsageTotalsResponse {
      */
     
     public Object conflictException;
+
     public GetUsageTotalsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetUsageTotalsResponse {
     
     
     public String contentType;
+
     public GetUsageTotalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetUsageTotalsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUsageTotalsResponse getUsageTotalsResponse;
+
     public GetUsageTotalsResponse withGetUsageTotalsResponse(org.openapis.openapi.models.shared.GetUsageTotalsResponse getUsageTotalsResponse) {
         this.getUsageTotalsResponse = getUsageTotalsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetUsageTotalsResponse {
      */
     
     public Object internalServerException;
+
     public GetUsageTotalsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetUsageTotalsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetUsageTotalsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetUsageTotalsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetUsageTotalsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetUsageTotalsResponse {
     
     
     public Integer statusCode;
+
     public GetUsageTotalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetUsageTotalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsageTotalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetUsageTotalsResponse {
      */
     
     public Object throttlingException;
+
     public GetUsageTotalsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetUsageTotalsResponse {
      */
     
     public Object validationException;
+
     public GetUsageTotalsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetUsageTotalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

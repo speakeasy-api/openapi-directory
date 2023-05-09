@@ -15,6 +15,7 @@ public class ConferenceRecordStartResponse {
      */
     @JsonProperty("Message")
     public ConferenceRecordStartResponseMessageEnum message;
+
     public ConferenceRecordStartResponse withMessage(ConferenceRecordStartResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class ConferenceRecordStartResponse {
      */
     @JsonProperty("RecordFile")
     public String recordFile;
+
     public ConferenceRecordStartResponse withRecordFile(String recordFile) {
         this.recordFile = recordFile;
         return this;
@@ -35,9 +37,15 @@ public class ConferenceRecordStartResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public ConferenceRecordStartResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ConferenceRecordStartResponse(@JsonProperty("Message") ConferenceRecordStartResponseMessageEnum message, @JsonProperty("RecordFile") String recordFile, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.recordFile = recordFile;
+        this.success = success;
+  }
 }

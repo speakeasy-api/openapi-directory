@@ -20,6 +20,7 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountMicros")
     public String amountMicros;
+
     public SuperChatEventSnippet withAmountMicros(String amountMicros) {
         this.amountMicros = amountMicros;
         return this;
@@ -31,6 +32,7 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public SuperChatEventSnippet withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -42,6 +44,7 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentText")
     public String commentText;
+
     public SuperChatEventSnippet withCommentText(String commentText) {
         this.commentText = commentText;
         return this;
@@ -55,6 +58,7 @@ public class SuperChatEventSnippet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SuperChatEventSnippet withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -66,6 +70,7 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public SuperChatEventSnippet withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -77,6 +82,7 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayString")
     public String displayString;
+
     public SuperChatEventSnippet withDisplayString(String displayString) {
         this.displayString = displayString;
         return this;
@@ -88,6 +94,7 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSuperStickerEvent")
     public Boolean isSuperStickerEvent;
+
     public SuperChatEventSnippet withIsSuperStickerEvent(Boolean isSuperStickerEvent) {
         this.isSuperStickerEvent = isSuperStickerEvent;
         return this;
@@ -99,6 +106,7 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageType")
     public Long messageType;
+
     public SuperChatEventSnippet withMessageType(Long messageType) {
         this.messageType = messageType;
         return this;
@@ -107,6 +115,7 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("superStickerMetadata")
     public SuperStickerMetadata superStickerMetadata;
+
     public SuperChatEventSnippet withSuperStickerMetadata(SuperStickerMetadata superStickerMetadata) {
         this.superStickerMetadata = superStickerMetadata;
         return this;
@@ -115,9 +124,11 @@ public class SuperChatEventSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supporterDetails")
     public ChannelProfileDetails supporterDetails;
+
     public SuperChatEventSnippet withSupporterDetails(ChannelProfileDetails supporterDetails) {
         this.supporterDetails = supporterDetails;
         return this;
     }
     
+    public SuperChatEventSnippet(){}
 }

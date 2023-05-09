@@ -18,6 +18,7 @@ public class ShipmentExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ShipmentDetailVO result;
+
     public ShipmentExpandVO withResult(ShipmentDetailVO result) {
         this.result = result;
         return this;
@@ -29,6 +30,7 @@ public class ShipmentExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resut")
     public ShipmentDetailVO resut;
+
     public ShipmentExpandVO withResut(ShipmentDetailVO resut) {
         this.resut = resut;
         return this;
@@ -37,6 +39,7 @@ public class ShipmentExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public ShipmentExpandVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -45,9 +48,11 @@ public class ShipmentExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public ShipmentExpandVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ShipmentExpandVO(){}
 }

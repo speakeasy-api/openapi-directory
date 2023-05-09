@@ -12,6 +12,7 @@ public class JobCommunicationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructionsForAllJobs")
     public String instructionsForAllJobs;
+
     public JobCommunicationDto withInstructionsForAllJobs(String instructionsForAllJobs) {
         this.instructionsForAllJobs = instructionsForAllJobs;
         return this;
@@ -20,6 +21,7 @@ public class JobCommunicationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructionsForJob")
     public String instructionsForJob;
+
     public JobCommunicationDto withInstructionsForJob(String instructionsForJob) {
         this.instructionsForJob = instructionsForJob;
         return this;
@@ -28,9 +30,11 @@ public class JobCommunicationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noteFromVendor")
     public String noteFromVendor;
+
     public JobCommunicationDto withNoteFromVendor(String noteFromVendor) {
         this.noteFromVendor = noteFromVendor;
         return this;
     }
     
+    public JobCommunicationDto(){}
 }

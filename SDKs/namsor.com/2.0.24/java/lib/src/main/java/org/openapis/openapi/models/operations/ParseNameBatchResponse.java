@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ParseNameBatchResponse {
@@ -12,6 +13,7 @@ public class ParseNameBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPersonalNameParsedOut batchPersonalNameParsedOut;
+
     public ParseNameBatchResponse withBatchPersonalNameParsedOut(org.openapis.openapi.models.shared.BatchPersonalNameParsedOut batchPersonalNameParsedOut) {
         this.batchPersonalNameParsedOut = batchPersonalNameParsedOut;
         return this;
@@ -19,6 +21,7 @@ public class ParseNameBatchResponse {
     
     
     public String contentType;
+
     public ParseNameBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ParseNameBatchResponse {
     
     
     public Integer statusCode;
+
     public ParseNameBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ParseNameBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ParseNameBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ParseNameBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class AudioUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shorts_loops_stems")
     public String shortsLoopsStems;
+
     public AudioUrl withShortsLoopsStems(String shortsLoopsStems) {
         this.shortsLoopsStems = shortsLoopsStems;
         return this;
@@ -28,9 +29,13 @@ public class AudioUrl {
      */
     @JsonProperty("url")
     public String url;
+
     public AudioUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AudioUrl(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

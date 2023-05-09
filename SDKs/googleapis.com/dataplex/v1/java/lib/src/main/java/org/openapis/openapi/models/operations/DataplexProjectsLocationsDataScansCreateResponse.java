@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataplexProjectsLocationsDataScansCreateResponse {
     
     public String contentType;
+
     public DataplexProjectsLocationsDataScansCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataplexProjectsLocationsDataScansCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation;
+
     public DataplexProjectsLocationsDataScansCreateResponse withGoogleLongrunningOperation(org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation) {
         this.googleLongrunningOperation = googleLongrunningOperation;
         return this;
@@ -26,6 +29,7 @@ public class DataplexProjectsLocationsDataScansCreateResponse {
     
     
     public Integer statusCode;
+
     public DataplexProjectsLocationsDataScansCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DataplexProjectsLocationsDataScansCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataplexProjectsLocationsDataScansCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataplexProjectsLocationsDataScansCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

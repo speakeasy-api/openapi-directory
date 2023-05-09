@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azureSubscriptionId")
     public String azureSubscriptionId;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSON withAzureSubscriptionId(String azureSubscriptionId) {
         this.azureSubscriptionId = azureSubscriptionId;
         return this;
@@ -29,6 +30,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azureSubscriptionState")
     public BillingAggregatedInformationGetByApp200ApplicationJSONAzureSubscriptionStateEnum azureSubscriptionState;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSON withAzureSubscriptionState(BillingAggregatedInformationGetByApp200ApplicationJSONAzureSubscriptionStateEnum azureSubscriptionState) {
         this.azureSubscriptionState = azureSubscriptionState;
         return this;
@@ -40,6 +42,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPlans")
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlans billingPlans;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSON withBillingPlans(BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlans billingPlans) {
         this.billingPlans = billingPlans;
         return this;
@@ -51,6 +54,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSON withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -73,6 +78,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public BillingAggregatedInformationGetByApp200ApplicationJSONUsage usage;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSON withUsage(BillingAggregatedInformationGetByApp200ApplicationJSONUsage usage) {
         this.usage = usage;
         return this;
@@ -84,9 +90,11 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public BillingAggregatedInformationGetByApp200ApplicationJSON(){}
 }

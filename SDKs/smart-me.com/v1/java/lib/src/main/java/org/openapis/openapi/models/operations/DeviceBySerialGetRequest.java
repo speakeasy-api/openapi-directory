@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeviceBySerialGetRequest {
@@ -12,9 +13,13 @@ public class DeviceBySerialGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serial")
     public Long serial;
+
     public DeviceBySerialGetRequest withSerial(Long serial) {
         this.serial = serial;
         return this;
     }
     
+    public DeviceBySerialGetRequest(@JsonProperty("serial") Long serial) {
+        this.serial = serial;
+  }
 }

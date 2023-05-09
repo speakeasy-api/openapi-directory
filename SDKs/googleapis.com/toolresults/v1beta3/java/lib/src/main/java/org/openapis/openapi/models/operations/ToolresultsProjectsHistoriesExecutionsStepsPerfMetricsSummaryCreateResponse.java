@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateResponse {
     
     public String contentType;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreate
      */
     
     public org.openapis.openapi.models.shared.PerfMetricsSummary perfMetricsSummary;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateResponse withPerfMetricsSummary(org.openapis.openapi.models.shared.PerfMetricsSummary perfMetricsSummary) {
         this.perfMetricsSummary = perfMetricsSummary;
         return this;
@@ -26,6 +29,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreate
     
     
     public Integer statusCode;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreate
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetHookEventsSubjectTypeResponse {
     
     public String contentType;
+
     public GetHookEventsSubjectTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetHookEventsSubjectTypeResponse {
     
     
     public Integer statusCode;
+
     public GetHookEventsSubjectTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetHookEventsSubjectTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetHookEventsSubjectTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetHookEventsSubjectTypeResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetHookEventsSubjectTypeResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetHookEventsSubjectTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedHookEvents paginatedHookEvents;
+
     public GetHookEventsSubjectTypeResponse withPaginatedHookEvents(org.openapis.openapi.models.shared.PaginatedHookEvents paginatedHookEvents) {
         this.paginatedHookEvents = paginatedHookEvents;
         return this;
     }
     
+    public GetHookEventsSubjectTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

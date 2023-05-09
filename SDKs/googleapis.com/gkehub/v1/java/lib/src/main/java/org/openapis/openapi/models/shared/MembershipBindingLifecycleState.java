@@ -18,9 +18,11 @@ public class MembershipBindingLifecycleState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public MembershipBindingLifecycleStateCodeEnum code;
+
     public MembershipBindingLifecycleState withCode(MembershipBindingLifecycleStateCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public MembershipBindingLifecycleState(){}
 }

@@ -15,6 +15,7 @@ public class UpdateNetworkSmDevicesTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String ids;
+
     public UpdateNetworkSmDevicesTagsRequestBody withIds(String ids) {
         this.ids = ids;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkSmDevicesTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public UpdateNetworkSmDevicesTagsRequestBody withScope(String scope) {
         this.scope = scope;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkSmDevicesTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serials")
     public String serials;
+
     public UpdateNetworkSmDevicesTagsRequestBody withSerials(String serials) {
         this.serials = serials;
         return this;
@@ -47,6 +50,7 @@ public class UpdateNetworkSmDevicesTagsRequestBody {
      */
     @JsonProperty("tags")
     public String tags;
+
     public UpdateNetworkSmDevicesTagsRequestBody withTags(String tags) {
         this.tags = tags;
         return this;
@@ -57,6 +61,7 @@ public class UpdateNetworkSmDevicesTagsRequestBody {
      */
     @JsonProperty("updateAction")
     public String updateAction;
+
     public UpdateNetworkSmDevicesTagsRequestBody withUpdateAction(String updateAction) {
         this.updateAction = updateAction;
         return this;
@@ -68,9 +73,14 @@ public class UpdateNetworkSmDevicesTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiMacs")
     public String wifiMacs;
+
     public UpdateNetworkSmDevicesTagsRequestBody withWifiMacs(String wifiMacs) {
         this.wifiMacs = wifiMacs;
         return this;
     }
     
+    public UpdateNetworkSmDevicesTagsRequestBody(@JsonProperty("tags") String tags, @JsonProperty("updateAction") String updateAction) {
+        this.tags = tags;
+        this.updateAction = updateAction;
+  }
 }

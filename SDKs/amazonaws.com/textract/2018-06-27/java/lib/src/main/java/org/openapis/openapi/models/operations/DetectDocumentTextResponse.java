@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectDocumentTextResponse {
@@ -12,6 +13,7 @@ public class DetectDocumentTextResponse {
      */
     
     public Object accessDeniedException;
+
     public DetectDocumentTextResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DetectDocumentTextResponse {
      */
     
     public Object badDocumentException;
+
     public DetectDocumentTextResponse withBadDocumentException(Object badDocumentException) {
         this.badDocumentException = badDocumentException;
         return this;
@@ -29,6 +32,7 @@ public class DetectDocumentTextResponse {
     
     
     public String contentType;
+
     public DetectDocumentTextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DetectDocumentTextResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectDocumentTextResponse detectDocumentTextResponse;
+
     public DetectDocumentTextResponse withDetectDocumentTextResponse(org.openapis.openapi.models.shared.DetectDocumentTextResponse detectDocumentTextResponse) {
         this.detectDocumentTextResponse = detectDocumentTextResponse;
         return this;
@@ -49,6 +54,7 @@ public class DetectDocumentTextResponse {
      */
     
     public Object documentTooLargeException;
+
     public DetectDocumentTextResponse withDocumentTooLargeException(Object documentTooLargeException) {
         this.documentTooLargeException = documentTooLargeException;
         return this;
@@ -59,6 +65,7 @@ public class DetectDocumentTextResponse {
      */
     
     public Object internalServerError;
+
     public DetectDocumentTextResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class DetectDocumentTextResponse {
      */
     
     public Object invalidParameterException;
+
     public DetectDocumentTextResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DetectDocumentTextResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public DetectDocumentTextResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class DetectDocumentTextResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DetectDocumentTextResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class DetectDocumentTextResponse {
     
     
     public Integer statusCode;
+
     public DetectDocumentTextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class DetectDocumentTextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectDocumentTextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class DetectDocumentTextResponse {
      */
     
     public Object throttlingException;
+
     public DetectDocumentTextResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class DetectDocumentTextResponse {
      */
     
     public Object unsupportedDocumentException;
+
     public DetectDocumentTextResponse withUnsupportedDocumentException(Object unsupportedDocumentException) {
         this.unsupportedDocumentException = unsupportedDocumentException;
         return this;
     }
     
+    public DetectDocumentTextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

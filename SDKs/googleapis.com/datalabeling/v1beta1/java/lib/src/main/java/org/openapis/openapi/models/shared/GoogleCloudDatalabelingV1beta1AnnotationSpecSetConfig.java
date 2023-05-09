@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMultiLabel")
     public Boolean allowMultiLabel;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig withAllowMultiLabel(Boolean allowMultiLabel) {
         this.allowMultiLabel = allowMultiLabel;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecSet")
     public String annotationSpecSet;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig withAnnotationSpecSet(String annotationSpecSet) {
         this.annotationSpecSet = annotationSpecSet;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig(){}
 }

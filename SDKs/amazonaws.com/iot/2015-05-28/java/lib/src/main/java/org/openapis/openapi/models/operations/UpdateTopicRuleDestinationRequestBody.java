@@ -12,6 +12,7 @@ public class UpdateTopicRuleDestinationRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateTopicRuleDestinationRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,14 @@ public class UpdateTopicRuleDestinationRequestBody {
      */
     @JsonProperty("status")
     public UpdateTopicRuleDestinationRequestBodyStatusEnum status;
+
     public UpdateTopicRuleDestinationRequestBody withStatus(UpdateTopicRuleDestinationRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateTopicRuleDestinationRequestBody(@JsonProperty("arn") String arn, @JsonProperty("status") UpdateTopicRuleDestinationRequestBodyStatusEnum status) {
+        this.arn = arn;
+        this.status = status;
+  }
 }

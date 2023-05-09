@@ -61,10 +61,8 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTrackCollectionItemsResponse res = new org.openapis.openapi.models.operations.AddTrackCollectionItemsResponse() {{
+        org.openapis.openapi.models.operations.AddTrackCollectionItemsResponse res = new org.openapis.openapi.models.operations.AddTrackCollectionItemsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -101,11 +99,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTrackCollectionResponse res = new org.openapis.openapi.models.operations.CreateTrackCollectionResponse() {{
+        org.openapis.openapi.models.operations.CreateTrackCollectionResponse res = new org.openapis.openapi.models.operations.CreateTrackCollectionResponse(contentType, httpRes.statusCode()) {{
             collectionCreateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -144,10 +140,8 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTrackCollectionResponse res = new org.openapis.openapi.models.operations.DeleteTrackCollectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteTrackCollectionResponse res = new org.openapis.openapi.models.operations.DeleteTrackCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -185,10 +179,8 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTrackCollectionItemsResponse res = new org.openapis.openapi.models.operations.DeleteTrackCollectionItemsResponse() {{
+        org.openapis.openapi.models.operations.DeleteTrackCollectionItemsResponse res = new org.openapis.openapi.models.operations.DeleteTrackCollectionItemsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -220,11 +212,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadTracksResponse res = new org.openapis.openapi.models.operations.DownloadTracksResponse() {{
+        org.openapis.openapi.models.operations.DownloadTracksResponse res = new org.openapis.openapi.models.operations.DownloadTracksResponse(contentType, httpRes.statusCode()) {{
             audioUrl = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,11 +259,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackResponse res = new org.openapis.openapi.models.operations.GetTrackResponse() {{
+        org.openapis.openapi.models.operations.GetTrackResponse res = new org.openapis.openapi.models.operations.GetTrackResponse(contentType, httpRes.statusCode()) {{
             audio = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -318,11 +306,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackCollectionResponse res = new org.openapis.openapi.models.operations.GetTrackCollectionResponse() {{
+        org.openapis.openapi.models.operations.GetTrackCollectionResponse res = new org.openapis.openapi.models.operations.GetTrackCollectionResponse(contentType, httpRes.statusCode()) {{
             collection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -367,11 +353,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackCollectionItemsResponse res = new org.openapis.openapi.models.operations.GetTrackCollectionItemsResponse() {{
+        org.openapis.openapi.models.operations.GetTrackCollectionItemsResponse res = new org.openapis.openapi.models.operations.GetTrackCollectionItemsResponse(contentType, httpRes.statusCode()) {{
             collectionItemDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -416,11 +400,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackCollectionListResponse res = new org.openapis.openapi.models.operations.GetTrackCollectionListResponse() {{
+        org.openapis.openapi.models.operations.GetTrackCollectionListResponse res = new org.openapis.openapi.models.operations.GetTrackCollectionListResponse(contentType, httpRes.statusCode()) {{
             collectionDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -465,11 +447,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackLicenseListResponse res = new org.openapis.openapi.models.operations.GetTrackLicenseListResponse() {{
+        org.openapis.openapi.models.operations.GetTrackLicenseListResponse res = new org.openapis.openapi.models.operations.GetTrackLicenseListResponse(contentType, httpRes.statusCode()) {{
             downloadHistoryDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -514,11 +494,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackListResponse res = new org.openapis.openapi.models.operations.GetTrackListResponse() {{
+        org.openapis.openapi.models.operations.GetTrackListResponse res = new org.openapis.openapi.models.operations.GetTrackListResponse(contentType, httpRes.statusCode()) {{
             audioDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -568,11 +546,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicenseTrackResponse res = new org.openapis.openapi.models.operations.LicenseTrackResponse() {{
+        org.openapis.openapi.models.operations.LicenseTrackResponse res = new org.openapis.openapi.models.operations.LicenseTrackResponse(contentType, httpRes.statusCode()) {{
             licenseAudioResultDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -617,11 +593,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGenresResponse res = new org.openapis.openapi.models.operations.ListGenresResponse() {{
+        org.openapis.openapi.models.operations.ListGenresResponse res = new org.openapis.openapi.models.operations.ListGenresResponse(contentType, httpRes.statusCode()) {{
             genreList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -664,11 +638,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListInstrumentsResponse res = new org.openapis.openapi.models.operations.ListInstrumentsResponse() {{
+        org.openapis.openapi.models.operations.ListInstrumentsResponse res = new org.openapis.openapi.models.operations.ListInstrumentsResponse(contentType, httpRes.statusCode()) {{
             instrumentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -711,11 +683,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMoodsResponse res = new org.openapis.openapi.models.operations.ListMoodsResponse() {{
+        org.openapis.openapi.models.operations.ListMoodsResponse res = new org.openapis.openapi.models.operations.ListMoodsResponse(contentType, httpRes.statusCode()) {{
             moodList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -757,10 +727,8 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RenameTrackCollectionResponse res = new org.openapis.openapi.models.operations.RenameTrackCollectionResponse() {{
+        org.openapis.openapi.models.operations.RenameTrackCollectionResponse res = new org.openapis.openapi.models.operations.RenameTrackCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -798,11 +766,9 @@ public class Audio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTracksResponse res = new org.openapis.openapi.models.operations.SearchTracksResponse() {{
+        org.openapis.openapi.models.operations.SearchTracksResponse res = new org.openapis.openapi.models.operations.SearchTracksResponse(contentType, httpRes.statusCode()) {{
             audioSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeClientAuthenticationSettingsResponse {
@@ -12,6 +13,7 @@ public class DescribeClientAuthenticationSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeClientAuthenticationSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeClientAuthenticationSettingsResponse {
      */
     
     public Object clientException;
+
     public DescribeClientAuthenticationSettingsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeClientAuthenticationSettingsResponse {
     
     
     public String contentType;
+
     public DescribeClientAuthenticationSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeClientAuthenticationSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeClientAuthenticationSettingsResult describeClientAuthenticationSettingsResult;
+
     public DescribeClientAuthenticationSettingsResponse withDescribeClientAuthenticationSettingsResult(org.openapis.openapi.models.shared.DescribeClientAuthenticationSettingsResult describeClientAuthenticationSettingsResult) {
         this.describeClientAuthenticationSettingsResult = describeClientAuthenticationSettingsResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribeClientAuthenticationSettingsResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public DescribeClientAuthenticationSettingsResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeClientAuthenticationSettingsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeClientAuthenticationSettingsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeClientAuthenticationSettingsResponse {
     
     
     public Integer statusCode;
+
     public DescribeClientAuthenticationSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeClientAuthenticationSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeClientAuthenticationSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeClientAuthenticationSettingsResponse {
      */
     
     public Object serviceException;
+
     public DescribeClientAuthenticationSettingsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeClientAuthenticationSettingsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeClientAuthenticationSettingsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeClientAuthenticationSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

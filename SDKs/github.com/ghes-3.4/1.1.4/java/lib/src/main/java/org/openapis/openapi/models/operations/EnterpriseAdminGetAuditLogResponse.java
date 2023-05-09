@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminGetAuditLogResponse {
     
     public String contentType;
+
     public EnterpriseAdminGetAuditLogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminGetAuditLogResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminGetAuditLogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminGetAuditLogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminGetAuditLogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminGetAuditLogResponse {
      */
     
     public org.openapis.openapi.models.shared.AuditLogEvent[] auditLogEvents;
+
     public EnterpriseAdminGetAuditLogResponse withAuditLogEvents(org.openapis.openapi.models.shared.AuditLogEvent[] auditLogEvents) {
         this.auditLogEvents = auditLogEvents;
         return this;
     }
     
+    public EnterpriseAdminGetAuditLogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

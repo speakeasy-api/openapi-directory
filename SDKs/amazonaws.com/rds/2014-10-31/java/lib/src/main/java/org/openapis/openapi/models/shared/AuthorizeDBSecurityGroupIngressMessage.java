@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AuthorizeDBSecurityGroupIngressMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeDBSecurityGroupIngressMessage {
     
     public String cidrip;
+
     public AuthorizeDBSecurityGroupIngressMessage withCidrip(String cidrip) {
         this.cidrip = cidrip;
         return this;
@@ -19,6 +20,7 @@ public class AuthorizeDBSecurityGroupIngressMessage {
     
     
     public String dbSecurityGroupName;
+
     public AuthorizeDBSecurityGroupIngressMessage withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -26,6 +28,7 @@ public class AuthorizeDBSecurityGroupIngressMessage {
     
     
     public String ec2SecurityGroupId;
+
     public AuthorizeDBSecurityGroupIngressMessage withEc2SecurityGroupId(String ec2SecurityGroupId) {
         this.ec2SecurityGroupId = ec2SecurityGroupId;
         return this;
@@ -33,6 +36,7 @@ public class AuthorizeDBSecurityGroupIngressMessage {
     
     
     public String ec2SecurityGroupName;
+
     public AuthorizeDBSecurityGroupIngressMessage withEc2SecurityGroupName(String ec2SecurityGroupName) {
         this.ec2SecurityGroupName = ec2SecurityGroupName;
         return this;
@@ -40,9 +44,13 @@ public class AuthorizeDBSecurityGroupIngressMessage {
     
     
     public String ec2SecurityGroupOwnerId;
+
     public AuthorizeDBSecurityGroupIngressMessage withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
         this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
         return this;
     }
     
+    public AuthorizeDBSecurityGroupIngressMessage(@JsonProperty("DBSecurityGroupName") String dbSecurityGroupName) {
+        this.dbSecurityGroupName = dbSecurityGroupName;
+  }
 }

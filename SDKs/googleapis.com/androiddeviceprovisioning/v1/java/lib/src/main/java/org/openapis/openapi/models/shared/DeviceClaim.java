@@ -18,6 +18,7 @@ public class DeviceClaim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalService")
     public DeviceClaimAdditionalServiceEnum additionalService;
+
     public DeviceClaim withAdditionalService(DeviceClaimAdditionalServiceEnum additionalService) {
         this.additionalService = additionalService;
         return this;
@@ -29,6 +30,7 @@ public class DeviceClaim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleWorkspaceCustomerId")
     public String googleWorkspaceCustomerId;
+
     public DeviceClaim withGoogleWorkspaceCustomerId(String googleWorkspaceCustomerId) {
         this.googleWorkspaceCustomerId = googleWorkspaceCustomerId;
         return this;
@@ -40,6 +42,7 @@ public class DeviceClaim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerCompanyId")
     public String ownerCompanyId;
+
     public DeviceClaim withOwnerCompanyId(String ownerCompanyId) {
         this.ownerCompanyId = ownerCompanyId;
         return this;
@@ -51,6 +54,7 @@ public class DeviceClaim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resellerId")
     public String resellerId;
+
     public DeviceClaim withResellerId(String resellerId) {
         this.resellerId = resellerId;
         return this;
@@ -62,6 +66,7 @@ public class DeviceClaim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionType")
     public DeviceClaimSectionTypeEnum sectionType;
+
     public DeviceClaim withSectionType(DeviceClaimSectionTypeEnum sectionType) {
         this.sectionType = sectionType;
         return this;
@@ -73,6 +78,7 @@ public class DeviceClaim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vacationModeExpireTime")
     public String vacationModeExpireTime;
+
     public DeviceClaim withVacationModeExpireTime(String vacationModeExpireTime) {
         this.vacationModeExpireTime = vacationModeExpireTime;
         return this;
@@ -84,9 +90,11 @@ public class DeviceClaim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vacationModeStartTime")
     public String vacationModeStartTime;
+
     public DeviceClaim withVacationModeStartTime(String vacationModeStartTime) {
         this.vacationModeStartTime = vacationModeStartTime;
         return this;
     }
     
+    public DeviceClaim(){}
 }

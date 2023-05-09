@@ -18,9 +18,11 @@ public class FeatureResourceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public FeatureResourceStateStateEnum state;
+
     public FeatureResourceState withState(FeatureResourceStateStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public FeatureResourceState(){}
 }

@@ -59,10 +59,8 @@ public class PrivateRiddles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRiddleResponse res = new org.openapis.openapi.models.operations.DeleteRiddleResponse() {{
+        org.openapis.openapi.models.operations.DeleteRiddleResponse res = new org.openapis.openapi.models.operations.DeleteRiddleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -99,10 +97,8 @@ public class PrivateRiddles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRiddleResponse res = new org.openapis.openapi.models.operations.GetRiddleResponse() {{
+        org.openapis.openapi.models.operations.GetRiddleResponse res = new org.openapis.openapi.models.operations.GetRiddleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -139,10 +135,8 @@ public class PrivateRiddles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRiddleResponse res = new org.openapis.openapi.models.operations.PostRiddleResponse() {{
+        org.openapis.openapi.models.operations.PostRiddleResponse res = new org.openapis.openapi.models.operations.PostRiddleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -179,10 +173,8 @@ public class PrivateRiddles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRiddleResponse res = new org.openapis.openapi.models.operations.PutRiddleResponse() {{
+        org.openapis.openapi.models.operations.PutRiddleResponse res = new org.openapis.openapi.models.operations.PutRiddleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

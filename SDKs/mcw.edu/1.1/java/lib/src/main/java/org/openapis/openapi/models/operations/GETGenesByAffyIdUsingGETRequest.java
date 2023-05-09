@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenesByAffyIdUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETGenesByAffyIdUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=affyId")
     public String affyId;
+
     public GETGenesByAffyIdUsingGETRequest withAffyId(String affyId) {
         this.affyId = affyId;
         return this;
@@ -22,9 +24,14 @@ public class GETGenesByAffyIdUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETGenesByAffyIdUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     
+    public GETGenesByAffyIdUsingGETRequest(@JsonProperty("affyId") String affyId, @JsonProperty("speciesTypeKey") Integer speciesTypeKey) {
+        this.affyId = affyId;
+        this.speciesTypeKey = speciesTypeKey;
+  }
 }

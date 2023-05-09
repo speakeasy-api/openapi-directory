@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteReportGroupInput {
     @JsonProperty("arn")
     public String arn;
+
     public DeleteReportGroupInput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,13 @@ public class DeleteReportGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteReports")
     public Boolean deleteReports;
+
     public DeleteReportGroupInput withDeleteReports(Boolean deleteReports) {
         this.deleteReports = deleteReports;
         return this;
     }
     
+    public DeleteReportGroupInput(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

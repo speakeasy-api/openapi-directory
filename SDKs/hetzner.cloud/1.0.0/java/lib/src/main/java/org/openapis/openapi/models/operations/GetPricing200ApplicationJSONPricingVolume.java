@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPricing200ApplicationJSONPricingVolume {
     @JsonProperty("price_per_gb_month")
     public GetPricing200ApplicationJSONPricingVolumePricePerGbMonth pricePerGbMonth;
+
     public GetPricing200ApplicationJSONPricingVolume withPricePerGbMonth(GetPricing200ApplicationJSONPricingVolumePricePerGbMonth pricePerGbMonth) {
         this.pricePerGbMonth = pricePerGbMonth;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingVolume(@JsonProperty("price_per_gb_month") GetPricing200ApplicationJSONPricingVolumePricePerGbMonth pricePerGbMonth) {
+        this.pricePerGbMonth = pricePerGbMonth;
+  }
 }

@@ -18,6 +18,7 @@ public class SerialPortOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public SerialPortOutput withContents(String contents) {
         this.contents = contents;
         return this;
@@ -29,6 +30,7 @@ public class SerialPortOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SerialPortOutput withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class SerialPortOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public SerialPortOutput withNext(String next) {
         this.next = next;
         return this;
@@ -51,6 +54,7 @@ public class SerialPortOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public SerialPortOutput withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -62,9 +66,11 @@ public class SerialPortOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public SerialPortOutput withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public SerialPortOutput(){}
 }

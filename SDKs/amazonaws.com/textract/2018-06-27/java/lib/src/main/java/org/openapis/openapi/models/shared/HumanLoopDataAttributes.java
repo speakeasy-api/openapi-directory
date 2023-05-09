@@ -15,9 +15,11 @@ public class HumanLoopDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentClassifiers")
     public ContentClassifierEnum[] contentClassifiers;
+
     public HumanLoopDataAttributes withContentClassifiers(ContentClassifierEnum[] contentClassifiers) {
         this.contentClassifiers = contentClassifiers;
         return this;
     }
     
+    public HumanLoopDataAttributes(){}
 }

@@ -15,6 +15,7 @@ public class InstanceTemplatesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTemplates")
     public InstanceTemplate[] instanceTemplates;
+
     public InstanceTemplatesScopedList withInstanceTemplates(InstanceTemplate[] instanceTemplates) {
         this.instanceTemplates = instanceTemplates;
         return this;
@@ -26,9 +27,11 @@ public class InstanceTemplatesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public InstanceTemplatesScopedListWarning warning;
+
     public InstanceTemplatesScopedList withWarning(InstanceTemplatesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public InstanceTemplatesScopedList(){}
 }

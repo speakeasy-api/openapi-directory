@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDeleteTransitGatewayConnectPeerResponse {
     
     public byte[] body;
+
     public POSTDeleteTransitGatewayConnectPeerResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteTransitGatewayConnectPeerResponse {
     
     
     public String contentType;
+
     public POSTDeleteTransitGatewayConnectPeerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeleteTransitGatewayConnectPeerResponse {
     
     
     public Integer statusCode;
+
     public POSTDeleteTransitGatewayConnectPeerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDeleteTransitGatewayConnectPeerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDeleteTransitGatewayConnectPeerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDeleteTransitGatewayConnectPeerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

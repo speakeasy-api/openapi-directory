@@ -15,6 +15,7 @@ public class DeviceSelectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceNameContains")
     public String deviceNameContains;
+
     public DeviceSelectionConfig withDeviceNameContains(String deviceNameContains) {
         this.deviceNameContains = deviceNameContains;
         return this;
@@ -23,6 +24,7 @@ public class DeviceSelectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceNames")
     public String[] deviceNames;
+
     public DeviceSelectionConfig withDeviceNames(String[] deviceNames) {
         this.deviceNames = deviceNames;
         return this;
@@ -30,6 +32,7 @@ public class DeviceSelectionConfig {
     
     @JsonProperty("DeviceSubsetType")
     public DeviceSubsetTypeEnum deviceSubsetType;
+
     public DeviceSelectionConfig withDeviceSubsetType(DeviceSubsetTypeEnum deviceSubsetType) {
         this.deviceSubsetType = deviceSubsetType;
         return this;
@@ -38,9 +41,13 @@ public class DeviceSelectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public Long percentage;
+
     public DeviceSelectionConfig withPercentage(Long percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public DeviceSelectionConfig(@JsonProperty("DeviceSubsetType") DeviceSubsetTypeEnum deviceSubsetType) {
+        this.deviceSubsetType = deviceSubsetType;
+  }
 }

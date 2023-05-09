@@ -15,6 +15,7 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("F1Score")
     public Float f1Score;
+
     public EvaluationResult withF1Score(Float f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -23,9 +24,11 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Summary")
     public Summary summary;
+
     public EvaluationResult withSummary(Summary summary) {
         this.summary = summary;
         return this;
     }
     
+    public EvaluationResult(){}
 }

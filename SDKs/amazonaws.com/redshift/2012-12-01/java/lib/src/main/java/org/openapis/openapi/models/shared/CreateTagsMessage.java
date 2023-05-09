@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateTagsMessage - Contains the output from the &lt;code&gt;CreateTags&lt;/code&gt; action. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTagsMessage {
     
     public String resourceName;
+
     public CreateTagsMessage withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -19,9 +20,14 @@ public class CreateTagsMessage {
     
     
     public TagList[] tags;
+
     public CreateTagsMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTagsMessage(@JsonProperty("ResourceName") String resourceName, @JsonProperty("Tags") TagList[] tags) {
+        this.resourceName = resourceName;
+        this.tags = tags;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFil
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilter withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFil
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilterMatchTypeEnum matchType;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilter withMatchType(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilterMatchTypeEnum matchType) {
         this.matchType = matchType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFil
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilter(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccountGetGuestsCountResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreResponsesCountResponce apiCoreResponsesCountResponce;
+
     public AccountGetGuestsCountResponse withApiCoreResponsesCountResponce(org.openapis.openapi.models.shared.ApiCoreResponsesCountResponce apiCoreResponsesCountResponce) {
         this.apiCoreResponsesCountResponce = apiCoreResponsesCountResponce;
         return this;
@@ -16,6 +18,7 @@ public class AccountGetGuestsCountResponse {
     
     
     public byte[] body;
+
     public AccountGetGuestsCountResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class AccountGetGuestsCountResponse {
     
     
     public String contentType;
+
     public AccountGetGuestsCountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class AccountGetGuestsCountResponse {
     
     
     public Integer statusCode;
+
     public AccountGetGuestsCountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class AccountGetGuestsCountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccountGetGuestsCountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccountGetGuestsCountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

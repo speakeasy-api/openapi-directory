@@ -18,9 +18,11 @@ public class UniversalTwoFactor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public UniversalTwoFactor withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public UniversalTwoFactor(){}
 }

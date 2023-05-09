@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class Outpost {
     
     public String arn;
+
     public Outpost withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public Outpost(){}
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.VerifiedaccessChallengeCreateSecurity;
 import org.openapis.openapi.models.operations.VerifiedaccessChallengeCreateRequest;
 import org.openapis.openapi.models.operations.VerifiedaccessChallengeCreateResponse;
+import org.openapis.openapi.models.operations.VerifiedaccessChallengeCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -30,14 +29,14 @@ public class Application {
                 .build();
 
             VerifiedaccessChallengeCreateRequest req = new VerifiedaccessChallengeCreateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 requestBody = new java.util.HashMap<String, Object>() {{
                     put("distinctio", "quibusdam");
                     put("unde", "nulla");
                     put("corrupti", "illum");
                 }};
                 accessToken = "vel";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "deserunt";
                 fields = "suscipit";
                 key = "iure";
@@ -46,19 +45,21 @@ public class Application {
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
-            VerifiedaccessChallengeCreateResponse res = sdk.challenge.verifiedaccessChallengeCreate(req, new VerifiedaccessChallengeCreateSecurity() {{
+            VerifiedaccessChallengeCreateResponse res = sdk.challenge.verifiedaccessChallengeCreate(req, new VerifiedaccessChallengeCreateSecurity("tempora", "suscipit") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.challenge.isPresent()) {
+            if (res.challenge != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -66,10 +67,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### challenge
+### [challenge](docs/challenge/README.md)
 
-* `verifiedaccessChallengeCreate` - CreateChallenge API
-* `verifiedaccessChallengeVerify` - VerifyChallengeResponse API
+* [verifiedaccessChallengeCreate](docs/challenge/README.md#verifiedaccesschallengecreate) - CreateChallenge API
+* [verifiedaccessChallengeVerify](docs/challenge/README.md#verifiedaccesschallengeverify) - VerifyChallengeResponse API
 <!-- End SDK Available Operations -->
 
 ### Maturity

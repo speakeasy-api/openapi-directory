@@ -16,6 +16,7 @@ public class CommitSearchResultItemCommitAuthor {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public CommitSearchResultItemCommitAuthor withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -23,6 +24,7 @@ public class CommitSearchResultItemCommitAuthor {
     
     @JsonProperty("email")
     public String email;
+
     public CommitSearchResultItemCommitAuthor withEmail(String email) {
         this.email = email;
         return this;
@@ -30,9 +32,15 @@ public class CommitSearchResultItemCommitAuthor {
     
     @JsonProperty("name")
     public String name;
+
     public CommitSearchResultItemCommitAuthor withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CommitSearchResultItemCommitAuthor(@JsonProperty("date") OffsetDateTime date, @JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.date = date;
+        this.email = email;
+        this.name = name;
+  }
 }

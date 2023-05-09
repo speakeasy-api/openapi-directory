@@ -35,4 +35,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostEventsV3SendRespons
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/BehavioralEventHttpCompletionRequest.java
+docs/sdk/README.md
+docs/behavioraleventstracking/README.md
 USAGE.md

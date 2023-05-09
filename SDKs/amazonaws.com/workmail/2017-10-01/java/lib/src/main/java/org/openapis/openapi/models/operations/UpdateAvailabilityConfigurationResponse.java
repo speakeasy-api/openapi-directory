@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAvailabilityConfigurationResponse {
     
     public String contentType;
+
     public UpdateAvailabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAvailabilityConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateAvailabilityConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAvailabilityConfigurationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public UpdateAvailabilityConfigurationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAvailabilityConfigurationResponse {
      */
     
     public Object organizationStateException;
+
     public UpdateAvailabilityConfigurationResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAvailabilityConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAvailabilityConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAvailabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateAvailabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAvailabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAvailabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAvailabilityConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateAvailabilityConfigurationResponse;
+
     public UpdateAvailabilityConfigurationResponse withUpdateAvailabilityConfigurationResponse(java.util.Map<String, Object> updateAvailabilityConfigurationResponse) {
         this.updateAvailabilityConfigurationResponse = updateAvailabilityConfigurationResponse;
         return this;
     }
     
+    public UpdateAvailabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ItemConditionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public ItemConditionPolicy withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -26,6 +27,7 @@ public class ItemConditionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTreeId")
     public String categoryTreeId;
+
     public ItemConditionPolicy withCategoryTreeId(String categoryTreeId) {
         this.categoryTreeId = categoryTreeId;
         return this;
@@ -37,6 +39,7 @@ public class ItemConditionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemConditionRequired")
     public Boolean itemConditionRequired;
+
     public ItemConditionPolicy withItemConditionRequired(Boolean itemConditionRequired) {
         this.itemConditionRequired = itemConditionRequired;
         return this;
@@ -48,9 +51,11 @@ public class ItemConditionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemConditions")
     public ItemCondition[] itemConditions;
+
     public ItemConditionPolicy withItemConditions(ItemCondition[] itemConditions) {
         this.itemConditions = itemConditions;
         return this;
     }
     
+    public ItemConditionPolicy(){}
 }

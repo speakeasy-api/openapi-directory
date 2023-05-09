@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSnapshotResponse {
     
     public String contentType;
+
     public DeleteSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSnapshotResponse deleteSnapshotResponse;
+
     public DeleteSnapshotResponse withDeleteSnapshotResponse(org.openapis.openapi.models.shared.DeleteSnapshotResponse deleteSnapshotResponse) {
         this.deleteSnapshotResponse = deleteSnapshotResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DeleteSnapshotResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteSnapshotResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object invalidSnapshotStateFault;
+
     public DeleteSnapshotResponse withInvalidSnapshotStateFault(Object invalidSnapshotStateFault) {
         this.invalidSnapshotStateFault = invalidSnapshotStateFault;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DeleteSnapshotResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -69,6 +76,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object snapshotNotFoundFault;
+
     public DeleteSnapshotResponse withSnapshotNotFoundFault(Object snapshotNotFoundFault) {
         this.snapshotNotFoundFault = snapshotNotFoundFault;
         return this;
@@ -76,6 +84,7 @@ public class DeleteSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

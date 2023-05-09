@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class EnableReachabilityAnalyzerOrganizationSharingRequest {
     
     public Boolean dryRun;
+
     public EnableReachabilityAnalyzerOrganizationSharingRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public EnableReachabilityAnalyzerOrganizationSharingRequest(){}
 }

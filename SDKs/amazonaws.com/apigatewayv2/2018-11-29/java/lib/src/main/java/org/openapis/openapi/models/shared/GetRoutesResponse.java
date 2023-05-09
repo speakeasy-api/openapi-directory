@@ -15,6 +15,7 @@ public class GetRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public Route[] items;
+
     public GetRoutesResponse withItems(Route[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class GetRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetRoutesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetRoutesResponse(){}
 }

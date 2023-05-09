@@ -12,6 +12,7 @@ public class RegisterTargetWithMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public RegisterTargetWithMaintenanceWindowRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class RegisterTargetWithMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RegisterTargetWithMaintenanceWindowRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class RegisterTargetWithMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RegisterTargetWithMaintenanceWindowRequest withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class RegisterTargetWithMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerInformation")
     public String ownerInformation;
+
     public RegisterTargetWithMaintenanceWindowRequest withOwnerInformation(String ownerInformation) {
         this.ownerInformation = ownerInformation;
         return this;
@@ -43,6 +47,7 @@ public class RegisterTargetWithMaintenanceWindowRequest {
     
     @JsonProperty("ResourceType")
     public MaintenanceWindowResourceTypeEnum resourceType;
+
     public RegisterTargetWithMaintenanceWindowRequest withResourceType(MaintenanceWindowResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -50,6 +55,7 @@ public class RegisterTargetWithMaintenanceWindowRequest {
     
     @JsonProperty("Targets")
     public Target[] targets;
+
     public RegisterTargetWithMaintenanceWindowRequest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -57,9 +63,15 @@ public class RegisterTargetWithMaintenanceWindowRequest {
     
     @JsonProperty("WindowId")
     public String windowId;
+
     public RegisterTargetWithMaintenanceWindowRequest withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public RegisterTargetWithMaintenanceWindowRequest(@JsonProperty("ResourceType") MaintenanceWindowResourceTypeEnum resourceType, @JsonProperty("Targets") Target[] targets, @JsonProperty("WindowId") String windowId) {
+        this.resourceType = resourceType;
+        this.targets = targets;
+        this.windowId = windowId;
+  }
 }

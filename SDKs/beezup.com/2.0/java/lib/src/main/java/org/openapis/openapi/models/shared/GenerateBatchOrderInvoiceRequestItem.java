@@ -12,6 +12,7 @@ public class GenerateBatchOrderInvoiceRequestItem {
      */
     @JsonProperty("accountId")
     public Long accountId;
+
     public GenerateBatchOrderInvoiceRequestItem withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class GenerateBatchOrderInvoiceRequestItem {
      */
     @JsonProperty("beezUPOrderUUID")
     public String beezUPOrderUUID;
+
     public GenerateBatchOrderInvoiceRequestItem withBeezUPOrderUUID(String beezUPOrderUUID) {
         this.beezUPOrderUUID = beezUPOrderUUID;
         return this;
@@ -32,6 +34,7 @@ public class GenerateBatchOrderInvoiceRequestItem {
      */
     @JsonProperty("invoiceSequenceNumber")
     public Long invoiceSequenceNumber;
+
     public GenerateBatchOrderInvoiceRequestItem withInvoiceSequenceNumber(Long invoiceSequenceNumber) {
         this.invoiceSequenceNumber = invoiceSequenceNumber;
         return this;
@@ -42,9 +45,16 @@ public class GenerateBatchOrderInvoiceRequestItem {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public GenerateBatchOrderInvoiceRequestItem withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public GenerateBatchOrderInvoiceRequestItem(@JsonProperty("accountId") Long accountId, @JsonProperty("beezUPOrderUUID") String beezUPOrderUUID, @JsonProperty("invoiceSequenceNumber") Long invoiceSequenceNumber, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.beezUPOrderUUID = beezUPOrderUUID;
+        this.invoiceSequenceNumber = invoiceSequenceNumber;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

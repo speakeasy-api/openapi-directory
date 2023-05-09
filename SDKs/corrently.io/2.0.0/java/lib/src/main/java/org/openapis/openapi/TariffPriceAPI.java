@@ -61,11 +61,9 @@ public class TariffPriceAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TariffSlph0Response res = new org.openapis.openapi.models.operations.TariffSlph0Response() {{
+        org.openapis.openapi.models.operations.TariffSlph0Response res = new org.openapis.openapi.models.operations.TariffSlph0Response(contentType, httpRes.statusCode()) {{
             tariffh0s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class TariffPriceAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TariffcomponentsResponse res = new org.openapis.openapi.models.operations.TariffcomponentsResponse() {{
+        org.openapis.openapi.models.operations.TariffcomponentsResponse res = new org.openapis.openapi.models.operations.TariffcomponentsResponse(contentType, httpRes.statusCode()) {{
             componentsh0 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

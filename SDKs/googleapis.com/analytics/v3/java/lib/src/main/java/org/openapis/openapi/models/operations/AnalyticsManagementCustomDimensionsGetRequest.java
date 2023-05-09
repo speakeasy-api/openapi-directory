@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementCustomDimensionsGetRequest {
@@ -12,6 +13,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementCustomDimensionsGetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementCustomDimensionsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customDimensionId")
     public String customDimensionId;
+
     public AnalyticsManagementCustomDimensionsGetRequest withCustomDimensionId(String customDimensionId) {
         this.customDimensionId = customDimensionId;
         return this;
@@ -42,6 +46,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementCustomDimensionsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementCustomDimensionsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementCustomDimensionsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementCustomDimensionsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementCustomDimensionsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementCustomDimensionsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -102,9 +112,15 @@ public class AnalyticsManagementCustomDimensionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementCustomDimensionsGetRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementCustomDimensionsGetRequest(@JsonProperty("accountId") String accountId, @JsonProperty("customDimensionId") String customDimensionId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.customDimensionId = customDimensionId;
+        this.webPropertyId = webPropertyId;
+  }
 }

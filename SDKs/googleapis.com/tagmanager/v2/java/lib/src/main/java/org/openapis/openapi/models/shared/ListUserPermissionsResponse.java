@@ -18,6 +18,7 @@ public class ListUserPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListUserPermissionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListUserPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPermission")
     public UserPermission[] userPermission;
+
     public ListUserPermissionsResponse withUserPermission(UserPermission[] userPermission) {
         this.userPermission = userPermission;
         return this;
     }
     
+    public ListUserPermissionsResponse(){}
 }

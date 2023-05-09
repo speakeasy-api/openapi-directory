@@ -18,6 +18,7 @@ public class DoNotContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call")
     public Boolean call;
+
     public DoNotContactInput withCall(Boolean call) {
         this.call = call;
         return this;
@@ -29,6 +30,7 @@ public class DoNotContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundCall")
     public Boolean inboundCall;
+
     public DoNotContactInput withInboundCall(Boolean inboundCall) {
         this.inboundCall = inboundCall;
         return this;
@@ -40,6 +42,7 @@ public class DoNotContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundText")
     public Boolean inboundText;
+
     public DoNotContactInput withInboundText(Boolean inboundText) {
         this.inboundText = inboundText;
         return this;
@@ -51,6 +54,7 @@ public class DoNotContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public DoNotContactInput withNumber(String number) {
         this.number = number;
         return this;
@@ -62,6 +66,7 @@ public class DoNotContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public DoNotContactInput withSource(String source) {
         this.source = source;
         return this;
@@ -73,9 +78,11 @@ public class DoNotContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public Boolean text;
+
     public DoNotContactInput withText(Boolean text) {
         this.text = text;
         return this;
     }
     
+    public DoNotContactInput(){}
 }

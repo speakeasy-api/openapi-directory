@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCopyFpgaImageRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCopyFpgaImageActionEnum action;
+
     public GETCopyFpgaImageRequest withAction(GETCopyFpgaImageActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCopyFpgaImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETCopyFpgaImageRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,6 +32,7 @@ public class GETCopyFpgaImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
     public String description;
+
     public GETCopyFpgaImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +43,7 @@ public class GETCopyFpgaImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETCopyFpgaImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -49,6 +54,7 @@ public class GETCopyFpgaImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
     public String name;
+
     public GETCopyFpgaImageRequest withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +65,7 @@ public class GETCopyFpgaImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceFpgaImageId")
     public String sourceFpgaImageId;
+
     public GETCopyFpgaImageRequest withSourceFpgaImageId(String sourceFpgaImageId) {
         this.sourceFpgaImageId = sourceFpgaImageId;
         return this;
@@ -69,6 +76,7 @@ public class GETCopyFpgaImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceRegion")
     public String sourceRegion;
+
     public GETCopyFpgaImageRequest withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -76,6 +84,7 @@ public class GETCopyFpgaImageRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCopyFpgaImageVersionEnum version;
+
     public GETCopyFpgaImageRequest withVersion(GETCopyFpgaImageVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETCopyFpgaImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCopyFpgaImageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETCopyFpgaImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCopyFpgaImageRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETCopyFpgaImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCopyFpgaImageRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETCopyFpgaImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCopyFpgaImageRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETCopyFpgaImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCopyFpgaImageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETCopyFpgaImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCopyFpgaImageRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,16 @@ public class GETCopyFpgaImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCopyFpgaImageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCopyFpgaImageRequest(@JsonProperty("Action") GETCopyFpgaImageActionEnum action, @JsonProperty("SourceFpgaImageId") String sourceFpgaImageId, @JsonProperty("SourceRegion") String sourceRegion, @JsonProperty("Version") GETCopyFpgaImageVersionEnum version) {
+        this.action = action;
+        this.sourceFpgaImageId = sourceFpgaImageId;
+        this.sourceRegion = sourceRegion;
+        this.version = version;
+  }
 }

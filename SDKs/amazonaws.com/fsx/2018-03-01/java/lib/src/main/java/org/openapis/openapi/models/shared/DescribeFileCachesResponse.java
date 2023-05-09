@@ -15,6 +15,7 @@ public class DescribeFileCachesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCaches")
     public FileCache[] fileCaches;
+
     public DescribeFileCachesResponse withFileCaches(FileCache[] fileCaches) {
         this.fileCaches = fileCaches;
         return this;
@@ -26,9 +27,11 @@ public class DescribeFileCachesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFileCachesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFileCachesResponse(){}
 }

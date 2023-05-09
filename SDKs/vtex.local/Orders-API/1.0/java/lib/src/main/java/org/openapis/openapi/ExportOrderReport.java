@@ -63,11 +63,9 @@ public class ExportOrderReport {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StatusCompletedResponse res = new org.openapis.openapi.models.operations.StatusCompletedResponse() {{
+        org.openapis.openapi.models.operations.StatusCompletedResponse res = new org.openapis.openapi.models.operations.StatusCompletedResponse(contentType, httpRes.statusCode()) {{
             exportCompletedResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,11 +113,9 @@ public class ExportOrderReport {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StatusInProgressResponse res = new org.openapis.openapi.models.operations.StatusInProgressResponse() {{
+        org.openapis.openapi.models.operations.StatusInProgressResponse res = new org.openapis.openapi.models.operations.StatusInProgressResponse(contentType, httpRes.statusCode()) {{
             exportInProgressResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

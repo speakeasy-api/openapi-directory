@@ -18,9 +18,11 @@ public class UndeleteCertificateAuthorityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public UndeleteCertificateAuthorityRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public UndeleteCertificateAuthorityRequest(){}
 }

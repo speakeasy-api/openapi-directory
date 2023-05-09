@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEntityResponse {
@@ -12,6 +13,7 @@ public class CreateEntityResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateEntityResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEntityResponse {
      */
     
     public Object conflictException;
+
     public CreateEntityResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEntityResponse {
     
     
     public String contentType;
+
     public CreateEntityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEntityResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEntityResponse createEntityResponse;
+
     public CreateEntityResponse withCreateEntityResponse(org.openapis.openapi.models.shared.CreateEntityResponse createEntityResponse) {
         this.createEntityResponse = createEntityResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateEntityResponse {
      */
     
     public Object internalServerException;
+
     public CreateEntityResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateEntityResponse {
     
     
     public Integer statusCode;
+
     public CreateEntityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateEntityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEntityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateEntityResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateEntityResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateEntityResponse {
      */
     
     public Object throttlingException;
+
     public CreateEntityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateEntityResponse {
      */
     
     public Object validationException;
+
     public CreateEntityResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateEntityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

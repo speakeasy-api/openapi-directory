@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListConformancePackComplianceScoresResponse {
     
     public String contentType;
+
     public ListConformancePackComplianceScoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListConformancePackComplianceScoresResponse {
      */
     
     public Object invalidLimitException;
+
     public ListConformancePackComplianceScoresResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -29,6 +32,7 @@ public class ListConformancePackComplianceScoresResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListConformancePackComplianceScoresResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListConformancePackComplianceScoresResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListConformancePackComplianceScoresResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListConformancePackComplianceScoresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListConformancePackComplianceScoresResponse listConformancePackComplianceScoresResponse;
+
     public ListConformancePackComplianceScoresResponse withListConformancePackComplianceScoresResponse(org.openapis.openapi.models.shared.ListConformancePackComplianceScoresResponse listConformancePackComplianceScoresResponse) {
         this.listConformancePackComplianceScoresResponse = listConformancePackComplianceScoresResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListConformancePackComplianceScoresResponse {
     
     
     public Integer statusCode;
+
     public ListConformancePackComplianceScoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListConformancePackComplianceScoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListConformancePackComplianceScoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListConformancePackComplianceScoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

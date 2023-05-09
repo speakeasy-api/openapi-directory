@@ -15,6 +15,7 @@ public class GetGroupsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public GroupSummary[] groups;
+
     public GetGroupsResult withGroups(GroupSummary[] groups) {
         this.groups = groups;
         return this;
@@ -23,9 +24,11 @@ public class GetGroupsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetGroupsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetGroupsResult(){}
 }

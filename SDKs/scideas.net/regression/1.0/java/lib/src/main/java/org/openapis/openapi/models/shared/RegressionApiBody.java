@@ -15,6 +15,7 @@ public class RegressionApiBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convert_date_to")
     public String convertDateTo;
+
     public RegressionApiBody withConvertDateTo(String convertDateTo) {
         this.convertDateTo = convertDateTo;
         return this;
@@ -22,6 +23,7 @@ public class RegressionApiBody {
     
     @JsonProperty("data")
     public java.util.Map<String, Object>[] data;
+
     public RegressionApiBody withData(java.util.Map<String, Object>[] data) {
         this.data = data;
         return this;
@@ -30,6 +32,7 @@ public class RegressionApiBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignore_variables")
     public java.util.Map<String, Object>[] ignoreVariables;
+
     public RegressionApiBody withIgnoreVariables(java.util.Map<String, Object>[] ignoreVariables) {
         this.ignoreVariables = ignoreVariables;
         return this;
@@ -40,6 +43,7 @@ public class RegressionApiBody {
      */
     @JsonProperty("key")
     public String key;
+
     public RegressionApiBody withKey(String key) {
         this.key = key;
         return this;
@@ -50,9 +54,15 @@ public class RegressionApiBody {
      */
     @JsonProperty("outcome_variable")
     public String outcomeVariable;
+
     public RegressionApiBody withOutcomeVariable(String outcomeVariable) {
         this.outcomeVariable = outcomeVariable;
         return this;
     }
     
+    public RegressionApiBody(@JsonProperty("data") java.util.Map<String, Object>[] data, @JsonProperty("key") String key, @JsonProperty("outcome_variable") String outcomeVariable) {
+        this.data = data;
+        this.key = key;
+        this.outcomeVariable = outcomeVariable;
+  }
 }

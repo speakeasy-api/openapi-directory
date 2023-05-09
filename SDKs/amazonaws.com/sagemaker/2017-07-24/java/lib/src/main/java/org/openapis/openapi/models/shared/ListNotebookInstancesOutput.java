@@ -15,6 +15,7 @@ public class ListNotebookInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotebookInstancesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListNotebookInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstances")
     public NotebookInstanceSummary[] notebookInstances;
+
     public ListNotebookInstancesOutput withNotebookInstances(NotebookInstanceSummary[] notebookInstances) {
         this.notebookInstances = notebookInstances;
         return this;
     }
     
+    public ListNotebookInstancesOutput(){}
 }

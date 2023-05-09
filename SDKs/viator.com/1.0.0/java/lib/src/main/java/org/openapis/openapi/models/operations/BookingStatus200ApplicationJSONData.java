@@ -18,6 +18,7 @@ public class BookingStatus200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingDate")
     public String bookingDate;
+
     public BookingStatus200ApplicationJSONData withBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
         return this;
@@ -29,6 +30,7 @@ public class BookingStatus200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingStatus")
     public org.openapis.openapi.models.shared.BookingStatusItinerary bookingStatus;
+
     public BookingStatus200ApplicationJSONData withBookingStatus(org.openapis.openapi.models.shared.BookingStatusItinerary bookingStatus) {
         this.bookingStatus = bookingStatus;
         return this;
@@ -40,6 +42,7 @@ public class BookingStatus200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorRef")
     public String distributorRef;
+
     public BookingStatus200ApplicationJSONData withDistributorRef(String distributorRef) {
         this.distributorRef = distributorRef;
         return this;
@@ -51,6 +54,7 @@ public class BookingStatus200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemSummaries")
     public BookingStatus200ApplicationJSONDataItemSummaries[] itemSummaries;
+
     public BookingStatus200ApplicationJSONData withItemSummaries(BookingStatus200ApplicationJSONDataItemSummaries[] itemSummaries) {
         this.itemSummaries = itemSummaries;
         return this;
@@ -62,6 +66,7 @@ public class BookingStatus200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryId")
     public Long itineraryId;
+
     public BookingStatus200ApplicationJSONData withItineraryId(Long itineraryId) {
         this.itineraryId = itineraryId;
         return this;
@@ -73,9 +78,11 @@ public class BookingStatus200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingStatus200ApplicationJSONData withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingStatus200ApplicationJSONData(){}
 }

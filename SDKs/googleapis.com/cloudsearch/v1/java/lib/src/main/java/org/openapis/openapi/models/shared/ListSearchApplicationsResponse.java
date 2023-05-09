@@ -18,6 +18,7 @@ public class ListSearchApplicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSearchApplicationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -26,9 +27,11 @@ public class ListSearchApplicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchApplications")
     public SearchApplication[] searchApplications;
+
     public ListSearchApplicationsResponse withSearchApplications(SearchApplication[] searchApplications) {
         this.searchApplications = searchApplications;
         return this;
     }
     
+    public ListSearchApplicationsResponse(){}
 }

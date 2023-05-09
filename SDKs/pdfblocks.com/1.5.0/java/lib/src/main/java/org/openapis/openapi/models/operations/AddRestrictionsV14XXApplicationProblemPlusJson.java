@@ -15,6 +15,7 @@ public class AddRestrictionsV14XXApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object> errors;
+
     public AddRestrictionsV14XXApplicationProblemPlusJson withErrors(java.util.Map<String, Object> errors) {
         this.errors = errors;
         return this;
@@ -23,6 +24,7 @@ public class AddRestrictionsV14XXApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public AddRestrictionsV14XXApplicationProblemPlusJson withStatus(Long status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class AddRestrictionsV14XXApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AddRestrictionsV14XXApplicationProblemPlusJson withTitle(String title) {
         this.title = title;
         return this;
@@ -39,9 +42,11 @@ public class AddRestrictionsV14XXApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AddRestrictionsV14XXApplicationProblemPlusJson withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AddRestrictionsV14XXApplicationProblemPlusJson(){}
 }

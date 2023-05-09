@@ -22,6 +22,7 @@ public class StartImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public StartImportResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importId")
     public String importId;
+
     public StartImportResponse withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -38,6 +40,7 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importStatus")
     public ImportStatusEnum importStatus;
+
     public StartImportResponse withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -46,6 +49,7 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeStrategy")
     public MergeStrategyEnum mergeStrategy;
+
     public StartImportResponse withMergeStrategy(MergeStrategyEnum mergeStrategy) {
         this.mergeStrategy = mergeStrategy;
         return this;
@@ -54,9 +58,11 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSpecification")
     public ImportResourceSpecification resourceSpecification;
+
     public StartImportResponse withResourceSpecification(ImportResourceSpecification resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
         return this;
     }
     
+    public StartImportResponse(){}
 }

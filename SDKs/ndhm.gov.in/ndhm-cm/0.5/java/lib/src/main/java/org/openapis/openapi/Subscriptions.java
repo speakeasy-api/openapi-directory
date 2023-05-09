@@ -64,12 +64,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -123,12 +121,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -183,12 +179,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnNotifyResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnNotifyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -243,12 +237,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

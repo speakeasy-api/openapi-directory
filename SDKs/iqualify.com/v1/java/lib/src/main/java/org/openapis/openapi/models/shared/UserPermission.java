@@ -15,6 +15,7 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserPermission withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBuilder")
     public Boolean isBuilder;
+
     public UserPermission withIsBuilder(Boolean isBuilder) {
         this.isBuilder = isBuilder;
         return this;
@@ -31,6 +33,7 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReviewer")
     public Boolean isReviewer;
+
     public UserPermission withIsReviewer(Boolean isReviewer) {
         this.isReviewer = isReviewer;
         return this;
@@ -39,9 +42,11 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserPermission withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UserPermission(){}
 }

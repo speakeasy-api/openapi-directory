@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MaintenanceControllerCreateMaintenanceJobJsonRequest {
@@ -12,6 +13,7 @@ public class MaintenanceControllerCreateMaintenanceJobJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MaintenanceIssueModel maintenanceIssueModel;
+
     public MaintenanceControllerCreateMaintenanceJobJsonRequest withMaintenanceIssueModel(org.openapis.openapi.models.shared.MaintenanceIssueModel maintenanceIssueModel) {
         this.maintenanceIssueModel = maintenanceIssueModel;
         return this;
@@ -22,6 +24,7 @@ public class MaintenanceControllerCreateMaintenanceJobJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
     public String branchID;
+
     public MaintenanceControllerCreateMaintenanceJobJsonRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -32,9 +35,15 @@ public class MaintenanceControllerCreateMaintenanceJobJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public MaintenanceControllerCreateMaintenanceJobJsonRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public MaintenanceControllerCreateMaintenanceJobJsonRequest(@JsonProperty("MaintenanceIssueModel") org.openapis.openapi.models.shared.MaintenanceIssueModel maintenanceIssueModel, @JsonProperty("branchID") String branchID, @JsonProperty("shortName") String shortName) {
+        this.maintenanceIssueModel = maintenanceIssueModel;
+        this.branchID = branchID;
+        this.shortName = shortName;
+  }
 }

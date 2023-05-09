@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCompareCommitsRequest {
@@ -12,6 +13,7 @@ public class ReposCompareCommitsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basehead")
     public String basehead;
+
     public ReposCompareCommitsRequest withBasehead(String basehead) {
         this.basehead = basehead;
         return this;
@@ -22,6 +24,7 @@ public class ReposCompareCommitsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposCompareCommitsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ReposCompareCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposCompareCommitsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ReposCompareCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposCompareCommitsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,15 @@ public class ReposCompareCommitsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposCompareCommitsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposCompareCommitsRequest(@JsonProperty("basehead") String basehead, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.basehead = basehead;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

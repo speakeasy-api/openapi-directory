@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomesticStandingOrdersDomesticStandingOrderIdRequest {
@@ -12,6 +13,7 @@ public class GetDomesticStandingOrdersDomesticStandingOrderIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetDomesticStandingOrdersDomesticStandingOrderIdRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class GetDomesticStandingOrdersDomesticStandingOrderIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomesticStandingOrderId")
     public String domesticStandingOrderId;
+
     public GetDomesticStandingOrdersDomesticStandingOrderIdRequest withDomesticStandingOrderId(String domesticStandingOrderId) {
         this.domesticStandingOrderId = domesticStandingOrderId;
         return this;
@@ -32,6 +35,7 @@ public class GetDomesticStandingOrdersDomesticStandingOrderIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public GetDomesticStandingOrdersDomesticStandingOrderIdRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class GetDomesticStandingOrdersDomesticStandingOrderIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public GetDomesticStandingOrdersDomesticStandingOrderIdRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class GetDomesticStandingOrdersDomesticStandingOrderIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public GetDomesticStandingOrdersDomesticStandingOrderIdRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,9 +70,14 @@ public class GetDomesticStandingOrdersDomesticStandingOrderIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public GetDomesticStandingOrdersDomesticStandingOrderIdRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public GetDomesticStandingOrdersDomesticStandingOrderIdRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("DomesticStandingOrderId") String domesticStandingOrderId) {
+        this.authorization = authorization;
+        this.domesticStandingOrderId = domesticStandingOrderId;
+  }
 }

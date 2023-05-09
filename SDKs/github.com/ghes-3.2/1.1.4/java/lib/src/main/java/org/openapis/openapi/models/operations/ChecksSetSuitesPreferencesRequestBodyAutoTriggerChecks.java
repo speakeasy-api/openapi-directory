@@ -12,6 +12,7 @@ public class ChecksSetSuitesPreferencesRequestBodyAutoTriggerChecks {
      */
     @JsonProperty("app_id")
     public Long appId;
+
     public ChecksSetSuitesPreferencesRequestBodyAutoTriggerChecks withAppId(Long appId) {
         this.appId = appId;
         return this;
@@ -22,9 +23,14 @@ public class ChecksSetSuitesPreferencesRequestBodyAutoTriggerChecks {
      */
     @JsonProperty("setting")
     public Boolean setting;
+
     public ChecksSetSuitesPreferencesRequestBodyAutoTriggerChecks withSetting(Boolean setting) {
         this.setting = setting;
         return this;
     }
     
+    public ChecksSetSuitesPreferencesRequestBodyAutoTriggerChecks(@JsonProperty("app_id") Long appId, @JsonProperty("setting") Boolean setting) {
+        this.appId = appId;
+        this.setting = setting;
+  }
 }

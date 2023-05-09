@@ -15,6 +15,7 @@ public class StackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppsCount")
     public Long appsCount;
+
     public StackSummary withAppsCount(Long appsCount) {
         this.appsCount = appsCount;
         return this;
@@ -23,6 +24,7 @@ public class StackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public StackSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class StackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesCount")
     public InstancesCount instancesCount;
+
     public StackSummary withInstancesCount(InstancesCount instancesCount) {
         this.instancesCount = instancesCount;
         return this;
@@ -39,6 +42,7 @@ public class StackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayersCount")
     public Long layersCount;
+
     public StackSummary withLayersCount(Long layersCount) {
         this.layersCount = layersCount;
         return this;
@@ -47,6 +51,7 @@ public class StackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public StackSummary withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class StackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public StackSummary withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public StackSummary(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelStepsInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public CancelStepsInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -22,6 +23,7 @@ public class CancelStepsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepCancellationOption")
     public StepCancellationOptionEnum stepCancellationOption;
+
     public CancelStepsInput withStepCancellationOption(StepCancellationOptionEnum stepCancellationOption) {
         this.stepCancellationOption = stepCancellationOption;
         return this;
@@ -29,9 +31,14 @@ public class CancelStepsInput {
     
     @JsonProperty("StepIds")
     public String[] stepIds;
+
     public CancelStepsInput withStepIds(String[] stepIds) {
         this.stepIds = stepIds;
         return this;
     }
     
+    public CancelStepsInput(@JsonProperty("ClusterId") String clusterId, @JsonProperty("StepIds") String[] stepIds) {
+        this.clusterId = clusterId;
+        this.stepIds = stepIds;
+  }
 }

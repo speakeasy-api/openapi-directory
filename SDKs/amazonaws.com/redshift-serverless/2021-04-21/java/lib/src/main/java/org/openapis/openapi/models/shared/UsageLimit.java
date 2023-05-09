@@ -15,6 +15,7 @@ public class UsageLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public UsageLimit withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -23,6 +24,7 @@ public class UsageLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breachAction")
     public UsageLimitBreachActionEnum breachAction;
+
     public UsageLimit withBreachAction(UsageLimitBreachActionEnum breachAction) {
         this.breachAction = breachAction;
         return this;
@@ -31,6 +33,7 @@ public class UsageLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public UsageLimitPeriodEnum period;
+
     public UsageLimit withPeriod(UsageLimitPeriodEnum period) {
         this.period = period;
         return this;
@@ -39,6 +42,7 @@ public class UsageLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public UsageLimit withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -47,6 +51,7 @@ public class UsageLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageLimitArn")
     public String usageLimitArn;
+
     public UsageLimit withUsageLimitArn(String usageLimitArn) {
         this.usageLimitArn = usageLimitArn;
         return this;
@@ -55,6 +60,7 @@ public class UsageLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageLimitId")
     public String usageLimitId;
+
     public UsageLimit withUsageLimitId(String usageLimitId) {
         this.usageLimitId = usageLimitId;
         return this;
@@ -63,9 +69,11 @@ public class UsageLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageType")
     public UsageLimitUsageTypeEnum usageType;
+
     public UsageLimit withUsageType(UsageLimitUsageTypeEnum usageType) {
         this.usageType = usageType;
         return this;
     }
     
+    public UsageLimit(){}
 }

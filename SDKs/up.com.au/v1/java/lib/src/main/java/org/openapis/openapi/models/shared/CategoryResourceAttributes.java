@@ -13,9 +13,13 @@ public class CategoryResourceAttributes {
      */
     @JsonProperty("name")
     public String name;
+
     public CategoryResourceAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CategoryResourceAttributes(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

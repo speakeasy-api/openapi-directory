@@ -18,6 +18,7 @@ public class TenancyUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumer")
     public String consumer;
+
     public TenancyUnit withConsumer(String consumer) {
         this.consumer = consumer;
         return this;
@@ -29,6 +30,7 @@ public class TenancyUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public TenancyUnit withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class TenancyUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TenancyUnit withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class TenancyUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public TenancyUnit withService(String service) {
         this.service = service;
         return this;
@@ -62,9 +66,11 @@ public class TenancyUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantResources")
     public TenantResource[] tenantResources;
+
     public TenancyUnit withTenantResources(TenantResource[] tenantResources) {
         this.tenantResources = tenantResources;
         return this;
     }
     
+    public TenancyUnit(){}
 }

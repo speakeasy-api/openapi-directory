@@ -12,6 +12,7 @@ public class ResourceServiceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ResourceServiceViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -20,6 +21,7 @@ public class ResourceServiceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public Integer serviceId;
+
     public ResourceServiceViewModel withServiceId(Integer serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -28,9 +30,11 @@ public class ResourceServiceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ResourceServiceViewModel withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ResourceServiceViewModel(){}
 }

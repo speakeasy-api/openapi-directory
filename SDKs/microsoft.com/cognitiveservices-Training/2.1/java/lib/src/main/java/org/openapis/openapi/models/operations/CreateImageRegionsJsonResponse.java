@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImageRegionsJsonResponse {
     
     public byte[] body;
+
     public CreateImageRegionsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateImageRegionsJsonResponse {
     
     
     public String contentType;
+
     public CreateImageRegionsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateImageRegionsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ImageRegionCreateSummary imageRegionCreateSummary;
+
     public CreateImageRegionsJsonResponse withImageRegionCreateSummary(org.openapis.openapi.models.shared.ImageRegionCreateSummary imageRegionCreateSummary) {
         this.imageRegionCreateSummary = imageRegionCreateSummary;
         return this;
@@ -33,6 +37,7 @@ public class CreateImageRegionsJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateImageRegionsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class CreateImageRegionsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImageRegionsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateImageRegionsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetIpAddressTypeResponse {
@@ -12,6 +13,7 @@ public class SetIpAddressTypeResponse {
      */
     
     public Object accessDeniedException;
+
     public SetIpAddressTypeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class SetIpAddressTypeResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public SetIpAddressTypeResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class SetIpAddressTypeResponse {
     
     
     public String contentType;
+
     public SetIpAddressTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SetIpAddressTypeResponse {
      */
     
     public Object invalidInputException;
+
     public SetIpAddressTypeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class SetIpAddressTypeResponse {
      */
     
     public Object notFoundException;
+
     public SetIpAddressTypeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SetIpAddressTypeResponse {
      */
     
     public Object operationFailureException;
+
     public SetIpAddressTypeResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class SetIpAddressTypeResponse {
      */
     
     public Object serviceException;
+
     public SetIpAddressTypeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -79,6 +87,7 @@ public class SetIpAddressTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.SetIpAddressTypeResult setIpAddressTypeResult;
+
     public SetIpAddressTypeResponse withSetIpAddressTypeResult(org.openapis.openapi.models.shared.SetIpAddressTypeResult setIpAddressTypeResult) {
         this.setIpAddressTypeResult = setIpAddressTypeResult;
         return this;
@@ -86,6 +95,7 @@ public class SetIpAddressTypeResponse {
     
     
     public Integer statusCode;
+
     public SetIpAddressTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SetIpAddressTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetIpAddressTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class SetIpAddressTypeResponse {
      */
     
     public Object unauthenticatedException;
+
     public SetIpAddressTypeResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public SetIpAddressTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

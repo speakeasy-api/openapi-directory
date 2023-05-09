@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetElectioneeringAggregatesRequest {
@@ -13,6 +14,7 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetElectioneeringAggregatesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -21,10 +23,17 @@ public class GetElectioneeringAggregatesRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String[] candidateId;
+
     public GetElectioneeringAggregatesRequest withCandidateId(String[] candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -36,6 +45,7 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetElectioneeringAggregatesRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -49,6 +59,7 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetElectioneeringAggregatesRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -59,6 +70,7 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetElectioneeringAggregatesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -69,6 +81,7 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetElectioneeringAggregatesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -80,6 +93,7 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetElectioneeringAggregatesRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -90,6 +104,7 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetElectioneeringAggregatesRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -100,6 +115,7 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetElectioneeringAggregatesRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -110,9 +126,13 @@ public class GetElectioneeringAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetElectioneeringAggregatesRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetElectioneeringAggregatesRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

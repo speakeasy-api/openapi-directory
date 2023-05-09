@@ -15,6 +15,7 @@ public class CreateVirtualServiceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateVirtualServiceRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateVirtualServiceRequestBody {
      */
     @JsonProperty("spec")
     public CreateVirtualServiceRequestBodySpec spec;
+
     public CreateVirtualServiceRequestBody withSpec(CreateVirtualServiceRequestBodySpec spec) {
         this.spec = spec;
         return this;
@@ -36,6 +38,7 @@ public class CreateVirtualServiceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.TagRef[] tags;
+
     public CreateVirtualServiceRequestBody withTags(org.openapis.openapi.models.shared.TagRef[] tags) {
         this.tags = tags;
         return this;
@@ -46,9 +49,14 @@ public class CreateVirtualServiceRequestBody {
      */
     @JsonProperty("virtualServiceName")
     public String virtualServiceName;
+
     public CreateVirtualServiceRequestBody withVirtualServiceName(String virtualServiceName) {
         this.virtualServiceName = virtualServiceName;
         return this;
     }
     
+    public CreateVirtualServiceRequestBody(@JsonProperty("spec") CreateVirtualServiceRequestBodySpec spec, @JsonProperty("virtualServiceName") String virtualServiceName) {
+        this.spec = spec;
+        this.virtualServiceName = virtualServiceName;
+  }
 }

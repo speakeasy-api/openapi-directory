@@ -20,6 +20,7 @@ public class EventGadget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     public String display;
+
     public EventGadget withDisplay(String display) {
         this.display = display;
         return this;
@@ -31,6 +32,7 @@ public class EventGadget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public EventGadget withHeight(Integer height) {
         this.height = height;
         return this;
@@ -42,6 +44,7 @@ public class EventGadget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconLink")
     public String iconLink;
+
     public EventGadget withIconLink(String iconLink) {
         this.iconLink = iconLink;
         return this;
@@ -53,6 +56,7 @@ public class EventGadget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public EventGadget withLink(String link) {
         this.link = link;
         return this;
@@ -64,6 +68,7 @@ public class EventGadget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferences")
     public java.util.Map<String, String> preferences;
+
     public EventGadget withPreferences(java.util.Map<String, String> preferences) {
         this.preferences = preferences;
         return this;
@@ -75,6 +80,7 @@ public class EventGadget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EventGadget withTitle(String title) {
         this.title = title;
         return this;
@@ -86,6 +92,7 @@ public class EventGadget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public EventGadget withType(String type) {
         this.type = type;
         return this;
@@ -97,9 +104,11 @@ public class EventGadget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public EventGadget withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public EventGadget(){}
 }

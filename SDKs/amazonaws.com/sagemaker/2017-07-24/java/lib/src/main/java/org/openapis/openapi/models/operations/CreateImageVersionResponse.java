@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImageVersionResponse {
     
     public String contentType;
+
     public CreateImageVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateImageVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateImageVersionResponse createImageVersionResponse;
+
     public CreateImageVersionResponse withCreateImageVersionResponse(org.openapis.openapi.models.shared.CreateImageVersionResponse createImageVersionResponse) {
         this.createImageVersionResponse = createImageVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateImageVersionResponse {
      */
     
     public Object resourceInUse;
+
     public CreateImageVersionResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateImageVersionResponse {
      */
     
     public Object resourceNotFound;
+
     public CreateImageVersionResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class CreateImageVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateImageVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateImageVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImageVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateImageVersionResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateImageVersionResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateImageVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

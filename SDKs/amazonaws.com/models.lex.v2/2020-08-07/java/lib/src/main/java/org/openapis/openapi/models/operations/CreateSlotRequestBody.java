@@ -15,6 +15,7 @@ public class CreateSlotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSlotRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateSlotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipleValuesSetting")
     public CreateSlotRequestBodyMultipleValuesSetting multipleValuesSetting;
+
     public CreateSlotRequestBody withMultipleValuesSetting(CreateSlotRequestBodyMultipleValuesSetting multipleValuesSetting) {
         this.multipleValuesSetting = multipleValuesSetting;
         return this;
@@ -37,6 +39,7 @@ public class CreateSlotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscationSetting")
     public CreateSlotRequestBodyObfuscationSetting obfuscationSetting;
+
     public CreateSlotRequestBody withObfuscationSetting(CreateSlotRequestBodyObfuscationSetting obfuscationSetting) {
         this.obfuscationSetting = obfuscationSetting;
         return this;
@@ -47,6 +50,7 @@ public class CreateSlotRequestBody {
      */
     @JsonProperty("slotName")
     public String slotName;
+
     public CreateSlotRequestBody withSlotName(String slotName) {
         this.slotName = slotName;
         return this;
@@ -58,6 +62,7 @@ public class CreateSlotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypeId")
     public String slotTypeId;
+
     public CreateSlotRequestBody withSlotTypeId(String slotTypeId) {
         this.slotTypeId = slotTypeId;
         return this;
@@ -69,6 +74,7 @@ public class CreateSlotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSlotSetting")
     public CreateSlotRequestBodySubSlotSetting subSlotSetting;
+
     public CreateSlotRequestBody withSubSlotSetting(CreateSlotRequestBodySubSlotSetting subSlotSetting) {
         this.subSlotSetting = subSlotSetting;
         return this;
@@ -79,9 +85,14 @@ public class CreateSlotRequestBody {
      */
     @JsonProperty("valueElicitationSetting")
     public CreateSlotRequestBodyValueElicitationSetting valueElicitationSetting;
+
     public CreateSlotRequestBody withValueElicitationSetting(CreateSlotRequestBodyValueElicitationSetting valueElicitationSetting) {
         this.valueElicitationSetting = valueElicitationSetting;
         return this;
     }
     
+    public CreateSlotRequestBody(@JsonProperty("slotName") String slotName, @JsonProperty("valueElicitationSetting") CreateSlotRequestBodyValueElicitationSetting valueElicitationSetting) {
+        this.slotName = slotName;
+        this.valueElicitationSetting = valueElicitationSetting;
+  }
 }

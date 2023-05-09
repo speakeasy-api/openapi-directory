@@ -12,6 +12,7 @@ public class HolidaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=federal")
     public HolidaysFederalEnum federal;
+
     public HolidaysRequest withFederal(HolidaysFederalEnum federal) {
         this.federal = federal;
         return this;
@@ -22,6 +23,7 @@ public class HolidaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
     public HolidaysOptionalEnum optional;
+
     public HolidaysRequest withOptional(HolidaysOptionalEnum optional) {
         this.optional = optional;
         return this;
@@ -32,9 +34,11 @@ public class HolidaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public HolidaysRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public HolidaysRequest(){}
 }

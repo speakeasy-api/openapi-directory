@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageSuggestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public GoogleCloudDialogflowV2beta1IntentMessageSuggestion[] suggestions;
+
     public GoogleCloudDialogflowV2beta1IntentMessageSuggestions withSuggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestion[] suggestions) {
         this.suggestions = suggestions;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageSuggestions(){}
 }

@@ -15,6 +15,7 @@ public class UserUpdateContent {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("birthday")
     public LocalDate birthday;
+
     public UserUpdateContent withBirthday(LocalDate birthday) {
         this.birthday = birthday;
         return this;
@@ -23,6 +24,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public UserUpdateContent withCity(String city) {
         this.city = city;
         return this;
@@ -31,6 +33,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public UserUpdateContent withCountry(String country) {
         this.country = country;
         return this;
@@ -42,6 +45,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserUpdateContent withEmail(String email) {
         this.email = email;
         return this;
@@ -53,6 +57,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public UserUpdateContent withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -64,6 +69,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public UserUpdateContent withId(Long id) {
         this.id = id;
         return this;
@@ -75,6 +81,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public UserUpdateContent withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -86,6 +93,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public UserUpdateContentNotifications notifications;
+
     public UserUpdateContent withNotifications(UserUpdateContentNotifications notifications) {
         this.notifications = notifications;
         return this;
@@ -97,6 +105,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notify")
     public Boolean notify;
+
     public UserUpdateContent withNotify(Boolean notify) {
         this.notify = notify;
         return this;
@@ -108,6 +117,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paypal_email")
     public String paypalEmail;
+
     public UserUpdateContent withPaypalEmail(String paypalEmail) {
         this.paypalEmail = paypalEmail;
         return this;
@@ -116,6 +126,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public UserUpdateContent withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -127,6 +138,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("require_1099")
     public Boolean require1099;
+
     public UserUpdateContent withRequire1099(Boolean require1099) {
         this.require1099 = require1099;
         return this;
@@ -135,6 +147,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public UserUpdateContent withState(String state) {
         this.state = state;
         return this;
@@ -143,6 +156,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public UserUpdateContent withStreet(String street) {
         this.street = street;
         return this;
@@ -154,6 +168,7 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_groups")
     public Long[] userGroups;
+
     public UserUpdateContent withUserGroups(Long[] userGroups) {
         this.userGroups = userGroups;
         return this;
@@ -162,9 +177,11 @@ public class UserUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public UserUpdateContent withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public UserUpdateContent(){}
 }

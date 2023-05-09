@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIndividualsPartyIdAddressesResponse {
     
     public String contentType;
+
     public GetIndividualsPartyIdAddressesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetIndividualsPartyIdAddressesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetIndividualsPartyIdAddressesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetIndividualsPartyIdAddressesResponse {
     
     
     public Integer statusCode;
+
     public GetIndividualsPartyIdAddressesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetIndividualsPartyIdAddressesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIndividualsPartyIdAddressesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetIndividualsPartyIdAddressesResponse {
      */
     
     public org.openapis.openapi.models.shared.Address[] addresses;
+
     public GetIndividualsPartyIdAddressesResponse withAddresses(org.openapis.openapi.models.shared.Address[] addresses) {
         this.addresses = addresses;
         return this;
@@ -50,6 +56,7 @@ public class GetIndividualsPartyIdAddressesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetIndividualsPartyIdAddressesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetIndividualsPartyIdAddressesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetIndividualsPartyIdAddressesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetIndividualsPartyIdAddressesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

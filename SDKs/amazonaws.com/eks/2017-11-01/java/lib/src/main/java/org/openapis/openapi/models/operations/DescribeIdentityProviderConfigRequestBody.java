@@ -12,9 +12,13 @@ public class DescribeIdentityProviderConfigRequestBody {
      */
     @JsonProperty("identityProviderConfig")
     public DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig identityProviderConfig;
+
     public DescribeIdentityProviderConfigRequestBody withIdentityProviderConfig(DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig identityProviderConfig) {
         this.identityProviderConfig = identityProviderConfig;
         return this;
     }
     
+    public DescribeIdentityProviderConfigRequestBody(@JsonProperty("identityProviderConfig") DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig identityProviderConfig) {
+        this.identityProviderConfig = identityProviderConfig;
+  }
 }

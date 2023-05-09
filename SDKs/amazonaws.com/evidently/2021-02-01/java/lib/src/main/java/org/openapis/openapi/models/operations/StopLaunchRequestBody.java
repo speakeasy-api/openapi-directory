@@ -15,6 +15,7 @@ public class StopLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredState")
     public StopLaunchRequestBodyDesiredStateEnum desiredState;
+
     public StopLaunchRequestBody withDesiredState(StopLaunchRequestBodyDesiredStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -26,9 +27,11 @@ public class StopLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public StopLaunchRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public StopLaunchRequestBody(){}
 }

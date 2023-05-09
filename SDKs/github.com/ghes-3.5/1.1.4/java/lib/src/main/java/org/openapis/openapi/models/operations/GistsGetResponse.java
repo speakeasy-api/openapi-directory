@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GistsGetResponse {
     
     public String contentType;
+
     public GistsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GistsGetResponse {
     
     
     public Integer statusCode;
+
     public GistsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GistsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GistsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GistsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GistsGetResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class GistsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GistSimple gistSimple;
+
     public GistsGetResponse withGistSimple(org.openapis.openapi.models.shared.GistSimple gistSimple) {
         this.gistSimple = gistSimple;
         return this;
@@ -53,9 +59,14 @@ public class GistsGetResponse {
      */
     
     public GistsGet403ApplicationJSON gistsGet403ApplicationJSONObject;
+
     public GistsGetResponse withGistsGet403ApplicationJSONObject(GistsGet403ApplicationJSON gistsGet403ApplicationJSONObject) {
         this.gistsGet403ApplicationJSONObject = gistsGet403ApplicationJSONObject;
         return this;
     }
     
+    public GistsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

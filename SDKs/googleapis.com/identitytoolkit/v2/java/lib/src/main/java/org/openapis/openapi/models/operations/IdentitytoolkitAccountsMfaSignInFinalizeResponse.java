@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitAccountsMfaSignInFinalizeResponse {
     
     public String contentType;
+
     public IdentitytoolkitAccountsMfaSignInFinalizeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitAccountsMfaSignInFinalizeResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse googleCloudIdentitytoolkitV2FinalizeMfaSignInResponse;
+
     public IdentitytoolkitAccountsMfaSignInFinalizeResponse withGoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse googleCloudIdentitytoolkitV2FinalizeMfaSignInResponse) {
         this.googleCloudIdentitytoolkitV2FinalizeMfaSignInResponse = googleCloudIdentitytoolkitV2FinalizeMfaSignInResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitAccountsMfaSignInFinalizeResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitAccountsMfaSignInFinalizeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitAccountsMfaSignInFinalizeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitAccountsMfaSignInFinalizeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitAccountsMfaSignInFinalizeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

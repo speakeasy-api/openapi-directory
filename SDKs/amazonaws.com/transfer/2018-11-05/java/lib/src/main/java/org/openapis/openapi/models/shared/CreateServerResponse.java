@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateServerResponse {
     @JsonProperty("ServerId")
     public String serverId;
+
     public CreateServerResponse withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public CreateServerResponse(@JsonProperty("ServerId") String serverId) {
+        this.serverId = serverId;
+  }
 }

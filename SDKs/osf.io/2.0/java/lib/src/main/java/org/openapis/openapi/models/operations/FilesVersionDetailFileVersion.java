@@ -12,6 +12,7 @@ public class FilesVersionDetailFileVersion {
      */
     
     public FilesVersionDetailFileVersionAttributes attributes;
+
     public FilesVersionDetailFileVersion withAttributes(FilesVersionDetailFileVersionAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class FilesVersionDetailFileVersion {
      */
     
     public String id;
+
     public FilesVersionDetailFileVersion withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class FilesVersionDetailFileVersion {
      */
     
     public FilesVersionDetailFileVersionLinks links;
+
     public FilesVersionDetailFileVersion withLinks(FilesVersionDetailFileVersionLinks links) {
         this.links = links;
         return this;
@@ -42,9 +45,11 @@ public class FilesVersionDetailFileVersion {
      */
     
     public String type;
+
     public FilesVersionDetailFileVersion withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FilesVersionDetailFileVersion(){}
 }

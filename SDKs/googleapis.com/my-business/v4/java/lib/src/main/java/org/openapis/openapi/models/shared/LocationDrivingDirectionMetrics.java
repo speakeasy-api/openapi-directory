@@ -18,6 +18,7 @@ public class LocationDrivingDirectionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationName")
     public String locationName;
+
     public LocationDrivingDirectionMetrics withLocationName(String locationName) {
         this.locationName = locationName;
         return this;
@@ -29,6 +30,7 @@ public class LocationDrivingDirectionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public LocationDrivingDirectionMetrics withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -40,9 +42,11 @@ public class LocationDrivingDirectionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topDirectionSources")
     public TopDirectionSources[] topDirectionSources;
+
     public LocationDrivingDirectionMetrics withTopDirectionSources(TopDirectionSources[] topDirectionSources) {
         this.topDirectionSources = topDirectionSources;
         return this;
     }
     
+    public LocationDrivingDirectionMetrics(){}
 }

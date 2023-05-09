@@ -17,6 +17,7 @@ public class UpdateAccountResponse {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public UpdateAccountResponse withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -25,6 +26,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSchedule")
     public PayoutScheduleResponse payoutSchedule;
+
     public UpdateAccountResponse withPayoutSchedule(PayoutScheduleResponse payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
@@ -36,6 +38,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public UpdateAccountResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -47,6 +50,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public UpdateAccountResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -60,9 +64,13 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public UpdateAccountResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public UpdateAccountResponse(@JsonProperty("accountCode") String accountCode) {
+        this.accountCode = accountCode;
+  }
 }

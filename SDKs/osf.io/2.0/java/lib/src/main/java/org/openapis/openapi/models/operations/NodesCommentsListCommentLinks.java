@@ -15,9 +15,11 @@ public class NodesCommentsListCommentLinks {
      */
     
     public String self;
+
     public NodesCommentsListCommentLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesCommentsListCommentLinks(){}
 }

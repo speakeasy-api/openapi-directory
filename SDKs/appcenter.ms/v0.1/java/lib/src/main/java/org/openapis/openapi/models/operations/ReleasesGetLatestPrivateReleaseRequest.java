@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestPrivateReleaseRequest {
@@ -12,6 +13,7 @@ public class ReleasesGetLatestPrivateReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
     public String appSecret;
+
     public ReleasesGetLatestPrivateReleaseRequest withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -22,9 +24,13 @@ public class ReleasesGetLatestPrivateReleaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=udid")
     public String udid;
+
     public ReleasesGetLatestPrivateReleaseRequest withUdid(String udid) {
         this.udid = udid;
         return this;
     }
     
+    public ReleasesGetLatestPrivateReleaseRequest(@JsonProperty("app_secret") String appSecret) {
+        this.appSecret = appSecret;
+  }
 }

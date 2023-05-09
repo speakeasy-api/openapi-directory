@@ -18,6 +18,7 @@ public class RuntimeActionSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public RuntimeActionSchema withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class RuntimeActionSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputParameters")
     public InputParameter[] inputParameters;
+
     public RuntimeActionSchema withInputParameters(InputParameter[] inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -40,9 +42,11 @@ public class RuntimeActionSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultMetadata")
     public ResultMetadata[] resultMetadata;
+
     public RuntimeActionSchema withResultMetadata(ResultMetadata[] resultMetadata) {
         this.resultMetadata = resultMetadata;
         return this;
     }
     
+    public RuntimeActionSchema(){}
 }

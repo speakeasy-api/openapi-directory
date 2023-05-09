@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeHttpsHealthChecksGetRequest {
@@ -12,6 +13,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeHttpsHealthChecksGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeHttpsHealthChecksGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeHttpsHealthChecksGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeHttpsHealthChecksGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeHttpsHealthChecksGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=httpsHealthCheck")
     public String httpsHealthCheck;
+
     public ComputeHttpsHealthChecksGetRequest withHttpsHealthCheck(String httpsHealthCheck) {
         this.httpsHealthCheck = httpsHealthCheck;
         return this;
@@ -72,6 +79,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeHttpsHealthChecksGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeHttpsHealthChecksGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeHttpsHealthChecksGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeHttpsHealthChecksGetRequest withProject(String project) {
         this.project = project;
         return this;
@@ -112,6 +123,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeHttpsHealthChecksGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeHttpsHealthChecksGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeHttpsHealthChecksGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,9 +156,14 @@ public class ComputeHttpsHealthChecksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeHttpsHealthChecksGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeHttpsHealthChecksGetRequest(@JsonProperty("httpsHealthCheck") String httpsHealthCheck, @JsonProperty("project") String project) {
+        this.httpsHealthCheck = httpsHealthCheck;
+        this.project = project;
+  }
 }

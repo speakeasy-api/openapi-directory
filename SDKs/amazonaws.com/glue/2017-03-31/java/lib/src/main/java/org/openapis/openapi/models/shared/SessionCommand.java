@@ -15,6 +15,7 @@ public class SessionCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SessionCommand withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class SessionCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PythonVersion")
     public String pythonVersion;
+
     public SessionCommand withPythonVersion(String pythonVersion) {
         this.pythonVersion = pythonVersion;
         return this;
     }
     
+    public SessionCommand(){}
 }

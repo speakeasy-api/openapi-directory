@@ -15,6 +15,7 @@ public class CreateAccessPolicyRequestBodyAccessPolicyIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public org.openapis.openapi.models.shared.GroupIdentity group;
+
     public CreateAccessPolicyRequestBodyAccessPolicyIdentity withGroup(org.openapis.openapi.models.shared.GroupIdentity group) {
         this.group = group;
         return this;
@@ -23,6 +24,7 @@ public class CreateAccessPolicyRequestBodyAccessPolicyIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRole")
     public org.openapis.openapi.models.shared.IAMRoleIdentity iamRole;
+
     public CreateAccessPolicyRequestBodyAccessPolicyIdentity withIamRole(org.openapis.openapi.models.shared.IAMRoleIdentity iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -31,6 +33,7 @@ public class CreateAccessPolicyRequestBodyAccessPolicyIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamUser")
     public org.openapis.openapi.models.shared.IAMUserIdentity iamUser;
+
     public CreateAccessPolicyRequestBodyAccessPolicyIdentity withIamUser(org.openapis.openapi.models.shared.IAMUserIdentity iamUser) {
         this.iamUser = iamUser;
         return this;
@@ -39,9 +42,11 @@ public class CreateAccessPolicyRequestBodyAccessPolicyIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public org.openapis.openapi.models.shared.UserIdentity user;
+
     public CreateAccessPolicyRequestBodyAccessPolicyIdentity withUser(org.openapis.openapi.models.shared.UserIdentity user) {
         this.user = user;
         return this;
     }
     
+    public CreateAccessPolicyRequestBodyAccessPolicyIdentity(){}
 }

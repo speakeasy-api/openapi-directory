@@ -12,6 +12,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeMaintenanceWindowsForTargetRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMaintenanceWindowsForTargetRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @JsonProperty("ResourceType")
     public MaintenanceWindowResourceTypeEnum resourceType;
+
     public DescribeMaintenanceWindowsForTargetRequest withResourceType(MaintenanceWindowResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -34,9 +37,14 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @JsonProperty("Targets")
     public Target[] targets;
+
     public DescribeMaintenanceWindowsForTargetRequest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public DescribeMaintenanceWindowsForTargetRequest(@JsonProperty("ResourceType") MaintenanceWindowResourceTypeEnum resourceType, @JsonProperty("Targets") Target[] targets) {
+        this.resourceType = resourceType;
+        this.targets = targets;
+  }
 }

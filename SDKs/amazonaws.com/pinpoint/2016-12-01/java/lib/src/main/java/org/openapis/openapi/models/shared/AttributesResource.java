@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttributesResource {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public AttributesResource withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -21,6 +22,7 @@ public class AttributesResource {
     
     @JsonProperty("AttributeType")
     public String attributeType;
+
     public AttributesResource withAttributeType(String attributeType) {
         this.attributeType = attributeType;
         return this;
@@ -29,9 +31,14 @@ public class AttributesResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public String[] attributes;
+
     public AttributesResource withAttributes(String[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public AttributesResource(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("AttributeType") String attributeType) {
+        this.applicationId = applicationId;
+        this.attributeType = attributeType;
+  }
 }

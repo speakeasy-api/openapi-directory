@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopApplicationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public StopApplicationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
     }
     
+    public StopApplicationRequest(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

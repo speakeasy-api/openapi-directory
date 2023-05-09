@@ -58,12 +58,10 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsV3EventsGetPageResponse res = new org.openapis.openapi.models.operations.GetEventsV3EventsGetPageResponse() {{
+        org.openapis.openapi.models.operations.GetEventsV3EventsGetPageResponse res = new org.openapis.openapi.models.operations.GetEventsV3EventsGetPageResponse(contentType, httpRes.statusCode()) {{
             collectionResponseExternalUnifiedEvent = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

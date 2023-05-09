@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse {
     
     public String contentType;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRespons
      */
     
     public java.util.Map<String, Object> googleProtobufEmpty;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse withGoogleProtobufEmpty(java.util.Map<String, Object> googleProtobufEmpty) {
         this.googleProtobufEmpty = googleProtobufEmpty;
         return this;
@@ -26,6 +29,7 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRespons
     
     
     public Integer statusCode;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

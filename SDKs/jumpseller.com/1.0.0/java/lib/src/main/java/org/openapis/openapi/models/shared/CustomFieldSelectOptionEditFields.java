@@ -15,9 +15,11 @@ public class CustomFieldSelectOptionEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomFieldSelectOptionEditFields withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomFieldSelectOptionEditFields(){}
 }

@@ -12,6 +12,7 @@ public class PostServersIdActionsAddToPlacementGroupActionResponseActionResource
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersIdActionsAddToPlacementGroupActionResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class PostServersIdActionsAddToPlacementGroupActionResponseActionResource
      */
     @JsonProperty("type")
     public String type;
+
     public PostServersIdActionsAddToPlacementGroupActionResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostServersIdActionsAddToPlacementGroupActionResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

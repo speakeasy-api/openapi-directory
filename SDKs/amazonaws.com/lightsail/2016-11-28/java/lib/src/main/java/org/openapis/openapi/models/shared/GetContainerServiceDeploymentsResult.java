@@ -15,9 +15,11 @@ public class GetContainerServiceDeploymentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployments")
     public ContainerServiceDeployment[] deployments;
+
     public GetContainerServiceDeploymentsResult withDeployments(ContainerServiceDeployment[] deployments) {
         this.deployments = deployments;
         return this;
     }
     
+    public GetContainerServiceDeploymentsResult(){}
 }

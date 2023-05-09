@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionInstanceGroupManagersListErrorsResponse {
     
     public String contentType;
+
     public ComputeRegionInstanceGroupManagersListErrorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionInstanceGroupManagersListErrorsResponse {
      */
     
     public org.openapis.openapi.models.shared.RegionInstanceGroupManagersListErrorsResponse regionInstanceGroupManagersListErrorsResponse;
+
     public ComputeRegionInstanceGroupManagersListErrorsResponse withRegionInstanceGroupManagersListErrorsResponse(org.openapis.openapi.models.shared.RegionInstanceGroupManagersListErrorsResponse regionInstanceGroupManagersListErrorsResponse) {
         this.regionInstanceGroupManagersListErrorsResponse = regionInstanceGroupManagersListErrorsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionInstanceGroupManagersListErrorsResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionInstanceGroupManagersListErrorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionInstanceGroupManagersListErrorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionInstanceGroupManagersListErrorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionInstanceGroupManagersListErrorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

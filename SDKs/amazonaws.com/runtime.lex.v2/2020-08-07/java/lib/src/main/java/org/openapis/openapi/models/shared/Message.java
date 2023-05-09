@@ -15,6 +15,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Message withContent(String content) {
         this.content = content;
         return this;
@@ -22,6 +23,7 @@ public class Message {
     
     @JsonProperty("contentType")
     public MessageContentTypeEnum contentType;
+
     public Message withContentType(MessageContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -33,9 +35,13 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageResponseCard")
     public ImageResponseCard imageResponseCard;
+
     public Message withImageResponseCard(ImageResponseCard imageResponseCard) {
         this.imageResponseCard = imageResponseCard;
         return this;
     }
     
+    public Message(@JsonProperty("contentType") MessageContentTypeEnum contentType) {
+        this.contentType = contentType;
+  }
 }

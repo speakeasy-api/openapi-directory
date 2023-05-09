@@ -523,4 +523,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/AccountTreeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserDeletionRequestId.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserDeletionRequestInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserDeletionRequest.java
+docs/sdk/README.md
+docs/data/README.md
+docs/management/README.md
+docs/metadata/README.md
+docs/provisioning/README.md
+docs/userdeletion/README.md
 USAGE.md

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LHDeepLinksFFPSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String auth;
+
     public LHDeepLinksFFPSecurity withAuth(String auth) {
         this.auth = auth;
         return this;
     }
     
+    public LHDeepLinksFFPSecurity(@JsonProperty("auth") String auth) {
+        this.auth = auth;
+  }
 }

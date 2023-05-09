@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopySnapshotResultTags {
     
     public String key;
+
     public CopySnapshotResultTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CopySnapshotResultTags {
     
     
     public String value;
+
     public CopySnapshotResultTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CopySnapshotResultTags(){}
 }

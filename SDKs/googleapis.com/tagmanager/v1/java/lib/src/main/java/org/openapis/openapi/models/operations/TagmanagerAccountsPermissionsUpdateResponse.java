@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagmanagerAccountsPermissionsUpdateResponse {
     
     public String contentType;
+
     public TagmanagerAccountsPermissionsUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TagmanagerAccountsPermissionsUpdateResponse {
     
     
     public Integer statusCode;
+
     public TagmanagerAccountsPermissionsUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TagmanagerAccountsPermissionsUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagmanagerAccountsPermissionsUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TagmanagerAccountsPermissionsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.UserAccess userAccess;
+
     public TagmanagerAccountsPermissionsUpdateResponse withUserAccess(org.openapis.openapi.models.shared.UserAccess userAccess) {
         this.userAccess = userAccess;
         return this;
     }
     
+    public TagmanagerAccountsPermissionsUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

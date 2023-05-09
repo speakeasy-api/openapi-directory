@@ -21,6 +21,7 @@ public class GetTimeSeriesServiceStatisticsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetTimeSeriesServiceStatisticsRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class GetTimeSeriesServiceStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntitySelectorExpression")
     public String entitySelectorExpression;
+
     public GetTimeSeriesServiceStatisticsRequestBody withEntitySelectorExpression(String entitySelectorExpression) {
         this.entitySelectorExpression = entitySelectorExpression;
         return this;
@@ -43,6 +45,7 @@ public class GetTimeSeriesServiceStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastStatistics")
     public Boolean forecastStatistics;
+
     public GetTimeSeriesServiceStatisticsRequestBody withForecastStatistics(Boolean forecastStatistics) {
         this.forecastStatistics = forecastStatistics;
         return this;
@@ -54,6 +57,7 @@ public class GetTimeSeriesServiceStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupARN")
     public String groupARN;
+
     public GetTimeSeriesServiceStatisticsRequestBody withGroupARN(String groupARN) {
         this.groupARN = groupARN;
         return this;
@@ -65,6 +69,7 @@ public class GetTimeSeriesServiceStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public GetTimeSeriesServiceStatisticsRequestBody withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -76,6 +81,7 @@ public class GetTimeSeriesServiceStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTimeSeriesServiceStatisticsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -87,6 +93,7 @@ public class GetTimeSeriesServiceStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Period")
     public Long period;
+
     public GetTimeSeriesServiceStatisticsRequestBody withPeriod(Long period) {
         this.period = period;
         return this;
@@ -99,9 +106,14 @@ public class GetTimeSeriesServiceStatisticsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetTimeSeriesServiceStatisticsRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetTimeSeriesServiceStatisticsRequestBody(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturesWithinResourceRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=begin")
     public String begin;
+
     public GetFeaturesWithinResourceRequest withBegin(String begin) {
         this.begin = begin;
         return this;
@@ -16,6 +18,7 @@ public class GetFeaturesWithinResourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build")
     public String build;
+
     public GetFeaturesWithinResourceRequest withBuild(String build) {
         this.build = build;
         return this;
@@ -23,6 +26,7 @@ public class GetFeaturesWithinResourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=end")
     public String end;
+
     public GetFeaturesWithinResourceRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -30,9 +34,16 @@ public class GetFeaturesWithinResourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reference")
     public String reference;
+
     public GetFeaturesWithinResourceRequest withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public GetFeaturesWithinResourceRequest(@JsonProperty("begin") String begin, @JsonProperty("build") String build, @JsonProperty("end") String end, @JsonProperty("reference") String reference) {
+        this.begin = begin;
+        this.build = build;
+        this.end = end;
+        this.reference = reference;
+  }
 }

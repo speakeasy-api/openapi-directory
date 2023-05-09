@@ -20,6 +20,7 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeQueriesWithoutUserInformation")
     public Boolean includeQueriesWithoutUserInformation;
+
     public DescribeQuerySuggestionsConfigResponse withIncludeQueriesWithoutUserInformation(Boolean includeQueriesWithoutUserInformation) {
         this.includeQueriesWithoutUserInformation = includeQueriesWithoutUserInformation;
         return this;
@@ -30,6 +31,7 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastClearTime")
     public OffsetDateTime lastClearTime;
+
     public DescribeQuerySuggestionsConfigResponse withLastClearTime(OffsetDateTime lastClearTime) {
         this.lastClearTime = lastClearTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSuggestionsBuildTime")
     public OffsetDateTime lastSuggestionsBuildTime;
+
     public DescribeQuerySuggestionsConfigResponse withLastSuggestionsBuildTime(OffsetDateTime lastSuggestionsBuildTime) {
         this.lastSuggestionsBuildTime = lastSuggestionsBuildTime;
         return this;
@@ -48,6 +51,7 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumNumberOfQueryingUsers")
     public Long minimumNumberOfQueryingUsers;
+
     public DescribeQuerySuggestionsConfigResponse withMinimumNumberOfQueryingUsers(Long minimumNumberOfQueryingUsers) {
         this.minimumNumberOfQueryingUsers = minimumNumberOfQueryingUsers;
         return this;
@@ -56,6 +60,7 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumQueryCount")
     public Long minimumQueryCount;
+
     public DescribeQuerySuggestionsConfigResponse withMinimumQueryCount(Long minimumQueryCount) {
         this.minimumQueryCount = minimumQueryCount;
         return this;
@@ -64,6 +69,7 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public ModeEnum mode;
+
     public DescribeQuerySuggestionsConfigResponse withMode(ModeEnum mode) {
         this.mode = mode;
         return this;
@@ -72,6 +78,7 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryLogLookBackWindowInDays")
     public Long queryLogLookBackWindowInDays;
+
     public DescribeQuerySuggestionsConfigResponse withQueryLogLookBackWindowInDays(Long queryLogLookBackWindowInDays) {
         this.queryLogLookBackWindowInDays = queryLogLookBackWindowInDays;
         return this;
@@ -80,6 +87,7 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public QuerySuggestionsStatusEnum status;
+
     public DescribeQuerySuggestionsConfigResponse withStatus(QuerySuggestionsStatusEnum status) {
         this.status = status;
         return this;
@@ -88,9 +96,11 @@ public class DescribeQuerySuggestionsConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalSuggestionsCount")
     public Long totalSuggestionsCount;
+
     public DescribeQuerySuggestionsConfigResponse withTotalSuggestionsCount(Long totalSuggestionsCount) {
         this.totalSuggestionsCount = totalSuggestionsCount;
         return this;
     }
     
+    public DescribeQuerySuggestionsConfigResponse(){}
 }

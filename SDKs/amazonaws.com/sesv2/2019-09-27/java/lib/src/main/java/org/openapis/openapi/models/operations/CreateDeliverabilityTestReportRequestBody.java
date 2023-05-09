@@ -14,6 +14,7 @@ public class CreateDeliverabilityTestReportRequestBody {
      */
     @JsonProperty("Content")
     public CreateDeliverabilityTestReportRequestBodyContent content;
+
     public CreateDeliverabilityTestReportRequestBody withContent(CreateDeliverabilityTestReportRequestBodyContent content) {
         this.content = content;
         return this;
@@ -24,6 +25,7 @@ public class CreateDeliverabilityTestReportRequestBody {
      */
     @JsonProperty("FromEmailAddress")
     public String fromEmailAddress;
+
     public CreateDeliverabilityTestReportRequestBody withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -35,6 +37,7 @@ public class CreateDeliverabilityTestReportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportName")
     public String reportName;
+
     public CreateDeliverabilityTestReportRequestBody withReportName(String reportName) {
         this.reportName = reportName;
         return this;
@@ -46,9 +49,14 @@ public class CreateDeliverabilityTestReportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateDeliverabilityTestReportRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDeliverabilityTestReportRequestBody(@JsonProperty("Content") CreateDeliverabilityTestReportRequestBodyContent content, @JsonProperty("FromEmailAddress") String fromEmailAddress) {
+        this.content = content;
+        this.fromEmailAddress = fromEmailAddress;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagsTagTopAskersPeriodRequest {
@@ -13,6 +14,7 @@ public class GetTagsTagTopAskersPeriodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetTagsTagTopAskersPeriodRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetTagsTagTopAskersPeriodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetTagsTagTopAskersPeriodRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -60,6 +63,7 @@ public class GetTagsTagTopAskersPeriodRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetTagsTagTopAskersPeriodRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -67,6 +71,7 @@ public class GetTagsTagTopAskersPeriodRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetTagsTagTopAskersPeriodRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -74,6 +79,7 @@ public class GetTagsTagTopAskersPeriodRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=period")
     public GetTagsTagTopAskersPeriodPeriodEnum period;
+
     public GetTagsTagTopAskersPeriodRequest withPeriod(GetTagsTagTopAskersPeriodPeriodEnum period) {
         this.period = period;
         return this;
@@ -85,6 +91,7 @@ public class GetTagsTagTopAskersPeriodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetTagsTagTopAskersPeriodRequest withSite(String site) {
         this.site = site;
         return this;
@@ -92,9 +99,15 @@ public class GetTagsTagTopAskersPeriodRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
     public String tag;
+
     public GetTagsTagTopAskersPeriodRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public GetTagsTagTopAskersPeriodRequest(@JsonProperty("period") GetTagsTagTopAskersPeriodPeriodEnum period, @JsonProperty("site") String site, @JsonProperty("tag") String tag) {
+        this.period = period;
+        this.site = site;
+        this.tag = tag;
+  }
 }

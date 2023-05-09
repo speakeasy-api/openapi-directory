@@ -59,11 +59,9 @@ public class PhoneNumberAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2PhoneNumberAssignmentsJsonResponse res = new org.openapis.openapi.models.operations.GetV2PhoneNumberAssignmentsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2PhoneNumberAssignmentsJsonResponse res = new org.openapis.openapi.models.operations.GetV2PhoneNumberAssignmentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class PhoneNumberAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2PhoneNumberAssignmentsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2PhoneNumberAssignmentsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2PhoneNumberAssignmentsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2PhoneNumberAssignmentsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

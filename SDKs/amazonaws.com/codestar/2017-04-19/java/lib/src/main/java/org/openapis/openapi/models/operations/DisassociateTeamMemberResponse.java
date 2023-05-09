@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateTeamMemberResponse {
@@ -12,6 +13,7 @@ public class DisassociateTeamMemberResponse {
      */
     
     public Object concurrentModificationException;
+
     public DisassociateTeamMemberResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateTeamMemberResponse {
     
     
     public String contentType;
+
     public DisassociateTeamMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateTeamMemberResponse {
      */
     
     public java.util.Map<String, Object> disassociateTeamMemberResult;
+
     public DisassociateTeamMemberResponse withDisassociateTeamMemberResult(java.util.Map<String, Object> disassociateTeamMemberResult) {
         this.disassociateTeamMemberResult = disassociateTeamMemberResult;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateTeamMemberResponse {
      */
     
     public Object invalidServiceRoleException;
+
     public DisassociateTeamMemberResponse withInvalidServiceRoleException(Object invalidServiceRoleException) {
         this.invalidServiceRoleException = invalidServiceRoleException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateTeamMemberResponse {
      */
     
     public Object projectNotFoundException;
+
     public DisassociateTeamMemberResponse withProjectNotFoundException(Object projectNotFoundException) {
         this.projectNotFoundException = projectNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateTeamMemberResponse {
     
     
     public Integer statusCode;
+
     public DisassociateTeamMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateTeamMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateTeamMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateTeamMemberResponse {
      */
     
     public Object validationException;
+
     public DisassociateTeamMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateTeamMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -57,14 +57,12 @@ public class PicoLoadmanagementSetDynamicCurrent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostResponse res = new org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostResponse() {{
+        org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostResponse res = new org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

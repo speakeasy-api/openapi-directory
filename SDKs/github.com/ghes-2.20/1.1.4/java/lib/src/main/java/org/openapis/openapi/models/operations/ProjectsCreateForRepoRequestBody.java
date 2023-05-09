@@ -15,6 +15,7 @@ public class ProjectsCreateForRepoRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public ProjectsCreateForRepoRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -25,9 +26,13 @@ public class ProjectsCreateForRepoRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ProjectsCreateForRepoRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProjectsCreateForRepoRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

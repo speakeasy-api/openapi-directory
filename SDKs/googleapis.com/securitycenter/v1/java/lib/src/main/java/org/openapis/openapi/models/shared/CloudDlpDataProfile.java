@@ -18,9 +18,11 @@ public class CloudDlpDataProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataProfile")
     public String dataProfile;
+
     public CloudDlpDataProfile withDataProfile(String dataProfile) {
         this.dataProfile = dataProfile;
         return this;
     }
     
+    public CloudDlpDataProfile(){}
 }

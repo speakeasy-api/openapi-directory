@@ -18,6 +18,7 @@ public class SslCertificateSelfManagedSslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public String certificate;
+
     public SslCertificateSelfManagedSslCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -29,9 +30,11 @@ public class SslCertificateSelfManagedSslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKey")
     public String privateKey;
+
     public SslCertificateSelfManagedSslCertificate withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
     }
     
+    public SslCertificateSelfManagedSslCertificate(){}
 }

@@ -15,6 +15,7 @@ public class UpdateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalMetricsToRetain")
     public String[] additionalMetricsToRetain;
+
     public UpdateSecurityProfileRequestBody withAdditionalMetricsToRetain(String[] additionalMetricsToRetain) {
         this.additionalMetricsToRetain = additionalMetricsToRetain;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalMetricsToRetainV2")
     public org.openapis.openapi.models.shared.MetricToRetain[] additionalMetricsToRetainV2;
+
     public UpdateSecurityProfileRequestBody withAdditionalMetricsToRetainV2(org.openapis.openapi.models.shared.MetricToRetain[] additionalMetricsToRetainV2) {
         this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
         return this;
@@ -37,6 +39,7 @@ public class UpdateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertTargets")
     public java.util.Map<String, org.openapis.openapi.models.shared.AlertTarget> alertTargets;
+
     public UpdateSecurityProfileRequestBody withAlertTargets(java.util.Map<String, org.openapis.openapi.models.shared.AlertTarget> alertTargets) {
         this.alertTargets = alertTargets;
         return this;
@@ -48,6 +51,7 @@ public class UpdateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behaviors")
     public org.openapis.openapi.models.shared.Behavior[] behaviors;
+
     public UpdateSecurityProfileRequestBody withBehaviors(org.openapis.openapi.models.shared.Behavior[] behaviors) {
         this.behaviors = behaviors;
         return this;
@@ -59,6 +63,7 @@ public class UpdateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteAdditionalMetricsToRetain")
     public Boolean deleteAdditionalMetricsToRetain;
+
     public UpdateSecurityProfileRequestBody withDeleteAdditionalMetricsToRetain(Boolean deleteAdditionalMetricsToRetain) {
         this.deleteAdditionalMetricsToRetain = deleteAdditionalMetricsToRetain;
         return this;
@@ -70,6 +75,7 @@ public class UpdateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteAlertTargets")
     public Boolean deleteAlertTargets;
+
     public UpdateSecurityProfileRequestBody withDeleteAlertTargets(Boolean deleteAlertTargets) {
         this.deleteAlertTargets = deleteAlertTargets;
         return this;
@@ -81,6 +87,7 @@ public class UpdateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteBehaviors")
     public Boolean deleteBehaviors;
+
     public UpdateSecurityProfileRequestBody withDeleteBehaviors(Boolean deleteBehaviors) {
         this.deleteBehaviors = deleteBehaviors;
         return this;
@@ -92,9 +99,11 @@ public class UpdateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileDescription")
     public String securityProfileDescription;
+
     public UpdateSecurityProfileRequestBody withSecurityProfileDescription(String securityProfileDescription) {
         this.securityProfileDescription = securityProfileDescription;
         return this;
     }
     
+    public UpdateSecurityProfileRequestBody(){}
 }

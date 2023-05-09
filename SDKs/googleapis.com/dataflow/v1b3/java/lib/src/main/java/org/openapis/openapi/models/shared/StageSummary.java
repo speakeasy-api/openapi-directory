@@ -18,6 +18,7 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public StageSummary withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public MetricUpdate[] metrics;
+
     public StageSummary withMetrics(MetricUpdate[] metrics) {
         this.metrics = metrics;
         return this;
@@ -40,6 +42,7 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public ProgressTimeseries progress;
+
     public StageSummary withProgress(ProgressTimeseries progress) {
         this.progress = progress;
         return this;
@@ -51,6 +54,7 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageId")
     public String stageId;
+
     public StageSummary withStageId(String stageId) {
         this.stageId = stageId;
         return this;
@@ -62,6 +66,7 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public StageSummary withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -73,6 +78,7 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StageSummaryStateEnum state;
+
     public StageSummary withState(StageSummaryStateEnum state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stragglerSummary")
     public StragglerSummary stragglerSummary;
+
     public StageSummary withStragglerSummary(StragglerSummary stragglerSummary) {
         this.stragglerSummary = stragglerSummary;
         return this;
     }
     
+    public StageSummary(){}
 }

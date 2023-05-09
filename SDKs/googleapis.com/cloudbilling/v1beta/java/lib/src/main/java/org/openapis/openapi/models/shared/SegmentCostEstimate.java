@@ -18,6 +18,7 @@ public class SegmentCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitmentCostEstimates")
     public CommitmentCostEstimate[] commitmentCostEstimates;
+
     public SegmentCostEstimate withCommitmentCostEstimates(CommitmentCostEstimate[] commitmentCostEstimates) {
         this.commitmentCostEstimates = commitmentCostEstimates;
         return this;
@@ -29,6 +30,7 @@ public class SegmentCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentStartTime")
     public EstimationTimePoint segmentStartTime;
+
     public SegmentCostEstimate withSegmentStartTime(EstimationTimePoint segmentStartTime) {
         this.segmentStartTime = segmentStartTime;
         return this;
@@ -40,6 +42,7 @@ public class SegmentCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentTotalCostEstimate")
     public CostEstimate segmentTotalCostEstimate;
+
     public SegmentCostEstimate withSegmentTotalCostEstimate(CostEstimate segmentTotalCostEstimate) {
         this.segmentTotalCostEstimate = segmentTotalCostEstimate;
         return this;
@@ -51,9 +54,11 @@ public class SegmentCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadCostEstimates")
     public WorkloadCostEstimate[] workloadCostEstimates;
+
     public SegmentCostEstimate withWorkloadCostEstimates(WorkloadCostEstimate[] workloadCostEstimates) {
         this.workloadCostEstimates = workloadCostEstimates;
         return this;
     }
     
+    public SegmentCostEstimate(){}
 }

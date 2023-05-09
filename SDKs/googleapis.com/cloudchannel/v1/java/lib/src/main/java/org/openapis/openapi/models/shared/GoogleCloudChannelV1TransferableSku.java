@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1TransferableSku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacySku")
     public GoogleCloudChannelV1Sku legacySku;
+
     public GoogleCloudChannelV1TransferableSku withLegacySku(GoogleCloudChannelV1Sku legacySku) {
         this.legacySku = legacySku;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1TransferableSku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public GoogleCloudChannelV1Sku sku;
+
     public GoogleCloudChannelV1TransferableSku withSku(GoogleCloudChannelV1Sku sku) {
         this.sku = sku;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1TransferableSku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferEligibility")
     public GoogleCloudChannelV1TransferEligibility transferEligibility;
+
     public GoogleCloudChannelV1TransferableSku withTransferEligibility(GoogleCloudChannelV1TransferEligibility transferEligibility) {
         this.transferEligibility = transferEligibility;
         return this;
     }
     
+    public GoogleCloudChannelV1TransferableSku(){}
 }

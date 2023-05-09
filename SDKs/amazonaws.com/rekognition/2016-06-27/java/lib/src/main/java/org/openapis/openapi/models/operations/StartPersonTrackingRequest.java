@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartPersonTrackingRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StartPersonTrackingRequest startPersonTrackingRequest;
+
     public StartPersonTrackingRequest withStartPersonTrackingRequest(org.openapis.openapi.models.shared.StartPersonTrackingRequest startPersonTrackingRequest) {
         this.startPersonTrackingRequest = startPersonTrackingRequest;
         return this;
@@ -16,6 +18,7 @@ public class StartPersonTrackingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartPersonTrackingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StartPersonTrackingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartPersonTrackingRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StartPersonTrackingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartPersonTrackingRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StartPersonTrackingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartPersonTrackingRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StartPersonTrackingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartPersonTrackingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StartPersonTrackingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartPersonTrackingRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StartPersonTrackingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartPersonTrackingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class StartPersonTrackingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public StartPersonTrackingXAmzTargetEnum xAmzTarget;
+
     public StartPersonTrackingRequest withXAmzTarget(StartPersonTrackingXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public StartPersonTrackingRequest(@JsonProperty("StartPersonTrackingRequest") org.openapis.openapi.models.shared.StartPersonTrackingRequest startPersonTrackingRequest, @JsonProperty("X-Amz-Target") StartPersonTrackingXAmzTargetEnum xAmzTarget) {
+        this.startPersonTrackingRequest = startPersonTrackingRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

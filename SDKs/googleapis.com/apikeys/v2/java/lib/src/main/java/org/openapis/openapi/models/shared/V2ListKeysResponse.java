@@ -18,6 +18,7 @@ public class V2ListKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public V2Key[] keys;
+
     public V2ListKeysResponse withKeys(V2Key[] keys) {
         this.keys = keys;
         return this;
@@ -29,9 +30,11 @@ public class V2ListKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public V2ListKeysResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public V2ListKeysResponse(){}
 }

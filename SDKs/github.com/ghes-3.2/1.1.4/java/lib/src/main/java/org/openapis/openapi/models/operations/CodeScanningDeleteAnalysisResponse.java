@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodeScanningDeleteAnalysisResponse {
     
     public String contentType;
+
     public CodeScanningDeleteAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodeScanningDeleteAnalysisResponse {
     
     
     public Integer statusCode;
+
     public CodeScanningDeleteAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodeScanningDeleteAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodeScanningDeleteAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodeScanningDeleteAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public CodeScanningDeleteAnalysisResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class CodeScanningDeleteAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.CodeScanningAnalysisDeletion codeScanningAnalysisDeletion;
+
     public CodeScanningDeleteAnalysisResponse withCodeScanningAnalysisDeletion(org.openapis.openapi.models.shared.CodeScanningAnalysisDeletion codeScanningAnalysisDeletion) {
         this.codeScanningAnalysisDeletion = codeScanningAnalysisDeletion;
         return this;
@@ -53,6 +59,7 @@ public class CodeScanningDeleteAnalysisResponse {
      */
     
     public CodeScanningDeleteAnalysis503ApplicationJSON codeScanningDeleteAnalysis503ApplicationJSONObject;
+
     public CodeScanningDeleteAnalysisResponse withCodeScanningDeleteAnalysis503ApplicationJSONObject(CodeScanningDeleteAnalysis503ApplicationJSON codeScanningDeleteAnalysis503ApplicationJSONObject) {
         this.codeScanningDeleteAnalysis503ApplicationJSONObject = codeScanningDeleteAnalysis503ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CodeScanningDeleteAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public CodeScanningDeleteAnalysisResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
     }
     
+    public CodeScanningDeleteAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateAssetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetDescription")
     public String assetDescription;
+
     public CreateAssetRequestBody withAssetDescription(String assetDescription) {
         this.assetDescription = assetDescription;
         return this;
@@ -25,6 +26,7 @@ public class CreateAssetRequestBody {
      */
     @JsonProperty("assetModelId")
     public String assetModelId;
+
     public CreateAssetRequestBody withAssetModelId(String assetModelId) {
         this.assetModelId = assetModelId;
         return this;
@@ -35,6 +37,7 @@ public class CreateAssetRequestBody {
      */
     @JsonProperty("assetName")
     public String assetName;
+
     public CreateAssetRequestBody withAssetName(String assetName) {
         this.assetName = assetName;
         return this;
@@ -46,6 +49,7 @@ public class CreateAssetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAssetRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -57,9 +61,14 @@ public class CreateAssetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAssetRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAssetRequestBody(@JsonProperty("assetModelId") String assetModelId, @JsonProperty("assetName") String assetName) {
+        this.assetModelId = assetModelId;
+        this.assetName = assetName;
+  }
 }

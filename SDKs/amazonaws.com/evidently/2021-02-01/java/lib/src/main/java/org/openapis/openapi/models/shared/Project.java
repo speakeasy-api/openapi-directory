@@ -20,6 +20,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeExperimentCount")
     public Long activeExperimentCount;
+
     public Project withActiveExperimentCount(Long activeExperimentCount) {
         this.activeExperimentCount = activeExperimentCount;
         return this;
@@ -28,6 +29,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeLaunchCount")
     public Long activeLaunchCount;
+
     public Project withActiveLaunchCount(Long activeLaunchCount) {
         this.activeLaunchCount = activeLaunchCount;
         return this;
@@ -36,6 +38,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appConfigResource")
     public ProjectAppConfigResource appConfigResource;
+
     public Project withAppConfigResource(ProjectAppConfigResource appConfigResource) {
         this.appConfigResource = appConfigResource;
         return this;
@@ -43,6 +46,7 @@ public class Project {
     
     @JsonProperty("arn")
     public String arn;
+
     public Project withArn(String arn) {
         this.arn = arn;
         return this;
@@ -52,6 +56,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public Project withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -60,6 +65,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDelivery")
     public ProjectDataDelivery dataDelivery;
+
     public Project withDataDelivery(ProjectDataDelivery dataDelivery) {
         this.dataDelivery = dataDelivery;
         return this;
@@ -68,6 +74,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Project withDescription(String description) {
         this.description = description;
         return this;
@@ -76,6 +83,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentCount")
     public Long experimentCount;
+
     public Project withExperimentCount(Long experimentCount) {
         this.experimentCount = experimentCount;
         return this;
@@ -84,6 +92,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureCount")
     public Long featureCount;
+
     public Project withFeatureCount(Long featureCount) {
         this.featureCount = featureCount;
         return this;
@@ -93,6 +102,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Project withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -101,6 +111,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchCount")
     public Long launchCount;
+
     public Project withLaunchCount(Long launchCount) {
         this.launchCount = launchCount;
         return this;
@@ -108,6 +119,7 @@ public class Project {
     
     @JsonProperty("name")
     public String name;
+
     public Project withName(String name) {
         this.name = name;
         return this;
@@ -115,6 +127,7 @@ public class Project {
     
     @JsonProperty("status")
     public ProjectStatusEnum status;
+
     public Project withStatus(ProjectStatusEnum status) {
         this.status = status;
         return this;
@@ -123,9 +136,17 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Project withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Project(@JsonProperty("arn") String arn, @JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("name") String name, @JsonProperty("status") ProjectStatusEnum status) {
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.name = name;
+        this.status = status;
+  }
 }

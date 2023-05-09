@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuestionsRequest {
@@ -12,6 +13,7 @@ public class GetQuestionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
     public String xAppToken;
+
     public GetQuestionsRequest withXAppToken(String xAppToken) {
         this.xAppToken = xAppToken;
         return this;
@@ -23,6 +25,7 @@ public class GetQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
     public String appToken;
+
     public GetQuestionsRequest withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -34,6 +37,7 @@ public class GetQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
+
     public GetQuestionsRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -45,6 +49,7 @@ public class GetQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
+
     public GetQuestionsRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
@@ -55,9 +60,13 @@ public class GetQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetQuestionsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetQuestionsRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

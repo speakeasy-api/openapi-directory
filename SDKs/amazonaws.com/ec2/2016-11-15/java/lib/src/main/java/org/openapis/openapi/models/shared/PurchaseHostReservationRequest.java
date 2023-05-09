@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PurchaseHostReservationRequest {
     
     public String clientToken;
+
     public PurchaseHostReservationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class PurchaseHostReservationRequest {
     
     
     public CurrencyCodeValuesEnum currencyCode;
+
     public PurchaseHostReservationRequest withCurrencyCode(CurrencyCodeValuesEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -23,6 +25,7 @@ public class PurchaseHostReservationRequest {
     
     
     public String[] hostIdSet;
+
     public PurchaseHostReservationRequest withHostIdSet(String[] hostIdSet) {
         this.hostIdSet = hostIdSet;
         return this;
@@ -30,6 +33,7 @@ public class PurchaseHostReservationRequest {
     
     
     public String limitPrice;
+
     public PurchaseHostReservationRequest withLimitPrice(String limitPrice) {
         this.limitPrice = limitPrice;
         return this;
@@ -37,6 +41,7 @@ public class PurchaseHostReservationRequest {
     
     
     public String offeringId;
+
     public PurchaseHostReservationRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -44,9 +49,14 @@ public class PurchaseHostReservationRequest {
     
     
     public PurchaseHostReservationRequestTagSpecifications[] tagSpecifications;
+
     public PurchaseHostReservationRequest withTagSpecifications(PurchaseHostReservationRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public PurchaseHostReservationRequest(@JsonProperty("HostIdSet") String[] hostIdSet, @JsonProperty("OfferingId") String offeringId) {
+        this.hostIdSet = hostIdSet;
+        this.offeringId = offeringId;
+  }
 }

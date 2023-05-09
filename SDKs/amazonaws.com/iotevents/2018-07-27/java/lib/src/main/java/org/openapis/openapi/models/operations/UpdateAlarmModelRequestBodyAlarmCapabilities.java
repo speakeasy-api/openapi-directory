@@ -15,6 +15,7 @@ public class UpdateAlarmModelRequestBodyAlarmCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgeFlow")
     public org.openapis.openapi.models.shared.AcknowledgeFlow acknowledgeFlow;
+
     public UpdateAlarmModelRequestBodyAlarmCapabilities withAcknowledgeFlow(org.openapis.openapi.models.shared.AcknowledgeFlow acknowledgeFlow) {
         this.acknowledgeFlow = acknowledgeFlow;
         return this;
@@ -23,9 +24,11 @@ public class UpdateAlarmModelRequestBodyAlarmCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initializationConfiguration")
     public org.openapis.openapi.models.shared.InitializationConfiguration initializationConfiguration;
+
     public UpdateAlarmModelRequestBodyAlarmCapabilities withInitializationConfiguration(org.openapis.openapi.models.shared.InitializationConfiguration initializationConfiguration) {
         this.initializationConfiguration = initializationConfiguration;
         return this;
     }
     
+    public UpdateAlarmModelRequestBodyAlarmCapabilities(){}
 }

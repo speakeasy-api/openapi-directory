@@ -17,6 +17,7 @@ public class TeamSimple {
      */
     @JsonProperty("description")
     public String description;
+
     public TeamSimple withDescription(String description) {
         this.description = description;
         return this;
@@ -24,6 +25,7 @@ public class TeamSimple {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public TeamSimple withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -34,6 +36,7 @@ public class TeamSimple {
      */
     @JsonProperty("id")
     public Long id;
+
     public TeamSimple withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class TeamSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_dn")
     public String ldapDn;
+
     public TeamSimple withLdapDn(String ldapDn) {
         this.ldapDn = ldapDn;
         return this;
@@ -52,6 +56,7 @@ public class TeamSimple {
     
     @JsonProperty("members_url")
     public String membersUrl;
+
     public TeamSimple withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -62,6 +67,7 @@ public class TeamSimple {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamSimple withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +75,7 @@ public class TeamSimple {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public TeamSimple withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -79,6 +86,7 @@ public class TeamSimple {
      */
     @JsonProperty("permission")
     public String permission;
+
     public TeamSimple withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -90,6 +98,7 @@ public class TeamSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public String privacy;
+
     public TeamSimple withPrivacy(String privacy) {
         this.privacy = privacy;
         return this;
@@ -97,6 +106,7 @@ public class TeamSimple {
     
     @JsonProperty("repositories_url")
     public String repositoriesUrl;
+
     public TeamSimple withRepositoriesUrl(String repositoriesUrl) {
         this.repositoriesUrl = repositoriesUrl;
         return this;
@@ -104,6 +114,7 @@ public class TeamSimple {
     
     @JsonProperty("slug")
     public String slug;
+
     public TeamSimple withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -114,9 +125,22 @@ public class TeamSimple {
      */
     @JsonProperty("url")
     public String url;
+
     public TeamSimple withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TeamSimple(@JsonProperty("description") String description, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("members_url") String membersUrl, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("permission") String permission, @JsonProperty("repositories_url") String repositoriesUrl, @JsonProperty("slug") String slug, @JsonProperty("url") String url) {
+        this.description = description;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.membersUrl = membersUrl;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.permission = permission;
+        this.repositoriesUrl = repositoriesUrl;
+        this.slug = slug;
+        this.url = url;
+  }
 }

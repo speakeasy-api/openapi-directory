@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DuplicateProjectRequest {
@@ -12,6 +13,7 @@ public class DuplicateProjectRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DuplicateProjectRequestBody requestBody;
+
     public DuplicateProjectRequest withRequestBody(DuplicateProjectRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class DuplicateProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public DuplicateProjectRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class DuplicateProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public DuplicateProjectRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,13 @@ public class DuplicateProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
     public String projectGid;
+
     public DuplicateProjectRequest withProjectGid(String projectGid) {
         this.projectGid = projectGid;
         return this;
     }
     
+    public DuplicateProjectRequest(@JsonProperty("project_gid") String projectGid) {
+        this.projectGid = projectGid;
+  }
 }

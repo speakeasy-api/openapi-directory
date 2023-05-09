@@ -15,9 +15,11 @@ public class ResetServiceSettingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceSetting")
     public ServiceSetting serviceSetting;
+
     public ResetServiceSettingResult withServiceSetting(ServiceSetting serviceSetting) {
         this.serviceSetting = serviceSetting;
         return this;
     }
     
+    public ResetServiceSettingResult(){}
 }

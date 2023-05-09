@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountTypesIdAccountTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetAccountTypesIdAccountTypeRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,9 +18,13 @@ public class GetAccountTypesIdAccountTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account_type")
     public Long idAccountType;
+
     public GetAccountTypesIdAccountTypeRequest withIdAccountType(Long idAccountType) {
         this.idAccountType = idAccountType;
         return this;
     }
     
+    public GetAccountTypesIdAccountTypeRequest(@JsonProperty("id_account_type") Long idAccountType) {
+        this.idAccountType = idAccountType;
+  }
 }

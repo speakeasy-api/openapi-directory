@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCandidateCandidateIdCommitteesHistoryResponse {
     
     public org.openapis.openapi.models.shared.CommitteeHistoryProfilePage committeeHistoryProfilePage;
+
     public GetCandidateCandidateIdCommitteesHistoryResponse withCommitteeHistoryProfilePage(org.openapis.openapi.models.shared.CommitteeHistoryProfilePage committeeHistoryProfilePage) {
         this.committeeHistoryProfilePage = committeeHistoryProfilePage;
         return this;
@@ -16,6 +18,7 @@ public class GetCandidateCandidateIdCommitteesHistoryResponse {
     
     
     public String contentType;
+
     public GetCandidateCandidateIdCommitteesHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetCandidateCandidateIdCommitteesHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetCandidateCandidateIdCommitteesHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetCandidateCandidateIdCommitteesHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCandidateCandidateIdCommitteesHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCandidateCandidateIdCommitteesHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

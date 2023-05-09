@@ -15,6 +15,7 @@ public class EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindMatchesMetrics")
     public FindMatchesMetrics findMatchesMetrics;
+
     public EvaluationMetrics withFindMatchesMetrics(FindMatchesMetrics findMatchesMetrics) {
         this.findMatchesMetrics = findMatchesMetrics;
         return this;
@@ -22,9 +23,13 @@ public class EvaluationMetrics {
     
     @JsonProperty("TransformType")
     public TransformTypeEnum transformType;
+
     public EvaluationMetrics withTransformType(TransformTypeEnum transformType) {
         this.transformType = transformType;
         return this;
     }
     
+    public EvaluationMetrics(@JsonProperty("TransformType") TransformTypeEnum transformType) {
+        this.transformType = transformType;
+  }
 }

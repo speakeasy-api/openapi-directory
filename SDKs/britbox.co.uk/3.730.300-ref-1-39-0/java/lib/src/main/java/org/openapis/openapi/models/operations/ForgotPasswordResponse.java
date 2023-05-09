@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ForgotPasswordResponse {
     
     public String contentType;
+
     public ForgotPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ForgotPasswordResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public ForgotPasswordResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -26,6 +29,7 @@ public class ForgotPasswordResponse {
     
     
     public Integer statusCode;
+
     public ForgotPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ForgotPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ForgotPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ForgotPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

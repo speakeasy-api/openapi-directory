@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateOpsItemRelatedItemResponse {
@@ -12,6 +13,7 @@ public class AssociateOpsItemRelatedItemResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateOpsItemRelatedItemResponse associateOpsItemRelatedItemResponse;
+
     public AssociateOpsItemRelatedItemResponse withAssociateOpsItemRelatedItemResponse(org.openapis.openapi.models.shared.AssociateOpsItemRelatedItemResponse associateOpsItemRelatedItemResponse) {
         this.associateOpsItemRelatedItemResponse = associateOpsItemRelatedItemResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateOpsItemRelatedItemResponse {
     
     
     public String contentType;
+
     public AssociateOpsItemRelatedItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateOpsItemRelatedItemResponse {
      */
     
     public Object internalServerError;
+
     public AssociateOpsItemRelatedItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class AssociateOpsItemRelatedItemResponse {
      */
     
     public Object opsItemInvalidParameterException;
+
     public AssociateOpsItemRelatedItemResponse withOpsItemInvalidParameterException(Object opsItemInvalidParameterException) {
         this.opsItemInvalidParameterException = opsItemInvalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateOpsItemRelatedItemResponse {
      */
     
     public Object opsItemLimitExceededException;
+
     public AssociateOpsItemRelatedItemResponse withOpsItemLimitExceededException(Object opsItemLimitExceededException) {
         this.opsItemLimitExceededException = opsItemLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateOpsItemRelatedItemResponse {
      */
     
     public Object opsItemNotFoundException;
+
     public AssociateOpsItemRelatedItemResponse withOpsItemNotFoundException(Object opsItemNotFoundException) {
         this.opsItemNotFoundException = opsItemNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateOpsItemRelatedItemResponse {
      */
     
     public Object opsItemRelatedItemAlreadyExistsException;
+
     public AssociateOpsItemRelatedItemResponse withOpsItemRelatedItemAlreadyExistsException(Object opsItemRelatedItemAlreadyExistsException) {
         this.opsItemRelatedItemAlreadyExistsException = opsItemRelatedItemAlreadyExistsException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateOpsItemRelatedItemResponse {
     
     
     public Integer statusCode;
+
     public AssociateOpsItemRelatedItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AssociateOpsItemRelatedItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateOpsItemRelatedItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateOpsItemRelatedItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

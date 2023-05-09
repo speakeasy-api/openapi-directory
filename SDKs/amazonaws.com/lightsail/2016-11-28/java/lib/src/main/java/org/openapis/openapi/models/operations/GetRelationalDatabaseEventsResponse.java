@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelationalDatabaseEventsResponse {
@@ -12,6 +13,7 @@ public class GetRelationalDatabaseEventsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRelationalDatabaseEventsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRelationalDatabaseEventsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetRelationalDatabaseEventsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetRelationalDatabaseEventsResponse {
     
     
     public String contentType;
+
     public GetRelationalDatabaseEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRelationalDatabaseEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRelationalDatabaseEventsResult getRelationalDatabaseEventsResult;
+
     public GetRelationalDatabaseEventsResponse withGetRelationalDatabaseEventsResult(org.openapis.openapi.models.shared.GetRelationalDatabaseEventsResult getRelationalDatabaseEventsResult) {
         this.getRelationalDatabaseEventsResult = getRelationalDatabaseEventsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetRelationalDatabaseEventsResponse {
      */
     
     public Object invalidInputException;
+
     public GetRelationalDatabaseEventsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetRelationalDatabaseEventsResponse {
      */
     
     public Object notFoundException;
+
     public GetRelationalDatabaseEventsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetRelationalDatabaseEventsResponse {
      */
     
     public Object operationFailureException;
+
     public GetRelationalDatabaseEventsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetRelationalDatabaseEventsResponse {
      */
     
     public Object serviceException;
+
     public GetRelationalDatabaseEventsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetRelationalDatabaseEventsResponse {
     
     
     public Integer statusCode;
+
     public GetRelationalDatabaseEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRelationalDatabaseEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelationalDatabaseEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRelationalDatabaseEventsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetRelationalDatabaseEventsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetRelationalDatabaseEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

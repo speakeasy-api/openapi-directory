@@ -15,6 +15,7 @@ public class InitializeClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ClusterStateEnum state;
+
     public InitializeClusterResponse withState(ClusterStateEnum state) {
         this.state = state;
         return this;
@@ -23,9 +24,11 @@ public class InitializeClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateMessage")
     public String stateMessage;
+
     public InitializeClusterResponse withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
     }
     
+    public InitializeClusterResponse(){}
 }

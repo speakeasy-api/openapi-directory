@@ -20,6 +20,7 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignArn")
     public String campaignArn;
+
     public Campaign withCampaignArn(String campaignArn) {
         this.campaignArn = campaignArn;
         return this;
@@ -28,6 +29,7 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignConfig")
     public CampaignConfig campaignConfig;
+
     public Campaign withCampaignConfig(CampaignConfig campaignConfig) {
         this.campaignConfig = campaignConfig;
         return this;
@@ -38,6 +40,7 @@ public class Campaign {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public Campaign withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -46,6 +49,7 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public Campaign withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -56,6 +60,7 @@ public class Campaign {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public Campaign withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -67,6 +72,7 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestCampaignUpdate")
     public CampaignUpdateSummary latestCampaignUpdate;
+
     public Campaign withLatestCampaignUpdate(CampaignUpdateSummary latestCampaignUpdate) {
         this.latestCampaignUpdate = latestCampaignUpdate;
         return this;
@@ -75,6 +81,7 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minProvisionedTPS")
     public Long minProvisionedTPS;
+
     public Campaign withMinProvisionedTPS(Long minProvisionedTPS) {
         this.minProvisionedTPS = minProvisionedTPS;
         return this;
@@ -83,6 +90,7 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Campaign withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +99,7 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public Campaign withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
@@ -99,9 +108,11 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Campaign withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Campaign(){}
 }

@@ -63,11 +63,9 @@ public class GreenPowerIndexGrunstromIndex {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GsiBesthourResponse res = new org.openapis.openapi.models.operations.GsiBesthourResponse() {{
+        org.openapis.openapi.models.operations.GsiBesthourResponse res = new org.openapis.openapi.models.operations.GsiBesthourResponse(contentType, httpRes.statusCode()) {{
             gsiBesthour200ApplicationJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,11 +110,9 @@ public class GreenPowerIndexGrunstromIndex {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GsiDispatchResponse res = new org.openapis.openapi.models.operations.GsiDispatchResponse() {{
+        org.openapis.openapi.models.operations.GsiDispatchResponse res = new org.openapis.openapi.models.operations.GsiDispatchResponse(contentType, httpRes.statusCode()) {{
             gsiDispatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class GreenPowerIndexGrunstromIndex {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GsiMarketdataResponse res = new org.openapis.openapi.models.operations.GsiMarketdataResponse() {{
+        org.openapis.openapi.models.operations.GsiMarketdataResponse res = new org.openapis.openapi.models.operations.GsiMarketdataResponse(contentType, httpRes.statusCode()) {{
             gsiMarketdata200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class GreenPowerIndexGrunstromIndex {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GsiPredictionResponse res = new org.openapis.openapi.models.operations.GsiPredictionResponse() {{
+        org.openapis.openapi.models.operations.GsiPredictionResponse res = new org.openapis.openapi.models.operations.GsiPredictionResponse(contentType, httpRes.statusCode()) {{
             gsiPrediction200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

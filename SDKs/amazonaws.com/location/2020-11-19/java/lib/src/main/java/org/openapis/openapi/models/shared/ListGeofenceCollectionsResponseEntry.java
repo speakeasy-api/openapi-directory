@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ListGeofenceCollectionsResponseEntry {
     @JsonProperty("CollectionName")
     public String collectionName;
+
     public ListGeofenceCollectionsResponseEntry withCollectionName(String collectionName) {
         this.collectionName = collectionName;
         return this;
@@ -28,6 +29,7 @@ public class ListGeofenceCollectionsResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public ListGeofenceCollectionsResponseEntry withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -35,6 +37,7 @@ public class ListGeofenceCollectionsResponseEntry {
     
     @JsonProperty("Description")
     public String description;
+
     public ListGeofenceCollectionsResponseEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class ListGeofenceCollectionsResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public ListGeofenceCollectionsResponseEntryPricingPlanEnum pricingPlan;
+
     public ListGeofenceCollectionsResponseEntry withPricingPlan(ListGeofenceCollectionsResponseEntryPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -51,6 +55,7 @@ public class ListGeofenceCollectionsResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanDataSource")
     public String pricingPlanDataSource;
+
     public ListGeofenceCollectionsResponseEntry withPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
         return this;
@@ -60,9 +65,16 @@ public class ListGeofenceCollectionsResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public ListGeofenceCollectionsResponseEntry withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ListGeofenceCollectionsResponseEntry(@JsonProperty("CollectionName") String collectionName, @JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("Description") String description, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.collectionName = collectionName;
+        this.createTime = createTime;
+        this.description = description;
+        this.updateTime = updateTime;
+  }
 }

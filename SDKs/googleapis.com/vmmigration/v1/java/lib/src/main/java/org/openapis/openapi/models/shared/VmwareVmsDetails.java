@@ -18,9 +18,11 @@ public class VmwareVmsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public VmwareVmDetails[] details;
+
     public VmwareVmsDetails withDetails(VmwareVmDetails[] details) {
         this.details = details;
         return this;
     }
     
+    public VmwareVmsDetails(){}
 }

@@ -18,6 +18,7 @@ public class CommitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public CommitRequestModeEnum mode;
+
     public CommitRequest withMode(CommitRequestModeEnum mode) {
         this.mode = mode;
         return this;
@@ -29,6 +30,7 @@ public class CommitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutations")
     public Mutation[] mutations;
+
     public CommitRequest withMutations(Mutation[] mutations) {
         this.mutations = mutations;
         return this;
@@ -40,9 +42,11 @@ public class CommitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public CommitRequest withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public CommitRequest(){}
 }

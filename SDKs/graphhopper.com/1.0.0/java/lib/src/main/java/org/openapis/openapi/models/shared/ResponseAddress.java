@@ -18,6 +18,7 @@ public class ResponseAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public ResponseAddress withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -29,6 +30,7 @@ public class ResponseAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public ResponseAddress withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -40,6 +42,7 @@ public class ResponseAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public ResponseAddress withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -51,6 +54,7 @@ public class ResponseAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResponseAddress withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ResponseAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapped_waypoint")
     public SnappedWaypoint snappedWaypoint;
+
     public ResponseAddress withSnappedWaypoint(SnappedWaypoint snappedWaypoint) {
         this.snappedWaypoint = snappedWaypoint;
         return this;
@@ -73,9 +78,11 @@ public class ResponseAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_hint")
     public String streetHint;
+
     public ResponseAddress withStreetHint(String streetHint) {
         this.streetHint = streetHint;
         return this;
     }
     
+    public ResponseAddress(){}
 }

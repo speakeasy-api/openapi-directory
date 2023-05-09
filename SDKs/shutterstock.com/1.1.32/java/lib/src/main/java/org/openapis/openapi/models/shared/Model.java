@@ -15,9 +15,13 @@ public class Model {
      */
     @JsonProperty("id")
     public String id;
+
     public Model withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Model(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

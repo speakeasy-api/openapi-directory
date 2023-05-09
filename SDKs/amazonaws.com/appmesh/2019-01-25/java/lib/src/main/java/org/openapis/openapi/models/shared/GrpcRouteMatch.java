@@ -15,6 +15,7 @@ public class GrpcRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public GrpcRouteMetadata[] metadata;
+
     public GrpcRouteMatch withMetadata(GrpcRouteMetadata[] metadata) {
         this.metadata = metadata;
         return this;
@@ -23,6 +24,7 @@ public class GrpcRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodName")
     public String methodName;
+
     public GrpcRouteMatch withMethodName(String methodName) {
         this.methodName = methodName;
         return this;
@@ -31,6 +33,7 @@ public class GrpcRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public GrpcRouteMatch withPort(Long port) {
         this.port = port;
         return this;
@@ -39,9 +42,11 @@ public class GrpcRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public GrpcRouteMatch withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public GrpcRouteMatch(){}
 }

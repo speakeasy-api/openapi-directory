@@ -78,11 +78,9 @@ public class SchemaResponseActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdResponse res = new org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdResponse res = new org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,10 +118,8 @@ public class SchemaResponseActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSchemaResponsesSchemaResponseIdActionsResponse res = new org.openapis.openapi.models.operations.PostSchemaResponsesSchemaResponseIdActionsResponse() {{
+        org.openapis.openapi.models.operations.PostSchemaResponsesSchemaResponseIdActionsResponse res = new org.openapis.openapi.models.operations.PostSchemaResponsesSchemaResponseIdActionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -157,11 +153,9 @@ public class SchemaResponseActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SchemaResponseActionReadResponse res = new org.openapis.openapi.models.operations.SchemaResponseActionReadResponse() {{
+        org.openapis.openapi.models.operations.SchemaResponseActionReadResponse res = new org.openapis.openapi.models.operations.SchemaResponseActionReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImageAttributeLastLaunchedTime {
     
     public String value;
+
     public ImageAttributeLastLaunchedTime withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImageAttributeLastLaunchedTime(){}
 }

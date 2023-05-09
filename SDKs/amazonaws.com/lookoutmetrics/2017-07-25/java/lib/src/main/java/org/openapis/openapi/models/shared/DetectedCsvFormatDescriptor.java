@@ -15,6 +15,7 @@ public class DetectedCsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charset")
     public DetectedField charset;
+
     public DetectedCsvFormatDescriptor withCharset(DetectedField charset) {
         this.charset = charset;
         return this;
@@ -23,6 +24,7 @@ public class DetectedCsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainsHeader")
     public DetectedField containsHeader;
+
     public DetectedCsvFormatDescriptor withContainsHeader(DetectedField containsHeader) {
         this.containsHeader = containsHeader;
         return this;
@@ -31,6 +33,7 @@ public class DetectedCsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delimiter")
     public DetectedField delimiter;
+
     public DetectedCsvFormatDescriptor withDelimiter(DetectedField delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -39,6 +42,7 @@ public class DetectedCsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCompression")
     public DetectedField fileCompression;
+
     public DetectedCsvFormatDescriptor withFileCompression(DetectedField fileCompression) {
         this.fileCompression = fileCompression;
         return this;
@@ -47,6 +51,7 @@ public class DetectedCsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeaderList")
     public DetectedField headerList;
+
     public DetectedCsvFormatDescriptor withHeaderList(DetectedField headerList) {
         this.headerList = headerList;
         return this;
@@ -55,9 +60,11 @@ public class DetectedCsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteSymbol")
     public DetectedField quoteSymbol;
+
     public DetectedCsvFormatDescriptor withQuoteSymbol(DetectedField quoteSymbol) {
         this.quoteSymbol = quoteSymbol;
         return this;
     }
     
+    public DetectedCsvFormatDescriptor(){}
 }

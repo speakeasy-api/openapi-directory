@@ -22,6 +22,7 @@ public class DeviceIdentifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DeviceIdentifier withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class DeviceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIdentifierArn")
     public String deviceIdentifierArn;
+
     public DeviceIdentifier withDeviceIdentifierArn(String deviceIdentifierArn) {
         this.deviceIdentifierArn = deviceIdentifierArn;
         return this;
@@ -38,6 +40,7 @@ public class DeviceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iccid")
     public String iccid;
+
     public DeviceIdentifier withIccid(String iccid) {
         this.iccid = iccid;
         return this;
@@ -46,6 +49,7 @@ public class DeviceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imsi")
     public String imsi;
+
     public DeviceIdentifier withImsi(String imsi) {
         this.imsi = imsi;
         return this;
@@ -54,6 +58,7 @@ public class DeviceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkArn")
     public String networkArn;
+
     public DeviceIdentifier withNetworkArn(String networkArn) {
         this.networkArn = networkArn;
         return this;
@@ -62,6 +67,7 @@ public class DeviceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderArn")
     public String orderArn;
+
     public DeviceIdentifier withOrderArn(String orderArn) {
         this.orderArn = orderArn;
         return this;
@@ -70,6 +76,7 @@ public class DeviceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DeviceIdentifierStatusEnum status;
+
     public DeviceIdentifier withStatus(DeviceIdentifierStatusEnum status) {
         this.status = status;
         return this;
@@ -78,6 +85,7 @@ public class DeviceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficGroupArn")
     public String trafficGroupArn;
+
     public DeviceIdentifier withTrafficGroupArn(String trafficGroupArn) {
         this.trafficGroupArn = trafficGroupArn;
         return this;
@@ -86,9 +94,11 @@ public class DeviceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public DeviceIdentifier withVendor(String vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public DeviceIdentifier(){}
 }

@@ -20,6 +20,7 @@ public class Workforce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CognitoConfig")
     public CognitoConfig cognitoConfig;
+
     public Workforce withCognitoConfig(CognitoConfig cognitoConfig) {
         this.cognitoConfig = cognitoConfig;
         return this;
@@ -30,6 +31,7 @@ public class Workforce {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateDate")
     public OffsetDateTime createDate;
+
     public Workforce withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -38,6 +40,7 @@ public class Workforce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public Workforce withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -48,6 +51,7 @@ public class Workforce {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDate")
     public OffsetDateTime lastUpdatedDate;
+
     public Workforce withLastUpdatedDate(OffsetDateTime lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -56,6 +60,7 @@ public class Workforce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OidcConfig")
     public OidcConfigForResponse oidcConfig;
+
     public Workforce withOidcConfig(OidcConfigForResponse oidcConfig) {
         this.oidcConfig = oidcConfig;
         return this;
@@ -64,6 +69,7 @@ public class Workforce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIpConfig")
     public SourceIpConfig sourceIpConfig;
+
     public Workforce withSourceIpConfig(SourceIpConfig sourceIpConfig) {
         this.sourceIpConfig = sourceIpConfig;
         return this;
@@ -72,6 +78,7 @@ public class Workforce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public WorkforceStatusEnum status;
+
     public Workforce withStatus(WorkforceStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +87,7 @@ public class Workforce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubDomain")
     public String subDomain;
+
     public Workforce withSubDomain(String subDomain) {
         this.subDomain = subDomain;
         return this;
@@ -87,6 +95,7 @@ public class Workforce {
     
     @JsonProperty("WorkforceArn")
     public String workforceArn;
+
     public Workforce withWorkforceArn(String workforceArn) {
         this.workforceArn = workforceArn;
         return this;
@@ -94,6 +103,7 @@ public class Workforce {
     
     @JsonProperty("WorkforceName")
     public String workforceName;
+
     public Workforce withWorkforceName(String workforceName) {
         this.workforceName = workforceName;
         return this;
@@ -102,9 +112,14 @@ public class Workforce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkforceVpcConfig")
     public WorkforceVpcConfigResponse workforceVpcConfig;
+
     public Workforce withWorkforceVpcConfig(WorkforceVpcConfigResponse workforceVpcConfig) {
         this.workforceVpcConfig = workforceVpcConfig;
         return this;
     }
     
+    public Workforce(@JsonProperty("WorkforceArn") String workforceArn, @JsonProperty("WorkforceName") String workforceName) {
+        this.workforceArn = workforceArn;
+        this.workforceName = workforceName;
+  }
 }

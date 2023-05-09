@@ -18,6 +18,7 @@ public class SetupBeneficiaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public SetupBeneficiaryResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -29,6 +30,7 @@ public class SetupBeneficiaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public SetupBeneficiaryResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,9 +42,11 @@ public class SetupBeneficiaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public SetupBeneficiaryResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public SetupBeneficiaryResponse(){}
 }

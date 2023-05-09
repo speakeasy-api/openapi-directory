@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSubnetGroupResponse {
     
     public String contentType;
+
     public DeleteSubnetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSubnetGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSubnetGroupResponse deleteSubnetGroupResponse;
+
     public DeleteSubnetGroupResponse withDeleteSubnetGroupResponse(org.openapis.openapi.models.shared.DeleteSubnetGroupResponse deleteSubnetGroupResponse) {
         this.deleteSubnetGroupResponse = deleteSubnetGroupResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteSubnetGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteSubnetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteSubnetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSubnetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteSubnetGroupResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DeleteSubnetGroupResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSubnetGroupResponse {
      */
     
     public Object subnetGroupInUseFault;
+
     public DeleteSubnetGroupResponse withSubnetGroupInUseFault(Object subnetGroupInUseFault) {
         this.subnetGroupInUseFault = subnetGroupInUseFault;
         return this;
@@ -63,9 +70,14 @@ public class DeleteSubnetGroupResponse {
      */
     
     public Object subnetGroupNotFoundFault;
+
     public DeleteSubnetGroupResponse withSubnetGroupNotFoundFault(Object subnetGroupNotFoundFault) {
         this.subnetGroupNotFoundFault = subnetGroupNotFoundFault;
         return this;
     }
     
+    public DeleteSubnetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

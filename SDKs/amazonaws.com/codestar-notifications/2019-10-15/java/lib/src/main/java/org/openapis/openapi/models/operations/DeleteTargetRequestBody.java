@@ -15,6 +15,7 @@ public class DeleteTargetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceUnsubscribeAll")
     public Boolean forceUnsubscribeAll;
+
     public DeleteTargetRequestBody withForceUnsubscribeAll(Boolean forceUnsubscribeAll) {
         this.forceUnsubscribeAll = forceUnsubscribeAll;
         return this;
@@ -25,9 +26,13 @@ public class DeleteTargetRequestBody {
      */
     @JsonProperty("TargetAddress")
     public String targetAddress;
+
     public DeleteTargetRequestBody withTargetAddress(String targetAddress) {
         this.targetAddress = targetAddress;
         return this;
     }
     
+    public DeleteTargetRequestBody(@JsonProperty("TargetAddress") String targetAddress) {
+        this.targetAddress = targetAddress;
+  }
 }

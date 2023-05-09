@@ -12,6 +12,7 @@ public class DisruptionsGetAllDisruptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public DisruptionsGetAllDisruptionsRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +23,7 @@ public class DisruptionsGetAllDisruptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disruption_modes")
     public DisruptionsGetAllDisruptionsDisruptionModesEnum[] disruptionModes;
+
     public DisruptionsGetAllDisruptionsRequest withDisruptionModes(DisruptionsGetAllDisruptionsDisruptionModesEnum[] disruptionModes) {
         this.disruptionModes = disruptionModes;
         return this;
@@ -32,6 +34,7 @@ public class DisruptionsGetAllDisruptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disruption_status")
     public DisruptionsGetAllDisruptionsDisruptionStatusEnum disruptionStatus;
+
     public DisruptionsGetAllDisruptionsRequest withDisruptionStatus(DisruptionsGetAllDisruptionsDisruptionStatusEnum disruptionStatus) {
         this.disruptionStatus = disruptionStatus;
         return this;
@@ -42,6 +45,7 @@ public class DisruptionsGetAllDisruptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_types")
     public DisruptionsGetAllDisruptionsRouteTypesEnum[] routeTypes;
+
     public DisruptionsGetAllDisruptionsRequest withRouteTypes(DisruptionsGetAllDisruptionsRouteTypesEnum[] routeTypes) {
         this.routeTypes = routeTypes;
         return this;
@@ -52,6 +56,7 @@ public class DisruptionsGetAllDisruptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public DisruptionsGetAllDisruptionsRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -62,9 +67,11 @@ public class DisruptionsGetAllDisruptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DisruptionsGetAllDisruptionsRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DisruptionsGetAllDisruptionsRequest(){}
 }

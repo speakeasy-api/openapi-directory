@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservedDBInstancesOfferingMessage {
     
     public String marker;
+
     public ReservedDBInstancesOfferingMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class ReservedDBInstancesOfferingMessage {
     
     
     public ReservedDBInstancesOfferingList[] reservedDBInstancesOfferings;
+
     public ReservedDBInstancesOfferingMessage withReservedDBInstancesOfferings(ReservedDBInstancesOfferingList[] reservedDBInstancesOfferings) {
         this.reservedDBInstancesOfferings = reservedDBInstancesOfferings;
         return this;
     }
     
+    public ReservedDBInstancesOfferingMessage(){}
 }

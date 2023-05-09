@@ -22,6 +22,7 @@ public class LicenseConfigurationUsage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AssociationTime")
     public OffsetDateTime associationTime;
+
     public LicenseConfigurationUsage withAssociationTime(OffsetDateTime associationTime) {
         this.associationTime = associationTime;
         return this;
@@ -30,6 +31,7 @@ public class LicenseConfigurationUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedLicenses")
     public Long consumedLicenses;
+
     public LicenseConfigurationUsage withConsumedLicenses(Long consumedLicenses) {
         this.consumedLicenses = consumedLicenses;
         return this;
@@ -38,6 +40,7 @@ public class LicenseConfigurationUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public LicenseConfigurationUsage withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -46,6 +49,7 @@ public class LicenseConfigurationUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceOwnerId")
     public String resourceOwnerId;
+
     public LicenseConfigurationUsage withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -54,6 +58,7 @@ public class LicenseConfigurationUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceStatus")
     public String resourceStatus;
+
     public LicenseConfigurationUsage withResourceStatus(String resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -62,9 +67,11 @@ public class LicenseConfigurationUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public LicenseConfigurationUsage withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public LicenseConfigurationUsage(){}
 }

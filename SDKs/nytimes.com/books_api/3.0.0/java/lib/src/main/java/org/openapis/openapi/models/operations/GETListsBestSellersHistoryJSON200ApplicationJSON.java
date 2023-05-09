@@ -12,6 +12,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -20,6 +21,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_results")
     public Long numResults;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSON withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -28,6 +30,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults[] results;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSON withResults(GETListsBestSellersHistoryJSON200ApplicationJSONResults[] results) {
         this.results = results;
         return this;
@@ -36,9 +39,11 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETListsBestSellersHistoryJSON200ApplicationJSON(){}
 }

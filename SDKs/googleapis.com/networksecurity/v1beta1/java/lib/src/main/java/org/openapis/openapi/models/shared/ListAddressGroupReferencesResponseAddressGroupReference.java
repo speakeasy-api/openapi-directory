@@ -18,6 +18,7 @@ public class ListAddressGroupReferencesResponseAddressGroupReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicy")
     public String firewallPolicy;
+
     public ListAddressGroupReferencesResponseAddressGroupReference withFirewallPolicy(String firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -29,9 +30,11 @@ public class ListAddressGroupReferencesResponseAddressGroupReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulePriority")
     public Integer rulePriority;
+
     public ListAddressGroupReferencesResponseAddressGroupReference withRulePriority(Integer rulePriority) {
         this.rulePriority = rulePriority;
         return this;
     }
     
+    public ListAddressGroupReferencesResponseAddressGroupReference(){}
 }

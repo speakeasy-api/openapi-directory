@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListReposStarredByUserRequest {
@@ -12,6 +13,7 @@ public class ActivityListReposStarredByUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public ActivityListReposStarredByUserRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +24,7 @@ public class ActivityListReposStarredByUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActivityListReposStarredByUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ActivityListReposStarredByUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActivityListReposStarredByUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class ActivityListReposStarredByUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public org.openapis.openapi.models.shared.SortEnum sort;
+
     public ActivityListReposStarredByUserRequest withSort(org.openapis.openapi.models.shared.SortEnum sort) {
         this.sort = sort;
         return this;
@@ -52,9 +57,13 @@ public class ActivityListReposStarredByUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public ActivityListReposStarredByUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ActivityListReposStarredByUserRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

@@ -18,6 +18,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Service withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public Endpoint[] endpoints;
+
     public Service withEndpoints(Endpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -40,6 +42,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public Service withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Service withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Service withUid(String uid) {
         this.uid = uid;
         return this;
@@ -73,9 +78,11 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Service withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Service(){}
 }

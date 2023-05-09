@@ -10,45 +10,53 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Statistics {
     /**
-     * Guarda siempre este valor, tanto si la conexi\u00f3n es correcta como si no. Es necesario para obtener soporte
+     * Guarda siempre este valor, tanto si la conexión es correcta como si no. Es necesario para obtener soporte
      */
     @JsonProperty("SESSION")
     public String session;
+
     public Statistics withSession(String session) {
         this.session = session;
         return this;
     }
     
     /**
-     * Duraci\u00f3n de la ejecuci\u00f3n
+     * Duración de la ejecución
      */
     @JsonProperty("execution_time")
     public Double executionTime;
+
     public Statistics withExecutionTime(Double executionTime) {
         this.executionTime = executionTime;
         return this;
     }
     
     /**
-     * El valor vendr\u00e1 indicado cuando se haya invocado a la API a trav\u00e9s del Widget que proporciona Wealth Reader. Para saber m\u00e1s sobre este tipo de integraci\u00f3n, visita: https://docs-es.wealthreader.com/
+     * El valor vendrá indicado cuando se haya invocado a la API a través del Widget que proporciona Wealth Reader. Para saber más sobre este tipo de integración, visita: https://docs-es.wealthreader.com/
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation_id")
     public String operationId;
+
     public Statistics withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
     /**
-     * El valor vendr\u00e1 indicado cuando se ha pedido la custodia de credenciales con la opci\u00f3n tokenize=true
+     * El valor vendrá indicado cuando se ha pedido la custodia de credenciales con la opción tokenize=true
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public Statistics withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public Statistics(@JsonProperty("SESSION") String session, @JsonProperty("execution_time") Double executionTime) {
+        this.session = session;
+        this.executionTime = executionTime;
+  }
 }

@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBatchJobExecutionsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListBatchJobExecutionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -17,6 +19,7 @@ public class ListBatchJobExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListBatchJobExecutionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -24,6 +27,7 @@ public class ListBatchJobExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListBatchJobExecutionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -31,6 +35,7 @@ public class ListBatchJobExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListBatchJobExecutionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -38,6 +43,7 @@ public class ListBatchJobExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListBatchJobExecutionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -45,6 +51,7 @@ public class ListBatchJobExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListBatchJobExecutionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -52,6 +59,7 @@ public class ListBatchJobExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListBatchJobExecutionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -62,6 +70,7 @@ public class ListBatchJobExecutionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
     public String applicationId;
+
     public ListBatchJobExecutionsRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -72,6 +81,7 @@ public class ListBatchJobExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=executionIds")
     public String[] executionIds;
+
     public ListBatchJobExecutionsRequest withExecutionIds(String[] executionIds) {
         this.executionIds = executionIds;
         return this;
@@ -82,6 +92,7 @@ public class ListBatchJobExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jobName")
     public String jobName;
+
     public ListBatchJobExecutionsRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -92,6 +103,7 @@ public class ListBatchJobExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListBatchJobExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +114,7 @@ public class ListBatchJobExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListBatchJobExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -112,6 +125,7 @@ public class ListBatchJobExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startedAfter")
     public OffsetDateTime startedAfter;
+
     public ListBatchJobExecutionsRequest withStartedAfter(OffsetDateTime startedAfter) {
         this.startedAfter = startedAfter;
         return this;
@@ -122,6 +136,7 @@ public class ListBatchJobExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startedBefore")
     public OffsetDateTime startedBefore;
+
     public ListBatchJobExecutionsRequest withStartedBefore(OffsetDateTime startedBefore) {
         this.startedBefore = startedBefore;
         return this;
@@ -132,9 +147,13 @@ public class ListBatchJobExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ListBatchJobExecutionsStatusEnum status;
+
     public ListBatchJobExecutionsRequest withStatus(ListBatchJobExecutionsStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListBatchJobExecutionsRequest(@JsonProperty("applicationId") String applicationId) {
+        this.applicationId = applicationId;
+  }
 }

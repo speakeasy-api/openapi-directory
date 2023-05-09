@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApplyEnvironmentManagedActionResult {
     
     public String actionDescription;
+
     public ApplyEnvironmentManagedActionResult withActionDescription(String actionDescription) {
         this.actionDescription = actionDescription;
         return this;
@@ -19,6 +20,7 @@ public class ApplyEnvironmentManagedActionResult {
     
     
     public String actionId;
+
     public ApplyEnvironmentManagedActionResult withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -26,6 +28,7 @@ public class ApplyEnvironmentManagedActionResult {
     
     
     public ActionTypeEnum actionType;
+
     public ApplyEnvironmentManagedActionResult withActionType(ActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -33,9 +36,11 @@ public class ApplyEnvironmentManagedActionResult {
     
     
     public String status;
+
     public ApplyEnvironmentManagedActionResult withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ApplyEnvironmentManagedActionResult(){}
 }

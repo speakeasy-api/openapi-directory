@@ -65,13 +65,11 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -133,13 +131,11 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

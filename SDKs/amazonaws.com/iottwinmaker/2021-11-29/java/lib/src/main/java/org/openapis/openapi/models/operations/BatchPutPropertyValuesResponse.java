@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchPutPropertyValuesResponse {
@@ -12,6 +13,7 @@ public class BatchPutPropertyValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPutPropertyValuesResponse batchPutPropertyValuesResponse;
+
     public BatchPutPropertyValuesResponse withBatchPutPropertyValuesResponse(org.openapis.openapi.models.shared.BatchPutPropertyValuesResponse batchPutPropertyValuesResponse) {
         this.batchPutPropertyValuesResponse = batchPutPropertyValuesResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchPutPropertyValuesResponse {
     
     
     public String contentType;
+
     public BatchPutPropertyValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchPutPropertyValuesResponse {
      */
     
     public Object internalServerException;
+
     public BatchPutPropertyValuesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class BatchPutPropertyValuesResponse {
     
     
     public Integer statusCode;
+
     public BatchPutPropertyValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class BatchPutPropertyValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchPutPropertyValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class BatchPutPropertyValuesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchPutPropertyValuesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class BatchPutPropertyValuesResponse {
      */
     
     public Object throttlingException;
+
     public BatchPutPropertyValuesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class BatchPutPropertyValuesResponse {
      */
     
     public Object validationException;
+
     public BatchPutPropertyValuesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchPutPropertyValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class AggregationResultCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public AggregationResultCount withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AggregationResultCount(){}
 }

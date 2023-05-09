@@ -12,6 +12,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addColumns")
     public ColumnDefinition[] addColumns;
+
     public UpdateTableRequest withAddColumns(ColumnDefinition[] addColumns) {
         this.addColumns = addColumns;
         return this;
@@ -20,6 +21,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacitySpecification")
     public CapacitySpecification capacitySpecification;
+
     public UpdateTableRequest withCapacitySpecification(CapacitySpecification capacitySpecification) {
         this.capacitySpecification = capacitySpecification;
         return this;
@@ -28,6 +30,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSideTimestamps")
     public ClientSideTimestamps clientSideTimestamps;
+
     public UpdateTableRequest withClientSideTimestamps(ClientSideTimestamps clientSideTimestamps) {
         this.clientSideTimestamps = clientSideTimestamps;
         return this;
@@ -36,6 +39,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTimeToLive")
     public Long defaultTimeToLive;
+
     public UpdateTableRequest withDefaultTimeToLive(Long defaultTimeToLive) {
         this.defaultTimeToLive = defaultTimeToLive;
         return this;
@@ -44,6 +48,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionSpecification")
     public EncryptionSpecification encryptionSpecification;
+
     public UpdateTableRequest withEncryptionSpecification(EncryptionSpecification encryptionSpecification) {
         this.encryptionSpecification = encryptionSpecification;
         return this;
@@ -51,6 +56,7 @@ public class UpdateTableRequest {
     
     @JsonProperty("keyspaceName")
     public String keyspaceName;
+
     public UpdateTableRequest withKeyspaceName(String keyspaceName) {
         this.keyspaceName = keyspaceName;
         return this;
@@ -59,6 +65,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointInTimeRecovery")
     public PointInTimeRecovery pointInTimeRecovery;
+
     public UpdateTableRequest withPointInTimeRecovery(PointInTimeRecovery pointInTimeRecovery) {
         this.pointInTimeRecovery = pointInTimeRecovery;
         return this;
@@ -66,6 +73,7 @@ public class UpdateTableRequest {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public UpdateTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -74,9 +82,14 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public TimeToLive ttl;
+
     public UpdateTableRequest withTtl(TimeToLive ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public UpdateTableRequest(@JsonProperty("keyspaceName") String keyspaceName, @JsonProperty("tableName") String tableName) {
+        this.keyspaceName = keyspaceName;
+        this.tableName = tableName;
+  }
 }

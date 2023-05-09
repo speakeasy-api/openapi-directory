@@ -61,10 +61,8 @@ public class Imports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -101,11 +99,9 @@ public class Imports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2ImportsJsonResponse res = new org.openapis.openapi.models.operations.GetV2ImportsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2ImportsJsonResponse res = new org.openapis.openapi.models.operations.GetV2ImportsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +138,9 @@ public class Imports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2ImportsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2ImportsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2ImportsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2ImportsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class Imports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2ImportsJsonResponse res = new org.openapis.openapi.models.operations.PostV2ImportsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV2ImportsJsonResponse res = new org.openapis.openapi.models.operations.PostV2ImportsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,11 +218,9 @@ public class Imports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2ImportsIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2ImportsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutV2ImportsIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2ImportsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

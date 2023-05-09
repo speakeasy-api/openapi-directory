@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiTriggerEventJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer;
+
     public OrderApiTriggerEventJsonRequest withRechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer) {
         this.rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer = rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer;
         return this;
@@ -19,9 +21,14 @@ public class OrderApiTriggerEventJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiTriggerEventJsonRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OrderApiTriggerEventJsonRequest(@JsonProperty("Rechnungsdruck.WebApp.Controllers.Api.OrderApiController.TriggerEventContainer") org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer, @JsonProperty("id") Long id) {
+        this.rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer = rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer;
+        this.id = id;
+  }
 }

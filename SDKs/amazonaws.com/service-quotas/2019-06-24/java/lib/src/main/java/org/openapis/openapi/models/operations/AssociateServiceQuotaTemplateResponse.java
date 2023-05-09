@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateServiceQuotaTemplateResponse {
@@ -12,6 +13,7 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public Object awsServiceAccessNotEnabledException;
+
     public AssociateServiceQuotaTemplateResponse withAWSServiceAccessNotEnabledException(Object awsServiceAccessNotEnabledException) {
         this.awsServiceAccessNotEnabledException = awsServiceAccessNotEnabledException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateServiceQuotaTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public java.util.Map<String, Object> associateServiceQuotaTemplateResponse;
+
     public AssociateServiceQuotaTemplateResponse withAssociateServiceQuotaTemplateResponse(java.util.Map<String, Object> associateServiceQuotaTemplateResponse) {
         this.associateServiceQuotaTemplateResponse = associateServiceQuotaTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class AssociateServiceQuotaTemplateResponse {
     
     
     public String contentType;
+
     public AssociateServiceQuotaTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public Object dependencyAccessDeniedException;
+
     public AssociateServiceQuotaTemplateResponse withDependencyAccessDeniedException(Object dependencyAccessDeniedException) {
         this.dependencyAccessDeniedException = dependencyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public Object noAvailableOrganizationException;
+
     public AssociateServiceQuotaTemplateResponse withNoAvailableOrganizationException(Object noAvailableOrganizationException) {
         this.noAvailableOrganizationException = noAvailableOrganizationException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public Object organizationNotInAllFeaturesModeException;
+
     public AssociateServiceQuotaTemplateResponse withOrganizationNotInAllFeaturesModeException(Object organizationNotInAllFeaturesModeException) {
         this.organizationNotInAllFeaturesModeException = organizationNotInAllFeaturesModeException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateServiceQuotaTemplateResponse {
     
     
     public Integer statusCode;
+
     public AssociateServiceQuotaTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateServiceQuotaTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateServiceQuotaTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public Object serviceException;
+
     public AssociateServiceQuotaTemplateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,6 +114,7 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public Object templatesNotAvailableInRegionException;
+
     public AssociateServiceQuotaTemplateResponse withTemplatesNotAvailableInRegionException(Object templatesNotAvailableInRegionException) {
         this.templatesNotAvailableInRegionException = templatesNotAvailableInRegionException;
         return this;
@@ -113,9 +125,14 @@ public class AssociateServiceQuotaTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AssociateServiceQuotaTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public AssociateServiceQuotaTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

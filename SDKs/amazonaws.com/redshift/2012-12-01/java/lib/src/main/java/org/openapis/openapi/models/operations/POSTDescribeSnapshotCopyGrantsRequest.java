@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDescribeSnapshotCopyGrantsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDescribeSnapshotCopyGrantsActionEnum action;
+
     public POSTDescribeSnapshotCopyGrantsRequest withAction(POSTDescribeSnapshotCopyGrantsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public POSTDescribeSnapshotCopyGrantsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public String maxRecords;
+
     public POSTDescribeSnapshotCopyGrantsRequest withMaxRecords(String maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -36,6 +40,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDescribeSnapshotCopyGrantsRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -43,6 +48,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDescribeSnapshotCopyGrantsVersionEnum version;
+
     public POSTDescribeSnapshotCopyGrantsRequest withVersion(POSTDescribeSnapshotCopyGrantsVersionEnum version) {
         this.version = version;
         return this;
@@ -50,6 +56,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDescribeSnapshotCopyGrantsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -57,6 +64,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDescribeSnapshotCopyGrantsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -64,6 +72,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDescribeSnapshotCopyGrantsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -71,6 +80,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDescribeSnapshotCopyGrantsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -78,6 +88,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDescribeSnapshotCopyGrantsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -85,6 +96,7 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDescribeSnapshotCopyGrantsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -92,9 +104,14 @@ public class POSTDescribeSnapshotCopyGrantsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDescribeSnapshotCopyGrantsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDescribeSnapshotCopyGrantsRequest(@JsonProperty("Action") POSTDescribeSnapshotCopyGrantsActionEnum action, @JsonProperty("Version") POSTDescribeSnapshotCopyGrantsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

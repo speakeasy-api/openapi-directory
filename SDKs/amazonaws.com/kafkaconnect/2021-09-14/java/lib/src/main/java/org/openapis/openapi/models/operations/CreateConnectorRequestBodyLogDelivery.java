@@ -15,9 +15,11 @@ public class CreateConnectorRequestBodyLogDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerLogDelivery")
     public org.openapis.openapi.models.shared.WorkerLogDelivery workerLogDelivery;
+
     public CreateConnectorRequestBodyLogDelivery withWorkerLogDelivery(org.openapis.openapi.models.shared.WorkerLogDelivery workerLogDelivery) {
         this.workerLogDelivery = workerLogDelivery;
         return this;
     }
     
+    public CreateConnectorRequestBodyLogDelivery(){}
 }

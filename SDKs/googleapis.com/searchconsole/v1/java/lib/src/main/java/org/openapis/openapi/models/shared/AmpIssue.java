@@ -18,6 +18,7 @@ public class AmpIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueMessage")
     public String issueMessage;
+
     public AmpIssue withIssueMessage(String issueMessage) {
         this.issueMessage = issueMessage;
         return this;
@@ -29,9 +30,11 @@ public class AmpIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public AmpIssueSeverityEnum severity;
+
     public AmpIssue withSeverity(AmpIssueSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public AmpIssue(){}
 }

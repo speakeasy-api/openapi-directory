@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartMatchBackfillResponse {
     
     public String contentType;
+
     public StartMatchBackfillResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartMatchBackfillResponse {
      */
     
     public Object internalServiceException;
+
     public StartMatchBackfillResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class StartMatchBackfillResponse {
      */
     
     public Object invalidRequestException;
+
     public StartMatchBackfillResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartMatchBackfillResponse {
      */
     
     public Object notFoundException;
+
     public StartMatchBackfillResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartMatchBackfillResponse {
      */
     
     public org.openapis.openapi.models.shared.StartMatchBackfillOutput startMatchBackfillOutput;
+
     public StartMatchBackfillResponse withStartMatchBackfillOutput(org.openapis.openapi.models.shared.StartMatchBackfillOutput startMatchBackfillOutput) {
         this.startMatchBackfillOutput = startMatchBackfillOutput;
         return this;
@@ -56,6 +62,7 @@ public class StartMatchBackfillResponse {
     
     
     public Integer statusCode;
+
     public StartMatchBackfillResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartMatchBackfillResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartMatchBackfillResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartMatchBackfillResponse {
      */
     
     public Object unsupportedRegionException;
+
     public StartMatchBackfillResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public StartMatchBackfillResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

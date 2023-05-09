@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReservationById200ApplicationJSONSlaRequestItem1 {
     @JsonProperty("additionalHandlingTime")
     public String additionalHandlingTime;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withAdditionalHandlingTime(String additionalHandlingTime) {
         this.additionalHandlingTime = additionalHandlingTime;
         return this;
@@ -16,6 +17,7 @@ public class ReservationById200ApplicationJSONSlaRequestItem1 {
     
     @JsonProperty("dimension")
     public ReservationById200ApplicationJSONSlaRequestItem1Dimension1 dimension;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withDimension(ReservationById200ApplicationJSONSlaRequestItem1Dimension1 dimension) {
         this.dimension = dimension;
         return this;
@@ -23,6 +25,7 @@ public class ReservationById200ApplicationJSONSlaRequestItem1 {
     
     @JsonProperty("groupItemId")
     public String groupItemId;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withGroupItemId(String groupItemId) {
         this.groupItemId = groupItemId;
         return this;
@@ -30,6 +33,7 @@ public class ReservationById200ApplicationJSONSlaRequestItem1 {
     
     @JsonProperty("id")
     public String id;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +41,7 @@ public class ReservationById200ApplicationJSONSlaRequestItem1 {
     
     @JsonProperty("kitItem")
     public String[] kitItem;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withKitItem(String[] kitItem) {
         this.kitItem = kitItem;
         return this;
@@ -44,6 +49,7 @@ public class ReservationById200ApplicationJSONSlaRequestItem1 {
     
     @JsonProperty("modal")
     public String modal;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withModal(String modal) {
         this.modal = modal;
         return this;
@@ -51,6 +57,7 @@ public class ReservationById200ApplicationJSONSlaRequestItem1 {
     
     @JsonProperty("price")
     public Double price;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withPrice(Double price) {
         this.price = price;
         return this;
@@ -58,6 +65,7 @@ public class ReservationById200ApplicationJSONSlaRequestItem1 {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -65,9 +73,21 @@ public class ReservationById200ApplicationJSONSlaRequestItem1 {
     
     @JsonProperty("unlimitedQuantity")
     public Boolean unlimitedQuantity;
+
     public ReservationById200ApplicationJSONSlaRequestItem1 withUnlimitedQuantity(Boolean unlimitedQuantity) {
         this.unlimitedQuantity = unlimitedQuantity;
         return this;
     }
     
+    public ReservationById200ApplicationJSONSlaRequestItem1(@JsonProperty("additionalHandlingTime") String additionalHandlingTime, @JsonProperty("dimension") ReservationById200ApplicationJSONSlaRequestItem1Dimension1 dimension, @JsonProperty("groupItemId") String groupItemId, @JsonProperty("id") String id, @JsonProperty("kitItem") String[] kitItem, @JsonProperty("modal") String modal, @JsonProperty("price") Double price, @JsonProperty("quantity") Integer quantity, @JsonProperty("unlimitedQuantity") Boolean unlimitedQuantity) {
+        this.additionalHandlingTime = additionalHandlingTime;
+        this.dimension = dimension;
+        this.groupItemId = groupItemId;
+        this.id = id;
+        this.kitItem = kitItem;
+        this.modal = modal;
+        this.price = price;
+        this.quantity = quantity;
+        this.unlimitedQuantity = unlimitedQuantity;
+  }
 }

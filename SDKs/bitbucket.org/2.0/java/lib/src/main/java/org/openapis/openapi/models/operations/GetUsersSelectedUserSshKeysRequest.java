@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersSelectedUserSshKeysRequest {
@@ -14,9 +15,13 @@ public class GetUsersSelectedUserSshKeysRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
     public String selectedUser;
+
     public GetUsersSelectedUserSshKeysRequest withSelectedUser(String selectedUser) {
         this.selectedUser = selectedUser;
         return this;
     }
     
+    public GetUsersSelectedUserSshKeysRequest(@JsonProperty("selected_user") String selectedUser) {
+        this.selectedUser = selectedUser;
+  }
 }

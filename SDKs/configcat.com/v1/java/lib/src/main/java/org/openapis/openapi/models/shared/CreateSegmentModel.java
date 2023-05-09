@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSegmentModel {
     @JsonProperty("comparator")
     public RolloutRuleComparatorEnum comparator;
+
     public CreateSegmentModel withComparator(RolloutRuleComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -18,6 +19,7 @@ public class CreateSegmentModel {
     
     @JsonProperty("comparisonAttribute")
     public String comparisonAttribute;
+
     public CreateSegmentModel withComparisonAttribute(String comparisonAttribute) {
         this.comparisonAttribute = comparisonAttribute;
         return this;
@@ -25,6 +27,7 @@ public class CreateSegmentModel {
     
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public CreateSegmentModel withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
@@ -33,6 +36,7 @@ public class CreateSegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSegmentModel withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +44,16 @@ public class CreateSegmentModel {
     
     @JsonProperty("name")
     public String name;
+
     public CreateSegmentModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateSegmentModel(@JsonProperty("comparator") RolloutRuleComparatorEnum comparator, @JsonProperty("comparisonAttribute") String comparisonAttribute, @JsonProperty("comparisonValue") String comparisonValue, @JsonProperty("name") String name) {
+        this.comparator = comparator;
+        this.comparisonAttribute = comparisonAttribute;
+        this.comparisonValue = comparisonValue;
+        this.name = name;
+  }
 }

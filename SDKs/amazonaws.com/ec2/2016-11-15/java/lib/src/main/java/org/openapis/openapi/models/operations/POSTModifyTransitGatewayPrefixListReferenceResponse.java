@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTModifyTransitGatewayPrefixListReferenceResponse {
     
     public byte[] body;
+
     public POSTModifyTransitGatewayPrefixListReferenceResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTModifyTransitGatewayPrefixListReferenceResponse {
     
     
     public String contentType;
+
     public POSTModifyTransitGatewayPrefixListReferenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTModifyTransitGatewayPrefixListReferenceResponse {
     
     
     public Integer statusCode;
+
     public POSTModifyTransitGatewayPrefixListReferenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTModifyTransitGatewayPrefixListReferenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTModifyTransitGatewayPrefixListReferenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTModifyTransitGatewayPrefixListReferenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

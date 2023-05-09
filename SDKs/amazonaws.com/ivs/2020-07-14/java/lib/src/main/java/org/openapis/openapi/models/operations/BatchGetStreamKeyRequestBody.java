@@ -12,9 +12,13 @@ public class BatchGetStreamKeyRequestBody {
      */
     @JsonProperty("arns")
     public String[] arns;
+
     public BatchGetStreamKeyRequestBody withArns(String[] arns) {
         this.arns = arns;
         return this;
     }
     
+    public BatchGetStreamKeyRequestBody(@JsonProperty("arns") String[] arns) {
+        this.arns = arns;
+  }
 }

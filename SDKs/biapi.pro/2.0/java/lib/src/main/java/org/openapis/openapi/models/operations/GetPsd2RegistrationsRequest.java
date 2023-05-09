@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetPsd2RegistrationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetPsd2RegistrationsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
     }
     
+    public GetPsd2RegistrationsRequest(){}
 }

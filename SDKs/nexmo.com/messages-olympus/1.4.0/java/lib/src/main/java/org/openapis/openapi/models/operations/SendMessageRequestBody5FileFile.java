@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendMessageRequestBody5FileFile {
     @JsonProperty("url")
     public String url;
+
     public SendMessageRequestBody5FileFile withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SendMessageRequestBody5FileFile(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetAllowedActionsEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminSetAllowedActionsEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminSetAllowedActionsEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -19,9 +21,14 @@ public class EnterpriseAdminSetAllowedActionsEnterpriseRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SelectedActions selectedActions;
+
     public EnterpriseAdminSetAllowedActionsEnterpriseRequest withSelectedActions(org.openapis.openapi.models.shared.SelectedActions selectedActions) {
         this.selectedActions = selectedActions;
         return this;
     }
     
+    public EnterpriseAdminSetAllowedActionsEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("selected-actions") org.openapis.openapi.models.shared.SelectedActions selectedActions) {
+        this.enterprise = enterprise;
+        this.selectedActions = selectedActions;
+  }
 }

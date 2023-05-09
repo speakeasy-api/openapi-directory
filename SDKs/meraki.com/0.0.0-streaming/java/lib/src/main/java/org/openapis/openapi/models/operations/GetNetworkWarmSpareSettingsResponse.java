@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkWarmSpareSettingsResponse {
     
     public String contentType;
+
     public GetNetworkWarmSpareSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkWarmSpareSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkWarmSpareSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkWarmSpareSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkWarmSpareSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkWarmSpareSettingsResponse {
      */
     
     public java.util.Map<String, Object> getNetworkWarmSpareSettings200ApplicationJSONObject;
+
     public GetNetworkWarmSpareSettingsResponse withGetNetworkWarmSpareSettings200ApplicationJSONObject(java.util.Map<String, Object> getNetworkWarmSpareSettings200ApplicationJSONObject) {
         this.getNetworkWarmSpareSettings200ApplicationJSONObject = getNetworkWarmSpareSettings200ApplicationJSONObject;
         return this;
     }
     
+    public GetNetworkWarmSpareSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

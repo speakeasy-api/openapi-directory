@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveCustomFieldSettingForPortfolioResponse {
     
     public String contentType;
+
     public RemoveCustomFieldSettingForPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveCustomFieldSettingForPortfolioResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public RemoveCustomFieldSettingForPortfolioResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class RemoveCustomFieldSettingForPortfolioResponse {
     
     
     public Integer statusCode;
+
     public RemoveCustomFieldSettingForPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RemoveCustomFieldSettingForPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveCustomFieldSettingForPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class RemoveCustomFieldSettingForPortfolioResponse {
      */
     
     public RemoveCustomFieldSettingForPortfolio200ApplicationJSON removeCustomFieldSettingForPortfolio200ApplicationJSONObject;
+
     public RemoveCustomFieldSettingForPortfolioResponse withRemoveCustomFieldSettingForPortfolio200ApplicationJSONObject(RemoveCustomFieldSettingForPortfolio200ApplicationJSON removeCustomFieldSettingForPortfolio200ApplicationJSONObject) {
         this.removeCustomFieldSettingForPortfolio200ApplicationJSONObject = removeCustomFieldSettingForPortfolio200ApplicationJSONObject;
         return this;
     }
     
+    public RemoveCustomFieldSettingForPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

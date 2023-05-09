@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
@@ -12,6 +13,7 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public UntagResourceResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UntagResourceResponse {
     
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public UntagResourceResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public UntagResourceResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidTaggingRequestException invalidTaggingRequestException;
+
     public UntagResourceResponse withInvalidTaggingRequestException(org.openapis.openapi.models.shared.InvalidTaggingRequestException invalidTaggingRequestException) {
         this.invalidTaggingRequestException = invalidTaggingRequestException;
         return this;
@@ -59,6 +65,7 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public UntagResourceResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public UntagResourceResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public UntagResourceResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -86,6 +95,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UntagResourceResponse {
      */
     
     public java.util.Map<String, Object> untagResourceResponse;
+
     public UntagResourceResponse withUntagResourceResponse(java.util.Map<String, Object> untagResourceResponse) {
         this.untagResourceResponse = untagResourceResponse;
         return this;
@@ -113,9 +125,14 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public UntagResourceResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

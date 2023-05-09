@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTodGettimeRequest {
@@ -12,6 +13,7 @@ public class ProtocolTodGettimeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolTodGettimeRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolTodGettimeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numRetries")
     public Integer numRetries;
+
     public ProtocolTodGettimeRequest withNumRetries(Integer numRetries) {
         this.numRetries = numRetries;
         return this;
@@ -32,6 +35,7 @@ public class ProtocolTodGettimeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portNum")
     public Integer portNum;
+
     public ProtocolTodGettimeRequest withPortNum(Integer portNum) {
         this.portNum = portNum;
         return this;
@@ -42,6 +46,7 @@ public class ProtocolTodGettimeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptName")
     public String scriptName;
+
     public ProtocolTodGettimeRequest withScriptName(String scriptName) {
         this.scriptName = scriptName;
         return this;
@@ -52,6 +57,7 @@ public class ProtocolTodGettimeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serverAddr")
     public String serverAddr;
+
     public ProtocolTodGettimeRequest withServerAddr(String serverAddr) {
         this.serverAddr = serverAddr;
         return this;
@@ -62,9 +68,18 @@ public class ProtocolTodGettimeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timeSec")
     public Integer timeSec;
+
     public ProtocolTodGettimeRequest withTimeSec(Integer timeSec) {
         this.timeSec = timeSec;
         return this;
     }
     
+    public ProtocolTodGettimeRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("numRetries") Integer numRetries, @JsonProperty("portNum") Integer portNum, @JsonProperty("scriptName") String scriptName, @JsonProperty("serverAddr") String serverAddr, @JsonProperty("timeSec") Integer timeSec) {
+        this.agentNum = agentNum;
+        this.numRetries = numRetries;
+        this.portNum = portNum;
+        this.scriptName = scriptName;
+        this.serverAddr = serverAddr;
+        this.timeSec = timeSec;
+  }
 }

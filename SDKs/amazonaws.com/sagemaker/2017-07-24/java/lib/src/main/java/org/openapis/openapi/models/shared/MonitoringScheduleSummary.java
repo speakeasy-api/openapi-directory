@@ -21,6 +21,7 @@ public class MonitoringScheduleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MonitoringScheduleSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class MonitoringScheduleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public MonitoringScheduleSummary withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -38,6 +40,7 @@ public class MonitoringScheduleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public MonitoringScheduleSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -46,6 +49,7 @@ public class MonitoringScheduleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringJobDefinitionName")
     public String monitoringJobDefinitionName;
+
     public MonitoringScheduleSummary withMonitoringJobDefinitionName(String monitoringJobDefinitionName) {
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         return this;
@@ -53,6 +57,7 @@ public class MonitoringScheduleSummary {
     
     @JsonProperty("MonitoringScheduleArn")
     public String monitoringScheduleArn;
+
     public MonitoringScheduleSummary withMonitoringScheduleArn(String monitoringScheduleArn) {
         this.monitoringScheduleArn = monitoringScheduleArn;
         return this;
@@ -60,6 +65,7 @@ public class MonitoringScheduleSummary {
     
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public MonitoringScheduleSummary withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
@@ -67,6 +73,7 @@ public class MonitoringScheduleSummary {
     
     @JsonProperty("MonitoringScheduleStatus")
     public ScheduleStatusEnum monitoringScheduleStatus;
+
     public MonitoringScheduleSummary withMonitoringScheduleStatus(ScheduleStatusEnum monitoringScheduleStatus) {
         this.monitoringScheduleStatus = monitoringScheduleStatus;
         return this;
@@ -75,9 +82,17 @@ public class MonitoringScheduleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringType")
     public MonitoringTypeEnum monitoringType;
+
     public MonitoringScheduleSummary withMonitoringType(MonitoringTypeEnum monitoringType) {
         this.monitoringType = monitoringType;
         return this;
     }
     
+    public MonitoringScheduleSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("MonitoringScheduleArn") String monitoringScheduleArn, @JsonProperty("MonitoringScheduleName") String monitoringScheduleName, @JsonProperty("MonitoringScheduleStatus") ScheduleStatusEnum monitoringScheduleStatus) {
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+        this.monitoringScheduleArn = monitoringScheduleArn;
+        this.monitoringScheduleName = monitoringScheduleName;
+        this.monitoringScheduleStatus = monitoringScheduleStatus;
+  }
 }

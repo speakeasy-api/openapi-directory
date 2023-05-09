@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCiscoSwitchSnmpConfigResponse {
     
     public String contentType;
+
     public GetCiscoSwitchSnmpConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCiscoSwitchSnmpConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.SNMPConfig snmpConfig;
+
     public GetCiscoSwitchSnmpConfigResponse withSNMPConfig(org.openapis.openapi.models.shared.SNMPConfig snmpConfig) {
         this.snmpConfig = snmpConfig;
         return this;
@@ -26,6 +29,7 @@ public class GetCiscoSwitchSnmpConfigResponse {
     
     
     public Integer statusCode;
+
     public GetCiscoSwitchSnmpConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetCiscoSwitchSnmpConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCiscoSwitchSnmpConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCiscoSwitchSnmpConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

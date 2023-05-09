@@ -175,6 +175,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -212,7 +217,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAwsLogSourceResponse res = new org.openapis.openapi.models.operations.CreateAwsLogSourceResponse() {{
+        org.openapis.openapi.models.operations.CreateAwsLogSourceResponse res = new org.openapis.openapi.models.operations.CreateAwsLogSourceResponse(contentType, httpRes.statusCode()) {{
             createAwsLogSourceResponse = null;
             internalServerException = null;
             validationException = null;
@@ -221,8 +226,6 @@ public class SDK {
             resourceNotFoundException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -312,7 +315,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomLogSourceResponse res = new org.openapis.openapi.models.operations.CreateCustomLogSourceResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomLogSourceResponse res = new org.openapis.openapi.models.operations.CreateCustomLogSourceResponse(contentType, httpRes.statusCode()) {{
             createCustomLogSourceResponse = null;
             internalServerException = null;
             validationException = null;
@@ -322,8 +325,6 @@ public class SDK {
             resourceNotFoundException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,7 +421,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDatalakeResponse res = new org.openapis.openapi.models.operations.CreateDatalakeResponse() {{
+        org.openapis.openapi.models.operations.CreateDatalakeResponse res = new org.openapis.openapi.models.operations.CreateDatalakeResponse(contentType, httpRes.statusCode()) {{
             createDatalakeResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -430,8 +431,6 @@ public class SDK {
             accessDeniedException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,15 +527,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDatalakeAutoEnableResponse res = new org.openapis.openapi.models.operations.CreateDatalakeAutoEnableResponse() {{
+        org.openapis.openapi.models.operations.CreateDatalakeAutoEnableResponse res = new org.openapis.openapi.models.operations.CreateDatalakeAutoEnableResponse(contentType, httpRes.statusCode()) {{
             createDatalakeAutoEnableResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -612,15 +609,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDatalakeDelegatedAdminResponse res = new org.openapis.openapi.models.operations.CreateDatalakeDelegatedAdminResponse() {{
+        org.openapis.openapi.models.operations.CreateDatalakeDelegatedAdminResponse res = new org.openapis.openapi.models.operations.CreateDatalakeDelegatedAdminResponse(contentType, httpRes.statusCode()) {{
             createDatalakeDelegatedAdminResponse = null;
             internalServerException = null;
             validationException = null;
             throttlingException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -696,15 +691,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDatalakeExceptionsSubscriptionResponse res = new org.openapis.openapi.models.operations.CreateDatalakeExceptionsSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.CreateDatalakeExceptionsSubscriptionResponse res = new org.openapis.openapi.models.operations.CreateDatalakeExceptionsSubscriptionResponse(contentType, httpRes.statusCode()) {{
             createDatalakeExceptionsSubscriptionResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -780,7 +773,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubscriberResponse res = new org.openapis.openapi.models.operations.CreateSubscriberResponse() {{
+        org.openapis.openapi.models.operations.CreateSubscriberResponse res = new org.openapis.openapi.models.operations.CreateSubscriberResponse(contentType, httpRes.statusCode()) {{
             createSubscriberResponse = null;
             conflictSubscriptionException = null;
             internalServerException = null;
@@ -791,8 +784,6 @@ public class SDK {
             accountNotFoundException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -896,7 +887,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubscriptionNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.CreateSubscriptionNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.CreateSubscriptionNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.CreateSubscriptionNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             createSubscriptionNotificationConfigurationResponse = null;
             concurrentModificationException = null;
             internalServerException = null;
@@ -906,8 +897,6 @@ public class SDK {
             accountNotFoundException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1004,15 +993,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAwsLogSourceResponse res = new org.openapis.openapi.models.operations.DeleteAwsLogSourceResponse() {{
+        org.openapis.openapi.models.operations.DeleteAwsLogSourceResponse res = new org.openapis.openapi.models.operations.DeleteAwsLogSourceResponse(contentType, httpRes.statusCode()) {{
             deleteAwsLogSourceResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1089,7 +1076,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomLogSourceResponse res = new org.openapis.openapi.models.operations.DeleteCustomLogSourceResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomLogSourceResponse res = new org.openapis.openapi.models.operations.DeleteCustomLogSourceResponse(contentType, httpRes.statusCode()) {{
             deleteCustomLogSourceResponse = null;
             internalServerException = null;
             validationException = null;
@@ -1099,8 +1086,6 @@ public class SDK {
             resourceNotFoundException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1192,7 +1177,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDatalakeResponse res = new org.openapis.openapi.models.operations.DeleteDatalakeResponse() {{
+        org.openapis.openapi.models.operations.DeleteDatalakeResponse res = new org.openapis.openapi.models.operations.DeleteDatalakeResponse(contentType, httpRes.statusCode()) {{
             deleteDatalakeResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -1202,8 +1187,6 @@ public class SDK {
             accessDeniedException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1300,15 +1283,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDatalakeAutoEnableResponse res = new org.openapis.openapi.models.operations.DeleteDatalakeAutoEnableResponse() {{
+        org.openapis.openapi.models.operations.DeleteDatalakeAutoEnableResponse res = new org.openapis.openapi.models.operations.DeleteDatalakeAutoEnableResponse(contentType, httpRes.statusCode()) {{
             deleteDatalakeAutoEnableResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1379,15 +1360,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDatalakeDelegatedAdminResponse res = new org.openapis.openapi.models.operations.DeleteDatalakeDelegatedAdminResponse() {{
+        org.openapis.openapi.models.operations.DeleteDatalakeDelegatedAdminResponse res = new org.openapis.openapi.models.operations.DeleteDatalakeDelegatedAdminResponse(contentType, httpRes.statusCode()) {{
             deleteDatalakeDelegatedAdminResponse = null;
             internalServerException = null;
             validationException = null;
             throttlingException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1458,15 +1437,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDatalakeExceptionsSubscriptionResponse res = new org.openapis.openapi.models.operations.DeleteDatalakeExceptionsSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.DeleteDatalakeExceptionsSubscriptionResponse res = new org.openapis.openapi.models.operations.DeleteDatalakeExceptionsSubscriptionResponse(contentType, httpRes.statusCode()) {{
             deleteDatalakeExceptionsSubscriptionResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1543,7 +1520,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSubscriberResponse res = new org.openapis.openapi.models.operations.DeleteSubscriberResponse() {{
+        org.openapis.openapi.models.operations.DeleteSubscriberResponse res = new org.openapis.openapi.models.operations.DeleteSubscriberResponse(contentType, httpRes.statusCode()) {{
             deleteSubscriberResponse = null;
             concurrentModificationException = null;
             internalServerException = null;
@@ -1554,8 +1531,6 @@ public class SDK {
             accountNotFoundException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1654,7 +1629,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSubscriptionNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteSubscriptionNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteSubscriptionNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteSubscriptionNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             deleteSubscriptionNotificationConfigurationResponse = null;
             concurrentModificationException = null;
             internalServerException = null;
@@ -1664,8 +1639,6 @@ public class SDK {
             accountNotFoundException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1757,7 +1730,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatalakeResponse res = new org.openapis.openapi.models.operations.GetDatalakeResponse() {{
+        org.openapis.openapi.models.operations.GetDatalakeResponse res = new org.openapis.openapi.models.operations.GetDatalakeResponse(contentType, httpRes.statusCode()) {{
             getDatalakeResponse = null;
             internalServerException = null;
             validationException = null;
@@ -1765,8 +1738,6 @@ public class SDK {
             resourceNotFoundException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1844,15 +1815,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatalakeAutoEnableResponse res = new org.openapis.openapi.models.operations.GetDatalakeAutoEnableResponse() {{
+        org.openapis.openapi.models.operations.GetDatalakeAutoEnableResponse res = new org.openapis.openapi.models.operations.GetDatalakeAutoEnableResponse(contentType, httpRes.statusCode()) {{
             getDatalakeAutoEnableResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1923,15 +1892,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatalakeExceptionsExpiryResponse res = new org.openapis.openapi.models.operations.GetDatalakeExceptionsExpiryResponse() {{
+        org.openapis.openapi.models.operations.GetDatalakeExceptionsExpiryResponse res = new org.openapis.openapi.models.operations.GetDatalakeExceptionsExpiryResponse(contentType, httpRes.statusCode()) {{
             getDatalakeExceptionsExpiryResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2002,15 +1969,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatalakeExceptionsSubscriptionResponse res = new org.openapis.openapi.models.operations.GetDatalakeExceptionsSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.GetDatalakeExceptionsSubscriptionResponse res = new org.openapis.openapi.models.operations.GetDatalakeExceptionsSubscriptionResponse(contentType, httpRes.statusCode()) {{
             getDatalakeExceptionsSubscriptionResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2092,15 +2057,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatalakeStatusResponse res = new org.openapis.openapi.models.operations.GetDatalakeStatusResponse() {{
+        org.openapis.openapi.models.operations.GetDatalakeStatusResponse res = new org.openapis.openapi.models.operations.GetDatalakeStatusResponse(contentType, httpRes.statusCode()) {{
             getDatalakeStatusResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2171,7 +2134,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriberResponse res = new org.openapis.openapi.models.operations.GetSubscriberResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriberResponse res = new org.openapis.openapi.models.operations.GetSubscriberResponse(contentType, httpRes.statusCode()) {{
             getSubscriberResponse = null;
             internalServerException = null;
             accessDeniedException = null;
@@ -2179,8 +2142,6 @@ public class SDK {
             accountNotFoundException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2269,15 +2230,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDatalakeExceptionsResponse res = new org.openapis.openapi.models.operations.ListDatalakeExceptionsResponse() {{
+        org.openapis.openapi.models.operations.ListDatalakeExceptionsResponse res = new org.openapis.openapi.models.operations.ListDatalakeExceptionsResponse(contentType, httpRes.statusCode()) {{
             listDatalakeExceptionsResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2359,7 +2318,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLogSourcesResponse res = new org.openapis.openapi.models.operations.ListLogSourcesResponse() {{
+        org.openapis.openapi.models.operations.ListLogSourcesResponse res = new org.openapis.openapi.models.operations.ListLogSourcesResponse(contentType, httpRes.statusCode()) {{
             listLogSourcesResponse = null;
             internalServerException = null;
             validationException = null;
@@ -2367,8 +2326,6 @@ public class SDK {
             resourceNotFoundException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2452,7 +2409,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSubscribersResponse res = new org.openapis.openapi.models.operations.ListSubscribersResponse() {{
+        org.openapis.openapi.models.operations.ListSubscribersResponse res = new org.openapis.openapi.models.operations.ListSubscribersResponse(contentType, httpRes.statusCode()) {{
             listSubscribersResponse = null;
             internalServerException = null;
             validationException = null;
@@ -2461,8 +2418,6 @@ public class SDK {
             accountNotFoundException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2552,7 +2507,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDatalakeResponse res = new org.openapis.openapi.models.operations.UpdateDatalakeResponse() {{
+        org.openapis.openapi.models.operations.UpdateDatalakeResponse res = new org.openapis.openapi.models.operations.UpdateDatalakeResponse(contentType, httpRes.statusCode()) {{
             updateDatalakeResponse = null;
             eventBridgeException = null;
             internalServerException = null;
@@ -2560,8 +2515,6 @@ public class SDK {
             accessDeniedException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2644,15 +2597,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDatalakeExceptionsExpiryResponse res = new org.openapis.openapi.models.operations.UpdateDatalakeExceptionsExpiryResponse() {{
+        org.openapis.openapi.models.operations.UpdateDatalakeExceptionsExpiryResponse res = new org.openapis.openapi.models.operations.UpdateDatalakeExceptionsExpiryResponse(contentType, httpRes.statusCode()) {{
             updateDatalakeExceptionsExpiryResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2728,15 +2679,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDatalakeExceptionsSubscriptionResponse res = new org.openapis.openapi.models.operations.UpdateDatalakeExceptionsSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.UpdateDatalakeExceptionsSubscriptionResponse res = new org.openapis.openapi.models.operations.UpdateDatalakeExceptionsSubscriptionResponse(contentType, httpRes.statusCode()) {{
             updateDatalakeExceptionsSubscriptionResponse = null;
             internalServerException = null;
             validationException = null;
             accessDeniedException = null;
             accountNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2812,7 +2761,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSubscriberResponse res = new org.openapis.openapi.models.operations.UpdateSubscriberResponse() {{
+        org.openapis.openapi.models.operations.UpdateSubscriberResponse res = new org.openapis.openapi.models.operations.UpdateSubscriberResponse(contentType, httpRes.statusCode()) {{
             updateSubscriberResponse = null;
             conflictSubscriptionException = null;
             concurrentModificationException = null;
@@ -2822,8 +2771,6 @@ public class SDK {
             accountNotFoundException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2920,7 +2867,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSubscriptionNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateSubscriptionNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateSubscriptionNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateSubscriptionNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateSubscriptionNotificationConfigurationResponse = null;
             concurrentModificationException = null;
             internalServerException = null;
@@ -2930,8 +2877,6 @@ public class SDK {
             accountNotFoundException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

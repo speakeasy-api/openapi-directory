@@ -15,9 +15,11 @@ public class GetSuiteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suite")
     public Suite suite;
+
     public GetSuiteResult withSuite(Suite suite) {
         this.suite = suite;
         return this;
     }
     
+    public GetSuiteResult(){}
 }

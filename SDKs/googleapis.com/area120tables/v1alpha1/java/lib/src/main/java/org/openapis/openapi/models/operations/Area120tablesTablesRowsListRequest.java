@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Area120tablesTablesRowsListRequest {
@@ -12,6 +13,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public Area120tablesTablesRowsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public Area120tablesTablesRowsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public Area120tablesTablesRowsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public Area120tablesTablesRowsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public Area120tablesTablesRowsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public Area120tablesTablesRowsListRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -72,6 +79,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public Area120tablesTablesRowsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public Area120tablesTablesRowsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public Area120tablesTablesRowsListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -102,6 +112,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public Area120tablesTablesRowsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public Area120tablesTablesRowsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public Area120tablesTablesRowsListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -132,6 +145,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public Area120tablesTablesRowsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public Area120tablesTablesRowsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public Area120tablesTablesRowsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,6 +178,7 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public Area120tablesTablesRowsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -172,9 +189,13 @@ public class Area120tablesTablesRowsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public Area120tablesTablesRowsListViewEnum view;
+
     public Area120tablesTablesRowsListRequest withView(Area120tablesTablesRowsListViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public Area120tablesTablesRowsListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

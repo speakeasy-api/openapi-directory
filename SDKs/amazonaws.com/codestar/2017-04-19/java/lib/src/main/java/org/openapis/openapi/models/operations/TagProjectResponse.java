@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagProjectResponse {
@@ -12,6 +13,7 @@ public class TagProjectResponse {
      */
     
     public Object concurrentModificationException;
+
     public TagProjectResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class TagProjectResponse {
     
     
     public String contentType;
+
     public TagProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TagProjectResponse {
      */
     
     public Object limitExceededException;
+
     public TagProjectResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class TagProjectResponse {
      */
     
     public Object projectNotFoundException;
+
     public TagProjectResponse withProjectNotFoundException(Object projectNotFoundException) {
         this.projectNotFoundException = projectNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class TagProjectResponse {
     
     
     public Integer statusCode;
+
     public TagProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TagProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TagProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.TagProjectResult tagProjectResult;
+
     public TagProjectResponse withTagProjectResult(org.openapis.openapi.models.shared.TagProjectResult tagProjectResult) {
         this.tagProjectResult = tagProjectResult;
         return this;
@@ -73,9 +81,14 @@ public class TagProjectResponse {
      */
     
     public Object validationException;
+
     public TagProjectResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public TagProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

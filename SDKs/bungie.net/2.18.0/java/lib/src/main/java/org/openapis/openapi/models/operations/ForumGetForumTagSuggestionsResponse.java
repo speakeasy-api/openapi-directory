@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ForumGetForumTagSuggestionsResponse {
     
     public byte[] body;
+
     public ForumGetForumTagSuggestionsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ForumGetForumTagSuggestionsResponse {
     
     
     public String contentType;
+
     public ForumGetForumTagSuggestionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ForumGetForumTagSuggestionsResponse {
     
     
     public Integer statusCode;
+
     public ForumGetForumTagSuggestionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ForumGetForumTagSuggestionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ForumGetForumTagSuggestionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ForumGetForumTagSuggestionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

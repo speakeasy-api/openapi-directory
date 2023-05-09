@@ -57,11 +57,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1ListProductsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1ListPromotionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +231,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1Subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +275,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -304,7 +292,7 @@ public class Partners {
     }
 
     /**
-     * [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
+     * [Opt-in only] Most partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -331,11 +319,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -375,11 +361,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1Subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -421,11 +405,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1Subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,11 +449,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse() {{
+        org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse res = new org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse(contentType, httpRes.statusCode()) {{
             googleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

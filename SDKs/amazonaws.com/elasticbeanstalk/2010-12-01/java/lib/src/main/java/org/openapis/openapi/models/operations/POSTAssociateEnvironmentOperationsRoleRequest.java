@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTAssociateEnvironmentOperationsRoleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTAssociateEnvironmentOperationsRoleActionEnum action;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withAction(POSTAssociateEnvironmentOperationsRoleActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTAssociateEnvironmentOperationsRoleVersionEnum version;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withVersion(POSTAssociateEnvironmentOperationsRoleVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTAssociateEnvironmentOperationsRoleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTAssociateEnvironmentOperationsRoleRequest(@JsonProperty("Action") POSTAssociateEnvironmentOperationsRoleActionEnum action, @JsonProperty("Version") POSTAssociateEnvironmentOperationsRoleVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

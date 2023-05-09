@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse {
     
     public byte[] body;
+
     public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse {
     
     
     public String contentType;
+
     public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.MarketingEventPublicReadResponse marketingEventPublicReadResponse;
+
     public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse withMarketingEventPublicReadResponse(org.openapis.openapi.models.shared.MarketingEventPublicReadResponse marketingEventPublicReadResponse) {
         this.marketingEventPublicReadResponse = marketingEventPublicReadResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse {
     
     
     public Integer statusCode;
+
     public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

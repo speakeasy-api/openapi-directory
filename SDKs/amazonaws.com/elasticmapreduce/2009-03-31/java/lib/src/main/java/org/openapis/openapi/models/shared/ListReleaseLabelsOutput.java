@@ -15,6 +15,7 @@ public class ListReleaseLabelsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListReleaseLabelsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListReleaseLabelsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleaseLabels")
     public String[] releaseLabels;
+
     public ListReleaseLabelsOutput withReleaseLabels(String[] releaseLabels) {
         this.releaseLabels = releaseLabels;
         return this;
     }
     
+    public ListReleaseLabelsOutput(){}
 }

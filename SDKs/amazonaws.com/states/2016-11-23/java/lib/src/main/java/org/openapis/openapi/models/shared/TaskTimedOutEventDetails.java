@@ -15,6 +15,7 @@ public class TaskTimedOutEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public TaskTimedOutEventDetails withCause(String cause) {
         this.cause = cause;
         return this;
@@ -23,6 +24,7 @@ public class TaskTimedOutEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public TaskTimedOutEventDetails withError(String error) {
         this.error = error;
         return this;
@@ -30,6 +32,7 @@ public class TaskTimedOutEventDetails {
     
     @JsonProperty("resource")
     public String resource;
+
     public TaskTimedOutEventDetails withResource(String resource) {
         this.resource = resource;
         return this;
@@ -37,9 +40,14 @@ public class TaskTimedOutEventDetails {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public TaskTimedOutEventDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TaskTimedOutEventDetails(@JsonProperty("resource") String resource, @JsonProperty("resourceType") String resourceType) {
+        this.resource = resource;
+        this.resourceType = resourceType;
+  }
 }

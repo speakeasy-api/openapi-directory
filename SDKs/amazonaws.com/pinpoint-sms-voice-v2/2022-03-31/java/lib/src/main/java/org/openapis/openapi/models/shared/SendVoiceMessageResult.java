@@ -15,9 +15,11 @@ public class SendVoiceMessageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageId")
     public String messageId;
+
     public SendVoiceMessageResult withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public SendVoiceMessageResult(){}
 }

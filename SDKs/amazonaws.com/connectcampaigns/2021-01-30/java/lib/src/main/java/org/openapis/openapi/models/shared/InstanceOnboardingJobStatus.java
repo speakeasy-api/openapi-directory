@@ -17,6 +17,7 @@ public class InstanceOnboardingJobStatus {
      */
     @JsonProperty("connectInstanceId")
     public String connectInstanceId;
+
     public InstanceOnboardingJobStatus withConnectInstanceId(String connectInstanceId) {
         this.connectInstanceId = connectInstanceId;
         return this;
@@ -28,6 +29,7 @@ public class InstanceOnboardingJobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public InstanceOnboardingJobFailureCodeEnum failureCode;
+
     public InstanceOnboardingJobStatus withFailureCode(InstanceOnboardingJobFailureCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -38,9 +40,14 @@ public class InstanceOnboardingJobStatus {
      */
     @JsonProperty("status")
     public InstanceOnboardingJobStatusCodeEnum status;
+
     public InstanceOnboardingJobStatus withStatus(InstanceOnboardingJobStatusCodeEnum status) {
         this.status = status;
         return this;
     }
     
+    public InstanceOnboardingJobStatus(@JsonProperty("connectInstanceId") String connectInstanceId, @JsonProperty("status") InstanceOnboardingJobStatusCodeEnum status) {
+        this.connectInstanceId = connectInstanceId;
+        this.status = status;
+  }
 }

@@ -15,6 +15,7 @@ public class DiskListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DiskListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class DiskListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DiskListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DiskListWarningData(){}
 }

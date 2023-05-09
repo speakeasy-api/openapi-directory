@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetConsumerV1ServicesIdAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public GetConsumerV1ServicesIdAllocationsRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +25,7 @@ public class GetConsumerV1ServicesIdAllocationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetConsumerV1ServicesIdAllocationsRequest withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +36,7 @@ public class GetConsumerV1ServicesIdAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetConsumerV1ServicesIdAllocationsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -43,6 +47,7 @@ public class GetConsumerV1ServicesIdAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetConsumerV1ServicesIdAllocationsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -53,6 +58,7 @@ public class GetConsumerV1ServicesIdAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetConsumerV1ServicesIdAllocationsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -63,6 +69,7 @@ public class GetConsumerV1ServicesIdAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
     public String resourceId;
+
     public GetConsumerV1ServicesIdAllocationsRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -73,9 +80,13 @@ public class GetConsumerV1ServicesIdAllocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public GetConsumerV1ServicesIdAllocationsRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GetConsumerV1ServicesIdAllocationsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

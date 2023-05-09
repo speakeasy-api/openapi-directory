@@ -64,13 +64,11 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsCreateForCommitCommentResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForCommitCommentResponse() {{
+        org.openapis.openapi.models.operations.ReactionsCreateForCommitCommentResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForCommitCommentResponse(contentType, httpRes.statusCode()) {{
             reaction = null;
             reactionsCreateForCommitComment415ApplicationJSONObject = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -125,13 +123,11 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsCreateForIssueResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForIssueResponse() {{
+        org.openapis.openapi.models.operations.ReactionsCreateForIssueResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForIssueResponse(contentType, httpRes.statusCode()) {{
             reaction = null;
             reactionsCreateForIssue415ApplicationJSONObject = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -186,13 +182,11 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsCreateForIssueCommentResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForIssueCommentResponse() {{
+        org.openapis.openapi.models.operations.ReactionsCreateForIssueCommentResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForIssueCommentResponse(contentType, httpRes.statusCode()) {{
             reaction = null;
             reactionsCreateForIssueComment415ApplicationJSONObject = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -247,13 +241,11 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsCreateForPullRequestReviewCommentResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForPullRequestReviewCommentResponse() {{
+        org.openapis.openapi.models.operations.ReactionsCreateForPullRequestReviewCommentResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForPullRequestReviewCommentResponse(contentType, httpRes.statusCode()) {{
             reaction = null;
             reactionsCreateForPullRequestReviewComment415ApplicationJSONObject = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -316,11 +308,9 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionResponse() {{
+        org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionResponse(contentType, httpRes.statusCode()) {{
             reaction = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -369,11 +359,9 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionCommentResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionCommentResponse() {{
+        org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionCommentResponse res = new org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionCommentResponse(contentType, httpRes.statusCode()) {{
             reaction = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -417,10 +405,8 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsDeleteResponse res = new org.openapis.openapi.models.operations.ReactionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ReactionsDeleteResponse res = new org.openapis.openapi.models.operations.ReactionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -457,13 +443,11 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsListForCommitCommentResponse res = new org.openapis.openapi.models.operations.ReactionsListForCommitCommentResponse() {{
+        org.openapis.openapi.models.operations.ReactionsListForCommitCommentResponse res = new org.openapis.openapi.models.operations.ReactionsListForCommitCommentResponse(contentType, httpRes.statusCode()) {{
             reactions = null;
             basicError = null;
             reactionsListForCommitComment415ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -521,13 +505,11 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsListForIssueResponse res = new org.openapis.openapi.models.operations.ReactionsListForIssueResponse() {{
+        org.openapis.openapi.models.operations.ReactionsListForIssueResponse res = new org.openapis.openapi.models.operations.ReactionsListForIssueResponse(contentType, httpRes.statusCode()) {{
             reactions = null;
             basicError = null;
             reactionsListForIssue415ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -585,13 +567,11 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsListForIssueCommentResponse res = new org.openapis.openapi.models.operations.ReactionsListForIssueCommentResponse() {{
+        org.openapis.openapi.models.operations.ReactionsListForIssueCommentResponse res = new org.openapis.openapi.models.operations.ReactionsListForIssueCommentResponse(contentType, httpRes.statusCode()) {{
             reactions = null;
             basicError = null;
             reactionsListForIssueComment415ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -649,13 +629,11 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentResponse res = new org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentResponse() {{
+        org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentResponse res = new org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentResponse(contentType, httpRes.statusCode()) {{
             reactions = null;
             basicError = null;
             reactionsListForPullRequestReviewComment415ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -721,11 +699,9 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionResponse res = new org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionResponse() {{
+        org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionResponse res = new org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionResponse(contentType, httpRes.statusCode()) {{
             reactions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -777,11 +753,9 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentResponse res = new org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentResponse() {{
+        org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentResponse res = new org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentResponse(contentType, httpRes.statusCode()) {{
             reactions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

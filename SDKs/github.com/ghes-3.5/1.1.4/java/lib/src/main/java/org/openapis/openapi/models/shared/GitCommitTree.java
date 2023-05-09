@@ -12,6 +12,7 @@ public class GitCommitTree {
      */
     @JsonProperty("sha")
     public String sha;
+
     public GitCommitTree withSha(String sha) {
         this.sha = sha;
         return this;
@@ -19,9 +20,14 @@ public class GitCommitTree {
     
     @JsonProperty("url")
     public String url;
+
     public GitCommitTree withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GitCommitTree(@JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.sha = sha;
+        this.url = url;
+  }
 }

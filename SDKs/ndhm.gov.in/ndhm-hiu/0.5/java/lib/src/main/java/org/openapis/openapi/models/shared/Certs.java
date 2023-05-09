@@ -15,9 +15,11 @@ public class Certs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public CertificateOrKeyGetSchema[] keys;
+
     public Certs withKeys(CertificateOrKeyGetSchema[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public Certs(){}
 }

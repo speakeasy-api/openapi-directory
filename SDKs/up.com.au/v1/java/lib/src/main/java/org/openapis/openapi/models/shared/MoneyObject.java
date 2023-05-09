@@ -17,6 +17,7 @@ public class MoneyObject {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public MoneyObject withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -30,6 +31,7 @@ public class MoneyObject {
      */
     @JsonProperty("value")
     public String value;
+
     public MoneyObject withValue(String value) {
         this.value = value;
         return this;
@@ -43,9 +45,15 @@ public class MoneyObject {
      */
     @JsonProperty("valueInBaseUnits")
     public Long valueInBaseUnits;
+
     public MoneyObject withValueInBaseUnits(Long valueInBaseUnits) {
         this.valueInBaseUnits = valueInBaseUnits;
         return this;
     }
     
+    public MoneyObject(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("value") String value, @JsonProperty("valueInBaseUnits") Long valueInBaseUnits) {
+        this.currencyCode = currencyCode;
+        this.value = value;
+        this.valueInBaseUnits = valueInBaseUnits;
+  }
 }

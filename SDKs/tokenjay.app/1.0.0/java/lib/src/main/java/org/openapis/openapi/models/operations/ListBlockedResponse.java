@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBlockedResponse {
     
     public byte[] body;
+
     public ListBlockedResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ListBlockedResponse {
     
     
     public String contentType;
+
     public ListBlockedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ListBlockedResponse {
     
     
     public Integer statusCode;
+
     public ListBlockedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ListBlockedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBlockedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ListBlockedResponse {
      */
     
     public String listBlocked400WildcardString;
+
     public ListBlockedResponse withListBlocked400WildcardString(String listBlocked400WildcardString) {
         this.listBlocked400WildcardString = listBlocked400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class ListBlockedResponse {
      */
     
     public String listBlocked401WildcardString;
+
     public ListBlockedResponse withListBlocked401WildcardString(String listBlocked401WildcardString) {
         this.listBlocked401WildcardString = listBlocked401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class ListBlockedResponse {
      */
     
     public String listBlocked404WildcardString;
+
     public ListBlockedResponse withListBlocked404WildcardString(String listBlocked404WildcardString) {
         this.listBlocked404WildcardString = listBlocked404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class ListBlockedResponse {
      */
     
     public String listBlocked409WildcardString;
+
     public ListBlockedResponse withListBlocked409WildcardString(String listBlocked409WildcardString) {
         this.listBlocked409WildcardString = listBlocked409WildcardString;
         return this;
     }
     
+    public ListBlockedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

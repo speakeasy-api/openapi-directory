@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ProvisionIpamPoolCidrRequest {
     
     public String cidr;
+
     public ProvisionIpamPoolCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +17,7 @@ public class ProvisionIpamPoolCidrRequest {
     
     
     public IpamCidrAuthorizationContext cidrAuthorizationContext;
+
     public ProvisionIpamPoolCidrRequest withCidrAuthorizationContext(IpamCidrAuthorizationContext cidrAuthorizationContext) {
         this.cidrAuthorizationContext = cidrAuthorizationContext;
         return this;
@@ -23,6 +25,7 @@ public class ProvisionIpamPoolCidrRequest {
     
     
     public String clientToken;
+
     public ProvisionIpamPoolCidrRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -30,6 +33,7 @@ public class ProvisionIpamPoolCidrRequest {
     
     
     public Boolean dryRun;
+
     public ProvisionIpamPoolCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +41,7 @@ public class ProvisionIpamPoolCidrRequest {
     
     
     public String ipamPoolId;
+
     public ProvisionIpamPoolCidrRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -44,9 +49,13 @@ public class ProvisionIpamPoolCidrRequest {
     
     
     public Long netmaskLength;
+
     public ProvisionIpamPoolCidrRequest withNetmaskLength(Long netmaskLength) {
         this.netmaskLength = netmaskLength;
         return this;
     }
     
+    public ProvisionIpamPoolCidrRequest(@JsonProperty("IpamPoolId") String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+  }
 }

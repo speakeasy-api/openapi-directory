@@ -15,6 +15,7 @@ public class CreateSessionUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public CreateSessionUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class CreateSessionUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CreateSessionUsingPOST200ApplicationJSONData data;
+
     public CreateSessionUsingPOST200ApplicationJSON withData(CreateSessionUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class CreateSessionUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateSessionUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateSessionUsingPOST200ApplicationJSON(){}
 }

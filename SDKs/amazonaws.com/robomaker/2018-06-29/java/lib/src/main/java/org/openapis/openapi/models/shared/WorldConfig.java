@@ -15,9 +15,11 @@ public class WorldConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("world")
     public String world;
+
     public WorldConfig withWorld(String world) {
         this.world = world;
         return this;
     }
     
+    public WorldConfig(){}
 }

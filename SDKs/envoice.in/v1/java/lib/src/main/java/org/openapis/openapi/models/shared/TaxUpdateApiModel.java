@@ -17,6 +17,7 @@ public class TaxUpdateApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public TaxUpdateApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class TaxUpdateApiModel {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public TaxUpdateApiModel withName(String name) {
         this.name = name;
         return this;
@@ -41,9 +43,11 @@ public class TaxUpdateApiModel {
     @JsonProperty("Percentage")
     @SpeakeasyMetadata("form:name=Percentage")
     public Double percentage;
+
     public TaxUpdateApiModel withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public TaxUpdateApiModel(){}
 }

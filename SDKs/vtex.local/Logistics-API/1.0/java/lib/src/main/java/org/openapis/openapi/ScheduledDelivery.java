@@ -65,10 +65,8 @@ public class ScheduledDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddBlockedDeliveryWindowsResponse res = new org.openapis.openapi.models.operations.AddBlockedDeliveryWindowsResponse() {{
+        org.openapis.openapi.models.operations.AddBlockedDeliveryWindowsResponse res = new org.openapis.openapi.models.operations.AddBlockedDeliveryWindowsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,10 +112,8 @@ public class ScheduledDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveBlockedDeliveryWindowsResponse res = new org.openapis.openapi.models.operations.RemoveBlockedDeliveryWindowsResponse() {{
+        org.openapis.openapi.models.operations.RemoveBlockedDeliveryWindowsResponse res = new org.openapis.openapi.models.operations.RemoveBlockedDeliveryWindowsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,10 +154,8 @@ public class ScheduledDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveBlockedDeliveryWindowsResponse res = new org.openapis.openapi.models.operations.RetrieveBlockedDeliveryWindowsResponse() {{
+        org.openapis.openapi.models.operations.RetrieveBlockedDeliveryWindowsResponse res = new org.openapis.openapi.models.operations.RetrieveBlockedDeliveryWindowsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,10 +204,8 @@ public class ScheduledDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesResponse res = new org.openapis.openapi.models.operations.GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesResponse() {{
+        org.openapis.openapi.models.operations.GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesResponse res = new org.openapis.openapi.models.operations.GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -256,10 +248,8 @@ public class ScheduledDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeResponse res = new org.openapis.openapi.models.operations.GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeResponse() {{
+        org.openapis.openapi.models.operations.GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeResponse res = new org.openapis.openapi.models.operations.GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

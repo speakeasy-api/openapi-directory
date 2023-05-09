@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesCampaignsIdMediaJsonRequest {
@@ -12,6 +13,7 @@ public class GetResourcesCampaignsIdMediaJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetResourcesCampaignsIdMediaJsonRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetResourcesCampaignsIdMediaJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
     public Integer max;
+
     public GetResourcesCampaignsIdMediaJsonRequest withMax(Integer max) {
         this.max = max;
         return this;
@@ -32,6 +35,7 @@ public class GetResourcesCampaignsIdMediaJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
     public Integer offset;
+
     public GetResourcesCampaignsIdMediaJsonRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -42,9 +46,13 @@ public class GetResourcesCampaignsIdMediaJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public String sort;
+
     public GetResourcesCampaignsIdMediaJsonRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetResourcesCampaignsIdMediaJsonRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePolicyResponse {
@@ -12,6 +13,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public UpdatePolicyResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdatePolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdatePolicyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object constraintViolationException;
+
     public UpdatePolicyResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class UpdatePolicyResponse {
     
     
     public String contentType;
+
     public UpdatePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object duplicatePolicyException;
+
     public UpdatePolicyResponse withDuplicatePolicyException(Object duplicatePolicyException) {
         this.duplicatePolicyException = duplicatePolicyException;
         return this;
@@ -69,6 +76,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object invalidInputException;
+
     public UpdatePolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public UpdatePolicyResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -89,6 +98,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object policyChangesInProgressException;
+
     public UpdatePolicyResponse withPolicyChangesInProgressException(Object policyChangesInProgressException) {
         this.policyChangesInProgressException = policyChangesInProgressException;
         return this;
@@ -99,6 +109,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public UpdatePolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -109,6 +120,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object serviceException;
+
     public UpdatePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -116,6 +128,7 @@ public class UpdatePolicyResponse {
     
     
     public Integer statusCode;
+
     public UpdatePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class UpdatePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,6 +147,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdatePolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -143,6 +158,7 @@ public class UpdatePolicyResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public UpdatePolicyResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
@@ -153,9 +169,14 @@ public class UpdatePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePolicyResponse updatePolicyResponse;
+
     public UpdatePolicyResponse withUpdatePolicyResponse(org.openapis.openapi.models.shared.UpdatePolicyResponse updatePolicyResponse) {
         this.updatePolicyResponse = updatePolicyResponse;
         return this;
     }
     
+    public UpdatePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

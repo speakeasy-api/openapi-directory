@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSubnetRequestTagSpecifications {
     
     public CreateSubnetRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateSubnetRequestTagSpecifications withResourceType(CreateSubnetRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateSubnetRequestTagSpecifications {
     
     
     public CreateSubnetRequestTagSpecificationsTags[] tags;
+
     public CreateSubnetRequestTagSpecifications withTags(CreateSubnetRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSubnetRequestTagSpecifications(){}
 }

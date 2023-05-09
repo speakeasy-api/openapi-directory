@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCertificatesCertificatesResponse {
     @JsonProperty("certificates")
     public GetCertificatesCertificatesResponseCertificate[] certificates;
+
     public GetCertificatesCertificatesResponse withCertificates(GetCertificatesCertificatesResponseCertificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -22,9 +23,13 @@ public class GetCertificatesCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetCertificatesCertificatesResponseMeta meta;
+
     public GetCertificatesCertificatesResponse withMeta(GetCertificatesCertificatesResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetCertificatesCertificatesResponse(@JsonProperty("certificates") GetCertificatesCertificatesResponseCertificate[] certificates) {
+        this.certificates = certificates;
+  }
 }

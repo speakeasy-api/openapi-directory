@@ -18,6 +18,7 @@ public class CustomerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditLoggingSettings")
     public AuditLoggingSettings auditLoggingSettings;
+
     public CustomerSettings withAuditLoggingSettings(AuditLoggingSettings auditLoggingSettings) {
         this.auditLoggingSettings = auditLoggingSettings;
         return this;
@@ -26,9 +27,11 @@ public class CustomerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcSettings")
     public VPCSettings vpcSettings;
+
     public CustomerSettings withVpcSettings(VPCSettings vpcSettings) {
         this.vpcSettings = vpcSettings;
         return this;
     }
     
+    public CustomerSettings(){}
 }

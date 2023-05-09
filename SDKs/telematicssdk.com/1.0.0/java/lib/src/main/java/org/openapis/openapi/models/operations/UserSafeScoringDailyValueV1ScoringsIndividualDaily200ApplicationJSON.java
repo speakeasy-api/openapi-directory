@@ -15,6 +15,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public Object[] errors;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON withErrors(Object[] errors) {
         this.errors = errors;
         return this;
@@ -23,6 +24,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult[] result;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON withResult(UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
@@ -31,6 +33,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public Double status;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON withStatus(Double status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTemplateSyncConfigResponse {
@@ -12,6 +13,7 @@ public class CreateTemplateSyncConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTemplateSyncConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTemplateSyncConfigResponse {
      */
     
     public Object conflictException;
+
     public CreateTemplateSyncConfigResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTemplateSyncConfigResponse {
     
     
     public String contentType;
+
     public CreateTemplateSyncConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTemplateSyncConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTemplateSyncConfigOutput createTemplateSyncConfigOutput;
+
     public CreateTemplateSyncConfigResponse withCreateTemplateSyncConfigOutput(org.openapis.openapi.models.shared.CreateTemplateSyncConfigOutput createTemplateSyncConfigOutput) {
         this.createTemplateSyncConfigOutput = createTemplateSyncConfigOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateTemplateSyncConfigResponse {
      */
     
     public Object internalServerException;
+
     public CreateTemplateSyncConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTemplateSyncConfigResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateTemplateSyncConfigResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateTemplateSyncConfigResponse {
     
     
     public Integer statusCode;
+
     public CreateTemplateSyncConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateTemplateSyncConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTemplateSyncConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateTemplateSyncConfigResponse {
      */
     
     public Object throttlingException;
+
     public CreateTemplateSyncConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateTemplateSyncConfigResponse {
      */
     
     public Object validationException;
+
     public CreateTemplateSyncConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateTemplateSyncConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

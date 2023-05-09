@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigsubscriptionsgroupRequest {
@@ -12,6 +13,7 @@ public class GetConfigsubscriptionsgroupRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetConfigsubscriptionsgroupRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetConfigsubscriptionsgroupRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetConfigsubscriptionsgroupRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class GetConfigsubscriptionsgroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public GetConfigsubscriptionsgroupRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public GetConfigsubscriptionsgroupRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("groupId") String groupId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.groupId = groupId;
+  }
 }

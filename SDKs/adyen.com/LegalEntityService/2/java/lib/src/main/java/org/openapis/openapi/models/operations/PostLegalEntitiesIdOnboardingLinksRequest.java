@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLegalEntitiesIdOnboardingLinksRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OnboardingLinkInfo onboardingLinkInfo;
+
     public PostLegalEntitiesIdOnboardingLinksRequest withOnboardingLinkInfo(org.openapis.openapi.models.shared.OnboardingLinkInfo onboardingLinkInfo) {
         this.onboardingLinkInfo = onboardingLinkInfo;
         return this;
@@ -19,9 +21,13 @@ public class PostLegalEntitiesIdOnboardingLinksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostLegalEntitiesIdOnboardingLinksRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostLegalEntitiesIdOnboardingLinksRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

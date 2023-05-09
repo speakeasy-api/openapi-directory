@@ -12,6 +12,7 @@ public class PatchSftpHostKeysIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PatchSftpHostKeysIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,11 @@ public class PatchSftpHostKeysIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=private_key")
     public String privateKey;
+
     public PatchSftpHostKeysIdRequestBody withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
     }
     
+    public PatchSftpHostKeysIdRequestBody(){}
 }

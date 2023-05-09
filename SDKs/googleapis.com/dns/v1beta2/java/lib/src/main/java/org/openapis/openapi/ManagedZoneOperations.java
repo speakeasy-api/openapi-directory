@@ -58,11 +58,9 @@ public class ManagedZoneOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetResponse res = new org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetResponse res = new org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class ManagedZoneOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZoneOperationsListResponse res = new org.openapis.openapi.models.operations.DnsManagedZoneOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZoneOperationsListResponse res = new org.openapis.openapi.models.operations.DnsManagedZoneOperationsListResponse(contentType, httpRes.statusCode()) {{
             managedZoneOperationsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

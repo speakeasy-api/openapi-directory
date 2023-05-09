@@ -18,6 +18,7 @@ public class SecretVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public SecretVersion withPath(String path) {
         this.path = path;
         return this;
@@ -29,9 +30,11 @@ public class SecretVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SecretVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SecretVersion(){}
 }

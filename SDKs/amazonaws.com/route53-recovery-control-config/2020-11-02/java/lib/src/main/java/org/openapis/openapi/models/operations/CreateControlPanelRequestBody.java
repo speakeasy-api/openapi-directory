@@ -15,6 +15,7 @@ public class CreateControlPanelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateControlPanelRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateControlPanelRequestBody {
      */
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public CreateControlPanelRequestBody withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -35,6 +37,7 @@ public class CreateControlPanelRequestBody {
      */
     @JsonProperty("ControlPanelName")
     public String controlPanelName;
+
     public CreateControlPanelRequestBody withControlPanelName(String controlPanelName) {
         this.controlPanelName = controlPanelName;
         return this;
@@ -46,9 +49,14 @@ public class CreateControlPanelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateControlPanelRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateControlPanelRequestBody(@JsonProperty("ClusterArn") String clusterArn, @JsonProperty("ControlPanelName") String controlPanelName) {
+        this.clusterArn = clusterArn;
+        this.controlPanelName = controlPanelName;
+  }
 }

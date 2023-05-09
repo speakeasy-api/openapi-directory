@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ErrorXml {
     
     public ErrorMessage[] messages;
+
     public ErrorXml withMessages(ErrorMessage[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public ErrorXml(){}
 }

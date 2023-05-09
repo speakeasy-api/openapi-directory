@@ -447,4 +447,16 @@ lib/src/main/java/org/openapis/openapi/models/shared/ApiCoreDtoDomainsDomain.jav
 lib/src/main/java/org/openapis/openapi/models/shared/ApiCoreDtoGroupsGroup.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApiCoreDtoRetargetingRetargetingScript.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/account/README.md
+docs/aggregated/README.md
+docs/clickstream/README.md
+docs/conversions/README.md
+docs/datapoints/README.md
+docs/domains/README.md
+docs/groups/README.md
+docs/hits/README.md
+docs/me/README.md
+docs/retargeting/README.md
+docs/tags/README.md
 USAGE.md

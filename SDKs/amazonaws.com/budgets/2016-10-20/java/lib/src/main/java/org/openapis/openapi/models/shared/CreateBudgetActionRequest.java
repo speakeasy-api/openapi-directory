@@ -12,6 +12,7 @@ public class CreateBudgetActionRequest {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public CreateBudgetActionRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class CreateBudgetActionRequest {
      */
     @JsonProperty("ActionThreshold")
     public ActionThreshold actionThreshold;
+
     public CreateBudgetActionRequest withActionThreshold(ActionThreshold actionThreshold) {
         this.actionThreshold = actionThreshold;
         return this;
@@ -29,6 +31,7 @@ public class CreateBudgetActionRequest {
     
     @JsonProperty("ActionType")
     public ActionTypeEnum actionType;
+
     public CreateBudgetActionRequest withActionType(ActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -36,6 +39,7 @@ public class CreateBudgetActionRequest {
     
     @JsonProperty("ApprovalModel")
     public ApprovalModelEnum approvalModel;
+
     public CreateBudgetActionRequest withApprovalModel(ApprovalModelEnum approvalModel) {
         this.approvalModel = approvalModel;
         return this;
@@ -46,6 +50,7 @@ public class CreateBudgetActionRequest {
      */
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public CreateBudgetActionRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -56,6 +61,7 @@ public class CreateBudgetActionRequest {
      */
     @JsonProperty("Definition")
     public Definition definition;
+
     public CreateBudgetActionRequest withDefinition(Definition definition) {
         this.definition = definition;
         return this;
@@ -63,6 +69,7 @@ public class CreateBudgetActionRequest {
     
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public CreateBudgetActionRequest withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -73,6 +80,7 @@ public class CreateBudgetActionRequest {
      */
     @JsonProperty("NotificationType")
     public NotificationTypeEnum notificationType;
+
     public CreateBudgetActionRequest withNotificationType(NotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -83,9 +91,21 @@ public class CreateBudgetActionRequest {
      */
     @JsonProperty("Subscribers")
     public Subscriber[] subscribers;
+
     public CreateBudgetActionRequest withSubscribers(Subscriber[] subscribers) {
         this.subscribers = subscribers;
         return this;
     }
     
+    public CreateBudgetActionRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("ActionThreshold") ActionThreshold actionThreshold, @JsonProperty("ActionType") ActionTypeEnum actionType, @JsonProperty("ApprovalModel") ApprovalModelEnum approvalModel, @JsonProperty("BudgetName") String budgetName, @JsonProperty("Definition") Definition definition, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("NotificationType") NotificationTypeEnum notificationType, @JsonProperty("Subscribers") Subscriber[] subscribers) {
+        this.accountId = accountId;
+        this.actionThreshold = actionThreshold;
+        this.actionType = actionType;
+        this.approvalModel = approvalModel;
+        this.budgetName = budgetName;
+        this.definition = definition;
+        this.executionRoleArn = executionRoleArn;
+        this.notificationType = notificationType;
+        this.subscribers = subscribers;
+  }
 }

@@ -20,6 +20,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public ImageErrorEnum error;
+
     public Image withError(ImageErrorEnum error) {
         this.error = error;
         return this;
@@ -28,6 +29,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageContent")
     public String imageContent;
+
     public Image withImageContent(String imageContent) {
         this.imageContent = imageContent;
         return this;
@@ -38,9 +40,11 @@ public class Image {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TimeStamp")
     public OffsetDateTime timeStamp;
+
     public Image withTimeStamp(OffsetDateTime timeStamp) {
         this.timeStamp = timeStamp;
         return this;
     }
     
+    public Image(){}
 }

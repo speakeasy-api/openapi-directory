@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAuthorizersResponse {
@@ -12,6 +13,7 @@ public class GetAuthorizersResponse {
      */
     
     public Object badRequestException;
+
     public GetAuthorizersResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetAuthorizersResponse {
     
     
     public String contentType;
+
     public GetAuthorizersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAuthorizersResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAuthorizersResponse getAuthorizersResponse;
+
     public GetAuthorizersResponse withGetAuthorizersResponse(org.openapis.openapi.models.shared.GetAuthorizersResponse getAuthorizersResponse) {
         this.getAuthorizersResponse = getAuthorizersResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAuthorizersResponse {
      */
     
     public Object notFoundException;
+
     public GetAuthorizersResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetAuthorizersResponse {
     
     
     public Integer statusCode;
+
     public GetAuthorizersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAuthorizersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAuthorizersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetAuthorizersResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetAuthorizersResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetAuthorizersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

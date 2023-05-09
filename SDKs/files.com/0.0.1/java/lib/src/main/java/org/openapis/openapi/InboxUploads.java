@@ -60,11 +60,9 @@ public class InboxUploads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInboxUploadsResponse res = new org.openapis.openapi.models.operations.GetInboxUploadsResponse() {{
+        org.openapis.openapi.models.operations.GetInboxUploadsResponse res = new org.openapis.openapi.models.operations.GetInboxUploadsResponse(contentType, httpRes.statusCode()) {{
             inboxUploadEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

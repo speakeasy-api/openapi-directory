@@ -935,4 +935,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdatePatchBaselineRequest.
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateResourceDataSyncRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateServiceSettingRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class ListStreamObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListStreamObjectsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListStreamObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamObjects")
     public StreamObject[] streamObjects;
+
     public ListStreamObjectsResponse withStreamObjects(StreamObject[] streamObjects) {
         this.streamObjects = streamObjects;
         return this;
     }
     
+    public ListStreamObjectsResponse(){}
 }

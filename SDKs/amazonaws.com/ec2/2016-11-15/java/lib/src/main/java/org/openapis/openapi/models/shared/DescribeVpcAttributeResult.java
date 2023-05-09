@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcAttributeResult {
     
     public DescribeVpcAttributeResultEnableDnsHostnames enableDnsHostnames;
+
     public DescribeVpcAttributeResult withEnableDnsHostnames(DescribeVpcAttributeResultEnableDnsHostnames enableDnsHostnames) {
         this.enableDnsHostnames = enableDnsHostnames;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcAttributeResult {
     
     
     public DescribeVpcAttributeResultEnableDnsSupport enableDnsSupport;
+
     public DescribeVpcAttributeResult withEnableDnsSupport(DescribeVpcAttributeResultEnableDnsSupport enableDnsSupport) {
         this.enableDnsSupport = enableDnsSupport;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpcAttributeResult {
     
     
     public DescribeVpcAttributeResultEnableNetworkAddressUsageMetrics enableNetworkAddressUsageMetrics;
+
     public DescribeVpcAttributeResult withEnableNetworkAddressUsageMetrics(DescribeVpcAttributeResultEnableNetworkAddressUsageMetrics enableNetworkAddressUsageMetrics) {
         this.enableNetworkAddressUsageMetrics = enableNetworkAddressUsageMetrics;
         return this;
@@ -33,9 +36,11 @@ public class DescribeVpcAttributeResult {
     
     
     public String vpcId;
+
     public DescribeVpcAttributeResult withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeVpcAttributeResult(){}
 }

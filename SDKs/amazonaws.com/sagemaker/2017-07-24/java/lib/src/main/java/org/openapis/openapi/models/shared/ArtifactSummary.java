@@ -20,6 +20,7 @@ public class ArtifactSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactArn")
     public String artifactArn;
+
     public ArtifactSummary withArtifactArn(String artifactArn) {
         this.artifactArn = artifactArn;
         return this;
@@ -28,6 +29,7 @@ public class ArtifactSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactName")
     public String artifactName;
+
     public ArtifactSummary withArtifactName(String artifactName) {
         this.artifactName = artifactName;
         return this;
@@ -36,6 +38,7 @@ public class ArtifactSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactType")
     public String artifactType;
+
     public ArtifactSummary withArtifactType(String artifactType) {
         this.artifactType = artifactType;
         return this;
@@ -46,6 +49,7 @@ public class ArtifactSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ArtifactSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +60,7 @@ public class ArtifactSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ArtifactSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,9 +69,11 @@ public class ArtifactSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ArtifactSource source;
+
     public ArtifactSummary withSource(ArtifactSource source) {
         this.source = source;
         return this;
     }
     
+    public ArtifactSummary(){}
 }

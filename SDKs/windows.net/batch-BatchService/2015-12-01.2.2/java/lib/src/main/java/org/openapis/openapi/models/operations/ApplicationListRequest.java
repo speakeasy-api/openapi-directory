@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationListRequest {
@@ -12,6 +13,7 @@ public class ApplicationListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public ApplicationListRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class ApplicationListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public ApplicationListRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class ApplicationListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
     public Integer maxresults;
+
     public ApplicationListRequest withMaxresults(Integer maxresults) {
         this.maxresults = maxresults;
         return this;
@@ -42,6 +46,7 @@ public class ApplicationListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public ApplicationListRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class ApplicationListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public ApplicationListRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -62,9 +68,13 @@ public class ApplicationListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public ApplicationListRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ApplicationListRequest(@JsonProperty("api-version") String apiVersion) {
+        this.apiVersion = apiVersion;
+  }
 }

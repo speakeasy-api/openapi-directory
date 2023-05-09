@@ -39,7 +39,9 @@ public class Deprecated {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DevicelistResponse devicelist(org.openapis.openapi.models.operations.DevicelistRequest request, org.openapis.openapi.models.operations.DevicelistSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/devicelist");
@@ -61,11 +63,9 @@ public class Deprecated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicelistResponse res = new org.openapis.openapi.models.operations.DevicelistResponse() {{
+        org.openapis.openapi.models.operations.DevicelistResponse res = new org.openapis.openapi.models.operations.DevicelistResponse(contentType, httpRes.statusCode()) {{
             naDeviceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -85,7 +85,9 @@ public class Deprecated {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetthermstateResponse getthermstate(org.openapis.openapi.models.operations.GetthermstateRequest request, org.openapis.openapi.models.operations.GetthermstateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getthermstate");
@@ -107,11 +109,9 @@ public class Deprecated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetthermstateResponse res = new org.openapis.openapi.models.operations.GetthermstateResponse() {{
+        org.openapis.openapi.models.operations.GetthermstateResponse res = new org.openapis.openapi.models.operations.GetthermstateResponse(contentType, httpRes.statusCode()) {{
             naThermStateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,10 +127,13 @@ public class Deprecated {
 
     /**
      * The method getuser returns information about a user such as prefered language, prefered units, and list of devices. - 
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
-    public org.openapis.openapi.models.operations.GetuserResponse getuser() throws Exception {
+    @Deprecated
+    public org.openapis.openapi.models.operations.GetuserResponse getuser(org.openapis.openapi.models.operations.GetuserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getuser");
         
@@ -139,16 +142,15 @@ public class Deprecated {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetuserResponse res = new org.openapis.openapi.models.operations.GetuserResponse() {{
+        org.openapis.openapi.models.operations.GetuserResponse res = new org.openapis.openapi.models.operations.GetuserResponse(contentType, httpRes.statusCode()) {{
             naUserResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

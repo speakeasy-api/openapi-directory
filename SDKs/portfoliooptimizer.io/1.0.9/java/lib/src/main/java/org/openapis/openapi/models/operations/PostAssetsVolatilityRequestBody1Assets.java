@@ -12,9 +12,13 @@ public class PostAssetsVolatilityRequestBody1Assets {
      */
     @JsonProperty("assetReturns")
     public Double[] assetReturns;
+
     public PostAssetsVolatilityRequestBody1Assets withAssetReturns(Double[] assetReturns) {
         this.assetReturns = assetReturns;
         return this;
     }
     
+    public PostAssetsVolatilityRequestBody1Assets(@JsonProperty("assetReturns") Double[] assetReturns) {
+        this.assetReturns = assetReturns;
+  }
 }

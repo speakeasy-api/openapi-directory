@@ -22,6 +22,7 @@ public class JobListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public JobListEntry withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class JobListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public JobListEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class JobListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsMaster")
     public Boolean isMaster;
+
     public JobListEntry withIsMaster(Boolean isMaster) {
         this.isMaster = isMaster;
         return this;
@@ -46,6 +49,7 @@ public class JobListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public JobListEntry withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -54,6 +58,7 @@ public class JobListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobState")
     public JobStateEnum jobState;
+
     public JobListEntry withJobState(JobStateEnum jobState) {
         this.jobState = jobState;
         return this;
@@ -62,6 +67,7 @@ public class JobListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobType")
     public JobTypeEnum jobType;
+
     public JobListEntry withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -70,9 +76,11 @@ public class JobListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballType")
     public SnowballTypeEnum snowballType;
+
     public JobListEntry withSnowballType(SnowballTypeEnum snowballType) {
         this.snowballType = snowballType;
         return this;
     }
     
+    public JobListEntry(){}
 }

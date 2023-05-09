@@ -18,6 +18,7 @@ public class OpenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReopen")
     public Boolean canReopen;
+
     public OpenInfo withCanReopen(Boolean canReopen) {
         this.canReopen = canReopen;
         return this;
@@ -29,6 +30,7 @@ public class OpenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openingDate")
     public Date openingDate;
+
     public OpenInfo withOpeningDate(Date openingDate) {
         this.openingDate = openingDate;
         return this;
@@ -40,9 +42,11 @@ public class OpenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OpenInfoStatusEnum status;
+
     public OpenInfo withStatus(OpenInfoStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OpenInfo(){}
 }

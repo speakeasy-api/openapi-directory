@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutConsumerV1AppointmentsIdBookResponse {
@@ -12,6 +13,7 @@ public class PutConsumerV1AppointmentsIdBookResponse {
      */
     
     public org.openapis.openapi.models.shared.AppointmentViewModel appointmentViewModel;
+
     public PutConsumerV1AppointmentsIdBookResponse withAppointmentViewModel(org.openapis.openapi.models.shared.AppointmentViewModel appointmentViewModel) {
         this.appointmentViewModel = appointmentViewModel;
         return this;
@@ -19,6 +21,7 @@ public class PutConsumerV1AppointmentsIdBookResponse {
     
     
     public String contentType;
+
     public PutConsumerV1AppointmentsIdBookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PutConsumerV1AppointmentsIdBookResponse {
     
     
     public Integer statusCode;
+
     public PutConsumerV1AppointmentsIdBookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PutConsumerV1AppointmentsIdBookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutConsumerV1AppointmentsIdBookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutConsumerV1AppointmentsIdBookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

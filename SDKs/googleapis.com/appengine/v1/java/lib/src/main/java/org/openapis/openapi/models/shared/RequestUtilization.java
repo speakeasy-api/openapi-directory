@@ -18,6 +18,7 @@ public class RequestUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetConcurrentRequests")
     public Integer targetConcurrentRequests;
+
     public RequestUtilization withTargetConcurrentRequests(Integer targetConcurrentRequests) {
         this.targetConcurrentRequests = targetConcurrentRequests;
         return this;
@@ -29,9 +30,11 @@ public class RequestUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetRequestCountPerSecond")
     public Integer targetRequestCountPerSecond;
+
     public RequestUtilization withTargetRequestCountPerSecond(Integer targetRequestCountPerSecond) {
         this.targetRequestCountPerSecond = targetRequestCountPerSecond;
         return this;
     }
     
+    public RequestUtilization(){}
 }

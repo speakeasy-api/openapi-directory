@@ -18,6 +18,7 @@ public class RecognizeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public RecognizeResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -29,6 +30,7 @@ public class RecognizeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public SpeechRecognitionResult[] results;
+
     public RecognizeResponse withResults(SpeechRecognitionResult[] results) {
         this.results = results;
         return this;
@@ -40,6 +42,7 @@ public class RecognizeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speechAdaptationInfo")
     public SpeechAdaptationInfo speechAdaptationInfo;
+
     public RecognizeResponse withSpeechAdaptationInfo(SpeechAdaptationInfo speechAdaptationInfo) {
         this.speechAdaptationInfo = speechAdaptationInfo;
         return this;
@@ -51,9 +54,11 @@ public class RecognizeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBilledTime")
     public String totalBilledTime;
+
     public RecognizeResponse withTotalBilledTime(String totalBilledTime) {
         this.totalBilledTime = totalBilledTime;
         return this;
     }
     
+    public RecognizeResponse(){}
 }

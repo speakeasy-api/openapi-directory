@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRepositorySyncStatusInput {
     @JsonProperty("branch")
     public String branch;
+
     public GetRepositorySyncStatusInput withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -16,6 +17,7 @@ public class GetRepositorySyncStatusInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetRepositorySyncStatusInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -23,6 +25,7 @@ public class GetRepositorySyncStatusInput {
     
     @JsonProperty("repositoryProvider")
     public RepositoryProviderEnum repositoryProvider;
+
     public GetRepositorySyncStatusInput withRepositoryProvider(RepositoryProviderEnum repositoryProvider) {
         this.repositoryProvider = repositoryProvider;
         return this;
@@ -30,9 +33,16 @@ public class GetRepositorySyncStatusInput {
     
     @JsonProperty("syncType")
     public SyncTypeEnum syncType;
+
     public GetRepositorySyncStatusInput withSyncType(SyncTypeEnum syncType) {
         this.syncType = syncType;
         return this;
     }
     
+    public GetRepositorySyncStatusInput(@JsonProperty("branch") String branch, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("repositoryProvider") RepositoryProviderEnum repositoryProvider, @JsonProperty("syncType") SyncTypeEnum syncType) {
+        this.branch = branch;
+        this.repositoryName = repositoryName;
+        this.repositoryProvider = repositoryProvider;
+        this.syncType = syncType;
+  }
 }

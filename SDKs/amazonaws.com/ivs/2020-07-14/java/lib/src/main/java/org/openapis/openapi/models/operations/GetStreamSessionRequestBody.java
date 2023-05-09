@@ -14,6 +14,7 @@ public class GetStreamSessionRequestBody {
      */
     @JsonProperty("channelArn")
     public String channelArn;
+
     public GetStreamSessionRequestBody withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -25,9 +26,13 @@ public class GetStreamSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public GetStreamSessionRequestBody withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
     }
     
+    public GetStreamSessionRequestBody(@JsonProperty("channelArn") String channelArn) {
+        this.channelArn = channelArn;
+  }
 }

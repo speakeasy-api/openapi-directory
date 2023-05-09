@@ -15,6 +15,7 @@ public class FiveHundredAndThreeSERVICEUNAVAILABLE {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum code;
+
     public FiveHundredAndThreeSERVICEUNAVAILABLE withCode(FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class FiveHundredAndThreeSERVICEUNAVAILABLE {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum message;
+
     public FiveHundredAndThreeSERVICEUNAVAILABLE withMessage(FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum message) {
         this.message = message;
         return this;
@@ -36,6 +38,7 @@ public class FiveHundredAndThreeSERVICEUNAVAILABLE {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public FiveHundredAndThreeSERVICEUNAVAILABLE withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -47,9 +50,11 @@ public class FiveHundredAndThreeSERVICEUNAVAILABLE {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public FiveHundredAndThreeSERVICEUNAVAILABLE withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public FiveHundredAndThreeSERVICEUNAVAILABLE(){}
 }

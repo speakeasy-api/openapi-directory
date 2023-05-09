@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HealthProfileResourceLinks {
     @JsonProperty("self")
     public String self;
+
     public HealthProfileResourceLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public HealthProfileResourceLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

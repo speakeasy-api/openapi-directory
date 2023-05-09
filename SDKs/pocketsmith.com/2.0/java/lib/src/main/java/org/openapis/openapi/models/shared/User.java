@@ -18,6 +18,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("always_show_base_currency")
     public Boolean alwaysShowBaseCurrency;
+
     public User withAlwaysShowBaseCurrency(Boolean alwaysShowBaseCurrency) {
         this.alwaysShowBaseCurrency = alwaysShowBaseCurrency;
         return this;
@@ -29,6 +30,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_accounts")
     public Long availableAccounts;
+
     public User withAvailableAccounts(Long availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -40,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_budgets")
     public Long availableBudgets;
+
     public User withAvailableBudgets(Long availableBudgets) {
         this.availableBudgets = availableBudgets;
         return this;
@@ -51,6 +54,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public User withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -62,6 +66,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_currency_code")
     public String baseCurrencyCode;
+
     public User withBaseCurrencyCode(String baseCurrencyCode) {
         this.baseCurrencyCode = baseCurrencyCode;
         return this;
@@ -73,6 +78,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beta_user")
     public Boolean betaUser;
+
     public User withBetaUser(Boolean betaUser) {
         this.betaUser = betaUser;
         return this;
@@ -84,6 +90,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public User withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -95,6 +102,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -106,6 +114,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecast_defer_recalculate")
     public Boolean forecastDeferRecalculate;
+
     public User withForecastDeferRecalculate(Boolean forecastDeferRecalculate) {
         this.forecastDeferRecalculate = forecastDeferRecalculate;
         return this;
@@ -117,6 +126,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecast_end_date")
     public String forecastEndDate;
+
     public User withForecastEndDate(String forecastEndDate) {
         this.forecastEndDate = forecastEndDate;
         return this;
@@ -128,6 +138,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecast_last_accessed_at")
     public String forecastLastAccessedAt;
+
     public User withForecastLastAccessedAt(String forecastLastAccessedAt) {
         this.forecastLastAccessedAt = forecastLastAccessedAt;
         return this;
@@ -139,6 +150,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecast_last_updated_at")
     public String forecastLastUpdatedAt;
+
     public User withForecastLastUpdatedAt(String forecastLastUpdatedAt) {
         this.forecastLastUpdatedAt = forecastLastUpdatedAt;
         return this;
@@ -150,6 +162,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecast_needs_recalculate")
     public Boolean forecastNeedsRecalculate;
+
     public User withForecastNeedsRecalculate(Boolean forecastNeedsRecalculate) {
         this.forecastNeedsRecalculate = forecastNeedsRecalculate;
         return this;
@@ -161,6 +174,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecast_start_date")
     public String forecastStartDate;
+
     public User withForecastStartDate(String forecastStartDate) {
         this.forecastStartDate = forecastStartDate;
         return this;
@@ -172,6 +186,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public User withId(Long id) {
         this.id = id;
         return this;
@@ -183,6 +198,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_reviewing_transactions")
     public Boolean isReviewingTransactions;
+
     public User withIsReviewingTransactions(Boolean isReviewingTransactions) {
         this.isReviewingTransactions = isReviewingTransactions;
         return this;
@@ -194,6 +210,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_activity_at")
     public String lastActivityAt;
+
     public User withLastActivityAt(String lastActivityAt) {
         this.lastActivityAt = lastActivityAt;
         return this;
@@ -205,6 +222,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_logged_in_at")
     public String lastLoggedInAt;
+
     public User withLastLoggedInAt(String lastLoggedInAt) {
         this.lastLoggedInAt = lastLoggedInAt;
         return this;
@@ -216,6 +234,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public User withLogin(String login) {
         this.login = login;
         return this;
@@ -227,6 +246,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -238,6 +258,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_zone")
     public String timeZone;
+
     public User withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -249,6 +270,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public User withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -260,6 +282,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("using_multiple_currencies")
     public Boolean usingMultipleCurrencies;
+
     public User withUsingMultipleCurrencies(Boolean usingMultipleCurrencies) {
         this.usingMultipleCurrencies = usingMultipleCurrencies;
         return this;
@@ -271,9 +294,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week_start_day")
     public Long weekStartDay;
+
     public User withWeekStartDay(Long weekStartDay) {
         this.weekStartDay = weekStartDay;
         return this;
     }
     
+    public User(){}
 }

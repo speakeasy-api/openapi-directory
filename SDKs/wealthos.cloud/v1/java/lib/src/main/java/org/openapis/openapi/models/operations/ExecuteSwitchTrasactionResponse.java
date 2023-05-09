@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteSwitchTrasactionResponse {
     
     public String contentType;
+
     public ExecuteSwitchTrasactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ExecuteSwitchTrasactionResponse {
     
     
     public Integer statusCode;
+
     public ExecuteSwitchTrasactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ExecuteSwitchTrasactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteSwitchTrasactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ExecuteSwitchTrasactionResponse {
      */
     
     public ExecuteSwitchTrasaction200ApplicationJSON executeSwitchTrasaction200ApplicationJSONObject;
+
     public ExecuteSwitchTrasactionResponse withExecuteSwitchTrasaction200ApplicationJSONObject(ExecuteSwitchTrasaction200ApplicationJSON executeSwitchTrasaction200ApplicationJSONObject) {
         this.executeSwitchTrasaction200ApplicationJSONObject = executeSwitchTrasaction200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ExecuteSwitchTrasactionResponse {
      */
     
     public ExecuteSwitchTrasaction400ApplicationJSON executeSwitchTrasaction400ApplicationJSONObject;
+
     public ExecuteSwitchTrasactionResponse withExecuteSwitchTrasaction400ApplicationJSONObject(ExecuteSwitchTrasaction400ApplicationJSON executeSwitchTrasaction400ApplicationJSONObject) {
         this.executeSwitchTrasaction400ApplicationJSONObject = executeSwitchTrasaction400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ExecuteSwitchTrasactionResponse {
      */
     
     public ExecuteSwitchTrasaction401ApplicationJSON executeSwitchTrasaction401ApplicationJSONObject;
+
     public ExecuteSwitchTrasactionResponse withExecuteSwitchTrasaction401ApplicationJSONObject(ExecuteSwitchTrasaction401ApplicationJSON executeSwitchTrasaction401ApplicationJSONObject) {
         this.executeSwitchTrasaction401ApplicationJSONObject = executeSwitchTrasaction401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ExecuteSwitchTrasactionResponse {
      */
     
     public ExecuteSwitchTrasaction403ApplicationJSON executeSwitchTrasaction403ApplicationJSONObject;
+
     public ExecuteSwitchTrasactionResponse withExecuteSwitchTrasaction403ApplicationJSONObject(ExecuteSwitchTrasaction403ApplicationJSON executeSwitchTrasaction403ApplicationJSONObject) {
         this.executeSwitchTrasaction403ApplicationJSONObject = executeSwitchTrasaction403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ExecuteSwitchTrasactionResponse {
      */
     
     public ExecuteSwitchTrasaction404ApplicationJSON executeSwitchTrasaction404ApplicationJSONObject;
+
     public ExecuteSwitchTrasactionResponse withExecuteSwitchTrasaction404ApplicationJSONObject(ExecuteSwitchTrasaction404ApplicationJSON executeSwitchTrasaction404ApplicationJSONObject) {
         this.executeSwitchTrasaction404ApplicationJSONObject = executeSwitchTrasaction404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ExecuteSwitchTrasactionResponse {
      */
     
     public ExecuteSwitchTrasaction409ApplicationJSON executeSwitchTrasaction409ApplicationJSONObject;
+
     public ExecuteSwitchTrasactionResponse withExecuteSwitchTrasaction409ApplicationJSONObject(ExecuteSwitchTrasaction409ApplicationJSON executeSwitchTrasaction409ApplicationJSONObject) {
         this.executeSwitchTrasaction409ApplicationJSONObject = executeSwitchTrasaction409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class ExecuteSwitchTrasactionResponse {
      */
     
     public ExecuteSwitchTrasaction429ApplicationJSON executeSwitchTrasaction429ApplicationJSONObject;
+
     public ExecuteSwitchTrasactionResponse withExecuteSwitchTrasaction429ApplicationJSONObject(ExecuteSwitchTrasaction429ApplicationJSON executeSwitchTrasaction429ApplicationJSONObject) {
         this.executeSwitchTrasaction429ApplicationJSONObject = executeSwitchTrasaction429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class ExecuteSwitchTrasactionResponse {
      */
     
     public ExecuteSwitchTrasaction500ApplicationJSON executeSwitchTrasaction500ApplicationJSONObject;
+
     public ExecuteSwitchTrasactionResponse withExecuteSwitchTrasaction500ApplicationJSONObject(ExecuteSwitchTrasaction500ApplicationJSON executeSwitchTrasaction500ApplicationJSONObject) {
         this.executeSwitchTrasaction500ApplicationJSONObject = executeSwitchTrasaction500ApplicationJSONObject;
         return this;
     }
     
+    public ExecuteSwitchTrasactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

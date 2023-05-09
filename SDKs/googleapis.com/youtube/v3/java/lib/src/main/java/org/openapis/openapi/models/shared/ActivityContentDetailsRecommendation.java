@@ -18,6 +18,7 @@ public class ActivityContentDetailsRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public ActivityContentDetailsRecommendationReasonEnum reason;
+
     public ActivityContentDetailsRecommendation withReason(ActivityContentDetailsRecommendationReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -29,6 +30,7 @@ public class ActivityContentDetailsRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public ResourceId resourceId;
+
     public ActivityContentDetailsRecommendation withResourceId(ResourceId resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -40,9 +42,11 @@ public class ActivityContentDetailsRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seedResourceId")
     public ResourceId seedResourceId;
+
     public ActivityContentDetailsRecommendation withSeedResourceId(ResourceId seedResourceId) {
         this.seedResourceId = seedResourceId;
         return this;
     }
     
+    public ActivityContentDetailsRecommendation(){}
 }

@@ -15,6 +15,7 @@ public class GetTerminologyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuxiliaryDataLocation")
     public TerminologyDataLocation auxiliaryDataLocation;
+
     public GetTerminologyResponse withAuxiliaryDataLocation(TerminologyDataLocation auxiliaryDataLocation) {
         this.auxiliaryDataLocation = auxiliaryDataLocation;
         return this;
@@ -23,6 +24,7 @@ public class GetTerminologyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminologyDataLocation")
     public TerminologyDataLocation terminologyDataLocation;
+
     public GetTerminologyResponse withTerminologyDataLocation(TerminologyDataLocation terminologyDataLocation) {
         this.terminologyDataLocation = terminologyDataLocation;
         return this;
@@ -31,9 +33,11 @@ public class GetTerminologyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminologyProperties")
     public TerminologyProperties terminologyProperties;
+
     public GetTerminologyResponse withTerminologyProperties(TerminologyProperties terminologyProperties) {
         this.terminologyProperties = terminologyProperties;
         return this;
     }
     
+    public GetTerminologyResponse(){}
 }

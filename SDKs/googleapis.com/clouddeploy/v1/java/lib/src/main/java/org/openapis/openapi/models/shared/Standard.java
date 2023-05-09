@@ -18,9 +18,11 @@ public class Standard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verify")
     public Boolean verify;
+
     public Standard withVerify(Boolean verify) {
         this.verify = verify;
         return this;
     }
     
+    public Standard(){}
 }

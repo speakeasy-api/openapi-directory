@@ -12,6 +12,7 @@ public class ListSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListSessionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSessionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateFilter")
     public SessionStateEnum stateFilter;
+
     public ListSessionsRequest withStateFilter(SessionStateEnum stateFilter) {
         this.stateFilter = stateFilter;
         return this;
@@ -35,9 +38,13 @@ public class ListSessionsRequest {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public ListSessionsRequest withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public ListSessionsRequest(@JsonProperty("WorkGroup") String workGroup) {
+        this.workGroup = workGroup;
+  }
 }

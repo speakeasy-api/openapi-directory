@@ -22,9 +22,11 @@ public class CatalogCustomAttributeDefinitionStringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforce_uniqueness")
     public Boolean enforceUniqueness;
+
     public CatalogCustomAttributeDefinitionStringConfig withEnforceUniqueness(Boolean enforceUniqueness) {
         this.enforceUniqueness = enforceUniqueness;
         return this;
     }
     
+    public CatalogCustomAttributeDefinitionStringConfig(){}
 }

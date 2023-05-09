@@ -15,6 +15,7 @@ public class StartAttachmentUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachmentId")
     public String attachmentId;
+
     public StartAttachmentUploadResponse withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -23,9 +24,11 @@ public class StartAttachmentUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UploadMetadata")
     public UploadMetadata uploadMetadata;
+
     public StartAttachmentUploadResponse withUploadMetadata(UploadMetadata uploadMetadata) {
         this.uploadMetadata = uploadMetadata;
         return this;
     }
     
+    public StartAttachmentUploadResponse(){}
 }

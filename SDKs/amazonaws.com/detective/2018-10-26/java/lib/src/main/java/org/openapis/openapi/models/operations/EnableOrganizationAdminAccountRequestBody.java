@@ -12,9 +12,13 @@ public class EnableOrganizationAdminAccountRequestBody {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public EnableOrganizationAdminAccountRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public EnableOrganizationAdminAccountRequestBody(@JsonProperty("AccountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

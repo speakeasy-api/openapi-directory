@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTaskDefinitionsResponse {
@@ -12,6 +13,7 @@ public class DeleteTaskDefinitionsResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTaskDefinitionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteTaskDefinitionsResponse {
      */
     
     public Object clientException;
+
     public DeleteTaskDefinitionsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTaskDefinitionsResponse {
     
     
     public String contentType;
+
     public DeleteTaskDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTaskDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTaskDefinitionsResponse deleteTaskDefinitionsResponse;
+
     public DeleteTaskDefinitionsResponse withDeleteTaskDefinitionsResponse(org.openapis.openapi.models.shared.DeleteTaskDefinitionsResponse deleteTaskDefinitionsResponse) {
         this.deleteTaskDefinitionsResponse = deleteTaskDefinitionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTaskDefinitionsResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteTaskDefinitionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTaskDefinitionsResponse {
      */
     
     public Object serverException;
+
     public DeleteTaskDefinitionsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteTaskDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public DeleteTaskDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTaskDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTaskDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteTaskDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

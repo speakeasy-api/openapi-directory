@@ -18,6 +18,7 @@ public class ListWorkstationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListWorkstationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListWorkstationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListWorkstationsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
@@ -40,9 +42,11 @@ public class ListWorkstationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workstations")
     public Workstation[] workstations;
+
     public ListWorkstationsResponse withWorkstations(Workstation[] workstations) {
         this.workstations = workstations;
         return this;
     }
     
+    public ListWorkstationsResponse(){}
 }

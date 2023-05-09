@@ -15,6 +15,7 @@ public class ListConnectionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connections")
     public Connection[] connections;
+
     public ListConnectionsOutput withConnections(Connection[] connections) {
         this.connections = connections;
         return this;
@@ -23,9 +24,11 @@ public class ListConnectionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConnectionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConnectionsOutput(){}
 }

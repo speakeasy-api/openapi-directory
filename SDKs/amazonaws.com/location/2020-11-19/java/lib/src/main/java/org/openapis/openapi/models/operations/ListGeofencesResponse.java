@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGeofencesResponse {
@@ -12,6 +13,7 @@ public class ListGeofencesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListGeofencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListGeofencesResponse {
     
     
     public String contentType;
+
     public ListGeofencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListGeofencesResponse {
      */
     
     public Object internalServerException;
+
     public ListGeofencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListGeofencesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGeofencesResponse listGeofencesResponse;
+
     public ListGeofencesResponse withListGeofencesResponse(org.openapis.openapi.models.shared.ListGeofencesResponse listGeofencesResponse) {
         this.listGeofencesResponse = listGeofencesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListGeofencesResponse {
     
     
     public Integer statusCode;
+
     public ListGeofencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListGeofencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGeofencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListGeofencesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListGeofencesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListGeofencesResponse {
      */
     
     public Object throttlingException;
+
     public ListGeofencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListGeofencesResponse {
      */
     
     public Object validationException;
+
     public ListGeofencesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListGeofencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

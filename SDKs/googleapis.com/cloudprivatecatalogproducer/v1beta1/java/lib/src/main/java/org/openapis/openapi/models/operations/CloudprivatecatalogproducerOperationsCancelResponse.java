@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudprivatecatalogproducerOperationsCancelResponse {
     
     public byte[] body;
+
     public CloudprivatecatalogproducerOperationsCancelResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CloudprivatecatalogproducerOperationsCancelResponse {
     
     
     public String contentType;
+
     public CloudprivatecatalogproducerOperationsCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CloudprivatecatalogproducerOperationsCancelResponse {
     
     
     public Integer statusCode;
+
     public CloudprivatecatalogproducerOperationsCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class CloudprivatecatalogproducerOperationsCancelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudprivatecatalogproducerOperationsCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudprivatecatalogproducerOperationsCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -31,10 +31,11 @@ public class Webhooks {
     /**
      * Test Firehose Webhook
      * Trigger a test payload to be sent to your configured Firehose Webhook url.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWebhooksFirehoseTestResponse postWebhooksFirehoseTest() throws Exception {
+    public org.openapis.openapi.models.operations.PostWebhooksFirehoseTestResponse postWebhooksFirehoseTest(org.openapis.openapi.models.operations.PostWebhooksFirehoseTestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhooks/firehose/test");
         
@@ -43,16 +44,15 @@ public class Webhooks {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksFirehoseTestResponse res = new org.openapis.openapi.models.operations.PostWebhooksFirehoseTestResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksFirehoseTestResponse res = new org.openapis.openapi.models.operations.PostWebhooksFirehoseTestResponse(contentType, httpRes.statusCode()) {{
             postWebhooksFirehoseTestDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -89,10 +89,8 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWebhooksFirehoseResponse res = new org.openapis.openapi.models.operations.PutWebhooksFirehoseResponse() {{
+        org.openapis.openapi.models.operations.PutWebhooksFirehoseResponse res = new org.openapis.openapi.models.operations.PutWebhooksFirehoseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

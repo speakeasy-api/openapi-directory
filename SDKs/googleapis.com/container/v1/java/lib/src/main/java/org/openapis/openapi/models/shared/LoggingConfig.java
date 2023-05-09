@@ -18,9 +18,11 @@ public class LoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentConfig")
     public LoggingComponentConfig componentConfig;
+
     public LoggingConfig withComponentConfig(LoggingComponentConfig componentConfig) {
         this.componentConfig = componentConfig;
         return this;
     }
     
+    public LoggingConfig(){}
 }

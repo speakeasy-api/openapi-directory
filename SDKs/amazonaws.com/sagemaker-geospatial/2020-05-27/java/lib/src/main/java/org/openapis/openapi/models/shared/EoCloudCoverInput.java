@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * EoCloudCoverInput - &lt;p/&gt;
+ * EoCloudCoverInput - The structure representing the EoCloudCover filter.
  */
 public class EoCloudCoverInput {
     @JsonProperty("LowerBound")
     public Float lowerBound;
+
     public EoCloudCoverInput withLowerBound(Float lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -19,9 +20,14 @@ public class EoCloudCoverInput {
     
     @JsonProperty("UpperBound")
     public Float upperBound;
+
     public EoCloudCoverInput withUpperBound(Float upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public EoCloudCoverInput(@JsonProperty("LowerBound") Float lowerBound, @JsonProperty("UpperBound") Float upperBound) {
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
+  }
 }

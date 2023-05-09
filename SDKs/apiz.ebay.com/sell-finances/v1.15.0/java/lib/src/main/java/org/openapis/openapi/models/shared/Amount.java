@@ -18,6 +18,7 @@ public class Amount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convertedFromCurrency")
     public String convertedFromCurrency;
+
     public Amount withConvertedFromCurrency(String convertedFromCurrency) {
         this.convertedFromCurrency = convertedFromCurrency;
         return this;
@@ -29,6 +30,7 @@ public class Amount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convertedFromValue")
     public String convertedFromValue;
+
     public Amount withConvertedFromValue(String convertedFromValue) {
         this.convertedFromValue = convertedFromValue;
         return this;
@@ -40,6 +42,7 @@ public class Amount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Amount withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -51,6 +54,7 @@ public class Amount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeRate")
     public String exchangeRate;
+
     public Amount withExchangeRate(String exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -62,9 +66,11 @@ public class Amount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Amount withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Amount(){}
 }

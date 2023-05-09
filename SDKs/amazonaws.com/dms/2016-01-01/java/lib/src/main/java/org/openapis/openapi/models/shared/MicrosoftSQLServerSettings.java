@@ -15,6 +15,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BcpPacketSize")
     public Long bcpPacketSize;
+
     public MicrosoftSQLServerSettings withBcpPacketSize(Long bcpPacketSize) {
         this.bcpPacketSize = bcpPacketSize;
         return this;
@@ -23,6 +24,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlTablesFileGroup")
     public String controlTablesFileGroup;
+
     public MicrosoftSQLServerSettings withControlTablesFileGroup(String controlTablesFileGroup) {
         this.controlTablesFileGroup = controlTablesFileGroup;
         return this;
@@ -31,6 +33,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public MicrosoftSQLServerSettings withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,6 +42,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceLobLookup")
     public Boolean forceLobLookup;
+
     public MicrosoftSQLServerSettings withForceLobLookup(Boolean forceLobLookup) {
         this.forceLobLookup = forceLobLookup;
         return this;
@@ -47,6 +51,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public MicrosoftSQLServerSettings withPassword(String password) {
         this.password = password;
         return this;
@@ -55,6 +60,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public MicrosoftSQLServerSettings withPort(Long port) {
         this.port = port;
         return this;
@@ -63,6 +69,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuerySingleAlwaysOnNode")
     public Boolean querySingleAlwaysOnNode;
+
     public MicrosoftSQLServerSettings withQuerySingleAlwaysOnNode(Boolean querySingleAlwaysOnNode) {
         this.querySingleAlwaysOnNode = querySingleAlwaysOnNode;
         return this;
@@ -71,6 +78,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadBackupOnly")
     public Boolean readBackupOnly;
+
     public MicrosoftSQLServerSettings withReadBackupOnly(Boolean readBackupOnly) {
         this.readBackupOnly = readBackupOnly;
         return this;
@@ -79,6 +87,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SafeguardPolicy")
     public SafeguardPolicyEnum safeguardPolicy;
+
     public MicrosoftSQLServerSettings withSafeguardPolicy(SafeguardPolicyEnum safeguardPolicy) {
         this.safeguardPolicy = safeguardPolicy;
         return this;
@@ -87,6 +96,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerAccessRoleArn")
     public String secretsManagerAccessRoleArn;
+
     public MicrosoftSQLServerSettings withSecretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
         this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
         return this;
@@ -95,6 +105,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerSecretId")
     public String secretsManagerSecretId;
+
     public MicrosoftSQLServerSettings withSecretsManagerSecretId(String secretsManagerSecretId) {
         this.secretsManagerSecretId = secretsManagerSecretId;
         return this;
@@ -103,6 +114,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public MicrosoftSQLServerSettings withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -111,6 +123,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlogAccessMode")
     public TlogAccessModeEnum tlogAccessMode;
+
     public MicrosoftSQLServerSettings withTlogAccessMode(TlogAccessModeEnum tlogAccessMode) {
         this.tlogAccessMode = tlogAccessMode;
         return this;
@@ -119,6 +132,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrimSpaceInChar")
     public Boolean trimSpaceInChar;
+
     public MicrosoftSQLServerSettings withTrimSpaceInChar(Boolean trimSpaceInChar) {
         this.trimSpaceInChar = trimSpaceInChar;
         return this;
@@ -127,6 +141,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseBcpFullLoad")
     public Boolean useBcpFullLoad;
+
     public MicrosoftSQLServerSettings withUseBcpFullLoad(Boolean useBcpFullLoad) {
         this.useBcpFullLoad = useBcpFullLoad;
         return this;
@@ -135,6 +150,7 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseThirdPartyBackupDevice")
     public Boolean useThirdPartyBackupDevice;
+
     public MicrosoftSQLServerSettings withUseThirdPartyBackupDevice(Boolean useThirdPartyBackupDevice) {
         this.useThirdPartyBackupDevice = useThirdPartyBackupDevice;
         return this;
@@ -143,9 +159,11 @@ public class MicrosoftSQLServerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public MicrosoftSQLServerSettings withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public MicrosoftSQLServerSettings(){}
 }

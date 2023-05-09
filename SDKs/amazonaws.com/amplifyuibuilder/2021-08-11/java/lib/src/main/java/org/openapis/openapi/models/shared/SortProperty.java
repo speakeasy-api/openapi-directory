@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SortProperty {
     @JsonProperty("direction")
     public SortDirectionEnum direction;
+
     public SortProperty withDirection(SortDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -19,9 +20,14 @@ public class SortProperty {
     
     @JsonProperty("field")
     public String field;
+
     public SortProperty withField(String field) {
         this.field = field;
         return this;
     }
     
+    public SortProperty(@JsonProperty("direction") SortDirectionEnum direction, @JsonProperty("field") String field) {
+        this.direction = direction;
+        this.field = field;
+  }
 }

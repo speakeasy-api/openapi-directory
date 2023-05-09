@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSubnetRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateSubnetRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateSubnetRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateSubnetRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateSubnetRequestTagSpecificationsTags(){}
 }

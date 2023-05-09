@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest {
@@ -12,6 +13,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_request_id")
     public Long pullRequestId;
+
     public DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest withPullRequestId(Long pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -24,6 +26,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,15 @@ public class DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRequest(@JsonProperty("pull_request_id") Long pullRequestId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.pullRequestId = pullRequestId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

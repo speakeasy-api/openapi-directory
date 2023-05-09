@@ -15,6 +15,7 @@ public class GetUnfilteredPartitionMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedColumns")
     public String[] authorizedColumns;
+
     public GetUnfilteredPartitionMetadataResponse withAuthorizedColumns(String[] authorizedColumns) {
         this.authorizedColumns = authorizedColumns;
         return this;
@@ -23,6 +24,7 @@ public class GetUnfilteredPartitionMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRegisteredWithLakeFormation")
     public Boolean isRegisteredWithLakeFormation;
+
     public GetUnfilteredPartitionMetadataResponse withIsRegisteredWithLakeFormation(Boolean isRegisteredWithLakeFormation) {
         this.isRegisteredWithLakeFormation = isRegisteredWithLakeFormation;
         return this;
@@ -31,9 +33,11 @@ public class GetUnfilteredPartitionMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Partition")
     public Partition partition;
+
     public GetUnfilteredPartitionMetadataResponse withPartition(Partition partition) {
         this.partition = partition;
         return this;
     }
     
+    public GetUnfilteredPartitionMetadataResponse(){}
 }

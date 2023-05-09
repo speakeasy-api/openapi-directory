@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaStringParameterArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValues")
     public String[] stringValues;
+
     public GoogleCloudIntegrationsV1alphaStringParameterArray withStringValues(String[] stringValues) {
         this.stringValues = stringValues;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaStringParameterArray(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterNode {
     
     public String nodeRole;
+
     public ClusterNode withNodeRole(String nodeRole) {
         this.nodeRole = nodeRole;
         return this;
@@ -19,6 +20,7 @@ public class ClusterNode {
     
     
     public String privateIPAddress;
+
     public ClusterNode withPrivateIPAddress(String privateIPAddress) {
         this.privateIPAddress = privateIPAddress;
         return this;
@@ -26,9 +28,11 @@ public class ClusterNode {
     
     
     public String publicIPAddress;
+
     public ClusterNode withPublicIPAddress(String publicIPAddress) {
         this.publicIPAddress = publicIPAddress;
         return this;
     }
     
+    public ClusterNode(){}
 }

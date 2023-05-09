@@ -18,6 +18,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public AcceleratorType withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public DeprecationStatus deprecated;
+
     public AcceleratorType withDeprecated(DeprecationStatus deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -40,6 +42,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AcceleratorType withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AcceleratorType withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AcceleratorType withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumCardsPerInstance")
     public Integer maximumCardsPerInstance;
+
     public AcceleratorType withMaximumCardsPerInstance(Integer maximumCardsPerInstance) {
         this.maximumCardsPerInstance = maximumCardsPerInstance;
         return this;
@@ -84,6 +90,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AcceleratorType withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public AcceleratorType withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -106,9 +114,11 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public AcceleratorType withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public AcceleratorType(){}
 }

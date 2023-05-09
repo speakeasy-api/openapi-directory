@@ -18,6 +18,7 @@ public class DefaultResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostingSite")
     public String hostingSite;
+
     public DefaultResources withHostingSite(String hostingSite) {
         this.hostingSite = hostingSite;
         return this;
@@ -29,6 +30,7 @@ public class DefaultResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public DefaultResources withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -40,6 +42,7 @@ public class DefaultResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("realtimeDatabaseInstance")
     public String realtimeDatabaseInstance;
+
     public DefaultResources withRealtimeDatabaseInstance(String realtimeDatabaseInstance) {
         this.realtimeDatabaseInstance = realtimeDatabaseInstance;
         return this;
@@ -51,9 +54,11 @@ public class DefaultResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBucket")
     public String storageBucket;
+
     public DefaultResources withStorageBucket(String storageBucket) {
         this.storageBucket = storageBucket;
         return this;
     }
     
+    public DefaultResources(){}
 }

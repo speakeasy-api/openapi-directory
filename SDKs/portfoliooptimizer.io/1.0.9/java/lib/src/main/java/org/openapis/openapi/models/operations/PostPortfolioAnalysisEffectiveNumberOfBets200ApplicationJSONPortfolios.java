@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONPortfol
      */
     @JsonProperty("portfolioEffectiveNumberOfBets")
     public Double portfolioEffectiveNumberOfBets;
+
     public PostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONPortfolios withPortfolioEffectiveNumberOfBets(Double portfolioEffectiveNumberOfBets) {
         this.portfolioEffectiveNumberOfBets = portfolioEffectiveNumberOfBets;
         return this;
     }
     
+    public PostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONPortfolios(@JsonProperty("portfolioEffectiveNumberOfBets") Double portfolioEffectiveNumberOfBets) {
+        this.portfolioEffectiveNumberOfBets = portfolioEffectiveNumberOfBets;
+  }
 }

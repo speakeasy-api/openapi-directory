@@ -15,9 +15,11 @@ public class GetLensOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lens")
     public Lens lens;
+
     public GetLensOutput withLens(Lens lens) {
         this.lens = lens;
         return this;
     }
     
+    public GetLensOutput(){}
 }

@@ -12,6 +12,7 @@ public class CreatePartitionIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public CreatePartitionIndexRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class CreatePartitionIndexRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public CreatePartitionIndexRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class CreatePartitionIndexRequest {
     
     @JsonProperty("PartitionIndex")
     public PartitionIndex partitionIndex;
+
     public CreatePartitionIndexRequest withPartitionIndex(PartitionIndex partitionIndex) {
         this.partitionIndex = partitionIndex;
         return this;
@@ -33,9 +36,15 @@ public class CreatePartitionIndexRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public CreatePartitionIndexRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public CreatePartitionIndexRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartitionIndex") PartitionIndex partitionIndex, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.partitionIndex = partitionIndex;
+        this.tableName = tableName;
+  }
 }

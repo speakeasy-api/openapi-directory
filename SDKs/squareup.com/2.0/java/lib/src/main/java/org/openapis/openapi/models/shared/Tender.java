@@ -19,6 +19,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_recipients")
     public AdditionalRecipient[] additionalRecipients;
+
     public Tender withAdditionalRecipients(AdditionalRecipient[] additionalRecipients) {
         this.additionalRecipients = additionalRecipients;
         return this;
@@ -35,6 +36,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public Tender withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -46,6 +48,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_details")
     public TenderCardDetails cardDetails;
+
     public Tender withCardDetails(TenderCardDetails cardDetails) {
         this.cardDetails = cardDetails;
         return this;
@@ -57,6 +60,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_details")
     public TenderCashDetails cashDetails;
+
     public Tender withCashDetails(TenderCashDetails cashDetails) {
         this.cashDetails = cashDetails;
         return this;
@@ -68,6 +72,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Tender withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -80,6 +85,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public Tender withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -91,6 +97,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Tender withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +109,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Tender withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -113,6 +121,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Tender withNote(String note) {
         this.note = note;
         return this;
@@ -125,6 +134,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public Tender withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -141,6 +151,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_fee_money")
     public Money processingFeeMoney;
+
     public Tender withProcessingFeeMoney(Money processingFeeMoney) {
         this.processingFeeMoney = processingFeeMoney;
         return this;
@@ -157,6 +168,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tip_money")
     public Money tipMoney;
+
     public Tender withTipMoney(Money tipMoney) {
         this.tipMoney = tipMoney;
         return this;
@@ -168,6 +180,7 @@ public class Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public Tender withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -178,9 +191,13 @@ public class Tender {
      */
     @JsonProperty("type")
     public String type;
+
     public Tender withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Tender(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

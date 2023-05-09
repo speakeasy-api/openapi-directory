@@ -18,9 +18,11 @@ public class AppInvitationsCreateByEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public AppInvitationsCreateByEmailRequestBodyRoleEnum role;
+
     public AppInvitationsCreateByEmailRequestBody withRole(AppInvitationsCreateByEmailRequestBodyRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public AppInvitationsCreateByEmailRequestBody(){}
 }

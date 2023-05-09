@@ -15,9 +15,11 @@ public class GetCustomerUserStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public CustomerUserStats[] stats;
+
     public GetCustomerUserStatsResponse withStats(CustomerUserStats[] stats) {
         this.stats = stats;
         return this;
     }
     
+    public GetCustomerUserStatsResponse(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTrustedAdvisorChecksResponse {
     @JsonProperty("checks")
     public TrustedAdvisorCheckDescription[] checks;
+
     public DescribeTrustedAdvisorChecksResponse withChecks(TrustedAdvisorCheckDescription[] checks) {
         this.checks = checks;
         return this;
     }
     
+    public DescribeTrustedAdvisorChecksResponse(@JsonProperty("checks") TrustedAdvisorCheckDescription[] checks) {
+        this.checks = checks;
+  }
 }

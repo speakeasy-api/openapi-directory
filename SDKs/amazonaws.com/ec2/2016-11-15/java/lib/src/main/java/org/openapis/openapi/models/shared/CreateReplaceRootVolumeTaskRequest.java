@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateReplaceRootVolumeTaskRequest {
     
     public String clientToken;
+
     public CreateReplaceRootVolumeTaskRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateReplaceRootVolumeTaskRequest {
     
     
     public Boolean deleteReplacedRootVolume;
+
     public CreateReplaceRootVolumeTaskRequest withDeleteReplacedRootVolume(Boolean deleteReplacedRootVolume) {
         this.deleteReplacedRootVolume = deleteReplacedRootVolume;
         return this;
@@ -23,6 +25,7 @@ public class CreateReplaceRootVolumeTaskRequest {
     
     
     public Boolean dryRun;
+
     public CreateReplaceRootVolumeTaskRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateReplaceRootVolumeTaskRequest {
     
     
     public String imageId;
+
     public CreateReplaceRootVolumeTaskRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -37,6 +41,7 @@ public class CreateReplaceRootVolumeTaskRequest {
     
     
     public String instanceId;
+
     public CreateReplaceRootVolumeTaskRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -44,6 +49,7 @@ public class CreateReplaceRootVolumeTaskRequest {
     
     
     public String snapshotId;
+
     public CreateReplaceRootVolumeTaskRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -51,9 +57,13 @@ public class CreateReplaceRootVolumeTaskRequest {
     
     
     public CreateReplaceRootVolumeTaskRequestTagSpecifications[] tagSpecifications;
+
     public CreateReplaceRootVolumeTaskRequest withTagSpecifications(CreateReplaceRootVolumeTaskRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateReplaceRootVolumeTaskRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

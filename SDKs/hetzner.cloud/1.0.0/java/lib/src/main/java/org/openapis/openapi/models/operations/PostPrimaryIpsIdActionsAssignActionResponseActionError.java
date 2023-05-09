@@ -15,6 +15,7 @@ public class PostPrimaryIpsIdActionsAssignActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostPrimaryIpsIdActionsAssignActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostPrimaryIpsIdActionsAssignActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostPrimaryIpsIdActionsAssignActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostPrimaryIpsIdActionsAssignActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

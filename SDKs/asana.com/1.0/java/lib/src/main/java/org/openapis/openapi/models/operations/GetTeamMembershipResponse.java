@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamMembershipResponse {
     
     public String contentType;
+
     public GetTeamMembershipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTeamMembershipResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetTeamMembershipResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetTeamMembershipResponse {
     
     
     public Integer statusCode;
+
     public GetTeamMembershipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTeamMembershipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamMembershipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetTeamMembershipResponse {
      */
     
     public GetTeamMembership200ApplicationJSON getTeamMembership200ApplicationJSONObject;
+
     public GetTeamMembershipResponse withGetTeamMembership200ApplicationJSONObject(GetTeamMembership200ApplicationJSON getTeamMembership200ApplicationJSONObject) {
         this.getTeamMembership200ApplicationJSONObject = getTeamMembership200ApplicationJSONObject;
         return this;
     }
     
+    public GetTeamMembershipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

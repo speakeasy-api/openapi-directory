@@ -18,9 +18,11 @@ public class ConnectionCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSql")
     public CloudSqlCredential cloudSql;
+
     public ConnectionCredential withCloudSql(CloudSqlCredential cloudSql) {
         this.cloudSql = cloudSql;
         return this;
     }
     
+    public ConnectionCredential(){}
 }

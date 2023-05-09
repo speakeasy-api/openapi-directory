@@ -12,6 +12,7 @@ public class CreateCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentSetId")
     public String attachmentSetId;
+
     public CreateCaseRequest withAttachmentSetId(String attachmentSetId) {
         this.attachmentSetId = attachmentSetId;
         return this;
@@ -20,6 +21,7 @@ public class CreateCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryCode")
     public String categoryCode;
+
     public CreateCaseRequest withCategoryCode(String categoryCode) {
         this.categoryCode = categoryCode;
         return this;
@@ -28,6 +30,7 @@ public class CreateCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ccEmailAddresses")
     public String[] ccEmailAddresses;
+
     public CreateCaseRequest withCcEmailAddresses(String[] ccEmailAddresses) {
         this.ccEmailAddresses = ccEmailAddresses;
         return this;
@@ -35,6 +38,7 @@ public class CreateCaseRequest {
     
     @JsonProperty("communicationBody")
     public String communicationBody;
+
     public CreateCaseRequest withCommunicationBody(String communicationBody) {
         this.communicationBody = communicationBody;
         return this;
@@ -43,6 +47,7 @@ public class CreateCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueType")
     public String issueType;
+
     public CreateCaseRequest withIssueType(String issueType) {
         this.issueType = issueType;
         return this;
@@ -51,6 +56,7 @@ public class CreateCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public CreateCaseRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -59,6 +65,7 @@ public class CreateCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceCode")
     public String serviceCode;
+
     public CreateCaseRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
@@ -67,6 +74,7 @@ public class CreateCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCode")
     public String severityCode;
+
     public CreateCaseRequest withSeverityCode(String severityCode) {
         this.severityCode = severityCode;
         return this;
@@ -74,9 +82,14 @@ public class CreateCaseRequest {
     
     @JsonProperty("subject")
     public String subject;
+
     public CreateCaseRequest withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public CreateCaseRequest(@JsonProperty("communicationBody") String communicationBody, @JsonProperty("subject") String subject) {
+        this.communicationBody = communicationBody;
+        this.subject = subject;
+  }
 }

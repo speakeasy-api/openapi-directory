@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Patch {
     @JsonProperty("op")
     public PatchOpEnum op;
+
     public Patch withOp(PatchOpEnum op) {
         this.op = op;
         return this;
@@ -18,6 +19,7 @@ public class Patch {
     
     @JsonProperty("path")
     public String path;
+
     public Patch withPath(String path) {
         this.path = path;
         return this;
@@ -26,9 +28,14 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public Patch withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public Patch(@JsonProperty("op") PatchOpEnum op, @JsonProperty("path") String path) {
+        this.op = op;
+        this.path = path;
+  }
 }

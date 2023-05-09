@@ -12,9 +12,13 @@ public class PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest {
      */
     @JsonProperty("apply_to")
     public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources[] applyTo;
+
     public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest withApplyTo(PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources[] applyTo) {
         this.applyTo = applyTo;
         return this;
     }
     
+    public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest(@JsonProperty("apply_to") PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources[] applyTo) {
+        this.applyTo = applyTo;
+  }
 }

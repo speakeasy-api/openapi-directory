@@ -18,6 +18,7 @@ public class DeleteTableColumnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public TableCellLocation cellLocation;
+
     public DeleteTableColumnRequest withCellLocation(TableCellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -29,9 +30,11 @@ public class DeleteTableColumnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableObjectId")
     public String tableObjectId;
+
     public DeleteTableColumnRequest withTableObjectId(String tableObjectId) {
         this.tableObjectId = tableObjectId;
         return this;
     }
     
+    public DeleteTableColumnRequest(){}
 }

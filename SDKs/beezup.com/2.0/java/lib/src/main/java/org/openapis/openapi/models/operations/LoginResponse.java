@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LoginResponse {
@@ -12,6 +13,7 @@ public class LoginResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public LoginResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class LoginResponse {
     
     
     public String contentType;
+
     public LoginResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class LoginResponse {
     
     
     public Integer statusCode;
+
     public LoginResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class LoginResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LoginResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class LoginResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiCredentials apiCredentials;
+
     public LoginResponse withApiCredentials(org.openapis.openapi.models.shared.ApiCredentials apiCredentials) {
         this.apiCredentials = apiCredentials;
         return this;
     }
     
+    public LoginResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

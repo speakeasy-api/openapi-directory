@@ -18,6 +18,7 @@ public class ListenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addTarget")
     public Target addTarget;
+
     public ListenRequest withAddTarget(Target addTarget) {
         this.addTarget = addTarget;
         return this;
@@ -29,6 +30,7 @@ public class ListenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ListenRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,9 +42,11 @@ public class ListenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeTarget")
     public Integer removeTarget;
+
     public ListenRequest withRemoveTarget(Integer removeTarget) {
         this.removeTarget = removeTarget;
         return this;
     }
     
+    public ListenRequest(){}
 }

@@ -61,11 +61,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaResponse res = new org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaResponse() {{
+        org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaResponse res = new org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaResponse(contentType, httpRes.statusCode()) {{
             allocateQuotaResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicecontrolServicesCheckResponse res = new org.openapis.openapi.models.operations.ServicecontrolServicesCheckResponse() {{
+        org.openapis.openapi.models.operations.ServicecontrolServicesCheckResponse res = new org.openapis.openapi.models.operations.ServicecontrolServicesCheckResponse(contentType, httpRes.statusCode()) {{
             checkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicecontrolServicesReportResponse res = new org.openapis.openapi.models.operations.ServicecontrolServicesReportResponse() {{
+        org.openapis.openapi.models.operations.ServicecontrolServicesReportResponse res = new org.openapis.openapi.models.operations.ServicecontrolServicesReportResponse(contentType, httpRes.statusCode()) {{
             reportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

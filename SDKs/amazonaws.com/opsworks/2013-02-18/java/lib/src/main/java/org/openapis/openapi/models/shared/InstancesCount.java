@@ -15,6 +15,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assigning")
     public Long assigning;
+
     public InstancesCount withAssigning(Long assigning) {
         this.assigning = assigning;
         return this;
@@ -23,6 +24,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Booting")
     public Long booting;
+
     public InstancesCount withBooting(Long booting) {
         this.booting = booting;
         return this;
@@ -31,6 +33,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionLost")
     public Long connectionLost;
+
     public InstancesCount withConnectionLost(Long connectionLost) {
         this.connectionLost = connectionLost;
         return this;
@@ -39,6 +42,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deregistering")
     public Long deregistering;
+
     public InstancesCount withDeregistering(Long deregistering) {
         this.deregistering = deregistering;
         return this;
@@ -47,6 +51,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Online")
     public Long online;
+
     public InstancesCount withOnline(Long online) {
         this.online = online;
         return this;
@@ -55,6 +60,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pending")
     public Long pending;
+
     public InstancesCount withPending(Long pending) {
         this.pending = pending;
         return this;
@@ -63,6 +69,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rebooting")
     public Long rebooting;
+
     public InstancesCount withRebooting(Long rebooting) {
         this.rebooting = rebooting;
         return this;
@@ -71,6 +78,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Registered")
     public Long registered;
+
     public InstancesCount withRegistered(Long registered) {
         this.registered = registered;
         return this;
@@ -79,6 +87,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Registering")
     public Long registering;
+
     public InstancesCount withRegistering(Long registering) {
         this.registering = registering;
         return this;
@@ -87,6 +96,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Requested")
     public Long requested;
+
     public InstancesCount withRequested(Long requested) {
         this.requested = requested;
         return this;
@@ -95,6 +105,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningSetup")
     public Long runningSetup;
+
     public InstancesCount withRunningSetup(Long runningSetup) {
         this.runningSetup = runningSetup;
         return this;
@@ -103,6 +114,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SetupFailed")
     public Long setupFailed;
+
     public InstancesCount withSetupFailed(Long setupFailed) {
         this.setupFailed = setupFailed;
         return this;
@@ -111,6 +123,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShuttingDown")
     public Long shuttingDown;
+
     public InstancesCount withShuttingDown(Long shuttingDown) {
         this.shuttingDown = shuttingDown;
         return this;
@@ -119,6 +132,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartFailed")
     public Long startFailed;
+
     public InstancesCount withStartFailed(Long startFailed) {
         this.startFailed = startFailed;
         return this;
@@ -127,6 +141,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopFailed")
     public Long stopFailed;
+
     public InstancesCount withStopFailed(Long stopFailed) {
         this.stopFailed = stopFailed;
         return this;
@@ -135,6 +150,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stopped")
     public Long stopped;
+
     public InstancesCount withStopped(Long stopped) {
         this.stopped = stopped;
         return this;
@@ -143,6 +159,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stopping")
     public Long stopping;
+
     public InstancesCount withStopping(Long stopping) {
         this.stopping = stopping;
         return this;
@@ -151,6 +168,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Terminated")
     public Long terminated;
+
     public InstancesCount withTerminated(Long terminated) {
         this.terminated = terminated;
         return this;
@@ -159,6 +177,7 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Terminating")
     public Long terminating;
+
     public InstancesCount withTerminating(Long terminating) {
         this.terminating = terminating;
         return this;
@@ -167,9 +186,11 @@ public class InstancesCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unassigning")
     public Long unassigning;
+
     public InstancesCount withUnassigning(Long unassigning) {
         this.unassigning = unassigning;
         return this;
     }
     
+    public InstancesCount(){}
 }

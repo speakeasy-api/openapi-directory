@@ -18,9 +18,11 @@ public class CommentActorVerification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adHocVerified")
     public String adHocVerified;
+
     public CommentActorVerification withAdHocVerified(String adHocVerified) {
         this.adHocVerified = adHocVerified;
         return this;
     }
     
+    public CommentActorVerification(){}
 }

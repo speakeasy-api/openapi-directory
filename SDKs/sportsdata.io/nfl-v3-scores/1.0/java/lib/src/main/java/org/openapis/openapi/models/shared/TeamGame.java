@@ -12,6 +12,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedTackles")
     public Long assistedTackles;
+
     public TeamGame withAssistedTackles(Long assistedTackles) {
         this.assistedTackles = assistedTackles;
         return this;
@@ -20,6 +21,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnTouchdowns")
     public Long blockedKickReturnTouchdowns;
+
     public TeamGame withBlockedKickReturnTouchdowns(Long blockedKickReturnTouchdowns) {
         this.blockedKickReturnTouchdowns = blockedKickReturnTouchdowns;
         return this;
@@ -28,6 +30,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnYards")
     public Long blockedKickReturnYards;
+
     public TeamGame withBlockedKickReturnYards(Long blockedKickReturnYards) {
         this.blockedKickReturnYards = blockedKickReturnYards;
         return this;
@@ -36,6 +39,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKicks")
     public Long blockedKicks;
+
     public TeamGame withBlockedKicks(Long blockedKicks) {
         this.blockedKicks = blockedKicks;
         return this;
@@ -44,6 +48,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionPercentage")
     public Double completionPercentage;
+
     public TeamGame withCompletionPercentage(Double completionPercentage) {
         this.completionPercentage = completionPercentage;
         return this;
@@ -52,6 +57,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Date")
     public String date;
+
     public TeamGame withDate(String date) {
         this.date = date;
         return this;
@@ -60,6 +66,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public TeamGame withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -68,6 +75,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public TeamGame withDay(String day) {
         this.day = day;
         return this;
@@ -76,6 +84,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfWeek")
     public String dayOfWeek;
+
     public TeamGame withDayOfWeek(String dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -84,6 +93,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointKickingAttempts")
     public Long extraPointKickingAttempts;
+
     public TeamGame withExtraPointKickingAttempts(Long extraPointKickingAttempts) {
         this.extraPointKickingAttempts = extraPointKickingAttempts;
         return this;
@@ -92,6 +102,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointKickingConversions")
     public Long extraPointKickingConversions;
+
     public TeamGame withExtraPointKickingConversions(Long extraPointKickingConversions) {
         this.extraPointKickingConversions = extraPointKickingConversions;
         return this;
@@ -100,6 +111,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointPassingAttempts")
     public Long extraPointPassingAttempts;
+
     public TeamGame withExtraPointPassingAttempts(Long extraPointPassingAttempts) {
         this.extraPointPassingAttempts = extraPointPassingAttempts;
         return this;
@@ -108,6 +120,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointPassingConversions")
     public Long extraPointPassingConversions;
+
     public TeamGame withExtraPointPassingConversions(Long extraPointPassingConversions) {
         this.extraPointPassingConversions = extraPointPassingConversions;
         return this;
@@ -116,6 +129,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointPercentage")
     public Double extraPointPercentage;
+
     public TeamGame withExtraPointPercentage(Double extraPointPercentage) {
         this.extraPointPercentage = extraPointPercentage;
         return this;
@@ -124,6 +138,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointRushingAttempts")
     public Long extraPointRushingAttempts;
+
     public TeamGame withExtraPointRushingAttempts(Long extraPointRushingAttempts) {
         this.extraPointRushingAttempts = extraPointRushingAttempts;
         return this;
@@ -132,6 +147,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointRushingConversions")
     public Long extraPointRushingConversions;
+
     public TeamGame withExtraPointRushingConversions(Long extraPointRushingConversions) {
         this.extraPointRushingConversions = extraPointRushingConversions;
         return this;
@@ -140,6 +156,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsHadBlocked")
     public Long extraPointsHadBlocked;
+
     public TeamGame withExtraPointsHadBlocked(Long extraPointsHadBlocked) {
         this.extraPointsHadBlocked = extraPointsHadBlocked;
         return this;
@@ -148,6 +165,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalAttempts")
     public Long fieldGoalAttempts;
+
     public TeamGame withFieldGoalAttempts(Long fieldGoalAttempts) {
         this.fieldGoalAttempts = fieldGoalAttempts;
         return this;
@@ -156,6 +174,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalPercentage")
     public Double fieldGoalPercentage;
+
     public TeamGame withFieldGoalPercentage(Double fieldGoalPercentage) {
         this.fieldGoalPercentage = fieldGoalPercentage;
         return this;
@@ -164,6 +183,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnTouchdowns")
     public Long fieldGoalReturnTouchdowns;
+
     public TeamGame withFieldGoalReturnTouchdowns(Long fieldGoalReturnTouchdowns) {
         this.fieldGoalReturnTouchdowns = fieldGoalReturnTouchdowns;
         return this;
@@ -172,6 +192,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnYards")
     public Long fieldGoalReturnYards;
+
     public TeamGame withFieldGoalReturnYards(Long fieldGoalReturnYards) {
         this.fieldGoalReturnYards = fieldGoalReturnYards;
         return this;
@@ -180,6 +201,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsHadBlocked")
     public Long fieldGoalsHadBlocked;
+
     public TeamGame withFieldGoalsHadBlocked(Long fieldGoalsHadBlocked) {
         this.fieldGoalsHadBlocked = fieldGoalsHadBlocked;
         return this;
@@ -188,6 +210,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade")
     public Long fieldGoalsMade;
+
     public TeamGame withFieldGoalsMade(Long fieldGoalsMade) {
         this.fieldGoalsMade = fieldGoalsMade;
         return this;
@@ -196,6 +219,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstDowns")
     public Long firstDowns;
+
     public TeamGame withFirstDowns(Long firstDowns) {
         this.firstDowns = firstDowns;
         return this;
@@ -204,6 +228,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstDownsByPassing")
     public Long firstDownsByPassing;
+
     public TeamGame withFirstDownsByPassing(Long firstDownsByPassing) {
         this.firstDownsByPassing = firstDownsByPassing;
         return this;
@@ -212,6 +237,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstDownsByPenalty")
     public Long firstDownsByPenalty;
+
     public TeamGame withFirstDownsByPenalty(Long firstDownsByPenalty) {
         this.firstDownsByPenalty = firstDownsByPenalty;
         return this;
@@ -220,6 +246,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstDownsByRushing")
     public Long firstDownsByRushing;
+
     public TeamGame withFirstDownsByRushing(Long firstDownsByRushing) {
         this.firstDownsByRushing = firstDownsByRushing;
         return this;
@@ -228,6 +255,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FourthDownAttempts")
     public Long fourthDownAttempts;
+
     public TeamGame withFourthDownAttempts(Long fourthDownAttempts) {
         this.fourthDownAttempts = fourthDownAttempts;
         return this;
@@ -236,6 +264,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FourthDownConversions")
     public Long fourthDownConversions;
+
     public TeamGame withFourthDownConversions(Long fourthDownConversions) {
         this.fourthDownConversions = fourthDownConversions;
         return this;
@@ -244,6 +273,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FourthDownPercentage")
     public Double fourthDownPercentage;
+
     public TeamGame withFourthDownPercentage(Double fourthDownPercentage) {
         this.fourthDownPercentage = fourthDownPercentage;
         return this;
@@ -252,6 +282,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnTouchdowns")
     public Long fumbleReturnTouchdowns;
+
     public TeamGame withFumbleReturnTouchdowns(Long fumbleReturnTouchdowns) {
         this.fumbleReturnTouchdowns = fumbleReturnTouchdowns;
         return this;
@@ -260,6 +291,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnYards")
     public Long fumbleReturnYards;
+
     public TeamGame withFumbleReturnYards(Long fumbleReturnYards) {
         this.fumbleReturnYards = fumbleReturnYards;
         return this;
@@ -268,6 +300,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fumbles")
     public Long fumbles;
+
     public TeamGame withFumbles(Long fumbles) {
         this.fumbles = fumbles;
         return this;
@@ -276,6 +309,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesForced")
     public Long fumblesForced;
+
     public TeamGame withFumblesForced(Long fumblesForced) {
         this.fumblesForced = fumblesForced;
         return this;
@@ -284,6 +318,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesLost")
     public Long fumblesLost;
+
     public TeamGame withFumblesLost(Long fumblesLost) {
         this.fumblesLost = fumblesLost;
         return this;
@@ -292,6 +327,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesRecovered")
     public Long fumblesRecovered;
+
     public TeamGame withFumblesRecovered(Long fumblesRecovered) {
         this.fumblesRecovered = fumblesRecovered;
         return this;
@@ -300,6 +336,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameKey")
     public String gameKey;
+
     public TeamGame withGameKey(String gameKey) {
         this.gameKey = gameKey;
         return this;
@@ -308,6 +345,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Giveaways")
     public Long giveaways;
+
     public TeamGame withGiveaways(Long giveaways) {
         this.giveaways = giveaways;
         return this;
@@ -316,6 +354,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalGameID")
     public Long globalGameID;
+
     public TeamGame withGlobalGameID(Long globalGameID) {
         this.globalGameID = globalGameID;
         return this;
@@ -324,6 +363,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalOpponentID")
     public Long globalOpponentID;
+
     public TeamGame withGlobalOpponentID(Long globalOpponentID) {
         this.globalOpponentID = globalOpponentID;
         return this;
@@ -332,6 +372,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public TeamGame withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -340,6 +381,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoalToGoAttempts")
     public Long goalToGoAttempts;
+
     public TeamGame withGoalToGoAttempts(Long goalToGoAttempts) {
         this.goalToGoAttempts = goalToGoAttempts;
         return this;
@@ -348,6 +390,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoalToGoConversions")
     public Long goalToGoConversions;
+
     public TeamGame withGoalToGoConversions(Long goalToGoConversions) {
         this.goalToGoConversions = goalToGoConversions;
         return this;
@@ -356,6 +399,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoalToGoPercentage")
     public Double goalToGoPercentage;
+
     public TeamGame withGoalToGoPercentage(Double goalToGoPercentage) {
         this.goalToGoPercentage = goalToGoPercentage;
         return this;
@@ -364,6 +408,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeOrAway")
     public String homeOrAway;
+
     public TeamGame withHomeOrAway(String homeOrAway) {
         this.homeOrAway = homeOrAway;
         return this;
@@ -372,6 +417,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Humidity")
     public Long humidity;
+
     public TeamGame withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -380,6 +426,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnTouchdowns")
     public Long interceptionReturnTouchdowns;
+
     public TeamGame withInterceptionReturnTouchdowns(Long interceptionReturnTouchdowns) {
         this.interceptionReturnTouchdowns = interceptionReturnTouchdowns;
         return this;
@@ -388,6 +435,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnYards")
     public Long interceptionReturnYards;
+
     public TeamGame withInterceptionReturnYards(Long interceptionReturnYards) {
         this.interceptionReturnYards = interceptionReturnYards;
         return this;
@@ -396,6 +444,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturns")
     public Long interceptionReturns;
+
     public TeamGame withInterceptionReturns(Long interceptionReturns) {
         this.interceptionReturns = interceptionReturns;
         return this;
@@ -404,6 +453,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsGameOver")
     public Boolean isGameOver;
+
     public TeamGame withIsGameOver(Boolean isGameOver) {
         this.isGameOver = isGameOver;
         return this;
@@ -412,6 +462,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnAverage")
     public Double kickReturnAverage;
+
     public TeamGame withKickReturnAverage(Double kickReturnAverage) {
         this.kickReturnAverage = kickReturnAverage;
         return this;
@@ -420,6 +471,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnLong")
     public Long kickReturnLong;
+
     public TeamGame withKickReturnLong(Long kickReturnLong) {
         this.kickReturnLong = kickReturnLong;
         return this;
@@ -428,6 +480,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnTouchdowns")
     public Long kickReturnTouchdowns;
+
     public TeamGame withKickReturnTouchdowns(Long kickReturnTouchdowns) {
         this.kickReturnTouchdowns = kickReturnTouchdowns;
         return this;
@@ -436,6 +489,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYardDifferential")
     public Long kickReturnYardDifferential;
+
     public TeamGame withKickReturnYardDifferential(Long kickReturnYardDifferential) {
         this.kickReturnYardDifferential = kickReturnYardDifferential;
         return this;
@@ -444,6 +498,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYards")
     public Long kickReturnYards;
+
     public TeamGame withKickReturnYards(Long kickReturnYards) {
         this.kickReturnYards = kickReturnYards;
         return this;
@@ -452,6 +507,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturns")
     public Long kickReturns;
+
     public TeamGame withKickReturns(Long kickReturns) {
         this.kickReturns = kickReturns;
         return this;
@@ -460,6 +516,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickoffTouchbacks")
     public Long kickoffTouchbacks;
+
     public TeamGame withKickoffTouchbacks(Long kickoffTouchbacks) {
         this.kickoffTouchbacks = kickoffTouchbacks;
         return this;
@@ -468,6 +525,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Kickoffs")
     public Long kickoffs;
+
     public TeamGame withKickoffs(Long kickoffs) {
         this.kickoffs = kickoffs;
         return this;
@@ -476,6 +534,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickoffsInEndZone")
     public Long kickoffsInEndZone;
+
     public TeamGame withKickoffsInEndZone(Long kickoffsInEndZone) {
         this.kickoffsInEndZone = kickoffsInEndZone;
         return this;
@@ -484,6 +543,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensivePlays")
     public Long offensivePlays;
+
     public TeamGame withOffensivePlays(Long offensivePlays) {
         this.offensivePlays = offensivePlays;
         return this;
@@ -492,6 +552,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveYards")
     public Long offensiveYards;
+
     public TeamGame withOffensiveYards(Long offensiveYards) {
         this.offensiveYards = offensiveYards;
         return this;
@@ -500,6 +561,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveYardsPerPlay")
     public Double offensiveYardsPerPlay;
+
     public TeamGame withOffensiveYardsPerPlay(Double offensiveYardsPerPlay) {
         this.offensiveYardsPerPlay = offensiveYardsPerPlay;
         return this;
@@ -508,6 +570,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public TeamGame withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -516,6 +579,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentAssistedTackles")
     public Long opponentAssistedTackles;
+
     public TeamGame withOpponentAssistedTackles(Long opponentAssistedTackles) {
         this.opponentAssistedTackles = opponentAssistedTackles;
         return this;
@@ -524,6 +588,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentBlockedKickReturnTouchdowns")
     public Long opponentBlockedKickReturnTouchdowns;
+
     public TeamGame withOpponentBlockedKickReturnTouchdowns(Long opponentBlockedKickReturnTouchdowns) {
         this.opponentBlockedKickReturnTouchdowns = opponentBlockedKickReturnTouchdowns;
         return this;
@@ -532,6 +597,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentBlockedKickReturnYards")
     public Long opponentBlockedKickReturnYards;
+
     public TeamGame withOpponentBlockedKickReturnYards(Long opponentBlockedKickReturnYards) {
         this.opponentBlockedKickReturnYards = opponentBlockedKickReturnYards;
         return this;
@@ -540,6 +606,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentBlockedKicks")
     public Long opponentBlockedKicks;
+
     public TeamGame withOpponentBlockedKicks(Long opponentBlockedKicks) {
         this.opponentBlockedKicks = opponentBlockedKicks;
         return this;
@@ -548,6 +615,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentCompletionPercentage")
     public Double opponentCompletionPercentage;
+
     public TeamGame withOpponentCompletionPercentage(Double opponentCompletionPercentage) {
         this.opponentCompletionPercentage = opponentCompletionPercentage;
         return this;
@@ -556,6 +624,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentExtraPointKickingAttempts")
     public Long opponentExtraPointKickingAttempts;
+
     public TeamGame withOpponentExtraPointKickingAttempts(Long opponentExtraPointKickingAttempts) {
         this.opponentExtraPointKickingAttempts = opponentExtraPointKickingAttempts;
         return this;
@@ -564,6 +633,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentExtraPointKickingConversions")
     public Long opponentExtraPointKickingConversions;
+
     public TeamGame withOpponentExtraPointKickingConversions(Long opponentExtraPointKickingConversions) {
         this.opponentExtraPointKickingConversions = opponentExtraPointKickingConversions;
         return this;
@@ -572,6 +642,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentExtraPointPassingAttempts")
     public Long opponentExtraPointPassingAttempts;
+
     public TeamGame withOpponentExtraPointPassingAttempts(Long opponentExtraPointPassingAttempts) {
         this.opponentExtraPointPassingAttempts = opponentExtraPointPassingAttempts;
         return this;
@@ -580,6 +651,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentExtraPointPassingConversions")
     public Long opponentExtraPointPassingConversions;
+
     public TeamGame withOpponentExtraPointPassingConversions(Long opponentExtraPointPassingConversions) {
         this.opponentExtraPointPassingConversions = opponentExtraPointPassingConversions;
         return this;
@@ -588,6 +660,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentExtraPointPercentage")
     public Double opponentExtraPointPercentage;
+
     public TeamGame withOpponentExtraPointPercentage(Double opponentExtraPointPercentage) {
         this.opponentExtraPointPercentage = opponentExtraPointPercentage;
         return this;
@@ -596,6 +669,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentExtraPointRushingAttempts")
     public Long opponentExtraPointRushingAttempts;
+
     public TeamGame withOpponentExtraPointRushingAttempts(Long opponentExtraPointRushingAttempts) {
         this.opponentExtraPointRushingAttempts = opponentExtraPointRushingAttempts;
         return this;
@@ -604,6 +678,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentExtraPointRushingConversions")
     public Long opponentExtraPointRushingConversions;
+
     public TeamGame withOpponentExtraPointRushingConversions(Long opponentExtraPointRushingConversions) {
         this.opponentExtraPointRushingConversions = opponentExtraPointRushingConversions;
         return this;
@@ -612,6 +687,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentExtraPointsHadBlocked")
     public Long opponentExtraPointsHadBlocked;
+
     public TeamGame withOpponentExtraPointsHadBlocked(Long opponentExtraPointsHadBlocked) {
         this.opponentExtraPointsHadBlocked = opponentExtraPointsHadBlocked;
         return this;
@@ -620,6 +696,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFieldGoalAttempts")
     public Long opponentFieldGoalAttempts;
+
     public TeamGame withOpponentFieldGoalAttempts(Long opponentFieldGoalAttempts) {
         this.opponentFieldGoalAttempts = opponentFieldGoalAttempts;
         return this;
@@ -628,6 +705,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFieldGoalPercentage")
     public Double opponentFieldGoalPercentage;
+
     public TeamGame withOpponentFieldGoalPercentage(Double opponentFieldGoalPercentage) {
         this.opponentFieldGoalPercentage = opponentFieldGoalPercentage;
         return this;
@@ -636,6 +714,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFieldGoalReturnTouchdowns")
     public Long opponentFieldGoalReturnTouchdowns;
+
     public TeamGame withOpponentFieldGoalReturnTouchdowns(Long opponentFieldGoalReturnTouchdowns) {
         this.opponentFieldGoalReturnTouchdowns = opponentFieldGoalReturnTouchdowns;
         return this;
@@ -644,6 +723,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFieldGoalReturnYards")
     public Long opponentFieldGoalReturnYards;
+
     public TeamGame withOpponentFieldGoalReturnYards(Long opponentFieldGoalReturnYards) {
         this.opponentFieldGoalReturnYards = opponentFieldGoalReturnYards;
         return this;
@@ -652,6 +732,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFieldGoalsHadBlocked")
     public Long opponentFieldGoalsHadBlocked;
+
     public TeamGame withOpponentFieldGoalsHadBlocked(Long opponentFieldGoalsHadBlocked) {
         this.opponentFieldGoalsHadBlocked = opponentFieldGoalsHadBlocked;
         return this;
@@ -660,6 +741,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFieldGoalsMade")
     public Long opponentFieldGoalsMade;
+
     public TeamGame withOpponentFieldGoalsMade(Long opponentFieldGoalsMade) {
         this.opponentFieldGoalsMade = opponentFieldGoalsMade;
         return this;
@@ -668,6 +750,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFirstDowns")
     public Long opponentFirstDowns;
+
     public TeamGame withOpponentFirstDowns(Long opponentFirstDowns) {
         this.opponentFirstDowns = opponentFirstDowns;
         return this;
@@ -676,6 +759,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFirstDownsByPassing")
     public Long opponentFirstDownsByPassing;
+
     public TeamGame withOpponentFirstDownsByPassing(Long opponentFirstDownsByPassing) {
         this.opponentFirstDownsByPassing = opponentFirstDownsByPassing;
         return this;
@@ -684,6 +768,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFirstDownsByPenalty")
     public Long opponentFirstDownsByPenalty;
+
     public TeamGame withOpponentFirstDownsByPenalty(Long opponentFirstDownsByPenalty) {
         this.opponentFirstDownsByPenalty = opponentFirstDownsByPenalty;
         return this;
@@ -692,6 +777,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFirstDownsByRushing")
     public Long opponentFirstDownsByRushing;
+
     public TeamGame withOpponentFirstDownsByRushing(Long opponentFirstDownsByRushing) {
         this.opponentFirstDownsByRushing = opponentFirstDownsByRushing;
         return this;
@@ -700,6 +786,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFourthDownAttempts")
     public Long opponentFourthDownAttempts;
+
     public TeamGame withOpponentFourthDownAttempts(Long opponentFourthDownAttempts) {
         this.opponentFourthDownAttempts = opponentFourthDownAttempts;
         return this;
@@ -708,6 +795,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFourthDownConversions")
     public Long opponentFourthDownConversions;
+
     public TeamGame withOpponentFourthDownConversions(Long opponentFourthDownConversions) {
         this.opponentFourthDownConversions = opponentFourthDownConversions;
         return this;
@@ -716,6 +804,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFourthDownPercentage")
     public Double opponentFourthDownPercentage;
+
     public TeamGame withOpponentFourthDownPercentage(Double opponentFourthDownPercentage) {
         this.opponentFourthDownPercentage = opponentFourthDownPercentage;
         return this;
@@ -724,6 +813,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFumbleReturnTouchdowns")
     public Long opponentFumbleReturnTouchdowns;
+
     public TeamGame withOpponentFumbleReturnTouchdowns(Long opponentFumbleReturnTouchdowns) {
         this.opponentFumbleReturnTouchdowns = opponentFumbleReturnTouchdowns;
         return this;
@@ -732,6 +822,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFumbleReturnYards")
     public Long opponentFumbleReturnYards;
+
     public TeamGame withOpponentFumbleReturnYards(Long opponentFumbleReturnYards) {
         this.opponentFumbleReturnYards = opponentFumbleReturnYards;
         return this;
@@ -740,6 +831,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFumbles")
     public Long opponentFumbles;
+
     public TeamGame withOpponentFumbles(Long opponentFumbles) {
         this.opponentFumbles = opponentFumbles;
         return this;
@@ -748,6 +840,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFumblesForced")
     public Long opponentFumblesForced;
+
     public TeamGame withOpponentFumblesForced(Long opponentFumblesForced) {
         this.opponentFumblesForced = opponentFumblesForced;
         return this;
@@ -756,6 +849,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFumblesLost")
     public Long opponentFumblesLost;
+
     public TeamGame withOpponentFumblesLost(Long opponentFumblesLost) {
         this.opponentFumblesLost = opponentFumblesLost;
         return this;
@@ -764,6 +858,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentFumblesRecovered")
     public Long opponentFumblesRecovered;
+
     public TeamGame withOpponentFumblesRecovered(Long opponentFumblesRecovered) {
         this.opponentFumblesRecovered = opponentFumblesRecovered;
         return this;
@@ -772,6 +867,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentGiveaways")
     public Long opponentGiveaways;
+
     public TeamGame withOpponentGiveaways(Long opponentGiveaways) {
         this.opponentGiveaways = opponentGiveaways;
         return this;
@@ -780,6 +876,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentGoalToGoAttempts")
     public Long opponentGoalToGoAttempts;
+
     public TeamGame withOpponentGoalToGoAttempts(Long opponentGoalToGoAttempts) {
         this.opponentGoalToGoAttempts = opponentGoalToGoAttempts;
         return this;
@@ -788,6 +885,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentGoalToGoConversions")
     public Long opponentGoalToGoConversions;
+
     public TeamGame withOpponentGoalToGoConversions(Long opponentGoalToGoConversions) {
         this.opponentGoalToGoConversions = opponentGoalToGoConversions;
         return this;
@@ -796,6 +894,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentGoalToGoPercentage")
     public Double opponentGoalToGoPercentage;
+
     public TeamGame withOpponentGoalToGoPercentage(Double opponentGoalToGoPercentage) {
         this.opponentGoalToGoPercentage = opponentGoalToGoPercentage;
         return this;
@@ -804,6 +903,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentID")
     public Long opponentID;
+
     public TeamGame withOpponentID(Long opponentID) {
         this.opponentID = opponentID;
         return this;
@@ -812,6 +912,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentInterceptionReturnTouchdowns")
     public Long opponentInterceptionReturnTouchdowns;
+
     public TeamGame withOpponentInterceptionReturnTouchdowns(Long opponentInterceptionReturnTouchdowns) {
         this.opponentInterceptionReturnTouchdowns = opponentInterceptionReturnTouchdowns;
         return this;
@@ -820,6 +921,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentInterceptionReturnYards")
     public Long opponentInterceptionReturnYards;
+
     public TeamGame withOpponentInterceptionReturnYards(Long opponentInterceptionReturnYards) {
         this.opponentInterceptionReturnYards = opponentInterceptionReturnYards;
         return this;
@@ -828,6 +930,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentInterceptionReturns")
     public Long opponentInterceptionReturns;
+
     public TeamGame withOpponentInterceptionReturns(Long opponentInterceptionReturns) {
         this.opponentInterceptionReturns = opponentInterceptionReturns;
         return this;
@@ -836,6 +939,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentKickReturnAverage")
     public Double opponentKickReturnAverage;
+
     public TeamGame withOpponentKickReturnAverage(Double opponentKickReturnAverage) {
         this.opponentKickReturnAverage = opponentKickReturnAverage;
         return this;
@@ -844,6 +948,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentKickReturnLong")
     public Long opponentKickReturnLong;
+
     public TeamGame withOpponentKickReturnLong(Long opponentKickReturnLong) {
         this.opponentKickReturnLong = opponentKickReturnLong;
         return this;
@@ -852,6 +957,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentKickReturnTouchdowns")
     public Long opponentKickReturnTouchdowns;
+
     public TeamGame withOpponentKickReturnTouchdowns(Long opponentKickReturnTouchdowns) {
         this.opponentKickReturnTouchdowns = opponentKickReturnTouchdowns;
         return this;
@@ -860,6 +966,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentKickReturnYards")
     public Long opponentKickReturnYards;
+
     public TeamGame withOpponentKickReturnYards(Long opponentKickReturnYards) {
         this.opponentKickReturnYards = opponentKickReturnYards;
         return this;
@@ -868,6 +975,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentKickReturns")
     public Long opponentKickReturns;
+
     public TeamGame withOpponentKickReturns(Long opponentKickReturns) {
         this.opponentKickReturns = opponentKickReturns;
         return this;
@@ -876,6 +984,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentKickoffTouchbacks")
     public Long opponentKickoffTouchbacks;
+
     public TeamGame withOpponentKickoffTouchbacks(Long opponentKickoffTouchbacks) {
         this.opponentKickoffTouchbacks = opponentKickoffTouchbacks;
         return this;
@@ -884,6 +993,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentKickoffs")
     public Long opponentKickoffs;
+
     public TeamGame withOpponentKickoffs(Long opponentKickoffs) {
         this.opponentKickoffs = opponentKickoffs;
         return this;
@@ -892,6 +1002,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentKickoffsInEndZone")
     public Long opponentKickoffsInEndZone;
+
     public TeamGame withOpponentKickoffsInEndZone(Long opponentKickoffsInEndZone) {
         this.opponentKickoffsInEndZone = opponentKickoffsInEndZone;
         return this;
@@ -900,6 +1011,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentOffensivePlays")
     public Long opponentOffensivePlays;
+
     public TeamGame withOpponentOffensivePlays(Long opponentOffensivePlays) {
         this.opponentOffensivePlays = opponentOffensivePlays;
         return this;
@@ -908,6 +1020,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentOffensiveYards")
     public Long opponentOffensiveYards;
+
     public TeamGame withOpponentOffensiveYards(Long opponentOffensiveYards) {
         this.opponentOffensiveYards = opponentOffensiveYards;
         return this;
@@ -916,6 +1029,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentOffensiveYardsPerPlay")
     public Double opponentOffensiveYardsPerPlay;
+
     public TeamGame withOpponentOffensiveYardsPerPlay(Double opponentOffensiveYardsPerPlay) {
         this.opponentOffensiveYardsPerPlay = opponentOffensiveYardsPerPlay;
         return this;
@@ -924,6 +1038,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPasserRating")
     public Double opponentPasserRating;
+
     public TeamGame withOpponentPasserRating(Double opponentPasserRating) {
         this.opponentPasserRating = opponentPasserRating;
         return this;
@@ -932,6 +1047,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassesDefended")
     public Long opponentPassesDefended;
+
     public TeamGame withOpponentPassesDefended(Long opponentPassesDefended) {
         this.opponentPassesDefended = opponentPassesDefended;
         return this;
@@ -940,6 +1056,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingAttempts")
     public Long opponentPassingAttempts;
+
     public TeamGame withOpponentPassingAttempts(Long opponentPassingAttempts) {
         this.opponentPassingAttempts = opponentPassingAttempts;
         return this;
@@ -948,6 +1065,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingCompletions")
     public Long opponentPassingCompletions;
+
     public TeamGame withOpponentPassingCompletions(Long opponentPassingCompletions) {
         this.opponentPassingCompletions = opponentPassingCompletions;
         return this;
@@ -956,6 +1074,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingDropbacks")
     public Long opponentPassingDropbacks;
+
     public TeamGame withOpponentPassingDropbacks(Long opponentPassingDropbacks) {
         this.opponentPassingDropbacks = opponentPassingDropbacks;
         return this;
@@ -964,6 +1083,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingInterceptionPercentage")
     public Double opponentPassingInterceptionPercentage;
+
     public TeamGame withOpponentPassingInterceptionPercentage(Double opponentPassingInterceptionPercentage) {
         this.opponentPassingInterceptionPercentage = opponentPassingInterceptionPercentage;
         return this;
@@ -972,6 +1092,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingInterceptions")
     public Long opponentPassingInterceptions;
+
     public TeamGame withOpponentPassingInterceptions(Long opponentPassingInterceptions) {
         this.opponentPassingInterceptions = opponentPassingInterceptions;
         return this;
@@ -980,6 +1101,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingTouchdowns")
     public Long opponentPassingTouchdowns;
+
     public TeamGame withOpponentPassingTouchdowns(Long opponentPassingTouchdowns) {
         this.opponentPassingTouchdowns = opponentPassingTouchdowns;
         return this;
@@ -988,6 +1110,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingYards")
     public Long opponentPassingYards;
+
     public TeamGame withOpponentPassingYards(Long opponentPassingYards) {
         this.opponentPassingYards = opponentPassingYards;
         return this;
@@ -996,6 +1119,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingYardsPerAttempt")
     public Double opponentPassingYardsPerAttempt;
+
     public TeamGame withOpponentPassingYardsPerAttempt(Double opponentPassingYardsPerAttempt) {
         this.opponentPassingYardsPerAttempt = opponentPassingYardsPerAttempt;
         return this;
@@ -1004,6 +1128,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPassingYardsPerCompletion")
     public Double opponentPassingYardsPerCompletion;
+
     public TeamGame withOpponentPassingYardsPerCompletion(Double opponentPassingYardsPerCompletion) {
         this.opponentPassingYardsPerCompletion = opponentPassingYardsPerCompletion;
         return this;
@@ -1012,6 +1137,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPenalties")
     public Long opponentPenalties;
+
     public TeamGame withOpponentPenalties(Long opponentPenalties) {
         this.opponentPenalties = opponentPenalties;
         return this;
@@ -1020,6 +1146,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPenaltyYards")
     public Long opponentPenaltyYards;
+
     public TeamGame withOpponentPenaltyYards(Long opponentPenaltyYards) {
         this.opponentPenaltyYards = opponentPenaltyYards;
         return this;
@@ -1028,6 +1155,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntAverage")
     public Double opponentPuntAverage;
+
     public TeamGame withOpponentPuntAverage(Double opponentPuntAverage) {
         this.opponentPuntAverage = opponentPuntAverage;
         return this;
@@ -1036,6 +1164,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntNetAverage")
     public Double opponentPuntNetAverage;
+
     public TeamGame withOpponentPuntNetAverage(Double opponentPuntNetAverage) {
         this.opponentPuntNetAverage = opponentPuntNetAverage;
         return this;
@@ -1044,6 +1173,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntNetYards")
     public Long opponentPuntNetYards;
+
     public TeamGame withOpponentPuntNetYards(Long opponentPuntNetYards) {
         this.opponentPuntNetYards = opponentPuntNetYards;
         return this;
@@ -1052,6 +1182,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntReturnAverage")
     public Double opponentPuntReturnAverage;
+
     public TeamGame withOpponentPuntReturnAverage(Double opponentPuntReturnAverage) {
         this.opponentPuntReturnAverage = opponentPuntReturnAverage;
         return this;
@@ -1060,6 +1191,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntReturnLong")
     public Long opponentPuntReturnLong;
+
     public TeamGame withOpponentPuntReturnLong(Long opponentPuntReturnLong) {
         this.opponentPuntReturnLong = opponentPuntReturnLong;
         return this;
@@ -1068,6 +1200,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntReturnTouchdowns")
     public Long opponentPuntReturnTouchdowns;
+
     public TeamGame withOpponentPuntReturnTouchdowns(Long opponentPuntReturnTouchdowns) {
         this.opponentPuntReturnTouchdowns = opponentPuntReturnTouchdowns;
         return this;
@@ -1076,6 +1209,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntReturnYards")
     public Long opponentPuntReturnYards;
+
     public TeamGame withOpponentPuntReturnYards(Long opponentPuntReturnYards) {
         this.opponentPuntReturnYards = opponentPuntReturnYards;
         return this;
@@ -1084,6 +1218,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntReturns")
     public Long opponentPuntReturns;
+
     public TeamGame withOpponentPuntReturns(Long opponentPuntReturns) {
         this.opponentPuntReturns = opponentPuntReturns;
         return this;
@@ -1092,6 +1227,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntYards")
     public Long opponentPuntYards;
+
     public TeamGame withOpponentPuntYards(Long opponentPuntYards) {
         this.opponentPuntYards = opponentPuntYards;
         return this;
@@ -1100,6 +1236,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPunts")
     public Long opponentPunts;
+
     public TeamGame withOpponentPunts(Long opponentPunts) {
         this.opponentPunts = opponentPunts;
         return this;
@@ -1108,6 +1245,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPuntsHadBlocked")
     public Long opponentPuntsHadBlocked;
+
     public TeamGame withOpponentPuntsHadBlocked(Long opponentPuntsHadBlocked) {
         this.opponentPuntsHadBlocked = opponentPuntsHadBlocked;
         return this;
@@ -1116,6 +1254,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentQuarterbackHits")
     public Long opponentQuarterbackHits;
+
     public TeamGame withOpponentQuarterbackHits(Long opponentQuarterbackHits) {
         this.opponentQuarterbackHits = opponentQuarterbackHits;
         return this;
@@ -1124,6 +1263,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentQuarterbackHitsDifferential")
     public Long opponentQuarterbackHitsDifferential;
+
     public TeamGame withOpponentQuarterbackHitsDifferential(Long opponentQuarterbackHitsDifferential) {
         this.opponentQuarterbackHitsDifferential = opponentQuarterbackHitsDifferential;
         return this;
@@ -1132,6 +1272,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentQuarterbackHitsPercentage")
     public Double opponentQuarterbackHitsPercentage;
+
     public TeamGame withOpponentQuarterbackHitsPercentage(Double opponentQuarterbackHitsPercentage) {
         this.opponentQuarterbackHitsPercentage = opponentQuarterbackHitsPercentage;
         return this;
@@ -1140,6 +1281,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentQuarterbackSacksDifferential")
     public Long opponentQuarterbackSacksDifferential;
+
     public TeamGame withOpponentQuarterbackSacksDifferential(Long opponentQuarterbackSacksDifferential) {
         this.opponentQuarterbackSacksDifferential = opponentQuarterbackSacksDifferential;
         return this;
@@ -1148,6 +1290,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRedZoneAttempts")
     public Long opponentRedZoneAttempts;
+
     public TeamGame withOpponentRedZoneAttempts(Long opponentRedZoneAttempts) {
         this.opponentRedZoneAttempts = opponentRedZoneAttempts;
         return this;
@@ -1156,6 +1299,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRedZoneConversions")
     public Long opponentRedZoneConversions;
+
     public TeamGame withOpponentRedZoneConversions(Long opponentRedZoneConversions) {
         this.opponentRedZoneConversions = opponentRedZoneConversions;
         return this;
@@ -1164,6 +1308,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRedZonePercentage")
     public Double opponentRedZonePercentage;
+
     public TeamGame withOpponentRedZonePercentage(Double opponentRedZonePercentage) {
         this.opponentRedZonePercentage = opponentRedZonePercentage;
         return this;
@@ -1172,6 +1317,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentReturnYards")
     public Long opponentReturnYards;
+
     public TeamGame withOpponentReturnYards(Long opponentReturnYards) {
         this.opponentReturnYards = opponentReturnYards;
         return this;
@@ -1180,6 +1326,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRushingAttempts")
     public Long opponentRushingAttempts;
+
     public TeamGame withOpponentRushingAttempts(Long opponentRushingAttempts) {
         this.opponentRushingAttempts = opponentRushingAttempts;
         return this;
@@ -1188,6 +1335,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRushingTouchdowns")
     public Long opponentRushingTouchdowns;
+
     public TeamGame withOpponentRushingTouchdowns(Long opponentRushingTouchdowns) {
         this.opponentRushingTouchdowns = opponentRushingTouchdowns;
         return this;
@@ -1196,6 +1344,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRushingYards")
     public Long opponentRushingYards;
+
     public TeamGame withOpponentRushingYards(Long opponentRushingYards) {
         this.opponentRushingYards = opponentRushingYards;
         return this;
@@ -1204,6 +1353,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRushingYardsPerAttempt")
     public Double opponentRushingYardsPerAttempt;
+
     public TeamGame withOpponentRushingYardsPerAttempt(Double opponentRushingYardsPerAttempt) {
         this.opponentRushingYardsPerAttempt = opponentRushingYardsPerAttempt;
         return this;
@@ -1212,6 +1362,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentSackYards")
     public Long opponentSackYards;
+
     public TeamGame withOpponentSackYards(Long opponentSackYards) {
         this.opponentSackYards = opponentSackYards;
         return this;
@@ -1220,6 +1371,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentSacks")
     public Long opponentSacks;
+
     public TeamGame withOpponentSacks(Long opponentSacks) {
         this.opponentSacks = opponentSacks;
         return this;
@@ -1228,6 +1380,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentSafeties")
     public Long opponentSafeties;
+
     public TeamGame withOpponentSafeties(Long opponentSafeties) {
         this.opponentSafeties = opponentSafeties;
         return this;
@@ -1236,6 +1389,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentScore")
     public Long opponentScore;
+
     public TeamGame withOpponentScore(Long opponentScore) {
         this.opponentScore = opponentScore;
         return this;
@@ -1244,6 +1398,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentScoreOvertime")
     public Long opponentScoreOvertime;
+
     public TeamGame withOpponentScoreOvertime(Long opponentScoreOvertime) {
         this.opponentScoreOvertime = opponentScoreOvertime;
         return this;
@@ -1252,6 +1407,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentScoreQuarter1")
     public Long opponentScoreQuarter1;
+
     public TeamGame withOpponentScoreQuarter1(Long opponentScoreQuarter1) {
         this.opponentScoreQuarter1 = opponentScoreQuarter1;
         return this;
@@ -1260,6 +1416,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentScoreQuarter2")
     public Long opponentScoreQuarter2;
+
     public TeamGame withOpponentScoreQuarter2(Long opponentScoreQuarter2) {
         this.opponentScoreQuarter2 = opponentScoreQuarter2;
         return this;
@@ -1268,6 +1425,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentScoreQuarter3")
     public Long opponentScoreQuarter3;
+
     public TeamGame withOpponentScoreQuarter3(Long opponentScoreQuarter3) {
         this.opponentScoreQuarter3 = opponentScoreQuarter3;
         return this;
@@ -1276,6 +1434,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentScoreQuarter4")
     public Long opponentScoreQuarter4;
+
     public TeamGame withOpponentScoreQuarter4(Long opponentScoreQuarter4) {
         this.opponentScoreQuarter4 = opponentScoreQuarter4;
         return this;
@@ -1284,6 +1443,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentSoloTackles")
     public Long opponentSoloTackles;
+
     public TeamGame withOpponentSoloTackles(Long opponentSoloTackles) {
         this.opponentSoloTackles = opponentSoloTackles;
         return this;
@@ -1292,6 +1452,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTacklesForLoss")
     public Long opponentTacklesForLoss;
+
     public TeamGame withOpponentTacklesForLoss(Long opponentTacklesForLoss) {
         this.opponentTacklesForLoss = opponentTacklesForLoss;
         return this;
@@ -1300,6 +1461,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTacklesForLossDifferential")
     public Long opponentTacklesForLossDifferential;
+
     public TeamGame withOpponentTacklesForLossDifferential(Long opponentTacklesForLossDifferential) {
         this.opponentTacklesForLossDifferential = opponentTacklesForLossDifferential;
         return this;
@@ -1308,6 +1470,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTacklesForLossPercentage")
     public Double opponentTacklesForLossPercentage;
+
     public TeamGame withOpponentTacklesForLossPercentage(Double opponentTacklesForLossPercentage) {
         this.opponentTacklesForLossPercentage = opponentTacklesForLossPercentage;
         return this;
@@ -1316,6 +1479,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTakeaways")
     public Long opponentTakeaways;
+
     public TeamGame withOpponentTakeaways(Long opponentTakeaways) {
         this.opponentTakeaways = opponentTakeaways;
         return this;
@@ -1324,6 +1488,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentThirdDownAttempts")
     public Long opponentThirdDownAttempts;
+
     public TeamGame withOpponentThirdDownAttempts(Long opponentThirdDownAttempts) {
         this.opponentThirdDownAttempts = opponentThirdDownAttempts;
         return this;
@@ -1332,6 +1497,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentThirdDownConversions")
     public Long opponentThirdDownConversions;
+
     public TeamGame withOpponentThirdDownConversions(Long opponentThirdDownConversions) {
         this.opponentThirdDownConversions = opponentThirdDownConversions;
         return this;
@@ -1340,6 +1506,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentThirdDownPercentage")
     public Double opponentThirdDownPercentage;
+
     public TeamGame withOpponentThirdDownPercentage(Double opponentThirdDownPercentage) {
         this.opponentThirdDownPercentage = opponentThirdDownPercentage;
         return this;
@@ -1348,6 +1515,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTimeOfPossession")
     public String opponentTimeOfPossession;
+
     public TeamGame withOpponentTimeOfPossession(String opponentTimeOfPossession) {
         this.opponentTimeOfPossession = opponentTimeOfPossession;
         return this;
@@ -1356,6 +1524,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTimeOfPossessionMinutes")
     public Long opponentTimeOfPossessionMinutes;
+
     public TeamGame withOpponentTimeOfPossessionMinutes(Long opponentTimeOfPossessionMinutes) {
         this.opponentTimeOfPossessionMinutes = opponentTimeOfPossessionMinutes;
         return this;
@@ -1364,6 +1533,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTimeOfPossessionSeconds")
     public Long opponentTimeOfPossessionSeconds;
+
     public TeamGame withOpponentTimeOfPossessionSeconds(Long opponentTimeOfPossessionSeconds) {
         this.opponentTimeOfPossessionSeconds = opponentTimeOfPossessionSeconds;
         return this;
@@ -1372,6 +1542,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTimesSacked")
     public Long opponentTimesSacked;
+
     public TeamGame withOpponentTimesSacked(Long opponentTimesSacked) {
         this.opponentTimesSacked = opponentTimesSacked;
         return this;
@@ -1380,6 +1551,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTimesSackedPercentage")
     public Double opponentTimesSackedPercentage;
+
     public TeamGame withOpponentTimesSackedPercentage(Double opponentTimesSackedPercentage) {
         this.opponentTimesSackedPercentage = opponentTimesSackedPercentage;
         return this;
@@ -1388,6 +1560,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTimesSackedYards")
     public Long opponentTimesSackedYards;
+
     public TeamGame withOpponentTimesSackedYards(Long opponentTimesSackedYards) {
         this.opponentTimesSackedYards = opponentTimesSackedYards;
         return this;
@@ -1396,6 +1569,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTouchdowns")
     public Long opponentTouchdowns;
+
     public TeamGame withOpponentTouchdowns(Long opponentTouchdowns) {
         this.opponentTouchdowns = opponentTouchdowns;
         return this;
@@ -1404,6 +1578,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTurnoverDifferential")
     public Long opponentTurnoverDifferential;
+
     public TeamGame withOpponentTurnoverDifferential(Long opponentTurnoverDifferential) {
         this.opponentTurnoverDifferential = opponentTurnoverDifferential;
         return this;
@@ -1412,6 +1587,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentTwoPointConversionReturns")
     public Long opponentTwoPointConversionReturns;
+
     public TeamGame withOpponentTwoPointConversionReturns(Long opponentTwoPointConversionReturns) {
         this.opponentTwoPointConversionReturns = opponentTwoPointConversionReturns;
         return this;
@@ -1420,6 +1596,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverUnder")
     public Double overUnder;
+
     public TeamGame withOverUnder(Double overUnder) {
         this.overUnder = overUnder;
         return this;
@@ -1428,6 +1605,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PasserRating")
     public Double passerRating;
+
     public TeamGame withPasserRating(Double passerRating) {
         this.passerRating = passerRating;
         return this;
@@ -1436,6 +1614,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassesDefended")
     public Long passesDefended;
+
     public TeamGame withPassesDefended(Long passesDefended) {
         this.passesDefended = passesDefended;
         return this;
@@ -1444,6 +1623,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingAttempts")
     public Long passingAttempts;
+
     public TeamGame withPassingAttempts(Long passingAttempts) {
         this.passingAttempts = passingAttempts;
         return this;
@@ -1452,6 +1632,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingCompletions")
     public Long passingCompletions;
+
     public TeamGame withPassingCompletions(Long passingCompletions) {
         this.passingCompletions = passingCompletions;
         return this;
@@ -1460,6 +1641,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingDropbacks")
     public Long passingDropbacks;
+
     public TeamGame withPassingDropbacks(Long passingDropbacks) {
         this.passingDropbacks = passingDropbacks;
         return this;
@@ -1468,6 +1650,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingInterceptionPercentage")
     public Double passingInterceptionPercentage;
+
     public TeamGame withPassingInterceptionPercentage(Double passingInterceptionPercentage) {
         this.passingInterceptionPercentage = passingInterceptionPercentage;
         return this;
@@ -1476,6 +1659,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingInterceptions")
     public Long passingInterceptions;
+
     public TeamGame withPassingInterceptions(Long passingInterceptions) {
         this.passingInterceptions = passingInterceptions;
         return this;
@@ -1484,6 +1668,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingTouchdowns")
     public Long passingTouchdowns;
+
     public TeamGame withPassingTouchdowns(Long passingTouchdowns) {
         this.passingTouchdowns = passingTouchdowns;
         return this;
@@ -1492,6 +1677,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYards")
     public Long passingYards;
+
     public TeamGame withPassingYards(Long passingYards) {
         this.passingYards = passingYards;
         return this;
@@ -1500,6 +1686,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYardsPerAttempt")
     public Double passingYardsPerAttempt;
+
     public TeamGame withPassingYardsPerAttempt(Double passingYardsPerAttempt) {
         this.passingYardsPerAttempt = passingYardsPerAttempt;
         return this;
@@ -1508,6 +1695,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYardsPerCompletion")
     public Double passingYardsPerCompletion;
+
     public TeamGame withPassingYardsPerCompletion(Double passingYardsPerCompletion) {
         this.passingYardsPerCompletion = passingYardsPerCompletion;
         return this;
@@ -1516,6 +1704,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Penalties")
     public Long penalties;
+
     public TeamGame withPenalties(Long penalties) {
         this.penalties = penalties;
         return this;
@@ -1524,6 +1713,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenaltyYardDifferential")
     public Long penaltyYardDifferential;
+
     public TeamGame withPenaltyYardDifferential(Long penaltyYardDifferential) {
         this.penaltyYardDifferential = penaltyYardDifferential;
         return this;
@@ -1532,6 +1722,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenaltyYards")
     public Long penaltyYards;
+
     public TeamGame withPenaltyYards(Long penaltyYards) {
         this.penaltyYards = penaltyYards;
         return this;
@@ -1540,6 +1731,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayingSurface")
     public String playingSurface;
+
     public TeamGame withPlayingSurface(String playingSurface) {
         this.playingSurface = playingSurface;
         return this;
@@ -1548,6 +1740,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointDifferential")
     public Long pointDifferential;
+
     public TeamGame withPointDifferential(Long pointDifferential) {
         this.pointDifferential = pointDifferential;
         return this;
@@ -1556,6 +1749,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointSpread")
     public Double pointSpread;
+
     public TeamGame withPointSpread(Double pointSpread) {
         this.pointSpread = pointSpread;
         return this;
@@ -1564,6 +1758,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntAverage")
     public Double puntAverage;
+
     public TeamGame withPuntAverage(Double puntAverage) {
         this.puntAverage = puntAverage;
         return this;
@@ -1572,6 +1767,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntNetAverage")
     public Double puntNetAverage;
+
     public TeamGame withPuntNetAverage(Double puntNetAverage) {
         this.puntNetAverage = puntNetAverage;
         return this;
@@ -1580,6 +1776,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntNetYards")
     public Long puntNetYards;
+
     public TeamGame withPuntNetYards(Long puntNetYards) {
         this.puntNetYards = puntNetYards;
         return this;
@@ -1588,6 +1785,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnAverage")
     public Double puntReturnAverage;
+
     public TeamGame withPuntReturnAverage(Double puntReturnAverage) {
         this.puntReturnAverage = puntReturnAverage;
         return this;
@@ -1596,6 +1794,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnLong")
     public Long puntReturnLong;
+
     public TeamGame withPuntReturnLong(Long puntReturnLong) {
         this.puntReturnLong = puntReturnLong;
         return this;
@@ -1604,6 +1803,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnTouchdowns")
     public Long puntReturnTouchdowns;
+
     public TeamGame withPuntReturnTouchdowns(Long puntReturnTouchdowns) {
         this.puntReturnTouchdowns = puntReturnTouchdowns;
         return this;
@@ -1612,6 +1812,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYardDifferential")
     public Long puntReturnYardDifferential;
+
     public TeamGame withPuntReturnYardDifferential(Long puntReturnYardDifferential) {
         this.puntReturnYardDifferential = puntReturnYardDifferential;
         return this;
@@ -1620,6 +1821,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYards")
     public Long puntReturnYards;
+
     public TeamGame withPuntReturnYards(Long puntReturnYards) {
         this.puntReturnYards = puntReturnYards;
         return this;
@@ -1628,6 +1830,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturns")
     public Long puntReturns;
+
     public TeamGame withPuntReturns(Long puntReturns) {
         this.puntReturns = puntReturns;
         return this;
@@ -1636,6 +1839,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntYards")
     public Long puntYards;
+
     public TeamGame withPuntYards(Long puntYards) {
         this.puntYards = puntYards;
         return this;
@@ -1644,6 +1848,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Punts")
     public Long punts;
+
     public TeamGame withPunts(Long punts) {
         this.punts = punts;
         return this;
@@ -1652,6 +1857,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntsHadBlocked")
     public Long puntsHadBlocked;
+
     public TeamGame withPuntsHadBlocked(Long puntsHadBlocked) {
         this.puntsHadBlocked = puntsHadBlocked;
         return this;
@@ -1660,6 +1866,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackHits")
     public Long quarterbackHits;
+
     public TeamGame withQuarterbackHits(Long quarterbackHits) {
         this.quarterbackHits = quarterbackHits;
         return this;
@@ -1668,6 +1875,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackHitsDifferential")
     public Long quarterbackHitsDifferential;
+
     public TeamGame withQuarterbackHitsDifferential(Long quarterbackHitsDifferential) {
         this.quarterbackHitsDifferential = quarterbackHitsDifferential;
         return this;
@@ -1676,6 +1884,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackHitsPercentage")
     public Double quarterbackHitsPercentage;
+
     public TeamGame withQuarterbackHitsPercentage(Double quarterbackHitsPercentage) {
         this.quarterbackHitsPercentage = quarterbackHitsPercentage;
         return this;
@@ -1684,6 +1893,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackSacksDifferential")
     public Long quarterbackSacksDifferential;
+
     public TeamGame withQuarterbackSacksDifferential(Long quarterbackSacksDifferential) {
         this.quarterbackSacksDifferential = quarterbackSacksDifferential;
         return this;
@@ -1692,6 +1902,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedZoneAttempts")
     public Long redZoneAttempts;
+
     public TeamGame withRedZoneAttempts(Long redZoneAttempts) {
         this.redZoneAttempts = redZoneAttempts;
         return this;
@@ -1700,6 +1911,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedZoneConversions")
     public Long redZoneConversions;
+
     public TeamGame withRedZoneConversions(Long redZoneConversions) {
         this.redZoneConversions = redZoneConversions;
         return this;
@@ -1708,6 +1920,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedZonePercentage")
     public Double redZonePercentage;
+
     public TeamGame withRedZonePercentage(Double redZonePercentage) {
         this.redZonePercentage = redZonePercentage;
         return this;
@@ -1716,6 +1929,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnYards")
     public Long returnYards;
+
     public TeamGame withReturnYards(Long returnYards) {
         this.returnYards = returnYards;
         return this;
@@ -1724,6 +1938,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingAttempts")
     public Long rushingAttempts;
+
     public TeamGame withRushingAttempts(Long rushingAttempts) {
         this.rushingAttempts = rushingAttempts;
         return this;
@@ -1732,6 +1947,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingTouchdowns")
     public Long rushingTouchdowns;
+
     public TeamGame withRushingTouchdowns(Long rushingTouchdowns) {
         this.rushingTouchdowns = rushingTouchdowns;
         return this;
@@ -1740,6 +1956,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingYards")
     public Long rushingYards;
+
     public TeamGame withRushingYards(Long rushingYards) {
         this.rushingYards = rushingYards;
         return this;
@@ -1748,6 +1965,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingYardsPerAttempt")
     public Double rushingYardsPerAttempt;
+
     public TeamGame withRushingYardsPerAttempt(Double rushingYardsPerAttempt) {
         this.rushingYardsPerAttempt = rushingYardsPerAttempt;
         return this;
@@ -1756,6 +1974,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SackYards")
     public Long sackYards;
+
     public TeamGame withSackYards(Long sackYards) {
         this.sackYards = sackYards;
         return this;
@@ -1764,6 +1983,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sacks")
     public Long sacks;
+
     public TeamGame withSacks(Long sacks) {
         this.sacks = sacks;
         return this;
@@ -1772,6 +1992,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Safeties")
     public Long safeties;
+
     public TeamGame withSafeties(Long safeties) {
         this.safeties = safeties;
         return this;
@@ -1780,6 +2001,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Long score;
+
     public TeamGame withScore(Long score) {
         this.score = score;
         return this;
@@ -1788,6 +2010,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreID")
     public Long scoreID;
+
     public TeamGame withScoreID(Long scoreID) {
         this.scoreID = scoreID;
         return this;
@@ -1796,6 +2019,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreOvertime")
     public Long scoreOvertime;
+
     public TeamGame withScoreOvertime(Long scoreOvertime) {
         this.scoreOvertime = scoreOvertime;
         return this;
@@ -1804,6 +2028,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreQuarter1")
     public Long scoreQuarter1;
+
     public TeamGame withScoreQuarter1(Long scoreQuarter1) {
         this.scoreQuarter1 = scoreQuarter1;
         return this;
@@ -1812,6 +2037,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreQuarter2")
     public Long scoreQuarter2;
+
     public TeamGame withScoreQuarter2(Long scoreQuarter2) {
         this.scoreQuarter2 = scoreQuarter2;
         return this;
@@ -1820,6 +2046,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreQuarter3")
     public Long scoreQuarter3;
+
     public TeamGame withScoreQuarter3(Long scoreQuarter3) {
         this.scoreQuarter3 = scoreQuarter3;
         return this;
@@ -1828,6 +2055,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreQuarter4")
     public Long scoreQuarter4;
+
     public TeamGame withScoreQuarter4(Long scoreQuarter4) {
         this.scoreQuarter4 = scoreQuarter4;
         return this;
@@ -1836,6 +2064,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public TeamGame withSeason(Long season) {
         this.season = season;
         return this;
@@ -1844,6 +2073,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public TeamGame withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -1852,6 +2082,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoloTackles")
     public Long soloTackles;
+
     public TeamGame withSoloTackles(Long soloTackles) {
         this.soloTackles = soloTackles;
         return this;
@@ -1860,6 +2091,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stadium")
     public String stadium;
+
     public TeamGame withStadium(String stadium) {
         this.stadium = stadium;
         return this;
@@ -1868,6 +2100,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TacklesForLoss")
     public Long tacklesForLoss;
+
     public TeamGame withTacklesForLoss(Long tacklesForLoss) {
         this.tacklesForLoss = tacklesForLoss;
         return this;
@@ -1876,6 +2109,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TacklesForLossDifferential")
     public Long tacklesForLossDifferential;
+
     public TeamGame withTacklesForLossDifferential(Long tacklesForLossDifferential) {
         this.tacklesForLossDifferential = tacklesForLossDifferential;
         return this;
@@ -1884,6 +2118,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TacklesForLossPercentage")
     public Double tacklesForLossPercentage;
+
     public TeamGame withTacklesForLossPercentage(Double tacklesForLossPercentage) {
         this.tacklesForLossPercentage = tacklesForLossPercentage;
         return this;
@@ -1892,6 +2127,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Takeaways")
     public Long takeaways;
+
     public TeamGame withTakeaways(Long takeaways) {
         this.takeaways = takeaways;
         return this;
@@ -1900,6 +2136,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public TeamGame withTeam(String team) {
         this.team = team;
         return this;
@@ -1908,6 +2145,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamGameID")
     public Long teamGameID;
+
     public TeamGame withTeamGameID(Long teamGameID) {
         this.teamGameID = teamGameID;
         return this;
@@ -1916,6 +2154,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public TeamGame withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -1924,6 +2163,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamName")
     public String teamName;
+
     public TeamGame withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
@@ -1932,6 +2172,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Temperature")
     public Long temperature;
+
     public TeamGame withTemperature(Long temperature) {
         this.temperature = temperature;
         return this;
@@ -1940,6 +2181,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdDownAttempts")
     public Long thirdDownAttempts;
+
     public TeamGame withThirdDownAttempts(Long thirdDownAttempts) {
         this.thirdDownAttempts = thirdDownAttempts;
         return this;
@@ -1948,6 +2190,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdDownConversions")
     public Long thirdDownConversions;
+
     public TeamGame withThirdDownConversions(Long thirdDownConversions) {
         this.thirdDownConversions = thirdDownConversions;
         return this;
@@ -1956,6 +2199,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdDownPercentage")
     public Double thirdDownPercentage;
+
     public TeamGame withThirdDownPercentage(Double thirdDownPercentage) {
         this.thirdDownPercentage = thirdDownPercentage;
         return this;
@@ -1964,6 +2208,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeOfPossession")
     public String timeOfPossession;
+
     public TeamGame withTimeOfPossession(String timeOfPossession) {
         this.timeOfPossession = timeOfPossession;
         return this;
@@ -1972,6 +2217,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeOfPossessionMinutes")
     public Long timeOfPossessionMinutes;
+
     public TeamGame withTimeOfPossessionMinutes(Long timeOfPossessionMinutes) {
         this.timeOfPossessionMinutes = timeOfPossessionMinutes;
         return this;
@@ -1980,6 +2226,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeOfPossessionSeconds")
     public Long timeOfPossessionSeconds;
+
     public TeamGame withTimeOfPossessionSeconds(Long timeOfPossessionSeconds) {
         this.timeOfPossessionSeconds = timeOfPossessionSeconds;
         return this;
@@ -1988,6 +2235,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimesSacked")
     public Long timesSacked;
+
     public TeamGame withTimesSacked(Long timesSacked) {
         this.timesSacked = timesSacked;
         return this;
@@ -1996,6 +2244,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimesSackedPercentage")
     public Double timesSackedPercentage;
+
     public TeamGame withTimesSackedPercentage(Double timesSackedPercentage) {
         this.timesSackedPercentage = timesSackedPercentage;
         return this;
@@ -2004,6 +2253,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimesSackedYards")
     public Long timesSackedYards;
+
     public TeamGame withTimesSackedYards(Long timesSackedYards) {
         this.timesSackedYards = timesSackedYards;
         return this;
@@ -2012,6 +2262,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalScore")
     public Long totalScore;
+
     public TeamGame withTotalScore(Long totalScore) {
         this.totalScore = totalScore;
         return this;
@@ -2020,6 +2271,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Touchdowns")
     public Long touchdowns;
+
     public TeamGame withTouchdowns(Long touchdowns) {
         this.touchdowns = touchdowns;
         return this;
@@ -2028,6 +2280,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TurnoverDifferential")
     public Long turnoverDifferential;
+
     public TeamGame withTurnoverDifferential(Long turnoverDifferential) {
         this.turnoverDifferential = turnoverDifferential;
         return this;
@@ -2036,6 +2289,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionReturns")
     public Long twoPointConversionReturns;
+
     public TeamGame withTwoPointConversionReturns(Long twoPointConversionReturns) {
         this.twoPointConversionReturns = twoPointConversionReturns;
         return this;
@@ -2044,6 +2298,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Week")
     public Long week;
+
     public TeamGame withWeek(Long week) {
         this.week = week;
         return this;
@@ -2052,9 +2307,11 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindSpeed")
     public Long windSpeed;
+
     public TeamGame withWindSpeed(Long windSpeed) {
         this.windSpeed = windSpeed;
         return this;
     }
     
+    public TeamGame(){}
 }

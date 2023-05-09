@@ -15,9 +15,11 @@ public class CreateFindingsReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportId")
     public String reportId;
+
     public CreateFindingsReportResponse withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public CreateFindingsReportResponse(){}
 }

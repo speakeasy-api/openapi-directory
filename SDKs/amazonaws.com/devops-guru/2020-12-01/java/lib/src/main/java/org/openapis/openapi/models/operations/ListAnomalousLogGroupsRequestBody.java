@@ -14,6 +14,7 @@ public class ListAnomalousLogGroupsRequestBody {
      */
     @JsonProperty("InsightId")
     public String insightId;
+
     public ListAnomalousLogGroupsRequestBody withInsightId(String insightId) {
         this.insightId = insightId;
         return this;
@@ -25,6 +26,7 @@ public class ListAnomalousLogGroupsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAnomalousLogGroupsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListAnomalousLogGroupsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalousLogGroupsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnomalousLogGroupsRequestBody(@JsonProperty("InsightId") String insightId) {
+        this.insightId = insightId;
+  }
 }

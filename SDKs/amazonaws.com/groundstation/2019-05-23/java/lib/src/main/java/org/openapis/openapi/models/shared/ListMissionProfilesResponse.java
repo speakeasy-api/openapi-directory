@@ -15,6 +15,7 @@ public class ListMissionProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionProfileList")
     public MissionProfileListItem[] missionProfileList;
+
     public ListMissionProfilesResponse withMissionProfileList(MissionProfileListItem[] missionProfileList) {
         this.missionProfileList = missionProfileList;
         return this;
@@ -23,9 +24,11 @@ public class ListMissionProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMissionProfilesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMissionProfilesResponse(){}
 }

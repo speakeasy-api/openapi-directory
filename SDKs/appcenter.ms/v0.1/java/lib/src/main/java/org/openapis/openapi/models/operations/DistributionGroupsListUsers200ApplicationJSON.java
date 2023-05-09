@@ -15,6 +15,7 @@ public class DistributionGroupsListUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public DistributionGroupsListUsers200ApplicationJSON withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -26,6 +27,7 @@ public class DistributionGroupsListUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_change_password")
     public Boolean canChangePassword;
+
     public DistributionGroupsListUsers200ApplicationJSON withCanChangePassword(Boolean canChangePassword) {
         this.canChangePassword = canChangePassword;
         return this;
@@ -37,6 +39,7 @@ public class DistributionGroupsListUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsListUsers200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -47,6 +50,7 @@ public class DistributionGroupsListUsers200ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public DistributionGroupsListUsers200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -58,6 +62,7 @@ public class DistributionGroupsListUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DistributionGroupsListUsers200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -69,6 +74,7 @@ public class DistributionGroupsListUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invite_pending")
     public Boolean invitePending;
+
     public DistributionGroupsListUsers200ApplicationJSON withInvitePending(Boolean invitePending) {
         this.invitePending = invitePending;
         return this;
@@ -80,9 +86,13 @@ public class DistributionGroupsListUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsListUsers200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DistributionGroupsListUsers200ApplicationJSON(@JsonProperty("email") String email) {
+        this.email = email;
+  }
 }

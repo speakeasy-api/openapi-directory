@@ -18,6 +18,7 @@ public class PivotOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public PivotOrderBy withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -29,9 +30,11 @@ public class PivotOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivotSelections")
     public PivotSelection[] pivotSelections;
+
     public PivotOrderBy withPivotSelections(PivotSelection[] pivotSelections) {
         this.pivotSelections = pivotSelections;
         return this;
     }
     
+    public PivotOrderBy(){}
 }

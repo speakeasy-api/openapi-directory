@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomesticStandingOrdersJsonResponse {
     
     public byte[] body;
+
     public CreateDomesticStandingOrdersJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateDomesticStandingOrdersJsonResponse {
     
     
     public String contentType;
+
     public CreateDomesticStandingOrdersJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateDomesticStandingOrdersJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateDomesticStandingOrdersJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateDomesticStandingOrdersJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateDomesticStandingOrdersJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateDomesticStandingOrdersJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteDomesticStandingOrderResponse6 obWriteDomesticStandingOrderResponse6;
+
     public CreateDomesticStandingOrdersJsonResponse withOBWriteDomesticStandingOrderResponse6(org.openapis.openapi.models.shared.OBWriteDomesticStandingOrderResponse6 obWriteDomesticStandingOrderResponse6) {
         this.obWriteDomesticStandingOrderResponse6 = obWriteDomesticStandingOrderResponse6;
         return this;
@@ -50,6 +56,7 @@ public class CreateDomesticStandingOrdersJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateDomesticStandingOrdersJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateDomesticStandingOrdersJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomesticStandingOrdersJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDomesticStandingOrdersJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

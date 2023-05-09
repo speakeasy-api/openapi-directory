@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination withTable(String table) {
         this.table = table;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeDisposition")
     public String writeDisposition;
+
     public GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination withWriteDisposition(String writeDisposition) {
         this.writeDisposition = writeDisposition;
         return this;
     }
     
+    public GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination(){}
 }

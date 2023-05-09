@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchedulesScheduleAByStateByCandidateTotalsResponse {
     
     public String contentType;
+
     public GetSchedulesScheduleAByStateByCandidateTotalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSchedulesScheduleAByStateByCandidateTotalsResponse {
     
     
     public org.openapis.openapi.models.shared.ScheduleAByStateCandidatePage scheduleAByStateCandidatePage;
+
     public GetSchedulesScheduleAByStateByCandidateTotalsResponse withScheduleAByStateCandidatePage(org.openapis.openapi.models.shared.ScheduleAByStateCandidatePage scheduleAByStateCandidatePage) {
         this.scheduleAByStateCandidatePage = scheduleAByStateCandidatePage;
         return this;
@@ -23,6 +26,7 @@ public class GetSchedulesScheduleAByStateByCandidateTotalsResponse {
     
     
     public Integer statusCode;
+
     public GetSchedulesScheduleAByStateByCandidateTotalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetSchedulesScheduleAByStateByCandidateTotalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchedulesScheduleAByStateByCandidateTotalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSchedulesScheduleAByStateByCandidateTotalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

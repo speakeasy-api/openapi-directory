@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutWorkspacesWorkspaceProjectsProjectKeyResponse {
     
     public String contentType;
+
     public PutWorkspacesWorkspaceProjectsProjectKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutWorkspacesWorkspaceProjectsProjectKeyResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PutWorkspacesWorkspaceProjectsProjectKeyResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PutWorkspacesWorkspaceProjectsProjectKeyResponse {
     
     
     public Integer statusCode;
+
     public PutWorkspacesWorkspaceProjectsProjectKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PutWorkspacesWorkspaceProjectsProjectKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutWorkspacesWorkspaceProjectsProjectKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PutWorkspacesWorkspaceProjectsProjectKeyResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutWorkspacesWorkspaceProjectsProjectKeyResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -50,9 +56,14 @@ public class PutWorkspacesWorkspaceProjectsProjectKeyResponse {
      */
     
     public java.util.Map<String, Object> project;
+
     public PutWorkspacesWorkspaceProjectsProjectKeyResponse withProject(java.util.Map<String, Object> project) {
         this.project = project;
         return this;
     }
     
+    public PutWorkspacesWorkspaceProjectsProjectKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

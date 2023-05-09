@@ -15,6 +15,7 @@ public class WorkerBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public WorkerBlock withReason(String reason) {
         this.reason = reason;
         return this;
@@ -23,9 +24,11 @@ public class WorkerBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerId")
     public String workerId;
+
     public WorkerBlock withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public WorkerBlock(){}
 }

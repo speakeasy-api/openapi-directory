@@ -15,6 +15,7 @@ public class ExpenseGroupProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ExpenseGroupProperty withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class ExpenseGroupProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Types")
     public String[] types;
+
     public ExpenseGroupProperty withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public ExpenseGroupProperty(){}
 }

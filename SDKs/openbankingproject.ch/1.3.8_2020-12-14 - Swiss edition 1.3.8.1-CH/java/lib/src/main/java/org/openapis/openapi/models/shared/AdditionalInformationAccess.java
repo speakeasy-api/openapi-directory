@@ -35,6 +35,7 @@ public class AdditionalInformationAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerName")
     public AccountReference16CH[] ownerName;
+
     public AdditionalInformationAccess withOwnerName(AccountReference16CH[] ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -54,9 +55,11 @@ public class AdditionalInformationAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustedBeneficiaries")
     public AccountReference16CH[] trustedBeneficiaries;
+
     public AdditionalInformationAccess withTrustedBeneficiaries(AccountReference16CH[] trustedBeneficiaries) {
         this.trustedBeneficiaries = trustedBeneficiaries;
         return this;
     }
     
+    public AdditionalInformationAccess(){}
 }

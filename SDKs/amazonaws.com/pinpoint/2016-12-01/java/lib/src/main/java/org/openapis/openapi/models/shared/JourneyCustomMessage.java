@@ -15,9 +15,11 @@ public class JourneyCustomMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public String data;
+
     public JourneyCustomMessage withData(String data) {
         this.data = data;
         return this;
     }
     
+    public JourneyCustomMessage(){}
 }

@@ -15,6 +15,7 @@ public class CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePermissionRoleArn")
     public String devicePermissionRoleArn;
+
     public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration withDevicePermissionRoleArn(String devicePermissionRoleArn) {
         this.devicePermissionRoleArn = devicePermissionRoleArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public org.openapis.openapi.models.shared.DeviceUnderTest[] devices;
+
     public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration withDevices(org.openapis.openapi.models.shared.DeviceUnderTest[] devices) {
         this.devices = devices;
         return this;
@@ -31,6 +33,7 @@ public class CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intendedForQualification")
     public Boolean intendedForQualification;
+
     public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration withIntendedForQualification(Boolean intendedForQualification) {
         this.intendedForQualification = intendedForQualification;
         return this;
@@ -39,6 +42,7 @@ public class CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLongDurationTest")
     public Boolean isLongDurationTest;
+
     public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration withIsLongDurationTest(Boolean isLongDurationTest) {
         this.isLongDurationTest = isLongDurationTest;
         return this;
@@ -47,6 +51,7 @@ public class CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public org.openapis.openapi.models.shared.ProtocolEnum protocol;
+
     public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration withProtocol(org.openapis.openapi.models.shared.ProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -55,6 +60,7 @@ public class CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootGroup")
     public String rootGroup;
+
     public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration withRootGroup(String rootGroup) {
         this.rootGroup = rootGroup;
         return this;
@@ -63,9 +69,11 @@ public class CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionName")
     public String suiteDefinitionName;
+
     public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration withSuiteDefinitionName(String suiteDefinitionName) {
         this.suiteDefinitionName = suiteDefinitionName;
         return this;
     }
     
+    public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration(){}
 }

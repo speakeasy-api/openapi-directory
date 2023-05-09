@@ -18,6 +18,7 @@ public class PayoutAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public PayoutAccountHolderResponse withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -29,6 +30,7 @@ public class PayoutAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public PayoutAccountHolderResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -40,6 +42,7 @@ public class PayoutAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public PayoutAccountHolderResponse withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -51,6 +54,7 @@ public class PayoutAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSpeed")
     public PayoutAccountHolderResponsePayoutSpeedEnum payoutSpeed;
+
     public PayoutAccountHolderResponse withPayoutSpeed(PayoutAccountHolderResponsePayoutSpeedEnum payoutSpeed) {
         this.payoutSpeed = payoutSpeed;
         return this;
@@ -62,6 +66,7 @@ public class PayoutAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public PayoutAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -73,9 +78,11 @@ public class PayoutAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public PayoutAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public PayoutAccountHolderResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
@@ -12,6 +13,7 @@ public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=X")
     public Long x;
+
     public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withX(Long x) {
         this.x = x;
         return this;
@@ -22,6 +24,7 @@ public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Y")
     public Long y;
+
     public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withY(Long y) {
         this.y = y;
         return this;
@@ -32,6 +35,7 @@ public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -42,6 +46,7 @@ public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=layer")
     public GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum layer;
+
     public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withLayer(GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum layer) {
         this.layer = layer;
         return this;
@@ -52,6 +57,7 @@ public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=style")
     public GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum style;
+
     public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withStyle(GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum style) {
         this.style = style;
         return this;
@@ -62,6 +68,7 @@ public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum versionNumber;
+
     public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withVersionNumber(GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -72,6 +79,7 @@ public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum view;
+
     public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withView(GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum view) {
         this.view = view;
         return this;
@@ -82,9 +90,18 @@ public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zoom")
     public GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum zoom;
+
     public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withZoom(GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum zoom) {
         this.zoom = zoom;
         return this;
     }
     
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest(@JsonProperty("X") Long x, @JsonProperty("Y") Long y, @JsonProperty("layer") GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum layer, @JsonProperty("style") GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum style, @JsonProperty("versionNumber") GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum versionNumber, @JsonProperty("zoom") GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum zoom) {
+        this.x = x;
+        this.y = y;
+        this.layer = layer;
+        this.style = style;
+        this.versionNumber = versionNumber;
+        this.zoom = zoom;
+  }
 }

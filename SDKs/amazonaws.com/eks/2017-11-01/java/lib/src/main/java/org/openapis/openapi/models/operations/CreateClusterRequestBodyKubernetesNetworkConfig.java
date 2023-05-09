@@ -15,6 +15,7 @@ public class CreateClusterRequestBodyKubernetesNetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipFamily")
     public org.openapis.openapi.models.shared.IpFamilyEnum ipFamily;
+
     public CreateClusterRequestBodyKubernetesNetworkConfig withIpFamily(org.openapis.openapi.models.shared.IpFamilyEnum ipFamily) {
         this.ipFamily = ipFamily;
         return this;
@@ -23,9 +24,11 @@ public class CreateClusterRequestBodyKubernetesNetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceIpv4Cidr")
     public String serviceIpv4Cidr;
+
     public CreateClusterRequestBodyKubernetesNetworkConfig withServiceIpv4Cidr(String serviceIpv4Cidr) {
         this.serviceIpv4Cidr = serviceIpv4Cidr;
         return this;
     }
     
+    public CreateClusterRequestBodyKubernetesNetworkConfig(){}
 }

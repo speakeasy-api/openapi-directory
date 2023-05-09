@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscriptionType {
     @JsonProperty("id")
     public String id;
+
     public SubscriptionType withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class SubscriptionType {
     
     @JsonProperty("name")
     public String name;
+
     public SubscriptionType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SubscriptionType(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

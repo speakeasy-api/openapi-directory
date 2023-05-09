@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRepositoryDescriptionResponse {
     
     public String contentType;
+
     public UpdateRepositoryDescriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public UpdateRepositoryDescriptionResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public UpdateRepositoryDescriptionResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public UpdateRepositoryDescriptionResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public UpdateRepositoryDescriptionResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public UpdateRepositoryDescriptionResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object invalidRepositoryDescriptionException;
+
     public UpdateRepositoryDescriptionResponse withInvalidRepositoryDescriptionException(Object invalidRepositoryDescriptionException) {
         this.invalidRepositoryDescriptionException = invalidRepositoryDescriptionException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public UpdateRepositoryDescriptionResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public UpdateRepositoryDescriptionResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateRepositoryDescriptionResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public UpdateRepositoryDescriptionResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -106,6 +117,7 @@ public class UpdateRepositoryDescriptionResponse {
     
     
     public Integer statusCode;
+
     public UpdateRepositoryDescriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class UpdateRepositoryDescriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRepositoryDescriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateRepositoryDescriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactRevisions")
     public ArtifactRevision[] artifactRevisions;
+
     public PipelineExecution withArtifactRevisions(ArtifactRevision[] artifactRevisions) {
         this.artifactRevisions = artifactRevisions;
         return this;
@@ -23,6 +24,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public PipelineExecution withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
@@ -31,6 +33,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public PipelineExecution withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -39,6 +42,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineVersion")
     public Long pipelineVersion;
+
     public PipelineExecution withPipelineVersion(Long pipelineVersion) {
         this.pipelineVersion = pipelineVersion;
         return this;
@@ -47,6 +51,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PipelineExecutionStatusEnum status;
+
     public PipelineExecution withStatus(PipelineExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusSummary")
     public String statusSummary;
+
     public PipelineExecution withStatusSummary(String statusSummary) {
         this.statusSummary = statusSummary;
         return this;
     }
     
+    public PipelineExecution(){}
 }

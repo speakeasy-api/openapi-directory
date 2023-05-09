@@ -12,9 +12,11 @@ public class ExportDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forBrowser")
     public Boolean forBrowser;
+
     public ExportDataRequest withForBrowser(Boolean forBrowser) {
         this.forBrowser = forBrowser;
         return this;
     }
     
+    public ExportDataRequest(){}
 }

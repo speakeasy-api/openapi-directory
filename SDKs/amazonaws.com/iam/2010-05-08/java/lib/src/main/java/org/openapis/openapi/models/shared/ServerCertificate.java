@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ServerCertificate - &lt;p&gt;Contains information about a server certificate.&lt;/p&gt; &lt;p&gt; This data type is used as a response element in the &lt;a&gt;GetServerCertificate&lt;/a&gt; operation. &lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ServerCertificate {
     
     public String certificateBody;
+
     public ServerCertificate withCertificateBody(String certificateBody) {
         this.certificateBody = certificateBody;
         return this;
@@ -19,6 +20,7 @@ public class ServerCertificate {
     
     
     public String certificateChain;
+
     public ServerCertificate withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
@@ -26,6 +28,7 @@ public class ServerCertificate {
     
     
     public ServerCertificateMetadata serverCertificateMetadata;
+
     public ServerCertificate withServerCertificateMetadata(ServerCertificateMetadata serverCertificateMetadata) {
         this.serverCertificateMetadata = serverCertificateMetadata;
         return this;
@@ -33,9 +36,14 @@ public class ServerCertificate {
     
     
     public Tag[] tags;
+
     public ServerCertificate withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ServerCertificate(@JsonProperty("CertificateBody") String certificateBody, @JsonProperty("ServerCertificateMetadata") ServerCertificateMetadata serverCertificateMetadata) {
+        this.certificateBody = certificateBody;
+        this.serverCertificateMetadata = serverCertificateMetadata;
+  }
 }

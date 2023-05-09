@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeCapacityReservationsResultCapacityReservations {
     
     public String availabilityZone;
+
     public DescribeCapacityReservationsResultCapacityReservations withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public String availabilityZoneId;
+
     public DescribeCapacityReservationsResultCapacityReservations withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public Long availableInstanceCount;
+
     public DescribeCapacityReservationsResultCapacityReservations withAvailableInstanceCount(Long availableInstanceCount) {
         this.availableInstanceCount = availableInstanceCount;
         return this;
@@ -33,6 +36,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public DescribeCapacityReservationsResultCapacityReservationsCapacityAllocations[] capacityAllocations;
+
     public DescribeCapacityReservationsResultCapacityReservations withCapacityAllocations(DescribeCapacityReservationsResultCapacityReservationsCapacityAllocations[] capacityAllocations) {
         this.capacityAllocations = capacityAllocations;
         return this;
@@ -40,6 +44,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public String capacityReservationArn;
+
     public DescribeCapacityReservationsResultCapacityReservations withCapacityReservationArn(String capacityReservationArn) {
         this.capacityReservationArn = capacityReservationArn;
         return this;
@@ -47,6 +52,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public String capacityReservationFleetId;
+
     public DescribeCapacityReservationsResultCapacityReservations withCapacityReservationFleetId(String capacityReservationFleetId) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public String capacityReservationId;
+
     public DescribeCapacityReservationsResultCapacityReservations withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public OffsetDateTime createDate;
+
     public DescribeCapacityReservationsResultCapacityReservations withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -68,6 +76,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public Boolean ebsOptimized;
+
     public DescribeCapacityReservationsResultCapacityReservations withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -75,6 +84,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public OffsetDateTime endDate;
+
     public DescribeCapacityReservationsResultCapacityReservations withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -82,6 +92,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public DescribeCapacityReservationsResultCapacityReservationsEndDateTypeEnum endDateType;
+
     public DescribeCapacityReservationsResultCapacityReservations withEndDateType(DescribeCapacityReservationsResultCapacityReservationsEndDateTypeEnum endDateType) {
         this.endDateType = endDateType;
         return this;
@@ -89,6 +100,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public Boolean ephemeralStorage;
+
     public DescribeCapacityReservationsResultCapacityReservations withEphemeralStorage(Boolean ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -96,6 +108,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public DescribeCapacityReservationsResultCapacityReservationsInstanceMatchCriteriaEnum instanceMatchCriteria;
+
     public DescribeCapacityReservationsResultCapacityReservations withInstanceMatchCriteria(DescribeCapacityReservationsResultCapacityReservationsInstanceMatchCriteriaEnum instanceMatchCriteria) {
         this.instanceMatchCriteria = instanceMatchCriteria;
         return this;
@@ -103,6 +116,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public DescribeCapacityReservationsResultCapacityReservationsInstancePlatformEnum instancePlatform;
+
     public DescribeCapacityReservationsResultCapacityReservations withInstancePlatform(DescribeCapacityReservationsResultCapacityReservationsInstancePlatformEnum instancePlatform) {
         this.instancePlatform = instancePlatform;
         return this;
@@ -110,6 +124,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public String instanceType;
+
     public DescribeCapacityReservationsResultCapacityReservations withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -117,6 +132,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public String outpostArn;
+
     public DescribeCapacityReservationsResultCapacityReservations withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -124,6 +140,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public String ownerId;
+
     public DescribeCapacityReservationsResultCapacityReservations withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -131,6 +148,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public String placementGroupArn;
+
     public DescribeCapacityReservationsResultCapacityReservations withPlacementGroupArn(String placementGroupArn) {
         this.placementGroupArn = placementGroupArn;
         return this;
@@ -138,6 +156,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public OffsetDateTime startDate;
+
     public DescribeCapacityReservationsResultCapacityReservations withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -145,6 +164,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public DescribeCapacityReservationsResultCapacityReservationsStateEnum state;
+
     public DescribeCapacityReservationsResultCapacityReservations withState(DescribeCapacityReservationsResultCapacityReservationsStateEnum state) {
         this.state = state;
         return this;
@@ -152,6 +172,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public DescribeCapacityReservationsResultCapacityReservationsTags[] tags;
+
     public DescribeCapacityReservationsResultCapacityReservations withTags(DescribeCapacityReservationsResultCapacityReservationsTags[] tags) {
         this.tags = tags;
         return this;
@@ -159,6 +180,7 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public DescribeCapacityReservationsResultCapacityReservationsTenancyEnum tenancy;
+
     public DescribeCapacityReservationsResultCapacityReservations withTenancy(DescribeCapacityReservationsResultCapacityReservationsTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
@@ -166,9 +188,11 @@ public class DescribeCapacityReservationsResultCapacityReservations {
     
     
     public Long totalInstanceCount;
+
     public DescribeCapacityReservationsResultCapacityReservations withTotalInstanceCount(Long totalInstanceCount) {
         this.totalInstanceCount = totalInstanceCount;
         return this;
     }
     
+    public DescribeCapacityReservationsResultCapacityReservations(){}
 }

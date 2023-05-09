@@ -18,6 +18,7 @@ public class InitialResponseSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeHook")
     public DialogCodeHookInvocationSetting codeHook;
+
     public InitialResponseSetting withCodeHook(DialogCodeHookInvocationSetting codeHook) {
         this.codeHook = codeHook;
         return this;
@@ -29,6 +30,7 @@ public class InitialResponseSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditional")
     public ConditionalSpecification conditional;
+
     public InitialResponseSetting withConditional(ConditionalSpecification conditional) {
         this.conditional = conditional;
         return this;
@@ -40,6 +42,7 @@ public class InitialResponseSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialResponse")
     public ResponseSpecification initialResponse;
+
     public InitialResponseSetting withInitialResponse(ResponseSpecification initialResponse) {
         this.initialResponse = initialResponse;
         return this;
@@ -48,9 +51,11 @@ public class InitialResponseSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextStep")
     public DialogState nextStep;
+
     public InitialResponseSetting withNextStep(DialogState nextStep) {
         this.nextStep = nextStep;
         return this;
     }
     
+    public InitialResponseSetting(){}
 }

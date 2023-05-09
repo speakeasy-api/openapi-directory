@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeNotificationConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeNotificationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeNotificationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeNotificationConfigurationResponse {
      */
     
     public Object clientLimitExceededException;
+
     public DescribeNotificationConfigurationResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeNotificationConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeNotificationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeNotificationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeNotificationConfigurationOutput describeNotificationConfigurationOutput;
+
     public DescribeNotificationConfigurationResponse withDescribeNotificationConfigurationOutput(org.openapis.openapi.models.shared.DescribeNotificationConfigurationOutput describeNotificationConfigurationOutput) {
         this.describeNotificationConfigurationOutput = describeNotificationConfigurationOutput;
         return this;
@@ -49,6 +54,7 @@ public class DescribeNotificationConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeNotificationConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeNotificationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeNotificationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeNotificationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeNotificationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeNotificationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeNotificationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeNotificationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public Size withHeight(Long height) {
         this.height = height;
         return this;
@@ -29,9 +30,11 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public Size withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public Size(){}
 }

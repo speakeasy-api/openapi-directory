@@ -12,6 +12,7 @@ public class ApiCoreDtoDatapointsUrlByNationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nation")
     public String nation;
+
     public ApiCoreDtoDatapointsUrlByNationItem withNation(String nation) {
         this.nation = nation;
         return this;
@@ -20,9 +21,11 @@ public class ApiCoreDtoDatapointsUrlByNationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ApiCoreDtoDatapointsUrlByNationItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ApiCoreDtoDatapointsUrlByNationItem(){}
 }

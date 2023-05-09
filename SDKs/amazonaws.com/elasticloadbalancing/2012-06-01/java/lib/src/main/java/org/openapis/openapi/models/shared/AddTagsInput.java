@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AddTagsInput - Contains the parameters for AddTags.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AddTagsInput {
     
     public String[] loadBalancerNames;
+
     public AddTagsInput withLoadBalancerNames(String[] loadBalancerNames) {
         this.loadBalancerNames = loadBalancerNames;
         return this;
@@ -19,9 +20,14 @@ public class AddTagsInput {
     
     
     public Tag[] tags;
+
     public AddTagsInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AddTagsInput(@JsonProperty("LoadBalancerNames") String[] loadBalancerNames, @JsonProperty("Tags") Tag[] tags) {
+        this.loadBalancerNames = loadBalancerNames;
+        this.tags = tags;
+  }
 }

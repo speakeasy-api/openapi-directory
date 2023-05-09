@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutInlinePolicyToPermissionSetResponse {
@@ -12,6 +13,7 @@ public class PutInlinePolicyToPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public PutInlinePolicyToPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutInlinePolicyToPermissionSetResponse {
      */
     
     public Object conflictException;
+
     public PutInlinePolicyToPermissionSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutInlinePolicyToPermissionSetResponse {
     
     
     public String contentType;
+
     public PutInlinePolicyToPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutInlinePolicyToPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public PutInlinePolicyToPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutInlinePolicyToPermissionSetResponse {
      */
     
     public java.util.Map<String, Object> putInlinePolicyToPermissionSetResponse;
+
     public PutInlinePolicyToPermissionSetResponse withPutInlinePolicyToPermissionSetResponse(java.util.Map<String, Object> putInlinePolicyToPermissionSetResponse) {
         this.putInlinePolicyToPermissionSetResponse = putInlinePolicyToPermissionSetResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutInlinePolicyToPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutInlinePolicyToPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class PutInlinePolicyToPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public PutInlinePolicyToPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutInlinePolicyToPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutInlinePolicyToPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PutInlinePolicyToPermissionSetResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public PutInlinePolicyToPermissionSetResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class PutInlinePolicyToPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public PutInlinePolicyToPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class PutInlinePolicyToPermissionSetResponse {
      */
     
     public Object validationException;
+
     public PutInlinePolicyToPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutInlinePolicyToPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

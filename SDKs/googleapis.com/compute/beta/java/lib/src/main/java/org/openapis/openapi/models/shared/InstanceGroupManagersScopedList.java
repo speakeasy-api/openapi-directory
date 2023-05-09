@@ -15,6 +15,7 @@ public class InstanceGroupManagersScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceGroupManagers")
     public InstanceGroupManager[] instanceGroupManagers;
+
     public InstanceGroupManagersScopedList withInstanceGroupManagers(InstanceGroupManager[] instanceGroupManagers) {
         this.instanceGroupManagers = instanceGroupManagers;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagersScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public InstanceGroupManagersScopedListWarning warning;
+
     public InstanceGroupManagersScopedList withWarning(InstanceGroupManagersScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public InstanceGroupManagersScopedList(){}
 }

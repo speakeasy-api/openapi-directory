@@ -15,6 +15,7 @@ public class AvailabilityZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public AvailabilityZone withState(String state) {
         this.state = state;
         return this;
@@ -23,9 +24,11 @@ public class AvailabilityZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zoneName")
     public String zoneName;
+
     public AvailabilityZone withZoneName(String zoneName) {
         this.zoneName = zoneName;
         return this;
     }
     
+    public AvailabilityZone(){}
 }

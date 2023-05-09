@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SolveVRPResponse {
@@ -12,6 +13,7 @@ public class SolveVRPResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequest badRequest;
+
     public SolveVRPResponse withBadRequest(org.openapis.openapi.models.shared.BadRequest badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class SolveVRPResponse {
     
     
     public String contentType;
+
     public SolveVRPResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SolveVRPResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public SolveVRPResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class SolveVRPResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalErrorMessage internalErrorMessage;
+
     public SolveVRPResponse withInternalErrorMessage(org.openapis.openapi.models.shared.InternalErrorMessage internalErrorMessage) {
         this.internalErrorMessage = internalErrorMessage;
         return this;
@@ -46,6 +51,7 @@ public class SolveVRPResponse {
      */
     
     public org.openapis.openapi.models.shared.Response response;
+
     public SolveVRPResponse withResponse(org.openapis.openapi.models.shared.Response response) {
         this.response = response;
         return this;
@@ -53,6 +59,7 @@ public class SolveVRPResponse {
     
     
     public Integer statusCode;
+
     public SolveVRPResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class SolveVRPResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SolveVRPResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SolveVRPResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

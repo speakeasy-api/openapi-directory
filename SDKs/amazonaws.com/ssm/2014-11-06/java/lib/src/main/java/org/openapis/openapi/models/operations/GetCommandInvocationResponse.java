@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommandInvocationResponse {
     
     public String contentType;
+
     public GetCommandInvocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCommandInvocationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCommandInvocationResult getCommandInvocationResult;
+
     public GetCommandInvocationResponse withGetCommandInvocationResult(org.openapis.openapi.models.shared.GetCommandInvocationResult getCommandInvocationResult) {
         this.getCommandInvocationResult = getCommandInvocationResult;
         return this;
@@ -29,6 +32,7 @@ public class GetCommandInvocationResponse {
      */
     
     public Object internalServerError;
+
     public GetCommandInvocationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetCommandInvocationResponse {
      */
     
     public Object invalidCommandId;
+
     public GetCommandInvocationResponse withInvalidCommandId(Object invalidCommandId) {
         this.invalidCommandId = invalidCommandId;
         return this;
@@ -49,6 +54,7 @@ public class GetCommandInvocationResponse {
      */
     
     public Object invalidInstanceId;
+
     public GetCommandInvocationResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -59,6 +65,7 @@ public class GetCommandInvocationResponse {
      */
     
     public Object invalidPluginName;
+
     public GetCommandInvocationResponse withInvalidPluginName(Object invalidPluginName) {
         this.invalidPluginName = invalidPluginName;
         return this;
@@ -69,6 +76,7 @@ public class GetCommandInvocationResponse {
      */
     
     public Object invocationDoesNotExist;
+
     public GetCommandInvocationResponse withInvocationDoesNotExist(Object invocationDoesNotExist) {
         this.invocationDoesNotExist = invocationDoesNotExist;
         return this;
@@ -76,6 +84,7 @@ public class GetCommandInvocationResponse {
     
     
     public Integer statusCode;
+
     public GetCommandInvocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetCommandInvocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommandInvocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommandInvocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

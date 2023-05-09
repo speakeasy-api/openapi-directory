@@ -15,9 +15,11 @@ public class DisassociateEntitiesFromExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntityList")
     public FailedEntity[] failedEntityList;
+
     public DisassociateEntitiesFromExperienceResponse withFailedEntityList(FailedEntity[] failedEntityList) {
         this.failedEntityList = failedEntityList;
         return this;
     }
     
+    public DisassociateEntitiesFromExperienceResponse(){}
 }

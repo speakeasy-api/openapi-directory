@@ -15,6 +15,7 @@ public class PipeSourceActiveMQBrokerParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public PipeSourceActiveMQBrokerParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -22,6 +23,7 @@ public class PipeSourceActiveMQBrokerParameters {
     
     @JsonProperty("Credentials")
     public MQBrokerAccessCredentials credentials;
+
     public PipeSourceActiveMQBrokerParameters withCredentials(MQBrokerAccessCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -30,6 +32,7 @@ public class PipeSourceActiveMQBrokerParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public PipeSourceActiveMQBrokerParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
@@ -37,9 +40,14 @@ public class PipeSourceActiveMQBrokerParameters {
     
     @JsonProperty("QueueName")
     public String queueName;
+
     public PipeSourceActiveMQBrokerParameters withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
     }
     
+    public PipeSourceActiveMQBrokerParameters(@JsonProperty("Credentials") MQBrokerAccessCredentials credentials, @JsonProperty("QueueName") String queueName) {
+        this.credentials = credentials;
+        this.queueName = queueName;
+  }
 }

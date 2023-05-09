@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchPutGeofenceRequestEntry {
     @JsonProperty("GeofenceId")
     public String geofenceId;
+
     public BatchPutGeofenceRequestEntry withGeofenceId(String geofenceId) {
         this.geofenceId = geofenceId;
         return this;
@@ -19,9 +20,14 @@ public class BatchPutGeofenceRequestEntry {
     
     @JsonProperty("Geometry")
     public GeofenceGeometry geometry;
+
     public BatchPutGeofenceRequestEntry withGeometry(GeofenceGeometry geometry) {
         this.geometry = geometry;
         return this;
     }
     
+    public BatchPutGeofenceRequestEntry(@JsonProperty("GeofenceId") String geofenceId, @JsonProperty("Geometry") GeofenceGeometry geometry) {
+        this.geofenceId = geofenceId;
+        this.geometry = geometry;
+  }
 }

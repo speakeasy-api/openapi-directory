@@ -18,6 +18,7 @@ public class TestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public TestDetails withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,9 +30,11 @@ public class TestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressMessages")
     public String[] progressMessages;
+
     public TestDetails withProgressMessages(String[] progressMessages) {
         this.progressMessages = progressMessages;
         return this;
     }
     
+    public TestDetails(){}
 }

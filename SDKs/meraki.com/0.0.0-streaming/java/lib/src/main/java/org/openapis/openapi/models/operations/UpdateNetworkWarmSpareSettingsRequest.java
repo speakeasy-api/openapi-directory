@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWarmSpareSettingsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkWarmSpareSettingsRequestBody requestBody;
+
     public UpdateNetworkWarmSpareSettingsRequest withRequestBody(UpdateNetworkWarmSpareSettingsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,14 @@ public class UpdateNetworkWarmSpareSettingsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkWarmSpareSettingsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public UpdateNetworkWarmSpareSettingsRequest(@JsonProperty("RequestBody") UpdateNetworkWarmSpareSettingsRequestBody requestBody, @JsonProperty("networkId") String networkId) {
+        this.requestBody = requestBody;
+        this.networkId = networkId;
+  }
 }

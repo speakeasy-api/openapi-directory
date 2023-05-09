@@ -68,11 +68,9 @@ public class PickupPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUpdatePickupPointResponse res = new org.openapis.openapi.models.operations.CreateUpdatePickupPointResponse() {{
+        org.openapis.openapi.models.operations.CreateUpdatePickupPointResponse res = new org.openapis.openapi.models.operations.CreateUpdatePickupPointResponse(contentType, httpRes.statusCode()) {{
             createUpdate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,10 +116,8 @@ public class PickupPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse() {{
+        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,11 +156,9 @@ public class PickupPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetByIdResponse res = new org.openapis.openapi.models.operations.GetByIdResponse() {{
+        org.openapis.openapi.models.operations.GetByIdResponse res = new org.openapis.openapi.models.operations.GetByIdResponse(contentType, httpRes.statusCode()) {{
             getById = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -216,10 +210,8 @@ public class PickupPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetpagedResponse res = new org.openapis.openapi.models.operations.GetpagedResponse() {{
+        org.openapis.openapi.models.operations.GetpagedResponse res = new org.openapis.openapi.models.operations.GetpagedResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,11 +250,9 @@ public class PickupPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAllPickupPpointsResponse res = new org.openapis.openapi.models.operations.ListAllPickupPpointsResponse() {{
+        org.openapis.openapi.models.operations.ListAllPickupPpointsResponse res = new org.openapis.openapi.models.operations.ListAllPickupPpointsResponse(contentType, httpRes.statusCode()) {{
             listAllPickupPpoints200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

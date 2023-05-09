@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAddressTransfersRequest {
     
     public String[] allocationIds;
+
     public DescribeAddressTransfersRequest withAllocationIds(String[] allocationIds) {
         this.allocationIds = allocationIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAddressTransfersRequest {
     
     
     public Boolean dryRun;
+
     public DescribeAddressTransfersRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAddressTransfersRequest {
     
     
     public Long maxResults;
+
     public DescribeAddressTransfersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,11 @@ public class DescribeAddressTransfersRequest {
     
     
     public String nextToken;
+
     public DescribeAddressTransfersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAddressTransfersRequest(){}
 }

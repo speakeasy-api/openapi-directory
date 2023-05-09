@@ -18,6 +18,7 @@ public class UpdateDimensionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionGroup")
     public DimensionGroup dimensionGroup;
+
     public UpdateDimensionGroupRequest withDimensionGroup(DimensionGroup dimensionGroup) {
         this.dimensionGroup = dimensionGroup;
         return this;
@@ -29,9 +30,11 @@ public class UpdateDimensionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateDimensionGroupRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public UpdateDimensionGroupRequest(){}
 }

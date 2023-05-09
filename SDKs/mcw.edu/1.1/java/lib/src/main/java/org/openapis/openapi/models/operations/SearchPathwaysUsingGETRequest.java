@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchPathwaysUsingGETRequest {
@@ -12,9 +13,13 @@ public class SearchPathwaysUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchString")
     public String searchString;
+
     public SearchPathwaysUsingGETRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
     }
     
+    public SearchPathwaysUsingGETRequest(@JsonProperty("searchString") String searchString) {
+        this.searchString = searchString;
+  }
 }

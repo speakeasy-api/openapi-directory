@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FaresSubscriptionsRequest {
@@ -12,6 +13,7 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public FaresSubscriptionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
     public String cabinClass;
+
     public FaresSubscriptionsRequest withCabinClass(String cabinClass) {
         this.cabinClass = cabinClass;
         return this;
@@ -32,6 +35,7 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public FaresSubscriptionsRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -42,6 +46,7 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
     public String destination;
+
     public FaresSubscriptionsRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -52,6 +57,7 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public FaresSubscriptionsRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -62,6 +68,7 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public FaresSubscriptionsRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -72,6 +79,7 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
     public String origin;
+
     public FaresSubscriptionsRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -82,6 +90,7 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
     public String trackingid;
+
     public FaresSubscriptionsRequest withTrackingid(String trackingid) {
         this.trackingid = trackingid;
         return this;
@@ -92,9 +101,19 @@ public class FaresSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trip-duration")
     public String tripDuration;
+
     public FaresSubscriptionsRequest withTripDuration(String tripDuration) {
         this.tripDuration = tripDuration;
         return this;
     }
     
+    public FaresSubscriptionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("cabin-class") String cabinClass, @JsonProperty("destination") String destination, @JsonProperty("email") String email, @JsonProperty("lang") String lang, @JsonProperty("origin") String origin, @JsonProperty("trip-duration") String tripDuration) {
+        this.accept = accept;
+        this.cabinClass = cabinClass;
+        this.destination = destination;
+        this.email = email;
+        this.lang = lang;
+        this.origin = origin;
+        this.tripDuration = tripDuration;
+  }
 }

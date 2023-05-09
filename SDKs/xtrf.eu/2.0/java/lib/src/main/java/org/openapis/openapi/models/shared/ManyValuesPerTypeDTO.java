@@ -15,6 +15,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculationUnit")
     public CalculationUnitDTO[] calculationUnit;
+
     public ManyValuesPerTypeDTO withCalculationUnit(CalculationUnitDTO[] calculationUnit) {
         this.calculationUnit = calculationUnit;
         return this;
@@ -23,6 +24,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public CategoryDTO[] category;
+
     public ManyValuesPerTypeDTO withCategory(CategoryDTO[] category) {
         this.category = category;
         return this;
@@ -31,6 +33,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public CountryDTO[] country;
+
     public ManyValuesPerTypeDTO withCountry(CountryDTO[] country) {
         this.country = country;
         return this;
@@ -39,6 +42,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public CurrencyDTO[] currency;
+
     public ManyValuesPerTypeDTO withCurrency(CurrencyDTO[] currency) {
         this.currency = currency;
         return this;
@@ -47,6 +51,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industry")
     public IndustryDTO[] industry;
+
     public ManyValuesPerTypeDTO withIndustry(IndustryDTO[] industry) {
         this.industry = industry;
         return this;
@@ -55,6 +60,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public JobTypeDTO[] jobType;
+
     public ManyValuesPerTypeDTO withJobType(JobTypeDTO[] jobType) {
         this.jobType = jobType;
         return this;
@@ -63,6 +69,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public LanguageDTO[] language;
+
     public ManyValuesPerTypeDTO withLanguage(LanguageDTO[] language) {
         this.language = language;
         return this;
@@ -71,6 +78,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadSource")
     public LeadSourceDTO[] leadSource;
+
     public ManyValuesPerTypeDTO withLeadSource(LeadSourceDTO[] leadSource) {
         this.leadSource = leadSource;
         return this;
@@ -79,6 +87,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personDepartment")
     public PersonDepartmentDTO[] personDepartment;
+
     public ManyValuesPerTypeDTO withPersonDepartment(PersonDepartmentDTO[] personDepartment) {
         this.personDepartment = personDepartment;
         return this;
@@ -87,6 +96,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personPosition")
     public PersonPositionDTO[] personPosition;
+
     public ManyValuesPerTypeDTO withPersonPosition(PersonPositionDTO[] personPosition) {
         this.personPosition = personPosition;
         return this;
@@ -95,6 +105,7 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("province")
     public ProvinceDTO[] province;
+
     public ManyValuesPerTypeDTO withProvince(ProvinceDTO[] province) {
         this.province = province;
         return this;
@@ -103,9 +114,11 @@ public class ManyValuesPerTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialization")
     public LanguageSpecializationDTO[] specialization;
+
     public ManyValuesPerTypeDTO withSpecialization(LanguageSpecializationDTO[] specialization) {
         this.specialization = specialization;
         return this;
     }
     
+    public ManyValuesPerTypeDTO(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservedCacheNodesOfferingList {
     
     public String cacheNodeType;
+
     public ReservedCacheNodesOfferingList withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -19,6 +20,7 @@ public class ReservedCacheNodesOfferingList {
     
     
     public Long duration;
+
     public ReservedCacheNodesOfferingList withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class ReservedCacheNodesOfferingList {
     
     
     public Double fixedPrice;
+
     public ReservedCacheNodesOfferingList withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -33,6 +36,7 @@ public class ReservedCacheNodesOfferingList {
     
     
     public String offeringType;
+
     public ReservedCacheNodesOfferingList withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -40,6 +44,7 @@ public class ReservedCacheNodesOfferingList {
     
     
     public String productDescription;
+
     public ReservedCacheNodesOfferingList withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -47,6 +52,7 @@ public class ReservedCacheNodesOfferingList {
     
     
     public RecurringChargeList[] recurringCharges;
+
     public ReservedCacheNodesOfferingList withRecurringCharges(RecurringChargeList[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -54,6 +60,7 @@ public class ReservedCacheNodesOfferingList {
     
     
     public String reservedCacheNodesOfferingId;
+
     public ReservedCacheNodesOfferingList withReservedCacheNodesOfferingId(String reservedCacheNodesOfferingId) {
         this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
         return this;
@@ -61,9 +68,11 @@ public class ReservedCacheNodesOfferingList {
     
     
     public Double usagePrice;
+
     public ReservedCacheNodesOfferingList withUsagePrice(Double usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public ReservedCacheNodesOfferingList(){}
 }

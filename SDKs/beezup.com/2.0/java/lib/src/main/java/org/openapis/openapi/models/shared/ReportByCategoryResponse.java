@@ -15,6 +15,7 @@ public class ReportByCategoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public ReportByCategory[] categories;
+
     public ReportByCategoryResponse withCategories(ReportByCategory[] categories) {
         this.categories = categories;
         return this;
@@ -27,6 +28,7 @@ public class ReportByCategoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public ReportByCategoryResponse withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -35,6 +37,7 @@ public class ReportByCategoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ReportByCommonResponseLinks links;
+
     public ReportByCategoryResponse withLinks(ReportByCommonResponseLinks links) {
         this.links = links;
         return this;
@@ -43,9 +46,11 @@ public class ReportByCategoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public ReportByCategoryResponse withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
     }
     
+    public ReportByCategoryResponse(){}
 }

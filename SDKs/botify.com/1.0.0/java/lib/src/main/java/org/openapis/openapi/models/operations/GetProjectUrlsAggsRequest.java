@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectUrlsAggsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UrlsAggsQuery[] requestBody;
+
     public GetProjectUrlsAggsRequest withRequestBody(org.openapis.openapi.models.shared.UrlsAggsQuery[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class GetProjectUrlsAggsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area")
     public GetProjectUrlsAggsAreaEnum area;
+
     public GetProjectUrlsAggsRequest withArea(GetProjectUrlsAggsAreaEnum area) {
         this.area = area;
         return this;
@@ -29,6 +32,7 @@ public class GetProjectUrlsAggsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_analysis_slug")
     public String lastAnalysisSlug;
+
     public GetProjectUrlsAggsRequest withLastAnalysisSlug(String lastAnalysisSlug) {
         this.lastAnalysisSlug = lastAnalysisSlug;
         return this;
@@ -39,6 +43,7 @@ public class GetProjectUrlsAggsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nb_analyses")
     public Integer nbAnalyses;
+
     public GetProjectUrlsAggsRequest withNbAnalyses(Integer nbAnalyses) {
         this.nbAnalyses = nbAnalyses;
         return this;
@@ -49,6 +54,7 @@ public class GetProjectUrlsAggsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetProjectUrlsAggsRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -59,9 +65,14 @@ public class GetProjectUrlsAggsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetProjectUrlsAggsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetProjectUrlsAggsRequest(@JsonProperty("project_slug") String projectSlug, @JsonProperty("username") String username) {
+        this.projectSlug = projectSlug;
+        this.username = username;
+  }
 }

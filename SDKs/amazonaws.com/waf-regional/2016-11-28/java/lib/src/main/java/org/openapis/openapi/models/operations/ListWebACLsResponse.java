@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWebACLsResponse {
     
     public String contentType;
+
     public ListWebACLsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWebACLsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWebACLsResponse listWebACLsResponse;
+
     public ListWebACLsResponse withListWebACLsResponse(org.openapis.openapi.models.shared.ListWebACLsResponse listWebACLsResponse) {
         this.listWebACLsResponse = listWebACLsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListWebACLsResponse {
     
     
     public Integer statusCode;
+
     public ListWebACLsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListWebACLsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWebACLsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListWebACLsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListWebACLsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class ListWebACLsResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public ListWebACLsResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
     }
     
+    public ListWebACLsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

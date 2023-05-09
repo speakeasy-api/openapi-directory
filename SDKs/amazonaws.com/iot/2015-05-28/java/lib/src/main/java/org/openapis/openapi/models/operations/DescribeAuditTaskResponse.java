@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAuditTaskResponse {
     
     public String contentType;
+
     public DescribeAuditTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAuditTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAuditTaskResponse describeAuditTaskResponse;
+
     public DescribeAuditTaskResponse withDescribeAuditTaskResponse(org.openapis.openapi.models.shared.DescribeAuditTaskResponse describeAuditTaskResponse) {
         this.describeAuditTaskResponse = describeAuditTaskResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAuditTaskResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeAuditTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAuditTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAuditTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAuditTaskResponse {
     
     
     public Integer statusCode;
+
     public DescribeAuditTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAuditTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAuditTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAuditTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAuditTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAuditTaskResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAuditTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeAuditTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DeleteNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceArn")
     public String namespaceArn;
+
     public DeleteNamespaceResponse withNamespaceArn(String namespaceArn) {
         this.namespaceArn = namespaceArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public DeleteNamespaceResponse withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
     }
     
+    public DeleteNamespaceResponse(){}
 }

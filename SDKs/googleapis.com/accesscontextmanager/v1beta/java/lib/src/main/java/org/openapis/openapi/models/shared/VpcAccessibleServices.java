@@ -18,6 +18,7 @@ public class VpcAccessibleServices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedServices")
     public String[] allowedServices;
+
     public VpcAccessibleServices withAllowedServices(String[] allowedServices) {
         this.allowedServices = allowedServices;
         return this;
@@ -29,9 +30,11 @@ public class VpcAccessibleServices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableRestriction")
     public Boolean enableRestriction;
+
     public VpcAccessibleServices withEnableRestriction(Boolean enableRestriction) {
         this.enableRestriction = enableRestriction;
         return this;
     }
     
+    public VpcAccessibleServices(){}
 }

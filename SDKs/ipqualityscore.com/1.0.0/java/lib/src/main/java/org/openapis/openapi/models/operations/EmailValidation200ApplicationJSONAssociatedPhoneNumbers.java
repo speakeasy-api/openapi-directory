@@ -12,6 +12,7 @@ public class EmailValidation200ApplicationJSONAssociatedPhoneNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_numbers")
     public String[] phoneNumbers;
+
     public EmailValidation200ApplicationJSONAssociatedPhoneNumbers withPhoneNumbers(String[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
@@ -20,9 +21,11 @@ public class EmailValidation200ApplicationJSONAssociatedPhoneNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EmailValidation200ApplicationJSONAssociatedPhoneNumbers withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public EmailValidation200ApplicationJSONAssociatedPhoneNumbers(){}
 }

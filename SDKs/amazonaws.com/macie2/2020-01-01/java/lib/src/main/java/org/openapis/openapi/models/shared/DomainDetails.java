@@ -15,9 +15,11 @@ public class DomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public DomainDetails withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DomainDetails(){}
 }

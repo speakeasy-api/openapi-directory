@@ -20,6 +20,7 @@ public class ProductCouponApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public ProductCouponApiModel withCode(String code) {
         this.code = code;
         return this;
@@ -31,6 +32,7 @@ public class ProductCouponApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountAmount")
     public Double discountAmount;
+
     public ProductCouponApiModel withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -42,6 +44,7 @@ public class ProductCouponApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountPercentage")
     public Double discountPercentage;
+
     public ProductCouponApiModel withDiscountPercentage(Double discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -53,6 +56,7 @@ public class ProductCouponApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public ProductCouponApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -66,9 +70,11 @@ public class ProductCouponApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValidUntil")
     public OffsetDateTime validUntil;
+
     public ProductCouponApiModel withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public ProductCouponApiModel(){}
 }

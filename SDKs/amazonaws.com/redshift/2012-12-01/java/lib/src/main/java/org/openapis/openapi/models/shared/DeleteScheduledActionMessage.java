@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteScheduledActionMessage {
     
     public String scheduledActionName;
+
     public DeleteScheduledActionMessage withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
     }
     
+    public DeleteScheduledActionMessage(@JsonProperty("ScheduledActionName") String scheduledActionName) {
+        this.scheduledActionName = scheduledActionName;
+  }
 }

@@ -15,6 +15,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogItemId")
     public String catalogItemId;
+
     public CatalogItem withCatalogItemId(String catalogItemId) {
         this.catalogItemId = catalogItemId;
         return this;
@@ -23,6 +24,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2Capacities")
     public Ec2Capacity[] ec2Capacities;
+
     public CatalogItem withEc2Capacities(Ec2Capacity[] ec2Capacities) {
         this.ec2Capacities = ec2Capacities;
         return this;
@@ -31,6 +33,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemStatus")
     public CatalogItemStatusEnum itemStatus;
+
     public CatalogItem withItemStatus(CatalogItemStatusEnum itemStatus) {
         this.itemStatus = itemStatus;
         return this;
@@ -39,6 +42,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerKva")
     public Float powerKva;
+
     public CatalogItem withPowerKva(Float powerKva) {
         this.powerKva = powerKva;
         return this;
@@ -47,6 +51,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedStorage")
     public SupportedStorageEnumEnum[] supportedStorage;
+
     public CatalogItem withSupportedStorage(SupportedStorageEnumEnum[] supportedStorage) {
         this.supportedStorage = supportedStorage;
         return this;
@@ -55,6 +60,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedUplinkGbps")
     public Long[] supportedUplinkGbps;
+
     public CatalogItem withSupportedUplinkGbps(Long[] supportedUplinkGbps) {
         this.supportedUplinkGbps = supportedUplinkGbps;
         return this;
@@ -63,9 +69,11 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeightLbs")
     public Long weightLbs;
+
     public CatalogItem withWeightLbs(Long weightLbs) {
         this.weightLbs = weightLbs;
         return this;
     }
     
+    public CatalogItem(){}
 }

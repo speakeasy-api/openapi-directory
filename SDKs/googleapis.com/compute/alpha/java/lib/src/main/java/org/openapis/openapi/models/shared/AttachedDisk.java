@@ -18,6 +18,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public AttachedDiskArchitectureEnum architecture;
+
     public AttachedDisk withArchitecture(AttachedDiskArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDelete")
     public Boolean autoDelete;
+
     public AttachedDisk withAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -40,6 +42,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boot")
     public Boolean boot;
+
     public AttachedDisk withBoot(Boolean boot) {
         this.boot = boot;
         return this;
@@ -51,6 +54,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public AttachedDisk withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -59,6 +63,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskEncryptionKey")
     public CustomerEncryptionKey diskEncryptionKey;
+
     public AttachedDisk withDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         return this;
@@ -70,6 +75,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public AttachedDisk withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -81,6 +87,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceAttach")
     public Boolean forceAttach;
+
     public AttachedDisk withForceAttach(Boolean forceAttach) {
         this.forceAttach = forceAttach;
         return this;
@@ -92,6 +99,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestOsFeatures")
     public GuestOsFeature[] guestOsFeatures;
+
     public AttachedDisk withGuestOsFeatures(GuestOsFeature[] guestOsFeatures) {
         this.guestOsFeatures = guestOsFeatures;
         return this;
@@ -103,6 +111,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public AttachedDisk withIndex(Integer index) {
         this.index = index;
         return this;
@@ -114,6 +123,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initializeParams")
     public AttachedDiskInitializeParams initializeParams;
+
     public AttachedDisk withInitializeParams(AttachedDiskInitializeParams initializeParams) {
         this.initializeParams = initializeParams;
         return this;
@@ -125,6 +135,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interface")
     public AttachedDiskInterfaceEnum interface_;
+
     public AttachedDisk withInterface(AttachedDiskInterfaceEnum interface_) {
         this.interface_ = interface_;
         return this;
@@ -136,6 +147,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AttachedDisk withKind(String kind) {
         this.kind = kind;
         return this;
@@ -147,6 +159,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public String[] licenses;
+
     public AttachedDisk withLicenses(String[] licenses) {
         this.licenses = licenses;
         return this;
@@ -158,6 +171,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public AttachedDisk withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -169,6 +183,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public AttachedDiskModeEnum mode;
+
     public AttachedDisk withMode(AttachedDiskModeEnum mode) {
         this.mode = mode;
         return this;
@@ -180,6 +195,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savedState")
     public AttachedDiskSavedStateEnum savedState;
+
     public AttachedDisk withSavedState(AttachedDiskSavedStateEnum savedState) {
         this.savedState = savedState;
         return this;
@@ -191,6 +207,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceInitialState")
     public InitialStateConfig shieldedInstanceInitialState;
+
     public AttachedDisk withShieldedInstanceInitialState(InitialStateConfig shieldedInstanceInitialState) {
         this.shieldedInstanceInitialState = shieldedInstanceInitialState;
         return this;
@@ -202,6 +219,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public AttachedDisk withSource(String source) {
         this.source = source;
         return this;
@@ -213,6 +231,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AttachedDiskTypeEnum type;
+
     public AttachedDisk withType(AttachedDiskTypeEnum type) {
         this.type = type;
         return this;
@@ -224,9 +243,11 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLicenses")
     public String[] userLicenses;
+
     public AttachedDisk withUserLicenses(String[] userLicenses) {
         this.userLicenses = userLicenses;
         return this;
     }
     
+    public AttachedDisk(){}
 }

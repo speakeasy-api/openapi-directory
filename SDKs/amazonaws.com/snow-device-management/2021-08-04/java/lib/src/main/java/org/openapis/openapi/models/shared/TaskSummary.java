@@ -15,6 +15,7 @@ public class TaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public TaskStateEnum state;
+
     public TaskSummary withState(TaskStateEnum state) {
         this.state = state;
         return this;
@@ -23,6 +24,7 @@ public class TaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public TaskSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -31,6 +33,7 @@ public class TaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskArn")
     public String taskArn;
+
     public TaskSummary withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
@@ -38,9 +41,13 @@ public class TaskSummary {
     
     @JsonProperty("taskId")
     public String taskId;
+
     public TaskSummary withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public TaskSummary(@JsonProperty("taskId") String taskId) {
+        this.taskId = taskId;
+  }
 }

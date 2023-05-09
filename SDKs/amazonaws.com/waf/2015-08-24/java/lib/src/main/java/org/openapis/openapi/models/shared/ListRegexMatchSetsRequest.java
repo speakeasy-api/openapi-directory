@@ -12,6 +12,7 @@ public class ListRegexMatchSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListRegexMatchSetsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,9 +21,11 @@ public class ListRegexMatchSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListRegexMatchSetsRequest withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListRegexMatchSetsRequest(){}
 }

@@ -18,6 +18,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargeBearer")
     public OBChargeBearerType1CodeEnum chargeBearer;
+
     public OBWriteInternational3DataInitiation withChargeBearer(OBChargeBearerType1CodeEnum chargeBearer) {
         this.chargeBearer = chargeBearer;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Creditor")
     public OBWriteInternational3DataInitiationCreditor creditor;
+
     public OBWriteInternational3DataInitiation withCreditor(OBWriteInternational3DataInitiationCreditor creditor) {
         this.creditor = creditor;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternational3DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteInternational3DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteInternational3DataInitiation withCreditorAccount(OBWriteInternational3DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -50,6 +53,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorAgent")
     public OBWriteInternational3DataInitiationCreditorAgent creditorAgent;
+
     public OBWriteInternational3DataInitiation withCreditorAgent(OBWriteInternational3DataInitiationCreditorAgent creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -60,6 +64,7 @@ public class OBWriteInternational3DataInitiation {
      */
     @JsonProperty("CurrencyOfTransfer")
     public String currencyOfTransfer;
+
     public OBWriteInternational3DataInitiation withCurrencyOfTransfer(String currencyOfTransfer) {
         this.currencyOfTransfer = currencyOfTransfer;
         return this;
@@ -71,6 +76,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteInternational3DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteInternational3DataInitiation withDebtorAccount(OBWriteInternational3DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -82,6 +88,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCountryCode")
     public String destinationCountryCode;
+
     public OBWriteInternational3DataInitiation withDestinationCountryCode(String destinationCountryCode) {
         this.destinationCountryCode = destinationCountryCode;
         return this;
@@ -94,6 +101,7 @@ public class OBWriteInternational3DataInitiation {
      */
     @JsonProperty("EndToEndIdentification")
     public String endToEndIdentification;
+
     public OBWriteInternational3DataInitiation withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -105,6 +113,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRateInformation")
     public OBWriteInternational3DataInitiationExchangeRateInformation exchangeRateInformation;
+
     public OBWriteInternational3DataInitiation withExchangeRateInformation(OBWriteInternational3DataInitiationExchangeRateInformation exchangeRateInformation) {
         this.exchangeRateInformation = exchangeRateInformation;
         return this;
@@ -116,6 +125,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedPurpose")
     public String extendedPurpose;
+
     public OBWriteInternational3DataInitiation withExtendedPurpose(String extendedPurpose) {
         this.extendedPurpose = extendedPurpose;
         return this;
@@ -127,6 +137,7 @@ public class OBWriteInternational3DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteInternational3DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteInternational3DataInitiation withInstructedAmount(OBWriteInternational3DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -138,6 +149,7 @@ public class OBWriteInternational3DataInitiation {
      */
     @JsonProperty("InstructionIdentification")
     public String instructionIdentification;
+
     public OBWriteInternational3DataInitiation withInstructionIdentification(String instructionIdentification) {
         this.instructionIdentification = instructionIdentification;
         return this;
@@ -149,6 +161,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstructionPriority")
     public OBWriteInternational3DataInitiationInstructionPriorityEnum instructionPriority;
+
     public OBWriteInternational3DataInitiation withInstructionPriority(OBWriteInternational3DataInitiationInstructionPriorityEnum instructionPriority) {
         this.instructionPriority = instructionPriority;
         return this;
@@ -161,6 +174,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteInternational3DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -174,6 +188,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Purpose")
     public String purpose;
+
     public OBWriteInternational3DataInitiation withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -185,6 +200,7 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteInternational3DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteInternational3DataInitiation withRemittanceInformation(OBWriteInternational3DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -196,9 +212,17 @@ public class OBWriteInternational3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteInternational3DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteInternational3DataInitiation(@JsonProperty("CreditorAccount") OBWriteInternational3DataInitiationCreditorAccount creditorAccount, @JsonProperty("CurrencyOfTransfer") String currencyOfTransfer, @JsonProperty("EndToEndIdentification") String endToEndIdentification, @JsonProperty("InstructedAmount") OBWriteInternational3DataInitiationInstructedAmount instructedAmount, @JsonProperty("InstructionIdentification") String instructionIdentification) {
+        this.creditorAccount = creditorAccount;
+        this.currencyOfTransfer = currencyOfTransfer;
+        this.endToEndIdentification = endToEndIdentification;
+        this.instructedAmount = instructedAmount;
+        this.instructionIdentification = instructionIdentification;
+  }
 }

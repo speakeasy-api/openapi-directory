@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetFlagRequest {
@@ -12,6 +13,7 @@ public class AvatarsGetFlagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
     public String code;
+
     public AvatarsGetFlagRequest withCode(String code) {
         this.code = code;
         return this;
@@ -22,6 +24,7 @@ public class AvatarsGetFlagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
     public Integer height;
+
     public AvatarsGetFlagRequest withHeight(Integer height) {
         this.height = height;
         return this;
@@ -32,6 +35,7 @@ public class AvatarsGetFlagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quality")
     public Integer quality;
+
     public AvatarsGetFlagRequest withQuality(Integer quality) {
         this.quality = quality;
         return this;
@@ -42,9 +46,13 @@ public class AvatarsGetFlagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Integer width;
+
     public AvatarsGetFlagRequest withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public AvatarsGetFlagRequest(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

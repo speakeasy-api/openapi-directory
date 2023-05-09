@@ -14,6 +14,7 @@ public class GetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bundles")
     public Boolean bundles;
+
     public GetHealthRequest withBundles(Boolean bundles) {
         this.bundles = bundles;
         return this;
@@ -24,9 +25,11 @@ public class GetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=plugins")
     public Boolean plugins;
+
     public GetHealthRequest withPlugins(Boolean plugins) {
         this.plugins = plugins;
         return this;
     }
     
+    public GetHealthRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     public String description;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public String networkInterfaceId;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -26,6 +28,7 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public String ownerId;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public Long packetLength;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withPacketLength(Long packetLength) {
         this.packetLength = packetLength;
         return this;
@@ -40,6 +44,7 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public Long sessionNumber;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withSessionNumber(Long sessionNumber) {
         this.sessionNumber = sessionNumber;
         return this;
@@ -47,6 +52,7 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public ModifyTrafficMirrorSessionResultTrafficMirrorSessionTags[] tags;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withTags(ModifyTrafficMirrorSessionResultTrafficMirrorSessionTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public String trafficMirrorFilterId;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
@@ -61,6 +68,7 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public String trafficMirrorSessionId;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withTrafficMirrorSessionId(String trafficMirrorSessionId) {
         this.trafficMirrorSessionId = trafficMirrorSessionId;
         return this;
@@ -68,6 +76,7 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public String trafficMirrorTargetId;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withTrafficMirrorTargetId(String trafficMirrorTargetId) {
         this.trafficMirrorTargetId = trafficMirrorTargetId;
         return this;
@@ -75,9 +84,11 @@ public class ModifyTrafficMirrorSessionResultTrafficMirrorSession {
     
     
     public Long virtualNetworkId;
+
     public ModifyTrafficMirrorSessionResultTrafficMirrorSession withVirtualNetworkId(Long virtualNetworkId) {
         this.virtualNetworkId = virtualNetworkId;
         return this;
     }
     
+    public ModifyTrafficMirrorSessionResultTrafficMirrorSession(){}
 }

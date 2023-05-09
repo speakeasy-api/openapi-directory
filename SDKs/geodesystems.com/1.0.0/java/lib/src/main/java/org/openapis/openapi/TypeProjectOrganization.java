@@ -57,10 +57,8 @@ public class TypeProjectOrganization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchProjectOrganizationResponse res = new org.openapis.openapi.models.operations.SearchProjectOrganizationResponse() {{
+        org.openapis.openapi.models.operations.SearchProjectOrganizationResponse res = new org.openapis.openapi.models.operations.SearchProjectOrganizationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

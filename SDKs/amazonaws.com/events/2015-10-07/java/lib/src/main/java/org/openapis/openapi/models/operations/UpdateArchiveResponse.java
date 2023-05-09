@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateArchiveResponse {
@@ -12,6 +13,7 @@ public class UpdateArchiveResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateArchiveResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateArchiveResponse {
     
     
     public String contentType;
+
     public UpdateArchiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateArchiveResponse {
      */
     
     public Object internalException;
+
     public UpdateArchiveResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateArchiveResponse {
      */
     
     public Object invalidEventPatternException;
+
     public UpdateArchiveResponse withInvalidEventPatternException(Object invalidEventPatternException) {
         this.invalidEventPatternException = invalidEventPatternException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateArchiveResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateArchiveResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateArchiveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateArchiveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateArchiveResponse {
     
     
     public Integer statusCode;
+
     public UpdateArchiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateArchiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateArchiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateArchiveResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateArchiveResponse updateArchiveResponse;
+
     public UpdateArchiveResponse withUpdateArchiveResponse(org.openapis.openapi.models.shared.UpdateArchiveResponse updateArchiveResponse) {
         this.updateArchiveResponse = updateArchiveResponse;
         return this;
     }
     
+    public UpdateArchiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

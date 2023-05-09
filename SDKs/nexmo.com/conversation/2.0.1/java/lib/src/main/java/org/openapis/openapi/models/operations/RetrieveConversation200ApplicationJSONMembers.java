@@ -15,6 +15,7 @@ public class RetrieveConversation200ApplicationJSONMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public RetrieveConversation200ApplicationJSONMembers withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -23,6 +24,7 @@ public class RetrieveConversation200ApplicationJSONMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initiator")
     public org.openapis.openapi.models.shared.Initiator initiator;
+
     public RetrieveConversation200ApplicationJSONMembers withInitiator(org.openapis.openapi.models.shared.Initiator initiator) {
         this.initiator = initiator;
         return this;
@@ -34,6 +36,7 @@ public class RetrieveConversation200ApplicationJSONMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_id")
     public String memberId;
+
     public RetrieveConversation200ApplicationJSONMembers withMemberId(String memberId) {
         this.memberId = memberId;
         return this;
@@ -45,6 +48,7 @@ public class RetrieveConversation200ApplicationJSONMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RetrieveConversation200ApplicationJSONMembers withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class RetrieveConversation200ApplicationJSONMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public org.openapis.openapi.models.shared.MemberStateEnum state;
+
     public RetrieveConversation200ApplicationJSONMembers withState(org.openapis.openapi.models.shared.MemberStateEnum state) {
         this.state = state;
         return this;
@@ -64,6 +69,7 @@ public class RetrieveConversation200ApplicationJSONMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public org.openapis.openapi.models.shared.TimestampResMember timestamp;
+
     public RetrieveConversation200ApplicationJSONMembers withTimestamp(org.openapis.openapi.models.shared.TimestampResMember timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -75,9 +81,11 @@ public class RetrieveConversation200ApplicationJSONMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public RetrieveConversation200ApplicationJSONMembers withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public RetrieveConversation200ApplicationJSONMembers(){}
 }

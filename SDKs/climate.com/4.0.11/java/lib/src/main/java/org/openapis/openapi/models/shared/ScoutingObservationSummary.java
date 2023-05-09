@@ -19,6 +19,7 @@ public class ScoutingObservationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ScoutingObservationSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class ScoutingObservationSummary {
      */
     @JsonProperty("id")
     public String id;
+
     public ScoutingObservationSummary withId(String id) {
         this.id = id;
         return this;
@@ -41,6 +43,7 @@ public class ScoutingObservationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ScoutingObservationSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -53,9 +56,16 @@ public class ScoutingObservationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public ScoutingObservationSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ScoutingObservationSummary(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("id") String id, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.endTime = endTime;
+        this.id = id;
+        this.startTime = startTime;
+        this.updatedAt = updatedAt;
+  }
 }

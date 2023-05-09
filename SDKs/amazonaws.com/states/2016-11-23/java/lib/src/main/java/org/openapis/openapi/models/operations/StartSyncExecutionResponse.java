@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSyncExecutionResponse {
     
     public String contentType;
+
     public StartSyncExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartSyncExecutionResponse {
      */
     
     public Object invalidArn;
+
     public StartSyncExecutionResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -29,6 +32,7 @@ public class StartSyncExecutionResponse {
      */
     
     public Object invalidExecutionInput;
+
     public StartSyncExecutionResponse withInvalidExecutionInput(Object invalidExecutionInput) {
         this.invalidExecutionInput = invalidExecutionInput;
         return this;
@@ -39,6 +43,7 @@ public class StartSyncExecutionResponse {
      */
     
     public Object invalidName;
+
     public StartSyncExecutionResponse withInvalidName(Object invalidName) {
         this.invalidName = invalidName;
         return this;
@@ -49,6 +54,7 @@ public class StartSyncExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSyncExecutionOutput startSyncExecutionOutput;
+
     public StartSyncExecutionResponse withStartSyncExecutionOutput(org.openapis.openapi.models.shared.StartSyncExecutionOutput startSyncExecutionOutput) {
         this.startSyncExecutionOutput = startSyncExecutionOutput;
         return this;
@@ -59,6 +65,7 @@ public class StartSyncExecutionResponse {
      */
     
     public Object stateMachineDeleting;
+
     public StartSyncExecutionResponse withStateMachineDeleting(Object stateMachineDeleting) {
         this.stateMachineDeleting = stateMachineDeleting;
         return this;
@@ -69,6 +76,7 @@ public class StartSyncExecutionResponse {
      */
     
     public Object stateMachineDoesNotExist;
+
     public StartSyncExecutionResponse withStateMachineDoesNotExist(Object stateMachineDoesNotExist) {
         this.stateMachineDoesNotExist = stateMachineDoesNotExist;
         return this;
@@ -79,6 +87,7 @@ public class StartSyncExecutionResponse {
      */
     
     public Object stateMachineTypeNotSupported;
+
     public StartSyncExecutionResponse withStateMachineTypeNotSupported(Object stateMachineTypeNotSupported) {
         this.stateMachineTypeNotSupported = stateMachineTypeNotSupported;
         return this;
@@ -86,6 +95,7 @@ public class StartSyncExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartSyncExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartSyncExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSyncExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartSyncExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

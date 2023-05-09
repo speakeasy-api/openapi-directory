@@ -15,6 +15,7 @@ public class FirehoseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchMode")
     public Boolean batchMode;
+
     public FirehoseAction withBatchMode(Boolean batchMode) {
         this.batchMode = batchMode;
         return this;
@@ -22,6 +23,7 @@ public class FirehoseAction {
     
     @JsonProperty("deliveryStreamName")
     public String deliveryStreamName;
+
     public FirehoseAction withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -29,6 +31,7 @@ public class FirehoseAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public FirehoseAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -37,9 +40,14 @@ public class FirehoseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("separator")
     public String separator;
+
     public FirehoseAction withSeparator(String separator) {
         this.separator = separator;
         return this;
     }
     
+    public FirehoseAction(@JsonProperty("deliveryStreamName") String deliveryStreamName, @JsonProperty("roleArn") String roleArn) {
+        this.deliveryStreamName = deliveryStreamName;
+        this.roleArn = roleArn;
+  }
 }

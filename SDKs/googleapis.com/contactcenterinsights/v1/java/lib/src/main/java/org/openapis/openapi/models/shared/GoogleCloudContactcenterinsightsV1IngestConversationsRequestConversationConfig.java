@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1IngestConversationsRequestConvers
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentId")
     public String agentId;
+
     public GoogleCloudContactcenterinsightsV1IngestConversationsRequestConversationConfig withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1IngestConversationsRequestConversationConfig(){}
 }

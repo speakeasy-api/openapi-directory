@@ -18,6 +18,7 @@ public class ItemsUpdate200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCards")
     public ItemsUpdate200ApplicationJSONPaymentDataGiftCards[] giftCards;
+
     public ItemsUpdate200ApplicationJSONPaymentData withGiftCards(ItemsUpdate200ApplicationJSONPaymentDataGiftCards[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -29,9 +30,11 @@ public class ItemsUpdate200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public ItemsUpdate200ApplicationJSONPaymentDataTransactions[] transactions;
+
     public ItemsUpdate200ApplicationJSONPaymentData withTransactions(ItemsUpdate200ApplicationJSONPaymentDataTransactions[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONPaymentData(){}
 }

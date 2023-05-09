@@ -18,6 +18,7 @@ public class JobCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTransitionTime")
     public String lastTransitionTime;
+
     public JobCondition withLastTransitionTime(String lastTransitionTime) {
         this.lastTransitionTime = lastTransitionTime;
         return this;
@@ -29,6 +30,7 @@ public class JobCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public JobCondition withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class JobCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public JobCondition withReason(String reason) {
         this.reason = reason;
         return this;
@@ -51,6 +54,7 @@ public class JobCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public JobCondition withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -62,6 +66,7 @@ public class JobCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public JobCondition withStatus(String status) {
         this.status = status;
         return this;
@@ -73,9 +78,11 @@ public class JobCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public JobCondition withType(String type) {
         this.type = type;
         return this;
     }
     
+    public JobCondition(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReverseReplicationResponse {
@@ -12,6 +13,7 @@ public class ReverseReplicationResponse {
      */
     
     public Object accessDeniedException;
+
     public ReverseReplicationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ReverseReplicationResponse {
      */
     
     public Object conflictException;
+
     public ReverseReplicationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ReverseReplicationResponse {
     
     
     public String contentType;
+
     public ReverseReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ReverseReplicationResponse {
      */
     
     public Object internalServerException;
+
     public ReverseReplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ReverseReplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ReverseReplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ReverseReplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.ReverseReplicationResponse reverseReplicationResponse;
+
     public ReverseReplicationResponse withReverseReplicationResponse(org.openapis.openapi.models.shared.ReverseReplicationResponse reverseReplicationResponse) {
         this.reverseReplicationResponse = reverseReplicationResponse;
         return this;
@@ -66,6 +73,7 @@ public class ReverseReplicationResponse {
     
     
     public Integer statusCode;
+
     public ReverseReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ReverseReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReverseReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ReverseReplicationResponse {
      */
     
     public Object throttlingException;
+
     public ReverseReplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class ReverseReplicationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public ReverseReplicationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -103,9 +114,14 @@ public class ReverseReplicationResponse {
      */
     
     public Object validationException;
+
     public ReverseReplicationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ReverseReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Backfilling")
     public Boolean backfilling;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withBackfilling(Boolean backfilling) {
         this.backfilling = backfilling;
         return this;
@@ -23,6 +24,7 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexArn")
     public String indexArn;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withIndexArn(String indexArn) {
         this.indexArn = indexArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -39,6 +42,7 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexSizeBytes")
     public Long indexSizeBytes;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withIndexSizeBytes(Long indexSizeBytes) {
         this.indexSizeBytes = indexSizeBytes;
         return this;
@@ -47,6 +51,7 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexStatus")
     public String indexStatus;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withIndexStatus(String indexStatus) {
         this.indexStatus = indexStatus;
         return this;
@@ -55,6 +60,7 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -63,6 +69,7 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySchema")
     public AwsDynamoDbTableKeySchema[] keySchema;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withKeySchema(AwsDynamoDbTableKeySchema[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -71,6 +78,7 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Projection")
     public AwsDynamoDbTableProjection projection;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withProjection(AwsDynamoDbTableProjection projection) {
         this.projection = projection;
         return this;
@@ -79,9 +87,11 @@ public class AwsDynamoDbTableGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughput")
     public AwsDynamoDbTableProvisionedThroughput provisionedThroughput;
+
     public AwsDynamoDbTableGlobalSecondaryIndex withProvisionedThroughput(AwsDynamoDbTableProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
     }
     
+    public AwsDynamoDbTableGlobalSecondaryIndex(){}
 }

@@ -238,4 +238,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateNotificationSettingsR
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateQualificationTypeResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateQualificationTypeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

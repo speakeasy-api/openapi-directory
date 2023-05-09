@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo {
     
     public DestinyDefinitionsRecordsDestinyRecordIntervalObjective[] intervalObjectives;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo withIntervalObjectives(DestinyDefinitionsRecordsDestinyRecordIntervalObjective[] intervalObjectives) {
         this.intervalObjectives = intervalObjectives;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo {
     
     
     public DestinyDefinitionsRecordsDestinyRecordIntervalRewards[] intervalRewards;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo withIntervalRewards(DestinyDefinitionsRecordsDestinyRecordIntervalRewards[] intervalRewards) {
         this.intervalRewards = intervalRewards;
         return this;
@@ -26,9 +28,11 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo {
     
     
     public Integer originalObjectiveArrayInsertionIndex;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo withOriginalObjectiveArrayInsertionIndex(Integer originalObjectiveArrayInsertionIndex) {
         this.originalObjectiveArrayInsertionIndex = originalObjectiveArrayInsertionIndex;
         return this;
     }
     
+    public DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo(){}
 }

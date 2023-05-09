@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DedicatedIpPool {
     @JsonProperty("PoolName")
     public String poolName;
+
     public DedicatedIpPool withPoolName(String poolName) {
         this.poolName = poolName;
         return this;
@@ -19,9 +20,14 @@ public class DedicatedIpPool {
     
     @JsonProperty("ScalingMode")
     public ScalingModeEnum scalingMode;
+
     public DedicatedIpPool withScalingMode(ScalingModeEnum scalingMode) {
         this.scalingMode = scalingMode;
         return this;
     }
     
+    public DedicatedIpPool(@JsonProperty("PoolName") String poolName, @JsonProperty("ScalingMode") ScalingModeEnum scalingMode) {
+        this.poolName = poolName;
+        this.scalingMode = scalingMode;
+  }
 }

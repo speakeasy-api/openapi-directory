@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEc2InstanceLimitsResponse {
     
     public String contentType;
+
     public DescribeEc2InstanceLimitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEc2InstanceLimitsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEc2InstanceLimitsOutput describeEc2InstanceLimitsOutput;
+
     public DescribeEc2InstanceLimitsResponse withDescribeEc2InstanceLimitsOutput(org.openapis.openapi.models.shared.DescribeEc2InstanceLimitsOutput describeEc2InstanceLimitsOutput) {
         this.describeEc2InstanceLimitsOutput = describeEc2InstanceLimitsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEc2InstanceLimitsResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeEc2InstanceLimitsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEc2InstanceLimitsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeEc2InstanceLimitsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeEc2InstanceLimitsResponse {
     
     
     public Integer statusCode;
+
     public DescribeEc2InstanceLimitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeEc2InstanceLimitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEc2InstanceLimitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeEc2InstanceLimitsResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeEc2InstanceLimitsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeEc2InstanceLimitsResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DescribeEc2InstanceLimitsResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DescribeEc2InstanceLimitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

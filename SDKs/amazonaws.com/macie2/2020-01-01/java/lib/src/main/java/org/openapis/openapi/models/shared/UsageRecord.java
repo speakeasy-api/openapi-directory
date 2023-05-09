@@ -20,6 +20,7 @@ public class UsageRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public UsageRecord withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class UsageRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("automatedDiscoveryFreeTrialStartDate")
     public OffsetDateTime automatedDiscoveryFreeTrialStartDate;
+
     public UsageRecord withAutomatedDiscoveryFreeTrialStartDate(OffsetDateTime automatedDiscoveryFreeTrialStartDate) {
         this.automatedDiscoveryFreeTrialStartDate = automatedDiscoveryFreeTrialStartDate;
         return this;
@@ -40,6 +42,7 @@ public class UsageRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("freeTrialStartDate")
     public OffsetDateTime freeTrialStartDate;
+
     public UsageRecord withFreeTrialStartDate(OffsetDateTime freeTrialStartDate) {
         this.freeTrialStartDate = freeTrialStartDate;
         return this;
@@ -48,9 +51,11 @@ public class UsageRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public UsageByAccount[] usage;
+
     public UsageRecord withUsage(UsageByAccount[] usage) {
         this.usage = usage;
         return this;
     }
     
+    public UsageRecord(){}
 }

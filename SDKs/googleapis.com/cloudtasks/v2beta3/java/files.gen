@@ -99,6 +99,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/UriOverrideUriOverrideEnfor
 lib/src/main/java/org/openapis/openapi/models/shared/UriOverride.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryOverride.java
 lib/src/main/java/org/openapis/openapi/models/shared/PathOverride.java
+lib/src/main/java/org/openapis/openapi/models/shared/OidcToken.java
+lib/src/main/java/org/openapis/openapi/models/shared/OAuthToken.java
 lib/src/main/java/org/openapis/openapi/models/shared/HeaderOverride.java
 lib/src/main/java/org/openapis/openapi/models/shared/Header.java
 lib/src/main/java/org/openapis/openapi/models/shared/AppEngineHttpQueue.java
@@ -118,8 +120,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Attempt.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java
 lib/src/main/java/org/openapis/openapi/models/shared/HttpRequestHttpMethodEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/HttpRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/OidcToken.java
-lib/src/main/java/org/openapis/openapi/models/shared/OAuthToken.java
 lib/src/main/java/org/openapis/openapi/models/shared/AppEngineHttpRequestHttpMethodEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AppEngineHttpRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/BufferTaskRequest.java
@@ -131,4 +131,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/RunTaskRequestResponseViewE
 lib/src/main/java/org/openapis/openapi/models/shared/RunTaskRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

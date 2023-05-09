@@ -61,11 +61,9 @@ public class CustomBiddingAlgorithms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateResponse(contentType, httpRes.statusCode()) {{
             customBiddingAlgorithm = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class CustomBiddingAlgorithms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetResponse(contentType, httpRes.statusCode()) {{
             customBiddingAlgorithm = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class CustomBiddingAlgorithms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListResponse(contentType, httpRes.statusCode()) {{
             listCustomBiddingAlgorithmsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class CustomBiddingAlgorithms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse(contentType, httpRes.statusCode()) {{
             customBiddingAlgorithm = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class CustomBiddingAlgorithms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse(contentType, httpRes.statusCode()) {{
             customBiddingScript = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class CustomBiddingAlgorithms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse(contentType, httpRes.statusCode()) {{
             customBiddingScript = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class CustomBiddingAlgorithms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse(contentType, httpRes.statusCode()) {{
             listCustomBiddingScriptsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class CustomBiddingAlgorithms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse(contentType, httpRes.statusCode()) {{
             customBiddingScriptRef = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

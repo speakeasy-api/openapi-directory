@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupsResult {
     
     public String nextToken;
+
     public DescribeSecurityGroupsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSecurityGroupsResult {
     
     
     public DescribeSecurityGroupsResultSecurityGroups[] securityGroups;
+
     public DescribeSecurityGroupsResult withSecurityGroups(DescribeSecurityGroupsResultSecurityGroups[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
     
+    public DescribeSecurityGroupsResult(){}
 }

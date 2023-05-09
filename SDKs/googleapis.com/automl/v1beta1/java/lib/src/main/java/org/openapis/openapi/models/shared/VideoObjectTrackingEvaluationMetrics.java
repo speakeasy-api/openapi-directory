@@ -18,6 +18,7 @@ public class VideoObjectTrackingEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBoxMeanAveragePrecision")
     public Float boundingBoxMeanAveragePrecision;
+
     public VideoObjectTrackingEvaluationMetrics withBoundingBoxMeanAveragePrecision(Float boundingBoxMeanAveragePrecision) {
         this.boundingBoxMeanAveragePrecision = boundingBoxMeanAveragePrecision;
         return this;
@@ -29,6 +30,7 @@ public class VideoObjectTrackingEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBoxMetricsEntries")
     public BoundingBoxMetricsEntry[] boundingBoxMetricsEntries;
+
     public VideoObjectTrackingEvaluationMetrics withBoundingBoxMetricsEntries(BoundingBoxMetricsEntry[] boundingBoxMetricsEntries) {
         this.boundingBoxMetricsEntries = boundingBoxMetricsEntries;
         return this;
@@ -40,6 +42,7 @@ public class VideoObjectTrackingEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatedBoundingBoxCount")
     public Integer evaluatedBoundingBoxCount;
+
     public VideoObjectTrackingEvaluationMetrics withEvaluatedBoundingBoxCount(Integer evaluatedBoundingBoxCount) {
         this.evaluatedBoundingBoxCount = evaluatedBoundingBoxCount;
         return this;
@@ -51,9 +54,11 @@ public class VideoObjectTrackingEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatedFrameCount")
     public Integer evaluatedFrameCount;
+
     public VideoObjectTrackingEvaluationMetrics withEvaluatedFrameCount(Integer evaluatedFrameCount) {
         this.evaluatedFrameCount = evaluatedFrameCount;
         return this;
     }
     
+    public VideoObjectTrackingEvaluationMetrics(){}
 }

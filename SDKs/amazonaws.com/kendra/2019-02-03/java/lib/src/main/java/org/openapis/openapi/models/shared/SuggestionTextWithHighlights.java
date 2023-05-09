@@ -15,6 +15,7 @@ public class SuggestionTextWithHighlights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Highlights")
     public SuggestionHighlight[] highlights;
+
     public SuggestionTextWithHighlights withHighlights(SuggestionHighlight[] highlights) {
         this.highlights = highlights;
         return this;
@@ -23,9 +24,11 @@ public class SuggestionTextWithHighlights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public SuggestionTextWithHighlights withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SuggestionTextWithHighlights(){}
 }

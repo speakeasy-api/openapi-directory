@@ -15,6 +15,7 @@ public class CustomConnectorDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customProperties")
     public java.util.Map<String, String> customProperties;
+
     public CustomConnectorDestinationProperties withCustomProperties(java.util.Map<String, String> customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -22,6 +23,7 @@ public class CustomConnectorDestinationProperties {
     
     @JsonProperty("entityName")
     public String entityName;
+
     public CustomConnectorDestinationProperties withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -30,6 +32,7 @@ public class CustomConnectorDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorHandlingConfig")
     public ErrorHandlingConfig errorHandlingConfig;
+
     public CustomConnectorDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
         this.errorHandlingConfig = errorHandlingConfig;
         return this;
@@ -38,6 +41,7 @@ public class CustomConnectorDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idFieldNames")
     public String[] idFieldNames;
+
     public CustomConnectorDestinationProperties withIdFieldNames(String[] idFieldNames) {
         this.idFieldNames = idFieldNames;
         return this;
@@ -46,9 +50,13 @@ public class CustomConnectorDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeOperationType")
     public WriteOperationTypeEnum writeOperationType;
+
     public CustomConnectorDestinationProperties withWriteOperationType(WriteOperationTypeEnum writeOperationType) {
         this.writeOperationType = writeOperationType;
         return this;
     }
     
+    public CustomConnectorDestinationProperties(@JsonProperty("entityName") String entityName) {
+        this.entityName = entityName;
+  }
 }

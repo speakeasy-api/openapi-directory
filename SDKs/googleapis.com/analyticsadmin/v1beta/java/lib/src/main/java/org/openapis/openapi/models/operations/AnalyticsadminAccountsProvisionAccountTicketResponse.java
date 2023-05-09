@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminAccountsProvisionAccountTicketResponse {
     
     public String contentType;
+
     public AnalyticsadminAccountsProvisionAccountTicketResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminAccountsProvisionAccountTicketResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaProvisionAccountTicketResponse googleAnalyticsAdminV1betaProvisionAccountTicketResponse;
+
     public AnalyticsadminAccountsProvisionAccountTicketResponse withGoogleAnalyticsAdminV1betaProvisionAccountTicketResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaProvisionAccountTicketResponse googleAnalyticsAdminV1betaProvisionAccountTicketResponse) {
         this.googleAnalyticsAdminV1betaProvisionAccountTicketResponse = googleAnalyticsAdminV1betaProvisionAccountTicketResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminAccountsProvisionAccountTicketResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsadminAccountsProvisionAccountTicketResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminAccountsProvisionAccountTicketResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminAccountsProvisionAccountTicketResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminAccountsProvisionAccountTicketResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

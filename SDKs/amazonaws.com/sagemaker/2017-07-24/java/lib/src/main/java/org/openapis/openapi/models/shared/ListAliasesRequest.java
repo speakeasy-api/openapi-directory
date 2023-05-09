@@ -12,6 +12,7 @@ public class ListAliasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public String alias;
+
     public ListAliasesRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -19,6 +20,7 @@ public class ListAliasesRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public ListAliasesRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -27,6 +29,7 @@ public class ListAliasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAliasesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class ListAliasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAliasesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class ListAliasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public ListAliasesRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ListAliasesRequest(@JsonProperty("ImageName") String imageName) {
+        this.imageName = imageName;
+  }
 }

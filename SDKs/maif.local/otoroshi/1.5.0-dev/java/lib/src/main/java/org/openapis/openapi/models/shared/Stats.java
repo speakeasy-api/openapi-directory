@@ -15,6 +15,7 @@ public class Stats {
      */
     @JsonProperty("calls")
     public Long calls;
+
     public Stats withCalls(Long calls) {
         this.calls = calls;
         return this;
@@ -25,6 +26,7 @@ public class Stats {
      */
     @JsonProperty("concurrentHandledRequests")
     public Long concurrentHandledRequests;
+
     public Stats withConcurrentHandledRequests(Long concurrentHandledRequests) {
         this.concurrentHandledRequests = concurrentHandledRequests;
         return this;
@@ -35,6 +37,7 @@ public class Stats {
      */
     @JsonProperty("dataIn")
     public Long dataIn;
+
     public Stats withDataIn(Long dataIn) {
         this.dataIn = dataIn;
         return this;
@@ -45,6 +48,7 @@ public class Stats {
      */
     @JsonProperty("dataInRate")
     public Double dataInRate;
+
     public Stats withDataInRate(Double dataInRate) {
         this.dataInRate = dataInRate;
         return this;
@@ -55,6 +59,7 @@ public class Stats {
      */
     @JsonProperty("dataOut")
     public Long dataOut;
+
     public Stats withDataOut(Long dataOut) {
         this.dataOut = dataOut;
         return this;
@@ -65,6 +70,7 @@ public class Stats {
      */
     @JsonProperty("dataOutRate")
     public Double dataOutRate;
+
     public Stats withDataOutRate(Double dataOutRate) {
         this.dataOutRate = dataOutRate;
         return this;
@@ -75,6 +81,7 @@ public class Stats {
      */
     @JsonProperty("duration")
     public Double duration;
+
     public Stats withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -85,6 +92,7 @@ public class Stats {
      */
     @JsonProperty("overhead")
     public Double overhead;
+
     public Stats withOverhead(Double overhead) {
         this.overhead = overhead;
         return this;
@@ -95,9 +103,21 @@ public class Stats {
      */
     @JsonProperty("rate")
     public Double rate;
+
     public Stats withRate(Double rate) {
         this.rate = rate;
         return this;
     }
     
+    public Stats(@JsonProperty("calls") Long calls, @JsonProperty("concurrentHandledRequests") Long concurrentHandledRequests, @JsonProperty("dataIn") Long dataIn, @JsonProperty("dataInRate") Double dataInRate, @JsonProperty("dataOut") Long dataOut, @JsonProperty("dataOutRate") Double dataOutRate, @JsonProperty("duration") Double duration, @JsonProperty("overhead") Double overhead, @JsonProperty("rate") Double rate) {
+        this.calls = calls;
+        this.concurrentHandledRequests = concurrentHandledRequests;
+        this.dataIn = dataIn;
+        this.dataInRate = dataInRate;
+        this.dataOut = dataOut;
+        this.dataOutRate = dataOutRate;
+        this.duration = duration;
+        this.overhead = overhead;
+        this.rate = rate;
+  }
 }

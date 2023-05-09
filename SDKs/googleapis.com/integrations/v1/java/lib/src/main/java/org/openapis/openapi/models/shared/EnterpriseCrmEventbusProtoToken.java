@@ -12,6 +12,7 @@ public class EnterpriseCrmEventbusProtoToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseCrmEventbusProtoToken withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class EnterpriseCrmEventbusProtoToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public EnterpriseCrmEventbusProtoToken withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoToken(){}
 }

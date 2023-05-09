@@ -18,6 +18,7 @@ public class NegativeKeywordList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public NegativeKeywordList withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class NegativeKeywordList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public NegativeKeywordList withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class NegativeKeywordList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NegativeKeywordList withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class NegativeKeywordList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeKeywordListId")
     public String negativeKeywordListId;
+
     public NegativeKeywordList withNegativeKeywordListId(String negativeKeywordListId) {
         this.negativeKeywordListId = negativeKeywordListId;
         return this;
@@ -62,9 +66,11 @@ public class NegativeKeywordList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetedLineItemCount")
     public String targetedLineItemCount;
+
     public NegativeKeywordList withTargetedLineItemCount(String targetedLineItemCount) {
         this.targetedLineItemCount = targetedLineItemCount;
         return this;
     }
     
+    public NegativeKeywordList(){}
 }

@@ -15,6 +15,7 @@ public class UpdateBaiduChannelRequestBodyBaiduChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKey")
     public String apiKey;
+
     public UpdateBaiduChannelRequestBodyBaiduChannelRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBaiduChannelRequestBodyBaiduChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateBaiduChannelRequestBodyBaiduChannelRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,9 +33,11 @@ public class UpdateBaiduChannelRequestBodyBaiduChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretKey")
     public String secretKey;
+
     public UpdateBaiduChannelRequestBodyBaiduChannelRequest withSecretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
     }
     
+    public UpdateBaiduChannelRequestBodyBaiduChannelRequest(){}
 }

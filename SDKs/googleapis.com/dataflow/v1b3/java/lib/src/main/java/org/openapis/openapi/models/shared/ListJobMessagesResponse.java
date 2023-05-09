@@ -18,6 +18,7 @@ public class ListJobMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalingEvents")
     public AutoscalingEvent[] autoscalingEvents;
+
     public ListJobMessagesResponse withAutoscalingEvents(AutoscalingEvent[] autoscalingEvents) {
         this.autoscalingEvents = autoscalingEvents;
         return this;
@@ -29,6 +30,7 @@ public class ListJobMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobMessages")
     public JobMessage[] jobMessages;
+
     public ListJobMessagesResponse withJobMessages(JobMessage[] jobMessages) {
         this.jobMessages = jobMessages;
         return this;
@@ -40,9 +42,11 @@ public class ListJobMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListJobMessagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListJobMessagesResponse(){}
 }

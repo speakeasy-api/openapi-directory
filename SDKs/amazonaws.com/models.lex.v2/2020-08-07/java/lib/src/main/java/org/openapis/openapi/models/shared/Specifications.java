@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Specifications {
     @JsonProperty("slotTypeId")
     public String slotTypeId;
+
     public Specifications withSlotTypeId(String slotTypeId) {
         this.slotTypeId = slotTypeId;
         return this;
@@ -19,9 +20,14 @@ public class Specifications {
     
     @JsonProperty("valueElicitationSetting")
     public SubSlotValueElicitationSetting valueElicitationSetting;
+
     public Specifications withValueElicitationSetting(SubSlotValueElicitationSetting valueElicitationSetting) {
         this.valueElicitationSetting = valueElicitationSetting;
         return this;
     }
     
+    public Specifications(@JsonProperty("slotTypeId") String slotTypeId, @JsonProperty("valueElicitationSetting") SubSlotValueElicitationSetting valueElicitationSetting) {
+        this.slotTypeId = slotTypeId;
+        this.valueElicitationSetting = valueElicitationSetting;
+  }
 }

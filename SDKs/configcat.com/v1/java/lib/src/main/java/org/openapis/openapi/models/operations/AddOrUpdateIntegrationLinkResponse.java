@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddOrUpdateIntegrationLinkResponse {
     
     public String contentType;
+
     public AddOrUpdateIntegrationLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddOrUpdateIntegrationLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.IntegrationLinkModel integrationLinkModel;
+
     public AddOrUpdateIntegrationLinkResponse withIntegrationLinkModel(org.openapis.openapi.models.shared.IntegrationLinkModel integrationLinkModel) {
         this.integrationLinkModel = integrationLinkModel;
         return this;
@@ -26,6 +29,7 @@ public class AddOrUpdateIntegrationLinkResponse {
     
     
     public Integer statusCode;
+
     public AddOrUpdateIntegrationLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AddOrUpdateIntegrationLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddOrUpdateIntegrationLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddOrUpdateIntegrationLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

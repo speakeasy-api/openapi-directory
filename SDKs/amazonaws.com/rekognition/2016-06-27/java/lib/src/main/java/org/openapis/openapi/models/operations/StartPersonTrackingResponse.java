@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartPersonTrackingResponse {
@@ -12,6 +13,7 @@ public class StartPersonTrackingResponse {
      */
     
     public Object accessDeniedException;
+
     public StartPersonTrackingResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartPersonTrackingResponse {
     
     
     public String contentType;
+
     public StartPersonTrackingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartPersonTrackingResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartPersonTrackingResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class StartPersonTrackingResponse {
      */
     
     public Object internalServerError;
+
     public StartPersonTrackingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class StartPersonTrackingResponse {
      */
     
     public Object invalidParameterException;
+
     public StartPersonTrackingResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class StartPersonTrackingResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public StartPersonTrackingResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -69,6 +76,7 @@ public class StartPersonTrackingResponse {
      */
     
     public Object limitExceededException;
+
     public StartPersonTrackingResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartPersonTrackingResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartPersonTrackingResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -89,6 +98,7 @@ public class StartPersonTrackingResponse {
      */
     
     public org.openapis.openapi.models.shared.StartPersonTrackingResponse startPersonTrackingResponse;
+
     public StartPersonTrackingResponse withStartPersonTrackingResponse(org.openapis.openapi.models.shared.StartPersonTrackingResponse startPersonTrackingResponse) {
         this.startPersonTrackingResponse = startPersonTrackingResponse;
         return this;
@@ -96,6 +106,7 @@ public class StartPersonTrackingResponse {
     
     
     public Integer statusCode;
+
     public StartPersonTrackingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class StartPersonTrackingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartPersonTrackingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class StartPersonTrackingResponse {
      */
     
     public Object throttlingException;
+
     public StartPersonTrackingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class StartPersonTrackingResponse {
      */
     
     public Object videoTooLargeException;
+
     public StartPersonTrackingResponse withVideoTooLargeException(Object videoTooLargeException) {
         this.videoTooLargeException = videoTooLargeException;
         return this;
     }
     
+    public StartPersonTrackingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

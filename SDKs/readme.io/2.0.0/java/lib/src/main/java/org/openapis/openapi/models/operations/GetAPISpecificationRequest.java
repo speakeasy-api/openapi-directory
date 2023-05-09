@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAPISpecificationRequest {
@@ -12,6 +13,7 @@ public class GetAPISpecificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetAPISpecificationRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class GetAPISpecificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetAPISpecificationRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +35,13 @@ public class GetAPISpecificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
     public String xReadmeVersion;
+
     public GetAPISpecificationRequest withXReadmeVersion(String xReadmeVersion) {
         this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     
+    public GetAPISpecificationRequest(@JsonProperty("x-readme-version") String xReadmeVersion) {
+        this.xReadmeVersion = xReadmeVersion;
+  }
 }

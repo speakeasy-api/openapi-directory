@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SegmentCondition {
     @JsonProperty("SegmentId")
     public String segmentId;
+
     public SegmentCondition withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public SegmentCondition(@JsonProperty("SegmentId") String segmentId) {
+        this.segmentId = segmentId;
+  }
 }

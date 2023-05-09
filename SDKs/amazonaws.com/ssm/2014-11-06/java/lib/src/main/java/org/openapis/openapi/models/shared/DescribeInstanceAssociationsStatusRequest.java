@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeInstanceAssociationsStatusRequest {
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DescribeInstanceAssociationsStatusRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceAssociationsStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeInstanceAssociationsStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class DescribeInstanceAssociationsStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstanceAssociationsStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceAssociationsStatusRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchMeterUsageRequest {
     @JsonProperty("ProductCode")
     public String productCode;
+
     public BatchMeterUsageRequest withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -19,9 +20,14 @@ public class BatchMeterUsageRequest {
     
     @JsonProperty("UsageRecords")
     public UsageRecord[] usageRecords;
+
     public BatchMeterUsageRequest withUsageRecords(UsageRecord[] usageRecords) {
         this.usageRecords = usageRecords;
         return this;
     }
     
+    public BatchMeterUsageRequest(@JsonProperty("ProductCode") String productCode, @JsonProperty("UsageRecords") UsageRecord[] usageRecords) {
+        this.productCode = productCode;
+        this.usageRecords = usageRecords;
+  }
 }

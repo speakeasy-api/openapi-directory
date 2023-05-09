@@ -12,6 +12,7 @@ public class ListComplianceStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListComplianceStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListComplianceStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComplianceStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListComplianceStatusRequest {
     
     @JsonProperty("PolicyId")
     public String policyId;
+
     public ListComplianceStatusRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public ListComplianceStatusRequest(@JsonProperty("PolicyId") String policyId) {
+        this.policyId = policyId;
+  }
 }

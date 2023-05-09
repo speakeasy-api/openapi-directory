@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateEncryptionConfigResponse {
@@ -12,6 +13,7 @@ public class AssociateEncryptionConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateEncryptionConfigResponse associateEncryptionConfigResponse;
+
     public AssociateEncryptionConfigResponse withAssociateEncryptionConfigResponse(org.openapis.openapi.models.shared.AssociateEncryptionConfigResponse associateEncryptionConfigResponse) {
         this.associateEncryptionConfigResponse = associateEncryptionConfigResponse;
         return this;
@@ -22,6 +24,7 @@ public class AssociateEncryptionConfigResponse {
      */
     
     public Object clientException;
+
     public AssociateEncryptionConfigResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateEncryptionConfigResponse {
     
     
     public String contentType;
+
     public AssociateEncryptionConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateEncryptionConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateEncryptionConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateEncryptionConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateEncryptionConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateEncryptionConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateEncryptionConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AssociateEncryptionConfigResponse {
     
     
     public Integer statusCode;
+
     public AssociateEncryptionConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AssociateEncryptionConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateEncryptionConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AssociateEncryptionConfigResponse {
      */
     
     public Object resourceInUseException;
+
     public AssociateEncryptionConfigResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateEncryptionConfigResponse {
      */
     
     public Object serverException;
+
     public AssociateEncryptionConfigResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public AssociateEncryptionConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

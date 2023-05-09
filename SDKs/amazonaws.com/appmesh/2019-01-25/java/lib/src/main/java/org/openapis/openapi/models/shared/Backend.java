@@ -15,9 +15,11 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualService")
     public VirtualServiceBackend virtualService;
+
     public Backend withVirtualService(VirtualServiceBackend virtualService) {
         this.virtualService = virtualService;
         return this;
     }
     
+    public Backend(){}
 }

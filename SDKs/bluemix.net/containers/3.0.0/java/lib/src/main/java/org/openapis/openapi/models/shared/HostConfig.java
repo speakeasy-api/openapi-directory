@@ -15,6 +15,7 @@ public class HostConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Binds")
     public String[] binds;
+
     public HostConfig withBinds(String[] binds) {
         this.binds = binds;
         return this;
@@ -27,6 +28,7 @@ public class HostConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraHosts")
     public String[] extraHosts;
+
     public HostConfig withExtraHosts(String[] extraHosts) {
         this.extraHosts = extraHosts;
         return this;
@@ -38,6 +40,7 @@ public class HostConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public String[] links;
+
     public HostConfig withLinks(String[] links) {
         this.links = links;
         return this;
@@ -50,9 +53,11 @@ public class HostConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortBindings")
     public String[] portBindings;
+
     public HostConfig withPortBindings(String[] portBindings) {
         this.portBindings = portBindings;
         return this;
     }
     
+    public HostConfig(){}
 }

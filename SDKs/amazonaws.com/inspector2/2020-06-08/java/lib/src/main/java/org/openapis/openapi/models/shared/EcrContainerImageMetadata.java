@@ -15,9 +15,11 @@ public class EcrContainerImageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public EcrContainerImageMetadata withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public EcrContainerImageMetadata(){}
 }

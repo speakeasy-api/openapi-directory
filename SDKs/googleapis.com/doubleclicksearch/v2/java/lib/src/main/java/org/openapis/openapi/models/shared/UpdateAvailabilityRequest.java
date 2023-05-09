@@ -18,9 +18,11 @@ public class UpdateAvailabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilities")
     public Availability[] availabilities;
+
     public UpdateAvailabilityRequest withAvailabilities(Availability[] availabilities) {
         this.availabilities = availabilities;
         return this;
     }
     
+    public UpdateAvailabilityRequest(){}
 }

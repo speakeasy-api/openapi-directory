@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentShippingsettingsGetsupportedpickupservicesResponse {
     
     public String contentType;
+
     public ContentShippingsettingsGetsupportedpickupservicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentShippingsettingsGetsupportedpickupservicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ShippingsettingsGetSupportedPickupServicesResponse shippingsettingsGetSupportedPickupServicesResponse;
+
     public ContentShippingsettingsGetsupportedpickupservicesResponse withShippingsettingsGetSupportedPickupServicesResponse(org.openapis.openapi.models.shared.ShippingsettingsGetSupportedPickupServicesResponse shippingsettingsGetSupportedPickupServicesResponse) {
         this.shippingsettingsGetSupportedPickupServicesResponse = shippingsettingsGetSupportedPickupServicesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentShippingsettingsGetsupportedpickupservicesResponse {
     
     
     public Integer statusCode;
+
     public ContentShippingsettingsGetsupportedpickupservicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentShippingsettingsGetsupportedpickupservicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentShippingsettingsGetsupportedpickupservicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentShippingsettingsGetsupportedpickupservicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

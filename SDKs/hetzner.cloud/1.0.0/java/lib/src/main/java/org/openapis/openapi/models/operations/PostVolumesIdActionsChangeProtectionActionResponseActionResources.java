@@ -12,6 +12,7 @@ public class PostVolumesIdActionsChangeProtectionActionResponseActionResources {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostVolumesIdActionsChangeProtectionActionResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class PostVolumesIdActionsChangeProtectionActionResponseActionResources {
      */
     @JsonProperty("type")
     public String type;
+
     public PostVolumesIdActionsChangeProtectionActionResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostVolumesIdActionsChangeProtectionActionResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

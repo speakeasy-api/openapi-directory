@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteIntentRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteIntentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteIntentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteIntentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteIntentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteIntentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteIntentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteIntentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DeleteIntentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
     public String botId;
+
     public DeleteIntentRequest withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -71,6 +80,7 @@ public class DeleteIntentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
     public String botVersion;
+
     public DeleteIntentRequest withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -81,6 +91,7 @@ public class DeleteIntentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intentId")
     public String intentId;
+
     public DeleteIntentRequest withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -91,9 +102,16 @@ public class DeleteIntentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
     public String localeId;
+
     public DeleteIntentRequest withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
     }
     
+    public DeleteIntentRequest(@JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion, @JsonProperty("intentId") String intentId, @JsonProperty("localeId") String localeId) {
+        this.botId = botId;
+        this.botVersion = botVersion;
+        this.intentId = intentId;
+        this.localeId = localeId;
+  }
 }

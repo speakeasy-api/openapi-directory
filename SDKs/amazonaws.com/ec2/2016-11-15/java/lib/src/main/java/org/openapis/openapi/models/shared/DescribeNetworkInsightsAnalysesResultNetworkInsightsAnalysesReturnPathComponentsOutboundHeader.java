@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeader {
     
     public String[] destinationAddresses;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeader withDestinationAddresses(String[] destinationAddresses) {
         this.destinationAddresses = destinationAddresses;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeaderDestinationPortRanges[] destinationPortRanges;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeader withDestinationPortRanges(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeaderDestinationPortRanges[] destinationPortRanges) {
         this.destinationPortRanges = destinationPortRanges;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String protocol;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeader withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String[] sourceAddresses;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeader withSourceAddresses(String[] sourceAddresses) {
         this.sourceAddresses = sourceAddresses;
         return this;
@@ -40,9 +44,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeaderSourcePortRanges[] sourcePortRanges;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeader withSourcePortRanges(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeaderSourcePortRanges[] sourcePortRanges) {
         this.sourcePortRanges = sourcePortRanges;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsOutboundHeader(){}
 }

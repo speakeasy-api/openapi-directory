@@ -18,6 +18,7 @@ public class BulkListAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemAssignedTargetingOptions")
     public LineItemAssignedTargetingOption[] lineItemAssignedTargetingOptions;
+
     public BulkListAssignedTargetingOptionsResponse withLineItemAssignedTargetingOptions(LineItemAssignedTargetingOption[] lineItemAssignedTargetingOptions) {
         this.lineItemAssignedTargetingOptions = lineItemAssignedTargetingOptions;
         return this;
@@ -29,9 +30,11 @@ public class BulkListAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public BulkListAssignedTargetingOptionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public BulkListAssignedTargetingOptionsResponse(){}
 }

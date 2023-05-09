@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidApnsPostRequest {
@@ -12,6 +13,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=badge")
     public Long badge;
+
     public KkidApnsPostRequest withBadge(Long badge) {
         this.badge = badge;
         return this;
@@ -22,6 +24,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicename")
     public String devicename;
+
     public KkidApnsPostRequest withDevicename(String devicename) {
         this.devicename = devicename;
         return this;
@@ -32,6 +35,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
     public Long kidUserId;
+
     public KkidApnsPostRequest withKidUserId(Long kidUserId) {
         this.kidUserId = kidUserId;
         return this;
@@ -42,6 +46,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
     public String message;
+
     public KkidApnsPostRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -52,6 +57,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority")
     public KkidApnsPostPriorityEnum priority;
+
     public KkidApnsPostRequest withPriority(KkidApnsPostPriorityEnum priority) {
         this.priority = priority;
         return this;
@@ -62,6 +68,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=section")
     public KkidApnsPostSectionEnum section;
+
     public KkidApnsPostRequest withSection(KkidApnsPostSectionEnum section) {
         this.section = section;
         return this;
@@ -72,6 +79,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sound")
     public String sound;
+
     public KkidApnsPostRequest withSound(String sound) {
         this.sound = sound;
         return this;
@@ -82,6 +90,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public KkidApnsPostRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -92,6 +101,7 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public KkidApnsPostRequest withToken(String token) {
         this.token = token;
         return this;
@@ -102,9 +112,14 @@ public class KkidApnsPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool")
     public KkidApnsPostToolEnum tool;
+
     public KkidApnsPostRequest withTool(KkidApnsPostToolEnum tool) {
         this.tool = tool;
         return this;
     }
     
+    public KkidApnsPostRequest(@JsonProperty("kidUserId") Long kidUserId, @JsonProperty("tool") KkidApnsPostToolEnum tool) {
+        this.kidUserId = kidUserId;
+        this.tool = tool;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListServiceSpecificCredentialsRequest {
     
     public String serviceName;
+
     public ListServiceSpecificCredentialsRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -16,9 +17,11 @@ public class ListServiceSpecificCredentialsRequest {
     
     
     public String userName;
+
     public ListServiceSpecificCredentialsRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ListServiceSpecificCredentialsRequest(){}
 }

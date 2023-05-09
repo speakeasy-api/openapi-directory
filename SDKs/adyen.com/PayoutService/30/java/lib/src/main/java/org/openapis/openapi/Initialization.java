@@ -55,12 +55,10 @@ public class Initialization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStoreDetailResponse res = new org.openapis.openapi.models.operations.PostStoreDetailResponse() {{
+        org.openapis.openapi.models.operations.PostStoreDetailResponse res = new org.openapis.openapi.models.operations.PostStoreDetailResponse(contentType, httpRes.statusCode()) {{
             storeDetailResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class Initialization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStoreDetailAndSubmitThirdPartyResponse res = new org.openapis.openapi.models.operations.PostStoreDetailAndSubmitThirdPartyResponse() {{
+        org.openapis.openapi.models.operations.PostStoreDetailAndSubmitThirdPartyResponse res = new org.openapis.openapi.models.operations.PostStoreDetailAndSubmitThirdPartyResponse(contentType, httpRes.statusCode()) {{
             storeDetailAndSubmitResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,12 +157,10 @@ public class Initialization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSubmitThirdPartyResponse res = new org.openapis.openapi.models.operations.PostSubmitThirdPartyResponse() {{
+        org.openapis.openapi.models.operations.PostSubmitThirdPartyResponse res = new org.openapis.openapi.models.operations.PostSubmitThirdPartyResponse(contentType, httpRes.statusCode()) {{
             submitResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

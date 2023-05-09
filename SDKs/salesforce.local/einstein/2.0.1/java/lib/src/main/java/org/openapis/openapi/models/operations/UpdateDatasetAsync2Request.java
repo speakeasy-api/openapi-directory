@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDatasetAsync2Request {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public UpdateDatasetAsync2RequestBody requestBody;
+
     public UpdateDatasetAsync2Request withRequestBody(UpdateDatasetAsync2RequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class UpdateDatasetAsync2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public UpdateDatasetAsync2Request withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
     }
     
+    public UpdateDatasetAsync2Request(@JsonProperty("datasetId") String datasetId) {
+        this.datasetId = datasetId;
+  }
 }

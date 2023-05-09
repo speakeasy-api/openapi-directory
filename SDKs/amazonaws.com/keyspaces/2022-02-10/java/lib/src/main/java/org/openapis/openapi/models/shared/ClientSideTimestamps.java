@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClientSideTimestamps {
     @JsonProperty("status")
     public ClientSideTimestampsStatusEnum status;
+
     public ClientSideTimestamps withStatus(ClientSideTimestampsStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ClientSideTimestamps(@JsonProperty("status") ClientSideTimestampsStatusEnum status) {
+        this.status = status;
+  }
 }

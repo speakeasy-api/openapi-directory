@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SetTypeConfigurationOutput {
     
     public String configurationArn;
+
     public SetTypeConfigurationOutput withConfigurationArn(String configurationArn) {
         this.configurationArn = configurationArn;
         return this;
     }
     
+    public SetTypeConfigurationOutput(){}
 }

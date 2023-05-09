@@ -15,6 +15,7 @@ public class StatefulRuleGroupReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Override")
     public StatefulRuleGroupOverride override;
+
     public StatefulRuleGroupReference withOverride(StatefulRuleGroupOverride override) {
         this.override = override;
         return this;
@@ -23,6 +24,7 @@ public class StatefulRuleGroupReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public StatefulRuleGroupReference withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -30,9 +32,13 @@ public class StatefulRuleGroupReference {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public StatefulRuleGroupReference withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public StatefulRuleGroupReference(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

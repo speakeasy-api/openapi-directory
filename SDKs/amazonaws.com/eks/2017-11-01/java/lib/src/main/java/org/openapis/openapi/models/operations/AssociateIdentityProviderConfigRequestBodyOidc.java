@@ -15,6 +15,7 @@ public class AssociateIdentityProviderConfigRequestBodyOidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public AssociateIdentityProviderConfigRequestBodyOidc withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class AssociateIdentityProviderConfigRequestBodyOidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupsClaim")
     public String groupsClaim;
+
     public AssociateIdentityProviderConfigRequestBodyOidc withGroupsClaim(String groupsClaim) {
         this.groupsClaim = groupsClaim;
         return this;
@@ -31,6 +33,7 @@ public class AssociateIdentityProviderConfigRequestBodyOidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupsPrefix")
     public String groupsPrefix;
+
     public AssociateIdentityProviderConfigRequestBodyOidc withGroupsPrefix(String groupsPrefix) {
         this.groupsPrefix = groupsPrefix;
         return this;
@@ -39,6 +42,7 @@ public class AssociateIdentityProviderConfigRequestBodyOidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderConfigName")
     public String identityProviderConfigName;
+
     public AssociateIdentityProviderConfigRequestBodyOidc withIdentityProviderConfigName(String identityProviderConfigName) {
         this.identityProviderConfigName = identityProviderConfigName;
         return this;
@@ -47,6 +51,7 @@ public class AssociateIdentityProviderConfigRequestBodyOidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerUrl")
     public String issuerUrl;
+
     public AssociateIdentityProviderConfigRequestBodyOidc withIssuerUrl(String issuerUrl) {
         this.issuerUrl = issuerUrl;
         return this;
@@ -55,6 +60,7 @@ public class AssociateIdentityProviderConfigRequestBodyOidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredClaims")
     public java.util.Map<String, String> requiredClaims;
+
     public AssociateIdentityProviderConfigRequestBodyOidc withRequiredClaims(java.util.Map<String, String> requiredClaims) {
         this.requiredClaims = requiredClaims;
         return this;
@@ -63,6 +69,7 @@ public class AssociateIdentityProviderConfigRequestBodyOidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usernameClaim")
     public String usernameClaim;
+
     public AssociateIdentityProviderConfigRequestBodyOidc withUsernameClaim(String usernameClaim) {
         this.usernameClaim = usernameClaim;
         return this;
@@ -71,9 +78,11 @@ public class AssociateIdentityProviderConfigRequestBodyOidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usernamePrefix")
     public String usernamePrefix;
+
     public AssociateIdentityProviderConfigRequestBodyOidc withUsernamePrefix(String usernamePrefix) {
         this.usernamePrefix = usernamePrefix;
         return this;
     }
     
+    public AssociateIdentityProviderConfigRequestBodyOidc(){}
 }

@@ -18,6 +18,7 @@ public class HistoryKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFactor")
     public HistoryKeyFormFactorEnum formFactor;
+
     public HistoryKey withFormFactor(HistoryKeyFormFactorEnum formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -29,6 +30,7 @@ public class HistoryKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public HistoryKey withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -40,9 +42,11 @@ public class HistoryKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public HistoryKey withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public HistoryKey(){}
 }

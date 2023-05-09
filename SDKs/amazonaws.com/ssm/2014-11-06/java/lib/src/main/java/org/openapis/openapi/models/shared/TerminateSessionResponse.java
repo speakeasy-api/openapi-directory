@@ -15,9 +15,11 @@ public class TerminateSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public TerminateSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public TerminateSessionResponse(){}
 }

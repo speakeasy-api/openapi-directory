@@ -15,9 +15,11 @@ public class CreateStreamProcessorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamProcessorArn")
     public String streamProcessorArn;
+
     public CreateStreamProcessorResponse withStreamProcessorArn(String streamProcessorArn) {
         this.streamProcessorArn = streamProcessorArn;
         return this;
     }
     
+    public CreateStreamProcessorResponse(){}
 }

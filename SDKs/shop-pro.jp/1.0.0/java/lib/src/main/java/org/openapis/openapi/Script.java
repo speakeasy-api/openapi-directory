@@ -65,11 +65,9 @@ public class Script {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateShopScriptTagResponse res = new org.openapis.openapi.models.operations.CreateShopScriptTagResponse() {{
+        org.openapis.openapi.models.operations.CreateShopScriptTagResponse res = new org.openapis.openapi.models.operations.CreateShopScriptTagResponse(contentType, httpRes.statusCode()) {{
             createShopScriptTag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,10 +103,8 @@ public class Script {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteScriptTagResponse res = new org.openapis.openapi.models.operations.DeleteScriptTagResponse() {{
+        org.openapis.openapi.models.operations.DeleteScriptTagResponse res = new org.openapis.openapi.models.operations.DeleteScriptTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -139,11 +135,9 @@ public class Script {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShopScriptTagResponse res = new org.openapis.openapi.models.operations.GetShopScriptTagResponse() {{
+        org.openapis.openapi.models.operations.GetShopScriptTagResponse res = new org.openapis.openapi.models.operations.GetShopScriptTagResponse(contentType, httpRes.statusCode()) {{
             getShopScriptTag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,10 +153,11 @@ public class Script {
 
     /**
      * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u53d6\u5f97
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetShopScriptTagsResponse getShopScriptTags() throws Exception {
+    public org.openapis.openapi.models.operations.GetShopScriptTagsResponse getShopScriptTags(org.openapis.openapi.models.operations.GetShopScriptTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/appstore/v1/script_tags.json");
         
@@ -171,16 +166,15 @@ public class Script {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShopScriptTagsResponse res = new org.openapis.openapi.models.operations.GetShopScriptTagsResponse() {{
+        org.openapis.openapi.models.operations.GetShopScriptTagsResponse res = new org.openapis.openapi.models.operations.GetShopScriptTagsResponse(contentType, httpRes.statusCode()) {{
             getShopScriptTags200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,11 +212,9 @@ public class Script {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateShopScriptTagResponse res = new org.openapis.openapi.models.operations.UpdateShopScriptTagResponse() {{
+        org.openapis.openapi.models.operations.UpdateShopScriptTagResponse res = new org.openapis.openapi.models.operations.UpdateShopScriptTagResponse(contentType, httpRes.statusCode()) {{
             updateShopScriptTag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

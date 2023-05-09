@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ConfigureHealthCheckInput - Contains the parameters for ConfigureHealthCheck.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ConfigureHealthCheckInput {
     
     public HealthCheck healthCheck;
+
     public ConfigureHealthCheckInput withHealthCheck(HealthCheck healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -19,9 +20,14 @@ public class ConfigureHealthCheckInput {
     
     
     public String loadBalancerName;
+
     public ConfigureHealthCheckInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public ConfigureHealthCheckInput(@JsonProperty("HealthCheck") HealthCheck healthCheck, @JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.healthCheck = healthCheck;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

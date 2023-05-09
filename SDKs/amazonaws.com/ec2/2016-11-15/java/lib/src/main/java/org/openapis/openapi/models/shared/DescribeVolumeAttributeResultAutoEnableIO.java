@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeAttributeResultAutoEnableIO {
     
     public Boolean value;
+
     public DescribeVolumeAttributeResultAutoEnableIO withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVolumeAttributeResultAutoEnableIO(){}
 }

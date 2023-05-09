@@ -18,6 +18,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentDimensions")
     public DocumentDimensions documentDimensions;
+
     public Document withDocumentDimensions(DocumentDimensions documentDimensions) {
         this.documentDimensions = documentDimensions;
         return this;
@@ -29,6 +30,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentText")
     public TextSnippet documentText;
+
     public Document withDocumentText(TextSnippet documentText) {
         this.documentText = documentText;
         return this;
@@ -40,6 +42,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public DocumentInputConfig inputConfig;
+
     public Document withInputConfig(DocumentInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -51,6 +54,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public Layout[] layout;
+
     public Document withLayout(Layout[] layout) {
         this.layout = layout;
         return this;
@@ -62,9 +66,11 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageCount")
     public Integer pageCount;
+
     public Document withPageCount(Integer pageCount) {
         this.pageCount = pageCount;
         return this;
     }
     
+    public Document(){}
 }

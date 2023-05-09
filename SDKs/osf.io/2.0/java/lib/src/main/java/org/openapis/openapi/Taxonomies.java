@@ -60,11 +60,9 @@ public class Taxonomies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxonomiesListResponse res = new org.openapis.openapi.models.operations.TaxonomiesListResponse() {{
+        org.openapis.openapi.models.operations.TaxonomiesListResponse res = new org.openapis.openapi.models.operations.TaxonomiesListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Taxonomies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxonomiesReadResponse res = new org.openapis.openapi.models.operations.TaxonomiesReadResponse() {{
+        org.openapis.openapi.models.operations.TaxonomiesReadResponse res = new org.openapis.openapi.models.operations.TaxonomiesReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

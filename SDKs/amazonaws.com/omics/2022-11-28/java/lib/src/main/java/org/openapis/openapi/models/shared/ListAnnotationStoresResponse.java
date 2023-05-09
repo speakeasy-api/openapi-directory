@@ -15,6 +15,7 @@ public class ListAnnotationStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationStores")
     public AnnotationStoreItem[] annotationStores;
+
     public ListAnnotationStoresResponse withAnnotationStores(AnnotationStoreItem[] annotationStores) {
         this.annotationStores = annotationStores;
         return this;
@@ -23,9 +24,11 @@ public class ListAnnotationStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAnnotationStoresResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnnotationStoresResponse(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeConfigurationSetRequest - Represents a request to return the details of a configuration set. Configuration sets enable you to publish email sending events. For information about using configuration sets, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeConfigurationSetRequest {
     
     public ConfigurationSetAttributeEnum[] configurationSetAttributeNames;
+
     public DescribeConfigurationSetRequest withConfigurationSetAttributeNames(ConfigurationSetAttributeEnum[] configurationSetAttributeNames) {
         this.configurationSetAttributeNames = configurationSetAttributeNames;
         return this;
@@ -19,9 +20,13 @@ public class DescribeConfigurationSetRequest {
     
     
     public String configurationSetName;
+
     public DescribeConfigurationSetRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
     }
     
+    public DescribeConfigurationSetRequest(@JsonProperty("ConfigurationSetName") String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+  }
 }

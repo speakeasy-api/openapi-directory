@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyId")
     public String keyId;
+
     public GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKey")
     public String privateKey;
+
     public GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamId")
     public String teamId;
+
     public GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig(){}
 }

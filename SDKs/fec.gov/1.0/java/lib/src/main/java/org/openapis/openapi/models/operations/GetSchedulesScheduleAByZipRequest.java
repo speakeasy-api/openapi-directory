@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleAByZipRequest {
@@ -13,6 +14,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSchedulesScheduleAByZipRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -24,6 +26,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetSchedulesScheduleAByZipRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -37,6 +40,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetSchedulesScheduleAByZipRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -47,6 +51,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetSchedulesScheduleAByZipRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -57,6 +62,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSchedulesScheduleAByZipRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -68,6 +74,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetSchedulesScheduleAByZipRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -78,6 +85,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetSchedulesScheduleAByZipRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -88,6 +96,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetSchedulesScheduleAByZipRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -98,6 +107,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetSchedulesScheduleAByZipRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -108,6 +118,7 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String[] state;
+
     public GetSchedulesScheduleAByZipRequest withState(String[] state) {
         this.state = state;
         return this;
@@ -118,9 +129,13 @@ public class GetSchedulesScheduleAByZipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
     public String[] zip;
+
     public GetSchedulesScheduleAByZipRequest withZip(String[] zip) {
         this.zip = zip;
         return this;
     }
     
+    public GetSchedulesScheduleAByZipRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

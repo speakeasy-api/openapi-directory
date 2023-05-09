@@ -20,6 +20,7 @@ public class CreateAccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public CreateAccountStatus withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class CreateAccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountName")
     public String accountName;
+
     public CreateAccountStatus withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -38,6 +40,7 @@ public class CreateAccountStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletedTimestamp")
     public OffsetDateTime completedTimestamp;
+
     public CreateAccountStatus withCompletedTimestamp(OffsetDateTime completedTimestamp) {
         this.completedTimestamp = completedTimestamp;
         return this;
@@ -46,6 +49,7 @@ public class CreateAccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public CreateAccountFailureReasonEnum failureReason;
+
     public CreateAccountStatus withFailureReason(CreateAccountFailureReasonEnum failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -54,6 +58,7 @@ public class CreateAccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GovCloudAccountId")
     public String govCloudAccountId;
+
     public CreateAccountStatus withGovCloudAccountId(String govCloudAccountId) {
         this.govCloudAccountId = govCloudAccountId;
         return this;
@@ -62,6 +67,7 @@ public class CreateAccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CreateAccountStatus withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +78,7 @@ public class CreateAccountStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedTimestamp")
     public OffsetDateTime requestedTimestamp;
+
     public CreateAccountStatus withRequestedTimestamp(OffsetDateTime requestedTimestamp) {
         this.requestedTimestamp = requestedTimestamp;
         return this;
@@ -80,9 +87,11 @@ public class CreateAccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CreateAccountStateEnum state;
+
     public CreateAccountStatus withState(CreateAccountStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateAccountStatus(){}
 }

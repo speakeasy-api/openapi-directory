@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBlueprintResponse {
@@ -12,6 +13,7 @@ public class UpdateBlueprintResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateBlueprintResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBlueprintResponse {
     
     
     public String contentType;
+
     public UpdateBlueprintResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBlueprintResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateBlueprintResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBlueprintResponse {
      */
     
     public Object illegalBlueprintStateException;
+
     public UpdateBlueprintResponse withIllegalBlueprintStateException(Object illegalBlueprintStateException) {
         this.illegalBlueprintStateException = illegalBlueprintStateException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateBlueprintResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateBlueprintResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateBlueprintResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateBlueprintResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateBlueprintResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateBlueprintResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateBlueprintResponse {
     
     
     public Integer statusCode;
+
     public UpdateBlueprintResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateBlueprintResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBlueprintResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateBlueprintResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBlueprintResponse updateBlueprintResponse;
+
     public UpdateBlueprintResponse withUpdateBlueprintResponse(org.openapis.openapi.models.shared.UpdateBlueprintResponse updateBlueprintResponse) {
         this.updateBlueprintResponse = updateBlueprintResponse;
         return this;
     }
     
+    public UpdateBlueprintResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

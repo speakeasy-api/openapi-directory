@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetQueueAttributesRequest {
@@ -12,6 +13,7 @@ public class GETSetQueueAttributesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
     public Long accountNumber;
+
     public GETSetQueueAttributesRequest withAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -19,6 +21,7 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetQueueAttributesActionEnum action;
+
     public GETSetQueueAttributesRequest withAction(GETSetQueueAttributesActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETSetQueueAttributesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Attribute")
     public java.util.Map<String, String> attribute;
+
     public GETSetQueueAttributesRequest withAttribute(java.util.Map<String, String> attribute) {
         this.attribute = attribute;
         return this;
@@ -39,6 +43,7 @@ public class GETSetQueueAttributesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
     public String queueName;
+
     public GETSetQueueAttributesRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -46,6 +51,7 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetQueueAttributesVersionEnum version;
+
     public GETSetQueueAttributesRequest withVersion(GETSetQueueAttributesVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetQueueAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetQueueAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetQueueAttributesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetQueueAttributesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetQueueAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetQueueAttributesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETSetQueueAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetQueueAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetQueueAttributesRequest(@JsonProperty("AccountNumber") Long accountNumber, @JsonProperty("Action") GETSetQueueAttributesActionEnum action, @JsonProperty("Attribute") java.util.Map<String, String> attribute, @JsonProperty("QueueName") String queueName, @JsonProperty("Version") GETSetQueueAttributesVersionEnum version) {
+        this.accountNumber = accountNumber;
+        this.action = action;
+        this.attribute = attribute;
+        this.queueName = queueName;
+        this.version = version;
+  }
 }

@@ -17,6 +17,7 @@ public class EvaluateRebalance409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public EvaluateRebalance409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class EvaluateRebalance409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public EvaluateRebalance409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class EvaluateRebalance409ApplicationJSON {
      */
     @JsonProperty("status")
     public EvaluateRebalance409ApplicationJSONStatusEnum status;
+
     public EvaluateRebalance409ApplicationJSON withStatus(EvaluateRebalance409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EvaluateRebalance409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") EvaluateRebalance409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

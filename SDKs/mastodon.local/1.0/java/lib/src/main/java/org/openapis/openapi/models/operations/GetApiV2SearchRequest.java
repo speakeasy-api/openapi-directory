@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2SearchRequest {
@@ -12,6 +13,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
     public String accountId;
+
     public GetApiV2SearchRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_unreviewed")
     public Boolean excludeUnreviewed;
+
     public GetApiV2SearchRequest withExcludeUnreviewed(Boolean excludeUnreviewed) {
         this.excludeUnreviewed = excludeUnreviewed;
         return this;
@@ -32,6 +35,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=following")
     public Boolean following;
+
     public GetApiV2SearchRequest withFollowing(Boolean following) {
         this.following = following;
         return this;
@@ -42,6 +46,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV2SearchRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
     public String maxId;
+
     public GetApiV2SearchRequest withMaxId(String maxId) {
         this.maxId = maxId;
         return this;
@@ -62,6 +68,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
     public String minId;
+
     public GetApiV2SearchRequest withMinId(String minId) {
         this.minId = minId;
         return this;
@@ -72,6 +79,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetApiV2SearchRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -82,6 +90,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetApiV2SearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -92,6 +101,7 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolve")
     public String resolve;
+
     public GetApiV2SearchRequest withResolve(String resolve) {
         this.resolve = resolve;
         return this;
@@ -102,9 +112,13 @@ public class GetApiV2SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetApiV2SearchTypeEnum type;
+
     public GetApiV2SearchRequest withType(GetApiV2SearchTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetApiV2SearchRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

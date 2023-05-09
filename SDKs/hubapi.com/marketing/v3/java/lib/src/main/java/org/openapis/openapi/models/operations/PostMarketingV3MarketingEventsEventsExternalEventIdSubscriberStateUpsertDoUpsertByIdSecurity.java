@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
@@ -16,9 +17,11 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateU
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdSecurity(){}
 }

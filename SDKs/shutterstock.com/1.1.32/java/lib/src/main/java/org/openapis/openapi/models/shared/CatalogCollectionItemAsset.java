@@ -12,6 +12,7 @@ public class CatalogCollectionItemAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CatalogCollectionItemAsset withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class CatalogCollectionItemAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogCollectionItemAsset withName(String name) {
         this.name = name;
         return this;
@@ -27,9 +29,13 @@ public class CatalogCollectionItemAsset {
     
     @JsonProperty("type")
     public CatalogCollectionItemAssetTypeEnum type;
+
     public CatalogCollectionItemAsset withType(CatalogCollectionItemAssetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CatalogCollectionItemAsset(@JsonProperty("type") CatalogCollectionItemAssetTypeEnum type) {
+        this.type = type;
+  }
 }

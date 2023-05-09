@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest {
@@ -12,6 +13,7 @@ public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,9 +24,14 @@ public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
     public String webhookId;
+
     public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest withWebhookId(String webhookId) {
         this.webhookId = webhookId;
         return this;
     }
     
+    public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest(@JsonProperty("companyId") String companyId, @JsonProperty("webhookId") String webhookId) {
+        this.companyId = companyId;
+        this.webhookId = webhookId;
+  }
 }

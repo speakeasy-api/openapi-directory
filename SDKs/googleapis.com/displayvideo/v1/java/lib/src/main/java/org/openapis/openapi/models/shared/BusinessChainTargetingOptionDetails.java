@@ -18,6 +18,7 @@ public class BusinessChainTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessChain")
     public String businessChain;
+
     public BusinessChainTargetingOptionDetails withBusinessChain(String businessChain) {
         this.businessChain = businessChain;
         return this;
@@ -29,6 +30,7 @@ public class BusinessChainTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoRegion")
     public String geoRegion;
+
     public BusinessChainTargetingOptionDetails withGeoRegion(String geoRegion) {
         this.geoRegion = geoRegion;
         return this;
@@ -40,9 +42,11 @@ public class BusinessChainTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoRegionType")
     public BusinessChainTargetingOptionDetailsGeoRegionTypeEnum geoRegionType;
+
     public BusinessChainTargetingOptionDetails withGeoRegionType(BusinessChainTargetingOptionDetailsGeoRegionTypeEnum geoRegionType) {
         this.geoRegionType = geoRegionType;
         return this;
     }
     
+    public BusinessChainTargetingOptionDetails(){}
 }

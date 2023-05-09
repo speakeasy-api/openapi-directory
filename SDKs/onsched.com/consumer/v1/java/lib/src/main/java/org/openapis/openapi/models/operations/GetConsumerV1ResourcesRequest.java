@@ -12,6 +12,7 @@ public class GetConsumerV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetConsumerV1ResourcesRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class GetConsumerV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetConsumerV1ResourcesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetConsumerV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetConsumerV1ResourcesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -42,6 +45,7 @@ public class GetConsumerV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetConsumerV1ResourcesRequest withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class GetConsumerV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetConsumerV1ResourcesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +67,7 @@ public class GetConsumerV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceGroupId")
     public Integer resourceGroupId;
+
     public GetConsumerV1ResourcesRequest withResourceGroupId(Integer resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -72,9 +78,11 @@ public class GetConsumerV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public String sortOrder;
+
     public GetConsumerV1ResourcesRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public GetConsumerV1ResourcesRequest(){}
 }

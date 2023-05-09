@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateWebhookConfigForRepoRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposUpdateWebhookConfigForRepoRequestBody requestBody;
+
     public ReposUpdateWebhookConfigForRepoRequest withRequestBody(ReposUpdateWebhookConfigForRepoRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ReposUpdateWebhookConfigForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public Long hookId;
+
     public ReposUpdateWebhookConfigForRepoRequest withHookId(Long hookId) {
         this.hookId = hookId;
         return this;
@@ -23,6 +26,7 @@ public class ReposUpdateWebhookConfigForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposUpdateWebhookConfigForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -30,9 +34,15 @@ public class ReposUpdateWebhookConfigForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposUpdateWebhookConfigForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposUpdateWebhookConfigForRepoRequest(@JsonProperty("hook_id") Long hookId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.hookId = hookId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

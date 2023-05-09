@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppsRemoveUserDefaultApplicationJSONError {
     @JsonProperty("code")
     public AppsRemoveUserDefaultApplicationJSONErrorCodeEnum code;
+
     public AppsRemoveUserDefaultApplicationJSONError withCode(AppsRemoveUserDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class AppsRemoveUserDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public AppsRemoveUserDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AppsRemoveUserDefaultApplicationJSONError(@JsonProperty("code") AppsRemoveUserDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

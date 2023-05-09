@@ -15,6 +15,7 @@ public class CrawlerTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogTargets")
     public CatalogTarget[] catalogTargets;
+
     public CrawlerTargets withCatalogTargets(CatalogTarget[] catalogTargets) {
         this.catalogTargets = catalogTargets;
         return this;
@@ -23,6 +24,7 @@ public class CrawlerTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeltaTargets")
     public DeltaTarget[] deltaTargets;
+
     public CrawlerTargets withDeltaTargets(DeltaTarget[] deltaTargets) {
         this.deltaTargets = deltaTargets;
         return this;
@@ -31,6 +33,7 @@ public class CrawlerTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamoDBTargets")
     public DynamoDBTarget[] dynamoDBTargets;
+
     public CrawlerTargets withDynamoDBTargets(DynamoDBTarget[] dynamoDBTargets) {
         this.dynamoDBTargets = dynamoDBTargets;
         return this;
@@ -39,6 +42,7 @@ public class CrawlerTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JdbcTargets")
     public JdbcTarget[] jdbcTargets;
+
     public CrawlerTargets withJdbcTargets(JdbcTarget[] jdbcTargets) {
         this.jdbcTargets = jdbcTargets;
         return this;
@@ -47,6 +51,7 @@ public class CrawlerTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MongoDBTargets")
     public MongoDBTarget[] mongoDBTargets;
+
     public CrawlerTargets withMongoDBTargets(MongoDBTarget[] mongoDBTargets) {
         this.mongoDBTargets = mongoDBTargets;
         return this;
@@ -55,9 +60,11 @@ public class CrawlerTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Targets")
     public S3Target[] s3Targets;
+
     public CrawlerTargets withS3Targets(S3Target[] s3Targets) {
         this.s3Targets = s3Targets;
         return this;
     }
     
+    public CrawlerTargets(){}
 }

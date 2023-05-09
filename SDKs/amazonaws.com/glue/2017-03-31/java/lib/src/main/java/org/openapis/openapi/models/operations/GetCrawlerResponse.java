@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCrawlerResponse {
     
     public String contentType;
+
     public GetCrawlerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCrawlerResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetCrawlerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetCrawlerResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCrawlerResponse getCrawlerResponse;
+
     public GetCrawlerResponse withGetCrawlerResponse(org.openapis.openapi.models.shared.GetCrawlerResponse getCrawlerResponse) {
         this.getCrawlerResponse = getCrawlerResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCrawlerResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetCrawlerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -46,6 +51,7 @@ public class GetCrawlerResponse {
     
     
     public Integer statusCode;
+
     public GetCrawlerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetCrawlerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCrawlerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCrawlerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

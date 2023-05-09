@@ -18,9 +18,11 @@ public class Verify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasPendingVerification")
     public Boolean hasPendingVerification;
+
     public Verify withHasPendingVerification(Boolean hasPendingVerification) {
         this.hasPendingVerification = hasPendingVerification;
         return this;
     }
     
+    public Verify(){}
 }

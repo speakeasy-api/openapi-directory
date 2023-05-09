@@ -15,6 +15,7 @@ public class PutFindingsPublicationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public PutFindingsPublicationConfigurationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,9 +27,11 @@ public class PutFindingsPublicationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityHubConfiguration")
     public PutFindingsPublicationConfigurationRequestBodySecurityHubConfiguration securityHubConfiguration;
+
     public PutFindingsPublicationConfigurationRequestBody withSecurityHubConfiguration(PutFindingsPublicationConfigurationRequestBodySecurityHubConfiguration securityHubConfiguration) {
         this.securityHubConfiguration = securityHubConfiguration;
         return this;
     }
     
+    public PutFindingsPublicationConfigurationRequestBody(){}
 }

@@ -59,11 +59,9 @@ public class Addresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAddressesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeAddressesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeAddressesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeAddressesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             addressAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Addresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAddressesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeAddressesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeAddressesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeAddressesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Addresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAddressesGetResponse res = new org.openapis.openapi.models.operations.ComputeAddressesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeAddressesGetResponse res = new org.openapis.openapi.models.operations.ComputeAddressesGetResponse(contentType, httpRes.statusCode()) {{
             address = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Addresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAddressesInsertResponse res = new org.openapis.openapi.models.operations.ComputeAddressesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeAddressesInsertResponse res = new org.openapis.openapi.models.operations.ComputeAddressesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Addresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAddressesListResponse res = new org.openapis.openapi.models.operations.ComputeAddressesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeAddressesListResponse res = new org.openapis.openapi.models.operations.ComputeAddressesListResponse(contentType, httpRes.statusCode()) {{
             addressList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Addresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAddressesMoveResponse res = new org.openapis.openapi.models.operations.ComputeAddressesMoveResponse() {{
+        org.openapis.openapi.models.operations.ComputeAddressesMoveResponse res = new org.openapis.openapi.models.operations.ComputeAddressesMoveResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class Addresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAddressesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeAddressesSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeAddressesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeAddressesSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class Addresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAddressesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeAddressesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeAddressesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeAddressesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

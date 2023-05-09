@@ -12,6 +12,7 @@ public class TestWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public CustomNotification notification;
+
     public TestWebhookRequest withNotification(CustomNotification notification) {
         this.notification = notification;
         return this;
@@ -53,9 +54,11 @@ public class TestWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public String[] types;
+
     public TestWebhookRequest withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public TestWebhookRequest(){}
 }

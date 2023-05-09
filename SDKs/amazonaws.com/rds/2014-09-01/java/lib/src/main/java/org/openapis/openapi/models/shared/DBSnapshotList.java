@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DBSnapshotList {
     
     public Long allocatedStorage;
+
     public DBSnapshotList withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class DBSnapshotList {
     
     
     public String availabilityZone;
+
     public DBSnapshotList withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +25,7 @@ public class DBSnapshotList {
     
     
     public String dbInstanceIdentifier;
+
     public DBSnapshotList withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -30,6 +33,7 @@ public class DBSnapshotList {
     
     
     public String dbSnapshotIdentifier;
+
     public DBSnapshotList withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -37,6 +41,7 @@ public class DBSnapshotList {
     
     
     public String engine;
+
     public DBSnapshotList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -44,6 +49,7 @@ public class DBSnapshotList {
     
     
     public String engineVersion;
+
     public DBSnapshotList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -51,6 +57,7 @@ public class DBSnapshotList {
     
     
     public OffsetDateTime instanceCreateTime;
+
     public DBSnapshotList withInstanceCreateTime(OffsetDateTime instanceCreateTime) {
         this.instanceCreateTime = instanceCreateTime;
         return this;
@@ -58,6 +65,7 @@ public class DBSnapshotList {
     
     
     public Long iops;
+
     public DBSnapshotList withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -65,6 +73,7 @@ public class DBSnapshotList {
     
     
     public String licenseModel;
+
     public DBSnapshotList withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -72,6 +81,7 @@ public class DBSnapshotList {
     
     
     public String masterUsername;
+
     public DBSnapshotList withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -79,6 +89,7 @@ public class DBSnapshotList {
     
     
     public String optionGroupName;
+
     public DBSnapshotList withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -86,6 +97,7 @@ public class DBSnapshotList {
     
     
     public Long percentProgress;
+
     public DBSnapshotList withPercentProgress(Long percentProgress) {
         this.percentProgress = percentProgress;
         return this;
@@ -93,6 +105,7 @@ public class DBSnapshotList {
     
     
     public Long port;
+
     public DBSnapshotList withPort(Long port) {
         this.port = port;
         return this;
@@ -100,6 +113,7 @@ public class DBSnapshotList {
     
     
     public OffsetDateTime snapshotCreateTime;
+
     public DBSnapshotList withSnapshotCreateTime(OffsetDateTime snapshotCreateTime) {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
@@ -107,6 +121,7 @@ public class DBSnapshotList {
     
     
     public String snapshotType;
+
     public DBSnapshotList withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
@@ -114,6 +129,7 @@ public class DBSnapshotList {
     
     
     public String sourceRegion;
+
     public DBSnapshotList withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -121,6 +137,7 @@ public class DBSnapshotList {
     
     
     public String status;
+
     public DBSnapshotList withStatus(String status) {
         this.status = status;
         return this;
@@ -128,6 +145,7 @@ public class DBSnapshotList {
     
     
     public String storageType;
+
     public DBSnapshotList withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -135,6 +153,7 @@ public class DBSnapshotList {
     
     
     public String tdeCredentialArn;
+
     public DBSnapshotList withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -142,9 +161,11 @@ public class DBSnapshotList {
     
     
     public String vpcId;
+
     public DBSnapshotList withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DBSnapshotList(){}
 }

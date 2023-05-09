@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbps {
     
     public Double max;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbps withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Double min;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbps withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbps(){}
 }

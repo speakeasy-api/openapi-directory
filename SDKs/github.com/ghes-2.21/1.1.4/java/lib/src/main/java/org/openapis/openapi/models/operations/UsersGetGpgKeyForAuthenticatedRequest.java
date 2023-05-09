@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersGetGpgKeyForAuthenticatedRequest {
@@ -12,9 +13,13 @@ public class UsersGetGpgKeyForAuthenticatedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gpg_key_id")
     public Long gpgKeyId;
+
     public UsersGetGpgKeyForAuthenticatedRequest withGpgKeyId(Long gpgKeyId) {
         this.gpgKeyId = gpgKeyId;
         return this;
     }
     
+    public UsersGetGpgKeyForAuthenticatedRequest(@JsonProperty("gpg_key_id") Long gpgKeyId) {
+        this.gpgKeyId = gpgKeyId;
+  }
 }

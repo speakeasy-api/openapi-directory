@@ -15,9 +15,11 @@ public class AddCouponsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public AddCouponsRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public AddCouponsRequestBody(){}
 }

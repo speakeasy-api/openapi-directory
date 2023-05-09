@@ -52,11 +52,9 @@ public class Shipment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelShipmentResponse res = new org.openapis.openapi.models.operations.CancelShipmentResponse() {{
+        org.openapis.openapi.models.operations.CancelShipmentResponse res = new org.openapis.openapi.models.operations.CancelShipmentResponse(contentType, httpRes.statusCode()) {{
             shipment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Shipment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFromShippingQuoteResponse res = new org.openapis.openapi.models.operations.CreateFromShippingQuoteResponse() {{
+        org.openapis.openapi.models.operations.CreateFromShippingQuoteResponse res = new org.openapis.openapi.models.operations.CreateFromShippingQuoteResponse(contentType, httpRes.statusCode()) {{
             shipment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -141,11 +137,9 @@ public class Shipment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadLabelFileResponse res = new org.openapis.openapi.models.operations.DownloadLabelFileResponse() {{
+        org.openapis.openapi.models.operations.DownloadLabelFileResponse res = new org.openapis.openapi.models.operations.DownloadLabelFileResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class Shipment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShipmentResponse res = new org.openapis.openapi.models.operations.GetShipmentResponse() {{
+        org.openapis.openapi.models.operations.GetShipmentResponse res = new org.openapis.openapi.models.operations.GetShipmentResponse(contentType, httpRes.statusCode()) {{
             shipment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

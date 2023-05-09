@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStopPointSearchRequest {
@@ -12,6 +13,7 @@ public class GetStopPointSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=faresOnly")
     public Boolean faresOnly;
+
     public GetStopPointSearchRequest withFaresOnly(Boolean faresOnly) {
         this.faresOnly = faresOnly;
         return this;
@@ -22,6 +24,7 @@ public class GetStopPointSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeHubs")
     public Boolean includeHubs;
+
     public GetStopPointSearchRequest withIncludeHubs(Boolean includeHubs) {
         this.includeHubs = includeHubs;
         return this;
@@ -32,6 +35,7 @@ public class GetStopPointSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lines")
     public String[] lines;
+
     public GetStopPointSearchRequest withLines(String[] lines) {
         this.lines = lines;
         return this;
@@ -43,6 +47,7 @@ public class GetStopPointSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Integer maxResults;
+
     public GetStopPointSearchRequest withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +58,7 @@ public class GetStopPointSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
     public String[] modes;
+
     public GetStopPointSearchRequest withModes(String[] modes) {
         this.modes = modes;
         return this;
@@ -63,6 +69,7 @@ public class GetStopPointSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetStopPointSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -73,9 +80,13 @@ public class GetStopPointSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tflOperatedNationalRailStationsOnly")
     public Boolean tflOperatedNationalRailStationsOnly;
+
     public GetStopPointSearchRequest withTflOperatedNationalRailStationsOnly(Boolean tflOperatedNationalRailStationsOnly) {
         this.tflOperatedNationalRailStationsOnly = tflOperatedNationalRailStationsOnly;
         return this;
     }
     
+    public GetStopPointSearchRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

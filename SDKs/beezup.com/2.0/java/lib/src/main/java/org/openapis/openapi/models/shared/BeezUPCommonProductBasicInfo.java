@@ -17,6 +17,7 @@ public class BeezUPCommonProductBasicInfo {
      */
     @JsonProperty("productExists")
     public Boolean productExists;
+
     public BeezUPCommonProductBasicInfo withProductExists(Boolean productExists) {
         this.productExists = productExists;
         return this;
@@ -27,6 +28,7 @@ public class BeezUPCommonProductBasicInfo {
      */
     @JsonProperty("productId")
     public String productId;
+
     public BeezUPCommonProductBasicInfo withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -38,6 +40,7 @@ public class BeezUPCommonProductBasicInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productImageUrl")
     public String productImageUrl;
+
     public BeezUPCommonProductBasicInfo withProductImageUrl(String productImageUrl) {
         this.productImageUrl = productImageUrl;
         return this;
@@ -48,6 +51,7 @@ public class BeezUPCommonProductBasicInfo {
      */
     @JsonProperty("productSku")
     public String productSku;
+
     public BeezUPCommonProductBasicInfo withProductSku(String productSku) {
         this.productSku = productSku;
         return this;
@@ -58,9 +62,16 @@ public class BeezUPCommonProductBasicInfo {
      */
     @JsonProperty("productTitle")
     public String productTitle;
+
     public BeezUPCommonProductBasicInfo withProductTitle(String productTitle) {
         this.productTitle = productTitle;
         return this;
     }
     
+    public BeezUPCommonProductBasicInfo(@JsonProperty("productExists") Boolean productExists, @JsonProperty("productId") String productId, @JsonProperty("productSku") String productSku, @JsonProperty("productTitle") String productTitle) {
+        this.productExists = productExists;
+        this.productId = productId;
+        this.productSku = productSku;
+        this.productTitle = productTitle;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventsByYearResponse {
     
     public String contentType;
+
     public GetEventsByYearResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEventsByYearResponse {
      */
     
     public org.openapis.openapi.models.shared.Event[] events;
+
     public GetEventsByYearResponse withEvents(org.openapis.openapi.models.shared.Event[] events) {
         this.events = events;
         return this;
@@ -26,6 +29,7 @@ public class GetEventsByYearResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEventsByYearResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetEventsByYearResponse {
     
     
     public Integer statusCode;
+
     public GetEventsByYearResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetEventsByYearResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventsByYearResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEventsByYearResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

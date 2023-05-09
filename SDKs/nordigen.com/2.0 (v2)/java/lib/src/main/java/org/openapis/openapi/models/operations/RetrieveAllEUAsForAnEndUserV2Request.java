@@ -12,6 +12,7 @@ public class RetrieveAllEUAsForAnEndUserV2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public RetrieveAllEUAsForAnEndUserV2Request withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class RetrieveAllEUAsForAnEndUserV2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public RetrieveAllEUAsForAnEndUserV2Request withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public RetrieveAllEUAsForAnEndUserV2Request(){}
 }

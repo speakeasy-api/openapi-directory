@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIPConsentNotificationNotification {
     @JsonProperty("consentDetail")
     public HIPConsentNotificationNotificationConsentDetail consentDetail;
+
     public HIPConsentNotificationNotification withConsentDetail(HIPConsentNotificationNotificationConsentDetail consentDetail) {
         this.consentDetail = consentDetail;
         return this;
@@ -16,6 +17,7 @@ public class HIPConsentNotificationNotification {
     
     @JsonProperty("consentId")
     public String consentId;
+
     public HIPConsentNotificationNotification withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -23,6 +25,7 @@ public class HIPConsentNotificationNotification {
     
     @JsonProperty("signature")
     public String signature;
+
     public HIPConsentNotificationNotification withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -30,9 +33,16 @@ public class HIPConsentNotificationNotification {
     
     @JsonProperty("status")
     public ConsentStatusEnum status;
+
     public HIPConsentNotificationNotification withStatus(ConsentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public HIPConsentNotificationNotification(@JsonProperty("consentDetail") HIPConsentNotificationNotificationConsentDetail consentDetail, @JsonProperty("consentId") String consentId, @JsonProperty("signature") String signature, @JsonProperty("status") ConsentStatusEnum status) {
+        this.consentDetail = consentDetail;
+        this.consentId = consentId;
+        this.signature = signature;
+        this.status = status;
+  }
 }

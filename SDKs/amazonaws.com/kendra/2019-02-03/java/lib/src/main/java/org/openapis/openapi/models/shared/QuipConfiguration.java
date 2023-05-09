@@ -15,6 +15,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachmentFieldMappings")
     public DataSourceToIndexFieldMapping[] attachmentFieldMappings;
+
     public QuipConfiguration withAttachmentFieldMappings(DataSourceToIndexFieldMapping[] attachmentFieldMappings) {
         this.attachmentFieldMappings = attachmentFieldMappings;
         return this;
@@ -23,6 +24,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlAttachments")
     public Boolean crawlAttachments;
+
     public QuipConfiguration withCrawlAttachments(Boolean crawlAttachments) {
         this.crawlAttachments = crawlAttachments;
         return this;
@@ -31,6 +33,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlChatRooms")
     public Boolean crawlChatRooms;
+
     public QuipConfiguration withCrawlChatRooms(Boolean crawlChatRooms) {
         this.crawlChatRooms = crawlChatRooms;
         return this;
@@ -39,6 +42,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlFileComments")
     public Boolean crawlFileComments;
+
     public QuipConfiguration withCrawlFileComments(Boolean crawlFileComments) {
         this.crawlFileComments = crawlFileComments;
         return this;
@@ -46,6 +50,7 @@ public class QuipConfiguration {
     
     @JsonProperty("Domain")
     public String domain;
+
     public QuipConfiguration withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -54,6 +59,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public QuipConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -62,6 +68,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FolderIds")
     public String[] folderIds;
+
     public QuipConfiguration withFolderIds(String[] folderIds) {
         this.folderIds = folderIds;
         return this;
@@ -70,6 +77,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public QuipConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -78,6 +86,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageFieldMappings")
     public DataSourceToIndexFieldMapping[] messageFieldMappings;
+
     public QuipConfiguration withMessageFieldMappings(DataSourceToIndexFieldMapping[] messageFieldMappings) {
         this.messageFieldMappings = messageFieldMappings;
         return this;
@@ -85,6 +94,7 @@ public class QuipConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public QuipConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -93,6 +103,7 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreadFieldMappings")
     public DataSourceToIndexFieldMapping[] threadFieldMappings;
+
     public QuipConfiguration withThreadFieldMappings(DataSourceToIndexFieldMapping[] threadFieldMappings) {
         this.threadFieldMappings = threadFieldMappings;
         return this;
@@ -101,9 +112,14 @@ public class QuipConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public QuipConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public QuipConfiguration(@JsonProperty("Domain") String domain, @JsonProperty("SecretArn") String secretArn) {
+        this.domain = domain;
+        this.secretArn = secretArn;
+  }
 }

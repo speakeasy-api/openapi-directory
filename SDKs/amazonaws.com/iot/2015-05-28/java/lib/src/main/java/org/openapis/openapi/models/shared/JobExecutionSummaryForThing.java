@@ -15,6 +15,7 @@ public class JobExecutionSummaryForThing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionSummary")
     public JobExecutionSummary jobExecutionSummary;
+
     public JobExecutionSummaryForThing withJobExecutionSummary(JobExecutionSummary jobExecutionSummary) {
         this.jobExecutionSummary = jobExecutionSummary;
         return this;
@@ -23,9 +24,11 @@ public class JobExecutionSummaryForThing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public JobExecutionSummaryForThing withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public JobExecutionSummaryForThing(){}
 }

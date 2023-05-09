@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutVerificationStateOnViolationResponse {
     
     public String contentType;
+
     public PutVerificationStateOnViolationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutVerificationStateOnViolationResponse {
      */
     
     public Object internalFailureException;
+
     public PutVerificationStateOnViolationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class PutVerificationStateOnViolationResponse {
      */
     
     public Object invalidRequestException;
+
     public PutVerificationStateOnViolationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class PutVerificationStateOnViolationResponse {
      */
     
     public java.util.Map<String, Object> putVerificationStateOnViolationResponse;
+
     public PutVerificationStateOnViolationResponse withPutVerificationStateOnViolationResponse(java.util.Map<String, Object> putVerificationStateOnViolationResponse) {
         this.putVerificationStateOnViolationResponse = putVerificationStateOnViolationResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutVerificationStateOnViolationResponse {
     
     
     public Integer statusCode;
+
     public PutVerificationStateOnViolationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutVerificationStateOnViolationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutVerificationStateOnViolationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutVerificationStateOnViolationResponse {
      */
     
     public Object throttlingException;
+
     public PutVerificationStateOnViolationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public PutVerificationStateOnViolationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

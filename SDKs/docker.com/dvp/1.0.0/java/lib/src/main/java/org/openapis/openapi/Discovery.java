@@ -51,11 +51,9 @@ public class Discovery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespaceResponse res = new org.openapis.openapi.models.operations.GetNamespaceResponse() {{
+        org.openapis.openapi.models.operations.GetNamespaceResponse res = new org.openapis.openapi.models.operations.GetNamespaceResponse(contentType, httpRes.statusCode()) {{
             namespaceMetadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -90,11 +88,9 @@ public class Discovery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespacesResponse res = new org.openapis.openapi.models.operations.GetNamespacesResponse() {{
+        org.openapis.openapi.models.operations.GetNamespacesResponse res = new org.openapis.openapi.models.operations.GetNamespacesResponse(contentType, httpRes.statusCode()) {{
             namespaceData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

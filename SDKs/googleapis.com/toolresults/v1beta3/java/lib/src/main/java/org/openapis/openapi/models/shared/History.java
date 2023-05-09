@@ -18,6 +18,7 @@ public class History {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public History withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class History {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historyId")
     public String historyId;
+
     public History withHistoryId(String historyId) {
         this.historyId = historyId;
         return this;
@@ -40,6 +42,7 @@ public class History {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public History withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class History {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testPlatform")
     public HistoryTestPlatformEnum testPlatform;
+
     public History withTestPlatform(HistoryTestPlatformEnum testPlatform) {
         this.testPlatform = testPlatform;
         return this;
     }
     
+    public History(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataprocProjectsRegionsClustersCreateRequest {
@@ -12,6 +13,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DataprocProjectsRegionsClustersCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ClusterInput clusterInput;
+
     public DataprocProjectsRegionsClustersCreateRequest withClusterInput(org.openapis.openapi.models.shared.ClusterInput clusterInput) {
         this.clusterInput = clusterInput;
         return this;
@@ -29,6 +32,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DataprocProjectsRegionsClustersCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actionOnFailedPrimaryWorkers")
     public DataprocProjectsRegionsClustersCreateActionOnFailedPrimaryWorkersEnum actionOnFailedPrimaryWorkers;
+
     public DataprocProjectsRegionsClustersCreateRequest withActionOnFailedPrimaryWorkers(DataprocProjectsRegionsClustersCreateActionOnFailedPrimaryWorkersEnum actionOnFailedPrimaryWorkers) {
         this.actionOnFailedPrimaryWorkers = actionOnFailedPrimaryWorkers;
         return this;
@@ -49,6 +54,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DataprocProjectsRegionsClustersCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DataprocProjectsRegionsClustersCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DataprocProjectsRegionsClustersCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DataprocProjectsRegionsClustersCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DataprocProjectsRegionsClustersCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DataprocProjectsRegionsClustersCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DataprocProjectsRegionsClustersCreateRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -119,6 +131,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DataprocProjectsRegionsClustersCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public DataprocProjectsRegionsClustersCreateRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +153,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public DataprocProjectsRegionsClustersCreateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -149,6 +164,7 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DataprocProjectsRegionsClustersCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,14 @@ public class DataprocProjectsRegionsClustersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DataprocProjectsRegionsClustersCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DataprocProjectsRegionsClustersCreateRequest(@JsonProperty("projectId") String projectId, @JsonProperty("region") String region) {
+        this.projectId = projectId;
+        this.region = region;
+  }
 }

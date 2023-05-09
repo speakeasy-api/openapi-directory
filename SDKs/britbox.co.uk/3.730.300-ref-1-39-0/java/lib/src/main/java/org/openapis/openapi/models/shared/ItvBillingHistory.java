@@ -15,9 +15,13 @@ public class ItvBillingHistory {
      */
     @JsonProperty("payment_history")
     public ItvBillingHistoryRecord[] paymentHistory;
+
     public ItvBillingHistory withPaymentHistory(ItvBillingHistoryRecord[] paymentHistory) {
         this.paymentHistory = paymentHistory;
         return this;
     }
     
+    public ItvBillingHistory(@JsonProperty("payment_history") ItvBillingHistoryRecord[] paymentHistory) {
+        this.paymentHistory = paymentHistory;
+  }
 }

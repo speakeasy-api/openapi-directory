@@ -15,6 +15,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsLogGroupArn")
     public String cloudWatchLogsLogGroupArn;
+
     public Trail withCloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsRoleArn")
     public String cloudWatchLogsRoleArn;
+
     public Trail withCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
         return this;
@@ -31,6 +33,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasCustomEventSelectors")
     public Boolean hasCustomEventSelectors;
+
     public Trail withHasCustomEventSelectors(Boolean hasCustomEventSelectors) {
         this.hasCustomEventSelectors = hasCustomEventSelectors;
         return this;
@@ -39,6 +42,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasInsightSelectors")
     public Boolean hasInsightSelectors;
+
     public Trail withHasInsightSelectors(Boolean hasInsightSelectors) {
         this.hasInsightSelectors = hasInsightSelectors;
         return this;
@@ -47,6 +51,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public Trail withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -55,6 +60,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeGlobalServiceEvents")
     public Boolean includeGlobalServiceEvents;
+
     public Trail withIncludeGlobalServiceEvents(Boolean includeGlobalServiceEvents) {
         this.includeGlobalServiceEvents = includeGlobalServiceEvents;
         return this;
@@ -63,6 +69,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsMultiRegionTrail")
     public Boolean isMultiRegionTrail;
+
     public Trail withIsMultiRegionTrail(Boolean isMultiRegionTrail) {
         this.isMultiRegionTrail = isMultiRegionTrail;
         return this;
@@ -71,6 +78,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsOrganizationTrail")
     public Boolean isOrganizationTrail;
+
     public Trail withIsOrganizationTrail(Boolean isOrganizationTrail) {
         this.isOrganizationTrail = isOrganizationTrail;
         return this;
@@ -79,6 +87,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public Trail withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -87,6 +96,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogFileValidationEnabled")
     public Boolean logFileValidationEnabled;
+
     public Trail withLogFileValidationEnabled(Boolean logFileValidationEnabled) {
         this.logFileValidationEnabled = logFileValidationEnabled;
         return this;
@@ -95,6 +105,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Trail withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +114,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public Trail withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -111,6 +123,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyPrefix")
     public String s3KeyPrefix;
+
     public Trail withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
@@ -119,6 +132,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicARN")
     public String snsTopicARN;
+
     public Trail withSnsTopicARN(String snsTopicARN) {
         this.snsTopicARN = snsTopicARN;
         return this;
@@ -127,6 +141,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicName")
     public String snsTopicName;
+
     public Trail withSnsTopicName(String snsTopicName) {
         this.snsTopicName = snsTopicName;
         return this;
@@ -135,9 +150,11 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrailARN")
     public String trailARN;
+
     public Trail withTrailARN(String trailARN) {
         this.trailARN = trailARN;
         return this;
     }
     
+    public Trail(){}
 }

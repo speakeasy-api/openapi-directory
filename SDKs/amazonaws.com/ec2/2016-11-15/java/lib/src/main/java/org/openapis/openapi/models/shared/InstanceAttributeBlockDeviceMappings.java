@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeBlockDeviceMappings {
     
     public String deviceName;
+
     public InstanceAttributeBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,9 +20,11 @@ public class InstanceAttributeBlockDeviceMappings {
     
     
     public InstanceAttributeBlockDeviceMappingsEbs ebs;
+
     public InstanceAttributeBlockDeviceMappings withEbs(InstanceAttributeBlockDeviceMappingsEbs ebs) {
         this.ebs = ebs;
         return this;
     }
     
+    public InstanceAttributeBlockDeviceMappings(){}
 }

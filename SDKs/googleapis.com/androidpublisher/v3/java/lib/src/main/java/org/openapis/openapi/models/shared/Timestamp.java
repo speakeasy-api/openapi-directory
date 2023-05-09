@@ -18,6 +18,7 @@ public class Timestamp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nanos")
     public Integer nanos;
+
     public Timestamp withNanos(Integer nanos) {
         this.nanos = nanos;
         return this;
@@ -29,9 +30,11 @@ public class Timestamp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seconds")
     public String seconds;
+
     public Timestamp withSeconds(String seconds) {
         this.seconds = seconds;
         return this;
     }
     
+    public Timestamp(){}
 }

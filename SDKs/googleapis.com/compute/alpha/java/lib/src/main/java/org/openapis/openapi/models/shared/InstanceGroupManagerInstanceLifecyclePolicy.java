@@ -15,6 +15,7 @@ public class InstanceGroupManagerInstanceLifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultActionOnFailure")
     public InstanceGroupManagerInstanceLifecyclePolicyDefaultActionOnFailureEnum defaultActionOnFailure;
+
     public InstanceGroupManagerInstanceLifecyclePolicy withDefaultActionOnFailure(InstanceGroupManagerInstanceLifecyclePolicyDefaultActionOnFailureEnum defaultActionOnFailure) {
         this.defaultActionOnFailure = defaultActionOnFailure;
         return this;
@@ -26,6 +27,7 @@ public class InstanceGroupManagerInstanceLifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceUpdateOnRepair")
     public InstanceGroupManagerInstanceLifecyclePolicyForceUpdateOnRepairEnum forceUpdateOnRepair;
+
     public InstanceGroupManagerInstanceLifecyclePolicy withForceUpdateOnRepair(InstanceGroupManagerInstanceLifecyclePolicyForceUpdateOnRepairEnum forceUpdateOnRepair) {
         this.forceUpdateOnRepair = forceUpdateOnRepair;
         return this;
@@ -34,9 +36,11 @@ public class InstanceGroupManagerInstanceLifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataBasedReadinessSignal")
     public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal metadataBasedReadinessSignal;
+
     public InstanceGroupManagerInstanceLifecyclePolicy withMetadataBasedReadinessSignal(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal metadataBasedReadinessSignal) {
         this.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
         return this;
     }
     
+    public InstanceGroupManagerInstanceLifecyclePolicy(){}
 }

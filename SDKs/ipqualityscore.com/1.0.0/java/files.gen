@@ -53,4 +53,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidation400Appli
 lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidation200ApplicationJSONAssociatedEmailAddresses.java
 lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidation200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidationResponse.java
+docs/sdk/README.md
+docs/emailvalidation/README.md
+docs/maliciousurlscanner/README.md
+docs/phonevalidation/README.md
 USAGE.md

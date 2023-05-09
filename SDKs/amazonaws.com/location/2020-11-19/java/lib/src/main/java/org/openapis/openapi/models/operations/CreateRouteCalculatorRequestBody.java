@@ -14,6 +14,7 @@ public class CreateRouteCalculatorRequestBody {
      */
     @JsonProperty("CalculatorName")
     public String calculatorName;
+
     public CreateRouteCalculatorRequestBody withCalculatorName(String calculatorName) {
         this.calculatorName = calculatorName;
         return this;
@@ -24,6 +25,7 @@ public class CreateRouteCalculatorRequestBody {
      */
     @JsonProperty("DataSource")
     public String dataSource;
+
     public CreateRouteCalculatorRequestBody withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -35,6 +37,7 @@ public class CreateRouteCalculatorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateRouteCalculatorRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class CreateRouteCalculatorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public CreateRouteCalculatorRequestBodyPricingPlanEnum pricingPlan;
+
     public CreateRouteCalculatorRequestBody withPricingPlan(CreateRouteCalculatorRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -57,9 +61,14 @@ public class CreateRouteCalculatorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateRouteCalculatorRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRouteCalculatorRequestBody(@JsonProperty("CalculatorName") String calculatorName, @JsonProperty("DataSource") String dataSource) {
+        this.calculatorName = calculatorName;
+        this.dataSource = dataSource;
+  }
 }

@@ -12,6 +12,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public Injury withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +21,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BodyPart")
     public String bodyPart;
+
     public Injury withBodyPart(String bodyPart) {
         this.bodyPart = bodyPart;
         return this;
@@ -28,6 +30,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedReturn")
     public String expectedReturn;
+
     public Injury withExpectedReturn(String expectedReturn) {
         this.expectedReturn = expectedReturn;
         return this;
@@ -36,6 +39,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryID")
     public Long injuryID;
+
     public Injury withInjuryID(Long injuryID) {
         this.injuryID = injuryID;
         return this;
@@ -44,6 +48,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Injury withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public Injury withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -60,6 +66,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public Injury withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -68,9 +75,11 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Injury withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Injury(){}
 }

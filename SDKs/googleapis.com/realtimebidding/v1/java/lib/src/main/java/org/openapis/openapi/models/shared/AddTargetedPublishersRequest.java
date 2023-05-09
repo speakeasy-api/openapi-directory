@@ -18,6 +18,7 @@ public class AddTargetedPublishersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherIds")
     public String[] publisherIds;
+
     public AddTargetedPublishersRequest withPublisherIds(String[] publisherIds) {
         this.publisherIds = publisherIds;
         return this;
@@ -29,9 +30,11 @@ public class AddTargetedPublishersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingMode")
     public AddTargetedPublishersRequestTargetingModeEnum targetingMode;
+
     public AddTargetedPublishersRequest withTargetingMode(AddTargetedPublishersRequestTargetingModeEnum targetingMode) {
         this.targetingMode = targetingMode;
         return this;
     }
     
+    public AddTargetedPublishersRequest(){}
 }

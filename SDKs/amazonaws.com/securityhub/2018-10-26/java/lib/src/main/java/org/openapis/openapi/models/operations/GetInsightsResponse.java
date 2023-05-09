@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInsightsResponse {
     
     public String contentType;
+
     public GetInsightsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInsightsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInsightsResponse getInsightsResponse;
+
     public GetInsightsResponse withGetInsightsResponse(org.openapis.openapi.models.shared.GetInsightsResponse getInsightsResponse) {
         this.getInsightsResponse = getInsightsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetInsightsResponse {
      */
     
     public Object internalException;
+
     public GetInsightsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class GetInsightsResponse {
      */
     
     public Object invalidAccessException;
+
     public GetInsightsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class GetInsightsResponse {
      */
     
     public Object invalidInputException;
+
     public GetInsightsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetInsightsResponse {
      */
     
     public Object limitExceededException;
+
     public GetInsightsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class GetInsightsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetInsightsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetInsightsResponse {
     
     
     public Integer statusCode;
+
     public GetInsightsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetInsightsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInsightsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInsightsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

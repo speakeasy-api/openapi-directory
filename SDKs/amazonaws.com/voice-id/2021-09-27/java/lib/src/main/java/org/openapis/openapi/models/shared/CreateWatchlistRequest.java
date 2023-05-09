@@ -12,6 +12,7 @@ public class CreateWatchlistRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateWatchlistRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateWatchlistRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateWatchlistRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateWatchlistRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public CreateWatchlistRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -34,9 +37,14 @@ public class CreateWatchlistRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateWatchlistRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateWatchlistRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("Name") String name) {
+        this.domainId = domainId;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRatingsResponse {
     
     public String contentType;
+
     public GetRatingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRatingsResponse {
     
     
     public Integer statusCode;
+
     public GetRatingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRatingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRatingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRatingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetRatingsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class GetRatingsResponse {
      */
     
     public java.util.Map<String, Integer> getRatings200ApplicationJSONObject;
+
     public GetRatingsResponse withGetRatings200ApplicationJSONObject(java.util.Map<String, Integer> getRatings200ApplicationJSONObject) {
         this.getRatings200ApplicationJSONObject = getRatings200ApplicationJSONObject;
         return this;
     }
     
+    public GetRatingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

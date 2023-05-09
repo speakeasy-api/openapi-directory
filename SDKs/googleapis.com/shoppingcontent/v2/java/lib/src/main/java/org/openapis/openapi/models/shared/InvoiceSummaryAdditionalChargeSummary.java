@@ -12,6 +12,7 @@ public class InvoiceSummaryAdditionalChargeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalAmount")
     public Amount totalAmount;
+
     public InvoiceSummaryAdditionalChargeSummary withTotalAmount(Amount totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -23,9 +24,11 @@ public class InvoiceSummaryAdditionalChargeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public InvoiceSummaryAdditionalChargeSummary withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InvoiceSummaryAdditionalChargeSummary(){}
 }

@@ -15,6 +15,7 @@ public class DescribeOrganizationHealthRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public DescribeOrganizationHealthRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -26,9 +27,11 @@ public class DescribeOrganizationHealthRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitIds")
     public String[] organizationalUnitIds;
+
     public DescribeOrganizationHealthRequestBody withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
     }
     
+    public DescribeOrganizationHealthRequestBody(){}
 }

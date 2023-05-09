@@ -15,6 +15,7 @@ public class ComponentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ComponentState withReason(String reason) {
         this.reason = reason;
         return this;
@@ -23,9 +24,11 @@ public class ComponentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ComponentStatusEnum status;
+
     public ComponentState withStatus(ComponentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ComponentState(){}
 }

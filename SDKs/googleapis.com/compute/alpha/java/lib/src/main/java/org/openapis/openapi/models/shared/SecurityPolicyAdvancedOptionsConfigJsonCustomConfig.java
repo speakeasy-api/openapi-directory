@@ -15,9 +15,11 @@ public class SecurityPolicyAdvancedOptionsConfigJsonCustomConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentTypes")
     public String[] contentTypes;
+
     public SecurityPolicyAdvancedOptionsConfigJsonCustomConfig withContentTypes(String[] contentTypes) {
         this.contentTypes = contentTypes;
         return this;
     }
     
+    public SecurityPolicyAdvancedOptionsConfigJsonCustomConfig(){}
 }

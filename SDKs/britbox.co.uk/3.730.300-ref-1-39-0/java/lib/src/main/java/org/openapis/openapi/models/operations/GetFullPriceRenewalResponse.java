@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFullPriceRenewalResponse {
     
     public String contentType;
+
     public GetFullPriceRenewalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFullPriceRenewalResponse {
      */
     
     public org.openapis.openapi.models.shared.ItvSubscriptionFullPriceRenewal itvSubscriptionFullPriceRenewal;
+
     public GetFullPriceRenewalResponse withItvSubscriptionFullPriceRenewal(org.openapis.openapi.models.shared.ItvSubscriptionFullPriceRenewal itvSubscriptionFullPriceRenewal) {
         this.itvSubscriptionFullPriceRenewal = itvSubscriptionFullPriceRenewal;
         return this;
@@ -26,6 +29,7 @@ public class GetFullPriceRenewalResponse {
     
     
     public Integer statusCode;
+
     public GetFullPriceRenewalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetFullPriceRenewalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFullPriceRenewalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFullPriceRenewalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

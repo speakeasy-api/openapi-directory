@@ -12,6 +12,7 @@ public class GetQuery200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public GetQuery200ApplicationJSONExplanationLocalsKey key;
+
     public GetQuery200ApplicationJSONExplanationLocals withKey(GetQuery200ApplicationJSONExplanationLocalsKey key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class GetQuery200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GetQuery200ApplicationJSONExplanationLocalsValue value;
+
     public GetQuery200ApplicationJSONExplanationLocals withValue(GetQuery200ApplicationJSONExplanationLocalsValue value) {
         this.value = value;
         return this;
     }
     
+    public GetQuery200ApplicationJSONExplanationLocals(){}
 }

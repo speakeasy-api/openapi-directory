@@ -15,6 +15,7 @@ public class HyperParameterRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoricalHyperParameterRanges")
     public CategoricalHyperParameterRange[] categoricalHyperParameterRanges;
+
     public HyperParameterRanges withCategoricalHyperParameterRanges(CategoricalHyperParameterRange[] categoricalHyperParameterRanges) {
         this.categoricalHyperParameterRanges = categoricalHyperParameterRanges;
         return this;
@@ -23,6 +24,7 @@ public class HyperParameterRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuousHyperParameterRanges")
     public ContinuousHyperParameterRange[] continuousHyperParameterRanges;
+
     public HyperParameterRanges withContinuousHyperParameterRanges(ContinuousHyperParameterRange[] continuousHyperParameterRanges) {
         this.continuousHyperParameterRanges = continuousHyperParameterRanges;
         return this;
@@ -31,9 +33,11 @@ public class HyperParameterRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerHyperParameterRanges")
     public IntegerHyperParameterRange[] integerHyperParameterRanges;
+
     public HyperParameterRanges withIntegerHyperParameterRanges(IntegerHyperParameterRange[] integerHyperParameterRanges) {
         this.integerHyperParameterRanges = integerHyperParameterRanges;
         return this;
     }
     
+    public HyperParameterRanges(){}
 }

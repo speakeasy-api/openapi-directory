@@ -15,6 +15,7 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FiberOpticCableType")
     public org.openapis.openapi.models.shared.FiberOpticCableTypeEnum fiberOpticCableType;
+
     public CreateSiteRequestBodyRackPhysicalProperties withFiberOpticCableType(org.openapis.openapi.models.shared.FiberOpticCableTypeEnum fiberOpticCableType) {
         this.fiberOpticCableType = fiberOpticCableType;
         return this;
@@ -23,6 +24,7 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumSupportedWeightLbs")
     public org.openapis.openapi.models.shared.MaximumSupportedWeightLbsEnum maximumSupportedWeightLbs;
+
     public CreateSiteRequestBodyRackPhysicalProperties withMaximumSupportedWeightLbs(org.openapis.openapi.models.shared.MaximumSupportedWeightLbsEnum maximumSupportedWeightLbs) {
         this.maximumSupportedWeightLbs = maximumSupportedWeightLbs;
         return this;
@@ -31,6 +33,7 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpticalStandard")
     public org.openapis.openapi.models.shared.OpticalStandardEnum opticalStandard;
+
     public CreateSiteRequestBodyRackPhysicalProperties withOpticalStandard(org.openapis.openapi.models.shared.OpticalStandardEnum opticalStandard) {
         this.opticalStandard = opticalStandard;
         return this;
@@ -39,6 +42,7 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerConnector")
     public org.openapis.openapi.models.shared.PowerConnectorEnum powerConnector;
+
     public CreateSiteRequestBodyRackPhysicalProperties withPowerConnector(org.openapis.openapi.models.shared.PowerConnectorEnum powerConnector) {
         this.powerConnector = powerConnector;
         return this;
@@ -47,6 +51,7 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerDrawKva")
     public org.openapis.openapi.models.shared.PowerDrawKvaEnum powerDrawKva;
+
     public CreateSiteRequestBodyRackPhysicalProperties withPowerDrawKva(org.openapis.openapi.models.shared.PowerDrawKvaEnum powerDrawKva) {
         this.powerDrawKva = powerDrawKva;
         return this;
@@ -55,6 +60,7 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerFeedDrop")
     public org.openapis.openapi.models.shared.PowerFeedDropEnum powerFeedDrop;
+
     public CreateSiteRequestBodyRackPhysicalProperties withPowerFeedDrop(org.openapis.openapi.models.shared.PowerFeedDropEnum powerFeedDrop) {
         this.powerFeedDrop = powerFeedDrop;
         return this;
@@ -63,6 +69,7 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerPhase")
     public org.openapis.openapi.models.shared.PowerPhaseEnum powerPhase;
+
     public CreateSiteRequestBodyRackPhysicalProperties withPowerPhase(org.openapis.openapi.models.shared.PowerPhaseEnum powerPhase) {
         this.powerPhase = powerPhase;
         return this;
@@ -71,6 +78,7 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UplinkCount")
     public org.openapis.openapi.models.shared.UplinkCountEnum uplinkCount;
+
     public CreateSiteRequestBodyRackPhysicalProperties withUplinkCount(org.openapis.openapi.models.shared.UplinkCountEnum uplinkCount) {
         this.uplinkCount = uplinkCount;
         return this;
@@ -79,9 +87,11 @@ public class CreateSiteRequestBodyRackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UplinkGbps")
     public org.openapis.openapi.models.shared.UplinkGbpsEnum uplinkGbps;
+
     public CreateSiteRequestBodyRackPhysicalProperties withUplinkGbps(org.openapis.openapi.models.shared.UplinkGbpsEnum uplinkGbps) {
         this.uplinkGbps = uplinkGbps;
         return this;
     }
     
+    public CreateSiteRequestBodyRackPhysicalProperties(){}
 }

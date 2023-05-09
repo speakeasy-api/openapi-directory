@@ -15,9 +15,11 @@ public class PostServersCreateServerRequestFirewalls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewall")
     public Long firewall;
+
     public PostServersCreateServerRequestFirewalls withFirewall(Long firewall) {
         this.firewall = firewall;
         return this;
     }
     
+    public PostServersCreateServerRequestFirewalls(){}
 }

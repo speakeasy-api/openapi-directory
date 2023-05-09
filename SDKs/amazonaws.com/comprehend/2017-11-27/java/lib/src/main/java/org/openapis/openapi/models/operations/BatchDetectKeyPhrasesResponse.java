@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDetectKeyPhrasesResponse {
@@ -12,6 +13,7 @@ public class BatchDetectKeyPhrasesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDetectKeyPhrasesResponse batchDetectKeyPhrasesResponse;
+
     public BatchDetectKeyPhrasesResponse withBatchDetectKeyPhrasesResponse(org.openapis.openapi.models.shared.BatchDetectKeyPhrasesResponse batchDetectKeyPhrasesResponse) {
         this.batchDetectKeyPhrasesResponse = batchDetectKeyPhrasesResponse;
         return this;
@@ -22,6 +24,7 @@ public class BatchDetectKeyPhrasesResponse {
      */
     
     public Object batchSizeLimitExceededException;
+
     public BatchDetectKeyPhrasesResponse withBatchSizeLimitExceededException(Object batchSizeLimitExceededException) {
         this.batchSizeLimitExceededException = batchSizeLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class BatchDetectKeyPhrasesResponse {
     
     
     public String contentType;
+
     public BatchDetectKeyPhrasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDetectKeyPhrasesResponse {
      */
     
     public Object internalServerException;
+
     public BatchDetectKeyPhrasesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDetectKeyPhrasesResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchDetectKeyPhrasesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDetectKeyPhrasesResponse {
     
     
     public Integer statusCode;
+
     public BatchDetectKeyPhrasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDetectKeyPhrasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDetectKeyPhrasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchDetectKeyPhrasesResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public BatchDetectKeyPhrasesResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -83,9 +92,14 @@ public class BatchDetectKeyPhrasesResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public BatchDetectKeyPhrasesResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public BatchDetectKeyPhrasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

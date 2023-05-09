@@ -15,6 +15,7 @@ public class UpdateIdentityProviderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateIdentityProviderRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class UpdateIdentityProviderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderDetails")
     public java.util.Map<String, String> identityProviderDetails;
+
     public UpdateIdentityProviderRequestBody withIdentityProviderDetails(java.util.Map<String, String> identityProviderDetails) {
         this.identityProviderDetails = identityProviderDetails;
         return this;
@@ -37,6 +39,7 @@ public class UpdateIdentityProviderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderName")
     public String identityProviderName;
+
     public UpdateIdentityProviderRequestBody withIdentityProviderName(String identityProviderName) {
         this.identityProviderName = identityProviderName;
         return this;
@@ -48,9 +51,11 @@ public class UpdateIdentityProviderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderType")
     public UpdateIdentityProviderRequestBodyIdentityProviderTypeEnum identityProviderType;
+
     public UpdateIdentityProviderRequestBody withIdentityProviderType(UpdateIdentityProviderRequestBodyIdentityProviderTypeEnum identityProviderType) {
         this.identityProviderType = identityProviderType;
         return this;
     }
     
+    public UpdateIdentityProviderRequestBody(){}
 }

@@ -77,6 +77,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloads
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1WorkloadResourceSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1WorkloadKMSSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus.java
@@ -96,4 +97,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloads
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssuredworkloadsV1ListViolationsResponse.java
+docs/sdk/README.md
+docs/organizations/README.md
 USAGE.md

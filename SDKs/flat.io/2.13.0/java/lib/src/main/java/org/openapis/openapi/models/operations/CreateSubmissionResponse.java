@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSubmissionResponse {
@@ -12,6 +13,7 @@ public class CreateSubmissionResponse {
      */
     
     public org.openapis.openapi.models.shared.AssignmentSubmission assignmentSubmission;
+
     public CreateSubmissionResponse withAssignmentSubmission(org.openapis.openapi.models.shared.AssignmentSubmission assignmentSubmission) {
         this.assignmentSubmission = assignmentSubmission;
         return this;
@@ -19,6 +21,7 @@ public class CreateSubmissionResponse {
     
     
     public String contentType;
+
     public CreateSubmissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSubmissionResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public CreateSubmissionResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -36,6 +40,7 @@ public class CreateSubmissionResponse {
     
     
     public Integer statusCode;
+
     public CreateSubmissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateSubmissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSubmissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSubmissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

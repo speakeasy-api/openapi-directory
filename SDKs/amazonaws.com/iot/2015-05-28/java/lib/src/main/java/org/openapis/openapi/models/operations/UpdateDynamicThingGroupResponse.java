@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDynamicThingGroupResponse {
     
     public String contentType;
+
     public UpdateDynamicThingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDynamicThingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateDynamicThingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDynamicThingGroupResponse {
      */
     
     public Object invalidQueryException;
+
     public UpdateDynamicThingGroupResponse withInvalidQueryException(Object invalidQueryException) {
         this.invalidQueryException = invalidQueryException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDynamicThingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDynamicThingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDynamicThingGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateDynamicThingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDynamicThingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDynamicThingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDynamicThingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDynamicThingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDynamicThingGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDynamicThingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDynamicThingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDynamicThingGroupResponse updateDynamicThingGroupResponse;
+
     public UpdateDynamicThingGroupResponse withUpdateDynamicThingGroupResponse(org.openapis.openapi.models.shared.UpdateDynamicThingGroupResponse updateDynamicThingGroupResponse) {
         this.updateDynamicThingGroupResponse = updateDynamicThingGroupResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateDynamicThingGroupResponse {
      */
     
     public Object versionConflictException;
+
     public UpdateDynamicThingGroupResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public UpdateDynamicThingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -60,11 +60,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudAssuredworkloadsV1ListWorkloadsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse(contentType, httpRes.statusCode()) {{
             googleCloudAssuredworkloadsV1Workload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudAssuredworkloadsV1Workload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse(contentType, httpRes.statusCode()) {{
             googleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse(contentType, httpRes.statusCode()) {{
             googleCloudAssuredworkloadsV1AcknowledgeViolationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudAssuredworkloadsV1Violation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListResponse() {{
+        org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListResponse res = new org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudAssuredworkloadsV1ListViolationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

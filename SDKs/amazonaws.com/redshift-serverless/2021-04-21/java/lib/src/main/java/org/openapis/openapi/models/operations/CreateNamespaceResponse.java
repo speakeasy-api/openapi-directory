@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNamespaceResponse {
@@ -12,6 +13,7 @@ public class CreateNamespaceResponse {
      */
     
     public Object conflictException;
+
     public CreateNamespaceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateNamespaceResponse {
     
     
     public String contentType;
+
     public CreateNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateNamespaceResponse createNamespaceResponse;
+
     public CreateNamespaceResponse withCreateNamespaceResponse(org.openapis.openapi.models.shared.CreateNamespaceResponse createNamespaceResponse) {
         this.createNamespaceResponse = createNamespaceResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateNamespaceResponse {
      */
     
     public Object internalServerException;
+
     public CreateNamespaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateNamespaceResponse {
     
     
     public Integer statusCode;
+
     public CreateNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateNamespaceResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateNamespaceResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -73,9 +81,14 @@ public class CreateNamespaceResponse {
      */
     
     public Object validationException;
+
     public CreateNamespaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

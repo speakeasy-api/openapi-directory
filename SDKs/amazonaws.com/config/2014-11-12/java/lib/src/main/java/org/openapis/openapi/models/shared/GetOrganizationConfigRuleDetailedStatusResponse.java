@@ -15,6 +15,7 @@ public class GetOrganizationConfigRuleDetailedStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetOrganizationConfigRuleDetailedStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetOrganizationConfigRuleDetailedStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConfigRuleDetailedStatus")
     public MemberAccountStatus[] organizationConfigRuleDetailedStatus;
+
     public GetOrganizationConfigRuleDetailedStatusResponse withOrganizationConfigRuleDetailedStatus(MemberAccountStatus[] organizationConfigRuleDetailedStatus) {
         this.organizationConfigRuleDetailedStatus = organizationConfigRuleDetailedStatus;
         return this;
     }
     
+    public GetOrganizationConfigRuleDetailedStatusResponse(){}
 }

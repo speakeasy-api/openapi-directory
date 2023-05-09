@@ -18,6 +18,7 @@ public class LongRunningRecognizeRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public RecognitionAudio audio;
+
     public LongRunningRecognizeRequestInput withAudio(RecognitionAudio audio) {
         this.audio = audio;
         return this;
@@ -29,6 +30,7 @@ public class LongRunningRecognizeRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public RecognitionConfigInput config;
+
     public LongRunningRecognizeRequestInput withConfig(RecognitionConfigInput config) {
         this.config = config;
         return this;
@@ -40,9 +42,11 @@ public class LongRunningRecognizeRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public TranscriptOutputConfig outputConfig;
+
     public LongRunningRecognizeRequestInput withOutputConfig(TranscriptOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public LongRunningRecognizeRequestInput(){}
 }

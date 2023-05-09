@@ -20,6 +20,7 @@ public class StageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public StageDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class StageDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public StageDetails withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -38,6 +40,7 @@ public class StageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StageDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class StageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameKey")
     public String gameKey;
+
     public StageDetails withGameKey(String gameKey) {
         this.gameKey = gameKey;
         return this;
@@ -56,6 +60,7 @@ public class StageDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public StageDetails withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -64,6 +69,7 @@ public class StageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroup")
     public String logGroup;
+
     public StageDetails withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
@@ -72,6 +78,7 @@ public class StageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public StageDetails withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class StageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public StageDetails withRole(String role) {
         this.role = role;
         return this;
@@ -88,6 +96,7 @@ public class StageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public StageStateEnum state;
+
     public StageDetails withState(StageStateEnum state) {
         this.state = state;
         return this;
@@ -96,9 +105,11 @@ public class StageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public StageDetails withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StageDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountriesCountryCodeJsonRequest {
@@ -12,6 +13,7 @@ public class GetCountriesCountryCodeJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetCountriesCountryCodeJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetCountriesCountryCodeJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country_code")
     public String countryCode;
+
     public GetCountriesCountryCodeJsonRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -32,9 +35,15 @@ public class GetCountriesCountryCodeJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetCountriesCountryCodeJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetCountriesCountryCodeJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("country_code") String countryCode, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.countryCode = countryCode;
+        this.login = login;
+  }
 }

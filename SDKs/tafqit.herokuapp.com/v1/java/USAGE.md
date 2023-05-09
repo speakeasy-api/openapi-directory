@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ConvertRequestBody;
 import org.openapis.openapi.models.operations.ConvertResponse;
 
@@ -17,7 +16,7 @@ public class Application {
                 hundredsForm = "مائة";
                 theNumber = "2519.50";
                 unit = " ريال سعودي";
-            }}            
+            }};            
 
             ConvertResponse res = sdk.convert(req);
 
@@ -27,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

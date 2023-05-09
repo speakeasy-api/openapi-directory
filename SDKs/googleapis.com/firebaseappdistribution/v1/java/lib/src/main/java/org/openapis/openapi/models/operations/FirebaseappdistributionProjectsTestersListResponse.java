@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappdistributionProjectsTestersListResponse {
     
     public String contentType;
+
     public FirebaseappdistributionProjectsTestersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappdistributionProjectsTestersListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1ListTestersResponse googleFirebaseAppdistroV1ListTestersResponse;
+
     public FirebaseappdistributionProjectsTestersListResponse withGoogleFirebaseAppdistroV1ListTestersResponse(org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1ListTestersResponse googleFirebaseAppdistroV1ListTestersResponse) {
         this.googleFirebaseAppdistroV1ListTestersResponse = googleFirebaseAppdistroV1ListTestersResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappdistributionProjectsTestersListResponse {
     
     
     public Integer statusCode;
+
     public FirebaseappdistributionProjectsTestersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappdistributionProjectsTestersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappdistributionProjectsTestersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappdistributionProjectsTestersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

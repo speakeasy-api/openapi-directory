@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFirewallConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateFirewallConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateFirewallConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFirewallConfigResponse {
     
     
     public String contentType;
+
     public UpdateFirewallConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFirewallConfigResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateFirewallConfigResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateFirewallConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateFirewallConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateFirewallConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFirewallConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFirewallConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFirewallConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFirewallConfigResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFirewallConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFirewallConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFirewallConfigResponse updateFirewallConfigResponse;
+
     public UpdateFirewallConfigResponse withUpdateFirewallConfigResponse(org.openapis.openapi.models.shared.UpdateFirewallConfigResponse updateFirewallConfigResponse) {
         this.updateFirewallConfigResponse = updateFirewallConfigResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateFirewallConfigResponse {
      */
     
     public Object validationException;
+
     public UpdateFirewallConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateFirewallConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

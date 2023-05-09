@@ -18,6 +18,7 @@ public class HttpFaultAbort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatus")
     public Long httpStatus;
+
     public HttpFaultAbort withHttpStatus(Long httpStatus) {
         this.httpStatus = httpStatus;
         return this;
@@ -29,9 +30,11 @@ public class HttpFaultAbort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public HttpFaultAbort withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public HttpFaultAbort(){}
 }

@@ -41,4 +41,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/RateLimitsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RateLimit.java
 lib/src/main/java/org/openapis/openapi/models/shared/Resource.java
 lib/src/main/java/org/openapis/openapi/models/shared/Rate.java
+docs/sdk/README.md
+docs/ratelimit/README.md
+docs/userratelimit/README.md
 USAGE.md

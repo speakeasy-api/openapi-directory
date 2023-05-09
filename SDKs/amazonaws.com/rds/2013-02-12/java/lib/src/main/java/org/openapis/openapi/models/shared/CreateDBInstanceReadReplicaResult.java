@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateDBInstanceReadReplicaResult {
     
     public DBInstance dbInstance;
+
     public CreateDBInstanceReadReplicaResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public CreateDBInstanceReadReplicaResult(){}
 }

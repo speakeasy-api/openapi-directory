@@ -15,6 +15,7 @@ public class HttpEndpointDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public HttpEndpointBufferingHints bufferingHints;
+
     public HttpEndpointDestinationConfiguration withBufferingHints(HttpEndpointBufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -26,6 +27,7 @@ public class HttpEndpointDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public HttpEndpointDestinationConfiguration withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -33,6 +35,7 @@ public class HttpEndpointDestinationConfiguration {
     
     @JsonProperty("EndpointConfiguration")
     public HttpEndpointConfiguration endpointConfiguration;
+
     public HttpEndpointDestinationConfiguration withEndpointConfiguration(HttpEndpointConfiguration endpointConfiguration) {
         this.endpointConfiguration = endpointConfiguration;
         return this;
@@ -44,6 +47,7 @@ public class HttpEndpointDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public HttpEndpointDestinationConfiguration withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -52,6 +56,7 @@ public class HttpEndpointDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestConfiguration")
     public HttpEndpointRequestConfiguration requestConfiguration;
+
     public HttpEndpointDestinationConfiguration withRequestConfiguration(HttpEndpointRequestConfiguration requestConfiguration) {
         this.requestConfiguration = requestConfiguration;
         return this;
@@ -60,6 +65,7 @@ public class HttpEndpointDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public HttpEndpointRetryOptions retryOptions;
+
     public HttpEndpointDestinationConfiguration withRetryOptions(HttpEndpointRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -68,6 +74,7 @@ public class HttpEndpointDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public HttpEndpointDestinationConfiguration withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -76,6 +83,7 @@ public class HttpEndpointDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupMode")
     public HttpEndpointS3BackupModeEnum s3BackupMode;
+
     public HttpEndpointDestinationConfiguration withS3BackupMode(HttpEndpointS3BackupModeEnum s3BackupMode) {
         this.s3BackupMode = s3BackupMode;
         return this;
@@ -86,9 +94,14 @@ public class HttpEndpointDestinationConfiguration {
      */
     @JsonProperty("S3Configuration")
     public S3DestinationConfiguration s3Configuration;
+
     public HttpEndpointDestinationConfiguration withS3Configuration(S3DestinationConfiguration s3Configuration) {
         this.s3Configuration = s3Configuration;
         return this;
     }
     
+    public HttpEndpointDestinationConfiguration(@JsonProperty("EndpointConfiguration") HttpEndpointConfiguration endpointConfiguration, @JsonProperty("S3Configuration") S3DestinationConfiguration s3Configuration) {
+        this.endpointConfiguration = endpointConfiguration;
+        this.s3Configuration = s3Configuration;
+  }
 }

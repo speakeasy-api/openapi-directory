@@ -15,6 +15,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("ImageId")
     public String imageId;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -25,6 +26,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("ImageLabel")
     public String imageLabel;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage withImageLabel(String imageLabel) {
         this.imageLabel = imageLabel;
         return this;
@@ -35,6 +37,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("ImagePath")
     public String imagePath;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage withImagePath(String imagePath) {
         this.imagePath = imagePath;
         return this;
@@ -45,6 +48,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("ImageTag")
     public String imageTag;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage withImageTag(String imageTag) {
         this.imageTag = imageTag;
         return this;
@@ -55,6 +59,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("ImageText")
     public String imageText;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage withImageText(String imageText) {
         this.imageText = imageText;
         return this;
@@ -65,6 +70,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("IsMain")
     public Boolean isMain;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage withIsMain(Boolean isMain) {
         this.isMain = isMain;
         return this;
@@ -75,6 +81,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("IsZoomSize")
     public Boolean isZoomSize;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage withIsZoomSize(Boolean isZoomSize) {
         this.isZoomSize = isZoomSize;
         return this;
@@ -85,9 +92,20 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("LastModified")
     public String lastModified;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
     }
     
+    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage(@JsonProperty("ImageId") String imageId, @JsonProperty("ImageLabel") String imageLabel, @JsonProperty("ImagePath") String imagePath, @JsonProperty("ImageTag") String imageTag, @JsonProperty("ImageText") String imageText, @JsonProperty("IsMain") Boolean isMain, @JsonProperty("IsZoomSize") Boolean isZoomSize, @JsonProperty("LastModified") String lastModified) {
+        this.imageId = imageId;
+        this.imageLabel = imageLabel;
+        this.imagePath = imagePath;
+        this.imageTag = imageTag;
+        this.imageText = imageText;
+        this.isMain = isMain;
+        this.isZoomSize = isZoomSize;
+        this.lastModified = lastModified;
+  }
 }

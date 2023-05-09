@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessSetAcldbRequest {
@@ -12,9 +13,13 @@ public class AccessSetAcldbRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
     public String databaseName;
+
     public AccessSetAcldbRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     
+    public AccessSetAcldbRequest(@JsonProperty("databaseName") String databaseName) {
+        this.databaseName = databaseName;
+  }
 }

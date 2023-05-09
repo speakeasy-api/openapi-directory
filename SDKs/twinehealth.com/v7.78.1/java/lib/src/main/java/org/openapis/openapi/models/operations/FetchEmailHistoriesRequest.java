@@ -12,6 +12,7 @@ public class FetchEmailHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[emailType]")
     public String filterEmailType;
+
     public FetchEmailHistoriesRequest withFilterEmailType(String filterEmailType) {
         this.filterEmailType = filterEmailType;
         return this;
@@ -22,6 +23,7 @@ public class FetchEmailHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[receiver]")
     public String filterReceiver;
+
     public FetchEmailHistoriesRequest withFilterReceiver(String filterReceiver) {
         this.filterReceiver = filterReceiver;
         return this;
@@ -32,6 +34,7 @@ public class FetchEmailHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[sender]")
     public String filterSender;
+
     public FetchEmailHistoriesRequest withFilterSender(String filterSender) {
         this.filterSender = filterSender;
         return this;
@@ -45,9 +48,11 @@ public class FetchEmailHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public FetchEmailHistoriesSortEnum sort;
+
     public FetchEmailHistoriesRequest withSort(FetchEmailHistoriesSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public FetchEmailHistoriesRequest(){}
 }

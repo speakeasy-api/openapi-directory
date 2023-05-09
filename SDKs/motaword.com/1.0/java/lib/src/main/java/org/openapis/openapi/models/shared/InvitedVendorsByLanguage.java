@@ -15,6 +15,7 @@ public class InvitedVendorsByLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invited_vendors")
     public InvitedVendor[] invitedVendors;
+
     public InvitedVendorsByLanguage withInvitedVendors(InvitedVendor[] invitedVendors) {
         this.invitedVendors = invitedVendors;
         return this;
@@ -26,9 +27,11 @@ public class InvitedVendorsByLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_language")
     public String targetLanguage;
+
     public InvitedVendorsByLanguage withTargetLanguage(String targetLanguage) {
         this.targetLanguage = targetLanguage;
         return this;
     }
     
+    public InvitedVendorsByLanguage(){}
 }

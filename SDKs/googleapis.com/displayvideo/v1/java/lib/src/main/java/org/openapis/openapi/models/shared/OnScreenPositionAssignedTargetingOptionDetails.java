@@ -18,6 +18,7 @@ public class OnScreenPositionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adType")
     public OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum adType;
+
     public OnScreenPositionAssignedTargetingOptionDetails withAdType(OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum adType) {
         this.adType = adType;
         return this;
@@ -29,6 +30,7 @@ public class OnScreenPositionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onScreenPosition")
     public OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum onScreenPosition;
+
     public OnScreenPositionAssignedTargetingOptionDetails withOnScreenPosition(OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum onScreenPosition) {
         this.onScreenPosition = onScreenPosition;
         return this;
@@ -40,9 +42,11 @@ public class OnScreenPositionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public OnScreenPositionAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public OnScreenPositionAssignedTargetingOptionDetails(){}
 }

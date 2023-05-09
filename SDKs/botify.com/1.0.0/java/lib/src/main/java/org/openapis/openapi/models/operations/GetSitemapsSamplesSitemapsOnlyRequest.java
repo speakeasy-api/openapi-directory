@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitemapsSamplesSitemapsOnlyRequest {
@@ -12,6 +13,7 @@ public class GetSitemapsSamplesSitemapsOnlyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
     public String analysisSlug;
+
     public GetSitemapsSamplesSitemapsOnlyRequest withAnalysisSlug(String analysisSlug) {
         this.analysisSlug = analysisSlug;
         return this;
@@ -22,6 +24,7 @@ public class GetSitemapsSamplesSitemapsOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSitemapsSamplesSitemapsOnlyRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class GetSitemapsSamplesSitemapsOnlyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetSitemapsSamplesSitemapsOnlyRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -42,6 +46,7 @@ public class GetSitemapsSamplesSitemapsOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetSitemapsSamplesSitemapsOnlyRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -52,9 +57,15 @@ public class GetSitemapsSamplesSitemapsOnlyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetSitemapsSamplesSitemapsOnlyRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetSitemapsSamplesSitemapsOnlyRequest(@JsonProperty("analysis_slug") String analysisSlug, @JsonProperty("project_slug") String projectSlug, @JsonProperty("username") String username) {
+        this.analysisSlug = analysisSlug;
+        this.projectSlug = projectSlug;
+        this.username = username;
+  }
 }

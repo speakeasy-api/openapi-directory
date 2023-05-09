@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherInappproductsUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InAppProduct inAppProduct;
+
     public AndroidpublisherInappproductsUpdateRequest withInAppProduct(org.openapis.openapi.models.shared.InAppProduct inAppProduct) {
         this.inAppProduct = inAppProduct;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherInappproductsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autoConvertMissingPrices")
     public Boolean autoConvertMissingPrices;
+
     public AndroidpublisherInappproductsUpdateRequest withAutoConvertMissingPrices(Boolean autoConvertMissingPrices) {
         this.autoConvertMissingPrices = autoConvertMissingPrices;
         return this;
@@ -39,6 +43,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherInappproductsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherInappproductsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherInappproductsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherInappproductsUpdateRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherInappproductsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherInappproductsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sku")
     public String sku;
+
     public AndroidpublisherInappproductsUpdateRequest withSku(String sku) {
         this.sku = sku;
         return this;
@@ -109,9 +120,14 @@ public class AndroidpublisherInappproductsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherInappproductsUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherInappproductsUpdateRequest(@JsonProperty("packageName") String packageName, @JsonProperty("sku") String sku) {
+        this.packageName = packageName;
+        this.sku = sku;
+  }
 }

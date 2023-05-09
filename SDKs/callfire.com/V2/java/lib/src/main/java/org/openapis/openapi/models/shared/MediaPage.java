@@ -18,6 +18,7 @@ public class MediaPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Media[] items;
+
     public MediaPage withItems(Media[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class MediaPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public MediaPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class MediaPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public MediaPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -51,9 +54,11 @@ public class MediaPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public MediaPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public MediaPage(){}
 }

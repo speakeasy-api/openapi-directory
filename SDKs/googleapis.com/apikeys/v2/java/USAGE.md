@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption1;
-import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption2;
-import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurity;
 import org.openapis.openapi.models.operations.ApikeysKeysLookupKeyRequest;
 import org.openapis.openapi.models.operations.ApikeysKeysLookupKeyResponse;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurity;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption1;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -19,9 +18,9 @@ public class Application {
                 .build();
 
             ApikeysKeysLookupKeyRequest req = new ApikeysKeysLookupKeyRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
@@ -31,20 +30,22 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             ApikeysKeysLookupKeyResponse res = sdk.keys.apikeysKeysLookupKey(req, new ApikeysKeysLookupKeySecurity() {{
-                option1 = new ApikeysKeysLookupKeySecurityOption1() {{
+                option1 = new ApikeysKeysLookupKeySecurityOption1("suscipit", "iure") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.v2LookupKeyResponse.isPresent()) {
+            if (res.v2LookupKeyResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

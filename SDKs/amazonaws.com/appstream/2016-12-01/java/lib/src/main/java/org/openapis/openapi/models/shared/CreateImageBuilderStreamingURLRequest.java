@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateImageBuilderStreamingURLRequest {
     @JsonProperty("Name")
     public String name;
+
     public CreateImageBuilderStreamingURLRequest withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,13 @@ public class CreateImageBuilderStreamingURLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Validity")
     public Long validity;
+
     public CreateImageBuilderStreamingURLRequest withValidity(Long validity) {
         this.validity = validity;
         return this;
     }
     
+    public CreateImageBuilderStreamingURLRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

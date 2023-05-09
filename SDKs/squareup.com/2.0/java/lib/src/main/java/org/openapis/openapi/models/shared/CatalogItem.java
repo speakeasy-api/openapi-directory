@@ -19,6 +19,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public CatalogItem withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -30,6 +31,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_electronically")
     public Boolean availableElectronically;
+
     public CatalogItem withAvailableElectronically(Boolean availableElectronically) {
         this.availableElectronically = availableElectronically;
         return this;
@@ -41,6 +43,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_for_pickup")
     public Boolean availableForPickup;
+
     public CatalogItem withAvailableForPickup(Boolean availableForPickup) {
         this.availableForPickup = availableForPickup;
         return this;
@@ -52,6 +55,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_online")
     public Boolean availableOnline;
+
     public CatalogItem withAvailableOnline(Boolean availableOnline) {
         this.availableOnline = availableOnline;
         return this;
@@ -63,6 +67,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public String categoryId;
+
     public CatalogItem withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -74,6 +79,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CatalogItem withDescription(String description) {
         this.description = description;
         return this;
@@ -88,6 +94,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_options")
     public CatalogItemOptionForItem[] itemOptions;
+
     public CatalogItem withItemOptions(CatalogItemOptionForItem[] itemOptions) {
         this.itemOptions = itemOptions;
         return this;
@@ -99,6 +106,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_color")
     public String labelColor;
+
     public CatalogItem withLabelColor(String labelColor) {
         this.labelColor = labelColor;
         return this;
@@ -113,6 +121,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier_list_info")
     public CatalogItemModifierListInfo[] modifierListInfo;
+
     public CatalogItem withModifierListInfo(CatalogItemModifierListInfo[] modifierListInfo) {
         this.modifierListInfo = modifierListInfo;
         return this;
@@ -124,6 +133,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogItem withName(String name) {
         this.name = name;
         return this;
@@ -138,6 +148,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_type")
     public String productType;
+
     public CatalogItem withProductType(String productType) {
         this.productType = productType;
         return this;
@@ -156,6 +167,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_modifier_screen")
     public Boolean skipModifierScreen;
+
     public CatalogItem withSkipModifierScreen(Boolean skipModifierScreen) {
         this.skipModifierScreen = skipModifierScreen;
         return this;
@@ -169,6 +181,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_name")
     public String sortName;
+
     public CatalogItem withSortName(String sortName) {
         this.sortName = sortName;
         return this;
@@ -182,6 +195,7 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_ids")
     public String[] taxIds;
+
     public CatalogItem withTaxIds(String[] taxIds) {
         this.taxIds = taxIds;
         return this;
@@ -194,9 +208,11 @@ public class CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variations")
     public CatalogObject[] variations;
+
     public CatalogItem withVariations(CatalogObject[] variations) {
         this.variations = variations;
         return this;
     }
     
+    public CatalogItem(){}
 }

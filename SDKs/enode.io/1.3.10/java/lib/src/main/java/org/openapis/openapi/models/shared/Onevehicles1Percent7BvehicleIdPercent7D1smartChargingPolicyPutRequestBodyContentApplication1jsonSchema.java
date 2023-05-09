@@ -18,6 +18,7 @@ public class Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadline")
     public String deadline;
+
     public Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema withDeadline(String deadline) {
         this.deadline = deadline;
         return this;
@@ -29,9 +30,11 @@ public class Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEnabled")
     public Boolean isEnabled;
+
     public Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema withIsEnabled(Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
     }
     
+    public Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema(){}
 }

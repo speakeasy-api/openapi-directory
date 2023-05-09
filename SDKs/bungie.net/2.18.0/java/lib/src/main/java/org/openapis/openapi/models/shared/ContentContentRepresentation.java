@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentContentRepresentation {
     
     public String name;
+
     public ContentContentRepresentation withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +17,7 @@ public class ContentContentRepresentation {
     
     
     public String path;
+
     public ContentContentRepresentation withPath(String path) {
         this.path = path;
         return this;
@@ -23,9 +25,11 @@ public class ContentContentRepresentation {
     
     
     public String validationString;
+
     public ContentContentRepresentation withValidationString(String validationString) {
         this.validationString = validationString;
         return this;
     }
     
+    public ContentContentRepresentation(){}
 }

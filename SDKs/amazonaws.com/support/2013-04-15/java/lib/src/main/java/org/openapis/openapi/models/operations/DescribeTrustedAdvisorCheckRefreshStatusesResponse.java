@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTrustedAdvisorCheckRefreshStatusesResponse {
     
     public String contentType;
+
     public DescribeTrustedAdvisorCheckRefreshStatusesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTrustedAdvisorCheckRefreshStatusesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTrustedAdvisorCheckRefreshStatusesResponse describeTrustedAdvisorCheckRefreshStatusesResponse;
+
     public DescribeTrustedAdvisorCheckRefreshStatusesResponse withDescribeTrustedAdvisorCheckRefreshStatusesResponse(org.openapis.openapi.models.shared.DescribeTrustedAdvisorCheckRefreshStatusesResponse describeTrustedAdvisorCheckRefreshStatusesResponse) {
         this.describeTrustedAdvisorCheckRefreshStatusesResponse = describeTrustedAdvisorCheckRefreshStatusesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTrustedAdvisorCheckRefreshStatusesResponse {
      */
     
     public Object internalServerError;
+
     public DescribeTrustedAdvisorCheckRefreshStatusesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class DescribeTrustedAdvisorCheckRefreshStatusesResponse {
     
     
     public Integer statusCode;
+
     public DescribeTrustedAdvisorCheckRefreshStatusesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeTrustedAdvisorCheckRefreshStatusesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTrustedAdvisorCheckRefreshStatusesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTrustedAdvisorCheckRefreshStatusesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

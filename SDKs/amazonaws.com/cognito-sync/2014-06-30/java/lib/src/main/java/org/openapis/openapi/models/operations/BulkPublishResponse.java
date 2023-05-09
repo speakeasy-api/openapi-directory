@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BulkPublishResponse {
@@ -12,6 +13,7 @@ public class BulkPublishResponse {
      */
     
     public Object alreadyStreamedException;
+
     public BulkPublishResponse withAlreadyStreamedException(Object alreadyStreamedException) {
         this.alreadyStreamedException = alreadyStreamedException;
         return this;
@@ -22,6 +24,7 @@ public class BulkPublishResponse {
      */
     
     public org.openapis.openapi.models.shared.BulkPublishResponse bulkPublishResponse;
+
     public BulkPublishResponse withBulkPublishResponse(org.openapis.openapi.models.shared.BulkPublishResponse bulkPublishResponse) {
         this.bulkPublishResponse = bulkPublishResponse;
         return this;
@@ -29,6 +32,7 @@ public class BulkPublishResponse {
     
     
     public String contentType;
+
     public BulkPublishResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BulkPublishResponse {
      */
     
     public Object duplicateRequestException;
+
     public BulkPublishResponse withDuplicateRequestException(Object duplicateRequestException) {
         this.duplicateRequestException = duplicateRequestException;
         return this;
@@ -49,6 +54,7 @@ public class BulkPublishResponse {
      */
     
     public Object internalErrorException;
+
     public BulkPublishResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -59,6 +65,7 @@ public class BulkPublishResponse {
      */
     
     public Object invalidParameterException;
+
     public BulkPublishResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class BulkPublishResponse {
      */
     
     public Object notAuthorizedException;
+
     public BulkPublishResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -76,6 +84,7 @@ public class BulkPublishResponse {
     
     
     public Integer statusCode;
+
     public BulkPublishResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class BulkPublishResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BulkPublishResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class BulkPublishResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BulkPublishResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public BulkPublishResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BatchDeleteImportDataError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public BatchDeleteImportDataErrorCodeEnum errorCode;
+
     public BatchDeleteImportDataError withErrorCode(BatchDeleteImportDataErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class BatchDeleteImportDataError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public String errorDescription;
+
     public BatchDeleteImportDataError withErrorDescription(String errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -31,9 +33,11 @@ public class BatchDeleteImportDataError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importTaskId")
     public String importTaskId;
+
     public BatchDeleteImportDataError withImportTaskId(String importTaskId) {
         this.importTaskId = importTaskId;
         return this;
     }
     
+    public BatchDeleteImportDataError(){}
 }

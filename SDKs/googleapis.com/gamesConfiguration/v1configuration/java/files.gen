@@ -77,4 +77,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GamesNumberFormatConfigurat
 lib/src/main/java/org/openapis/openapi/models/shared/GamesNumberFormatConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/GamesNumberAffixConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/LeaderboardConfigurationListResponse.java
+docs/sdk/README.md
+docs/achievementconfigurations/README.md
+docs/leaderboardconfigurations/README.md
 USAGE.md

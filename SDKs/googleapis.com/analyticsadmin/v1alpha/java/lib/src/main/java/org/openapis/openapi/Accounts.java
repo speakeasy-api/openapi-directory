@@ -59,11 +59,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminAccountsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminAccountsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminAccountsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminAccountsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketResponse res = new org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketResponse res = new org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaProvisionAccountTicketResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse res = new org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse res = new org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

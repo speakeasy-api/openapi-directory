@@ -15,6 +15,7 @@ public class RecoverySnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsSnapshots")
     public String[] ebsSnapshots;
+
     public RecoverySnapshot withEbsSnapshots(String[] ebsSnapshots) {
         this.ebsSnapshots = ebsSnapshots;
         return this;
@@ -22,6 +23,7 @@ public class RecoverySnapshot {
     
     @JsonProperty("expectedTimestamp")
     public String expectedTimestamp;
+
     public RecoverySnapshot withExpectedTimestamp(String expectedTimestamp) {
         this.expectedTimestamp = expectedTimestamp;
         return this;
@@ -29,6 +31,7 @@ public class RecoverySnapshot {
     
     @JsonProperty("snapshotID")
     public String snapshotID;
+
     public RecoverySnapshot withSnapshotID(String snapshotID) {
         this.snapshotID = snapshotID;
         return this;
@@ -36,6 +39,7 @@ public class RecoverySnapshot {
     
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public RecoverySnapshot withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -44,9 +48,15 @@ public class RecoverySnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public RecoverySnapshot withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public RecoverySnapshot(@JsonProperty("expectedTimestamp") String expectedTimestamp, @JsonProperty("snapshotID") String snapshotID, @JsonProperty("sourceServerID") String sourceServerID) {
+        this.expectedTimestamp = expectedTimestamp;
+        this.snapshotID = snapshotID;
+        this.sourceServerID = sourceServerID;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ConfigureHealthCheckOutput {
     
     public HealthCheck healthCheck;
+
     public ConfigureHealthCheckOutput withHealthCheck(HealthCheck healthCheck) {
         this.healthCheck = healthCheck;
         return this;
     }
     
+    public ConfigureHealthCheckOutput(){}
 }

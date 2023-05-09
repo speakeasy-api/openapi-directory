@@ -18,6 +18,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public PublicAdvertisedPrefix withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PublicAdvertisedPrefix withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsVerificationIp")
     public String dnsVerificationIp;
+
     public PublicAdvertisedPrefix withDnsVerificationIp(String dnsVerificationIp) {
         this.dnsVerificationIp = dnsVerificationIp;
         return this;
@@ -51,6 +54,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public PublicAdvertisedPrefix withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -62,6 +66,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PublicAdvertisedPrefix withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public PublicAdvertisedPrefix withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -84,6 +90,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PublicAdvertisedPrefix withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PublicAdvertisedPrefix withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdpScope")
     public PublicAdvertisedPrefixPdpScopeEnum pdpScope;
+
     public PublicAdvertisedPrefix withPdpScope(PublicAdvertisedPrefixPdpScopeEnum pdpScope) {
         this.pdpScope = pdpScope;
         return this;
@@ -117,6 +126,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicDelegatedPrefixs")
     public PublicAdvertisedPrefixPublicDelegatedPrefix[] publicDelegatedPrefixs;
+
     public PublicAdvertisedPrefix withPublicDelegatedPrefixs(PublicAdvertisedPrefixPublicDelegatedPrefix[] publicDelegatedPrefixs) {
         this.publicDelegatedPrefixs = publicDelegatedPrefixs;
         return this;
@@ -128,6 +138,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public PublicAdvertisedPrefix withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -139,6 +150,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public PublicAdvertisedPrefix withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -150,6 +162,7 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedSecret")
     public String sharedSecret;
+
     public PublicAdvertisedPrefix withSharedSecret(String sharedSecret) {
         this.sharedSecret = sharedSecret;
         return this;
@@ -161,9 +174,11 @@ public class PublicAdvertisedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PublicAdvertisedPrefixStatusEnum status;
+
     public PublicAdvertisedPrefix withStatus(PublicAdvertisedPrefixStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PublicAdvertisedPrefix(){}
 }

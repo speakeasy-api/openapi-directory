@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainEntryResponse {
@@ -12,6 +13,7 @@ public class UpdateDomainEntryResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDomainEntryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDomainEntryResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public UpdateDomainEntryResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDomainEntryResponse {
     
     
     public String contentType;
+
     public UpdateDomainEntryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDomainEntryResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDomainEntryResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDomainEntryResponse {
      */
     
     public Object notFoundException;
+
     public UpdateDomainEntryResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDomainEntryResponse {
      */
     
     public Object operationFailureException;
+
     public UpdateDomainEntryResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateDomainEntryResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainEntryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDomainEntryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainEntryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDomainEntryResponse {
      */
     
     public Object serviceException;
+
     public UpdateDomainEntryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateDomainEntryResponse {
      */
     
     public Object unauthenticatedException;
+
     public UpdateDomainEntryResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateDomainEntryResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDomainEntryResult updateDomainEntryResult;
+
     public UpdateDomainEntryResponse withUpdateDomainEntryResult(org.openapis.openapi.models.shared.UpdateDomainEntryResult updateDomainEntryResult) {
         this.updateDomainEntryResult = updateDomainEntryResult;
         return this;
     }
     
+    public UpdateDomainEntryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

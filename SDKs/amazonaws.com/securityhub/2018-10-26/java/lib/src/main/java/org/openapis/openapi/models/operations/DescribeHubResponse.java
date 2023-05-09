@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeHubResponse {
     
     public String contentType;
+
     public DescribeHubResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeHubResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeHubResponse describeHubResponse;
+
     public DescribeHubResponse withDescribeHubResponse(org.openapis.openapi.models.shared.DescribeHubResponse describeHubResponse) {
         this.describeHubResponse = describeHubResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeHubResponse {
      */
     
     public Object internalException;
+
     public DescribeHubResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeHubResponse {
      */
     
     public Object invalidAccessException;
+
     public DescribeHubResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeHubResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeHubResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeHubResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeHubResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeHubResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeHubResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeHubResponse {
     
     
     public Integer statusCode;
+
     public DescribeHubResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeHubResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeHubResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeHubResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

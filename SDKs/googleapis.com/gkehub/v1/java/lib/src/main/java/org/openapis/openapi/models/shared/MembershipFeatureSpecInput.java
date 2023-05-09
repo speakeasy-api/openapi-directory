@@ -18,6 +18,7 @@ public class MembershipFeatureSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configmanagement")
     public ConfigManagementMembershipSpec configmanagement;
+
     public MembershipFeatureSpecInput withConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
         this.configmanagement = configmanagement;
         return this;
@@ -29,6 +30,7 @@ public class MembershipFeatureSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetInherited")
     public Boolean fleetInherited;
+
     public MembershipFeatureSpecInput withFleetInherited(Boolean fleetInherited) {
         this.fleetInherited = fleetInherited;
         return this;
@@ -40,6 +42,7 @@ public class MembershipFeatureSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetobservability")
     public java.util.Map<String, Object> fleetobservability;
+
     public MembershipFeatureSpecInput withFleetobservability(java.util.Map<String, Object> fleetobservability) {
         this.fleetobservability = fleetobservability;
         return this;
@@ -51,6 +54,7 @@ public class MembershipFeatureSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityservice")
     public IdentityServiceMembershipSpecInput identityservice;
+
     public MembershipFeatureSpecInput withIdentityservice(IdentityServiceMembershipSpecInput identityservice) {
         this.identityservice = identityservice;
         return this;
@@ -62,9 +66,11 @@ public class MembershipFeatureSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mesh")
     public ServiceMeshMembershipSpec mesh;
+
     public MembershipFeatureSpecInput withMesh(ServiceMeshMembershipSpec mesh) {
         this.mesh = mesh;
         return this;
     }
     
+    public MembershipFeatureSpecInput(){}
 }

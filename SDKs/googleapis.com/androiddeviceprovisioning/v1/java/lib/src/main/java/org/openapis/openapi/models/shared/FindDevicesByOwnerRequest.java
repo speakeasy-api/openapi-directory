@@ -18,6 +18,7 @@ public class FindDevicesByOwnerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String[] customerId;
+
     public FindDevicesByOwnerRequest withCustomerId(String[] customerId) {
         this.customerId = customerId;
         return this;
@@ -29,6 +30,7 @@ public class FindDevicesByOwnerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleWorkspaceCustomerId")
     public String[] googleWorkspaceCustomerId;
+
     public FindDevicesByOwnerRequest withGoogleWorkspaceCustomerId(String[] googleWorkspaceCustomerId) {
         this.googleWorkspaceCustomerId = googleWorkspaceCustomerId;
         return this;
@@ -40,6 +42,7 @@ public class FindDevicesByOwnerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public String limit;
+
     public FindDevicesByOwnerRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -51,6 +54,7 @@ public class FindDevicesByOwnerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public FindDevicesByOwnerRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -62,9 +66,11 @@ public class FindDevicesByOwnerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionType")
     public FindDevicesByOwnerRequestSectionTypeEnum sectionType;
+
     public FindDevicesByOwnerRequest withSectionType(FindDevicesByOwnerRequestSectionTypeEnum sectionType) {
         this.sectionType = sectionType;
         return this;
     }
     
+    public FindDevicesByOwnerRequest(){}
 }

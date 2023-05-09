@@ -12,6 +12,7 @@ public class AccountGetDomainWhitelistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public AccountGetDomainWhitelistRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class AccountGetDomainWhitelistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public AccountGetDomainWhitelistRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public AccountGetDomainWhitelistRequest(){}
 }

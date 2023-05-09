@@ -12,9 +12,11 @@ public class GetLegacyTrackingChannelCatalogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
     public String storeId;
+
     public GetLegacyTrackingChannelCatalogsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetLegacyTrackingChannelCatalogsRequest(){}
 }

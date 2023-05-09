@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableApplicationLayerAutomaticResponseResponse {
     
     public String contentType;
+
     public DisableApplicationLayerAutomaticResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableApplicationLayerAutomaticResponseResponse {
      */
     
     public java.util.Map<String, Object> disableApplicationLayerAutomaticResponseResponse;
+
     public DisableApplicationLayerAutomaticResponseResponse withDisableApplicationLayerAutomaticResponseResponse(java.util.Map<String, Object> disableApplicationLayerAutomaticResponseResponse) {
         this.disableApplicationLayerAutomaticResponseResponse = disableApplicationLayerAutomaticResponseResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object internalErrorException;
+
     public DisableApplicationLayerAutomaticResponseResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object invalidOperationException;
+
     public DisableApplicationLayerAutomaticResponseResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class DisableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object invalidParameterException;
+
     public DisableApplicationLayerAutomaticResponseResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DisableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object optimisticLockException;
+
     public DisableApplicationLayerAutomaticResponseResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -66,6 +73,7 @@ public class DisableApplicationLayerAutomaticResponseResponse {
     
     
     public Integer statusCode;
+
     public DisableApplicationLayerAutomaticResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisableApplicationLayerAutomaticResponseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableApplicationLayerAutomaticResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DisableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableApplicationLayerAutomaticResponseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisableApplicationLayerAutomaticResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

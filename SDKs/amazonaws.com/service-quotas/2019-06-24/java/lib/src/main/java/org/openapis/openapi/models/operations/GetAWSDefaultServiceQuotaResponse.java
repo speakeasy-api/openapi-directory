@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAWSDefaultServiceQuotaResponse {
@@ -12,6 +13,7 @@ public class GetAWSDefaultServiceQuotaResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAWSDefaultServiceQuotaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAWSDefaultServiceQuotaResponse {
     
     
     public String contentType;
+
     public GetAWSDefaultServiceQuotaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAWSDefaultServiceQuotaResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAWSDefaultServiceQuotaResponse getAWSDefaultServiceQuotaResponse;
+
     public GetAWSDefaultServiceQuotaResponse withGetAWSDefaultServiceQuotaResponse(org.openapis.openapi.models.shared.GetAWSDefaultServiceQuotaResponse getAWSDefaultServiceQuotaResponse) {
         this.getAWSDefaultServiceQuotaResponse = getAWSDefaultServiceQuotaResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAWSDefaultServiceQuotaResponse {
      */
     
     public Object illegalArgumentException;
+
     public GetAWSDefaultServiceQuotaResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetAWSDefaultServiceQuotaResponse {
      */
     
     public Object noSuchResourceException;
+
     public GetAWSDefaultServiceQuotaResponse withNoSuchResourceException(Object noSuchResourceException) {
         this.noSuchResourceException = noSuchResourceException;
         return this;
@@ -59,6 +65,7 @@ public class GetAWSDefaultServiceQuotaResponse {
      */
     
     public Object serviceException;
+
     public GetAWSDefaultServiceQuotaResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetAWSDefaultServiceQuotaResponse {
     
     
     public Integer statusCode;
+
     public GetAWSDefaultServiceQuotaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetAWSDefaultServiceQuotaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAWSDefaultServiceQuotaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetAWSDefaultServiceQuotaResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetAWSDefaultServiceQuotaResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetAWSDefaultServiceQuotaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

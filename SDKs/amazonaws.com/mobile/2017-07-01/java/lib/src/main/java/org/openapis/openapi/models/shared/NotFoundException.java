@@ -18,9 +18,11 @@ public class NotFoundException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NotFoundException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NotFoundException(){}
 }

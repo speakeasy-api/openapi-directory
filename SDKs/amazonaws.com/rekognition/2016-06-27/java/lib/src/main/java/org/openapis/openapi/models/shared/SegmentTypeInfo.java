@@ -15,6 +15,7 @@ public class SegmentTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public SegmentTypeInfo withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -23,9 +24,11 @@ public class SegmentTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SegmentTypeEnum type;
+
     public SegmentTypeInfo withType(SegmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SegmentTypeInfo(){}
 }

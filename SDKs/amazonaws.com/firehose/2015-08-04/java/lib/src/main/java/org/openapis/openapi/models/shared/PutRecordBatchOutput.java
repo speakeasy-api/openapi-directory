@@ -15,6 +15,7 @@ public class PutRecordBatchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encrypted")
     public Boolean encrypted;
+
     public PutRecordBatchOutput withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -22,6 +23,7 @@ public class PutRecordBatchOutput {
     
     @JsonProperty("FailedPutCount")
     public Long failedPutCount;
+
     public PutRecordBatchOutput withFailedPutCount(Long failedPutCount) {
         this.failedPutCount = failedPutCount;
         return this;
@@ -29,9 +31,14 @@ public class PutRecordBatchOutput {
     
     @JsonProperty("RequestResponses")
     public PutRecordBatchResponseEntry[] requestResponses;
+
     public PutRecordBatchOutput withRequestResponses(PutRecordBatchResponseEntry[] requestResponses) {
         this.requestResponses = requestResponses;
         return this;
     }
     
+    public PutRecordBatchOutput(@JsonProperty("FailedPutCount") Long failedPutCount, @JsonProperty("RequestResponses") PutRecordBatchResponseEntry[] requestResponses) {
+        this.failedPutCount = failedPutCount;
+        this.requestResponses = requestResponses;
+  }
 }

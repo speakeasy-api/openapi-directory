@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminOperationsCancelSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminOperationsCancelSecurityOption1 option1;
+
     public BigtableadminOperationsCancelSecurity withOption1(BigtableadminOperationsCancelSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminOperationsCancelSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminOperationsCancelSecurityOption2 option2;
+
     public BigtableadminOperationsCancelSecurity withOption2(BigtableadminOperationsCancelSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminOperationsCancelSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminOperationsCancelSecurityOption3 option3;
+
     public BigtableadminOperationsCancelSecurity withOption3(BigtableadminOperationsCancelSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminOperationsCancelSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminOperationsCancelSecurityOption4 option4;
+
     public BigtableadminOperationsCancelSecurity withOption4(BigtableadminOperationsCancelSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminOperationsCancelSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminOperationsCancelSecurityOption5 option5;
+
     public BigtableadminOperationsCancelSecurity withOption5(BigtableadminOperationsCancelSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class BigtableadminOperationsCancelSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminOperationsCancelSecurityOption6 option6;
+
     public BigtableadminOperationsCancelSecurity withOption6(BigtableadminOperationsCancelSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public BigtableadminOperationsCancelSecurity(){}
 }

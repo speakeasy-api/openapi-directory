@@ -15,6 +15,7 @@ public class AuthenticationResultType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public AuthenticationResultType withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,6 +24,7 @@ public class AuthenticationResultType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpiresIn")
     public Long expiresIn;
+
     public AuthenticationResultType withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -31,6 +33,7 @@ public class AuthenticationResultType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdToken")
     public String idToken;
+
     public AuthenticationResultType withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -39,6 +42,7 @@ public class AuthenticationResultType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewDeviceMetadata")
     public NewDeviceMetadataType newDeviceMetadata;
+
     public AuthenticationResultType withNewDeviceMetadata(NewDeviceMetadataType newDeviceMetadata) {
         this.newDeviceMetadata = newDeviceMetadata;
         return this;
@@ -47,6 +51,7 @@ public class AuthenticationResultType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefreshToken")
     public String refreshToken;
+
     public AuthenticationResultType withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -55,9 +60,11 @@ public class AuthenticationResultType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenType")
     public String tokenType;
+
     public AuthenticationResultType withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public AuthenticationResultType(){}
 }

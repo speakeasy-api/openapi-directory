@@ -18,9 +18,11 @@ public class UploadKfpArtifactMediaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public UploadKfpArtifactMediaResponse withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public UploadKfpArtifactMediaResponse(){}
 }

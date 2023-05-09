@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMissionProfileResponse {
     
     public String contentType;
+
     public DeleteMissionProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMissionProfileResponse {
      */
     
     public Object dependencyException;
+
     public DeleteMissionProfileResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMissionProfileResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteMissionProfileResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMissionProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.MissionProfileIdResponse missionProfileIdResponse;
+
     public DeleteMissionProfileResponse withMissionProfileIdResponse(org.openapis.openapi.models.shared.MissionProfileIdResponse missionProfileIdResponse) {
         this.missionProfileIdResponse = missionProfileIdResponse;
         return this;
@@ -46,6 +51,7 @@ public class DeleteMissionProfileResponse {
     
     
     public Integer statusCode;
+
     public DeleteMissionProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteMissionProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMissionProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteMissionProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteMissionProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteMissionProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBuildRequest {
@@ -12,6 +13,7 @@ public class PostBuildRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/tar")
     public byte[] requestBody;
+
     public PostBuildRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PostBuildRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PostBuildRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -32,6 +35,7 @@ public class PostBuildRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PostBuildRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -42,6 +46,7 @@ public class PostBuildRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nocache")
     public Boolean nocache;
+
     public PostBuildRequest withNocache(Boolean nocache) {
         this.nocache = nocache;
         return this;
@@ -52,6 +57,7 @@ public class PostBuildRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pull")
     public Boolean pull;
+
     public PostBuildRequest withPull(Boolean pull) {
         this.pull = pull;
         return this;
@@ -62,6 +68,7 @@ public class PostBuildRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public Boolean q;
+
     public PostBuildRequest withQ(Boolean q) {
         this.q = q;
         return this;
@@ -72,9 +79,16 @@ public class PostBuildRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t")
     public String t;
+
     public PostBuildRequest withT(String t) {
         this.t = t;
         return this;
     }
     
+    public PostBuildRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken, @JsonProperty("t") String t) {
+        this.requestBody = requestBody;
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+        this.t = t;
+  }
 }

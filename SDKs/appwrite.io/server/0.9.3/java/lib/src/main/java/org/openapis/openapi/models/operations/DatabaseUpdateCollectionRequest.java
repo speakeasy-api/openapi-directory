@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseUpdateCollectionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DatabaseUpdateCollectionRequestBody requestBody;
+
     public DatabaseUpdateCollectionRequest withRequestBody(DatabaseUpdateCollectionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class DatabaseUpdateCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
     public String collectionId;
+
     public DatabaseUpdateCollectionRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public DatabaseUpdateCollectionRequest(@JsonProperty("collectionId") String collectionId) {
+        this.collectionId = collectionId;
+  }
 }

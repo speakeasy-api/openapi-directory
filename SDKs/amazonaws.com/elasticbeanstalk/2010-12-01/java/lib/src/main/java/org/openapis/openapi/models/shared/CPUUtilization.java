@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CPUUtilization {
     
     public Double ioWait;
+
     public CPUUtilization withIOWait(Double ioWait) {
         this.ioWait = ioWait;
         return this;
@@ -19,6 +20,7 @@ public class CPUUtilization {
     
     
     public Double irq;
+
     public CPUUtilization withIrq(Double irq) {
         this.irq = irq;
         return this;
@@ -26,6 +28,7 @@ public class CPUUtilization {
     
     
     public Double idle;
+
     public CPUUtilization withIdle(Double idle) {
         this.idle = idle;
         return this;
@@ -33,6 +36,7 @@ public class CPUUtilization {
     
     
     public Double nice;
+
     public CPUUtilization withNice(Double nice) {
         this.nice = nice;
         return this;
@@ -40,6 +44,7 @@ public class CPUUtilization {
     
     
     public Double privileged;
+
     public CPUUtilization withPrivileged(Double privileged) {
         this.privileged = privileged;
         return this;
@@ -47,6 +52,7 @@ public class CPUUtilization {
     
     
     public Double softIRQ;
+
     public CPUUtilization withSoftIRQ(Double softIRQ) {
         this.softIRQ = softIRQ;
         return this;
@@ -54,6 +60,7 @@ public class CPUUtilization {
     
     
     public Double system;
+
     public CPUUtilization withSystem(Double system) {
         this.system = system;
         return this;
@@ -61,9 +68,11 @@ public class CPUUtilization {
     
     
     public Double user;
+
     public CPUUtilization withUser(Double user) {
         this.user = user;
         return this;
     }
     
+    public CPUUtilization(){}
 }

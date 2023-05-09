@@ -15,9 +15,11 @@ public class CreateReplicationInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstance")
     public ReplicationInstance replicationInstance;
+
     public CreateReplicationInstanceResponse withReplicationInstance(ReplicationInstance replicationInstance) {
         this.replicationInstance = replicationInstance;
         return this;
     }
     
+    public CreateReplicationInstanceResponse(){}
 }

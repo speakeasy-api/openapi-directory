@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGatewayResponse {
@@ -12,6 +13,7 @@ public class UpdateGatewayResponse {
      */
     
     public Object conflictingOperationException;
+
     public UpdateGatewayResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGatewayResponse {
     
     
     public String contentType;
+
     public UpdateGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGatewayResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateGatewayResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGatewayResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateGatewayResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateGatewayResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateGatewayResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateGatewayResponse {
     
     
     public Integer statusCode;
+
     public UpdateGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateGatewayResponse {
      */
     
     public Object throttlingException;
+
     public UpdateGatewayResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public UpdateGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

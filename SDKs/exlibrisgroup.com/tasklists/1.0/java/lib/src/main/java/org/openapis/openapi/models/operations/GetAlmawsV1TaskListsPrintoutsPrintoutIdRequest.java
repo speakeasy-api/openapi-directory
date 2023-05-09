@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest {
@@ -12,9 +13,13 @@ public class GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=printout_id")
     public String printoutId;
+
     public GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest withPrintoutId(String printoutId) {
         this.printoutId = printoutId;
         return this;
     }
     
+    public GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest(@JsonProperty("printout_id") String printoutId) {
+        this.printoutId = printoutId;
+  }
 }

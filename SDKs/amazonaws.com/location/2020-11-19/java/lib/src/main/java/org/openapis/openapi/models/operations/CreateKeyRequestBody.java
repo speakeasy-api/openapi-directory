@@ -20,6 +20,7 @@ public class CreateKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateKeyRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +34,7 @@ public class CreateKeyRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpireTime")
     public OffsetDateTime expireTime;
+
     public CreateKeyRequestBody withExpireTime(OffsetDateTime expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -43,6 +45,7 @@ public class CreateKeyRequestBody {
      */
     @JsonProperty("KeyName")
     public String keyName;
+
     public CreateKeyRequestBody withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -54,6 +57,7 @@ public class CreateKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoExpiry")
     public Boolean noExpiry;
+
     public CreateKeyRequestBody withNoExpiry(Boolean noExpiry) {
         this.noExpiry = noExpiry;
         return this;
@@ -64,6 +68,7 @@ public class CreateKeyRequestBody {
      */
     @JsonProperty("Restrictions")
     public CreateKeyRequestBodyRestrictions restrictions;
+
     public CreateKeyRequestBody withRestrictions(CreateKeyRequestBodyRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -75,9 +80,14 @@ public class CreateKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateKeyRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateKeyRequestBody(@JsonProperty("KeyName") String keyName, @JsonProperty("Restrictions") CreateKeyRequestBodyRestrictions restrictions) {
+        this.keyName = keyName;
+        this.restrictions = restrictions;
+  }
 }

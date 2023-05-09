@@ -18,6 +18,7 @@ public class HostRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public HostRule withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class HostRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosts")
     public String[] hosts;
+
     public HostRule withHosts(String[] hosts) {
         this.hosts = hosts;
         return this;
@@ -40,9 +42,11 @@ public class HostRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathMatcher")
     public String pathMatcher;
+
     public HostRule withPathMatcher(String pathMatcher) {
         this.pathMatcher = pathMatcher;
         return this;
     }
     
+    public HostRule(){}
 }

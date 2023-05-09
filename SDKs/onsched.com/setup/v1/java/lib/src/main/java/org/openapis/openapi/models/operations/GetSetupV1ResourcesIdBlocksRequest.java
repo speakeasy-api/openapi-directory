@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetSetupV1ResourcesIdBlocksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public GetSetupV1ResourcesIdBlocksRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +25,7 @@ public class GetSetupV1ResourcesIdBlocksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSetupV1ResourcesIdBlocksRequest withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +36,7 @@ public class GetSetupV1ResourcesIdBlocksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1ResourcesIdBlocksRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -43,6 +47,7 @@ public class GetSetupV1ResourcesIdBlocksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1ResourcesIdBlocksRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -53,9 +58,13 @@ public class GetSetupV1ResourcesIdBlocksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public GetSetupV1ResourcesIdBlocksRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GetSetupV1ResourcesIdBlocksRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

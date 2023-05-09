@@ -18,6 +18,7 @@ public class ListImageVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageVersions")
     public ImageVersion[] imageVersions;
+
     public ListImageVersionsResponse withImageVersions(ImageVersion[] imageVersions) {
         this.imageVersions = imageVersions;
         return this;
@@ -29,9 +30,11 @@ public class ListImageVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListImageVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListImageVersionsResponse(){}
 }

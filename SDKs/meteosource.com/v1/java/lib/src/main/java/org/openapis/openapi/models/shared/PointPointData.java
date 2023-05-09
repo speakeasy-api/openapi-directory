@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointPointData {
     @JsonProperty("alerts")
     public PointPointAlerts alerts;
+
     public PointPointData withAlerts(PointPointAlerts alerts) {
         this.alerts = alerts;
         return this;
@@ -22,6 +23,7 @@ public class PointPointData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public PointPointCurrentData current;
+
     public PointPointData withCurrent(PointPointCurrentData current) {
         this.current = current;
         return this;
@@ -30,6 +32,7 @@ public class PointPointData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daily")
     public PointPointDaily daily;
+
     public PointPointData withDaily(PointPointDaily daily) {
         this.daily = daily;
         return this;
@@ -40,6 +43,7 @@ public class PointPointData {
      */
     @JsonProperty("elevation")
     public Long elevation;
+
     public PointPointData withElevation(Long elevation) {
         this.elevation = elevation;
         return this;
@@ -48,6 +52,7 @@ public class PointPointData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourly")
     public PointPointHourly hourly;
+
     public PointPointData withHourly(PointPointHourly hourly) {
         this.hourly = hourly;
         return this;
@@ -58,6 +63,7 @@ public class PointPointData {
      */
     @JsonProperty("lat")
     public String lat;
+
     public PointPointData withLat(String lat) {
         this.lat = lat;
         return this;
@@ -68,6 +74,7 @@ public class PointPointData {
      */
     @JsonProperty("lon")
     public String lon;
+
     public PointPointData withLon(String lon) {
         this.lon = lon;
         return this;
@@ -76,6 +83,7 @@ public class PointPointData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutely")
     public PointPointMinutely minutely;
+
     public PointPointData withMinutely(PointPointMinutely minutely) {
         this.minutely = minutely;
         return this;
@@ -87,6 +95,7 @@ public class PointPointData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public PointPointData withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -97,9 +106,17 @@ public class PointPointData {
      */
     @JsonProperty("units")
     public String units;
+
     public PointPointData withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public PointPointData(@JsonProperty("alerts") PointPointAlerts alerts, @JsonProperty("elevation") Long elevation, @JsonProperty("lat") String lat, @JsonProperty("lon") String lon, @JsonProperty("units") String units) {
+        this.alerts = alerts;
+        this.elevation = elevation;
+        this.lat = lat;
+        this.lon = lon;
+        this.units = units;
+  }
 }

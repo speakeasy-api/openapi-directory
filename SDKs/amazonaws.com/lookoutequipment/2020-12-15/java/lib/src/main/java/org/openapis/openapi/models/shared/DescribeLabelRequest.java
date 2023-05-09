@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLabelRequest {
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public DescribeLabelRequest withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -16,9 +17,14 @@ public class DescribeLabelRequest {
     
     @JsonProperty("LabelId")
     public String labelId;
+
     public DescribeLabelRequest withLabelId(String labelId) {
         this.labelId = labelId;
         return this;
     }
     
+    public DescribeLabelRequest(@JsonProperty("LabelGroupName") String labelGroupName, @JsonProperty("LabelId") String labelId) {
+        this.labelGroupName = labelGroupName;
+        this.labelId = labelId;
+  }
 }

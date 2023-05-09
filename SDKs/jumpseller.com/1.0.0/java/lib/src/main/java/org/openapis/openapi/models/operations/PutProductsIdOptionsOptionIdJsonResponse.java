@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutProductsIdOptionsOptionIdJsonResponse {
     
     public String contentType;
+
     public PutProductsIdOptionsOptionIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutProductsIdOptionsOptionIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutProductsIdOptionsOptionIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -29,6 +32,7 @@ public class PutProductsIdOptionsOptionIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ProductOption productOption;
+
     public PutProductsIdOptionsOptionIdJsonResponse withProductOption(org.openapis.openapi.models.shared.ProductOption productOption) {
         this.productOption = productOption;
         return this;
@@ -36,6 +40,7 @@ public class PutProductsIdOptionsOptionIdJsonResponse {
     
     
     public Integer statusCode;
+
     public PutProductsIdOptionsOptionIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PutProductsIdOptionsOptionIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutProductsIdOptionsOptionIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutProductsIdOptionsOptionIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

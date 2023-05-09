@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccessTokensAccessTokensInvalidateRequest {
@@ -12,6 +13,7 @@ public class GetAccessTokensAccessTokensInvalidateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accessTokens")
     public String accessTokens;
+
     public GetAccessTokensAccessTokensInvalidateRequest withAccessTokens(String accessTokens) {
         this.accessTokens = accessTokens;
         return this;
@@ -23,6 +25,7 @@ public class GetAccessTokensAccessTokensInvalidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetAccessTokensAccessTokensInvalidateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -63,6 +66,7 @@ public class GetAccessTokensAccessTokensInvalidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetAccessTokensAccessTokensInvalidateRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -70,6 +74,7 @@ public class GetAccessTokensAccessTokensInvalidateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetAccessTokensAccessTokensInvalidateRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -77,9 +82,13 @@ public class GetAccessTokensAccessTokensInvalidateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetAccessTokensAccessTokensInvalidateRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
     }
     
+    public GetAccessTokensAccessTokensInvalidateRequest(@JsonProperty("accessTokens") String accessTokens) {
+        this.accessTokens = accessTokens;
+  }
 }

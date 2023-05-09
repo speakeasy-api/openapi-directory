@@ -15,6 +15,7 @@ public class CoverageHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoverageHoursPercentage")
     public String coverageHoursPercentage;
+
     public CoverageHours withCoverageHoursPercentage(String coverageHoursPercentage) {
         this.coverageHoursPercentage = coverageHoursPercentage;
         return this;
@@ -23,6 +24,7 @@ public class CoverageHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandHours")
     public String onDemandHours;
+
     public CoverageHours withOnDemandHours(String onDemandHours) {
         this.onDemandHours = onDemandHours;
         return this;
@@ -31,6 +33,7 @@ public class CoverageHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedHours")
     public String reservedHours;
+
     public CoverageHours withReservedHours(String reservedHours) {
         this.reservedHours = reservedHours;
         return this;
@@ -39,9 +42,11 @@ public class CoverageHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRunningHours")
     public String totalRunningHours;
+
     public CoverageHours withTotalRunningHours(String totalRunningHours) {
         this.totalRunningHours = totalRunningHours;
         return this;
     }
     
+    public CoverageHours(){}
 }

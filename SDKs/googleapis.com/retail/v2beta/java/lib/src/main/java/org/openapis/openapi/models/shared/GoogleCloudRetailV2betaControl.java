@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedServingConfigIds")
     public String[] associatedServingConfigIds;
+
     public GoogleCloudRetailV2betaControl withAssociatedServingConfigIds(String[] associatedServingConfigIds) {
         this.associatedServingConfigIds = associatedServingConfigIds;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2betaControl withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facetSpec")
     public GoogleCloudRetailV2betaSearchRequestFacetSpec facetSpec;
+
     public GoogleCloudRetailV2betaControl withFacetSpec(GoogleCloudRetailV2betaSearchRequestFacetSpec facetSpec) {
         this.facetSpec = facetSpec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2betaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2betaControl withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2betaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public GoogleCloudRetailV2betaRule rule;
+
     public GoogleCloudRetailV2betaControl withRule(GoogleCloudRetailV2betaRule rule) {
         this.rule = rule;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2betaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchSolutionUseCase")
     public GoogleCloudRetailV2betaControlSearchSolutionUseCaseEnum[] searchSolutionUseCase;
+
     public GoogleCloudRetailV2betaControl withSearchSolutionUseCase(GoogleCloudRetailV2betaControlSearchSolutionUseCaseEnum[] searchSolutionUseCase) {
         this.searchSolutionUseCase = searchSolutionUseCase;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudRetailV2betaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionTypes")
     public GoogleCloudRetailV2betaControlSolutionTypesEnum[] solutionTypes;
+
     public GoogleCloudRetailV2betaControl withSolutionTypes(GoogleCloudRetailV2betaControlSolutionTypesEnum[] solutionTypes) {
         this.solutionTypes = solutionTypes;
         return this;
     }
     
+    public GoogleCloudRetailV2betaControl(){}
 }

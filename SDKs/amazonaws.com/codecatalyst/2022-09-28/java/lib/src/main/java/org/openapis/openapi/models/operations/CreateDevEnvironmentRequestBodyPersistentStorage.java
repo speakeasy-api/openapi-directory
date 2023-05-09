@@ -15,9 +15,11 @@ public class CreateDevEnvironmentRequestBodyPersistentStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInGiB")
     public Long sizeInGiB;
+
     public CreateDevEnvironmentRequestBodyPersistentStorage withSizeInGiB(Long sizeInGiB) {
         this.sizeInGiB = sizeInGiB;
         return this;
     }
     
+    public CreateDevEnvironmentRequestBodyPersistentStorage(){}
 }

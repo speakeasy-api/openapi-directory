@@ -12,6 +12,7 @@ public class LanguageCombinationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageId")
     public Long sourceLanguageId;
+
     public LanguageCombinationDto withSourceLanguageId(Long sourceLanguageId) {
         this.sourceLanguageId = sourceLanguageId;
         return this;
@@ -20,9 +21,11 @@ public class LanguageCombinationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageId")
     public Long targetLanguageId;
+
     public LanguageCombinationDto withTargetLanguageId(Long targetLanguageId) {
         this.targetLanguageId = targetLanguageId;
         return this;
     }
     
+    public LanguageCombinationDto(){}
 }

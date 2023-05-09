@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeFeatureMetadataRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeFeatureMetadataRequest describeFeatureMetadataRequest;
+
     public DescribeFeatureMetadataRequest withDescribeFeatureMetadataRequest(org.openapis.openapi.models.shared.DescribeFeatureMetadataRequest describeFeatureMetadataRequest) {
         this.describeFeatureMetadataRequest = describeFeatureMetadataRequest;
         return this;
@@ -16,6 +18,7 @@ public class DescribeFeatureMetadataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeFeatureMetadataRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeFeatureMetadataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeFeatureMetadataRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeFeatureMetadataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeFeatureMetadataRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeFeatureMetadataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeFeatureMetadataRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeFeatureMetadataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeFeatureMetadataRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeFeatureMetadataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeFeatureMetadataRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeFeatureMetadataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeFeatureMetadataRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DescribeFeatureMetadataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeFeatureMetadataXAmzTargetEnum xAmzTarget;
+
     public DescribeFeatureMetadataRequest withXAmzTarget(DescribeFeatureMetadataXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeFeatureMetadataRequest(@JsonProperty("DescribeFeatureMetadataRequest") org.openapis.openapi.models.shared.DescribeFeatureMetadataRequest describeFeatureMetadataRequest, @JsonProperty("X-Amz-Target") DescribeFeatureMetadataXAmzTargetEnum xAmzTarget) {
+        this.describeFeatureMetadataRequest = describeFeatureMetadataRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

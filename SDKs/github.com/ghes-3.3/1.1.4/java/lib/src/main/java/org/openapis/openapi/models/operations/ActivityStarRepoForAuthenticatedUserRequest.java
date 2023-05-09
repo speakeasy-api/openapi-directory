@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityStarRepoForAuthenticatedUserRequest {
@@ -12,6 +13,7 @@ public class ActivityStarRepoForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActivityStarRepoForAuthenticatedUserRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,9 +24,14 @@ public class ActivityStarRepoForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActivityStarRepoForAuthenticatedUserRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActivityStarRepoForAuthenticatedUserRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity;
 import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest;
 import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse;
+import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,13 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest req = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest() {{
-                id = "corrupti";
-                memberSlug = "provident";
-                workspaceSlug = "distinctio";
-            }}            
+            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest req = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest("corrupti", "provident", "distinctio");            
 
-            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse res = sdk.activities.deleteWorkspaceSlugMembersMemberSlugActivitiesId(req, new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity() {{
+            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse res = sdk.activities.deleteWorkspaceSlugMembersMemberSlugActivitiesId(req, new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity("quibusdam") {{
                 bearer = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 
@@ -30,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateAnEmployeeEarningRequest {
@@ -12,6 +13,7 @@ public class AddOrUpdateAnEmployeeEarningRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public AddOrUpdateAnEmployeeEarningRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class AddOrUpdateAnEmployeeEarningRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Earning earning;
+
     public AddOrUpdateAnEmployeeEarningRequest withEarning(org.openapis.openapi.models.shared.Earning earning) {
         this.earning = earning;
         return this;
@@ -32,9 +35,15 @@ public class AddOrUpdateAnEmployeeEarningRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public AddOrUpdateAnEmployeeEarningRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
     }
     
+    public AddOrUpdateAnEmployeeEarningRequest(@JsonProperty("companyId") String companyId, @JsonProperty("earning") org.openapis.openapi.models.shared.Earning earning, @JsonProperty("employeeId") String employeeId) {
+        this.companyId = companyId;
+        this.earning = earning;
+        this.employeeId = employeeId;
+  }
 }

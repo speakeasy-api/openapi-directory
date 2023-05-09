@@ -18,6 +18,7 @@ public class ClicksFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliasId")
     public String aliasId;
+
     public ClicksFilterModel withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -29,6 +30,7 @@ public class ClicksFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateFrom")
     public String dateFrom;
+
     public ClicksFilterModel withDateFrom(String dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -40,6 +42,7 @@ public class ClicksFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTo")
     public String dateTo;
+
     public ClicksFilterModel withDateTo(String dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -51,6 +54,7 @@ public class ClicksFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public ClicksFilterModel withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -62,9 +66,11 @@ public class ClicksFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastId")
     public Long lastId;
+
     public ClicksFilterModel withLastId(Long lastId) {
         this.lastId = lastId;
         return this;
     }
     
+    public ClicksFilterModel(){}
 }

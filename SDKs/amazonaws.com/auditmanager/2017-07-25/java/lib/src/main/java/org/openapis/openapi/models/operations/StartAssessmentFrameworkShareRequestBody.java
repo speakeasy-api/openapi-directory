@@ -15,6 +15,7 @@ public class StartAssessmentFrameworkShareRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public StartAssessmentFrameworkShareRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -25,6 +26,7 @@ public class StartAssessmentFrameworkShareRequestBody {
      */
     @JsonProperty("destinationAccount")
     public String destinationAccount;
+
     public StartAssessmentFrameworkShareRequestBody withDestinationAccount(String destinationAccount) {
         this.destinationAccount = destinationAccount;
         return this;
@@ -35,9 +37,14 @@ public class StartAssessmentFrameworkShareRequestBody {
      */
     @JsonProperty("destinationRegion")
     public String destinationRegion;
+
     public StartAssessmentFrameworkShareRequestBody withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
     }
     
+    public StartAssessmentFrameworkShareRequestBody(@JsonProperty("destinationAccount") String destinationAccount, @JsonProperty("destinationRegion") String destinationRegion) {
+        this.destinationAccount = destinationAccount;
+        this.destinationRegion = destinationRegion;
+  }
 }

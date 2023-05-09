@@ -20,6 +20,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatarUrl")
     public String avatarUrl;
+
     public UserResponse withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -38,6 +40,7 @@ public class UserResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstAccessAt")
     public OffsetDateTime firstAccessAt;
+
     public UserResponse withFirstAccessAt(OffsetDateTime firstAccessAt) {
         this.firstAccessAt = firstAccessAt;
         return this;
@@ -46,6 +49,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public UserResponse withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -54,6 +58,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UserResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invite")
     public Invite invite;
+
     public UserResponse withInvite(Invite invite) {
         this.invite = invite;
         return this;
@@ -72,6 +78,7 @@ public class UserResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastAccessAt")
     public OffsetDateTime lastAccessAt;
+
     public UserResponse withLastAccessAt(OffsetDateTime lastAccessAt) {
         this.lastAccessAt = lastAccessAt;
         return this;
@@ -80,6 +87,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public UserResponse withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -88,6 +96,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public UserMetadata metadata;
+
     public UserResponse withMetadata(UserMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -96,6 +105,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personId")
     public String personId;
+
     public UserResponse withPersonId(String personId) {
         this.personId = personId;
         return this;
@@ -104,9 +114,11 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public UserProfile profile;
+
     public UserResponse withProfile(UserProfile profile) {
         this.profile = profile;
         return this;
     }
     
+    public UserResponse(){}
 }

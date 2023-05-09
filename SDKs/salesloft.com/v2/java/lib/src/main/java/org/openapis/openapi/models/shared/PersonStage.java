@@ -15,6 +15,7 @@ public class PersonStage {
      */
     
     public OffsetDateTime createdAt;
+
     public PersonStage withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class PersonStage {
      */
     
     public Long id;
+
     public PersonStage withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class PersonStage {
      */
     
     public String name;
+
     public PersonStage withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class PersonStage {
      */
     
     public Long order;
+
     public PersonStage withOrder(Long order) {
         this.order = order;
         return this;
@@ -55,9 +59,11 @@ public class PersonStage {
      */
     
     public OffsetDateTime updatedAt;
+
     public PersonStage withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public PersonStage(){}
 }

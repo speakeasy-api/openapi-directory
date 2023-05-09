@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Action {
     @JsonProperty("CrossRegionCopy")
     public CrossRegionCopyAction[] crossRegionCopy;
+
     public Action withCrossRegionCopy(CrossRegionCopyAction[] crossRegionCopy) {
         this.crossRegionCopy = crossRegionCopy;
         return this;
@@ -19,9 +20,14 @@ public class Action {
     
     @JsonProperty("Name")
     public String name;
+
     public Action withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Action(@JsonProperty("CrossRegionCopy") CrossRegionCopyAction[] crossRegionCopy, @JsonProperty("Name") String name) {
+        this.crossRegionCopy = crossRegionCopy;
+        this.name = name;
+  }
 }

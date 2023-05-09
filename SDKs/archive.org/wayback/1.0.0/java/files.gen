@@ -37,4 +37,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ArchivedResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Snapshot.java
 lib/src/main/java/org/openapis/openapi/models/shared/StatusCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClosestEnum.java
+docs/sdk/README.md
 USAGE.md

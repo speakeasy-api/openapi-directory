@@ -12,6 +12,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isError")
     public Boolean isError;
+
     public ApiResponse withIsError(Boolean isError) {
         this.isError = isError;
         return this;
@@ -20,6 +21,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ApiResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +30,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseException")
     public Object responseException;
+
     public ApiResponse withResponseException(Object responseException) {
         this.responseException = responseException;
         return this;
@@ -36,6 +39,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Object result;
+
     public ApiResponse withResult(Object result) {
         this.result = result;
         return this;
@@ -44,6 +48,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public Integer statusCode;
+
     public ApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -52,9 +57,11 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ApiResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ApiResponse(){}
 }

@@ -15,6 +15,7 @@ public class ScanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity consumedCapacity;
+
     public ScanOutput withConsumedCapacity(ConsumedCapacity consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -23,6 +24,7 @@ public class ScanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public ScanOutput withCount(Long count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class ScanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public java.util.Map<String, AttributeValue>[] items;
+
     public ScanOutput withItems(java.util.Map<String, AttributeValue>[] items) {
         this.items = items;
         return this;
@@ -39,6 +42,7 @@ public class ScanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastEvaluatedKey")
     public java.util.Map<String, AttributeValue> lastEvaluatedKey;
+
     public ScanOutput withLastEvaluatedKey(java.util.Map<String, AttributeValue> lastEvaluatedKey) {
         this.lastEvaluatedKey = lastEvaluatedKey;
         return this;
@@ -47,9 +51,11 @@ public class ScanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScannedCount")
     public Long scannedCount;
+
     public ScanOutput withScannedCount(Long scannedCount) {
         this.scannedCount = scannedCount;
         return this;
     }
     
+    public ScanOutput(){}
 }

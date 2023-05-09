@@ -21,6 +21,7 @@ public class DeletedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public DeletedItem withError(String error) {
         this.error = error;
         return this;
@@ -32,6 +33,7 @@ public class DeletedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeletedItem withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +45,7 @@ public class DeletedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DeletedItem withStatus(String status) {
         this.status = status;
         return this;
@@ -54,9 +57,11 @@ public class DeletedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DeletedItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DeletedItem(){}
 }

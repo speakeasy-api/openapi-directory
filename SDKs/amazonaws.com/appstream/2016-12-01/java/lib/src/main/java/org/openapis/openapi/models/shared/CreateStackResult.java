@@ -15,9 +15,11 @@ public class CreateStackResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stack")
     public Stack stack;
+
     public CreateStackResult withStack(Stack stack) {
         this.stack = stack;
         return this;
     }
     
+    public CreateStackResult(){}
 }

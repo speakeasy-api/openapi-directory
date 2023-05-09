@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOfferingsResponse {
@@ -12,6 +13,7 @@ public class ListOfferingsResponse {
      */
     
     public Object argumentException;
+
     public ListOfferingsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListOfferingsResponse {
     
     
     public String contentType;
+
     public ListOfferingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListOfferingsResponse {
      */
     
     public Object limitExceededException;
+
     public ListOfferingsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListOfferingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOfferingsResult listOfferingsResult;
+
     public ListOfferingsResponse withListOfferingsResult(org.openapis.openapi.models.shared.ListOfferingsResult listOfferingsResult) {
         this.listOfferingsResult = listOfferingsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListOfferingsResponse {
      */
     
     public Object notEligibleException;
+
     public ListOfferingsResponse withNotEligibleException(Object notEligibleException) {
         this.notEligibleException = notEligibleException;
         return this;
@@ -59,6 +65,7 @@ public class ListOfferingsResponse {
      */
     
     public Object notFoundException;
+
     public ListOfferingsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListOfferingsResponse {
      */
     
     public Object serviceAccountException;
+
     public ListOfferingsResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -76,6 +84,7 @@ public class ListOfferingsResponse {
     
     
     public Integer statusCode;
+
     public ListOfferingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListOfferingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOfferingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListOfferingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

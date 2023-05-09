@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications {
     
     public String availabilityZone;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public String availabilityZoneId;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public String capacityReservationId;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public OffsetDateTime createDate;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -40,6 +44,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public Boolean ebsOptimized;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -47,6 +52,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public Double fulfilledCapacity;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withFulfilledCapacity(Double fulfilledCapacity) {
         this.fulfilledCapacity = fulfilledCapacity;
         return this;
@@ -54,6 +60,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecificationsInstancePlatformEnum instancePlatform;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withInstancePlatform(DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecificationsInstancePlatformEnum instancePlatform) {
         this.instancePlatform = instancePlatform;
         return this;
@@ -61,6 +68,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecificationsInstanceTypeEnum instanceType;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withInstanceType(DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecificationsInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -68,6 +76,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public Long priority;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -75,6 +84,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public Long totalInstanceCount;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withTotalInstanceCount(Long totalInstanceCount) {
         this.totalInstanceCount = totalInstanceCount;
         return this;
@@ -82,9 +92,11 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsIns
     
     
     public Double weight;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications(){}
 }

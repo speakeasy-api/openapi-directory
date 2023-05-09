@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigqueryTabledataListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigqueryTabledataListSecurityOption1 option1;
+
     public BigqueryTabledataListSecurity withOption1(BigqueryTabledataListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigqueryTabledataListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryTabledataListSecurityOption2 option2;
+
     public BigqueryTabledataListSecurity withOption2(BigqueryTabledataListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class BigqueryTabledataListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryTabledataListSecurityOption3 option3;
+
     public BigqueryTabledataListSecurity withOption3(BigqueryTabledataListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public BigqueryTabledataListSecurity(){}
 }

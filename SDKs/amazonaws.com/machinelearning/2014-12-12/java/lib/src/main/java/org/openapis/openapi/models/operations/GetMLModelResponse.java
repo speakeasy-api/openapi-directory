@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMLModelResponse {
     
     public String contentType;
+
     public GetMLModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMLModelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMLModelOutput getMLModelOutput;
+
     public GetMLModelResponse withGetMLModelOutput(org.openapis.openapi.models.shared.GetMLModelOutput getMLModelOutput) {
         this.getMLModelOutput = getMLModelOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetMLModelResponse {
      */
     
     public Object internalServerException;
+
     public GetMLModelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetMLModelResponse {
      */
     
     public Object invalidInputException;
+
     public GetMLModelResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class GetMLModelResponse {
     
     
     public Integer statusCode;
+
     public GetMLModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetMLModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMLModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetMLModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMLModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetMLModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

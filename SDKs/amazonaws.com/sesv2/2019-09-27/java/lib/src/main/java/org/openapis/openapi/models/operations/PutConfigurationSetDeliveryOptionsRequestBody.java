@@ -15,6 +15,7 @@ public class PutConfigurationSetDeliveryOptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingPoolName")
     public String sendingPoolName;
+
     public PutConfigurationSetDeliveryOptionsRequestBody withSendingPoolName(String sendingPoolName) {
         this.sendingPoolName = sendingPoolName;
         return this;
@@ -26,9 +27,11 @@ public class PutConfigurationSetDeliveryOptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlsPolicy")
     public PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum tlsPolicy;
+
     public PutConfigurationSetDeliveryOptionsRequestBody withTlsPolicy(PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
         return this;
     }
     
+    public PutConfigurationSetDeliveryOptionsRequestBody(){}
 }

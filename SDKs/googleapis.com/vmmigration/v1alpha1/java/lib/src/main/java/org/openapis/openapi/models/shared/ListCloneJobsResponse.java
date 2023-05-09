@@ -18,6 +18,7 @@ public class ListCloneJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloneJobs")
     public CloneJob[] cloneJobs;
+
     public ListCloneJobsResponse withCloneJobs(CloneJob[] cloneJobs) {
         this.cloneJobs = cloneJobs;
         return this;
@@ -29,6 +30,7 @@ public class ListCloneJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCloneJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListCloneJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListCloneJobsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListCloneJobsResponse(){}
 }

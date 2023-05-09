@@ -15,9 +15,11 @@ public class AddPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statement")
     public String statement;
+
     public AddPermissionResponse withStatement(String statement) {
         this.statement = statement;
         return this;
     }
     
+    public AddPermissionResponse(){}
 }

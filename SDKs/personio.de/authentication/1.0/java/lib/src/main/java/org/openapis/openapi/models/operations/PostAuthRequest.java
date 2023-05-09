@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthRequest {
@@ -12,6 +13,7 @@ public class PostAuthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
     public String clientId;
+
     public PostAuthRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,9 +24,14 @@ public class PostAuthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_secret")
     public String clientSecret;
+
     public PostAuthRequest withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public PostAuthRequest(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+  }
 }

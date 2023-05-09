@@ -12,6 +12,7 @@ public class NAUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NAUser withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class NAUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrative")
     public NAUserAdministrative administrative;
+
     public NAUser withAdministrative(NAUserAdministrative administrative) {
         this.administrative = administrative;
         return this;
@@ -28,6 +30,7 @@ public class NAUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_creation")
     public NADate dateCreation;
+
     public NAUser withDateCreation(NADate dateCreation) {
         this.dateCreation = dateCreation;
         return this;
@@ -39,6 +42,7 @@ public class NAUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public String[] devices;
+
     public NAUser withDevices(String[] devices) {
         this.devices = devices;
         return this;
@@ -51,6 +55,7 @@ public class NAUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friend_devices")
     public String[] friendDevices;
+
     public NAUser withFriendDevices(String[] friendDevices) {
         this.friendDevices = friendDevices;
         return this;
@@ -59,6 +64,7 @@ public class NAUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mail")
     public String mail;
+
     public NAUser withMail(String mail) {
         this.mail = mail;
         return this;
@@ -67,6 +73,7 @@ public class NAUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeline_not_read")
     public Integer timelineNotRead;
+
     public NAUser withTimelineNotRead(Integer timelineNotRead) {
         this.timelineNotRead = timelineNotRead;
         return this;
@@ -75,9 +82,11 @@ public class NAUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeline_size")
     public Integer timelineSize;
+
     public NAUser withTimelineSize(Integer timelineSize) {
         this.timelineSize = timelineSize;
         return this;
     }
     
+    public NAUser(){}
 }

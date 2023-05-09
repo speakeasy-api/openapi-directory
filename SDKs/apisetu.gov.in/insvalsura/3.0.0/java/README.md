@@ -15,24 +15,24 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.SkcerSecurity;
+import org.openapis.openapi.models.operations.SkcerRequestBody;
 import org.openapis.openapi.models.operations.SkcerRequestBodyCertificateParameters;
 import org.openapis.openapi.models.operations.SkcerRequestBodyFormatEnum;
-import org.openapis.openapi.models.operations.SkcerRequestBody;
 import org.openapis.openapi.models.operations.SkcerResponse;
+import org.openapis.openapi.models.operations.SkcerSecurity;
+import org.openapis.openapi.models.shared.ConsentArtifactSchema;
+import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsent;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentData;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentDataConsumer;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentDataProvider;
+import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPermission;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPermissionDateRange;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPermissionFrequency;
-import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPermission;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPurpose;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentUser;
-import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsent;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaSignature;
-import org.openapis.openapi.models.shared.ConsentArtifactSchema;
 
 public class Application {
     public static void main(String[] args) {
@@ -40,56 +40,12 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SkcerRequestBody req = new SkcerRequestBody() {{
-                certificateParameters = new SkcerRequestBodyCertificateParameters() {{
-                    coursename = "DEDH P,GI S,GI W,MESC,LCOM EW,LCOM Tac,CHME Q,AA/APP,SSR/NAM,Direct Entry El,ITSC S";
-                    personalno = "12345-T";
-                    unit = "Valsura,Shivaji,Dronacharya,SignalSchool,NIAT";
-                }};
-                consentArtifact = new ConsentArtifactSchema() {{
-                    consent = new ConsentArtifactSchemaConsent() {{
-                        consentId = "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba";
-                        data = new ConsentArtifactSchemaConsentData() {{
-                            id = "corrupti";
-                        }};
-                        dataConsumer = new ConsentArtifactSchemaConsentDataConsumer() {{
-                            id = "provident";
-                        }};
-                        dataProvider = new ConsentArtifactSchemaConsentDataProvider() {{
-                            id = "distinctio";
-                        }};
-                        permission = new ConsentArtifactSchemaConsentPermission() {{
-                            access = "quibusdam";
-                            dateRange = new ConsentArtifactSchemaConsentPermissionDateRange() {{
-                                from = "2021-04-14T16:47:33.722Z";
-                                to = "2021-04-22T12:08:58.275Z";
-                            }};
-                            frequency = new ConsentArtifactSchemaConsentPermissionFrequency() {{
-                                repeats = 4236.55;
-                                unit = "error";
-                                value = 6458.94;
-                            }};
-                        }};
-                        purpose = new ConsentArtifactSchemaConsentPurpose() {{
-                            description = "suscipit";
-                        }};
-                        timestamp = "2022-09-14T09:35:47.986Z";
-                        user = new ConsentArtifactSchemaConsentUser() {{
-                            email = "Anahi38@hotmail.com";
-                            idNumber = "molestiae";
-                            idType = "minus";
-                            mobile = "645-598-0306 x03897";
-                        }};
-                    }};
-                    signature = new ConsentArtifactSchemaSignature() {{
-                        signature = "odit";
-                    }};
-                }};
-                format = "pdf";
-                txnId = "f7f1469c-29b0-4325-9dfc-c567200a70f7";
-            }}            
+            SkcerRequestBody req = new SkcerRequestBody(SkcerRequestBodyFormatEnum.PDF, "f7f1469c-29b0-4325-9dfc-c567200a70f7") {{
+                certificateParameters = new SkcerRequestBodyCertificateParameters("DEDH P,GI S,GI W,MESC,LCOM EW,LCOM Tac,CHME Q,AA/APP,SSR/NAM,Direct Entry El,ITSC S", "12345-T", "Valsura,Shivaji,Dronacharya,SignalSchool,NIAT");;
+                consentArtifact = new ConsentArtifactSchema(                new ConsentArtifactSchemaConsent("ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba",                 new ConsentArtifactSchemaConsentData("corrupti");,                 new ConsentArtifactSchemaConsentDataConsumer("provident");,                 new ConsentArtifactSchemaConsentDataProvider("distinctio");,                 new ConsentArtifactSchemaConsentPermission("quibusdam",                 new ConsentArtifactSchemaConsentPermissionDateRange(OffsetDateTime.parse("2021-04-14T16:47:33.722Z"), OffsetDateTime.parse("2021-04-22T12:08:58.275Z"));,                 new ConsentArtifactSchemaConsentPermissionFrequency(4236.55, "error", 6458.94););,                 new ConsentArtifactSchemaConsentPurpose("suscipit");, OffsetDateTime.parse("2022-09-14T09:35:47.986Z"),                 new ConsentArtifactSchemaConsentUser("debitis", "ipsa", "delectus", "tempora"););,                 new ConsentArtifactSchemaSignature("suscipit"););;
+            }};            
 
-            SkcerResponse res = sdk.apIs.skcer(req, new SkcerSecurity() {{
+            SkcerResponse res = sdk.apIs.skcer(req, new SkcerSecurity("molestiae", "minus") {{
                 apiKey = "YOUR_API_KEY_HERE";
                 clientId = "YOUR_API_KEY_HERE";
             }});
@@ -100,6 +56,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -107,10 +65,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### apIs
+### [apIs](docs/apis/README.md)
 
-* `skcer` - Skill Certificate
-* `skmst` - Skill Marksheet/ Score Card
+* [skcer](docs/apis/README.md#skcer) - Skill Certificate
+* [skmst](docs/apis/README.md#skmst) - Skill Marksheet/ Score Card
 <!-- End SDK Available Operations -->
 
 ### Maturity

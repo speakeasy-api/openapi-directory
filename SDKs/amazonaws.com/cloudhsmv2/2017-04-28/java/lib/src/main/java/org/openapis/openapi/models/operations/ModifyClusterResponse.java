@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyClusterResponse {
@@ -12,6 +13,7 @@ public class ModifyClusterResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public ModifyClusterResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ModifyClusterResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public ModifyClusterResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class ModifyClusterResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public ModifyClusterResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class ModifyClusterResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public ModifyClusterResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class ModifyClusterResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public ModifyClusterResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -59,6 +65,7 @@ public class ModifyClusterResponse {
     
     
     public String contentType;
+
     public ModifyClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class ModifyClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyClusterResponse modifyClusterResponse;
+
     public ModifyClusterResponse withModifyClusterResponse(org.openapis.openapi.models.shared.ModifyClusterResponse modifyClusterResponse) {
         this.modifyClusterResponse = modifyClusterResponse;
         return this;
@@ -76,6 +84,7 @@ public class ModifyClusterResponse {
     
     
     public Integer statusCode;
+
     public ModifyClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ModifyClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifyClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

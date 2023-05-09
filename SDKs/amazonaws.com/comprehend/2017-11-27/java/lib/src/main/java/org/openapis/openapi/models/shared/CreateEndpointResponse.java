@@ -15,6 +15,7 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public CreateEndpointResponse withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public CreateEndpointResponse withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
     }
     
+    public CreateEndpointResponse(){}
 }

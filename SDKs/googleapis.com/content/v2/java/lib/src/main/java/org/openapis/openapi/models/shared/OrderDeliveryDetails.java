@@ -12,6 +12,7 @@ public class OrderDeliveryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public OrderAddress address;
+
     public OrderDeliveryDetails withAddress(OrderAddress address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class OrderDeliveryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public OrderDeliveryDetails withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public OrderDeliveryDetails(){}
 }

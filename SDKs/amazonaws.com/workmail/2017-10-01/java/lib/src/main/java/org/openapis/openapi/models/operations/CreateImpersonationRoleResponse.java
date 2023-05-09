@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImpersonationRoleResponse {
     
     public String contentType;
+
     public CreateImpersonationRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateImpersonationRoleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateImpersonationRoleResponse createImpersonationRoleResponse;
+
     public CreateImpersonationRoleResponse withCreateImpersonationRoleResponse(org.openapis.openapi.models.shared.CreateImpersonationRoleResponse createImpersonationRoleResponse) {
         this.createImpersonationRoleResponse = createImpersonationRoleResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateImpersonationRoleResponse {
      */
     
     public Object entityNotFoundException;
+
     public CreateImpersonationRoleResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class CreateImpersonationRoleResponse {
      */
     
     public Object entityStateException;
+
     public CreateImpersonationRoleResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -49,6 +54,7 @@ public class CreateImpersonationRoleResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateImpersonationRoleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateImpersonationRoleResponse {
      */
     
     public Object limitExceededException;
+
     public CreateImpersonationRoleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateImpersonationRoleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public CreateImpersonationRoleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateImpersonationRoleResponse {
      */
     
     public Object organizationStateException;
+
     public CreateImpersonationRoleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -86,6 +95,7 @@ public class CreateImpersonationRoleResponse {
     
     
     public Integer statusCode;
+
     public CreateImpersonationRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateImpersonationRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImpersonationRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateImpersonationRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

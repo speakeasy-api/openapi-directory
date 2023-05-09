@@ -18,9 +18,11 @@ public class Timing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public Timing withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public Timing(){}
 }

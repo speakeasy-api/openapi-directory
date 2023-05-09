@@ -12,6 +12,7 @@ public class UpsertMappingRequest {
      */
     @JsonProperty("marketplaceSalesChannel")
     public Integer marketplaceSalesChannel;
+
     public UpsertMappingRequest withMarketplaceSalesChannel(Integer marketplaceSalesChannel) {
         this.marketplaceSalesChannel = marketplaceSalesChannel;
         return this;
@@ -22,9 +23,14 @@ public class UpsertMappingRequest {
      */
     @JsonProperty("sellerChannel")
     public String sellerChannel;
+
     public UpsertMappingRequest withSellerChannel(String sellerChannel) {
         this.sellerChannel = sellerChannel;
         return this;
     }
     
+    public UpsertMappingRequest(@JsonProperty("marketplaceSalesChannel") Integer marketplaceSalesChannel, @JsonProperty("sellerChannel") String sellerChannel) {
+        this.marketplaceSalesChannel = marketplaceSalesChannel;
+        this.sellerChannel = sellerChannel;
+  }
 }

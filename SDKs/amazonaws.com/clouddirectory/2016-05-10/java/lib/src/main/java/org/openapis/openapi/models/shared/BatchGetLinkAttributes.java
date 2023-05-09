@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetLinkAttributes {
     @JsonProperty("AttributeNames")
     public String[] attributeNames;
+
     public BatchGetLinkAttributes withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetLinkAttributes {
     
     @JsonProperty("TypedLinkSpecifier")
     public TypedLinkSpecifier typedLinkSpecifier;
+
     public BatchGetLinkAttributes withTypedLinkSpecifier(TypedLinkSpecifier typedLinkSpecifier) {
         this.typedLinkSpecifier = typedLinkSpecifier;
         return this;
     }
     
+    public BatchGetLinkAttributes(@JsonProperty("AttributeNames") String[] attributeNames, @JsonProperty("TypedLinkSpecifier") TypedLinkSpecifier typedLinkSpecifier) {
+        this.attributeNames = attributeNames;
+        this.typedLinkSpecifier = typedLinkSpecifier;
+  }
 }

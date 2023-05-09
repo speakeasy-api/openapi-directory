@@ -18,6 +18,7 @@ public class GetWorkspaceStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeConflict")
     public MergeConflict[] mergeConflict;
+
     public GetWorkspaceStatusResponse withMergeConflict(MergeConflict[] mergeConflict) {
         this.mergeConflict = mergeConflict;
         return this;
@@ -29,9 +30,11 @@ public class GetWorkspaceStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceChange")
     public Entity[] workspaceChange;
+
     public GetWorkspaceStatusResponse withWorkspaceChange(Entity[] workspaceChange) {
         this.workspaceChange = workspaceChange;
         return this;
     }
     
+    public GetWorkspaceStatusResponse(){}
 }

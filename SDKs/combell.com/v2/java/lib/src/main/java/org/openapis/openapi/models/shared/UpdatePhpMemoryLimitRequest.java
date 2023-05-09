@@ -18,9 +18,11 @@ public class UpdatePhpMemoryLimitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory_limit")
     public Integer memoryLimit;
+
     public UpdatePhpMemoryLimitRequest withMemoryLimit(Integer memoryLimit) {
         this.memoryLimit = memoryLimit;
         return this;
     }
     
+    public UpdatePhpMemoryLimitRequest(){}
 }

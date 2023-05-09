@@ -61,11 +61,9 @@ public class Changes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsChangesCreateResponse res = new org.openapis.openapi.models.operations.DnsChangesCreateResponse() {{
+        org.openapis.openapi.models.operations.DnsChangesCreateResponse res = new org.openapis.openapi.models.operations.DnsChangesCreateResponse(contentType, httpRes.statusCode()) {{
             change = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Changes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsChangesGetResponse res = new org.openapis.openapi.models.operations.DnsChangesGetResponse() {{
+        org.openapis.openapi.models.operations.DnsChangesGetResponse res = new org.openapis.openapi.models.operations.DnsChangesGetResponse(contentType, httpRes.statusCode()) {{
             change = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Changes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsChangesListResponse res = new org.openapis.openapi.models.operations.DnsChangesListResponse() {{
+        org.openapis.openapi.models.operations.DnsChangesListResponse res = new org.openapis.openapi.models.operations.DnsChangesListResponse(contentType, httpRes.statusCode()) {{
             changesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

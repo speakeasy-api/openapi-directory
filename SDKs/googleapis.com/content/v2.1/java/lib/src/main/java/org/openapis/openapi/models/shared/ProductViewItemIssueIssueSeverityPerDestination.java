@@ -18,6 +18,7 @@ public class ProductViewItemIssueIssueSeverityPerDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("demotedCountries")
     public String[] demotedCountries;
+
     public ProductViewItemIssueIssueSeverityPerDestination withDemotedCountries(String[] demotedCountries) {
         this.demotedCountries = demotedCountries;
         return this;
@@ -29,6 +30,7 @@ public class ProductViewItemIssueIssueSeverityPerDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public ProductViewItemIssueIssueSeverityPerDestination withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -40,9 +42,11 @@ public class ProductViewItemIssueIssueSeverityPerDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovedCountries")
     public String[] disapprovedCountries;
+
     public ProductViewItemIssueIssueSeverityPerDestination withDisapprovedCountries(String[] disapprovedCountries) {
         this.disapprovedCountries = disapprovedCountries;
         return this;
     }
     
+    public ProductViewItemIssueIssueSeverityPerDestination(){}
 }

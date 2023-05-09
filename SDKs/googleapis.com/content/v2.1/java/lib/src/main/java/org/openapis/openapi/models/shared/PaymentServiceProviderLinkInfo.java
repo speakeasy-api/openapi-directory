@@ -18,6 +18,7 @@ public class PaymentServiceProviderLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalAccountBusinessCountry")
     public String externalAccountBusinessCountry;
+
     public PaymentServiceProviderLinkInfo withExternalAccountBusinessCountry(String externalAccountBusinessCountry) {
         this.externalAccountBusinessCountry = externalAccountBusinessCountry;
         return this;
@@ -29,9 +30,11 @@ public class PaymentServiceProviderLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalAccountId")
     public String externalAccountId;
+
     public PaymentServiceProviderLinkInfo withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
     }
     
+    public PaymentServiceProviderLinkInfo(){}
 }

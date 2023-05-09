@@ -18,6 +18,7 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public String[] countries;
+
     public ReturnPolicyOnlineInput withCountries(String[] countries) {
         this.countries = countries;
         return this;
@@ -29,6 +30,7 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemConditions")
     public ReturnPolicyOnlineItemConditionsEnum[] itemConditions;
+
     public ReturnPolicyOnlineInput withItemConditions(ReturnPolicyOnlineItemConditionsEnum[] itemConditions) {
         this.itemConditions = itemConditions;
         return this;
@@ -40,6 +42,7 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ReturnPolicyOnlineInput withLabel(String label) {
         this.label = label;
         return this;
@@ -51,6 +54,7 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReturnPolicyOnlineInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public ReturnPolicyOnlinePolicy policy;
+
     public ReturnPolicyOnlineInput withPolicy(ReturnPolicyOnlinePolicy policy) {
         this.policy = policy;
         return this;
@@ -73,6 +78,7 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restockingFee")
     public ReturnPolicyOnlineRestockingFee restockingFee;
+
     public ReturnPolicyOnlineInput withRestockingFee(ReturnPolicyOnlineRestockingFee restockingFee) {
         this.restockingFee = restockingFee;
         return this;
@@ -84,6 +90,7 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnMethods")
     public ReturnPolicyOnlineReturnMethodsEnum[] returnMethods;
+
     public ReturnPolicyOnlineInput withReturnMethods(ReturnPolicyOnlineReturnMethodsEnum[] returnMethods) {
         this.returnMethods = returnMethods;
         return this;
@@ -95,6 +102,7 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicyUri")
     public String returnPolicyUri;
+
     public ReturnPolicyOnlineInput withReturnPolicyUri(String returnPolicyUri) {
         this.returnPolicyUri = returnPolicyUri;
         return this;
@@ -106,9 +114,11 @@ public class ReturnPolicyOnlineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnReasonCategoryInfo")
     public ReturnPolicyOnlineReturnReasonCategoryInfo[] returnReasonCategoryInfo;
+
     public ReturnPolicyOnlineInput withReturnReasonCategoryInfo(ReturnPolicyOnlineReturnReasonCategoryInfo[] returnReasonCategoryInfo) {
         this.returnReasonCategoryInfo = returnReasonCategoryInfo;
         return this;
     }
     
+    public ReturnPolicyOnlineInput(){}
 }

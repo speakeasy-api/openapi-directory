@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateStreamModeInput {
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UpdateStreamModeInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -16,9 +17,14 @@ public class UpdateStreamModeInput {
     
     @JsonProperty("StreamModeDetails")
     public StreamModeDetails streamModeDetails;
+
     public UpdateStreamModeInput withStreamModeDetails(StreamModeDetails streamModeDetails) {
         this.streamModeDetails = streamModeDetails;
         return this;
     }
     
+    public UpdateStreamModeInput(@JsonProperty("StreamARN") String streamARN, @JsonProperty("StreamModeDetails") StreamModeDetails streamModeDetails) {
+        this.streamARN = streamARN;
+        this.streamModeDetails = streamModeDetails;
+  }
 }

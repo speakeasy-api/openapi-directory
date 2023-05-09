@@ -18,9 +18,11 @@ public class OSPolicyResourcePackageResourceGooGet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OSPolicyResourcePackageResourceGooGet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OSPolicyResourcePackageResourceGooGet(){}
 }

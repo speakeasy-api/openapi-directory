@@ -18,6 +18,7 @@ public class SuggestedDocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentStyle")
     public DocumentStyle documentStyle;
+
     public SuggestedDocumentStyle withDocumentStyle(DocumentStyle documentStyle) {
         this.documentStyle = documentStyle;
         return this;
@@ -29,9 +30,11 @@ public class SuggestedDocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentStyleSuggestionState")
     public DocumentStyleSuggestionState documentStyleSuggestionState;
+
     public SuggestedDocumentStyle withDocumentStyleSuggestionState(DocumentStyleSuggestionState documentStyleSuggestionState) {
         this.documentStyleSuggestionState = documentStyleSuggestionState;
         return this;
     }
     
+    public SuggestedDocumentStyle(){}
 }

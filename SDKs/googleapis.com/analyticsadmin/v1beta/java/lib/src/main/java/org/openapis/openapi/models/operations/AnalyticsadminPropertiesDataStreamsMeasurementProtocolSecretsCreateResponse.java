@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaMeasurementProtocolSecret googleAnalyticsAdminV1betaMeasurementProtocolSecret;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse withGoogleAnalyticsAdminV1betaMeasurementProtocolSecret(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaMeasurementProtocolSecret googleAnalyticsAdminV1betaMeasurementProtocolSecret) {
         this.googleAnalyticsAdminV1betaMeasurementProtocolSecret = googleAnalyticsAdminV1betaMeasurementProtocolSecret;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

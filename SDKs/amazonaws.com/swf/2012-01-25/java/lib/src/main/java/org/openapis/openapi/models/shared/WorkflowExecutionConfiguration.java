@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowExecutionConfiguration {
     @JsonProperty("childPolicy")
     public ChildPolicyEnum childPolicy;
+
     public WorkflowExecutionConfiguration withChildPolicy(ChildPolicyEnum childPolicy) {
         this.childPolicy = childPolicy;
         return this;
@@ -21,6 +22,7 @@ public class WorkflowExecutionConfiguration {
     
     @JsonProperty("executionStartToCloseTimeout")
     public String executionStartToCloseTimeout;
+
     public WorkflowExecutionConfiguration withExecutionStartToCloseTimeout(String executionStartToCloseTimeout) {
         this.executionStartToCloseTimeout = executionStartToCloseTimeout;
         return this;
@@ -29,6 +31,7 @@ public class WorkflowExecutionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaRole")
     public String lambdaRole;
+
     public WorkflowExecutionConfiguration withLambdaRole(String lambdaRole) {
         this.lambdaRole = lambdaRole;
         return this;
@@ -36,6 +39,7 @@ public class WorkflowExecutionConfiguration {
     
     @JsonProperty("taskList")
     public TaskList taskList;
+
     public WorkflowExecutionConfiguration withTaskList(TaskList taskList) {
         this.taskList = taskList;
         return this;
@@ -44,6 +48,7 @@ public class WorkflowExecutionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskPriority")
     public String taskPriority;
+
     public WorkflowExecutionConfiguration withTaskPriority(String taskPriority) {
         this.taskPriority = taskPriority;
         return this;
@@ -51,9 +56,16 @@ public class WorkflowExecutionConfiguration {
     
     @JsonProperty("taskStartToCloseTimeout")
     public String taskStartToCloseTimeout;
+
     public WorkflowExecutionConfiguration withTaskStartToCloseTimeout(String taskStartToCloseTimeout) {
         this.taskStartToCloseTimeout = taskStartToCloseTimeout;
         return this;
     }
     
+    public WorkflowExecutionConfiguration(@JsonProperty("childPolicy") ChildPolicyEnum childPolicy, @JsonProperty("executionStartToCloseTimeout") String executionStartToCloseTimeout, @JsonProperty("taskList") TaskList taskList, @JsonProperty("taskStartToCloseTimeout") String taskStartToCloseTimeout) {
+        this.childPolicy = childPolicy;
+        this.executionStartToCloseTimeout = executionStartToCloseTimeout;
+        this.taskList = taskList;
+        this.taskStartToCloseTimeout = taskStartToCloseTimeout;
+  }
 }

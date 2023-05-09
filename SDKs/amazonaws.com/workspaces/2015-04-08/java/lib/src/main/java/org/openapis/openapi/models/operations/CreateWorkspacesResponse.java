@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkspacesResponse {
     
     public String contentType;
+
     public CreateWorkspacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorkspacesResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkspacesResult createWorkspacesResult;
+
     public CreateWorkspacesResponse withCreateWorkspacesResult(org.openapis.openapi.models.shared.CreateWorkspacesResult createWorkspacesResult) {
         this.createWorkspacesResult = createWorkspacesResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkspacesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CreateWorkspacesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkspacesResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateWorkspacesResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateWorkspacesResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkspacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateWorkspacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkspacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateWorkspacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

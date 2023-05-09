@@ -15,6 +15,7 @@ public class AssociateAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationArn")
     public String applicationArn;
+
     public AssociateAttributeGroupResponse withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -23,9 +24,11 @@ public class AssociateAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeGroupArn")
     public String attributeGroupArn;
+
     public AssociateAttributeGroupResponse withAttributeGroupArn(String attributeGroupArn) {
         this.attributeGroupArn = attributeGroupArn;
         return this;
     }
     
+    public AssociateAttributeGroupResponse(){}
 }

@@ -15,9 +15,11 @@ public class UpdateFlywheelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelProperties")
     public FlywheelProperties flywheelProperties;
+
     public UpdateFlywheelResponse withFlywheelProperties(FlywheelProperties flywheelProperties) {
         this.flywheelProperties = flywheelProperties;
         return this;
     }
     
+    public UpdateFlywheelResponse(){}
 }

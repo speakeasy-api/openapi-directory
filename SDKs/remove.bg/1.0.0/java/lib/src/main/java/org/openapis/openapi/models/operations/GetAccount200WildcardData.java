@@ -9,9 +9,11 @@ package org.openapis.openapi.models.operations;
 public class GetAccount200WildcardData {
     
     public GetAccount200WildcardDataAttributes attributes;
+
     public GetAccount200WildcardData withAttributes(GetAccount200WildcardDataAttributes attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public GetAccount200WildcardData(){}
 }

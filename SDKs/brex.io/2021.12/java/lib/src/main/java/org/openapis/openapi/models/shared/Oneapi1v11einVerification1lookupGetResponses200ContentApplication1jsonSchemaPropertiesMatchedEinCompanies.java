@@ -12,6 +12,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String[] address;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withAddress(String[] address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_score")
     public Double companyScore;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withCompanyScore(Double companyScore) {
         this.companyScore = companyScore;
         return this;
@@ -28,6 +30,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_score_explanation")
     public String companyScoreExplanation;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withCompanyScoreExplanation(String companyScoreExplanation) {
         this.companyScoreExplanation = companyScoreExplanation;
         return this;
@@ -36,6 +39,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence_score")
     public Double confidenceScore;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withConfidenceScore(Double confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -44,6 +48,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence_score_explanation")
     public String confidenceScoreExplanation;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withConfidenceScoreExplanation(String confidenceScoreExplanation) {
         this.confidenceScoreExplanation = confidenceScoreExplanation;
         return this;
@@ -52,6 +57,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dba_score")
     public String dbaScore;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withDbaScore(String dbaScore) {
         this.dbaScore = dbaScore;
         return this;
@@ -60,6 +66,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dba_score_explanation")
     public String dbaScoreExplanation;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withDbaScoreExplanation(String dbaScoreExplanation) {
         this.dbaScoreExplanation = dbaScoreExplanation;
         return this;
@@ -68,6 +75,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ein")
     public String ein;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withEin(String ein) {
         this.ein = ein;
         return this;
@@ -76,6 +84,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedAddress")
     public String[] formattedAddress;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withFormattedAddress(String[] formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -84,6 +93,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("irs_score")
     public String irsScore;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withIrsScore(String irsScore) {
         this.irsScore = irsScore;
         return this;
@@ -92,6 +102,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("irs_score_explanation")
     public String irsScoreExplanation;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withIrsScoreExplanation(String irsScoreExplanation) {
         this.irsScoreExplanation = irsScoreExplanation;
         return this;
@@ -100,6 +111,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withName(String name) {
         this.name = name;
         return this;
@@ -108,6 +120,7 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provided_status")
     public String providedStatus;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withProvidedStatus(String providedStatus) {
         this.providedStatus = providedStatus;
         return this;
@@ -116,9 +129,11 @@ public class Oneapi1v11einVerification1lookupGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provided_status_explanation")
     public String providedStatusExplanation;
+
     public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies withProvidedStatusExplanation(String providedStatusExplanation) {
         this.providedStatusExplanation = providedStatusExplanation;
         return this;
     }
     
+    public Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies(){}
 }

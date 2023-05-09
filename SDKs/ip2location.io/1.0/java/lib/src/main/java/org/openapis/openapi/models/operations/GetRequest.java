@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
@@ -12,6 +13,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetFormatEnum format;
+
     public GetRequest withFormat(GetFormatEnum format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public GetRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -32,6 +35,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,9 +46,14 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public GetLangEnum lang;
+
     public GetRequest withLang(GetLangEnum lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetRequest(@JsonProperty("ip") String ip, @JsonProperty("key") String key) {
+        this.ip = ip;
+        this.key = key;
+  }
 }

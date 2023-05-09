@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentRequestsStatusJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05ConsentRequestsStatusJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05ConsentRequestsStatusJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class PostV05ConsentRequestsStatusJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ConsentRequestStatusRequest consentRequestStatusRequest;
+
     public PostV05ConsentRequestsStatusJsonRequest withConsentRequestStatusRequest(org.openapis.openapi.models.shared.ConsentRequestStatusRequest consentRequestStatusRequest) {
         this.consentRequestStatusRequest = consentRequestStatusRequest;
         return this;
     }
     
+    public PostV05ConsentRequestsStatusJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("ConsentRequestStatusRequest") org.openapis.openapi.models.shared.ConsentRequestStatusRequest consentRequestStatusRequest) {
+        this.authorization = authorization;
+        this.consentRequestStatusRequest = consentRequestStatusRequest;
+  }
 }

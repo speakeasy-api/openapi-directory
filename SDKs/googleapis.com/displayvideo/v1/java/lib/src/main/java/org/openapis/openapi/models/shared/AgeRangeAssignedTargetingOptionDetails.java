@@ -18,6 +18,7 @@ public class AgeRangeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageRange")
     public AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum ageRange;
+
     public AgeRangeAssignedTargetingOptionDetails withAgeRange(AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum ageRange) {
         this.ageRange = ageRange;
         return this;
@@ -29,9 +30,11 @@ public class AgeRangeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public AgeRangeAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public AgeRangeAssignedTargetingOptionDetails(){}
 }

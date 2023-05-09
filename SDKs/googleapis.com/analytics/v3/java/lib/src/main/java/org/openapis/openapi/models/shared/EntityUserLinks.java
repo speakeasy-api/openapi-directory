@@ -18,6 +18,7 @@ public class EntityUserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public EntityUserLink[] items;
+
     public EntityUserLinks withItems(EntityUserLink[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class EntityUserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsPerPage")
     public Integer itemsPerPage;
+
     public EntityUserLinks withItemsPerPage(Integer itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -40,6 +42,7 @@ public class EntityUserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EntityUserLinks withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class EntityUserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextLink")
     public String nextLink;
+
     public EntityUserLinks withNextLink(String nextLink) {
         this.nextLink = nextLink;
         return this;
@@ -62,6 +66,7 @@ public class EntityUserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousLink")
     public String previousLink;
+
     public EntityUserLinks withPreviousLink(String previousLink) {
         this.previousLink = previousLink;
         return this;
@@ -73,6 +78,7 @@ public class EntityUserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public EntityUserLinks withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -84,9 +90,11 @@ public class EntityUserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResults")
     public Integer totalResults;
+
     public EntityUserLinks withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public EntityUserLinks(){}
 }

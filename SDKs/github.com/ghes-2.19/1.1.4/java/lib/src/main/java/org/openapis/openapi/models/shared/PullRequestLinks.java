@@ -12,6 +12,7 @@ public class PullRequestLinks {
      */
     @JsonProperty("comments")
     public Link comments;
+
     public PullRequestLinks withComments(Link comments) {
         this.comments = comments;
         return this;
@@ -22,6 +23,7 @@ public class PullRequestLinks {
      */
     @JsonProperty("commits")
     public Link commits;
+
     public PullRequestLinks withCommits(Link commits) {
         this.commits = commits;
         return this;
@@ -32,6 +34,7 @@ public class PullRequestLinks {
      */
     @JsonProperty("html")
     public Link html;
+
     public PullRequestLinks withHtml(Link html) {
         this.html = html;
         return this;
@@ -42,6 +45,7 @@ public class PullRequestLinks {
      */
     @JsonProperty("issue")
     public Link issue;
+
     public PullRequestLinks withIssue(Link issue) {
         this.issue = issue;
         return this;
@@ -52,6 +56,7 @@ public class PullRequestLinks {
      */
     @JsonProperty("review_comment")
     public Link reviewComment;
+
     public PullRequestLinks withReviewComment(Link reviewComment) {
         this.reviewComment = reviewComment;
         return this;
@@ -62,6 +67,7 @@ public class PullRequestLinks {
      */
     @JsonProperty("review_comments")
     public Link reviewComments;
+
     public PullRequestLinks withReviewComments(Link reviewComments) {
         this.reviewComments = reviewComments;
         return this;
@@ -72,6 +78,7 @@ public class PullRequestLinks {
      */
     @JsonProperty("self")
     public Link self;
+
     public PullRequestLinks withSelf(Link self) {
         this.self = self;
         return this;
@@ -82,9 +89,20 @@ public class PullRequestLinks {
      */
     @JsonProperty("statuses")
     public Link statuses;
+
     public PullRequestLinks withStatuses(Link statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public PullRequestLinks(@JsonProperty("comments") Link comments, @JsonProperty("commits") Link commits, @JsonProperty("html") Link html, @JsonProperty("issue") Link issue, @JsonProperty("review_comment") Link reviewComment, @JsonProperty("review_comments") Link reviewComments, @JsonProperty("self") Link self, @JsonProperty("statuses") Link statuses) {
+        this.comments = comments;
+        this.commits = commits;
+        this.html = html;
+        this.issue = issue;
+        this.reviewComment = reviewComment;
+        this.reviewComments = reviewComments;
+        this.self = self;
+        this.statuses = statuses;
+  }
 }

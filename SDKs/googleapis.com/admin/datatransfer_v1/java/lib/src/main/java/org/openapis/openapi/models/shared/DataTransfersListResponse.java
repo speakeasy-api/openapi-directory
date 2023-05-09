@@ -18,6 +18,7 @@ public class DataTransfersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTransfers")
     public DataTransfer[] dataTransfers;
+
     public DataTransfersListResponse withDataTransfers(DataTransfer[] dataTransfers) {
         this.dataTransfers = dataTransfers;
         return this;
@@ -29,6 +30,7 @@ public class DataTransfersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public DataTransfersListResponse withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class DataTransfersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DataTransfersListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class DataTransfersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DataTransfersListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public DataTransfersListResponse(){}
 }

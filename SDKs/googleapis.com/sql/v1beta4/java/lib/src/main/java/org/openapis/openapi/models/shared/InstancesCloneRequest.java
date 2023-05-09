@@ -18,9 +18,11 @@ public class InstancesCloneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloneContext")
     public CloneContext cloneContext;
+
     public InstancesCloneRequest withCloneContext(CloneContext cloneContext) {
         this.cloneContext = cloneContext;
         return this;
     }
     
+    public InstancesCloneRequest(){}
 }

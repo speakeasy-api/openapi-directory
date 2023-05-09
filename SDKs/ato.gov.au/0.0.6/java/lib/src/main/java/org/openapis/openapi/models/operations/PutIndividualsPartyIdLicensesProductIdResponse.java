@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutIndividualsPartyIdLicensesProductIdResponse {
     
     public String contentType;
+
     public PutIndividualsPartyIdLicensesProductIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutIndividualsPartyIdLicensesProductIdResponse {
     
     
     public Integer statusCode;
+
     public PutIndividualsPartyIdLicensesProductIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutIndividualsPartyIdLicensesProductIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutIndividualsPartyIdLicensesProductIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutIndividualsPartyIdLicensesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PutIndividualsPartyIdLicensesProductIdResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -43,6 +48,7 @@ public class PutIndividualsPartyIdLicensesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.License license;
+
     public PutIndividualsPartyIdLicensesProductIdResponse withLicense(org.openapis.openapi.models.shared.License license) {
         this.license = license;
         return this;
@@ -53,6 +59,7 @@ public class PutIndividualsPartyIdLicensesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutIndividualsPartyIdLicensesProductIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -63,9 +70,14 @@ public class PutIndividualsPartyIdLicensesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PutIndividualsPartyIdLicensesProductIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PutIndividualsPartyIdLicensesProductIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

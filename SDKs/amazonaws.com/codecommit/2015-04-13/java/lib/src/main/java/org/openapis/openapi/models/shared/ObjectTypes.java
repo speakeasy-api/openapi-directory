@@ -15,6 +15,7 @@ public class ObjectTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public ObjectTypeEnumEnum base;
+
     public ObjectTypes withBase(ObjectTypeEnumEnum base) {
         this.base = base;
         return this;
@@ -23,6 +24,7 @@ public class ObjectTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public ObjectTypeEnumEnum destination;
+
     public ObjectTypes withDestination(ObjectTypeEnumEnum destination) {
         this.destination = destination;
         return this;
@@ -31,9 +33,11 @@ public class ObjectTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public ObjectTypeEnumEnum source;
+
     public ObjectTypes withSource(ObjectTypeEnumEnum source) {
         this.source = source;
         return this;
     }
     
+    public ObjectTypes(){}
 }

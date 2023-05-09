@@ -18,6 +18,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appAutoApprovalEnabled")
     public Boolean appAutoApprovalEnabled;
+
     public Enterprise withAppAutoApprovalEnabled(Boolean appAutoApprovalEnabled) {
         this.appAutoApprovalEnabled = appAutoApprovalEnabled;
         return this;
@@ -29,6 +30,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactInfo")
     public ContactInfo contactInfo;
+
     public Enterprise withContactInfo(ContactInfo contactInfo) {
         this.contactInfo = contactInfo;
         return this;
@@ -40,6 +42,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledNotificationTypes")
     public EnterpriseEnabledNotificationTypesEnum[] enabledNotificationTypes;
+
     public Enterprise withEnabledNotificationTypes(EnterpriseEnabledNotificationTypesEnum[] enabledNotificationTypes) {
         this.enabledNotificationTypes = enabledNotificationTypes;
         return this;
@@ -51,6 +54,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enterpriseDisplayName")
     public String enterpriseDisplayName;
+
     public Enterprise withEnterpriseDisplayName(String enterpriseDisplayName) {
         this.enterpriseDisplayName = enterpriseDisplayName;
         return this;
@@ -62,6 +66,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public ExternalData logo;
+
     public Enterprise withLogo(ExternalData logo) {
         this.logo = logo;
         return this;
@@ -73,6 +78,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Enterprise withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryColor")
     public Integer primaryColor;
+
     public Enterprise withPrimaryColor(Integer primaryColor) {
         this.primaryColor = primaryColor;
         return this;
@@ -95,6 +102,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public Enterprise withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
@@ -106,6 +114,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signinDetails")
     public SigninDetail[] signinDetails;
+
     public Enterprise withSigninDetails(SigninDetail[] signinDetails) {
         this.signinDetails = signinDetails;
         return this;
@@ -117,9 +126,11 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsAndConditions")
     public TermsAndConditions[] termsAndConditions;
+
     public Enterprise withTermsAndConditions(TermsAndConditions[] termsAndConditions) {
         this.termsAndConditions = termsAndConditions;
         return this;
     }
     
+    public Enterprise(){}
 }

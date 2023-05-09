@@ -18,6 +18,7 @@ public class ListCertificateIssuanceConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateIssuanceConfigs")
     public CertificateIssuanceConfig[] certificateIssuanceConfigs;
+
     public ListCertificateIssuanceConfigsResponse withCertificateIssuanceConfigs(CertificateIssuanceConfig[] certificateIssuanceConfigs) {
         this.certificateIssuanceConfigs = certificateIssuanceConfigs;
         return this;
@@ -29,6 +30,7 @@ public class ListCertificateIssuanceConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCertificateIssuanceConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListCertificateIssuanceConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListCertificateIssuanceConfigsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListCertificateIssuanceConfigsResponse(){}
 }

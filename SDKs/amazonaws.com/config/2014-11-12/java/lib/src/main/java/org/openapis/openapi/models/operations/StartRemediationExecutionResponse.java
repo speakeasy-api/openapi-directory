@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartRemediationExecutionResponse {
     
     public String contentType;
+
     public StartRemediationExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartRemediationExecutionResponse {
      */
     
     public Object insufficientPermissionsException;
+
     public StartRemediationExecutionResponse withInsufficientPermissionsException(Object insufficientPermissionsException) {
         this.insufficientPermissionsException = insufficientPermissionsException;
         return this;
@@ -29,6 +32,7 @@ public class StartRemediationExecutionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StartRemediationExecutionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class StartRemediationExecutionResponse {
      */
     
     public Object noSuchRemediationConfigurationException;
+
     public StartRemediationExecutionResponse withNoSuchRemediationConfigurationException(Object noSuchRemediationConfigurationException) {
         this.noSuchRemediationConfigurationException = noSuchRemediationConfigurationException;
         return this;
@@ -49,6 +54,7 @@ public class StartRemediationExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartRemediationExecutionResponse startRemediationExecutionResponse;
+
     public StartRemediationExecutionResponse withStartRemediationExecutionResponse(org.openapis.openapi.models.shared.StartRemediationExecutionResponse startRemediationExecutionResponse) {
         this.startRemediationExecutionResponse = startRemediationExecutionResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartRemediationExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartRemediationExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartRemediationExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartRemediationExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartRemediationExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

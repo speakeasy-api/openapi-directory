@@ -56,7 +56,7 @@ public class Runs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunsForRouteResponse res = new org.openapis.openapi.models.operations.RunsForRouteResponse() {{
+        org.openapis.openapi.models.operations.RunsForRouteResponse res = new org.openapis.openapi.models.operations.RunsForRouteResponse(contentType, httpRes.statusCode()) {{
             v3RunsResponse = null;
             v3RunsResponse = null;
             body = null;
@@ -64,8 +64,6 @@ public class Runs {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,7 +128,7 @@ public class Runs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeResponse res = new org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeResponse() {{
+        org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeResponse res = new org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeResponse(contentType, httpRes.statusCode()) {{
             v3RunsResponse = null;
             v3RunsResponse = null;
             body = null;
@@ -138,8 +136,6 @@ public class Runs {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,7 +200,7 @@ public class Runs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunsForRunResponse res = new org.openapis.openapi.models.operations.RunsForRunResponse() {{
+        org.openapis.openapi.models.operations.RunsForRunResponse res = new org.openapis.openapi.models.operations.RunsForRunResponse(contentType, httpRes.statusCode()) {{
             v3RunsResponse = null;
             v3RunsResponse = null;
             body = null;
@@ -212,8 +208,6 @@ public class Runs {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,7 +272,7 @@ public class Runs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunsForRunAndRouteTypeResponse res = new org.openapis.openapi.models.operations.RunsForRunAndRouteTypeResponse() {{
+        org.openapis.openapi.models.operations.RunsForRunAndRouteTypeResponse res = new org.openapis.openapi.models.operations.RunsForRunAndRouteTypeResponse(contentType, httpRes.statusCode()) {{
             v3RunResponse = null;
             v3RunResponse = null;
             body = null;
@@ -286,8 +280,6 @@ public class Runs {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

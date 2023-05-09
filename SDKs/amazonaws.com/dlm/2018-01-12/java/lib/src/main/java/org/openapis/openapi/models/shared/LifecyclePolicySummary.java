@@ -15,6 +15,7 @@ public class LifecyclePolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public LifecyclePolicySummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class LifecyclePolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public LifecyclePolicySummary withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -31,6 +33,7 @@ public class LifecyclePolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyType")
     public PolicyTypeValuesEnum policyType;
+
     public LifecyclePolicySummary withPolicyType(PolicyTypeValuesEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -39,6 +42,7 @@ public class LifecyclePolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public GettablePolicyStateValuesEnum state;
+
     public LifecyclePolicySummary withState(GettablePolicyStateValuesEnum state) {
         this.state = state;
         return this;
@@ -47,9 +51,11 @@ public class LifecyclePolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public LifecyclePolicySummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public LifecyclePolicySummary(){}
 }

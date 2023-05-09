@@ -18,6 +18,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowOverwrite")
     public Boolean allowOverwrite;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withAllowOverwrite(Boolean allowOverwrite) {
         this.allowOverwrite = allowOverwrite;
         return this;
@@ -26,6 +27,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockSize")
     public Integer blockSize;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withBlockSize(Integer blockSize) {
         this.blockSize = blockSize;
         return this;
@@ -37,6 +39,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuMemCost")
     public Integer cpuMemCost;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withCpuMemCost(Integer cpuMemCost) {
         this.cpuMemCost = cpuMemCost;
         return this;
@@ -48,6 +51,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedProjectNumber")
     public String delegatedProjectNumber;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withDelegatedProjectNumber(String delegatedProjectNumber) {
         this.delegatedProjectNumber = delegatedProjectNumber;
         return this;
@@ -56,6 +60,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dkLen")
     public Integer dkLen;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withDkLen(Integer dkLen) {
         this.dkLen = dkLen;
         return this;
@@ -67,6 +72,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashAlgorithm")
     public String hashAlgorithm;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withHashAlgorithm(String hashAlgorithm) {
         this.hashAlgorithm = hashAlgorithm;
         return this;
@@ -78,6 +84,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryCost")
     public Integer memoryCost;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withMemoryCost(Integer memoryCost) {
         this.memoryCost = memoryCost;
         return this;
@@ -86,6 +93,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelization")
     public Integer parallelization;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withParallelization(Integer parallelization) {
         this.parallelization = parallelization;
         return this;
@@ -97,6 +105,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rounds")
     public Integer rounds;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withRounds(Integer rounds) {
         this.rounds = rounds;
         return this;
@@ -108,6 +117,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saltSeparator")
     public String saltSeparator;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withSaltSeparator(String saltSeparator) {
         this.saltSeparator = saltSeparator;
         return this;
@@ -119,6 +129,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sanityCheck")
     public Boolean sanityCheck;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withSanityCheck(Boolean sanityCheck) {
         this.sanityCheck = sanityCheck;
         return this;
@@ -130,6 +141,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signerKey")
     public String signerKey;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withSignerKey(String signerKey) {
         this.signerKey = signerKey;
         return this;
@@ -141,6 +153,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetProjectId")
     public String targetProjectId;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withTargetProjectId(String targetProjectId) {
         this.targetProjectId = targetProjectId;
         return this;
@@ -152,9 +165,11 @@ public class IdentitytoolkitRelyingpartyUploadAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public UserInfo[] users;
+
     public IdentitytoolkitRelyingpartyUploadAccountRequest withUsers(UserInfo[] users) {
         this.users = users;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyUploadAccountRequest(){}
 }

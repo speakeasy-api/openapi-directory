@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse {
     
     public String contentType;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsc
     
     
     public Integer statusCode;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsc
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsc
      */
     
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclusters200ApplicationJSON getUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclusters200ApplicationJSONObject;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse withGetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclusters200ApplicationJSONObject(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclusters200ApplicationJSON getUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclusters200ApplicationJSONObject) {
         this.getUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclusters200ApplicationJSONObject = getUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclusters200ApplicationJSONObject;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

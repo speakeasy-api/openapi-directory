@@ -83,4 +83,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ServicePerimeter.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServicePerimeterConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/VpcAccessibleServices.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListServicePerimetersResponse.java
+docs/sdk/README.md
+docs/accesspolicies/README.md
+docs/operations/README.md
 USAGE.md

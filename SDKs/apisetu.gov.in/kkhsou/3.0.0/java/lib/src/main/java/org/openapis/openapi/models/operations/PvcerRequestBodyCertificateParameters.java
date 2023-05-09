@@ -12,6 +12,7 @@ public class PvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("ENROL_NO")
     public String enrolNo;
+
     public PvcerRequestBodyCertificateParameters withEnrolNo(String enrolNo) {
         this.enrolNo = enrolNo;
         return this;
@@ -22,6 +23,7 @@ public class PvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public PvcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,9 +34,15 @@ public class PvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("YEAR")
     public String year;
+
     public PvcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public PvcerRequestBodyCertificateParameters(@JsonProperty("ENROL_NO") String enrolNo, @JsonProperty("FullName") String fullName, @JsonProperty("YEAR") String year) {
+        this.enrolNo = enrolNo;
+        this.fullName = fullName;
+        this.year = year;
+  }
 }

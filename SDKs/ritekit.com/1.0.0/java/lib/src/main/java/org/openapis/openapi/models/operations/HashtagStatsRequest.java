@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HashtagStatsRequest {
@@ -12,9 +13,13 @@ public class HashtagStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tags")
     public Object[] tags;
+
     public HashtagStatsRequest withTags(Object[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public HashtagStatsRequest(@JsonProperty("tags") Object[] tags) {
+        this.tags = tags;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public GoogleCloudDialogflowV2QueryResult withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allRequiredParamsPresent")
     public Boolean allRequiredParamsPresent;
+
     public GoogleCloudDialogflowV2QueryResult withAllRequiredParamsPresent(Boolean allRequiredParamsPresent) {
         this.allRequiredParamsPresent = allRequiredParamsPresent;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelsSlotFilling")
     public Boolean cancelsSlotFilling;
+
     public GoogleCloudDialogflowV2QueryResult withCancelsSlotFilling(Boolean cancelsSlotFilling) {
         this.cancelsSlotFilling = cancelsSlotFilling;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnosticInfo")
     public java.util.Map<String, Object> diagnosticInfo;
+
     public GoogleCloudDialogflowV2QueryResult withDiagnosticInfo(java.util.Map<String, Object> diagnosticInfo) {
         this.diagnosticInfo = diagnosticInfo;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentMessages")
     public GoogleCloudDialogflowV2IntentMessage[] fulfillmentMessages;
+
     public GoogleCloudDialogflowV2QueryResult withFulfillmentMessages(GoogleCloudDialogflowV2IntentMessage[] fulfillmentMessages) {
         this.fulfillmentMessages = fulfillmentMessages;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentText")
     public String fulfillmentText;
+
     public GoogleCloudDialogflowV2QueryResult withFulfillmentText(String fulfillmentText) {
         this.fulfillmentText = fulfillmentText;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public GoogleCloudDialogflowV2Intent intent;
+
     public GoogleCloudDialogflowV2QueryResult withIntent(GoogleCloudDialogflowV2Intent intent) {
         this.intent = intent;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentDetectionConfidence")
     public Float intentDetectionConfidence;
+
     public GoogleCloudDialogflowV2QueryResult withIntentDetectionConfidence(Float intentDetectionConfidence) {
         this.intentDetectionConfidence = intentDetectionConfidence;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2QueryResult withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputContexts")
     public GoogleCloudDialogflowV2Context[] outputContexts;
+
     public GoogleCloudDialogflowV2QueryResult withOutputContexts(GoogleCloudDialogflowV2Context[] outputContexts) {
         this.outputContexts = outputContexts;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GoogleCloudDialogflowV2QueryResult withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryText")
     public String queryText;
+
     public GoogleCloudDialogflowV2QueryResult withQueryText(String queryText) {
         this.queryText = queryText;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentAnalysisResult")
     public GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysisResult;
+
     public GoogleCloudDialogflowV2QueryResult withSentimentAnalysisResult(GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysisResult) {
         this.sentimentAnalysisResult = sentimentAnalysisResult;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speechRecognitionConfidence")
     public Float speechRecognitionConfidence;
+
     public GoogleCloudDialogflowV2QueryResult withSpeechRecognitionConfidence(Float speechRecognitionConfidence) {
         this.speechRecognitionConfidence = speechRecognitionConfidence;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookPayload")
     public java.util.Map<String, Object> webhookPayload;
+
     public GoogleCloudDialogflowV2QueryResult withWebhookPayload(java.util.Map<String, Object> webhookPayload) {
         this.webhookPayload = webhookPayload;
         return this;
@@ -183,9 +198,11 @@ public class GoogleCloudDialogflowV2QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookSource")
     public String webhookSource;
+
     public GoogleCloudDialogflowV2QueryResult withWebhookSource(String webhookSource) {
         this.webhookSource = webhookSource;
         return this;
     }
     
+    public GoogleCloudDialogflowV2QueryResult(){}
 }

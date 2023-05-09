@@ -15,6 +15,7 @@ public class QueuedResponseData {
      */
     @JsonProperty("id")
     public String id;
+
     public QueuedResponseData withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class QueuedResponseData {
      */
     @JsonProperty("message")
     public String message;
+
     public QueuedResponseData withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public QueuedResponseData(@JsonProperty("id") String id, @JsonProperty("message") String message) {
+        this.id = id;
+        this.message = message;
+  }
 }

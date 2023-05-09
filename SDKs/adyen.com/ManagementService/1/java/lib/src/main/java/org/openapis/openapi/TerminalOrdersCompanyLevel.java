@@ -65,12 +65,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdBillingEntitiesResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdBillingEntitiesResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdBillingEntitiesResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdBillingEntitiesResponse(contentType, httpRes.statusCode()) {{
             billingEntitiesResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -125,12 +123,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdShippingLocationsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdShippingLocationsResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdShippingLocationsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdShippingLocationsResponse(contentType, httpRes.statusCode()) {{
             shippingLocationsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,12 +175,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalModelsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalModelsResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalModelsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalModelsResponse(contentType, httpRes.statusCode()) {{
             terminalModelsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,12 +233,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalOrdersResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalOrdersResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalOrdersResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalOrdersResponse(contentType, httpRes.statusCode()) {{
             terminalOrdersResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,12 +284,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalOrdersOrderIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalOrdersOrderIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalOrdersOrderIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalOrdersOrderIdResponse(contentType, httpRes.statusCode()) {{
             terminalOrder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -351,12 +341,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalProductsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalProductsResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalProductsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalProductsResponse(contentType, httpRes.statusCode()) {{
             terminalProductsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,12 +398,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalOrdersOrderIdResponse res = new org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalOrdersOrderIdResponse() {{
+        org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalOrdersOrderIdResponse res = new org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalOrdersOrderIdResponse(contentType, httpRes.statusCode()) {{
             terminalOrder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -464,12 +450,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdShippingLocationsResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdShippingLocationsResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdShippingLocationsResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdShippingLocationsResponse(contentType, httpRes.statusCode()) {{
             shippingLocation = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -518,12 +502,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdTerminalOrdersResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdTerminalOrdersResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdTerminalOrdersResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdTerminalOrdersResponse(contentType, httpRes.statusCode()) {{
             terminalOrder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -572,12 +554,10 @@ public class TerminalOrdersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdTerminalOrdersOrderIdCancelResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdTerminalOrdersOrderIdCancelResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdTerminalOrdersOrderIdCancelResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdTerminalOrdersOrderIdCancelResponse(contentType, httpRes.statusCode()) {{
             terminalOrder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class RelatedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public String assetType;
+
     public RelatedResource withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -29,9 +30,11 @@ public class RelatedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullResourceName")
     public String fullResourceName;
+
     public RelatedResource withFullResourceName(String fullResourceName) {
         this.fullResourceName = fullResourceName;
         return this;
     }
     
+    public RelatedResource(){}
 }

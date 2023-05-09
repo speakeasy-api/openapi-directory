@@ -23,6 +23,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acl")
     public ObjectAccessControl[] acl;
+
     public Object withAcl(ObjectAccessControl[] acl) {
         this.acl = acl;
         return this;
@@ -34,6 +35,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public Object withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -45,6 +47,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheControl")
     public String cacheControl;
+
     public Object withCacheControl(String cacheControl) {
         this.cacheControl = cacheControl;
         return this;
@@ -56,6 +59,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentCount")
     public Integer componentCount;
+
     public Object withComponentCount(Integer componentCount) {
         this.componentCount = componentCount;
         return this;
@@ -67,6 +71,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDisposition")
     public String contentDisposition;
+
     public Object withContentDisposition(String contentDisposition) {
         this.contentDisposition = contentDisposition;
         return this;
@@ -78,6 +83,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentEncoding")
     public String contentEncoding;
+
     public Object withContentEncoding(String contentEncoding) {
         this.contentEncoding = contentEncoding;
         return this;
@@ -89,6 +95,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLanguage")
     public String contentLanguage;
+
     public Object withContentLanguage(String contentLanguage) {
         this.contentLanguage = contentLanguage;
         return this;
@@ -100,6 +107,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public Object withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -111,6 +119,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crc32c")
     public String crc32c;
+
     public Object withCrc32c(String crc32c) {
         this.crc32c = crc32c;
         return this;
@@ -124,6 +133,7 @@ public class Object {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("customTime")
     public OffsetDateTime customTime;
+
     public Object withCustomTime(OffsetDateTime customTime) {
         this.customTime = customTime;
         return this;
@@ -135,6 +145,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerEncryption")
     public ObjectCustomerEncryption customerEncryption;
+
     public Object withCustomerEncryption(ObjectCustomerEncryption customerEncryption) {
         this.customerEncryption = customerEncryption;
         return this;
@@ -146,6 +157,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Object withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -157,6 +169,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventBasedHold")
     public Boolean eventBasedHold;
+
     public Object withEventBasedHold(Boolean eventBasedHold) {
         this.eventBasedHold = eventBasedHold;
         return this;
@@ -168,6 +181,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generation")
     public String generation;
+
     public Object withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -179,6 +193,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Object withId(String id) {
         this.id = id;
         return this;
@@ -190,6 +205,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Object withKind(String kind) {
         this.kind = kind;
         return this;
@@ -201,6 +217,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public Object withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -212,6 +229,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5Hash")
     public String md5Hash;
+
     public Object withMd5Hash(String md5Hash) {
         this.md5Hash = md5Hash;
         return this;
@@ -223,6 +241,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaLink")
     public String mediaLink;
+
     public Object withMediaLink(String mediaLink) {
         this.mediaLink = mediaLink;
         return this;
@@ -234,6 +253,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public Object withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -245,6 +265,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metageneration")
     public String metageneration;
+
     public Object withMetageneration(String metageneration) {
         this.metageneration = metageneration;
         return this;
@@ -256,6 +277,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Object withName(String name) {
         this.name = name;
         return this;
@@ -267,6 +289,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public ObjectOwner owner;
+
     public Object withOwner(ObjectOwner owner) {
         this.owner = owner;
         return this;
@@ -280,6 +303,7 @@ public class Object {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("retentionExpirationTime")
     public OffsetDateTime retentionExpirationTime;
+
     public Object withRetentionExpirationTime(OffsetDateTime retentionExpirationTime) {
         this.retentionExpirationTime = retentionExpirationTime;
         return this;
@@ -291,6 +315,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Object withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -302,6 +327,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public Object withSize(String size) {
         this.size = size;
         return this;
@@ -313,6 +339,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageClass")
     public String storageClass;
+
     public Object withStorageClass(String storageClass) {
         this.storageClass = storageClass;
         return this;
@@ -324,6 +351,7 @@ public class Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temporaryHold")
     public Boolean temporaryHold;
+
     public Object withTemporaryHold(Boolean temporaryHold) {
         this.temporaryHold = temporaryHold;
         return this;
@@ -337,6 +365,7 @@ public class Object {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeCreated")
     public OffsetDateTime timeCreated;
+
     public Object withTimeCreated(OffsetDateTime timeCreated) {
         this.timeCreated = timeCreated;
         return this;
@@ -350,6 +379,7 @@ public class Object {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeDeleted")
     public OffsetDateTime timeDeleted;
+
     public Object withTimeDeleted(OffsetDateTime timeDeleted) {
         this.timeDeleted = timeDeleted;
         return this;
@@ -363,6 +393,7 @@ public class Object {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeStorageClassUpdated")
     public OffsetDateTime timeStorageClassUpdated;
+
     public Object withTimeStorageClassUpdated(OffsetDateTime timeStorageClassUpdated) {
         this.timeStorageClassUpdated = timeStorageClassUpdated;
         return this;
@@ -376,9 +407,11 @@ public class Object {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public Object withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public Object(){}
 }

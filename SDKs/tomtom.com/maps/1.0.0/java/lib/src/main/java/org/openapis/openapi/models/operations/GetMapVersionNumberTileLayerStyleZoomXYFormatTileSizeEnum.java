@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum - Tile dimensions in pixels. &lt;em&gt;512&lt;/em&gt; is only available for the &lt;em&gt;main&lt;/em&gt; style and &lt;em&gt;basic&lt;/em&gt; or &lt;em&gt;labels&lt;/em&gt; layers.
  */
 public enum GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum {
-    TWO_HUNDRED_AND_FIFTY_SIX("256"),
-    FIVE_HUNDRED_AND_TWELVE("512");
+    TWO_HUNDRED_AND_FIFTY_SIX(256L),
+    FIVE_HUNDRED_AND_TWELVE(512L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum(String value) {
+    private GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum(Long value) {
         this.value = value;
     }
 }

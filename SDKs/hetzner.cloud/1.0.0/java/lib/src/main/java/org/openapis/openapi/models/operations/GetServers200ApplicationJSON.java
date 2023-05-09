@@ -15,6 +15,7 @@ public class GetServers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetServers200ApplicationJSONMeta meta;
+
     public GetServers200ApplicationJSON withMeta(GetServers200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
@@ -22,9 +23,13 @@ public class GetServers200ApplicationJSON {
     
     @JsonProperty("servers")
     public GetServers200ApplicationJSONServers[] servers;
+
     public GetServers200ApplicationJSON withServers(GetServers200ApplicationJSONServers[] servers) {
         this.servers = servers;
         return this;
     }
     
+    public GetServers200ApplicationJSON(@JsonProperty("servers") GetServers200ApplicationJSONServers[] servers) {
+        this.servers = servers;
+  }
 }

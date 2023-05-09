@@ -15,6 +15,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateList")
     public String dateList;
+
     public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates withDateList(String dateList) {
         this.dateList = dateList;
         return this;
@@ -26,6 +27,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceFrom")
     public String priceFrom;
+
     public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates withPriceFrom(String priceFrom) {
         this.priceFrom = priceFrom;
         return this;
@@ -37,9 +39,11 @@ public class AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceQuote")
     public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPriceQuote priceQuote;
+
     public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates withPriceQuote(AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPriceQuote priceQuote) {
         this.priceQuote = priceQuote;
         return this;
     }
     
+    public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates(){}
 }

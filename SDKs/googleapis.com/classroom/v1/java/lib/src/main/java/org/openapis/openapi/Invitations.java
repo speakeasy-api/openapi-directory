@@ -60,11 +60,9 @@ public class Invitations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomInvitationsAcceptResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsAcceptResponse() {{
+        org.openapis.openapi.models.operations.ClassroomInvitationsAcceptResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsAcceptResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Invitations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomInvitationsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomInvitationsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsCreateResponse(contentType, httpRes.statusCode()) {{
             invitation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Invitations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomInvitationsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomInvitationsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Invitations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomInvitationsGetResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomInvitationsGetResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsGetResponse(contentType, httpRes.statusCode()) {{
             invitation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Invitations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomInvitationsListResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomInvitationsListResponse res = new org.openapis.openapi.models.operations.ClassroomInvitationsListResponse(contentType, httpRes.statusCode()) {{
             listInvitationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBuildResponse {
@@ -12,6 +13,7 @@ public class CreateBuildResponse {
      */
     
     public Object conflictException;
+
     public CreateBuildResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBuildResponse {
     
     
     public String contentType;
+
     public CreateBuildResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBuildResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBuildOutput createBuildOutput;
+
     public CreateBuildResponse withCreateBuildOutput(org.openapis.openapi.models.shared.CreateBuildOutput createBuildOutput) {
         this.createBuildOutput = createBuildOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateBuildResponse {
      */
     
     public Object internalServiceException;
+
     public CreateBuildResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBuildResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateBuildResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class CreateBuildResponse {
     
     
     public Integer statusCode;
+
     public CreateBuildResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateBuildResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBuildResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateBuildResponse {
      */
     
     public Object taggingFailedException;
+
     public CreateBuildResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -83,9 +92,14 @@ public class CreateBuildResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateBuildResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateBuildResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class DisplayDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableDisplay")
     public Boolean enableDisplay;
+
     public DisplayDevice withEnableDisplay(Boolean enableDisplay) {
         this.enableDisplay = enableDisplay;
         return this;
     }
     
+    public DisplayDevice(){}
 }

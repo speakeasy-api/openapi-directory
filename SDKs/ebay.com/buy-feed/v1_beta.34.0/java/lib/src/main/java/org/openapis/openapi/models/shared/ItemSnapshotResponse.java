@@ -18,9 +18,11 @@ public class ItemSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ItemSnapshot[] items;
+
     public ItemSnapshotResponse withItems(ItemSnapshot[] items) {
         this.items = items;
         return this;
     }
     
+    public ItemSnapshotResponse(){}
 }

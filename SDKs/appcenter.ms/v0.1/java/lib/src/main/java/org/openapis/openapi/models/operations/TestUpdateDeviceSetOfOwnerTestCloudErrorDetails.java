@@ -15,6 +15,7 @@ public class TestUpdateDeviceSetOfOwnerTestCloudErrorDetails {
      */
     @JsonProperty("message")
     public String message;
+
     public TestUpdateDeviceSetOfOwnerTestCloudErrorDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class TestUpdateDeviceSetOfOwnerTestCloudErrorDetails {
      */
     @JsonProperty("status")
     public String status;
+
     public TestUpdateDeviceSetOfOwnerTestCloudErrorDetails withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TestUpdateDeviceSetOfOwnerTestCloudErrorDetails(@JsonProperty("message") String message, @JsonProperty("status") String status) {
+        this.message = message;
+        this.status = status;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionTargetTcpProxiesInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionTargetTcpProxiesInsertSecurityOption1 option1;
+
     public ComputeRegionTargetTcpProxiesInsertSecurity withOption1(ComputeRegionTargetTcpProxiesInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionTargetTcpProxiesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionTargetTcpProxiesInsertSecurityOption2 option2;
+
     public ComputeRegionTargetTcpProxiesInsertSecurity withOption2(ComputeRegionTargetTcpProxiesInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionTargetTcpProxiesInsertSecurity(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class UserUserMembershipData {
     
     public UserGeneralUser bungieNetUser;
+
     public UserUserMembershipData withBungieNetUser(UserGeneralUser bungieNetUser) {
         this.bungieNetUser = bungieNetUser;
         return this;
@@ -19,6 +20,7 @@ public class UserUserMembershipData {
      */
     
     public GroupsV2GroupUserInfoCard[] destinyMemberships;
+
     public UserUserMembershipData withDestinyMemberships(GroupsV2GroupUserInfoCard[] destinyMemberships) {
         this.destinyMemberships = destinyMemberships;
         return this;
@@ -30,9 +32,11 @@ public class UserUserMembershipData {
      */
     
     public Long primaryMembershipId;
+
     public UserUserMembershipData withPrimaryMembershipId(Long primaryMembershipId) {
         this.primaryMembershipId = primaryMembershipId;
         return this;
     }
     
+    public UserUserMembershipData(){}
 }

@@ -13,6 +13,7 @@ public class GetSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ad_rep_account_id")
     public String adRepAccountId;
+
     public GetSeriesRequest withAdRepAccountId(String adRepAccountId) {
         this.adRepAccountId = adRepAccountId;
         return this;
@@ -26,6 +27,7 @@ public class GetSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetSeriesRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -36,6 +38,7 @@ public class GetSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=network_id")
     public String networkId;
+
     public GetSeriesRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -48,6 +51,7 @@ public class GetSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public GetSeriesRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -60,6 +64,7 @@ public class GetSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetSeriesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -70,6 +75,7 @@ public class GetSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetSeriesRequest withQ(String q) {
         this.q = q;
         return this;
@@ -82,9 +88,11 @@ public class GetSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public GetSeriesSortEnum[] sort;
+
     public GetSeriesRequest withSort(GetSeriesSortEnum[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetSeriesRequest(){}
 }

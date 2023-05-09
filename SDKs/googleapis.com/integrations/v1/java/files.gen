@@ -169,6 +169,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1al
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaCloudKmsConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaListConnectionsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1Connection.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1ConnectionStatusStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1ConnectionStatus.java
@@ -180,6 +181,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1SslC
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1Secret.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1ConfigVariable.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1NodeConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1LogConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1LockConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1DestinationConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1Destination.java
@@ -190,6 +192,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1Auth
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaRuntimeActionSchema.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaListRuntimeEntitySchemasResponse.java
@@ -445,4 +448,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1al
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaSfdcChannelInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaSfdcChannel.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudIntegrationsV1alphaListSfdcChannelsResponse.java
+docs/sdk/README.md
+docs/callback/README.md
+docs/connectorplatformregions/README.md
+docs/projects/README.md
 USAGE.md

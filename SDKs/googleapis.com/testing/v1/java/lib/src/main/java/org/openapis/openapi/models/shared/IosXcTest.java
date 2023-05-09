@@ -18,6 +18,7 @@ public class IosXcTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appBundleId")
     public String appBundleId;
+
     public IosXcTest withAppBundleId(String appBundleId) {
         this.appBundleId = appBundleId;
         return this;
@@ -29,6 +30,7 @@ public class IosXcTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSpecialEntitlements")
     public Boolean testSpecialEntitlements;
+
     public IosXcTest withTestSpecialEntitlements(Boolean testSpecialEntitlements) {
         this.testSpecialEntitlements = testSpecialEntitlements;
         return this;
@@ -40,6 +42,7 @@ public class IosXcTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testsZip")
     public FileReference testsZip;
+
     public IosXcTest withTestsZip(FileReference testsZip) {
         this.testsZip = testsZip;
         return this;
@@ -51,6 +54,7 @@ public class IosXcTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcodeVersion")
     public String xcodeVersion;
+
     public IosXcTest withXcodeVersion(String xcodeVersion) {
         this.xcodeVersion = xcodeVersion;
         return this;
@@ -62,9 +66,11 @@ public class IosXcTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xctestrun")
     public FileReference xctestrun;
+
     public IosXcTest withXctestrun(FileReference xctestrun) {
         this.xctestrun = xctestrun;
         return this;
     }
     
+    public IosXcTest(){}
 }

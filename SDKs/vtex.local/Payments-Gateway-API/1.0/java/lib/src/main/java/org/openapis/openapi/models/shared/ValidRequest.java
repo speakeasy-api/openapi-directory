@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidRequest {
     @JsonProperty("installments")
     public Installment[] installments;
+
     public ValidRequest withInstallments(Installment[] installments) {
         this.installments = installments;
         return this;
@@ -16,9 +17,14 @@ public class ValidRequest {
     
     @JsonProperty("value")
     public Double value;
+
     public ValidRequest withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ValidRequest(@JsonProperty("installments") Installment[] installments, @JsonProperty("value") Double value) {
+        this.installments = installments;
+        this.value = value;
+  }
 }

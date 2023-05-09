@@ -15,6 +15,7 @@ public class CreateProvisioningTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateProvisioningTemplateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateProvisioningTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CreateProvisioningTemplateRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -37,6 +39,7 @@ public class CreateProvisioningTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preProvisioningHook")
     public CreateProvisioningTemplateRequestBodyPreProvisioningHook preProvisioningHook;
+
     public CreateProvisioningTemplateRequestBody withPreProvisioningHook(CreateProvisioningTemplateRequestBodyPreProvisioningHook preProvisioningHook) {
         this.preProvisioningHook = preProvisioningHook;
         return this;
@@ -47,6 +50,7 @@ public class CreateProvisioningTemplateRequestBody {
      */
     @JsonProperty("provisioningRoleArn")
     public String provisioningRoleArn;
+
     public CreateProvisioningTemplateRequestBody withProvisioningRoleArn(String provisioningRoleArn) {
         this.provisioningRoleArn = provisioningRoleArn;
         return this;
@@ -58,6 +62,7 @@ public class CreateProvisioningTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateProvisioningTemplateRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -68,6 +73,7 @@ public class CreateProvisioningTemplateRequestBody {
      */
     @JsonProperty("templateBody")
     public String templateBody;
+
     public CreateProvisioningTemplateRequestBody withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -78,6 +84,7 @@ public class CreateProvisioningTemplateRequestBody {
      */
     @JsonProperty("templateName")
     public String templateName;
+
     public CreateProvisioningTemplateRequestBody withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -89,9 +96,15 @@ public class CreateProvisioningTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreateProvisioningTemplateRequestBodyTypeEnum type;
+
     public CreateProvisioningTemplateRequestBody withType(CreateProvisioningTemplateRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateProvisioningTemplateRequestBody(@JsonProperty("provisioningRoleArn") String provisioningRoleArn, @JsonProperty("templateBody") String templateBody, @JsonProperty("templateName") String templateName) {
+        this.provisioningRoleArn = provisioningRoleArn;
+        this.templateBody = templateBody;
+        this.templateName = templateName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErrorsGroupErrorFreeDevicePercentagesResponse {
     
     public String contentType;
+
     public ErrorsGroupErrorFreeDevicePercentagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ErrorsGroupErrorFreeDevicePercentagesResponse {
      */
     
     public ErrorsGroupErrorFreeDevicePercentages200ApplicationJSON errorsGroupErrorFreeDevicePercentages200ApplicationJSONObject;
+
     public ErrorsGroupErrorFreeDevicePercentagesResponse withErrorsGroupErrorFreeDevicePercentages200ApplicationJSONObject(ErrorsGroupErrorFreeDevicePercentages200ApplicationJSON errorsGroupErrorFreeDevicePercentages200ApplicationJSONObject) {
         this.errorsGroupErrorFreeDevicePercentages200ApplicationJSONObject = errorsGroupErrorFreeDevicePercentages200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ErrorsGroupErrorFreeDevicePercentagesResponse {
      */
     
     public ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSON errorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONObject;
+
     public ErrorsGroupErrorFreeDevicePercentagesResponse withErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONObject(ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSON errorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONObject) {
         this.errorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONObject = errorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ErrorsGroupErrorFreeDevicePercentagesResponse {
     
     
     public Integer statusCode;
+
     public ErrorsGroupErrorFreeDevicePercentagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ErrorsGroupErrorFreeDevicePercentagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErrorsGroupErrorFreeDevicePercentagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ErrorsGroupErrorFreeDevicePercentagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -114,4 +114,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetSitesSiteIDSubsitesO
 lib/src/main/java/org/openapis/openapi/models/operations/GetSitesSiteIDSubsitesOutputFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSitesSiteIDSubsitesOutputFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/intersections/README.md
+docs/occupants/README.md
+docs/parcels/README.md
+docs/sites/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class SchemaReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaId")
     public SchemaId schemaId;
+
     public SchemaReference withSchemaId(SchemaId schemaId) {
         this.schemaId = schemaId;
         return this;
@@ -23,6 +24,7 @@ public class SchemaReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionId")
     public String schemaVersionId;
+
     public SchemaReference withSchemaVersionId(String schemaVersionId) {
         this.schemaVersionId = schemaVersionId;
         return this;
@@ -31,9 +33,11 @@ public class SchemaReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionNumber")
     public Long schemaVersionNumber;
+
     public SchemaReference withSchemaVersionNumber(Long schemaVersionNumber) {
         this.schemaVersionNumber = schemaVersionNumber;
         return this;
     }
     
+    public SchemaReference(){}
 }

@@ -12,6 +12,7 @@ public class GetSetupV1BusinessusersPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1BusinessusersPermissionsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetSetupV1BusinessusersPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1BusinessusersPermissionsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,9 +34,11 @@ public class GetSetupV1BusinessusersPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public String role;
+
     public GetSetupV1BusinessusersPermissionsRequest withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public GetSetupV1BusinessusersPermissionsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspaceMembershipsForUserResponse {
     
     public String contentType;
+
     public GetWorkspaceMembershipsForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkspaceMembershipsForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetWorkspaceMembershipsForUserResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetWorkspaceMembershipsForUserResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspaceMembershipsForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkspaceMembershipsForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspaceMembershipsForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetWorkspaceMembershipsForUserResponse {
      */
     
     public GetWorkspaceMembershipsForUser200ApplicationJSON getWorkspaceMembershipsForUser200ApplicationJSONObject;
+
     public GetWorkspaceMembershipsForUserResponse withGetWorkspaceMembershipsForUser200ApplicationJSONObject(GetWorkspaceMembershipsForUser200ApplicationJSON getWorkspaceMembershipsForUser200ApplicationJSONObject) {
         this.getWorkspaceMembershipsForUser200ApplicationJSONObject = getWorkspaceMembershipsForUser200ApplicationJSONObject;
         return this;
     }
     
+    public GetWorkspaceMembershipsForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

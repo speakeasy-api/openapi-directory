@@ -15,6 +15,7 @@ public class ShipmentListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ShipmentSimpleVO[] result;
+
     public ShipmentListVO withResult(ShipmentSimpleVO[] result) {
         this.result = result;
         return this;
@@ -23,6 +24,7 @@ public class ShipmentListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public ShipmentListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class ShipmentListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public ShipmentListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ShipmentListVO(){}
 }

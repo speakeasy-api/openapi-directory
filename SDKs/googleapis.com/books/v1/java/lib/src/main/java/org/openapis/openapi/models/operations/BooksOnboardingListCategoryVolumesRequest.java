@@ -12,6 +12,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksOnboardingListCategoryVolumesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksOnboardingListCategoryVolumesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksOnboardingListCategoryVolumesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksOnboardingListCategoryVolumesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryId")
     public String[] categoryId;
+
     public BooksOnboardingListCategoryVolumesRequest withCategoryId(String[] categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -62,6 +67,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksOnboardingListCategoryVolumesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +78,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksOnboardingListCategoryVolumesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +89,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public BooksOnboardingListCategoryVolumesRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -92,6 +100,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAllowedMaturityRating")
     public BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum maxAllowedMaturityRating;
+
     public BooksOnboardingListCategoryVolumesRequest withMaxAllowedMaturityRating(BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum maxAllowedMaturityRating) {
         this.maxAllowedMaturityRating = maxAllowedMaturityRating;
         return this;
@@ -102,6 +111,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksOnboardingListCategoryVolumesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +122,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public BooksOnboardingListCategoryVolumesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,6 +133,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public BooksOnboardingListCategoryVolumesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +144,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksOnboardingListCategoryVolumesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +155,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksOnboardingListCategoryVolumesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +166,7 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksOnboardingListCategoryVolumesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +177,11 @@ public class BooksOnboardingListCategoryVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksOnboardingListCategoryVolumesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BooksOnboardingListCategoryVolumesRequest(){}
 }

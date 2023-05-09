@@ -18,6 +18,7 @@ public class TlsRouteRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public TlsRouteRouteAction action;
+
     public TlsRouteRouteRule withAction(TlsRouteRouteAction action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class TlsRouteRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public TlsRouteRouteMatch[] matches;
+
     public TlsRouteRouteRule withMatches(TlsRouteRouteMatch[] matches) {
         this.matches = matches;
         return this;
     }
     
+    public TlsRouteRouteRule(){}
 }

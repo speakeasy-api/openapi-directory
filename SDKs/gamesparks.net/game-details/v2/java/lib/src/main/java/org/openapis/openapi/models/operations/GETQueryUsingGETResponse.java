@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETQueryUsingGETResponse {
     
     public String contentType;
+
     public GETQueryUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETQueryUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ManageQuery manageQuery;
+
     public GETQueryUsingGETResponse withManageQuery(org.openapis.openapi.models.shared.ManageQuery manageQuery) {
         this.manageQuery = manageQuery;
         return this;
@@ -29,6 +32,7 @@ public class GETQueryUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETQueryUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class GETQueryUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETQueryUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GETQueryUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETQueryUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETQueryUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteObservabilityConfigurationRequest {
     @JsonProperty("ObservabilityConfigurationArn")
     public String observabilityConfigurationArn;
+
     public DeleteObservabilityConfigurationRequest withObservabilityConfigurationArn(String observabilityConfigurationArn) {
         this.observabilityConfigurationArn = observabilityConfigurationArn;
         return this;
     }
     
+    public DeleteObservabilityConfigurationRequest(@JsonProperty("ObservabilityConfigurationArn") String observabilityConfigurationArn) {
+        this.observabilityConfigurationArn = observabilityConfigurationArn;
+  }
 }

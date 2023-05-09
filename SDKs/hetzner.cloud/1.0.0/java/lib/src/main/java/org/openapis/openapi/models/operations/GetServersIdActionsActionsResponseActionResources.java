@@ -12,6 +12,7 @@ public class GetServersIdActionsActionsResponseActionResources {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetServersIdActionsActionsResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class GetServersIdActionsActionsResponseActionResources {
      */
     @JsonProperty("type")
     public String type;
+
     public GetServersIdActionsActionsResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetServersIdActionsActionsResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

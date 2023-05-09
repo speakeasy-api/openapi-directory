@@ -15,9 +15,11 @@ public class PlaylistPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embedHtml")
     public String embedHtml;
+
     public PlaylistPlayer withEmbedHtml(String embedHtml) {
         this.embedHtml = embedHtml;
         return this;
     }
     
+    public PlaylistPlayer(){}
 }

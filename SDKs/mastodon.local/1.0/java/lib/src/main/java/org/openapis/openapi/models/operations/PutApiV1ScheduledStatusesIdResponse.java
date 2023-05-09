@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutApiV1ScheduledStatusesIdResponse {
     
     public String contentType;
+
     public PutApiV1ScheduledStatusesIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutApiV1ScheduledStatusesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PutApiV1ScheduledStatusesIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class PutApiV1ScheduledStatusesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ScheduledStatus scheduledStatus;
+
     public PutApiV1ScheduledStatusesIdResponse withScheduledStatus(org.openapis.openapi.models.shared.ScheduledStatus scheduledStatus) {
         this.scheduledStatus = scheduledStatus;
         return this;
@@ -36,6 +40,7 @@ public class PutApiV1ScheduledStatusesIdResponse {
     
     
     public Integer statusCode;
+
     public PutApiV1ScheduledStatusesIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PutApiV1ScheduledStatusesIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutApiV1ScheduledStatusesIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutApiV1ScheduledStatusesIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

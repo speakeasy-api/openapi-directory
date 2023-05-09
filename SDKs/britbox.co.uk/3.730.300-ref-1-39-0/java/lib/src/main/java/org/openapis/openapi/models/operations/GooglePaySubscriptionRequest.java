@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GooglePaySubscriptionRequest {
@@ -12,6 +13,7 @@ public class GooglePaySubscriptionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvGooglePaySubscriptionRequest itvGooglePaySubscriptionRequest;
+
     public GooglePaySubscriptionRequest withItvGooglePaySubscriptionRequest(org.openapis.openapi.models.shared.ItvGooglePaySubscriptionRequest itvGooglePaySubscriptionRequest) {
         this.itvGooglePaySubscriptionRequest = itvGooglePaySubscriptionRequest;
         return this;
@@ -32,9 +34,13 @@ public class GooglePaySubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GooglePaySubscriptionRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GooglePaySubscriptionRequest(@JsonProperty("ItvGooglePaySubscriptionRequest") org.openapis.openapi.models.shared.ItvGooglePaySubscriptionRequest itvGooglePaySubscriptionRequest) {
+        this.itvGooglePaySubscriptionRequest = itvGooglePaySubscriptionRequest;
+  }
 }

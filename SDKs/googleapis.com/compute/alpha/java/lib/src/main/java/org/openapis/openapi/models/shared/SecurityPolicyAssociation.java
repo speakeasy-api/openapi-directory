@@ -18,6 +18,7 @@ public class SecurityPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentId")
     public String attachmentId;
+
     public SecurityPolicyAssociation withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -29,6 +30,7 @@ public class SecurityPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SecurityPolicyAssociation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class SecurityPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SecurityPolicyAssociation withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class SecurityPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicyId")
     public String securityPolicyId;
+
     public SecurityPolicyAssociation withSecurityPolicyId(String securityPolicyId) {
         this.securityPolicyId = securityPolicyId;
         return this;
     }
     
+    public SecurityPolicyAssociation(){}
 }

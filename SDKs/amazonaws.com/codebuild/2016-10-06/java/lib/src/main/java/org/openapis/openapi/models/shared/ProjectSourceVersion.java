@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProjectSourceVersion {
     @JsonProperty("sourceIdentifier")
     public String sourceIdentifier;
+
     public ProjectSourceVersion withSourceIdentifier(String sourceIdentifier) {
         this.sourceIdentifier = sourceIdentifier;
         return this;
@@ -19,9 +20,14 @@ public class ProjectSourceVersion {
     
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public ProjectSourceVersion withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
     }
     
+    public ProjectSourceVersion(@JsonProperty("sourceIdentifier") String sourceIdentifier, @JsonProperty("sourceVersion") String sourceVersion) {
+        this.sourceIdentifier = sourceIdentifier;
+        this.sourceVersion = sourceVersion;
+  }
 }

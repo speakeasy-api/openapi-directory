@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FitnessUsersSessionsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersSessionsDeleteSecurityOption1 option1;
+
     public FitnessUsersSessionsDeleteSecurity withOption1(FitnessUsersSessionsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FitnessUsersSessionsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersSessionsDeleteSecurityOption2 option2;
+
     public FitnessUsersSessionsDeleteSecurity withOption2(FitnessUsersSessionsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FitnessUsersSessionsDeleteSecurity(){}
 }

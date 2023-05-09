@@ -18,6 +18,7 @@ public class SubscriptionOfferTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquisitionRule")
     public AcquisitionTargetingRule acquisitionRule;
+
     public SubscriptionOfferTargeting withAcquisitionRule(AcquisitionTargetingRule acquisitionRule) {
         this.acquisitionRule = acquisitionRule;
         return this;
@@ -29,9 +30,11 @@ public class SubscriptionOfferTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeRule")
     public UpgradeTargetingRule upgradeRule;
+
     public SubscriptionOfferTargeting withUpgradeRule(UpgradeTargetingRule upgradeRule) {
         this.upgradeRule = upgradeRule;
         return this;
     }
     
+    public SubscriptionOfferTargeting(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePipelineResponse {
     
     public String contentType;
+
     public DeletePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePipelineResponse {
      */
     
     public Object internalFailureException;
+
     public DeletePipelineResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePipelineResponse {
      */
     
     public Object invalidRequestException;
+
     public DeletePipelineResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePipelineResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePipelineResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeletePipelineResponse {
     
     
     public Integer statusCode;
+
     public DeletePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeletePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeletePipelineResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeletePipelineResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class DeletePipelineResponse {
      */
     
     public Object throttlingException;
+
     public DeletePipelineResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeletePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

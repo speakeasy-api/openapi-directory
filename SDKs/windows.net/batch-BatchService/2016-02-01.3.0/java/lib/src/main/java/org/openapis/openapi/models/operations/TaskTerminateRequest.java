@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskTerminateRequest {
@@ -12,6 +13,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public TaskTerminateRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public TaskTerminateRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public TaskTerminateRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -42,6 +46,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public TaskTerminateRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public TaskTerminateRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -62,6 +68,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public TaskTerminateRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -72,6 +79,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public TaskTerminateRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -82,6 +90,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public TaskTerminateRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -92,6 +101,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public TaskTerminateRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -102,6 +112,7 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public TaskTerminateRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -112,9 +123,15 @@ public class TaskTerminateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public TaskTerminateRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public TaskTerminateRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("jobId") String jobId, @JsonProperty("taskId") String taskId) {
+        this.apiVersion = apiVersion;
+        this.jobId = jobId;
+        this.taskId = taskId;
+  }
 }

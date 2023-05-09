@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetVerifiedAccessGroupPolicyRequest {
     
     public Boolean dryRun;
+
     public GetVerifiedAccessGroupPolicyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class GetVerifiedAccessGroupPolicyRequest {
     
     
     public String verifiedAccessGroupId;
+
     public GetVerifiedAccessGroupPolicyRequest withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
     }
     
+    public GetVerifiedAccessGroupPolicyRequest(@JsonProperty("VerifiedAccessGroupId") String verifiedAccessGroupId) {
+        this.verifiedAccessGroupId = verifiedAccessGroupId;
+  }
 }

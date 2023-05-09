@@ -15,9 +15,11 @@ public class RandomSplitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Branches")
     public RandomSplitEntry[] branches;
+
     public RandomSplitActivity withBranches(RandomSplitEntry[] branches) {
         this.branches = branches;
         return this;
     }
     
+    public RandomSplitActivity(){}
 }

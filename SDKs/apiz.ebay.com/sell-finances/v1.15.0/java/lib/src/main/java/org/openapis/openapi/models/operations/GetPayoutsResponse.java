@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPayoutsResponse {
     
     public String contentType;
+
     public GetPayoutsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPayoutsResponse {
      */
     
     public org.openapis.openapi.models.shared.Payouts payouts;
+
     public GetPayoutsResponse withPayouts(org.openapis.openapi.models.shared.Payouts payouts) {
         this.payouts = payouts;
         return this;
@@ -26,6 +29,7 @@ public class GetPayoutsResponse {
     
     
     public Integer statusCode;
+
     public GetPayoutsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPayoutsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPayoutsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPayoutsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

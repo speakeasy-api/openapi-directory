@@ -59,11 +59,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetResponse(contentType, httpRes.statusCode()) {{
             backendService = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetHealthResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetHealthResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetHealthResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetHealthResponse(contentType, httpRes.statusCode()) {{
             backendServiceGroupHealth = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesListResponse(contentType, httpRes.statusCode()) {{
             backendServiceList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +421,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesSetSecurityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesSetSecurityPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesSetSecurityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesSetSecurityPolicyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +467,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -533,11 +513,9 @@ public class RegionBackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionBackendServicesUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionBackendServicesUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRegionBackendServicesUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

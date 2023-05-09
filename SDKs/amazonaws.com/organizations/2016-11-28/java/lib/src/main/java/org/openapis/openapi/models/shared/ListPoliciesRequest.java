@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListPoliciesRequest {
     @JsonProperty("Filter")
     public PolicyTypeEnum filter;
+
     public ListPoliciesRequest withFilter(PolicyTypeEnum filter) {
         this.filter = filter;
         return this;
@@ -19,6 +20,7 @@ public class ListPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPoliciesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPoliciesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPoliciesRequest(@JsonProperty("Filter") PolicyTypeEnum filter) {
+        this.filter = filter;
+  }
 }

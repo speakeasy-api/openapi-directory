@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeI18nRegionsListRequest {
@@ -12,6 +13,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeI18nRegionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeI18nRegionsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeI18nRegionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeI18nRegionsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeI18nRegionsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class YoutubeI18nRegionsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hl")
     public String hl;
+
     public YoutubeI18nRegionsListRequest withHl(String hl) {
         this.hl = hl;
         return this;
@@ -69,6 +76,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeI18nRegionsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeI18nRegionsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeI18nRegionsListRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -99,6 +109,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeI18nRegionsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeI18nRegionsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeI18nRegionsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class YoutubeI18nRegionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeI18nRegionsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeI18nRegionsListRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteNetworkAclEntryRequest {
     
     public Boolean dryRun;
+
     public DeleteNetworkAclEntryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DeleteNetworkAclEntryRequest {
     
     
     public Boolean egress;
+
     public DeleteNetworkAclEntryRequest withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -23,6 +25,7 @@ public class DeleteNetworkAclEntryRequest {
     
     
     public String networkAclId;
+
     public DeleteNetworkAclEntryRequest withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -30,9 +33,15 @@ public class DeleteNetworkAclEntryRequest {
     
     
     public Long ruleNumber;
+
     public DeleteNetworkAclEntryRequest withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public DeleteNetworkAclEntryRequest(@JsonProperty("Egress") Boolean egress, @JsonProperty("NetworkAclId") String networkAclId, @JsonProperty("RuleNumber") Long ruleNumber) {
+        this.egress = egress;
+        this.networkAclId = networkAclId;
+        this.ruleNumber = ruleNumber;
+  }
 }

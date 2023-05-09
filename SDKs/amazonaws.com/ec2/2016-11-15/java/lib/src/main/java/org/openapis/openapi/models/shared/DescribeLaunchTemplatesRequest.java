@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLaunchTemplatesRequest {
     
     public Boolean dryRun;
+
     public DescribeLaunchTemplatesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLaunchTemplatesRequest {
     
     
     public DescribeLaunchTemplatesRequestFilters[] filters;
+
     public DescribeLaunchTemplatesRequest withFilters(DescribeLaunchTemplatesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeLaunchTemplatesRequest {
     
     
     public String[] launchTemplateIds;
+
     public DescribeLaunchTemplatesRequest withLaunchTemplateIds(String[] launchTemplateIds) {
         this.launchTemplateIds = launchTemplateIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeLaunchTemplatesRequest {
     
     
     public String[] launchTemplateNames;
+
     public DescribeLaunchTemplatesRequest withLaunchTemplateNames(String[] launchTemplateNames) {
         this.launchTemplateNames = launchTemplateNames;
         return this;
@@ -37,6 +41,7 @@ public class DescribeLaunchTemplatesRequest {
     
     
     public Long maxResults;
+
     public DescribeLaunchTemplatesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,9 +49,11 @@ public class DescribeLaunchTemplatesRequest {
     
     
     public String nextToken;
+
     public DescribeLaunchTemplatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLaunchTemplatesRequest(){}
 }

@@ -12,6 +12,7 @@ public class BatchGetDeploymentTargetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public BatchGetDeploymentTargetsInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -20,9 +21,11 @@ public class BatchGetDeploymentTargetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIds")
     public String[] targetIds;
+
     public BatchGetDeploymentTargetsInput withTargetIds(String[] targetIds) {
         this.targetIds = targetIds;
         return this;
     }
     
+    public BatchGetDeploymentTargetsInput(){}
 }

@@ -15,6 +15,7 @@ public class AwsEcsServicePlacementStrategiesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Field")
     public String field;
+
     public AwsEcsServicePlacementStrategiesDetails withField(String field) {
         this.field = field;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsServicePlacementStrategiesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEcsServicePlacementStrategiesDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsEcsServicePlacementStrategiesDetails(){}
 }

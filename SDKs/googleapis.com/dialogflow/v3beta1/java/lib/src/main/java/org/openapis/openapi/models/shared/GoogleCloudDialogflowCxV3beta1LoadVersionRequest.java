@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1LoadVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowOverrideAgentResources")
     public Boolean allowOverrideAgentResources;
+
     public GoogleCloudDialogflowCxV3beta1LoadVersionRequest withAllowOverrideAgentResources(Boolean allowOverrideAgentResources) {
         this.allowOverrideAgentResources = allowOverrideAgentResources;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1LoadVersionRequest(){}
 }

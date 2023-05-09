@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProfileObjectTypeTemplateResponse {
@@ -12,6 +13,7 @@ public class GetProfileObjectTypeTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetProfileObjectTypeTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetProfileObjectTypeTemplateResponse {
      */
     
     public Object badRequestException;
+
     public GetProfileObjectTypeTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class GetProfileObjectTypeTemplateResponse {
     
     
     public String contentType;
+
     public GetProfileObjectTypeTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetProfileObjectTypeTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProfileObjectTypeTemplateResponse getProfileObjectTypeTemplateResponse;
+
     public GetProfileObjectTypeTemplateResponse withGetProfileObjectTypeTemplateResponse(org.openapis.openapi.models.shared.GetProfileObjectTypeTemplateResponse getProfileObjectTypeTemplateResponse) {
         this.getProfileObjectTypeTemplateResponse = getProfileObjectTypeTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetProfileObjectTypeTemplateResponse {
      */
     
     public Object internalServerException;
+
     public GetProfileObjectTypeTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetProfileObjectTypeTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetProfileObjectTypeTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetProfileObjectTypeTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProfileObjectTypeTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetProfileObjectTypeTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetProfileObjectTypeTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetProfileObjectTypeTemplateResponse {
      */
     
     public Object throttlingException;
+
     public GetProfileObjectTypeTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetProfileObjectTypeTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

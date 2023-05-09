@@ -20,6 +20,7 @@ public class Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200Cont
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Double distance;
+
     public Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200ContentApplication1jsonSchema withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -32,9 +33,11 @@ public class Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200Cont
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastUpdated")
     public LocalDate lastUpdated;
+
     public Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200ContentApplication1jsonSchema withLastUpdated(LocalDate lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
     }
     
+    public Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200ContentApplication1jsonSchema(){}
 }

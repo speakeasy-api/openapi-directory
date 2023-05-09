@@ -18,9 +18,11 @@ public class DomainTransferability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Transferable")
     public TransferableEnum transferable;
+
     public DomainTransferability withTransferable(TransferableEnum transferable) {
         this.transferable = transferable;
         return this;
     }
     
+    public DomainTransferability(){}
 }

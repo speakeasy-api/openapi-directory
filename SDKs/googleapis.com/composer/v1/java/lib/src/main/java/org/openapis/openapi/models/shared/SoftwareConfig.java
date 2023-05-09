@@ -18,6 +18,7 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("airflowConfigOverrides")
     public java.util.Map<String, String> airflowConfigOverrides;
+
     public SoftwareConfig withAirflowConfigOverrides(java.util.Map<String, String> airflowConfigOverrides) {
         this.airflowConfigOverrides = airflowConfigOverrides;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envVariables")
     public java.util.Map<String, String> envVariables;
+
     public SoftwareConfig withEnvVariables(java.util.Map<String, String> envVariables) {
         this.envVariables = envVariables;
         return this;
@@ -40,6 +42,7 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageVersion")
     public String imageVersion;
+
     public SoftwareConfig withImageVersion(String imageVersion) {
         this.imageVersion = imageVersion;
         return this;
@@ -51,6 +54,7 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pypiPackages")
     public java.util.Map<String, String> pypiPackages;
+
     public SoftwareConfig withPypiPackages(java.util.Map<String, String> pypiPackages) {
         this.pypiPackages = pypiPackages;
         return this;
@@ -62,6 +66,7 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonVersion")
     public String pythonVersion;
+
     public SoftwareConfig withPythonVersion(String pythonVersion) {
         this.pythonVersion = pythonVersion;
         return this;
@@ -73,9 +78,11 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulerCount")
     public Integer schedulerCount;
+
     public SoftwareConfig withSchedulerCount(Integer schedulerCount) {
         this.schedulerCount = schedulerCount;
         return this;
     }
     
+    public SoftwareConfig(){}
 }

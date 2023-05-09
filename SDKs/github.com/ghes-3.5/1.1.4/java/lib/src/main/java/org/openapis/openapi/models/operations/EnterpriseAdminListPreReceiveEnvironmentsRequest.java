@@ -12,6 +12,7 @@ public class EnterpriseAdminListPreReceiveEnvironmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public EnterpriseAdminListPreReceiveEnvironmentsRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +23,7 @@ public class EnterpriseAdminListPreReceiveEnvironmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public EnterpriseAdminListPreReceiveEnvironmentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +34,7 @@ public class EnterpriseAdminListPreReceiveEnvironmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public EnterpriseAdminListPreReceiveEnvironmentsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -39,9 +42,11 @@ public class EnterpriseAdminListPreReceiveEnvironmentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public EnterpriseAdminListPreReceiveEnvironmentsSortEnum sort;
+
     public EnterpriseAdminListPreReceiveEnvironmentsRequest withSort(EnterpriseAdminListPreReceiveEnvironmentsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public EnterpriseAdminListPreReceiveEnvironmentsRequest(){}
 }

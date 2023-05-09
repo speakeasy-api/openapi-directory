@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyDBSubnetGroupMessage {
     
     public String dbSubnetGroupDescription;
+
     public ModifyDBSubnetGroupMessage withDBSubnetGroupDescription(String dbSubnetGroupDescription) {
         this.dbSubnetGroupDescription = dbSubnetGroupDescription;
         return this;
@@ -16,6 +17,7 @@ public class ModifyDBSubnetGroupMessage {
     
     
     public String dbSubnetGroupName;
+
     public ModifyDBSubnetGroupMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -23,9 +25,14 @@ public class ModifyDBSubnetGroupMessage {
     
     
     public String[] subnetIds;
+
     public ModifyDBSubnetGroupMessage withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public ModifyDBSubnetGroupMessage(@JsonProperty("DBSubnetGroupName") String dbSubnetGroupName, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.dbSubnetGroupName = dbSubnetGroupName;
+        this.subnetIds = subnetIds;
+  }
 }

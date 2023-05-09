@@ -15,6 +15,7 @@ public class IssueTokenRequestTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public IssueTokenRequestTransfer withAddress(String address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class IssueTokenRequestTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public IssueTokenRequestTransfer withAmount(Double amount) {
         this.amount = amount;
         return this;
     }
     
+    public IssueTokenRequestTransfer(){}
 }

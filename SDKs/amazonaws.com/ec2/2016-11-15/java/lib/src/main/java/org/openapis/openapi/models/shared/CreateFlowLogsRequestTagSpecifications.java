@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFlowLogsRequestTagSpecifications {
     
     public CreateFlowLogsRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateFlowLogsRequestTagSpecifications withResourceType(CreateFlowLogsRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateFlowLogsRequestTagSpecifications {
     
     
     public CreateFlowLogsRequestTagSpecificationsTags[] tags;
+
     public CreateFlowLogsRequestTagSpecifications withTags(CreateFlowLogsRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFlowLogsRequestTagSpecifications(){}
 }

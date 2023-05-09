@@ -18,6 +18,7 @@ public class TextRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public TextRun withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class TextRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public TextRun withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -40,6 +42,7 @@ public class TextRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public TextRun withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
@@ -51,6 +54,7 @@ public class TextRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedTextStyleChanges")
     public java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges;
+
     public TextRun withSuggestedTextStyleChanges(java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges) {
         this.suggestedTextStyleChanges = suggestedTextStyleChanges;
         return this;
@@ -62,9 +66,11 @@ public class TextRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public TextRun withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
     
+    public TextRun(){}
 }

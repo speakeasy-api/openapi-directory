@@ -15,6 +15,7 @@ public class HumanLoopConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAttributes")
     public HumanLoopDataAttributes dataAttributes;
+
     public HumanLoopConfig withDataAttributes(HumanLoopDataAttributes dataAttributes) {
         this.dataAttributes = dataAttributes;
         return this;
@@ -22,6 +23,7 @@ public class HumanLoopConfig {
     
     @JsonProperty("FlowDefinitionArn")
     public String flowDefinitionArn;
+
     public HumanLoopConfig withFlowDefinitionArn(String flowDefinitionArn) {
         this.flowDefinitionArn = flowDefinitionArn;
         return this;
@@ -29,9 +31,14 @@ public class HumanLoopConfig {
     
     @JsonProperty("HumanLoopName")
     public String humanLoopName;
+
     public HumanLoopConfig withHumanLoopName(String humanLoopName) {
         this.humanLoopName = humanLoopName;
         return this;
     }
     
+    public HumanLoopConfig(@JsonProperty("FlowDefinitionArn") String flowDefinitionArn, @JsonProperty("HumanLoopName") String humanLoopName) {
+        this.flowDefinitionArn = flowDefinitionArn;
+        this.humanLoopName = humanLoopName;
+  }
 }

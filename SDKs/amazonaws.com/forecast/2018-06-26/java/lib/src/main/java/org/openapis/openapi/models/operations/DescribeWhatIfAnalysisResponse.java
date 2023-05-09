@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWhatIfAnalysisResponse {
     
     public String contentType;
+
     public DescribeWhatIfAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWhatIfAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWhatIfAnalysisResponse describeWhatIfAnalysisResponse;
+
     public DescribeWhatIfAnalysisResponse withDescribeWhatIfAnalysisResponse(org.openapis.openapi.models.shared.DescribeWhatIfAnalysisResponse describeWhatIfAnalysisResponse) {
         this.describeWhatIfAnalysisResponse = describeWhatIfAnalysisResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWhatIfAnalysisResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeWhatIfAnalysisResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeWhatIfAnalysisResponse {
     
     
     public Integer statusCode;
+
     public DescribeWhatIfAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeWhatIfAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWhatIfAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeWhatIfAnalysisResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWhatIfAnalysisResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeWhatIfAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

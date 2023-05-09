@@ -20,6 +20,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortConfig")
     public AbortConfig abortConfig;
+
     public Job withAbortConfig(AbortConfig abortConfig) {
         this.abortConfig = abortConfig;
         return this;
@@ -28,6 +29,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public Job withComment(String comment) {
         this.comment = comment;
         return this;
@@ -38,6 +40,7 @@ public class Job {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedAt")
     public OffsetDateTime completedAt;
+
     public Job withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -48,6 +51,7 @@ public class Job {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Job withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -56,6 +60,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Job withDescription(String description) {
         this.description = description;
         return this;
@@ -64,6 +69,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentParameters")
     public java.util.Map<String, String> documentParameters;
+
     public Job withDocumentParameters(java.util.Map<String, String> documentParameters) {
         this.documentParameters = documentParameters;
         return this;
@@ -72,6 +78,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceCanceled")
     public Boolean forceCanceled;
+
     public Job withForceCanceled(Boolean forceCanceled) {
         this.forceCanceled = forceCanceled;
         return this;
@@ -80,6 +87,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isConcurrent")
     public Boolean isConcurrent;
+
     public Job withIsConcurrent(Boolean isConcurrent) {
         this.isConcurrent = isConcurrent;
         return this;
@@ -88,6 +96,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public Job withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -96,6 +105,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRetryConfig")
     public JobExecutionsRetryConfig jobExecutionsRetryConfig;
+
     public Job withJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
         this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
         return this;
@@ -104,6 +114,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRolloutConfig")
     public JobExecutionsRolloutConfig jobExecutionsRolloutConfig;
+
     public Job withJobExecutionsRolloutConfig(JobExecutionsRolloutConfig jobExecutionsRolloutConfig) {
         this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
         return this;
@@ -112,6 +123,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public Job withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -120,6 +132,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobProcessDetails")
     public JobProcessDetails jobProcessDetails;
+
     public Job withJobProcessDetails(JobProcessDetails jobProcessDetails) {
         this.jobProcessDetails = jobProcessDetails;
         return this;
@@ -128,6 +141,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplateArn")
     public String jobTemplateArn;
+
     public Job withJobTemplateArn(String jobTemplateArn) {
         this.jobTemplateArn = jobTemplateArn;
         return this;
@@ -138,6 +152,7 @@ public class Job {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public Job withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -146,6 +161,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceId")
     public String namespaceId;
+
     public Job withNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
@@ -154,6 +170,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presignedUrlConfig")
     public PresignedUrlConfig presignedUrlConfig;
+
     public Job withPresignedUrlConfig(PresignedUrlConfig presignedUrlConfig) {
         this.presignedUrlConfig = presignedUrlConfig;
         return this;
@@ -162,6 +179,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCode")
     public String reasonCode;
+
     public Job withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
@@ -170,6 +188,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledJobRollouts")
     public ScheduledJobRollout[] scheduledJobRollouts;
+
     public Job withScheduledJobRollouts(ScheduledJobRollout[] scheduledJobRollouts) {
         this.scheduledJobRollouts = scheduledJobRollouts;
         return this;
@@ -178,6 +197,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingConfig")
     public SchedulingConfig schedulingConfig;
+
     public Job withSchedulingConfig(SchedulingConfig schedulingConfig) {
         this.schedulingConfig = schedulingConfig;
         return this;
@@ -186,6 +206,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public Job withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -194,6 +215,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSelection")
     public TargetSelectionEnum targetSelection;
+
     public Job withTargetSelection(TargetSelectionEnum targetSelection) {
         this.targetSelection = targetSelection;
         return this;
@@ -202,6 +224,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public String[] targets;
+
     public Job withTargets(String[] targets) {
         this.targets = targets;
         return this;
@@ -210,9 +233,11 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConfig")
     public TimeoutConfig timeoutConfig;
+
     public Job withTimeoutConfig(TimeoutConfig timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
     
+    public Job(){}
 }

@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class VirtualNodeRef {
     @JsonProperty("arn")
     public String arn;
+
     public VirtualNodeRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class VirtualNodeRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public VirtualNodeRef withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class VirtualNodeRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public VirtualNodeRef withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -42,6 +45,7 @@ public class VirtualNodeRef {
     
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualNodeRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -49,6 +53,7 @@ public class VirtualNodeRef {
     
     @JsonProperty("meshOwner")
     public String meshOwner;
+
     public VirtualNodeRef withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -56,6 +61,7 @@ public class VirtualNodeRef {
     
     @JsonProperty("resourceOwner")
     public String resourceOwner;
+
     public VirtualNodeRef withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -63,6 +69,7 @@ public class VirtualNodeRef {
     
     @JsonProperty("version")
     public Long version;
+
     public VirtualNodeRef withVersion(Long version) {
         this.version = version;
         return this;
@@ -70,9 +77,20 @@ public class VirtualNodeRef {
     
     @JsonProperty("virtualNodeName")
     public String virtualNodeName;
+
     public VirtualNodeRef withVirtualNodeName(String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
         return this;
     }
     
+    public VirtualNodeRef(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("meshName") String meshName, @JsonProperty("meshOwner") String meshOwner, @JsonProperty("resourceOwner") String resourceOwner, @JsonProperty("version") Long version, @JsonProperty("virtualNodeName") String virtualNodeName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.meshName = meshName;
+        this.meshOwner = meshOwner;
+        this.resourceOwner = resourceOwner;
+        this.version = version;
+        this.virtualNodeName = virtualNodeName;
+  }
 }

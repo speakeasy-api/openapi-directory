@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class WorkflowExecutionDetail {
     @JsonProperty("executionConfiguration")
     public WorkflowExecutionConfiguration executionConfiguration;
+
     public WorkflowExecutionDetail withExecutionConfiguration(WorkflowExecutionConfiguration executionConfiguration) {
         this.executionConfiguration = executionConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class WorkflowExecutionDetail {
     
     @JsonProperty("executionInfo")
     public WorkflowExecutionInfo executionInfo;
+
     public WorkflowExecutionDetail withExecutionInfo(WorkflowExecutionInfo executionInfo) {
         this.executionInfo = executionInfo;
         return this;
@@ -36,6 +38,7 @@ public class WorkflowExecutionDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("latestActivityTaskTimestamp")
     public OffsetDateTime latestActivityTaskTimestamp;
+
     public WorkflowExecutionDetail withLatestActivityTaskTimestamp(OffsetDateTime latestActivityTaskTimestamp) {
         this.latestActivityTaskTimestamp = latestActivityTaskTimestamp;
         return this;
@@ -44,6 +47,7 @@ public class WorkflowExecutionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestExecutionContext")
     public String latestExecutionContext;
+
     public WorkflowExecutionDetail withLatestExecutionContext(String latestExecutionContext) {
         this.latestExecutionContext = latestExecutionContext;
         return this;
@@ -51,9 +55,15 @@ public class WorkflowExecutionDetail {
     
     @JsonProperty("openCounts")
     public WorkflowExecutionOpenCounts openCounts;
+
     public WorkflowExecutionDetail withOpenCounts(WorkflowExecutionOpenCounts openCounts) {
         this.openCounts = openCounts;
         return this;
     }
     
+    public WorkflowExecutionDetail(@JsonProperty("executionConfiguration") WorkflowExecutionConfiguration executionConfiguration, @JsonProperty("executionInfo") WorkflowExecutionInfo executionInfo, @JsonProperty("openCounts") WorkflowExecutionOpenCounts openCounts) {
+        this.executionConfiguration = executionConfiguration;
+        this.executionInfo = executionInfo;
+        this.openCounts = openCounts;
+  }
 }

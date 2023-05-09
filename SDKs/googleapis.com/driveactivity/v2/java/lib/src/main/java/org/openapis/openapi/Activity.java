@@ -61,11 +61,9 @@ public class Activity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveactivityActivityQueryResponse res = new org.openapis.openapi.models.operations.DriveactivityActivityQueryResponse() {{
+        org.openapis.openapi.models.operations.DriveactivityActivityQueryResponse res = new org.openapis.openapi.models.operations.DriveactivityActivityQueryResponse(contentType, httpRes.statusCode()) {{
             queryDriveActivityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

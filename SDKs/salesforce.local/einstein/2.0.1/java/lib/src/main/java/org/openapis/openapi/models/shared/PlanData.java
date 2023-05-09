@@ -12,6 +12,7 @@ public class PlanData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Integer amount;
+
     public PlanData withAmount(Integer amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class PlanData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public PlanDataTypeOfPlanBasedOnTheSourceEnum plan;
+
     public PlanData withPlan(PlanDataTypeOfPlanBasedOnTheSourceEnum plan) {
         this.plan = plan;
         return this;
@@ -28,9 +30,11 @@ public class PlanData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public PlanDataServiceThatProvisionedThePlanEnum source;
+
     public PlanData withSource(PlanDataServiceThatProvisionedThePlanEnum source) {
         this.source = source;
         return this;
     }
     
+    public PlanData(){}
 }

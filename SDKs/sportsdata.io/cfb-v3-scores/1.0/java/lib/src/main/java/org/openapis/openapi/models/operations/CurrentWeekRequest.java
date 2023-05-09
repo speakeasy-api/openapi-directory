@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CurrentWeekRequest {
@@ -12,9 +13,13 @@ public class CurrentWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public CurrentWeekFormatEnum format;
+
     public CurrentWeekRequest withFormat(CurrentWeekFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public CurrentWeekRequest(@JsonProperty("format") CurrentWeekFormatEnum format) {
+        this.format = format;
+  }
 }

@@ -14,6 +14,7 @@ public class BatchGetAssetPropertyValueHistoryRequestBody {
      */
     @JsonProperty("entries")
     public org.openapis.openapi.models.shared.BatchGetAssetPropertyValueHistoryEntry[] entries;
+
     public BatchGetAssetPropertyValueHistoryRequestBody withEntries(org.openapis.openapi.models.shared.BatchGetAssetPropertyValueHistoryEntry[] entries) {
         this.entries = entries;
         return this;
@@ -25,6 +26,7 @@ public class BatchGetAssetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public BatchGetAssetPropertyValueHistoryRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class BatchGetAssetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public BatchGetAssetPropertyValueHistoryRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public BatchGetAssetPropertyValueHistoryRequestBody(@JsonProperty("entries") org.openapis.openapi.models.shared.BatchGetAssetPropertyValueHistoryEntry[] entries) {
+        this.entries = entries;
+  }
 }

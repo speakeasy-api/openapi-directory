@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUserPoolClientsResponse {
     
     public String contentType;
+
     public ListUserPoolClientsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListUserPoolClientsResponse {
      */
     
     public Object internalErrorException;
+
     public ListUserPoolClientsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListUserPoolClientsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListUserPoolClientsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListUserPoolClientsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUserPoolClientsResponse listUserPoolClientsResponse;
+
     public ListUserPoolClientsResponse withListUserPoolClientsResponse(org.openapis.openapi.models.shared.ListUserPoolClientsResponse listUserPoolClientsResponse) {
         this.listUserPoolClientsResponse = listUserPoolClientsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListUserPoolClientsResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListUserPoolClientsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListUserPoolClientsResponse {
     
     
     public Integer statusCode;
+
     public ListUserPoolClientsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListUserPoolClientsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUserPoolClientsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListUserPoolClientsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListUserPoolClientsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListUserPoolClientsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListUserPoolClientsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListUserPoolClientsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

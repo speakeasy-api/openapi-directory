@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateOpenIDConnectProviderResponse {
     
     public String openIDConnectProviderArn;
+
     public CreateOpenIDConnectProviderResponse withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
@@ -19,9 +20,11 @@ public class CreateOpenIDConnectProviderResponse {
     
     
     public Tag[] tags;
+
     public CreateOpenIDConnectProviderResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateOpenIDConnectProviderResponse(){}
 }

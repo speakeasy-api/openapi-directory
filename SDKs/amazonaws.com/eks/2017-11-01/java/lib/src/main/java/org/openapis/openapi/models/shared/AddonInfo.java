@@ -15,6 +15,7 @@ public class AddonInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonName")
     public String addonName;
+
     public AddonInfo withAddonName(String addonName) {
         this.addonName = addonName;
         return this;
@@ -23,6 +24,7 @@ public class AddonInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonVersions")
     public AddonVersionInfo[] addonVersions;
+
     public AddonInfo withAddonVersions(AddonVersionInfo[] addonVersions) {
         this.addonVersions = addonVersions;
         return this;
@@ -31,6 +33,7 @@ public class AddonInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceInformation")
     public MarketplaceInformation marketplaceInformation;
+
     public AddonInfo withMarketplaceInformation(MarketplaceInformation marketplaceInformation) {
         this.marketplaceInformation = marketplaceInformation;
         return this;
@@ -39,6 +42,7 @@ public class AddonInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public AddonInfo withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -47,6 +51,7 @@ public class AddonInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public AddonInfo withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -55,9 +60,11 @@ public class AddonInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AddonInfo withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AddonInfo(){}
 }

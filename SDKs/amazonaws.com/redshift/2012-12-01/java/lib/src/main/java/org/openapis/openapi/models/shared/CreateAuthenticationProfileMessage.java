@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateAuthenticationProfileMessage {
     
     public String authenticationProfileContent;
+
     public CreateAuthenticationProfileMessage withAuthenticationProfileContent(String authenticationProfileContent) {
         this.authenticationProfileContent = authenticationProfileContent;
         return this;
@@ -16,9 +17,14 @@ public class CreateAuthenticationProfileMessage {
     
     
     public String authenticationProfileName;
+
     public CreateAuthenticationProfileMessage withAuthenticationProfileName(String authenticationProfileName) {
         this.authenticationProfileName = authenticationProfileName;
         return this;
     }
     
+    public CreateAuthenticationProfileMessage(@JsonProperty("AuthenticationProfileContent") String authenticationProfileContent, @JsonProperty("AuthenticationProfileName") String authenticationProfileName) {
+        this.authenticationProfileContent = authenticationProfileContent;
+        this.authenticationProfileName = authenticationProfileName;
+  }
 }

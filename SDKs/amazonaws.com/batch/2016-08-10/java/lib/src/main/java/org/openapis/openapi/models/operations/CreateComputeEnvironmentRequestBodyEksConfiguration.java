@@ -15,6 +15,7 @@ public class CreateComputeEnvironmentRequestBodyEksConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksClusterArn")
     public String eksClusterArn;
+
     public CreateComputeEnvironmentRequestBodyEksConfiguration withEksClusterArn(String eksClusterArn) {
         this.eksClusterArn = eksClusterArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateComputeEnvironmentRequestBodyEksConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubernetesNamespace")
     public String kubernetesNamespace;
+
     public CreateComputeEnvironmentRequestBodyEksConfiguration withKubernetesNamespace(String kubernetesNamespace) {
         this.kubernetesNamespace = kubernetesNamespace;
         return this;
     }
     
+    public CreateComputeEnvironmentRequestBodyEksConfiguration(){}
 }

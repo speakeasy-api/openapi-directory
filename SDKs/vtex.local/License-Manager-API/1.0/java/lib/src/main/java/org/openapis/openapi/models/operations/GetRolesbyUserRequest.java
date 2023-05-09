@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRolesbyUserRequest {
@@ -12,6 +13,7 @@ public class GetRolesbyUserRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetRolesbyUserRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,9 +24,14 @@ public class GetRolesbyUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public GetRolesbyUserRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetRolesbyUserRequest(@JsonProperty("Content-Type") String contentType, @JsonProperty("userId") String userId) {
+        this.contentType = contentType;
+        this.userId = userId;
+  }
 }

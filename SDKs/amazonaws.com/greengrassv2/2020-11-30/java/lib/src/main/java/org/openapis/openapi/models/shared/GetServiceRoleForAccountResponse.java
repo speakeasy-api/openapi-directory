@@ -15,6 +15,7 @@ public class GetServiceRoleForAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedAt")
     public String associatedAt;
+
     public GetServiceRoleForAccountResponse withAssociatedAt(String associatedAt) {
         this.associatedAt = associatedAt;
         return this;
@@ -23,9 +24,11 @@ public class GetServiceRoleForAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public GetServiceRoleForAccountResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public GetServiceRoleForAccountResponse(){}
 }

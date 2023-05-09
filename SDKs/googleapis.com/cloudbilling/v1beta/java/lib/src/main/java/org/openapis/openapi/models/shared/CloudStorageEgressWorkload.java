@@ -18,6 +18,7 @@ public class CloudStorageEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationContinent")
     public CloudStorageEgressWorkloadDestinationContinentEnum destinationContinent;
+
     public CloudStorageEgressWorkload withDestinationContinent(CloudStorageEgressWorkloadDestinationContinentEnum destinationContinent) {
         this.destinationContinent = destinationContinent;
         return this;
@@ -29,6 +30,7 @@ public class CloudStorageEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressRate")
     public Usage egressRate;
+
     public CloudStorageEgressWorkload withEgressRate(Usage egressRate) {
         this.egressRate = egressRate;
         return this;
@@ -40,9 +42,11 @@ public class CloudStorageEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceContinent")
     public CloudStorageEgressWorkloadSourceContinentEnum sourceContinent;
+
     public CloudStorageEgressWorkload withSourceContinent(CloudStorageEgressWorkloadSourceContinentEnum sourceContinent) {
         this.sourceContinent = sourceContinent;
         return this;
     }
     
+    public CloudStorageEgressWorkload(){}
 }

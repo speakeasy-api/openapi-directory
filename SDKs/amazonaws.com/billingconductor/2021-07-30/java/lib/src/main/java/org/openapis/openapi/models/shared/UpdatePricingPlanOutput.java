@@ -15,6 +15,7 @@ public class UpdatePricingPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public UpdatePricingPlanOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePricingPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePricingPlanOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class UpdatePricingPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTime")
     public Long lastModifiedTime;
+
     public UpdatePricingPlanOutput withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -39,6 +42,7 @@ public class UpdatePricingPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdatePricingPlanOutput withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class UpdatePricingPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public UpdatePricingPlanOutput withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public UpdatePricingPlanOutput(){}
 }

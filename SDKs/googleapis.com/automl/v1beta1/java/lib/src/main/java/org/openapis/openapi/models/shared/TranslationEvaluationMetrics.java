@@ -18,6 +18,7 @@ public class TranslationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseBleuScore")
     public Double baseBleuScore;
+
     public TranslationEvaluationMetrics withBaseBleuScore(Double baseBleuScore) {
         this.baseBleuScore = baseBleuScore;
         return this;
@@ -29,9 +30,11 @@ public class TranslationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bleuScore")
     public Double bleuScore;
+
     public TranslationEvaluationMetrics withBleuScore(Double bleuScore) {
         this.bleuScore = bleuScore;
         return this;
     }
     
+    public TranslationEvaluationMetrics(){}
 }

@@ -15,6 +15,7 @@ public class ListDevicePoolsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePools")
     public DevicePool[] devicePools;
+
     public ListDevicePoolsResult withDevicePools(DevicePool[] devicePools) {
         this.devicePools = devicePools;
         return this;
@@ -23,9 +24,11 @@ public class ListDevicePoolsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDevicePoolsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDevicePoolsResult(){}
 }

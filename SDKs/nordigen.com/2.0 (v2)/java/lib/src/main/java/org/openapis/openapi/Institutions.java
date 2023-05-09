@@ -58,15 +58,14 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveAllSupportedInstitutionsInAGivenCountryResponse res = new org.openapis.openapi.models.operations.RetrieveAllSupportedInstitutionsInAGivenCountryResponse() {{
+        org.openapis.openapi.models.operations.RetrieveAllSupportedInstitutionsInAGivenCountryResponse res = new org.openapis.openapi.models.operations.RetrieveAllSupportedInstitutionsInAGivenCountryResponse(contentType, httpRes.statusCode()) {{
             integrations = null;
             retrieveAllSupportedInstitutionsInAGivenCountry400ApplicationJSONObject = null;
             retrieveAllSupportedInstitutionsInAGivenCountry401ApplicationJSONObject = null;
             retrieveAllSupportedInstitutionsInAGivenCountry403ApplicationJSONObject = null;
             retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject = null;
+            retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,6 +103,13 @@ public class Institutions {
                 res.retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject = out;
             }
         }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject = out;
+            }
+        }
 
         return res;
     }
@@ -129,21 +135,20 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveInstitutionResponse res = new org.openapis.openapi.models.operations.RetrieveInstitutionResponse() {{
-            integration = null;
+        org.openapis.openapi.models.operations.RetrieveInstitutionResponse res = new org.openapis.openapi.models.operations.RetrieveInstitutionResponse(contentType, httpRes.statusCode()) {{
+            integrationRetrieve = null;
             retrieveInstitution401ApplicationJSONObject = null;
             retrieveInstitution403ApplicationJSONObject = null;
             retrieveInstitution404ApplicationJSONObject = null;
+            retrieveInstitution429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Integration out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Integration.class);
-                res.integration = out;
+                org.openapis.openapi.models.shared.IntegrationRetrieve out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.IntegrationRetrieve.class);
+                res.integrationRetrieve = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
@@ -165,6 +170,13 @@ public class Institutions {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.retrieveInstitution404ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveInstitution429ApplicationJSONObject = out;
             }
         }
 

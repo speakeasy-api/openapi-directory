@@ -15,6 +15,7 @@ public class SelfUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamUserArn")
     public String iamUserArn;
+
     public SelfUserProfile withIamUserArn(String iamUserArn) {
         this.iamUserArn = iamUserArn;
         return this;
@@ -23,6 +24,7 @@ public class SelfUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SelfUserProfile withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class SelfUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshPublicKey")
     public String sshPublicKey;
+
     public SelfUserProfile withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -39,9 +42,11 @@ public class SelfUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshUsername")
     public String sshUsername;
+
     public SelfUserProfile withSshUsername(String sshUsername) {
         this.sshUsername = sshUsername;
         return this;
     }
     
+    public SelfUserProfile(){}
 }

@@ -15,9 +15,11 @@ public class KnownGender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public KnownGenderTypeEnum type;
+
     public KnownGender withType(KnownGenderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public KnownGender(){}
 }

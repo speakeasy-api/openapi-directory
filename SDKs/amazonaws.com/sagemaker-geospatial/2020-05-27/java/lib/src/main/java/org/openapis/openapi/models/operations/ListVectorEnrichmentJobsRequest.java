@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListVectorEnrichmentJobsRequest {
@@ -12,6 +13,7 @@ public class ListVectorEnrichmentJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListVectorEnrichmentJobsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -22,6 +24,7 @@ public class ListVectorEnrichmentJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListVectorEnrichmentJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,6 +32,7 @@ public class ListVectorEnrichmentJobsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListVectorEnrichmentJobsRequestBody requestBody;
+
     public ListVectorEnrichmentJobsRequest withRequestBody(ListVectorEnrichmentJobsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class ListVectorEnrichmentJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListVectorEnrichmentJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListVectorEnrichmentJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListVectorEnrichmentJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListVectorEnrichmentJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListVectorEnrichmentJobsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListVectorEnrichmentJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListVectorEnrichmentJobsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListVectorEnrichmentJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListVectorEnrichmentJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListVectorEnrichmentJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListVectorEnrichmentJobsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,9 +88,13 @@ public class ListVectorEnrichmentJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListVectorEnrichmentJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListVectorEnrichmentJobsRequest(@JsonProperty("RequestBody") ListVectorEnrichmentJobsRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

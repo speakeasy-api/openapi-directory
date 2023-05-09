@@ -15,6 +15,7 @@ public class PartnerStoreStatusStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PartnerStoreStatusStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -26,9 +27,11 @@ public class PartnerStoreStatusStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public PartnerStoreStatusStatus withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public PartnerStoreStatusStatus(){}
 }

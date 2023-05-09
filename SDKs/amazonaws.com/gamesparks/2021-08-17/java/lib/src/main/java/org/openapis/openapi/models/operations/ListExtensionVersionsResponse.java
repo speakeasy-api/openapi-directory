@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExtensionVersionsResponse {
@@ -12,6 +13,7 @@ public class ListExtensionVersionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListExtensionVersionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListExtensionVersionsResponse {
     
     
     public String contentType;
+
     public ListExtensionVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListExtensionVersionsResponse {
      */
     
     public Object internalServerException;
+
     public ListExtensionVersionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListExtensionVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExtensionVersionsResult listExtensionVersionsResult;
+
     public ListExtensionVersionsResponse withListExtensionVersionsResult(org.openapis.openapi.models.shared.ListExtensionVersionsResult listExtensionVersionsResult) {
         this.listExtensionVersionsResult = listExtensionVersionsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListExtensionVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListExtensionVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListExtensionVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListExtensionVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListExtensionVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExtensionVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListExtensionVersionsResponse {
      */
     
     public Object throttlingException;
+
     public ListExtensionVersionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListExtensionVersionsResponse {
      */
     
     public Object validationException;
+
     public ListExtensionVersionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListExtensionVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

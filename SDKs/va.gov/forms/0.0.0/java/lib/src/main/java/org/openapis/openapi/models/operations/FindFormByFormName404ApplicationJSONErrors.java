@@ -12,9 +12,11 @@ public class FindFormByFormName404ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FindFormByFormName404ApplicationJSONErrors withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FindFormByFormName404ApplicationJSONErrors(){}
 }

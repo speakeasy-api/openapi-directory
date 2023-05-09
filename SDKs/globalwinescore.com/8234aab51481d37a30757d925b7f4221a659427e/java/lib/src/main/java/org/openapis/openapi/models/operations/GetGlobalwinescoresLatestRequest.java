@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetGlobalwinescoresLatestRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetGlobalwinescoresLatestRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +20,7 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
     public GetGlobalwinescoresLatestColorEnum color;
+
     public GetGlobalwinescoresLatestRequest withColor(GetGlobalwinescoresLatestColorEnum color) {
         this.color = color;
         return this;
@@ -30,6 +32,7 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_primeurs")
     public Boolean isPrimeurs;
+
     public GetGlobalwinescoresLatestRequest withIsPrimeurs(Boolean isPrimeurs) {
         this.isPrimeurs = isPrimeurs;
         return this;
@@ -40,6 +43,7 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetGlobalwinescoresLatestRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -51,6 +55,7 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lwin")
     public String lwin;
+
     public GetGlobalwinescoresLatestRequest withLwin(String lwin) {
         this.lwin = lwin;
         return this;
@@ -62,6 +67,7 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lwin_11")
     public String lwin11;
+
     public GetGlobalwinescoresLatestRequest withLwin11(String lwin11) {
         this.lwin11 = lwin11;
         return this;
@@ -72,6 +78,7 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetGlobalwinescoresLatestRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -82,6 +89,7 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
     public GetGlobalwinescoresLatestOrderingEnum ordering;
+
     public GetGlobalwinescoresLatestRequest withOrdering(GetGlobalwinescoresLatestOrderingEnum ordering) {
         this.ordering = ordering;
         return this;
@@ -92,6 +100,7 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vintage")
     public String vintage;
+
     public GetGlobalwinescoresLatestRequest withVintage(String vintage) {
         this.vintage = vintage;
         return this;
@@ -103,9 +112,11 @@ public class GetGlobalwinescoresLatestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wine_id")
     public Long[] wineId;
+
     public GetGlobalwinescoresLatestRequest withWineId(Long[] wineId) {
         this.wineId = wineId;
         return this;
     }
     
+    public GetGlobalwinescoresLatestRequest(){}
 }

@@ -15,6 +15,7 @@ public class GetComponentPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public String policy;
+
     public GetComponentPolicyResponse withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -23,9 +24,11 @@ public class GetComponentPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GetComponentPolicyResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetComponentPolicyResponse(){}
 }

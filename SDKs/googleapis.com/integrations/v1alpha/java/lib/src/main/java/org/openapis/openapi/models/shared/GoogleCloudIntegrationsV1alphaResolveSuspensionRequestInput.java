@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaResolveSuspensionRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspension")
     public GoogleCloudIntegrationsV1alphaSuspensionInput suspension;
+
     public GoogleCloudIntegrationsV1alphaResolveSuspensionRequestInput withSuspension(GoogleCloudIntegrationsV1alphaSuspensionInput suspension) {
         this.suspension = suspension;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaResolveSuspensionRequestInput(){}
 }

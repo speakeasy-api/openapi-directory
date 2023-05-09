@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypeOfferingsResultInstanceTypeOfferings {
     
     public DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum instanceType;
+
     public DescribeInstanceTypeOfferingsResultInstanceTypeOfferings withInstanceType(DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypeOfferingsResultInstanceTypeOfferings {
     
     
     public String location;
+
     public DescribeInstanceTypeOfferingsResultInstanceTypeOfferings withLocation(String location) {
         this.location = location;
         return this;
@@ -26,9 +28,11 @@ public class DescribeInstanceTypeOfferingsResultInstanceTypeOfferings {
     
     
     public DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum locationType;
+
     public DescribeInstanceTypeOfferingsResultInstanceTypeOfferings withLocationType(DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
     }
     
+    public DescribeInstanceTypeOfferingsResultInstanceTypeOfferings(){}
 }

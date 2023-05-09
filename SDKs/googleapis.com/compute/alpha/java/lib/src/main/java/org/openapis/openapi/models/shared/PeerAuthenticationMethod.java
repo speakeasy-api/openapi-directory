@@ -18,9 +18,11 @@ public class PeerAuthenticationMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtls")
     public MutualTls mtls;
+
     public PeerAuthenticationMethod withMtls(MutualTls mtls) {
         this.mtls = mtls;
         return this;
     }
     
+    public PeerAuthenticationMethod(){}
 }

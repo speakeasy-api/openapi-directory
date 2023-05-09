@@ -12,6 +12,7 @@ public class CreatePullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreatePullRequestInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class CreatePullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreatePullRequestInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreatePullRequestInput {
     
     @JsonProperty("targets")
     public Target[] targets;
+
     public CreatePullRequestInput withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -34,9 +37,14 @@ public class CreatePullRequestInput {
     
     @JsonProperty("title")
     public String title;
+
     public CreatePullRequestInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CreatePullRequestInput(@JsonProperty("targets") Target[] targets, @JsonProperty("title") String title) {
+        this.targets = targets;
+        this.title = title;
+  }
 }

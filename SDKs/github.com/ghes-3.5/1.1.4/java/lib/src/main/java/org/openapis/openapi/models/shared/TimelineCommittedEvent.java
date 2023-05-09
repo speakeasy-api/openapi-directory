@@ -17,6 +17,7 @@ public class TimelineCommittedEvent {
      */
     @JsonProperty("author")
     public TimelineCommittedEventAuthor author;
+
     public TimelineCommittedEvent withAuthor(TimelineCommittedEventAuthor author) {
         this.author = author;
         return this;
@@ -27,6 +28,7 @@ public class TimelineCommittedEvent {
      */
     @JsonProperty("committer")
     public TimelineCommittedEventCommitter committer;
+
     public TimelineCommittedEvent withCommitter(TimelineCommittedEventCommitter committer) {
         this.committer = committer;
         return this;
@@ -35,6 +37,7 @@ public class TimelineCommittedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public TimelineCommittedEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -42,6 +45,7 @@ public class TimelineCommittedEvent {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public TimelineCommittedEvent withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -52,6 +56,7 @@ public class TimelineCommittedEvent {
      */
     @JsonProperty("message")
     public String message;
+
     public TimelineCommittedEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -59,6 +64,7 @@ public class TimelineCommittedEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public TimelineCommittedEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -66,6 +72,7 @@ public class TimelineCommittedEvent {
     
     @JsonProperty("parents")
     public TimelineCommittedEventParents[] parents;
+
     public TimelineCommittedEvent withParents(TimelineCommittedEventParents[] parents) {
         this.parents = parents;
         return this;
@@ -76,6 +83,7 @@ public class TimelineCommittedEvent {
      */
     @JsonProperty("sha")
     public String sha;
+
     public TimelineCommittedEvent withSha(String sha) {
         this.sha = sha;
         return this;
@@ -83,6 +91,7 @@ public class TimelineCommittedEvent {
     
     @JsonProperty("tree")
     public TimelineCommittedEventTree tree;
+
     public TimelineCommittedEvent withTree(TimelineCommittedEventTree tree) {
         this.tree = tree;
         return this;
@@ -90,6 +99,7 @@ public class TimelineCommittedEvent {
     
     @JsonProperty("url")
     public String url;
+
     public TimelineCommittedEvent withUrl(String url) {
         this.url = url;
         return this;
@@ -97,9 +107,22 @@ public class TimelineCommittedEvent {
     
     @JsonProperty("verification")
     public TimelineCommittedEventVerification verification;
+
     public TimelineCommittedEvent withVerification(TimelineCommittedEventVerification verification) {
         this.verification = verification;
         return this;
     }
     
+    public TimelineCommittedEvent(@JsonProperty("author") TimelineCommittedEventAuthor author, @JsonProperty("committer") TimelineCommittedEventCommitter committer, @JsonProperty("html_url") String htmlUrl, @JsonProperty("message") String message, @JsonProperty("node_id") String nodeId, @JsonProperty("parents") TimelineCommittedEventParents[] parents, @JsonProperty("sha") String sha, @JsonProperty("tree") TimelineCommittedEventTree tree, @JsonProperty("url") String url, @JsonProperty("verification") TimelineCommittedEventVerification verification) {
+        this.author = author;
+        this.committer = committer;
+        this.htmlUrl = htmlUrl;
+        this.message = message;
+        this.nodeId = nodeId;
+        this.parents = parents;
+        this.sha = sha;
+        this.tree = tree;
+        this.url = url;
+        this.verification = verification;
+  }
 }

@@ -18,6 +18,7 @@ public class AnalyzeSyntaxResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public AnalyzeSyntaxResponse withLanguage(String language) {
         this.language = language;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzeSyntaxResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentences")
     public Sentence[] sentences;
+
     public AnalyzeSyntaxResponse withSentences(Sentence[] sentences) {
         this.sentences = sentences;
         return this;
@@ -40,9 +42,11 @@ public class AnalyzeSyntaxResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokens")
     public Token[] tokens;
+
     public AnalyzeSyntaxResponse withTokens(Token[] tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public AnalyzeSyntaxResponse(){}
 }

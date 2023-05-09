@@ -20,6 +20,7 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentSigningKeyLength")
     public DkimSigningKeyLengthEnum currentSigningKeyLength;
+
     public DkimAttributes withCurrentSigningKeyLength(DkimSigningKeyLengthEnum currentSigningKeyLength) {
         this.currentSigningKeyLength = currentSigningKeyLength;
         return this;
@@ -30,6 +31,7 @@ public class DkimAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastKeyGenerationTimestamp")
     public OffsetDateTime lastKeyGenerationTimestamp;
+
     public DkimAttributes withLastKeyGenerationTimestamp(OffsetDateTime lastKeyGenerationTimestamp) {
         this.lastKeyGenerationTimestamp = lastKeyGenerationTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextSigningKeyLength")
     public DkimSigningKeyLengthEnum nextSigningKeyLength;
+
     public DkimAttributes withNextSigningKeyLength(DkimSigningKeyLengthEnum nextSigningKeyLength) {
         this.nextSigningKeyLength = nextSigningKeyLength;
         return this;
@@ -46,6 +49,7 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningAttributesOrigin")
     public DkimSigningAttributesOriginEnum signingAttributesOrigin;
+
     public DkimAttributes withSigningAttributesOrigin(DkimSigningAttributesOriginEnum signingAttributesOrigin) {
         this.signingAttributesOrigin = signingAttributesOrigin;
         return this;
@@ -54,6 +58,7 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningEnabled")
     public Boolean signingEnabled;
+
     public DkimAttributes withSigningEnabled(Boolean signingEnabled) {
         this.signingEnabled = signingEnabled;
         return this;
@@ -62,6 +67,7 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DkimStatusEnum status;
+
     public DkimAttributes withStatus(DkimStatusEnum status) {
         this.status = status;
         return this;
@@ -70,9 +76,11 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tokens")
     public String[] tokens;
+
     public DkimAttributes withTokens(String[] tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public DkimAttributes(){}
 }

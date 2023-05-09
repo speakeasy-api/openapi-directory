@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBlueprintRequest {
     @JsonProperty("BlueprintLocation")
     public String blueprintLocation;
+
     public CreateBlueprintRequest withBlueprintLocation(String blueprintLocation) {
         this.blueprintLocation = blueprintLocation;
         return this;
@@ -19,6 +20,7 @@ public class CreateBlueprintRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateBlueprintRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateBlueprintRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateBlueprintRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,9 +37,14 @@ public class CreateBlueprintRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateBlueprintRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateBlueprintRequest(@JsonProperty("BlueprintLocation") String blueprintLocation, @JsonProperty("Name") String name) {
+        this.blueprintLocation = blueprintLocation;
+        this.name = name;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     public DestinyDefinitionsRecordsDestinyRecordCompletionBlock completionInfo;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withCompletionInfo(DestinyDefinitionsRecordsDestinyRecordCompletionBlock completionInfo) {
         this.completionInfo = completionInfo;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withDisplayProperties(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties) {
         this.displayProperties = displayProperties;
         return this;
@@ -29,6 +31,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public DestinyDefinitionsRecordsDestinyRecordExpirationBlock expirationInfo;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withExpirationInfo(DestinyDefinitionsRecordsDestinyRecordExpirationBlock expirationInfo) {
         this.expirationInfo = expirationInfo;
         return this;
@@ -36,6 +39,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public Boolean forTitleGilding;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withForTitleGilding(Boolean forTitleGilding) {
         this.forTitleGilding = forTitleGilding;
         return this;
@@ -47,6 +51,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public Long hash;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withHash(Long hash) {
         this.hash = hash;
         return this;
@@ -57,6 +62,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public Integer index;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withIndex(Integer index) {
         this.index = index;
         return this;
@@ -67,6 +73,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo intervalInfo;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withIntervalInfo(DestinyDefinitionsRecordsDestinyRecordDefinitionIntervalInfo intervalInfo) {
         this.intervalInfo = intervalInfo;
         return this;
@@ -74,6 +81,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public Long loreHash;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withLoreHash(Long loreHash) {
         this.loreHash = loreHash;
         return this;
@@ -81,6 +89,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public Long[] objectiveHashes;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withObjectiveHashes(Long[] objectiveHashes) {
         this.objectiveHashes = objectiveHashes;
         return this;
@@ -91,6 +100,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public Long[] parentNodeHashes;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withParentNodeHashes(Long[] parentNodeHashes) {
         this.parentNodeHashes = parentNodeHashes;
         return this;
@@ -98,6 +108,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withPresentationInfo(DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo) {
         this.presentationInfo = presentationInfo;
         return this;
@@ -105,6 +116,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public Integer presentationNodeType;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withPresentationNodeType(Integer presentationNodeType) {
         this.presentationNodeType = presentationNodeType;
         return this;
@@ -112,6 +124,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public Integer recordValueStyle;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withRecordValueStyle(Integer recordValueStyle) {
         this.recordValueStyle = recordValueStyle;
         return this;
@@ -122,6 +135,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public Boolean redacted;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withRedacted(Boolean redacted) {
         this.redacted = redacted;
         return this;
@@ -132,6 +146,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withRequirements(DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements) {
         this.requirements = requirements;
         return this;
@@ -143,6 +158,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public DestinyDestinyItemQuantity[] rewardItems;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withRewardItems(DestinyDestinyItemQuantity[] rewardItems) {
         this.rewardItems = rewardItems;
         return this;
@@ -153,6 +169,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public Integer scope;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withScope(Integer scope) {
         this.scope = scope;
         return this;
@@ -163,6 +180,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
      */
     
     public Boolean shouldShowLargeIcons;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withShouldShowLargeIcons(Boolean shouldShowLargeIcons) {
         this.shouldShowLargeIcons = shouldShowLargeIcons;
         return this;
@@ -170,6 +188,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public DestinyDefinitionsRecordsSchemaRecordStateBlock stateInfo;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withStateInfo(DestinyDefinitionsRecordsSchemaRecordStateBlock stateInfo) {
         this.stateInfo = stateInfo;
         return this;
@@ -177,6 +196,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public DestinyDefinitionsRecordsDestinyRecordTitleBlock titleInfo;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withTitleInfo(DestinyDefinitionsRecordsDestinyRecordTitleBlock titleInfo) {
         this.titleInfo = titleInfo;
         return this;
@@ -184,6 +204,7 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public Long[] traitHashes;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withTraitHashes(Long[] traitHashes) {
         this.traitHashes = traitHashes;
         return this;
@@ -191,9 +212,11 @@ public class DestinyDefinitionsRecordsDestinyRecordDefinition {
     
     
     public String[] traitIds;
+
     public DestinyDefinitionsRecordsDestinyRecordDefinition withTraitIds(String[] traitIds) {
         this.traitIds = traitIds;
         return this;
     }
     
+    public DestinyDefinitionsRecordsDestinyRecordDefinition(){}
 }

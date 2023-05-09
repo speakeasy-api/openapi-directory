@@ -12,6 +12,7 @@ public class UpdateIdentityProviderSettingsRequestBody {
      */
     @JsonProperty("IdentityProvider")
     public UpdateIdentityProviderSettingsRequestBodyIdentityProvider identityProvider;
+
     public UpdateIdentityProviderSettingsRequestBody withIdentityProvider(UpdateIdentityProviderSettingsRequestBodyIdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -22,6 +23,7 @@ public class UpdateIdentityProviderSettingsRequestBody {
      */
     @JsonProperty("Product")
     public String product;
+
     public UpdateIdentityProviderSettingsRequestBody withProduct(String product) {
         this.product = product;
         return this;
@@ -32,9 +34,15 @@ public class UpdateIdentityProviderSettingsRequestBody {
      */
     @JsonProperty("UpdateSettings")
     public UpdateIdentityProviderSettingsRequestBodyUpdateSettings updateSettings;
+
     public UpdateIdentityProviderSettingsRequestBody withUpdateSettings(UpdateIdentityProviderSettingsRequestBodyUpdateSettings updateSettings) {
         this.updateSettings = updateSettings;
         return this;
     }
     
+    public UpdateIdentityProviderSettingsRequestBody(@JsonProperty("IdentityProvider") UpdateIdentityProviderSettingsRequestBodyIdentityProvider identityProvider, @JsonProperty("Product") String product, @JsonProperty("UpdateSettings") UpdateIdentityProviderSettingsRequestBodyUpdateSettings updateSettings) {
+        this.identityProvider = identityProvider;
+        this.product = product;
+        this.updateSettings = updateSettings;
+  }
 }

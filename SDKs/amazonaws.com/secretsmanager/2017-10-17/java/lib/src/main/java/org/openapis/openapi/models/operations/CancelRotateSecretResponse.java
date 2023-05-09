@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelRotateSecretResponse {
@@ -12,6 +13,7 @@ public class CancelRotateSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelRotateSecretResponse cancelRotateSecretResponse;
+
     public CancelRotateSecretResponse withCancelRotateSecretResponse(org.openapis.openapi.models.shared.CancelRotateSecretResponse cancelRotateSecretResponse) {
         this.cancelRotateSecretResponse = cancelRotateSecretResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelRotateSecretResponse {
     
     
     public String contentType;
+
     public CancelRotateSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelRotateSecretResponse {
      */
     
     public Object internalServiceError;
+
     public CancelRotateSecretResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class CancelRotateSecretResponse {
      */
     
     public Object invalidParameterException;
+
     public CancelRotateSecretResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CancelRotateSecretResponse {
      */
     
     public Object invalidRequestException;
+
     public CancelRotateSecretResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CancelRotateSecretResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelRotateSecretResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CancelRotateSecretResponse {
     
     
     public Integer statusCode;
+
     public CancelRotateSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CancelRotateSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelRotateSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelRotateSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

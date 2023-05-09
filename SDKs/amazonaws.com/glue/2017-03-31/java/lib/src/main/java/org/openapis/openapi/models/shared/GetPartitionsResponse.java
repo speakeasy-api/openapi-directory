@@ -15,6 +15,7 @@ public class GetPartitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetPartitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetPartitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Partitions")
     public Partition[] partitions;
+
     public GetPartitionsResponse withPartitions(Partition[] partitions) {
         this.partitions = partitions;
         return this;
     }
     
+    public GetPartitionsResponse(){}
 }

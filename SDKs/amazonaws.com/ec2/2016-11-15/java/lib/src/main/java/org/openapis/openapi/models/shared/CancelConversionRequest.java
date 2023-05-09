@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelConversionRequest {
     
     public String conversionTaskId;
+
     public CancelConversionRequest withConversionTaskId(String conversionTaskId) {
         this.conversionTaskId = conversionTaskId;
         return this;
@@ -16,6 +17,7 @@ public class CancelConversionRequest {
     
     
     public Boolean dryRun;
+
     public CancelConversionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class CancelConversionRequest {
     
     
     public String reasonMessage;
+
     public CancelConversionRequest withReasonMessage(String reasonMessage) {
         this.reasonMessage = reasonMessage;
         return this;
     }
     
+    public CancelConversionRequest(@JsonProperty("ConversionTaskId") String conversionTaskId) {
+        this.conversionTaskId = conversionTaskId;
+  }
 }

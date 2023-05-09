@@ -15,6 +15,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardMerchant")
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant cardMerchant;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPayment withCardMerchant(GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant cardMerchant) {
         this.cardMerchant = cardMerchant;
         return this;
@@ -23,9 +24,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentTypeEnum type;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPayment withType(GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPayment(){}
 }

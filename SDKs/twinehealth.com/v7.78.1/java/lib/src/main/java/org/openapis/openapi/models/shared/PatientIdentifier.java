@@ -12,6 +12,7 @@ public class PatientIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public PatientIdentifier withLabel(String label) {
         this.label = label;
         return this;
@@ -19,6 +20,7 @@ public class PatientIdentifier {
     
     @JsonProperty("system")
     public String system;
+
     public PatientIdentifier withSystem(String system) {
         this.system = system;
         return this;
@@ -30,6 +32,7 @@ public class PatientIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique")
     public Boolean unique;
+
     public PatientIdentifier withUnique(Boolean unique) {
         this.unique = unique;
         return this;
@@ -37,9 +40,14 @@ public class PatientIdentifier {
     
     @JsonProperty("value")
     public String value;
+
     public PatientIdentifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PatientIdentifier(@JsonProperty("system") String system, @JsonProperty("value") String value) {
+        this.system = system;
+        this.value = value;
+  }
 }

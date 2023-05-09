@@ -18,6 +18,7 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionDate")
     public String completionDate;
+
     public InventoryTask withCompletionDate(String completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -29,6 +30,7 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public InventoryTask withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -40,6 +42,7 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailHref")
     public String detailHref;
+
     public InventoryTask withDetailHref(String detailHref) {
         this.detailHref = detailHref;
         return this;
@@ -51,6 +54,7 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public String feedType;
+
     public InventoryTask withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -62,6 +66,7 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public InventoryFilterCriteria filterCriteria;
+
     public InventoryTask withFilterCriteria(InventoryFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -73,6 +78,7 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public InventoryTask withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -84,6 +90,7 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public InventoryTask withStatus(String status) {
         this.status = status;
         return this;
@@ -95,6 +102,7 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public InventoryTask withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -106,9 +114,11 @@ public class InventoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadSummary")
     public UploadSummary uploadSummary;
+
     public InventoryTask withUploadSummary(UploadSummary uploadSummary) {
         this.uploadSummary = uploadSummary;
         return this;
     }
     
+    public InventoryTask(){}
 }

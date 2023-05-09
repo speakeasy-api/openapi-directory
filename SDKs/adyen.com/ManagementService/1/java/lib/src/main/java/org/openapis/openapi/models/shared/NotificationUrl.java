@@ -15,6 +15,7 @@ public class NotificationUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localUrls")
     public Url[] localUrls;
+
     public NotificationUrl withLocalUrls(Url[] localUrls) {
         this.localUrls = localUrls;
         return this;
@@ -26,9 +27,11 @@ public class NotificationUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicUrls")
     public Url[] publicUrls;
+
     public NotificationUrl withPublicUrls(Url[] publicUrls) {
         this.publicUrls = publicUrls;
         return this;
     }
     
+    public NotificationUrl(){}
 }

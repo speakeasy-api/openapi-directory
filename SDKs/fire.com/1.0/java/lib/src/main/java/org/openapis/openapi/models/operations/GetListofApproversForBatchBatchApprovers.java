@@ -15,9 +15,11 @@ public class GetListofApproversForBatchBatchApprovers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvals")
     public GetListofApproversForBatchBatchApproversApprovals[] approvals;
+
     public GetListofApproversForBatchBatchApprovers withApprovals(GetListofApproversForBatchBatchApproversApprovals[] approvals) {
         this.approvals = approvals;
         return this;
     }
     
+    public GetListofApproversForBatchBatchApprovers(){}
 }

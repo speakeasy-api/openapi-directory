@@ -17,6 +17,7 @@ public class Two {
      */
     @JsonProperty("type")
     public String type;
+
     public Two withType(String type) {
         this.type = type;
         return this;
@@ -28,9 +29,13 @@ public class Two {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Two withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Two(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class ReturnaddressCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public ReturnaddressCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -26,6 +27,7 @@ public class ReturnaddressCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public ReturnaddressCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -37,6 +39,7 @@ public class ReturnaddressCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReturnaddressCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,9 +51,11 @@ public class ReturnaddressCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnAddress")
     public ReturnAddress returnAddress;
+
     public ReturnaddressCustomBatchResponseEntry withReturnAddress(ReturnAddress returnAddress) {
         this.returnAddress = returnAddress;
         return this;
     }
     
+    public ReturnaddressCustomBatchResponseEntry(){}
 }

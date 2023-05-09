@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UserEMailSettingSubscriptionLocalization {
     
     public String description;
+
     public UserEMailSettingSubscriptionLocalization withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UserEMailSettingSubscriptionLocalization {
     
     
     public String knownUserActionText;
+
     public UserEMailSettingSubscriptionLocalization withKnownUserActionText(String knownUserActionText) {
         this.knownUserActionText = knownUserActionText;
         return this;
@@ -26,6 +28,7 @@ public class UserEMailSettingSubscriptionLocalization {
     
     
     public String registeredUserDescription;
+
     public UserEMailSettingSubscriptionLocalization withRegisteredUserDescription(String registeredUserDescription) {
         this.registeredUserDescription = registeredUserDescription;
         return this;
@@ -33,6 +36,7 @@ public class UserEMailSettingSubscriptionLocalization {
     
     
     public String title;
+
     public UserEMailSettingSubscriptionLocalization withTitle(String title) {
         this.title = title;
         return this;
@@ -40,6 +44,7 @@ public class UserEMailSettingSubscriptionLocalization {
     
     
     public String unknownUserActionText;
+
     public UserEMailSettingSubscriptionLocalization withUnknownUserActionText(String unknownUserActionText) {
         this.unknownUserActionText = unknownUserActionText;
         return this;
@@ -47,6 +52,7 @@ public class UserEMailSettingSubscriptionLocalization {
     
     
     public String unknownUserDescription;
+
     public UserEMailSettingSubscriptionLocalization withUnknownUserDescription(String unknownUserDescription) {
         this.unknownUserDescription = unknownUserDescription;
         return this;
@@ -54,9 +60,11 @@ public class UserEMailSettingSubscriptionLocalization {
     
     
     public String unregisteredUserDescription;
+
     public UserEMailSettingSubscriptionLocalization withUnregisteredUserDescription(String unregisteredUserDescription) {
         this.unregisteredUserDescription = unregisteredUserDescription;
         return this;
     }
     
+    public UserEMailSettingSubscriptionLocalization(){}
 }

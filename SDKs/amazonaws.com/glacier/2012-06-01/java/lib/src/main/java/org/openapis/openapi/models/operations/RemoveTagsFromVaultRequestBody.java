@@ -15,9 +15,11 @@ public class RemoveTagsFromVaultRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKeys")
     public String[] tagKeys;
+
     public RemoveTagsFromVaultRequestBody withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public RemoveTagsFromVaultRequestBody(){}
 }

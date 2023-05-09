@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteApplicationInputProcessingConfigurationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public DeleteApplicationInputProcessingConfigurationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -16,6 +17,7 @@ public class DeleteApplicationInputProcessingConfigurationRequest {
     
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public DeleteApplicationInputProcessingConfigurationRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
@@ -23,9 +25,15 @@ public class DeleteApplicationInputProcessingConfigurationRequest {
     
     @JsonProperty("InputId")
     public String inputId;
+
     public DeleteApplicationInputProcessingConfigurationRequest withInputId(String inputId) {
         this.inputId = inputId;
         return this;
     }
     
+    public DeleteApplicationInputProcessingConfigurationRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("CurrentApplicationVersionId") Long currentApplicationVersionId, @JsonProperty("InputId") String inputId) {
+        this.applicationName = applicationName;
+        this.currentApplicationVersionId = currentApplicationVersionId;
+        this.inputId = inputId;
+  }
 }

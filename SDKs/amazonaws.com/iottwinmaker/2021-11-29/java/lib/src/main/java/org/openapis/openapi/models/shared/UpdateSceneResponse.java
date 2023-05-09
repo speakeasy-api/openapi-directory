@@ -19,9 +19,13 @@ public class UpdateSceneResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public UpdateSceneResponse withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public UpdateSceneResponse(@JsonProperty("updateDateTime") OffsetDateTime updateDateTime) {
+        this.updateDateTime = updateDateTime;
+  }
 }

@@ -12,6 +12,7 @@ public class DeletePortfolioShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DeletePortfolioShareInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class DeletePortfolioShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public DeletePortfolioShareInput withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +30,7 @@ public class DeletePortfolioShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationNode")
     public OrganizationNode organizationNode;
+
     public DeletePortfolioShareInput withOrganizationNode(OrganizationNode organizationNode) {
         this.organizationNode = organizationNode;
         return this;
@@ -35,9 +38,13 @@ public class DeletePortfolioShareInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public DeletePortfolioShareInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
     }
     
+    public DeletePortfolioShareInput(@JsonProperty("PortfolioId") String portfolioId) {
+        this.portfolioId = portfolioId;
+  }
 }

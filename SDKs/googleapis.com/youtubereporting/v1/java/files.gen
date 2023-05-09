@@ -93,4 +93,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GdataDiffChecksumsResponse.
 lib/src/main/java/org/openapis/openapi/models/shared/GdataContentTypeInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListReportTypesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportType.java
+docs/sdk/README.md
+docs/jobs/README.md
+docs/media/README.md
+docs/reporttypes/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class GlobalSecondaryIndexAutoScalingUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public GlobalSecondaryIndexAutoScalingUpdate withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -26,9 +27,11 @@ public class GlobalSecondaryIndexAutoScalingUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedWriteCapacityAutoScalingUpdate")
     public AutoScalingSettingsUpdate provisionedWriteCapacityAutoScalingUpdate;
+
     public GlobalSecondaryIndexAutoScalingUpdate withProvisionedWriteCapacityAutoScalingUpdate(AutoScalingSettingsUpdate provisionedWriteCapacityAutoScalingUpdate) {
         this.provisionedWriteCapacityAutoScalingUpdate = provisionedWriteCapacityAutoScalingUpdate;
         return this;
     }
     
+    public GlobalSecondaryIndexAutoScalingUpdate(){}
 }

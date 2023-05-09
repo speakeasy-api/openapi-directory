@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdatePickupPointRequestBodyBusinessHour {
     @JsonProperty("closingTime")
     public String closingTime;
+
     public CreateUpdatePickupPointRequestBodyBusinessHour withClosingTime(String closingTime) {
         this.closingTime = closingTime;
         return this;
@@ -16,6 +17,7 @@ public class CreateUpdatePickupPointRequestBodyBusinessHour {
     
     @JsonProperty("dayOfWeek")
     public Integer dayOfWeek;
+
     public CreateUpdatePickupPointRequestBodyBusinessHour withDayOfWeek(Integer dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -23,9 +25,15 @@ public class CreateUpdatePickupPointRequestBodyBusinessHour {
     
     @JsonProperty("openingTime")
     public String openingTime;
+
     public CreateUpdatePickupPointRequestBodyBusinessHour withOpeningTime(String openingTime) {
         this.openingTime = openingTime;
         return this;
     }
     
+    public CreateUpdatePickupPointRequestBodyBusinessHour(@JsonProperty("closingTime") String closingTime, @JsonProperty("dayOfWeek") Integer dayOfWeek, @JsonProperty("openingTime") String openingTime) {
+        this.closingTime = closingTime;
+        this.dayOfWeek = dayOfWeek;
+        this.openingTime = openingTime;
+  }
 }

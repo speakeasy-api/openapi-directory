@@ -15,6 +15,7 @@ public class GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpec")
     public GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec;
+
     public GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry withAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec) {
         this.annotationSpec = annotationSpec;
         return this;
@@ -26,9 +27,11 @@ public class GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCount")
     public Integer itemCount;
+
     public GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry withItemCount(Integer itemCount) {
         this.itemCount = itemCount;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry(){}
 }

@@ -18,6 +18,7 @@ public class ReportRowMetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public ReportRowMetricValue withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -29,6 +30,7 @@ public class ReportRowMetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public String integerValue;
+
     public ReportRowMetricValue withIntegerValue(String integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -40,9 +42,11 @@ public class ReportRowMetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("microsValue")
     public String microsValue;
+
     public ReportRowMetricValue withMicrosValue(String microsValue) {
         this.microsValue = microsValue;
         return this;
     }
     
+    public ReportRowMetricValue(){}
 }

@@ -12,6 +12,7 @@ public class CreateFaqRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateFaqRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateFaqRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateFaqRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CreateFaqRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFormat")
     public FaqFileFormatEnum fileFormat;
+
     public CreateFaqRequest withFileFormat(FaqFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -35,6 +38,7 @@ public class CreateFaqRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public CreateFaqRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -43,6 +47,7 @@ public class CreateFaqRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public CreateFaqRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -50,6 +55,7 @@ public class CreateFaqRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateFaqRequest withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +63,7 @@ public class CreateFaqRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateFaqRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -64,6 +71,7 @@ public class CreateFaqRequest {
     
     @JsonProperty("S3Path")
     public S3Path s3Path;
+
     public CreateFaqRequest withS3Path(S3Path s3Path) {
         this.s3Path = s3Path;
         return this;
@@ -72,9 +80,16 @@ public class CreateFaqRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFaqRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFaqRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("Name") String name, @JsonProperty("RoleArn") String roleArn, @JsonProperty("S3Path") S3Path s3Path) {
+        this.indexId = indexId;
+        this.name = name;
+        this.roleArn = roleArn;
+        this.s3Path = s3Path;
+  }
 }

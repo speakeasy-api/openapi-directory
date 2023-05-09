@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportConfigurationsCreateResponse {
     
     public String contentType;
+
     public ExportConfigurationsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExportConfigurationsCreateResponse {
      */
     
     public ExportConfigurationsCreate202ApplicationJSON exportConfigurationsCreate202ApplicationJSONObject;
+
     public ExportConfigurationsCreateResponse withExportConfigurationsCreate202ApplicationJSONObject(ExportConfigurationsCreate202ApplicationJSON exportConfigurationsCreate202ApplicationJSONObject) {
         this.exportConfigurationsCreate202ApplicationJSONObject = exportConfigurationsCreate202ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ExportConfigurationsCreateResponse {
      */
     
     public ExportConfigurationsCreateDefaultApplicationJSON exportConfigurationsCreateDefaultApplicationJSONObject;
+
     public ExportConfigurationsCreateResponse withExportConfigurationsCreateDefaultApplicationJSONObject(ExportConfigurationsCreateDefaultApplicationJSON exportConfigurationsCreateDefaultApplicationJSONObject) {
         this.exportConfigurationsCreateDefaultApplicationJSONObject = exportConfigurationsCreateDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ExportConfigurationsCreateResponse {
     
     
     public Integer statusCode;
+
     public ExportConfigurationsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ExportConfigurationsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportConfigurationsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExportConfigurationsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

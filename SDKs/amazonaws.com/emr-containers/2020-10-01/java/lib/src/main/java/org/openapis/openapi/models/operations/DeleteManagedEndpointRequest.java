@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteManagedEndpointRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteManagedEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteManagedEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteManagedEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteManagedEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteManagedEndpointRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteManagedEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteManagedEndpointRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteManagedEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteManagedEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteManagedEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteManagedEndpointRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteManagedEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteManagedEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DeleteManagedEndpointRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=endpointId")
     public String endpointId;
+
     public DeleteManagedEndpointRequest withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -71,9 +80,14 @@ public class DeleteManagedEndpointRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=virtualClusterId")
     public String virtualClusterId;
+
     public DeleteManagedEndpointRequest withVirtualClusterId(String virtualClusterId) {
         this.virtualClusterId = virtualClusterId;
         return this;
     }
     
+    public DeleteManagedEndpointRequest(@JsonProperty("endpointId") String endpointId, @JsonProperty("virtualClusterId") String virtualClusterId) {
+        this.endpointId = endpointId;
+        this.virtualClusterId = virtualClusterId;
+  }
 }

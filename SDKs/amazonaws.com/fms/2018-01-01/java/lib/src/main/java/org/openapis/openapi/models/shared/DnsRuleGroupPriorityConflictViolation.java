@@ -15,6 +15,7 @@ public class DnsRuleGroupPriorityConflictViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConflictingPolicyId")
     public String conflictingPolicyId;
+
     public DnsRuleGroupPriorityConflictViolation withConflictingPolicyId(String conflictingPolicyId) {
         this.conflictingPolicyId = conflictingPolicyId;
         return this;
@@ -23,6 +24,7 @@ public class DnsRuleGroupPriorityConflictViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConflictingPriority")
     public Long conflictingPriority;
+
     public DnsRuleGroupPriorityConflictViolation withConflictingPriority(Long conflictingPriority) {
         this.conflictingPriority = conflictingPriority;
         return this;
@@ -31,6 +33,7 @@ public class DnsRuleGroupPriorityConflictViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnavailablePriorities")
     public Long[] unavailablePriorities;
+
     public DnsRuleGroupPriorityConflictViolation withUnavailablePriorities(Long[] unavailablePriorities) {
         this.unavailablePriorities = unavailablePriorities;
         return this;
@@ -39,6 +42,7 @@ public class DnsRuleGroupPriorityConflictViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public DnsRuleGroupPriorityConflictViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
@@ -47,9 +51,11 @@ public class DnsRuleGroupPriorityConflictViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTargetDescription")
     public String violationTargetDescription;
+
     public DnsRuleGroupPriorityConflictViolation withViolationTargetDescription(String violationTargetDescription) {
         this.violationTargetDescription = violationTargetDescription;
         return this;
     }
     
+    public DnsRuleGroupPriorityConflictViolation(){}
 }

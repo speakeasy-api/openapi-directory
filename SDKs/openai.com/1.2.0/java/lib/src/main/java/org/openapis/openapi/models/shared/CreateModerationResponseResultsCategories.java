@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateModerationResponseResultsCategories {
     @JsonProperty("hate")
     public Boolean hate;
+
     public CreateModerationResponseResultsCategories withHate(Boolean hate) {
         this.hate = hate;
         return this;
@@ -16,6 +17,7 @@ public class CreateModerationResponseResultsCategories {
     
     @JsonProperty("hate/threatening")
     public Boolean hateThreatening;
+
     public CreateModerationResponseResultsCategories withHateThreatening(Boolean hateThreatening) {
         this.hateThreatening = hateThreatening;
         return this;
@@ -23,6 +25,7 @@ public class CreateModerationResponseResultsCategories {
     
     @JsonProperty("self-harm")
     public Boolean selfHarm;
+
     public CreateModerationResponseResultsCategories withSelfHarm(Boolean selfHarm) {
         this.selfHarm = selfHarm;
         return this;
@@ -30,6 +33,7 @@ public class CreateModerationResponseResultsCategories {
     
     @JsonProperty("sexual")
     public Boolean sexual;
+
     public CreateModerationResponseResultsCategories withSexual(Boolean sexual) {
         this.sexual = sexual;
         return this;
@@ -37,6 +41,7 @@ public class CreateModerationResponseResultsCategories {
     
     @JsonProperty("sexual/minors")
     public Boolean sexualMinors;
+
     public CreateModerationResponseResultsCategories withSexualMinors(Boolean sexualMinors) {
         this.sexualMinors = sexualMinors;
         return this;
@@ -44,6 +49,7 @@ public class CreateModerationResponseResultsCategories {
     
     @JsonProperty("violence")
     public Boolean violence;
+
     public CreateModerationResponseResultsCategories withViolence(Boolean violence) {
         this.violence = violence;
         return this;
@@ -51,9 +57,19 @@ public class CreateModerationResponseResultsCategories {
     
     @JsonProperty("violence/graphic")
     public Boolean violenceGraphic;
+
     public CreateModerationResponseResultsCategories withViolenceGraphic(Boolean violenceGraphic) {
         this.violenceGraphic = violenceGraphic;
         return this;
     }
     
+    public CreateModerationResponseResultsCategories(@JsonProperty("hate") Boolean hate, @JsonProperty("hate/threatening") Boolean hateThreatening, @JsonProperty("self-harm") Boolean selfHarm, @JsonProperty("sexual") Boolean sexual, @JsonProperty("sexual/minors") Boolean sexualMinors, @JsonProperty("violence") Boolean violence, @JsonProperty("violence/graphic") Boolean violenceGraphic) {
+        this.hate = hate;
+        this.hateThreatening = hateThreatening;
+        this.selfHarm = selfHarm;
+        this.sexual = sexual;
+        this.sexualMinors = sexualMinors;
+        this.violence = violence;
+        this.violenceGraphic = violenceGraphic;
+  }
 }

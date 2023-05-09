@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventItemLevel")
     public GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum eventItemLevel;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig withEventItemLevel(GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum eventItemLevel) {
         this.eventItemLevel = eventItemLevel;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictItemLevel")
     public GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum predictItemLevel;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig withPredictItemLevel(GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum predictItemLevel) {
         this.predictItemLevel = predictItemLevel;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig(){}
 }

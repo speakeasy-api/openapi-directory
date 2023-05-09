@@ -12,6 +12,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algo_type")
     public String algoType;
+
     public NAHouseModel withAlgoType(String algoType) {
         this.algoType = algoType;
         return this;
@@ -20,6 +21,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ca")
     public NAHouseModelCa ca;
+
     public NAHouseModel withCa(NAHouseModelCa ca) {
         this.ca = ca;
         return this;
@@ -28,6 +30,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ext_temps")
     public java.util.Map<String, Integer> extTemps;
+
     public NAHouseModel withExtTemps(java.util.Map<String, Integer> extTemps) {
         this.extTemps = extTemps;
         return this;
@@ -36,6 +39,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_anticipate_avail")
     public Boolean firstAnticipateAvail;
+
     public NAHouseModel withFirstAnticipateAvail(Boolean firstAnticipateAvail) {
         this.firstAnticipateAvail = firstAnticipateAvail;
         return this;
@@ -44,6 +48,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_pid_avail")
     public Boolean firstPidAvail;
+
     public NAHouseModel withFirstPidAvail(Boolean firstPidAvail) {
         this.firstPidAvail = firstPidAvail;
         return this;
@@ -52,6 +57,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gefs")
     public NAStation gefs;
+
     public NAHouseModel withGefs(NAStation gefs) {
         this.gefs = gefs;
         return this;
@@ -60,6 +66,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_use")
     public String inUse;
+
     public NAHouseModel withInUse(String inUse) {
         this.inUse = inUse;
         return this;
@@ -68,6 +75,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_compute_try")
     public NADate lastComputeTry;
+
     public NAHouseModel withLastComputeTry(NADate lastComputeTry) {
         this.lastComputeTry = lastComputeTry;
         return this;
@@ -76,6 +84,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_station")
     public NALinkStation linkStation;
+
     public NAHouseModel withLinkStation(NALinkStation linkStation) {
         this.linkStation = linkStation;
         return this;
@@ -84,6 +93,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid_algo")
     public NAPidAlgo pidAlgo;
+
     public NAHouseModel withPidAlgo(NAPidAlgo pidAlgo) {
         this.pidAlgo = pidAlgo;
         return this;
@@ -92,6 +102,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefered_algo_type")
     public String preferedAlgoType;
+
     public NAHouseModel withPreferedAlgoType(String preferedAlgoType) {
         this.preferedAlgoType = preferedAlgoType;
         return this;
@@ -100,6 +111,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simple_algo")
     public NASimpleAlgo simpleAlgo;
+
     public NAHouseModel withSimpleAlgo(NASimpleAlgo simpleAlgo) {
         this.simpleAlgo = simpleAlgo;
         return this;
@@ -108,6 +120,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("station")
     public NAStation station;
+
     public NAHouseModel withStation(NAStation station) {
         this.station = station;
         return this;
@@ -116,6 +129,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("station_firsttime_anticipate")
     public Boolean stationFirsttimeAnticipate;
+
     public NAHouseModel withStationFirsttimeAnticipate(Boolean stationFirsttimeAnticipate) {
         this.stationFirsttimeAnticipate = stationFirsttimeAnticipate;
         return this;
@@ -124,6 +138,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public NADate time;
+
     public NAHouseModel withTime(NADate time) {
         this.time = time;
         return this;
@@ -132,6 +147,7 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_algo_changed")
     public Integer timeAlgoChanged;
+
     public NAHouseModel withTimeAlgoChanged(Integer timeAlgoChanged) {
         this.timeAlgoChanged = timeAlgoChanged;
         return this;
@@ -140,9 +156,11 @@ public class NAHouseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_pid_computed")
     public Integer timePidComputed;
+
     public NAHouseModel withTimePidComputed(Integer timePidComputed) {
         this.timePidComputed = timePidComputed;
         return this;
     }
     
+    public NAHouseModel(){}
 }

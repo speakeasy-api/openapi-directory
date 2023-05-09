@@ -12,9 +12,11 @@ public class DeleteAppLaunchConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public DeleteAppLaunchConfigurationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public DeleteAppLaunchConfigurationRequest(){}
 }

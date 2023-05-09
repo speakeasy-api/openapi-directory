@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse {
     
     public String contentType;
+
     public NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAuthorizationPoliciesResponse listAuthorizationPoliciesResponse;
+
     public NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse withListAuthorizationPoliciesResponse(org.openapis.openapi.models.shared.ListAuthorizationPoliciesResponse listAuthorizationPoliciesResponse) {
         this.listAuthorizationPoliciesResponse = listAuthorizationPoliciesResponse;
         return this;
@@ -26,6 +29,7 @@ public class NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse {
     
     
     public Integer statusCode;
+
     public NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

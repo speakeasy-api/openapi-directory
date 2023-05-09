@@ -18,9 +18,11 @@ public class Background {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public OptionalColor color;
+
     public Background withColor(OptionalColor color) {
         this.color = color;
         return this;
     }
     
+    public Background(){}
 }

@@ -15,9 +15,11 @@ public class UpdateCollection200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public UpdateCollection200ApplicationJSONCollection collection;
+
     public UpdateCollection200ApplicationJSON withCollection(UpdateCollection200ApplicationJSONCollection collection) {
         this.collection = collection;
         return this;
     }
     
+    public UpdateCollection200ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class ListOpsItemRelatedItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOpsItemRelatedItemsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListOpsItemRelatedItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Summaries")
     public OpsItemRelatedItemSummary[] summaries;
+
     public ListOpsItemRelatedItemsResponse withSummaries(OpsItemRelatedItemSummary[] summaries) {
         this.summaries = summaries;
         return this;
     }
     
+    public ListOpsItemRelatedItemsResponse(){}
 }

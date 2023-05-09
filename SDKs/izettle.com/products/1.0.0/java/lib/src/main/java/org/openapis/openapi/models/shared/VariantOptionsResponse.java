@@ -12,9 +12,11 @@ public class VariantOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Option[] options;
+
     public VariantOptionsResponse withOptions(Option[] options) {
         this.options = options;
         return this;
     }
     
+    public VariantOptionsResponse(){}
 }

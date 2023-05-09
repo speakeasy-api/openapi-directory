@@ -15,6 +15,7 @@ public class AccountAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public AccountAssignment withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class AccountAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public AccountAssignment withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
@@ -31,6 +33,7 @@ public class AccountAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalId")
     public String principalId;
+
     public AccountAssignment withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -39,9 +42,11 @@ public class AccountAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalType")
     public PrincipalTypeEnum principalType;
+
     public AccountAssignment withPrincipalType(PrincipalTypeEnum principalType) {
         this.principalType = principalType;
         return this;
     }
     
+    public AccountAssignment(){}
 }

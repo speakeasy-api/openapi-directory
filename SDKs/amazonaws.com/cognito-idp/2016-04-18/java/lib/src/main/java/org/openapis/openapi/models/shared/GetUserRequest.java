@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUserRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public GetUserRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
+    public GetUserRequest(@JsonProperty("AccessToken") String accessToken) {
+        this.accessToken = accessToken;
+  }
 }

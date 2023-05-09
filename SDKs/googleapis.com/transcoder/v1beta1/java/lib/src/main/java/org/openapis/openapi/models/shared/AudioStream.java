@@ -18,6 +18,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bitrateBps")
     public Integer bitrateBps;
+
     public AudioStream withBitrateBps(Integer bitrateBps) {
         this.bitrateBps = bitrateBps;
         return this;
@@ -29,6 +30,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCount")
     public Integer channelCount;
+
     public AudioStream withChannelCount(Integer channelCount) {
         this.channelCount = channelCount;
         return this;
@@ -40,6 +42,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelLayout")
     public String[] channelLayout;
+
     public AudioStream withChannelLayout(String[] channelLayout) {
         this.channelLayout = channelLayout;
         return this;
@@ -51,6 +54,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public String codec;
+
     public AudioStream withCodec(String codec) {
         this.codec = codec;
         return this;
@@ -62,6 +66,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping")
     public AudioAtom[] mapping;
+
     public AudioStream withMapping(AudioAtom[] mapping) {
         this.mapping = mapping;
         return this;
@@ -73,9 +78,11 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public AudioStream withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
     }
     
+    public AudioStream(){}
 }

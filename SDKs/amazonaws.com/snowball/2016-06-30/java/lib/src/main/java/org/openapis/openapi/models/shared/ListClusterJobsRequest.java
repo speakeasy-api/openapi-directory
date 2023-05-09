@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListClusterJobsRequest {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ListClusterJobsRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -19,6 +20,7 @@ public class ListClusterJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListClusterJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListClusterJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListClusterJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListClusterJobsRequest(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

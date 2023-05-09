@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IntegratorObjectResult {
     @JsonProperty("actions")
     public Object[] actions;
+
     public IntegratorObjectResult withActions(Object[] actions) {
         this.actions = actions;
         return this;
@@ -18,6 +19,7 @@ public class IntegratorObjectResult {
     
     @JsonProperty("id")
     public String id;
+
     public IntegratorObjectResult withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class IntegratorObjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkUrl")
     public String linkUrl;
+
     public IntegratorObjectResult withLinkUrl(String linkUrl) {
         this.linkUrl = linkUrl;
         return this;
@@ -33,6 +36,7 @@ public class IntegratorObjectResult {
     
     @JsonProperty("title")
     public String title;
+
     public IntegratorObjectResult withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +44,16 @@ public class IntegratorObjectResult {
     
     @JsonProperty("tokens")
     public ObjectToken[] tokens;
+
     public IntegratorObjectResult withTokens(ObjectToken[] tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public IntegratorObjectResult(@JsonProperty("actions") Object[] actions, @JsonProperty("id") String id, @JsonProperty("title") String title, @JsonProperty("tokens") ObjectToken[] tokens) {
+        this.actions = actions;
+        this.id = id;
+        this.title = title;
+        this.tokens = tokens;
+  }
 }

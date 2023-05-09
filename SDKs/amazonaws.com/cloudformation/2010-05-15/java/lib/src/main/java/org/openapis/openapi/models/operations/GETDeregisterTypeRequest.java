@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeregisterTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeregisterTypeActionEnum action;
+
     public GETDeregisterTypeRequest withAction(GETDeregisterTypeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeregisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
     public String arn;
+
     public GETDeregisterTypeRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +32,7 @@ public class GETDeregisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public GETDeregisterTypeTypeEnum type;
+
     public GETDeregisterTypeRequest withType(GETDeregisterTypeTypeEnum type) {
         this.type = type;
         return this;
@@ -39,6 +43,7 @@ public class GETDeregisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
     public String typeName;
+
     public GETDeregisterTypeRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -46,6 +51,7 @@ public class GETDeregisterTypeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeregisterTypeVersionEnum version;
+
     public GETDeregisterTypeRequest withVersion(GETDeregisterTypeVersionEnum version) {
         this.version = version;
         return this;
@@ -56,6 +62,7 @@ public class GETDeregisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionId")
     public String versionId;
+
     public GETDeregisterTypeRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -63,6 +70,7 @@ public class GETDeregisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeregisterTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDeregisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeregisterTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDeregisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeregisterTypeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDeregisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeregisterTypeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDeregisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeregisterTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDeregisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeregisterTypeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETDeregisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeregisterTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeregisterTypeRequest(@JsonProperty("Action") GETDeregisterTypeActionEnum action, @JsonProperty("Version") GETDeregisterTypeVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

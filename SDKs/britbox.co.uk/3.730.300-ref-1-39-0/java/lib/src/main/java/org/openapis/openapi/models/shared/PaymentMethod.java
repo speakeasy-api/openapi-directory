@@ -18,6 +18,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Float balance;
+
     public PaymentMethod withBalance(Float balance) {
         this.balance = balance;
         return this;
@@ -29,6 +30,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public PaymentMethodBrandEnum brand;
+
     public PaymentMethod withBrand(PaymentMethodBrandEnum brand) {
         this.brand = brand;
         return this;
@@ -40,6 +42,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public PaymentMethod withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -57,6 +60,7 @@ public class PaymentMethod {
      */
     @JsonProperty("description")
     public String description;
+
     public PaymentMethod withDescription(String description) {
         this.description = description;
         return this;
@@ -68,6 +72,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryMonth")
     public Double expiryMonth;
+
     public PaymentMethod withExpiryMonth(Double expiryMonth) {
         this.expiryMonth = expiryMonth;
         return this;
@@ -79,6 +84,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryYear")
     public Double expiryYear;
+
     public PaymentMethod withExpiryYear(Double expiryYear) {
         this.expiryYear = expiryYear;
         return this;
@@ -89,6 +95,7 @@ public class PaymentMethod {
      */
     @JsonProperty("id")
     public String id;
+
     public PaymentMethod withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +109,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDigits")
     public Double lastDigits;
+
     public PaymentMethod withLastDigits(Double lastDigits) {
         this.lastDigits = lastDigits;
         return this;
@@ -112,9 +120,15 @@ public class PaymentMethod {
      */
     @JsonProperty("type")
     public PaymentMethodTypeEnum type;
+
     public PaymentMethod withType(PaymentMethodTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PaymentMethod(@JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("type") PaymentMethodTypeEnum type) {
+        this.description = description;
+        this.id = id;
+        this.type = type;
+  }
 }

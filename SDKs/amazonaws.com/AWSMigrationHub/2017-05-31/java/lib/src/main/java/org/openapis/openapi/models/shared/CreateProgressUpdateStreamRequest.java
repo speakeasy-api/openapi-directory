@@ -12,6 +12,7 @@ public class CreateProgressUpdateStreamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public CreateProgressUpdateStreamRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,9 +20,13 @@ public class CreateProgressUpdateStreamRequest {
     
     @JsonProperty("ProgressUpdateStreamName")
     public String progressUpdateStreamName;
+
     public CreateProgressUpdateStreamRequest withProgressUpdateStreamName(String progressUpdateStreamName) {
         this.progressUpdateStreamName = progressUpdateStreamName;
         return this;
     }
     
+    public CreateProgressUpdateStreamRequest(@JsonProperty("ProgressUpdateStreamName") String progressUpdateStreamName) {
+        this.progressUpdateStreamName = progressUpdateStreamName;
+  }
 }

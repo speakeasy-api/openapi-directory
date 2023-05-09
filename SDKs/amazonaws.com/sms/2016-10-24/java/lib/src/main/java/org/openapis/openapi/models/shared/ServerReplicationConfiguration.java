@@ -15,6 +15,7 @@ public class ServerReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public Server server;
+
     public ServerReplicationConfiguration withServer(Server server) {
         this.server = server;
         return this;
@@ -23,9 +24,11 @@ public class ServerReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverReplicationParameters")
     public ServerReplicationParameters serverReplicationParameters;
+
     public ServerReplicationConfiguration withServerReplicationParameters(ServerReplicationParameters serverReplicationParameters) {
         this.serverReplicationParameters = serverReplicationParameters;
         return this;
     }
     
+    public ServerReplicationConfiguration(){}
 }

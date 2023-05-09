@@ -18,6 +18,7 @@ public class Attribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileName")
     public String profileName;
+
     public Attribution withProfileName(String profileName) {
         this.profileName = profileName;
         return this;
@@ -29,6 +30,7 @@ public class Attribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePhotoUrl")
     public String profilePhotoUrl;
+
     public Attribution withProfilePhotoUrl(String profilePhotoUrl) {
         this.profilePhotoUrl = profilePhotoUrl;
         return this;
@@ -40,6 +42,7 @@ public class Attribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileUrl")
     public String profileUrl;
+
     public Attribution withProfileUrl(String profileUrl) {
         this.profileUrl = profileUrl;
         return this;
@@ -51,9 +54,11 @@ public class Attribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("takedownUrl")
     public String takedownUrl;
+
     public Attribution withTakedownUrl(String takedownUrl) {
         this.takedownUrl = takedownUrl;
         return this;
     }
     
+    public Attribution(){}
 }

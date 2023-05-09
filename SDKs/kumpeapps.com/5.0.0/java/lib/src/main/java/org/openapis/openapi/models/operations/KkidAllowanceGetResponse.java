@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KkidAllowanceGetResponse {
@@ -12,6 +13,7 @@ public class KkidAllowanceGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive;
+
     public KkidAllowanceGetResponse withFourHundredAndFive(org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive) {
         this.fourHundredAndFive = fourHundredAndFive;
         return this;
@@ -22,6 +24,7 @@ public class KkidAllowanceGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve;
+
     public KkidAllowanceGetResponse withFourHundredAndTwelve(org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve) {
         this.fourHundredAndTwelve = fourHundredAndTwelve;
         return this;
@@ -29,6 +32,7 @@ public class KkidAllowanceGetResponse {
     
     
     public String contentType;
+
     public KkidAllowanceGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class KkidAllowanceGetResponse {
     
     
     public Integer statusCode;
+
     public KkidAllowanceGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class KkidAllowanceGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KkidAllowanceGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class KkidAllowanceGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Allowance allowance;
+
     public KkidAllowanceGetResponse withAllowance(org.openapis.openapi.models.shared.Allowance allowance) {
         this.allowance = allowance;
         return this;
@@ -63,9 +70,14 @@ public class KkidAllowanceGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Nodata nodata;
+
     public KkidAllowanceGetResponse withNodata(org.openapis.openapi.models.shared.Nodata nodata) {
         this.nodata = nodata;
         return this;
     }
     
+    public KkidAllowanceGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

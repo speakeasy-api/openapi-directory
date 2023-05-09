@@ -18,6 +18,7 @@ public class ImportRulesJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileFormat")
     public ImportRulesJobDetailsFileFormatEnum fileFormat;
+
     public ImportRulesJobDetails withFileFormat(ImportRulesJobDetailsFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -29,9 +30,11 @@ public class ImportRulesJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public String[] files;
+
     public ImportRulesJobDetails withFiles(String[] files) {
         this.files = files;
         return this;
     }
     
+    public ImportRulesJobDetails(){}
 }

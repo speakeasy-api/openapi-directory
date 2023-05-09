@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ViewElement {
     
     public String id;
+
     public ViewElement withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class ViewElement {
     
     
     public String onClickAction;
+
     public ViewElement withOnClickAction(String onClickAction) {
         this.onClickAction = onClickAction;
         return this;
@@ -23,6 +25,7 @@ public class ViewElement {
     
     
     public String onLongPressAction;
+
     public ViewElement withOnLongPressAction(String onLongPressAction) {
         this.onLongPressAction = onLongPressAction;
         return this;
@@ -30,9 +33,11 @@ public class ViewElement {
     
     
     public Boolean visible;
+
     public ViewElement withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public ViewElement(){}
 }

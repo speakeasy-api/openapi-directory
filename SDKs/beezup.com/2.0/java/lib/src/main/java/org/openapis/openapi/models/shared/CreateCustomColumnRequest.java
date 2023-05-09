@@ -15,6 +15,7 @@ public class CreateCustomColumnRequest {
      */
     @JsonProperty("displayGroupName")
     public String displayGroupName;
+
     public CreateCustomColumnRequest withDisplayGroupName(String displayGroupName) {
         this.displayGroupName = displayGroupName;
         return this;
@@ -25,6 +26,7 @@ public class CreateCustomColumnRequest {
      */
     @JsonProperty("encryptedBlocklyExpression")
     public String encryptedBlocklyExpression;
+
     public CreateCustomColumnRequest withEncryptedBlocklyExpression(String encryptedBlocklyExpression) {
         this.encryptedBlocklyExpression = encryptedBlocklyExpression;
         return this;
@@ -35,6 +37,7 @@ public class CreateCustomColumnRequest {
      */
     @JsonProperty("encryptedExpression")
     public String encryptedExpression;
+
     public CreateCustomColumnRequest withEncryptedExpression(String encryptedExpression) {
         this.encryptedExpression = encryptedExpression;
         return this;
@@ -45,9 +48,16 @@ public class CreateCustomColumnRequest {
      */
     @JsonProperty("userColumnName")
     public String userColumnName;
+
     public CreateCustomColumnRequest withUserColumnName(String userColumnName) {
         this.userColumnName = userColumnName;
         return this;
     }
     
+    public CreateCustomColumnRequest(@JsonProperty("displayGroupName") String displayGroupName, @JsonProperty("encryptedBlocklyExpression") String encryptedBlocklyExpression, @JsonProperty("encryptedExpression") String encryptedExpression, @JsonProperty("userColumnName") String userColumnName) {
+        this.displayGroupName = displayGroupName;
+        this.encryptedBlocklyExpression = encryptedBlocklyExpression;
+        this.encryptedExpression = encryptedExpression;
+        this.userColumnName = userColumnName;
+  }
 }

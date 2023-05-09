@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNsxvManagerRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NSXVManagerDataSource nsxvManagerDataSource;
+
     public UpdateNsxvManagerRequest withNSXVManagerDataSource(org.openapis.openapi.models.shared.NSXVManagerDataSource nsxvManagerDataSource) {
         this.nsxvManagerDataSource = nsxvManagerDataSource;
         return this;
@@ -19,9 +21,13 @@ public class UpdateNsxvManagerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateNsxvManagerRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateNsxvManagerRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

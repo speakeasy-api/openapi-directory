@@ -24,6 +24,7 @@ public class Notification {
      */
     @JsonProperty("account")
     public Account account;
+
     public Notification withAccount(Account account) {
         this.account = account;
         return this;
@@ -36,6 +37,7 @@ public class Notification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Notification withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +48,7 @@ public class Notification {
      */
     @JsonProperty("id")
     public String id;
+
     public Notification withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +61,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public Notification withStatus(Status status) {
         this.status = status;
         return this;
@@ -68,9 +72,16 @@ public class Notification {
      */
     @JsonProperty("type")
     public NotificationTypeEnum type;
+
     public Notification withType(NotificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Notification(@JsonProperty("account") Account account, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("type") NotificationTypeEnum type) {
+        this.account = account;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.type = type;
+  }
 }

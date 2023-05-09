@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ApplySecurityGroupsToLoadBalancerInput - Contains the parameters for ApplySecurityGroupsToLoadBalancer.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApplySecurityGroupsToLoadBalancerInput {
     
     public String loadBalancerName;
+
     public ApplySecurityGroupsToLoadBalancerInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,9 +20,14 @@ public class ApplySecurityGroupsToLoadBalancerInput {
     
     
     public String[] securityGroups;
+
     public ApplySecurityGroupsToLoadBalancerInput withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
     
+    public ApplySecurityGroupsToLoadBalancerInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("SecurityGroups") String[] securityGroups) {
+        this.loadBalancerName = loadBalancerName;
+        this.securityGroups = securityGroups;
+  }
 }

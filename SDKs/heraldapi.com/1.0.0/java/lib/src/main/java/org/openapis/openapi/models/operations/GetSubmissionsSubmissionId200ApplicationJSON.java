@@ -18,9 +18,11 @@ public class GetSubmissionsSubmissionId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submission")
     public org.openapis.openapi.models.shared.SubmissionV1 submission;
+
     public GetSubmissionsSubmissionId200ApplicationJSON withSubmission(org.openapis.openapi.models.shared.SubmissionV1 submission) {
         this.submission = submission;
         return this;
     }
     
+    public GetSubmissionsSubmissionId200ApplicationJSON(){}
 }

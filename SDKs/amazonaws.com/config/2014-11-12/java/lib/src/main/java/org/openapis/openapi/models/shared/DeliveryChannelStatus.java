@@ -15,6 +15,7 @@ public class DeliveryChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configHistoryDeliveryInfo")
     public ConfigExportDeliveryInfo configHistoryDeliveryInfo;
+
     public DeliveryChannelStatus withConfigHistoryDeliveryInfo(ConfigExportDeliveryInfo configHistoryDeliveryInfo) {
         this.configHistoryDeliveryInfo = configHistoryDeliveryInfo;
         return this;
@@ -23,6 +24,7 @@ public class DeliveryChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSnapshotDeliveryInfo")
     public ConfigExportDeliveryInfo configSnapshotDeliveryInfo;
+
     public DeliveryChannelStatus withConfigSnapshotDeliveryInfo(ConfigExportDeliveryInfo configSnapshotDeliveryInfo) {
         this.configSnapshotDeliveryInfo = configSnapshotDeliveryInfo;
         return this;
@@ -31,6 +33,7 @@ public class DeliveryChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configStreamDeliveryInfo")
     public ConfigStreamDeliveryInfo configStreamDeliveryInfo;
+
     public DeliveryChannelStatus withConfigStreamDeliveryInfo(ConfigStreamDeliveryInfo configStreamDeliveryInfo) {
         this.configStreamDeliveryInfo = configStreamDeliveryInfo;
         return this;
@@ -39,9 +42,11 @@ public class DeliveryChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeliveryChannelStatus withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeliveryChannelStatus(){}
 }

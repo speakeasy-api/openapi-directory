@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutBillingDetailsResponse {
@@ -12,6 +13,7 @@ public class PutBillingDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.BillingDetailsModel billingDetailsModel;
+
     public PutBillingDetailsResponse withBillingDetailsModel(org.openapis.openapi.models.shared.BillingDetailsModel billingDetailsModel) {
         this.billingDetailsModel = billingDetailsModel;
         return this;
@@ -19,6 +21,7 @@ public class PutBillingDetailsResponse {
     
     
     public String contentType;
+
     public PutBillingDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutBillingDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public PutBillingDetailsResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class PutBillingDetailsResponse {
     
     
     public Integer statusCode;
+
     public PutBillingDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PutBillingDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutBillingDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutBillingDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

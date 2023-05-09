@@ -18,6 +18,7 @@ public class DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public Destination[] destinations;
+
     public DestinationConfig withDestinations(Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -29,9 +30,11 @@ public class DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DestinationConfig withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public DestinationConfig(){}
 }

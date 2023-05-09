@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AcceptTermsOfServiceRequest acceptTermsOfServiceRequest;
+
     public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withAcceptTermsOfServiceRequest(org.openapis.openapi.models.shared.AcceptTermsOfServiceRequest acceptTermsOfServiceRequest) {
         this.acceptTermsOfServiceRequest = acceptTermsOfServiceRequest;
         return this;
@@ -19,6 +21,7 @@ public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +32,14 @@ public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=termsofservicedocumentid")
     public String termsofservicedocumentid;
+
     public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withTermsofservicedocumentid(String termsofservicedocumentid) {
         this.termsofservicedocumentid = termsofservicedocumentid;
         return this;
     }
     
+    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest(@JsonProperty("id") String id, @JsonProperty("termsofservicedocumentid") String termsofservicedocumentid) {
+        this.id = id;
+        this.termsofservicedocumentid = termsofservicedocumentid;
+  }
 }

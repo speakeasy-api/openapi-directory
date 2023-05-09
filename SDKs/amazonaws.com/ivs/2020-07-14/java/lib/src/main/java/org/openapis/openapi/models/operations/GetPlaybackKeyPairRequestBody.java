@@ -12,9 +12,13 @@ public class GetPlaybackKeyPairRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public GetPlaybackKeyPairRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetPlaybackKeyPairRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

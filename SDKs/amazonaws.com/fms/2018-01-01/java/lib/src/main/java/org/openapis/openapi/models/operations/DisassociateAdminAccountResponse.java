@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateAdminAccountResponse {
     
     public String contentType;
+
     public DisassociateAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateAdminAccountResponse {
      */
     
     public Object internalErrorException;
+
     public DisassociateAdminAccountResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateAdminAccountResponse {
      */
     
     public Object invalidOperationException;
+
     public DisassociateAdminAccountResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateAdminAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateAdminAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public DisassociateAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DisassociateAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

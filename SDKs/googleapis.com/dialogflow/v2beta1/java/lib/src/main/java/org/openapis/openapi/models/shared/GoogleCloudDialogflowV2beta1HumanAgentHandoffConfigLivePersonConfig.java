@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig(){}
 }

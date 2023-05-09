@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetResourcesSummaryOutput {
     @JsonProperty("counts")
     public CountsSummary counts;
+
     public GetResourcesSummaryOutput withCounts(CountsSummary counts) {
         this.counts = counts;
         return this;
     }
     
+    public GetResourcesSummaryOutput(@JsonProperty("counts") CountsSummary counts) {
+        this.counts = counts;
+  }
 }

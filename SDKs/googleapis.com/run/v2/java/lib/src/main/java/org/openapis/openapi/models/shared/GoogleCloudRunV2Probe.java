@@ -18,6 +18,7 @@ public class GoogleCloudRunV2Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureThreshold")
     public Integer failureThreshold;
+
     public GoogleCloudRunV2Probe withFailureThreshold(Integer failureThreshold) {
         this.failureThreshold = failureThreshold;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpc")
     public GoogleCloudRunV2GRPCAction grpc;
+
     public GoogleCloudRunV2Probe withGrpc(GoogleCloudRunV2GRPCAction grpc) {
         this.grpc = grpc;
         return this;
@@ -40,17 +42,19 @@ public class GoogleCloudRunV2Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpGet")
     public GoogleCloudRunV2HTTPGetAction httpGet;
+
     public GoogleCloudRunV2Probe withHttpGet(GoogleCloudRunV2HTTPGetAction httpGet) {
         this.httpGet = httpGet;
         return this;
     }
     
     /**
-     * Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialDelaySeconds")
     public Integer initialDelaySeconds;
+
     public GoogleCloudRunV2Probe withInitialDelaySeconds(Integer initialDelaySeconds) {
         this.initialDelaySeconds = initialDelaySeconds;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRunV2Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodSeconds")
     public Integer periodSeconds;
+
     public GoogleCloudRunV2Probe withPeriodSeconds(Integer periodSeconds) {
         this.periodSeconds = periodSeconds;
         return this;
@@ -73,20 +78,23 @@ public class GoogleCloudRunV2Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpSocket")
     public GoogleCloudRunV2TCPSocketAction tcpSocket;
+
     public GoogleCloudRunV2Probe withTcpSocket(GoogleCloudRunV2TCPSocketAction tcpSocket) {
         this.tcpSocket = tcpSocket;
         return this;
     }
     
     /**
-     * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Integer timeoutSeconds;
+
     public GoogleCloudRunV2Probe withTimeoutSeconds(Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public GoogleCloudRunV2Probe(){}
 }

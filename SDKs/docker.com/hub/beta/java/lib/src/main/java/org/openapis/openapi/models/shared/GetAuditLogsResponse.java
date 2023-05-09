@@ -18,9 +18,11 @@ public class GetAuditLogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logs")
     public AuditLog[] logs;
+
     public GetAuditLogsResponse withLogs(AuditLog[] logs) {
         this.logs = logs;
         return this;
     }
     
+    public GetAuditLogsResponse(){}
 }

@@ -18,9 +18,11 @@ public class DeviceTypeTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public DeviceTypeTargetingOptionDetailsDeviceTypeEnum deviceType;
+
     public DeviceTypeTargetingOptionDetails withDeviceType(DeviceTypeTargetingOptionDetailsDeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
     }
     
+    public DeviceTypeTargetingOptionDetails(){}
 }

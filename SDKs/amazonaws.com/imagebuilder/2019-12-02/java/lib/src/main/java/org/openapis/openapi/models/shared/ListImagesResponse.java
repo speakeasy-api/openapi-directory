@@ -15,6 +15,7 @@ public class ListImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageVersionList")
     public ImageVersion[] imageVersionList;
+
     public ListImagesResponse withImageVersionList(ImageVersion[] imageVersionList) {
         this.imageVersionList = imageVersionList;
         return this;
@@ -23,6 +24,7 @@ public class ListImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImagesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ListImagesResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ListImagesResponse(){}
 }

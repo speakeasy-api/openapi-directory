@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TemplatesCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TemplateRequest templateRequest;
+
     public TemplatesCreateRequest withTemplateRequest(org.openapis.openapi.models.shared.TemplateRequest templateRequest) {
         this.templateRequest = templateRequest;
         return this;
@@ -19,9 +21,13 @@ public class TemplatesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public TemplatesCreateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public TemplatesCreateRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

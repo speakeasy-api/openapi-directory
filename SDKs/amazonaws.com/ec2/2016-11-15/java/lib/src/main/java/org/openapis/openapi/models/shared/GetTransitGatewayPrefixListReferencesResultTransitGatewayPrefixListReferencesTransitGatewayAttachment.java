@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachment {
     
     public String resourceId;
+
     public GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachment withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixList
     
     
     public GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum resourceType;
+
     public GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachment withResourceType(GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,9 +28,11 @@ public class GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixList
     
     
     public String transitGatewayAttachmentId;
+
     public GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachment withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachment(){}
 }

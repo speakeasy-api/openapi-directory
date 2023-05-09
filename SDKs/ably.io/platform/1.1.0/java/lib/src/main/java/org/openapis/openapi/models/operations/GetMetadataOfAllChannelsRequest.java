@@ -12,6 +12,7 @@ public class GetMetadataOfAllChannelsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public GetMetadataOfAllChannelsRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,6 +23,7 @@ public class GetMetadataOfAllChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=by")
     public GetMetadataOfAllChannelsByEnum by;
+
     public GetMetadataOfAllChannelsRequest withBy(GetMetadataOfAllChannelsByEnum by) {
         this.by = by;
         return this;
@@ -32,6 +34,7 @@ public class GetMetadataOfAllChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public GetMetadataOfAllChannelsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
@@ -39,6 +42,7 @@ public class GetMetadataOfAllChannelsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetMetadataOfAllChannelsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -49,9 +53,11 @@ public class GetMetadataOfAllChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
     public String prefix;
+
     public GetMetadataOfAllChannelsRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public GetMetadataOfAllChannelsRequest(){}
 }

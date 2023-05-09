@@ -15,6 +15,7 @@ public class UpdateApplicationComponentConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appType")
     public UpdateApplicationComponentConfigRequestBodyAppTypeEnum appType;
+
     public UpdateApplicationComponentConfigRequestBody withAppType(UpdateApplicationComponentConfigRequestBodyAppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -25,6 +26,7 @@ public class UpdateApplicationComponentConfigRequestBody {
      */
     @JsonProperty("applicationComponentId")
     public String applicationComponentId;
+
     public UpdateApplicationComponentConfigRequestBody withApplicationComponentId(String applicationComponentId) {
         this.applicationComponentId = applicationComponentId;
         return this;
@@ -36,6 +38,7 @@ public class UpdateApplicationComponentConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configureOnly")
     public Boolean configureOnly;
+
     public UpdateApplicationComponentConfigRequestBody withConfigureOnly(Boolean configureOnly) {
         this.configureOnly = configureOnly;
         return this;
@@ -47,6 +50,7 @@ public class UpdateApplicationComponentConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusionStatus")
     public UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum inclusionStatus;
+
     public UpdateApplicationComponentConfigRequestBody withInclusionStatus(UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum inclusionStatus) {
         this.inclusionStatus = inclusionStatus;
         return this;
@@ -58,6 +62,7 @@ public class UpdateApplicationComponentConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretsManagerKey")
     public String secretsManagerKey;
+
     public UpdateApplicationComponentConfigRequestBody withSecretsManagerKey(String secretsManagerKey) {
         this.secretsManagerKey = secretsManagerKey;
         return this;
@@ -69,6 +74,7 @@ public class UpdateApplicationComponentConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCodeList")
     public org.openapis.openapi.models.shared.SourceCode[] sourceCodeList;
+
     public UpdateApplicationComponentConfigRequestBody withSourceCodeList(org.openapis.openapi.models.shared.SourceCode[] sourceCodeList) {
         this.sourceCodeList = sourceCodeList;
         return this;
@@ -80,9 +86,13 @@ public class UpdateApplicationComponentConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strategyOption")
     public UpdateApplicationComponentConfigRequestBodyStrategyOption strategyOption;
+
     public UpdateApplicationComponentConfigRequestBody withStrategyOption(UpdateApplicationComponentConfigRequestBodyStrategyOption strategyOption) {
         this.strategyOption = strategyOption;
         return this;
     }
     
+    public UpdateApplicationComponentConfigRequestBody(@JsonProperty("applicationComponentId") String applicationComponentId) {
+        this.applicationComponentId = applicationComponentId;
+  }
 }

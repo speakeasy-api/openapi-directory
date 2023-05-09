@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSetupV1LocationsIdGoogleServiceAccountResponse {
     
     public String contentType;
+
     public DeleteSetupV1LocationsIdGoogleServiceAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteSetupV1LocationsIdGoogleServiceAccountResponse {
     
     
     public Integer statusCode;
+
     public DeleteSetupV1LocationsIdGoogleServiceAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class DeleteSetupV1LocationsIdGoogleServiceAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSetupV1LocationsIdGoogleServiceAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSetupV1LocationsIdGoogleServiceAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

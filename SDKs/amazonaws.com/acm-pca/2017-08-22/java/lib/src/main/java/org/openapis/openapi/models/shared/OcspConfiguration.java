@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OcspConfiguration {
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public OcspConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -22,9 +23,13 @@ public class OcspConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OcspCustomCname")
     public String ocspCustomCname;
+
     public OcspConfiguration withOcspCustomCname(String ocspCustomCname) {
         this.ocspCustomCname = ocspCustomCname;
         return this;
     }
     
+    public OcspConfiguration(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

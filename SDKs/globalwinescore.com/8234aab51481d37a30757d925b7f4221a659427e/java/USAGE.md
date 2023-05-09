@@ -3,36 +3,37 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestColorEnum;
 import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestOrderingEnum;
 import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestRequest;
 import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     tokenAuthentication = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetGlobalwinescoresLatestRequest req = new GetGlobalwinescoresLatestRequest() {{
-                authorization = "corrupti";
-                color = "white";
+                authorization = "provident";
+                color = GetGlobalwinescoresLatestColorEnum.PINK;
                 isPrimeurs = false;
-                limit = 715190;
-                lwin = "quibusdam";
-                lwin11 = "unde";
-                offset = 857946;
-                ordering = "score";
-                vintage = "illum";
+                limit = 844266L;
+                lwin = "unde";
+                lwin11 = "nulla";
+                offset = 544883L;
+                ordering = GetGlobalwinescoresLatestOrderingEnum.MINUS_SCORE;
+                vintage = "vel";
                 wineId = new Long[]{{
-                    add(623564),
-                    add(645894),
+                    add(645894L),
+                    add(384382L),
+                    add(437587L),
                 }};
-            }}            
+            }};            
 
             GetGlobalwinescoresLatestResponse res = sdk.globalWineScore.getGlobalwinescoresLatest(req);
 
@@ -42,5 +43,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAppValidationOutputResponse {
     
     public String contentType;
+
     public GetAppValidationOutputResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAppValidationOutputResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAppValidationOutputResponse getAppValidationOutputResponse;
+
     public GetAppValidationOutputResponse withGetAppValidationOutputResponse(org.openapis.openapi.models.shared.GetAppValidationOutputResponse getAppValidationOutputResponse) {
         this.getAppValidationOutputResponse = getAppValidationOutputResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAppValidationOutputResponse {
      */
     
     public Object internalError;
+
     public GetAppValidationOutputResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class GetAppValidationOutputResponse {
      */
     
     public Object invalidParameterException;
+
     public GetAppValidationOutputResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetAppValidationOutputResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetAppValidationOutputResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetAppValidationOutputResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetAppValidationOutputResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class GetAppValidationOutputResponse {
     
     
     public Integer statusCode;
+
     public GetAppValidationOutputResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetAppValidationOutputResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAppValidationOutputResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetAppValidationOutputResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GetAppValidationOutputResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GetAppValidationOutputResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONMeta
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextCursor")
     public String nextCursor;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONMeta withNextCursor(String nextCursor) {
         this.nextCursor = nextCursor;
         return this;
@@ -26,9 +27,11 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONMeta
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Double totalCount;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONMeta withTotalCount(Double totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONMeta(){}
 }

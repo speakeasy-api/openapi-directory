@@ -15,6 +15,7 @@ public class GetRelationalDatabaseEventsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetRelationalDatabaseEventsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class GetRelationalDatabaseEventsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseEvents")
     public RelationalDatabaseEvent[] relationalDatabaseEvents;
+
     public GetRelationalDatabaseEventsResult withRelationalDatabaseEvents(RelationalDatabaseEvent[] relationalDatabaseEvents) {
         this.relationalDatabaseEvents = relationalDatabaseEvents;
         return this;
     }
     
+    public GetRelationalDatabaseEventsResult(){}
 }

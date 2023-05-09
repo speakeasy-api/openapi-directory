@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETListsNamesFormatResponse {
     
     public String contentType;
+
     public GETListsNamesFormatResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETListsNamesFormatResponse {
     
     
     public GETListsNamesFormat200ApplicationJSON getListsNamesFormat200ApplicationJSONObject;
+
     public GETListsNamesFormatResponse withGETListsNamesFormat200ApplicationJSONObject(GETListsNamesFormat200ApplicationJSON getListsNamesFormat200ApplicationJSONObject) {
         this.getListsNamesFormat200ApplicationJSONObject = getListsNamesFormat200ApplicationJSONObject;
         return this;
@@ -23,6 +26,7 @@ public class GETListsNamesFormatResponse {
     
     
     public Integer statusCode;
+
     public GETListsNamesFormatResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETListsNamesFormatResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETListsNamesFormatResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETListsNamesFormatResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

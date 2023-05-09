@@ -15,6 +15,7 @@ public class UpdateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionFilterList")
     public org.openapis.openapi.models.shared.MetricSetDimensionFilter[] dimensionFilterList;
+
     public UpdateMetricSetRequestBody withDimensionFilterList(org.openapis.openapi.models.shared.MetricSetDimensionFilter[] dimensionFilterList) {
         this.dimensionFilterList = dimensionFilterList;
         return this;
@@ -26,6 +27,7 @@ public class UpdateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionList")
     public String[] dimensionList;
+
     public UpdateMetricSetRequestBody withDimensionList(String[] dimensionList) {
         this.dimensionList = dimensionList;
         return this;
@@ -37,6 +39,7 @@ public class UpdateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricList")
     public org.openapis.openapi.models.shared.Metric[] metricList;
+
     public UpdateMetricSetRequestBody withMetricList(org.openapis.openapi.models.shared.Metric[] metricList) {
         this.metricList = metricList;
         return this;
@@ -47,6 +50,7 @@ public class UpdateMetricSetRequestBody {
      */
     @JsonProperty("MetricSetArn")
     public String metricSetArn;
+
     public UpdateMetricSetRequestBody withMetricSetArn(String metricSetArn) {
         this.metricSetArn = metricSetArn;
         return this;
@@ -58,6 +62,7 @@ public class UpdateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetDescription")
     public String metricSetDescription;
+
     public UpdateMetricSetRequestBody withMetricSetDescription(String metricSetDescription) {
         this.metricSetDescription = metricSetDescription;
         return this;
@@ -69,6 +74,7 @@ public class UpdateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetFrequency")
     public UpdateMetricSetRequestBodyMetricSetFrequencyEnum metricSetFrequency;
+
     public UpdateMetricSetRequestBody withMetricSetFrequency(UpdateMetricSetRequestBodyMetricSetFrequencyEnum metricSetFrequency) {
         this.metricSetFrequency = metricSetFrequency;
         return this;
@@ -80,6 +86,7 @@ public class UpdateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSource")
     public UpdateMetricSetRequestBodyMetricSource metricSource;
+
     public UpdateMetricSetRequestBody withMetricSource(UpdateMetricSetRequestBodyMetricSource metricSource) {
         this.metricSource = metricSource;
         return this;
@@ -91,6 +98,7 @@ public class UpdateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Offset")
     public Long offset;
+
     public UpdateMetricSetRequestBody withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -102,9 +110,13 @@ public class UpdateMetricSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampColumn")
     public UpdateMetricSetRequestBodyTimestampColumn timestampColumn;
+
     public UpdateMetricSetRequestBody withTimestampColumn(UpdateMetricSetRequestBodyTimestampColumn timestampColumn) {
         this.timestampColumn = timestampColumn;
         return this;
     }
     
+    public UpdateMetricSetRequestBody(@JsonProperty("MetricSetArn") String metricSetArn) {
+        this.metricSetArn = metricSetArn;
+  }
 }

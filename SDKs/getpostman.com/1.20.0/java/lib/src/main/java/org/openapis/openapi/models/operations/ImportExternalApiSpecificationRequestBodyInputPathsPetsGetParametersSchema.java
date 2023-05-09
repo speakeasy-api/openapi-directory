@@ -12,6 +12,7 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetParameter
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetParametersSchema withFormat(String format) {
         this.format = format;
         return this;
@@ -20,9 +21,11 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetParameter
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetParametersSchema withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetParametersSchema(){}
 }

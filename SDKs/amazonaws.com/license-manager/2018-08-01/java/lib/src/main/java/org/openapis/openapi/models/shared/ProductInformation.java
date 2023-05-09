@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProductInformation {
     @JsonProperty("ProductInformationFilterList")
     public ProductInformationFilter[] productInformationFilterList;
+
     public ProductInformation withProductInformationFilterList(ProductInformationFilter[] productInformationFilterList) {
         this.productInformationFilterList = productInformationFilterList;
         return this;
@@ -19,9 +20,14 @@ public class ProductInformation {
     
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ProductInformation withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ProductInformation(@JsonProperty("ProductInformationFilterList") ProductInformationFilter[] productInformationFilterList, @JsonProperty("ResourceType") String resourceType) {
+        this.productInformationFilterList = productInformationFilterList;
+        this.resourceType = resourceType;
+  }
 }

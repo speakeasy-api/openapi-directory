@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveUserFromAccount429ApplicationJSONMeta {
     @JsonProperty("requestId")
     public String requestId;
+
     public RemoveUserFromAccount429ApplicationJSONMeta withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -16,9 +17,14 @@ public class RemoveUserFromAccount429ApplicationJSONMeta {
     
     @JsonProperty("status")
     public Double status;
+
     public RemoveUserFromAccount429ApplicationJSONMeta withStatus(Double status) {
         this.status = status;
         return this;
     }
     
+    public RemoveUserFromAccount429ApplicationJSONMeta(@JsonProperty("requestId") String requestId, @JsonProperty("status") Double status) {
+        this.requestId = requestId;
+        this.status = status;
+  }
 }

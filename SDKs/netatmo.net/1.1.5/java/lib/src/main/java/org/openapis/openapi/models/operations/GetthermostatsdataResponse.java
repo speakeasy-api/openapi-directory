@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetthermostatsdataResponse {
     
     public String contentType;
+
     public GetthermostatsdataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetthermostatsdataResponse {
      */
     
     public org.openapis.openapi.models.shared.NAThermostatDataResponse naThermostatDataResponse;
+
     public GetthermostatsdataResponse withNAThermostatDataResponse(org.openapis.openapi.models.shared.NAThermostatDataResponse naThermostatDataResponse) {
         this.naThermostatDataResponse = naThermostatDataResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetthermostatsdataResponse {
     
     
     public Integer statusCode;
+
     public GetthermostatsdataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetthermostatsdataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetthermostatsdataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetthermostatsdataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

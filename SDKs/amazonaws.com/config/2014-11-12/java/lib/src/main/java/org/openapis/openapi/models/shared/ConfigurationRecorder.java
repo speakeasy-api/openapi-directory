@@ -15,6 +15,7 @@ public class ConfigurationRecorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConfigurationRecorder withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class ConfigurationRecorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordingGroup")
     public RecordingGroup recordingGroup;
+
     public ConfigurationRecorder withRecordingGroup(RecordingGroup recordingGroup) {
         this.recordingGroup = recordingGroup;
         return this;
@@ -31,9 +33,11 @@ public class ConfigurationRecorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleARN")
     public String roleARN;
+
     public ConfigurationRecorder withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public ConfigurationRecorder(){}
 }

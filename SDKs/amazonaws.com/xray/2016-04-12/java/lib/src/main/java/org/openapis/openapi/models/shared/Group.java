@@ -15,6 +15,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterExpression")
     public String filterExpression;
+
     public Group withFilterExpression(String filterExpression) {
         this.filterExpression = filterExpression;
         return this;
@@ -23,6 +24,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupARN")
     public String groupARN;
+
     public Group withGroupARN(String groupARN) {
         this.groupARN = groupARN;
         return this;
@@ -31,6 +33,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public Group withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -39,9 +42,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightsConfiguration")
     public InsightsConfiguration insightsConfiguration;
+
     public Group withInsightsConfiguration(InsightsConfiguration insightsConfiguration) {
         this.insightsConfiguration = insightsConfiguration;
         return this;
     }
     
+    public Group(){}
 }

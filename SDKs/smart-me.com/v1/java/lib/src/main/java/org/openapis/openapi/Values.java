@@ -50,12 +50,10 @@ public class Values {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValuesGetResponse res = new org.openapis.openapi.models.operations.ValuesGetResponse() {{
+        org.openapis.openapi.models.operations.ValuesGetResponse res = new org.openapis.openapi.models.operations.ValuesGetResponse(contentType, httpRes.statusCode()) {{
             valuesData = null;
             valuesData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

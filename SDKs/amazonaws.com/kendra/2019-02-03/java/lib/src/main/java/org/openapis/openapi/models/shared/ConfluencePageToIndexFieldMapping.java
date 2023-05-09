@@ -15,6 +15,7 @@ public class ConfluencePageToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceFieldName")
     public ConfluencePageFieldNameEnum dataSourceFieldName;
+
     public ConfluencePageToIndexFieldMapping withDataSourceFieldName(ConfluencePageFieldNameEnum dataSourceFieldName) {
         this.dataSourceFieldName = dataSourceFieldName;
         return this;
@@ -23,6 +24,7 @@ public class ConfluencePageToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateFieldFormat")
     public String dateFieldFormat;
+
     public ConfluencePageToIndexFieldMapping withDateFieldFormat(String dateFieldFormat) {
         this.dateFieldFormat = dateFieldFormat;
         return this;
@@ -31,9 +33,11 @@ public class ConfluencePageToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexFieldName")
     public String indexFieldName;
+
     public ConfluencePageToIndexFieldMapping withIndexFieldName(String indexFieldName) {
         this.indexFieldName = indexFieldName;
         return this;
     }
     
+    public ConfluencePageToIndexFieldMapping(){}
 }

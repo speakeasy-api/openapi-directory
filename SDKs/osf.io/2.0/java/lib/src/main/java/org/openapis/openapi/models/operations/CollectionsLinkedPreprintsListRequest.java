@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsLinkedPreprintsListRequest {
@@ -12,9 +13,13 @@ public class CollectionsLinkedPreprintsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public String collectionId;
+
     public CollectionsLinkedPreprintsListRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public CollectionsLinkedPreprintsListRequest(@JsonProperty("collection_id") String collectionId) {
+        this.collectionId = collectionId;
+  }
 }

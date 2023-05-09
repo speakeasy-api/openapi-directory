@@ -15,6 +15,7 @@ public class EksSecret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public EksSecret withOptional(Boolean optional) {
         this.optional = optional;
         return this;
@@ -22,9 +23,13 @@ public class EksSecret {
     
     @JsonProperty("secretName")
     public String secretName;
+
     public EksSecret withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public EksSecret(@JsonProperty("secretName") String secretName) {
+        this.secretName = secretName;
+  }
 }

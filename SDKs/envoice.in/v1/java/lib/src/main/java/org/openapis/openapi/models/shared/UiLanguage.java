@@ -12,6 +12,7 @@ public class UiLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public UiLanguage withId(Integer id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class UiLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UiLanguage withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class UiLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UiCulture")
     public String uiCulture;
+
     public UiLanguage withUiCulture(String uiCulture) {
         this.uiCulture = uiCulture;
         return this;
     }
     
+    public UiLanguage(){}
 }

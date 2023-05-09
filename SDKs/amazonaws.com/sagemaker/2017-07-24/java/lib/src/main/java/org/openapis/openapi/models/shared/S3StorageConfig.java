@@ -15,6 +15,7 @@ public class S3StorageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public S3StorageConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,6 +24,7 @@ public class S3StorageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolvedOutputS3Uri")
     public String resolvedOutputS3Uri;
+
     public S3StorageConfig withResolvedOutputS3Uri(String resolvedOutputS3Uri) {
         this.resolvedOutputS3Uri = resolvedOutputS3Uri;
         return this;
@@ -30,9 +32,13 @@ public class S3StorageConfig {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public S3StorageConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public S3StorageConfig(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

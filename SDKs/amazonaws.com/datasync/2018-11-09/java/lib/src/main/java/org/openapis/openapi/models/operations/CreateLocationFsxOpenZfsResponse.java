@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLocationFsxOpenZfsResponse {
     
     public String contentType;
+
     public CreateLocationFsxOpenZfsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLocationFsxOpenZfsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLocationFsxOpenZfsResponse createLocationFsxOpenZfsResponse;
+
     public CreateLocationFsxOpenZfsResponse withCreateLocationFsxOpenZfsResponse(org.openapis.openapi.models.shared.CreateLocationFsxOpenZfsResponse createLocationFsxOpenZfsResponse) {
         this.createLocationFsxOpenZfsResponse = createLocationFsxOpenZfsResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateLocationFsxOpenZfsResponse {
      */
     
     public Object internalException;
+
     public CreateLocationFsxOpenZfsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLocationFsxOpenZfsResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateLocationFsxOpenZfsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateLocationFsxOpenZfsResponse {
     
     
     public Integer statusCode;
+
     public CreateLocationFsxOpenZfsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateLocationFsxOpenZfsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLocationFsxOpenZfsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLocationFsxOpenZfsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

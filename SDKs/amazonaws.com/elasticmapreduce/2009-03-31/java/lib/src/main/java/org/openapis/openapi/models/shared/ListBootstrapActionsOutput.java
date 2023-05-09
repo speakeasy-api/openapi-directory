@@ -15,6 +15,7 @@ public class ListBootstrapActionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BootstrapActions")
     public Command[] bootstrapActions;
+
     public ListBootstrapActionsOutput withBootstrapActions(Command[] bootstrapActions) {
         this.bootstrapActions = bootstrapActions;
         return this;
@@ -23,9 +24,11 @@ public class ListBootstrapActionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListBootstrapActionsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListBootstrapActionsOutput(){}
 }

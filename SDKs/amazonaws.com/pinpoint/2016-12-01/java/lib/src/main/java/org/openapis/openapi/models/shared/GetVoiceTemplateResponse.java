@@ -15,9 +15,13 @@ public class GetVoiceTemplateResponse {
      */
     @JsonProperty("VoiceTemplateResponse")
     public VoiceTemplateResponse voiceTemplateResponse;
+
     public GetVoiceTemplateResponse withVoiceTemplateResponse(VoiceTemplateResponse voiceTemplateResponse) {
         this.voiceTemplateResponse = voiceTemplateResponse;
         return this;
     }
     
+    public GetVoiceTemplateResponse(@JsonProperty("VoiceTemplateResponse") VoiceTemplateResponse voiceTemplateResponse) {
+        this.voiceTemplateResponse = voiceTemplateResponse;
+  }
 }

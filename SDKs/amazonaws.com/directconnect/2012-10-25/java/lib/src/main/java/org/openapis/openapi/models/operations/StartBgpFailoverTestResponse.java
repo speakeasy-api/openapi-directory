@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartBgpFailoverTestResponse {
     
     public String contentType;
+
     public StartBgpFailoverTestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartBgpFailoverTestResponse {
      */
     
     public Object directConnectClientException;
+
     public StartBgpFailoverTestResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class StartBgpFailoverTestResponse {
      */
     
     public Object directConnectServerException;
+
     public StartBgpFailoverTestResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartBgpFailoverTestResponse {
      */
     
     public org.openapis.openapi.models.shared.StartBgpFailoverTestResponse startBgpFailoverTestResponse;
+
     public StartBgpFailoverTestResponse withStartBgpFailoverTestResponse(org.openapis.openapi.models.shared.StartBgpFailoverTestResponse startBgpFailoverTestResponse) {
         this.startBgpFailoverTestResponse = startBgpFailoverTestResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartBgpFailoverTestResponse {
     
     
     public Integer statusCode;
+
     public StartBgpFailoverTestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class StartBgpFailoverTestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartBgpFailoverTestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartBgpFailoverTestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

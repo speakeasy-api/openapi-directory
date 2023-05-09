@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeHumanLoopResponse {
     
     public String contentType;
+
     public DescribeHumanLoopResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeHumanLoopResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeHumanLoopResponse describeHumanLoopResponse;
+
     public DescribeHumanLoopResponse withDescribeHumanLoopResponse(org.openapis.openapi.models.shared.DescribeHumanLoopResponse describeHumanLoopResponse) {
         this.describeHumanLoopResponse = describeHumanLoopResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeHumanLoopResponse {
      */
     
     public Object internalServerException;
+
     public DescribeHumanLoopResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeHumanLoopResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeHumanLoopResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeHumanLoopResponse {
     
     
     public Integer statusCode;
+
     public DescribeHumanLoopResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeHumanLoopResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeHumanLoopResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeHumanLoopResponse {
      */
     
     public Object throttlingException;
+
     public DescribeHumanLoopResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeHumanLoopResponse {
      */
     
     public Object validationException;
+
     public DescribeHumanLoopResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeHumanLoopResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

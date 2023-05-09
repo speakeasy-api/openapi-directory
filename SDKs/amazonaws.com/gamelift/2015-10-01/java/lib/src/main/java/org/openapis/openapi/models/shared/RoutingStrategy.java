@@ -15,6 +15,7 @@ public class RoutingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public RoutingStrategy withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -23,6 +24,7 @@ public class RoutingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public RoutingStrategy withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class RoutingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RoutingStrategyTypeEnum type;
+
     public RoutingStrategy withType(RoutingStrategyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RoutingStrategy(){}
 }

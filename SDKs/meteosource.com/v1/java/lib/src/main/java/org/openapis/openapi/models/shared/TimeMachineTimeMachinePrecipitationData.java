@@ -16,6 +16,7 @@ public class TimeMachineTimeMachinePrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public TimeMachineTimeMachinePrecipitationData withTotal(Double total) {
         this.total = total;
         return this;
@@ -36,9 +37,11 @@ public class TimeMachineTimeMachinePrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public byte[] type;
+
     public TimeMachineTimeMachinePrecipitationData withType(byte[] type) {
         this.type = type;
         return this;
     }
     
+    public TimeMachineTimeMachinePrecipitationData(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningUpdateAlertRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public SecretScanningUpdateAlertRequestBody requestBody;
+
     public SecretScanningUpdateAlertRequest withRequestBody(SecretScanningUpdateAlertRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class SecretScanningUpdateAlertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alert_number")
     public Long alertNumber;
+
     public SecretScanningUpdateAlertRequest withAlertNumber(Long alertNumber) {
         this.alertNumber = alertNumber;
         return this;
@@ -29,6 +32,7 @@ public class SecretScanningUpdateAlertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public SecretScanningUpdateAlertRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,16 @@ public class SecretScanningUpdateAlertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public SecretScanningUpdateAlertRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public SecretScanningUpdateAlertRequest(@JsonProperty("RequestBody") SecretScanningUpdateAlertRequestBody requestBody, @JsonProperty("alert_number") Long alertNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.alertNumber = alertNumber;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

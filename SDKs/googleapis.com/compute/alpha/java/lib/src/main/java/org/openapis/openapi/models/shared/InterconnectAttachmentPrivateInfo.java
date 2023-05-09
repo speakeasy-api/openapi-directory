@@ -18,9 +18,11 @@ public class InterconnectAttachmentPrivateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag8021q")
     public Long tag8021q;
+
     public InterconnectAttachmentPrivateInfo withTag8021q(Long tag8021q) {
         this.tag8021q = tag8021q;
         return this;
     }
     
+    public InterconnectAttachmentPrivateInfo(){}
 }

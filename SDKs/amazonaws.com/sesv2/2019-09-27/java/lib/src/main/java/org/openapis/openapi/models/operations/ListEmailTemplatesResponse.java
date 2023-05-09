@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEmailTemplatesResponse {
@@ -12,6 +13,7 @@ public class ListEmailTemplatesResponse {
      */
     
     public Object badRequestException;
+
     public ListEmailTemplatesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListEmailTemplatesResponse {
     
     
     public String contentType;
+
     public ListEmailTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEmailTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEmailTemplatesResponse listEmailTemplatesResponse;
+
     public ListEmailTemplatesResponse withListEmailTemplatesResponse(org.openapis.openapi.models.shared.ListEmailTemplatesResponse listEmailTemplatesResponse) {
         this.listEmailTemplatesResponse = listEmailTemplatesResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListEmailTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListEmailTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListEmailTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEmailTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListEmailTemplatesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListEmailTemplatesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListEmailTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

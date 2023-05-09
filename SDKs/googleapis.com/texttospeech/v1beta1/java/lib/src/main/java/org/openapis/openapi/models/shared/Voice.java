@@ -18,6 +18,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCodes")
     public String[] languageCodes;
+
     public Voice withLanguageCodes(String[] languageCodes) {
         this.languageCodes = languageCodes;
         return this;
@@ -29,6 +30,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Voice withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naturalSampleRateHertz")
     public Integer naturalSampleRateHertz;
+
     public Voice withNaturalSampleRateHertz(Integer naturalSampleRateHertz) {
         this.naturalSampleRateHertz = naturalSampleRateHertz;
         return this;
@@ -51,9 +54,11 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmlGender")
     public VoiceSsmlGenderEnum ssmlGender;
+
     public Voice withSsmlGender(VoiceSsmlGenderEnum ssmlGender) {
         this.ssmlGender = ssmlGender;
         return this;
     }
     
+    public Voice(){}
 }

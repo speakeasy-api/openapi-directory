@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecacheTranslationsRequest {
@@ -12,6 +13,7 @@ public class RecacheTranslationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_id")
     public Long fileId;
+
     public RecacheTranslationsRequest withFileId(Long fileId) {
         this.fileId = fileId;
         return this;
@@ -22,6 +24,7 @@ public class RecacheTranslationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public RecacheTranslationsRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -32,9 +35,13 @@ public class RecacheTranslationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public RecacheTranslationsRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public RecacheTranslationsRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

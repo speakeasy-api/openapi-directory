@@ -15,9 +15,11 @@ public class DistributionPolicyZoneConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public DistributionPolicyZoneConfiguration withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public DistributionPolicyZoneConfiguration(){}
 }

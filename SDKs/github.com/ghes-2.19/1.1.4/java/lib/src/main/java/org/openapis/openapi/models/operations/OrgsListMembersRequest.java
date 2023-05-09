@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListMembersRequest {
@@ -14,6 +15,7 @@ public class OrgsListMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public OrgsListMembersFilterEnum filter;
+
     public OrgsListMembersRequest withFilter(OrgsListMembersFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -21,6 +23,7 @@ public class OrgsListMembersRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsListMembersRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -31,6 +34,7 @@ public class OrgsListMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public OrgsListMembersRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -41,6 +45,7 @@ public class OrgsListMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public OrgsListMembersRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -54,9 +59,13 @@ public class OrgsListMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public OrgsListMembersRoleEnum role;
+
     public OrgsListMembersRequest withRole(OrgsListMembersRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public OrgsListMembersRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

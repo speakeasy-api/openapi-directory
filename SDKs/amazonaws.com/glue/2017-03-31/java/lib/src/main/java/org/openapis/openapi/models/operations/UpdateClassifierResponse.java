@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateClassifierResponse {
     
     public String contentType;
+
     public UpdateClassifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateClassifierResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateClassifierResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClassifierResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateClassifierResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateClassifierResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateClassifierResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateClassifierResponse {
     
     
     public Integer statusCode;
+
     public UpdateClassifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateClassifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateClassifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateClassifierResponse {
      */
     
     public java.util.Map<String, Object> updateClassifierResponse;
+
     public UpdateClassifierResponse withUpdateClassifierResponse(java.util.Map<String, Object> updateClassifierResponse) {
         this.updateClassifierResponse = updateClassifierResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateClassifierResponse {
      */
     
     public Object versionMismatchException;
+
     public UpdateClassifierResponse withVersionMismatchException(Object versionMismatchException) {
         this.versionMismatchException = versionMismatchException;
         return this;
     }
     
+    public UpdateClassifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

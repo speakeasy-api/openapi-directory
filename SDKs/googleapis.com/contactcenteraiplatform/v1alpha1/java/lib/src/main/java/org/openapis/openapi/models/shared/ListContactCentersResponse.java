@@ -18,6 +18,7 @@ public class ListContactCentersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactCenters")
     public ContactCenter[] contactCenters;
+
     public ListContactCentersResponse withContactCenters(ContactCenter[] contactCenters) {
         this.contactCenters = contactCenters;
         return this;
@@ -29,6 +30,7 @@ public class ListContactCentersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListContactCentersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListContactCentersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListContactCentersResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListContactCentersResponse(){}
 }

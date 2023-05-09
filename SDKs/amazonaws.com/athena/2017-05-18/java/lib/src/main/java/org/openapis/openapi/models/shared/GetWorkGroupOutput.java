@@ -15,9 +15,11 @@ public class GetWorkGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkGroup")
     public WorkGroup workGroup;
+
     public GetWorkGroupOutput withWorkGroup(WorkGroup workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public GetWorkGroupOutput(){}
 }

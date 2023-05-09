@@ -54,14 +54,12 @@ public class AccessToken {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessTokenPutFormResponse res = new org.openapis.openapi.models.operations.AccessTokenPutFormResponse() {{
+        org.openapis.openapi.models.operations.AccessTokenPutFormResponse res = new org.openapis.openapi.models.operations.AccessTokenPutFormResponse(contentType, httpRes.statusCode()) {{
             accessTokenPutForm200ApplicationJSONString = null;
             accessTokenPutForm200ApplicationXMLString = null;
             accessTokenPutForm200TextJSONString = null;
             accessTokenPutForm200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,14 +110,12 @@ public class AccessToken {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessTokenPutJsonResponse res = new org.openapis.openapi.models.operations.AccessTokenPutJsonResponse() {{
+        org.openapis.openapi.models.operations.AccessTokenPutJsonResponse res = new org.openapis.openapi.models.operations.AccessTokenPutJsonResponse(contentType, httpRes.statusCode()) {{
             accessTokenPutJSON200ApplicationJSONString = null;
             accessTokenPutJson200ApplicationXMLString = null;
             accessTokenPutJSON200TextJSONString = null;
             accessTokenPutJson200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,14 +166,12 @@ public class AccessToken {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessTokenPutRawResponse res = new org.openapis.openapi.models.operations.AccessTokenPutRawResponse() {{
+        org.openapis.openapi.models.operations.AccessTokenPutRawResponse res = new org.openapis.openapi.models.operations.AccessTokenPutRawResponse(contentType, httpRes.statusCode()) {{
             accessTokenPutRaw200ApplicationJSONString = null;
             accessTokenPutRaw200ApplicationXMLString = null;
             accessTokenPutRaw200TextJSONString = null;
             accessTokenPutRaw200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

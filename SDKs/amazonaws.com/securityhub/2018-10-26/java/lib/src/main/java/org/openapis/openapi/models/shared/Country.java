@@ -15,6 +15,7 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryCode")
     public String countryCode;
+
     public Country withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -23,9 +24,11 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryName")
     public String countryName;
+
     public Country withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
     }
     
+    public Country(){}
 }

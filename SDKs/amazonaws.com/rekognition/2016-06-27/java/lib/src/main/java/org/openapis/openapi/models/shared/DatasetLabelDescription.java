@@ -15,6 +15,7 @@ public class DatasetLabelDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelName")
     public String labelName;
+
     public DatasetLabelDescription withLabelName(String labelName) {
         this.labelName = labelName;
         return this;
@@ -23,9 +24,11 @@ public class DatasetLabelDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelStats")
     public DatasetLabelStats labelStats;
+
     public DatasetLabelDescription withLabelStats(DatasetLabelStats labelStats) {
         this.labelStats = labelStats;
         return this;
     }
     
+    public DatasetLabelDescription(){}
 }

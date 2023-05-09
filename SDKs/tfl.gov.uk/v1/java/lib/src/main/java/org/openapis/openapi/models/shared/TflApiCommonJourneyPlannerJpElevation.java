@@ -12,6 +12,7 @@ public class TflApiCommonJourneyPlannerJpElevation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Integer distance;
+
     public TflApiCommonJourneyPlannerJpElevation withDistance(Integer distance) {
         this.distance = distance;
         return this;
@@ -20,6 +21,7 @@ public class TflApiCommonJourneyPlannerJpElevation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endLat")
     public Double endLat;
+
     public TflApiCommonJourneyPlannerJpElevation withEndLat(Double endLat) {
         this.endLat = endLat;
         return this;
@@ -28,6 +30,7 @@ public class TflApiCommonJourneyPlannerJpElevation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endLon")
     public Double endLon;
+
     public TflApiCommonJourneyPlannerJpElevation withEndLon(Double endLon) {
         this.endLon = endLon;
         return this;
@@ -36,6 +39,7 @@ public class TflApiCommonJourneyPlannerJpElevation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradient")
     public Double gradient;
+
     public TflApiCommonJourneyPlannerJpElevation withGradient(Double gradient) {
         this.gradient = gradient;
         return this;
@@ -44,6 +48,7 @@ public class TflApiCommonJourneyPlannerJpElevation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heightFromPreviousPoint")
     public Integer heightFromPreviousPoint;
+
     public TflApiCommonJourneyPlannerJpElevation withHeightFromPreviousPoint(Integer heightFromPreviousPoint) {
         this.heightFromPreviousPoint = heightFromPreviousPoint;
         return this;
@@ -52,6 +57,7 @@ public class TflApiCommonJourneyPlannerJpElevation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLat")
     public Double startLat;
+
     public TflApiCommonJourneyPlannerJpElevation withStartLat(Double startLat) {
         this.startLat = startLat;
         return this;
@@ -60,9 +66,11 @@ public class TflApiCommonJourneyPlannerJpElevation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLon")
     public Double startLon;
+
     public TflApiCommonJourneyPlannerJpElevation withStartLon(Double startLon) {
         this.startLon = startLon;
         return this;
     }
     
+    public TflApiCommonJourneyPlannerJpElevation(){}
 }

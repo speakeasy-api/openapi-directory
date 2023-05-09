@@ -22,6 +22,7 @@ public class ComplianceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ComplianceSummaryTimestamp")
     public OffsetDateTime complianceSummaryTimestamp;
+
     public ComplianceSummary withComplianceSummaryTimestamp(OffsetDateTime complianceSummaryTimestamp) {
         this.complianceSummaryTimestamp = complianceSummaryTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class ComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantResourceCount")
     public ComplianceContributorCount compliantResourceCount;
+
     public ComplianceSummary withCompliantResourceCount(ComplianceContributorCount compliantResourceCount) {
         this.compliantResourceCount = compliantResourceCount;
         return this;
@@ -38,9 +40,11 @@ public class ComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantResourceCount")
     public ComplianceContributorCount nonCompliantResourceCount;
+
     public ComplianceSummary withNonCompliantResourceCount(ComplianceContributorCount nonCompliantResourceCount) {
         this.nonCompliantResourceCount = nonCompliantResourceCount;
         return this;
     }
     
+    public ComplianceSummary(){}
 }

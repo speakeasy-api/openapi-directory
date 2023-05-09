@@ -15,6 +15,7 @@ public class KmsGrantConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionContextEquals")
     public java.util.Map<String, String> encryptionContextEquals;
+
     public KmsGrantConstraints withEncryptionContextEquals(java.util.Map<String, String> encryptionContextEquals) {
         this.encryptionContextEquals = encryptionContextEquals;
         return this;
@@ -23,9 +24,11 @@ public class KmsGrantConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionContextSubset")
     public java.util.Map<String, String> encryptionContextSubset;
+
     public KmsGrantConstraints withEncryptionContextSubset(java.util.Map<String, String> encryptionContextSubset) {
         this.encryptionContextSubset = encryptionContextSubset;
         return this;
     }
     
+    public KmsGrantConstraints(){}
 }

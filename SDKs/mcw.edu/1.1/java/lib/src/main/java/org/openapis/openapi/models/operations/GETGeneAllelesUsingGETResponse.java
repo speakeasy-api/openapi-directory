@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGeneAllelesUsingGETResponse {
     
     public byte[] body;
+
     public GETGeneAllelesUsingGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETGeneAllelesUsingGETResponse {
     
     
     public String contentType;
+
     public GETGeneAllelesUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETGeneAllelesUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETGeneAllelesUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETGeneAllelesUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGeneAllelesUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGeneAllelesUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

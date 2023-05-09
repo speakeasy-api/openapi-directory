@@ -15,9 +15,11 @@ public class Invite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Invite withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Invite(){}
 }

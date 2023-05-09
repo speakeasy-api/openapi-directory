@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesModificationsRequest {
     
     public DescribeReservedInstancesModificationsRequestFilters[] filters;
+
     public DescribeReservedInstancesModificationsRequest withFilters(DescribeReservedInstancesModificationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesModificationsRequest {
     
     
     public String nextToken;
+
     public DescribeReservedInstancesModificationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,11 @@ public class DescribeReservedInstancesModificationsRequest {
     
     
     public String[] reservedInstancesModificationIds;
+
     public DescribeReservedInstancesModificationsRequest withReservedInstancesModificationIds(String[] reservedInstancesModificationIds) {
         this.reservedInstancesModificationIds = reservedInstancesModificationIds;
         return this;
     }
     
+    public DescribeReservedInstancesModificationsRequest(){}
 }

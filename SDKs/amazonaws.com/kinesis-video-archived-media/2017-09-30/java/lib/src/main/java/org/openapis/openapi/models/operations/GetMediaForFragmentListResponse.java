@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMediaForFragmentListResponse {
@@ -12,6 +13,7 @@ public class GetMediaForFragmentListResponse {
      */
     
     public Object clientLimitExceededException;
+
     public GetMediaForFragmentListResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetMediaForFragmentListResponse {
     
     
     public String contentType;
+
     public GetMediaForFragmentListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMediaForFragmentListResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMediaForFragmentListOutput getMediaForFragmentListOutput;
+
     public GetMediaForFragmentListResponse withGetMediaForFragmentListOutput(org.openapis.openapi.models.shared.GetMediaForFragmentListOutput getMediaForFragmentListOutput) {
         this.getMediaForFragmentListOutput = getMediaForFragmentListOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetMediaForFragmentListResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetMediaForFragmentListResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetMediaForFragmentListResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetMediaForFragmentListResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class GetMediaForFragmentListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMediaForFragmentListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetMediaForFragmentListResponse {
     
     
     public Integer statusCode;
+
     public GetMediaForFragmentListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetMediaForFragmentListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMediaForFragmentListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMediaForFragmentListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

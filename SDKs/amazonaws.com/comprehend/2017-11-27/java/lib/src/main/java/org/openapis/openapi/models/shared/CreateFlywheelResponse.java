@@ -15,6 +15,7 @@ public class CreateFlywheelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveModelArn")
     public String activeModelArn;
+
     public CreateFlywheelResponse withActiveModelArn(String activeModelArn) {
         this.activeModelArn = activeModelArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateFlywheelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public CreateFlywheelResponse withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
     }
     
+    public CreateFlywheelResponse(){}
 }

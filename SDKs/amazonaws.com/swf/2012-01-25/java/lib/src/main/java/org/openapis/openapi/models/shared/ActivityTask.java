@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActivityTask {
     @JsonProperty("activityId")
     public String activityId;
+
     public ActivityTask withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -21,6 +22,7 @@ public class ActivityTask {
     
     @JsonProperty("activityType")
     public ActivityType activityType;
+
     public ActivityTask withActivityType(ActivityType activityType) {
         this.activityType = activityType;
         return this;
@@ -29,6 +31,7 @@ public class ActivityTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public ActivityTask withInput(String input) {
         this.input = input;
         return this;
@@ -36,6 +39,7 @@ public class ActivityTask {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ActivityTask withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -43,6 +47,7 @@ public class ActivityTask {
     
     @JsonProperty("taskToken")
     public String taskToken;
+
     public ActivityTask withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
@@ -50,9 +55,17 @@ public class ActivityTask {
     
     @JsonProperty("workflowExecution")
     public WorkflowExecution workflowExecution;
+
     public ActivityTask withWorkflowExecution(WorkflowExecution workflowExecution) {
         this.workflowExecution = workflowExecution;
         return this;
     }
     
+    public ActivityTask(@JsonProperty("activityId") String activityId, @JsonProperty("activityType") ActivityType activityType, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("taskToken") String taskToken, @JsonProperty("workflowExecution") WorkflowExecution workflowExecution) {
+        this.activityId = activityId;
+        this.activityType = activityType;
+        this.startedEventId = startedEventId;
+        this.taskToken = taskToken;
+        this.workflowExecution = workflowExecution;
+  }
 }

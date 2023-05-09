@@ -18,6 +18,7 @@ public class PutCertificatesIdCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public PutCertificatesIdCertificateResponseCertificateStatusError error;
+
     public PutCertificatesIdCertificateResponseCertificateStatus withError(PutCertificatesIdCertificateResponseCertificateStatusError error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class PutCertificatesIdCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuance")
     public PutCertificatesIdCertificateResponseCertificateStatusIssuanceEnum issuance;
+
     public PutCertificatesIdCertificateResponseCertificateStatus withIssuance(PutCertificatesIdCertificateResponseCertificateStatusIssuanceEnum issuance) {
         this.issuance = issuance;
         return this;
@@ -40,9 +42,11 @@ public class PutCertificatesIdCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewal")
     public PutCertificatesIdCertificateResponseCertificateStatusRenewalEnum renewal;
+
     public PutCertificatesIdCertificateResponseCertificateStatus withRenewal(PutCertificatesIdCertificateResponseCertificateStatusRenewalEnum renewal) {
         this.renewal = renewal;
         return this;
     }
     
+    public PutCertificatesIdCertificateResponseCertificateStatus(){}
 }

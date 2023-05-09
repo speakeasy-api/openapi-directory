@@ -20,6 +20,7 @@ public class CreateNewCardNewCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardId")
     public Long cardId;
+
     public CreateNewCardNewCardResponse withCardId(Long cardId) {
         this.cardId = cardId;
         return this;
@@ -30,6 +31,7 @@ public class CreateNewCardNewCardResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiryDate")
     public OffsetDateTime expiryDate;
+
     public CreateNewCardNewCardResponse withExpiryDate(OffsetDateTime expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -38,6 +40,7 @@ public class CreateNewCardNewCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maskedPan")
     public String maskedPan;
+
     public CreateNewCardNewCardResponse withMaskedPan(String maskedPan) {
         this.maskedPan = maskedPan;
         return this;
@@ -46,9 +49,11 @@ public class CreateNewCardNewCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateNewCardNewCardResponseStatusEnum status;
+
     public CreateNewCardNewCardResponse withStatus(CreateNewCardNewCardResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateNewCardNewCardResponse(){}
 }

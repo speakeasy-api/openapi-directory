@@ -12,6 +12,7 @@ public class OpenTunnelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OpenTunnelRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class OpenTunnelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConfig")
     public DestinationConfig destinationConfig;
+
     public OpenTunnelRequest withDestinationConfig(DestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -28,6 +30,7 @@ public class OpenTunnelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public OpenTunnelRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -36,9 +39,11 @@ public class OpenTunnelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConfig")
     public TimeoutConfig timeoutConfig;
+
     public OpenTunnelRequest withTimeoutConfig(TimeoutConfig timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
     
+    public OpenTunnelRequest(){}
 }

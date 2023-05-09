@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeImportTasksRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeImportTasksRequest describeImportTasksRequest;
+
     public DescribeImportTasksRequest withDescribeImportTasksRequest(org.openapis.openapi.models.shared.DescribeImportTasksRequest describeImportTasksRequest) {
         this.describeImportTasksRequest = describeImportTasksRequest;
         return this;
@@ -16,6 +18,7 @@ public class DescribeImportTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeImportTasksRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeImportTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeImportTasksRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeImportTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeImportTasksRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeImportTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeImportTasksRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeImportTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeImportTasksRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeImportTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeImportTasksRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeImportTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeImportTasksRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class DescribeImportTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeImportTasksXAmzTargetEnum xAmzTarget;
+
     public DescribeImportTasksRequest withXAmzTarget(DescribeImportTasksXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class DescribeImportTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public DescribeImportTasksRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -85,9 +96,14 @@ public class DescribeImportTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public DescribeImportTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeImportTasksRequest(@JsonProperty("DescribeImportTasksRequest") org.openapis.openapi.models.shared.DescribeImportTasksRequest describeImportTasksRequest, @JsonProperty("X-Amz-Target") DescribeImportTasksXAmzTargetEnum xAmzTarget) {
+        this.describeImportTasksRequest = describeImportTasksRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

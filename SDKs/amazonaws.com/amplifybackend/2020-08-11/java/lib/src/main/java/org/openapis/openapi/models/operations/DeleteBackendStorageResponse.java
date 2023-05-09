@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBackendStorageResponse {
@@ -12,6 +13,7 @@ public class DeleteBackendStorageResponse {
      */
     
     public Object badRequestException;
+
     public DeleteBackendStorageResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBackendStorageResponse {
     
     
     public String contentType;
+
     public DeleteBackendStorageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBackendStorageResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBackendStorageResponse deleteBackendStorageResponse;
+
     public DeleteBackendStorageResponse withDeleteBackendStorageResponse(org.openapis.openapi.models.shared.DeleteBackendStorageResponse deleteBackendStorageResponse) {
         this.deleteBackendStorageResponse = deleteBackendStorageResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBackendStorageResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public DeleteBackendStorageResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBackendStorageResponse {
      */
     
     public Object notFoundException;
+
     public DeleteBackendStorageResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteBackendStorageResponse {
     
     
     public Integer statusCode;
+
     public DeleteBackendStorageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteBackendStorageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBackendStorageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteBackendStorageResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteBackendStorageResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteBackendStorageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

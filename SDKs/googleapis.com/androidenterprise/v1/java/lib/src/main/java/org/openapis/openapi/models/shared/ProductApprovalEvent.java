@@ -18,6 +18,7 @@ public class ProductApprovalEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved")
     public ProductApprovalEventApprovedEnum approved;
+
     public ProductApprovalEvent withApproved(ProductApprovalEventApprovedEnum approved) {
         this.approved = approved;
         return this;
@@ -29,9 +30,11 @@ public class ProductApprovalEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductApprovalEvent withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ProductApprovalEvent(){}
 }

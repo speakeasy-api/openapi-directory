@@ -342,6 +342,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/JobInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Step.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecutionStageStateExecutionStageStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecutionStageState.java
+lib/src/main/java/org/openapis/openapi/models/shared/RuntimeUpdatableParams.java
 lib/src/main/java/org/openapis/openapi/models/shared/PipelineDescription.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransformSummaryKindEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransformSummary.java
@@ -535,4 +536,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/WorkerMessageCode.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkerLifecycleEventEventEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkerLifecycleEvent.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkerHealthReport.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

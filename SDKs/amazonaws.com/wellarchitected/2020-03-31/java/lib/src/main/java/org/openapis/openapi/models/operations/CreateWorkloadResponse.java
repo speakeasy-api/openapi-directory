@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkloadResponse {
@@ -12,6 +13,7 @@ public class CreateWorkloadResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateWorkloadResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateWorkloadResponse {
      */
     
     public Object conflictException;
+
     public CreateWorkloadResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkloadResponse {
     
     
     public String contentType;
+
     public CreateWorkloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkloadResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkloadOutput createWorkloadOutput;
+
     public CreateWorkloadResponse withCreateWorkloadOutput(org.openapis.openapi.models.shared.CreateWorkloadOutput createWorkloadOutput) {
         this.createWorkloadOutput = createWorkloadOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorkloadResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorkloadResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorkloadResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateWorkloadResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateWorkloadResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,8 +81,20 @@ public class CreateWorkloadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * ResourceNotFoundException
+     */
+    
+    public Object resourceNotFoundException;
+
+    public CreateWorkloadResponse withResourceNotFoundException(Object resourceNotFoundException) {
+        this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
@@ -83,6 +103,7 @@ public class CreateWorkloadResponse {
      */
     
     public Object throttlingException;
+
     public CreateWorkloadResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +114,14 @@ public class CreateWorkloadResponse {
      */
     
     public Object validationException;
+
     public CreateWorkloadResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateWorkloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

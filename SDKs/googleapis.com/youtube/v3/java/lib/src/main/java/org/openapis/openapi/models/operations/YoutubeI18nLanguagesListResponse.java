@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class YoutubeI18nLanguagesListResponse {
     
     public String contentType;
+
     public YoutubeI18nLanguagesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class YoutubeI18nLanguagesListResponse {
      */
     
     public org.openapis.openapi.models.shared.I18nLanguageListResponse i18nLanguageListResponse;
+
     public YoutubeI18nLanguagesListResponse withI18nLanguageListResponse(org.openapis.openapi.models.shared.I18nLanguageListResponse i18nLanguageListResponse) {
         this.i18nLanguageListResponse = i18nLanguageListResponse;
         return this;
@@ -26,6 +29,7 @@ public class YoutubeI18nLanguagesListResponse {
     
     
     public Integer statusCode;
+
     public YoutubeI18nLanguagesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class YoutubeI18nLanguagesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public YoutubeI18nLanguagesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public YoutubeI18nLanguagesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

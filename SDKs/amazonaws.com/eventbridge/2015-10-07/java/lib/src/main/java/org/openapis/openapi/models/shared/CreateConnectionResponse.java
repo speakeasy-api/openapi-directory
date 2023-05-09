@@ -20,6 +20,7 @@ public class CreateConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public CreateConnectionResponse withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -28,6 +29,7 @@ public class CreateConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionState")
     public ConnectionStateEnum connectionState;
+
     public CreateConnectionResponse withConnectionState(ConnectionStateEnum connectionState) {
         this.connectionState = connectionState;
         return this;
@@ -38,6 +40,7 @@ public class CreateConnectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public CreateConnectionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,9 +51,11 @@ public class CreateConnectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public CreateConnectionResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public CreateConnectionResponse(){}
 }

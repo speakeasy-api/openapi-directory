@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteActiveWidgetRequest {
@@ -12,6 +13,7 @@ public class DeleteActiveWidgetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public DeleteActiveWidgetRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -22,9 +24,14 @@ public class DeleteActiveWidgetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=widgetId")
     public Long widgetId;
+
     public DeleteActiveWidgetRequest withWidgetId(Long widgetId) {
         this.widgetId = widgetId;
         return this;
     }
     
+    public DeleteActiveWidgetRequest(@JsonProperty("projectId") Long projectId, @JsonProperty("widgetId") Long widgetId) {
+        this.projectId = projectId;
+        this.widgetId = widgetId;
+  }
 }

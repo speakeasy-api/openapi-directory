@@ -15,6 +15,7 @@ public class StartChangeSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeSetArn")
     public String changeSetArn;
+
     public StartChangeSetResponse withChangeSetArn(String changeSetArn) {
         this.changeSetArn = changeSetArn;
         return this;
@@ -23,9 +24,11 @@ public class StartChangeSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeSetId")
     public String changeSetId;
+
     public StartChangeSetResponse withChangeSetId(String changeSetId) {
         this.changeSetId = changeSetId;
         return this;
     }
     
+    public StartChangeSetResponse(){}
 }

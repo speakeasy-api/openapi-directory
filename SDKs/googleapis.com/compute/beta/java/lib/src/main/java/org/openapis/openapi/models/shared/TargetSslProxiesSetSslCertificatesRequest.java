@@ -15,9 +15,11 @@ public class TargetSslProxiesSetSslCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslCertificates")
     public String[] sslCertificates;
+
     public TargetSslProxiesSetSslCertificatesRequest withSslCertificates(String[] sslCertificates) {
         this.sslCertificates = sslCertificates;
         return this;
     }
     
+    public TargetSslProxiesSetSslCertificatesRequest(){}
 }

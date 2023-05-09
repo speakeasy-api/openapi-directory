@@ -15,6 +15,7 @@ public class ListAnomaliesForInsightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ListAnomaliesForInsightRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class ListAnomaliesForInsightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ListAnomaliesForInsightRequestBodyFilters filters;
+
     public ListAnomaliesForInsightRequestBody withFilters(ListAnomaliesForInsightRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -37,6 +39,7 @@ public class ListAnomaliesForInsightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAnomaliesForInsightRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,6 +51,7 @@ public class ListAnomaliesForInsightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomaliesForInsightRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,9 +63,11 @@ public class ListAnomaliesForInsightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTimeRange")
     public ListAnomaliesForInsightRequestBodyStartTimeRange startTimeRange;
+
     public ListAnomaliesForInsightRequestBody withStartTimeRange(ListAnomaliesForInsightRequestBodyStartTimeRange startTimeRange) {
         this.startTimeRange = startTimeRange;
         return this;
     }
     
+    public ListAnomaliesForInsightRequestBody(){}
 }

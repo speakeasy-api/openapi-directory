@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamResultIpam {
     
     public String defaultResourceDiscoveryAssociationId;
+
     public CreateIpamResultIpam withDefaultResourceDiscoveryAssociationId(String defaultResourceDiscoveryAssociationId) {
         this.defaultResourceDiscoveryAssociationId = defaultResourceDiscoveryAssociationId;
         return this;
@@ -19,6 +20,7 @@ public class CreateIpamResultIpam {
     
     
     public String defaultResourceDiscoveryId;
+
     public CreateIpamResultIpam withDefaultResourceDiscoveryId(String defaultResourceDiscoveryId) {
         this.defaultResourceDiscoveryId = defaultResourceDiscoveryId;
         return this;
@@ -26,6 +28,7 @@ public class CreateIpamResultIpam {
     
     
     public String description;
+
     public CreateIpamResultIpam withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class CreateIpamResultIpam {
     
     
     public String ipamArn;
+
     public CreateIpamResultIpam withIpamArn(String ipamArn) {
         this.ipamArn = ipamArn;
         return this;
@@ -40,6 +44,7 @@ public class CreateIpamResultIpam {
     
     
     public String ipamId;
+
     public CreateIpamResultIpam withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -47,6 +52,7 @@ public class CreateIpamResultIpam {
     
     
     public String ipamRegion;
+
     public CreateIpamResultIpam withIpamRegion(String ipamRegion) {
         this.ipamRegion = ipamRegion;
         return this;
@@ -54,6 +60,7 @@ public class CreateIpamResultIpam {
     
     
     public CreateIpamResultIpamOperatingRegions[] operatingRegions;
+
     public CreateIpamResultIpam withOperatingRegions(CreateIpamResultIpamOperatingRegions[] operatingRegions) {
         this.operatingRegions = operatingRegions;
         return this;
@@ -61,6 +68,7 @@ public class CreateIpamResultIpam {
     
     
     public String ownerId;
+
     public CreateIpamResultIpam withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class CreateIpamResultIpam {
     
     
     public String privateDefaultScopeId;
+
     public CreateIpamResultIpam withPrivateDefaultScopeId(String privateDefaultScopeId) {
         this.privateDefaultScopeId = privateDefaultScopeId;
         return this;
@@ -75,6 +84,7 @@ public class CreateIpamResultIpam {
     
     
     public String publicDefaultScopeId;
+
     public CreateIpamResultIpam withPublicDefaultScopeId(String publicDefaultScopeId) {
         this.publicDefaultScopeId = publicDefaultScopeId;
         return this;
@@ -82,6 +92,7 @@ public class CreateIpamResultIpam {
     
     
     public Long resourceDiscoveryAssociationCount;
+
     public CreateIpamResultIpam withResourceDiscoveryAssociationCount(Long resourceDiscoveryAssociationCount) {
         this.resourceDiscoveryAssociationCount = resourceDiscoveryAssociationCount;
         return this;
@@ -89,6 +100,7 @@ public class CreateIpamResultIpam {
     
     
     public Long scopeCount;
+
     public CreateIpamResultIpam withScopeCount(Long scopeCount) {
         this.scopeCount = scopeCount;
         return this;
@@ -96,6 +108,7 @@ public class CreateIpamResultIpam {
     
     
     public CreateIpamResultIpamStateEnum state;
+
     public CreateIpamResultIpam withState(CreateIpamResultIpamStateEnum state) {
         this.state = state;
         return this;
@@ -103,9 +116,11 @@ public class CreateIpamResultIpam {
     
     
     public CreateIpamResultIpamTags[] tags;
+
     public CreateIpamResultIpam withTags(CreateIpamResultIpamTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateIpamResultIpam(){}
 }

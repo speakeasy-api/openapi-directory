@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleBByPurposeRequest {
@@ -13,6 +14,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSchedulesScheduleBByPurposeRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -24,6 +26,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetSchedulesScheduleBByPurposeRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -37,6 +40,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetSchedulesScheduleBByPurposeRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -47,6 +51,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetSchedulesScheduleBByPurposeRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -57,6 +62,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSchedulesScheduleBByPurposeRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -67,6 +73,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=purpose")
     public String[] purpose;
+
     public GetSchedulesScheduleBByPurposeRequest withPurpose(String[] purpose) {
         this.purpose = purpose;
         return this;
@@ -78,6 +85,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetSchedulesScheduleBByPurposeRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -88,6 +96,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetSchedulesScheduleBByPurposeRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -98,6 +107,7 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetSchedulesScheduleBByPurposeRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -108,9 +118,13 @@ public class GetSchedulesScheduleBByPurposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetSchedulesScheduleBByPurposeRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetSchedulesScheduleBByPurposeRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

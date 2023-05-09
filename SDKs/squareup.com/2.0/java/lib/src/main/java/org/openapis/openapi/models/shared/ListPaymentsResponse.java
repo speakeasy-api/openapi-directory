@@ -21,6 +21,7 @@ public class ListPaymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListPaymentsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +33,7 @@ public class ListPaymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListPaymentsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +45,11 @@ public class ListPaymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payments")
     public Payment[] payments;
+
     public ListPaymentsResponse withPayments(Payment[] payments) {
         this.payments = payments;
         return this;
     }
     
+    public ListPaymentsResponse(){}
 }

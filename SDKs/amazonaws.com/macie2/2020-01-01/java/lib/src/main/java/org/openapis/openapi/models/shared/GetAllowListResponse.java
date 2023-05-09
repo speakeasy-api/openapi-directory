@@ -20,6 +20,7 @@ public class GetAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetAllowListResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetAllowListResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetAllowListResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class GetAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public AllowListCriteria criteria;
+
     public GetAllowListResponse withCriteria(AllowListCriteria criteria) {
         this.criteria = criteria;
         return this;
@@ -46,6 +49,7 @@ public class GetAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetAllowListResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class GetAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAllowListResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class GetAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAllowListResponse withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class GetAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AllowListStatus status;
+
     public GetAllowListResponse withStatus(AllowListStatus status) {
         this.status = status;
         return this;
@@ -78,6 +85,7 @@ public class GetAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetAllowListResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -88,9 +96,11 @@ public class GetAllowListResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public GetAllowListResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetAllowListResponse(){}
 }

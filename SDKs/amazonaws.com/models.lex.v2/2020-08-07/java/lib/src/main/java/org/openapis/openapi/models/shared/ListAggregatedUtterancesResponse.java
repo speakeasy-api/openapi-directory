@@ -20,6 +20,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregatedUtterancesSummaries")
     public AggregatedUtterancesSummary[] aggregatedUtterancesSummaries;
+
     public ListAggregatedUtterancesResponse withAggregatedUtterancesSummaries(AggregatedUtterancesSummary[] aggregatedUtterancesSummaries) {
         this.aggregatedUtterancesSummaries = aggregatedUtterancesSummaries;
         return this;
@@ -28,6 +29,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationDuration")
     public UtteranceAggregationDuration aggregationDuration;
+
     public ListAggregatedUtterancesResponse withAggregationDuration(UtteranceAggregationDuration aggregationDuration) {
         this.aggregationDuration = aggregationDuration;
         return this;
@@ -38,6 +40,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("aggregationLastRefreshedDateTime")
     public OffsetDateTime aggregationLastRefreshedDateTime;
+
     public ListAggregatedUtterancesResponse withAggregationLastRefreshedDateTime(OffsetDateTime aggregationLastRefreshedDateTime) {
         this.aggregationLastRefreshedDateTime = aggregationLastRefreshedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("aggregationWindowEndTime")
     public OffsetDateTime aggregationWindowEndTime;
+
     public ListAggregatedUtterancesResponse withAggregationWindowEndTime(OffsetDateTime aggregationWindowEndTime) {
         this.aggregationWindowEndTime = aggregationWindowEndTime;
         return this;
@@ -58,6 +62,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("aggregationWindowStartTime")
     public OffsetDateTime aggregationWindowStartTime;
+
     public ListAggregatedUtterancesResponse withAggregationWindowStartTime(OffsetDateTime aggregationWindowStartTime) {
         this.aggregationWindowStartTime = aggregationWindowStartTime;
         return this;
@@ -66,6 +71,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasId")
     public String botAliasId;
+
     public ListAggregatedUtterancesResponse withBotAliasId(String botAliasId) {
         this.botAliasId = botAliasId;
         return this;
@@ -74,6 +80,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListAggregatedUtterancesResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -82,6 +89,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListAggregatedUtterancesResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -90,6 +98,7 @@ public class ListAggregatedUtterancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListAggregatedUtterancesResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -98,9 +107,11 @@ public class ListAggregatedUtterancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAggregatedUtterancesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAggregatedUtterancesResponse(){}
 }

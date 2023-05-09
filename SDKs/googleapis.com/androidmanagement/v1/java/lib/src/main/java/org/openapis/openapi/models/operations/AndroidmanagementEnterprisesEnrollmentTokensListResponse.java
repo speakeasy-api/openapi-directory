@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidmanagementEnterprisesEnrollmentTokensListResponse {
     
     public String contentType;
+
     public AndroidmanagementEnterprisesEnrollmentTokensListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidmanagementEnterprisesEnrollmentTokensListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEnrollmentTokensResponse listEnrollmentTokensResponse;
+
     public AndroidmanagementEnterprisesEnrollmentTokensListResponse withListEnrollmentTokensResponse(org.openapis.openapi.models.shared.ListEnrollmentTokensResponse listEnrollmentTokensResponse) {
         this.listEnrollmentTokensResponse = listEnrollmentTokensResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroidmanagementEnterprisesEnrollmentTokensListResponse {
     
     
     public Integer statusCode;
+
     public AndroidmanagementEnterprisesEnrollmentTokensListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidmanagementEnterprisesEnrollmentTokensListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidmanagementEnterprisesEnrollmentTokensListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidmanagementEnterprisesEnrollmentTokensListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

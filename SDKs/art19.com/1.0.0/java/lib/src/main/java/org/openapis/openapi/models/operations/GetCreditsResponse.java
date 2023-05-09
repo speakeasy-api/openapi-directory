@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCreditsResponse {
     
     public String contentType;
+
     public GetCreditsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCreditsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetCreditsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetCreditsResponse {
     
     
     public Integer statusCode;
+
     public GetCreditsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetCreditsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCreditsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetCreditsResponse {
      */
     
     public GetCredits200ApplicationVndApiPlusJson getCredits200ApplicationVndApiPlusJsonObject;
+
     public GetCreditsResponse withGetCredits200ApplicationVndApiPlusJsonObject(GetCredits200ApplicationVndApiPlusJson getCredits200ApplicationVndApiPlusJsonObject) {
         this.getCredits200ApplicationVndApiPlusJsonObject = getCredits200ApplicationVndApiPlusJsonObject;
         return this;
@@ -54,9 +60,14 @@ public class GetCreditsResponse {
      */
     
     public GetCredits400ApplicationVndApiPlusJson getCredits400ApplicationVndApiPlusJsonObject;
+
     public GetCreditsResponse withGetCredits400ApplicationVndApiPlusJsonObject(GetCredits400ApplicationVndApiPlusJson getCredits400ApplicationVndApiPlusJsonObject) {
         this.getCredits400ApplicationVndApiPlusJsonObject = getCredits400ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetCreditsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

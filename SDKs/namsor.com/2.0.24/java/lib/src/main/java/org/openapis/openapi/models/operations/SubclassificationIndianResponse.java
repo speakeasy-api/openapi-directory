@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubclassificationIndianResponse {
     
     public String contentType;
+
     public SubclassificationIndianResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SubclassificationIndianResponse {
      */
     
     public org.openapis.openapi.models.shared.FirstLastNameGeoSubclassificationOut firstLastNameGeoSubclassificationOut;
+
     public SubclassificationIndianResponse withFirstLastNameGeoSubclassificationOut(org.openapis.openapi.models.shared.FirstLastNameGeoSubclassificationOut firstLastNameGeoSubclassificationOut) {
         this.firstLastNameGeoSubclassificationOut = firstLastNameGeoSubclassificationOut;
         return this;
@@ -26,6 +29,7 @@ public class SubclassificationIndianResponse {
     
     
     public Integer statusCode;
+
     public SubclassificationIndianResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SubclassificationIndianResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubclassificationIndianResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SubclassificationIndianResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

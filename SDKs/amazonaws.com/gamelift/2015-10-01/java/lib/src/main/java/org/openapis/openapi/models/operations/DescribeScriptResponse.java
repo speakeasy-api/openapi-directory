@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeScriptResponse {
     
     public String contentType;
+
     public DescribeScriptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeScriptResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeScriptOutput describeScriptOutput;
+
     public DescribeScriptResponse withDescribeScriptOutput(org.openapis.openapi.models.shared.DescribeScriptOutput describeScriptOutput) {
         this.describeScriptOutput = describeScriptOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeScriptResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeScriptResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeScriptResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeScriptResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeScriptResponse {
      */
     
     public Object notFoundException;
+
     public DescribeScriptResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeScriptResponse {
     
     
     public Integer statusCode;
+
     public DescribeScriptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeScriptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeScriptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeScriptResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeScriptResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeScriptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

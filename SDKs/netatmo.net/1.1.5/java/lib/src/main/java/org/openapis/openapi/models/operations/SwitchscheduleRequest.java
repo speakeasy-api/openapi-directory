@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SwitchscheduleRequest {
@@ -12,6 +13,7 @@ public class SwitchscheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
     public String deviceId;
+
     public SwitchscheduleRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,6 +24,7 @@ public class SwitchscheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
     public String moduleId;
+
     public SwitchscheduleRequest withModuleId(String moduleId) {
         this.moduleId = moduleId;
         return this;
@@ -33,9 +36,15 @@ public class SwitchscheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=schedule_id")
     public String scheduleId;
+
     public SwitchscheduleRequest withScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
         return this;
     }
     
+    public SwitchscheduleRequest(@JsonProperty("device_id") String deviceId, @JsonProperty("module_id") String moduleId, @JsonProperty("schedule_id") String scheduleId) {
+        this.deviceId = deviceId;
+        this.moduleId = moduleId;
+        this.scheduleId = scheduleId;
+  }
 }

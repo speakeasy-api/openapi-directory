@@ -15,6 +15,7 @@ public class RefResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RefResource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class RefResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public RefResource withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -31,6 +33,7 @@ public class RefResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedOn")
     public String lastUpdatedOn;
+
     public RefResource withLastUpdatedOn(String lastUpdatedOn) {
         this.lastUpdatedOn = lastUpdatedOn;
         return this;
@@ -38,6 +41,7 @@ public class RefResource {
     
     @JsonProperty("name")
     public String name;
+
     public RefResource withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +50,7 @@ public class RefResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public RefResource withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -54,6 +59,7 @@ public class RefResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RefResource withStatus(String status) {
         this.status = status;
         return this;
@@ -61,9 +67,14 @@ public class RefResource {
     
     @JsonProperty("type")
     public String type;
+
     public RefResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RefResource(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

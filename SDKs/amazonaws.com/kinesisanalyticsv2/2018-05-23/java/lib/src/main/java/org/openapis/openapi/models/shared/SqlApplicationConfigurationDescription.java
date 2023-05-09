@@ -15,6 +15,7 @@ public class SqlApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDescriptions")
     public InputDescription[] inputDescriptions;
+
     public SqlApplicationConfigurationDescription withInputDescriptions(InputDescription[] inputDescriptions) {
         this.inputDescriptions = inputDescriptions;
         return this;
@@ -23,6 +24,7 @@ public class SqlApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDescriptions")
     public OutputDescription[] outputDescriptions;
+
     public SqlApplicationConfigurationDescription withOutputDescriptions(OutputDescription[] outputDescriptions) {
         this.outputDescriptions = outputDescriptions;
         return this;
@@ -31,9 +33,11 @@ public class SqlApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceDataSourceDescriptions")
     public ReferenceDataSourceDescription[] referenceDataSourceDescriptions;
+
     public SqlApplicationConfigurationDescription withReferenceDataSourceDescriptions(ReferenceDataSourceDescription[] referenceDataSourceDescriptions) {
         this.referenceDataSourceDescriptions = referenceDataSourceDescriptions;
         return this;
     }
     
+    public SqlApplicationConfigurationDescription(){}
 }

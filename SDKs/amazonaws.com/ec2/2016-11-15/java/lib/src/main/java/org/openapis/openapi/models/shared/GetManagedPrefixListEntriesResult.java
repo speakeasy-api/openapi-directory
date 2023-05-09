@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetManagedPrefixListEntriesResult {
     
     public GetManagedPrefixListEntriesResultEntries[] entries;
+
     public GetManagedPrefixListEntriesResult withEntries(GetManagedPrefixListEntriesResultEntries[] entries) {
         this.entries = entries;
         return this;
@@ -19,9 +20,11 @@ public class GetManagedPrefixListEntriesResult {
     
     
     public String nextToken;
+
     public GetManagedPrefixListEntriesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetManagedPrefixListEntriesResult(){}
 }

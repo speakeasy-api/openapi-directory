@@ -15,9 +15,11 @@ public class LoggerDefinitionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Loggers")
     public Logger[] loggers;
+
     public LoggerDefinitionVersion withLoggers(Logger[] loggers) {
         this.loggers = loggers;
         return this;
     }
     
+    public LoggerDefinitionVersion(){}
 }

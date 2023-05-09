@@ -61,11 +61,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyMediaUploadResponse res = new org.openapis.openapi.models.operations.ChromepolicyMediaUploadResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyMediaUploadResponse res = new org.openapis.openapi.models.operations.ChromepolicyMediaUploadResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1UploadPolicyFileResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

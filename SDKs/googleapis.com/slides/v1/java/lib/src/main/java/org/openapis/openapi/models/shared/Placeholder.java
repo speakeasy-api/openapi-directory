@@ -18,6 +18,7 @@ public class Placeholder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public Placeholder withIndex(Integer index) {
         this.index = index;
         return this;
@@ -29,6 +30,7 @@ public class Placeholder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentObjectId")
     public String parentObjectId;
+
     public Placeholder withParentObjectId(String parentObjectId) {
         this.parentObjectId = parentObjectId;
         return this;
@@ -40,9 +42,11 @@ public class Placeholder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PlaceholderTypeEnum type;
+
     public Placeholder withType(PlaceholderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Placeholder(){}
 }

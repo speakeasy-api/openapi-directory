@@ -20,6 +20,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetRunResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetRunResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public GetRunResponse withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -46,6 +49,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public GetRunResponse withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -54,6 +58,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetRunResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevel")
     public RunLogLevelEnum logLevel;
+
     public GetRunResponse withLogLevel(RunLogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -70,6 +76,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetRunResponse withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUri")
     public String outputUri;
+
     public GetRunResponse withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
@@ -86,6 +94,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GetRunResponse withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -94,6 +103,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public GetRunResponse withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -102,6 +112,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceDigests")
     public java.util.Map<String, String> resourceDigests;
+
     public GetRunResponse withResourceDigests(java.util.Map<String, String> resourceDigests) {
         this.resourceDigests = resourceDigests;
         return this;
@@ -110,6 +121,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public GetRunResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -118,6 +130,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runGroupId")
     public String runGroupId;
+
     public GetRunResponse withRunGroupId(String runGroupId) {
         this.runGroupId = runGroupId;
         return this;
@@ -126,6 +139,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public GetRunResponse withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -136,6 +150,7 @@ public class GetRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetRunResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -144,6 +159,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedBy")
     public String startedBy;
+
     public GetRunResponse withStartedBy(String startedBy) {
         this.startedBy = startedBy;
         return this;
@@ -152,6 +168,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RunStatusEnum status;
+
     public GetRunResponse withStatus(RunStatusEnum status) {
         this.status = status;
         return this;
@@ -160,6 +177,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetRunResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -170,6 +188,7 @@ public class GetRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopTime")
     public OffsetDateTime stopTime;
+
     public GetRunResponse withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
@@ -178,6 +197,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageCapacity")
     public Long storageCapacity;
+
     public GetRunResponse withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -186,6 +206,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetRunResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -194,6 +215,7 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public GetRunResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -202,9 +224,11 @@ public class GetRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowType")
     public WorkflowTypeEnum workflowType;
+
     public GetRunResponse withWorkflowType(WorkflowTypeEnum workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public GetRunResponse(){}
 }

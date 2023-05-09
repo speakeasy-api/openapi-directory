@@ -19,6 +19,7 @@ public class LabelFieldModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldId")
     public String fieldId;
+
     public LabelFieldModification withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -30,6 +31,7 @@ public class LabelFieldModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LabelFieldModification withKind(String kind) {
         this.kind = kind;
         return this;
@@ -41,6 +43,7 @@ public class LabelFieldModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setDateValues")
     public LocalDate[] setDateValues;
+
     public LabelFieldModification withSetDateValues(LocalDate[] setDateValues) {
         this.setDateValues = setDateValues;
         return this;
@@ -52,6 +55,7 @@ public class LabelFieldModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setIntegerValues")
     public String[] setIntegerValues;
+
     public LabelFieldModification withSetIntegerValues(String[] setIntegerValues) {
         this.setIntegerValues = setIntegerValues;
         return this;
@@ -63,6 +67,7 @@ public class LabelFieldModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setSelectionValues")
     public String[] setSelectionValues;
+
     public LabelFieldModification withSetSelectionValues(String[] setSelectionValues) {
         this.setSelectionValues = setSelectionValues;
         return this;
@@ -74,6 +79,7 @@ public class LabelFieldModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setTextValues")
     public String[] setTextValues;
+
     public LabelFieldModification withSetTextValues(String[] setTextValues) {
         this.setTextValues = setTextValues;
         return this;
@@ -85,6 +91,7 @@ public class LabelFieldModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setUserValues")
     public String[] setUserValues;
+
     public LabelFieldModification withSetUserValues(String[] setUserValues) {
         this.setUserValues = setUserValues;
         return this;
@@ -96,9 +103,11 @@ public class LabelFieldModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsetValues")
     public Boolean unsetValues;
+
     public LabelFieldModification withUnsetValues(Boolean unsetValues) {
         this.unsetValues = unsetValues;
         return this;
     }
     
+    public LabelFieldModification(){}
 }

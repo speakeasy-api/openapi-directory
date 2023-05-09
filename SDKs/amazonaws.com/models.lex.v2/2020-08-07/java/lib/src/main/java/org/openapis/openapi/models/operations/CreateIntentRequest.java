@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateIntentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateIntentRequestBody requestBody;
+
     public CreateIntentRequest withRequestBody(CreateIntentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateIntentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class CreateIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateIntentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class CreateIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateIntentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class CreateIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateIntentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class CreateIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateIntentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class CreateIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateIntentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class CreateIntentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateIntentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class CreateIntentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
     public String botId;
+
     public CreateIntentRequest withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -78,6 +88,7 @@ public class CreateIntentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
     public String botVersion;
+
     public CreateIntentRequest withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -88,9 +99,16 @@ public class CreateIntentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
     public String localeId;
+
     public CreateIntentRequest withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
     }
     
+    public CreateIntentRequest(@JsonProperty("RequestBody") CreateIntentRequestBody requestBody, @JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion, @JsonProperty("localeId") String localeId) {
+        this.requestBody = requestBody;
+        this.botId = botId;
+        this.botVersion = botVersion;
+        this.localeId = localeId;
+  }
 }

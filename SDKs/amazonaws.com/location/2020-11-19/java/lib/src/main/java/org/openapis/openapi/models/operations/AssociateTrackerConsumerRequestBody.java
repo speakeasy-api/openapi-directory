@@ -12,9 +12,13 @@ public class AssociateTrackerConsumerRequestBody {
      */
     @JsonProperty("ConsumerArn")
     public String consumerArn;
+
     public AssociateTrackerConsumerRequestBody withConsumerArn(String consumerArn) {
         this.consumerArn = consumerArn;
         return this;
     }
     
+    public AssociateTrackerConsumerRequestBody(@JsonProperty("ConsumerArn") String consumerArn) {
+        this.consumerArn = consumerArn;
+  }
 }

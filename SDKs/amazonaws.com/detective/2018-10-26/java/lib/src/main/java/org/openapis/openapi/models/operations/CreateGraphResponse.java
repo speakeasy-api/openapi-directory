@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGraphResponse {
@@ -12,6 +13,7 @@ public class CreateGraphResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateGraphResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateGraphResponse {
      */
     
     public Object conflictException;
+
     public CreateGraphResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateGraphResponse {
     
     
     public String contentType;
+
     public CreateGraphResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateGraphResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGraphResponse createGraphResponse;
+
     public CreateGraphResponse withCreateGraphResponse(org.openapis.openapi.models.shared.CreateGraphResponse createGraphResponse) {
         this.createGraphResponse = createGraphResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateGraphResponse {
      */
     
     public Object internalServerException;
+
     public CreateGraphResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGraphResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateGraphResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateGraphResponse {
     
     
     public Integer statusCode;
+
     public CreateGraphResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateGraphResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGraphResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateGraphResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

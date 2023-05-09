@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DropwebhookSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String codeOauth;
+
     public DropwebhookSecurity withCodeOauth(String codeOauth) {
         this.codeOauth = codeOauth;
         return this;
@@ -16,9 +17,11 @@ public class DropwebhookSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String passwordOauth;
+
     public DropwebhookSecurity withPasswordOauth(String passwordOauth) {
         this.passwordOauth = passwordOauth;
         return this;
     }
     
+    public DropwebhookSecurity(){}
 }

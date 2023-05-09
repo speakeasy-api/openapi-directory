@@ -15,6 +15,7 @@ public class ExchangeRateInformation1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractIdentification")
     public String contractIdentification;
+
     public ExchangeRateInformation1 withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -23,6 +24,7 @@ public class ExchangeRateInformation1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeRate")
     public String exchangeRate;
+
     public ExchangeRateInformation1 withExchangeRate(String exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -31,9 +33,11 @@ public class ExchangeRateInformation1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateType")
     public ExchangeRateInformation1RateTypeEnum rateType;
+
     public ExchangeRateInformation1 withRateType(ExchangeRateInformation1RateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
     }
     
+    public ExchangeRateInformation1(){}
 }

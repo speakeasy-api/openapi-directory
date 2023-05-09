@@ -20,6 +20,7 @@ public class CreateInlineScriptTagRequestBodyInlineScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_scope")
     public CreateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum displayScope;
+
     public CreateInlineScriptTagRequestBodyInlineScriptTag withDisplayScope(CreateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum displayScope) {
         this.displayScope = displayScope;
         return this;
@@ -31,6 +32,7 @@ public class CreateInlineScriptTagRequestBodyInlineScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public CreateInlineScriptTagRequestBodyInlineScriptTag withScript(String script) {
         this.script = script;
         return this;
@@ -45,9 +47,11 @@ public class CreateInlineScriptTagRequestBodyInlineScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger_event")
     public CreateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum triggerEvent;
+
     public CreateInlineScriptTagRequestBodyInlineScriptTag withTriggerEvent(CreateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum triggerEvent) {
         this.triggerEvent = triggerEvent;
         return this;
     }
     
+    public CreateInlineScriptTagRequestBodyInlineScriptTag(){}
 }

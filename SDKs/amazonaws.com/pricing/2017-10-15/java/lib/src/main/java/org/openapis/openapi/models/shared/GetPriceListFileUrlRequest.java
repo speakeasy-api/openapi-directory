@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPriceListFileUrlRequest {
     @JsonProperty("FileFormat")
     public String fileFormat;
+
     public GetPriceListFileUrlRequest withFileFormat(String fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -16,9 +17,14 @@ public class GetPriceListFileUrlRequest {
     
     @JsonProperty("PriceListArn")
     public String priceListArn;
+
     public GetPriceListFileUrlRequest withPriceListArn(String priceListArn) {
         this.priceListArn = priceListArn;
         return this;
     }
     
+    public GetPriceListFileUrlRequest(@JsonProperty("FileFormat") String fileFormat, @JsonProperty("PriceListArn") String priceListArn) {
+        this.fileFormat = fileFormat;
+        this.priceListArn = priceListArn;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeLiveStreamsUpdateRequest {
@@ -12,6 +13,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeLiveStreamsUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class YoutubeLiveStreamsUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LiveStream liveStream;
+
     public YoutubeLiveStreamsUpdateRequest withLiveStream(org.openapis.openapi.models.shared.LiveStream liveStream) {
         this.liveStream = liveStream;
         return this;
@@ -29,6 +32,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeLiveStreamsUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeLiveStreamsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeLiveStreamsUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeLiveStreamsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeLiveStreamsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeLiveStreamsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubeLiveStreamsUpdateRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -99,6 +109,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwnerChannel")
     public String onBehalfOfContentOwnerChannel;
+
     public YoutubeLiveStreamsUpdateRequest withOnBehalfOfContentOwnerChannel(String onBehalfOfContentOwnerChannel) {
         this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
         return this;
@@ -109,6 +120,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeLiveStreamsUpdateRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -119,6 +131,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeLiveStreamsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeLiveStreamsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeLiveStreamsUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class YoutubeLiveStreamsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeLiveStreamsUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeLiveStreamsUpdateRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

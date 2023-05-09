@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CaptureOption {
     @JsonProperty("CaptureMode")
     public CaptureModeEnum captureMode;
+
     public CaptureOption withCaptureMode(CaptureModeEnum captureMode) {
         this.captureMode = captureMode;
         return this;
     }
     
+    public CaptureOption(@JsonProperty("CaptureMode") CaptureModeEnum captureMode) {
+        this.captureMode = captureMode;
+  }
 }

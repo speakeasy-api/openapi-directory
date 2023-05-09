@@ -18,6 +18,7 @@ public class BrandedFoodObjectItemsPackagingPhotosFront {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     public String display;
+
     public BrandedFoodObjectItemsPackagingPhotosFront withDisplay(String display) {
         this.display = display;
         return this;
@@ -29,6 +30,7 @@ public class BrandedFoodObjectItemsPackagingPhotosFront {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("small")
     public String small;
+
     public BrandedFoodObjectItemsPackagingPhotosFront withSmall(String small) {
         this.small = small;
         return this;
@@ -40,9 +42,11 @@ public class BrandedFoodObjectItemsPackagingPhotosFront {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumb")
     public String thumb;
+
     public BrandedFoodObjectItemsPackagingPhotosFront withThumb(String thumb) {
         this.thumb = thumb;
         return this;
     }
     
+    public BrandedFoodObjectItemsPackagingPhotosFront(){}
 }

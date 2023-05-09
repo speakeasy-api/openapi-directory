@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetById8Request {
@@ -12,6 +13,7 @@ public class GetById8Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public String embed;
+
     public GetById8Request withEmbed(String embed) {
         this.embed = embed;
         return this;
@@ -22,9 +24,13 @@ public class GetById8Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public GetById8Request withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public GetById8Request(@JsonProperty("quoteId") String quoteId) {
+        this.quoteId = quoteId;
+  }
 }

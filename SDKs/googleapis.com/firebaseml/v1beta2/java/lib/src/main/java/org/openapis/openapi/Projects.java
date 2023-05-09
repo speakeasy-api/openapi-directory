@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteResponse() {{
+        org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadResponse() {{
+        org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadResponse(contentType, httpRes.statusCode()) {{
             downloadModelResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,11 +192,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasemlProjectsModelsListResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsListResponse() {{
+        org.openapis.openapi.models.operations.FirebasemlProjectsModelsListResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsListResponse(contentType, httpRes.statusCode()) {{
             listModelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchResponse() {{
+        org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +282,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

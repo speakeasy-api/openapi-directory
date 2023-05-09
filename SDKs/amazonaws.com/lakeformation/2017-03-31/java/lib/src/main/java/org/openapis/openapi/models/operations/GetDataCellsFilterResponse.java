@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataCellsFilterResponse {
@@ -12,6 +13,7 @@ public class GetDataCellsFilterResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDataCellsFilterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDataCellsFilterResponse {
     
     
     public String contentType;
+
     public GetDataCellsFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDataCellsFilterResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetDataCellsFilterResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetDataCellsFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataCellsFilterResponse getDataCellsFilterResponse;
+
     public GetDataCellsFilterResponse withGetDataCellsFilterResponse(org.openapis.openapi.models.shared.GetDataCellsFilterResponse getDataCellsFilterResponse) {
         this.getDataCellsFilterResponse = getDataCellsFilterResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetDataCellsFilterResponse {
      */
     
     public Object internalServiceException;
+
     public GetDataCellsFilterResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetDataCellsFilterResponse {
      */
     
     public Object invalidInputException;
+
     public GetDataCellsFilterResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetDataCellsFilterResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetDataCellsFilterResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetDataCellsFilterResponse {
     
     
     public Integer statusCode;
+
     public GetDataCellsFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetDataCellsFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataCellsFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDataCellsFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

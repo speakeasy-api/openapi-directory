@@ -4,23 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyDBClusterActionEnum action;
+
     public GETModifyDBClusterRequest withAction(GETModifyDBClusterActionEnum action) {
         this.action = action;
         return this;
     }
     
     /**
-     * &lt;p&gt;The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.&lt;/p&gt; &lt;p&gt;Type: Integer&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     * &lt;p&gt;The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocatedStorage")
     public Long allocatedStorage;
+
     public GETModifyDBClusterRequest withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether engine mode changes from &lt;code&gt;serverless&lt;/code&gt; to &lt;code&gt;provisioned&lt;/code&gt; are allowed.&lt;/p&gt; &lt;p&gt;Constraints: You must allow engine mode changes when specifying a different value for the &lt;code&gt;EngineMode&lt;/code&gt; parameter from the DB cluster's current engine mode.&lt;/p&gt; &lt;p&gt;Valid for: Aurora Serverless v1 DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowEngineModeChange")
+    public Boolean allowEngineModeChange;
+
+    public GETModifyDBClusterRequest withAllowEngineModeChange(Boolean allowEngineModeChange) {
+        this.allowEngineModeChange = allowEngineModeChange;
         return this;
     }
     
@@ -29,16 +43,18 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMajorVersionUpgrade")
     public Boolean allowMajorVersionUpgrade;
+
     public GETModifyDBClusterRequest withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         return this;
     }
     
     /**
-     * &lt;p&gt;A value that indicates whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the &lt;code&gt;PreferredMaintenanceWindow&lt;/code&gt; setting for the DB cluster. If this parameter is disabled, changes to the DB cluster are applied during the next maintenance window.&lt;/p&gt; &lt;p&gt;The &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter only affects the &lt;code&gt;EnableIAMDatabaseAuthentication&lt;/code&gt;, &lt;code&gt;MasterUserPassword&lt;/code&gt;, and &lt;code&gt;NewDBClusterIdentifier&lt;/code&gt; values. If the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter is disabled, then changes to the &lt;code&gt;EnableIAMDatabaseAuthentication&lt;/code&gt;, &lt;code&gt;MasterUserPassword&lt;/code&gt;, and &lt;code&gt;NewDBClusterIdentifier&lt;/code&gt; values are applied during the next maintenance window. All other changes are applied immediately, regardless of the value of the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt;By default, this parameter is disabled.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     * &lt;p&gt;A value that indicates whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the &lt;code&gt;PreferredMaintenanceWindow&lt;/code&gt; setting for the DB cluster. If this parameter is disabled, changes to the DB cluster are applied during the next maintenance window.&lt;/p&gt; &lt;p&gt;Most modifications can be applied immediately or during the next scheduled maintenance window. Some modifications, such as turning on deletion protection and changing the master password, are applied immediately\u2014regardless of when you choose to apply them.&lt;/p&gt; &lt;p&gt;By default, this parameter is disabled.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
     public Boolean applyImmediately;
+
     public GETModifyDBClusterRequest withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -49,6 +65,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoMinorVersionUpgrade")
     public Boolean autoMinorVersionUpgrade;
+
     public GETModifyDBClusterRequest withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -59,6 +76,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BacktrackWindow")
     public Long backtrackWindow;
+
     public GETModifyDBClusterRequest withBacktrackWindow(Long backtrackWindow) {
         this.backtrackWindow = backtrackWindow;
         return this;
@@ -69,6 +87,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BackupRetentionPeriod")
     public Long backupRetentionPeriod;
+
     public GETModifyDBClusterRequest withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -79,6 +98,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CloudwatchLogsExportConfiguration")
     public GETModifyDBClusterCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration;
+
     public GETModifyDBClusterRequest withCloudwatchLogsExportConfiguration(GETModifyDBClusterCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration) {
         this.cloudwatchLogsExportConfiguration = cloudwatchLogsExportConfiguration;
         return this;
@@ -89,6 +109,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CopyTagsToSnapshot")
     public Boolean copyTagsToSnapshot;
+
     public GETModifyDBClusterRequest withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -99,6 +120,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
     public String dbClusterIdentifier;
+
     public GETModifyDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -109,6 +131,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterInstanceClass")
     public String dbClusterInstanceClass;
+
     public GETModifyDBClusterRequest withDBClusterInstanceClass(String dbClusterInstanceClass) {
         this.dbClusterInstanceClass = dbClusterInstanceClass;
         return this;
@@ -119,6 +142,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterParameterGroupName")
     public String dbClusterParameterGroupName;
+
     public GETModifyDBClusterRequest withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -129,6 +153,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceParameterGroupName")
     public String dbInstanceParameterGroupName;
+
     public GETModifyDBClusterRequest withDBInstanceParameterGroupName(String dbInstanceParameterGroupName) {
         this.dbInstanceParameterGroupName = dbInstanceParameterGroupName;
         return this;
@@ -139,6 +164,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionProtection")
     public Boolean deletionProtection;
+
     public GETModifyDBClusterRequest withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -149,6 +175,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Domain")
     public String domain;
+
     public GETModifyDBClusterRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -159,6 +186,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainIAMRoleName")
     public String domainIAMRoleName;
+
     public GETModifyDBClusterRequest withDomainIAMRoleName(String domainIAMRoleName) {
         this.domainIAMRoleName = domainIAMRoleName;
         return this;
@@ -169,6 +197,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableGlobalWriteForwarding")
     public Boolean enableGlobalWriteForwarding;
+
     public GETModifyDBClusterRequest withEnableGlobalWriteForwarding(Boolean enableGlobalWriteForwarding) {
         this.enableGlobalWriteForwarding = enableGlobalWriteForwarding;
         return this;
@@ -179,6 +208,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableHttpEndpoint")
     public Boolean enableHttpEndpoint;
+
     public GETModifyDBClusterRequest withEnableHttpEndpoint(Boolean enableHttpEndpoint) {
         this.enableHttpEndpoint = enableHttpEndpoint;
         return this;
@@ -189,6 +219,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableIAMDatabaseAuthentication")
     public Boolean enableIAMDatabaseAuthentication;
+
     public GETModifyDBClusterRequest withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -199,16 +230,29 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnablePerformanceInsights")
     public Boolean enablePerformanceInsights;
+
     public GETModifyDBClusterRequest withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
     }
     
     /**
-     * &lt;p&gt;The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless &lt;code&gt;ApplyImmediately&lt;/code&gt; is enabled. &lt;/p&gt; &lt;p&gt;If the cluster that you're modifying has one or more read replicas, all replicas must be running an engine version that's the same or later than the version you specify.&lt;/p&gt; &lt;p&gt;To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL 8.0-compatible), use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for Aurora PostgreSQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for RDS for MySQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine mysql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for RDS for PostgreSQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine postgres --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     * &lt;p&gt;The DB engine mode of the DB cluster, either &lt;code&gt;provisioned&lt;/code&gt; or &lt;code&gt;serverless&lt;/code&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The DB engine mode can be modified only from &lt;code&gt;serverless&lt;/code&gt; to &lt;code&gt;provisioned&lt;/code&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html"&gt; CreateDBCluster&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineMode")
+    public String engineMode;
+
+    public GETModifyDBClusterRequest withEngineMode(String engineMode) {
+        this.engineMode = engineMode;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless &lt;code&gt;ApplyImmediately&lt;/code&gt; is enabled.&lt;/p&gt; &lt;p&gt;If the cluster that you're modifying has one or more read replicas, all replicas must be running an engine version that's the same or later than the version you specify.&lt;/p&gt; &lt;p&gt;To list all of the available engine versions for Aurora MySQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for Aurora PostgreSQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for RDS for MySQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine mysql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for RDS for PostgreSQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine postgres --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
     public String engineVersion;
+
     public GETModifyDBClusterRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -219,6 +263,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iops")
     public Long iops;
+
     public GETModifyDBClusterRequest withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -229,6 +274,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManageMasterUserPassword")
     public Boolean manageMasterUserPassword;
+
     public GETModifyDBClusterRequest withManageMasterUserPassword(Boolean manageMasterUserPassword) {
         this.manageMasterUserPassword = manageMasterUserPassword;
         return this;
@@ -239,6 +285,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserPassword")
     public String masterUserPassword;
+
     public GETModifyDBClusterRequest withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -249,6 +296,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserSecretKmsKeyId")
     public String masterUserSecretKmsKeyId;
+
     public GETModifyDBClusterRequest withMasterUserSecretKmsKeyId(String masterUserSecretKmsKeyId) {
         this.masterUserSecretKmsKeyId = masterUserSecretKmsKeyId;
         return this;
@@ -259,6 +307,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MonitoringInterval")
     public Long monitoringInterval;
+
     public GETModifyDBClusterRequest withMonitoringInterval(Long monitoringInterval) {
         this.monitoringInterval = monitoringInterval;
         return this;
@@ -269,6 +318,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MonitoringRoleArn")
     public String monitoringRoleArn;
+
     public GETModifyDBClusterRequest withMonitoringRoleArn(String monitoringRoleArn) {
         this.monitoringRoleArn = monitoringRoleArn;
         return this;
@@ -279,6 +329,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkType")
     public String networkType;
+
     public GETModifyDBClusterRequest withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -289,6 +340,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewDBClusterIdentifier")
     public String newDBClusterIdentifier;
+
     public GETModifyDBClusterRequest withNewDBClusterIdentifier(String newDBClusterIdentifier) {
         this.newDBClusterIdentifier = newDBClusterIdentifier;
         return this;
@@ -299,6 +351,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptionGroupName")
     public String optionGroupName;
+
     public GETModifyDBClusterRequest withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -309,6 +362,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PerformanceInsightsKMSKeyId")
     public String performanceInsightsKMSKeyId;
+
     public GETModifyDBClusterRequest withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -319,6 +373,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PerformanceInsightsRetentionPeriod")
     public Long performanceInsightsRetentionPeriod;
+
     public GETModifyDBClusterRequest withPerformanceInsightsRetentionPeriod(Long performanceInsightsRetentionPeriod) {
         this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
         return this;
@@ -329,6 +384,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
     public Long port;
+
     public GETModifyDBClusterRequest withPort(Long port) {
         this.port = port;
         return this;
@@ -339,6 +395,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredBackupWindow")
     public String preferredBackupWindow;
+
     public GETModifyDBClusterRequest withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -349,6 +406,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public GETModifyDBClusterRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -359,6 +417,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RotateMasterUserPassword")
     public Boolean rotateMasterUserPassword;
+
     public GETModifyDBClusterRequest withRotateMasterUserPassword(Boolean rotateMasterUserPassword) {
         this.rotateMasterUserPassword = rotateMasterUserPassword;
         return this;
@@ -369,6 +428,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScalingConfiguration")
     public GETModifyDBClusterScalingConfiguration scalingConfiguration;
+
     public GETModifyDBClusterRequest withScalingConfiguration(GETModifyDBClusterScalingConfiguration scalingConfiguration) {
         this.scalingConfiguration = scalingConfiguration;
         return this;
@@ -379,6 +439,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServerlessV2ScalingConfiguration")
     public GETModifyDBClusterServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+
     public GETModifyDBClusterRequest withServerlessV2ScalingConfiguration(GETModifyDBClusterServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
         this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
         return this;
@@ -389,6 +450,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StorageType")
     public String storageType;
+
     public GETModifyDBClusterRequest withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -396,6 +458,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyDBClusterVersionEnum version;
+
     public GETModifyDBClusterRequest withVersion(GETModifyDBClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -406,6 +469,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public GETModifyDBClusterRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -413,6 +477,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -420,6 +485,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -427,6 +493,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyDBClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -434,6 +501,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyDBClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -441,6 +509,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -448,6 +517,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyDBClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -455,9 +525,15 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyDBClusterRequest(@JsonProperty("Action") GETModifyDBClusterActionEnum action, @JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("Version") GETModifyDBClusterVersionEnum version) {
+        this.action = action;
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.version = version;
+  }
 }

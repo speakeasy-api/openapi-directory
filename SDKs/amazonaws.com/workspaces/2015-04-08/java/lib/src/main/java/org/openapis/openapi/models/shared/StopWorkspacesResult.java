@@ -15,9 +15,11 @@ public class StopWorkspacesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedRequests")
     public FailedWorkspaceChangeRequest[] failedRequests;
+
     public StopWorkspacesResult withFailedRequests(FailedWorkspaceChangeRequest[] failedRequests) {
         this.failedRequests = failedRequests;
         return this;
     }
     
+    public StopWorkspacesResult(){}
 }

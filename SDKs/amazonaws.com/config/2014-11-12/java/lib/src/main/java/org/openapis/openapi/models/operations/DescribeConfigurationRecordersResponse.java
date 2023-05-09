@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConfigurationRecordersResponse {
     
     public String contentType;
+
     public DescribeConfigurationRecordersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConfigurationRecordersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConfigurationRecordersResponse describeConfigurationRecordersResponse;
+
     public DescribeConfigurationRecordersResponse withDescribeConfigurationRecordersResponse(org.openapis.openapi.models.shared.DescribeConfigurationRecordersResponse describeConfigurationRecordersResponse) {
         this.describeConfigurationRecordersResponse = describeConfigurationRecordersResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConfigurationRecordersResponse {
      */
     
     public Object noSuchConfigurationRecorderException;
+
     public DescribeConfigurationRecordersResponse withNoSuchConfigurationRecorderException(Object noSuchConfigurationRecorderException) {
         this.noSuchConfigurationRecorderException = noSuchConfigurationRecorderException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeConfigurationRecordersResponse {
     
     
     public Integer statusCode;
+
     public DescribeConfigurationRecordersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeConfigurationRecordersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConfigurationRecordersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConfigurationRecordersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

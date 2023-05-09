@@ -55,11 +55,9 @@ public class ActionNotificationExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetActionNotificationExportsIdResponse res = new org.openapis.openapi.models.operations.GetActionNotificationExportsIdResponse() {{
+        org.openapis.openapi.models.operations.GetActionNotificationExportsIdResponse res = new org.openapis.openapi.models.operations.GetActionNotificationExportsIdResponse(contentType, httpRes.statusCode()) {{
             actionNotificationExportEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class ActionNotificationExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostActionNotificationExportsResponse res = new org.openapis.openapi.models.operations.PostActionNotificationExportsResponse() {{
+        org.openapis.openapi.models.operations.PostActionNotificationExportsResponse res = new org.openapis.openapi.models.operations.PostActionNotificationExportsResponse(contentType, httpRes.statusCode()) {{
             actionNotificationExportEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

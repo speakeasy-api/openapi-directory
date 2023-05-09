@@ -65,4 +65,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/BankPriorityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Bank.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/CounterpartyInfo.java
+docs/sdk/README.md
+docs/transactions/README.md
+docs/transfers/README.md
 USAGE.md

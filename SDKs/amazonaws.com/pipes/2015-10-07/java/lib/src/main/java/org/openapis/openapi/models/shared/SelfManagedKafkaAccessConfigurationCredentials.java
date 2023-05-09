@@ -15,6 +15,7 @@ public class SelfManagedKafkaAccessConfigurationCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BasicAuth")
     public String basicAuth;
+
     public SelfManagedKafkaAccessConfigurationCredentials withBasicAuth(String basicAuth) {
         this.basicAuth = basicAuth;
         return this;
@@ -23,6 +24,7 @@ public class SelfManagedKafkaAccessConfigurationCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCertificateTlsAuth")
     public String clientCertificateTlsAuth;
+
     public SelfManagedKafkaAccessConfigurationCredentials withClientCertificateTlsAuth(String clientCertificateTlsAuth) {
         this.clientCertificateTlsAuth = clientCertificateTlsAuth;
         return this;
@@ -31,6 +33,7 @@ public class SelfManagedKafkaAccessConfigurationCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SaslScram256Auth")
     public String saslScram256Auth;
+
     public SelfManagedKafkaAccessConfigurationCredentials withSaslScram256Auth(String saslScram256Auth) {
         this.saslScram256Auth = saslScram256Auth;
         return this;
@@ -39,9 +42,11 @@ public class SelfManagedKafkaAccessConfigurationCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SaslScram512Auth")
     public String saslScram512Auth;
+
     public SelfManagedKafkaAccessConfigurationCredentials withSaslScram512Auth(String saslScram512Auth) {
         this.saslScram512Auth = saslScram512Auth;
         return this;
     }
     
+    public SelfManagedKafkaAccessConfigurationCredentials(){}
 }

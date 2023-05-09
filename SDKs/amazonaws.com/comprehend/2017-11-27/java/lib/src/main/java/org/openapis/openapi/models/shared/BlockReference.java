@@ -15,6 +15,7 @@ public class BlockReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public BlockReference withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class BlockReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockId")
     public String blockId;
+
     public BlockReference withBlockId(String blockId) {
         this.blockId = blockId;
         return this;
@@ -31,6 +33,7 @@ public class BlockReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChildBlocks")
     public ChildBlock[] childBlocks;
+
     public BlockReference withChildBlocks(ChildBlock[] childBlocks) {
         this.childBlocks = childBlocks;
         return this;
@@ -39,9 +42,11 @@ public class BlockReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public BlockReference withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
     }
     
+    public BlockReference(){}
 }

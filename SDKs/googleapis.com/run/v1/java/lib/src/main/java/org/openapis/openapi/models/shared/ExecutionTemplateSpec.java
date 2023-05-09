@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ExecutionTemplateSpec - ExecutionTemplateSpec describes the metadata and spec an Execution should have when created from a job. Based on: https://github.com/kubernetes/api/blob/e771f807/core/v1/types.go#L3179-L3190
+ * ExecutionTemplateSpec - ExecutionTemplateSpec describes the metadata and spec an Execution should have when created from a job.
  */
 public class ExecutionTemplateSpec {
     /**
@@ -18,6 +18,7 @@ public class ExecutionTemplateSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ObjectMeta metadata;
+
     public ExecutionTemplateSpec withMetadata(ObjectMeta metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class ExecutionTemplateSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public ExecutionSpec spec;
+
     public ExecutionTemplateSpec withSpec(ExecutionSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public ExecutionTemplateSpec(){}
 }

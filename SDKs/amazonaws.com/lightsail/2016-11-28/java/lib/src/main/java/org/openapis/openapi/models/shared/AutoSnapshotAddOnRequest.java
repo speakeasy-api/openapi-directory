@@ -15,9 +15,11 @@ public class AutoSnapshotAddOnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotTimeOfDay")
     public String snapshotTimeOfDay;
+
     public AutoSnapshotAddOnRequest withSnapshotTimeOfDay(String snapshotTimeOfDay) {
         this.snapshotTimeOfDay = snapshotTimeOfDay;
         return this;
     }
     
+    public AutoSnapshotAddOnRequest(){}
 }

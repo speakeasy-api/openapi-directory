@@ -18,17 +18,19 @@ public class GcsDestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avroFileFormat")
     public java.util.Map<String, Object> avroFileFormat;
+
     public GcsDestinationConfig withAvroFileFormat(java.util.Map<String, Object> avroFileFormat) {
         this.avroFileFormat = avroFileFormat;
         return this;
     }
     
     /**
-     * The maximum duration for which new events are added before a file is closed and a new file is created.
+     * The maximum duration for which new events are added before a file is closed and a new file is created. Values within the range of 15-60 seconds are allowed.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileRotationInterval")
     public String fileRotationInterval;
+
     public GcsDestinationConfig withFileRotationInterval(String fileRotationInterval) {
         this.fileRotationInterval = fileRotationInterval;
         return this;
@@ -40,6 +42,7 @@ public class GcsDestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileRotationMb")
     public Integer fileRotationMb;
+
     public GcsDestinationConfig withFileRotationMb(Integer fileRotationMb) {
         this.fileRotationMb = fileRotationMb;
         return this;
@@ -51,6 +54,7 @@ public class GcsDestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonFileFormat")
     public JsonFileFormat jsonFileFormat;
+
     public GcsDestinationConfig withJsonFileFormat(JsonFileFormat jsonFileFormat) {
         this.jsonFileFormat = jsonFileFormat;
         return this;
@@ -62,9 +66,11 @@ public class GcsDestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GcsDestinationConfig withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public GcsDestinationConfig(){}
 }

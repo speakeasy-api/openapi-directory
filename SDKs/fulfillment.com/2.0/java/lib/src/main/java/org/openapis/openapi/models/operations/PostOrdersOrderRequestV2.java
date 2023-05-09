@@ -18,6 +18,7 @@ public class PostOrdersOrderRequestV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrator")
     public PostOrdersOrderRequestV2IntegratorEnum integrator;
+
     public PostOrdersOrderRequestV2 withIntegrator(PostOrdersOrderRequestV2IntegratorEnum integrator) {
         this.integrator = integrator;
         return this;
@@ -25,6 +26,7 @@ public class PostOrdersOrderRequestV2 {
     
     @JsonProperty("items")
     public PostOrdersOrderRequestV2Items[] items;
+
     public PostOrdersOrderRequestV2 withItems(PostOrdersOrderRequestV2Items[] items) {
         this.items = items;
         return this;
@@ -36,6 +38,7 @@ public class PostOrdersOrderRequestV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public Long merchantId;
+
     public PostOrdersOrderRequestV2 withMerchantId(Long merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -46,6 +49,7 @@ public class PostOrdersOrderRequestV2 {
      */
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public PostOrdersOrderRequestV2 withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -54,6 +58,7 @@ public class PostOrdersOrderRequestV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public PostOrdersOrderRequestV2 withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -61,6 +66,7 @@ public class PostOrdersOrderRequestV2 {
     
     @JsonProperty("recipient")
     public PostOrdersOrderRequestV2ConsigneeNewV2 recipient;
+
     public PostOrdersOrderRequestV2 withRecipient(PostOrdersOrderRequestV2ConsigneeNewV2 recipient) {
         this.recipient = recipient;
         return this;
@@ -71,6 +77,7 @@ public class PostOrdersOrderRequestV2 {
      */
     @JsonProperty("shippingMethod")
     public String shippingMethod;
+
     public PostOrdersOrderRequestV2 withShippingMethod(String shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
@@ -82,9 +89,16 @@ public class PostOrdersOrderRequestV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouse")
     public PostOrdersOrderRequestV2Warehouse warehouse;
+
     public PostOrdersOrderRequestV2 withWarehouse(PostOrdersOrderRequestV2Warehouse warehouse) {
         this.warehouse = warehouse;
         return this;
     }
     
+    public PostOrdersOrderRequestV2(@JsonProperty("items") PostOrdersOrderRequestV2Items[] items, @JsonProperty("merchantOrderId") String merchantOrderId, @JsonProperty("recipient") PostOrdersOrderRequestV2ConsigneeNewV2 recipient, @JsonProperty("shippingMethod") String shippingMethod) {
+        this.items = items;
+        this.merchantOrderId = merchantOrderId;
+        this.recipient = recipient;
+        this.shippingMethod = shippingMethod;
+  }
 }

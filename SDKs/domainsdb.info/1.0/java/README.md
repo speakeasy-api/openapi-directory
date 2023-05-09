@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadRequest;
 import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadResponse;
 
@@ -26,11 +25,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetDomainsTldZoneIdDownloadRequest req = new GetDomainsTldZoneIdDownloadRequest() {{
-                apiKey = "corrupti";
-                date = "provident";
-                zoneId = "distinctio";
-            }}            
+            GetDomainsTldZoneIdDownloadRequest req = new GetDomainsTldZoneIdDownloadRequest("corrupti") {{
+                apiKey = "provident";
+                date = "distinctio";
+            }};            
 
             GetDomainsTldZoneIdDownloadResponse res = sdk.domains.getDomainsTldZoneIdDownload(req);
 
@@ -40,6 +38,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,25 +47,25 @@ public class Application {
 ## Available Resources and Operations
 
 
-### domains
+### [domains](docs/domains/README.md)
 
-* `getDomainsTldZoneIdDownload` - Download Whole Dataset for TLD
-* `getDomainsTldZoneIdSearch` - Domains Search for TLD
-* `getDomainsUpdatesAdded` - Get added domains, latest if date not specified
-* `getDomainsUpdatesAddedDownload` - Download added domains, latest if date not specified
-* `getDomainsUpdatesDeleted` - Get deleted domains, latest if date not specified
-* `getDomainsUpdatesDeletedDownload` - Download deleted domains, latest if date not specified
-* `getDomainsUpdatesList` - List of updates
-* `getSearchDomainItem` - Domains Database Search
-* `getTldDomainItem` - Get TLD records
+* [getDomainsTldZoneIdDownload](docs/domains/README.md#getdomainstldzoneiddownload) - Download Whole Dataset for TLD
+* [getDomainsTldZoneIdSearch](docs/domains/README.md#getdomainstldzoneidsearch) - Domains Search for TLD
+* [getDomainsUpdatesAdded](docs/domains/README.md#getdomainsupdatesadded) - Get added domains, latest if date not specified
+* [getDomainsUpdatesAddedDownload](docs/domains/README.md#getdomainsupdatesaddeddownload) - Download added domains, latest if date not specified
+* [getDomainsUpdatesDeleted](docs/domains/README.md#getdomainsupdatesdeleted) - Get deleted domains, latest if date not specified
+* [getDomainsUpdatesDeletedDownload](docs/domains/README.md#getdomainsupdatesdeleteddownload) - Download deleted domains, latest if date not specified
+* [getDomainsUpdatesList](docs/domains/README.md#getdomainsupdateslist) - List of updates
+* [getSearchDomainItem](docs/domains/README.md#getsearchdomainitem) - Domains Database Search
+* [getTldDomainItem](docs/domains/README.md#gettlddomainitem) - Get TLD records
 
-### info
+### [info](docs/info/README.md)
 
-* `getInfoTld` - Returns overall Tld info
-* `getInfoTldZone` - Returns statistics for specific zone
-* `getApiInfoItem`
-* `getStatisticsCollection` - Returns overall stagtistics
-* `getStatisticsItem` - Returns statistics for specific zone
+* [getInfoTld](docs/info/README.md#getinfotld) - Returns overall Tld info
+* [getInfoTldZone](docs/info/README.md#getinfotldzone) - Returns statistics for specific zone
+* [getApiInfoItem](docs/info/README.md#getapiinfoitem)
+* [getStatisticsCollection](docs/info/README.md#getstatisticscollection) - Returns overall stagtistics
+* [getStatisticsItem](docs/info/README.md#getstatisticsitem) - Returns statistics for specific zone
 <!-- End SDK Available Operations -->
 
 ### Maturity

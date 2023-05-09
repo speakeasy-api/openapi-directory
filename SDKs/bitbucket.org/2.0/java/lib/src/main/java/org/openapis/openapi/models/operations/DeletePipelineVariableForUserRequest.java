@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePipelineVariableForUserRequest {
@@ -12,6 +13,7 @@ public class DeletePipelineVariableForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
     public String selectedUser;
+
     public DeletePipelineVariableForUserRequest withSelectedUser(String selectedUser) {
         this.selectedUser = selectedUser;
         return this;
@@ -22,9 +24,14 @@ public class DeletePipelineVariableForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
     public String variableUuid;
+
     public DeletePipelineVariableForUserRequest withVariableUuid(String variableUuid) {
         this.variableUuid = variableUuid;
         return this;
     }
     
+    public DeletePipelineVariableForUserRequest(@JsonProperty("selected_user") String selectedUser, @JsonProperty("variable_uuid") String variableUuid) {
+        this.selectedUser = selectedUser;
+        this.variableUuid = variableUuid;
+  }
 }

@@ -15,9 +15,13 @@ public class GenerateClientKeyResponse {
      */
     @JsonProperty("clientKey")
     public String clientKey;
+
     public GenerateClientKeyResponse withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
     }
     
+    public GenerateClientKeyResponse(@JsonProperty("clientKey") String clientKey) {
+        this.clientKey = clientKey;
+  }
 }

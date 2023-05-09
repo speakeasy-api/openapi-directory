@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteVpcEndpointConnectionNotificationsRequest {
     
     public String[] connectionNotificationIds;
+
     public DeleteVpcEndpointConnectionNotificationsRequest withConnectionNotificationIds(String[] connectionNotificationIds) {
         this.connectionNotificationIds = connectionNotificationIds;
         return this;
@@ -16,9 +17,13 @@ public class DeleteVpcEndpointConnectionNotificationsRequest {
     
     
     public Boolean dryRun;
+
     public DeleteVpcEndpointConnectionNotificationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DeleteVpcEndpointConnectionNotificationsRequest(@JsonProperty("ConnectionNotificationIds") String[] connectionNotificationIds) {
+        this.connectionNotificationIds = connectionNotificationIds;
+  }
 }

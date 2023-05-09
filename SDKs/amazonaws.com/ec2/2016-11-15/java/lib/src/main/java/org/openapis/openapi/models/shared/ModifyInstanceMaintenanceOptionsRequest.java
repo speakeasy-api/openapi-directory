@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyInstanceMaintenanceOptionsRequest {
     
     public InstanceAutoRecoveryStateEnum autoRecovery;
+
     public ModifyInstanceMaintenanceOptionsRequest withAutoRecovery(InstanceAutoRecoveryStateEnum autoRecovery) {
         this.autoRecovery = autoRecovery;
         return this;
@@ -16,6 +17,7 @@ public class ModifyInstanceMaintenanceOptionsRequest {
     
     
     public Boolean dryRun;
+
     public ModifyInstanceMaintenanceOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class ModifyInstanceMaintenanceOptionsRequest {
     
     
     public String instanceId;
+
     public ModifyInstanceMaintenanceOptionsRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public ModifyInstanceMaintenanceOptionsRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

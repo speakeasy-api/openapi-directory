@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * EojDataSourceConfigInput - &lt;p/&gt;
+ * EojDataSourceConfigInput - Union representing different data sources to be used as input for an Earth Observation job.
  */
 public class EojDataSourceConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Data")
     public S3DataInput s3Data;
+
     public EojDataSourceConfigInput withS3Data(S3DataInput s3Data) {
         this.s3Data = s3Data;
         return this;
     }
     
+    public EojDataSourceConfigInput(){}
 }

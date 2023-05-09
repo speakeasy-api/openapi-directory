@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBReadStandingOrder6 {
     @JsonProperty("Data")
     public OBReadDataStandingOrder5 data;
+
     public OBReadStandingOrder6 withData(OBReadDataStandingOrder5 data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBReadStandingOrder6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBReadStandingOrder6 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,9 +38,13 @@ public class OBReadStandingOrder6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBReadStandingOrder6 withMeta(Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public OBReadStandingOrder6(@JsonProperty("Data") OBReadDataStandingOrder5 data) {
+        this.data = data;
+  }
 }

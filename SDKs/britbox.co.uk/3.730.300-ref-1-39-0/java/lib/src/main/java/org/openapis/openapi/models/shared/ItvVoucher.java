@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ItvVoucher {
     @JsonProperty("display")
     public java.util.Map<String, Object> display;
+
     public ItvVoucher withDisplay(java.util.Map<String, Object> display) {
         this.display = display;
         return this;
@@ -22,6 +23,7 @@ public class ItvVoucher {
      */
     @JsonProperty("id")
     public String id;
+
     public ItvVoucher withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class ItvVoucher {
     
     @JsonProperty("links")
     public java.util.Map<String, Object> links;
+
     public ItvVoucher withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
@@ -39,9 +42,16 @@ public class ItvVoucher {
      */
     @JsonProperty("offerType")
     public ItvVoucherOfferTypeEnum offerType;
+
     public ItvVoucher withOfferType(ItvVoucherOfferTypeEnum offerType) {
         this.offerType = offerType;
         return this;
     }
     
+    public ItvVoucher(@JsonProperty("display") java.util.Map<String, Object> display, @JsonProperty("id") String id, @JsonProperty("links") java.util.Map<String, Object> links, @JsonProperty("offerType") ItvVoucherOfferTypeEnum offerType) {
+        this.display = display;
+        this.id = id;
+        this.links = links;
+        this.offerType = offerType;
+  }
 }

@@ -12,6 +12,7 @@ public class SurveyQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
     public SimpleModel[] answers;
+
     public SurveyQuestion withAnswers(SimpleModel[] answers) {
         this.answers = answers;
         return this;
@@ -20,6 +21,7 @@ public class SurveyQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public SurveyQuestionQuestion question;
+
     public SurveyQuestion withQuestion(SurveyQuestionQuestion question) {
         this.question = question;
         return this;
@@ -28,9 +30,11 @@ public class SurveyQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question_answers")
     public SimpleModel[] questionAnswers;
+
     public SurveyQuestion withQuestionAnswers(SimpleModel[] questionAnswers) {
         this.questionAnswers = questionAnswers;
         return this;
     }
     
+    public SurveyQuestion(){}
 }

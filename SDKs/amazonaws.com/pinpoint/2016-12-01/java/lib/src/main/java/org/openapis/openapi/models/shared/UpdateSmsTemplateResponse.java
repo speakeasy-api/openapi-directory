@@ -15,9 +15,13 @@ public class UpdateSmsTemplateResponse {
      */
     @JsonProperty("MessageBody")
     public MessageBody messageBody;
+
     public UpdateSmsTemplateResponse withMessageBody(MessageBody messageBody) {
         this.messageBody = messageBody;
         return this;
     }
     
+    public UpdateSmsTemplateResponse(@JsonProperty("MessageBody") MessageBody messageBody) {
+        this.messageBody = messageBody;
+  }
 }

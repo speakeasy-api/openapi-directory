@@ -15,6 +15,7 @@ public class Podoc502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Podoc502ApplicationJSONErrorEnum error;
+
     public Podoc502ApplicationJSON withError(Podoc502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Podoc502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Podoc502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Podoc502ApplicationJSON withErrorDescription(Podoc502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Podoc502ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class ColumnSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataStats")
     public DataStats dataStats;
+
     public ColumnSpec withDataStats(DataStats dataStats) {
         this.dataStats = dataStats;
         return this;
@@ -29,6 +30,7 @@ public class ColumnSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public DataType dataType;
+
     public ColumnSpec withDataType(DataType dataType) {
         this.dataType = dataType;
         return this;
@@ -40,6 +42,7 @@ public class ColumnSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ColumnSpec withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class ColumnSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ColumnSpec withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class ColumnSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ColumnSpec withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class ColumnSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topCorrelatedColumns")
     public CorrelatedColumn[] topCorrelatedColumns;
+
     public ColumnSpec withTopCorrelatedColumns(CorrelatedColumn[] topCorrelatedColumns) {
         this.topCorrelatedColumns = topCorrelatedColumns;
         return this;
     }
     
+    public ColumnSpec(){}
 }

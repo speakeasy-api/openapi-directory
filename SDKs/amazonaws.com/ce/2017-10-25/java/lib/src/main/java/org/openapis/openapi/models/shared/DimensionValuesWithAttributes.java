@@ -15,6 +15,7 @@ public class DimensionValuesWithAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public DimensionValuesWithAttributes withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class DimensionValuesWithAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public DimensionValuesWithAttributes withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DimensionValuesWithAttributes(){}
 }

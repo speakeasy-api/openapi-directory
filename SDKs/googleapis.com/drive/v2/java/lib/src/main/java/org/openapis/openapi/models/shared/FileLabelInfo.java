@@ -18,9 +18,11 @@ public class FileLabelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public Label[] labels;
+
     public FileLabelInfo withLabels(Label[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public FileLabelInfo(){}
 }

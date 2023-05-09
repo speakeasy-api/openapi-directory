@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdminUserGlobalSignOutRequest {
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminUserGlobalSignOutRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -19,9 +20,14 @@ public class AdminUserGlobalSignOutRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminUserGlobalSignOutRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminUserGlobalSignOutRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

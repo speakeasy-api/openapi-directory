@@ -57,11 +57,9 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelreservationResponse res = new org.openapis.openapi.models.operations.CancelreservationResponse() {{
+        org.openapis.openapi.models.operations.CancelreservationResponse res = new org.openapis.openapi.models.operations.CancelreservationResponse(contentType, httpRes.statusCode()) {{
             cancelreservation201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -104,10 +102,8 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommandsResponse res = new org.openapis.openapi.models.operations.GetCommandsResponse() {{
+        org.openapis.openapi.models.operations.GetCommandsResponse res = new org.openapis.openapi.models.operations.GetCommandsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -137,10 +133,8 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariablesResponse res = new org.openapis.openapi.models.operations.GetVariablesResponse() {{
+        org.openapis.openapi.models.operations.GetVariablesResponse res = new org.openapis.openapi.models.operations.GetVariablesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,11 +169,9 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchChargeStationVariableResponse res = new org.openapis.openapi.models.operations.PatchChargeStationVariableResponse() {{
+        org.openapis.openapi.models.operations.PatchChargeStationVariableResponse res = new org.openapis.openapi.models.operations.PatchChargeStationVariableResponse(contentType, httpRes.statusCode()) {{
             patchChargeStationVariable201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -221,11 +213,9 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotestartResponse res = new org.openapis.openapi.models.operations.RemotestartResponse() {{
+        org.openapis.openapi.models.operations.RemotestartResponse res = new org.openapis.openapi.models.operations.RemotestartResponse(contentType, httpRes.statusCode()) {{
             remotestart201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -267,10 +257,8 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotestopResponse res = new org.openapis.openapi.models.operations.RemotestopResponse() {{
+        org.openapis.openapi.models.operations.RemotestopResponse res = new org.openapis.openapi.models.operations.RemotestopResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400) {
@@ -305,11 +293,9 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReserveResponse res = new org.openapis.openapi.models.operations.ReserveResponse() {{
+        org.openapis.openapi.models.operations.ReserveResponse res = new org.openapis.openapi.models.operations.ReserveResponse(contentType, httpRes.statusCode()) {{
             reserve201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -351,11 +337,9 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetResponse res = new org.openapis.openapi.models.operations.ResetResponse() {{
+        org.openapis.openapi.models.operations.ResetResponse res = new org.openapis.openapi.models.operations.ResetResponse(contentType, httpRes.statusCode()) {{
             reset201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -397,11 +381,9 @@ public class Commands {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnlockconnectorResponse res = new org.openapis.openapi.models.operations.UnlockconnectorResponse() {{
+        org.openapis.openapi.models.operations.UnlockconnectorResponse res = new org.openapis.openapi.models.operations.UnlockconnectorResponse(contentType, httpRes.statusCode()) {{
             unlockconnector201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

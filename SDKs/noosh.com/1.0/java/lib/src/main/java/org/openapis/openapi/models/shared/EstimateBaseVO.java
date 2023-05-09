@@ -18,6 +18,7 @@ public class EstimateBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("create_date")
     public LocalDate createDate;
+
     public EstimateBaseVO withCreateDate(LocalDate createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +27,7 @@ public class EstimateBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public EstimateBaseVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -34,6 +36,7 @@ public class EstimateBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_id")
     public Long estimateId;
+
     public EstimateBaseVO withEstimateId(Long estimateId) {
         this.estimateId = estimateId;
         return this;
@@ -42,6 +45,7 @@ public class EstimateBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_title")
     public String estimateTitle;
+
     public EstimateBaseVO withEstimateTitle(String estimateTitle) {
         this.estimateTitle = estimateTitle;
         return this;
@@ -51,6 +55,7 @@ public class EstimateBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("expiration_date")
     public LocalDate expirationDate;
+
     public EstimateBaseVO withExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -62,6 +67,7 @@ public class EstimateBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectBaseVO project;
+
     public EstimateBaseVO withProject(ProjectBaseVO project) {
         this.project = project;
         return this;
@@ -73,6 +79,7 @@ public class EstimateBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe")
     public RfeBaseVO rfe;
+
     public EstimateBaseVO withRfe(RfeBaseVO rfe) {
         this.rfe = rfe;
         return this;
@@ -81,6 +88,7 @@ public class EstimateBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EstimateBaseVO withStatus(String status) {
         this.status = status;
         return this;
@@ -90,6 +98,7 @@ public class EstimateBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("submit_date")
     public LocalDate submitDate;
+
     public EstimateBaseVO withSubmitDate(LocalDate submitDate) {
         this.submitDate = submitDate;
         return this;
@@ -101,6 +110,7 @@ public class EstimateBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_workgroup")
     public WorkgroupBaseVO supplierWorkgroup;
+
     public EstimateBaseVO withSupplierWorkgroup(WorkgroupBaseVO supplierWorkgroup) {
         this.supplierWorkgroup = supplierWorkgroup;
         return this;
@@ -109,9 +119,11 @@ public class EstimateBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public EstimateBaseVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
     }
     
+    public EstimateBaseVO(){}
 }

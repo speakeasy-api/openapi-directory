@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AsyncClusteringProblemResponse {
@@ -12,6 +13,7 @@ public class AsyncClusteringProblemResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequest badRequest;
+
     public AsyncClusteringProblemResponse withBadRequest(org.openapis.openapi.models.shared.BadRequest badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class AsyncClusteringProblemResponse {
     
     
     public String contentType;
+
     public AsyncClusteringProblemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AsyncClusteringProblemResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public AsyncClusteringProblemResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class AsyncClusteringProblemResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalErrorMessage internalErrorMessage;
+
     public AsyncClusteringProblemResponse withInternalErrorMessage(org.openapis.openapi.models.shared.InternalErrorMessage internalErrorMessage) {
         this.internalErrorMessage = internalErrorMessage;
         return this;
@@ -46,6 +51,7 @@ public class AsyncClusteringProblemResponse {
      */
     
     public org.openapis.openapi.models.shared.JobId jobId;
+
     public AsyncClusteringProblemResponse withJobId(org.openapis.openapi.models.shared.JobId jobId) {
         this.jobId = jobId;
         return this;
@@ -53,6 +59,7 @@ public class AsyncClusteringProblemResponse {
     
     
     public Integer statusCode;
+
     public AsyncClusteringProblemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class AsyncClusteringProblemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AsyncClusteringProblemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AsyncClusteringProblemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -57,12 +57,10 @@ public class AnalyticsTracking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreTrackedClicksResponse res = new org.openapis.openapi.models.operations.GetStoreTrackedClicksResponse() {{
+        org.openapis.openapi.models.operations.GetStoreTrackedClicksResponse res = new org.openapis.openapi.models.operations.GetStoreTrackedClicksResponse(contentType, httpRes.statusCode()) {{
             trackedClicks = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class AnalyticsTracking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersResponse res = new org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersResponse() {{
+        org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersResponse res = new org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersResponse(contentType, httpRes.statusCode()) {{
             trackedExternalOrders = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,12 +157,10 @@ public class AnalyticsTracking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreTrackedOrdersResponse res = new org.openapis.openapi.models.operations.GetStoreTrackedOrdersResponse() {{
+        org.openapis.openapi.models.operations.GetStoreTrackedOrdersResponse res = new org.openapis.openapi.models.operations.GetStoreTrackedOrdersResponse(contentType, httpRes.statusCode()) {{
             trackedOrders = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,12 +204,10 @@ public class AnalyticsTracking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreTrackingStatusResponse res = new org.openapis.openapi.models.operations.GetStoreTrackingStatusResponse() {{
+        org.openapis.openapi.models.operations.GetStoreTrackingStatusResponse res = new org.openapis.openapi.models.operations.GetStoreTrackingStatusResponse(contentType, httpRes.statusCode()) {{
             storeTrackingStatus = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,12 +250,10 @@ public class AnalyticsTracking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackingStatusResponse res = new org.openapis.openapi.models.operations.GetTrackingStatusResponse() {{
+        org.openapis.openapi.models.operations.GetTrackingStatusResponse res = new org.openapis.openapi.models.operations.GetTrackingStatusResponse(contentType, httpRes.statusCode()) {{
             trackingStatus = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

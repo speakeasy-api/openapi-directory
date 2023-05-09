@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetFieldResponse {
     @JsonProperty("errors")
     public FieldError[] errors;
+
     public BatchGetFieldResponse withErrors(FieldError[] errors) {
         this.errors = errors;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetFieldResponse {
     
     @JsonProperty("fields")
     public GetFieldResponse[] fields;
+
     public BatchGetFieldResponse withFields(GetFieldResponse[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public BatchGetFieldResponse(@JsonProperty("errors") FieldError[] errors, @JsonProperty("fields") GetFieldResponse[] fields) {
+        this.errors = errors;
+        this.fields = fields;
+  }
 }

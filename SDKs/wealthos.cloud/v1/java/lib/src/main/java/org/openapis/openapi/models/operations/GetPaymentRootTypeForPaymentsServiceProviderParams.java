@@ -18,6 +18,7 @@ public class GetPaymentRootTypeForPaymentsServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_id")
     public String bankAccountId;
+
     public GetPaymentRootTypeForPaymentsServiceProviderParams withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -29,6 +30,7 @@ public class GetPaymentRootTypeForPaymentsServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hpp_url")
     public String hppUrl;
+
     public GetPaymentRootTypeForPaymentsServiceProviderParams withHppUrl(String hppUrl) {
         this.hppUrl = hppUrl;
         return this;
@@ -40,9 +42,11 @@ public class GetPaymentRootTypeForPaymentsServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_intent_id")
     public String paymentIntentId;
+
     public GetPaymentRootTypeForPaymentsServiceProviderParams withPaymentIntentId(String paymentIntentId) {
         this.paymentIntentId = paymentIntentId;
         return this;
     }
     
+    public GetPaymentRootTypeForPaymentsServiceProviderParams(){}
 }

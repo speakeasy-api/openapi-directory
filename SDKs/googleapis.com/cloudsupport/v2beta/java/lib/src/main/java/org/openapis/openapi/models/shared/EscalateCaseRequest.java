@@ -18,9 +18,11 @@ public class EscalateCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("escalation")
     public Escalation escalation;
+
     public EscalateCaseRequest withEscalation(Escalation escalation) {
         this.escalation = escalation;
         return this;
     }
     
+    public EscalateCaseRequest(){}
 }

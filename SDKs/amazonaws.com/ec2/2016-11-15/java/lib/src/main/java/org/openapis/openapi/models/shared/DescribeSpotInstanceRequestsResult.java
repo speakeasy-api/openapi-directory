@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotInstanceRequestsResult {
     
     public String nextToken;
+
     public DescribeSpotInstanceRequestsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotInstanceRequestsResult {
     
     
     public DescribeSpotInstanceRequestsResultSpotInstanceRequests[] spotInstanceRequests;
+
     public DescribeSpotInstanceRequestsResult withSpotInstanceRequests(DescribeSpotInstanceRequestsResultSpotInstanceRequests[] spotInstanceRequests) {
         this.spotInstanceRequests = spotInstanceRequests;
         return this;
     }
     
+    public DescribeSpotInstanceRequestsResult(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateStackSetInput {
     
     public String administrationRoleARN;
+
     public CreateStackSetInput withAdministrationRoleARN(String administrationRoleARN) {
         this.administrationRoleARN = administrationRoleARN;
         return this;
@@ -16,6 +17,7 @@ public class CreateStackSetInput {
     
     
     public AutoDeployment autoDeployment;
+
     public CreateStackSetInput withAutoDeployment(AutoDeployment autoDeployment) {
         this.autoDeployment = autoDeployment;
         return this;
@@ -23,6 +25,7 @@ public class CreateStackSetInput {
     
     
     public CallAsEnum callAs;
+
     public CreateStackSetInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -30,6 +33,7 @@ public class CreateStackSetInput {
     
     
     public CapabilityEnum[] capabilities;
+
     public CreateStackSetInput withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -37,6 +41,7 @@ public class CreateStackSetInput {
     
     
     public String clientRequestToken;
+
     public CreateStackSetInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -44,6 +49,7 @@ public class CreateStackSetInput {
     
     
     public String description;
+
     public CreateStackSetInput withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +57,7 @@ public class CreateStackSetInput {
     
     
     public String executionRoleName;
+
     public CreateStackSetInput withExecutionRoleName(String executionRoleName) {
         this.executionRoleName = executionRoleName;
         return this;
@@ -58,6 +65,7 @@ public class CreateStackSetInput {
     
     
     public ManagedExecution managedExecution;
+
     public CreateStackSetInput withManagedExecution(ManagedExecution managedExecution) {
         this.managedExecution = managedExecution;
         return this;
@@ -65,6 +73,7 @@ public class CreateStackSetInput {
     
     
     public Parameter[] parameters;
+
     public CreateStackSetInput withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -72,6 +81,7 @@ public class CreateStackSetInput {
     
     
     public PermissionModelsEnum permissionModel;
+
     public CreateStackSetInput withPermissionModel(PermissionModelsEnum permissionModel) {
         this.permissionModel = permissionModel;
         return this;
@@ -79,6 +89,7 @@ public class CreateStackSetInput {
     
     
     public String stackId;
+
     public CreateStackSetInput withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -86,6 +97,7 @@ public class CreateStackSetInput {
     
     
     public String stackSetName;
+
     public CreateStackSetInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -93,6 +105,7 @@ public class CreateStackSetInput {
     
     
     public Tag[] tags;
+
     public CreateStackSetInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -100,6 +113,7 @@ public class CreateStackSetInput {
     
     
     public String templateBody;
+
     public CreateStackSetInput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -107,9 +121,13 @@ public class CreateStackSetInput {
     
     
     public String templateURL;
+
     public CreateStackSetInput withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
     }
     
+    public CreateStackSetInput(@JsonProperty("StackSetName") String stackSetName) {
+        this.stackSetName = stackSetName;
+  }
 }

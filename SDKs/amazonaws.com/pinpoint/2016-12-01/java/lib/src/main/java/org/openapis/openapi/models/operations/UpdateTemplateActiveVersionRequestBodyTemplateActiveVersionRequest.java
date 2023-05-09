@@ -15,9 +15,11 @@ public class UpdateTemplateActiveVersionRequestBodyTemplateActiveVersionRequest 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public UpdateTemplateActiveVersionRequestBodyTemplateActiveVersionRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateTemplateActiveVersionRequestBodyTemplateActiveVersionRequest(){}
 }

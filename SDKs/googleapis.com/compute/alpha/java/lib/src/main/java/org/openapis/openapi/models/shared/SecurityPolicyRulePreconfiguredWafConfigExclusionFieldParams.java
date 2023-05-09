@@ -15,6 +15,7 @@ public class SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParamsOpEnum op;
+
     public SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams withOp(SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParamsOpEnum op) {
         this.op = op;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("val")
     public String val;
+
     public SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams withVal(String val) {
         this.val = val;
         return this;
     }
     
+    public SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams(){}
 }

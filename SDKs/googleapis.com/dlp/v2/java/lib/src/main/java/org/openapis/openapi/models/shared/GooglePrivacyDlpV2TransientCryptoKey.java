@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2TransientCryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2TransientCryptoKey withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GooglePrivacyDlpV2TransientCryptoKey(){}
 }

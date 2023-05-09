@@ -15,6 +15,7 @@ public class ResourceErrorsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMoreErrors")
     public Boolean hasMoreErrors;
+
     public ResourceErrorsDetails withHasMoreErrors(Boolean hasMoreErrors) {
         this.hasMoreErrors = hasMoreErrors;
         return this;
@@ -23,9 +24,11 @@ public class ResourceErrorsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceErrors")
     public ResourceError[] resourceErrors;
+
     public ResourceErrorsDetails withResourceErrors(ResourceError[] resourceErrors) {
         this.resourceErrors = resourceErrors;
         return this;
     }
     
+    public ResourceErrorsDetails(){}
 }

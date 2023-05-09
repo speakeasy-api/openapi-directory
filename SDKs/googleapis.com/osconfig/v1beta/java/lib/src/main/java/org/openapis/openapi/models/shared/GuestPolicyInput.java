@@ -18,6 +18,7 @@ public class GuestPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignment")
     public Assignment assignment;
+
     public GuestPolicyInput withAssignment(Assignment assignment) {
         this.assignment = assignment;
         return this;
@@ -29,6 +30,7 @@ public class GuestPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GuestPolicyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GuestPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GuestPolicyInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class GuestPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GuestPolicyInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GuestPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageRepositories")
     public PackageRepository[] packageRepositories;
+
     public GuestPolicyInput withPackageRepositories(PackageRepository[] packageRepositories) {
         this.packageRepositories = packageRepositories;
         return this;
@@ -73,6 +78,7 @@ public class GuestPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public Package[] packages;
+
     public GuestPolicyInput withPackages(Package[] packages) {
         this.packages = packages;
         return this;
@@ -84,9 +90,11 @@ public class GuestPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipes")
     public SoftwareRecipe[] recipes;
+
     public GuestPolicyInput withRecipes(SoftwareRecipe[] recipes) {
         this.recipes = recipes;
         return this;
     }
     
+    public GuestPolicyInput(){}
 }

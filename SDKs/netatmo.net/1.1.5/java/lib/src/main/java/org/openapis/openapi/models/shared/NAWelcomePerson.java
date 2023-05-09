@@ -12,6 +12,7 @@ public class NAWelcomePerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("face")
     public NAWelcomeFace face;
+
     public NAWelcomePerson withFace(NAWelcomeFace face) {
         this.face = face;
         return this;
@@ -23,6 +24,7 @@ public class NAWelcomePerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NAWelcomePerson withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class NAWelcomePerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_seen")
     public Integer lastSeen;
+
     public NAWelcomePerson withLastSeen(Integer lastSeen) {
         this.lastSeen = lastSeen;
         return this;
@@ -45,6 +48,7 @@ public class NAWelcomePerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("out_of_sight")
     public Boolean outOfSight;
+
     public NAWelcomePerson withOutOfSight(Boolean outOfSight) {
         this.outOfSight = outOfSight;
         return this;
@@ -56,9 +60,11 @@ public class NAWelcomePerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pseudo")
     public String pseudo;
+
     public NAWelcomePerson withPseudo(String pseudo) {
         this.pseudo = pseudo;
         return this;
     }
     
+    public NAWelcomePerson(){}
 }

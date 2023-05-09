@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RankExpressionStatus - The value of a &lt;code&gt;RankExpression&lt;/code&gt; and its current status.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RankExpressionStatus {
     
     public NamedRankExpression options;
+
     public RankExpressionStatus withOptions(NamedRankExpression options) {
         this.options = options;
         return this;
@@ -22,9 +23,14 @@ public class RankExpressionStatus {
      */
     
     public OptionStatus status;
+
     public RankExpressionStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public RankExpressionStatus(@JsonProperty("Options") NamedRankExpression options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

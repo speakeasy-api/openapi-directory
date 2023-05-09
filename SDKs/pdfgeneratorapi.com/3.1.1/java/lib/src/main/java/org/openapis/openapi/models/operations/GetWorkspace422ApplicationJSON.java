@@ -18,6 +18,7 @@ public class GetWorkspace422ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public GetWorkspace422ApplicationJSONErrorEnum error;
+
     public GetWorkspace422ApplicationJSON withError(GetWorkspace422ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class GetWorkspace422ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public GetWorkspace422ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public GetWorkspace422ApplicationJSON(){}
 }

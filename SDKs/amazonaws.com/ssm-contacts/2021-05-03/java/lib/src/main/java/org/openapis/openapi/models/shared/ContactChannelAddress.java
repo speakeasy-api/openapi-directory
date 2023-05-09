@@ -15,9 +15,11 @@ public class ContactChannelAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SimpleAddress")
     public String simpleAddress;
+
     public ContactChannelAddress withSimpleAddress(String simpleAddress) {
         this.simpleAddress = simpleAddress;
         return this;
     }
     
+    public ContactChannelAddress(){}
 }

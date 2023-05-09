@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStopPointIdPlaceTypesResponse {
     
     public byte[] body;
+
     public GetStopPointIdPlaceTypesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetStopPointIdPlaceTypesResponse {
     
     
     public String contentType;
+
     public GetStopPointIdPlaceTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetStopPointIdPlaceTypesResponse {
     
     
     public Integer statusCode;
+
     public GetStopPointIdPlaceTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetStopPointIdPlaceTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStopPointIdPlaceTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetStopPointIdPlaceTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesPlace[] tflApiPresentationEntitiesPlaces;
+
     public GetStopPointIdPlaceTypesResponse withTflApiPresentationEntitiesPlaces(org.openapis.openapi.models.shared.TflApiPresentationEntitiesPlace[] tflApiPresentationEntitiesPlaces) {
         this.tflApiPresentationEntitiesPlaces = tflApiPresentationEntitiesPlaces;
         return this;
     }
     
+    public GetStopPointIdPlaceTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ public class UpdateWindowToChangeSellerRequestBody {
      */
     @JsonProperty("waitingTime")
     public Long waitingTime;
+
     public UpdateWindowToChangeSellerRequestBody withWaitingTime(Long waitingTime) {
         this.waitingTime = waitingTime;
         return this;
     }
     
+    public UpdateWindowToChangeSellerRequestBody(@JsonProperty("waitingTime") Long waitingTime) {
+        this.waitingTime = waitingTime;
+  }
 }

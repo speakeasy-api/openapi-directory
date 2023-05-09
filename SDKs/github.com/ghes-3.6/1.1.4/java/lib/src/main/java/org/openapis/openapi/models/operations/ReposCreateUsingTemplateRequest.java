@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateUsingTemplateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposCreateUsingTemplateRequestBody requestBody;
+
     public ReposCreateUsingTemplateRequest withRequestBody(ReposCreateUsingTemplateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateUsingTemplateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template_owner")
     public String templateOwner;
+
     public ReposCreateUsingTemplateRequest withTemplateOwner(String templateOwner) {
         this.templateOwner = templateOwner;
         return this;
@@ -23,9 +26,15 @@ public class ReposCreateUsingTemplateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template_repo")
     public String templateRepo;
+
     public ReposCreateUsingTemplateRequest withTemplateRepo(String templateRepo) {
         this.templateRepo = templateRepo;
         return this;
     }
     
+    public ReposCreateUsingTemplateRequest(@JsonProperty("RequestBody") ReposCreateUsingTemplateRequestBody requestBody, @JsonProperty("template_owner") String templateOwner, @JsonProperty("template_repo") String templateRepo) {
+        this.requestBody = requestBody;
+        this.templateOwner = templateOwner;
+        this.templateRepo = templateRepo;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsUpdateResponse {
     
     public String contentType;
+
     public PullsUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsUpdateResponse {
     
     
     public Integer statusCode;
+
     public PullsUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PullsUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PullsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public PullsUpdateResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class PullsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.PullRequest pullRequest;
+
     public PullsUpdateResponse withPullRequest(org.openapis.openapi.models.shared.PullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
@@ -53,9 +59,14 @@ public class PullsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public PullsUpdateResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public PullsUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

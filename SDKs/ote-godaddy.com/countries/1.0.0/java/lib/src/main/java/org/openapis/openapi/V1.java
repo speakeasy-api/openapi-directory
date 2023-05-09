@@ -57,13 +57,11 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCountriesResponse res = new org.openapis.openapi.models.operations.GetCountriesResponse() {{
+        org.openapis.openapi.models.operations.GetCountriesResponse res = new org.openapis.openapi.models.operations.GetCountriesResponse(contentType, httpRes.statusCode()) {{
             arrayOfCountrySummary = null;
             error = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,13 +116,11 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCountryResponse res = new org.openapis.openapi.models.operations.GetCountryResponse() {{
+        org.openapis.openapi.models.operations.GetCountryResponse res = new org.openapis.openapi.models.operations.GetCountryResponse(contentType, httpRes.statusCode()) {{
             arrayOfCountry = null;
             error = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

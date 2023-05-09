@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeTagsInput {
     
     public String[] resourceArns;
+
     public DescribeTagsInput withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
     }
     
+    public DescribeTagsInput(@JsonProperty("ResourceArns") String[] resourceArns) {
+        this.resourceArns = resourceArns;
+  }
 }

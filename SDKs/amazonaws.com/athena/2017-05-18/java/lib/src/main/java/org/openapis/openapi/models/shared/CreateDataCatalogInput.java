@@ -12,6 +12,7 @@ public class CreateDataCatalogInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDataCatalogInput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateDataCatalogInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateDataCatalogInput withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class CreateDataCatalogInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public CreateDataCatalogInput withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -35,6 +38,7 @@ public class CreateDataCatalogInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDataCatalogInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -42,9 +46,14 @@ public class CreateDataCatalogInput {
     
     @JsonProperty("Type")
     public DataCatalogTypeEnum type;
+
     public CreateDataCatalogInput withType(DataCatalogTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateDataCatalogInput(@JsonProperty("Name") String name, @JsonProperty("Type") DataCatalogTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

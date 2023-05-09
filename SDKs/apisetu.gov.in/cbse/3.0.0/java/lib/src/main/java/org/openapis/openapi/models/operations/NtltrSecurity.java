@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NtltrSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-APIKEY")
     public String apiKey;
+
     public NtltrSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +18,14 @@ public class NtltrSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-CLIENTID")
     public String clientId;
+
     public NtltrSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public NtltrSecurity(@JsonProperty("apiKey") String apiKey, @JsonProperty("clientId") String clientId) {
+        this.apiKey = apiKey;
+        this.clientId = clientId;
+  }
 }

@@ -18,6 +18,7 @@ public class ListFormResponsesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFormResponsesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListFormResponsesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     public FormResponse[] responses;
+
     public ListFormResponsesResponse withResponses(FormResponse[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public ListFormResponsesResponse(){}
 }

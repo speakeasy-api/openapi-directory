@@ -18,6 +18,7 @@ public class DataSourceObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chartId")
     public Integer chartId;
+
     public DataSourceObjectReference withChartId(Integer chartId) {
         this.chartId = chartId;
         return this;
@@ -29,6 +30,7 @@ public class DataSourceObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceFormulaCell")
     public GridCoordinate dataSourceFormulaCell;
+
     public DataSourceObjectReference withDataSourceFormulaCell(GridCoordinate dataSourceFormulaCell) {
         this.dataSourceFormulaCell = dataSourceFormulaCell;
         return this;
@@ -40,6 +42,7 @@ public class DataSourceObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourcePivotTableAnchorCell")
     public GridCoordinate dataSourcePivotTableAnchorCell;
+
     public DataSourceObjectReference withDataSourcePivotTableAnchorCell(GridCoordinate dataSourcePivotTableAnchorCell) {
         this.dataSourcePivotTableAnchorCell = dataSourcePivotTableAnchorCell;
         return this;
@@ -51,6 +54,7 @@ public class DataSourceObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceTableAnchorCell")
     public GridCoordinate dataSourceTableAnchorCell;
+
     public DataSourceObjectReference withDataSourceTableAnchorCell(GridCoordinate dataSourceTableAnchorCell) {
         this.dataSourceTableAnchorCell = dataSourceTableAnchorCell;
         return this;
@@ -62,9 +66,11 @@ public class DataSourceObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public String sheetId;
+
     public DataSourceObjectReference withSheetId(String sheetId) {
         this.sheetId = sheetId;
         return this;
     }
     
+    public DataSourceObjectReference(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEnvironmentMembershipResponse {
@@ -12,6 +13,7 @@ public class DeleteEnvironmentMembershipResponse {
      */
     
     public Object badRequestException;
+
     public DeleteEnvironmentMembershipResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteEnvironmentMembershipResponse {
      */
     
     public Object conflictException;
+
     public DeleteEnvironmentMembershipResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEnvironmentMembershipResponse {
     
     
     public String contentType;
+
     public DeleteEnvironmentMembershipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEnvironmentMembershipResponse {
      */
     
     public java.util.Map<String, Object> deleteEnvironmentMembershipResult;
+
     public DeleteEnvironmentMembershipResponse withDeleteEnvironmentMembershipResult(java.util.Map<String, Object> deleteEnvironmentMembershipResult) {
         this.deleteEnvironmentMembershipResult = deleteEnvironmentMembershipResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEnvironmentMembershipResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteEnvironmentMembershipResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEnvironmentMembershipResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteEnvironmentMembershipResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteEnvironmentMembershipResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteEnvironmentMembershipResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteEnvironmentMembershipResponse {
      */
     
     public Object notFoundException;
+
     public DeleteEnvironmentMembershipResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteEnvironmentMembershipResponse {
     
     
     public Integer statusCode;
+
     public DeleteEnvironmentMembershipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteEnvironmentMembershipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEnvironmentMembershipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteEnvironmentMembershipResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteEnvironmentMembershipResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteEnvironmentMembershipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

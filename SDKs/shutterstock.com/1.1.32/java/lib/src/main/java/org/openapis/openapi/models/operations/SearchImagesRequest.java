@@ -13,6 +13,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date")
     public LocalDate addedDate;
+
     public SearchImagesRequest withAddedDate(LocalDate addedDate) {
         this.addedDate = addedDate;
         return this;
@@ -23,6 +24,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_end")
     public LocalDate addedDateEnd;
+
     public SearchImagesRequest withAddedDateEnd(LocalDate addedDateEnd) {
         this.addedDateEnd = addedDateEnd;
         return this;
@@ -33,6 +35,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_start")
     public LocalDate addedDateStart;
+
     public SearchImagesRequest withAddedDateStart(LocalDate addedDateStart) {
         this.addedDateStart = addedDateStart;
         return this;
@@ -43,6 +46,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ai_industry")
     public SearchImagesAiIndustryEnum aiIndustry;
+
     public SearchImagesRequest withAiIndustry(SearchImagesAiIndustryEnum aiIndustry) {
         this.aiIndustry = aiIndustry;
         return this;
@@ -53,6 +57,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ai_labels_limit")
     public Long aiLabelsLimit;
+
     public SearchImagesRequest withAiLabelsLimit(Long aiLabelsLimit) {
         this.aiLabelsLimit = aiLabelsLimit;
         return this;
@@ -63,6 +68,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ai_objective")
     public SearchImagesAiObjectiveEnum aiObjective;
+
     public SearchImagesRequest withAiObjective(SearchImagesAiObjectiveEnum aiObjective) {
         this.aiObjective = aiObjective;
         return this;
@@ -73,6 +79,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ai_search")
     public Boolean aiSearch;
+
     public SearchImagesRequest withAiSearch(Boolean aiSearch) {
         this.aiSearch = aiSearch;
         return this;
@@ -83,6 +90,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_ratio")
     public Double aspectRatio;
+
     public SearchImagesRequest withAspectRatio(Double aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -93,6 +101,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_ratio_max")
     public Double aspectRatioMax;
+
     public SearchImagesRequest withAspectRatioMax(Double aspectRatioMax) {
         this.aspectRatioMax = aspectRatioMax;
         return this;
@@ -103,6 +112,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_ratio_min")
     public Double aspectRatioMin;
+
     public SearchImagesRequest withAspectRatioMin(Double aspectRatioMin) {
         this.aspectRatioMin = aspectRatioMin;
         return this;
@@ -113,6 +123,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public SearchImagesRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -123,6 +134,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
     public String color;
+
     public SearchImagesRequest withColor(String color) {
         this.color = color;
         return this;
@@ -133,6 +145,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
     public String[] contributor;
+
     public SearchImagesRequest withContributor(String[] contributor) {
         this.contributor = contributor;
         return this;
@@ -143,6 +156,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_country")
     public Object contributorCountry;
+
     public SearchImagesRequest withContributorCountry(Object contributorCountry) {
         this.contributorCountry = contributorCountry;
         return this;
@@ -153,6 +167,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SearchImagesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -160,9 +175,13 @@ public class SearchImagesRequest {
     
     /**
      * (Deprecated; use height_from and height_to instead) Show images with the specified height
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    @Deprecated
     public Long height;
+
+    @Deprecated
     public SearchImagesRequest withHeight(Long height) {
         this.height = height;
         return this;
@@ -173,6 +192,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height_from")
     public Long heightFrom;
+
     public SearchImagesRequest withHeightFrom(Long heightFrom) {
         this.heightFrom = heightFrom;
         return this;
@@ -183,6 +203,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height_to")
     public Long heightTo;
+
     public SearchImagesRequest withHeightTo(Long heightTo) {
         this.heightTo = heightTo;
         return this;
@@ -193,6 +214,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_type")
     public SearchImagesImageTypeEnum[] imageType;
+
     public SearchImagesRequest withImageType(SearchImagesImageTypeEnum[] imageType) {
         this.imageType = imageType;
         return this;
@@ -203,6 +225,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword_safe_search")
     public Boolean keywordSafeSearch;
+
     public SearchImagesRequest withKeywordSafeSearch(Boolean keywordSafeSearch) {
         this.keywordSafeSearch = keywordSafeSearch;
         return this;
@@ -213,6 +236,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public SearchImagesRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -223,6 +247,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public SearchImagesLicenseEnum[] license;
+
     public SearchImagesRequest withLicense(SearchImagesLicenseEnum[] license) {
         this.license = license;
         return this;
@@ -233,6 +258,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String[] model;
+
     public SearchImagesRequest withModel(String[] model) {
         this.model = model;
         return this;
@@ -243,6 +269,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orientation")
     public SearchImagesOrientationEnum orientation;
+
     public SearchImagesRequest withOrientation(SearchImagesOrientationEnum orientation) {
         this.orientation = orientation;
         return this;
@@ -253,6 +280,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchImagesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -263,6 +291,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_age")
     public SearchImagesPeopleAgeEnum peopleAge;
+
     public SearchImagesRequest withPeopleAge(SearchImagesPeopleAgeEnum peopleAge) {
         this.peopleAge = peopleAge;
         return this;
@@ -273,6 +302,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_ethnicity")
     public SearchImagesPeopleEthnicityEnum[] peopleEthnicity;
+
     public SearchImagesRequest withPeopleEthnicity(SearchImagesPeopleEthnicityEnum[] peopleEthnicity) {
         this.peopleEthnicity = peopleEthnicity;
         return this;
@@ -283,6 +313,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_gender")
     public SearchImagesPeopleGenderEnum peopleGender;
+
     public SearchImagesRequest withPeopleGender(SearchImagesPeopleGenderEnum peopleGender) {
         this.peopleGender = peopleGender;
         return this;
@@ -293,6 +324,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_model_released")
     public Boolean peopleModelReleased;
+
     public SearchImagesRequest withPeopleModelReleased(Boolean peopleModelReleased) {
         this.peopleModelReleased = peopleModelReleased;
         return this;
@@ -303,6 +335,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_number")
     public Long peopleNumber;
+
     public SearchImagesRequest withPeopleNumber(Long peopleNumber) {
         this.peopleNumber = peopleNumber;
         return this;
@@ -313,6 +346,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchImagesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -323,6 +357,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchImagesRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -333,6 +368,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
     public Object region;
+
     public SearchImagesRequest withRegion(Object region) {
         this.region = region;
         return this;
@@ -343,6 +379,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
     public Boolean safe;
+
     public SearchImagesRequest withSafe(Boolean safe) {
         this.safe = safe;
         return this;
@@ -353,6 +390,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchImagesSortEnum sort;
+
     public SearchImagesRequest withSort(SearchImagesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -363,6 +401,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spellcheck_query")
     public Boolean spellcheckQuery;
+
     public SearchImagesRequest withSpellcheckQuery(Boolean spellcheckQuery) {
         this.spellcheckQuery = spellcheckQuery;
         return this;
@@ -373,6 +412,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public SearchImagesViewEnum view;
+
     public SearchImagesRequest withView(SearchImagesViewEnum view) {
         this.view = view;
         return this;
@@ -380,9 +420,13 @@ public class SearchImagesRequest {
     
     /**
      * (Deprecated; use width_from and width_to instead) Show images with the specified width
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    @Deprecated
     public Long width;
+
+    @Deprecated
     public SearchImagesRequest withWidth(Long width) {
         this.width = width;
         return this;
@@ -393,6 +437,7 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width_from")
     public Long widthFrom;
+
     public SearchImagesRequest withWidthFrom(Long widthFrom) {
         this.widthFrom = widthFrom;
         return this;
@@ -403,9 +448,11 @@ public class SearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width_to")
     public Long widthTo;
+
     public SearchImagesRequest withWidthTo(Long widthTo) {
         this.widthTo = widthTo;
         return this;
     }
     
+    public SearchImagesRequest(){}
 }

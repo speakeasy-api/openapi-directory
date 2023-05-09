@@ -24,6 +24,7 @@ public class OnboardingTheme {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public OnboardingTheme withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +36,7 @@ public class OnboardingTheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OnboardingTheme withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +47,7 @@ public class OnboardingTheme {
      */
     @JsonProperty("id")
     public String id;
+
     public OnboardingTheme withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +58,7 @@ public class OnboardingTheme {
      */
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public OnboardingTheme withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -68,9 +72,15 @@ public class OnboardingTheme {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public OnboardingTheme withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public OnboardingTheme(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("properties") java.util.Map<String, String> properties) {
+        this.createdAt = createdAt;
+        this.id = id;
+        this.properties = properties;
+  }
 }

@@ -18,9 +18,11 @@ public class NetworkAdapterList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkAdapters")
     public NetworkAdapterDetails[] networkAdapters;
+
     public NetworkAdapterList withNetworkAdapters(NetworkAdapterDetails[] networkAdapters) {
         this.networkAdapters = networkAdapters;
         return this;
     }
     
+    public NetworkAdapterList(){}
 }

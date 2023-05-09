@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * Trial - The properties of a trial as returned by the &lt;a&gt;Search&lt;/a&gt; API.
+ * Trial - The properties of a trial as returned by the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API.
  */
 public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public Trial withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class Trial {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Trial withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Trial withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public Trial withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -57,6 +61,7 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public Trial withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -67,6 +72,7 @@ public class Trial {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Trial withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -78,6 +84,7 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public Trial withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -89,6 +96,7 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public TrialSource source;
+
     public Trial withSource(TrialSource source) {
         this.source = source;
         return this;
@@ -97,6 +105,7 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Trial withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -105,6 +114,7 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialArn")
     public String trialArn;
+
     public Trial withTrialArn(String trialArn) {
         this.trialArn = trialArn;
         return this;
@@ -113,6 +123,7 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentSummaries")
     public TrialComponentSimpleSummary[] trialComponentSummaries;
+
     public Trial withTrialComponentSummaries(TrialComponentSimpleSummary[] trialComponentSummaries) {
         this.trialComponentSummaries = trialComponentSummaries;
         return this;
@@ -121,9 +132,11 @@ public class Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialName")
     public String trialName;
+
     public Trial withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public Trial(){}
 }

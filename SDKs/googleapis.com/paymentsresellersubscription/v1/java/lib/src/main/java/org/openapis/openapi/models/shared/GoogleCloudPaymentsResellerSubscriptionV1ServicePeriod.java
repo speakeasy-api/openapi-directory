@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod(){}
 }

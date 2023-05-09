@@ -18,6 +18,7 @@ public class SourceLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public Integer column;
+
     public SourceLocation withColumn(Integer column) {
         this.column = column;
         return this;
@@ -29,6 +30,7 @@ public class SourceLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Integer line;
+
     public SourceLocation withLine(Integer line) {
         this.line = line;
         return this;
@@ -40,9 +42,11 @@ public class SourceLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public SourceLocation withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public SourceLocation(){}
 }

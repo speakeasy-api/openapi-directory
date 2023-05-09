@@ -15,6 +15,7 @@ public class Warehouse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessDayConfig")
     public BusinessDayConfig businessDayConfig;
+
     public Warehouse withBusinessDayConfig(BusinessDayConfig businessDayConfig) {
         this.businessDayConfig = businessDayConfig;
         return this;
@@ -23,6 +24,7 @@ public class Warehouse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cutoffTime")
     public WarehouseCutoffTime cutoffTime;
+
     public Warehouse withCutoffTime(WarehouseCutoffTime cutoffTime) {
         this.cutoffTime = cutoffTime;
         return this;
@@ -34,6 +36,7 @@ public class Warehouse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("handlingDays")
     public String handlingDays;
+
     public Warehouse withHandlingDays(String handlingDays) {
         this.handlingDays = handlingDays;
         return this;
@@ -45,6 +48,7 @@ public class Warehouse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Warehouse withName(String name) {
         this.name = name;
         return this;
@@ -53,9 +57,11 @@ public class Warehouse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingAddress")
     public Address shippingAddress;
+
     public Warehouse withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
     
+    public Warehouse(){}
 }

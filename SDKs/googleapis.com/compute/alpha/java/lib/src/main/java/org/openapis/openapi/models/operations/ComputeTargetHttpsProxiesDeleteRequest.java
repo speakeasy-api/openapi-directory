@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeTargetHttpsProxiesDeleteRequest {
@@ -12,6 +13,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeTargetHttpsProxiesDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeTargetHttpsProxiesDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeTargetHttpsProxiesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeTargetHttpsProxiesDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeTargetHttpsProxiesDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeTargetHttpsProxiesDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeTargetHttpsProxiesDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeTargetHttpsProxiesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeTargetHttpsProxiesDeleteRequest withProject(String project) {
         this.project = project;
         return this;
@@ -102,6 +112,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeTargetHttpsProxiesDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeTargetHttpsProxiesDeleteRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -122,6 +134,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetHttpsProxy")
     public String targetHttpsProxy;
+
     public ComputeTargetHttpsProxiesDeleteRequest withTargetHttpsProxy(String targetHttpsProxy) {
         this.targetHttpsProxy = targetHttpsProxy;
         return this;
@@ -132,6 +145,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeTargetHttpsProxiesDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeTargetHttpsProxiesDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,9 +167,14 @@ public class ComputeTargetHttpsProxiesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeTargetHttpsProxiesDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeTargetHttpsProxiesDeleteRequest(@JsonProperty("project") String project, @JsonProperty("targetHttpsProxy") String targetHttpsProxy) {
+        this.project = project;
+        this.targetHttpsProxy = targetHttpsProxy;
+  }
 }

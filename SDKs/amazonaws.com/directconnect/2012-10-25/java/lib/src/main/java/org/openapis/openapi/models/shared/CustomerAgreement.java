@@ -15,6 +15,7 @@ public class CustomerAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agreementName")
     public String agreementName;
+
     public CustomerAgreement withAgreementName(String agreementName) {
         this.agreementName = agreementName;
         return this;
@@ -23,9 +24,11 @@ public class CustomerAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CustomerAgreement withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CustomerAgreement(){}
 }

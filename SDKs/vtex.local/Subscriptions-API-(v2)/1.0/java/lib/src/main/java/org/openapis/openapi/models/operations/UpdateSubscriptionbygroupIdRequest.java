@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSubscriptionbygroupIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateSubscriptionbygroupIdRequest updateSubscriptionbygroupIdRequest;
+
     public UpdateSubscriptionbygroupIdRequest withUpdateSubscriptionbygroupIdRequest(org.openapis.openapi.models.shared.UpdateSubscriptionbygroupIdRequest updateSubscriptionbygroupIdRequest) {
         this.updateSubscriptionbygroupIdRequest = updateSubscriptionbygroupIdRequest;
         return this;
@@ -19,9 +21,14 @@ public class UpdateSubscriptionbygroupIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public UpdateSubscriptionbygroupIdRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public UpdateSubscriptionbygroupIdRequest(@JsonProperty("UpdateSubscriptionbygroupIdRequest") org.openapis.openapi.models.shared.UpdateSubscriptionbygroupIdRequest updateSubscriptionbygroupIdRequest, @JsonProperty("groupId") String groupId) {
+        this.updateSubscriptionbygroupIdRequest = updateSubscriptionbygroupIdRequest;
+        this.groupId = groupId;
+  }
 }

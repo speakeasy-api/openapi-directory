@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public GoogleCloudPaymentsResellerSubscriptionV1Amount amount;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig withAmount(GoogleCloudPaymentsResellerSubscriptionV1Amount amount) {
         this.amount = amount;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig(){}
 }

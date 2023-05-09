@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotificationDestinationConfig {
     @JsonProperty("Uri")
     public String uri;
+
     public NotificationDestinationConfig withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public NotificationDestinationConfig(@JsonProperty("Uri") String uri) {
+        this.uri = uri;
+  }
 }

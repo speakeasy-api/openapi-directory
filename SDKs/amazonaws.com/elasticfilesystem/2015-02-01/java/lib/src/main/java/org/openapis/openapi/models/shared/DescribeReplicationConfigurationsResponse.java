@@ -15,6 +15,7 @@ public class DescribeReplicationConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeReplicationConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeReplicationConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Replications")
     public ReplicationConfigurationDescription[] replications;
+
     public DescribeReplicationConfigurationsResponse withReplications(ReplicationConfigurationDescription[] replications) {
         this.replications = replications;
         return this;
     }
     
+    public DescribeReplicationConfigurationsResponse(){}
 }

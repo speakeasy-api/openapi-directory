@@ -16,6 +16,7 @@ public class CommitteeDetailJfcCommittee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joint_committee_id")
     public String jointCommitteeId;
+
     public CommitteeDetailJfcCommittee withJointCommitteeId(String jointCommitteeId) {
         this.jointCommitteeId = jointCommitteeId;
         return this;
@@ -27,9 +28,11 @@ public class CommitteeDetailJfcCommittee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joint_committee_name")
     public String jointCommitteeName;
+
     public CommitteeDetailJfcCommittee withJointCommitteeName(String jointCommitteeName) {
         this.jointCommitteeName = jointCommitteeName;
         return this;
     }
     
+    public CommitteeDetailJfcCommittee(){}
 }

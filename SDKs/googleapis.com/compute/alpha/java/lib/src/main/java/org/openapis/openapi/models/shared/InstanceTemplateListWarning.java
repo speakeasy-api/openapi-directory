@@ -18,6 +18,7 @@ public class InstanceTemplateListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstanceTemplateListWarningCodeEnum code;
+
     public InstanceTemplateListWarning withCode(InstanceTemplateListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstanceTemplateListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstanceTemplateListWarningData[] data;
+
     public InstanceTemplateListWarning withData(InstanceTemplateListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstanceTemplateListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstanceTemplateListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceTemplateListWarning(){}
 }

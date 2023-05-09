@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTableRowsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListTableRowsRequestBody requestBody;
+
     public ListTableRowsRequest withRequestBody(ListTableRowsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ListTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListTableRowsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListTableRowsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListTableRowsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListTableRowsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListTableRowsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListTableRowsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListTableRowsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class ListTableRowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListTableRowsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -78,6 +88,7 @@ public class ListTableRowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListTableRowsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -88,6 +99,7 @@ public class ListTableRowsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
     public String tableId;
+
     public ListTableRowsRequest withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -98,9 +110,15 @@ public class ListTableRowsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workbookId")
     public String workbookId;
+
     public ListTableRowsRequest withWorkbookId(String workbookId) {
         this.workbookId = workbookId;
         return this;
     }
     
+    public ListTableRowsRequest(@JsonProperty("RequestBody") ListTableRowsRequestBody requestBody, @JsonProperty("tableId") String tableId, @JsonProperty("workbookId") String workbookId) {
+        this.requestBody = requestBody;
+        this.tableId = tableId;
+        this.workbookId = workbookId;
+  }
 }

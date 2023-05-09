@@ -15,9 +15,11 @@ public class Translate500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public Translate500ApplicationJSON withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public Translate500ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePlacementResponse {
     
     public String contentType;
+
     public CreatePlacementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePlacementResponse {
      */
     
     public java.util.Map<String, Object> createPlacementResponse;
+
     public CreatePlacementResponse withCreatePlacementResponse(java.util.Map<String, Object> createPlacementResponse) {
         this.createPlacementResponse = createPlacementResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreatePlacementResponse {
      */
     
     public Object internalFailureException;
+
     public CreatePlacementResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePlacementResponse {
      */
     
     public Object invalidRequestException;
+
     public CreatePlacementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreatePlacementResponse {
     
     
     public Integer statusCode;
+
     public CreatePlacementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreatePlacementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePlacementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreatePlacementResponse {
      */
     
     public Object resourceConflictException;
+
     public CreatePlacementResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -73,9 +81,14 @@ public class CreatePlacementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePlacementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreatePlacementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

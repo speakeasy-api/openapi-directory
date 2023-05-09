@@ -15,6 +15,7 @@ public class SearchResourcesTagCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public SearchResourcesComparatorEnum comparator;
+
     public SearchResourcesTagCriterion withComparator(SearchResourcesComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,9 +24,11 @@ public class SearchResourcesTagCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValues")
     public SearchResourcesTagCriterionPair[] tagValues;
+
     public SearchResourcesTagCriterion withTagValues(SearchResourcesTagCriterionPair[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public SearchResourcesTagCriterion(){}
 }

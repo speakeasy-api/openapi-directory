@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200Applicat
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONPortfolios withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200Applicat
      */
     @JsonProperty("portfolioReturn")
     public Double portfolioReturn;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONPortfolios withPortfolioReturn(Double portfolioReturn) {
         this.portfolioReturn = portfolioReturn;
         return this;
@@ -32,9 +34,15 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200Applicat
      */
     @JsonProperty("portfolioVolatility")
     public Double portfolioVolatility;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONPortfolios withPortfolioVolatility(Double portfolioVolatility) {
         this.portfolioVolatility = portfolioVolatility;
         return this;
     }
     
+    public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONPortfolios(@JsonProperty("assetsWeights") Double[] assetsWeights, @JsonProperty("portfolioReturn") Double portfolioReturn, @JsonProperty("portfolioVolatility") Double portfolioVolatility) {
+        this.assetsWeights = assetsWeights;
+        this.portfolioReturn = portfolioReturn;
+        this.portfolioVolatility = portfolioVolatility;
+  }
 }

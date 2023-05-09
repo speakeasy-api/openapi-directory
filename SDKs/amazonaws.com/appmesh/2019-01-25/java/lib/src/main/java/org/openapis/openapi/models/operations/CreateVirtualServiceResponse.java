@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVirtualServiceResponse {
@@ -12,6 +13,7 @@ public class CreateVirtualServiceResponse {
      */
     
     public Object badRequestException;
+
     public CreateVirtualServiceResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateVirtualServiceResponse {
      */
     
     public Object conflictException;
+
     public CreateVirtualServiceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateVirtualServiceResponse {
     
     
     public String contentType;
+
     public CreateVirtualServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateVirtualServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVirtualServiceOutput createVirtualServiceOutput;
+
     public CreateVirtualServiceResponse withCreateVirtualServiceOutput(org.openapis.openapi.models.shared.CreateVirtualServiceOutput createVirtualServiceOutput) {
         this.createVirtualServiceOutput = createVirtualServiceOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateVirtualServiceResponse {
      */
     
     public Object forbiddenException;
+
     public CreateVirtualServiceResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateVirtualServiceResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateVirtualServiceResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateVirtualServiceResponse {
      */
     
     public Object limitExceededException;
+
     public CreateVirtualServiceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateVirtualServiceResponse {
      */
     
     public Object notFoundException;
+
     public CreateVirtualServiceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateVirtualServiceResponse {
     
     
     public Integer statusCode;
+
     public CreateVirtualServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateVirtualServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVirtualServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateVirtualServiceResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateVirtualServiceResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class CreateVirtualServiceResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateVirtualServiceResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateVirtualServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

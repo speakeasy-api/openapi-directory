@@ -72,11 +72,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBreakTypeResponse res = new org.openapis.openapi.models.operations.CreateBreakTypeResponse() {{
+        org.openapis.openapi.models.operations.CreateBreakTypeResponse res = new org.openapis.openapi.models.operations.CreateBreakTypeResponse(contentType, httpRes.statusCode()) {{
             createBreakTypeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +133,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateShiftResponse res = new org.openapis.openapi.models.operations.CreateShiftResponse() {{
+        org.openapis.openapi.models.operations.CreateShiftResponse res = new org.openapis.openapi.models.operations.CreateShiftResponse(contentType, httpRes.statusCode()) {{
             createShiftResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +174,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBreakTypeResponse res = new org.openapis.openapi.models.operations.DeleteBreakTypeResponse() {{
+        org.openapis.openapi.models.operations.DeleteBreakTypeResponse res = new org.openapis.openapi.models.operations.DeleteBreakTypeResponse(contentType, httpRes.statusCode()) {{
             deleteBreakTypeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +213,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteShiftResponse res = new org.openapis.openapi.models.operations.DeleteShiftResponse() {{
+        org.openapis.openapi.models.operations.DeleteShiftResponse res = new org.openapis.openapi.models.operations.DeleteShiftResponse(contentType, httpRes.statusCode()) {{
             deleteShiftResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,11 +252,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBreakTypeResponse res = new org.openapis.openapi.models.operations.GetBreakTypeResponse() {{
+        org.openapis.openapi.models.operations.GetBreakTypeResponse res = new org.openapis.openapi.models.operations.GetBreakTypeResponse(contentType, httpRes.statusCode()) {{
             getBreakTypeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,11 +291,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEmployeeWageResponse res = new org.openapis.openapi.models.operations.GetEmployeeWageResponse() {{
+        org.openapis.openapi.models.operations.GetEmployeeWageResponse res = new org.openapis.openapi.models.operations.GetEmployeeWageResponse(contentType, httpRes.statusCode()) {{
             getEmployeeWageResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShiftResponse res = new org.openapis.openapi.models.operations.GetShiftResponse() {{
+        org.openapis.openapi.models.operations.GetShiftResponse res = new org.openapis.openapi.models.operations.GetShiftResponse(contentType, httpRes.statusCode()) {{
             getShiftResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -383,11 +369,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamMemberWageResponse res = new org.openapis.openapi.models.operations.GetTeamMemberWageResponse() {{
+        org.openapis.openapi.models.operations.GetTeamMemberWageResponse res = new org.openapis.openapi.models.operations.GetTeamMemberWageResponse(contentType, httpRes.statusCode()) {{
             getTeamMemberWageResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -430,11 +414,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListBreakTypesResponse res = new org.openapis.openapi.models.operations.ListBreakTypesResponse() {{
+        org.openapis.openapi.models.operations.ListBreakTypesResponse res = new org.openapis.openapi.models.operations.ListBreakTypesResponse(contentType, httpRes.statusCode()) {{
             listBreakTypesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,11 +459,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEmployeeWagesResponse res = new org.openapis.openapi.models.operations.ListEmployeeWagesResponse() {{
+        org.openapis.openapi.models.operations.ListEmployeeWagesResponse res = new org.openapis.openapi.models.operations.ListEmployeeWagesResponse(contentType, httpRes.statusCode()) {{
             listEmployeeWagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -524,11 +504,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTeamMemberWagesResponse res = new org.openapis.openapi.models.operations.ListTeamMemberWagesResponse() {{
+        org.openapis.openapi.models.operations.ListTeamMemberWagesResponse res = new org.openapis.openapi.models.operations.ListTeamMemberWagesResponse(contentType, httpRes.statusCode()) {{
             listTeamMemberWagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,11 +549,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorkweekConfigsResponse res = new org.openapis.openapi.models.operations.ListWorkweekConfigsResponse() {{
+        org.openapis.openapi.models.operations.ListWorkweekConfigsResponse res = new org.openapis.openapi.models.operations.ListWorkweekConfigsResponse(contentType, httpRes.statusCode()) {{
             listWorkweekConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchShiftsResponse res = new org.openapis.openapi.models.operations.SearchShiftsResponse() {{
+        org.openapis.openapi.models.operations.SearchShiftsResponse res = new org.openapis.openapi.models.operations.SearchShiftsResponse(contentType, httpRes.statusCode()) {{
             searchShiftsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBreakTypeResponse res = new org.openapis.openapi.models.operations.UpdateBreakTypeResponse() {{
+        org.openapis.openapi.models.operations.UpdateBreakTypeResponse res = new org.openapis.openapi.models.operations.UpdateBreakTypeResponse(contentType, httpRes.statusCode()) {{
             updateBreakTypeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -728,11 +700,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateShiftResponse res = new org.openapis.openapi.models.operations.UpdateShiftResponse() {{
+        org.openapis.openapi.models.operations.UpdateShiftResponse res = new org.openapis.openapi.models.operations.UpdateShiftResponse(contentType, httpRes.statusCode()) {{
             updateShiftResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -774,11 +744,9 @@ public class Labor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWorkweekConfigResponse res = new org.openapis.openapi.models.operations.UpdateWorkweekConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateWorkweekConfigResponse res = new org.openapis.openapi.models.operations.UpdateWorkweekConfigResponse(contentType, httpRes.statusCode()) {{
             updateWorkweekConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

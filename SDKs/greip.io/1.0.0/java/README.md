@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetBulkLookupRequest;
-import org.openapis.openapi.models.operations.GetBulkLookupResponse;
+import org.openapis.openapi.models.operations.GetASNLookupRequest;
+import org.openapis.openapi.models.operations.GetASNLookupResponse;
 
 public class Application {
     public static void main(String[] args) {
@@ -26,15 +25,12 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetBulkLookupRequest req = new GetBulkLookupRequest() {{
-                format = "XML";
-                ips = "1.1.1.1,2.2.2.2";
-                key = "2517bc4fc3f790e8f09bc808bb63b899";
-                lang = "AR";
-                params = "currency";
-            }}            
+            GetASNLookupRequest req = new GetASNLookupRequest("15169", "2517bc4fc3f790e8f09bc808bb63b899") {{
+                format = "JSON";
+                isList = "no";
+            }};            
 
-            GetBulkLookupResponse res = sdk.getBulkLookup(req);
+            GetASNLookupResponse res = sdk.getASNLookup(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -42,19 +38,25 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getBulkLookup` - BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
-* `getCountry` - Country endpoint: Returns the information of a specific country by passing the `countrCode`.
-* `getGeoIP` - GeoIP endpoint: Returns the geolocation data of the visitor.
-* `getIPLookup` - IPLookup endpoint: Returns the geolocation data of a specific IP Address.
-* `getBadWords` - badWords endpoint: Detects whether user inputs contain profanity or not.
+* [getASNLookup](docs/sdk/README.md#getasnlookup) - ASNLookup endpoint: This method helps you lookup any AS Number. It returns the type, organisation details, routes, etc.
+* [getBINLookup](docs/sdk/README.md#getbinlookup) - This method helps you validate any BIN/IIN number and retrieve the full details related to the bank, brand, type, scheme, country, etc.
+* [getBulkLookup](docs/sdk/README.md#getbulklookup) - BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
+* [getCountry](docs/sdk/README.md#getcountry) - Country endpoint: Returns the information of a specific country by passing the `countrCode`.
+* [getGeoIP](docs/sdk/README.md#getgeoip) - Returns the geolocation data of the visitor.
+* [getIPLookup](docs/sdk/README.md#getiplookup) - Returns the geolocation data of a specific IP Address.
+* [getBadWords](docs/sdk/README.md#getbadwords) - badWords endpoint: Detects whether user inputs contain profanity or not.
+* [getValidateEmail](docs/sdk/README.md#getvalidateemail) - This method can be used as an extra-layer of your system for validating email addresses.
+* [getValidatePhone](docs/sdk/README.md#getvalidatephone) - This method can be used as an extra-layer of your system for validating phone numbers.
 <!-- End SDK Available Operations -->
 
 ### Maturity

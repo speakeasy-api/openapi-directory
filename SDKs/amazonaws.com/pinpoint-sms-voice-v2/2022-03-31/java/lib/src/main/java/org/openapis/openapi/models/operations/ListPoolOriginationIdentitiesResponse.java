@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPoolOriginationIdentitiesResponse {
@@ -12,6 +13,7 @@ public class ListPoolOriginationIdentitiesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPoolOriginationIdentitiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPoolOriginationIdentitiesResponse {
     
     
     public String contentType;
+
     public ListPoolOriginationIdentitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPoolOriginationIdentitiesResponse {
      */
     
     public Object internalServerException;
+
     public ListPoolOriginationIdentitiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPoolOriginationIdentitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPoolOriginationIdentitiesResult listPoolOriginationIdentitiesResult;
+
     public ListPoolOriginationIdentitiesResponse withListPoolOriginationIdentitiesResult(org.openapis.openapi.models.shared.ListPoolOriginationIdentitiesResult listPoolOriginationIdentitiesResult) {
         this.listPoolOriginationIdentitiesResult = listPoolOriginationIdentitiesResult;
         return this;
@@ -49,6 +54,7 @@ public class ListPoolOriginationIdentitiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPoolOriginationIdentitiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListPoolOriginationIdentitiesResponse {
     
     
     public Integer statusCode;
+
     public ListPoolOriginationIdentitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPoolOriginationIdentitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPoolOriginationIdentitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListPoolOriginationIdentitiesResponse {
      */
     
     public Object throttlingException;
+
     public ListPoolOriginationIdentitiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListPoolOriginationIdentitiesResponse {
      */
     
     public Object validationException;
+
     public ListPoolOriginationIdentitiesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPoolOriginationIdentitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

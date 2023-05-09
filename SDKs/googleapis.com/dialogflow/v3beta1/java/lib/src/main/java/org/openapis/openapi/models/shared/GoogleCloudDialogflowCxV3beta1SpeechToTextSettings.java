@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1SpeechToTextSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSpeechAdaptation")
     public Boolean enableSpeechAdaptation;
+
     public GoogleCloudDialogflowCxV3beta1SpeechToTextSettings withEnableSpeechAdaptation(Boolean enableSpeechAdaptation) {
         this.enableSpeechAdaptation = enableSpeechAdaptation;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1SpeechToTextSettings(){}
 }

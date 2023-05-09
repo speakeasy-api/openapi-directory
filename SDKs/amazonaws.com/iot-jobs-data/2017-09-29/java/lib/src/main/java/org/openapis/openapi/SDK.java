@@ -148,6 +148,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -186,7 +191,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeJobExecutionResponse res = new org.openapis.openapi.models.operations.DescribeJobExecutionResponse() {{
+        org.openapis.openapi.models.operations.DescribeJobExecutionResponse res = new org.openapis.openapi.models.operations.DescribeJobExecutionResponse(contentType, httpRes.statusCode()) {{
             describeJobExecutionResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -195,8 +200,6 @@ public class SDK {
             certificateValidationException = null;
             terminalStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,7 +284,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPendingJobExecutionsResponse res = new org.openapis.openapi.models.operations.GetPendingJobExecutionsResponse() {{
+        org.openapis.openapi.models.operations.GetPendingJobExecutionsResponse res = new org.openapis.openapi.models.operations.GetPendingJobExecutionsResponse(contentType, httpRes.statusCode()) {{
             getPendingJobExecutionsResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -289,8 +292,6 @@ public class SDK {
             serviceUnavailableException = null;
             certificateValidationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -373,7 +374,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartNextPendingJobExecutionResponse res = new org.openapis.openapi.models.operations.StartNextPendingJobExecutionResponse() {{
+        org.openapis.openapi.models.operations.StartNextPendingJobExecutionResponse res = new org.openapis.openapi.models.operations.StartNextPendingJobExecutionResponse(contentType, httpRes.statusCode()) {{
             startNextPendingJobExecutionResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -381,8 +382,6 @@ public class SDK {
             serviceUnavailableException = null;
             certificateValidationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -465,7 +464,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateJobExecutionResponse res = new org.openapis.openapi.models.operations.UpdateJobExecutionResponse() {{
+        org.openapis.openapi.models.operations.UpdateJobExecutionResponse res = new org.openapis.openapi.models.operations.UpdateJobExecutionResponse(contentType, httpRes.statusCode()) {{
             updateJobExecutionResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -474,8 +473,6 @@ public class SDK {
             certificateValidationException = null;
             invalidStateTransitionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

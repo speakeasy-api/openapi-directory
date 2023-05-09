@@ -12,6 +12,7 @@ public class SpinLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playlist")
     public Link playlist;
+
     public SpinLinks withPlaylist(Link playlist) {
         this.playlist = playlist;
         return this;
@@ -20,9 +21,11 @@ public class SpinLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Link self;
+
     public SpinLinks withSelf(Link self) {
         this.self = self;
         return this;
     }
     
+    public SpinLinks(){}
 }

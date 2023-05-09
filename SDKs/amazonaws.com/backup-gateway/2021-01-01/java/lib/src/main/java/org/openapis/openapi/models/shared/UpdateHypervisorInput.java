@@ -12,6 +12,7 @@ public class UpdateHypervisorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Host")
     public String host;
+
     public UpdateHypervisorInput withHost(String host) {
         this.host = host;
         return this;
@@ -19,6 +20,7 @@ public class UpdateHypervisorInput {
     
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public UpdateHypervisorInput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
@@ -27,6 +29,7 @@ public class UpdateHypervisorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroupArn")
     public String logGroupArn;
+
     public UpdateHypervisorInput withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
@@ -35,6 +38,7 @@ public class UpdateHypervisorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateHypervisorInput withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class UpdateHypervisorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public UpdateHypervisorInput withPassword(String password) {
         this.password = password;
         return this;
@@ -51,9 +56,13 @@ public class UpdateHypervisorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public UpdateHypervisorInput withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UpdateHypervisorInput(@JsonProperty("HypervisorArn") String hypervisorArn) {
+        this.hypervisorArn = hypervisorArn;
+  }
 }

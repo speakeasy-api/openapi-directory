@@ -15,6 +15,7 @@ public class GetUsageStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterBy")
     public org.openapis.openapi.models.shared.UsageStatisticsFilter[] filterBy;
+
     public GetUsageStatisticsRequestBody withFilterBy(org.openapis.openapi.models.shared.UsageStatisticsFilter[] filterBy) {
         this.filterBy = filterBy;
         return this;
@@ -26,6 +27,7 @@ public class GetUsageStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetUsageStatisticsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class GetUsageStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetUsageStatisticsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,6 +51,7 @@ public class GetUsageStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public GetUsageStatisticsRequestBodySortBy sortBy;
+
     public GetUsageStatisticsRequestBody withSortBy(GetUsageStatisticsRequestBodySortBy sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -59,9 +63,11 @@ public class GetUsageStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeRange")
     public GetUsageStatisticsRequestBodyTimeRangeEnum timeRange;
+
     public GetUsageStatisticsRequestBody withTimeRange(GetUsageStatisticsRequestBodyTimeRangeEnum timeRange) {
         this.timeRange = timeRange;
         return this;
     }
     
+    public GetUsageStatisticsRequestBody(){}
 }

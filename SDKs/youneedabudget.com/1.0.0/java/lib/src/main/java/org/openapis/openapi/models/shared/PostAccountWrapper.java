@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAccountWrapper {
     @JsonProperty("account")
     public SaveAccount account;
+
     public PostAccountWrapper withAccount(SaveAccount account) {
         this.account = account;
         return this;
     }
     
+    public PostAccountWrapper(@JsonProperty("account") SaveAccount account) {
+        this.account = account;
+  }
 }

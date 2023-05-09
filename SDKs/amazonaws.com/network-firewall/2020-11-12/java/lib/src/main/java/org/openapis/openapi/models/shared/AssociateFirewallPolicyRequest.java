@@ -12,6 +12,7 @@ public class AssociateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public AssociateFirewallPolicyRequest withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -20,6 +21,7 @@ public class AssociateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public AssociateFirewallPolicyRequest withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -27,6 +29,7 @@ public class AssociateFirewallPolicyRequest {
     
     @JsonProperty("FirewallPolicyArn")
     public String firewallPolicyArn;
+
     public AssociateFirewallPolicyRequest withFirewallPolicyArn(String firewallPolicyArn) {
         this.firewallPolicyArn = firewallPolicyArn;
         return this;
@@ -35,9 +38,13 @@ public class AssociateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public AssociateFirewallPolicyRequest withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public AssociateFirewallPolicyRequest(@JsonProperty("FirewallPolicyArn") String firewallPolicyArn) {
+        this.firewallPolicyArn = firewallPolicyArn;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AllocateHostsResult {
     
     public String[] hostIds;
+
     public AllocateHostsResult withHostIds(String[] hostIds) {
         this.hostIds = hostIds;
         return this;
     }
     
+    public AllocateHostsResult(){}
 }

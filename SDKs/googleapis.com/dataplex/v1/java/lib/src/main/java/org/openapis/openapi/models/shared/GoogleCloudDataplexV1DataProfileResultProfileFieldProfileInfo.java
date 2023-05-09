@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distinctRatio")
     public Double distinctRatio;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo withDistinctRatio(Double distinctRatio) {
         this.distinctRatio = distinctRatio;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleProfile")
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo doubleProfile;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo withDoubleProfile(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo doubleProfile) {
         this.doubleProfile = doubleProfile;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerProfile")
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo integerProfile;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo withIntegerProfile(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo integerProfile) {
         this.integerProfile = integerProfile;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullRatio")
     public Double nullRatio;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo withNullRatio(Double nullRatio) {
         this.nullRatio = nullRatio;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringProfile")
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo stringProfile;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo withStringProfile(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo stringProfile) {
         this.stringProfile = stringProfile;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topNValues")
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue[] topNValues;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo withTopNValues(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue[] topNValues) {
         this.topNValues = topNValues;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo(){}
 }

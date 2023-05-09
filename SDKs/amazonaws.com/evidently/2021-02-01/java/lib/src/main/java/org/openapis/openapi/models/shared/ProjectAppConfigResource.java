@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProjectAppConfigResource {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public ProjectAppConfigResource withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -19,6 +20,7 @@ public class ProjectAppConfigResource {
     
     @JsonProperty("configurationProfileId")
     public String configurationProfileId;
+
     public ProjectAppConfigResource withConfigurationProfileId(String configurationProfileId) {
         this.configurationProfileId = configurationProfileId;
         return this;
@@ -26,9 +28,15 @@ public class ProjectAppConfigResource {
     
     @JsonProperty("environmentId")
     public String environmentId;
+
     public ProjectAppConfigResource withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     
+    public ProjectAppConfigResource(@JsonProperty("applicationId") String applicationId, @JsonProperty("configurationProfileId") String configurationProfileId, @JsonProperty("environmentId") String environmentId) {
+        this.applicationId = applicationId;
+        this.configurationProfileId = configurationProfileId;
+        this.environmentId = environmentId;
+  }
 }

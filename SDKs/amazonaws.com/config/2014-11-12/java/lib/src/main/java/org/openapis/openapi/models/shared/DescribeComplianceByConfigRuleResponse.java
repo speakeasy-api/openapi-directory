@@ -15,6 +15,7 @@ public class DescribeComplianceByConfigRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceByConfigRules")
     public ComplianceByConfigRule[] complianceByConfigRules;
+
     public DescribeComplianceByConfigRuleResponse withComplianceByConfigRules(ComplianceByConfigRule[] complianceByConfigRules) {
         this.complianceByConfigRules = complianceByConfigRules;
         return this;
@@ -23,9 +24,11 @@ public class DescribeComplianceByConfigRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeComplianceByConfigRuleResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeComplianceByConfigRuleResponse(){}
 }

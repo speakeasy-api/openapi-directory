@@ -20,6 +20,7 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionNumber")
     public Long executionNumber;
+
     public JobExecutionSummary withExecutionNumber(Long executionNumber) {
         this.executionNumber = executionNumber;
         return this;
@@ -30,6 +31,7 @@ public class JobExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public JobExecutionSummary withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -40,6 +42,7 @@ public class JobExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("queuedAt")
     public OffsetDateTime queuedAt;
+
     public JobExecutionSummary withQueuedAt(OffsetDateTime queuedAt) {
         this.queuedAt = queuedAt;
         return this;
@@ -48,6 +51,7 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryAttempt")
     public Long retryAttempt;
+
     public JobExecutionSummary withRetryAttempt(Long retryAttempt) {
         this.retryAttempt = retryAttempt;
         return this;
@@ -58,6 +62,7 @@ public class JobExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public JobExecutionSummary withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -66,9 +71,11 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobExecutionStatusEnum status;
+
     public JobExecutionSummary withStatus(JobExecutionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public JobExecutionSummary(){}
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetglobalnumberinfoRequest;
 import org.openapis.openapi.models.operations.GetglobalnumberinfoResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetglobalnumberinfoRequest req = new GetglobalnumberinfoRequest() {{
-                intlnumber = "corrupti";
-                license = "provident";
-            }}            
+            GetglobalnumberinfoRequest req = new GetglobalnumberinfoRequest("corrupti", "provident");            
 
             GetglobalnumberinfoResponse res = sdk.globalPhoneNumberInformation.getglobalnumberinfo(req);
 
-            if (res.getglobalnumberinfo200ApplicationJSONObject.isPresent()) {
+            if (res.getglobalnumberinfo200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### globalPhoneNumberInformation
+### [globalPhoneNumberInformation](docs/globalphonenumberinformation/README.md)
 
-* `getglobalnumberinfo` - Get demographic information for a global telephone number
+* [getglobalnumberinfo](docs/globalphonenumberinformation/README.md#getglobalnumberinfo) - Get demographic information for a global telephone number
 <!-- End SDK Available Operations -->
 
 ### Maturity

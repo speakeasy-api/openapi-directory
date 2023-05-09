@@ -57,11 +57,9 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateTokenV2Response res = new org.openapis.openapi.models.operations.GenerateTokenV2Response() {{
+        org.openapis.openapi.models.operations.GenerateTokenV2Response res = new org.openapis.openapi.models.operations.GenerateTokenV2Response(contentType, httpRes.statusCode()) {{
             generateAccessTokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,10 +95,8 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RevokeRefreshTokenV2Response res = new org.openapis.openapi.models.operations.RevokeRefreshTokenV2Response() {{
+        org.openapis.openapi.models.operations.RevokeRefreshTokenV2Response res = new org.openapis.openapi.models.operations.RevokeRefreshTokenV2Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {

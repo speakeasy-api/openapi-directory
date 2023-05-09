@@ -62,11 +62,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsCreateResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsCreateResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsCreateResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsCreateResponse(contentType, httpRes.statusCode()) {{
             adUnit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsGetAdcodeResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsGetAdcodeResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsGetAdcodeResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsGetAdcodeResponse(contentType, httpRes.statusCode()) {{
             adUnitAdCode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsListResponse(contentType, httpRes.statusCode()) {{
             listAdUnitsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsResponse(contentType, httpRes.statusCode()) {{
             listLinkedCustomChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsCreateResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsCreateResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsCreateResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsCreateResponse(contentType, httpRes.statusCode()) {{
             customChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsDeleteResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsDeleteResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsListResponse(contentType, httpRes.statusCode()) {{
             listCustomChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -386,11 +372,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse(contentType, httpRes.statusCode()) {{
             listLinkedAdUnitsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsPatchResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsPatchResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsPatchResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsCustomchannelsPatchResponse(contentType, httpRes.statusCode()) {{
             customChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -480,11 +462,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListResponse(contentType, httpRes.statusCode()) {{
             listAdClientsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -526,11 +506,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsUrlchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsUrlchannelsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAdclientsUrlchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAdclientsUrlchannelsListResponse(contentType, httpRes.statusCode()) {{
             listUrlChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -572,11 +550,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsAlertsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAlertsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsAlertsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsAlertsListResponse(contentType, httpRes.statusCode()) {{
             listAlertsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -618,11 +594,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsGetAdBlockingRecoveryTagResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsGetAdBlockingRecoveryTagResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsGetAdBlockingRecoveryTagResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsGetAdBlockingRecoveryTagResponse(contentType, httpRes.statusCode()) {{
             adBlockingRecoveryTag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -664,11 +638,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsListResponse(contentType, httpRes.statusCode()) {{
             listAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -710,11 +682,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsListChildAccountsResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsListChildAccountsResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsListChildAccountsResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsListChildAccountsResponse(contentType, httpRes.statusCode()) {{
             listChildAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -756,11 +726,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListResponse(contentType, httpRes.statusCode()) {{
             listPaymentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -802,11 +770,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateResponse(contentType, httpRes.statusCode()) {{
             reportResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -848,11 +814,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateCsvResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateCsvResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateCsvResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateCsvResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -894,11 +858,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsReportsGetSavedResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsGetSavedResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsReportsGetSavedResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsGetSavedResponse(contentType, httpRes.statusCode()) {{
             savedReport = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -940,11 +902,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateResponse(contentType, httpRes.statusCode()) {{
             reportResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -986,11 +946,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateCsvResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateCsvResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateCsvResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateCsvResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1032,11 +990,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListResponse(contentType, httpRes.statusCode()) {{
             listSavedReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1078,11 +1034,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsSitesGetResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsSitesGetResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsSitesGetResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsSitesGetResponse(contentType, httpRes.statusCode()) {{
             site = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1124,11 +1078,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAccountsSitesListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsSitesListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAccountsSitesListResponse res = new org.openapis.openapi.models.operations.AdsenseAccountsSitesListResponse(contentType, httpRes.statusCode()) {{
             listSitesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

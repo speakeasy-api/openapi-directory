@@ -18,6 +18,7 @@ public class FamilyInfoMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquirePermission")
     public String acquirePermission;
+
     public FamilyInfoMembership withAcquirePermission(String acquirePermission) {
         this.acquirePermission = acquirePermission;
         return this;
@@ -29,6 +30,7 @@ public class FamilyInfoMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageGroup")
     public String ageGroup;
+
     public FamilyInfoMembership withAgeGroup(String ageGroup) {
         this.ageGroup = ageGroup;
         return this;
@@ -40,6 +42,7 @@ public class FamilyInfoMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedMaturityRating")
     public String allowedMaturityRating;
+
     public FamilyInfoMembership withAllowedMaturityRating(String allowedMaturityRating) {
         this.allowedMaturityRating = allowedMaturityRating;
         return this;
@@ -48,6 +51,7 @@ public class FamilyInfoMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInFamily")
     public Boolean isInFamily;
+
     public FamilyInfoMembership withIsInFamily(Boolean isInFamily) {
         this.isInFamily = isInFamily;
         return this;
@@ -59,9 +63,11 @@ public class FamilyInfoMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public FamilyInfoMembership withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public FamilyInfoMembership(){}
 }

@@ -15,9 +15,11 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels(){}
 }

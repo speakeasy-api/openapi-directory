@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveParentsDeleteRequest {
@@ -12,6 +13,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveParentsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
     public Boolean enforceSingleParent;
+
     public DriveParentsDeleteRequest withEnforceSingleParent(Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
         return this;
@@ -32,6 +35,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveParentsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DriveParentsDeleteRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -52,6 +57,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveParentsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveParentsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parentId")
     public String parentId;
+
     public DriveParentsDeleteRequest withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -82,6 +90,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveParentsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveParentsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,9 +112,14 @@ public class DriveParentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveParentsDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveParentsDeleteRequest(@JsonProperty("fileId") String fileId, @JsonProperty("parentId") String parentId) {
+        this.fileId = fileId;
+        this.parentId = parentId;
+  }
 }

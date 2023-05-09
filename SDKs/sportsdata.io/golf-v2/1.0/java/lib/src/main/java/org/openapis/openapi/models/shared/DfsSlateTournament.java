@@ -12,6 +12,7 @@ public class DfsSlateTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorTournamentID")
     public Long operatorTournamentID;
+
     public DfsSlateTournament withOperatorTournamentID(Long operatorTournamentID) {
         this.operatorTournamentID = operatorTournamentID;
         return this;
@@ -20,6 +21,7 @@ public class DfsSlateTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemovedByOperator")
     public Boolean removedByOperator;
+
     public DfsSlateTournament withRemovedByOperator(Boolean removedByOperator) {
         this.removedByOperator = removedByOperator;
         return this;
@@ -28,6 +30,7 @@ public class DfsSlateTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateID")
     public Long slateID;
+
     public DfsSlateTournament withSlateID(Long slateID) {
         this.slateID = slateID;
         return this;
@@ -36,6 +39,7 @@ public class DfsSlateTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateTournamentID")
     public Long slateTournamentID;
+
     public DfsSlateTournament withSlateTournamentID(Long slateTournamentID) {
         this.slateTournamentID = slateTournamentID;
         return this;
@@ -44,6 +48,7 @@ public class DfsSlateTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tournament")
     public Tournament tournament;
+
     public DfsSlateTournament withTournament(Tournament tournament) {
         this.tournament = tournament;
         return this;
@@ -52,9 +57,11 @@ public class DfsSlateTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentID")
     public Long tournamentID;
+
     public DfsSlateTournament withTournamentID(Long tournamentID) {
         this.tournamentID = tournamentID;
         return this;
     }
     
+    public DfsSlateTournament(){}
 }

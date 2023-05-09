@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeElasticGpusResultElasticGpuSetElasticGpuHealth {
     
     public DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum status;
+
     public DescribeElasticGpusResultElasticGpuSetElasticGpuHealth withStatus(DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeElasticGpusResultElasticGpuSetElasticGpuHealth(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLabelingJobResponse {
     
     public String contentType;
+
     public DescribeLabelingJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLabelingJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLabelingJobResponse describeLabelingJobResponse;
+
     public DescribeLabelingJobResponse withDescribeLabelingJobResponse(org.openapis.openapi.models.shared.DescribeLabelingJobResponse describeLabelingJobResponse) {
         this.describeLabelingJobResponse = describeLabelingJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLabelingJobResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeLabelingJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribeLabelingJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeLabelingJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeLabelingJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLabelingJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLabelingJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

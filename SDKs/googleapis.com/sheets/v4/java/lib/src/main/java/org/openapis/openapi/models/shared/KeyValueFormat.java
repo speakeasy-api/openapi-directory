@@ -18,6 +18,7 @@ public class KeyValueFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public TextPosition position;
+
     public KeyValueFormat withPosition(TextPosition position) {
         this.position = position;
         return this;
@@ -29,9 +30,11 @@ public class KeyValueFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textFormat")
     public TextFormat textFormat;
+
     public KeyValueFormat withTextFormat(TextFormat textFormat) {
         this.textFormat = textFormat;
         return this;
     }
     
+    public KeyValueFormat(){}
 }

@@ -18,6 +18,7 @@ public class SourceResultCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMoreResults")
     public Boolean hasMoreResults;
+
     public SourceResultCount withHasMoreResults(Boolean hasMoreResults) {
         this.hasMoreResults = hasMoreResults;
         return this;
@@ -29,6 +30,7 @@ public class SourceResultCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCountEstimate")
     public String resultCountEstimate;
+
     public SourceResultCount withResultCountEstimate(String resultCountEstimate) {
         this.resultCountEstimate = resultCountEstimate;
         return this;
@@ -40,6 +42,7 @@ public class SourceResultCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCountExact")
     public String resultCountExact;
+
     public SourceResultCount withResultCountExact(String resultCountExact) {
         this.resultCountExact = resultCountExact;
         return this;
@@ -51,9 +54,11 @@ public class SourceResultCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public SourceResultCount withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public SourceResultCount(){}
 }

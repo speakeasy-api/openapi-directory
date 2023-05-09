@@ -15,9 +15,11 @@ public class ListAccessControlRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public AccessControlRule[] rules;
+
     public ListAccessControlRulesResponse withRules(AccessControlRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public ListAccessControlRulesResponse(){}
 }

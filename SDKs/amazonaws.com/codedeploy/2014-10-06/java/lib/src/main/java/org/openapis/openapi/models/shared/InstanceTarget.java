@@ -20,6 +20,7 @@ public class InstanceTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public InstanceTarget withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -28,6 +29,7 @@ public class InstanceTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceLabel")
     public TargetLabelEnum instanceLabel;
+
     public InstanceTarget withInstanceLabel(TargetLabelEnum instanceLabel) {
         this.instanceLabel = instanceLabel;
         return this;
@@ -38,6 +40,7 @@ public class InstanceTarget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public InstanceTarget withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -46,6 +49,7 @@ public class InstanceTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleEvents")
     public LifecycleEvent[] lifecycleEvents;
+
     public InstanceTarget withLifecycleEvents(LifecycleEvent[] lifecycleEvents) {
         this.lifecycleEvents = lifecycleEvents;
         return this;
@@ -54,6 +58,7 @@ public class InstanceTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TargetStatusEnum status;
+
     public InstanceTarget withStatus(TargetStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +67,7 @@ public class InstanceTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetArn")
     public String targetArn;
+
     public InstanceTarget withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
@@ -70,9 +76,11 @@ public class InstanceTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public String targetId;
+
     public InstanceTarget withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public InstanceTarget(){}
 }

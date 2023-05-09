@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetActivityTaskResponse {
@@ -12,6 +13,7 @@ public class GetActivityTaskResponse {
      */
     
     public Object activityDoesNotExist;
+
     public GetActivityTaskResponse withActivityDoesNotExist(Object activityDoesNotExist) {
         this.activityDoesNotExist = activityDoesNotExist;
         return this;
@@ -22,6 +24,7 @@ public class GetActivityTaskResponse {
      */
     
     public Object activityWorkerLimitExceeded;
+
     public GetActivityTaskResponse withActivityWorkerLimitExceeded(Object activityWorkerLimitExceeded) {
         this.activityWorkerLimitExceeded = activityWorkerLimitExceeded;
         return this;
@@ -29,6 +32,7 @@ public class GetActivityTaskResponse {
     
     
     public String contentType;
+
     public GetActivityTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetActivityTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.GetActivityTaskOutput getActivityTaskOutput;
+
     public GetActivityTaskResponse withGetActivityTaskOutput(org.openapis.openapi.models.shared.GetActivityTaskOutput getActivityTaskOutput) {
         this.getActivityTaskOutput = getActivityTaskOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetActivityTaskResponse {
      */
     
     public Object invalidArn;
+
     public GetActivityTaskResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -56,6 +62,7 @@ public class GetActivityTaskResponse {
     
     
     public Integer statusCode;
+
     public GetActivityTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetActivityTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetActivityTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetActivityTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

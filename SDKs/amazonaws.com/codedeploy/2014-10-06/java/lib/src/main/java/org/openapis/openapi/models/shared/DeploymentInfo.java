@@ -20,6 +20,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalDeploymentStatusInfo")
     public String additionalDeploymentStatusInfo;
+
     public DeploymentInfo withAdditionalDeploymentStatusInfo(String additionalDeploymentStatusInfo) {
         this.additionalDeploymentStatusInfo = additionalDeploymentStatusInfo;
         return this;
@@ -28,6 +29,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationName")
     public String applicationName;
+
     public DeploymentInfo withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -36,6 +38,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRollbackConfiguration")
     public AutoRollbackConfiguration autoRollbackConfiguration;
+
     public DeploymentInfo withAutoRollbackConfiguration(AutoRollbackConfiguration autoRollbackConfiguration) {
         this.autoRollbackConfiguration = autoRollbackConfiguration;
         return this;
@@ -44,6 +47,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueGreenDeploymentConfiguration")
     public BlueGreenDeploymentConfiguration blueGreenDeploymentConfiguration;
+
     public DeploymentInfo withBlueGreenDeploymentConfiguration(BlueGreenDeploymentConfiguration blueGreenDeploymentConfiguration) {
         this.blueGreenDeploymentConfiguration = blueGreenDeploymentConfiguration;
         return this;
@@ -54,6 +58,7 @@ public class DeploymentInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completeTime")
     public OffsetDateTime completeTime;
+
     public DeploymentInfo withCompleteTime(OffsetDateTime completeTime) {
         this.completeTime = completeTime;
         return this;
@@ -62,6 +67,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computePlatform")
     public ComputePlatformEnum computePlatform;
+
     public DeploymentInfo withComputePlatform(ComputePlatformEnum computePlatform) {
         this.computePlatform = computePlatform;
         return this;
@@ -72,6 +78,7 @@ public class DeploymentInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public DeploymentInfo withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -80,6 +87,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public DeploymentCreatorEnum creator;
+
     public DeploymentInfo withCreator(DeploymentCreatorEnum creator) {
         this.creator = creator;
         return this;
@@ -88,6 +96,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfigName")
     public String deploymentConfigName;
+
     public DeploymentInfo withDeploymentConfigName(String deploymentConfigName) {
         this.deploymentConfigName = deploymentConfigName;
         return this;
@@ -96,6 +105,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentGroupName")
     public String deploymentGroupName;
+
     public DeploymentInfo withDeploymentGroupName(String deploymentGroupName) {
         this.deploymentGroupName = deploymentGroupName;
         return this;
@@ -104,6 +114,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public DeploymentInfo withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -112,6 +123,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentOverview")
     public DeploymentOverview deploymentOverview;
+
     public DeploymentInfo withDeploymentOverview(DeploymentOverview deploymentOverview) {
         this.deploymentOverview = deploymentOverview;
         return this;
@@ -120,6 +132,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatusMessages")
     public String[] deploymentStatusMessages;
+
     public DeploymentInfo withDeploymentStatusMessages(String[] deploymentStatusMessages) {
         this.deploymentStatusMessages = deploymentStatusMessages;
         return this;
@@ -128,6 +141,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStyle")
     public DeploymentStyle deploymentStyle;
+
     public DeploymentInfo withDeploymentStyle(DeploymentStyle deploymentStyle) {
         this.deploymentStyle = deploymentStyle;
         return this;
@@ -136,6 +150,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DeploymentInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -144,6 +159,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorInformation")
     public ErrorInformation errorInformation;
+
     public DeploymentInfo withErrorInformation(ErrorInformation errorInformation) {
         this.errorInformation = errorInformation;
         return this;
@@ -152,6 +168,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public DeploymentInfo withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -160,6 +177,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileExistsBehavior")
     public FileExistsBehaviorEnum fileExistsBehavior;
+
     public DeploymentInfo withFileExistsBehavior(FileExistsBehaviorEnum fileExistsBehavior) {
         this.fileExistsBehavior = fileExistsBehavior;
         return this;
@@ -168,6 +186,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreApplicationStopFailures")
     public Boolean ignoreApplicationStopFailures;
+
     public DeploymentInfo withIgnoreApplicationStopFailures(Boolean ignoreApplicationStopFailures) {
         this.ignoreApplicationStopFailures = ignoreApplicationStopFailures;
         return this;
@@ -176,6 +195,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTerminationWaitTimeStarted")
     public Boolean instanceTerminationWaitTimeStarted;
+
     public DeploymentInfo withInstanceTerminationWaitTimeStarted(Boolean instanceTerminationWaitTimeStarted) {
         this.instanceTerminationWaitTimeStarted = instanceTerminationWaitTimeStarted;
         return this;
@@ -184,6 +204,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancerInfo")
     public LoadBalancerInfo loadBalancerInfo;
+
     public DeploymentInfo withLoadBalancerInfo(LoadBalancerInfo loadBalancerInfo) {
         this.loadBalancerInfo = loadBalancerInfo;
         return this;
@@ -195,6 +216,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideAlarmConfiguration")
     public AlarmConfiguration overrideAlarmConfiguration;
+
     public DeploymentInfo withOverrideAlarmConfiguration(AlarmConfiguration overrideAlarmConfiguration) {
         this.overrideAlarmConfiguration = overrideAlarmConfiguration;
         return this;
@@ -203,6 +225,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousRevision")
     public RevisionLocation previousRevision;
+
     public DeploymentInfo withPreviousRevision(RevisionLocation previousRevision) {
         this.previousRevision = previousRevision;
         return this;
@@ -214,6 +237,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedDeployments")
     public RelatedDeployments relatedDeployments;
+
     public DeploymentInfo withRelatedDeployments(RelatedDeployments relatedDeployments) {
         this.relatedDeployments = relatedDeployments;
         return this;
@@ -222,6 +246,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public RevisionLocation revision;
+
     public DeploymentInfo withRevision(RevisionLocation revision) {
         this.revision = revision;
         return this;
@@ -230,6 +255,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollbackInfo")
     public RollbackInfo rollbackInfo;
+
     public DeploymentInfo withRollbackInfo(RollbackInfo rollbackInfo) {
         this.rollbackInfo = rollbackInfo;
         return this;
@@ -240,6 +266,7 @@ public class DeploymentInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public DeploymentInfo withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -248,6 +275,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DeploymentStatusEnum status;
+
     public DeploymentInfo withStatus(DeploymentStatusEnum status) {
         this.status = status;
         return this;
@@ -256,6 +284,7 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstances")
     public TargetInstances targetInstances;
+
     public DeploymentInfo withTargetInstances(TargetInstances targetInstances) {
         this.targetInstances = targetInstances;
         return this;
@@ -264,9 +293,11 @@ public class DeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateOutdatedInstancesOnly")
     public Boolean updateOutdatedInstancesOnly;
+
     public DeploymentInfo withUpdateOutdatedInstancesOnly(Boolean updateOutdatedInstancesOnly) {
         this.updateOutdatedInstancesOnly = updateOutdatedInstancesOnly;
         return this;
     }
     
+    public DeploymentInfo(){}
 }

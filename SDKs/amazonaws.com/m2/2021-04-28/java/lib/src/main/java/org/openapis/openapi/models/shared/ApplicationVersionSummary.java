@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ApplicationVersionSummary {
     @JsonProperty("applicationVersion")
     public Long applicationVersion;
+
     public ApplicationVersionSummary withApplicationVersion(Long applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -28,6 +29,7 @@ public class ApplicationVersionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ApplicationVersionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class ApplicationVersionSummary {
     
     @JsonProperty("status")
     public ApplicationVersionLifecycleEnum status;
+
     public ApplicationVersionSummary withStatus(ApplicationVersionLifecycleEnum status) {
         this.status = status;
         return this;
@@ -43,9 +46,15 @@ public class ApplicationVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public ApplicationVersionSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ApplicationVersionSummary(@JsonProperty("applicationVersion") Long applicationVersion, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("status") ApplicationVersionLifecycleEnum status) {
+        this.applicationVersion = applicationVersion;
+        this.creationTime = creationTime;
+        this.status = status;
+  }
 }

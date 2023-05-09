@@ -15,6 +15,7 @@ public class CreateDeploymentConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computePlatform")
     public ComputePlatformEnum computePlatform;
+
     public CreateDeploymentConfigInput withComputePlatform(ComputePlatformEnum computePlatform) {
         this.computePlatform = computePlatform;
         return this;
@@ -22,6 +23,7 @@ public class CreateDeploymentConfigInput {
     
     @JsonProperty("deploymentConfigName")
     public String deploymentConfigName;
+
     public CreateDeploymentConfigInput withDeploymentConfigName(String deploymentConfigName) {
         this.deploymentConfigName = deploymentConfigName;
         return this;
@@ -30,6 +32,7 @@ public class CreateDeploymentConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumHealthyHosts")
     public MinimumHealthyHosts minimumHealthyHosts;
+
     public CreateDeploymentConfigInput withMinimumHealthyHosts(MinimumHealthyHosts minimumHealthyHosts) {
         this.minimumHealthyHosts = minimumHealthyHosts;
         return this;
@@ -38,9 +41,13 @@ public class CreateDeploymentConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficRoutingConfig")
     public TrafficRoutingConfig trafficRoutingConfig;
+
     public CreateDeploymentConfigInput withTrafficRoutingConfig(TrafficRoutingConfig trafficRoutingConfig) {
         this.trafficRoutingConfig = trafficRoutingConfig;
         return this;
     }
     
+    public CreateDeploymentConfigInput(@JsonProperty("deploymentConfigName") String deploymentConfigName) {
+        this.deploymentConfigName = deploymentConfigName;
+  }
 }

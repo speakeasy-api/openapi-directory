@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemovePaymentMethodSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String accountAuth;
+
     public RemovePaymentMethodSecurity withAccountAuth(String accountAuth) {
         this.accountAuth = accountAuth;
         return this;
     }
     
+    public RemovePaymentMethodSecurity(@JsonProperty("accountAuth") String accountAuth) {
+        this.accountAuth = accountAuth;
+  }
 }

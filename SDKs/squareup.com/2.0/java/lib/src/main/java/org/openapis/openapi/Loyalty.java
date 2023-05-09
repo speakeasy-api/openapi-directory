@@ -69,11 +69,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccumulateLoyaltyPointsResponse res = new org.openapis.openapi.models.operations.AccumulateLoyaltyPointsResponse() {{
+        org.openapis.openapi.models.operations.AccumulateLoyaltyPointsResponse res = new org.openapis.openapi.models.operations.AccumulateLoyaltyPointsResponse(contentType, httpRes.statusCode()) {{
             accumulateLoyaltyPointsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,11 +117,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdjustLoyaltyPointsResponse res = new org.openapis.openapi.models.operations.AdjustLoyaltyPointsResponse() {{
+        org.openapis.openapi.models.operations.AdjustLoyaltyPointsResponse res = new org.openapis.openapi.models.operations.AdjustLoyaltyPointsResponse(contentType, httpRes.statusCode()) {{
             adjustLoyaltyPointsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalculateLoyaltyPointsResponse res = new org.openapis.openapi.models.operations.CalculateLoyaltyPointsResponse() {{
+        org.openapis.openapi.models.operations.CalculateLoyaltyPointsResponse res = new org.openapis.openapi.models.operations.CalculateLoyaltyPointsResponse(contentType, httpRes.statusCode()) {{
             calculateLoyaltyPointsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,11 +216,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLoyaltyAccountResponse res = new org.openapis.openapi.models.operations.CreateLoyaltyAccountResponse() {{
+        org.openapis.openapi.models.operations.CreateLoyaltyAccountResponse res = new org.openapis.openapi.models.operations.CreateLoyaltyAccountResponse(contentType, httpRes.statusCode()) {{
             createLoyaltyAccountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -275,11 +267,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLoyaltyRewardResponse res = new org.openapis.openapi.models.operations.CreateLoyaltyRewardResponse() {{
+        org.openapis.openapi.models.operations.CreateLoyaltyRewardResponse res = new org.openapis.openapi.models.operations.CreateLoyaltyRewardResponse(contentType, httpRes.statusCode()) {{
             createLoyaltyRewardResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -324,11 +314,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLoyaltyRewardResponse res = new org.openapis.openapi.models.operations.DeleteLoyaltyRewardResponse() {{
+        org.openapis.openapi.models.operations.DeleteLoyaltyRewardResponse res = new org.openapis.openapi.models.operations.DeleteLoyaltyRewardResponse(contentType, httpRes.statusCode()) {{
             deleteLoyaltyRewardResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,10 +337,11 @@ public class Loyalty {
      * 
      * 
      * Replaced with [RetrieveLoyaltyProgram](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/retrieve-loyalty-program) when used with the keyword `main`.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLoyaltyProgramsResponse listLoyaltyPrograms() throws Exception {
+    public org.openapis.openapi.models.operations.ListLoyaltyProgramsResponse listLoyaltyPrograms(org.openapis.openapi.models.operations.ListLoyaltyProgramsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/loyalty/programs");
         
@@ -361,16 +350,15 @@ public class Loyalty {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLoyaltyProgramsResponse res = new org.openapis.openapi.models.operations.ListLoyaltyProgramsResponse() {{
+        org.openapis.openapi.models.operations.ListLoyaltyProgramsResponse res = new org.openapis.openapi.models.operations.ListLoyaltyProgramsResponse(contentType, httpRes.statusCode()) {{
             listLoyaltyProgramsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -422,11 +410,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedeemLoyaltyRewardResponse res = new org.openapis.openapi.models.operations.RedeemLoyaltyRewardResponse() {{
+        org.openapis.openapi.models.operations.RedeemLoyaltyRewardResponse res = new org.openapis.openapi.models.operations.RedeemLoyaltyRewardResponse(contentType, httpRes.statusCode()) {{
             redeemLoyaltyRewardResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -463,11 +449,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveLoyaltyAccountResponse res = new org.openapis.openapi.models.operations.RetrieveLoyaltyAccountResponse() {{
+        org.openapis.openapi.models.operations.RetrieveLoyaltyAccountResponse res = new org.openapis.openapi.models.operations.RetrieveLoyaltyAccountResponse(contentType, httpRes.statusCode()) {{
             retrieveLoyaltyAccountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,11 +490,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveLoyaltyProgramResponse res = new org.openapis.openapi.models.operations.RetrieveLoyaltyProgramResponse() {{
+        org.openapis.openapi.models.operations.RetrieveLoyaltyProgramResponse res = new org.openapis.openapi.models.operations.RetrieveLoyaltyProgramResponse(contentType, httpRes.statusCode()) {{
             retrieveLoyaltyProgramResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -547,11 +529,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveLoyaltyRewardResponse res = new org.openapis.openapi.models.operations.RetrieveLoyaltyRewardResponse() {{
+        org.openapis.openapi.models.operations.RetrieveLoyaltyRewardResponse res = new org.openapis.openapi.models.operations.RetrieveLoyaltyRewardResponse(contentType, httpRes.statusCode()) {{
             retrieveLoyaltyRewardResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -597,11 +577,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchLoyaltyAccountsResponse res = new org.openapis.openapi.models.operations.SearchLoyaltyAccountsResponse() {{
+        org.openapis.openapi.models.operations.SearchLoyaltyAccountsResponse res = new org.openapis.openapi.models.operations.SearchLoyaltyAccountsResponse(contentType, httpRes.statusCode()) {{
             searchLoyaltyAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -650,11 +628,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchLoyaltyEventsResponse res = new org.openapis.openapi.models.operations.SearchLoyaltyEventsResponse() {{
+        org.openapis.openapi.models.operations.SearchLoyaltyEventsResponse res = new org.openapis.openapi.models.operations.SearchLoyaltyEventsResponse(contentType, httpRes.statusCode()) {{
             searchLoyaltyEventsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -703,11 +679,9 @@ public class Loyalty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchLoyaltyRewardsResponse res = new org.openapis.openapi.models.operations.SearchLoyaltyRewardsResponse() {{
+        org.openapis.openapi.models.operations.SearchLoyaltyRewardsResponse res = new org.openapis.openapi.models.operations.SearchLoyaltyRewardsResponse(contentType, httpRes.statusCode()) {{
             searchLoyaltyRewardsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

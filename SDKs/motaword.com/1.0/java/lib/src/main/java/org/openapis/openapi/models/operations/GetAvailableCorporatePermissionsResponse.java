@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAvailableCorporatePermissionsResponse {
     
     public String contentType;
+
     public GetAvailableCorporatePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAvailableCorporatePermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.PermissionList permissionList;
+
     public GetAvailableCorporatePermissionsResponse withPermissionList(org.openapis.openapi.models.shared.PermissionList permissionList) {
         this.permissionList = permissionList;
         return this;
@@ -26,6 +29,7 @@ public class GetAvailableCorporatePermissionsResponse {
     
     
     public Integer statusCode;
+
     public GetAvailableCorporatePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAvailableCorporatePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAvailableCorporatePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAvailableCorporatePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

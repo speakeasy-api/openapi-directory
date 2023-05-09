@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkerConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeWorkerConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public DescribeWorkerConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkerConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeWorkerConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorkerConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorkerConfigurationResponse describeWorkerConfigurationResponse;
+
     public DescribeWorkerConfigurationResponse withDescribeWorkerConfigurationResponse(org.openapis.openapi.models.shared.DescribeWorkerConfigurationResponse describeWorkerConfigurationResponse) {
         this.describeWorkerConfigurationResponse = describeWorkerConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWorkerConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeWorkerConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeWorkerConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeWorkerConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeWorkerConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public DescribeWorkerConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeWorkerConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeWorkerConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeWorkerConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkerConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeWorkerConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkerConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DescribeWorkerConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeWorkerConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class DescribeWorkerConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeWorkerConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeWorkerConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

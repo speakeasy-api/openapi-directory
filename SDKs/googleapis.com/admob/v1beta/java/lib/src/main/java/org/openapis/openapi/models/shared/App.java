@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class App {
     /**
-     * Output only. The approval state for the app.
+     * Output only. The approval state for the app. The field is read-only.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appApprovalState")
     public AppAppApprovalStateEnum appApprovalState;
+
     public App withAppApprovalState(AppAppApprovalStateEnum appApprovalState) {
         this.appApprovalState = appApprovalState;
         return this;
@@ -29,6 +30,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public App withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -40,6 +42,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedAppInfo")
     public AppLinkedAppInfo linkedAppInfo;
+
     public App withLinkedAppInfo(AppLinkedAppInfo linkedAppInfo) {
         this.linkedAppInfo = linkedAppInfo;
         return this;
@@ -51,6 +54,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualAppInfo")
     public AppManualAppInfo manualAppInfo;
+
     public App withManualAppInfo(AppManualAppInfo manualAppInfo) {
         this.manualAppInfo = manualAppInfo;
         return this;
@@ -62,6 +66,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public App withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public App withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public App(){}
 }

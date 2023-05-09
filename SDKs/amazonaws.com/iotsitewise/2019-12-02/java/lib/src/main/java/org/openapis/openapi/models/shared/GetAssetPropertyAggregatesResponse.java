@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAssetPropertyAggregatesResponse {
     @JsonProperty("aggregatedValues")
     public AggregatedValue[] aggregatedValues;
+
     public GetAssetPropertyAggregatesResponse withAggregatedValues(AggregatedValue[] aggregatedValues) {
         this.aggregatedValues = aggregatedValues;
         return this;
@@ -22,9 +23,13 @@ public class GetAssetPropertyAggregatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetAssetPropertyAggregatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAssetPropertyAggregatesResponse(@JsonProperty("aggregatedValues") AggregatedValue[] aggregatedValues) {
+        this.aggregatedValues = aggregatedValues;
+  }
 }

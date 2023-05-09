@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEventBusResponse {
@@ -12,6 +13,7 @@ public class DeleteEventBusResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteEventBusResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEventBusResponse {
     
     
     public String contentType;
+
     public DeleteEventBusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEventBusResponse {
      */
     
     public Object internalException;
+
     public DeleteEventBusResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteEventBusResponse {
     
     
     public Integer statusCode;
+
     public DeleteEventBusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteEventBusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEventBusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteEventBusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

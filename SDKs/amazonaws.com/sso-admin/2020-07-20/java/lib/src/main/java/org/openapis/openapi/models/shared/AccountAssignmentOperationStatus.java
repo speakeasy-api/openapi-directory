@@ -22,6 +22,7 @@ public class AccountAssignmentOperationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public AccountAssignmentOperationStatus withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -30,6 +31,7 @@ public class AccountAssignmentOperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public AccountAssignmentOperationStatus withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -38,6 +40,7 @@ public class AccountAssignmentOperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public AccountAssignmentOperationStatus withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
@@ -46,6 +49,7 @@ public class AccountAssignmentOperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalId")
     public String principalId;
+
     public AccountAssignmentOperationStatus withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -54,6 +58,7 @@ public class AccountAssignmentOperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalType")
     public PrincipalTypeEnum principalType;
+
     public AccountAssignmentOperationStatus withPrincipalType(PrincipalTypeEnum principalType) {
         this.principalType = principalType;
         return this;
@@ -62,6 +67,7 @@ public class AccountAssignmentOperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public AccountAssignmentOperationStatus withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -70,6 +76,7 @@ public class AccountAssignmentOperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusValuesEnum status;
+
     public AccountAssignmentOperationStatus withStatus(StatusValuesEnum status) {
         this.status = status;
         return this;
@@ -78,6 +85,7 @@ public class AccountAssignmentOperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetId")
     public String targetId;
+
     public AccountAssignmentOperationStatus withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -86,9 +94,11 @@ public class AccountAssignmentOperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public TargetTypeEnum targetType;
+
     public AccountAssignmentOperationStatus withTargetType(TargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public AccountAssignmentOperationStatus(){}
 }

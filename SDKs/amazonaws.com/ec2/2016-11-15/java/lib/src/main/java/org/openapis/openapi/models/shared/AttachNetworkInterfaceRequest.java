@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AttachNetworkInterfaceRequest - Contains the parameters for AttachNetworkInterface.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AttachNetworkInterfaceRequest {
     
     public Long deviceIndex;
+
     public AttachNetworkInterfaceRequest withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -19,6 +20,7 @@ public class AttachNetworkInterfaceRequest {
     
     
     public Boolean dryRun;
+
     public AttachNetworkInterfaceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +28,7 @@ public class AttachNetworkInterfaceRequest {
     
     
     public EnaSrdSpecification enaSrdSpecification;
+
     public AttachNetworkInterfaceRequest withEnaSrdSpecification(EnaSrdSpecification enaSrdSpecification) {
         this.enaSrdSpecification = enaSrdSpecification;
         return this;
@@ -33,6 +36,7 @@ public class AttachNetworkInterfaceRequest {
     
     
     public String instanceId;
+
     public AttachNetworkInterfaceRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +44,7 @@ public class AttachNetworkInterfaceRequest {
     
     
     public Long networkCardIndex;
+
     public AttachNetworkInterfaceRequest withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -47,9 +52,15 @@ public class AttachNetworkInterfaceRequest {
     
     
     public String networkInterfaceId;
+
     public AttachNetworkInterfaceRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
     
+    public AttachNetworkInterfaceRequest(@JsonProperty("DeviceIndex") Long deviceIndex, @JsonProperty("InstanceId") String instanceId, @JsonProperty("NetworkInterfaceId") String networkInterfaceId) {
+        this.deviceIndex = deviceIndex;
+        this.instanceId = instanceId;
+        this.networkInterfaceId = networkInterfaceId;
+  }
 }

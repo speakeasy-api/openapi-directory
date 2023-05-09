@@ -15,6 +15,7 @@ public class ResourceIdPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdType")
     public ResourceIdTypeEnum resourceIdType;
+
     public ResourceIdPreference withResourceIdType(ResourceIdTypeEnum resourceIdType) {
         this.resourceIdType = resourceIdType;
         return this;
@@ -23,9 +24,11 @@ public class ResourceIdPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public ResourceEnum[] resources;
+
     public ResourceIdPreference withResources(ResourceEnum[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ResourceIdPreference(){}
 }

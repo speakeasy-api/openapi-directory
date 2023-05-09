@@ -19,6 +19,7 @@ public class CreateBookingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booking")
     public Booking booking;
+
     public CreateBookingResponse withBooking(Booking booking) {
         this.booking = booking;
         return this;
@@ -30,9 +31,11 @@ public class CreateBookingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateBookingResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CreateBookingResponse(){}
 }

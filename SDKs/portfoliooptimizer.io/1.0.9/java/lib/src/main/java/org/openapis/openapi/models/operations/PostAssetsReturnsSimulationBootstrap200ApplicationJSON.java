@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsReturnsSimulationBootstrap200ApplicationJSON {
     @JsonProperty("simulations")
     public PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulations[] simulations;
+
     public PostAssetsReturnsSimulationBootstrap200ApplicationJSON withSimulations(PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulations[] simulations) {
         this.simulations = simulations;
         return this;
     }
     
+    public PostAssetsReturnsSimulationBootstrap200ApplicationJSON(@JsonProperty("simulations") PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulations[] simulations) {
+        this.simulations = simulations;
+  }
 }

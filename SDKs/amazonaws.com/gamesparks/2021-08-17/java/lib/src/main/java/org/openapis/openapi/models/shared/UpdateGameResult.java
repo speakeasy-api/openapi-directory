@@ -15,9 +15,11 @@ public class UpdateGameResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Game")
     public GameDetails game;
+
     public UpdateGameResult withGame(GameDetails game) {
         this.game = game;
         return this;
     }
     
+    public UpdateGameResult(){}
 }

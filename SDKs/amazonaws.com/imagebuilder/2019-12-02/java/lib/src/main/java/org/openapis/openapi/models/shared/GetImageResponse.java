@@ -15,6 +15,7 @@ public class GetImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public GetImageResponse withImage(Image image) {
         this.image = image;
         return this;
@@ -23,9 +24,11 @@ public class GetImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GetImageResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetImageResponse(){}
 }

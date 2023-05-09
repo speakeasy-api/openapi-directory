@@ -19,6 +19,7 @@ public class GenerateAccessLogsRequestBody {
      */
     @JsonProperty("domainName")
     public String domainName;
+
     public GenerateAccessLogsRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -32,6 +33,7 @@ public class GenerateAccessLogsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GenerateAccessLogsRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -45,9 +47,13 @@ public class GenerateAccessLogsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GenerateAccessLogsRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GenerateAccessLogsRequestBody(@JsonProperty("domainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

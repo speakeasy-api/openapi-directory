@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * V3StatusHealthEnum - API system health status (0=offline, 1=online)
  */
 public enum V3StatusHealthEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private V3StatusHealthEnum(String value) {
+    private V3StatusHealthEnum(Integer value) {
         this.value = value;
     }
 }

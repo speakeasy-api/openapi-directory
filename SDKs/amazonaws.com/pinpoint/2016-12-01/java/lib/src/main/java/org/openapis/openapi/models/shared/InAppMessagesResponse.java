@@ -15,9 +15,11 @@ public class InAppMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InAppMessageCampaigns")
     public InAppMessageCampaign[] inAppMessageCampaigns;
+
     public InAppMessagesResponse withInAppMessageCampaigns(InAppMessageCampaign[] inAppMessageCampaigns) {
         this.inAppMessageCampaigns = inAppMessageCampaigns;
         return this;
     }
     
+    public InAppMessagesResponse(){}
 }

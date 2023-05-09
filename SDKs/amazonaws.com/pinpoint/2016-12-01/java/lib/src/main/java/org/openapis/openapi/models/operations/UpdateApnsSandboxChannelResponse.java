@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApnsSandboxChannelResponse {
@@ -12,6 +13,7 @@ public class UpdateApnsSandboxChannelResponse {
      */
     
     public Object badRequestException;
+
     public UpdateApnsSandboxChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateApnsSandboxChannelResponse {
     
     
     public String contentType;
+
     public UpdateApnsSandboxChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApnsSandboxChannelResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateApnsSandboxChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApnsSandboxChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateApnsSandboxChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApnsSandboxChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateApnsSandboxChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateApnsSandboxChannelResponse {
      */
     
     public Object notFoundException;
+
     public UpdateApnsSandboxChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateApnsSandboxChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateApnsSandboxChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateApnsSandboxChannelResponse {
     
     
     public Integer statusCode;
+
     public UpdateApnsSandboxChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateApnsSandboxChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApnsSandboxChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateApnsSandboxChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateApnsSandboxChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateApnsSandboxChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApnsSandboxChannelResponse updateApnsSandboxChannelResponse;
+
     public UpdateApnsSandboxChannelResponse withUpdateApnsSandboxChannelResponse(org.openapis.openapi.models.shared.UpdateApnsSandboxChannelResponse updateApnsSandboxChannelResponse) {
         this.updateApnsSandboxChannelResponse = updateApnsSandboxChannelResponse;
         return this;
     }
     
+    public UpdateApnsSandboxChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class IngressPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressFrom")
     public IngressFrom ingressFrom;
+
     public IngressPolicy withIngressFrom(IngressFrom ingressFrom) {
         this.ingressFrom = ingressFrom;
         return this;
@@ -29,9 +30,11 @@ public class IngressPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressTo")
     public IngressTo ingressTo;
+
     public IngressPolicy withIngressTo(IngressTo ingressTo) {
         this.ingressTo = ingressTo;
         return this;
     }
     
+    public IngressPolicy(){}
 }

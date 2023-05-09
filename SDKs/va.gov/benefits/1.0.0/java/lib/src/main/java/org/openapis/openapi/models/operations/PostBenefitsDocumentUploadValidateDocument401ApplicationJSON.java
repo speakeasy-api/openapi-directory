@@ -18,9 +18,11 @@ public class PostBenefitsDocumentUploadValidateDocument401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public PostBenefitsDocumentUploadValidateDocument401ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostBenefitsDocumentUploadValidateDocument401ApplicationJSON(){}
 }

@@ -18,9 +18,11 @@ public class DailyResourceUsageAggregationDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iops")
     public DailyResourceUsageAggregationStats iops;
+
     public DailyResourceUsageAggregationDisk withIops(DailyResourceUsageAggregationStats iops) {
         this.iops = iops;
         return this;
     }
     
+    public DailyResourceUsageAggregationDisk(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PolicyRole {
     
     public String roleId;
+
     public PolicyRole withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
@@ -19,9 +20,11 @@ public class PolicyRole {
     
     
     public String roleName;
+
     public PolicyRole withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public PolicyRole(){}
 }

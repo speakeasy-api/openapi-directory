@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanConstraint")
     public java.util.Map<String, Object> booleanConstraint;
+
     public GoogleCloudOrgpolicyV2Constraint withBooleanConstraint(java.util.Map<String, Object> booleanConstraint) {
         this.booleanConstraint = booleanConstraint;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudOrgpolicyV2Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraintDefault")
     public GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum constraintDefault;
+
     public GoogleCloudOrgpolicyV2Constraint withConstraintDefault(GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum constraintDefault) {
         this.constraintDefault = constraintDefault;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudOrgpolicyV2Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudOrgpolicyV2Constraint withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudOrgpolicyV2Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudOrgpolicyV2Constraint withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudOrgpolicyV2Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listConstraint")
     public GoogleCloudOrgpolicyV2ConstraintListConstraint listConstraint;
+
     public GoogleCloudOrgpolicyV2Constraint withListConstraint(GoogleCloudOrgpolicyV2ConstraintListConstraint listConstraint) {
         this.listConstraint = listConstraint;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudOrgpolicyV2Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudOrgpolicyV2Constraint withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudOrgpolicyV2Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsDryRun")
     public Boolean supportsDryRun;
+
     public GoogleCloudOrgpolicyV2Constraint withSupportsDryRun(Boolean supportsDryRun) {
         this.supportsDryRun = supportsDryRun;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2Constraint(){}
 }

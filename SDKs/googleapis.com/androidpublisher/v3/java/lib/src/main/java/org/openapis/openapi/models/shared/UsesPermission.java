@@ -18,6 +18,7 @@ public class UsesPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSdkVersion")
     public Integer maxSDKVersion;
+
     public UsesPermission withMaxSDKVersion(Integer maxSDKVersion) {
         this.maxSDKVersion = maxSDKVersion;
         return this;
@@ -29,9 +30,11 @@ public class UsesPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UsesPermission withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UsesPermission(){}
 }

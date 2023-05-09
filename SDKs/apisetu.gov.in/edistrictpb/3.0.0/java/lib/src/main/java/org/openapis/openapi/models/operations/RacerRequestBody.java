@@ -15,6 +15,7 @@ public class RacerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public RacerRequestBodyCertificateParameters certificateParameters;
+
     public RacerRequestBody withCertificateParameters(RacerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class RacerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public RacerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class RacerRequestBody {
      */
     @JsonProperty("format")
     public RacerRequestBodyFormatEnum format;
+
     public RacerRequestBody withFormat(RacerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class RacerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public RacerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public RacerRequestBody(@JsonProperty("format") RacerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

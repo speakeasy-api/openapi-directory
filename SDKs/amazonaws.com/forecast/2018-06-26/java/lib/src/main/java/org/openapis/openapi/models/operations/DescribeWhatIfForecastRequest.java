@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeWhatIfForecastRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeWhatIfForecastRequest describeWhatIfForecastRequest;
+
     public DescribeWhatIfForecastRequest withDescribeWhatIfForecastRequest(org.openapis.openapi.models.shared.DescribeWhatIfForecastRequest describeWhatIfForecastRequest) {
         this.describeWhatIfForecastRequest = describeWhatIfForecastRequest;
         return this;
@@ -16,6 +18,7 @@ public class DescribeWhatIfForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeWhatIfForecastRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeWhatIfForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeWhatIfForecastRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeWhatIfForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeWhatIfForecastRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeWhatIfForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeWhatIfForecastRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeWhatIfForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeWhatIfForecastRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeWhatIfForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeWhatIfForecastRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeWhatIfForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeWhatIfForecastRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DescribeWhatIfForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeWhatIfForecastXAmzTargetEnum xAmzTarget;
+
     public DescribeWhatIfForecastRequest withXAmzTarget(DescribeWhatIfForecastXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeWhatIfForecastRequest(@JsonProperty("DescribeWhatIfForecastRequest") org.openapis.openapi.models.shared.DescribeWhatIfForecastRequest describeWhatIfForecastRequest, @JsonProperty("X-Amz-Target") DescribeWhatIfForecastXAmzTargetEnum xAmzTarget) {
+        this.describeWhatIfForecastRequest = describeWhatIfForecastRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

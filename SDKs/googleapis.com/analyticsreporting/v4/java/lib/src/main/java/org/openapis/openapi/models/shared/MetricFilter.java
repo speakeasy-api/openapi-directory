@@ -18,6 +18,7 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public MetricFilter withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
@@ -29,6 +30,7 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public MetricFilter withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -40,6 +42,7 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("not")
     public Boolean not;
+
     public MetricFilter withNot(Boolean not) {
         this.not = not;
         return this;
@@ -51,9 +54,11 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public MetricFilterOperatorEnum operator;
+
     public MetricFilter withOperator(MetricFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
     }
     
+    public MetricFilter(){}
 }

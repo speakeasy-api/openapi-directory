@@ -15,6 +15,7 @@ public class KernelGatewayImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemConfig")
     public FileSystemConfig fileSystemConfig;
+
     public KernelGatewayImageConfig withFileSystemConfig(FileSystemConfig fileSystemConfig) {
         this.fileSystemConfig = fileSystemConfig;
         return this;
@@ -22,9 +23,13 @@ public class KernelGatewayImageConfig {
     
     @JsonProperty("KernelSpecs")
     public KernelSpec[] kernelSpecs;
+
     public KernelGatewayImageConfig withKernelSpecs(KernelSpec[] kernelSpecs) {
         this.kernelSpecs = kernelSpecs;
         return this;
     }
     
+    public KernelGatewayImageConfig(@JsonProperty("KernelSpecs") KernelSpec[] kernelSpecs) {
+        this.kernelSpecs = kernelSpecs;
+  }
 }

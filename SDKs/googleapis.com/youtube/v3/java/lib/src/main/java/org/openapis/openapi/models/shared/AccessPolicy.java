@@ -18,6 +18,7 @@ public class AccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public Boolean allowed;
+
     public AccessPolicy withAllowed(Boolean allowed) {
         this.allowed = allowed;
         return this;
@@ -29,9 +30,11 @@ public class AccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception")
     public String[] exception;
+
     public AccessPolicy withException(String[] exception) {
         this.exception = exception;
         return this;
     }
     
+    public AccessPolicy(){}
 }

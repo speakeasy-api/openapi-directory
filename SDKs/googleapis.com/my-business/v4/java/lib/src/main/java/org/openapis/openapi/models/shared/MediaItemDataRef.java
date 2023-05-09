@@ -18,9 +18,11 @@ public class MediaItemDataRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public MediaItemDataRef withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public MediaItemDataRef(){}
 }

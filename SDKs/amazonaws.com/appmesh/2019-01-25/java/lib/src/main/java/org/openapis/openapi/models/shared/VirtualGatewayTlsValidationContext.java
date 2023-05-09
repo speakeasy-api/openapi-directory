@@ -15,6 +15,7 @@ public class VirtualGatewayTlsValidationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public SubjectAlternativeNames subjectAlternativeNames;
+
     public VirtualGatewayTlsValidationContext withSubjectAlternativeNames(SubjectAlternativeNames subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -22,9 +23,13 @@ public class VirtualGatewayTlsValidationContext {
     
     @JsonProperty("trust")
     public VirtualGatewayTlsValidationContextTrust trust;
+
     public VirtualGatewayTlsValidationContext withTrust(VirtualGatewayTlsValidationContextTrust trust) {
         this.trust = trust;
         return this;
     }
     
+    public VirtualGatewayTlsValidationContext(@JsonProperty("trust") VirtualGatewayTlsValidationContextTrust trust) {
+        this.trust = trust;
+  }
 }

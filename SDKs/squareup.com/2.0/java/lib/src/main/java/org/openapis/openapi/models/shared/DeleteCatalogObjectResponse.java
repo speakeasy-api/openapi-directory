@@ -19,6 +19,7 @@ public class DeleteCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_at")
     public String deletedAt;
+
     public DeleteCatalogObjectResponse withDeletedAt(String deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -33,6 +34,7 @@ public class DeleteCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_object_ids")
     public String[] deletedObjectIds;
+
     public DeleteCatalogObjectResponse withDeletedObjectIds(String[] deletedObjectIds) {
         this.deletedObjectIds = deletedObjectIds;
         return this;
@@ -44,9 +46,11 @@ public class DeleteCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public DeleteCatalogObjectResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteCatalogObjectResponse(){}
 }

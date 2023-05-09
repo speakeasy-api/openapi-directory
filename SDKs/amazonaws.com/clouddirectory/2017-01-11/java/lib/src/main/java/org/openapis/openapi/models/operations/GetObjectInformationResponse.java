@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetObjectInformationResponse {
@@ -12,6 +13,7 @@ public class GetObjectInformationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetObjectInformationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetObjectInformationResponse {
     
     
     public String contentType;
+
     public GetObjectInformationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetObjectInformationResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public GetObjectInformationResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class GetObjectInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetObjectInformationResponse getObjectInformationResponse;
+
     public GetObjectInformationResponse withGetObjectInformationResponse(org.openapis.openapi.models.shared.GetObjectInformationResponse getObjectInformationResponse) {
         this.getObjectInformationResponse = getObjectInformationResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetObjectInformationResponse {
      */
     
     public Object internalServiceException;
+
     public GetObjectInformationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetObjectInformationResponse {
      */
     
     public Object invalidArnException;
+
     public GetObjectInformationResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class GetObjectInformationResponse {
      */
     
     public Object limitExceededException;
+
     public GetObjectInformationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetObjectInformationResponse {
     
     
     public Integer statusCode;
+
     public GetObjectInformationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetObjectInformationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetObjectInformationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetObjectInformationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetObjectInformationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetObjectInformationResponse {
      */
     
     public Object retryableConflictException;
+
     public GetObjectInformationResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class GetObjectInformationResponse {
      */
     
     public Object validationException;
+
     public GetObjectInformationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetObjectInformationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

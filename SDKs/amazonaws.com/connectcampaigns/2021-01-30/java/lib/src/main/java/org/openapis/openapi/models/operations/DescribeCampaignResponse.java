@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCampaignResponse {
@@ -12,6 +13,7 @@ public class DescribeCampaignResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeCampaignResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCampaignResponse {
     
     
     public String contentType;
+
     public DescribeCampaignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCampaignResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCampaignResponse describeCampaignResponse;
+
     public DescribeCampaignResponse withDescribeCampaignResponse(org.openapis.openapi.models.shared.DescribeCampaignResponse describeCampaignResponse) {
         this.describeCampaignResponse = describeCampaignResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCampaignResponse {
      */
     
     public Object internalServerException;
+
     public DescribeCampaignResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeCampaignResponse {
     
     
     public Integer statusCode;
+
     public DescribeCampaignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeCampaignResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCampaignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeCampaignResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCampaignResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeCampaignResponse {
      */
     
     public Object validationException;
+
     public DescribeCampaignResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeCampaignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

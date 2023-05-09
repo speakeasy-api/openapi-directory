@@ -16,6 +16,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public Integer[] applicableMembershipTypes;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -26,6 +27,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public String bungieGlobalDisplayName;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -36,6 +38,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -46,6 +49,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public Integer crossSaveOverride;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -56,6 +60,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public String displayName;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -66,6 +71,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public String iconPath;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -76,6 +82,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public Boolean isPublic;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -86,6 +93,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public Long membershipId;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -96,6 +104,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public Integer membershipType;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -106,9 +115,11 @@ public class DestinyEntitiesProfilesDestinyProfileComponentUserInfo {
      */
     
     public String supplementalDisplayName;
+
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
     }
     
+    public DestinyEntitiesProfilesDestinyProfileComponentUserInfo(){}
 }

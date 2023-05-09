@@ -15,9 +15,11 @@ public class DeleteApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application")
     public ApplicationSummary application;
+
     public DeleteApplicationResponse withApplication(ApplicationSummary application) {
         this.application = application;
         return this;
     }
     
+    public DeleteApplicationResponse(){}
 }

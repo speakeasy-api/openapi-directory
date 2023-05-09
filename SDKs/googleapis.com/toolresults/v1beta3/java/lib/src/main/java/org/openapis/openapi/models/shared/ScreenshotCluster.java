@@ -18,6 +18,7 @@ public class ScreenshotCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity")
     public String activity;
+
     public ScreenshotCluster withActivity(String activity) {
         this.activity = activity;
         return this;
@@ -29,6 +30,7 @@ public class ScreenshotCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public ScreenshotCluster withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -37,6 +39,7 @@ public class ScreenshotCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyScreen")
     public Screen keyScreen;
+
     public ScreenshotCluster withKeyScreen(Screen keyScreen) {
         this.keyScreen = keyScreen;
         return this;
@@ -48,9 +51,11 @@ public class ScreenshotCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screens")
     public Screen[] screens;
+
     public ScreenshotCluster withScreens(Screen[] screens) {
         this.screens = screens;
         return this;
     }
     
+    public ScreenshotCluster(){}
 }

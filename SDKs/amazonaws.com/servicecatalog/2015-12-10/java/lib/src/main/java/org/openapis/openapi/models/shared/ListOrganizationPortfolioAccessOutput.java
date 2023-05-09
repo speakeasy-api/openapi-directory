@@ -15,6 +15,7 @@ public class ListOrganizationPortfolioAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListOrganizationPortfolioAccessOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListOrganizationPortfolioAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationNodes")
     public OrganizationNode[] organizationNodes;
+
     public ListOrganizationPortfolioAccessOutput withOrganizationNodes(OrganizationNode[] organizationNodes) {
         this.organizationNodes = organizationNodes;
         return this;
     }
     
+    public ListOrganizationPortfolioAccessOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessagesSendRequest {
@@ -12,6 +13,7 @@ public class GetMessagesSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body")
     public String body;
+
     public GetMessagesSendRequest withBody(String body) {
         this.body = body;
         return this;
@@ -22,6 +24,7 @@ public class GetMessagesSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deduplication-id")
     public Long deduplicationId;
+
     public GetMessagesSendRequest withDeduplicationId(Long deduplicationId) {
         this.deduplicationId = deduplicationId;
         return this;
@@ -32,9 +35,14 @@ public class GetMessagesSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public String to;
+
     public GetMessagesSendRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public GetMessagesSendRequest(@JsonProperty("body") String body, @JsonProperty("to") String to) {
+        this.body = body;
+        this.to = to;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelAPendingCheckTransferDefaultApplicationJSON10 {
     @JsonProperty("detail")
     public String detail;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON10 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -16,6 +17,7 @@ public class CancelAPendingCheckTransferDefaultApplicationJSON10 {
     
     @JsonProperty("status")
     public CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum status;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON10 withStatus(CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +25,7 @@ public class CancelAPendingCheckTransferDefaultApplicationJSON10 {
     
     @JsonProperty("title")
     public String title;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON10 withTitle(String title) {
         this.title = title;
         return this;
@@ -30,9 +33,16 @@ public class CancelAPendingCheckTransferDefaultApplicationJSON10 {
     
     @JsonProperty("type")
     public CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum type;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON10 withType(CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CancelAPendingCheckTransferDefaultApplicationJSON10(@JsonProperty("detail") String detail, @JsonProperty("status") CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

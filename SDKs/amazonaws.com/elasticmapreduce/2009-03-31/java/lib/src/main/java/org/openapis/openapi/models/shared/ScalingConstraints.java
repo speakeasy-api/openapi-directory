@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScalingConstraints {
     @JsonProperty("MaxCapacity")
     public Long maxCapacity;
+
     public ScalingConstraints withMaxCapacity(Long maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -19,9 +20,14 @@ public class ScalingConstraints {
     
     @JsonProperty("MinCapacity")
     public Long minCapacity;
+
     public ScalingConstraints withMinCapacity(Long minCapacity) {
         this.minCapacity = minCapacity;
         return this;
     }
     
+    public ScalingConstraints(@JsonProperty("MaxCapacity") Long maxCapacity, @JsonProperty("MinCapacity") Long minCapacity) {
+        this.maxCapacity = maxCapacity;
+        this.minCapacity = minCapacity;
+  }
 }

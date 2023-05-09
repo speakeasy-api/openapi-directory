@@ -15,6 +15,7 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ReactiveOrganizationInsightSummary withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ReactiveOrganizationInsightSummary withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightTimeRange")
     public InsightTimeRange insightTimeRange;
+
     public ReactiveOrganizationInsightSummary withInsightTimeRange(InsightTimeRange insightTimeRange) {
         this.insightTimeRange = insightTimeRange;
         return this;
@@ -42,6 +45,7 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ReactiveOrganizationInsightSummary withName(String name) {
         this.name = name;
         return this;
@@ -50,6 +54,7 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitId")
     public String organizationalUnitId;
+
     public ReactiveOrganizationInsightSummary withOrganizationalUnitId(String organizationalUnitId) {
         this.organizationalUnitId = organizationalUnitId;
         return this;
@@ -61,6 +66,7 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public ResourceCollection resourceCollection;
+
     public ReactiveOrganizationInsightSummary withResourceCollection(ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -72,6 +78,7 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCollection")
     public ServiceCollection serviceCollection;
+
     public ReactiveOrganizationInsightSummary withServiceCollection(ServiceCollection serviceCollection) {
         this.serviceCollection = serviceCollection;
         return this;
@@ -80,6 +87,7 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public InsightSeverityEnum severity;
+
     public ReactiveOrganizationInsightSummary withSeverity(InsightSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -88,9 +96,11 @@ public class ReactiveOrganizationInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InsightStatusEnum status;
+
     public ReactiveOrganizationInsightSummary withStatus(InsightStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReactiveOrganizationInsightSummary(){}
 }

@@ -18,6 +18,7 @@ public class MetagameConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentVersion")
     public Integer currentVersion;
+
     public MetagameConfig withCurrentVersion(Integer currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -29,6 +30,7 @@ public class MetagameConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MetagameConfig withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class MetagameConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playerLevels")
     public PlayerLevel[] playerLevels;
+
     public MetagameConfig withPlayerLevels(PlayerLevel[] playerLevels) {
         this.playerLevels = playerLevels;
         return this;
     }
     
+    public MetagameConfig(){}
 }

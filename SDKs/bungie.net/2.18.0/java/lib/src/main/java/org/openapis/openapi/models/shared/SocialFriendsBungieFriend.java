@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SocialFriendsBungieFriend {
     
     public String bungieGlobalDisplayName;
+
     public SocialFriendsBungieFriend withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -16,6 +17,7 @@ public class SocialFriendsBungieFriend {
     
     
     public Long bungieGlobalDisplayNameCode;
+
     public SocialFriendsBungieFriend withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -23,6 +25,7 @@ public class SocialFriendsBungieFriend {
     
     
     public UserGeneralUser bungieNetUser;
+
     public SocialFriendsBungieFriend withBungieNetUser(UserGeneralUser bungieNetUser) {
         this.bungieNetUser = bungieNetUser;
         return this;
@@ -30,6 +33,7 @@ public class SocialFriendsBungieFriend {
     
     
     public Integer lastSeenAsBungieMembershipType;
+
     public SocialFriendsBungieFriend withLastSeenAsBungieMembershipType(Integer lastSeenAsBungieMembershipType) {
         this.lastSeenAsBungieMembershipType = lastSeenAsBungieMembershipType;
         return this;
@@ -37,6 +41,7 @@ public class SocialFriendsBungieFriend {
     
     
     public Long lastSeenAsMembershipId;
+
     public SocialFriendsBungieFriend withLastSeenAsMembershipId(Long lastSeenAsMembershipId) {
         this.lastSeenAsMembershipId = lastSeenAsMembershipId;
         return this;
@@ -44,6 +49,7 @@ public class SocialFriendsBungieFriend {
     
     
     public Integer onlineStatus;
+
     public SocialFriendsBungieFriend withOnlineStatus(Integer onlineStatus) {
         this.onlineStatus = onlineStatus;
         return this;
@@ -51,6 +57,7 @@ public class SocialFriendsBungieFriend {
     
     
     public Integer onlineTitle;
+
     public SocialFriendsBungieFriend withOnlineTitle(Integer onlineTitle) {
         this.onlineTitle = onlineTitle;
         return this;
@@ -58,9 +65,11 @@ public class SocialFriendsBungieFriend {
     
     
     public Integer relationship;
+
     public SocialFriendsBungieFriend withRelationship(Integer relationship) {
         this.relationship = relationship;
         return this;
     }
     
+    public SocialFriendsBungieFriend(){}
 }

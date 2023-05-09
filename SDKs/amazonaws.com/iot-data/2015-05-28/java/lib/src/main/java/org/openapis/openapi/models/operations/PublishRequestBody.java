@@ -15,9 +15,11 @@ public class PublishRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public PublishRequestBody withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public PublishRequestBody(){}
 }

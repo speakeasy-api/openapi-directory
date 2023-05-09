@@ -15,6 +15,7 @@ public class ListInferenceSchedulersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerSummaries")
     public InferenceSchedulerSummary[] inferenceSchedulerSummaries;
+
     public ListInferenceSchedulersResponse withInferenceSchedulerSummaries(InferenceSchedulerSummary[] inferenceSchedulerSummaries) {
         this.inferenceSchedulerSummaries = inferenceSchedulerSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListInferenceSchedulersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceSchedulersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInferenceSchedulersResponse(){}
 }

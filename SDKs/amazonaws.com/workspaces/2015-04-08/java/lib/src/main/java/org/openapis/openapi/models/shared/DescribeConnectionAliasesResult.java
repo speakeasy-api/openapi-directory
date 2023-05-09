@@ -15,6 +15,7 @@ public class DescribeConnectionAliasesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionAliases")
     public ConnectionAlias[] connectionAliases;
+
     public DescribeConnectionAliasesResult withConnectionAliases(ConnectionAlias[] connectionAliases) {
         this.connectionAliases = connectionAliases;
         return this;
@@ -23,9 +24,11 @@ public class DescribeConnectionAliasesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConnectionAliasesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConnectionAliasesResult(){}
 }

@@ -15,6 +15,7 @@ public class PartListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RangeInBytes")
     public String rangeInBytes;
+
     public PartListElement withRangeInBytes(String rangeInBytes) {
         this.rangeInBytes = rangeInBytes;
         return this;
@@ -23,9 +24,11 @@ public class PartListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SHA256TreeHash")
     public String sha256TreeHash;
+
     public PartListElement withSha256TreeHash(String sha256TreeHash) {
         this.sha256TreeHash = sha256TreeHash;
         return this;
     }
     
+    public PartListElement(){}
 }

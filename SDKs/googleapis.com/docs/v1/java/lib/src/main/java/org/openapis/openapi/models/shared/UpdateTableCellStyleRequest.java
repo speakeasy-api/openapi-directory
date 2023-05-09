@@ -18,6 +18,7 @@ public class UpdateTableCellStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateTableCellStyleRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateTableCellStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCellStyle")
     public TableCellStyle tableCellStyle;
+
     public UpdateTableCellStyleRequest withTableCellStyle(TableCellStyle tableCellStyle) {
         this.tableCellStyle = tableCellStyle;
         return this;
@@ -40,6 +42,7 @@ public class UpdateTableCellStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRange")
     public TableRange tableRange;
+
     public UpdateTableCellStyleRequest withTableRange(TableRange tableRange) {
         this.tableRange = tableRange;
         return this;
@@ -51,9 +54,11 @@ public class UpdateTableCellStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableStartLocation")
     public Location tableStartLocation;
+
     public UpdateTableCellStyleRequest withTableStartLocation(Location tableStartLocation) {
         this.tableStartLocation = tableStartLocation;
         return this;
     }
     
+    public UpdateTableCellStyleRequest(){}
 }

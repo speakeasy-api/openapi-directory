@@ -68,11 +68,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OffersLoungesByLocationGetResponse res = new org.openapis.openapi.models.operations.OffersLoungesByLocationGetResponse() {{
+        org.openapis.openapi.models.operations.OffersLoungesByLocationGetResponse res = new org.openapis.openapi.models.operations.OffersLoungesByLocationGetResponse(contentType, httpRes.statusCode()) {{
             offersLoungesByLocationGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,11 +115,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse res = new org.openapis.openapi.models.operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse() {{
+        org.openapis.openapi.models.operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse res = new org.openapis.openapi.models.operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse(contentType, httpRes.statusCode()) {{
             offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

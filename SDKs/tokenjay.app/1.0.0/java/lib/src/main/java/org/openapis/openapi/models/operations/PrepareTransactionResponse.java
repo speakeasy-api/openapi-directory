@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrepareTransactionResponse {
     
     public byte[] body;
+
     public PrepareTransactionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PrepareTransactionResponse {
     
     
     public String contentType;
+
     public PrepareTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PrepareTransactionResponse {
     
     
     public Integer statusCode;
+
     public PrepareTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PrepareTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrepareTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PrepareTransactionResponse {
      */
     
     public String prepareTransaction400WildcardString;
+
     public PrepareTransactionResponse withPrepareTransaction400WildcardString(String prepareTransaction400WildcardString) {
         this.prepareTransaction400WildcardString = prepareTransaction400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class PrepareTransactionResponse {
      */
     
     public String prepareTransaction401WildcardString;
+
     public PrepareTransactionResponse withPrepareTransaction401WildcardString(String prepareTransaction401WildcardString) {
         this.prepareTransaction401WildcardString = prepareTransaction401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class PrepareTransactionResponse {
      */
     
     public String prepareTransaction404WildcardString;
+
     public PrepareTransactionResponse withPrepareTransaction404WildcardString(String prepareTransaction404WildcardString) {
         this.prepareTransaction404WildcardString = prepareTransaction404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class PrepareTransactionResponse {
      */
     
     public String prepareTransaction409WildcardString;
+
     public PrepareTransactionResponse withPrepareTransaction409WildcardString(String prepareTransaction409WildcardString) {
         this.prepareTransaction409WildcardString = prepareTransaction409WildcardString;
         return this;
     }
     
+    public PrepareTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

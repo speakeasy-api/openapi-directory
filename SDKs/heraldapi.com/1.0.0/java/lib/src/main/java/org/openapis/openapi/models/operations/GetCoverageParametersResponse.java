@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCoverageParametersResponse {
     
     public String contentType;
+
     public GetCoverageParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCoverageParametersResponse {
     
     
     public Integer statusCode;
+
     public GetCoverageParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetCoverageParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCoverageParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetCoverageParametersResponse {
      */
     
     public GetCoverageParameters200ApplicationJSON getCoverageParameters200ApplicationJSONObject;
+
     public GetCoverageParametersResponse withGetCoverageParameters200ApplicationJSONObject(GetCoverageParameters200ApplicationJSON getCoverageParameters200ApplicationJSONObject) {
         this.getCoverageParameters200ApplicationJSONObject = getCoverageParameters200ApplicationJSONObject;
         return this;
     }
     
+    public GetCoverageParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

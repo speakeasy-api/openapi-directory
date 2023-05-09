@@ -12,6 +12,7 @@ public class PatchOrganizationRequestBodySupportChat1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PatchOrganizationRequestBodySupportChat1 withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class PatchOrganizationRequestBodySupportChat1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatchOrganizationRequestBodySupportChat1 withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PatchOrganizationRequestBodySupportChat1(){}
 }

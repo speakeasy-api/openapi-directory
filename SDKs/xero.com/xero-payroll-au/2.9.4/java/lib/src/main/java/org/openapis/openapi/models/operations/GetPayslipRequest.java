@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayslipRequest {
@@ -12,6 +13,7 @@ public class GetPayslipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayslipID")
     public String payslipID;
+
     public GetPayslipRequest withPayslipID(String payslipID) {
         this.payslipID = payslipID;
         return this;
@@ -22,9 +24,14 @@ public class GetPayslipRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public GetPayslipRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetPayslipRequest(@JsonProperty("PayslipID") String payslipID, @JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.payslipID = payslipID;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

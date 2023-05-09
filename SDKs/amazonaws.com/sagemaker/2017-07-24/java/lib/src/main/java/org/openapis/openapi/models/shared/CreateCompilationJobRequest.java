@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCompilationJobRequest {
     @JsonProperty("CompilationJobName")
     public String compilationJobName;
+
     public CreateCompilationJobRequest withCompilationJobName(String compilationJobName) {
         this.compilationJobName = compilationJobName;
         return this;
@@ -19,6 +20,7 @@ public class CreateCompilationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputConfig")
     public InputConfig inputConfig;
+
     public CreateCompilationJobRequest withInputConfig(InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -27,6 +29,7 @@ public class CreateCompilationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageVersionArn")
     public String modelPackageVersionArn;
+
     public CreateCompilationJobRequest withModelPackageVersionArn(String modelPackageVersionArn) {
         this.modelPackageVersionArn = modelPackageVersionArn;
         return this;
@@ -34,6 +37,7 @@ public class CreateCompilationJobRequest {
     
     @JsonProperty("OutputConfig")
     public OutputConfig outputConfig;
+
     public CreateCompilationJobRequest withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -41,6 +45,7 @@ public class CreateCompilationJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateCompilationJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -48,6 +53,7 @@ public class CreateCompilationJobRequest {
     
     @JsonProperty("StoppingCondition")
     public StoppingCondition stoppingCondition;
+
     public CreateCompilationJobRequest withStoppingCondition(StoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -56,6 +62,7 @@ public class CreateCompilationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateCompilationJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -64,9 +71,16 @@ public class CreateCompilationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public NeoVpcConfig vpcConfig;
+
     public CreateCompilationJobRequest withVpcConfig(NeoVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateCompilationJobRequest(@JsonProperty("CompilationJobName") String compilationJobName, @JsonProperty("OutputConfig") OutputConfig outputConfig, @JsonProperty("RoleArn") String roleArn, @JsonProperty("StoppingCondition") StoppingCondition stoppingCondition) {
+        this.compilationJobName = compilationJobName;
+        this.outputConfig = outputConfig;
+        this.roleArn = roleArn;
+        this.stoppingCondition = stoppingCondition;
+  }
 }

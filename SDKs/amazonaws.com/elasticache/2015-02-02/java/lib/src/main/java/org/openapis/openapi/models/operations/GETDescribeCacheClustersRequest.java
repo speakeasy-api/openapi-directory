@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeCacheClustersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeCacheClustersActionEnum action;
+
     public GETDescribeCacheClustersRequest withAction(GETDescribeCacheClustersActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeCacheClustersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterId")
     public String cacheClusterId;
+
     public GETDescribeCacheClustersRequest withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeCacheClustersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeCacheClustersRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeCacheClustersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeCacheClustersRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeCacheClustersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowCacheClustersNotInReplicationGroups")
     public Boolean showCacheClustersNotInReplicationGroups;
+
     public GETDescribeCacheClustersRequest withShowCacheClustersNotInReplicationGroups(Boolean showCacheClustersNotInReplicationGroups) {
         this.showCacheClustersNotInReplicationGroups = showCacheClustersNotInReplicationGroups;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeCacheClustersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowCacheNodeInfo")
     public Boolean showCacheNodeInfo;
+
     public GETDescribeCacheClustersRequest withShowCacheNodeInfo(Boolean showCacheNodeInfo) {
         this.showCacheNodeInfo = showCacheNodeInfo;
         return this;
@@ -66,6 +73,7 @@ public class GETDescribeCacheClustersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeCacheClustersVersionEnum version;
+
     public GETDescribeCacheClustersRequest withVersion(GETDescribeCacheClustersVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETDescribeCacheClustersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeCacheClustersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETDescribeCacheClustersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeCacheClustersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETDescribeCacheClustersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeCacheClustersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETDescribeCacheClustersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeCacheClustersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETDescribeCacheClustersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeCacheClustersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETDescribeCacheClustersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeCacheClustersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,14 @@ public class GETDescribeCacheClustersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeCacheClustersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeCacheClustersRequest(@JsonProperty("Action") GETDescribeCacheClustersActionEnum action, @JsonProperty("Version") GETDescribeCacheClustersVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

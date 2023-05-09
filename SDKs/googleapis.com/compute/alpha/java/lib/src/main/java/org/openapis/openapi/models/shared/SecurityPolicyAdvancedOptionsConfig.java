@@ -12,6 +12,7 @@ public class SecurityPolicyAdvancedOptionsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonCustomConfig")
     public SecurityPolicyAdvancedOptionsConfigJsonCustomConfig jsonCustomConfig;
+
     public SecurityPolicyAdvancedOptionsConfig withJsonCustomConfig(SecurityPolicyAdvancedOptionsConfigJsonCustomConfig jsonCustomConfig) {
         this.jsonCustomConfig = jsonCustomConfig;
         return this;
@@ -20,6 +21,7 @@ public class SecurityPolicyAdvancedOptionsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonParsing")
     public SecurityPolicyAdvancedOptionsConfigJsonParsingEnum jsonParsing;
+
     public SecurityPolicyAdvancedOptionsConfig withJsonParsing(SecurityPolicyAdvancedOptionsConfigJsonParsingEnum jsonParsing) {
         this.jsonParsing = jsonParsing;
         return this;
@@ -28,9 +30,23 @@ public class SecurityPolicyAdvancedOptionsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevel")
     public SecurityPolicyAdvancedOptionsConfigLogLevelEnum logLevel;
+
     public SecurityPolicyAdvancedOptionsConfig withLogLevel(SecurityPolicyAdvancedOptionsConfigLogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
     }
     
+    /**
+     * An optional list of case-insensitive request header names to use for resolving the callers client IP address.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userIpRequestHeaders")
+    public String[] userIpRequestHeaders;
+
+    public SecurityPolicyAdvancedOptionsConfig withUserIpRequestHeaders(String[] userIpRequestHeaders) {
+        this.userIpRequestHeaders = userIpRequestHeaders;
+        return this;
+    }
+    
+    public SecurityPolicyAdvancedOptionsConfig(){}
 }

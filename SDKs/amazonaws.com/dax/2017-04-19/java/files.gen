@@ -157,4 +157,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ParameterNameValue.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSubnetGroupResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSubnetGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

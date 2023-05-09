@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public String actionTypeLabel;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withActionTypeLabel(String actionTypeLabel) {
         this.actionTypeLabel = actionTypeLabel;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public Boolean consumeEntireStack;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withConsumeEntireStack(Boolean consumeEntireStack) {
         this.consumeEntireStack = consumeEntireStack;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public Boolean deleteOnAction;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withDeleteOnAction(Boolean deleteOnAction) {
         this.deleteOnAction = deleteOnAction;
         return this;
@@ -45,6 +48,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public Boolean isPositive;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withIsPositive(Boolean isPositive) {
         this.isPositive = isPositive;
         return this;
@@ -55,6 +59,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public String overlayIcon;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withOverlayIcon(String overlayIcon) {
         this.overlayIcon = overlayIcon;
         return this;
@@ -65,6 +70,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public String overlayScreenName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withOverlayScreenName(String overlayScreenName) {
         this.overlayScreenName = overlayScreenName;
         return this;
@@ -75,6 +81,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public DestinyDefinitionsDestinyProgressionRewardDefinition[] progressionRewards;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withProgressionRewards(DestinyDefinitionsDestinyProgressionRewardDefinition[] progressionRewards) {
         this.progressionRewards = progressionRewards;
         return this;
@@ -85,6 +92,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public Long requiredCooldownHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withRequiredCooldownHash(Long requiredCooldownHash) {
         this.requiredCooldownHash = requiredCooldownHash;
         return this;
@@ -95,6 +103,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public Integer requiredCooldownSeconds;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withRequiredCooldownSeconds(Integer requiredCooldownSeconds) {
         this.requiredCooldownSeconds = requiredCooldownSeconds;
         return this;
@@ -105,6 +114,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public DestinyDefinitionsDestinyItemActionRequiredItemDefinition[] requiredItems;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withRequiredItems(DestinyDefinitionsDestinyItemActionRequiredItemDefinition[] requiredItems) {
         this.requiredItems = requiredItems;
         return this;
@@ -115,6 +125,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public String requiredLocation;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withRequiredLocation(String requiredLocation) {
         this.requiredLocation = requiredLocation;
         return this;
@@ -125,6 +136,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public Boolean useOnAcquire;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withUseOnAcquire(Boolean useOnAcquire) {
         this.useOnAcquire = useOnAcquire;
         return this;
@@ -135,6 +147,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public String verbDescription;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withVerbDescription(String verbDescription) {
         this.verbDescription = verbDescription;
         return this;
@@ -145,9 +158,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionAction {
      */
     
     public String verbName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction withVerbName(String verbName) {
         this.verbName = verbName;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionAction(){}
 }

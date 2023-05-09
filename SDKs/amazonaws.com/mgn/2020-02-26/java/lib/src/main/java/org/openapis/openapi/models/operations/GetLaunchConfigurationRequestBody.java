@@ -12,9 +12,13 @@ public class GetLaunchConfigurationRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public GetLaunchConfigurationRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public GetLaunchConfigurationRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

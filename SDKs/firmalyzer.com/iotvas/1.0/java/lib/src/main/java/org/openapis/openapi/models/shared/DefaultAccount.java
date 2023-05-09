@@ -12,6 +12,7 @@ public class DefaultAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public Long gid;
+
     public DefaultAccount withGid(Long gid) {
         this.gid = gid;
         return this;
@@ -20,6 +21,7 @@ public class DefaultAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash_algorithm")
     public String hashAlgorithm;
+
     public DefaultAccount withHashAlgorithm(String hashAlgorithm) {
         this.hashAlgorithm = hashAlgorithm;
         return this;
@@ -28,6 +30,7 @@ public class DefaultAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_dir")
     public String homeDir;
+
     public DefaultAccount withHomeDir(String homeDir) {
         this.homeDir = homeDir;
         return this;
@@ -36,6 +39,7 @@ public class DefaultAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DefaultAccount withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class DefaultAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pwd_hash")
     public String pwdHash;
+
     public DefaultAccount withPwdHash(String pwdHash) {
         this.pwdHash = pwdHash;
         return this;
@@ -52,6 +57,7 @@ public class DefaultAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shell")
     public String shell;
+
     public DefaultAccount withShell(String shell) {
         this.shell = shell;
         return this;
@@ -60,9 +66,11 @@ public class DefaultAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public Long uid;
+
     public DefaultAccount withUid(Long uid) {
         this.uid = uid;
         return this;
     }
     
+    public DefaultAccount(){}
 }

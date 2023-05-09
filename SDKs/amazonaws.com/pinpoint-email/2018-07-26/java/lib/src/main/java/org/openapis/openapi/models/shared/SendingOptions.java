@@ -15,9 +15,11 @@ public class SendingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingEnabled")
     public Boolean sendingEnabled;
+
     public SendingOptions withSendingEnabled(Boolean sendingEnabled) {
         this.sendingEnabled = sendingEnabled;
         return this;
     }
     
+    public SendingOptions(){}
 }

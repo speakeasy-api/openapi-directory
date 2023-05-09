@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adRotationMode")
     public GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum adRotationMode;
+
     public GoogleAdsSearchads360V0ResourcesAdGroup withAdRotationMode(GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum adRotationMode) {
         this.adRotationMode = adRotationMode;
         return this;
@@ -29,8 +30,57 @@ public class GoogleAdsSearchads360V0ResourcesAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpcBidMicros")
     public String cpcBidMicros;
+
     public GoogleAdsSearchads360V0ResourcesAdGroup withCpcBidMicros(String cpcBidMicros) {
         this.cpcBidMicros = cpcBidMicros;
+        return this;
+    }
+    
+    /**
+     * Output only. The timestamp when this ad_group was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creationTime")
+    public String creationTime;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withCreationTime(String creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    
+    /**
+     * Output only. Date when the ad group ends serving ads. By default, the ad group ends on the ad group's end date. If this field is set, then the ad group ends at the end of the specified date in the customer's time zone. This field is only available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("endDate")
+    public String endDate;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Output only. ID of the ad group in the external engine account. This field is for non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use "ad_group.id" instead.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("engineId")
+    public String engineId;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withEngineId(String engineId) {
+        this.engineId = engineId;
+        return this;
+    }
+    
+    /**
+     * Output only. The Engine Status for ad group.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("engineStatus")
+    public GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum engineStatus;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withEngineStatus(GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum engineStatus) {
+        this.engineStatus = engineStatus;
         return this;
     }
     
@@ -40,8 +90,45 @@ public class GoogleAdsSearchads360V0ResourcesAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAdsSearchads360V0ResourcesAdGroup withId(String id) {
         this.id = id;
+        return this;
+    }
+    
+    /**
+     * Output only. The resource names of labels attached to this ad group.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labels")
+    public String[] labels;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withLabels(String[] labels) {
+        this.labels = labels;
+        return this;
+    }
+    
+    /**
+     * Output only. The language of the ads and keywords in an ad group. This field is only available for Microsoft Advertising accounts. More details: https://docs.microsoft.com/en-us/advertising/guides/ad-languages?view=bingads-13#adlanguage
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("languageCode")
+    public String languageCode;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    
+    /**
+     * Output only. The datetime when this ad group was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastModifiedTime")
+    public String lastModifiedTime;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withLastModifiedTime(String lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
@@ -51,6 +138,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAdsSearchads360V0ResourcesAdGroup withName(String name) {
         this.name = name;
         return this;
@@ -62,8 +150,21 @@ public class GoogleAdsSearchads360V0ResourcesAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesAdGroup withResourceName(String resourceName) {
         this.resourceName = resourceName;
+        return this;
+    }
+    
+    /**
+     * Output only. Date when this ad group starts serving ads. By default, the ad group starts now or the ad group's start date, whichever is later. If this field is set, then the ad group starts at the beginning of the specified date in the customer's time zone. This field is only available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("startDate")
+    public String startDate;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     
@@ -73,8 +174,21 @@ public class GoogleAdsSearchads360V0ResourcesAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum status;
+
     public GoogleAdsSearchads360V0ResourcesAdGroup withStatus(GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum status) {
         this.status = status;
+        return this;
+    }
+    
+    /**
+     * Settings for the targeting-related features, at the campaign and ad group levels. For more details about the targeting setting, visit https://support.google.com/google-ads/answer/7365594
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("targetingSetting")
+    public GoogleAdsSearchads360V0CommonTargetingSetting targetingSetting;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroup withTargetingSetting(GoogleAdsSearchads360V0CommonTargetingSetting targetingSetting) {
+        this.targetingSetting = targetingSetting;
         return this;
     }
     
@@ -84,9 +198,11 @@ public class GoogleAdsSearchads360V0ResourcesAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum type;
+
     public GoogleAdsSearchads360V0ResourcesAdGroup withType(GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesAdGroup(){}
 }

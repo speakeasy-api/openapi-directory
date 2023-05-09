@@ -12,6 +12,7 @@ public class DisablePermitRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public DisablePermitRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -22,9 +23,14 @@ public class DisablePermitRequest {
      */
     @JsonProperty("token")
     public String token;
+
     public DisablePermitRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DisablePermitRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("token") String token) {
+        this.merchantAccount = merchantAccount;
+        this.token = token;
+  }
 }

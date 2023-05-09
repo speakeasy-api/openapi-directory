@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntityPersonaConfiguration {
     @JsonProperty("EntityId")
     public String entityId;
+
     public EntityPersonaConfiguration withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -19,9 +20,14 @@ public class EntityPersonaConfiguration {
     
     @JsonProperty("Persona")
     public PersonaEnum persona;
+
     public EntityPersonaConfiguration withPersona(PersonaEnum persona) {
         this.persona = persona;
         return this;
     }
     
+    public EntityPersonaConfiguration(@JsonProperty("EntityId") String entityId, @JsonProperty("Persona") PersonaEnum persona) {
+        this.entityId = entityId;
+        this.persona = persona;
+  }
 }

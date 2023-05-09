@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAvailabilityZonesRequest {
     
     public Boolean allAvailabilityZones;
+
     public DescribeAvailabilityZonesRequest withAllAvailabilityZones(Boolean allAvailabilityZones) {
         this.allAvailabilityZones = allAvailabilityZones;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAvailabilityZonesRequest {
     
     
     public Boolean dryRun;
+
     public DescribeAvailabilityZonesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAvailabilityZonesRequest {
     
     
     public DescribeAvailabilityZonesRequestFilters[] filters;
+
     public DescribeAvailabilityZonesRequest withFilters(DescribeAvailabilityZonesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeAvailabilityZonesRequest {
     
     
     public String[] zoneIds;
+
     public DescribeAvailabilityZonesRequest withZoneIds(String[] zoneIds) {
         this.zoneIds = zoneIds;
         return this;
@@ -37,9 +41,11 @@ public class DescribeAvailabilityZonesRequest {
     
     
     public String[] zoneNames;
+
     public DescribeAvailabilityZonesRequest withZoneNames(String[] zoneNames) {
         this.zoneNames = zoneNames;
         return this;
     }
     
+    public DescribeAvailabilityZonesRequest(){}
 }

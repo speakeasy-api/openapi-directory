@@ -21,6 +21,7 @@ public class UpdateDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public UpdateDomainResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class UpdateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterQueueUrl")
     public String deadLetterQueueUrl;
+
     public UpdateDomainResponse withDeadLetterQueueUrl(String deadLetterQueueUrl) {
         this.deadLetterQueueUrl = deadLetterQueueUrl;
         return this;
@@ -37,6 +39,7 @@ public class UpdateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultEncryptionKey")
     public String defaultEncryptionKey;
+
     public UpdateDomainResponse withDefaultEncryptionKey(String defaultEncryptionKey) {
         this.defaultEncryptionKey = defaultEncryptionKey;
         return this;
@@ -45,6 +48,7 @@ public class UpdateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultExpirationDays")
     public Long defaultExpirationDays;
+
     public UpdateDomainResponse withDefaultExpirationDays(Long defaultExpirationDays) {
         this.defaultExpirationDays = defaultExpirationDays;
         return this;
@@ -52,6 +56,7 @@ public class UpdateDomainResponse {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public UpdateDomainResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -61,6 +66,7 @@ public class UpdateDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public UpdateDomainResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -69,6 +75,7 @@ public class UpdateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Matching")
     public MatchingResponse matching;
+
     public UpdateDomainResponse withMatching(MatchingResponse matching) {
         this.matching = matching;
         return this;
@@ -77,9 +84,15 @@ public class UpdateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public UpdateDomainResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateDomainResponse(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("DomainName") String domainName, @JsonProperty("LastUpdatedAt") OffsetDateTime lastUpdatedAt) {
+        this.createdAt = createdAt;
+        this.domainName = domainName;
+        this.lastUpdatedAt = lastUpdatedAt;
+  }
 }

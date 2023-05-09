@@ -15,9 +15,11 @@ public class EvaluationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationContextIdentifier")
     public String evaluationContextIdentifier;
+
     public EvaluationContext withEvaluationContextIdentifier(String evaluationContextIdentifier) {
         this.evaluationContextIdentifier = evaluationContextIdentifier;
         return this;
     }
     
+    public EvaluationContext(){}
 }

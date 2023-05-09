@@ -15,9 +15,11 @@ public class DescribeTargetedSentimentDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetedSentimentDetectionJobProperties")
     public TargetedSentimentDetectionJobProperties targetedSentimentDetectionJobProperties;
+
     public DescribeTargetedSentimentDetectionJobResponse withTargetedSentimentDetectionJobProperties(TargetedSentimentDetectionJobProperties targetedSentimentDetectionJobProperties) {
         this.targetedSentimentDetectionJobProperties = targetedSentimentDetectionJobProperties;
         return this;
     }
     
+    public DescribeTargetedSentimentDetectionJobResponse(){}
 }

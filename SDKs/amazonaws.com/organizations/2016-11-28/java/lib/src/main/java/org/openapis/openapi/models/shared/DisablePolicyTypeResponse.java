@@ -15,9 +15,11 @@ public class DisablePolicyTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Root")
     public Root root;
+
     public DisablePolicyTypeResponse withRoot(Root root) {
         this.root = root;
         return this;
     }
     
+    public DisablePolicyTypeResponse(){}
 }

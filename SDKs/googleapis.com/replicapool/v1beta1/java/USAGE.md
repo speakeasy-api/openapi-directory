@@ -3,13 +3,12 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurity;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption1;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption2;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption3;
-import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurity;
-import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest;
-import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.PoolsDeleteRequest;
 
@@ -19,28 +18,26 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ReplicapoolPoolsDeleteRequest req = new ReplicapoolPoolsDeleteRequest() {{
+            ReplicapoolPoolsDeleteRequest req = new ReplicapoolPoolsDeleteRequest("corrupti", "provident", "distinctio") {{
                 poolsDeleteRequest = new PoolsDeleteRequest() {{
                     abandonInstances = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
-                }};
-                alt = "json";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
-                poolName = "illum";
+                }};;
+                alt = AltEnum.JSON;
+                fields = "vel";
+                key = "error";
+                oauthToken = "deserunt";
                 prettyPrint = false;
-                projectName = "vel";
-                quotaUser = "error";
-                userIp = "deserunt";
-                zone = "suscipit";
-            }}            
+                quotaUser = "suscipit";
+                userIp = "iure";
+            }};            
 
             ReplicapoolPoolsDeleteResponse res = sdk.pools.replicapoolPoolsDelete(req, new ReplicapoolPoolsDeleteSecurity() {{
-                option1 = new ReplicapoolPoolsDeleteSecurityOption1() {{
+                option1 = new ReplicapoolPoolsDeleteSecurityOption1("magnam", "debitis") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
@@ -52,5 +49,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

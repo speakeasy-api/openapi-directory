@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NetworkservicesProjectsLocationsGrpcRoutesListResponse {
     
     public String contentType;
+
     public NetworkservicesProjectsLocationsGrpcRoutesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class NetworkservicesProjectsLocationsGrpcRoutesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGrpcRoutesResponse listGrpcRoutesResponse;
+
     public NetworkservicesProjectsLocationsGrpcRoutesListResponse withListGrpcRoutesResponse(org.openapis.openapi.models.shared.ListGrpcRoutesResponse listGrpcRoutesResponse) {
         this.listGrpcRoutesResponse = listGrpcRoutesResponse;
         return this;
@@ -26,6 +29,7 @@ public class NetworkservicesProjectsLocationsGrpcRoutesListResponse {
     
     
     public Integer statusCode;
+
     public NetworkservicesProjectsLocationsGrpcRoutesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class NetworkservicesProjectsLocationsGrpcRoutesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NetworkservicesProjectsLocationsGrpcRoutesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public NetworkservicesProjectsLocationsGrpcRoutesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

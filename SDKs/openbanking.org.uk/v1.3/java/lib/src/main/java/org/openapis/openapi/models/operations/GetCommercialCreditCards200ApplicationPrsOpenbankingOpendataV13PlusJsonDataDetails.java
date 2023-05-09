@@ -15,6 +15,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("CCSubType")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCCSubTypeEnum ccSubType;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetails withCCSubType(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCCSubTypeEnum ccSubType) {
         this.ccSubType = ccSubType;
         return this;
@@ -25,9 +26,14 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("CommercialCreditCardItem")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem commercialCreditCardItem;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetails withCommercialCreditCardItem(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem commercialCreditCardItem) {
         this.commercialCreditCardItem = commercialCreditCardItem;
         return this;
     }
     
+    public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetails(@JsonProperty("CCSubType") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCCSubTypeEnum ccSubType, @JsonProperty("CommercialCreditCardItem") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem commercialCreditCardItem) {
+        this.ccSubType = ccSubType;
+        this.commercialCreditCardItem = commercialCreditCardItem;
+  }
 }

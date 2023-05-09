@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
     
     public String contentType;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -79,6 +87,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -89,6 +98,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -99,6 +109,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryOutput listAssociatedApprovalRuleTemplatesForRepositoryOutput;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withListAssociatedApprovalRuleTemplatesForRepositoryOutput(org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryOutput listAssociatedApprovalRuleTemplatesForRepositoryOutput) {
         this.listAssociatedApprovalRuleTemplatesForRepositoryOutput = listAssociatedApprovalRuleTemplatesForRepositoryOutput;
         return this;
@@ -109,6 +120,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -119,6 +131,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -126,6 +139,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
     
     
     public Integer statusCode;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAssociatedApprovalRuleTemplatesForRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

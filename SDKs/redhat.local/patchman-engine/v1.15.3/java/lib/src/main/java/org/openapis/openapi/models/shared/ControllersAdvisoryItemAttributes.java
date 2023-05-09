@@ -12,6 +12,7 @@ public class ControllersAdvisoryItemAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisory_type")
     public Long advisoryType;
+
     public ControllersAdvisoryItemAttributes withAdvisoryType(Long advisoryType) {
         this.advisoryType = advisoryType;
         return this;
@@ -20,6 +21,7 @@ public class ControllersAdvisoryItemAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicable_systems")
     public Long applicableSystems;
+
     public ControllersAdvisoryItemAttributes withApplicableSystems(Long applicableSystems) {
         this.applicableSystems = applicableSystems;
         return this;
@@ -28,6 +30,7 @@ public class ControllersAdvisoryItemAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cve_count")
     public Long cveCount;
+
     public ControllersAdvisoryItemAttributes withCveCount(Long cveCount) {
         this.cveCount = cveCount;
         return this;
@@ -36,6 +39,7 @@ public class ControllersAdvisoryItemAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ControllersAdvisoryItemAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class ControllersAdvisoryItemAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_date")
     public String publicDate;
+
     public ControllersAdvisoryItemAttributes withPublicDate(String publicDate) {
         this.publicDate = publicDate;
         return this;
@@ -52,6 +57,7 @@ public class ControllersAdvisoryItemAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public Long severity;
+
     public ControllersAdvisoryItemAttributes withSeverity(Long severity) {
         this.severity = severity;
         return this;
@@ -60,9 +66,11 @@ public class ControllersAdvisoryItemAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synopsis")
     public String synopsis;
+
     public ControllersAdvisoryItemAttributes withSynopsis(String synopsis) {
         this.synopsis = synopsis;
         return this;
     }
     
+    public ControllersAdvisoryItemAttributes(){}
 }

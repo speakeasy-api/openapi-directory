@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListSelfHostedRunnersForRepoResponse {
     
     public String contentType;
+
     public ActionsListSelfHostedRunnersForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListSelfHostedRunnersForRepoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActionsListSelfHostedRunnersForRepoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListSelfHostedRunnersForRepoResponse {
     
     
     public Integer statusCode;
+
     public ActionsListSelfHostedRunnersForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActionsListSelfHostedRunnersForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListSelfHostedRunnersForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ActionsListSelfHostedRunnersForRepoResponse {
      */
     
     public ActionsListSelfHostedRunnersForRepo200ApplicationJSON actionsListSelfHostedRunnersForRepo200ApplicationJSONObject;
+
     public ActionsListSelfHostedRunnersForRepoResponse withActionsListSelfHostedRunnersForRepo200ApplicationJSONObject(ActionsListSelfHostedRunnersForRepo200ApplicationJSON actionsListSelfHostedRunnersForRepo200ApplicationJSONObject) {
         this.actionsListSelfHostedRunnersForRepo200ApplicationJSONObject = actionsListSelfHostedRunnersForRepo200ApplicationJSONObject;
         return this;
     }
     
+    public ActionsListSelfHostedRunnersForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

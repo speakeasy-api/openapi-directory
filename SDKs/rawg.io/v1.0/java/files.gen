@@ -153,4 +153,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/Store.java
 lib/src/main/java/org/openapis/openapi/models/shared/StoreSingle.java
 lib/src/main/java/org/openapis/openapi/models/shared/Tag.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagSingle.java
+docs/sdk/README.md
+docs/creatorroles/README.md
+docs/creators/README.md
+docs/developers/README.md
+docs/games/README.md
+docs/genres/README.md
+docs/platforms/README.md
+docs/publishers/README.md
+docs/stores/README.md
+docs/tags/README.md
 USAGE.md

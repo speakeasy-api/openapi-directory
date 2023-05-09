@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public TagmanagerAccountsContainersWorkspacesGtagConfigListSecurityOption1 option1;
+
     public TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity withOption1(TagmanagerAccountsContainersWorkspacesGtagConfigListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public TagmanagerAccountsContainersWorkspacesGtagConfigListSecurityOption2 option2;
+
     public TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity withOption2(TagmanagerAccountsContainersWorkspacesGtagConfigListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity(){}
 }

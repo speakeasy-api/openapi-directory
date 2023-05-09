@@ -15,9 +15,11 @@ public class CreateBulkImportJobRequestBodyJobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileFormat")
     public org.openapis.openapi.models.shared.FileFormat fileFormat;
+
     public CreateBulkImportJobRequestBodyJobConfiguration withFileFormat(org.openapis.openapi.models.shared.FileFormat fileFormat) {
         this.fileFormat = fileFormat;
         return this;
     }
     
+    public CreateBulkImportJobRequestBodyJobConfiguration(){}
 }

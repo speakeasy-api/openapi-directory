@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ExportFlowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowUri")
     public String flowUri;
+
     public GoogleCloudDialogflowCxV3beta1ExportFlowRequest withFlowUri(String flowUri) {
         this.flowUri = flowUri;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1ExportFlowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeReferencedFlows")
     public Boolean includeReferencedFlows;
+
     public GoogleCloudDialogflowCxV3beta1ExportFlowRequest withIncludeReferencedFlows(Boolean includeReferencedFlows) {
         this.includeReferencedFlows = includeReferencedFlows;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ExportFlowRequest(){}
 }

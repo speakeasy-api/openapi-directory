@@ -18,9 +18,11 @@ public class LandlordProfitLossSectionModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rows")
     public LandlordProfitLossRowModel[] rows;
+
     public LandlordProfitLossSectionModel withRows(LandlordProfitLossRowModel[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public LandlordProfitLossSectionModel(){}
 }

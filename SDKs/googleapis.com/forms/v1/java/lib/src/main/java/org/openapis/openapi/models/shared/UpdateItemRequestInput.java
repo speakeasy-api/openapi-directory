@@ -18,6 +18,7 @@ public class UpdateItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public ItemInput item;
+
     public UpdateItemRequestInput withItem(ItemInput item) {
         this.item = item;
         return this;
@@ -29,6 +30,7 @@ public class UpdateItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public UpdateItemRequestInput withLocation(Location location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class UpdateItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateItemRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public UpdateItemRequestInput(){}
 }

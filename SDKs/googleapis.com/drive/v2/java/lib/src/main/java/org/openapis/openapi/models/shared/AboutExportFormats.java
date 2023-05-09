@@ -15,6 +15,7 @@ public class AboutExportFormats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public AboutExportFormats withSource(String source) {
         this.source = source;
         return this;
@@ -26,9 +27,11 @@ public class AboutExportFormats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public String[] targets;
+
     public AboutExportFormats withTargets(String[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public AboutExportFormats(){}
 }

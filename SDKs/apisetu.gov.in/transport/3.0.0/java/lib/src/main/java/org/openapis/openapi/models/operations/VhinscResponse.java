@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VhinscResponse {
     
     public String contentType;
+
     public VhinscResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VhinscResponse {
     
     
     public Integer statusCode;
+
     public VhinscResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class VhinscResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VhinscResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class VhinscResponse {
      */
     
     public Vhinsc400ApplicationJSON vhinsc400ApplicationJSONObject;
+
     public VhinscResponse withVhinsc400ApplicationJSONObject(Vhinsc400ApplicationJSON vhinsc400ApplicationJSONObject) {
         this.vhinsc400ApplicationJSONObject = vhinsc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class VhinscResponse {
      */
     
     public Vhinsc401ApplicationJSON vhinsc401ApplicationJSONObject;
+
     public VhinscResponse withVhinsc401ApplicationJSONObject(Vhinsc401ApplicationJSON vhinsc401ApplicationJSONObject) {
         this.vhinsc401ApplicationJSONObject = vhinsc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class VhinscResponse {
      */
     
     public Vhinsc404ApplicationJSON vhinsc404ApplicationJSONObject;
+
     public VhinscResponse withVhinsc404ApplicationJSONObject(Vhinsc404ApplicationJSON vhinsc404ApplicationJSONObject) {
         this.vhinsc404ApplicationJSONObject = vhinsc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class VhinscResponse {
      */
     
     public Vhinsc500ApplicationJSON vhinsc500ApplicationJSONObject;
+
     public VhinscResponse withVhinsc500ApplicationJSONObject(Vhinsc500ApplicationJSON vhinsc500ApplicationJSONObject) {
         this.vhinsc500ApplicationJSONObject = vhinsc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class VhinscResponse {
      */
     
     public Vhinsc502ApplicationJSON vhinsc502ApplicationJSONObject;
+
     public VhinscResponse withVhinsc502ApplicationJSONObject(Vhinsc502ApplicationJSON vhinsc502ApplicationJSONObject) {
         this.vhinsc502ApplicationJSONObject = vhinsc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class VhinscResponse {
      */
     
     public Vhinsc503ApplicationJSON vhinsc503ApplicationJSONObject;
+
     public VhinscResponse withVhinsc503ApplicationJSONObject(Vhinsc503ApplicationJSON vhinsc503ApplicationJSONObject) {
         this.vhinsc503ApplicationJSONObject = vhinsc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class VhinscResponse {
      */
     
     public Vhinsc504ApplicationJSON vhinsc504ApplicationJSONObject;
+
     public VhinscResponse withVhinsc504ApplicationJSONObject(Vhinsc504ApplicationJSON vhinsc504ApplicationJSONObject) {
         this.vhinsc504ApplicationJSONObject = vhinsc504ApplicationJSONObject;
         return this;
     }
     
+    public VhinscResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

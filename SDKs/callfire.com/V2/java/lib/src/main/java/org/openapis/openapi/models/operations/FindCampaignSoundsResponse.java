@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindCampaignSoundsResponse {
@@ -12,6 +13,7 @@ public class FindCampaignSoundsResponse {
      */
     
     public org.openapis.openapi.models.shared.CampaignSoundPage campaignSoundPage;
+
     public FindCampaignSoundsResponse withCampaignSoundPage(org.openapis.openapi.models.shared.CampaignSoundPage campaignSoundPage) {
         this.campaignSoundPage = campaignSoundPage;
         return this;
@@ -19,6 +21,7 @@ public class FindCampaignSoundsResponse {
     
     
     public String contentType;
+
     public FindCampaignSoundsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class FindCampaignSoundsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public FindCampaignSoundsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class FindCampaignSoundsResponse {
     
     
     public Integer statusCode;
+
     public FindCampaignSoundsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FindCampaignSoundsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindCampaignSoundsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindCampaignSoundsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

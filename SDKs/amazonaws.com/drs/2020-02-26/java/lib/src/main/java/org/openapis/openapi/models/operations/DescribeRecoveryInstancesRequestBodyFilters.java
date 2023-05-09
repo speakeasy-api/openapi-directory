@@ -15,6 +15,7 @@ public class DescribeRecoveryInstancesRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryInstanceIDs")
     public String[] recoveryInstanceIDs;
+
     public DescribeRecoveryInstancesRequestBodyFilters withRecoveryInstanceIDs(String[] recoveryInstanceIDs) {
         this.recoveryInstanceIDs = recoveryInstanceIDs;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRecoveryInstancesRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerIDs")
     public String[] sourceServerIDs;
+
     public DescribeRecoveryInstancesRequestBodyFilters withSourceServerIDs(String[] sourceServerIDs) {
         this.sourceServerIDs = sourceServerIDs;
         return this;
     }
     
+    public DescribeRecoveryInstancesRequestBodyFilters(){}
 }

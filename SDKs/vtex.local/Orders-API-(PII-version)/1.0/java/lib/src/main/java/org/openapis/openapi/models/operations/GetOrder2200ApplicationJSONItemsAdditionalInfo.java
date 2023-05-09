@@ -18,6 +18,7 @@ public class GetOrder2200ApplicationJSONItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandId")
     public String brandId;
+
     public GetOrder2200ApplicationJSONItemsAdditionalInfo withBrandId(String brandId) {
         this.brandId = brandId;
         return this;
@@ -29,6 +30,7 @@ public class GetOrder2200ApplicationJSONItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandName")
     public String brandName;
+
     public GetOrder2200ApplicationJSONItemsAdditionalInfo withBrandName(String brandName) {
         this.brandName = brandName;
         return this;
@@ -40,6 +42,7 @@ public class GetOrder2200ApplicationJSONItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public String dimension;
+
     public GetOrder2200ApplicationJSONItemsAdditionalInfo withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -51,6 +54,7 @@ public class GetOrder2200ApplicationJSONItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringInfo")
     public String offeringInfo;
+
     public GetOrder2200ApplicationJSONItemsAdditionalInfo withOfferingInfo(String offeringInfo) {
         this.offeringInfo = offeringInfo;
         return this;
@@ -62,6 +66,7 @@ public class GetOrder2200ApplicationJSONItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringType")
     public String offeringType;
+
     public GetOrder2200ApplicationJSONItemsAdditionalInfo withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -73,9 +78,11 @@ public class GetOrder2200ApplicationJSONItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringTypeId")
     public String offeringTypeId;
+
     public GetOrder2200ApplicationJSONItemsAdditionalInfo withOfferingTypeId(String offeringTypeId) {
         this.offeringTypeId = offeringTypeId;
         return this;
     }
     
+    public GetOrder2200ApplicationJSONItemsAdditionalInfo(){}
 }

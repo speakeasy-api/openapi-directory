@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidWishlistPostRequest {
@@ -12,6 +13,7 @@ public class KkidWishlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public KkidWishlistPostRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +24,7 @@ public class KkidWishlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
     public Long kidUserId;
+
     public KkidWishlistPostRequest withKidUserId(Long kidUserId) {
         this.kidUserId = kidUserId;
         return this;
@@ -32,6 +35,7 @@ public class KkidWishlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=link")
     public String link;
+
     public KkidWishlistPostRequest withLink(String link) {
         this.link = link;
         return this;
@@ -42,6 +46,7 @@ public class KkidWishlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority")
     public Long priority;
+
     public KkidWishlistPostRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -52,9 +57,14 @@ public class KkidWishlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public KkidWishlistPostRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public KkidWishlistPostRequest(@JsonProperty("kidUserId") Long kidUserId, @JsonProperty("title") String title) {
+        this.kidUserId = kidUserId;
+        this.title = title;
+  }
 }

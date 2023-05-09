@@ -12,6 +12,7 @@ public class PlatformsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
     public String ordering;
+
     public PlatformsListRequest withOrdering(String ordering) {
         this.ordering = ordering;
         return this;
@@ -22,6 +23,7 @@ public class PlatformsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PlatformsListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +34,11 @@ public class PlatformsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PlatformsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public PlatformsListRequest(){}
 }

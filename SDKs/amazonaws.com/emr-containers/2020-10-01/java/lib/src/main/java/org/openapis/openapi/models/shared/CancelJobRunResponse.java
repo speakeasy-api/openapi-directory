@@ -15,6 +15,7 @@ public class CancelJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CancelJobRunResponse withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class CancelJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualClusterId")
     public String virtualClusterId;
+
     public CancelJobRunResponse withVirtualClusterId(String virtualClusterId) {
         this.virtualClusterId = virtualClusterId;
         return this;
     }
     
+    public CancelJobRunResponse(){}
 }

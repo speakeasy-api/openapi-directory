@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRuleRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteRuleRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,9 +17,14 @@ public class DeleteRuleRequest {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public DeleteRuleRequest withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public DeleteRuleRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("RuleId") String ruleId) {
+        this.changeToken = changeToken;
+        this.ruleId = ruleId;
+  }
 }

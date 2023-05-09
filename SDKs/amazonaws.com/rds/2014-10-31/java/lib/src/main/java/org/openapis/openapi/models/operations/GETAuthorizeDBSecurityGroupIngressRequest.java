@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAuthorizeDBSecurityGroupIngressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAuthorizeDBSecurityGroupIngressActionEnum action;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withAction(GETAuthorizeDBSecurityGroupIngressActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CIDRIP")
     public String cidrip;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withCidrip(String cidrip) {
         this.cidrip = cidrip;
         return this;
@@ -29,6 +32,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSecurityGroupName")
     public String dbSecurityGroupName;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -39,6 +43,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupId")
     public String ec2SecurityGroupId;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withEc2SecurityGroupId(String ec2SecurityGroupId) {
         this.ec2SecurityGroupId = ec2SecurityGroupId;
         return this;
@@ -49,6 +54,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupName")
     public String ec2SecurityGroupName;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withEc2SecurityGroupName(String ec2SecurityGroupName) {
         this.ec2SecurityGroupName = ec2SecurityGroupName;
         return this;
@@ -59,6 +65,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupOwnerId")
     public String ec2SecurityGroupOwnerId;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
         this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
         return this;
@@ -66,6 +73,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAuthorizeDBSecurityGroupIngressVersionEnum version;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withVersion(GETAuthorizeDBSecurityGroupIngressVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETAuthorizeDBSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAuthorizeDBSecurityGroupIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAuthorizeDBSecurityGroupIngressRequest(@JsonProperty("Action") GETAuthorizeDBSecurityGroupIngressActionEnum action, @JsonProperty("DBSecurityGroupName") String dbSecurityGroupName, @JsonProperty("Version") GETAuthorizeDBSecurityGroupIngressVersionEnum version) {
+        this.action = action;
+        this.dbSecurityGroupName = dbSecurityGroupName;
+        this.version = version;
+  }
 }

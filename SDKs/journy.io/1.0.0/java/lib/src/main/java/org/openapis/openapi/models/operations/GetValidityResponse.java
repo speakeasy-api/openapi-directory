@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetValidityResponse {
     
     public String contentType;
+
     public GetValidityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetValidityResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetValidityResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetValidityResponse {
     
     
     public Integer statusCode;
+
     public GetValidityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetValidityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetValidityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetValidityResponse {
      */
     
     public GetValidity200ApplicationJSON getValidity200ApplicationJSONObject;
+
     public GetValidityResponse withGetValidity200ApplicationJSONObject(GetValidity200ApplicationJSON getValidity200ApplicationJSONObject) {
         this.getValidity200ApplicationJSONObject = getValidity200ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class GetValidityResponse {
      */
     
     public GetValidity401ApplicationJSON getValidity401ApplicationJSONObject;
+
     public GetValidityResponse withGetValidity401ApplicationJSONObject(GetValidity401ApplicationJSON getValidity401ApplicationJSONObject) {
         this.getValidity401ApplicationJSONObject = getValidity401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class GetValidityResponse {
      */
     
     public GetValidity403ApplicationJSON getValidity403ApplicationJSONObject;
+
     public GetValidityResponse withGetValidity403ApplicationJSONObject(GetValidity403ApplicationJSON getValidity403ApplicationJSONObject) {
         this.getValidity403ApplicationJSONObject = getValidity403ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class GetValidityResponse {
      */
     
     public GetValidity429ApplicationJSON getValidity429ApplicationJSONObject;
+
     public GetValidityResponse withGetValidity429ApplicationJSONObject(GetValidity429ApplicationJSON getValidity429ApplicationJSONObject) {
         this.getValidity429ApplicationJSONObject = getValidity429ApplicationJSONObject;
         return this;
@@ -80,9 +89,14 @@ public class GetValidityResponse {
      */
     
     public GetValidity500ApplicationJSON getValidity500ApplicationJSONObject;
+
     public GetValidityResponse withGetValidity500ApplicationJSONObject(GetValidity500ApplicationJSON getValidity500ApplicationJSONObject) {
         this.getValidity500ApplicationJSONObject = getValidity500ApplicationJSONObject;
         return this;
     }
     
+    public GetValidityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

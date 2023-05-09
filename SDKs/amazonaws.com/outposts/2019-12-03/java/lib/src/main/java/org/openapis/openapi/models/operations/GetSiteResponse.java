@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSiteResponse {
@@ -12,6 +13,7 @@ public class GetSiteResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSiteResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSiteResponse {
     
     
     public String contentType;
+
     public GetSiteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSiteResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSiteOutput getSiteOutput;
+
     public GetSiteResponse withGetSiteOutput(org.openapis.openapi.models.shared.GetSiteOutput getSiteOutput) {
         this.getSiteOutput = getSiteOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetSiteResponse {
      */
     
     public Object internalServerException;
+
     public GetSiteResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetSiteResponse {
      */
     
     public Object notFoundException;
+
     public GetSiteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetSiteResponse {
     
     
     public Integer statusCode;
+
     public GetSiteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetSiteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSiteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetSiteResponse {
      */
     
     public Object validationException;
+
     public GetSiteResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSiteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

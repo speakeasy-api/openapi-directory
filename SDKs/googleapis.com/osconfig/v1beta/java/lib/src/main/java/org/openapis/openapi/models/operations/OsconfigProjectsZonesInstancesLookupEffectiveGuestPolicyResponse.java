@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse {
     
     public String contentType;
+
     public OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.EffectiveGuestPolicy effectiveGuestPolicy;
+
     public OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse withEffectiveGuestPolicy(org.openapis.openapi.models.shared.EffectiveGuestPolicy effectiveGuestPolicy) {
         this.effectiveGuestPolicy = effectiveGuestPolicy;
         return this;
@@ -26,6 +29,7 @@ public class OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse {
     
     
     public Integer statusCode;
+
     public OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

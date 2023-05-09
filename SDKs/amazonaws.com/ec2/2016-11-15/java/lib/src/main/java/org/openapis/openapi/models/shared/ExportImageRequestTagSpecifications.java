@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExportImageRequestTagSpecifications {
     
     public ExportImageRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public ExportImageRequestTagSpecifications withResourceType(ExportImageRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class ExportImageRequestTagSpecifications {
     
     
     public ExportImageRequestTagSpecificationsTags[] tags;
+
     public ExportImageRequestTagSpecifications withTags(ExportImageRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ExportImageRequestTagSpecifications(){}
 }

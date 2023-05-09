@@ -18,9 +18,11 @@ public class UpgradeInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redisVersion")
     public String redisVersion;
+
     public UpgradeInstanceRequest withRedisVersion(String redisVersion) {
         this.redisVersion = redisVersion;
         return this;
     }
     
+    public UpgradeInstanceRequest(){}
 }

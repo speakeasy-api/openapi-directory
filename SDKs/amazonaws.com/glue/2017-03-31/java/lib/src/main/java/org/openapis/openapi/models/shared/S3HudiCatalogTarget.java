@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3HudiCatalogTarget {
     @JsonProperty("AdditionalOptions")
     public java.util.Map<String, String> additionalOptions;
+
     public S3HudiCatalogTarget withAdditionalOptions(java.util.Map<String, String> additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -21,6 +22,7 @@ public class S3HudiCatalogTarget {
     
     @JsonProperty("Database")
     public String database;
+
     public S3HudiCatalogTarget withDatabase(String database) {
         this.database = database;
         return this;
@@ -28,6 +30,7 @@ public class S3HudiCatalogTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public S3HudiCatalogTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -35,6 +38,7 @@ public class S3HudiCatalogTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public S3HudiCatalogTarget withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class S3HudiCatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public String[][] partitionKeys;
+
     public S3HudiCatalogTarget withPartitionKeys(String[][] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -51,6 +56,7 @@ public class S3HudiCatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaChangePolicy")
     public CatalogSchemaChangePolicy schemaChangePolicy;
+
     public S3HudiCatalogTarget withSchemaChangePolicy(CatalogSchemaChangePolicy schemaChangePolicy) {
         this.schemaChangePolicy = schemaChangePolicy;
         return this;
@@ -58,9 +64,17 @@ public class S3HudiCatalogTarget {
     
     @JsonProperty("Table")
     public String table;
+
     public S3HudiCatalogTarget withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public S3HudiCatalogTarget(@JsonProperty("AdditionalOptions") java.util.Map<String, String> additionalOptions, @JsonProperty("Database") String database, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.additionalOptions = additionalOptions;
+        this.database = database;
+        this.inputs = inputs;
+        this.name = name;
+        this.table = table;
+  }
 }

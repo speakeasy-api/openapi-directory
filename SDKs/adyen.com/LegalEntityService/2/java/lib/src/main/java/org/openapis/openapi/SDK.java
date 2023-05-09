@@ -23,6 +23,8 @@ import org.openapis.openapi.utils.SpeakeasyHTTPClient;
  * ## Versioning
  * The Legal Entity Management API supports versioning of its endpoints through a version suffix in the endpoint URL. This suffix has the following format: "vXX", where XX is the version number.
  * 
+ * &gt;If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+ * 
  * For example:
  * ```
  * https://kyc-test.adyen.com/lem/v2/legalEntities
@@ -44,6 +46,7 @@ public class SDK {
     public Documents documents;
     public HostedOnboarding hostedOnboarding;
     public LegalEntities legalEntities;
+    public PCIQuestionnaires pciQuestionnaires;
     public TermsOfService termsOfService;
     public TransferInstruments transferInstruments;	
 
@@ -134,6 +137,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.businessLines = new BusinessLines(
@@ -164,6 +172,15 @@ public class SDK {
 		);
 		
 		this.legalEntities = new LegalEntities(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.pciQuestionnaires = new PCIQuestionnaires(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

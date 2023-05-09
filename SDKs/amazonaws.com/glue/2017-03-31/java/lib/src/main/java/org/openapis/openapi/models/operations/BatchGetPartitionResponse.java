@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetPartitionResponse {
@@ -12,6 +13,7 @@ public class BatchGetPartitionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetPartitionResponse batchGetPartitionResponse;
+
     public BatchGetPartitionResponse withBatchGetPartitionResponse(org.openapis.openapi.models.shared.BatchGetPartitionResponse batchGetPartitionResponse) {
         this.batchGetPartitionResponse = batchGetPartitionResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetPartitionResponse {
     
     
     public String contentType;
+
     public BatchGetPartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,8 +32,31 @@ public class BatchGetPartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public BatchGetPartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceException
+     */
+    
+    public Object federationSourceException;
+
+    public BatchGetPartitionResponse withFederationSourceException(Object federationSourceException) {
+        this.federationSourceException = federationSourceException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceRetryableException
+     */
+    
+    public Object federationSourceRetryableException;
+
+    public BatchGetPartitionResponse withFederationSourceRetryableException(Object federationSourceRetryableException) {
+        this.federationSourceRetryableException = federationSourceRetryableException;
         return this;
     }
     
@@ -39,6 +65,7 @@ public class BatchGetPartitionResponse {
      */
     
     public Object glueEncryptionException;
+
     public BatchGetPartitionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +76,7 @@ public class BatchGetPartitionResponse {
      */
     
     public Object internalServiceException;
+
     public BatchGetPartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +87,7 @@ public class BatchGetPartitionResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetPartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +98,7 @@ public class BatchGetPartitionResponse {
      */
     
     public Object invalidStateException;
+
     public BatchGetPartitionResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -79,6 +109,7 @@ public class BatchGetPartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchGetPartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +117,7 @@ public class BatchGetPartitionResponse {
     
     
     public Integer statusCode;
+
     public BatchGetPartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +125,14 @@ public class BatchGetPartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetPartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetPartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

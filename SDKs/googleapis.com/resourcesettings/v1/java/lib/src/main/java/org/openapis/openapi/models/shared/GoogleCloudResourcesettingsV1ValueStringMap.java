@@ -18,9 +18,11 @@ public class GoogleCloudResourcesettingsV1ValueStringMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappings")
     public java.util.Map<String, String> mappings;
+
     public GoogleCloudResourcesettingsV1ValueStringMap withMappings(java.util.Map<String, String> mappings) {
         this.mappings = mappings;
         return this;
     }
     
+    public GoogleCloudResourcesettingsV1ValueStringMap(){}
 }

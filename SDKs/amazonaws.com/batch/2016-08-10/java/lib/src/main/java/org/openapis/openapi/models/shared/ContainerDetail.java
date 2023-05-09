@@ -15,6 +15,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public ContainerDetail withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerInstanceArn")
     public String containerInstanceArn;
+
     public ContainerDetail withContainerInstanceArn(String containerInstanceArn) {
         this.containerInstanceArn = containerInstanceArn;
         return this;
@@ -31,17 +33,16 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public KeyValuePair[] environment;
+
     public ContainerDetail withEnvironment(KeyValuePair[] environment) {
         this.environment = environment;
         return this;
     }
     
-    /**
-     * The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
-     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemeralStorage")
     public EphemeralStorage ephemeralStorage;
+
     public ContainerDetail withEphemeralStorage(EphemeralStorage ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -50,6 +51,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public ContainerDetail withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -58,6 +60,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Long exitCode;
+
     public ContainerDetail withExitCode(Long exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -66,6 +69,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fargatePlatformConfiguration")
     public FargatePlatformConfiguration fargatePlatformConfiguration;
+
     public ContainerDetail withFargatePlatformConfiguration(FargatePlatformConfiguration fargatePlatformConfiguration) {
         this.fargatePlatformConfiguration = fargatePlatformConfiguration;
         return this;
@@ -74,6 +78,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public ContainerDetail withImage(String image) {
         this.image = image;
         return this;
@@ -82,6 +87,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public ContainerDetail withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -90,6 +96,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobRoleArn")
     public String jobRoleArn;
+
     public ContainerDetail withJobRoleArn(String jobRoleArn) {
         this.jobRoleArn = jobRoleArn;
         return this;
@@ -98,6 +105,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linuxParameters")
     public LinuxParameters linuxParameters;
+
     public ContainerDetail withLinuxParameters(LinuxParameters linuxParameters) {
         this.linuxParameters = linuxParameters;
         return this;
@@ -106,6 +114,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfiguration")
     public LogConfiguration logConfiguration;
+
     public ContainerDetail withLogConfiguration(LogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -114,6 +123,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamName")
     public String logStreamName;
+
     public ContainerDetail withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
@@ -122,6 +132,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public ContainerDetail withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -130,6 +141,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPoints")
     public MountPoint[] mountPoints;
+
     public ContainerDetail withMountPoints(MountPoint[] mountPoints) {
         this.mountPoints = mountPoints;
         return this;
@@ -138,6 +150,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public ContainerDetail withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -146,6 +159,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public ContainerDetail withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -154,6 +168,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privileged")
     public Boolean privileged;
+
     public ContainerDetail withPrivileged(Boolean privileged) {
         this.privileged = privileged;
         return this;
@@ -162,6 +177,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonlyRootFilesystem")
     public Boolean readonlyRootFilesystem;
+
     public ContainerDetail withReadonlyRootFilesystem(Boolean readonlyRootFilesystem) {
         this.readonlyRootFilesystem = readonlyRootFilesystem;
         return this;
@@ -170,6 +186,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ContainerDetail withReason(String reason) {
         this.reason = reason;
         return this;
@@ -178,6 +195,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirement[] resourceRequirements;
+
     public ContainerDetail withResourceRequirements(ResourceRequirement[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -186,6 +204,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secrets")
     public Secret[] secrets;
+
     public ContainerDetail withSecrets(Secret[] secrets) {
         this.secrets = secrets;
         return this;
@@ -194,6 +213,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskArn")
     public String taskArn;
+
     public ContainerDetail withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
@@ -202,6 +222,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ulimits")
     public Ulimit[] ulimits;
+
     public ContainerDetail withUlimits(Ulimit[] ulimits) {
         this.ulimits = ulimits;
         return this;
@@ -210,6 +231,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public ContainerDetail withUser(String user) {
         this.user = user;
         return this;
@@ -218,6 +240,7 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcpus")
     public Long vcpus;
+
     public ContainerDetail withVcpus(Long vcpus) {
         this.vcpus = vcpus;
         return this;
@@ -226,9 +249,11 @@ public class ContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public Volume[] volumes;
+
     public ContainerDetail withVolumes(Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public ContainerDetail(){}
 }

@@ -12,6 +12,7 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public RmcerRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
@@ -22,9 +23,14 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("TokenNo")
     public String tokenNo;
+
     public RmcerRequestBodyCertificateParameters withTokenNo(String tokenNo) {
         this.tokenNo = tokenNo;
         return this;
     }
     
+    public RmcerRequestBodyCertificateParameters(@JsonProperty("RefNo") String refNo, @JsonProperty("TokenNo") String tokenNo) {
+        this.refNo = refNo;
+        this.tokenNo = tokenNo;
+  }
 }

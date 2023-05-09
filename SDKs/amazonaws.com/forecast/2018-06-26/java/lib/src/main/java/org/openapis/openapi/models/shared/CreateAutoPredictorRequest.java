@@ -12,6 +12,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataConfig")
     public DataConfig dataConfig;
+
     public CreateAutoPredictorRequest withDataConfig(DataConfig dataConfig) {
         this.dataConfig = dataConfig;
         return this;
@@ -23,6 +24,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public CreateAutoPredictorRequest withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -31,6 +33,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainPredictor")
     public Boolean explainPredictor;
+
     public CreateAutoPredictorRequest withExplainPredictor(Boolean explainPredictor) {
         this.explainPredictor = explainPredictor;
         return this;
@@ -39,6 +42,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastDimensions")
     public String[] forecastDimensions;
+
     public CreateAutoPredictorRequest withForecastDimensions(String[] forecastDimensions) {
         this.forecastDimensions = forecastDimensions;
         return this;
@@ -47,6 +51,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastFrequency")
     public String forecastFrequency;
+
     public CreateAutoPredictorRequest withForecastFrequency(String forecastFrequency) {
         this.forecastFrequency = forecastFrequency;
         return this;
@@ -55,6 +60,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastHorizon")
     public Long forecastHorizon;
+
     public CreateAutoPredictorRequest withForecastHorizon(Long forecastHorizon) {
         this.forecastHorizon = forecastHorizon;
         return this;
@@ -63,6 +69,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastTypes")
     public String[] forecastTypes;
+
     public CreateAutoPredictorRequest withForecastTypes(String[] forecastTypes) {
         this.forecastTypes = forecastTypes;
         return this;
@@ -71,6 +78,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorConfig")
     public MonitorConfig monitorConfig;
+
     public CreateAutoPredictorRequest withMonitorConfig(MonitorConfig monitorConfig) {
         this.monitorConfig = monitorConfig;
         return this;
@@ -79,6 +87,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizationMetric")
     public OptimizationMetricEnum optimizationMetric;
+
     public CreateAutoPredictorRequest withOptimizationMetric(OptimizationMetricEnum optimizationMetric) {
         this.optimizationMetric = optimizationMetric;
         return this;
@@ -86,6 +95,7 @@ public class CreateAutoPredictorRequest {
     
     @JsonProperty("PredictorName")
     public String predictorName;
+
     public CreateAutoPredictorRequest withPredictorName(String predictorName) {
         this.predictorName = predictorName;
         return this;
@@ -94,6 +104,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferencePredictorArn")
     public String referencePredictorArn;
+
     public CreateAutoPredictorRequest withReferencePredictorArn(String referencePredictorArn) {
         this.referencePredictorArn = referencePredictorArn;
         return this;
@@ -102,6 +113,7 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAutoPredictorRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -110,9 +122,13 @@ public class CreateAutoPredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeAlignmentBoundary")
     public TimeAlignmentBoundary timeAlignmentBoundary;
+
     public CreateAutoPredictorRequest withTimeAlignmentBoundary(TimeAlignmentBoundary timeAlignmentBoundary) {
         this.timeAlignmentBoundary = timeAlignmentBoundary;
         return this;
     }
     
+    public CreateAutoPredictorRequest(@JsonProperty("PredictorName") String predictorName) {
+        this.predictorName = predictorName;
+  }
 }

@@ -18,6 +18,7 @@ public class InventoryVersionedPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public InventoryVersionedPackage withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class InventoryVersionedPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public InventoryVersionedPackage withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -40,9 +42,11 @@ public class InventoryVersionedPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public InventoryVersionedPackage withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public InventoryVersionedPackage(){}
 }

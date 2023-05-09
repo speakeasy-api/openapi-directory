@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSetupV1ResourcegroupsIdResponse {
     
     public String contentType;
+
     public DeleteSetupV1ResourcegroupsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSetupV1ResourcegroupsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceGroupViewModel resourceGroupViewModel;
+
     public DeleteSetupV1ResourcegroupsIdResponse withResourceGroupViewModel(org.openapis.openapi.models.shared.ResourceGroupViewModel resourceGroupViewModel) {
         this.resourceGroupViewModel = resourceGroupViewModel;
         return this;
@@ -26,6 +29,7 @@ public class DeleteSetupV1ResourcegroupsIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteSetupV1ResourcegroupsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteSetupV1ResourcegroupsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSetupV1ResourcegroupsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSetupV1ResourcegroupsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class BusinessHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periods")
     public TimePeriod[] periods;
+
     public BusinessHours withPeriods(TimePeriod[] periods) {
         this.periods = periods;
         return this;
     }
     
+    public BusinessHours(){}
 }

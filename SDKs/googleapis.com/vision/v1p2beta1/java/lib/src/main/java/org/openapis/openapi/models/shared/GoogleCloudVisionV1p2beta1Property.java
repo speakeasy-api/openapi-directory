@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudVisionV1p2beta1Property withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uint64Value")
     public String uint64Value;
+
     public GoogleCloudVisionV1p2beta1Property withUint64Value(String uint64Value) {
         this.uint64Value = uint64Value;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p2beta1Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudVisionV1p2beta1Property withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1Property(){}
 }

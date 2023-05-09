@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCallBroadcastRequest {
@@ -12,6 +13,7 @@ public class UpdateCallBroadcastRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CallBroadcastInput callBroadcastInput;
+
     public UpdateCallBroadcastRequest withCallBroadcastInput(org.openapis.openapi.models.shared.CallBroadcastInput callBroadcastInput) {
         this.callBroadcastInput = callBroadcastInput;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCallBroadcastRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public UpdateCallBroadcastRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,9 +35,13 @@ public class UpdateCallBroadcastRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
     public Boolean strictValidation;
+
     public UpdateCallBroadcastRequest withStrictValidation(Boolean strictValidation) {
         this.strictValidation = strictValidation;
         return this;
     }
     
+    public UpdateCallBroadcastRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

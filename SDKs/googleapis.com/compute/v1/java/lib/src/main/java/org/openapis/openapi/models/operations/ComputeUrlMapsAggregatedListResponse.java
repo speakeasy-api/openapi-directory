@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeUrlMapsAggregatedListResponse {
     
     public String contentType;
+
     public ComputeUrlMapsAggregatedListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ComputeUrlMapsAggregatedListResponse {
     
     
     public Integer statusCode;
+
     public ComputeUrlMapsAggregatedListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ComputeUrlMapsAggregatedListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeUrlMapsAggregatedListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ComputeUrlMapsAggregatedListResponse {
      */
     
     public org.openapis.openapi.models.shared.UrlMapsAggregatedList urlMapsAggregatedList;
+
     public ComputeUrlMapsAggregatedListResponse withUrlMapsAggregatedList(org.openapis.openapi.models.shared.UrlMapsAggregatedList urlMapsAggregatedList) {
         this.urlMapsAggregatedList = urlMapsAggregatedList;
         return this;
     }
     
+    public ComputeUrlMapsAggregatedListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

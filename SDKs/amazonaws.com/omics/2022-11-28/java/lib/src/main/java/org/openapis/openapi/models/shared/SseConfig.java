@@ -15,6 +15,7 @@ public class SseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public SseConfig withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -22,9 +23,13 @@ public class SseConfig {
     
     @JsonProperty("type")
     public EncryptionTypeEnum type;
+
     public SseConfig withType(EncryptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SseConfig(@JsonProperty("type") EncryptionTypeEnum type) {
+        this.type = type;
+  }
 }

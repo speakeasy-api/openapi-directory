@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2KAnonymityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public GooglePrivacyDlpV2EntityId entityId;
+
     public GooglePrivacyDlpV2KAnonymityConfig withEntityId(GooglePrivacyDlpV2EntityId entityId) {
         this.entityId = entityId;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2KAnonymityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quasiIds")
     public GooglePrivacyDlpV2FieldId[] quasiIds;
+
     public GooglePrivacyDlpV2KAnonymityConfig withQuasiIds(GooglePrivacyDlpV2FieldId[] quasiIds) {
         this.quasiIds = quasiIds;
         return this;
     }
     
+    public GooglePrivacyDlpV2KAnonymityConfig(){}
 }

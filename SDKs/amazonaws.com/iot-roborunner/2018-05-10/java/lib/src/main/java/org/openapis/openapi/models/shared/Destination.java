@@ -23,6 +23,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public Destination withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -33,6 +34,7 @@ public class Destination {
      */
     @JsonProperty("arn")
     public String arn;
+
     public Destination withArn(String arn) {
         this.arn = arn;
         return this;
@@ -45,6 +47,7 @@ public class Destination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Destination withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +58,7 @@ public class Destination {
      */
     @JsonProperty("id")
     public String id;
+
     public Destination withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +69,7 @@ public class Destination {
      */
     @JsonProperty("name")
     public String name;
+
     public Destination withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +80,7 @@ public class Destination {
      */
     @JsonProperty("site")
     public String site;
+
     public Destination withSite(String site) {
         this.site = site;
         return this;
@@ -85,6 +91,7 @@ public class Destination {
      */
     @JsonProperty("state")
     public DestinationStateEnum state;
+
     public Destination withState(DestinationStateEnum state) {
         this.state = state;
         return this;
@@ -97,9 +104,19 @@ public class Destination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Destination withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Destination(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("site") String site, @JsonProperty("state") DestinationStateEnum state, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.name = name;
+        this.site = site;
+        this.state = state;
+        this.updatedAt = updatedAt;
+  }
 }

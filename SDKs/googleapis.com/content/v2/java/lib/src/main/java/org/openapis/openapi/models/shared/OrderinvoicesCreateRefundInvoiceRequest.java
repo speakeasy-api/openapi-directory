@@ -15,6 +15,7 @@ public class OrderinvoicesCreateRefundInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceId")
     public String invoiceId;
+
     public OrderinvoicesCreateRefundInvoiceRequest withInvoiceId(String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -26,6 +27,7 @@ public class OrderinvoicesCreateRefundInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrderinvoicesCreateRefundInvoiceRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -34,6 +36,7 @@ public class OrderinvoicesCreateRefundInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundOnlyOption")
     public OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption refundOnlyOption;
+
     public OrderinvoicesCreateRefundInvoiceRequest withRefundOnlyOption(OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption refundOnlyOption) {
         this.refundOnlyOption = refundOnlyOption;
         return this;
@@ -42,6 +45,7 @@ public class OrderinvoicesCreateRefundInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnOption")
     public OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption returnOption;
+
     public OrderinvoicesCreateRefundInvoiceRequest withReturnOption(OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption returnOption) {
         this.returnOption = returnOption;
         return this;
@@ -53,9 +57,11 @@ public class OrderinvoicesCreateRefundInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentInvoices")
     public ShipmentInvoice[] shipmentInvoices;
+
     public OrderinvoicesCreateRefundInvoiceRequest withShipmentInvoices(ShipmentInvoice[] shipmentInvoices) {
         this.shipmentInvoices = shipmentInvoices;
         return this;
     }
     
+    public OrderinvoicesCreateRefundInvoiceRequest(){}
 }

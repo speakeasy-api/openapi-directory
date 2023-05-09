@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceResult {
     
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstance verifiedAccessInstance;
+
     public ModifyVerifiedAccessInstanceResult withVerifiedAccessInstance(ModifyVerifiedAccessInstanceResultVerifiedAccessInstance verifiedAccessInstance) {
         this.verifiedAccessInstance = verifiedAccessInstance;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceResult(){}
 }

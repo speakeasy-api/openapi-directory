@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRemovebgJsonResponse {
     
     public byte[] body;
+
     public PostRemovebgJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostRemovebgJsonResponse {
     
     
     public String contentType;
+
     public PostRemovebgJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostRemovebgJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostRemovebgJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class PostRemovebgJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveBgJsonResponse removeBgJsonResponse;
+
     public PostRemovebgJsonResponse withRemoveBgJsonResponse(org.openapis.openapi.models.shared.RemoveBgJsonResponse removeBgJsonResponse) {
         this.removeBgJsonResponse = removeBgJsonResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostRemovebgJsonResponse {
     
     
     public Integer statusCode;
+
     public PostRemovebgJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,6 +53,7 @@ public class PostRemovebgJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRemovebgJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -57,9 +64,14 @@ public class PostRemovebgJsonResponse {
      */
     
     public byte[] postRemovebgJson200ImageWildcardBinaryString;
+
     public PostRemovebgJsonResponse withPostRemovebgJson200ImageWildcardBinaryString(byte[] postRemovebgJson200ImageWildcardBinaryString) {
         this.postRemovebgJson200ImageWildcardBinaryString = postRemovebgJson200ImageWildcardBinaryString;
         return this;
     }
     
+    public PostRemovebgJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SegmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public SegmentDimensions[] dimensions;
+
     public SegmentGroup withDimensions(SegmentDimensions[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +24,7 @@ public class SegmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceSegments")
     public SegmentReference[] sourceSegments;
+
     public SegmentGroup withSourceSegments(SegmentReference[] sourceSegments) {
         this.sourceSegments = sourceSegments;
         return this;
@@ -31,6 +33,7 @@ public class SegmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public SourceTypeEnum sourceType;
+
     public SegmentGroup withSourceType(SourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -39,9 +42,11 @@ public class SegmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public TypeEnum type;
+
     public SegmentGroup withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SegmentGroup(){}
 }

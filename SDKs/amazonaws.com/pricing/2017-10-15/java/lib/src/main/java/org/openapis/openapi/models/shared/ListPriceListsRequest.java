@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ListPriceListsRequest {
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public ListPriceListsRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -25,6 +26,7 @@ public class ListPriceListsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EffectiveDate")
     public OffsetDateTime effectiveDate;
+
     public ListPriceListsRequest withEffectiveDate(OffsetDateTime effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -33,6 +35,7 @@ public class ListPriceListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPriceListsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -41,6 +44,7 @@ public class ListPriceListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPriceListsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -49,6 +53,7 @@ public class ListPriceListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionCode")
     public String regionCode;
+
     public ListPriceListsRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -56,9 +61,15 @@ public class ListPriceListsRequest {
     
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public ListPriceListsRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public ListPriceListsRequest(@JsonProperty("CurrencyCode") String currencyCode, @JsonProperty("EffectiveDate") OffsetDateTime effectiveDate, @JsonProperty("ServiceCode") String serviceCode) {
+        this.currencyCode = currencyCode;
+        this.effectiveDate = effectiveDate;
+        this.serviceCode = serviceCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSavingsPlanRatesResponse {
     
     public String contentType;
+
     public DescribeSavingsPlanRatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSavingsPlanRatesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSavingsPlanRatesResponse describeSavingsPlanRatesResponse;
+
     public DescribeSavingsPlanRatesResponse withDescribeSavingsPlanRatesResponse(org.openapis.openapi.models.shared.DescribeSavingsPlanRatesResponse describeSavingsPlanRatesResponse) {
         this.describeSavingsPlanRatesResponse = describeSavingsPlanRatesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSavingsPlanRatesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeSavingsPlanRatesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeSavingsPlanRatesResponse {
     
     
     public Integer statusCode;
+
     public DescribeSavingsPlanRatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeSavingsPlanRatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSavingsPlanRatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeSavingsPlanRatesResponse {
      */
     
     public Object validationException;
+
     public DescribeSavingsPlanRatesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeSavingsPlanRatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

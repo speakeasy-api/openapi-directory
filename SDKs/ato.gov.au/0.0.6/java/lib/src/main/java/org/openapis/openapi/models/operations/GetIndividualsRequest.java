@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIndividualsRequest {
@@ -12,6 +13,7 @@ public class GetIndividualsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GetIndividualsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GetIndividualsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateOfBirth")
     public String dateOfBirth;
+
     public GetIndividualsRequest withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -32,9 +35,13 @@ public class GetIndividualsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeOfBirth")
     public String placeOfBirth;
+
     public GetIndividualsRequest withPlaceOfBirth(String placeOfBirth) {
         this.placeOfBirth = placeOfBirth;
         return this;
     }
     
+    public GetIndividualsRequest(@JsonProperty("apiKey") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

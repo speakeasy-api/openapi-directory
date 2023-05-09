@@ -15,6 +15,7 @@ public class SolutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithmHyperParameters")
     public java.util.Map<String, String> algorithmHyperParameters;
+
     public SolutionConfig withAlgorithmHyperParameters(java.util.Map<String, String> algorithmHyperParameters) {
         this.algorithmHyperParameters = algorithmHyperParameters;
         return this;
@@ -23,6 +24,7 @@ public class SolutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoMLConfig")
     public AutoMLConfig autoMLConfig;
+
     public SolutionConfig withAutoMLConfig(AutoMLConfig autoMLConfig) {
         this.autoMLConfig = autoMLConfig;
         return this;
@@ -31,6 +33,7 @@ public class SolutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventValueThreshold")
     public String eventValueThreshold;
+
     public SolutionConfig withEventValueThreshold(String eventValueThreshold) {
         this.eventValueThreshold = eventValueThreshold;
         return this;
@@ -39,6 +42,7 @@ public class SolutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureTransformationParameters")
     public java.util.Map<String, String> featureTransformationParameters;
+
     public SolutionConfig withFeatureTransformationParameters(java.util.Map<String, String> featureTransformationParameters) {
         this.featureTransformationParameters = featureTransformationParameters;
         return this;
@@ -47,6 +51,7 @@ public class SolutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hpoConfig")
     public HPOConfig hpoConfig;
+
     public SolutionConfig withHpoConfig(HPOConfig hpoConfig) {
         this.hpoConfig = hpoConfig;
         return this;
@@ -55,9 +60,11 @@ public class SolutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationObjective")
     public OptimizationObjective optimizationObjective;
+
     public SolutionConfig withOptimizationObjective(OptimizationObjective optimizationObjective) {
         this.optimizationObjective = optimizationObjective;
         return this;
     }
     
+    public SolutionConfig(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionInfos")
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo[] executionInfos;
+
     public GoogleCloudIntegrationsV1alphaListExecutionsResponse withExecutionInfos(EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo[] executionInfos) {
         this.executionInfos = executionInfos;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executions")
     public GoogleCloudIntegrationsV1alphaExecution[] executions;
+
     public GoogleCloudIntegrationsV1alphaListExecutionsResponse withExecutions(GoogleCloudIntegrationsV1alphaExecution[] executions) {
         this.executions = executions;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIntegrationsV1alphaListExecutionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaListExecutionsResponse(){}
 }

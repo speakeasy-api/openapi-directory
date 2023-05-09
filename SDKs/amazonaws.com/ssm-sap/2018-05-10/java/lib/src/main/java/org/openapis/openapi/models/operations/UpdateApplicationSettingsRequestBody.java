@@ -14,6 +14,7 @@ public class UpdateApplicationSettingsRequestBody {
      */
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public UpdateApplicationSettingsRequestBody withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -25,6 +26,7 @@ public class UpdateApplicationSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CredentialsToAddOrUpdate")
     public org.openapis.openapi.models.shared.ApplicationCredential[] credentialsToAddOrUpdate;
+
     public UpdateApplicationSettingsRequestBody withCredentialsToAddOrUpdate(org.openapis.openapi.models.shared.ApplicationCredential[] credentialsToAddOrUpdate) {
         this.credentialsToAddOrUpdate = credentialsToAddOrUpdate;
         return this;
@@ -36,9 +38,13 @@ public class UpdateApplicationSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CredentialsToRemove")
     public org.openapis.openapi.models.shared.ApplicationCredential[] credentialsToRemove;
+
     public UpdateApplicationSettingsRequestBody withCredentialsToRemove(org.openapis.openapi.models.shared.ApplicationCredential[] credentialsToRemove) {
         this.credentialsToRemove = credentialsToRemove;
         return this;
     }
     
+    public UpdateApplicationSettingsRequestBody(@JsonProperty("ApplicationId") String applicationId) {
+        this.applicationId = applicationId;
+  }
 }

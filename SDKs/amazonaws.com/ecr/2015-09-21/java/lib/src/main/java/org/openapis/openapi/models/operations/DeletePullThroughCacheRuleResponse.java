@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePullThroughCacheRuleResponse {
     
     public String contentType;
+
     public DeletePullThroughCacheRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePullThroughCacheRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.DeletePullThroughCacheRuleResponse deletePullThroughCacheRuleResponse;
+
     public DeletePullThroughCacheRuleResponse withDeletePullThroughCacheRuleResponse(org.openapis.openapi.models.shared.DeletePullThroughCacheRuleResponse deletePullThroughCacheRuleResponse) {
         this.deletePullThroughCacheRuleResponse = deletePullThroughCacheRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeletePullThroughCacheRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public DeletePullThroughCacheRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePullThroughCacheRuleResponse {
      */
     
     public Object pullThroughCacheRuleNotFoundException;
+
     public DeletePullThroughCacheRuleResponse withPullThroughCacheRuleNotFoundException(Object pullThroughCacheRuleNotFoundException) {
         this.pullThroughCacheRuleNotFoundException = pullThroughCacheRuleNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePullThroughCacheRuleResponse {
      */
     
     public Object serverException;
+
     public DeletePullThroughCacheRuleResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DeletePullThroughCacheRuleResponse {
     
     
     public Integer statusCode;
+
     public DeletePullThroughCacheRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeletePullThroughCacheRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePullThroughCacheRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeletePullThroughCacheRuleResponse {
      */
     
     public Object validationException;
+
     public DeletePullThroughCacheRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePullThroughCacheRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

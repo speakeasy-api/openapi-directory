@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineTimetableToRequest {
@@ -12,6 +13,7 @@ public class LineTimetableToRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fromStopPointId")
     public String fromStopPointId;
+
     public LineTimetableToRequest withFromStopPointId(String fromStopPointId) {
         this.fromStopPointId = fromStopPointId;
         return this;
@@ -22,6 +24,7 @@ public class LineTimetableToRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public LineTimetableToRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +35,15 @@ public class LineTimetableToRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=toStopPointId")
     public String toStopPointId;
+
     public LineTimetableToRequest withToStopPointId(String toStopPointId) {
         this.toStopPointId = toStopPointId;
         return this;
     }
     
+    public LineTimetableToRequest(@JsonProperty("fromStopPointId") String fromStopPointId, @JsonProperty("id") String id, @JsonProperty("toStopPointId") String toStopPointId) {
+        this.fromStopPointId = fromStopPointId;
+        this.id = id;
+        this.toStopPointId = toStopPointId;
+  }
 }

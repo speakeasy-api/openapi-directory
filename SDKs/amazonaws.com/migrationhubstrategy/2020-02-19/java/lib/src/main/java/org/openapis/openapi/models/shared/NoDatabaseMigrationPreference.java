@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NoDatabaseMigrationPreference {
     @JsonProperty("targetDatabaseEngine")
     public TargetDatabaseEngineEnum[] targetDatabaseEngine;
+
     public NoDatabaseMigrationPreference withTargetDatabaseEngine(TargetDatabaseEngineEnum[] targetDatabaseEngine) {
         this.targetDatabaseEngine = targetDatabaseEngine;
         return this;
     }
     
+    public NoDatabaseMigrationPreference(@JsonProperty("targetDatabaseEngine") TargetDatabaseEngineEnum[] targetDatabaseEngine) {
+        this.targetDatabaseEngine = targetDatabaseEngine;
+  }
 }

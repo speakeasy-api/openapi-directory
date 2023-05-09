@@ -50,7 +50,7 @@ public class UserFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectHomeUserFieldListOfClientResponse res = new org.openapis.openapi.models.operations.GetProjectHomeUserFieldListOfClientResponse() {{
+        org.openapis.openapi.models.operations.GetProjectHomeUserFieldListOfClientResponse res = new org.openapis.openapi.models.operations.GetProjectHomeUserFieldListOfClientResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -68,8 +68,6 @@ public class UserFields {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,7 +167,7 @@ public class UserFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectHomeUserFieldsListResponse res = new org.openapis.openapi.models.operations.GetProjectHomeUserFieldsListResponse() {{
+        org.openapis.openapi.models.operations.GetProjectHomeUserFieldsListResponse res = new org.openapis.openapi.models.operations.GetProjectHomeUserFieldsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -187,8 +185,6 @@ public class UserFields {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

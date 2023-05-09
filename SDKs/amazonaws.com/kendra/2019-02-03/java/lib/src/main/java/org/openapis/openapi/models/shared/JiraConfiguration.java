@@ -15,6 +15,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachmentFieldMappings")
     public DataSourceToIndexFieldMapping[] attachmentFieldMappings;
+
     public JiraConfiguration withAttachmentFieldMappings(DataSourceToIndexFieldMapping[] attachmentFieldMappings) {
         this.attachmentFieldMappings = attachmentFieldMappings;
         return this;
@@ -23,6 +24,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommentFieldMappings")
     public DataSourceToIndexFieldMapping[] commentFieldMappings;
+
     public JiraConfiguration withCommentFieldMappings(DataSourceToIndexFieldMapping[] commentFieldMappings) {
         this.commentFieldMappings = commentFieldMappings;
         return this;
@@ -31,6 +33,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public JiraConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -39,6 +42,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public JiraConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -47,6 +51,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IssueFieldMappings")
     public DataSourceToIndexFieldMapping[] issueFieldMappings;
+
     public JiraConfiguration withIssueFieldMappings(DataSourceToIndexFieldMapping[] issueFieldMappings) {
         this.issueFieldMappings = issueFieldMappings;
         return this;
@@ -55,6 +60,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IssueSubEntityFilter")
     public IssueSubEntityEnum[] issueSubEntityFilter;
+
     public JiraConfiguration withIssueSubEntityFilter(IssueSubEntityEnum[] issueSubEntityFilter) {
         this.issueSubEntityFilter = issueSubEntityFilter;
         return this;
@@ -63,6 +69,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IssueType")
     public String[] issueType;
+
     public JiraConfiguration withIssueType(String[] issueType) {
         this.issueType = issueType;
         return this;
@@ -70,6 +77,7 @@ public class JiraConfiguration {
     
     @JsonProperty("JiraAccountUrl")
     public String jiraAccountUrl;
+
     public JiraConfiguration withJiraAccountUrl(String jiraAccountUrl) {
         this.jiraAccountUrl = jiraAccountUrl;
         return this;
@@ -78,6 +86,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Project")
     public String[] project;
+
     public JiraConfiguration withProject(String[] project) {
         this.project = project;
         return this;
@@ -86,6 +95,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectFieldMappings")
     public DataSourceToIndexFieldMapping[] projectFieldMappings;
+
     public JiraConfiguration withProjectFieldMappings(DataSourceToIndexFieldMapping[] projectFieldMappings) {
         this.projectFieldMappings = projectFieldMappings;
         return this;
@@ -93,6 +103,7 @@ public class JiraConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public JiraConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -101,6 +112,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String[] status;
+
     public JiraConfiguration withStatus(String[] status) {
         this.status = status;
         return this;
@@ -109,6 +121,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseChangeLog")
     public Boolean useChangeLog;
+
     public JiraConfiguration withUseChangeLog(Boolean useChangeLog) {
         this.useChangeLog = useChangeLog;
         return this;
@@ -117,6 +130,7 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public JiraConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
@@ -125,9 +139,14 @@ public class JiraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkLogFieldMappings")
     public DataSourceToIndexFieldMapping[] workLogFieldMappings;
+
     public JiraConfiguration withWorkLogFieldMappings(DataSourceToIndexFieldMapping[] workLogFieldMappings) {
         this.workLogFieldMappings = workLogFieldMappings;
         return this;
     }
     
+    public JiraConfiguration(@JsonProperty("JiraAccountUrl") String jiraAccountUrl, @JsonProperty("SecretArn") String secretArn) {
+        this.jiraAccountUrl = jiraAccountUrl;
+        this.secretArn = secretArn;
+  }
 }

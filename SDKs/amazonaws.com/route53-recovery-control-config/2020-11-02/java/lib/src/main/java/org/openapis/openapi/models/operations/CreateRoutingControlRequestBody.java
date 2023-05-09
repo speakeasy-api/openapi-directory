@@ -15,6 +15,7 @@ public class CreateRoutingControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateRoutingControlRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateRoutingControlRequestBody {
      */
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public CreateRoutingControlRequestBody withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -36,6 +38,7 @@ public class CreateRoutingControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanelArn")
     public String controlPanelArn;
+
     public CreateRoutingControlRequestBody withControlPanelArn(String controlPanelArn) {
         this.controlPanelArn = controlPanelArn;
         return this;
@@ -46,9 +49,14 @@ public class CreateRoutingControlRequestBody {
      */
     @JsonProperty("RoutingControlName")
     public String routingControlName;
+
     public CreateRoutingControlRequestBody withRoutingControlName(String routingControlName) {
         this.routingControlName = routingControlName;
         return this;
     }
     
+    public CreateRoutingControlRequestBody(@JsonProperty("ClusterArn") String clusterArn, @JsonProperty("RoutingControlName") String routingControlName) {
+        this.clusterArn = clusterArn;
+        this.routingControlName = routingControlName;
+  }
 }

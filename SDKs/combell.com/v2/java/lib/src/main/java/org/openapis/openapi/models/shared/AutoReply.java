@@ -18,6 +18,7 @@ public class AutoReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AutoReply withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class AutoReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AutoReply withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class AutoReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public AutoReply withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public AutoReply(){}
 }

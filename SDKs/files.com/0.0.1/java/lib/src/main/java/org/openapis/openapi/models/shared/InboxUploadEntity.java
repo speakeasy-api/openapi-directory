@@ -25,6 +25,7 @@ public class InboxUploadEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public InboxUploadEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +37,7 @@ public class InboxUploadEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbox_registration")
     public InboxRegistrationEntity inboxRegistration;
+
     public InboxUploadEntity withInboxRegistration(InboxRegistrationEntity inboxRegistration) {
         this.inboxRegistration = inboxRegistration;
         return this;
@@ -47,9 +49,11 @@ public class InboxUploadEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public InboxUploadEntity withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public InboxUploadEntity(){}
 }

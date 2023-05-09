@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnableAWSServiceAccessRequest {
     @JsonProperty("ServicePrincipal")
     public String servicePrincipal;
+
     public EnableAWSServiceAccessRequest withServicePrincipal(String servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
         return this;
     }
     
+    public EnableAWSServiceAccessRequest(@JsonProperty("ServicePrincipal") String servicePrincipal) {
+        this.servicePrincipal = servicePrincipal;
+  }
 }

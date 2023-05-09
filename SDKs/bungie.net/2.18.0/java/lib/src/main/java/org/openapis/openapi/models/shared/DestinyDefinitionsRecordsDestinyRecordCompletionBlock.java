@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsRecordsDestinyRecordCompletionBlock {
     
     public Integer scoreValue;
+
     public DestinyDefinitionsRecordsDestinyRecordCompletionBlock withScoreValue(Integer scoreValue) {
         this.scoreValue = scoreValue;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsRecordsDestinyRecordCompletionBlock {
      */
     
     public Integer partialCompletionObjectiveCountThreshold;
+
     public DestinyDefinitionsRecordsDestinyRecordCompletionBlock withPartialCompletionObjectiveCountThreshold(Integer partialCompletionObjectiveCountThreshold) {
         this.partialCompletionObjectiveCountThreshold = partialCompletionObjectiveCountThreshold;
         return this;
@@ -26,6 +28,7 @@ public class DestinyDefinitionsRecordsDestinyRecordCompletionBlock {
     
     
     public Boolean shouldFireToast;
+
     public DestinyDefinitionsRecordsDestinyRecordCompletionBlock withShouldFireToast(Boolean shouldFireToast) {
         this.shouldFireToast = shouldFireToast;
         return this;
@@ -33,9 +36,11 @@ public class DestinyDefinitionsRecordsDestinyRecordCompletionBlock {
     
     
     public Integer toastStyle;
+
     public DestinyDefinitionsRecordsDestinyRecordCompletionBlock withToastStyle(Integer toastStyle) {
         this.toastStyle = toastStyle;
         return this;
     }
     
+    public DestinyDefinitionsRecordsDestinyRecordCompletionBlock(){}
 }

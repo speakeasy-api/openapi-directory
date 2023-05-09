@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeAlgorithmOutput {
     @JsonProperty("AlgorithmArn")
     public String algorithmArn;
+
     public DescribeAlgorithmOutput withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
@@ -27,6 +28,7 @@ public class DescribeAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmDescription")
     public String algorithmDescription;
+
     public DescribeAlgorithmOutput withAlgorithmDescription(String algorithmDescription) {
         this.algorithmDescription = algorithmDescription;
         return this;
@@ -34,6 +36,7 @@ public class DescribeAlgorithmOutput {
     
     @JsonProperty("AlgorithmName")
     public String algorithmName;
+
     public DescribeAlgorithmOutput withAlgorithmName(String algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -41,6 +44,7 @@ public class DescribeAlgorithmOutput {
     
     @JsonProperty("AlgorithmStatus")
     public AlgorithmStatusEnum algorithmStatus;
+
     public DescribeAlgorithmOutput withAlgorithmStatus(AlgorithmStatusEnum algorithmStatus) {
         this.algorithmStatus = algorithmStatus;
         return this;
@@ -48,6 +52,7 @@ public class DescribeAlgorithmOutput {
     
     @JsonProperty("AlgorithmStatusDetails")
     public AlgorithmStatusDetails algorithmStatusDetails;
+
     public DescribeAlgorithmOutput withAlgorithmStatusDetails(AlgorithmStatusDetails algorithmStatusDetails) {
         this.algorithmStatusDetails = algorithmStatusDetails;
         return this;
@@ -56,6 +61,7 @@ public class DescribeAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertifyForMarketplace")
     public Boolean certifyForMarketplace;
+
     public DescribeAlgorithmOutput withCertifyForMarketplace(Boolean certifyForMarketplace) {
         this.certifyForMarketplace = certifyForMarketplace;
         return this;
@@ -65,6 +71,7 @@ public class DescribeAlgorithmOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeAlgorithmOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -73,6 +80,7 @@ public class DescribeAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSpecification")
     public InferenceSpecification inferenceSpecification;
+
     public DescribeAlgorithmOutput withInferenceSpecification(InferenceSpecification inferenceSpecification) {
         this.inferenceSpecification = inferenceSpecification;
         return this;
@@ -81,6 +89,7 @@ public class DescribeAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public DescribeAlgorithmOutput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -88,6 +97,7 @@ public class DescribeAlgorithmOutput {
     
     @JsonProperty("TrainingSpecification")
     public TrainingSpecification trainingSpecification;
+
     public DescribeAlgorithmOutput withTrainingSpecification(TrainingSpecification trainingSpecification) {
         this.trainingSpecification = trainingSpecification;
         return this;
@@ -96,9 +106,18 @@ public class DescribeAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationSpecification")
     public AlgorithmValidationSpecification validationSpecification;
+
     public DescribeAlgorithmOutput withValidationSpecification(AlgorithmValidationSpecification validationSpecification) {
         this.validationSpecification = validationSpecification;
         return this;
     }
     
+    public DescribeAlgorithmOutput(@JsonProperty("AlgorithmArn") String algorithmArn, @JsonProperty("AlgorithmName") String algorithmName, @JsonProperty("AlgorithmStatus") AlgorithmStatusEnum algorithmStatus, @JsonProperty("AlgorithmStatusDetails") AlgorithmStatusDetails algorithmStatusDetails, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("TrainingSpecification") TrainingSpecification trainingSpecification) {
+        this.algorithmArn = algorithmArn;
+        this.algorithmName = algorithmName;
+        this.algorithmStatus = algorithmStatus;
+        this.algorithmStatusDetails = algorithmStatusDetails;
+        this.creationTime = creationTime;
+        this.trainingSpecification = trainingSpecification;
+  }
 }

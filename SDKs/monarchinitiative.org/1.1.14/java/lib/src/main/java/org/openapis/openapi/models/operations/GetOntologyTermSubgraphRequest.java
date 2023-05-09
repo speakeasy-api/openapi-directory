@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntologyTermSubgraphRequest {
@@ -12,6 +13,7 @@ public class GetOntologyTermSubgraphRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cnode")
     public String[] cnode;
+
     public GetOntologyTermSubgraphRequest withCnode(String[] cnode) {
         this.cnode = cnode;
         return this;
@@ -22,6 +24,7 @@ public class GetOntologyTermSubgraphRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetOntologyTermSubgraphRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetOntologyTermSubgraphRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_ancestors")
     public Boolean includeAncestors;
+
     public GetOntologyTermSubgraphRequest withIncludeAncestors(Boolean includeAncestors) {
         this.includeAncestors = includeAncestors;
         return this;
@@ -42,6 +46,7 @@ public class GetOntologyTermSubgraphRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_descendants")
     public Boolean includeDescendants;
+
     public GetOntologyTermSubgraphRequest withIncludeDescendants(Boolean includeDescendants) {
         this.includeDescendants = includeDescendants;
         return this;
@@ -52,6 +57,7 @@ public class GetOntologyTermSubgraphRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_meta")
     public Boolean includeMeta;
+
     public GetOntologyTermSubgraphRequest withIncludeMeta(Boolean includeMeta) {
         this.includeMeta = includeMeta;
         return this;
@@ -62,9 +68,13 @@ public class GetOntologyTermSubgraphRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
     public String[] relation;
+
     public GetOntologyTermSubgraphRequest withRelation(String[] relation) {
         this.relation = relation;
         return this;
     }
     
+    public GetOntologyTermSubgraphRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -56,14 +56,12 @@ public class ValuesInPastMultiple {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValuesInPastMultipleGetResponse res = new org.openapis.openapi.models.operations.ValuesInPastMultipleGetResponse() {{
+        org.openapis.openapi.models.operations.ValuesInPastMultipleGetResponse res = new org.openapis.openapi.models.operations.ValuesInPastMultipleGetResponse(contentType, httpRes.statusCode()) {{
             valuesData = null;
             valuesData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

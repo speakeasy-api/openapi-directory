@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class RestoreRevisionUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public RestoreRevisionUsingPOSTRequest withPadID(String padID) {
         this.padID = padID;
         return this;
@@ -16,9 +17,11 @@ public class RestoreRevisionUsingPOSTRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rev")
     public String rev;
+
     public RestoreRevisionUsingPOSTRequest withRev(String rev) {
         this.rev = rev;
         return this;
     }
     
+    public RestoreRevisionUsingPOSTRequest(){}
 }

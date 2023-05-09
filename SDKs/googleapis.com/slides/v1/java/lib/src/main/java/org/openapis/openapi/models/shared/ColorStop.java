@@ -18,6 +18,7 @@ public class ColorStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alpha")
     public Float alpha;
+
     public ColorStop withAlpha(Float alpha) {
         this.alpha = alpha;
         return this;
@@ -29,6 +30,7 @@ public class ColorStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public OpaqueColor color;
+
     public ColorStop withColor(OpaqueColor color) {
         this.color = color;
         return this;
@@ -40,9 +42,11 @@ public class ColorStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Float position;
+
     public ColorStop withPosition(Float position) {
         this.position = position;
         return this;
     }
     
+    public ColorStop(){}
 }

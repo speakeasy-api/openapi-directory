@@ -15,9 +15,11 @@ public class StartTransactionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public StartTransactionResponse withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public StartTransactionResponse(){}
 }

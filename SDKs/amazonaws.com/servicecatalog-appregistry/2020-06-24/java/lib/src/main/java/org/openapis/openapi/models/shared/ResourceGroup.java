@@ -15,6 +15,7 @@ public class ResourceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ResourceGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ResourceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ResourceGroup withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class ResourceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ResourceGroupStateEnum state;
+
     public ResourceGroup withState(ResourceGroupStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ResourceGroup(){}
 }

@@ -18,6 +18,7 @@ public class Pageviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blogId")
     public String blogId;
+
     public Pageviews withBlogId(String blogId) {
         this.blogId = blogId;
         return this;
@@ -29,6 +30,7 @@ public class Pageviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counts")
     public PageviewsCounts[] counts;
+
     public Pageviews withCounts(PageviewsCounts[] counts) {
         this.counts = counts;
         return this;
@@ -40,9 +42,11 @@ public class Pageviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Pageviews withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Pageviews(){}
 }

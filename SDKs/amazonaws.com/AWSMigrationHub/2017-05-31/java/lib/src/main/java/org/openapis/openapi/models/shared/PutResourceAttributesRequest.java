@@ -12,6 +12,7 @@ public class PutResourceAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public PutResourceAttributesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class PutResourceAttributesRequest {
     
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public PutResourceAttributesRequest withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -26,6 +28,7 @@ public class PutResourceAttributesRequest {
     
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public PutResourceAttributesRequest withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
@@ -33,9 +36,15 @@ public class PutResourceAttributesRequest {
     
     @JsonProperty("ResourceAttributeList")
     public ResourceAttribute[] resourceAttributeList;
+
     public PutResourceAttributesRequest withResourceAttributeList(ResourceAttribute[] resourceAttributeList) {
         this.resourceAttributeList = resourceAttributeList;
         return this;
     }
     
+    public PutResourceAttributesRequest(@JsonProperty("MigrationTaskName") String migrationTaskName, @JsonProperty("ProgressUpdateStream") String progressUpdateStream, @JsonProperty("ResourceAttributeList") ResourceAttribute[] resourceAttributeList) {
+        this.migrationTaskName = migrationTaskName;
+        this.progressUpdateStream = progressUpdateStream;
+        this.resourceAttributeList = resourceAttributeList;
+  }
 }

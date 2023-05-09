@@ -18,9 +18,11 @@ public class CustomLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expr")
     public Expr expr;
+
     public CustomLevel withExpr(Expr expr) {
         this.expr = expr;
         return this;
     }
     
+    public CustomLevel(){}
 }

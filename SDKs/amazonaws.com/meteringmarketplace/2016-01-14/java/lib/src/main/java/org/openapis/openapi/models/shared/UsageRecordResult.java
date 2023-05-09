@@ -15,6 +15,7 @@ public class UsageRecordResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeteringRecordId")
     public String meteringRecordId;
+
     public UsageRecordResult withMeteringRecordId(String meteringRecordId) {
         this.meteringRecordId = meteringRecordId;
         return this;
@@ -23,6 +24,7 @@ public class UsageRecordResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UsageRecordResultStatusEnum status;
+
     public UsageRecordResult withStatus(UsageRecordResultStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class UsageRecordResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageRecord")
     public UsageRecord usageRecord;
+
     public UsageRecordResult withUsageRecord(UsageRecord usageRecord) {
         this.usageRecord = usageRecord;
         return this;
     }
     
+    public UsageRecordResult(){}
 }

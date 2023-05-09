@@ -22,6 +22,7 @@ public class StartImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public StartImportResponse withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public String[] destinations;
+
     public StartImportResponse withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -40,6 +42,7 @@ public class StartImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndEventTime")
     public OffsetDateTime endEventTime;
+
     public StartImportResponse withEndEventTime(OffsetDateTime endEventTime) {
         this.endEventTime = endEventTime;
         return this;
@@ -48,6 +51,7 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportId")
     public String importId;
+
     public StartImportResponse withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -56,6 +60,7 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportSource")
     public ImportSource importSource;
+
     public StartImportResponse withImportSource(ImportSource importSource) {
         this.importSource = importSource;
         return this;
@@ -64,6 +69,7 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportStatus")
     public ImportStatusEnum importStatus;
+
     public StartImportResponse withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -74,6 +80,7 @@ public class StartImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartEventTime")
     public OffsetDateTime startEventTime;
+
     public StartImportResponse withStartEventTime(OffsetDateTime startEventTime) {
         this.startEventTime = startEventTime;
         return this;
@@ -84,9 +91,11 @@ public class StartImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTimestamp")
     public OffsetDateTime updatedTimestamp;
+
     public StartImportResponse withUpdatedTimestamp(OffsetDateTime updatedTimestamp) {
         this.updatedTimestamp = updatedTimestamp;
         return this;
     }
     
+    public StartImportResponse(){}
 }

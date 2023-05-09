@@ -12,9 +12,11 @@ public class ListSessionsOfGroupUsingPOST200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessions")
     public ListSessionsOfGroupUsingPOST200ApplicationJSONDataSessions[] sessions;
+
     public ListSessionsOfGroupUsingPOST200ApplicationJSONData withSessions(ListSessionsOfGroupUsingPOST200ApplicationJSONDataSessions[] sessions) {
         this.sessions = sessions;
         return this;
     }
     
+    public ListSessionsOfGroupUsingPOST200ApplicationJSONData(){}
 }

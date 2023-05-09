@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGitHubAccountTokenNamesResponse {
     
     public String contentType;
+
     public ListGitHubAccountTokenNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListGitHubAccountTokenNamesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListGitHubAccountTokenNamesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListGitHubAccountTokenNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGitHubAccountTokenNamesOutput listGitHubAccountTokenNamesOutput;
+
     public ListGitHubAccountTokenNamesResponse withListGitHubAccountTokenNamesOutput(org.openapis.openapi.models.shared.ListGitHubAccountTokenNamesOutput listGitHubAccountTokenNamesOutput) {
         this.listGitHubAccountTokenNamesOutput = listGitHubAccountTokenNamesOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListGitHubAccountTokenNamesResponse {
      */
     
     public Object operationNotSupportedException;
+
     public ListGitHubAccountTokenNamesResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -46,6 +51,7 @@ public class ListGitHubAccountTokenNamesResponse {
     
     
     public Integer statusCode;
+
     public ListGitHubAccountTokenNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListGitHubAccountTokenNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGitHubAccountTokenNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListGitHubAccountTokenNamesResponse {
      */
     
     public Object resourceValidationException;
+
     public ListGitHubAccountTokenNamesResponse withResourceValidationException(Object resourceValidationException) {
         this.resourceValidationException = resourceValidationException;
         return this;
     }
     
+    public ListGitHubAccountTokenNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

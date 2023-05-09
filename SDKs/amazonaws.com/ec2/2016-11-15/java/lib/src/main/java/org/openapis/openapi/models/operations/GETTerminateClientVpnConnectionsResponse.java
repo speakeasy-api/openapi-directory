@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETTerminateClientVpnConnectionsResponse {
     
     public byte[] body;
+
     public GETTerminateClientVpnConnectionsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETTerminateClientVpnConnectionsResponse {
     
     
     public String contentType;
+
     public GETTerminateClientVpnConnectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETTerminateClientVpnConnectionsResponse {
     
     
     public Integer statusCode;
+
     public GETTerminateClientVpnConnectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETTerminateClientVpnConnectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETTerminateClientVpnConnectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETTerminateClientVpnConnectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public GetDocumentWithWebHook200ApplicationJSONResultAstRulesBody[] body;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstRules withBody(GetDocumentWithWebHook200ApplicationJSONResultAstRulesBody[] body) {
         this.body = body;
         return this;
@@ -23,9 +24,11 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("head")
     public GetDocumentWithWebHook200ApplicationJSONResultAstRulesHead head;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstRules withHead(GetDocumentWithWebHook200ApplicationJSONResultAstRulesHead head) {
         this.head = head;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONResultAstRules(){}
 }

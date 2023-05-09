@@ -15,9 +15,11 @@ public class DeleteMLTransformResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformId")
     public String transformId;
+
     public DeleteMLTransformResponse withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public DeleteMLTransformResponse(){}
 }

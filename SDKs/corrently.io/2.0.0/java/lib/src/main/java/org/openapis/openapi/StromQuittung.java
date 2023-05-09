@@ -59,11 +59,9 @@ public class StromQuittung {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuittungComitResponse res = new org.openapis.openapi.models.operations.QuittungComitResponse() {{
+        org.openapis.openapi.models.operations.QuittungComitResponse res = new org.openapis.openapi.models.operations.QuittungComitResponse(contentType, httpRes.statusCode()) {{
             quittungComit200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class StromQuittung {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuittungCreateResponse res = new org.openapis.openapi.models.operations.QuittungCreateResponse() {{
+        org.openapis.openapi.models.operations.QuittungCreateResponse res = new org.openapis.openapi.models.operations.QuittungCreateResponse(contentType, httpRes.statusCode()) {{
             quittungCreate200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class StromQuittung {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuittungPrepareResponse res = new org.openapis.openapi.models.operations.QuittungPrepareResponse() {{
+        org.openapis.openapi.models.operations.QuittungPrepareResponse res = new org.openapis.openapi.models.operations.QuittungPrepareResponse(contentType, httpRes.statusCode()) {{
             quittungPrepare200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,11 +183,9 @@ public class StromQuittung {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuittungTSEResponse res = new org.openapis.openapi.models.operations.QuittungTSEResponse() {{
+        org.openapis.openapi.models.operations.QuittungTSEResponse res = new org.openapis.openapi.models.operations.QuittungTSEResponse(contentType, httpRes.statusCode()) {{
             quittungTSE200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,10 +227,8 @@ public class StromQuittung {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuittungTSEDataResponse res = new org.openapis.openapi.models.operations.QuittungTSEDataResponse() {{
+        org.openapis.openapi.models.operations.QuittungTSEDataResponse res = new org.openapis.openapi.models.operations.QuittungTSEDataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -275,10 +265,8 @@ public class StromQuittung {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuittungTSEsignatureResponse res = new org.openapis.openapi.models.operations.QuittungTSEsignatureResponse() {{
+        org.openapis.openapi.models.operations.QuittungTSEsignatureResponse res = new org.openapis.openapi.models.operations.QuittungTSEsignatureResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,10 +303,8 @@ public class StromQuittung {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuittungZugferdResponse res = new org.openapis.openapi.models.operations.QuittungZugferdResponse() {{
+        org.openapis.openapi.models.operations.QuittungZugferdResponse res = new org.openapis.openapi.models.operations.QuittungZugferdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

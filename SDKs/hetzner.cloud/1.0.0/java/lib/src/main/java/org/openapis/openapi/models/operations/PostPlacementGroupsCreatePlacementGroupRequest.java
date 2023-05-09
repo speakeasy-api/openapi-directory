@@ -15,6 +15,7 @@ public class PostPlacementGroupsCreatePlacementGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PostPlacementGroupsCreatePlacementGroupRequest withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -25,6 +26,7 @@ public class PostPlacementGroupsCreatePlacementGroupRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public PostPlacementGroupsCreatePlacementGroupRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,14 @@ public class PostPlacementGroupsCreatePlacementGroupRequest {
      */
     @JsonProperty("type")
     public PostPlacementGroupsCreatePlacementGroupRequestTypeEnum type;
+
     public PostPlacementGroupsCreatePlacementGroupRequest withType(PostPlacementGroupsCreatePlacementGroupRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostPlacementGroupsCreatePlacementGroupRequest(@JsonProperty("name") String name, @JsonProperty("type") PostPlacementGroupsCreatePlacementGroupRequestTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

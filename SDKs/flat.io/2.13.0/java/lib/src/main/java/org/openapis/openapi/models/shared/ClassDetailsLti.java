@@ -18,6 +18,7 @@ public class ClassDetailsLti {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextId")
     public String contextId;
+
     public ClassDetailsLti withContextId(String contextId) {
         this.contextId = contextId;
         return this;
@@ -29,6 +30,7 @@ public class ClassDetailsLti {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextLabel")
     public String contextLabel;
+
     public ClassDetailsLti withContextLabel(String contextLabel) {
         this.contextLabel = contextLabel;
         return this;
@@ -40,9 +42,11 @@ public class ClassDetailsLti {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextTitle")
     public String contextTitle;
+
     public ClassDetailsLti withContextTitle(String contextTitle) {
         this.contextTitle = contextTitle;
         return this;
     }
     
+    public ClassDetailsLti(){}
 }

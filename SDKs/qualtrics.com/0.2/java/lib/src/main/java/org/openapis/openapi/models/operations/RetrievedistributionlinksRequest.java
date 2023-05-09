@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievedistributionlinksRequest {
@@ -12,6 +13,7 @@ public class RetrievedistributionlinksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DistributionId")
     public String distributionId;
+
     public RetrievedistributionlinksRequest withDistributionId(String distributionId) {
         this.distributionId = distributionId;
         return this;
@@ -22,9 +24,14 @@ public class RetrievedistributionlinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=surveyId")
     public String surveyId;
+
     public RetrievedistributionlinksRequest withSurveyId(String surveyId) {
         this.surveyId = surveyId;
         return this;
     }
     
+    public RetrievedistributionlinksRequest(@JsonProperty("DistributionId") String distributionId, @JsonProperty("surveyId") String surveyId) {
+        this.distributionId = distributionId;
+        this.surveyId = surveyId;
+  }
 }

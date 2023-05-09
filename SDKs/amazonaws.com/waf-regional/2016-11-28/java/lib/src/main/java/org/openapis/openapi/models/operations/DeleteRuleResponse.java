@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRuleResponse {
     
     public String contentType;
+
     public DeleteRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRuleResponse deleteRuleResponse;
+
     public DeleteRuleResponse withDeleteRuleResponse(org.openapis.openapi.models.shared.DeleteRuleResponse deleteRuleResponse) {
         this.deleteRuleResponse = deleteRuleResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteRuleResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteRuleResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRuleResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteRuleResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRuleResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteRuleResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRuleResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteRuleResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRuleResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteRuleResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteRuleResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteRuleResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteRuleResponse {
      */
     
     public Object wafTagOperationException;
+
     public DeleteRuleResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteRuleResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public DeleteRuleResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public DeleteRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

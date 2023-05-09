@@ -18,6 +18,7 @@ public class ListExportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exports")
     public Export[] exports;
+
     public ListExportsResponse withExports(Export[] exports) {
         this.exports = exports;
         return this;
@@ -29,9 +30,11 @@ public class ListExportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListExportsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListExportsResponse(){}
 }

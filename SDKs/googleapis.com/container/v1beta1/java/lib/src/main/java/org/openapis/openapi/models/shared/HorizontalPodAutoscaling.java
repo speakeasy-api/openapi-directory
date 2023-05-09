@@ -18,9 +18,11 @@ public class HorizontalPodAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public HorizontalPodAutoscaling withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
     }
     
+    public HorizontalPodAutoscaling(){}
 }

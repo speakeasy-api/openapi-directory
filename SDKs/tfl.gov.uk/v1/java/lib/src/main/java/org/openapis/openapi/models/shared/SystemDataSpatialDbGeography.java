@@ -12,9 +12,11 @@ public class SystemDataSpatialDbGeography {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geography")
     public SystemDataSpatialDbGeographyWellKnownValue geography;
+
     public SystemDataSpatialDbGeography withGeography(SystemDataSpatialDbGeographyWellKnownValue geography) {
         this.geography = geography;
         return this;
     }
     
+    public SystemDataSpatialDbGeography(){}
 }

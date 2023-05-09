@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBWriteFileConsentResponse4 {
     @JsonProperty("Data")
     public OBWriteFileConsentResponse4Data data;
+
     public OBWriteFileConsentResponse4 withData(OBWriteFileConsentResponse4Data data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteFileConsentResponse4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBWriteFileConsentResponse4 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,9 +38,13 @@ public class OBWriteFileConsentResponse4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBWriteFileConsentResponse4 withMeta(Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public OBWriteFileConsentResponse4(@JsonProperty("Data") OBWriteFileConsentResponse4Data data) {
+        this.data = data;
+  }
 }

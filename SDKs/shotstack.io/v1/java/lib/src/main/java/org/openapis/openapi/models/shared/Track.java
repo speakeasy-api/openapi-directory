@@ -15,9 +15,13 @@ public class Track {
      */
     @JsonProperty("clips")
     public Clip[] clips;
+
     public Track withClips(Clip[] clips) {
         this.clips = clips;
         return this;
     }
     
+    public Track(@JsonProperty("clips") Clip[] clips) {
+        this.clips = clips;
+  }
 }

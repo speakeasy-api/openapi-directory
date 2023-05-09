@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccountIntegrationsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListAccountIntegrationsRequestBody requestBody;
+
     public ListAccountIntegrationsRequest withRequestBody(ListAccountIntegrationsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ListAccountIntegrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAccountIntegrationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListAccountIntegrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAccountIntegrationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListAccountIntegrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAccountIntegrationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListAccountIntegrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAccountIntegrationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListAccountIntegrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAccountIntegrationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListAccountIntegrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAccountIntegrationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListAccountIntegrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAccountIntegrationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class ListAccountIntegrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include-hidden")
     public Boolean includeHidden;
+
     public ListAccountIntegrationsRequest withIncludeHidden(Boolean includeHidden) {
         this.includeHidden = includeHidden;
         return this;
@@ -78,6 +88,7 @@ public class ListAccountIntegrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
     public Long maxResults;
+
     public ListAccountIntegrationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -88,9 +99,13 @@ public class ListAccountIntegrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
     public String nextToken;
+
     public ListAccountIntegrationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccountIntegrationsRequest(@JsonProperty("RequestBody") ListAccountIntegrationsRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CertificateAuthenticationRequest {
     
     public String clientRootCertificateChainArn;
+
     public CertificateAuthenticationRequest withClientRootCertificateChainArn(String clientRootCertificateChainArn) {
         this.clientRootCertificateChainArn = clientRootCertificateChainArn;
         return this;
     }
     
+    public CertificateAuthenticationRequest(){}
 }

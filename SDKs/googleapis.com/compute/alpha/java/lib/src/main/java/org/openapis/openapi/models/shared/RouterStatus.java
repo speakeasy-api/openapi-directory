@@ -15,6 +15,7 @@ public class RouterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestRoutes")
     public Route[] bestRoutes;
+
     public RouterStatus withBestRoutes(Route[] bestRoutes) {
         this.bestRoutes = bestRoutes;
         return this;
@@ -26,6 +27,7 @@ public class RouterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestRoutesForRouter")
     public Route[] bestRoutesForRouter;
+
     public RouterStatus withBestRoutesForRouter(Route[] bestRoutesForRouter) {
         this.bestRoutesForRouter = bestRoutesForRouter;
         return this;
@@ -34,6 +36,7 @@ public class RouterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpPeerStatus")
     public RouterStatusBgpPeerStatus[] bgpPeerStatus;
+
     public RouterStatus withBgpPeerStatus(RouterStatusBgpPeerStatus[] bgpPeerStatus) {
         this.bgpPeerStatus = bgpPeerStatus;
         return this;
@@ -42,6 +45,7 @@ public class RouterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natStatus")
     public RouterStatusNatStatus[] natStatus;
+
     public RouterStatus withNatStatus(RouterStatusNatStatus[] natStatus) {
         this.natStatus = natStatus;
         return this;
@@ -53,9 +57,11 @@ public class RouterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public RouterStatus withNetwork(String network) {
         this.network = network;
         return this;
     }
     
+    public RouterStatus(){}
 }

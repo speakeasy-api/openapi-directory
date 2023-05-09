@@ -20,6 +20,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchEventDetailType")
     public String cloudWatchEventDetailType;
+
     public Observation withCloudWatchEventDetailType(String cloudWatchEventDetailType) {
         this.cloudWatchEventDetailType = cloudWatchEventDetailType;
         return this;
@@ -28,6 +29,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchEventId")
     public String cloudWatchEventId;
+
     public Observation withCloudWatchEventId(String cloudWatchEventId) {
         this.cloudWatchEventId = cloudWatchEventId;
         return this;
@@ -36,6 +38,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchEventSource")
     public CloudWatchEventSourceEnum cloudWatchEventSource;
+
     public Observation withCloudWatchEventSource(CloudWatchEventSourceEnum cloudWatchEventSource) {
         this.cloudWatchEventSource = cloudWatchEventSource;
         return this;
@@ -44,6 +47,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeployApplication")
     public String codeDeployApplication;
+
     public Observation withCodeDeployApplication(String codeDeployApplication) {
         this.codeDeployApplication = codeDeployApplication;
         return this;
@@ -52,6 +56,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeployDeploymentGroup")
     public String codeDeployDeploymentGroup;
+
     public Observation withCodeDeployDeploymentGroup(String codeDeployDeploymentGroup) {
         this.codeDeployDeploymentGroup = codeDeployDeploymentGroup;
         return this;
@@ -60,6 +65,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeployDeploymentId")
     public String codeDeployDeploymentId;
+
     public Observation withCodeDeployDeploymentId(String codeDeployDeploymentId) {
         this.codeDeployDeploymentId = codeDeployDeploymentId;
         return this;
@@ -68,6 +74,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeployInstanceGroupId")
     public String codeDeployInstanceGroupId;
+
     public Observation withCodeDeployInstanceGroupId(String codeDeployInstanceGroupId) {
         this.codeDeployInstanceGroupId = codeDeployInstanceGroupId;
         return this;
@@ -76,6 +83,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeployState")
     public String codeDeployState;
+
     public Observation withCodeDeployState(String codeDeployState) {
         this.codeDeployState = codeDeployState;
         return this;
@@ -84,6 +92,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsCause")
     public String ebsCause;
+
     public Observation withEbsCause(String ebsCause) {
         this.ebsCause = ebsCause;
         return this;
@@ -92,6 +101,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsEvent")
     public String ebsEvent;
+
     public Observation withEbsEvent(String ebsEvent) {
         this.ebsEvent = ebsEvent;
         return this;
@@ -100,6 +110,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsRequestId")
     public String ebsRequestId;
+
     public Observation withEbsRequestId(String ebsRequestId) {
         this.ebsRequestId = ebsRequestId;
         return this;
@@ -108,6 +119,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsResult")
     public String ebsResult;
+
     public Observation withEbsResult(String ebsResult) {
         this.ebsResult = ebsResult;
         return this;
@@ -116,6 +128,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2State")
     public String ec2State;
+
     public Observation withEc2State(String ec2State) {
         this.ec2State = ec2State;
         return this;
@@ -126,6 +139,7 @@ public class Observation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public Observation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -134,6 +148,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthEventArn")
     public String healthEventArn;
+
     public Observation withHealthEventArn(String healthEventArn) {
         this.healthEventArn = healthEventArn;
         return this;
@@ -142,6 +157,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthEventDescription")
     public String healthEventDescription;
+
     public Observation withHealthEventDescription(String healthEventDescription) {
         this.healthEventDescription = healthEventDescription;
         return this;
@@ -150,6 +166,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthEventTypeCategory")
     public String healthEventTypeCategory;
+
     public Observation withHealthEventTypeCategory(String healthEventTypeCategory) {
         this.healthEventTypeCategory = healthEventTypeCategory;
         return this;
@@ -158,6 +175,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthEventTypeCode")
     public String healthEventTypeCode;
+
     public Observation withHealthEventTypeCode(String healthEventTypeCode) {
         this.healthEventTypeCode = healthEventTypeCode;
         return this;
@@ -166,6 +184,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthService")
     public String healthService;
+
     public Observation withHealthService(String healthService) {
         this.healthService = healthService;
         return this;
@@ -174,6 +193,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Observation withId(String id) {
         this.id = id;
         return this;
@@ -184,6 +204,7 @@ public class Observation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LineTime")
     public OffsetDateTime lineTime;
+
     public Observation withLineTime(OffsetDateTime lineTime) {
         this.lineTime = lineTime;
         return this;
@@ -192,6 +213,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogFilter")
     public LogFilterEnum logFilter;
+
     public Observation withLogFilter(LogFilterEnum logFilter) {
         this.logFilter = logFilter;
         return this;
@@ -200,6 +222,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroup")
     public String logGroup;
+
     public Observation withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
@@ -208,6 +231,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogText")
     public String logText;
+
     public Observation withLogText(String logText) {
         this.logText = logText;
         return this;
@@ -216,6 +240,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public Observation withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -224,6 +249,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricNamespace")
     public String metricNamespace;
+
     public Observation withMetricNamespace(String metricNamespace) {
         this.metricNamespace = metricNamespace;
         return this;
@@ -232,6 +258,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RdsEventCategories")
     public String rdsEventCategories;
+
     public Observation withRdsEventCategories(String rdsEventCategories) {
         this.rdsEventCategories = rdsEventCategories;
         return this;
@@ -240,6 +267,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RdsEventMessage")
     public String rdsEventMessage;
+
     public Observation withRdsEventMessage(String rdsEventMessage) {
         this.rdsEventMessage = rdsEventMessage;
         return this;
@@ -248,6 +276,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3EventName")
     public String s3EventName;
+
     public Observation withS3EventName(String s3EventName) {
         this.s3EventName = s3EventName;
         return this;
@@ -256,6 +285,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceARN")
     public String sourceARN;
+
     public Observation withSourceARN(String sourceARN) {
         this.sourceARN = sourceARN;
         return this;
@@ -264,6 +294,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public Observation withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -274,6 +305,7 @@ public class Observation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public Observation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -282,6 +314,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatesArn")
     public String statesArn;
+
     public Observation withStatesArn(String statesArn) {
         this.statesArn = statesArn;
         return this;
@@ -290,6 +323,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatesExecutionArn")
     public String statesExecutionArn;
+
     public Observation withStatesExecutionArn(String statesExecutionArn) {
         this.statesExecutionArn = statesExecutionArn;
         return this;
@@ -298,6 +332,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatesInput")
     public String statesInput;
+
     public Observation withStatesInput(String statesInput) {
         this.statesInput = statesInput;
         return this;
@@ -306,6 +341,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatesStatus")
     public String statesStatus;
+
     public Observation withStatesStatus(String statesStatus) {
         this.statesStatus = statesStatus;
         return this;
@@ -314,6 +350,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public Observation withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -322,6 +359,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public Observation withValue(Double value) {
         this.value = value;
         return this;
@@ -330,6 +368,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XRayErrorPercent")
     public Long xRayErrorPercent;
+
     public Observation withXRayErrorPercent(Long xRayErrorPercent) {
         this.xRayErrorPercent = xRayErrorPercent;
         return this;
@@ -338,6 +377,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XRayFaultPercent")
     public Long xRayFaultPercent;
+
     public Observation withXRayFaultPercent(Long xRayFaultPercent) {
         this.xRayFaultPercent = xRayFaultPercent;
         return this;
@@ -346,6 +386,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XRayNodeName")
     public String xRayNodeName;
+
     public Observation withXRayNodeName(String xRayNodeName) {
         this.xRayNodeName = xRayNodeName;
         return this;
@@ -354,6 +395,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XRayNodeType")
     public String xRayNodeType;
+
     public Observation withXRayNodeType(String xRayNodeType) {
         this.xRayNodeType = xRayNodeType;
         return this;
@@ -362,6 +404,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XRayRequestAverageLatency")
     public Long xRayRequestAverageLatency;
+
     public Observation withXRayRequestAverageLatency(Long xRayRequestAverageLatency) {
         this.xRayRequestAverageLatency = xRayRequestAverageLatency;
         return this;
@@ -370,6 +413,7 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XRayRequestCount")
     public Long xRayRequestCount;
+
     public Observation withXRayRequestCount(Long xRayRequestCount) {
         this.xRayRequestCount = xRayRequestCount;
         return this;
@@ -378,9 +422,11 @@ public class Observation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XRayThrottlePercent")
     public Long xRayThrottlePercent;
+
     public Observation withXRayThrottlePercent(Long xRayThrottlePercent) {
         this.xRayThrottlePercent = xRayThrottlePercent;
         return this;
     }
     
+    public Observation(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportSourceCredentialsInput {
     @JsonProperty("authType")
     public AuthTypeEnum authType;
+
     public ImportSourceCredentialsInput withAuthType(AuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -18,6 +19,7 @@ public class ImportSourceCredentialsInput {
     
     @JsonProperty("serverType")
     public ServerTypeEnum serverType;
+
     public ImportSourceCredentialsInput withServerType(ServerTypeEnum serverType) {
         this.serverType = serverType;
         return this;
@@ -26,6 +28,7 @@ public class ImportSourceCredentialsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shouldOverwrite")
     public Boolean shouldOverwrite;
+
     public ImportSourceCredentialsInput withShouldOverwrite(Boolean shouldOverwrite) {
         this.shouldOverwrite = shouldOverwrite;
         return this;
@@ -33,6 +36,7 @@ public class ImportSourceCredentialsInput {
     
     @JsonProperty("token")
     public String token;
+
     public ImportSourceCredentialsInput withToken(String token) {
         this.token = token;
         return this;
@@ -41,9 +45,15 @@ public class ImportSourceCredentialsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public ImportSourceCredentialsInput withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ImportSourceCredentialsInput(@JsonProperty("authType") AuthTypeEnum authType, @JsonProperty("serverType") ServerTypeEnum serverType, @JsonProperty("token") String token) {
+        this.authType = authType;
+        this.serverType = serverType;
+        this.token = token;
+  }
 }

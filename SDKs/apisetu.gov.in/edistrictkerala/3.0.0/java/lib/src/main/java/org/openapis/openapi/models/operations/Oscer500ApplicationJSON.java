@@ -15,6 +15,7 @@ public class Oscer500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Oscer500ApplicationJSONErrorEnum error;
+
     public Oscer500ApplicationJSON withError(Oscer500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Oscer500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Oscer500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Oscer500ApplicationJSON withErrorDescription(Oscer500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Oscer500ApplicationJSON(){}
 }

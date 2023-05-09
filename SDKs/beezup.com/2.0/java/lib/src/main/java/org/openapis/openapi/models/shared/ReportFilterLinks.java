@@ -15,6 +15,7 @@ public class ReportFilterLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public LinksDeleteReportFilterLink delete;
+
     public ReportFilterLinks withDelete(LinksDeleteReportFilterLink delete) {
         this.delete = delete;
         return this;
@@ -23,6 +24,7 @@ public class ReportFilterLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("save")
     public LinksSaveReportFilterLink save;
+
     public ReportFilterLinks withSave(LinksSaveReportFilterLink save) {
         this.save = save;
         return this;
@@ -31,9 +33,11 @@ public class ReportFilterLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetReportFilterLink self;
+
     public ReportFilterLinks withSelf(LinksGetReportFilterLink self) {
         this.self = self;
         return this;
     }
     
+    public ReportFilterLinks(){}
 }

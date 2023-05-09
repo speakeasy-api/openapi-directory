@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClaimBillingNotesReadResponse {
@@ -12,6 +13,7 @@ public class ClaimBillingNotesReadResponse {
      */
     
     public org.openapis.openapi.models.shared.ClaimBillingNotes claimBillingNotes;
+
     public ClaimBillingNotesReadResponse withClaimBillingNotes(org.openapis.openapi.models.shared.ClaimBillingNotes claimBillingNotes) {
         this.claimBillingNotes = claimBillingNotes;
         return this;
@@ -19,6 +21,7 @@ public class ClaimBillingNotesReadResponse {
     
     
     public String contentType;
+
     public ClaimBillingNotesReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClaimBillingNotesReadResponse {
     
     
     public Integer statusCode;
+
     public ClaimBillingNotesReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClaimBillingNotesReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClaimBillingNotesReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClaimBillingNotesReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -16,14 +16,14 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BalanceGetResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     password = "YOUR_PASSWORD_HERE";
                     username = "YOUR_USERNAME_HERE";
                 }})
@@ -37,17 +37,19 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `balanceGet` - Balance
-* `sendPost` - SendSMS
-* `sendbatchPost` - Bulk SMS
+* [balanceGet](docs/sdk/README.md#balanceget) - Balance
+* [sendPost](docs/sdk/README.md#sendpost) - SendSMS
+* [sendbatchPost](docs/sdk/README.md#sendbatchpost) - Bulk SMS
 <!-- End SDK Available Operations -->
 
 ### Maturity

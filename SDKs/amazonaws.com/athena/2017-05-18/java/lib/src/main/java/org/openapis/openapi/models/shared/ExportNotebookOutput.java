@@ -15,6 +15,7 @@ public class ExportNotebookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookMetadata")
     public NotebookMetadata notebookMetadata;
+
     public ExportNotebookOutput withNotebookMetadata(NotebookMetadata notebookMetadata) {
         this.notebookMetadata = notebookMetadata;
         return this;
@@ -23,9 +24,11 @@ public class ExportNotebookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payload")
     public String payload;
+
     public ExportNotebookOutput withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public ExportNotebookOutput(){}
 }

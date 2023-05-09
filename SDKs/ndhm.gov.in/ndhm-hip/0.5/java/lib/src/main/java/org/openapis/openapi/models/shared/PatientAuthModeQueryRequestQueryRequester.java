@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientAuthModeQueryRequestQueryRequester {
     @JsonProperty("id")
     public String id;
+
     public PatientAuthModeQueryRequestQueryRequester withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class PatientAuthModeQueryRequestQueryRequester {
     
     @JsonProperty("type")
     public PatientAuthModeQueryRequestQueryRequesterTypeEnum type;
+
     public PatientAuthModeQueryRequestQueryRequester withType(PatientAuthModeQueryRequestQueryRequesterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PatientAuthModeQueryRequestQueryRequester(@JsonProperty("id") String id, @JsonProperty("type") PatientAuthModeQueryRequestQueryRequesterTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

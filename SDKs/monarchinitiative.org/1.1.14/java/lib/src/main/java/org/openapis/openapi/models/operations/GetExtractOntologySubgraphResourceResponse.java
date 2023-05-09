@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExtractOntologySubgraphResourceResponse {
     
     public String contentType;
+
     public GetExtractOntologySubgraphResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetExtractOntologySubgraphResourceResponse {
     
     
     public Integer statusCode;
+
     public GetExtractOntologySubgraphResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class GetExtractOntologySubgraphResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExtractOntologySubgraphResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetExtractOntologySubgraphResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

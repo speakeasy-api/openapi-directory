@@ -15,6 +15,7 @@ public class SetIdentityPoolConfigurationRequestBodyCognitoStreams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public SetIdentityPoolConfigurationRequestBodyCognitoStreams withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -23,6 +24,7 @@ public class SetIdentityPoolConfigurationRequestBodyCognitoStreams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public SetIdentityPoolConfigurationRequestBodyCognitoStreams withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -31,9 +33,11 @@ public class SetIdentityPoolConfigurationRequestBodyCognitoStreams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingStatus")
     public org.openapis.openapi.models.shared.StreamingStatusEnum streamingStatus;
+
     public SetIdentityPoolConfigurationRequestBodyCognitoStreams withStreamingStatus(org.openapis.openapi.models.shared.StreamingStatusEnum streamingStatus) {
         this.streamingStatus = streamingStatus;
         return this;
     }
     
+    public SetIdentityPoolConfigurationRequestBodyCognitoStreams(){}
 }

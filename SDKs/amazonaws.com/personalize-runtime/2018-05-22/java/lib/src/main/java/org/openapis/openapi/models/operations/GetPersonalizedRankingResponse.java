@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPersonalizedRankingResponse {
     
     public String contentType;
+
     public GetPersonalizedRankingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPersonalizedRankingResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPersonalizedRankingResponse getPersonalizedRankingResponse;
+
     public GetPersonalizedRankingResponse withGetPersonalizedRankingResponse(org.openapis.openapi.models.shared.GetPersonalizedRankingResponse getPersonalizedRankingResponse) {
         this.getPersonalizedRankingResponse = getPersonalizedRankingResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetPersonalizedRankingResponse {
      */
     
     public Object invalidInputException;
+
     public GetPersonalizedRankingResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class GetPersonalizedRankingResponse {
     
     
     public Integer statusCode;
+
     public GetPersonalizedRankingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetPersonalizedRankingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPersonalizedRankingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetPersonalizedRankingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPersonalizedRankingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetPersonalizedRankingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

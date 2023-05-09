@@ -18,6 +18,7 @@ public class TunnelDestGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidrs")
     public String[] cidrs;
+
     public TunnelDestGroup withCidrs(String[] cidrs) {
         this.cidrs = cidrs;
         return this;
@@ -29,6 +30,7 @@ public class TunnelDestGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdns")
     public String[] fqdns;
+
     public TunnelDestGroup withFqdns(String[] fqdns) {
         this.fqdns = fqdns;
         return this;
@@ -40,9 +42,11 @@ public class TunnelDestGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TunnelDestGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TunnelDestGroup(){}
 }

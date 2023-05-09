@@ -18,9 +18,11 @@ public class YaraRuleSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yaraRule")
     public String yaraRule;
+
     public YaraRuleSignature withYaraRule(String yaraRule) {
         this.yaraRule = yaraRule;
         return this;
     }
     
+    public YaraRuleSignature(){}
 }

@@ -18,6 +18,7 @@ public class CustomClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customClassId")
     public String customClassId;
+
     public CustomClass withCustomClassId(String customClassId) {
         this.customClassId = customClassId;
         return this;
@@ -29,8 +30,33 @@ public class CustomClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ClassItem[] items;
+
     public CustomClass withItems(ClassItem[] items) {
         this.items = items;
+        return this;
+    }
+    
+    /**
+     * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with which the content of the ClassItem is encrypted. The expected format is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kmsKeyName")
+    public String kmsKeyName;
+
+    public CustomClass withKmsKeyName(String kmsKeyName) {
+        this.kmsKeyName = kmsKeyName;
+        return this;
+    }
+    
+    /**
+     * Output only. The [KMS key version name](https://cloud.google.com/kms/docs/resource-hierarchy#key_versions) with which content of the ClassItem is encrypted. The expected format is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kmsKeyVersionName")
+    public String kmsKeyVersionName;
+
+    public CustomClass withKmsKeyVersionName(String kmsKeyVersionName) {
+        this.kmsKeyVersionName = kmsKeyVersionName;
         return this;
     }
     
@@ -40,9 +66,11 @@ public class CustomClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomClass withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CustomClass(){}
 }

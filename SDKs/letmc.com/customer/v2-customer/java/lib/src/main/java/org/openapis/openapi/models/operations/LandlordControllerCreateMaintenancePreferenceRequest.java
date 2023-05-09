@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerCreateMaintenancePreferenceRequest {
@@ -12,6 +13,7 @@ public class LandlordControllerCreateMaintenancePreferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public LandlordControllerCreateMaintenancePreferenceRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +24,7 @@ public class LandlordControllerCreateMaintenancePreferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notes")
     public String notes;
+
     public LandlordControllerCreateMaintenancePreferenceRequest withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -32,6 +35,7 @@ public class LandlordControllerCreateMaintenancePreferenceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public LandlordControllerCreateMaintenancePreferenceRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -42,6 +46,7 @@ public class LandlordControllerCreateMaintenancePreferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenancyID")
     public String tenancyID;
+
     public LandlordControllerCreateMaintenancePreferenceRequest withTenancyID(String tenancyID) {
         this.tenancyID = tenancyID;
         return this;
@@ -52,9 +57,17 @@ public class LandlordControllerCreateMaintenancePreferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public LandlordControllerCreateMaintenancePreferenceRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public LandlordControllerCreateMaintenancePreferenceRequest(@JsonProperty("name") String name, @JsonProperty("notes") String notes, @JsonProperty("shortName") String shortName, @JsonProperty("tenancyID") String tenancyID, @JsonProperty("token") String token) {
+        this.name = name;
+        this.notes = notes;
+        this.shortName = shortName;
+        this.tenancyID = tenancyID;
+        this.token = token;
+  }
 }

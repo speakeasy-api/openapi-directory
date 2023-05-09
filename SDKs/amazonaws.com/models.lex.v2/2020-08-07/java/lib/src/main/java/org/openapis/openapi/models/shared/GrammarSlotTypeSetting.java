@@ -15,9 +15,11 @@ public class GrammarSlotTypeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public GrammarSlotTypeSource source;
+
     public GrammarSlotTypeSetting withSource(GrammarSlotTypeSource source) {
         this.source = source;
         return this;
     }
     
+    public GrammarSlotTypeSetting(){}
 }

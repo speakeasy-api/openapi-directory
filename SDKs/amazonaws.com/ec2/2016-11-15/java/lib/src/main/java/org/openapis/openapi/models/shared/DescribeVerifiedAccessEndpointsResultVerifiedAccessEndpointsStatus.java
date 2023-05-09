@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatus {
     
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatusCodeEnum code;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatus withCode(DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatus 
     
     
     public String message;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatus(){}
 }

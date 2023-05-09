@@ -15,9 +15,11 @@ public class PutClassificationExportConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public ClassificationExportConfiguration configuration;
+
     public PutClassificationExportConfigurationResponse withConfiguration(ClassificationExportConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public PutClassificationExportConfigurationResponse(){}
 }

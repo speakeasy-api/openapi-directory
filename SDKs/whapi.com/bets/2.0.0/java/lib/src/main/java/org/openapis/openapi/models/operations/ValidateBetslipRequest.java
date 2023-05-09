@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateBetslipRequest {
@@ -12,6 +13,7 @@ public class ValidateBetslipRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public ValidateBetslipRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class ValidateBetslipRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiSecret")
     public String apiSecret;
+
     public ValidateBetslipRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class ValidateBetslipRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BetSlipRequest betSlipRequest;
+
     public ValidateBetslipRequest withBetSlipRequest(org.openapis.openapi.models.shared.BetSlipRequest betSlipRequest) {
         this.betSlipRequest = betSlipRequest;
         return this;
@@ -42,9 +46,15 @@ public class ValidateBetslipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expanded")
     public String expanded;
+
     public ValidateBetslipRequest withExpanded(String expanded) {
         this.expanded = expanded;
         return this;
     }
     
+    public ValidateBetslipRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("apiSecret") String apiSecret, @JsonProperty("betSlipRequest") org.openapis.openapi.models.shared.BetSlipRequest betSlipRequest) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.betSlipRequest = betSlipRequest;
+  }
 }

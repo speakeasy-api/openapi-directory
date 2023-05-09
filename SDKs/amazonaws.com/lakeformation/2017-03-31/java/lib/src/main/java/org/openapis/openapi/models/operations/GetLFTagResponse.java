@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLFTagResponse {
@@ -12,6 +13,7 @@ public class GetLFTagResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLFTagResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLFTagResponse {
     
     
     public String contentType;
+
     public GetLFTagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLFTagResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetLFTagResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetLFTagResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLFTagResponse getLFTagResponse;
+
     public GetLFTagResponse withGetLFTagResponse(org.openapis.openapi.models.shared.GetLFTagResponse getLFTagResponse) {
         this.getLFTagResponse = getLFTagResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetLFTagResponse {
      */
     
     public Object internalServiceException;
+
     public GetLFTagResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetLFTagResponse {
      */
     
     public Object invalidInputException;
+
     public GetLFTagResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetLFTagResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetLFTagResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetLFTagResponse {
     
     
     public Integer statusCode;
+
     public GetLFTagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetLFTagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLFTagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLFTagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

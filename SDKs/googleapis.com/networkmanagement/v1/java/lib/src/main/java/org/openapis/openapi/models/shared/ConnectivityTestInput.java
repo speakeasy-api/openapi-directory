@@ -18,6 +18,7 @@ public class ConnectivityTestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConnectivityTestInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ConnectivityTestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Endpoint destination;
+
     public ConnectivityTestInput withDestination(Endpoint destination) {
         this.destination = destination;
         return this;
@@ -40,6 +42,7 @@ public class ConnectivityTestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ConnectivityTestInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class ConnectivityTestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConnectivityTestInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ConnectivityTestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public ConnectivityTestInput withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -73,6 +78,7 @@ public class ConnectivityTestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reachabilityDetails")
     public ReachabilityDetails reachabilityDetails;
+
     public ConnectivityTestInput withReachabilityDetails(ReachabilityDetails reachabilityDetails) {
         this.reachabilityDetails = reachabilityDetails;
         return this;
@@ -84,6 +90,7 @@ public class ConnectivityTestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedProjects")
     public String[] relatedProjects;
+
     public ConnectivityTestInput withRelatedProjects(String[] relatedProjects) {
         this.relatedProjects = relatedProjects;
         return this;
@@ -95,9 +102,11 @@ public class ConnectivityTestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Endpoint source;
+
     public ConnectivityTestInput withSource(Endpoint source) {
         this.source = source;
         return this;
     }
     
+    public ConnectivityTestInput(){}
 }

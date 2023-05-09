@@ -15,6 +15,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsLogGroupArn")
     public String cloudWatchLogsLogGroupArn;
+
     public AwsCloudTrailTrailDetails withCloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsRoleArn")
     public String cloudWatchLogsRoleArn;
+
     public AwsCloudTrailTrailDetails withCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasCustomEventSelectors")
     public Boolean hasCustomEventSelectors;
+
     public AwsCloudTrailTrailDetails withHasCustomEventSelectors(Boolean hasCustomEventSelectors) {
         this.hasCustomEventSelectors = hasCustomEventSelectors;
         return this;
@@ -39,6 +42,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public AwsCloudTrailTrailDetails withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -47,6 +51,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeGlobalServiceEvents")
     public Boolean includeGlobalServiceEvents;
+
     public AwsCloudTrailTrailDetails withIncludeGlobalServiceEvents(Boolean includeGlobalServiceEvents) {
         this.includeGlobalServiceEvents = includeGlobalServiceEvents;
         return this;
@@ -55,6 +60,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsMultiRegionTrail")
     public Boolean isMultiRegionTrail;
+
     public AwsCloudTrailTrailDetails withIsMultiRegionTrail(Boolean isMultiRegionTrail) {
         this.isMultiRegionTrail = isMultiRegionTrail;
         return this;
@@ -63,6 +69,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsOrganizationTrail")
     public Boolean isOrganizationTrail;
+
     public AwsCloudTrailTrailDetails withIsOrganizationTrail(Boolean isOrganizationTrail) {
         this.isOrganizationTrail = isOrganizationTrail;
         return this;
@@ -71,6 +78,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AwsCloudTrailTrailDetails withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -79,6 +87,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogFileValidationEnabled")
     public Boolean logFileValidationEnabled;
+
     public AwsCloudTrailTrailDetails withLogFileValidationEnabled(Boolean logFileValidationEnabled) {
         this.logFileValidationEnabled = logFileValidationEnabled;
         return this;
@@ -87,6 +96,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsCloudTrailTrailDetails withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +105,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public AwsCloudTrailTrailDetails withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -103,6 +114,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyPrefix")
     public String s3KeyPrefix;
+
     public AwsCloudTrailTrailDetails withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
@@ -111,6 +123,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public AwsCloudTrailTrailDetails withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -119,6 +132,7 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicName")
     public String snsTopicName;
+
     public AwsCloudTrailTrailDetails withSnsTopicName(String snsTopicName) {
         this.snsTopicName = snsTopicName;
         return this;
@@ -127,9 +141,11 @@ public class AwsCloudTrailTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrailArn")
     public String trailArn;
+
     public AwsCloudTrailTrailDetails withTrailArn(String trailArn) {
         this.trailArn = trailArn;
         return this;
     }
     
+    public AwsCloudTrailTrailDetails(){}
 }

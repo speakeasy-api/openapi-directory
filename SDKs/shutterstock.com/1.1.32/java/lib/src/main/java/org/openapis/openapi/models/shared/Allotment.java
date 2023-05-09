@@ -23,6 +23,7 @@ public class Allotment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloads_left")
     public Long downloadsLeft;
+
     public Allotment withDownloadsLeft(Long downloadsLeft) {
         this.downloadsLeft = downloadsLeft;
         return this;
@@ -34,6 +35,7 @@ public class Allotment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloads_limit")
     public Long downloadsLimit;
+
     public Allotment withDownloadsLimit(Long downloadsLimit) {
         this.downloadsLimit = downloadsLimit;
         return this;
@@ -47,6 +49,7 @@ public class Allotment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("end_time")
     public OffsetDateTime endTime;
+
     public Allotment withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -60,9 +63,11 @@ public class Allotment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start_time")
     public OffsetDateTime startTime;
+
     public Allotment withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public Allotment(){}
 }

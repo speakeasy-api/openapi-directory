@@ -12,6 +12,7 @@ public class OutletsGetAllOutletsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public OutletsGetAllOutletsRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +23,7 @@ public class OutletsGetAllOutletsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
     public Integer maxResults;
+
     public OutletsGetAllOutletsRequest withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -32,6 +34,7 @@ public class OutletsGetAllOutletsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public OutletsGetAllOutletsRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -42,9 +45,11 @@ public class OutletsGetAllOutletsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public OutletsGetAllOutletsRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public OutletsGetAllOutletsRequest(){}
 }

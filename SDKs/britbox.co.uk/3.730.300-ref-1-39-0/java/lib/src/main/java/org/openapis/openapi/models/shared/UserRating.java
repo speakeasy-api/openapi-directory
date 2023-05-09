@@ -15,6 +15,7 @@ public class UserRating {
      */
     @JsonProperty("itemId")
     public String itemId;
+
     public UserRating withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -25,9 +26,14 @@ public class UserRating {
      */
     @JsonProperty("rating")
     public Integer rating;
+
     public UserRating withRating(Integer rating) {
         this.rating = rating;
         return this;
     }
     
+    public UserRating(@JsonProperty("itemId") String itemId, @JsonProperty("rating") Integer rating) {
+        this.itemId = itemId;
+        this.rating = rating;
+  }
 }

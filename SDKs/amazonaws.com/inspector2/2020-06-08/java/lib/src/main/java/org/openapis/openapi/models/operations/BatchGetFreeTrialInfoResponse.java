@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetFreeTrialInfoResponse {
@@ -12,6 +13,7 @@ public class BatchGetFreeTrialInfoResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetFreeTrialInfoResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetFreeTrialInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetFreeTrialInfoResponse batchGetFreeTrialInfoResponse;
+
     public BatchGetFreeTrialInfoResponse withBatchGetFreeTrialInfoResponse(org.openapis.openapi.models.shared.BatchGetFreeTrialInfoResponse batchGetFreeTrialInfoResponse) {
         this.batchGetFreeTrialInfoResponse = batchGetFreeTrialInfoResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetFreeTrialInfoResponse {
     
     
     public String contentType;
+
     public BatchGetFreeTrialInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetFreeTrialInfoResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetFreeTrialInfoResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetFreeTrialInfoResponse {
     
     
     public Integer statusCode;
+
     public BatchGetFreeTrialInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchGetFreeTrialInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetFreeTrialInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetFreeTrialInfoResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetFreeTrialInfoResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetFreeTrialInfoResponse {
      */
     
     public Object validationException;
+
     public BatchGetFreeTrialInfoResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetFreeTrialInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

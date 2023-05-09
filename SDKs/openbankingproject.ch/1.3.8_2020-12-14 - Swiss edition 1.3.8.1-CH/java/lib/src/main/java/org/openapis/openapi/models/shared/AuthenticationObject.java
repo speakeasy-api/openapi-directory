@@ -19,6 +19,7 @@ public class AuthenticationObject {
      */
     @JsonProperty("authenticationMethodId")
     public String authenticationMethodId;
+
     public AuthenticationObject withAuthenticationMethodId(String authenticationMethodId) {
         this.authenticationMethodId = authenticationMethodId;
         return this;
@@ -45,6 +46,7 @@ public class AuthenticationObject {
      */
     @JsonProperty("authenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public AuthenticationObject withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -59,6 +61,7 @@ public class AuthenticationObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationVersion")
     public String authenticationVersion;
+
     public AuthenticationObject withAuthenticationVersion(String authenticationVersion) {
         this.authenticationVersion = authenticationVersion;
         return this;
@@ -71,6 +74,7 @@ public class AuthenticationObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public String explanation;
+
     public AuthenticationObject withExplanation(String explanation) {
         this.explanation = explanation;
         return this;
@@ -85,9 +89,14 @@ public class AuthenticationObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuthenticationObject withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AuthenticationObject(@JsonProperty("authenticationMethodId") String authenticationMethodId, @JsonProperty("authenticationType") AuthenticationTypeEnum authenticationType) {
+        this.authenticationMethodId = authenticationMethodId;
+        this.authenticationType = authenticationType;
+  }
 }

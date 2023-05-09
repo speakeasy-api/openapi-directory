@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateEnvironmentMessage {
     
     public String applicationName;
+
     public UpdateEnvironmentMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateEnvironmentMessage {
     
     
     public String description;
+
     public UpdateEnvironmentMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class UpdateEnvironmentMessage {
     
     
     public String environmentId;
+
     public UpdateEnvironmentMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -33,6 +36,7 @@ public class UpdateEnvironmentMessage {
     
     
     public String environmentName;
+
     public UpdateEnvironmentMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -40,6 +44,7 @@ public class UpdateEnvironmentMessage {
     
     
     public String groupName;
+
     public UpdateEnvironmentMessage withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -47,6 +52,7 @@ public class UpdateEnvironmentMessage {
     
     
     public ConfigurationOptionSetting[] optionSettings;
+
     public UpdateEnvironmentMessage withOptionSettings(ConfigurationOptionSetting[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -54,6 +60,7 @@ public class UpdateEnvironmentMessage {
     
     
     public OptionSpecification[] optionsToRemove;
+
     public UpdateEnvironmentMessage withOptionsToRemove(OptionSpecification[] optionsToRemove) {
         this.optionsToRemove = optionsToRemove;
         return this;
@@ -61,6 +68,7 @@ public class UpdateEnvironmentMessage {
     
     
     public String platformArn;
+
     public UpdateEnvironmentMessage withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -68,6 +76,7 @@ public class UpdateEnvironmentMessage {
     
     
     public String solutionStackName;
+
     public UpdateEnvironmentMessage withSolutionStackName(String solutionStackName) {
         this.solutionStackName = solutionStackName;
         return this;
@@ -75,6 +84,7 @@ public class UpdateEnvironmentMessage {
     
     
     public String templateName;
+
     public UpdateEnvironmentMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -82,6 +92,7 @@ public class UpdateEnvironmentMessage {
     
     
     public EnvironmentTier tier;
+
     public UpdateEnvironmentMessage withTier(EnvironmentTier tier) {
         this.tier = tier;
         return this;
@@ -89,9 +100,11 @@ public class UpdateEnvironmentMessage {
     
     
     public String versionLabel;
+
     public UpdateEnvironmentMessage withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public UpdateEnvironmentMessage(){}
 }

@@ -15,6 +15,7 @@ public class ResultConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AclConfiguration")
     public AclConfiguration aclConfiguration;
+
     public ResultConfiguration withAclConfiguration(AclConfiguration aclConfiguration) {
         this.aclConfiguration = aclConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ResultConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public ResultConfiguration withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class ResultConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedBucketOwner")
     public String expectedBucketOwner;
+
     public ResultConfiguration withExpectedBucketOwner(String expectedBucketOwner) {
         this.expectedBucketOwner = expectedBucketOwner;
         return this;
@@ -39,9 +42,11 @@ public class ResultConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public String outputLocation;
+
     public ResultConfiguration withOutputLocation(String outputLocation) {
         this.outputLocation = outputLocation;
         return this;
     }
     
+    public ResultConfiguration(){}
 }

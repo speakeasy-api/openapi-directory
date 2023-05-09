@@ -15,6 +15,7 @@ public class ShipmentLocationsPOSTResultVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ShipmentLocationsPOSTVO[] results;
+
     public ShipmentLocationsPOSTResultVO withResults(ShipmentLocationsPOSTVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class ShipmentLocationsPOSTResultVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public ShipmentLocationsPOSTResultVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class ShipmentLocationsPOSTResultVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public ShipmentLocationsPOSTResultVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ShipmentLocationsPOSTResultVO(){}
 }

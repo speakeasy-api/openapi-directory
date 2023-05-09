@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StationList {
     
     public Station[] items;
+
     public StationList withItems(Station[] items) {
         this.items = items;
         return this;
@@ -19,9 +20,11 @@ public class StationList {
     
     
     public Long total;
+
     public StationList withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public StationList(){}
 }

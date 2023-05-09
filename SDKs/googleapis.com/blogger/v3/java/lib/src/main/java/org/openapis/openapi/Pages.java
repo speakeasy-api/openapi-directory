@@ -59,10 +59,8 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerPagesDeleteResponse res = new org.openapis.openapi.models.operations.BloggerPagesDeleteResponse() {{
+        org.openapis.openapi.models.operations.BloggerPagesDeleteResponse res = new org.openapis.openapi.models.operations.BloggerPagesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerPagesGetResponse res = new org.openapis.openapi.models.operations.BloggerPagesGetResponse() {{
+        org.openapis.openapi.models.operations.BloggerPagesGetResponse res = new org.openapis.openapi.models.operations.BloggerPagesGetResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerPagesInsertResponse res = new org.openapis.openapi.models.operations.BloggerPagesInsertResponse() {{
+        org.openapis.openapi.models.operations.BloggerPagesInsertResponse res = new org.openapis.openapi.models.operations.BloggerPagesInsertResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerPagesListResponse res = new org.openapis.openapi.models.operations.BloggerPagesListResponse() {{
+        org.openapis.openapi.models.operations.BloggerPagesListResponse res = new org.openapis.openapi.models.operations.BloggerPagesListResponse(contentType, httpRes.statusCode()) {{
             pageList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerPagesPatchResponse res = new org.openapis.openapi.models.operations.BloggerPagesPatchResponse() {{
+        org.openapis.openapi.models.operations.BloggerPagesPatchResponse res = new org.openapis.openapi.models.operations.BloggerPagesPatchResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerPagesPublishResponse res = new org.openapis.openapi.models.operations.BloggerPagesPublishResponse() {{
+        org.openapis.openapi.models.operations.BloggerPagesPublishResponse res = new org.openapis.openapi.models.operations.BloggerPagesPublishResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -333,11 +321,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerPagesRevertResponse res = new org.openapis.openapi.models.operations.BloggerPagesRevertResponse() {{
+        org.openapis.openapi.models.operations.BloggerPagesRevertResponse res = new org.openapis.openapi.models.operations.BloggerPagesRevertResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,11 +367,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerPagesUpdateResponse res = new org.openapis.openapi.models.operations.BloggerPagesUpdateResponse() {{
+        org.openapis.openapi.models.operations.BloggerPagesUpdateResponse res = new org.openapis.openapi.models.operations.BloggerPagesUpdateResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

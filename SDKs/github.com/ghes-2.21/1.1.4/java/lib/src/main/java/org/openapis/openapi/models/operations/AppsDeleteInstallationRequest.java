@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsDeleteInstallationRequest {
@@ -12,6 +13,7 @@ public class AppsDeleteInstallationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public AppsDeleteInstallationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,9 +24,14 @@ public class AppsDeleteInstallationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
     public Long installationId;
+
     public AppsDeleteInstallationRequest withInstallationId(Long installationId) {
         this.installationId = installationId;
         return this;
     }
     
+    public AppsDeleteInstallationRequest(@JsonProperty("accept") String accept, @JsonProperty("installation_id") Long installationId) {
+        this.accept = accept;
+        this.installationId = installationId;
+  }
 }

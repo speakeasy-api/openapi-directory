@@ -18,6 +18,7 @@ public class RsaKeyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxModulusSize")
     public String maxModulusSize;
+
     public RsaKeyType withMaxModulusSize(String maxModulusSize) {
         this.maxModulusSize = maxModulusSize;
         return this;
@@ -29,9 +30,11 @@ public class RsaKeyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minModulusSize")
     public String minModulusSize;
+
     public RsaKeyType withMinModulusSize(String minModulusSize) {
         this.minModulusSize = minModulusSize;
         return this;
     }
     
+    public RsaKeyType(){}
 }

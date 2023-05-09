@@ -18,6 +18,7 @@ public class InputInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InputInformation withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class InputInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Integer number;
+
     public InputInformation withNumber(Integer number) {
         this.number = number;
         return this;
     }
     
+    public InputInformation(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksPersonalizedstreamGetResponse {
     
     public String contentType;
+
     public BooksPersonalizedstreamGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BooksPersonalizedstreamGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Discoveryclusters discoveryclusters;
+
     public BooksPersonalizedstreamGetResponse withDiscoveryclusters(org.openapis.openapi.models.shared.Discoveryclusters discoveryclusters) {
         this.discoveryclusters = discoveryclusters;
         return this;
@@ -26,6 +29,7 @@ public class BooksPersonalizedstreamGetResponse {
     
     
     public Integer statusCode;
+
     public BooksPersonalizedstreamGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BooksPersonalizedstreamGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksPersonalizedstreamGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BooksPersonalizedstreamGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

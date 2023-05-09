@@ -18,6 +18,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public java.util.Map<String, String> details;
+
     public Event withDetails(java.util.Map<String, String> details) {
         this.details = details;
         return this;
@@ -29,6 +30,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportTime")
     public String reportTime;
+
     public Event withReportTime(String reportTime) {
         this.reportTime = reportTime;
         return this;
@@ -40,9 +42,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EventTypeEnum type;
+
     public Event withType(EventTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Event(){}
 }

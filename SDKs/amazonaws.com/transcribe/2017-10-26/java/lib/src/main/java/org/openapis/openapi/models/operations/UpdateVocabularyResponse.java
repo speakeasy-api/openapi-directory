@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVocabularyResponse {
@@ -12,6 +13,7 @@ public class UpdateVocabularyResponse {
      */
     
     public Object badRequestException;
+
     public UpdateVocabularyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateVocabularyResponse {
      */
     
     public Object conflictException;
+
     public UpdateVocabularyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVocabularyResponse {
     
     
     public String contentType;
+
     public UpdateVocabularyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateVocabularyResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateVocabularyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateVocabularyResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateVocabularyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateVocabularyResponse {
      */
     
     public Object notFoundException;
+
     public UpdateVocabularyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateVocabularyResponse {
     
     
     public Integer statusCode;
+
     public UpdateVocabularyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateVocabularyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVocabularyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateVocabularyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVocabularyResponse updateVocabularyResponse;
+
     public UpdateVocabularyResponse withUpdateVocabularyResponse(org.openapis.openapi.models.shared.UpdateVocabularyResponse updateVocabularyResponse) {
         this.updateVocabularyResponse = updateVocabularyResponse;
         return this;
     }
     
+    public UpdateVocabularyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

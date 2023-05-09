@@ -18,9 +18,11 @@ public class ListNetworkUsageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public NetworkUsage[] networks;
+
     public ListNetworkUsageResponse withNetworks(NetworkUsage[] networks) {
         this.networks = networks;
         return this;
     }
     
+    public ListNetworkUsageResponse(){}
 }

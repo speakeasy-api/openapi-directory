@@ -18,6 +18,7 @@ public class PubsubSnapshotMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public PubsubSnapshotMetadata withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -29,6 +30,7 @@ public class PubsubSnapshotMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public PubsubSnapshotMetadata withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -40,9 +42,11 @@ public class PubsubSnapshotMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicName")
     public String topicName;
+
     public PubsubSnapshotMetadata withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public PubsubSnapshotMetadata(){}
 }

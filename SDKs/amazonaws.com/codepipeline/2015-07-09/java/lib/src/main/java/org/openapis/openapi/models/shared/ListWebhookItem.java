@@ -20,6 +20,7 @@ public class ListWebhookItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ListWebhookItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class ListWebhookItem {
     
     @JsonProperty("definition")
     public WebhookDefinition definition;
+
     public ListWebhookItem withDefinition(WebhookDefinition definition) {
         this.definition = definition;
         return this;
@@ -35,6 +37,7 @@ public class ListWebhookItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public ListWebhookItem withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -43,6 +46,7 @@ public class ListWebhookItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ListWebhookItem withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -53,6 +57,7 @@ public class ListWebhookItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastTriggered")
     public OffsetDateTime lastTriggered;
+
     public ListWebhookItem withLastTriggered(OffsetDateTime lastTriggered) {
         this.lastTriggered = lastTriggered;
         return this;
@@ -61,6 +66,7 @@ public class ListWebhookItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public ListWebhookItem withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -68,9 +74,14 @@ public class ListWebhookItem {
     
     @JsonProperty("url")
     public String url;
+
     public ListWebhookItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ListWebhookItem(@JsonProperty("definition") WebhookDefinition definition, @JsonProperty("url") String url) {
+        this.definition = definition;
+        this.url = url;
+  }
 }

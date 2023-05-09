@@ -12,6 +12,7 @@ public class VatRateDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public VatRateDto withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class VatRateDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public VatRateDto withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -28,6 +30,7 @@ public class VatRateDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public VatRateDto withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -36,6 +39,7 @@ public class VatRateDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderIndex")
     public Integer orderIndex;
+
     public VatRateDto withOrderIndex(Integer orderIndex) {
         this.orderIndex = orderIndex;
         return this;
@@ -44,6 +48,7 @@ public class VatRateDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public VatRateDto withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
@@ -52,6 +57,7 @@ public class VatRateDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public VatRateDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -60,9 +66,11 @@ public class VatRateDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatCategoryId")
     public Long vatCategoryId;
+
     public VatRateDto withVatCategoryId(Long vatCategoryId) {
         this.vatCategoryId = vatCategoryId;
         return this;
     }
     
+    public VatRateDto(){}
 }

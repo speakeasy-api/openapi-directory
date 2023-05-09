@@ -15,6 +15,7 @@ public class ScriptStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationKind")
     public String evaluationKind;
+
     public ScriptStatistics withEvaluationKind(String evaluationKind) {
         this.evaluationKind = evaluationKind;
         return this;
@@ -26,9 +27,11 @@ public class ScriptStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackFrames")
     public ScriptStackFrame[] stackFrames;
+
     public ScriptStatistics withStackFrames(ScriptStackFrame[] stackFrames) {
         this.stackFrames = stackFrames;
         return this;
     }
     
+    public ScriptStatistics(){}
 }

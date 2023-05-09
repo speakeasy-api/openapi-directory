@@ -18,6 +18,7 @@ public class PayoutSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public PayoutSummaryResponse withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class PayoutSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutCount")
     public Integer payoutCount;
+
     public PayoutSummaryResponse withPayoutCount(Integer payoutCount) {
         this.payoutCount = payoutCount;
         return this;
@@ -40,9 +42,11 @@ public class PayoutSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionCount")
     public Integer transactionCount;
+
     public PayoutSummaryResponse withTransactionCount(Integer transactionCount) {
         this.transactionCount = transactionCount;
         return this;
     }
     
+    public PayoutSummaryResponse(){}
 }

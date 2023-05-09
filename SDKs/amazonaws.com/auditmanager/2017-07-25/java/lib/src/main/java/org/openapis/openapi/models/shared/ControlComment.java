@@ -20,6 +20,7 @@ public class ControlComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorName")
     public String authorName;
+
     public ControlComment withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -28,6 +29,7 @@ public class ControlComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentBody")
     public String commentBody;
+
     public ControlComment withCommentBody(String commentBody) {
         this.commentBody = commentBody;
         return this;
@@ -38,9 +40,11 @@ public class ControlComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("postedDate")
     public OffsetDateTime postedDate;
+
     public ControlComment withPostedDate(OffsetDateTime postedDate) {
         this.postedDate = postedDate;
         return this;
     }
     
+    public ControlComment(){}
 }

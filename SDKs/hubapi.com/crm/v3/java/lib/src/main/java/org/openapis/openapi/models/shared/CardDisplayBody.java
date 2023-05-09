@@ -15,9 +15,13 @@ public class CardDisplayBody {
      */
     @JsonProperty("properties")
     public CardDisplayProperty[] properties;
+
     public CardDisplayBody withProperties(CardDisplayProperty[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public CardDisplayBody(@JsonProperty("properties") CardDisplayProperty[] properties) {
+        this.properties = properties;
+  }
 }

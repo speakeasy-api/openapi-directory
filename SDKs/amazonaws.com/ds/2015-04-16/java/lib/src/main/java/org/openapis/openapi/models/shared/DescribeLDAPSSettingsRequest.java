@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLDAPSSettingsRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DescribeLDAPSSettingsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeLDAPSSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeLDAPSSettingsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class DescribeLDAPSSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeLDAPSSettingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class DescribeLDAPSSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public LDAPSTypeEnum type;
+
     public DescribeLDAPSSettingsRequest withType(LDAPSTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeLDAPSSettingsRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

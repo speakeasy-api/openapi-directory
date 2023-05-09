@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAuthorsOfPadUsingPOSTResponse {
     
     public String contentType;
+
     public ListAuthorsOfPadUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListAuthorsOfPadUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public ListAuthorsOfPadUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListAuthorsOfPadUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAuthorsOfPadUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListAuthorsOfPadUsingPOSTResponse {
      */
     
     public ListAuthorsOfPadUsingPOST200ApplicationJSON listAuthorsOfPadUsingPOST200ApplicationJSONObject;
+
     public ListAuthorsOfPadUsingPOSTResponse withListAuthorsOfPadUsingPOST200ApplicationJSONObject(ListAuthorsOfPadUsingPOST200ApplicationJSON listAuthorsOfPadUsingPOST200ApplicationJSONObject) {
         this.listAuthorsOfPadUsingPOST200ApplicationJSONObject = listAuthorsOfPadUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListAuthorsOfPadUsingPOSTResponse {
      */
     
     public ListAuthorsOfPadUsingPOST400ApplicationJSON listAuthorsOfPadUsingPOST400ApplicationJSONObject;
+
     public ListAuthorsOfPadUsingPOSTResponse withListAuthorsOfPadUsingPOST400ApplicationJSONObject(ListAuthorsOfPadUsingPOST400ApplicationJSON listAuthorsOfPadUsingPOST400ApplicationJSONObject) {
         this.listAuthorsOfPadUsingPOST400ApplicationJSONObject = listAuthorsOfPadUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListAuthorsOfPadUsingPOSTResponse {
      */
     
     public ListAuthorsOfPadUsingPOST401ApplicationJSON listAuthorsOfPadUsingPOST401ApplicationJSONObject;
+
     public ListAuthorsOfPadUsingPOSTResponse withListAuthorsOfPadUsingPOST401ApplicationJSONObject(ListAuthorsOfPadUsingPOST401ApplicationJSON listAuthorsOfPadUsingPOST401ApplicationJSONObject) {
         this.listAuthorsOfPadUsingPOST401ApplicationJSONObject = listAuthorsOfPadUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListAuthorsOfPadUsingPOSTResponse {
      */
     
     public ListAuthorsOfPadUsingPOST500ApplicationJSON listAuthorsOfPadUsingPOST500ApplicationJSONObject;
+
     public ListAuthorsOfPadUsingPOSTResponse withListAuthorsOfPadUsingPOST500ApplicationJSONObject(ListAuthorsOfPadUsingPOST500ApplicationJSON listAuthorsOfPadUsingPOST500ApplicationJSONObject) {
         this.listAuthorsOfPadUsingPOST500ApplicationJSONObject = listAuthorsOfPadUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public ListAuthorsOfPadUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

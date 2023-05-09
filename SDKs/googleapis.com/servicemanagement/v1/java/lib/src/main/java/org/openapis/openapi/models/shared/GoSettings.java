@@ -18,9 +18,11 @@ public class GoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public CommonLanguageSettings common;
+
     public GoSettings withCommon(CommonLanguageSettings common) {
         this.common = common;
         return this;
     }
     
+    public GoSettings(){}
 }

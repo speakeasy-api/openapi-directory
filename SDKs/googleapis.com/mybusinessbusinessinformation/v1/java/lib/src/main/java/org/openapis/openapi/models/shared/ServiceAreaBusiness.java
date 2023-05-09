@@ -18,6 +18,7 @@ public class ServiceAreaBusiness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessType")
     public ServiceAreaBusinessBusinessTypeEnum businessType;
+
     public ServiceAreaBusiness withBusinessType(ServiceAreaBusinessBusinessTypeEnum businessType) {
         this.businessType = businessType;
         return this;
@@ -29,6 +30,7 @@ public class ServiceAreaBusiness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("places")
     public Places places;
+
     public ServiceAreaBusiness withPlaces(Places places) {
         this.places = places;
         return this;
@@ -40,9 +42,11 @@ public class ServiceAreaBusiness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public ServiceAreaBusiness withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public ServiceAreaBusiness(){}
 }

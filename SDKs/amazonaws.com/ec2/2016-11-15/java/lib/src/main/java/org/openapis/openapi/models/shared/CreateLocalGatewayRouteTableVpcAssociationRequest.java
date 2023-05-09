@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLocalGatewayRouteTableVpcAssociationRequest {
     
     public Boolean dryRun;
+
     public CreateLocalGatewayRouteTableVpcAssociationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateLocalGatewayRouteTableVpcAssociationRequest {
     
     
     public String localGatewayRouteTableId;
+
     public CreateLocalGatewayRouteTableVpcAssociationRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -23,6 +25,7 @@ public class CreateLocalGatewayRouteTableVpcAssociationRequest {
     
     
     public CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecifications[] tagSpecifications;
+
     public CreateLocalGatewayRouteTableVpcAssociationRequest withTagSpecifications(CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -30,9 +33,14 @@ public class CreateLocalGatewayRouteTableVpcAssociationRequest {
     
     
     public String vpcId;
+
     public CreateLocalGatewayRouteTableVpcAssociationRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableVpcAssociationRequest(@JsonProperty("LocalGatewayRouteTableId") String localGatewayRouteTableId, @JsonProperty("VpcId") String vpcId) {
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        this.vpcId = vpcId;
+  }
 }

@@ -15,6 +15,7 @@ public class ErrorRootCauseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exceptions")
     public RootCauseException[] exceptions;
+
     public ErrorRootCauseEntity withExceptions(RootCauseException[] exceptions) {
         this.exceptions = exceptions;
         return this;
@@ -23,6 +24,7 @@ public class ErrorRootCauseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ErrorRootCauseEntity withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ErrorRootCauseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Remote")
     public Boolean remote;
+
     public ErrorRootCauseEntity withRemote(Boolean remote) {
         this.remote = remote;
         return this;
     }
     
+    public ErrorRootCauseEntity(){}
 }

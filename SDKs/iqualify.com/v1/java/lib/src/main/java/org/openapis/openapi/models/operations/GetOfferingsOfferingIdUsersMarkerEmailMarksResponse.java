@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsOfferingIdUsersMarkerEmailMarksResponse {
     
     public String contentType;
+
     public GetOfferingsOfferingIdUsersMarkerEmailMarksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsOfferingIdUsersMarkerEmailMarksResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsOfferingIdUsersMarkerEmailMarksResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsOfferingIdUsersMarkerEmailMarksResponse {
      */
     
     public org.openapis.openapi.models.shared.OfferingUser[] offeringUsers;
+
     public GetOfferingsOfferingIdUsersMarkerEmailMarksResponse withOfferingUsers(org.openapis.openapi.models.shared.OfferingUser[] offeringUsers) {
         this.offeringUsers = offeringUsers;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsOfferingIdUsersMarkerEmailMarksResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingsOfferingIdUsersMarkerEmailMarksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsOfferingIdUsersMarkerEmailMarksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsOfferingIdUsersMarkerEmailMarksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsOfferingIdUsersMarkerEmailMarksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

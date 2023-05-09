@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class User {
     
     public String arn;
+
     public User withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +21,7 @@ public class User {
     
     
     public OffsetDateTime createDate;
+
     public User withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +29,7 @@ public class User {
     
     
     public OffsetDateTime passwordLastUsed;
+
     public User withPasswordLastUsed(OffsetDateTime passwordLastUsed) {
         this.passwordLastUsed = passwordLastUsed;
         return this;
@@ -33,6 +37,7 @@ public class User {
     
     
     public String path;
+
     public User withPath(String path) {
         this.path = path;
         return this;
@@ -40,6 +45,7 @@ public class User {
     
     
     public AttachedPermissionsBoundary permissionsBoundary;
+
     public User withPermissionsBoundary(AttachedPermissionsBoundary permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -47,6 +53,7 @@ public class User {
     
     
     public Tag[] tags;
+
     public User withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +61,7 @@ public class User {
     
     
     public String userId;
+
     public User withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -61,9 +69,17 @@ public class User {
     
     
     public String userName;
+
     public User withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public User(@JsonProperty("Arn") String arn, @JsonProperty("CreateDate") OffsetDateTime createDate, @JsonProperty("Path") String path, @JsonProperty("UserId") String userId, @JsonProperty("UserName") String userName) {
+        this.arn = arn;
+        this.createDate = createDate;
+        this.path = path;
+        this.userId = userId;
+        this.userName = userName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAliasResponse {
@@ -12,6 +13,7 @@ public class UpdateAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.AliasConfiguration aliasConfiguration;
+
     public UpdateAliasResponse withAliasConfiguration(org.openapis.openapi.models.shared.AliasConfiguration aliasConfiguration) {
         this.aliasConfiguration = aliasConfiguration;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAliasResponse {
     
     
     public String contentType;
+
     public UpdateAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAliasResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateAliasResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAliasResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateAliasResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAliasResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateAliasResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateAliasResponse {
      */
     
     public Object serviceException;
+
     public UpdateAliasResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateAliasResponse {
     
     
     public Integer statusCode;
+
     public UpdateAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateAliasResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateAliasResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public UpdateAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

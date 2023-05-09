@@ -18,6 +18,7 @@ public class PlaceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceInfo withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class PlaceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeId")
     public String placeId;
+
     public PlaceInfo withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
     }
     
+    public PlaceInfo(){}
 }

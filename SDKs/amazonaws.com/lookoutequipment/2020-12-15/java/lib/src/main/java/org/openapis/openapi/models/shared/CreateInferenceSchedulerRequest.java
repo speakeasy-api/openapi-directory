@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateInferenceSchedulerRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateInferenceSchedulerRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateInferenceSchedulerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataDelayOffsetInMinutes")
     public Long dataDelayOffsetInMinutes;
+
     public CreateInferenceSchedulerRequest withDataDelayOffsetInMinutes(Long dataDelayOffsetInMinutes) {
         this.dataDelayOffsetInMinutes = dataDelayOffsetInMinutes;
         return this;
@@ -26,6 +28,7 @@ public class CreateInferenceSchedulerRequest {
     
     @JsonProperty("DataInputConfiguration")
     public InferenceInputConfiguration dataInputConfiguration;
+
     public CreateInferenceSchedulerRequest withDataInputConfiguration(InferenceInputConfiguration dataInputConfiguration) {
         this.dataInputConfiguration = dataInputConfiguration;
         return this;
@@ -33,6 +36,7 @@ public class CreateInferenceSchedulerRequest {
     
     @JsonProperty("DataOutputConfiguration")
     public InferenceOutputConfiguration dataOutputConfiguration;
+
     public CreateInferenceSchedulerRequest withDataOutputConfiguration(InferenceOutputConfiguration dataOutputConfiguration) {
         this.dataOutputConfiguration = dataOutputConfiguration;
         return this;
@@ -40,6 +44,7 @@ public class CreateInferenceSchedulerRequest {
     
     @JsonProperty("DataUploadFrequency")
     public DataUploadFrequencyEnum dataUploadFrequency;
+
     public CreateInferenceSchedulerRequest withDataUploadFrequency(DataUploadFrequencyEnum dataUploadFrequency) {
         this.dataUploadFrequency = dataUploadFrequency;
         return this;
@@ -47,6 +52,7 @@ public class CreateInferenceSchedulerRequest {
     
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public CreateInferenceSchedulerRequest withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
@@ -54,6 +60,7 @@ public class CreateInferenceSchedulerRequest {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public CreateInferenceSchedulerRequest withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -61,6 +68,7 @@ public class CreateInferenceSchedulerRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateInferenceSchedulerRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -69,6 +77,7 @@ public class CreateInferenceSchedulerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideKmsKeyId")
     public String serverSideKmsKeyId;
+
     public CreateInferenceSchedulerRequest withServerSideKmsKeyId(String serverSideKmsKeyId) {
         this.serverSideKmsKeyId = serverSideKmsKeyId;
         return this;
@@ -77,9 +86,19 @@ public class CreateInferenceSchedulerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateInferenceSchedulerRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInferenceSchedulerRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("DataInputConfiguration") InferenceInputConfiguration dataInputConfiguration, @JsonProperty("DataOutputConfiguration") InferenceOutputConfiguration dataOutputConfiguration, @JsonProperty("DataUploadFrequency") DataUploadFrequencyEnum dataUploadFrequency, @JsonProperty("InferenceSchedulerName") String inferenceSchedulerName, @JsonProperty("ModelName") String modelName, @JsonProperty("RoleArn") String roleArn) {
+        this.clientToken = clientToken;
+        this.dataInputConfiguration = dataInputConfiguration;
+        this.dataOutputConfiguration = dataOutputConfiguration;
+        this.dataUploadFrequency = dataUploadFrequency;
+        this.inferenceSchedulerName = inferenceSchedulerName;
+        this.modelName = modelName;
+        this.roleArn = roleArn;
+  }
 }

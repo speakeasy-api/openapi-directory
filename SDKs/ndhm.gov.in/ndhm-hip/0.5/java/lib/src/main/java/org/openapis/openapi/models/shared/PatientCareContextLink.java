@@ -12,6 +12,7 @@ public class PatientCareContextLink {
      */
     @JsonProperty("accessToken")
     public String accessToken;
+
     public PatientCareContextLink withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -19,9 +20,14 @@ public class PatientCareContextLink {
     
     @JsonProperty("patient")
     public PatientCareContextLinkPatient patient;
+
     public PatientCareContextLink withPatient(PatientCareContextLinkPatient patient) {
         this.patient = patient;
         return this;
     }
     
+    public PatientCareContextLink(@JsonProperty("accessToken") String accessToken, @JsonProperty("patient") PatientCareContextLinkPatient patient) {
+        this.accessToken = accessToken;
+        this.patient = patient;
+  }
 }

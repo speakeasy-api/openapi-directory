@@ -15,6 +15,7 @@ public class ScimUserMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public String created;
+
     public ScimUserMeta withCreated(String created) {
         this.created = created;
         return this;
@@ -26,6 +27,7 @@ public class ScimUserMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public String lastModified;
+
     public ScimUserMeta withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -34,6 +36,7 @@ public class ScimUserMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ScimUserMeta withLocation(String location) {
         this.location = location;
         return this;
@@ -42,9 +45,11 @@ public class ScimUserMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ScimUserMeta withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ScimUserMeta(){}
 }

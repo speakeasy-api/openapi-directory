@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccessPreviewResponse {
@@ -12,6 +13,7 @@ public class GetAccessPreviewResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAccessPreviewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAccessPreviewResponse {
     
     
     public String contentType;
+
     public GetAccessPreviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAccessPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccessPreviewResponse getAccessPreviewResponse;
+
     public GetAccessPreviewResponse withGetAccessPreviewResponse(org.openapis.openapi.models.shared.GetAccessPreviewResponse getAccessPreviewResponse) {
         this.getAccessPreviewResponse = getAccessPreviewResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAccessPreviewResponse {
      */
     
     public Object internalServerException;
+
     public GetAccessPreviewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAccessPreviewResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAccessPreviewResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAccessPreviewResponse {
     
     
     public Integer statusCode;
+
     public GetAccessPreviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAccessPreviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccessPreviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAccessPreviewResponse {
      */
     
     public Object throttlingException;
+
     public GetAccessPreviewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetAccessPreviewResponse {
      */
     
     public Object validationException;
+
     public GetAccessPreviewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAccessPreviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TaskTemplatesCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
     public Long assigneeGroup;
+
     public TaskTemplatesCreateRequest withAssigneeGroup(Long assigneeGroup) {
         this.assigneeGroup = assigneeGroup;
         return this;
@@ -16,6 +17,7 @@ public class TaskTemplatesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
     public Long assigneeUser;
+
     public TaskTemplatesCreateRequest withAssigneeUser(Long assigneeUser) {
         this.assigneeUser = assigneeUser;
         return this;
@@ -23,6 +25,7 @@ public class TaskTemplatesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public Long category;
+
     public TaskTemplatesCreateRequest withCategory(Long category) {
         this.category = category;
         return this;
@@ -30,6 +33,7 @@ public class TaskTemplatesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public TaskTemplatesCreateRequest withSince(String since) {
         this.since = since;
         return this;
@@ -37,9 +41,11 @@ public class TaskTemplatesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public Long status;
+
     public TaskTemplatesCreateRequest withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public TaskTemplatesCreateRequest(){}
 }

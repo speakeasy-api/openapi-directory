@@ -18,9 +18,13 @@ public class UpdateTransactionCategoryRequest {
      */
     @JsonProperty("data")
     public UpdateTransactionCategoryRequestData data;
+
     public UpdateTransactionCategoryRequest withData(UpdateTransactionCategoryRequestData data) {
         this.data = data;
         return this;
     }
     
+    public UpdateTransactionCategoryRequest(@JsonProperty("data") UpdateTransactionCategoryRequestData data) {
+        this.data = data;
+  }
 }

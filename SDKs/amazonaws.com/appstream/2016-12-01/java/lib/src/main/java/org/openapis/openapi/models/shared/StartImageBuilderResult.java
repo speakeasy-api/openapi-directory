@@ -15,9 +15,11 @@ public class StartImageBuilderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageBuilder")
     public ImageBuilder imageBuilder;
+
     public StartImageBuilderResult withImageBuilder(ImageBuilder imageBuilder) {
         this.imageBuilder = imageBuilder;
         return this;
     }
     
+    public StartImageBuilderResult(){}
 }

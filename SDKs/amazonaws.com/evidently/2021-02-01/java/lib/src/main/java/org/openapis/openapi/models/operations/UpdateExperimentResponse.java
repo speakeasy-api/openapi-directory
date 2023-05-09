@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateExperimentResponse {
@@ -12,6 +13,7 @@ public class UpdateExperimentResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateExperimentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateExperimentResponse {
      */
     
     public Object conflictException;
+
     public UpdateExperimentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateExperimentResponse {
     
     
     public String contentType;
+
     public UpdateExperimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class UpdateExperimentResponse {
     
     
     public Integer statusCode;
+
     public UpdateExperimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateExperimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateExperimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateExperimentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateExperimentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateExperimentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateExperimentResponse updateExperimentResponse;
+
     public UpdateExperimentResponse withUpdateExperimentResponse(org.openapis.openapi.models.shared.UpdateExperimentResponse updateExperimentResponse) {
         this.updateExperimentResponse = updateExperimentResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateExperimentResponse {
      */
     
     public Object validationException;
+
     public UpdateExperimentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateExperimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

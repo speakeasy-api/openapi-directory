@@ -15,9 +15,11 @@ public class GetSizeConstraintSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeConstraintSet")
     public SizeConstraintSet sizeConstraintSet;
+
     public GetSizeConstraintSetResponse withSizeConstraintSet(SizeConstraintSet sizeConstraintSet) {
         this.sizeConstraintSet = sizeConstraintSet;
         return this;
     }
     
+    public GetSizeConstraintSetResponse(){}
 }

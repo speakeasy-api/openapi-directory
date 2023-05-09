@@ -18,9 +18,11 @@ public class DisableSecretVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public DisableSecretVersionRequest withEtag(String etag) {
         this.etag = etag;
         return this;
     }
     
+    public DisableSecretVersionRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNodeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=:operation")
     public String operation;
+
     public PostNodeRequest withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -16,6 +18,7 @@ public class PostNodeRequest {
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostNodeRequestBody requestBody;
+
     public PostNodeRequest withRequestBody(PostNodeRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class PostNodeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleteAuthorizable")
     public String deleteAuthorizable;
+
     public PostNodeRequest withDeleteAuthorizable(String deleteAuthorizable) {
         this.deleteAuthorizable = deleteAuthorizable;
         return this;
@@ -30,6 +34,7 @@ public class PostNodeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public PostNodeRequest withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +42,14 @@ public class PostNodeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public PostNodeRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PostNodeRequest(@JsonProperty("name") String name, @JsonProperty("path") String path) {
+        this.name = name;
+        this.path = path;
+  }
 }

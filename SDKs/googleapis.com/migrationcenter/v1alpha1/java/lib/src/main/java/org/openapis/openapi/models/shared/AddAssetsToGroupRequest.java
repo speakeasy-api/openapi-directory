@@ -18,6 +18,7 @@ public class AddAssetsToGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowExisting")
     public Boolean allowExisting;
+
     public AddAssetsToGroupRequest withAllowExisting(Boolean allowExisting) {
         this.allowExisting = allowExisting;
         return this;
@@ -29,6 +30,7 @@ public class AddAssetsToGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public AssetList assets;
+
     public AddAssetsToGroupRequest withAssets(AssetList assets) {
         this.assets = assets;
         return this;
@@ -40,9 +42,11 @@ public class AddAssetsToGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public AddAssetsToGroupRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public AddAssetsToGroupRequest(){}
 }

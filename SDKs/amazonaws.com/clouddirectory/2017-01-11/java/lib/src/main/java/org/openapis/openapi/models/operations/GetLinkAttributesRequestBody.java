@@ -14,6 +14,7 @@ public class GetLinkAttributesRequestBody {
      */
     @JsonProperty("AttributeNames")
     public String[] attributeNames;
+
     public GetLinkAttributesRequestBody withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -25,6 +26,7 @@ public class GetLinkAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistencyLevel")
     public GetLinkAttributesRequestBodyConsistencyLevelEnum consistencyLevel;
+
     public GetLinkAttributesRequestBody withConsistencyLevel(GetLinkAttributesRequestBodyConsistencyLevelEnum consistencyLevel) {
         this.consistencyLevel = consistencyLevel;
         return this;
@@ -35,9 +37,14 @@ public class GetLinkAttributesRequestBody {
      */
     @JsonProperty("TypedLinkSpecifier")
     public GetLinkAttributesRequestBodyTypedLinkSpecifier typedLinkSpecifier;
+
     public GetLinkAttributesRequestBody withTypedLinkSpecifier(GetLinkAttributesRequestBodyTypedLinkSpecifier typedLinkSpecifier) {
         this.typedLinkSpecifier = typedLinkSpecifier;
         return this;
     }
     
+    public GetLinkAttributesRequestBody(@JsonProperty("AttributeNames") String[] attributeNames, @JsonProperty("TypedLinkSpecifier") GetLinkAttributesRequestBodyTypedLinkSpecifier typedLinkSpecifier) {
+        this.attributeNames = attributeNames;
+        this.typedLinkSpecifier = typedLinkSpecifier;
+  }
 }

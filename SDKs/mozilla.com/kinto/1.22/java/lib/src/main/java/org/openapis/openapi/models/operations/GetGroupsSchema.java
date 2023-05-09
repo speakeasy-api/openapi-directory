@@ -15,9 +15,11 @@ public class GetGroupsSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetGroupsSchemaData[] data;
+
     public GetGroupsSchema withData(GetGroupsSchemaData[] data) {
         this.data = data;
         return this;
     }
     
+    public GetGroupsSchema(){}
 }

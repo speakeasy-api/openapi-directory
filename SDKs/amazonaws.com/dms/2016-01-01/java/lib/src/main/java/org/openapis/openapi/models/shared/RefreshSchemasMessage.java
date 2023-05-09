@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RefreshSchemasMessage {
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public RefreshSchemasMessage withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -19,9 +20,14 @@ public class RefreshSchemasMessage {
     
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public RefreshSchemasMessage withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
     }
     
+    public RefreshSchemasMessage(@JsonProperty("EndpointArn") String endpointArn, @JsonProperty("ReplicationInstanceArn") String replicationInstanceArn) {
+        this.endpointArn = endpointArn;
+        this.replicationInstanceArn = replicationInstanceArn;
+  }
 }

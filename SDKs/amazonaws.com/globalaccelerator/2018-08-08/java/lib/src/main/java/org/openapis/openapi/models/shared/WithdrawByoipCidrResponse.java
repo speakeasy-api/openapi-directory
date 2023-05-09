@@ -15,9 +15,11 @@ public class WithdrawByoipCidrResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ByoipCidr")
     public ByoipCidr byoipCidr;
+
     public WithdrawByoipCidrResponse withByoipCidr(ByoipCidr byoipCidr) {
         this.byoipCidr = byoipCidr;
         return this;
     }
     
+    public WithdrawByoipCidrResponse(){}
 }

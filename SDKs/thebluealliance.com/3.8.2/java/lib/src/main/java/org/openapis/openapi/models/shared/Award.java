@@ -12,6 +12,7 @@ public class Award {
      */
     @JsonProperty("award_type")
     public Long awardType;
+
     public Award withAwardType(Long awardType) {
         this.awardType = awardType;
         return this;
@@ -22,6 +23,7 @@ public class Award {
      */
     @JsonProperty("event_key")
     public String eventKey;
+
     public Award withEventKey(String eventKey) {
         this.eventKey = eventKey;
         return this;
@@ -32,6 +34,7 @@ public class Award {
      */
     @JsonProperty("name")
     public String name;
+
     public Award withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +45,7 @@ public class Award {
      */
     @JsonProperty("recipient_list")
     public AwardRecipient[] recipientList;
+
     public Award withRecipientList(AwardRecipient[] recipientList) {
         this.recipientList = recipientList;
         return this;
@@ -52,9 +56,17 @@ public class Award {
      */
     @JsonProperty("year")
     public Long year;
+
     public Award withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public Award(@JsonProperty("award_type") Long awardType, @JsonProperty("event_key") String eventKey, @JsonProperty("name") String name, @JsonProperty("recipient_list") AwardRecipient[] recipientList, @JsonProperty("year") Long year) {
+        this.awardType = awardType;
+        this.eventKey = eventKey;
+        this.name = name;
+        this.recipientList = recipientList;
+        this.year = year;
+  }
 }

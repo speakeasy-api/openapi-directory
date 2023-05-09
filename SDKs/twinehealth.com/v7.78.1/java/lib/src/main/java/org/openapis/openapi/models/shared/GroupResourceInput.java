@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GroupResourceInput {
     @JsonProperty("attributes")
     public GroupResourceAttributes attributes;
+
     public GroupResourceInput withAttributes(GroupResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -16,6 +17,7 @@ public class GroupResourceInput {
     
     @JsonProperty("id")
     public String id;
+
     public GroupResourceInput withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +25,15 @@ public class GroupResourceInput {
     
     @JsonProperty("type")
     public GroupResourceTypeEnum type;
+
     public GroupResourceInput withType(GroupResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GroupResourceInput(@JsonProperty("attributes") GroupResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("type") GroupResourceTypeEnum type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.type = type;
+  }
 }

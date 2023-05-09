@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNotificationResponse {
@@ -12,6 +13,7 @@ public class CreateNotificationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateNotificationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateNotificationResponse {
     
     
     public String contentType;
+
     public CreateNotificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateNotificationResponse {
      */
     
     public java.util.Map<String, Object> createNotificationResponse;
+
     public CreateNotificationResponse withCreateNotificationResponse(java.util.Map<String, Object> createNotificationResponse) {
         this.createNotificationResponse = createNotificationResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateNotificationResponse {
      */
     
     public Object creationLimitExceededException;
+
     public CreateNotificationResponse withCreationLimitExceededException(Object creationLimitExceededException) {
         this.creationLimitExceededException = creationLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateNotificationResponse {
      */
     
     public Object duplicateRecordException;
+
     public CreateNotificationResponse withDuplicateRecordException(Object duplicateRecordException) {
         this.duplicateRecordException = duplicateRecordException;
         return this;
@@ -59,6 +65,7 @@ public class CreateNotificationResponse {
      */
     
     public Object internalErrorException;
+
     public CreateNotificationResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateNotificationResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateNotificationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class CreateNotificationResponse {
      */
     
     public Object notFoundException;
+
     public CreateNotificationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateNotificationResponse {
     
     
     public Integer statusCode;
+
     public CreateNotificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateNotificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNotificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateNotificationResponse {
      */
     
     public Object throttlingException;
+
     public CreateNotificationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateNotificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

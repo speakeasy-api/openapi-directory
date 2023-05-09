@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUcsSnmpConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateUcsSnmpConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public UpdateUcsSnmpConfigResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUcsSnmpConfigResponse {
     
     
     public String contentType;
+
     public UpdateUcsSnmpConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUcsSnmpConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.SNMPConfig snmpConfig;
+
     public UpdateUcsSnmpConfigResponse withSNMPConfig(org.openapis.openapi.models.shared.SNMPConfig snmpConfig) {
         this.snmpConfig = snmpConfig;
         return this;
@@ -36,6 +40,7 @@ public class UpdateUcsSnmpConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateUcsSnmpConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class UpdateUcsSnmpConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUcsSnmpConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateUcsSnmpConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

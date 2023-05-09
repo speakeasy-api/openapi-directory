@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDomainEntryRequest {
     @JsonProperty("domainEntry")
     public DomainEntry domainEntry;
+
     public UpdateDomainEntryRequest withDomainEntry(DomainEntry domainEntry) {
         this.domainEntry = domainEntry;
         return this;
@@ -16,9 +17,14 @@ public class UpdateDomainEntryRequest {
     
     @JsonProperty("domainName")
     public String domainName;
+
     public UpdateDomainEntryRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public UpdateDomainEntryRequest(@JsonProperty("domainEntry") DomainEntry domainEntry, @JsonProperty("domainName") String domainName) {
+        this.domainEntry = domainEntry;
+        this.domainName = domainName;
+  }
 }

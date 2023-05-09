@@ -18,6 +18,7 @@ public class DiaryAppointmentTypeModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public DiaryAppointmentTypeModel withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -29,6 +30,7 @@ public class DiaryAppointmentTypeModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DiaryAppointmentTypeModel withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class DiaryAppointmentTypeModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public DiaryAppointmentTypeModel withOid(String oid) {
         this.oid = oid;
         return this;
@@ -51,9 +54,11 @@ public class DiaryAppointmentTypeModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SystemType")
     public DiaryAppointmentTypeModelSystemTypeEnum systemType;
+
     public DiaryAppointmentTypeModel withSystemType(DiaryAppointmentTypeModelSystemTypeEnum systemType) {
         this.systemType = systemType;
         return this;
     }
     
+    public DiaryAppointmentTypeModel(){}
 }

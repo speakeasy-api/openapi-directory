@@ -18,9 +18,11 @@ public class GeoRegionSearchTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoRegionQuery")
     public String geoRegionQuery;
+
     public GeoRegionSearchTerms withGeoRegionQuery(String geoRegionQuery) {
         this.geoRegionQuery = geoRegionQuery;
         return this;
     }
     
+    public GeoRegionSearchTerms(){}
 }

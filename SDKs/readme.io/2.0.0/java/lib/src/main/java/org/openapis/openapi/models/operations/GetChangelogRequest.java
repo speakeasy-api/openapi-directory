@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChangelogRequest {
@@ -12,9 +13,13 @@ public class GetChangelogRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
     public String slug;
+
     public GetChangelogRequest withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public GetChangelogRequest(@JsonProperty("slug") String slug) {
+        this.slug = slug;
+  }
 }

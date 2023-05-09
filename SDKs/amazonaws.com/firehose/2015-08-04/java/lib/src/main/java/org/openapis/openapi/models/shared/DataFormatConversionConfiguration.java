@@ -15,6 +15,7 @@ public class DataFormatConversionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public DataFormatConversionConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +24,7 @@ public class DataFormatConversionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormatConfiguration")
     public InputFormatConfiguration inputFormatConfiguration;
+
     public DataFormatConversionConfiguration withInputFormatConfiguration(InputFormatConfiguration inputFormatConfiguration) {
         this.inputFormatConfiguration = inputFormatConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class DataFormatConversionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputFormatConfiguration")
     public OutputFormatConfiguration outputFormatConfiguration;
+
     public DataFormatConversionConfiguration withOutputFormatConfiguration(OutputFormatConfiguration outputFormatConfiguration) {
         this.outputFormatConfiguration = outputFormatConfiguration;
         return this;
@@ -39,9 +42,11 @@ public class DataFormatConversionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaConfiguration")
     public SchemaConfiguration schemaConfiguration;
+
     public DataFormatConversionConfiguration withSchemaConfiguration(SchemaConfiguration schemaConfiguration) {
         this.schemaConfiguration = schemaConfiguration;
         return this;
     }
     
+    public DataFormatConversionConfiguration(){}
 }

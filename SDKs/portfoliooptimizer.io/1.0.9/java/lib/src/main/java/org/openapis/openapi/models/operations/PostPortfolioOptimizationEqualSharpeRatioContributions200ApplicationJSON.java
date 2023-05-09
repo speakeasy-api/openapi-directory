@@ -15,9 +15,13 @@ public class PostPortfolioOptimizationEqualSharpeRatioContributions200Applicatio
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

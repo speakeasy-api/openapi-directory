@@ -15,6 +15,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectArn")
     public String projectArn;
+
     public ProjectSummary withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -23,9 +24,11 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ProjectSummary withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public ProjectSummary(){}
 }

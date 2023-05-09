@@ -15,9 +15,11 @@ public class LinksConversationSelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public LinksConversationSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public LinksConversationSelf(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsSubnetRouteTable {
     
     public String arn;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsSubnetRouteTable withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String id;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsSubnetRouteTable withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String name;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsSubnetRouteTable withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsSubnetRouteTable(){}
 }

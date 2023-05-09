@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNotebookResponse {
     
     public String contentType;
+
     public UpdateNotebookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNotebookResponse {
      */
     
     public Object internalServerException;
+
     public UpdateNotebookResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNotebookResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateNotebookResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateNotebookResponse {
     
     
     public Integer statusCode;
+
     public UpdateNotebookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateNotebookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNotebookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateNotebookResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateNotebookResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateNotebookResponse {
      */
     
     public java.util.Map<String, Object> updateNotebookOutput;
+
     public UpdateNotebookResponse withUpdateNotebookOutput(java.util.Map<String, Object> updateNotebookOutput) {
         this.updateNotebookOutput = updateNotebookOutput;
         return this;
     }
     
+    public UpdateNotebookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

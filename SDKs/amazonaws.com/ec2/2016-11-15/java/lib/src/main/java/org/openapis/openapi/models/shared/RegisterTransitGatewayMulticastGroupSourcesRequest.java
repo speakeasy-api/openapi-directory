@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegisterTransitGatewayMulticastGroupSourcesRequest {
     
     public Boolean dryRun;
+
     public RegisterTransitGatewayMulticastGroupSourcesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class RegisterTransitGatewayMulticastGroupSourcesRequest {
     
     
     public String groupIpAddress;
+
     public RegisterTransitGatewayMulticastGroupSourcesRequest withGroupIpAddress(String groupIpAddress) {
         this.groupIpAddress = groupIpAddress;
         return this;
@@ -23,6 +25,7 @@ public class RegisterTransitGatewayMulticastGroupSourcesRequest {
     
     
     public String[] networkInterfaceIds;
+
     public RegisterTransitGatewayMulticastGroupSourcesRequest withNetworkInterfaceIds(String[] networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
@@ -30,9 +33,14 @@ public class RegisterTransitGatewayMulticastGroupSourcesRequest {
     
     
     public String transitGatewayMulticastDomainId;
+
     public RegisterTransitGatewayMulticastGroupSourcesRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
     }
     
+    public RegisterTransitGatewayMulticastGroupSourcesRequest(@JsonProperty("NetworkInterfaceIds") String[] networkInterfaceIds, @JsonProperty("TransitGatewayMulticastDomainId") String transitGatewayMulticastDomainId) {
+        this.networkInterfaceIds = networkInterfaceIds;
+        this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
+  }
 }

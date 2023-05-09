@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResourceProfileDetectionsResponse {
@@ -12,6 +13,7 @@ public class UpdateResourceProfileDetectionsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateResourceProfileDetectionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResourceProfileDetectionsResponse {
     
     
     public String contentType;
+
     public UpdateResourceProfileDetectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResourceProfileDetectionsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateResourceProfileDetectionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateResourceProfileDetectionsResponse {
     
     
     public Integer statusCode;
+
     public UpdateResourceProfileDetectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateResourceProfileDetectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResourceProfileDetectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateResourceProfileDetectionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateResourceProfileDetectionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateResourceProfileDetectionsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateResourceProfileDetectionsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateResourceProfileDetectionsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateResourceProfileDetectionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateResourceProfileDetectionsResponse {
      */
     
     public java.util.Map<String, Object> updateResourceProfileDetectionsResponse;
+
     public UpdateResourceProfileDetectionsResponse withUpdateResourceProfileDetectionsResponse(java.util.Map<String, Object> updateResourceProfileDetectionsResponse) {
         this.updateResourceProfileDetectionsResponse = updateResourceProfileDetectionsResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateResourceProfileDetectionsResponse {
      */
     
     public Object validationException;
+
     public UpdateResourceProfileDetectionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateResourceProfileDetectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ReportHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public ReportHeader withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -29,6 +30,7 @@ public class ReportHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizationSettings")
     public LocalizationSettings localizationSettings;
+
     public ReportHeader withLocalizationSettings(LocalizationSettings localizationSettings) {
         this.localizationSettings = localizationSettings;
         return this;
@@ -40,9 +42,11 @@ public class ReportHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingTimeZone")
     public String reportingTimeZone;
+
     public ReportHeader withReportingTimeZone(String reportingTimeZone) {
         this.reportingTimeZone = reportingTimeZone;
         return this;
     }
     
+    public ReportHeader(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Area {
     @JsonProperty("q")
     public Float q;
+
     public Area withQ(Float q) {
         this.q = q;
         return this;
@@ -19,9 +20,14 @@ public class Area {
     
     @JsonProperty("u")
     public String u;
+
     public Area withU(String u) {
         this.u = u;
         return this;
     }
     
+    public Area(@JsonProperty("q") Float q, @JsonProperty("u") String u) {
+        this.q = q;
+        this.u = u;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayMulticastDomainAssociationsResult {
     
     public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations[] multicastDomainAssociations;
+
     public GetTransitGatewayMulticastDomainAssociationsResult withMulticastDomainAssociations(GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations[] multicastDomainAssociations) {
         this.multicastDomainAssociations = multicastDomainAssociations;
         return this;
@@ -19,9 +20,11 @@ public class GetTransitGatewayMulticastDomainAssociationsResult {
     
     
     public String nextToken;
+
     public GetTransitGatewayMulticastDomainAssociationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetTransitGatewayMulticastDomainAssociationsResult(){}
 }

@@ -15,6 +15,7 @@ public class Miipc503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Miipc503ApplicationJSONErrorEnum error;
+
     public Miipc503ApplicationJSON withError(Miipc503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Miipc503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Miipc503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Miipc503ApplicationJSON withErrorDescription(Miipc503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Miipc503ApplicationJSON(){}
 }

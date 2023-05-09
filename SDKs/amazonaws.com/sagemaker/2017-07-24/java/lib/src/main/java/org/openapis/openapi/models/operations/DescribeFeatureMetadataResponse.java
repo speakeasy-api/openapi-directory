@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFeatureMetadataResponse {
     
     public String contentType;
+
     public DescribeFeatureMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFeatureMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFeatureMetadataResponse describeFeatureMetadataResponse;
+
     public DescribeFeatureMetadataResponse withDescribeFeatureMetadataResponse(org.openapis.openapi.models.shared.DescribeFeatureMetadataResponse describeFeatureMetadataResponse) {
         this.describeFeatureMetadataResponse = describeFeatureMetadataResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFeatureMetadataResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeFeatureMetadataResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribeFeatureMetadataResponse {
     
     
     public Integer statusCode;
+
     public DescribeFeatureMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeFeatureMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFeatureMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFeatureMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

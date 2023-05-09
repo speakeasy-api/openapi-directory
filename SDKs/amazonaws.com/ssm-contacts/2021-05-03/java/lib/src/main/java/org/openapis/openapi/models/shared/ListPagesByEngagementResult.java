@@ -15,6 +15,7 @@ public class ListPagesByEngagementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPagesByEngagementResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListPagesByEngagementResult {
     
     @JsonProperty("Pages")
     public Page[] pages;
+
     public ListPagesByEngagementResult withPages(Page[] pages) {
         this.pages = pages;
         return this;
     }
     
+    public ListPagesByEngagementResult(@JsonProperty("Pages") Page[] pages) {
+        this.pages = pages;
+  }
 }

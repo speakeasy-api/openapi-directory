@@ -15,6 +15,7 @@ public class BatchAssociateResourcesToCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriodRange")
     public BatchAssociateResourcesToCustomLineItemRequestBodyBillingPeriodRange billingPeriodRange;
+
     public BatchAssociateResourcesToCustomLineItemRequestBody withBillingPeriodRange(BatchAssociateResourcesToCustomLineItemRequestBodyBillingPeriodRange billingPeriodRange) {
         this.billingPeriodRange = billingPeriodRange;
         return this;
@@ -25,6 +26,7 @@ public class BatchAssociateResourcesToCustomLineItemRequestBody {
      */
     @JsonProperty("ResourceArns")
     public String[] resourceArns;
+
     public BatchAssociateResourcesToCustomLineItemRequestBody withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
@@ -35,9 +37,14 @@ public class BatchAssociateResourcesToCustomLineItemRequestBody {
      */
     @JsonProperty("TargetArn")
     public String targetArn;
+
     public BatchAssociateResourcesToCustomLineItemRequestBody withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public BatchAssociateResourcesToCustomLineItemRequestBody(@JsonProperty("ResourceArns") String[] resourceArns, @JsonProperty("TargetArn") String targetArn) {
+        this.resourceArns = resourceArns;
+        this.targetArn = targetArn;
+  }
 }

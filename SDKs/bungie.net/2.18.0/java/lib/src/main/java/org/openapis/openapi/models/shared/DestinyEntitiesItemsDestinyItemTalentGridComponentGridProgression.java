@@ -15,6 +15,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer currentProgress;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withCurrentProgress(Integer currentProgress) {
         this.currentProgress = currentProgress;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer currentResetCount;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withCurrentResetCount(Integer currentResetCount) {
         this.currentResetCount = currentResetCount;
         return this;
@@ -35,6 +37,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer dailyLimit;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withDailyLimit(Integer dailyLimit) {
         this.dailyLimit = dailyLimit;
         return this;
@@ -45,6 +48,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer dailyProgress;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withDailyProgress(Integer dailyProgress) {
         this.dailyProgress = dailyProgress;
         return this;
@@ -55,6 +59,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer level;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withLevel(Integer level) {
         this.level = level;
         return this;
@@ -65,6 +70,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer levelCap;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withLevelCap(Integer levelCap) {
         this.levelCap = levelCap;
         return this;
@@ -75,6 +81,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer nextLevelAt;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withNextLevelAt(Integer nextLevelAt) {
         this.nextLevelAt = nextLevelAt;
         return this;
@@ -85,6 +92,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer progressToNextLevel;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withProgressToNextLevel(Integer progressToNextLevel) {
         this.progressToNextLevel = progressToNextLevel;
         return this;
@@ -95,6 +103,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Long progressionHash;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withProgressionHash(Long progressionHash) {
         this.progressionHash = progressionHash;
         return this;
@@ -105,6 +114,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer[] rewardItemStates;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withRewardItemStates(Integer[] rewardItemStates) {
         this.rewardItemStates = rewardItemStates;
         return this;
@@ -115,6 +125,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public DestinyDestinyProgressionResetEntry[] seasonResets;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withSeasonResets(DestinyDestinyProgressionResetEntry[] seasonResets) {
         this.seasonResets = seasonResets;
         return this;
@@ -125,6 +136,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer stepIndex;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withStepIndex(Integer stepIndex) {
         this.stepIndex = stepIndex;
         return this;
@@ -135,6 +147,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer weeklyLimit;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withWeeklyLimit(Integer weeklyLimit) {
         this.weeklyLimit = weeklyLimit;
         return this;
@@ -145,9 +158,11 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression {
      */
     
     public Integer weeklyProgress;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression withWeeklyProgress(Integer weeklyProgress) {
         this.weeklyProgress = weeklyProgress;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression(){}
 }

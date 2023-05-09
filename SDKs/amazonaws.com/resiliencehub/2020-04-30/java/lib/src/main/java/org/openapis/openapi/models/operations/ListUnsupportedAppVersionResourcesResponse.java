@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUnsupportedAppVersionResourcesResponse {
@@ -12,6 +13,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListUnsupportedAppVersionResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
      */
     
     public Object conflictException;
+
     public ListUnsupportedAppVersionResourcesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
     
     
     public String contentType;
+
     public ListUnsupportedAppVersionResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListUnsupportedAppVersionResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUnsupportedAppVersionResourcesResponse listUnsupportedAppVersionResourcesResponse;
+
     public ListUnsupportedAppVersionResourcesResponse withListUnsupportedAppVersionResourcesResponse(org.openapis.openapi.models.shared.ListUnsupportedAppVersionResourcesResponse listUnsupportedAppVersionResourcesResponse) {
         this.listUnsupportedAppVersionResourcesResponse = listUnsupportedAppVersionResourcesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListUnsupportedAppVersionResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUnsupportedAppVersionResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListUnsupportedAppVersionResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListUnsupportedAppVersionResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListUnsupportedAppVersionResourcesResponse {
      */
     
     public Object validationException;
+
     public ListUnsupportedAppVersionResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListUnsupportedAppVersionResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

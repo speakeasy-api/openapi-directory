@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopEngagementResponse {
@@ -12,6 +13,7 @@ public class StopEngagementResponse {
      */
     
     public Object accessDeniedException;
+
     public StopEngagementResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopEngagementResponse {
     
     
     public String contentType;
+
     public StopEngagementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopEngagementResponse {
      */
     
     public Object internalServerException;
+
     public StopEngagementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class StopEngagementResponse {
     
     
     public Integer statusCode;
+
     public StopEngagementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopEngagementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopEngagementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopEngagementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopEngagementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopEngagementResponse {
      */
     
     public java.util.Map<String, Object> stopEngagementResult;
+
     public StopEngagementResponse withStopEngagementResult(java.util.Map<String, Object> stopEngagementResult) {
         this.stopEngagementResult = stopEngagementResult;
         return this;
@@ -73,6 +81,7 @@ public class StopEngagementResponse {
      */
     
     public Object throttlingException;
+
     public StopEngagementResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StopEngagementResponse {
      */
     
     public Object validationException;
+
     public StopEngagementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopEngagementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

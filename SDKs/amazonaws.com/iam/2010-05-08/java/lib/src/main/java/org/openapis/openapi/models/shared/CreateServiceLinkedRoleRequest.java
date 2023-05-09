@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateServiceLinkedRoleRequest {
     
     public String awsServiceName;
+
     public CreateServiceLinkedRoleRequest withAWSServiceName(String awsServiceName) {
         this.awsServiceName = awsServiceName;
         return this;
@@ -16,6 +17,7 @@ public class CreateServiceLinkedRoleRequest {
     
     
     public String customSuffix;
+
     public CreateServiceLinkedRoleRequest withCustomSuffix(String customSuffix) {
         this.customSuffix = customSuffix;
         return this;
@@ -23,9 +25,13 @@ public class CreateServiceLinkedRoleRequest {
     
     
     public String description;
+
     public CreateServiceLinkedRoleRequest withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public CreateServiceLinkedRoleRequest(@JsonProperty("AWSServiceName") String awsServiceName) {
+        this.awsServiceName = awsServiceName;
+  }
 }

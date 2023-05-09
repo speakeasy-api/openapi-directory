@@ -12,6 +12,7 @@ public class StartSNOMEDCTInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartSNOMEDCTInferenceJobRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartSNOMEDCTInferenceJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartSNOMEDCTInferenceJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -29,6 +31,7 @@ public class StartSNOMEDCTInferenceJobRequest {
      */
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartSNOMEDCTInferenceJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -37,6 +40,7 @@ public class StartSNOMEDCTInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartSNOMEDCTInferenceJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -45,6 +49,7 @@ public class StartSNOMEDCTInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKey")
     public String kmsKey;
+
     public StartSNOMEDCTInferenceJobRequest withKMSKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -52,6 +57,7 @@ public class StartSNOMEDCTInferenceJobRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartSNOMEDCTInferenceJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -62,9 +68,16 @@ public class StartSNOMEDCTInferenceJobRequest {
      */
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartSNOMEDCTInferenceJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
     }
     
+    public StartSNOMEDCTInferenceJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

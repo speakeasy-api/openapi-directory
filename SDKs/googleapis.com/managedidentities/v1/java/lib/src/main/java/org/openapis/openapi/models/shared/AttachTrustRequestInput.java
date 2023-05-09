@@ -18,9 +18,11 @@ public class AttachTrustRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trust")
     public TrustInput trust;
+
     public AttachTrustRequestInput withTrust(TrustInput trust) {
         this.trust = trust;
         return this;
     }
     
+    public AttachTrustRequestInput(){}
 }

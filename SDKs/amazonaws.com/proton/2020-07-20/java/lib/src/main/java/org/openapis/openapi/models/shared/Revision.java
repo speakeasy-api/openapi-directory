@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Revision {
     @JsonProperty("branch")
     public String branch;
+
     public Revision withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -19,6 +20,7 @@ public class Revision {
     
     @JsonProperty("directory")
     public String directory;
+
     public Revision withDirectory(String directory) {
         this.directory = directory;
         return this;
@@ -26,6 +28,7 @@ public class Revision {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public Revision withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -33,6 +36,7 @@ public class Revision {
     
     @JsonProperty("repositoryProvider")
     public RepositoryProviderEnum repositoryProvider;
+
     public Revision withRepositoryProvider(RepositoryProviderEnum repositoryProvider) {
         this.repositoryProvider = repositoryProvider;
         return this;
@@ -40,9 +44,17 @@ public class Revision {
     
     @JsonProperty("sha")
     public String sha;
+
     public Revision withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public Revision(@JsonProperty("branch") String branch, @JsonProperty("directory") String directory, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("repositoryProvider") RepositoryProviderEnum repositoryProvider, @JsonProperty("sha") String sha) {
+        this.branch = branch;
+        this.directory = directory;
+        this.repositoryName = repositoryName;
+        this.repositoryProvider = repositoryProvider;
+        this.sha = sha;
+  }
 }

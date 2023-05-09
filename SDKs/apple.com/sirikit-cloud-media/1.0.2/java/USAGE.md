@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ExtensionConfigurationRequest;
 import org.openapis.openapi.models.operations.ExtensionConfigurationResponse;
 
@@ -13,23 +12,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ExtensionConfigurationRequest req = new ExtensionConfigurationRequest() {{
-                acceptLanguage = "corrupti";
-                cacheControl = "provident";
-                ifNoneMatch = "distinctio";
-                requestTimeout = 8442.66;
-                userAgent = "unde";
-                xApplecloudextensionRetryCount = 8579.46;
-                xApplecloudextensionSessionId = "corrupti";
-            }}            
+            ExtensionConfigurationRequest req = new ExtensionConfigurationRequest("corrupti", "provident", 7151.9, "quibusdam", "unde") {{
+                ifNoneMatch = "nulla";
+                xApplecloudextensionRetryCount = 5448.83;
+            }};            
 
             ExtensionConfigurationResponse res = sdk.config.extensionConfiguration(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

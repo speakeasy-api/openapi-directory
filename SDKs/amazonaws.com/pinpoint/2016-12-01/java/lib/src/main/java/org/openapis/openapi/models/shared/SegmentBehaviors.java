@@ -15,9 +15,11 @@ public class SegmentBehaviors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recency")
     public RecencyDimension recency;
+
     public SegmentBehaviors withRecency(RecencyDimension recency) {
         this.recency = recency;
         return this;
     }
     
+    public SegmentBehaviors(){}
 }

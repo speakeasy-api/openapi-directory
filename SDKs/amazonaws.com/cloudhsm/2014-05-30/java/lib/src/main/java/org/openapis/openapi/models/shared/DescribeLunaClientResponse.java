@@ -15,6 +15,7 @@ public class DescribeLunaClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public DescribeLunaClientResponse withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -23,6 +24,7 @@ public class DescribeLunaClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateFingerprint")
     public String certificateFingerprint;
+
     public DescribeLunaClientResponse withCertificateFingerprint(String certificateFingerprint) {
         this.certificateFingerprint = certificateFingerprint;
         return this;
@@ -31,6 +33,7 @@ public class DescribeLunaClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientArn")
     public String clientArn;
+
     public DescribeLunaClientResponse withClientArn(String clientArn) {
         this.clientArn = clientArn;
         return this;
@@ -39,6 +42,7 @@ public class DescribeLunaClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public DescribeLunaClientResponse withLabel(String label) {
         this.label = label;
         return this;
@@ -47,9 +51,11 @@ public class DescribeLunaClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTimestamp")
     public String lastModifiedTimestamp;
+
     public DescribeLunaClientResponse withLastModifiedTimestamp(String lastModifiedTimestamp) {
         this.lastModifiedTimestamp = lastModifiedTimestamp;
         return this;
     }
     
+    public DescribeLunaClientResponse(){}
 }

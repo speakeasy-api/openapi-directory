@@ -15,6 +15,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_name")
     public String activityName;
+
     public TimeCardLineVO withActivityName(String activityName) {
         this.activityName = activityName;
         return this;
@@ -26,6 +27,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day1_hours_spent")
     public Object day1HoursSpent;
+
     public TimeCardLineVO withDay1HoursSpent(Object day1HoursSpent) {
         this.day1HoursSpent = day1HoursSpent;
         return this;
@@ -37,6 +39,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day2_hours_spent")
     public Object day2HoursSpent;
+
     public TimeCardLineVO withDay2HoursSpent(Object day2HoursSpent) {
         this.day2HoursSpent = day2HoursSpent;
         return this;
@@ -48,6 +51,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day3_hours_spent")
     public Object day3HoursSpent;
+
     public TimeCardLineVO withDay3HoursSpent(Object day3HoursSpent) {
         this.day3HoursSpent = day3HoursSpent;
         return this;
@@ -59,6 +63,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day4_hours_spent")
     public Object day4HoursSpent;
+
     public TimeCardLineVO withDay4HoursSpent(Object day4HoursSpent) {
         this.day4HoursSpent = day4HoursSpent;
         return this;
@@ -70,6 +75,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day5_hours_spent")
     public Object day5HoursSpent;
+
     public TimeCardLineVO withDay5HoursSpent(Object day5HoursSpent) {
         this.day5HoursSpent = day5HoursSpent;
         return this;
@@ -81,6 +87,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day6_hours_spent")
     public Object day6HoursSpent;
+
     public TimeCardLineVO withDay6HoursSpent(Object day6HoursSpent) {
         this.day6HoursSpent = day6HoursSpent;
         return this;
@@ -92,6 +99,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day7_hours_spent")
     public Object day7HoursSpent;
+
     public TimeCardLineVO withDay7HoursSpent(Object day7HoursSpent) {
         this.day7HoursSpent = day7HoursSpent;
         return this;
@@ -103,6 +111,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectTimeCardVO project;
+
     public TimeCardLineVO withProject(ProjectTimeCardVO project) {
         this.project = project;
         return this;
@@ -114,6 +123,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public TaskTimeCardVO task;
+
     public TimeCardLineVO withTask(TaskTimeCardVO task) {
         this.task = task;
         return this;
@@ -122,6 +132,7 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_card_line_id")
     public Long timeCardLineId;
+
     public TimeCardLineVO withTimeCardLineId(Long timeCardLineId) {
         this.timeCardLineId = timeCardLineId;
         return this;
@@ -133,9 +144,11 @@ public class TimeCardLineVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_hours_spent")
     public Object totalHoursSpent;
+
     public TimeCardLineVO withTotalHoursSpent(Object totalHoursSpent) {
         this.totalHoursSpent = totalHoursSpent;
         return this;
     }
     
+    public TimeCardLineVO(){}
 }

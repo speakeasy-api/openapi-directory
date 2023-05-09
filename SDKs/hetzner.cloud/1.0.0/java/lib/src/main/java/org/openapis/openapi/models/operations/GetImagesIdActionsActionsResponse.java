@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImagesIdActionsActionsResponse {
     @JsonProperty("actions")
     public GetImagesIdActionsActionsResponseAction[] actions;
+
     public GetImagesIdActionsActionsResponse withActions(GetImagesIdActionsActionsResponseAction[] actions) {
         this.actions = actions;
         return this;
@@ -22,9 +23,13 @@ public class GetImagesIdActionsActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetImagesIdActionsActionsResponseMeta meta;
+
     public GetImagesIdActionsActionsResponse withMeta(GetImagesIdActionsActionsResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetImagesIdActionsActionsResponse(@JsonProperty("actions") GetImagesIdActionsActionsResponseAction[] actions) {
+        this.actions = actions;
+  }
 }

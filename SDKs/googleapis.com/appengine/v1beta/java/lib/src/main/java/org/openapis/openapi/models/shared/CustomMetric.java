@@ -18,6 +18,7 @@ public class CustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public CustomMetric withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,6 +30,7 @@ public class CustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public CustomMetric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -40,6 +42,7 @@ public class CustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleInstanceAssignment")
     public Double singleInstanceAssignment;
+
     public CustomMetric withSingleInstanceAssignment(Double singleInstanceAssignment) {
         this.singleInstanceAssignment = singleInstanceAssignment;
         return this;
@@ -51,6 +54,7 @@ public class CustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetType")
     public String targetType;
+
     public CustomMetric withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -62,9 +66,11 @@ public class CustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetUtilization")
     public Double targetUtilization;
+
     public CustomMetric withTargetUtilization(Double targetUtilization) {
         this.targetUtilization = targetUtilization;
         return this;
     }
     
+    public CustomMetric(){}
 }

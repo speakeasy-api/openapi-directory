@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInvitationsResponse {
     
     public String contentType;
+
     public DeleteInvitationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteInvitationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteInvitationsResponse deleteInvitationsResponse;
+
     public DeleteInvitationsResponse withDeleteInvitationsResponse(org.openapis.openapi.models.shared.DeleteInvitationsResponse deleteInvitationsResponse) {
         this.deleteInvitationsResponse = deleteInvitationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInvitationsResponse {
      */
     
     public Object internalException;
+
     public DeleteInvitationsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInvitationsResponse {
      */
     
     public Object invalidAccessException;
+
     public DeleteInvitationsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInvitationsResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteInvitationsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInvitationsResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteInvitationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteInvitationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteInvitationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteInvitationsResponse {
     
     
     public Integer statusCode;
+
     public DeleteInvitationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteInvitationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInvitationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteInvitationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

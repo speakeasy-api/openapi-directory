@@ -15,6 +15,7 @@ public class Bpm {
      */
     @SpeakeasyMetadata("queryParam:name=from")
     public Long from;
+
     public Bpm withFrom(Long from) {
         this.from = from;
         return this;
@@ -25,9 +26,11 @@ public class Bpm {
      */
     @SpeakeasyMetadata("queryParam:name=to")
     public Long to;
+
     public Bpm withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public Bpm(){}
 }

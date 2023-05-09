@@ -12,6 +12,7 @@ public class GetTrackCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetTrackCollectionListEmbedEnum[] embed;
+
     public GetTrackCollectionListRequest withEmbed(GetTrackCollectionListEmbedEnum[] embed) {
         this.embed = embed;
         return this;
@@ -22,6 +23,7 @@ public class GetTrackCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetTrackCollectionListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +34,11 @@ public class GetTrackCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetTrackCollectionListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetTrackCollectionListRequest(){}
 }

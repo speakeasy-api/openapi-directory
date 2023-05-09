@@ -18,6 +18,7 @@ public class EgressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identities")
     public String[] identities;
+
     public EgressFrom withIdentities(String[] identities) {
         this.identities = identities;
         return this;
@@ -29,9 +30,11 @@ public class EgressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityType")
     public EgressFromIdentityTypeEnum identityType;
+
     public EgressFrom withIdentityType(EgressFromIdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
     }
     
+    public EgressFrom(){}
 }

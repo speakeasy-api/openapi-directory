@@ -15,6 +15,7 @@ public class AccountAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsId")
     public String adsId;
+
     public AccountAdsLink withAdsId(String adsId) {
         this.adsId = adsId;
         return this;
@@ -26,9 +27,11 @@ public class AccountAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AccountAdsLink withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AccountAdsLink(){}
 }

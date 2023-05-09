@@ -15,9 +15,11 @@ public class Locations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Location[] locations;
+
     public Locations withLocations(Location[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public Locations(){}
 }

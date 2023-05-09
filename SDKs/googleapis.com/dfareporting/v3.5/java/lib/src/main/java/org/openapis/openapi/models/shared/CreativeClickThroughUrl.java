@@ -18,6 +18,7 @@ public class CreativeClickThroughUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computedClickThroughUrl")
     public String computedClickThroughUrl;
+
     public CreativeClickThroughUrl withComputedClickThroughUrl(String computedClickThroughUrl) {
         this.computedClickThroughUrl = computedClickThroughUrl;
         return this;
@@ -29,6 +30,7 @@ public class CreativeClickThroughUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customClickThroughUrl")
     public String customClickThroughUrl;
+
     public CreativeClickThroughUrl withCustomClickThroughUrl(String customClickThroughUrl) {
         this.customClickThroughUrl = customClickThroughUrl;
         return this;
@@ -40,9 +42,11 @@ public class CreativeClickThroughUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("landingPageId")
     public String landingPageId;
+
     public CreativeClickThroughUrl withLandingPageId(String landingPageId) {
         this.landingPageId = landingPageId;
         return this;
     }
     
+    public CreativeClickThroughUrl(){}
 }

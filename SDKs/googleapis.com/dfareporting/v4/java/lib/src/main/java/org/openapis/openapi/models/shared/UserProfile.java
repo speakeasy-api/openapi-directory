@@ -18,6 +18,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public UserProfile withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public UserProfile withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -40,6 +42,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public UserProfile withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UserProfile withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileId")
     public String profileId;
+
     public UserProfile withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -73,6 +78,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountId")
     public String subAccountId;
+
     public UserProfile withSubAccountId(String subAccountId) {
         this.subAccountId = subAccountId;
         return this;
@@ -84,6 +90,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountName")
     public String subAccountName;
+
     public UserProfile withSubAccountName(String subAccountName) {
         this.subAccountName = subAccountName;
         return this;
@@ -95,9 +102,11 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public UserProfile withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UserProfile(){}
 }

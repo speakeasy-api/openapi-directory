@@ -75,4 +75,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormatRequest
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormat200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormat200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormatResponse.java
+docs/sdk/README.md
 USAGE.md

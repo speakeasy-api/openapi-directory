@@ -15,6 +15,7 @@ public class Product {
      */
     
     public String id;
+
     public Product withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class Product {
      */
     
     public String name;
+
     public Product withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class Product {
      */
     
     public String type;
+
     public Product withType(String type) {
         this.type = type;
         return this;
@@ -45,9 +48,11 @@ public class Product {
      */
     
     public String url;
+
     public Product withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Product(){}
 }

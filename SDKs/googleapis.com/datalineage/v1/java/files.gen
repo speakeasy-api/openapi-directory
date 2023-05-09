@@ -92,4 +92,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatacatalogLinea
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatacatalogLineageV1SearchLinksResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatacatalogLineageV1Link.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatacatalogLineageV1SearchLinksRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

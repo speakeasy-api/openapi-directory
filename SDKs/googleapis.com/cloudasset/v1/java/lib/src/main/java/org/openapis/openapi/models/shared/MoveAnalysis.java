@@ -18,6 +18,7 @@ public class MoveAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysis")
     public MoveAnalysisResult analysis;
+
     public MoveAnalysis withAnalysis(MoveAnalysisResult analysis) {
         this.analysis = analysis;
         return this;
@@ -29,6 +30,7 @@ public class MoveAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public MoveAnalysis withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class MoveAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public MoveAnalysis withError(Status error) {
         this.error = error;
         return this;
     }
     
+    public MoveAnalysis(){}
 }

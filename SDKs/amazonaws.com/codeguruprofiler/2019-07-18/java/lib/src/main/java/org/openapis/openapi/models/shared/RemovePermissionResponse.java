@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemovePermissionResponse {
     @JsonProperty("policy")
     public String policy;
+
     public RemovePermissionResponse withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -19,9 +20,14 @@ public class RemovePermissionResponse {
     
     @JsonProperty("revisionId")
     public String revisionId;
+
     public RemovePermissionResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public RemovePermissionResponse(@JsonProperty("policy") String policy, @JsonProperty("revisionId") String revisionId) {
+        this.policy = policy;
+        this.revisionId = revisionId;
+  }
 }

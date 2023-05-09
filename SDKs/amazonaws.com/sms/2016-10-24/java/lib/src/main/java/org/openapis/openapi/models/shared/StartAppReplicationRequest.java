@@ -12,9 +12,11 @@ public class StartAppReplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public StartAppReplicationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public StartAppReplicationRequest(){}
 }

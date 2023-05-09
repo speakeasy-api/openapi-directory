@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNatGatewaysResult {
     
     public DescribeNatGatewaysResultNatGateways[] natGateways;
+
     public DescribeNatGatewaysResult withNatGateways(DescribeNatGatewaysResultNatGateways[] natGateways) {
         this.natGateways = natGateways;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNatGatewaysResult {
     
     
     public String nextToken;
+
     public DescribeNatGatewaysResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNatGatewaysResult(){}
 }

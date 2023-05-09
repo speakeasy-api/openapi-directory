@@ -15,6 +15,7 @@ public class SetUserPoolMfaConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MfaConfiguration")
     public UserPoolMfaTypeEnum mfaConfiguration;
+
     public SetUserPoolMfaConfigResponse withMfaConfiguration(UserPoolMfaTypeEnum mfaConfiguration) {
         this.mfaConfiguration = mfaConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class SetUserPoolMfaConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsMfaConfiguration")
     public SmsMfaConfigType smsMfaConfiguration;
+
     public SetUserPoolMfaConfigResponse withSmsMfaConfiguration(SmsMfaConfigType smsMfaConfiguration) {
         this.smsMfaConfiguration = smsMfaConfiguration;
         return this;
@@ -31,9 +33,11 @@ public class SetUserPoolMfaConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoftwareTokenMfaConfiguration")
     public SoftwareTokenMfaConfigType softwareTokenMfaConfiguration;
+
     public SetUserPoolMfaConfigResponse withSoftwareTokenMfaConfiguration(SoftwareTokenMfaConfigType softwareTokenMfaConfiguration) {
         this.softwareTokenMfaConfiguration = softwareTokenMfaConfiguration;
         return this;
     }
     
+    public SetUserPoolMfaConfigResponse(){}
 }

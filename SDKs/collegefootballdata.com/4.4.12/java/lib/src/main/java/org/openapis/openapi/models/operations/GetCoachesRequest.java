@@ -12,6 +12,7 @@ public class GetCoachesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstName")
     public String firstName;
+
     public GetCoachesRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -22,6 +23,7 @@ public class GetCoachesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastName")
     public String lastName;
+
     public GetCoachesRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -32,6 +34,7 @@ public class GetCoachesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxYear")
     public Long maxYear;
+
     public GetCoachesRequest withMaxYear(Long maxYear) {
         this.maxYear = maxYear;
         return this;
@@ -42,6 +45,7 @@ public class GetCoachesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minYear")
     public Long minYear;
+
     public GetCoachesRequest withMinYear(Long minYear) {
         this.minYear = minYear;
         return this;
@@ -52,6 +56,7 @@ public class GetCoachesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetCoachesRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -62,9 +67,11 @@ public class GetCoachesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetCoachesRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetCoachesRequest(){}
 }

@@ -25,6 +25,7 @@ public class FlightStop {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("arrivalAt")
     public OffsetDateTime arrivalAt;
+
     public FlightStop withArrivalAt(OffsetDateTime arrivalAt) {
         this.arrivalAt = arrivalAt;
         return this;
@@ -38,6 +39,7 @@ public class FlightStop {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("departureAt")
     public OffsetDateTime departureAt;
+
     public FlightStop withDepartureAt(OffsetDateTime departureAt) {
         this.departureAt = departureAt;
         return this;
@@ -49,6 +51,7 @@ public class FlightStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public FlightStop withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -60,9 +63,11 @@ public class FlightStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iataCode")
     public String iataCode;
+
     public FlightStop withIataCode(String iataCode) {
         this.iataCode = iataCode;
         return this;
     }
     
+    public FlightStop(){}
 }

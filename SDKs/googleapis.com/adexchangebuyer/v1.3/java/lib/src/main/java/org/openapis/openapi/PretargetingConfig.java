@@ -59,10 +59,8 @@ public class PretargetingConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class PretargetingConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class PretargetingConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class PretargetingConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfigList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class PretargetingConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class PretargetingConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

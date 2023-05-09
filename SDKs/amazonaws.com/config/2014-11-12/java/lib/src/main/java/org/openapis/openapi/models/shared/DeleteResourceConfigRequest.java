@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteResourceConfigRequest {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DeleteResourceConfigRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteResourceConfigRequest {
     
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public DeleteResourceConfigRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public DeleteResourceConfigRequest(@JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceType") String resourceType) {
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+  }
 }

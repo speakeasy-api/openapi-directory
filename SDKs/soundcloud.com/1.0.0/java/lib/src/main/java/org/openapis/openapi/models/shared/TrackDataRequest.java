@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TrackDataRequest {
     @SpeakeasyMetadata("multipartForm:file")
     public TrackDataRequestOnlyForUploadingForPROUsers trackArtworkData;
+
     public TrackDataRequest withTrackArtworkData(TrackDataRequestOnlyForUploadingForPROUsers trackArtworkData) {
         this.trackArtworkData = trackArtworkData;
         return this;
@@ -19,6 +20,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:file")
     public TrackDataRequestOnlyForUploading trackAssetData;
+
     public TrackDataRequest withTrackAssetData(TrackDataRequestOnlyForUploading trackAssetData) {
         this.trackAssetData = trackAssetData;
         return this;
@@ -26,6 +28,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[commentable]")
     public Boolean trackCommentable;
+
     public TrackDataRequest withTrackCommentable(Boolean trackCommentable) {
         this.trackCommentable = trackCommentable;
         return this;
@@ -33,6 +36,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[description]")
     public String trackDescription;
+
     public TrackDataRequest withTrackDescription(String trackDescription) {
         this.trackDescription = trackDescription;
         return this;
@@ -40,6 +44,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[downloadable]")
     public Boolean trackDownloadable;
+
     public TrackDataRequest withTrackDownloadable(Boolean trackDownloadable) {
         this.trackDownloadable = trackDownloadable;
         return this;
@@ -50,6 +55,7 @@ public class TrackDataRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=track[embeddable_by]")
     public TrackDataRequestTrackEmbeddableByEnum trackEmbeddableBy;
+
     public TrackDataRequest withTrackEmbeddableBy(TrackDataRequestTrackEmbeddableByEnum trackEmbeddableBy) {
         this.trackEmbeddableBy = trackEmbeddableBy;
         return this;
@@ -57,6 +63,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[genre]")
     public String trackGenre;
+
     public TrackDataRequest withTrackGenre(String trackGenre) {
         this.trackGenre = trackGenre;
         return this;
@@ -64,6 +71,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[isrc]")
     public String trackIsrc;
+
     public TrackDataRequest withTrackIsrc(String trackIsrc) {
         this.trackIsrc = trackIsrc;
         return this;
@@ -71,6 +79,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[label_name]")
     public String trackLabelName;
+
     public TrackDataRequest withTrackLabelName(String trackLabelName) {
         this.trackLabelName = trackLabelName;
         return this;
@@ -81,6 +90,7 @@ public class TrackDataRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=track[license]")
     public TrackDataRequestTrackLicenseEnum trackLicense;
+
     public TrackDataRequest withTrackLicense(TrackDataRequestTrackLicenseEnum trackLicense) {
         this.trackLicense = trackLicense;
         return this;
@@ -88,6 +98,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[permalink]")
     public String trackPermalink;
+
     public TrackDataRequest withTrackPermalink(String trackPermalink) {
         this.trackPermalink = trackPermalink;
         return this;
@@ -95,6 +106,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[purchase_url]")
     public String trackPurchaseUrl;
+
     public TrackDataRequest withTrackPurchaseUrl(String trackPurchaseUrl) {
         this.trackPurchaseUrl = trackPurchaseUrl;
         return this;
@@ -102,6 +114,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[release]")
     public String trackRelease;
+
     public TrackDataRequest withTrackRelease(String trackRelease) {
         this.trackRelease = trackRelease;
         return this;
@@ -112,6 +125,7 @@ public class TrackDataRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=track[release_date]")
     public String trackReleaseDate;
+
     public TrackDataRequest withTrackReleaseDate(String trackReleaseDate) {
         this.trackReleaseDate = trackReleaseDate;
         return this;
@@ -119,6 +133,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[sharing]")
     public TrackDataRequestTrackSharingEnum trackSharing;
+
     public TrackDataRequest withTrackSharing(TrackDataRequestTrackSharingEnum trackSharing) {
         this.trackSharing = trackSharing;
         return this;
@@ -126,6 +141,7 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[streamable]")
     public Boolean trackStreamable;
+
     public TrackDataRequest withTrackStreamable(Boolean trackStreamable) {
         this.trackStreamable = trackStreamable;
         return this;
@@ -136,6 +152,7 @@ public class TrackDataRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=track[tag_list]")
     public String trackTagList;
+
     public TrackDataRequest withTrackTagList(String trackTagList) {
         this.trackTagList = trackTagList;
         return this;
@@ -143,9 +160,11 @@ public class TrackDataRequest {
     
     @SpeakeasyMetadata("multipartForm:name=track[title]")
     public String trackTitle;
+
     public TrackDataRequest withTrackTitle(String trackTitle) {
         this.trackTitle = trackTitle;
         return this;
     }
     
+    public TrackDataRequest(){}
 }

@@ -12,6 +12,7 @@ public class BudgetAnalysisPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public Category category;
+
     public BudgetAnalysisPackage withCategory(Category category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class BudgetAnalysisPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expense")
     public BudgetAnalysis expense;
+
     public BudgetAnalysisPackage withExpense(BudgetAnalysis expense) {
         this.expense = expense;
         return this;
@@ -28,6 +30,7 @@ public class BudgetAnalysisPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("income")
     public BudgetAnalysis income;
+
     public BudgetAnalysisPackage withIncome(BudgetAnalysis income) {
         this.income = income;
         return this;
@@ -39,9 +42,11 @@ public class BudgetAnalysisPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_transfer")
     public Boolean isTransfer;
+
     public BudgetAnalysisPackage withIsTransfer(Boolean isTransfer) {
         this.isTransfer = isTransfer;
         return this;
     }
     
+    public BudgetAnalysisPackage(){}
 }

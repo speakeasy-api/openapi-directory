@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnableReachabilityAnalyzerOrganizationSharingResult {
     
     public Boolean returnValue;
+
     public EnableReachabilityAnalyzerOrganizationSharingResult withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public EnableReachabilityAnalyzerOrganizationSharingResult(){}
 }

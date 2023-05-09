@@ -12,9 +12,13 @@ public class DeleteSchedulingPolicyRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public DeleteSchedulingPolicyRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteSchedulingPolicyRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

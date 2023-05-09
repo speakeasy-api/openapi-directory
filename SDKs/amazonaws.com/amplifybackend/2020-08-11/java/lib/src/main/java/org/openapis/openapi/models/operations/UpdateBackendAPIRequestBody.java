@@ -15,6 +15,7 @@ public class UpdateBackendAPIRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceConfig")
     public UpdateBackendAPIRequestBodyResourceConfig resourceConfig;
+
     public UpdateBackendAPIRequestBody withResourceConfig(UpdateBackendAPIRequestBodyResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -25,9 +26,13 @@ public class UpdateBackendAPIRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public UpdateBackendAPIRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public UpdateBackendAPIRequestBody(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

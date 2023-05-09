@@ -18,6 +18,7 @@ public class DeviceReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appState")
     public AppState[] appState;
+
     public DeviceReport withAppState(AppState[] appState) {
         this.appState = appState;
         return this;
@@ -29,9 +30,11 @@ public class DeviceReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedTimestampMillis")
     public String lastUpdatedTimestampMillis;
+
     public DeviceReport withLastUpdatedTimestampMillis(String lastUpdatedTimestampMillis) {
         this.lastUpdatedTimestampMillis = lastUpdatedTimestampMillis;
         return this;
     }
     
+    public DeviceReport(){}
 }

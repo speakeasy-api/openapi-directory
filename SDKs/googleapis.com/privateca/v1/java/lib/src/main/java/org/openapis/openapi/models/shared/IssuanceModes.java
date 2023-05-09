@@ -18,6 +18,7 @@ public class IssuanceModes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowConfigBasedIssuance")
     public Boolean allowConfigBasedIssuance;
+
     public IssuanceModes withAllowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
         this.allowConfigBasedIssuance = allowConfigBasedIssuance;
         return this;
@@ -29,9 +30,11 @@ public class IssuanceModes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCsrBasedIssuance")
     public Boolean allowCsrBasedIssuance;
+
     public IssuanceModes withAllowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
         this.allowCsrBasedIssuance = allowCsrBasedIssuance;
         return this;
     }
     
+    public IssuanceModes(){}
 }

@@ -12,6 +12,7 @@ public class TargetingValueDayPartTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayParts")
     public TargetingValueDayPartTargetingDayPart[] dayParts;
+
     public TargetingValueDayPartTargeting withDayParts(TargetingValueDayPartTargetingDayPart[] dayParts) {
         this.dayParts = dayParts;
         return this;
@@ -20,9 +21,11 @@ public class TargetingValueDayPartTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneType")
     public String timeZoneType;
+
     public TargetingValueDayPartTargeting withTimeZoneType(String timeZoneType) {
         this.timeZoneType = timeZoneType;
         return this;
     }
     
+    public TargetingValueDayPartTargeting(){}
 }

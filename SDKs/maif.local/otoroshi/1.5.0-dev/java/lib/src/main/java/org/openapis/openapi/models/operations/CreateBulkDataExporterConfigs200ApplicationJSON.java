@@ -18,6 +18,7 @@ public class CreateBulkDataExporterConfigs200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Boolean created;
+
     public CreateBulkDataExporterConfigs200ApplicationJSON withCreated(Boolean created) {
         this.created = created;
         return this;
@@ -29,6 +30,7 @@ public class CreateBulkDataExporterConfigs200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Boolean id;
+
     public CreateBulkDataExporterConfigs200ApplicationJSON withId(Boolean id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class CreateBulkDataExporterConfigs200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateBulkDataExporterConfigs200ApplicationJSONStatusEnum status;
+
     public CreateBulkDataExporterConfigs200ApplicationJSON withStatus(CreateBulkDataExporterConfigs200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateBulkDataExporterConfigs200ApplicationJSON(){}
 }

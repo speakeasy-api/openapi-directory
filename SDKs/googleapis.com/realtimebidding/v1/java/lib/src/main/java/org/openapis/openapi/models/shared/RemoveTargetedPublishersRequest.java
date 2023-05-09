@@ -18,9 +18,11 @@ public class RemoveTargetedPublishersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherIds")
     public String[] publisherIds;
+
     public RemoveTargetedPublishersRequest withPublisherIds(String[] publisherIds) {
         this.publisherIds = publisherIds;
         return this;
     }
     
+    public RemoveTargetedPublishersRequest(){}
 }

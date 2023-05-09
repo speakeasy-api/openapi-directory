@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostImagesIdActionsChangeProtectionResponse {
@@ -12,6 +13,7 @@ public class PostImagesIdActionsChangeProtectionResponse {
      */
     
     public PostImagesIdActionsChangeProtectionActionResponse actionResponse;
+
     public PostImagesIdActionsChangeProtectionResponse withActionResponse(PostImagesIdActionsChangeProtectionActionResponse actionResponse) {
         this.actionResponse = actionResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostImagesIdActionsChangeProtectionResponse {
     
     
     public String contentType;
+
     public PostImagesIdActionsChangeProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostImagesIdActionsChangeProtectionResponse {
     
     
     public Integer statusCode;
+
     public PostImagesIdActionsChangeProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostImagesIdActionsChangeProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostImagesIdActionsChangeProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostImagesIdActionsChangeProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

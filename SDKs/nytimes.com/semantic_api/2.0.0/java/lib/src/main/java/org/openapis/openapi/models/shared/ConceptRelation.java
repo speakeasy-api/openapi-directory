@@ -12,6 +12,7 @@ public class ConceptRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_created")
     public String conceptCreated;
+
     public ConceptRelation withConceptCreated(String conceptCreated) {
         this.conceptCreated = conceptCreated;
         return this;
@@ -20,6 +21,7 @@ public class ConceptRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_id")
     public Long conceptId;
+
     public ConceptRelation withConceptId(Long conceptId) {
         this.conceptId = conceptId;
         return this;
@@ -28,6 +30,7 @@ public class ConceptRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_name")
     public String conceptName;
+
     public ConceptRelation withConceptName(String conceptName) {
         this.conceptName = conceptName;
         return this;
@@ -36,6 +39,7 @@ public class ConceptRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_status")
     public String conceptStatus;
+
     public ConceptRelation withConceptStatus(String conceptStatus) {
         this.conceptStatus = conceptStatus;
         return this;
@@ -44,6 +48,7 @@ public class ConceptRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_type")
     public String conceptType;
+
     public ConceptRelation withConceptType(String conceptType) {
         this.conceptType = conceptType;
         return this;
@@ -52,6 +57,7 @@ public class ConceptRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_updated")
     public String conceptUpdated;
+
     public ConceptRelation withConceptUpdated(String conceptUpdated) {
         this.conceptUpdated = conceptUpdated;
         return this;
@@ -60,6 +66,7 @@ public class ConceptRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_times_tag")
     public Long isTimesTag;
+
     public ConceptRelation withIsTimesTag(Long isTimesTag) {
         this.isTimesTag = isTimesTag;
         return this;
@@ -68,9 +75,11 @@ public class ConceptRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vernacular")
     public String vernacular;
+
     public ConceptRelation withVernacular(String vernacular) {
         this.vernacular = vernacular;
         return this;
     }
     
+    public ConceptRelation(){}
 }

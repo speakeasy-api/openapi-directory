@@ -59,11 +59,9 @@ public class VpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnGatewaysAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnGatewaysAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysAggregatedListResponse(contentType, httpRes.statusCode()) {{
             vpnGatewayAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class VpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnGatewaysDeleteResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnGatewaysDeleteResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class VpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnGatewaysGetResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnGatewaysGetResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysGetResponse(contentType, httpRes.statusCode()) {{
             vpnGateway = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class VpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnGatewaysGetStatusResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysGetStatusResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnGatewaysGetStatusResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysGetStatusResponse(contentType, httpRes.statusCode()) {{
             vpnGatewaysGetStatusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class VpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnGatewaysInsertResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnGatewaysInsertResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class VpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnGatewaysListResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysListResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnGatewaysListResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysListResponse(contentType, httpRes.statusCode()) {{
             vpnGatewayList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class VpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnGatewaysSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnGatewaysSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class VpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnGatewaysTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnGatewaysTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeVpnGatewaysTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

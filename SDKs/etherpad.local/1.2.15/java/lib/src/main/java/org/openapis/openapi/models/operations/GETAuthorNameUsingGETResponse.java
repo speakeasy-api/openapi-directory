@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETAuthorNameUsingGETResponse {
     
     public String contentType;
+
     public GETAuthorNameUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETAuthorNameUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETAuthorNameUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETAuthorNameUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETAuthorNameUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETAuthorNameUsingGETResponse {
      */
     
     public GETAuthorNameUsingGET200ApplicationJSON getAuthorNameUsingGET200ApplicationJSONObject;
+
     public GETAuthorNameUsingGETResponse withGETAuthorNameUsingGET200ApplicationJSONObject(GETAuthorNameUsingGET200ApplicationJSON getAuthorNameUsingGET200ApplicationJSONObject) {
         this.getAuthorNameUsingGET200ApplicationJSONObject = getAuthorNameUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETAuthorNameUsingGETResponse {
      */
     
     public GETAuthorNameUsingGET400ApplicationJSON getAuthorNameUsingGET400ApplicationJSONObject;
+
     public GETAuthorNameUsingGETResponse withGETAuthorNameUsingGET400ApplicationJSONObject(GETAuthorNameUsingGET400ApplicationJSON getAuthorNameUsingGET400ApplicationJSONObject) {
         this.getAuthorNameUsingGET400ApplicationJSONObject = getAuthorNameUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETAuthorNameUsingGETResponse {
      */
     
     public GETAuthorNameUsingGET401ApplicationJSON getAuthorNameUsingGET401ApplicationJSONObject;
+
     public GETAuthorNameUsingGETResponse withGETAuthorNameUsingGET401ApplicationJSONObject(GETAuthorNameUsingGET401ApplicationJSON getAuthorNameUsingGET401ApplicationJSONObject) {
         this.getAuthorNameUsingGET401ApplicationJSONObject = getAuthorNameUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETAuthorNameUsingGETResponse {
      */
     
     public GETAuthorNameUsingGET500ApplicationJSON getAuthorNameUsingGET500ApplicationJSONObject;
+
     public GETAuthorNameUsingGETResponse withGETAuthorNameUsingGET500ApplicationJSONObject(GETAuthorNameUsingGET500ApplicationJSON getAuthorNameUsingGET500ApplicationJSONObject) {
         this.getAuthorNameUsingGET500ApplicationJSONObject = getAuthorNameUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETAuthorNameUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateDataSourceFromS3Output {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public CreateDataSourceFromS3Output withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     
+    public CreateDataSourceFromS3Output(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetVpnConnectionDeviceTypesResult {
     
     public String nextToken;
+
     public GetVpnConnectionDeviceTypesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class GetVpnConnectionDeviceTypesResult {
     
     
     public GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes[] vpnConnectionDeviceTypes;
+
     public GetVpnConnectionDeviceTypesResult withVpnConnectionDeviceTypes(GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes[] vpnConnectionDeviceTypes) {
         this.vpnConnectionDeviceTypes = vpnConnectionDeviceTypes;
         return this;
     }
     
+    public GetVpnConnectionDeviceTypesResult(){}
 }

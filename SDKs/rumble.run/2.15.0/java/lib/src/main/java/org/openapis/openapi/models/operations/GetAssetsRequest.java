@@ -12,9 +12,11 @@ public class GetAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetAssetsRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public GetAssetsRequest(){}
 }

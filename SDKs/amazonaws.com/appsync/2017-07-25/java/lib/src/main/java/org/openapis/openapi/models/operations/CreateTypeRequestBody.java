@@ -12,6 +12,7 @@ public class CreateTypeRequestBody {
      */
     @JsonProperty("definition")
     public String definition;
+
     public CreateTypeRequestBody withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -22,9 +23,14 @@ public class CreateTypeRequestBody {
      */
     @JsonProperty("format")
     public CreateTypeRequestBodyFormatEnum format;
+
     public CreateTypeRequestBody withFormat(CreateTypeRequestBodyFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public CreateTypeRequestBody(@JsonProperty("definition") String definition, @JsonProperty("format") CreateTypeRequestBodyFormatEnum format) {
+        this.definition = definition;
+        this.format = format;
+  }
 }

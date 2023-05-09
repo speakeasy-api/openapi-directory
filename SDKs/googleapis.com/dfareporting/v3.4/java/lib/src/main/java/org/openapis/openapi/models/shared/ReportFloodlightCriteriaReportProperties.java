@@ -18,6 +18,7 @@ public class ReportFloodlightCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeAttributedIPConversions")
     public Boolean includeAttributedIPConversions;
+
     public ReportFloodlightCriteriaReportProperties withIncludeAttributedIPConversions(Boolean includeAttributedIPConversions) {
         this.includeAttributedIPConversions = includeAttributedIPConversions;
         return this;
@@ -29,6 +30,7 @@ public class ReportFloodlightCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeUnattributedCookieConversions")
     public Boolean includeUnattributedCookieConversions;
+
     public ReportFloodlightCriteriaReportProperties withIncludeUnattributedCookieConversions(Boolean includeUnattributedCookieConversions) {
         this.includeUnattributedCookieConversions = includeUnattributedCookieConversions;
         return this;
@@ -40,9 +42,11 @@ public class ReportFloodlightCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeUnattributedIPConversions")
     public Boolean includeUnattributedIPConversions;
+
     public ReportFloodlightCriteriaReportProperties withIncludeUnattributedIPConversions(Boolean includeUnattributedIPConversions) {
         this.includeUnattributedIPConversions = includeUnattributedIPConversions;
         return this;
     }
     
+    public ReportFloodlightCriteriaReportProperties(){}
 }

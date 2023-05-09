@@ -19,6 +19,7 @@ public class Error {
      */
     @JsonProperty("category")
     public String category;
+
     public Error withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class Error {
      */
     @JsonProperty("code")
     public String code;
+
     public Error withCode(String code) {
         this.code = code;
         return this;
@@ -40,6 +42,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -52,9 +55,14 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public Error withField(String field) {
         this.field = field;
         return this;
     }
     
+    public Error(@JsonProperty("category") String category, @JsonProperty("code") String code) {
+        this.category = category;
+        this.code = code;
+  }
 }

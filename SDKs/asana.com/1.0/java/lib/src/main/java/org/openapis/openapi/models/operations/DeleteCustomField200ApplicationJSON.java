@@ -18,9 +18,11 @@ public class DeleteCustomField200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public DeleteCustomField200ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
     }
     
+    public DeleteCustomField200ApplicationJSON(){}
 }

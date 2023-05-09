@@ -18,9 +18,11 @@ public class RequestReviewShoppingAdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public RequestReviewShoppingAdsRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public RequestReviewShoppingAdsRequest(){}
 }

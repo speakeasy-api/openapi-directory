@@ -15,6 +15,7 @@ public class SimulationSoftwareSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public SimulationSoftwareSuiteTypeEnum name;
+
     public SimulationSoftwareSuite withName(SimulationSoftwareSuiteTypeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class SimulationSoftwareSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SimulationSoftwareSuite withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SimulationSoftwareSuite(){}
 }

@@ -20,6 +20,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("creationDate")
     @SpeakeasyMetadata("form:name=creationDate")
     public String creationDate;
+
     public ApiCoreDtoGroupsGroup withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -29,6 +30,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("deleted")
     @SpeakeasyMetadata("form:name=deleted")
     public Boolean deleted;
+
     public ApiCoreDtoGroupsGroup withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -38,6 +40,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public Long id;
+
     public ApiCoreDtoGroupsGroup withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +50,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("isPublic")
     @SpeakeasyMetadata("form:name=isPublic")
     public Boolean isPublic;
+
     public ApiCoreDtoGroupsGroup withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -56,6 +60,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ApiCoreDtoGroupsGroup withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +70,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("notes")
     @SpeakeasyMetadata("form:name=notes")
     public String notes;
+
     public ApiCoreDtoGroupsGroup withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -74,6 +80,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("preferred")
     @SpeakeasyMetadata("form:name=preferred")
     public Boolean preferred;
+
     public ApiCoreDtoGroupsGroup withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -83,6 +90,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("redirectOnly")
     @SpeakeasyMetadata("form:name=redirectOnly")
     public Boolean redirectOnly;
+
     public ApiCoreDtoGroupsGroup withRedirectOnly(Boolean redirectOnly) {
         this.redirectOnly = redirectOnly;
         return this;
@@ -92,6 +100,7 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("tags")
     @SpeakeasyMetadata("form:name=tags,json")
     public ApiCoreDtoTagsTag[] tags;
+
     public ApiCoreDtoGroupsGroup withTags(ApiCoreDtoTagsTag[] tags) {
         this.tags = tags;
         return this;
@@ -101,9 +110,11 @@ public class ApiCoreDtoGroupsGroup {
     @JsonProperty("writePermited")
     @SpeakeasyMetadata("form:name=writePermited")
     public Boolean writePermited;
+
     public ApiCoreDtoGroupsGroup withWritePermited(Boolean writePermited) {
         this.writePermited = writePermited;
         return this;
     }
     
+    public ApiCoreDtoGroupsGroup(){}
 }

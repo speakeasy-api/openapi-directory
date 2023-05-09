@@ -18,6 +18,7 @@ public class NetworkEndpointGroupCloudRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public NetworkEndpointGroupCloudRun withService(String service) {
         this.service = service;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpointGroupCloudRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public NetworkEndpointGroupCloudRun withTag(String tag) {
         this.tag = tag;
         return this;
@@ -40,9 +42,11 @@ public class NetworkEndpointGroupCloudRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMask")
     public String urlMask;
+
     public NetworkEndpointGroupCloudRun withUrlMask(String urlMask) {
         this.urlMask = urlMask;
         return this;
     }
     
+    public NetworkEndpointGroupCloudRun(){}
 }

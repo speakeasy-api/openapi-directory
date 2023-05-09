@@ -12,9 +12,11 @@ public class SeriesRelationshipsAListOfClassificationsAssociatedWithTheSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public SeriesRelationshipsAListOfClassificationsAssociatedWithTheSeries withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public SeriesRelationshipsAListOfClassificationsAssociatedWithTheSeries(){}
 }

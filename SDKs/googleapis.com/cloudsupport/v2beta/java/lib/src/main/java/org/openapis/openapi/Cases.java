@@ -11,6 +11,7 @@ import org.apache.http.NameValuePair;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
+import org.openapis.openapi.utils.SerializedBody;
 
 public class Cases {
 	
@@ -29,6 +30,412 @@ public class Cases {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
+
+    /**
+     * Retrieve all attachments associated with a support case.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesAttachmentsListResponse cloudsupportCasesAttachmentsList(org.openapis.openapi.models.operations.CloudsupportCasesAttachmentsListRequest request, org.openapis.openapi.models.operations.CloudsupportCasesAttachmentsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesAttachmentsListRequest.class, baseUrl, "/v2beta/{parent}/attachments", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesAttachmentsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesAttachmentsListResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesAttachmentsListResponse(contentType, httpRes.statusCode()) {{
+            listAttachmentsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListAttachmentsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListAttachmentsResponse.class);
+                res.listAttachmentsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Close the specified case.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesCloseResponse cloudsupportCasesClose(org.openapis.openapi.models.operations.CloudsupportCasesCloseRequest request, org.openapis.openapi.models.operations.CloudsupportCasesCloseSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesCloseRequest.class, baseUrl, "/v2beta/{name}:close", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesCloseRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesCloseResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesCloseResponse(contentType, httpRes.statusCode()) {{
+            case_ = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Case out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Case.class);
+                res.case_ = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Add a new comment to the specified Case. The comment object must have the following fields set: body.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesCommentsCreateResponse cloudsupportCasesCommentsCreate(org.openapis.openapi.models.operations.CloudsupportCasesCommentsCreateRequest request, org.openapis.openapi.models.operations.CloudsupportCasesCommentsCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesCommentsCreateRequest.class, baseUrl, "/v2beta/{parent}/comments", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "commentInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesCommentsCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesCommentsCreateResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesCommentsCreateResponse(contentType, httpRes.statusCode()) {{
+            comment = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Comment out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Comment.class);
+                res.comment = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve all Comments associated with the Case object.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesCommentsListResponse cloudsupportCasesCommentsList(org.openapis.openapi.models.operations.CloudsupportCasesCommentsListRequest request, org.openapis.openapi.models.operations.CloudsupportCasesCommentsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesCommentsListRequest.class, baseUrl, "/v2beta/{parent}/comments", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesCommentsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesCommentsListResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesCommentsListResponse(contentType, httpRes.statusCode()) {{
+            listCommentsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListCommentsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListCommentsResponse.class);
+                res.listCommentsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Create a new case and associate it with the given Google Cloud Resource. The case object must have the following fields set: `display_name`, `description`, `classification`, and `priority`.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesCreateResponse cloudsupportCasesCreate(org.openapis.openapi.models.operations.CloudsupportCasesCreateRequest request, org.openapis.openapi.models.operations.CloudsupportCasesCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesCreateRequest.class, baseUrl, "/v2beta/{parent}/cases", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "caseInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesCreateResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesCreateResponse(contentType, httpRes.statusCode()) {{
+            case_ = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Case out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Case.class);
+                res.case_ = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Escalate a case. Escalating a case will initiate the Google Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesEscalateResponse cloudsupportCasesEscalate(org.openapis.openapi.models.operations.CloudsupportCasesEscalateRequest request, org.openapis.openapi.models.operations.CloudsupportCasesEscalateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesEscalateRequest.class, baseUrl, "/v2beta/{name}:escalate", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "escalateCaseRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesEscalateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesEscalateResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesEscalateResponse(contentType, httpRes.statusCode()) {{
+            case_ = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Case out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Case.class);
+                res.case_ = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve the specified case.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesGetResponse cloudsupportCasesGet(org.openapis.openapi.models.operations.CloudsupportCasesGetRequest request, org.openapis.openapi.models.operations.CloudsupportCasesGetSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesGetRequest.class, baseUrl, "/v2beta/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesGetRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesGetResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesGetResponse(contentType, httpRes.statusCode()) {{
+            case_ = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Case out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Case.class);
+                res.case_ = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesListResponse cloudsupportCasesList(org.openapis.openapi.models.operations.CloudsupportCasesListRequest request, org.openapis.openapi.models.operations.CloudsupportCasesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesListRequest.class, baseUrl, "/v2beta/{parent}/cases", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesListResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesListResponse(contentType, httpRes.statusCode()) {{
+            listCasesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListCasesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListCasesResponse.class);
+                res.listCasesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update the specified case. Only a subset of fields can be updated.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudsupportCasesPatchResponse cloudsupportCasesPatch(org.openapis.openapi.models.operations.CloudsupportCasesPatchRequest request, org.openapis.openapi.models.operations.CloudsupportCasesPatchSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportCasesPatchRequest.class, baseUrl, "/v2beta/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "caseInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCasesPatchRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudsupportCasesPatchResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesPatchResponse(contentType, httpRes.statusCode()) {{
+            case_ = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Case out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Case.class);
+                res.case_ = out;
+            }
+        }
+
+        return res;
+    }
 
     /**
      * Search cases using the specified query.
@@ -58,11 +465,9 @@ public class Cases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsupportCasesSearchResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudsupportCasesSearchResponse res = new org.openapis.openapi.models.operations.CloudsupportCasesSearchResponse(contentType, httpRes.statusCode()) {{
             searchCasesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

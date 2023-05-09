@@ -15,9 +15,11 @@ public class Payslips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payslips")
     public Payslip[] payslips;
+
     public Payslips withPayslips(Payslip[] payslips) {
         this.payslips = payslips;
         return this;
     }
     
+    public Payslips(){}
 }

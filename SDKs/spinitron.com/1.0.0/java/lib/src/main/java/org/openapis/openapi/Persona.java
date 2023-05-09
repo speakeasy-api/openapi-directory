@@ -57,12 +57,10 @@ public class Persona {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPersonasResponse res = new org.openapis.openapi.models.operations.GetPersonasResponse() {{
+        org.openapis.openapi.models.operations.GetPersonasResponse res = new org.openapis.openapi.models.operations.GetPersonasResponse(contentType, httpRes.statusCode()) {{
             getPersonas200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,14 +105,12 @@ public class Persona {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPersonasIdResponse res = new org.openapis.openapi.models.operations.GetPersonasIdResponse() {{
+        org.openapis.openapi.models.operations.GetPersonasIdResponse res = new org.openapis.openapi.models.operations.GetPersonasIdResponse(contentType, httpRes.statusCode()) {{
             persona = null;
             body = null;
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

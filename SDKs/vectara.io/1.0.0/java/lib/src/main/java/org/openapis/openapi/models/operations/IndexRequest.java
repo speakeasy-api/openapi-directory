@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IndexRequest {
@@ -12,6 +13,7 @@ public class IndexRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
     public Long customerId;
+
     public IndexRequest withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -19,9 +21,14 @@ public class IndexRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VectaraIndexDocumentRequest vectaraIndexDocumentRequest;
+
     public IndexRequest withVectaraIndexDocumentRequest(org.openapis.openapi.models.shared.VectaraIndexDocumentRequest vectaraIndexDocumentRequest) {
         this.vectaraIndexDocumentRequest = vectaraIndexDocumentRequest;
         return this;
     }
     
+    public IndexRequest(@JsonProperty("customer-id") Long customerId, @JsonProperty("vectaraIndexDocumentRequest") org.openapis.openapi.models.shared.VectaraIndexDocumentRequest vectaraIndexDocumentRequest) {
+        this.customerId = customerId;
+        this.vectaraIndexDocumentRequest = vectaraIndexDocumentRequest;
+  }
 }

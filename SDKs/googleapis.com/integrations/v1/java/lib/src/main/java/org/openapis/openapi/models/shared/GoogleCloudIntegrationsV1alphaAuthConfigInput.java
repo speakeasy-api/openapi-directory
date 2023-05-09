@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorEmail")
     public String creatorEmail;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withCreatorEmail(String creatorEmail) {
         this.creatorEmail = creatorEmail;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialType")
     public GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum credentialType;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withCredentialType(GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum credentialType) {
         this.credentialType = credentialType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decryptedCredential")
     public GoogleCloudIntegrationsV1alphaCredential decryptedCredential;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withDecryptedCredential(GoogleCloudIntegrationsV1alphaCredential decryptedCredential) {
         this.decryptedCredential = decryptedCredential;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptedCredential")
     public String encryptedCredential;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withEncryptedCredential(String encryptedCredential) {
         this.encryptedCredential = encryptedCredential;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryNotificationDuration")
     public String[] expiryNotificationDuration;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withExpiryNotificationDuration(String[] expiryNotificationDuration) {
         this.expiryNotificationDuration = expiryNotificationDuration;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifierEmail")
     public String lastModifierEmail;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withLastModifierEmail(String lastModifierEmail) {
         this.lastModifierEmail = lastModifierEmail;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideValidTime")
     public String overrideValidTime;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withOverrideValidTime(String overrideValidTime) {
         this.overrideValidTime = overrideValidTime;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withReason(String reason) {
         this.reason = reason;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudIntegrationsV1alphaAuthConfigStateEnum state;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withState(GoogleCloudIntegrationsV1alphaAuthConfigStateEnum state) {
         this.state = state;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validTime")
     public String validTime;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withValidTime(String validTime) {
         this.validTime = validTime;
         return this;
@@ -172,9 +186,11 @@ public class GoogleCloudIntegrationsV1alphaAuthConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum visibility;
+
     public GoogleCloudIntegrationsV1alphaAuthConfigInput withVisibility(GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaAuthConfigInput(){}
 }

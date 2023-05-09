@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetClientClientIdRequest;
 import org.openapis.openapi.models.operations.GetClientClientIdResponse;
 
@@ -26,18 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetClientClientIdRequest req = new GetClientClientIdRequest() {{
-                clientId = "corrupti";
-            }}            
+            GetClientClientIdRequest req = new GetClientClientIdRequest("corrupti");            
 
             GetClientClientIdResponse res = sdk.client.getClientClientId(req);
 
-            if (res.getClientClientId200ApplicationJSONObject.isPresent()) {
+            if (res.getClientClientId200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,33 +44,33 @@ public class Application {
 ## Available Resources and Operations
 
 
-### client
+### [client](docs/client/README.md)
 
-* `getClientClientId` - Get a Client
-* `getClientClientIdTokenKind` - Get a Client Token
-* `postClient` - Create a Client Selfie
+* [getClientClientId](docs/client/README.md#getclientclientid) - Get a Client
+* [getClientClientIdTokenKind](docs/client/README.md#getclientclientidtokenkind) - Get a Client Token
+* [postClient](docs/client/README.md#postclient) - Create a Client Selfie
 
-### domain
+### [domain](docs/domain/README.md)
 
-* `getDomainDomainname` - Get a Domain
+* [getDomainDomainname](docs/domain/README.md#getdomaindomainname) - Get a Domain
 
-### fleet
+### [fleet](docs/fleet/README.md)
 
-* `getFleetFleetname` - Get a Fleet
+* [getFleetFleetname](docs/fleet/README.md#getfleetfleetname) - Get a Fleet
 
-### team
+### [team](docs/team/README.md)
 
-* `getTeamTeamname` - Get a Team
+* [getTeamTeamname](docs/team/README.md#getteamteamname) - Get a Team
 
-### tenant
+### [tenant](docs/tenant/README.md)
 
-* `getTenantTenantname` - Get a Tenant
+* [getTenantTenantname](docs/tenant/README.md#gettenanttenantname) - Get a Tenant
 
-### user
+### [user](docs/user/README.md)
 
-* `getUserUsername` - Get a User
-* `getUserUsernameTokenKind` - Get a User Token
-* `postUser` - Create a User Selfie
+* [getUserUsername](docs/user/README.md#getuserusername) - Get a User
+* [getUserUsernameTokenKind](docs/user/README.md#getuserusernametokenkind) - Get a User Token
+* [postUser](docs/user/README.md#postuser) - Create a User Selfie
 <!-- End SDK Available Operations -->
 
 ### Maturity

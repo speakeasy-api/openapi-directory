@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DeletePlatformVersionRequest {
     
     public String platformArn;
+
     public DeletePlatformVersionRequest withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
     }
     
+    public DeletePlatformVersionRequest(){}
 }

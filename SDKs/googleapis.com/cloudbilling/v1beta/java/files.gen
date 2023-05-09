@@ -105,4 +105,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/VmResourceBasedCud.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/EstimateCostScenarioWithListPriceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EstimateCostScenarioWithListPriceRequest.java
+docs/sdk/README.md
+docs/billingaccounts/README.md
+docs/v1beta/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class IamPolicyAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisQuery")
     public IamPolicyAnalysisQuery analysisQuery;
+
     public IamPolicyAnalysis withAnalysisQuery(IamPolicyAnalysisQuery analysisQuery) {
         this.analysisQuery = analysisQuery;
         return this;
@@ -29,8 +30,21 @@ public class IamPolicyAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisResults")
     public IamPolicyAnalysisResult[] analysisResults;
+
     public IamPolicyAnalysis withAnalysisResults(IamPolicyAnalysisResult[] analysisResults) {
         this.analysisResults = analysisResults;
+        return this;
+    }
+    
+    /**
+     * A list of DeniedAccess, which contains all access tuples in the analysis_results that are denied by IAM deny policies. If no access tuples are denied, the list is empty. This is only populated when IamPolicyAnalysisQuery.Options.include_deny_policy_analysis is true.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deniedAccesses")
+    public DeniedAccess[] deniedAccesses;
+
+    public IamPolicyAnalysis withDeniedAccesses(DeniedAccess[] deniedAccesses) {
+        this.deniedAccesses = deniedAccesses;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class IamPolicyAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullyExplored")
     public Boolean fullyExplored;
+
     public IamPolicyAnalysis withFullyExplored(Boolean fullyExplored) {
         this.fullyExplored = fullyExplored;
         return this;
@@ -51,9 +66,11 @@ public class IamPolicyAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonCriticalErrors")
     public IamPolicyAnalysisState[] nonCriticalErrors;
+
     public IamPolicyAnalysis withNonCriticalErrors(IamPolicyAnalysisState[] nonCriticalErrors) {
         this.nonCriticalErrors = nonCriticalErrors;
         return this;
     }
     
+    public IamPolicyAnalysis(){}
 }

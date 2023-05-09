@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitRelyingpartyDownloadAccountResponse {
     
     public String contentType;
+
     public IdentitytoolkitRelyingpartyDownloadAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitRelyingpartyDownloadAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.DownloadAccountResponse downloadAccountResponse;
+
     public IdentitytoolkitRelyingpartyDownloadAccountResponse withDownloadAccountResponse(org.openapis.openapi.models.shared.DownloadAccountResponse downloadAccountResponse) {
         this.downloadAccountResponse = downloadAccountResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitRelyingpartyDownloadAccountResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitRelyingpartyDownloadAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitRelyingpartyDownloadAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitRelyingpartyDownloadAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyDownloadAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -34,4 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CompileLatexCompilerEnu
 lib/src/main/java/org/openapis/openapi/models/operations/CompileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompileResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/pdfgeneration/README.md
 USAGE.md

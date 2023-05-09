@@ -18,6 +18,7 @@ public class StartStreamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public StartStreamRequest withLevel(String level) {
         this.level = level;
         return this;
@@ -29,6 +30,7 @@ public class StartStreamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loop")
     public Long loop;
+
     public StartStreamRequest withLoop(Long loop) {
         this.loop = loop;
         return this;
@@ -36,9 +38,13 @@ public class StartStreamRequest {
     
     @JsonProperty("stream_url")
     public String[] streamUrl;
+
     public StartStreamRequest withStreamUrl(String[] streamUrl) {
         this.streamUrl = streamUrl;
         return this;
     }
     
+    public StartStreamRequest(@JsonProperty("stream_url") String[] streamUrl) {
+        this.streamUrl = streamUrl;
+  }
 }

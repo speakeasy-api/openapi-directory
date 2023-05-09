@@ -15,6 +15,7 @@ public class ResolveCaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalCaseStatus")
     public String finalCaseStatus;
+
     public ResolveCaseResponse withFinalCaseStatus(String finalCaseStatus) {
         this.finalCaseStatus = finalCaseStatus;
         return this;
@@ -23,9 +24,11 @@ public class ResolveCaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialCaseStatus")
     public String initialCaseStatus;
+
     public ResolveCaseResponse withInitialCaseStatus(String initialCaseStatus) {
         this.initialCaseStatus = initialCaseStatus;
         return this;
     }
     
+    public ResolveCaseResponse(){}
 }

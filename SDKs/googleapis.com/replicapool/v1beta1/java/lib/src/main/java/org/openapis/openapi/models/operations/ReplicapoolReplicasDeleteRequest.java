@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplicapoolReplicasDeleteRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ReplicasDeleteRequest replicasDeleteRequest;
+
     public ReplicapoolReplicasDeleteRequest withReplicasDeleteRequest(org.openapis.openapi.models.shared.ReplicasDeleteRequest replicasDeleteRequest) {
         this.replicasDeleteRequest = replicasDeleteRequest;
         return this;
@@ -19,6 +21,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ReplicapoolReplicasDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ReplicapoolReplicasDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +43,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ReplicapoolReplicasDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +54,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ReplicapoolReplicasDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +65,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolName")
     public String poolName;
+
     public ReplicapoolReplicasDeleteRequest withPoolName(String poolName) {
         this.poolName = poolName;
         return this;
@@ -69,6 +76,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ReplicapoolReplicasDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public ReplicapoolReplicasDeleteRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -89,6 +98,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ReplicapoolReplicasDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=replicaName")
     public String replicaName;
+
     public ReplicapoolReplicasDeleteRequest withReplicaName(String replicaName) {
         this.replicaName = replicaName;
         return this;
@@ -109,6 +120,7 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ReplicapoolReplicasDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -119,9 +131,16 @@ public class ReplicapoolReplicasDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ReplicapoolReplicasDeleteRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ReplicapoolReplicasDeleteRequest(@JsonProperty("poolName") String poolName, @JsonProperty("projectName") String projectName, @JsonProperty("replicaName") String replicaName, @JsonProperty("zone") String zone) {
+        this.poolName = poolName;
+        this.projectName = projectName;
+        this.replicaName = replicaName;
+        this.zone = zone;
+  }
 }

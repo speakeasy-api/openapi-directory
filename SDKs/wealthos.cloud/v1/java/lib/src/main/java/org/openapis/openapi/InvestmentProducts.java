@@ -15,7 +15,7 @@ import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
 
 /**
- * Investment products  (e.g. mutual funds, ETFs, stocks etc.) are bought and sold by the investor (or by the wealth manager on the investor\u2019s behalf). 
+ * Investment products  (e.g. mutual funds, ETFs, stocks etc.) are bought and sold by the investor (or by the wealth manager on the investor’s behalf). 
  * 
  * The Investment Products endpoint returns all the investment products that are offered by the wealth manager, as well as the current market price. The wealth manager must specify the universe of supported investment products via the WealthOS Admin UI. 
  */
@@ -74,7 +74,7 @@ public class InvestmentProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesResponse res = new org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesResponse() {{
+        org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesResponse res = new org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesResponse(contentType, httpRes.statusCode()) {{
             getConfiguredInvestmentProductPrices200ApplicationJSONObject = null;
             getConfiguredInvestmentProductPrices401ApplicationJSONObject = null;
             getConfiguredInvestmentProductPrices403ApplicationJSONObject = null;
@@ -82,8 +82,6 @@ public class InvestmentProducts {
             getConfiguredInvestmentProductPrices429ApplicationJSONObject = null;
             getConfiguredInvestmentProductPrices500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,7 +167,7 @@ public class InvestmentProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsResponse res = new org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsResponse() {{
+        org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsResponse res = new org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsResponse(contentType, httpRes.statusCode()) {{
             getConfiguredInvestmentProducts200ApplicationJSONObject = null;
             getConfiguredInvestmentProducts401ApplicationJSONObject = null;
             getConfiguredInvestmentProducts403ApplicationJSONObject = null;
@@ -177,8 +175,6 @@ public class InvestmentProducts {
             getConfiguredInvestmentProducts429ApplicationJSONObject = null;
             getConfiguredInvestmentProducts500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,7 +254,7 @@ public class InvestmentProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInvestmentProductResponse res = new org.openapis.openapi.models.operations.GetInvestmentProductResponse() {{
+        org.openapis.openapi.models.operations.GetInvestmentProductResponse res = new org.openapis.openapi.models.operations.GetInvestmentProductResponse(contentType, httpRes.statusCode()) {{
             getInvestmentProduct200ApplicationJSONObject = null;
             getInvestmentProduct401ApplicationJSONObject = null;
             getInvestmentProduct403ApplicationJSONObject = null;
@@ -266,8 +262,6 @@ public class InvestmentProducts {
             getInvestmentProduct429ApplicationJSONObject = null;
             getInvestmentProduct500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,7 +341,7 @@ public class InvestmentProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInvestmentProductPriceResponse res = new org.openapis.openapi.models.operations.GetInvestmentProductPriceResponse() {{
+        org.openapis.openapi.models.operations.GetInvestmentProductPriceResponse res = new org.openapis.openapi.models.operations.GetInvestmentProductPriceResponse(contentType, httpRes.statusCode()) {{
             getInvestmentProductPrice200ApplicationJSONObject = null;
             getInvestmentProductPrice401ApplicationJSONObject = null;
             getInvestmentProductPrice403ApplicationJSONObject = null;
@@ -355,8 +349,6 @@ public class InvestmentProducts {
             getInvestmentProductPrice429ApplicationJSONObject = null;
             getInvestmentProductPrice500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

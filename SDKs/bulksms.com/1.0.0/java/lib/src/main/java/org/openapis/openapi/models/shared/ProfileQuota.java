@@ -12,6 +12,7 @@ public class ProfileQuota {
      */
     @JsonProperty("remaining")
     public Integer remaining;
+
     public ProfileQuota withRemaining(Integer remaining) {
         this.remaining = remaining;
         return this;
@@ -22,9 +23,14 @@ public class ProfileQuota {
      */
     @JsonProperty("size")
     public Integer size;
+
     public ProfileQuota withSize(Integer size) {
         this.size = size;
         return this;
     }
     
+    public ProfileQuota(@JsonProperty("remaining") Integer remaining, @JsonProperty("size") Integer size) {
+        this.remaining = remaining;
+        this.size = size;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountMicros")
     public String amountMicros;
+
     public GoogleAdsSearchads360V0ResourcesCampaignBudget withAmountMicros(String amountMicros) {
         this.amountMicros = amountMicros;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryMethod")
     public GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum deliveryMethod;
+
     public GoogleAdsSearchads360V0ResourcesCampaignBudget withDeliveryMethod(GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum deliveryMethod) {
         this.deliveryMethod = deliveryMethod;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum period;
+
     public GoogleAdsSearchads360V0ResourcesCampaignBudget withPeriod(GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum period) {
         this.period = period;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaignBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesCampaignBudget withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaignBudget(){}
 }

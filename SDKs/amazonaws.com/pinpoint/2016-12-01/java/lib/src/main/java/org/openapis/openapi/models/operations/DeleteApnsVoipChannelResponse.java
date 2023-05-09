@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApnsVoipChannelResponse {
@@ -12,6 +13,7 @@ public class DeleteApnsVoipChannelResponse {
      */
     
     public Object badRequestException;
+
     public DeleteApnsVoipChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApnsVoipChannelResponse {
     
     
     public String contentType;
+
     public DeleteApnsVoipChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApnsVoipChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteApnsVoipChannelResponse deleteApnsVoipChannelResponse;
+
     public DeleteApnsVoipChannelResponse withDeleteApnsVoipChannelResponse(org.openapis.openapi.models.shared.DeleteApnsVoipChannelResponse deleteApnsVoipChannelResponse) {
         this.deleteApnsVoipChannelResponse = deleteApnsVoipChannelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApnsVoipChannelResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteApnsVoipChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApnsVoipChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteApnsVoipChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteApnsVoipChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteApnsVoipChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteApnsVoipChannelResponse {
      */
     
     public Object notFoundException;
+
     public DeleteApnsVoipChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteApnsVoipChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteApnsVoipChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteApnsVoipChannelResponse {
     
     
     public Integer statusCode;
+
     public DeleteApnsVoipChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteApnsVoipChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApnsVoipChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteApnsVoipChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteApnsVoipChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteApnsVoipChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

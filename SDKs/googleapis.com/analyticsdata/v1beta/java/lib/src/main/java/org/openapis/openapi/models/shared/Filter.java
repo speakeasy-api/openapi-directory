@@ -18,6 +18,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betweenFilter")
     public BetweenFilter betweenFilter;
+
     public Filter withBetweenFilter(BetweenFilter betweenFilter) {
         this.betweenFilter = betweenFilter;
         return this;
@@ -29,6 +30,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public Filter withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -40,6 +42,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inListFilter")
     public InListFilter inListFilter;
+
     public Filter withInListFilter(InListFilter inListFilter) {
         this.inListFilter = inListFilter;
         return this;
@@ -51,6 +54,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericFilter")
     public NumericFilter numericFilter;
+
     public Filter withNumericFilter(NumericFilter numericFilter) {
         this.numericFilter = numericFilter;
         return this;
@@ -62,9 +66,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringFilter")
     public StringFilter stringFilter;
+
     public Filter withStringFilter(StringFilter stringFilter) {
         this.stringFilter = stringFilter;
         return this;
     }
     
+    public Filter(){}
 }

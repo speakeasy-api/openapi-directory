@@ -15,6 +15,7 @@ public class JobLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public JobLogEventEnum event;
+
     public JobLog withEvent(JobLogEventEnum event) {
         this.event = event;
         return this;
@@ -23,6 +24,7 @@ public class JobLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventData")
     public JobLogEventData eventData;
+
     public JobLog withEventData(JobLogEventData eventData) {
         this.eventData = eventData;
         return this;
@@ -31,9 +33,11 @@ public class JobLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logDateTime")
     public String logDateTime;
+
     public JobLog withLogDateTime(String logDateTime) {
         this.logDateTime = logDateTime;
         return this;
     }
     
+    public JobLog(){}
 }

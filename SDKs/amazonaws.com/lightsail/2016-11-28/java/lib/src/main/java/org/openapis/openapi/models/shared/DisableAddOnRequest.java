@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableAddOnRequest {
     @JsonProperty("addOnType")
     public AddOnTypeEnum addOnType;
+
     public DisableAddOnRequest withAddOnType(AddOnTypeEnum addOnType) {
         this.addOnType = addOnType;
         return this;
@@ -16,9 +17,14 @@ public class DisableAddOnRequest {
     
     @JsonProperty("resourceName")
     public String resourceName;
+
     public DisableAddOnRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public DisableAddOnRequest(@JsonProperty("addOnType") AddOnTypeEnum addOnType, @JsonProperty("resourceName") String resourceName) {
+        this.addOnType = addOnType;
+        this.resourceName = resourceName;
+  }
 }

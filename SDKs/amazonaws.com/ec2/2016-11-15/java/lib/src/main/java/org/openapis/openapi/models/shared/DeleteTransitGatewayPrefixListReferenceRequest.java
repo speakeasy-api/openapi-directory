@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteTransitGatewayPrefixListReferenceRequest {
     
     public Boolean dryRun;
+
     public DeleteTransitGatewayPrefixListReferenceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DeleteTransitGatewayPrefixListReferenceRequest {
     
     
     public String prefixListId;
+
     public DeleteTransitGatewayPrefixListReferenceRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -23,9 +25,14 @@ public class DeleteTransitGatewayPrefixListReferenceRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public DeleteTransitGatewayPrefixListReferenceRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public DeleteTransitGatewayPrefixListReferenceRequest(@JsonProperty("PrefixListId") String prefixListId, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.prefixListId = prefixListId;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

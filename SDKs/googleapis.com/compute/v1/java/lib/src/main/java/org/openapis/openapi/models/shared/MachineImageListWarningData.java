@@ -15,6 +15,7 @@ public class MachineImageListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public MachineImageListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class MachineImageListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public MachineImageListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MachineImageListWarningData(){}
 }

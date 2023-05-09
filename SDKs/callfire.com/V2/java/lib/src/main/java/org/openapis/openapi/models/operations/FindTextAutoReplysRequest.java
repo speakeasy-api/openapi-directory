@@ -12,6 +12,7 @@ public class FindTextAutoReplysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindTextAutoReplysRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class FindTextAutoReplysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindTextAutoReplysRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class FindTextAutoReplysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public String number;
+
     public FindTextAutoReplysRequest withNumber(String number) {
         this.number = number;
         return this;
@@ -42,9 +45,11 @@ public class FindTextAutoReplysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindTextAutoReplysRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public FindTextAutoReplysRequest(){}
 }

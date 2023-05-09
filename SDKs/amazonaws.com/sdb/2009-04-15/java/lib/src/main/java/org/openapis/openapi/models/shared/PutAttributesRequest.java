@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutAttributesRequest {
     
     public ReplaceableAttributeList[] attributes;
+
     public PutAttributesRequest withAttributes(ReplaceableAttributeList[] attributes) {
         this.attributes = attributes;
         return this;
@@ -16,6 +17,7 @@ public class PutAttributesRequest {
     
     
     public String domainName;
+
     public PutAttributesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +25,7 @@ public class PutAttributesRequest {
     
     
     public UpdateCondition expected;
+
     public PutAttributesRequest withExpected(UpdateCondition expected) {
         this.expected = expected;
         return this;
@@ -30,9 +33,15 @@ public class PutAttributesRequest {
     
     
     public String itemName;
+
     public PutAttributesRequest withItemName(String itemName) {
         this.itemName = itemName;
         return this;
     }
     
+    public PutAttributesRequest(@JsonProperty("Attributes") ReplaceableAttributeList[] attributes, @JsonProperty("DomainName") String domainName, @JsonProperty("ItemName") String itemName) {
+        this.attributes = attributes;
+        this.domainName = domainName;
+        this.itemName = itemName;
+  }
 }

@@ -49,13 +49,11 @@ public class OMInvoiceAPISettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderInvoiceDesignSettingsResponse res = new org.openapis.openapi.models.operations.GetOrderInvoiceDesignSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetOrderInvoiceDesignSettingsResponse res = new org.openapis.openapi.models.operations.GetOrderInvoiceDesignSettingsResponse(contentType, httpRes.statusCode()) {{
             orderInvoiceDesignSettings = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,13 +114,11 @@ public class OMInvoiceAPISettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderInvoiceDesignSettingsPreviewResponse res = new org.openapis.openapi.models.operations.GetOrderInvoiceDesignSettingsPreviewResponse() {{
+        org.openapis.openapi.models.operations.GetOrderInvoiceDesignSettingsPreviewResponse res = new org.openapis.openapi.models.operations.GetOrderInvoiceDesignSettingsPreviewResponse(contentType, httpRes.statusCode()) {{
             getOrderInvoiceDesignPreviewResponse = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,13 +165,11 @@ public class OMInvoiceAPISettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderInvoiceGeneralSettingsResponse res = new org.openapis.openapi.models.operations.GetOrderInvoiceGeneralSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetOrderInvoiceGeneralSettingsResponse res = new org.openapis.openapi.models.operations.GetOrderInvoiceGeneralSettingsResponse(contentType, httpRes.statusCode()) {{
             getOrderInvoiceGeneralSettingsResponse = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,12 +222,10 @@ public class OMInvoiceAPISettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveOrderInvoiceDesignSettingsResponse res = new org.openapis.openapi.models.operations.SaveOrderInvoiceDesignSettingsResponse() {{
+        org.openapis.openapi.models.operations.SaveOrderInvoiceDesignSettingsResponse res = new org.openapis.openapi.models.operations.SaveOrderInvoiceDesignSettingsResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -281,12 +273,10 @@ public class OMInvoiceAPISettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveOrderInvoiceGeneralSettingsResponse res = new org.openapis.openapi.models.operations.SaveOrderInvoiceGeneralSettingsResponse() {{
+        org.openapis.openapi.models.operations.SaveOrderInvoiceGeneralSettingsResponse res = new org.openapis.openapi.models.operations.SaveOrderInvoiceGeneralSettingsResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

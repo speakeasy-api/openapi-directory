@@ -58,13 +58,11 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckConnectionToSourceResponse res = new org.openapis.openapi.models.operations.CheckConnectionToSourceResponse() {{
+        org.openapis.openapi.models.operations.CheckConnectionToSourceResponse res = new org.openapis.openapi.models.operations.CheckConnectionToSourceResponse(contentType, httpRes.statusCode()) {{
             checkConnectionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,13 +115,11 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckConnectionToSourceForUpdateResponse res = new org.openapis.openapi.models.operations.CheckConnectionToSourceForUpdateResponse() {{
+        org.openapis.openapi.models.operations.CheckConnectionToSourceForUpdateResponse res = new org.openapis.openapi.models.operations.CheckConnectionToSourceForUpdateResponse(contentType, httpRes.statusCode()) {{
             checkConnectionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,13 +172,11 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloneSourceResponse res = new org.openapis.openapi.models.operations.CloneSourceResponse() {{
+        org.openapis.openapi.models.operations.CloneSourceResponse res = new org.openapis.openapi.models.operations.CloneSourceResponse(contentType, httpRes.statusCode()) {{
             sourceRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,12 +229,10 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSourceResponse res = new org.openapis.openapi.models.operations.CreateSourceResponse() {{
+        org.openapis.openapi.models.operations.CreateSourceResponse res = new org.openapis.openapi.models.operations.CreateSourceResponse(contentType, httpRes.statusCode()) {{
             sourceRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,12 +278,10 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSourceResponse res = new org.openapis.openapi.models.operations.DeleteSourceResponse() {{
+        org.openapis.openapi.models.operations.DeleteSourceResponse res = new org.openapis.openapi.models.operations.DeleteSourceResponse(contentType, httpRes.statusCode()) {{
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -339,13 +329,11 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoverSchemaForSourceResponse res = new org.openapis.openapi.models.operations.DiscoverSchemaForSourceResponse() {{
+        org.openapis.openapi.models.operations.DiscoverSchemaForSourceResponse res = new org.openapis.openapi.models.operations.DiscoverSchemaForSourceResponse(contentType, httpRes.statusCode()) {{
             sourceDiscoverSchemaRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,13 +386,11 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMostRecentSourceActorCatalogResponse res = new org.openapis.openapi.models.operations.GetMostRecentSourceActorCatalogResponse() {{
+        org.openapis.openapi.models.operations.GetMostRecentSourceActorCatalogResponse res = new org.openapis.openapi.models.operations.GetMostRecentSourceActorCatalogResponse(contentType, httpRes.statusCode()) {{
             actorCatalogWithUpdatedAt = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -457,13 +443,11 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSourceResponse res = new org.openapis.openapi.models.operations.GetSourceResponse() {{
+        org.openapis.openapi.models.operations.GetSourceResponse res = new org.openapis.openapi.models.operations.GetSourceResponse(contentType, httpRes.statusCode()) {{
             sourceRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -517,13 +501,11 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSourcesForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListSourcesForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.ListSourcesForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListSourcesForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             sourceReadList = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -576,12 +558,10 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchSourcesResponse res = new org.openapis.openapi.models.operations.SearchSourcesResponse() {{
+        org.openapis.openapi.models.operations.SearchSourcesResponse res = new org.openapis.openapi.models.operations.SearchSourcesResponse(contentType, httpRes.statusCode()) {{
             sourceReadList = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -627,13 +607,11 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSourceResponse res = new org.openapis.openapi.models.operations.UpdateSourceResponse() {{
+        org.openapis.openapi.models.operations.UpdateSourceResponse res = new org.openapis.openapi.models.operations.UpdateSourceResponse(contentType, httpRes.statusCode()) {{
             sourceRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -686,11 +664,9 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse res = new org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse() {{
+        org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse res = new org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse(contentType, httpRes.statusCode()) {{
             discoverCatalogResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

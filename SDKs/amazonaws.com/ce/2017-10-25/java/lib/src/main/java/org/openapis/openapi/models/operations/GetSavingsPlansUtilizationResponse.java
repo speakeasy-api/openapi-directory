@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSavingsPlansUtilizationResponse {
     
     public String contentType;
+
     public GetSavingsPlansUtilizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSavingsPlansUtilizationResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetSavingsPlansUtilizationResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -29,6 +32,7 @@ public class GetSavingsPlansUtilizationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSavingsPlansUtilizationResponse getSavingsPlansUtilizationResponse;
+
     public GetSavingsPlansUtilizationResponse withGetSavingsPlansUtilizationResponse(org.openapis.openapi.models.shared.GetSavingsPlansUtilizationResponse getSavingsPlansUtilizationResponse) {
         this.getSavingsPlansUtilizationResponse = getSavingsPlansUtilizationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSavingsPlansUtilizationResponse {
      */
     
     public Object limitExceededException;
+
     public GetSavingsPlansUtilizationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class GetSavingsPlansUtilizationResponse {
     
     
     public Integer statusCode;
+
     public GetSavingsPlansUtilizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetSavingsPlansUtilizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSavingsPlansUtilizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSavingsPlansUtilizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

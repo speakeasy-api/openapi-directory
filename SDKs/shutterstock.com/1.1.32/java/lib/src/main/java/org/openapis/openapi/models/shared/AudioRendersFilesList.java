@@ -15,6 +15,7 @@ public class AudioRendersFilesList {
      */
     @JsonProperty("bits_sample")
     public Double bitsSample;
+
     public AudioRendersFilesList withBitsSample(Double bitsSample) {
         this.bitsSample = bitsSample;
         return this;
@@ -25,6 +26,7 @@ public class AudioRendersFilesList {
      */
     @JsonProperty("content_type")
     public String contentType;
+
     public AudioRendersFilesList withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -35,6 +37,7 @@ public class AudioRendersFilesList {
      */
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public AudioRendersFilesList withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -45,6 +48,7 @@ public class AudioRendersFilesList {
      */
     @JsonProperty("filename")
     public String filename;
+
     public AudioRendersFilesList withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -55,6 +59,7 @@ public class AudioRendersFilesList {
      */
     @JsonProperty("frequency_hz")
     public Double frequencyHz;
+
     public AudioRendersFilesList withFrequencyHz(Double frequencyHz) {
         this.frequencyHz = frequencyHz;
         return this;
@@ -65,6 +70,7 @@ public class AudioRendersFilesList {
      */
     @JsonProperty("kbits_second")
     public Double kbitsSecond;
+
     public AudioRendersFilesList withKbitsSecond(Double kbitsSecond) {
         this.kbitsSecond = kbitsSecond;
         return this;
@@ -75,6 +81,7 @@ public class AudioRendersFilesList {
      */
     @JsonProperty("size_bytes")
     public Double sizeBytes;
+
     public AudioRendersFilesList withSizeBytes(Double sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -85,9 +92,20 @@ public class AudioRendersFilesList {
      */
     @JsonProperty("tracks")
     public String[] tracks;
+
     public AudioRendersFilesList withTracks(String[] tracks) {
         this.tracks = tracks;
         return this;
     }
     
+    public AudioRendersFilesList(@JsonProperty("bits_sample") Double bitsSample, @JsonProperty("content_type") String contentType, @JsonProperty("download_url") String downloadUrl, @JsonProperty("filename") String filename, @JsonProperty("frequency_hz") Double frequencyHz, @JsonProperty("kbits_second") Double kbitsSecond, @JsonProperty("size_bytes") Double sizeBytes, @JsonProperty("tracks") String[] tracks) {
+        this.bitsSample = bitsSample;
+        this.contentType = contentType;
+        this.downloadUrl = downloadUrl;
+        this.filename = filename;
+        this.frequencyHz = frequencyHz;
+        this.kbitsSecond = kbitsSecond;
+        this.sizeBytes = sizeBytes;
+        this.tracks = tracks;
+  }
 }

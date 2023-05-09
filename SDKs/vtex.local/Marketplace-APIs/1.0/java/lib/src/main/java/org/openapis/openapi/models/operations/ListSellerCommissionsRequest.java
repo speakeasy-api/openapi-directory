@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSellerCommissionsRequest {
@@ -12,6 +13,7 @@ public class ListSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ListSellerCommissionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ListSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ListSellerCommissionsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class ListSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public ListSellerCommissionsRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class ListSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public ListSellerCommissionsRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -52,9 +57,17 @@ public class ListSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public ListSellerCommissionsRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public ListSellerCommissionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.environment = environment;
+        this.sellerId = sellerId;
+  }
 }

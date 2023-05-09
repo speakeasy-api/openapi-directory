@@ -12,9 +12,13 @@ public class DisconnectRequestBody {
      */
     @JsonProperty("endpoint")
     public String endpoint;
+
     public DisconnectRequestBody withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public DisconnectRequestBody(@JsonProperty("endpoint") String endpoint) {
+        this.endpoint = endpoint;
+  }
 }

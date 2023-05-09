@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateIpGroupsResponse {
@@ -12,6 +13,7 @@ public class AssociateIpGroupsResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateIpGroupsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateIpGroupsResponse {
      */
     
     public java.util.Map<String, Object> associateIpGroupsResult;
+
     public AssociateIpGroupsResponse withAssociateIpGroupsResult(java.util.Map<String, Object> associateIpGroupsResult) {
         this.associateIpGroupsResult = associateIpGroupsResult;
         return this;
@@ -29,6 +32,7 @@ public class AssociateIpGroupsResponse {
     
     
     public String contentType;
+
     public AssociateIpGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateIpGroupsResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public AssociateIpGroupsResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateIpGroupsResponse {
      */
     
     public Object invalidResourceStateException;
+
     public AssociateIpGroupsResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateIpGroupsResponse {
      */
     
     public Object operationNotSupportedException;
+
     public AssociateIpGroupsResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateIpGroupsResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public AssociateIpGroupsResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateIpGroupsResponse {
     
     
     public Integer statusCode;
+
     public AssociateIpGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateIpGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateIpGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class AssociateIpGroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateIpGroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateIpGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

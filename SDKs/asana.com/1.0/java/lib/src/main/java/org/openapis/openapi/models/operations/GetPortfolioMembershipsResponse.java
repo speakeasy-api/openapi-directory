@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPortfolioMembershipsResponse {
     
     public String contentType;
+
     public GetPortfolioMembershipsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPortfolioMembershipsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetPortfolioMembershipsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetPortfolioMembershipsResponse {
     
     
     public Integer statusCode;
+
     public GetPortfolioMembershipsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetPortfolioMembershipsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPortfolioMembershipsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetPortfolioMembershipsResponse {
      */
     
     public GetPortfolioMemberships200ApplicationJSON getPortfolioMemberships200ApplicationJSONObject;
+
     public GetPortfolioMembershipsResponse withGetPortfolioMemberships200ApplicationJSONObject(GetPortfolioMemberships200ApplicationJSON getPortfolioMemberships200ApplicationJSONObject) {
         this.getPortfolioMemberships200ApplicationJSONObject = getPortfolioMemberships200ApplicationJSONObject;
         return this;
     }
     
+    public GetPortfolioMembershipsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

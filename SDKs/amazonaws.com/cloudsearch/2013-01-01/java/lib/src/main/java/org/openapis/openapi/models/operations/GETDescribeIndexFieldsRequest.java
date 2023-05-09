@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeIndexFieldsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeIndexFieldsActionEnum action;
+
     public GETDescribeIndexFieldsRequest withAction(GETDescribeIndexFieldsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeIndexFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Deployed")
     public Boolean deployed;
+
     public GETDescribeIndexFieldsRequest withDeployed(Boolean deployed) {
         this.deployed = deployed;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeIndexFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETDescribeIndexFieldsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeIndexFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FieldNames")
     public String[] fieldNames;
+
     public GETDescribeIndexFieldsRequest withFieldNames(String[] fieldNames) {
         this.fieldNames = fieldNames;
         return this;
@@ -46,6 +51,7 @@ public class GETDescribeIndexFieldsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeIndexFieldsVersionEnum version;
+
     public GETDescribeIndexFieldsRequest withVersion(GETDescribeIndexFieldsVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDescribeIndexFieldsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeIndexFieldsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDescribeIndexFieldsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeIndexFieldsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDescribeIndexFieldsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeIndexFieldsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDescribeIndexFieldsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeIndexFieldsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDescribeIndexFieldsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeIndexFieldsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDescribeIndexFieldsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeIndexFieldsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETDescribeIndexFieldsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeIndexFieldsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeIndexFieldsRequest(@JsonProperty("Action") GETDescribeIndexFieldsActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("Version") GETDescribeIndexFieldsVersionEnum version) {
+        this.action = action;
+        this.domainName = domainName;
+        this.version = version;
+  }
 }

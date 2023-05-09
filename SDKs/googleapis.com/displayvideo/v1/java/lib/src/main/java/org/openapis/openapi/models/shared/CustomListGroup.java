@@ -18,9 +18,11 @@ public class CustomListGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public CustomListTargetingSetting[] settings;
+
     public CustomListGroup withSettings(CustomListTargetingSetting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public CustomListGroup(){}
 }

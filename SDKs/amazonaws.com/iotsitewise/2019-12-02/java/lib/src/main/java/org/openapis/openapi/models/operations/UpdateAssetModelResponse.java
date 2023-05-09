@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssetModelResponse {
@@ -12,6 +13,7 @@ public class UpdateAssetModelResponse {
      */
     
     public Object conflictingOperationException;
+
     public UpdateAssetModelResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAssetModelResponse {
     
     
     public String contentType;
+
     public UpdateAssetModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssetModelResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateAssetModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAssetModelResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAssetModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAssetModelResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateAssetModelResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateAssetModelResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public UpdateAssetModelResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateAssetModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAssetModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateAssetModelResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssetModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAssetModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssetModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateAssetModelResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAssetModelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateAssetModelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAssetModelResponse updateAssetModelResponse;
+
     public UpdateAssetModelResponse withUpdateAssetModelResponse(org.openapis.openapi.models.shared.UpdateAssetModelResponse updateAssetModelResponse) {
         this.updateAssetModelResponse = updateAssetModelResponse;
         return this;
     }
     
+    public UpdateAssetModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

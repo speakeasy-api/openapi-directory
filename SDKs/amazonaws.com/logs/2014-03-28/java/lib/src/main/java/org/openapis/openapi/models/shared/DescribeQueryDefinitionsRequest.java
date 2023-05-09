@@ -12,6 +12,7 @@ public class DescribeQueryDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeQueryDefinitionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +24,7 @@ public class DescribeQueryDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeQueryDefinitionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class DescribeQueryDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryDefinitionNamePrefix")
     public String queryDefinitionNamePrefix;
+
     public DescribeQueryDefinitionsRequest withQueryDefinitionNamePrefix(String queryDefinitionNamePrefix) {
         this.queryDefinitionNamePrefix = queryDefinitionNamePrefix;
         return this;
     }
     
+    public DescribeQueryDefinitionsRequest(){}
 }

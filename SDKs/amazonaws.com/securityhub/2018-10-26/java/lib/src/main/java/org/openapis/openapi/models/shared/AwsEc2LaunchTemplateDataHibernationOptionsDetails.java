@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataHibernationOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configured")
     public Boolean configured;
+
     public AwsEc2LaunchTemplateDataHibernationOptionsDetails withConfigured(Boolean configured) {
         this.configured = configured;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataHibernationOptionsDetails(){}
 }

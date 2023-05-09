@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MergeTemplatesRequest {
@@ -12,6 +13,7 @@ public class MergeTemplatesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchData[] requestBody;
+
     public MergeTemplatesRequest withRequestBody(org.openapis.openapi.models.shared.BatchData[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class MergeTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public MergeTemplatesRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class MergeTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public MergeTemplatesRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +46,13 @@ public class MergeTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
     public org.openapis.openapi.models.shared.OutputEnum output;
+
     public MergeTemplatesRequest withOutput(org.openapis.openapi.models.shared.OutputEnum output) {
         this.output = output;
         return this;
     }
     
+    public MergeTemplatesRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.BatchData[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

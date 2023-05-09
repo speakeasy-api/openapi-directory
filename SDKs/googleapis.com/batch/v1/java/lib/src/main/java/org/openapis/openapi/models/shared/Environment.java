@@ -15,6 +15,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptedVariables")
     public KMSEnvMap encryptedVariables;
+
     public Environment withEncryptedVariables(KMSEnvMap encryptedVariables) {
         this.encryptedVariables = encryptedVariables;
         return this;
@@ -26,6 +27,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretVariables")
     public java.util.Map<String, String> secretVariables;
+
     public Environment withSecretVariables(java.util.Map<String, String> secretVariables) {
         this.secretVariables = secretVariables;
         return this;
@@ -37,9 +39,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variables")
     public java.util.Map<String, String> variables;
+
     public Environment withVariables(java.util.Map<String, String> variables) {
         this.variables = variables;
         return this;
     }
     
+    public Environment(){}
 }

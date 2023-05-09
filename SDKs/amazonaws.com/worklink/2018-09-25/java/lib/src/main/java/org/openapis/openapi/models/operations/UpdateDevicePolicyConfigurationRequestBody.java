@@ -15,6 +15,7 @@ public class UpdateDevicePolicyConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceCaCertificate")
     public String deviceCaCertificate;
+
     public UpdateDevicePolicyConfigurationRequestBody withDeviceCaCertificate(String deviceCaCertificate) {
         this.deviceCaCertificate = deviceCaCertificate;
         return this;
@@ -25,9 +26,13 @@ public class UpdateDevicePolicyConfigurationRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public UpdateDevicePolicyConfigurationRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public UpdateDevicePolicyConfigurationRequestBody(@JsonProperty("FleetArn") String fleetArn) {
+        this.fleetArn = fleetArn;
+  }
 }

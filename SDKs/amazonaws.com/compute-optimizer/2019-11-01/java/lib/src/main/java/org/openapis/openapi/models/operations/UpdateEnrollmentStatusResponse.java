@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEnrollmentStatusResponse {
@@ -12,6 +13,7 @@ public class UpdateEnrollmentStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateEnrollmentStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEnrollmentStatusResponse {
     
     
     public String contentType;
+
     public UpdateEnrollmentStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEnrollmentStatusResponse {
      */
     
     public Object internalServerException;
+
     public UpdateEnrollmentStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEnrollmentStatusResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateEnrollmentStatusResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateEnrollmentStatusResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public UpdateEnrollmentStatusResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -59,6 +65,7 @@ public class UpdateEnrollmentStatusResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateEnrollmentStatusResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateEnrollmentStatusResponse {
     
     
     public Integer statusCode;
+
     public UpdateEnrollmentStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateEnrollmentStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEnrollmentStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateEnrollmentStatusResponse {
      */
     
     public Object throttlingException;
+
     public UpdateEnrollmentStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateEnrollmentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEnrollmentStatusResponse updateEnrollmentStatusResponse;
+
     public UpdateEnrollmentStatusResponse withUpdateEnrollmentStatusResponse(org.openapis.openapi.models.shared.UpdateEnrollmentStatusResponse updateEnrollmentStatusResponse) {
         this.updateEnrollmentStatusResponse = updateEnrollmentStatusResponse;
         return this;
     }
     
+    public UpdateEnrollmentStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

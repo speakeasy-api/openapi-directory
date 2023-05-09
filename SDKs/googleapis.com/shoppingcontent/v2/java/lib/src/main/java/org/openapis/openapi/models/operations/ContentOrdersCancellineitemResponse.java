@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentOrdersCancellineitemResponse {
     
     public String contentType;
+
     public ContentOrdersCancellineitemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentOrdersCancellineitemResponse {
      */
     
     public org.openapis.openapi.models.shared.OrdersCancelLineItemResponse ordersCancelLineItemResponse;
+
     public ContentOrdersCancellineitemResponse withOrdersCancelLineItemResponse(org.openapis.openapi.models.shared.OrdersCancelLineItemResponse ordersCancelLineItemResponse) {
         this.ordersCancelLineItemResponse = ordersCancelLineItemResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentOrdersCancellineitemResponse {
     
     
     public Integer statusCode;
+
     public ContentOrdersCancellineitemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentOrdersCancellineitemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentOrdersCancellineitemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentOrdersCancellineitemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

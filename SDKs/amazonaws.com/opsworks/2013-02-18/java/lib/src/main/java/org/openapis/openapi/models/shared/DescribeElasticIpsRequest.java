@@ -12,6 +12,7 @@ public class DescribeElasticIpsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DescribeElasticIpsRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeElasticIpsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ips")
     public String[] ips;
+
     public DescribeElasticIpsRequest withIps(String[] ips) {
         this.ips = ips;
         return this;
@@ -28,9 +30,11 @@ public class DescribeElasticIpsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeElasticIpsRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeElasticIpsRequest(){}
 }

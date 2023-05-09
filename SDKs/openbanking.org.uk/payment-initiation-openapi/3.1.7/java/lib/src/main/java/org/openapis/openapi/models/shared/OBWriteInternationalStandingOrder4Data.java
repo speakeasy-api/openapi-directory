@@ -12,6 +12,7 @@ public class OBWriteInternationalStandingOrder4Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteInternationalStandingOrder4Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -22,9 +23,14 @@ public class OBWriteInternationalStandingOrder4Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalStandingOrder4DataInitiation initiation;
+
     public OBWriteInternationalStandingOrder4Data withInitiation(OBWriteInternationalStandingOrder4DataInitiation initiation) {
         this.initiation = initiation;
         return this;
     }
     
+    public OBWriteInternationalStandingOrder4Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("Initiation") OBWriteInternationalStandingOrder4DataInitiation initiation) {
+        this.consentId = consentId;
+        this.initiation = initiation;
+  }
 }

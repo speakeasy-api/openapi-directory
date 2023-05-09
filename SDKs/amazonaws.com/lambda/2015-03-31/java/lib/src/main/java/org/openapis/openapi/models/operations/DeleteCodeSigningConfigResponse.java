@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCodeSigningConfigResponse {
     
     public String contentType;
+
     public DeleteCodeSigningConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCodeSigningConfigResponse {
      */
     
     public java.util.Map<String, Object> deleteCodeSigningConfigResponse;
+
     public DeleteCodeSigningConfigResponse withDeleteCodeSigningConfigResponse(java.util.Map<String, Object> deleteCodeSigningConfigResponse) {
         this.deleteCodeSigningConfigResponse = deleteCodeSigningConfigResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCodeSigningConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteCodeSigningConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCodeSigningConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public DeleteCodeSigningConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCodeSigningConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteCodeSigningConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCodeSigningConfigResponse {
      */
     
     public Object serviceException;
+
     public DeleteCodeSigningConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCodeSigningConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteCodeSigningConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteCodeSigningConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCodeSigningConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCodeSigningConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

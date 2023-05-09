@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteApplicationVersionMessage - Request to delete an application version.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteApplicationVersionMessage {
     
     public String applicationName;
+
     public DeleteApplicationVersionMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class DeleteApplicationVersionMessage {
     
     
     public Boolean deleteSourceBundle;
+
     public DeleteApplicationVersionMessage withDeleteSourceBundle(Boolean deleteSourceBundle) {
         this.deleteSourceBundle = deleteSourceBundle;
         return this;
@@ -26,9 +28,14 @@ public class DeleteApplicationVersionMessage {
     
     
     public String versionLabel;
+
     public DeleteApplicationVersionMessage withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public DeleteApplicationVersionMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("VersionLabel") String versionLabel) {
+        this.applicationName = applicationName;
+        this.versionLabel = versionLabel;
+  }
 }

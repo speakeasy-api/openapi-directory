@@ -15,6 +15,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public OrderShippingAddress withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public OrderShippingAddress withCity(String city) {
         this.city = city;
         return this;
@@ -37,6 +39,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public OrderShippingAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -48,6 +51,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_name")
     public String countryName;
+
     public OrderShippingAddress withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -59,6 +63,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public OrderShippingAddress withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -70,6 +75,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public OrderShippingAddress withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -81,6 +87,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("municipality")
     public String municipality;
+
     public OrderShippingAddress withMunicipality(String municipality) {
         this.municipality = municipality;
         return this;
@@ -92,6 +99,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderShippingAddress withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal")
     public String postal;
+
     public OrderShippingAddress withPostal(String postal) {
         this.postal = postal;
         return this;
@@ -114,6 +123,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public OrderShippingAddress withRegion(String region) {
         this.region = region;
         return this;
@@ -125,6 +135,7 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_number")
     public Double streetNumber;
+
     public OrderShippingAddress withStreetNumber(Double streetNumber) {
         this.streetNumber = streetNumber;
         return this;
@@ -136,9 +147,11 @@ public class OrderShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surname")
     public String surname;
+
     public OrderShippingAddress withSurname(String surname) {
         this.surname = surname;
         return this;
     }
     
+    public OrderShippingAddress(){}
 }

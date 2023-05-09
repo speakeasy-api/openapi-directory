@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSolutionVersionResponse {
     
     public String contentType;
+
     public CreateSolutionVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSolutionVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSolutionVersionResponse createSolutionVersionResponse;
+
     public CreateSolutionVersionResponse withCreateSolutionVersionResponse(org.openapis.openapi.models.shared.CreateSolutionVersionResponse createSolutionVersionResponse) {
         this.createSolutionVersionResponse = createSolutionVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSolutionVersionResponse {
      */
     
     public Object invalidInputException;
+
     public CreateSolutionVersionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSolutionVersionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateSolutionVersionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSolutionVersionResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateSolutionVersionResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateSolutionVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateSolutionVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateSolutionVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSolutionVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateSolutionVersionResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateSolutionVersionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class CreateSolutionVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSolutionVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSolutionVersionResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateSolutionVersionResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateSolutionVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

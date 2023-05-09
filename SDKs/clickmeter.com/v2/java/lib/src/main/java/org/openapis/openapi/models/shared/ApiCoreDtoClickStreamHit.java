@@ -15,6 +15,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessTime")
     public String accessTime;
+
     public ApiCoreDtoClickStreamHit withAccessTime(String accessTime) {
         this.accessTime = accessTime;
         return this;
@@ -23,6 +24,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browser")
     public ApiCoreDtoClickStreamHitBrowserInfo browser;
+
     public ApiCoreDtoClickStreamHit withBrowser(ApiCoreDtoClickStreamHitBrowserInfo browser) {
         this.browser = browser;
         return this;
@@ -31,6 +33,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientLanguage")
     public String clientLanguage;
+
     public ApiCoreDtoClickStreamHit withClientLanguage(String clientLanguage) {
         this.clientLanguage = clientLanguage;
         return this;
@@ -39,6 +42,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversion1")
     public ApiCoreDtoClickStreamHitConversionInfo conversion1;
+
     public ApiCoreDtoClickStreamHit withConversion1(ApiCoreDtoClickStreamHitConversionInfo conversion1) {
         this.conversion1 = conversion1;
         return this;
@@ -47,6 +51,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversion2")
     public ApiCoreDtoClickStreamHitConversionInfo conversion2;
+
     public ApiCoreDtoClickStreamHit withConversion2(ApiCoreDtoClickStreamHitConversionInfo conversion2) {
         this.conversion2 = conversion2;
         return this;
@@ -55,6 +60,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversion3")
     public ApiCoreDtoClickStreamHitConversionInfo conversion3;
+
     public ApiCoreDtoClickStreamHit withConversion3(ApiCoreDtoClickStreamHitConversionInfo conversion3) {
         this.conversion3 = conversion3;
         return this;
@@ -63,6 +69,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversion4")
     public ApiCoreDtoClickStreamHitConversionInfo conversion4;
+
     public ApiCoreDtoClickStreamHit withConversion4(ApiCoreDtoClickStreamHitConversionInfo conversion4) {
         this.conversion4 = conversion4;
         return this;
@@ -71,6 +78,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversion5")
     public ApiCoreDtoClickStreamHitConversionInfo conversion5;
+
     public ApiCoreDtoClickStreamHit withConversion5(ApiCoreDtoClickStreamHitConversionInfo conversion5) {
         this.conversion5 = conversion5;
         return this;
@@ -79,6 +87,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversions")
     public ApiCoreDtoClickStreamHitConversionInfo[] conversions;
+
     public ApiCoreDtoClickStreamHit withConversions(ApiCoreDtoClickStreamHitConversionInfo[] conversions) {
         this.conversions = conversions;
         return this;
@@ -87,6 +96,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public ApiCoreDtoClickStreamHitDatapointInfo entity;
+
     public ApiCoreDtoClickStreamHit withEntity(ApiCoreDtoClickStreamHitDatapointInfo entity) {
         this.entity = entity;
         return this;
@@ -95,6 +105,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public ApiCoreDtoClickStreamHit withIp(String ip) {
         this.ip = ip;
         return this;
@@ -103,6 +114,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isProxy")
     public String isProxy;
+
     public ApiCoreDtoClickStreamHit withIsProxy(String isProxy) {
         this.isProxy = isProxy;
         return this;
@@ -111,6 +123,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSpider")
     public String isSpider;
+
     public ApiCoreDtoClickStreamHit withIsSpider(String isSpider) {
         this.isSpider = isSpider;
         return this;
@@ -119,6 +132,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUnique")
     public String isUnique;
+
     public ApiCoreDtoClickStreamHit withIsUnique(String isUnique) {
         this.isUnique = isUnique;
         return this;
@@ -127,6 +141,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ApiCoreDtoClickStreamHitLocationInfo location;
+
     public ApiCoreDtoClickStreamHit withLocation(ApiCoreDtoClickStreamHitLocationInfo location) {
         this.location = location;
         return this;
@@ -135,6 +150,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org")
     public String org;
+
     public ApiCoreDtoClickStreamHit withOrg(String org) {
         this.org = org;
         return this;
@@ -143,6 +159,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public ApiCoreDtoClickStreamHitOsInfo os;
+
     public ApiCoreDtoClickStreamHit withOs(ApiCoreDtoClickStreamHitOsInfo os) {
         this.os = os;
         return this;
@@ -151,6 +168,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public String queryParams;
+
     public ApiCoreDtoClickStreamHit withQueryParams(String queryParams) {
         this.queryParams = queryParams;
         return this;
@@ -159,6 +177,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("realDestinationUrl")
     public String realDestinationUrl;
+
     public ApiCoreDtoClickStreamHit withRealDestinationUrl(String realDestinationUrl) {
         this.realDestinationUrl = realDestinationUrl;
         return this;
@@ -167,6 +186,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referer")
     public String referer;
+
     public ApiCoreDtoClickStreamHit withReferer(String referer) {
         this.referer = referer;
         return this;
@@ -175,6 +195,7 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public ApiCoreDtoClickStreamHitSource source;
+
     public ApiCoreDtoClickStreamHit withSource(ApiCoreDtoClickStreamHitSource source) {
         this.source = source;
         return this;
@@ -183,9 +204,11 @@ public class ApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ApiCoreDtoClickStreamHit withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ApiCoreDtoClickStreamHit(){}
 }

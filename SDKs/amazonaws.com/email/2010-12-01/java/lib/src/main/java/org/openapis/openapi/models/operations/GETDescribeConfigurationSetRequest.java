@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeConfigurationSetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeConfigurationSetActionEnum action;
+
     public GETDescribeConfigurationSetRequest withAction(GETDescribeConfigurationSetActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeConfigurationSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetAttributeNames")
     public org.openapis.openapi.models.shared.ConfigurationSetAttributeEnum[] configurationSetAttributeNames;
+
     public GETDescribeConfigurationSetRequest withConfigurationSetAttributeNames(org.openapis.openapi.models.shared.ConfigurationSetAttributeEnum[] configurationSetAttributeNames) {
         this.configurationSetAttributeNames = configurationSetAttributeNames;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeConfigurationSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetName")
     public String configurationSetName;
+
     public GETDescribeConfigurationSetRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -36,6 +40,7 @@ public class GETDescribeConfigurationSetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeConfigurationSetVersionEnum version;
+
     public GETDescribeConfigurationSetRequest withVersion(GETDescribeConfigurationSetVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDescribeConfigurationSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeConfigurationSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDescribeConfigurationSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeConfigurationSetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDescribeConfigurationSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeConfigurationSetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDescribeConfigurationSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeConfigurationSetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDescribeConfigurationSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeConfigurationSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDescribeConfigurationSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeConfigurationSetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDescribeConfigurationSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeConfigurationSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeConfigurationSetRequest(@JsonProperty("Action") GETDescribeConfigurationSetActionEnum action, @JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("Version") GETDescribeConfigurationSetVersionEnum version) {
+        this.action = action;
+        this.configurationSetName = configurationSetName;
+        this.version = version;
+  }
 }

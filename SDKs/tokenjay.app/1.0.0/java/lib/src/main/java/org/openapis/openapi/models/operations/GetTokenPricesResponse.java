@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTokenPricesResponse {
     
     public byte[] body;
+
     public GetTokenPricesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetTokenPricesResponse {
     
     
     public String contentType;
+
     public GetTokenPricesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetTokenPricesResponse {
     
     
     public Integer statusCode;
+
     public GetTokenPricesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetTokenPricesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTokenPricesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetTokenPricesResponse {
      */
     
     public String getTokenPrices400WildcardString;
+
     public GetTokenPricesResponse withGetTokenPrices400WildcardString(String getTokenPrices400WildcardString) {
         this.getTokenPrices400WildcardString = getTokenPrices400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class GetTokenPricesResponse {
      */
     
     public String getTokenPrices401WildcardString;
+
     public GetTokenPricesResponse withGetTokenPrices401WildcardString(String getTokenPrices401WildcardString) {
         this.getTokenPrices401WildcardString = getTokenPrices401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class GetTokenPricesResponse {
      */
     
     public String getTokenPrices404WildcardString;
+
     public GetTokenPricesResponse withGetTokenPrices404WildcardString(String getTokenPrices404WildcardString) {
         this.getTokenPrices404WildcardString = getTokenPrices404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class GetTokenPricesResponse {
      */
     
     public String getTokenPrices409WildcardString;
+
     public GetTokenPricesResponse withGetTokenPrices409WildcardString(String getTokenPrices409WildcardString) {
         this.getTokenPrices409WildcardString = getTokenPrices409WildcardString;
         return this;
     }
     
+    public GetTokenPricesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class PayslipObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payslip")
     public Payslip payslip;
+
     public PayslipObject withPayslip(Payslip payslip) {
         this.payslip = payslip;
         return this;
     }
     
+    public PayslipObject(){}
 }

@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class HIPConsentNotification {
     @JsonProperty("notification")
     public HIPConsentNotificationNotification notification;
+
     public HIPConsentNotification withNotification(HIPConsentNotificationNotification notification) {
         this.notification = notification;
         return this;
@@ -24,6 +25,7 @@ public class HIPConsentNotification {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public HIPConsentNotification withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -36,9 +38,15 @@ public class HIPConsentNotification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIPConsentNotification withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HIPConsentNotification(@JsonProperty("notification") HIPConsentNotificationNotification notification, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.notification = notification;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteVpcEndpointConnectionNotificationsResult {
     
     public DeleteVpcEndpointConnectionNotificationsResultUnsuccessful[] unsuccessful;
+
     public DeleteVpcEndpointConnectionNotificationsResult withUnsuccessful(DeleteVpcEndpointConnectionNotificationsResultUnsuccessful[] unsuccessful) {
         this.unsuccessful = unsuccessful;
         return this;
     }
     
+    public DeleteVpcEndpointConnectionNotificationsResult(){}
 }

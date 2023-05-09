@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     public String localGatewayId;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     
     public String localGatewayRouteTableArn;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withLocalGatewayRouteTableArn(String localGatewayRouteTableArn) {
         this.localGatewayRouteTableArn = localGatewayRouteTableArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     
     public String localGatewayRouteTableId;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesModeEnum mode;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withMode(DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesModeEnum mode) {
         this.mode = mode;
         return this;
@@ -40,6 +44,7 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     
     public String outpostArn;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     
     public String ownerId;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     
     public String state;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withState(String state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesStateReason stateReason;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withStateReason(DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesStateReason stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -68,9 +76,11 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables {
     
     
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesTags[] tags;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables withTags(DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables(){}
 }

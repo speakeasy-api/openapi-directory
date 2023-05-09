@@ -20,6 +20,7 @@ public class CreateCheckoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout")
     public Checkout checkout;
+
     public CreateCheckoutResponse withCheckout(Checkout checkout) {
         this.checkout = checkout;
         return this;
@@ -31,9 +32,11 @@ public class CreateCheckoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateCheckoutResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CreateCheckoutResponse(){}
 }

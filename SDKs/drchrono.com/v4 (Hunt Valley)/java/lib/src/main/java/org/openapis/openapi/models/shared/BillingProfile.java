@@ -15,6 +15,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public BillingProfile withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -26,6 +27,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpt_codes")
     public BillingProfileCptCodes[] cptCodes;
+
     public BillingProfile withCptCodes(BillingProfileCptCodes[] cptCodes) {
         this.cptCodes = cptCodes;
         return this;
@@ -34,6 +36,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public BillingProfile withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +48,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_procedure_codes")
     public BillingProfileCustomProcedureCodes[] customProcedureCodes;
+
     public BillingProfile withCustomProcedureCodes(BillingProfileCustomProcedureCodes[] customProcedureCodes) {
         this.customProcedureCodes = customProcedureCodes;
         return this;
@@ -53,6 +57,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doctor")
     public String doctor;
+
     public BillingProfile withDoctor(String doctor) {
         this.doctor = doctor;
         return this;
@@ -64,6 +69,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hcpcs_codes")
     public BillingProfileHcpcsCodes[] hcpcsCodes;
+
     public BillingProfile withHcpcsCodes(BillingProfileHcpcsCodes[] hcpcsCodes) {
         this.hcpcsCodes = hcpcsCodes;
         return this;
@@ -75,6 +81,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icd10_codes")
     public String[] icd10Codes;
+
     public BillingProfile withIcd10Codes(String[] icd10Codes) {
         this.icd10Codes = icd10Codes;
         return this;
@@ -86,6 +93,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icd9_codes")
     public String[] icd9Codes;
+
     public BillingProfile withIcd9Codes(String[] icd9Codes) {
         this.icd9Codes = icd9Codes;
         return this;
@@ -94,6 +102,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BillingProfile withId(Long id) {
         this.id = id;
         return this;
@@ -102,6 +111,7 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BillingProfile withName(String name) {
         this.name = name;
         return this;
@@ -110,9 +120,11 @@ public class BillingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public BillingProfile withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public BillingProfile(){}
 }

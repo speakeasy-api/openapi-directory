@@ -22,6 +22,7 @@ public class GlobalTableDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public GlobalTableDescription withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class GlobalTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableArn")
     public String globalTableArn;
+
     public GlobalTableDescription withGlobalTableArn(String globalTableArn) {
         this.globalTableArn = globalTableArn;
         return this;
@@ -38,6 +40,7 @@ public class GlobalTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableName")
     public String globalTableName;
+
     public GlobalTableDescription withGlobalTableName(String globalTableName) {
         this.globalTableName = globalTableName;
         return this;
@@ -46,6 +49,7 @@ public class GlobalTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableStatus")
     public GlobalTableStatusEnum globalTableStatus;
+
     public GlobalTableDescription withGlobalTableStatus(GlobalTableStatusEnum globalTableStatus) {
         this.globalTableStatus = globalTableStatus;
         return this;
@@ -54,9 +58,11 @@ public class GlobalTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationGroup")
     public ReplicaDescription[] replicationGroup;
+
     public GlobalTableDescription withReplicationGroup(ReplicaDescription[] replicationGroup) {
         this.replicationGroup = replicationGroup;
         return this;
     }
     
+    public GlobalTableDescription(){}
 }

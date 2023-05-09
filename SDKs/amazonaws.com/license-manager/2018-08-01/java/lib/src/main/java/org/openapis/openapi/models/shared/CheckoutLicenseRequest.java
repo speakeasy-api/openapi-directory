@@ -12,6 +12,7 @@ public class CheckoutLicenseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Beneficiary")
     public String beneficiary;
+
     public CheckoutLicenseRequest withBeneficiary(String beneficiary) {
         this.beneficiary = beneficiary;
         return this;
@@ -19,6 +20,7 @@ public class CheckoutLicenseRequest {
     
     @JsonProperty("CheckoutType")
     public CheckoutTypeEnum checkoutType;
+
     public CheckoutLicenseRequest withCheckoutType(CheckoutTypeEnum checkoutType) {
         this.checkoutType = checkoutType;
         return this;
@@ -26,6 +28,7 @@ public class CheckoutLicenseRequest {
     
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CheckoutLicenseRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -33,6 +36,7 @@ public class CheckoutLicenseRequest {
     
     @JsonProperty("Entitlements")
     public EntitlementData[] entitlements;
+
     public CheckoutLicenseRequest withEntitlements(EntitlementData[] entitlements) {
         this.entitlements = entitlements;
         return this;
@@ -40,6 +44,7 @@ public class CheckoutLicenseRequest {
     
     @JsonProperty("KeyFingerprint")
     public String keyFingerprint;
+
     public CheckoutLicenseRequest withKeyFingerprint(String keyFingerprint) {
         this.keyFingerprint = keyFingerprint;
         return this;
@@ -48,6 +53,7 @@ public class CheckoutLicenseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeId")
     public String nodeId;
+
     public CheckoutLicenseRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -55,9 +61,17 @@ public class CheckoutLicenseRequest {
     
     @JsonProperty("ProductSKU")
     public String productSKU;
+
     public CheckoutLicenseRequest withProductSKU(String productSKU) {
         this.productSKU = productSKU;
         return this;
     }
     
+    public CheckoutLicenseRequest(@JsonProperty("CheckoutType") CheckoutTypeEnum checkoutType, @JsonProperty("ClientToken") String clientToken, @JsonProperty("Entitlements") EntitlementData[] entitlements, @JsonProperty("KeyFingerprint") String keyFingerprint, @JsonProperty("ProductSKU") String productSKU) {
+        this.checkoutType = checkoutType;
+        this.clientToken = clientToken;
+        this.entitlements = entitlements;
+        this.keyFingerprint = keyFingerprint;
+        this.productSKU = productSKU;
+  }
 }

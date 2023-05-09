@@ -15,6 +15,7 @@ public class NotifyEmailType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HtmlBody")
     public String htmlBody;
+
     public NotifyEmailType withHtmlBody(String htmlBody) {
         this.htmlBody = htmlBody;
         return this;
@@ -22,6 +23,7 @@ public class NotifyEmailType {
     
     @JsonProperty("Subject")
     public String subject;
+
     public NotifyEmailType withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -30,9 +32,13 @@ public class NotifyEmailType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextBody")
     public String textBody;
+
     public NotifyEmailType withTextBody(String textBody) {
         this.textBody = textBody;
         return this;
     }
     
+    public NotifyEmailType(@JsonProperty("Subject") String subject) {
+        this.subject = subject;
+  }
 }

@@ -18,9 +18,11 @@ public class StringList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public String[] elements;
+
     public StringList withElements(String[] elements) {
         this.elements = elements;
         return this;
     }
     
+    public StringList(){}
 }

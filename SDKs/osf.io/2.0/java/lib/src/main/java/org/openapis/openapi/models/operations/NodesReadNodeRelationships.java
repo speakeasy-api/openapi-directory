@@ -15,6 +15,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String affiliatedInstitutions;
+
     public NodesReadNodeRelationships withAffiliatedInstitutions(String affiliatedInstitutions) {
         this.affiliatedInstitutions = affiliatedInstitutions;
         return this;
@@ -25,6 +26,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String children;
+
     public NodesReadNodeRelationships withChildren(String children) {
         this.children = children;
         return this;
@@ -35,6 +37,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String citation;
+
     public NodesReadNodeRelationships withCitation(String citation) {
         this.citation = citation;
         return this;
@@ -45,6 +48,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String comments;
+
     public NodesReadNodeRelationships withComments(String comments) {
         this.comments = comments;
         return this;
@@ -55,6 +59,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String contributors;
+
     public NodesReadNodeRelationships withContributors(String contributors) {
         this.contributors = contributors;
         return this;
@@ -65,6 +70,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String draftRegistrations;
+
     public NodesReadNodeRelationships withDraftRegistrations(String draftRegistrations) {
         this.draftRegistrations = draftRegistrations;
         return this;
@@ -75,6 +81,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String files;
+
     public NodesReadNodeRelationships withFiles(String files) {
         this.files = files;
         return this;
@@ -85,6 +92,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String forkedFrom;
+
     public NodesReadNodeRelationships withForkedFrom(String forkedFrom) {
         this.forkedFrom = forkedFrom;
         return this;
@@ -95,6 +103,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String forks;
+
     public NodesReadNodeRelationships withForks(String forks) {
         this.forks = forks;
         return this;
@@ -105,6 +114,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String identifiers;
+
     public NodesReadNodeRelationships withIdentifiers(String identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -115,6 +125,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String license;
+
     public NodesReadNodeRelationships withLicense(String license) {
         this.license = license;
         return this;
@@ -125,6 +136,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String linkedNodes;
+
     public NodesReadNodeRelationships withLinkedNodes(String linkedNodes) {
         this.linkedNodes = linkedNodes;
         return this;
@@ -135,6 +147,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String logs;
+
     public NodesReadNodeRelationships withLogs(String logs) {
         this.logs = logs;
         return this;
@@ -145,6 +158,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String nodeLinks;
+
     public NodesReadNodeRelationships withNodeLinks(String nodeLinks) {
         this.nodeLinks = nodeLinks;
         return this;
@@ -155,6 +169,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String parent;
+
     public NodesReadNodeRelationships withParent(String parent) {
         this.parent = parent;
         return this;
@@ -165,6 +180,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String preprints;
+
     public NodesReadNodeRelationships withPreprints(String preprints) {
         this.preprints = preprints;
         return this;
@@ -175,6 +191,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String registrations;
+
     public NodesReadNodeRelationships withRegistrations(String registrations) {
         this.registrations = registrations;
         return this;
@@ -185,6 +202,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String root;
+
     public NodesReadNodeRelationships withRoot(String root) {
         this.root = root;
         return this;
@@ -195,6 +213,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String templateNode;
+
     public NodesReadNodeRelationships withTemplateNode(String templateNode) {
         this.templateNode = templateNode;
         return this;
@@ -205,6 +224,7 @@ public class NodesReadNodeRelationships {
      */
     
     public String viewOnlyLinks;
+
     public NodesReadNodeRelationships withViewOnlyLinks(String viewOnlyLinks) {
         this.viewOnlyLinks = viewOnlyLinks;
         return this;
@@ -215,9 +235,11 @@ public class NodesReadNodeRelationships {
      */
     
     public String wikis;
+
     public NodesReadNodeRelationships withWikis(String wikis) {
         this.wikis = wikis;
         return this;
     }
     
+    public NodesReadNodeRelationships(){}
 }

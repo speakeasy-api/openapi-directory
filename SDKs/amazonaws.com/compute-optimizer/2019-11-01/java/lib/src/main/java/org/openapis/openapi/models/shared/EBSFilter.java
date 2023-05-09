@@ -15,6 +15,7 @@ public class EBSFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public EBSFilterNameEnum name;
+
     public EBSFilter withName(EBSFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class EBSFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public EBSFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public EBSFilter(){}
 }

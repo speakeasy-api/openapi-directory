@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUsersIdUserAlerts200ApplicationJSON {
     @JsonProperty("alerts")
     public org.openapis.openapi.models.shared.Alert[] alerts;
+
     public GetUsersIdUserAlerts200ApplicationJSON withAlerts(org.openapis.openapi.models.shared.Alert[] alerts) {
         this.alerts = alerts;
         return this;
@@ -25,9 +26,13 @@ public class GetUsersIdUserAlerts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetUsersIdUserAlerts200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetUsersIdUserAlerts200ApplicationJSON(@JsonProperty("alerts") org.openapis.openapi.models.shared.Alert[] alerts) {
+        this.alerts = alerts;
+  }
 }

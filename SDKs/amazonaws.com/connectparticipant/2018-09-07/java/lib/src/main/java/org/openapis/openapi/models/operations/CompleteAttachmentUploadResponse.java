@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompleteAttachmentUploadResponse {
@@ -12,6 +13,7 @@ public class CompleteAttachmentUploadResponse {
      */
     
     public Object accessDeniedException;
+
     public CompleteAttachmentUploadResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CompleteAttachmentUploadResponse {
      */
     
     public java.util.Map<String, Object> completeAttachmentUploadResponse;
+
     public CompleteAttachmentUploadResponse withCompleteAttachmentUploadResponse(java.util.Map<String, Object> completeAttachmentUploadResponse) {
         this.completeAttachmentUploadResponse = completeAttachmentUploadResponse;
         return this;
@@ -32,6 +35,7 @@ public class CompleteAttachmentUploadResponse {
      */
     
     public Object conflictException;
+
     public CompleteAttachmentUploadResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class CompleteAttachmentUploadResponse {
     
     
     public String contentType;
+
     public CompleteAttachmentUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CompleteAttachmentUploadResponse {
      */
     
     public Object internalServerException;
+
     public CompleteAttachmentUploadResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CompleteAttachmentUploadResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CompleteAttachmentUploadResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CompleteAttachmentUploadResponse {
     
     
     public Integer statusCode;
+
     public CompleteAttachmentUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CompleteAttachmentUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompleteAttachmentUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CompleteAttachmentUploadResponse {
      */
     
     public Object throttlingException;
+
     public CompleteAttachmentUploadResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CompleteAttachmentUploadResponse {
      */
     
     public Object validationException;
+
     public CompleteAttachmentUploadResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CompleteAttachmentUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopId")
     public String stopId;
+
     public TflApiPresentationEntitiesInterval withStopId(String stopId) {
         this.stopId = stopId;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeToArrival")
     public Double timeToArrival;
+
     public TflApiPresentationEntitiesInterval withTimeToArrival(Double timeToArrival) {
         this.timeToArrival = timeToArrival;
         return this;
     }
     
+    public TflApiPresentationEntitiesInterval(){}
 }

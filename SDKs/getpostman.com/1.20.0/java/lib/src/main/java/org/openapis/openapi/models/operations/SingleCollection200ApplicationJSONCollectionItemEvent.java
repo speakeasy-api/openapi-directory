@@ -12,6 +12,7 @@ public class SingleCollection200ApplicationJSONCollectionItemEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listen")
     public String listen;
+
     public SingleCollection200ApplicationJSONCollectionItemEvent withListen(String listen) {
         this.listen = listen;
         return this;
@@ -20,9 +21,11 @@ public class SingleCollection200ApplicationJSONCollectionItemEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public SingleCollection200ApplicationJSONCollectionItemEventScript script;
+
     public SingleCollection200ApplicationJSONCollectionItemEvent withScript(SingleCollection200ApplicationJSONCollectionItemEventScript script) {
         this.script = script;
         return this;
     }
     
+    public SingleCollection200ApplicationJSONCollectionItemEvent(){}
 }

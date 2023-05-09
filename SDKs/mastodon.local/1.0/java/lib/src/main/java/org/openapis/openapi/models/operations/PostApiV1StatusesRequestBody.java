@@ -15,6 +15,7 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_reply_to_id")
     public String inReplyToId;
+
     public PostApiV1StatusesRequestBody withInReplyToId(String inReplyToId) {
         this.inReplyToId = inReplyToId;
         return this;
@@ -26,6 +27,7 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public PostApiV1StatusesRequestBody withLanguage(String language) {
         this.language = language;
         return this;
@@ -37,6 +39,7 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media_ids")
     public String[] mediaIds;
+
     public PostApiV1StatusesRequestBody withMediaIds(String[] mediaIds) {
         this.mediaIds = mediaIds;
         return this;
@@ -45,6 +48,7 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poll")
     public java.util.Map<String, Object>[] poll;
+
     public PostApiV1StatusesRequestBody withPoll(java.util.Map<String, Object>[] poll) {
         this.poll = poll;
         return this;
@@ -56,6 +60,7 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduled_at")
     public String scheduledAt;
+
     public PostApiV1StatusesRequestBody withScheduledAt(String scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
@@ -67,6 +72,7 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitive")
     public Boolean sensitive;
+
     public PostApiV1StatusesRequestBody withSensitive(Boolean sensitive) {
         this.sensitive = sensitive;
         return this;
@@ -78,6 +84,7 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spoiler_text")
     public String spoilerText;
+
     public PostApiV1StatusesRequestBody withSpoilerText(String spoilerText) {
         this.spoilerText = spoilerText;
         return this;
@@ -89,6 +96,7 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PostApiV1StatusesRequestBody withStatus(String status) {
         this.status = status;
         return this;
@@ -100,9 +108,11 @@ public class PostApiV1StatusesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public PostApiV1StatusesRequestBodyVisibilityEnum visibility;
+
     public PostApiV1StatusesRequestBody withVisibility(PostApiV1StatusesRequestBodyVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public PostApiV1StatusesRequestBody(){}
 }

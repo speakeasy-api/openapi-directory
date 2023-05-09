@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFunctionUrlConfigResponse {
     
     public String contentType;
+
     public UpdateFunctionUrlConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFunctionUrlConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateFunctionUrlConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateFunctionUrlConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateFunctionUrlConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateFunctionUrlConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFunctionUrlConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateFunctionUrlConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateFunctionUrlConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFunctionUrlConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFunctionUrlConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFunctionUrlConfigResponse {
      */
     
     public Object serviceException;
+
     public UpdateFunctionUrlConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFunctionUrlConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateFunctionUrlConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateFunctionUrlConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFunctionUrlConfigResponse updateFunctionUrlConfigResponse;
+
     public UpdateFunctionUrlConfigResponse withUpdateFunctionUrlConfigResponse(org.openapis.openapi.models.shared.UpdateFunctionUrlConfigResponse updateFunctionUrlConfigResponse) {
         this.updateFunctionUrlConfigResponse = updateFunctionUrlConfigResponse;
         return this;
     }
     
+    public UpdateFunctionUrlConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

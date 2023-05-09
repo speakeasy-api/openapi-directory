@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutFirewallsIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutFirewallsIdUpdateFirewallRequest requestBody;
+
     public PutFirewallsIdRequest withRequestBody(PutFirewallsIdUpdateFirewallRequest requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PutFirewallsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutFirewallsIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutFirewallsIdRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

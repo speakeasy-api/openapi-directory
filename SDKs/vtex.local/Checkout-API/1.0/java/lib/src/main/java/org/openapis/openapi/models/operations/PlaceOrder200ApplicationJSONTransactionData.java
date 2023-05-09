@@ -18,6 +18,7 @@ public class PlaceOrder200ApplicationJSONTransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayCallbackTemplatePath")
     public String gatewayCallbackTemplatePath;
+
     public PlaceOrder200ApplicationJSONTransactionData withGatewayCallbackTemplatePath(String gatewayCallbackTemplatePath) {
         this.gatewayCallbackTemplatePath = gatewayCallbackTemplatePath;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrder200ApplicationJSONTransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantTransactions")
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions[] merchantTransactions;
+
     public PlaceOrder200ApplicationJSONTransactionData withMerchantTransactions(PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions[] merchantTransactions) {
         this.merchantTransactions = merchantTransactions;
         return this;
@@ -40,9 +42,11 @@ public class PlaceOrder200ApplicationJSONTransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverUri")
     public String receiverUri;
+
     public PlaceOrder200ApplicationJSONTransactionData withReceiverUri(String receiverUri) {
         this.receiverUri = receiverUri;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONTransactionData(){}
 }

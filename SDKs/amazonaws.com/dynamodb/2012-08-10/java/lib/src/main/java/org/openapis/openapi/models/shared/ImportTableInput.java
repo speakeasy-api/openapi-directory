@@ -12,6 +12,7 @@ public class ImportTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public ImportTableInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class ImportTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputCompressionType")
     public InputCompressionTypeEnum inputCompressionType;
+
     public ImportTableInput withInputCompressionType(InputCompressionTypeEnum inputCompressionType) {
         this.inputCompressionType = inputCompressionType;
         return this;
@@ -27,6 +29,7 @@ public class ImportTableInput {
     
     @JsonProperty("InputFormat")
     public InputFormatEnum inputFormat;
+
     public ImportTableInput withInputFormat(InputFormatEnum inputFormat) {
         this.inputFormat = inputFormat;
         return this;
@@ -35,6 +38,7 @@ public class ImportTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormatOptions")
     public InputFormatOptions inputFormatOptions;
+
     public ImportTableInput withInputFormatOptions(InputFormatOptions inputFormatOptions) {
         this.inputFormatOptions = inputFormatOptions;
         return this;
@@ -42,6 +46,7 @@ public class ImportTableInput {
     
     @JsonProperty("S3BucketSource")
     public S3BucketSource s3BucketSource;
+
     public ImportTableInput withS3BucketSource(S3BucketSource s3BucketSource) {
         this.s3BucketSource = s3BucketSource;
         return this;
@@ -49,9 +54,15 @@ public class ImportTableInput {
     
     @JsonProperty("TableCreationParameters")
     public TableCreationParameters tableCreationParameters;
+
     public ImportTableInput withTableCreationParameters(TableCreationParameters tableCreationParameters) {
         this.tableCreationParameters = tableCreationParameters;
         return this;
     }
     
+    public ImportTableInput(@JsonProperty("InputFormat") InputFormatEnum inputFormat, @JsonProperty("S3BucketSource") S3BucketSource s3BucketSource, @JsonProperty("TableCreationParameters") TableCreationParameters tableCreationParameters) {
+        this.inputFormat = inputFormat;
+        this.s3BucketSource = s3BucketSource;
+        this.tableCreationParameters = tableCreationParameters;
+  }
 }

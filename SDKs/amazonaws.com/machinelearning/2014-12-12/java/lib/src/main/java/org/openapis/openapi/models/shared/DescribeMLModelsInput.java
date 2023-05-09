@@ -12,6 +12,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EQ")
     public String eq;
+
     public DescribeMLModelsInput withEq(String eq) {
         this.eq = eq;
         return this;
@@ -20,6 +21,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterVariable")
     public MLModelFilterVariableEnum filterVariable;
+
     public DescribeMLModelsInput withFilterVariable(MLModelFilterVariableEnum filterVariable) {
         this.filterVariable = filterVariable;
         return this;
@@ -28,6 +30,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GE")
     public String ge;
+
     public DescribeMLModelsInput withGe(String ge) {
         this.ge = ge;
         return this;
@@ -36,6 +39,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GT")
     public String gt;
+
     public DescribeMLModelsInput withGt(String gt) {
         this.gt = gt;
         return this;
@@ -44,6 +48,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LE")
     public String le;
+
     public DescribeMLModelsInput withLe(String le) {
         this.le = le;
         return this;
@@ -52,6 +57,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LT")
     public String lt;
+
     public DescribeMLModelsInput withLt(String lt) {
         this.lt = lt;
         return this;
@@ -60,6 +66,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeMLModelsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -68,6 +75,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NE")
     public String ne;
+
     public DescribeMLModelsInput withNe(String ne) {
         this.ne = ne;
         return this;
@@ -76,6 +84,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMLModelsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -84,6 +93,7 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public DescribeMLModelsInput withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -92,9 +102,11 @@ public class DescribeMLModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public DescribeMLModelsInput withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public DescribeMLModelsInput(){}
 }

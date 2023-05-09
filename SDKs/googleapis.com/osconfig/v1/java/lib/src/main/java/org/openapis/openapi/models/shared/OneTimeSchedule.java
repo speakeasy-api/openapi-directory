@@ -18,9 +18,11 @@ public class OneTimeSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executeTime")
     public String executeTime;
+
     public OneTimeSchedule withExecuteTime(String executeTime) {
         this.executeTime = executeTime;
         return this;
     }
     
+    public OneTimeSchedule(){}
 }

@@ -12,6 +12,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorIdNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_number")
     public String idNumber;
+
     public UpdateInvestorUpdateRequestBodyForInvestorIdNumbers withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -20,9 +21,11 @@ public class UpdateInvestorUpdateRequestBodyForInvestorIdNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_type")
     public String idType;
+
     public UpdateInvestorUpdateRequestBodyForInvestorIdNumbers withIdType(String idType) {
         this.idType = idType;
         return this;
     }
     
+    public UpdateInvestorUpdateRequestBodyForInvestorIdNumbers(){}
 }

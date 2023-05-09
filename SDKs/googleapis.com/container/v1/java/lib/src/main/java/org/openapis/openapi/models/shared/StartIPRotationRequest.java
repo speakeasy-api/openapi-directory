@@ -18,6 +18,7 @@ public class StartIPRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public StartIPRotationRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class StartIPRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StartIPRotationRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class StartIPRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public StartIPRotationRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -51,6 +54,7 @@ public class StartIPRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotateCredentials")
     public Boolean rotateCredentials;
+
     public StartIPRotationRequest withRotateCredentials(Boolean rotateCredentials) {
         this.rotateCredentials = rotateCredentials;
         return this;
@@ -62,9 +66,11 @@ public class StartIPRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public StartIPRotationRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public StartIPRotationRequest(){}
 }

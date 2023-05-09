@@ -18,6 +18,7 @@ public class SDKHarnessContainerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public String[] capabilities;
+
     public SDKHarnessContainerImage withCapabilities(String[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -29,6 +30,7 @@ public class SDKHarnessContainerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImage")
     public String containerImage;
+
     public SDKHarnessContainerImage withContainerImage(String containerImage) {
         this.containerImage = containerImage;
         return this;
@@ -40,6 +42,7 @@ public class SDKHarnessContainerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public SDKHarnessContainerImage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -51,9 +54,11 @@ public class SDKHarnessContainerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useSingleCorePerContainer")
     public Boolean useSingleCorePerContainer;
+
     public SDKHarnessContainerImage withUseSingleCorePerContainer(Boolean useSingleCorePerContainer) {
         this.useSingleCorePerContainer = useSingleCorePerContainer;
         return this;
     }
     
+    public SDKHarnessContainerImage(){}
 }

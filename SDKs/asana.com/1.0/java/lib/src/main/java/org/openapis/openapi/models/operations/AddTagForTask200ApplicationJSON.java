@@ -18,9 +18,11 @@ public class AddTagForTask200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public AddTagForTask200ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
     }
     
+    public AddTagForTask200ApplicationJSON(){}
 }

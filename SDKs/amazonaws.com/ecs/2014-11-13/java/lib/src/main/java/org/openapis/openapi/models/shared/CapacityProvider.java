@@ -15,6 +15,7 @@ public class CapacityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroupProvider")
     public AutoScalingGroupProvider autoScalingGroupProvider;
+
     public CapacityProvider withAutoScalingGroupProvider(AutoScalingGroupProvider autoScalingGroupProvider) {
         this.autoScalingGroupProvider = autoScalingGroupProvider;
         return this;
@@ -23,6 +24,7 @@ public class CapacityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviderArn")
     public String capacityProviderArn;
+
     public CapacityProvider withCapacityProviderArn(String capacityProviderArn) {
         this.capacityProviderArn = capacityProviderArn;
         return this;
@@ -31,6 +33,7 @@ public class CapacityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CapacityProvider withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class CapacityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CapacityProviderStatusEnum status;
+
     public CapacityProvider withStatus(CapacityProviderStatusEnum status) {
         this.status = status;
         return this;
@@ -47,6 +51,7 @@ public class CapacityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CapacityProvider withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -55,6 +60,7 @@ public class CapacityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateStatus")
     public CapacityProviderUpdateStatusEnum updateStatus;
+
     public CapacityProvider withUpdateStatus(CapacityProviderUpdateStatusEnum updateStatus) {
         this.updateStatus = updateStatus;
         return this;
@@ -63,9 +69,11 @@ public class CapacityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateStatusReason")
     public String updateStatusReason;
+
     public CapacityProvider withUpdateStatusReason(String updateStatusReason) {
         this.updateStatusReason = updateStatusReason;
         return this;
     }
     
+    public CapacityProvider(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutProvisionedConcurrencyConfigResponse {
     
     public String contentType;
+
     public PutProvisionedConcurrencyConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutProvisionedConcurrencyConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutProvisionedConcurrencyConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class PutProvisionedConcurrencyConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.PutProvisionedConcurrencyConfigResponse putProvisionedConcurrencyConfigResponse;
+
     public PutProvisionedConcurrencyConfigResponse withPutProvisionedConcurrencyConfigResponse(org.openapis.openapi.models.shared.PutProvisionedConcurrencyConfigResponse putProvisionedConcurrencyConfigResponse) {
         this.putProvisionedConcurrencyConfigResponse = putProvisionedConcurrencyConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutProvisionedConcurrencyConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public PutProvisionedConcurrencyConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -49,6 +54,7 @@ public class PutProvisionedConcurrencyConfigResponse {
      */
     
     public Object serviceException;
+
     public PutProvisionedConcurrencyConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class PutProvisionedConcurrencyConfigResponse {
     
     
     public Integer statusCode;
+
     public PutProvisionedConcurrencyConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutProvisionedConcurrencyConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutProvisionedConcurrencyConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutProvisionedConcurrencyConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutProvisionedConcurrencyConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class PutProvisionedConcurrencyConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutProvisionedConcurrencyConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutProvisionedConcurrencyConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

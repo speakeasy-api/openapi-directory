@@ -15,6 +15,7 @@ public class AwsElasticBeanstalkEnvironmentOptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public AwsElasticBeanstalkEnvironmentOptionSetting withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -23,6 +24,7 @@ public class AwsElasticBeanstalkEnvironmentOptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptionName")
     public String optionName;
+
     public AwsElasticBeanstalkEnvironmentOptionSetting withOptionName(String optionName) {
         this.optionName = optionName;
         return this;
@@ -31,6 +33,7 @@ public class AwsElasticBeanstalkEnvironmentOptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public AwsElasticBeanstalkEnvironmentOptionSetting withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -39,9 +42,11 @@ public class AwsElasticBeanstalkEnvironmentOptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsElasticBeanstalkEnvironmentOptionSetting withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsElasticBeanstalkEnvironmentOptionSetting(){}
 }

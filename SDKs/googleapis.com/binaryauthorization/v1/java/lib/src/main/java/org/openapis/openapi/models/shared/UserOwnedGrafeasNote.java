@@ -18,6 +18,7 @@ public class UserOwnedGrafeasNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegationServiceAccountEmail")
     public String delegationServiceAccountEmail;
+
     public UserOwnedGrafeasNote withDelegationServiceAccountEmail(String delegationServiceAccountEmail) {
         this.delegationServiceAccountEmail = delegationServiceAccountEmail;
         return this;
@@ -29,6 +30,7 @@ public class UserOwnedGrafeasNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noteReference")
     public String noteReference;
+
     public UserOwnedGrafeasNote withNoteReference(String noteReference) {
         this.noteReference = noteReference;
         return this;
@@ -40,9 +42,11 @@ public class UserOwnedGrafeasNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKeys")
     public AttestorPublicKey[] publicKeys;
+
     public UserOwnedGrafeasNote withPublicKeys(AttestorPublicKey[] publicKeys) {
         this.publicKeys = publicKeys;
         return this;
     }
     
+    public UserOwnedGrafeasNote(){}
 }

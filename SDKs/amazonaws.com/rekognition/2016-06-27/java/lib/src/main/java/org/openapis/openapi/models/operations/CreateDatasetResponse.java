@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatasetResponse {
@@ -12,6 +13,7 @@ public class CreateDatasetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDatasetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDatasetResponse {
     
     
     public String contentType;
+
     public CreateDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatasetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDatasetResponse createDatasetResponse;
+
     public CreateDatasetResponse withCreateDatasetResponse(org.openapis.openapi.models.shared.CreateDatasetResponse createDatasetResponse) {
         this.createDatasetResponse = createDatasetResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatasetResponse {
      */
     
     public Object internalServerError;
+
     public CreateDatasetResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CreateDatasetResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateDatasetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDatasetResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public CreateDatasetResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDatasetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDatasetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDatasetResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public CreateDatasetResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateDatasetResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDatasetResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -99,6 +109,7 @@ public class CreateDatasetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDatasetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class CreateDatasetResponse {
     
     
     public Integer statusCode;
+
     public CreateDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class CreateDatasetResponse {
      */
     
     public Object throttlingException;
+
     public CreateDatasetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

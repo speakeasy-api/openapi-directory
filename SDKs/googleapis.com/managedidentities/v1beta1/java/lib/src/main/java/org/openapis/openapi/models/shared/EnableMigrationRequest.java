@@ -18,9 +18,11 @@ public class EnableMigrationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migratingDomains")
     public OnPremDomainDetails[] migratingDomains;
+
     public EnableMigrationRequest withMigratingDomains(OnPremDomainDetails[] migratingDomains) {
         this.migratingDomains = migratingDomains;
         return this;
     }
     
+    public EnableMigrationRequest(){}
 }

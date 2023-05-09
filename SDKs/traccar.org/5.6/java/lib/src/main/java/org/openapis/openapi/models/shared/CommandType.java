@@ -12,9 +12,11 @@ public class CommandType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CommandType withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CommandType(){}
 }

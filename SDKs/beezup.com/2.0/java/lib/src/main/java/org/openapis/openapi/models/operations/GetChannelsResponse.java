@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelsResponse {
@@ -12,6 +13,7 @@ public class GetChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelsResponse {
     
     
     public String contentType;
+
     public GetChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetChannelsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelsResponse {
     
     
     public Integer statusCode;
+
     public GetChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.PublicChannelInfoList publicChannelInfoList;
+
     public GetChannelsResponse withPublicChannelInfoList(org.openapis.openapi.models.shared.PublicChannelInfoList publicChannelInfoList) {
         this.publicChannelInfoList = publicChannelInfoList;
         return this;
     }
     
+    public GetChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

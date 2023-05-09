@@ -18,9 +18,11 @@ public class EnterpriseAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountEmail")
     public String accountEmail;
+
     public EnterpriseAccount withAccountEmail(String accountEmail) {
         this.accountEmail = accountEmail;
         return this;
     }
     
+    public EnterpriseAccount(){}
 }

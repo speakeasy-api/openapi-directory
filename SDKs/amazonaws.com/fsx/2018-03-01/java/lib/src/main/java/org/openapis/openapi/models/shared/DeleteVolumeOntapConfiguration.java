@@ -18,6 +18,7 @@ public class DeleteVolumeOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupTags")
     public Tag[] finalBackupTags;
+
     public DeleteVolumeOntapConfiguration withFinalBackupTags(Tag[] finalBackupTags) {
         this.finalBackupTags = finalBackupTags;
         return this;
@@ -26,9 +27,11 @@ public class DeleteVolumeOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkipFinalBackup")
     public Boolean skipFinalBackup;
+
     public DeleteVolumeOntapConfiguration withSkipFinalBackup(Boolean skipFinalBackup) {
         this.skipFinalBackup = skipFinalBackup;
         return this;
     }
     
+    public DeleteVolumeOntapConfiguration(){}
 }

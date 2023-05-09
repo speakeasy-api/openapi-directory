@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPotTransactionsRequest {
@@ -12,6 +13,7 @@ public class GetPotTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public String from;
+
     public GetPotTransactionsRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -22,6 +24,7 @@ public class GetPotTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
     public String pageNumber;
+
     public GetPotTransactionsRequest withPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -32,6 +35,7 @@ public class GetPotTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public String pageSize;
+
     public GetPotTransactionsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -42,6 +46,7 @@ public class GetPotTransactionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pot_id")
     public String potId;
+
     public GetPotTransactionsRequest withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -52,6 +57,7 @@ public class GetPotTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetPotTransactionsSortEnum sort;
+
     public GetPotTransactionsRequest withSort(GetPotTransactionsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -62,6 +68,7 @@ public class GetPotTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub_transaction_type")
     public String subTransactionType;
+
     public GetPotTransactionsRequest withSubTransactionType(String subTransactionType) {
         this.subTransactionType = subTransactionType;
         return this;
@@ -72,6 +79,7 @@ public class GetPotTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public String to;
+
     public GetPotTransactionsRequest withTo(String to) {
         this.to = to;
         return this;
@@ -82,9 +90,14 @@ public class GetPotTransactionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetPotTransactionsRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetPotTransactionsRequest(@JsonProperty("pot_id") String potId, @JsonProperty("x-api-key") String xApiKey) {
+        this.potId = potId;
+        this.xApiKey = xApiKey;
+  }
 }

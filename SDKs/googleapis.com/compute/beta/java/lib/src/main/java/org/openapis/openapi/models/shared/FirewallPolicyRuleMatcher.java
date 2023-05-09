@@ -18,6 +18,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destAddressGroups")
     public String[] destAddressGroups;
+
     public FirewallPolicyRuleMatcher withDestAddressGroups(String[] destAddressGroups) {
         this.destAddressGroups = destAddressGroups;
         return this;
@@ -29,6 +30,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destFqdns")
     public String[] destFqdns;
+
     public FirewallPolicyRuleMatcher withDestFqdns(String[] destFqdns) {
         this.destFqdns = destFqdns;
         return this;
@@ -40,6 +42,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destIpRanges")
     public String[] destIpRanges;
+
     public FirewallPolicyRuleMatcher withDestIpRanges(String[] destIpRanges) {
         this.destIpRanges = destIpRanges;
         return this;
@@ -51,6 +54,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destRegionCodes")
     public String[] destRegionCodes;
+
     public FirewallPolicyRuleMatcher withDestRegionCodes(String[] destRegionCodes) {
         this.destRegionCodes = destRegionCodes;
         return this;
@@ -62,6 +66,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destThreatIntelligences")
     public String[] destThreatIntelligences;
+
     public FirewallPolicyRuleMatcher withDestThreatIntelligences(String[] destThreatIntelligences) {
         this.destThreatIntelligences = destThreatIntelligences;
         return this;
@@ -73,6 +78,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layer4Configs")
     public FirewallPolicyRuleMatcherLayer4Config[] layer4Configs;
+
     public FirewallPolicyRuleMatcher withLayer4Configs(FirewallPolicyRuleMatcherLayer4Config[] layer4Configs) {
         this.layer4Configs = layer4Configs;
         return this;
@@ -84,6 +90,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcAddressGroups")
     public String[] srcAddressGroups;
+
     public FirewallPolicyRuleMatcher withSrcAddressGroups(String[] srcAddressGroups) {
         this.srcAddressGroups = srcAddressGroups;
         return this;
@@ -95,6 +102,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcFqdns")
     public String[] srcFqdns;
+
     public FirewallPolicyRuleMatcher withSrcFqdns(String[] srcFqdns) {
         this.srcFqdns = srcFqdns;
         return this;
@@ -106,6 +114,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcIpRanges")
     public String[] srcIpRanges;
+
     public FirewallPolicyRuleMatcher withSrcIpRanges(String[] srcIpRanges) {
         this.srcIpRanges = srcIpRanges;
         return this;
@@ -117,6 +126,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcRegionCodes")
     public String[] srcRegionCodes;
+
     public FirewallPolicyRuleMatcher withSrcRegionCodes(String[] srcRegionCodes) {
         this.srcRegionCodes = srcRegionCodes;
         return this;
@@ -128,6 +138,7 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcSecureTags")
     public FirewallPolicyRuleSecureTag[] srcSecureTags;
+
     public FirewallPolicyRuleMatcher withSrcSecureTags(FirewallPolicyRuleSecureTag[] srcSecureTags) {
         this.srcSecureTags = srcSecureTags;
         return this;
@@ -139,9 +150,11 @@ public class FirewallPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcThreatIntelligences")
     public String[] srcThreatIntelligences;
+
     public FirewallPolicyRuleMatcher withSrcThreatIntelligences(String[] srcThreatIntelligences) {
         this.srcThreatIntelligences = srcThreatIntelligences;
         return this;
     }
     
+    public FirewallPolicyRuleMatcher(){}
 }

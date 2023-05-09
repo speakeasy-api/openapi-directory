@@ -58,11 +58,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CustomersResponse res = new org.openapis.openapi.models.operations.GetSetupV1CustomersResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CustomersResponse res = new org.openapis.openapi.models.operations.GetSetupV1CustomersResponse(contentType, httpRes.statusCode()) {{
             customerListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CustomersIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1CustomersIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CustomersIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1CustomersIdResponse(contentType, httpRes.statusCode()) {{
             customerViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CustomersIdPrivacyResponse res = new org.openapis.openapi.models.operations.GetSetupV1CustomersIdPrivacyResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CustomersIdPrivacyResponse res = new org.openapis.openapi.models.operations.GetSetupV1CustomersIdPrivacyResponse(contentType, httpRes.statusCode()) {{
             customerPrivacyViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

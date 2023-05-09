@@ -15,6 +15,7 @@ public class LambdaFunctionAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionNames")
     public StringFilter[] functionNames;
+
     public LambdaFunctionAggregation withFunctionNames(StringFilter[] functionNames) {
         this.functionNames = functionNames;
         return this;
@@ -23,6 +24,7 @@ public class LambdaFunctionAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionTags")
     public MapFilter[] functionTags;
+
     public LambdaFunctionAggregation withFunctionTags(MapFilter[] functionTags) {
         this.functionTags = functionTags;
         return this;
@@ -31,6 +33,7 @@ public class LambdaFunctionAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public StringFilter[] resourceIds;
+
     public LambdaFunctionAggregation withResourceIds(StringFilter[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -39,6 +42,7 @@ public class LambdaFunctionAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimes")
     public StringFilter[] runtimes;
+
     public LambdaFunctionAggregation withRuntimes(StringFilter[] runtimes) {
         this.runtimes = runtimes;
         return this;
@@ -47,6 +51,7 @@ public class LambdaFunctionAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public LambdaFunctionSortByEnum sortBy;
+
     public LambdaFunctionAggregation withSortBy(LambdaFunctionSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -55,9 +60,11 @@ public class LambdaFunctionAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public LambdaFunctionAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public LambdaFunctionAggregation(){}
 }

@@ -12,6 +12,7 @@ public class DeleteEnvironment404ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DeleteEnvironment404ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
@@ -20,9 +21,11 @@ public class DeleteEnvironment404ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeleteEnvironment404ApplicationJSONError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteEnvironment404ApplicationJSONError(){}
 }

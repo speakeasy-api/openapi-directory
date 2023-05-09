@@ -20,6 +20,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationImportFailure")
     public Long applicationImportFailure;
+
     public ImportTask withApplicationImportFailure(Long applicationImportFailure) {
         this.applicationImportFailure = applicationImportFailure;
         return this;
@@ -28,6 +29,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationImportSuccess")
     public Long applicationImportSuccess;
+
     public ImportTask withApplicationImportSuccess(Long applicationImportSuccess) {
         this.applicationImportSuccess = applicationImportSuccess;
         return this;
@@ -36,6 +38,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public ImportTask withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -44,6 +47,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorsAndFailedEntriesZip")
     public String errorsAndFailedEntriesZip;
+
     public ImportTask withErrorsAndFailedEntriesZip(String errorsAndFailedEntriesZip) {
         this.errorsAndFailedEntriesZip = errorsAndFailedEntriesZip;
         return this;
@@ -54,6 +58,7 @@ public class ImportTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("importCompletionTime")
     public OffsetDateTime importCompletionTime;
+
     public ImportTask withImportCompletionTime(OffsetDateTime importCompletionTime) {
         this.importCompletionTime = importCompletionTime;
         return this;
@@ -64,6 +69,7 @@ public class ImportTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("importDeletedTime")
     public OffsetDateTime importDeletedTime;
+
     public ImportTask withImportDeletedTime(OffsetDateTime importDeletedTime) {
         this.importDeletedTime = importDeletedTime;
         return this;
@@ -74,6 +80,7 @@ public class ImportTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("importRequestTime")
     public OffsetDateTime importRequestTime;
+
     public ImportTask withImportRequestTime(OffsetDateTime importRequestTime) {
         this.importRequestTime = importRequestTime;
         return this;
@@ -82,6 +89,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importTaskId")
     public String importTaskId;
+
     public ImportTask withImportTaskId(String importTaskId) {
         this.importTaskId = importTaskId;
         return this;
@@ -90,6 +98,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importUrl")
     public String importUrl;
+
     public ImportTask withImportUrl(String importUrl) {
         this.importUrl = importUrl;
         return this;
@@ -98,6 +107,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportTask withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +116,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverImportFailure")
     public Long serverImportFailure;
+
     public ImportTask withServerImportFailure(Long serverImportFailure) {
         this.serverImportFailure = serverImportFailure;
         return this;
@@ -114,6 +125,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverImportSuccess")
     public Long serverImportSuccess;
+
     public ImportTask withServerImportSuccess(Long serverImportSuccess) {
         this.serverImportSuccess = serverImportSuccess;
         return this;
@@ -122,9 +134,11 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ImportStatusEnum status;
+
     public ImportTask withStatus(ImportStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ImportTask(){}
 }

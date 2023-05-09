@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttributeDefinition {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public AttributeDefinition withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,14 @@ public class AttributeDefinition {
     
     @JsonProperty("AttributeType")
     public ScalarAttributeTypeEnum attributeType;
+
     public AttributeDefinition withAttributeType(ScalarAttributeTypeEnum attributeType) {
         this.attributeType = attributeType;
         return this;
     }
     
+    public AttributeDefinition(@JsonProperty("AttributeName") String attributeName, @JsonProperty("AttributeType") ScalarAttributeTypeEnum attributeType) {
+        this.attributeName = attributeName;
+        this.attributeType = attributeType;
+  }
 }

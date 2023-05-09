@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestPatchTestSeriesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TestPatchTestSeriesNameOfTheTestSeries requestBody;
+
     public TestPatchTestSeriesRequest withRequestBody(TestPatchTestSeriesNameOfTheTestSeries requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class TestPatchTestSeriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public TestPatchTestSeriesRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,6 +32,7 @@ public class TestPatchTestSeriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public TestPatchTestSeriesRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -39,9 +43,16 @@ public class TestPatchTestSeriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_series_slug")
     public String testSeriesSlug;
+
     public TestPatchTestSeriesRequest withTestSeriesSlug(String testSeriesSlug) {
         this.testSeriesSlug = testSeriesSlug;
         return this;
     }
     
+    public TestPatchTestSeriesRequest(@JsonProperty("RequestBody") TestPatchTestSeriesNameOfTheTestSeries requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("test_series_slug") String testSeriesSlug) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.testSeriesSlug = testSeriesSlug;
+  }
 }

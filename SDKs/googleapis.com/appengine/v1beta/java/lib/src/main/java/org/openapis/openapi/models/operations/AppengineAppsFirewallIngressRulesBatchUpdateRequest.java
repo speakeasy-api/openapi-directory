@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
@@ -12,6 +13,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchUpdateIngressRulesRequest batchUpdateIngressRulesRequest;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withBatchUpdateIngressRulesRequest(org.openapis.openapi.models.shared.BatchUpdateIngressRulesRequest batchUpdateIngressRulesRequest) {
         this.batchUpdateIngressRulesRequest = batchUpdateIngressRulesRequest;
         return this;
@@ -29,6 +32,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
     public String appsId;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withAppsId(String appsId) {
         this.appsId = appsId;
         return this;
@@ -59,6 +65,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest(@JsonProperty("appsId") String appsId) {
+        this.appsId = appsId;
+  }
 }

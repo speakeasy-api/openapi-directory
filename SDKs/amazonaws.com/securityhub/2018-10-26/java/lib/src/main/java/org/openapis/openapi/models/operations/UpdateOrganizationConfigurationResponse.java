@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateOrganizationConfigurationResponse {
     
     public String contentType;
+
     public UpdateOrganizationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public Object internalException;
+
     public UpdateOrganizationConfigurationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public Object invalidAccessException;
+
     public UpdateOrganizationConfigurationResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateOrganizationConfigurationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateOrganizationConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateOrganizationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateOrganizationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateOrganizationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateOrganizationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateOrganizationConfigurationResponse;
+
     public UpdateOrganizationConfigurationResponse withUpdateOrganizationConfigurationResponse(java.util.Map<String, Object> updateOrganizationConfigurationResponse) {
         this.updateOrganizationConfigurationResponse = updateOrganizationConfigurationResponse;
         return this;
     }
     
+    public UpdateOrganizationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class TestOrderDeliveryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public TestOrderAddress address;
+
     public TestOrderDeliveryDetails withAddress(TestOrderAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class TestOrderDeliveryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isScheduledDelivery")
     public Boolean isScheduledDelivery;
+
     public TestOrderDeliveryDetails withIsScheduledDelivery(Boolean isScheduledDelivery) {
         this.isScheduledDelivery = isScheduledDelivery;
         return this;
@@ -34,9 +36,11 @@ public class TestOrderDeliveryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public TestOrderDeliveryDetails withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public TestOrderDeliveryDetails(){}
 }

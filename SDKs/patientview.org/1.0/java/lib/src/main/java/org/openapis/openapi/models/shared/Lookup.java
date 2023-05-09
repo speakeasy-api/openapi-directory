@@ -19,6 +19,7 @@ public class Lookup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Lookup withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class Lookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Lookup withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class Lookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptionFriendly")
     public String descriptionFriendly;
+
     public Lookup withDescriptionFriendly(String descriptionFriendly) {
         this.descriptionFriendly = descriptionFriendly;
         return this;
@@ -43,6 +46,7 @@ public class Lookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayOrder")
     public Long displayOrder;
+
     public Lookup withDisplayOrder(Long displayOrder) {
         this.displayOrder = displayOrder;
         return this;
@@ -51,6 +55,7 @@ public class Lookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Lookup withId(Long id) {
         this.id = id;
         return this;
@@ -61,6 +66,7 @@ public class Lookup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public Lookup withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -69,6 +75,7 @@ public class Lookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookupType")
     public LookupType lookupType;
+
     public Lookup withLookupType(LookupType lookupType) {
         this.lookupType = lookupType;
         return this;
@@ -77,9 +84,11 @@ public class Lookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Lookup withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Lookup(){}
 }

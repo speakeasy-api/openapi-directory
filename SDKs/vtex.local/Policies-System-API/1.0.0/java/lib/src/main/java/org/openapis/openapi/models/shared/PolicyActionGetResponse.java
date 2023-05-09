@@ -15,6 +15,7 @@ public class PolicyActionGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PolicyActionGetResponse withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class PolicyActionGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public PolicyActionGetResponse withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public PolicyActionGetResponse(){}
 }

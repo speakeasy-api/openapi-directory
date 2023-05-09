@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetRequest {
@@ -12,9 +13,13 @@ public class GetAssetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
     public String assetId;
+
     public GetAssetRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
     }
     
+    public GetAssetRequest(@JsonProperty("asset_id") String assetId) {
+        this.assetId = assetId;
+  }
 }

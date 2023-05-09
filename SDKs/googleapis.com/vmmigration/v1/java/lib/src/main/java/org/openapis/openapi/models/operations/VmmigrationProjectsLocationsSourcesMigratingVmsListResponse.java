@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VmmigrationProjectsLocationsSourcesMigratingVmsListResponse {
     
     public String contentType;
+
     public VmmigrationProjectsLocationsSourcesMigratingVmsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VmmigrationProjectsLocationsSourcesMigratingVmsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMigratingVmsResponse listMigratingVmsResponse;
+
     public VmmigrationProjectsLocationsSourcesMigratingVmsListResponse withListMigratingVmsResponse(org.openapis.openapi.models.shared.ListMigratingVmsResponse listMigratingVmsResponse) {
         this.listMigratingVmsResponse = listMigratingVmsResponse;
         return this;
@@ -26,6 +29,7 @@ public class VmmigrationProjectsLocationsSourcesMigratingVmsListResponse {
     
     
     public Integer statusCode;
+
     public VmmigrationProjectsLocationsSourcesMigratingVmsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VmmigrationProjectsLocationsSourcesMigratingVmsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VmmigrationProjectsLocationsSourcesMigratingVmsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VmmigrationProjectsLocationsSourcesMigratingVmsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

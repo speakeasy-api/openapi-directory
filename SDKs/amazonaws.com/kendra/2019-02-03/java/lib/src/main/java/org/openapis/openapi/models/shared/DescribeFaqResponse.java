@@ -22,6 +22,7 @@ public class DescribeFaqResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeFaqResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeFaqResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeFaqResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -46,6 +49,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFormat")
     public FaqFileFormatEnum fileFormat;
+
     public DescribeFaqResponse withFileFormat(FaqFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -54,6 +58,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeFaqResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeFaqResponse withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -70,6 +76,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public DescribeFaqResponse withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -78,6 +85,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeFaqResponse withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeFaqResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -97,6 +106,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Path")
     public S3Path s3Path;
+
     public DescribeFaqResponse withS3Path(S3Path s3Path) {
         this.s3Path = s3Path;
         return this;
@@ -105,6 +115,7 @@ public class DescribeFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FaqStatusEnum status;
+
     public DescribeFaqResponse withStatus(FaqStatusEnum status) {
         this.status = status;
         return this;
@@ -115,9 +126,11 @@ public class DescribeFaqResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeFaqResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DescribeFaqResponse(){}
 }

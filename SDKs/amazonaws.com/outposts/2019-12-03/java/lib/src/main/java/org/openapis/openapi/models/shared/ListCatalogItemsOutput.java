@@ -15,6 +15,7 @@ public class ListCatalogItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogItems")
     public CatalogItem[] catalogItems;
+
     public ListCatalogItemsOutput withCatalogItems(CatalogItem[] catalogItems) {
         this.catalogItems = catalogItems;
         return this;
@@ -26,9 +27,11 @@ public class ListCatalogItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCatalogItemsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCatalogItemsOutput(){}
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetSecurity;
 import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetRequest;
 import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetResponse;
+import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -28,28 +27,29 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AdexchangebuyerAccountsGetRequest req = new AdexchangebuyerAccountsGetRequest() {{
-                alt = "json";
-                fields = "corrupti";
-                id = 592845;
+            AdexchangebuyerAccountsGetRequest req = new AdexchangebuyerAccountsGetRequest(548814L) {{
+                alt = AltEnum.JSON;
+                fields = "provident";
                 key = "distinctio";
                 oauthToken = "quibusdam";
                 prettyPrint = false;
                 quotaUser = "unde";
                 userIp = "nulla";
-            }}            
+            }};            
 
-            AdexchangebuyerAccountsGetResponse res = sdk.accounts.adexchangebuyerAccountsGet(req, new AdexchangebuyerAccountsGetSecurity() {{
+            AdexchangebuyerAccountsGetResponse res = sdk.accounts.adexchangebuyerAccountsGet(req, new AdexchangebuyerAccountsGetSecurity("corrupti", "illum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.account.isPresent()) {
+            if (res.account != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -57,18 +57,18 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `adexchangebuyerAccountsGet` - Gets one account by ID.
-* `adexchangebuyerAccountsList` - Retrieves the authenticated user's list of accounts.
-* `adexchangebuyerAccountsPatch` - Updates an existing account. This method supports patch semantics.
-* `adexchangebuyerAccountsUpdate` - Updates an existing account.
+* [adexchangebuyerAccountsGet](docs/accounts/README.md#adexchangebuyeraccountsget) - Gets one account by ID.
+* [adexchangebuyerAccountsList](docs/accounts/README.md#adexchangebuyeraccountslist) - Retrieves the authenticated user's list of accounts.
+* [adexchangebuyerAccountsPatch](docs/accounts/README.md#adexchangebuyeraccountspatch) - Updates an existing account. This method supports patch semantics.
+* [adexchangebuyerAccountsUpdate](docs/accounts/README.md#adexchangebuyeraccountsupdate) - Updates an existing account.
 
-### creatives
+### [creatives](docs/creatives/README.md)
 
-* `adexchangebuyerCreativesGet` - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
-* `adexchangebuyerCreativesInsert` - Submit a new creative.
-* `adexchangebuyerCreativesList` - Retrieves a list of the authenticated user's active creatives. A creative will be available 30-40 minutes after submission.
+* [adexchangebuyerCreativesGet](docs/creatives/README.md#adexchangebuyercreativesget) - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
+* [adexchangebuyerCreativesInsert](docs/creatives/README.md#adexchangebuyercreativesinsert) - Submit a new creative.
+* [adexchangebuyerCreativesList](docs/creatives/README.md#adexchangebuyercreativeslist) - Retrieves a list of the authenticated user's active creatives. A creative will be available 30-40 minutes after submission.
 <!-- End SDK Available Operations -->
 
 ### Maturity

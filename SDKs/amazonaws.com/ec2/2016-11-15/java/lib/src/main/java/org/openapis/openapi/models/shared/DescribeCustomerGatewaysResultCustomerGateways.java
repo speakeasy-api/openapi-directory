@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCustomerGatewaysResultCustomerGateways {
     
     public String bgpAsn;
+
     public DescribeCustomerGatewaysResultCustomerGateways withBgpAsn(String bgpAsn) {
         this.bgpAsn = bgpAsn;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCustomerGatewaysResultCustomerGateways {
     
     
     public String certificateArn;
+
     public DescribeCustomerGatewaysResultCustomerGateways withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeCustomerGatewaysResultCustomerGateways {
     
     
     public String customerGatewayId;
+
     public DescribeCustomerGatewaysResultCustomerGateways withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeCustomerGatewaysResultCustomerGateways {
     
     
     public String deviceName;
+
     public DescribeCustomerGatewaysResultCustomerGateways withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -40,6 +44,7 @@ public class DescribeCustomerGatewaysResultCustomerGateways {
     
     
     public String ipAddress;
+
     public DescribeCustomerGatewaysResultCustomerGateways withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -47,6 +52,7 @@ public class DescribeCustomerGatewaysResultCustomerGateways {
     
     
     public String state;
+
     public DescribeCustomerGatewaysResultCustomerGateways withState(String state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class DescribeCustomerGatewaysResultCustomerGateways {
     
     
     public DescribeCustomerGatewaysResultCustomerGatewaysTags[] tags;
+
     public DescribeCustomerGatewaysResultCustomerGateways withTags(DescribeCustomerGatewaysResultCustomerGatewaysTags[] tags) {
         this.tags = tags;
         return this;
@@ -61,9 +68,11 @@ public class DescribeCustomerGatewaysResultCustomerGateways {
     
     
     public String type;
+
     public DescribeCustomerGatewaysResultCustomerGateways withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DescribeCustomerGatewaysResultCustomerGateways(){}
 }

@@ -130,6 +130,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -154,11 +159,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfsSlatesByDateResponse res = new org.openapis.openapi.models.operations.DfsSlatesByDateResponse() {{
+        org.openapis.openapi.models.operations.DfsSlatesByDateResponse res = new org.openapis.openapi.models.operations.DfsSlatesByDateResponse(contentType, httpRes.statusCode()) {{
             dfsSlates = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +197,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateResponse res = new org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateResponse() {{
+        org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateResponse res = new org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateResponse(contentType, httpRes.statusCode()) {{
             playerGameProjections = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +235,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerResponse res = new org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerResponse() {{
+        org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerResponse res = new org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerResponse(contentType, httpRes.statusCode()) {{
             playerGameProjections = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

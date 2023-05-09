@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAvailableManagementCidrRangesRequest {
     @JsonProperty("ManagementCidrRangeConstraint")
     public String managementCidrRangeConstraint;
+
     public ListAvailableManagementCidrRangesRequest withManagementCidrRangeConstraint(String managementCidrRangeConstraint) {
         this.managementCidrRangeConstraint = managementCidrRangeConstraint;
         return this;
@@ -19,6 +20,7 @@ public class ListAvailableManagementCidrRangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAvailableManagementCidrRangesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListAvailableManagementCidrRangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAvailableManagementCidrRangesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAvailableManagementCidrRangesRequest(@JsonProperty("ManagementCidrRangeConstraint") String managementCidrRangeConstraint) {
+        this.managementCidrRangeConstraint = managementCidrRangeConstraint;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectLogsConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogs")
     public AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails cloudWatchLogs;
+
     public AwsCodeBuildProjectLogsConfigDetails withCloudWatchLogs(AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -23,9 +24,11 @@ public class AwsCodeBuildProjectLogsConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Logs")
     public AwsCodeBuildProjectLogsConfigS3LogsDetails s3Logs;
+
     public AwsCodeBuildProjectLogsConfigDetails withS3Logs(AwsCodeBuildProjectLogsConfigS3LogsDetails s3Logs) {
         this.s3Logs = s3Logs;
         return this;
     }
     
+    public AwsCodeBuildProjectLogsConfigDetails(){}
 }

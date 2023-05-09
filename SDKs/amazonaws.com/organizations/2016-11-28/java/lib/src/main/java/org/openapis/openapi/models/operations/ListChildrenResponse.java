@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListChildrenResponse {
@@ -12,6 +13,7 @@ public class ListChildrenResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListChildrenResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListChildrenResponse {
      */
     
     public Object accessDeniedException;
+
     public ListChildrenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class ListChildrenResponse {
     
     
     public String contentType;
+
     public ListChildrenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListChildrenResponse {
      */
     
     public Object invalidInputException;
+
     public ListChildrenResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListChildrenResponse {
      */
     
     public org.openapis.openapi.models.shared.ListChildrenResponse listChildrenResponse;
+
     public ListChildrenResponse withListChildrenResponse(org.openapis.openapi.models.shared.ListChildrenResponse listChildrenResponse) {
         this.listChildrenResponse = listChildrenResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListChildrenResponse {
      */
     
     public Object parentNotFoundException;
+
     public ListChildrenResponse withParentNotFoundException(Object parentNotFoundException) {
         this.parentNotFoundException = parentNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListChildrenResponse {
      */
     
     public Object serviceException;
+
     public ListChildrenResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListChildrenResponse {
     
     
     public Integer statusCode;
+
     public ListChildrenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListChildrenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListChildrenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListChildrenResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListChildrenResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListChildrenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

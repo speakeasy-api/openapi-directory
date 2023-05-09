@@ -18,6 +18,7 @@ public class ListPretargetingConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPretargetingConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPretargetingConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pretargetingConfigs")
     public PretargetingConfig[] pretargetingConfigs;
+
     public ListPretargetingConfigsResponse withPretargetingConfigs(PretargetingConfig[] pretargetingConfigs) {
         this.pretargetingConfigs = pretargetingConfigs;
         return this;
     }
     
+    public ListPretargetingConfigsResponse(){}
 }

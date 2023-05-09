@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsCrashGroupOperatingSystemCountsResponse {
@@ -12,6 +13,7 @@ public class AnalyticsCrashGroupOperatingSystemCountsResponse {
      */
     
     public AnalyticsCrashGroupOperatingSystemCounts200ApplicationJSON analyticsCrashGroupOperatingSystemCounts200ApplicationJSONObject;
+
     public AnalyticsCrashGroupOperatingSystemCountsResponse withAnalyticsCrashGroupOperatingSystemCounts200ApplicationJSONObject(AnalyticsCrashGroupOperatingSystemCounts200ApplicationJSON analyticsCrashGroupOperatingSystemCounts200ApplicationJSONObject) {
         this.analyticsCrashGroupOperatingSystemCounts200ApplicationJSONObject = analyticsCrashGroupOperatingSystemCounts200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsCrashGroupOperatingSystemCountsResponse {
      */
     
     public AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSON analyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONObject;
+
     public AnalyticsCrashGroupOperatingSystemCountsResponse withAnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONObject(AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSON analyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONObject) {
         this.analyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONObject = analyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsCrashGroupOperatingSystemCountsResponse {
     
     
     public String contentType;
+
     public AnalyticsCrashGroupOperatingSystemCountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsCrashGroupOperatingSystemCountsResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsCrashGroupOperatingSystemCountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsCrashGroupOperatingSystemCountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsCrashGroupOperatingSystemCountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsCrashGroupOperatingSystemCountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

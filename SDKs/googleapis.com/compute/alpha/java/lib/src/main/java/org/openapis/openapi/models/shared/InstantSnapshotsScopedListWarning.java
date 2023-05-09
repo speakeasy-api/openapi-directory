@@ -18,6 +18,7 @@ public class InstantSnapshotsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstantSnapshotsScopedListWarningCodeEnum code;
+
     public InstantSnapshotsScopedListWarning withCode(InstantSnapshotsScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstantSnapshotsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstantSnapshotsScopedListWarningData[] data;
+
     public InstantSnapshotsScopedListWarning withData(InstantSnapshotsScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstantSnapshotsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstantSnapshotsScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstantSnapshotsScopedListWarning(){}
 }

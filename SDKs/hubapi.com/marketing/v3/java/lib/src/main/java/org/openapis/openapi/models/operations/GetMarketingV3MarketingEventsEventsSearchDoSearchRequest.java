@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMarketingV3MarketingEventsEventsSearchDoSearchRequest {
@@ -12,9 +13,13 @@ public class GetMarketingV3MarketingEventsEventsSearchDoSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetMarketingV3MarketingEventsEventsSearchDoSearchRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetMarketingV3MarketingEventsEventsSearchDoSearchRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

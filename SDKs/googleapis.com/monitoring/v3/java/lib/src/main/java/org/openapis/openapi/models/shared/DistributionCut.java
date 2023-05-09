@@ -18,6 +18,7 @@ public class DistributionCut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionFilter")
     public String distributionFilter;
+
     public DistributionCut withDistributionFilter(String distributionFilter) {
         this.distributionFilter = distributionFilter;
         return this;
@@ -29,9 +30,11 @@ public class DistributionCut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GoogleMonitoringV3Range range;
+
     public DistributionCut withRange(GoogleMonitoringV3Range range) {
         this.range = range;
         return this;
     }
     
+    public DistributionCut(){}
 }

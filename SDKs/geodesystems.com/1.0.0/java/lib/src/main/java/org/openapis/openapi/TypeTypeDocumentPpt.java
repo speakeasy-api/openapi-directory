@@ -57,10 +57,8 @@ public class TypeTypeDocumentPpt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeDocumentPptResponse res = new org.openapis.openapi.models.operations.SearchTypeDocumentPptResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeDocumentPptResponse res = new org.openapis.openapi.models.operations.SearchTypeDocumentPptResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

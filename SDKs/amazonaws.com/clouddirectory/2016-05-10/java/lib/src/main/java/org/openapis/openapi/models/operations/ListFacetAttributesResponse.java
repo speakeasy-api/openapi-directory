@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFacetAttributesResponse {
@@ -12,6 +13,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public ListFacetAttributesResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFacetAttributesResponse {
     
     
     public String contentType;
+
     public ListFacetAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.FacetNotFoundException facetNotFoundException;
+
     public ListFacetAttributesResponse withFacetNotFoundException(org.openapis.openapi.models.shared.FacetNotFoundException facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public ListFacetAttributesResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public ListFacetAttributesResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException;
+
     public ListFacetAttributesResponse withInvalidNextTokenException(org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public ListFacetAttributesResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFacetAttributesResponse listFacetAttributesResponse;
+
     public ListFacetAttributesResponse withListFacetAttributesResponse(org.openapis.openapi.models.shared.ListFacetAttributesResponse listFacetAttributesResponse) {
         this.listFacetAttributesResponse = listFacetAttributesResponse;
         return this;
@@ -86,6 +95,7 @@ public class ListFacetAttributesResponse {
     
     
     public Integer statusCode;
+
     public ListFacetAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListFacetAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFacetAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public ListFacetAttributesResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public ListFacetAttributesResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public ListFacetAttributesResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFacetAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionCh
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldId")
     public String fieldId;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionCh
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionCh
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties properties;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest withProperties(GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties properties) {
         this.properties = properties;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionCh
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest(){}
 }

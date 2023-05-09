@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatasetGroupResponse {
     
     public String contentType;
+
     public DeleteDatasetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDatasetGroupResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteDatasetGroupResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatasetGroupResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteDatasetGroupResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatasetGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDatasetGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDatasetGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatasetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteDatasetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatasetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDatasetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

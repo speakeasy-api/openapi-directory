@@ -15,6 +15,7 @@ public class AssetPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public AssetPropertySummary withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -23,6 +24,7 @@ public class AssetPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetCompositeModelId")
     public String assetCompositeModelId;
+
     public AssetPropertySummary withAssetCompositeModelId(String assetCompositeModelId) {
         this.assetCompositeModelId = assetCompositeModelId;
         return this;
@@ -31,6 +33,7 @@ public class AssetPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssetPropertySummary withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class AssetPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public PropertyNotification notification;
+
     public AssetPropertySummary withNotification(PropertyNotification notification) {
         this.notification = notification;
         return this;
@@ -50,9 +54,11 @@ public class AssetPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public AssetPropertySummary withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public AssetPropertySummary(){}
 }

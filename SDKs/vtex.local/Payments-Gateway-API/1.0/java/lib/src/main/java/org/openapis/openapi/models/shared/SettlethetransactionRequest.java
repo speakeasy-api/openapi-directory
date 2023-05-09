@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SettlethetransactionRequest {
     @JsonProperty("value")
     public Integer value;
+
     public SettlethetransactionRequest withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public SettlethetransactionRequest(@JsonProperty("value") Integer value) {
+        this.value = value;
+  }
 }

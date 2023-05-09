@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFleetAdvisorCollectorRequest {
     @JsonProperty("CollectorName")
     public String collectorName;
+
     public CreateFleetAdvisorCollectorRequest withCollectorName(String collectorName) {
         this.collectorName = collectorName;
         return this;
@@ -19,6 +20,7 @@ public class CreateFleetAdvisorCollectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateFleetAdvisorCollectorRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateFleetAdvisorCollectorRequest {
     
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public CreateFleetAdvisorCollectorRequest withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -33,9 +36,15 @@ public class CreateFleetAdvisorCollectorRequest {
     
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public CreateFleetAdvisorCollectorRequest withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
     }
     
+    public CreateFleetAdvisorCollectorRequest(@JsonProperty("CollectorName") String collectorName, @JsonProperty("S3BucketName") String s3BucketName, @JsonProperty("ServiceAccessRoleArn") String serviceAccessRoleArn) {
+        this.collectorName = collectorName;
+        this.s3BucketName = s3BucketName;
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
+  }
 }

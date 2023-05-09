@@ -18,6 +18,7 @@ public class LinuxNodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cgroupMode")
     public LinuxNodeConfigCgroupModeEnum cgroupMode;
+
     public LinuxNodeConfig withCgroupMode(LinuxNodeConfigCgroupModeEnum cgroupMode) {
         this.cgroupMode = cgroupMode;
         return this;
@@ -29,9 +30,11 @@ public class LinuxNodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sysctls")
     public java.util.Map<String, String> sysctls;
+
     public LinuxNodeConfig withSysctls(java.util.Map<String, String> sysctls) {
         this.sysctls = sysctls;
         return this;
     }
     
+    public LinuxNodeConfig(){}
 }

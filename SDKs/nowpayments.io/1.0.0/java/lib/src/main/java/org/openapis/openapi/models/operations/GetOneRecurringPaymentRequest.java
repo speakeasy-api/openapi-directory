@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOneRecurringPaymentRequest {
     @SpeakeasyMetadata("request:mediaType=text/plain")
     public byte[] requestBody;
+
     public GetOneRecurringPaymentRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class GetOneRecurringPaymentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sub_id")
     public String subId;
+
     public GetOneRecurringPaymentRequest withSubId(String subId) {
         this.subId = subId;
         return this;
@@ -23,9 +26,13 @@ public class GetOneRecurringPaymentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetOneRecurringPaymentRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetOneRecurringPaymentRequest(@JsonProperty("sub_id") String subId) {
+        this.subId = subId;
+  }
 }

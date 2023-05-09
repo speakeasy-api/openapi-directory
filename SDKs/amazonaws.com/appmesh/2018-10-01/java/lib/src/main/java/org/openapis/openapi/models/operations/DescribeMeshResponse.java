@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMeshResponse {
@@ -12,6 +13,7 @@ public class DescribeMeshResponse {
      */
     
     public Object badRequestException;
+
     public DescribeMeshResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMeshResponse {
     
     
     public String contentType;
+
     public DescribeMeshResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMeshResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMeshOutput describeMeshOutput;
+
     public DescribeMeshResponse withDescribeMeshOutput(org.openapis.openapi.models.shared.DescribeMeshOutput describeMeshOutput) {
         this.describeMeshOutput = describeMeshOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMeshResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeMeshResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMeshResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeMeshResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeMeshResponse {
      */
     
     public Object notFoundException;
+
     public DescribeMeshResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeMeshResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeMeshResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeMeshResponse {
     
     
     public Integer statusCode;
+
     public DescribeMeshResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeMeshResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMeshResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeMeshResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeMeshResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeMeshResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

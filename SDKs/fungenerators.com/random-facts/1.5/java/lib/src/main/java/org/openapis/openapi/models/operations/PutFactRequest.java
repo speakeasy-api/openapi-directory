@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutFactRequest {
@@ -12,6 +13,7 @@ public class PutFactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public PutFactRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -22,6 +24,7 @@ public class PutFactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fact")
     public String fact;
+
     public PutFactRequest withFact(String fact) {
         this.fact = fact;
         return this;
@@ -32,6 +35,7 @@ public class PutFactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subcategory")
     public String subcategory;
+
     public PutFactRequest withSubcategory(String subcategory) {
         this.subcategory = subcategory;
         return this;
@@ -42,9 +46,16 @@ public class PutFactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public PutFactRequest withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutFactRequest(@JsonProperty("category") String category, @JsonProperty("fact") String fact, @JsonProperty("subcategory") String subcategory, @JsonProperty("tags") String tags) {
+        this.category = category;
+        this.fact = fact;
+        this.subcategory = subcategory;
+        this.tags = tags;
+  }
 }

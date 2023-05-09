@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersChannelsSitesReplaceResponse {
     
     public String contentType;
+
     public DisplayvideoAdvertisersChannelsSitesReplaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersChannelsSitesReplaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ReplaceSitesResponse replaceSitesResponse;
+
     public DisplayvideoAdvertisersChannelsSitesReplaceResponse withReplaceSitesResponse(org.openapis.openapi.models.shared.ReplaceSitesResponse replaceSitesResponse) {
         this.replaceSitesResponse = replaceSitesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersChannelsSitesReplaceResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersChannelsSitesReplaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersChannelsSitesReplaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersChannelsSitesReplaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersChannelsSitesReplaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

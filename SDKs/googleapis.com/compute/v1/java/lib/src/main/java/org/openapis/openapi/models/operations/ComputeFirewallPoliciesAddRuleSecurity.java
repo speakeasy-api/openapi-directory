@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeFirewallPoliciesAddRuleSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeFirewallPoliciesAddRuleSecurityOption1 option1;
+
     public ComputeFirewallPoliciesAddRuleSecurity withOption1(ComputeFirewallPoliciesAddRuleSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeFirewallPoliciesAddRuleSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeFirewallPoliciesAddRuleSecurityOption2 option2;
+
     public ComputeFirewallPoliciesAddRuleSecurity withOption2(ComputeFirewallPoliciesAddRuleSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeFirewallPoliciesAddRuleSecurity(){}
 }

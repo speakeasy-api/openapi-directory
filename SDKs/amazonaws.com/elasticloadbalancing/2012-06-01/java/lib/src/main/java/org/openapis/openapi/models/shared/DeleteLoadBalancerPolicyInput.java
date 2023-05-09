@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteLoadBalancerPolicyInput - Contains the parameters for DeleteLoadBalancerPolicy.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLoadBalancerPolicyInput {
     
     public String loadBalancerName;
+
     public DeleteLoadBalancerPolicyInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteLoadBalancerPolicyInput {
     
     
     public String policyName;
+
     public DeleteLoadBalancerPolicyInput withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public DeleteLoadBalancerPolicyInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("PolicyName") String policyName) {
+        this.loadBalancerName = loadBalancerName;
+        this.policyName = policyName;
+  }
 }

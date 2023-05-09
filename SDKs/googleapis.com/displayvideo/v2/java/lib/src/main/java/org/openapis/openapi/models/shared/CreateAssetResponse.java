@@ -18,9 +18,11 @@ public class CreateAssetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public Asset asset;
+
     public CreateAssetResponse withAsset(Asset asset) {
         this.asset = asset;
         return this;
     }
     
+    public CreateAssetResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NotifyResourceDeploymentStatusChangeResponse {
@@ -12,6 +13,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
      */
     
     public Object accessDeniedException;
+
     public NotifyResourceDeploymentStatusChangeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
      */
     
     public Object conflictException;
+
     public NotifyResourceDeploymentStatusChangeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
     
     
     public String contentType;
+
     public NotifyResourceDeploymentStatusChangeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
      */
     
     public Object internalServerException;
+
     public NotifyResourceDeploymentStatusChangeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
      */
     
     public java.util.Map<String, Object> notifyResourceDeploymentStatusChangeOutput;
+
     public NotifyResourceDeploymentStatusChangeResponse withNotifyResourceDeploymentStatusChangeOutput(java.util.Map<String, Object> notifyResourceDeploymentStatusChangeOutput) {
         this.notifyResourceDeploymentStatusChangeOutput = notifyResourceDeploymentStatusChangeOutput;
         return this;
@@ -59,6 +65,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public NotifyResourceDeploymentStatusChangeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public NotifyResourceDeploymentStatusChangeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
     
     
     public Integer statusCode;
+
     public NotifyResourceDeploymentStatusChangeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NotifyResourceDeploymentStatusChangeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class NotifyResourceDeploymentStatusChangeResponse {
      */
     
     public Object throttlingException;
+
     public NotifyResourceDeploymentStatusChangeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class NotifyResourceDeploymentStatusChangeResponse {
      */
     
     public Object validationException;
+
     public NotifyResourceDeploymentStatusChangeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public NotifyResourceDeploymentStatusChangeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

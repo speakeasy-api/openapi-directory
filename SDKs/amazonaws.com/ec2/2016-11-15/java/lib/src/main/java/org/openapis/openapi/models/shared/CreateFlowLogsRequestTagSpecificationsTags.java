@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFlowLogsRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateFlowLogsRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateFlowLogsRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateFlowLogsRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateFlowLogsRequestTagSpecificationsTags(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLogsResponse {
     
     public String contentType;
+
     public GetLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLogsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetLogsResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetLogsResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetLogsResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -36,6 +40,7 @@ public class GetLogsResponse {
     
     
     public Integer statusCode;
+
     public GetLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -52,10 +58,15 @@ public class GetLogsResponse {
      * Returns the log file
      */
     
-    public String getLogs200TextPlainBinaryString;
-    public GetLogsResponse withGetLogs200TextPlainBinaryString(String getLogs200TextPlainBinaryString) {
+    public byte[] getLogs200TextPlainBinaryString;
+
+    public GetLogsResponse withGetLogs200TextPlainBinaryString(byte[] getLogs200TextPlainBinaryString) {
         this.getLogs200TextPlainBinaryString = getLogs200TextPlainBinaryString;
         return this;
     }
     
+    public GetLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

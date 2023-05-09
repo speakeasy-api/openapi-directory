@@ -15,6 +15,7 @@ public class Translation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public Translation withFrom(String from) {
         this.from = from;
         return this;
@@ -26,6 +27,7 @@ public class Translation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalText")
     public String originalText;
+
     public Translation withOriginalText(String originalText) {
         this.originalText = originalText;
         return this;
@@ -37,6 +39,7 @@ public class Translation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public Translation withTo(String to) {
         this.to = to;
         return this;
@@ -48,9 +51,11 @@ public class Translation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translatedText")
     public String translatedText;
+
     public Translation withTranslatedText(String translatedText) {
         this.translatedText = translatedText;
         return this;
     }
     
+    public Translation(){}
 }

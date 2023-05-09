@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutReportDefinitionResponse {
     
     public String contentType;
+
     public PutReportDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutReportDefinitionResponse {
      */
     
     public Object duplicateReportNameException;
+
     public PutReportDefinitionResponse withDuplicateReportNameException(Object duplicateReportNameException) {
         this.duplicateReportNameException = duplicateReportNameException;
         return this;
@@ -29,6 +32,7 @@ public class PutReportDefinitionResponse {
      */
     
     public Object internalErrorException;
+
     public PutReportDefinitionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class PutReportDefinitionResponse {
      */
     
     public java.util.Map<String, Object> putReportDefinitionResponse;
+
     public PutReportDefinitionResponse withPutReportDefinitionResponse(java.util.Map<String, Object> putReportDefinitionResponse) {
         this.putReportDefinitionResponse = putReportDefinitionResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutReportDefinitionResponse {
     
     
     public Integer statusCode;
+
     public PutReportDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutReportDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutReportDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class PutReportDefinitionResponse {
      */
     
     public Object reportLimitReachedException;
+
     public PutReportDefinitionResponse withReportLimitReachedException(Object reportLimitReachedException) {
         this.reportLimitReachedException = reportLimitReachedException;
         return this;
@@ -73,9 +81,14 @@ public class PutReportDefinitionResponse {
      */
     
     public Object validationException;
+
     public PutReportDefinitionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutReportDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

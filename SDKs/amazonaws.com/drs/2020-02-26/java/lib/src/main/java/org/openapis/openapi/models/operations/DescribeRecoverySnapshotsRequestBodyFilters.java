@@ -15,6 +15,7 @@ public class DescribeRecoverySnapshotsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromDateTime")
     public String fromDateTime;
+
     public DescribeRecoverySnapshotsRequestBodyFilters withFromDateTime(String fromDateTime) {
         this.fromDateTime = fromDateTime;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRecoverySnapshotsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toDateTime")
     public String toDateTime;
+
     public DescribeRecoverySnapshotsRequestBodyFilters withToDateTime(String toDateTime) {
         this.toDateTime = toDateTime;
         return this;
     }
     
+    public DescribeRecoverySnapshotsRequestBodyFilters(){}
 }

@@ -15,6 +15,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public Page withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public ValueHolder[] values;
+
     public Page withValues(ValueHolder[] values) {
         this.values = values;
         return this;
     }
     
+    public Page(){}
 }

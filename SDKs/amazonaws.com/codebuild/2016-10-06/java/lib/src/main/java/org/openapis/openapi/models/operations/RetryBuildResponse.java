@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetryBuildResponse {
@@ -12,6 +13,7 @@ public class RetryBuildResponse {
      */
     
     public Object accountLimitExceededException;
+
     public RetryBuildResponse withAccountLimitExceededException(Object accountLimitExceededException) {
         this.accountLimitExceededException = accountLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class RetryBuildResponse {
     
     
     public String contentType;
+
     public RetryBuildResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RetryBuildResponse {
      */
     
     public Object invalidInputException;
+
     public RetryBuildResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class RetryBuildResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RetryBuildResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RetryBuildResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryBuildOutput retryBuildOutput;
+
     public RetryBuildResponse withRetryBuildOutput(org.openapis.openapi.models.shared.RetryBuildOutput retryBuildOutput) {
         this.retryBuildOutput = retryBuildOutput;
         return this;
@@ -56,6 +62,7 @@ public class RetryBuildResponse {
     
     
     public Integer statusCode;
+
     public RetryBuildResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class RetryBuildResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetryBuildResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetryBuildResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ConfigTypeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaDownlinkConfig")
     public AntennaDownlinkConfig antennaDownlinkConfig;
+
     public ConfigTypeData withAntennaDownlinkConfig(AntennaDownlinkConfig antennaDownlinkConfig) {
         this.antennaDownlinkConfig = antennaDownlinkConfig;
         return this;
@@ -23,6 +24,7 @@ public class ConfigTypeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaDownlinkDemodDecodeConfig")
     public AntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig;
+
     public ConfigTypeData withAntennaDownlinkDemodDecodeConfig(AntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig) {
         this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
         return this;
@@ -31,6 +33,7 @@ public class ConfigTypeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaUplinkConfig")
     public AntennaUplinkConfig antennaUplinkConfig;
+
     public ConfigTypeData withAntennaUplinkConfig(AntennaUplinkConfig antennaUplinkConfig) {
         this.antennaUplinkConfig = antennaUplinkConfig;
         return this;
@@ -39,6 +42,7 @@ public class ConfigTypeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointConfig")
     public DataflowEndpointConfig dataflowEndpointConfig;
+
     public ConfigTypeData withDataflowEndpointConfig(DataflowEndpointConfig dataflowEndpointConfig) {
         this.dataflowEndpointConfig = dataflowEndpointConfig;
         return this;
@@ -47,6 +51,7 @@ public class ConfigTypeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3RecordingConfig")
     public S3RecordingConfig s3RecordingConfig;
+
     public ConfigTypeData withS3RecordingConfig(S3RecordingConfig s3RecordingConfig) {
         this.s3RecordingConfig = s3RecordingConfig;
         return this;
@@ -55,6 +60,7 @@ public class ConfigTypeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingConfig")
     public TrackingConfig trackingConfig;
+
     public ConfigTypeData withTrackingConfig(TrackingConfig trackingConfig) {
         this.trackingConfig = trackingConfig;
         return this;
@@ -63,9 +69,11 @@ public class ConfigTypeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkEchoConfig")
     public UplinkEchoConfig uplinkEchoConfig;
+
     public ConfigTypeData withUplinkEchoConfig(UplinkEchoConfig uplinkEchoConfig) {
         this.uplinkEchoConfig = uplinkEchoConfig;
         return this;
     }
     
+    public ConfigTypeData(){}
 }

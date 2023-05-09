@@ -14,6 +14,7 @@ public class GetUploadedDocumentsRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public GetUploadedDocumentsRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -25,6 +26,7 @@ public class GetUploadedDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public GetUploadedDocumentsRequest withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -36,9 +38,13 @@ public class GetUploadedDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholderCode")
     public String shareholderCode;
+
     public GetUploadedDocumentsRequest withShareholderCode(String shareholderCode) {
         this.shareholderCode = shareholderCode;
         return this;
     }
     
+    public GetUploadedDocumentsRequest(@JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountHolderCode = accountHolderCode;
+  }
 }

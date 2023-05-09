@@ -18,6 +18,7 @@ public class RRSetRoutingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geo")
     public RRSetRoutingPolicyGeoPolicy geo;
+
     public RRSetRoutingPolicy withGeo(RRSetRoutingPolicyGeoPolicy geo) {
         this.geo = geo;
         return this;
@@ -29,6 +30,7 @@ public class RRSetRoutingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoPolicy")
     public RRSetRoutingPolicyGeoPolicy geoPolicy;
+
     public RRSetRoutingPolicy withGeoPolicy(RRSetRoutingPolicyGeoPolicy geoPolicy) {
         this.geoPolicy = geoPolicy;
         return this;
@@ -37,6 +39,7 @@ public class RRSetRoutingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RRSetRoutingPolicy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,6 +51,7 @@ public class RRSetRoutingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryBackup")
     public RRSetRoutingPolicyPrimaryBackupPolicy primaryBackup;
+
     public RRSetRoutingPolicy withPrimaryBackup(RRSetRoutingPolicyPrimaryBackupPolicy primaryBackup) {
         this.primaryBackup = primaryBackup;
         return this;
@@ -59,6 +63,7 @@ public class RRSetRoutingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrr")
     public RRSetRoutingPolicyWrrPolicy wrr;
+
     public RRSetRoutingPolicy withWrr(RRSetRoutingPolicyWrrPolicy wrr) {
         this.wrr = wrr;
         return this;
@@ -70,9 +75,11 @@ public class RRSetRoutingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrrPolicy")
     public RRSetRoutingPolicyWrrPolicy wrrPolicy;
+
     public RRSetRoutingPolicy withWrrPolicy(RRSetRoutingPolicyWrrPolicy wrrPolicy) {
         this.wrrPolicy = wrrPolicy;
         return this;
     }
     
+    public RRSetRoutingPolicy(){}
 }

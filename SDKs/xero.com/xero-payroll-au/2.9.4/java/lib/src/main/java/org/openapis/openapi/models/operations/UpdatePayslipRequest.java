@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePayslipRequest {
@@ -12,6 +13,7 @@ public class UpdatePayslipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayslipID")
     public String payslipID;
+
     public UpdatePayslipRequest withPayslipID(String payslipID) {
         this.payslipID = payslipID;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePayslipRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PayslipLines[] requestBody;
+
     public UpdatePayslipRequest withRequestBody(org.openapis.openapi.models.shared.PayslipLines[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,9 +32,14 @@ public class UpdatePayslipRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public UpdatePayslipRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public UpdatePayslipRequest(@JsonProperty("PayslipID") String payslipID, @JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.payslipID = payslipID;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

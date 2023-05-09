@@ -12,6 +12,7 @@ public class StartAttachmentUploadRequestBody {
      */
     @JsonProperty("AttachmentName")
     public String attachmentName;
+
     public StartAttachmentUploadRequestBody withAttachmentName(String attachmentName) {
         this.attachmentName = attachmentName;
         return this;
@@ -22,6 +23,7 @@ public class StartAttachmentUploadRequestBody {
      */
     @JsonProperty("AttachmentSizeInBytes")
     public Long attachmentSizeInBytes;
+
     public StartAttachmentUploadRequestBody withAttachmentSizeInBytes(Long attachmentSizeInBytes) {
         this.attachmentSizeInBytes = attachmentSizeInBytes;
         return this;
@@ -32,6 +34,7 @@ public class StartAttachmentUploadRequestBody {
      */
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartAttachmentUploadRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -42,9 +45,16 @@ public class StartAttachmentUploadRequestBody {
      */
     @JsonProperty("ContentType")
     public String contentType;
+
     public StartAttachmentUploadRequestBody withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public StartAttachmentUploadRequestBody(@JsonProperty("AttachmentName") String attachmentName, @JsonProperty("AttachmentSizeInBytes") Long attachmentSizeInBytes, @JsonProperty("ClientToken") String clientToken, @JsonProperty("ContentType") String contentType) {
+        this.attachmentName = attachmentName;
+        this.attachmentSizeInBytes = attachmentSizeInBytes;
+        this.clientToken = clientToken;
+        this.contentType = contentType;
+  }
 }

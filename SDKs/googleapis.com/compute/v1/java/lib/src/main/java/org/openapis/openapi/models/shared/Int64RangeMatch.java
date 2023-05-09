@@ -18,6 +18,7 @@ public class Int64RangeMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeEnd")
     public String rangeEnd;
+
     public Int64RangeMatch withRangeEnd(String rangeEnd) {
         this.rangeEnd = rangeEnd;
         return this;
@@ -29,9 +30,11 @@ public class Int64RangeMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeStart")
     public String rangeStart;
+
     public Int64RangeMatch withRangeStart(String rangeStart) {
         this.rangeStart = rangeStart;
         return this;
     }
     
+    public Int64RangeMatch(){}
 }

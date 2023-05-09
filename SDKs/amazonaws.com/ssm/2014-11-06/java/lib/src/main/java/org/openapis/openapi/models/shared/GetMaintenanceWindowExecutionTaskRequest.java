@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMaintenanceWindowExecutionTaskRequest {
     @JsonProperty("TaskId")
     public String taskId;
+
     public GetMaintenanceWindowExecutionTaskRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -16,9 +17,14 @@ public class GetMaintenanceWindowExecutionTaskRequest {
     
     @JsonProperty("WindowExecutionId")
     public String windowExecutionId;
+
     public GetMaintenanceWindowExecutionTaskRequest withWindowExecutionId(String windowExecutionId) {
         this.windowExecutionId = windowExecutionId;
         return this;
     }
     
+    public GetMaintenanceWindowExecutionTaskRequest(@JsonProperty("TaskId") String taskId, @JsonProperty("WindowExecutionId") String windowExecutionId) {
+        this.taskId = taskId;
+        this.windowExecutionId = windowExecutionId;
+  }
 }

@@ -12,6 +12,7 @@ public class SetCardCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstEd")
     public Double firstEd;
+
     public SetCardCount withFirstEd(Double firstEd) {
         this.firstEd = firstEd;
         return this;
@@ -20,6 +21,7 @@ public class SetCardCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holo")
     public Double holo;
+
     public SetCardCount withHolo(Double holo) {
         this.holo = holo;
         return this;
@@ -28,6 +30,7 @@ public class SetCardCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normal")
     public Double normal;
+
     public SetCardCount withNormal(Double normal) {
         this.normal = normal;
         return this;
@@ -35,6 +38,7 @@ public class SetCardCount {
     
     @JsonProperty("official")
     public Double official;
+
     public SetCardCount withOfficial(Double official) {
         this.official = official;
         return this;
@@ -43,6 +47,7 @@ public class SetCardCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reverse")
     public Double reverse;
+
     public SetCardCount withReverse(Double reverse) {
         this.reverse = reverse;
         return this;
@@ -50,9 +55,14 @@ public class SetCardCount {
     
     @JsonProperty("total")
     public Double total;
+
     public SetCardCount withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public SetCardCount(@JsonProperty("official") Double official, @JsonProperty("total") Double total) {
+        this.official = official;
+        this.total = total;
+  }
 }

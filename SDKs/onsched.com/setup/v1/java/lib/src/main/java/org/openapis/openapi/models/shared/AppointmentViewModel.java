@@ -15,6 +15,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditTrail")
     public AppointmentAuditViewModel[] auditTrail;
+
     public AppointmentViewModel withAuditTrail(AppointmentAuditViewModel[] auditTrail) {
         this.auditTrail = auditTrail;
         return this;
@@ -23,6 +24,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookedBy")
     public String bookedBy;
+
     public AppointmentViewModel withBookedBy(String bookedBy) {
         this.bookedBy = bookedBy;
         return this;
@@ -31,6 +33,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessName")
     public String businessName;
+
     public AppointmentViewModel withBusinessName(String businessName) {
         this.businessName = businessName;
         return this;
@@ -39,6 +42,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarId")
     public String calendarId;
+
     public AppointmentViewModel withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -47,6 +51,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationNumber")
     public String confirmationNumber;
+
     public AppointmentViewModel withConfirmationNumber(String confirmationNumber) {
         this.confirmationNumber = confirmationNumber;
         return this;
@@ -55,6 +60,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmed")
     public Boolean confirmed;
+
     public AppointmentViewModel withConfirmed(Boolean confirmed) {
         this.confirmed = confirmed;
         return this;
@@ -63,6 +69,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDate")
     public String createDate;
+
     public AppointmentViewModel withCreateDate(String createDate) {
         this.createDate = createDate;
         return this;
@@ -71,6 +78,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, CustomFieldViewModel> customFields;
+
     public AppointmentViewModel withCustomFields(java.util.Map<String, CustomFieldViewModel> customFields) {
         this.customFields = customFields;
         return this;
@@ -79,6 +87,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public AppointmentViewModel withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -87,6 +96,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerMessage")
     public String customerMessage;
+
     public AppointmentViewModel withCustomerMessage(String customerMessage) {
         this.customerMessage = customerMessage;
         return this;
@@ -95,6 +105,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customers")
     public AppointmentCustomerViewModel[] customers;
+
     public AppointmentViewModel withCustomers(AppointmentCustomerViewModel[] customers) {
         this.customers = customers;
         return this;
@@ -103,6 +114,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public AppointmentViewModel withDate(String date) {
         this.date = date;
         return this;
@@ -111,6 +123,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateInternational")
     public String dateInternational;
+
     public AppointmentViewModel withDateInternational(String dateInternational) {
         this.dateInternational = dateInternational;
         return this;
@@ -119,6 +132,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadIcsUrl")
     public String downloadIcsUrl;
+
     public AppointmentViewModel withDownloadIcsUrl(String downloadIcsUrl) {
         this.downloadIcsUrl = downloadIcsUrl;
         return this;
@@ -127,6 +141,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Integer duration;
+
     public AppointmentViewModel withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -135,6 +150,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AppointmentViewModel withEmail(String email) {
         this.email = email;
         return this;
@@ -143,6 +159,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailConfirmationSent")
     public String emailConfirmationSent;
+
     public AppointmentViewModel withEmailConfirmationSent(String emailConfirmationSent) {
         this.emailConfirmationSent = emailConfirmationSent;
         return this;
@@ -151,6 +168,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailReminderSent")
     public String emailReminderSent;
+
     public AppointmentViewModel withEmailReminderSent(String emailReminderSent) {
         this.emailReminderSent = emailReminderSent;
         return this;
@@ -159,6 +177,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateTime")
     public String endDateTime;
+
     public AppointmentViewModel withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -167,6 +186,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstname")
     public String firstname;
+
     public AppointmentViewModel withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -175,6 +195,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupSize")
     public Integer groupSize;
+
     public AppointmentViewModel withGroupSize(Integer groupSize) {
         this.groupSize = groupSize;
         return this;
@@ -183,6 +204,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AppointmentViewModel withId(String id) {
         this.id = id;
         return this;
@@ -191,6 +213,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public AppointmentViewModel withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -199,6 +222,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedBy")
     public String lastModifiedBy;
+
     public AppointmentViewModel withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -207,6 +231,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedOn")
     public String lastModifiedOn;
+
     public AppointmentViewModel withLastModifiedOn(String lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -215,6 +240,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastname")
     public String lastname;
+
     public AppointmentViewModel withLastname(String lastname) {
         this.lastname = lastname;
         return this;
@@ -223,6 +249,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public String latitude;
+
     public AppointmentViewModel withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -231,6 +258,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public AppointmentViewModel withLocation(String location) {
         this.location = location;
         return this;
@@ -239,6 +267,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public AppointmentViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -247,6 +276,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public String longitude;
+
     public AppointmentViewModel withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
@@ -255,6 +285,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppointmentViewModel withName(String name) {
         this.name = name;
         return this;
@@ -263,6 +294,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public AppointmentViewModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -271,6 +303,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public AppointmentViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -279,6 +312,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlineBooking")
     public Boolean onlineBooking;
+
     public AppointmentViewModel withOnlineBooking(Boolean onlineBooking) {
         this.onlineBooking = onlineBooking;
         return this;
@@ -287,6 +321,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentStatus")
     public Integer paymentStatus;
+
     public AppointmentViewModel withPaymentStatus(Integer paymentStatus) {
         this.paymentStatus = paymentStatus;
         return this;
@@ -295,6 +330,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public AppointmentViewModel withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -303,6 +339,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneExt")
     public String phoneExt;
+
     public AppointmentViewModel withPhoneExt(String phoneExt) {
         this.phoneExt = phoneExt;
         return this;
@@ -311,6 +348,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneType")
     public String phoneType;
+
     public AppointmentViewModel withPhoneType(String phoneType) {
         this.phoneType = phoneType;
         return this;
@@ -319,6 +357,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rescheduledId")
     public String rescheduledId;
+
     public AppointmentViewModel withRescheduledId(String rescheduledId) {
         this.rescheduledId = rescheduledId;
         return this;
@@ -327,6 +366,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceEmail")
     public String resourceEmail;
+
     public AppointmentViewModel withResourceEmail(String resourceEmail) {
         this.resourceEmail = resourceEmail;
         return this;
@@ -335,6 +375,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupId")
     public String resourceGroupId;
+
     public AppointmentViewModel withResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -343,6 +384,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupName")
     public String resourceGroupName;
+
     public AppointmentViewModel withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -351,6 +393,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public AppointmentViewModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -359,6 +402,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceImageUrl")
     public String resourceImageUrl;
+
     public AppointmentViewModel withResourceImageUrl(String resourceImageUrl) {
         this.resourceImageUrl = resourceImageUrl;
         return this;
@@ -367,6 +411,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public AppointmentViewModel withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -375,6 +420,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public AppointmentResourceViewModel[] resources;
+
     public AppointmentViewModel withResources(AppointmentResourceViewModel[] resources) {
         this.resources = resources;
         return this;
@@ -383,6 +429,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAllocationId")
     public String serviceAllocationId;
+
     public AppointmentViewModel withServiceAllocationId(String serviceAllocationId) {
         this.serviceAllocationId = serviceAllocationId;
         return this;
@@ -391,6 +438,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public AppointmentViewModel withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -399,6 +447,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceImageUrl")
     public String serviceImageUrl;
+
     public AppointmentViewModel withServiceImageUrl(String serviceImageUrl) {
         this.serviceImageUrl = serviceImageUrl;
         return this;
@@ -407,6 +456,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public AppointmentViewModel withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -415,6 +465,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsConfirmationSent")
     public String smsConfirmationSent;
+
     public AppointmentViewModel withSmsConfirmationSent(String smsConfirmationSent) {
         this.smsConfirmationSent = smsConfirmationSent;
         return this;
@@ -423,6 +474,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsReminderSent")
     public String smsReminderSent;
+
     public AppointmentViewModel withSmsReminderSent(String smsReminderSent) {
         this.smsReminderSent = smsReminderSent;
         return this;
@@ -431,6 +483,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateTime")
     public String startDateTime;
+
     public AppointmentViewModel withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -439,6 +492,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AppointmentViewModel withStatus(String status) {
         this.status = status;
         return this;
@@ -447,6 +501,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeChargeId")
     public String stripeChargeId;
+
     public AppointmentViewModel withStripeChargeId(String stripeChargeId) {
         this.stripeChargeId = stripeChargeId;
         return this;
@@ -455,6 +510,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeRefundId")
     public String stripeRefundId;
+
     public AppointmentViewModel withStripeRefundId(String stripeRefundId) {
         this.stripeRefundId = stripeRefundId;
         return this;
@@ -463,6 +519,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Integer time;
+
     public AppointmentViewModel withTime(Integer time) {
         this.time = time;
         return this;
@@ -471,6 +528,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public Integer timezone;
+
     public AppointmentViewModel withTimezone(Integer timezone) {
         this.timezone = timezone;
         return this;
@@ -479,6 +537,7 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneIana")
     public String timezoneIana;
+
     public AppointmentViewModel withTimezoneIana(String timezoneIana) {
         this.timezoneIana = timezoneIana;
         return this;
@@ -487,9 +546,11 @@ public class AppointmentViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneId")
     public String timezoneId;
+
     public AppointmentViewModel withTimezoneId(String timezoneId) {
         this.timezoneId = timezoneId;
         return this;
     }
     
+    public AppointmentViewModel(){}
 }

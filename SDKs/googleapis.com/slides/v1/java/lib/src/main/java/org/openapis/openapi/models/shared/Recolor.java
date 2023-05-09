@@ -18,6 +18,7 @@ public class Recolor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public RecolorNameEnum name;
+
     public Recolor withName(RecolorNameEnum name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Recolor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recolorStops")
     public ColorStop[] recolorStops;
+
     public Recolor withRecolorStops(ColorStop[] recolorStops) {
         this.recolorStops = recolorStops;
         return this;
     }
     
+    public Recolor(){}
 }

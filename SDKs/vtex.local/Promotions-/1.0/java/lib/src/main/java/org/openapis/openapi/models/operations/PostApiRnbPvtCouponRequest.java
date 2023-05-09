@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiRnbPvtCouponRequest {
@@ -12,6 +13,7 @@ public class PostApiRnbPvtCouponRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PostApiRnbPvtCouponRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PostApiRnbPvtCouponRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PostApiRnbPvtCouponRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,14 @@ public class PostApiRnbPvtCouponRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostApiRnbPvtCouponRequestBody requestBody;
+
     public PostApiRnbPvtCouponRequest withRequestBody(PostApiRnbPvtCouponRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public PostApiRnbPvtCouponRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

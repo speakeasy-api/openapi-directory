@@ -18,6 +18,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brightness")
     public Double brightness;
+
     public Color withBrightness(Double brightness) {
         this.brightness = brightness;
         return this;
@@ -29,6 +30,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contrast")
     public Double contrast;
+
     public Color withContrast(Double contrast) {
         this.contrast = contrast;
         return this;
@@ -40,9 +42,11 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saturation")
     public Double saturation;
+
     public Color withSaturation(Double saturation) {
         this.saturation = saturation;
         return this;
     }
     
+    public Color(){}
 }

@@ -18,6 +18,7 @@ public class SignalWord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signalWordDescription")
     public String signalWordDescription;
+
     public SignalWord withSignalWordDescription(String signalWordDescription) {
         this.signalWordDescription = signalWordDescription;
         return this;
@@ -29,9 +30,11 @@ public class SignalWord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signalWordId")
     public String signalWordId;
+
     public SignalWord withSignalWordId(String signalWordId) {
         this.signalWordId = signalWordId;
         return this;
     }
     
+    public SignalWord(){}
 }

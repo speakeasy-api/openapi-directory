@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RevokeClusterSecurityGroupIngressMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeClusterSecurityGroupIngressMessage {
     
     public String cidrip;
+
     public RevokeClusterSecurityGroupIngressMessage withCidrip(String cidrip) {
         this.cidrip = cidrip;
         return this;
@@ -19,6 +20,7 @@ public class RevokeClusterSecurityGroupIngressMessage {
     
     
     public String clusterSecurityGroupName;
+
     public RevokeClusterSecurityGroupIngressMessage withClusterSecurityGroupName(String clusterSecurityGroupName) {
         this.clusterSecurityGroupName = clusterSecurityGroupName;
         return this;
@@ -26,6 +28,7 @@ public class RevokeClusterSecurityGroupIngressMessage {
     
     
     public String ec2SecurityGroupName;
+
     public RevokeClusterSecurityGroupIngressMessage withEc2SecurityGroupName(String ec2SecurityGroupName) {
         this.ec2SecurityGroupName = ec2SecurityGroupName;
         return this;
@@ -33,9 +36,13 @@ public class RevokeClusterSecurityGroupIngressMessage {
     
     
     public String ec2SecurityGroupOwnerId;
+
     public RevokeClusterSecurityGroupIngressMessage withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
         this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
         return this;
     }
     
+    public RevokeClusterSecurityGroupIngressMessage(@JsonProperty("ClusterSecurityGroupName") String clusterSecurityGroupName) {
+        this.clusterSecurityGroupName = clusterSecurityGroupName;
+  }
 }

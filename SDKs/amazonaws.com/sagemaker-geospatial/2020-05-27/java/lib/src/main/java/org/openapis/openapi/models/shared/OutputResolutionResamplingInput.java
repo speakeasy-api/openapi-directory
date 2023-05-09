@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * OutputResolutionResamplingInput - &lt;p/&gt;
+ * OutputResolutionResamplingInput - OutputResolution Configuration indicating the target resolution for the output of Resampling operation.
  */
 public class OutputResolutionResamplingInput {
     @JsonProperty("UserDefined")
     public UserDefined userDefined;
+
     public OutputResolutionResamplingInput withUserDefined(UserDefined userDefined) {
         this.userDefined = userDefined;
         return this;
     }
     
+    public OutputResolutionResamplingInput(@JsonProperty("UserDefined") UserDefined userDefined) {
+        this.userDefined = userDefined;
+  }
 }

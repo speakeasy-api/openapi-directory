@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspaceMembersRequest {
@@ -14,9 +15,13 @@ public class GetWorkspacesWorkspaceMembersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetWorkspacesWorkspaceMembersRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetWorkspacesWorkspaceMembersRequest(@JsonProperty("workspace") String workspace) {
+        this.workspace = workspace;
+  }
 }

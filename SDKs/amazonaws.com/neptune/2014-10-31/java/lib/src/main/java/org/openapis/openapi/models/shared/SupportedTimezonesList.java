@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SupportedTimezonesList {
     
     public String timezoneName;
+
     public SupportedTimezonesList withTimezoneName(String timezoneName) {
         this.timezoneName = timezoneName;
         return this;
     }
     
+    public SupportedTimezonesList(){}
 }

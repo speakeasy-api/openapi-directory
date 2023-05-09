@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutIndividualsPartyIdRolesRoleIdRequest {
@@ -12,6 +13,7 @@ public class PutIndividualsPartyIdRolesRoleIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PutIndividualsPartyIdRolesRoleIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class PutIndividualsPartyIdRolesRoleIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput;
+
     public PutIndividualsPartyIdRolesRoleIdRequest withPartyRoleInput(org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput) {
         this.partyRoleInput = partyRoleInput;
         return this;
@@ -32,6 +35,7 @@ public class PutIndividualsPartyIdRolesRoleIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PutIndividualsPartyIdRolesRoleIdRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
@@ -42,9 +46,16 @@ public class PutIndividualsPartyIdRolesRoleIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
     public String roleId;
+
     public PutIndividualsPartyIdRolesRoleIdRequest withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
     }
     
+    public PutIndividualsPartyIdRolesRoleIdRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("party-roleInput") org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput, @JsonProperty("partyId") String partyId, @JsonProperty("roleId") String roleId) {
+        this.apiKey = apiKey;
+        this.partyRoleInput = partyRoleInput;
+        this.partyId = partyId;
+        this.roleId = roleId;
+  }
 }

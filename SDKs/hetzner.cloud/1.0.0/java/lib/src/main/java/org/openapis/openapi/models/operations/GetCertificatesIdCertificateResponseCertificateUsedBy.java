@@ -12,6 +12,7 @@ public class GetCertificatesIdCertificateResponseCertificateUsedBy {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetCertificatesIdCertificateResponseCertificateUsedBy withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class GetCertificatesIdCertificateResponseCertificateUsedBy {
      */
     @JsonProperty("type")
     public String type;
+
     public GetCertificatesIdCertificateResponseCertificateUsedBy withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetCertificatesIdCertificateResponseCertificateUsedBy(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateScreenUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class CreateScreenUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ManageScreen manageScreen;
+
     public CreateScreenUsingPOSTRequest withManageScreen(org.openapis.openapi.models.shared.ManageScreen manageScreen) {
         this.manageScreen = manageScreen;
         return this;
@@ -22,9 +24,14 @@ public class CreateScreenUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public CreateScreenUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public CreateScreenUsingPOSTRequest(@JsonProperty("ManageScreen") org.openapis.openapi.models.shared.ManageScreen manageScreen, @JsonProperty("apiKey") String apiKey) {
+        this.manageScreen = manageScreen;
+        this.apiKey = apiKey;
+  }
 }

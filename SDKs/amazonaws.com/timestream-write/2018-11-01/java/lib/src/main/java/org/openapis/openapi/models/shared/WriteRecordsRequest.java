@@ -12,6 +12,7 @@ public class WriteRecordsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommonAttributes")
     public Record commonAttributes;
+
     public WriteRecordsRequest withCommonAttributes(Record commonAttributes) {
         this.commonAttributes = commonAttributes;
         return this;
@@ -19,6 +20,7 @@ public class WriteRecordsRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public WriteRecordsRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class WriteRecordsRequest {
     
     @JsonProperty("Records")
     public Record[] records;
+
     public WriteRecordsRequest withRecords(Record[] records) {
         this.records = records;
         return this;
@@ -33,9 +36,15 @@ public class WriteRecordsRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public WriteRecordsRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public WriteRecordsRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("Records") Record[] records, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.records = records;
+        this.tableName = tableName;
+  }
 }

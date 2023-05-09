@@ -15,6 +15,7 @@ public class FourHundredAndSixNOTACCEPTABLE {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public FourHundredAndSixNOTACCEPTABLECodeEnum code;
+
     public FourHundredAndSixNOTACCEPTABLE withCode(FourHundredAndSixNOTACCEPTABLECodeEnum code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class FourHundredAndSixNOTACCEPTABLE {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FourHundredAndSixNOTACCEPTABLE withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class FourHundredAndSixNOTACCEPTABLE {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public FourHundredAndSixNOTACCEPTABLE withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -51,9 +54,11 @@ public class FourHundredAndSixNOTACCEPTABLE {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public FourHundredAndSixNOTACCEPTABLE withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public FourHundredAndSixNOTACCEPTABLE(){}
 }

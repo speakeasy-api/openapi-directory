@@ -57,10 +57,8 @@ public class TypeTypeEdgarFiling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeEdgarFilingResponse res = new org.openapis.openapi.models.operations.SearchTypeEdgarFilingResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeEdgarFilingResponse res = new org.openapis.openapi.models.operations.SearchTypeEdgarFilingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

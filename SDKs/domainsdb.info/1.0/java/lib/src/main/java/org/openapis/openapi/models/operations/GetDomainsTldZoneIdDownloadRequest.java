@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainsTldZoneIdDownloadRequest {
@@ -12,6 +13,7 @@ public class GetDomainsTldZoneIdDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetDomainsTldZoneIdDownloadRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GetDomainsTldZoneIdDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetDomainsTldZoneIdDownloadRequest withDate(String date) {
         this.date = date;
         return this;
@@ -29,9 +32,13 @@ public class GetDomainsTldZoneIdDownloadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone_id")
     public String zoneId;
+
     public GetDomainsTldZoneIdDownloadRequest withZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     
+    public GetDomainsTldZoneIdDownloadRequest(@JsonProperty("zone_id") String zoneId) {
+        this.zoneId = zoneId;
+  }
 }

@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public Image withHeight(Integer height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public Image withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -40,9 +42,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public Image withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public Image(){}
 }

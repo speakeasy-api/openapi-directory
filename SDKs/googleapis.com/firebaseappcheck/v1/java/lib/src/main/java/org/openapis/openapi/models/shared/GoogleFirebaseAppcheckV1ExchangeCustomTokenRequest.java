@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1ExchangeCustomTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customToken")
     public String customToken;
+
     public GoogleFirebaseAppcheckV1ExchangeCustomTokenRequest withCustomToken(String customToken) {
         this.customToken = customToken;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1ExchangeCustomTokenRequest(){}
 }

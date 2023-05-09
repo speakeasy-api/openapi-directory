@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeStackSetInput {
     
     public CallAsEnum callAs;
+
     public DescribeStackSetInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -16,9 +17,13 @@ public class DescribeStackSetInput {
     
     
     public String stackSetName;
+
     public DescribeStackSetInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public DescribeStackSetInput(@JsonProperty("StackSetName") String stackSetName) {
+        this.stackSetName = stackSetName;
+  }
 }

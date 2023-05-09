@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1p4beta1Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceNode")
     public String sourceNode;
+
     public GoogleCloudAssetV1p4beta1Edge withSourceNode(String sourceNode) {
         this.sourceNode = sourceNode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1p4beta1Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetNode")
     public String targetNode;
+
     public GoogleCloudAssetV1p4beta1Edge withTargetNode(String targetNode) {
         this.targetNode = targetNode;
         return this;
     }
     
+    public GoogleCloudAssetV1p4beta1Edge(){}
 }

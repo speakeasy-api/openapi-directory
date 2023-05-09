@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetSelfHostedRunnerGroupForOrgResponse {
     
     public String contentType;
+
     public ActionsGetSelfHostedRunnerGroupForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetSelfHostedRunnerGroupForOrgResponse {
     
     
     public Integer statusCode;
+
     public ActionsGetSelfHostedRunnerGroupForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetSelfHostedRunnerGroupForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetSelfHostedRunnerGroupForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsGetSelfHostedRunnerGroupForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.RunnerGroupsOrg runnerGroupsOrg;
+
     public ActionsGetSelfHostedRunnerGroupForOrgResponse withRunnerGroupsOrg(org.openapis.openapi.models.shared.RunnerGroupsOrg runnerGroupsOrg) {
         this.runnerGroupsOrg = runnerGroupsOrg;
         return this;
     }
     
+    public ActionsGetSelfHostedRunnerGroupForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

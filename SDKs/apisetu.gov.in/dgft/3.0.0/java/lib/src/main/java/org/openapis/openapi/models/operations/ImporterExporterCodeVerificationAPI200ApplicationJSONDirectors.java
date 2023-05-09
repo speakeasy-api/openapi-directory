@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImporterExporterCodeVerificationAPI200ApplicationJSONDirectors {
     @JsonProperty("name")
     public String name;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSONDirectors withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ImporterExporterCodeVerificationAPI200ApplicationJSONDirectors(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

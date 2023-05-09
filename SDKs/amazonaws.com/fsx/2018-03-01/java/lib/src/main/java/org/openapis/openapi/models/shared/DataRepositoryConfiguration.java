@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * DataRepositoryConfiguration - &lt;p&gt;The data repository configuration object for Lustre file systems returned in the response of the &lt;code&gt;CreateFileSystem&lt;/code&gt; operation.&lt;/p&gt; &lt;p&gt;This data type is not supported for file systems with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type. Instead, use .&lt;/p&gt;
+ * DataRepositoryConfiguration - &lt;p&gt;The data repository configuration object for Lustre file systems returned in the response of the &lt;code&gt;CreateFileSystem&lt;/code&gt; operation.&lt;/p&gt; &lt;p&gt;This data type is not supported on file systems with a data repository association. For file systems with a data repository association, see .&lt;/p&gt;
  */
 public class DataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoImportPolicy")
     public AutoImportPolicyTypeEnum autoImportPolicy;
+
     public DataRepositoryConfiguration withAutoImportPolicy(AutoImportPolicyTypeEnum autoImportPolicy) {
         this.autoImportPolicy = autoImportPolicy;
         return this;
@@ -23,6 +24,7 @@ public class DataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportPath")
     public String exportPath;
+
     public DataRepositoryConfiguration withExportPath(String exportPath) {
         this.exportPath = exportPath;
         return this;
@@ -34,6 +36,7 @@ public class DataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public DataRepositoryFailureDetails failureDetails;
+
     public DataRepositoryConfiguration withFailureDetails(DataRepositoryFailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -42,6 +45,7 @@ public class DataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportPath")
     public String importPath;
+
     public DataRepositoryConfiguration withImportPath(String importPath) {
         this.importPath = importPath;
         return this;
@@ -50,6 +54,7 @@ public class DataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportedFileChunkSize")
     public Long importedFileChunkSize;
+
     public DataRepositoryConfiguration withImportedFileChunkSize(Long importedFileChunkSize) {
         this.importedFileChunkSize = importedFileChunkSize;
         return this;
@@ -58,9 +63,11 @@ public class DataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public DataRepositoryLifecycleEnum lifecycle;
+
     public DataRepositoryConfiguration withLifecycle(DataRepositoryLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
     }
     
+    public DataRepositoryConfiguration(){}
 }

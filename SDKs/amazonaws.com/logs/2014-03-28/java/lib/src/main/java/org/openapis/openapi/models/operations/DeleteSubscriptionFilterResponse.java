@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSubscriptionFilterResponse {
     
     public String contentType;
+
     public DeleteSubscriptionFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSubscriptionFilterResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteSubscriptionFilterResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSubscriptionFilterResponse {
      */
     
     public Object operationAbortedException;
+
     public DeleteSubscriptionFilterResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSubscriptionFilterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSubscriptionFilterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSubscriptionFilterResponse {
     
     
     public Integer statusCode;
+
     public DeleteSubscriptionFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSubscriptionFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSubscriptionFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteSubscriptionFilterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteSubscriptionFilterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteSubscriptionFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

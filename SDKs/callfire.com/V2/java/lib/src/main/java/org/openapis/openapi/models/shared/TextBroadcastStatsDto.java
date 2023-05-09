@@ -18,6 +18,7 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedAmount")
     public Double billedAmount;
+
     public TextBroadcastStatsDto withBilledAmount(Double billedAmount) {
         this.billedAmount = billedAmount;
         return this;
@@ -29,6 +30,7 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doNotTextCount")
     public Integer doNotTextCount;
+
     public TextBroadcastStatsDto withDoNotTextCount(Integer doNotTextCount) {
         this.doNotTextCount = doNotTextCount;
         return this;
@@ -40,6 +42,7 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCount")
     public Integer errorCount;
+
     public TextBroadcastStatsDto withErrorCount(Integer errorCount) {
         this.errorCount = errorCount;
         return this;
@@ -51,6 +54,7 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recievedCount")
     public Integer recievedCount;
+
     public TextBroadcastStatsDto withRecievedCount(Integer recievedCount) {
         this.recievedCount = recievedCount;
         return this;
@@ -62,6 +66,7 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingOutboundCount")
     public Integer remainingOutboundCount;
+
     public TextBroadcastStatsDto withRemainingOutboundCount(Integer remainingOutboundCount) {
         this.remainingOutboundCount = remainingOutboundCount;
         return this;
@@ -73,6 +78,7 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentCount")
     public Integer sentCount;
+
     public TextBroadcastStatsDto withSentCount(Integer sentCount) {
         this.sentCount = sentCount;
         return this;
@@ -84,6 +90,7 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tooBigCount")
     public Integer tooBigCount;
+
     public TextBroadcastStatsDto withTooBigCount(Integer tooBigCount) {
         this.tooBigCount = tooBigCount;
         return this;
@@ -95,6 +102,7 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalOutboundCount")
     public Integer totalOutboundCount;
+
     public TextBroadcastStatsDto withTotalOutboundCount(Integer totalOutboundCount) {
         this.totalOutboundCount = totalOutboundCount;
         return this;
@@ -106,9 +114,11 @@ public class TextBroadcastStatsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsentCount")
     public Integer unsentCount;
+
     public TextBroadcastStatsDto withUnsentCount(Integer unsentCount) {
         this.unsentCount = unsentCount;
         return this;
     }
     
+    public TextBroadcastStatsDto(){}
 }

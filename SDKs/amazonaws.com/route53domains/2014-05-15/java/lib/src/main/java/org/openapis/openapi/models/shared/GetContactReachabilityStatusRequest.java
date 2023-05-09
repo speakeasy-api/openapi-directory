@@ -12,9 +12,11 @@ public class GetContactReachabilityStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public GetContactReachabilityStatusRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public GetContactReachabilityStatusRequest(){}
 }

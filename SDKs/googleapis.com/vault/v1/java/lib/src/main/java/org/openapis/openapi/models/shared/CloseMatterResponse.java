@@ -18,9 +18,11 @@ public class CloseMatterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matter")
     public Matter matter;
+
     public CloseMatterResponse withMatter(Matter matter) {
         this.matter = matter;
         return this;
     }
     
+    public CloseMatterResponse(){}
 }

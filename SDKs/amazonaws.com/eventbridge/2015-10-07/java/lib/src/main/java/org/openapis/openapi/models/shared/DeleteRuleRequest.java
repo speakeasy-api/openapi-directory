@@ -12,6 +12,7 @@ public class DeleteRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public DeleteRuleRequest withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -20,6 +21,7 @@ public class DeleteRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Force")
     public Boolean force;
+
     public DeleteRuleRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -27,9 +29,13 @@ public class DeleteRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DeleteRuleRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteRuleRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ElicitSubSlot {
     @JsonProperty("name")
     public String name;
+
     public ElicitSubSlot withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class ElicitSubSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSlotToElicit")
     public ElicitSubSlot subSlotToElicit;
+
     public ElicitSubSlot withSubSlotToElicit(ElicitSubSlot subSlotToElicit) {
         this.subSlotToElicit = subSlotToElicit;
         return this;
     }
     
+    public ElicitSubSlot(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

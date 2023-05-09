@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartMaintenanceResponse {
     
     public String contentType;
+
     public StartMaintenanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartMaintenanceResponse {
      */
     
     public Object invalidStateException;
+
     public StartMaintenanceResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -29,6 +32,7 @@ public class StartMaintenanceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartMaintenanceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartMaintenanceResponse {
      */
     
     public org.openapis.openapi.models.shared.StartMaintenanceResponse startMaintenanceResponse;
+
     public StartMaintenanceResponse withStartMaintenanceResponse(org.openapis.openapi.models.shared.StartMaintenanceResponse startMaintenanceResponse) {
         this.startMaintenanceResponse = startMaintenanceResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartMaintenanceResponse {
     
     
     public Integer statusCode;
+
     public StartMaintenanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StartMaintenanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartMaintenanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StartMaintenanceResponse {
      */
     
     public Object validationException;
+
     public StartMaintenanceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartMaintenanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

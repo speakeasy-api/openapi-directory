@@ -14,6 +14,7 @@ public class CreateMembersRequestBody {
      */
     @JsonProperty("Accounts")
     public org.openapis.openapi.models.shared.Account[] accounts;
+
     public CreateMembersRequestBody withAccounts(org.openapis.openapi.models.shared.Account[] accounts) {
         this.accounts = accounts;
         return this;
@@ -25,6 +26,7 @@ public class CreateMembersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableEmailNotification")
     public Boolean disableEmailNotification;
+
     public CreateMembersRequestBody withDisableEmailNotification(Boolean disableEmailNotification) {
         this.disableEmailNotification = disableEmailNotification;
         return this;
@@ -35,6 +37,7 @@ public class CreateMembersRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public CreateMembersRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
@@ -46,9 +49,14 @@ public class CreateMembersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public CreateMembersRequestBody withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateMembersRequestBody(@JsonProperty("Accounts") org.openapis.openapi.models.shared.Account[] accounts, @JsonProperty("GraphArn") String graphArn) {
+        this.accounts = accounts;
+        this.graphArn = graphArn;
+  }
 }

@@ -18,6 +18,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public Segments withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL1")
     public String categoryL1;
+
     public Segments withCategoryL1(String categoryL1) {
         this.categoryL1 = categoryL1;
         return this;
@@ -40,6 +42,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL2")
     public String categoryL2;
+
     public Segments withCategoryL2(String categoryL2) {
         this.categoryL2 = categoryL2;
         return this;
@@ -51,6 +54,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL3")
     public String categoryL3;
+
     public Segments withCategoryL3(String categoryL3) {
         this.categoryL3 = categoryL3;
         return this;
@@ -62,6 +66,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL4")
     public String categoryL4;
+
     public Segments withCategoryL4(String categoryL4) {
         this.categoryL4 = categoryL4;
         return this;
@@ -73,6 +78,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL5")
     public String categoryL5;
+
     public Segments withCategoryL5(String categoryL5) {
         this.categoryL5 = categoryL5;
         return this;
@@ -84,6 +90,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Segments withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -95,6 +102,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel0")
     public String customLabel0;
+
     public Segments withCustomLabel0(String customLabel0) {
         this.customLabel0 = customLabel0;
         return this;
@@ -106,6 +114,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel1")
     public String customLabel1;
+
     public Segments withCustomLabel1(String customLabel1) {
         this.customLabel1 = customLabel1;
         return this;
@@ -117,6 +126,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel2")
     public String customLabel2;
+
     public Segments withCustomLabel2(String customLabel2) {
         this.customLabel2 = customLabel2;
         return this;
@@ -128,6 +138,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel3")
     public String customLabel3;
+
     public Segments withCustomLabel3(String customLabel3) {
         this.customLabel3 = customLabel3;
         return this;
@@ -139,6 +150,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel4")
     public String customLabel4;
+
     public Segments withCustomLabel4(String customLabel4) {
         this.customLabel4 = customLabel4;
         return this;
@@ -150,6 +162,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerCountryCode")
     public String customerCountryCode;
+
     public Segments withCustomerCountryCode(String customerCountryCode) {
         this.customerCountryCode = customerCountryCode;
         return this;
@@ -161,6 +174,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public Segments withDate(Date date) {
         this.date = date;
         return this;
@@ -172,6 +186,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public Segments withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -183,6 +198,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL1")
     public String productTypeL1;
+
     public Segments withProductTypeL1(String productTypeL1) {
         this.productTypeL1 = productTypeL1;
         return this;
@@ -194,6 +210,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL2")
     public String productTypeL2;
+
     public Segments withProductTypeL2(String productTypeL2) {
         this.productTypeL2 = productTypeL2;
         return this;
@@ -205,6 +222,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL3")
     public String productTypeL3;
+
     public Segments withProductTypeL3(String productTypeL3) {
         this.productTypeL3 = productTypeL3;
         return this;
@@ -216,6 +234,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL4")
     public String productTypeL4;
+
     public Segments withProductTypeL4(String productTypeL4) {
         this.productTypeL4 = productTypeL4;
         return this;
@@ -227,6 +246,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL5")
     public String productTypeL5;
+
     public Segments withProductTypeL5(String productTypeL5) {
         this.productTypeL5 = productTypeL5;
         return this;
@@ -238,6 +258,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("program")
     public SegmentsProgramEnum program;
+
     public Segments withProgram(SegmentsProgramEnum program) {
         this.program = program;
         return this;
@@ -249,6 +270,7 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Segments withTitle(String title) {
         this.title = title;
         return this;
@@ -260,9 +282,11 @@ public class Segments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public Date week;
+
     public Segments withWeek(Date week) {
         this.week = week;
         return this;
     }
     
+    public Segments(){}
 }

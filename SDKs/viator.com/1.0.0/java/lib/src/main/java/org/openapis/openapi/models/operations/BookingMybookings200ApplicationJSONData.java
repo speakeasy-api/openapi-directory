@@ -15,6 +15,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookerEmail")
     public String bookerEmail;
+
     public BookingMybookings200ApplicationJSONData withBookerEmail(String bookerEmail) {
         this.bookerEmail = bookerEmail;
         return this;
@@ -26,6 +27,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingDate")
     public String bookingDate;
+
     public BookingMybookings200ApplicationJSONData withBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
         return this;
@@ -37,6 +39,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingStatus")
     public org.openapis.openapi.models.shared.BookingStatusItinerary bookingStatus;
+
     public BookingMybookings200ApplicationJSONData withBookingStatus(org.openapis.openapi.models.shared.BookingStatusItinerary bookingStatus) {
         this.bookingStatus = bookingStatus;
         return this;
@@ -48,6 +51,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingMybookings200ApplicationJSONData withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -59,6 +63,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorRef")
     public String distributorRef;
+
     public BookingMybookings200ApplicationJSONData withDistributorRef(String distributorRef) {
         this.distributorRef = distributorRef;
         return this;
@@ -70,6 +75,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeRate")
     public Long exchangeRate;
+
     public BookingMybookings200ApplicationJSONData withExchangeRate(Long exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -81,6 +87,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasVoucher")
     public Boolean hasVoucher;
+
     public BookingMybookings200ApplicationJSONData withHasVoucher(Boolean hasVoucher) {
         this.hasVoucher = hasVoucher;
         return this;
@@ -92,6 +99,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemSummaries")
     public BookingMybookings200ApplicationJSONDataItemSummaries[] itemSummaries;
+
     public BookingMybookings200ApplicationJSONData withItemSummaries(BookingMybookings200ApplicationJSONDataItemSummaries[] itemSummaries) {
         this.itemSummaries = itemSummaries;
         return this;
@@ -103,6 +111,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryId")
     public Long itineraryId;
+
     public BookingMybookings200ApplicationJSONData withItineraryId(Long itineraryId) {
         this.itineraryId = itineraryId;
         return this;
@@ -114,6 +123,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesApplied")
     public String rulesApplied;
+
     public BookingMybookings200ApplicationJSONData withRulesApplied(String rulesApplied) {
         this.rulesApplied = rulesApplied;
         return this;
@@ -125,6 +135,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingMybookings200ApplicationJSONData withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -138,6 +149,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPrice")
     public Double totalPrice;
+
     public BookingMybookings200ApplicationJSONData withTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
         return this;
@@ -151,6 +163,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPriceFormatted")
     public String totalPriceFormatted;
+
     public BookingMybookings200ApplicationJSONData withTotalPriceFormatted(String totalPriceFormatted) {
         this.totalPriceFormatted = totalPriceFormatted;
         return this;
@@ -162,6 +175,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPriceUSD")
     public Double totalPriceUSD;
+
     public BookingMybookings200ApplicationJSONData withTotalPriceUSD(Double totalPriceUSD) {
         this.totalPriceUSD = totalPriceUSD;
         return this;
@@ -173,6 +187,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public BookingMybookings200ApplicationJSONData withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -184,6 +199,7 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucherKey")
     public String voucherKey;
+
     public BookingMybookings200ApplicationJSONData withVoucherKey(String voucherKey) {
         this.voucherKey = voucherKey;
         return this;
@@ -195,9 +211,11 @@ public class BookingMybookings200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucherURL")
     public String voucherURL;
+
     public BookingMybookings200ApplicationJSONData withVoucherURL(String voucherURL) {
         this.voucherURL = voucherURL;
         return this;
     }
     
+    public BookingMybookings200ApplicationJSONData(){}
 }

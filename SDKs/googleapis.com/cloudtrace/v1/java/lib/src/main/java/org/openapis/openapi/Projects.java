@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesResponse() {{
+        org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetResponse() {{
+        org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetResponse(contentType, httpRes.statusCode()) {{
             trace = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudtraceProjectsTracesListResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTracesListResponse() {{
+        org.openapis.openapi.models.operations.CloudtraceProjectsTracesListResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTracesListResponse(contentType, httpRes.statusCode()) {{
             listTracesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

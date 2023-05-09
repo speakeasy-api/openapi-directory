@@ -15,6 +15,7 @@ public class NullableGitUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public NullableGitUser withDate(String date) {
         this.date = date;
         return this;
@@ -23,6 +24,7 @@ public class NullableGitUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public NullableGitUser withEmail(String email) {
         this.email = email;
         return this;
@@ -31,9 +33,11 @@ public class NullableGitUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NullableGitUser withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NullableGitUser(){}
 }

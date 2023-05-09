@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryAspsGetResponse {
@@ -12,6 +13,7 @@ public class DirectoryAspsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Asp asp;
+
     public DirectoryAspsGetResponse withAsp(org.openapis.openapi.models.shared.Asp asp) {
         this.asp = asp;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryAspsGetResponse {
     
     
     public String contentType;
+
     public DirectoryAspsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DirectoryAspsGetResponse {
     
     
     public Integer statusCode;
+
     public DirectoryAspsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryAspsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryAspsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectoryAspsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class ListImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListImagesFilter filter;
+
     public ListImagesRequest withFilter(ListImagesFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListImagesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImagesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public ListImagesRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -43,9 +47,13 @@ public class ListImagesRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public ListImagesRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public ListImagesRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteModel1Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public DeleteModel1Request withModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
     
+    public DeleteModel1Request(@JsonProperty("modelId") String modelId) {
+        this.modelId = modelId;
+  }
 }

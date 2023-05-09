@@ -25,6 +25,7 @@ public class GitCreateTagRequestBodyTagger {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public GitCreateTagRequestBodyTagger withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -35,6 +36,7 @@ public class GitCreateTagRequestBodyTagger {
      */
     @JsonProperty("email")
     public String email;
+
     public GitCreateTagRequestBodyTagger withEmail(String email) {
         this.email = email;
         return this;
@@ -45,9 +47,14 @@ public class GitCreateTagRequestBodyTagger {
      */
     @JsonProperty("name")
     public String name;
+
     public GitCreateTagRequestBodyTagger withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GitCreateTagRequestBodyTagger(@JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.email = email;
+        this.name = name;
+  }
 }

@@ -21,6 +21,7 @@ public class SearchOrdersFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_filter")
     public SearchOrdersCustomerFilter customerFilter;
+
     public SearchOrdersFilter withCustomerFilter(SearchOrdersCustomerFilter customerFilter) {
         this.customerFilter = customerFilter;
         return this;
@@ -45,6 +46,7 @@ public class SearchOrdersFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_time_filter")
     public SearchOrdersDateTimeFilter dateTimeFilter;
+
     public SearchOrdersFilter withDateTimeFilter(SearchOrdersDateTimeFilter dateTimeFilter) {
         this.dateTimeFilter = dateTimeFilter;
         return this;
@@ -56,6 +58,7 @@ public class SearchOrdersFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillment_filter")
     public SearchOrdersFulfillmentFilter fulfillmentFilter;
+
     public SearchOrdersFilter withFulfillmentFilter(SearchOrdersFulfillmentFilter fulfillmentFilter) {
         this.fulfillmentFilter = fulfillmentFilter;
         return this;
@@ -67,6 +70,7 @@ public class SearchOrdersFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_filter")
     public SearchOrdersSourceFilter sourceFilter;
+
     public SearchOrdersFilter withSourceFilter(SearchOrdersSourceFilter sourceFilter) {
         this.sourceFilter = sourceFilter;
         return this;
@@ -78,9 +82,11 @@ public class SearchOrdersFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_filter")
     public SearchOrdersStateFilter stateFilter;
+
     public SearchOrdersFilter withStateFilter(SearchOrdersStateFilter stateFilter) {
         this.stateFilter = stateFilter;
         return this;
     }
     
+    public SearchOrdersFilter(){}
 }

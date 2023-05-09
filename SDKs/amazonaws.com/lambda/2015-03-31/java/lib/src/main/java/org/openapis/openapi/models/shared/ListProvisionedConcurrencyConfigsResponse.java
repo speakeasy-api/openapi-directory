@@ -15,6 +15,7 @@ public class ListProvisionedConcurrencyConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListProvisionedConcurrencyConfigsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListProvisionedConcurrencyConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedConcurrencyConfigs")
     public ProvisionedConcurrencyConfigListItem[] provisionedConcurrencyConfigs;
+
     public ListProvisionedConcurrencyConfigsResponse withProvisionedConcurrencyConfigs(ProvisionedConcurrencyConfigListItem[] provisionedConcurrencyConfigs) {
         this.provisionedConcurrencyConfigs = provisionedConcurrencyConfigs;
         return this;
     }
     
+    public ListProvisionedConcurrencyConfigsResponse(){}
 }

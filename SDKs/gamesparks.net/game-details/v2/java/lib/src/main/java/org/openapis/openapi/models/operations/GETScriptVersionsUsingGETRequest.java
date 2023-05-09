@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETScriptVersionsUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETScriptVersionsUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GETScriptVersionsUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GETScriptVersionsUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public Integer page;
+
     public GETScriptVersionsUsingGETRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -32,9 +35,14 @@ public class GETScriptVersionsUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GETScriptVersionsUsingGETRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GETScriptVersionsUsingGETRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("page") Integer page) {
+        this.apiKey = apiKey;
+        this.page = page;
+  }
 }

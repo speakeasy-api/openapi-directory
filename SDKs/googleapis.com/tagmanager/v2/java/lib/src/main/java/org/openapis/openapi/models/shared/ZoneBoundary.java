@@ -18,6 +18,7 @@ public class ZoneBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public Condition[] condition;
+
     public ZoneBoundary withCondition(Condition[] condition) {
         this.condition = condition;
         return this;
@@ -29,9 +30,11 @@ public class ZoneBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customEvaluationTriggerId")
     public String[] customEvaluationTriggerId;
+
     public ZoneBoundary withCustomEvaluationTriggerId(String[] customEvaluationTriggerId) {
         this.customEvaluationTriggerId = customEvaluationTriggerId;
         return this;
     }
     
+    public ZoneBoundary(){}
 }

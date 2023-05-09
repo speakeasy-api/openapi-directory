@@ -18,6 +18,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affiliates")
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsAffiliates[] affiliates;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withAffiliates(Setcampaignconfiguration200ApplicationJSONTargetConfigurationsAffiliates[] affiliates) {
         this.affiliates = affiliates;
         return this;
@@ -29,6 +30,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areSalesChannelIdsExclusive")
     public Boolean areSalesChannelIdsExclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withAreSalesChannelIdsExclusive(Boolean areSalesChannelIdsExclusive) {
         this.areSalesChannelIdsExclusive = areSalesChannelIdsExclusive;
         return this;
@@ -40,6 +42,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsBrands[] brands;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withBrands(Setcampaignconfiguration200ApplicationJSONTargetConfigurationsBrands[] brands) {
         this.brands = brands;
         return this;
@@ -51,6 +54,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandsAreInclusive")
     public Boolean brandsAreInclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withBrandsAreInclusive(Boolean brandsAreInclusive) {
         this.brandsAreInclusive = brandsAreInclusive;
         return this;
@@ -62,6 +66,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaigns")
     public Object[] campaigns;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCampaigns(Object[] campaigns) {
         this.campaigns = campaigns;
         return this;
@@ -70,6 +75,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardIssuers")
     public Object[] cardIssuers;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCardIssuers(Object[] cardIssuers) {
         this.cardIssuers = cardIssuers;
         return this;
@@ -81,6 +87,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsCategories[] categories;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCategories(Setcampaignconfiguration200ApplicationJSONTargetConfigurationsCategories[] categories) {
         this.categories = categories;
         return this;
@@ -92,6 +99,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoriesAreInclusive")
     public Boolean categoriesAreInclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCategoriesAreInclusive(Boolean categoriesAreInclusive) {
         this.categoriesAreInclusive = categoriesAreInclusive;
         return this;
@@ -103,6 +111,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterExpressions")
     public String[] clusterExpressions;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withClusterExpressions(String[] clusterExpressions) {
         this.clusterExpressions = clusterExpressions;
         return this;
@@ -111,6 +120,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterOperator")
     public String clusterOperator;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withClusterOperator(String clusterOperator) {
         this.clusterOperator = clusterOperator;
         return this;
@@ -122,6 +132,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsCollections[] collections;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCollections(Setcampaignconfiguration200ApplicationJSONTargetConfigurationsCollections[] collections) {
         this.collections = collections;
         return this;
@@ -133,6 +144,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections1BuyTogether")
     public String[] collections1BuyTogether;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCollections1BuyTogether(String[] collections1BuyTogether) {
         this.collections1BuyTogether = collections1BuyTogether;
         return this;
@@ -141,6 +153,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections2BuyTogether")
     public Object[] collections2BuyTogether;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCollections2BuyTogether(Object[] collections2BuyTogether) {
         this.collections2BuyTogether = collections2BuyTogether;
         return this;
@@ -152,6 +165,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionsIsInclusive")
     public Boolean collectionsIsInclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCollectionsIsInclusive(Boolean collectionsIsInclusive) {
         this.collectionsIsInclusive = collectionsIsInclusive;
         return this;
@@ -163,6 +177,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compareListPriceAndPrice")
     public Boolean compareListPriceAndPrice;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCompareListPriceAndPrice(Boolean compareListPriceAndPrice) {
         this.compareListPriceAndPrice = compareListPriceAndPrice;
         return this;
@@ -171,6 +186,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon")
     public Object[] coupon;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withCoupon(Object[] coupon) {
         this.coupon = coupon;
         return this;
@@ -182,6 +198,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysAgoOfPurchases")
     public Long daysAgoOfPurchases;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withDaysAgoOfPurchases(Long daysAgoOfPurchases) {
         this.daysAgoOfPurchases = daysAgoOfPurchases;
         return this;
@@ -193,6 +210,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableBuyTogetherPerSku")
     public Boolean enableBuyTogetherPerSku;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withEnableBuyTogetherPerSku(Boolean enableBuyTogetherPerSku) {
         this.enableBuyTogetherPerSku = enableBuyTogetherPerSku;
         return this;
@@ -204,6 +222,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featured")
     public Boolean featured;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withFeatured(Boolean featured) {
         this.featured = featured;
         return this;
@@ -215,6 +234,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstBuyIsProfileOptimistic")
     public Boolean firstBuyIsProfileOptimistic;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withFirstBuyIsProfileOptimistic(Boolean firstBuyIsProfileOptimistic) {
         this.firstBuyIsProfileOptimistic = firstBuyIsProfileOptimistic;
         return this;
@@ -226,6 +246,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftListTypes")
     public String[] giftListTypes;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withGiftListTypes(String[] giftListTypes) {
         this.giftListTypes = giftListTypes;
         return this;
@@ -237,6 +258,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withId(String id) {
         this.id = id;
         return this;
@@ -248,6 +270,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idSellerIsInclusive")
     public Boolean idSellerIsInclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withIdSellerIsInclusive(Boolean idSellerIsInclusive) {
         this.idSellerIsInclusive = idSellerIsInclusive;
         return this;
@@ -259,6 +282,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idsSalesChannel")
     public String[] idsSalesChannel;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withIdsSalesChannel(String[] idsSalesChannel) {
         this.idsSalesChannel = idsSalesChannel;
         return this;
@@ -267,6 +291,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installment")
     public Long installment;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withInstallment(Long installment) {
         this.installment = installment;
         return this;
@@ -278,6 +303,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDifferentListPriceAndPrice")
     public Boolean isDifferentListPriceAndPrice;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withIsDifferentListPriceAndPrice(Boolean isDifferentListPriceAndPrice) {
         this.isDifferentListPriceAndPrice = isDifferentListPriceAndPrice;
         return this;
@@ -289,6 +315,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFirstBuy")
     public Boolean isFirstBuy;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withIsFirstBuy(Boolean isFirstBuy) {
         this.isFirstBuy = isFirstBuy;
         return this;
@@ -300,6 +327,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMinMaxInstallments")
     public Boolean isMinMaxInstallments;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withIsMinMaxInstallments(Boolean isMinMaxInstallments) {
         this.isMinMaxInstallments = isMinMaxInstallments;
         return this;
@@ -311,6 +339,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSlaSelected")
     public Boolean isSlaSelected;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withIsSlaSelected(Boolean isSlaSelected) {
         this.isSlaSelected = isSlaSelected;
         return this;
@@ -322,6 +351,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMaxPrice")
     public Double itemMaxPrice;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withItemMaxPrice(Double itemMaxPrice) {
         this.itemMaxPrice = itemMaxPrice;
         return this;
@@ -333,6 +363,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMinPrice")
     public Double itemMinPrice;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withItemMinPrice(Double itemMinPrice) {
         this.itemMinPrice = itemMinPrice;
         return this;
@@ -344,6 +375,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listBrand1BuyTogether")
     public Object[] listBrand1BuyTogether;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withListBrand1BuyTogether(Object[] listBrand1BuyTogether) {
         this.listBrand1BuyTogether = listBrand1BuyTogether;
         return this;
@@ -355,6 +387,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listCategory1BuyTogether")
     public Object[] listCategory1BuyTogether;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withListCategory1BuyTogether(Object[] listCategory1BuyTogether) {
         this.listCategory1BuyTogether = listCategory1BuyTogether;
         return this;
@@ -366,6 +399,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSku1BuyTogether")
     public Object[] listSku1BuyTogether;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withListSku1BuyTogether(Object[] listSku1BuyTogether) {
         this.listSku1BuyTogether = listSku1BuyTogether;
         return this;
@@ -377,6 +411,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSku2BuyTogether")
     public Object[] listSku2BuyTogether;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withListSku2BuyTogether(Object[] listSku2BuyTogether) {
         this.listSku2BuyTogether = listSku2BuyTogether;
         return this;
@@ -388,6 +423,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingTags")
     public String[] marketingTags;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMarketingTags(String[] marketingTags) {
         this.marketingTags = marketingTags;
         return this;
@@ -399,6 +435,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingTagsAreNotInclusive")
     public Boolean marketingTagsAreNotInclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMarketingTagsAreNotInclusive(Boolean marketingTagsAreNotInclusive) {
         this.marketingTagsAreNotInclusive = marketingTagsAreNotInclusive;
         return this;
@@ -410,6 +447,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstallment")
     public Long maxInstallment;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMaxInstallment(Long maxInstallment) {
         this.maxInstallment = maxInstallment;
         return this;
@@ -421,6 +459,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUsage")
     public Long maxUsage;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMaxUsage(Long maxUsage) {
         this.maxUsage = maxUsage;
         return this;
@@ -432,6 +471,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUsagePerClient")
     public Long maxUsagePerClient;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMaxUsagePerClient(Long maxUsagePerClient) {
         this.maxUsagePerClient = maxUsagePerClient;
         return this;
@@ -440,6 +480,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchants")
     public Object[] merchants;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMerchants(Object[] merchants) {
         this.merchants = merchants;
         return this;
@@ -451,6 +492,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minInstallment")
     public Long minInstallment;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMinInstallment(Long minInstallment) {
         this.minInstallment = minInstallment;
         return this;
@@ -462,6 +504,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumQuantityBuyTogether")
     public Long minimumQuantityBuyTogether;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMinimumQuantityBuyTogether(Long minimumQuantityBuyTogether) {
         this.minimumQuantityBuyTogether = minimumQuantityBuyTogether;
         return this;
@@ -473,6 +516,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipleUsePerClient")
     public Boolean multipleUsePerClient;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withMultipleUsePerClient(Boolean multipleUsePerClient) {
         this.multipleUsePerClient = multipleUsePerClient;
         return this;
@@ -484,6 +528,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withName(String name) {
         this.name = name;
         return this;
@@ -495,6 +540,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -506,6 +552,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsMethods")
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsPaymentsMethods[] paymentsMethods;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withPaymentsMethods(Setcampaignconfiguration200ApplicationJSONTargetConfigurationsPaymentsMethods[] paymentsMethods) {
         this.paymentsMethods = paymentsMethods;
         return this;
@@ -514,6 +561,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsRules")
     public Object[] paymentsRules;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withPaymentsRules(Object[] paymentsRules) {
         this.paymentsRules = paymentsRules;
         return this;
@@ -525,6 +573,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValueList")
     public Double[] percentualDiscountValueList;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withPercentualDiscountValueList(Double[] percentualDiscountValueList) {
         this.percentualDiscountValueList = percentualDiscountValueList;
         return this;
@@ -536,6 +585,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsProducts[] products;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withProducts(Setcampaignconfiguration200ApplicationJSONTargetConfigurationsProducts[] products) {
         this.products = products;
         return this;
@@ -547,6 +597,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productsAreInclusive")
     public Boolean productsAreInclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withProductsAreInclusive(Boolean productsAreInclusive) {
         this.productsAreInclusive = productsAreInclusive;
         return this;
@@ -555,6 +606,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productsSpecifications")
     public Object[] productsSpecifications;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withProductsSpecifications(Object[] productsSpecifications) {
         this.productsSpecifications = productsSpecifications;
         return this;
@@ -566,6 +618,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityToAffectBuyTogether")
     public Long quantityToAffectBuyTogether;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withQuantityToAffectBuyTogether(Long quantityToAffectBuyTogether) {
         this.quantityToAffectBuyTogether = quantityToAffectBuyTogether;
         return this;
@@ -577,6 +630,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictionsBins")
     public String[] restrictionsBins;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withRestrictionsBins(String[] restrictionsBins) {
         this.restrictionsBins = restrictionsBins;
         return this;
@@ -588,6 +642,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shouldDistributeDiscountAmongMatchedItems")
     public Boolean shouldDistributeDiscountAmongMatchedItems;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withShouldDistributeDiscountAmongMatchedItems(Boolean shouldDistributeDiscountAmongMatchedItems) {
         this.shouldDistributeDiscountAmongMatchedItems = shouldDistributeDiscountAmongMatchedItems;
         return this;
@@ -599,6 +654,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skus")
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsSkus[] skus;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withSkus(Setcampaignconfiguration200ApplicationJSONTargetConfigurationsSkus[] skus) {
         this.skus = skus;
         return this;
@@ -610,6 +666,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skusAreInclusive")
     public Boolean skusAreInclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withSkusAreInclusive(Boolean skusAreInclusive) {
         this.skusAreInclusive = skusAreInclusive;
         return this;
@@ -621,6 +678,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slasIds")
     public String[] slasIds;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withSlasIds(String[] slasIds) {
         this.slasIds = slasIds;
         return this;
@@ -629,6 +687,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stores")
     public Object[] stores;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withStores(Object[] stores) {
         this.stores = stores;
         return this;
@@ -637,6 +696,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storesAreInclusive")
     public Boolean storesAreInclusive;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withStoresAreInclusive(Boolean storesAreInclusive) {
         this.storesAreInclusive = storesAreInclusive;
         return this;
@@ -648,6 +708,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueCeling")
     public Double totalValueCeling;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withTotalValueCeling(Double totalValueCeling) {
         this.totalValueCeling = totalValueCeling;
         return this;
@@ -659,6 +720,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueFloor")
     public Double totalValueFloor;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withTotalValueFloor(Double totalValueFloor) {
         this.totalValueFloor = totalValueFloor;
         return this;
@@ -667,6 +729,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueIncludeAllItems")
     public Boolean totalValueIncludeAllItems;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withTotalValueIncludeAllItems(Boolean totalValueIncludeAllItems) {
         this.totalValueIncludeAllItems = totalValueIncludeAllItems;
         return this;
@@ -678,6 +741,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueMode")
     public String totalValueMode;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withTotalValueMode(String totalValueMode) {
         this.totalValueMode = totalValueMode;
         return this;
@@ -689,6 +753,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValuePurchase")
     public Double totalValuePurchase;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withTotalValuePurchase(Double totalValuePurchase) {
         this.totalValuePurchase = totalValuePurchase;
         return this;
@@ -700,6 +765,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useNewProgressiveAlgorithm")
     public Boolean useNewProgressiveAlgorithm;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withUseNewProgressiveAlgorithm(Boolean useNewProgressiveAlgorithm) {
         this.useNewProgressiveAlgorithm = useNewProgressiveAlgorithm;
         return this;
@@ -711,9 +777,11 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipCodeRanges")
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsZipCodeRanges[] zipCodeRanges;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurations withZipCodeRanges(Setcampaignconfiguration200ApplicationJSONTargetConfigurationsZipCodeRanges[] zipCodeRanges) {
         this.zipCodeRanges = zipCodeRanges;
         return this;
     }
     
+    public Setcampaignconfiguration200ApplicationJSONTargetConfigurations(){}
 }

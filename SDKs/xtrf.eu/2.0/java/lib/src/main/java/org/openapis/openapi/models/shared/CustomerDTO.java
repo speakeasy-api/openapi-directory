@@ -20,6 +20,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountOnCustomerServer")
     public String accountOnCustomerServer;
+
     public CustomerDTO withAccountOnCustomerServer(String accountOnCustomerServer) {
         this.accountOnCustomerServer = accountOnCustomerServer;
         return this;
@@ -28,6 +29,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounting")
     public CustomerAccountingDTO accounting;
+
     public CustomerDTO withAccounting(CustomerAccountingDTO accounting) {
         this.accounting = accounting;
         return this;
@@ -36,6 +38,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public AddressDTO billingAddress;
+
     public CustomerDTO withBillingAddress(AddressDTO billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -44,6 +47,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchId")
     public Long branchId;
+
     public CustomerDTO withBranchId(Long branchId) {
         this.branchId = branchId;
         return this;
@@ -52,6 +56,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoriesIds")
     public Long[] categoriesIds;
+
     public CustomerDTO withCategoriesIds(Long[] categoriesIds) {
         this.categoriesIds = categoriesIds;
         return this;
@@ -62,6 +67,7 @@ public class CustomerDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("clientFirstProjectDate")
     public OffsetDateTime clientFirstProjectDate;
+
     public CustomerDTO withClientFirstProjectDate(OffsetDateTime clientFirstProjectDate) {
         this.clientFirstProjectDate = clientFirstProjectDate;
         return this;
@@ -72,6 +78,7 @@ public class CustomerDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("clientFirstQuoteDate")
     public OffsetDateTime clientFirstQuoteDate;
+
     public CustomerDTO withClientFirstQuoteDate(OffsetDateTime clientFirstQuoteDate) {
         this.clientFirstQuoteDate = clientFirstQuoteDate;
         return this;
@@ -82,6 +89,7 @@ public class CustomerDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("clientLastProjectDate")
     public OffsetDateTime clientLastProjectDate;
+
     public CustomerDTO withClientLastProjectDate(OffsetDateTime clientLastProjectDate) {
         this.clientLastProjectDate = clientLastProjectDate;
         return this;
@@ -92,6 +100,7 @@ public class CustomerDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("clientLastQuoteDate")
     public OffsetDateTime clientLastQuoteDate;
+
     public CustomerDTO withClientLastQuoteDate(OffsetDateTime clientLastQuoteDate) {
         this.clientLastQuoteDate = clientLastQuoteDate;
         return this;
@@ -100,6 +109,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientNumberOfProjects")
     public Integer clientNumberOfProjects;
+
     public CustomerDTO withClientNumberOfProjects(Integer clientNumberOfProjects) {
         this.clientNumberOfProjects = clientNumberOfProjects;
         return this;
@@ -108,6 +118,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientNumberOfQuotes")
     public Integer clientNumberOfQuotes;
+
     public CustomerDTO withClientNumberOfQuotes(Integer clientNumberOfQuotes) {
         this.clientNumberOfQuotes = clientNumberOfQuotes;
         return this;
@@ -116,6 +127,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public ContactDTO contact;
+
     public CustomerDTO withContact(ContactDTO contact) {
         this.contact = contact;
         return this;
@@ -124,6 +136,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractNumber")
     public String contractNumber;
+
     public CustomerDTO withContractNumber(String contractNumber) {
         this.contractNumber = contractNumber;
         return this;
@@ -132,6 +145,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correspondenceAddress")
     public AddressDTO correspondenceAddress;
+
     public CustomerDTO withCorrespondenceAddress(AddressDTO correspondenceAddress) {
         this.correspondenceAddress = correspondenceAddress;
         return this;
@@ -140,6 +154,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldDTO[] customFields;
+
     public CustomerDTO withCustomFields(CustomFieldDTO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -148,6 +163,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public CustomerDTO withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -156,6 +172,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CustomerDTO withId(Long id) {
         this.id = id;
         return this;
@@ -164,6 +181,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idNumber")
     public String idNumber;
+
     public CustomerDTO withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -172,6 +190,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industriesIds")
     public Long[] industriesIds;
+
     public CustomerDTO withIndustriesIds(Long[] industriesIds) {
         this.industriesIds = industriesIds;
         return this;
@@ -180,6 +199,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadSourceId")
     public Long leadSourceId;
+
     public CustomerDTO withLeadSourceId(Long leadSourceId) {
         this.leadSourceId = leadSourceId;
         return this;
@@ -188,6 +208,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitAccessToPeopleResponsible")
     public Boolean limitAccessToPeopleResponsible;
+
     public CustomerDTO withLimitAccessToPeopleResponsible(Boolean limitAccessToPeopleResponsible) {
         this.limitAccessToPeopleResponsible = limitAccessToPeopleResponsible;
         return this;
@@ -196,6 +217,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomerDTO withName(String name) {
         this.name = name;
         return this;
@@ -204,6 +226,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public CustomerDTO withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -212,6 +235,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persons")
     public CustomerPersonDTO[] persons;
+
     public CustomerDTO withPersons(CustomerPersonDTO[] persons) {
         this.persons = persons;
         return this;
@@ -220,6 +244,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsiblePersons")
     public CustomerResponsiblePersonsDTO responsiblePersons;
+
     public CustomerDTO withResponsiblePersons(CustomerResponsiblePersonsDTO responsiblePersons) {
         this.responsiblePersons = responsiblePersons;
         return this;
@@ -228,6 +253,7 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesNotes")
     public String salesNotes;
+
     public CustomerDTO withSalesNotes(String salesNotes) {
         this.salesNotes = salesNotes;
         return this;
@@ -236,9 +262,11 @@ public class CustomerDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CustomerDTOStatusEnum status;
+
     public CustomerDTO withStatus(CustomerDTOStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CustomerDTO(){}
 }

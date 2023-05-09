@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateExperimentTemplateResponse {
     
     public String contentType;
+
     public UpdateExperimentTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateExperimentTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateExperimentTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateExperimentTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateExperimentTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateExperimentTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateExperimentTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -43,6 +48,7 @@ public class UpdateExperimentTemplateResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateExperimentTemplateResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateExperimentTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateExperimentTemplateResponse updateExperimentTemplateResponse;
+
     public UpdateExperimentTemplateResponse withUpdateExperimentTemplateResponse(org.openapis.openapi.models.shared.UpdateExperimentTemplateResponse updateExperimentTemplateResponse) {
         this.updateExperimentTemplateResponse = updateExperimentTemplateResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateExperimentTemplateResponse {
      */
     
     public Object validationException;
+
     public UpdateExperimentTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateExperimentTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

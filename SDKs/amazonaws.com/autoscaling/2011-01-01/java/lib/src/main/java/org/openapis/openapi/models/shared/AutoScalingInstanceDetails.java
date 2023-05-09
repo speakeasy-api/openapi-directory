@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AutoScalingInstanceDetails - Describes an EC2 instance associated with an Auto Scaling group.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AutoScalingInstanceDetails {
     
     public String autoScalingGroupName;
+
     public AutoScalingInstanceDetails withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -19,6 +20,7 @@ public class AutoScalingInstanceDetails {
     
     
     public String availabilityZone;
+
     public AutoScalingInstanceDetails withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class AutoScalingInstanceDetails {
     
     
     public String healthStatus;
+
     public AutoScalingInstanceDetails withHealthStatus(String healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -33,6 +36,7 @@ public class AutoScalingInstanceDetails {
     
     
     public String instanceId;
+
     public AutoScalingInstanceDetails withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +44,7 @@ public class AutoScalingInstanceDetails {
     
     
     public String instanceType;
+
     public AutoScalingInstanceDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +52,7 @@ public class AutoScalingInstanceDetails {
     
     
     public String launchConfigurationName;
+
     public AutoScalingInstanceDetails withLaunchConfigurationName(String launchConfigurationName) {
         this.launchConfigurationName = launchConfigurationName;
         return this;
@@ -54,6 +60,7 @@ public class AutoScalingInstanceDetails {
     
     
     public LaunchTemplateSpecification launchTemplate;
+
     public AutoScalingInstanceDetails withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -61,6 +68,7 @@ public class AutoScalingInstanceDetails {
     
     
     public String lifecycleState;
+
     public AutoScalingInstanceDetails withLifecycleState(String lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -68,6 +76,7 @@ public class AutoScalingInstanceDetails {
     
     
     public Boolean protectedFromScaleIn;
+
     public AutoScalingInstanceDetails withProtectedFromScaleIn(Boolean protectedFromScaleIn) {
         this.protectedFromScaleIn = protectedFromScaleIn;
         return this;
@@ -75,9 +84,18 @@ public class AutoScalingInstanceDetails {
     
     
     public String weightedCapacity;
+
     public AutoScalingInstanceDetails withWeightedCapacity(String weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public AutoScalingInstanceDetails(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("AvailabilityZone") String availabilityZone, @JsonProperty("HealthStatus") String healthStatus, @JsonProperty("InstanceId") String instanceId, @JsonProperty("LifecycleState") String lifecycleState, @JsonProperty("ProtectedFromScaleIn") Boolean protectedFromScaleIn) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.availabilityZone = availabilityZone;
+        this.healthStatus = healthStatus;
+        this.instanceId = instanceId;
+        this.lifecycleState = lifecycleState;
+        this.protectedFromScaleIn = protectedFromScaleIn;
+  }
 }

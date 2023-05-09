@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErrorsErrorAttachmentTextResponse {
     
     public String contentType;
+
     public ErrorsErrorAttachmentTextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ErrorsErrorAttachmentTextResponse {
      */
     
     public ErrorsErrorAttachmentText200ApplicationJSON errorsErrorAttachmentText200ApplicationJSONObject;
+
     public ErrorsErrorAttachmentTextResponse withErrorsErrorAttachmentText200ApplicationJSONObject(ErrorsErrorAttachmentText200ApplicationJSON errorsErrorAttachmentText200ApplicationJSONObject) {
         this.errorsErrorAttachmentText200ApplicationJSONObject = errorsErrorAttachmentText200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ErrorsErrorAttachmentTextResponse {
      */
     
     public ErrorsErrorAttachmentTextDefaultApplicationJSON errorsErrorAttachmentTextDefaultApplicationJSONObject;
+
     public ErrorsErrorAttachmentTextResponse withErrorsErrorAttachmentTextDefaultApplicationJSONObject(ErrorsErrorAttachmentTextDefaultApplicationJSON errorsErrorAttachmentTextDefaultApplicationJSONObject) {
         this.errorsErrorAttachmentTextDefaultApplicationJSONObject = errorsErrorAttachmentTextDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ErrorsErrorAttachmentTextResponse {
     
     
     public Integer statusCode;
+
     public ErrorsErrorAttachmentTextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ErrorsErrorAttachmentTextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErrorsErrorAttachmentTextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ErrorsErrorAttachmentTextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

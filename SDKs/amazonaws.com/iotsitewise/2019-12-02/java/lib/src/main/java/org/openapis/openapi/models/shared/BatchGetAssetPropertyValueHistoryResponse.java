@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetAssetPropertyValueHistoryResponse {
     @JsonProperty("errorEntries")
     public BatchGetAssetPropertyValueHistoryErrorEntry[] errorEntries;
+
     public BatchGetAssetPropertyValueHistoryResponse withErrorEntries(BatchGetAssetPropertyValueHistoryErrorEntry[] errorEntries) {
         this.errorEntries = errorEntries;
         return this;
@@ -22,6 +23,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public BatchGetAssetPropertyValueHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,6 +31,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
     
     @JsonProperty("skippedEntries")
     public BatchGetAssetPropertyValueHistorySkippedEntry[] skippedEntries;
+
     public BatchGetAssetPropertyValueHistoryResponse withSkippedEntries(BatchGetAssetPropertyValueHistorySkippedEntry[] skippedEntries) {
         this.skippedEntries = skippedEntries;
         return this;
@@ -36,9 +39,15 @@ public class BatchGetAssetPropertyValueHistoryResponse {
     
     @JsonProperty("successEntries")
     public BatchGetAssetPropertyValueHistorySuccessEntry[] successEntries;
+
     public BatchGetAssetPropertyValueHistoryResponse withSuccessEntries(BatchGetAssetPropertyValueHistorySuccessEntry[] successEntries) {
         this.successEntries = successEntries;
         return this;
     }
     
+    public BatchGetAssetPropertyValueHistoryResponse(@JsonProperty("errorEntries") BatchGetAssetPropertyValueHistoryErrorEntry[] errorEntries, @JsonProperty("skippedEntries") BatchGetAssetPropertyValueHistorySkippedEntry[] skippedEntries, @JsonProperty("successEntries") BatchGetAssetPropertyValueHistorySuccessEntry[] successEntries) {
+        this.errorEntries = errorEntries;
+        this.skippedEntries = skippedEntries;
+        this.successEntries = successEntries;
+  }
 }

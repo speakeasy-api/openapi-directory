@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChargersResponse {
     
     public String contentType;
+
     public GetChargersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetChargersResponse {
     
     
     public Integer statusCode;
+
     public GetChargersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetChargersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChargersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetChargersResponse {
      */
     
     public org.openapis.openapi.models.shared.Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchema[] onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemas;
+
     public GetChargersResponse withOnechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemas(org.openapis.openapi.models.shared.Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchema[] onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemas) {
         this.onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemas = onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemas;
         return this;
     }
     
+    public GetChargersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

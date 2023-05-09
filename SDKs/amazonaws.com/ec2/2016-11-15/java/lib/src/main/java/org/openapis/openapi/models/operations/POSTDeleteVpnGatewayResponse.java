@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDeleteVpnGatewayResponse {
     
     public String contentType;
+
     public POSTDeleteVpnGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteVpnGatewayResponse {
     
     
     public Integer statusCode;
+
     public POSTDeleteVpnGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class POSTDeleteVpnGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDeleteVpnGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDeleteVpnGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

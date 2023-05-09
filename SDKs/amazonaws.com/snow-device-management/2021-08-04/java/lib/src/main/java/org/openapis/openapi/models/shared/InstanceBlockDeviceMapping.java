@@ -15,6 +15,7 @@ public class InstanceBlockDeviceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public InstanceBlockDeviceMapping withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -23,9 +24,11 @@ public class InstanceBlockDeviceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebs")
     public EbsInstanceBlockDevice ebs;
+
     public InstanceBlockDeviceMapping withEbs(EbsInstanceBlockDevice ebs) {
         this.ebs = ebs;
         return this;
     }
     
+    public InstanceBlockDeviceMapping(){}
 }

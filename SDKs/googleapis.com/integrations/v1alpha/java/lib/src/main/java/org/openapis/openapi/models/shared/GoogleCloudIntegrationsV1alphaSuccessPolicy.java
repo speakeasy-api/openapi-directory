@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaSuccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalState")
     public GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum finalState;
+
     public GoogleCloudIntegrationsV1alphaSuccessPolicy withFinalState(GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum finalState) {
         this.finalState = finalState;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSuccessPolicy(){}
 }

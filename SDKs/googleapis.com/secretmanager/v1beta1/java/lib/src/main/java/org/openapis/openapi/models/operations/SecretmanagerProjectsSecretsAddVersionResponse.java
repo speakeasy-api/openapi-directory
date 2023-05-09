@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecretmanagerProjectsSecretsAddVersionResponse {
     
     public String contentType;
+
     public SecretmanagerProjectsSecretsAddVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SecretmanagerProjectsSecretsAddVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.SecretVersion secretVersion;
+
     public SecretmanagerProjectsSecretsAddVersionResponse withSecretVersion(org.openapis.openapi.models.shared.SecretVersion secretVersion) {
         this.secretVersion = secretVersion;
         return this;
@@ -26,6 +29,7 @@ public class SecretmanagerProjectsSecretsAddVersionResponse {
     
     
     public Integer statusCode;
+
     public SecretmanagerProjectsSecretsAddVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SecretmanagerProjectsSecretsAddVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecretmanagerProjectsSecretsAddVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SecretmanagerProjectsSecretsAddVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -56,4 +56,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Topic.java
 lib/src/main/java/org/openapis/openapi/models/shared/TopicSentiment.java
 lib/src/main/java/org/openapis/openapi/models/shared/Sentiment.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/textanalysis/README.md
 USAGE.md

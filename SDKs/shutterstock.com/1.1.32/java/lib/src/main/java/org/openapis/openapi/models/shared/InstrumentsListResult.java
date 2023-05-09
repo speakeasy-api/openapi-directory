@@ -18,6 +18,7 @@ public class InstrumentsListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Instrument[] data;
+
     public InstrumentsListResult withData(Instrument[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class InstrumentsListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public InstrumentsListResult withPage(Long page) {
         this.page = page;
         return this;
@@ -40,9 +42,11 @@ public class InstrumentsListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public InstrumentsListResult withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public InstrumentsListResult(){}
 }

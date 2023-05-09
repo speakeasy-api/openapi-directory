@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachStaticIpResponse {
@@ -12,6 +13,7 @@ public class AttachStaticIpResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachStaticIpResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachStaticIpResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public AttachStaticIpResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -32,6 +35,7 @@ public class AttachStaticIpResponse {
      */
     
     public org.openapis.openapi.models.shared.AttachStaticIpResult attachStaticIpResult;
+
     public AttachStaticIpResponse withAttachStaticIpResult(org.openapis.openapi.models.shared.AttachStaticIpResult attachStaticIpResult) {
         this.attachStaticIpResult = attachStaticIpResult;
         return this;
@@ -39,6 +43,7 @@ public class AttachStaticIpResponse {
     
     
     public String contentType;
+
     public AttachStaticIpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AttachStaticIpResponse {
      */
     
     public Object invalidInputException;
+
     public AttachStaticIpResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class AttachStaticIpResponse {
      */
     
     public Object notFoundException;
+
     public AttachStaticIpResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AttachStaticIpResponse {
      */
     
     public Object operationFailureException;
+
     public AttachStaticIpResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class AttachStaticIpResponse {
      */
     
     public Object serviceException;
+
     public AttachStaticIpResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class AttachStaticIpResponse {
     
     
     public Integer statusCode;
+
     public AttachStaticIpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AttachStaticIpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachStaticIpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class AttachStaticIpResponse {
      */
     
     public Object unauthenticatedException;
+
     public AttachStaticIpResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public AttachStaticIpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public GoogleCloudDataplexV1Content[] content;
+
     public GoogleCloudDataplexV1ListContentResponse withContent(GoogleCloudDataplexV1Content[] content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListContentResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListContentResponse(){}
 }

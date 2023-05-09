@@ -18,6 +18,7 @@ public class AclEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTime")
     public String expirationTime;
+
     public AclEntry withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -29,6 +30,7 @@ public class AclEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AclEntry withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class AclEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AclEntry withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class AclEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public AclEntry withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AclEntry(){}
 }

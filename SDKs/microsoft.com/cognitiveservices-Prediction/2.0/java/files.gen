@@ -54,4 +54,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ImagePrediction.java
 lib/src/main/java/org/openapis/openapi/models/shared/Prediction.java
 lib/src/main/java/org/openapis/openapi/models/shared/BoundingBox.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImageUrl.java
+docs/sdk/README.md
+docs/imagepredictionapi/README.md
 USAGE.md

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OracleSQLCatalogSource {
     @JsonProperty("Database")
     public String database;
+
     public OracleSQLCatalogSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -19,6 +20,7 @@ public class OracleSQLCatalogSource {
     
     @JsonProperty("Name")
     public String name;
+
     public OracleSQLCatalogSource withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class OracleSQLCatalogSource {
     
     @JsonProperty("Table")
     public String table;
+
     public OracleSQLCatalogSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public OracleSQLCatalogSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

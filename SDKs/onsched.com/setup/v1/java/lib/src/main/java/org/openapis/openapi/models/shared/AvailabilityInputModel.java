@@ -15,6 +15,7 @@ public class AvailabilityInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri")
     public WeekDayInputModel fri;
+
     public AvailabilityInputModel withFri(WeekDayInputModel fri) {
         this.fri = fri;
         return this;
@@ -23,6 +24,7 @@ public class AvailabilityInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon")
     public WeekDayInputModel mon;
+
     public AvailabilityInputModel withMon(WeekDayInputModel mon) {
         this.mon = mon;
         return this;
@@ -31,6 +33,7 @@ public class AvailabilityInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat")
     public WeekDayInputModel sat;
+
     public AvailabilityInputModel withSat(WeekDayInputModel sat) {
         this.sat = sat;
         return this;
@@ -39,6 +42,7 @@ public class AvailabilityInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun")
     public WeekDayInputModel sun;
+
     public AvailabilityInputModel withSun(WeekDayInputModel sun) {
         this.sun = sun;
         return this;
@@ -47,6 +51,7 @@ public class AvailabilityInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu")
     public WeekDayInputModel thu;
+
     public AvailabilityInputModel withThu(WeekDayInputModel thu) {
         this.thu = thu;
         return this;
@@ -55,6 +60,7 @@ public class AvailabilityInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue")
     public WeekDayInputModel tue;
+
     public AvailabilityInputModel withTue(WeekDayInputModel tue) {
         this.tue = tue;
         return this;
@@ -63,9 +69,11 @@ public class AvailabilityInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed")
     public WeekDayInputModel wed;
+
     public AvailabilityInputModel withWed(WeekDayInputModel wed) {
         this.wed = wed;
         return this;
     }
     
+    public AvailabilityInputModel(){}
 }

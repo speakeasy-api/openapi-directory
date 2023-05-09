@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImagesIdActionsActionsResponseMeta {
     @JsonProperty("pagination")
     public GetImagesIdActionsActionsResponseMetaPagination pagination;
+
     public GetImagesIdActionsActionsResponseMeta withPagination(GetImagesIdActionsActionsResponseMetaPagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public GetImagesIdActionsActionsResponseMeta(@JsonProperty("pagination") GetImagesIdActionsActionsResponseMetaPagination pagination) {
+        this.pagination = pagination;
+  }
 }

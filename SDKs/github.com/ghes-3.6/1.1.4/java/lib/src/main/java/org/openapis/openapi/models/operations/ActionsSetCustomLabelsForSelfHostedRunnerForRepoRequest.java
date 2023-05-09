@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequestBody requestBody;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest withRequestBody(ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -39,9 +43,16 @@ public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
     public Long runnerId;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
     }
     
+    public ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest(@JsonProperty("RequestBody") ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("runner_id") Long runnerId) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.repo = repo;
+        this.runnerId = runnerId;
+  }
 }

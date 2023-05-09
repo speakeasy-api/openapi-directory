@@ -18,9 +18,11 @@ public class UpdateActiveBreakpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakpoint")
     public Breakpoint breakpoint;
+
     public UpdateActiveBreakpointRequest withBreakpoint(Breakpoint breakpoint) {
         this.breakpoint = breakpoint;
         return this;
     }
     
+    public UpdateActiveBreakpointRequest(){}
 }

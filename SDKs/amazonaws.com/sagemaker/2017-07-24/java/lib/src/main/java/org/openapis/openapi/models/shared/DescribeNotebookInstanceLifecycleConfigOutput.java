@@ -22,6 +22,7 @@ public class DescribeNotebookInstanceLifecycleConfigOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeNotebookInstanceLifecycleConfigOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class DescribeNotebookInstanceLifecycleConfigOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeNotebookInstanceLifecycleConfigOutput withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeNotebookInstanceLifecycleConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceLifecycleConfigArn")
     public String notebookInstanceLifecycleConfigArn;
+
     public DescribeNotebookInstanceLifecycleConfigOutput withNotebookInstanceLifecycleConfigArn(String notebookInstanceLifecycleConfigArn) {
         this.notebookInstanceLifecycleConfigArn = notebookInstanceLifecycleConfigArn;
         return this;
@@ -48,6 +51,7 @@ public class DescribeNotebookInstanceLifecycleConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceLifecycleConfigName")
     public String notebookInstanceLifecycleConfigName;
+
     public DescribeNotebookInstanceLifecycleConfigOutput withNotebookInstanceLifecycleConfigName(String notebookInstanceLifecycleConfigName) {
         this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
         return this;
@@ -56,6 +60,7 @@ public class DescribeNotebookInstanceLifecycleConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnCreate")
     public NotebookInstanceLifecycleHook[] onCreate;
+
     public DescribeNotebookInstanceLifecycleConfigOutput withOnCreate(NotebookInstanceLifecycleHook[] onCreate) {
         this.onCreate = onCreate;
         return this;
@@ -64,9 +69,11 @@ public class DescribeNotebookInstanceLifecycleConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnStart")
     public NotebookInstanceLifecycleHook[] onStart;
+
     public DescribeNotebookInstanceLifecycleConfigOutput withOnStart(NotebookInstanceLifecycleHook[] onStart) {
         this.onStart = onStart;
         return this;
     }
     
+    public DescribeNotebookInstanceLifecycleConfigOutput(){}
 }

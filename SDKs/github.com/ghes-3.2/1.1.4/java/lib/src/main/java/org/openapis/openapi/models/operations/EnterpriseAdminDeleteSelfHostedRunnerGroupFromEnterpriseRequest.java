@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,9 +24,14 @@ public class EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
     public Long runnerGroupId;
+
     public EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
         this.runnerGroupId = runnerGroupId;
         return this;
     }
     
+    public EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("runner_group_id") Long runnerGroupId) {
+        this.enterprise = enterprise;
+        this.runnerGroupId = runnerGroupId;
+  }
 }

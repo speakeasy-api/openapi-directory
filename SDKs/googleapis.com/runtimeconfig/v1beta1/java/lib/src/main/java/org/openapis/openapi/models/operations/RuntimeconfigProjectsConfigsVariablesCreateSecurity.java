@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class RuntimeconfigProjectsConfigsVariablesCreateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public RuntimeconfigProjectsConfigsVariablesCreateSecurityOption1 option1;
+
     public RuntimeconfigProjectsConfigsVariablesCreateSecurity withOption1(RuntimeconfigProjectsConfigsVariablesCreateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class RuntimeconfigProjectsConfigsVariablesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public RuntimeconfigProjectsConfigsVariablesCreateSecurityOption2 option2;
+
     public RuntimeconfigProjectsConfigsVariablesCreateSecurity withOption2(RuntimeconfigProjectsConfigsVariablesCreateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public RuntimeconfigProjectsConfigsVariablesCreateSecurity(){}
 }

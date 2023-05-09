@@ -15,6 +15,7 @@ public class Label {
      */
     @JsonProperty("color")
     public String color;
+
     public Label withColor(String color) {
         this.color = color;
         return this;
@@ -22,6 +23,7 @@ public class Label {
     
     @JsonProperty("default")
     public Boolean default_;
+
     public Label withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -29,6 +31,7 @@ public class Label {
     
     @JsonProperty("description")
     public String description;
+
     public Label withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class Label {
     
     @JsonProperty("id")
     public Long id;
+
     public Label withId(Long id) {
         this.id = id;
         return this;
@@ -46,6 +50,7 @@ public class Label {
      */
     @JsonProperty("name")
     public String name;
+
     public Label withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +58,7 @@ public class Label {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Label withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -63,9 +69,19 @@ public class Label {
      */
     @JsonProperty("url")
     public String url;
+
     public Label withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Label(@JsonProperty("color") String color, @JsonProperty("default") Boolean default_, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("url") String url) {
+        this.color = color;
+        this.default_ = default_;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.url = url;
+  }
 }

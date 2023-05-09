@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomLineItemFlatChargeDetails {
     @JsonProperty("ChargeValue")
     public Double chargeValue;
+
     public CustomLineItemFlatChargeDetails withChargeValue(Double chargeValue) {
         this.chargeValue = chargeValue;
         return this;
     }
     
+    public CustomLineItemFlatChargeDetails(@JsonProperty("ChargeValue") Double chargeValue) {
+        this.chargeValue = chargeValue;
+  }
 }

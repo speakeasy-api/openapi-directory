@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeDisksStartAsyncReplicationResponse {
     
     public String contentType;
+
     public ComputeDisksStartAsyncReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeDisksStartAsyncReplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ComputeDisksStartAsyncReplicationResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ComputeDisksStartAsyncReplicationResponse {
     
     
     public Integer statusCode;
+
     public ComputeDisksStartAsyncReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeDisksStartAsyncReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeDisksStartAsyncReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeDisksStartAsyncReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

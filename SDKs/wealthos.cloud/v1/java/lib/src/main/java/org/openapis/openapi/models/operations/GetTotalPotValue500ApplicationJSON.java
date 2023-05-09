@@ -18,6 +18,7 @@ public class GetTotalPotValue500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetTotalPotValue500ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetTotalPotValue500ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetTotalPotValue500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetTotalPotValue500ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

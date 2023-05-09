@@ -15,6 +15,7 @@ public class ResourcePolicyWeeklyCycleDayOfWeek {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public ResourcePolicyWeeklyCycleDayOfWeekDayEnum day;
+
     public ResourcePolicyWeeklyCycleDayOfWeek withDay(ResourcePolicyWeeklyCycleDayOfWeekDayEnum day) {
         this.day = day;
         return this;
@@ -26,6 +27,7 @@ public class ResourcePolicyWeeklyCycleDayOfWeek {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public ResourcePolicyWeeklyCycleDayOfWeek withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -37,9 +39,11 @@ public class ResourcePolicyWeeklyCycleDayOfWeek {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public ResourcePolicyWeeklyCycleDayOfWeek withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ResourcePolicyWeeklyCycleDayOfWeek(){}
 }

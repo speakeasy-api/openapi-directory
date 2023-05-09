@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
@@ -12,6 +13,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
     
     
     public String contentType;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
      */
     
     public Object illegalArgumentException;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRequestedServiceQuotaChangeHistoryByQuotaResponse listRequestedServiceQuotaChangeHistoryByQuotaResponse;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withListRequestedServiceQuotaChangeHistoryByQuotaResponse(org.openapis.openapi.models.shared.ListRequestedServiceQuotaChangeHistoryByQuotaResponse listRequestedServiceQuotaChangeHistoryByQuotaResponse) {
         this.listRequestedServiceQuotaChangeHistoryByQuotaResponse = listRequestedServiceQuotaChangeHistoryByQuotaResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
      */
     
     public Object noSuchResourceException;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withNoSuchResourceException(Object noSuchResourceException) {
         this.noSuchResourceException = noSuchResourceException;
         return this;
@@ -69,6 +76,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
      */
     
     public Object serviceException;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
     
     
     public Integer statusCode;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListRequestedServiceQuotaChangeHistoryByQuotaResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListRequestedServiceQuotaChangeHistoryByQuotaResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListRequestedServiceQuotaChangeHistoryByQuotaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

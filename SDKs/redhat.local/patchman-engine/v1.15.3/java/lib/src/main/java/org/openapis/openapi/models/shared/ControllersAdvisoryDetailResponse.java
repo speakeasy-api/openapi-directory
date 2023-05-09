@@ -15,9 +15,11 @@ public class ControllersAdvisoryDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ControllersAdvisoryDetailItem data;
+
     public ControllersAdvisoryDetailResponse withData(ControllersAdvisoryDetailItem data) {
         this.data = data;
         return this;
     }
     
+    public ControllersAdvisoryDetailResponse(){}
 }

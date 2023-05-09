@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryStanding
      */
     
     public String displayValue;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryStandingBasic withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryStanding
      */
     
     public Double value;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryStandingBasic withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryStandingBasic(){}
 }

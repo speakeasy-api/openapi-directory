@@ -17,6 +17,7 @@ public class ReviewRequestRemovedIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public ReviewRequestRemovedIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -24,6 +25,7 @@ public class ReviewRequestRemovedIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public ReviewRequestRemovedIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -31,6 +33,7 @@ public class ReviewRequestRemovedIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public ReviewRequestRemovedIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -38,6 +41,7 @@ public class ReviewRequestRemovedIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public ReviewRequestRemovedIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +49,7 @@ public class ReviewRequestRemovedIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public ReviewRequestRemovedIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -52,6 +57,7 @@ public class ReviewRequestRemovedIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public ReviewRequestRemovedIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +65,7 @@ public class ReviewRequestRemovedIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public ReviewRequestRemovedIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -69,6 +76,7 @@ public class ReviewRequestRemovedIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public ReviewRequestRemovedIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -80,6 +88,7 @@ public class ReviewRequestRemovedIssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_reviewer")
     public SimpleUser requestedReviewer;
+
     public ReviewRequestRemovedIssueEvent withRequestedReviewer(SimpleUser requestedReviewer) {
         this.requestedReviewer = requestedReviewer;
         return this;
@@ -91,6 +100,7 @@ public class ReviewRequestRemovedIssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_team")
     public Team requestedTeam;
+
     public ReviewRequestRemovedIssueEvent withRequestedTeam(Team requestedTeam) {
         this.requestedTeam = requestedTeam;
         return this;
@@ -101,6 +111,7 @@ public class ReviewRequestRemovedIssueEvent {
      */
     @JsonProperty("review_requester")
     public SimpleUser reviewRequester;
+
     public ReviewRequestRemovedIssueEvent withReviewRequester(SimpleUser reviewRequester) {
         this.reviewRequester = reviewRequester;
         return this;
@@ -108,9 +119,22 @@ public class ReviewRequestRemovedIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public ReviewRequestRemovedIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ReviewRequestRemovedIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("review_requester") SimpleUser reviewRequester, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.reviewRequester = reviewRequester;
+        this.url = url;
+  }
 }

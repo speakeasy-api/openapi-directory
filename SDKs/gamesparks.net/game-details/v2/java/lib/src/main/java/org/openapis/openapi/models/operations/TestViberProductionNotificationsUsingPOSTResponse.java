@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestViberProductionNotificationsUsingPOSTResponse {
     
     public byte[] body;
+
     public TestViberProductionNotificationsUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TestViberProductionNotificationsUsingPOSTResponse {
     
     
     public String contentType;
+
     public TestViberProductionNotificationsUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TestViberProductionNotificationsUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public TestViberProductionNotificationsUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class TestViberProductionNotificationsUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestViberProductionNotificationsUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TestViberProductionNotificationsUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

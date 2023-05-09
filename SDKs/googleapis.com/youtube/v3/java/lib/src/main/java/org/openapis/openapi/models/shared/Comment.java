@@ -18,6 +18,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Comment withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Comment withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Comment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public CommentSnippet snippet;
+
     public Comment withSnippet(CommentSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public Comment(){}
 }

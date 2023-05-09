@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AccountLimit {
     
     public String name;
+
     public AccountLimit withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class AccountLimit {
     
     
     public Long value;
+
     public AccountLimit withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public AccountLimit(){}
 }

@@ -15,9 +15,11 @@ public class StartAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public StartAssessmentResponse withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
     }
     
+    public StartAssessmentResponse(){}
 }

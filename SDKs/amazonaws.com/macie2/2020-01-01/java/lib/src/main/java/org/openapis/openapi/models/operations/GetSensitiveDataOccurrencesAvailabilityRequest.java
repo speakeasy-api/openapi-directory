@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSensitiveDataOccurrencesAvailabilityRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetSensitiveDataOccurrencesAvailabilityRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetSensitiveDataOccurrencesAvailabilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetSensitiveDataOccurrencesAvailabilityRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetSensitiveDataOccurrencesAvailabilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetSensitiveDataOccurrencesAvailabilityRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetSensitiveDataOccurrencesAvailabilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetSensitiveDataOccurrencesAvailabilityRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetSensitiveDataOccurrencesAvailabilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetSensitiveDataOccurrencesAvailabilityRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetSensitiveDataOccurrencesAvailabilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetSensitiveDataOccurrencesAvailabilityRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetSensitiveDataOccurrencesAvailabilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetSensitiveDataOccurrencesAvailabilityRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,9 +69,13 @@ public class GetSensitiveDataOccurrencesAvailabilityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=findingId")
     public String findingId;
+
     public GetSensitiveDataOccurrencesAvailabilityRequest withFindingId(String findingId) {
         this.findingId = findingId;
         return this;
     }
     
+    public GetSensitiveDataOccurrencesAvailabilityRequest(@JsonProperty("findingId") String findingId) {
+        this.findingId = findingId;
+  }
 }

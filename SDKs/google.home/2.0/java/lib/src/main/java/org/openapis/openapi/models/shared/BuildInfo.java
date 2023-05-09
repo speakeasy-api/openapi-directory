@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BuildInfo {
     @JsonProperty("build_type")
     public Integer buildType;
+
     public BuildInfo withBuildType(Integer buildType) {
         this.buildType = buildType;
         return this;
@@ -16,6 +17,7 @@ public class BuildInfo {
     
     @JsonProperty("cast_build_revision")
     public String castBuildRevision;
+
     public BuildInfo withCastBuildRevision(String castBuildRevision) {
         this.castBuildRevision = castBuildRevision;
         return this;
@@ -23,6 +25,7 @@ public class BuildInfo {
     
     @JsonProperty("cast_control_version")
     public Integer castControlVersion;
+
     public BuildInfo withCastControlVersion(Integer castControlVersion) {
         this.castControlVersion = castControlVersion;
         return this;
@@ -30,6 +33,7 @@ public class BuildInfo {
     
     @JsonProperty("preview_channel_state")
     public Integer previewChannelState;
+
     public BuildInfo withPreviewChannelState(Integer previewChannelState) {
         this.previewChannelState = previewChannelState;
         return this;
@@ -37,6 +41,7 @@ public class BuildInfo {
     
     @JsonProperty("release_track")
     public String releaseTrack;
+
     public BuildInfo withReleaseTrack(String releaseTrack) {
         this.releaseTrack = releaseTrack;
         return this;
@@ -44,9 +49,18 @@ public class BuildInfo {
     
     @JsonProperty("system_build_number")
     public String systemBuildNumber;
+
     public BuildInfo withSystemBuildNumber(String systemBuildNumber) {
         this.systemBuildNumber = systemBuildNumber;
         return this;
     }
     
+    public BuildInfo(@JsonProperty("build_type") Integer buildType, @JsonProperty("cast_build_revision") String castBuildRevision, @JsonProperty("cast_control_version") Integer castControlVersion, @JsonProperty("preview_channel_state") Integer previewChannelState, @JsonProperty("release_track") String releaseTrack, @JsonProperty("system_build_number") String systemBuildNumber) {
+        this.buildType = buildType;
+        this.castBuildRevision = castBuildRevision;
+        this.castControlVersion = castControlVersion;
+        this.previewChannelState = previewChannelState;
+        this.releaseTrack = releaseTrack;
+        this.systemBuildNumber = systemBuildNumber;
+  }
 }

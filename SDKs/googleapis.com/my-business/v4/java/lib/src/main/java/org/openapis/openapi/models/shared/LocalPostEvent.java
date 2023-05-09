@@ -18,6 +18,7 @@ public class LocalPostEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public TimeInterval schedule;
+
     public LocalPostEvent withSchedule(TimeInterval schedule) {
         this.schedule = schedule;
         return this;
@@ -29,9 +30,11 @@ public class LocalPostEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public LocalPostEvent withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public LocalPostEvent(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSectionResponse {
     
     public String contentType;
+
     public GetSectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSectionResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetSectionResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetSectionResponse {
     
     
     public Integer statusCode;
+
     public GetSectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetSectionResponse {
      */
     
     public GetSection200ApplicationJSON getSection200ApplicationJSONObject;
+
     public GetSectionResponse withGetSection200ApplicationJSONObject(GetSection200ApplicationJSON getSection200ApplicationJSONObject) {
         this.getSection200ApplicationJSONObject = getSection200ApplicationJSONObject;
         return this;
     }
     
+    public GetSectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

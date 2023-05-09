@@ -18,9 +18,11 @@ public class LandlordMaintenanceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jobs")
     public LandlordMaintenanceJobModel[] jobs;
+
     public LandlordMaintenanceModel withJobs(LandlordMaintenanceJobModel[] jobs) {
         this.jobs = jobs;
         return this;
     }
     
+    public LandlordMaintenanceModel(){}
 }

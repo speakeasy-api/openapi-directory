@@ -58,4 +58,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/SaveReviewResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SaveMultipleReviewsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SaveReviewRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/rating/README.md
+docs/review/README.md
 USAGE.md

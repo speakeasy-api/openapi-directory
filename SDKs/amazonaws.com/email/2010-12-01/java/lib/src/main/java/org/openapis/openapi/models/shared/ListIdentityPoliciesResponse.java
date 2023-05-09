@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListIdentityPoliciesResponse - A list of names of sending authorization policies that apply to an identity.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class ListIdentityPoliciesResponse {
     
     public String[] policyNames;
+
     public ListIdentityPoliciesResponse withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public ListIdentityPoliciesResponse(@JsonProperty("PolicyNames") String[] policyNames) {
+        this.policyNames = policyNames;
+  }
 }

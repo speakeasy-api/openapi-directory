@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScheduleActivityTaskDecisionAttributes {
     @JsonProperty("activityId")
     public String activityId;
+
     public ScheduleActivityTaskDecisionAttributes withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -21,6 +22,7 @@ public class ScheduleActivityTaskDecisionAttributes {
     
     @JsonProperty("activityType")
     public ActivityType activityType;
+
     public ScheduleActivityTaskDecisionAttributes withActivityType(ActivityType activityType) {
         this.activityType = activityType;
         return this;
@@ -29,6 +31,7 @@ public class ScheduleActivityTaskDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public ScheduleActivityTaskDecisionAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -37,6 +40,7 @@ public class ScheduleActivityTaskDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heartbeatTimeout")
     public String heartbeatTimeout;
+
     public ScheduleActivityTaskDecisionAttributes withHeartbeatTimeout(String heartbeatTimeout) {
         this.heartbeatTimeout = heartbeatTimeout;
         return this;
@@ -45,6 +49,7 @@ public class ScheduleActivityTaskDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public ScheduleActivityTaskDecisionAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -53,6 +58,7 @@ public class ScheduleActivityTaskDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleToCloseTimeout")
     public String scheduleToCloseTimeout;
+
     public ScheduleActivityTaskDecisionAttributes withScheduleToCloseTimeout(String scheduleToCloseTimeout) {
         this.scheduleToCloseTimeout = scheduleToCloseTimeout;
         return this;
@@ -61,6 +67,7 @@ public class ScheduleActivityTaskDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleToStartTimeout")
     public String scheduleToStartTimeout;
+
     public ScheduleActivityTaskDecisionAttributes withScheduleToStartTimeout(String scheduleToStartTimeout) {
         this.scheduleToStartTimeout = scheduleToStartTimeout;
         return this;
@@ -69,6 +76,7 @@ public class ScheduleActivityTaskDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startToCloseTimeout")
     public String startToCloseTimeout;
+
     public ScheduleActivityTaskDecisionAttributes withStartToCloseTimeout(String startToCloseTimeout) {
         this.startToCloseTimeout = startToCloseTimeout;
         return this;
@@ -77,6 +85,7 @@ public class ScheduleActivityTaskDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskList")
     public TaskList taskList;
+
     public ScheduleActivityTaskDecisionAttributes withTaskList(TaskList taskList) {
         this.taskList = taskList;
         return this;
@@ -85,9 +94,14 @@ public class ScheduleActivityTaskDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskPriority")
     public String taskPriority;
+
     public ScheduleActivityTaskDecisionAttributes withTaskPriority(String taskPriority) {
         this.taskPriority = taskPriority;
         return this;
     }
     
+    public ScheduleActivityTaskDecisionAttributes(@JsonProperty("activityId") String activityId, @JsonProperty("activityType") ActivityType activityType) {
+        this.activityId = activityId;
+        this.activityType = activityType;
+  }
 }

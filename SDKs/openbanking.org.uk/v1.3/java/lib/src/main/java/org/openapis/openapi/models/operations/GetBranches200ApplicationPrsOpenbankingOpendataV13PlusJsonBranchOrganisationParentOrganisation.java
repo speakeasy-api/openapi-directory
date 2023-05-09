@@ -18,6 +18,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrg
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BIC")
     public String bic;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisation withBic(String bic) {
         this.bic = bic;
         return this;
@@ -29,6 +30,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrg
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LEI")
     public String lei;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisation withLei(String lei) {
         this.lei = lei;
         return this;
@@ -39,9 +41,13 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrg
      */
     @JsonProperty("OrganisationName")
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisationOrganisationName organisationName;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisation withOrganisationName(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisationOrganisationName organisationName) {
         this.organisationName = organisationName;
         return this;
     }
     
+    public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisation(@JsonProperty("OrganisationName") GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisationOrganisationName organisationName) {
+        this.organisationName = organisationName;
+  }
 }

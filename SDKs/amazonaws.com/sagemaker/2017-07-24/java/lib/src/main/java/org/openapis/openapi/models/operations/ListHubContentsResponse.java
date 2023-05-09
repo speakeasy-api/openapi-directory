@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHubContentsResponse {
     
     public String contentType;
+
     public ListHubContentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListHubContentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHubContentsResponse listHubContentsResponse;
+
     public ListHubContentsResponse withListHubContentsResponse(org.openapis.openapi.models.shared.ListHubContentsResponse listHubContentsResponse) {
         this.listHubContentsResponse = listHubContentsResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListHubContentsResponse {
      */
     
     public Object resourceNotFound;
+
     public ListHubContentsResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class ListHubContentsResponse {
     
     
     public Integer statusCode;
+
     public ListHubContentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListHubContentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHubContentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListHubContentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

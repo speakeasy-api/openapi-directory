@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MarkScoreCommentResolvedResponse {
     
     public String contentType;
+
     public MarkScoreCommentResolvedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MarkScoreCommentResolvedResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public MarkScoreCommentResolvedResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -26,6 +29,7 @@ public class MarkScoreCommentResolvedResponse {
     
     
     public Integer statusCode;
+
     public MarkScoreCommentResolvedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MarkScoreCommentResolvedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MarkScoreCommentResolvedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MarkScoreCommentResolvedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

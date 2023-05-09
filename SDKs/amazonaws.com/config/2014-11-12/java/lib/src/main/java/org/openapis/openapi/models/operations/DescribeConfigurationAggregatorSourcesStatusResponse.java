@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConfigurationAggregatorSourcesStatusResponse {
     
     public String contentType;
+
     public DescribeConfigurationAggregatorSourcesStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConfigurationAggregatorSourcesStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConfigurationAggregatorSourcesStatusResponse describeConfigurationAggregatorSourcesStatusResponse;
+
     public DescribeConfigurationAggregatorSourcesStatusResponse withDescribeConfigurationAggregatorSourcesStatusResponse(org.openapis.openapi.models.shared.DescribeConfigurationAggregatorSourcesStatusResponse describeConfigurationAggregatorSourcesStatusResponse) {
         this.describeConfigurationAggregatorSourcesStatusResponse = describeConfigurationAggregatorSourcesStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConfigurationAggregatorSourcesStatusResponse {
      */
     
     public Object invalidLimitException;
+
     public DescribeConfigurationAggregatorSourcesStatusResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConfigurationAggregatorSourcesStatusResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeConfigurationAggregatorSourcesStatusResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConfigurationAggregatorSourcesStatusResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeConfigurationAggregatorSourcesStatusResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeConfigurationAggregatorSourcesStatusResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public DescribeConfigurationAggregatorSourcesStatusResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeConfigurationAggregatorSourcesStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeConfigurationAggregatorSourcesStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeConfigurationAggregatorSourcesStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConfigurationAggregatorSourcesStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConfigurationAggregatorSourcesStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

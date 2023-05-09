@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLaunchTemplateResultLaunchTemplateTags {
     
     public String key;
+
     public DeleteLaunchTemplateResultLaunchTemplateTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DeleteLaunchTemplateResultLaunchTemplateTags {
     
     
     public String value;
+
     public DeleteLaunchTemplateResultLaunchTemplateTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeleteLaunchTemplateResultLaunchTemplateTags(){}
 }

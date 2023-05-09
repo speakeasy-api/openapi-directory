@@ -14,6 +14,7 @@ public class CreateStreamKeyRequestBody {
      */
     @JsonProperty("channelArn")
     public String channelArn;
+
     public CreateStreamKeyRequestBody withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -25,9 +26,13 @@ public class CreateStreamKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateStreamKeyRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStreamKeyRequestBody(@JsonProperty("channelArn") String channelArn) {
+        this.channelArn = channelArn;
+  }
 }

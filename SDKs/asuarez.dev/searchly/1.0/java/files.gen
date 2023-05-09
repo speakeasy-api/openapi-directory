@@ -43,4 +43,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/APIResponseSimilarity.java
 lib/src/main/java/org/openapis/openapi/models/shared/APIResponseSongResponseResults.java
 lib/src/main/java/org/openapis/openapi/models/shared/APIResponseSongResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/APIResponseSong.java
+docs/sdk/README.md
+docs/similarity/README.md
+docs/song/README.md
 USAGE.md

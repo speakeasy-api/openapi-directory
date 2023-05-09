@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPolicyVersionsResponse {
     
     public String contentType;
+
     public ListPolicyVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPolicyVersionsResponse {
      */
     
     public Object internalFailureException;
+
     public ListPolicyVersionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListPolicyVersionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListPolicyVersionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListPolicyVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPolicyVersionsResponse listPolicyVersionsResponse;
+
     public ListPolicyVersionsResponse withListPolicyVersionsResponse(org.openapis.openapi.models.shared.ListPolicyVersionsResponse listPolicyVersionsResponse) {
         this.listPolicyVersionsResponse = listPolicyVersionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPolicyVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPolicyVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListPolicyVersionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListPolicyVersionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class ListPolicyVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListPolicyVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListPolicyVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPolicyVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListPolicyVersionsResponse {
      */
     
     public Object throttlingException;
+
     public ListPolicyVersionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListPolicyVersionsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListPolicyVersionsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListPolicyVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

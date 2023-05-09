@@ -18,6 +18,7 @@ public class ValidateCreateMembershipRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership")
     public MembershipInput membership;
+
     public ValidateCreateMembershipRequestInput withMembership(MembershipInput membership) {
         this.membership = membership;
         return this;
@@ -29,9 +30,11 @@ public class ValidateCreateMembershipRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipId")
     public String membershipId;
+
     public ValidateCreateMembershipRequestInput withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
     }
     
+    public ValidateCreateMembershipRequestInput(){}
 }

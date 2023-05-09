@@ -15,6 +15,7 @@ public class CustomerReadCreateToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
     public String dateOfBirth;
+
     public CustomerReadCreateToken withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -26,9 +27,11 @@ public class CustomerReadCreateToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public CustomerReadCreateToken withGender(String gender) {
         this.gender = gender;
         return this;
     }
     
+    public CustomerReadCreateToken(){}
 }

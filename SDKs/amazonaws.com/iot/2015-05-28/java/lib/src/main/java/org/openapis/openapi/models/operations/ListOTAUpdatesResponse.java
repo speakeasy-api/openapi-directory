@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOTAUpdatesResponse {
     
     public String contentType;
+
     public ListOTAUpdatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListOTAUpdatesResponse {
      */
     
     public Object internalFailureException;
+
     public ListOTAUpdatesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListOTAUpdatesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListOTAUpdatesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListOTAUpdatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOTAUpdatesResponse listOTAUpdatesResponse;
+
     public ListOTAUpdatesResponse withListOTAUpdatesResponse(org.openapis.openapi.models.shared.ListOTAUpdatesResponse listOTAUpdatesResponse) {
         this.listOTAUpdatesResponse = listOTAUpdatesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListOTAUpdatesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListOTAUpdatesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListOTAUpdatesResponse {
     
     
     public Integer statusCode;
+
     public ListOTAUpdatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListOTAUpdatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOTAUpdatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListOTAUpdatesResponse {
      */
     
     public Object throttlingException;
+
     public ListOTAUpdatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListOTAUpdatesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListOTAUpdatesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListOTAUpdatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

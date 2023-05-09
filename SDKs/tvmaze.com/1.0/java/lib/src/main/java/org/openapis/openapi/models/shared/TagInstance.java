@@ -15,6 +15,7 @@ public class TagInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public TagInstanceEmbedded embedded;
+
     public TagInstance withEmbedded(TagInstanceEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,9 +24,11 @@ public class TagInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_id")
     public Long showId;
+
     public TagInstance withShowId(Long showId) {
         this.showId = showId;
         return this;
     }
     
+    public TagInstance(){}
 }

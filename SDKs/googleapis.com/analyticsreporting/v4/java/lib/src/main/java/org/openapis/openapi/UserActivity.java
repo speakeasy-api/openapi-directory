@@ -61,11 +61,9 @@ public class UserActivity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsreportingUserActivitySearchResponse res = new org.openapis.openapi.models.operations.AnalyticsreportingUserActivitySearchResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsreportingUserActivitySearchResponse res = new org.openapis.openapi.models.operations.AnalyticsreportingUserActivitySearchResponse(contentType, httpRes.statusCode()) {{
             searchUserActivityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,9 +18,11 @@ public class ContentInstreamPositionAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentInstreamPosition")
     public ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum contentInstreamPosition;
+
     public ContentInstreamPositionAssignedTargetingOptionDetailsInput withContentInstreamPosition(ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum contentInstreamPosition) {
         this.contentInstreamPosition = contentInstreamPosition;
         return this;
     }
     
+    public ContentInstreamPositionAssignedTargetingOptionDetailsInput(){}
 }

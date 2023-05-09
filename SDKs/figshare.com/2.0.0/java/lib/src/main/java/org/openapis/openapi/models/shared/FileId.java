@@ -18,9 +18,11 @@ public class FileId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_id")
     public Long fileId;
+
     public FileId withFileId(Long fileId) {
         this.fileId = fileId;
         return this;
     }
     
+    public FileId(){}
 }

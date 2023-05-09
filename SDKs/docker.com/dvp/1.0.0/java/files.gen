@@ -65,4 +65,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/WeekData.java
 lib/src/main/java/org/openapis/openapi/models/shared/YearData.java
 lib/src/main/java/org/openapis/openapi/models/shared/YearModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/authentication/README.md
+docs/discovery/README.md
+docs/namespaces/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class FindNumbersTollfreeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindNumbersTollfreeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class FindNumbersTollfreeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindNumbersTollfreeRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,9 +34,11 @@ public class FindNumbersTollfreeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
     public String pattern;
+
     public FindNumbersTollfreeRequest withPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
     
+    public FindNumbersTollfreeRequest(){}
 }

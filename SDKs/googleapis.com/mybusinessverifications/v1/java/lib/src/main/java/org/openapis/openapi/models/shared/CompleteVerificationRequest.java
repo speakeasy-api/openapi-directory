@@ -18,9 +18,11 @@ public class CompleteVerificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pin")
     public String pin;
+
     public CompleteVerificationRequest withPin(String pin) {
         this.pin = pin;
         return this;
     }
     
+    public CompleteVerificationRequest(){}
 }

@@ -60,11 +60,9 @@ public class Intent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddMediaIntentHandlingResponse res = new org.openapis.openapi.models.operations.AddMediaIntentHandlingResponse() {{
+        org.openapis.openapi.models.operations.AddMediaIntentHandlingResponse res = new org.openapis.openapi.models.operations.AddMediaIntentHandlingResponse(contentType, httpRes.statusCode()) {{
             addMediaIntentHandlingInvocationResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Intent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayMediaIntentHandlingResponse res = new org.openapis.openapi.models.operations.PlayMediaIntentHandlingResponse() {{
+        org.openapis.openapi.models.operations.PlayMediaIntentHandlingResponse res = new org.openapis.openapi.models.operations.PlayMediaIntentHandlingResponse(contentType, httpRes.statusCode()) {{
             playMediaIntentHandlingInvocationResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Intent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMediaAffinityIntentHandlingResponse res = new org.openapis.openapi.models.operations.UpdateMediaAffinityIntentHandlingResponse() {{
+        org.openapis.openapi.models.operations.UpdateMediaAffinityIntentHandlingResponse res = new org.openapis.openapi.models.operations.UpdateMediaAffinityIntentHandlingResponse(contentType, httpRes.statusCode()) {{
             updateMediaAffinityIntentHandlingInvocationResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class TokensTwitchDropHistoryResponse {
     
     public TokensTwitchDropHistoryResponseClaimStateEnum claimState;
+
     public TokensTwitchDropHistoryResponse withClaimState(TokensTwitchDropHistoryResponseClaimStateEnum claimState) {
         this.claimState = claimState;
         return this;
@@ -16,6 +17,7 @@ public class TokensTwitchDropHistoryResponse {
     
     
     public OffsetDateTime createdAt;
+
     public TokensTwitchDropHistoryResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +25,7 @@ public class TokensTwitchDropHistoryResponse {
     
     
     public String description;
+
     public TokensTwitchDropHistoryResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -30,9 +33,11 @@ public class TokensTwitchDropHistoryResponse {
     
     
     public String title;
+
     public TokensTwitchDropHistoryResponse withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public TokensTwitchDropHistoryResponse(){}
 }

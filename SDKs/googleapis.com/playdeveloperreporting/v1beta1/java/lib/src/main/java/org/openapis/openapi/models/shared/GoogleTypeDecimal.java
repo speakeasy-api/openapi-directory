@@ -18,9 +18,11 @@ public class GoogleTypeDecimal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleTypeDecimal withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleTypeDecimal(){}
 }

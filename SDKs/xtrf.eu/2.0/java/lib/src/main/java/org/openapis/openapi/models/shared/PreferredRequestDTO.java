@@ -15,9 +15,11 @@ public class PreferredRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public PreferredRequestDTO withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
     }
     
+    public PreferredRequestDTO(){}
 }

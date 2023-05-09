@@ -15,6 +15,7 @@ public class ListBlueprintsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blueprints")
     public String[] blueprints;
+
     public ListBlueprintsResponse withBlueprints(String[] blueprints) {
         this.blueprints = blueprints;
         return this;
@@ -23,9 +24,11 @@ public class ListBlueprintsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBlueprintsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBlueprintsResponse(){}
 }

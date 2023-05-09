@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Connector {
     @JsonProperty("ConnectorArn")
     public String connectorArn;
+
     public Connector withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
@@ -21,6 +22,7 @@ public class Connector {
     
     @JsonProperty("Id")
     public String id;
+
     public Connector withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +31,14 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public Connector withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public Connector(@JsonProperty("ConnectorArn") String connectorArn, @JsonProperty("Id") String id) {
+        this.connectorArn = connectorArn;
+        this.id = id;
+  }
 }

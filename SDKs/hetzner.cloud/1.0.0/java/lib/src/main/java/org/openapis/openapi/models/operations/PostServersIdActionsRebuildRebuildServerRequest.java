@@ -15,9 +15,13 @@ public class PostServersIdActionsRebuildRebuildServerRequest {
      */
     @JsonProperty("image")
     public String image;
+
     public PostServersIdActionsRebuildRebuildServerRequest withImage(String image) {
         this.image = image;
         return this;
     }
     
+    public PostServersIdActionsRebuildRebuildServerRequest(@JsonProperty("image") String image) {
+        this.image = image;
+  }
 }

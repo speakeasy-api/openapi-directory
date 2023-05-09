@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JobSchedulePatchResponse {
@@ -12,6 +13,7 @@ public class JobSchedulePatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public JobSchedulePatchResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class JobSchedulePatchResponse {
     
     
     public String contentType;
+
     public JobSchedulePatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class JobSchedulePatchResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public JobSchedulePatchResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class JobSchedulePatchResponse {
     
     
     public Integer statusCode;
+
     public JobSchedulePatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class JobSchedulePatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JobSchedulePatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JobSchedulePatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

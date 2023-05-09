@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DotGetAvailableLocalesResponse {
     
     public byte[] body;
+
     public DotGetAvailableLocalesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DotGetAvailableLocalesResponse {
     
     
     public String contentType;
+
     public DotGetAvailableLocalesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DotGetAvailableLocalesResponse {
     
     
     public Integer statusCode;
+
     public DotGetAvailableLocalesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DotGetAvailableLocalesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DotGetAvailableLocalesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DotGetAvailableLocalesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

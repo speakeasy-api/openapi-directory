@@ -12,6 +12,7 @@ public class PullsDismissReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public PullsDismissReviewRequestBody withEvent(String event) {
         this.event = event;
         return this;
@@ -22,9 +23,13 @@ public class PullsDismissReviewRequestBody {
      */
     @JsonProperty("message")
     public String message;
+
     public PullsDismissReviewRequestBody withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PullsDismissReviewRequestBody(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

@@ -17,6 +17,7 @@ public class ProjectSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_account")
     public String clientAccount;
+
     public ProjectSimpleVO withClientAccount(String clientAccount) {
         this.clientAccount = clientAccount;
         return this;
@@ -25,6 +26,7 @@ public class ProjectSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_id")
     public Long clientWorkgroupId;
+
     public ProjectSimpleVO withClientWorkgroupId(Long clientWorkgroupId) {
         this.clientWorkgroupId = clientWorkgroupId;
         return this;
@@ -34,6 +36,7 @@ public class ProjectSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public ProjectSimpleVO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -42,6 +45,7 @@ public class ProjectSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public ProjectSimpleVO withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -50,6 +54,7 @@ public class ProjectSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_hot")
     public Boolean isHot;
+
     public ProjectSimpleVO withIsHot(Boolean isHot) {
         this.isHot = isHot;
         return this;
@@ -59,6 +64,7 @@ public class ProjectSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_spec_update")
     public LocalDate lastSpecUpdate;
+
     public ProjectSimpleVO withLastSpecUpdate(LocalDate lastSpecUpdate) {
         this.lastSpecUpdate = lastSpecUpdate;
         return this;
@@ -67,6 +73,7 @@ public class ProjectSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public Long projectId;
+
     public ProjectSimpleVO withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -75,6 +82,7 @@ public class ProjectSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_name")
     public String projectName;
+
     public ProjectSimpleVO withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -83,6 +91,7 @@ public class ProjectSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_number")
     public String projectNumber;
+
     public ProjectSimpleVO withProjectNumber(String projectNumber) {
         this.projectNumber = projectNumber;
         return this;
@@ -91,9 +100,11 @@ public class ProjectSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_status")
     public String projectStatus;
+
     public ProjectSimpleVO withProjectStatus(String projectStatus) {
         this.projectStatus = projectStatus;
         return this;
     }
     
+    public ProjectSimpleVO(){}
 }

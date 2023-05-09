@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEmailTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateEmailTemplateResponse {
      */
     
     public Object badRequestException;
+
     public UpdateEmailTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEmailTemplateResponse {
     
     
     public String contentType;
+
     public UpdateEmailTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEmailTemplateResponse {
      */
     
     public Object notFoundException;
+
     public UpdateEmailTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateEmailTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateEmailTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateEmailTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEmailTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEmailTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateEmailTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateEmailTemplateResponse {
      */
     
     public java.util.Map<String, Object> updateEmailTemplateResponse;
+
     public UpdateEmailTemplateResponse withUpdateEmailTemplateResponse(java.util.Map<String, Object> updateEmailTemplateResponse) {
         this.updateEmailTemplateResponse = updateEmailTemplateResponse;
         return this;
     }
     
+    public UpdateEmailTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

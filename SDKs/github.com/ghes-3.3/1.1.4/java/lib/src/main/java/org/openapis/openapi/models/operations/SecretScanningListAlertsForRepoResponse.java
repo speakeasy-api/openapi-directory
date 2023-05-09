@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecretScanningListAlertsForRepoResponse {
     
     public String contentType;
+
     public SecretScanningListAlertsForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SecretScanningListAlertsForRepoResponse {
     
     
     public Integer statusCode;
+
     public SecretScanningListAlertsForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SecretScanningListAlertsForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecretScanningListAlertsForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SecretScanningListAlertsForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.SecretScanningAlert[] secretScanningAlerts;
+
     public SecretScanningListAlertsForRepoResponse withSecretScanningAlerts(org.openapis.openapi.models.shared.SecretScanningAlert[] secretScanningAlerts) {
         this.secretScanningAlerts = secretScanningAlerts;
         return this;
@@ -43,9 +48,14 @@ public class SecretScanningListAlertsForRepoResponse {
      */
     
     public SecretScanningListAlertsForRepo503ApplicationJSON secretScanningListAlertsForRepo503ApplicationJSONObject;
+
     public SecretScanningListAlertsForRepoResponse withSecretScanningListAlertsForRepo503ApplicationJSONObject(SecretScanningListAlertsForRepo503ApplicationJSON secretScanningListAlertsForRepo503ApplicationJSONObject) {
         this.secretScanningListAlertsForRepo503ApplicationJSONObject = secretScanningListAlertsForRepo503ApplicationJSONObject;
         return this;
     }
     
+    public SecretScanningListAlertsForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

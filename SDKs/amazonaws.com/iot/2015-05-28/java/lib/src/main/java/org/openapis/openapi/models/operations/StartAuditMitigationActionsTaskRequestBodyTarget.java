@@ -15,6 +15,7 @@ public class StartAuditMitigationActionsTaskRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditCheckToReasonCodeFilter")
     public java.util.Map<String, String[]> auditCheckToReasonCodeFilter;
+
     public StartAuditMitigationActionsTaskRequestBodyTarget withAuditCheckToReasonCodeFilter(java.util.Map<String, String[]> auditCheckToReasonCodeFilter) {
         this.auditCheckToReasonCodeFilter = auditCheckToReasonCodeFilter;
         return this;
@@ -23,6 +24,7 @@ public class StartAuditMitigationActionsTaskRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditTaskId")
     public String auditTaskId;
+
     public StartAuditMitigationActionsTaskRequestBodyTarget withAuditTaskId(String auditTaskId) {
         this.auditTaskId = auditTaskId;
         return this;
@@ -31,9 +33,11 @@ public class StartAuditMitigationActionsTaskRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingIds")
     public String[] findingIds;
+
     public StartAuditMitigationActionsTaskRequestBodyTarget withFindingIds(String[] findingIds) {
         this.findingIds = findingIds;
         return this;
     }
     
+    public StartAuditMitigationActionsTaskRequestBodyTarget(){}
 }

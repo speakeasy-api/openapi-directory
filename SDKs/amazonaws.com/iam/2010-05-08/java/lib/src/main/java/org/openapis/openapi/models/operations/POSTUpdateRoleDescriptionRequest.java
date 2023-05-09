@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTUpdateRoleDescriptionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTUpdateRoleDescriptionActionEnum action;
+
     public POSTUpdateRoleDescriptionRequest withAction(POSTUpdateRoleDescriptionActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTUpdateRoleDescriptionRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTUpdateRoleDescriptionVersionEnum version;
+
     public POSTUpdateRoleDescriptionRequest withVersion(POSTUpdateRoleDescriptionVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTUpdateRoleDescriptionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTUpdateRoleDescriptionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTUpdateRoleDescriptionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTUpdateRoleDescriptionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTUpdateRoleDescriptionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTUpdateRoleDescriptionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTUpdateRoleDescriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTUpdateRoleDescriptionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTUpdateRoleDescriptionRequest(@JsonProperty("Action") POSTUpdateRoleDescriptionActionEnum action, @JsonProperty("Version") POSTUpdateRoleDescriptionVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

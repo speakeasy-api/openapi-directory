@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeScalableTargetsResponse {
@@ -12,6 +13,7 @@ public class DescribeScalableTargetsResponse {
      */
     
     public Object concurrentUpdateException;
+
     public DescribeScalableTargetsResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeScalableTargetsResponse {
     
     
     public String contentType;
+
     public DescribeScalableTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeScalableTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeScalableTargetsResponse describeScalableTargetsResponse;
+
     public DescribeScalableTargetsResponse withDescribeScalableTargetsResponse(org.openapis.openapi.models.shared.DescribeScalableTargetsResponse describeScalableTargetsResponse) {
         this.describeScalableTargetsResponse = describeScalableTargetsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeScalableTargetsResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeScalableTargetsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeScalableTargetsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeScalableTargetsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeScalableTargetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeScalableTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeScalableTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeScalableTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeScalableTargetsResponse {
      */
     
     public Object validationException;
+
     public DescribeScalableTargetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeScalableTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

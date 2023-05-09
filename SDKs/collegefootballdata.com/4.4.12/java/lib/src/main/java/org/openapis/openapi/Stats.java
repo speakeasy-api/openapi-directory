@@ -61,11 +61,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdvancedTeamGameStatsResponse res = new org.openapis.openapi.models.operations.GetAdvancedTeamGameStatsResponse() {{
+        org.openapis.openapi.models.operations.GetAdvancedTeamGameStatsResponse res = new org.openapis.openapi.models.operations.GetAdvancedTeamGameStatsResponse(contentType, httpRes.statusCode()) {{
             advancedGameStats = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdvancedTeamSeasonStatsResponse res = new org.openapis.openapi.models.operations.GetAdvancedTeamSeasonStatsResponse() {{
+        org.openapis.openapi.models.operations.GetAdvancedTeamSeasonStatsResponse res = new org.openapis.openapi.models.operations.GetAdvancedTeamSeasonStatsResponse(contentType, httpRes.statusCode()) {{
             advancedSeasonStats = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatCategoriesResponse res = new org.openapis.openapi.models.operations.GetStatCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetStatCategoriesResponse res = new org.openapis.openapi.models.operations.GetStatCategoriesResponse(contentType, httpRes.statusCode()) {{
             getStatCategories200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamSeasonStatsResponse res = new org.openapis.openapi.models.operations.GetTeamSeasonStatsResponse() {{
+        org.openapis.openapi.models.operations.GetTeamSeasonStatsResponse res = new org.openapis.openapi.models.operations.GetTeamSeasonStatsResponse(contentType, httpRes.statusCode()) {{
             teamSeasonStats = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

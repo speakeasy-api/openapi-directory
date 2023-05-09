@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInsightRulesInput {
     
     public Long maxResults;
+
     public DescribeInsightRulesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -16,9 +17,11 @@ public class DescribeInsightRulesInput {
     
     
     public String nextToken;
+
     public DescribeInsightRulesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInsightRulesInput(){}
 }

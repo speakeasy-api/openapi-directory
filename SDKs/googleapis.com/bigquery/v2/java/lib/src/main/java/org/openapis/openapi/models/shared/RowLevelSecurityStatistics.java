@@ -15,9 +15,11 @@ public class RowLevelSecurityStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowLevelSecurityApplied")
     public Boolean rowLevelSecurityApplied;
+
     public RowLevelSecurityStatistics withRowLevelSecurityApplied(Boolean rowLevelSecurityApplied) {
         this.rowLevelSecurityApplied = rowLevelSecurityApplied;
         return this;
     }
     
+    public RowLevelSecurityStatistics(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse {
      */
     
     public EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject;
+
     public EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse withEnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject(EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject) {
         this.enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject = enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject;
         return this;
     }
     
+    public EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

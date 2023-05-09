@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsForStreamResponse {
@@ -12,6 +13,7 @@ public class ListTagsForStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTagsForStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsForStreamResponse {
     
     
     public String contentType;
+
     public ListTagsForStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsForStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListTagsForStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsForStreamResponse {
      */
     
     public Object limitExceededException;
+
     public ListTagsForStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListTagsForStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsForStreamOutput listTagsForStreamOutput;
+
     public ListTagsForStreamResponse withListTagsForStreamOutput(org.openapis.openapi.models.shared.ListTagsForStreamOutput listTagsForStreamOutput) {
         this.listTagsForStreamOutput = listTagsForStreamOutput;
         return this;
@@ -59,6 +65,7 @@ public class ListTagsForStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTagsForStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListTagsForStreamResponse {
     
     
     public Integer statusCode;
+
     public ListTagsForStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListTagsForStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsForStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTagsForStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

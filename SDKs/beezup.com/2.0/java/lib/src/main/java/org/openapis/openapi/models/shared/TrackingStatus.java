@@ -22,6 +22,7 @@ public class TrackingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("clickSynchronizationUtcDate")
     public OffsetDateTime clickSynchronizationUtcDate;
+
     public TrackingStatus withClickSynchronizationUtcDate(OffsetDateTime clickSynchronizationUtcDate) {
         this.clickSynchronizationUtcDate = clickSynchronizationUtcDate;
         return this;
@@ -34,6 +35,7 @@ public class TrackingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("marketplaceOrderSynchonizationUtcDate")
     public OffsetDateTime marketplaceOrderSynchonizationUtcDate;
+
     public TrackingStatus withMarketplaceOrderSynchonizationUtcDate(OffsetDateTime marketplaceOrderSynchonizationUtcDate) {
         this.marketplaceOrderSynchonizationUtcDate = marketplaceOrderSynchonizationUtcDate;
         return this;
@@ -46,9 +48,15 @@ public class TrackingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("orderSynchonizationUtcDate")
     public OffsetDateTime orderSynchonizationUtcDate;
+
     public TrackingStatus withOrderSynchonizationUtcDate(OffsetDateTime orderSynchonizationUtcDate) {
         this.orderSynchonizationUtcDate = orderSynchonizationUtcDate;
         return this;
     }
     
+    public TrackingStatus(@JsonProperty("clickSynchronizationUtcDate") OffsetDateTime clickSynchronizationUtcDate, @JsonProperty("marketplaceOrderSynchonizationUtcDate") OffsetDateTime marketplaceOrderSynchonizationUtcDate, @JsonProperty("orderSynchonizationUtcDate") OffsetDateTime orderSynchonizationUtcDate) {
+        this.clickSynchronizationUtcDate = clickSynchronizationUtcDate;
+        this.marketplaceOrderSynchonizationUtcDate = marketplaceOrderSynchonizationUtcDate;
+        this.orderSynchonizationUtcDate = orderSynchonizationUtcDate;
+  }
 }

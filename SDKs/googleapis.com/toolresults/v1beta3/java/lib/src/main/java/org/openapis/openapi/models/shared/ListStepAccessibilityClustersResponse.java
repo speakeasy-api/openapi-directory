@@ -18,6 +18,7 @@ public class ListStepAccessibilityClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public SuggestionClusterProto[] clusters;
+
     public ListStepAccessibilityClustersResponse withClusters(SuggestionClusterProto[] clusters) {
         this.clusters = clusters;
         return this;
@@ -29,9 +30,11 @@ public class ListStepAccessibilityClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListStepAccessibilityClustersResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ListStepAccessibilityClustersResponse(){}
 }

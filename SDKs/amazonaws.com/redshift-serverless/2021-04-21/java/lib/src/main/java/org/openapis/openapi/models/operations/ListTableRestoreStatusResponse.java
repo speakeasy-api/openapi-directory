@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTableRestoreStatusResponse {
     
     public String contentType;
+
     public ListTableRestoreStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTableRestoreStatusResponse {
      */
     
     public Object invalidPaginationException;
+
     public ListTableRestoreStatusResponse withInvalidPaginationException(Object invalidPaginationException) {
         this.invalidPaginationException = invalidPaginationException;
         return this;
@@ -29,6 +32,7 @@ public class ListTableRestoreStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTableRestoreStatusResponse listTableRestoreStatusResponse;
+
     public ListTableRestoreStatusResponse withListTableRestoreStatusResponse(org.openapis.openapi.models.shared.ListTableRestoreStatusResponse listTableRestoreStatusResponse) {
         this.listTableRestoreStatusResponse = listTableRestoreStatusResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListTableRestoreStatusResponse {
     
     
     public Integer statusCode;
+
     public ListTableRestoreStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListTableRestoreStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTableRestoreStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListTableRestoreStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTableRestoreStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class ListTableRestoreStatusResponse {
      */
     
     public Object validationException;
+
     public ListTableRestoreStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTableRestoreStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

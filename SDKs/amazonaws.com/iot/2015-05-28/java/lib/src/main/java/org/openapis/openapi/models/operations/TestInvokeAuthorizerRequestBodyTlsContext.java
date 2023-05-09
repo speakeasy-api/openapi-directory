@@ -15,9 +15,11 @@ public class TestInvokeAuthorizerRequestBodyTlsContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverName")
     public String serverName;
+
     public TestInvokeAuthorizerRequestBodyTlsContext withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public TestInvokeAuthorizerRequestBodyTlsContext(){}
 }

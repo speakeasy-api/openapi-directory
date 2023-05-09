@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListForUserRequest {
@@ -12,6 +13,7 @@ public class ProjectsListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ProjectsListForUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class ProjectsListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ProjectsListForUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,6 +35,7 @@ public class ProjectsListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public ProjectsListForUserStateEnum state;
+
     public ProjectsListForUserRequest withState(ProjectsListForUserStateEnum state) {
         this.state = state;
         return this;
@@ -42,9 +46,13 @@ public class ProjectsListForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public ProjectsListForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ProjectsListForUserRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

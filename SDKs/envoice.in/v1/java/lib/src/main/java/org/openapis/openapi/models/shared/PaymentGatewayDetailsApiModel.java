@@ -15,6 +15,7 @@ public class PaymentGatewayDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PaymentGatewayDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class PaymentGatewayDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedCurrencies")
     public CurrencyApiModel[] supportedCurrencies;
+
     public PaymentGatewayDetailsApiModel withSupportedCurrencies(CurrencyApiModel[] supportedCurrencies) {
         this.supportedCurrencies = supportedCurrencies;
         return this;
     }
     
+    public PaymentGatewayDetailsApiModel(){}
 }

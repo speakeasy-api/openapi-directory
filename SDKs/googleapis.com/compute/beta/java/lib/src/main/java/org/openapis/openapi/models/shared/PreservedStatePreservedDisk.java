@@ -15,6 +15,7 @@ public class PreservedStatePreservedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDelete")
     public PreservedStatePreservedDiskAutoDeleteEnum autoDelete;
+
     public PreservedStatePreservedDisk withAutoDelete(PreservedStatePreservedDiskAutoDeleteEnum autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -26,6 +27,7 @@ public class PreservedStatePreservedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public PreservedStatePreservedDiskModeEnum mode;
+
     public PreservedStatePreservedDisk withMode(PreservedStatePreservedDiskModeEnum mode) {
         this.mode = mode;
         return this;
@@ -37,9 +39,11 @@ public class PreservedStatePreservedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public PreservedStatePreservedDisk withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public PreservedStatePreservedDisk(){}
 }

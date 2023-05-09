@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdTerminalOrdersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest;
+
     public PostCompaniesCompanyIdTerminalOrdersRequest withTerminalOrderRequest(org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest) {
         this.terminalOrderRequest = terminalOrderRequest;
         return this;
@@ -19,9 +21,13 @@ public class PostCompaniesCompanyIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PostCompaniesCompanyIdTerminalOrdersRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public PostCompaniesCompanyIdTerminalOrdersRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

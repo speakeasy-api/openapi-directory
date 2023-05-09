@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchPatientPlanSummaryResponse {
     
     public String contentType;
+
     public FetchPatientPlanSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchPatientPlanSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse;
+
     public FetchPatientPlanSummaryResponse withFetchErrorResponse(org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse) {
         this.fetchErrorResponse = fetchErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FetchPatientPlanSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchPatientPlanSummaryResponse fetchPatientPlanSummaryResponse;
+
     public FetchPatientPlanSummaryResponse withFetchPatientPlanSummaryResponse(org.openapis.openapi.models.shared.FetchPatientPlanSummaryResponse fetchPatientPlanSummaryResponse) {
         this.fetchPatientPlanSummaryResponse = fetchPatientPlanSummaryResponse;
         return this;
@@ -36,6 +40,7 @@ public class FetchPatientPlanSummaryResponse {
     
     
     public Integer statusCode;
+
     public FetchPatientPlanSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FetchPatientPlanSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchPatientPlanSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchPatientPlanSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

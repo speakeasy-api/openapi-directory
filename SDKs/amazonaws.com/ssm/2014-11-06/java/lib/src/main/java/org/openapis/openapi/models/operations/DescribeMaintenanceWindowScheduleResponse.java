@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMaintenanceWindowScheduleResponse {
     
     public String contentType;
+
     public DescribeMaintenanceWindowScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMaintenanceWindowScheduleResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMaintenanceWindowScheduleResult describeMaintenanceWindowScheduleResult;
+
     public DescribeMaintenanceWindowScheduleResponse withDescribeMaintenanceWindowScheduleResult(org.openapis.openapi.models.shared.DescribeMaintenanceWindowScheduleResult describeMaintenanceWindowScheduleResult) {
         this.describeMaintenanceWindowScheduleResult = describeMaintenanceWindowScheduleResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMaintenanceWindowScheduleResponse {
      */
     
     public Object doesNotExistException;
+
     public DescribeMaintenanceWindowScheduleResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMaintenanceWindowScheduleResponse {
      */
     
     public Object internalServerError;
+
     public DescribeMaintenanceWindowScheduleResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMaintenanceWindowScheduleResponse {
     
     
     public Integer statusCode;
+
     public DescribeMaintenanceWindowScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeMaintenanceWindowScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMaintenanceWindowScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMaintenanceWindowScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

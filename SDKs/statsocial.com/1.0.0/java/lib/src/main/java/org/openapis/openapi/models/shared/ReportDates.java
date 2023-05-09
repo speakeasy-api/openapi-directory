@@ -15,6 +15,7 @@ public class ReportDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Long[] data;
+
     public ReportDates withData(Long[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ReportDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public ReportDates withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -31,9 +33,11 @@ public class ReportDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public ReportDates withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public ReportDates(){}
 }

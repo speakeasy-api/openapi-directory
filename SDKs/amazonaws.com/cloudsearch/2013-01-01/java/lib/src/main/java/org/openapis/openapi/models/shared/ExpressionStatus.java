@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ExpressionStatus - The value of an &lt;code&gt;Expression&lt;/code&gt; and its current status.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExpressionStatus {
     
     public Expression options;
+
     public ExpressionStatus withOptions(Expression options) {
         this.options = options;
         return this;
@@ -22,9 +23,14 @@ public class ExpressionStatus {
      */
     
     public OptionStatus status;
+
     public ExpressionStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public ExpressionStatus(@JsonProperty("Options") Expression options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

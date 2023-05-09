@@ -12,6 +12,7 @@ public class AuditCaseCategoryRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_category_id")
     public String primaryCategoryId;
+
     public AuditCaseCategoryRelation withPrimaryCategoryId(String primaryCategoryId) {
         this.primaryCategoryId = primaryCategoryId;
         return this;
@@ -20,6 +21,7 @@ public class AuditCaseCategoryRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_category_name")
     public String primaryCategoryName;
+
     public AuditCaseCategoryRelation withPrimaryCategoryName(String primaryCategoryName) {
         this.primaryCategoryName = primaryCategoryName;
         return this;
@@ -28,9 +30,11 @@ public class AuditCaseCategoryRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_category_list")
     public AuditCaseSubCategory[] subCategoryList;
+
     public AuditCaseCategoryRelation withSubCategoryList(AuditCaseSubCategory[] subCategoryList) {
         this.subCategoryList = subCategoryList;
         return this;
     }
     
+    public AuditCaseCategoryRelation(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBReadBalance1 {
     @JsonProperty("Data")
     public OBReadDataBalance1 data;
+
     public OBReadBalance1 withData(OBReadDataBalance1 data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class OBReadBalance1 {
      */
     @JsonProperty("Links")
     public Links links;
+
     public OBReadBalance1 withLinks(Links links) {
         this.links = links;
         return this;
@@ -32,9 +34,15 @@ public class OBReadBalance1 {
      */
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBReadBalance1 withMeta(Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public OBReadBalance1(@JsonProperty("Data") OBReadDataBalance1 data, @JsonProperty("Links") Links links, @JsonProperty("Meta") Meta meta) {
+        this.data = data;
+        this.links = links;
+        this.meta = meta;
+  }
 }

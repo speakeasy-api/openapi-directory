@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DoSigmaUsdExchangeResponse {
     
     public byte[] body;
+
     public DoSigmaUsdExchangeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DoSigmaUsdExchangeResponse {
     
     
     public String contentType;
+
     public DoSigmaUsdExchangeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DoSigmaUsdExchangeResponse {
     
     
     public Integer statusCode;
+
     public DoSigmaUsdExchangeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DoSigmaUsdExchangeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DoSigmaUsdExchangeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DoSigmaUsdExchangeResponse {
      */
     
     public String doSigmaUsdExchange400WildcardString;
+
     public DoSigmaUsdExchangeResponse withDoSigmaUsdExchange400WildcardString(String doSigmaUsdExchange400WildcardString) {
         this.doSigmaUsdExchange400WildcardString = doSigmaUsdExchange400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class DoSigmaUsdExchangeResponse {
      */
     
     public String doSigmaUsdExchange401WildcardString;
+
     public DoSigmaUsdExchangeResponse withDoSigmaUsdExchange401WildcardString(String doSigmaUsdExchange401WildcardString) {
         this.doSigmaUsdExchange401WildcardString = doSigmaUsdExchange401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class DoSigmaUsdExchangeResponse {
      */
     
     public String doSigmaUsdExchange404WildcardString;
+
     public DoSigmaUsdExchangeResponse withDoSigmaUsdExchange404WildcardString(String doSigmaUsdExchange404WildcardString) {
         this.doSigmaUsdExchange404WildcardString = doSigmaUsdExchange404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class DoSigmaUsdExchangeResponse {
      */
     
     public String doSigmaUsdExchange409WildcardString;
+
     public DoSigmaUsdExchangeResponse withDoSigmaUsdExchange409WildcardString(String doSigmaUsdExchange409WildcardString) {
         this.doSigmaUsdExchange409WildcardString = doSigmaUsdExchange409WildcardString;
         return this;
     }
     
+    public DoSigmaUsdExchangeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

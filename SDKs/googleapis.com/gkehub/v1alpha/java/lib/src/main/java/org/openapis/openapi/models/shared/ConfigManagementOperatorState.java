@@ -18,6 +18,7 @@ public class ConfigManagementOperatorState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentState")
     public ConfigManagementOperatorStateDeploymentStateEnum deploymentState;
+
     public ConfigManagementOperatorState withDeploymentState(ConfigManagementOperatorStateDeploymentStateEnum deploymentState) {
         this.deploymentState = deploymentState;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementOperatorState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ConfigManagementInstallError[] errors;
+
     public ConfigManagementOperatorState withErrors(ConfigManagementInstallError[] errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class ConfigManagementOperatorState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ConfigManagementOperatorState withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ConfigManagementOperatorState(){}
 }

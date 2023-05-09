@@ -12,6 +12,7 @@ public class SlcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public SlcerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -22,9 +23,14 @@ public class SlcerRequestBodyCertificateParameters {
      */
     @JsonProperty("refno")
     public String refno;
+
     public SlcerRequestBodyCertificateParameters withRefno(String refno) {
         this.refno = refno;
         return this;
     }
     
+    public SlcerRequestBodyCertificateParameters(@JsonProperty("UID") String uid, @JsonProperty("refno") String refno) {
+        this.uid = uid;
+        this.refno = refno;
+  }
 }

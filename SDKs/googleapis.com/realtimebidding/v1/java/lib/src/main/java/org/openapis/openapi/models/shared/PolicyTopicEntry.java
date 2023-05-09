@@ -18,6 +18,7 @@ public class PolicyTopicEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidences")
     public PolicyTopicEvidence[] evidences;
+
     public PolicyTopicEntry withEvidences(PolicyTopicEvidence[] evidences) {
         this.evidences = evidences;
         return this;
@@ -29,6 +30,7 @@ public class PolicyTopicEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpCenterUrl")
     public String helpCenterUrl;
+
     public PolicyTopicEntry withHelpCenterUrl(String helpCenterUrl) {
         this.helpCenterUrl = helpCenterUrl;
         return this;
@@ -40,6 +42,7 @@ public class PolicyTopicEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingCertificate")
     public Boolean missingCertificate;
+
     public PolicyTopicEntry withMissingCertificate(Boolean missingCertificate) {
         this.missingCertificate = missingCertificate;
         return this;
@@ -51,9 +54,11 @@ public class PolicyTopicEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTopic")
     public String policyTopic;
+
     public PolicyTopicEntry withPolicyTopic(String policyTopic) {
         this.policyTopic = policyTopic;
         return this;
     }
     
+    public PolicyTopicEntry(){}
 }

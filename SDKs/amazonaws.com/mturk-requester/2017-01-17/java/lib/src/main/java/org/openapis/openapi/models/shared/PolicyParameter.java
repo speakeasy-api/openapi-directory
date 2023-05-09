@@ -15,6 +15,7 @@ public class PolicyParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public PolicyParameter withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class PolicyParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MapEntries")
     public ParameterMapEntry[] mapEntries;
+
     public PolicyParameter withMapEntries(ParameterMapEntry[] mapEntries) {
         this.mapEntries = mapEntries;
         return this;
@@ -31,9 +33,11 @@ public class PolicyParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public PolicyParameter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PolicyParameter(){}
 }

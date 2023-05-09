@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartNetworkInsightsAccessScopeAnalysisRequest {
     
     public String clientToken;
+
     public StartNetworkInsightsAccessScopeAnalysisRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class StartNetworkInsightsAccessScopeAnalysisRequest {
     
     
     public Boolean dryRun;
+
     public StartNetworkInsightsAccessScopeAnalysisRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class StartNetworkInsightsAccessScopeAnalysisRequest {
     
     
     public String networkInsightsAccessScopeId;
+
     public StartNetworkInsightsAccessScopeAnalysisRequest withNetworkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
         return this;
@@ -30,9 +33,14 @@ public class StartNetworkInsightsAccessScopeAnalysisRequest {
     
     
     public StartNetworkInsightsAccessScopeAnalysisRequestTagSpecifications[] tagSpecifications;
+
     public StartNetworkInsightsAccessScopeAnalysisRequest withTagSpecifications(StartNetworkInsightsAccessScopeAnalysisRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public StartNetworkInsightsAccessScopeAnalysisRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("NetworkInsightsAccessScopeId") String networkInsightsAccessScopeId) {
+        this.clientToken = clientToken;
+        this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
+  }
 }

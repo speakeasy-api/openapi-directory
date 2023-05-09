@@ -18,6 +18,7 @@ public class GeoRegionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GeoRegionAssignedTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GeoRegionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoRegionType")
     public GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum geoRegionType;
+
     public GeoRegionAssignedTargetingOptionDetails withGeoRegionType(GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum geoRegionType) {
         this.geoRegionType = geoRegionType;
         return this;
@@ -40,6 +42,7 @@ public class GeoRegionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public GeoRegionAssignedTargetingOptionDetails withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -51,9 +54,11 @@ public class GeoRegionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public GeoRegionAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public GeoRegionAssignedTargetingOptionDetails(){}
 }

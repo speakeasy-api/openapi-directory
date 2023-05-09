@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClassicLinkInstancesResultInstances {
     
     public DescribeClassicLinkInstancesResultInstancesGroups[] groups;
+
     public DescribeClassicLinkInstancesResultInstances withGroups(DescribeClassicLinkInstancesResultInstancesGroups[] groups) {
         this.groups = groups;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClassicLinkInstancesResultInstances {
     
     
     public String instanceId;
+
     public DescribeClassicLinkInstancesResultInstances withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClassicLinkInstancesResultInstances {
     
     
     public DescribeClassicLinkInstancesResultInstancesTags[] tags;
+
     public DescribeClassicLinkInstancesResultInstances withTags(DescribeClassicLinkInstancesResultInstancesTags[] tags) {
         this.tags = tags;
         return this;
@@ -33,9 +36,11 @@ public class DescribeClassicLinkInstancesResultInstances {
     
     
     public String vpcId;
+
     public DescribeClassicLinkInstancesResultInstances withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeClassicLinkInstancesResultInstances(){}
 }

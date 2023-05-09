@@ -14,6 +14,7 @@ public class ReleasesAvailableToTester200ApplicationJSONDistributionGroups {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesAvailableToTester200ApplicationJSONDistributionGroups withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class ReleasesAvailableToTester200ApplicationJSONDistributionGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_latest")
     public Boolean isLatest;
+
     public ReleasesAvailableToTester200ApplicationJSONDistributionGroups withIsLatest(Boolean isLatest) {
         this.isLatest = isLatest;
         return this;
@@ -36,9 +38,13 @@ public class ReleasesAvailableToTester200ApplicationJSONDistributionGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReleasesAvailableToTester200ApplicationJSONDistributionGroups withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReleasesAvailableToTester200ApplicationJSONDistributionGroups(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

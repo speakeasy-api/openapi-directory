@@ -15,6 +15,7 @@ public class SearchIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexName")
     public String indexName;
+
     public SearchIndexRequestBody withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -26,6 +27,7 @@ public class SearchIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchIndexRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class SearchIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchIndexRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,6 +50,7 @@ public class SearchIndexRequestBody {
      */
     @JsonProperty("queryString")
     public String queryString;
+
     public SearchIndexRequestBody withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -58,9 +62,13 @@ public class SearchIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVersion")
     public String queryVersion;
+
     public SearchIndexRequestBody withQueryVersion(String queryVersion) {
         this.queryVersion = queryVersion;
         return this;
     }
     
+    public SearchIndexRequestBody(@JsonProperty("queryString") String queryString) {
+        this.queryString = queryString;
+  }
 }

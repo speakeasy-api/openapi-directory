@@ -18,6 +18,7 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UserList withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UserList withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipDurationDays")
     public String membershipDurationDays;
+
     public UserList withMembershipDurationDays(String membershipDurationDays) {
         this.membershipDurationDays = membershipDurationDays;
         return this;
@@ -51,6 +54,7 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserList withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UserListStatusEnum status;
+
     public UserList withStatus(UserListStatusEnum status) {
         this.status = status;
         return this;
@@ -73,9 +78,11 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlRestriction")
     public UrlRestriction urlRestriction;
+
     public UserList withUrlRestriction(UrlRestriction urlRestriction) {
         this.urlRestriction = urlRestriction;
         return this;
     }
     
+    public UserList(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomColumnLinks {
     @JsonProperty("delete")
     public LinksCatalogDeleteCustomColumnLink delete;
+
     public CustomColumnLinks withDelete(LinksCatalogDeleteCustomColumnLink delete) {
         this.delete = delete;
         return this;
@@ -16,6 +17,7 @@ public class CustomColumnLinks {
     
     @JsonProperty("expression")
     public LinksCatalogGetCustomColumnExpressionLink expression;
+
     public CustomColumnLinks withExpression(LinksCatalogGetCustomColumnExpressionLink expression) {
         this.expression = expression;
         return this;
@@ -23,6 +25,7 @@ public class CustomColumnLinks {
     
     @JsonProperty("rename")
     public LinksCatalogChangeCustomColumnUserNameLink rename;
+
     public CustomColumnLinks withRename(LinksCatalogChangeCustomColumnUserNameLink rename) {
         this.rename = rename;
         return this;
@@ -30,6 +33,7 @@ public class CustomColumnLinks {
     
     @JsonProperty("save")
     public LinksCatalogSaveCustomColumnLink save;
+
     public CustomColumnLinks withSave(LinksCatalogSaveCustomColumnLink save) {
         this.save = save;
         return this;
@@ -37,9 +41,17 @@ public class CustomColumnLinks {
     
     @JsonProperty("saveExpression")
     public LinksCatalogChangeCustomColumnExpressionLink saveExpression;
+
     public CustomColumnLinks withSaveExpression(LinksCatalogChangeCustomColumnExpressionLink saveExpression) {
         this.saveExpression = saveExpression;
         return this;
     }
     
+    public CustomColumnLinks(@JsonProperty("delete") LinksCatalogDeleteCustomColumnLink delete, @JsonProperty("expression") LinksCatalogGetCustomColumnExpressionLink expression, @JsonProperty("rename") LinksCatalogChangeCustomColumnUserNameLink rename, @JsonProperty("save") LinksCatalogSaveCustomColumnLink save, @JsonProperty("saveExpression") LinksCatalogChangeCustomColumnExpressionLink saveExpression) {
+        this.delete = delete;
+        this.expression = expression;
+        this.rename = rename;
+        this.save = save;
+        this.saveExpression = saveExpression;
+  }
 }

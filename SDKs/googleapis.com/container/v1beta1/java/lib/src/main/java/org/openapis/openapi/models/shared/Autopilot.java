@@ -18,9 +18,11 @@ public class Autopilot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Autopilot withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public Autopilot(){}
 }

@@ -15,6 +15,7 @@ public class DeleteDefaultMessageTypeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetArn")
     public String configurationSetArn;
+
     public DeleteDefaultMessageTypeResult withConfigurationSetArn(String configurationSetArn) {
         this.configurationSetArn = configurationSetArn;
         return this;
@@ -23,6 +24,7 @@ public class DeleteDefaultMessageTypeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public DeleteDefaultMessageTypeResult withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -31,9 +33,11 @@ public class DeleteDefaultMessageTypeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public DeleteDefaultMessageTypeResult withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
     }
     
+    public DeleteDefaultMessageTypeResult(){}
 }

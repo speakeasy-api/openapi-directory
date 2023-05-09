@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Ulimit {
     @JsonProperty("hardLimit")
     public Long hardLimit;
+
     public Ulimit withHardLimit(Long hardLimit) {
         this.hardLimit = hardLimit;
         return this;
@@ -19,6 +20,7 @@ public class Ulimit {
     
     @JsonProperty("name")
     public String name;
+
     public Ulimit withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class Ulimit {
     
     @JsonProperty("softLimit")
     public Long softLimit;
+
     public Ulimit withSoftLimit(Long softLimit) {
         this.softLimit = softLimit;
         return this;
     }
     
+    public Ulimit(@JsonProperty("hardLimit") Long hardLimit, @JsonProperty("name") String name, @JsonProperty("softLimit") Long softLimit) {
+        this.hardLimit = hardLimit;
+        this.name = name;
+        this.softLimit = softLimit;
+  }
 }

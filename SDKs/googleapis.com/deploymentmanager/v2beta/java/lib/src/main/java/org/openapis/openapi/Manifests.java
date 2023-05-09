@@ -58,11 +58,9 @@ public class Manifests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetResponse(contentType, httpRes.statusCode()) {{
             manifest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Manifests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerManifestsListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerManifestsListResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerManifestsListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerManifestsListResponse(contentType, httpRes.statusCode()) {{
             manifestsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

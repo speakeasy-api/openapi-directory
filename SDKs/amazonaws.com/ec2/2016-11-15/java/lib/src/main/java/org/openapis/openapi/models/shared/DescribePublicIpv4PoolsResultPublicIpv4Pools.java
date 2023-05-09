@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePublicIpv4PoolsResultPublicIpv4Pools {
     
     public String description;
+
     public DescribePublicIpv4PoolsResultPublicIpv4Pools withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribePublicIpv4PoolsResultPublicIpv4Pools {
     
     
     public String networkBorderGroup;
+
     public DescribePublicIpv4PoolsResultPublicIpv4Pools withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
@@ -26,6 +28,7 @@ public class DescribePublicIpv4PoolsResultPublicIpv4Pools {
     
     
     public DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges[] poolAddressRanges;
+
     public DescribePublicIpv4PoolsResultPublicIpv4Pools withPoolAddressRanges(DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges[] poolAddressRanges) {
         this.poolAddressRanges = poolAddressRanges;
         return this;
@@ -33,6 +36,7 @@ public class DescribePublicIpv4PoolsResultPublicIpv4Pools {
     
     
     public String poolId;
+
     public DescribePublicIpv4PoolsResultPublicIpv4Pools withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -40,6 +44,7 @@ public class DescribePublicIpv4PoolsResultPublicIpv4Pools {
     
     
     public DescribePublicIpv4PoolsResultPublicIpv4PoolsTags[] tags;
+
     public DescribePublicIpv4PoolsResultPublicIpv4Pools withTags(DescribePublicIpv4PoolsResultPublicIpv4PoolsTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,6 +52,7 @@ public class DescribePublicIpv4PoolsResultPublicIpv4Pools {
     
     
     public Long totalAddressCount;
+
     public DescribePublicIpv4PoolsResultPublicIpv4Pools withTotalAddressCount(Long totalAddressCount) {
         this.totalAddressCount = totalAddressCount;
         return this;
@@ -54,9 +60,11 @@ public class DescribePublicIpv4PoolsResultPublicIpv4Pools {
     
     
     public Long totalAvailableAddressCount;
+
     public DescribePublicIpv4PoolsResultPublicIpv4Pools withTotalAvailableAddressCount(Long totalAvailableAddressCount) {
         this.totalAvailableAddressCount = totalAvailableAddressCount;
         return this;
     }
     
+    public DescribePublicIpv4PoolsResultPublicIpv4Pools(){}
 }

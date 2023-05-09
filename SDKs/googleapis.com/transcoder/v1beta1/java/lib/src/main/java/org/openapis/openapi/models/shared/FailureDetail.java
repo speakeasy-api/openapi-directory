@@ -18,9 +18,11 @@ public class FailureDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FailureDetail withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public FailureDetail(){}
 }

@@ -56,15 +56,13 @@ public class PaymentPortal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddPaymentRequestResponse res = new org.openapis.openapi.models.operations.AddPaymentRequestResponse() {{
+        org.openapis.openapi.models.operations.AddPaymentRequestResponse res = new org.openapis.openapi.models.operations.AddPaymentRequestResponse(contentType, httpRes.statusCode()) {{
             body = null;
             addPaymentRequest400WildcardString = null;
             addPaymentRequest401WildcardString = null;
             addPaymentRequest404WildcardString = null;
             addPaymentRequest409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,15 +119,13 @@ public class PaymentPortal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentStateResponse res = new org.openapis.openapi.models.operations.GetPaymentStateResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentStateResponse res = new org.openapis.openapi.models.operations.GetPaymentStateResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getPaymentState400WildcardString = null;
             getPaymentState401WildcardString = null;
             getPaymentState404WildcardString = null;
             getPaymentState409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class UpdateDomainNameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateDomainNameRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateDomainNameRequestBody(){}
 }

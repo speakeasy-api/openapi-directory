@@ -18,6 +18,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupPool")
     public String backupPool;
+
     public TargetPool withBackupPool(String backupPool) {
         this.backupPool = backupPool;
         return this;
@@ -29,6 +30,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetPool withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetPool withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failoverRatio")
     public Float failoverRatio;
+
     public TargetPool withFailoverRatio(Float failoverRatio) {
         this.failoverRatio = failoverRatio;
         return this;
@@ -62,6 +66,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthChecks")
     public String[] healthChecks;
+
     public TargetPool withHealthChecks(String[] healthChecks) {
         this.healthChecks = healthChecks;
         return this;
@@ -73,6 +78,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetPool withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public TargetPool withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -95,6 +102,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetPool withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetPool withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TargetPool withRegion(String region) {
         this.region = region;
         return this;
@@ -128,6 +138,7 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetPool withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -139,9 +150,11 @@ public class TargetPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAffinity")
     public TargetPoolSessionAffinityEnum sessionAffinity;
+
     public TargetPool withSessionAffinity(TargetPoolSessionAffinityEnum sessionAffinity) {
         this.sessionAffinity = sessionAffinity;
         return this;
     }
     
+    public TargetPool(){}
 }

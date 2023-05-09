@@ -15,6 +15,7 @@ public class PossibleRemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PossibleRemediationAction withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class PossibleRemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDefaultAction")
     public Boolean isDefaultAction;
+
     public PossibleRemediationAction withIsDefaultAction(Boolean isDefaultAction) {
         this.isDefaultAction = isDefaultAction;
         return this;
@@ -30,9 +32,13 @@ public class PossibleRemediationAction {
     
     @JsonProperty("OrderedRemediationActions")
     public RemediationActionWithOrder[] orderedRemediationActions;
+
     public PossibleRemediationAction withOrderedRemediationActions(RemediationActionWithOrder[] orderedRemediationActions) {
         this.orderedRemediationActions = orderedRemediationActions;
         return this;
     }
     
+    public PossibleRemediationAction(@JsonProperty("OrderedRemediationActions") RemediationActionWithOrder[] orderedRemediationActions) {
+        this.orderedRemediationActions = orderedRemediationActions;
+  }
 }

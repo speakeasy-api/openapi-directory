@@ -17,6 +17,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("AdditionalEmails")
     @SpeakeasyMetadata("form:name=AdditionalEmails,json")
     public AdditionalClientEmailApiModel[] additionalEmails;
+
     public ClientUpdateApiModel withAdditionalEmails(AdditionalClientEmailApiModel[] additionalEmails) {
         this.additionalEmails = additionalEmails;
         return this;
@@ -29,6 +30,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("Address")
     @SpeakeasyMetadata("form:name=Address")
     public String address;
+
     public ClientUpdateApiModel withAddress(String address) {
         this.address = address;
         return this;
@@ -41,6 +43,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("ClientCountryId")
     @SpeakeasyMetadata("form:name=ClientCountryId")
     public Integer clientCountryId;
+
     public ClientUpdateApiModel withClientCountryId(Integer clientCountryId) {
         this.clientCountryId = clientCountryId;
         return this;
@@ -53,6 +56,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("ClientCurrencyId")
     @SpeakeasyMetadata("form:name=ClientCurrencyId")
     public Integer clientCurrencyId;
+
     public ClientUpdateApiModel withClientCurrencyId(Integer clientCurrencyId) {
         this.clientCurrencyId = clientCurrencyId;
         return this;
@@ -65,6 +69,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("CompanyRegistrationNumber")
     @SpeakeasyMetadata("form:name=CompanyRegistrationNumber")
     public String companyRegistrationNumber;
+
     public ClientUpdateApiModel withCompanyRegistrationNumber(String companyRegistrationNumber) {
         this.companyRegistrationNumber = companyRegistrationNumber;
         return this;
@@ -77,6 +82,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("DefaultDueDateInDays")
     @SpeakeasyMetadata("form:name=DefaultDueDateInDays")
     public Integer defaultDueDateInDays;
+
     public ClientUpdateApiModel withDefaultDueDateInDays(Integer defaultDueDateInDays) {
         this.defaultDueDateInDays = defaultDueDateInDays;
         return this;
@@ -89,6 +95,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("Email")
     @SpeakeasyMetadata("form:name=Email")
     public String email;
+
     public ClientUpdateApiModel withEmail(String email) {
         this.email = email;
         return this;
@@ -101,6 +108,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public ClientUpdateApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -113,6 +121,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public ClientUpdateApiModel withName(String name) {
         this.name = name;
         return this;
@@ -125,6 +134,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("PhoneNumber")
     @SpeakeasyMetadata("form:name=PhoneNumber")
     public String phoneNumber;
+
     public ClientUpdateApiModel withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -137,6 +147,7 @@ public class ClientUpdateApiModel {
     @JsonProperty("UiLanguageId")
     @SpeakeasyMetadata("form:name=UiLanguageId")
     public Integer uiLanguageId;
+
     public ClientUpdateApiModel withUiLanguageId(Integer uiLanguageId) {
         this.uiLanguageId = uiLanguageId;
         return this;
@@ -149,9 +160,11 @@ public class ClientUpdateApiModel {
     @JsonProperty("Vat")
     @SpeakeasyMetadata("form:name=Vat")
     public String vat;
+
     public ClientUpdateApiModel withVat(String vat) {
         this.vat = vat;
         return this;
     }
     
+    public ClientUpdateApiModel(){}
 }

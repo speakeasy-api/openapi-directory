@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCustomRoutingAcceleratorRequest {
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public UpdateCustomRoutingAcceleratorRequest withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateCustomRoutingAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateCustomRoutingAcceleratorRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -27,6 +29,7 @@ public class UpdateCustomRoutingAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public UpdateCustomRoutingAcceleratorRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -35,9 +38,13 @@ public class UpdateCustomRoutingAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateCustomRoutingAcceleratorRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCustomRoutingAcceleratorRequest(@JsonProperty("AcceleratorArn") String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+  }
 }

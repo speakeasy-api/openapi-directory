@@ -12,6 +12,7 @@ public class Elv {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderName")
     public String accountHolderName;
+
     public Elv withAccountHolderName(String accountHolderName) {
         this.accountHolderName = accountHolderName;
         return this;
@@ -20,6 +21,7 @@ public class Elv {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountNumber")
     public String bankAccountNumber;
+
     public Elv withBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
         return this;
@@ -28,6 +30,7 @@ public class Elv {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankLocation")
     public String bankLocation;
+
     public Elv withBankLocation(String bankLocation) {
         this.bankLocation = bankLocation;
         return this;
@@ -36,6 +39,7 @@ public class Elv {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankLocationId")
     public String bankLocationId;
+
     public Elv withBankLocationId(String bankLocationId) {
         this.bankLocationId = bankLocationId;
         return this;
@@ -44,9 +48,11 @@ public class Elv {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankName")
     public String bankName;
+
     public Elv withBankName(String bankName) {
         this.bankName = bankName;
         return this;
     }
     
+    public Elv(){}
 }

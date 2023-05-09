@@ -21,6 +21,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeModelExplainabilityJobDefinitionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     
     @JsonProperty("JobDefinitionArn")
     public String jobDefinitionArn;
+
     public DescribeModelExplainabilityJobDefinitionResponse withJobDefinitionArn(String jobDefinitionArn) {
         this.jobDefinitionArn = jobDefinitionArn;
         return this;
@@ -35,6 +37,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     
     @JsonProperty("JobDefinitionName")
     public String jobDefinitionName;
+
     public DescribeModelExplainabilityJobDefinitionResponse withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -45,6 +48,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
      */
     @JsonProperty("JobResources")
     public MonitoringResources jobResources;
+
     public DescribeModelExplainabilityJobDefinitionResponse withJobResources(MonitoringResources jobResources) {
         this.jobResources = jobResources;
         return this;
@@ -52,6 +56,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     
     @JsonProperty("ModelExplainabilityAppSpecification")
     public ModelExplainabilityAppSpecification modelExplainabilityAppSpecification;
+
     public DescribeModelExplainabilityJobDefinitionResponse withModelExplainabilityAppSpecification(ModelExplainabilityAppSpecification modelExplainabilityAppSpecification) {
         this.modelExplainabilityAppSpecification = modelExplainabilityAppSpecification;
         return this;
@@ -60,6 +65,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelExplainabilityBaselineConfig")
     public ModelExplainabilityBaselineConfig modelExplainabilityBaselineConfig;
+
     public DescribeModelExplainabilityJobDefinitionResponse withModelExplainabilityBaselineConfig(ModelExplainabilityBaselineConfig modelExplainabilityBaselineConfig) {
         this.modelExplainabilityBaselineConfig = modelExplainabilityBaselineConfig;
         return this;
@@ -67,6 +73,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     
     @JsonProperty("ModelExplainabilityJobInput")
     public ModelExplainabilityJobInput modelExplainabilityJobInput;
+
     public DescribeModelExplainabilityJobDefinitionResponse withModelExplainabilityJobInput(ModelExplainabilityJobInput modelExplainabilityJobInput) {
         this.modelExplainabilityJobInput = modelExplainabilityJobInput;
         return this;
@@ -77,6 +84,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
      */
     @JsonProperty("ModelExplainabilityJobOutputConfig")
     public MonitoringOutputConfig modelExplainabilityJobOutputConfig;
+
     public DescribeModelExplainabilityJobDefinitionResponse withModelExplainabilityJobOutputConfig(MonitoringOutputConfig modelExplainabilityJobOutputConfig) {
         this.modelExplainabilityJobOutputConfig = modelExplainabilityJobOutputConfig;
         return this;
@@ -85,6 +93,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public MonitoringNetworkConfig networkConfig;
+
     public DescribeModelExplainabilityJobDefinitionResponse withNetworkConfig(MonitoringNetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -92,6 +101,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeModelExplainabilityJobDefinitionResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -103,9 +113,20 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public MonitoringStoppingCondition stoppingCondition;
+
     public DescribeModelExplainabilityJobDefinitionResponse withStoppingCondition(MonitoringStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
     }
     
+    public DescribeModelExplainabilityJobDefinitionResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("JobDefinitionArn") String jobDefinitionArn, @JsonProperty("JobDefinitionName") String jobDefinitionName, @JsonProperty("JobResources") MonitoringResources jobResources, @JsonProperty("ModelExplainabilityAppSpecification") ModelExplainabilityAppSpecification modelExplainabilityAppSpecification, @JsonProperty("ModelExplainabilityJobInput") ModelExplainabilityJobInput modelExplainabilityJobInput, @JsonProperty("ModelExplainabilityJobOutputConfig") MonitoringOutputConfig modelExplainabilityJobOutputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.creationTime = creationTime;
+        this.jobDefinitionArn = jobDefinitionArn;
+        this.jobDefinitionName = jobDefinitionName;
+        this.jobResources = jobResources;
+        this.modelExplainabilityAppSpecification = modelExplainabilityAppSpecification;
+        this.modelExplainabilityJobInput = modelExplainabilityJobInput;
+        this.modelExplainabilityJobOutputConfig = modelExplainabilityJobOutputConfig;
+        this.roleArn = roleArn;
+  }
 }

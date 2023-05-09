@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEditorUrlRequest {
@@ -12,6 +13,7 @@ public class GetEditorUrlRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public GetEditorUrlRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class GetEditorUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public GetEditorUrlLanguageEnum language;
+
     public GetEditorUrlRequest withLanguage(GetEditorUrlLanguageEnum language) {
         this.language = language;
         return this;
@@ -32,9 +35,14 @@ public class GetEditorUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
     public Long templateId;
+
     public GetEditorUrlRequest withTemplateId(Long templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public GetEditorUrlRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("templateId") Long templateId) {
+        this.requestBody = requestBody;
+        this.templateId = templateId;
+  }
 }

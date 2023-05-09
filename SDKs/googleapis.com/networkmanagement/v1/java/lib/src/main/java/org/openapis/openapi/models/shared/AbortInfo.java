@@ -18,6 +18,7 @@ public class AbortInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public AbortInfoCauseEnum cause;
+
     public AbortInfo withCause(AbortInfoCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -29,6 +30,7 @@ public class AbortInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectsMissingPermission")
     public String[] projectsMissingPermission;
+
     public AbortInfo withProjectsMissingPermission(String[] projectsMissingPermission) {
         this.projectsMissingPermission = projectsMissingPermission;
         return this;
@@ -40,9 +42,11 @@ public class AbortInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUri")
     public String resourceUri;
+
     public AbortInfo withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
     }
     
+    public AbortInfo(){}
 }

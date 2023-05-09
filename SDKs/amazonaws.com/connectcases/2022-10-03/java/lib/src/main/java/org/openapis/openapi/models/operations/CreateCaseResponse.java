@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCaseResponse {
@@ -12,6 +13,7 @@ public class CreateCaseResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateCaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCaseResponse {
      */
     
     public Object conflictException;
+
     public CreateCaseResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateCaseResponse {
     
     
     public String contentType;
+
     public CreateCaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateCaseResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCaseResponse createCaseResponse;
+
     public CreateCaseResponse withCreateCaseResponse(org.openapis.openapi.models.shared.CreateCaseResponse createCaseResponse) {
         this.createCaseResponse = createCaseResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateCaseResponse {
      */
     
     public Object internalServerException;
+
     public CreateCaseResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateCaseResponse {
     
     
     public Integer statusCode;
+
     public CreateCaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateCaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateCaseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateCaseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateCaseResponse {
      */
     
     public Object throttlingException;
+
     public CreateCaseResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateCaseResponse {
      */
     
     public Object validationException;
+
     public CreateCaseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateCaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

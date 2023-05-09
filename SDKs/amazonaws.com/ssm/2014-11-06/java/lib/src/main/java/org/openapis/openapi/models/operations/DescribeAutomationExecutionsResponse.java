@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAutomationExecutionsResponse {
     
     public String contentType;
+
     public DescribeAutomationExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAutomationExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAutomationExecutionsResult describeAutomationExecutionsResult;
+
     public DescribeAutomationExecutionsResponse withDescribeAutomationExecutionsResult(org.openapis.openapi.models.shared.DescribeAutomationExecutionsResult describeAutomationExecutionsResult) {
         this.describeAutomationExecutionsResult = describeAutomationExecutionsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAutomationExecutionsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeAutomationExecutionsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAutomationExecutionsResponse {
      */
     
     public Object invalidFilterKey;
+
     public DescribeAutomationExecutionsResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAutomationExecutionsResponse {
      */
     
     public Object invalidFilterValue;
+
     public DescribeAutomationExecutionsResponse withInvalidFilterValue(Object invalidFilterValue) {
         this.invalidFilterValue = invalidFilterValue;
         return this;
@@ -59,6 +65,7 @@ public class DescribeAutomationExecutionsResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeAutomationExecutionsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -66,6 +73,7 @@ public class DescribeAutomationExecutionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAutomationExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAutomationExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAutomationExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAutomationExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

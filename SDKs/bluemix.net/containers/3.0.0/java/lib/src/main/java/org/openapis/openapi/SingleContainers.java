@@ -67,10 +67,8 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteContainersNameOrIdResponse res = new org.openapis.openapi.models.operations.DeleteContainersNameOrIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteContainersNameOrIdResponse res = new org.openapis.openapi.models.operations.DeleteContainersNameOrIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -114,11 +112,9 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContainersJsonResponse res = new org.openapis.openapi.models.operations.GetContainersJsonResponse() {{
+        org.openapis.openapi.models.operations.GetContainersJsonResponse res = new org.openapis.openapi.models.operations.GetContainersJsonResponse(contentType, httpRes.statusCode()) {{
             containers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,11 +159,9 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContainersIdStatusResponse res = new org.openapis.openapi.models.operations.GetContainersIdStatusResponse() {{
+        org.openapis.openapi.models.operations.GetContainersIdStatusResponse res = new org.openapis.openapi.models.operations.GetContainersIdStatusResponse(contentType, httpRes.statusCode()) {{
             getContainerStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -212,11 +206,9 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContainersNameOrIdJsonResponse res = new org.openapis.openapi.models.operations.GetContainersNameOrIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetContainersNameOrIdJsonResponse res = new org.openapis.openapi.models.operations.GetContainersNameOrIdJsonResponse(contentType, httpRes.statusCode()) {{
             containerInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,11 +270,9 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersCreateResponse res = new org.openapis.openapi.models.operations.PostContainersCreateResponse() {{
+        org.openapis.openapi.models.operations.PostContainersCreateResponse res = new org.openapis.openapi.models.operations.PostContainersCreateResponse(contentType, httpRes.statusCode()) {{
             containerId = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -327,10 +317,8 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersNameOrIdPauseResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdPauseResponse() {{
+        org.openapis.openapi.models.operations.PostContainersNameOrIdPauseResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdPauseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -374,10 +362,8 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersNameOrIdRenameResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdRenameResponse() {{
+        org.openapis.openapi.models.operations.PostContainersNameOrIdRenameResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdRenameResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {
@@ -421,10 +407,8 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersNameOrIdRestartResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdRestartResponse() {{
+        org.openapis.openapi.models.operations.PostContainersNameOrIdRestartResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdRestartResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -462,10 +446,8 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersNameOrIdStartResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdStartResponse() {{
+        org.openapis.openapi.models.operations.PostContainersNameOrIdStartResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdStartResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -509,10 +491,8 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersNameOrIdStopResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdStopResponse() {{
+        org.openapis.openapi.models.operations.PostContainersNameOrIdStopResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdStopResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -550,10 +530,8 @@ public class SingleContainers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersNameOrIdUnpauseResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdUnpauseResponse() {{
+        org.openapis.openapi.models.operations.PostContainersNameOrIdUnpauseResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdUnpauseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

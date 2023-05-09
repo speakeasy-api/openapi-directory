@@ -25,6 +25,7 @@ public class ClassDetailsClever {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public ClassDetailsClever withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -36,6 +37,7 @@ public class ClassDetailsClever {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ClassDetailsClever withId(String id) {
         this.id = id;
         return this;
@@ -49,6 +51,7 @@ public class ClassDetailsClever {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modificationDate")
     public OffsetDateTime modificationDate;
+
     public ClassDetailsClever withModificationDate(OffsetDateTime modificationDate) {
         this.modificationDate = modificationDate;
         return this;
@@ -60,6 +63,7 @@ public class ClassDetailsClever {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public ClassDetailsCleverSubjectEnum subject;
+
     public ClassDetailsClever withSubject(ClassDetailsCleverSubjectEnum subject) {
         this.subject = subject;
         return this;
@@ -73,6 +77,7 @@ public class ClassDetailsClever {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("termEndDate")
     public OffsetDateTime termEndDate;
+
     public ClassDetailsClever withTermEndDate(OffsetDateTime termEndDate) {
         this.termEndDate = termEndDate;
         return this;
@@ -84,6 +89,7 @@ public class ClassDetailsClever {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termName")
     public String termName;
+
     public ClassDetailsClever withTermName(String termName) {
         this.termName = termName;
         return this;
@@ -97,9 +103,11 @@ public class ClassDetailsClever {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("termStartDate")
     public OffsetDateTime termStartDate;
+
     public ClassDetailsClever withTermStartDate(OffsetDateTime termStartDate) {
         this.termStartDate = termStartDate;
         return this;
     }
     
+    public ClassDetailsClever(){}
 }

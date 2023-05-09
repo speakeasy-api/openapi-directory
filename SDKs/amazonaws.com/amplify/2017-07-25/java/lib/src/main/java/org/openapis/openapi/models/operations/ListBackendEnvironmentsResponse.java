@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBackendEnvironmentsResponse {
@@ -12,6 +13,7 @@ public class ListBackendEnvironmentsResponse {
      */
     
     public Object badRequestException;
+
     public ListBackendEnvironmentsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListBackendEnvironmentsResponse {
     
     
     public String contentType;
+
     public ListBackendEnvironmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListBackendEnvironmentsResponse {
      */
     
     public Object internalFailureException;
+
     public ListBackendEnvironmentsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListBackendEnvironmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBackendEnvironmentsResult listBackendEnvironmentsResult;
+
     public ListBackendEnvironmentsResponse withListBackendEnvironmentsResult(org.openapis.openapi.models.shared.ListBackendEnvironmentsResult listBackendEnvironmentsResult) {
         this.listBackendEnvironmentsResult = listBackendEnvironmentsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListBackendEnvironmentsResponse {
     
     
     public Integer statusCode;
+
     public ListBackendEnvironmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBackendEnvironmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBackendEnvironmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListBackendEnvironmentsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListBackendEnvironmentsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListBackendEnvironmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

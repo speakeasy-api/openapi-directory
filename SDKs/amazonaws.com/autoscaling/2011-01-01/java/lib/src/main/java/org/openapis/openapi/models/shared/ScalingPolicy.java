@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScalingPolicy {
     
     public String adjustmentType;
+
     public ScalingPolicy withAdjustmentType(String adjustmentType) {
         this.adjustmentType = adjustmentType;
         return this;
@@ -19,6 +20,7 @@ public class ScalingPolicy {
     
     
     public Alarm[] alarms;
+
     public ScalingPolicy withAlarms(Alarm[] alarms) {
         this.alarms = alarms;
         return this;
@@ -26,6 +28,7 @@ public class ScalingPolicy {
     
     
     public String autoScalingGroupName;
+
     public ScalingPolicy withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -33,6 +36,7 @@ public class ScalingPolicy {
     
     
     public Long cooldown;
+
     public ScalingPolicy withCooldown(Long cooldown) {
         this.cooldown = cooldown;
         return this;
@@ -40,6 +44,7 @@ public class ScalingPolicy {
     
     
     public Boolean enabled;
+
     public ScalingPolicy withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -47,6 +52,7 @@ public class ScalingPolicy {
     
     
     public Long estimatedInstanceWarmup;
+
     public ScalingPolicy withEstimatedInstanceWarmup(Long estimatedInstanceWarmup) {
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;
         return this;
@@ -54,6 +60,7 @@ public class ScalingPolicy {
     
     
     public String metricAggregationType;
+
     public ScalingPolicy withMetricAggregationType(String metricAggregationType) {
         this.metricAggregationType = metricAggregationType;
         return this;
@@ -61,6 +68,7 @@ public class ScalingPolicy {
     
     
     public Long minAdjustmentMagnitude;
+
     public ScalingPolicy withMinAdjustmentMagnitude(Long minAdjustmentMagnitude) {
         this.minAdjustmentMagnitude = minAdjustmentMagnitude;
         return this;
@@ -68,6 +76,7 @@ public class ScalingPolicy {
     
     
     public Long minAdjustmentStep;
+
     public ScalingPolicy withMinAdjustmentStep(Long minAdjustmentStep) {
         this.minAdjustmentStep = minAdjustmentStep;
         return this;
@@ -75,6 +84,7 @@ public class ScalingPolicy {
     
     
     public String policyARN;
+
     public ScalingPolicy withPolicyARN(String policyARN) {
         this.policyARN = policyARN;
         return this;
@@ -82,6 +92,7 @@ public class ScalingPolicy {
     
     
     public String policyName;
+
     public ScalingPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -89,6 +100,7 @@ public class ScalingPolicy {
     
     
     public String policyType;
+
     public ScalingPolicy withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
@@ -96,6 +108,7 @@ public class ScalingPolicy {
     
     
     public PredictiveScalingConfiguration predictiveScalingConfiguration;
+
     public ScalingPolicy withPredictiveScalingConfiguration(PredictiveScalingConfiguration predictiveScalingConfiguration) {
         this.predictiveScalingConfiguration = predictiveScalingConfiguration;
         return this;
@@ -103,6 +116,7 @@ public class ScalingPolicy {
     
     
     public Long scalingAdjustment;
+
     public ScalingPolicy withScalingAdjustment(Long scalingAdjustment) {
         this.scalingAdjustment = scalingAdjustment;
         return this;
@@ -110,6 +124,7 @@ public class ScalingPolicy {
     
     
     public StepAdjustment[] stepAdjustments;
+
     public ScalingPolicy withStepAdjustments(StepAdjustment[] stepAdjustments) {
         this.stepAdjustments = stepAdjustments;
         return this;
@@ -117,9 +132,11 @@ public class ScalingPolicy {
     
     
     public TargetTrackingConfiguration targetTrackingConfiguration;
+
     public ScalingPolicy withTargetTrackingConfiguration(TargetTrackingConfiguration targetTrackingConfiguration) {
         this.targetTrackingConfiguration = targetTrackingConfiguration;
         return this;
     }
     
+    public ScalingPolicy(){}
 }

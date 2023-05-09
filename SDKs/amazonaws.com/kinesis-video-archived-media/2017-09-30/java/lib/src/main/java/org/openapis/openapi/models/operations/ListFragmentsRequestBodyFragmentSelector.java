@@ -15,6 +15,7 @@ public class ListFragmentsRequestBodyFragmentSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentSelectorType")
     public org.openapis.openapi.models.shared.FragmentSelectorTypeEnum fragmentSelectorType;
+
     public ListFragmentsRequestBodyFragmentSelector withFragmentSelectorType(org.openapis.openapi.models.shared.FragmentSelectorTypeEnum fragmentSelectorType) {
         this.fragmentSelectorType = fragmentSelectorType;
         return this;
@@ -23,9 +24,11 @@ public class ListFragmentsRequestBodyFragmentSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampRange")
     public org.openapis.openapi.models.shared.TimestampRange timestampRange;
+
     public ListFragmentsRequestBodyFragmentSelector withTimestampRange(org.openapis.openapi.models.shared.TimestampRange timestampRange) {
         this.timestampRange = timestampRange;
         return this;
     }
     
+    public ListFragmentsRequestBodyFragmentSelector(){}
 }

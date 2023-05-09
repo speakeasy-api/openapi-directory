@@ -23,6 +23,7 @@ public class FreeBusyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendars")
     public java.util.Map<String, FreeBusyCalendar> calendars;
+
     public FreeBusyResponse withCalendars(java.util.Map<String, FreeBusyCalendar> calendars) {
         this.calendars = calendars;
         return this;
@@ -34,6 +35,7 @@ public class FreeBusyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public java.util.Map<String, FreeBusyGroup> groups;
+
     public FreeBusyResponse withGroups(java.util.Map<String, FreeBusyGroup> groups) {
         this.groups = groups;
         return this;
@@ -45,6 +47,7 @@ public class FreeBusyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FreeBusyResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -58,6 +61,7 @@ public class FreeBusyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeMax")
     public OffsetDateTime timeMax;
+
     public FreeBusyResponse withTimeMax(OffsetDateTime timeMax) {
         this.timeMax = timeMax;
         return this;
@@ -71,9 +75,11 @@ public class FreeBusyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeMin")
     public OffsetDateTime timeMin;
+
     public FreeBusyResponse withTimeMin(OffsetDateTime timeMin) {
         this.timeMin = timeMin;
         return this;
     }
     
+    public FreeBusyResponse(){}
 }

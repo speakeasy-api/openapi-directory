@@ -93,7 +93,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePotResponse res = new org.openapis.openapi.models.operations.UpdatePotResponse() {{
+        org.openapis.openapi.models.operations.UpdatePotResponse res = new org.openapis.openapi.models.operations.UpdatePotResponse(contentType, httpRes.statusCode()) {{
             updatePot200ApplicationJSONObject = null;
             updatePot400ApplicationJSONObject = null;
             updatePot401ApplicationJSONObject = null;
@@ -103,8 +103,6 @@ public class PotsHoldingsAndTransactions {
             updatePot429ApplicationJSONObject = null;
             updatePot500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,7 +197,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePotResponse res = new org.openapis.openapi.models.operations.CreatePotResponse() {{
+        org.openapis.openapi.models.operations.CreatePotResponse res = new org.openapis.openapi.models.operations.CreatePotResponse(contentType, httpRes.statusCode()) {{
             createPot201ApplicationJSONObject = null;
             createPot400ApplicationJSONObject = null;
             createPot401ApplicationJSONObject = null;
@@ -208,8 +206,6 @@ public class PotsHoldingsAndTransactions {
             createPot429ApplicationJSONObject = null;
             createPot500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -295,7 +291,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPotResponse res = new org.openapis.openapi.models.operations.GetPotResponse() {{
+        org.openapis.openapi.models.operations.GetPotResponse res = new org.openapis.openapi.models.operations.GetPotResponse(contentType, httpRes.statusCode()) {{
             getPot200ApplicationJSONObject = null;
             getPot401ApplicationJSONObject = null;
             getPot403ApplicationJSONObject = null;
@@ -303,8 +299,6 @@ public class PotsHoldingsAndTransactions {
             getPot429ApplicationJSONObject = null;
             getPot500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,7 +378,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPotHoldingsResponse res = new org.openapis.openapi.models.operations.GetPotHoldingsResponse() {{
+        org.openapis.openapi.models.operations.GetPotHoldingsResponse res = new org.openapis.openapi.models.operations.GetPotHoldingsResponse(contentType, httpRes.statusCode()) {{
             getPotHoldings200ApplicationJSONObject = null;
             getPotHoldings400ApplicationJSONObject = null;
             getPotHoldings401ApplicationJSONObject = null;
@@ -393,8 +387,6 @@ public class PotsHoldingsAndTransactions {
             getPotHoldings429ApplicationJSONObject = null;
             getPotHoldings500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -487,7 +479,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPotTransactionsResponse res = new org.openapis.openapi.models.operations.GetPotTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetPotTransactionsResponse res = new org.openapis.openapi.models.operations.GetPotTransactionsResponse(contentType, httpRes.statusCode()) {{
             getPotTransactions200ApplicationJSONObject = null;
             getPotTransactions401ApplicationJSONObject = null;
             getPotTransactions403ApplicationJSONObject = null;
@@ -495,8 +487,6 @@ public class PotsHoldingsAndTransactions {
             getPotTransactions429ApplicationJSONObject = null;
             getPotTransactions500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -576,7 +566,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPotValueResponse res = new org.openapis.openapi.models.operations.GetPotValueResponse() {{
+        org.openapis.openapi.models.operations.GetPotValueResponse res = new org.openapis.openapi.models.operations.GetPotValueResponse(contentType, httpRes.statusCode()) {{
             getPotValue200ApplicationJSONObject = null;
             getPotValue400ApplicationJSONObject = null;
             getPotValue401ApplicationJSONObject = null;
@@ -585,8 +575,6 @@ public class PotsHoldingsAndTransactions {
             getPotValue429ApplicationJSONObject = null;
             getPotValue500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -679,7 +667,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPotsResponse res = new org.openapis.openapi.models.operations.GetPotsResponse() {{
+        org.openapis.openapi.models.operations.GetPotsResponse res = new org.openapis.openapi.models.operations.GetPotsResponse(contentType, httpRes.statusCode()) {{
             getPots200ApplicationJSONObject = null;
             getPots400ApplicationJSONObject = null;
             getPots401ApplicationJSONObject = null;
@@ -688,8 +676,6 @@ public class PotsHoldingsAndTransactions {
             getPots429ApplicationJSONObject = null;
             getPots500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -776,7 +762,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTotalPotHoldingsResponse res = new org.openapis.openapi.models.operations.GetTotalPotHoldingsResponse() {{
+        org.openapis.openapi.models.operations.GetTotalPotHoldingsResponse res = new org.openapis.openapi.models.operations.GetTotalPotHoldingsResponse(contentType, httpRes.statusCode()) {{
             getTotalPotHoldings200ApplicationJSONObject = null;
             getTotalPotHoldings401ApplicationJSONObject = null;
             getTotalPotHoldings403ApplicationJSONObject = null;
@@ -784,8 +770,6 @@ public class PotsHoldingsAndTransactions {
             getTotalPotHoldings429ApplicationJSONObject = null;
             getTotalPotHoldings500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -836,7 +820,7 @@ public class PotsHoldingsAndTransactions {
 
     /**
      * Get total value of all pots of an investor
-     * Get the current value of all the investor\u2019s pots broken down by currency (including cash and investment product holdings)
+     * Get the current value of all the investor’s pots broken down by currency (including cash and investment product holdings)
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -865,7 +849,7 @@ public class PotsHoldingsAndTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTotalPotValueResponse res = new org.openapis.openapi.models.operations.GetTotalPotValueResponse() {{
+        org.openapis.openapi.models.operations.GetTotalPotValueResponse res = new org.openapis.openapi.models.operations.GetTotalPotValueResponse(contentType, httpRes.statusCode()) {{
             getTotalPotValue200ApplicationJSONObject = null;
             getTotalPotValue400ApplicationJSONObject = null;
             getTotalPotValue401ApplicationJSONObject = null;
@@ -874,8 +858,6 @@ public class PotsHoldingsAndTransactions {
             getTotalPotValue429ApplicationJSONObject = null;
             getTotalPotValue500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

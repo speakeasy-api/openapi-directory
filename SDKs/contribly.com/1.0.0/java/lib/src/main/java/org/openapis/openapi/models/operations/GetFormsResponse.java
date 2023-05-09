@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFormsResponse {
     
     public String contentType;
+
     public GetFormsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFormsResponse {
      */
     
     public org.openapis.openapi.models.shared.Form[] forms;
+
     public GetFormsResponse withForms(org.openapis.openapi.models.shared.Form[] forms) {
         this.forms = forms;
         return this;
@@ -26,6 +29,7 @@ public class GetFormsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetFormsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetFormsResponse {
     
     
     public Integer statusCode;
+
     public GetFormsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetFormsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFormsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFormsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

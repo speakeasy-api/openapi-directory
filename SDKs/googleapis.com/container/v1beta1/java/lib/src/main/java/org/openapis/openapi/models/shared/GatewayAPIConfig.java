@@ -18,9 +18,11 @@ public class GatewayAPIConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public GatewayAPIConfigChannelEnum channel;
+
     public GatewayAPIConfig withChannel(GatewayAPIConfigChannelEnum channel) {
         this.channel = channel;
         return this;
     }
     
+    public GatewayAPIConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyInstanceMetadataOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyInstanceMetadataOptionsActionEnum action;
+
     public GETModifyInstanceMetadataOptionsRequest withAction(GETModifyInstanceMetadataOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyInstanceMetadataOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HttpEndpoint")
     public GETModifyInstanceMetadataOptionsHTTPEndpointEnum httpEndpoint;
+
     public GETModifyInstanceMetadataOptionsRequest withHttpEndpoint(GETModifyInstanceMetadataOptionsHTTPEndpointEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HttpProtocolIpv6")
     public GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum httpProtocolIpv6;
+
     public GETModifyInstanceMetadataOptionsRequest withHttpProtocolIpv6(GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HttpPutResponseHopLimit")
     public Long httpPutResponseHopLimit;
+
     public GETModifyInstanceMetadataOptionsRequest withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HttpTokens")
     public GETModifyInstanceMetadataOptionsHTTPTokensEnum httpTokens;
+
     public GETModifyInstanceMetadataOptionsRequest withHttpTokens(GETModifyInstanceMetadataOptionsHTTPTokensEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETModifyInstanceMetadataOptionsRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceMetadataTags")
     public GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags;
+
     public GETModifyInstanceMetadataOptionsRequest withInstanceMetadataTags(GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
@@ -86,6 +95,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyInstanceMetadataOptionsVersionEnum version;
+
     public GETModifyInstanceMetadataOptionsRequest withVersion(GETModifyInstanceMetadataOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyInstanceMetadataOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyInstanceMetadataOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyInstanceMetadataOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyInstanceMetadataOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyInstanceMetadataOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETModifyInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyInstanceMetadataOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,15 @@ public class GETModifyInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyInstanceMetadataOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyInstanceMetadataOptionsRequest(@JsonProperty("Action") GETModifyInstanceMetadataOptionsActionEnum action, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Version") GETModifyInstanceMetadataOptionsVersionEnum version) {
+        this.action = action;
+        this.instanceId = instanceId;
+        this.version = version;
+  }
 }

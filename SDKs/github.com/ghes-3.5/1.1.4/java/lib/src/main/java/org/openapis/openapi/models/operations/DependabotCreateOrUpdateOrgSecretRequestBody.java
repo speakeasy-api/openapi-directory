@@ -15,6 +15,7 @@ public class DependabotCreateOrUpdateOrgSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted_value")
     public String encryptedValue;
+
     public DependabotCreateOrUpdateOrgSecretRequestBody withEncryptedValue(String encryptedValue) {
         this.encryptedValue = encryptedValue;
         return this;
@@ -26,6 +27,7 @@ public class DependabotCreateOrUpdateOrgSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key_id")
     public String keyId;
+
     public DependabotCreateOrUpdateOrgSecretRequestBody withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -37,6 +39,7 @@ public class DependabotCreateOrUpdateOrgSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_repository_ids")
     public String[] selectedRepositoryIds;
+
     public DependabotCreateOrUpdateOrgSecretRequestBody withSelectedRepositoryIds(String[] selectedRepositoryIds) {
         this.selectedRepositoryIds = selectedRepositoryIds;
         return this;
@@ -47,9 +50,13 @@ public class DependabotCreateOrUpdateOrgSecretRequestBody {
      */
     @JsonProperty("visibility")
     public DependabotCreateOrUpdateOrgSecretRequestBodyVisibilityEnum visibility;
+
     public DependabotCreateOrUpdateOrgSecretRequestBody withVisibility(DependabotCreateOrUpdateOrgSecretRequestBodyVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public DependabotCreateOrUpdateOrgSecretRequestBody(@JsonProperty("visibility") DependabotCreateOrUpdateOrgSecretRequestBodyVisibilityEnum visibility) {
+        this.visibility = visibility;
+  }
 }

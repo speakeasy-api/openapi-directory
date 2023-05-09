@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingAccountUserProfilesPatchRequest {
@@ -12,6 +13,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingAccountUserProfilesPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AccountUserProfile accountUserProfile;
+
     public DfareportingAccountUserProfilesPatchRequest withAccountUserProfile(org.openapis.openapi.models.shared.AccountUserProfile accountUserProfile) {
         this.accountUserProfile = accountUserProfile;
         return this;
@@ -29,6 +32,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingAccountUserProfilesPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingAccountUserProfilesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingAccountUserProfilesPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingAccountUserProfilesPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public DfareportingAccountUserProfilesPatchRequest withId(String id) {
         this.id = id;
         return this;
@@ -79,6 +87,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingAccountUserProfilesPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingAccountUserProfilesPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingAccountUserProfilesPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingAccountUserProfilesPatchRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -119,6 +131,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingAccountUserProfilesPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingAccountUserProfilesPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class DfareportingAccountUserProfilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingAccountUserProfilesPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingAccountUserProfilesPatchRequest(@JsonProperty("id") String id, @JsonProperty("profileId") String profileId) {
+        this.id = id;
+        this.profileId = profileId;
+  }
 }

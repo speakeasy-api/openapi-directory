@@ -15,6 +15,7 @@ public class BlockDeviceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public BlockDeviceMapping withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -23,6 +24,7 @@ public class BlockDeviceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ebs")
     public EbsBlockDevice ebs;
+
     public BlockDeviceMapping withEbs(EbsBlockDevice ebs) {
         this.ebs = ebs;
         return this;
@@ -31,6 +33,7 @@ public class BlockDeviceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoDevice")
     public String noDevice;
+
     public BlockDeviceMapping withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -39,9 +42,11 @@ public class BlockDeviceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualName")
     public String virtualName;
+
     public BlockDeviceMapping withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public BlockDeviceMapping(){}
 }

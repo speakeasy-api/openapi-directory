@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeSpaceRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public DescribeSpaceRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -16,9 +17,14 @@ public class DescribeSpaceRequest {
     
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public DescribeSpaceRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public DescribeSpaceRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("SpaceName") String spaceName) {
+        this.domainId = domainId;
+        this.spaceName = spaceName;
+  }
 }

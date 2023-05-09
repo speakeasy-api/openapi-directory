@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetLocationCapacityResponse {
     
     public String contentType;
+
     public DescribeFleetLocationCapacityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetLocationCapacityResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetLocationCapacityOutput describeFleetLocationCapacityOutput;
+
     public DescribeFleetLocationCapacityResponse withDescribeFleetLocationCapacityOutput(org.openapis.openapi.models.shared.DescribeFleetLocationCapacityOutput describeFleetLocationCapacityOutput) {
         this.describeFleetLocationCapacityOutput = describeFleetLocationCapacityOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetLocationCapacityResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeFleetLocationCapacityResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFleetLocationCapacityResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeFleetLocationCapacityResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFleetLocationCapacityResponse {
      */
     
     public Object notFoundException;
+
     public DescribeFleetLocationCapacityResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeFleetLocationCapacityResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetLocationCapacityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFleetLocationCapacityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetLocationCapacityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeFleetLocationCapacityResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeFleetLocationCapacityResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeFleetLocationCapacityResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DescribeFleetLocationCapacityResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DescribeFleetLocationCapacityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,13 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisati
      */
     @JsonProperty("LegalName")
     public String legalName;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisationOrganisationName withLegalName(String legalName) {
         this.legalName = legalName;
         return this;
     }
     
+    public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisationOrganisationName(@JsonProperty("LegalName") String legalName) {
+        this.legalName = legalName;
+  }
 }

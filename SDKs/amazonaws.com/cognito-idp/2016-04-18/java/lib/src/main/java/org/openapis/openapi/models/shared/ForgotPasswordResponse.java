@@ -15,9 +15,11 @@ public class ForgotPasswordResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeliveryDetails")
     public CodeDeliveryDetailsType codeDeliveryDetails;
+
     public ForgotPasswordResponse withCodeDeliveryDetails(CodeDeliveryDetailsType codeDeliveryDetails) {
         this.codeDeliveryDetails = codeDeliveryDetails;
         return this;
     }
     
+    public ForgotPasswordResponse(){}
 }

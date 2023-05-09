@@ -19,6 +19,7 @@ public class PortfolioRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public PortfolioRequestColorEnum color;
+
     public PortfolioRequestInput withColor(PortfolioRequestColorEnum color) {
         this.color = color;
         return this;
@@ -30,6 +31,7 @@ public class PortfolioRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PortfolioRequestInput withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +43,7 @@ public class PortfolioRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public PortfolioRequestInput withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -52,9 +55,11 @@ public class PortfolioRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public String workspace;
+
     public PortfolioRequestInput withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PortfolioRequestInput(){}
 }

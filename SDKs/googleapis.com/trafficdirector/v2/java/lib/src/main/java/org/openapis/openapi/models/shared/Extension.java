@@ -18,6 +18,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public Extension withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public Extension withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -40,6 +42,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Extension withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeDescriptor")
     public String typeDescriptor;
+
     public Extension withTypeDescriptor(String typeDescriptor) {
         this.typeDescriptor = typeDescriptor;
         return this;
@@ -62,9 +66,11 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public BuildVersion version;
+
     public Extension withVersion(BuildVersion version) {
         this.version = version;
         return this;
     }
     
+    public Extension(){}
 }

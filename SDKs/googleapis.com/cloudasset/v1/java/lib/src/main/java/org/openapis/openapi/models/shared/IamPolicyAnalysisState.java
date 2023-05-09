@@ -18,6 +18,7 @@ public class IamPolicyAnalysisState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public IamPolicyAnalysisState withCause(String cause) {
         this.cause = cause;
         return this;
@@ -29,9 +30,11 @@ public class IamPolicyAnalysisState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public IamPolicyAnalysisStateCodeEnum code;
+
     public IamPolicyAnalysisState withCode(IamPolicyAnalysisStateCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public IamPolicyAnalysisState(){}
 }

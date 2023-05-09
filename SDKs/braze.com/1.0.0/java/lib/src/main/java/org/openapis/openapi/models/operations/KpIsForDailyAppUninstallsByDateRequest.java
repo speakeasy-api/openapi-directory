@@ -14,6 +14,7 @@ public class KpIsForDailyAppUninstallsByDateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_id")
     public String appId;
+
     public KpIsForDailyAppUninstallsByDateRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -26,6 +27,7 @@ public class KpIsForDailyAppUninstallsByDateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public KpIsForDailyAppUninstallsByDateRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -38,9 +40,11 @@ public class KpIsForDailyAppUninstallsByDateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public KpIsForDailyAppUninstallsByDateRequest withLength(String length) {
         this.length = length;
         return this;
     }
     
+    public KpIsForDailyAppUninstallsByDateRequest(){}
 }

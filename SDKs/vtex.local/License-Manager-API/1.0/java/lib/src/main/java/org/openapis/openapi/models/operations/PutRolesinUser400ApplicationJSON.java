@@ -18,9 +18,11 @@ public class PutRolesinUser400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public PutRolesinUser400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PutRolesinUser400ApplicationJSON(){}
 }

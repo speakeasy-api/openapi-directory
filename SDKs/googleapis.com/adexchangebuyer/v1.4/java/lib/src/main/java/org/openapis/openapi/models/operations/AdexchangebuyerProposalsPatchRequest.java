@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerProposalsPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Proposal proposal;
+
     public AdexchangebuyerProposalsPatchRequest withProposal(org.openapis.openapi.models.shared.Proposal proposal) {
         this.proposal = proposal;
         return this;
@@ -19,6 +21,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdexchangebuyerProposalsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdexchangebuyerProposalsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +43,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdexchangebuyerProposalsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +54,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdexchangebuyerProposalsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +65,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdexchangebuyerProposalsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -69,6 +76,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
     public String proposalId;
+
     public AdexchangebuyerProposalsPatchRequest withProposalId(String proposalId) {
         this.proposalId = proposalId;
         return this;
@@ -79,6 +87,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdexchangebuyerProposalsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -89,6 +98,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revisionNumber")
     public String revisionNumber;
+
     public AdexchangebuyerProposalsPatchRequest withRevisionNumber(String revisionNumber) {
         this.revisionNumber = revisionNumber;
         return this;
@@ -99,6 +109,7 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=updateAction")
     public AdexchangebuyerProposalsPatchUpdateActionEnum updateAction;
+
     public AdexchangebuyerProposalsPatchRequest withUpdateAction(AdexchangebuyerProposalsPatchUpdateActionEnum updateAction) {
         this.updateAction = updateAction;
         return this;
@@ -109,9 +120,15 @@ public class AdexchangebuyerProposalsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdexchangebuyerProposalsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdexchangebuyerProposalsPatchRequest(@JsonProperty("proposalId") String proposalId, @JsonProperty("revisionNumber") String revisionNumber, @JsonProperty("updateAction") AdexchangebuyerProposalsPatchUpdateActionEnum updateAction) {
+        this.proposalId = proposalId;
+        this.revisionNumber = revisionNumber;
+        this.updateAction = updateAction;
+  }
 }

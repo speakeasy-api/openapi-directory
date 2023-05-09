@@ -61,11 +61,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsCustombatchResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsCustombatchResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsCustombatchResponse(contentType, httpRes.statusCode()) {{
             liasettingsCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsGetResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsGetResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsGetResponse(contentType, httpRes.statusCode()) {{
             liaSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsResponse(contentType, httpRes.statusCode()) {{
             liasettingsGetAccessibleGmbAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsListResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsListResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsListResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsListResponse(contentType, httpRes.statusCode()) {{
             liasettingsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersResponse(contentType, httpRes.statusCode()) {{
             liasettingsListPosDataProvidersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessResponse(contentType, httpRes.statusCode()) {{
             liasettingsRequestGmbAccessResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationResponse(contentType, httpRes.statusCode()) {{
             liasettingsRequestInventoryVerificationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -383,11 +369,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactResponse(contentType, httpRes.statusCode()) {{
             liasettingsSetInventoryVerificationContactResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -429,11 +413,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderResponse(contentType, httpRes.statusCode()) {{
             liasettingsSetPosDataProviderResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,11 +459,9 @@ public class Liasettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentLiasettingsUpdateResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ContentLiasettingsUpdateResponse res = new org.openapis.openapi.models.operations.ContentLiasettingsUpdateResponse(contentType, httpRes.statusCode()) {{
             liaSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

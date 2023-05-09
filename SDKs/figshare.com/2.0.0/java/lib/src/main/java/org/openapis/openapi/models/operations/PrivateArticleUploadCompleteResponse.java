@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateArticleUploadCompleteResponse {
     
     public String contentType;
+
     public PrivateArticleUploadCompleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivateArticleUploadCompleteResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateArticleUploadCompleteResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,6 +29,7 @@ public class PrivateArticleUploadCompleteResponse {
     
     
     public Integer statusCode;
+
     public PrivateArticleUploadCompleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PrivateArticleUploadCompleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateArticleUploadCompleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateArticleUploadCompleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamMemberListOfClientProjectResponse {
     
     public byte[] body;
+
     public GetTeamMemberListOfClientProjectResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamMemberListOfClientProjectResponse {
     
     
     public String contentType;
+
     public GetTeamMemberListOfClientProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetTeamMemberListOfClientProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetTeamMemberListOfClientProjectResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetTeamMemberListOfClientProjectResponse {
     
     
     public Integer statusCode;
+
     public GetTeamMemberListOfClientProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetTeamMemberListOfClientProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamMemberListOfClientProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetTeamMemberListOfClientProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamMemberListVO teamMemberListVO;
+
     public GetTeamMemberListOfClientProjectResponse withTeamMemberListVO(org.openapis.openapi.models.shared.TeamMemberListVO teamMemberListVO) {
         this.teamMemberListVO = teamMemberListVO;
         return this;
     }
     
+    public GetTeamMemberListOfClientProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceShareAssociationsResponse {
     
     public String contentType;
+
     public GetResourceShareAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceShareAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceShareAssociationsResponse getResourceShareAssociationsResponse;
+
     public GetResourceShareAssociationsResponse withGetResourceShareAssociationsResponse(org.openapis.openapi.models.shared.GetResourceShareAssociationsResponse getResourceShareAssociationsResponse) {
         this.getResourceShareAssociationsResponse = getResourceShareAssociationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceShareAssociationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetResourceShareAssociationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceShareAssociationsResponse {
      */
     
     public Object invalidParameterException;
+
     public GetResourceShareAssociationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceShareAssociationsResponse {
      */
     
     public Object malformedArnException;
+
     public GetResourceShareAssociationsResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -59,6 +65,7 @@ public class GetResourceShareAssociationsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetResourceShareAssociationsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class GetResourceShareAssociationsResponse {
     
     
     public Integer statusCode;
+
     public GetResourceShareAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetResourceShareAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceShareAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetResourceShareAssociationsResponse {
      */
     
     public Object serverInternalException;
+
     public GetResourceShareAssociationsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -93,6 +103,7 @@ public class GetResourceShareAssociationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetResourceShareAssociationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class GetResourceShareAssociationsResponse {
      */
     
     public Object unknownResourceException;
+
     public GetResourceShareAssociationsResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public GetResourceShareAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

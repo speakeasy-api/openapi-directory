@@ -12,9 +12,13 @@ public class CreateMembersRequestBody {
      */
     @JsonProperty("AccountDetails")
     public org.openapis.openapi.models.shared.AccountDetails[] accountDetails;
+
     public CreateMembersRequestBody withAccountDetails(org.openapis.openapi.models.shared.AccountDetails[] accountDetails) {
         this.accountDetails = accountDetails;
         return this;
     }
     
+    public CreateMembersRequestBody(@JsonProperty("AccountDetails") org.openapis.openapi.models.shared.AccountDetails[] accountDetails) {
+        this.accountDetails = accountDetails;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LateDataRule {
     @JsonProperty("ruleConfiguration")
     public LateDataRuleConfiguration ruleConfiguration;
+
     public LateDataRule withRuleConfiguration(LateDataRuleConfiguration ruleConfiguration) {
         this.ruleConfiguration = ruleConfiguration;
         return this;
@@ -22,9 +23,13 @@ public class LateDataRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleName")
     public String ruleName;
+
     public LateDataRule withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }
     
+    public LateDataRule(@JsonProperty("ruleConfiguration") LateDataRuleConfiguration ruleConfiguration) {
+        this.ruleConfiguration = ruleConfiguration;
+  }
 }

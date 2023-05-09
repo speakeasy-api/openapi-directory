@@ -15,6 +15,7 @@ public class Aliases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public Object[] aliases;
+
     public Aliases withAliases(Object[] aliases) {
         this.aliases = aliases;
         return this;
@@ -23,6 +24,7 @@ public class Aliases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Aliases withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -31,9 +33,11 @@ public class Aliases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Aliases withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Aliases(){}
 }

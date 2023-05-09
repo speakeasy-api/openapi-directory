@@ -15,6 +15,7 @@ public class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum visibility;
+
     public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody withVisibility(EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody(){}
 }

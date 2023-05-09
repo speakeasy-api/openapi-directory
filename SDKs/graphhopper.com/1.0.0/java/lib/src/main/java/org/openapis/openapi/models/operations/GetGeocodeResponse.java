@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGeocodeResponse {
     
     public String contentType;
+
     public GetGeocodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetGeocodeResponse {
      */
     
     public org.openapis.openapi.models.shared.GHError ghError;
+
     public GetGeocodeResponse withGHError(org.openapis.openapi.models.shared.GHError ghError) {
         this.ghError = ghError;
         return this;
@@ -29,6 +32,7 @@ public class GetGeocodeResponse {
      */
     
     public org.openapis.openapi.models.shared.GeocodingResponse geocodingResponse;
+
     public GetGeocodeResponse withGeocodingResponse(org.openapis.openapi.models.shared.GeocodingResponse geocodingResponse) {
         this.geocodingResponse = geocodingResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetGeocodeResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetGeocodeResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class GetGeocodeResponse {
     
     
     public Integer statusCode;
+
     public GetGeocodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetGeocodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGeocodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetGeocodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

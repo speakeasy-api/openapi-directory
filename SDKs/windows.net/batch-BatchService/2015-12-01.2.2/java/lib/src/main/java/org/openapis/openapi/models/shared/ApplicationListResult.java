@@ -18,6 +18,7 @@ public class ApplicationListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public ApplicationListResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class ApplicationListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public ApplicationSummary[] value;
+
     public ApplicationListResult withValue(ApplicationSummary[] value) {
         this.value = value;
         return this;
     }
     
+    public ApplicationListResult(){}
 }

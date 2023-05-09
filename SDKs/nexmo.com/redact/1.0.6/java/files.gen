@@ -41,4 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorInvalidId.java
 lib/src/main/java/org/openapis/openapi/models/shared/RedactTransactionProductEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RedactTransactionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RedactTransaction.java
+docs/sdk/README.md
 USAGE.md

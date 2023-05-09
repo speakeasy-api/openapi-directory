@@ -17,6 +17,7 @@ public class VerificationSettings {
      */
     @JsonProperty("fields")
     public java.util.Map<String, String> fields;
+
     public VerificationSettings withFields(java.util.Map<String, String> fields) {
         this.fields = fields;
         return this;
@@ -28,9 +29,13 @@ public class VerificationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappingSettings")
     public MappingSettings mappingSettings;
+
     public VerificationSettings withMappingSettings(MappingSettings mappingSettings) {
         this.mappingSettings = mappingSettings;
         return this;
     }
     
+    public VerificationSettings(@JsonProperty("fields") java.util.Map<String, String> fields) {
+        this.fields = fields;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVpcPeeringAuthorizationResponse {
     
     public String contentType;
+
     public CreateVpcPeeringAuthorizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateVpcPeeringAuthorizationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVpcPeeringAuthorizationOutput createVpcPeeringAuthorizationOutput;
+
     public CreateVpcPeeringAuthorizationResponse withCreateVpcPeeringAuthorizationOutput(org.openapis.openapi.models.shared.CreateVpcPeeringAuthorizationOutput createVpcPeeringAuthorizationOutput) {
         this.createVpcPeeringAuthorizationOutput = createVpcPeeringAuthorizationOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateVpcPeeringAuthorizationResponse {
      */
     
     public Object internalServiceException;
+
     public CreateVpcPeeringAuthorizationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class CreateVpcPeeringAuthorizationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateVpcPeeringAuthorizationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateVpcPeeringAuthorizationResponse {
      */
     
     public Object notFoundException;
+
     public CreateVpcPeeringAuthorizationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateVpcPeeringAuthorizationResponse {
     
     
     public Integer statusCode;
+
     public CreateVpcPeeringAuthorizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateVpcPeeringAuthorizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVpcPeeringAuthorizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateVpcPeeringAuthorizationResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateVpcPeeringAuthorizationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateVpcPeeringAuthorizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

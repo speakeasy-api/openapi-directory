@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeApplicationStateResponse {
@@ -12,6 +13,7 @@ public class DescribeApplicationStateResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeApplicationStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeApplicationStateResponse {
     
     
     public String contentType;
+
     public DescribeApplicationStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeApplicationStateResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeApplicationStateResult describeApplicationStateResult;
+
     public DescribeApplicationStateResponse withDescribeApplicationStateResult(org.openapis.openapi.models.shared.DescribeApplicationStateResult describeApplicationStateResult) {
         this.describeApplicationStateResult = describeApplicationStateResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeApplicationStateResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DescribeApplicationStateResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeApplicationStateResponse {
      */
     
     public Object internalServerError;
+
     public DescribeApplicationStateResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DescribeApplicationStateResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeApplicationStateResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeApplicationStateResponse {
      */
     
     public Object policyErrorException;
+
     public DescribeApplicationStateResponse withPolicyErrorException(Object policyErrorException) {
         this.policyErrorException = policyErrorException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeApplicationStateResponse {
     
     
     public Integer statusCode;
+
     public DescribeApplicationStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeApplicationStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeApplicationStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DescribeApplicationStateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeApplicationStateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class DescribeApplicationStateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeApplicationStateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class DescribeApplicationStateResponse {
      */
     
     public Object throttlingException;
+
     public DescribeApplicationStateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeApplicationStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

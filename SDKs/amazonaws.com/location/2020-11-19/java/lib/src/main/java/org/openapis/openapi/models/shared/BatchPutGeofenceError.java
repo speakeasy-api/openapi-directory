@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchPutGeofenceError {
     @JsonProperty("Error")
     public BatchItemError error;
+
     public BatchPutGeofenceError withError(BatchItemError error) {
         this.error = error;
         return this;
@@ -19,9 +20,14 @@ public class BatchPutGeofenceError {
     
     @JsonProperty("GeofenceId")
     public String geofenceId;
+
     public BatchPutGeofenceError withGeofenceId(String geofenceId) {
         this.geofenceId = geofenceId;
         return this;
     }
     
+    public BatchPutGeofenceError(@JsonProperty("Error") BatchItemError error, @JsonProperty("GeofenceId") String geofenceId) {
+        this.error = error;
+        this.geofenceId = geofenceId;
+  }
 }

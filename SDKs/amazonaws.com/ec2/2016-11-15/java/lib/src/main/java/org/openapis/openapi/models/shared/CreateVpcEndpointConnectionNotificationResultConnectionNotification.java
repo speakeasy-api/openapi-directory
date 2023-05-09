@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcEndpointConnectionNotificationResultConnectionNotification {
     
     public String[] connectionEvents;
+
     public CreateVpcEndpointConnectionNotificationResultConnectionNotification withConnectionEvents(String[] connectionEvents) {
         this.connectionEvents = connectionEvents;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpcEndpointConnectionNotificationResultConnectionNotification
     
     
     public String connectionNotificationArn;
+
     public CreateVpcEndpointConnectionNotificationResultConnectionNotification withConnectionNotificationArn(String connectionNotificationArn) {
         this.connectionNotificationArn = connectionNotificationArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpcEndpointConnectionNotificationResultConnectionNotification
     
     
     public String connectionNotificationId;
+
     public CreateVpcEndpointConnectionNotificationResultConnectionNotification withConnectionNotificationId(String connectionNotificationId) {
         this.connectionNotificationId = connectionNotificationId;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpcEndpointConnectionNotificationResultConnectionNotification
     
     
     public CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum connectionNotificationState;
+
     public CreateVpcEndpointConnectionNotificationResultConnectionNotification withConnectionNotificationState(CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum connectionNotificationState) {
         this.connectionNotificationState = connectionNotificationState;
         return this;
@@ -40,6 +44,7 @@ public class CreateVpcEndpointConnectionNotificationResultConnectionNotification
     
     
     public CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum connectionNotificationType;
+
     public CreateVpcEndpointConnectionNotificationResultConnectionNotification withConnectionNotificationType(CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum connectionNotificationType) {
         this.connectionNotificationType = connectionNotificationType;
         return this;
@@ -47,6 +52,7 @@ public class CreateVpcEndpointConnectionNotificationResultConnectionNotification
     
     
     public String serviceId;
+
     public CreateVpcEndpointConnectionNotificationResultConnectionNotification withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -54,9 +60,11 @@ public class CreateVpcEndpointConnectionNotificationResultConnectionNotification
     
     
     public String vpcEndpointId;
+
     public CreateVpcEndpointConnectionNotificationResultConnectionNotification withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
     }
     
+    public CreateVpcEndpointConnectionNotificationResultConnectionNotification(){}
 }

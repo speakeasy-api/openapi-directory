@@ -15,9 +15,11 @@ public class UpdateRegexPatternSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateRegexPatternSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public UpdateRegexPatternSetResponse(){}
 }

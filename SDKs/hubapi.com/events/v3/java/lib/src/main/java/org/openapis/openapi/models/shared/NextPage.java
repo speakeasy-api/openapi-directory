@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NextPage {
     @JsonProperty("after")
     public String after;
+
     public NextPage withAfter(String after) {
         this.after = after;
         return this;
@@ -19,9 +20,13 @@ public class NextPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public NextPage withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public NextPage(@JsonProperty("after") String after) {
+        this.after = after;
+  }
 }

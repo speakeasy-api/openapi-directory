@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GroundhogRequest;
 import org.openapis.openapi.models.operations.GroundhogResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GroundhogRequest req = new GroundhogRequest() {{
-                slug = "corrupti";
-            }}            
+            GroundhogRequest req = new GroundhogRequest("corrupti");            
 
             GroundhogResponse res = sdk.groundhogs.groundhog(req);
 
-            if (res.groundhog200ApplicationJSONObject.isPresent()) {
+            if (res.groundhog200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

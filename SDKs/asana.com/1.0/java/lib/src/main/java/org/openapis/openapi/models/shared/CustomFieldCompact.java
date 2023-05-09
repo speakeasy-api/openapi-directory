@@ -20,6 +20,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_value")
     public CustomFieldCompactDateValue dateValue;
+
     public CustomFieldCompact withDateValue(CustomFieldCompactDateValue dateValue) {
         this.dateValue = dateValue;
         return this;
@@ -31,6 +32,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_value")
     public String displayValue;
+
     public CustomFieldCompact withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -42,6 +44,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CustomFieldCompact withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -53,6 +56,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enum_options")
     public EnumOption[] enumOptions;
+
     public CustomFieldCompact withEnumOptions(EnumOption[] enumOptions) {
         this.enumOptions = enumOptions;
         return this;
@@ -61,6 +65,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enum_value")
     public CustomFieldCompactEnumValue enumValue;
+
     public CustomFieldCompact withEnumValue(CustomFieldCompactEnumValue enumValue) {
         this.enumValue = enumValue;
         return this;
@@ -72,6 +77,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public CustomFieldCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -83,6 +89,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multi_enum_values")
     public EnumOption[] multiEnumValues;
+
     public CustomFieldCompact withMultiEnumValues(EnumOption[] multiEnumValues) {
         this.multiEnumValues = multiEnumValues;
         return this;
@@ -94,6 +101,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomFieldCompact withName(String name) {
         this.name = name;
         return this;
@@ -105,6 +113,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_value")
     public Double numberValue;
+
     public CustomFieldCompact withNumberValue(Double numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -117,6 +126,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public CustomFieldCompactResourceSubtypeEnum resourceSubtype;
+
     public CustomFieldCompact withResourceSubtype(CustomFieldCompactResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -128,6 +138,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public CustomFieldCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -139,6 +150,7 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_value")
     public String textValue;
+
     public CustomFieldCompact withTextValue(String textValue) {
         this.textValue = textValue;
         return this;
@@ -151,9 +163,11 @@ public class CustomFieldCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CustomFieldCompactTypeEnum type;
+
     public CustomFieldCompact withType(CustomFieldCompactTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CustomFieldCompact(){}
 }

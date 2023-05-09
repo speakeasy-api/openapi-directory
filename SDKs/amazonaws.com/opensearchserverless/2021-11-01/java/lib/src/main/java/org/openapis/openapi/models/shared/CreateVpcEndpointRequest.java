@@ -12,6 +12,7 @@ public class CreateVpcEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateVpcEndpointRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpcEndpointRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateVpcEndpointRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class CreateVpcEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public CreateVpcEndpointRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -34,6 +37,7 @@ public class CreateVpcEndpointRequest {
     
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public CreateVpcEndpointRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -41,9 +45,15 @@ public class CreateVpcEndpointRequest {
     
     @JsonProperty("vpcId")
     public String vpcId;
+
     public CreateVpcEndpointRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateVpcEndpointRequest(@JsonProperty("name") String name, @JsonProperty("subnetIds") String[] subnetIds, @JsonProperty("vpcId") String vpcId) {
+        this.name = name;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

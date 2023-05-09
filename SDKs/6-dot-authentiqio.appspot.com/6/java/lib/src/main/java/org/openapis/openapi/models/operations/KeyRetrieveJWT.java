@@ -22,6 +22,7 @@ public class KeyRetrieveJWT {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("since")
     public OffsetDateTime since;
+
     public KeyRetrieveJWT withSince(OffsetDateTime since) {
         this.since = since;
         return this;
@@ -30,6 +31,7 @@ public class KeyRetrieveJWT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public KeyRetrieveJWT withStatus(String status) {
         this.status = status;
         return this;
@@ -41,9 +43,11 @@ public class KeyRetrieveJWT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub")
     public String sub;
+
     public KeyRetrieveJWT withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public KeyRetrieveJWT(){}
 }

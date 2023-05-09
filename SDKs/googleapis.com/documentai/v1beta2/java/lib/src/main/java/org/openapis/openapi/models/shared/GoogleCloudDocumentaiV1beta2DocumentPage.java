@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blocks")
     public GoogleCloudDocumentaiV1beta2DocumentPageBlock[] blocks;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withBlocks(GoogleCloudDocumentaiV1beta2DocumentPageBlock[] blocks) {
         this.blocks = blocks;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedBarcodes")
     public GoogleCloudDocumentaiV1beta2DocumentPageDetectedBarcode[] detectedBarcodes;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withDetectedBarcodes(GoogleCloudDocumentaiV1beta2DocumentPageDetectedBarcode[] detectedBarcodes) {
         this.detectedBarcodes = detectedBarcodes;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withDetectedLanguages(GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public GoogleCloudDocumentaiV1beta2DocumentPageDimension dimension;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withDimension(GoogleCloudDocumentaiV1beta2DocumentPageDimension dimension) {
         this.dimension = dimension;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFields")
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField[] formFields;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withFormFields(GoogleCloudDocumentaiV1beta2DocumentPageFormField[] formFields) {
         this.formFields = formFields;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleCloudDocumentaiV1beta2DocumentPageImage image;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withImage(GoogleCloudDocumentaiV1beta2DocumentPageImage image) {
         this.image = image;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageQualityScores")
     public GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores imageQualityScores;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withImageQualityScores(GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores imageQualityScores) {
         this.imageQualityScores = imageQualityScores;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1beta2DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withLayout(GoogleCloudDocumentaiV1beta2DocumentPageLayout layout) {
         this.layout = layout;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lines")
     public GoogleCloudDocumentaiV1beta2DocumentPageLine[] lines;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withLines(GoogleCloudDocumentaiV1beta2DocumentPageLine[] lines) {
         this.lines = lines;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraphs")
     public GoogleCloudDocumentaiV1beta2DocumentPageParagraph[] paragraphs;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withParagraphs(GoogleCloudDocumentaiV1beta2DocumentPageParagraph[] paragraphs) {
         this.paragraphs = paragraphs;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1beta2DocumentProvenance provenance;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withProvenance(GoogleCloudDocumentaiV1beta2DocumentProvenance provenance) {
         this.provenance = provenance;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbols")
     public GoogleCloudDocumentaiV1beta2DocumentPageSymbol[] symbols;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withSymbols(GoogleCloudDocumentaiV1beta2DocumentPageSymbol[] symbols) {
         this.symbols = symbols;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tables")
     public GoogleCloudDocumentaiV1beta2DocumentPageTable[] tables;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withTables(GoogleCloudDocumentaiV1beta2DocumentPageTable[] tables) {
         this.tables = tables;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokens")
     public GoogleCloudDocumentaiV1beta2DocumentPageToken[] tokens;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withTokens(GoogleCloudDocumentaiV1beta2DocumentPageToken[] tokens) {
         this.tokens = tokens;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transforms")
     public GoogleCloudDocumentaiV1beta2DocumentPageMatrix[] transforms;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withTransforms(GoogleCloudDocumentaiV1beta2DocumentPageMatrix[] transforms) {
         this.transforms = transforms;
         return this;
@@ -194,9 +210,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visualElements")
     public GoogleCloudDocumentaiV1beta2DocumentPageVisualElement[] visualElements;
+
     public GoogleCloudDocumentaiV1beta2DocumentPage withVisualElements(GoogleCloudDocumentaiV1beta2DocumentPageVisualElement[] visualElements) {
         this.visualElements = visualElements;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentPage(){}
 }

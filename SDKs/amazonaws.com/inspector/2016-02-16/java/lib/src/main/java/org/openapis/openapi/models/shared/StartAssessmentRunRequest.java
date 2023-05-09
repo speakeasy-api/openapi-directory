@@ -12,6 +12,7 @@ public class StartAssessmentRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentRunName")
     public String assessmentRunName;
+
     public StartAssessmentRunRequest withAssessmentRunName(String assessmentRunName) {
         this.assessmentRunName = assessmentRunName;
         return this;
@@ -19,9 +20,13 @@ public class StartAssessmentRunRequest {
     
     @JsonProperty("assessmentTemplateArn")
     public String assessmentTemplateArn;
+
     public StartAssessmentRunRequest withAssessmentTemplateArn(String assessmentTemplateArn) {
         this.assessmentTemplateArn = assessmentTemplateArn;
         return this;
     }
     
+    public StartAssessmentRunRequest(@JsonProperty("assessmentTemplateArn") String assessmentTemplateArn) {
+        this.assessmentTemplateArn = assessmentTemplateArn;
+  }
 }

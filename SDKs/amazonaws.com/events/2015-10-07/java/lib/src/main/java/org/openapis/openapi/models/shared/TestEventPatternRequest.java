@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestEventPatternRequest {
     @JsonProperty("Event")
     public String event;
+
     public TestEventPatternRequest withEvent(String event) {
         this.event = event;
         return this;
@@ -16,9 +17,14 @@ public class TestEventPatternRequest {
     
     @JsonProperty("EventPattern")
     public String eventPattern;
+
     public TestEventPatternRequest withEventPattern(String eventPattern) {
         this.eventPattern = eventPattern;
         return this;
     }
     
+    public TestEventPatternRequest(@JsonProperty("Event") String event, @JsonProperty("EventPattern") String eventPattern) {
+        this.event = event;
+        this.eventPattern = eventPattern;
+  }
 }

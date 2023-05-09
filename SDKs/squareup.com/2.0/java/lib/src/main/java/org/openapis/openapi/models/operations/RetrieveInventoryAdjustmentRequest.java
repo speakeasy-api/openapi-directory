@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveInventoryAdjustmentRequest {
@@ -12,9 +13,13 @@ public class RetrieveInventoryAdjustmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adjustment_id")
     public String adjustmentId;
+
     public RetrieveInventoryAdjustmentRequest withAdjustmentId(String adjustmentId) {
         this.adjustmentId = adjustmentId;
         return this;
     }
     
+    public RetrieveInventoryAdjustmentRequest(@JsonProperty("adjustment_id") String adjustmentId) {
+        this.adjustmentId = adjustmentId;
+  }
 }

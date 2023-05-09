@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentLinkApiDeleteFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.PaymentLink paymentLink;
+
     public PaymentLinkApiDeleteFormRequest withPaymentLink(org.openapis.openapi.models.shared.PaymentLink paymentLink) {
         this.paymentLink = paymentLink;
         return this;
@@ -16,6 +18,7 @@ public class PaymentLinkApiDeleteFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public PaymentLinkApiDeleteFormRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class PaymentLinkApiDeleteFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public PaymentLinkApiDeleteFormRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public PaymentLinkApiDeleteFormRequest(@JsonProperty("PaymentLink") org.openapis.openapi.models.shared.PaymentLink paymentLink, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.paymentLink = paymentLink;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

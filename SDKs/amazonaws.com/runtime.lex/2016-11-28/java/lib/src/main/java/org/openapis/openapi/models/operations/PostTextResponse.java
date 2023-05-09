@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostTextResponse {
@@ -12,6 +13,7 @@ public class PostTextResponse {
      */
     
     public Object badGatewayException;
+
     public PostTextResponse withBadGatewayException(Object badGatewayException) {
         this.badGatewayException = badGatewayException;
         return this;
@@ -22,6 +24,7 @@ public class PostTextResponse {
      */
     
     public Object badRequestException;
+
     public PostTextResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class PostTextResponse {
      */
     
     public Object conflictException;
+
     public PostTextResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class PostTextResponse {
     
     
     public String contentType;
+
     public PostTextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class PostTextResponse {
      */
     
     public Object dependencyFailedException;
+
     public PostTextResponse withDependencyFailedException(Object dependencyFailedException) {
         this.dependencyFailedException = dependencyFailedException;
         return this;
@@ -59,6 +65,7 @@ public class PostTextResponse {
      */
     
     public Object internalFailureException;
+
     public PostTextResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -69,6 +76,7 @@ public class PostTextResponse {
      */
     
     public Object limitExceededException;
+
     public PostTextResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PostTextResponse {
      */
     
     public Object loopDetectedException;
+
     public PostTextResponse withLoopDetectedException(Object loopDetectedException) {
         this.loopDetectedException = loopDetectedException;
         return this;
@@ -89,6 +98,7 @@ public class PostTextResponse {
      */
     
     public Object notFoundException;
+
     public PostTextResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -99,6 +109,7 @@ public class PostTextResponse {
      */
     
     public org.openapis.openapi.models.shared.PostTextResponse postTextResponse;
+
     public PostTextResponse withPostTextResponse(org.openapis.openapi.models.shared.PostTextResponse postTextResponse) {
         this.postTextResponse = postTextResponse;
         return this;
@@ -106,6 +117,7 @@ public class PostTextResponse {
     
     
     public Integer statusCode;
+
     public PostTextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class PostTextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostTextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostTextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

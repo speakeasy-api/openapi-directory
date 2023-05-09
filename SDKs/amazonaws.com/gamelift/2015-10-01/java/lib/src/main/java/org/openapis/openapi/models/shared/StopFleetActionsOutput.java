@@ -15,6 +15,7 @@ public class StopFleetActionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public StopFleetActionsOutput withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -23,9 +24,11 @@ public class StopFleetActionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public StopFleetActionsOutput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public StopFleetActionsOutput(){}
 }

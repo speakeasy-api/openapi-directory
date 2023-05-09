@@ -20,6 +20,7 @@ public class UserType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public AttributeType[] attributes;
+
     public UserType withAttributes(AttributeType[] attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +29,7 @@ public class UserType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UserType withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -36,6 +38,7 @@ public class UserType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MFAOptions")
     public MFAOptionType[] mfaOptions;
+
     public UserType withMFAOptions(MFAOptionType[] mfaOptions) {
         this.mfaOptions = mfaOptions;
         return this;
@@ -46,6 +49,7 @@ public class UserType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UserCreateDate")
     public OffsetDateTime userCreateDate;
+
     public UserType withUserCreateDate(OffsetDateTime userCreateDate) {
         this.userCreateDate = userCreateDate;
         return this;
@@ -56,6 +60,7 @@ public class UserType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UserLastModifiedDate")
     public OffsetDateTime userLastModifiedDate;
+
     public UserType withUserLastModifiedDate(OffsetDateTime userLastModifiedDate) {
         this.userLastModifiedDate = userLastModifiedDate;
         return this;
@@ -64,6 +69,7 @@ public class UserType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserStatus")
     public UserStatusTypeEnum userStatus;
+
     public UserType withUserStatus(UserStatusTypeEnum userStatus) {
         this.userStatus = userStatus;
         return this;
@@ -72,9 +78,11 @@ public class UserType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public UserType withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UserType(){}
 }

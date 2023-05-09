@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetResponse {
     
     public String spotFleetRequestId;
+
     public RequestSpotFleetResponse withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
     }
     
+    public RequestSpotFleetResponse(){}
 }

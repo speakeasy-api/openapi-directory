@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentDetailsRequest {
@@ -12,6 +13,7 @@ public class PaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PaymentDetailsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PaymentDetailsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class PaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
     public String xPROVIDERAPIAppKey;
+
     public PaymentDetailsRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
         this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
         return this;
@@ -42,6 +46,7 @@ public class PaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
     public String xPROVIDERAPIAppToken;
+
     public PaymentDetailsRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
         this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
@@ -49,6 +54,7 @@ public class PaymentDetailsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
     public String paymentId;
+
     public PaymentDetailsRequest withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -56,9 +62,18 @@ public class PaymentDetailsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
     public String transactionId;
+
     public PaymentDetailsRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public PaymentDetailsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("X-PROVIDER-API-AppKey") String xPROVIDERAPIAppKey, @JsonProperty("X-PROVIDER-API-AppToken") String xPROVIDERAPIAppToken, @JsonProperty("paymentId") String paymentId, @JsonProperty("transactionId") String transactionId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        this.paymentId = paymentId;
+        this.transactionId = transactionId;
+  }
 }

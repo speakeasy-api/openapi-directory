@@ -23,6 +23,7 @@ public class SandboxStandingOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public SandboxStandingOrder withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -34,6 +35,7 @@ public class SandboxStandingOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SandboxStandingOrder withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +49,7 @@ public class SandboxStandingOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("finalPaymentDate")
     public OffsetDateTime finalPaymentDate;
+
     public SandboxStandingOrder withFinalPaymentDate(OffsetDateTime finalPaymentDate) {
         this.finalPaymentDate = finalPaymentDate;
         return this;
@@ -60,6 +63,7 @@ public class SandboxStandingOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstPaymentDate")
     public OffsetDateTime firstPaymentDate;
+
     public SandboxStandingOrder withFirstPaymentDate(OffsetDateTime firstPaymentDate) {
         this.firstPaymentDate = firstPaymentDate;
         return this;
@@ -70,6 +74,7 @@ public class SandboxStandingOrder {
      */
     @JsonProperty("frequency")
     public String frequency;
+
     public SandboxStandingOrder withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -83,6 +88,7 @@ public class SandboxStandingOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastPaymentDate")
     public OffsetDateTime lastPaymentDate;
+
     public SandboxStandingOrder withLastPaymentDate(OffsetDateTime lastPaymentDate) {
         this.lastPaymentDate = lastPaymentDate;
         return this;
@@ -96,6 +102,7 @@ public class SandboxStandingOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextPaymentDate")
     public OffsetDateTime nextPaymentDate;
+
     public SandboxStandingOrder withNextPaymentDate(OffsetDateTime nextPaymentDate) {
         this.nextPaymentDate = nextPaymentDate;
         return this;
@@ -107,9 +114,13 @@ public class SandboxStandingOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SandboxStandingOrder withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SandboxStandingOrder(@JsonProperty("frequency") String frequency) {
+        this.frequency = frequency;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage {
     @JsonProperty("DeliveryMethod")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum deliveryMethod;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage withDeliveryMethod(GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum deliveryMethod) {
         this.deliveryMethod = deliveryMethod;
         return this;
@@ -22,6 +23,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMess
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSettings")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageEmailSettings emailSettings;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage withEmailSettings(GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageEmailSettings emailSettings) {
         this.emailSettings = emailSettings;
         return this;
@@ -30,9 +32,13 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMess
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsSettings")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageSmsSettings smsSettings;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage withSmsSettings(GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageSmsSettings smsSettings) {
         this.smsSettings = smsSettings;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage(@JsonProperty("DeliveryMethod") GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum deliveryMethod) {
+        this.deliveryMethod = deliveryMethod;
+  }
 }

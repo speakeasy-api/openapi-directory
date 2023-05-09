@@ -18,6 +18,7 @@ public class UpsolverS3OutputFormatConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationConfig")
     public AggregationConfig aggregationConfig;
+
     public UpsolverS3OutputFormatConfig withAggregationConfig(AggregationConfig aggregationConfig) {
         this.aggregationConfig = aggregationConfig;
         return this;
@@ -26,6 +27,7 @@ public class UpsolverS3OutputFormatConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public FileTypeEnum fileType;
+
     public UpsolverS3OutputFormatConfig withFileType(FileTypeEnum fileType) {
         this.fileType = fileType;
         return this;
@@ -36,9 +38,13 @@ public class UpsolverS3OutputFormatConfig {
      */
     @JsonProperty("prefixConfig")
     public PrefixConfig prefixConfig;
+
     public UpsolverS3OutputFormatConfig withPrefixConfig(PrefixConfig prefixConfig) {
         this.prefixConfig = prefixConfig;
         return this;
     }
     
+    public UpsolverS3OutputFormatConfig(@JsonProperty("prefixConfig") PrefixConfig prefixConfig) {
+        this.prefixConfig = prefixConfig;
+  }
 }

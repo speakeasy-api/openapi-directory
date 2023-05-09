@@ -49,12 +49,10 @@ public class CustomerRights {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRightsResponse res = new org.openapis.openapi.models.operations.GetRightsResponse() {{
+        org.openapis.openapi.models.operations.GetRightsResponse res = new org.openapis.openapi.models.operations.GetRightsResponse(contentType, httpRes.statusCode()) {{
             functionalityRightInfos = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

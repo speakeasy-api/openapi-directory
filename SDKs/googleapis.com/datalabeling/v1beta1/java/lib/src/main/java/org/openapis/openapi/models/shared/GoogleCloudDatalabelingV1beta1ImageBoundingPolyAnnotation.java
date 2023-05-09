@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpec")
     public GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec;
+
     public GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation withAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec) {
         this.annotationSpec = annotationSpec;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPoly")
     public GoogleCloudDatalabelingV1beta1BoundingPoly boundingPoly;
+
     public GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation withBoundingPoly(GoogleCloudDatalabelingV1beta1BoundingPoly boundingPoly) {
         this.boundingPoly = boundingPoly;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedBoundingPoly")
     public GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly normalizedBoundingPoly;
+
     public GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation withNormalizedBoundingPoly(GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly normalizedBoundingPoly) {
         this.normalizedBoundingPoly = normalizedBoundingPoly;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation(){}
 }

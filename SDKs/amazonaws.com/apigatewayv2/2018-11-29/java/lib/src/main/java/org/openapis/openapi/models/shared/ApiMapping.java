@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApiMapping {
     @JsonProperty("ApiId")
     public String apiId;
+
     public ApiMapping withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -22,6 +23,7 @@ public class ApiMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiMappingId")
     public String apiMappingId;
+
     public ApiMapping withApiMappingId(String apiMappingId) {
         this.apiMappingId = apiMappingId;
         return this;
@@ -30,6 +32,7 @@ public class ApiMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiMappingKey")
     public String apiMappingKey;
+
     public ApiMapping withApiMappingKey(String apiMappingKey) {
         this.apiMappingKey = apiMappingKey;
         return this;
@@ -37,9 +40,14 @@ public class ApiMapping {
     
     @JsonProperty("Stage")
     public String stage;
+
     public ApiMapping withStage(String stage) {
         this.stage = stage;
         return this;
     }
     
+    public ApiMapping(@JsonProperty("ApiId") String apiId, @JsonProperty("Stage") String stage) {
+        this.apiId = apiId;
+        this.stage = stage;
+  }
 }

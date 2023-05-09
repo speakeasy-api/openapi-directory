@@ -15,9 +15,11 @@ public class NumberList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Number[] items;
+
     public NumberList withItems(Number[] items) {
         this.items = items;
         return this;
     }
     
+    public NumberList(){}
 }

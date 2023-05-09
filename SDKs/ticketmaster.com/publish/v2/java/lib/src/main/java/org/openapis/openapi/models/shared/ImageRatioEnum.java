@@ -10,9 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ImageRatioEnum - Aspect ratio of the image
  */
 public enum ImageRatioEnum {
-    SIXTEEN9("16_9"),
-    THREE2("3_2"),
-    FOUR3("4_3");
+    ZERO("0");
 
     @JsonValue
     public final String value;

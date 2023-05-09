@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateElasticIpResponse {
     
     public String contentType;
+
     public AssociateElasticIpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AssociateElasticIpResponse {
     
     
     public Integer statusCode;
+
     public AssociateElasticIpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AssociateElasticIpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateElasticIpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AssociateElasticIpResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateElasticIpResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -43,9 +48,14 @@ public class AssociateElasticIpResponse {
      */
     
     public Object validationException;
+
     public AssociateElasticIpResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateElasticIpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

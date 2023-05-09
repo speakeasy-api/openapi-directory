@@ -18,6 +18,7 @@ public class DeveloperMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public DeveloperMetadataLocation location;
+
     public DeveloperMetadata withLocation(DeveloperMetadataLocation location) {
         this.location = location;
         return this;
@@ -29,6 +30,7 @@ public class DeveloperMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataId")
     public Integer metadataId;
+
     public DeveloperMetadata withMetadataId(Integer metadataId) {
         this.metadataId = metadataId;
         return this;
@@ -40,6 +42,7 @@ public class DeveloperMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataKey")
     public String metadataKey;
+
     public DeveloperMetadata withMetadataKey(String metadataKey) {
         this.metadataKey = metadataKey;
         return this;
@@ -51,6 +54,7 @@ public class DeveloperMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataValue")
     public String metadataValue;
+
     public DeveloperMetadata withMetadataValue(String metadataValue) {
         this.metadataValue = metadataValue;
         return this;
@@ -62,9 +66,11 @@ public class DeveloperMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public DeveloperMetadataVisibilityEnum visibility;
+
     public DeveloperMetadata withVisibility(DeveloperMetadataVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public DeveloperMetadata(){}
 }

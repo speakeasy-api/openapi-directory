@@ -17,6 +17,7 @@ public class StartDevEnvironmentSessionResponse {
      */
     @JsonProperty("accessDetails")
     public DevEnvironmentAccessDetails accessDetails;
+
     public StartDevEnvironmentSessionResponse withAccessDetails(DevEnvironmentAccessDetails accessDetails) {
         this.accessDetails = accessDetails;
         return this;
@@ -24,6 +25,7 @@ public class StartDevEnvironmentSessionResponse {
     
     @JsonProperty("id")
     public String id;
+
     public StartDevEnvironmentSessionResponse withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class StartDevEnvironmentSessionResponse {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public StartDevEnvironmentSessionResponse withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -39,6 +42,7 @@ public class StartDevEnvironmentSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public StartDevEnvironmentSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -46,9 +50,16 @@ public class StartDevEnvironmentSessionResponse {
     
     @JsonProperty("spaceName")
     public String spaceName;
+
     public StartDevEnvironmentSessionResponse withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public StartDevEnvironmentSessionResponse(@JsonProperty("accessDetails") DevEnvironmentAccessDetails accessDetails, @JsonProperty("id") String id, @JsonProperty("projectName") String projectName, @JsonProperty("spaceName") String spaceName) {
+        this.accessDetails = accessDetails;
+        this.id = id;
+        this.projectName = projectName;
+        this.spaceName = spaceName;
+  }
 }

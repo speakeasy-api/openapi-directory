@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartBatchJobResponse {
     @JsonProperty("executionId")
     public String executionId;
+
     public StartBatchJobResponse withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
     }
     
+    public StartBatchJobResponse(@JsonProperty("executionId") String executionId) {
+        this.executionId = executionId;
+  }
 }

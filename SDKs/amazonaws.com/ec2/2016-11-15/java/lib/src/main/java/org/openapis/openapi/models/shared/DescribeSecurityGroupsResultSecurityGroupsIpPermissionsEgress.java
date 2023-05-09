@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress {
     
     public Long fromPort;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress {
     
     
     public String ipProtocol;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress {
     
     
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressIpRanges[] ipRanges;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress withIpRanges(DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressIpRanges[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress {
     
     
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressIpv6Ranges[] ipv6Ranges;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress withIpv6Ranges(DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressIpv6Ranges[] ipv6Ranges) {
         this.ipv6Ranges = ipv6Ranges;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress {
     
     
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressPrefixListIds[] prefixListIds;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress withPrefixListIds(DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressPrefixListIds[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress {
     
     
     public Long toPort;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
@@ -54,9 +60,11 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress {
     
     
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs[] userIdGroupPairs;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress withUserIdGroupPairs(DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs[] userIdGroupPairs) {
         this.userIdGroupPairs = userIdGroupPairs;
         return this;
     }
     
+    public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress(){}
 }

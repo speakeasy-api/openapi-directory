@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetColumnsResponse {
@@ -12,6 +13,7 @@ public class GetColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.ColumnDTO[] columnDTOS;
+
     public GetColumnsResponse withColumnDTOS(org.openapis.openapi.models.shared.ColumnDTO[] columnDTOS) {
         this.columnDTOS = columnDTOS;
         return this;
@@ -19,6 +21,7 @@ public class GetColumnsResponse {
     
     
     public String contentType;
+
     public GetColumnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetColumnsResponse {
     
     
     public Integer statusCode;
+
     public GetColumnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetColumnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetColumnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetColumnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

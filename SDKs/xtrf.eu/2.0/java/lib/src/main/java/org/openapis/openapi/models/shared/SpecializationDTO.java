@@ -15,9 +15,11 @@ public class SpecializationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specializationId")
     public Long specializationId;
+
     public SpecializationDTO withSpecializationId(Long specializationId) {
         this.specializationId = specializationId;
         return this;
     }
     
+    public SpecializationDTO(){}
 }

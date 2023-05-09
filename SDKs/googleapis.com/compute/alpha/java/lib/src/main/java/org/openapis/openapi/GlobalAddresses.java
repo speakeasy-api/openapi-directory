@@ -59,11 +59,9 @@ public class GlobalAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class GlobalAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalAddressesGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalAddressesGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesGetResponse(contentType, httpRes.statusCode()) {{
             address = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class GlobalAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalAddressesGetOwnerInstanceResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesGetOwnerInstanceResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalAddressesGetOwnerInstanceResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesGetOwnerInstanceResponse(contentType, httpRes.statusCode()) {{
             getOwnerInstanceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class GlobalAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class GlobalAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalAddressesListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalAddressesListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesListResponse(contentType, httpRes.statusCode()) {{
             addressList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class GlobalAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalAddressesMoveResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesMoveResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalAddressesMoveResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesMoveResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class GlobalAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class GlobalAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalAddressesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalAddressesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeGlobalAddressesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

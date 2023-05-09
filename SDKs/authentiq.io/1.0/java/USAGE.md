@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AuthorizeRequest;
 import org.openapis.openapi.models.operations.AuthorizeResponse;
 
@@ -13,19 +12,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AuthorizeRequest req = new AuthorizeRequest() {{
-                clientId = "corrupti";
-                display = "provident";
-                maxAge = 715190;
-                nonce = "quibusdam";
-                prompt = "unde";
-                redirectUri = "nulla";
-                responseMode = "corrupti";
-                responseType = "illum";
-                scope = "vel";
-                state = "error";
+            AuthorizeRequest req = new AuthorizeRequest("corrupti", "provident", "distinctio", "quibusdam", "unde") {{
+                display = "nulla";
+                maxAge = 544883L;
+                nonce = "illum";
+                prompt = "vel";
+                responseMode = "error";
                 uiLocales = "deserunt";
-            }}            
+            }};            
 
             AuthorizeResponse res = sdk.authentication.authorize(req);
 
@@ -35,5 +29,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

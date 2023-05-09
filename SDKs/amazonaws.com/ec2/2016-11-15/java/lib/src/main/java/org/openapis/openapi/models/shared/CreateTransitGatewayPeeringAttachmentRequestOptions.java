@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayPeeringAttachmentRequestOptions {
     
     public DynamicRoutingValueEnum dynamicRouting;
+
     public CreateTransitGatewayPeeringAttachmentRequestOptions withDynamicRouting(DynamicRoutingValueEnum dynamicRouting) {
         this.dynamicRouting = dynamicRouting;
         return this;
     }
     
+    public CreateTransitGatewayPeeringAttachmentRequestOptions(){}
 }

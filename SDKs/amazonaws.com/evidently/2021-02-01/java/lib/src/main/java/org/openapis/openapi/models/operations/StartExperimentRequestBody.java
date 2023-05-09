@@ -19,9 +19,13 @@ public class StartExperimentRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("analysisCompleteTime")
     public OffsetDateTime analysisCompleteTime;
+
     public StartExperimentRequestBody withAnalysisCompleteTime(OffsetDateTime analysisCompleteTime) {
         this.analysisCompleteTime = analysisCompleteTime;
         return this;
     }
     
+    public StartExperimentRequestBody(@JsonProperty("analysisCompleteTime") OffsetDateTime analysisCompleteTime) {
+        this.analysisCompleteTime = analysisCompleteTime;
+  }
 }

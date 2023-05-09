@@ -15,6 +15,7 @@ public class ArrayValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayValues")
     public ArrayValue[] arrayValues;
+
     public ArrayValue withArrayValues(ArrayValue[] arrayValues) {
         this.arrayValues = arrayValues;
         return this;
@@ -23,6 +24,7 @@ public class ArrayValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValues")
     public Boolean[] booleanValues;
+
     public ArrayValue withBooleanValues(Boolean[] booleanValues) {
         this.booleanValues = booleanValues;
         return this;
@@ -31,6 +33,7 @@ public class ArrayValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValues")
     public Double[] doubleValues;
+
     public ArrayValue withDoubleValues(Double[] doubleValues) {
         this.doubleValues = doubleValues;
         return this;
@@ -39,6 +42,7 @@ public class ArrayValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longValues")
     public Long[] longValues;
+
     public ArrayValue withLongValues(Long[] longValues) {
         this.longValues = longValues;
         return this;
@@ -47,9 +51,11 @@ public class ArrayValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValues")
     public String[] stringValues;
+
     public ArrayValue withStringValues(String[] stringValues) {
         this.stringValues = stringValues;
         return this;
     }
     
+    public ArrayValue(){}
 }

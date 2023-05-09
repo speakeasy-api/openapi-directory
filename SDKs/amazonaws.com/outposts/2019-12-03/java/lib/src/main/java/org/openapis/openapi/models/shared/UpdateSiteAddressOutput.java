@@ -15,6 +15,7 @@ public class UpdateSiteAddressOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public Address address;
+
     public UpdateSiteAddressOutput withAddress(Address address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class UpdateSiteAddressOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressType")
     public AddressTypeEnum addressType;
+
     public UpdateSiteAddressOutput withAddressType(AddressTypeEnum addressType) {
         this.addressType = addressType;
         return this;
     }
     
+    public UpdateSiteAddressOutput(){}
 }

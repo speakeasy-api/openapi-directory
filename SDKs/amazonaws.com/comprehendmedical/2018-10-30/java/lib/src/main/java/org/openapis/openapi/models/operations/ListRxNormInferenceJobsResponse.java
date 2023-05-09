@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRxNormInferenceJobsResponse {
     
     public String contentType;
+
     public ListRxNormInferenceJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRxNormInferenceJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListRxNormInferenceJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListRxNormInferenceJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListRxNormInferenceJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListRxNormInferenceJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRxNormInferenceJobsResponse listRxNormInferenceJobsResponse;
+
     public ListRxNormInferenceJobsResponse withListRxNormInferenceJobsResponse(org.openapis.openapi.models.shared.ListRxNormInferenceJobsResponse listRxNormInferenceJobsResponse) {
         this.listRxNormInferenceJobsResponse = listRxNormInferenceJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListRxNormInferenceJobsResponse {
     
     
     public Integer statusCode;
+
     public ListRxNormInferenceJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRxNormInferenceJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRxNormInferenceJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListRxNormInferenceJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListRxNormInferenceJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class ListRxNormInferenceJobsResponse {
      */
     
     public Object validationException;
+
     public ListRxNormInferenceJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRxNormInferenceJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

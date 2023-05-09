@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesGetRequest {
@@ -12,6 +13,7 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CrashesGetRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
     public String crashGroupId;
+
     public CrashesGetRequest withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -32,6 +35,7 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
     public String crashId;
+
     public CrashesGetRequest withCrashId(String crashId) {
         this.crashId = crashId;
         return this;
@@ -42,6 +46,7 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=grouping_only")
     public Boolean groupingOnly;
+
     public CrashesGetRequest withGroupingOnly(Boolean groupingOnly) {
         this.groupingOnly = groupingOnly;
         return this;
@@ -52,6 +57,7 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_details")
     public Boolean includeDetails;
+
     public CrashesGetRequest withIncludeDetails(Boolean includeDetails) {
         this.includeDetails = includeDetails;
         return this;
@@ -62,6 +68,7 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_log")
     public Boolean includeLog;
+
     public CrashesGetRequest withIncludeLog(Boolean includeLog) {
         this.includeLog = includeLog;
         return this;
@@ -72,6 +79,7 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_report")
     public Boolean includeReport;
+
     public CrashesGetRequest withIncludeReport(Boolean includeReport) {
         this.includeReport = includeReport;
         return this;
@@ -82,6 +90,7 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_stacktrace")
     public Boolean includeStacktrace;
+
     public CrashesGetRequest withIncludeStacktrace(Boolean includeStacktrace) {
         this.includeStacktrace = includeStacktrace;
         return this;
@@ -92,9 +101,16 @@ public class CrashesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CrashesGetRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CrashesGetRequest(@JsonProperty("app_name") String appName, @JsonProperty("crash_group_id") String crashGroupId, @JsonProperty("crash_id") String crashId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.crashGroupId = crashGroupId;
+        this.crashId = crashId;
+        this.ownerName = ownerName;
+  }
 }

@@ -13,6 +13,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchBoulderCountyVoterDetailsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchBoulderCountyVoterDetailsRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchBoulderCountyVoterDetailsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchBoulderCountyVoterDetailsRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchBoulderCountyVoterDetailsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchBoulderCountyVoterDetailsRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchBoulderCountyVoterDetailsRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchBoulderCountyVoterDetailsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchBoulderCountyVoterDetailsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchBoulderCountyVoterDetailsRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchBoulderCountyVoterDetailsRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchBoulderCountyVoterDetailsRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchBoulderCountyVoterDetailsRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchBoulderCountyVoterDetailsRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.birth_year")
     public Long searchDbBoulderCountyVoterDetailsBirthYear;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsBirthYear(Long searchDbBoulderCountyVoterDetailsBirthYear) {
         this.searchDbBoulderCountyVoterDetailsBirthYear = searchDbBoulderCountyVoterDetailsBirthYear;
         return this;
@@ -163,6 +178,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.city_ward_district")
     public String searchDbBoulderCountyVoterDetailsCityWardDistrict;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsCityWardDistrict(String searchDbBoulderCountyVoterDetailsCityWardDistrict) {
         this.searchDbBoulderCountyVoterDetailsCityWardDistrict = searchDbBoulderCountyVoterDetailsCityWardDistrict;
         return this;
@@ -173,6 +189,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.congressional")
     public String searchDbBoulderCountyVoterDetailsCongressional;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsCongressional(String searchDbBoulderCountyVoterDetailsCongressional) {
         this.searchDbBoulderCountyVoterDetailsCongressional = searchDbBoulderCountyVoterDetailsCongressional;
         return this;
@@ -183,6 +200,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.first_name")
     public String searchDbBoulderCountyVoterDetailsFirstName;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsFirstName(String searchDbBoulderCountyVoterDetailsFirstName) {
         this.searchDbBoulderCountyVoterDetailsFirstName = searchDbBoulderCountyVoterDetailsFirstName;
         return this;
@@ -193,6 +211,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.gender")
     public String searchDbBoulderCountyVoterDetailsGender;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsGender(String searchDbBoulderCountyVoterDetailsGender) {
         this.searchDbBoulderCountyVoterDetailsGender = searchDbBoulderCountyVoterDetailsGender;
         return this;
@@ -203,6 +222,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.last_name")
     public String searchDbBoulderCountyVoterDetailsLastName;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsLastName(String searchDbBoulderCountyVoterDetailsLastName) {
         this.searchDbBoulderCountyVoterDetailsLastName = searchDbBoulderCountyVoterDetailsLastName;
         return this;
@@ -213,6 +233,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.last_updated_date")
     public String searchDbBoulderCountyVoterDetailsLastUpdatedDate;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsLastUpdatedDate(String searchDbBoulderCountyVoterDetailsLastUpdatedDate) {
         this.searchDbBoulderCountyVoterDetailsLastUpdatedDate = searchDbBoulderCountyVoterDetailsLastUpdatedDate;
         return this;
@@ -223,6 +244,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.location")
     public String searchDbBoulderCountyVoterDetailsLocation;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsLocation(String searchDbBoulderCountyVoterDetailsLocation) {
         this.searchDbBoulderCountyVoterDetailsLocation = searchDbBoulderCountyVoterDetailsLocation;
         return this;
@@ -233,6 +255,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.mailing_zip_code")
     public String searchDbBoulderCountyVoterDetailsMailingZipCode;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsMailingZipCode(String searchDbBoulderCountyVoterDetailsMailingZipCode) {
         this.searchDbBoulderCountyVoterDetailsMailingZipCode = searchDbBoulderCountyVoterDetailsMailingZipCode;
         return this;
@@ -243,6 +266,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.municipality")
     public String searchDbBoulderCountyVoterDetailsMunicipality;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsMunicipality(String searchDbBoulderCountyVoterDetailsMunicipality) {
         this.searchDbBoulderCountyVoterDetailsMunicipality = searchDbBoulderCountyVoterDetailsMunicipality;
         return this;
@@ -253,6 +277,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.party")
     public String searchDbBoulderCountyVoterDetailsParty;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsParty(String searchDbBoulderCountyVoterDetailsParty) {
         this.searchDbBoulderCountyVoterDetailsParty = searchDbBoulderCountyVoterDetailsParty;
         return this;
@@ -263,6 +288,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.precinct_code")
     public String searchDbBoulderCountyVoterDetailsPrecinctCode;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsPrecinctCode(String searchDbBoulderCountyVoterDetailsPrecinctCode) {
         this.searchDbBoulderCountyVoterDetailsPrecinctCode = searchDbBoulderCountyVoterDetailsPrecinctCode;
         return this;
@@ -273,6 +299,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.registration_date")
     public String searchDbBoulderCountyVoterDetailsRegistrationDate;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsRegistrationDate(String searchDbBoulderCountyVoterDetailsRegistrationDate) {
         this.searchDbBoulderCountyVoterDetailsRegistrationDate = searchDbBoulderCountyVoterDetailsRegistrationDate;
         return this;
@@ -283,6 +310,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.residential_address")
     public String searchDbBoulderCountyVoterDetailsResidentialAddress;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsResidentialAddress(String searchDbBoulderCountyVoterDetailsResidentialAddress) {
         this.searchDbBoulderCountyVoterDetailsResidentialAddress = searchDbBoulderCountyVoterDetailsResidentialAddress;
         return this;
@@ -293,6 +321,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.residential_city")
     public String searchDbBoulderCountyVoterDetailsResidentialCity;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsResidentialCity(String searchDbBoulderCountyVoterDetailsResidentialCity) {
         this.searchDbBoulderCountyVoterDetailsResidentialCity = searchDbBoulderCountyVoterDetailsResidentialCity;
         return this;
@@ -303,6 +332,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.school_district")
     public String searchDbBoulderCountyVoterDetailsSchoolDistrict;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsSchoolDistrict(String searchDbBoulderCountyVoterDetailsSchoolDistrict) {
         this.searchDbBoulderCountyVoterDetailsSchoolDistrict = searchDbBoulderCountyVoterDetailsSchoolDistrict;
         return this;
@@ -313,6 +343,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.state_house")
     public String searchDbBoulderCountyVoterDetailsStateHouse;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsStateHouse(String searchDbBoulderCountyVoterDetailsStateHouse) {
         this.searchDbBoulderCountyVoterDetailsStateHouse = searchDbBoulderCountyVoterDetailsStateHouse;
         return this;
@@ -323,6 +354,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.state_senate")
     public String searchDbBoulderCountyVoterDetailsStateSenate;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsStateSenate(String searchDbBoulderCountyVoterDetailsStateSenate) {
         this.searchDbBoulderCountyVoterDetailsStateSenate = searchDbBoulderCountyVoterDetailsStateSenate;
         return this;
@@ -333,6 +365,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_county_voter_details.voter_status")
     public String searchDbBoulderCountyVoterDetailsVoterStatus;
+
     public SearchBoulderCountyVoterDetailsRequest withSearchDbBoulderCountyVoterDetailsVoterStatus(String searchDbBoulderCountyVoterDetailsVoterStatus) {
         this.searchDbBoulderCountyVoterDetailsVoterStatus = searchDbBoulderCountyVoterDetailsVoterStatus;
         return this;
@@ -343,6 +376,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchBoulderCountyVoterDetailsRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -353,6 +387,7 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchBoulderCountyVoterDetailsRequest withText(String text) {
         this.text = text;
         return this;
@@ -363,9 +398,11 @@ public class SearchBoulderCountyVoterDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchBoulderCountyVoterDetailsRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchBoulderCountyVoterDetailsRequest(){}
 }

@@ -22,6 +22,7 @@ public class Workteam {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateDate")
     public OffsetDateTime createDate;
+
     public Workteam withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -29,6 +30,7 @@ public class Workteam {
     
     @JsonProperty("Description")
     public String description;
+
     public Workteam withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +41,7 @@ public class Workteam {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDate")
     public OffsetDateTime lastUpdatedDate;
+
     public Workteam withLastUpdatedDate(OffsetDateTime lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -46,6 +49,7 @@ public class Workteam {
     
     @JsonProperty("MemberDefinitions")
     public MemberDefinition[] memberDefinitions;
+
     public Workteam withMemberDefinitions(MemberDefinition[] memberDefinitions) {
         this.memberDefinitions = memberDefinitions;
         return this;
@@ -54,6 +58,7 @@ public class Workteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfiguration")
     public NotificationConfiguration notificationConfiguration;
+
     public Workteam withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
@@ -62,6 +67,7 @@ public class Workteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductListingIds")
     public String[] productListingIds;
+
     public Workteam withProductListingIds(String[] productListingIds) {
         this.productListingIds = productListingIds;
         return this;
@@ -70,6 +76,7 @@ public class Workteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubDomain")
     public String subDomain;
+
     public Workteam withSubDomain(String subDomain) {
         this.subDomain = subDomain;
         return this;
@@ -78,6 +85,7 @@ public class Workteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkforceArn")
     public String workforceArn;
+
     public Workteam withWorkforceArn(String workforceArn) {
         this.workforceArn = workforceArn;
         return this;
@@ -85,6 +93,7 @@ public class Workteam {
     
     @JsonProperty("WorkteamArn")
     public String workteamArn;
+
     public Workteam withWorkteamArn(String workteamArn) {
         this.workteamArn = workteamArn;
         return this;
@@ -92,9 +101,16 @@ public class Workteam {
     
     @JsonProperty("WorkteamName")
     public String workteamName;
+
     public Workteam withWorkteamName(String workteamName) {
         this.workteamName = workteamName;
         return this;
     }
     
+    public Workteam(@JsonProperty("Description") String description, @JsonProperty("MemberDefinitions") MemberDefinition[] memberDefinitions, @JsonProperty("WorkteamArn") String workteamArn, @JsonProperty("WorkteamName") String workteamName) {
+        this.description = description;
+        this.memberDefinitions = memberDefinitions;
+        this.workteamArn = workteamArn;
+        this.workteamName = workteamName;
+  }
 }

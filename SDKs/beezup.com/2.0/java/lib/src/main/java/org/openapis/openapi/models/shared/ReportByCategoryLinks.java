@@ -12,6 +12,7 @@ public class ReportByCategoryLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableProducts")
     public LinksOptimiseByCategoryLink disableProducts;
+
     public ReportByCategoryLinks withDisableProducts(LinksOptimiseByCategoryLink disableProducts) {
         this.disableProducts = disableProducts;
         return this;
@@ -20,9 +21,11 @@ public class ReportByCategoryLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableProducts")
     public LinksOptimiseByCategoryLink enableProducts;
+
     public ReportByCategoryLinks withEnableProducts(LinksOptimiseByCategoryLink enableProducts) {
         this.enableProducts = enableProducts;
         return this;
     }
     
+    public ReportByCategoryLinks(){}
 }

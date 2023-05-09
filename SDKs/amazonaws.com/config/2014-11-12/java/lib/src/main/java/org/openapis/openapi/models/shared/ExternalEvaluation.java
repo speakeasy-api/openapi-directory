@@ -20,6 +20,7 @@ public class ExternalEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Annotation")
     public String annotation;
+
     public ExternalEvaluation withAnnotation(String annotation) {
         this.annotation = annotation;
         return this;
@@ -27,6 +28,7 @@ public class ExternalEvaluation {
     
     @JsonProperty("ComplianceResourceId")
     public String complianceResourceId;
+
     public ExternalEvaluation withComplianceResourceId(String complianceResourceId) {
         this.complianceResourceId = complianceResourceId;
         return this;
@@ -34,6 +36,7 @@ public class ExternalEvaluation {
     
     @JsonProperty("ComplianceResourceType")
     public String complianceResourceType;
+
     public ExternalEvaluation withComplianceResourceType(String complianceResourceType) {
         this.complianceResourceType = complianceResourceType;
         return this;
@@ -41,6 +44,7 @@ public class ExternalEvaluation {
     
     @JsonProperty("ComplianceType")
     public ComplianceTypeEnum complianceType;
+
     public ExternalEvaluation withComplianceType(ComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -50,9 +54,16 @@ public class ExternalEvaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OrderingTimestamp")
     public OffsetDateTime orderingTimestamp;
+
     public ExternalEvaluation withOrderingTimestamp(OffsetDateTime orderingTimestamp) {
         this.orderingTimestamp = orderingTimestamp;
         return this;
     }
     
+    public ExternalEvaluation(@JsonProperty("ComplianceResourceId") String complianceResourceId, @JsonProperty("ComplianceResourceType") String complianceResourceType, @JsonProperty("ComplianceType") ComplianceTypeEnum complianceType, @JsonProperty("OrderingTimestamp") OffsetDateTime orderingTimestamp) {
+        this.complianceResourceId = complianceResourceId;
+        this.complianceResourceType = complianceResourceType;
+        this.complianceType = complianceType;
+        this.orderingTimestamp = orderingTimestamp;
+  }
 }

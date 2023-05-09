@@ -15,6 +15,7 @@ public class LoadBalancerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public LoadBalancerState withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class LoadBalancerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public LoadBalancerState withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public LoadBalancerState(){}
 }

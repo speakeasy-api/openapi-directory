@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AlertManagerDefinitionStatus {
     @JsonProperty("statusCode")
     public AlertManagerDefinitionStatusCodeEnum statusCode;
+
     public AlertManagerDefinitionStatus withStatusCode(AlertManagerDefinitionStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -22,9 +23,13 @@ public class AlertManagerDefinitionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public AlertManagerDefinitionStatus withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public AlertManagerDefinitionStatus(@JsonProperty("statusCode") AlertManagerDefinitionStatusCodeEnum statusCode) {
+        this.statusCode = statusCode;
+  }
 }

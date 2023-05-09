@@ -12,6 +12,7 @@ public class ApplicationsSeries {
      */
     
     public ApplicationsDatapoint[] datapoints;
+
     public ApplicationsSeries withDatapoints(ApplicationsDatapoint[] datapoints) {
         this.datapoints = datapoints;
         return this;
@@ -22,9 +23,11 @@ public class ApplicationsSeries {
      */
     
     public String target;
+
     public ApplicationsSeries withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public ApplicationsSeries(){}
 }

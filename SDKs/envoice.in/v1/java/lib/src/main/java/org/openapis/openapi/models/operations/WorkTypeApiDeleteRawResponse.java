@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WorkTypeApiDeleteRawResponse {
     
     public byte[] body;
+
     public WorkTypeApiDeleteRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class WorkTypeApiDeleteRawResponse {
     
     
     public String contentType;
+
     public WorkTypeApiDeleteRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class WorkTypeApiDeleteRawResponse {
     
     
     public Integer statusCode;
+
     public WorkTypeApiDeleteRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class WorkTypeApiDeleteRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WorkTypeApiDeleteRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class WorkTypeApiDeleteRawResponse {
      */
     
     public Integer workTypeApiDeleteRaw200ApplicationJSONInt32Integer;
+
     public WorkTypeApiDeleteRawResponse withWorkTypeApiDeleteRaw200ApplicationJSONInt32Integer(Integer workTypeApiDeleteRaw200ApplicationJSONInt32Integer) {
         this.workTypeApiDeleteRaw200ApplicationJSONInt32Integer = workTypeApiDeleteRaw200ApplicationJSONInt32Integer;
         return this;
@@ -50,9 +56,14 @@ public class WorkTypeApiDeleteRawResponse {
      */
     
     public Integer workTypeApiDeleteRaw200TextJSONInt32Integer;
+
     public WorkTypeApiDeleteRawResponse withWorkTypeApiDeleteRaw200TextJSONInt32Integer(Integer workTypeApiDeleteRaw200TextJSONInt32Integer) {
         this.workTypeApiDeleteRaw200TextJSONInt32Integer = workTypeApiDeleteRaw200TextJSONInt32Integer;
         return this;
     }
     
+    public WorkTypeApiDeleteRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DeleteAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public DeleteAttributesResponse withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public DeleteAttributesResponse(){}
 }

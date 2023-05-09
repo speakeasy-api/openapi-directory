@@ -18,6 +18,7 @@ public class TagHold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public TagHold withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class TagHold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpLink")
     public String helpLink;
+
     public TagHold withHelpLink(String helpLink) {
         this.helpLink = helpLink;
         return this;
@@ -40,6 +42,7 @@ public class TagHold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holder")
     public String holder;
+
     public TagHold withHolder(String holder) {
         this.holder = holder;
         return this;
@@ -51,6 +54,7 @@ public class TagHold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagHold withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class TagHold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public TagHold withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public TagHold(){}
 }

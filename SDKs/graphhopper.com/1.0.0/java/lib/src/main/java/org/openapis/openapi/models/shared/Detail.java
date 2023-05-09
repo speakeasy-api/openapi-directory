@@ -32,6 +32,7 @@ public class Detail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public Detail withCode(Integer code) {
         this.code = code;
         return this;
@@ -43,6 +44,7 @@ public class Detail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Detail withId(String id) {
         this.id = id;
         return this;
@@ -54,9 +56,11 @@ public class Detail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Detail withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public Detail(){}
 }

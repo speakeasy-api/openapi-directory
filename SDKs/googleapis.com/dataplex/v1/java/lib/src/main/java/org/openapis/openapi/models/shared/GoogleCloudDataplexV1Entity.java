@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public GoogleCloudDataplexV1StorageAccess access;
+
     public GoogleCloudDataplexV1Entity withAccess(GoogleCloudDataplexV1StorageAccess access) {
         this.access = access;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public String asset;
+
     public GoogleCloudDataplexV1Entity withAsset(String asset) {
         this.asset = asset;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogEntry")
     public String catalogEntry;
+
     public GoogleCloudDataplexV1Entity withCatalogEntry(String catalogEntry) {
         this.catalogEntry = catalogEntry;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibility")
     public GoogleCloudDataplexV1EntityCompatibilityStatus compatibility;
+
     public GoogleCloudDataplexV1Entity withCompatibility(GoogleCloudDataplexV1EntityCompatibilityStatus compatibility) {
         this.compatibility = compatibility;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1Entity withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPath")
     public String dataPath;
+
     public GoogleCloudDataplexV1Entity withDataPath(String dataPath) {
         this.dataPath = dataPath;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPathPattern")
     public String dataPathPattern;
+
     public GoogleCloudDataplexV1Entity withDataPathPattern(String dataPathPattern) {
         this.dataPathPattern = dataPathPattern;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1Entity withDescription(String description) {
         this.description = description;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1Entity withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudDataplexV1Entity withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -128,17 +138,19 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public GoogleCloudDataplexV1StorageFormat format;
+
     public GoogleCloudDataplexV1Entity withFormat(GoogleCloudDataplexV1StorageFormat format) {
         this.format = format;
         return this;
     }
     
     /**
-     * Required. A user-provided entity ID. It is mutable, and will be used as the published table name. Specifying a new ID in an update entity request will override the existing value. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter and consist of 256 or fewer characters.
+     * Required. A user-provided entity ID. It is mutable, and will be used as the published table name. Specifying a new ID in an update entity request will override the existing value. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores, and consist of 256 or fewer characters.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDataplexV1Entity withId(String id) {
         this.id = id;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Entity withName(String name) {
         this.name = name;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public GoogleCloudDataplexV1Schema schema;
+
     public GoogleCloudDataplexV1Entity withSchema(GoogleCloudDataplexV1Schema schema) {
         this.schema = schema;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("system")
     public GoogleCloudDataplexV1EntitySystemEnum system;
+
     public GoogleCloudDataplexV1Entity withSystem(GoogleCloudDataplexV1EntitySystemEnum system) {
         this.system = system;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1EntityTypeEnum type;
+
     public GoogleCloudDataplexV1Entity withType(GoogleCloudDataplexV1EntityTypeEnum type) {
         this.type = type;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1Entity withUid(String uid) {
         this.uid = uid;
         return this;
@@ -205,9 +222,11 @@ public class GoogleCloudDataplexV1Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1Entity withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1Entity(){}
 }

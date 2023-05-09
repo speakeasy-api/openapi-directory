@@ -18,9 +18,11 @@ public class SetBreakpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakpoint")
     public Breakpoint breakpoint;
+
     public SetBreakpointResponse withBreakpoint(Breakpoint breakpoint) {
         this.breakpoint = breakpoint;
         return this;
     }
     
+    public SetBreakpointResponse(){}
 }

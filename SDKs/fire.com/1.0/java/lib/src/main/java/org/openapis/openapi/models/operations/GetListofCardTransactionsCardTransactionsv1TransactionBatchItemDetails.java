@@ -18,6 +18,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDeta
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchItemPublicUuid")
     public String batchItemPublicUuid;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDetails withBatchItemPublicUuid(String batchItemPublicUuid) {
         this.batchItemPublicUuid = batchItemPublicUuid;
         return this;
@@ -29,6 +30,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDeta
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchName")
     public String batchName;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDetails withBatchName(String batchName) {
         this.batchName = batchName;
         return this;
@@ -40,6 +42,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDeta
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchPublicUuid")
     public String batchPublicUuid;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDetails withBatchPublicUuid(String batchPublicUuid) {
         this.batchPublicUuid = batchPublicUuid;
         return this;
@@ -51,9 +54,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDeta
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobNumber")
     public String jobNumber;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDetails withJobNumber(String jobNumber) {
         this.jobNumber = jobNumber;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDetails(){}
 }

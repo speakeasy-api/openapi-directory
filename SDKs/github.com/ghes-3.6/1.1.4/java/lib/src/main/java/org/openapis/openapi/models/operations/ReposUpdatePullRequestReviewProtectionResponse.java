@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposUpdatePullRequestReviewProtectionResponse {
     
     public String contentType;
+
     public ReposUpdatePullRequestReviewProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposUpdatePullRequestReviewProtectionResponse {
     
     
     public Integer statusCode;
+
     public ReposUpdatePullRequestReviewProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposUpdatePullRequestReviewProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposUpdatePullRequestReviewProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposUpdatePullRequestReviewProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.ProtectedBranchPullRequestReview protectedBranchPullRequestReview;
+
     public ReposUpdatePullRequestReviewProtectionResponse withProtectedBranchPullRequestReview(org.openapis.openapi.models.shared.ProtectedBranchPullRequestReview protectedBranchPullRequestReview) {
         this.protectedBranchPullRequestReview = protectedBranchPullRequestReview;
         return this;
@@ -43,9 +48,14 @@ public class ReposUpdatePullRequestReviewProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposUpdatePullRequestReviewProtectionResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposUpdatePullRequestReviewProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

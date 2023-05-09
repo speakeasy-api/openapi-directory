@@ -22,6 +22,7 @@ public class MonitorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MonitorSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class MonitorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public MonitorSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -40,6 +42,7 @@ public class MonitorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public MonitorSummary withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -48,6 +51,7 @@ public class MonitorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public MonitorSummary withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
@@ -56,6 +60,7 @@ public class MonitorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public MonitorSummary withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -64,9 +69,11 @@ public class MonitorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public MonitorSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public MonitorSummary(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApproveAssignmentRequest {
     @JsonProperty("AssignmentId")
     public String assignmentId;
+
     public ApproveAssignmentRequest withAssignmentId(String assignmentId) {
         this.assignmentId = assignmentId;
         return this;
@@ -19,6 +20,7 @@ public class ApproveAssignmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverrideRejection")
     public Boolean overrideRejection;
+
     public ApproveAssignmentRequest withOverrideRejection(Boolean overrideRejection) {
         this.overrideRejection = overrideRejection;
         return this;
@@ -27,9 +29,13 @@ public class ApproveAssignmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterFeedback")
     public String requesterFeedback;
+
     public ApproveAssignmentRequest withRequesterFeedback(String requesterFeedback) {
         this.requesterFeedback = requesterFeedback;
         return this;
     }
     
+    public ApproveAssignmentRequest(@JsonProperty("AssignmentId") String assignmentId) {
+        this.assignmentId = assignmentId;
+  }
 }

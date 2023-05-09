@@ -15,9 +15,11 @@ public class CreateFirewallRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallRule")
     public FirewallRule firewallRule;
+
     public CreateFirewallRuleResponse withFirewallRule(FirewallRule firewallRule) {
         this.firewallRule = firewallRule;
         return this;
     }
     
+    public CreateFirewallRuleResponse(){}
 }

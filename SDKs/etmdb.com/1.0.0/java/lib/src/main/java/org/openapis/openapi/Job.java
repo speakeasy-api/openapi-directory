@@ -54,10 +54,8 @@ public class Job {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobSearchReadResponse res = new org.openapis.openapi.models.operations.JobSearchReadResponse() {{
+        org.openapis.openapi.models.operations.JobSearchReadResponse res = new org.openapis.openapi.models.operations.JobSearchReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,10 +92,8 @@ public class Job {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobSearchallReadResponse res = new org.openapis.openapi.models.operations.JobSearchallReadResponse() {{
+        org.openapis.openapi.models.operations.JobSearchallReadResponse res = new org.openapis.openapi.models.operations.JobSearchallReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

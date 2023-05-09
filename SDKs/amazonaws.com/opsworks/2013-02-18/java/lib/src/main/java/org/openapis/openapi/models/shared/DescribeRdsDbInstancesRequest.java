@@ -12,6 +12,7 @@ public class DescribeRdsDbInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RdsDbInstanceArns")
     public String[] rdsDbInstanceArns;
+
     public DescribeRdsDbInstancesRequest withRdsDbInstanceArns(String[] rdsDbInstanceArns) {
         this.rdsDbInstanceArns = rdsDbInstanceArns;
         return this;
@@ -19,9 +20,13 @@ public class DescribeRdsDbInstancesRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeRdsDbInstancesRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeRdsDbInstancesRequest(@JsonProperty("StackId") String stackId) {
+        this.stackId = stackId;
+  }
 }

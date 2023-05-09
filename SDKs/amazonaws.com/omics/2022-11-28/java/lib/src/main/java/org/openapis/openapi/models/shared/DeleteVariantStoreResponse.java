@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteVariantStoreResponse {
     @JsonProperty("status")
     public StoreStatusEnum status;
+
     public DeleteVariantStoreResponse withStatus(StoreStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteVariantStoreResponse(@JsonProperty("status") StoreStatusEnum status) {
+        this.status = status;
+  }
 }

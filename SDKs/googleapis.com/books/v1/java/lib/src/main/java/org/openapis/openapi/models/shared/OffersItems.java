@@ -12,6 +12,7 @@ public class OffersItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artUrl")
     public String artUrl;
+
     public OffersItems withArtUrl(String artUrl) {
         this.artUrl = artUrl;
         return this;
@@ -20,6 +21,7 @@ public class OffersItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gservicesKey")
     public String gservicesKey;
+
     public OffersItems withGservicesKey(String gservicesKey) {
         this.gservicesKey = gservicesKey;
         return this;
@@ -28,6 +30,7 @@ public class OffersItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OffersItems withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class OffersItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public OffersItemsItems[] items;
+
     public OffersItems withItems(OffersItemsItems[] items) {
         this.items = items;
         return this;
     }
     
+    public OffersItems(){}
 }

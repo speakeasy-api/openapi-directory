@@ -18,6 +18,7 @@ public class BuildsListToolsets200ApplicationJSONNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public Boolean current;
+
     public BuildsListToolsets200ApplicationJSONNode withCurrent(Boolean current) {
         this.current = current;
         return this;
@@ -29,9 +30,11 @@ public class BuildsListToolsets200ApplicationJSONNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BuildsListToolsets200ApplicationJSONNode withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BuildsListToolsets200ApplicationJSONNode(){}
 }

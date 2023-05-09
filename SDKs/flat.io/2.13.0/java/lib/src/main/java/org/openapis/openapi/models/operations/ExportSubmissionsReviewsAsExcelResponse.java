@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportSubmissionsReviewsAsExcelResponse {
     
     public byte[] body;
+
     public ExportSubmissionsReviewsAsExcelResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ExportSubmissionsReviewsAsExcelResponse {
     
     
     public String contentType;
+
     public ExportSubmissionsReviewsAsExcelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ExportSubmissionsReviewsAsExcelResponse {
     
     
     public Integer statusCode;
+
     public ExportSubmissionsReviewsAsExcelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ExportSubmissionsReviewsAsExcelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportSubmissionsReviewsAsExcelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ExportSubmissionsReviewsAsExcelResponse {
      */
     
     public byte[] exportSubmissionsReviewsAsExcel200ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheetBinaryString;
+
     public ExportSubmissionsReviewsAsExcelResponse withExportSubmissionsReviewsAsExcel200ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheetBinaryString(byte[] exportSubmissionsReviewsAsExcel200ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheetBinaryString) {
         this.exportSubmissionsReviewsAsExcel200ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheetBinaryString = exportSubmissionsReviewsAsExcel200ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheetBinaryString;
         return this;
     }
     
+    public ExportSubmissionsReviewsAsExcelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRemoteServersIdConfigurationFileRequest {
@@ -12,9 +13,13 @@ public class GetRemoteServersIdConfigurationFileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetRemoteServersIdConfigurationFileRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public GetRemoteServersIdConfigurationFileRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudMlV1ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public GoogleCloudMlV1Job[] jobs;
+
     public GoogleCloudMlV1ListJobsResponse withJobs(GoogleCloudMlV1Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudMlV1ListJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudMlV1ListJobsResponse(){}
 }

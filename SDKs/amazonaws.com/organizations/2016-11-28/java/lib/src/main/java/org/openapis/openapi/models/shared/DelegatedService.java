@@ -22,6 +22,7 @@ public class DelegatedService {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DelegationEnabledDate")
     public OffsetDateTime delegationEnabledDate;
+
     public DelegatedService withDelegationEnabledDate(OffsetDateTime delegationEnabledDate) {
         this.delegationEnabledDate = delegationEnabledDate;
         return this;
@@ -30,9 +31,11 @@ public class DelegatedService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServicePrincipal")
     public String servicePrincipal;
+
     public DelegatedService withServicePrincipal(String servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
         return this;
     }
     
+    public DelegatedService(){}
 }

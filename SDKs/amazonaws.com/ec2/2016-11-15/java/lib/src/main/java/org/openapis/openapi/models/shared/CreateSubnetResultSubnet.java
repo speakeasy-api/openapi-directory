@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSubnetResultSubnet {
     
     public Boolean assignIpv6AddressOnCreation;
+
     public CreateSubnetResultSubnet withAssignIpv6AddressOnCreation(Boolean assignIpv6AddressOnCreation) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         return this;
@@ -19,6 +20,7 @@ public class CreateSubnetResultSubnet {
     
     
     public String availabilityZone;
+
     public CreateSubnetResultSubnet withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class CreateSubnetResultSubnet {
     
     
     public String availabilityZoneId;
+
     public CreateSubnetResultSubnet withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -33,6 +36,7 @@ public class CreateSubnetResultSubnet {
     
     
     public Long availableIpAddressCount;
+
     public CreateSubnetResultSubnet withAvailableIpAddressCount(Long availableIpAddressCount) {
         this.availableIpAddressCount = availableIpAddressCount;
         return this;
@@ -40,6 +44,7 @@ public class CreateSubnetResultSubnet {
     
     
     public String cidrBlock;
+
     public CreateSubnetResultSubnet withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -47,6 +52,7 @@ public class CreateSubnetResultSubnet {
     
     
     public String customerOwnedIpv4Pool;
+
     public CreateSubnetResultSubnet withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         return this;
@@ -54,6 +60,7 @@ public class CreateSubnetResultSubnet {
     
     
     public Boolean defaultForAz;
+
     public CreateSubnetResultSubnet withDefaultForAz(Boolean defaultForAz) {
         this.defaultForAz = defaultForAz;
         return this;
@@ -61,6 +68,7 @@ public class CreateSubnetResultSubnet {
     
     
     public Boolean enableDns64;
+
     public CreateSubnetResultSubnet withEnableDns64(Boolean enableDns64) {
         this.enableDns64 = enableDns64;
         return this;
@@ -68,6 +76,7 @@ public class CreateSubnetResultSubnet {
     
     
     public Long enableLniAtDeviceIndex;
+
     public CreateSubnetResultSubnet withEnableLniAtDeviceIndex(Long enableLniAtDeviceIndex) {
         this.enableLniAtDeviceIndex = enableLniAtDeviceIndex;
         return this;
@@ -75,6 +84,7 @@ public class CreateSubnetResultSubnet {
     
     
     public CreateSubnetResultSubnetIpv6CidrBlockAssociationSet[] ipv6CidrBlockAssociationSet;
+
     public CreateSubnetResultSubnet withIpv6CidrBlockAssociationSet(CreateSubnetResultSubnetIpv6CidrBlockAssociationSet[] ipv6CidrBlockAssociationSet) {
         this.ipv6CidrBlockAssociationSet = ipv6CidrBlockAssociationSet;
         return this;
@@ -82,6 +92,7 @@ public class CreateSubnetResultSubnet {
     
     
     public Boolean ipv6Native;
+
     public CreateSubnetResultSubnet withIpv6Native(Boolean ipv6Native) {
         this.ipv6Native = ipv6Native;
         return this;
@@ -89,6 +100,7 @@ public class CreateSubnetResultSubnet {
     
     
     public Boolean mapCustomerOwnedIpOnLaunch;
+
     public CreateSubnetResultSubnet withMapCustomerOwnedIpOnLaunch(Boolean mapCustomerOwnedIpOnLaunch) {
         this.mapCustomerOwnedIpOnLaunch = mapCustomerOwnedIpOnLaunch;
         return this;
@@ -96,6 +108,7 @@ public class CreateSubnetResultSubnet {
     
     
     public Boolean mapPublicIpOnLaunch;
+
     public CreateSubnetResultSubnet withMapPublicIpOnLaunch(Boolean mapPublicIpOnLaunch) {
         this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
         return this;
@@ -103,6 +116,7 @@ public class CreateSubnetResultSubnet {
     
     
     public String outpostArn;
+
     public CreateSubnetResultSubnet withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -110,6 +124,7 @@ public class CreateSubnetResultSubnet {
     
     
     public String ownerId;
+
     public CreateSubnetResultSubnet withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -117,6 +132,7 @@ public class CreateSubnetResultSubnet {
     
     
     public CreateSubnetResultSubnetPrivateDnsNameOptionsOnLaunch privateDnsNameOptionsOnLaunch;
+
     public CreateSubnetResultSubnet withPrivateDnsNameOptionsOnLaunch(CreateSubnetResultSubnetPrivateDnsNameOptionsOnLaunch privateDnsNameOptionsOnLaunch) {
         this.privateDnsNameOptionsOnLaunch = privateDnsNameOptionsOnLaunch;
         return this;
@@ -124,6 +140,7 @@ public class CreateSubnetResultSubnet {
     
     
     public CreateSubnetResultSubnetStateEnum state;
+
     public CreateSubnetResultSubnet withState(CreateSubnetResultSubnetStateEnum state) {
         this.state = state;
         return this;
@@ -131,6 +148,7 @@ public class CreateSubnetResultSubnet {
     
     
     public String subnetArn;
+
     public CreateSubnetResultSubnet withSubnetArn(String subnetArn) {
         this.subnetArn = subnetArn;
         return this;
@@ -138,6 +156,7 @@ public class CreateSubnetResultSubnet {
     
     
     public String subnetId;
+
     public CreateSubnetResultSubnet withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -145,6 +164,7 @@ public class CreateSubnetResultSubnet {
     
     
     public CreateSubnetResultSubnetTags[] tags;
+
     public CreateSubnetResultSubnet withTags(CreateSubnetResultSubnetTags[] tags) {
         this.tags = tags;
         return this;
@@ -152,9 +172,11 @@ public class CreateSubnetResultSubnet {
     
     
     public String vpcId;
+
     public CreateSubnetResultSubnet withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateSubnetResultSubnet(){}
 }

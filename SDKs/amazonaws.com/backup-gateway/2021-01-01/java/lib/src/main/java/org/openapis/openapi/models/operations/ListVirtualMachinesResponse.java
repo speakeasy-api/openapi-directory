@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVirtualMachinesResponse {
     
     public String contentType;
+
     public ListVirtualMachinesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListVirtualMachinesResponse {
      */
     
     public Object internalServerException;
+
     public ListVirtualMachinesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListVirtualMachinesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVirtualMachinesOutput listVirtualMachinesOutput;
+
     public ListVirtualMachinesResponse withListVirtualMachinesOutput(org.openapis.openapi.models.shared.ListVirtualMachinesOutput listVirtualMachinesOutput) {
         this.listVirtualMachinesOutput = listVirtualMachinesOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListVirtualMachinesResponse {
     
     
     public Integer statusCode;
+
     public ListVirtualMachinesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListVirtualMachinesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVirtualMachinesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListVirtualMachinesResponse {
      */
     
     public Object throttlingException;
+
     public ListVirtualMachinesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListVirtualMachinesResponse {
      */
     
     public Object validationException;
+
     public ListVirtualMachinesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListVirtualMachinesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

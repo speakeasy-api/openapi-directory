@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDescribeDBClusterParametersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDescribeDBClusterParametersActionEnum action;
+
     public POSTDescribeDBClusterParametersRequest withAction(POSTDescribeDBClusterParametersActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class POSTDescribeDBClusterParametersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public POSTDescribeDBClusterParametersRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class POSTDescribeDBClusterParametersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public String maxRecords;
+
     public POSTDescribeDBClusterParametersRequest withMaxRecords(String maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -36,6 +40,7 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDescribeDBClusterParametersRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -43,6 +48,7 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDescribeDBClusterParametersVersionEnum version;
+
     public POSTDescribeDBClusterParametersRequest withVersion(POSTDescribeDBClusterParametersVersionEnum version) {
         this.version = version;
         return this;
@@ -50,6 +56,7 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDescribeDBClusterParametersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -57,6 +64,7 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDescribeDBClusterParametersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -64,6 +72,7 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDescribeDBClusterParametersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -71,6 +80,7 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDescribeDBClusterParametersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -78,6 +88,7 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDescribeDBClusterParametersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -85,6 +96,7 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDescribeDBClusterParametersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -92,9 +104,14 @@ public class POSTDescribeDBClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDescribeDBClusterParametersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDescribeDBClusterParametersRequest(@JsonProperty("Action") POSTDescribeDBClusterParametersActionEnum action, @JsonProperty("Version") POSTDescribeDBClusterParametersVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

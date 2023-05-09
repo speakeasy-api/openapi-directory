@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteIndexFieldResponse - The result of a &lt;code&gt;&lt;a&gt;DeleteIndexField&lt;/a&gt;&lt;/code&gt; request.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteIndexFieldResponse {
     
     public IndexFieldStatus indexField;
+
     public DeleteIndexFieldResponse withIndexField(IndexFieldStatus indexField) {
         this.indexField = indexField;
         return this;
     }
     
+    public DeleteIndexFieldResponse(@JsonProperty("IndexField") IndexFieldStatus indexField) {
+        this.indexField = indexField;
+  }
 }

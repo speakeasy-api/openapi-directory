@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableClientAuthenticationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EnableClientAuthenticationRequest enableClientAuthenticationRequest;
+
     public EnableClientAuthenticationRequest withEnableClientAuthenticationRequest(org.openapis.openapi.models.shared.EnableClientAuthenticationRequest enableClientAuthenticationRequest) {
         this.enableClientAuthenticationRequest = enableClientAuthenticationRequest;
         return this;
@@ -16,6 +18,7 @@ public class EnableClientAuthenticationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public EnableClientAuthenticationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class EnableClientAuthenticationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public EnableClientAuthenticationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class EnableClientAuthenticationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public EnableClientAuthenticationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class EnableClientAuthenticationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public EnableClientAuthenticationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class EnableClientAuthenticationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public EnableClientAuthenticationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class EnableClientAuthenticationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public EnableClientAuthenticationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class EnableClientAuthenticationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public EnableClientAuthenticationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class EnableClientAuthenticationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public EnableClientAuthenticationXAmzTargetEnum xAmzTarget;
+
     public EnableClientAuthenticationRequest withXAmzTarget(EnableClientAuthenticationXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public EnableClientAuthenticationRequest(@JsonProperty("EnableClientAuthenticationRequest") org.openapis.openapi.models.shared.EnableClientAuthenticationRequest enableClientAuthenticationRequest, @JsonProperty("X-Amz-Target") EnableClientAuthenticationXAmzTargetEnum xAmzTarget) {
+        this.enableClientAuthenticationRequest = enableClientAuthenticationRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

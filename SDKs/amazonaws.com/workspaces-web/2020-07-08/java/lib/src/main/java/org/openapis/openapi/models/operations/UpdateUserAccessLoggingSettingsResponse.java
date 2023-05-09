@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserAccessLoggingSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateUserAccessLoggingSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateUserAccessLoggingSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUserAccessLoggingSettingsResponse {
     
     
     public String contentType;
+
     public UpdateUserAccessLoggingSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUserAccessLoggingSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateUserAccessLoggingSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserAccessLoggingSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateUserAccessLoggingSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateUserAccessLoggingSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserAccessLoggingSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateUserAccessLoggingSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserAccessLoggingSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateUserAccessLoggingSettingsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateUserAccessLoggingSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateUserAccessLoggingSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserAccessLoggingSettingsResponse updateUserAccessLoggingSettingsResponse;
+
     public UpdateUserAccessLoggingSettingsResponse withUpdateUserAccessLoggingSettingsResponse(org.openapis.openapi.models.shared.UpdateUserAccessLoggingSettingsResponse updateUserAccessLoggingSettingsResponse) {
         this.updateUserAccessLoggingSettingsResponse = updateUserAccessLoggingSettingsResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateUserAccessLoggingSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateUserAccessLoggingSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateUserAccessLoggingSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

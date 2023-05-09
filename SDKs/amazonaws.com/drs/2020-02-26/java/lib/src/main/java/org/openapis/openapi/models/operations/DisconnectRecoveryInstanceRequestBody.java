@@ -12,9 +12,13 @@ public class DisconnectRecoveryInstanceRequestBody {
      */
     @JsonProperty("recoveryInstanceID")
     public String recoveryInstanceID;
+
     public DisconnectRecoveryInstanceRequestBody withRecoveryInstanceID(String recoveryInstanceID) {
         this.recoveryInstanceID = recoveryInstanceID;
         return this;
     }
     
+    public DisconnectRecoveryInstanceRequestBody(@JsonProperty("recoveryInstanceID") String recoveryInstanceID) {
+        this.recoveryInstanceID = recoveryInstanceID;
+  }
 }

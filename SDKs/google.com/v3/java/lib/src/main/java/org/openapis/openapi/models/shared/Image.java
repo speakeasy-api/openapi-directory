@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("galleryUri")
     public LocalizedText[] galleryUri;
+
     public Image withGalleryUri(LocalizedText[] galleryUri) {
         this.galleryUri = galleryUri;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public LocalizedText[] title;
+
     public Image withTitle(LocalizedText[] title) {
         this.title = title;
         return this;
@@ -40,9 +42,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Image withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Image(){}
 }

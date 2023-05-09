@@ -17,6 +17,7 @@ public class ActionFunctionIdentifier {
      */
     @JsonProperty("functionType")
     public ActionFunctionIdentifierFunctionTypeEnum functionType;
+
     public ActionFunctionIdentifier withFunctionType(ActionFunctionIdentifierFunctionTypeEnum functionType) {
         this.functionType = functionType;
         return this;
@@ -28,9 +29,13 @@ public class ActionFunctionIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ActionFunctionIdentifier withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ActionFunctionIdentifier(@JsonProperty("functionType") ActionFunctionIdentifierFunctionTypeEnum functionType) {
+        this.functionType = functionType;
+  }
 }

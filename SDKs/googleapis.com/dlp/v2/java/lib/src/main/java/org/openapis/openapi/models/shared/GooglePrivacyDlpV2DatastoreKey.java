@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2DatastoreKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityKey")
     public GooglePrivacyDlpV2Key entityKey;
+
     public GooglePrivacyDlpV2DatastoreKey withEntityKey(GooglePrivacyDlpV2Key entityKey) {
         this.entityKey = entityKey;
         return this;
     }
     
+    public GooglePrivacyDlpV2DatastoreKey(){}
 }

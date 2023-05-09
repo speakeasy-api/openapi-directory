@@ -15,9 +15,11 @@ public class ValidateTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trust")
     public Trust trust;
+
     public ValidateTrustRequest withTrust(Trust trust) {
         this.trust = trust;
         return this;
     }
     
+    public ValidateTrustRequest(){}
 }

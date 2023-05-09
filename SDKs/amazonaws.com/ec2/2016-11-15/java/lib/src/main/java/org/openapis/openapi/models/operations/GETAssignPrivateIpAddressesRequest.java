@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssignPrivateIpAddressesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAssignPrivateIpAddressesActionEnum action;
+
     public GETAssignPrivateIpAddressesRequest withAction(GETAssignPrivateIpAddressesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAssignPrivateIpAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowReassignment")
     public Boolean allowReassignment;
+
     public GETAssignPrivateIpAddressesRequest withAllowReassignment(Boolean allowReassignment) {
         this.allowReassignment = allowReassignment;
         return this;
@@ -29,6 +32,7 @@ public class GETAssignPrivateIpAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv4Prefix")
     public String[] ipv4Prefix;
+
     public GETAssignPrivateIpAddressesRequest withIpv4Prefix(String[] ipv4Prefix) {
         this.ipv4Prefix = ipv4Prefix;
         return this;
@@ -39,6 +43,7 @@ public class GETAssignPrivateIpAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv4PrefixCount")
     public Long ipv4PrefixCount;
+
     public GETAssignPrivateIpAddressesRequest withIpv4PrefixCount(Long ipv4PrefixCount) {
         this.ipv4PrefixCount = ipv4PrefixCount;
         return this;
@@ -49,6 +54,7 @@ public class GETAssignPrivateIpAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
     public String networkInterfaceId;
+
     public GETAssignPrivateIpAddressesRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -59,6 +65,7 @@ public class GETAssignPrivateIpAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateIpAddress")
     public String[] privateIpAddress;
+
     public GETAssignPrivateIpAddressesRequest withPrivateIpAddress(String[] privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -69,6 +76,7 @@ public class GETAssignPrivateIpAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SecondaryPrivateIpAddressCount")
     public Long secondaryPrivateIpAddressCount;
+
     public GETAssignPrivateIpAddressesRequest withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -76,6 +84,7 @@ public class GETAssignPrivateIpAddressesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAssignPrivateIpAddressesVersionEnum version;
+
     public GETAssignPrivateIpAddressesRequest withVersion(GETAssignPrivateIpAddressesVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETAssignPrivateIpAddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAssignPrivateIpAddressesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETAssignPrivateIpAddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAssignPrivateIpAddressesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETAssignPrivateIpAddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAssignPrivateIpAddressesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETAssignPrivateIpAddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAssignPrivateIpAddressesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETAssignPrivateIpAddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAssignPrivateIpAddressesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETAssignPrivateIpAddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAssignPrivateIpAddressesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,15 @@ public class GETAssignPrivateIpAddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAssignPrivateIpAddressesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAssignPrivateIpAddressesRequest(@JsonProperty("Action") GETAssignPrivateIpAddressesActionEnum action, @JsonProperty("NetworkInterfaceId") String networkInterfaceId, @JsonProperty("Version") GETAssignPrivateIpAddressesVersionEnum version) {
+        this.action = action;
+        this.networkInterfaceId = networkInterfaceId;
+        this.version = version;
+  }
 }

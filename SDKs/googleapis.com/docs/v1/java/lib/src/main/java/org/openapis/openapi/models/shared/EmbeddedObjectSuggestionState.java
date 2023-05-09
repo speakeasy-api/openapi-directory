@@ -18,6 +18,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptionSuggested")
     public Boolean descriptionSuggested;
+
     public EmbeddedObjectSuggestionState withDescriptionSuggested(Boolean descriptionSuggested) {
         this.descriptionSuggested = descriptionSuggested;
         return this;
@@ -29,6 +30,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedDrawingPropertiesSuggestionState")
     public java.util.Map<String, Object> embeddedDrawingPropertiesSuggestionState;
+
     public EmbeddedObjectSuggestionState withEmbeddedDrawingPropertiesSuggestionState(java.util.Map<String, Object> embeddedDrawingPropertiesSuggestionState) {
         this.embeddedDrawingPropertiesSuggestionState = embeddedDrawingPropertiesSuggestionState;
         return this;
@@ -40,6 +42,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedObjectBorderSuggestionState")
     public EmbeddedObjectBorderSuggestionState embeddedObjectBorderSuggestionState;
+
     public EmbeddedObjectSuggestionState withEmbeddedObjectBorderSuggestionState(EmbeddedObjectBorderSuggestionState embeddedObjectBorderSuggestionState) {
         this.embeddedObjectBorderSuggestionState = embeddedObjectBorderSuggestionState;
         return this;
@@ -51,6 +54,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePropertiesSuggestionState")
     public ImagePropertiesSuggestionState imagePropertiesSuggestionState;
+
     public EmbeddedObjectSuggestionState withImagePropertiesSuggestionState(ImagePropertiesSuggestionState imagePropertiesSuggestionState) {
         this.imagePropertiesSuggestionState = imagePropertiesSuggestionState;
         return this;
@@ -62,6 +66,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedContentReferenceSuggestionState")
     public LinkedContentReferenceSuggestionState linkedContentReferenceSuggestionState;
+
     public EmbeddedObjectSuggestionState withLinkedContentReferenceSuggestionState(LinkedContentReferenceSuggestionState linkedContentReferenceSuggestionState) {
         this.linkedContentReferenceSuggestionState = linkedContentReferenceSuggestionState;
         return this;
@@ -73,6 +78,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginBottomSuggested")
     public Boolean marginBottomSuggested;
+
     public EmbeddedObjectSuggestionState withMarginBottomSuggested(Boolean marginBottomSuggested) {
         this.marginBottomSuggested = marginBottomSuggested;
         return this;
@@ -84,6 +90,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginLeftSuggested")
     public Boolean marginLeftSuggested;
+
     public EmbeddedObjectSuggestionState withMarginLeftSuggested(Boolean marginLeftSuggested) {
         this.marginLeftSuggested = marginLeftSuggested;
         return this;
@@ -95,6 +102,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginRightSuggested")
     public Boolean marginRightSuggested;
+
     public EmbeddedObjectSuggestionState withMarginRightSuggested(Boolean marginRightSuggested) {
         this.marginRightSuggested = marginRightSuggested;
         return this;
@@ -106,6 +114,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginTopSuggested")
     public Boolean marginTopSuggested;
+
     public EmbeddedObjectSuggestionState withMarginTopSuggested(Boolean marginTopSuggested) {
         this.marginTopSuggested = marginTopSuggested;
         return this;
@@ -117,6 +126,7 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeSuggestionState")
     public SizeSuggestionState sizeSuggestionState;
+
     public EmbeddedObjectSuggestionState withSizeSuggestionState(SizeSuggestionState sizeSuggestionState) {
         this.sizeSuggestionState = sizeSuggestionState;
         return this;
@@ -128,9 +138,11 @@ public class EmbeddedObjectSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("titleSuggested")
     public Boolean titleSuggested;
+
     public EmbeddedObjectSuggestionState withTitleSuggested(Boolean titleSuggested) {
         this.titleSuggested = titleSuggested;
         return this;
     }
     
+    public EmbeddedObjectSuggestionState(){}
 }

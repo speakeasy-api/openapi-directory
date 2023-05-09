@@ -12,6 +12,7 @@ public class CreateMessengerAccount400ApplicationJSONInvalidParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateMessengerAccount400ApplicationJSONInvalidParams withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class CreateMessengerAccount400ApplicationJSONInvalidParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CreateMessengerAccount400ApplicationJSONInvalidParams withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CreateMessengerAccount400ApplicationJSONInvalidParams(){}
 }

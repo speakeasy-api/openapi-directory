@@ -15,6 +15,7 @@ public class State {
      */
     
     public String name;
+
     public State withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,11 @@ public class State {
      */
     
     public String stateCode;
+
     public State withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
     }
     
+    public State(){}
 }

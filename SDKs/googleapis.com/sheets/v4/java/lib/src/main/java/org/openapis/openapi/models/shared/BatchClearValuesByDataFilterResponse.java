@@ -18,6 +18,7 @@ public class BatchClearValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clearedRanges")
     public String[] clearedRanges;
+
     public BatchClearValuesByDataFilterResponse withClearedRanges(String[] clearedRanges) {
         this.clearedRanges = clearedRanges;
         return this;
@@ -29,9 +30,11 @@ public class BatchClearValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public BatchClearValuesByDataFilterResponse withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
     }
     
+    public BatchClearValuesByDataFilterResponse(){}
 }

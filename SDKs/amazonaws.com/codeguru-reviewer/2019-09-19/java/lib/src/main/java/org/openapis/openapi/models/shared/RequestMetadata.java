@@ -15,6 +15,7 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventInfo")
     public EventInfo eventInfo;
+
     public RequestMetadata withEventInfo(EventInfo eventInfo) {
         this.eventInfo = eventInfo;
         return this;
@@ -23,6 +24,7 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public RequestMetadata withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -31,6 +33,7 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Requester")
     public String requester;
+
     public RequestMetadata withRequester(String requester) {
         this.requester = requester;
         return this;
@@ -39,9 +42,11 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VendorName")
     public VendorNameEnum vendorName;
+
     public RequestMetadata withVendorName(VendorNameEnum vendorName) {
         this.vendorName = vendorName;
         return this;
     }
     
+    public RequestMetadata(){}
 }

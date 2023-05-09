@@ -17,6 +17,7 @@ public class Message {
      */
     @JsonProperty("body")
     public Object body;
+
     public Message withBody(Object body) {
         this.body = body;
         return this;
@@ -28,6 +29,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditCost")
     public Float creditCost;
+
     public Message withCreditCost(Float creditCost) {
         this.creditCost = creditCost;
         return this;
@@ -39,6 +41,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public MessageEncodingEnum encoding;
+
     public Message withEncoding(MessageEncodingEnum encoding) {
         this.encoding = encoding;
         return this;
@@ -50,6 +53,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public Message withFrom(String from) {
         this.from = from;
         return this;
@@ -60,6 +64,7 @@ public class Message {
      */
     @JsonProperty("id")
     public String id;
+
     public Message withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +76,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageClass")
     public Integer messageClass;
+
     public Message withMessageClass(Integer messageClass) {
         this.messageClass = messageClass;
         return this;
@@ -82,6 +88,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfParts")
     public Integer numberOfParts;
+
     public Message withNumberOfParts(Integer numberOfParts) {
         this.numberOfParts = numberOfParts;
         return this;
@@ -93,6 +100,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocolId")
     public Integer protocolId;
+
     public Message withProtocolId(Integer protocolId) {
         this.protocolId = protocolId;
         return this;
@@ -112,6 +120,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedSentMessageId")
     public String relatedSentMessageId;
+
     public Message withRelatedSentMessageId(String relatedSentMessageId) {
         this.relatedSentMessageId = relatedSentMessageId;
         return this;
@@ -122,6 +131,7 @@ public class Message {
      */
     @JsonProperty("status")
     public MessageStatus status;
+
     public Message withStatus(MessageStatus status) {
         this.status = status;
         return this;
@@ -134,6 +144,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submission")
     public MessageSubmission submission;
+
     public Message withSubmission(MessageSubmission submission) {
         this.submission = submission;
         return this;
@@ -144,6 +155,7 @@ public class Message {
      */
     @JsonProperty("to")
     public String to;
+
     public Message withTo(String to) {
         this.to = to;
         return this;
@@ -154,6 +166,7 @@ public class Message {
      */
     @JsonProperty("type")
     public MessageTypeEnum type;
+
     public Message withType(MessageTypeEnum type) {
         this.type = type;
         return this;
@@ -167,9 +180,17 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSuppliedId")
     public String userSuppliedId;
+
     public Message withUserSuppliedId(String userSuppliedId) {
         this.userSuppliedId = userSuppliedId;
         return this;
     }
     
+    public Message(@JsonProperty("body") Object body, @JsonProperty("id") String id, @JsonProperty("status") MessageStatus status, @JsonProperty("to") String to, @JsonProperty("type") MessageTypeEnum type) {
+        this.body = body;
+        this.id = id;
+        this.status = status;
+        this.to = to;
+        this.type = type;
+  }
 }

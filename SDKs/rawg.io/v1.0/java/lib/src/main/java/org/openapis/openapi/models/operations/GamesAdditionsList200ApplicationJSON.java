@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GamesAdditionsList200ApplicationJSON {
     @JsonProperty("count")
     public Long count;
+
     public GamesAdditionsList200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class GamesAdditionsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public GamesAdditionsList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -27,6 +29,7 @@ public class GamesAdditionsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public GamesAdditionsList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -34,9 +37,14 @@ public class GamesAdditionsList200ApplicationJSON {
     
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Game[] results;
+
     public GamesAdditionsList200ApplicationJSON withResults(org.openapis.openapi.models.shared.Game[] results) {
         this.results = results;
         return this;
     }
     
+    public GamesAdditionsList200ApplicationJSON(@JsonProperty("count") Long count, @JsonProperty("results") org.openapis.openapi.models.shared.Game[] results) {
+        this.count = count;
+        this.results = results;
+  }
 }

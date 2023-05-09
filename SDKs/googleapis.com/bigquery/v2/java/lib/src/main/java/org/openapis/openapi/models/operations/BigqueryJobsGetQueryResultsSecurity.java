@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigqueryJobsGetQueryResultsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigqueryJobsGetQueryResultsSecurityOption1 option1;
+
     public BigqueryJobsGetQueryResultsSecurity withOption1(BigqueryJobsGetQueryResultsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigqueryJobsGetQueryResultsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryJobsGetQueryResultsSecurityOption2 option2;
+
     public BigqueryJobsGetQueryResultsSecurity withOption2(BigqueryJobsGetQueryResultsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class BigqueryJobsGetQueryResultsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryJobsGetQueryResultsSecurityOption3 option3;
+
     public BigqueryJobsGetQueryResultsSecurity withOption3(BigqueryJobsGetQueryResultsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public BigqueryJobsGetQueryResultsSecurity(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExportClientVpnClientCertificateRevocationListResultStatus {
     
     public ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum code;
+
     public ExportClientVpnClientCertificateRevocationListResultStatus withCode(ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class ExportClientVpnClientCertificateRevocationListResultStatus {
     
     
     public String message;
+
     public ExportClientVpnClientCertificateRevocationListResultStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ExportClientVpnClientCertificateRevocationListResultStatus(){}
 }

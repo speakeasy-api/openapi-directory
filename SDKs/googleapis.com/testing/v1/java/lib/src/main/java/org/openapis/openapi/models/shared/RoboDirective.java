@@ -18,6 +18,7 @@ public class RoboDirective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public RoboDirectiveActionTypeEnum actionType;
+
     public RoboDirective withActionType(RoboDirectiveActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -29,6 +30,7 @@ public class RoboDirective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputText")
     public String inputText;
+
     public RoboDirective withInputText(String inputText) {
         this.inputText = inputText;
         return this;
@@ -40,9 +42,11 @@ public class RoboDirective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public RoboDirective withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public RoboDirective(){}
 }

@@ -20,6 +20,7 @@ public class AndroidCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AndroidCertificate withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +32,7 @@ public class AndroidCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public String extension;
+
     public AndroidCertificate withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -41,6 +43,7 @@ public class AndroidCertificate {
      */
     @JsonProperty("id")
     public String id;
+
     public AndroidCertificate withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +55,7 @@ public class AndroidCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AndroidCertificate withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +69,7 @@ public class AndroidCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notAfter")
     public OffsetDateTime notAfter;
+
     public AndroidCertificate withNotAfter(OffsetDateTime notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -78,6 +83,7 @@ public class AndroidCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notBefore")
     public OffsetDateTime notBefore;
+
     public AndroidCertificate withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -89,9 +95,13 @@ public class AndroidCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AndroidCertificate withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AndroidCertificate(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

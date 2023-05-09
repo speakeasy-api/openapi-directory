@@ -15,6 +15,7 @@ public class RotationRulesType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticallyAfterDays")
     public Long automaticallyAfterDays;
+
     public RotationRulesType withAutomaticallyAfterDays(Long automaticallyAfterDays) {
         this.automaticallyAfterDays = automaticallyAfterDays;
         return this;
@@ -23,6 +24,7 @@ public class RotationRulesType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public String duration;
+
     public RotationRulesType withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -31,9 +33,11 @@ public class RotationRulesType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public RotationRulesType withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
     }
     
+    public RotationRulesType(){}
 }

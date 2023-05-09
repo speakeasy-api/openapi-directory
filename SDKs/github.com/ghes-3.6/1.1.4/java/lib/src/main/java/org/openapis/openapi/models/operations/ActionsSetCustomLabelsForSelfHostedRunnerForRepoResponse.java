@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse {
     
     public String contentType;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse {
     
     
     public Integer statusCode;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse {
      */
     
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepo200ApplicationJSON actionsSetCustomLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse withActionsSetCustomLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject(ActionsSetCustomLabelsForSelfHostedRunnerForRepo200ApplicationJSON actionsSetCustomLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject) {
         this.actionsSetCustomLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject = actionsSetCustomLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -53,9 +59,14 @@ public class ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEventsResponse {
@@ -12,6 +13,7 @@ public class ListEventsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEventsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListEventsResponse {
     
     
     public String contentType;
+
     public ListEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEventsResponse {
      */
     
     public Object internalServerException;
+
     public ListEventsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEventsResponse listEventsResponse;
+
     public ListEventsResponse withListEventsResponse(org.openapis.openapi.models.shared.ListEventsResponse listEventsResponse) {
         this.listEventsResponse = listEventsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListEventsResponse {
     
     
     public Integer statusCode;
+
     public ListEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListEventsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEventsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListEventsResponse {
      */
     
     public Object throttlingException;
+
     public ListEventsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListEventsResponse {
      */
     
     public Object validationException;
+
     public ListEventsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

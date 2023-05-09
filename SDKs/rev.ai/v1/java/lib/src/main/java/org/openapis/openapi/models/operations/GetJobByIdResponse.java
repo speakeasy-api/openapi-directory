@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobByIdResponse {
     
     public String contentType;
+
     public GetJobByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class GetJobByIdResponse {
      */
     
     public GetJobById401ApplicationProblemPlusJson getJobById401ApplicationProblemPlusJsonObject;
+
     public GetJobByIdResponse withGetJobById401ApplicationProblemPlusJsonObject(GetJobById401ApplicationProblemPlusJson getJobById401ApplicationProblemPlusJsonObject) {
         this.getJobById401ApplicationProblemPlusJsonObject = getJobById401ApplicationProblemPlusJsonObject;
         return this;
@@ -32,6 +35,7 @@ public class GetJobByIdResponse {
      */
     
     public GetJobById404ApplicationProblemPlusJson getJobById404ApplicationProblemPlusJsonObject;
+
     public GetJobByIdResponse withGetJobById404ApplicationProblemPlusJsonObject(GetJobById404ApplicationProblemPlusJson getJobById404ApplicationProblemPlusJsonObject) {
         this.getJobById404ApplicationProblemPlusJsonObject = getJobById404ApplicationProblemPlusJsonObject;
         return this;
@@ -42,6 +46,7 @@ public class GetJobByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Job job;
+
     public GetJobByIdResponse withJob(org.openapis.openapi.models.shared.Job job) {
         this.job = job;
         return this;
@@ -49,6 +54,7 @@ public class GetJobByIdResponse {
     
     
     public Integer statusCode;
+
     public GetJobByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -56,9 +62,14 @@ public class GetJobByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetJobByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

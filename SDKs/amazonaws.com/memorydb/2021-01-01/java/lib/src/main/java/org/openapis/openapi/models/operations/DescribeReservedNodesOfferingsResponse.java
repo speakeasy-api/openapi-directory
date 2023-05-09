@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeReservedNodesOfferingsResponse {
     
     public String contentType;
+
     public DescribeReservedNodesOfferingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReservedNodesOfferingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeReservedNodesOfferingsResponse describeReservedNodesOfferingsResponse;
+
     public DescribeReservedNodesOfferingsResponse withDescribeReservedNodesOfferingsResponse(org.openapis.openapi.models.shared.DescribeReservedNodesOfferingsResponse describeReservedNodesOfferingsResponse) {
         this.describeReservedNodesOfferingsResponse = describeReservedNodesOfferingsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReservedNodesOfferingsResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeReservedNodesOfferingsResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeReservedNodesOfferingsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeReservedNodesOfferingsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeReservedNodesOfferingsResponse {
      */
     
     public Object reservedNodesOfferingNotFoundFault;
+
     public DescribeReservedNodesOfferingsResponse withReservedNodesOfferingNotFoundFault(Object reservedNodesOfferingNotFoundFault) {
         this.reservedNodesOfferingNotFoundFault = reservedNodesOfferingNotFoundFault;
         return this;
@@ -56,6 +62,7 @@ public class DescribeReservedNodesOfferingsResponse {
     
     
     public Integer statusCode;
+
     public DescribeReservedNodesOfferingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeReservedNodesOfferingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeReservedNodesOfferingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeReservedNodesOfferingsResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DescribeReservedNodesOfferingsResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
     }
     
+    public DescribeReservedNodesOfferingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

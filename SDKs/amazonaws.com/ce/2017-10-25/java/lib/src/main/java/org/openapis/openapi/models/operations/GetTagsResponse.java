@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTagsResponse {
@@ -12,6 +13,7 @@ public class GetTagsResponse {
      */
     
     public Object billExpirationException;
+
     public GetTagsResponse withBillExpirationException(Object billExpirationException) {
         this.billExpirationException = billExpirationException;
         return this;
@@ -19,6 +21,7 @@ public class GetTagsResponse {
     
     
     public String contentType;
+
     public GetTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTagsResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetTagsResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class GetTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTagsResponse getTagsResponse;
+
     public GetTagsResponse withGetTagsResponse(org.openapis.openapi.models.shared.GetTagsResponse getTagsResponse) {
         this.getTagsResponse = getTagsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetTagsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetTagsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetTagsResponse {
      */
     
     public Object limitExceededException;
+
     public GetTagsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class GetTagsResponse {
      */
     
     public Object requestChangedException;
+
     public GetTagsResponse withRequestChangedException(Object requestChangedException) {
         this.requestChangedException = requestChangedException;
         return this;
@@ -76,6 +84,7 @@ public class GetTagsResponse {
     
     
     public Integer statusCode;
+
     public GetTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

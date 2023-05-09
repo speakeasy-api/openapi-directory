@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTagsForDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public DeleteTagsForDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteTagsForDomainRequest {
     
     @JsonProperty("TagsToDelete")
     public String[] tagsToDelete;
+
     public DeleteTagsForDomainRequest withTagsToDelete(String[] tagsToDelete) {
         this.tagsToDelete = tagsToDelete;
         return this;
     }
     
+    public DeleteTagsForDomainRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("TagsToDelete") String[] tagsToDelete) {
+        this.domainName = domainName;
+        this.tagsToDelete = tagsToDelete;
+  }
 }

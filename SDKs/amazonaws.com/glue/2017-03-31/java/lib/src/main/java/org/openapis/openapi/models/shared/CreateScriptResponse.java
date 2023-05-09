@@ -15,6 +15,7 @@ public class CreateScriptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PythonScript")
     public String pythonScript;
+
     public CreateScriptResponse withPythonScript(String pythonScript) {
         this.pythonScript = pythonScript;
         return this;
@@ -23,9 +24,11 @@ public class CreateScriptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalaCode")
     public String scalaCode;
+
     public CreateScriptResponse withScalaCode(String scalaCode) {
         this.scalaCode = scalaCode;
         return this;
     }
     
+    public CreateScriptResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubePlaylistItemsInsertRequest {
@@ -12,6 +13,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubePlaylistItemsInsertRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class YoutubePlaylistItemsInsertRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PlaylistItem playlistItem;
+
     public YoutubePlaylistItemsInsertRequest withPlaylistItem(org.openapis.openapi.models.shared.PlaylistItem playlistItem) {
         this.playlistItem = playlistItem;
         return this;
@@ -29,6 +32,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubePlaylistItemsInsertRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubePlaylistItemsInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubePlaylistItemsInsertRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubePlaylistItemsInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubePlaylistItemsInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubePlaylistItemsInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubePlaylistItemsInsertRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -99,6 +109,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubePlaylistItemsInsertRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -109,6 +120,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubePlaylistItemsInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubePlaylistItemsInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubePlaylistItemsInsertRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class YoutubePlaylistItemsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubePlaylistItemsInsertRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubePlaylistItemsInsertRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

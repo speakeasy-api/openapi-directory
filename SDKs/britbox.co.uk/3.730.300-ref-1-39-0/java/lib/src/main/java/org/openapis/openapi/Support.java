@@ -62,11 +62,9 @@ public class Support {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForgotPasswordResponse res = new org.openapis.openapi.models.operations.ForgotPasswordResponse() {{
+        org.openapis.openapi.models.operations.ForgotPasswordResponse res = new org.openapis.openapi.models.operations.ForgotPasswordResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -102,12 +100,10 @@ public class Support {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionDataResponse res = new org.openapis.openapi.models.operations.GetSubscriptionDataResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionDataResponse res = new org.openapis.openapi.models.operations.GetSubscriptionDataResponse(contentType, httpRes.statusCode()) {{
             subscriptionDetails = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,11 +155,9 @@ public class Support {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetPasswordResponse res = new org.openapis.openapi.models.operations.ResetPasswordResponse() {{
+        org.openapis.openapi.models.operations.ResetPasswordResponse res = new org.openapis.openapi.models.operations.ResetPasswordResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -207,11 +201,9 @@ public class Support {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyEmailResponse res = new org.openapis.openapi.models.operations.VerifyEmailResponse() {{
+        org.openapis.openapi.models.operations.VerifyEmailResponse res = new org.openapis.openapi.models.operations.VerifyEmailResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

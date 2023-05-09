@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UtteranceAggregationDuration {
     @JsonProperty("relativeAggregationDuration")
     public RelativeAggregationDuration relativeAggregationDuration;
+
     public UtteranceAggregationDuration withRelativeAggregationDuration(RelativeAggregationDuration relativeAggregationDuration) {
         this.relativeAggregationDuration = relativeAggregationDuration;
         return this;
     }
     
+    public UtteranceAggregationDuration(@JsonProperty("relativeAggregationDuration") RelativeAggregationDuration relativeAggregationDuration) {
+        this.relativeAggregationDuration = relativeAggregationDuration;
+  }
 }

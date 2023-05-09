@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApplicationTierRequest {
@@ -12,6 +13,7 @@ public class GetApplicationTierRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetApplicationTierRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +21,14 @@ public class GetApplicationTierRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tier-id")
     public String tierId;
+
     public GetApplicationTierRequest withTierId(String tierId) {
         this.tierId = tierId;
         return this;
     }
     
+    public GetApplicationTierRequest(@JsonProperty("id") String id, @JsonProperty("tier-id") String tierId) {
+        this.id = id;
+        this.tierId = tierId;
+  }
 }

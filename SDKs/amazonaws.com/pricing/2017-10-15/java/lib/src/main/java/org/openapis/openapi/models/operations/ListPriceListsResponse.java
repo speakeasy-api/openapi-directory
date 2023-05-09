@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPriceListsResponse {
@@ -12,6 +13,7 @@ public class ListPriceListsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPriceListsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPriceListsResponse {
     
     
     public String contentType;
+
     public ListPriceListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPriceListsResponse {
      */
     
     public Object expiredNextTokenException;
+
     public ListPriceListsResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListPriceListsResponse {
      */
     
     public Object internalErrorException;
+
     public ListPriceListsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListPriceListsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListPriceListsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListPriceListsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListPriceListsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class ListPriceListsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPriceListsResponse listPriceListsResponse;
+
     public ListPriceListsResponse withListPriceListsResponse(org.openapis.openapi.models.shared.ListPriceListsResponse listPriceListsResponse) {
         this.listPriceListsResponse = listPriceListsResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListPriceListsResponse {
      */
     
     public Object notFoundException;
+
     public ListPriceListsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class ListPriceListsResponse {
     
     
     public Integer statusCode;
+
     public ListPriceListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class ListPriceListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPriceListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPriceListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

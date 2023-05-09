@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdShippingLocationsRequest {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdShippingLocationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetCompaniesCompanyIdShippingLocationsRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetCompaniesCompanyIdShippingLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetCompaniesCompanyIdShippingLocationsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetCompaniesCompanyIdShippingLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetCompaniesCompanyIdShippingLocationsRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +46,13 @@ public class GetCompaniesCompanyIdShippingLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetCompaniesCompanyIdShippingLocationsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetCompaniesCompanyIdShippingLocationsRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

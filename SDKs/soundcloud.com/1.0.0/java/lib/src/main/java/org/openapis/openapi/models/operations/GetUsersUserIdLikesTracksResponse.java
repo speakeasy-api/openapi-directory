@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersUserIdLikesTracksResponse {
     
     public String contentType;
+
     public GetUsersUserIdLikesTracksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUsersUserIdLikesTracksResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetUsersUserIdLikesTracksResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetUsersUserIdLikesTracksResponse {
     
     
     public Integer statusCode;
+
     public GetUsersUserIdLikesTracksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetUsersUserIdLikesTracksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersUserIdLikesTracksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetUsersUserIdLikesTracksResponse {
      */
     
     public Object getUsersUserIdLikesTracks200ApplicationJSONOneOf;
+
     public GetUsersUserIdLikesTracksResponse withGetUsersUserIdLikesTracks200ApplicationJSONOneOf(Object getUsersUserIdLikesTracks200ApplicationJSONOneOf) {
         this.getUsersUserIdLikesTracks200ApplicationJSONOneOf = getUsersUserIdLikesTracks200ApplicationJSONOneOf;
         return this;
     }
     
+    public GetUsersUserIdLikesTracksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

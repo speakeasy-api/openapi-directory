@@ -18,9 +18,11 @@ public class EstimateCostScenarioWithListPriceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costScenario")
     public CostScenario costScenario;
+
     public EstimateCostScenarioWithListPriceRequest withCostScenario(CostScenario costScenario) {
         this.costScenario = costScenario;
         return this;
     }
     
+    public EstimateCostScenarioWithListPriceRequest(){}
 }

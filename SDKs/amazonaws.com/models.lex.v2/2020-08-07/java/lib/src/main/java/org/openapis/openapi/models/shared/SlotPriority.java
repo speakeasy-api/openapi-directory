@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SlotPriority {
     @JsonProperty("priority")
     public Long priority;
+
     public SlotPriority withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -19,9 +20,14 @@ public class SlotPriority {
     
     @JsonProperty("slotId")
     public String slotId;
+
     public SlotPriority withSlotId(String slotId) {
         this.slotId = slotId;
         return this;
     }
     
+    public SlotPriority(@JsonProperty("priority") Long priority, @JsonProperty("slotId") String slotId) {
+        this.priority = priority;
+        this.slotId = slotId;
+  }
 }

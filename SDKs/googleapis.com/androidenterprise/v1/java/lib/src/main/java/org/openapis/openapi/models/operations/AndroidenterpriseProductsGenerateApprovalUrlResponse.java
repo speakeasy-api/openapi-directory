@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidenterpriseProductsGenerateApprovalUrlResponse {
     
     public String contentType;
+
     public AndroidenterpriseProductsGenerateApprovalUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidenterpriseProductsGenerateApprovalUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.ProductsGenerateApprovalUrlResponse productsGenerateApprovalUrlResponse;
+
     public AndroidenterpriseProductsGenerateApprovalUrlResponse withProductsGenerateApprovalUrlResponse(org.openapis.openapi.models.shared.ProductsGenerateApprovalUrlResponse productsGenerateApprovalUrlResponse) {
         this.productsGenerateApprovalUrlResponse = productsGenerateApprovalUrlResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroidenterpriseProductsGenerateApprovalUrlResponse {
     
     
     public Integer statusCode;
+
     public AndroidenterpriseProductsGenerateApprovalUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidenterpriseProductsGenerateApprovalUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidenterpriseProductsGenerateApprovalUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidenterpriseProductsGenerateApprovalUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

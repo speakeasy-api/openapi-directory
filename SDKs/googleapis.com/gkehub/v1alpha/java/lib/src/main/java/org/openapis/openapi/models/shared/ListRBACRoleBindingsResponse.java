@@ -18,6 +18,7 @@ public class ListRBACRoleBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRBACRoleBindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRBACRoleBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rbacrolebindings")
     public RBACRoleBinding[] rbacrolebindings;
+
     public ListRBACRoleBindingsResponse withRbacrolebindings(RBACRoleBinding[] rbacrolebindings) {
         this.rbacrolebindings = rbacrolebindings;
         return this;
     }
     
+    public ListRBACRoleBindingsResponse(){}
 }

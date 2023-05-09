@@ -18,9 +18,11 @@ public class CloudAuditLoggingFeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowlistedServiceAccounts")
     public String[] allowlistedServiceAccounts;
+
     public CloudAuditLoggingFeatureSpec withAllowlistedServiceAccounts(String[] allowlistedServiceAccounts) {
         this.allowlistedServiceAccounts = allowlistedServiceAccounts;
         return this;
     }
     
+    public CloudAuditLoggingFeatureSpec(){}
 }

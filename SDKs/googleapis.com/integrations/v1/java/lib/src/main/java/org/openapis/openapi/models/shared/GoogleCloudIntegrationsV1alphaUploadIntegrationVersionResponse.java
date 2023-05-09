@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationVersion")
     public GoogleCloudIntegrationsV1alphaIntegrationVersion integrationVersion;
+
     public GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse withIntegrationVersion(GoogleCloudIntegrationsV1alphaIntegrationVersion integrationVersion) {
         this.integrationVersion = integrationVersion;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse(){}
 }

@@ -19,6 +19,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListMonitoringSchedulesRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListMonitoringSchedulesRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public ListMonitoringSchedulesRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -47,6 +50,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListMonitoringSchedulesRequest withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -57,6 +61,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListMonitoringSchedulesRequest withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -65,6 +70,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMonitoringSchedulesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -73,6 +79,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringJobDefinitionName")
     public String monitoringJobDefinitionName;
+
     public ListMonitoringSchedulesRequest withMonitoringJobDefinitionName(String monitoringJobDefinitionName) {
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         return this;
@@ -81,6 +88,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringTypeEquals")
     public MonitoringTypeEnum monitoringTypeEquals;
+
     public ListMonitoringSchedulesRequest withMonitoringTypeEquals(MonitoringTypeEnum monitoringTypeEquals) {
         this.monitoringTypeEquals = monitoringTypeEquals;
         return this;
@@ -89,6 +97,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListMonitoringSchedulesRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -97,6 +106,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitoringSchedulesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -105,6 +115,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public MonitoringScheduleSortKeyEnum sortBy;
+
     public ListMonitoringSchedulesRequest withSortBy(MonitoringScheduleSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -113,6 +124,7 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListMonitoringSchedulesRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -121,9 +133,11 @@ public class ListMonitoringSchedulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public ScheduleStatusEnum statusEquals;
+
     public ListMonitoringSchedulesRequest withStatusEquals(ScheduleStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListMonitoringSchedulesRequest(){}
 }

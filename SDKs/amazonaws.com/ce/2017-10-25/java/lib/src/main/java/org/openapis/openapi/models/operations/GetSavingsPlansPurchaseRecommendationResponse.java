@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSavingsPlansPurchaseRecommendationResponse {
     
     public String contentType;
+
     public GetSavingsPlansPurchaseRecommendationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSavingsPlansPurchaseRecommendationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSavingsPlansPurchaseRecommendationResponse getSavingsPlansPurchaseRecommendationResponse;
+
     public GetSavingsPlansPurchaseRecommendationResponse withGetSavingsPlansPurchaseRecommendationResponse(org.openapis.openapi.models.shared.GetSavingsPlansPurchaseRecommendationResponse getSavingsPlansPurchaseRecommendationResponse) {
         this.getSavingsPlansPurchaseRecommendationResponse = getSavingsPlansPurchaseRecommendationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSavingsPlansPurchaseRecommendationResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetSavingsPlansPurchaseRecommendationResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetSavingsPlansPurchaseRecommendationResponse {
      */
     
     public Object limitExceededException;
+
     public GetSavingsPlansPurchaseRecommendationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class GetSavingsPlansPurchaseRecommendationResponse {
     
     
     public Integer statusCode;
+
     public GetSavingsPlansPurchaseRecommendationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetSavingsPlansPurchaseRecommendationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSavingsPlansPurchaseRecommendationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSavingsPlansPurchaseRecommendationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

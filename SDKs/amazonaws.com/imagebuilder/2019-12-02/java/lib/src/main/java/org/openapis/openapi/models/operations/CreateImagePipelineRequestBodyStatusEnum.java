@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * CreateImagePipelineRequestBodyStatusEnum -  The status of the image pipeline.
+ * CreateImagePipelineRequestBodyStatusEnum - The status of the image pipeline.
  */
 public enum CreateImagePipelineRequestBodyStatusEnum {
     DISABLED("DISABLED"),

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkCellularFirewallRulesResponse {
     
     public String contentType;
+
     public GetNetworkCellularFirewallRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkCellularFirewallRulesResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkCellularFirewallRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkCellularFirewallRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkCellularFirewallRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkCellularFirewallRulesResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkCellularFirewallRules200ApplicationJSONObjects;
+
     public GetNetworkCellularFirewallRulesResponse withGetNetworkCellularFirewallRules200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkCellularFirewallRules200ApplicationJSONObjects) {
         this.getNetworkCellularFirewallRules200ApplicationJSONObjects = getNetworkCellularFirewallRules200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkCellularFirewallRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

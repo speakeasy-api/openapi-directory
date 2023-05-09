@@ -18,9 +18,11 @@ public class InventoryFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingFormat")
     public String listingFormat;
+
     public InventoryFilterCriteria withListingFormat(String listingFormat) {
         this.listingFormat = listingFormat;
         return this;
     }
     
+    public InventoryFilterCriteria(){}
 }

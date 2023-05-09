@@ -15,6 +15,7 @@ public class ListAppVersionResourceMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAppVersionResourceMappingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListAppVersionResourceMappingsResponse {
     
     @JsonProperty("resourceMappings")
     public ResourceMapping[] resourceMappings;
+
     public ListAppVersionResourceMappingsResponse withResourceMappings(ResourceMapping[] resourceMappings) {
         this.resourceMappings = resourceMappings;
         return this;
     }
     
+    public ListAppVersionResourceMappingsResponse(@JsonProperty("resourceMappings") ResourceMapping[] resourceMappings) {
+        this.resourceMappings = resourceMappings;
+  }
 }

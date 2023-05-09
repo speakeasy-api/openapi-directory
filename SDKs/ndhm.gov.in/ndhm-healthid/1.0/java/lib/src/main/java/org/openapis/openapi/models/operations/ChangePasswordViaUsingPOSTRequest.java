@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordViaUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public ChangePasswordViaUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +21,7 @@ public class ChangePasswordViaUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HidChangePasswordRequestPayload hidChangePasswordRequestPayload;
+
     public ChangePasswordViaUsingPOSTRequest withHidChangePasswordRequestPayload(org.openapis.openapi.models.shared.HidChangePasswordRequestPayload hidChangePasswordRequestPayload) {
         this.hidChangePasswordRequestPayload = hidChangePasswordRequestPayload;
         return this;
@@ -29,9 +32,14 @@ public class ChangePasswordViaUsingPOSTRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
     public String xToken;
+
     public ChangePasswordViaUsingPOSTRequest withXToken(String xToken) {
         this.xToken = xToken;
         return this;
     }
     
+    public ChangePasswordViaUsingPOSTRequest(@JsonProperty("HidChangePasswordRequestPayload") org.openapis.openapi.models.shared.HidChangePasswordRequestPayload hidChangePasswordRequestPayload, @JsonProperty("X-Token") String xToken) {
+        this.hidChangePasswordRequestPayload = hidChangePasswordRequestPayload;
+        this.xToken = xToken;
+  }
 }

@@ -56,12 +56,10 @@ public class Repertoire {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RepertoireResponse res = new org.openapis.openapi.models.operations.RepertoireResponse() {{
+        org.openapis.openapi.models.operations.RepertoireResponse res = new org.openapis.openapi.models.operations.RepertoireResponse(contentType, httpRes.statusCode()) {{
             repertoirEmodifreponse = null;
             erreur = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class Repertoire {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RepertoireCreaResponse res = new org.openapis.openapi.models.operations.RepertoireCreaResponse() {{
+        org.openapis.openapi.models.operations.RepertoireCreaResponse res = new org.openapis.openapi.models.operations.RepertoireCreaResponse(contentType, httpRes.statusCode()) {{
             repertoirEcreatereponse = null;
             erreur = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

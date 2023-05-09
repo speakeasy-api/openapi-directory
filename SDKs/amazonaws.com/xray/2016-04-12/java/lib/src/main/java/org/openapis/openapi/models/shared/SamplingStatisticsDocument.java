@@ -20,6 +20,7 @@ public class SamplingStatisticsDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BorrowCount")
     public Long borrowCount;
+
     public SamplingStatisticsDocument withBorrowCount(Long borrowCount) {
         this.borrowCount = borrowCount;
         return this;
@@ -27,6 +28,7 @@ public class SamplingStatisticsDocument {
     
     @JsonProperty("ClientID")
     public String clientID;
+
     public SamplingStatisticsDocument withClientID(String clientID) {
         this.clientID = clientID;
         return this;
@@ -34,6 +36,7 @@ public class SamplingStatisticsDocument {
     
     @JsonProperty("RequestCount")
     public Long requestCount;
+
     public SamplingStatisticsDocument withRequestCount(Long requestCount) {
         this.requestCount = requestCount;
         return this;
@@ -41,6 +44,7 @@ public class SamplingStatisticsDocument {
     
     @JsonProperty("RuleName")
     public String ruleName;
+
     public SamplingStatisticsDocument withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -48,6 +52,7 @@ public class SamplingStatisticsDocument {
     
     @JsonProperty("SampledCount")
     public Long sampledCount;
+
     public SamplingStatisticsDocument withSampledCount(Long sampledCount) {
         this.sampledCount = sampledCount;
         return this;
@@ -57,9 +62,17 @@ public class SamplingStatisticsDocument {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public SamplingStatisticsDocument withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public SamplingStatisticsDocument(@JsonProperty("ClientID") String clientID, @JsonProperty("RequestCount") Long requestCount, @JsonProperty("RuleName") String ruleName, @JsonProperty("SampledCount") Long sampledCount, @JsonProperty("Timestamp") OffsetDateTime timestamp) {
+        this.clientID = clientID;
+        this.requestCount = requestCount;
+        this.ruleName = ruleName;
+        this.sampledCount = sampledCount;
+        this.timestamp = timestamp;
+  }
 }

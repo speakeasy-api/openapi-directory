@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetWorkflowRunAttemptRequest {
@@ -12,6 +13,7 @@ public class ActionsGetWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attempt_number")
     public Long attemptNumber;
+
     public ActionsGetWorkflowRunAttemptRequest withAttemptNumber(Long attemptNumber) {
         this.attemptNumber = attemptNumber;
         return this;
@@ -22,6 +24,7 @@ public class ActionsGetWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_pull_requests")
     public Boolean excludePullRequests;
+
     public ActionsGetWorkflowRunAttemptRequest withExcludePullRequests(Boolean excludePullRequests) {
         this.excludePullRequests = excludePullRequests;
         return this;
@@ -32,6 +35,7 @@ public class ActionsGetWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsGetWorkflowRunAttemptRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -42,6 +46,7 @@ public class ActionsGetWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsGetWorkflowRunAttemptRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -52,9 +57,16 @@ public class ActionsGetWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
     public Long runId;
+
     public ActionsGetWorkflowRunAttemptRequest withRunId(Long runId) {
         this.runId = runId;
         return this;
     }
     
+    public ActionsGetWorkflowRunAttemptRequest(@JsonProperty("attempt_number") Long attemptNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("run_id") Long runId) {
+        this.attemptNumber = attemptNumber;
+        this.owner = owner;
+        this.repo = repo;
+        this.runId = runId;
+  }
 }

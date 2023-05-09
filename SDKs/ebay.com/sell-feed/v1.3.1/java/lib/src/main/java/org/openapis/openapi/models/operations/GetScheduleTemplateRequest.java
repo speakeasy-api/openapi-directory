@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScheduleTemplateRequest {
@@ -12,9 +13,13 @@ public class GetScheduleTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_template_id")
     public String scheduleTemplateId;
+
     public GetScheduleTemplateRequest withScheduleTemplateId(String scheduleTemplateId) {
         this.scheduleTemplateId = scheduleTemplateId;
         return this;
     }
     
+    public GetScheduleTemplateRequest(@JsonProperty("schedule_template_id") String scheduleTemplateId) {
+        this.scheduleTemplateId = scheduleTemplateId;
+  }
 }

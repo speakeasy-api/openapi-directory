@@ -12,6 +12,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_services")
     public String currentServices;
+
     public ProfileSurvey withCurrentServices(String currentServices) {
         this.currentServices = currentServices;
         return this;
@@ -20,6 +21,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daily_proofreading_capacity")
     public String dailyProofreadingCapacity;
+
     public ProfileSurvey withDailyProofreadingCapacity(String dailyProofreadingCapacity) {
         this.dailyProofreadingCapacity = dailyProofreadingCapacity;
         return this;
@@ -28,6 +30,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daily_translation_capacity")
     public String dailyTranslationCapacity;
+
     public ProfileSurvey withDailyTranslationCapacity(String dailyTranslationCapacity) {
         this.dailyTranslationCapacity = dailyTranslationCapacity;
         return this;
@@ -36,6 +39,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtp_software")
     public String dtpSoftware;
+
     public ProfileSurvey withDtpSoftware(String dtpSoftware) {
         this.dtpSoftware = dtpSoftware;
         return this;
@@ -44,6 +48,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experience")
     public String experience;
+
     public ProfileSurvey withExperience(String experience) {
         this.experience = experience;
         return this;
@@ -52,6 +57,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_certified_translator")
     public String isCertifiedTranslator;
+
     public ProfileSurvey withIsCertifiedTranslator(String isCertifiedTranslator) {
         this.isCertifiedTranslator = isCertifiedTranslator;
         return this;
@@ -60,6 +66,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_sworn_translator")
     public String isSwornTranslator;
+
     public ProfileSurvey withIsSwornTranslator(String isSwornTranslator) {
         this.isSwornTranslator = isSwornTranslator;
         return this;
@@ -68,6 +75,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoq")
     public String memoq;
+
     public ProfileSurvey withMemoq(String memoq) {
         this.memoq = memoq;
         return this;
@@ -76,6 +84,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memsource")
     public String memsource;
+
     public ProfileSurvey withMemsource(String memsource) {
         this.memsource = memsource;
         return this;
@@ -84,6 +93,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("omegat")
     public String omegat;
+
     public ProfileSurvey withOmegat(String omegat) {
         this.omegat = omegat;
         return this;
@@ -92,6 +102,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proofreader_experience")
     public String proofreaderExperience;
+
     public ProfileSurvey withProofreaderExperience(String proofreaderExperience) {
         this.proofreaderExperience = proofreaderExperience;
         return this;
@@ -100,6 +111,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provides_creative_writing_service")
     public String providesCreativeWritingService;
+
     public ProfileSurvey withProvidesCreativeWritingService(String providesCreativeWritingService) {
         this.providesCreativeWritingService = providesCreativeWritingService;
         return this;
@@ -108,6 +120,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provides_postedit_service")
     public String providesPosteditService;
+
     public ProfileSurvey withProvidesPosteditService(String providesPosteditService) {
         this.providesPosteditService = providesPosteditService;
         return this;
@@ -116,6 +129,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public ProfileSurvey withReference(String reference) {
         this.reference = reference;
         return this;
@@ -124,6 +138,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdl_trados")
     public String sdlTrados;
+
     public ProfileSurvey withSdlTrados(String sdlTrados) {
         this.sdlTrados = sdlTrados;
         return this;
@@ -132,6 +147,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skype_id")
     public String skypeId;
+
     public ProfileSurvey withSkypeId(String skypeId) {
         this.skypeId = skypeId;
         return this;
@@ -140,6 +156,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartcat")
     public String smartcat;
+
     public ProfileSurvey withSmartcat(String smartcat) {
         this.smartcat = smartcat;
         return this;
@@ -148,6 +165,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartling")
     public String smartling;
+
     public ProfileSurvey withSmartling(String smartling) {
         this.smartling = smartling;
         return this;
@@ -156,6 +174,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("software")
     public String software;
+
     public ProfileSurvey withSoftware(String software) {
         this.software = software;
         return this;
@@ -164,6 +183,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialization")
     public String specialization;
+
     public ProfileSurvey withSpecialization(String specialization) {
         this.specialization = specialization;
         return this;
@@ -172,6 +192,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle_edit")
     public String subtitleEdit;
+
     public ProfileSurvey withSubtitleEdit(String subtitleEdit) {
         this.subtitleEdit = subtitleEdit;
         return this;
@@ -180,6 +201,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle_workshop")
     public String subtitleWorkshop;
+
     public ProfileSurvey withSubtitleWorkshop(String subtitleWorkshop) {
         this.subtitleWorkshop = subtitleWorkshop;
         return this;
@@ -188,6 +210,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translator_association")
     public String translatorAssociation;
+
     public ProfileSurvey withTranslatorAssociation(String translatorAssociation) {
         this.translatorAssociation = translatorAssociation;
         return this;
@@ -196,6 +219,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transsuite_2000")
     public String transsuite2000;
+
     public ProfileSurvey withTranssuite2000(String transsuite2000) {
         this.transsuite2000 = transsuite2000;
         return this;
@@ -204,6 +228,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_profile_lsp")
     public String vendorProfileLsp;
+
     public ProfileSurvey withVendorProfileLsp(String vendorProfileLsp) {
         this.vendorProfileLsp = vendorProfileLsp;
         return this;
@@ -212,6 +237,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordbee")
     public String wordbee;
+
     public ProfileSurvey withWordbee(String wordbee) {
         this.wordbee = wordbee;
         return this;
@@ -220,6 +246,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordfast")
     public String wordfast;
+
     public ProfileSurvey withWordfast(String wordfast) {
         this.wordfast = wordfast;
         return this;
@@ -228,6 +255,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_type")
     public String workType;
+
     public ProfileSurvey withWorkType(String workType) {
         this.workType = workType;
         return this;
@@ -236,6 +264,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_with")
     public String workWith;
+
     public ProfileSurvey withWorkWith(String workWith) {
         this.workWith = workWith;
         return this;
@@ -244,6 +273,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("working_as")
     public String workingAs;
+
     public ProfileSurvey withWorkingAs(String workingAs) {
         this.workingAs = workingAs;
         return this;
@@ -252,6 +282,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("working_timezone")
     public String workingTimezone;
+
     public ProfileSurvey withWorkingTimezone(String workingTimezone) {
         this.workingTimezone = workingTimezone;
         return this;
@@ -260,6 +291,7 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xbench")
     public String xbench;
+
     public ProfileSurvey withXbench(String xbench) {
         this.xbench = xbench;
         return this;
@@ -268,9 +300,11 @@ public class ProfileSurvey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xtm")
     public String xtm;
+
     public ProfileSurvey withXtm(String xtm) {
         this.xtm = xtm;
         return this;
     }
     
+    public ProfileSurvey(){}
 }

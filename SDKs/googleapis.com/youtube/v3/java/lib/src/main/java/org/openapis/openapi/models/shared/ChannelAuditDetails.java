@@ -18,6 +18,7 @@ public class ChannelAuditDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communityGuidelinesGoodStanding")
     public Boolean communityGuidelinesGoodStanding;
+
     public ChannelAuditDetails withCommunityGuidelinesGoodStanding(Boolean communityGuidelinesGoodStanding) {
         this.communityGuidelinesGoodStanding = communityGuidelinesGoodStanding;
         return this;
@@ -29,6 +30,7 @@ public class ChannelAuditDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentIdClaimsGoodStanding")
     public Boolean contentIdClaimsGoodStanding;
+
     public ChannelAuditDetails withContentIdClaimsGoodStanding(Boolean contentIdClaimsGoodStanding) {
         this.contentIdClaimsGoodStanding = contentIdClaimsGoodStanding;
         return this;
@@ -40,9 +42,11 @@ public class ChannelAuditDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyrightStrikesGoodStanding")
     public Boolean copyrightStrikesGoodStanding;
+
     public ChannelAuditDetails withCopyrightStrikesGoodStanding(Boolean copyrightStrikesGoodStanding) {
         this.copyrightStrikesGoodStanding = copyrightStrikesGoodStanding;
         return this;
     }
     
+    public ChannelAuditDetails(){}
 }

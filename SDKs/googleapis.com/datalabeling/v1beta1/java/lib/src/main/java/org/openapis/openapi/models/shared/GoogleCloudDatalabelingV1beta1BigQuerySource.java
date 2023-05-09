@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1BigQuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUri")
     public String inputUri;
+
     public GoogleCloudDatalabelingV1beta1BigQuerySource withInputUri(String inputUri) {
         this.inputUri = inputUri;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1BigQuerySource(){}
 }

@@ -12,9 +12,11 @@ public class ForumGetForumTagSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partialtag")
     public String partialtag;
+
     public ForumGetForumTagSuggestionsRequest withPartialtag(String partialtag) {
         this.partialtag = partialtag;
         return this;
     }
     
+    public ForumGetForumTagSuggestionsRequest(){}
 }

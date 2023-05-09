@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InferSNOMEDCTResponse {
     
     public String contentType;
+
     public InferSNOMEDCTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InferSNOMEDCTResponse {
      */
     
     public org.openapis.openapi.models.shared.InferSNOMEDCTResponse inferSNOMEDCTResponse;
+
     public InferSNOMEDCTResponse withInferSNOMEDCTResponse(org.openapis.openapi.models.shared.InferSNOMEDCTResponse inferSNOMEDCTResponse) {
         this.inferSNOMEDCTResponse = inferSNOMEDCTResponse;
         return this;
@@ -29,6 +32,7 @@ public class InferSNOMEDCTResponse {
      */
     
     public Object internalServerException;
+
     public InferSNOMEDCTResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class InferSNOMEDCTResponse {
      */
     
     public Object invalidEncodingException;
+
     public InferSNOMEDCTResponse withInvalidEncodingException(Object invalidEncodingException) {
         this.invalidEncodingException = invalidEncodingException;
         return this;
@@ -49,6 +54,7 @@ public class InferSNOMEDCTResponse {
      */
     
     public Object invalidRequestException;
+
     public InferSNOMEDCTResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class InferSNOMEDCTResponse {
     
     
     public Integer statusCode;
+
     public InferSNOMEDCTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class InferSNOMEDCTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InferSNOMEDCTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class InferSNOMEDCTResponse {
      */
     
     public Object serviceUnavailableException;
+
     public InferSNOMEDCTResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class InferSNOMEDCTResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public InferSNOMEDCTResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -93,9 +103,14 @@ public class InferSNOMEDCTResponse {
      */
     
     public Object tooManyRequestsException;
+
     public InferSNOMEDCTResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public InferSNOMEDCTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

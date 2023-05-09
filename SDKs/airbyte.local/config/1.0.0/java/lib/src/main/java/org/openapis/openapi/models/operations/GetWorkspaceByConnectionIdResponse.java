@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspaceByConnectionIdResponse {
     
     public String contentType;
+
     public GetWorkspaceByConnectionIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkspaceByConnectionIdResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetWorkspaceByConnectionIdResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkspaceByConnectionIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetWorkspaceByConnectionIdResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -36,6 +40,7 @@ public class GetWorkspaceByConnectionIdResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspaceByConnectionIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetWorkspaceByConnectionIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspaceByConnectionIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetWorkspaceByConnectionIdResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkspaceRead workspaceRead;
+
     public GetWorkspaceByConnectionIdResponse withWorkspaceRead(org.openapis.openapi.models.shared.WorkspaceRead workspaceRead) {
         this.workspaceRead = workspaceRead;
         return this;
     }
     
+    public GetWorkspaceByConnectionIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

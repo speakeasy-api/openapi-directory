@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * VariantProperty - &lt;p&gt;Specifies a production variant property type for an Endpoint.&lt;/p&gt; &lt;p&gt;If you are updating an endpoint with the &lt;a&gt;UpdateEndpointInput$RetainAllVariantProperties&lt;/a&gt; option set to &lt;code&gt;true&lt;/code&gt;, the &lt;code&gt;VariantProperty&lt;/code&gt; objects listed in &lt;a&gt;UpdateEndpointInput$ExcludeRetainedVariantProperties&lt;/a&gt; override the existing variant properties of the endpoint.&lt;/p&gt;
+ * VariantProperty - &lt;p&gt;Specifies a production variant property type for an Endpoint.&lt;/p&gt; &lt;p&gt;If you are updating an endpoint with the &lt;code&gt;RetainAllVariantProperties&lt;/code&gt; option of &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateEndpoint.html"&gt;UpdateEndpointInput&lt;/a&gt; set to &lt;code&gt;true&lt;/code&gt;, the &lt;code&gt;VariantProperty&lt;/code&gt; objects listed in the &lt;code&gt;ExcludeRetainedVariantProperties&lt;/code&gt; parameter of &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateEndpoint.html"&gt;UpdateEndpointInput&lt;/a&gt; override the existing variant properties of the endpoint.&lt;/p&gt;
  */
 public class VariantProperty {
     @JsonProperty("VariantPropertyType")
     public VariantPropertyTypeEnum variantPropertyType;
+
     public VariantProperty withVariantPropertyType(VariantPropertyTypeEnum variantPropertyType) {
         this.variantPropertyType = variantPropertyType;
         return this;
     }
     
+    public VariantProperty(@JsonProperty("VariantPropertyType") VariantPropertyTypeEnum variantPropertyType) {
+        this.variantPropertyType = variantPropertyType;
+  }
 }

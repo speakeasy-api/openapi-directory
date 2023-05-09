@@ -57,10 +57,8 @@ public class TypeBioSam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchBioSamResponse res = new org.openapis.openapi.models.operations.SearchBioSamResponse() {{
+        org.openapis.openapi.models.operations.SearchBioSamResponse res = new org.openapis.openapi.models.operations.SearchBioSamResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

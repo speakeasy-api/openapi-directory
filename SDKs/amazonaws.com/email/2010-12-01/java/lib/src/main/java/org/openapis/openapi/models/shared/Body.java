@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Body {
     
     public Content html;
+
     public Body withHtml(Content html) {
         this.html = html;
         return this;
@@ -19,9 +20,11 @@ public class Body {
     
     
     public Content text;
+
     public Body withText(Content text) {
         this.text = text;
         return this;
     }
     
+    public Body(){}
 }

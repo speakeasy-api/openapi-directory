@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1SafeSearchAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adult")
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum adult;
+
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotation withAdult(GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum adult) {
         this.adult = adult;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1SafeSearchAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medical")
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum medical;
+
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotation withMedical(GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum medical) {
         this.medical = medical;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p1beta1SafeSearchAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("racy")
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum racy;
+
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotation withRacy(GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum racy) {
         this.racy = racy;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVisionV1p1beta1SafeSearchAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spoof")
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum spoof;
+
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotation withSpoof(GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum spoof) {
         this.spoof = spoof;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudVisionV1p1beta1SafeSearchAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violence")
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum violence;
+
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotation withViolence(GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum violence) {
         this.violence = violence;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1SafeSearchAnnotation(){}
 }

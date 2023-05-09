@@ -15,6 +15,7 @@ public class Earnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed")
     public EarningWithTQS[] completed;
+
     public Earnings withCompleted(EarningWithTQS[] completed) {
         this.completed = completed;
         return this;
@@ -23,6 +24,7 @@ public class Earnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ongoing")
     public EarningWithTQS[] ongoing;
+
     public Earnings withOngoing(EarningWithTQS[] ongoing) {
         this.ongoing = ongoing;
         return this;
@@ -31,9 +33,11 @@ public class Earnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public Earnings withTotal(Float total) {
         this.total = total;
         return this;
     }
     
+    public Earnings(){}
 }

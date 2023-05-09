@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogDriver")
     public String logDriver;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails withLogDriver(String logDriver) {
         this.logDriver = logDriver;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public java.util.Map<String, String> options;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails withOptions(java.util.Map<String, String> options) {
         this.options = options;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretOptions")
     public AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationSecretOptionsDetails[] secretOptions;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails withSecretOptions(AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationSecretOptionsDetails[] secretOptions) {
         this.secretOptions = secretOptions;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails(){}
 }

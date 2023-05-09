@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeBundleTasksRequestFilters {
     
     public String name;
+
     public DescribeBundleTasksRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeBundleTasksRequestFilters {
     
     
     public String[] values;
+
     public DescribeBundleTasksRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeBundleTasksRequestFilters(){}
 }

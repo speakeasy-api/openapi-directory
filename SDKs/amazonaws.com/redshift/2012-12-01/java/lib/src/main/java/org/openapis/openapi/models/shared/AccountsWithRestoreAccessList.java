@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AccountsWithRestoreAccessList {
     
     public String accountAlias;
+
     public AccountsWithRestoreAccessList withAccountAlias(String accountAlias) {
         this.accountAlias = accountAlias;
         return this;
@@ -19,9 +20,11 @@ public class AccountsWithRestoreAccessList {
     
     
     public String accountId;
+
     public AccountsWithRestoreAccessList withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public AccountsWithRestoreAccessList(){}
 }

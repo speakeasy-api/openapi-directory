@@ -16,6 +16,7 @@ public class GetTrackTrackingResponseFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bbox")
     public Object[] bbox;
+
     public GetTrackTrackingResponseFeature withBbox(Object[] bbox) {
         this.bbox = bbox;
         return this;
@@ -28,6 +29,7 @@ public class GetTrackTrackingResponseFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("centerline")
     public org.openapis.openapi.models.shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry centerline;
+
     public GetTrackTrackingResponseFeature withCenterline(org.openapis.openapi.models.shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry centerline) {
         this.centerline = centerline;
         return this;
@@ -39,6 +41,7 @@ public class GetTrackTrackingResponseFeature {
      */
     @JsonProperty("geometry")
     public GetTrackTrackingResponseFeatureGeometry geometry;
+
     public GetTrackTrackingResponseFeature withGeometry(GetTrackTrackingResponseFeatureGeometry geometry) {
         this.geometry = geometry;
         return this;
@@ -47,6 +50,7 @@ public class GetTrackTrackingResponseFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetTrackTrackingResponseFeature withId(Long id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class GetTrackTrackingResponseFeature {
     
     @JsonProperty("properties")
     public GetTrackTrackingResponseFeatureProperties properties;
+
     public GetTrackTrackingResponseFeature withProperties(GetTrackTrackingResponseFeatureProperties properties) {
         this.properties = properties;
         return this;
@@ -62,6 +67,7 @@ public class GetTrackTrackingResponseFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetTrackTrackingResponseFeature withTitle(String title) {
         this.title = title;
         return this;
@@ -69,9 +75,15 @@ public class GetTrackTrackingResponseFeature {
     
     @JsonProperty("type")
     public GetTrackTrackingResponseFeatureTypeEnum type;
+
     public GetTrackTrackingResponseFeature withType(GetTrackTrackingResponseFeatureTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetTrackTrackingResponseFeature(@JsonProperty("geometry") GetTrackTrackingResponseFeatureGeometry geometry, @JsonProperty("properties") GetTrackTrackingResponseFeatureProperties properties, @JsonProperty("type") GetTrackTrackingResponseFeatureTypeEnum type) {
+        this.geometry = geometry;
+        this.properties = properties;
+        this.type = type;
+  }
 }

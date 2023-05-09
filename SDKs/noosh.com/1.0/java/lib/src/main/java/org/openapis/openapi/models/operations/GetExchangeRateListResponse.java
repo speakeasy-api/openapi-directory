@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExchangeRateListResponse {
     
     public byte[] body;
+
     public GetExchangeRateListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetExchangeRateListResponse {
     
     
     public String contentType;
+
     public GetExchangeRateListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetExchangeRateListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetExchangeRateListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetExchangeRateListResponse {
      */
     
     public org.openapis.openapi.models.shared.MultiExchangeRateListVO multiExchangeRateListVO;
+
     public GetExchangeRateListResponse withMultiExchangeRateListVO(org.openapis.openapi.models.shared.MultiExchangeRateListVO multiExchangeRateListVO) {
         this.multiExchangeRateListVO = multiExchangeRateListVO;
         return this;
@@ -43,6 +48,7 @@ public class GetExchangeRateListResponse {
     
     
     public Integer statusCode;
+
     public GetExchangeRateListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetExchangeRateListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExchangeRateListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetExchangeRateListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

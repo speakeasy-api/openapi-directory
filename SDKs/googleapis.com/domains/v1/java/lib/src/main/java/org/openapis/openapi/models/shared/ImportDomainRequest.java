@@ -18,6 +18,7 @@ public class ImportDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public ImportDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,9 +30,11 @@ public class ImportDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ImportDomainRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public ImportDomainRequest(){}
 }

@@ -16,6 +16,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public Long currentVersion;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withCurrentVersion(Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public String[] displayVersionWatermarkIcons;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withDisplayVersionWatermarkIcons(String[] displayVersionWatermarkIcons) {
         this.displayVersionWatermarkIcons = displayVersionWatermarkIcons;
         return this;
@@ -37,6 +39,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public Long infusionCategoryHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withInfusionCategoryHash(Long infusionCategoryHash) {
         this.infusionCategoryHash = infusionCategoryHash;
         return this;
@@ -47,6 +50,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public Long[] infusionCategoryHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withInfusionCategoryHashes(Long[] infusionCategoryHashes) {
         this.infusionCategoryHashes = infusionCategoryHashes;
         return this;
@@ -59,6 +63,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public String infusionCategoryName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withInfusionCategoryName(String infusionCategoryName) {
         this.infusionCategoryName = infusionCategoryName;
         return this;
@@ -70,6 +75,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public Integer[] itemLevels;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withItemLevels(Integer[] itemLevels) {
         this.itemLevels = itemLevels;
         return this;
@@ -80,6 +86,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public Long progressionLevelRequirementHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withProgressionLevelRequirementHash(Long progressionLevelRequirementHash) {
         this.progressionLevelRequirementHash = progressionLevelRequirementHash;
         return this;
@@ -90,6 +97,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public Integer qualityLevel;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withQualityLevel(Integer qualityLevel) {
         this.qualityLevel = qualityLevel;
         return this;
@@ -100,9 +108,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionQuality {
      */
     
     public DestinyDefinitionsDestinyItemVersionDefinition[] versions;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality withVersions(DestinyDefinitionsDestinyItemVersionDefinition[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionQuality(){}
 }

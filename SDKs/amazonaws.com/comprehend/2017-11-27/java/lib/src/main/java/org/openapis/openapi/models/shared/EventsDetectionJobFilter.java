@@ -20,6 +20,7 @@ public class EventsDetectionJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public EventsDetectionJobFilter withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -28,6 +29,7 @@ public class EventsDetectionJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public EventsDetectionJobFilter withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -38,6 +40,7 @@ public class EventsDetectionJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeAfter")
     public OffsetDateTime submitTimeAfter;
+
     public EventsDetectionJobFilter withSubmitTimeAfter(OffsetDateTime submitTimeAfter) {
         this.submitTimeAfter = submitTimeAfter;
         return this;
@@ -48,9 +51,11 @@ public class EventsDetectionJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeBefore")
     public OffsetDateTime submitTimeBefore;
+
     public EventsDetectionJobFilter withSubmitTimeBefore(OffsetDateTime submitTimeBefore) {
         this.submitTimeBefore = submitTimeBefore;
         return this;
     }
     
+    public EventsDetectionJobFilter(){}
 }

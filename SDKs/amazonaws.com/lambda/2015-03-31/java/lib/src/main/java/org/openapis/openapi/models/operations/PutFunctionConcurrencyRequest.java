@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutFunctionConcurrencyRequest {
@@ -12,6 +13,7 @@ public class PutFunctionConcurrencyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
     public String functionName;
+
     public PutFunctionConcurrencyRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -19,6 +21,7 @@ public class PutFunctionConcurrencyRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutFunctionConcurrencyRequestBody requestBody;
+
     public PutFunctionConcurrencyRequest withRequestBody(PutFunctionConcurrencyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class PutFunctionConcurrencyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutFunctionConcurrencyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class PutFunctionConcurrencyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutFunctionConcurrencyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class PutFunctionConcurrencyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutFunctionConcurrencyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class PutFunctionConcurrencyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutFunctionConcurrencyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class PutFunctionConcurrencyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutFunctionConcurrencyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class PutFunctionConcurrencyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutFunctionConcurrencyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class PutFunctionConcurrencyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutFunctionConcurrencyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public PutFunctionConcurrencyRequest(@JsonProperty("FunctionName") String functionName, @JsonProperty("RequestBody") PutFunctionConcurrencyRequestBody requestBody) {
+        this.functionName = functionName;
+        this.requestBody = requestBody;
+  }
 }

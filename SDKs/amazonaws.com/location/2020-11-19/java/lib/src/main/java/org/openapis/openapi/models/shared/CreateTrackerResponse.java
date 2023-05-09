@@ -19,6 +19,7 @@ public class CreateTrackerResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public CreateTrackerResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class CreateTrackerResponse {
     
     @JsonProperty("TrackerArn")
     public String trackerArn;
+
     public CreateTrackerResponse withTrackerArn(String trackerArn) {
         this.trackerArn = trackerArn;
         return this;
@@ -33,9 +35,15 @@ public class CreateTrackerResponse {
     
     @JsonProperty("TrackerName")
     public String trackerName;
+
     public CreateTrackerResponse withTrackerName(String trackerName) {
         this.trackerName = trackerName;
         return this;
     }
     
+    public CreateTrackerResponse(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("TrackerArn") String trackerArn, @JsonProperty("TrackerName") String trackerName) {
+        this.createTime = createTime;
+        this.trackerArn = trackerArn;
+        this.trackerName = trackerName;
+  }
 }

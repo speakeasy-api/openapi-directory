@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFlowDefinitionResponse {
     @JsonProperty("FlowDefinitionArn")
     public String flowDefinitionArn;
+
     public CreateFlowDefinitionResponse withFlowDefinitionArn(String flowDefinitionArn) {
         this.flowDefinitionArn = flowDefinitionArn;
         return this;
     }
     
+    public CreateFlowDefinitionResponse(@JsonProperty("FlowDefinitionArn") String flowDefinitionArn) {
+        this.flowDefinitionArn = flowDefinitionArn;
+  }
 }

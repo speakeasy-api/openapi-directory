@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSessionUsingGETResponse {
     
     public String contentType;
+
     public DeleteSessionUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteSessionUsingGETResponse {
     
     
     public Integer statusCode;
+
     public DeleteSessionUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteSessionUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSessionUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteSessionUsingGETResponse {
      */
     
     public DeleteSessionUsingGET200ApplicationJSON deleteSessionUsingGET200ApplicationJSONObject;
+
     public DeleteSessionUsingGETResponse withDeleteSessionUsingGET200ApplicationJSONObject(DeleteSessionUsingGET200ApplicationJSON deleteSessionUsingGET200ApplicationJSONObject) {
         this.deleteSessionUsingGET200ApplicationJSONObject = deleteSessionUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeleteSessionUsingGETResponse {
      */
     
     public DeleteSessionUsingGET400ApplicationJSON deleteSessionUsingGET400ApplicationJSONObject;
+
     public DeleteSessionUsingGETResponse withDeleteSessionUsingGET400ApplicationJSONObject(DeleteSessionUsingGET400ApplicationJSON deleteSessionUsingGET400ApplicationJSONObject) {
         this.deleteSessionUsingGET400ApplicationJSONObject = deleteSessionUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSessionUsingGETResponse {
      */
     
     public DeleteSessionUsingGET401ApplicationJSON deleteSessionUsingGET401ApplicationJSONObject;
+
     public DeleteSessionUsingGETResponse withDeleteSessionUsingGET401ApplicationJSONObject(DeleteSessionUsingGET401ApplicationJSON deleteSessionUsingGET401ApplicationJSONObject) {
         this.deleteSessionUsingGET401ApplicationJSONObject = deleteSessionUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class DeleteSessionUsingGETResponse {
      */
     
     public DeleteSessionUsingGET500ApplicationJSON deleteSessionUsingGET500ApplicationJSONObject;
+
     public DeleteSessionUsingGETResponse withDeleteSessionUsingGET500ApplicationJSONObject(DeleteSessionUsingGET500ApplicationJSON deleteSessionUsingGET500ApplicationJSONObject) {
         this.deleteSessionUsingGET500ApplicationJSONObject = deleteSessionUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public DeleteSessionUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

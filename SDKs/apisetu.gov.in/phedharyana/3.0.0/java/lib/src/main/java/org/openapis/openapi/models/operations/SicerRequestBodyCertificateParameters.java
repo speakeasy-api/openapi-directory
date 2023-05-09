@@ -12,6 +12,7 @@ public class SicerRequestBodyCertificateParameters {
      */
     @JsonProperty("_name")
     public String name;
+
     public SicerRequestBodyCertificateParameters withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class SicerRequestBodyCertificateParameters {
      */
     @JsonProperty("consumer_id")
     public String consumerId;
+
     public SicerRequestBodyCertificateParameters withConsumerId(String consumerId) {
         this.consumerId = consumerId;
         return this;
     }
     
+    public SicerRequestBodyCertificateParameters(@JsonProperty("_name") String name, @JsonProperty("consumer_id") String consumerId) {
+        this.name = name;
+        this.consumerId = consumerId;
+  }
 }

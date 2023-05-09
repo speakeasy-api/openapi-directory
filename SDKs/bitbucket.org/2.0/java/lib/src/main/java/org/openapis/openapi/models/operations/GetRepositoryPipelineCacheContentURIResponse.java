@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoryPipelineCacheContentURIResponse {
     
     public String contentType;
+
     public GetRepositoryPipelineCacheContentURIResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoryPipelineCacheContentURIResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoryPipelineCacheContentURIResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoryPipelineCacheContentURIResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoryPipelineCacheContentURIResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoryPipelineCacheContentURIResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoryPipelineCacheContentURIResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoryPipelineCacheContentURIResponse {
      */
     
     public org.openapis.openapi.models.shared.PipelineCacheContentUri pipelineCacheContentUri;
+
     public GetRepositoryPipelineCacheContentURIResponse withPipelineCacheContentUri(org.openapis.openapi.models.shared.PipelineCacheContentUri pipelineCacheContentUri) {
         this.pipelineCacheContentUri = pipelineCacheContentUri;
         return this;
     }
     
+    public GetRepositoryPipelineCacheContentURIResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

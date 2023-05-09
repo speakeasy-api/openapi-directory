@@ -19,9 +19,11 @@ public class ImageProcessingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("augmentationMethods")
     public java.util.Map<String, Boolean> augmentationMethods;
+
     public ImageProcessingSettings withAugmentationMethods(java.util.Map<String, Boolean> augmentationMethods) {
         this.augmentationMethods = augmentationMethods;
         return this;
     }
     
+    public ImageProcessingSettings(){}
 }

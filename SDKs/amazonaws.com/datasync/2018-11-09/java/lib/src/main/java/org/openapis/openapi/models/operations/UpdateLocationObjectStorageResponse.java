@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLocationObjectStorageResponse {
     
     public String contentType;
+
     public UpdateLocationObjectStorageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLocationObjectStorageResponse {
      */
     
     public Object internalException;
+
     public UpdateLocationObjectStorageResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLocationObjectStorageResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateLocationObjectStorageResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateLocationObjectStorageResponse {
     
     
     public Integer statusCode;
+
     public UpdateLocationObjectStorageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateLocationObjectStorageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLocationObjectStorageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateLocationObjectStorageResponse {
      */
     
     public java.util.Map<String, Object> updateLocationObjectStorageResponse;
+
     public UpdateLocationObjectStorageResponse withUpdateLocationObjectStorageResponse(java.util.Map<String, Object> updateLocationObjectStorageResponse) {
         this.updateLocationObjectStorageResponse = updateLocationObjectStorageResponse;
         return this;
     }
     
+    public UpdateLocationObjectStorageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

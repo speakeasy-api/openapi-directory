@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEndpointAccessResponse {
@@ -12,6 +13,7 @@ public class ListEndpointAccessResponse {
      */
     
     public Object conflictException;
+
     public ListEndpointAccessResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class ListEndpointAccessResponse {
     
     
     public String contentType;
+
     public ListEndpointAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEndpointAccessResponse {
      */
     
     public Object internalServerException;
+
     public ListEndpointAccessResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListEndpointAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEndpointAccessResponse listEndpointAccessResponse;
+
     public ListEndpointAccessResponse withListEndpointAccessResponse(org.openapis.openapi.models.shared.ListEndpointAccessResponse listEndpointAccessResponse) {
         this.listEndpointAccessResponse = listEndpointAccessResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListEndpointAccessResponse {
     
     
     public Integer statusCode;
+
     public ListEndpointAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListEndpointAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEndpointAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListEndpointAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEndpointAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListEndpointAccessResponse {
      */
     
     public Object validationException;
+
     public ListEndpointAccessResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEndpointAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

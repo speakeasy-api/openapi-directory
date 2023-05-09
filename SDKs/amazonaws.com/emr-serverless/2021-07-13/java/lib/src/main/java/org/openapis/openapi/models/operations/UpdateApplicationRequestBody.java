@@ -15,6 +15,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public UpdateApplicationRequestBodyArchitectureEnum architecture;
+
     public UpdateApplicationRequestBody withArchitecture(UpdateApplicationRequestBodyArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -26,6 +27,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoStartConfiguration")
     public UpdateApplicationRequestBodyAutoStartConfiguration autoStartConfiguration;
+
     public UpdateApplicationRequestBody withAutoStartConfiguration(UpdateApplicationRequestBodyAutoStartConfiguration autoStartConfiguration) {
         this.autoStartConfiguration = autoStartConfiguration;
         return this;
@@ -37,6 +39,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoStopConfiguration")
     public UpdateApplicationRequestBodyAutoStopConfiguration autoStopConfiguration;
+
     public UpdateApplicationRequestBody withAutoStopConfiguration(UpdateApplicationRequestBodyAutoStopConfiguration autoStopConfiguration) {
         this.autoStopConfiguration = autoStopConfiguration;
         return this;
@@ -47,6 +50,7 @@ public class UpdateApplicationRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateApplicationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -58,6 +62,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageConfiguration")
     public UpdateApplicationRequestBodyImageConfiguration imageConfiguration;
+
     public UpdateApplicationRequestBody withImageConfiguration(UpdateApplicationRequestBodyImageConfiguration imageConfiguration) {
         this.imageConfiguration = imageConfiguration;
         return this;
@@ -69,6 +74,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialCapacity")
     public java.util.Map<String, org.openapis.openapi.models.shared.InitialCapacityConfig> initialCapacity;
+
     public UpdateApplicationRequestBody withInitialCapacity(java.util.Map<String, org.openapis.openapi.models.shared.InitialCapacityConfig> initialCapacity) {
         this.initialCapacity = initialCapacity;
         return this;
@@ -80,6 +86,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumCapacity")
     public UpdateApplicationRequestBodyMaximumCapacity maximumCapacity;
+
     public UpdateApplicationRequestBody withMaximumCapacity(UpdateApplicationRequestBodyMaximumCapacity maximumCapacity) {
         this.maximumCapacity = maximumCapacity;
         return this;
@@ -91,6 +98,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public UpdateApplicationRequestBodyNetworkConfiguration networkConfiguration;
+
     public UpdateApplicationRequestBody withNetworkConfiguration(UpdateApplicationRequestBodyNetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -102,9 +110,13 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerTypeSpecifications")
     public java.util.Map<String, org.openapis.openapi.models.shared.WorkerTypeSpecificationInput> workerTypeSpecifications;
+
     public UpdateApplicationRequestBody withWorkerTypeSpecifications(java.util.Map<String, org.openapis.openapi.models.shared.WorkerTypeSpecificationInput> workerTypeSpecifications) {
         this.workerTypeSpecifications = workerTypeSpecifications;
         return this;
     }
     
+    public UpdateApplicationRequestBody(@JsonProperty("clientToken") String clientToken) {
+        this.clientToken = clientToken;
+  }
 }

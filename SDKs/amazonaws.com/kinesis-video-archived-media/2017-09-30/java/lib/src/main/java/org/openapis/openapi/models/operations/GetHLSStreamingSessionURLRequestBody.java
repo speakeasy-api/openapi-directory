@@ -15,6 +15,7 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerFormat")
     public GetHLSStreamingSessionURLRequestBodyContainerFormatEnum containerFormat;
+
     public GetHLSStreamingSessionURLRequestBody withContainerFormat(GetHLSStreamingSessionURLRequestBodyContainerFormatEnum containerFormat) {
         this.containerFormat = containerFormat;
         return this;
@@ -26,6 +27,7 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscontinuityMode")
     public GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum discontinuityMode;
+
     public GetHLSStreamingSessionURLRequestBody withDiscontinuityMode(GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum discontinuityMode) {
         this.discontinuityMode = discontinuityMode;
         return this;
@@ -37,6 +39,7 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayFragmentTimestamp")
     public GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum displayFragmentTimestamp;
+
     public GetHLSStreamingSessionURLRequestBody withDisplayFragmentTimestamp(GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum displayFragmentTimestamp) {
         this.displayFragmentTimestamp = displayFragmentTimestamp;
         return this;
@@ -48,6 +51,7 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expires")
     public Long expires;
+
     public GetHLSStreamingSessionURLRequestBody withExpires(Long expires) {
         this.expires = expires;
         return this;
@@ -59,6 +63,7 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HLSFragmentSelector")
     public GetHLSStreamingSessionURLRequestBodyHLSFragmentSelector hlsFragmentSelector;
+
     public GetHLSStreamingSessionURLRequestBody withHLSFragmentSelector(GetHLSStreamingSessionURLRequestBodyHLSFragmentSelector hlsFragmentSelector) {
         this.hlsFragmentSelector = hlsFragmentSelector;
         return this;
@@ -70,6 +75,7 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxMediaPlaylistFragmentResults")
     public Long maxMediaPlaylistFragmentResults;
+
     public GetHLSStreamingSessionURLRequestBody withMaxMediaPlaylistFragmentResults(Long maxMediaPlaylistFragmentResults) {
         this.maxMediaPlaylistFragmentResults = maxMediaPlaylistFragmentResults;
         return this;
@@ -81,6 +87,7 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlaybackMode")
     public GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum playbackMode;
+
     public GetHLSStreamingSessionURLRequestBody withPlaybackMode(GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum playbackMode) {
         this.playbackMode = playbackMode;
         return this;
@@ -92,6 +99,7 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetHLSStreamingSessionURLRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -103,9 +111,11 @@ public class GetHLSStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public GetHLSStreamingSessionURLRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public GetHLSStreamingSessionURLRequestBody(){}
 }

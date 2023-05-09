@@ -15,6 +15,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public BillingGroupListElement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputationPreference")
     public ComputationPreference computationPreference;
+
     public BillingGroupListElement withComputationPreference(ComputationPreference computationPreference) {
         this.computationPreference = computationPreference;
         return this;
@@ -34,6 +36,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public Long creationTime;
+
     public BillingGroupListElement withCreationTime(Long creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -42,6 +45,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public BillingGroupListElement withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +54,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTime")
     public Long lastModifiedTime;
+
     public BillingGroupListElement withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -58,6 +63,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillingGroupListElement withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +72,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryAccountId")
     public String primaryAccountId;
+
     public BillingGroupListElement withPrimaryAccountId(String primaryAccountId) {
         this.primaryAccountId = primaryAccountId;
         return this;
@@ -74,6 +81,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public BillingGroupListElement withSize(Long size) {
         this.size = size;
         return this;
@@ -82,6 +90,7 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public BillingGroupStatusEnum status;
+
     public BillingGroupListElement withStatus(BillingGroupStatusEnum status) {
         this.status = status;
         return this;
@@ -90,9 +99,11 @@ public class BillingGroupListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public BillingGroupListElement withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public BillingGroupListElement(){}
 }

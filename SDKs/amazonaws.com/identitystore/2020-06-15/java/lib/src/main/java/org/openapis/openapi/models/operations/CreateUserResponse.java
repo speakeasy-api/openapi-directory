@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserResponse {
@@ -12,6 +13,7 @@ public class CreateUserResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateUserResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateUserResponse {
      */
     
     public Object conflictException;
+
     public CreateUserResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserResponse {
     
     
     public String contentType;
+
     public CreateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserResponse createUserResponse;
+
     public CreateUserResponse withCreateUserResponse(org.openapis.openapi.models.shared.CreateUserResponse createUserResponse) {
         this.createUserResponse = createUserResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserResponse {
      */
     
     public Object internalServerException;
+
     public CreateUserResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateUserResponse {
     
     
     public Integer statusCode;
+
     public CreateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateUserResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateUserResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateUserResponse {
      */
     
     public Object throttlingException;
+
     public CreateUserResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateUserResponse {
      */
     
     public Object validationException;
+
     public CreateUserResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

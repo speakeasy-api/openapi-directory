@@ -15,6 +15,7 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floating_ips_max")
     public String floatingIpsMax;
+
     public ContainersQuotaInfoOrgQuota withFloatingIpsMax(String floatingIpsMax) {
         this.floatingIpsMax = floatingIpsMax;
         return this;
@@ -26,6 +27,7 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floating_ips_space_default")
     public String floatingIpsSpaceDefault;
+
     public ContainersQuotaInfoOrgQuota withFloatingIpsSpaceDefault(String floatingIpsSpaceDefault) {
         this.floatingIpsSpaceDefault = floatingIpsSpaceDefault;
         return this;
@@ -37,6 +39,7 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floating_ips_usage")
     public Integer floatingIpsUsage;
+
     public ContainersQuotaInfoOrgQuota withFloatingIpsUsage(Integer floatingIpsUsage) {
         this.floatingIpsUsage = floatingIpsUsage;
         return this;
@@ -48,6 +51,7 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ram_max")
     public Integer ramMax;
+
     public ContainersQuotaInfoOrgQuota withRamMax(Integer ramMax) {
         this.ramMax = ramMax;
         return this;
@@ -59,6 +63,7 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ram_space_default")
     public Integer ramSpaceDefault;
+
     public ContainersQuotaInfoOrgQuota withRamSpaceDefault(Integer ramSpaceDefault) {
         this.ramSpaceDefault = ramSpaceDefault;
         return this;
@@ -70,6 +75,7 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ram_usage")
     public Integer ramUsage;
+
     public ContainersQuotaInfoOrgQuota withRamUsage(Integer ramUsage) {
         this.ramUsage = ramUsage;
         return this;
@@ -81,6 +87,7 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnet_usage")
     public Integer subnetUsage;
+
     public ContainersQuotaInfoOrgQuota withSubnetUsage(Integer subnetUsage) {
         this.subnetUsage = subnetUsage;
         return this;
@@ -92,6 +99,7 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets_default")
     public Integer subnetsDefault;
+
     public ContainersQuotaInfoOrgQuota withSubnetsDefault(Integer subnetsDefault) {
         this.subnetsDefault = subnetsDefault;
         return this;
@@ -103,9 +111,11 @@ public class ContainersQuotaInfoOrgQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets_max")
     public Integer subnetsMax;
+
     public ContainersQuotaInfoOrgQuota withSubnetsMax(Integer subnetsMax) {
         this.subnetsMax = subnetsMax;
         return this;
     }
     
+    public ContainersQuotaInfoOrgQuota(){}
 }

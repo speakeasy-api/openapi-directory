@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnvironmentTier {
     
     public String name;
+
     public EnvironmentTier withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class EnvironmentTier {
     
     
     public String type;
+
     public EnvironmentTier withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +28,11 @@ public class EnvironmentTier {
     
     
     public String version;
+
     public EnvironmentTier withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public EnvironmentTier(){}
 }

@@ -15,6 +15,7 @@ public class CandidateProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CandidateArtifactLocations")
     public CandidateArtifactLocations candidateArtifactLocations;
+
     public CandidateProperties withCandidateArtifactLocations(CandidateArtifactLocations candidateArtifactLocations) {
         this.candidateArtifactLocations = candidateArtifactLocations;
         return this;
@@ -23,9 +24,11 @@ public class CandidateProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CandidateMetrics")
     public MetricDatum[] candidateMetrics;
+
     public CandidateProperties withCandidateMetrics(MetricDatum[] candidateMetrics) {
         this.candidateMetrics = candidateMetrics;
         return this;
     }
     
+    public CandidateProperties(){}
 }

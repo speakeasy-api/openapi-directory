@@ -18,6 +18,7 @@ public class AwsSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKeyCreds")
     public AccessKeyCredentials accessKeyCreds;
+
     public AwsSourceDetails withAccessKeyCreds(AccessKeyCredentials accessKeyCreds) {
         this.accessKeyCreds = accessKeyCreds;
         return this;
@@ -29,6 +30,7 @@ public class AwsSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public AwsSourceDetails withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -40,6 +42,7 @@ public class AwsSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public AwsSourceDetails withError(Status error) {
         this.error = error;
         return this;
@@ -51,6 +54,7 @@ public class AwsSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySecurityGroupNames")
     public String[] inventorySecurityGroupNames;
+
     public AwsSourceDetails withInventorySecurityGroupNames(String[] inventorySecurityGroupNames) {
         this.inventorySecurityGroupNames = inventorySecurityGroupNames;
         return this;
@@ -62,6 +66,7 @@ public class AwsSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryTagList")
     public Tag[] inventoryTagList;
+
     public AwsSourceDetails withInventoryTagList(Tag[] inventoryTagList) {
         this.inventoryTagList = inventoryTagList;
         return this;
@@ -73,6 +78,7 @@ public class AwsSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrationResourcesUserTags")
     public java.util.Map<String, String> migrationResourcesUserTags;
+
     public AwsSourceDetails withMigrationResourcesUserTags(java.util.Map<String, String> migrationResourcesUserTags) {
         this.migrationResourcesUserTags = migrationResourcesUserTags;
         return this;
@@ -84,6 +90,7 @@ public class AwsSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicIp")
     public String publicIp;
+
     public AwsSourceDetails withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -95,9 +102,11 @@ public class AwsSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AwsSourceDetailsStateEnum state;
+
     public AwsSourceDetails withState(AwsSourceDetailsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AwsSourceDetails(){}
 }

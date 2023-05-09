@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMaintenanceWindowResponse {
     
     public String contentType;
+
     public DeleteMaintenanceWindowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMaintenanceWindowResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteMaintenanceWindowResult deleteMaintenanceWindowResult;
+
     public DeleteMaintenanceWindowResponse withDeleteMaintenanceWindowResult(org.openapis.openapi.models.shared.DeleteMaintenanceWindowResult deleteMaintenanceWindowResult) {
         this.deleteMaintenanceWindowResult = deleteMaintenanceWindowResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMaintenanceWindowResponse {
      */
     
     public Object internalServerError;
+
     public DeleteMaintenanceWindowResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class DeleteMaintenanceWindowResponse {
     
     
     public Integer statusCode;
+
     public DeleteMaintenanceWindowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteMaintenanceWindowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMaintenanceWindowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMaintenanceWindowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

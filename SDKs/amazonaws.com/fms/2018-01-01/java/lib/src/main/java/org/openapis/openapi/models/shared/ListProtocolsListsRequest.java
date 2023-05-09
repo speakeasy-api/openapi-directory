@@ -12,6 +12,7 @@ public class ListProtocolsListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultLists")
     public Boolean defaultLists;
+
     public ListProtocolsListsRequest withDefaultLists(Boolean defaultLists) {
         this.defaultLists = defaultLists;
         return this;
@@ -19,6 +20,7 @@ public class ListProtocolsListsRequest {
     
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListProtocolsListsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListProtocolsListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProtocolsListsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListProtocolsListsRequest(@JsonProperty("MaxResults") Long maxResults) {
+        this.maxResults = maxResults;
+  }
 }

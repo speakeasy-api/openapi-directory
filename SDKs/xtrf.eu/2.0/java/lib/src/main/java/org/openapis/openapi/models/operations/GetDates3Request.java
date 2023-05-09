@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDates3Request {
@@ -12,9 +13,13 @@ public class GetDates3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public GetDates3Request withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public GetDates3Request(@JsonProperty("taskId") String taskId) {
+        this.taskId = taskId;
+  }
 }

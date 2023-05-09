@@ -15,6 +15,7 @@ public class HoneycodeConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public HoneycodeConnectorProfileCredentials withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -26,6 +27,7 @@ public class HoneycodeConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthRequest")
     public ConnectorOAuthRequest oAuthRequest;
+
     public HoneycodeConnectorProfileCredentials withOAuthRequest(ConnectorOAuthRequest oAuthRequest) {
         this.oAuthRequest = oAuthRequest;
         return this;
@@ -34,9 +36,11 @@ public class HoneycodeConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public HoneycodeConnectorProfileCredentials withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public HoneycodeConnectorProfileCredentials(){}
 }

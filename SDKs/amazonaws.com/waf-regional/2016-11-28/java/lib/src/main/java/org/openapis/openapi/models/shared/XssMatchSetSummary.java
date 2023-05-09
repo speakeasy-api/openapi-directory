@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class XssMatchSetSummary {
     @JsonProperty("Name")
     public String name;
+
     public XssMatchSetSummary withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class XssMatchSetSummary {
     
     @JsonProperty("XssMatchSetId")
     public String xssMatchSetId;
+
     public XssMatchSetSummary withXssMatchSetId(String xssMatchSetId) {
         this.xssMatchSetId = xssMatchSetId;
         return this;
     }
     
+    public XssMatchSetSummary(@JsonProperty("Name") String name, @JsonProperty("XssMatchSetId") String xssMatchSetId) {
+        this.name = name;
+        this.xssMatchSetId = xssMatchSetId;
+  }
 }

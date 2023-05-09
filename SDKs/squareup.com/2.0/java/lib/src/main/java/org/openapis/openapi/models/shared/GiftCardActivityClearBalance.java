@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GiftCardActivityClearBalance {
     @JsonProperty("reason")
     public Object reason;
+
     public GiftCardActivityClearBalance withReason(Object reason) {
         this.reason = reason;
         return this;
     }
     
+    public GiftCardActivityClearBalance(@JsonProperty("reason") Object reason) {
+        this.reason = reason;
+  }
 }

@@ -12,6 +12,7 @@ public class TestSegmentPatternRequestBody {
      */
     @JsonProperty("pattern")
     public String pattern;
+
     public TestSegmentPatternRequestBody withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -22,9 +23,14 @@ public class TestSegmentPatternRequestBody {
      */
     @JsonProperty("payload")
     public String payload;
+
     public TestSegmentPatternRequestBody withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public TestSegmentPatternRequestBody(@JsonProperty("pattern") String pattern, @JsonProperty("payload") String payload) {
+        this.pattern = pattern;
+        this.payload = payload;
+  }
 }

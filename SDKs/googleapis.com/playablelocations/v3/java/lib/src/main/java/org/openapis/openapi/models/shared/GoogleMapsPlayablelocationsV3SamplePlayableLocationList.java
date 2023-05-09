@@ -18,9 +18,11 @@ public class GoogleMapsPlayablelocationsV3SamplePlayableLocationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public GoogleMapsPlayablelocationsV3SamplePlayableLocation[] locations;
+
     public GoogleMapsPlayablelocationsV3SamplePlayableLocationList withLocations(GoogleMapsPlayablelocationsV3SamplePlayableLocation[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3SamplePlayableLocationList(){}
 }

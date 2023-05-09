@@ -18,6 +18,7 @@ public class FormTableDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnDefinitions")
     public FormTableColumnDefinition[] columnDefinitions;
+
     public FormTableDefinition withColumnDefinitions(FormTableColumnDefinition[] columnDefinitions) {
         this.columnDefinitions = columnDefinitions;
         return this;
@@ -29,6 +30,7 @@ public class FormTableDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableID")
     public String tableID;
+
     public FormTableDefinition withTableID(String tableID) {
         this.tableID = tableID;
         return this;
@@ -40,6 +42,7 @@ public class FormTableDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetRowHeight_Relative")
     public Double targetRowHeightRelative;
+
     public FormTableDefinition withTargetRowHeightRelative(Double targetRowHeightRelative) {
         this.targetRowHeightRelative = targetRowHeightRelative;
         return this;
@@ -51,9 +54,11 @@ public class FormTableDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTableHeight_Relative")
     public Double targetTableHeightRelative;
+
     public FormTableDefinition withTargetTableHeightRelative(Double targetTableHeightRelative) {
         this.targetTableHeightRelative = targetTableHeightRelative;
         return this;
     }
     
+    public FormTableDefinition(){}
 }

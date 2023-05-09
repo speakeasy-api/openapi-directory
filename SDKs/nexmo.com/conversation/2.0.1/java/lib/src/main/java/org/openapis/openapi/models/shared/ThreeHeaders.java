@@ -18,9 +18,11 @@ public class ThreeHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public ThreeHeaders withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public ThreeHeaders(){}
 }

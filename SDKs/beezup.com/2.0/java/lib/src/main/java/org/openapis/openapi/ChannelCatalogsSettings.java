@@ -55,11 +55,9 @@ public class ChannelCatalogsSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureChannelCatalogCostSettingsResponse res = new org.openapis.openapi.models.operations.ConfigureChannelCatalogCostSettingsResponse() {{
+        org.openapis.openapi.models.operations.ConfigureChannelCatalogCostSettingsResponse res = new org.openapis.openapi.models.operations.ConfigureChannelCatalogCostSettingsResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -100,11 +98,9 @@ public class ChannelCatalogsSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureChannelCatalogGeneralSettingsResponse res = new org.openapis.openapi.models.operations.ConfigureChannelCatalogGeneralSettingsResponse() {{
+        org.openapis.openapi.models.operations.ConfigureChannelCatalogGeneralSettingsResponse res = new org.openapis.openapi.models.operations.ConfigureChannelCatalogGeneralSettingsResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -140,11 +136,9 @@ public class ChannelCatalogsSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableChannelCatalogResponse res = new org.openapis.openapi.models.operations.DisableChannelCatalogResponse() {{
+        org.openapis.openapi.models.operations.DisableChannelCatalogResponse res = new org.openapis.openapi.models.operations.DisableChannelCatalogResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -180,12 +174,10 @@ public class ChannelCatalogsSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableChannelCatalogResponse res = new org.openapis.openapi.models.operations.EnableChannelCatalogResponse() {{
+        org.openapis.openapi.models.operations.EnableChannelCatalogResponse res = new org.openapis.openapi.models.operations.EnableChannelCatalogResponse(contentType, httpRes.statusCode()) {{
             upgradeOfferRequired = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

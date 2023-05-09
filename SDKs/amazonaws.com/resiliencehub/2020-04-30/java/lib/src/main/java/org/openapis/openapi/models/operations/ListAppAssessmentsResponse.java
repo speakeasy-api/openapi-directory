@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAppAssessmentsResponse {
@@ -12,6 +13,7 @@ public class ListAppAssessmentsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAppAssessmentsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAppAssessmentsResponse {
     
     
     public String contentType;
+
     public ListAppAssessmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAppAssessmentsResponse {
      */
     
     public Object internalServerException;
+
     public ListAppAssessmentsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAppAssessmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppAssessmentsResponse listAppAssessmentsResponse;
+
     public ListAppAssessmentsResponse withListAppAssessmentsResponse(org.openapis.openapi.models.shared.ListAppAssessmentsResponse listAppAssessmentsResponse) {
         this.listAppAssessmentsResponse = listAppAssessmentsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAppAssessmentsResponse {
     
     
     public Integer statusCode;
+
     public ListAppAssessmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAppAssessmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAppAssessmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAppAssessmentsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAppAssessmentsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListAppAssessmentsResponse {
      */
     
     public Object throttlingException;
+
     public ListAppAssessmentsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAppAssessmentsResponse {
      */
     
     public Object validationException;
+
     public ListAppAssessmentsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAppAssessmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContainerServiceResponse {
@@ -12,6 +13,7 @@ public class CreateContainerServiceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateContainerServiceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateContainerServiceResponse {
     
     
     public String contentType;
+
     public CreateContainerServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateContainerServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContainerServiceResult createContainerServiceResult;
+
     public CreateContainerServiceResponse withCreateContainerServiceResult(org.openapis.openapi.models.shared.CreateContainerServiceResult createContainerServiceResult) {
         this.createContainerServiceResult = createContainerServiceResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateContainerServiceResponse {
      */
     
     public Object invalidInputException;
+
     public CreateContainerServiceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateContainerServiceResponse {
      */
     
     public Object notFoundException;
+
     public CreateContainerServiceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateContainerServiceResponse {
      */
     
     public Object serviceException;
+
     public CreateContainerServiceResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateContainerServiceResponse {
     
     
     public Integer statusCode;
+
     public CreateContainerServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateContainerServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContainerServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateContainerServiceResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateContainerServiceResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateContainerServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

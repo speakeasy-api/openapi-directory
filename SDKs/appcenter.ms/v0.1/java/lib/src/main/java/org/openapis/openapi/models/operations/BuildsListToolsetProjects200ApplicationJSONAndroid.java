@@ -14,6 +14,7 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroid {
      */
     @JsonProperty("androidModules")
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules[] androidModules;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroid withAndroidModules(BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules[] androidModules) {
         this.androidModules = androidModules;
         return this;
@@ -25,9 +26,13 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradleWrapperPath")
     public String gradleWrapperPath;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroid withGradleWrapperPath(String gradleWrapperPath) {
         this.gradleWrapperPath = gradleWrapperPath;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONAndroid(@JsonProperty("androidModules") BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules[] androidModules) {
+        this.androidModules = androidModules;
+  }
 }

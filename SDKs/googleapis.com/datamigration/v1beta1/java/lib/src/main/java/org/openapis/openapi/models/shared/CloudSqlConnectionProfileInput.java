@@ -18,9 +18,11 @@ public class CloudSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public CloudSqlSettingsInput settings;
+
     public CloudSqlConnectionProfileInput withSettings(CloudSqlSettingsInput settings) {
         this.settings = settings;
         return this;
     }
     
+    public CloudSqlConnectionProfileInput(){}
 }

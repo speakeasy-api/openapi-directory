@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSessionMatchesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public GetSessionMatchesRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetSessionMatchesRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

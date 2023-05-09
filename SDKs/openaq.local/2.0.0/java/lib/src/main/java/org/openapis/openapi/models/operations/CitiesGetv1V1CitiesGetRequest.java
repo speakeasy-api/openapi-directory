@@ -14,6 +14,7 @@ public class CitiesGetv1V1CitiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
     public String[] city;
+
     public CitiesGetv1V1CitiesGetRequest withCity(String[] city) {
         this.city = city;
         return this;
@@ -26,6 +27,7 @@ public class CitiesGetv1V1CitiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String[] country;
+
     public CitiesGetv1V1CitiesGetRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -38,6 +40,7 @@ public class CitiesGetv1V1CitiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
     public String countryId;
+
     public CitiesGetv1V1CitiesGetRequest withCountryId(String countryId) {
         this.countryId = countryId;
         return this;
@@ -45,6 +48,7 @@ public class CitiesGetv1V1CitiesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity")
     public String entity;
+
     public CitiesGetv1V1CitiesGetRequest withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -55,6 +59,7 @@ public class CitiesGetv1V1CitiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CitiesGetv1V1CitiesGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -62,6 +67,7 @@ public class CitiesGetv1V1CitiesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public CitiesGetv1V1CitiesGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -72,6 +78,7 @@ public class CitiesGetv1V1CitiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public CitiesGetv1V1CitiesGetOrderByCitiesOrderEnum orderBy;
+
     public CitiesGetv1V1CitiesGetRequest withOrderBy(CitiesGetv1V1CitiesGetOrderByCitiesOrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -82,6 +89,7 @@ public class CitiesGetv1V1CitiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CitiesGetv1V1CitiesGetRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -92,9 +100,11 @@ public class CitiesGetv1V1CitiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public CitiesGetv1V1CitiesGetSortSortEnum sort;
+
     public CitiesGetv1V1CitiesGetRequest withSort(CitiesGetv1V1CitiesGetSortSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public CitiesGetv1V1CitiesGetRequest(){}
 }

@@ -343,4 +343,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/VariantImportItemSource.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAnnotationStoreResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateVariantStoreResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

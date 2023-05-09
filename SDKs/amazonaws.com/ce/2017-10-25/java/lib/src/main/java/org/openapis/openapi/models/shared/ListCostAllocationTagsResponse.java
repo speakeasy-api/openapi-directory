@@ -15,6 +15,7 @@ public class ListCostAllocationTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostAllocationTags")
     public CostAllocationTag[] costAllocationTags;
+
     public ListCostAllocationTagsResponse withCostAllocationTags(CostAllocationTag[] costAllocationTags) {
         this.costAllocationTags = costAllocationTags;
         return this;
@@ -23,9 +24,11 @@ public class ListCostAllocationTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCostAllocationTagsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCostAllocationTagsResponse(){}
 }

@@ -15,6 +15,7 @@ public class UpdateDomainConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerConfig")
     public UpdateDomainConfigurationRequestBodyAuthorizerConfig authorizerConfig;
+
     public UpdateDomainConfigurationRequestBody withAuthorizerConfig(UpdateDomainConfigurationRequestBodyAuthorizerConfig authorizerConfig) {
         this.authorizerConfig = authorizerConfig;
         return this;
@@ -26,6 +27,7 @@ public class UpdateDomainConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainConfigurationStatus")
     public UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum domainConfigurationStatus;
+
     public UpdateDomainConfigurationRequestBody withDomainConfigurationStatus(UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum domainConfigurationStatus) {
         this.domainConfigurationStatus = domainConfigurationStatus;
         return this;
@@ -37,9 +39,11 @@ public class UpdateDomainConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeAuthorizerConfig")
     public Boolean removeAuthorizerConfig;
+
     public UpdateDomainConfigurationRequestBody withRemoveAuthorizerConfig(Boolean removeAuthorizerConfig) {
         this.removeAuthorizerConfig = removeAuthorizerConfig;
         return this;
     }
     
+    public UpdateDomainConfigurationRequestBody(){}
 }

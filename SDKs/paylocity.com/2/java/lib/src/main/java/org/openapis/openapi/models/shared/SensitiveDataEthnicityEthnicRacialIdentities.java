@@ -18,9 +18,11 @@ public class SensitiveDataEthnicityEthnicRacialIdentities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SensitiveDataEthnicityEthnicRacialIdentities withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public SensitiveDataEthnicityEthnicRacialIdentities(){}
 }

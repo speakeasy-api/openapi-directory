@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestCreateDeviceSelectionResponse {
     
     public String contentType;
+
     public TestCreateDeviceSelectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestCreateDeviceSelectionResponse {
      */
     
     public TestCreateDeviceSelectionDeviceSelection deviceSelection;
+
     public TestCreateDeviceSelectionResponse withDeviceSelection(TestCreateDeviceSelectionDeviceSelection deviceSelection) {
         this.deviceSelection = deviceSelection;
         return this;
@@ -26,6 +29,7 @@ public class TestCreateDeviceSelectionResponse {
     
     
     public Integer statusCode;
+
     public TestCreateDeviceSelectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TestCreateDeviceSelectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestCreateDeviceSelectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class TestCreateDeviceSelectionResponse {
      */
     
     public TestCreateDeviceSelectionTestCloudErrorDetails testCloudErrorDetails;
+
     public TestCreateDeviceSelectionResponse withTestCloudErrorDetails(TestCreateDeviceSelectionTestCloudErrorDetails testCloudErrorDetails) {
         this.testCloudErrorDetails = testCloudErrorDetails;
         return this;
     }
     
+    public TestCreateDeviceSelectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOp
      */
     
     public org.openapis.openapi.models.shared.BulkListCampaignAssignedTargetingOptionsResponse bulkListCampaignAssignedTargetingOptionsResponse;
+
     public DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse withBulkListCampaignAssignedTargetingOptionsResponse(org.openapis.openapi.models.shared.BulkListCampaignAssignedTargetingOptionsResponse bulkListCampaignAssignedTargetingOptionsResponse) {
         this.bulkListCampaignAssignedTargetingOptionsResponse = bulkListCampaignAssignedTargetingOptionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOp
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOp
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

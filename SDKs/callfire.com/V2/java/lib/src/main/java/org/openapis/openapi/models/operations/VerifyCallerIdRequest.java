@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyCallerIdRequest {
@@ -12,6 +13,7 @@ public class VerifyCallerIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CallerIdVerificationRequest callerIdVerificationRequest;
+
     public VerifyCallerIdRequest withCallerIdVerificationRequest(org.openapis.openapi.models.shared.CallerIdVerificationRequest callerIdVerificationRequest) {
         this.callerIdVerificationRequest = callerIdVerificationRequest;
         return this;
@@ -22,9 +24,13 @@ public class VerifyCallerIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callerid")
     public String callerid;
+
     public VerifyCallerIdRequest withCallerid(String callerid) {
         this.callerid = callerid;
         return this;
     }
     
+    public VerifyCallerIdRequest(@JsonProperty("callerid") String callerid) {
+        this.callerid = callerid;
+  }
 }

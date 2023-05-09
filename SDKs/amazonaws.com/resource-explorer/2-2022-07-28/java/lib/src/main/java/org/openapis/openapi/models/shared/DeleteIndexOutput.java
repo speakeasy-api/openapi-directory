@@ -20,6 +20,7 @@ public class DeleteIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DeleteIndexOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DeleteIndexOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public DeleteIndexOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -38,9 +40,11 @@ public class DeleteIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public IndexStateEnum state;
+
     public DeleteIndexOutput withState(IndexStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DeleteIndexOutput(){}
 }

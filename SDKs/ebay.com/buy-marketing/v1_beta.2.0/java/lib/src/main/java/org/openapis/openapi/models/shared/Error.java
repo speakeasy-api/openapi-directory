@@ -15,6 +15,7 @@ public class Error {
      */
     
     public String category;
+
     public Error withCategory(String category) {
         this.category = category;
         return this;
@@ -25,6 +26,7 @@ public class Error {
      */
     
     public String domain;
+
     public Error withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -35,6 +37,7 @@ public class Error {
      */
     
     public Long errorId;
+
     public Error withErrorId(Long errorId) {
         this.errorId = errorId;
         return this;
@@ -45,6 +48,7 @@ public class Error {
      */
     
     public String[] inputRefIds;
+
     public Error withInputRefIds(String[] inputRefIds) {
         this.inputRefIds = inputRefIds;
         return this;
@@ -55,6 +59,7 @@ public class Error {
      */
     
     public String longMessage;
+
     public Error withLongMessage(String longMessage) {
         this.longMessage = longMessage;
         return this;
@@ -65,6 +70,7 @@ public class Error {
      */
     
     public String message;
+
     public Error withMessage(String message) {
         this.message = message;
         return this;
@@ -75,6 +81,7 @@ public class Error {
      */
     
     public String[] outputRefIds;
+
     public Error withOutputRefIds(String[] outputRefIds) {
         this.outputRefIds = outputRefIds;
         return this;
@@ -85,6 +92,7 @@ public class Error {
      */
     
     public ErrorParameter[] parameters;
+
     public Error withParameters(ErrorParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -95,9 +103,11 @@ public class Error {
      */
     
     public String subdomain;
+
     public Error withSubdomain(String subdomain) {
         this.subdomain = subdomain;
         return this;
     }
     
+    public Error(){}
 }

@@ -18,6 +18,7 @@ public class VideoItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public VideoItem withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -29,9 +30,11 @@ public class VideoItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public Video video;
+
     public VideoItem withVideo(Video video) {
         this.video = video;
         return this;
     }
     
+    public VideoItem(){}
 }

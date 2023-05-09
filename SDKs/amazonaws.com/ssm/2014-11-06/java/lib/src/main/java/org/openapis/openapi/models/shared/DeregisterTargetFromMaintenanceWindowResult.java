@@ -15,6 +15,7 @@ public class DeregisterTargetFromMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public DeregisterTargetFromMaintenanceWindowResult withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
@@ -23,9 +24,11 @@ public class DeregisterTargetFromMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowTargetId")
     public String windowTargetId;
+
     public DeregisterTargetFromMaintenanceWindowResult withWindowTargetId(String windowTargetId) {
         this.windowTargetId = windowTargetId;
         return this;
     }
     
+    public DeregisterTargetFromMaintenanceWindowResult(){}
 }

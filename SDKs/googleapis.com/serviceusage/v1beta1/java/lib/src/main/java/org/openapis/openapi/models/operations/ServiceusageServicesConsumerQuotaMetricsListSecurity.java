@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServiceusageServicesConsumerQuotaMetricsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServiceusageServicesConsumerQuotaMetricsListSecurityOption1 option1;
+
     public ServiceusageServicesConsumerQuotaMetricsListSecurity withOption1(ServiceusageServicesConsumerQuotaMetricsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServiceusageServicesConsumerQuotaMetricsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServiceusageServicesConsumerQuotaMetricsListSecurityOption2 option2;
+
     public ServiceusageServicesConsumerQuotaMetricsListSecurity withOption2(ServiceusageServicesConsumerQuotaMetricsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServiceusageServicesConsumerQuotaMetricsListSecurity(){}
 }

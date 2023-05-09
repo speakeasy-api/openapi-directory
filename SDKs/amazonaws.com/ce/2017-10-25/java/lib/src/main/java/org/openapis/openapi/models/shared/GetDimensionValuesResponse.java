@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDimensionValuesResponse {
     @JsonProperty("DimensionValues")
     public DimensionValuesWithAttributes[] dimensionValues;
+
     public GetDimensionValuesResponse withDimensionValues(DimensionValuesWithAttributes[] dimensionValues) {
         this.dimensionValues = dimensionValues;
         return this;
@@ -22,6 +23,7 @@ public class GetDimensionValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetDimensionValuesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +31,7 @@ public class GetDimensionValuesResponse {
     
     @JsonProperty("ReturnSize")
     public Long returnSize;
+
     public GetDimensionValuesResponse withReturnSize(Long returnSize) {
         this.returnSize = returnSize;
         return this;
@@ -36,9 +39,15 @@ public class GetDimensionValuesResponse {
     
     @JsonProperty("TotalSize")
     public Long totalSize;
+
     public GetDimensionValuesResponse withTotalSize(Long totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GetDimensionValuesResponse(@JsonProperty("DimensionValues") DimensionValuesWithAttributes[] dimensionValues, @JsonProperty("ReturnSize") Long returnSize, @JsonProperty("TotalSize") Long totalSize) {
+        this.dimensionValues = dimensionValues;
+        this.returnSize = returnSize;
+        this.totalSize = totalSize;
+  }
 }

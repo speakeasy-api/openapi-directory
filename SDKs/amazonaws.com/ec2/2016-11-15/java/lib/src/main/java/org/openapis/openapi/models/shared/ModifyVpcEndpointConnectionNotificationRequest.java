@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpcEndpointConnectionNotificationRequest {
     
     public String[] connectionEvents;
+
     public ModifyVpcEndpointConnectionNotificationRequest withConnectionEvents(String[] connectionEvents) {
         this.connectionEvents = connectionEvents;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpcEndpointConnectionNotificationRequest {
     
     
     public String connectionNotificationArn;
+
     public ModifyVpcEndpointConnectionNotificationRequest withConnectionNotificationArn(String connectionNotificationArn) {
         this.connectionNotificationArn = connectionNotificationArn;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVpcEndpointConnectionNotificationRequest {
     
     
     public String connectionNotificationId;
+
     public ModifyVpcEndpointConnectionNotificationRequest withConnectionNotificationId(String connectionNotificationId) {
         this.connectionNotificationId = connectionNotificationId;
         return this;
@@ -30,9 +33,13 @@ public class ModifyVpcEndpointConnectionNotificationRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVpcEndpointConnectionNotificationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public ModifyVpcEndpointConnectionNotificationRequest(@JsonProperty("ConnectionNotificationId") String connectionNotificationId) {
+        this.connectionNotificationId = connectionNotificationId;
+  }
 }

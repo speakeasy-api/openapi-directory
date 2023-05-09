@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatementRequest {
@@ -12,6 +13,7 @@ public class GetStatementRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public GetStatementRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
@@ -19,6 +21,7 @@ public class GetStatementRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=statementID")
     public String statementIDPathParameter;
+
     public GetStatementRequest withStatementIDPathParameter(String statementIDPathParameter) {
         this.statementIDPathParameter = statementIDPathParameter;
         return this;
@@ -29,9 +32,15 @@ public class GetStatementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statementId")
     public String statementIdQueryParameter;
+
     public GetStatementRequest withStatementIdQueryParameter(String statementIdQueryParameter) {
         this.statementIdQueryParameter = statementIdQueryParameter;
         return this;
     }
     
+    public GetStatementRequest(@JsonProperty("Xero-Tenant-Id") String xeroTenantId, @JsonProperty("statementIDPathParameter") String statementIDPathParameter, @JsonProperty("statementIdQueryParameter") String statementIdQueryParameter) {
+        this.xeroTenantId = xeroTenantId;
+        this.statementIDPathParameter = statementIDPathParameter;
+        this.statementIdQueryParameter = statementIdQueryParameter;
+  }
 }

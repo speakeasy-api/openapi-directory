@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditCollectionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CollectionModification collectionModification;
+
     public EditCollectionRequest withCollectionModification(org.openapis.openapi.models.shared.CollectionModification collectionModification) {
         this.collectionModification = collectionModification;
         return this;
@@ -24,9 +26,13 @@ public class EditCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public String collection;
+
     public EditCollectionRequest withCollection(String collection) {
         this.collection = collection;
         return this;
     }
     
+    public EditCollectionRequest(@JsonProperty("collection") String collection) {
+        this.collection = collection;
+  }
 }

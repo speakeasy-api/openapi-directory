@@ -18,6 +18,7 @@ public class InstanceGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstanceGroupListWarningCodeEnum code;
+
     public InstanceGroupListWarning withCode(InstanceGroupListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstanceGroupListWarningData[] data;
+
     public InstanceGroupListWarning withData(InstanceGroupListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstanceGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstanceGroupListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceGroupListWarning(){}
 }

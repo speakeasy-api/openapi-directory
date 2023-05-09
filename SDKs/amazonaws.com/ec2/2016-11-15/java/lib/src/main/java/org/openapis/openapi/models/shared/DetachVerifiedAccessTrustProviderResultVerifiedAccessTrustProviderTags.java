@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTags {
     
     public String key;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderT
     
     
     public String value;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTags(){}
 }

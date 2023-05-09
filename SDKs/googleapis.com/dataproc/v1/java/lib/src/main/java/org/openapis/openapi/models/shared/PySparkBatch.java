@@ -18,6 +18,7 @@ public class PySparkBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveUris")
     public String[] archiveUris;
+
     public PySparkBatch withArchiveUris(String[] archiveUris) {
         this.archiveUris = archiveUris;
         return this;
@@ -29,6 +30,7 @@ public class PySparkBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public PySparkBatch withArgs(String[] args) {
         this.args = args;
         return this;
@@ -40,6 +42,7 @@ public class PySparkBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUris")
     public String[] fileUris;
+
     public PySparkBatch withFileUris(String[] fileUris) {
         this.fileUris = fileUris;
         return this;
@@ -51,6 +54,7 @@ public class PySparkBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jarFileUris")
     public String[] jarFileUris;
+
     public PySparkBatch withJarFileUris(String[] jarFileUris) {
         this.jarFileUris = jarFileUris;
         return this;
@@ -62,6 +66,7 @@ public class PySparkBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainPythonFileUri")
     public String mainPythonFileUri;
+
     public PySparkBatch withMainPythonFileUri(String mainPythonFileUri) {
         this.mainPythonFileUri = mainPythonFileUri;
         return this;
@@ -73,9 +78,11 @@ public class PySparkBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonFileUris")
     public String[] pythonFileUris;
+
     public PySparkBatch withPythonFileUris(String[] pythonFileUris) {
         this.pythonFileUris = pythonFileUris;
         return this;
     }
     
+    public PySparkBatch(){}
 }

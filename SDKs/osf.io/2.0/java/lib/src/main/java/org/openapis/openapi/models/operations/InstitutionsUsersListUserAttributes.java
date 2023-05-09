@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public Boolean active;
+
     public InstitutionsUsersListUserAttributes withActive(Boolean active) {
         this.active = active;
         return this;
@@ -25,6 +27,7 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public OffsetDateTime dateRegistered;
+
     public InstitutionsUsersListUserAttributes withDateRegistered(OffsetDateTime dateRegistered) {
         this.dateRegistered = dateRegistered;
         return this;
@@ -35,6 +38,7 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public String familyName;
+
     public InstitutionsUsersListUserAttributes withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -45,6 +49,7 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public String fullName;
+
     public InstitutionsUsersListUserAttributes withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -55,6 +60,7 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public String givenName;
+
     public InstitutionsUsersListUserAttributes withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -65,6 +71,7 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public String locale;
+
     public InstitutionsUsersListUserAttributes withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -75,6 +82,7 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public String middleNames;
+
     public InstitutionsUsersListUserAttributes withMiddleNames(String middleNames) {
         this.middleNames = middleNames;
         return this;
@@ -85,6 +93,7 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public String suffix;
+
     public InstitutionsUsersListUserAttributes withSuffix(String suffix) {
         this.suffix = suffix;
         return this;
@@ -95,9 +104,15 @@ public class InstitutionsUsersListUserAttributes {
      */
     
     public String timezone;
+
     public InstitutionsUsersListUserAttributes withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public InstitutionsUsersListUserAttributes(@JsonProperty("active") Boolean active, @JsonProperty("date_registered") OffsetDateTime dateRegistered, @JsonProperty("full_name") String fullName) {
+        this.active = active;
+        this.dateRegistered = dateRegistered;
+        this.fullName = fullName;
+  }
 }

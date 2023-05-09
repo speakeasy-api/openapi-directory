@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResults {
     
     public String reservedInstancesId;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResults withReservedInstancesId(String reservedInstancesId) {
         this.reservedInstancesId = reservedInstancesId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration targetConfiguration;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResults withTargetConfiguration(DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration targetConfiguration) {
         this.targetConfiguration = targetConfiguration;
         return this;
     }
     
+    public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResults(){}
 }

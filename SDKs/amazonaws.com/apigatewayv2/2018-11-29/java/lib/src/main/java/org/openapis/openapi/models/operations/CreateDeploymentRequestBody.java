@@ -15,6 +15,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateDeploymentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageName")
     public String stageName;
+
     public CreateDeploymentRequestBody withStageName(String stageName) {
         this.stageName = stageName;
         return this;
     }
     
+    public CreateDeploymentRequestBody(){}
 }

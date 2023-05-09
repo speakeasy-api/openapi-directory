@@ -16,6 +16,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public Integer alternatePlugStyle;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withAlternatePlugStyle(Integer alternatePlugStyle) {
         this.alternatePlugStyle = alternatePlugStyle;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public String alternateUiPlugLabel;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withAlternateUiPlugLabel(String alternateUiPlugLabel) {
         this.alternateUiPlugLabel = alternateUiPlugLabel;
         return this;
@@ -36,6 +38,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public Long enabledMaterialRequirementHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withEnabledMaterialRequirementHash(Long enabledMaterialRequirementHash) {
         this.enabledMaterialRequirementHash = enabledMaterialRequirementHash;
         return this;
@@ -47,6 +50,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public DestinyDefinitionsItemsDestinyPlugRuleDefinition[] enabledRules;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withEnabledRules(DestinyDefinitionsItemsDestinyPlugRuleDefinition[] enabledRules) {
         this.enabledRules = enabledRules;
         return this;
@@ -57,6 +61,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity energyCapacity;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withEnergyCapacity(DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity energyCapacity) {
         this.energyCapacity = energyCapacity;
         return this;
@@ -67,6 +72,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost energyCost;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withEnergyCost(DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost energyCost) {
         this.energyCost = energyCost;
         return this;
@@ -77,6 +83,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public Long insertionMaterialRequirementHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withInsertionMaterialRequirementHash(Long insertionMaterialRequirementHash) {
         this.insertionMaterialRequirementHash = insertionMaterialRequirementHash;
         return this;
@@ -88,6 +95,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public DestinyDefinitionsItemsDestinyPlugRuleDefinition[] insertionRules;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withInsertionRules(DestinyDefinitionsItemsDestinyPlugRuleDefinition[] insertionRules) {
         this.insertionRules = insertionRules;
         return this;
@@ -98,6 +106,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public Boolean isDummyPlug;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withIsDummyPlug(Boolean isDummyPlug) {
         this.isDummyPlug = isDummyPlug;
         return this;
@@ -108,6 +117,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public Boolean onActionRecreateSelf;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withOnActionRecreateSelf(Boolean onActionRecreateSelf) {
         this.onActionRecreateSelf = onActionRecreateSelf;
         return this;
@@ -120,6 +130,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugParentItemOverride parentItemOverride;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withParentItemOverride(DestinyDefinitionsDestinyInventoryItemDefinitionPlugParentItemOverride parentItemOverride) {
         this.parentItemOverride = parentItemOverride;
         return this;
@@ -130,6 +141,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public Integer plugAvailability;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withPlugAvailability(Integer plugAvailability) {
         this.plugAvailability = plugAvailability;
         return this;
@@ -140,6 +152,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public Long plugCategoryHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withPlugCategoryHash(Long plugCategoryHash) {
         this.plugCategoryHash = plugCategoryHash;
         return this;
@@ -150,6 +163,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public String plugCategoryIdentifier;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withPlugCategoryIdentifier(String plugCategoryIdentifier) {
         this.plugCategoryIdentifier = plugCategoryIdentifier;
         return this;
@@ -157,6 +171,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
     
     
     public Integer plugStyle;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withPlugStyle(Integer plugStyle) {
         this.plugStyle = plugStyle;
         return this;
@@ -167,6 +182,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public Long previewItemOverrideHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withPreviewItemOverrideHash(Long previewItemOverrideHash) {
         this.previewItemOverrideHash = previewItemOverrideHash;
         return this;
@@ -177,9 +193,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlug {
      */
     
     public String uiPlugLabel;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug withUiPlugLabel(String uiPlugLabel) {
         this.uiPlugLabel = uiPlugLabel;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionPlug(){}
 }

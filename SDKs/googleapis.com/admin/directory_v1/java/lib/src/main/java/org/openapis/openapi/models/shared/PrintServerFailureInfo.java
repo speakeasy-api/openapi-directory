@@ -18,6 +18,7 @@ public class PrintServerFailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public PrintServerFailureInfoErrorCodeEnum errorCode;
+
     public PrintServerFailureInfo withErrorCode(PrintServerFailureInfoErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,6 +30,7 @@ public class PrintServerFailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public PrintServerFailureInfo withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,6 +42,7 @@ public class PrintServerFailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printServer")
     public PrintServer printServer;
+
     public PrintServerFailureInfo withPrintServer(PrintServer printServer) {
         this.printServer = printServer;
         return this;
@@ -51,9 +54,11 @@ public class PrintServerFailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printServerId")
     public String printServerId;
+
     public PrintServerFailureInfo withPrintServerId(String printServerId) {
         this.printServerId = printServerId;
         return this;
     }
     
+    public PrintServerFailureInfo(){}
 }

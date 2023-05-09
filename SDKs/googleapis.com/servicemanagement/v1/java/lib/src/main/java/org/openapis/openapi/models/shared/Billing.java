@@ -18,9 +18,11 @@ public class Billing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerDestinations")
     public BillingDestination[] consumerDestinations;
+
     public Billing withConsumerDestinations(BillingDestination[] consumerDestinations) {
         this.consumerDestinations = consumerDestinations;
         return this;
     }
     
+    public Billing(){}
 }

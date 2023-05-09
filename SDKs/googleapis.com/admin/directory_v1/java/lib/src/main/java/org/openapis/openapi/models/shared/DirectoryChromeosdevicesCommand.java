@@ -18,6 +18,7 @@ public class DirectoryChromeosdevicesCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandExpireTime")
     public String commandExpireTime;
+
     public DirectoryChromeosdevicesCommand withCommandExpireTime(String commandExpireTime) {
         this.commandExpireTime = commandExpireTime;
         return this;
@@ -29,6 +30,7 @@ public class DirectoryChromeosdevicesCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandId")
     public String commandId;
+
     public DirectoryChromeosdevicesCommand withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -40,6 +42,7 @@ public class DirectoryChromeosdevicesCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandResult")
     public DirectoryChromeosdevicesCommandResult commandResult;
+
     public DirectoryChromeosdevicesCommand withCommandResult(DirectoryChromeosdevicesCommandResult commandResult) {
         this.commandResult = commandResult;
         return this;
@@ -51,6 +54,7 @@ public class DirectoryChromeosdevicesCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueTime")
     public String issueTime;
+
     public DirectoryChromeosdevicesCommand withIssueTime(String issueTime) {
         this.issueTime = issueTime;
         return this;
@@ -62,6 +66,7 @@ public class DirectoryChromeosdevicesCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public DirectoryChromeosdevicesCommand withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -73,6 +78,7 @@ public class DirectoryChromeosdevicesCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DirectoryChromeosdevicesCommandStateEnum state;
+
     public DirectoryChromeosdevicesCommand withState(DirectoryChromeosdevicesCommandStateEnum state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class DirectoryChromeosdevicesCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DirectoryChromeosdevicesCommandTypeEnum type;
+
     public DirectoryChromeosdevicesCommand withType(DirectoryChromeosdevicesCommandTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DirectoryChromeosdevicesCommand(){}
 }

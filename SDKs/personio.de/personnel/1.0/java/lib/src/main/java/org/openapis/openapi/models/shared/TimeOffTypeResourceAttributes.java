@@ -12,9 +12,11 @@ public class TimeOffTypeResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TimeOffTypeResourceAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TimeOffTypeResourceAttributes(){}
 }

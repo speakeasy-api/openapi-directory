@@ -18,6 +18,7 @@ public class SAPODataDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorHandlingConfig")
     public ErrorHandlingConfig errorHandlingConfig;
+
     public SAPODataDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
         this.errorHandlingConfig = errorHandlingConfig;
         return this;
@@ -29,6 +30,7 @@ public class SAPODataDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idFieldNames")
     public String[] idFieldNames;
+
     public SAPODataDestinationProperties withIdFieldNames(String[] idFieldNames) {
         this.idFieldNames = idFieldNames;
         return this;
@@ -36,6 +38,7 @@ public class SAPODataDestinationProperties {
     
     @JsonProperty("objectPath")
     public String objectPath;
+
     public SAPODataDestinationProperties withObjectPath(String objectPath) {
         this.objectPath = objectPath;
         return this;
@@ -44,6 +47,7 @@ public class SAPODataDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successResponseHandlingConfig")
     public SuccessResponseHandlingConfig successResponseHandlingConfig;
+
     public SAPODataDestinationProperties withSuccessResponseHandlingConfig(SuccessResponseHandlingConfig successResponseHandlingConfig) {
         this.successResponseHandlingConfig = successResponseHandlingConfig;
         return this;
@@ -55,9 +59,13 @@ public class SAPODataDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeOperationType")
     public WriteOperationTypeEnum writeOperationType;
+
     public SAPODataDestinationProperties withWriteOperationType(WriteOperationTypeEnum writeOperationType) {
         this.writeOperationType = writeOperationType;
         return this;
     }
     
+    public SAPODataDestinationProperties(@JsonProperty("objectPath") String objectPath) {
+        this.objectPath = objectPath;
+  }
 }

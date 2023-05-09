@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTagsRequest {
     
     public Boolean dryRun;
+
     public DescribeTagsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTagsRequest {
     
     
     public DescribeTagsRequestFilters[] filters;
+
     public DescribeTagsRequest withFilters(DescribeTagsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTagsRequest {
     
     
     public Long maxResults;
+
     public DescribeTagsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,11 @@ public class DescribeTagsRequest {
     
     
     public String nextToken;
+
     public DescribeTagsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeTagsRequest(){}
 }

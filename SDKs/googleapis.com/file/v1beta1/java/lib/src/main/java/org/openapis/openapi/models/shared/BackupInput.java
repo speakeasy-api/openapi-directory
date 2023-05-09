@@ -18,6 +18,7 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BackupInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public BackupInput withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -40,6 +42,7 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public BackupInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceFileShare")
     public String sourceFileShare;
+
     public BackupInput withSourceFileShare(String sourceFileShare) {
         this.sourceFileShare = sourceFileShare;
         return this;
@@ -62,9 +66,11 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstance")
     public String sourceInstance;
+
     public BackupInput withSourceInstance(String sourceInstance) {
         this.sourceInstance = sourceInstance;
         return this;
     }
     
+    public BackupInput(){}
 }

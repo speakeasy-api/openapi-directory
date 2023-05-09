@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateQuantumTaskResponse {
@@ -12,6 +13,7 @@ public class CreateQuantumTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateQuantumTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateQuantumTaskResponse {
     
     
     public String contentType;
+
     public CreateQuantumTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateQuantumTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateQuantumTaskResponse createQuantumTaskResponse;
+
     public CreateQuantumTaskResponse withCreateQuantumTaskResponse(org.openapis.openapi.models.shared.CreateQuantumTaskResponse createQuantumTaskResponse) {
         this.createQuantumTaskResponse = createQuantumTaskResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateQuantumTaskResponse {
      */
     
     public Object deviceOfflineException;
+
     public CreateQuantumTaskResponse withDeviceOfflineException(Object deviceOfflineException) {
         this.deviceOfflineException = deviceOfflineException;
         return this;
@@ -49,6 +54,7 @@ public class CreateQuantumTaskResponse {
      */
     
     public Object deviceRetiredException;
+
     public CreateQuantumTaskResponse withDeviceRetiredException(Object deviceRetiredException) {
         this.deviceRetiredException = deviceRetiredException;
         return this;
@@ -59,6 +65,7 @@ public class CreateQuantumTaskResponse {
      */
     
     public Object internalServiceException;
+
     public CreateQuantumTaskResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateQuantumTaskResponse {
     
     
     public Integer statusCode;
+
     public CreateQuantumTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateQuantumTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateQuantumTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateQuantumTaskResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateQuantumTaskResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateQuantumTaskResponse {
      */
     
     public Object throttlingException;
+
     public CreateQuantumTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateQuantumTaskResponse {
      */
     
     public Object validationException;
+
     public CreateQuantumTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateQuantumTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

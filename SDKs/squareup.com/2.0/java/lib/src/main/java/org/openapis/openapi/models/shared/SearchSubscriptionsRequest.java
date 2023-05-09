@@ -23,6 +23,7 @@ public class SearchSubscriptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchSubscriptionsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -37,6 +38,7 @@ public class SearchSubscriptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchSubscriptionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -48,9 +50,11 @@ public class SearchSubscriptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public SearchSubscriptionsQuery query;
+
     public SearchSubscriptionsRequest withQuery(SearchSubscriptionsQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchSubscriptionsRequest(){}
 }

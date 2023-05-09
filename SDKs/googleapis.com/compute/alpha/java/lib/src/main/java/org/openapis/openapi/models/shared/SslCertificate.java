@@ -18,6 +18,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public String certificate;
+
     public SslCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -29,6 +30,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public SslCertificate withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SslCertificate withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public SslCertificate withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -62,6 +66,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SslCertificate withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SslCertificate withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,6 +90,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managed")
     public SslCertificateManagedSslCertificate managed;
+
     public SslCertificate withManaged(SslCertificateManagedSslCertificate managed) {
         this.managed = managed;
         return this;
@@ -95,6 +102,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SslCertificate withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKey")
     public String privateKey;
+
     public SslCertificate withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -117,6 +126,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public SslCertificate withRegion(String region) {
         this.region = region;
         return this;
@@ -128,6 +138,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public SslCertificate withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -139,6 +150,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public SslCertificate withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -150,6 +162,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfManaged")
     public SslCertificateSelfManagedSslCertificate selfManaged;
+
     public SslCertificate withSelfManaged(SslCertificateSelfManagedSslCertificate selfManaged) {
         this.selfManaged = selfManaged;
         return this;
@@ -161,6 +174,7 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public String[] subjectAlternativeNames;
+
     public SslCertificate withSubjectAlternativeNames(String[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -172,9 +186,11 @@ public class SslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SslCertificateTypeEnum type;
+
     public SslCertificate withType(SslCertificateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SslCertificate(){}
 }

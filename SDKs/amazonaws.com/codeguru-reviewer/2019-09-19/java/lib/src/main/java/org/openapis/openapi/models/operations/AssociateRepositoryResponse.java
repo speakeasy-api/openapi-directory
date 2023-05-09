@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateRepositoryResponse {
@@ -12,6 +13,7 @@ public class AssociateRepositoryResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateRepositoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateRepositoryResponse associateRepositoryResponse;
+
     public AssociateRepositoryResponse withAssociateRepositoryResponse(org.openapis.openapi.models.shared.AssociateRepositoryResponse associateRepositoryResponse) {
         this.associateRepositoryResponse = associateRepositoryResponse;
         return this;
@@ -32,6 +35,7 @@ public class AssociateRepositoryResponse {
      */
     
     public Object conflictException;
+
     public AssociateRepositoryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateRepositoryResponse {
     
     
     public String contentType;
+
     public AssociateRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateRepositoryResponse {
      */
     
     public Object internalServerException;
+
     public AssociateRepositoryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateRepositoryResponse {
     
     
     public Integer statusCode;
+
     public AssociateRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateRepositoryResponse {
      */
     
     public Object throttlingException;
+
     public AssociateRepositoryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class AssociateRepositoryResponse {
      */
     
     public Object validationException;
+
     public AssociateRepositoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

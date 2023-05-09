@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAliasRequest {
@@ -12,6 +13,7 @@ public class CreateAliasRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateAliasRequest createAliasRequest;
+
     public CreateAliasRequest withCreateAliasRequest(org.openapis.openapi.models.shared.CreateAliasRequest createAliasRequest) {
         this.createAliasRequest = createAliasRequest;
         return this;
@@ -22,6 +24,7 @@ public class CreateAliasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public CreateAliasRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -32,9 +35,14 @@ public class CreateAliasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public CreateAliasRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     
+    public CreateAliasRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+  }
 }

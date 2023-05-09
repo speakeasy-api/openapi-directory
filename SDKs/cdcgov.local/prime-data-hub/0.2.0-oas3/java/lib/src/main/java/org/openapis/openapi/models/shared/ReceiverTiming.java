@@ -18,6 +18,7 @@ public class ReceiverTiming {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyAt")
     public Double dailyAt;
+
     public ReceiverTiming withDailyAt(Double dailyAt) {
         this.dailyAt = dailyAt;
         return this;
@@ -28,9 +29,13 @@ public class ReceiverTiming {
      */
     @JsonProperty("frequency")
     public ReceiverTimingFrequencyEnum frequency;
+
     public ReceiverTiming withFrequency(ReceiverTimingFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
     }
     
+    public ReceiverTiming(@JsonProperty("frequency") ReceiverTimingFrequencyEnum frequency) {
+        this.frequency = frequency;
+  }
 }

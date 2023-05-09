@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AnalyticsIndexResponse;
 
 public class Application {
@@ -14,11 +13,13 @@ public class Application {
 
             AnalyticsIndexResponse res = sdk.analyticsGlobal.analyticsIndex();
 
-            if (res.analyticsIndex.isPresent()) {
+            if (res.analyticsIndex != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

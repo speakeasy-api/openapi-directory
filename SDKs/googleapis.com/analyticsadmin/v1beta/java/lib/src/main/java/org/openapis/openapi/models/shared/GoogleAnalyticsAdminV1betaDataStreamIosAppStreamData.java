@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firebaseAppId")
     public String firebaseAppId;
+
     public GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData withFirebaseAppId(String firebaseAppId) {
         this.firebaseAppId = firebaseAppId;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData(){}
 }

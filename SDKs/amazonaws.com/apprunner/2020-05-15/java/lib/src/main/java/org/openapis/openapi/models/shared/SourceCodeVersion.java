@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceCodeVersion {
     @JsonProperty("Type")
     public SourceCodeVersionTypeEnum type;
+
     public SourceCodeVersion withType(SourceCodeVersionTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class SourceCodeVersion {
     
     @JsonProperty("Value")
     public String value;
+
     public SourceCodeVersion withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SourceCodeVersion(@JsonProperty("Type") SourceCodeVersionTypeEnum type, @JsonProperty("Value") String value) {
+        this.type = type;
+        this.value = value;
+  }
 }

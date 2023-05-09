@@ -20,6 +20,7 @@ public class IngestionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestIngestionAttemptEventID")
     public String latestIngestionAttemptEventID;
+
     public IngestionStatus withLatestIngestionAttemptEventID(String latestIngestionAttemptEventID) {
         this.latestIngestionAttemptEventID = latestIngestionAttemptEventID;
         return this;
@@ -30,6 +31,7 @@ public class IngestionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestIngestionAttemptTime")
     public OffsetDateTime latestIngestionAttemptTime;
+
     public IngestionStatus withLatestIngestionAttemptTime(OffsetDateTime latestIngestionAttemptTime) {
         this.latestIngestionAttemptTime = latestIngestionAttemptTime;
         return this;
@@ -38,6 +40,7 @@ public class IngestionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestIngestionErrorCode")
     public String latestIngestionErrorCode;
+
     public IngestionStatus withLatestIngestionErrorCode(String latestIngestionErrorCode) {
         this.latestIngestionErrorCode = latestIngestionErrorCode;
         return this;
@@ -46,6 +49,7 @@ public class IngestionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestIngestionSuccessEventID")
     public String latestIngestionSuccessEventID;
+
     public IngestionStatus withLatestIngestionSuccessEventID(String latestIngestionSuccessEventID) {
         this.latestIngestionSuccessEventID = latestIngestionSuccessEventID;
         return this;
@@ -56,9 +60,11 @@ public class IngestionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestIngestionSuccessTime")
     public OffsetDateTime latestIngestionSuccessTime;
+
     public IngestionStatus withLatestIngestionSuccessTime(OffsetDateTime latestIngestionSuccessTime) {
         this.latestIngestionSuccessTime = latestIngestionSuccessTime;
         return this;
     }
     
+    public IngestionStatus(){}
 }

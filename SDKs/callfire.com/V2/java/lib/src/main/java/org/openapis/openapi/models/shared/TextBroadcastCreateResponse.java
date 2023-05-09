@@ -18,9 +18,11 @@ public class TextBroadcastCreateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TextBroadcastCreateResponse withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public TextBroadcastCreateResponse(){}
 }

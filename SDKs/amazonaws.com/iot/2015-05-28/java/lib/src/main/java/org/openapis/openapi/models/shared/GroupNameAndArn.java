@@ -15,6 +15,7 @@ public class GroupNameAndArn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupArn")
     public String groupArn;
+
     public GroupNameAndArn withGroupArn(String groupArn) {
         this.groupArn = groupArn;
         return this;
@@ -23,9 +24,11 @@ public class GroupNameAndArn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public GroupNameAndArn withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public GroupNameAndArn(){}
 }

@@ -17,6 +17,7 @@ public class ReposCreatePagesSiteRequestBodySource {
      */
     @JsonProperty("branch")
     public ReposCreatePagesSiteRequestBodySourceBranchEnum branch;
+
     public ReposCreatePagesSiteRequestBodySource withBranch(ReposCreatePagesSiteRequestBodySourceBranchEnum branch) {
         this.branch = branch;
         return this;
@@ -28,9 +29,13 @@ public class ReposCreatePagesSiteRequestBodySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public ReposCreatePagesSiteRequestBodySourcePathEnum path;
+
     public ReposCreatePagesSiteRequestBodySource withPath(ReposCreatePagesSiteRequestBodySourcePathEnum path) {
         this.path = path;
         return this;
     }
     
+    public ReposCreatePagesSiteRequestBodySource(@JsonProperty("branch") ReposCreatePagesSiteRequestBodySourceBranchEnum branch) {
+        this.branch = branch;
+  }
 }

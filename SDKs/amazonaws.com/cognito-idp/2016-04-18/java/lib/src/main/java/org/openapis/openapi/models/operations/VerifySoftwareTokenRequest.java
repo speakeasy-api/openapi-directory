@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifySoftwareTokenRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VerifySoftwareTokenRequest verifySoftwareTokenRequest;
+
     public VerifySoftwareTokenRequest withVerifySoftwareTokenRequest(org.openapis.openapi.models.shared.VerifySoftwareTokenRequest verifySoftwareTokenRequest) {
         this.verifySoftwareTokenRequest = verifySoftwareTokenRequest;
         return this;
@@ -16,6 +18,7 @@ public class VerifySoftwareTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public VerifySoftwareTokenRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class VerifySoftwareTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public VerifySoftwareTokenRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class VerifySoftwareTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public VerifySoftwareTokenRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class VerifySoftwareTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public VerifySoftwareTokenRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class VerifySoftwareTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public VerifySoftwareTokenRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class VerifySoftwareTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public VerifySoftwareTokenRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class VerifySoftwareTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public VerifySoftwareTokenRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class VerifySoftwareTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public VerifySoftwareTokenXAmzTargetEnum xAmzTarget;
+
     public VerifySoftwareTokenRequest withXAmzTarget(VerifySoftwareTokenXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public VerifySoftwareTokenRequest(@JsonProperty("VerifySoftwareTokenRequest") org.openapis.openapi.models.shared.VerifySoftwareTokenRequest verifySoftwareTokenRequest, @JsonProperty("X-Amz-Target") VerifySoftwareTokenXAmzTargetEnum xAmzTarget) {
+        this.verifySoftwareTokenRequest = verifySoftwareTokenRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

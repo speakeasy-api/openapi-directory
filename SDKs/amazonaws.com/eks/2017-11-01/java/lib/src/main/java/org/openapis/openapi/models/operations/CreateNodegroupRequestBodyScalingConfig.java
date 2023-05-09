@@ -15,6 +15,7 @@ public class CreateNodegroupRequestBodyScalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredSize")
     public Long desiredSize;
+
     public CreateNodegroupRequestBodyScalingConfig withDesiredSize(Long desiredSize) {
         this.desiredSize = desiredSize;
         return this;
@@ -23,6 +24,7 @@ public class CreateNodegroupRequestBodyScalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSize")
     public Long maxSize;
+
     public CreateNodegroupRequestBodyScalingConfig withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -31,9 +33,11 @@ public class CreateNodegroupRequestBodyScalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minSize")
     public Long minSize;
+
     public CreateNodegroupRequestBodyScalingConfig withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
     }
     
+    public CreateNodegroupRequestBodyScalingConfig(){}
 }

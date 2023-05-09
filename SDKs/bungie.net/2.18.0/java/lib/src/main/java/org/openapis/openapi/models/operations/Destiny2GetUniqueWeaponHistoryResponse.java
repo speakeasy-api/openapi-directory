@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Destiny2GetUniqueWeaponHistoryResponse {
     
     public byte[] body;
+
     public Destiny2GetUniqueWeaponHistoryResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class Destiny2GetUniqueWeaponHistoryResponse {
     
     
     public String contentType;
+
     public Destiny2GetUniqueWeaponHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class Destiny2GetUniqueWeaponHistoryResponse {
     
     
     public Integer statusCode;
+
     public Destiny2GetUniqueWeaponHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class Destiny2GetUniqueWeaponHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Destiny2GetUniqueWeaponHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Destiny2GetUniqueWeaponHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

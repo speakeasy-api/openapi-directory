@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetPoolsAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetPoolsAggregatedListSecurityOption1 option1;
+
     public ComputeTargetPoolsAggregatedListSecurity withOption1(ComputeTargetPoolsAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeTargetPoolsAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetPoolsAggregatedListSecurityOption2 option2;
+
     public ComputeTargetPoolsAggregatedListSecurity withOption2(ComputeTargetPoolsAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeTargetPoolsAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetPoolsAggregatedListSecurityOption3 option3;
+
     public ComputeTargetPoolsAggregatedListSecurity withOption3(ComputeTargetPoolsAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeTargetPoolsAggregatedListSecurity(){}
 }

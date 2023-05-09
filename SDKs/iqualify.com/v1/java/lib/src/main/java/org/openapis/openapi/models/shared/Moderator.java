@@ -12,6 +12,7 @@ public class Moderator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatarUrl")
     public String avatarUrl;
+
     public Moderator withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -20,6 +21,7 @@ public class Moderator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public Moderator withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -28,6 +30,7 @@ public class Moderator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Moderator withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class Moderator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public Moderator withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public Moderator(){}
 }

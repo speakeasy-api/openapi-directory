@@ -15,6 +15,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoriesIds")
     public Long[] categoriesIds;
+
     public ProjectDTOv1 withCategoriesIds(Long[] categoriesIds) {
         this.categoriesIds = categoriesIds;
         return this;
@@ -23,6 +24,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPersonId")
     public Long contactPersonId;
+
     public ProjectDTOv1 withContactPersonId(Long contactPersonId) {
         this.contactPersonId = contactPersonId;
         return this;
@@ -31,6 +33,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public ContactsDTO contacts;
+
     public ProjectDTOv1 withContacts(ContactsDTO contacts) {
         this.contacts = contacts;
         return this;
@@ -39,6 +42,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldDTO[] customFields;
+
     public ProjectDTOv1 withCustomFields(CustomFieldDTO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -47,6 +51,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public ProjectDTOv1 withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -55,6 +60,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates")
     public ProjectDatesDTO dates;
+
     public ProjectDTOv1 withDates(ProjectDatesDTO dates) {
         this.dates = dates;
         return this;
@@ -63,6 +69,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finance")
     public FinanceDTO finance;
+
     public ProjectDTOv1 withFinance(FinanceDTO finance) {
         this.finance = finance;
         return this;
@@ -71,6 +78,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ProjectDTOv1 withId(Long id) {
         this.id = id;
         return this;
@@ -79,6 +87,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idNumber")
     public String idNumber;
+
     public ProjectDTOv1 withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -87,6 +96,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     public InstructionsDTO instructions;
+
     public ProjectDTOv1 withInstructions(InstructionsDTO instructions) {
         this.instructions = instructions;
         return this;
@@ -95,6 +105,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isClassicProject")
     public Boolean isClassicProject;
+
     public ProjectDTOv1 withIsClassicProject(Boolean isClassicProject) {
         this.isClassicProject = isClassicProject;
         return this;
@@ -103,6 +114,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectDTOv1 withName(String name) {
         this.name = name;
         return this;
@@ -111,6 +123,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ProjectDTOv1 withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -119,6 +132,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectManagerId")
     public Long projectManagerId;
+
     public ProjectDTOv1 withProjectManagerId(Long projectManagerId) {
         this.projectManagerId = projectManagerId;
         return this;
@@ -127,6 +141,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specializationId")
     public Long specializationId;
+
     public ProjectDTOv1 withSpecializationId(Long specializationId) {
         this.specializationId = specializationId;
         return this;
@@ -135,6 +150,7 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProjectDTOv1StatusEnum status;
+
     public ProjectDTOv1 withStatus(ProjectDTOv1StatusEnum status) {
         this.status = status;
         return this;
@@ -143,9 +159,11 @@ public class ProjectDTOv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public TaskDTO[] tasks;
+
     public ProjectDTOv1 withTasks(TaskDTO[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public ProjectDTOv1(){}
 }

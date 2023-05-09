@@ -18,6 +18,7 @@ public class AddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AddressType withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class AddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AddressType withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class AddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddressType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AddressType(){}
 }

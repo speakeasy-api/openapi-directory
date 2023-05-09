@@ -18,9 +18,11 @@ public class CreateAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessment")
     public Assessment assessment;
+
     public CreateAssessmentResponse withAssessment(Assessment assessment) {
         this.assessment = assessment;
         return this;
     }
     
+    public CreateAssessmentResponse(){}
 }

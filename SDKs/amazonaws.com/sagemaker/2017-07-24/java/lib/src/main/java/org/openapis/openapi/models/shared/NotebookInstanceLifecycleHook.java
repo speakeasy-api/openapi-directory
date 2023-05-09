@@ -15,9 +15,11 @@ public class NotebookInstanceLifecycleHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public NotebookInstanceLifecycleHook withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public NotebookInstanceLifecycleHook(){}
 }

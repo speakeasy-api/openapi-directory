@@ -18,6 +18,7 @@ public class AddDoNotContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call")
     public Boolean call;
+
     public AddDoNotContactRequest withCall(Boolean call) {
         this.call = call;
         return this;
@@ -29,6 +30,7 @@ public class AddDoNotContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundCall")
     public Boolean inboundCall;
+
     public AddDoNotContactRequest withInboundCall(Boolean inboundCall) {
         this.inboundCall = inboundCall;
         return this;
@@ -40,6 +42,7 @@ public class AddDoNotContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundText")
     public Boolean inboundText;
+
     public AddDoNotContactRequest withInboundText(Boolean inboundText) {
         this.inboundText = inboundText;
         return this;
@@ -51,6 +54,7 @@ public class AddDoNotContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numbers")
     public String[] numbers;
+
     public AddDoNotContactRequest withNumbers(String[] numbers) {
         this.numbers = numbers;
         return this;
@@ -62,6 +66,7 @@ public class AddDoNotContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public AddDoNotContactRequest withSource(String source) {
         this.source = source;
         return this;
@@ -73,9 +78,11 @@ public class AddDoNotContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public Boolean text;
+
     public AddDoNotContactRequest withText(Boolean text) {
         this.text = text;
         return this;
     }
     
+    public AddDoNotContactRequest(){}
 }

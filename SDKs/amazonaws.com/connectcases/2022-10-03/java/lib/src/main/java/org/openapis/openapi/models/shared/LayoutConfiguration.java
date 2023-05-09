@@ -15,9 +15,11 @@ public class LayoutConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLayout")
     public String defaultLayout;
+
     public LayoutConfiguration withDefaultLayout(String defaultLayout) {
         this.defaultLayout = defaultLayout;
         return this;
     }
     
+    public LayoutConfiguration(){}
 }

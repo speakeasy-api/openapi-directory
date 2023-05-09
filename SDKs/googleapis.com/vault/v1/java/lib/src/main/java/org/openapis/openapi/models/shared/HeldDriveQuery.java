@@ -18,6 +18,7 @@ public class HeldDriveQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeSharedDriveFiles")
     public Boolean includeSharedDriveFiles;
+
     public HeldDriveQuery withIncludeSharedDriveFiles(Boolean includeSharedDriveFiles) {
         this.includeSharedDriveFiles = includeSharedDriveFiles;
         return this;
@@ -29,9 +30,11 @@ public class HeldDriveQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeTeamDriveFiles")
     public Boolean includeTeamDriveFiles;
+
     public HeldDriveQuery withIncludeTeamDriveFiles(Boolean includeTeamDriveFiles) {
         this.includeTeamDriveFiles = includeTeamDriveFiles;
         return this;
     }
     
+    public HeldDriveQuery(){}
 }

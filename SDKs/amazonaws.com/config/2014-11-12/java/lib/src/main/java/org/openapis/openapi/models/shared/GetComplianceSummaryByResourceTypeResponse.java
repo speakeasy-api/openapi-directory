@@ -15,9 +15,11 @@ public class GetComplianceSummaryByResourceTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSummariesByResourceType")
     public ComplianceSummaryByResourceType[] complianceSummariesByResourceType;
+
     public GetComplianceSummaryByResourceTypeResponse withComplianceSummariesByResourceType(ComplianceSummaryByResourceType[] complianceSummariesByResourceType) {
         this.complianceSummariesByResourceType = complianceSummariesByResourceType;
         return this;
     }
     
+    public GetComplianceSummaryByResourceTypeResponse(){}
 }

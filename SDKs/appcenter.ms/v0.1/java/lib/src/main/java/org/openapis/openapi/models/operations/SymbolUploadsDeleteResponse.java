@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SymbolUploadsDeleteResponse {
     
     public String contentType;
+
     public SymbolUploadsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SymbolUploadsDeleteResponse {
     
     
     public Integer statusCode;
+
     public SymbolUploadsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SymbolUploadsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SymbolUploadsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SymbolUploadsDeleteResponse {
      */
     
     public SymbolUploadsDelete200ApplicationJSON symbolUploadsDelete200ApplicationJSONObject;
+
     public SymbolUploadsDeleteResponse withSymbolUploadsDelete200ApplicationJSONObject(SymbolUploadsDelete200ApplicationJSON symbolUploadsDelete200ApplicationJSONObject) {
         this.symbolUploadsDelete200ApplicationJSONObject = symbolUploadsDelete200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SymbolUploadsDeleteResponse {
      */
     
     public SymbolUploadsDelete403ApplicationJSON symbolUploadsDelete403ApplicationJSONObject;
+
     public SymbolUploadsDeleteResponse withSymbolUploadsDelete403ApplicationJSONObject(SymbolUploadsDelete403ApplicationJSON symbolUploadsDelete403ApplicationJSONObject) {
         this.symbolUploadsDelete403ApplicationJSONObject = symbolUploadsDelete403ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SymbolUploadsDeleteResponse {
      */
     
     public SymbolUploadsDelete404ApplicationJSON symbolUploadsDelete404ApplicationJSONObject;
+
     public SymbolUploadsDeleteResponse withSymbolUploadsDelete404ApplicationJSONObject(SymbolUploadsDelete404ApplicationJSON symbolUploadsDelete404ApplicationJSONObject) {
         this.symbolUploadsDelete404ApplicationJSONObject = symbolUploadsDelete404ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SymbolUploadsDeleteResponse {
      */
     
     public SymbolUploadsDelete500ApplicationJSON symbolUploadsDelete500ApplicationJSONObject;
+
     public SymbolUploadsDeleteResponse withSymbolUploadsDelete500ApplicationJSONObject(SymbolUploadsDelete500ApplicationJSON symbolUploadsDelete500ApplicationJSONObject) {
         this.symbolUploadsDelete500ApplicationJSONObject = symbolUploadsDelete500ApplicationJSONObject;
         return this;
     }
     
+    public SymbolUploadsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

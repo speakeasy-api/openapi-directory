@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListInstanceGroupsInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ListInstanceGroupsInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -22,9 +23,13 @@ public class ListInstanceGroupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListInstanceGroupsInput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListInstanceGroupsInput(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

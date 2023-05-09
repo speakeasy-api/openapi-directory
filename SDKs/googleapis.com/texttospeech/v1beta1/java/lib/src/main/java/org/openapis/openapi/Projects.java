@@ -59,11 +59,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TexttospeechProjectsLocationsSynthesizeLongAudioResponse res = new org.openapis.openapi.models.operations.TexttospeechProjectsLocationsSynthesizeLongAudioResponse() {{
+        org.openapis.openapi.models.operations.TexttospeechProjectsLocationsSynthesizeLongAudioResponse res = new org.openapis.openapi.models.operations.TexttospeechProjectsLocationsSynthesizeLongAudioResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteDBProxyRequest {
     
     public String dbProxyName;
+
     public DeleteDBProxyRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
     }
     
+    public DeleteDBProxyRequest(@JsonProperty("DBProxyName") String dbProxyName) {
+        this.dbProxyName = dbProxyName;
+  }
 }

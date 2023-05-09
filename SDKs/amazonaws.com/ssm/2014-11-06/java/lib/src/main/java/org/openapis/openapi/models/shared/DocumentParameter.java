@@ -15,6 +15,7 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public String defaultValue;
+
     public DocumentParameter withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,6 +24,7 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DocumentParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DocumentParameter withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public DocumentParameterTypeEnum type;
+
     public DocumentParameter withType(DocumentParameterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DocumentParameter(){}
 }

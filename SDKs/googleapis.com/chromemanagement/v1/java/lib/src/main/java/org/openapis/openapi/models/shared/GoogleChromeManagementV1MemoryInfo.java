@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1MemoryInfo - Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A
+ * GoogleChromeManagementV1MemoryInfo - Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_MEMORY_INFO
  */
 public class GoogleChromeManagementV1MemoryInfo {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1MemoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableRamBytes")
     public String availableRamBytes;
+
     public GoogleChromeManagementV1MemoryInfo withAvailableRamBytes(String availableRamBytes) {
         this.availableRamBytes = availableRamBytes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1MemoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalMemoryEncryption")
     public GoogleChromeManagementV1TotalMemoryEncryptionInfo totalMemoryEncryption;
+
     public GoogleChromeManagementV1MemoryInfo withTotalMemoryEncryption(GoogleChromeManagementV1TotalMemoryEncryptionInfo totalMemoryEncryption) {
         this.totalMemoryEncryption = totalMemoryEncryption;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1MemoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRamBytes")
     public String totalRamBytes;
+
     public GoogleChromeManagementV1MemoryInfo withTotalRamBytes(String totalRamBytes) {
         this.totalRamBytes = totalRamBytes;
         return this;
     }
     
+    public GoogleChromeManagementV1MemoryInfo(){}
 }

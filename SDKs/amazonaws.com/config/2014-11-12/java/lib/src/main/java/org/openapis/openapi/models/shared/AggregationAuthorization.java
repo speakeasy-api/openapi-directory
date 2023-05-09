@@ -20,6 +20,7 @@ public class AggregationAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregationAuthorizationArn")
     public String aggregationAuthorizationArn;
+
     public AggregationAuthorization withAggregationAuthorizationArn(String aggregationAuthorizationArn) {
         this.aggregationAuthorizationArn = aggregationAuthorizationArn;
         return this;
@@ -28,6 +29,7 @@ public class AggregationAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedAccountId")
     public String authorizedAccountId;
+
     public AggregationAuthorization withAuthorizedAccountId(String authorizedAccountId) {
         this.authorizedAccountId = authorizedAccountId;
         return this;
@@ -36,6 +38,7 @@ public class AggregationAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedAwsRegion")
     public String authorizedAwsRegion;
+
     public AggregationAuthorization withAuthorizedAwsRegion(String authorizedAwsRegion) {
         this.authorizedAwsRegion = authorizedAwsRegion;
         return this;
@@ -46,9 +49,11 @@ public class AggregationAuthorization {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AggregationAuthorization withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
     }
     
+    public AggregationAuthorization(){}
 }

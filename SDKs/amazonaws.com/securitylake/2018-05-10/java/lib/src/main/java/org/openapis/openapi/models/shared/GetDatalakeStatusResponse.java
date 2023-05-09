@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatalakeStatusResponse {
     @JsonProperty("accountSourcesList")
     public AccountSources[] accountSourcesList;
+
     public GetDatalakeStatusResponse withAccountSourcesList(AccountSources[] accountSourcesList) {
         this.accountSourcesList = accountSourcesList;
         return this;
@@ -22,9 +23,13 @@ public class GetDatalakeStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetDatalakeStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDatalakeStatusResponse(@JsonProperty("accountSourcesList") AccountSources[] accountSourcesList) {
+        this.accountSourcesList = accountSourcesList;
+  }
 }

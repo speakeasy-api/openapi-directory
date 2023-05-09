@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSimpleQueryRequest {
@@ -12,6 +13,7 @@ public class PostSimpleQueryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PostSimpleQueryRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class PostSimpleQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public PostSimpleQueryRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
     }
     
+    public PostSimpleQueryRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+  }
 }

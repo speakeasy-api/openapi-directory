@@ -12,6 +12,7 @@ public class ScimGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     public String display;
+
     public ScimGroup withDisplay(String display) {
         this.display = display;
         return this;
@@ -20,9 +21,11 @@ public class ScimGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ScimGroup withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ScimGroup(){}
 }

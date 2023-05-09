@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrainProjectRequest {
@@ -12,6 +13,7 @@ public class TrainProjectRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public TrainProjectRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -22,6 +24,7 @@ public class TrainProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceTrain")
     public Boolean forceTrain;
+
     public TrainProjectRequest withForceTrain(Boolean forceTrain) {
         this.forceTrain = forceTrain;
         return this;
@@ -32,6 +35,7 @@ public class TrainProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notificationEmailAddress")
     public String notificationEmailAddress;
+
     public TrainProjectRequest withNotificationEmailAddress(String notificationEmailAddress) {
         this.notificationEmailAddress = notificationEmailAddress;
         return this;
@@ -42,6 +46,7 @@ public class TrainProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public TrainProjectRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -52,6 +57,7 @@ public class TrainProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reservedBudgetInHours")
     public Integer reservedBudgetInHours;
+
     public TrainProjectRequest withReservedBudgetInHours(Integer reservedBudgetInHours) {
         this.reservedBudgetInHours = reservedBudgetInHours;
         return this;
@@ -62,9 +68,14 @@ public class TrainProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trainingType")
     public TrainProjectTrainingTypeEnum trainingType;
+
     public TrainProjectRequest withTrainingType(TrainProjectTrainingTypeEnum trainingType) {
         this.trainingType = trainingType;
         return this;
     }
     
+    public TrainProjectRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

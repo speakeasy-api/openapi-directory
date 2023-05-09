@@ -15,9 +15,11 @@ public class GetWorkspaceMembershipsForWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.WorkspaceMembershipCompact[] data;
+
     public GetWorkspaceMembershipsForWorkspace200ApplicationJSON withData(org.openapis.openapi.models.shared.WorkspaceMembershipCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetWorkspaceMembershipsForWorkspace200ApplicationJSON(){}
 }

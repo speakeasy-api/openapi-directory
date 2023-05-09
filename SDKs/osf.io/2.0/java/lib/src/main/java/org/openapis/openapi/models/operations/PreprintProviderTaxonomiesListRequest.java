@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintProviderTaxonomiesListRequest {
@@ -12,9 +13,13 @@ public class PreprintProviderTaxonomiesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_provider_id")
     public String preprintProviderId;
+
     public PreprintProviderTaxonomiesListRequest withPreprintProviderId(String preprintProviderId) {
         this.preprintProviderId = preprintProviderId;
         return this;
     }
     
+    public PreprintProviderTaxonomiesListRequest(@JsonProperty("preprint_provider_id") String preprintProviderId) {
+        this.preprintProviderId = preprintProviderId;
+  }
 }

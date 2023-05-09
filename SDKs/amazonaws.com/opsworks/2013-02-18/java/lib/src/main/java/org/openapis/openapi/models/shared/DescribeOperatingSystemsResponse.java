@@ -15,9 +15,11 @@ public class DescribeOperatingSystemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystems")
     public OperatingSystem[] operatingSystems;
+
     public DescribeOperatingSystemsResponse withOperatingSystems(OperatingSystem[] operatingSystems) {
         this.operatingSystems = operatingSystems;
         return this;
     }
     
+    public DescribeOperatingSystemsResponse(){}
 }

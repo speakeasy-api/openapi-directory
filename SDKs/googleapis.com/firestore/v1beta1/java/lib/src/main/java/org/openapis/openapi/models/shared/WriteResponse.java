@@ -18,6 +18,7 @@ public class WriteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitTime")
     public String commitTime;
+
     public WriteResponse withCommitTime(String commitTime) {
         this.commitTime = commitTime;
         return this;
@@ -29,6 +30,7 @@ public class WriteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public WriteResponse withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
@@ -40,6 +42,7 @@ public class WriteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamToken")
     public String streamToken;
+
     public WriteResponse withStreamToken(String streamToken) {
         this.streamToken = streamToken;
         return this;
@@ -51,9 +54,11 @@ public class WriteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeResults")
     public WriteResult[] writeResults;
+
     public WriteResponse withWriteResults(WriteResult[] writeResults) {
         this.writeResults = writeResults;
         return this;
     }
     
+    public WriteResponse(){}
 }

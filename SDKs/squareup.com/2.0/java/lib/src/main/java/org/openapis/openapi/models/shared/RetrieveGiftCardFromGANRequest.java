@@ -17,9 +17,13 @@ public class RetrieveGiftCardFromGANRequest {
      */
     @JsonProperty("gan")
     public String gan;
+
     public RetrieveGiftCardFromGANRequest withGan(String gan) {
         this.gan = gan;
         return this;
     }
     
+    public RetrieveGiftCardFromGANRequest(@JsonProperty("gan") String gan) {
+        this.gan = gan;
+  }
 }

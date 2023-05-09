@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDiskRequest {
     @JsonProperty("diskName")
     public String diskName;
+
     public DeleteDiskRequest withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
@@ -19,9 +20,13 @@ public class DeleteDiskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDeleteAddOns")
     public Boolean forceDeleteAddOns;
+
     public DeleteDiskRequest withForceDeleteAddOns(Boolean forceDeleteAddOns) {
         this.forceDeleteAddOns = forceDeleteAddOns;
         return this;
     }
     
+    public DeleteDiskRequest(@JsonProperty("diskName") String diskName) {
+        this.diskName = diskName;
+  }
 }

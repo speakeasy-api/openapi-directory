@@ -15,6 +15,7 @@ public class ResourceInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public String platform;
+
     public ResourceInventory withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -23,6 +24,7 @@ public class ResourceInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformVersion")
     public String platformVersion;
+
     public ResourceInventory withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -31,6 +33,7 @@ public class ResourceInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public ResourceInventory withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -39,6 +42,7 @@ public class ResourceInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ResourceInventory withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -47,6 +51,7 @@ public class ResourceInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceOwningAccountId")
     public String resourceOwningAccountId;
+
     public ResourceInventory withResourceOwningAccountId(String resourceOwningAccountId) {
         this.resourceOwningAccountId = resourceOwningAccountId;
         return this;
@@ -55,9 +60,11 @@ public class ResourceInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public ResourceInventory withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceInventory(){}
 }

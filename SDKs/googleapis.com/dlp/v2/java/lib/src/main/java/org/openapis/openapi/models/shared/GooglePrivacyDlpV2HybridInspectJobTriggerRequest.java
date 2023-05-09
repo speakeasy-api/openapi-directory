@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2HybridInspectJobTriggerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hybridItem")
     public GooglePrivacyDlpV2HybridContentItem hybridItem;
+
     public GooglePrivacyDlpV2HybridInspectJobTriggerRequest withHybridItem(GooglePrivacyDlpV2HybridContentItem hybridItem) {
         this.hybridItem = hybridItem;
         return this;
     }
     
+    public GooglePrivacyDlpV2HybridInspectJobTriggerRequest(){}
 }

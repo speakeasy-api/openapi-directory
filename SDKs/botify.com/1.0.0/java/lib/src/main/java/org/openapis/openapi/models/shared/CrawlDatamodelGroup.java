@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrawlDatamodelGroup {
     @JsonProperty("id")
     public String id;
+
     public CrawlDatamodelGroup withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class CrawlDatamodelGroup {
     
     @JsonProperty("name")
     public String name;
+
     public CrawlDatamodelGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CrawlDatamodelGroup(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResolverEndpointResponse {
     
     public String contentType;
+
     public DeleteResolverEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResolverEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteResolverEndpointResponse deleteResolverEndpointResponse;
+
     public DeleteResolverEndpointResponse withDeleteResolverEndpointResponse(org.openapis.openapi.models.shared.DeleteResolverEndpointResponse deleteResolverEndpointResponse) {
         this.deleteResolverEndpointResponse = deleteResolverEndpointResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResolverEndpointResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteResolverEndpointResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResolverEndpointResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteResolverEndpointResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResolverEndpointResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteResolverEndpointResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteResolverEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteResolverEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteResolverEndpointResponse {
     
     
     public Integer statusCode;
+
     public DeleteResolverEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteResolverEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResolverEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteResolverEndpointResponse {
      */
     
     public Object throttlingException;
+
     public DeleteResolverEndpointResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteResolverEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

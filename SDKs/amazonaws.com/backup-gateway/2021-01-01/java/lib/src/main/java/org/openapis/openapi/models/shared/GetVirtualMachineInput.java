@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetVirtualMachineInput {
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public GetVirtualMachineInput withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public GetVirtualMachineInput(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

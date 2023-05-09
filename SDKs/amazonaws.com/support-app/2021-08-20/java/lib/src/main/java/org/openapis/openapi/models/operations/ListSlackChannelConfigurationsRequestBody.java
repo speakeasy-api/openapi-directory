@@ -15,9 +15,11 @@ public class ListSlackChannelConfigurationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSlackChannelConfigurationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSlackChannelConfigurationsRequestBody(){}
 }

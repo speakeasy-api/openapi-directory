@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations {
     
     public String associationId;
+
     public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssoc
     
     
     public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociationsIamInstanceProfile iamInstanceProfile;
+
     public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations withIamInstanceProfile(DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociationsIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -26,6 +28,7 @@ public class DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssoc
     
     
     public String instanceId;
+
     public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssoc
     
     
     public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociationsStateEnum state;
+
     public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations withState(DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociationsStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +44,11 @@ public class DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssoc
     
     
     public OffsetDateTime timestamp;
+
     public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations(){}
 }

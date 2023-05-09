@@ -91,6 +91,12 @@ public class SDK {
 	
 	
 	
+	
+	
+	
+	
+	
+	
   		
 
 	private HTTPClient _defaultClient;
@@ -195,6 +201,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -232,7 +243,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelImageCreationResponse res = new org.openapis.openapi.models.operations.CancelImageCreationResponse() {{
+        org.openapis.openapi.models.operations.CancelImageCreationResponse res = new org.openapis.openapi.models.operations.CancelImageCreationResponse(contentType, httpRes.statusCode()) {{
             cancelImageCreationResponse = null;
             serviceException = null;
             clientException = null;
@@ -243,8 +254,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -348,7 +357,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateComponentResponse res = new org.openapis.openapi.models.operations.CreateComponentResponse() {{
+        org.openapis.openapi.models.operations.CreateComponentResponse res = new org.openapis.openapi.models.operations.CreateComponentResponse(contentType, httpRes.statusCode()) {{
             createComponentResponse = null;
             serviceException = null;
             clientException = null;
@@ -362,8 +371,6 @@ public class SDK {
             invalidParameterCombinationException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,7 +495,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateContainerRecipeResponse res = new org.openapis.openapi.models.operations.CreateContainerRecipeResponse() {{
+        org.openapis.openapi.models.operations.CreateContainerRecipeResponse res = new org.openapis.openapi.models.operations.CreateContainerRecipeResponse(contentType, httpRes.statusCode()) {{
             createContainerRecipeResponse = null;
             serviceException = null;
             clientException = null;
@@ -502,8 +509,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,7 +633,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDistributionConfigurationResponse res = new org.openapis.openapi.models.operations.CreateDistributionConfigurationResponse() {{
+        org.openapis.openapi.models.operations.CreateDistributionConfigurationResponse res = new org.openapis.openapi.models.operations.CreateDistributionConfigurationResponse(contentType, httpRes.statusCode()) {{
             createDistributionConfigurationResponse = null;
             serviceException = null;
             clientException = null;
@@ -642,8 +647,6 @@ public class SDK {
             invalidParameterCombinationException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -735,7 +738,7 @@ public class SDK {
     }
 
     /**
-     *  Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
+     * Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -768,7 +771,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImageResponse res = new org.openapis.openapi.models.operations.CreateImageResponse() {{
+        org.openapis.openapi.models.operations.CreateImageResponse res = new org.openapis.openapi.models.operations.CreateImageResponse(contentType, httpRes.statusCode()) {{
             createImageResponse = null;
             serviceException = null;
             clientException = null;
@@ -780,8 +783,6 @@ public class SDK {
             resourceInUseException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -859,7 +860,7 @@ public class SDK {
     }
 
     /**
-     *  Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
+     * Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -892,7 +893,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagePipelineResponse res = new org.openapis.openapi.models.operations.CreateImagePipelineResponse() {{
+        org.openapis.openapi.models.operations.CreateImagePipelineResponse res = new org.openapis.openapi.models.operations.CreateImagePipelineResponse(contentType, httpRes.statusCode()) {{
             createImagePipelineResponse = null;
             serviceException = null;
             clientException = null;
@@ -905,8 +906,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -991,7 +990,7 @@ public class SDK {
     }
 
     /**
-     *  Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
+     * Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1024,7 +1023,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImageRecipeResponse res = new org.openapis.openapi.models.operations.CreateImageRecipeResponse() {{
+        org.openapis.openapi.models.operations.CreateImageRecipeResponse res = new org.openapis.openapi.models.operations.CreateImageRecipeResponse(contentType, httpRes.statusCode()) {{
             createImageRecipeResponse = null;
             serviceException = null;
             clientException = null;
@@ -1038,8 +1037,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1131,7 +1128,7 @@ public class SDK {
     }
 
     /**
-     *  Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+     * Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1164,7 +1161,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInfrastructureConfigurationResponse res = new org.openapis.openapi.models.operations.CreateInfrastructureConfigurationResponse() {{
+        org.openapis.openapi.models.operations.CreateInfrastructureConfigurationResponse res = new org.openapis.openapi.models.operations.CreateInfrastructureConfigurationResponse(contentType, httpRes.statusCode()) {{
             createInfrastructureConfigurationResponse = null;
             serviceException = null;
             clientException = null;
@@ -1177,8 +1174,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1263,7 +1258,7 @@ public class SDK {
     }
 
     /**
-     *  Deletes a component build version.
+     * Deletes a component build version.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1297,7 +1292,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteComponentResponse res = new org.openapis.openapi.models.operations.DeleteComponentResponse() {{
+        org.openapis.openapi.models.operations.DeleteComponentResponse res = new org.openapis.openapi.models.operations.DeleteComponentResponse(contentType, httpRes.statusCode()) {{
             deleteComponentResponse = null;
             serviceException = null;
             clientException = null;
@@ -1307,8 +1302,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1406,7 +1399,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteContainerRecipeResponse res = new org.openapis.openapi.models.operations.DeleteContainerRecipeResponse() {{
+        org.openapis.openapi.models.operations.DeleteContainerRecipeResponse res = new org.openapis.openapi.models.operations.DeleteContainerRecipeResponse(contentType, httpRes.statusCode()) {{
             deleteContainerRecipeResponse = null;
             serviceException = null;
             clientException = null;
@@ -1416,8 +1409,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1481,7 +1472,7 @@ public class SDK {
     }
 
     /**
-     *  Deletes a distribution configuration.
+     * Deletes a distribution configuration.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1515,7 +1506,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDistributionConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteDistributionConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteDistributionConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteDistributionConfigurationResponse(contentType, httpRes.statusCode()) {{
             deleteDistributionConfigurationResponse = null;
             serviceException = null;
             clientException = null;
@@ -1525,8 +1516,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1624,7 +1613,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteImageResponse res = new org.openapis.openapi.models.operations.DeleteImageResponse() {{
+        org.openapis.openapi.models.operations.DeleteImageResponse res = new org.openapis.openapi.models.operations.DeleteImageResponse(contentType, httpRes.statusCode()) {{
             deleteImageResponse = null;
             serviceException = null;
             clientException = null;
@@ -1634,8 +1623,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1699,7 +1686,7 @@ public class SDK {
     }
 
     /**
-     *  Deletes an image pipeline.
+     * Deletes an image pipeline.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1733,7 +1720,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteImagePipelineResponse res = new org.openapis.openapi.models.operations.DeleteImagePipelineResponse() {{
+        org.openapis.openapi.models.operations.DeleteImagePipelineResponse res = new org.openapis.openapi.models.operations.DeleteImagePipelineResponse(contentType, httpRes.statusCode()) {{
             deleteImagePipelineResponse = null;
             serviceException = null;
             clientException = null;
@@ -1743,8 +1730,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1808,7 +1793,7 @@ public class SDK {
     }
 
     /**
-     *  Deletes an image recipe.
+     * Deletes an image recipe.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1842,7 +1827,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteImageRecipeResponse res = new org.openapis.openapi.models.operations.DeleteImageRecipeResponse() {{
+        org.openapis.openapi.models.operations.DeleteImageRecipeResponse res = new org.openapis.openapi.models.operations.DeleteImageRecipeResponse(contentType, httpRes.statusCode()) {{
             deleteImageRecipeResponse = null;
             serviceException = null;
             clientException = null;
@@ -1852,8 +1837,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1917,7 +1900,7 @@ public class SDK {
     }
 
     /**
-     *  Deletes an infrastructure configuration.
+     * Deletes an infrastructure configuration.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1951,7 +1934,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteInfrastructureConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteInfrastructureConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteInfrastructureConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteInfrastructureConfigurationResponse(contentType, httpRes.statusCode()) {{
             deleteInfrastructureConfigurationResponse = null;
             serviceException = null;
             clientException = null;
@@ -1961,8 +1944,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2026,7 +2007,7 @@ public class SDK {
     }
 
     /**
-     *  Gets a component object.
+     * Gets a component object.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2060,7 +2041,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetComponentResponse res = new org.openapis.openapi.models.operations.GetComponentResponse() {{
+        org.openapis.openapi.models.operations.GetComponentResponse res = new org.openapis.openapi.models.operations.GetComponentResponse(contentType, httpRes.statusCode()) {{
             getComponentResponse = null;
             serviceException = null;
             clientException = null;
@@ -2069,8 +2050,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2127,7 +2106,7 @@ public class SDK {
     }
 
     /**
-     *  Gets a component policy.
+     * Gets a component policy.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2161,7 +2140,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetComponentPolicyResponse res = new org.openapis.openapi.models.operations.GetComponentPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetComponentPolicyResponse res = new org.openapis.openapi.models.operations.GetComponentPolicyResponse(contentType, httpRes.statusCode()) {{
             getComponentPolicyResponse = null;
             serviceException = null;
             serviceUnavailableException = null;
@@ -2170,8 +2149,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2262,7 +2239,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContainerRecipeResponse res = new org.openapis.openapi.models.operations.GetContainerRecipeResponse() {{
+        org.openapis.openapi.models.operations.GetContainerRecipeResponse res = new org.openapis.openapi.models.operations.GetContainerRecipeResponse(contentType, httpRes.statusCode()) {{
             getContainerRecipeResponse = null;
             serviceException = null;
             clientException = null;
@@ -2271,8 +2248,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2363,7 +2338,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContainerRecipePolicyResponse res = new org.openapis.openapi.models.operations.GetContainerRecipePolicyResponse() {{
+        org.openapis.openapi.models.operations.GetContainerRecipePolicyResponse res = new org.openapis.openapi.models.operations.GetContainerRecipePolicyResponse(contentType, httpRes.statusCode()) {{
             getContainerRecipePolicyResponse = null;
             serviceException = null;
             serviceUnavailableException = null;
@@ -2372,8 +2347,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2430,7 +2403,7 @@ public class SDK {
     }
 
     /**
-     *  Gets a distribution configuration.
+     * Gets a distribution configuration.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2464,7 +2437,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistributionConfigurationResponse res = new org.openapis.openapi.models.operations.GetDistributionConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetDistributionConfigurationResponse res = new org.openapis.openapi.models.operations.GetDistributionConfigurationResponse(contentType, httpRes.statusCode()) {{
             getDistributionConfigurationResponse = null;
             serviceException = null;
             clientException = null;
@@ -2473,8 +2446,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2531,7 +2502,7 @@ public class SDK {
     }
 
     /**
-     *  Gets an image.
+     * Gets an image.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2565,7 +2536,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImageResponse res = new org.openapis.openapi.models.operations.GetImageResponse() {{
+        org.openapis.openapi.models.operations.GetImageResponse res = new org.openapis.openapi.models.operations.GetImageResponse(contentType, httpRes.statusCode()) {{
             getImageResponse = null;
             serviceException = null;
             clientException = null;
@@ -2574,8 +2545,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2632,7 +2601,7 @@ public class SDK {
     }
 
     /**
-     *  Gets an image pipeline.
+     * Gets an image pipeline.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2666,7 +2635,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagePipelineResponse res = new org.openapis.openapi.models.operations.GetImagePipelineResponse() {{
+        org.openapis.openapi.models.operations.GetImagePipelineResponse res = new org.openapis.openapi.models.operations.GetImagePipelineResponse(contentType, httpRes.statusCode()) {{
             getImagePipelineResponse = null;
             serviceException = null;
             clientException = null;
@@ -2675,8 +2644,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2733,7 +2700,7 @@ public class SDK {
     }
 
     /**
-     *  Gets an image policy.
+     * Gets an image policy.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2767,7 +2734,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagePolicyResponse res = new org.openapis.openapi.models.operations.GetImagePolicyResponse() {{
+        org.openapis.openapi.models.operations.GetImagePolicyResponse res = new org.openapis.openapi.models.operations.GetImagePolicyResponse(contentType, httpRes.statusCode()) {{
             getImagePolicyResponse = null;
             serviceException = null;
             serviceUnavailableException = null;
@@ -2776,8 +2743,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2834,7 +2799,7 @@ public class SDK {
     }
 
     /**
-     *  Gets an image recipe.
+     * Gets an image recipe.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2868,7 +2833,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImageRecipeResponse res = new org.openapis.openapi.models.operations.GetImageRecipeResponse() {{
+        org.openapis.openapi.models.operations.GetImageRecipeResponse res = new org.openapis.openapi.models.operations.GetImageRecipeResponse(contentType, httpRes.statusCode()) {{
             getImageRecipeResponse = null;
             serviceException = null;
             clientException = null;
@@ -2877,8 +2842,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2935,7 +2898,7 @@ public class SDK {
     }
 
     /**
-     *  Gets an image recipe policy.
+     * Gets an image recipe policy.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2969,7 +2932,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImageRecipePolicyResponse res = new org.openapis.openapi.models.operations.GetImageRecipePolicyResponse() {{
+        org.openapis.openapi.models.operations.GetImageRecipePolicyResponse res = new org.openapis.openapi.models.operations.GetImageRecipePolicyResponse(contentType, httpRes.statusCode()) {{
             getImageRecipePolicyResponse = null;
             serviceException = null;
             serviceUnavailableException = null;
@@ -2978,8 +2941,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3036,7 +2997,7 @@ public class SDK {
     }
 
     /**
-     *  Gets an infrastructure configuration.
+     * Gets an infrastructure configuration.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3070,7 +3031,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInfrastructureConfigurationResponse res = new org.openapis.openapi.models.operations.GetInfrastructureConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetInfrastructureConfigurationResponse res = new org.openapis.openapi.models.operations.GetInfrastructureConfigurationResponse(contentType, httpRes.statusCode()) {{
             getInfrastructureConfigurationResponse = null;
             serviceException = null;
             clientException = null;
@@ -3079,8 +3040,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3088,6 +3047,204 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GetInfrastructureConfigurationResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GetInfrastructureConfigurationResponse.class);
                 res.getInfrastructureConfigurationResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.clientException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.forbiddenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.callRateLimitExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Get the runtime information that was logged for a specific runtime instance of the workflow.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetWorkflowExecutionResponse getWorkflowExecution(org.openapis.openapi.models.operations.GetWorkflowExecutionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/GetWorkflowExecution#workflowExecutionId");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkflowExecutionRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetWorkflowExecutionResponse res = new org.openapis.openapi.models.operations.GetWorkflowExecutionResponse(contentType, httpRes.statusCode()) {{
+            getWorkflowExecutionResponse = null;
+            serviceException = null;
+            clientException = null;
+            serviceUnavailableException = null;
+            invalidRequestException = null;
+            forbiddenException = null;
+            callRateLimitExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GetWorkflowExecutionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GetWorkflowExecutionResponse.class);
+                res.getWorkflowExecutionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.clientException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.forbiddenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.callRateLimitExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Get the runtime information that was logged for a specific runtime instance of the workflow step.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetWorkflowStepExecutionResponse getWorkflowStepExecution(org.openapis.openapi.models.operations.GetWorkflowStepExecutionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/GetWorkflowStepExecution#stepExecutionId");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkflowStepExecutionRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetWorkflowStepExecutionResponse res = new org.openapis.openapi.models.operations.GetWorkflowStepExecutionResponse(contentType, httpRes.statusCode()) {{
+            getWorkflowStepExecutionResponse = null;
+            serviceException = null;
+            clientException = null;
+            serviceUnavailableException = null;
+            invalidRequestException = null;
+            forbiddenException = null;
+            callRateLimitExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GetWorkflowStepExecutionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GetWorkflowStepExecutionResponse.class);
+                res.getWorkflowStepExecutionResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -3170,7 +3327,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportComponentResponse res = new org.openapis.openapi.models.operations.ImportComponentResponse() {{
+        org.openapis.openapi.models.operations.ImportComponentResponse res = new org.openapis.openapi.models.operations.ImportComponentResponse(contentType, httpRes.statusCode()) {{
             importComponentResponse = null;
             serviceException = null;
             clientException = null;
@@ -3183,8 +3340,6 @@ public class SDK {
             resourceInUseException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3302,14 +3457,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportVmImageResponse res = new org.openapis.openapi.models.operations.ImportVmImageResponse() {{
+        org.openapis.openapi.models.operations.ImportVmImageResponse res = new org.openapis.openapi.models.operations.ImportVmImageResponse(contentType, httpRes.statusCode()) {{
             importVmImageResponse = null;
             serviceException = null;
             clientException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3345,7 +3498,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; Returns the list of component build versions for the specified semantic version.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The semantic version has four nodes: &amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;.&amp;lt;patch&amp;gt;/&amp;lt;build&amp;gt;. You can assign values for the first three, and can filter on all of them.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Filtering:&lt;/b&gt; With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Returns the list of component build versions for the specified semantic version.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The semantic version has four nodes: &amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;.&amp;lt;patch&amp;gt;/&amp;lt;build&amp;gt;. You can assign values for the first three, and can filter on all of them.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Filtering:&lt;/b&gt; With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3384,7 +3537,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListComponentBuildVersionsResponse res = new org.openapis.openapi.models.operations.ListComponentBuildVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListComponentBuildVersionsResponse res = new org.openapis.openapi.models.operations.ListComponentBuildVersionsResponse(contentType, httpRes.statusCode()) {{
             listComponentBuildVersionsResponse = null;
             serviceException = null;
             clientException = null;
@@ -3394,8 +3547,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3498,7 +3649,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListComponentsResponse res = new org.openapis.openapi.models.operations.ListComponentsResponse() {{
+        org.openapis.openapi.models.operations.ListComponentsResponse res = new org.openapis.openapi.models.operations.ListComponentsResponse(contentType, httpRes.statusCode()) {{
             listComponentsResponse = null;
             serviceException = null;
             clientException = null;
@@ -3508,8 +3659,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3612,7 +3761,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListContainerRecipesResponse res = new org.openapis.openapi.models.operations.ListContainerRecipesResponse() {{
+        org.openapis.openapi.models.operations.ListContainerRecipesResponse res = new org.openapis.openapi.models.operations.ListContainerRecipesResponse(contentType, httpRes.statusCode()) {{
             listContainerRecipesResponse = null;
             serviceException = null;
             clientException = null;
@@ -3622,8 +3771,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3726,7 +3873,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDistributionConfigurationsResponse res = new org.openapis.openapi.models.operations.ListDistributionConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.ListDistributionConfigurationsResponse res = new org.openapis.openapi.models.operations.ListDistributionConfigurationsResponse(contentType, httpRes.statusCode()) {{
             listDistributionConfigurationsResponse = null;
             serviceException = null;
             clientException = null;
@@ -3736,8 +3883,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3801,7 +3946,7 @@ public class SDK {
     }
 
     /**
-     *  Returns a list of image build versions.
+     * Returns a list of image build versions.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3840,7 +3985,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImageBuildVersionsResponse res = new org.openapis.openapi.models.operations.ListImageBuildVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListImageBuildVersionsResponse res = new org.openapis.openapi.models.operations.ListImageBuildVersionsResponse(contentType, httpRes.statusCode()) {{
             listImageBuildVersionsResponse = null;
             serviceException = null;
             clientException = null;
@@ -3850,8 +3995,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3954,7 +4097,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImagePackagesResponse res = new org.openapis.openapi.models.operations.ListImagePackagesResponse() {{
+        org.openapis.openapi.models.operations.ListImagePackagesResponse res = new org.openapis.openapi.models.operations.ListImagePackagesResponse(contentType, httpRes.statusCode()) {{
             listImagePackagesResponse = null;
             serviceException = null;
             clientException = null;
@@ -3965,8 +4108,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4076,7 +4217,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImagePipelineImagesResponse res = new org.openapis.openapi.models.operations.ListImagePipelineImagesResponse() {{
+        org.openapis.openapi.models.operations.ListImagePipelineImagesResponse res = new org.openapis.openapi.models.operations.ListImagePipelineImagesResponse(contentType, httpRes.statusCode()) {{
             listImagePipelineImagesResponse = null;
             serviceException = null;
             clientException = null;
@@ -4087,8 +4228,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4198,7 +4337,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImagePipelinesResponse res = new org.openapis.openapi.models.operations.ListImagePipelinesResponse() {{
+        org.openapis.openapi.models.operations.ListImagePipelinesResponse res = new org.openapis.openapi.models.operations.ListImagePipelinesResponse(contentType, httpRes.statusCode()) {{
             listImagePipelinesResponse = null;
             serviceException = null;
             clientException = null;
@@ -4208,8 +4347,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4273,7 +4410,7 @@ public class SDK {
     }
 
     /**
-     *  Returns a list of image recipes.
+     * Returns a list of image recipes.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4312,7 +4449,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImageRecipesResponse res = new org.openapis.openapi.models.operations.ListImageRecipesResponse() {{
+        org.openapis.openapi.models.operations.ListImageRecipesResponse res = new org.openapis.openapi.models.operations.ListImageRecipesResponse(contentType, httpRes.statusCode()) {{
             listImageRecipesResponse = null;
             serviceException = null;
             clientException = null;
@@ -4322,8 +4459,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4331,6 +4466,230 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListImageRecipesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListImageRecipesResponse.class);
                 res.listImageRecipesResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.clientException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidPaginationTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.forbiddenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.callRateLimitExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Returns a list of image scan aggregations for your account. You can filter by the type of key that Image Builder uses to group results. For example, if you want to get a list of findings by severity level for one of your pipelines, you might specify your pipeline with the &lt;code&gt;imagePipelineArn&lt;/code&gt; filter. If you don't specify a filter, Image Builder returns an aggregation for your account.&lt;/p&gt; &lt;p&gt;To streamline results, you can use the following filters in your request:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;accountId&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;imageBuildVersionArn&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;imagePipelineArn&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;vulnerabilityId&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListImageScanFindingAggregationsResponse listImageScanFindingAggregations(org.openapis.openapi.models.operations.ListImageScanFindingAggregationsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ListImageScanFindingAggregations");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListImageScanFindingAggregationsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListImageScanFindingAggregationsResponse res = new org.openapis.openapi.models.operations.ListImageScanFindingAggregationsResponse(contentType, httpRes.statusCode()) {{
+            listImageScanFindingAggregationsResponse = null;
+            serviceException = null;
+            clientException = null;
+            serviceUnavailableException = null;
+            invalidRequestException = null;
+            invalidPaginationTokenException = null;
+            forbiddenException = null;
+            callRateLimitExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListImageScanFindingAggregationsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListImageScanFindingAggregationsResponse.class);
+                res.listImageScanFindingAggregationsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.clientException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidPaginationTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.forbiddenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.callRateLimitExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns a list of image scan findings for your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListImageScanFindingsResponse listImageScanFindings(org.openapis.openapi.models.operations.ListImageScanFindingsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ListImageScanFindings");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListImageScanFindingsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListImageScanFindingsResponse res = new org.openapis.openapi.models.operations.ListImageScanFindingsResponse(contentType, httpRes.statusCode()) {{
+            listImageScanFindingsResponse = null;
+            serviceException = null;
+            clientException = null;
+            serviceUnavailableException = null;
+            invalidRequestException = null;
+            invalidPaginationTokenException = null;
+            forbiddenException = null;
+            callRateLimitExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListImageScanFindingsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListImageScanFindingsResponse.class);
+                res.listImageScanFindingsResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -4426,7 +4785,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImagesResponse res = new org.openapis.openapi.models.operations.ListImagesResponse() {{
+        org.openapis.openapi.models.operations.ListImagesResponse res = new org.openapis.openapi.models.operations.ListImagesResponse(contentType, httpRes.statusCode()) {{
             listImagesResponse = null;
             serviceException = null;
             clientException = null;
@@ -4436,8 +4795,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4501,7 +4858,7 @@ public class SDK {
     }
 
     /**
-     *  Returns a list of infrastructure configurations.
+     * Returns a list of infrastructure configurations.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4540,7 +4897,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListInfrastructureConfigurationsResponse res = new org.openapis.openapi.models.operations.ListInfrastructureConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.ListInfrastructureConfigurationsResponse res = new org.openapis.openapi.models.operations.ListInfrastructureConfigurationsResponse(contentType, httpRes.statusCode()) {{
             listInfrastructureConfigurationsResponse = null;
             serviceException = null;
             clientException = null;
@@ -4550,8 +4907,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4615,7 +4970,7 @@ public class SDK {
     }
 
     /**
-     *  Returns the list of tags for the specified resource.
+     * Returns the list of tags for the specified resource.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4643,14 +4998,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             serviceException = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4686,7 +5039,231 @@ public class SDK {
     }
 
     /**
-     *  Applies a policy to a component. We recommend that you call the RAM API &lt;a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html"&gt;CreateResourceShare&lt;/a&gt; to share resources. If you call the Image Builder API &lt;code&gt;PutComponentPolicy&lt;/code&gt;, you must also call the RAM API &lt;a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html"&gt;PromoteResourceShareCreatedFromPolicy&lt;/a&gt; in order for the resource to be visible to all principals with whom the resource is shared.
+     * Returns a list of workflow runtime instance metadata objects for a specific image build version.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListWorkflowExecutionsResponse listWorkflowExecutions(org.openapis.openapi.models.operations.ListWorkflowExecutionsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ListWorkflowExecutions");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWorkflowExecutionsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListWorkflowExecutionsResponse res = new org.openapis.openapi.models.operations.ListWorkflowExecutionsResponse(contentType, httpRes.statusCode()) {{
+            listWorkflowExecutionsResponse = null;
+            serviceException = null;
+            clientException = null;
+            serviceUnavailableException = null;
+            invalidRequestException = null;
+            invalidPaginationTokenException = null;
+            forbiddenException = null;
+            callRateLimitExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListWorkflowExecutionsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListWorkflowExecutionsResponse.class);
+                res.listWorkflowExecutionsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.clientException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidPaginationTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.forbiddenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.callRateLimitExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Shows runtime data for each step in a runtime instance of the workflow that you specify in the request.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListWorkflowStepExecutionsResponse listWorkflowStepExecutions(org.openapis.openapi.models.operations.ListWorkflowStepExecutionsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ListWorkflowStepExecutions");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWorkflowStepExecutionsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListWorkflowStepExecutionsResponse res = new org.openapis.openapi.models.operations.ListWorkflowStepExecutionsResponse(contentType, httpRes.statusCode()) {{
+            listWorkflowStepExecutionsResponse = null;
+            serviceException = null;
+            clientException = null;
+            serviceUnavailableException = null;
+            invalidRequestException = null;
+            invalidPaginationTokenException = null;
+            forbiddenException = null;
+            callRateLimitExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListWorkflowStepExecutionsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListWorkflowStepExecutionsResponse.class);
+                res.listWorkflowStepExecutionsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.clientException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidPaginationTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.forbiddenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.callRateLimitExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Applies a policy to a component. We recommend that you call the RAM API &lt;a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html"&gt;CreateResourceShare&lt;/a&gt; to share resources. If you call the Image Builder API &lt;code&gt;PutComponentPolicy&lt;/code&gt;, you must also call the RAM API &lt;a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html"&gt;PromoteResourceShareCreatedFromPolicy&lt;/a&gt; in order for the resource to be visible to all principals with whom the resource is shared.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4719,7 +5296,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutComponentPolicyResponse res = new org.openapis.openapi.models.operations.PutComponentPolicyResponse() {{
+        org.openapis.openapi.models.operations.PutComponentPolicyResponse res = new org.openapis.openapi.models.operations.PutComponentPolicyResponse(contentType, httpRes.statusCode()) {{
             putComponentPolicyResponse = null;
             serviceException = null;
             clientException = null;
@@ -4730,8 +5307,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4835,7 +5410,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutContainerRecipePolicyResponse res = new org.openapis.openapi.models.operations.PutContainerRecipePolicyResponse() {{
+        org.openapis.openapi.models.operations.PutContainerRecipePolicyResponse res = new org.openapis.openapi.models.operations.PutContainerRecipePolicyResponse(contentType, httpRes.statusCode()) {{
             putContainerRecipePolicyResponse = null;
             serviceException = null;
             clientException = null;
@@ -4846,8 +5421,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4951,7 +5524,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutImagePolicyResponse res = new org.openapis.openapi.models.operations.PutImagePolicyResponse() {{
+        org.openapis.openapi.models.operations.PutImagePolicyResponse res = new org.openapis.openapi.models.operations.PutImagePolicyResponse(contentType, httpRes.statusCode()) {{
             putImagePolicyResponse = null;
             serviceException = null;
             clientException = null;
@@ -4962,8 +5535,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5034,7 +5605,7 @@ public class SDK {
     }
 
     /**
-     *  Applies a policy to an image recipe. We recommend that you call the RAM API &lt;a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html"&gt;CreateResourceShare&lt;/a&gt; to share resources. If you call the Image Builder API &lt;code&gt;PutImageRecipePolicy&lt;/code&gt;, you must also call the RAM API &lt;a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html"&gt;PromoteResourceShareCreatedFromPolicy&lt;/a&gt; in order for the resource to be visible to all principals with whom the resource is shared.
+     * Applies a policy to an image recipe. We recommend that you call the RAM API &lt;a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html"&gt;CreateResourceShare&lt;/a&gt; to share resources. If you call the Image Builder API &lt;code&gt;PutImageRecipePolicy&lt;/code&gt;, you must also call the RAM API &lt;a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html"&gt;PromoteResourceShareCreatedFromPolicy&lt;/a&gt; in order for the resource to be visible to all principals with whom the resource is shared.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5067,7 +5638,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutImageRecipePolicyResponse res = new org.openapis.openapi.models.operations.PutImageRecipePolicyResponse() {{
+        org.openapis.openapi.models.operations.PutImageRecipePolicyResponse res = new org.openapis.openapi.models.operations.PutImageRecipePolicyResponse(contentType, httpRes.statusCode()) {{
             putImageRecipePolicyResponse = null;
             serviceException = null;
             clientException = null;
@@ -5078,8 +5649,6 @@ public class SDK {
             forbiddenException = null;
             callRateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5150,7 +5719,7 @@ public class SDK {
     }
 
     /**
-     *  Manually triggers a pipeline to create an image.
+     * Manually triggers a pipeline to create an image.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5183,7 +5752,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartImagePipelineExecutionResponse res = new org.openapis.openapi.models.operations.StartImagePipelineExecutionResponse() {{
+        org.openapis.openapi.models.operations.StartImagePipelineExecutionResponse res = new org.openapis.openapi.models.operations.StartImagePipelineExecutionResponse(contentType, httpRes.statusCode()) {{
             startImagePipelineExecutionResponse = null;
             serviceException = null;
             clientException = null;
@@ -5195,8 +5764,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5274,7 +5841,7 @@ public class SDK {
     }
 
     /**
-     *  Adds a tag to a resource.
+     * Adds a tag to a resource.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5307,14 +5874,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             serviceException = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5350,7 +5915,7 @@ public class SDK {
     }
 
     /**
-     *  Removes a tag from a resource.
+     * Removes a tag from a resource.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5384,14 +5949,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             serviceException = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5427,7 +5990,7 @@ public class SDK {
     }
 
     /**
-     *  Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
+     * Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5460,7 +6023,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDistributionConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateDistributionConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateDistributionConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateDistributionConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateDistributionConfigurationResponse = null;
             serviceException = null;
             clientException = null;
@@ -5472,8 +6035,6 @@ public class SDK {
             resourceInUseException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5551,7 +6112,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.&lt;/p&gt; &lt;note&gt; &lt;p&gt;UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.&lt;/p&gt; &lt;note&gt; &lt;p&gt;UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5584,7 +6145,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateImagePipelineResponse res = new org.openapis.openapi.models.operations.UpdateImagePipelineResponse() {{
+        org.openapis.openapi.models.operations.UpdateImagePipelineResponse res = new org.openapis.openapi.models.operations.UpdateImagePipelineResponse(contentType, httpRes.statusCode()) {{
             updateImagePipelineResponse = null;
             serviceException = null;
             clientException = null;
@@ -5595,8 +6156,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5667,7 +6226,7 @@ public class SDK {
     }
 
     /**
-     *  Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+     * Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5700,7 +6259,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInfrastructureConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateInfrastructureConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateInfrastructureConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateInfrastructureConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateInfrastructureConfigurationResponse = null;
             serviceException = null;
             clientException = null;
@@ -5711,8 +6270,6 @@ public class SDK {
             callRateLimitExceededException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

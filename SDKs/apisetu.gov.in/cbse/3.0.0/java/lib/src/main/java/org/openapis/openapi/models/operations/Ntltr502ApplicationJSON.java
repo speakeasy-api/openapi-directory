@@ -15,6 +15,7 @@ public class Ntltr502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Ntltr502ApplicationJSONErrorEnum error;
+
     public Ntltr502ApplicationJSON withError(Ntltr502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Ntltr502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Ntltr502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Ntltr502ApplicationJSON withErrorDescription(Ntltr502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Ntltr502ApplicationJSON(){}
 }

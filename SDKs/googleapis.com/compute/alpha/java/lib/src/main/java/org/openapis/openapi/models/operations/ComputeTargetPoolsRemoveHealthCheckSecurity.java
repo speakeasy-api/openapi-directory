@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetPoolsRemoveHealthCheckSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetPoolsRemoveHealthCheckSecurityOption1 option1;
+
     public ComputeTargetPoolsRemoveHealthCheckSecurity withOption1(ComputeTargetPoolsRemoveHealthCheckSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeTargetPoolsRemoveHealthCheckSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetPoolsRemoveHealthCheckSecurityOption2 option2;
+
     public ComputeTargetPoolsRemoveHealthCheckSecurity withOption2(ComputeTargetPoolsRemoveHealthCheckSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeTargetPoolsRemoveHealthCheckSecurity(){}
 }

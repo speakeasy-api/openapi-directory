@@ -15,6 +15,7 @@ public class CreateChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelArn")
     public String channelArn;
+
     public CreateChannelResponse withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public Destination[] destinations;
+
     public CreateChannelResponse withDestinations(Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -31,6 +33,7 @@ public class CreateChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateChannelResponse withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class CreateChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public CreateChannelResponse withSource(String source) {
         this.source = source;
         return this;
@@ -50,9 +54,11 @@ public class CreateChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateChannelResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateChannelResponse(){}
 }

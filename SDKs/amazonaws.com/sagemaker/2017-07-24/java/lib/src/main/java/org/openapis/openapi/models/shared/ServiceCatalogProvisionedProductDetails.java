@@ -15,6 +15,7 @@ public class ServiceCatalogProvisionedProductDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductId")
     public String provisionedProductId;
+
     public ServiceCatalogProvisionedProductDetails withProvisionedProductId(String provisionedProductId) {
         this.provisionedProductId = provisionedProductId;
         return this;
@@ -23,9 +24,11 @@ public class ServiceCatalogProvisionedProductDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductStatusMessage")
     public String provisionedProductStatusMessage;
+
     public ServiceCatalogProvisionedProductDetails withProvisionedProductStatusMessage(String provisionedProductStatusMessage) {
         this.provisionedProductStatusMessage = provisionedProductStatusMessage;
         return this;
     }
     
+    public ServiceCatalogProvisionedProductDetails(){}
 }

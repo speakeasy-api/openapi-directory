@@ -15,9 +15,11 @@ public class GetRepositoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryMetadata")
     public RepositoryMetadata repositoryMetadata;
+
     public GetRepositoryOutput withRepositoryMetadata(RepositoryMetadata repositoryMetadata) {
         this.repositoryMetadata = repositoryMetadata;
         return this;
     }
     
+    public GetRepositoryOutput(){}
 }

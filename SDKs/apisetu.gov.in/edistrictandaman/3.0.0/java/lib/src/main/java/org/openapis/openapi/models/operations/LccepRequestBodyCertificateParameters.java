@@ -12,9 +12,13 @@ public class LccepRequestBodyCertificateParameters {
      */
     @JsonProperty("CertificateNumber")
     public String certificateNumber;
+
     public LccepRequestBodyCertificateParameters withCertificateNumber(String certificateNumber) {
         this.certificateNumber = certificateNumber;
         return this;
     }
     
+    public LccepRequestBodyCertificateParameters(@JsonProperty("CertificateNumber") String certificateNumber) {
+        this.certificateNumber = certificateNumber;
+  }
 }

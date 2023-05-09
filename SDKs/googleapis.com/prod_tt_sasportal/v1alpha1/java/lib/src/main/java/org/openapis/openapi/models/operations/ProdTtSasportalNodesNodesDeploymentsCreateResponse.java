@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProdTtSasportalNodesNodesDeploymentsCreateResponse {
     
     public String contentType;
+
     public ProdTtSasportalNodesNodesDeploymentsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProdTtSasportalNodesNodesDeploymentsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.SasPortalDeployment sasPortalDeployment;
+
     public ProdTtSasportalNodesNodesDeploymentsCreateResponse withSasPortalDeployment(org.openapis.openapi.models.shared.SasPortalDeployment sasPortalDeployment) {
         this.sasPortalDeployment = sasPortalDeployment;
         return this;
@@ -26,6 +29,7 @@ public class ProdTtSasportalNodesNodesDeploymentsCreateResponse {
     
     
     public Integer statusCode;
+
     public ProdTtSasportalNodesNodesDeploymentsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProdTtSasportalNodesNodesDeploymentsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProdTtSasportalNodesNodesDeploymentsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProdTtSasportalNodesNodesDeploymentsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachPolicyResponse {
@@ -12,6 +13,7 @@ public class AttachPolicyResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public AttachPolicyResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class AttachPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class AttachPolicyResponse {
      */
     
     public Object concurrentModificationException;
+
     public AttachPolicyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class AttachPolicyResponse {
      */
     
     public Object constraintViolationException;
+
     public AttachPolicyResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class AttachPolicyResponse {
     
     
     public String contentType;
+
     public AttachPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class AttachPolicyResponse {
      */
     
     public Object duplicatePolicyAttachmentException;
+
     public AttachPolicyResponse withDuplicatePolicyAttachmentException(Object duplicatePolicyAttachmentException) {
         this.duplicatePolicyAttachmentException = duplicatePolicyAttachmentException;
         return this;
@@ -69,6 +76,7 @@ public class AttachPolicyResponse {
      */
     
     public Object invalidInputException;
+
     public AttachPolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class AttachPolicyResponse {
      */
     
     public Object policyChangesInProgressException;
+
     public AttachPolicyResponse withPolicyChangesInProgressException(Object policyChangesInProgressException) {
         this.policyChangesInProgressException = policyChangesInProgressException;
         return this;
@@ -89,6 +98,7 @@ public class AttachPolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public AttachPolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class AttachPolicyResponse {
      */
     
     public Object policyTypeNotEnabledException;
+
     public AttachPolicyResponse withPolicyTypeNotEnabledException(Object policyTypeNotEnabledException) {
         this.policyTypeNotEnabledException = policyTypeNotEnabledException;
         return this;
@@ -106,6 +117,7 @@ public class AttachPolicyResponse {
     
     
     public Integer statusCode;
+
     public AttachPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class AttachPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class AttachPolicyResponse {
      */
     
     public Object serviceException;
+
     public AttachPolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -133,6 +147,7 @@ public class AttachPolicyResponse {
      */
     
     public Object targetNotFoundException;
+
     public AttachPolicyResponse withTargetNotFoundException(Object targetNotFoundException) {
         this.targetNotFoundException = targetNotFoundException;
         return this;
@@ -143,6 +158,7 @@ public class AttachPolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AttachPolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -153,9 +169,14 @@ public class AttachPolicyResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public AttachPolicyResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public AttachPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

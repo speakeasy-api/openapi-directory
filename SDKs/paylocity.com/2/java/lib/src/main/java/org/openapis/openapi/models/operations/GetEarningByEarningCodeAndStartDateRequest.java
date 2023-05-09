@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEarningByEarningCodeAndStartDateRequest {
@@ -12,6 +13,7 @@ public class GetEarningByEarningCodeAndStartDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetEarningByEarningCodeAndStartDateRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetEarningByEarningCodeAndStartDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=earningCode")
     public String earningCode;
+
     public GetEarningByEarningCodeAndStartDateRequest withEarningCode(String earningCode) {
         this.earningCode = earningCode;
         return this;
@@ -32,6 +35,7 @@ public class GetEarningByEarningCodeAndStartDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public GetEarningByEarningCodeAndStartDateRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -42,9 +46,16 @@ public class GetEarningByEarningCodeAndStartDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startDate")
     public String startDate;
+
     public GetEarningByEarningCodeAndStartDateRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GetEarningByEarningCodeAndStartDateRequest(@JsonProperty("companyId") String companyId, @JsonProperty("earningCode") String earningCode, @JsonProperty("employeeId") String employeeId, @JsonProperty("startDate") String startDate) {
+        this.companyId = companyId;
+        this.earningCode = earningCode;
+        this.employeeId = employeeId;
+        this.startDate = startDate;
+  }
 }

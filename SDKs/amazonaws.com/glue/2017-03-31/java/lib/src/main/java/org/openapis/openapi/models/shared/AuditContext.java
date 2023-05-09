@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AuditContext - A structure containing information for audit.
+ * AuditContext - A structure containing the Lake Formation audit context.
  */
 public class AuditContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAuditContext")
     public String additionalAuditContext;
+
     public AuditContext withAdditionalAuditContext(String additionalAuditContext) {
         this.additionalAuditContext = additionalAuditContext;
         return this;
@@ -23,6 +24,7 @@ public class AuditContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllColumnsRequested")
     public Boolean allColumnsRequested;
+
     public AuditContext withAllColumnsRequested(Boolean allColumnsRequested) {
         this.allColumnsRequested = allColumnsRequested;
         return this;
@@ -31,9 +33,11 @@ public class AuditContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedColumns")
     public String[] requestedColumns;
+
     public AuditContext withRequestedColumns(String[] requestedColumns) {
         this.requestedColumns = requestedColumns;
         return this;
     }
     
+    public AuditContext(){}
 }

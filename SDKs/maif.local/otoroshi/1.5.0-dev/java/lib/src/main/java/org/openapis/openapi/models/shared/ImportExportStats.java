@@ -15,6 +15,7 @@ public class ImportExportStats {
      */
     @JsonProperty("calls")
     public Long calls;
+
     public ImportExportStats withCalls(Long calls) {
         this.calls = calls;
         return this;
@@ -25,6 +26,7 @@ public class ImportExportStats {
      */
     @JsonProperty("dataIn")
     public Long dataIn;
+
     public ImportExportStats withDataIn(Long dataIn) {
         this.dataIn = dataIn;
         return this;
@@ -35,9 +37,15 @@ public class ImportExportStats {
      */
     @JsonProperty("dataOut")
     public Long dataOut;
+
     public ImportExportStats withDataOut(Long dataOut) {
         this.dataOut = dataOut;
         return this;
     }
     
+    public ImportExportStats(@JsonProperty("calls") Long calls, @JsonProperty("dataIn") Long dataIn, @JsonProperty("dataOut") Long dataOut) {
+        this.calls = calls;
+        this.dataIn = dataIn;
+        this.dataOut = dataOut;
+  }
 }

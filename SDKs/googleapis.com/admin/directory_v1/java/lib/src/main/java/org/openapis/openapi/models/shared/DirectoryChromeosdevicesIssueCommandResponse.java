@@ -18,9 +18,11 @@ public class DirectoryChromeosdevicesIssueCommandResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandId")
     public String commandId;
+
     public DirectoryChromeosdevicesIssueCommandResponse withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
     }
     
+    public DirectoryChromeosdevicesIssueCommandResponse(){}
 }

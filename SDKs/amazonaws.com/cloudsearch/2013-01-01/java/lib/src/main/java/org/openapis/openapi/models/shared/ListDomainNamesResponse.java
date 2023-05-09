@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ListDomainNamesResponse {
     
     public java.util.Map<String, String> domainNames;
+
     public ListDomainNamesResponse withDomainNames(java.util.Map<String, String> domainNames) {
         this.domainNames = domainNames;
         return this;
     }
     
+    public ListDomainNamesResponse(){}
 }

@@ -15,6 +15,7 @@ public class DetachTypedLinkRequestBodyTypedLinkSpecifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityAttributeValues")
     public org.openapis.openapi.models.shared.AttributeNameAndValue[] identityAttributeValues;
+
     public DetachTypedLinkRequestBodyTypedLinkSpecifier withIdentityAttributeValues(org.openapis.openapi.models.shared.AttributeNameAndValue[] identityAttributeValues) {
         this.identityAttributeValues = identityAttributeValues;
         return this;
@@ -23,6 +24,7 @@ public class DetachTypedLinkRequestBodyTypedLinkSpecifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceObjectReference")
     public org.openapis.openapi.models.shared.ObjectReference sourceObjectReference;
+
     public DetachTypedLinkRequestBodyTypedLinkSpecifier withSourceObjectReference(org.openapis.openapi.models.shared.ObjectReference sourceObjectReference) {
         this.sourceObjectReference = sourceObjectReference;
         return this;
@@ -31,6 +33,7 @@ public class DetachTypedLinkRequestBodyTypedLinkSpecifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetObjectReference")
     public org.openapis.openapi.models.shared.ObjectReference targetObjectReference;
+
     public DetachTypedLinkRequestBodyTypedLinkSpecifier withTargetObjectReference(org.openapis.openapi.models.shared.ObjectReference targetObjectReference) {
         this.targetObjectReference = targetObjectReference;
         return this;
@@ -39,9 +42,11 @@ public class DetachTypedLinkRequestBodyTypedLinkSpecifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypedLinkFacet")
     public org.openapis.openapi.models.shared.TypedLinkSchemaAndFacetName typedLinkFacet;
+
     public DetachTypedLinkRequestBodyTypedLinkSpecifier withTypedLinkFacet(org.openapis.openapi.models.shared.TypedLinkSchemaAndFacetName typedLinkFacet) {
         this.typedLinkFacet = typedLinkFacet;
         return this;
     }
     
+    public DetachTypedLinkRequestBodyTypedLinkSpecifier(){}
 }

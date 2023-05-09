@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteAccountAliasRequest {
     
     public String accountAlias;
+
     public DeleteAccountAliasRequest withAccountAlias(String accountAlias) {
         this.accountAlias = accountAlias;
         return this;
     }
     
+    public DeleteAccountAliasRequest(@JsonProperty("AccountAlias") String accountAlias) {
+        this.accountAlias = accountAlias;
+  }
 }

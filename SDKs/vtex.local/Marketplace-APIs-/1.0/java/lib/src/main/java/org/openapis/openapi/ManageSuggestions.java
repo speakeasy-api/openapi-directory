@@ -67,10 +67,8 @@ public class ManageSuggestions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSuggestionResponse res = new org.openapis.openapi.models.operations.DeleteSuggestionResponse() {{
+        org.openapis.openapi.models.operations.DeleteSuggestionResponse res = new org.openapis.openapi.models.operations.DeleteSuggestionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,10 +122,8 @@ public class ManageSuggestions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveSuggestionResponse res = new org.openapis.openapi.models.operations.SaveSuggestionResponse() {{
+        org.openapis.openapi.models.operations.SaveSuggestionResponse res = new org.openapis.openapi.models.operations.SaveSuggestionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

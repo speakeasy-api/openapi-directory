@@ -15,6 +15,7 @@ public class PublicIpAddressEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ftp_enabled")
     public Boolean ftpEnabled;
+
     public PublicIpAddressEntity withFtpEnabled(Boolean ftpEnabled) {
         this.ftpEnabled = ftpEnabled;
         return this;
@@ -26,6 +27,7 @@ public class PublicIpAddressEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address")
     public String ipAddress;
+
     public PublicIpAddressEntity withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -37,6 +39,7 @@ public class PublicIpAddressEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server_name")
     public String serverName;
+
     public PublicIpAddressEntity withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -45,9 +48,11 @@ public class PublicIpAddressEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sftp_enabled")
     public Boolean sftpEnabled;
+
     public PublicIpAddressEntity withSftpEnabled(Boolean sftpEnabled) {
         this.sftpEnabled = sftpEnabled;
         return this;
     }
     
+    public PublicIpAddressEntity(){}
 }

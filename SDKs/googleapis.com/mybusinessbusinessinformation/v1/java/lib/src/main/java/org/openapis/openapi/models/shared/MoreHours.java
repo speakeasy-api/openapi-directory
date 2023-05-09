@@ -18,6 +18,7 @@ public class MoreHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hoursTypeId")
     public String hoursTypeId;
+
     public MoreHours withHoursTypeId(String hoursTypeId) {
         this.hoursTypeId = hoursTypeId;
         return this;
@@ -29,9 +30,11 @@ public class MoreHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periods")
     public TimePeriod[] periods;
+
     public MoreHours withPeriods(TimePeriod[] periods) {
         this.periods = periods;
         return this;
     }
     
+    public MoreHours(){}
 }

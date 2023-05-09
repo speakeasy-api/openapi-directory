@@ -20,6 +20,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public Command withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -28,6 +29,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchOutputConfig")
     public CloudWatchOutputConfig cloudWatchOutputConfig;
+
     public Command withCloudWatchOutputConfig(CloudWatchOutputConfig cloudWatchOutputConfig) {
         this.cloudWatchOutputConfig = cloudWatchOutputConfig;
         return this;
@@ -36,6 +38,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommandId")
     public String commandId;
+
     public Command withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -44,6 +47,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public String comment;
+
     public Command withComment(String comment) {
         this.comment = comment;
         return this;
@@ -52,6 +56,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletedCount")
     public Long completedCount;
+
     public Command withCompletedCount(Long completedCount) {
         this.completedCount = completedCount;
         return this;
@@ -60,6 +65,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryTimedOutCount")
     public Long deliveryTimedOutCount;
+
     public Command withDeliveryTimedOutCount(Long deliveryTimedOutCount) {
         this.deliveryTimedOutCount = deliveryTimedOutCount;
         return this;
@@ -68,6 +74,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentName")
     public String documentName;
+
     public Command withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -76,6 +83,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public Command withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -84,6 +92,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCount")
     public Long errorCount;
+
     public Command withErrorCount(Long errorCount) {
         this.errorCount = errorCount;
         return this;
@@ -94,6 +103,7 @@ public class Command {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpiresAfter")
     public OffsetDateTime expiresAfter;
+
     public Command withExpiresAfter(OffsetDateTime expiresAfter) {
         this.expiresAfter = expiresAfter;
         return this;
@@ -102,6 +112,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public Command withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -110,6 +121,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public Command withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -118,6 +130,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public Command withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -126,6 +139,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfig")
     public NotificationConfig notificationConfig;
+
     public Command withNotificationConfig(NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -134,6 +148,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3BucketName")
     public String outputS3BucketName;
+
     public Command withOutputS3BucketName(String outputS3BucketName) {
         this.outputS3BucketName = outputS3BucketName;
         return this;
@@ -142,6 +157,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3KeyPrefix")
     public String outputS3KeyPrefix;
+
     public Command withOutputS3KeyPrefix(String outputS3KeyPrefix) {
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         return this;
@@ -150,6 +166,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3Region")
     public String outputS3Region;
+
     public Command withOutputS3Region(String outputS3Region) {
         this.outputS3Region = outputS3Region;
         return this;
@@ -158,6 +175,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public Command withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -168,6 +186,7 @@ public class Command {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedDateTime")
     public OffsetDateTime requestedDateTime;
+
     public Command withRequestedDateTime(OffsetDateTime requestedDateTime) {
         this.requestedDateTime = requestedDateTime;
         return this;
@@ -176,6 +195,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public Command withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -184,6 +204,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CommandStatusEnum status;
+
     public Command withStatus(CommandStatusEnum status) {
         this.status = status;
         return this;
@@ -192,6 +213,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public Command withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -200,6 +222,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetCount")
     public Long targetCount;
+
     public Command withTargetCount(Long targetCount) {
         this.targetCount = targetCount;
         return this;
@@ -208,6 +231,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public Command withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -216,6 +240,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutSeconds")
     public Long timeoutSeconds;
+
     public Command withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
@@ -224,9 +249,11 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggeredAlarms")
     public AlarmStateInformation[] triggeredAlarms;
+
     public Command withTriggeredAlarms(AlarmStateInformation[] triggeredAlarms) {
         this.triggeredAlarms = triggeredAlarms;
         return this;
     }
     
+    public Command(){}
 }

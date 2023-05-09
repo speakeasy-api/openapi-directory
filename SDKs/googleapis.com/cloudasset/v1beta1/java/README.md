@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistorySecurity;
 import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum;
 import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryRequest;
 import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryResponse;
+import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistorySecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -30,41 +29,41 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CloudassetProjectsBatchGetAssetsHistoryRequest req = new CloudassetProjectsBatchGetAssetsHistoryRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
+            CloudassetProjectsBatchGetAssetsHistoryRequest req = new CloudassetProjectsBatchGetAssetsHistoryRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 assetNames = new String[]{{
-                    add("unde"),
                     add("nulla"),
                     add("corrupti"),
                     add("illum"),
                 }};
                 callback = "vel";
-                contentType = "RESOURCE";
+                contentType = CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum.RESOURCE;
                 fields = "deserunt";
                 key = "suscipit";
                 oauthToken = "iure";
-                parent = "magnam";
                 prettyPrint = false;
-                quotaUser = "debitis";
-                readTimeWindowEndTime = "ipsa";
-                readTimeWindowStartTime = "delectus";
-                uploadType = "tempora";
-                uploadProtocol = "suscipit";
-            }}            
+                quotaUser = "magnam";
+                readTimeWindowEndTime = "debitis";
+                readTimeWindowStartTime = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }};            
 
-            CloudassetProjectsBatchGetAssetsHistoryResponse res = sdk.projects.cloudassetProjectsBatchGetAssetsHistory(req, new CloudassetProjectsBatchGetAssetsHistorySecurity() {{
+            CloudassetProjectsBatchGetAssetsHistoryResponse res = sdk.projects.cloudassetProjectsBatchGetAssetsHistory(req, new CloudassetProjectsBatchGetAssetsHistorySecurity("suscipit", "molestiae") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.batchGetAssetsHistoryResponse.isPresent()) {
+            if (res.batchGetAssetsHistoryResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -72,11 +71,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `cloudassetProjectsBatchGetAssetsHistory` - Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps in the output history. Otherwise, this API outputs history with asset in both non-delete or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
-* `cloudassetProjectsExportAssets` - Exports assets with time and resource types to a given Cloud Storage location. The output format is newline-delimited JSON. This API implements the google.longrunning.Operation API allowing you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. For regular-size resource parent, the export operation usually finishes within 5 minutes.
-* `cloudassetProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [cloudassetProjectsBatchGetAssetsHistory](docs/projects/README.md#cloudassetprojectsbatchgetassetshistory) - Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps in the output history. Otherwise, this API outputs history with asset in both non-delete or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
+* [cloudassetProjectsExportAssets](docs/projects/README.md#cloudassetprojectsexportassets) - Exports assets with time and resource types to a given Cloud Storage location. The output format is newline-delimited JSON. This API implements the google.longrunning.Operation API allowing you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. For regular-size resource parent, the export operation usually finishes within 5 minutes.
+* [cloudassetProjectsOperationsGet](docs/projects/README.md#cloudassetprojectsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

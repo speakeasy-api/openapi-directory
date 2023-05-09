@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostGetTerminalDetailsResponse {
     
     public String contentType;
+
     public PostGetTerminalDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostGetTerminalDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTerminalDetailsResponse getTerminalDetailsResponse;
+
     public PostGetTerminalDetailsResponse withGetTerminalDetailsResponse(org.openapis.openapi.models.shared.GetTerminalDetailsResponse getTerminalDetailsResponse) {
         this.getTerminalDetailsResponse = getTerminalDetailsResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostGetTerminalDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostGetTerminalDetailsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostGetTerminalDetailsResponse {
     
     
     public Integer statusCode;
+
     public PostGetTerminalDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostGetTerminalDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostGetTerminalDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostGetTerminalDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegistryCredential {
     @JsonProperty("credential")
     public String credential;
+
     public RegistryCredential withCredential(String credential) {
         this.credential = credential;
         return this;
@@ -19,9 +20,14 @@ public class RegistryCredential {
     
     @JsonProperty("credentialProvider")
     public CredentialProviderTypeEnum credentialProvider;
+
     public RegistryCredential withCredentialProvider(CredentialProviderTypeEnum credentialProvider) {
         this.credentialProvider = credentialProvider;
         return this;
     }
     
+    public RegistryCredential(@JsonProperty("credential") String credential, @JsonProperty("credentialProvider") CredentialProviderTypeEnum credentialProvider) {
+        this.credential = credential;
+        this.credentialProvider = credentialProvider;
+  }
 }

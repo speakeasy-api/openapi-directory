@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartAnnotationImportResponse {
     @JsonProperty("jobId")
     public String jobId;
+
     public StartAnnotationImportResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartAnnotationImportResponse(@JsonProperty("jobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

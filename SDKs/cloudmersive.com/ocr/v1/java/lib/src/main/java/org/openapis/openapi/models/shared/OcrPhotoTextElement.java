@@ -18,6 +18,7 @@ public class OcrPhotoTextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingPoints")
     public Point[] boundingPoints;
+
     public OcrPhotoTextElement withBoundingPoints(Point[] boundingPoints) {
         this.boundingPoints = boundingPoints;
         return this;
@@ -29,6 +30,7 @@ public class OcrPhotoTextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfidenceLevel")
     public Double confidenceLevel;
+
     public OcrPhotoTextElement withConfidenceLevel(Double confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
@@ -40,6 +42,7 @@ public class OcrPhotoTextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Height")
     public Integer height;
+
     public OcrPhotoTextElement withHeight(Integer height) {
         this.height = height;
         return this;
@@ -51,6 +54,7 @@ public class OcrPhotoTextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public OcrPhotoTextElement withText(String text) {
         this.text = text;
         return this;
@@ -62,6 +66,7 @@ public class OcrPhotoTextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Width")
     public Integer width;
+
     public OcrPhotoTextElement withWidth(Integer width) {
         this.width = width;
         return this;
@@ -73,6 +78,7 @@ public class OcrPhotoTextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XLeft")
     public Integer xLeft;
+
     public OcrPhotoTextElement withXLeft(Integer xLeft) {
         this.xLeft = xLeft;
         return this;
@@ -84,9 +90,11 @@ public class OcrPhotoTextElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YTop")
     public Integer yTop;
+
     public OcrPhotoTextElement withYTop(Integer yTop) {
         this.yTop = yTop;
         return this;
     }
     
+    public OcrPhotoTextElement(){}
 }

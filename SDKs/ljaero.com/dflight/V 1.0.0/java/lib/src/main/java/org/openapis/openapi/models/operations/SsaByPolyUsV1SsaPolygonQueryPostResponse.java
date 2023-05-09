@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SsaByPolyUsV1SsaPolygonQueryPostResponse {
     
     public String contentType;
+
     public SsaByPolyUsV1SsaPolygonQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SsaByPolyUsV1SsaPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public SsaByPolyUsV1SsaPolygonQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class SsaByPolyUsV1SsaPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.SSAPolyResponse ssaPolyResponse;
+
     public SsaByPolyUsV1SsaPolygonQueryPostResponse withSSAPolyResponse(org.openapis.openapi.models.shared.SSAPolyResponse ssaPolyResponse) {
         this.ssaPolyResponse = ssaPolyResponse;
         return this;
@@ -36,6 +40,7 @@ public class SsaByPolyUsV1SsaPolygonQueryPostResponse {
     
     
     public Integer statusCode;
+
     public SsaByPolyUsV1SsaPolygonQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class SsaByPolyUsV1SsaPolygonQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SsaByPolyUsV1SsaPolygonQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SsaByPolyUsV1SsaPolygonQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

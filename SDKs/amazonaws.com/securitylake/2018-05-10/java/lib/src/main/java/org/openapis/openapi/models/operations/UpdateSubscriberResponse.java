@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSubscriberResponse {
@@ -12,6 +13,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateSubscriberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object accountNotFoundException;
+
     public UpdateSubscriberResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateSubscriberResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object conflictSubscriptionException;
+
     public UpdateSubscriberResponse withConflictSubscriptionException(Object conflictSubscriptionException) {
         this.conflictSubscriptionException = conflictSubscriptionException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSubscriberResponse {
     
     
     public String contentType;
+
     public UpdateSubscriberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSubscriberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateSubscriberResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateSubscriberResponse {
     
     
     public Integer statusCode;
+
     public UpdateSubscriberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSubscriberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSubscriberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateSubscriberResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSubscriberResponse updateSubscriberResponse;
+
     public UpdateSubscriberResponse withUpdateSubscriberResponse(org.openapis.openapi.models.shared.UpdateSubscriberResponse updateSubscriberResponse) {
         this.updateSubscriberResponse = updateSubscriberResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateSubscriberResponse {
      */
     
     public Object validationException;
+
     public UpdateSubscriberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSubscriberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

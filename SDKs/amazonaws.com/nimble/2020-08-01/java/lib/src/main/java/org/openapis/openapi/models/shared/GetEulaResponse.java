@@ -15,9 +15,11 @@ public class GetEulaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eula")
     public Eula eula;
+
     public GetEulaResponse withEula(Eula eula) {
         this.eula = eula;
         return this;
     }
     
+    public GetEulaResponse(){}
 }

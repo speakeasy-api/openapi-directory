@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETPublicStatusUsingGETResponse {
     
     public String contentType;
+
     public GETPublicStatusUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETPublicStatusUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETPublicStatusUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETPublicStatusUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETPublicStatusUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETPublicStatusUsingGETResponse {
      */
     
     public GETPublicStatusUsingGET200ApplicationJSON getPublicStatusUsingGET200ApplicationJSONObject;
+
     public GETPublicStatusUsingGETResponse withGETPublicStatusUsingGET200ApplicationJSONObject(GETPublicStatusUsingGET200ApplicationJSON getPublicStatusUsingGET200ApplicationJSONObject) {
         this.getPublicStatusUsingGET200ApplicationJSONObject = getPublicStatusUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETPublicStatusUsingGETResponse {
      */
     
     public GETPublicStatusUsingGET400ApplicationJSON getPublicStatusUsingGET400ApplicationJSONObject;
+
     public GETPublicStatusUsingGETResponse withGETPublicStatusUsingGET400ApplicationJSONObject(GETPublicStatusUsingGET400ApplicationJSON getPublicStatusUsingGET400ApplicationJSONObject) {
         this.getPublicStatusUsingGET400ApplicationJSONObject = getPublicStatusUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETPublicStatusUsingGETResponse {
      */
     
     public GETPublicStatusUsingGET401ApplicationJSON getPublicStatusUsingGET401ApplicationJSONObject;
+
     public GETPublicStatusUsingGETResponse withGETPublicStatusUsingGET401ApplicationJSONObject(GETPublicStatusUsingGET401ApplicationJSON getPublicStatusUsingGET401ApplicationJSONObject) {
         this.getPublicStatusUsingGET401ApplicationJSONObject = getPublicStatusUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETPublicStatusUsingGETResponse {
      */
     
     public GETPublicStatusUsingGET500ApplicationJSON getPublicStatusUsingGET500ApplicationJSONObject;
+
     public GETPublicStatusUsingGETResponse withGETPublicStatusUsingGET500ApplicationJSONObject(GETPublicStatusUsingGET500ApplicationJSON getPublicStatusUsingGET500ApplicationJSONObject) {
         this.getPublicStatusUsingGET500ApplicationJSONObject = getPublicStatusUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETPublicStatusUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

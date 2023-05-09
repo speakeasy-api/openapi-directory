@@ -15,6 +15,7 @@ public class StartRecoveryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDrill")
     public Boolean isDrill;
+
     public StartRecoveryRequestBody withIsDrill(Boolean isDrill) {
         this.isDrill = isDrill;
         return this;
@@ -25,6 +26,7 @@ public class StartRecoveryRequestBody {
      */
     @JsonProperty("sourceServers")
     public org.openapis.openapi.models.shared.StartRecoveryRequestSourceServer[] sourceServers;
+
     public StartRecoveryRequestBody withSourceServers(org.openapis.openapi.models.shared.StartRecoveryRequestSourceServer[] sourceServers) {
         this.sourceServers = sourceServers;
         return this;
@@ -36,9 +38,13 @@ public class StartRecoveryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartRecoveryRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartRecoveryRequestBody(@JsonProperty("sourceServers") org.openapis.openapi.models.shared.StartRecoveryRequestSourceServer[] sourceServers) {
+        this.sourceServers = sourceServers;
+  }
 }

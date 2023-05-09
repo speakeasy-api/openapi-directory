@@ -14,9 +14,13 @@ public class GetTerminalDetailsRequest {
      */
     @JsonProperty("terminal")
     public String terminal;
+
     public GetTerminalDetailsRequest withTerminal(String terminal) {
         this.terminal = terminal;
         return this;
     }
     
+    public GetTerminalDetailsRequest(@JsonProperty("terminal") String terminal) {
+        this.terminal = terminal;
+  }
 }

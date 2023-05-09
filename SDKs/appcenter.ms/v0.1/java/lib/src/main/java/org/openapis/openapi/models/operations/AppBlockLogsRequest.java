@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppBlockLogsRequest {
@@ -12,6 +13,7 @@ public class AppBlockLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AppBlockLogsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,9 +24,14 @@ public class AppBlockLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AppBlockLogsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public AppBlockLogsRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

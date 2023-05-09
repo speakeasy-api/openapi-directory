@@ -18,6 +18,7 @@ public class AsymmetricDecryptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plaintext")
     public String plaintext;
+
     public AsymmetricDecryptResponse withPlaintext(String plaintext) {
         this.plaintext = plaintext;
         return this;
@@ -29,6 +30,7 @@ public class AsymmetricDecryptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plaintextCrc32c")
     public String plaintextCrc32c;
+
     public AsymmetricDecryptResponse withPlaintextCrc32c(String plaintextCrc32c) {
         this.plaintextCrc32c = plaintextCrc32c;
         return this;
@@ -40,6 +42,7 @@ public class AsymmetricDecryptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectionLevel")
     public AsymmetricDecryptResponseProtectionLevelEnum protectionLevel;
+
     public AsymmetricDecryptResponse withProtectionLevel(AsymmetricDecryptResponseProtectionLevelEnum protectionLevel) {
         this.protectionLevel = protectionLevel;
         return this;
@@ -51,9 +54,11 @@ public class AsymmetricDecryptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifiedCiphertextCrc32c")
     public Boolean verifiedCiphertextCrc32c;
+
     public AsymmetricDecryptResponse withVerifiedCiphertextCrc32c(Boolean verifiedCiphertextCrc32c) {
         this.verifiedCiphertextCrc32c = verifiedCiphertextCrc32c;
         return this;
     }
     
+    public AsymmetricDecryptResponse(){}
 }

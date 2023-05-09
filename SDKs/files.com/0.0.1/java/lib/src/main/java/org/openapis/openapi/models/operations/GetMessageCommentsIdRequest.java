@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessageCommentsIdRequest {
@@ -12,9 +13,13 @@ public class GetMessageCommentsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetMessageCommentsIdRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public GetMessageCommentsIdRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebBackendListConnectionsForWorkspaceResponse {
     
     public String contentType;
+
     public WebBackendListConnectionsForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebBackendListConnectionsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public WebBackendListConnectionsForWorkspaceResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class WebBackendListConnectionsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public WebBackendListConnectionsForWorkspaceResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -36,6 +40,7 @@ public class WebBackendListConnectionsForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public WebBackendListConnectionsForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class WebBackendListConnectionsForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebBackendListConnectionsForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class WebBackendListConnectionsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.WebBackendConnectionReadList webBackendConnectionReadList;
+
     public WebBackendListConnectionsForWorkspaceResponse withWebBackendConnectionReadList(org.openapis.openapi.models.shared.WebBackendConnectionReadList webBackendConnectionReadList) {
         this.webBackendConnectionReadList = webBackendConnectionReadList;
         return this;
     }
     
+    public WebBackendListConnectionsForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

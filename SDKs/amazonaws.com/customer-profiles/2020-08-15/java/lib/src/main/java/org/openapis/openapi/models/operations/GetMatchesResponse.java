@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMatchesResponse {
@@ -12,6 +13,7 @@ public class GetMatchesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMatchesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetMatchesResponse {
      */
     
     public Object badRequestException;
+
     public GetMatchesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class GetMatchesResponse {
     
     
     public String contentType;
+
     public GetMatchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetMatchesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMatchesResponse getMatchesResponse;
+
     public GetMatchesResponse withGetMatchesResponse(org.openapis.openapi.models.shared.GetMatchesResponse getMatchesResponse) {
         this.getMatchesResponse = getMatchesResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetMatchesResponse {
      */
     
     public Object internalServerException;
+
     public GetMatchesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetMatchesResponse {
     
     
     public Integer statusCode;
+
     public GetMatchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetMatchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMatchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetMatchesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMatchesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetMatchesResponse {
      */
     
     public Object throttlingException;
+
     public GetMatchesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetMatchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Scoping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public JobScopingBlock excludes;
+
     public Scoping withExcludes(JobScopingBlock excludes) {
         this.excludes = excludes;
         return this;
@@ -23,9 +24,11 @@ public class Scoping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includes")
     public JobScopingBlock includes;
+
     public Scoping withIncludes(JobScopingBlock includes) {
         this.includes = includes;
         return this;
     }
     
+    public Scoping(){}
 }

@@ -15,6 +15,7 @@ public class TransportsSupported {
      */
     
     public String[] serializers;
+
     public TransportsSupported withSerializers(String[] serializers) {
         this.serializers = serializers;
         return this;
@@ -22,9 +23,11 @@ public class TransportsSupported {
     
     
     public TransportDescriptor transport;
+
     public TransportsSupported withTransport(TransportDescriptor transport) {
         this.transport = transport;
         return this;
     }
     
+    public TransportsSupported(){}
 }

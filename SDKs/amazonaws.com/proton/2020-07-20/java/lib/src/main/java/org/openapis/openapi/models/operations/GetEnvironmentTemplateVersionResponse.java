@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEnvironmentTemplateVersionResponse {
@@ -12,6 +13,7 @@ public class GetEnvironmentTemplateVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEnvironmentTemplateVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEnvironmentTemplateVersionResponse {
     
     
     public String contentType;
+
     public GetEnvironmentTemplateVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEnvironmentTemplateVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEnvironmentTemplateVersionOutput getEnvironmentTemplateVersionOutput;
+
     public GetEnvironmentTemplateVersionResponse withGetEnvironmentTemplateVersionOutput(org.openapis.openapi.models.shared.GetEnvironmentTemplateVersionOutput getEnvironmentTemplateVersionOutput) {
         this.getEnvironmentTemplateVersionOutput = getEnvironmentTemplateVersionOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetEnvironmentTemplateVersionResponse {
      */
     
     public Object internalServerException;
+
     public GetEnvironmentTemplateVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEnvironmentTemplateVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEnvironmentTemplateVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetEnvironmentTemplateVersionResponse {
     
     
     public Integer statusCode;
+
     public GetEnvironmentTemplateVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetEnvironmentTemplateVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEnvironmentTemplateVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetEnvironmentTemplateVersionResponse {
      */
     
     public Object throttlingException;
+
     public GetEnvironmentTemplateVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetEnvironmentTemplateVersionResponse {
      */
     
     public Object validationException;
+
     public GetEnvironmentTemplateVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEnvironmentTemplateVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

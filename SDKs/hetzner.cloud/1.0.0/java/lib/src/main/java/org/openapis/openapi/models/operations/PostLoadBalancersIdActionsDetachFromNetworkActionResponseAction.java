@@ -12,6 +12,7 @@ public class PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction {
      */
     @JsonProperty("error")
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError error;
+
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction withError(PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction {
      */
     @JsonProperty("resources")
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources[] resources;
+
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction withResources(PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction {
      */
     @JsonProperty("status")
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum status;
+
     public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction withStatus(PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

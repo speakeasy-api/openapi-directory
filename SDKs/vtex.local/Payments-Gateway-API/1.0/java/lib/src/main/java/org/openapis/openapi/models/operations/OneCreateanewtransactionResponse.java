@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OneCreateanewtransactionResponse {
     
     public String contentType;
+
     public OneCreateanewtransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OneCreateanewtransactionResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OneCreateanewtransactionResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class OneCreateanewtransactionResponse {
     
     
     public org.openapis.openapi.models.shared.StartTransactionResponse startTransactionResponse;
+
     public OneCreateanewtransactionResponse withStartTransactionResponse(org.openapis.openapi.models.shared.StartTransactionResponse startTransactionResponse) {
         this.startTransactionResponse = startTransactionResponse;
         return this;
@@ -30,6 +34,7 @@ public class OneCreateanewtransactionResponse {
     
     
     public Integer statusCode;
+
     public OneCreateanewtransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class OneCreateanewtransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OneCreateanewtransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OneCreateanewtransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

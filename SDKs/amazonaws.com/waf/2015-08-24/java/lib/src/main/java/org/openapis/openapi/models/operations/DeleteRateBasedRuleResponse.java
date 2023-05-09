@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRateBasedRuleResponse {
     
     public String contentType;
+
     public DeleteRateBasedRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRateBasedRuleResponse deleteRateBasedRuleResponse;
+
     public DeleteRateBasedRuleResponse withDeleteRateBasedRuleResponse(org.openapis.openapi.models.shared.DeleteRateBasedRuleResponse deleteRateBasedRuleResponse) {
         this.deleteRateBasedRuleResponse = deleteRateBasedRuleResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteRateBasedRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteRateBasedRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteRateBasedRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRateBasedRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteRateBasedRuleResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteRateBasedRuleResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteRateBasedRuleResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteRateBasedRuleResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteRateBasedRuleResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteRateBasedRuleResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public Object wafTagOperationException;
+
     public DeleteRateBasedRuleResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteRateBasedRuleResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public DeleteRateBasedRuleResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public DeleteRateBasedRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

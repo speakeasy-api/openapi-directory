@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeEventCategoriesMessage {
     
     public String sourceType;
+
     public DescribeEventCategoriesMessage withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public DescribeEventCategoriesMessage(){}
 }

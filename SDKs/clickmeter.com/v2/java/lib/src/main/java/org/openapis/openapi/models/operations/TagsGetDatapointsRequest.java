@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetDatapointsRequest {
@@ -12,6 +13,7 @@ public class TagsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public TagsGetDatapointsRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +24,7 @@ public class TagsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public TagsGetDatapointsRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +35,7 @@ public class TagsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public TagsGetDatapointsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class TagsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public TagsGetDatapointsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,6 +57,7 @@ public class TagsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public TagsGetDatapointsStatusEnum status;
+
     public TagsGetDatapointsRequest withStatus(TagsGetDatapointsStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +68,7 @@ public class TagsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public Long tagId;
+
     public TagsGetDatapointsRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
@@ -72,6 +79,7 @@ public class TagsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public TagsGetDatapointsRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -82,9 +90,13 @@ public class TagsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public TagsGetDatapointsTypeEnum type;
+
     public TagsGetDatapointsRequest withType(TagsGetDatapointsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TagsGetDatapointsRequest(@JsonProperty("tagId") Long tagId) {
+        this.tagId = tagId;
+  }
 }

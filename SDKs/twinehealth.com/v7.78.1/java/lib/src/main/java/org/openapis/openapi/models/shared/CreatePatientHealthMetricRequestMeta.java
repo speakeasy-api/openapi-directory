@@ -17,9 +17,11 @@ public class CreatePatientHealthMetricRequestMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignore_duplicates")
     public Boolean ignoreDuplicates;
+
     public CreatePatientHealthMetricRequestMeta withIgnoreDuplicates(Boolean ignoreDuplicates) {
         this.ignoreDuplicates = ignoreDuplicates;
         return this;
     }
     
+    public CreatePatientHealthMetricRequestMeta(){}
 }

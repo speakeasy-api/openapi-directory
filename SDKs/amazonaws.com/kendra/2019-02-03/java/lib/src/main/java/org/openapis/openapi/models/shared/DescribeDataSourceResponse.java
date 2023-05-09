@@ -20,6 +20,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public DataSourceConfiguration configuration;
+
     public DescribeDataSourceResponse withConfiguration(DataSourceConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -30,6 +31,7 @@ public class DescribeDataSourceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeDataSourceResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDocumentEnrichmentConfiguration")
     public CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration;
+
     public DescribeDataSourceResponse withCustomDocumentEnrichmentConfiguration(CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration) {
         this.customDocumentEnrichmentConfiguration = customDocumentEnrichmentConfiguration;
         return this;
@@ -46,6 +49,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeDataSourceResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeDataSourceResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -62,6 +67,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeDataSourceResponse withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeDataSourceResponse withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -78,6 +85,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public DescribeDataSourceResponse withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -86,6 +94,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeDataSourceResponse withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeDataSourceResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -102,6 +112,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public DescribeDataSourceResponse withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -110,6 +121,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DataSourceStatusEnum status;
+
     public DescribeDataSourceResponse withStatus(DataSourceStatusEnum status) {
         this.status = status;
         return this;
@@ -118,6 +130,7 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public DataSourceTypeEnum type;
+
     public DescribeDataSourceResponse withType(DataSourceTypeEnum type) {
         this.type = type;
         return this;
@@ -128,6 +141,7 @@ public class DescribeDataSourceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeDataSourceResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -136,9 +150,11 @@ public class DescribeDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public DescribeDataSourceResponse withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public DescribeDataSourceResponse(){}
 }

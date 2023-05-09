@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAuditMitigationActionsTaskResponse {
     
     public String contentType;
+
     public StartAuditMitigationActionsTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartAuditMitigationActionsTaskResponse {
      */
     
     public Object internalFailureException;
+
     public StartAuditMitigationActionsTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class StartAuditMitigationActionsTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public StartAuditMitigationActionsTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartAuditMitigationActionsTaskResponse {
      */
     
     public Object limitExceededException;
+
     public StartAuditMitigationActionsTaskResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartAuditMitigationActionsTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.StartAuditMitigationActionsTaskResponse startAuditMitigationActionsTaskResponse;
+
     public StartAuditMitigationActionsTaskResponse withStartAuditMitigationActionsTaskResponse(org.openapis.openapi.models.shared.StartAuditMitigationActionsTaskResponse startAuditMitigationActionsTaskResponse) {
         this.startAuditMitigationActionsTaskResponse = startAuditMitigationActionsTaskResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartAuditMitigationActionsTaskResponse {
     
     
     public Integer statusCode;
+
     public StartAuditMitigationActionsTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartAuditMitigationActionsTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAuditMitigationActionsTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartAuditMitigationActionsTaskResponse {
      */
     
     public Object taskAlreadyExistsException;
+
     public StartAuditMitigationActionsTaskResponse withTaskAlreadyExistsException(Object taskAlreadyExistsException) {
         this.taskAlreadyExistsException = taskAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class StartAuditMitigationActionsTaskResponse {
      */
     
     public Object throttlingException;
+
     public StartAuditMitigationActionsTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartAuditMitigationActionsTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

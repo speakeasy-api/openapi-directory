@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementUnsampledReportsInsertResponse {
     
     public String contentType;
+
     public AnalyticsManagementUnsampledReportsInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AnalyticsManagementUnsampledReportsInsertResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementUnsampledReportsInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AnalyticsManagementUnsampledReportsInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementUnsampledReportsInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementUnsampledReportsInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.UnsampledReport unsampledReport;
+
     public AnalyticsManagementUnsampledReportsInsertResponse withUnsampledReport(org.openapis.openapi.models.shared.UnsampledReport unsampledReport) {
         this.unsampledReport = unsampledReport;
         return this;
     }
     
+    public AnalyticsManagementUnsampledReportsInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

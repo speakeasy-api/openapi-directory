@@ -17,6 +17,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public Long[] displayActivityHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withDisplayActivityHashes(Long[] displayActivityHashes) {
         this.displayActivityHashes = displayActivityHashes;
         return this;
@@ -24,6 +25,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
     
     
     public Boolean displayAsStatTracker;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withDisplayAsStatTracker(Boolean displayAsStatTracker) {
         this.displayAsStatTracker = displayAsStatTracker;
         return this;
@@ -34,6 +36,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public String narrative;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withNarrative(String narrative) {
         this.narrative = narrative;
         return this;
@@ -44,6 +47,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public Long[] objectiveHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withObjectiveHashes(Long[] objectiveHashes) {
         this.objectiveHashes = objectiveHashes;
         return this;
@@ -54,6 +58,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public String objectiveVerbName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withObjectiveVerbName(String objectiveVerbName) {
         this.objectiveVerbName = objectiveVerbName;
         return this;
@@ -64,6 +69,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public DestinyDefinitionsDestinyObjectiveDisplayProperties[] perObjectiveDisplayProperties;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withPerObjectiveDisplayProperties(DestinyDefinitionsDestinyObjectiveDisplayProperties[] perObjectiveDisplayProperties) {
         this.perObjectiveDisplayProperties = perObjectiveDisplayProperties;
         return this;
@@ -74,6 +80,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public Long questTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withQuestTypeHash(Long questTypeHash) {
         this.questTypeHash = questTypeHash;
         return this;
@@ -84,6 +91,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public String questTypeIdentifier;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withQuestTypeIdentifier(String questTypeIdentifier) {
         this.questTypeIdentifier = questTypeIdentifier;
         return this;
@@ -94,6 +102,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public Long questlineItemHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withQuestlineItemHash(Long questlineItemHash) {
         this.questlineItemHash = questlineItemHash;
         return this;
@@ -104,9 +113,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionObjectives {
      */
     
     public Boolean requireFullObjectiveCompletion;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives withRequireFullObjectiveCompletion(Boolean requireFullObjectiveCompletion) {
         this.requireFullObjectiveCompletion = requireFullObjectiveCompletion;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsLaunchTemplateSpecification {
     
     public String launchTemplateId;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsLaunchTemplateSpecification withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -19,6 +20,7 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsL
     
     
     public String launchTemplateName;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsLaunchTemplateSpecification withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -26,9 +28,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsL
     
     
     public String version;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsLaunchTemplateSpecification withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsLaunchTemplateSpecification(){}
 }

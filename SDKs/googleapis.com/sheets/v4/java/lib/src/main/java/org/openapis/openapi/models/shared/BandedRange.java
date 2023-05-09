@@ -18,6 +18,7 @@ public class BandedRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandedRangeId")
     public Integer bandedRangeId;
+
     public BandedRange withBandedRangeId(Integer bandedRangeId) {
         this.bandedRangeId = bandedRangeId;
         return this;
@@ -29,6 +30,7 @@ public class BandedRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnProperties")
     public BandingProperties columnProperties;
+
     public BandedRange withColumnProperties(BandingProperties columnProperties) {
         this.columnProperties = columnProperties;
         return this;
@@ -40,6 +42,7 @@ public class BandedRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public BandedRange withRange(GridRange range) {
         this.range = range;
         return this;
@@ -51,9 +54,11 @@ public class BandedRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowProperties")
     public BandingProperties rowProperties;
+
     public BandedRange withRowProperties(BandingProperties rowProperties) {
         this.rowProperties = rowProperties;
         return this;
     }
     
+    public BandedRange(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AppPages - Pages of app results
@@ -15,6 +15,7 @@ public class AppPages {
      */
     
     public Long count;
+
     public AppPages withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class AppPages {
      */
     
     public App[] list;
+
     public AppPages withList(App[] list) {
         this.list = list;
         return this;
@@ -35,6 +37,7 @@ public class AppPages {
      */
     
     public Long pageNumber;
+
     public AppPages withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -45,9 +48,14 @@ public class AppPages {
      */
     
     public Long pages;
+
     public AppPages withPages(Long pages) {
         this.pages = pages;
         return this;
     }
     
+    public AppPages(@JsonProperty("count") Long count, @JsonProperty("list") App[] list) {
+        this.count = count;
+        this.list = list;
+  }
 }

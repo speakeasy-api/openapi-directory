@@ -15,6 +15,7 @@ public class FilterRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterType")
     public FilterTypeEnum filterType;
+
     public FilterRule withFilterType(FilterTypeEnum filterType) {
         this.filterType = filterType;
         return this;
@@ -23,9 +24,11 @@ public class FilterRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public FilterRule withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FilterRule(){}
 }

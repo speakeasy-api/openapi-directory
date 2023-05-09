@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsNetworkInterfaceCountDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max")
     public Long max;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsNetworkInterfaceCountDetails withMax(Long max) {
         this.max = max;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsNetworkInterfaceCountDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Min")
     public Long min;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsNetworkInterfaceCountDetails withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataInstanceRequirementsNetworkInterfaceCountDetails(){}
 }

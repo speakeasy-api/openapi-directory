@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class SlotStartTimeRangeRequest {
     
     public OffsetDateTime earliestTime;
+
     public SlotStartTimeRangeRequest withEarliestTime(OffsetDateTime earliestTime) {
         this.earliestTime = earliestTime;
         return this;
@@ -19,9 +20,11 @@ public class SlotStartTimeRangeRequest {
     
     
     public OffsetDateTime latestTime;
+
     public SlotStartTimeRangeRequest withLatestTime(OffsetDateTime latestTime) {
         this.latestTime = latestTime;
         return this;
     }
     
+    public SlotStartTimeRangeRequest(){}
 }

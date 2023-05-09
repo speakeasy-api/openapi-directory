@@ -15,6 +15,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistribu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandAllocationStrategy")
     public String onDemandAllocationStrategy;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails withOnDemandAllocationStrategy(String onDemandAllocationStrategy) {
         this.onDemandAllocationStrategy = onDemandAllocationStrategy;
         return this;
@@ -23,6 +24,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistribu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandBaseCapacity")
     public Long onDemandBaseCapacity;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails withOnDemandBaseCapacity(Long onDemandBaseCapacity) {
         this.onDemandBaseCapacity = onDemandBaseCapacity;
         return this;
@@ -31,6 +33,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistribu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandPercentageAboveBaseCapacity")
     public Long onDemandPercentageAboveBaseCapacity;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails withOnDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
         this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
         return this;
@@ -39,6 +42,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistribu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpotAllocationStrategy")
     public String spotAllocationStrategy;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails withSpotAllocationStrategy(String spotAllocationStrategy) {
         this.spotAllocationStrategy = spotAllocationStrategy;
         return this;
@@ -47,6 +51,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistribu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpotInstancePools")
     public Long spotInstancePools;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails withSpotInstancePools(Long spotInstancePools) {
         this.spotInstancePools = spotInstancePools;
         return this;
@@ -55,9 +60,11 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistribu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpotMaxPrice")
     public String spotMaxPrice;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails withSpotMaxPrice(String spotMaxPrice) {
         this.spotMaxPrice = spotMaxPrice;
         return this;
     }
     
+    public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails(){}
 }

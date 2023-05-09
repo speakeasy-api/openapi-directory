@@ -18,6 +18,7 @@ public class PlaceActionTypeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PlaceActionTypeMetadata withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class PlaceActionTypeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeActionType")
     public PlaceActionTypeMetadataPlaceActionTypeEnum placeActionType;
+
     public PlaceActionTypeMetadata withPlaceActionType(PlaceActionTypeMetadataPlaceActionTypeEnum placeActionType) {
         this.placeActionType = placeActionType;
         return this;
     }
     
+    public PlaceActionTypeMetadata(){}
 }

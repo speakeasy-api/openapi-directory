@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * AppAppApprovalStateEnum - Output only. The approval state for the app.
+ * AppAppApprovalStateEnum - Output only. The approval state for the app. The field is read-only.
  */
 public enum AppAppApprovalStateEnum {
     APP_APPROVAL_STATE_UNSPECIFIED("APP_APPROVAL_STATE_UNSPECIFIED"),

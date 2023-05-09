@@ -18,6 +18,7 @@ public class OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInfo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContractIdentification")
     public String contractIdentification;
+
     public OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformation withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInfo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRate")
     public Double exchangeRate;
+
     public OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformation withExchangeRate(Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInfo
      */
     @JsonProperty("RateType")
     public OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum rateType;
+
     public OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformation withRateType(OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -49,9 +52,14 @@ public class OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInfo
      */
     @JsonProperty("UnitCurrency")
     public String unitCurrency;
+
     public OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformation withUnitCurrency(String unitCurrency) {
         this.unitCurrency = unitCurrency;
         return this;
     }
     
+    public OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformation(@JsonProperty("RateType") OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum rateType, @JsonProperty("UnitCurrency") String unitCurrency) {
+        this.rateType = rateType;
+        this.unitCurrency = unitCurrency;
+  }
 }

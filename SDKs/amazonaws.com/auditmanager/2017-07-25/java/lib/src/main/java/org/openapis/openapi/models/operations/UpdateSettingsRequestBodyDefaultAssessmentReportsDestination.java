@@ -15,6 +15,7 @@ public class UpdateSettingsRequestBodyDefaultAssessmentReportsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public UpdateSettingsRequestBodyDefaultAssessmentReportsDestination withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -23,9 +24,11 @@ public class UpdateSettingsRequestBodyDefaultAssessmentReportsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationType")
     public org.openapis.openapi.models.shared.AssessmentReportDestinationTypeEnum destinationType;
+
     public UpdateSettingsRequestBodyDefaultAssessmentReportsDestination withDestinationType(org.openapis.openapi.models.shared.AssessmentReportDestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
     }
     
+    public UpdateSettingsRequestBodyDefaultAssessmentReportsDestination(){}
 }

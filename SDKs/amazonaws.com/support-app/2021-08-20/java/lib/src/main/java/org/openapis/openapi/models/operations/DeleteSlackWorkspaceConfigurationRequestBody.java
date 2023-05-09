@@ -12,9 +12,13 @@ public class DeleteSlackWorkspaceConfigurationRequestBody {
      */
     @JsonProperty("teamId")
     public String teamId;
+
     public DeleteSlackWorkspaceConfigurationRequestBody withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public DeleteSlackWorkspaceConfigurationRequestBody(@JsonProperty("teamId") String teamId) {
+        this.teamId = teamId;
+  }
 }

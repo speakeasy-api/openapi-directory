@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnprovisionedErrorResponse {
     @JsonProperty("detail")
     public String detail;
+
     public UnprovisionedErrorResponse withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,6 +20,7 @@ public class UnprovisionedErrorResponse {
     
     @JsonProperty("instance")
     public String instance;
+
     public UnprovisionedErrorResponse withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -26,6 +28,7 @@ public class UnprovisionedErrorResponse {
     
     @JsonProperty("title")
     public String title;
+
     public UnprovisionedErrorResponse withTitle(String title) {
         this.title = title;
         return this;
@@ -33,9 +36,16 @@ public class UnprovisionedErrorResponse {
     
     @JsonProperty("type")
     public String type;
+
     public UnprovisionedErrorResponse withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UnprovisionedErrorResponse(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

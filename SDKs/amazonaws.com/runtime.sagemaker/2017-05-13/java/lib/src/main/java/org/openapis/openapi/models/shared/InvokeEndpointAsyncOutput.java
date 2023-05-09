@@ -15,9 +15,11 @@ public class InvokeEndpointAsyncOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceId")
     public String inferenceId;
+
     public InvokeEndpointAsyncOutput withInferenceId(String inferenceId) {
         this.inferenceId = inferenceId;
         return this;
     }
     
+    public InvokeEndpointAsyncOutput(){}
 }

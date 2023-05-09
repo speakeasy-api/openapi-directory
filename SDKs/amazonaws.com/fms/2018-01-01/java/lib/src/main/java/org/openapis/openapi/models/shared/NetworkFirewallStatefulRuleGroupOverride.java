@@ -15,9 +15,11 @@ public class NetworkFirewallStatefulRuleGroupOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public NetworkFirewallOverrideActionEnum action;
+
     public NetworkFirewallStatefulRuleGroupOverride withAction(NetworkFirewallOverrideActionEnum action) {
         this.action = action;
         return this;
     }
     
+    public NetworkFirewallStatefulRuleGroupOverride(){}
 }

@@ -20,6 +20,7 @@ public class DialRequest {
      */
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public DialRequest withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -30,6 +31,7 @@ public class DialRequest {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DialRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -42,6 +44,7 @@ public class DialRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationTime")
     public OffsetDateTime expirationTime;
+
     public DialRequest withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -52,9 +55,16 @@ public class DialRequest {
      */
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public DialRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public DialRequest(@JsonProperty("attributes") java.util.Map<String, String> attributes, @JsonProperty("clientToken") String clientToken, @JsonProperty("expirationTime") OffsetDateTime expirationTime, @JsonProperty("phoneNumber") String phoneNumber) {
+        this.attributes = attributes;
+        this.clientToken = clientToken;
+        this.expirationTime = expirationTime;
+        this.phoneNumber = phoneNumber;
+  }
 }

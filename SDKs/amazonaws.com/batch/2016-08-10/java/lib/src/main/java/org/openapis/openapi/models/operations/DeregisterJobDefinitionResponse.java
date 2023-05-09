@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterJobDefinitionResponse {
@@ -12,6 +13,7 @@ public class DeregisterJobDefinitionResponse {
      */
     
     public Object clientException;
+
     public DeregisterJobDefinitionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterJobDefinitionResponse {
     
     
     public String contentType;
+
     public DeregisterJobDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterJobDefinitionResponse {
      */
     
     public java.util.Map<String, Object> deregisterJobDefinitionResponse;
+
     public DeregisterJobDefinitionResponse withDeregisterJobDefinitionResponse(java.util.Map<String, Object> deregisterJobDefinitionResponse) {
         this.deregisterJobDefinitionResponse = deregisterJobDefinitionResponse;
         return this;
@@ -36,6 +40,7 @@ public class DeregisterJobDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DeregisterJobDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeregisterJobDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterJobDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeregisterJobDefinitionResponse {
      */
     
     public Object serverException;
+
     public DeregisterJobDefinitionResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DeregisterJobDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

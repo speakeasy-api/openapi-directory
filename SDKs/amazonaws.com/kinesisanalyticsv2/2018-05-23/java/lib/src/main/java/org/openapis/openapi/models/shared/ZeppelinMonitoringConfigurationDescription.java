@@ -15,9 +15,11 @@ public class ZeppelinMonitoringConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogLevel")
     public LogLevelEnum logLevel;
+
     public ZeppelinMonitoringConfigurationDescription withLogLevel(LogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
     }
     
+    public ZeppelinMonitoringConfigurationDescription(){}
 }

@@ -12,6 +12,7 @@ public class ListPortfolioAccessInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListPortfolioAccessInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class ListPortfolioAccessInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationParentId")
     public String organizationParentId;
+
     public ListPortfolioAccessInput withOrganizationParentId(String organizationParentId) {
         this.organizationParentId = organizationParentId;
         return this;
@@ -28,6 +30,7 @@ public class ListPortfolioAccessInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListPortfolioAccessInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -36,6 +39,7 @@ public class ListPortfolioAccessInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListPortfolioAccessInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -43,9 +47,13 @@ public class ListPortfolioAccessInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public ListPortfolioAccessInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
     }
     
+    public ListPortfolioAccessInput(@JsonProperty("PortfolioId") String portfolioId) {
+        this.portfolioId = portfolioId;
+  }
 }

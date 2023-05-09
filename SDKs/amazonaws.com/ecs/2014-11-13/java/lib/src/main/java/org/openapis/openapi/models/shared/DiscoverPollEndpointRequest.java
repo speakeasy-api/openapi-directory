@@ -12,6 +12,7 @@ public class DiscoverPollEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public DiscoverPollEndpointRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -20,9 +21,11 @@ public class DiscoverPollEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerInstance")
     public String containerInstance;
+
     public DiscoverPollEndpointRequest withContainerInstance(String containerInstance) {
         this.containerInstance = containerInstance;
         return this;
     }
     
+    public DiscoverPollEndpointRequest(){}
 }

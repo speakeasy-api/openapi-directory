@@ -15,9 +15,11 @@ public class IamRoleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustPolicy")
     public String trustPolicy;
+
     public IamRoleConfiguration withTrustPolicy(String trustPolicy) {
         this.trustPolicy = trustPolicy;
         return this;
     }
     
+    public IamRoleConfiguration(){}
 }

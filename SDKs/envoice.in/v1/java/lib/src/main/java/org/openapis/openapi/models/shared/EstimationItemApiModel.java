@@ -15,6 +15,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cost")
     public Double cost;
+
     public EstimationItemApiModel withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -26,6 +27,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public EstimationItemApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountAmount")
     public Double discountAmount;
+
     public EstimationItemApiModel withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -48,6 +51,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountPercentage")
     public Double discountPercentage;
+
     public EstimationItemApiModel withDiscountPercentage(Double discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -59,6 +63,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public EstimationItemApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -70,6 +75,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Double quantity;
+
     public EstimationItemApiModel withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -81,6 +87,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubTotalAmount")
     public Double subTotalAmount;
+
     public EstimationItemApiModel withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -92,6 +99,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxAmount")
     public Double taxAmount;
+
     public EstimationItemApiModel withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -103,6 +111,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxId")
     public Integer taxId;
+
     public EstimationItemApiModel withTaxId(Integer taxId) {
         this.taxId = taxId;
         return this;
@@ -114,6 +123,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxPercentage")
     public Double taxPercentage;
+
     public EstimationItemApiModel withTaxPercentage(Double taxPercentage) {
         this.taxPercentage = taxPercentage;
         return this;
@@ -125,6 +135,7 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmount")
     public Double totalAmount;
+
     public EstimationItemApiModel withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -136,9 +147,11 @@ public class EstimationItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkTypeId")
     public Integer workTypeId;
+
     public EstimationItemApiModel withWorkTypeId(Integer workTypeId) {
         this.workTypeId = workTypeId;
         return this;
     }
     
+    public EstimationItemApiModel(){}
 }

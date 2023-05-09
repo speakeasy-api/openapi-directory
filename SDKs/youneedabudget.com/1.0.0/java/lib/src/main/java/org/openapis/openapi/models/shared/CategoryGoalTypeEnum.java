@@ -15,7 +15,7 @@ public enum CategoryGoalTypeEnum {
     MF("MF"),
     NEED("NEED"),
     DEBT("DEBT"),
-    NULL_("null");
+    LESS_THAN_NIL_GREATER_THAN("<nil>");
 
     @JsonValue
     public final String value;

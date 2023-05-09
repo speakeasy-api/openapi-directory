@@ -15,6 +15,7 @@ public class AuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAuthorizerOverride")
     public Boolean allowAuthorizerOverride;
+
     public AuthorizerConfig withAllowAuthorizerOverride(Boolean allowAuthorizerOverride) {
         this.allowAuthorizerOverride = allowAuthorizerOverride;
         return this;
@@ -23,9 +24,11 @@ public class AuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAuthorizerName")
     public String defaultAuthorizerName;
+
     public AuthorizerConfig withDefaultAuthorizerName(String defaultAuthorizerName) {
         this.defaultAuthorizerName = defaultAuthorizerName;
         return this;
     }
     
+    public AuthorizerConfig(){}
 }

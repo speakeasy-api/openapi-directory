@@ -20,6 +20,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_lock_reason")
     public String activeLockReason;
+
     public Issue withActiveLockReason(String activeLockReason) {
         this.activeLockReason = activeLockReason;
         return this;
@@ -30,6 +31,7 @@ public class Issue {
      */
     @JsonProperty("assignee")
     public NullableSimpleUser assignee;
+
     public Issue withAssignee(NullableSimpleUser assignee) {
         this.assignee = assignee;
         return this;
@@ -38,6 +40,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees")
     public SimpleUser[] assignees;
+
     public Issue withAssignees(SimpleUser[] assignees) {
         this.assignees = assignees;
         return this;
@@ -48,6 +51,7 @@ public class Issue {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public Issue withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -59,6 +63,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Issue withBody(String body) {
         this.body = body;
         return this;
@@ -67,6 +72,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public Issue withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -75,6 +81,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public Issue withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -84,6 +91,7 @@ public class Issue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("closed_at")
     public OffsetDateTime closedAt;
+
     public Issue withClosedAt(OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -95,6 +103,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_by")
     public NullableSimpleUser closedBy;
+
     public Issue withClosedBy(NullableSimpleUser closedBy) {
         this.closedBy = closedBy;
         return this;
@@ -102,6 +111,7 @@ public class Issue {
     
     @JsonProperty("comments")
     public Long comments;
+
     public Issue withComments(Long comments) {
         this.comments = comments;
         return this;
@@ -109,6 +119,7 @@ public class Issue {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public Issue withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -118,6 +129,7 @@ public class Issue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Issue withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -125,6 +137,7 @@ public class Issue {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public Issue withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -132,6 +145,7 @@ public class Issue {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Issue withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -139,6 +153,7 @@ public class Issue {
     
     @JsonProperty("id")
     public Long id;
+
     public Issue withId(Long id) {
         this.id = id;
         return this;
@@ -149,6 +164,7 @@ public class Issue {
      */
     @JsonProperty("labels")
     public Object[] labels;
+
     public Issue withLabels(Object[] labels) {
         this.labels = labels;
         return this;
@@ -156,6 +172,7 @@ public class Issue {
     
     @JsonProperty("labels_url")
     public String labelsUrl;
+
     public Issue withLabelsUrl(String labelsUrl) {
         this.labelsUrl = labelsUrl;
         return this;
@@ -163,6 +180,7 @@ public class Issue {
     
     @JsonProperty("locked")
     public Boolean locked;
+
     public Issue withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -173,6 +191,7 @@ public class Issue {
      */
     @JsonProperty("milestone")
     public NullableMilestone milestone;
+
     public Issue withMilestone(NullableMilestone milestone) {
         this.milestone = milestone;
         return this;
@@ -180,6 +199,7 @@ public class Issue {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Issue withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -190,6 +210,7 @@ public class Issue {
      */
     @JsonProperty("number")
     public Long number;
+
     public Issue withNumber(Long number) {
         this.number = number;
         return this;
@@ -201,6 +222,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public Issue withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -209,6 +231,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pull_request")
     public IssuePullRequest pullRequest;
+
     public Issue withPullRequest(IssuePullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
@@ -217,6 +240,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public Issue withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -228,6 +252,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public Repository repository;
+
     public Issue withRepository(Repository repository) {
         this.repository = repository;
         return this;
@@ -235,6 +260,7 @@ public class Issue {
     
     @JsonProperty("repository_url")
     public String repositoryUrl;
+
     public Issue withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -245,6 +271,7 @@ public class Issue {
      */
     @JsonProperty("state")
     public String state;
+
     public Issue withState(String state) {
         this.state = state;
         return this;
@@ -253,6 +280,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeline_url")
     public String timelineUrl;
+
     public Issue withTimelineUrl(String timelineUrl) {
         this.timelineUrl = timelineUrl;
         return this;
@@ -263,6 +291,7 @@ public class Issue {
      */
     @JsonProperty("title")
     public String title;
+
     public Issue withTitle(String title) {
         this.title = title;
         return this;
@@ -272,6 +301,7 @@ public class Issue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Issue withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -282,6 +312,7 @@ public class Issue {
      */
     @JsonProperty("url")
     public String url;
+
     public Issue withUrl(String url) {
         this.url = url;
         return this;
@@ -292,9 +323,33 @@ public class Issue {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public Issue withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public Issue(@JsonProperty("assignee") NullableSimpleUser assignee, @JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("closed_at") OffsetDateTime closedAt, @JsonProperty("comments") Long comments, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("events_url") String eventsUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("labels") Object[] labels, @JsonProperty("labels_url") String labelsUrl, @JsonProperty("locked") Boolean locked, @JsonProperty("milestone") NullableMilestone milestone, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("repository_url") String repositoryUrl, @JsonProperty("state") String state, @JsonProperty("title") String title, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.assignee = assignee;
+        this.authorAssociation = authorAssociation;
+        this.closedAt = closedAt;
+        this.comments = comments;
+        this.commentsUrl = commentsUrl;
+        this.createdAt = createdAt;
+        this.eventsUrl = eventsUrl;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.labels = labels;
+        this.labelsUrl = labelsUrl;
+        this.locked = locked;
+        this.milestone = milestone;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.repositoryUrl = repositoryUrl;
+        this.state = state;
+        this.title = title;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

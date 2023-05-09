@@ -15,6 +15,7 @@ public class LambdaContainerParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public LambdaDeviceMount[] devices;
+
     public LambdaContainerParams withDevices(LambdaDeviceMount[] devices) {
         this.devices = devices;
         return this;
@@ -23,6 +24,7 @@ public class LambdaContainerParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memorySizeInKB")
     public Long memorySizeInKB;
+
     public LambdaContainerParams withMemorySizeInKB(Long memorySizeInKB) {
         this.memorySizeInKB = memorySizeInKB;
         return this;
@@ -31,6 +33,7 @@ public class LambdaContainerParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountROSysfs")
     public Boolean mountROSysfs;
+
     public LambdaContainerParams withMountROSysfs(Boolean mountROSysfs) {
         this.mountROSysfs = mountROSysfs;
         return this;
@@ -39,9 +42,11 @@ public class LambdaContainerParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public LambdaVolumeMount[] volumes;
+
     public LambdaContainerParams withVolumes(LambdaVolumeMount[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public LambdaContainerParams(){}
 }

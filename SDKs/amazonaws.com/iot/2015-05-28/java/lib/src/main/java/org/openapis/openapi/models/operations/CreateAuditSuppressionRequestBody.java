@@ -19,6 +19,7 @@ public class CreateAuditSuppressionRequestBody {
      */
     @JsonProperty("checkName")
     public String checkName;
+
     public CreateAuditSuppressionRequestBody withCheckName(String checkName) {
         this.checkName = checkName;
         return this;
@@ -29,6 +30,7 @@ public class CreateAuditSuppressionRequestBody {
      */
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateAuditSuppressionRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -40,6 +42,7 @@ public class CreateAuditSuppressionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAuditSuppressionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -53,6 +56,7 @@ public class CreateAuditSuppressionRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public CreateAuditSuppressionRequestBody withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -63,6 +67,7 @@ public class CreateAuditSuppressionRequestBody {
      */
     @JsonProperty("resourceIdentifier")
     public CreateAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier;
+
     public CreateAuditSuppressionRequestBody withResourceIdentifier(CreateAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -74,9 +79,15 @@ public class CreateAuditSuppressionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressIndefinitely")
     public Boolean suppressIndefinitely;
+
     public CreateAuditSuppressionRequestBody withSuppressIndefinitely(Boolean suppressIndefinitely) {
         this.suppressIndefinitely = suppressIndefinitely;
         return this;
     }
     
+    public CreateAuditSuppressionRequestBody(@JsonProperty("checkName") String checkName, @JsonProperty("clientRequestToken") String clientRequestToken, @JsonProperty("resourceIdentifier") CreateAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier) {
+        this.checkName = checkName;
+        this.clientRequestToken = clientRequestToken;
+        this.resourceIdentifier = resourceIdentifier;
+  }
 }

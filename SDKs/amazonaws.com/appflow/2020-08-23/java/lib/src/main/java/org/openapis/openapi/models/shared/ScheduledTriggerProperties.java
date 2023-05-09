@@ -20,6 +20,7 @@ public class ScheduledTriggerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPullMode")
     public DataPullModeEnum dataPullMode;
+
     public ScheduledTriggerProperties withDataPullMode(DataPullModeEnum dataPullMode) {
         this.dataPullMode = dataPullMode;
         return this;
@@ -30,6 +31,7 @@ public class ScheduledTriggerProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstExecutionFrom")
     public OffsetDateTime firstExecutionFrom;
+
     public ScheduledTriggerProperties withFirstExecutionFrom(OffsetDateTime firstExecutionFrom) {
         this.firstExecutionFrom = firstExecutionFrom;
         return this;
@@ -38,6 +40,7 @@ public class ScheduledTriggerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowErrorDeactivationThreshold")
     public Long flowErrorDeactivationThreshold;
+
     public ScheduledTriggerProperties withFlowErrorDeactivationThreshold(Long flowErrorDeactivationThreshold) {
         this.flowErrorDeactivationThreshold = flowErrorDeactivationThreshold;
         return this;
@@ -48,6 +51,7 @@ public class ScheduledTriggerProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduleEndTime")
     public OffsetDateTime scheduleEndTime;
+
     public ScheduledTriggerProperties withScheduleEndTime(OffsetDateTime scheduleEndTime) {
         this.scheduleEndTime = scheduleEndTime;
         return this;
@@ -55,6 +59,7 @@ public class ScheduledTriggerProperties {
     
     @JsonProperty("scheduleExpression")
     public String scheduleExpression;
+
     public ScheduledTriggerProperties withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -63,6 +68,7 @@ public class ScheduledTriggerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleOffset")
     public Long scheduleOffset;
+
     public ScheduledTriggerProperties withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -73,6 +79,7 @@ public class ScheduledTriggerProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduleStartTime")
     public OffsetDateTime scheduleStartTime;
+
     public ScheduledTriggerProperties withScheduleStartTime(OffsetDateTime scheduleStartTime) {
         this.scheduleStartTime = scheduleStartTime;
         return this;
@@ -81,9 +88,13 @@ public class ScheduledTriggerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public ScheduledTriggerProperties withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public ScheduledTriggerProperties(@JsonProperty("scheduleExpression") String scheduleExpression) {
+        this.scheduleExpression = scheduleExpression;
+  }
 }

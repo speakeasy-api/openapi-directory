@@ -15,6 +15,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerVolumeConfiguration")
     public DockerVolumeConfiguration dockerVolumeConfiguration;
+
     public Volume withDockerVolumeConfiguration(DockerVolumeConfiguration dockerVolumeConfiguration) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("efsVolumeConfiguration")
     public EFSVolumeConfiguration efsVolumeConfiguration;
+
     public Volume withEfsVolumeConfiguration(EFSVolumeConfiguration efsVolumeConfiguration) {
         this.efsVolumeConfiguration = efsVolumeConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fsxWindowsFileServerVolumeConfiguration")
     public FSxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration;
+
     public Volume withFsxWindowsFileServerVolumeConfiguration(FSxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration) {
         this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public HostVolumeProperties host;
+
     public Volume withHost(HostVolumeProperties host) {
         this.host = host;
         return this;
@@ -47,9 +51,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Volume withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Volume(){}
 }

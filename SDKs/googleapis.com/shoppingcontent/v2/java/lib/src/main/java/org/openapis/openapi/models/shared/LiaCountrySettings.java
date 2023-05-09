@@ -12,6 +12,7 @@ public class LiaCountrySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("about")
     public LiaAboutPageSettings about;
+
     public LiaCountrySettings withAbout(LiaAboutPageSettings about) {
         this.about = about;
         return this;
@@ -23,6 +24,7 @@ public class LiaCountrySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public LiaCountrySettings withCountry(String country) {
         this.country = country;
         return this;
@@ -34,6 +36,7 @@ public class LiaCountrySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostedLocalStorefrontActive")
     public Boolean hostedLocalStorefrontActive;
+
     public LiaCountrySettings withHostedLocalStorefrontActive(Boolean hostedLocalStorefrontActive) {
         this.hostedLocalStorefrontActive = hostedLocalStorefrontActive;
         return this;
@@ -42,6 +45,7 @@ public class LiaCountrySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventory")
     public LiaInventorySettings inventory;
+
     public LiaCountrySettings withInventory(LiaInventorySettings inventory) {
         this.inventory = inventory;
         return this;
@@ -50,6 +54,7 @@ public class LiaCountrySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onDisplayToOrder")
     public LiaOnDisplayToOrderSettings onDisplayToOrder;
+
     public LiaCountrySettings withOnDisplayToOrder(LiaOnDisplayToOrderSettings onDisplayToOrder) {
         this.onDisplayToOrder = onDisplayToOrder;
         return this;
@@ -58,6 +63,7 @@ public class LiaCountrySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posDataProvider")
     public LiaPosDataProvider posDataProvider;
+
     public LiaCountrySettings withPosDataProvider(LiaPosDataProvider posDataProvider) {
         this.posDataProvider = posDataProvider;
         return this;
@@ -69,9 +75,11 @@ public class LiaCountrySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storePickupActive")
     public Boolean storePickupActive;
+
     public LiaCountrySettings withStorePickupActive(Boolean storePickupActive) {
         this.storePickupActive = storePickupActive;
         return this;
     }
     
+    public LiaCountrySettings(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountCtrlGetLocationByIDRequest {
@@ -12,6 +13,7 @@ public class AccountCtrlGetLocationByIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public Double accountId;
+
     public AccountCtrlGetLocationByIDRequest withAccountId(Double accountId) {
         this.accountId = accountId;
         return this;
@@ -22,9 +24,14 @@ public class AccountCtrlGetLocationByIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public Double locationId;
+
     public AccountCtrlGetLocationByIDRequest withLocationId(Double locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public AccountCtrlGetLocationByIDRequest(@JsonProperty("account_id") Double accountId, @JsonProperty("location_id") Double locationId) {
+        this.accountId = accountId;
+        this.locationId = locationId;
+  }
 }

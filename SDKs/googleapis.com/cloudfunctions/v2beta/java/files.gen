@@ -118,4 +118,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListRuntimesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RuntimeEnvironmentEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RuntimeStageEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Runtime.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

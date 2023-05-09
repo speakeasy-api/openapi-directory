@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApiKeyResponse {
@@ -12,6 +13,7 @@ public class UpdateApiKeyResponse {
      */
     
     public Object apiKeyValidityOutOfBoundsException;
+
     public UpdateApiKeyResponse withApiKeyValidityOutOfBoundsException(Object apiKeyValidityOutOfBoundsException) {
         this.apiKeyValidityOutOfBoundsException = apiKeyValidityOutOfBoundsException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateApiKeyResponse {
      */
     
     public Object badRequestException;
+
     public UpdateApiKeyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApiKeyResponse {
     
     
     public String contentType;
+
     public UpdateApiKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApiKeyResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateApiKeyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApiKeyResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateApiKeyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateApiKeyResponse {
      */
     
     public Object notFoundException;
+
     public UpdateApiKeyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateApiKeyResponse {
     
     
     public Integer statusCode;
+
     public UpdateApiKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateApiKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApiKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateApiKeyResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateApiKeyResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateApiKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApiKeyResponse updateApiKeyResponse;
+
     public UpdateApiKeyResponse withUpdateApiKeyResponse(org.openapis.openapi.models.shared.UpdateApiKeyResponse updateApiKeyResponse) {
         this.updateApiKeyResponse = updateApiKeyResponse;
         return this;
     }
     
+    public UpdateApiKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

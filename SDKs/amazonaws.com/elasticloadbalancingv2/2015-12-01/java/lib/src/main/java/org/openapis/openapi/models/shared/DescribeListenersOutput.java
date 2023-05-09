@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeListenersOutput {
     
     public Listener[] listeners;
+
     public DescribeListenersOutput withListeners(Listener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -19,9 +20,11 @@ public class DescribeListenersOutput {
     
     
     public String nextMarker;
+
     public DescribeListenersOutput withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public DescribeListenersOutput(){}
 }

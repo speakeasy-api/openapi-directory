@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPermissionsBoundaryForPermissionSetRequest {
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public GetPermissionsBoundaryForPermissionSetRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -16,9 +17,14 @@ public class GetPermissionsBoundaryForPermissionSetRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public GetPermissionsBoundaryForPermissionSetRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
     }
     
+    public GetPermissionsBoundaryForPermissionSetRequest(@JsonProperty("InstanceArn") String instanceArn, @JsonProperty("PermissionSetArn") String permissionSetArn) {
+        this.instanceArn = instanceArn;
+        this.permissionSetArn = permissionSetArn;
+  }
 }

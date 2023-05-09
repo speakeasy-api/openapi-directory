@@ -15,9 +15,11 @@ public class ResetSearchApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public ResetSearchApplicationRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
     }
     
+    public ResetSearchApplicationRequest(){}
 }

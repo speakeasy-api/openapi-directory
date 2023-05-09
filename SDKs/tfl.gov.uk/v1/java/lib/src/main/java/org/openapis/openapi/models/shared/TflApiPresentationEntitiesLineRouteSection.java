@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesLineRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public TflApiPresentationEntitiesLineRouteSection withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesLineRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesLineRouteSection withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesLineRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromStation")
     public String fromStation;
+
     public TflApiPresentationEntitiesLineRouteSection withFromStation(String fromStation) {
         this.fromStation = fromStation;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesLineRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeId")
     public Integer routeId;
+
     public TflApiPresentationEntitiesLineRouteSection withRouteId(Integer routeId) {
         this.routeId = routeId;
         return this;
@@ -44,6 +48,7 @@ public class TflApiPresentationEntitiesLineRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public String serviceType;
+
     public TflApiPresentationEntitiesLineRouteSection withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -52,6 +57,7 @@ public class TflApiPresentationEntitiesLineRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toStation")
     public String toStation;
+
     public TflApiPresentationEntitiesLineRouteSection withToStation(String toStation) {
         this.toStation = toStation;
         return this;
@@ -60,9 +66,11 @@ public class TflApiPresentationEntitiesLineRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicleDestinationText")
     public String vehicleDestinationText;
+
     public TflApiPresentationEntitiesLineRouteSection withVehicleDestinationText(String vehicleDestinationText) {
         this.vehicleDestinationText = vehicleDestinationText;
         return this;
     }
     
+    public TflApiPresentationEntitiesLineRouteSection(){}
 }

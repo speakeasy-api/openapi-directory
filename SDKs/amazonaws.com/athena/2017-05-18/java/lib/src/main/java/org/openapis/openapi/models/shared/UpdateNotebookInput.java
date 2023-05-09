@@ -12,6 +12,7 @@ public class UpdateNotebookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public UpdateNotebookInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class UpdateNotebookInput {
     
     @JsonProperty("NotebookId")
     public String notebookId;
+
     public UpdateNotebookInput withNotebookId(String notebookId) {
         this.notebookId = notebookId;
         return this;
@@ -26,6 +28,7 @@ public class UpdateNotebookInput {
     
     @JsonProperty("Payload")
     public String payload;
+
     public UpdateNotebookInput withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -34,6 +37,7 @@ public class UpdateNotebookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public UpdateNotebookInput withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -41,9 +45,15 @@ public class UpdateNotebookInput {
     
     @JsonProperty("Type")
     public NotebookTypeEnum type;
+
     public UpdateNotebookInput withType(NotebookTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateNotebookInput(@JsonProperty("NotebookId") String notebookId, @JsonProperty("Payload") String payload, @JsonProperty("Type") NotebookTypeEnum type) {
+        this.notebookId = notebookId;
+        this.payload = payload;
+        this.type = type;
+  }
 }

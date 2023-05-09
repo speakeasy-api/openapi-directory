@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetAssetPropertyAggregatesSkippedEntry {
     @JsonProperty("completionStatus")
     public BatchEntryCompletionStatusEnum completionStatus;
+
     public BatchGetAssetPropertyAggregatesSkippedEntry withCompletionStatus(BatchEntryCompletionStatusEnum completionStatus) {
         this.completionStatus = completionStatus;
         return this;
@@ -21,6 +22,7 @@ public class BatchGetAssetPropertyAggregatesSkippedEntry {
     
     @JsonProperty("entryId")
     public String entryId;
+
     public BatchGetAssetPropertyAggregatesSkippedEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
@@ -29,9 +31,14 @@ public class BatchGetAssetPropertyAggregatesSkippedEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorInfo")
     public BatchGetAssetPropertyAggregatesErrorInfo errorInfo;
+
     public BatchGetAssetPropertyAggregatesSkippedEntry withErrorInfo(BatchGetAssetPropertyAggregatesErrorInfo errorInfo) {
         this.errorInfo = errorInfo;
         return this;
     }
     
+    public BatchGetAssetPropertyAggregatesSkippedEntry(@JsonProperty("completionStatus") BatchEntryCompletionStatusEnum completionStatus, @JsonProperty("entryId") String entryId) {
+        this.completionStatus = completionStatus;
+        this.entryId = entryId;
+  }
 }

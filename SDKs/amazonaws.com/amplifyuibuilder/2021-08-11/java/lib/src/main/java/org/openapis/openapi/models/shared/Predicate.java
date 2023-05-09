@@ -15,6 +15,7 @@ public class Predicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("and")
     public Predicate[] and;
+
     public Predicate withAnd(Predicate[] and) {
         this.and = and;
         return this;
@@ -23,6 +24,7 @@ public class Predicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public Predicate withField(String field) {
         this.field = field;
         return this;
@@ -31,14 +33,25 @@ public class Predicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operand")
     public String operand;
+
     public Predicate withOperand(String operand) {
         this.operand = operand;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("operandType")
+    public String operandType;
+
+    public Predicate withOperandType(String operandType) {
+        this.operandType = operandType;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public String operator;
+
     public Predicate withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -47,9 +60,11 @@ public class Predicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("or")
     public Predicate[] or;
+
     public Predicate withOr(Predicate[] or) {
         this.or = or;
         return this;
     }
     
+    public Predicate(){}
 }

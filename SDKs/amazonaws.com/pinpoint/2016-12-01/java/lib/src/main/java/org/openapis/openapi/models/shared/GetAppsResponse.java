@@ -15,9 +15,13 @@ public class GetAppsResponse {
      */
     @JsonProperty("ApplicationsResponse")
     public ApplicationsResponse applicationsResponse;
+
     public GetAppsResponse withApplicationsResponse(ApplicationsResponse applicationsResponse) {
         this.applicationsResponse = applicationsResponse;
         return this;
     }
     
+    public GetAppsResponse(@JsonProperty("ApplicationsResponse") ApplicationsResponse applicationsResponse) {
+        this.applicationsResponse = applicationsResponse;
+  }
 }

@@ -103,4 +103,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/TimeStamp.java
 lib/src/main/java/org/openapis/openapi/models/shared/AppPkgNotificationTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AppPkgNotificationLinks.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/SubscriptionsPOSTNotificationPOSTResponse.java
+docs/sdk/README.md
+docs/apppkgm/README.md
+docs/apppkgmnotifications/README.md
 USAGE.md

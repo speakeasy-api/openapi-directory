@@ -17,6 +17,7 @@ public class PutServersId200ApplicationJSONServerPublicNetIpv6 {
      */
     @JsonProperty("blocked")
     public Boolean blocked;
+
     public PutServersId200ApplicationJSONServerPublicNetIpv6 withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -27,6 +28,7 @@ public class PutServersId200ApplicationJSONServerPublicNetIpv6 {
      */
     @JsonProperty("dns_ptr")
     public PutServersId200ApplicationJSONServerPublicNetIpv6DnsPtr[] dnsPtr;
+
     public PutServersId200ApplicationJSONServerPublicNetIpv6 withDnsPtr(PutServersId200ApplicationJSONServerPublicNetIpv6DnsPtr[] dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -38,6 +40,7 @@ public class PutServersId200ApplicationJSONServerPublicNetIpv6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PutServersId200ApplicationJSONServerPublicNetIpv6 withId(Long id) {
         this.id = id;
         return this;
@@ -48,9 +51,15 @@ public class PutServersId200ApplicationJSONServerPublicNetIpv6 {
      */
     @JsonProperty("ip")
     public String ip;
+
     public PutServersId200ApplicationJSONServerPublicNetIpv6 withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public PutServersId200ApplicationJSONServerPublicNetIpv6(@JsonProperty("blocked") Boolean blocked, @JsonProperty("dns_ptr") PutServersId200ApplicationJSONServerPublicNetIpv6DnsPtr[] dnsPtr, @JsonProperty("ip") String ip) {
+        this.blocked = blocked;
+        this.dnsPtr = dnsPtr;
+        this.ip = ip;
+  }
 }

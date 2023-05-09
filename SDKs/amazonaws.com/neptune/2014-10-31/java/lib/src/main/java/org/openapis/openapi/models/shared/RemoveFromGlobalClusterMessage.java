@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveFromGlobalClusterMessage {
     
     public String dbClusterIdentifier;
+
     public RemoveFromGlobalClusterMessage withDbClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class RemoveFromGlobalClusterMessage {
     
     
     public String globalClusterIdentifier;
+
     public RemoveFromGlobalClusterMessage withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
     }
     
+    public RemoveFromGlobalClusterMessage(@JsonProperty("DbClusterIdentifier") String dbClusterIdentifier, @JsonProperty("GlobalClusterIdentifier") String globalClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.globalClusterIdentifier = globalClusterIdentifier;
+  }
 }

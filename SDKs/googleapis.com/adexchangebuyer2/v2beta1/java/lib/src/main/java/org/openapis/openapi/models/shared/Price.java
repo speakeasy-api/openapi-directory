@@ -18,6 +18,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Money amount;
+
     public Price withAmount(Money amount) {
         this.amount = amount;
         return this;
@@ -29,9 +30,11 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingType")
     public PricePricingTypeEnum pricingType;
+
     public Price withPricingType(PricePricingTypeEnum pricingType) {
         this.pricingType = pricingType;
         return this;
     }
     
+    public Price(){}
 }

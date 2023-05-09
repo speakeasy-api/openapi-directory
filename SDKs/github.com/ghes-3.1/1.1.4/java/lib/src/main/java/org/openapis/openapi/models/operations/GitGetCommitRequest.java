@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitGetCommitRequest {
@@ -12,6 +13,7 @@ public class GitGetCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
     public String commitSha;
+
     public GitGetCommitRequest withCommitSha(String commitSha) {
         this.commitSha = commitSha;
         return this;
@@ -22,6 +24,7 @@ public class GitGetCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public GitGetCommitRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,9 +35,15 @@ public class GitGetCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public GitGetCommitRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public GitGetCommitRequest(@JsonProperty("commit_sha") String commitSha, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.commitSha = commitSha;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

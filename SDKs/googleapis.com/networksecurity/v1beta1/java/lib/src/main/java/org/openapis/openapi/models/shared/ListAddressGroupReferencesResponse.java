@@ -18,6 +18,7 @@ public class ListAddressGroupReferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressGroupReferences")
     public ListAddressGroupReferencesResponseAddressGroupReference[] addressGroupReferences;
+
     public ListAddressGroupReferencesResponse withAddressGroupReferences(ListAddressGroupReferencesResponseAddressGroupReference[] addressGroupReferences) {
         this.addressGroupReferences = addressGroupReferences;
         return this;
@@ -29,9 +30,11 @@ public class ListAddressGroupReferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAddressGroupReferencesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAddressGroupReferencesResponse(){}
 }

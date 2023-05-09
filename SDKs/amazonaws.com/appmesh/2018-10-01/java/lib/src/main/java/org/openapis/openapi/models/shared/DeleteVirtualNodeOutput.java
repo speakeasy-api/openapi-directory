@@ -15,9 +15,11 @@ public class DeleteVirtualNodeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualNode")
     public VirtualNodeData virtualNode;
+
     public DeleteVirtualNodeOutput withVirtualNode(VirtualNodeData virtualNode) {
         this.virtualNode = virtualNode;
         return this;
     }
     
+    public DeleteVirtualNodeOutput(){}
 }

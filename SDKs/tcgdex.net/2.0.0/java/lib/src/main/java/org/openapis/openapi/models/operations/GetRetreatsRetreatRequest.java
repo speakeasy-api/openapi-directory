@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRetreatsRetreatRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=retreat")
     public String retreat;
+
     public GetRetreatsRetreatRequest withRetreat(String retreat) {
         this.retreat = retreat;
         return this;
     }
     
+    public GetRetreatsRetreatRequest(@JsonProperty("retreat") String retreat) {
+        this.retreat = retreat;
+  }
 }

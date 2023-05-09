@@ -15,6 +15,7 @@ public class ListEntitiesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public ListEntitiesFilter withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -23,6 +24,7 @@ public class ListEntitiesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public ListEntitiesFilter withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -31,9 +33,11 @@ public class ListEntitiesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEntityId")
     public String parentEntityId;
+
     public ListEntitiesFilter withParentEntityId(String parentEntityId) {
         this.parentEntityId = parentEntityId;
         return this;
     }
     
+    public ListEntitiesFilter(){}
 }

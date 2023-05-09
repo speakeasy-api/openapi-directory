@@ -22,6 +22,7 @@ public class ClientAuthenticationSettingInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public ClientAuthenticationSettingInfo withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -30,6 +31,7 @@ public class ClientAuthenticationSettingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ClientAuthenticationStatusEnum status;
+
     public ClientAuthenticationSettingInfo withStatus(ClientAuthenticationStatusEnum status) {
         this.status = status;
         return this;
@@ -38,9 +40,11 @@ public class ClientAuthenticationSettingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ClientAuthenticationTypeEnum type;
+
     public ClientAuthenticationSettingInfo withType(ClientAuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ClientAuthenticationSettingInfo(){}
 }

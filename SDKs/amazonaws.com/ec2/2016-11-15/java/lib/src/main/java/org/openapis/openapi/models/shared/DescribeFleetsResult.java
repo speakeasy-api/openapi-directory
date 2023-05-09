@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResult {
     
     public DescribeFleetsResultFleets[] fleets;
+
     public DescribeFleetsResult withFleets(DescribeFleetsResultFleets[] fleets) {
         this.fleets = fleets;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFleetsResult {
     
     
     public String nextToken;
+
     public DescribeFleetsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetsResult(){}
 }

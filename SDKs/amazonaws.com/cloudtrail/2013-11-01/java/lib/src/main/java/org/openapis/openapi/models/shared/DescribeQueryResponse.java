@@ -15,6 +15,7 @@ public class DescribeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryS3Uri")
     public String deliveryS3Uri;
+
     public DescribeQueryResponse withDeliveryS3Uri(String deliveryS3Uri) {
         this.deliveryS3Uri = deliveryS3Uri;
         return this;
@@ -23,6 +24,7 @@ public class DescribeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryStatus")
     public DeliveryStatusEnum deliveryStatus;
+
     public DescribeQueryResponse withDeliveryStatus(DeliveryStatusEnum deliveryStatus) {
         this.deliveryStatus = deliveryStatus;
         return this;
@@ -31,6 +33,7 @@ public class DescribeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeQueryResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -39,6 +42,7 @@ public class DescribeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryId")
     public String queryId;
+
     public DescribeQueryResponse withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -47,6 +51,7 @@ public class DescribeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStatistics")
     public QueryStatisticsForDescribeQuery queryStatistics;
+
     public DescribeQueryResponse withQueryStatistics(QueryStatisticsForDescribeQuery queryStatistics) {
         this.queryStatistics = queryStatistics;
         return this;
@@ -55,6 +60,7 @@ public class DescribeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStatus")
     public QueryStatusEnum queryStatus;
+
     public DescribeQueryResponse withQueryStatus(QueryStatusEnum queryStatus) {
         this.queryStatus = queryStatus;
         return this;
@@ -63,9 +69,11 @@ public class DescribeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryString")
     public String queryString;
+
     public DescribeQueryResponse withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public DescribeQueryResponse(){}
 }

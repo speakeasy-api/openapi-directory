@@ -18,9 +18,11 @@ public class WeeklySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public WeeklyScheduleDayOfWeekEnum dayOfWeek;
+
     public WeeklySchedule withDayOfWeek(WeeklyScheduleDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
     }
     
+    public WeeklySchedule(){}
 }

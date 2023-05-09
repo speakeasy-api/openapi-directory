@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidmanagementSignupUrlsCreateResponse {
     
     public String contentType;
+
     public AndroidmanagementSignupUrlsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidmanagementSignupUrlsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.SignupUrl signupUrl;
+
     public AndroidmanagementSignupUrlsCreateResponse withSignupUrl(org.openapis.openapi.models.shared.SignupUrl signupUrl) {
         this.signupUrl = signupUrl;
         return this;
@@ -26,6 +29,7 @@ public class AndroidmanagementSignupUrlsCreateResponse {
     
     
     public Integer statusCode;
+
     public AndroidmanagementSignupUrlsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidmanagementSignupUrlsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidmanagementSignupUrlsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidmanagementSignupUrlsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

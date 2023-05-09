@@ -15,6 +15,7 @@ public class ListSecurityPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSecurityPoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSecurityPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicySummaries")
     public SecurityPolicySummary[] securityPolicySummaries;
+
     public ListSecurityPoliciesResponse withSecurityPolicySummaries(SecurityPolicySummary[] securityPolicySummaries) {
         this.securityPolicySummaries = securityPolicySummaries;
         return this;
     }
     
+    public ListSecurityPoliciesResponse(){}
 }

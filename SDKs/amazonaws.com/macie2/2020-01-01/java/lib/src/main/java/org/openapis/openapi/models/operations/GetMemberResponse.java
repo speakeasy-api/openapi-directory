@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMemberResponse {
@@ -12,6 +13,7 @@ public class GetMemberResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMemberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetMemberResponse {
      */
     
     public Object conflictException;
+
     public GetMemberResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetMemberResponse {
     
     
     public String contentType;
+
     public GetMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetMemberResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMemberResponse getMemberResponse;
+
     public GetMemberResponse withGetMemberResponse(org.openapis.openapi.models.shared.GetMemberResponse getMemberResponse) {
         this.getMemberResponse = getMemberResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetMemberResponse {
      */
     
     public Object internalServerException;
+
     public GetMemberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetMemberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMemberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetMemberResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetMemberResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetMemberResponse {
     
     
     public Integer statusCode;
+
     public GetMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetMemberResponse {
      */
     
     public Object throttlingException;
+
     public GetMemberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetMemberResponse {
      */
     
     public Object validationException;
+
     public GetMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

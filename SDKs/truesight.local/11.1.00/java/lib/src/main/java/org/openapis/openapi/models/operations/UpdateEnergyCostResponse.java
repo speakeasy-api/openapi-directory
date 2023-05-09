@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEnergyCostResponse {
     
     public byte[] body;
+
     public UpdateEnergyCostResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class UpdateEnergyCostResponse {
     
     
     public String contentType;
+
     public UpdateEnergyCostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class UpdateEnergyCostResponse {
     
     
     public Integer statusCode;
+
     public UpdateEnergyCostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class UpdateEnergyCostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEnergyCostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateEnergyCostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

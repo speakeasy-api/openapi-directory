@@ -18,6 +18,7 @@ public class AndroidInstrumentationTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testPackageId")
     public String testPackageId;
+
     public AndroidInstrumentationTest withTestPackageId(String testPackageId) {
         this.testPackageId = testPackageId;
         return this;
@@ -29,6 +30,7 @@ public class AndroidInstrumentationTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testRunnerClass")
     public String testRunnerClass;
+
     public AndroidInstrumentationTest withTestRunnerClass(String testRunnerClass) {
         this.testRunnerClass = testRunnerClass;
         return this;
@@ -40,6 +42,7 @@ public class AndroidInstrumentationTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTargets")
     public String[] testTargets;
+
     public AndroidInstrumentationTest withTestTargets(String[] testTargets) {
         this.testTargets = testTargets;
         return this;
@@ -51,9 +54,11 @@ public class AndroidInstrumentationTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useOrchestrator")
     public Boolean useOrchestrator;
+
     public AndroidInstrumentationTest withUseOrchestrator(Boolean useOrchestrator) {
         this.useOrchestrator = useOrchestrator;
         return this;
     }
     
+    public AndroidInstrumentationTest(){}
 }

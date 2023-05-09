@@ -15,6 +15,7 @@ public class StreamKeySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StreamKeySummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class StreamKeySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelArn")
     public String channelArn;
+
     public StreamKeySummary withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -31,9 +33,11 @@ public class StreamKeySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StreamKeySummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StreamKeySummary(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BestPodcastsResponse {
     @JsonProperty("has_next")
     public Boolean hasNext;
+
     public BestPodcastsResponse withHasNext(Boolean hasNext) {
         this.hasNext = hasNext;
         return this;
@@ -19,6 +20,7 @@ public class BestPodcastsResponse {
     
     @JsonProperty("has_previous")
     public Boolean hasPrevious;
+
     public BestPodcastsResponse withHasPrevious(Boolean hasPrevious) {
         this.hasPrevious = hasPrevious;
         return this;
@@ -29,6 +31,7 @@ public class BestPodcastsResponse {
      */
     @JsonProperty("id")
     public Long id;
+
     public BestPodcastsResponse withId(Long id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class BestPodcastsResponse {
      */
     @JsonProperty("listennotes_url")
     public String listennotesUrl;
+
     public BestPodcastsResponse withListennotesUrl(String listennotesUrl) {
         this.listennotesUrl = listennotesUrl;
         return this;
@@ -49,6 +53,7 @@ public class BestPodcastsResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public BestPodcastsResponse withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +61,7 @@ public class BestPodcastsResponse {
     
     @JsonProperty("next_page_number")
     public Long nextPageNumber;
+
     public BestPodcastsResponse withNextPageNumber(Long nextPageNumber) {
         this.nextPageNumber = nextPageNumber;
         return this;
@@ -63,6 +69,7 @@ public class BestPodcastsResponse {
     
     @JsonProperty("page_number")
     public Long pageNumber;
+
     public BestPodcastsResponse withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -73,6 +80,7 @@ public class BestPodcastsResponse {
      */
     @JsonProperty("parent_id")
     public Long parentId;
+
     public BestPodcastsResponse withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -80,6 +88,7 @@ public class BestPodcastsResponse {
     
     @JsonProperty("podcasts")
     public PodcastSimple[] podcasts;
+
     public BestPodcastsResponse withPodcasts(PodcastSimple[] podcasts) {
         this.podcasts = podcasts;
         return this;
@@ -87,6 +96,7 @@ public class BestPodcastsResponse {
     
     @JsonProperty("previous_page_number")
     public Long previousPageNumber;
+
     public BestPodcastsResponse withPreviousPageNumber(Long previousPageNumber) {
         this.previousPageNumber = previousPageNumber;
         return this;
@@ -94,9 +104,23 @@ public class BestPodcastsResponse {
     
     @JsonProperty("total")
     public Long total;
+
     public BestPodcastsResponse withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public BestPodcastsResponse(@JsonProperty("has_next") Boolean hasNext, @JsonProperty("has_previous") Boolean hasPrevious, @JsonProperty("id") Long id, @JsonProperty("listennotes_url") String listennotesUrl, @JsonProperty("name") String name, @JsonProperty("next_page_number") Long nextPageNumber, @JsonProperty("page_number") Long pageNumber, @JsonProperty("parent_id") Long parentId, @JsonProperty("podcasts") PodcastSimple[] podcasts, @JsonProperty("previous_page_number") Long previousPageNumber, @JsonProperty("total") Long total) {
+        this.hasNext = hasNext;
+        this.hasPrevious = hasPrevious;
+        this.id = id;
+        this.listennotesUrl = listennotesUrl;
+        this.name = name;
+        this.nextPageNumber = nextPageNumber;
+        this.pageNumber = pageNumber;
+        this.parentId = parentId;
+        this.podcasts = podcasts;
+        this.previousPageNumber = previousPageNumber;
+        this.total = total;
+  }
 }

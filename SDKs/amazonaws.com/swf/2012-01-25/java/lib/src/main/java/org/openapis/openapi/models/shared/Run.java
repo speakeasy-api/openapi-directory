@@ -15,9 +15,11 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public Run withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public Run(){}
 }

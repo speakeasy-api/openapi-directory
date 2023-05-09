@@ -15,6 +15,7 @@ public class RepositoryScanningConfigurationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public ScanningConfigurationFailureCodeEnum failureCode;
+
     public RepositoryScanningConfigurationFailure withFailureCode(ScanningConfigurationFailureCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -23,6 +24,7 @@ public class RepositoryScanningConfigurationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public RepositoryScanningConfigurationFailure withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -31,9 +33,11 @@ public class RepositoryScanningConfigurationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public RepositoryScanningConfigurationFailure withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public RepositoryScanningConfigurationFailure(){}
 }

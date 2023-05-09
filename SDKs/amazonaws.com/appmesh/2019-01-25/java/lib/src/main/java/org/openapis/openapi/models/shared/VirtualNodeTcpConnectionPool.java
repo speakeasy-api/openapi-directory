@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualNodeTcpConnectionPool {
     @JsonProperty("maxConnections")
     public Long maxConnections;
+
     public VirtualNodeTcpConnectionPool withMaxConnections(Long maxConnections) {
         this.maxConnections = maxConnections;
         return this;
     }
     
+    public VirtualNodeTcpConnectionPool(@JsonProperty("maxConnections") Long maxConnections) {
+        this.maxConnections = maxConnections;
+  }
 }

@@ -15,9 +15,11 @@ public class UpdateTeamRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TeamRequestInput data;
+
     public UpdateTeamRequestBodyInput withData(org.openapis.openapi.models.shared.TeamRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public UpdateTeamRequestBodyInput(){}
 }

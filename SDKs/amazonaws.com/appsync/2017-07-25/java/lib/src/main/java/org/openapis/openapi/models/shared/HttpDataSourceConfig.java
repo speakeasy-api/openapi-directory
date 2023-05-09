@@ -15,6 +15,7 @@ public class HttpDataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationConfig")
     public AuthorizationConfig authorizationConfig;
+
     public HttpDataSourceConfig withAuthorizationConfig(AuthorizationConfig authorizationConfig) {
         this.authorizationConfig = authorizationConfig;
         return this;
@@ -23,9 +24,11 @@ public class HttpDataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public HttpDataSourceConfig withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public HttpDataSourceConfig(){}
 }

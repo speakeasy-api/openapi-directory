@@ -20,6 +20,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignment")
     public Assignment assignment;
+
     public Contribution withAssignment(Assignment assignment) {
         this.assignment = assignment;
         return this;
@@ -31,6 +32,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribution")
     public String attribution;
+
     public Contribution withAttribution(String attribution) {
         this.attribution = attribution;
         return this;
@@ -39,6 +41,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Contribution withBody(String body) {
         this.body = body;
         return this;
@@ -49,6 +52,7 @@ public class Contribution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Contribution withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -57,6 +61,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headline")
     public String headline;
+
     public Contribution withHeadline(String headline) {
         this.headline = headline;
         return this;
@@ -65,6 +70,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Contribution withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +79,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaUsages")
     public MediaUsage[] mediaUsages;
+
     public Contribution withMediaUsages(MediaUsage[] mediaUsages) {
         this.mediaUsages = mediaUsages;
         return this;
@@ -81,6 +88,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moderationHistory")
     public ModerationHistoryItem[] moderationHistory;
+
     public Contribution withModerationHistory(ModerationHistoryItem[] moderationHistory) {
         this.moderationHistory = moderationHistory;
         return this;
@@ -89,6 +97,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place")
     public Place place;
+
     public Contribution withPlace(Place place) {
         this.place = place;
         return this;
@@ -97,6 +106,7 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlWords")
     public String urlWords;
+
     public Contribution withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
@@ -105,9 +115,11 @@ public class Contribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("via")
     public Via via;
+
     public Contribution withVia(Via via) {
         this.via = via;
         return this;
     }
     
+    public Contribution(){}
 }

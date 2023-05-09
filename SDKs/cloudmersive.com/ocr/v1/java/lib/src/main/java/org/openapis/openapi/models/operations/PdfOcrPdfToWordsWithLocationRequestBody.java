@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PdfOcrPdfToWordsWithLocationRequestBody {
@@ -12,9 +13,13 @@ public class PdfOcrPdfToWordsWithLocationRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PdfOcrPdfToWordsWithLocationRequestBodyImageFile imageFile;
+
     public PdfOcrPdfToWordsWithLocationRequestBody withImageFile(PdfOcrPdfToWordsWithLocationRequestBodyImageFile imageFile) {
         this.imageFile = imageFile;
         return this;
     }
     
+    public PdfOcrPdfToWordsWithLocationRequestBody(@JsonProperty("imageFile") PdfOcrPdfToWordsWithLocationRequestBodyImageFile imageFile) {
+        this.imageFile = imageFile;
+  }
 }

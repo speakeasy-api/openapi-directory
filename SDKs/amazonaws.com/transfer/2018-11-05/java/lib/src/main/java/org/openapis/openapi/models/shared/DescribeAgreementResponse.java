@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAgreementResponse {
     @JsonProperty("Agreement")
     public DescribedAgreement agreement;
+
     public DescribeAgreementResponse withAgreement(DescribedAgreement agreement) {
         this.agreement = agreement;
         return this;
     }
     
+    public DescribeAgreementResponse(@JsonProperty("Agreement") DescribedAgreement agreement) {
+        this.agreement = agreement;
+  }
 }

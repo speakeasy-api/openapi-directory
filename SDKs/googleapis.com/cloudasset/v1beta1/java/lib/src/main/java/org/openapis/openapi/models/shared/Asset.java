@@ -18,6 +18,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevel")
     public GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel;
+
     public Asset withAccessLevel(GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel) {
         this.accessLevel = accessLevel;
         return this;
@@ -29,6 +30,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPolicy")
     public GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy;
+
     public Asset withAccessPolicy(GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy) {
         this.accessPolicy = accessPolicy;
         return this;
@@ -40,6 +42,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public String assetType;
+
     public Asset withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -51,6 +54,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamPolicy")
     public Policy iamPolicy;
+
     public Asset withIamPolicy(Policy iamPolicy) {
         this.iamPolicy = iamPolicy;
         return this;
@@ -62,6 +66,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Asset withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgPolicy")
     public GoogleCloudOrgpolicyV1Policy[] orgPolicy;
+
     public Asset withOrgPolicy(GoogleCloudOrgpolicyV1Policy[] orgPolicy) {
         this.orgPolicy = orgPolicy;
         return this;
@@ -84,6 +90,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public Resource resource;
+
     public Asset withResource(Resource resource) {
         this.resource = resource;
         return this;
@@ -95,9 +102,11 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicePerimeter")
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter;
+
     public Asset withServicePerimeter(GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter) {
         this.servicePerimeter = servicePerimeter;
         return this;
     }
     
+    public Asset(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateClassRequest {
@@ -12,6 +13,7 @@ public class UpdateClassRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ClassUpdate classUpdate;
+
     public UpdateClassRequest withClassUpdate(org.openapis.openapi.models.shared.ClassUpdate classUpdate) {
         this.classUpdate = classUpdate;
         return this;
@@ -22,9 +24,13 @@ public class UpdateClassRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public UpdateClassRequest withClass(String class_) {
         this.class_ = class_;
         return this;
     }
     
+    public UpdateClassRequest(@JsonProperty("class") String class_) {
+        this.class_ = class_;
+  }
 }

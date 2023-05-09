@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FinalizeDeviceClaimRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public FinalizeDeviceClaimRequestBody requestBody;
+
     public FinalizeDeviceClaimRequest withRequestBody(FinalizeDeviceClaimRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class FinalizeDeviceClaimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public FinalizeDeviceClaimRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class FinalizeDeviceClaimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public FinalizeDeviceClaimRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class FinalizeDeviceClaimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public FinalizeDeviceClaimRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class FinalizeDeviceClaimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public FinalizeDeviceClaimRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class FinalizeDeviceClaimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public FinalizeDeviceClaimRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class FinalizeDeviceClaimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public FinalizeDeviceClaimRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class FinalizeDeviceClaimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public FinalizeDeviceClaimRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,9 +77,14 @@ public class FinalizeDeviceClaimRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
     public String deviceId;
+
     public FinalizeDeviceClaimRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public FinalizeDeviceClaimRequest(@JsonProperty("RequestBody") FinalizeDeviceClaimRequestBody requestBody, @JsonProperty("deviceId") String deviceId) {
+        this.requestBody = requestBody;
+        this.deviceId = deviceId;
+  }
 }

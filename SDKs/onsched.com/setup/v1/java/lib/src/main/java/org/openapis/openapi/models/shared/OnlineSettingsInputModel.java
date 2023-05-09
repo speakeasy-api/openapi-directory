@@ -12,6 +12,7 @@ public class OnlineSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookAheadUnit")
     public Integer bookAheadUnit;
+
     public OnlineSettingsInputModel withBookAheadUnit(Integer bookAheadUnit) {
         this.bookAheadUnit = bookAheadUnit;
         return this;
@@ -20,6 +21,7 @@ public class OnlineSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookAheadValue")
     public Integer bookAheadValue;
+
     public OnlineSettingsInputModel withBookAheadValue(Integer bookAheadValue) {
         this.bookAheadValue = bookAheadValue;
         return this;
@@ -28,6 +30,7 @@ public class OnlineSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookInAdvance")
     public Integer bookInAdvance;
+
     public OnlineSettingsInputModel withBookInAdvance(Integer bookInAdvance) {
         this.bookInAdvance = bookInAdvance;
         return this;
@@ -36,6 +39,7 @@ public class OnlineSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingTimerMins")
     public Integer bookingTimerMins;
+
     public OnlineSettingsInputModel withBookingTimerMins(Integer bookingTimerMins) {
         this.bookingTimerMins = bookingTimerMins;
         return this;
@@ -44,6 +48,7 @@ public class OnlineSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerBookingsPerDay")
     public Integer customerBookingsPerDay;
+
     public OnlineSettingsInputModel withCustomerBookingsPerDay(Integer customerBookingsPerDay) {
         this.customerBookingsPerDay = customerBookingsPerDay;
         return this;
@@ -52,9 +57,11 @@ public class OnlineSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWorldTimezones")
     public Boolean enableWorldTimezones;
+
     public OnlineSettingsInputModel withEnableWorldTimezones(Boolean enableWorldTimezones) {
         this.enableWorldTimezones = enableWorldTimezones;
         return this;
     }
     
+    public OnlineSettingsInputModel(){}
 }

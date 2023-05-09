@@ -18,6 +18,7 @@ public class HistogramSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barColor")
     public Color barColor;
+
     public HistogramSeries withBarColor(Color barColor) {
         this.barColor = barColor;
         return this;
@@ -29,6 +30,7 @@ public class HistogramSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barColorStyle")
     public ColorStyle barColorStyle;
+
     public HistogramSeries withBarColorStyle(ColorStyle barColorStyle) {
         this.barColorStyle = barColorStyle;
         return this;
@@ -40,9 +42,11 @@ public class HistogramSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ChartData data;
+
     public HistogramSeries withData(ChartData data) {
         this.data = data;
         return this;
     }
     
+    public HistogramSeries(){}
 }

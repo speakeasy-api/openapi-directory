@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DriveChangesWatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public DriveChangesWatchRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -19,6 +20,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveChangesWatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +31,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=driveId")
     public String driveId;
+
     public DriveChangesWatchRequest withDriveId(String driveId) {
         this.driveId = driveId;
         return this;
@@ -39,6 +42,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveChangesWatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +53,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCorpusRemovals")
     public Boolean includeCorpusRemovals;
+
     public DriveChangesWatchRequest withIncludeCorpusRemovals(Boolean includeCorpusRemovals) {
         this.includeCorpusRemovals = includeCorpusRemovals;
         return this;
@@ -59,6 +64,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDeleted")
     public Boolean includeDeleted;
+
     public DriveChangesWatchRequest withIncludeDeleted(Boolean includeDeleted) {
         this.includeDeleted = includeDeleted;
         return this;
@@ -69,6 +75,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeItemsFromAllDrives")
     public Boolean includeItemsFromAllDrives;
+
     public DriveChangesWatchRequest withIncludeItemsFromAllDrives(Boolean includeItemsFromAllDrives) {
         this.includeItemsFromAllDrives = includeItemsFromAllDrives;
         return this;
@@ -79,6 +86,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
     public String includeLabels;
+
     public DriveChangesWatchRequest withIncludeLabels(String includeLabels) {
         this.includeLabels = includeLabels;
         return this;
@@ -89,6 +97,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
     public String includePermissionsForView;
+
     public DriveChangesWatchRequest withIncludePermissionsForView(String includePermissionsForView) {
         this.includePermissionsForView = includePermissionsForView;
         return this;
@@ -99,6 +108,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSubscribed")
     public Boolean includeSubscribed;
+
     public DriveChangesWatchRequest withIncludeSubscribed(Boolean includeSubscribed) {
         this.includeSubscribed = includeSubscribed;
         return this;
@@ -109,6 +119,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTeamDriveItems")
     public Boolean includeTeamDriveItems;
+
     public DriveChangesWatchRequest withIncludeTeamDriveItems(Boolean includeTeamDriveItems) {
         this.includeTeamDriveItems = includeTeamDriveItems;
         return this;
@@ -119,6 +130,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveChangesWatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -129,6 +141,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DriveChangesWatchRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -139,6 +152,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveChangesWatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -149,6 +163,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DriveChangesWatchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -159,6 +174,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveChangesWatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -169,6 +185,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveChangesWatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -179,6 +196,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spaces")
     public String spaces;
+
     public DriveChangesWatchRequest withSpaces(String spaces) {
         this.spaces = spaces;
         return this;
@@ -189,6 +207,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startChangeId")
     public String startChangeId;
+
     public DriveChangesWatchRequest withStartChangeId(String startChangeId) {
         this.startChangeId = startChangeId;
         return this;
@@ -199,6 +218,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
     public Boolean supportsAllDrives;
+
     public DriveChangesWatchRequest withSupportsAllDrives(Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -209,6 +229,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
     public Boolean supportsTeamDrives;
+
     public DriveChangesWatchRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -219,6 +240,7 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=teamDriveId")
     public String teamDriveId;
+
     public DriveChangesWatchRequest withTeamDriveId(String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -229,9 +251,11 @@ public class DriveChangesWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveChangesWatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveChangesWatchRequest(){}
 }

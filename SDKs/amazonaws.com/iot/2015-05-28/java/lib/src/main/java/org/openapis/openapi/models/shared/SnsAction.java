@@ -15,6 +15,7 @@ public class SnsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageFormat")
     public MessageFormatEnum messageFormat;
+
     public SnsAction withMessageFormat(MessageFormatEnum messageFormat) {
         this.messageFormat = messageFormat;
         return this;
@@ -22,6 +23,7 @@ public class SnsAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public SnsAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -29,9 +31,14 @@ public class SnsAction {
     
     @JsonProperty("targetArn")
     public String targetArn;
+
     public SnsAction withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public SnsAction(@JsonProperty("roleArn") String roleArn, @JsonProperty("targetArn") String targetArn) {
+        this.roleArn = roleArn;
+        this.targetArn = targetArn;
+  }
 }

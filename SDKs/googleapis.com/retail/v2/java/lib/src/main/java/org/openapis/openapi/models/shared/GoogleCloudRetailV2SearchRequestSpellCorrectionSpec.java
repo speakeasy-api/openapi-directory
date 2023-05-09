@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2SearchRequestSpellCorrectionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public GoogleCloudRetailV2SearchRequestSpellCorrectionSpecModeEnum mode;
+
     public GoogleCloudRetailV2SearchRequestSpellCorrectionSpec withMode(GoogleCloudRetailV2SearchRequestSpellCorrectionSpecModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public GoogleCloudRetailV2SearchRequestSpellCorrectionSpec(){}
 }

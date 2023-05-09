@@ -20,6 +20,7 @@ public class DiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Price amount;
+
     public DiscountResponse withAmount(Price amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class DiscountResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public DiscountResponse withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -37,6 +39,7 @@ public class DiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DiscountResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class DiscountResponse {
     
     @JsonProperty("etag")
     public String etag;
+
     public DiscountResponse withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -52,6 +56,7 @@ public class DiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalReference")
     public String externalReference;
+
     public DiscountResponse withExternalReference(String externalReference) {
         this.externalReference = externalReference;
         return this;
@@ -60,6 +65,7 @@ public class DiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageLookupKeys")
     public String[] imageLookupKeys;
+
     public DiscountResponse withImageLookupKeys(String[] imageLookupKeys) {
         this.imageLookupKeys = imageLookupKeys;
         return this;
@@ -67,6 +73,7 @@ public class DiscountResponse {
     
     @JsonProperty("name")
     public String name;
+
     public DiscountResponse withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +82,7 @@ public class DiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public DiscountResponse withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
@@ -84,6 +92,7 @@ public class DiscountResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public DiscountResponse withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
@@ -92,6 +101,7 @@ public class DiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public String updatedBy;
+
     public DiscountResponse withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -99,9 +109,17 @@ public class DiscountResponse {
     
     @JsonProperty("uuid")
     public String uuid;
+
     public DiscountResponse withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public DiscountResponse(@JsonProperty("created") OffsetDateTime created, @JsonProperty("etag") String etag, @JsonProperty("name") String name, @JsonProperty("updated") OffsetDateTime updated, @JsonProperty("uuid") String uuid) {
+        this.created = created;
+        this.etag = etag;
+        this.name = name;
+        this.updated = updated;
+        this.uuid = uuid;
+  }
 }

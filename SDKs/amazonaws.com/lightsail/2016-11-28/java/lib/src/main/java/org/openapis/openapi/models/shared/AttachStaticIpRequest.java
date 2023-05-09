@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttachStaticIpRequest {
     @JsonProperty("instanceName")
     public String instanceName;
+
     public AttachStaticIpRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -16,9 +17,14 @@ public class AttachStaticIpRequest {
     
     @JsonProperty("staticIpName")
     public String staticIpName;
+
     public AttachStaticIpRequest withStaticIpName(String staticIpName) {
         this.staticIpName = staticIpName;
         return this;
     }
     
+    public AttachStaticIpRequest(@JsonProperty("instanceName") String instanceName, @JsonProperty("staticIpName") String staticIpName) {
+        this.instanceName = instanceName;
+        this.staticIpName = staticIpName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportHtmlBelegeBelegUuidRequest {
@@ -12,9 +13,13 @@ public class GetExportHtmlBelegeBelegUuidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
     public String belegUuid;
+
     public GetExportHtmlBelegeBelegUuidRequest withBelegUuid(String belegUuid) {
         this.belegUuid = belegUuid;
         return this;
     }
     
+    public GetExportHtmlBelegeBelegUuidRequest(@JsonProperty("belegUuid") String belegUuid) {
+        this.belegUuid = belegUuid;
+  }
 }

@@ -18,6 +18,7 @@ public class SearchApplicationQueryStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public SearchApplicationQueryStats withDate(Date date) {
         this.date = date;
         return this;
@@ -26,9 +27,11 @@ public class SearchApplicationQueryStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryCountByStatus")
     public QueryCountByStatus[] queryCountByStatus;
+
     public SearchApplicationQueryStats withQueryCountByStatus(QueryCountByStatus[] queryCountByStatus) {
         this.queryCountByStatus = queryCountByStatus;
         return this;
     }
     
+    public SearchApplicationQueryStats(){}
 }

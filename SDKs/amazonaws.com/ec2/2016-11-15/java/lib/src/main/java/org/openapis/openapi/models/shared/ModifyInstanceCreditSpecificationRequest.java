@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyInstanceCreditSpecificationRequest {
     
     public String clientToken;
+
     public ModifyInstanceCreditSpecificationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class ModifyInstanceCreditSpecificationRequest {
     
     
     public Boolean dryRun;
+
     public ModifyInstanceCreditSpecificationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class ModifyInstanceCreditSpecificationRequest {
     
     
     public ModifyInstanceCreditSpecificationRequestInstanceCreditSpecifications[] instanceCreditSpecifications;
+
     public ModifyInstanceCreditSpecificationRequest withInstanceCreditSpecifications(ModifyInstanceCreditSpecificationRequestInstanceCreditSpecifications[] instanceCreditSpecifications) {
         this.instanceCreditSpecifications = instanceCreditSpecifications;
         return this;
     }
     
+    public ModifyInstanceCreditSpecificationRequest(@JsonProperty("InstanceCreditSpecifications") ModifyInstanceCreditSpecificationRequestInstanceCreditSpecifications[] instanceCreditSpecifications) {
+        this.instanceCreditSpecifications = instanceCreditSpecifications;
+  }
 }

@@ -15,6 +15,7 @@ public class FollowedTag {
      */
     @JsonProperty("id")
     public Long id;
+
     public FollowedTag withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class FollowedTag {
     
     @JsonProperty("name")
     public String name;
+
     public FollowedTag withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,15 @@ public class FollowedTag {
     
     @JsonProperty("points")
     public Float points;
+
     public FollowedTag withPoints(Float points) {
         this.points = points;
         return this;
     }
     
+    public FollowedTag(@JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("points") Float points) {
+        this.id = id;
+        this.name = name;
+        this.points = points;
+  }
 }

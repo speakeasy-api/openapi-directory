@@ -15,9 +15,11 @@ public class ReferenceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceArn")
     public String referenceArn;
+
     public ReferenceItem withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
     }
     
+    public ReferenceItem(){}
 }

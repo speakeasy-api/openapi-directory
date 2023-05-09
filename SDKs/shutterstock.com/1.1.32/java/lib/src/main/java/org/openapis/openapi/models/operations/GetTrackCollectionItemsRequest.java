@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackCollectionItemsRequest {
@@ -12,6 +13,7 @@ public class GetTrackCollectionItemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetTrackCollectionItemsRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetTrackCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetTrackCollectionItemsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class GetTrackCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetTrackCollectionItemsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class GetTrackCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=share_code")
     public String shareCode;
+
     public GetTrackCollectionItemsRequest withShareCode(String shareCode) {
         this.shareCode = shareCode;
         return this;
@@ -52,9 +57,13 @@ public class GetTrackCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetTrackCollectionItemsSortEnum sort;
+
     public GetTrackCollectionItemsRequest withSort(GetTrackCollectionItemsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetTrackCollectionItemsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

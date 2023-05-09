@@ -18,6 +18,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAdvertiserId")
     public String defaultAdvertiserId;
+
     public GuaranteedOrder withDefaultAdvertiserId(String defaultAdvertiserId) {
         this.defaultAdvertiserId = defaultAdvertiserId;
         return this;
@@ -29,6 +30,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCampaignId")
     public String defaultCampaignId;
+
     public GuaranteedOrder withDefaultCampaignId(String defaultCampaignId) {
         this.defaultCampaignId = defaultCampaignId;
         return this;
@@ -40,6 +42,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GuaranteedOrder withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
     public GuaranteedOrderExchangeEnum exchange;
+
     public GuaranteedOrder withExchange(GuaranteedOrderExchangeEnum exchange) {
         this.exchange = exchange;
         return this;
@@ -62,6 +66,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guaranteedOrderId")
     public String guaranteedOrderId;
+
     public GuaranteedOrder withGuaranteedOrderId(String guaranteedOrderId) {
         this.guaranteedOrderId = guaranteedOrderId;
         return this;
@@ -73,6 +78,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyGuaranteedOrderId")
     public String legacyGuaranteedOrderId;
+
     public GuaranteedOrder withLegacyGuaranteedOrderId(String legacyGuaranteedOrderId) {
         this.legacyGuaranteedOrderId = legacyGuaranteedOrderId;
         return this;
@@ -84,6 +90,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GuaranteedOrder withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherName")
     public String publisherName;
+
     public GuaranteedOrder withPublisherName(String publisherName) {
         this.publisherName = publisherName;
         return this;
@@ -106,6 +114,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAccessInherited")
     public Boolean readAccessInherited;
+
     public GuaranteedOrder withReadAccessInherited(Boolean readAccessInherited) {
         this.readAccessInherited = readAccessInherited;
         return this;
@@ -117,6 +126,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAdvertiserIds")
     public String[] readAdvertiserIds;
+
     public GuaranteedOrder withReadAdvertiserIds(String[] readAdvertiserIds) {
         this.readAdvertiserIds = readAdvertiserIds;
         return this;
@@ -128,6 +138,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readWriteAdvertiserId")
     public String readWriteAdvertiserId;
+
     public GuaranteedOrder withReadWriteAdvertiserId(String readWriteAdvertiserId) {
         this.readWriteAdvertiserId = readWriteAdvertiserId;
         return this;
@@ -139,6 +150,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readWritePartnerId")
     public String readWritePartnerId;
+
     public GuaranteedOrder withReadWritePartnerId(String readWritePartnerId) {
         this.readWritePartnerId = readWritePartnerId;
         return this;
@@ -150,6 +162,7 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GuaranteedOrderStatus status;
+
     public GuaranteedOrder withStatus(GuaranteedOrderStatus status) {
         this.status = status;
         return this;
@@ -161,9 +174,11 @@ public class GuaranteedOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GuaranteedOrder withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GuaranteedOrder(){}
 }

@@ -15,9 +15,11 @@ public class CreateLocationFsxOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public CreateLocationFsxOntapResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
     }
     
+    public CreateLocationFsxOntapResponse(){}
 }

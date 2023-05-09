@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MaliciousUrlScannerRequest {
@@ -12,6 +13,7 @@ public class MaliciousUrlScannerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=URL_HERE")
     public String urlHere;
+
     public MaliciousUrlScannerRequest withUrlHere(String urlHere) {
         this.urlHere = urlHere;
         return this;
@@ -22,9 +24,14 @@ public class MaliciousUrlScannerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=YOUR_API_KEY_HERE")
     public String yourApiKeyHere;
+
     public MaliciousUrlScannerRequest withYourApiKeyHere(String yourApiKeyHere) {
         this.yourApiKeyHere = yourApiKeyHere;
         return this;
     }
     
+    public MaliciousUrlScannerRequest(@JsonProperty("URL_HERE") String urlHere, @JsonProperty("YOUR_API_KEY_HERE") String yourApiKeyHere) {
+        this.urlHere = urlHere;
+        this.yourApiKeyHere = yourApiKeyHere;
+  }
 }

@@ -12,6 +12,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Double failed;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps withFailed(Double failed) {
         this.failed = failed;
         return this;
@@ -20,6 +21,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipped")
     public Double skipped;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps withSkipped(Double skipped) {
         this.skipped = skipped;
         return this;
@@ -36,6 +39,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepExecutions")
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecutions[] stepExecutions;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps withStepExecutions(TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecutions[] stepExecutions) {
         this.stepExecutions = stepExecutions;
         return this;
@@ -44,6 +48,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepName")
     public String stepName;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps withStepName(String stepName) {
         this.stepName = stepName;
         return this;
@@ -52,9 +57,11 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step_report_url")
     public String stepReportUrl;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps withStepReportUrl(String stepReportUrl) {
         this.stepReportUrl = stepReportUrl;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps(){}
 }

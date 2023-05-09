@@ -12,6 +12,7 @@ public class PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResour
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer server;
+
     public PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources withServer(PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer server) {
         this.server = server;
         return this;
@@ -23,9 +24,11 @@ public class PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResour
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum type;
+
     public PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources withType(PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources(){}
 }

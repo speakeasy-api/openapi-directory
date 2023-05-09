@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CombinedCommitStatus {
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public CombinedCommitStatus withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -22,6 +23,7 @@ public class CombinedCommitStatus {
      */
     @JsonProperty("repository")
     public MinimalRepository repository;
+
     public CombinedCommitStatus withRepository(MinimalRepository repository) {
         this.repository = repository;
         return this;
@@ -29,6 +31,7 @@ public class CombinedCommitStatus {
     
     @JsonProperty("sha")
     public String sha;
+
     public CombinedCommitStatus withSha(String sha) {
         this.sha = sha;
         return this;
@@ -36,6 +39,7 @@ public class CombinedCommitStatus {
     
     @JsonProperty("state")
     public String state;
+
     public CombinedCommitStatus withState(String state) {
         this.state = state;
         return this;
@@ -43,6 +47,7 @@ public class CombinedCommitStatus {
     
     @JsonProperty("statuses")
     public SimpleCommitStatus[] statuses;
+
     public CombinedCommitStatus withStatuses(SimpleCommitStatus[] statuses) {
         this.statuses = statuses;
         return this;
@@ -50,6 +55,7 @@ public class CombinedCommitStatus {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public CombinedCommitStatus withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -57,9 +63,19 @@ public class CombinedCommitStatus {
     
     @JsonProperty("url")
     public String url;
+
     public CombinedCommitStatus withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CombinedCommitStatus(@JsonProperty("commit_url") String commitUrl, @JsonProperty("repository") MinimalRepository repository, @JsonProperty("sha") String sha, @JsonProperty("state") String state, @JsonProperty("statuses") SimpleCommitStatus[] statuses, @JsonProperty("total_count") Long totalCount, @JsonProperty("url") String url) {
+        this.commitUrl = commitUrl;
+        this.repository = repository;
+        this.sha = sha;
+        this.state = state;
+        this.statuses = statuses;
+        this.totalCount = totalCount;
+        this.url = url;
+  }
 }

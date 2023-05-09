@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Environment {
     @JsonProperty("arn")
     public String arn;
+
     public Environment withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionType")
     public ConnectionTypeEnum connectionType;
+
     public Environment withConnectionType(ConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -30,6 +32,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Environment withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +41,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Environment withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +50,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycle")
     public EnvironmentLifecycle lifecycle;
+
     public Environment withLifecycle(EnvironmentLifecycle lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -54,6 +59,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedCredentialsStatus")
     public ManagedCredentialsStatusEnum managedCredentialsStatus;
+
     public Environment withManagedCredentialsStatus(ManagedCredentialsStatusEnum managedCredentialsStatus) {
         this.managedCredentialsStatus = managedCredentialsStatus;
         return this;
@@ -62,6 +68,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Environment withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +76,7 @@ public class Environment {
     
     @JsonProperty("ownerArn")
     public String ownerArn;
+
     public Environment withOwnerArn(String ownerArn) {
         this.ownerArn = ownerArn;
         return this;
@@ -76,9 +84,15 @@ public class Environment {
     
     @JsonProperty("type")
     public EnvironmentTypeEnum type;
+
     public Environment withType(EnvironmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Environment(@JsonProperty("arn") String arn, @JsonProperty("ownerArn") String ownerArn, @JsonProperty("type") EnvironmentTypeEnum type) {
+        this.arn = arn;
+        this.ownerArn = ownerArn;
+        this.type = type;
+  }
 }

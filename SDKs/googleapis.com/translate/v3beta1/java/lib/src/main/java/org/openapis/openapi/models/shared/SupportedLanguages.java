@@ -18,9 +18,11 @@ public class SupportedLanguages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public SupportedLanguage[] languages;
+
     public SupportedLanguages withLanguages(SupportedLanguage[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public SupportedLanguages(){}
 }

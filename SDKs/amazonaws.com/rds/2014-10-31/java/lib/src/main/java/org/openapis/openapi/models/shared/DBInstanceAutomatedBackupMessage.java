@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBInstanceAutomatedBackupMessage {
     
     public DBInstanceAutomatedBackupList[] dbInstanceAutomatedBackups;
+
     public DBInstanceAutomatedBackupMessage withDBInstanceAutomatedBackups(DBInstanceAutomatedBackupList[] dbInstanceAutomatedBackups) {
         this.dbInstanceAutomatedBackups = dbInstanceAutomatedBackups;
         return this;
@@ -19,9 +20,11 @@ public class DBInstanceAutomatedBackupMessage {
     
     
     public String marker;
+
     public DBInstanceAutomatedBackupMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBInstanceAutomatedBackupMessage(){}
 }

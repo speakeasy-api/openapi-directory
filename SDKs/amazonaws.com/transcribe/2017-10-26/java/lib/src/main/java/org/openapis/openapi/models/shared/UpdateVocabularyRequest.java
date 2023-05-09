@@ -12,6 +12,7 @@ public class UpdateVocabularyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public UpdateVocabularyRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateVocabularyRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public UpdateVocabularyRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -27,6 +29,7 @@ public class UpdateVocabularyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Phrases")
     public String[] phrases;
+
     public UpdateVocabularyRequest withPhrases(String[] phrases) {
         this.phrases = phrases;
         return this;
@@ -35,6 +38,7 @@ public class UpdateVocabularyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFileUri")
     public String vocabularyFileUri;
+
     public UpdateVocabularyRequest withVocabularyFileUri(String vocabularyFileUri) {
         this.vocabularyFileUri = vocabularyFileUri;
         return this;
@@ -42,9 +46,14 @@ public class UpdateVocabularyRequest {
     
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public UpdateVocabularyRequest withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
     }
     
+    public UpdateVocabularyRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("VocabularyName") String vocabularyName) {
+        this.languageCode = languageCode;
+        this.vocabularyName = vocabularyName;
+  }
 }

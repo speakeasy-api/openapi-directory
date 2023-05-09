@@ -12,6 +12,7 @@ public class VolumeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitId")
     public Long unitId;
+
     public VolumeDTO withUnitId(Long unitId) {
         this.unitId = unitId;
         return this;
@@ -20,9 +21,11 @@ public class VolumeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public VolumeDTO withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public VolumeDTO(){}
 }

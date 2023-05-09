@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EkmanEmotionResponse {
     
     public String contentType;
+
     public EkmanEmotionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EkmanEmotionResponse {
      */
     
     public org.openapis.openapi.models.shared.PostPredicted[] predictionResults;
+
     public EkmanEmotionResponse withPredictionResults(org.openapis.openapi.models.shared.PostPredicted[] predictionResults) {
         this.predictionResults = predictionResults;
         return this;
@@ -26,6 +29,7 @@ public class EkmanEmotionResponse {
     
     
     public Integer statusCode;
+
     public EkmanEmotionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class EkmanEmotionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EkmanEmotionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class EkmanEmotionResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrors validationErrors;
+
     public EkmanEmotionResponse withValidationErrors(org.openapis.openapi.models.shared.ValidationErrors validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public EkmanEmotionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

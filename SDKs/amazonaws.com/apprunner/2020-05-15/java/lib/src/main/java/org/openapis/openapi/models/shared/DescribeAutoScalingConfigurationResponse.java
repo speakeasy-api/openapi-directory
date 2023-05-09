@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAutoScalingConfigurationResponse {
     @JsonProperty("AutoScalingConfiguration")
     public AutoScalingConfiguration autoScalingConfiguration;
+
     public DescribeAutoScalingConfigurationResponse withAutoScalingConfiguration(AutoScalingConfiguration autoScalingConfiguration) {
         this.autoScalingConfiguration = autoScalingConfiguration;
         return this;
     }
     
+    public DescribeAutoScalingConfigurationResponse(@JsonProperty("AutoScalingConfiguration") AutoScalingConfiguration autoScalingConfiguration) {
+        this.autoScalingConfiguration = autoScalingConfiguration;
+  }
 }

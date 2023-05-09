@@ -15,6 +15,7 @@ public class PodocRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PodocRequestBodyCertificateParameters certificateParameters;
+
     public PodocRequestBody withCertificateParameters(PodocRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PodocRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PodocRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PodocRequestBody {
      */
     @JsonProperty("format")
     public PodocRequestBodyFormatEnum format;
+
     public PodocRequestBody withFormat(PodocRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PodocRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PodocRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PodocRequestBody(@JsonProperty("format") PodocRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

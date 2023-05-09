@@ -52,11 +52,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsResponse res = new org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsResponse() {{
+        org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsResponse res = new org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsResponse(contentType, httpRes.statusCode()) {{
             permissionList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsByIdResponse res = new org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsByIdResponse() {{
+        org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsByIdResponse res = new org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsByIdResponse(contentType, httpRes.statusCode()) {{
             permissionList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -131,11 +127,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorporateResponse res = new org.openapis.openapi.models.operations.GetCorporateResponse() {{
+        org.openapis.openapi.models.operations.GetCorporateResponse res = new org.openapis.openapi.models.operations.GetCorporateResponse(contentType, httpRes.statusCode()) {{
             corporateAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +165,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorporateByIdResponse res = new org.openapis.openapi.models.operations.GetCorporateByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCorporateByIdResponse res = new org.openapis.openapi.models.operations.GetCorporateByIdResponse(contentType, httpRes.statusCode()) {{
             corporateAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,11 +202,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorporateUserGroupsResponse res = new org.openapis.openapi.models.operations.GetCorporateUserGroupsResponse() {{
+        org.openapis.openapi.models.operations.GetCorporateUserGroupsResponse res = new org.openapis.openapi.models.operations.GetCorporateUserGroupsResponse(contentType, httpRes.statusCode()) {{
             userGroupList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +240,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorporateUserGroupsByIdResponse res = new org.openapis.openapi.models.operations.GetCorporateUserGroupsByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCorporateUserGroupsByIdResponse res = new org.openapis.openapi.models.operations.GetCorporateUserGroupsByIdResponse(contentType, httpRes.statusCode()) {{
             userGroupList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +277,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorporateUsersResponse res = new org.openapis.openapi.models.operations.GetCorporateUsersResponse() {{
+        org.openapis.openapi.models.operations.GetCorporateUsersResponse res = new org.openapis.openapi.models.operations.GetCorporateUsersResponse(contentType, httpRes.statusCode()) {{
             userList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -329,11 +315,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorporateUsersByIdResponse res = new org.openapis.openapi.models.operations.GetCorporateUsersByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCorporateUsersByIdResponse res = new org.openapis.openapi.models.operations.GetCorporateUsersByIdResponse(contentType, httpRes.statusCode()) {{
             userList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,11 +352,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorporatesListResponse res = new org.openapis.openapi.models.operations.GetCorporatesListResponse() {{
+        org.openapis.openapi.models.operations.GetCorporatesListResponse res = new org.openapis.openapi.models.operations.GetCorporatesListResponse(contentType, httpRes.statusCode()) {{
             corporateAccounts = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -413,11 +395,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveCorporateUserResponse res = new org.openapis.openapi.models.operations.SaveCorporateUserResponse() {{
+        org.openapis.openapi.models.operations.SaveCorporateUserResponse res = new org.openapis.openapi.models.operations.SaveCorporateUserResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -458,11 +438,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveCorporateUserGroupResponse res = new org.openapis.openapi.models.operations.SaveCorporateUserGroupResponse() {{
+        org.openapis.openapi.models.operations.SaveCorporateUserGroupResponse res = new org.openapis.openapi.models.operations.SaveCorporateUserGroupResponse(contentType, httpRes.statusCode()) {{
             userGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -503,11 +481,9 @@ public class Corporate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveCorporateUserGroupByIdResponse res = new org.openapis.openapi.models.operations.SaveCorporateUserGroupByIdResponse() {{
+        org.openapis.openapi.models.operations.SaveCorporateUserGroupByIdResponse res = new org.openapis.openapi.models.operations.SaveCorporateUserGroupByIdResponse(contentType, httpRes.statusCode()) {{
             userGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

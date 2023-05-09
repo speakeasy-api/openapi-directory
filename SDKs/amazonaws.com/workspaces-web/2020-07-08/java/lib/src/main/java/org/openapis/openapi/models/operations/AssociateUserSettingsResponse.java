@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateUserSettingsResponse {
@@ -12,6 +13,7 @@ public class AssociateUserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateUserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateUserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateUserSettingsResponse associateUserSettingsResponse;
+
     public AssociateUserSettingsResponse withAssociateUserSettingsResponse(org.openapis.openapi.models.shared.AssociateUserSettingsResponse associateUserSettingsResponse) {
         this.associateUserSettingsResponse = associateUserSettingsResponse;
         return this;
@@ -32,6 +35,7 @@ public class AssociateUserSettingsResponse {
      */
     
     public Object conflictException;
+
     public AssociateUserSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateUserSettingsResponse {
     
     
     public String contentType;
+
     public AssociateUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateUserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public AssociateUserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public AssociateUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateUserSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateUserSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AssociateUserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public AssociateUserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateUserSettingsResponse {
      */
     
     public Object validationException;
+
     public AssociateUserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

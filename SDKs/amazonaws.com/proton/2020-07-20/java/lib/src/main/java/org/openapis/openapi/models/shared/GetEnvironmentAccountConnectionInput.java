@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEnvironmentAccountConnectionInput {
     @JsonProperty("id")
     public String id;
+
     public GetEnvironmentAccountConnectionInput withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetEnvironmentAccountConnectionInput(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

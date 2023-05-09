@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cases")
     public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase[] cases;
+
     public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases withCases(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase[] cases) {
         this.cases = cases;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases(){}
 }

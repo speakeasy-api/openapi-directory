@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyCacheClusterMessage - Represents the input of a &lt;code&gt;ModifyCacheCluster&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyCacheClusterMessage {
     
     public AZModeEnum azMode;
+
     public ModifyCacheClusterMessage withAZMode(AZModeEnum azMode) {
         this.azMode = azMode;
         return this;
@@ -19,6 +20,7 @@ public class ModifyCacheClusterMessage {
     
     
     public Boolean applyImmediately;
+
     public ModifyCacheClusterMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -26,6 +28,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String authToken;
+
     public ModifyCacheClusterMessage withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -33,6 +36,7 @@ public class ModifyCacheClusterMessage {
     
     
     public AuthTokenUpdateStrategyTypeEnum authTokenUpdateStrategy;
+
     public ModifyCacheClusterMessage withAuthTokenUpdateStrategy(AuthTokenUpdateStrategyTypeEnum authTokenUpdateStrategy) {
         this.authTokenUpdateStrategy = authTokenUpdateStrategy;
         return this;
@@ -40,6 +44,7 @@ public class ModifyCacheClusterMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public ModifyCacheClusterMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -47,6 +52,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String cacheClusterId;
+
     public ModifyCacheClusterMessage withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -54,6 +60,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String[] cacheNodeIdsToRemove;
+
     public ModifyCacheClusterMessage withCacheNodeIdsToRemove(String[] cacheNodeIdsToRemove) {
         this.cacheNodeIdsToRemove = cacheNodeIdsToRemove;
         return this;
@@ -61,6 +68,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String cacheNodeType;
+
     public ModifyCacheClusterMessage withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -68,6 +76,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String cacheParameterGroupName;
+
     public ModifyCacheClusterMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -75,6 +84,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String[] cacheSecurityGroupNames;
+
     public ModifyCacheClusterMessage withCacheSecurityGroupNames(String[] cacheSecurityGroupNames) {
         this.cacheSecurityGroupNames = cacheSecurityGroupNames;
         return this;
@@ -82,6 +92,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String engineVersion;
+
     public ModifyCacheClusterMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -89,6 +100,7 @@ public class ModifyCacheClusterMessage {
     
     
     public IpDiscoveryEnum ipDiscovery;
+
     public ModifyCacheClusterMessage withIpDiscovery(IpDiscoveryEnum ipDiscovery) {
         this.ipDiscovery = ipDiscovery;
         return this;
@@ -96,6 +108,7 @@ public class ModifyCacheClusterMessage {
     
     
     public LogDeliveryConfigurationRequestList[] logDeliveryConfigurations;
+
     public ModifyCacheClusterMessage withLogDeliveryConfigurations(LogDeliveryConfigurationRequestList[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -103,6 +116,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String[] newAvailabilityZones;
+
     public ModifyCacheClusterMessage withNewAvailabilityZones(String[] newAvailabilityZones) {
         this.newAvailabilityZones = newAvailabilityZones;
         return this;
@@ -110,6 +124,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String notificationTopicArn;
+
     public ModifyCacheClusterMessage withNotificationTopicArn(String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
         return this;
@@ -117,6 +132,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String notificationTopicStatus;
+
     public ModifyCacheClusterMessage withNotificationTopicStatus(String notificationTopicStatus) {
         this.notificationTopicStatus = notificationTopicStatus;
         return this;
@@ -124,6 +140,7 @@ public class ModifyCacheClusterMessage {
     
     
     public Long numCacheNodes;
+
     public ModifyCacheClusterMessage withNumCacheNodes(Long numCacheNodes) {
         this.numCacheNodes = numCacheNodes;
         return this;
@@ -131,6 +148,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public ModifyCacheClusterMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -138,6 +156,7 @@ public class ModifyCacheClusterMessage {
     
     
     public String[] securityGroupIds;
+
     public ModifyCacheClusterMessage withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -145,6 +164,7 @@ public class ModifyCacheClusterMessage {
     
     
     public Long snapshotRetentionLimit;
+
     public ModifyCacheClusterMessage withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -152,9 +172,13 @@ public class ModifyCacheClusterMessage {
     
     
     public String snapshotWindow;
+
     public ModifyCacheClusterMessage withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
     }
     
+    public ModifyCacheClusterMessage(@JsonProperty("CacheClusterId") String cacheClusterId) {
+        this.cacheClusterId = cacheClusterId;
+  }
 }

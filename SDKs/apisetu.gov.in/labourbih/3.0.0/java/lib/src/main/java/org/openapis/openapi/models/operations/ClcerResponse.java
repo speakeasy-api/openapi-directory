@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClcerResponse {
     
     public String contentType;
+
     public ClcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ClcerResponse {
     
     
     public Integer statusCode;
+
     public ClcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ClcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ClcerResponse {
      */
     
     public Clcer400ApplicationJSON clcer400ApplicationJSONObject;
+
     public ClcerResponse withClcer400ApplicationJSONObject(Clcer400ApplicationJSON clcer400ApplicationJSONObject) {
         this.clcer400ApplicationJSONObject = clcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ClcerResponse {
      */
     
     public Clcer401ApplicationJSON clcer401ApplicationJSONObject;
+
     public ClcerResponse withClcer401ApplicationJSONObject(Clcer401ApplicationJSON clcer401ApplicationJSONObject) {
         this.clcer401ApplicationJSONObject = clcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ClcerResponse {
      */
     
     public Clcer404ApplicationJSON clcer404ApplicationJSONObject;
+
     public ClcerResponse withClcer404ApplicationJSONObject(Clcer404ApplicationJSON clcer404ApplicationJSONObject) {
         this.clcer404ApplicationJSONObject = clcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ClcerResponse {
      */
     
     public Clcer500ApplicationJSON clcer500ApplicationJSONObject;
+
     public ClcerResponse withClcer500ApplicationJSONObject(Clcer500ApplicationJSON clcer500ApplicationJSONObject) {
         this.clcer500ApplicationJSONObject = clcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ClcerResponse {
      */
     
     public Clcer502ApplicationJSON clcer502ApplicationJSONObject;
+
     public ClcerResponse withClcer502ApplicationJSONObject(Clcer502ApplicationJSON clcer502ApplicationJSONObject) {
         this.clcer502ApplicationJSONObject = clcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ClcerResponse {
      */
     
     public Clcer503ApplicationJSON clcer503ApplicationJSONObject;
+
     public ClcerResponse withClcer503ApplicationJSONObject(Clcer503ApplicationJSON clcer503ApplicationJSONObject) {
         this.clcer503ApplicationJSONObject = clcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class ClcerResponse {
      */
     
     public Clcer504ApplicationJSON clcer504ApplicationJSONObject;
+
     public ClcerResponse withClcer504ApplicationJSONObject(Clcer504ApplicationJSON clcer504ApplicationJSONObject) {
         this.clcer504ApplicationJSONObject = clcer504ApplicationJSONObject;
         return this;
     }
     
+    public ClcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

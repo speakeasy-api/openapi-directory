@@ -12,9 +12,11 @@ public class CountOf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public CountOf withCount(Integer count) {
         this.count = count;
         return this;
     }
     
+    public CountOf(){}
 }

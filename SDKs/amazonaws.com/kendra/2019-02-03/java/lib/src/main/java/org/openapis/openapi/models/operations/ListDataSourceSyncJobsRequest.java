@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDataSourceSyncJobsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListDataSourceSyncJobsRequest listDataSourceSyncJobsRequest;
+
     public ListDataSourceSyncJobsRequest withListDataSourceSyncJobsRequest(org.openapis.openapi.models.shared.ListDataSourceSyncJobsRequest listDataSourceSyncJobsRequest) {
         this.listDataSourceSyncJobsRequest = listDataSourceSyncJobsRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListDataSourceSyncJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListDataSourceSyncJobsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListDataSourceSyncJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListDataSourceSyncJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListDataSourceSyncJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListDataSourceSyncJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListDataSourceSyncJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListDataSourceSyncJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListDataSourceSyncJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListDataSourceSyncJobsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListDataSourceSyncJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListDataSourceSyncJobsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListDataSourceSyncJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListDataSourceSyncJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListDataSourceSyncJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListDataSourceSyncJobsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListDataSourceSyncJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListDataSourceSyncJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListDataSourceSyncJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListDataSourceSyncJobsXAmzTargetEnum xAmzTarget;
+
     public ListDataSourceSyncJobsRequest withXAmzTarget(ListDataSourceSyncJobsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListDataSourceSyncJobsRequest(@JsonProperty("ListDataSourceSyncJobsRequest") org.openapis.openapi.models.shared.ListDataSourceSyncJobsRequest listDataSourceSyncJobsRequest, @JsonProperty("X-Amz-Target") ListDataSourceSyncJobsXAmzTargetEnum xAmzTarget) {
+        this.listDataSourceSyncJobsRequest = listDataSourceSyncJobsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

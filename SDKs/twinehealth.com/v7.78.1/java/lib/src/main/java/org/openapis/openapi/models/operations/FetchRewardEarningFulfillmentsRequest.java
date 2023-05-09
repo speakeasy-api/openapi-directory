@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRewardEarningFulfillmentsRequest {
@@ -12,9 +13,13 @@ public class FetchRewardEarningFulfillmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
     public String filterPatient;
+
     public FetchRewardEarningFulfillmentsRequest withFilterPatient(String filterPatient) {
         this.filterPatient = filterPatient;
         return this;
     }
     
+    public FetchRewardEarningFulfillmentsRequest(@JsonProperty("filter[patient]") String filterPatient) {
+        this.filterPatient = filterPatient;
+  }
 }

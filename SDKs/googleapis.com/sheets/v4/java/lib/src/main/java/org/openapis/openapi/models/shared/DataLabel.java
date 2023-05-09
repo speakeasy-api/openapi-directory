@@ -18,6 +18,7 @@ public class DataLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabelData")
     public ChartData customLabelData;
+
     public DataLabel withCustomLabelData(ChartData customLabelData) {
         this.customLabelData = customLabelData;
         return this;
@@ -29,6 +30,7 @@ public class DataLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placement")
     public DataLabelPlacementEnum placement;
+
     public DataLabel withPlacement(DataLabelPlacementEnum placement) {
         this.placement = placement;
         return this;
@@ -40,6 +42,7 @@ public class DataLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textFormat")
     public TextFormat textFormat;
+
     public DataLabel withTextFormat(TextFormat textFormat) {
         this.textFormat = textFormat;
         return this;
@@ -51,9 +54,11 @@ public class DataLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DataLabelTypeEnum type;
+
     public DataLabel withType(DataLabelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataLabel(){}
 }

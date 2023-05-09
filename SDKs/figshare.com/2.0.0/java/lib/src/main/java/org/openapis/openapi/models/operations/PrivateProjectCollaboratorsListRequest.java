@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectCollaboratorsListRequest {
@@ -12,9 +13,13 @@ public class PrivateProjectCollaboratorsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public PrivateProjectCollaboratorsListRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PrivateProjectCollaboratorsListRequest(@JsonProperty("project_id") Long projectId) {
+        this.projectId = projectId;
+  }
 }

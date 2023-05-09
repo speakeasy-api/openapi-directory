@@ -59,11 +59,9 @@ public class InstanceGroupManagerResizeRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class InstanceGroupManagerResizeRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class InstanceGroupManagerResizeRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetResponse(contentType, httpRes.statusCode()) {{
             instanceGroupManagerResizeRequest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class InstanceGroupManagerResizeRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class InstanceGroupManagerResizeRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListResponse res = new org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListResponse(contentType, httpRes.statusCode()) {{
             instanceGroupManagerResizeRequestsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

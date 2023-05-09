@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETAnnotsByRefrerenceUsingGETResponse {
     
     public byte[] body;
+
     public GETAnnotsByRefrerenceUsingGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETAnnotsByRefrerenceUsingGETResponse {
     
     
     public String contentType;
+
     public GETAnnotsByRefrerenceUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETAnnotsByRefrerenceUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETAnnotsByRefrerenceUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETAnnotsByRefrerenceUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETAnnotsByRefrerenceUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETAnnotsByRefrerenceUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

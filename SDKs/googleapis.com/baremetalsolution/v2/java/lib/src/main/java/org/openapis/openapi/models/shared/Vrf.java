@@ -18,6 +18,7 @@ public class Vrf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Vrf withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class Vrf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qosPolicy")
     public QosPolicy qosPolicy;
+
     public Vrf withQosPolicy(QosPolicy qosPolicy) {
         this.qosPolicy = qosPolicy;
         return this;
@@ -40,6 +42,7 @@ public class Vrf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public VRFStateEnum state;
+
     public Vrf withState(VRFStateEnum state) {
         this.state = state;
         return this;
@@ -51,9 +54,11 @@ public class Vrf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlanAttachments")
     public VlanAttachment[] vlanAttachments;
+
     public Vrf withVlanAttachments(VlanAttachment[] vlanAttachments) {
         this.vlanAttachments = vlanAttachments;
         return this;
     }
     
+    public Vrf(){}
 }

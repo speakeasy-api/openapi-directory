@@ -20,6 +20,7 @@ public class GetMedicalVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DownloadUri")
     public String downloadUri;
+
     public GetMedicalVocabularyResponse withDownloadUri(String downloadUri) {
         this.downloadUri = downloadUri;
         return this;
@@ -28,6 +29,7 @@ public class GetMedicalVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public GetMedicalVocabularyResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -36,6 +38,7 @@ public class GetMedicalVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public GetMedicalVocabularyResponse withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -46,6 +49,7 @@ public class GetMedicalVocabularyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public GetMedicalVocabularyResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -54,6 +58,7 @@ public class GetMedicalVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public GetMedicalVocabularyResponse withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
@@ -62,9 +67,11 @@ public class GetMedicalVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyState")
     public VocabularyStateEnum vocabularyState;
+
     public GetMedicalVocabularyResponse withVocabularyState(VocabularyStateEnum vocabularyState) {
         this.vocabularyState = vocabularyState;
         return this;
     }
     
+    public GetMedicalVocabularyResponse(){}
 }

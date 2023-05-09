@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance - The ID of the Amazon Web Services Verified Access instance.
+ * DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance - The ID of the Verified Access instance.
  */
 public class DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance {
     
     public String creationTime;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance {
     
     
     public String description;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance {
     
     
     public String lastUpdatedTime;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -33,6 +36,7 @@ public class DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance {
     
     
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstanceTags[] tags;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance withTags(DetachVerifiedAccessTrustProviderResultVerifiedAccessInstanceTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,6 +44,7 @@ public class DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance {
     
     
     public String verifiedAccessInstanceId;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
@@ -47,9 +52,11 @@ public class DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance {
     
     
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProviders[] verifiedAccessTrustProviders;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance withVerifiedAccessTrustProviders(DetachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProviders[] verifiedAccessTrustProviders) {
         this.verifiedAccessTrustProviders = verifiedAccessTrustProviders;
         return this;
     }
     
+    public DetachVerifiedAccessTrustProviderResultVerifiedAccessInstance(){}
 }

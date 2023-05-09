@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListActivityTypesInput {
     @JsonProperty("domain")
     public String domain;
+
     public ListActivityTypesInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class ListActivityTypesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPageSize")
     public Long maximumPageSize;
+
     public ListActivityTypesInput withMaximumPageSize(Long maximumPageSize) {
         this.maximumPageSize = maximumPageSize;
         return this;
@@ -27,6 +29,7 @@ public class ListActivityTypesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListActivityTypesInput withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class ListActivityTypesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListActivityTypesInput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -42,6 +46,7 @@ public class ListActivityTypesInput {
     
     @JsonProperty("registrationStatus")
     public RegistrationStatusEnum registrationStatus;
+
     public ListActivityTypesInput withRegistrationStatus(RegistrationStatusEnum registrationStatus) {
         this.registrationStatus = registrationStatus;
         return this;
@@ -50,9 +55,14 @@ public class ListActivityTypesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reverseOrder")
     public Boolean reverseOrder;
+
     public ListActivityTypesInput withReverseOrder(Boolean reverseOrder) {
         this.reverseOrder = reverseOrder;
         return this;
     }
     
+    public ListActivityTypesInput(@JsonProperty("domain") String domain, @JsonProperty("registrationStatus") RegistrationStatusEnum registrationStatus) {
+        this.domain = domain;
+        this.registrationStatus = registrationStatus;
+  }
 }

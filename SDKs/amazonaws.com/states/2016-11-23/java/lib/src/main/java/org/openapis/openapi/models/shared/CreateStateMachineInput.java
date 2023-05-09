@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateStateMachineInput {
     @JsonProperty("definition")
     public String definition;
+
     public CreateStateMachineInput withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -19,6 +20,7 @@ public class CreateStateMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfiguration")
     public LoggingConfiguration loggingConfiguration;
+
     public CreateStateMachineInput withLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
@@ -26,6 +28,7 @@ public class CreateStateMachineInput {
     
     @JsonProperty("name")
     public String name;
+
     public CreateStateMachineInput withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class CreateStateMachineInput {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateStateMachineInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -41,6 +45,7 @@ public class CreateStateMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateStateMachineInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -49,6 +54,7 @@ public class CreateStateMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracingConfiguration")
     public TracingConfiguration tracingConfiguration;
+
     public CreateStateMachineInput withTracingConfiguration(TracingConfiguration tracingConfiguration) {
         this.tracingConfiguration = tracingConfiguration;
         return this;
@@ -57,9 +63,15 @@ public class CreateStateMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public StateMachineTypeEnum type;
+
     public CreateStateMachineInput withType(StateMachineTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateStateMachineInput(@JsonProperty("definition") String definition, @JsonProperty("name") String name, @JsonProperty("roleArn") String roleArn) {
+        this.definition = definition;
+        this.name = name;
+        this.roleArn = roleArn;
+  }
 }

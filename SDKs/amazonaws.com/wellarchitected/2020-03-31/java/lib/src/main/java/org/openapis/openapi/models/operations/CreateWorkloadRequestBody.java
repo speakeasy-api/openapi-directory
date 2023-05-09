@@ -15,6 +15,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public CreateWorkloadRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -26,6 +27,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Applications")
     public String[] applications;
+
     public CreateWorkloadRequestBody withApplications(String[] applications) {
         this.applications = applications;
         return this;
@@ -37,6 +39,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchitecturalDesign")
     public String architecturalDesign;
+
     public CreateWorkloadRequestBody withArchitecturalDesign(String architecturalDesign) {
         this.architecturalDesign = architecturalDesign;
         return this;
@@ -48,16 +51,18 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegions")
     public String[] awsRegions;
+
     public CreateWorkloadRequestBody withAwsRegions(String[] awsRegions) {
         this.awsRegions = awsRegions;
         return this;
     }
     
     /**
-     * &lt;p&gt;A unique case-sensitive string used to ensure that this request is idempotent (executes only once).&lt;/p&gt; &lt;p&gt;You should not reuse the same token for other requests. If you retry a request with the same client request token and the same parameters after it has completed successfully, the result of the original request is returned. &lt;/p&gt; &lt;important&gt; &lt;p&gt;This token is listed as required, however, if you do not specify it, the Amazon Web Services SDKs automatically generate one for you. If you are not using the Amazon Web Services SDK or the CLI, you must provide this token or the request will fail.&lt;/p&gt; &lt;/important&gt;
+     * &lt;p&gt;A unique case-sensitive string used to ensure that this request is idempotent (executes only once).&lt;/p&gt; &lt;p&gt;You should not reuse the same token for other requests. If you retry a request with the same client request token and the same parameters after the original request has completed successfully, the result of the original request is returned.&lt;/p&gt; &lt;important&gt; &lt;p&gt;This token is listed as required, however, if you do not specify it, the Amazon Web Services SDKs automatically generate one for you. If you are not using the Amazon Web Services SDK or the CLI, you must provide this token or the request will fail.&lt;/p&gt; &lt;/important&gt;
      */
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateWorkloadRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -68,6 +73,7 @@ public class CreateWorkloadRequestBody {
      */
     @JsonProperty("Description")
     public String description;
+
     public CreateWorkloadRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -79,6 +85,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscoveryConfig")
     public CreateWorkloadRequestBodyDiscoveryConfig discoveryConfig;
+
     public CreateWorkloadRequestBody withDiscoveryConfig(CreateWorkloadRequestBodyDiscoveryConfig discoveryConfig) {
         this.discoveryConfig = discoveryConfig;
         return this;
@@ -89,6 +96,7 @@ public class CreateWorkloadRequestBody {
      */
     @JsonProperty("Environment")
     public CreateWorkloadRequestBodyEnvironmentEnum environment;
+
     public CreateWorkloadRequestBody withEnvironment(CreateWorkloadRequestBodyEnvironmentEnum environment) {
         this.environment = environment;
         return this;
@@ -100,6 +108,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Industry")
     public String industry;
+
     public CreateWorkloadRequestBody withIndustry(String industry) {
         this.industry = industry;
         return this;
@@ -111,6 +120,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndustryType")
     public String industryType;
+
     public CreateWorkloadRequestBody withIndustryType(String industryType) {
         this.industryType = industryType;
         return this;
@@ -121,6 +131,7 @@ public class CreateWorkloadRequestBody {
      */
     @JsonProperty("Lenses")
     public String[] lenses;
+
     public CreateWorkloadRequestBody withLenses(String[] lenses) {
         this.lenses = lenses;
         return this;
@@ -132,6 +143,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonAwsRegions")
     public String[] nonAwsRegions;
+
     public CreateWorkloadRequestBody withNonAwsRegions(String[] nonAwsRegions) {
         this.nonAwsRegions = nonAwsRegions;
         return this;
@@ -143,6 +155,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public CreateWorkloadRequestBody withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -154,6 +167,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarPriorities")
     public String[] pillarPriorities;
+
     public CreateWorkloadRequestBody withPillarPriorities(String[] pillarPriorities) {
         this.pillarPriorities = pillarPriorities;
         return this;
@@ -165,6 +179,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewOwner")
     public String reviewOwner;
+
     public CreateWorkloadRequestBody withReviewOwner(String reviewOwner) {
         this.reviewOwner = reviewOwner;
         return this;
@@ -176,6 +191,7 @@ public class CreateWorkloadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorkloadRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -186,9 +202,17 @@ public class CreateWorkloadRequestBody {
      */
     @JsonProperty("WorkloadName")
     public String workloadName;
+
     public CreateWorkloadRequestBody withWorkloadName(String workloadName) {
         this.workloadName = workloadName;
         return this;
     }
     
+    public CreateWorkloadRequestBody(@JsonProperty("ClientRequestToken") String clientRequestToken, @JsonProperty("Description") String description, @JsonProperty("Environment") CreateWorkloadRequestBodyEnvironmentEnum environment, @JsonProperty("Lenses") String[] lenses, @JsonProperty("WorkloadName") String workloadName) {
+        this.clientRequestToken = clientRequestToken;
+        this.description = description;
+        this.environment = environment;
+        this.lenses = lenses;
+        this.workloadName = workloadName;
+  }
 }

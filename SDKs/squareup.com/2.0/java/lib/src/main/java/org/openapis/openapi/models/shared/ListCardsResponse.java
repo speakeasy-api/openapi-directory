@@ -22,6 +22,7 @@ public class ListCardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public Card[] cards;
+
     public ListCardsResponse withCards(Card[] cards) {
         this.cards = cards;
         return this;
@@ -36,6 +37,7 @@ public class ListCardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListCardsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -47,9 +49,11 @@ public class ListCardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListCardsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ListCardsResponse(){}
 }

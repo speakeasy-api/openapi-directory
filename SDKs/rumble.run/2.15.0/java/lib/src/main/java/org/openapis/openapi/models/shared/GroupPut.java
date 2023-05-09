@@ -12,6 +12,7 @@ public class GroupPut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GroupPut withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class GroupPut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public Long expiresAt;
+
     public GroupPut withExpiresAt(Long expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -28,6 +30,7 @@ public class GroupPut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GroupPut withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class GroupPut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GroupPut withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class GroupPut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_default_role")
     public String orgDefaultRole;
+
     public GroupPut withOrgDefaultRole(String orgDefaultRole) {
         this.orgDefaultRole = orgDefaultRole;
         return this;
@@ -52,9 +57,11 @@ public class GroupPut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_roles")
     public java.util.Map<String, Object> orgRoles;
+
     public GroupPut withOrgRoles(java.util.Map<String, Object> orgRoles) {
         this.orgRoles = orgRoles;
         return this;
     }
     
+    public GroupPut(){}
 }

@@ -19,6 +19,7 @@ public class ApiUsage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endsAt")
     public OffsetDateTime endsAt;
+
     public ApiUsage withEndsAt(OffsetDateTime endsAt) {
         this.endsAt = endsAt;
         return this;
@@ -27,6 +28,7 @@ public class ApiUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ApiUsage withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class ApiUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseId")
     public String licenseId;
+
     public ApiUsage withLicenseId(String licenseId) {
         this.licenseId = licenseId;
         return this;
@@ -43,6 +46,7 @@ public class ApiUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ApiUsage withObject(String object) {
         this.object = object;
         return this;
@@ -51,6 +55,7 @@ public class ApiUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public ApiUsage withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -59,6 +64,7 @@ public class ApiUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planData")
     public PlanData[] planData;
+
     public ApiUsage withPlanData(PlanData[] planData) {
         this.planData = planData;
         return this;
@@ -67,6 +73,7 @@ public class ApiUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionsMax")
     public Long predictionsMax;
+
     public ApiUsage withPredictionsMax(Long predictionsMax) {
         this.predictionsMax = predictionsMax;
         return this;
@@ -75,6 +82,7 @@ public class ApiUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionsUsed")
     public Long predictionsUsed;
+
     public ApiUsage withPredictionsUsed(Long predictionsUsed) {
         this.predictionsUsed = predictionsUsed;
         return this;
@@ -85,9 +93,11 @@ public class ApiUsage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startsAt")
     public OffsetDateTime startsAt;
+
     public ApiUsage withStartsAt(OffsetDateTime startsAt) {
         this.startsAt = startsAt;
         return this;
     }
     
+    public ApiUsage(){}
 }

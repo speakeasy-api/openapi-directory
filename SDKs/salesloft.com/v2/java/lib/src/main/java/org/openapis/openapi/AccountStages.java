@@ -59,11 +59,9 @@ public class AccountStages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2AccountStagesJsonResponse res = new org.openapis.openapi.models.operations.GetV2AccountStagesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2AccountStagesJsonResponse res = new org.openapis.openapi.models.operations.GetV2AccountStagesJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class AccountStages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2AccountStagesIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2AccountStagesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2AccountStagesIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2AccountStagesIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostOrganisationsPartyIdLicensesResponse {
     
     public String contentType;
+
     public PostOrganisationsPartyIdLicensesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostOrganisationsPartyIdLicensesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostOrganisationsPartyIdLicensesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostOrganisationsPartyIdLicensesResponse {
     
     
     public Integer statusCode;
+
     public PostOrganisationsPartyIdLicensesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostOrganisationsPartyIdLicensesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostOrganisationsPartyIdLicensesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostOrganisationsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PostOrganisationsPartyIdLicensesResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -50,6 +56,7 @@ public class PostOrganisationsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.License license;
+
     public PostOrganisationsPartyIdLicensesResponse withLicense(org.openapis.openapi.models.shared.License license) {
         this.license = license;
         return this;
@@ -60,9 +67,14 @@ public class PostOrganisationsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PostOrganisationsPartyIdLicensesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PostOrganisationsPartyIdLicensesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

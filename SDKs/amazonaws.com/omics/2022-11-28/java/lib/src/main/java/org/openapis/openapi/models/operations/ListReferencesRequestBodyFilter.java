@@ -22,6 +22,7 @@ public class ListReferencesRequestBodyFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAfter")
     public OffsetDateTime createdAfter;
+
     public ListReferencesRequestBodyFilter withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class ListReferencesRequestBodyFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdBefore")
     public OffsetDateTime createdBefore;
+
     public ListReferencesRequestBodyFilter withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,6 +42,7 @@ public class ListReferencesRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5")
     public String md5;
+
     public ListReferencesRequestBodyFilter withMd5(String md5) {
         this.md5 = md5;
         return this;
@@ -48,9 +51,11 @@ public class ListReferencesRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListReferencesRequestBodyFilter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ListReferencesRequestBodyFilter(){}
 }

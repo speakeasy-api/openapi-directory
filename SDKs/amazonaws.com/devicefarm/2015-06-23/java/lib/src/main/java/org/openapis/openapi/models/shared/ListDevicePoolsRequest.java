@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDevicePoolsRequest {
     @JsonProperty("arn")
     public String arn;
+
     public ListDevicePoolsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class ListDevicePoolsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDevicePoolsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class ListDevicePoolsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DevicePoolTypeEnum type;
+
     public ListDevicePoolsRequest withType(DevicePoolTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListDevicePoolsRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

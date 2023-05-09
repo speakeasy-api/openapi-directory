@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseGetCollectionRequest {
@@ -12,9 +13,13 @@ public class DatabaseGetCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
     public String collectionId;
+
     public DatabaseGetCollectionRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public DatabaseGetCollectionRequest(@JsonProperty("collectionId") String collectionId) {
+        this.collectionId = collectionId;
+  }
 }

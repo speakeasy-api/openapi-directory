@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations {
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsAcl acl;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withAcl(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsAcl acl) {
         this.acl = acl;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsAclRule aclRule;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withAclRule(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsAclRule aclRule) {
         this.aclRule = aclRule;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String address;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withAddress(String address) {
         this.address = address;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String[] addresses;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withAddresses(String[] addresses) {
         this.addresses = addresses;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsAttachedTo attachedTo;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withAttachedTo(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsAttachedTo attachedTo) {
         this.attachedTo = attachedTo;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String[] availabilityZones;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -54,6 +60,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String[] cidrs;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withCidrs(String[] cidrs) {
         this.cidrs = cidrs;
         return this;
@@ -61,6 +68,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsClassicLoadBalancerListener classicLoadBalancerListener;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withClassicLoadBalancerListener(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsClassicLoadBalancerListener classicLoadBalancerListener) {
         this.classicLoadBalancerListener = classicLoadBalancerListener;
         return this;
@@ -68,6 +76,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsComponent component;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withComponent(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsComponent component) {
         this.component = component;
         return this;
@@ -75,6 +84,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String componentAccount;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withComponentAccount(String componentAccount) {
         this.componentAccount = componentAccount;
         return this;
@@ -82,6 +92,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String componentRegion;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withComponentRegion(String componentRegion) {
         this.componentRegion = componentRegion;
         return this;
@@ -89,6 +100,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsCustomerGateway customerGateway;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withCustomerGateway(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsCustomerGateway customerGateway) {
         this.customerGateway = customerGateway;
         return this;
@@ -96,6 +108,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsDestination destination;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withDestination(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsDestination destination) {
         this.destination = destination;
         return this;
@@ -103,6 +116,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsDestinationVpc destinationVpc;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withDestinationVpc(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsDestinationVpc destinationVpc) {
         this.destinationVpc = destinationVpc;
         return this;
@@ -110,6 +124,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String direction;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -117,6 +132,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsElasticLoadBalancerListener elasticLoadBalancerListener;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withElasticLoadBalancerListener(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsElasticLoadBalancerListener elasticLoadBalancerListener) {
         this.elasticLoadBalancerListener = elasticLoadBalancerListener;
         return this;
@@ -124,6 +140,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String explanationCode;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withExplanationCode(String explanationCode) {
         this.explanationCode = explanationCode;
         return this;
@@ -131,6 +148,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsFirewallStatefulRule firewallStatefulRule;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withFirewallStatefulRule(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsFirewallStatefulRule firewallStatefulRule) {
         this.firewallStatefulRule = firewallStatefulRule;
         return this;
@@ -138,6 +156,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsFirewallStatelessRule firewallStatelessRule;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withFirewallStatelessRule(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsFirewallStatelessRule firewallStatelessRule) {
         this.firewallStatelessRule = firewallStatelessRule;
         return this;
@@ -145,6 +164,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsIngressRouteTable ingressRouteTable;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withIngressRouteTable(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsIngressRouteTable ingressRouteTable) {
         this.ingressRouteTable = ingressRouteTable;
         return this;
@@ -152,6 +172,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsInternetGateway internetGateway;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withInternetGateway(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsInternetGateway internetGateway) {
         this.internetGateway = internetGateway;
         return this;
@@ -159,6 +180,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String loadBalancerArn;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -166,6 +188,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public Long loadBalancerListenerPort;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withLoadBalancerListenerPort(Long loadBalancerListenerPort) {
         this.loadBalancerListenerPort = loadBalancerListenerPort;
         return this;
@@ -173,6 +196,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTarget loadBalancerTarget;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withLoadBalancerTarget(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTarget loadBalancerTarget) {
         this.loadBalancerTarget = loadBalancerTarget;
         return this;
@@ -180,6 +204,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTargetGroup loadBalancerTargetGroup;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withLoadBalancerTargetGroup(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTargetGroup loadBalancerTargetGroup) {
         this.loadBalancerTargetGroup = loadBalancerTargetGroup;
         return this;
@@ -187,6 +212,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTargetGroups[] loadBalancerTargetGroups;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withLoadBalancerTargetGroups(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTargetGroups[] loadBalancerTargetGroups) {
         this.loadBalancerTargetGroups = loadBalancerTargetGroups;
         return this;
@@ -194,6 +220,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public Long loadBalancerTargetPort;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withLoadBalancerTargetPort(Long loadBalancerTargetPort) {
         this.loadBalancerTargetPort = loadBalancerTargetPort;
         return this;
@@ -201,6 +228,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String missingComponent;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withMissingComponent(String missingComponent) {
         this.missingComponent = missingComponent;
         return this;
@@ -208,6 +236,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsNatGateway natGateway;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withNatGateway(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsNatGateway natGateway) {
         this.natGateway = natGateway;
         return this;
@@ -215,6 +244,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsNetworkInterface networkInterface;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withNetworkInterface(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsNetworkInterface networkInterface) {
         this.networkInterface = networkInterface;
         return this;
@@ -222,6 +252,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String packetField;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withPacketField(String packetField) {
         this.packetField = packetField;
         return this;
@@ -229,6 +260,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public Long port;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withPort(Long port) {
         this.port = port;
         return this;
@@ -236,6 +268,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsPortRanges[] portRanges;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withPortRanges(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsPortRanges[] portRanges) {
         this.portRanges = portRanges;
         return this;
@@ -243,6 +276,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsPrefixList prefixList;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withPrefixList(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsPrefixList prefixList) {
         this.prefixList = prefixList;
         return this;
@@ -250,6 +284,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String[] protocols;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withProtocols(String[] protocols) {
         this.protocols = protocols;
         return this;
@@ -257,6 +292,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTable routeTable;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withRouteTable(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTable routeTable) {
         this.routeTable = routeTable;
         return this;
@@ -264,6 +300,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute routeTableRoute;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withRouteTableRoute(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute routeTableRoute) {
         this.routeTableRoute = routeTableRoute;
         return this;
@@ -271,6 +308,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroup securityGroup;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withSecurityGroup(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroup securityGroup) {
         this.securityGroup = securityGroup;
         return this;
@@ -278,6 +316,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule securityGroupRule;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withSecurityGroupRule(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule securityGroupRule) {
         this.securityGroupRule = securityGroupRule;
         return this;
@@ -285,6 +324,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroups[] securityGroups;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withSecurityGroups(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroups[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -292,6 +332,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSourceVpc sourceVpc;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withSourceVpc(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSourceVpc sourceVpc) {
         this.sourceVpc = sourceVpc;
         return this;
@@ -299,6 +340,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String state;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withState(String state) {
         this.state = state;
         return this;
@@ -306,6 +348,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSubnet subnet;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withSubnet(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSubnet subnet) {
         this.subnet = subnet;
         return this;
@@ -313,6 +356,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSubnetRouteTable subnetRouteTable;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withSubnetRouteTable(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSubnetRouteTable subnetRouteTable) {
         this.subnetRouteTable = subnetRouteTable;
         return this;
@@ -320,6 +364,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsTransitGateway transitGateway;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withTransitGateway(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsTransitGateway transitGateway) {
         this.transitGateway = transitGateway;
         return this;
@@ -327,6 +372,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsTransitGatewayAttachment transitGatewayAttachment;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withTransitGatewayAttachment(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsTransitGatewayAttachment transitGatewayAttachment) {
         this.transitGatewayAttachment = transitGatewayAttachment;
         return this;
@@ -334,6 +380,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsTransitGatewayRouteTable transitGatewayRouteTable;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withTransitGatewayRouteTable(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsTransitGatewayRouteTable transitGatewayRouteTable) {
         this.transitGatewayRouteTable = transitGatewayRouteTable;
         return this;
@@ -341,6 +388,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsTransitGatewayRouteTableRoute transitGatewayRouteTableRoute;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withTransitGatewayRouteTableRoute(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsTransitGatewayRouteTableRoute transitGatewayRouteTableRoute) {
         this.transitGatewayRouteTableRoute = transitGatewayRouteTableRoute;
         return this;
@@ -348,6 +396,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpc vpc;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withVpc(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpc vpc) {
         this.vpc = vpc;
         return this;
@@ -355,6 +404,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpcEndpoint vpcEndpoint;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withVpcEndpoint(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpcEndpoint vpcEndpoint) {
         this.vpcEndpoint = vpcEndpoint;
         return this;
@@ -362,6 +412,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpcPeeringConnection vpcPeeringConnection;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withVpcPeeringConnection(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpcPeeringConnection vpcPeeringConnection) {
         this.vpcPeeringConnection = vpcPeeringConnection;
         return this;
@@ -369,6 +420,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpnConnection vpnConnection;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withVpnConnection(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpnConnection vpnConnection) {
         this.vpnConnection = vpnConnection;
         return this;
@@ -376,9 +428,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpnGateway vpnGateway;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations withVpnGateway(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsVpnGateway vpnGateway) {
         this.vpnGateway = vpnGateway;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations(){}
 }

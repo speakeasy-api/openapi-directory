@@ -18,9 +18,11 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public PostSubtypeEnum subtype;
+
     public Post withSubtype(PostSubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
     }
     
+    public Post(){}
 }

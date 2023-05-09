@@ -20,6 +20,7 @@ public class DelegationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public DelegationMetadata withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -28,6 +29,7 @@ public class DelegationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public DelegationMetadata withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -36,6 +38,7 @@ public class DelegationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSetName")
     public String controlSetName;
+
     public DelegationMetadata withControlSetName(String controlSetName) {
         this.controlSetName = controlSetName;
         return this;
@@ -46,6 +49,7 @@ public class DelegationMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DelegationMetadata withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class DelegationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DelegationMetadata withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class DelegationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DelegationMetadata withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -70,9 +76,11 @@ public class DelegationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DelegationStatusEnum status;
+
     public DelegationMetadata withStatus(DelegationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DelegationMetadata(){}
 }

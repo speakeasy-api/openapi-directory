@@ -18,6 +18,7 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("critical")
     public Boolean critical;
+
     public NameConstraints withCritical(Boolean critical) {
         this.critical = critical;
         return this;
@@ -29,6 +30,7 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedDnsNames")
     public String[] excludedDnsNames;
+
     public NameConstraints withExcludedDnsNames(String[] excludedDnsNames) {
         this.excludedDnsNames = excludedDnsNames;
         return this;
@@ -40,6 +42,7 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedEmailAddresses")
     public String[] excludedEmailAddresses;
+
     public NameConstraints withExcludedEmailAddresses(String[] excludedEmailAddresses) {
         this.excludedEmailAddresses = excludedEmailAddresses;
         return this;
@@ -51,6 +54,7 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedIpRanges")
     public String[] excludedIpRanges;
+
     public NameConstraints withExcludedIpRanges(String[] excludedIpRanges) {
         this.excludedIpRanges = excludedIpRanges;
         return this;
@@ -62,6 +66,7 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedUris")
     public String[] excludedUris;
+
     public NameConstraints withExcludedUris(String[] excludedUris) {
         this.excludedUris = excludedUris;
         return this;
@@ -73,6 +78,7 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permittedDnsNames")
     public String[] permittedDnsNames;
+
     public NameConstraints withPermittedDnsNames(String[] permittedDnsNames) {
         this.permittedDnsNames = permittedDnsNames;
         return this;
@@ -84,6 +90,7 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permittedEmailAddresses")
     public String[] permittedEmailAddresses;
+
     public NameConstraints withPermittedEmailAddresses(String[] permittedEmailAddresses) {
         this.permittedEmailAddresses = permittedEmailAddresses;
         return this;
@@ -95,6 +102,7 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permittedIpRanges")
     public String[] permittedIpRanges;
+
     public NameConstraints withPermittedIpRanges(String[] permittedIpRanges) {
         this.permittedIpRanges = permittedIpRanges;
         return this;
@@ -106,9 +114,11 @@ public class NameConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permittedUris")
     public String[] permittedUris;
+
     public NameConstraints withPermittedUris(String[] permittedUris) {
         this.permittedUris = permittedUris;
         return this;
     }
     
+    public NameConstraints(){}
 }

@@ -15,6 +15,7 @@ public class ListPreparedStatementsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPreparedStatementsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPreparedStatementsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreparedStatements")
     public PreparedStatementSummary[] preparedStatements;
+
     public ListPreparedStatementsOutput withPreparedStatements(PreparedStatementSummary[] preparedStatements) {
         this.preparedStatements = preparedStatements;
         return this;
     }
     
+    public ListPreparedStatementsOutput(){}
 }

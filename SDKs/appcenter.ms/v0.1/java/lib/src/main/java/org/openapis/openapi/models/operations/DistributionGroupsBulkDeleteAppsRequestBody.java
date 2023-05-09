@@ -18,9 +18,11 @@ public class DistributionGroupsBulkDeleteAppsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apps")
     public DistributionGroupsBulkDeleteAppsRequestBodyApps[] apps;
+
     public DistributionGroupsBulkDeleteAppsRequestBody withApps(DistributionGroupsBulkDeleteAppsRequestBodyApps[] apps) {
         this.apps = apps;
         return this;
     }
     
+    public DistributionGroupsBulkDeleteAppsRequestBody(){}
 }

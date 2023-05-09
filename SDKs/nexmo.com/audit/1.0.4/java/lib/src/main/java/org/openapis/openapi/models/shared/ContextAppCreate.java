@@ -18,6 +18,7 @@ public class ContextAppCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public ContextAppCreate withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -26,9 +27,11 @@ public class ContextAppCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public ContextAppCreateCreated created;
+
     public ContextAppCreate withCreated(ContextAppCreateCreated created) {
         this.created = created;
         return this;
     }
     
+    public ContextAppCreate(){}
 }

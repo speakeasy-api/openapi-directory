@@ -12,6 +12,7 @@ public class PutQueryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupNames")
     public String[] logGroupNames;
+
     public PutQueryDefinitionRequest withLogGroupNames(String[] logGroupNames) {
         this.logGroupNames = logGroupNames;
         return this;
@@ -19,6 +20,7 @@ public class PutQueryDefinitionRequest {
     
     @JsonProperty("name")
     public String name;
+
     public PutQueryDefinitionRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class PutQueryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryDefinitionId")
     public String queryDefinitionId;
+
     public PutQueryDefinitionRequest withQueryDefinitionId(String queryDefinitionId) {
         this.queryDefinitionId = queryDefinitionId;
         return this;
@@ -34,9 +37,14 @@ public class PutQueryDefinitionRequest {
     
     @JsonProperty("queryString")
     public String queryString;
+
     public PutQueryDefinitionRequest withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public PutQueryDefinitionRequest(@JsonProperty("name") String name, @JsonProperty("queryString") String queryString) {
+        this.name = name;
+        this.queryString = queryString;
+  }
 }

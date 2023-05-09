@@ -21,6 +21,7 @@ public class Error406AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error406AIS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error406AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error406AISAdditionalErrors[] additionalErrors;
+
     public Error406AIS withAdditionalErrors(Error406AISAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error406AIS {
      */
     @JsonProperty("code")
     public MessageCode406AISEnum code;
+
     public Error406AIS withCode(MessageCode406AISEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error406AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error406AIS withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error406AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error406AIS withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error406AIS {
      */
     @JsonProperty("type")
     public String type;
+
     public Error406AIS withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error406AIS(@JsonProperty("code") MessageCode406AISEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

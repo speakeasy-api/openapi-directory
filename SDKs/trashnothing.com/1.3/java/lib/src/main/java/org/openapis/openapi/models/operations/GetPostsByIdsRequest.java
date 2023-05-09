@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPostsByIdsRequest {
@@ -13,9 +14,13 @@ public class GetPostsByIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=post_ids")
     public String postIds;
+
     public GetPostsByIdsRequest withPostIds(String postIds) {
         this.postIds = postIds;
         return this;
     }
     
+    public GetPostsByIdsRequest(@JsonProperty("post_ids") String postIds) {
+        this.postIds = postIds;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FireteamGetMyClanFireteamsRequest {
@@ -12,6 +13,7 @@ public class FireteamGetMyClanFireteamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupFilter")
     public Boolean groupFilter;
+
     public FireteamGetMyClanFireteamsRequest withGroupFilter(Boolean groupFilter) {
         this.groupFilter = groupFilter;
         return this;
@@ -22,6 +24,7 @@ public class FireteamGetMyClanFireteamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public FireteamGetMyClanFireteamsRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -32,6 +35,7 @@ public class FireteamGetMyClanFireteamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=includeClosed")
     public Boolean includeClosed;
+
     public FireteamGetMyClanFireteamsRequest withIncludeClosed(Boolean includeClosed) {
         this.includeClosed = includeClosed;
         return this;
@@ -42,6 +46,7 @@ public class FireteamGetMyClanFireteamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=langFilter")
     public String langFilter;
+
     public FireteamGetMyClanFireteamsRequest withLangFilter(String langFilter) {
         this.langFilter = langFilter;
         return this;
@@ -49,9 +54,13 @@ public class FireteamGetMyClanFireteamsRequest {
     
     /**
      * Deprecated parameter, ignored.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    @Deprecated
     public Integer page;
+
+    @Deprecated
     public FireteamGetMyClanFireteamsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -62,9 +71,16 @@ public class FireteamGetMyClanFireteamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public Long platform;
+
     public FireteamGetMyClanFireteamsRequest withPlatform(Long platform) {
         this.platform = platform;
         return this;
     }
     
+    public FireteamGetMyClanFireteamsRequest(@JsonProperty("groupId") Long groupId, @JsonProperty("includeClosed") Boolean includeClosed, @JsonProperty("page") Integer page, @JsonProperty("platform") Long platform) {
+        this.groupId = groupId;
+        this.includeClosed = includeClosed;
+        this.page = page;
+        this.platform = platform;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1GroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleFirebaseAppdistroV1GroupInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppdistroV1GroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppdistroV1GroupInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1GroupInput(){}
 }

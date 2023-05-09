@@ -15,6 +15,7 @@ public class ExecuteStatementRequestBodyResultSetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decimalReturnType")
     public org.openapis.openapi.models.shared.DecimalReturnTypeEnum decimalReturnType;
+
     public ExecuteStatementRequestBodyResultSetOptions withDecimalReturnType(org.openapis.openapi.models.shared.DecimalReturnTypeEnum decimalReturnType) {
         this.decimalReturnType = decimalReturnType;
         return this;
@@ -23,9 +24,11 @@ public class ExecuteStatementRequestBodyResultSetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longReturnType")
     public org.openapis.openapi.models.shared.LongReturnTypeEnum longReturnType;
+
     public ExecuteStatementRequestBodyResultSetOptions withLongReturnType(org.openapis.openapi.models.shared.LongReturnTypeEnum longReturnType) {
         this.longReturnType = longReturnType;
         return this;
     }
     
+    public ExecuteStatementRequestBodyResultSetOptions(){}
 }

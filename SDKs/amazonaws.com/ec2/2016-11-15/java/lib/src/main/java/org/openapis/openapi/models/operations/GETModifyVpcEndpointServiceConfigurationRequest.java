@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcEndpointServiceConfigurationRequest {
@@ -12,6 +13,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AcceptanceRequired")
     public Boolean acceptanceRequired;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withAcceptanceRequired(Boolean acceptanceRequired) {
         this.acceptanceRequired = acceptanceRequired;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVpcEndpointServiceConfigurationActionEnum action;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withAction(GETModifyVpcEndpointServiceConfigurationActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddGatewayLoadBalancerArn")
     public String[] addGatewayLoadBalancerArn;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withAddGatewayLoadBalancerArn(String[] addGatewayLoadBalancerArn) {
         this.addGatewayLoadBalancerArn = addGatewayLoadBalancerArn;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddNetworkLoadBalancerArn")
     public String[] addNetworkLoadBalancerArn;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withAddNetworkLoadBalancerArn(String[] addNetworkLoadBalancerArn) {
         this.addNetworkLoadBalancerArn = addNetworkLoadBalancerArn;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddSupportedIpAddressType")
     public String[] addSupportedIpAddressType;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withAddSupportedIpAddressType(String[] addSupportedIpAddressType) {
         this.addSupportedIpAddressType = addSupportedIpAddressType;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateDnsName")
     public String privateDnsName;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveGatewayLoadBalancerArn")
     public String[] removeGatewayLoadBalancerArn;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withRemoveGatewayLoadBalancerArn(String[] removeGatewayLoadBalancerArn) {
         this.removeGatewayLoadBalancerArn = removeGatewayLoadBalancerArn;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveNetworkLoadBalancerArn")
     public String[] removeNetworkLoadBalancerArn;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withRemoveNetworkLoadBalancerArn(String[] removeNetworkLoadBalancerArn) {
         this.removeNetworkLoadBalancerArn = removeNetworkLoadBalancerArn;
         return this;
@@ -99,6 +109,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemovePrivateDnsName")
     public Boolean removePrivateDnsName;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withRemovePrivateDnsName(Boolean removePrivateDnsName) {
         this.removePrivateDnsName = removePrivateDnsName;
         return this;
@@ -109,6 +120,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveSupportedIpAddressType")
     public String[] removeSupportedIpAddressType;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withRemoveSupportedIpAddressType(String[] removeSupportedIpAddressType) {
         this.removeSupportedIpAddressType = removeSupportedIpAddressType;
         return this;
@@ -119,6 +131,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceId")
     public String serviceId;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -126,6 +139,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVpcEndpointServiceConfigurationVersionEnum version;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withVersion(GETModifyVpcEndpointServiceConfigurationVersionEnum version) {
         this.version = version;
         return this;
@@ -133,6 +147,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -140,6 +155,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -147,6 +163,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -154,6 +171,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -161,6 +179,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -168,6 +187,7 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -175,9 +195,15 @@ public class GETModifyVpcEndpointServiceConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVpcEndpointServiceConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVpcEndpointServiceConfigurationRequest(@JsonProperty("Action") GETModifyVpcEndpointServiceConfigurationActionEnum action, @JsonProperty("ServiceId") String serviceId, @JsonProperty("Version") GETModifyVpcEndpointServiceConfigurationVersionEnum version) {
+        this.action = action;
+        this.serviceId = serviceId;
+        this.version = version;
+  }
 }

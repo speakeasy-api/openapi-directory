@@ -15,6 +15,7 @@ public class Location {
      */
     @JsonProperty("latitude")
     public Double latitude;
+
     public Location withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -25,9 +26,14 @@ public class Location {
      */
     @JsonProperty("longitude")
     public Double longitude;
+
     public Location withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public Location(@JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

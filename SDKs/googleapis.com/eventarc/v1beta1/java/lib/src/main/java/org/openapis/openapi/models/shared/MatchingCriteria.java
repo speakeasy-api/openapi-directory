@@ -18,6 +18,7 @@ public class MatchingCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public String attribute;
+
     public MatchingCriteria withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -29,9 +30,11 @@ public class MatchingCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public MatchingCriteria withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MatchingCriteria(){}
 }

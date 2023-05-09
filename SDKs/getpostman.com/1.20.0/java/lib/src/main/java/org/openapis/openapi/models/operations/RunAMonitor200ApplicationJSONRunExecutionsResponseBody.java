@@ -12,9 +12,11 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponseBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLength")
     public Double contentLength;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponseBody withContentLength(Double contentLength) {
         this.contentLength = contentLength;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunExecutionsResponseBody(){}
 }

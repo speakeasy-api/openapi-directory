@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTableObjectsResponse {
@@ -12,6 +13,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateTableObjectsResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTableObjectsResponse {
     
     
     public String contentType;
+
     public UpdateTableObjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateTableObjectsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateTableObjectsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateTableObjectsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateTableObjectsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object resourceNotReadyException;
+
     public UpdateTableObjectsResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateTableObjectsResponse {
     
     
     public Integer statusCode;
+
     public UpdateTableObjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateTableObjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTableObjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object transactionCanceledException;
+
     public UpdateTableObjectsResponse withTransactionCanceledException(Object transactionCanceledException) {
         this.transactionCanceledException = transactionCanceledException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object transactionCommitInProgressException;
+
     public UpdateTableObjectsResponse withTransactionCommitInProgressException(Object transactionCommitInProgressException) {
         this.transactionCommitInProgressException = transactionCommitInProgressException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateTableObjectsResponse {
      */
     
     public Object transactionCommittedException;
+
     public UpdateTableObjectsResponse withTransactionCommittedException(Object transactionCommittedException) {
         this.transactionCommittedException = transactionCommittedException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateTableObjectsResponse {
      */
     
     public java.util.Map<String, Object> updateTableObjectsResponse;
+
     public UpdateTableObjectsResponse withUpdateTableObjectsResponse(java.util.Map<String, Object> updateTableObjectsResponse) {
         this.updateTableObjectsResponse = updateTableObjectsResponse;
         return this;
     }
     
+    public UpdateTableObjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

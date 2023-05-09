@@ -18,6 +18,7 @@ public class SufficiencyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categorical_score")
     public Double categoricalScore;
+
     public SufficiencyOutput withCategoricalScore(Double categoricalScore) {
         this.categoricalScore = categoricalScore;
         return this;
@@ -29,6 +30,7 @@ public class SufficiencyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaled_score")
     public Double scaledScore;
+
     public SufficiencyOutput withScaledScore(Double scaledScore) {
         this.scaledScore = scaledScore;
         return this;
@@ -40,9 +42,11 @@ public class SufficiencyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simple_score")
     public Double simpleScore;
+
     public SufficiencyOutput withSimpleScore(Double simpleScore) {
         this.simpleScore = simpleScore;
         return this;
     }
     
+    public SufficiencyOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterIdentityProviderResponse {
@@ -12,6 +13,7 @@ public class RegisterIdentityProviderResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterIdentityProviderResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterIdentityProviderResponse {
      */
     
     public Object conflictException;
+
     public RegisterIdentityProviderResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterIdentityProviderResponse {
     
     
     public String contentType;
+
     public RegisterIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RegisterIdentityProviderResponse {
      */
     
     public Object internalServerException;
+
     public RegisterIdentityProviderResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterIdentityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterIdentityProviderResponse registerIdentityProviderResponse;
+
     public RegisterIdentityProviderResponse withRegisterIdentityProviderResponse(org.openapis.openapi.models.shared.RegisterIdentityProviderResponse registerIdentityProviderResponse) {
         this.registerIdentityProviderResponse = registerIdentityProviderResponse;
         return this;
@@ -59,6 +65,7 @@ public class RegisterIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterIdentityProviderResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public RegisterIdentityProviderResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class RegisterIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public RegisterIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class RegisterIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class RegisterIdentityProviderResponse {
      */
     
     public Object throttlingException;
+
     public RegisterIdentityProviderResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class RegisterIdentityProviderResponse {
      */
     
     public Object validationException;
+
     public RegisterIdentityProviderResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RegisterIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

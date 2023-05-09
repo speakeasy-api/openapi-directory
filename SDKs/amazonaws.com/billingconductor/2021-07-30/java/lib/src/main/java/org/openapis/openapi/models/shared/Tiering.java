@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Tiering {
     @JsonProperty("FreeTier")
     public FreeTierConfig freeTier;
+
     public Tiering withFreeTier(FreeTierConfig freeTier) {
         this.freeTier = freeTier;
         return this;
     }
     
+    public Tiering(@JsonProperty("FreeTier") FreeTierConfig freeTier) {
+        this.freeTier = freeTier;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Document {
     @JsonProperty("accountId")
     public String accountId;
+
     public Document withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +17,7 @@ public class Document {
     
     @JsonProperty("accountName")
     public String accountName;
+
     public Document withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -23,6 +25,7 @@ public class Document {
     
     @JsonProperty("carttag")
     public String carttag;
+
     public Document withCarttag(String carttag) {
         this.carttag = carttag;
         return this;
@@ -30,6 +33,7 @@ public class Document {
     
     @JsonProperty("checkouttag")
     public String checkouttag;
+
     public Document withCheckouttag(String checkouttag) {
         this.checkouttag = checkouttag;
         return this;
@@ -37,6 +41,7 @@ public class Document {
     
     @JsonProperty("dataEntityId")
     public String dataEntityId;
+
     public Document withDataEntityId(String dataEntityId) {
         this.dataEntityId = dataEntityId;
         return this;
@@ -44,6 +49,7 @@ public class Document {
     
     @JsonProperty("departmentVisitedTag")
     public DepartmentVisitedTag departmentVisitedTag;
+
     public Document withDepartmentVisitedTag(DepartmentVisitedTag departmentVisitedTag) {
         this.departmentVisitedTag = departmentVisitedTag;
         return this;
@@ -51,6 +57,7 @@ public class Document {
     
     @JsonProperty("email")
     public String email;
+
     public Document withEmail(String email) {
         this.email = email;
         return this;
@@ -58,6 +65,7 @@ public class Document {
     
     @JsonProperty("followers")
     public String[] followers;
+
     public Document withFollowers(String[] followers) {
         this.followers = followers;
         return this;
@@ -65,6 +73,7 @@ public class Document {
     
     @JsonProperty("id")
     public String id;
+
     public Document withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +81,7 @@ public class Document {
     
     @JsonProperty("rclastsession")
     public String rclastsession;
+
     public Document withRclastsession(String rclastsession) {
         this.rclastsession = rclastsession;
         return this;
@@ -79,9 +89,23 @@ public class Document {
     
     @JsonProperty("rclastsessiondate")
     public String rclastsessiondate;
+
     public Document withRclastsessiondate(String rclastsessiondate) {
         this.rclastsessiondate = rclastsessiondate;
         return this;
     }
     
+    public Document(@JsonProperty("accountId") String accountId, @JsonProperty("accountName") String accountName, @JsonProperty("carttag") String carttag, @JsonProperty("checkouttag") String checkouttag, @JsonProperty("dataEntityId") String dataEntityId, @JsonProperty("departmentVisitedTag") DepartmentVisitedTag departmentVisitedTag, @JsonProperty("email") String email, @JsonProperty("followers") String[] followers, @JsonProperty("id") String id, @JsonProperty("rclastsession") String rclastsession, @JsonProperty("rclastsessiondate") String rclastsessiondate) {
+        this.accountId = accountId;
+        this.accountName = accountName;
+        this.carttag = carttag;
+        this.checkouttag = checkouttag;
+        this.dataEntityId = dataEntityId;
+        this.departmentVisitedTag = departmentVisitedTag;
+        this.email = email;
+        this.followers = followers;
+        this.id = id;
+        this.rclastsession = rclastsession;
+        this.rclastsessiondate = rclastsessiondate;
+  }
 }

@@ -16,9 +16,11 @@ public class NANewScheduleBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_id")
     public String scheduleId;
+
     public NANewScheduleBody withScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
         return this;
     }
     
+    public NANewScheduleBody(){}
 }

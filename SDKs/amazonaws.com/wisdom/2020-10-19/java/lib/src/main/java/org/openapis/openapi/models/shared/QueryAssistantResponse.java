@@ -15,6 +15,7 @@ public class QueryAssistantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public QueryAssistantResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class QueryAssistantResponse {
     
     @JsonProperty("results")
     public ResultData[] results;
+
     public QueryAssistantResponse withResults(ResultData[] results) {
         this.results = results;
         return this;
     }
     
+    public QueryAssistantResponse(@JsonProperty("results") ResultData[] results) {
+        this.results = results;
+  }
 }

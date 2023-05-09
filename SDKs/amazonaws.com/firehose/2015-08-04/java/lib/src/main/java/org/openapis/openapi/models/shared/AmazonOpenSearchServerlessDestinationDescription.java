@@ -15,6 +15,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public AmazonOpenSearchServerlessBufferingHints bufferingHints;
+
     public AmazonOpenSearchServerlessDestinationDescription withBufferingHints(AmazonOpenSearchServerlessBufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -26,6 +27,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public AmazonOpenSearchServerlessDestinationDescription withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -34,6 +36,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionEndpoint")
     public String collectionEndpoint;
+
     public AmazonOpenSearchServerlessDestinationDescription withCollectionEndpoint(String collectionEndpoint) {
         this.collectionEndpoint = collectionEndpoint;
         return this;
@@ -42,6 +45,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public AmazonOpenSearchServerlessDestinationDescription withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -53,6 +57,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public AmazonOpenSearchServerlessDestinationDescription withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -61,6 +66,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public AmazonOpenSearchServerlessRetryOptions retryOptions;
+
     public AmazonOpenSearchServerlessDestinationDescription withRetryOptions(AmazonOpenSearchServerlessRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -69,6 +75,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public AmazonOpenSearchServerlessDestinationDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -77,6 +84,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupMode")
     public AmazonOpenSearchServerlessS3BackupModeEnum s3BackupMode;
+
     public AmazonOpenSearchServerlessDestinationDescription withS3BackupMode(AmazonOpenSearchServerlessS3BackupModeEnum s3BackupMode) {
         this.s3BackupMode = s3BackupMode;
         return this;
@@ -88,6 +96,7 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DestinationDescription")
     public S3DestinationDescription s3DestinationDescription;
+
     public AmazonOpenSearchServerlessDestinationDescription withS3DestinationDescription(S3DestinationDescription s3DestinationDescription) {
         this.s3DestinationDescription = s3DestinationDescription;
         return this;
@@ -99,9 +108,11 @@ public class AmazonOpenSearchServerlessDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfigurationDescription")
     public VpcConfigurationDescription vpcConfigurationDescription;
+
     public AmazonOpenSearchServerlessDestinationDescription withVpcConfigurationDescription(VpcConfigurationDescription vpcConfigurationDescription) {
         this.vpcConfigurationDescription = vpcConfigurationDescription;
         return this;
     }
     
+    public AmazonOpenSearchServerlessDestinationDescription(){}
 }

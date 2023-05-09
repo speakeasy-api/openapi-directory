@@ -12,6 +12,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=crm_id")
     public String[] crmId;
+
     public GetV2CrmUsersJsonRequest withCrmId(String[] crmId) {
         this.crmId = crmId;
         return this;
@@ -22,6 +23,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2CrmUsersJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -32,6 +34,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2CrmUsersJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -42,6 +45,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2CrmUsersJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -52,6 +56,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2CrmUsersJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +67,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2CrmUsersJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -72,6 +78,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2CrmUsersJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -82,6 +89,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2CrmUsersJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -92,6 +100,7 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_guid")
     public String[] userGuid;
+
     public GetV2CrmUsersJsonRequest withUserGuid(String[] userGuid) {
         this.userGuid = userGuid;
         return this;
@@ -102,9 +111,11 @@ public class GetV2CrmUsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_id")
     public Long[] userId;
+
     public GetV2CrmUsersJsonRequest withUserId(Long[] userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetV2CrmUsersJsonRequest(){}
 }

@@ -15,6 +15,7 @@ public class VersionControlInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionControlConfigurationTimeStamp")
     public String versionControlConfigurationTimeStamp;
+
     public VersionControlInfo withVersionControlConfigurationTimeStamp(String versionControlConfigurationTimeStamp) {
         this.versionControlConfigurationTimeStamp = versionControlConfigurationTimeStamp;
         return this;
@@ -23,9 +24,11 @@ public class VersionControlInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionControlType")
     public VersionControlTypeEnum versionControlType;
+
     public VersionControlInfo withVersionControlType(VersionControlTypeEnum versionControlType) {
         this.versionControlType = versionControlType;
         return this;
     }
     
+    public VersionControlInfo(){}
 }

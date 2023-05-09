@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLicenseSpecificationsForResourceResponse {
@@ -12,6 +13,7 @@ public class ListLicenseSpecificationsForResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLicenseSpecificationsForResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListLicenseSpecificationsForResourceResponse {
      */
     
     public Object authorizationException;
+
     public ListLicenseSpecificationsForResourceResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListLicenseSpecificationsForResourceResponse {
     
     
     public String contentType;
+
     public ListLicenseSpecificationsForResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListLicenseSpecificationsForResourceResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListLicenseSpecificationsForResourceResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListLicenseSpecificationsForResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLicenseSpecificationsForResourceResponse listLicenseSpecificationsForResourceResponse;
+
     public ListLicenseSpecificationsForResourceResponse withListLicenseSpecificationsForResourceResponse(org.openapis.openapi.models.shared.ListLicenseSpecificationsForResourceResponse listLicenseSpecificationsForResourceResponse) {
         this.listLicenseSpecificationsForResourceResponse = listLicenseSpecificationsForResourceResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListLicenseSpecificationsForResourceResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListLicenseSpecificationsForResourceResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ListLicenseSpecificationsForResourceResponse {
     
     
     public Integer statusCode;
+
     public ListLicenseSpecificationsForResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListLicenseSpecificationsForResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLicenseSpecificationsForResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListLicenseSpecificationsForResourceResponse {
      */
     
     public Object serverInternalException;
+
     public ListLicenseSpecificationsForResourceResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public ListLicenseSpecificationsForResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

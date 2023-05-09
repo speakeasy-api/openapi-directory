@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ParametersGetV2ParametersGetResponse {
     
     public String contentType;
+
     public ParametersGetV2ParametersGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ParametersGetV2ParametersGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public ParametersGetV2ParametersGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class ParametersGetV2ParametersGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQParametersResult openAQParametersResult;
+
     public ParametersGetV2ParametersGetResponse withOpenAQParametersResult(org.openapis.openapi.models.shared.OpenAQParametersResult openAQParametersResult) {
         this.openAQParametersResult = openAQParametersResult;
         return this;
@@ -36,6 +40,7 @@ public class ParametersGetV2ParametersGetResponse {
     
     
     public Integer statusCode;
+
     public ParametersGetV2ParametersGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ParametersGetV2ParametersGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ParametersGetV2ParametersGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ParametersGetV2ParametersGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class InitiateLayerUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partSize")
     public Long partSize;
+
     public InitiateLayerUploadResponse withPartSize(Long partSize) {
         this.partSize = partSize;
         return this;
@@ -23,9 +24,11 @@ public class InitiateLayerUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadId")
     public String uploadId;
+
     public InitiateLayerUploadResponse withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public InitiateLayerUploadResponse(){}
 }

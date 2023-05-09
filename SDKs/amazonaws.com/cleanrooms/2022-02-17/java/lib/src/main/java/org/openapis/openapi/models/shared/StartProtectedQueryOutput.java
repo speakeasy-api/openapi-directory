@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartProtectedQueryOutput {
     @JsonProperty("protectedQuery")
     public ProtectedQuery protectedQuery;
+
     public StartProtectedQueryOutput withProtectedQuery(ProtectedQuery protectedQuery) {
         this.protectedQuery = protectedQuery;
         return this;
     }
     
+    public StartProtectedQueryOutput(@JsonProperty("protectedQuery") ProtectedQuery protectedQuery) {
+        this.protectedQuery = protectedQuery;
+  }
 }

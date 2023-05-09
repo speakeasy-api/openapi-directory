@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlsExportStatusRequest {
@@ -12,6 +13,7 @@ public class GetUrlsExportStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
     public String analysisSlug;
+
     public GetUrlsExportStatusRequest withAnalysisSlug(String analysisSlug) {
         this.analysisSlug = analysisSlug;
         return this;
@@ -22,6 +24,7 @@ public class GetUrlsExportStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetUrlsExportStatusRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -32,6 +35,7 @@ public class GetUrlsExportStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=url_export_id")
     public String urlExportId;
+
     public GetUrlsExportStatusRequest withUrlExportId(String urlExportId) {
         this.urlExportId = urlExportId;
         return this;
@@ -42,9 +46,16 @@ public class GetUrlsExportStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetUrlsExportStatusRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetUrlsExportStatusRequest(@JsonProperty("analysis_slug") String analysisSlug, @JsonProperty("project_slug") String projectSlug, @JsonProperty("url_export_id") String urlExportId, @JsonProperty("username") String username) {
+        this.analysisSlug = analysisSlug;
+        this.projectSlug = projectSlug;
+        this.urlExportId = urlExportId;
+        this.username = username;
+  }
 }

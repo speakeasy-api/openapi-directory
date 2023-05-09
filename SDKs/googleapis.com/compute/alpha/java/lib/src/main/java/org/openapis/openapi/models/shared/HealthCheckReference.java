@@ -15,9 +15,11 @@ public class HealthCheckReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public String healthCheck;
+
     public HealthCheckReference withHealthCheck(String healthCheck) {
         this.healthCheck = healthCheck;
         return this;
     }
     
+    public HealthCheckReference(){}
 }

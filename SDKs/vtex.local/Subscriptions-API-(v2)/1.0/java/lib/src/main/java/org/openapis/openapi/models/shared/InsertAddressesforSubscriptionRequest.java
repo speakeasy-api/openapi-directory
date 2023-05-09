@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InsertAddressesforSubscriptionRequest {
     @JsonProperty("additionalComponents")
     public String additionalComponents;
+
     public InsertAddressesforSubscriptionRequest withAdditionalComponents(String additionalComponents) {
         this.additionalComponents = additionalComponents;
         return this;
@@ -16,6 +17,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("addressId")
     public String addressId;
+
     public InsertAddressesforSubscriptionRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -23,6 +25,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("addressName")
     public String addressName;
+
     public InsertAddressesforSubscriptionRequest withAddressName(String addressName) {
         this.addressName = addressName;
         return this;
@@ -30,6 +33,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("addressType")
     public String addressType;
+
     public InsertAddressesforSubscriptionRequest withAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -37,6 +41,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("city")
     public String city;
+
     public InsertAddressesforSubscriptionRequest withCity(String city) {
         this.city = city;
         return this;
@@ -44,6 +49,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("complement")
     public String complement;
+
     public InsertAddressesforSubscriptionRequest withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -51,6 +57,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("country")
     public String country;
+
     public InsertAddressesforSubscriptionRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -58,6 +65,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("formattedAddress")
     public String formattedAddress;
+
     public InsertAddressesforSubscriptionRequest withFormattedAddress(String formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -65,6 +73,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("geoCoordinate")
     public String geoCoordinate;
+
     public InsertAddressesforSubscriptionRequest withGeoCoordinate(String geoCoordinate) {
         this.geoCoordinate = geoCoordinate;
         return this;
@@ -72,6 +81,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public InsertAddressesforSubscriptionRequest withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -79,6 +89,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("number")
     public String number;
+
     public InsertAddressesforSubscriptionRequest withNumber(String number) {
         this.number = number;
         return this;
@@ -86,6 +97,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("postalCode")
     public String postalCode;
+
     public InsertAddressesforSubscriptionRequest withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -93,6 +105,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("receiverName")
     public String receiverName;
+
     public InsertAddressesforSubscriptionRequest withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
@@ -100,6 +113,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("reference")
     public String reference;
+
     public InsertAddressesforSubscriptionRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -107,6 +121,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("state")
     public String state;
+
     public InsertAddressesforSubscriptionRequest withState(String state) {
         this.state = state;
         return this;
@@ -114,9 +129,28 @@ public class InsertAddressesforSubscriptionRequest {
     
     @JsonProperty("street")
     public String street;
+
     public InsertAddressesforSubscriptionRequest withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public InsertAddressesforSubscriptionRequest(@JsonProperty("additionalComponents") String additionalComponents, @JsonProperty("addressId") String addressId, @JsonProperty("addressName") String addressName, @JsonProperty("addressType") String addressType, @JsonProperty("city") String city, @JsonProperty("complement") String complement, @JsonProperty("country") String country, @JsonProperty("formattedAddress") String formattedAddress, @JsonProperty("geoCoordinate") String geoCoordinate, @JsonProperty("neighborhood") String neighborhood, @JsonProperty("number") String number, @JsonProperty("postalCode") String postalCode, @JsonProperty("receiverName") String receiverName, @JsonProperty("reference") String reference, @JsonProperty("state") String state, @JsonProperty("street") String street) {
+        this.additionalComponents = additionalComponents;
+        this.addressId = addressId;
+        this.addressName = addressName;
+        this.addressType = addressType;
+        this.city = city;
+        this.complement = complement;
+        this.country = country;
+        this.formattedAddress = formattedAddress;
+        this.geoCoordinate = geoCoordinate;
+        this.neighborhood = neighborhood;
+        this.number = number;
+        this.postalCode = postalCode;
+        this.receiverName = receiverName;
+        this.reference = reference;
+        this.state = state;
+        this.street = street;
+  }
 }

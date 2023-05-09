@@ -18,6 +18,7 @@ public class ExecuteSellTrasactionSellTransactionRequestInstructionBuySell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_order_id")
     public String clientOrderId;
+
     public ExecuteSellTrasactionSellTransactionRequestInstructionBuySell withClientOrderId(String clientOrderId) {
         this.clientOrderId = clientOrderId;
         return this;
@@ -25,6 +26,7 @@ public class ExecuteSellTrasactionSellTransactionRequestInstructionBuySell {
     
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public ExecuteSellTrasactionSellTransactionRequestInstructionBuySell withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -36,6 +38,7 @@ public class ExecuteSellTrasactionSellTransactionRequestInstructionBuySell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public ExecuteSellTrasactionSellTransactionRequestInstructionBuySell withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -47,9 +50,13 @@ public class ExecuteSellTrasactionSellTransactionRequestInstructionBuySell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ExecuteSellTrasactionSellTransactionRequestInstructionBuySell withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ExecuteSellTrasactionSellTransactionRequestInstructionBuySell(@JsonProperty("investment_product_id") String investmentProductId) {
+        this.investmentProductId = investmentProductId;
+  }
 }

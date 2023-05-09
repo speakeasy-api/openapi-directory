@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCatalogueAssetResponse {
     
     public String contentType;
+
     public GetCatalogueAssetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCatalogueAssetResponse {
     
     
     public Integer statusCode;
+
     public GetCatalogueAssetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetCatalogueAssetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCatalogueAssetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class GetCatalogueAssetResponse {
     
     
     public java.util.Map<String, Object> getCatalogueAsset200ApplicationJSONObject;
+
     public GetCatalogueAssetResponse withGetCatalogueAsset200ApplicationJSONObject(java.util.Map<String, Object> getCatalogueAsset200ApplicationJSONObject) {
         this.getCatalogueAsset200ApplicationJSONObject = getCatalogueAsset200ApplicationJSONObject;
         return this;
     }
     
+    public GetCatalogueAssetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

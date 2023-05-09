@@ -18,6 +18,7 @@ public class Move {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedParents")
     public Parent[] addedParents;
+
     public Move withAddedParents(Parent[] addedParents) {
         this.addedParents = addedParents;
         return this;
@@ -29,9 +30,11 @@ public class Move {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removedParents")
     public Parent[] removedParents;
+
     public Move withRemovedParents(Parent[] removedParents) {
         this.removedParents = removedParents;
         return this;
     }
     
+    public Move(){}
 }

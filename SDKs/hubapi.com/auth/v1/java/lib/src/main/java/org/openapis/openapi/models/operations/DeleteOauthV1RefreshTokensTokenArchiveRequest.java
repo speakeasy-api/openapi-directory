@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOauthV1RefreshTokensTokenArchiveRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public DeleteOauthV1RefreshTokensTokenArchiveRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DeleteOauthV1RefreshTokensTokenArchiveRequest(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

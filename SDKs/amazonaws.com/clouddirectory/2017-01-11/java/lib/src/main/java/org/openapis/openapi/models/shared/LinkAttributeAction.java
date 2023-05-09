@@ -15,6 +15,7 @@ public class LinkAttributeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeActionType")
     public UpdateActionTypeEnum attributeActionType;
+
     public LinkAttributeAction withAttributeActionType(UpdateActionTypeEnum attributeActionType) {
         this.attributeActionType = attributeActionType;
         return this;
@@ -23,9 +24,11 @@ public class LinkAttributeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeUpdateValue")
     public TypedAttributeValue attributeUpdateValue;
+
     public LinkAttributeAction withAttributeUpdateValue(TypedAttributeValue attributeUpdateValue) {
         this.attributeUpdateValue = attributeUpdateValue;
         return this;
     }
     
+    public LinkAttributeAction(){}
 }

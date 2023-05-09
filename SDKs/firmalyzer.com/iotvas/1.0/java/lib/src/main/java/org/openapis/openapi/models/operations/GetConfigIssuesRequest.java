@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigIssuesRequest {
@@ -12,9 +13,13 @@ public class GetConfigIssuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firmware_hash")
     public String firmwareHash;
+
     public GetConfigIssuesRequest withFirmwareHash(String firmwareHash) {
         this.firmwareHash = firmwareHash;
         return this;
     }
     
+    public GetConfigIssuesRequest(@JsonProperty("firmware_hash") String firmwareHash) {
+        this.firmwareHash = firmwareHash;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StaticValue {
     @JsonProperty("Values")
     public String[] values;
+
     public StaticValue withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public StaticValue(@JsonProperty("Values") String[] values) {
+        this.values = values;
+  }
 }

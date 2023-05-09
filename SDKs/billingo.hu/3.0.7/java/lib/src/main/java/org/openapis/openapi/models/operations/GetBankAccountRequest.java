@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBankAccountRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetBankAccountRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetBankAccountRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

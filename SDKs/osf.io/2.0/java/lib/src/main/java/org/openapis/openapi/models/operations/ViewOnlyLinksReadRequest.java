@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ViewOnlyLinksReadRequest {
@@ -12,9 +13,13 @@ public class ViewOnlyLinksReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
     public String linkId;
+
     public ViewOnlyLinksReadRequest withLinkId(String linkId) {
         this.linkId = linkId;
         return this;
     }
     
+    public ViewOnlyLinksReadRequest(@JsonProperty("link_id") String linkId) {
+        this.linkId = linkId;
+  }
 }

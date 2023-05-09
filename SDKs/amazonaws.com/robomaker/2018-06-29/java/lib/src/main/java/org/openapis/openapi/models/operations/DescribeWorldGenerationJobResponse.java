@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorldGenerationJobResponse {
     
     public String contentType;
+
     public DescribeWorldGenerationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorldGenerationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorldGenerationJobResponse describeWorldGenerationJobResponse;
+
     public DescribeWorldGenerationJobResponse withDescribeWorldGenerationJobResponse(org.openapis.openapi.models.shared.DescribeWorldGenerationJobResponse describeWorldGenerationJobResponse) {
         this.describeWorldGenerationJobResponse = describeWorldGenerationJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorldGenerationJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeWorldGenerationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWorldGenerationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeWorldGenerationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeWorldGenerationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWorldGenerationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeWorldGenerationJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorldGenerationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeWorldGenerationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorldGenerationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeWorldGenerationJobResponse {
      */
     
     public Object throttlingException;
+
     public DescribeWorldGenerationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeWorldGenerationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

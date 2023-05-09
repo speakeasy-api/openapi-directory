@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDatacatalogLineageV1Link withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogLineageV1Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogLineageV1Link withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogLineageV1Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public GoogleCloudDatacatalogLineageV1EntityReference source;
+
     public GoogleCloudDatacatalogLineageV1Link withSource(GoogleCloudDatacatalogLineageV1EntityReference source) {
         this.source = source;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogLineageV1Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDatacatalogLineageV1Link withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatacatalogLineageV1Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public GoogleCloudDatacatalogLineageV1EntityReference target;
+
     public GoogleCloudDatacatalogLineageV1Link withTarget(GoogleCloudDatacatalogLineageV1EntityReference target) {
         this.target = target;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1Link(){}
 }

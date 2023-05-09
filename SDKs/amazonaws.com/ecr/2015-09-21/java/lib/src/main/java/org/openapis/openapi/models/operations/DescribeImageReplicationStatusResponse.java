@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeImageReplicationStatusResponse {
     
     public String contentType;
+
     public DescribeImageReplicationStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeImageReplicationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeImageReplicationStatusResponse describeImageReplicationStatusResponse;
+
     public DescribeImageReplicationStatusResponse withDescribeImageReplicationStatusResponse(org.openapis.openapi.models.shared.DescribeImageReplicationStatusResponse describeImageReplicationStatusResponse) {
         this.describeImageReplicationStatusResponse = describeImageReplicationStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeImageReplicationStatusResponse {
      */
     
     public Object imageNotFoundException;
+
     public DescribeImageReplicationStatusResponse withImageNotFoundException(Object imageNotFoundException) {
         this.imageNotFoundException = imageNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeImageReplicationStatusResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeImageReplicationStatusResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeImageReplicationStatusResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public DescribeImageReplicationStatusResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeImageReplicationStatusResponse {
      */
     
     public Object serverException;
+
     public DescribeImageReplicationStatusResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeImageReplicationStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeImageReplicationStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeImageReplicationStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeImageReplicationStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeImageReplicationStatusResponse {
      */
     
     public Object validationException;
+
     public DescribeImageReplicationStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeImageReplicationStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

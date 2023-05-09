@@ -18,6 +18,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsJavascript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageJsonPath")
     public String packageJsonPath;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsJavascript withPackageJsonPath(String packageJsonPath) {
         this.packageJsonPath = packageJsonPath;
         return this;
@@ -29,6 +30,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsJavascript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactNativeVersion")
     public String reactNativeVersion;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsJavascript withReactNativeVersion(String reactNativeVersion) {
         this.reactNativeVersion = reactNativeVersion;
         return this;
@@ -40,9 +42,11 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsJavascript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runTests")
     public Boolean runTests;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsJavascript withRunTests(Boolean runTests) {
         this.runTests = runTests;
         return this;
     }
     
+    public BranchConfigurationsUpdate200ApplicationJSONToolsetsJavascript(){}
 }

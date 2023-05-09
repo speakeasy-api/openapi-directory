@@ -12,6 +12,7 @@ public class ProductSubscriptionCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Price amount;
+
     public ProductSubscriptionCost withAmount(Price amount) {
         this.amount = amount;
         return this;
@@ -23,6 +24,7 @@ public class ProductSubscriptionCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public String period;
+
     public ProductSubscriptionCost withPeriod(String period) {
         this.period = period;
         return this;
@@ -34,9 +36,11 @@ public class ProductSubscriptionCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodLength")
     public String periodLength;
+
     public ProductSubscriptionCost withPeriodLength(String periodLength) {
         this.periodLength = periodLength;
         return this;
     }
     
+    public ProductSubscriptionCost(){}
 }

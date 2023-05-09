@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateEvaluationInput {
     @JsonProperty("EvaluationId")
     public String evaluationId;
+
     public UpdateEvaluationInput withEvaluationId(String evaluationId) {
         this.evaluationId = evaluationId;
         return this;
@@ -16,9 +17,14 @@ public class UpdateEvaluationInput {
     
     @JsonProperty("EvaluationName")
     public String evaluationName;
+
     public UpdateEvaluationInput withEvaluationName(String evaluationName) {
         this.evaluationName = evaluationName;
         return this;
     }
     
+    public UpdateEvaluationInput(@JsonProperty("EvaluationId") String evaluationId, @JsonProperty("EvaluationName") String evaluationName) {
+        this.evaluationId = evaluationId;
+        this.evaluationName = evaluationName;
+  }
 }

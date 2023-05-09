@@ -18,9 +18,11 @@ public class ModifyBackupAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Backup")
     public Backup backup;
+
     public ModifyBackupAttributesResponse withBackup(Backup backup) {
         this.backup = backup;
         return this;
     }
     
+    public ModifyBackupAttributesResponse(){}
 }

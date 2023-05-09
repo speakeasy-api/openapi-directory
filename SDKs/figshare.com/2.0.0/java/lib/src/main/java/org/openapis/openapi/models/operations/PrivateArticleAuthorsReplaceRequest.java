@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleAuthorsReplaceRequest {
@@ -12,6 +13,7 @@ public class PrivateArticleAuthorsReplaceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AuthorsCreator authorsCreator;
+
     public PrivateArticleAuthorsReplaceRequest withAuthorsCreator(org.openapis.openapi.models.shared.AuthorsCreator authorsCreator) {
         this.authorsCreator = authorsCreator;
         return this;
@@ -22,9 +24,14 @@ public class PrivateArticleAuthorsReplaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticleAuthorsReplaceRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public PrivateArticleAuthorsReplaceRequest(@JsonProperty("AuthorsCreator") org.openapis.openapi.models.shared.AuthorsCreator authorsCreator, @JsonProperty("article_id") Long articleId) {
+        this.authorsCreator = authorsCreator;
+        this.articleId = articleId;
+  }
 }

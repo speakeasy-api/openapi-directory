@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Content - &lt;p&gt;Represents textual data, plus an optional character set specification.&lt;/p&gt; &lt;p&gt;By default, the text must be 7-bit ASCII, due to the constraints of the SMTP protocol. If the text must contain any other characters, then you must also specify a character set. Examples include UTF-8, ISO-8859-1, and Shift_JIS.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Content {
     
     public String charset;
+
     public Content withCharset(String charset) {
         this.charset = charset;
         return this;
@@ -19,9 +20,13 @@ public class Content {
     
     
     public String data;
+
     public Content withData(String data) {
         this.data = data;
         return this;
     }
     
+    public Content(@JsonProperty("Data") String data) {
+        this.data = data;
+  }
 }

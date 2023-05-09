@@ -18,9 +18,11 @@ public class ExportEvaluatedExamplesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public ExportEvaluatedExamplesOutputConfig outputConfig;
+
     public ExportEvaluatedExamplesRequest withOutputConfig(ExportEvaluatedExamplesOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public ExportEvaluatedExamplesRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum action;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withAction(POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum version;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withVersion(POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTUpdateConfigurationSetReputationMetricsEnabledRequest(@JsonProperty("Action") POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum action, @JsonProperty("Version") POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

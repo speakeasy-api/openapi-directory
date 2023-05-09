@@ -15,6 +15,7 @@ public class RegisterCertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCertificatePem")
     public String caCertificatePem;
+
     public RegisterCertificateRequestBody withCaCertificatePem(String caCertificatePem) {
         this.caCertificatePem = caCertificatePem;
         return this;
@@ -25,6 +26,7 @@ public class RegisterCertificateRequestBody {
      */
     @JsonProperty("certificatePem")
     public String certificatePem;
+
     public RegisterCertificateRequestBody withCertificatePem(String certificatePem) {
         this.certificatePem = certificatePem;
         return this;
@@ -36,9 +38,13 @@ public class RegisterCertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RegisterCertificateRequestBodyStatusEnum status;
+
     public RegisterCertificateRequestBody withStatus(RegisterCertificateRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RegisterCertificateRequestBody(@JsonProperty("certificatePem") String certificatePem) {
+        this.certificatePem = certificatePem;
+  }
 }

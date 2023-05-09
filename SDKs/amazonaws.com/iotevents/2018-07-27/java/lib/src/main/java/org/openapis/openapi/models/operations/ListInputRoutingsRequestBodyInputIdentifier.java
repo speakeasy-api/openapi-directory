@@ -15,6 +15,7 @@ public class ListInputRoutingsRequestBodyInputIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotEventsInputIdentifier")
     public org.openapis.openapi.models.shared.IotEventsInputIdentifier iotEventsInputIdentifier;
+
     public ListInputRoutingsRequestBodyInputIdentifier withIotEventsInputIdentifier(org.openapis.openapi.models.shared.IotEventsInputIdentifier iotEventsInputIdentifier) {
         this.iotEventsInputIdentifier = iotEventsInputIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class ListInputRoutingsRequestBodyInputIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotSiteWiseInputIdentifier")
     public org.openapis.openapi.models.shared.IotSiteWiseInputIdentifier iotSiteWiseInputIdentifier;
+
     public ListInputRoutingsRequestBodyInputIdentifier withIotSiteWiseInputIdentifier(org.openapis.openapi.models.shared.IotSiteWiseInputIdentifier iotSiteWiseInputIdentifier) {
         this.iotSiteWiseInputIdentifier = iotSiteWiseInputIdentifier;
         return this;
     }
     
+    public ListInputRoutingsRequestBodyInputIdentifier(){}
 }

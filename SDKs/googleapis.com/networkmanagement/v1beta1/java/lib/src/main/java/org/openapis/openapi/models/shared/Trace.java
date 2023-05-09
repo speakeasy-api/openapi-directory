@@ -18,6 +18,7 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointInfo")
     public EndpointInfo endpointInfo;
+
     public Trace withEndpointInfo(EndpointInfo endpointInfo) {
         this.endpointInfo = endpointInfo;
         return this;
@@ -29,9 +30,11 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public Step[] steps;
+
     public Trace withSteps(Step[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public Trace(){}
 }

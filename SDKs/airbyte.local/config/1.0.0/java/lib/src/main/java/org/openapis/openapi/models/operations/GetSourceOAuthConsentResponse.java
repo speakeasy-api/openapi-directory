@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSourceOAuthConsentResponse {
     
     public String contentType;
+
     public GetSourceOAuthConsentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSourceOAuthConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetSourceOAuthConsentResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetSourceOAuthConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetSourceOAuthConsentResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class GetSourceOAuthConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.OAuthConsentRead oAuthConsentRead;
+
     public GetSourceOAuthConsentResponse withOAuthConsentRead(org.openapis.openapi.models.shared.OAuthConsentRead oAuthConsentRead) {
         this.oAuthConsentRead = oAuthConsentRead;
         return this;
@@ -46,6 +51,7 @@ public class GetSourceOAuthConsentResponse {
     
     
     public Integer statusCode;
+
     public GetSourceOAuthConsentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetSourceOAuthConsentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSourceOAuthConsentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSourceOAuthConsentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

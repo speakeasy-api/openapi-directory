@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionTypeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionTypeRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFu
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
     public String definitionId;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionTypeRequest withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
@@ -29,9 +32,15 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFu
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionType")
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionTypeFunctionTypeEnum functionType;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionTypeRequest withFunctionType(GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionTypeFunctionTypeEnum functionType) {
         this.functionType = functionType;
         return this;
     }
     
+    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionTypeRequest(@JsonProperty("appId") Integer appId, @JsonProperty("definitionId") String definitionId, @JsonProperty("functionType") GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionTypeFunctionTypeEnum functionType) {
+        this.appId = appId;
+        this.definitionId = definitionId;
+        this.functionType = functionType;
+  }
 }

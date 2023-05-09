@@ -55,4 +55,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetDailyMetricsTimeSeriesRe
 lib/src/main/java/org/openapis/openapi/models/shared/ListSearchKeywordImpressionsMonthlyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchKeywordCount.java
 lib/src/main/java/org/openapis/openapi/models/shared/InsightsValue.java
+docs/sdk/README.md
+docs/locations/README.md
 USAGE.md

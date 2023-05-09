@@ -12,6 +12,7 @@ public class MessagePropertyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public AudioProperty audio;
+
     public MessagePropertyContent withAudio(AudioProperty audio) {
         this.audio = audio;
         return this;
@@ -20,6 +21,7 @@ public class MessagePropertyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public FileProperty file;
+
     public MessagePropertyContent withFile(FileProperty file) {
         this.file = file;
         return this;
@@ -28,6 +30,7 @@ public class MessagePropertyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public ImageProperty image;
+
     public MessagePropertyContent withImage(ImageProperty image) {
         this.image = image;
         return this;
@@ -36,6 +39,7 @@ public class MessagePropertyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public TemplateProperty template;
+
     public MessagePropertyContent withTemplate(TemplateProperty template) {
         this.template = template;
         return this;
@@ -54,6 +58,7 @@ public class MessagePropertyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public MessagePropertyContent withText(String text) {
         this.text = text;
         return this;
@@ -73,6 +78,7 @@ public class MessagePropertyContent {
      */
     @JsonProperty("type")
     public MessagePropertyContentTypeEnum type;
+
     public MessagePropertyContent withType(MessagePropertyContentTypeEnum type) {
         this.type = type;
         return this;
@@ -81,9 +87,13 @@ public class MessagePropertyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public VideoProperty video;
+
     public MessagePropertyContent withVideo(VideoProperty video) {
         this.video = video;
         return this;
     }
     
+    public MessagePropertyContent(@JsonProperty("type") MessagePropertyContentTypeEnum type) {
+        this.type = type;
+  }
 }

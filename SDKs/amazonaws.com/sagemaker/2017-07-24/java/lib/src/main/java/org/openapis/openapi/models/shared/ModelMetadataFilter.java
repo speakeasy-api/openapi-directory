@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelMetadataFilter {
     @JsonProperty("Name")
     public ModelMetadataFilterTypeEnum name;
+
     public ModelMetadataFilter withName(ModelMetadataFilterTypeEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class ModelMetadataFilter {
     
     @JsonProperty("Value")
     public String value;
+
     public ModelMetadataFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModelMetadataFilter(@JsonProperty("Name") ModelMetadataFilterTypeEnum name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

@@ -17,7 +17,7 @@ import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &lt;p&gt;Amazon CloudWatch Internet Monitor provides visibility into how internet issues impact the performance and availability between your applications hosted on Amazon Web Services and your end users, reducing the time it takes for you to diagnose these issues, from days to minutes. You can explore internet measurements for different time frames and at different geographic granularities, and quickly visualize the impact of issues, and then take action to improve your end users' experience, for example, by switching to other Amazon Web Services services or rerouting traffic to your workload through differentAmazon Web Services Regions.&lt;/p&gt; &lt;p&gt; If the issue is caused by the Amazon Web Services network, you'll automatically receive an Amazon Web Services Health Dashboard notification with the steps that Amazon Web Services is taking to mitigate the problem. To support integrating health information for geographies and networks specific to your application, Internet Monitor delivers measurements to CloudWatch Logs and CloudWatch Metrics. Internet Monitor also sends health events to Amazon EventBridge, so you can set up notifications. Internet Monitor monitors internet connectivity for your application through Amazon Virtual Private Clouds (VPCs), Amazon CloudFront distributions, and Amazon WorkSpaces directories.&lt;/p&gt; &lt;p&gt;To use Internet Monitor, you create a &lt;i&gt;monitor&lt;/i&gt; and add resources to it, Virtual Private Clouds (VPCs), Amazon CloudFront distributions, or WorkSpaces directories that show where your application's internet traffic is. Internet Monitor then provides internet measurements from Amazon Web Services that are specific to the locations and networks that communicate with your application. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-InternetMonitor.html"&gt; Using Amazon CloudWatch Internet Monitor&lt;/a&gt; in the Amazon CloudWatch User Guide.&lt;/p&gt;
+ * &lt;p&gt;Amazon CloudWatch Internet Monitor provides visibility into how internet issues impact the performance and availability between your applications hosted on Amazon Web Services and your end users. It reduces the time it takes for you to diagnose internet issues from days to minutes. Internet Monitor uses the connectivity data that Amazon Web Services captures from its global networking footprint to calculate a baseline of performance and availability for internet traffic. This is the same data that Amazon Web Services uses to monitor internet uptime and availability. With those measurements as a baseline, Internet Monitor raises awareness for you when there are significant problems for your end users in the different geographic locations where your application runs.&lt;/p&gt; &lt;p&gt;Internet Monitor publishes internet measurements to CloudWatch Logs and CloudWatch Metrics, to easily support using CloudWatch tools with health information for geographies and networks specific to your application. Internet Monitor sends health events to Amazon EventBridge so that you can set up notifications. If an issue is caused by the Amazon Web Services network, you also automatically receive an Amazon Web Services Health Dashboard notification with the steps that Amazon Web Services is taking to mitigate the problem.&lt;/p&gt; &lt;p&gt;To use Internet Monitor, you create a &lt;i&gt;monitor&lt;/i&gt; and associate your application's resources with it, VPCs, CloudFront distributions, or WorkSpaces directories, to enable Internet Monitor to know where your application's internet traffic is. Internet Monitor then provides internet measurements from Amazon Web Services that are specific to the locations and networks that communicate with your application.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-InternetMonitor.html"&gt;Using Amazon CloudWatch Internet Monitor&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt;
  * https://docs.aws.amazon.com/internetmonitor/ - Amazon Web Services documentation
  */
 public class SDK {
@@ -156,11 +156,16 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
     /**
-     * &lt;p&gt;Creates a monitor in Amazon CloudWatch Internet Monitor. A monitor is built based on information from the application resources that you add: Virtual Private Clouds (VPCs), Amazon CloudFront distributions, and WorkSpaces directories. &lt;/p&gt; &lt;p&gt;After you create a monitor, you can view the internet performance for your application, scoped to a location, as well as any health events that are impairing traffic. Internet Monitor can also diagnose whether the impairment is on the Amazon Web Services network or is an issue with an internet service provider (ISP).&lt;/p&gt;
+     * &lt;p&gt;Creates a monitor in Amazon CloudWatch Internet Monitor. A monitor is built based on information from the application resources that you add: Amazon Virtual Private Clouds (VPCs), Amazon CloudFront distributions, and WorkSpaces directories. Internet Monitor then publishes internet measurements from Amazon Web Services that are specific to the &lt;i&gt;city-networks&lt;/i&gt;, that is, the locations and ASNs (typically internet service providers or ISPs), where clients access your application. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-InternetMonitor.html"&gt;Using Amazon CloudWatch Internet Monitor&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When you create a monitor, you set a maximum limit for the number of city-networks where client traffic is monitored. The city-network maximum that you choose is the limit, but you only pay for the number of city-networks that are actually monitored. You can change the maximum at any time by updating your monitor. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html"&gt;Choosing a city-network maximum value&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -193,7 +198,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMonitorResponse res = new org.openapis.openapi.models.operations.CreateMonitorResponse() {{
+        org.openapis.openapi.models.operations.CreateMonitorResponse res = new org.openapis.openapi.models.operations.CreateMonitorResponse(contentType, httpRes.statusCode()) {{
             createMonitorOutput = null;
             internalServerException = null;
             accessDeniedException = null;
@@ -202,8 +207,6 @@ public class SDK {
             limitExceededException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,15 +291,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMonitorResponse res = new org.openapis.openapi.models.operations.DeleteMonitorResponse() {{
+        org.openapis.openapi.models.operations.DeleteMonitorResponse res = new org.openapis.openapi.models.operations.DeleteMonitorResponse(contentType, httpRes.statusCode()) {{
             deleteMonitorOutput = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -367,15 +368,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHealthEventResponse res = new org.openapis.openapi.models.operations.GetHealthEventResponse() {{
+        org.openapis.openapi.models.operations.GetHealthEventResponse res = new org.openapis.openapi.models.operations.GetHealthEventResponse(contentType, httpRes.statusCode()) {{
             getHealthEventOutput = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -446,15 +445,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMonitorResponse res = new org.openapis.openapi.models.operations.GetMonitorResponse() {{
+        org.openapis.openapi.models.operations.GetMonitorResponse res = new org.openapis.openapi.models.operations.GetMonitorResponse(contentType, httpRes.statusCode()) {{
             getMonitorOutput = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,15 +528,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHealthEventsResponse res = new org.openapis.openapi.models.operations.ListHealthEventsResponse() {{
+        org.openapis.openapi.models.operations.ListHealthEventsResponse res = new org.openapis.openapi.models.operations.ListHealthEventsResponse(contentType, httpRes.statusCode()) {{
             listHealthEventsOutput = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -616,15 +611,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMonitorsResponse res = new org.openapis.openapi.models.operations.ListMonitorsResponse() {{
+        org.openapis.openapi.models.operations.ListMonitorsResponse res = new org.openapis.openapi.models.operations.ListMonitorsResponse(contentType, httpRes.statusCode()) {{
             listMonitorsOutput = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -695,7 +688,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceOutput = null;
             tooManyRequestsException = null;
             accessDeniedException = null;
@@ -703,8 +696,6 @@ public class SDK {
             badRequestException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -787,7 +778,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceOutput = null;
             tooManyRequestsException = null;
             accessDeniedException = null;
@@ -795,8 +786,6 @@ public class SDK {
             badRequestException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -880,7 +869,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceOutput = null;
             tooManyRequestsException = null;
             accessDeniedException = null;
@@ -888,8 +877,6 @@ public class SDK {
             badRequestException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -939,7 +926,7 @@ public class SDK {
     }
 
     /**
-     * Updates a monitor. You can update a monitor to add or remove resources, or to change the status of the monitor. You can't change the name of a monitor.
+     * &lt;p&gt;Updates a monitor. You can update a monitor to change the maximum number of city-networks (locations and ASNs or internet service providers), to add or remove resources, or to change the status of the monitor. Note that you can't change the name of a monitor.&lt;/p&gt; &lt;p&gt;The city-network maximum that you choose is the limit, but you only pay for the number of city-networks that are actually monitored. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html"&gt;Choosing a city-network maximum value&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -972,7 +959,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMonitorResponse res = new org.openapis.openapi.models.operations.UpdateMonitorResponse() {{
+        org.openapis.openapi.models.operations.UpdateMonitorResponse res = new org.openapis.openapi.models.operations.UpdateMonitorResponse(contentType, httpRes.statusCode()) {{
             updateMonitorOutput = null;
             internalServerException = null;
             resourceNotFoundException = null;
@@ -981,8 +968,6 @@ public class SDK {
             limitExceededException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

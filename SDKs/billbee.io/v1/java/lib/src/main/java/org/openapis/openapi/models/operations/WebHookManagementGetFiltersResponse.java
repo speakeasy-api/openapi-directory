@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebHookManagementGetFiltersResponse {
     
     public String contentType;
+
     public WebHookManagementGetFiltersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WebHookManagementGetFiltersResponse {
     
     
     public Integer statusCode;
+
     public WebHookManagementGetFiltersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WebHookManagementGetFiltersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebHookManagementGetFiltersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class WebHookManagementGetFiltersResponse {
      */
     
     public java.util.Map<String, Object> webHookManagementGetFilters200ApplicationJSONObject;
+
     public WebHookManagementGetFiltersResponse withWebHookManagementGetFilters200ApplicationJSONObject(java.util.Map<String, Object> webHookManagementGetFilters200ApplicationJSONObject) {
         this.webHookManagementGetFilters200ApplicationJSONObject = webHookManagementGetFilters200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class WebHookManagementGetFiltersResponse {
      */
     
     public java.util.Map<String, Object> webHookManagementGetFilters200TextJSONObject;
+
     public WebHookManagementGetFiltersResponse withWebHookManagementGetFilters200TextJSONObject(java.util.Map<String, Object> webHookManagementGetFilters200TextJSONObject) {
         this.webHookManagementGetFilters200TextJSONObject = webHookManagementGetFilters200TextJSONObject;
         return this;
     }
     
+    public WebHookManagementGetFiltersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

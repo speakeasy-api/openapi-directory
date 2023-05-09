@@ -15,6 +15,7 @@ public class WifiProfiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profiles")
     public Profile[] profiles;
+
     public WifiProfiles withProfiles(Profile[] profiles) {
         this.profiles = profiles;
         return this;
@@ -23,9 +24,11 @@ public class WifiProfiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public Settings settings;
+
     public WifiProfiles withSettings(Settings settings) {
         this.settings = settings;
         return this;
     }
     
+    public WifiProfiles(){}
 }

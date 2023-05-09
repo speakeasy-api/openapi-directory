@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FetchEmailHistoriesResponse {
     @JsonProperty("data")
     public EmailHistoryResource[] data;
+
     public FetchEmailHistoriesResponse withData(EmailHistoryResource[] data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class FetchEmailHistoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public FetchMetaResponse meta;
+
     public FetchEmailHistoriesResponse withMeta(FetchMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public FetchEmailHistoriesResponse(@JsonProperty("data") EmailHistoryResource[] data) {
+        this.data = data;
+  }
 }

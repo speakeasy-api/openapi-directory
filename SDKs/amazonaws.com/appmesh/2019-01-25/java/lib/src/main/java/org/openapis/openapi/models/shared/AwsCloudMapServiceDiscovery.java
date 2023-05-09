@@ -15,6 +15,7 @@ public class AwsCloudMapServiceDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public AwsCloudMapInstanceAttribute[] attributes;
+
     public AwsCloudMapServiceDiscovery withAttributes(AwsCloudMapInstanceAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class AwsCloudMapServiceDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipPreference")
     public IpPreferenceEnum ipPreference;
+
     public AwsCloudMapServiceDiscovery withIpPreference(IpPreferenceEnum ipPreference) {
         this.ipPreference = ipPreference;
         return this;
@@ -30,6 +32,7 @@ public class AwsCloudMapServiceDiscovery {
     
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public AwsCloudMapServiceDiscovery withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -37,9 +40,14 @@ public class AwsCloudMapServiceDiscovery {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public AwsCloudMapServiceDiscovery withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public AwsCloudMapServiceDiscovery(@JsonProperty("namespaceName") String namespaceName, @JsonProperty("serviceName") String serviceName) {
+        this.namespaceName = namespaceName;
+        this.serviceName = serviceName;
+  }
 }

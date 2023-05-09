@@ -15,9 +15,11 @@ public class StatementOutputData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextPlain")
     public String textPlain;
+
     public StatementOutputData withTextPlain(String textPlain) {
         this.textPlain = textPlain;
         return this;
     }
     
+    public StatementOutputData(){}
 }

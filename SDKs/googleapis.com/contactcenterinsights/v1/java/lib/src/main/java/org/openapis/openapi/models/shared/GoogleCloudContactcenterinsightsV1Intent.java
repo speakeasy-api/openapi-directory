@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudContactcenterinsightsV1Intent withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudContactcenterinsightsV1Intent withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1Intent(){}
 }

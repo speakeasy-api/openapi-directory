@@ -12,6 +12,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerCustomerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Addresses")
     public String addresses;
+
     public RechnungsdruckWebAppControllersApiSearchControllerCustomerResult withAddresses(String addresses) {
         this.addresses = addresses;
         return this;
@@ -20,6 +21,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerCustomerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public RechnungsdruckWebAppControllersApiSearchControllerCustomerResult withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerCustomerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RechnungsdruckWebAppControllersApiSearchControllerCustomerResult withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class RechnungsdruckWebAppControllersApiSearchControllerCustomerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public String number;
+
     public RechnungsdruckWebAppControllersApiSearchControllerCustomerResult withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiSearchControllerCustomerResult(){}
 }

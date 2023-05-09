@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartEdgeConfigurationUpdateResponse {
@@ -12,6 +13,7 @@ public class StartEdgeConfigurationUpdateResponse {
      */
     
     public Object accessDeniedException;
+
     public StartEdgeConfigurationUpdateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartEdgeConfigurationUpdateResponse {
      */
     
     public Object clientLimitExceededException;
+
     public StartEdgeConfigurationUpdateResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class StartEdgeConfigurationUpdateResponse {
     
     
     public String contentType;
+
     public StartEdgeConfigurationUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartEdgeConfigurationUpdateResponse {
      */
     
     public Object invalidArgumentException;
+
     public StartEdgeConfigurationUpdateResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class StartEdgeConfigurationUpdateResponse {
      */
     
     public Object noDataRetentionException;
+
     public StartEdgeConfigurationUpdateResponse withNoDataRetentionException(Object noDataRetentionException) {
         this.noDataRetentionException = noDataRetentionException;
         return this;
@@ -59,6 +65,7 @@ public class StartEdgeConfigurationUpdateResponse {
      */
     
     public Object resourceInUseException;
+
     public StartEdgeConfigurationUpdateResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class StartEdgeConfigurationUpdateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartEdgeConfigurationUpdateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class StartEdgeConfigurationUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.StartEdgeConfigurationUpdateOutput startEdgeConfigurationUpdateOutput;
+
     public StartEdgeConfigurationUpdateResponse withStartEdgeConfigurationUpdateOutput(org.openapis.openapi.models.shared.StartEdgeConfigurationUpdateOutput startEdgeConfigurationUpdateOutput) {
         this.startEdgeConfigurationUpdateOutput = startEdgeConfigurationUpdateOutput;
         return this;
@@ -86,6 +95,7 @@ public class StartEdgeConfigurationUpdateResponse {
     
     
     public Integer statusCode;
+
     public StartEdgeConfigurationUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartEdgeConfigurationUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartEdgeConfigurationUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartEdgeConfigurationUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

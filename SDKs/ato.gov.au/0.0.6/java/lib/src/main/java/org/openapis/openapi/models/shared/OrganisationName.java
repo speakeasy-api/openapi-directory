@@ -25,6 +25,7 @@ public class OrganisationName {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public OrganisationName withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -36,6 +37,7 @@ public class OrganisationName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrganisationName withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +49,7 @@ public class OrganisationName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrganisationName withName(String name) {
         this.name = name;
         return this;
@@ -60,9 +63,11 @@ public class OrganisationName {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public OrganisationName withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public OrganisationName(){}
 }

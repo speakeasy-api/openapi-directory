@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutApiV1FiltersIdRequestBody {
     /**
@@ -12,6 +12,7 @@ public class PutApiV1FiltersIdRequestBody {
      */
     
     public PutApiV1FiltersIdRequestBodyContextEnum[] context;
+
     public PutApiV1FiltersIdRequestBody withContext(PutApiV1FiltersIdRequestBodyContextEnum[] context) {
         this.context = context;
         return this;
@@ -22,6 +23,7 @@ public class PutApiV1FiltersIdRequestBody {
      */
     
     public Long expiresIn;
+
     public PutApiV1FiltersIdRequestBody withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -32,6 +34,7 @@ public class PutApiV1FiltersIdRequestBody {
      */
     
     public Boolean irreversible;
+
     public PutApiV1FiltersIdRequestBody withIrreversible(Boolean irreversible) {
         this.irreversible = irreversible;
         return this;
@@ -42,6 +45,7 @@ public class PutApiV1FiltersIdRequestBody {
      */
     
     public String phrase;
+
     public PutApiV1FiltersIdRequestBody withPhrase(String phrase) {
         this.phrase = phrase;
         return this;
@@ -52,9 +56,14 @@ public class PutApiV1FiltersIdRequestBody {
      */
     
     public Boolean wholeWord;
+
     public PutApiV1FiltersIdRequestBody withWholeWord(Boolean wholeWord) {
         this.wholeWord = wholeWord;
         return this;
     }
     
+    public PutApiV1FiltersIdRequestBody(@JsonProperty("context") PutApiV1FiltersIdRequestBodyContextEnum[] context, @JsonProperty("phrase") String phrase) {
+        this.context = context;
+        this.phrase = phrase;
+  }
 }

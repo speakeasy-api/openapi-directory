@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestMergeResult {
     @JsonProperty("merged")
     public Boolean merged;
+
     public PullRequestMergeResult withMerged(Boolean merged) {
         this.merged = merged;
         return this;
@@ -19,6 +20,7 @@ public class PullRequestMergeResult {
     
     @JsonProperty("message")
     public String message;
+
     public PullRequestMergeResult withMessage(String message) {
         this.message = message;
         return this;
@@ -26,9 +28,15 @@ public class PullRequestMergeResult {
     
     @JsonProperty("sha")
     public String sha;
+
     public PullRequestMergeResult withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public PullRequestMergeResult(@JsonProperty("merged") Boolean merged, @JsonProperty("message") String message, @JsonProperty("sha") String sha) {
+        this.merged = merged;
+        this.message = message;
+        this.sha = sha;
+  }
 }

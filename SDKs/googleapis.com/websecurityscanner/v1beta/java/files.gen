@@ -103,4 +103,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/OutdatedLibrary.java
 lib/src/main/java/org/openapis/openapi/models/shared/Form.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListFindingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListScanRunsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

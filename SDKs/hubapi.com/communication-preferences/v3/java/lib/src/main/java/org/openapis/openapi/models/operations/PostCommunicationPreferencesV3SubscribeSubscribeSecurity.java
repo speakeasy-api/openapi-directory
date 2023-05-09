@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostCommunicationPreferencesV3SubscribeSubscribeSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
     public String hapikey;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
@@ -16,6 +17,7 @@ public class PostCommunicationPreferencesV3SubscribeSubscribeSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
@@ -23,6 +25,7 @@ public class PostCommunicationPreferencesV3SubscribeSubscribeSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy1;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeSecurity withOauth2Legacy1(String oauth2Legacy1) {
         this.oauth2Legacy1 = oauth2Legacy1;
         return this;
@@ -30,6 +33,7 @@ public class PostCommunicationPreferencesV3SubscribeSubscribeSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
@@ -37,9 +41,11 @@ public class PostCommunicationPreferencesV3SubscribeSubscribeSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy1;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeSecurity withPrivateAppsLegacy1(String privateAppsLegacy1) {
         this.privateAppsLegacy1 = privateAppsLegacy1;
         return this;
     }
     
+    public PostCommunicationPreferencesV3SubscribeSubscribeSecurity(){}
 }

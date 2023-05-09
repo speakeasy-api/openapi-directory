@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRouteResponse {
@@ -12,6 +13,7 @@ public class UpdateRouteResponse {
      */
     
     public Object badRequestException;
+
     public UpdateRouteResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRouteResponse {
      */
     
     public Object conflictException;
+
     public UpdateRouteResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRouteResponse {
     
     
     public String contentType;
+
     public UpdateRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRouteResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateRouteResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRouteResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateRouteResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateRouteResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateRouteResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateRouteResponse {
      */
     
     public Object notFoundException;
+
     public UpdateRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateRouteResponse {
     
     
     public Integer statusCode;
+
     public UpdateRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRouteResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateRouteResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRouteOutput updateRouteOutput;
+
     public UpdateRouteResponse withUpdateRouteOutput(org.openapis.openapi.models.shared.UpdateRouteOutput updateRouteOutput) {
         this.updateRouteOutput = updateRouteOutput;
         return this;
     }
     
+    public UpdateRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

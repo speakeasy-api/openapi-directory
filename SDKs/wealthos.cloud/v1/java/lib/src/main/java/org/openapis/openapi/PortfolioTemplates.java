@@ -14,9 +14,9 @@ import org.openapis.openapi.utils.JSON;
 import org.openapis.openapi.utils.SerializedBody;
 
 /**
- * A portfolio template captures how an investor\u2019s cash (once transferred to a pot) should be automatically invested by the system. A portfolio template consists of a set of investment products and the ratios in which these products must be bought, once cleared cash is available to invest. 
+ * A portfolio template captures how an investor’s cash (once transferred to a pot) should be automatically invested by the system. A portfolio template consists of a set of investment products and the ratios in which these products must be bought, once cleared cash is available to invest. 
  * 
- * For example, a portfolio template \u2018PT1\u2019 has the following template
+ * For example, a portfolio template ‘PT1’ has the following template
  * 
  * Investment Product | Ratio
  * -------------------|-------
@@ -32,7 +32,7 @@ import org.openapis.openapi.utils.SerializedBody;
  * 
  * ### Portfolio Creation
  * 
- * Portfolio Templates can be created by the Wealth Manger (generic set of portfolio templates created in WealthOS and a single template will be assigned to an Investor\u2019s pot based on suitability - e.g. robo advisory) 
+ * Portfolio Templates can be created by the Wealth Manger (generic set of portfolio templates created in WealthOS and a single template will be assigned to an Investor’s pot based on suitability - e.g. robo advisory) 
  * 
  * &lt;!-- If a Portfolio template is created by an investor then the request must have `owner : "investor"` and `investor_id` populated with the relevant investor ID.  --&gt;
  * 
@@ -95,7 +95,7 @@ public class PortfolioTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePortfolioTemplateResponse res = new org.openapis.openapi.models.operations.CreatePortfolioTemplateResponse() {{
+        org.openapis.openapi.models.operations.CreatePortfolioTemplateResponse res = new org.openapis.openapi.models.operations.CreatePortfolioTemplateResponse(contentType, httpRes.statusCode()) {{
             createPortfolioTemplate201ApplicationJSONObject = null;
             createPortfolioTemplate400ApplicationJSONObject = null;
             createPortfolioTemplate401ApplicationJSONObject = null;
@@ -104,8 +104,6 @@ public class PortfolioTemplates {
             createPortfolioTemplate429ApplicationJSONObject = null;
             createPortfolioTemplate500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -192,7 +190,7 @@ public class PortfolioTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllPortfolioTemplatesResponse res = new org.openapis.openapi.models.operations.GetAllPortfolioTemplatesResponse() {{
+        org.openapis.openapi.models.operations.GetAllPortfolioTemplatesResponse res = new org.openapis.openapi.models.operations.GetAllPortfolioTemplatesResponse(contentType, httpRes.statusCode()) {{
             getAllPortfolioTemplates200ApplicationJSONObject = null;
             getAllPortfolioTemplates401ApplicationJSONObject = null;
             getAllPortfolioTemplates403ApplicationJSONObject = null;
@@ -200,8 +198,6 @@ public class PortfolioTemplates {
             getAllPortfolioTemplates429ApplicationJSONObject = null;
             getAllPortfolioTemplates500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -280,7 +276,7 @@ public class PortfolioTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPortfolioTemplateResponse res = new org.openapis.openapi.models.operations.GetPortfolioTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetPortfolioTemplateResponse res = new org.openapis.openapi.models.operations.GetPortfolioTemplateResponse(contentType, httpRes.statusCode()) {{
             getPortfolioTemplate200ApplicationJSONObject = null;
             getPortfolioTemplate401ApplicationJSONObject = null;
             getPortfolioTemplate403ApplicationJSONObject = null;
@@ -288,8 +284,6 @@ public class PortfolioTemplates {
             getPortfolioTemplate429ApplicationJSONObject = null;
             getPortfolioTemplate500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -373,7 +367,7 @@ public class PortfolioTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePortfolioTemplateResponse res = new org.openapis.openapi.models.operations.UpdatePortfolioTemplateResponse() {{
+        org.openapis.openapi.models.operations.UpdatePortfolioTemplateResponse res = new org.openapis.openapi.models.operations.UpdatePortfolioTemplateResponse(contentType, httpRes.statusCode()) {{
             updatePortfolioTemplate200ApplicationJSONObject = null;
             updatePortfolioTemplate400ApplicationJSONObject = null;
             updatePortfolioTemplate401ApplicationJSONObject = null;
@@ -383,8 +377,6 @@ public class PortfolioTemplates {
             updatePortfolioTemplate429ApplicationJSONObject = null;
             updatePortfolioTemplate500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

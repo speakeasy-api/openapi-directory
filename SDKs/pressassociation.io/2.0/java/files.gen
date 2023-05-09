@@ -54,6 +54,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetCatalogueAssetRespon
 lib/src/main/java/org/openapis/openapi/models/operations/GetCatalogueAssetDetailSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCatalogueAssetDetailRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCatalogueAssetDetailResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListCataloguesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCataloguesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetChannelSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetChannelRequest.java
@@ -70,6 +71,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListContributorResponse
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListFeatureTypesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFeatureTypesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFeaturesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFeaturesRequest.java
@@ -86,4 +88,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListPlatformsResponse.j
 lib/src/main/java/org/openapis/openapi/models/operations/ListScheduleSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListScheduleRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListScheduleResponse.java
+docs/sdk/README.md
+docs/asset/README.md
+docs/catalogue/README.md
+docs/channel/README.md
+docs/contributor/README.md
+docs/feature/README.md
+docs/platform/README.md
+docs/schedule/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class RegionInstanceGroupManagersStartInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public RegionInstanceGroupManagersStartInstancesRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public RegionInstanceGroupManagersStartInstancesRequest(){}
 }

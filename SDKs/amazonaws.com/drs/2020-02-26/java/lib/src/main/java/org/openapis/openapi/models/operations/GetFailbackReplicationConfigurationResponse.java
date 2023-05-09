@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFailbackReplicationConfigurationResponse {
     
     public String contentType;
+
     public GetFailbackReplicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFailbackReplicationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFailbackReplicationConfigurationResponse getFailbackReplicationConfigurationResponse;
+
     public GetFailbackReplicationConfigurationResponse withGetFailbackReplicationConfigurationResponse(org.openapis.openapi.models.shared.GetFailbackReplicationConfigurationResponse getFailbackReplicationConfigurationResponse) {
         this.getFailbackReplicationConfigurationResponse = getFailbackReplicationConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetFailbackReplicationConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetFailbackReplicationConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetFailbackReplicationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFailbackReplicationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetFailbackReplicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetFailbackReplicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetFailbackReplicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFailbackReplicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetFailbackReplicationConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetFailbackReplicationConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetFailbackReplicationConfigurationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public GetFailbackReplicationConfigurationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public GetFailbackReplicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

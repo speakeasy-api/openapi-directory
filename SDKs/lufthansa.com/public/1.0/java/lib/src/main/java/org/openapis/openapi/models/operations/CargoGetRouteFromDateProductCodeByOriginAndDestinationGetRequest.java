@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest {
@@ -12,6 +13,7 @@ public class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
     public String destination;
+
     public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -32,6 +35,7 @@ public class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fromDate")
     public String fromDate;
+
     public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withFromDate(String fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -42,6 +46,7 @@ public class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
     public String origin;
+
     public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -52,9 +57,17 @@ public class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productCode")
     public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum productCode;
+
     public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withProductCode(CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum productCode) {
         this.productCode = productCode;
         return this;
     }
     
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("destination") String destination, @JsonProperty("fromDate") String fromDate, @JsonProperty("origin") String origin, @JsonProperty("productCode") CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum productCode) {
+        this.accept = accept;
+        this.destination = destination;
+        this.fromDate = fromDate;
+        this.origin = origin;
+        this.productCode = productCode;
+  }
 }

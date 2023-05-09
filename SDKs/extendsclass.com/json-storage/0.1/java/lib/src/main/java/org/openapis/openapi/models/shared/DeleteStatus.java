@@ -15,9 +15,11 @@ public class DeleteStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public DeleteStatus withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public DeleteStatus(){}
 }

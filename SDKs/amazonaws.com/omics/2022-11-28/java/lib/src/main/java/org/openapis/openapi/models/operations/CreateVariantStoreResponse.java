@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVariantStoreResponse {
@@ -12,6 +13,7 @@ public class CreateVariantStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateVariantStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateVariantStoreResponse {
      */
     
     public Object conflictException;
+
     public CreateVariantStoreResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateVariantStoreResponse {
     
     
     public String contentType;
+
     public CreateVariantStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateVariantStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVariantStoreResponse createVariantStoreResponse;
+
     public CreateVariantStoreResponse withCreateVariantStoreResponse(org.openapis.openapi.models.shared.CreateVariantStoreResponse createVariantStoreResponse) {
         this.createVariantStoreResponse = createVariantStoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateVariantStoreResponse {
      */
     
     public Object internalServerException;
+
     public CreateVariantStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateVariantStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateVariantStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateVariantStoreResponse {
     
     
     public Integer statusCode;
+
     public CreateVariantStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateVariantStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVariantStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateVariantStoreResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateVariantStoreResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateVariantStoreResponse {
      */
     
     public Object throttlingException;
+
     public CreateVariantStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateVariantStoreResponse {
      */
     
     public Object validationException;
+
     public CreateVariantStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateVariantStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

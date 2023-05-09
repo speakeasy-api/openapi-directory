@@ -15,9 +15,11 @@ public class GetWorldTemplateBodyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateBody")
     public String templateBody;
+
     public GetWorldTemplateBodyResponse withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
     }
     
+    public GetWorldTemplateBodyResponse(){}
 }

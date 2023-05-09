@@ -19,6 +19,7 @@ public class UpdateCertificateRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActiveDate")
     public OffsetDateTime activeDate;
+
     public UpdateCertificateRequest withActiveDate(OffsetDateTime activeDate) {
         this.activeDate = activeDate;
         return this;
@@ -26,6 +27,7 @@ public class UpdateCertificateRequest {
     
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public UpdateCertificateRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -34,6 +36,7 @@ public class UpdateCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateCertificateRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,9 +47,13 @@ public class UpdateCertificateRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InactiveDate")
     public OffsetDateTime inactiveDate;
+
     public UpdateCertificateRequest withInactiveDate(OffsetDateTime inactiveDate) {
         this.inactiveDate = inactiveDate;
         return this;
     }
     
+    public UpdateCertificateRequest(@JsonProperty("CertificateId") String certificateId) {
+        this.certificateId = certificateId;
+  }
 }

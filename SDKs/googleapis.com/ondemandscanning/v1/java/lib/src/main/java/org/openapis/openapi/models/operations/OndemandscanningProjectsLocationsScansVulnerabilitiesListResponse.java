@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse {
     
     public String contentType;
+
     public OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVulnerabilitiesResponseV1 listVulnerabilitiesResponseV1;
+
     public OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse withListVulnerabilitiesResponseV1(org.openapis.openapi.models.shared.ListVulnerabilitiesResponseV1 listVulnerabilitiesResponseV1) {
         this.listVulnerabilitiesResponseV1 = listVulnerabilitiesResponseV1;
         return this;
@@ -26,6 +29,7 @@ public class OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse {
     
     
     public Integer statusCode;
+
     public OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

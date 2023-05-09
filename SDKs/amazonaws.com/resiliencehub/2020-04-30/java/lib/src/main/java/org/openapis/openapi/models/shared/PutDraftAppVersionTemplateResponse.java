@@ -15,6 +15,7 @@ public class PutDraftAppVersionTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appArn")
     public String appArn;
+
     public PutDraftAppVersionTemplateResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -23,9 +24,11 @@ public class PutDraftAppVersionTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersion")
     public String appVersion;
+
     public PutDraftAppVersionTemplateResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
     
+    public PutDraftAppVersionTemplateResponse(){}
 }

@@ -18,6 +18,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner withEmail(String email) {
         this.email = email;
         return this;
@@ -49,6 +52,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner {
      */
     @JsonProperty("id")
     public String id;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,16 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner {
      */
     @JsonProperty("type")
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum type;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner withType(DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum type) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

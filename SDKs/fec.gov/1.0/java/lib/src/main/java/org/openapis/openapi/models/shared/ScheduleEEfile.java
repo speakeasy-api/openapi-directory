@@ -19,6 +19,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amendment_indicator")
     public String amendmentIndicator;
+
     public ScheduleEEfile withAmendmentIndicator(String amendmentIndicator) {
         this.amendmentIndicator = amendmentIndicator;
         return this;
@@ -27,6 +28,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("back_reference_schedule_name")
     public String backReferenceScheduleName;
+
     public ScheduleEEfile withBackReferenceScheduleName(String backReferenceScheduleName) {
         this.backReferenceScheduleName = backReferenceScheduleName;
         return this;
@@ -35,6 +37,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("back_reference_transaction_id")
     public String backReferenceTransactionId;
+
     public ScheduleEEfile withBackReferenceTransactionId(String backReferenceTransactionId) {
         this.backReferenceTransactionId = backReferenceTransactionId;
         return this;
@@ -43,6 +46,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginning_image_number")
     public String beginningImageNumber;
+
     public ScheduleEEfile withBeginningImageNumber(String beginningImageNumber) {
         this.beginningImageNumber = beginningImageNumber;
         return this;
@@ -51,6 +55,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_first_name")
     public String candidateFirstName;
+
     public ScheduleEEfile withCandidateFirstName(String candidateFirstName) {
         this.candidateFirstName = candidateFirstName;
         return this;
@@ -59,6 +64,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public ScheduleEEfile withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -67,6 +73,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_middle_name")
     public String candidateMiddleName;
+
     public ScheduleEEfile withCandidateMiddleName(String candidateMiddleName) {
         this.candidateMiddleName = candidateMiddleName;
         return this;
@@ -78,6 +85,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_name")
     public String candidateName;
+
     public ScheduleEEfile withCandidateName(String candidateName) {
         this.candidateName = candidateName;
         return this;
@@ -89,6 +97,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office")
     public String candidateOffice;
+
     public ScheduleEEfile withCandidateOffice(String candidateOffice) {
         this.candidateOffice = candidateOffice;
         return this;
@@ -100,6 +109,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_district")
     public String candidateOfficeDistrict;
+
     public ScheduleEEfile withCandidateOfficeDistrict(String candidateOfficeDistrict) {
         this.candidateOfficeDistrict = candidateOfficeDistrict;
         return this;
@@ -111,6 +121,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_state")
     public String candidateOfficeState;
+
     public ScheduleEEfile withCandidateOfficeState(String candidateOfficeState) {
         this.candidateOfficeState = candidateOfficeState;
         return this;
@@ -122,6 +133,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_party")
     public String candidateParty;
+
     public ScheduleEEfile withCandidateParty(String candidateParty) {
         this.candidateParty = candidateParty;
         return this;
@@ -130,6 +142,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_prefix")
     public String candidatePrefix;
+
     public ScheduleEEfile withCandidatePrefix(String candidatePrefix) {
         this.candidatePrefix = candidatePrefix;
         return this;
@@ -138,6 +151,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_suffix")
     public String candidateSuffix;
+
     public ScheduleEEfile withCandidateSuffix(String candidateSuffix) {
         this.candidateSuffix = candidateSuffix;
         return this;
@@ -146,6 +160,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_code")
     public String categoryCode;
+
     public ScheduleEEfile withCategoryCode(String categoryCode) {
         this.categoryCode = categoryCode;
         return this;
@@ -154,6 +169,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee")
     public CommitteeHistory committee;
+
     public ScheduleEEfile withCommittee(CommitteeHistory committee) {
         this.committee = committee;
         return this;
@@ -166,6 +182,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_id")
     public String committeeId;
+
     public ScheduleEEfile withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -174,6 +191,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csv_url")
     public String csvUrl;
+
     public ScheduleEEfile withCsvUrl(String csvUrl) {
         this.csvUrl = csvUrl;
         return this;
@@ -188,6 +206,7 @@ public class ScheduleEEfile {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("dissemination_date")
     public LocalDate disseminationDate;
+
     public ScheduleEEfile withDisseminationDate(LocalDate disseminationDate) {
         this.disseminationDate = disseminationDate;
         return this;
@@ -196,6 +215,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public String entityType;
+
     public ScheduleEEfile withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -204,6 +224,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenditure_amount")
     public Integer expenditureAmount;
+
     public ScheduleEEfile withExpenditureAmount(Integer expenditureAmount) {
         this.expenditureAmount = expenditureAmount;
         return this;
@@ -213,6 +234,7 @@ public class ScheduleEEfile {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("expenditure_date")
     public LocalDate expenditureDate;
+
     public ScheduleEEfile withExpenditureDate(LocalDate expenditureDate) {
         this.expenditureDate = expenditureDate;
         return this;
@@ -221,6 +243,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenditure_description")
     public String expenditureDescription;
+
     public ScheduleEEfile withExpenditureDescription(String expenditureDescription) {
         this.expenditureDescription = expenditureDescription;
         return this;
@@ -229,6 +252,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fec_url")
     public String fecUrl;
+
     public ScheduleEEfile withFecUrl(String fecUrl) {
         this.fecUrl = fecUrl;
         return this;
@@ -236,6 +260,7 @@ public class ScheduleEEfile {
     
     @JsonProperty("file_number")
     public Integer fileNumber;
+
     public ScheduleEEfile withFileNumber(Integer fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -244,6 +269,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filer_first_name")
     public String filerFirstName;
+
     public ScheduleEEfile withFilerFirstName(String filerFirstName) {
         this.filerFirstName = filerFirstName;
         return this;
@@ -252,6 +278,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filer_last_name")
     public String filerLastName;
+
     public ScheduleEEfile withFilerLastName(String filerLastName) {
         this.filerLastName = filerLastName;
         return this;
@@ -260,6 +287,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filer_middle_name")
     public String filerMiddleName;
+
     public ScheduleEEfile withFilerMiddleName(String filerMiddleName) {
         this.filerMiddleName = filerMiddleName;
         return this;
@@ -268,6 +296,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filer_prefix")
     public String filerPrefix;
+
     public ScheduleEEfile withFilerPrefix(String filerPrefix) {
         this.filerPrefix = filerPrefix;
         return this;
@@ -276,6 +305,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filer_suffix")
     public String filerSuffix;
+
     public ScheduleEEfile withFilerSuffix(String filerSuffix) {
         this.filerSuffix = filerSuffix;
         return this;
@@ -284,6 +314,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filing")
     public EFilings filing;
+
     public ScheduleEEfile withFiling(EFilings filing) {
         this.filing = filing;
         return this;
@@ -292,6 +323,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filing_form")
     public String filingForm;
+
     public ScheduleEEfile withFilingForm(String filingForm) {
         this.filingForm = filingForm;
         return this;
@@ -304,6 +336,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_number")
     public String imageNumber;
+
     public ScheduleEEfile withImageNumber(String imageNumber) {
         this.imageNumber = imageNumber;
         return this;
@@ -312,6 +345,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_notice")
     public Boolean isNotice;
+
     public ScheduleEEfile withIsNotice(Boolean isNotice) {
         this.isNotice = isNotice;
         return this;
@@ -320,6 +354,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_number")
     public String lineNumber;
+
     public ScheduleEEfile withLineNumber(String lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -330,6 +365,7 @@ public class ScheduleEEfile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("load_timestamp")
     public OffsetDateTime loadTimestamp;
+
     public ScheduleEEfile withLoadTimestamp(OffsetDateTime loadTimestamp) {
         this.loadTimestamp = loadTimestamp;
         return this;
@@ -338,6 +374,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_code")
     public String memoCode;
+
     public ScheduleEEfile withMemoCode(String memoCode) {
         this.memoCode = memoCode;
         return this;
@@ -346,6 +383,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_text")
     public String memoText;
+
     public ScheduleEEfile withMemoText(String memoText) {
         this.memoText = memoText;
         return this;
@@ -358,6 +396,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("most_recent")
     public Boolean mostRecent;
+
     public ScheduleEEfile withMostRecent(Boolean mostRecent) {
         this.mostRecent = mostRecent;
         return this;
@@ -367,6 +406,7 @@ public class ScheduleEEfile {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("notary_sign_date")
     public LocalDate notarySignDate;
+
     public ScheduleEEfile withNotarySignDate(LocalDate notarySignDate) {
         this.notarySignDate = notarySignDate;
         return this;
@@ -375,6 +415,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_total_ytd")
     public Float officeTotalYtd;
+
     public ScheduleEEfile withOfficeTotalYtd(Float officeTotalYtd) {
         this.officeTotalYtd = officeTotalYtd;
         return this;
@@ -383,6 +424,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_city")
     public String payeeCity;
+
     public ScheduleEEfile withPayeeCity(String payeeCity) {
         this.payeeCity = payeeCity;
         return this;
@@ -391,6 +433,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_first_name")
     public String payeeFirstName;
+
     public ScheduleEEfile withPayeeFirstName(String payeeFirstName) {
         this.payeeFirstName = payeeFirstName;
         return this;
@@ -399,6 +442,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_last_name")
     public String payeeLastName;
+
     public ScheduleEEfile withPayeeLastName(String payeeLastName) {
         this.payeeLastName = payeeLastName;
         return this;
@@ -407,6 +451,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_middle_name")
     public String payeeMiddleName;
+
     public ScheduleEEfile withPayeeMiddleName(String payeeMiddleName) {
         this.payeeMiddleName = payeeMiddleName;
         return this;
@@ -415,6 +460,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_name")
     public String payeeName;
+
     public ScheduleEEfile withPayeeName(String payeeName) {
         this.payeeName = payeeName;
         return this;
@@ -423,6 +469,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_prefix")
     public String payeePrefix;
+
     public ScheduleEEfile withPayeePrefix(String payeePrefix) {
         this.payeePrefix = payeePrefix;
         return this;
@@ -431,6 +478,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_state")
     public String payeeState;
+
     public ScheduleEEfile withPayeeState(String payeeState) {
         this.payeeState = payeeState;
         return this;
@@ -439,6 +487,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_street_1")
     public String payeeStreet1;
+
     public ScheduleEEfile withPayeeStreet1(String payeeStreet1) {
         this.payeeStreet1 = payeeStreet1;
         return this;
@@ -447,6 +496,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_street_2")
     public String payeeStreet2;
+
     public ScheduleEEfile withPayeeStreet2(String payeeStreet2) {
         this.payeeStreet2 = payeeStreet2;
         return this;
@@ -455,6 +505,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_suffix")
     public String payeeSuffix;
+
     public ScheduleEEfile withPayeeSuffix(String payeeSuffix) {
         this.payeeSuffix = payeeSuffix;
         return this;
@@ -463,6 +514,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_zip")
     public String payeeZip;
+
     public ScheduleEEfile withPayeeZip(String payeeZip) {
         this.payeeZip = payeeZip;
         return this;
@@ -471,6 +523,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdf_url")
     public String pdfUrl;
+
     public ScheduleEEfile withPdfUrl(String pdfUrl) {
         this.pdfUrl = pdfUrl;
         return this;
@@ -478,6 +531,7 @@ public class ScheduleEEfile {
     
     @JsonProperty("related_line_number")
     public Integer relatedLineNumber;
+
     public ScheduleEEfile withRelatedLineNumber(Integer relatedLineNumber) {
         this.relatedLineNumber = relatedLineNumber;
         return this;
@@ -486,6 +540,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type")
     public String reportType;
+
     public ScheduleEEfile withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -497,6 +552,7 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support_oppose_indicator")
     public String supportOpposeIndicator;
+
     public ScheduleEEfile withSupportOpposeIndicator(String supportOpposeIndicator) {
         this.supportOpposeIndicator = supportOpposeIndicator;
         return this;
@@ -505,9 +561,14 @@ public class ScheduleEEfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public ScheduleEEfile withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public ScheduleEEfile(@JsonProperty("file_number") Integer fileNumber, @JsonProperty("related_line_number") Integer relatedLineNumber) {
+        this.fileNumber = fileNumber;
+        this.relatedLineNumber = relatedLineNumber;
+  }
 }

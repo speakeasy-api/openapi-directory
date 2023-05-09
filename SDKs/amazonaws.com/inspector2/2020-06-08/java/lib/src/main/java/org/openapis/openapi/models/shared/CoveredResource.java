@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CoveredResource {
     @JsonProperty("accountId")
     public String accountId;
+
     public CoveredResource withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -21,6 +22,7 @@ public class CoveredResource {
     
     @JsonProperty("resourceId")
     public String resourceId;
+
     public CoveredResource withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -29,6 +31,7 @@ public class CoveredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceMetadata")
     public ResourceScanMetadata resourceMetadata;
+
     public CoveredResource withResourceMetadata(ResourceScanMetadata resourceMetadata) {
         this.resourceMetadata = resourceMetadata;
         return this;
@@ -36,6 +39,7 @@ public class CoveredResource {
     
     @JsonProperty("resourceType")
     public CoverageResourceTypeEnum resourceType;
+
     public CoveredResource withResourceType(CoverageResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -44,6 +48,7 @@ public class CoveredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanStatus")
     public ScanStatus scanStatus;
+
     public CoveredResource withScanStatus(ScanStatus scanStatus) {
         this.scanStatus = scanStatus;
         return this;
@@ -51,9 +56,16 @@ public class CoveredResource {
     
     @JsonProperty("scanType")
     public ScanTypeEnum scanType;
+
     public CoveredResource withScanType(ScanTypeEnum scanType) {
         this.scanType = scanType;
         return this;
     }
     
+    public CoveredResource(@JsonProperty("accountId") String accountId, @JsonProperty("resourceId") String resourceId, @JsonProperty("resourceType") CoverageResourceTypeEnum resourceType, @JsonProperty("scanType") ScanTypeEnum scanType) {
+        this.accountId = accountId;
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+        this.scanType = scanType;
+  }
 }

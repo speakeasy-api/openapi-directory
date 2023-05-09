@@ -15,6 +15,7 @@ public class AssessmentReportEvidenceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public AssessmentReportEvidenceError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class AssessmentReportEvidenceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public AssessmentReportEvidenceError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class AssessmentReportEvidenceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceId")
     public String evidenceId;
+
     public AssessmentReportEvidenceError withEvidenceId(String evidenceId) {
         this.evidenceId = evidenceId;
         return this;
     }
     
+    public AssessmentReportEvidenceError(){}
 }

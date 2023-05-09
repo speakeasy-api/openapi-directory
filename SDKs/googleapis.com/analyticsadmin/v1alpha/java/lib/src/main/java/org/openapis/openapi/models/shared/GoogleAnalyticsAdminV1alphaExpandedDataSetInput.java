@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilterExpression")
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression dimensionFilterExpression;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetInput withDimensionFilterExpression(GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression dimensionFilterExpression) {
         this.dimensionFilterExpression = dimensionFilterExpression;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionNames")
     public String[] dimensionNames;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetInput withDimensionNames(String[] dimensionNames) {
         this.dimensionNames = dimensionNames;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricNames")
     public String[] metricNames;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetInput withMetricNames(String[] metricNames) {
         this.metricNames = metricNames;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaExpandedDataSetInput(){}
 }

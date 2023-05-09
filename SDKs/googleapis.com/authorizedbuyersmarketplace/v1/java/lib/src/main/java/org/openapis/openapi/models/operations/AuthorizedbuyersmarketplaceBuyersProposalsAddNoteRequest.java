@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
@@ -12,6 +13,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddNoteRequestInput addNoteRequestInput;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withAddNoteRequestInput(org.openapis.openapi.models.shared.AddNoteRequestInput addNoteRequestInput) {
         this.addNoteRequestInput = addNoteRequestInput;
         return this;
@@ -29,6 +32,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposal")
     public String proposal;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withProposal(String proposal) {
         this.proposal = proposal;
         return this;
@@ -109,6 +120,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest(@JsonProperty("proposal") String proposal) {
+        this.proposal = proposal;
+  }
 }

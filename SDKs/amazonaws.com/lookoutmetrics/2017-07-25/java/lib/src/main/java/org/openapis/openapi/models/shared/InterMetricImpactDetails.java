@@ -15,6 +15,7 @@ public class InterMetricImpactDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroupId")
     public String anomalyGroupId;
+
     public InterMetricImpactDetails withAnomalyGroupId(String anomalyGroupId) {
         this.anomalyGroupId = anomalyGroupId;
         return this;
@@ -23,6 +24,7 @@ public class InterMetricImpactDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContributionPercentage")
     public Double contributionPercentage;
+
     public InterMetricImpactDetails withContributionPercentage(Double contributionPercentage) {
         this.contributionPercentage = contributionPercentage;
         return this;
@@ -31,6 +33,7 @@ public class InterMetricImpactDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public InterMetricImpactDetails withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -39,9 +42,11 @@ public class InterMetricImpactDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipType")
     public RelationshipTypeEnum relationshipType;
+
     public InterMetricImpactDetails withRelationshipType(RelationshipTypeEnum relationshipType) {
         this.relationshipType = relationshipType;
         return this;
     }
     
+    public InterMetricImpactDetails(){}
 }

@@ -17,10 +17,24 @@ public class PaymentWriteRequest {
     /**
      * Registered creditor account
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditor_account")
     public String creditorAccount;
+
     public PaymentWriteRequest withCreditorAccount(String creditorAccount) {
         this.creditorAccount = creditorAccount;
+        return this;
+    }
+    
+    /**
+     * Creditor account
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creditor_object")
+    public CreditorAccountWriteRequest creditorObject;
+
+    public PaymentWriteRequest withCreditorObject(CreditorAccountWriteRequest creditorObject) {
+        this.creditorObject = creditorObject;
         return this;
     }
     
@@ -30,6 +44,7 @@ public class PaymentWriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_payment_id")
     public String customPaymentId;
+
     public PaymentWriteRequest withCustomPaymentId(String customPaymentId) {
         this.customPaymentId = customPaymentId;
         return this;
@@ -41,6 +56,7 @@ public class PaymentWriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtor_account")
     public PaymentWriteRequestDebtorAccount debtorAccount;
+
     public PaymentWriteRequest withDebtorAccount(PaymentWriteRequestDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -52,6 +68,7 @@ public class PaymentWriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PaymentWriteRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +80,7 @@ public class PaymentWriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institution_id")
     public String institutionId;
+
     public PaymentWriteRequest withInstitutionId(String institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -73,6 +91,7 @@ public class PaymentWriteRequest {
      */
     @JsonProperty("instructed_amount")
     public InstructedAmountRequest instructedAmount;
+
     public PaymentWriteRequest withInstructedAmount(InstructedAmountRequest instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -80,10 +99,22 @@ public class PaymentWriteRequest {
     
     /**
      * Payment product
+     * 
+     * * `T2P` - target-2-payments
+     * * `SCT` - sepa-credit-transfers
+     * * `ISCT` - instant-sepa-credit-transfer
+     * * `CBCT` - cross-border-credit-transfers
+     * * `BACS` - Back Payment Scheme
+     * * `CHAPS` - CHAPS Payment Scheme
+     * * `FPS` - Faster Payment Scheme
+     * * `SWIFT` - Swift Payment Service
+     * * `BT` - Balance Transfer
+     * * `MT` - Money Transfer
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_product")
     public PaymentWriteRequestPaymentProductEnum paymentProduct;
+
     public PaymentWriteRequest withPaymentProduct(PaymentWriteRequestPaymentProductEnum paymentProduct) {
         this.paymentProduct = paymentProduct;
         return this;
@@ -95,6 +126,7 @@ public class PaymentWriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodic_payment")
     public PeriodicPaymentRequest periodicPayment;
+
     public PaymentWriteRequest withPeriodicPayment(PeriodicPaymentRequest periodicPayment) {
         this.periodicPayment = periodicPayment;
         return this;
@@ -105,6 +137,7 @@ public class PaymentWriteRequest {
      */
     @JsonProperty("redirect")
     public String redirect;
+
     public PaymentWriteRequest withRedirect(String redirect) {
         this.redirect = redirect;
         return this;
@@ -117,9 +150,26 @@ public class PaymentWriteRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("requested_execution_date")
     public LocalDate requestedExecutionDate;
+
     public PaymentWriteRequest withRequestedExecutionDate(LocalDate requestedExecutionDate) {
         this.requestedExecutionDate = requestedExecutionDate;
         return this;
     }
     
+    /**
+     * Indicates whether payment should be submitted separately
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("submit_payment")
+    public Boolean submitPayment;
+
+    public PaymentWriteRequest withSubmitPayment(Boolean submitPayment) {
+        this.submitPayment = submitPayment;
+        return this;
+    }
+    
+    public PaymentWriteRequest(@JsonProperty("instructed_amount") InstructedAmountRequest instructedAmount, @JsonProperty("redirect") String redirect) {
+        this.instructedAmount = instructedAmount;
+        this.redirect = redirect;
+  }
 }

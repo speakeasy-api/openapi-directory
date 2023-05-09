@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteCacheClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteCacheClusterActionEnum action;
+
     public GETDeleteCacheClusterRequest withAction(GETDeleteCacheClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteCacheClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterId")
     public String cacheClusterId;
+
     public GETDeleteCacheClusterRequest withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteCacheClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FinalSnapshotIdentifier")
     public String finalSnapshotIdentifier;
+
     public GETDeleteCacheClusterRequest withFinalSnapshotIdentifier(String finalSnapshotIdentifier) {
         this.finalSnapshotIdentifier = finalSnapshotIdentifier;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteCacheClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteCacheClusterVersionEnum version;
+
     public GETDeleteCacheClusterRequest withVersion(GETDeleteCacheClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteCacheClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteCacheClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteCacheClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteCacheClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteCacheClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteCacheClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeleteCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteCacheClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteCacheClusterRequest(@JsonProperty("Action") GETDeleteCacheClusterActionEnum action, @JsonProperty("CacheClusterId") String cacheClusterId, @JsonProperty("Version") GETDeleteCacheClusterVersionEnum version) {
+        this.action = action;
+        this.cacheClusterId = cacheClusterId;
+        this.version = version;
+  }
 }

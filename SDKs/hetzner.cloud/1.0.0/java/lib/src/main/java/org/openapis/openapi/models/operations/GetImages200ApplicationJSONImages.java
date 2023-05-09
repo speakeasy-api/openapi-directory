@@ -14,6 +14,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("bound_to")
     public Long boundTo;
+
     public GetImages200ApplicationJSONImages withBoundTo(Long boundTo) {
         this.boundTo = boundTo;
         return this;
@@ -24,6 +25,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("created")
     public String created;
+
     public GetImages200ApplicationJSONImages withCreated(String created) {
         this.created = created;
         return this;
@@ -34,6 +36,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("created_from")
     public GetImages200ApplicationJSONImagesCreatedFrom createdFrom;
+
     public GetImages200ApplicationJSONImages withCreatedFrom(GetImages200ApplicationJSONImagesCreatedFrom createdFrom) {
         this.createdFrom = createdFrom;
         return this;
@@ -44,6 +47,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("deleted")
     public String deleted;
+
     public GetImages200ApplicationJSONImages withDeleted(String deleted) {
         this.deleted = deleted;
         return this;
@@ -54,6 +58,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public GetImages200ApplicationJSONImages withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -64,6 +69,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("description")
     public String description;
+
     public GetImages200ApplicationJSONImages withDescription(String description) {
         this.description = description;
         return this;
@@ -74,6 +80,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("disk_size")
     public Double diskSize;
+
     public GetImages200ApplicationJSONImages withDiskSize(Double diskSize) {
         this.diskSize = diskSize;
         return this;
@@ -84,6 +91,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetImages200ApplicationJSONImages withId(Long id) {
         this.id = id;
         return this;
@@ -94,6 +102,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("image_size")
     public Double imageSize;
+
     public GetImages200ApplicationJSONImages withImageSize(Double imageSize) {
         this.imageSize = imageSize;
         return this;
@@ -104,6 +113,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GetImages200ApplicationJSONImages withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -114,6 +124,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("name")
     public String name;
+
     public GetImages200ApplicationJSONImages withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +135,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("os_flavor")
     public GetImages200ApplicationJSONImagesOsFlavorEnum osFlavor;
+
     public GetImages200ApplicationJSONImages withOsFlavor(GetImages200ApplicationJSONImagesOsFlavorEnum osFlavor) {
         this.osFlavor = osFlavor;
         return this;
@@ -134,6 +146,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("os_version")
     public String osVersion;
+
     public GetImages200ApplicationJSONImages withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -144,6 +157,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("protection")
     public GetImages200ApplicationJSONImagesProtection protection;
+
     public GetImages200ApplicationJSONImages withProtection(GetImages200ApplicationJSONImagesProtection protection) {
         this.protection = protection;
         return this;
@@ -155,6 +169,7 @@ public class GetImages200ApplicationJSONImages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rapid_deploy")
     public Boolean rapidDeploy;
+
     public GetImages200ApplicationJSONImages withRapidDeploy(Boolean rapidDeploy) {
         this.rapidDeploy = rapidDeploy;
         return this;
@@ -165,6 +180,7 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("status")
     public GetImages200ApplicationJSONImagesStatusEnum status;
+
     public GetImages200ApplicationJSONImages withStatus(GetImages200ApplicationJSONImagesStatusEnum status) {
         this.status = status;
         return this;
@@ -175,9 +191,28 @@ public class GetImages200ApplicationJSONImages {
      */
     @JsonProperty("type")
     public GetImages200ApplicationJSONImagesTypeEnum type;
+
     public GetImages200ApplicationJSONImages withType(GetImages200ApplicationJSONImagesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetImages200ApplicationJSONImages(@JsonProperty("bound_to") Long boundTo, @JsonProperty("created") String created, @JsonProperty("created_from") GetImages200ApplicationJSONImagesCreatedFrom createdFrom, @JsonProperty("deleted") String deleted, @JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("disk_size") Double diskSize, @JsonProperty("id") Long id, @JsonProperty("image_size") Double imageSize, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("os_flavor") GetImages200ApplicationJSONImagesOsFlavorEnum osFlavor, @JsonProperty("os_version") String osVersion, @JsonProperty("protection") GetImages200ApplicationJSONImagesProtection protection, @JsonProperty("status") GetImages200ApplicationJSONImagesStatusEnum status, @JsonProperty("type") GetImages200ApplicationJSONImagesTypeEnum type) {
+        this.boundTo = boundTo;
+        this.created = created;
+        this.createdFrom = createdFrom;
+        this.deleted = deleted;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.diskSize = diskSize;
+        this.id = id;
+        this.imageSize = imageSize;
+        this.labels = labels;
+        this.name = name;
+        this.osFlavor = osFlavor;
+        this.osVersion = osVersion;
+        this.protection = protection;
+        this.status = status;
+        this.type = type;
+  }
 }

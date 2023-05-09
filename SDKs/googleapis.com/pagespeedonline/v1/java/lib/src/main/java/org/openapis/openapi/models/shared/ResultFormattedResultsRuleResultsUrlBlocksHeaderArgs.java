@@ -12,6 +12,7 @@ public class ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs {
      */
     
     public String type;
+
     public ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs withType(String type) {
         this.type = type;
         return this;
@@ -22,9 +23,11 @@ public class ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs {
      */
     
     public String value;
+
     public ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs(){}
 }

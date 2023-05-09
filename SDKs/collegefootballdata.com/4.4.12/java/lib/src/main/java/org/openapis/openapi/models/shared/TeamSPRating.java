@@ -12,6 +12,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public TeamSPRating withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,6 +21,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense")
     public TeamSPRatingDefense defense;
+
     public TeamSPRating withDefense(TeamSPRatingDefense defense) {
         this.defense = defense;
         return this;
@@ -28,6 +30,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense")
     public TeamSPRatingOffense offense;
+
     public TeamSPRating withOffense(TeamSPRatingOffense offense) {
         this.offense = offense;
         return this;
@@ -36,6 +39,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ranking")
     public Double ranking;
+
     public TeamSPRating withRanking(Double ranking) {
         this.ranking = ranking;
         return this;
@@ -44,6 +48,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public TeamSPRating withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -52,6 +57,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondOrderWins")
     public Double secondOrderWins;
+
     public TeamSPRating withSecondOrderWins(Double secondOrderWins) {
         this.secondOrderWins = secondOrderWins;
         return this;
@@ -60,6 +66,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sos")
     public Double sos;
+
     public TeamSPRating withSos(Double sos) {
         this.sos = sos;
         return this;
@@ -68,6 +75,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialTeams")
     public TeamSPRatingSpecialTeams specialTeams;
+
     public TeamSPRating withSpecialTeams(TeamSPRatingSpecialTeams specialTeams) {
         this.specialTeams = specialTeams;
         return this;
@@ -76,6 +84,7 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public TeamSPRating withTeam(String team) {
         this.team = team;
         return this;
@@ -84,9 +93,11 @@ public class TeamSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public TeamSPRating withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public TeamSPRating(){}
 }

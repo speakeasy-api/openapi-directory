@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBParameterGroupsMessage {
     
     public DBParameterGroupList[] dbParameterGroups;
+
     public DBParameterGroupsMessage withDBParameterGroups(DBParameterGroupList[] dbParameterGroups) {
         this.dbParameterGroups = dbParameterGroups;
         return this;
@@ -19,9 +20,11 @@ public class DBParameterGroupsMessage {
     
     
     public String marker;
+
     public DBParameterGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBParameterGroupsMessage(){}
 }

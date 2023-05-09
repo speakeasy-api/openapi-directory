@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRecommendationPreferencesResponse {
@@ -12,6 +13,7 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRecommendationPreferencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRecommendationPreferencesResponse {
     
     
     public String contentType;
+
     public DeleteRecommendationPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public java.util.Map<String, Object> deleteRecommendationPreferencesResponse;
+
     public DeleteRecommendationPreferencesResponse withDeleteRecommendationPreferencesResponse(java.util.Map<String, Object> deleteRecommendationPreferencesResponse) {
         this.deleteRecommendationPreferencesResponse = deleteRecommendationPreferencesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRecommendationPreferencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteRecommendationPreferencesResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public DeleteRecommendationPreferencesResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -69,6 +76,7 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public Object optInRequiredException;
+
     public DeleteRecommendationPreferencesResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteRecommendationPreferencesResponse {
     
     
     public Integer statusCode;
+
     public DeleteRecommendationPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRecommendationPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRecommendationPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRecommendationPreferencesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteRecommendationPreferencesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteRecommendationPreferencesResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRecommendationPreferencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteRecommendationPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

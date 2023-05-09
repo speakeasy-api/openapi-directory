@@ -17,6 +17,7 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borough")
     public String borough;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withBorough(String borough) {
         this.borough = borough;
         return this;
@@ -25,6 +26,7 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("casualties")
     public TflApiPresentationEntitiesAccidentStatsCasualty[] casualties;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withCasualties(TflApiPresentationEntitiesAccidentStatsCasualty[] casualties) {
         this.casualties = casualties;
         return this;
@@ -35,6 +37,7 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -43,6 +46,7 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withId(Integer id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -59,6 +64,7 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withLocation(String location) {
         this.location = location;
         return this;
@@ -67,6 +73,7 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -75,6 +82,7 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -83,9 +91,11 @@ public class TflApiPresentationEntitiesAccidentStatsAccidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicles")
     public TflApiPresentationEntitiesAccidentStatsVehicle[] vehicles;
+
     public TflApiPresentationEntitiesAccidentStatsAccidentDetail withVehicles(TflApiPresentationEntitiesAccidentStatsVehicle[] vehicles) {
         this.vehicles = vehicles;
         return this;
     }
     
+    public TflApiPresentationEntitiesAccidentStatsAccidentDetail(){}
 }

@@ -18,9 +18,11 @@ public class UserManagedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicas")
     public ReplicaStatus[] replicas;
+
     public UserManagedStatus withReplicas(ReplicaStatus[] replicas) {
         this.replicas = replicas;
         return this;
     }
     
+    public UserManagedStatus(){}
 }

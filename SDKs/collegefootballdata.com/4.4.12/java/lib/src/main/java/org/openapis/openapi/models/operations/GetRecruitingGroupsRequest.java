@@ -12,6 +12,7 @@ public class GetRecruitingGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetRecruitingGroupsRequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -22,6 +23,7 @@ public class GetRecruitingGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endYear")
     public Long endYear;
+
     public GetRecruitingGroupsRequest withEndYear(Long endYear) {
         this.endYear = endYear;
         return this;
@@ -32,6 +34,7 @@ public class GetRecruitingGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startYear")
     public Long startYear;
+
     public GetRecruitingGroupsRequest withStartYear(Long startYear) {
         this.startYear = startYear;
         return this;
@@ -42,9 +45,11 @@ public class GetRecruitingGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetRecruitingGroupsRequest withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public GetRecruitingGroupsRequest(){}
 }

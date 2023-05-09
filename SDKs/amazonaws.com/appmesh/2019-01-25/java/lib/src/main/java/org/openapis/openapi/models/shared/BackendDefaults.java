@@ -15,9 +15,11 @@ public class BackendDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPolicy")
     public ClientPolicy clientPolicy;
+
     public BackendDefaults withClientPolicy(ClientPolicy clientPolicy) {
         this.clientPolicy = clientPolicy;
         return this;
     }
     
+    public BackendDefaults(){}
 }

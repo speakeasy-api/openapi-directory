@@ -18,6 +18,7 @@ public class GetPortfolioTemplate401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetPortfolioTemplate401ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetPortfolioTemplate401ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetPortfolioTemplate401ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetPortfolioTemplate401ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

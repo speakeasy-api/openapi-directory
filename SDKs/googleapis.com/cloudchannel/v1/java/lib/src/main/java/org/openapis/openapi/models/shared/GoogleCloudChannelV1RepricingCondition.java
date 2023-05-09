@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1RepricingCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuGroupCondition")
     public GoogleCloudChannelV1SkuGroupCondition skuGroupCondition;
+
     public GoogleCloudChannelV1RepricingCondition withSkuGroupCondition(GoogleCloudChannelV1SkuGroupCondition skuGroupCondition) {
         this.skuGroupCondition = skuGroupCondition;
         return this;
     }
     
+    public GoogleCloudChannelV1RepricingCondition(){}
 }

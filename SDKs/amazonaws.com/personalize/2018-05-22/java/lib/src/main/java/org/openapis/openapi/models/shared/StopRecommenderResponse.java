@@ -15,9 +15,11 @@ public class StopRecommenderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public StopRecommenderResponse withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
     }
     
+    public StopRecommenderResponse(){}
 }

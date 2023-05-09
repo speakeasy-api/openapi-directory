@@ -18,6 +18,7 @@ public class LoadBalancerBackend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LoadBalancerBackend withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class LoadBalancerBackend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckAllowingFirewallRules")
     public String[] healthCheckAllowingFirewallRules;
+
     public LoadBalancerBackend withHealthCheckAllowingFirewallRules(String[] healthCheckAllowingFirewallRules) {
         this.healthCheckAllowingFirewallRules = healthCheckAllowingFirewallRules;
         return this;
@@ -40,6 +42,7 @@ public class LoadBalancerBackend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckBlockingFirewallRules")
     public String[] healthCheckBlockingFirewallRules;
+
     public LoadBalancerBackend withHealthCheckBlockingFirewallRules(String[] healthCheckBlockingFirewallRules) {
         this.healthCheckBlockingFirewallRules = healthCheckBlockingFirewallRules;
         return this;
@@ -51,6 +54,7 @@ public class LoadBalancerBackend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckFirewallState")
     public LoadBalancerBackendHealthCheckFirewallStateEnum healthCheckFirewallState;
+
     public LoadBalancerBackend withHealthCheckFirewallState(LoadBalancerBackendHealthCheckFirewallStateEnum healthCheckFirewallState) {
         this.healthCheckFirewallState = healthCheckFirewallState;
         return this;
@@ -62,9 +66,11 @@ public class LoadBalancerBackend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public LoadBalancerBackend withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public LoadBalancerBackend(){}
 }

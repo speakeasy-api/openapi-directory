@@ -18,6 +18,7 @@ public class SellerFundsSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableFunds")
     public Amount availableFunds;
+
     public SellerFundsSummaryResponse withAvailableFunds(Amount availableFunds) {
         this.availableFunds = availableFunds;
         return this;
@@ -29,6 +30,7 @@ public class SellerFundsSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundsOnHold")
     public Amount fundsOnHold;
+
     public SellerFundsSummaryResponse withFundsOnHold(Amount fundsOnHold) {
         this.fundsOnHold = fundsOnHold;
         return this;
@@ -40,6 +42,7 @@ public class SellerFundsSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingFunds")
     public Amount processingFunds;
+
     public SellerFundsSummaryResponse withProcessingFunds(Amount processingFunds) {
         this.processingFunds = processingFunds;
         return this;
@@ -51,9 +54,11 @@ public class SellerFundsSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalFunds")
     public Amount totalFunds;
+
     public SellerFundsSummaryResponse withTotalFunds(Amount totalFunds) {
         this.totalFunds = totalFunds;
         return this;
     }
     
+    public SellerFundsSummaryResponse(){}
 }

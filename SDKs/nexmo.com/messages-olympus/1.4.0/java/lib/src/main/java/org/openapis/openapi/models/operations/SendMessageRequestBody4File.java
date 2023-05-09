@@ -14,6 +14,7 @@ public class SendMessageRequestBody4File {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody4FileChannelEnum channel;
+
     public SendMessageRequestBody4File withChannel(SendMessageRequestBody4FileChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody4File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody4File withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -32,6 +34,7 @@ public class SendMessageRequestBody4File {
     
     @JsonProperty("file")
     public SendMessageRequestBody4FileFile file;
+
     public SendMessageRequestBody4File withFile(SendMessageRequestBody4FileFile file) {
         this.file = file;
         return this;
@@ -43,6 +46,7 @@ public class SendMessageRequestBody4File {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody4File withFrom(String from) {
         this.from = from;
         return this;
@@ -53,6 +57,7 @@ public class SendMessageRequestBody4File {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody4FileMessageTypeEnum messageType;
+
     public SendMessageRequestBody4File withMessageType(SendMessageRequestBody4FileMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -61,6 +66,7 @@ public class SendMessageRequestBody4File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messenger")
     public SendMessageRequestBody4FileMessenger messenger;
+
     public SendMessageRequestBody4File withMessenger(SendMessageRequestBody4FileMessenger messenger) {
         this.messenger = messenger;
         return this;
@@ -72,9 +78,17 @@ public class SendMessageRequestBody4File {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody4File withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendMessageRequestBody4File(@JsonProperty("channel") SendMessageRequestBody4FileChannelEnum channel, @JsonProperty("file") SendMessageRequestBody4FileFile file, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody4FileMessageTypeEnum messageType, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.file = file;
+        this.from = from;
+        this.messageType = messageType;
+        this.to = to;
+  }
 }

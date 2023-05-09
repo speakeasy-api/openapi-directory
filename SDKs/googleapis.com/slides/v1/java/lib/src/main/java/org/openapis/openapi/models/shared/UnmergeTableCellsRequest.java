@@ -18,6 +18,7 @@ public class UnmergeTableCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UnmergeTableCellsRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -29,9 +30,11 @@ public class UnmergeTableCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRange")
     public TableRange tableRange;
+
     public UnmergeTableCellsRequest withTableRange(TableRange tableRange) {
         this.tableRange = tableRange;
         return this;
     }
     
+    public UnmergeTableCellsRequest(){}
 }

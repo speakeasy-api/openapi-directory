@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToolresultsProjectsHistoriesCreateRequest {
@@ -12,6 +13,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ToolresultsProjectsHistoriesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.History history;
+
     public ToolresultsProjectsHistoriesCreateRequest withHistory(org.openapis.openapi.models.shared.History history) {
         this.history = history;
         return this;
@@ -29,6 +32,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ToolresultsProjectsHistoriesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ToolresultsProjectsHistoriesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ToolresultsProjectsHistoriesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ToolresultsProjectsHistoriesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ToolresultsProjectsHistoriesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ToolresultsProjectsHistoriesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ToolresultsProjectsHistoriesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ToolresultsProjectsHistoriesCreateRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -109,6 +120,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ToolresultsProjectsHistoriesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ToolresultsProjectsHistoriesCreateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -129,6 +142,7 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ToolresultsProjectsHistoriesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class ToolresultsProjectsHistoriesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ToolresultsProjectsHistoriesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ToolresultsProjectsHistoriesCreateRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

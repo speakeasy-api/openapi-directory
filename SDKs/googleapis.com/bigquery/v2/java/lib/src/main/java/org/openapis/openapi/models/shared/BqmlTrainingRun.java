@@ -20,6 +20,7 @@ public class BqmlTrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iterationResults")
     public BqmlIterationResult[] iterationResults;
+
     public BqmlTrainingRun withIterationResults(BqmlIterationResult[] iterationResults) {
         this.iterationResults = iterationResults;
         return this;
@@ -33,6 +34,7 @@ public class BqmlTrainingRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public BqmlTrainingRun withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -44,6 +46,7 @@ public class BqmlTrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public BqmlTrainingRun withState(String state) {
         this.state = state;
         return this;
@@ -55,9 +58,11 @@ public class BqmlTrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingOptions")
     public BqmlTrainingRunTrainingOptions trainingOptions;
+
     public BqmlTrainingRun withTrainingOptions(BqmlTrainingRunTrainingOptions trainingOptions) {
         this.trainingOptions = trainingOptions;
         return this;
     }
     
+    public BqmlTrainingRun(){}
 }

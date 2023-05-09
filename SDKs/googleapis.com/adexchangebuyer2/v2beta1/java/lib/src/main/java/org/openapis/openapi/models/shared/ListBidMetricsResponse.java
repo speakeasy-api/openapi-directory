@@ -18,6 +18,7 @@ public class ListBidMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidMetricsRows")
     public BidMetricsRow[] bidMetricsRows;
+
     public ListBidMetricsResponse withBidMetricsRows(BidMetricsRow[] bidMetricsRows) {
         this.bidMetricsRows = bidMetricsRows;
         return this;
@@ -29,9 +30,11 @@ public class ListBidMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBidMetricsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBidMetricsResponse(){}
 }

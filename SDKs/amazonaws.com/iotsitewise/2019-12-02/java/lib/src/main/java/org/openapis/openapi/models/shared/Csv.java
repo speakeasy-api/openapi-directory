@@ -15,9 +15,11 @@ public class Csv {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnNames")
     public ColumnNameEnum[] columnNames;
+
     public Csv withColumnNames(ColumnNameEnum[] columnNames) {
         this.columnNames = columnNames;
         return this;
     }
     
+    public Csv(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation {
     
     public String localGatewayId;
+
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTa
     
     
     public String localGatewayRouteTableArn;
+
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation withLocalGatewayRouteTableArn(String localGatewayRouteTableArn) {
         this.localGatewayRouteTableArn = localGatewayRouteTableArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTa
     
     
     public String localGatewayRouteTableId;
+
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -33,6 +36,7 @@ public class CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTa
     
     
     public String localGatewayRouteTableVpcAssociationId;
+
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation withLocalGatewayRouteTableVpcAssociationId(String localGatewayRouteTableVpcAssociationId) {
         this.localGatewayRouteTableVpcAssociationId = localGatewayRouteTableVpcAssociationId;
         return this;
@@ -40,6 +44,7 @@ public class CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTa
     
     
     public String ownerId;
+
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -47,6 +52,7 @@ public class CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTa
     
     
     public String state;
+
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation withState(String state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTa
     
     
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociationTags[] tags;
+
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation withTags(CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociationTags[] tags) {
         this.tags = tags;
         return this;
@@ -61,9 +68,11 @@ public class CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTa
     
     
     public String vpcId;
+
     public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation(){}
 }

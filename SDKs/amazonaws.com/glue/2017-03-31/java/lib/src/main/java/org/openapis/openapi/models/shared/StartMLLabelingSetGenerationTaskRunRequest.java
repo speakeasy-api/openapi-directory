@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartMLLabelingSetGenerationTaskRunRequest {
     @JsonProperty("OutputS3Path")
     public String outputS3Path;
+
     public StartMLLabelingSetGenerationTaskRunRequest withOutputS3Path(String outputS3Path) {
         this.outputS3Path = outputS3Path;
         return this;
@@ -16,9 +17,14 @@ public class StartMLLabelingSetGenerationTaskRunRequest {
     
     @JsonProperty("TransformId")
     public String transformId;
+
     public StartMLLabelingSetGenerationTaskRunRequest withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public StartMLLabelingSetGenerationTaskRunRequest(@JsonProperty("OutputS3Path") String outputS3Path, @JsonProperty("TransformId") String transformId) {
+        this.outputS3Path = outputS3Path;
+        this.transformId = transformId;
+  }
 }

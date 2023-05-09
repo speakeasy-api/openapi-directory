@@ -61,11 +61,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersAbandonInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersAbandonInstancesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersAbandonInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersAbandonInstancesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersApplyUpdatesToInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersApplyUpdatesToInstancesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersApplyUpdatesToInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersApplyUpdatesToInstancesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersCreateInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersCreateInstancesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersCreateInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersCreateInstancesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeleteInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeleteInstancesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeleteInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeleteInstancesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +289,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeletePerInstanceConfigsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeletePerInstanceConfigsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeletePerInstanceConfigsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersDeletePerInstanceConfigsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +333,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersGetResponse(contentType, httpRes.statusCode()) {{
             instanceGroupManager = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,11 +379,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListResponse(contentType, httpRes.statusCode()) {{
             regionInstanceGroupManagerList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +467,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListErrorsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListErrorsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListErrorsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListErrorsResponse(contentType, httpRes.statusCode()) {{
             regionInstanceGroupManagersListErrorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,11 +511,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListManagedInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListManagedInstancesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListManagedInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListManagedInstancesResponse(contentType, httpRes.statusCode()) {{
             regionInstanceGroupManagersListInstancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -577,11 +555,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListPerInstanceConfigsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListPerInstanceConfigsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListPerInstanceConfigsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersListPerInstanceConfigsResponse(contentType, httpRes.statusCode()) {{
             regionInstanceGroupManagersListInstanceConfigsResp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -625,11 +601,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,11 +647,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersPatchPerInstanceConfigsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersPatchPerInstanceConfigsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersPatchPerInstanceConfigsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersPatchPerInstanceConfigsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -721,11 +693,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersRecreateInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersRecreateInstancesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersRecreateInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersRecreateInstancesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -767,11 +737,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersResizeResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersResizeResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersResizeResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersResizeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -815,11 +783,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersSetInstanceTemplateResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersSetInstanceTemplateResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersSetInstanceTemplateResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersSetInstanceTemplateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -863,11 +829,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersSetTargetPoolsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersSetTargetPoolsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersSetTargetPoolsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersSetTargetPoolsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -911,11 +875,9 @@ public class RegionInstanceGroupManagers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersUpdatePerInstanceConfigsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersUpdatePerInstanceConfigsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersUpdatePerInstanceConfigsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupManagersUpdatePerInstanceConfigsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

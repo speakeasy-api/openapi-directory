@@ -19,6 +19,7 @@ public class ReplicationConfigurationDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ReplicationConfigurationDescription withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class ReplicationConfigurationDescription {
     
     @JsonProperty("Destinations")
     public Destination[] destinations;
+
     public ReplicationConfigurationDescription withDestinations(Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -33,6 +35,7 @@ public class ReplicationConfigurationDescription {
     
     @JsonProperty("OriginalSourceFileSystemArn")
     public String originalSourceFileSystemArn;
+
     public ReplicationConfigurationDescription withOriginalSourceFileSystemArn(String originalSourceFileSystemArn) {
         this.originalSourceFileSystemArn = originalSourceFileSystemArn;
         return this;
@@ -40,6 +43,7 @@ public class ReplicationConfigurationDescription {
     
     @JsonProperty("SourceFileSystemArn")
     public String sourceFileSystemArn;
+
     public ReplicationConfigurationDescription withSourceFileSystemArn(String sourceFileSystemArn) {
         this.sourceFileSystemArn = sourceFileSystemArn;
         return this;
@@ -47,6 +51,7 @@ public class ReplicationConfigurationDescription {
     
     @JsonProperty("SourceFileSystemId")
     public String sourceFileSystemId;
+
     public ReplicationConfigurationDescription withSourceFileSystemId(String sourceFileSystemId) {
         this.sourceFileSystemId = sourceFileSystemId;
         return this;
@@ -54,9 +59,18 @@ public class ReplicationConfigurationDescription {
     
     @JsonProperty("SourceFileSystemRegion")
     public String sourceFileSystemRegion;
+
     public ReplicationConfigurationDescription withSourceFileSystemRegion(String sourceFileSystemRegion) {
         this.sourceFileSystemRegion = sourceFileSystemRegion;
         return this;
     }
     
+    public ReplicationConfigurationDescription(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("Destinations") Destination[] destinations, @JsonProperty("OriginalSourceFileSystemArn") String originalSourceFileSystemArn, @JsonProperty("SourceFileSystemArn") String sourceFileSystemArn, @JsonProperty("SourceFileSystemId") String sourceFileSystemId, @JsonProperty("SourceFileSystemRegion") String sourceFileSystemRegion) {
+        this.creationTime = creationTime;
+        this.destinations = destinations;
+        this.originalSourceFileSystemArn = originalSourceFileSystemArn;
+        this.sourceFileSystemArn = sourceFileSystemArn;
+        this.sourceFileSystemId = sourceFileSystemId;
+        this.sourceFileSystemRegion = sourceFileSystemRegion;
+  }
 }

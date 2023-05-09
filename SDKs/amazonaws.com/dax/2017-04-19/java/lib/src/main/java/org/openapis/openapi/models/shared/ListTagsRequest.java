@@ -12,6 +12,7 @@ public class ListTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTagsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,13 @@ public class ListTagsRequest {
     
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public ListTagsRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public ListTagsRequest(@JsonProperty("ResourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

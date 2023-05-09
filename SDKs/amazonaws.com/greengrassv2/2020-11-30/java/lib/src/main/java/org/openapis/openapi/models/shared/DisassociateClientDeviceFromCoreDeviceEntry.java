@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateClientDeviceFromCoreDeviceEntry {
     @JsonProperty("thingName")
     public String thingName;
+
     public DisassociateClientDeviceFromCoreDeviceEntry withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public DisassociateClientDeviceFromCoreDeviceEntry(@JsonProperty("thingName") String thingName) {
+        this.thingName = thingName;
+  }
 }

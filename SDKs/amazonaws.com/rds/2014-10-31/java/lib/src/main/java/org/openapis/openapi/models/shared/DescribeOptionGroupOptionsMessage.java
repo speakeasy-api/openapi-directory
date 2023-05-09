@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeOptionGroupOptionsMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeOptionGroupOptionsMessage {
     
     public String engineName;
+
     public DescribeOptionGroupOptionsMessage withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeOptionGroupOptionsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeOptionGroupOptionsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeOptionGroupOptionsMessage {
     
     
     public String majorEngineVersion;
+
     public DescribeOptionGroupOptionsMessage withMajorEngineVersion(String majorEngineVersion) {
         this.majorEngineVersion = majorEngineVersion;
         return this;
@@ -33,6 +36,7 @@ public class DescribeOptionGroupOptionsMessage {
     
     
     public String marker;
+
     public DescribeOptionGroupOptionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -40,9 +44,13 @@ public class DescribeOptionGroupOptionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeOptionGroupOptionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeOptionGroupOptionsMessage(@JsonProperty("EngineName") String engineName) {
+        this.engineName = engineName;
+  }
 }

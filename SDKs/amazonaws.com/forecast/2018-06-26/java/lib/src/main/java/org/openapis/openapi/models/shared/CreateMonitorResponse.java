@@ -15,9 +15,11 @@ public class CreateMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public CreateMonitorResponse withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
     }
     
+    public CreateMonitorResponse(){}
 }

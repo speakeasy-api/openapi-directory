@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateDhcpOptionsRequest {
     
     public String dhcpOptionsId;
+
     public AssociateDhcpOptionsRequest withDhcpOptionsId(String dhcpOptionsId) {
         this.dhcpOptionsId = dhcpOptionsId;
         return this;
@@ -16,6 +17,7 @@ public class AssociateDhcpOptionsRequest {
     
     
     public Boolean dryRun;
+
     public AssociateDhcpOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class AssociateDhcpOptionsRequest {
     
     
     public String vpcId;
+
     public AssociateDhcpOptionsRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AssociateDhcpOptionsRequest(@JsonProperty("DhcpOptionsId") String dhcpOptionsId, @JsonProperty("VpcId") String vpcId) {
+        this.dhcpOptionsId = dhcpOptionsId;
+        this.vpcId = vpcId;
+  }
 }

@@ -12,9 +12,11 @@ public class GetUsers200ApplicationJSONEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetUsers200ApplicationJSONEmbeddedData data;
+
     public GetUsers200ApplicationJSONEmbedded withData(GetUsers200ApplicationJSONEmbeddedData data) {
         this.data = data;
         return this;
     }
     
+    public GetUsers200ApplicationJSONEmbedded(){}
 }

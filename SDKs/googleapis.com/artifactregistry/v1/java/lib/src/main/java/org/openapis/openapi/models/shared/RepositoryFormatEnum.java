@@ -16,6 +16,7 @@ public enum RepositoryFormatEnum {
     NPM("NPM"),
     APT("APT"),
     YUM("YUM"),
+    GOOGET("GOOGET"),
     PYTHON("PYTHON"),
     KFP("KFP");
 

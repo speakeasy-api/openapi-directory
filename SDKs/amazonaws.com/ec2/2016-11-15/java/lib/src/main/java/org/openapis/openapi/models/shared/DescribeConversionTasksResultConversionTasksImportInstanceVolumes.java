@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeConversionTasksResultConversionTasksImportInstanceVolumes {
     
     public String availabilityZone;
+
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumes withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeConversionTasksResultConversionTasksImportInstanceVolumes {
     
     
     public Long bytesConverted;
+
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumes withBytesConverted(Long bytesConverted) {
         this.bytesConverted = bytesConverted;
         return this;
@@ -26,6 +28,7 @@ public class DescribeConversionTasksResultConversionTasksImportInstanceVolumes {
     
     
     public String description;
+
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumes withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DescribeConversionTasksResultConversionTasksImportInstanceVolumes {
     
     
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumesImage image;
+
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumes withImage(DescribeConversionTasksResultConversionTasksImportInstanceVolumesImage image) {
         this.image = image;
         return this;
@@ -40,6 +44,7 @@ public class DescribeConversionTasksResultConversionTasksImportInstanceVolumes {
     
     
     public String status;
+
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumes withStatus(String status) {
         this.status = status;
         return this;
@@ -47,6 +52,7 @@ public class DescribeConversionTasksResultConversionTasksImportInstanceVolumes {
     
     
     public String statusMessage;
+
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumes withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -54,9 +60,11 @@ public class DescribeConversionTasksResultConversionTasksImportInstanceVolumes {
     
     
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumesVolume volume;
+
     public DescribeConversionTasksResultConversionTasksImportInstanceVolumes withVolume(DescribeConversionTasksResultConversionTasksImportInstanceVolumesVolume volume) {
         this.volume = volume;
         return this;
     }
     
+    public DescribeConversionTasksResultConversionTasksImportInstanceVolumes(){}
 }

@@ -17,6 +17,7 @@ public class LoyaltyEventRedeemReward {
      */
     @JsonProperty("loyalty_program_id")
     public String loyaltyProgramId;
+
     public LoyaltyEventRedeemReward withLoyaltyProgramId(String loyaltyProgramId) {
         this.loyaltyProgramId = loyaltyProgramId;
         return this;
@@ -29,6 +30,7 @@ public class LoyaltyEventRedeemReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public LoyaltyEventRedeemReward withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -41,9 +43,13 @@ public class LoyaltyEventRedeemReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reward_id")
     public String rewardId;
+
     public LoyaltyEventRedeemReward withRewardId(String rewardId) {
         this.rewardId = rewardId;
         return this;
     }
     
+    public LoyaltyEventRedeemReward(@JsonProperty("loyalty_program_id") String loyaltyProgramId) {
+        this.loyaltyProgramId = loyaltyProgramId;
+  }
 }

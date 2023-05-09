@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LinkConfirmationRequestConfirmation {
     @JsonProperty("linkRefNumber")
     public String linkRefNumber;
+
     public LinkConfirmationRequestConfirmation withLinkRefNumber(String linkRefNumber) {
         this.linkRefNumber = linkRefNumber;
         return this;
@@ -16,9 +17,14 @@ public class LinkConfirmationRequestConfirmation {
     
     @JsonProperty("token")
     public String token;
+
     public LinkConfirmationRequestConfirmation withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public LinkConfirmationRequestConfirmation(@JsonProperty("linkRefNumber") String linkRefNumber, @JsonProperty("token") String token) {
+        this.linkRefNumber = linkRefNumber;
+        this.token = token;
+  }
 }

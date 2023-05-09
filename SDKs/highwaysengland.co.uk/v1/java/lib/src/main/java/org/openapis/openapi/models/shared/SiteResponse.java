@@ -12,6 +12,7 @@ public class SiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row_count")
     public Integer rowCount;
+
     public SiteResponse withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -20,9 +21,11 @@ public class SiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public SiteResult[] sites;
+
     public SiteResponse withSites(SiteResult[] sites) {
         this.sites = sites;
         return this;
     }
     
+    public SiteResponse(){}
 }

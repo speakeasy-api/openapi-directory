@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkspaceGiveFeedback {
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WorkspaceGiveFeedback withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WorkspaceGiveFeedback(@JsonProperty("workspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

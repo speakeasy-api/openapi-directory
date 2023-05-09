@@ -20,6 +20,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public JobRun withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public JobRun withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,6 +38,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationOverrides")
     public ConfigurationOverrides configurationOverrides;
+
     public JobRun withConfigurationOverrides(ConfigurationOverrides configurationOverrides) {
         this.configurationOverrides = configurationOverrides;
         return this;
@@ -46,6 +49,7 @@ public class JobRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public JobRun withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public JobRun withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -62,6 +67,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public JobRun withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -70,6 +76,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public FailureReasonEnum failureReason;
+
     public JobRun withFailureReason(FailureReasonEnum failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -80,6 +87,7 @@ public class JobRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("finishedAt")
     public OffsetDateTime finishedAt;
+
     public JobRun withFinishedAt(OffsetDateTime finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -88,6 +96,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public JobRun withId(String id) {
         this.id = id;
         return this;
@@ -96,6 +105,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDriver")
     public JobDriver jobDriver;
+
     public JobRun withJobDriver(JobDriver jobDriver) {
         this.jobDriver = jobDriver;
         return this;
@@ -104,6 +114,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobRun withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +123,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public JobRun withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -120,6 +132,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPolicyConfiguration")
     public RetryPolicyConfiguration retryPolicyConfiguration;
+
     public JobRun withRetryPolicyConfiguration(RetryPolicyConfiguration retryPolicyConfiguration) {
         this.retryPolicyConfiguration = retryPolicyConfiguration;
         return this;
@@ -128,6 +141,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPolicyExecution")
     public RetryPolicyExecution retryPolicyExecution;
+
     public JobRun withRetryPolicyExecution(RetryPolicyExecution retryPolicyExecution) {
         this.retryPolicyExecution = retryPolicyExecution;
         return this;
@@ -136,6 +150,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public JobRunStateEnum state;
+
     public JobRun withState(JobRunStateEnum state) {
         this.state = state;
         return this;
@@ -144,6 +159,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDetails")
     public String stateDetails;
+
     public JobRun withStateDetails(String stateDetails) {
         this.stateDetails = stateDetails;
         return this;
@@ -152,6 +168,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public JobRun withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -160,9 +177,11 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualClusterId")
     public String virtualClusterId;
+
     public JobRun withVirtualClusterId(String virtualClusterId) {
         this.virtualClusterId = virtualClusterId;
         return this;
     }
     
+    public JobRun(){}
 }

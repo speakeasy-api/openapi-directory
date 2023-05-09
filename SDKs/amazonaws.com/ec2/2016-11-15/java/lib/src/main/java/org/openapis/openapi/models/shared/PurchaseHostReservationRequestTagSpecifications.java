@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseHostReservationRequestTagSpecifications {
     
     public PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public PurchaseHostReservationRequestTagSpecifications withResourceType(PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class PurchaseHostReservationRequestTagSpecifications {
     
     
     public PurchaseHostReservationRequestTagSpecificationsTags[] tags;
+
     public PurchaseHostReservationRequestTagSpecifications withTags(PurchaseHostReservationRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PurchaseHostReservationRequestTagSpecifications(){}
 }

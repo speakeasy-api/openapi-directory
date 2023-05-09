@@ -15,6 +15,7 @@ public class StatusDetailFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public StatusDetailFilters withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class StatusDetailFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberAccountRuleStatus")
     public MemberAccountRuleStatusEnum memberAccountRuleStatus;
+
     public StatusDetailFilters withMemberAccountRuleStatus(MemberAccountRuleStatusEnum memberAccountRuleStatus) {
         this.memberAccountRuleStatus = memberAccountRuleStatus;
         return this;
     }
     
+    public StatusDetailFilters(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserSetting {
     @JsonProperty("Action")
     public ActionEnum action;
+
     public UserSetting withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class UserSetting {
     
     @JsonProperty("Permission")
     public PermissionEnum permission;
+
     public UserSetting withPermission(PermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public UserSetting(@JsonProperty("Action") ActionEnum action, @JsonProperty("Permission") PermissionEnum permission) {
+        this.action = action;
+        this.permission = permission;
+  }
 }

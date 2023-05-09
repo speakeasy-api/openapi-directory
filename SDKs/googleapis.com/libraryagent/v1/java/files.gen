@@ -51,4 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleExampleLibraryagentV1ListBooksResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleExampleLibraryagentV1ListShelvesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleExampleLibraryagentV1Shelf.java
+docs/sdk/README.md
+docs/shelves/README.md
 USAGE.md

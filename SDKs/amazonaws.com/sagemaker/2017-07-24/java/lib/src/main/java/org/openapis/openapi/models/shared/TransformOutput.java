@@ -15,6 +15,7 @@ public class TransformOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accept")
     public String accept;
+
     public TransformOutput withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -23,6 +24,7 @@ public class TransformOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssembleWith")
     public AssemblyTypeEnum assembleWith;
+
     public TransformOutput withAssembleWith(AssemblyTypeEnum assembleWith) {
         this.assembleWith = assembleWith;
         return this;
@@ -31,6 +33,7 @@ public class TransformOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public TransformOutput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -38,9 +41,13 @@ public class TransformOutput {
     
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public TransformOutput withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public TransformOutput(@JsonProperty("S3OutputPath") String s3OutputPath) {
+        this.s3OutputPath = s3OutputPath;
+  }
 }

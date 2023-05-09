@@ -12,6 +12,7 @@ public class TaskJobsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobCount")
     public Integer jobCount;
+
     public TaskJobsDTO withJobCount(Integer jobCount) {
         this.jobCount = jobCount;
         return this;
@@ -20,9 +21,11 @@ public class TaskJobsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobIds")
     public Long[] jobIds;
+
     public TaskJobsDTO withJobIds(Long[] jobIds) {
         this.jobIds = jobIds;
         return this;
     }
     
+    public TaskJobsDTO(){}
 }

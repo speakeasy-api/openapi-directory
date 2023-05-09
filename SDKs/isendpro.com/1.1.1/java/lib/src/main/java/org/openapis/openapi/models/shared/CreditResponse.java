@@ -15,9 +15,11 @@ public class CreditResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public CreditResponseEtat etat;
+
     public CreditResponse withEtat(CreditResponseEtat etat) {
         this.etat = etat;
         return this;
     }
     
+    public CreditResponse(){}
 }

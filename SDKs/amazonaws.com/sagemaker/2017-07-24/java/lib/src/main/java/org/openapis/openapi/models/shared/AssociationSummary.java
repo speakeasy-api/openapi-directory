@@ -20,6 +20,7 @@ public class AssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationType")
     public AssociationEdgeTypeEnum associationType;
+
     public AssociationSummary withAssociationType(AssociationEdgeTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -31,6 +32,7 @@ public class AssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public AssociationSummary withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -41,6 +43,7 @@ public class AssociationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AssociationSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -49,6 +52,7 @@ public class AssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public AssociationSummary withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -57,6 +61,7 @@ public class AssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationName")
     public String destinationName;
+
     public AssociationSummary withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -65,6 +70,7 @@ public class AssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationType")
     public String destinationType;
+
     public AssociationSummary withDestinationType(String destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -73,6 +79,7 @@ public class AssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public AssociationSummary withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -81,6 +88,7 @@ public class AssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceName")
     public String sourceName;
+
     public AssociationSummary withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -89,9 +97,11 @@ public class AssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public AssociationSummary withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public AssociationSummary(){}
 }

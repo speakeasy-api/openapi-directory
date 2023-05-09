@@ -15,6 +15,7 @@ public class SessionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public SessionSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class SessionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public EngineVersion engineVersion;
+
     public SessionSummary withEngineVersion(EngineVersion engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -31,6 +33,7 @@ public class SessionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookVersion")
     public String notebookVersion;
+
     public SessionSummary withNotebookVersion(String notebookVersion) {
         this.notebookVersion = notebookVersion;
         return this;
@@ -39,6 +42,7 @@ public class SessionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public SessionSummary withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -47,9 +51,11 @@ public class SessionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SessionStatus status;
+
     public SessionSummary withStatus(SessionStatus status) {
         this.status = status;
         return this;
     }
     
+    public SessionSummary(){}
 }

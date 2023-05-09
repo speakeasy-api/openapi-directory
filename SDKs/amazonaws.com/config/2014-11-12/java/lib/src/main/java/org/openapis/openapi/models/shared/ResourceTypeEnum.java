@@ -257,7 +257,30 @@ public enum ResourceTypeEnum {
     AWS_IO_T_SCHEDULED_AUDIT("AWS::IoT::ScheduledAudit"),
     AWS_EVENTS_CONNECTION("AWS::Events::Connection"),
     AWS_EVENT_SCHEMAS_SCHEMA("AWS::EventSchemas::Schema"),
-    AWS_MEDIA_PACKAGE_PACKAGING_CONFIGURATION("AWS::MediaPackage::PackagingConfiguration");
+    AWS_MEDIA_PACKAGE_PACKAGING_CONFIGURATION("AWS::MediaPackage::PackagingConfiguration"),
+    AWS_KINESIS_VIDEO_SIGNALING_CHANNEL("AWS::KinesisVideo::SignalingChannel"),
+    AWS_APP_STREAM_DIRECTORY_CONFIG("AWS::AppStream::DirectoryConfig"),
+    AWS_LOOKOUT_VISION_PROJECT("AWS::LookoutVision::Project"),
+    AWS_ROUTE53_RECOVERY_CONTROL_CLUSTER("AWS::Route53RecoveryControl::Cluster"),
+    AWS_ROUTE53_RECOVERY_CONTROL_SAFETY_RULE("AWS::Route53RecoveryControl::SafetyRule"),
+    AWS_ROUTE53_RECOVERY_CONTROL_CONTROL_PANEL("AWS::Route53RecoveryControl::ControlPanel"),
+    AWS_ROUTE53_RECOVERY_CONTROL_ROUTING_CONTROL("AWS::Route53RecoveryControl::RoutingControl"),
+    AWS_ROUTE53_RECOVERY_READINESS_RESOURCE_SET("AWS::Route53RecoveryReadiness::ResourceSet"),
+    AWS_ROBO_MAKER_SIMULATION_APPLICATION("AWS::RoboMaker::SimulationApplication"),
+    AWS_ROBO_MAKER_ROBOT_APPLICATION("AWS::RoboMaker::RobotApplication"),
+    AWS_HEALTH_LAKE_FHIR_DATASTORE("AWS::HealthLake::FHIRDatastore"),
+    AWS_PINPOINT_SEGMENT("AWS::Pinpoint::Segment"),
+    AWS_PINPOINT_APPLICATION_SETTINGS("AWS::Pinpoint::ApplicationSettings"),
+    AWS_EVENTS_RULE("AWS::Events::Rule"),
+    AWS_EC2_DHCP_OPTIONS("AWS::EC2::DHCPOptions"),
+    AWS_EC2_NETWORK_INSIGHTS_PATH("AWS::EC2::NetworkInsightsPath"),
+    AWS_EC2_TRAFFIC_MIRROR_FILTER("AWS::EC2::TrafficMirrorFilter"),
+    AWS_EC2_IPAM("AWS::EC2::IPAM"),
+    AWS_IO_T_TWIN_MAKER_SCENE("AWS::IoTTwinMaker::Scene"),
+    AWS_NETWORK_MANAGER_TRANSIT_GATEWAY_REGISTRATION("AWS::NetworkManager::TransitGatewayRegistration"),
+    AWS_CUSTOMER_PROFILES_DOMAIN("AWS::CustomerProfiles::Domain"),
+    AWS_AUTO_SCALING_WARM_POOL("AWS::AutoScaling::WarmPool"),
+    AWS_CONNECT_PHONE_NUMBER("AWS::Connect::PhoneNumber");
 
     @JsonValue
     public final String value;

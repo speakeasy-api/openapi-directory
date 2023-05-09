@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeviceRegistrationResponse {
     
     public String contentType;
+
     public GetDeviceRegistrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDeviceRegistrationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeviceRegistrationResult getDeviceRegistrationResult;
+
     public GetDeviceRegistrationResponse withGetDeviceRegistrationResult(org.openapis.openapi.models.shared.GetDeviceRegistrationResult getDeviceRegistrationResult) {
         this.getDeviceRegistrationResult = getDeviceRegistrationResult;
         return this;
@@ -29,6 +32,7 @@ public class GetDeviceRegistrationResponse {
      */
     
     public Object internalServiceException;
+
     public GetDeviceRegistrationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -36,6 +40,7 @@ public class GetDeviceRegistrationResponse {
     
     
     public Integer statusCode;
+
     public GetDeviceRegistrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetDeviceRegistrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeviceRegistrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeviceRegistrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

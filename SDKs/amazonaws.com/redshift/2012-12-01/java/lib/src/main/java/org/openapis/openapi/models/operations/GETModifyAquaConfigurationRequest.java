@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyAquaConfigurationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyAquaConfigurationActionEnum action;
+
     public GETModifyAquaConfigurationRequest withAction(GETModifyAquaConfigurationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyAquaConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AquaConfigurationStatus")
     public GETModifyAquaConfigurationAquaConfigurationStatusEnum aquaConfigurationStatus;
+
     public GETModifyAquaConfigurationRequest withAquaConfigurationStatus(GETModifyAquaConfigurationAquaConfigurationStatusEnum aquaConfigurationStatus) {
         this.aquaConfigurationStatus = aquaConfigurationStatus;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyAquaConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETModifyAquaConfigurationRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -36,6 +40,7 @@ public class GETModifyAquaConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyAquaConfigurationVersionEnum version;
+
     public GETModifyAquaConfigurationRequest withVersion(GETModifyAquaConfigurationVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETModifyAquaConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyAquaConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETModifyAquaConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyAquaConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETModifyAquaConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyAquaConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETModifyAquaConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyAquaConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETModifyAquaConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyAquaConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETModifyAquaConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyAquaConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETModifyAquaConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyAquaConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyAquaConfigurationRequest(@JsonProperty("Action") GETModifyAquaConfigurationActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("Version") GETModifyAquaConfigurationVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.version = version;
+  }
 }

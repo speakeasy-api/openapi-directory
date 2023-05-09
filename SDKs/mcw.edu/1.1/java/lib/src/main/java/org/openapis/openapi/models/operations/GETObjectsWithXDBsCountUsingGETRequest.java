@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETObjectsWithXDBsCountUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETObjectsWithXDBsCountUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateYYYYMMDD")
     public String dateYYYYMMDD;
+
     public GETObjectsWithXDBsCountUsingGETRequest withDateYYYYMMDD(String dateYYYYMMDD) {
         this.dateYYYYMMDD = dateYYYYMMDD;
         return this;
@@ -22,6 +24,7 @@ public class GETObjectsWithXDBsCountUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectKey")
     public Integer objectKey;
+
     public GETObjectsWithXDBsCountUsingGETRequest withObjectKey(Integer objectKey) {
         this.objectKey = objectKey;
         return this;
@@ -32,9 +35,15 @@ public class GETObjectsWithXDBsCountUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETObjectsWithXDBsCountUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     
+    public GETObjectsWithXDBsCountUsingGETRequest(@JsonProperty("dateYYYYMMDD") String dateYYYYMMDD, @JsonProperty("objectKey") Integer objectKey, @JsonProperty("speciesTypeKey") Integer speciesTypeKey) {
+        this.dateYYYYMMDD = dateYYYYMMDD;
+        this.objectKey = objectKey;
+        this.speciesTypeKey = speciesTypeKey;
+  }
 }

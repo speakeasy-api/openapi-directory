@@ -15,9 +15,11 @@ public class DocumentServiceWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DocumentServiceWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DocumentServiceWarning(){}
 }

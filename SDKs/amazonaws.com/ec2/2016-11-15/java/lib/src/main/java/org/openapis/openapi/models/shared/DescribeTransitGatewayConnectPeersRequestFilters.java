@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayConnectPeersRequestFilters {
     
     public String name;
+
     public DescribeTransitGatewayConnectPeersRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTransitGatewayConnectPeersRequestFilters {
     
     
     public String[] values;
+
     public DescribeTransitGatewayConnectPeersRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeTransitGatewayConnectPeersRequestFilters(){}
 }

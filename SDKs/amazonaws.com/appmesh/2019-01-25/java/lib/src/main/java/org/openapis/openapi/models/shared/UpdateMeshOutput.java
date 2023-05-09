@@ -15,9 +15,13 @@ public class UpdateMeshOutput {
      */
     @JsonProperty("mesh")
     public MeshData mesh;
+
     public UpdateMeshOutput withMesh(MeshData mesh) {
         this.mesh = mesh;
         return this;
     }
     
+    public UpdateMeshOutput(@JsonProperty("mesh") MeshData mesh) {
+        this.mesh = mesh;
+  }
 }

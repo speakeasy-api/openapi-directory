@@ -16,6 +16,7 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSONDeclination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONDeclination withUnits(String units) {
         this.units = units;
         return this;
@@ -24,9 +25,11 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSONDeclination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONDeclination withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONDeclination(){}
 }

@@ -12,6 +12,7 @@ public class IpNumericRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Long end;
+
     public IpNumericRange withEnd(Long end) {
         this.end = end;
         return this;
@@ -20,9 +21,11 @@ public class IpNumericRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Long start;
+
     public IpNumericRange withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public IpNumericRange(){}
 }

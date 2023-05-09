@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1RoutineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryRoutineSpec")
     public GoogleCloudDatacatalogV1BigQueryRoutineSpec bigqueryRoutineSpec;
+
     public GoogleCloudDatacatalogV1RoutineSpec withBigqueryRoutineSpec(GoogleCloudDatacatalogV1BigQueryRoutineSpec bigqueryRoutineSpec) {
         this.bigqueryRoutineSpec = bigqueryRoutineSpec;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1RoutineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitionBody")
     public String definitionBody;
+
     public GoogleCloudDatacatalogV1RoutineSpec withDefinitionBody(String definitionBody) {
         this.definitionBody = definitionBody;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1RoutineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public GoogleCloudDatacatalogV1RoutineSpec withLanguage(String language) {
         this.language = language;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1RoutineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnType")
     public String returnType;
+
     public GoogleCloudDatacatalogV1RoutineSpec withReturnType(String returnType) {
         this.returnType = returnType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1RoutineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routineArguments")
     public GoogleCloudDatacatalogV1RoutineSpecArgument[] routineArguments;
+
     public GoogleCloudDatacatalogV1RoutineSpec withRoutineArguments(GoogleCloudDatacatalogV1RoutineSpecArgument[] routineArguments) {
         this.routineArguments = routineArguments;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDatacatalogV1RoutineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routineType")
     public GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum routineType;
+
     public GoogleCloudDatacatalogV1RoutineSpec withRoutineType(GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum routineType) {
         this.routineType = routineType;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1RoutineSpec(){}
 }

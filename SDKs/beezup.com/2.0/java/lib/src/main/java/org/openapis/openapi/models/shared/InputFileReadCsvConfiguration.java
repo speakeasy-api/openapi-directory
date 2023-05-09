@@ -17,6 +17,7 @@ public class InputFileReadCsvConfiguration {
      */
     @JsonProperty("csvSeparator")
     public String csvSeparator;
+
     public InputFileReadCsvConfiguration withCsvSeparator(String csvSeparator) {
         this.csvSeparator = csvSeparator;
         return this;
@@ -28,6 +29,7 @@ public class InputFileReadCsvConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csvTextQualifier")
     public String csvTextQualifier;
+
     public InputFileReadCsvConfiguration withCsvTextQualifier(String csvTextQualifier) {
         this.csvTextQualifier = csvTextQualifier;
         return this;
@@ -38,6 +40,7 @@ public class InputFileReadCsvConfiguration {
      */
     @JsonProperty("hasHeaderRecord")
     public Boolean hasHeaderRecord;
+
     public InputFileReadCsvConfiguration withHasHeaderRecord(Boolean hasHeaderRecord) {
         this.hasHeaderRecord = hasHeaderRecord;
         return this;
@@ -48,9 +51,15 @@ public class InputFileReadCsvConfiguration {
      */
     @JsonProperty("ignoreHeaderRecord")
     public Boolean ignoreHeaderRecord;
+
     public InputFileReadCsvConfiguration withIgnoreHeaderRecord(Boolean ignoreHeaderRecord) {
         this.ignoreHeaderRecord = ignoreHeaderRecord;
         return this;
     }
     
+    public InputFileReadCsvConfiguration(@JsonProperty("csvSeparator") String csvSeparator, @JsonProperty("hasHeaderRecord") Boolean hasHeaderRecord, @JsonProperty("ignoreHeaderRecord") Boolean ignoreHeaderRecord) {
+        this.csvSeparator = csvSeparator;
+        this.hasHeaderRecord = hasHeaderRecord;
+        this.ignoreHeaderRecord = ignoreHeaderRecord;
+  }
 }

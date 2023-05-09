@@ -18,6 +18,7 @@ public class CompleteUserQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlimited_upload_quota")
     public Boolean unlimitedUploadQuota;
+
     public CompleteUserQuota withUnlimitedUploadQuota(Boolean unlimitedUploadQuota) {
         this.unlimitedUploadQuota = unlimitedUploadQuota;
         return this;
@@ -29,9 +30,11 @@ public class CompleteUserQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_seconds_used")
     public Long uploadSecondsUsed;
+
     public CompleteUserQuota withUploadSecondsUsed(Long uploadSecondsUsed) {
         this.uploadSecondsUsed = uploadSecondsUsed;
         return this;
     }
     
+    public CompleteUserQuota(){}
 }

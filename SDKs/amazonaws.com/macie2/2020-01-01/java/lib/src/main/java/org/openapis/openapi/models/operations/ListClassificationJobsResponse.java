@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListClassificationJobsResponse {
@@ -12,6 +13,7 @@ public class ListClassificationJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListClassificationJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListClassificationJobsResponse {
      */
     
     public Object conflictException;
+
     public ListClassificationJobsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListClassificationJobsResponse {
     
     
     public String contentType;
+
     public ListClassificationJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListClassificationJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListClassificationJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListClassificationJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListClassificationJobsResponse listClassificationJobsResponse;
+
     public ListClassificationJobsResponse withListClassificationJobsResponse(org.openapis.openapi.models.shared.ListClassificationJobsResponse listClassificationJobsResponse) {
         this.listClassificationJobsResponse = listClassificationJobsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListClassificationJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListClassificationJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListClassificationJobsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListClassificationJobsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListClassificationJobsResponse {
     
     
     public Integer statusCode;
+
     public ListClassificationJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListClassificationJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListClassificationJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListClassificationJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListClassificationJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListClassificationJobsResponse {
      */
     
     public Object validationException;
+
     public ListClassificationJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListClassificationJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

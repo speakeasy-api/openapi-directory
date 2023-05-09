@@ -15,6 +15,7 @@ public class CreateMitigationActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionArn")
     public String actionArn;
+
     public CreateMitigationActionResponse withActionArn(String actionArn) {
         this.actionArn = actionArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateMitigationActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionId")
     public String actionId;
+
     public CreateMitigationActionResponse withActionId(String actionId) {
         this.actionId = actionId;
         return this;
     }
     
+    public CreateMitigationActionResponse(){}
 }

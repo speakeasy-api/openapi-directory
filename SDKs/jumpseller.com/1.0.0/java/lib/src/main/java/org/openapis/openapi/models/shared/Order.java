@@ -15,9 +15,11 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public OrderFields order;
+
     public Order withOrder(OrderFields order) {
         this.order = order;
         return this;
     }
     
+    public Order(){}
 }

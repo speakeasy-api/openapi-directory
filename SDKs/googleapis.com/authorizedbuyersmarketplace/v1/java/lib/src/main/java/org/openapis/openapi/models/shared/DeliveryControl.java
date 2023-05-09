@@ -18,6 +18,7 @@ public class DeliveryControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companionDeliveryType")
     public DeliveryControlCompanionDeliveryTypeEnum companionDeliveryType;
+
     public DeliveryControl withCompanionDeliveryType(DeliveryControlCompanionDeliveryTypeEnum companionDeliveryType) {
         this.companionDeliveryType = companionDeliveryType;
         return this;
@@ -29,6 +30,7 @@ public class DeliveryControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeRotationType")
     public DeliveryControlCreativeRotationTypeEnum creativeRotationType;
+
     public DeliveryControl withCreativeRotationType(DeliveryControlCreativeRotationTypeEnum creativeRotationType) {
         this.creativeRotationType = creativeRotationType;
         return this;
@@ -40,6 +42,7 @@ public class DeliveryControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryRateType")
     public DeliveryControlDeliveryRateTypeEnum deliveryRateType;
+
     public DeliveryControl withDeliveryRateType(DeliveryControlDeliveryRateTypeEnum deliveryRateType) {
         this.deliveryRateType = deliveryRateType;
         return this;
@@ -51,6 +54,7 @@ public class DeliveryControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequencyCap")
     public FrequencyCap[] frequencyCap;
+
     public DeliveryControl withFrequencyCap(FrequencyCap[] frequencyCap) {
         this.frequencyCap = frequencyCap;
         return this;
@@ -62,9 +66,11 @@ public class DeliveryControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roadblockingType")
     public DeliveryControlRoadblockingTypeEnum roadblockingType;
+
     public DeliveryControl withRoadblockingType(DeliveryControlRoadblockingTypeEnum roadblockingType) {
         this.roadblockingType = roadblockingType;
         return this;
     }
     
+    public DeliveryControl(){}
 }

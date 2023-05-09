@@ -18,6 +18,7 @@ public class DnsAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public DnsAuthorization withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class DnsAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DnsAuthorization withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class DnsAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsResourceRecord")
     public DnsResourceRecord dnsResourceRecord;
+
     public DnsAuthorization withDnsResourceRecord(DnsResourceRecord dnsResourceRecord) {
         this.dnsResourceRecord = dnsResourceRecord;
         return this;
@@ -51,6 +54,7 @@ public class DnsAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public DnsAuthorization withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -62,6 +66,7 @@ public class DnsAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public DnsAuthorization withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class DnsAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DnsAuthorization withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class DnsAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public DnsAuthorization withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DnsAuthorization(){}
 }

@@ -18,6 +18,7 @@ public class NegativeKeyword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordValue")
     public String keywordValue;
+
     public NegativeKeyword withKeywordValue(String keywordValue) {
         this.keywordValue = keywordValue;
         return this;
@@ -29,9 +30,11 @@ public class NegativeKeyword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NegativeKeyword withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NegativeKeyword(){}
 }

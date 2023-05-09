@@ -15,6 +15,7 @@ public class Seller {
      */
     @JsonProperty("fulfillmentEndpoint")
     public String fulfillmentEndpoint;
+
     public Seller withFulfillmentEndpoint(String fulfillmentEndpoint) {
         this.fulfillmentEndpoint = fulfillmentEndpoint;
         return this;
@@ -25,6 +26,7 @@ public class Seller {
      */
     @JsonProperty("id")
     public String id;
+
     public Seller withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class Seller {
      */
     @JsonProperty("logo")
     public String logo;
+
     public Seller withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -45,9 +48,16 @@ public class Seller {
      */
     @JsonProperty("name")
     public String name;
+
     public Seller withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Seller(@JsonProperty("fulfillmentEndpoint") String fulfillmentEndpoint, @JsonProperty("id") String id, @JsonProperty("logo") String logo, @JsonProperty("name") String name) {
+        this.fulfillmentEndpoint = fulfillmentEndpoint;
+        this.id = id;
+        this.logo = logo;
+        this.name = name;
+  }
 }

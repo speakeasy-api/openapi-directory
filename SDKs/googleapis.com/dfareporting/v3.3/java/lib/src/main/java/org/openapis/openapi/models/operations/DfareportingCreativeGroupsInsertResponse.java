@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingCreativeGroupsInsertResponse {
     
     public String contentType;
+
     public DfareportingCreativeGroupsInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingCreativeGroupsInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.CreativeGroup creativeGroup;
+
     public DfareportingCreativeGroupsInsertResponse withCreativeGroup(org.openapis.openapi.models.shared.CreativeGroup creativeGroup) {
         this.creativeGroup = creativeGroup;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingCreativeGroupsInsertResponse {
     
     
     public Integer statusCode;
+
     public DfareportingCreativeGroupsInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingCreativeGroupsInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingCreativeGroupsInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingCreativeGroupsInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

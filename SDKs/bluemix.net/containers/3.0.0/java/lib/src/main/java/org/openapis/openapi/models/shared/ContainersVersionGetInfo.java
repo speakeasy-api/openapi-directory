@@ -18,6 +18,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiVersion")
     public String apiVersion;
+
     public ContainersVersionGetInfo withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,6 +30,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arch")
     public String arch;
+
     public ContainersVersionGetInfo withArch(String arch) {
         this.arch = arch;
         return this;
@@ -37,6 +39,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildDetail")
     public ContainersVersionGetInfoBuildDetail buildDetail;
+
     public ContainersVersionGetInfo withBuildDetail(ContainersVersionGetInfoBuildDetail buildDetail) {
         this.buildDetail = buildDetail;
         return this;
@@ -45,6 +48,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildID")
     public String buildID;
+
     public ContainersVersionGetInfo withBuildID(String buildID) {
         this.buildID = buildID;
         return this;
@@ -53,6 +57,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildNumber")
     public String buildNumber;
+
     public ContainersVersionGetInfo withBuildNumber(String buildNumber) {
         this.buildNumber = buildNumber;
         return this;
@@ -64,6 +69,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildTime")
     public String buildTime;
+
     public ContainersVersionGetInfo withBuildTime(String buildTime) {
         this.buildTime = buildTime;
         return this;
@@ -72,6 +78,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GitCommit")
     public String gitCommit;
+
     public ContainersVersionGetInfo withGitCommit(String gitCommit) {
         this.gitCommit = gitCommit;
         return this;
@@ -83,6 +90,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoVersion")
     public String goVersion;
+
     public ContainersVersionGetInfo withGoVersion(String goVersion) {
         this.goVersion = goVersion;
         return this;
@@ -94,6 +102,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KernelVersion")
     public String kernelVersion;
+
     public ContainersVersionGetInfo withKernelVersion(String kernelVersion) {
         this.kernelVersion = kernelVersion;
         return this;
@@ -105,6 +114,7 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Os")
     public String os;
+
     public ContainersVersionGetInfo withOs(String os) {
         this.os = os;
         return this;
@@ -116,9 +126,11 @@ public class ContainersVersionGetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public ContainersVersionGetInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ContainersVersionGetInfo(){}
 }

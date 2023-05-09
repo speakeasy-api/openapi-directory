@@ -18,6 +18,7 @@ public class GenericResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public GenericResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -29,6 +30,7 @@ public class GenericResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GenericResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,9 +42,11 @@ public class GenericResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GenericResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public GenericResponse(){}
 }

@@ -15,6 +15,7 @@ public class ConnectionScheduleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicSchedule")
     public ConnectionScheduleDataBasicSchedule basicSchedule;
+
     public ConnectionScheduleData withBasicSchedule(ConnectionScheduleDataBasicSchedule basicSchedule) {
         this.basicSchedule = basicSchedule;
         return this;
@@ -23,9 +24,11 @@ public class ConnectionScheduleData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cron")
     public ConnectionScheduleDataCron cron;
+
     public ConnectionScheduleData withCron(ConnectionScheduleDataCron cron) {
         this.cron = cron;
         return this;
     }
     
+    public ConnectionScheduleData(){}
 }

@@ -18,6 +18,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cronSchedule")
     public String cronSchedule;
+
     public Schedule withCronSchedule(String cronSchedule) {
         this.cronSchedule = cronSchedule;
         return this;
@@ -29,9 +30,11 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paused")
     public Boolean paused;
+
     public Schedule withPaused(Boolean paused) {
         this.paused = paused;
         return this;
     }
     
+    public Schedule(){}
 }

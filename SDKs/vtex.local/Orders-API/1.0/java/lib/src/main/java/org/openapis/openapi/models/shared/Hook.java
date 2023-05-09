@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Hook {
     @JsonProperty("headers")
     public Headers headers;
+
     public Hook withHeaders(Headers headers) {
         this.headers = headers;
         return this;
@@ -16,9 +17,14 @@ public class Hook {
     
     @JsonProperty("url")
     public String url;
+
     public Hook withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Hook(@JsonProperty("headers") Headers headers, @JsonProperty("url") String url) {
+        this.headers = headers;
+        this.url = url;
+  }
 }

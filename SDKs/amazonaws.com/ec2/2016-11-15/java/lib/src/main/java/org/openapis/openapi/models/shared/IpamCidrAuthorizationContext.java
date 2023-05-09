@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IpamCidrAuthorizationContext {
     
     public String message;
+
     public IpamCidrAuthorizationContext withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,11 @@ public class IpamCidrAuthorizationContext {
     
     
     public String signature;
+
     public IpamCidrAuthorizationContext withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public IpamCidrAuthorizationContext(){}
 }

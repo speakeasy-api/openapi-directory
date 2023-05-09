@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountPropertiesResponse {
     
     public String contentType;
+
     public GetAccountPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAccountPropertiesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetAccountPropertiesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetAccountPropertiesResponse {
     
     
     public Integer statusCode;
+
     public GetAccountPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetAccountPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetAccountPropertiesResponse {
      */
     
     public GetAccountProperties200ApplicationJSON getAccountProperties200ApplicationJSONObject;
+
     public GetAccountPropertiesResponse withGetAccountProperties200ApplicationJSONObject(GetAccountProperties200ApplicationJSON getAccountProperties200ApplicationJSONObject) {
         this.getAccountProperties200ApplicationJSONObject = getAccountProperties200ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class GetAccountPropertiesResponse {
      */
     
     public GetAccountProperties400ApplicationJSON getAccountProperties400ApplicationJSONObject;
+
     public GetAccountPropertiesResponse withGetAccountProperties400ApplicationJSONObject(GetAccountProperties400ApplicationJSON getAccountProperties400ApplicationJSONObject) {
         this.getAccountProperties400ApplicationJSONObject = getAccountProperties400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class GetAccountPropertiesResponse {
      */
     
     public GetAccountProperties401ApplicationJSON getAccountProperties401ApplicationJSONObject;
+
     public GetAccountPropertiesResponse withGetAccountProperties401ApplicationJSONObject(GetAccountProperties401ApplicationJSON getAccountProperties401ApplicationJSONObject) {
         this.getAccountProperties401ApplicationJSONObject = getAccountProperties401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class GetAccountPropertiesResponse {
      */
     
     public GetAccountProperties403ApplicationJSON getAccountProperties403ApplicationJSONObject;
+
     public GetAccountPropertiesResponse withGetAccountProperties403ApplicationJSONObject(GetAccountProperties403ApplicationJSON getAccountProperties403ApplicationJSONObject) {
         this.getAccountProperties403ApplicationJSONObject = getAccountProperties403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class GetAccountPropertiesResponse {
      */
     
     public GetAccountProperties429ApplicationJSON getAccountProperties429ApplicationJSONObject;
+
     public GetAccountPropertiesResponse withGetAccountProperties429ApplicationJSONObject(GetAccountProperties429ApplicationJSON getAccountProperties429ApplicationJSONObject) {
         this.getAccountProperties429ApplicationJSONObject = getAccountProperties429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class GetAccountPropertiesResponse {
      */
     
     public GetAccountProperties500ApplicationJSON getAccountProperties500ApplicationJSONObject;
+
     public GetAccountPropertiesResponse withGetAccountProperties500ApplicationJSONObject(GetAccountProperties500ApplicationJSON getAccountProperties500ApplicationJSONObject) {
         this.getAccountProperties500ApplicationJSONObject = getAccountProperties500ApplicationJSONObject;
         return this;
     }
     
+    public GetAccountPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

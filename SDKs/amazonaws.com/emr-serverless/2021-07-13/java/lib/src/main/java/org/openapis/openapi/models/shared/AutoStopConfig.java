@@ -15,6 +15,7 @@ public class AutoStopConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AutoStopConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class AutoStopConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleTimeoutMinutes")
     public Long idleTimeoutMinutes;
+
     public AutoStopConfig withIdleTimeoutMinutes(Long idleTimeoutMinutes) {
         this.idleTimeoutMinutes = idleTimeoutMinutes;
         return this;
     }
     
+    public AutoStopConfig(){}
 }

@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETUpdateDomainEndpointOptionsDomainEndpointOptions {
     @SpeakeasyMetadata("queryParam:name=EnforceHTTPS")
     public Boolean enforceHTTPS;
+
     public GETUpdateDomainEndpointOptionsDomainEndpointOptions withEnforceHTTPS(Boolean enforceHTTPS) {
         this.enforceHTTPS = enforceHTTPS;
         return this;
@@ -19,9 +20,11 @@ public class GETUpdateDomainEndpointOptionsDomainEndpointOptions {
     
     @SpeakeasyMetadata("queryParam:name=TLSSecurityPolicy")
     public org.openapis.openapi.models.shared.TLSSecurityPolicyEnum tlsSecurityPolicy;
+
     public GETUpdateDomainEndpointOptionsDomainEndpointOptions withTLSSecurityPolicy(org.openapis.openapi.models.shared.TLSSecurityPolicyEnum tlsSecurityPolicy) {
         this.tlsSecurityPolicy = tlsSecurityPolicy;
         return this;
     }
     
+    public GETUpdateDomainEndpointOptionsDomainEndpointOptions(){}
 }

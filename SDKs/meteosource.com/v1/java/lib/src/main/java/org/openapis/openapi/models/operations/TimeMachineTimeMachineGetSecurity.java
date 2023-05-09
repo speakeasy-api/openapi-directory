@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TimeMachineTimeMachineGetSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
     public String apiKeyHeader;
+
     public TimeMachineTimeMachineGetSecurity withAPIKeyHeader(String apiKeyHeader) {
         this.apiKeyHeader = apiKeyHeader;
         return this;
     }
     
+    public TimeMachineTimeMachineGetSecurity(@JsonProperty("APIKeyHeader") String apiKeyHeader) {
+        this.apiKeyHeader = apiKeyHeader;
+  }
 }

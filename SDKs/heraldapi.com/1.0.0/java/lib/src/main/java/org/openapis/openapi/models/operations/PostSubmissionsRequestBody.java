@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostSubmissionsRequestBody {
     @JsonProperty("application")
     public Object application;
+
     public PostSubmissionsRequestBody withApplication(Object application) {
         this.application = application;
         return this;
@@ -16,9 +17,14 @@ public class PostSubmissionsRequestBody {
     
     @JsonProperty("producer_id")
     public String producerId;
+
     public PostSubmissionsRequestBody withProducerId(String producerId) {
         this.producerId = producerId;
         return this;
     }
     
+    public PostSubmissionsRequestBody(@JsonProperty("application") Object application, @JsonProperty("producer_id") String producerId) {
+        this.application = application;
+        this.producerId = producerId;
+  }
 }

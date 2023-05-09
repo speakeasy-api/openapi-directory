@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResultClientVpnEndpointsClientLoginBannerOptions {
     
     public String bannerText;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsClientLoginBannerOptions withBannerText(String bannerText) {
         this.bannerText = bannerText;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpointsClientLoginBanner
     
     
     public Boolean enabled;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsClientLoginBannerOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResultClientVpnEndpointsClientLoginBannerOptions(){}
 }

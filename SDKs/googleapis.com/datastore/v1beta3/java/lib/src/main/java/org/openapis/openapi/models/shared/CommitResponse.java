@@ -18,6 +18,7 @@ public class CommitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitTime")
     public String commitTime;
+
     public CommitResponse withCommitTime(String commitTime) {
         this.commitTime = commitTime;
         return this;
@@ -29,6 +30,7 @@ public class CommitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexUpdates")
     public Integer indexUpdates;
+
     public CommitResponse withIndexUpdates(Integer indexUpdates) {
         this.indexUpdates = indexUpdates;
         return this;
@@ -40,9 +42,11 @@ public class CommitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutationResults")
     public MutationResult[] mutationResults;
+
     public CommitResponse withMutationResults(MutationResult[] mutationResults) {
         this.mutationResults = mutationResults;
         return this;
     }
     
+    public CommitResponse(){}
 }

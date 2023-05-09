@@ -18,6 +18,7 @@ public class MonitoringDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public String[] metrics;
+
     public MonitoringDestination withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -29,9 +30,11 @@ public class MonitoringDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoredResource")
     public String monitoredResource;
+
     public MonitoringDestination withMonitoredResource(String monitoredResource) {
         this.monitoredResource = monitoredResource;
         return this;
     }
     
+    public MonitoringDestination(){}
 }

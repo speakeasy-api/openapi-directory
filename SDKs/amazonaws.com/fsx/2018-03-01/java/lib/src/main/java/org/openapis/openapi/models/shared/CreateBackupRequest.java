@@ -15,6 +15,7 @@ public class CreateBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateBackupRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -23,6 +24,7 @@ public class CreateBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public CreateBackupRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -31,6 +33,7 @@ public class CreateBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateBackupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -39,9 +42,11 @@ public class CreateBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public CreateBackupRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public CreateBackupRequest(){}
 }

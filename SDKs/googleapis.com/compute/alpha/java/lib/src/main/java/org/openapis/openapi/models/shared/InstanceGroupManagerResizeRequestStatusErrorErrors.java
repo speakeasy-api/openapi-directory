@@ -15,6 +15,7 @@ public class InstanceGroupManagerResizeRequestStatusErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public InstanceGroupManagerResizeRequestStatusErrorErrors withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class InstanceGroupManagerResizeRequestStatusErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDetails")
     public InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails[] errorDetails;
+
     public InstanceGroupManagerResizeRequestStatusErrorErrors withErrorDetails(InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails[] errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -37,6 +39,7 @@ public class InstanceGroupManagerResizeRequestStatusErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public InstanceGroupManagerResizeRequestStatusErrorErrors withLocation(String location) {
         this.location = location;
         return this;
@@ -48,9 +51,11 @@ public class InstanceGroupManagerResizeRequestStatusErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstanceGroupManagerResizeRequestStatusErrorErrors withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceGroupManagerResizeRequestStatusErrorErrors(){}
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreatorRolesListRequest;
 import org.openapis.openapi.models.operations.CreatorRolesListResponse;
 
@@ -27,18 +26,20 @@ public class Application {
                 .build();
 
             CreatorRolesListRequest req = new CreatorRolesListRequest() {{
-                page = 548814;
-                pageSize = 592845;
-            }}            
+                page = 548814L;
+                pageSize = 592845L;
+            }};            
 
             CreatorRolesListResponse res = sdk.creatorRoles.creatorRolesList(req);
 
-            if (res.creatorRolesList200ApplicationJSONObject.isPresent()) {
+            if (res.creatorRolesList200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,62 +47,62 @@ public class Application {
 ## Available Resources and Operations
 
 
-### creatorRoles
+### [creatorRoles](docs/creatorroles/README.md)
 
-* `creatorRolesList` - Get a list of creator positions (jobs).
+* [creatorRolesList](docs/creatorroles/README.md#creatorroleslist) - Get a list of creator positions (jobs).
 
-### creators
+### [creators](docs/creators/README.md)
 
-* `creatorsList` - Get a list of game creators.
-* `creatorsRead` - Get details of the creator.
+* [creatorsList](docs/creators/README.md#creatorslist) - Get a list of game creators.
+* [creatorsRead](docs/creators/README.md#creatorsread) - Get details of the creator.
 
-### developers
+### [developers](docs/developers/README.md)
 
-* `developersList` - Get a list of game developers.
-* `developersRead` - Get details of the developer.
+* [developersList](docs/developers/README.md#developerslist) - Get a list of game developers.
+* [developersRead](docs/developers/README.md#developersread) - Get details of the developer.
 
-### games
+### [games](docs/games/README.md)
 
-* `gamesAchievementsRead` - Get a list of game achievements.
-* `gamesAdditionsList` - Get a list of DLC's for the game, GOTY and other editions, companion apps, etc.
-* `gamesDevelopmentTeamList` - Get a list of individual creators that were part of the development team.
-* `gamesGameSeriesList` - Get a list of games that are part of the same series.
-* `gamesList` - Get a list of games.
-* `gamesMoviesRead` - Get a list of game trailers.
-* `gamesParentGamesList` - Get a list of parent games for DLC's and editions.
-* `gamesRead` - Get details of the game.
-* `gamesRedditRead` - Get a list of most recent posts from the game's subreddit.
-* `gamesScreenshotsList` - Get screenshots for the game.
-* `gamesStoresList` - Get links to the stores that sell the game.
-* `gamesSuggestedRead` - Get a list of visually similar games, available only for business and enterprise API users.
-* `gamesTwitchRead` - Get streams on Twitch associated with the game, available only for business and enterprise API users.
-* `gamesYoutubeRead` - Get videos from YouTube associated with the game, available only for business and enterprise API users.
+* [gamesAchievementsRead](docs/games/README.md#gamesachievementsread) - Get a list of game achievements.
+* [gamesAdditionsList](docs/games/README.md#gamesadditionslist) - Get a list of DLC's for the game, GOTY and other editions, companion apps, etc.
+* [gamesDevelopmentTeamList](docs/games/README.md#gamesdevelopmentteamlist) - Get a list of individual creators that were part of the development team.
+* [gamesGameSeriesList](docs/games/README.md#gamesgameserieslist) - Get a list of games that are part of the same series.
+* [gamesList](docs/games/README.md#gameslist) - Get a list of games.
+* [gamesMoviesRead](docs/games/README.md#gamesmoviesread) - Get a list of game trailers.
+* [gamesParentGamesList](docs/games/README.md#gamesparentgameslist) - Get a list of parent games for DLC's and editions.
+* [gamesRead](docs/games/README.md#gamesread) - Get details of the game.
+* [gamesRedditRead](docs/games/README.md#gamesredditread) - Get a list of most recent posts from the game's subreddit.
+* [gamesScreenshotsList](docs/games/README.md#gamesscreenshotslist) - Get screenshots for the game.
+* [gamesStoresList](docs/games/README.md#gamesstoreslist) - Get links to the stores that sell the game.
+* [gamesSuggestedRead](docs/games/README.md#gamessuggestedread) - Get a list of visually similar games, available only for business and enterprise API users.
+* [gamesTwitchRead](docs/games/README.md#gamestwitchread) - Get streams on Twitch associated with the game, available only for business and enterprise API users.
+* [gamesYoutubeRead](docs/games/README.md#gamesyoutuberead) - Get videos from YouTube associated with the game, available only for business and enterprise API users.
 
-### genres
+### [genres](docs/genres/README.md)
 
-* `genresList` - Get a list of video game genres.
-* `genresRead` - Get details of the genre.
+* [genresList](docs/genres/README.md#genreslist) - Get a list of video game genres.
+* [genresRead](docs/genres/README.md#genresread) - Get details of the genre.
 
-### platforms
+### [platforms](docs/platforms/README.md)
 
-* `platformsList` - Get a list of video game platforms.
-* `platformsListsParentsList` - Get a list of parent platforms.
-* `platformsRead` - Get details of the platform.
+* [platformsList](docs/platforms/README.md#platformslist) - Get a list of video game platforms.
+* [platformsListsParentsList](docs/platforms/README.md#platformslistsparentslist) - Get a list of parent platforms.
+* [platformsRead](docs/platforms/README.md#platformsread) - Get details of the platform.
 
-### publishers
+### [publishers](docs/publishers/README.md)
 
-* `publishersList` - Get a list of video game publishers.
-* `publishersRead` - Get details of the publisher.
+* [publishersList](docs/publishers/README.md#publisherslist) - Get a list of video game publishers.
+* [publishersRead](docs/publishers/README.md#publishersread) - Get details of the publisher.
 
-### stores
+### [stores](docs/stores/README.md)
 
-* `storesList` - Get a list of video game storefronts.
-* `storesRead` - Get details of the store.
+* [storesList](docs/stores/README.md#storeslist) - Get a list of video game storefronts.
+* [storesRead](docs/stores/README.md#storesread) - Get details of the store.
 
-### tags
+### [tags](docs/tags/README.md)
 
-* `tagsList` - Get a list of tags.
-* `tagsRead` - Get details of the tag.
+* [tagsList](docs/tags/README.md#tagslist) - Get a list of tags.
+* [tagsRead](docs/tags/README.md#tagsread) - Get details of the tag.
 <!-- End SDK Available Operations -->
 
 ### Maturity

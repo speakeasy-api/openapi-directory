@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContactPolicyResponse {
@@ -12,6 +13,7 @@ public class GetContactPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContactPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetContactPolicyResponse {
     
     
     public String contentType;
+
     public GetContactPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContactPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContactPolicyResult getContactPolicyResult;
+
     public GetContactPolicyResponse withGetContactPolicyResult(org.openapis.openapi.models.shared.GetContactPolicyResult getContactPolicyResult) {
         this.getContactPolicyResult = getContactPolicyResult;
         return this;
@@ -39,6 +43,7 @@ public class GetContactPolicyResponse {
      */
     
     public Object internalServerException;
+
     public GetContactPolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetContactPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetContactPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetContactPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContactPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetContactPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetContactPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetContactPolicyResponse {
      */
     
     public Object throttlingException;
+
     public GetContactPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetContactPolicyResponse {
      */
     
     public Object validationException;
+
     public GetContactPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetContactPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

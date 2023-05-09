@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidpublisherEditsDeobfuscationfilesUploadResponse {
     
     public String contentType;
+
     public AndroidpublisherEditsDeobfuscationfilesUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherEditsDeobfuscationfilesUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.DeobfuscationFilesUploadResponse deobfuscationFilesUploadResponse;
+
     public AndroidpublisherEditsDeobfuscationfilesUploadResponse withDeobfuscationFilesUploadResponse(org.openapis.openapi.models.shared.DeobfuscationFilesUploadResponse deobfuscationFilesUploadResponse) {
         this.deobfuscationFilesUploadResponse = deobfuscationFilesUploadResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroidpublisherEditsDeobfuscationfilesUploadResponse {
     
     
     public Integer statusCode;
+
     public AndroidpublisherEditsDeobfuscationfilesUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidpublisherEditsDeobfuscationfilesUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidpublisherEditsDeobfuscationfilesUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidpublisherEditsDeobfuscationfilesUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

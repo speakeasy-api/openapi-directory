@@ -18,6 +18,7 @@ public class JobMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public JobMessage withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class JobMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageImportance")
     public JobMessageMessageImportanceEnum messageImportance;
+
     public JobMessage withMessageImportance(JobMessageMessageImportanceEnum messageImportance) {
         this.messageImportance = messageImportance;
         return this;
@@ -40,6 +42,7 @@ public class JobMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageText")
     public String messageText;
+
     public JobMessage withMessageText(String messageText) {
         this.messageText = messageText;
         return this;
@@ -51,9 +54,11 @@ public class JobMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public JobMessage withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public JobMessage(){}
 }

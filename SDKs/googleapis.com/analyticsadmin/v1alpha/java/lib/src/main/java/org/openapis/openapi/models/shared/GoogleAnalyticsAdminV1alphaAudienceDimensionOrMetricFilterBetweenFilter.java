@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromValue")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue fromValue;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter withFromValue(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue fromValue) {
         this.fromValue = fromValue;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toValue")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue toValue;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter withToValue(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue toValue) {
         this.toValue = toValue;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter(){}
 }

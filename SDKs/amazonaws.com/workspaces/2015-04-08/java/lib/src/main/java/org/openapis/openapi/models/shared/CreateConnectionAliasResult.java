@@ -15,9 +15,11 @@ public class CreateConnectionAliasResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasId")
     public String aliasId;
+
     public CreateConnectionAliasResult withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
     }
     
+    public CreateConnectionAliasResult(){}
 }

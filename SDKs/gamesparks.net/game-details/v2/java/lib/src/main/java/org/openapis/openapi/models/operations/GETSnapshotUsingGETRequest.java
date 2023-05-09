@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSnapshotUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETSnapshotUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GETSnapshotUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class GETSnapshotUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId")
     public String snapshotId;
+
     public GETSnapshotUsingGETRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public GETSnapshotUsingGETRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("snapshotId") String snapshotId) {
+        this.apiKey = apiKey;
+        this.snapshotId = snapshotId;
+  }
 }

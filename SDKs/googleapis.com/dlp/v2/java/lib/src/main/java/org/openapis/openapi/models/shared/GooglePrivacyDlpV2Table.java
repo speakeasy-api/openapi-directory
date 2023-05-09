@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public GooglePrivacyDlpV2FieldId[] headers;
+
     public GooglePrivacyDlpV2Table withHeaders(GooglePrivacyDlpV2FieldId[] headers) {
         this.headers = headers;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public GooglePrivacyDlpV2Row[] rows;
+
     public GooglePrivacyDlpV2Table withRows(GooglePrivacyDlpV2Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public GooglePrivacyDlpV2Table(){}
 }

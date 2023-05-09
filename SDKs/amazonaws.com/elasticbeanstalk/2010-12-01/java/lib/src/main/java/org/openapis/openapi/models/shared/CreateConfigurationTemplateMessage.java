@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateConfigurationTemplateMessage - Request to create a configuration template.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateConfigurationTemplateMessage {
     
     public String applicationName;
+
     public CreateConfigurationTemplateMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class CreateConfigurationTemplateMessage {
     
     
     public String description;
+
     public CreateConfigurationTemplateMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateConfigurationTemplateMessage {
     
     
     public String environmentId;
+
     public CreateConfigurationTemplateMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -33,6 +36,7 @@ public class CreateConfigurationTemplateMessage {
     
     
     public ConfigurationOptionSetting[] optionSettings;
+
     public CreateConfigurationTemplateMessage withOptionSettings(ConfigurationOptionSetting[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -40,6 +44,7 @@ public class CreateConfigurationTemplateMessage {
     
     
     public String platformArn;
+
     public CreateConfigurationTemplateMessage withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -47,6 +52,7 @@ public class CreateConfigurationTemplateMessage {
     
     
     public String solutionStackName;
+
     public CreateConfigurationTemplateMessage withSolutionStackName(String solutionStackName) {
         this.solutionStackName = solutionStackName;
         return this;
@@ -54,6 +60,7 @@ public class CreateConfigurationTemplateMessage {
     
     
     public SourceConfiguration sourceConfiguration;
+
     public CreateConfigurationTemplateMessage withSourceConfiguration(SourceConfiguration sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
@@ -61,6 +68,7 @@ public class CreateConfigurationTemplateMessage {
     
     
     public Tag[] tags;
+
     public CreateConfigurationTemplateMessage withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -68,9 +76,14 @@ public class CreateConfigurationTemplateMessage {
     
     
     public String templateName;
+
     public CreateConfigurationTemplateMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public CreateConfigurationTemplateMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("TemplateName") String templateName) {
+        this.applicationName = applicationName;
+        this.templateName = templateName;
+  }
 }

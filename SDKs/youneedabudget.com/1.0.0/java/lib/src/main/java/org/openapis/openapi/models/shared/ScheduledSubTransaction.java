@@ -14,6 +14,7 @@ public class ScheduledSubTransaction {
      */
     @JsonProperty("amount")
     public Long amount;
+
     public ScheduledSubTransaction withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class ScheduledSubTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public String categoryId;
+
     public ScheduledSubTransaction withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -32,6 +34,7 @@ public class ScheduledSubTransaction {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public ScheduledSubTransaction withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -39,6 +42,7 @@ public class ScheduledSubTransaction {
     
     @JsonProperty("id")
     public String id;
+
     public ScheduledSubTransaction withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class ScheduledSubTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public ScheduledSubTransaction withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -55,6 +60,7 @@ public class ScheduledSubTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_id")
     public String payeeId;
+
     public ScheduledSubTransaction withPayeeId(String payeeId) {
         this.payeeId = payeeId;
         return this;
@@ -62,6 +68,7 @@ public class ScheduledSubTransaction {
     
     @JsonProperty("scheduled_transaction_id")
     public String scheduledTransactionId;
+
     public ScheduledSubTransaction withScheduledTransactionId(String scheduledTransactionId) {
         this.scheduledTransactionId = scheduledTransactionId;
         return this;
@@ -73,9 +80,16 @@ public class ScheduledSubTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer_account_id")
     public String transferAccountId;
+
     public ScheduledSubTransaction withTransferAccountId(String transferAccountId) {
         this.transferAccountId = transferAccountId;
         return this;
     }
     
+    public ScheduledSubTransaction(@JsonProperty("amount") Long amount, @JsonProperty("deleted") Boolean deleted, @JsonProperty("id") String id, @JsonProperty("scheduled_transaction_id") String scheduledTransactionId) {
+        this.amount = amount;
+        this.deleted = deleted;
+        this.id = id;
+        this.scheduledTransactionId = scheduledTransactionId;
+  }
 }

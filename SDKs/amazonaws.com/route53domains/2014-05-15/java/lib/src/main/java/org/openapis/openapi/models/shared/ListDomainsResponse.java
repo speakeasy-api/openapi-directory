@@ -15,6 +15,7 @@ public class ListDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domains")
     public DomainSummary[] domains;
+
     public ListDomainsResponse withDomains(DomainSummary[] domains) {
         this.domains = domains;
         return this;
@@ -23,9 +24,11 @@ public class ListDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageMarker")
     public String nextPageMarker;
+
     public ListDomainsResponse withNextPageMarker(String nextPageMarker) {
         this.nextPageMarker = nextPageMarker;
         return this;
     }
     
+    public ListDomainsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDownloadArtifactRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=archive_format")
     public String archiveFormat;
+
     public ActionsDownloadArtifactRequest withArchiveFormat(String archiveFormat) {
         this.archiveFormat = archiveFormat;
         return this;
@@ -19,6 +21,7 @@ public class ActionsDownloadArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifact_id")
     public Long artifactId;
+
     public ActionsDownloadArtifactRequest withArtifactId(Long artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -29,6 +32,7 @@ public class ActionsDownloadArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsDownloadArtifactRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,16 @@ public class ActionsDownloadArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsDownloadArtifactRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActionsDownloadArtifactRequest(@JsonProperty("archive_format") String archiveFormat, @JsonProperty("artifact_id") Long artifactId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.archiveFormat = archiveFormat;
+        this.artifactId = artifactId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

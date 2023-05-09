@@ -18,6 +18,7 @@ public class ListTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTemplatesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public CustomTemplate[] template;
+
     public ListTemplatesResponse withTemplate(CustomTemplate[] template) {
         this.template = template;
         return this;
     }
     
+    public ListTemplatesResponse(){}
 }

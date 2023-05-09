@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TravelpartnerAccountsPriceCoverageViewsListResponse {
     
     public String contentType;
+
     public TravelpartnerAccountsPriceCoverageViewsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TravelpartnerAccountsPriceCoverageViewsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPriceCoverageViewsResponse listPriceCoverageViewsResponse;
+
     public TravelpartnerAccountsPriceCoverageViewsListResponse withListPriceCoverageViewsResponse(org.openapis.openapi.models.shared.ListPriceCoverageViewsResponse listPriceCoverageViewsResponse) {
         this.listPriceCoverageViewsResponse = listPriceCoverageViewsResponse;
         return this;
@@ -26,6 +29,7 @@ public class TravelpartnerAccountsPriceCoverageViewsListResponse {
     
     
     public Integer statusCode;
+
     public TravelpartnerAccountsPriceCoverageViewsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TravelpartnerAccountsPriceCoverageViewsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TravelpartnerAccountsPriceCoverageViewsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TravelpartnerAccountsPriceCoverageViewsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

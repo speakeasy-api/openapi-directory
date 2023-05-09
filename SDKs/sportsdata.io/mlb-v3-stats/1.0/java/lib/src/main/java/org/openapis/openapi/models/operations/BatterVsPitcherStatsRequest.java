@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatterVsPitcherStatsRequest {
@@ -12,6 +13,7 @@ public class BatterVsPitcherStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public BatterVsPitcherStatsFormatEnum format;
+
     public BatterVsPitcherStatsRequest withFormat(BatterVsPitcherStatsFormatEnum format) {
         this.format = format;
         return this;
@@ -23,6 +25,7 @@ public class BatterVsPitcherStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hitterid")
     public String hitterid;
+
     public BatterVsPitcherStatsRequest withHitterid(String hitterid) {
         this.hitterid = hitterid;
         return this;
@@ -34,9 +37,15 @@ public class BatterVsPitcherStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pitcherid")
     public String pitcherid;
+
     public BatterVsPitcherStatsRequest withPitcherid(String pitcherid) {
         this.pitcherid = pitcherid;
         return this;
     }
     
+    public BatterVsPitcherStatsRequest(@JsonProperty("format") BatterVsPitcherStatsFormatEnum format, @JsonProperty("hitterid") String hitterid, @JsonProperty("pitcherid") String pitcherid) {
+        this.format = format;
+        this.hitterid = hitterid;
+        this.pitcherid = pitcherid;
+  }
 }

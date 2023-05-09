@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReturnPolicyResponse {
     
     public String contentType;
+
     public CreateReturnPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateReturnPolicyResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateReturnPolicyResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class CreateReturnPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.SetReturnPolicyResponse setReturnPolicyResponse;
+
     public CreateReturnPolicyResponse withSetReturnPolicyResponse(org.openapis.openapi.models.shared.SetReturnPolicyResponse setReturnPolicyResponse) {
         this.setReturnPolicyResponse = setReturnPolicyResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateReturnPolicyResponse {
     
     
     public Integer statusCode;
+
     public CreateReturnPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class CreateReturnPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReturnPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateReturnPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateVpcEndpointResultVpcEndpoint {
     
     public OffsetDateTime creationTimestamp;
+
     public CreateVpcEndpointResultVpcEndpoint withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public CreateVpcEndpointResultVpcEndpointDnsEntries[] dnsEntries;
+
     public CreateVpcEndpointResultVpcEndpoint withDnsEntries(CreateVpcEndpointResultVpcEndpointDnsEntries[] dnsEntries) {
         this.dnsEntries = dnsEntries;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public CreateVpcEndpointResultVpcEndpointDnsOptions dnsOptions;
+
     public CreateVpcEndpointResultVpcEndpoint withDnsOptions(CreateVpcEndpointResultVpcEndpointDnsOptions dnsOptions) {
         this.dnsOptions = dnsOptions;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public CreateVpcEndpointResultVpcEndpointGroups[] groups;
+
     public CreateVpcEndpointResultVpcEndpoint withGroups(CreateVpcEndpointResultVpcEndpointGroups[] groups) {
         this.groups = groups;
         return this;
@@ -40,6 +44,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public CreateVpcEndpointResultVpcEndpointIpAddressTypeEnum ipAddressType;
+
     public CreateVpcEndpointResultVpcEndpoint withIpAddressType(CreateVpcEndpointResultVpcEndpointIpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -47,6 +52,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public CreateVpcEndpointResultVpcEndpointLastError lastError;
+
     public CreateVpcEndpointResultVpcEndpoint withLastError(CreateVpcEndpointResultVpcEndpointLastError lastError) {
         this.lastError = lastError;
         return this;
@@ -54,6 +60,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public String[] networkInterfaceIds;
+
     public CreateVpcEndpointResultVpcEndpoint withNetworkInterfaceIds(String[] networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
@@ -61,6 +68,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public String ownerId;
+
     public CreateVpcEndpointResultVpcEndpoint withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public String policyDocument;
+
     public CreateVpcEndpointResultVpcEndpoint withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -75,6 +84,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public Boolean privateDnsEnabled;
+
     public CreateVpcEndpointResultVpcEndpoint withPrivateDnsEnabled(Boolean privateDnsEnabled) {
         this.privateDnsEnabled = privateDnsEnabled;
         return this;
@@ -82,6 +92,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public Boolean requesterManaged;
+
     public CreateVpcEndpointResultVpcEndpoint withRequesterManaged(Boolean requesterManaged) {
         this.requesterManaged = requesterManaged;
         return this;
@@ -89,6 +100,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public String[] routeTableIds;
+
     public CreateVpcEndpointResultVpcEndpoint withRouteTableIds(String[] routeTableIds) {
         this.routeTableIds = routeTableIds;
         return this;
@@ -96,6 +108,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public String serviceName;
+
     public CreateVpcEndpointResultVpcEndpoint withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -103,6 +116,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public CreateVpcEndpointResultVpcEndpointStateEnum state;
+
     public CreateVpcEndpointResultVpcEndpoint withState(CreateVpcEndpointResultVpcEndpointStateEnum state) {
         this.state = state;
         return this;
@@ -110,6 +124,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public String[] subnetIds;
+
     public CreateVpcEndpointResultVpcEndpoint withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -117,6 +132,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public CreateVpcEndpointResultVpcEndpointTags[] tags;
+
     public CreateVpcEndpointResultVpcEndpoint withTags(CreateVpcEndpointResultVpcEndpointTags[] tags) {
         this.tags = tags;
         return this;
@@ -124,6 +140,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public String vpcEndpointId;
+
     public CreateVpcEndpointResultVpcEndpoint withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -131,6 +148,7 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum vpcEndpointType;
+
     public CreateVpcEndpointResultVpcEndpoint withVpcEndpointType(CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum vpcEndpointType) {
         this.vpcEndpointType = vpcEndpointType;
         return this;
@@ -138,9 +156,11 @@ public class CreateVpcEndpointResultVpcEndpoint {
     
     
     public String vpcId;
+
     public CreateVpcEndpointResultVpcEndpoint withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateVpcEndpointResultVpcEndpoint(){}
 }

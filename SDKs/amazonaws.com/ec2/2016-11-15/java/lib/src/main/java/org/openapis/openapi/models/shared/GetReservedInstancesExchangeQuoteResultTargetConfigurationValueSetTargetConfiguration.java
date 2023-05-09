@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetTargetConfiguration {
     
     public Long instanceCount;
+
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetTargetConfiguration withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -19,9 +20,11 @@ public class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetT
     
     
     public String offeringId;
+
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetTargetConfiguration withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetTargetConfiguration(){}
 }

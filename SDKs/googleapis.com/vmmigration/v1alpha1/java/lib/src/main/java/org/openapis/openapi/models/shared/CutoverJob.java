@@ -18,6 +18,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEngineTargetDetails")
     public ComputeEngineTargetDetails computeEngineTargetDetails;
+
     public CutoverJob withComputeEngineTargetDetails(ComputeEngineTargetDetails computeEngineTargetDetails) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         return this;
@@ -29,6 +30,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEngineVmDetails")
     public TargetVMDetails computeEngineVmDetails;
+
     public CutoverJob withComputeEngineVmDetails(TargetVMDetails computeEngineVmDetails) {
         this.computeEngineVmDetails = computeEngineVmDetails;
         return this;
@@ -40,6 +42,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public CutoverJob withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public CutoverJob withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -62,6 +66,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public CutoverJob withError(Status error) {
         this.error = error;
         return this;
@@ -73,6 +78,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CutoverJob withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public Integer progress;
+
     public CutoverJob withProgress(Integer progress) {
         this.progress = progress;
         return this;
@@ -95,6 +102,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressPercent")
     public Integer progressPercent;
+
     public CutoverJob withProgressPercent(Integer progressPercent) {
         this.progressPercent = progressPercent;
         return this;
@@ -106,6 +114,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CutoverJobStateEnum state;
+
     public CutoverJob withState(CutoverJobStateEnum state) {
         this.state = state;
         return this;
@@ -117,6 +126,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMessage")
     public String stateMessage;
+
     public CutoverJob withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -128,6 +138,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateTime")
     public String stateTime;
+
     public CutoverJob withStateTime(String stateTime) {
         this.stateTime = stateTime;
         return this;
@@ -139,6 +150,7 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public CutoverStep[] steps;
+
     public CutoverJob withSteps(CutoverStep[] steps) {
         this.steps = steps;
         return this;
@@ -150,9 +162,11 @@ public class CutoverJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDetails")
     public TargetVMDetails targetDetails;
+
     public CutoverJob withTargetDetails(TargetVMDetails targetDetails) {
         this.targetDetails = targetDetails;
         return this;
     }
     
+    public CutoverJob(){}
 }

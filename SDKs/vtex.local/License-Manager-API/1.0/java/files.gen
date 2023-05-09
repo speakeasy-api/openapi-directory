@@ -85,4 +85,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListUsersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserItems.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/account/README.md
+docs/appkeys/README.md
+docs/roles/README.md
+docs/store/README.md
+docs/user/README.md
 USAGE.md

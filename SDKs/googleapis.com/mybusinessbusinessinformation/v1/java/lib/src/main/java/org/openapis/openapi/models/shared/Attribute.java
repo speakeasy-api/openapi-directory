@@ -18,6 +18,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Attribute withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeatedEnumValue")
     public RepeatedEnumAttributeValue repeatedEnumValue;
+
     public Attribute withRepeatedEnumValue(RepeatedEnumAttributeValue repeatedEnumValue) {
         this.repeatedEnumValue = repeatedEnumValue;
         return this;
@@ -40,6 +42,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uriValues")
     public UriAttributeValue[] uriValues;
+
     public Attribute withUriValues(UriAttributeValue[] uriValues) {
         this.uriValues = uriValues;
         return this;
@@ -51,6 +54,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueType")
     public AttributeValueTypeEnum valueType;
+
     public Attribute withValueType(AttributeValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
@@ -62,9 +66,11 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Object[] values;
+
     public Attribute withValues(Object[] values) {
         this.values = values;
         return this;
     }
     
+    public Attribute(){}
 }

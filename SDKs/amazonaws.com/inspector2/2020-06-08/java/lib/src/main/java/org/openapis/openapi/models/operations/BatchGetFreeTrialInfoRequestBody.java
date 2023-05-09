@@ -12,9 +12,13 @@ public class BatchGetFreeTrialInfoRequestBody {
      */
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public BatchGetFreeTrialInfoRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
     }
     
+    public BatchGetFreeTrialInfoRequestBody(@JsonProperty("accountIds") String[] accountIds) {
+        this.accountIds = accountIds;
+  }
 }

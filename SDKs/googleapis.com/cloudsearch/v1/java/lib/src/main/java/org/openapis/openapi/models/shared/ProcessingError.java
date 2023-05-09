@@ -15,6 +15,7 @@ public class ProcessingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ProcessingErrorCodeEnum code;
+
     public ProcessingError withCode(ProcessingErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class ProcessingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ProcessingError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -37,9 +39,11 @@ public class ProcessingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldViolations")
     public FieldViolation[] fieldViolations;
+
     public ProcessingError withFieldViolations(FieldViolation[] fieldViolations) {
         this.fieldViolations = fieldViolations;
         return this;
     }
     
+    public ProcessingError(){}
 }

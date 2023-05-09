@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifact")
     public String artifact;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest withArtifact(String artifact) {
         this.artifact = artifact;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assertion")
     public String assertion;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest withAssertion(String assertion) {
         this.assertion = assertion;
         return this;
@@ -40,9 +42,11 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challenge")
     public String challenge;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest withChallenge(String challenge) {
         this.challenge = challenge;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest(){}
 }

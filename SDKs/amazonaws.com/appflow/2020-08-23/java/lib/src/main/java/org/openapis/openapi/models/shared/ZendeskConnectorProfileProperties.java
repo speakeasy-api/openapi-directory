@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ZendeskConnectorProfileProperties {
     @JsonProperty("instanceUrl")
     public String instanceUrl;
+
     public ZendeskConnectorProfileProperties withInstanceUrl(String instanceUrl) {
         this.instanceUrl = instanceUrl;
         return this;
     }
     
+    public ZendeskConnectorProfileProperties(@JsonProperty("instanceUrl") String instanceUrl) {
+        this.instanceUrl = instanceUrl;
+  }
 }

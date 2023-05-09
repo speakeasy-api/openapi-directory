@@ -15,6 +15,7 @@ public class StoppingCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRuntimeInSeconds")
     public Long maxRuntimeInSeconds;
+
     public StoppingCondition withMaxRuntimeInSeconds(Long maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
         return this;
@@ -23,9 +24,11 @@ public class StoppingCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxWaitTimeInSeconds")
     public Long maxWaitTimeInSeconds;
+
     public StoppingCondition withMaxWaitTimeInSeconds(Long maxWaitTimeInSeconds) {
         this.maxWaitTimeInSeconds = maxWaitTimeInSeconds;
         return this;
     }
     
+    public StoppingCondition(){}
 }

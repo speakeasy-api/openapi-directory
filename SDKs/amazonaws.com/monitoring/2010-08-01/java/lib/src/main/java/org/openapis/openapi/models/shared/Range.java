@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class Range {
     
     public OffsetDateTime endTime;
+
     public Range withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -19,9 +21,14 @@ public class Range {
     
     
     public OffsetDateTime startTime;
+
     public Range withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public Range(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

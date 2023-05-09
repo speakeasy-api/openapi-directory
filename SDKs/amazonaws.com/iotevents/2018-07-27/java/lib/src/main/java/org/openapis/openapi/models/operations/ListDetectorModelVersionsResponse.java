@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDetectorModelVersionsResponse {
     
     public String contentType;
+
     public ListDetectorModelVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDetectorModelVersionsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDetectorModelVersionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDetectorModelVersionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDetectorModelVersionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDetectorModelVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDetectorModelVersionsResponse listDetectorModelVersionsResponse;
+
     public ListDetectorModelVersionsResponse withListDetectorModelVersionsResponse(org.openapis.openapi.models.shared.ListDetectorModelVersionsResponse listDetectorModelVersionsResponse) {
         this.listDetectorModelVersionsResponse = listDetectorModelVersionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDetectorModelVersionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListDetectorModelVersionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListDetectorModelVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListDetectorModelVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDetectorModelVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDetectorModelVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListDetectorModelVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDetectorModelVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListDetectorModelVersionsResponse {
      */
     
     public Object throttlingException;
+
     public ListDetectorModelVersionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDetectorModelVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

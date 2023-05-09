@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ManagedRule -  Contains the information that's required to enable a managed Contributor Insights rule for an Amazon Web Services resource. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ManagedRule {
     
     public String resourceARN;
+
     public ManagedRule withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -19,6 +20,7 @@ public class ManagedRule {
     
     
     public Tag[] tags;
+
     public ManagedRule withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -26,9 +28,14 @@ public class ManagedRule {
     
     
     public String templateName;
+
     public ManagedRule withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ManagedRule(@JsonProperty("ResourceARN") String resourceARN, @JsonProperty("TemplateName") String templateName) {
+        this.resourceARN = resourceARN;
+        this.templateName = templateName;
+  }
 }

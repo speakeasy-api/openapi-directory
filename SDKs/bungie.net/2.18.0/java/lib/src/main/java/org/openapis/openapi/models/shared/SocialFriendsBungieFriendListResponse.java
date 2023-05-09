@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class SocialFriendsBungieFriendListResponse {
     
     public SocialFriendsBungieFriend[] friends;
+
     public SocialFriendsBungieFriendListResponse withFriends(SocialFriendsBungieFriend[] friends) {
         this.friends = friends;
         return this;
     }
     
+    public SocialFriendsBungieFriendListResponse(){}
 }

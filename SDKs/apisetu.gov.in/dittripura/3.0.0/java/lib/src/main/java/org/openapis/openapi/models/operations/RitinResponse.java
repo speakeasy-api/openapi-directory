@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RitinResponse {
     
     public String contentType;
+
     public RitinResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RitinResponse {
     
     
     public Integer statusCode;
+
     public RitinResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RitinResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RitinResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RitinResponse {
      */
     
     public Ritin400ApplicationJSON ritin400ApplicationJSONObject;
+
     public RitinResponse withRitin400ApplicationJSONObject(Ritin400ApplicationJSON ritin400ApplicationJSONObject) {
         this.ritin400ApplicationJSONObject = ritin400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RitinResponse {
      */
     
     public Ritin401ApplicationJSON ritin401ApplicationJSONObject;
+
     public RitinResponse withRitin401ApplicationJSONObject(Ritin401ApplicationJSON ritin401ApplicationJSONObject) {
         this.ritin401ApplicationJSONObject = ritin401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RitinResponse {
      */
     
     public Ritin404ApplicationJSON ritin404ApplicationJSONObject;
+
     public RitinResponse withRitin404ApplicationJSONObject(Ritin404ApplicationJSON ritin404ApplicationJSONObject) {
         this.ritin404ApplicationJSONObject = ritin404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RitinResponse {
      */
     
     public Ritin500ApplicationJSON ritin500ApplicationJSONObject;
+
     public RitinResponse withRitin500ApplicationJSONObject(Ritin500ApplicationJSON ritin500ApplicationJSONObject) {
         this.ritin500ApplicationJSONObject = ritin500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class RitinResponse {
      */
     
     public Ritin502ApplicationJSON ritin502ApplicationJSONObject;
+
     public RitinResponse withRitin502ApplicationJSONObject(Ritin502ApplicationJSON ritin502ApplicationJSONObject) {
         this.ritin502ApplicationJSONObject = ritin502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class RitinResponse {
      */
     
     public Ritin503ApplicationJSON ritin503ApplicationJSONObject;
+
     public RitinResponse withRitin503ApplicationJSONObject(Ritin503ApplicationJSON ritin503ApplicationJSONObject) {
         this.ritin503ApplicationJSONObject = ritin503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class RitinResponse {
      */
     
     public Ritin504ApplicationJSON ritin504ApplicationJSONObject;
+
     public RitinResponse withRitin504ApplicationJSONObject(Ritin504ApplicationJSON ritin504ApplicationJSONObject) {
         this.ritin504ApplicationJSONObject = ritin504ApplicationJSONObject;
         return this;
     }
     
+    public RitinResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

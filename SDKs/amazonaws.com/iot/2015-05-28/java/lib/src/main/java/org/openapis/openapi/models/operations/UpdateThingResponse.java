@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateThingResponse {
     
     public String contentType;
+
     public UpdateThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateThingResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateThingResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateThingResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateThingResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateThingResponse {
     
     
     public Integer statusCode;
+
     public UpdateThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateThingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateThingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateThingResponse {
      */
     
     public Object throttlingException;
+
     public UpdateThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateThingResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateThingResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateThingResponse {
      */
     
     public java.util.Map<String, Object> updateThingResponse;
+
     public UpdateThingResponse withUpdateThingResponse(java.util.Map<String, Object> updateThingResponse) {
         this.updateThingResponse = updateThingResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateThingResponse {
      */
     
     public Object versionConflictException;
+
     public UpdateThingResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public UpdateThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

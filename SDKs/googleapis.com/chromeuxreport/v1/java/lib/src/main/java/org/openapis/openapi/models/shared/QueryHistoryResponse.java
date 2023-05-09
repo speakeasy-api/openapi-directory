@@ -18,6 +18,7 @@ public class QueryHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record")
     public HistoryRecord record;
+
     public QueryHistoryResponse withRecord(HistoryRecord record) {
         this.record = record;
         return this;
@@ -29,9 +30,11 @@ public class QueryHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlNormalizationDetails")
     public UrlNormalization urlNormalizationDetails;
+
     public QueryHistoryResponse withUrlNormalizationDetails(UrlNormalization urlNormalizationDetails) {
         this.urlNormalizationDetails = urlNormalizationDetails;
         return this;
     }
     
+    public QueryHistoryResponse(){}
 }

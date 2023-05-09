@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCrawlStatisticsByFrequencyResponse {
     
     public String contentType;
+
     public GetCrawlStatisticsByFrequencyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCrawlStatisticsByFrequencyResponse {
      */
     
     public org.openapis.openapi.models.shared.CrawlStatisticsTime crawlStatisticsTime;
+
     public GetCrawlStatisticsByFrequencyResponse withCrawlStatisticsTime(org.openapis.openapi.models.shared.CrawlStatisticsTime crawlStatisticsTime) {
         this.crawlStatisticsTime = crawlStatisticsTime;
         return this;
@@ -29,6 +32,7 @@ public class GetCrawlStatisticsByFrequencyResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetCrawlStatisticsByFrequencyResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -36,6 +40,7 @@ public class GetCrawlStatisticsByFrequencyResponse {
     
     
     public Integer statusCode;
+
     public GetCrawlStatisticsByFrequencyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCrawlStatisticsByFrequencyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCrawlStatisticsByFrequencyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCrawlStatisticsByFrequencyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImportImageTasksResultImportImageTasks {
     
     public String architecture;
+
     public DescribeImportImageTasksResultImportImageTasks withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public DescribeImportImageTasksResultImportImageTasksBootModeEnum bootMode;
+
     public DescribeImportImageTasksResultImportImageTasks withBootMode(DescribeImportImageTasksResultImportImageTasksBootModeEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -26,6 +28,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String description;
+
     public DescribeImportImageTasksResultImportImageTasks withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public Boolean encrypted;
+
     public DescribeImportImageTasksResultImportImageTasks withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -40,6 +44,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String hypervisor;
+
     public DescribeImportImageTasksResultImportImageTasks withHypervisor(String hypervisor) {
         this.hypervisor = hypervisor;
         return this;
@@ -47,6 +52,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String imageId;
+
     public DescribeImportImageTasksResultImportImageTasks withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String importTaskId;
+
     public DescribeImportImageTasksResultImportImageTasks withImportTaskId(String importTaskId) {
         this.importTaskId = importTaskId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String kmsKeyId;
+
     public DescribeImportImageTasksResultImportImageTasks withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public DescribeImportImageTasksResultImportImageTasksLicenseSpecifications[] licenseSpecifications;
+
     public DescribeImportImageTasksResultImportImageTasks withLicenseSpecifications(DescribeImportImageTasksResultImportImageTasksLicenseSpecifications[] licenseSpecifications) {
         this.licenseSpecifications = licenseSpecifications;
         return this;
@@ -75,6 +84,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String licenseType;
+
     public DescribeImportImageTasksResultImportImageTasks withLicenseType(String licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -82,6 +92,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String platform;
+
     public DescribeImportImageTasksResultImportImageTasks withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -89,6 +100,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String progress;
+
     public DescribeImportImageTasksResultImportImageTasks withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -96,6 +108,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails[] snapshotDetails;
+
     public DescribeImportImageTasksResultImportImageTasks withSnapshotDetails(DescribeImportImageTasksResultImportImageTasksSnapshotDetails[] snapshotDetails) {
         this.snapshotDetails = snapshotDetails;
         return this;
@@ -103,6 +116,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String status;
+
     public DescribeImportImageTasksResultImportImageTasks withStatus(String status) {
         this.status = status;
         return this;
@@ -110,6 +124,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String statusMessage;
+
     public DescribeImportImageTasksResultImportImageTasks withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -117,6 +132,7 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public DescribeImportImageTasksResultImportImageTasksTags[] tags;
+
     public DescribeImportImageTasksResultImportImageTasks withTags(DescribeImportImageTasksResultImportImageTasksTags[] tags) {
         this.tags = tags;
         return this;
@@ -124,9 +140,11 @@ public class DescribeImportImageTasksResultImportImageTasks {
     
     
     public String usageOperation;
+
     public DescribeImportImageTasksResultImportImageTasks withUsageOperation(String usageOperation) {
         this.usageOperation = usageOperation;
         return this;
     }
     
+    public DescribeImportImageTasksResultImportImageTasks(){}
 }

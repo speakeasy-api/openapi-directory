@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResponseOkDesignerTemplate {
     @JsonProperty("results")
     public DesignerTemplate results;
+
     public ResponseOkDesignerTemplate withResults(DesignerTemplate results) {
         this.results = results;
         return this;
     }
     
+    public ResponseOkDesignerTemplate(@JsonProperty("results") DesignerTemplate results) {
+        this.results = results;
+  }
 }

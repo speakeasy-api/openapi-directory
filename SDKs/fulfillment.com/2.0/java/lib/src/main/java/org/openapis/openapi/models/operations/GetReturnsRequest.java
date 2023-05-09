@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReturnsRequest {
@@ -12,6 +13,7 @@ public class GetReturnsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
     public String fromDate;
+
     public GetReturnsRequest withFromDate(String fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -22,6 +24,7 @@ public class GetReturnsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetReturnsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetReturnsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetReturnsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,9 +46,14 @@ public class GetReturnsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
     public String toDate;
+
     public GetReturnsRequest withToDate(String toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public GetReturnsRequest(@JsonProperty("fromDate") String fromDate, @JsonProperty("toDate") String toDate) {
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopStreamEncryptionResponse {
@@ -12,6 +13,7 @@ public class StopStreamEncryptionResponse {
      */
     
     public Object accessDeniedException;
+
     public StopStreamEncryptionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopStreamEncryptionResponse {
     
     
     public String contentType;
+
     public StopStreamEncryptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopStreamEncryptionResponse {
      */
     
     public Object invalidArgumentException;
+
     public StopStreamEncryptionResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class StopStreamEncryptionResponse {
      */
     
     public Object limitExceededException;
+
     public StopStreamEncryptionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StopStreamEncryptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopStreamEncryptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class StopStreamEncryptionResponse {
     
     
     public Integer statusCode;
+
     public StopStreamEncryptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopStreamEncryptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopStreamEncryptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopStreamEncryptionResponse {
      */
     
     public Object resourceInUseException;
+
     public StopStreamEncryptionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
     }
     
+    public StopStreamEncryptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

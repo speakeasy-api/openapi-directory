@@ -15,9 +15,11 @@ public class DescribeEventTopicsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTopics")
     public EventTopic[] eventTopics;
+
     public DescribeEventTopicsResult withEventTopics(EventTopic[] eventTopics) {
         this.eventTopics = eventTopics;
         return this;
     }
     
+    public DescribeEventTopicsResult(){}
 }

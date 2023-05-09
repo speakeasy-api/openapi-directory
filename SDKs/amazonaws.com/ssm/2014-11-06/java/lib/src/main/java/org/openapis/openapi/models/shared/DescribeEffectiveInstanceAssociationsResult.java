@@ -15,6 +15,7 @@ public class DescribeEffectiveInstanceAssociationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Associations")
     public InstanceAssociation[] associations;
+
     public DescribeEffectiveInstanceAssociationsResult withAssociations(InstanceAssociation[] associations) {
         this.associations = associations;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEffectiveInstanceAssociationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEffectiveInstanceAssociationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEffectiveInstanceAssociationsResult(){}
 }

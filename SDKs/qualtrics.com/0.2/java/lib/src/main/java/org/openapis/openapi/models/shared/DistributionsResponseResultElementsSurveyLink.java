@@ -12,6 +12,7 @@ public class DistributionsResponseResultElementsSurveyLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationDate")
     public String expirationDate;
+
     public DistributionsResponseResultElementsSurveyLink withExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -20,6 +21,7 @@ public class DistributionsResponseResultElementsSurveyLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkType")
     public String linkType;
+
     public DistributionsResponseResultElementsSurveyLink withLinkType(String linkType) {
         this.linkType = linkType;
         return this;
@@ -28,9 +30,11 @@ public class DistributionsResponseResultElementsSurveyLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surveyId")
     public String surveyId;
+
     public DistributionsResponseResultElementsSurveyLink withSurveyId(String surveyId) {
         this.surveyId = surveyId;
         return this;
     }
     
+    public DistributionsResponseResultElementsSurveyLink(){}
 }

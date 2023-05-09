@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PeoplePeopleUpdateContactRequest {
@@ -12,6 +13,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public PeoplePeopleUpdateContactRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class PeoplePeopleUpdateContactRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PersonInput personInput;
+
     public PeoplePeopleUpdateContactRequest withPersonInput(org.openapis.openapi.models.shared.PersonInput personInput) {
         this.personInput = personInput;
         return this;
@@ -29,6 +32,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public PeoplePeopleUpdateContactRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PeoplePeopleUpdateContactRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PeoplePeopleUpdateContactRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PeoplePeopleUpdateContactRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PeoplePeopleUpdateContactRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PeoplePeopleUpdateContactRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=personFields")
     public String personFields;
+
     public PeoplePeopleUpdateContactRequest withPersonFields(String personFields) {
         this.personFields = personFields;
         return this;
@@ -99,6 +109,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PeoplePeopleUpdateContactRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PeoplePeopleUpdateContactRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceName")
     public String resourceName;
+
     public PeoplePeopleUpdateContactRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -129,6 +142,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sources")
     public PeoplePeopleUpdateContactSourcesEnum[] sources;
+
     public PeoplePeopleUpdateContactRequest withSources(PeoplePeopleUpdateContactSourcesEnum[] sources) {
         this.sources = sources;
         return this;
@@ -139,6 +153,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatePersonFields")
     public String updatePersonFields;
+
     public PeoplePeopleUpdateContactRequest withUpdatePersonFields(String updatePersonFields) {
         this.updatePersonFields = updatePersonFields;
         return this;
@@ -149,6 +164,7 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public PeoplePeopleUpdateContactRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,13 @@ public class PeoplePeopleUpdateContactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public PeoplePeopleUpdateContactRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public PeoplePeopleUpdateContactRequest(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

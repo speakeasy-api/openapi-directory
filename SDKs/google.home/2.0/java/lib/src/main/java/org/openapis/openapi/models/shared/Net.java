@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Net {
     @JsonProperty("ethernet_connected")
     public Boolean ethernetConnected;
+
     public Net withEthernetConnected(Boolean ethernetConnected) {
         this.ethernetConnected = ethernetConnected;
         return this;
@@ -16,6 +17,7 @@ public class Net {
     
     @JsonProperty("ip_address")
     public String ipAddress;
+
     public Net withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -23,9 +25,15 @@ public class Net {
     
     @JsonProperty("online")
     public Boolean online;
+
     public Net withOnline(Boolean online) {
         this.online = online;
         return this;
     }
     
+    public Net(@JsonProperty("ethernet_connected") Boolean ethernetConnected, @JsonProperty("ip_address") String ipAddress, @JsonProperty("online") Boolean online) {
+        this.ethernetConnected = ethernetConnected;
+        this.ipAddress = ipAddress;
+        this.online = online;
+  }
 }

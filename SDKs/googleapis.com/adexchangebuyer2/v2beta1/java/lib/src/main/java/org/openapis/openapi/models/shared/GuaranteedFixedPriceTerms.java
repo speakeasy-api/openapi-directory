@@ -18,6 +18,7 @@ public class GuaranteedFixedPriceTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedPrices")
     public PricePerBuyer[] fixedPrices;
+
     public GuaranteedFixedPriceTerms withFixedPrices(PricePerBuyer[] fixedPrices) {
         this.fixedPrices = fixedPrices;
         return this;
@@ -29,17 +30,19 @@ public class GuaranteedFixedPriceTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guaranteedImpressions")
     public String guaranteedImpressions;
+
     public GuaranteedFixedPriceTerms withGuaranteedImpressions(String guaranteedImpressions) {
         this.guaranteedImpressions = guaranteedImpressions;
         return this;
     }
     
     /**
-     * Count of guaranteed looks. Required for deal, optional for product.
+     * Count of guaranteed looks. Required for deal, optional for product. For CPD deals, buyer changes to guaranteed_looks will be ignored.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guaranteedLooks")
     public String guaranteedLooks;
+
     public GuaranteedFixedPriceTerms withGuaranteedLooks(String guaranteedLooks) {
         this.guaranteedLooks = guaranteedLooks;
         return this;
@@ -51,17 +54,19 @@ public class GuaranteedFixedPriceTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionCap")
     public String impressionCap;
+
     public GuaranteedFixedPriceTerms withImpressionCap(String impressionCap) {
         this.impressionCap = impressionCap;
         return this;
     }
     
     /**
-     * Daily minimum looks for CPD deal types.
+     * Daily minimum looks for CPD deal types. For CPD deals, buyer should negotiate on this field instead of guaranteed_looks.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumDailyLooks")
     public String minimumDailyLooks;
+
     public GuaranteedFixedPriceTerms withMinimumDailyLooks(String minimumDailyLooks) {
         this.minimumDailyLooks = minimumDailyLooks;
         return this;
@@ -73,6 +78,7 @@ public class GuaranteedFixedPriceTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentShareOfVoice")
     public String percentShareOfVoice;
+
     public GuaranteedFixedPriceTerms withPercentShareOfVoice(String percentShareOfVoice) {
         this.percentShareOfVoice = percentShareOfVoice;
         return this;
@@ -84,9 +90,11 @@ public class GuaranteedFixedPriceTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservationType")
     public GuaranteedFixedPriceTermsReservationTypeEnum reservationType;
+
     public GuaranteedFixedPriceTerms withReservationType(GuaranteedFixedPriceTermsReservationTypeEnum reservationType) {
         this.reservationType = reservationType;
         return this;
     }
     
+    public GuaranteedFixedPriceTerms(){}
 }

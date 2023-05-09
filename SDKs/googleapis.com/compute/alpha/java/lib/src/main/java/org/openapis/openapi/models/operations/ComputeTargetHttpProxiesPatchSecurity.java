@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetHttpProxiesPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetHttpProxiesPatchSecurityOption1 option1;
+
     public ComputeTargetHttpProxiesPatchSecurity withOption1(ComputeTargetHttpProxiesPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeTargetHttpProxiesPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetHttpProxiesPatchSecurityOption2 option2;
+
     public ComputeTargetHttpProxiesPatchSecurity withOption2(ComputeTargetHttpProxiesPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeTargetHttpProxiesPatchSecurity(){}
 }

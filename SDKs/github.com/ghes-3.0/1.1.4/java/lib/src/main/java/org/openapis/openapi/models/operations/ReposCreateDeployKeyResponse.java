@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateDeployKeyResponse {
     
     public String contentType;
+
     public ReposCreateDeployKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateDeployKeyResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposCreateDeployKeyResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateDeployKeyResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateDeployKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposCreateDeployKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateDeployKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposCreateDeployKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeployKey deployKey;
+
     public ReposCreateDeployKeyResponse withDeployKey(org.openapis.openapi.models.shared.DeployKey deployKey) {
         this.deployKey = deployKey;
         return this;
@@ -50,9 +56,14 @@ public class ReposCreateDeployKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateDeployKeyResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateDeployKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

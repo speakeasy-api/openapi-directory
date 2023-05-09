@@ -15,6 +15,7 @@ public class MembershipDatasources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public MembershipDatasources withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class MembershipDatasources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasourcePackageIngestHistory")
     public java.util.Map<String, java.util.Map<String, TimestampForCollection>> datasourcePackageIngestHistory;
+
     public MembershipDatasources withDatasourcePackageIngestHistory(java.util.Map<String, java.util.Map<String, TimestampForCollection>> datasourcePackageIngestHistory) {
         this.datasourcePackageIngestHistory = datasourcePackageIngestHistory;
         return this;
@@ -31,9 +33,11 @@ public class MembershipDatasources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public MembershipDatasources withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public MembershipDatasources(){}
 }

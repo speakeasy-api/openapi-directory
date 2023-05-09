@@ -599,4 +599,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDialogflowV2List
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudLocationListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudLocationLocation.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

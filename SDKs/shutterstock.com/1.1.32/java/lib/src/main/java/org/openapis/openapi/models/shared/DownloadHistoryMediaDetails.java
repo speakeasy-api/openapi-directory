@@ -18,6 +18,7 @@ public class DownloadHistoryMediaDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public DownloadHistoryFormatDetails format;
+
     public DownloadHistoryMediaDetails withFormat(DownloadHistoryFormatDetails format) {
         this.format = format;
         return this;
@@ -28,9 +29,13 @@ public class DownloadHistoryMediaDetails {
      */
     @JsonProperty("id")
     public String id;
+
     public DownloadHistoryMediaDetails withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DownloadHistoryMediaDetails(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

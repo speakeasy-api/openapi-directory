@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReplaceableItemList {
     
     public ReplaceableAttributeList[] attributes;
+
     public ReplaceableItemList withAttributes(ReplaceableAttributeList[] attributes) {
         this.attributes = attributes;
         return this;
@@ -16,9 +17,14 @@ public class ReplaceableItemList {
     
     
     public String name;
+
     public ReplaceableItemList withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReplaceableItemList(@JsonProperty("Attributes") ReplaceableAttributeList[] attributes, @JsonProperty("Name") String name) {
+        this.attributes = attributes;
+        this.name = name;
+  }
 }

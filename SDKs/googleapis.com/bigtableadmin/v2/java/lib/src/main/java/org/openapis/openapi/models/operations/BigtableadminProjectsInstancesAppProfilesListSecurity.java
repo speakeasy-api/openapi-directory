@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesAppProfilesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesAppProfilesListSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesAppProfilesListSecurity withOption1(BigtableadminProjectsInstancesAppProfilesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesAppProfilesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesAppProfilesListSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesAppProfilesListSecurity withOption2(BigtableadminProjectsInstancesAppProfilesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesAppProfilesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesAppProfilesListSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesAppProfilesListSecurity withOption3(BigtableadminProjectsInstancesAppProfilesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesAppProfilesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesAppProfilesListSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesAppProfilesListSecurity withOption4(BigtableadminProjectsInstancesAppProfilesListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminProjectsInstancesAppProfilesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesAppProfilesListSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesAppProfilesListSecurity withOption5(BigtableadminProjectsInstancesAppProfilesListSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class BigtableadminProjectsInstancesAppProfilesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesAppProfilesListSecurityOption6 option6;
+
     public BigtableadminProjectsInstancesAppProfilesListSecurity withOption6(BigtableadminProjectsInstancesAppProfilesListSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public BigtableadminProjectsInstancesAppProfilesListSecurity(){}
 }

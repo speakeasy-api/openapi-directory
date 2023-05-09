@@ -15,6 +15,7 @@ public class RenamedIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public RenamedIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -22,6 +23,7 @@ public class RenamedIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public RenamedIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -29,6 +31,7 @@ public class RenamedIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public RenamedIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -36,6 +39,7 @@ public class RenamedIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public RenamedIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +47,7 @@ public class RenamedIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public RenamedIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -50,6 +55,7 @@ public class RenamedIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public RenamedIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -57,6 +63,7 @@ public class RenamedIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public RenamedIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -67,6 +74,7 @@ public class RenamedIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public RenamedIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -74,6 +82,7 @@ public class RenamedIssueEvent {
     
     @JsonProperty("rename")
     public RenamedIssueEventRename rename;
+
     public RenamedIssueEvent withRename(RenamedIssueEventRename rename) {
         this.rename = rename;
         return this;
@@ -81,9 +90,22 @@ public class RenamedIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public RenamedIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RenamedIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("rename") RenamedIssueEventRename rename, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.rename = rename;
+        this.url = url;
+  }
 }

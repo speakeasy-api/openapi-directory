@@ -56,10 +56,8 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAppsAppIdResponse res = new org.openapis.openapi.models.operations.DeleteAppsAppIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAppsAppIdResponse res = new org.openapis.openapi.models.operations.DeleteAppsAppIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 404) {
@@ -97,10 +95,8 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionResponse res = new org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionResponse() {{
+        org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionResponse res = new org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 404) {
@@ -139,11 +135,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAppsResponse res = new org.openapis.openapi.models.operations.GetAppsResponse() {{
+        org.openapis.openapi.models.operations.GetAppsResponse res = new org.openapis.openapi.models.operations.GetAppsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -187,11 +181,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameResponse res = new org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameResponse() {{
+        org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameResponse res = new org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -235,11 +227,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAppsTextSearchResponse res = new org.openapis.openapi.models.operations.GetAppsTextSearchResponse() {{
+        org.openapis.openapi.models.operations.GetAppsTextSearchResponse res = new org.openapis.openapi.models.operations.GetAppsTextSearchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -285,11 +275,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAppsVersionsResponse res = new org.openapis.openapi.models.operations.GetAppsVersionsResponse() {{
+        org.openapis.openapi.models.operations.GetAppsVersionsResponse res = new org.openapis.openapi.models.operations.GetAppsVersionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -333,11 +321,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAppsAppIdResponse res = new org.openapis.openapi.models.operations.GetAppsAppIdResponse() {{
+        org.openapis.openapi.models.operations.GetAppsAppIdResponse res = new org.openapis.openapi.models.operations.GetAppsAppIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -381,11 +367,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionResponse res = new org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionResponse() {{
+        org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionResponse res = new org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -432,11 +416,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionResponse res = new org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionResponse() {{
+        org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionResponse res = new org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409) {
@@ -482,11 +464,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAppsResponse res = new org.openapis.openapi.models.operations.PostAppsResponse() {{
+        org.openapis.openapi.models.operations.PostAppsResponse res = new org.openapis.openapi.models.operations.PostAppsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 409) {
@@ -530,10 +510,8 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAppsAppIdLiveResponse res = new org.openapis.openapi.models.operations.PostAppsAppIdLiveResponse() {{
+        org.openapis.openapi.models.operations.PostAppsAppIdLiveResponse res = new org.openapis.openapi.models.operations.PostAppsAppIdLiveResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -572,10 +550,8 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAppsAppIdPublishResponse res = new org.openapis.openapi.models.operations.PostAppsAppIdPublishResponse() {{
+        org.openapis.openapi.models.operations.PostAppsAppIdPublishResponse res = new org.openapis.openapi.models.operations.PostAppsAppIdPublishResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409) {
@@ -616,11 +592,9 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionResponse res = new org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionResponse() {{
+        org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionResponse res = new org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409) {
@@ -664,10 +638,8 @@ public class AppsFindAndModifyApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusResponse res = new org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusResponse() {{
+        org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusResponse res = new org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 412) {

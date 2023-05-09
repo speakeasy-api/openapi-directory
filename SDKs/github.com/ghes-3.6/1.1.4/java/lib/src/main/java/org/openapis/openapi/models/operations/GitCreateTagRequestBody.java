@@ -14,6 +14,7 @@ public class GitCreateTagRequestBody {
      */
     @JsonProperty("message")
     public String message;
+
     public GitCreateTagRequestBody withMessage(String message) {
         this.message = message;
         return this;
@@ -24,6 +25,7 @@ public class GitCreateTagRequestBody {
      */
     @JsonProperty("object")
     public String object;
+
     public GitCreateTagRequestBody withObject(String object) {
         this.object = object;
         return this;
@@ -34,6 +36,7 @@ public class GitCreateTagRequestBody {
      */
     @JsonProperty("tag")
     public String tag;
+
     public GitCreateTagRequestBody withTag(String tag) {
         this.tag = tag;
         return this;
@@ -45,6 +48,7 @@ public class GitCreateTagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagger")
     public GitCreateTagRequestBodyTagger tagger;
+
     public GitCreateTagRequestBody withTagger(GitCreateTagRequestBodyTagger tagger) {
         this.tagger = tagger;
         return this;
@@ -55,9 +59,16 @@ public class GitCreateTagRequestBody {
      */
     @JsonProperty("type")
     public GitCreateTagRequestBodyTypeEnum type;
+
     public GitCreateTagRequestBody withType(GitCreateTagRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GitCreateTagRequestBody(@JsonProperty("message") String message, @JsonProperty("object") String object, @JsonProperty("tag") String tag, @JsonProperty("type") GitCreateTagRequestBodyTypeEnum type) {
+        this.message = message;
+        this.object = object;
+        this.tag = tag;
+        this.type = type;
+  }
 }

@@ -18,6 +18,7 @@ public class Mesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Mesh withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Mesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Mesh withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Mesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interceptionPort")
     public Integer interceptionPort;
+
     public Mesh withInterceptionPort(Integer interceptionPort) {
         this.interceptionPort = interceptionPort;
         return this;
@@ -51,6 +54,7 @@ public class Mesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Mesh withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class Mesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Mesh withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Mesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Mesh withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -84,9 +90,11 @@ public class Mesh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Mesh withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Mesh(){}
 }

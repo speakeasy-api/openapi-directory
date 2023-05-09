@@ -12,9 +12,11 @@ public class GetTeamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetTeamsRequest withConference(String conference) {
         this.conference = conference;
         return this;
     }
     
+    public GetTeamsRequest(){}
 }

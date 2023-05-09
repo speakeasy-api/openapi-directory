@@ -15,9 +15,11 @@ public class AddTagsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public AddTagsOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AddTagsOutput(){}
 }

@@ -15,6 +15,7 @@ public class ListUploadsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUploadsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUploadsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploads")
     public Upload[] uploads;
+
     public ListUploadsResult withUploads(Upload[] uploads) {
         this.uploads = uploads;
         return this;
     }
     
+    public ListUploadsResult(){}
 }

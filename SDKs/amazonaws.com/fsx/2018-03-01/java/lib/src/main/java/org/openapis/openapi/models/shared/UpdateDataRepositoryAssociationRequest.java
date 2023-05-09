@@ -11,17 +11,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDataRepositoryAssociationRequest {
     @JsonProperty("AssociationId")
     public String associationId;
+
     public UpdateDataRepositoryAssociationRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
     }
     
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public UpdateDataRepositoryAssociationRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -30,6 +32,7 @@ public class UpdateDataRepositoryAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportedFileChunkSize")
     public Long importedFileChunkSize;
+
     public UpdateDataRepositoryAssociationRequest withImportedFileChunkSize(Long importedFileChunkSize) {
         this.importedFileChunkSize = importedFileChunkSize;
         return this;
@@ -38,9 +41,13 @@ public class UpdateDataRepositoryAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public S3DataRepositoryConfiguration s3;
+
     public UpdateDataRepositoryAssociationRequest withS3(S3DataRepositoryConfiguration s3) {
         this.s3 = s3;
         return this;
     }
     
+    public UpdateDataRepositoryAssociationRequest(@JsonProperty("AssociationId") String associationId) {
+        this.associationId = associationId;
+  }
 }

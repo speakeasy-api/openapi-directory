@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMediaStorageConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeMediaStorageConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeMediaStorageConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeMediaStorageConfigurationResponse {
      */
     
     public Object clientLimitExceededException;
+
     public DescribeMediaStorageConfigurationResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMediaStorageConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeMediaStorageConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMediaStorageConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMediaStorageConfigurationOutput describeMediaStorageConfigurationOutput;
+
     public DescribeMediaStorageConfigurationResponse withDescribeMediaStorageConfigurationOutput(org.openapis.openapi.models.shared.DescribeMediaStorageConfigurationOutput describeMediaStorageConfigurationOutput) {
         this.describeMediaStorageConfigurationOutput = describeMediaStorageConfigurationOutput;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMediaStorageConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeMediaStorageConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeMediaStorageConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeMediaStorageConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeMediaStorageConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeMediaStorageConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeMediaStorageConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMediaStorageConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMediaStorageConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

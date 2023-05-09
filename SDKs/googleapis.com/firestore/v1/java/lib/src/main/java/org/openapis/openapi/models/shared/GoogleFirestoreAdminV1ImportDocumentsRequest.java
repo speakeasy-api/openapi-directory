@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1ImportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionIds")
     public String[] collectionIds;
+
     public GoogleFirestoreAdminV1ImportDocumentsRequest withCollectionIds(String[] collectionIds) {
         this.collectionIds = collectionIds;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirestoreAdminV1ImportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUriPrefix")
     public String inputUriPrefix;
+
     public GoogleFirestoreAdminV1ImportDocumentsRequest withInputUriPrefix(String inputUriPrefix) {
         this.inputUriPrefix = inputUriPrefix;
         return this;
@@ -40,9 +42,11 @@ public class GoogleFirestoreAdminV1ImportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceIds")
     public String[] namespaceIds;
+
     public GoogleFirestoreAdminV1ImportDocumentsRequest withNamespaceIds(String[] namespaceIds) {
         this.namespaceIds = namespaceIds;
         return this;
     }
     
+    public GoogleFirestoreAdminV1ImportDocumentsRequest(){}
 }

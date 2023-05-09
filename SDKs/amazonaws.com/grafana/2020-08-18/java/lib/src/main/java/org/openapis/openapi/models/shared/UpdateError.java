@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateError {
     @JsonProperty("causedBy")
     public UpdateInstruction causedBy;
+
     public UpdateError withCausedBy(UpdateInstruction causedBy) {
         this.causedBy = causedBy;
         return this;
@@ -19,6 +20,7 @@ public class UpdateError {
     
     @JsonProperty("code")
     public Long code;
+
     public UpdateError withCode(Long code) {
         this.code = code;
         return this;
@@ -26,9 +28,15 @@ public class UpdateError {
     
     @JsonProperty("message")
     public String message;
+
     public UpdateError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public UpdateError(@JsonProperty("causedBy") UpdateInstruction causedBy, @JsonProperty("code") Long code, @JsonProperty("message") String message) {
+        this.causedBy = causedBy;
+        this.code = code;
+        this.message = message;
+  }
 }

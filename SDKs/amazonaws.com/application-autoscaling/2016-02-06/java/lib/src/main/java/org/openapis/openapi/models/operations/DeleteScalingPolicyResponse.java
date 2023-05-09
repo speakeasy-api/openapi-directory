@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteScalingPolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteScalingPolicyResponse {
      */
     
     public Object concurrentUpdateException;
+
     public DeleteScalingPolicyResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteScalingPolicyResponse {
     
     
     public String contentType;
+
     public DeleteScalingPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteScalingPolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteScalingPolicyResponse;
+
     public DeleteScalingPolicyResponse withDeleteScalingPolicyResponse(java.util.Map<String, Object> deleteScalingPolicyResponse) {
         this.deleteScalingPolicyResponse = deleteScalingPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteScalingPolicyResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteScalingPolicyResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteScalingPolicyResponse {
      */
     
     public Object objectNotFoundException;
+
     public DeleteScalingPolicyResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteScalingPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteScalingPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteScalingPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteScalingPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteScalingPolicyResponse {
      */
     
     public Object validationException;
+
     public DeleteScalingPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteScalingPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

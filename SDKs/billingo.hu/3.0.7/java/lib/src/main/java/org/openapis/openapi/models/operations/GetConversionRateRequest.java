@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConversionRateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public org.openapis.openapi.models.shared.CurrencyEnum from;
+
     public GetConversionRateRequest withFrom(org.openapis.openapi.models.shared.CurrencyEnum from) {
         this.from = from;
         return this;
@@ -16,9 +18,14 @@ public class GetConversionRateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public org.openapis.openapi.models.shared.CurrencyEnum to;
+
     public GetConversionRateRequest withTo(org.openapis.openapi.models.shared.CurrencyEnum to) {
         this.to = to;
         return this;
     }
     
+    public GetConversionRateRequest(@JsonProperty("from") org.openapis.openapi.models.shared.CurrencyEnum from, @JsonProperty("to") org.openapis.openapi.models.shared.CurrencyEnum to) {
+        this.from = from;
+        this.to = to;
+  }
 }

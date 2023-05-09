@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAlmawsV1TaskListsRsLendingRequestsResponse {
     
     public byte[] body;
+
     public GetAlmawsV1TaskListsRsLendingRequestsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsResponse {
     
     
     public String contentType;
+
     public GetAlmawsV1TaskListsRsLendingRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetAlmawsV1TaskListsRsLendingRequestsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -30,6 +34,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsResponse {
     
     
     public Integer statusCode;
+
     public GetAlmawsV1TaskListsRsLendingRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,6 +42,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAlmawsV1TaskListsRsLendingRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -47,9 +53,14 @@ public class GetAlmawsV1TaskListsRsLendingRequestsResponse {
      */
     
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSON getAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject;
+
     public GetAlmawsV1TaskListsRsLendingRequestsResponse withGetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSON getAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject) {
         this.getAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject = getAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRsLendingRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ public class CreateDatalakeDelegatedAdminRequestBody {
      */
     @JsonProperty("account")
     public String account;
+
     public CreateDatalakeDelegatedAdminRequestBody withAccount(String account) {
         this.account = account;
         return this;
     }
     
+    public CreateDatalakeDelegatedAdminRequestBody(@JsonProperty("account") String account) {
+        this.account = account;
+  }
 }

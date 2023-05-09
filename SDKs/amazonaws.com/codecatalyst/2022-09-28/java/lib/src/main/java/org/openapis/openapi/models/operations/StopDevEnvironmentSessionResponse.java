@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopDevEnvironmentSessionResponse {
@@ -12,6 +13,7 @@ public class StopDevEnvironmentSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public StopDevEnvironmentSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StopDevEnvironmentSessionResponse {
      */
     
     public Object conflictException;
+
     public StopDevEnvironmentSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StopDevEnvironmentSessionResponse {
     
     
     public String contentType;
+
     public StopDevEnvironmentSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StopDevEnvironmentSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopDevEnvironmentSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopDevEnvironmentSessionResponse {
     
     
     public Integer statusCode;
+
     public StopDevEnvironmentSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopDevEnvironmentSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopDevEnvironmentSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopDevEnvironmentSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StopDevEnvironmentSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class StopDevEnvironmentSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopDevEnvironmentSessionResponse stopDevEnvironmentSessionResponse;
+
     public StopDevEnvironmentSessionResponse withStopDevEnvironmentSessionResponse(org.openapis.openapi.models.shared.StopDevEnvironmentSessionResponse stopDevEnvironmentSessionResponse) {
         this.stopDevEnvironmentSessionResponse = stopDevEnvironmentSessionResponse;
         return this;
@@ -83,6 +92,7 @@ public class StopDevEnvironmentSessionResponse {
      */
     
     public Object throttlingException;
+
     public StopDevEnvironmentSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StopDevEnvironmentSessionResponse {
      */
     
     public Object validationException;
+
     public StopDevEnvironmentSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopDevEnvironmentSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

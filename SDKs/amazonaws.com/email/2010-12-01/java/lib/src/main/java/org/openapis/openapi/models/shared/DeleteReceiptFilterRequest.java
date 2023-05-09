@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteReceiptFilterRequest - Represents a request to delete an IP address filter. You use IP address filters when you receive email with Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteReceiptFilterRequest {
     
     public String filterName;
+
     public DeleteReceiptFilterRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
     }
     
+    public DeleteReceiptFilterRequest(@JsonProperty("FilterName") String filterName) {
+        this.filterName = filterName;
+  }
 }

@@ -15,6 +15,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipe")
     public Pipe pipe;
+
     public Address withPipe(Pipe pipe) {
         this.pipe = pipe;
         return this;
@@ -26,9 +27,11 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("socketAddress")
     public SocketAddress socketAddress;
+
     public Address withSocketAddress(SocketAddress socketAddress) {
         this.socketAddress = socketAddress;
         return this;
     }
     
+    public Address(){}
 }

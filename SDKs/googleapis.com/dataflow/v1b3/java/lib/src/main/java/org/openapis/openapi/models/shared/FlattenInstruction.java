@@ -18,9 +18,11 @@ public class FlattenInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputs")
     public InstructionInput[] inputs;
+
     public FlattenInstruction withInputs(InstructionInput[] inputs) {
         this.inputs = inputs;
         return this;
     }
     
+    public FlattenInstruction(){}
 }

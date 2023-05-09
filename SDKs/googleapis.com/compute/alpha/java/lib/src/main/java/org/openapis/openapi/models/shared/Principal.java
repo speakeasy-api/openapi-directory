@@ -18,6 +18,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public Principal withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -29,6 +30,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public String[] groups;
+
     public Principal withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -40,6 +42,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ips")
     public String[] ips;
+
     public Principal withIps(String[] ips) {
         this.ips = ips;
         return this;
@@ -51,6 +54,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaces")
     public String[] namespaces;
+
     public Principal withNamespaces(String[] namespaces) {
         this.namespaces = namespaces;
         return this;
@@ -62,6 +66,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notGroups")
     public String[] notGroups;
+
     public Principal withNotGroups(String[] notGroups) {
         this.notGroups = notGroups;
         return this;
@@ -73,6 +78,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notIps")
     public String[] notIps;
+
     public Principal withNotIps(String[] notIps) {
         this.notIps = notIps;
         return this;
@@ -84,6 +90,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notNamespaces")
     public String[] notNamespaces;
+
     public Principal withNotNamespaces(String[] notNamespaces) {
         this.notNamespaces = notNamespaces;
         return this;
@@ -95,6 +102,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notUsers")
     public String[] notUsers;
+
     public Principal withNotUsers(String[] notUsers) {
         this.notUsers = notUsers;
         return this;
@@ -106,6 +114,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public Principal withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -117,9 +126,11 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public String[] users;
+
     public Principal withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public Principal(){}
 }

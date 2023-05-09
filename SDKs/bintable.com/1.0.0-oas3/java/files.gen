@@ -36,4 +36,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/BalanceLookupResponse.j
 lib/src/main/java/org/openapis/openapi/models/operations/BinLookupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BinLookupResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResponseItem.java
+docs/sdk/README.md
+docs/balance/README.md
+docs/lookup/README.md
 USAGE.md

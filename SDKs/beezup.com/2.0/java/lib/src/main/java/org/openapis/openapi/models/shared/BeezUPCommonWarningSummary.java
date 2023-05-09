@@ -12,6 +12,7 @@ public class BeezUPCommonWarningSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("technicalErrorMessage")
     public String technicalErrorMessage;
+
     public BeezUPCommonWarningSummary withTechnicalErrorMessage(String technicalErrorMessage) {
         this.technicalErrorMessage = technicalErrorMessage;
         return this;
@@ -20,6 +21,7 @@ public class BeezUPCommonWarningSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningArguments")
     public java.util.Map<String, String> warningArguments;
+
     public BeezUPCommonWarningSummary withWarningArguments(java.util.Map<String, String> warningArguments) {
         this.warningArguments = warningArguments;
         return this;
@@ -28,6 +30,7 @@ public class BeezUPCommonWarningSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningCode")
     public String warningCode;
+
     public BeezUPCommonWarningSummary withWarningCode(String warningCode) {
         this.warningCode = warningCode;
         return this;
@@ -36,9 +39,11 @@ public class BeezUPCommonWarningSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningMessage")
     public String warningMessage;
+
     public BeezUPCommonWarningSummary withWarningMessage(String warningMessage) {
         this.warningMessage = warningMessage;
         return this;
     }
     
+    public BeezUPCommonWarningSummary(){}
 }

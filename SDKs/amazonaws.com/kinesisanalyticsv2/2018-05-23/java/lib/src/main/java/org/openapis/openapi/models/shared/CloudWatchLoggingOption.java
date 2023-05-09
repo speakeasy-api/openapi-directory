@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudWatchLoggingOption {
     @JsonProperty("LogStreamARN")
     public String logStreamARN;
+
     public CloudWatchLoggingOption withLogStreamARN(String logStreamARN) {
         this.logStreamARN = logStreamARN;
         return this;
     }
     
+    public CloudWatchLoggingOption(@JsonProperty("LogStreamARN") String logStreamARN) {
+        this.logStreamARN = logStreamARN;
+  }
 }

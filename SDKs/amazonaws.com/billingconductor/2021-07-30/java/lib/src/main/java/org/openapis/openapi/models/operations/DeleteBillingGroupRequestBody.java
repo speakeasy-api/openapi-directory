@@ -12,9 +12,13 @@ public class DeleteBillingGroupRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public DeleteBillingGroupRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteBillingGroupRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

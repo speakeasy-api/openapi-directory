@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTransactionsRequest {
@@ -12,19 +13,25 @@ public class UpdateTransactionsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatchTransactionsWrapper patchTransactionsWrapper;
+
     public UpdateTransactionsRequest withPatchTransactionsWrapper(org.openapis.openapi.models.shared.PatchTransactionsWrapper patchTransactionsWrapper) {
         this.patchTransactionsWrapper = patchTransactionsWrapper;
         return this;
     }
     
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public UpdateTransactionsRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
     }
     
+    public UpdateTransactionsRequest(@JsonProperty("PatchTransactionsWrapper") org.openapis.openapi.models.shared.PatchTransactionsWrapper patchTransactionsWrapper, @JsonProperty("budget_id") String budgetId) {
+        this.patchTransactionsWrapper = patchTransactionsWrapper;
+        this.budgetId = budgetId;
+  }
 }

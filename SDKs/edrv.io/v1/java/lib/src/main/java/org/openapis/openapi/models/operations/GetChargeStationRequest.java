@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChargeStationRequest {
@@ -12,6 +13,7 @@ public class GetChargeStationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetChargeStationRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetChargeStationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evses")
     public Boolean includeEvses;
+
     public GetChargeStationRequest withIncludeEvses(Boolean includeEvses) {
         this.includeEvses = includeEvses;
         return this;
@@ -32,6 +35,7 @@ public class GetChargeStationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_location")
     public Boolean includeLocation;
+
     public GetChargeStationRequest withIncludeLocation(Boolean includeLocation) {
         this.includeLocation = includeLocation;
         return this;
@@ -42,9 +46,13 @@ public class GetChargeStationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetChargeStationRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
     }
     
+    public GetChargeStationRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

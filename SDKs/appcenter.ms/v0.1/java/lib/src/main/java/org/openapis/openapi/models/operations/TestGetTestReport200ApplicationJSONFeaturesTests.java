@@ -12,6 +12,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peakDuration")
     public Double peakDuration;
+
     public TestGetTestReport200ApplicationJSONFeaturesTests withPeakDuration(Double peakDuration) {
         this.peakDuration = peakDuration;
         return this;
@@ -20,6 +21,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peakMemory")
     public Double peakMemory;
+
     public TestGetTestReport200ApplicationJSONFeaturesTests withPeakMemory(Double peakMemory) {
         this.peakMemory = peakMemory;
         return this;
@@ -28,6 +30,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runs")
     public TestGetTestReport200ApplicationJSONFeaturesTestsRuns[] runs;
+
     public TestGetTestReport200ApplicationJSONFeaturesTests withRuns(TestGetTestReport200ApplicationJSONFeaturesTestsRuns[] runs) {
         this.runs = runs;
         return this;
@@ -36,9 +39,11 @@ public class TestGetTestReport200ApplicationJSONFeaturesTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testName")
     public String testName;
+
     public TestGetTestReport200ApplicationJSONFeaturesTests withTestName(String testName) {
         this.testName = testName;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSONFeaturesTests(){}
 }

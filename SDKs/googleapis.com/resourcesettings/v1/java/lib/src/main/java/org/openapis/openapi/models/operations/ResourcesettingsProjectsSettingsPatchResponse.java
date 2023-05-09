@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResourcesettingsProjectsSettingsPatchResponse {
     
     public String contentType;
+
     public ResourcesettingsProjectsSettingsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResourcesettingsProjectsSettingsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudResourcesettingsV1Setting googleCloudResourcesettingsV1Setting;
+
     public ResourcesettingsProjectsSettingsPatchResponse withGoogleCloudResourcesettingsV1Setting(org.openapis.openapi.models.shared.GoogleCloudResourcesettingsV1Setting googleCloudResourcesettingsV1Setting) {
         this.googleCloudResourcesettingsV1Setting = googleCloudResourcesettingsV1Setting;
         return this;
@@ -26,6 +29,7 @@ public class ResourcesettingsProjectsSettingsPatchResponse {
     
     
     public Integer statusCode;
+
     public ResourcesettingsProjectsSettingsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ResourcesettingsProjectsSettingsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResourcesettingsProjectsSettingsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResourcesettingsProjectsSettingsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

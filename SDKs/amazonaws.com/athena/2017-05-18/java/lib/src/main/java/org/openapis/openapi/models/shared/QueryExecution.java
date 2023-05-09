@@ -15,6 +15,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public EngineVersion engineVersion;
+
     public QueryExecution withEngineVersion(EngineVersion engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -23,6 +24,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionParameters")
     public String[] executionParameters;
+
     public QueryExecution withExecutionParameters(String[] executionParameters) {
         this.executionParameters = executionParameters;
         return this;
@@ -31,6 +33,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Query")
     public String query;
+
     public QueryExecution withQuery(String query) {
         this.query = query;
         return this;
@@ -39,6 +42,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryExecutionContext")
     public QueryExecutionContext queryExecutionContext;
+
     public QueryExecution withQueryExecutionContext(QueryExecutionContext queryExecutionContext) {
         this.queryExecutionContext = queryExecutionContext;
         return this;
@@ -47,6 +51,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryExecutionId")
     public String queryExecutionId;
+
     public QueryExecution withQueryExecutionId(String queryExecutionId) {
         this.queryExecutionId = queryExecutionId;
         return this;
@@ -55,6 +60,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultConfiguration")
     public ResultConfiguration resultConfiguration;
+
     public QueryExecution withResultConfiguration(ResultConfiguration resultConfiguration) {
         this.resultConfiguration = resultConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultReuseConfiguration")
     public ResultReuseConfiguration resultReuseConfiguration;
+
     public QueryExecution withResultReuseConfiguration(ResultReuseConfiguration resultReuseConfiguration) {
         this.resultReuseConfiguration = resultReuseConfiguration;
         return this;
@@ -71,6 +78,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementType")
     public StatementTypeEnum statementType;
+
     public QueryExecution withStatementType(StatementTypeEnum statementType) {
         this.statementType = statementType;
         return this;
@@ -79,6 +87,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistics")
     public QueryExecutionStatistics statistics;
+
     public QueryExecution withStatistics(QueryExecutionStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -87,6 +96,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public QueryExecutionStatus status;
+
     public QueryExecution withStatus(QueryExecutionStatus status) {
         this.status = status;
         return this;
@@ -95,6 +105,7 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubstatementType")
     public String substatementType;
+
     public QueryExecution withSubstatementType(String substatementType) {
         this.substatementType = substatementType;
         return this;
@@ -103,9 +114,11 @@ public class QueryExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public QueryExecution withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public QueryExecution(){}
 }

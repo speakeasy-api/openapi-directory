@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0CommonLanguageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageConstant")
     public String languageConstant;
+
     public GoogleAdsSearchads360V0CommonLanguageInfo withLanguageConstant(String languageConstant) {
         this.languageConstant = languageConstant;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonLanguageInfo(){}
 }

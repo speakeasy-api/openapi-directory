@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Item2 {
     @JsonProperty("discount")
     public Double discount;
+
     public Item2 withDiscount(Double discount) {
         this.discount = discount;
         return this;
@@ -16,6 +17,7 @@ public class Item2 {
     
     @JsonProperty("id")
     public String id;
+
     public Item2 withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +25,7 @@ public class Item2 {
     
     @JsonProperty("name")
     public String name;
+
     public Item2 withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +33,7 @@ public class Item2 {
     
     @JsonProperty("price")
     public Double price;
+
     public Item2 withPrice(Double price) {
         this.price = price;
         return this;
@@ -37,6 +41,7 @@ public class Item2 {
     
     @JsonProperty("priceTags")
     public PriceTag[] priceTags;
+
     public Item2 withPriceTags(PriceTag[] priceTags) {
         this.priceTags = priceTags;
         return this;
@@ -44,6 +49,7 @@ public class Item2 {
     
     @JsonProperty("productId")
     public String productId;
+
     public Item2 withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -51,6 +57,7 @@ public class Item2 {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item2 withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -58,6 +65,7 @@ public class Item2 {
     
     @JsonProperty("refId")
     public String refId;
+
     public Item2 withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -65,6 +73,7 @@ public class Item2 {
     
     @JsonProperty("shippingDiscount")
     public Integer shippingDiscount;
+
     public Item2 withShippingDiscount(Integer shippingDiscount) {
         this.shippingDiscount = shippingDiscount;
         return this;
@@ -72,9 +81,22 @@ public class Item2 {
     
     @JsonProperty("value")
     public Double value;
+
     public Item2 withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Item2(@JsonProperty("discount") Double discount, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("price") Double price, @JsonProperty("priceTags") PriceTag[] priceTags, @JsonProperty("productId") String productId, @JsonProperty("quantity") Integer quantity, @JsonProperty("refId") String refId, @JsonProperty("shippingDiscount") Integer shippingDiscount, @JsonProperty("value") Double value) {
+        this.discount = discount;
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.priceTags = priceTags;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.refId = refId;
+        this.shippingDiscount = shippingDiscount;
+        this.value = value;
+  }
 }

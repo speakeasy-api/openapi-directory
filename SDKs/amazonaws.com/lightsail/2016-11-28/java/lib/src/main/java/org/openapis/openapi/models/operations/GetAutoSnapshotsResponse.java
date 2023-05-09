@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutoSnapshotsResponse {
@@ -12,6 +13,7 @@ public class GetAutoSnapshotsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAutoSnapshotsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAutoSnapshotsResponse {
     
     
     public String contentType;
+
     public GetAutoSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAutoSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAutoSnapshotsResult getAutoSnapshotsResult;
+
     public GetAutoSnapshotsResponse withGetAutoSnapshotsResult(org.openapis.openapi.models.shared.GetAutoSnapshotsResult getAutoSnapshotsResult) {
         this.getAutoSnapshotsResult = getAutoSnapshotsResult;
         return this;
@@ -39,6 +43,7 @@ public class GetAutoSnapshotsResponse {
      */
     
     public Object invalidInputException;
+
     public GetAutoSnapshotsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetAutoSnapshotsResponse {
      */
     
     public Object notFoundException;
+
     public GetAutoSnapshotsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetAutoSnapshotsResponse {
      */
     
     public Object operationFailureException;
+
     public GetAutoSnapshotsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class GetAutoSnapshotsResponse {
      */
     
     public Object serviceException;
+
     public GetAutoSnapshotsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetAutoSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public GetAutoSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetAutoSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutoSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetAutoSnapshotsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetAutoSnapshotsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetAutoSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

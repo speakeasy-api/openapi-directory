@@ -18,6 +18,7 @@ public class MonitoringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentConfig")
     public MonitoringComponentConfig componentConfig;
+
     public MonitoringConfig withComponentConfig(MonitoringComponentConfig componentConfig) {
         this.componentConfig = componentConfig;
         return this;
@@ -29,9 +30,11 @@ public class MonitoringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedPrometheusConfig")
     public ManagedPrometheusConfig managedPrometheusConfig;
+
     public MonitoringConfig withManagedPrometheusConfig(ManagedPrometheusConfig managedPrometheusConfig) {
         this.managedPrometheusConfig = managedPrometheusConfig;
         return this;
     }
     
+    public MonitoringConfig(){}
 }

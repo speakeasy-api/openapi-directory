@@ -14,6 +14,7 @@ public class PutSourceServerActionRequestBody {
      */
     @JsonProperty("actionID")
     public String actionID;
+
     public PutSourceServerActionRequestBody withActionID(String actionID) {
         this.actionID = actionID;
         return this;
@@ -24,6 +25,7 @@ public class PutSourceServerActionRequestBody {
      */
     @JsonProperty("actionName")
     public String actionName;
+
     public PutSourceServerActionRequestBody withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -35,6 +37,7 @@ public class PutSourceServerActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PutSourceServerActionRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -46,6 +49,7 @@ public class PutSourceServerActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public PutSourceServerActionRequestBodyCategoryEnum category;
+
     public PutSourceServerActionRequestBody withCategory(PutSourceServerActionRequestBodyCategoryEnum category) {
         this.category = category;
         return this;
@@ -57,6 +61,7 @@ public class PutSourceServerActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PutSourceServerActionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class PutSourceServerActionRequestBody {
      */
     @JsonProperty("documentIdentifier")
     public String documentIdentifier;
+
     public PutSourceServerActionRequestBody withDocumentIdentifier(String documentIdentifier) {
         this.documentIdentifier = documentIdentifier;
         return this;
@@ -78,6 +84,7 @@ public class PutSourceServerActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentVersion")
     public String documentVersion;
+
     public PutSourceServerActionRequestBody withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -89,6 +96,7 @@ public class PutSourceServerActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalParameters")
     public java.util.Map<String, org.openapis.openapi.models.shared.SsmExternalParameter> externalParameters;
+
     public PutSourceServerActionRequestBody withExternalParameters(java.util.Map<String, org.openapis.openapi.models.shared.SsmExternalParameter> externalParameters) {
         this.externalParameters = externalParameters;
         return this;
@@ -100,6 +108,7 @@ public class PutSourceServerActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mustSucceedForCutover")
     public Boolean mustSucceedForCutover;
+
     public PutSourceServerActionRequestBody withMustSucceedForCutover(Boolean mustSucceedForCutover) {
         this.mustSucceedForCutover = mustSucceedForCutover;
         return this;
@@ -110,6 +119,7 @@ public class PutSourceServerActionRequestBody {
      */
     @JsonProperty("order")
     public Long order;
+
     public PutSourceServerActionRequestBody withOrder(Long order) {
         this.order = order;
         return this;
@@ -121,6 +131,7 @@ public class PutSourceServerActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, org.openapis.openapi.models.shared.SsmParameterStoreParameter[]> parameters;
+
     public PutSourceServerActionRequestBody withParameters(java.util.Map<String, org.openapis.openapi.models.shared.SsmParameterStoreParameter[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -131,6 +142,7 @@ public class PutSourceServerActionRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public PutSourceServerActionRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -142,9 +154,17 @@ public class PutSourceServerActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Long timeoutSeconds;
+
     public PutSourceServerActionRequestBody withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public PutSourceServerActionRequestBody(@JsonProperty("actionID") String actionID, @JsonProperty("actionName") String actionName, @JsonProperty("documentIdentifier") String documentIdentifier, @JsonProperty("order") Long order, @JsonProperty("sourceServerID") String sourceServerID) {
+        this.actionID = actionID;
+        this.actionName = actionName;
+        this.documentIdentifier = documentIdentifier;
+        this.order = order;
+        this.sourceServerID = sourceServerID;
+  }
 }

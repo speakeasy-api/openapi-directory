@@ -15,6 +15,7 @@ public class PaymentMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public PaymentMethodFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PaymentMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PaymentMethodFields withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class PaymentMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PaymentMethodFieldsTypeEnum type;
+
     public PaymentMethodFields withType(PaymentMethodFieldsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PaymentMethodFields(){}
 }

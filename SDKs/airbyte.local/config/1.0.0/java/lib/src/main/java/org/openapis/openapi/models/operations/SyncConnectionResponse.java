@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SyncConnectionResponse {
     
     public String contentType;
+
     public SyncConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SyncConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public SyncConnectionResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class SyncConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.JobInfoRead jobInfoRead;
+
     public SyncConnectionResponse withJobInfoRead(org.openapis.openapi.models.shared.JobInfoRead jobInfoRead) {
         this.jobInfoRead = jobInfoRead;
         return this;
@@ -39,6 +43,7 @@ public class SyncConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public SyncConnectionResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -46,6 +51,7 @@ public class SyncConnectionResponse {
     
     
     public Integer statusCode;
+
     public SyncConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class SyncConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SyncConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SyncConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

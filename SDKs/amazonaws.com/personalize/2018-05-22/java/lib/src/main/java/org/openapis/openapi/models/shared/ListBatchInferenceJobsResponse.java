@@ -15,6 +15,7 @@ public class ListBatchInferenceJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchInferenceJobs")
     public BatchInferenceJobSummary[] batchInferenceJobs;
+
     public ListBatchInferenceJobsResponse withBatchInferenceJobs(BatchInferenceJobSummary[] batchInferenceJobs) {
         this.batchInferenceJobs = batchInferenceJobs;
         return this;
@@ -23,9 +24,11 @@ public class ListBatchInferenceJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBatchInferenceJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBatchInferenceJobsResponse(){}
 }

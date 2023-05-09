@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_id")
     public String issueId;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest withIssueId(String issueId) {
         this.issueId = issueId;
         return this;
@@ -24,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,15 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest(@JsonProperty("issue_id") String issueId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.issueId = issueId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

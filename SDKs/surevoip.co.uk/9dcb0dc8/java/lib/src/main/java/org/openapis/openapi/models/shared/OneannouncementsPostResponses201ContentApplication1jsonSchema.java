@@ -15,9 +15,11 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("announcement")
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement announcement;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchema withAnnouncement(OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncement announcement) {
         this.announcement = announcement;
         return this;
     }
     
+    public OneannouncementsPostResponses201ContentApplication1jsonSchema(){}
 }

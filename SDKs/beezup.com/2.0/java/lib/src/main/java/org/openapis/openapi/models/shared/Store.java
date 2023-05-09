@@ -20,6 +20,7 @@ public class Store {
      */
     @JsonProperty("countryIsoCodeAlpha3")
     public String countryIsoCodeAlpha3;
+
     public Store withCountryIsoCodeAlpha3(String countryIsoCodeAlpha3) {
         this.countryIsoCodeAlpha3 = countryIsoCodeAlpha3;
         return this;
@@ -32,6 +33,7 @@ public class Store {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationUtcDate")
     public OffsetDateTime creationUtcDate;
+
     public Store withCreationUtcDate(OffsetDateTime creationUtcDate) {
         this.creationUtcDate = creationUtcDate;
         return this;
@@ -43,6 +45,7 @@ public class Store {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Store withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -53,6 +56,7 @@ public class Store {
      */
     @JsonProperty("goVersion")
     public Integer goVersion;
+
     public Store withGoVersion(Integer goVersion) {
         this.goVersion = goVersion;
         return this;
@@ -63,6 +67,7 @@ public class Store {
      */
     @JsonProperty("isTest")
     public Boolean isTest;
+
     public Store withIsTest(Boolean isTest) {
         this.isTest = isTest;
         return this;
@@ -73,6 +78,7 @@ public class Store {
      */
     @JsonProperty("links")
     public StoreLinks links;
+
     public Store withLinks(StoreLinks links) {
         this.links = links;
         return this;
@@ -83,6 +89,7 @@ public class Store {
      */
     @JsonProperty("name")
     public String name;
+
     public Store withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +100,7 @@ public class Store {
      */
     @JsonProperty("offerId")
     public Integer offerId;
+
     public Store withOfferId(Integer offerId) {
         this.offerId = offerId;
         return this;
@@ -103,6 +111,7 @@ public class Store {
      */
     @JsonProperty("offerName")
     public String offerName;
+
     public Store withOfferName(String offerName) {
         this.offerName = offerName;
         return this;
@@ -113,6 +122,7 @@ public class Store {
      */
     @JsonProperty("ownerUserId")
     public String ownerUserId;
+
     public Store withOwnerUserId(String ownerUserId) {
         this.ownerUserId = ownerUserId;
         return this;
@@ -123,6 +133,7 @@ public class Store {
      */
     @JsonProperty("sectors")
     public String[] sectors;
+
     public Store withSectors(String[] sectors) {
         this.sectors = sectors;
         return this;
@@ -133,6 +144,7 @@ public class Store {
      */
     @JsonProperty("shareCount")
     public Long shareCount;
+
     public Store withShareCount(Long shareCount) {
         this.shareCount = shareCount;
         return this;
@@ -147,6 +159,7 @@ public class Store {
      */
     @JsonProperty("status")
     public StoreStatusEnum status;
+
     public Store withStatus(StoreStatusEnum status) {
         this.status = status;
         return this;
@@ -157,6 +170,7 @@ public class Store {
      */
     @JsonProperty("storeId")
     public String storeId;
+
     public Store withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -167,6 +181,7 @@ public class Store {
      */
     @JsonProperty("url")
     public String url;
+
     public Store withUrl(String url) {
         this.url = url;
         return this;
@@ -180,9 +195,28 @@ public class Store {
      */
     @JsonProperty("userRole")
     public StoreUserRoleEnum userRole;
+
     public Store withUserRole(StoreUserRoleEnum userRole) {
         this.userRole = userRole;
         return this;
     }
     
+    public Store(@JsonProperty("countryIsoCodeAlpha3") String countryIsoCodeAlpha3, @JsonProperty("creationUtcDate") OffsetDateTime creationUtcDate, @JsonProperty("currencyCode") String currencyCode, @JsonProperty("goVersion") Integer goVersion, @JsonProperty("isTest") Boolean isTest, @JsonProperty("links") StoreLinks links, @JsonProperty("name") String name, @JsonProperty("offerId") Integer offerId, @JsonProperty("offerName") String offerName, @JsonProperty("ownerUserId") String ownerUserId, @JsonProperty("sectors") String[] sectors, @JsonProperty("shareCount") Long shareCount, @JsonProperty("status") StoreStatusEnum status, @JsonProperty("storeId") String storeId, @JsonProperty("url") String url, @JsonProperty("userRole") StoreUserRoleEnum userRole) {
+        this.countryIsoCodeAlpha3 = countryIsoCodeAlpha3;
+        this.creationUtcDate = creationUtcDate;
+        this.currencyCode = currencyCode;
+        this.goVersion = goVersion;
+        this.isTest = isTest;
+        this.links = links;
+        this.name = name;
+        this.offerId = offerId;
+        this.offerName = offerName;
+        this.ownerUserId = ownerUserId;
+        this.sectors = sectors;
+        this.shareCount = shareCount;
+        this.status = status;
+        this.storeId = storeId;
+        this.url = url;
+        this.userRole = userRole;
+  }
 }

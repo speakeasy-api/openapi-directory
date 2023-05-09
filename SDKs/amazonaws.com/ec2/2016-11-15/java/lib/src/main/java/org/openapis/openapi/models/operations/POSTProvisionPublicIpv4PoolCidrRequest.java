@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTProvisionPublicIpv4PoolCidrRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTProvisionPublicIpv4PoolCidrActionEnum action;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withAction(POSTProvisionPublicIpv4PoolCidrActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTProvisionPublicIpv4PoolCidrVersionEnum version;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withVersion(POSTProvisionPublicIpv4PoolCidrVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTProvisionPublicIpv4PoolCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTProvisionPublicIpv4PoolCidrRequest(@JsonProperty("Action") POSTProvisionPublicIpv4PoolCidrActionEnum action, @JsonProperty("Version") POSTProvisionPublicIpv4PoolCidrVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

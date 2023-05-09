@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsOutboundHeaderSourcePortRanges {
     
     public Long from;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsOutboundHeaderSourcePortRanges withFrom(Long from) {
         this.from = from;
         return this;
@@ -19,9 +20,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public Long to;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsOutboundHeaderSourcePortRanges withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsOutboundHeaderSourcePortRanges(){}
 }

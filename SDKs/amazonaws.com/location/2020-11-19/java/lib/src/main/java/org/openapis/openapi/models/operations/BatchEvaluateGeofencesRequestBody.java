@@ -12,9 +12,13 @@ public class BatchEvaluateGeofencesRequestBody {
      */
     @JsonProperty("DevicePositionUpdates")
     public org.openapis.openapi.models.shared.DevicePositionUpdate[] devicePositionUpdates;
+
     public BatchEvaluateGeofencesRequestBody withDevicePositionUpdates(org.openapis.openapi.models.shared.DevicePositionUpdate[] devicePositionUpdates) {
         this.devicePositionUpdates = devicePositionUpdates;
         return this;
     }
     
+    public BatchEvaluateGeofencesRequestBody(@JsonProperty("DevicePositionUpdates") org.openapis.openapi.models.shared.DevicePositionUpdate[] devicePositionUpdates) {
+        this.devicePositionUpdates = devicePositionUpdates;
+  }
 }

@@ -18,6 +18,7 @@ public class InvoiceCategoryApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public InvoiceCategoryApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class InvoiceCategoryApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InvoiceCategoryApiModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InvoiceCategoryApiModel(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteApplicationVpcConfigurationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public DeleteApplicationVpcConfigurationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class DeleteApplicationVpcConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalToken")
     public String conditionalToken;
+
     public DeleteApplicationVpcConfigurationRequest withConditionalToken(String conditionalToken) {
         this.conditionalToken = conditionalToken;
         return this;
@@ -27,6 +29,7 @@ public class DeleteApplicationVpcConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public DeleteApplicationVpcConfigurationRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
@@ -34,9 +37,14 @@ public class DeleteApplicationVpcConfigurationRequest {
     
     @JsonProperty("VpcConfigurationId")
     public String vpcConfigurationId;
+
     public DeleteApplicationVpcConfigurationRequest withVpcConfigurationId(String vpcConfigurationId) {
         this.vpcConfigurationId = vpcConfigurationId;
         return this;
     }
     
+    public DeleteApplicationVpcConfigurationRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("VpcConfigurationId") String vpcConfigurationId) {
+        this.applicationName = applicationName;
+        this.vpcConfigurationId = vpcConfigurationId;
+  }
 }

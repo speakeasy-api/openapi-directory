@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateLensesResponse {
@@ -12,6 +13,7 @@ public class AssociateLensesResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateLensesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateLensesResponse {
      */
     
     public Object conflictException;
+
     public AssociateLensesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateLensesResponse {
     
     
     public String contentType;
+
     public AssociateLensesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateLensesResponse {
      */
     
     public Object internalServerException;
+
     public AssociateLensesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateLensesResponse {
     
     
     public Integer statusCode;
+
     public AssociateLensesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AssociateLensesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateLensesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AssociateLensesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateLensesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class AssociateLensesResponse {
      */
     
     public Object throttlingException;
+
     public AssociateLensesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class AssociateLensesResponse {
      */
     
     public Object validationException;
+
     public AssociateLensesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateLensesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

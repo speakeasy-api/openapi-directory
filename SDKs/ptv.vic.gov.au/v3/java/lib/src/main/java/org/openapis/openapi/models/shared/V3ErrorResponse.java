@@ -18,6 +18,7 @@ public class V3ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public V3ErrorResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -26,9 +27,11 @@ public class V3ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public V3Status status;
+
     public V3ErrorResponse withStatus(V3Status status) {
         this.status = status;
         return this;
     }
     
+    public V3ErrorResponse(){}
 }

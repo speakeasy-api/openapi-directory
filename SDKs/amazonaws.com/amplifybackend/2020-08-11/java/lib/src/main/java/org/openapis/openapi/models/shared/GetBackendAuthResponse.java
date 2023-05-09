@@ -15,6 +15,7 @@ public class GetBackendAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public GetBackendAuthResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class GetBackendAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackendEnvironmentName")
     public String backendEnvironmentName;
+
     public GetBackendAuthResponse withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
@@ -31,6 +33,7 @@ public class GetBackendAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public GetBackendAuthResponse withError(String error) {
         this.error = error;
         return this;
@@ -39,6 +42,7 @@ public class GetBackendAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceConfig")
     public GetBackendAuthResponseResourceConfig resourceConfig;
+
     public GetBackendAuthResponse withResourceConfig(GetBackendAuthResponseResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -47,9 +51,11 @@ public class GetBackendAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public GetBackendAuthResponse withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GetBackendAuthResponse(){}
 }

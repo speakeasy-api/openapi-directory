@@ -15,6 +15,7 @@ public class CampaignHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaFunctionName")
     public String lambdaFunctionName;
+
     public CampaignHook withLambdaFunctionName(String lambdaFunctionName) {
         this.lambdaFunctionName = lambdaFunctionName;
         return this;
@@ -23,6 +24,7 @@ public class CampaignHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public ModeEnum mode;
+
     public CampaignHook withMode(ModeEnum mode) {
         this.mode = mode;
         return this;
@@ -31,9 +33,11 @@ public class CampaignHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebUrl")
     public String webUrl;
+
     public CampaignHook withWebUrl(String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
     
+    public CampaignHook(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1ResourcesIdBlocksResponse {
     
     public String contentType;
+
     public GetSetupV1ResourcesIdBlocksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1ResourcesIdBlocksResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceBlockListViewModel resourceBlockListViewModel;
+
     public GetSetupV1ResourcesIdBlocksResponse withResourceBlockListViewModel(org.openapis.openapi.models.shared.ResourceBlockListViewModel resourceBlockListViewModel) {
         this.resourceBlockListViewModel = resourceBlockListViewModel;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1ResourcesIdBlocksResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1ResourcesIdBlocksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1ResourcesIdBlocksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1ResourcesIdBlocksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1ResourcesIdBlocksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

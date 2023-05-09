@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidateCandidateIdHistoryCycleRequest {
@@ -13,6 +14,7 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCandidateCandidateIdHistoryCycleRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -21,10 +23,17 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=candidate_id")
     public String candidateId;
+
     public GetCandidateCandidateIdHistoryCycleRequest withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -42,6 +51,7 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cycle")
     public Integer cycle;
+
     public GetCandidateCandidateIdHistoryCycleRequest withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -53,6 +63,7 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetCandidateCandidateIdHistoryCycleRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -63,6 +74,7 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCandidateCandidateIdHistoryCycleRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -73,6 +85,7 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCandidateCandidateIdHistoryCycleRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -84,6 +97,7 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCandidateCandidateIdHistoryCycleRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -94,6 +108,7 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCandidateCandidateIdHistoryCycleRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -104,6 +119,7 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCandidateCandidateIdHistoryCycleRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -114,9 +130,15 @@ public class GetCandidateCandidateIdHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCandidateCandidateIdHistoryCycleRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetCandidateCandidateIdHistoryCycleRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("candidate_id") String candidateId, @JsonProperty("cycle") Integer cycle) {
+        this.apiKey = apiKey;
+        this.candidateId = candidateId;
+        this.cycle = cycle;
+  }
 }

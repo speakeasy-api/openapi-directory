@@ -15,6 +15,7 @@ public class AnalyticsCrashGroupTotalsDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AnalyticsCrashGroupTotalsDefaultApplicationJSONErrorCodeEnum code;
+
     public AnalyticsCrashGroupTotalsDefaultApplicationJSONError withCode(AnalyticsCrashGroupTotalsDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsCrashGroupTotalsDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AnalyticsCrashGroupTotalsDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AnalyticsCrashGroupTotalsDefaultApplicationJSONError(){}
 }

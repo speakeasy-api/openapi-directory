@@ -18,9 +18,11 @@ public class FetchVerificationOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public VerificationOption[] options;
+
     public FetchVerificationOptionsResponse withOptions(VerificationOption[] options) {
         this.options = options;
         return this;
     }
     
+    public FetchVerificationOptionsResponse(){}
 }

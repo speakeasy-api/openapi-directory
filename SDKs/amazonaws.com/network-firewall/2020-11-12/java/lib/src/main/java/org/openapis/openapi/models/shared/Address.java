@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Address {
     @JsonProperty("AddressDefinition")
     public String addressDefinition;
+
     public Address withAddressDefinition(String addressDefinition) {
         this.addressDefinition = addressDefinition;
         return this;
     }
     
+    public Address(@JsonProperty("AddressDefinition") String addressDefinition) {
+        this.addressDefinition = addressDefinition;
+  }
 }

@@ -12,6 +12,7 @@ public class VatLookup200ApplicationJSONMatches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public org.openapis.openapi.models.shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany company;
+
     public VatLookup200ApplicationJSONMatches withCompany(org.openapis.openapi.models.shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany company) {
         this.company = company;
         return this;
@@ -20,9 +21,11 @@ public class VatLookup200ApplicationJSONMatches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat")
     public String vat;
+
     public VatLookup200ApplicationJSONMatches withVat(String vat) {
         this.vat = vat;
         return this;
     }
     
+    public VatLookup200ApplicationJSONMatches(){}
 }

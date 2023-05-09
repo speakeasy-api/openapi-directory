@@ -15,6 +15,7 @@ public class GetSeasonsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetSeasonsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -27,6 +28,7 @@ public class GetSeasonsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public GetSeasonsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -39,6 +41,7 @@ public class GetSeasonsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetSeasonsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -49,6 +52,7 @@ public class GetSeasonsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetSeasonsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -59,6 +63,7 @@ public class GetSeasonsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=series_id")
     public String seriesId;
+
     public GetSeasonsRequest withSeriesId(String seriesId) {
         this.seriesId = seriesId;
         return this;
@@ -71,9 +76,11 @@ public class GetSeasonsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public GetSeasonsSortEnum[] sort;
+
     public GetSeasonsRequest withSort(GetSeasonsSortEnum[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetSeasonsRequest(){}
 }

@@ -15,9 +15,11 @@ public class DescribeDocumentClassifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierProperties")
     public DocumentClassifierProperties documentClassifierProperties;
+
     public DescribeDocumentClassifierResponse withDocumentClassifierProperties(DocumentClassifierProperties documentClassifierProperties) {
         this.documentClassifierProperties = documentClassifierProperties;
         return this;
     }
     
+    public DescribeDocumentClassifierResponse(){}
 }

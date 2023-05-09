@@ -15,9 +15,11 @@ public class RestoreTableFromSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRestoreStatus")
     public TableRestoreStatus tableRestoreStatus;
+
     public RestoreTableFromSnapshotResponse withTableRestoreStatus(TableRestoreStatus tableRestoreStatus) {
         this.tableRestoreStatus = tableRestoreStatus;
         return this;
     }
     
+    public RestoreTableFromSnapshotResponse(){}
 }

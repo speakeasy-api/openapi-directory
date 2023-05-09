@@ -15,6 +15,7 @@ public class AwsEcrRepositoryLifecyclePolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecyclePolicyText")
     public String lifecyclePolicyText;
+
     public AwsEcrRepositoryLifecyclePolicyDetails withLifecyclePolicyText(String lifecyclePolicyText) {
         this.lifecyclePolicyText = lifecyclePolicyText;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcrRepositoryLifecyclePolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryId")
     public String registryId;
+
     public AwsEcrRepositoryLifecyclePolicyDetails withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
     }
     
+    public AwsEcrRepositoryLifecyclePolicyDetails(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionAutoscalersUpdateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionAutoscalersUpdateSecurityOption1 option1;
+
     public ComputeRegionAutoscalersUpdateSecurity withOption1(ComputeRegionAutoscalersUpdateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionAutoscalersUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionAutoscalersUpdateSecurityOption2 option2;
+
     public ComputeRegionAutoscalersUpdateSecurity withOption2(ComputeRegionAutoscalersUpdateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionAutoscalersUpdateSecurity(){}
 }

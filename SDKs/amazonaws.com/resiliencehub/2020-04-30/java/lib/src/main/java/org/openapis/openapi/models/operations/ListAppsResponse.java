@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAppsResponse {
@@ -12,6 +13,7 @@ public class ListAppsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAppsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAppsResponse {
     
     
     public String contentType;
+
     public ListAppsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAppsResponse {
      */
     
     public Object internalServerException;
+
     public ListAppsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAppsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppsResponse listAppsResponse;
+
     public ListAppsResponse withListAppsResponse(org.openapis.openapi.models.shared.ListAppsResponse listAppsResponse) {
         this.listAppsResponse = listAppsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAppsResponse {
     
     
     public Integer statusCode;
+
     public ListAppsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAppsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAppsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAppsResponse {
      */
     
     public Object throttlingException;
+
     public ListAppsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListAppsResponse {
      */
     
     public Object validationException;
+
     public ListAppsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAppsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

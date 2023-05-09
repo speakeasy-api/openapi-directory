@@ -15,9 +15,11 @@ public class UpdateAlarmModelRequestBodyAlarmRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleRule")
     public org.openapis.openapi.models.shared.SimpleRule simpleRule;
+
     public UpdateAlarmModelRequestBodyAlarmRule withSimpleRule(org.openapis.openapi.models.shared.SimpleRule simpleRule) {
         this.simpleRule = simpleRule;
         return this;
     }
     
+    public UpdateAlarmModelRequestBodyAlarmRule(){}
 }

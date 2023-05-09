@@ -15,6 +15,7 @@ public class AccountUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionCount")
     public Long functionCount;
+
     public AccountUsage withFunctionCount(Long functionCount) {
         this.functionCount = functionCount;
         return this;
@@ -23,9 +24,11 @@ public class AccountUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCodeSize")
     public Long totalCodeSize;
+
     public AccountUsage withTotalCodeSize(Long totalCodeSize) {
         this.totalCodeSize = totalCodeSize;
         return this;
     }
     
+    public AccountUsage(){}
 }

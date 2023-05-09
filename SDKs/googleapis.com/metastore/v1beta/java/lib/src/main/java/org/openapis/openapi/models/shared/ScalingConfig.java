@@ -18,6 +18,7 @@ public class ScalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceSize")
     public ScalingConfigInstanceSizeEnum instanceSize;
+
     public ScalingConfig withInstanceSize(ScalingConfigInstanceSizeEnum instanceSize) {
         this.instanceSize = instanceSize;
         return this;
@@ -29,9 +30,11 @@ public class ScalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scalingFactor")
     public Float scalingFactor;
+
     public ScalingConfig withScalingFactor(Float scalingFactor) {
         this.scalingFactor = scalingFactor;
         return this;
     }
     
+    public ScalingConfig(){}
 }

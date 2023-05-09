@@ -15,6 +15,7 @@ public class SetCommonInstanceMetadataOperationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientOperationId")
     public String clientOperationId;
+
     public SetCommonInstanceMetadataOperationMetadata withClientOperationId(String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -23,9 +24,11 @@ public class SetCommonInstanceMetadataOperationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perLocationOperations")
     public java.util.Map<String, SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo> perLocationOperations;
+
     public SetCommonInstanceMetadataOperationMetadata withPerLocationOperations(java.util.Map<String, SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo> perLocationOperations) {
         this.perLocationOperations = perLocationOperations;
         return this;
     }
     
+    public SetCommonInstanceMetadataOperationMetadata(){}
 }

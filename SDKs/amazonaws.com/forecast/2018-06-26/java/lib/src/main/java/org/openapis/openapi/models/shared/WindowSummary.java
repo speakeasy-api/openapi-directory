@@ -20,6 +20,7 @@ public class WindowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationType")
     public EvaluationTypeEnum evaluationType;
+
     public WindowSummary withEvaluationType(EvaluationTypeEnum evaluationType) {
         this.evaluationType = evaluationType;
         return this;
@@ -28,6 +29,7 @@ public class WindowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public WindowSummary withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -36,6 +38,7 @@ public class WindowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public Metrics metrics;
+
     public WindowSummary withMetrics(Metrics metrics) {
         this.metrics = metrics;
         return this;
@@ -46,6 +49,7 @@ public class WindowSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TestWindowEnd")
     public OffsetDateTime testWindowEnd;
+
     public WindowSummary withTestWindowEnd(OffsetDateTime testWindowEnd) {
         this.testWindowEnd = testWindowEnd;
         return this;
@@ -56,9 +60,11 @@ public class WindowSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TestWindowStart")
     public OffsetDateTime testWindowStart;
+
     public WindowSummary withTestWindowStart(OffsetDateTime testWindowStart) {
         this.testWindowStart = testWindowStart;
         return this;
     }
     
+    public WindowSummary(){}
 }

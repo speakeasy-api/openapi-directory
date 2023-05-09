@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetOrganizationAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auditLogType")
     public GetOrganizationAuditlogsAuditLogTypeEnum auditLogType;
+
     public GetOrganizationAuditlogsRequest withAuditLogType(GetOrganizationAuditlogsAuditLogTypeEnum auditLogType) {
         this.auditLogType = auditLogType;
         return this;
@@ -23,6 +25,7 @@ public class GetOrganizationAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configId")
     public String configId;
+
     public GetOrganizationAuditlogsRequest withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -33,6 +36,7 @@ public class GetOrganizationAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environmentId")
     public String environmentId;
+
     public GetOrganizationAuditlogsRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -43,6 +47,7 @@ public class GetOrganizationAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromUtcDateTime")
     public OffsetDateTime fromUtcDateTime;
+
     public GetOrganizationAuditlogsRequest withFromUtcDateTime(OffsetDateTime fromUtcDateTime) {
         this.fromUtcDateTime = fromUtcDateTime;
         return this;
@@ -53,6 +58,7 @@ public class GetOrganizationAuditlogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public GetOrganizationAuditlogsRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -63,6 +69,7 @@ public class GetOrganizationAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=productId")
     public String productId;
+
     public GetOrganizationAuditlogsRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -73,9 +80,13 @@ public class GetOrganizationAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toUtcDateTime")
     public OffsetDateTime toUtcDateTime;
+
     public GetOrganizationAuditlogsRequest withToUtcDateTime(OffsetDateTime toUtcDateTime) {
         this.toUtcDateTime = toUtcDateTime;
         return this;
     }
     
+    public GetOrganizationAuditlogsRequest(@JsonProperty("organizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

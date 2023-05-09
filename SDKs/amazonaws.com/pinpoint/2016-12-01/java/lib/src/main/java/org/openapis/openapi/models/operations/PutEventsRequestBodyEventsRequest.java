@@ -15,9 +15,11 @@ public class PutEventsRequestBodyEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchItem")
     public java.util.Map<String, org.openapis.openapi.models.shared.EventsBatch> batchItem;
+
     public PutEventsRequestBodyEventsRequest withBatchItem(java.util.Map<String, org.openapis.openapi.models.shared.EventsBatch> batchItem) {
         this.batchItem = batchItem;
         return this;
     }
     
+    public PutEventsRequestBodyEventsRequest(){}
 }

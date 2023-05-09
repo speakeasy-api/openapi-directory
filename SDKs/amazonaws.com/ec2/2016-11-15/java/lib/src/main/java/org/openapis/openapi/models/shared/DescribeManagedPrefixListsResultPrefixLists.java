@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeManagedPrefixListsResultPrefixLists {
     
     public String addressFamily;
+
     public DescribeManagedPrefixListsResultPrefixLists withAddressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -19,6 +20,7 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public Long maxEntries;
+
     public DescribeManagedPrefixListsResultPrefixLists withMaxEntries(Long maxEntries) {
         this.maxEntries = maxEntries;
         return this;
@@ -26,6 +28,7 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public String ownerId;
+
     public DescribeManagedPrefixListsResultPrefixLists withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public String prefixListArn;
+
     public DescribeManagedPrefixListsResultPrefixLists withPrefixListArn(String prefixListArn) {
         this.prefixListArn = prefixListArn;
         return this;
@@ -40,6 +44,7 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public String prefixListId;
+
     public DescribeManagedPrefixListsResultPrefixLists withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public String prefixListName;
+
     public DescribeManagedPrefixListsResultPrefixLists withPrefixListName(String prefixListName) {
         this.prefixListName = prefixListName;
         return this;
@@ -54,6 +60,7 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public DescribeManagedPrefixListsResultPrefixListsStateEnum state;
+
     public DescribeManagedPrefixListsResultPrefixLists withState(DescribeManagedPrefixListsResultPrefixListsStateEnum state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public String stateMessage;
+
     public DescribeManagedPrefixListsResultPrefixLists withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -68,6 +76,7 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public DescribeManagedPrefixListsResultPrefixListsTags[] tags;
+
     public DescribeManagedPrefixListsResultPrefixLists withTags(DescribeManagedPrefixListsResultPrefixListsTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +84,11 @@ public class DescribeManagedPrefixListsResultPrefixLists {
     
     
     public Long version;
+
     public DescribeManagedPrefixListsResultPrefixLists withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public DescribeManagedPrefixListsResultPrefixLists(){}
 }

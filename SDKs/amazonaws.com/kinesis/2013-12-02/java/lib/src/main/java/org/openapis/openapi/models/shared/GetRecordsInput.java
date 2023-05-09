@@ -15,6 +15,7 @@ public class GetRecordsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public GetRecordsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetRecordsInput {
     
     @JsonProperty("ShardIterator")
     public String shardIterator;
+
     public GetRecordsInput withShardIterator(String shardIterator) {
         this.shardIterator = shardIterator;
         return this;
@@ -30,9 +32,13 @@ public class GetRecordsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetRecordsInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
     }
     
+    public GetRecordsInput(@JsonProperty("ShardIterator") String shardIterator) {
+        this.shardIterator = shardIterator;
+  }
 }

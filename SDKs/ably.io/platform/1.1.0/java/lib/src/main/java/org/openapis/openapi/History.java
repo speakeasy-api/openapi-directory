@@ -68,13 +68,11 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessagesByChannelResponse res = new org.openapis.openapi.models.operations.GetMessagesByChannelResponse() {{
+        org.openapis.openapi.models.operations.GetMessagesByChannelResponse res = new org.openapis.openapi.models.operations.GetMessagesByChannelResponse(contentType, httpRes.statusCode()) {{
             messages = null;
             body = null;
             getMessagesByChannel2XXTextHTMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -136,7 +134,7 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPresenceHistoryOfChannelResponse res = new org.openapis.openapi.models.operations.GetPresenceHistoryOfChannelResponse() {{
+        org.openapis.openapi.models.operations.GetPresenceHistoryOfChannelResponse res = new org.openapis.openapi.models.operations.GetPresenceHistoryOfChannelResponse(contentType, httpRes.statusCode()) {{
             presenceMessages = null;
             body = null;
             getPresenceHistoryOfChannel2XXTextHTMLString = null;
@@ -144,8 +142,6 @@ public class History {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

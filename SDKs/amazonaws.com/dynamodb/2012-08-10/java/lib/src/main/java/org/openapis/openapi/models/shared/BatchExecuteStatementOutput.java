@@ -15,6 +15,7 @@ public class BatchExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity[] consumedCapacity;
+
     public BatchExecuteStatementOutput withConsumedCapacity(ConsumedCapacity[] consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -23,9 +24,11 @@ public class BatchExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Responses")
     public BatchStatementResponse[] responses;
+
     public BatchExecuteStatementOutput withResponses(BatchStatementResponse[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public BatchExecuteStatementOutput(){}
 }

@@ -18,6 +18,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiry")
     public Long expiry;
+
     public Token withExpiry(Long expiry) {
         this.expiry = expiry;
         return this;
@@ -26,9 +27,11 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public Token withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public Token(){}
 }

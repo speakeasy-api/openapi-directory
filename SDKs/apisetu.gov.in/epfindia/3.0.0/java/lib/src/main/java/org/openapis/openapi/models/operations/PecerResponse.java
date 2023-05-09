@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PecerResponse {
     
     public String contentType;
+
     public PecerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PecerResponse {
     
     
     public Integer statusCode;
+
     public PecerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PecerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PecerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PecerResponse {
      */
     
     public Pecer400ApplicationJSON pecer400ApplicationJSONObject;
+
     public PecerResponse withPecer400ApplicationJSONObject(Pecer400ApplicationJSON pecer400ApplicationJSONObject) {
         this.pecer400ApplicationJSONObject = pecer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PecerResponse {
      */
     
     public Pecer401ApplicationJSON pecer401ApplicationJSONObject;
+
     public PecerResponse withPecer401ApplicationJSONObject(Pecer401ApplicationJSON pecer401ApplicationJSONObject) {
         this.pecer401ApplicationJSONObject = pecer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PecerResponse {
      */
     
     public Pecer404ApplicationJSON pecer404ApplicationJSONObject;
+
     public PecerResponse withPecer404ApplicationJSONObject(Pecer404ApplicationJSON pecer404ApplicationJSONObject) {
         this.pecer404ApplicationJSONObject = pecer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PecerResponse {
      */
     
     public Pecer500ApplicationJSON pecer500ApplicationJSONObject;
+
     public PecerResponse withPecer500ApplicationJSONObject(Pecer500ApplicationJSON pecer500ApplicationJSONObject) {
         this.pecer500ApplicationJSONObject = pecer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PecerResponse {
      */
     
     public Pecer502ApplicationJSON pecer502ApplicationJSONObject;
+
     public PecerResponse withPecer502ApplicationJSONObject(Pecer502ApplicationJSON pecer502ApplicationJSONObject) {
         this.pecer502ApplicationJSONObject = pecer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PecerResponse {
      */
     
     public Pecer503ApplicationJSON pecer503ApplicationJSONObject;
+
     public PecerResponse withPecer503ApplicationJSONObject(Pecer503ApplicationJSON pecer503ApplicationJSONObject) {
         this.pecer503ApplicationJSONObject = pecer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PecerResponse {
      */
     
     public Pecer504ApplicationJSON pecer504ApplicationJSONObject;
+
     public PecerResponse withPecer504ApplicationJSONObject(Pecer504ApplicationJSON pecer504ApplicationJSONObject) {
         this.pecer504ApplicationJSONObject = pecer504ApplicationJSONObject;
         return this;
     }
     
+    public PecerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

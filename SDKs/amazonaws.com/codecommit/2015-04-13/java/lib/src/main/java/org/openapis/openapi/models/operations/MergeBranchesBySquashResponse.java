@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergeBranchesBySquashResponse {
@@ -12,6 +13,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object branchDoesNotExistException;
+
     public MergeBranchesBySquashResponse withBranchDoesNotExistException(Object branchDoesNotExistException) {
         this.branchDoesNotExistException = branchDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object branchNameIsTagNameException;
+
     public MergeBranchesBySquashResponse withBranchNameIsTagNameException(Object branchNameIsTagNameException) {
         this.branchNameIsTagNameException = branchNameIsTagNameException;
         return this;
@@ -32,6 +35,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object branchNameRequiredException;
+
     public MergeBranchesBySquashResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -42,6 +46,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public MergeBranchesBySquashResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -52,6 +57,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object commitMessageLengthExceededException;
+
     public MergeBranchesBySquashResponse withCommitMessageLengthExceededException(Object commitMessageLengthExceededException) {
         this.commitMessageLengthExceededException = commitMessageLengthExceededException;
         return this;
@@ -62,6 +68,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object commitRequiredException;
+
     public MergeBranchesBySquashResponse withCommitRequiredException(Object commitRequiredException) {
         this.commitRequiredException = commitRequiredException;
         return this;
@@ -72,6 +79,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object concurrentReferenceUpdateException;
+
     public MergeBranchesBySquashResponse withConcurrentReferenceUpdateException(Object concurrentReferenceUpdateException) {
         this.concurrentReferenceUpdateException = concurrentReferenceUpdateException;
         return this;
@@ -79,6 +87,7 @@ public class MergeBranchesBySquashResponse {
     
     
     public String contentType;
+
     public MergeBranchesBySquashResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -89,6 +98,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public MergeBranchesBySquashResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -99,6 +109,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public MergeBranchesBySquashResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -109,6 +120,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public MergeBranchesBySquashResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -119,6 +131,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public MergeBranchesBySquashResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -129,6 +142,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public MergeBranchesBySquashResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -139,6 +153,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object fileContentSizeLimitExceededException;
+
     public MergeBranchesBySquashResponse withFileContentSizeLimitExceededException(Object fileContentSizeLimitExceededException) {
         this.fileContentSizeLimitExceededException = fileContentSizeLimitExceededException;
         return this;
@@ -149,6 +164,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object fileModeRequiredException;
+
     public MergeBranchesBySquashResponse withFileModeRequiredException(Object fileModeRequiredException) {
         this.fileModeRequiredException = fileModeRequiredException;
         return this;
@@ -159,6 +175,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object folderContentSizeLimitExceededException;
+
     public MergeBranchesBySquashResponse withFolderContentSizeLimitExceededException(Object folderContentSizeLimitExceededException) {
         this.folderContentSizeLimitExceededException = folderContentSizeLimitExceededException;
         return this;
@@ -169,6 +186,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidBranchNameException;
+
     public MergeBranchesBySquashResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -179,6 +197,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidCommitException;
+
     public MergeBranchesBySquashResponse withInvalidCommitException(Object invalidCommitException) {
         this.invalidCommitException = invalidCommitException;
         return this;
@@ -189,6 +208,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidConflictDetailLevelException;
+
     public MergeBranchesBySquashResponse withInvalidConflictDetailLevelException(Object invalidConflictDetailLevelException) {
         this.invalidConflictDetailLevelException = invalidConflictDetailLevelException;
         return this;
@@ -199,6 +219,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidConflictResolutionException;
+
     public MergeBranchesBySquashResponse withInvalidConflictResolutionException(Object invalidConflictResolutionException) {
         this.invalidConflictResolutionException = invalidConflictResolutionException;
         return this;
@@ -209,6 +230,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidConflictResolutionStrategyException;
+
     public MergeBranchesBySquashResponse withInvalidConflictResolutionStrategyException(Object invalidConflictResolutionStrategyException) {
         this.invalidConflictResolutionStrategyException = invalidConflictResolutionStrategyException;
         return this;
@@ -219,6 +241,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidEmailException;
+
     public MergeBranchesBySquashResponse withInvalidEmailException(Object invalidEmailException) {
         this.invalidEmailException = invalidEmailException;
         return this;
@@ -229,6 +252,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidFileModeException;
+
     public MergeBranchesBySquashResponse withInvalidFileModeException(Object invalidFileModeException) {
         this.invalidFileModeException = invalidFileModeException;
         return this;
@@ -239,6 +263,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidPathException;
+
     public MergeBranchesBySquashResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -249,6 +274,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidReplacementContentException;
+
     public MergeBranchesBySquashResponse withInvalidReplacementContentException(Object invalidReplacementContentException) {
         this.invalidReplacementContentException = invalidReplacementContentException;
         return this;
@@ -259,6 +285,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidReplacementTypeException;
+
     public MergeBranchesBySquashResponse withInvalidReplacementTypeException(Object invalidReplacementTypeException) {
         this.invalidReplacementTypeException = invalidReplacementTypeException;
         return this;
@@ -269,6 +296,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public MergeBranchesBySquashResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -279,6 +307,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object invalidTargetBranchException;
+
     public MergeBranchesBySquashResponse withInvalidTargetBranchException(Object invalidTargetBranchException) {
         this.invalidTargetBranchException = invalidTargetBranchException;
         return this;
@@ -289,6 +318,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object manualMergeRequiredException;
+
     public MergeBranchesBySquashResponse withManualMergeRequiredException(Object manualMergeRequiredException) {
         this.manualMergeRequiredException = manualMergeRequiredException;
         return this;
@@ -299,6 +329,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object maximumConflictResolutionEntriesExceededException;
+
     public MergeBranchesBySquashResponse withMaximumConflictResolutionEntriesExceededException(Object maximumConflictResolutionEntriesExceededException) {
         this.maximumConflictResolutionEntriesExceededException = maximumConflictResolutionEntriesExceededException;
         return this;
@@ -309,6 +340,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object maximumFileContentToLoadExceededException;
+
     public MergeBranchesBySquashResponse withMaximumFileContentToLoadExceededException(Object maximumFileContentToLoadExceededException) {
         this.maximumFileContentToLoadExceededException = maximumFileContentToLoadExceededException;
         return this;
@@ -319,6 +351,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object maximumItemsToCompareExceededException;
+
     public MergeBranchesBySquashResponse withMaximumItemsToCompareExceededException(Object maximumItemsToCompareExceededException) {
         this.maximumItemsToCompareExceededException = maximumItemsToCompareExceededException;
         return this;
@@ -329,6 +362,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public org.openapis.openapi.models.shared.MergeBranchesBySquashOutput mergeBranchesBySquashOutput;
+
     public MergeBranchesBySquashResponse withMergeBranchesBySquashOutput(org.openapis.openapi.models.shared.MergeBranchesBySquashOutput mergeBranchesBySquashOutput) {
         this.mergeBranchesBySquashOutput = mergeBranchesBySquashOutput;
         return this;
@@ -339,6 +373,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object multipleConflictResolutionEntriesException;
+
     public MergeBranchesBySquashResponse withMultipleConflictResolutionEntriesException(Object multipleConflictResolutionEntriesException) {
         this.multipleConflictResolutionEntriesException = multipleConflictResolutionEntriesException;
         return this;
@@ -349,6 +384,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object nameLengthExceededException;
+
     public MergeBranchesBySquashResponse withNameLengthExceededException(Object nameLengthExceededException) {
         this.nameLengthExceededException = nameLengthExceededException;
         return this;
@@ -359,6 +395,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object pathRequiredException;
+
     public MergeBranchesBySquashResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -369,6 +406,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object replacementContentRequiredException;
+
     public MergeBranchesBySquashResponse withReplacementContentRequiredException(Object replacementContentRequiredException) {
         this.replacementContentRequiredException = replacementContentRequiredException;
         return this;
@@ -379,6 +417,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object replacementTypeRequiredException;
+
     public MergeBranchesBySquashResponse withReplacementTypeRequiredException(Object replacementTypeRequiredException) {
         this.replacementTypeRequiredException = replacementTypeRequiredException;
         return this;
@@ -389,6 +428,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public MergeBranchesBySquashResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -399,6 +439,7 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public MergeBranchesBySquashResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -406,6 +447,7 @@ public class MergeBranchesBySquashResponse {
     
     
     public Integer statusCode;
+
     public MergeBranchesBySquashResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -413,6 +455,7 @@ public class MergeBranchesBySquashResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergeBranchesBySquashResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -423,9 +466,14 @@ public class MergeBranchesBySquashResponse {
      */
     
     public Object tipsDivergenceExceededException;
+
     public MergeBranchesBySquashResponse withTipsDivergenceExceededException(Object tipsDivergenceExceededException) {
         this.tipsDivergenceExceededException = tipsDivergenceExceededException;
         return this;
     }
     
+    public MergeBranchesBySquashResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

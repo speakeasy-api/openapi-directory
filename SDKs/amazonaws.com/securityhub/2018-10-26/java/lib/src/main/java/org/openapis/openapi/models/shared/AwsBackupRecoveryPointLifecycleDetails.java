@@ -15,6 +15,7 @@ public class AwsBackupRecoveryPointLifecycleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteAfterDays")
     public Long deleteAfterDays;
+
     public AwsBackupRecoveryPointLifecycleDetails withDeleteAfterDays(Long deleteAfterDays) {
         this.deleteAfterDays = deleteAfterDays;
         return this;
@@ -23,9 +24,11 @@ public class AwsBackupRecoveryPointLifecycleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MoveToColdStorageAfterDays")
     public Long moveToColdStorageAfterDays;
+
     public AwsBackupRecoveryPointLifecycleDetails withMoveToColdStorageAfterDays(Long moveToColdStorageAfterDays) {
         this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
         return this;
     }
     
+    public AwsBackupRecoveryPointLifecycleDetails(){}
 }

@@ -15,6 +15,7 @@ public class AwsElasticsearchDomainDomainEndpointOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnforceHTTPS")
     public Boolean enforceHTTPS;
+
     public AwsElasticsearchDomainDomainEndpointOptions withEnforceHTTPS(Boolean enforceHTTPS) {
         this.enforceHTTPS = enforceHTTPS;
         return this;
@@ -23,9 +24,11 @@ public class AwsElasticsearchDomainDomainEndpointOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TLSSecurityPolicy")
     public String tlsSecurityPolicy;
+
     public AwsElasticsearchDomainDomainEndpointOptions withTLSSecurityPolicy(String tlsSecurityPolicy) {
         this.tlsSecurityPolicy = tlsSecurityPolicy;
         return this;
     }
     
+    public AwsElasticsearchDomainDomainEndpointOptions(){}
 }

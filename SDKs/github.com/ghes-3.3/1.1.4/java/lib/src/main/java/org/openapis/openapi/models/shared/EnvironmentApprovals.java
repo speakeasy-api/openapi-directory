@@ -15,6 +15,7 @@ public class EnvironmentApprovals {
      */
     @JsonProperty("comment")
     public String comment;
+
     public EnvironmentApprovals withComment(String comment) {
         this.comment = comment;
         return this;
@@ -25,6 +26,7 @@ public class EnvironmentApprovals {
      */
     @JsonProperty("environments")
     public EnvironmentApprovalsEnvironments[] environments;
+
     public EnvironmentApprovals withEnvironments(EnvironmentApprovalsEnvironments[] environments) {
         this.environments = environments;
         return this;
@@ -35,6 +37,7 @@ public class EnvironmentApprovals {
      */
     @JsonProperty("state")
     public EnvironmentApprovalsStateEnum state;
+
     public EnvironmentApprovals withState(EnvironmentApprovalsStateEnum state) {
         this.state = state;
         return this;
@@ -45,9 +48,16 @@ public class EnvironmentApprovals {
      */
     @JsonProperty("user")
     public SimpleUser user;
+
     public EnvironmentApprovals withUser(SimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public EnvironmentApprovals(@JsonProperty("comment") String comment, @JsonProperty("environments") EnvironmentApprovalsEnvironments[] environments, @JsonProperty("state") EnvironmentApprovalsStateEnum state, @JsonProperty("user") SimpleUser user) {
+        this.comment = comment;
+        this.environments = environments;
+        this.state = state;
+        this.user = user;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchSystemInstancesResponse {
     
     public String contentType;
+
     public SearchSystemInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchSystemInstancesResponse {
      */
     
     public Object internalFailureException;
+
     public SearchSystemInstancesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class SearchSystemInstancesResponse {
      */
     
     public Object invalidRequestException;
+
     public SearchSystemInstancesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SearchSystemInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchSystemInstancesResponse searchSystemInstancesResponse;
+
     public SearchSystemInstancesResponse withSearchSystemInstancesResponse(org.openapis.openapi.models.shared.SearchSystemInstancesResponse searchSystemInstancesResponse) {
         this.searchSystemInstancesResponse = searchSystemInstancesResponse;
         return this;
@@ -46,6 +51,7 @@ public class SearchSystemInstancesResponse {
     
     
     public Integer statusCode;
+
     public SearchSystemInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SearchSystemInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchSystemInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class SearchSystemInstancesResponse {
      */
     
     public Object throttlingException;
+
     public SearchSystemInstancesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SearchSystemInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

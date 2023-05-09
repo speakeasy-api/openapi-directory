@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PriceChangeRequest {
@@ -12,6 +13,7 @@ public class PriceChangeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PriceChangeRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PriceChangeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PriceChangeRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PriceChangeRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PriceChangeRequest priceChangeRequest;
+
     public PriceChangeRequest withPriceChangeRequest(org.openapis.openapi.models.shared.PriceChangeRequest priceChangeRequest) {
         this.priceChangeRequest = priceChangeRequest;
         return this;
@@ -39,6 +43,7 @@ public class PriceChangeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemIndex")
     public String itemIndex;
+
     public PriceChangeRequest withItemIndex(String itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -49,9 +54,17 @@ public class PriceChangeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
     public String orderFormId;
+
     public PriceChangeRequest withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
     }
     
+    public PriceChangeRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("PriceChangeRequest") org.openapis.openapi.models.shared.PriceChangeRequest priceChangeRequest, @JsonProperty("itemIndex") String itemIndex, @JsonProperty("orderFormId") String orderFormId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.priceChangeRequest = priceChangeRequest;
+        this.itemIndex = itemIndex;
+        this.orderFormId = orderFormId;
+  }
 }

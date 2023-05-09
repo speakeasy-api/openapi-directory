@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganisationsResponse {
     
     public String contentType;
+
     public GetOrganisationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganisationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrganisationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganisationsResponse {
     
     
     public Integer statusCode;
+
     public GetOrganisationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetOrganisationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganisationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetOrganisationsResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetOrganisationsResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -50,6 +56,7 @@ public class GetOrganisationsResponse {
      */
     
     public org.openapis.openapi.models.shared.Organisation[] organisations;
+
     public GetOrganisationsResponse withOrganisations(org.openapis.openapi.models.shared.Organisation[] organisations) {
         this.organisations = organisations;
         return this;
@@ -60,9 +67,14 @@ public class GetOrganisationsResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetOrganisationsResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetOrganisationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

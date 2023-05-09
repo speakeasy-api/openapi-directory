@@ -15,6 +15,7 @@ public class FormatOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tsvOptions")
     public TsvOptions tsvOptions;
+
     public FormatOptions withTsvOptions(TsvOptions tsvOptions) {
         this.tsvOptions = tsvOptions;
         return this;
@@ -23,9 +24,11 @@ public class FormatOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcfOptions")
     public VcfOptions vcfOptions;
+
     public FormatOptions withVcfOptions(VcfOptions vcfOptions) {
         this.vcfOptions = vcfOptions;
         return this;
     }
     
+    public FormatOptions(){}
 }

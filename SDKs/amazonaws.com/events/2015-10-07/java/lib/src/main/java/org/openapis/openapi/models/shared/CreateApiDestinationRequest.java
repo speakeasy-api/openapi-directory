@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateApiDestinationRequest {
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public CreateApiDestinationRequest withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateApiDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateApiDestinationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateApiDestinationRequest {
     
     @JsonProperty("HttpMethod")
     public ApiDestinationHttpMethodEnum httpMethod;
+
     public CreateApiDestinationRequest withHttpMethod(ApiDestinationHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -33,6 +36,7 @@ public class CreateApiDestinationRequest {
     
     @JsonProperty("InvocationEndpoint")
     public String invocationEndpoint;
+
     public CreateApiDestinationRequest withInvocationEndpoint(String invocationEndpoint) {
         this.invocationEndpoint = invocationEndpoint;
         return this;
@@ -41,6 +45,7 @@ public class CreateApiDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationRateLimitPerSecond")
     public Long invocationRateLimitPerSecond;
+
     public CreateApiDestinationRequest withInvocationRateLimitPerSecond(Long invocationRateLimitPerSecond) {
         this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
         return this;
@@ -48,9 +53,16 @@ public class CreateApiDestinationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateApiDestinationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateApiDestinationRequest(@JsonProperty("ConnectionArn") String connectionArn, @JsonProperty("HttpMethod") ApiDestinationHttpMethodEnum httpMethod, @JsonProperty("InvocationEndpoint") String invocationEndpoint, @JsonProperty("Name") String name) {
+        this.connectionArn = connectionArn;
+        this.httpMethod = httpMethod;
+        this.invocationEndpoint = invocationEndpoint;
+        this.name = name;
+  }
 }

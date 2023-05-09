@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostIndividualsPartyIdBusinessNamesResponse {
     
     public String contentType;
+
     public PostIndividualsPartyIdBusinessNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostIndividualsPartyIdBusinessNamesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostIndividualsPartyIdBusinessNamesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostIndividualsPartyIdBusinessNamesResponse {
     
     
     public Integer statusCode;
+
     public PostIndividualsPartyIdBusinessNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostIndividualsPartyIdBusinessNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostIndividualsPartyIdBusinessNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostIndividualsPartyIdBusinessNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessName businessName;
+
     public PostIndividualsPartyIdBusinessNamesResponse withBusinessName(org.openapis.openapi.models.shared.BusinessName businessName) {
         this.businessName = businessName;
         return this;
@@ -50,6 +56,7 @@ public class PostIndividualsPartyIdBusinessNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PostIndividualsPartyIdBusinessNamesResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -60,9 +67,14 @@ public class PostIndividualsPartyIdBusinessNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PostIndividualsPartyIdBusinessNamesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PostIndividualsPartyIdBusinessNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

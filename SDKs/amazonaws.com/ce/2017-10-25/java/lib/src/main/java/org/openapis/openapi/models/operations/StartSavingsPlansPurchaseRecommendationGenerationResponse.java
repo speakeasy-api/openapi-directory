@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
     
     public String contentType;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
      */
     
     public Object generationExistsException;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withGenerationExistsException(Object generationExistsException) {
         this.generationExistsException = generationExistsException;
         return this;
@@ -29,6 +32,7 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
      */
     
     public Object limitExceededException;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSavingsPlansPurchaseRecommendationGenerationResponse startSavingsPlansPurchaseRecommendationGenerationResponse;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withStartSavingsPlansPurchaseRecommendationGenerationResponse(org.openapis.openapi.models.shared.StartSavingsPlansPurchaseRecommendationGenerationResponse startSavingsPlansPurchaseRecommendationGenerationResponse) {
         this.startSavingsPlansPurchaseRecommendationGenerationResponse = startSavingsPlansPurchaseRecommendationGenerationResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
     
     
     public Integer statusCode;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartSavingsPlansPurchaseRecommendationGenerationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

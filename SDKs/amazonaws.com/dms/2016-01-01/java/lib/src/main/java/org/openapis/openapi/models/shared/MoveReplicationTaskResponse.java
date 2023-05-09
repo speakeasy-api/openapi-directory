@@ -15,9 +15,11 @@ public class MoveReplicationTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTask")
     public ReplicationTask replicationTask;
+
     public MoveReplicationTaskResponse withReplicationTask(ReplicationTask replicationTask) {
         this.replicationTask = replicationTask;
         return this;
     }
     
+    public MoveReplicationTaskResponse(){}
 }

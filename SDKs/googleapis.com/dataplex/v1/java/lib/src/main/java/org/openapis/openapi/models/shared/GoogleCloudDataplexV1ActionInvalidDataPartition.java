@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1ActionInvalidDataPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedStructure")
     public GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum expectedStructure;
+
     public GoogleCloudDataplexV1ActionInvalidDataPartition withExpectedStructure(GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum expectedStructure) {
         this.expectedStructure = expectedStructure;
         return this;
     }
     
+    public GoogleCloudDataplexV1ActionInvalidDataPartition(){}
 }

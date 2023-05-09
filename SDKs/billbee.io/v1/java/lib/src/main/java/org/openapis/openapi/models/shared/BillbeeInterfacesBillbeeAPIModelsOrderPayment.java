@@ -17,6 +17,7 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillbeeId")
     public Long billbeeId;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withBillbeeId(Long billbeeId) {
         this.billbeeId = billbeeId;
         return this;
@@ -25,6 +26,7 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PayDate")
     public OffsetDateTime payDate;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withPayDate(OffsetDateTime payDate) {
         this.payDate = payDate;
         return this;
@@ -43,6 +46,7 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayValue")
     public Double payValue;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withPayValue(Double payValue) {
         this.payValue = payValue;
         return this;
@@ -51,6 +55,7 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentType")
     public Integer paymentType;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withPaymentType(Integer paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -59,6 +64,7 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Purpose")
     public String purpose;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -67,6 +73,7 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTechnology")
     public String sourceTechnology;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withSourceTechnology(String sourceTechnology) {
         this.sourceTechnology = sourceTechnology;
         return this;
@@ -75,6 +82,7 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceText")
     public String sourceText;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withSourceText(String sourceText) {
         this.sourceText = sourceText;
         return this;
@@ -83,9 +91,11 @@ public class BillbeeInterfacesBillbeeAPIModelsOrderPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelsOrderPayment(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngra
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingCycleSpec")
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum billingCycleSpec;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails withBillingCycleSpec(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum billingCycleSpec) {
         this.billingCycleSpec = billingCycleSpec;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngra
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousSubscriptionId")
     public String previousSubscriptionId;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails withPreviousSubscriptionId(String previousSubscriptionId) {
         this.previousSubscriptionId = previousSubscriptionId;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails(){}
 }

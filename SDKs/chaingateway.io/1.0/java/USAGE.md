@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteAddressRequest;
 import org.openapis.openapi.models.operations.DeleteAddressResponse;
 import org.openapis.openapi.models.shared.DeleteAddressRequest;
@@ -14,21 +13,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteAddressRequest req = new DeleteAddressRequest() {{
-                authorization = "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m";
-                deleteAddressRequest = new DeleteAddressRequest() {{
-                    ethereumaddress = "corrupti";
-                    password = "provident";
-                }};
-            }}            
+            DeleteAddressRequest req = new DeleteAddressRequest("q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m",                 new DeleteAddressRequest("corrupti", "provident"););            
 
             DeleteAddressResponse res = sdk.addressRequests.deleteAddress(req);
 
-            if (res.deleteAddress.isPresent()) {
+            if (res.deleteAddress != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

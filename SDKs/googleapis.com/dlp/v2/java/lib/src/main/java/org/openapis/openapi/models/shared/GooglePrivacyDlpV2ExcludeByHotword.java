@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ExcludeByHotword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotwordRegex")
     public GooglePrivacyDlpV2Regex hotwordRegex;
+
     public GooglePrivacyDlpV2ExcludeByHotword withHotwordRegex(GooglePrivacyDlpV2Regex hotwordRegex) {
         this.hotwordRegex = hotwordRegex;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2ExcludeByHotword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximity")
     public GooglePrivacyDlpV2Proximity proximity;
+
     public GooglePrivacyDlpV2ExcludeByHotword withProximity(GooglePrivacyDlpV2Proximity proximity) {
         this.proximity = proximity;
         return this;
     }
     
+    public GooglePrivacyDlpV2ExcludeByHotword(){}
 }

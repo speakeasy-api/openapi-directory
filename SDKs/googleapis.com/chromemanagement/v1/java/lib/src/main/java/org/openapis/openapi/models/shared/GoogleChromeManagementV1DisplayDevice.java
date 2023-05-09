@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1DisplayDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayHeightMm")
     public Integer displayHeightMm;
+
     public GoogleChromeManagementV1DisplayDevice withDisplayHeightMm(Integer displayHeightMm) {
         this.displayHeightMm = displayHeightMm;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1DisplayDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleChromeManagementV1DisplayDevice withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1DisplayDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayWidthMm")
     public Integer displayWidthMm;
+
     public GoogleChromeManagementV1DisplayDevice withDisplayWidthMm(Integer displayWidthMm) {
         this.displayWidthMm = displayWidthMm;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromeManagementV1DisplayDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internal")
     public Boolean internal;
+
     public GoogleChromeManagementV1DisplayDevice withInternal(Boolean internal) {
         this.internal = internal;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1DisplayDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufactureYear")
     public Integer manufactureYear;
+
     public GoogleChromeManagementV1DisplayDevice withManufactureYear(Integer manufactureYear) {
         this.manufactureYear = manufactureYear;
         return this;
@@ -73,6 +78,7 @@ public class GoogleChromeManagementV1DisplayDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturerId")
     public String manufacturerId;
+
     public GoogleChromeManagementV1DisplayDevice withManufacturerId(String manufacturerId) {
         this.manufacturerId = manufacturerId;
         return this;
@@ -84,9 +90,11 @@ public class GoogleChromeManagementV1DisplayDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelId")
     public Integer modelId;
+
     public GoogleChromeManagementV1DisplayDevice withModelId(Integer modelId) {
         this.modelId = modelId;
         return this;
     }
     
+    public GoogleChromeManagementV1DisplayDevice(){}
 }

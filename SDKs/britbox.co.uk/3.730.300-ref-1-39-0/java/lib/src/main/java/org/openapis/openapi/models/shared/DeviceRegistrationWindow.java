@@ -22,6 +22,7 @@ public class DeviceRegistrationWindow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public DeviceRegistrationWindow withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -32,6 +33,7 @@ public class DeviceRegistrationWindow {
      */
     @JsonProperty("limit")
     public Integer limit;
+
     public DeviceRegistrationWindow withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +44,7 @@ public class DeviceRegistrationWindow {
      */
     @JsonProperty("periodDays")
     public Integer periodDays;
+
     public DeviceRegistrationWindow withPeriodDays(Integer periodDays) {
         this.periodDays = periodDays;
         return this;
@@ -52,6 +55,7 @@ public class DeviceRegistrationWindow {
      */
     @JsonProperty("remaining")
     public Integer remaining;
+
     public DeviceRegistrationWindow withRemaining(Integer remaining) {
         this.remaining = remaining;
         return this;
@@ -70,9 +74,17 @@ public class DeviceRegistrationWindow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public DeviceRegistrationWindow withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public DeviceRegistrationWindow(@JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("limit") Integer limit, @JsonProperty("periodDays") Integer periodDays, @JsonProperty("remaining") Integer remaining, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.endDate = endDate;
+        this.limit = limit;
+        this.periodDays = periodDays;
+        this.remaining = remaining;
+        this.startDate = startDate;
+  }
 }

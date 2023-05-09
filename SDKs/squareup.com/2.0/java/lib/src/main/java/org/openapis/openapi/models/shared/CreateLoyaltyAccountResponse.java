@@ -18,6 +18,7 @@ public class CreateLoyaltyAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateLoyaltyAccountResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -30,9 +31,11 @@ public class CreateLoyaltyAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loyalty_account")
     public LoyaltyAccount loyaltyAccount;
+
     public CreateLoyaltyAccountResponse withLoyaltyAccount(LoyaltyAccount loyaltyAccount) {
         this.loyaltyAccount = loyaltyAccount;
         return this;
     }
     
+    public CreateLoyaltyAccountResponse(){}
 }

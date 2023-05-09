@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsDeleteLegacyResponse {
     
     public String contentType;
+
     public TeamsDeleteLegacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsDeleteLegacyResponse {
     
     
     public Integer statusCode;
+
     public TeamsDeleteLegacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsDeleteLegacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsDeleteLegacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TeamsDeleteLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public TeamsDeleteLegacyResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class TeamsDeleteLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public TeamsDeleteLegacyResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public TeamsDeleteLegacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

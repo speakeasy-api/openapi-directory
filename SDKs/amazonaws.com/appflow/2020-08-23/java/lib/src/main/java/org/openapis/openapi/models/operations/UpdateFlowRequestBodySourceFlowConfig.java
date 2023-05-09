@@ -15,6 +15,7 @@ public class UpdateFlowRequestBodySourceFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public UpdateFlowRequestBodySourceFlowConfig withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -23,6 +24,7 @@ public class UpdateFlowRequestBodySourceFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileName")
     public String connectorProfileName;
+
     public UpdateFlowRequestBodySourceFlowConfig withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -31,6 +33,7 @@ public class UpdateFlowRequestBodySourceFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorType")
     public org.openapis.openapi.models.shared.ConnectorTypeEnum connectorType;
+
     public UpdateFlowRequestBodySourceFlowConfig withConnectorType(org.openapis.openapi.models.shared.ConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -39,6 +42,7 @@ public class UpdateFlowRequestBodySourceFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incrementalPullConfig")
     public org.openapis.openapi.models.shared.IncrementalPullConfig incrementalPullConfig;
+
     public UpdateFlowRequestBodySourceFlowConfig withIncrementalPullConfig(org.openapis.openapi.models.shared.IncrementalPullConfig incrementalPullConfig) {
         this.incrementalPullConfig = incrementalPullConfig;
         return this;
@@ -47,9 +51,11 @@ public class UpdateFlowRequestBodySourceFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConnectorProperties")
     public org.openapis.openapi.models.shared.SourceConnectorProperties sourceConnectorProperties;
+
     public UpdateFlowRequestBodySourceFlowConfig withSourceConnectorProperties(org.openapis.openapi.models.shared.SourceConnectorProperties sourceConnectorProperties) {
         this.sourceConnectorProperties = sourceConnectorProperties;
         return this;
     }
     
+    public UpdateFlowRequestBodySourceFlowConfig(){}
 }

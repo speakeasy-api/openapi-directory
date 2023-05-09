@@ -21,6 +21,7 @@ public class GetSwitch200ApplicationJSONTransactions {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetSwitch200ApplicationJSONTransactions withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +32,7 @@ public class GetSwitch200ApplicationJSONTransactions {
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetSwitch200ApplicationJSONTransactions withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -42,6 +44,7 @@ public class GetSwitch200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public GetSwitch200ApplicationJSONTransactions withPrice(String price) {
         this.price = price;
         return this;
@@ -53,6 +56,7 @@ public class GetSwitch200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public GetSwitch200ApplicationJSONTransactions withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -63,6 +67,7 @@ public class GetSwitch200ApplicationJSONTransactions {
      */
     @JsonProperty("side")
     public GetSwitch200ApplicationJSONTransactionsSideEnum side;
+
     public GetSwitch200ApplicationJSONTransactions withSide(GetSwitch200ApplicationJSONTransactionsSideEnum side) {
         this.side = side;
         return this;
@@ -70,6 +75,7 @@ public class GetSwitch200ApplicationJSONTransactions {
     
     @JsonProperty("status")
     public GetSwitch200ApplicationJSONTransactionsStatusEnum status;
+
     public GetSwitch200ApplicationJSONTransactions withStatus(GetSwitch200ApplicationJSONTransactionsStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +86,7 @@ public class GetSwitch200ApplicationJSONTransactions {
      */
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public GetSwitch200ApplicationJSONTransactions withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -91,9 +98,17 @@ public class GetSwitch200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetSwitch200ApplicationJSONTransactions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetSwitch200ApplicationJSONTransactions(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("side") GetSwitch200ApplicationJSONTransactionsSideEnum side, @JsonProperty("status") GetSwitch200ApplicationJSONTransactionsStatusEnum status, @JsonProperty("transaction_id") String transactionId) {
+        this.createdAt = createdAt;
+        this.investmentProductId = investmentProductId;
+        this.side = side;
+        this.status = status;
+        this.transactionId = transactionId;
+  }
 }

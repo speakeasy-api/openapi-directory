@@ -18,9 +18,11 @@ public class ActivityActorVerification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adHocVerified")
     public String adHocVerified;
+
     public ActivityActorVerification withAdHocVerified(String adHocVerified) {
         this.adHocVerified = adHocVerified;
         return this;
     }
     
+    public ActivityActorVerification(){}
 }

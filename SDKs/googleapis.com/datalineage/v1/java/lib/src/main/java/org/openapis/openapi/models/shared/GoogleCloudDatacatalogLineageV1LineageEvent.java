@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1LineageEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDatacatalogLineageV1LineageEvent withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogLineageV1LineageEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public GoogleCloudDatacatalogLineageV1EventLink[] links;
+
     public GoogleCloudDatacatalogLineageV1LineageEvent withLinks(GoogleCloudDatacatalogLineageV1EventLink[] links) {
         this.links = links;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogLineageV1LineageEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogLineageV1LineageEvent withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogLineageV1LineageEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDatacatalogLineageV1LineageEvent withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1LineageEvent(){}
 }

@@ -15,9 +15,11 @@ public class TwoHundredResultResultAstPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public TwoHundredResultResultAstPackagePath[] path;
+
     public TwoHundredResultResultAstPackage withPath(TwoHundredResultResultAstPackagePath[] path) {
         this.path = path;
         return this;
     }
     
+    public TwoHundredResultResultAstPackage(){}
 }

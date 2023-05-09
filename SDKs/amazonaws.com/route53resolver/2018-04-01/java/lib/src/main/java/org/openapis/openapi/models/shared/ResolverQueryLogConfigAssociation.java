@@ -15,6 +15,7 @@ public class ResolverQueryLogConfigAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public ResolverQueryLogConfigAssociation withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -23,6 +24,7 @@ public class ResolverQueryLogConfigAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public ResolverQueryLogConfigAssociationErrorEnum error;
+
     public ResolverQueryLogConfigAssociation withError(ResolverQueryLogConfigAssociationErrorEnum error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class ResolverQueryLogConfigAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public ResolverQueryLogConfigAssociation withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -39,6 +42,7 @@ public class ResolverQueryLogConfigAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResolverQueryLogConfigAssociation withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class ResolverQueryLogConfigAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverQueryLogConfigId")
     public String resolverQueryLogConfigId;
+
     public ResolverQueryLogConfigAssociation withResolverQueryLogConfigId(String resolverQueryLogConfigId) {
         this.resolverQueryLogConfigId = resolverQueryLogConfigId;
         return this;
@@ -55,6 +60,7 @@ public class ResolverQueryLogConfigAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ResolverQueryLogConfigAssociation withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -63,9 +69,11 @@ public class ResolverQueryLogConfigAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ResolverQueryLogConfigAssociationStatusEnum status;
+
     public ResolverQueryLogConfigAssociation withStatus(ResolverQueryLogConfigAssociationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ResolverQueryLogConfigAssociation(){}
 }

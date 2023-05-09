@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executions")
     public RunAMonitor200ApplicationJSONRunExecutions[] executions;
+
     public RunAMonitor200ApplicationJSONRun withExecutions(RunAMonitor200ApplicationJSONRunExecutions[] executions) {
         this.executions = executions;
         return this;
@@ -20,6 +21,7 @@ public class RunAMonitor200ApplicationJSONRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public RunAMonitor200ApplicationJSONRunFailures[] failures;
+
     public RunAMonitor200ApplicationJSONRun withFailures(RunAMonitor200ApplicationJSONRunFailures[] failures) {
         this.failures = failures;
         return this;
@@ -28,6 +30,7 @@ public class RunAMonitor200ApplicationJSONRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public RunAMonitor200ApplicationJSONRunInfo info;
+
     public RunAMonitor200ApplicationJSONRun withInfo(RunAMonitor200ApplicationJSONRunInfo info) {
         this.info = info;
         return this;
@@ -36,9 +39,11 @@ public class RunAMonitor200ApplicationJSONRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public RunAMonitor200ApplicationJSONRunStats stats;
+
     public RunAMonitor200ApplicationJSONRun withStats(RunAMonitor200ApplicationJSONRunStats stats) {
         this.stats = stats;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRun(){}
 }

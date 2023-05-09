@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=heading")
     public Float heading;
+
     public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withHeading(Float heading) {
         this.heading = heading;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=poiList")
     public String poiList;
+
     public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withPoiList(String poiList) {
         this.poiList = poiList;
         return this;
@@ -42,6 +46,7 @@ public class GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
     public String position;
+
     public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -52,6 +57,7 @@ public class GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routingTimeout")
     public Long routingTimeout;
+
     public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withRoutingTimeout(Long routingTimeout) {
         this.routingTimeout = routingTimeout;
         return this;
@@ -62,9 +68,17 @@ public class GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("heading") Float heading, @JsonProperty("poiList") String poiList, @JsonProperty("position") String position, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.heading = heading;
+        this.poiList = poiList;
+        this.position = position;
+        this.versionNumber = versionNumber;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestnetGetTokenHoldersResponse {
     
     public String contentType;
+
     public TestnetGetTokenHoldersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestnetGetTokenHoldersResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public TestnetGetTokenHoldersResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class TestnetGetTokenHoldersResponse {
     
     
     public Integer statusCode;
+
     public TestnetGetTokenHoldersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TestnetGetTokenHoldersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestnetGetTokenHoldersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class TestnetGetTokenHoldersResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTokenHoldersResponse getTokenHoldersResponse;
+
     public TestnetGetTokenHoldersResponse withGetTokenHoldersResponse(org.openapis.openapi.models.shared.GetTokenHoldersResponse getTokenHoldersResponse) {
         this.getTokenHoldersResponse = getTokenHoldersResponse;
         return this;
     }
     
+    public TestnetGetTokenHoldersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

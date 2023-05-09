@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CheckBoxField {
     @JsonProperty("bbox")
     public BoundingBox bbox;
+
     public CheckBoxField withBbox(BoundingBox bbox) {
         this.bbox = bbox;
         return this;
@@ -19,6 +20,7 @@ public class CheckBoxField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eval")
     public Object eval;
+
     public CheckBoxField withEval(Object eval) {
         this.eval = eval;
         return this;
@@ -26,6 +28,7 @@ public class CheckBoxField {
     
     @JsonProperty("name")
     public String name;
+
     public CheckBoxField withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class CheckBoxField {
     
     @JsonProperty("page")
     public Long page;
+
     public CheckBoxField withPage(Long page) {
         this.page = page;
         return this;
@@ -41,6 +45,7 @@ public class CheckBoxField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public CheckBoxField withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -48,9 +53,16 @@ public class CheckBoxField {
     
     @JsonProperty("type")
     public CheckBoxFieldTypeEnum type;
+
     public CheckBoxField withType(CheckBoxFieldTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CheckBoxField(@JsonProperty("bbox") BoundingBox bbox, @JsonProperty("name") String name, @JsonProperty("page") Long page, @JsonProperty("type") CheckBoxFieldTypeEnum type) {
+        this.bbox = bbox;
+        this.name = name;
+        this.page = page;
+        this.type = type;
+  }
 }

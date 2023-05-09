@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartMedicalTranscriptionJobResponse {
@@ -12,6 +13,7 @@ public class StartMedicalTranscriptionJobResponse {
      */
     
     public Object badRequestException;
+
     public StartMedicalTranscriptionJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class StartMedicalTranscriptionJobResponse {
      */
     
     public Object conflictException;
+
     public StartMedicalTranscriptionJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartMedicalTranscriptionJobResponse {
     
     
     public String contentType;
+
     public StartMedicalTranscriptionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartMedicalTranscriptionJobResponse {
      */
     
     public Object internalFailureException;
+
     public StartMedicalTranscriptionJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class StartMedicalTranscriptionJobResponse {
      */
     
     public Object limitExceededException;
+
     public StartMedicalTranscriptionJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartMedicalTranscriptionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartMedicalTranscriptionJobResponse startMedicalTranscriptionJobResponse;
+
     public StartMedicalTranscriptionJobResponse withStartMedicalTranscriptionJobResponse(org.openapis.openapi.models.shared.StartMedicalTranscriptionJobResponse startMedicalTranscriptionJobResponse) {
         this.startMedicalTranscriptionJobResponse = startMedicalTranscriptionJobResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartMedicalTranscriptionJobResponse {
     
     
     public Integer statusCode;
+
     public StartMedicalTranscriptionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class StartMedicalTranscriptionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartMedicalTranscriptionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartMedicalTranscriptionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

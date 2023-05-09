@@ -15,9 +15,11 @@ public class CheckDomainAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Availability")
     public DomainAvailabilityEnum availability;
+
     public CheckDomainAvailabilityResponse withAvailability(DomainAvailabilityEnum availability) {
         this.availability = availability;
         return this;
     }
     
+    public CheckDomainAvailabilityResponse(){}
 }

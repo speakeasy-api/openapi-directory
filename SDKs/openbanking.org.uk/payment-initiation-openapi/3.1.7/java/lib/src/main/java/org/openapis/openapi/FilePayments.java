@@ -68,13 +68,11 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 406 || httpRes.statusCode() == 415) {
@@ -138,13 +136,11 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawResponse() {{
+        org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 406 || httpRes.statusCode() == 415) {
@@ -208,7 +204,7 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteFileConsentResponse4 = null;
             obWriteFileConsentResponse4 = null;
@@ -216,8 +212,6 @@ public class FilePayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -297,7 +291,7 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteFileConsentResponse4 = null;
             obWriteFileConsentResponse4 = null;
@@ -305,8 +299,6 @@ public class FilePayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -386,7 +378,7 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFilePaymentsJsonResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateFilePaymentsJsonResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteFileResponse3 = null;
             obWriteFileResponse3 = null;
@@ -394,8 +386,6 @@ public class FilePayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -475,7 +465,7 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFilePaymentsRawResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateFilePaymentsRawResponse res = new org.openapis.openapi.models.operations.CreateFilePaymentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteFileResponse3 = null;
             obWriteFileResponse3 = null;
@@ -483,8 +473,6 @@ public class FilePayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -559,7 +547,7 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteFileConsentResponse4 = null;
             obWriteFileConsentResponse4 = null;
@@ -567,8 +555,6 @@ public class FilePayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -643,7 +629,7 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileResponse res = new org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileResponse() {{
+        org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileResponse res = new org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileResponse(contentType, httpRes.statusCode()) {{
             body = null;
             file = null;
             file = null;
@@ -651,8 +637,6 @@ public class FilePayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -727,7 +711,7 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdResponse res = new org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdResponse() {{
+        org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdResponse res = new org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteFileResponse3 = null;
             obWriteFileResponse3 = null;
@@ -735,8 +719,6 @@ public class FilePayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -811,7 +793,7 @@ public class FilePayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileResponse res = new org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileResponse() {{
+        org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileResponse res = new org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileResponse(contentType, httpRes.statusCode()) {{
             body = null;
             file = null;
             file = null;
@@ -819,8 +801,6 @@ public class FilePayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

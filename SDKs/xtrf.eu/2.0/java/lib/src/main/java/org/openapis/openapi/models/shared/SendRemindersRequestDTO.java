@@ -15,9 +15,11 @@ public class SendRemindersRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public Long[] ids;
+
     public SendRemindersRequestDTO withIds(Long[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public SendRemindersRequestDTO(){}
 }

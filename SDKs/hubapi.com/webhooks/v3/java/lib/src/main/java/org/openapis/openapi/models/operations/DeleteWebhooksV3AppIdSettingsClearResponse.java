@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWebhooksV3AppIdSettingsClearResponse {
     
     public byte[] body;
+
     public DeleteWebhooksV3AppIdSettingsClearResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DeleteWebhooksV3AppIdSettingsClearResponse {
     
     
     public String contentType;
+
     public DeleteWebhooksV3AppIdSettingsClearResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DeleteWebhooksV3AppIdSettingsClearResponse {
     
     
     public Integer statusCode;
+
     public DeleteWebhooksV3AppIdSettingsClearResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DeleteWebhooksV3AppIdSettingsClearResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWebhooksV3AppIdSettingsClearResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteWebhooksV3AppIdSettingsClearResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

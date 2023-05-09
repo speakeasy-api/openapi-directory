@@ -15,6 +15,7 @@ public class StartSuiteRunRequestBodySuiteRunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelRun")
     public Boolean parallelRun;
+
     public StartSuiteRunRequestBodySuiteRunConfiguration withParallelRun(Boolean parallelRun) {
         this.parallelRun = parallelRun;
         return this;
@@ -23,6 +24,7 @@ public class StartSuiteRunRequestBodySuiteRunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryDevice")
     public org.openapis.openapi.models.shared.DeviceUnderTest primaryDevice;
+
     public StartSuiteRunRequestBodySuiteRunConfiguration withPrimaryDevice(org.openapis.openapi.models.shared.DeviceUnderTest primaryDevice) {
         this.primaryDevice = primaryDevice;
         return this;
@@ -31,9 +33,11 @@ public class StartSuiteRunRequestBodySuiteRunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedTestList")
     public String[] selectedTestList;
+
     public StartSuiteRunRequestBodySuiteRunConfiguration withSelectedTestList(String[] selectedTestList) {
         this.selectedTestList = selectedTestList;
         return this;
     }
     
+    public StartSuiteRunRequestBodySuiteRunConfiguration(){}
 }

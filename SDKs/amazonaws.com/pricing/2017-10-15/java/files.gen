@@ -60,4 +60,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListPriceListsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PriceList.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListPriceListsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

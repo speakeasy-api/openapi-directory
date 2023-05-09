@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeActionSchemas")
     public GoogleCloudIntegrationsV1alphaRuntimeActionSchema[] runtimeActionSchemas;
+
     public GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse withRuntimeActionSchemas(GoogleCloudIntegrationsV1alphaRuntimeActionSchema[] runtimeActionSchemas) {
         this.runtimeActionSchemas = runtimeActionSchemas;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse(){}
 }

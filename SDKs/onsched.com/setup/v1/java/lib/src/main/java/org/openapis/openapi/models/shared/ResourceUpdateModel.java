@@ -15,6 +15,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AddressUpdateModel address;
+
     public ResourceUpdateModel withAddress(AddressUpdateModel address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public AvailabilityInputModel availability;
+
     public ResourceUpdateModel withAvailability(AvailabilityInputModel availability) {
         this.availability = availability;
         return this;
@@ -31,6 +33,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public ContactUpdateModel contact;
+
     public ResourceUpdateModel withContact(ContactUpdateModel contact) {
         this.contact = contact;
         return this;
@@ -39,6 +42,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldUpdateModel customFields;
+
     public ResourceUpdateModel withCustomFields(CustomFieldUpdateModel customFields) {
         this.customFields = customFields;
         return this;
@@ -47,6 +51,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ResourceUpdateModel withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ResourceUpdateModel withEmail(String email) {
         this.email = email;
         return this;
@@ -63,6 +69,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public String groupId;
+
     public ResourceUpdateModel withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -71,6 +78,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ResourceUpdateModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -79,6 +87,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceUpdateModel withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +96,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public ResourceOptionsUpdateModel options;
+
     public ResourceUpdateModel withOptions(ResourceOptionsUpdateModel options) {
         this.options = options;
         return this;
@@ -95,6 +105,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringAvailability")
     public Boolean recurringAvailability;
+
     public ResourceUpdateModel withRecurringAvailability(Boolean recurringAvailability) {
         this.recurringAvailability = recurringAvailability;
         return this;
@@ -103,6 +114,7 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceIds")
     public String[] serviceIds;
+
     public ResourceUpdateModel withServiceIds(String[] serviceIds) {
         this.serviceIds = serviceIds;
         return this;
@@ -111,9 +123,11 @@ public class ResourceUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneId")
     public String timezoneId;
+
     public ResourceUpdateModel withTimezoneId(String timezoneId) {
         this.timezoneId = timezoneId;
         return this;
     }
     
+    public ResourceUpdateModel(){}
 }

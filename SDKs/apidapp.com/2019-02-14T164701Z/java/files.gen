@@ -34,6 +34,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteKeyKeyResponse.ja
 lib/src/main/java/org/openapis/openapi/models/operations/GetAccountIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAccountIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAccountIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetBlockSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockIdRequest.java
@@ -44,6 +45,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBlockIdTransactionRe
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockIdTransactionIndexSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockIdTransactionIndexRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockIdTransactionIndexResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetBlockchainSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockchainResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockchainIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBlockchainIdRequest.java
@@ -103,6 +105,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/OptionsWalletAccountIdR
 lib/src/main/java/org/openapis/openapi/models/operations/OptionsWalletAccountIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/OptionsWalletAccountIdPayRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/OptionsWalletAccountIdPayResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PostAccountSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostContractResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostContractIdSecurity.java
@@ -112,6 +115,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostErc20Response.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostErc20AddressRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostErc20AddressResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostKeyResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PostTransactionSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostTransactionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostWalletResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostWalletAccountResponse.java
@@ -121,4 +125,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostWalletAccountIdErc2
 lib/src/main/java/org/openapis/openapi/models/operations/PostWalletAccountIdErc20Response.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostWalletAccountIdPayRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostWalletAccountIdPayResponse.java
+docs/sdk/README.md
 USAGE.md

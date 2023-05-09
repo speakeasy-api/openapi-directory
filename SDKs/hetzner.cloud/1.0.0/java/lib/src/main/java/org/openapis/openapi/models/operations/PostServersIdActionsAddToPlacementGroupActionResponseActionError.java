@@ -15,6 +15,7 @@ public class PostServersIdActionsAddToPlacementGroupActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostServersIdActionsAddToPlacementGroupActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostServersIdActionsAddToPlacementGroupActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostServersIdActionsAddToPlacementGroupActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostServersIdActionsAddToPlacementGroupActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

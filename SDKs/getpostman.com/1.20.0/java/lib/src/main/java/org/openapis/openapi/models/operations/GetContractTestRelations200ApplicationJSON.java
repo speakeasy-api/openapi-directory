@@ -15,9 +15,11 @@ public class GetContractTestRelations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contracttest")
     public GetContractTestRelations200ApplicationJSONContracttest[] contracttest;
+
     public GetContractTestRelations200ApplicationJSON withContracttest(GetContractTestRelations200ApplicationJSONContracttest[] contracttest) {
         this.contracttest = contracttest;
         return this;
     }
     
+    public GetContractTestRelations200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutFunctionCodeSigningConfigResponse {
@@ -12,6 +13,7 @@ public class PutFunctionCodeSigningConfigResponse {
      */
     
     public Object codeSigningConfigNotFoundException;
+
     public PutFunctionCodeSigningConfigResponse withCodeSigningConfigNotFoundException(Object codeSigningConfigNotFoundException) {
         this.codeSigningConfigNotFoundException = codeSigningConfigNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class PutFunctionCodeSigningConfigResponse {
     
     
     public String contentType;
+
     public PutFunctionCodeSigningConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutFunctionCodeSigningConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutFunctionCodeSigningConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class PutFunctionCodeSigningConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.PutFunctionCodeSigningConfigResponse putFunctionCodeSigningConfigResponse;
+
     public PutFunctionCodeSigningConfigResponse withPutFunctionCodeSigningConfigResponse(org.openapis.openapi.models.shared.PutFunctionCodeSigningConfigResponse putFunctionCodeSigningConfigResponse) {
         this.putFunctionCodeSigningConfigResponse = putFunctionCodeSigningConfigResponse;
         return this;
@@ -49,6 +54,7 @@ public class PutFunctionCodeSigningConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public PutFunctionCodeSigningConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -59,6 +65,7 @@ public class PutFunctionCodeSigningConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutFunctionCodeSigningConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutFunctionCodeSigningConfigResponse {
      */
     
     public Object serviceException;
+
     public PutFunctionCodeSigningConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class PutFunctionCodeSigningConfigResponse {
     
     
     public Integer statusCode;
+
     public PutFunctionCodeSigningConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutFunctionCodeSigningConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutFunctionCodeSigningConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class PutFunctionCodeSigningConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutFunctionCodeSigningConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutFunctionCodeSigningConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

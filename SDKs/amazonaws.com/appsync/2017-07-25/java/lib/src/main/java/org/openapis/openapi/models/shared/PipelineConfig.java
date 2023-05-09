@@ -15,9 +15,11 @@ public class PipelineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functions")
     public String[] functions;
+
     public PipelineConfig withFunctions(String[] functions) {
         this.functions = functions;
         return this;
     }
     
+    public PipelineConfig(){}
 }

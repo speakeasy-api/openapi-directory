@@ -12,9 +12,13 @@ public class DeleteRecordingConfigurationRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public DeleteRecordingConfigurationRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteRecordingConfigurationRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

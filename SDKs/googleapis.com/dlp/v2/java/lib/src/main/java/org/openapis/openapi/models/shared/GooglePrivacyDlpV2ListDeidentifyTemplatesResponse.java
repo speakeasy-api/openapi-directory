@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ListDeidentifyTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deidentifyTemplates")
     public GooglePrivacyDlpV2DeidentifyTemplate[] deidentifyTemplates;
+
     public GooglePrivacyDlpV2ListDeidentifyTemplatesResponse withDeidentifyTemplates(GooglePrivacyDlpV2DeidentifyTemplate[] deidentifyTemplates) {
         this.deidentifyTemplates = deidentifyTemplates;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2ListDeidentifyTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GooglePrivacyDlpV2ListDeidentifyTemplatesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GooglePrivacyDlpV2ListDeidentifyTemplatesResponse(){}
 }

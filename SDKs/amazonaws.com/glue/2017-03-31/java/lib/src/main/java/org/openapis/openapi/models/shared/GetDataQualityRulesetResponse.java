@@ -22,6 +22,7 @@ public class GetDataQualityRulesetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedOn")
     public OffsetDateTime createdOn;
+
     public GetDataQualityRulesetResponse withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -30,6 +31,7 @@ public class GetDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetDataQualityRulesetResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GetDataQualityRulesetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedOn")
     public OffsetDateTime lastModifiedOn;
+
     public GetDataQualityRulesetResponse withLastModifiedOn(OffsetDateTime lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -48,6 +51,7 @@ public class GetDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetDataQualityRulesetResponse withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class GetDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationRunId")
     public String recommendationRunId;
+
     public GetDataQualityRulesetResponse withRecommendationRunId(String recommendationRunId) {
         this.recommendationRunId = recommendationRunId;
         return this;
@@ -64,6 +69,7 @@ public class GetDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ruleset")
     public String ruleset;
+
     public GetDataQualityRulesetResponse withRuleset(String ruleset) {
         this.ruleset = ruleset;
         return this;
@@ -72,9 +78,11 @@ public class GetDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTable")
     public DataQualityTargetTable targetTable;
+
     public GetDataQualityRulesetResponse withTargetTable(DataQualityTargetTable targetTable) {
         this.targetTable = targetTable;
         return this;
     }
     
+    public GetDataQualityRulesetResponse(){}
 }

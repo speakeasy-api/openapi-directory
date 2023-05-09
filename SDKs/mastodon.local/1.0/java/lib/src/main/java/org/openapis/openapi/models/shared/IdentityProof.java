@@ -19,6 +19,7 @@ public class IdentityProof {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_url")
     public String profileUrl;
+
     public IdentityProof withProfileUrl(String profileUrl) {
         this.profileUrl = profileUrl;
         return this;
@@ -30,6 +31,7 @@ public class IdentityProof {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proof_url")
     public String proofUrl;
+
     public IdentityProof withProofUrl(String proofUrl) {
         this.proofUrl = proofUrl;
         return this;
@@ -41,6 +43,7 @@ public class IdentityProof {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public IdentityProof withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -52,6 +55,7 @@ public class IdentityProof {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider_username")
     public String providerUsername;
+
     public IdentityProof withProviderUsername(String providerUsername) {
         this.providerUsername = providerUsername;
         return this;
@@ -63,9 +67,11 @@ public class IdentityProof {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public IdentityProof withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public IdentityProof(){}
 }

@@ -18,6 +18,7 @@ public class ListFindingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finding")
     public Finding finding;
+
     public ListFindingsResult withFinding(Finding finding) {
         this.finding = finding;
         return this;
@@ -29,6 +30,7 @@ public class ListFindingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public Resource resource;
+
     public ListFindingsResult withResource(Resource resource) {
         this.resource = resource;
         return this;
@@ -40,9 +42,11 @@ public class ListFindingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateChange")
     public ListFindingsResultStateChangeEnum stateChange;
+
     public ListFindingsResult withStateChange(ListFindingsResultStateChangeEnum stateChange) {
         this.stateChange = stateChange;
         return this;
     }
     
+    public ListFindingsResult(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionAliasPermission {
     @JsonProperty("AllowAssociation")
     public Boolean allowAssociation;
+
     public ConnectionAliasPermission withAllowAssociation(Boolean allowAssociation) {
         this.allowAssociation = allowAssociation;
         return this;
@@ -19,9 +20,14 @@ public class ConnectionAliasPermission {
     
     @JsonProperty("SharedAccountId")
     public String sharedAccountId;
+
     public ConnectionAliasPermission withSharedAccountId(String sharedAccountId) {
         this.sharedAccountId = sharedAccountId;
         return this;
     }
     
+    public ConnectionAliasPermission(@JsonProperty("AllowAssociation") Boolean allowAssociation, @JsonProperty("SharedAccountId") String sharedAccountId) {
+        this.allowAssociation = allowAssociation;
+        this.sharedAccountId = sharedAccountId;
+  }
 }

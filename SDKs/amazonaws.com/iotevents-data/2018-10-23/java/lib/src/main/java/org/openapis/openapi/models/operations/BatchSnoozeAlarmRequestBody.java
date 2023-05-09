@@ -12,9 +12,13 @@ public class BatchSnoozeAlarmRequestBody {
      */
     @JsonProperty("snoozeActionRequests")
     public org.openapis.openapi.models.shared.SnoozeAlarmActionRequest[] snoozeActionRequests;
+
     public BatchSnoozeAlarmRequestBody withSnoozeActionRequests(org.openapis.openapi.models.shared.SnoozeAlarmActionRequest[] snoozeActionRequests) {
         this.snoozeActionRequests = snoozeActionRequests;
         return this;
     }
     
+    public BatchSnoozeAlarmRequestBody(@JsonProperty("snoozeActionRequests") org.openapis.openapi.models.shared.SnoozeAlarmActionRequest[] snoozeActionRequests) {
+        this.snoozeActionRequests = snoozeActionRequests;
+  }
 }

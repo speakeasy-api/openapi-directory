@@ -18,6 +18,7 @@ public class BasicAutoscalingAlgorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cooldownPeriod")
     public String cooldownPeriod;
+
     public BasicAutoscalingAlgorithm withCooldownPeriod(String cooldownPeriod) {
         this.cooldownPeriod = cooldownPeriod;
         return this;
@@ -29,6 +30,7 @@ public class BasicAutoscalingAlgorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkStandaloneConfig")
     public SparkStandaloneAutoscalingConfig sparkStandaloneConfig;
+
     public BasicAutoscalingAlgorithm withSparkStandaloneConfig(SparkStandaloneAutoscalingConfig sparkStandaloneConfig) {
         this.sparkStandaloneConfig = sparkStandaloneConfig;
         return this;
@@ -40,9 +42,11 @@ public class BasicAutoscalingAlgorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yarnConfig")
     public BasicYarnAutoscalingConfig yarnConfig;
+
     public BasicAutoscalingAlgorithm withYarnConfig(BasicYarnAutoscalingConfig yarnConfig) {
         this.yarnConfig = yarnConfig;
         return this;
     }
     
+    public BasicAutoscalingAlgorithm(){}
 }

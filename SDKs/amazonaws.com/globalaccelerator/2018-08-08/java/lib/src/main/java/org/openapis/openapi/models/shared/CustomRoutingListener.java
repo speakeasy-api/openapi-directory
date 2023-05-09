@@ -15,6 +15,7 @@ public class CustomRoutingListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListenerArn")
     public String listenerArn;
+
     public CustomRoutingListener withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -23,9 +24,11 @@ public class CustomRoutingListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortRanges")
     public PortRange[] portRanges;
+
     public CustomRoutingListener withPortRanges(PortRange[] portRanges) {
         this.portRanges = portRanges;
         return this;
     }
     
+    public CustomRoutingListener(){}
 }

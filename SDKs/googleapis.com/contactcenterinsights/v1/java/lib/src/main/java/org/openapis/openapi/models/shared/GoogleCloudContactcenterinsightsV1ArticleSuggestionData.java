@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ArticleSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceScore")
     public Float confidenceScore;
+
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionData withConfidenceScore(Float confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1ArticleSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionData withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1ArticleSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryRecord")
     public String queryRecord;
+
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionData withQueryRecord(String queryRecord) {
         this.queryRecord = queryRecord;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudContactcenterinsightsV1ArticleSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionData withSource(String source) {
         this.source = source;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudContactcenterinsightsV1ArticleSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionData withTitle(String title) {
         this.title = title;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudContactcenterinsightsV1ArticleSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionData withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ArticleSuggestionData(){}
 }

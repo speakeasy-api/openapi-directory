@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptCapProgramInPriceRequest {
@@ -12,6 +13,7 @@ public class OptCapProgramInPriceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public OptCapProgramInPriceRequestBody requestBody;
+
     public OptCapProgramInPriceRequest withRequestBody(OptCapProgramInPriceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class OptCapProgramInPriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
     public String wmConsumerChannelType;
+
     public OptCapProgramInPriceRequest withWmConsumerChannelType(String wmConsumerChannelType) {
         this.wmConsumerChannelType = wmConsumerChannelType;
         return this;
@@ -32,6 +35,7 @@ public class OptCapProgramInPriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
     public String wmQosCorrelationId;
+
     public OptCapProgramInPriceRequest withWmQosCorrelationId(String wmQosCorrelationId) {
         this.wmQosCorrelationId = wmQosCorrelationId;
         return this;
@@ -42,6 +46,7 @@ public class OptCapProgramInPriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
     public String wmSecAccessToken;
+
     public OptCapProgramInPriceRequest withWmSecAccessToken(String wmSecAccessToken) {
         this.wmSecAccessToken = wmSecAccessToken;
         return this;
@@ -52,9 +57,16 @@ public class OptCapProgramInPriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
     public String wmSvcName;
+
     public OptCapProgramInPriceRequest withWmSvcName(String wmSvcName) {
         this.wmSvcName = wmSvcName;
         return this;
     }
     
+    public OptCapProgramInPriceRequest(@JsonProperty("RequestBody") OptCapProgramInPriceRequestBody requestBody, @JsonProperty("WM_QOS.CORRELATION_ID") String wmQosCorrelationId, @JsonProperty("WM_SEC.ACCESS_TOKEN") String wmSecAccessToken, @JsonProperty("WM_SVC.NAME") String wmSvcName) {
+        this.requestBody = requestBody;
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        this.wmSecAccessToken = wmSecAccessToken;
+        this.wmSvcName = wmSvcName;
+  }
 }

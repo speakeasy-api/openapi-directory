@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PointPointGetResponse {
     
     public String contentType;
+
     public PointPointGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PointPointGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GeneralRequestError generalRequestError;
+
     public PointPointGetResponse withGeneralRequestError(org.openapis.openapi.models.shared.GeneralRequestError generalRequestError) {
         this.generalRequestError = generalRequestError;
         return this;
@@ -29,6 +32,7 @@ public class PointPointGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public PointPointGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -39,6 +43,7 @@ public class PointPointGetResponse {
      */
     
     public org.openapis.openapi.models.shared.PointPointData pointPointData;
+
     public PointPointGetResponse withPointPointData(org.openapis.openapi.models.shared.PointPointData pointPointData) {
         this.pointPointData = pointPointData;
         return this;
@@ -46,6 +51,7 @@ public class PointPointGetResponse {
     
     
     public Integer statusCode;
+
     public PointPointGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PointPointGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PointPointGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PointPointGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

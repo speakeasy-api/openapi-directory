@@ -15,9 +15,11 @@ public class GetDirectoryLimitsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryLimits")
     public DirectoryLimits directoryLimits;
+
     public GetDirectoryLimitsResult withDirectoryLimits(DirectoryLimits directoryLimits) {
         this.directoryLimits = directoryLimits;
         return this;
     }
     
+    public GetDirectoryLimitsResult(){}
 }

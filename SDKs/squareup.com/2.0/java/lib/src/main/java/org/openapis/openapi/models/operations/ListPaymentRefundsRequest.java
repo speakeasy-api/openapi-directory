@@ -14,6 +14,7 @@ public class ListPaymentRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
     public String beginTime;
+
     public ListPaymentRefundsRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -27,6 +28,7 @@ public class ListPaymentRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListPaymentRefundsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -39,6 +41,7 @@ public class ListPaymentRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public ListPaymentRefundsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -55,6 +58,7 @@ public class ListPaymentRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListPaymentRefundsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -66,6 +70,7 @@ public class ListPaymentRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListPaymentRefundsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -78,6 +83,7 @@ public class ListPaymentRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public String sortOrder;
+
     public ListPaymentRefundsRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -92,6 +98,7 @@ public class ListPaymentRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_type")
     public String sourceType;
+
     public ListPaymentRefundsRequest withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -105,9 +112,11 @@ public class ListPaymentRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public ListPaymentRefundsRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ListPaymentRefundsRequest(){}
 }

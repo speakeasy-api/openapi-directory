@@ -15,6 +15,7 @@ public class ThreeDs2CardRangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandCode")
     public String brandCode;
+
     public ThreeDs2CardRangeDetail withBrandCode(String brandCode) {
         this.brandCode = brandCode;
         return this;
@@ -26,6 +27,7 @@ public class ThreeDs2CardRangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endRange")
     public String endRange;
+
     public ThreeDs2CardRangeDetail withEndRange(String endRange) {
         this.endRange = endRange;
         return this;
@@ -37,6 +39,7 @@ public class ThreeDs2CardRangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startRange")
     public String startRange;
+
     public ThreeDs2CardRangeDetail withStartRange(String startRange) {
         this.startRange = startRange;
         return this;
@@ -48,6 +51,7 @@ public class ThreeDs2CardRangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDS2Version")
     public String threeDs2Version;
+
     public ThreeDs2CardRangeDetail withThreeDs2Version(String threeDs2Version) {
         this.threeDs2Version = threeDs2Version;
         return this;
@@ -59,9 +63,11 @@ public class ThreeDs2CardRangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDSMethodURL")
     public String threeDSMethodURL;
+
     public ThreeDs2CardRangeDetail withThreeDSMethodURL(String threeDSMethodURL) {
         this.threeDSMethodURL = threeDSMethodURL;
         return this;
     }
     
+    public ThreeDs2CardRangeDetail(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BotImportSpecification {
     @JsonProperty("botName")
     public String botName;
+
     public BotImportSpecification withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -22,6 +23,7 @@ public class BotImportSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botTags")
     public java.util.Map<String, String> botTags;
+
     public BotImportSpecification withBotTags(java.util.Map<String, String> botTags) {
         this.botTags = botTags;
         return this;
@@ -32,6 +34,7 @@ public class BotImportSpecification {
      */
     @JsonProperty("dataPrivacy")
     public DataPrivacy dataPrivacy;
+
     public BotImportSpecification withDataPrivacy(DataPrivacy dataPrivacy) {
         this.dataPrivacy = dataPrivacy;
         return this;
@@ -40,6 +43,7 @@ public class BotImportSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleSessionTTLInSeconds")
     public Long idleSessionTTLInSeconds;
+
     public BotImportSpecification withIdleSessionTTLInSeconds(Long idleSessionTTLInSeconds) {
         this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
         return this;
@@ -47,6 +51,7 @@ public class BotImportSpecification {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public BotImportSpecification withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -55,9 +60,15 @@ public class BotImportSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testBotAliasTags")
     public java.util.Map<String, String> testBotAliasTags;
+
     public BotImportSpecification withTestBotAliasTags(java.util.Map<String, String> testBotAliasTags) {
         this.testBotAliasTags = testBotAliasTags;
         return this;
     }
     
+    public BotImportSpecification(@JsonProperty("botName") String botName, @JsonProperty("dataPrivacy") DataPrivacy dataPrivacy, @JsonProperty("roleArn") String roleArn) {
+        this.botName = botName;
+        this.dataPrivacy = dataPrivacy;
+        this.roleArn = roleArn;
+  }
 }

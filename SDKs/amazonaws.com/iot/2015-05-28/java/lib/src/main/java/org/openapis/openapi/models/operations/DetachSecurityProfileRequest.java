@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetachSecurityProfileRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DetachSecurityProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DetachSecurityProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DetachSecurityProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DetachSecurityProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DetachSecurityProfileRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DetachSecurityProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DetachSecurityProfileRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DetachSecurityProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DetachSecurityProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DetachSecurityProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DetachSecurityProfileRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DetachSecurityProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DetachSecurityProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DetachSecurityProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityProfileName")
     public String securityProfileName;
+
     public DetachSecurityProfileRequest withSecurityProfileName(String securityProfileName) {
         this.securityProfileName = securityProfileName;
         return this;
@@ -71,9 +80,14 @@ public class DetachSecurityProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=securityProfileTargetArn")
     public String securityProfileTargetArn;
+
     public DetachSecurityProfileRequest withSecurityProfileTargetArn(String securityProfileTargetArn) {
         this.securityProfileTargetArn = securityProfileTargetArn;
         return this;
     }
     
+    public DetachSecurityProfileRequest(@JsonProperty("securityProfileName") String securityProfileName, @JsonProperty("securityProfileTargetArn") String securityProfileTargetArn) {
+        this.securityProfileName = securityProfileName;
+        this.securityProfileTargetArn = securityProfileTargetArn;
+  }
 }

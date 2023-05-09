@@ -17,6 +17,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("announcement_type")
     public BlogArticleAnnouncementTypeEnum announcementType;
+
     public BlogArticle withAnnouncementType(BlogArticleAnnouncementTypeEnum announcementType) {
         this.announcementType = announcementType;
         return this;
@@ -25,6 +26,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public BlogArticle withAuthor(String author) {
         this.author = author;
         return this;
@@ -36,6 +38,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public BlogArticle withContent(String content) {
         this.content = content;
         return this;
@@ -49,6 +52,7 @@ public class BlogArticle {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public BlogArticle withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -60,6 +64,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excerpt")
     public String excerpt;
+
     public BlogArticle withExcerpt(String excerpt) {
         this.excerpt = excerpt;
         return this;
@@ -68,6 +73,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BlogArticle withId(Long id) {
         this.id = id;
         return this;
@@ -79,6 +85,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public BlogArticle withLanguage(String language) {
         this.language = language;
         return this;
@@ -87,6 +94,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public BlogArticleLinks links;
+
     public BlogArticle withLinks(BlogArticleLinks links) {
         this.links = links;
         return this;
@@ -95,6 +103,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public BlogArticle withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -103,6 +112,7 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public BlogArticle withTitle(String title) {
         this.title = title;
         return this;
@@ -111,9 +121,11 @@ public class BlogArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public BlogArticle withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public BlogArticle(){}
 }

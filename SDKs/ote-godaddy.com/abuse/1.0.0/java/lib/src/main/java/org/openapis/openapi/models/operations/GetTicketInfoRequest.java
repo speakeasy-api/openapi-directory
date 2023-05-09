@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTicketInfoRequest {
@@ -12,9 +13,13 @@ public class GetTicketInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticketId")
     public String ticketId;
+
     public GetTicketInfoRequest withTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
     }
     
+    public GetTicketInfoRequest(@JsonProperty("ticketId") String ticketId) {
+        this.ticketId = ticketId;
+  }
 }

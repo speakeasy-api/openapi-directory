@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEnvironmentStatusResponse {
@@ -12,6 +13,7 @@ public class DescribeEnvironmentStatusResponse {
      */
     
     public Object badRequestException;
+
     public DescribeEnvironmentStatusResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeEnvironmentStatusResponse {
      */
     
     public Object conflictException;
+
     public DescribeEnvironmentStatusResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEnvironmentStatusResponse {
     
     
     public String contentType;
+
     public DescribeEnvironmentStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEnvironmentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEnvironmentStatusResult describeEnvironmentStatusResult;
+
     public DescribeEnvironmentStatusResponse withDescribeEnvironmentStatusResult(org.openapis.openapi.models.shared.DescribeEnvironmentStatusResult describeEnvironmentStatusResult) {
         this.describeEnvironmentStatusResult = describeEnvironmentStatusResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEnvironmentStatusResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeEnvironmentStatusResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeEnvironmentStatusResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeEnvironmentStatusResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeEnvironmentStatusResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeEnvironmentStatusResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeEnvironmentStatusResponse {
      */
     
     public Object notFoundException;
+
     public DescribeEnvironmentStatusResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeEnvironmentStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeEnvironmentStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeEnvironmentStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEnvironmentStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DescribeEnvironmentStatusResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeEnvironmentStatusResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeEnvironmentStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

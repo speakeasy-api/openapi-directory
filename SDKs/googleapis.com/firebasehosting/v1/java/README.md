@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.FirebasehostingOperationsCancelRequest;
 import org.openapis.openapi.models.operations.FirebasehostingOperationsCancelResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -28,34 +27,35 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FirebasehostingOperationsCancelRequest req = new FirebasehostingOperationsCancelRequest() {{
-                dollarXgafv = "2";
+            FirebasehostingOperationsCancelRequest req = new FirebasehostingOperationsCancelRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 requestBody = new java.util.HashMap<String, Object>() {{
-                    put("distinctio", "quibusdam");
-                    put("unde", "nulla");
-                    put("corrupti", "illum");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
+                    put("illum", "vel");
                 }};
-                accessToken = "vel";
-                alt = "media";
-                callback = "deserunt";
-                fields = "suscipit";
-                key = "iure";
-                name = "magnam";
+                accessToken = "error";
+                alt = AltEnum.MEDIA;
+                callback = "suscipit";
+                fields = "iure";
+                key = "magnam";
                 oauthToken = "debitis";
                 prettyPrint = false;
                 quotaUser = "ipsa";
                 uploadType = "delectus";
                 uploadProtocol = "tempora";
-            }}            
+            }};            
 
             FirebasehostingOperationsCancelResponse res = sdk.operations.firebasehostingOperationsCancel(req);
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -63,11 +63,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### operations
+### [operations](docs/operations/README.md)
 
-* `firebasehostingOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `firebasehostingOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `firebasehostingOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [firebasehostingOperationsCancel](docs/operations/README.md#firebasehostingoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [firebasehostingOperationsDelete](docs/operations/README.md#firebasehostingoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [firebasehostingOperationsList](docs/operations/README.md#firebasehostingoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

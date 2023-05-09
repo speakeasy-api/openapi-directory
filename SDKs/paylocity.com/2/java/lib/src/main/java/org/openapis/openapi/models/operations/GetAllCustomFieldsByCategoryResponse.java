@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllCustomFieldsByCategoryResponse {
     
     public String contentType;
+
     public GetAllCustomFieldsByCategoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllCustomFieldsByCategoryResponse {
     
     
     public Integer statusCode;
+
     public GetAllCustomFieldsByCategoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAllCustomFieldsByCategoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllCustomFieldsByCategoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAllCustomFieldsByCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomFieldDefinition[] customFieldDefinitions;
+
     public GetAllCustomFieldsByCategoryResponse withCustomFieldDefinitions(org.openapis.openapi.models.shared.CustomFieldDefinition[] customFieldDefinitions) {
         this.customFieldDefinitions = customFieldDefinitions;
         return this;
@@ -43,9 +48,14 @@ public class GetAllCustomFieldsByCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetAllCustomFieldsByCategoryResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetAllCustomFieldsByCategoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

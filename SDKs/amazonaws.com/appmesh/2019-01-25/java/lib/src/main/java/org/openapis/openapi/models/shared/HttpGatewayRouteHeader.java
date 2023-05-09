@@ -15,6 +15,7 @@ public class HttpGatewayRouteHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invert")
     public Boolean invert;
+
     public HttpGatewayRouteHeader withInvert(Boolean invert) {
         this.invert = invert;
         return this;
@@ -23,6 +24,7 @@ public class HttpGatewayRouteHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public HeaderMatchMethod match;
+
     public HttpGatewayRouteHeader withMatch(HeaderMatchMethod match) {
         this.match = match;
         return this;
@@ -30,9 +32,13 @@ public class HttpGatewayRouteHeader {
     
     @JsonProperty("name")
     public String name;
+
     public HttpGatewayRouteHeader withName(String name) {
         this.name = name;
         return this;
     }
     
+    public HttpGatewayRouteHeader(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class Hsmgr401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Hsmgr401ApplicationJSONErrorEnum error;
+
     public Hsmgr401ApplicationJSON withError(Hsmgr401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Hsmgr401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Hsmgr401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Hsmgr401ApplicationJSON withErrorDescription(Hsmgr401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Hsmgr401ApplicationJSON(){}
 }

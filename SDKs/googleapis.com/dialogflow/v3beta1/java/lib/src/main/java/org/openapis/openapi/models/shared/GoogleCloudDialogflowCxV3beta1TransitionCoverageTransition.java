@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition {
     /**
-     * Whether or not the transition is covered by at least one of the agent's test cases.
+     * Whether the transition is covered by at least one of the agent's test cases.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("covered")
     public Boolean covered;
+
     public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition withCovered(Boolean covered) {
         this.covered = covered;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventHandler")
     public GoogleCloudDialogflowCxV3beta1EventHandler eventHandler;
+
     public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition withEventHandler(GoogleCloudDialogflowCxV3beta1EventHandler eventHandler) {
         this.eventHandler = eventHandler;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition withIndex(Integer index) {
         this.index = index;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNode source;
+
     public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition withSource(GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNode source) {
         this.source = source;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNode target;
+
     public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition withTarget(GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNode target) {
         this.target = target;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionRoute")
     public GoogleCloudDialogflowCxV3beta1TransitionRoute transitionRoute;
+
     public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition withTransitionRoute(GoogleCloudDialogflowCxV3beta1TransitionRoute transitionRoute) {
         this.transitionRoute = transitionRoute;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition(){}
 }

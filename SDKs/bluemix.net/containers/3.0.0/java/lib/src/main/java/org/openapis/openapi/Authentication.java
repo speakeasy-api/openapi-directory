@@ -58,11 +58,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTlskeyResponse res = new org.openapis.openapi.models.operations.GetTlskeyResponse() {{
+        org.openapis.openapi.models.operations.GetTlskeyResponse res = new org.openapis.openapi.models.operations.GetTlskeyResponse(contentType, httpRes.statusCode()) {{
             certificate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutTlskeyRefreshResponse res = new org.openapis.openapi.models.operations.PutTlskeyRefreshResponse() {{
+        org.openapis.openapi.models.operations.PutTlskeyRefreshResponse res = new org.openapis.openapi.models.operations.PutTlskeyRefreshResponse(contentType, httpRes.statusCode()) {{
             certificateRefresh = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

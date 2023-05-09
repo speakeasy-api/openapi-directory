@@ -15,6 +15,7 @@ public class ConfluenceSpaceToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceFieldName")
     public ConfluenceSpaceFieldNameEnum dataSourceFieldName;
+
     public ConfluenceSpaceToIndexFieldMapping withDataSourceFieldName(ConfluenceSpaceFieldNameEnum dataSourceFieldName) {
         this.dataSourceFieldName = dataSourceFieldName;
         return this;
@@ -23,6 +24,7 @@ public class ConfluenceSpaceToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateFieldFormat")
     public String dateFieldFormat;
+
     public ConfluenceSpaceToIndexFieldMapping withDateFieldFormat(String dateFieldFormat) {
         this.dateFieldFormat = dateFieldFormat;
         return this;
@@ -31,9 +33,11 @@ public class ConfluenceSpaceToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexFieldName")
     public String indexFieldName;
+
     public ConfluenceSpaceToIndexFieldMapping withIndexFieldName(String indexFieldName) {
         this.indexFieldName = indexFieldName;
         return this;
     }
     
+    public ConfluenceSpaceToIndexFieldMapping(){}
 }

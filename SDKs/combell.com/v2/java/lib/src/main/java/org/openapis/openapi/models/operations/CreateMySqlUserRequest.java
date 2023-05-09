@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMySqlUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateMySqlUser createMySqlUser;
+
     public CreateMySqlUserRequest withCreateMySqlUser(org.openapis.openapi.models.shared.CreateMySqlUser createMySqlUser) {
         this.createMySqlUser = createMySqlUser;
         return this;
@@ -19,6 +21,7 @@ public class CreateMySqlUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
     public String databaseNamePathParameter;
+
     public CreateMySqlUserRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
         this.databaseNamePathParameter = databaseNamePathParameter;
         return this;
@@ -29,9 +32,14 @@ public class CreateMySqlUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
     public String databaseNameQueryParameter;
+
     public CreateMySqlUserRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
         this.databaseNameQueryParameter = databaseNameQueryParameter;
         return this;
     }
     
+    public CreateMySqlUserRequest(@JsonProperty("databaseNamePathParameter") String databaseNamePathParameter, @JsonProperty("database_nameQueryParameter") String databaseNameQueryParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
+  }
 }

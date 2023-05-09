@@ -20,6 +20,7 @@ public class AssociationExecutionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public AssociationExecutionTarget withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -28,6 +29,7 @@ public class AssociationExecutionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersion")
     public String associationVersion;
+
     public AssociationExecutionTarget withAssociationVersion(String associationVersion) {
         this.associationVersion = associationVersion;
         return this;
@@ -36,6 +38,7 @@ public class AssociationExecutionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedStatus")
     public String detailedStatus;
+
     public AssociationExecutionTarget withDetailedStatus(String detailedStatus) {
         this.detailedStatus = detailedStatus;
         return this;
@@ -44,6 +47,7 @@ public class AssociationExecutionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionId")
     public String executionId;
+
     public AssociationExecutionTarget withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -54,6 +58,7 @@ public class AssociationExecutionTarget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastExecutionDate")
     public OffsetDateTime lastExecutionDate;
+
     public AssociationExecutionTarget withLastExecutionDate(OffsetDateTime lastExecutionDate) {
         this.lastExecutionDate = lastExecutionDate;
         return this;
@@ -62,6 +67,7 @@ public class AssociationExecutionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSource")
     public OutputSource outputSource;
+
     public AssociationExecutionTarget withOutputSource(OutputSource outputSource) {
         this.outputSource = outputSource;
         return this;
@@ -70,6 +76,7 @@ public class AssociationExecutionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public AssociationExecutionTarget withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -78,6 +85,7 @@ public class AssociationExecutionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public AssociationExecutionTarget withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -86,9 +94,11 @@ public class AssociationExecutionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AssociationExecutionTarget withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AssociationExecutionTarget(){}
 }

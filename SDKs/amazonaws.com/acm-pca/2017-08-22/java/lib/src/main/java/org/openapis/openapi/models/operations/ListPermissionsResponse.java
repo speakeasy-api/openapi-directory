@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPermissionsResponse {
     
     public String contentType;
+
     public ListPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPermissionsResponse {
      */
     
     public Object invalidArnException;
+
     public ListPermissionsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class ListPermissionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListPermissionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListPermissionsResponse {
      */
     
     public Object invalidStateException;
+
     public ListPermissionsResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class ListPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPermissionsResponse listPermissionsResponse;
+
     public ListPermissionsResponse withListPermissionsResponse(org.openapis.openapi.models.shared.ListPermissionsResponse listPermissionsResponse) {
         this.listPermissionsResponse = listPermissionsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListPermissionsResponse {
      */
     
     public Object requestFailedException;
+
     public ListPermissionsResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -69,6 +76,7 @@ public class ListPermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ListPermissionsResponse {
     
     
     public Integer statusCode;
+
     public ListPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

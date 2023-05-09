@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostServersIdActionsChangeProtectionActionResponse {
     @JsonProperty("action")
     public PostServersIdActionsChangeProtectionActionResponseAction action;
+
     public PostServersIdActionsChangeProtectionActionResponse withAction(PostServersIdActionsChangeProtectionActionResponseAction action) {
         this.action = action;
         return this;
     }
     
+    public PostServersIdActionsChangeProtectionActionResponse(@JsonProperty("action") PostServersIdActionsChangeProtectionActionResponseAction action) {
+        this.action = action;
+  }
 }

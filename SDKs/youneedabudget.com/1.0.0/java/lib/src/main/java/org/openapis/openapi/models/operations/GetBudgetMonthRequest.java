@@ -4,15 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBudgetMonthRequest {
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public GetBudgetMonthRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
@@ -23,9 +25,14 @@ public class GetBudgetMonthRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=month")
     public LocalDate month;
+
     public GetBudgetMonthRequest withMonth(LocalDate month) {
         this.month = month;
         return this;
     }
     
+    public GetBudgetMonthRequest(@JsonProperty("budget_id") String budgetId, @JsonProperty("month") LocalDate month) {
+        this.budgetId = budgetId;
+        this.month = month;
+  }
 }

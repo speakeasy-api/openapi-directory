@@ -12,6 +12,7 @@ public class GetOrganizationConformancePackDetailedStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public OrganizationResourceDetailedStatusFilters filters;
+
     public GetOrganizationConformancePackDetailedStatusRequest withFilters(OrganizationResourceDetailedStatusFilters filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class GetOrganizationConformancePackDetailedStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public GetOrganizationConformancePackDetailedStatusRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class GetOrganizationConformancePackDetailedStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetOrganizationConformancePackDetailedStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class GetOrganizationConformancePackDetailedStatusRequest {
     
     @JsonProperty("OrganizationConformancePackName")
     public String organizationConformancePackName;
+
     public GetOrganizationConformancePackDetailedStatusRequest withOrganizationConformancePackName(String organizationConformancePackName) {
         this.organizationConformancePackName = organizationConformancePackName;
         return this;
     }
     
+    public GetOrganizationConformancePackDetailedStatusRequest(@JsonProperty("OrganizationConformancePackName") String organizationConformancePackName) {
+        this.organizationConformancePackName = organizationConformancePackName;
+  }
 }

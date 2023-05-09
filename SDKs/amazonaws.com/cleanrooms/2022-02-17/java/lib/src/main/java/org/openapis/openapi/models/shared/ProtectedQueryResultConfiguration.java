@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedQueryResultConfiguration {
     @JsonProperty("outputConfiguration")
     public ProtectedQueryOutputConfiguration outputConfiguration;
+
     public ProtectedQueryResultConfiguration withOutputConfiguration(ProtectedQueryOutputConfiguration outputConfiguration) {
         this.outputConfiguration = outputConfiguration;
         return this;
     }
     
+    public ProtectedQueryResultConfiguration(@JsonProperty("outputConfiguration") ProtectedQueryOutputConfiguration outputConfiguration) {
+        this.outputConfiguration = outputConfiguration;
+  }
 }

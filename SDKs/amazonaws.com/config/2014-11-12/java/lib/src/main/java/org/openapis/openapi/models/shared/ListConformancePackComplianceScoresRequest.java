@@ -12,6 +12,7 @@ public class ListConformancePackComplianceScoresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ConformancePackComplianceScoresFilters filters;
+
     public ListConformancePackComplianceScoresRequest withFilters(ConformancePackComplianceScoresFilters filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListConformancePackComplianceScoresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListConformancePackComplianceScoresRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class ListConformancePackComplianceScoresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConformancePackComplianceScoresRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListConformancePackComplianceScoresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortByEnum sortBy;
+
     public ListConformancePackComplianceScoresRequest withSortBy(SortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -44,9 +48,11 @@ public class ListConformancePackComplianceScoresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListConformancePackComplianceScoresRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListConformancePackComplianceScoresRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResultRow {
     @JsonProperty("GroupedBys")
     public ResultRowValue[] groupedBys;
+
     public ResultRow withGroupedBys(ResultRowValue[] groupedBys) {
         this.groupedBys = groupedBys;
         return this;
@@ -19,9 +20,14 @@ public class ResultRow {
     
     @JsonProperty("Values")
     public ResultRowValue[] values;
+
     public ResultRow withValues(ResultRowValue[] values) {
         this.values = values;
         return this;
     }
     
+    public ResultRow(@JsonProperty("GroupedBys") ResultRowValue[] groupedBys, @JsonProperty("Values") ResultRowValue[] values) {
+        this.groupedBys = groupedBys;
+        this.values = values;
+  }
 }

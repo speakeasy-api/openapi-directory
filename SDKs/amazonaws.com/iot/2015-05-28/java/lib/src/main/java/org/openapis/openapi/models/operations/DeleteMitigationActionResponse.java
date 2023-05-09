@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMitigationActionResponse {
     
     public String contentType;
+
     public DeleteMitigationActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMitigationActionResponse {
      */
     
     public java.util.Map<String, Object> deleteMitigationActionResponse;
+
     public DeleteMitigationActionResponse withDeleteMitigationActionResponse(java.util.Map<String, Object> deleteMitigationActionResponse) {
         this.deleteMitigationActionResponse = deleteMitigationActionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMitigationActionResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteMitigationActionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMitigationActionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteMitigationActionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteMitigationActionResponse {
     
     
     public Integer statusCode;
+
     public DeleteMitigationActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteMitigationActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMitigationActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteMitigationActionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteMitigationActionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteMitigationActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

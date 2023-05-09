@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IPSetSummary {
     @JsonProperty("IPSetId")
     public String ipSetId;
+
     public IPSetSummary withIPSetId(String ipSetId) {
         this.ipSetId = ipSetId;
         return this;
@@ -19,9 +20,14 @@ public class IPSetSummary {
     
     @JsonProperty("Name")
     public String name;
+
     public IPSetSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IPSetSummary(@JsonProperty("IPSetId") String ipSetId, @JsonProperty("Name") String name) {
+        this.ipSetId = ipSetId;
+        this.name = name;
+  }
 }

@@ -20,6 +20,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("AcceptTerms")
     @SpeakeasyMetadata("form:name=AcceptTerms")
     public Boolean acceptTerms;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withAcceptTerms(Boolean acceptTerms) {
         this.acceptTerms = acceptTerms;
         return this;
@@ -32,6 +33,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("Address")
     @SpeakeasyMetadata("form:name=Address,json")
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress address;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withAddress(RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress address) {
         this.address = address;
         return this;
@@ -44,6 +46,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("AffiliateCouponCode")
     @SpeakeasyMetadata("form:name=AffiliateCouponCode")
     public String affiliateCouponCode;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withAffiliateCouponCode(String affiliateCouponCode) {
         this.affiliateCouponCode = affiliateCouponCode;
         return this;
@@ -56,6 +59,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("DefaultCurrrency")
     @SpeakeasyMetadata("form:name=DefaultCurrrency")
     public String defaultCurrrency;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withDefaultCurrrency(String defaultCurrrency) {
         this.defaultCurrrency = defaultCurrrency;
         return this;
@@ -68,6 +72,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("DefaultVatIndex")
     @SpeakeasyMetadata("form:name=DefaultVatIndex")
     public Integer defaultVatIndex;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withDefaultVatIndex(Integer defaultVatIndex) {
         this.defaultVatIndex = defaultVatIndex;
         return this;
@@ -80,6 +85,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("DefaultVatMode")
     @SpeakeasyMetadata("form:name=DefaultVatMode")
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerDefaultVatModeEnum defaultVatMode;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withDefaultVatMode(RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerDefaultVatModeEnum defaultVatMode) {
         this.defaultVatMode = defaultVatMode;
         return this;
@@ -91,6 +97,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("EMail")
     @SpeakeasyMetadata("form:name=EMail")
     public String eMail;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withEMail(String eMail) {
         this.eMail = eMail;
         return this;
@@ -100,6 +107,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("Password")
     @SpeakeasyMetadata("form:name=Password")
     public String password;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withPassword(String password) {
         this.password = password;
         return this;
@@ -112,6 +120,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("Vat1Rate")
     @SpeakeasyMetadata("form:name=Vat1Rate")
     public Double vat1Rate;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withVat1Rate(Double vat1Rate) {
         this.vat1Rate = vat1Rate;
         return this;
@@ -124,9 +133,13 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonProperty("Vat2Rate")
     @SpeakeasyMetadata("form:name=Vat2Rate")
     public Double vat2Rate;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer withVat2Rate(Double vat2Rate) {
         this.vat2Rate = vat2Rate;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer(@JsonProperty("EMail") String eMail) {
+        this.eMail = eMail;
+  }
 }

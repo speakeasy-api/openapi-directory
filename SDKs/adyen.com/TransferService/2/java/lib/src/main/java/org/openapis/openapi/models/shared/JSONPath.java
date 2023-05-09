@@ -12,9 +12,11 @@ public class JSONPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String[] content;
+
     public JSONPath withContent(String[] content) {
         this.content = content;
         return this;
     }
     
+    public JSONPath(){}
 }

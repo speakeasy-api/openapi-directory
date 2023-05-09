@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2alphaListMerchantCenterAccountLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCenterAccountLinks")
     public GoogleCloudRetailV2alphaMerchantCenterAccountLink[] merchantCenterAccountLinks;
+
     public GoogleCloudRetailV2alphaListMerchantCenterAccountLinksResponse withMerchantCenterAccountLinks(GoogleCloudRetailV2alphaMerchantCenterAccountLink[] merchantCenterAccountLinks) {
         this.merchantCenterAccountLinks = merchantCenterAccountLinks;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaListMerchantCenterAccountLinksResponse(){}
 }

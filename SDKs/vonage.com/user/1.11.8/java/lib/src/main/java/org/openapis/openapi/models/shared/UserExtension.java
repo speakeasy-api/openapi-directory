@@ -15,6 +15,7 @@ public class UserExtension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dids")
     public Did[] dids;
+
     public UserExtension withDids(Did[] dids) {
         this.dids = dids;
         return this;
@@ -26,9 +27,11 @@ public class UserExtension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension_number")
     public String extensionNumber;
+
     public UserExtension withExtensionNumber(String extensionNumber) {
         this.extensionNumber = extensionNumber;
         return this;
     }
     
+    public UserExtension(){}
 }

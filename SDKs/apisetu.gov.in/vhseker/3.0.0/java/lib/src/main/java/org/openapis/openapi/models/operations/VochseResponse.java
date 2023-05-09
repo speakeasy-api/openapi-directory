@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VochseResponse {
     
     public String contentType;
+
     public VochseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VochseResponse {
     
     
     public Integer statusCode;
+
     public VochseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class VochseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VochseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class VochseResponse {
      */
     
     public Vochse400ApplicationJSON vochse400ApplicationJSONObject;
+
     public VochseResponse withVochse400ApplicationJSONObject(Vochse400ApplicationJSON vochse400ApplicationJSONObject) {
         this.vochse400ApplicationJSONObject = vochse400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class VochseResponse {
      */
     
     public Vochse401ApplicationJSON vochse401ApplicationJSONObject;
+
     public VochseResponse withVochse401ApplicationJSONObject(Vochse401ApplicationJSON vochse401ApplicationJSONObject) {
         this.vochse401ApplicationJSONObject = vochse401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class VochseResponse {
      */
     
     public Vochse404ApplicationJSON vochse404ApplicationJSONObject;
+
     public VochseResponse withVochse404ApplicationJSONObject(Vochse404ApplicationJSON vochse404ApplicationJSONObject) {
         this.vochse404ApplicationJSONObject = vochse404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class VochseResponse {
      */
     
     public Vochse500ApplicationJSON vochse500ApplicationJSONObject;
+
     public VochseResponse withVochse500ApplicationJSONObject(Vochse500ApplicationJSON vochse500ApplicationJSONObject) {
         this.vochse500ApplicationJSONObject = vochse500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class VochseResponse {
      */
     
     public Vochse502ApplicationJSON vochse502ApplicationJSONObject;
+
     public VochseResponse withVochse502ApplicationJSONObject(Vochse502ApplicationJSON vochse502ApplicationJSONObject) {
         this.vochse502ApplicationJSONObject = vochse502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class VochseResponse {
      */
     
     public Vochse503ApplicationJSON vochse503ApplicationJSONObject;
+
     public VochseResponse withVochse503ApplicationJSONObject(Vochse503ApplicationJSON vochse503ApplicationJSONObject) {
         this.vochse503ApplicationJSONObject = vochse503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class VochseResponse {
      */
     
     public Vochse504ApplicationJSON vochse504ApplicationJSONObject;
+
     public VochseResponse withVochse504ApplicationJSONObject(Vochse504ApplicationJSON vochse504ApplicationJSONObject) {
         this.vochse504ApplicationJSONObject = vochse504ApplicationJSONObject;
         return this;
     }
     
+    public VochseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlusActivitiesSearchRequest {
@@ -12,6 +13,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PlusActivitiesSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PlusActivitiesSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PlusActivitiesSearchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public PlusActivitiesSearchRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -52,6 +57,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public PlusActivitiesSearchRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PlusActivitiesSearchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public PlusActivitiesSearchOrderByEnum orderBy;
+
     public PlusActivitiesSearchRequest withOrderBy(PlusActivitiesSearchOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -82,6 +90,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public PlusActivitiesSearchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -92,6 +101,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PlusActivitiesSearchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public PlusActivitiesSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -112,6 +123,7 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PlusActivitiesSearchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,9 +134,13 @@ public class PlusActivitiesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public PlusActivitiesSearchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public PlusActivitiesSearchRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

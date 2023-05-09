@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeUpdateActionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeUpdateActionsActionEnum action;
+
     public GETDescribeUpdateActionsRequest withAction(GETDescribeUpdateActionsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterIds")
     public String[] cacheClusterIds;
+
     public GETDescribeUpdateActionsRequest withCacheClusterIds(String[] cacheClusterIds) {
         this.cacheClusterIds = cacheClusterIds;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
     public String engine;
+
     public GETDescribeUpdateActionsRequest withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeUpdateActionsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeUpdateActionsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupIds")
     public String[] replicationGroupIds;
+
     public GETDescribeUpdateActionsRequest withReplicationGroupIds(String[] replicationGroupIds) {
         this.replicationGroupIds = replicationGroupIds;
         return this;
@@ -69,6 +76,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateName")
     public String serviceUpdateName;
+
     public GETDescribeUpdateActionsRequest withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -79,6 +87,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateStatus")
     public org.openapis.openapi.models.shared.ServiceUpdateStatusEnum[] serviceUpdateStatus;
+
     public GETDescribeUpdateActionsRequest withServiceUpdateStatus(org.openapis.openapi.models.shared.ServiceUpdateStatusEnum[] serviceUpdateStatus) {
         this.serviceUpdateStatus = serviceUpdateStatus;
         return this;
@@ -89,6 +98,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateTimeRange")
     public GETDescribeUpdateActionsServiceUpdateTimeRange serviceUpdateTimeRange;
+
     public GETDescribeUpdateActionsRequest withServiceUpdateTimeRange(GETDescribeUpdateActionsServiceUpdateTimeRange serviceUpdateTimeRange) {
         this.serviceUpdateTimeRange = serviceUpdateTimeRange;
         return this;
@@ -99,6 +109,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowNodeLevelUpdateStatus")
     public Boolean showNodeLevelUpdateStatus;
+
     public GETDescribeUpdateActionsRequest withShowNodeLevelUpdateStatus(Boolean showNodeLevelUpdateStatus) {
         this.showNodeLevelUpdateStatus = showNodeLevelUpdateStatus;
         return this;
@@ -109,6 +120,7 @@ public class GETDescribeUpdateActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UpdateActionStatus")
     public org.openapis.openapi.models.shared.UpdateActionStatusEnum[] updateActionStatus;
+
     public GETDescribeUpdateActionsRequest withUpdateActionStatus(org.openapis.openapi.models.shared.UpdateActionStatusEnum[] updateActionStatus) {
         this.updateActionStatus = updateActionStatus;
         return this;
@@ -116,6 +128,7 @@ public class GETDescribeUpdateActionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeUpdateActionsVersionEnum version;
+
     public GETDescribeUpdateActionsRequest withVersion(GETDescribeUpdateActionsVersionEnum version) {
         this.version = version;
         return this;
@@ -123,6 +136,7 @@ public class GETDescribeUpdateActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeUpdateActionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -130,6 +144,7 @@ public class GETDescribeUpdateActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeUpdateActionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -137,6 +152,7 @@ public class GETDescribeUpdateActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeUpdateActionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -144,6 +160,7 @@ public class GETDescribeUpdateActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeUpdateActionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -151,6 +168,7 @@ public class GETDescribeUpdateActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeUpdateActionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -158,6 +176,7 @@ public class GETDescribeUpdateActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeUpdateActionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -165,9 +184,14 @@ public class GETDescribeUpdateActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeUpdateActionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeUpdateActionsRequest(@JsonProperty("Action") GETDescribeUpdateActionsActionEnum action, @JsonProperty("Version") GETDescribeUpdateActionsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

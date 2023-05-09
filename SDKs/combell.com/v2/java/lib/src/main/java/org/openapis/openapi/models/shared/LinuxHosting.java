@@ -15,6 +15,7 @@ public class LinuxHosting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public LinuxHosting withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,9 +27,11 @@ public class LinuxHosting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicepack_id")
     public Integer servicepackId;
+
     public LinuxHosting withServicepackId(Integer servicepackId) {
         this.servicepackId = servicepackId;
         return this;
     }
     
+    public LinuxHosting(){}
 }

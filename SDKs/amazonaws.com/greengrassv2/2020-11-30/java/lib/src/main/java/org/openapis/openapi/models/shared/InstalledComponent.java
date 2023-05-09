@@ -20,6 +20,7 @@ public class InstalledComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public InstalledComponent withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -28,6 +29,7 @@ public class InstalledComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersion")
     public String componentVersion;
+
     public InstalledComponent withComponentVersion(String componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -36,6 +38,7 @@ public class InstalledComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRoot")
     public Boolean isRoot;
+
     public InstalledComponent withIsRoot(Boolean isRoot) {
         this.isRoot = isRoot;
         return this;
@@ -44,6 +47,7 @@ public class InstalledComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastInstallationSource")
     public String lastInstallationSource;
+
     public InstalledComponent withLastInstallationSource(String lastInstallationSource) {
         this.lastInstallationSource = lastInstallationSource;
         return this;
@@ -54,6 +58,7 @@ public class InstalledComponent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastReportedTimestamp")
     public OffsetDateTime lastReportedTimestamp;
+
     public InstalledComponent withLastReportedTimestamp(OffsetDateTime lastReportedTimestamp) {
         this.lastReportedTimestamp = lastReportedTimestamp;
         return this;
@@ -64,6 +69,7 @@ public class InstalledComponent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStatusChangeTimestamp")
     public OffsetDateTime lastStatusChangeTimestamp;
+
     public InstalledComponent withLastStatusChangeTimestamp(OffsetDateTime lastStatusChangeTimestamp) {
         this.lastStatusChangeTimestamp = lastStatusChangeTimestamp;
         return this;
@@ -72,6 +78,7 @@ public class InstalledComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleState")
     public InstalledComponentLifecycleStateEnum lifecycleState;
+
     public InstalledComponent withLifecycleState(InstalledComponentLifecycleStateEnum lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -80,6 +87,7 @@ public class InstalledComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleStateDetails")
     public String lifecycleStateDetails;
+
     public InstalledComponent withLifecycleStateDetails(String lifecycleStateDetails) {
         this.lifecycleStateDetails = lifecycleStateDetails;
         return this;
@@ -88,9 +96,11 @@ public class InstalledComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleStatusCodes")
     public String[] lifecycleStatusCodes;
+
     public InstalledComponent withLifecycleStatusCodes(String[] lifecycleStatusCodes) {
         this.lifecycleStatusCodes = lifecycleStatusCodes;
         return this;
     }
     
+    public InstalledComponent(){}
 }

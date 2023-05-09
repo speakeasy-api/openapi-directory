@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1ProductSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexTime")
     public String indexTime;
+
     public GoogleCloudVisionV1p1beta1ProductSearchResults withIndexTime(String indexTime) {
         this.indexTime = indexTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1ProductSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productGroupedResults")
     public GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult[] productGroupedResults;
+
     public GoogleCloudVisionV1p1beta1ProductSearchResults withProductGroupedResults(GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult[] productGroupedResults) {
         this.productGroupedResults = productGroupedResults;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p1beta1ProductSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleCloudVisionV1p1beta1ProductSearchResultsResult[] results;
+
     public GoogleCloudVisionV1p1beta1ProductSearchResults withResults(GoogleCloudVisionV1p1beta1ProductSearchResultsResult[] results) {
         this.results = results;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1ProductSearchResults(){}
 }

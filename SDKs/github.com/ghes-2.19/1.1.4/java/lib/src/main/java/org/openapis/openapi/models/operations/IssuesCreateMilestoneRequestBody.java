@@ -20,6 +20,7 @@ public class IssuesCreateMilestoneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public IssuesCreateMilestoneRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +34,7 @@ public class IssuesCreateMilestoneRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("due_on")
     public OffsetDateTime dueOn;
+
     public IssuesCreateMilestoneRequestBody withDueOn(OffsetDateTime dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -44,6 +46,7 @@ public class IssuesCreateMilestoneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public IssuesCreateMilestoneRequestBodyStateEnum state;
+
     public IssuesCreateMilestoneRequestBody withState(IssuesCreateMilestoneRequestBodyStateEnum state) {
         this.state = state;
         return this;
@@ -54,9 +57,13 @@ public class IssuesCreateMilestoneRequestBody {
      */
     @JsonProperty("title")
     public String title;
+
     public IssuesCreateMilestoneRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public IssuesCreateMilestoneRequestBody(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateSimulationApplicationRequestBodyRenderingEngine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.RenderingEngineTypeEnum name;
+
     public UpdateSimulationApplicationRequestBodyRenderingEngine withName(org.openapis.openapi.models.shared.RenderingEngineTypeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class UpdateSimulationApplicationRequestBodyRenderingEngine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public UpdateSimulationApplicationRequestBodyRenderingEngine withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateSimulationApplicationRequestBodyRenderingEngine(){}
 }

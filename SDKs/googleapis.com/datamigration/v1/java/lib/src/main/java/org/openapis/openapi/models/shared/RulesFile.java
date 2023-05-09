@@ -18,6 +18,7 @@ public class RulesFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesContent")
     public String rulesContent;
+
     public RulesFile withRulesContent(String rulesContent) {
         this.rulesContent = rulesContent;
         return this;
@@ -29,9 +30,11 @@ public class RulesFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesSourceFilename")
     public String rulesSourceFilename;
+
     public RulesFile withRulesSourceFilename(String rulesSourceFilename) {
         this.rulesSourceFilename = rulesSourceFilename;
         return this;
     }
     
+    public RulesFile(){}
 }

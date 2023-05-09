@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSecurityConfigurationsResponse {
     
     public String contentType;
+
     public GetSecurityConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSecurityConfigurationsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetSecurityConfigurationsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetSecurityConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSecurityConfigurationsResponse getSecurityConfigurationsResponse;
+
     public GetSecurityConfigurationsResponse withGetSecurityConfigurationsResponse(org.openapis.openapi.models.shared.GetSecurityConfigurationsResponse getSecurityConfigurationsResponse) {
         this.getSecurityConfigurationsResponse = getSecurityConfigurationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSecurityConfigurationsResponse {
      */
     
     public Object internalServiceException;
+
     public GetSecurityConfigurationsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetSecurityConfigurationsResponse {
      */
     
     public Object invalidInputException;
+
     public GetSecurityConfigurationsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetSecurityConfigurationsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetSecurityConfigurationsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetSecurityConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public GetSecurityConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetSecurityConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSecurityConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSecurityConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

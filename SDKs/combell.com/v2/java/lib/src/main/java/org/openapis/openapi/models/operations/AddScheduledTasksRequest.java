@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddScheduledTasksRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ScheduledTask scheduledTask;
+
     public AddScheduledTasksRequest withScheduledTask(org.openapis.openapi.models.shared.ScheduledTask scheduledTask) {
         this.scheduledTask = scheduledTask;
         return this;
@@ -19,6 +21,7 @@ public class AddScheduledTasksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public AddScheduledTasksRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -29,9 +32,14 @@ public class AddScheduledTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public AddScheduledTasksRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     
+    public AddScheduledTasksRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAppVersionResourceResponse {
@@ -12,6 +13,7 @@ public class CreateAppVersionResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAppVersionResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAppVersionResourceResponse {
      */
     
     public Object conflictException;
+
     public CreateAppVersionResourceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAppVersionResourceResponse {
     
     
     public String contentType;
+
     public CreateAppVersionResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAppVersionResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAppVersionResourceResponse createAppVersionResourceResponse;
+
     public CreateAppVersionResourceResponse withCreateAppVersionResourceResponse(org.openapis.openapi.models.shared.CreateAppVersionResourceResponse createAppVersionResourceResponse) {
         this.createAppVersionResourceResponse = createAppVersionResourceResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAppVersionResourceResponse {
      */
     
     public Object internalServerException;
+
     public CreateAppVersionResourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAppVersionResourceResponse {
     
     
     public Integer statusCode;
+
     public CreateAppVersionResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAppVersionResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAppVersionResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateAppVersionResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAppVersionResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateAppVersionResourceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAppVersionResourceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateAppVersionResourceResponse {
      */
     
     public Object throttlingException;
+
     public CreateAppVersionResourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAppVersionResourceResponse {
      */
     
     public Object validationException;
+
     public CreateAppVersionResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAppVersionResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

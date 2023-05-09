@@ -12,9 +12,11 @@ public class APIRequestResourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public APIRequestResourceItem withId(String id) {
         this.id = id;
         return this;
     }
     
+    public APIRequestResourceItem(){}
 }

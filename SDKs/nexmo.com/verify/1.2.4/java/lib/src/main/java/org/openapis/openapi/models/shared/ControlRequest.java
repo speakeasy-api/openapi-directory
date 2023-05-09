@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ControlRequest {
@@ -12,6 +13,7 @@ public class ControlRequest {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public ControlRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class ControlRequest {
      */
     @SpeakeasyMetadata("form:name=api_secret")
     public String apiSecret;
+
     public ControlRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class ControlRequest {
      */
     @SpeakeasyMetadata("form:name=cmd")
     public ControlRequestCmdEnum cmd;
+
     public ControlRequest withCmd(ControlRequestCmdEnum cmd) {
         this.cmd = cmd;
         return this;
@@ -42,9 +46,16 @@ public class ControlRequest {
      */
     @SpeakeasyMetadata("form:name=request_id")
     public String requestId;
+
     public ControlRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ControlRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("cmd") ControlRequestCmdEnum cmd, @JsonProperty("request_id") String requestId) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.cmd = cmd;
+        this.requestId = requestId;
+  }
 }

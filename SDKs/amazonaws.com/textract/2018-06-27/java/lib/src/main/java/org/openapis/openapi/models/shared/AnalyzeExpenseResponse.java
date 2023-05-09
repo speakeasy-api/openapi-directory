@@ -18,6 +18,7 @@ public class AnalyzeExpenseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public AnalyzeExpenseResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -26,9 +27,11 @@ public class AnalyzeExpenseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpenseDocuments")
     public ExpenseDocument[] expenseDocuments;
+
     public AnalyzeExpenseResponse withExpenseDocuments(ExpenseDocument[] expenseDocuments) {
         this.expenseDocuments = expenseDocuments;
         return this;
     }
     
+    public AnalyzeExpenseResponse(){}
 }

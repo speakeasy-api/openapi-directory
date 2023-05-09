@@ -22,6 +22,7 @@ public class TopicRuleListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TopicRuleListItem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class TopicRuleListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleArn")
     public String ruleArn;
+
     public TopicRuleListItem withRuleArn(String ruleArn) {
         this.ruleArn = ruleArn;
         return this;
@@ -38,6 +40,7 @@ public class TopicRuleListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleDisabled")
     public Boolean ruleDisabled;
+
     public TopicRuleListItem withRuleDisabled(Boolean ruleDisabled) {
         this.ruleDisabled = ruleDisabled;
         return this;
@@ -46,6 +49,7 @@ public class TopicRuleListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleName")
     public String ruleName;
+
     public TopicRuleListItem withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -54,9 +58,11 @@ public class TopicRuleListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicPattern")
     public String topicPattern;
+
     public TopicRuleListItem withTopicPattern(String topicPattern) {
         this.topicPattern = topicPattern;
         return this;
     }
     
+    public TopicRuleListItem(){}
 }

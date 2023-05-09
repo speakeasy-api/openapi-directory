@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidateMatchmakingRuleSetInput {
     @JsonProperty("RuleSetBody")
     public String ruleSetBody;
+
     public ValidateMatchmakingRuleSetInput withRuleSetBody(String ruleSetBody) {
         this.ruleSetBody = ruleSetBody;
         return this;
     }
     
+    public ValidateMatchmakingRuleSetInput(@JsonProperty("RuleSetBody") String ruleSetBody) {
+        this.ruleSetBody = ruleSetBody;
+  }
 }

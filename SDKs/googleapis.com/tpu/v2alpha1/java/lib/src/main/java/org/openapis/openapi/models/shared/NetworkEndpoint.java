@@ -18,6 +18,7 @@ public class NetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessConfig")
     public AccessConfig accessConfig;
+
     public NetworkEndpoint withAccessConfig(AccessConfig accessConfig) {
         this.accessConfig = accessConfig;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public NetworkEndpoint withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -40,9 +42,11 @@ public class NetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public NetworkEndpoint withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public NetworkEndpoint(){}
 }

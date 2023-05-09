@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateNetworkCameraSnapshotResponse {
     
     public String contentType;
+
     public GenerateNetworkCameraSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GenerateNetworkCameraSnapshotResponse {
     
     
     public Integer statusCode;
+
     public GenerateNetworkCameraSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GenerateNetworkCameraSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateNetworkCameraSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GenerateNetworkCameraSnapshotResponse {
      */
     
     public java.util.Map<String, Object> generateNetworkCameraSnapshot202ApplicationJSONObject;
+
     public GenerateNetworkCameraSnapshotResponse withGenerateNetworkCameraSnapshot202ApplicationJSONObject(java.util.Map<String, Object> generateNetworkCameraSnapshot202ApplicationJSONObject) {
         this.generateNetworkCameraSnapshot202ApplicationJSONObject = generateNetworkCameraSnapshot202ApplicationJSONObject;
         return this;
     }
     
+    public GenerateNetworkCameraSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GetInvestmentProduct404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetInvestmentProduct404ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetInvestmentProduct404ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetInvestmentProduct404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetInvestmentProduct404ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

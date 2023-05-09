@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkAclResultNetworkAclAssociations {
     
     public String networkAclAssociationId;
+
     public CreateNetworkAclResultNetworkAclAssociations withNetworkAclAssociationId(String networkAclAssociationId) {
         this.networkAclAssociationId = networkAclAssociationId;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkAclResultNetworkAclAssociations {
     
     
     public String networkAclId;
+
     public CreateNetworkAclResultNetworkAclAssociations withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -26,9 +28,11 @@ public class CreateNetworkAclResultNetworkAclAssociations {
     
     
     public String subnetId;
+
     public CreateNetworkAclResultNetworkAclAssociations withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public CreateNetworkAclResultNetworkAclAssociations(){}
 }

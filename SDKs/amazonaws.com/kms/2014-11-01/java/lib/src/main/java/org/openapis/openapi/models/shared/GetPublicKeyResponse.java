@@ -15,6 +15,7 @@ public class GetPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerMasterKeySpec")
     public GetPublicKeyResponseCustomerMasterKeySpecEnum customerMasterKeySpec;
+
     public GetPublicKeyResponse withCustomerMasterKeySpec(GetPublicKeyResponseCustomerMasterKeySpecEnum customerMasterKeySpec) {
         this.customerMasterKeySpec = customerMasterKeySpec;
         return this;
@@ -23,6 +24,7 @@ public class GetPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionAlgorithms")
     public EncryptionAlgorithmSpecEnum[] encryptionAlgorithms;
+
     public GetPublicKeyResponse withEncryptionAlgorithms(EncryptionAlgorithmSpecEnum[] encryptionAlgorithms) {
         this.encryptionAlgorithms = encryptionAlgorithms;
         return this;
@@ -31,6 +33,7 @@ public class GetPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public GetPublicKeyResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -39,6 +42,7 @@ public class GetPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySpec")
     public KeySpecEnum keySpec;
+
     public GetPublicKeyResponse withKeySpec(KeySpecEnum keySpec) {
         this.keySpec = keySpec;
         return this;
@@ -47,6 +51,7 @@ public class GetPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyUsage")
     public KeyUsageTypeEnum keyUsage;
+
     public GetPublicKeyResponse withKeyUsage(KeyUsageTypeEnum keyUsage) {
         this.keyUsage = keyUsage;
         return this;
@@ -55,6 +60,7 @@ public class GetPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKey")
     public String publicKey;
+
     public GetPublicKeyResponse withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -63,9 +69,11 @@ public class GetPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningAlgorithms")
     public SigningAlgorithmSpecEnum[] signingAlgorithms;
+
     public GetPublicKeyResponse withSigningAlgorithms(SigningAlgorithmSpecEnum[] signingAlgorithms) {
         this.signingAlgorithms = signingAlgorithms;
         return this;
     }
     
+    public GetPublicKeyResponse(){}
 }

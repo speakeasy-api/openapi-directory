@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListJobTemplatesResponse {
     
     public String contentType;
+
     public ListJobTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListJobTemplatesResponse {
      */
     
     public Object internalFailureException;
+
     public ListJobTemplatesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListJobTemplatesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListJobTemplatesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListJobTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListJobTemplatesResponse listJobTemplatesResponse;
+
     public ListJobTemplatesResponse withListJobTemplatesResponse(org.openapis.openapi.models.shared.ListJobTemplatesResponse listJobTemplatesResponse) {
         this.listJobTemplatesResponse = listJobTemplatesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListJobTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListJobTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListJobTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListJobTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListJobTemplatesResponse {
      */
     
     public Object throttlingException;
+
     public ListJobTemplatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListJobTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

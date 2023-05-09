@@ -15,6 +15,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsAccountId")
     public org.openapis.openapi.models.shared.StringFilter[] awsAccountId;
+
     public UpdateInsightRequestBodyFilters withAwsAccountId(org.openapis.openapi.models.shared.StringFilter[] awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyName")
     public org.openapis.openapi.models.shared.StringFilter[] companyName;
+
     public UpdateInsightRequestBodyFilters withCompanyName(org.openapis.openapi.models.shared.StringFilter[] companyName) {
         this.companyName = companyName;
         return this;
@@ -31,6 +33,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceAssociatedStandardsId")
     public org.openapis.openapi.models.shared.StringFilter[] complianceAssociatedStandardsId;
+
     public UpdateInsightRequestBodyFilters withComplianceAssociatedStandardsId(org.openapis.openapi.models.shared.StringFilter[] complianceAssociatedStandardsId) {
         this.complianceAssociatedStandardsId = complianceAssociatedStandardsId;
         return this;
@@ -39,6 +42,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSecurityControlId")
     public org.openapis.openapi.models.shared.StringFilter[] complianceSecurityControlId;
+
     public UpdateInsightRequestBodyFilters withComplianceSecurityControlId(org.openapis.openapi.models.shared.StringFilter[] complianceSecurityControlId) {
         this.complianceSecurityControlId = complianceSecurityControlId;
         return this;
@@ -47,6 +51,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceStatus")
     public org.openapis.openapi.models.shared.StringFilter[] complianceStatus;
+
     public UpdateInsightRequestBodyFilters withComplianceStatus(org.openapis.openapi.models.shared.StringFilter[] complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -55,6 +60,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public org.openapis.openapi.models.shared.NumberFilter[] confidence;
+
     public UpdateInsightRequestBodyFilters withConfidence(org.openapis.openapi.models.shared.NumberFilter[] confidence) {
         this.confidence = confidence;
         return this;
@@ -63,6 +69,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public org.openapis.openapi.models.shared.DateFilter[] createdAt;
+
     public UpdateInsightRequestBodyFilters withCreatedAt(org.openapis.openapi.models.shared.DateFilter[] createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -71,6 +78,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Criticality")
     public org.openapis.openapi.models.shared.NumberFilter[] criticality;
+
     public UpdateInsightRequestBodyFilters withCriticality(org.openapis.openapi.models.shared.NumberFilter[] criticality) {
         this.criticality = criticality;
         return this;
@@ -79,6 +87,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public org.openapis.openapi.models.shared.StringFilter[] description;
+
     public UpdateInsightRequestBodyFilters withDescription(org.openapis.openapi.models.shared.StringFilter[] description) {
         this.description = description;
         return this;
@@ -87,6 +96,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingProviderFieldsConfidence")
     public org.openapis.openapi.models.shared.NumberFilter[] findingProviderFieldsConfidence;
+
     public UpdateInsightRequestBodyFilters withFindingProviderFieldsConfidence(org.openapis.openapi.models.shared.NumberFilter[] findingProviderFieldsConfidence) {
         this.findingProviderFieldsConfidence = findingProviderFieldsConfidence;
         return this;
@@ -95,6 +105,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingProviderFieldsCriticality")
     public org.openapis.openapi.models.shared.NumberFilter[] findingProviderFieldsCriticality;
+
     public UpdateInsightRequestBodyFilters withFindingProviderFieldsCriticality(org.openapis.openapi.models.shared.NumberFilter[] findingProviderFieldsCriticality) {
         this.findingProviderFieldsCriticality = findingProviderFieldsCriticality;
         return this;
@@ -103,6 +114,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingProviderFieldsRelatedFindingsId")
     public org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsRelatedFindingsId;
+
     public UpdateInsightRequestBodyFilters withFindingProviderFieldsRelatedFindingsId(org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsRelatedFindingsId) {
         this.findingProviderFieldsRelatedFindingsId = findingProviderFieldsRelatedFindingsId;
         return this;
@@ -111,6 +123,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingProviderFieldsRelatedFindingsProductArn")
     public org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsRelatedFindingsProductArn;
+
     public UpdateInsightRequestBodyFilters withFindingProviderFieldsRelatedFindingsProductArn(org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsRelatedFindingsProductArn) {
         this.findingProviderFieldsRelatedFindingsProductArn = findingProviderFieldsRelatedFindingsProductArn;
         return this;
@@ -119,6 +132,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingProviderFieldsSeverityLabel")
     public org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsSeverityLabel;
+
     public UpdateInsightRequestBodyFilters withFindingProviderFieldsSeverityLabel(org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsSeverityLabel) {
         this.findingProviderFieldsSeverityLabel = findingProviderFieldsSeverityLabel;
         return this;
@@ -127,6 +141,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingProviderFieldsSeverityOriginal")
     public org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsSeverityOriginal;
+
     public UpdateInsightRequestBodyFilters withFindingProviderFieldsSeverityOriginal(org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsSeverityOriginal) {
         this.findingProviderFieldsSeverityOriginal = findingProviderFieldsSeverityOriginal;
         return this;
@@ -135,6 +150,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingProviderFieldsTypes")
     public org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsTypes;
+
     public UpdateInsightRequestBodyFilters withFindingProviderFieldsTypes(org.openapis.openapi.models.shared.StringFilter[] findingProviderFieldsTypes) {
         this.findingProviderFieldsTypes = findingProviderFieldsTypes;
         return this;
@@ -143,6 +159,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstObservedAt")
     public org.openapis.openapi.models.shared.DateFilter[] firstObservedAt;
+
     public UpdateInsightRequestBodyFilters withFirstObservedAt(org.openapis.openapi.models.shared.DateFilter[] firstObservedAt) {
         this.firstObservedAt = firstObservedAt;
         return this;
@@ -151,6 +168,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratorId")
     public org.openapis.openapi.models.shared.StringFilter[] generatorId;
+
     public UpdateInsightRequestBodyFilters withGeneratorId(org.openapis.openapi.models.shared.StringFilter[] generatorId) {
         this.generatorId = generatorId;
         return this;
@@ -159,6 +177,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public org.openapis.openapi.models.shared.StringFilter[] id;
+
     public UpdateInsightRequestBodyFilters withId(org.openapis.openapi.models.shared.StringFilter[] id) {
         this.id = id;
         return this;
@@ -167,6 +186,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keyword")
     public org.openapis.openapi.models.shared.KeywordFilter[] keyword;
+
     public UpdateInsightRequestBodyFilters withKeyword(org.openapis.openapi.models.shared.KeywordFilter[] keyword) {
         this.keyword = keyword;
         return this;
@@ -175,6 +195,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastObservedAt")
     public org.openapis.openapi.models.shared.DateFilter[] lastObservedAt;
+
     public UpdateInsightRequestBodyFilters withLastObservedAt(org.openapis.openapi.models.shared.DateFilter[] lastObservedAt) {
         this.lastObservedAt = lastObservedAt;
         return this;
@@ -183,6 +204,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MalwareName")
     public org.openapis.openapi.models.shared.StringFilter[] malwareName;
+
     public UpdateInsightRequestBodyFilters withMalwareName(org.openapis.openapi.models.shared.StringFilter[] malwareName) {
         this.malwareName = malwareName;
         return this;
@@ -191,6 +213,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MalwarePath")
     public org.openapis.openapi.models.shared.StringFilter[] malwarePath;
+
     public UpdateInsightRequestBodyFilters withMalwarePath(org.openapis.openapi.models.shared.StringFilter[] malwarePath) {
         this.malwarePath = malwarePath;
         return this;
@@ -199,6 +222,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MalwareState")
     public org.openapis.openapi.models.shared.StringFilter[] malwareState;
+
     public UpdateInsightRequestBodyFilters withMalwareState(org.openapis.openapi.models.shared.StringFilter[] malwareState) {
         this.malwareState = malwareState;
         return this;
@@ -207,6 +231,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MalwareType")
     public org.openapis.openapi.models.shared.StringFilter[] malwareType;
+
     public UpdateInsightRequestBodyFilters withMalwareType(org.openapis.openapi.models.shared.StringFilter[] malwareType) {
         this.malwareType = malwareType;
         return this;
@@ -215,6 +240,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkDestinationDomain")
     public org.openapis.openapi.models.shared.StringFilter[] networkDestinationDomain;
+
     public UpdateInsightRequestBodyFilters withNetworkDestinationDomain(org.openapis.openapi.models.shared.StringFilter[] networkDestinationDomain) {
         this.networkDestinationDomain = networkDestinationDomain;
         return this;
@@ -223,6 +249,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkDestinationIpV4")
     public org.openapis.openapi.models.shared.IpFilter[] networkDestinationIpV4;
+
     public UpdateInsightRequestBodyFilters withNetworkDestinationIpV4(org.openapis.openapi.models.shared.IpFilter[] networkDestinationIpV4) {
         this.networkDestinationIpV4 = networkDestinationIpV4;
         return this;
@@ -231,6 +258,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkDestinationIpV6")
     public org.openapis.openapi.models.shared.IpFilter[] networkDestinationIpV6;
+
     public UpdateInsightRequestBodyFilters withNetworkDestinationIpV6(org.openapis.openapi.models.shared.IpFilter[] networkDestinationIpV6) {
         this.networkDestinationIpV6 = networkDestinationIpV6;
         return this;
@@ -239,6 +267,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkDestinationPort")
     public org.openapis.openapi.models.shared.NumberFilter[] networkDestinationPort;
+
     public UpdateInsightRequestBodyFilters withNetworkDestinationPort(org.openapis.openapi.models.shared.NumberFilter[] networkDestinationPort) {
         this.networkDestinationPort = networkDestinationPort;
         return this;
@@ -247,6 +276,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkDirection")
     public org.openapis.openapi.models.shared.StringFilter[] networkDirection;
+
     public UpdateInsightRequestBodyFilters withNetworkDirection(org.openapis.openapi.models.shared.StringFilter[] networkDirection) {
         this.networkDirection = networkDirection;
         return this;
@@ -255,6 +285,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkProtocol")
     public org.openapis.openapi.models.shared.StringFilter[] networkProtocol;
+
     public UpdateInsightRequestBodyFilters withNetworkProtocol(org.openapis.openapi.models.shared.StringFilter[] networkProtocol) {
         this.networkProtocol = networkProtocol;
         return this;
@@ -263,6 +294,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkSourceDomain")
     public org.openapis.openapi.models.shared.StringFilter[] networkSourceDomain;
+
     public UpdateInsightRequestBodyFilters withNetworkSourceDomain(org.openapis.openapi.models.shared.StringFilter[] networkSourceDomain) {
         this.networkSourceDomain = networkSourceDomain;
         return this;
@@ -271,6 +303,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkSourceIpV4")
     public org.openapis.openapi.models.shared.IpFilter[] networkSourceIpV4;
+
     public UpdateInsightRequestBodyFilters withNetworkSourceIpV4(org.openapis.openapi.models.shared.IpFilter[] networkSourceIpV4) {
         this.networkSourceIpV4 = networkSourceIpV4;
         return this;
@@ -279,6 +312,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkSourceIpV6")
     public org.openapis.openapi.models.shared.IpFilter[] networkSourceIpV6;
+
     public UpdateInsightRequestBodyFilters withNetworkSourceIpV6(org.openapis.openapi.models.shared.IpFilter[] networkSourceIpV6) {
         this.networkSourceIpV6 = networkSourceIpV6;
         return this;
@@ -287,6 +321,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkSourceMac")
     public org.openapis.openapi.models.shared.StringFilter[] networkSourceMac;
+
     public UpdateInsightRequestBodyFilters withNetworkSourceMac(org.openapis.openapi.models.shared.StringFilter[] networkSourceMac) {
         this.networkSourceMac = networkSourceMac;
         return this;
@@ -295,6 +330,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkSourcePort")
     public org.openapis.openapi.models.shared.NumberFilter[] networkSourcePort;
+
     public UpdateInsightRequestBodyFilters withNetworkSourcePort(org.openapis.openapi.models.shared.NumberFilter[] networkSourcePort) {
         this.networkSourcePort = networkSourcePort;
         return this;
@@ -303,6 +339,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoteText")
     public org.openapis.openapi.models.shared.StringFilter[] noteText;
+
     public UpdateInsightRequestBodyFilters withNoteText(org.openapis.openapi.models.shared.StringFilter[] noteText) {
         this.noteText = noteText;
         return this;
@@ -311,6 +348,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoteUpdatedAt")
     public org.openapis.openapi.models.shared.DateFilter[] noteUpdatedAt;
+
     public UpdateInsightRequestBodyFilters withNoteUpdatedAt(org.openapis.openapi.models.shared.DateFilter[] noteUpdatedAt) {
         this.noteUpdatedAt = noteUpdatedAt;
         return this;
@@ -319,6 +357,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoteUpdatedBy")
     public org.openapis.openapi.models.shared.StringFilter[] noteUpdatedBy;
+
     public UpdateInsightRequestBodyFilters withNoteUpdatedBy(org.openapis.openapi.models.shared.StringFilter[] noteUpdatedBy) {
         this.noteUpdatedBy = noteUpdatedBy;
         return this;
@@ -327,6 +366,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessLaunchedAt")
     public org.openapis.openapi.models.shared.DateFilter[] processLaunchedAt;
+
     public UpdateInsightRequestBodyFilters withProcessLaunchedAt(org.openapis.openapi.models.shared.DateFilter[] processLaunchedAt) {
         this.processLaunchedAt = processLaunchedAt;
         return this;
@@ -335,6 +375,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessName")
     public org.openapis.openapi.models.shared.StringFilter[] processName;
+
     public UpdateInsightRequestBodyFilters withProcessName(org.openapis.openapi.models.shared.StringFilter[] processName) {
         this.processName = processName;
         return this;
@@ -343,6 +384,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessParentPid")
     public org.openapis.openapi.models.shared.NumberFilter[] processParentPid;
+
     public UpdateInsightRequestBodyFilters withProcessParentPid(org.openapis.openapi.models.shared.NumberFilter[] processParentPid) {
         this.processParentPid = processParentPid;
         return this;
@@ -351,6 +393,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessPath")
     public org.openapis.openapi.models.shared.StringFilter[] processPath;
+
     public UpdateInsightRequestBodyFilters withProcessPath(org.openapis.openapi.models.shared.StringFilter[] processPath) {
         this.processPath = processPath;
         return this;
@@ -359,6 +402,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessPid")
     public org.openapis.openapi.models.shared.NumberFilter[] processPid;
+
     public UpdateInsightRequestBodyFilters withProcessPid(org.openapis.openapi.models.shared.NumberFilter[] processPid) {
         this.processPid = processPid;
         return this;
@@ -367,6 +411,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessTerminatedAt")
     public org.openapis.openapi.models.shared.DateFilter[] processTerminatedAt;
+
     public UpdateInsightRequestBodyFilters withProcessTerminatedAt(org.openapis.openapi.models.shared.DateFilter[] processTerminatedAt) {
         this.processTerminatedAt = processTerminatedAt;
         return this;
@@ -375,6 +420,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductArn")
     public org.openapis.openapi.models.shared.StringFilter[] productArn;
+
     public UpdateInsightRequestBodyFilters withProductArn(org.openapis.openapi.models.shared.StringFilter[] productArn) {
         this.productArn = productArn;
         return this;
@@ -383,6 +429,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductFields")
     public org.openapis.openapi.models.shared.MapFilter[] productFields;
+
     public UpdateInsightRequestBodyFilters withProductFields(org.openapis.openapi.models.shared.MapFilter[] productFields) {
         this.productFields = productFields;
         return this;
@@ -391,6 +438,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public org.openapis.openapi.models.shared.StringFilter[] productName;
+
     public UpdateInsightRequestBodyFilters withProductName(org.openapis.openapi.models.shared.StringFilter[] productName) {
         this.productName = productName;
         return this;
@@ -399,6 +447,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationText")
     public org.openapis.openapi.models.shared.StringFilter[] recommendationText;
+
     public UpdateInsightRequestBodyFilters withRecommendationText(org.openapis.openapi.models.shared.StringFilter[] recommendationText) {
         this.recommendationText = recommendationText;
         return this;
@@ -407,6 +456,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordState")
     public org.openapis.openapi.models.shared.StringFilter[] recordState;
+
     public UpdateInsightRequestBodyFilters withRecordState(org.openapis.openapi.models.shared.StringFilter[] recordState) {
         this.recordState = recordState;
         return this;
@@ -415,6 +465,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public org.openapis.openapi.models.shared.StringFilter[] region;
+
     public UpdateInsightRequestBodyFilters withRegion(org.openapis.openapi.models.shared.StringFilter[] region) {
         this.region = region;
         return this;
@@ -423,6 +474,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedFindingsId")
     public org.openapis.openapi.models.shared.StringFilter[] relatedFindingsId;
+
     public UpdateInsightRequestBodyFilters withRelatedFindingsId(org.openapis.openapi.models.shared.StringFilter[] relatedFindingsId) {
         this.relatedFindingsId = relatedFindingsId;
         return this;
@@ -431,6 +483,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedFindingsProductArn")
     public org.openapis.openapi.models.shared.StringFilter[] relatedFindingsProductArn;
+
     public UpdateInsightRequestBodyFilters withRelatedFindingsProductArn(org.openapis.openapi.models.shared.StringFilter[] relatedFindingsProductArn) {
         this.relatedFindingsProductArn = relatedFindingsProductArn;
         return this;
@@ -439,6 +492,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceIamInstanceProfileArn")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceIamInstanceProfileArn;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceIamInstanceProfileArn(org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceIamInstanceProfileArn) {
         this.resourceAwsEc2InstanceIamInstanceProfileArn = resourceAwsEc2InstanceIamInstanceProfileArn;
         return this;
@@ -447,6 +501,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceImageId")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceImageId;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceImageId(org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceImageId) {
         this.resourceAwsEc2InstanceImageId = resourceAwsEc2InstanceImageId;
         return this;
@@ -455,6 +510,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceIpV4Addresses")
     public org.openapis.openapi.models.shared.IpFilter[] resourceAwsEc2InstanceIpV4Addresses;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceIpV4Addresses(org.openapis.openapi.models.shared.IpFilter[] resourceAwsEc2InstanceIpV4Addresses) {
         this.resourceAwsEc2InstanceIpV4Addresses = resourceAwsEc2InstanceIpV4Addresses;
         return this;
@@ -463,6 +519,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceIpV6Addresses")
     public org.openapis.openapi.models.shared.IpFilter[] resourceAwsEc2InstanceIpV6Addresses;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceIpV6Addresses(org.openapis.openapi.models.shared.IpFilter[] resourceAwsEc2InstanceIpV6Addresses) {
         this.resourceAwsEc2InstanceIpV6Addresses = resourceAwsEc2InstanceIpV6Addresses;
         return this;
@@ -471,6 +528,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceKeyName")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceKeyName;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceKeyName(org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceKeyName) {
         this.resourceAwsEc2InstanceKeyName = resourceAwsEc2InstanceKeyName;
         return this;
@@ -479,6 +537,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceLaunchedAt")
     public org.openapis.openapi.models.shared.DateFilter[] resourceAwsEc2InstanceLaunchedAt;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceLaunchedAt(org.openapis.openapi.models.shared.DateFilter[] resourceAwsEc2InstanceLaunchedAt) {
         this.resourceAwsEc2InstanceLaunchedAt = resourceAwsEc2InstanceLaunchedAt;
         return this;
@@ -487,6 +546,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceSubnetId")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceSubnetId;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceSubnetId(org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceSubnetId) {
         this.resourceAwsEc2InstanceSubnetId = resourceAwsEc2InstanceSubnetId;
         return this;
@@ -495,6 +555,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceType")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceType;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceType(org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceType) {
         this.resourceAwsEc2InstanceType = resourceAwsEc2InstanceType;
         return this;
@@ -503,6 +564,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsEc2InstanceVpcId")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceVpcId;
+
     public UpdateInsightRequestBodyFilters withResourceAwsEc2InstanceVpcId(org.openapis.openapi.models.shared.StringFilter[] resourceAwsEc2InstanceVpcId) {
         this.resourceAwsEc2InstanceVpcId = resourceAwsEc2InstanceVpcId;
         return this;
@@ -511,6 +573,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsIamAccessKeyCreatedAt")
     public org.openapis.openapi.models.shared.DateFilter[] resourceAwsIamAccessKeyCreatedAt;
+
     public UpdateInsightRequestBodyFilters withResourceAwsIamAccessKeyCreatedAt(org.openapis.openapi.models.shared.DateFilter[] resourceAwsIamAccessKeyCreatedAt) {
         this.resourceAwsIamAccessKeyCreatedAt = resourceAwsIamAccessKeyCreatedAt;
         return this;
@@ -519,6 +582,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsIamAccessKeyPrincipalName")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsIamAccessKeyPrincipalName;
+
     public UpdateInsightRequestBodyFilters withResourceAwsIamAccessKeyPrincipalName(org.openapis.openapi.models.shared.StringFilter[] resourceAwsIamAccessKeyPrincipalName) {
         this.resourceAwsIamAccessKeyPrincipalName = resourceAwsIamAccessKeyPrincipalName;
         return this;
@@ -527,6 +591,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsIamAccessKeyStatus")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsIamAccessKeyStatus;
+
     public UpdateInsightRequestBodyFilters withResourceAwsIamAccessKeyStatus(org.openapis.openapi.models.shared.StringFilter[] resourceAwsIamAccessKeyStatus) {
         this.resourceAwsIamAccessKeyStatus = resourceAwsIamAccessKeyStatus;
         return this;
@@ -535,6 +600,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsIamAccessKeyUserName")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsIamAccessKeyUserName;
+
     public UpdateInsightRequestBodyFilters withResourceAwsIamAccessKeyUserName(org.openapis.openapi.models.shared.StringFilter[] resourceAwsIamAccessKeyUserName) {
         this.resourceAwsIamAccessKeyUserName = resourceAwsIamAccessKeyUserName;
         return this;
@@ -543,6 +609,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsIamUserUserName")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsIamUserUserName;
+
     public UpdateInsightRequestBodyFilters withResourceAwsIamUserUserName(org.openapis.openapi.models.shared.StringFilter[] resourceAwsIamUserUserName) {
         this.resourceAwsIamUserUserName = resourceAwsIamUserUserName;
         return this;
@@ -551,6 +618,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsS3BucketOwnerId")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsS3BucketOwnerId;
+
     public UpdateInsightRequestBodyFilters withResourceAwsS3BucketOwnerId(org.openapis.openapi.models.shared.StringFilter[] resourceAwsS3BucketOwnerId) {
         this.resourceAwsS3BucketOwnerId = resourceAwsS3BucketOwnerId;
         return this;
@@ -559,6 +627,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAwsS3BucketOwnerName")
     public org.openapis.openapi.models.shared.StringFilter[] resourceAwsS3BucketOwnerName;
+
     public UpdateInsightRequestBodyFilters withResourceAwsS3BucketOwnerName(org.openapis.openapi.models.shared.StringFilter[] resourceAwsS3BucketOwnerName) {
         this.resourceAwsS3BucketOwnerName = resourceAwsS3BucketOwnerName;
         return this;
@@ -567,6 +636,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceContainerImageId")
     public org.openapis.openapi.models.shared.StringFilter[] resourceContainerImageId;
+
     public UpdateInsightRequestBodyFilters withResourceContainerImageId(org.openapis.openapi.models.shared.StringFilter[] resourceContainerImageId) {
         this.resourceContainerImageId = resourceContainerImageId;
         return this;
@@ -575,6 +645,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceContainerImageName")
     public org.openapis.openapi.models.shared.StringFilter[] resourceContainerImageName;
+
     public UpdateInsightRequestBodyFilters withResourceContainerImageName(org.openapis.openapi.models.shared.StringFilter[] resourceContainerImageName) {
         this.resourceContainerImageName = resourceContainerImageName;
         return this;
@@ -583,6 +654,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceContainerLaunchedAt")
     public org.openapis.openapi.models.shared.DateFilter[] resourceContainerLaunchedAt;
+
     public UpdateInsightRequestBodyFilters withResourceContainerLaunchedAt(org.openapis.openapi.models.shared.DateFilter[] resourceContainerLaunchedAt) {
         this.resourceContainerLaunchedAt = resourceContainerLaunchedAt;
         return this;
@@ -591,6 +663,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceContainerName")
     public org.openapis.openapi.models.shared.StringFilter[] resourceContainerName;
+
     public UpdateInsightRequestBodyFilters withResourceContainerName(org.openapis.openapi.models.shared.StringFilter[] resourceContainerName) {
         this.resourceContainerName = resourceContainerName;
         return this;
@@ -599,6 +672,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDetailsOther")
     public org.openapis.openapi.models.shared.MapFilter[] resourceDetailsOther;
+
     public UpdateInsightRequestBodyFilters withResourceDetailsOther(org.openapis.openapi.models.shared.MapFilter[] resourceDetailsOther) {
         this.resourceDetailsOther = resourceDetailsOther;
         return this;
@@ -607,6 +681,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public org.openapis.openapi.models.shared.StringFilter[] resourceId;
+
     public UpdateInsightRequestBodyFilters withResourceId(org.openapis.openapi.models.shared.StringFilter[] resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -615,6 +690,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcePartition")
     public org.openapis.openapi.models.shared.StringFilter[] resourcePartition;
+
     public UpdateInsightRequestBodyFilters withResourcePartition(org.openapis.openapi.models.shared.StringFilter[] resourcePartition) {
         this.resourcePartition = resourcePartition;
         return this;
@@ -623,6 +699,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRegion")
     public org.openapis.openapi.models.shared.StringFilter[] resourceRegion;
+
     public UpdateInsightRequestBodyFilters withResourceRegion(org.openapis.openapi.models.shared.StringFilter[] resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
@@ -631,6 +708,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public org.openapis.openapi.models.shared.MapFilter[] resourceTags;
+
     public UpdateInsightRequestBodyFilters withResourceTags(org.openapis.openapi.models.shared.MapFilter[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -639,6 +717,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public org.openapis.openapi.models.shared.StringFilter[] resourceType;
+
     public UpdateInsightRequestBodyFilters withResourceType(org.openapis.openapi.models.shared.StringFilter[] resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -647,6 +726,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sample")
     public org.openapis.openapi.models.shared.BooleanFilter[] sample;
+
     public UpdateInsightRequestBodyFilters withSample(org.openapis.openapi.models.shared.BooleanFilter[] sample) {
         this.sample = sample;
         return this;
@@ -655,6 +735,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeverityLabel")
     public org.openapis.openapi.models.shared.StringFilter[] severityLabel;
+
     public UpdateInsightRequestBodyFilters withSeverityLabel(org.openapis.openapi.models.shared.StringFilter[] severityLabel) {
         this.severityLabel = severityLabel;
         return this;
@@ -663,6 +744,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeverityNormalized")
     public org.openapis.openapi.models.shared.NumberFilter[] severityNormalized;
+
     public UpdateInsightRequestBodyFilters withSeverityNormalized(org.openapis.openapi.models.shared.NumberFilter[] severityNormalized) {
         this.severityNormalized = severityNormalized;
         return this;
@@ -671,6 +753,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeverityProduct")
     public org.openapis.openapi.models.shared.NumberFilter[] severityProduct;
+
     public UpdateInsightRequestBodyFilters withSeverityProduct(org.openapis.openapi.models.shared.NumberFilter[] severityProduct) {
         this.severityProduct = severityProduct;
         return this;
@@ -679,6 +762,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceUrl")
     public org.openapis.openapi.models.shared.StringFilter[] sourceUrl;
+
     public UpdateInsightRequestBodyFilters withSourceUrl(org.openapis.openapi.models.shared.StringFilter[] sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
@@ -687,6 +771,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreatIntelIndicatorCategory")
     public org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorCategory;
+
     public UpdateInsightRequestBodyFilters withThreatIntelIndicatorCategory(org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorCategory) {
         this.threatIntelIndicatorCategory = threatIntelIndicatorCategory;
         return this;
@@ -695,6 +780,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreatIntelIndicatorLastObservedAt")
     public org.openapis.openapi.models.shared.DateFilter[] threatIntelIndicatorLastObservedAt;
+
     public UpdateInsightRequestBodyFilters withThreatIntelIndicatorLastObservedAt(org.openapis.openapi.models.shared.DateFilter[] threatIntelIndicatorLastObservedAt) {
         this.threatIntelIndicatorLastObservedAt = threatIntelIndicatorLastObservedAt;
         return this;
@@ -703,6 +789,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreatIntelIndicatorSource")
     public org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorSource;
+
     public UpdateInsightRequestBodyFilters withThreatIntelIndicatorSource(org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorSource) {
         this.threatIntelIndicatorSource = threatIntelIndicatorSource;
         return this;
@@ -711,6 +798,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreatIntelIndicatorSourceUrl")
     public org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorSourceUrl;
+
     public UpdateInsightRequestBodyFilters withThreatIntelIndicatorSourceUrl(org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorSourceUrl) {
         this.threatIntelIndicatorSourceUrl = threatIntelIndicatorSourceUrl;
         return this;
@@ -719,6 +807,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreatIntelIndicatorType")
     public org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorType;
+
     public UpdateInsightRequestBodyFilters withThreatIntelIndicatorType(org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorType) {
         this.threatIntelIndicatorType = threatIntelIndicatorType;
         return this;
@@ -727,6 +816,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreatIntelIndicatorValue")
     public org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorValue;
+
     public UpdateInsightRequestBodyFilters withThreatIntelIndicatorValue(org.openapis.openapi.models.shared.StringFilter[] threatIntelIndicatorValue) {
         this.threatIntelIndicatorValue = threatIntelIndicatorValue;
         return this;
@@ -735,6 +825,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public org.openapis.openapi.models.shared.StringFilter[] title;
+
     public UpdateInsightRequestBodyFilters withTitle(org.openapis.openapi.models.shared.StringFilter[] title) {
         this.title = title;
         return this;
@@ -743,6 +834,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public org.openapis.openapi.models.shared.StringFilter[] type;
+
     public UpdateInsightRequestBodyFilters withType(org.openapis.openapi.models.shared.StringFilter[] type) {
         this.type = type;
         return this;
@@ -751,6 +843,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedAt")
     public org.openapis.openapi.models.shared.DateFilter[] updatedAt;
+
     public UpdateInsightRequestBodyFilters withUpdatedAt(org.openapis.openapi.models.shared.DateFilter[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -759,6 +852,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserDefinedFields")
     public org.openapis.openapi.models.shared.MapFilter[] userDefinedFields;
+
     public UpdateInsightRequestBodyFilters withUserDefinedFields(org.openapis.openapi.models.shared.MapFilter[] userDefinedFields) {
         this.userDefinedFields = userDefinedFields;
         return this;
@@ -767,6 +861,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerificationState")
     public org.openapis.openapi.models.shared.StringFilter[] verificationState;
+
     public UpdateInsightRequestBodyFilters withVerificationState(org.openapis.openapi.models.shared.StringFilter[] verificationState) {
         this.verificationState = verificationState;
         return this;
@@ -775,6 +870,7 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowState")
     public org.openapis.openapi.models.shared.StringFilter[] workflowState;
+
     public UpdateInsightRequestBodyFilters withWorkflowState(org.openapis.openapi.models.shared.StringFilter[] workflowState) {
         this.workflowState = workflowState;
         return this;
@@ -783,9 +879,11 @@ public class UpdateInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowStatus")
     public org.openapis.openapi.models.shared.StringFilter[] workflowStatus;
+
     public UpdateInsightRequestBodyFilters withWorkflowStatus(org.openapis.openapi.models.shared.StringFilter[] workflowStatus) {
         this.workflowStatus = workflowStatus;
         return this;
     }
     
+    public UpdateInsightRequestBodyFilters(){}
 }

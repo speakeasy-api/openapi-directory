@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeClientVpnAuthorizationRulesRequest {
     
     public String clientVpnEndpointId;
+
     public DescribeClientVpnAuthorizationRulesRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -16,6 +17,7 @@ public class DescribeClientVpnAuthorizationRulesRequest {
     
     
     public Boolean dryRun;
+
     public DescribeClientVpnAuthorizationRulesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeClientVpnAuthorizationRulesRequest {
     
     
     public DescribeClientVpnAuthorizationRulesRequestFilters[] filters;
+
     public DescribeClientVpnAuthorizationRulesRequest withFilters(DescribeClientVpnAuthorizationRulesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeClientVpnAuthorizationRulesRequest {
     
     
     public Long maxResults;
+
     public DescribeClientVpnAuthorizationRulesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,13 @@ public class DescribeClientVpnAuthorizationRulesRequest {
     
     
     public String nextToken;
+
     public DescribeClientVpnAuthorizationRulesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeClientVpnAuthorizationRulesRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+  }
 }

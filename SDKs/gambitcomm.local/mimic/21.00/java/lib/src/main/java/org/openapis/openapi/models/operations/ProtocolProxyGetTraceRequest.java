@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolProxyGetTraceRequest {
@@ -12,9 +13,13 @@ public class ProtocolProxyGetTraceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolProxyGetTraceRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public ProtocolProxyGetTraceRequest(@JsonProperty("agentNum") Integer agentNum) {
+        this.agentNum = agentNum;
+  }
 }

@@ -15,6 +15,7 @@ public class ItemPriority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeMetadata")
     public String changeMetadata;
+
     public ItemPriority withChangeMetadata(String changeMetadata) {
         this.changeMetadata = changeMetadata;
         return this;
@@ -26,6 +27,7 @@ public class ItemPriority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public ItemPriority withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -37,9 +39,11 @@ public class ItemPriority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorityListingPayload")
     public String priorityListingPayload;
+
     public ItemPriority withPriorityListingPayload(String priorityListingPayload) {
         this.priorityListingPayload = priorityListingPayload;
         return this;
     }
     
+    public ItemPriority(){}
 }

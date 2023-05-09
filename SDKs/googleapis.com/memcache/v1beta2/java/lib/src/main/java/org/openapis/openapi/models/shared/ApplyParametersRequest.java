@@ -18,6 +18,7 @@ public class ApplyParametersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyAll")
     public Boolean applyAll;
+
     public ApplyParametersRequest withApplyAll(Boolean applyAll) {
         this.applyAll = applyAll;
         return this;
@@ -29,9 +30,11 @@ public class ApplyParametersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeIds")
     public String[] nodeIds;
+
     public ApplyParametersRequest withNodeIds(String[] nodeIds) {
         this.nodeIds = nodeIds;
         return this;
     }
     
+    public ApplyParametersRequest(){}
 }

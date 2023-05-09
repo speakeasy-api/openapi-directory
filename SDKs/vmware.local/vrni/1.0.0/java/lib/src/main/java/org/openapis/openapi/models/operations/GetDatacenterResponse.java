@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDatacenterResponse {
@@ -12,6 +13,7 @@ public class GetDatacenterResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetDatacenterResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class GetDatacenterResponse {
     
     
     public String contentType;
+
     public GetDatacenterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetDatacenterResponse {
     
     
     public Integer statusCode;
+
     public GetDatacenterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetDatacenterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDatacenterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetDatacenterResponse {
      */
     
     public org.openapis.openapi.models.shared.VCDatacenter vcDatacenter;
+
     public GetDatacenterResponse withVCDatacenter(org.openapis.openapi.models.shared.VCDatacenter vcDatacenter) {
         this.vcDatacenter = vcDatacenter;
         return this;
     }
     
+    public GetDatacenterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

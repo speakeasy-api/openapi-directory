@@ -18,6 +18,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicate")
     public Duplicate duplicate;
+
     public Metadata withDuplicate(Duplicate duplicate) {
         this.duplicate = duplicate;
         return this;
@@ -29,6 +30,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapsUrl")
     public String mapsUrl;
+
     public Metadata withMapsUrl(String mapsUrl) {
         this.mapsUrl = mapsUrl;
         return this;
@@ -40,9 +42,11 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newReviewUrl")
     public String newReviewUrl;
+
     public Metadata withNewReviewUrl(String newReviewUrl) {
         this.newReviewUrl = newReviewUrl;
         return this;
     }
     
+    public Metadata(){}
 }

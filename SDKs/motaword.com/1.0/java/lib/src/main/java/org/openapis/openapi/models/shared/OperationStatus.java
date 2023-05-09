@@ -15,9 +15,11 @@ public class OperationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OperationStatusEnumEnum status;
+
     public OperationStatus withStatus(OperationStatusEnumEnum status) {
         this.status = status;
         return this;
     }
     
+    public OperationStatus(){}
 }

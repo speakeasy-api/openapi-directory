@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2Tenant = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2InboundSamlConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2ListInboundSamlConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2ListTenantsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2OAuthIdpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2OAuthIdpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitAdminV2OAuthIdpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +694,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             googleIamV1TestIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

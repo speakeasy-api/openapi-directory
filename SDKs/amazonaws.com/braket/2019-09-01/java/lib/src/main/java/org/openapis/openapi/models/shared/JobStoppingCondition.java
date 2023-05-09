@@ -15,9 +15,11 @@ public class JobStoppingCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRuntimeInSeconds")
     public Long maxRuntimeInSeconds;
+
     public JobStoppingCondition withMaxRuntimeInSeconds(Long maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
         return this;
     }
     
+    public JobStoppingCondition(){}
 }

@@ -51,14 +51,12 @@ public class OAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OAuthAuthorizeResponse res = new org.openapis.openapi.models.operations.OAuthAuthorizeResponse() {{
+        org.openapis.openapi.models.operations.OAuthAuthorizeResponse res = new org.openapis.openapi.models.operations.OAuthAuthorizeResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,14 +103,12 @@ public class OAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiOauthAuthorizeResponse res = new org.openapis.openapi.models.operations.PostApiOauthAuthorizeResponse() {{
+        org.openapis.openapi.models.operations.PostApiOauthAuthorizeResponse res = new org.openapis.openapi.models.operations.PostApiOauthAuthorizeResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

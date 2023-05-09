@@ -15,6 +15,7 @@ public class UpdateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateWorkflowRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkflowRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateWorkflowRequestBody(){}
 }

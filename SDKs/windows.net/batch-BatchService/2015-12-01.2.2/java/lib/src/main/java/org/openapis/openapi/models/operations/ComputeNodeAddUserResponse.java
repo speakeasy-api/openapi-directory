@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNodeAddUserResponse {
@@ -12,6 +13,7 @@ public class ComputeNodeAddUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public ComputeNodeAddUserResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNodeAddUserResponse {
     
     
     public String contentType;
+
     public ComputeNodeAddUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNodeAddUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ComputeNodeAddUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class ComputeNodeAddUserResponse {
     
     
     public Integer statusCode;
+
     public ComputeNodeAddUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class ComputeNodeAddUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNodeAddUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNodeAddUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

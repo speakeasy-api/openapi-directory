@@ -15,6 +15,7 @@ public class RepositoryTriggerExecutionFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureMessage")
     public String failureMessage;
+
     public RepositoryTriggerExecutionFailure withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -23,9 +24,11 @@ public class RepositoryTriggerExecutionFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public String trigger;
+
     public RepositoryTriggerExecutionFailure withTrigger(String trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public RepositoryTriggerExecutionFailure(){}
 }

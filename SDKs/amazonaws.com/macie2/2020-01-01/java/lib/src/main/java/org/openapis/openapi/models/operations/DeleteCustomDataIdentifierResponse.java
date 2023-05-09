@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomDataIdentifierResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomDataIdentifierResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteCustomDataIdentifierResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCustomDataIdentifierResponse {
      */
     
     public Object conflictException;
+
     public DeleteCustomDataIdentifierResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomDataIdentifierResponse {
     
     
     public String contentType;
+
     public DeleteCustomDataIdentifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomDataIdentifierResponse {
      */
     
     public java.util.Map<String, Object> deleteCustomDataIdentifierResponse;
+
     public DeleteCustomDataIdentifierResponse withDeleteCustomDataIdentifierResponse(java.util.Map<String, Object> deleteCustomDataIdentifierResponse) {
         this.deleteCustomDataIdentifierResponse = deleteCustomDataIdentifierResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomDataIdentifierResponse {
      */
     
     public Object internalServerException;
+
     public DeleteCustomDataIdentifierResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCustomDataIdentifierResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteCustomDataIdentifierResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteCustomDataIdentifierResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteCustomDataIdentifierResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteCustomDataIdentifierResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomDataIdentifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteCustomDataIdentifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomDataIdentifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteCustomDataIdentifierResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCustomDataIdentifierResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteCustomDataIdentifierResponse {
      */
     
     public Object validationException;
+
     public DeleteCustomDataIdentifierResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteCustomDataIdentifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

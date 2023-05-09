@@ -18,6 +18,7 @@ public class HttpBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public HttpBody withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +30,7 @@ public class HttpBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public HttpBody withData(String data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class HttpBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extensions")
     public java.util.Map<String, Object>[] extensions;
+
     public HttpBody withExtensions(java.util.Map<String, Object>[] extensions) {
         this.extensions = extensions;
         return this;
     }
     
+    public HttpBody(){}
 }

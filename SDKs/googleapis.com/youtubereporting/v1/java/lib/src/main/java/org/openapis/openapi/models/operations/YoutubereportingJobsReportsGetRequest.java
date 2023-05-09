@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubereportingJobsReportsGetRequest {
@@ -12,6 +13,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubereportingJobsReportsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubereportingJobsReportsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubereportingJobsReportsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubereportingJobsReportsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubereportingJobsReportsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public YoutubereportingJobsReportsGetRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -72,6 +79,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubereportingJobsReportsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubereportingJobsReportsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubereportingJobsReportsGetRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -102,6 +112,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubereportingJobsReportsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubereportingJobsReportsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public String reportId;
+
     public YoutubereportingJobsReportsGetRequest withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -132,6 +145,7 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubereportingJobsReportsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,14 @@ public class YoutubereportingJobsReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubereportingJobsReportsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubereportingJobsReportsGetRequest(@JsonProperty("jobId") String jobId, @JsonProperty("reportId") String reportId) {
+        this.jobId = jobId;
+        this.reportId = reportId;
+  }
 }

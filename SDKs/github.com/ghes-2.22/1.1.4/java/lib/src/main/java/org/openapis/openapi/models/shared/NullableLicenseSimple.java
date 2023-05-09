@@ -15,6 +15,7 @@ public class NullableLicenseSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public NullableLicenseSimple withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -22,6 +23,7 @@ public class NullableLicenseSimple {
     
     @JsonProperty("key")
     public String key;
+
     public NullableLicenseSimple withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +31,7 @@ public class NullableLicenseSimple {
     
     @JsonProperty("name")
     public String name;
+
     public NullableLicenseSimple withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class NullableLicenseSimple {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public NullableLicenseSimple withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -43,6 +47,7 @@ public class NullableLicenseSimple {
     
     @JsonProperty("spdx_id")
     public String spdxId;
+
     public NullableLicenseSimple withSpdxId(String spdxId) {
         this.spdxId = spdxId;
         return this;
@@ -50,9 +55,17 @@ public class NullableLicenseSimple {
     
     @JsonProperty("url")
     public String url;
+
     public NullableLicenseSimple withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NullableLicenseSimple(@JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("spdx_id") String spdxId, @JsonProperty("url") String url) {
+        this.key = key;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.spdxId = spdxId;
+        this.url = url;
+  }
 }

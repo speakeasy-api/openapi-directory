@@ -18,6 +18,7 @@ public class MetricsScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public MetricsScope withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class MetricsScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoredProjects")
     public MonitoredProject[] monitoredProjects;
+
     public MetricsScope withMonitoredProjects(MonitoredProject[] monitoredProjects) {
         this.monitoredProjects = monitoredProjects;
         return this;
@@ -40,6 +42,7 @@ public class MetricsScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetricsScope withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class MetricsScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public MetricsScope withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public MetricsScope(){}
 }

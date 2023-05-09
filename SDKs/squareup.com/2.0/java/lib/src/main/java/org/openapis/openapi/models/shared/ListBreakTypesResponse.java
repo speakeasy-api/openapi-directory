@@ -20,6 +20,7 @@ public class ListBreakTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("break_types")
     public BreakType[] breakTypes;
+
     public ListBreakTypesResponse withBreakTypes(BreakType[] breakTypes) {
         this.breakTypes = breakTypes;
         return this;
@@ -32,6 +33,7 @@ public class ListBreakTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListBreakTypesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -43,9 +45,11 @@ public class ListBreakTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListBreakTypesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ListBreakTypesResponse(){}
 }

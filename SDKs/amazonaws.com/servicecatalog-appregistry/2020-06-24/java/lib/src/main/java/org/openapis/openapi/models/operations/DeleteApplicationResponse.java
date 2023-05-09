@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApplicationResponse {
     
     public String contentType;
+
     public DeleteApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteApplicationResponse deleteApplicationResponse;
+
     public DeleteApplicationResponse withDeleteApplicationResponse(org.openapis.openapi.models.shared.DeleteApplicationResponse deleteApplicationResponse) {
         this.deleteApplicationResponse = deleteApplicationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApplicationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteApplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteApplicationResponse {
     
     
     public Integer statusCode;
+
     public DeleteApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteApplicationResponse {
      */
     
     public Object validationException;
+
     public DeleteApplicationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class SasPortalGetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public SasPortalGetPolicyRequest withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public SasPortalGetPolicyRequest(){}
 }

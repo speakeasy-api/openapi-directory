@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MessageData {
     
     public String code;
+
     public MessageData withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class MessageData {
     
     
     public String value;
+
     public MessageData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MessageData(){}
 }

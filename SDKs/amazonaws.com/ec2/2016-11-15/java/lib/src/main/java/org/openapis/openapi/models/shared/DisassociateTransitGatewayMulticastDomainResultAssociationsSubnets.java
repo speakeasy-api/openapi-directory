@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateTransitGatewayMulticastDomainResultAssociationsSubnets {
     
     public DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum state;
+
     public DisassociateTransitGatewayMulticastDomainResultAssociationsSubnets withState(DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class DisassociateTransitGatewayMulticastDomainResultAssociationsSubnets 
     
     
     public String subnetId;
+
     public DisassociateTransitGatewayMulticastDomainResultAssociationsSubnets withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public DisassociateTransitGatewayMulticastDomainResultAssociationsSubnets(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest {
@@ -12,6 +13,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
     public String wmConsumerChannelType;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withWmConsumerChannelType(String wmConsumerChannelType) {
         this.wmConsumerChannelType = wmConsumerChannelType;
         return this;
@@ -22,6 +24,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
     public String wmQosCorrelationId;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withWmQosCorrelationId(String wmQosCorrelationId) {
         this.wmQosCorrelationId = wmQosCorrelationId;
         return this;
@@ -32,6 +35,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
     public String wmSecAccessToken;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withWmSecAccessToken(String wmSecAccessToken) {
         this.wmSecAccessToken = wmSecAccessToken;
         return this;
@@ -42,6 +46,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
     public String wmSvcName;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withWmSvcName(String wmSvcName) {
         this.wmSvcName = wmSvcName;
         return this;
@@ -52,6 +57,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -62,9 +68,15 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextCursor")
     public String nextCursor;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withNextCursor(String nextCursor) {
         this.nextCursor = nextCursor;
         return this;
     }
     
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest(@JsonProperty("WM_QOS.CORRELATION_ID") String wmQosCorrelationId, @JsonProperty("WM_SEC.ACCESS_TOKEN") String wmSecAccessToken, @JsonProperty("WM_SVC.NAME") String wmSvcName) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        this.wmSecAccessToken = wmSecAccessToken;
+        this.wmSvcName = wmSvcName;
+  }
 }

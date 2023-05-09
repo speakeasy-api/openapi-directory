@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreReleasesGetRealTimeStatusByReleaseIdRequest {
@@ -12,6 +13,7 @@ public class StoreReleasesGetRealTimeStatusByReleaseIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public StoreReleasesGetRealTimeStatusByReleaseIdRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class StoreReleasesGetRealTimeStatusByReleaseIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public StoreReleasesGetRealTimeStatusByReleaseIdRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,6 +35,7 @@ public class StoreReleasesGetRealTimeStatusByReleaseIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Double releaseId;
+
     public StoreReleasesGetRealTimeStatusByReleaseIdRequest withReleaseId(Double releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -42,9 +46,16 @@ public class StoreReleasesGetRealTimeStatusByReleaseIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
     public String storeName;
+
     public StoreReleasesGetRealTimeStatusByReleaseIdRequest withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
     }
     
+    public StoreReleasesGetRealTimeStatusByReleaseIdRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") Double releaseId, @JsonProperty("store_name") String storeName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+        this.storeName = storeName;
+  }
 }

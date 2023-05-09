@@ -26,6 +26,7 @@ public class AccountTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieType")
     public AccountTokenRequestCookieTypeEnum cookieType;
+
     public AccountTokenRequest withCookieType(AccountTokenRequestCookieTypeEnum cookieType) {
         this.cookieType = cookieType;
         return this;
@@ -36,6 +37,7 @@ public class AccountTokenRequest {
      */
     @JsonProperty("email")
     public String email;
+
     public AccountTokenRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -46,6 +48,7 @@ public class AccountTokenRequest {
      */
     @JsonProperty("password")
     public String password;
+
     public AccountTokenRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -58,9 +61,15 @@ public class AccountTokenRequest {
      */
     @JsonProperty("scopes")
     public AccountTokenRequestScopesEnum[] scopes;
+
     public AccountTokenRequest withScopes(AccountTokenRequestScopesEnum[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public AccountTokenRequest(@JsonProperty("email") String email, @JsonProperty("password") String password, @JsonProperty("scopes") AccountTokenRequestScopesEnum[] scopes) {
+        this.email = email;
+        this.password = password;
+        this.scopes = scopes;
+  }
 }

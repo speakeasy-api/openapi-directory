@@ -12,6 +12,7 @@ public class GetCreditUsageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalBegin")
     public Long intervalBegin;
+
     public GetCreditUsageRequest withIntervalBegin(Long intervalBegin) {
         this.intervalBegin = intervalBegin;
         return this;
@@ -22,9 +23,11 @@ public class GetCreditUsageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalEnd")
     public Long intervalEnd;
+
     public GetCreditUsageRequest withIntervalEnd(Long intervalEnd) {
         this.intervalEnd = intervalEnd;
         return this;
     }
     
+    public GetCreditUsageRequest(){}
 }

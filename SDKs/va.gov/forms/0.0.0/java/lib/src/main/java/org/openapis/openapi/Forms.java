@@ -53,14 +53,12 @@ public class Forms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindFormByFormNameResponse res = new org.openapis.openapi.models.operations.FindFormByFormNameResponse() {{
+        org.openapis.openapi.models.operations.FindFormByFormNameResponse res = new org.openapis.openapi.models.operations.FindFormByFormNameResponse(contentType, httpRes.statusCode()) {{
             findFormByFormName200ApplicationJSONObject = null;
             findFormByFormName401ApplicationJSONObject = null;
             findFormByFormName404ApplicationJSONObject = null;
             findFormByFormName429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,13 +122,11 @@ public class Forms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindFormsResponse res = new org.openapis.openapi.models.operations.FindFormsResponse() {{
+        org.openapis.openapi.models.operations.FindFormsResponse res = new org.openapis.openapi.models.operations.FindFormsResponse(contentType, httpRes.statusCode()) {{
             findForms200ApplicationJSONObject = null;
             findForms401ApplicationJSONObject = null;
             findForms429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

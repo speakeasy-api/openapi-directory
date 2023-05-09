@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConnectInstanceConfigResponse {
@@ -12,6 +13,7 @@ public class DeleteConnectInstanceConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteConnectInstanceConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConnectInstanceConfigResponse {
     
     
     public String contentType;
+
     public DeleteConnectInstanceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConnectInstanceConfigResponse {
      */
     
     public Object internalServerException;
+
     public DeleteConnectInstanceConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConnectInstanceConfigResponse {
      */
     
     public Object invalidStateException;
+
     public DeleteConnectInstanceConfigResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteConnectInstanceConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteConnectInstanceConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteConnectInstanceConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteConnectInstanceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteConnectInstanceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConnectInstanceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteConnectInstanceConfigResponse {
      */
     
     public Object throttlingException;
+
     public DeleteConnectInstanceConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteConnectInstanceConfigResponse {
      */
     
     public Object validationException;
+
     public DeleteConnectInstanceConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteConnectInstanceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

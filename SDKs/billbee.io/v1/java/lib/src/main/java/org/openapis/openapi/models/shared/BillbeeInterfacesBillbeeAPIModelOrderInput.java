@@ -25,6 +25,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("AcceptLossOfReturnRight")
     @SpeakeasyMetadata("form:name=AcceptLossOfReturnRight")
     public Boolean acceptLossOfReturnRight;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withAcceptLossOfReturnRight(Boolean acceptLossOfReturnRight) {
         this.acceptLossOfReturnRight = acceptLossOfReturnRight;
         return this;
@@ -34,6 +35,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("AdjustmentCost")
     @SpeakeasyMetadata("form:name=AdjustmentCost")
     public Double adjustmentCost;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withAdjustmentCost(Double adjustmentCost) {
         this.adjustmentCost = adjustmentCost;
         return this;
@@ -43,6 +45,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("AdjustmentReason")
     @SpeakeasyMetadata("form:name=AdjustmentReason")
     public String adjustmentReason;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withAdjustmentReason(String adjustmentReason) {
         this.adjustmentReason = adjustmentReason;
         return this;
@@ -55,6 +58,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ApiAccountId")
     @SpeakeasyMetadata("form:name=ApiAccountId")
     public Long apiAccountId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withApiAccountId(Long apiAccountId) {
         this.apiAccountId = apiAccountId;
         return this;
@@ -67,6 +71,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ApiAccountName")
     @SpeakeasyMetadata("form:name=ApiAccountName")
     public String apiAccountName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withApiAccountName(String apiAccountName) {
         this.apiAccountName = apiAccountName;
         return this;
@@ -81,6 +86,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ArchivedAt")
     @SpeakeasyMetadata("form:name=ArchivedAt")
     public OffsetDateTime archivedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -93,6 +99,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("BillBeeOrderId")
     @SpeakeasyMetadata("form:name=BillBeeOrderId")
     public Long billBeeOrderId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withBillBeeOrderId(Long billBeeOrderId) {
         this.billBeeOrderId = billBeeOrderId;
         return this;
@@ -105,6 +112,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("BillBeeParentOrderId")
     @SpeakeasyMetadata("form:name=BillBeeParentOrderId")
     public Long billBeeParentOrderId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withBillBeeParentOrderId(Long billBeeParentOrderId) {
         this.billBeeParentOrderId = billBeeParentOrderId;
         return this;
@@ -114,6 +122,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("Buyer")
     @SpeakeasyMetadata("form:name=Buyer,json")
     public BillbeeInterfacesBillbeeAPIModelOrderUserInput buyer;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withBuyer(BillbeeInterfacesBillbeeAPIModelOrderUserInput buyer) {
         this.buyer = buyer;
         return this;
@@ -126,6 +135,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("Comments")
     @SpeakeasyMetadata("form:name=Comments,json")
     public BillbeeInterfacesBillbeeAPIModelCommentAPIModel[] comments;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withComments(BillbeeInterfacesBillbeeAPIModelCommentAPIModel[] comments) {
         this.comments = comments;
         return this;
@@ -140,6 +150,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ConfirmedAt")
     @SpeakeasyMetadata("form:name=ConfirmedAt")
     public OffsetDateTime confirmedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withConfirmedAt(OffsetDateTime confirmedAt) {
         this.confirmedAt = confirmedAt;
         return this;
@@ -154,6 +165,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("CreatedAt")
     @SpeakeasyMetadata("form:name=CreatedAt")
     public OffsetDateTime createdAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -166,6 +178,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("Currency")
     @SpeakeasyMetadata("form:name=Currency")
     public String currency;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -178,6 +191,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("CustomInvoiceNote")
     @SpeakeasyMetadata("form:name=CustomInvoiceNote")
     public String customInvoiceNote;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withCustomInvoiceNote(String customInvoiceNote) {
         this.customInvoiceNote = customInvoiceNote;
         return this;
@@ -187,6 +201,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("Customer")
     @SpeakeasyMetadata("form:name=Customer,json")
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput customer;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withCustomer(BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput customer) {
         this.customer = customer;
         return this;
@@ -199,6 +214,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("CustomerNumber")
     @SpeakeasyMetadata("form:name=CustomerNumber")
     public String customerNumber;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withCustomerNumber(String customerNumber) {
         this.customerNumber = customerNumber;
         return this;
@@ -211,6 +227,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("CustomerVatId")
     @SpeakeasyMetadata("form:name=CustomerVatId")
     public String customerVatId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withCustomerVatId(String customerVatId) {
         this.customerVatId = customerVatId;
         return this;
@@ -223,6 +240,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("DeliverySourceCountryCode")
     @SpeakeasyMetadata("form:name=DeliverySourceCountryCode")
     public String deliverySourceCountryCode;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withDeliverySourceCountryCode(String deliverySourceCountryCode) {
         this.deliverySourceCountryCode = deliverySourceCountryCode;
         return this;
@@ -235,6 +253,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("DistributionCenter")
     @SpeakeasyMetadata("form:name=DistributionCenter")
     public String distributionCenter;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withDistributionCenter(String distributionCenter) {
         this.distributionCenter = distributionCenter;
         return this;
@@ -244,6 +263,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("History")
     @SpeakeasyMetadata("form:name=History,json")
     public BillbeeInterfacesOrderHistoryEntry[] history;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withHistory(BillbeeInterfacesOrderHistoryEntry[] history) {
         this.history = history;
         return this;
@@ -256,6 +276,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public String id;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withId(String id) {
         this.id = id;
         return this;
@@ -265,6 +286,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("InvoiceAddress")
     @SpeakeasyMetadata("form:name=InvoiceAddress,json")
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel invoiceAddress;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withInvoiceAddress(BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel invoiceAddress) {
         this.invoiceAddress = invoiceAddress;
         return this;
@@ -279,6 +301,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("InvoiceDate")
     @SpeakeasyMetadata("form:name=InvoiceDate")
     public OffsetDateTime invoiceDate;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withInvoiceDate(OffsetDateTime invoiceDate) {
         this.invoiceDate = invoiceDate;
         return this;
@@ -291,6 +314,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("InvoiceNumber")
     @SpeakeasyMetadata("form:name=InvoiceNumber")
     public Integer invoiceNumber;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withInvoiceNumber(Integer invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -303,6 +327,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("InvoiceNumberPostfix")
     @SpeakeasyMetadata("form:name=InvoiceNumberPostfix")
     public String invoiceNumberPostfix;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withInvoiceNumberPostfix(String invoiceNumberPostfix) {
         this.invoiceNumberPostfix = invoiceNumberPostfix;
         return this;
@@ -315,6 +340,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("InvoiceNumberPrefix")
     @SpeakeasyMetadata("form:name=InvoiceNumberPrefix")
     public String invoiceNumberPrefix;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withInvoiceNumberPrefix(String invoiceNumberPrefix) {
         this.invoiceNumberPrefix = invoiceNumberPrefix;
         return this;
@@ -327,6 +353,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("IsCancelationFor")
     @SpeakeasyMetadata("form:name=IsCancelationFor")
     public String isCancelationFor;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withIsCancelationFor(String isCancelationFor) {
         this.isCancelationFor = isCancelationFor;
         return this;
@@ -339,6 +366,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("IsFromBillbeeApi")
     @SpeakeasyMetadata("form:name=IsFromBillbeeApi")
     public Boolean isFromBillbeeApi;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withIsFromBillbeeApi(Boolean isFromBillbeeApi) {
         this.isFromBillbeeApi = isFromBillbeeApi;
         return this;
@@ -351,6 +379,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("LanguageCode")
     @SpeakeasyMetadata("form:name=LanguageCode")
     public String languageCode;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -365,6 +394,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("LastModifiedAt")
     @SpeakeasyMetadata("form:name=LastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -377,6 +407,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("MerchantVatId")
     @SpeakeasyMetadata("form:name=MerchantVatId")
     public String merchantVatId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withMerchantVatId(String merchantVatId) {
         this.merchantVatId = merchantVatId;
         return this;
@@ -389,6 +420,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("OrderItems")
     @SpeakeasyMetadata("form:name=OrderItems,json")
     public BillbeeInterfacesBillbeeAPIModelOrderItemInput[] orderItems;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withOrderItems(BillbeeInterfacesBillbeeAPIModelOrderItemInput[] orderItems) {
         this.orderItems = orderItems;
         return this;
@@ -401,6 +433,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("OrderNumber")
     @SpeakeasyMetadata("form:name=OrderNumber")
     public String orderNumber;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -410,6 +443,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("PaidAmount")
     @SpeakeasyMetadata("form:name=PaidAmount")
     public Double paidAmount;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withPaidAmount(Double paidAmount) {
         this.paidAmount = paidAmount;
         return this;
@@ -424,6 +458,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("PayedAt")
     @SpeakeasyMetadata("form:name=PayedAt")
     public OffsetDateTime payedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withPayedAt(OffsetDateTime payedAt) {
         this.payedAt = payedAt;
         return this;
@@ -436,6 +471,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("PaymentInstruction")
     @SpeakeasyMetadata("form:name=PaymentInstruction")
     public String paymentInstruction;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withPaymentInstruction(String paymentInstruction) {
         this.paymentInstruction = paymentInstruction;
         return this;
@@ -448,6 +484,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("PaymentMethod")
     @SpeakeasyMetadata("form:name=PaymentMethod")
     public BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum paymentMethod;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withPaymentMethod(BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -460,6 +497,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("PaymentReference")
     @SpeakeasyMetadata("form:name=PaymentReference")
     public String paymentReference;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withPaymentReference(String paymentReference) {
         this.paymentReference = paymentReference;
         return this;
@@ -472,6 +510,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("PaymentTransactionId")
     @SpeakeasyMetadata("form:name=PaymentTransactionId")
     public String paymentTransactionId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withPaymentTransactionId(String paymentTransactionId) {
         this.paymentTransactionId = paymentTransactionId;
         return this;
@@ -481,6 +520,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("Payments")
     @SpeakeasyMetadata("form:name=Payments,json")
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment[] payments;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withPayments(BillbeeInterfacesBillbeeAPIModelsOrderPayment[] payments) {
         this.payments = payments;
         return this;
@@ -495,6 +535,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("RestoredAt")
     @SpeakeasyMetadata("form:name=RestoredAt")
     public OffsetDateTime restoredAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withRestoredAt(OffsetDateTime restoredAt) {
         this.restoredAt = restoredAt;
         return this;
@@ -504,6 +545,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("Seller")
     @SpeakeasyMetadata("form:name=Seller,json")
     public BillbeeInterfacesBillbeeAPIModelOrderUserInput seller;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withSeller(BillbeeInterfacesBillbeeAPIModelOrderUserInput seller) {
         this.seller = seller;
         return this;
@@ -516,6 +558,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("SellerComment")
     @SpeakeasyMetadata("form:name=SellerComment")
     public String sellerComment;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withSellerComment(String sellerComment) {
         this.sellerComment = sellerComment;
         return this;
@@ -528,6 +571,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShipWeightKg")
     @SpeakeasyMetadata("form:name=ShipWeightKg")
     public Double shipWeightKg;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShipWeightKg(Double shipWeightKg) {
         this.shipWeightKg = shipWeightKg;
         return this;
@@ -542,6 +586,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippedAt")
     @SpeakeasyMetadata("form:name=ShippedAt")
     public OffsetDateTime shippedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippedAt(OffsetDateTime shippedAt) {
         this.shippedAt = shippedAt;
         return this;
@@ -551,6 +596,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingAddress")
     @SpeakeasyMetadata("form:name=ShippingAddress,json")
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel shippingAddress;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingAddress(BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -563,6 +609,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingCost")
     @SpeakeasyMetadata("form:name=ShippingCost")
     public Double shippingCost;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingCost(Double shippingCost) {
         this.shippingCost = shippingCost;
         return this;
@@ -575,6 +622,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingIds")
     @SpeakeasyMetadata("form:name=ShippingIds,json")
     public BillbeeInterfacesBillbeeAPIModelShipment[] shippingIds;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingIds(BillbeeInterfacesBillbeeAPIModelShipment[] shippingIds) {
         this.shippingIds = shippingIds;
         return this;
@@ -587,6 +635,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingProfileId")
     @SpeakeasyMetadata("form:name=ShippingProfileId")
     public String shippingProfileId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingProfileId(String shippingProfileId) {
         this.shippingProfileId = shippingProfileId;
         return this;
@@ -599,6 +648,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingProfileName")
     @SpeakeasyMetadata("form:name=ShippingProfileName")
     public String shippingProfileName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingProfileName(String shippingProfileName) {
         this.shippingProfileName = shippingProfileName;
         return this;
@@ -611,6 +661,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingProviderId")
     @SpeakeasyMetadata("form:name=ShippingProviderId")
     public Long shippingProviderId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingProviderId(Long shippingProviderId) {
         this.shippingProviderId = shippingProviderId;
         return this;
@@ -623,6 +674,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingProviderName")
     @SpeakeasyMetadata("form:name=ShippingProviderName")
     public String shippingProviderName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingProviderName(String shippingProviderName) {
         this.shippingProviderName = shippingProviderName;
         return this;
@@ -635,6 +687,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingProviderProductId")
     @SpeakeasyMetadata("form:name=ShippingProviderProductId")
     public Long shippingProviderProductId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingProviderProductId(Long shippingProviderProductId) {
         this.shippingProviderProductId = shippingProviderProductId;
         return this;
@@ -647,6 +700,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("ShippingProviderProductName")
     @SpeakeasyMetadata("form:name=ShippingProviderProductName")
     public String shippingProviderProductName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withShippingProviderProductName(String shippingProviderProductName) {
         this.shippingProviderProductName = shippingProviderProductName;
         return this;
@@ -659,6 +713,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("State")
     @SpeakeasyMetadata("form:name=State")
     public BillbeeInterfacesBillbeeAPIModelOrderStateEnum state;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withState(BillbeeInterfacesBillbeeAPIModelOrderStateEnum state) {
         this.state = state;
         return this;
@@ -671,6 +726,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("Tags")
     @SpeakeasyMetadata("form:name=Tags")
     public String[] tags;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -683,6 +739,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("TaxRate1")
     @SpeakeasyMetadata("form:name=TaxRate1")
     public Double taxRate1;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withTaxRate1(Double taxRate1) {
         this.taxRate1 = taxRate1;
         return this;
@@ -695,6 +752,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("TaxRate2")
     @SpeakeasyMetadata("form:name=TaxRate2")
     public Double taxRate2;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withTaxRate2(Double taxRate2) {
         this.taxRate2 = taxRate2;
         return this;
@@ -707,6 +765,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("TotalCost")
     @SpeakeasyMetadata("form:name=TotalCost")
     public Double totalCost;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withTotalCost(Double totalCost) {
         this.totalCost = totalCost;
         return this;
@@ -721,6 +780,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("UpdatedAt")
     @SpeakeasyMetadata("form:name=UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -733,6 +793,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("VatId")
     @SpeakeasyMetadata("form:name=VatId")
     public String vatId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withVatId(String vatId) {
         this.vatId = vatId;
         return this;
@@ -745,9 +806,11 @@ public class BillbeeInterfacesBillbeeAPIModelOrderInput {
     @JsonProperty("VatMode")
     @SpeakeasyMetadata("form:name=VatMode")
     public BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum vatMode;
+
     public BillbeeInterfacesBillbeeAPIModelOrderInput withVatMode(BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum vatMode) {
         this.vatMode = vatMode;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelOrderInput(){}
 }

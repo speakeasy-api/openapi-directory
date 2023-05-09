@@ -15,6 +15,7 @@ public class ClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public ClusterConfiguration configuration;
+
     public ClusterRequest withConfiguration(ClusterConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -23,9 +24,11 @@ public class ClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customers")
     public ClusterCustomer[] customers;
+
     public ClusterRequest withCustomers(ClusterCustomer[] customers) {
         this.customers = customers;
         return this;
     }
     
+    public ClusterRequest(){}
 }

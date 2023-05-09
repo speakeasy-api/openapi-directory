@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1EnvironmentHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentVersion")
     public String agentVersion;
+
     public GoogleCloudDialogflowV2beta1EnvironmentHistoryEntry withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1EnvironmentHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2beta1EnvironmentHistoryEntry withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2beta1EnvironmentHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2beta1EnvironmentHistoryEntry withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1EnvironmentHistoryEntry(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalculateRouteRequest {
@@ -12,6 +13,7 @@ public class CalculateRouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CalculatorName")
     public String calculatorName;
+
     public CalculateRouteRequest withCalculatorName(String calculatorName) {
         this.calculatorName = calculatorName;
         return this;
@@ -19,6 +21,7 @@ public class CalculateRouteRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CalculateRouteRequestBody requestBody;
+
     public CalculateRouteRequest withRequestBody(CalculateRouteRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class CalculateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CalculateRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class CalculateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CalculateRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class CalculateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CalculateRouteRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class CalculateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CalculateRouteRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class CalculateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CalculateRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class CalculateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CalculateRouteRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class CalculateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CalculateRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public CalculateRouteRequest(@JsonProperty("CalculatorName") String calculatorName, @JsonProperty("RequestBody") CalculateRouteRequestBody requestBody) {
+        this.calculatorName = calculatorName;
+        this.requestBody = requestBody;
+  }
 }

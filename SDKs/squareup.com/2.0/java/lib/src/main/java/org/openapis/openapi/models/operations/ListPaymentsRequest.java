@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPaymentsRequest {
@@ -13,6 +14,7 @@ public class ListPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
     public String batchToken;
+
     public ListPaymentsRequest withBatchToken(String batchToken) {
         this.batchToken = batchToken;
         return this;
@@ -23,6 +25,7 @@ public class ListPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
     public String beginTime;
+
     public ListPaymentsRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -33,6 +36,7 @@ public class ListPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public ListPaymentsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -43,6 +47,7 @@ public class ListPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_partial")
     public Boolean includePartial;
+
     public ListPaymentsRequest withIncludePartial(Boolean includePartial) {
         this.includePartial = includePartial;
         return this;
@@ -53,6 +58,7 @@ public class ListPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListPaymentsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -63,6 +69,7 @@ public class ListPaymentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public ListPaymentsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -73,9 +80,13 @@ public class ListPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public ListPaymentsRequest withOrder(String order) {
         this.order = order;
         return this;
     }
     
+    public ListPaymentsRequest(@JsonProperty("location_id") String locationId) {
+        this.locationId = locationId;
+  }
 }

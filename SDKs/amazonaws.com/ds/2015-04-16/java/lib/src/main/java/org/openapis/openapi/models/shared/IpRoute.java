@@ -15,6 +15,7 @@ public class IpRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrIp")
     public String cidrIp;
+
     public IpRoute withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
@@ -23,9 +24,11 @@ public class IpRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public IpRoute withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public IpRoute(){}
 }

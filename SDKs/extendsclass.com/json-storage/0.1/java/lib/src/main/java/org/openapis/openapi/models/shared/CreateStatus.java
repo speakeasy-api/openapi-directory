@@ -15,6 +15,7 @@ public class CreateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateStatus withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class CreateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public CreateStatus withStatus(Long status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class CreateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public CreateStatus withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public CreateStatus(){}
 }

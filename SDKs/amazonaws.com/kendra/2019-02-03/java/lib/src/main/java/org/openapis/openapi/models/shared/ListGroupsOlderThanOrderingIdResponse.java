@@ -15,6 +15,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupsSummaries")
     public GroupSummary[] groupsSummaries;
+
     public ListGroupsOlderThanOrderingIdResponse withGroupsSummaries(GroupSummary[] groupsSummaries) {
         this.groupsSummaries = groupsSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListGroupsOlderThanOrderingIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGroupsOlderThanOrderingIdResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGroupsOlderThanOrderingIdResponse(){}
 }

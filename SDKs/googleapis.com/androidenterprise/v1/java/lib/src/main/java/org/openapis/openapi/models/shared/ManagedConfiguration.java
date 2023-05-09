@@ -18,6 +18,7 @@ public class ManagedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationVariables")
     public ConfigurationVariables configurationVariables;
+
     public ManagedConfiguration withConfigurationVariables(ConfigurationVariables configurationVariables) {
         this.configurationVariables = configurationVariables;
         return this;
@@ -29,6 +30,7 @@ public class ManagedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedConfiguration withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class ManagedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedProperty")
     public ManagedProperty[] managedProperty;
+
     public ManagedConfiguration withManagedProperty(ManagedProperty[] managedProperty) {
         this.managedProperty = managedProperty;
         return this;
@@ -51,9 +54,11 @@ public class ManagedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ManagedConfiguration withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ManagedConfiguration(){}
 }

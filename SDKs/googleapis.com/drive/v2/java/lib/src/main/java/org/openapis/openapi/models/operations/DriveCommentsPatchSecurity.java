@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DriveCommentsPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DriveCommentsPatchSecurityOption1 option1;
+
     public DriveCommentsPatchSecurity withOption1(DriveCommentsPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DriveCommentsPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveCommentsPatchSecurityOption2 option2;
+
     public DriveCommentsPatchSecurity withOption2(DriveCommentsPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DriveCommentsPatchSecurity(){}
 }

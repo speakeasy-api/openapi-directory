@@ -15,6 +15,7 @@ public class ListPricingPlansAssociatedWithPricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriod")
     public String billingPeriod;
+
     public ListPricingPlansAssociatedWithPricingRuleOutput withBillingPeriod(String billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -23,6 +24,7 @@ public class ListPricingPlansAssociatedWithPricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPricingPlansAssociatedWithPricingRuleOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class ListPricingPlansAssociatedWithPricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanArns")
     public String[] pricingPlanArns;
+
     public ListPricingPlansAssociatedWithPricingRuleOutput withPricingPlanArns(String[] pricingPlanArns) {
         this.pricingPlanArns = pricingPlanArns;
         return this;
@@ -39,9 +42,11 @@ public class ListPricingPlansAssociatedWithPricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingRuleArn")
     public String pricingRuleArn;
+
     public ListPricingPlansAssociatedWithPricingRuleOutput withPricingRuleArn(String pricingRuleArn) {
         this.pricingRuleArn = pricingRuleArn;
         return this;
     }
     
+    public ListPricingPlansAssociatedWithPricingRuleOutput(){}
 }

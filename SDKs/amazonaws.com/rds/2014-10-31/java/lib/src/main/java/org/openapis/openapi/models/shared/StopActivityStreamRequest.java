@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StopActivityStreamRequest {
     
     public Boolean applyImmediately;
+
     public StopActivityStreamRequest withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -16,9 +17,13 @@ public class StopActivityStreamRequest {
     
     
     public String resourceArn;
+
     public StopActivityStreamRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public StopActivityStreamRequest(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

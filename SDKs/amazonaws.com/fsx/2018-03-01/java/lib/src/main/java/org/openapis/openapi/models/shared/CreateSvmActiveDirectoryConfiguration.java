@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSvmActiveDirectoryConfiguration {
     @JsonProperty("NetBiosName")
     public String netBiosName;
+
     public CreateSvmActiveDirectoryConfiguration withNetBiosName(String netBiosName) {
         this.netBiosName = netBiosName;
         return this;
@@ -25,9 +26,13 @@ public class CreateSvmActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedActiveDirectoryConfiguration")
     public SelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration;
+
     public CreateSvmActiveDirectoryConfiguration withSelfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
         this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
         return this;
     }
     
+    public CreateSvmActiveDirectoryConfiguration(@JsonProperty("NetBiosName") String netBiosName) {
+        this.netBiosName = netBiosName;
+  }
 }

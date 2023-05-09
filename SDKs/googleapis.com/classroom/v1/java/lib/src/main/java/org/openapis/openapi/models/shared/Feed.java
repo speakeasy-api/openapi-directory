@@ -18,6 +18,7 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseRosterChangesInfo")
     public CourseRosterChangesInfo courseRosterChangesInfo;
+
     public Feed withCourseRosterChangesInfo(CourseRosterChangesInfo courseRosterChangesInfo) {
         this.courseRosterChangesInfo = courseRosterChangesInfo;
         return this;
@@ -29,6 +30,7 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseWorkChangesInfo")
     public CourseWorkChangesInfo courseWorkChangesInfo;
+
     public Feed withCourseWorkChangesInfo(CourseWorkChangesInfo courseWorkChangesInfo) {
         this.courseWorkChangesInfo = courseWorkChangesInfo;
         return this;
@@ -40,9 +42,11 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public FeedFeedTypeEnum feedType;
+
     public Feed withFeedType(FeedFeedTypeEnum feedType) {
         this.feedType = feedType;
         return this;
     }
     
+    public Feed(){}
 }

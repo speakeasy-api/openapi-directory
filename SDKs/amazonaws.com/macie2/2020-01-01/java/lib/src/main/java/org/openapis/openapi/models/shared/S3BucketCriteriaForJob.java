@@ -15,6 +15,7 @@ public class S3BucketCriteriaForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public CriteriaBlockForJob excludes;
+
     public S3BucketCriteriaForJob withExcludes(CriteriaBlockForJob excludes) {
         this.excludes = excludes;
         return this;
@@ -23,9 +24,11 @@ public class S3BucketCriteriaForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includes")
     public CriteriaBlockForJob includes;
+
     public S3BucketCriteriaForJob withIncludes(CriteriaBlockForJob includes) {
         this.includes = includes;
         return this;
     }
     
+    public S3BucketCriteriaForJob(){}
 }

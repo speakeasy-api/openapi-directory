@@ -15,6 +15,7 @@ public class EventDetailSettings {
      */
     @JsonProperty("appId")
     public Integer appId;
+
     public EventDetailSettings withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -25,9 +26,14 @@ public class EventDetailSettings {
      */
     @JsonProperty("eventDetailsUrl")
     public String eventDetailsUrl;
+
     public EventDetailSettings withEventDetailsUrl(String eventDetailsUrl) {
         this.eventDetailsUrl = eventDetailsUrl;
         return this;
     }
     
+    public EventDetailSettings(@JsonProperty("appId") Integer appId, @JsonProperty("eventDetailsUrl") String eventDetailsUrl) {
+        this.appId = appId;
+        this.eventDetailsUrl = eventDetailsUrl;
+  }
 }

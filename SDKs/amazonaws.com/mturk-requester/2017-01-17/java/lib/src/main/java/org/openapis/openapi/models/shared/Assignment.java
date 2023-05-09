@@ -22,6 +22,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AcceptTime")
     public OffsetDateTime acceptTime;
+
     public Assignment withAcceptTime(OffsetDateTime acceptTime) {
         this.acceptTime = acceptTime;
         return this;
@@ -30,6 +31,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Answer")
     public String answer;
+
     public Assignment withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -40,6 +42,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ApprovalTime")
     public OffsetDateTime approvalTime;
+
     public Assignment withApprovalTime(OffsetDateTime approvalTime) {
         this.approvalTime = approvalTime;
         return this;
@@ -48,6 +51,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentId")
     public String assignmentId;
+
     public Assignment withAssignmentId(String assignmentId) {
         this.assignmentId = assignmentId;
         return this;
@@ -56,6 +60,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentStatus")
     public AssignmentStatusEnum assignmentStatus;
+
     public Assignment withAssignmentStatus(AssignmentStatusEnum assignmentStatus) {
         this.assignmentStatus = assignmentStatus;
         return this;
@@ -66,6 +71,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AutoApprovalTime")
     public OffsetDateTime autoApprovalTime;
+
     public Assignment withAutoApprovalTime(OffsetDateTime autoApprovalTime) {
         this.autoApprovalTime = autoApprovalTime;
         return this;
@@ -76,6 +82,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Deadline")
     public OffsetDateTime deadline;
+
     public Assignment withDeadline(OffsetDateTime deadline) {
         this.deadline = deadline;
         return this;
@@ -84,6 +91,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITId")
     public String hitId;
+
     public Assignment withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -94,6 +102,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RejectionTime")
     public OffsetDateTime rejectionTime;
+
     public Assignment withRejectionTime(OffsetDateTime rejectionTime) {
         this.rejectionTime = rejectionTime;
         return this;
@@ -102,6 +111,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterFeedback")
     public String requesterFeedback;
+
     public Assignment withRequesterFeedback(String requesterFeedback) {
         this.requesterFeedback = requesterFeedback;
         return this;
@@ -112,6 +122,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public Assignment withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -120,9 +131,11 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerId")
     public String workerId;
+
     public Assignment withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public Assignment(){}
 }

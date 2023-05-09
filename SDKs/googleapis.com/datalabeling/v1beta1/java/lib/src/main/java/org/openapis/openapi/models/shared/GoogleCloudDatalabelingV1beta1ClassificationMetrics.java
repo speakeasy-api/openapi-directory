@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confusionMatrix")
     public GoogleCloudDatalabelingV1beta1ConfusionMatrix confusionMatrix;
+
     public GoogleCloudDatalabelingV1beta1ClassificationMetrics withConfusionMatrix(GoogleCloudDatalabelingV1beta1ConfusionMatrix confusionMatrix) {
         this.confusionMatrix = confusionMatrix;
         return this;
@@ -26,9 +27,11 @@ public class GoogleCloudDatalabelingV1beta1ClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prCurve")
     public GoogleCloudDatalabelingV1beta1PrCurve prCurve;
+
     public GoogleCloudDatalabelingV1beta1ClassificationMetrics withPrCurve(GoogleCloudDatalabelingV1beta1PrCurve prCurve) {
         this.prCurve = prCurve;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ClassificationMetrics(){}
 }

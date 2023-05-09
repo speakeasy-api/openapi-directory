@@ -22,6 +22,7 @@ public class StatementData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public StatementData withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class StatementData {
     
     @JsonProperty("Id")
     public String id;
+
     public StatementData withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class StatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsBatchStatement")
     public Boolean isBatchStatement;
+
     public StatementData withIsBatchStatement(Boolean isBatchStatement) {
         this.isBatchStatement = isBatchStatement;
         return this;
@@ -45,6 +48,7 @@ public class StatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryParameters")
     public SqlParameter[] queryParameters;
+
     public StatementData withQueryParameters(SqlParameter[] queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -53,6 +57,7 @@ public class StatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryString")
     public String queryString;
+
     public StatementData withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -61,6 +66,7 @@ public class StatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStrings")
     public String[] queryStrings;
+
     public StatementData withQueryStrings(String[] queryStrings) {
         this.queryStrings = queryStrings;
         return this;
@@ -69,6 +75,7 @@ public class StatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public StatementData withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -77,6 +84,7 @@ public class StatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementName")
     public String statementName;
+
     public StatementData withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -85,6 +93,7 @@ public class StatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusStringEnum status;
+
     public StatementData withStatus(StatusStringEnum status) {
         this.status = status;
         return this;
@@ -95,9 +104,13 @@ public class StatementData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public StatementData withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public StatementData(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

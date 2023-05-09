@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOTAUpdateResponse {
     
     public String contentType;
+
     public DeleteOTAUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteOTAUpdateResponse {
      */
     
     public java.util.Map<String, Object> deleteOTAUpdateResponse;
+
     public DeleteOTAUpdateResponse withDeleteOTAUpdateResponse(java.util.Map<String, Object> deleteOTAUpdateResponse) {
         this.deleteOTAUpdateResponse = deleteOTAUpdateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteOTAUpdateResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteOTAUpdateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOTAUpdateResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteOTAUpdateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteOTAUpdateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteOTAUpdateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteOTAUpdateResponse {
     
     
     public Integer statusCode;
+
     public DeleteOTAUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteOTAUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOTAUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteOTAUpdateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteOTAUpdateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteOTAUpdateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteOTAUpdateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteOTAUpdateResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteOTAUpdateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteOTAUpdateResponse {
      */
     
     public Object versionConflictException;
+
     public DeleteOTAUpdateResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public DeleteOTAUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

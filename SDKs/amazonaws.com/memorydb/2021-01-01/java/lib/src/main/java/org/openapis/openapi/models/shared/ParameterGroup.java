@@ -15,6 +15,7 @@ public class ParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public ParameterGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ParameterGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Family")
     public String family;
+
     public ParameterGroup withFamily(String family) {
         this.family = family;
         return this;
@@ -39,9 +42,11 @@ public class ParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ParameterGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ParameterGroup(){}
 }

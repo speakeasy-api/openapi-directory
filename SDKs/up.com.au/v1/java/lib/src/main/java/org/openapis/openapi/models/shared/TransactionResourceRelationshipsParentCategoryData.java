@@ -13,6 +13,7 @@ public class TransactionResourceRelationshipsParentCategoryData {
      */
     @JsonProperty("id")
     public String id;
+
     public TransactionResourceRelationshipsParentCategoryData withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,14 @@ public class TransactionResourceRelationshipsParentCategoryData {
      */
     @JsonProperty("type")
     public String type;
+
     public TransactionResourceRelationshipsParentCategoryData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TransactionResourceRelationshipsParentCategoryData(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

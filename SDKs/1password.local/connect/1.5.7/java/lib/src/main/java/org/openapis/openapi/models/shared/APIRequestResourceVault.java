@@ -12,9 +12,11 @@ public class APIRequestResourceVault {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public APIRequestResourceVault withId(String id) {
         this.id = id;
         return this;
     }
     
+    public APIRequestResourceVault(){}
 }

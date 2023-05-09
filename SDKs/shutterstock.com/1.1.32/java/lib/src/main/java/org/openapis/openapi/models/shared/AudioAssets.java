@@ -18,6 +18,7 @@ public class AudioAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("album_art")
     public AudioAssetDetails albumArt;
+
     public AudioAssets withAlbumArt(AudioAssetDetails albumArt) {
         this.albumArt = albumArt;
         return this;
@@ -29,6 +30,7 @@ public class AudioAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clean_audio")
     public AudioAssetDetails cleanAudio;
+
     public AudioAssets withCleanAudio(AudioAssetDetails cleanAudio) {
         this.cleanAudio = cleanAudio;
         return this;
@@ -40,6 +42,7 @@ public class AudioAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_audio")
     public AudioAssetDetails originalAudio;
+
     public AudioAssets withOriginalAudio(AudioAssetDetails originalAudio) {
         this.originalAudio = originalAudio;
         return this;
@@ -51,6 +54,7 @@ public class AudioAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_mp3")
     public AudioAssetDetails previewMp3;
+
     public AudioAssets withPreviewMp3(AudioAssetDetails previewMp3) {
         this.previewMp3 = previewMp3;
         return this;
@@ -62,6 +66,7 @@ public class AudioAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_ogg")
     public AudioAssetDetails previewOgg;
+
     public AudioAssets withPreviewOgg(AudioAssetDetails previewOgg) {
         this.previewOgg = previewOgg;
         return this;
@@ -73,6 +78,7 @@ public class AudioAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shorts_loops_stems")
     public ShortsLoopsStems shortsLoopsStems;
+
     public AudioAssets withShortsLoopsStems(ShortsLoopsStems shortsLoopsStems) {
         this.shortsLoopsStems = shortsLoopsStems;
         return this;
@@ -84,9 +90,11 @@ public class AudioAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveform")
     public AudioAssetDetails waveform;
+
     public AudioAssets withWaveform(AudioAssetDetails waveform) {
         this.waveform = waveform;
         return this;
     }
     
+    public AudioAssets(){}
 }

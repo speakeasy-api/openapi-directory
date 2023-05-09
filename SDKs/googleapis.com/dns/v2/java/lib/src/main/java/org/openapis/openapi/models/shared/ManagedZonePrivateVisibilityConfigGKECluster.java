@@ -15,6 +15,7 @@ public class ManagedZonePrivateVisibilityConfigGKECluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeClusterName")
     public String gkeClusterName;
+
     public ManagedZonePrivateVisibilityConfigGKECluster withGkeClusterName(String gkeClusterName) {
         this.gkeClusterName = gkeClusterName;
         return this;
@@ -23,9 +24,11 @@ public class ManagedZonePrivateVisibilityConfigGKECluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedZonePrivateVisibilityConfigGKECluster withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ManagedZonePrivateVisibilityConfigGKECluster(){}
 }

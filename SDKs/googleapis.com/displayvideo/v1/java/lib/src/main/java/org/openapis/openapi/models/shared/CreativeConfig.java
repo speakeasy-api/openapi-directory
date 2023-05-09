@@ -18,6 +18,7 @@ public class CreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeType")
     public CreativeConfigCreativeTypeEnum creativeType;
+
     public CreativeConfig withCreativeType(CreativeConfigCreativeTypeEnum creativeType) {
         this.creativeType = creativeType;
         return this;
@@ -29,6 +30,7 @@ public class CreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayCreativeConfig")
     public InventorySourceDisplayCreativeConfig displayCreativeConfig;
+
     public CreativeConfig withDisplayCreativeConfig(InventorySourceDisplayCreativeConfig displayCreativeConfig) {
         this.displayCreativeConfig = displayCreativeConfig;
         return this;
@@ -40,9 +42,11 @@ public class CreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoCreativeConfig")
     public InventorySourceVideoCreativeConfig videoCreativeConfig;
+
     public CreativeConfig withVideoCreativeConfig(InventorySourceVideoCreativeConfig videoCreativeConfig) {
         this.videoCreativeConfig = videoCreativeConfig;
         return this;
     }
     
+    public CreativeConfig(){}
 }

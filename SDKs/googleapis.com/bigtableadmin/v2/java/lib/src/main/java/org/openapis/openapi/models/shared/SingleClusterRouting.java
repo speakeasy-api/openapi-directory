@@ -18,6 +18,7 @@ public class SingleClusterRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowTransactionalWrites")
     public Boolean allowTransactionalWrites;
+
     public SingleClusterRouting withAllowTransactionalWrites(Boolean allowTransactionalWrites) {
         this.allowTransactionalWrites = allowTransactionalWrites;
         return this;
@@ -29,9 +30,11 @@ public class SingleClusterRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SingleClusterRouting withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     
+    public SingleClusterRouting(){}
 }

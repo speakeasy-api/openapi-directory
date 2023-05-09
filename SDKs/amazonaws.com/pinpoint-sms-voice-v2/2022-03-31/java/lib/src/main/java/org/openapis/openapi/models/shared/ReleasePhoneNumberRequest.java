@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReleasePhoneNumberRequest {
     @JsonProperty("PhoneNumberId")
     public String phoneNumberId;
+
     public ReleasePhoneNumberRequest withPhoneNumberId(String phoneNumberId) {
         this.phoneNumberId = phoneNumberId;
         return this;
     }
     
+    public ReleasePhoneNumberRequest(@JsonProperty("PhoneNumberId") String phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
+  }
 }

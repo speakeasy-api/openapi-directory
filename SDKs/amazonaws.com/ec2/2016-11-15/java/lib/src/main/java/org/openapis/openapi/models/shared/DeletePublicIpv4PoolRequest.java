@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeletePublicIpv4PoolRequest {
     
     public Boolean dryRun;
+
     public DeletePublicIpv4PoolRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeletePublicIpv4PoolRequest {
     
     
     public String poolId;
+
     public DeletePublicIpv4PoolRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public DeletePublicIpv4PoolRequest(@JsonProperty("PoolId") String poolId) {
+        this.poolId = poolId;
+  }
 }

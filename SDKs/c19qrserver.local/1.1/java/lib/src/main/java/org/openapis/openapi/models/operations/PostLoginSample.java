@@ -15,6 +15,7 @@ public class PostLoginSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PostLoginSample withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class PostLoginSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public PostLoginSample withPassword(String password) {
         this.password = password;
         return this;
@@ -31,9 +33,11 @@ public class PostLoginSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public PostLoginSampleSourceEnum source;
+
     public PostLoginSample withSource(PostLoginSampleSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public PostLoginSample(){}
 }

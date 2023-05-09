@@ -18,6 +18,7 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyboxWinningRuleStats")
     public RepricingRuleReportBuyboxWinningRuleStats buyboxWinningRuleStats;
+
     public RepricingRuleReport withBuyboxWinningRuleStats(RepricingRuleReportBuyboxWinningRuleStats buyboxWinningRuleStats) {
         this.buyboxWinningRuleStats = buyboxWinningRuleStats;
         return this;
@@ -29,6 +30,7 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public RepricingRuleReport withDate(Date date) {
         this.date = date;
         return this;
@@ -40,6 +42,7 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impactedProducts")
     public String[] impactedProducts;
+
     public RepricingRuleReport withImpactedProducts(String[] impactedProducts) {
         this.impactedProducts = impactedProducts;
         return this;
@@ -51,6 +54,7 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inapplicabilityDetails")
     public InapplicabilityDetails[] inapplicabilityDetails;
+
     public RepricingRuleReport withInapplicabilityDetails(InapplicabilityDetails[] inapplicabilityDetails) {
         this.inapplicabilityDetails = inapplicabilityDetails;
         return this;
@@ -62,6 +66,7 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inapplicableProducts")
     public String[] inapplicableProducts;
+
     public RepricingRuleReport withInapplicableProducts(String[] inapplicableProducts) {
         this.inapplicableProducts = inapplicableProducts;
         return this;
@@ -73,6 +78,7 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItemCount")
     public Integer orderItemCount;
+
     public RepricingRuleReport withOrderItemCount(Integer orderItemCount) {
         this.orderItemCount = orderItemCount;
         return this;
@@ -84,6 +90,7 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleId")
     public String ruleId;
+
     public RepricingRuleReport withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -95,6 +102,7 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalGmv")
     public PriceAmount totalGmv;
+
     public RepricingRuleReport withTotalGmv(PriceAmount totalGmv) {
         this.totalGmv = totalGmv;
         return this;
@@ -106,9 +114,11 @@ public class RepricingRuleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RepricingRuleReportTypeEnum type;
+
     public RepricingRuleReport withType(RepricingRuleReportTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RepricingRuleReport(){}
 }

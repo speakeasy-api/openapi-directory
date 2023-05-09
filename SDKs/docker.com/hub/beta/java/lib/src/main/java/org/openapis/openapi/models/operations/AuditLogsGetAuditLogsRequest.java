@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class AuditLogsGetAuditLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
     public String account;
+
     public AuditLogsGetAuditLogsRequest withAccount(String account) {
         this.account = account;
         return this;
@@ -23,6 +25,7 @@ public class AuditLogsGetAuditLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
     public String action;
+
     public AuditLogsGetAuditLogsRequest withAction(String action) {
         this.action = action;
         return this;
@@ -33,6 +36,7 @@ public class AuditLogsGetAuditLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor")
     public String actor;
+
     public AuditLogsGetAuditLogsRequest withActor(String actor) {
         this.actor = actor;
         return this;
@@ -43,6 +47,7 @@ public class AuditLogsGetAuditLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public OffsetDateTime from;
+
     public AuditLogsGetAuditLogsRequest withFrom(OffsetDateTime from) {
         this.from = from;
         return this;
@@ -53,6 +58,7 @@ public class AuditLogsGetAuditLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public AuditLogsGetAuditLogsRequest withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class AuditLogsGetAuditLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public AuditLogsGetAuditLogsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -73,6 +80,7 @@ public class AuditLogsGetAuditLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public AuditLogsGetAuditLogsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -83,9 +91,13 @@ public class AuditLogsGetAuditLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public OffsetDateTime to;
+
     public AuditLogsGetAuditLogsRequest withTo(OffsetDateTime to) {
         this.to = to;
         return this;
     }
     
+    public AuditLogsGetAuditLogsRequest(@JsonProperty("account") String account) {
+        this.account = account;
+  }
 }

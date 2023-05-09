@@ -12,6 +12,7 @@ public class PlayoffAggregateScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public String created;
+
     public PlayoffAggregateScore withCreated(String created) {
         this.created = created;
         return this;
@@ -20,6 +21,7 @@ public class PlayoffAggregateScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamA_AggregateScore")
     public Long teamAAggregateScore;
+
     public PlayoffAggregateScore withTeamAAggregateScore(Long teamAAggregateScore) {
         this.teamAAggregateScore = teamAAggregateScore;
         return this;
@@ -28,6 +30,7 @@ public class PlayoffAggregateScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamA_Id")
     public Long teamAId;
+
     public PlayoffAggregateScore withTeamAId(Long teamAId) {
         this.teamAId = teamAId;
         return this;
@@ -36,6 +39,7 @@ public class PlayoffAggregateScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamB_AggregateScore")
     public Long teamBAggregateScore;
+
     public PlayoffAggregateScore withTeamBAggregateScore(Long teamBAggregateScore) {
         this.teamBAggregateScore = teamBAggregateScore;
         return this;
@@ -44,6 +48,7 @@ public class PlayoffAggregateScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamB_Id")
     public Long teamBId;
+
     public PlayoffAggregateScore withTeamBId(Long teamBId) {
         this.teamBId = teamBId;
         return this;
@@ -52,6 +57,7 @@ public class PlayoffAggregateScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayoffAggregateScore withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -60,9 +66,11 @@ public class PlayoffAggregateScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WinningTeamId")
     public Long winningTeamId;
+
     public PlayoffAggregateScore withWinningTeamId(Long winningTeamId) {
         this.winningTeamId = winningTeamId;
         return this;
     }
     
+    public PlayoffAggregateScore(){}
 }

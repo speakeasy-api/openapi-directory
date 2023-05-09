@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PropertyGroup {
     @JsonProperty("PropertyGroupId")
     public String propertyGroupId;
+
     public PropertyGroup withPropertyGroupId(String propertyGroupId) {
         this.propertyGroupId = propertyGroupId;
         return this;
@@ -19,9 +20,14 @@ public class PropertyGroup {
     
     @JsonProperty("PropertyMap")
     public java.util.Map<String, String> propertyMap;
+
     public PropertyGroup withPropertyMap(java.util.Map<String, String> propertyMap) {
         this.propertyMap = propertyMap;
         return this;
     }
     
+    public PropertyGroup(@JsonProperty("PropertyGroupId") String propertyGroupId, @JsonProperty("PropertyMap") java.util.Map<String, String> propertyMap) {
+        this.propertyGroupId = propertyGroupId;
+        this.propertyMap = propertyMap;
+  }
 }

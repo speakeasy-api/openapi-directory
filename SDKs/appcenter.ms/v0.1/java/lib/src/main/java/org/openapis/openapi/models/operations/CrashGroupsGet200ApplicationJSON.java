@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CrashGroupsGet200ApplicationJSON {
     @JsonProperty("annotation")
     public String annotation;
+
     public CrashGroupsGet200ApplicationJSON withAnnotation(String annotation) {
         this.annotation = annotation;
         return this;
@@ -26,6 +27,7 @@ public class CrashGroupsGet200ApplicationJSON {
     
     @JsonProperty("app_version")
     public String appVersion;
+
     public CrashGroupsGet200ApplicationJSON withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -33,6 +35,7 @@ public class CrashGroupsGet200ApplicationJSON {
     
     @JsonProperty("build")
     public String build;
+
     public CrashGroupsGet200ApplicationJSON withBuild(String build) {
         this.build = build;
         return this;
@@ -40,6 +43,7 @@ public class CrashGroupsGet200ApplicationJSON {
     
     @JsonProperty("count")
     public Long count;
+
     public CrashGroupsGet200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -47,6 +51,7 @@ public class CrashGroupsGet200ApplicationJSON {
     
     @JsonProperty("crash_group_id")
     public String crashGroupId;
+
     public CrashGroupsGet200ApplicationJSON withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -54,6 +59,7 @@ public class CrashGroupsGet200ApplicationJSON {
     
     @JsonProperty("crash_reason")
     public String crashReason;
+
     public CrashGroupsGet200ApplicationJSON withCrashReason(String crashReason) {
         this.crashReason = crashReason;
         return this;
@@ -61,6 +67,7 @@ public class CrashGroupsGet200ApplicationJSON {
     
     @JsonProperty("display_id")
     public String displayId;
+
     public CrashGroupsGet200ApplicationJSON withDisplayId(String displayId) {
         this.displayId = displayId;
         return this;
@@ -69,6 +76,7 @@ public class CrashGroupsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception")
     public String exception;
+
     public CrashGroupsGet200ApplicationJSON withException(String exception) {
         this.exception = exception;
         return this;
@@ -79,6 +87,7 @@ public class CrashGroupsGet200ApplicationJSON {
      */
     @JsonProperty("fatal")
     public Boolean fatal;
+
     public CrashGroupsGet200ApplicationJSON withFatal(Boolean fatal) {
         this.fatal = fatal;
         return this;
@@ -88,6 +97,7 @@ public class CrashGroupsGet200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("first_occurrence")
     public OffsetDateTime firstOccurrence;
+
     public CrashGroupsGet200ApplicationJSON withFirstOccurrence(OffsetDateTime firstOccurrence) {
         this.firstOccurrence = firstOccurrence;
         return this;
@@ -96,6 +106,7 @@ public class CrashGroupsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impacted_users")
     public Long impactedUsers;
+
     public CrashGroupsGet200ApplicationJSON withImpactedUsers(Long impactedUsers) {
         this.impactedUsers = impactedUsers;
         return this;
@@ -105,6 +116,7 @@ public class CrashGroupsGet200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_occurrence")
     public OffsetDateTime lastOccurrence;
+
     public CrashGroupsGet200ApplicationJSON withLastOccurrence(OffsetDateTime lastOccurrence) {
         this.lastOccurrence = lastOccurrence;
         return this;
@@ -112,6 +124,7 @@ public class CrashGroupsGet200ApplicationJSON {
     
     @JsonProperty("new_crash_group_id")
     public String newCrashGroupId;
+
     public CrashGroupsGet200ApplicationJSON withNewCrashGroupId(String newCrashGroupId) {
         this.newCrashGroupId = newCrashGroupId;
         return this;
@@ -123,6 +136,7 @@ public class CrashGroupsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason_frame")
     public CrashGroupsGet200ApplicationJSONReasonFrame reasonFrame;
+
     public CrashGroupsGet200ApplicationJSON withReasonFrame(CrashGroupsGet200ApplicationJSONReasonFrame reasonFrame) {
         this.reasonFrame = reasonFrame;
         return this;
@@ -130,9 +144,24 @@ public class CrashGroupsGet200ApplicationJSON {
     
     @JsonProperty("status")
     public CrashGroupsGet200ApplicationJSONStatusEnum status;
+
     public CrashGroupsGet200ApplicationJSON withStatus(CrashGroupsGet200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CrashGroupsGet200ApplicationJSON(@JsonProperty("annotation") String annotation, @JsonProperty("app_version") String appVersion, @JsonProperty("build") String build, @JsonProperty("count") Long count, @JsonProperty("crash_group_id") String crashGroupId, @JsonProperty("crash_reason") String crashReason, @JsonProperty("display_id") String displayId, @JsonProperty("fatal") Boolean fatal, @JsonProperty("first_occurrence") OffsetDateTime firstOccurrence, @JsonProperty("last_occurrence") OffsetDateTime lastOccurrence, @JsonProperty("new_crash_group_id") String newCrashGroupId, @JsonProperty("status") CrashGroupsGet200ApplicationJSONStatusEnum status) {
+        this.annotation = annotation;
+        this.appVersion = appVersion;
+        this.build = build;
+        this.count = count;
+        this.crashGroupId = crashGroupId;
+        this.crashReason = crashReason;
+        this.displayId = displayId;
+        this.fatal = fatal;
+        this.firstOccurrence = firstOccurrence;
+        this.lastOccurrence = lastOccurrence;
+        this.newCrashGroupId = newCrashGroupId;
+        this.status = status;
+  }
 }

@@ -20,6 +20,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public InventoryTransfer withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -33,6 +34,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_type")
     public String catalogObjectType;
+
     public InventoryTransfer withCatalogObjectType(String catalogObjectType) {
         this.catalogObjectType = catalogObjectType;
         return this;
@@ -45,6 +47,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public InventoryTransfer withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -57,6 +60,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     public String employeeId;
+
     public InventoryTransfer withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -69,6 +73,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_location_id")
     public String fromLocationId;
+
     public InventoryTransfer withFromLocationId(String fromLocationId) {
         this.fromLocationId = fromLocationId;
         return this;
@@ -81,6 +86,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InventoryTransfer withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +101,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at")
     public String occurredAt;
+
     public InventoryTransfer withOccurredAt(String occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -107,6 +114,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public InventoryTransfer withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -119,6 +127,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public InventoryTransfer withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -130,6 +139,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public SourceApplication source;
+
     public InventoryTransfer withSource(SourceApplication source) {
         this.source = source;
         return this;
@@ -142,6 +152,7 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public InventoryTransfer withState(String state) {
         this.state = state;
         return this;
@@ -154,9 +165,11 @@ public class InventoryTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to_location_id")
     public String toLocationId;
+
     public InventoryTransfer withToLocationId(String toLocationId) {
         this.toLocationId = toLocationId;
         return this;
     }
     
+    public InventoryTransfer(){}
 }

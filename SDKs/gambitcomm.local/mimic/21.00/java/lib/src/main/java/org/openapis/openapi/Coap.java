@@ -52,11 +52,9 @@ public class Coap {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolCoapGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolCoapGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolCoapGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Coap {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolCoapGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolCoapGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetConfigResponse(contentType, httpRes.statusCode()) {{
             configCOAP = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Coap {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolCoapGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolCoapGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolCoapGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Coap {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolCoapGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolCoapGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolCoapGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Coap {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolCoapGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolCoapGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolCoapGetTraceResponse(contentType, httpRes.statusCode()) {{
             configCOAP = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Coap {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolCoapSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolCoapSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolCoapSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolCoapSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolCoapSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +290,9 @@ public class Coap {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolCoapSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolCoapSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolCoapSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolCoapSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolCoapSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

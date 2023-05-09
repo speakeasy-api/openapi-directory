@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetAssetPropertyValueHistorySuccessEntry {
     @JsonProperty("assetPropertyValueHistory")
     public AssetPropertyValue[] assetPropertyValueHistory;
+
     public BatchGetAssetPropertyValueHistorySuccessEntry withAssetPropertyValueHistory(AssetPropertyValue[] assetPropertyValueHistory) {
         this.assetPropertyValueHistory = assetPropertyValueHistory;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetAssetPropertyValueHistorySuccessEntry {
     
     @JsonProperty("entryId")
     public String entryId;
+
     public BatchGetAssetPropertyValueHistorySuccessEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
     }
     
+    public BatchGetAssetPropertyValueHistorySuccessEntry(@JsonProperty("assetPropertyValueHistory") AssetPropertyValue[] assetPropertyValueHistory, @JsonProperty("entryId") String entryId) {
+        this.assetPropertyValueHistory = assetPropertyValueHistory;
+        this.entryId = entryId;
+  }
 }

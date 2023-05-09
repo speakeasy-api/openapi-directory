@@ -22,6 +22,7 @@ public class GetMigrationWorkflowTemplateResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetMigrationWorkflowTemplateResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class GetMigrationWorkflowTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetMigrationWorkflowTemplateResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class GetMigrationWorkflowTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetMigrationWorkflowTemplateResponse withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class GetMigrationWorkflowTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputs")
     public TemplateInput[] inputs;
+
     public GetMigrationWorkflowTemplateResponse withInputs(TemplateInput[] inputs) {
         this.inputs = inputs;
         return this;
@@ -54,6 +58,7 @@ public class GetMigrationWorkflowTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetMigrationWorkflowTemplateResponse withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class GetMigrationWorkflowTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TemplateStatusEnum status;
+
     public GetMigrationWorkflowTemplateResponse withStatus(TemplateStatusEnum status) {
         this.status = status;
         return this;
@@ -70,9 +76,11 @@ public class GetMigrationWorkflowTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tools")
     public Tool[] tools;
+
     public GetMigrationWorkflowTemplateResponse withTools(Tool[] tools) {
         this.tools = tools;
         return this;
     }
     
+    public GetMigrationWorkflowTemplateResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInvitationsResponse {
@@ -12,6 +13,7 @@ public class CreateInvitationsResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateInvitationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateInvitationsResponse {
      */
     
     public Object conflictException;
+
     public CreateInvitationsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateInvitationsResponse {
     
     
     public String contentType;
+
     public CreateInvitationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateInvitationsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateInvitationsResponse createInvitationsResponse;
+
     public CreateInvitationsResponse withCreateInvitationsResponse(org.openapis.openapi.models.shared.CreateInvitationsResponse createInvitationsResponse) {
         this.createInvitationsResponse = createInvitationsResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateInvitationsResponse {
      */
     
     public Object internalServerException;
+
     public CreateInvitationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateInvitationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateInvitationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateInvitationsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateInvitationsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateInvitationsResponse {
     
     
     public Integer statusCode;
+
     public CreateInvitationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateInvitationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInvitationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateInvitationsResponse {
      */
     
     public Object throttlingException;
+
     public CreateInvitationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateInvitationsResponse {
      */
     
     public Object validationException;
+
     public CreateInvitationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateInvitationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

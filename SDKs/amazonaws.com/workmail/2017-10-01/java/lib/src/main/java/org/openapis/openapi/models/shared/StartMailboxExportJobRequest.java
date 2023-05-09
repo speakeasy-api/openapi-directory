@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartMailboxExportJobRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartMailboxExportJobRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class StartMailboxExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StartMailboxExportJobRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class StartMailboxExportJobRequest {
     
     @JsonProperty("EntityId")
     public String entityId;
+
     public StartMailboxExportJobRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -33,6 +36,7 @@ public class StartMailboxExportJobRequest {
     
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public StartMailboxExportJobRequest withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -40,6 +44,7 @@ public class StartMailboxExportJobRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public StartMailboxExportJobRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -47,6 +52,7 @@ public class StartMailboxExportJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public StartMailboxExportJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -54,6 +60,7 @@ public class StartMailboxExportJobRequest {
     
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public StartMailboxExportJobRequest withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -61,9 +68,19 @@ public class StartMailboxExportJobRequest {
     
     @JsonProperty("S3Prefix")
     public String s3Prefix;
+
     public StartMailboxExportJobRequest withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
     }
     
+    public StartMailboxExportJobRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("EntityId") String entityId, @JsonProperty("KmsKeyArn") String kmsKeyArn, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("RoleArn") String roleArn, @JsonProperty("S3BucketName") String s3BucketName, @JsonProperty("S3Prefix") String s3Prefix) {
+        this.clientToken = clientToken;
+        this.entityId = entityId;
+        this.kmsKeyArn = kmsKeyArn;
+        this.organizationId = organizationId;
+        this.roleArn = roleArn;
+        this.s3BucketName = s3BucketName;
+        this.s3Prefix = s3Prefix;
+  }
 }

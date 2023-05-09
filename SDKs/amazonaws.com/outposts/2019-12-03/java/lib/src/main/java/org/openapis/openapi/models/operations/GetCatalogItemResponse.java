@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCatalogItemResponse {
     
     public String contentType;
+
     public GetCatalogItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCatalogItemResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCatalogItemOutput getCatalogItemOutput;
+
     public GetCatalogItemResponse withGetCatalogItemOutput(org.openapis.openapi.models.shared.GetCatalogItemOutput getCatalogItemOutput) {
         this.getCatalogItemOutput = getCatalogItemOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetCatalogItemResponse {
      */
     
     public Object internalServerException;
+
     public GetCatalogItemResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetCatalogItemResponse {
      */
     
     public Object notFoundException;
+
     public GetCatalogItemResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetCatalogItemResponse {
     
     
     public Integer statusCode;
+
     public GetCatalogItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCatalogItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCatalogItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetCatalogItemResponse {
      */
     
     public Object validationException;
+
     public GetCatalogItemResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCatalogItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

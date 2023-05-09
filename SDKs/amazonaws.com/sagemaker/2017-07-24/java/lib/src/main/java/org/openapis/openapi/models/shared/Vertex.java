@@ -15,6 +15,7 @@ public class Vertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Vertex withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Vertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageType")
     public LineageTypeEnum lineageType;
+
     public Vertex withLineageType(LineageTypeEnum lineageType) {
         this.lineageType = lineageType;
         return this;
@@ -31,9 +33,11 @@ public class Vertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Vertex withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Vertex(){}
 }

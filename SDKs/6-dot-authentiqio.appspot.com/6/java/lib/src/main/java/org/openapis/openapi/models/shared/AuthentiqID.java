@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AuthentiqID - Authentiq ID in JWT format, self-signed.
@@ -16,6 +16,7 @@ public class AuthentiqID {
      */
     
     public String devtoken;
+
     public AuthentiqID withDevtoken(String devtoken) {
         this.devtoken = devtoken;
         return this;
@@ -26,9 +27,13 @@ public class AuthentiqID {
      */
     
     public String sub;
+
     public AuthentiqID withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public AuthentiqID(@JsonProperty("sub") String sub) {
+        this.sub = sub;
+  }
 }

@@ -12,6 +12,7 @@ public class CopyFileToS3RequestBodyFilePaths {
      */
     @JsonProperty("path")
     public String path;
+
     public CopyFileToS3RequestBodyFilePaths withPath(String path) {
         this.path = path;
         return this;
@@ -22,9 +23,14 @@ public class CopyFileToS3RequestBodyFilePaths {
      */
     @JsonProperty("type")
     public String type;
+
     public CopyFileToS3RequestBodyFilePaths withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CopyFileToS3RequestBodyFilePaths(@JsonProperty("path") String path, @JsonProperty("type") String type) {
+        this.path = path;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFileSystemPolicyResponse {
@@ -12,6 +13,7 @@ public class DescribeFileSystemPolicyResponse {
      */
     
     public Object badRequest;
+
     public DescribeFileSystemPolicyResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFileSystemPolicyResponse {
     
     
     public String contentType;
+
     public DescribeFileSystemPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFileSystemPolicyResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeFileSystemPolicyResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFileSystemPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.FileSystemPolicyDescription fileSystemPolicyDescription;
+
     public DescribeFileSystemPolicyResponse withFileSystemPolicyDescription(org.openapis.openapi.models.shared.FileSystemPolicyDescription fileSystemPolicyDescription) {
         this.fileSystemPolicyDescription = fileSystemPolicyDescription;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFileSystemPolicyResponse {
      */
     
     public Object internalServerError;
+
     public DescribeFileSystemPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DescribeFileSystemPolicyResponse {
      */
     
     public Object policyNotFound;
+
     public DescribeFileSystemPolicyResponse withPolicyNotFound(Object policyNotFound) {
         this.policyNotFound = policyNotFound;
         return this;
@@ -66,6 +73,7 @@ public class DescribeFileSystemPolicyResponse {
     
     
     public Integer statusCode;
+
     public DescribeFileSystemPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFileSystemPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFileSystemPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFileSystemPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class SuccessDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherNativeCrash")
     public Boolean otherNativeCrash;
+
     public SuccessDetail withOtherNativeCrash(Boolean otherNativeCrash) {
         this.otherNativeCrash = otherNativeCrash;
         return this;
     }
     
+    public SuccessDetail(){}
 }

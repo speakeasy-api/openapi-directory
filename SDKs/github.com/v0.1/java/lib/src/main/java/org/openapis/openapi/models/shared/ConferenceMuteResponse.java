@@ -18,6 +18,7 @@ public class ConferenceMuteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Members")
     public String[] members;
+
     public ConferenceMuteResponse withMembers(String[] members) {
         this.members = members;
         return this;
@@ -28,6 +29,7 @@ public class ConferenceMuteResponse {
      */
     @JsonProperty("Message")
     public ConferenceMuteResponseMessageEnum message;
+
     public ConferenceMuteResponse withMessage(ConferenceMuteResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -38,9 +40,14 @@ public class ConferenceMuteResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public ConferenceMuteResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ConferenceMuteResponse(@JsonProperty("Message") ConferenceMuteResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

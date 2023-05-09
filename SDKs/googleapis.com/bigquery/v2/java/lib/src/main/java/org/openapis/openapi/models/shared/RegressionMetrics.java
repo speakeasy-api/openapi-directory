@@ -18,6 +18,7 @@ public class RegressionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanAbsoluteError")
     public Double meanAbsoluteError;
+
     public RegressionMetrics withMeanAbsoluteError(Double meanAbsoluteError) {
         this.meanAbsoluteError = meanAbsoluteError;
         return this;
@@ -29,6 +30,7 @@ public class RegressionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanSquaredError")
     public Double meanSquaredError;
+
     public RegressionMetrics withMeanSquaredError(Double meanSquaredError) {
         this.meanSquaredError = meanSquaredError;
         return this;
@@ -40,6 +42,7 @@ public class RegressionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanSquaredLogError")
     public Double meanSquaredLogError;
+
     public RegressionMetrics withMeanSquaredLogError(Double meanSquaredLogError) {
         this.meanSquaredLogError = meanSquaredLogError;
         return this;
@@ -51,6 +54,7 @@ public class RegressionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medianAbsoluteError")
     public Double medianAbsoluteError;
+
     public RegressionMetrics withMedianAbsoluteError(Double medianAbsoluteError) {
         this.medianAbsoluteError = medianAbsoluteError;
         return this;
@@ -62,9 +66,11 @@ public class RegressionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rSquared")
     public Double rSquared;
+
     public RegressionMetrics withRSquared(Double rSquared) {
         this.rSquared = rSquared;
         return this;
     }
     
+    public RegressionMetrics(){}
 }

@@ -14,6 +14,7 @@ public class BatchAssociateProjectAssetsRequestBody {
      */
     @JsonProperty("assetIds")
     public String[] assetIds;
+
     public BatchAssociateProjectAssetsRequestBody withAssetIds(String[] assetIds) {
         this.assetIds = assetIds;
         return this;
@@ -25,9 +26,13 @@ public class BatchAssociateProjectAssetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public BatchAssociateProjectAssetsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public BatchAssociateProjectAssetsRequestBody(@JsonProperty("assetIds") String[] assetIds) {
+        this.assetIds = assetIds;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HookConfigurationRequest {
     @JsonProperty("filter")
     public HookFilter filter;
+
     public HookConfigurationRequest withFilter(HookFilter filter) {
         this.filter = filter;
         return this;
@@ -16,9 +17,14 @@ public class HookConfigurationRequest {
     
     @JsonProperty("hook")
     public Hook hook;
+
     public HookConfigurationRequest withHook(Hook hook) {
         this.hook = hook;
         return this;
     }
     
+    public HookConfigurationRequest(@JsonProperty("filter") HookFilter filter, @JsonProperty("hook") Hook hook) {
+        this.filter = filter;
+        this.hook = hook;
+  }
 }

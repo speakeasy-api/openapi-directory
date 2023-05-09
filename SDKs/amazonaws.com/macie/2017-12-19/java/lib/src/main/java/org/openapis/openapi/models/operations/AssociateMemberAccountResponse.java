@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateMemberAccountResponse {
     
     public String contentType;
+
     public AssociateMemberAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AssociateMemberAccountResponse {
      */
     
     public Object internalException;
+
     public AssociateMemberAccountResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateMemberAccountResponse {
      */
     
     public Object invalidInputException;
+
     public AssociateMemberAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateMemberAccountResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateMemberAccountResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateMemberAccountResponse {
     
     
     public Integer statusCode;
+
     public AssociateMemberAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AssociateMemberAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateMemberAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateMemberAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

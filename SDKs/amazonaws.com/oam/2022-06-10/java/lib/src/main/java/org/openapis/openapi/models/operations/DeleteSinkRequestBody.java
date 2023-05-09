@@ -12,9 +12,13 @@ public class DeleteSinkRequestBody {
      */
     @JsonProperty("Identifier")
     public String identifier;
+
     public DeleteSinkRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public DeleteSinkRequestBody(@JsonProperty("Identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

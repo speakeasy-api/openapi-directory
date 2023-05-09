@@ -15,9 +15,13 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersAlgorithm {
      */
     @JsonProperty("type")
     public GetLoadBalancers200ApplicationJSONLoadBalancersAlgorithmTypeEnum type;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersAlgorithm withType(GetLoadBalancers200ApplicationJSONLoadBalancersAlgorithmTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetLoadBalancers200ApplicationJSONLoadBalancersAlgorithm(@JsonProperty("type") GetLoadBalancers200ApplicationJSONLoadBalancersAlgorithmTypeEnum type) {
+        this.type = type;
+  }
 }

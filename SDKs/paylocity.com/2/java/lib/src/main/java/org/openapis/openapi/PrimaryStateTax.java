@@ -58,11 +58,9 @@ public class PrimaryStateTax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddOrUpdatePrimaryStateTaxResponse res = new org.openapis.openapi.models.operations.AddOrUpdatePrimaryStateTaxResponse() {{
+        org.openapis.openapi.models.operations.AddOrUpdatePrimaryStateTaxResponse res = new org.openapis.openapi.models.operations.AddOrUpdatePrimaryStateTaxResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {

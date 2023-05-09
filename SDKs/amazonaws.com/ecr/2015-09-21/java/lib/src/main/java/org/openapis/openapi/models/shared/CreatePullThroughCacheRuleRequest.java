@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePullThroughCacheRuleRequest {
     @JsonProperty("ecrRepositoryPrefix")
     public String ecrRepositoryPrefix;
+
     public CreatePullThroughCacheRuleRequest withEcrRepositoryPrefix(String ecrRepositoryPrefix) {
         this.ecrRepositoryPrefix = ecrRepositoryPrefix;
         return this;
@@ -19,6 +20,7 @@ public class CreatePullThroughCacheRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public CreatePullThroughCacheRuleRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,9 +28,14 @@ public class CreatePullThroughCacheRuleRequest {
     
     @JsonProperty("upstreamRegistryUrl")
     public String upstreamRegistryUrl;
+
     public CreatePullThroughCacheRuleRequest withUpstreamRegistryUrl(String upstreamRegistryUrl) {
         this.upstreamRegistryUrl = upstreamRegistryUrl;
         return this;
     }
     
+    public CreatePullThroughCacheRuleRequest(@JsonProperty("ecrRepositoryPrefix") String ecrRepositoryPrefix, @JsonProperty("upstreamRegistryUrl") String upstreamRegistryUrl) {
+        this.ecrRepositoryPrefix = ecrRepositoryPrefix;
+        this.upstreamRegistryUrl = upstreamRegistryUrl;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVocabularyResponse {
@@ -12,6 +13,7 @@ public class CreateVocabularyResponse {
      */
     
     public Object badRequestException;
+
     public CreateVocabularyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateVocabularyResponse {
      */
     
     public Object conflictException;
+
     public CreateVocabularyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateVocabularyResponse {
     
     
     public String contentType;
+
     public CreateVocabularyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateVocabularyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVocabularyResponse createVocabularyResponse;
+
     public CreateVocabularyResponse withCreateVocabularyResponse(org.openapis.openapi.models.shared.CreateVocabularyResponse createVocabularyResponse) {
         this.createVocabularyResponse = createVocabularyResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateVocabularyResponse {
      */
     
     public Object internalFailureException;
+
     public CreateVocabularyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateVocabularyResponse {
      */
     
     public Object limitExceededException;
+
     public CreateVocabularyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateVocabularyResponse {
     
     
     public Integer statusCode;
+
     public CreateVocabularyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateVocabularyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVocabularyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateVocabularyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

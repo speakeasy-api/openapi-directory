@@ -15,6 +15,7 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ADM")
     public org.openapis.openapi.models.shared.AndroidPushNotificationTemplate adm;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withAdm(org.openapis.openapi.models.shared.AndroidPushNotificationTemplate adm) {
         this.adm = adm;
         return this;
@@ -23,6 +24,7 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("APNS")
     public org.openapis.openapi.models.shared.APNSPushNotificationTemplate apns;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withApns(org.openapis.openapi.models.shared.APNSPushNotificationTemplate apns) {
         this.apns = apns;
         return this;
@@ -31,6 +33,7 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Baidu")
     public org.openapis.openapi.models.shared.AndroidPushNotificationTemplate baidu;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withBaidu(org.openapis.openapi.models.shared.AndroidPushNotificationTemplate baidu) {
         this.baidu = baidu;
         return this;
@@ -39,6 +42,7 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Default")
     public org.openapis.openapi.models.shared.DefaultPushNotificationTemplate default_;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withDefault(org.openapis.openapi.models.shared.DefaultPushNotificationTemplate default_) {
         this.default_ = default_;
         return this;
@@ -47,6 +51,7 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -55,6 +60,7 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GCM")
     public org.openapis.openapi.models.shared.AndroidPushNotificationTemplate gcm;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withGcm(org.openapis.openapi.models.shared.AndroidPushNotificationTemplate gcm) {
         this.gcm = gcm;
         return this;
@@ -63,6 +69,7 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommenderId")
     public String recommenderId;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withRecommenderId(String recommenderId) {
         this.recommenderId = recommenderId;
         return this;
@@ -71,6 +78,7 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -79,9 +87,11 @@ public class CreatePushTemplateRequestBodyPushNotificationTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreatePushTemplateRequestBodyPushNotificationTemplateRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePushTemplateRequestBodyPushNotificationTemplateRequest(){}
 }

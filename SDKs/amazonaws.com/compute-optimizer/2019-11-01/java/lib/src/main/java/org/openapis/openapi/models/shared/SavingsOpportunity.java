@@ -15,6 +15,7 @@ public class SavingsOpportunity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedMonthlySavings")
     public EstimatedMonthlySavings estimatedMonthlySavings;
+
     public SavingsOpportunity withEstimatedMonthlySavings(EstimatedMonthlySavings estimatedMonthlySavings) {
         this.estimatedMonthlySavings = estimatedMonthlySavings;
         return this;
@@ -23,9 +24,11 @@ public class SavingsOpportunity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsOpportunityPercentage")
     public Double savingsOpportunityPercentage;
+
     public SavingsOpportunity withSavingsOpportunityPercentage(Double savingsOpportunityPercentage) {
         this.savingsOpportunityPercentage = savingsOpportunityPercentage;
         return this;
     }
     
+    public SavingsOpportunity(){}
 }

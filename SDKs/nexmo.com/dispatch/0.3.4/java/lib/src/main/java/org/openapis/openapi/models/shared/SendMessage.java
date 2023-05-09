@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendMessage {
     @JsonProperty("from")
     public FromProperty from;
+
     public SendMessage withFrom(FromProperty from) {
         this.from = from;
         return this;
@@ -19,6 +20,7 @@ public class SendMessage {
     
     @JsonProperty("message")
     public MessageProperty message;
+
     public SendMessage withMessage(MessageProperty message) {
         this.message = message;
         return this;
@@ -26,9 +28,15 @@ public class SendMessage {
     
     @JsonProperty("to")
     public ToProperty to;
+
     public SendMessage withTo(ToProperty to) {
         this.to = to;
         return this;
     }
     
+    public SendMessage(@JsonProperty("from") FromProperty from, @JsonProperty("message") MessageProperty message, @JsonProperty("to") ToProperty to) {
+        this.from = from;
+        this.message = message;
+        this.to = to;
+  }
 }

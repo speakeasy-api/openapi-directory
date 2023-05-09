@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1SentimentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableLabelSentimentSelection")
     public Boolean enableLabelSentimentSelection;
+
     public GoogleCloudDatalabelingV1beta1SentimentConfig withEnableLabelSentimentSelection(Boolean enableLabelSentimentSelection) {
         this.enableLabelSentimentSelection = enableLabelSentimentSelection;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1SentimentConfig(){}
 }

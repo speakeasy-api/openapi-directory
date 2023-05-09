@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDetectDominantLanguageResponse {
     @JsonProperty("ErrorList")
     public BatchItemError[] errorList;
+
     public BatchDetectDominantLanguageResponse withErrorList(BatchItemError[] errorList) {
         this.errorList = errorList;
         return this;
@@ -19,9 +20,14 @@ public class BatchDetectDominantLanguageResponse {
     
     @JsonProperty("ResultList")
     public BatchDetectDominantLanguageItemResult[] resultList;
+
     public BatchDetectDominantLanguageResponse withResultList(BatchDetectDominantLanguageItemResult[] resultList) {
         this.resultList = resultList;
         return this;
     }
     
+    public BatchDetectDominantLanguageResponse(@JsonProperty("ErrorList") BatchItemError[] errorList, @JsonProperty("ResultList") BatchDetectDominantLanguageItemResult[] resultList) {
+        this.errorList = errorList;
+        this.resultList = resultList;
+  }
 }

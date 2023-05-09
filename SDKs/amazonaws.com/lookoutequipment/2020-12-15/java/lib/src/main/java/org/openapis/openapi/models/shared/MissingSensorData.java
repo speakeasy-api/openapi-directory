@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MissingSensorData {
     @JsonProperty("AffectedSensorCount")
     public Long affectedSensorCount;
+
     public MissingSensorData withAffectedSensorCount(Long affectedSensorCount) {
         this.affectedSensorCount = affectedSensorCount;
         return this;
@@ -19,9 +20,14 @@ public class MissingSensorData {
     
     @JsonProperty("TotalNumberOfMissingValues")
     public Long totalNumberOfMissingValues;
+
     public MissingSensorData withTotalNumberOfMissingValues(Long totalNumberOfMissingValues) {
         this.totalNumberOfMissingValues = totalNumberOfMissingValues;
         return this;
     }
     
+    public MissingSensorData(@JsonProperty("AffectedSensorCount") Long affectedSensorCount, @JsonProperty("TotalNumberOfMissingValues") Long totalNumberOfMissingValues) {
+        this.affectedSensorCount = affectedSensorCount;
+        this.totalNumberOfMissingValues = totalNumberOfMissingValues;
+  }
 }

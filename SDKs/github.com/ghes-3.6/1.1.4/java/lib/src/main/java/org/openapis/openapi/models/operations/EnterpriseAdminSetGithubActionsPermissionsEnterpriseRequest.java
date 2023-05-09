@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody requestBody;
+
     public EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequest withRequestBody(EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
     }
     
+    public EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequest(@JsonProperty("RequestBody") EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody requestBody, @JsonProperty("enterprise") String enterprise) {
+        this.requestBody = requestBody;
+        this.enterprise = enterprise;
+  }
 }

@@ -20,6 +20,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountSummary")
     public java.util.Map<String, Long> accountSummary;
+
     public CheckSummary withAccountSummary(java.util.Map<String, Long> accountSummary) {
         this.accountSummary = accountSummary;
         return this;
@@ -31,6 +32,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChoiceId")
     public String choiceId;
+
     public CheckSummary withChoiceId(String choiceId) {
         this.choiceId = choiceId;
         return this;
@@ -39,6 +41,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CheckSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CheckSummary withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensArn")
     public String lensArn;
+
     public CheckSummary withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -63,6 +68,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CheckSummary withName(String name) {
         this.name = name;
         return this;
@@ -74,6 +80,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarId")
     public String pillarId;
+
     public CheckSummary withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -82,6 +89,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Provider")
     public CheckProviderEnum provider;
+
     public CheckSummary withProvider(CheckProviderEnum provider) {
         this.provider = provider;
         return this;
@@ -93,6 +101,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionId")
     public String questionId;
+
     public CheckSummary withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
@@ -101,6 +110,7 @@ public class CheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CheckStatusEnum status;
+
     public CheckSummary withStatus(CheckStatusEnum status) {
         this.status = status;
         return this;
@@ -114,9 +124,11 @@ public class CheckSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public CheckSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CheckSummary(){}
 }

@@ -18,6 +18,7 @@ public class AcknowledgeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ackId")
     public String[] ackId;
+
     public AcknowledgeRequest withAckId(String[] ackId) {
         this.ackId = ackId;
         return this;
@@ -29,9 +30,11 @@ public class AcknowledgeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public String subscription;
+
     public AcknowledgeRequest withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public AcknowledgeRequest(){}
 }

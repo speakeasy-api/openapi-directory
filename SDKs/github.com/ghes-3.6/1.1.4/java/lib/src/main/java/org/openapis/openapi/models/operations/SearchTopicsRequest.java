@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTopicsRequest {
@@ -12,6 +13,7 @@ public class SearchTopicsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchTopicsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class SearchTopicsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchTopicsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +35,13 @@ public class SearchTopicsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchTopicsRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public SearchTopicsRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

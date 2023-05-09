@@ -15,6 +15,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanvasAppSettings")
     public CanvasAppSettings canvasAppSettings;
+
     public UserSettings withCanvasAppSettings(CanvasAppSettings canvasAppSettings) {
         this.canvasAppSettings = canvasAppSettings;
         return this;
@@ -23,6 +24,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRole")
     public String executionRole;
+
     public UserSettings withExecutionRole(String executionRole) {
         this.executionRole = executionRole;
         return this;
@@ -31,6 +33,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JupyterServerAppSettings")
     public JupyterServerAppSettings jupyterServerAppSettings;
+
     public UserSettings withJupyterServerAppSettings(JupyterServerAppSettings jupyterServerAppSettings) {
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         return this;
@@ -39,6 +42,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KernelGatewayAppSettings")
     public KernelGatewayAppSettings kernelGatewayAppSettings;
+
     public UserSettings withKernelGatewayAppSettings(KernelGatewayAppSettings kernelGatewayAppSettings) {
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
         return this;
@@ -47,6 +51,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RSessionAppSettings")
     public RSessionAppSettings rSessionAppSettings;
+
     public UserSettings withRSessionAppSettings(RSessionAppSettings rSessionAppSettings) {
         this.rSessionAppSettings = rSessionAppSettings;
         return this;
@@ -55,6 +60,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RStudioServerProAppSettings")
     public RStudioServerProAppSettings rStudioServerProAppSettings;
+
     public UserSettings withRStudioServerProAppSettings(RStudioServerProAppSettings rStudioServerProAppSettings) {
         this.rStudioServerProAppSettings = rStudioServerProAppSettings;
         return this;
@@ -63,6 +69,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public UserSettings withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -71,6 +78,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharingSettings")
     public SharingSettings sharingSettings;
+
     public UserSettings withSharingSettings(SharingSettings sharingSettings) {
         this.sharingSettings = sharingSettings;
         return this;
@@ -79,9 +87,11 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TensorBoardAppSettings")
     public TensorBoardAppSettings tensorBoardAppSettings;
+
     public UserSettings withTensorBoardAppSettings(TensorBoardAppSettings tensorBoardAppSettings) {
         this.tensorBoardAppSettings = tensorBoardAppSettings;
         return this;
     }
     
+    public UserSettings(){}
 }

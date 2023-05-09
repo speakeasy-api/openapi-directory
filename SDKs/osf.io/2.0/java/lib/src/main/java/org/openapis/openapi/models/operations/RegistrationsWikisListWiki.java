@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegistrationsWikisListWiki {
     /**
@@ -12,6 +12,7 @@ public class RegistrationsWikisListWiki {
      */
     
     public RegistrationsWikisListWikiAttributes attributes;
+
     public RegistrationsWikisListWiki withAttributes(RegistrationsWikisListWikiAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsWikisListWiki {
      */
     
     public String id;
+
     public RegistrationsWikisListWiki withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsWikisListWiki {
      */
     
     public RegistrationsWikisListWikiLinks links;
+
     public RegistrationsWikisListWiki withLinks(RegistrationsWikisListWikiLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class RegistrationsWikisListWiki {
      */
     
     public RegistrationsWikisListWikiRelationships relationships;
+
     public RegistrationsWikisListWiki withRelationships(RegistrationsWikisListWikiRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,14 @@ public class RegistrationsWikisListWiki {
      */
     
     public String type;
+
     public RegistrationsWikisListWiki withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsWikisListWiki(@JsonProperty("relationships") RegistrationsWikisListWikiRelationships relationships, @JsonProperty("type") String type) {
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

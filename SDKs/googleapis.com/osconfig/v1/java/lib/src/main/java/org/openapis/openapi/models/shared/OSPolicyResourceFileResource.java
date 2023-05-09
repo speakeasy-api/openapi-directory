@@ -18,6 +18,7 @@ public class OSPolicyResourceFileResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public OSPolicyResourceFileResource withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceFileResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public OSPolicyResourceFile file;
+
     public OSPolicyResourceFileResource withFile(OSPolicyResourceFile file) {
         this.file = file;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyResourceFileResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public OSPolicyResourceFileResource withPath(String path) {
         this.path = path;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyResourceFileResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String permissions;
+
     public OSPolicyResourceFileResource withPermissions(String permissions) {
         this.permissions = permissions;
         return this;
@@ -62,9 +66,11 @@ public class OSPolicyResourceFileResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public OSPolicyResourceFileResourceStateEnum state;
+
     public OSPolicyResourceFileResource withState(OSPolicyResourceFileResourceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public OSPolicyResourceFileResource(){}
 }

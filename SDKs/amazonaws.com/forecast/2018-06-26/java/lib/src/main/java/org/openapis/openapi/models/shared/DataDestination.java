@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataDestination {
     @JsonProperty("S3Config")
     public S3Config s3Config;
+
     public DataDestination withS3Config(S3Config s3Config) {
         this.s3Config = s3Config;
         return this;
     }
     
+    public DataDestination(@JsonProperty("S3Config") S3Config s3Config) {
+        this.s3Config = s3Config;
+  }
 }

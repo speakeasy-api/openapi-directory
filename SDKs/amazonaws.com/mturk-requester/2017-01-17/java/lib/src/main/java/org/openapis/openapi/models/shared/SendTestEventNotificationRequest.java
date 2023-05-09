@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendTestEventNotificationRequest {
     @JsonProperty("Notification")
     public NotificationSpecification notification;
+
     public SendTestEventNotificationRequest withNotification(NotificationSpecification notification) {
         this.notification = notification;
         return this;
@@ -16,9 +17,14 @@ public class SendTestEventNotificationRequest {
     
     @JsonProperty("TestEventType")
     public EventTypeEnum testEventType;
+
     public SendTestEventNotificationRequest withTestEventType(EventTypeEnum testEventType) {
         this.testEventType = testEventType;
         return this;
     }
     
+    public SendTestEventNotificationRequest(@JsonProperty("Notification") NotificationSpecification notification, @JsonProperty("TestEventType") EventTypeEnum testEventType) {
+        this.notification = notification;
+        this.testEventType = testEventType;
+  }
 }

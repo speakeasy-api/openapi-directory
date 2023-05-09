@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * BandMathConfigInput - &lt;p/&gt;
+ * BandMathConfigInput - Input structure for the BandMath operation type. Defines Predefined and CustomIndices to be computed using BandMath.
  */
 public class BandMathConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomIndices")
     public CustomIndicesInput customIndices;
+
     public BandMathConfigInput withCustomIndices(CustomIndicesInput customIndices) {
         this.customIndices = customIndices;
         return this;
@@ -23,9 +24,11 @@ public class BandMathConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredefinedIndices")
     public String[] predefinedIndices;
+
     public BandMathConfigInput withPredefinedIndices(String[] predefinedIndices) {
         this.predefinedIndices = predefinedIndices;
         return this;
     }
     
+    public BandMathConfigInput(){}
 }

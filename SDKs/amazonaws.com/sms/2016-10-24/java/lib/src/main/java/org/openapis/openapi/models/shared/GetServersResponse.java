@@ -22,6 +22,7 @@ public class GetServersResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedOn")
     public OffsetDateTime lastModifiedOn;
+
     public GetServersResponse withLastModifiedOn(OffsetDateTime lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -30,6 +31,7 @@ public class GetServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetServersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -38,6 +40,7 @@ public class GetServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCatalogStatus")
     public ServerCatalogStatusEnum serverCatalogStatus;
+
     public GetServersResponse withServerCatalogStatus(ServerCatalogStatusEnum serverCatalogStatus) {
         this.serverCatalogStatus = serverCatalogStatus;
         return this;
@@ -46,9 +49,11 @@ public class GetServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverList")
     public Server[] serverList;
+
     public GetServersResponse withServerList(Server[] serverList) {
         this.serverList = serverList;
         return this;
     }
     
+    public GetServersResponse(){}
 }

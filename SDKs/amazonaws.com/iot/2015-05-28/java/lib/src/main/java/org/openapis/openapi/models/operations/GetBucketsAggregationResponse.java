@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBucketsAggregationResponse {
     
     public String contentType;
+
     public GetBucketsAggregationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBucketsAggregationResponse getBucketsAggregationResponse;
+
     public GetBucketsAggregationResponse withGetBucketsAggregationResponse(org.openapis.openapi.models.shared.GetBucketsAggregationResponse getBucketsAggregationResponse) {
         this.getBucketsAggregationResponse = getBucketsAggregationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object indexNotReadyException;
+
     public GetBucketsAggregationResponse withIndexNotReadyException(Object indexNotReadyException) {
         this.indexNotReadyException = indexNotReadyException;
         return this;
@@ -39,6 +43,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object internalFailureException;
+
     public GetBucketsAggregationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object invalidAggregationException;
+
     public GetBucketsAggregationResponse withInvalidAggregationException(Object invalidAggregationException) {
         this.invalidAggregationException = invalidAggregationException;
         return this;
@@ -59,6 +65,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object invalidQueryException;
+
     public GetBucketsAggregationResponse withInvalidQueryException(Object invalidQueryException) {
         this.invalidQueryException = invalidQueryException;
         return this;
@@ -69,6 +76,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object invalidRequestException;
+
     public GetBucketsAggregationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetBucketsAggregationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetBucketsAggregationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class GetBucketsAggregationResponse {
     
     
     public Integer statusCode;
+
     public GetBucketsAggregationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetBucketsAggregationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBucketsAggregationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object throttlingException;
+
     public GetBucketsAggregationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class GetBucketsAggregationResponse {
      */
     
     public Object unauthorizedException;
+
     public GetBucketsAggregationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetBucketsAggregationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

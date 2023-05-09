@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsCopyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Object object;
+
     public StorageObjectsCopyRequest withObject(org.openapis.openapi.models.shared.Object object) {
         this.object = object;
         return this;
@@ -19,6 +21,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageObjectsCopyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationBucket")
     public String destinationBucket;
+
     public StorageObjectsCopyRequest withDestinationBucket(String destinationBucket) {
         this.destinationBucket = destinationBucket;
         return this;
@@ -39,6 +43,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationKmsKeyName")
     public String destinationKmsKeyName;
+
     public StorageObjectsCopyRequest withDestinationKmsKeyName(String destinationKmsKeyName) {
         this.destinationKmsKeyName = destinationKmsKeyName;
         return this;
@@ -49,6 +54,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationObject")
     public String destinationObject;
+
     public StorageObjectsCopyRequest withDestinationObject(String destinationObject) {
         this.destinationObject = destinationObject;
         return this;
@@ -59,6 +65,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationPredefinedAcl")
     public StorageObjectsCopyDestinationPredefinedACLEnum destinationPredefinedAcl;
+
     public StorageObjectsCopyRequest withDestinationPredefinedAcl(StorageObjectsCopyDestinationPredefinedACLEnum destinationPredefinedAcl) {
         this.destinationPredefinedAcl = destinationPredefinedAcl;
         return this;
@@ -69,6 +76,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageObjectsCopyRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
     public String ifGenerationMatch;
+
     public StorageObjectsCopyRequest withIfGenerationMatch(String ifGenerationMatch) {
         this.ifGenerationMatch = ifGenerationMatch;
         return this;
@@ -89,6 +98,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
     public String ifGenerationNotMatch;
+
     public StorageObjectsCopyRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
         this.ifGenerationNotMatch = ifGenerationNotMatch;
         return this;
@@ -99,6 +109,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
     public String ifMetagenerationMatch;
+
     public StorageObjectsCopyRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
         this.ifMetagenerationMatch = ifMetagenerationMatch;
         return this;
@@ -109,6 +120,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
     public String ifMetagenerationNotMatch;
+
     public StorageObjectsCopyRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
         this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
         return this;
@@ -119,6 +131,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceGenerationMatch")
     public String ifSourceGenerationMatch;
+
     public StorageObjectsCopyRequest withIfSourceGenerationMatch(String ifSourceGenerationMatch) {
         this.ifSourceGenerationMatch = ifSourceGenerationMatch;
         return this;
@@ -129,6 +142,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceGenerationNotMatch")
     public String ifSourceGenerationNotMatch;
+
     public StorageObjectsCopyRequest withIfSourceGenerationNotMatch(String ifSourceGenerationNotMatch) {
         this.ifSourceGenerationNotMatch = ifSourceGenerationNotMatch;
         return this;
@@ -139,6 +153,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceMetagenerationMatch")
     public String ifSourceMetagenerationMatch;
+
     public StorageObjectsCopyRequest withIfSourceMetagenerationMatch(String ifSourceMetagenerationMatch) {
         this.ifSourceMetagenerationMatch = ifSourceMetagenerationMatch;
         return this;
@@ -149,6 +164,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceMetagenerationNotMatch")
     public String ifSourceMetagenerationNotMatch;
+
     public StorageObjectsCopyRequest withIfSourceMetagenerationNotMatch(String ifSourceMetagenerationNotMatch) {
         this.ifSourceMetagenerationNotMatch = ifSourceMetagenerationNotMatch;
         return this;
@@ -159,6 +175,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageObjectsCopyRequest withKey(String key) {
         this.key = key;
         return this;
@@ -169,6 +186,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageObjectsCopyRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -179,6 +197,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageObjectsCopyRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -189,6 +208,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public StorageObjectsCopyProjectionEnum projection;
+
     public StorageObjectsCopyRequest withProjection(StorageObjectsCopyProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -199,6 +219,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageObjectsCopyRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -209,6 +230,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceBucket")
     public String sourceBucket;
+
     public StorageObjectsCopyRequest withSourceBucket(String sourceBucket) {
         this.sourceBucket = sourceBucket;
         return this;
@@ -219,6 +241,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceGeneration")
     public String sourceGeneration;
+
     public StorageObjectsCopyRequest withSourceGeneration(String sourceGeneration) {
         this.sourceGeneration = sourceGeneration;
         return this;
@@ -229,6 +252,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceObject")
     public String sourceObject;
+
     public StorageObjectsCopyRequest withSourceObject(String sourceObject) {
         this.sourceObject = sourceObject;
         return this;
@@ -239,6 +263,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageObjectsCopyRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -249,6 +274,7 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageObjectsCopyRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -259,9 +285,16 @@ public class StorageObjectsCopyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageObjectsCopyRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageObjectsCopyRequest(@JsonProperty("destinationBucket") String destinationBucket, @JsonProperty("destinationObject") String destinationObject, @JsonProperty("sourceBucket") String sourceBucket, @JsonProperty("sourceObject") String sourceObject) {
+        this.destinationBucket = destinationBucket;
+        this.destinationObject = destinationObject;
+        this.sourceBucket = sourceBucket;
+        this.sourceObject = sourceObject;
+  }
 }

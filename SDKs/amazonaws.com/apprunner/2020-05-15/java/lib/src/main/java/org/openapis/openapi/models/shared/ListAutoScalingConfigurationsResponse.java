@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAutoScalingConfigurationsResponse {
     @JsonProperty("AutoScalingConfigurationSummaryList")
     public AutoScalingConfigurationSummary[] autoScalingConfigurationSummaryList;
+
     public ListAutoScalingConfigurationsResponse withAutoScalingConfigurationSummaryList(AutoScalingConfigurationSummary[] autoScalingConfigurationSummaryList) {
         this.autoScalingConfigurationSummaryList = autoScalingConfigurationSummaryList;
         return this;
@@ -22,9 +23,13 @@ public class ListAutoScalingConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAutoScalingConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAutoScalingConfigurationsResponse(@JsonProperty("AutoScalingConfigurationSummaryList") AutoScalingConfigurationSummary[] autoScalingConfigurationSummaryList) {
+        this.autoScalingConfigurationSummaryList = autoScalingConfigurationSummaryList;
+  }
 }

@@ -15,6 +15,7 @@ public class ComponentCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public ComponentCandidate withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -23,6 +24,7 @@ public class ComponentCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersion")
     public String componentVersion;
+
     public ComponentCandidate withComponentVersion(String componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -31,9 +33,11 @@ public class ComponentCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionRequirements")
     public java.util.Map<String, String> versionRequirements;
+
     public ComponentCandidate withVersionRequirements(java.util.Map<String, String> versionRequirements) {
         this.versionRequirements = versionRequirements;
         return this;
     }
     
+    public ComponentCandidate(){}
 }

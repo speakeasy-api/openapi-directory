@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeHttpHealthChecksListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeHttpHealthChecksListSecurityOption1 option1;
+
     public ComputeHttpHealthChecksListSecurity withOption1(ComputeHttpHealthChecksListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeHttpHealthChecksListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeHttpHealthChecksListSecurityOption2 option2;
+
     public ComputeHttpHealthChecksListSecurity withOption2(ComputeHttpHealthChecksListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeHttpHealthChecksListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeHttpHealthChecksListSecurityOption3 option3;
+
     public ComputeHttpHealthChecksListSecurity withOption3(ComputeHttpHealthChecksListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeHttpHealthChecksListSecurity(){}
 }

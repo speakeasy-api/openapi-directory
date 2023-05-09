@@ -12,6 +12,7 @@ public class RemotestartRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargestation")
     public String chargestation;
+
     public RemotestartRequestBody withChargestation(String chargestation) {
         this.chargestation = chargestation;
         return this;
@@ -20,6 +21,7 @@ public class RemotestartRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connector")
     public String connector;
+
     public RemotestartRequestBody withConnector(String connector) {
         this.connector = connector;
         return this;
@@ -28,6 +30,7 @@ public class RemotestartRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driver")
     public String driver;
+
     public RemotestartRequestBody withDriver(String driver) {
         this.driver = driver;
         return this;
@@ -36,9 +39,11 @@ public class RemotestartRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public RemotestartRequestBody withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RemotestartRequestBody(){}
 }

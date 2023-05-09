@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInferenceExperimentResponse {
     
     public String contentType;
+
     public CreateInferenceExperimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateInferenceExperimentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateInferenceExperimentResponse createInferenceExperimentResponse;
+
     public CreateInferenceExperimentResponse withCreateInferenceExperimentResponse(org.openapis.openapi.models.shared.CreateInferenceExperimentResponse createInferenceExperimentResponse) {
         this.createInferenceExperimentResponse = createInferenceExperimentResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateInferenceExperimentResponse {
      */
     
     public Object resourceInUse;
+
     public CreateInferenceExperimentResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -36,6 +40,7 @@ public class CreateInferenceExperimentResponse {
     
     
     public Integer statusCode;
+
     public CreateInferenceExperimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateInferenceExperimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInferenceExperimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateInferenceExperimentResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateInferenceExperimentResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateInferenceExperimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

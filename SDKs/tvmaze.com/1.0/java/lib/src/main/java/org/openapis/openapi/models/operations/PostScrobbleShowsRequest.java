@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostScrobbleShowsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostScrobbleShowsRequestBody[] requestBody;
+
     public PostScrobbleShowsRequest withRequestBody(PostScrobbleShowsRequestBody[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +20,7 @@ public class PostScrobbleShowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imdb_id")
     public Long imdbId;
+
     public PostScrobbleShowsRequest withImdbId(Long imdbId) {
         this.imdbId = imdbId;
         return this;
@@ -29,6 +31,7 @@ public class PostScrobbleShowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thetvdb_id")
     public Long thetvdbId;
+
     public PostScrobbleShowsRequest withThetvdbId(Long thetvdbId) {
         this.thetvdbId = thetvdbId;
         return this;
@@ -39,9 +42,11 @@ public class PostScrobbleShowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tvmaze_id")
     public Long tvmazeId;
+
     public PostScrobbleShowsRequest withTvmazeId(Long tvmazeId) {
         this.tvmazeId = tvmazeId;
         return this;
     }
     
+    public PostScrobbleShowsRequest(){}
 }

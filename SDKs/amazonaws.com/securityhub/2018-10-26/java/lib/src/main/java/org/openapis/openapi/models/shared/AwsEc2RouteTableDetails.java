@@ -15,6 +15,7 @@ public class AwsEc2RouteTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationSet")
     public AssociationSetDetails[] associationSet;
+
     public AwsEc2RouteTableDetails withAssociationSet(AssociationSetDetails[] associationSet) {
         this.associationSet = associationSet;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2RouteTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public AwsEc2RouteTableDetails withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2RouteTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropagatingVgwSet")
     public PropagatingVgwSetDetails[] propagatingVgwSet;
+
     public AwsEc2RouteTableDetails withPropagatingVgwSet(PropagatingVgwSetDetails[] propagatingVgwSet) {
         this.propagatingVgwSet = propagatingVgwSet;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2RouteTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteSet")
     public RouteSetDetails[] routeSet;
+
     public AwsEc2RouteTableDetails withRouteSet(RouteSetDetails[] routeSet) {
         this.routeSet = routeSet;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2RouteTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteTableId")
     public String routeTableId;
+
     public AwsEc2RouteTableDetails withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -55,9 +60,11 @@ public class AwsEc2RouteTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsEc2RouteTableDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsEc2RouteTableDetails(){}
 }

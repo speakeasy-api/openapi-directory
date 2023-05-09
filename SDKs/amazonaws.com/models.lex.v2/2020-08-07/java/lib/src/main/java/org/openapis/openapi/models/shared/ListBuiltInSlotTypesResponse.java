@@ -15,6 +15,7 @@ public class ListBuiltInSlotTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builtInSlotTypeSummaries")
     public BuiltInSlotTypeSummary[] builtInSlotTypeSummaries;
+
     public ListBuiltInSlotTypesResponse withBuiltInSlotTypeSummaries(BuiltInSlotTypeSummary[] builtInSlotTypeSummaries) {
         this.builtInSlotTypeSummaries = builtInSlotTypeSummaries;
         return this;
@@ -23,6 +24,7 @@ public class ListBuiltInSlotTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListBuiltInSlotTypesResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -31,9 +33,11 @@ public class ListBuiltInSlotTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBuiltInSlotTypesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBuiltInSlotTypesResponse(){}
 }

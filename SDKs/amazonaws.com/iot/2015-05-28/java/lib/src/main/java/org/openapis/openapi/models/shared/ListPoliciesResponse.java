@@ -15,6 +15,7 @@ public class ListPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextMarker")
     public String nextMarker;
+
     public ListPoliciesResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public Policy[] policies;
+
     public ListPoliciesResponse withPolicies(Policy[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public ListPoliciesResponse(){}
 }

@@ -14,6 +14,7 @@ public class ListResourcesAssociatedToCustomLineItemRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public ListResourcesAssociatedToCustomLineItemRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class ListResourcesAssociatedToCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriod")
     public String billingPeriod;
+
     public ListResourcesAssociatedToCustomLineItemRequestBody withBillingPeriod(String billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -36,6 +38,7 @@ public class ListResourcesAssociatedToCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ListResourcesAssociatedToCustomLineItemRequestBodyFilters filters;
+
     public ListResourcesAssociatedToCustomLineItemRequestBody withFilters(ListResourcesAssociatedToCustomLineItemRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -47,6 +50,7 @@ public class ListResourcesAssociatedToCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResourcesAssociatedToCustomLineItemRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -58,9 +62,13 @@ public class ListResourcesAssociatedToCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourcesAssociatedToCustomLineItemRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourcesAssociatedToCustomLineItemRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

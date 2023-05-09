@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirestoreProjectsDatabasesDocumentsRollbackSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsRollbackSecurityOption1 option1;
+
     public FirestoreProjectsDatabasesDocumentsRollbackSecurity withOption1(FirestoreProjectsDatabasesDocumentsRollbackSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirestoreProjectsDatabasesDocumentsRollbackSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsRollbackSecurityOption2 option2;
+
     public FirestoreProjectsDatabasesDocumentsRollbackSecurity withOption2(FirestoreProjectsDatabasesDocumentsRollbackSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsRollbackSecurity(){}
 }

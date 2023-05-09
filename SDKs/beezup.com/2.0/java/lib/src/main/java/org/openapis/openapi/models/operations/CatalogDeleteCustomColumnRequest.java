@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogDeleteCustomColumnRequest {
@@ -12,6 +13,7 @@ public class CatalogDeleteCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public CatalogDeleteCustomColumnRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -22,9 +24,14 @@ public class CatalogDeleteCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public CatalogDeleteCustomColumnRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CatalogDeleteCustomColumnRequest(@JsonProperty("columnId") String columnId, @JsonProperty("storeId") String storeId) {
+        this.columnId = columnId;
+        this.storeId = storeId;
+  }
 }

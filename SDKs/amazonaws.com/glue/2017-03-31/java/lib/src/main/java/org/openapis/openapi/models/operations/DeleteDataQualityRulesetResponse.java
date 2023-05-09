@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDataQualityRulesetResponse {
     
     public String contentType;
+
     public DeleteDataQualityRulesetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDataQualityRulesetResponse {
      */
     
     public java.util.Map<String, Object> deleteDataQualityRulesetResponse;
+
     public DeleteDataQualityRulesetResponse withDeleteDataQualityRulesetResponse(java.util.Map<String, Object> deleteDataQualityRulesetResponse) {
         this.deleteDataQualityRulesetResponse = deleteDataQualityRulesetResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDataQualityRulesetResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteDataQualityRulesetResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDataQualityRulesetResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteDataQualityRulesetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDataQualityRulesetResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteDataQualityRulesetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDataQualityRulesetResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteDataQualityRulesetResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteDataQualityRulesetResponse {
     
     
     public Integer statusCode;
+
     public DeleteDataQualityRulesetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDataQualityRulesetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDataQualityRulesetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDataQualityRulesetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

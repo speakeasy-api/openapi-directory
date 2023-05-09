@@ -12,9 +12,13 @@ public class DeleteTagsRequestBody {
      */
     @JsonProperty("TagKeys")
     public String[] tagKeys;
+
     public DeleteTagsRequestBody withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public DeleteTagsRequestBody(@JsonProperty("TagKeys") String[] tagKeys) {
+        this.tagKeys = tagKeys;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EinVerificationComprehensive200ApplicationJSON {
     @JsonProperty("ein")
     public String ein;
+
     public EinVerificationComprehensive200ApplicationJSON withEin(String ein) {
         this.ein = ein;
         return this;
@@ -19,6 +20,7 @@ public class EinVerificationComprehensive200ApplicationJSON {
     
     @JsonProperty("matched_ein_companies")
     public org.openapis.openapi.models.shared.Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies[] matchedEinCompanies;
+
     public EinVerificationComprehensive200ApplicationJSON withMatchedEinCompanies(org.openapis.openapi.models.shared.Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies[] matchedEinCompanies) {
         this.matchedEinCompanies = matchedEinCompanies;
         return this;
@@ -26,6 +28,7 @@ public class EinVerificationComprehensive200ApplicationJSON {
     
     @JsonProperty("timestamp")
     public Double timestamp;
+
     public EinVerificationComprehensive200ApplicationJSON withTimestamp(Double timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -33,9 +36,16 @@ public class EinVerificationComprehensive200ApplicationJSON {
     
     @JsonProperty("validationStatus")
     public Boolean validationStatus;
+
     public EinVerificationComprehensive200ApplicationJSON withValidationStatus(Boolean validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public EinVerificationComprehensive200ApplicationJSON(@JsonProperty("ein") String ein, @JsonProperty("matched_ein_companies") org.openapis.openapi.models.shared.Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies[] matchedEinCompanies, @JsonProperty("timestamp") Double timestamp, @JsonProperty("validationStatus") Boolean validationStatus) {
+        this.ein = ein;
+        this.matchedEinCompanies = matchedEinCompanies;
+        this.timestamp = timestamp;
+        this.validationStatus = validationStatus;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Leg {
     @JsonProperty("Distance")
     public Double distance;
+
     public Leg withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -21,6 +22,7 @@ public class Leg {
     
     @JsonProperty("DurationSeconds")
     public Double durationSeconds;
+
     public Leg withDurationSeconds(Double durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -28,6 +30,7 @@ public class Leg {
     
     @JsonProperty("EndPosition")
     public Double[] endPosition;
+
     public Leg withEndPosition(Double[] endPosition) {
         this.endPosition = endPosition;
         return this;
@@ -36,6 +39,7 @@ public class Leg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Geometry")
     public LegGeometry geometry;
+
     public Leg withGeometry(LegGeometry geometry) {
         this.geometry = geometry;
         return this;
@@ -43,6 +47,7 @@ public class Leg {
     
     @JsonProperty("StartPosition")
     public Double[] startPosition;
+
     public Leg withStartPosition(Double[] startPosition) {
         this.startPosition = startPosition;
         return this;
@@ -50,9 +55,17 @@ public class Leg {
     
     @JsonProperty("Steps")
     public Step[] steps;
+
     public Leg withSteps(Step[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public Leg(@JsonProperty("Distance") Double distance, @JsonProperty("DurationSeconds") Double durationSeconds, @JsonProperty("EndPosition") Double[] endPosition, @JsonProperty("StartPosition") Double[] startPosition, @JsonProperty("Steps") Step[] steps) {
+        this.distance = distance;
+        this.durationSeconds = durationSeconds;
+        this.endPosition = endPosition;
+        this.startPosition = startPosition;
+        this.steps = steps;
+  }
 }

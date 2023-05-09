@@ -15,6 +15,7 @@ public class MutanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public MutanRequestBodyCertificateParameters certificateParameters;
+
     public MutanRequestBody withCertificateParameters(MutanRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class MutanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public MutanRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class MutanRequestBody {
      */
     @JsonProperty("format")
     public MutanRequestBodyFormatEnum format;
+
     public MutanRequestBody withFormat(MutanRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class MutanRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public MutanRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public MutanRequestBody(@JsonProperty("format") MutanRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

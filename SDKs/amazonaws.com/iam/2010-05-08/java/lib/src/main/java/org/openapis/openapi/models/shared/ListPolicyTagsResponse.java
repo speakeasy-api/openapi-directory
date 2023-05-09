@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListPolicyTagsResponse - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListPolicyTagsResponse {
     
     public Boolean isTruncated;
+
     public ListPolicyTagsResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListPolicyTagsResponse {
     
     
     public String marker;
+
     public ListPolicyTagsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,13 @@ public class ListPolicyTagsResponse {
     
     
     public Tag[] tags;
+
     public ListPolicyTagsResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListPolicyTagsResponse(@JsonProperty("Tags") Tag[] tags) {
+        this.tags = tags;
+  }
 }

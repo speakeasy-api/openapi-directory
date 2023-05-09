@@ -15,6 +15,7 @@ public class LocationTimestamp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public LocationTimestamp withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -22,9 +23,13 @@ public class LocationTimestamp {
     
     @JsonProperty("value")
     public String value;
+
     public LocationTimestamp withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public LocationTimestamp(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

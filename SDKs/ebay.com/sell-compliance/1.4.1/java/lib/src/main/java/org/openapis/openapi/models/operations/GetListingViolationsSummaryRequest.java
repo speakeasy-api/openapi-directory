@@ -12,6 +12,7 @@ public class GetListingViolationsSummaryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetListingViolationsSummaryRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,9 +23,11 @@ public class GetListingViolationsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compliance_type")
     public String complianceType;
+
     public GetListingViolationsSummaryRequest withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
     }
     
+    public GetListingViolationsSummaryRequest(){}
 }

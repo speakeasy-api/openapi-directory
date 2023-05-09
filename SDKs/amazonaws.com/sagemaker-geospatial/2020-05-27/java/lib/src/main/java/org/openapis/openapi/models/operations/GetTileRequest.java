@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTileRequest {
@@ -12,8 +13,20 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
     public String arn;
+
     public GetTileRequest withArn(String arn) {
         this.arn = arn;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that you specify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExecutionRoleArn")
+    public String executionRoleArn;
+
+    public GetTileRequest withExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
         return this;
     }
     
@@ -22,6 +35,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ImageAssets")
     public String[] imageAssets;
+
     public GetTileRequest withImageAssets(String[] imageAssets) {
         this.imageAssets = imageAssets;
         return this;
@@ -32,6 +46,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ImageMask")
     public Boolean imageMask;
+
     public GetTileRequest withImageMask(Boolean imageMask) {
         this.imageMask = imageMask;
         return this;
@@ -42,6 +57,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OutputDataType")
     public GetTileOutputDataTypeEnum outputDataType;
+
     public GetTileRequest withOutputDataType(GetTileOutputDataTypeEnum outputDataType) {
         this.outputDataType = outputDataType;
         return this;
@@ -52,6 +68,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OutputFormat")
     public String outputFormat;
+
     public GetTileRequest withOutputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -62,6 +79,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PropertyFilters")
     public String propertyFilters;
+
     public GetTileRequest withPropertyFilters(String propertyFilters) {
         this.propertyFilters = propertyFilters;
         return this;
@@ -72,6 +90,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Target")
     public GetTileTargetEnum target;
+
     public GetTileRequest withTarget(GetTileTargetEnum target) {
         this.target = target;
         return this;
@@ -82,6 +101,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TimeRangeFilter")
     public String timeRangeFilter;
+
     public GetTileRequest withTimeRangeFilter(String timeRangeFilter) {
         this.timeRangeFilter = timeRangeFilter;
         return this;
@@ -89,6 +109,7 @@ public class GetTileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetTileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -96,6 +117,7 @@ public class GetTileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetTileRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -103,6 +125,7 @@ public class GetTileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetTileRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -110,6 +133,7 @@ public class GetTileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetTileRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -117,6 +141,7 @@ public class GetTileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetTileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -124,6 +149,7 @@ public class GetTileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetTileRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -131,6 +157,7 @@ public class GetTileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetTileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -141,6 +168,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=x")
     public Long x;
+
     public GetTileRequest withX(Long x) {
         this.x = x;
         return this;
@@ -151,6 +179,7 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=y")
     public Long y;
+
     public GetTileRequest withY(Long y) {
         this.y = y;
         return this;
@@ -161,9 +190,18 @@ public class GetTileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
     public Long z;
+
     public GetTileRequest withZ(Long z) {
         this.z = z;
         return this;
     }
     
+    public GetTileRequest(@JsonProperty("Arn") String arn, @JsonProperty("ImageAssets") String[] imageAssets, @JsonProperty("Target") GetTileTargetEnum target, @JsonProperty("x") Long x, @JsonProperty("y") Long y, @JsonProperty("z") Long z) {
+        this.arn = arn;
+        this.imageAssets = imageAssets;
+        this.target = target;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+  }
 }

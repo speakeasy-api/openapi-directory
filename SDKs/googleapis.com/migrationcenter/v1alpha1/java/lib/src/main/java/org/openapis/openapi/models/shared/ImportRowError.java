@@ -18,6 +18,7 @@ public class ImportRowError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ImportError[] errors;
+
     public ImportRowError withErrors(ImportError[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +30,7 @@ public class ImportRowError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowNumber")
     public Integer rowNumber;
+
     public ImportRowError withRowNumber(Integer rowNumber) {
         this.rowNumber = rowNumber;
         return this;
@@ -40,6 +42,7 @@ public class ImportRowError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmName")
     public String vmName;
+
     public ImportRowError withVmName(String vmName) {
         this.vmName = vmName;
         return this;
@@ -51,9 +54,11 @@ public class ImportRowError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmUuid")
     public String vmUuid;
+
     public ImportRowError withVmUuid(String vmUuid) {
         this.vmUuid = vmUuid;
         return this;
     }
     
+    public ImportRowError(){}
 }

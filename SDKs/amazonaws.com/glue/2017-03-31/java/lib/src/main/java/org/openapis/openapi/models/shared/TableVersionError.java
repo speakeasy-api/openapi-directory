@@ -15,6 +15,7 @@ public class TableVersionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetail")
     public ErrorDetail errorDetail;
+
     public TableVersionError withErrorDetail(ErrorDetail errorDetail) {
         this.errorDetail = errorDetail;
         return this;
@@ -23,6 +24,7 @@ public class TableVersionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public TableVersionError withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -31,9 +33,11 @@ public class TableVersionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public TableVersionError withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public TableVersionError(){}
 }

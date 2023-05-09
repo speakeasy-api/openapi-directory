@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseSyslog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnterpriseSettingsEnterpriseSyslog withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseSyslog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol_name")
     public String protocolName;
+
     public EnterpriseSettingsEnterpriseSyslog withProtocolName(String protocolName) {
         this.protocolName = protocolName;
         return this;
@@ -28,9 +30,11 @@ public class EnterpriseSettingsEnterpriseSyslog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public String server;
+
     public EnterpriseSettingsEnterpriseSyslog withServer(String server) {
         this.server = server;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseSyslog(){}
 }

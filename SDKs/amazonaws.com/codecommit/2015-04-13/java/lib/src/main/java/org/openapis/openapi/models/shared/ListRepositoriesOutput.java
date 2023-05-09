@@ -15,6 +15,7 @@ public class ListRepositoriesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRepositoriesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRepositoriesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public RepositoryNameIdPair[] repositories;
+
     public ListRepositoriesOutput withRepositories(RepositoryNameIdPair[] repositories) {
         this.repositories = repositories;
         return this;
     }
     
+    public ListRepositoriesOutput(){}
 }

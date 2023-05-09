@@ -15,6 +15,7 @@ public class InstanceGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingPolicy")
     public AutoScalingPolicy autoScalingPolicy;
+
     public InstanceGroupConfig withAutoScalingPolicy(AutoScalingPolicy autoScalingPolicy) {
         this.autoScalingPolicy = autoScalingPolicy;
         return this;
@@ -23,6 +24,7 @@ public class InstanceGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BidPrice")
     public String bidPrice;
+
     public InstanceGroupConfig withBidPrice(String bidPrice) {
         this.bidPrice = bidPrice;
         return this;
@@ -31,6 +33,7 @@ public class InstanceGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public Configuration[] configurations;
+
     public InstanceGroupConfig withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -39,6 +42,7 @@ public class InstanceGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomAmiId")
     public String customAmiId;
+
     public InstanceGroupConfig withCustomAmiId(String customAmiId) {
         this.customAmiId = customAmiId;
         return this;
@@ -47,6 +51,7 @@ public class InstanceGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsConfiguration")
     public EbsConfiguration ebsConfiguration;
+
     public InstanceGroupConfig withEbsConfiguration(EbsConfiguration ebsConfiguration) {
         this.ebsConfiguration = ebsConfiguration;
         return this;
@@ -54,6 +59,7 @@ public class InstanceGroupConfig {
     
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public InstanceGroupConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -61,6 +67,7 @@ public class InstanceGroupConfig {
     
     @JsonProperty("InstanceRole")
     public InstanceRoleTypeEnum instanceRole;
+
     public InstanceGroupConfig withInstanceRole(InstanceRoleTypeEnum instanceRole) {
         this.instanceRole = instanceRole;
         return this;
@@ -68,6 +75,7 @@ public class InstanceGroupConfig {
     
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public InstanceGroupConfig withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -76,6 +84,7 @@ public class InstanceGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Market")
     public MarketTypeEnum market;
+
     public InstanceGroupConfig withMarket(MarketTypeEnum market) {
         this.market = market;
         return this;
@@ -84,9 +93,15 @@ public class InstanceGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InstanceGroupConfig withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InstanceGroupConfig(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("InstanceRole") InstanceRoleTypeEnum instanceRole, @JsonProperty("InstanceType") String instanceType) {
+        this.instanceCount = instanceCount;
+        this.instanceRole = instanceRole;
+        this.instanceType = instanceType;
+  }
 }

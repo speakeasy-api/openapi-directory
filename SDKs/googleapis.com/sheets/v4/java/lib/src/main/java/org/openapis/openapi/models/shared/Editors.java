@@ -18,6 +18,7 @@ public class Editors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainUsersCanEdit")
     public Boolean domainUsersCanEdit;
+
     public Editors withDomainUsersCanEdit(Boolean domainUsersCanEdit) {
         this.domainUsersCanEdit = domainUsersCanEdit;
         return this;
@@ -29,6 +30,7 @@ public class Editors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public String[] groups;
+
     public Editors withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -40,9 +42,11 @@ public class Editors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public String[] users;
+
     public Editors withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public Editors(){}
 }

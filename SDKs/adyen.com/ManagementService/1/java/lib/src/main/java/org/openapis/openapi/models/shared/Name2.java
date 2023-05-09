@@ -15,6 +15,7 @@ public class Name2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public Name2 withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -26,9 +27,11 @@ public class Name2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public Name2 withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public Name2(){}
 }

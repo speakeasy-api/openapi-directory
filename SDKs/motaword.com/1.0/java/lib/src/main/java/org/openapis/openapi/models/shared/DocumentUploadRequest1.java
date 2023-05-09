@@ -12,6 +12,7 @@ public class DocumentUploadRequest1 {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public DocumentUploadRequestDocuments documents;
+
     public DocumentUploadRequest1 withDocuments(DocumentUploadRequestDocuments documents) {
         this.documents = documents;
         return this;
@@ -22,6 +23,7 @@ public class DocumentUploadRequest1 {
      */
     @SpeakeasyMetadata("multipartForm:name=schemes")
     public String schemes;
+
     public DocumentUploadRequest1 withSchemes(String schemes) {
         this.schemes = schemes;
         return this;
@@ -29,9 +31,11 @@ public class DocumentUploadRequest1 {
     
     @SpeakeasyMetadata("multipartForm:name=source-link,json")
     public LinkedSourceDocument sourceLink;
+
     public DocumentUploadRequest1 withSourceLink(LinkedSourceDocument sourceLink) {
         this.sourceLink = sourceLink;
         return this;
     }
     
+    public DocumentUploadRequest1(){}
 }

@@ -12,6 +12,7 @@ public class UpdateEnvironmentTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateEnvironmentTemplateVersionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateEnvironmentTemplateVersionInput {
     
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public UpdateEnvironmentTemplateVersionInput withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -26,6 +28,7 @@ public class UpdateEnvironmentTemplateVersionInput {
     
     @JsonProperty("minorVersion")
     public String minorVersion;
+
     public UpdateEnvironmentTemplateVersionInput withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -34,6 +37,7 @@ public class UpdateEnvironmentTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TemplateVersionStatusEnum status;
+
     public UpdateEnvironmentTemplateVersionInput withStatus(TemplateVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -41,9 +45,15 @@ public class UpdateEnvironmentTemplateVersionInput {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public UpdateEnvironmentTemplateVersionInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public UpdateEnvironmentTemplateVersionInput(@JsonProperty("majorVersion") String majorVersion, @JsonProperty("minorVersion") String minorVersion, @JsonProperty("templateName") String templateName) {
+        this.majorVersion = majorVersion;
+        this.minorVersion = minorVersion;
+        this.templateName = templateName;
+  }
 }

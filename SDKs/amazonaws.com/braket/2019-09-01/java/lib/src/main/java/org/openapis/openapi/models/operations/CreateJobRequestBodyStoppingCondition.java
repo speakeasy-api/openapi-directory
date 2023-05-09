@@ -15,9 +15,11 @@ public class CreateJobRequestBodyStoppingCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRuntimeInSeconds")
     public Long maxRuntimeInSeconds;
+
     public CreateJobRequestBodyStoppingCondition withMaxRuntimeInSeconds(Long maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
         return this;
     }
     
+    public CreateJobRequestBodyStoppingCondition(){}
 }

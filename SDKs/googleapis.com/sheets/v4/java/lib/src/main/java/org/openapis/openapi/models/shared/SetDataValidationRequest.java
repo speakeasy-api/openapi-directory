@@ -18,6 +18,7 @@ public class SetDataValidationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public SetDataValidationRequest withRange(GridRange range) {
         this.range = range;
         return this;
@@ -29,9 +30,11 @@ public class SetDataValidationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public DataValidationRule rule;
+
     public SetDataValidationRequest withRule(DataValidationRule rule) {
         this.rule = rule;
         return this;
     }
     
+    public SetDataValidationRequest(){}
 }

@@ -12,9 +12,13 @@ public class DeleteFleetRequestBody {
      */
     @JsonProperty("fleet")
     public String fleet;
+
     public DeleteFleetRequestBody withFleet(String fleet) {
         this.fleet = fleet;
         return this;
     }
     
+    public DeleteFleetRequestBody(@JsonProperty("fleet") String fleet) {
+        this.fleet = fleet;
+  }
 }

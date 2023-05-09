@@ -18,6 +18,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costType")
     public String costType;
+
     public ShippingOption withCostType(String costType) {
         this.costType = costType;
         return this;
@@ -29,6 +30,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insuranceFee")
     public Amount insuranceFee;
+
     public ShippingOption withInsuranceFee(Amount insuranceFee) {
         this.insuranceFee = insuranceFee;
         return this;
@@ -40,6 +42,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insuranceOffered")
     public Boolean insuranceOffered;
+
     public ShippingOption withInsuranceOffered(Boolean insuranceOffered) {
         this.insuranceOffered = insuranceOffered;
         return this;
@@ -51,6 +54,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optionType")
     public String optionType;
+
     public ShippingOption withOptionType(String optionType) {
         this.optionType = optionType;
         return this;
@@ -62,6 +66,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageHandlingCost")
     public Amount packageHandlingCost;
+
     public ShippingOption withPackageHandlingCost(Amount packageHandlingCost) {
         this.packageHandlingCost = packageHandlingCost;
         return this;
@@ -73,6 +78,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateTableId")
     public String rateTableId;
+
     public ShippingOption withRateTableId(String rateTableId) {
         this.rateTableId = rateTableId;
         return this;
@@ -84,6 +90,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingDiscountProfileId")
     public String shippingDiscountProfileId;
+
     public ShippingOption withShippingDiscountProfileId(String shippingDiscountProfileId) {
         this.shippingDiscountProfileId = shippingDiscountProfileId;
         return this;
@@ -95,6 +102,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingPromotionOffered")
     public Boolean shippingPromotionOffered;
+
     public ShippingOption withShippingPromotionOffered(Boolean shippingPromotionOffered) {
         this.shippingPromotionOffered = shippingPromotionOffered;
         return this;
@@ -106,9 +114,11 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingServices")
     public ShippingService[] shippingServices;
+
     public ShippingOption withShippingServices(ShippingService[] shippingServices) {
         this.shippingServices = shippingServices;
         return this;
     }
     
+    public ShippingOption(){}
 }

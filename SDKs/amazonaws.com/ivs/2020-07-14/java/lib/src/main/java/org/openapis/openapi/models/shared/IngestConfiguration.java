@@ -15,6 +15,7 @@ public class IngestConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public AudioConfiguration audio;
+
     public IngestConfiguration withAudio(AudioConfiguration audio) {
         this.audio = audio;
         return this;
@@ -23,9 +24,11 @@ public class IngestConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public VideoConfiguration video;
+
     public IngestConfiguration withVideo(VideoConfiguration video) {
         this.video = video;
         return this;
     }
     
+    public IngestConfiguration(){}
 }

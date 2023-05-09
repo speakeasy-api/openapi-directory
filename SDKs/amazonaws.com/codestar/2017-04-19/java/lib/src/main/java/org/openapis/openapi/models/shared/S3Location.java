@@ -15,6 +15,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketKey")
     public String bucketKey;
+
     public S3Location withBucketKey(String bucketKey) {
         this.bucketKey = bucketKey;
         return this;
@@ -23,9 +24,11 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public S3Location withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
     
+    public S3Location(){}
 }

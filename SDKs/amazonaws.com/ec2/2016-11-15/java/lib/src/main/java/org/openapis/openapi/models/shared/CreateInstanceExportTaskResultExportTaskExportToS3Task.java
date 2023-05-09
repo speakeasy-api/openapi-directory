@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceExportTaskResultExportTaskExportToS3Task {
     
     public CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum containerFormat;
+
     public CreateInstanceExportTaskResultExportTaskExportToS3Task withContainerFormat(CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum containerFormat) {
         this.containerFormat = containerFormat;
         return this;
@@ -19,6 +20,7 @@ public class CreateInstanceExportTaskResultExportTaskExportToS3Task {
     
     
     public CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum diskImageFormat;
+
     public CreateInstanceExportTaskResultExportTaskExportToS3Task withDiskImageFormat(CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum diskImageFormat) {
         this.diskImageFormat = diskImageFormat;
         return this;
@@ -26,6 +28,7 @@ public class CreateInstanceExportTaskResultExportTaskExportToS3Task {
     
     
     public String s3Bucket;
+
     public CreateInstanceExportTaskResultExportTaskExportToS3Task withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -33,9 +36,11 @@ public class CreateInstanceExportTaskResultExportTaskExportToS3Task {
     
     
     public String s3Key;
+
     public CreateInstanceExportTaskResultExportTaskExportToS3Task withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
     }
     
+    public CreateInstanceExportTaskResultExportTaskExportToS3Task(){}
 }

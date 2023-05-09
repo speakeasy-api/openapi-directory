@@ -116,6 +116,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -139,12 +144,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse() {{
+        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse(contentType, httpRes.statusCode()) {{
             mbusData = null;
             textError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,12 +186,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMultiResponse res = new org.openapis.openapi.models.operations.GetMultiResponse() {{
+        org.openapis.openapi.models.operations.GetMultiResponse res = new org.openapis.openapi.models.operations.GetMultiResponse(contentType, httpRes.statusCode()) {{
             mbusData = null;
             textError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,12 +227,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HatResponse res = new org.openapis.openapi.models.operations.HatResponse() {{
+        org.openapis.openapi.models.operations.HatResponse res = new org.openapis.openapi.models.operations.HatResponse(contentType, httpRes.statusCode()) {{
             hat = null;
             textError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,11 +269,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HatOffResponse res = new org.openapis.openapi.models.operations.HatOffResponse() {{
+        org.openapis.openapi.models.operations.HatOffResponse res = new org.openapis.openapi.models.operations.HatOffResponse(contentType, httpRes.statusCode()) {{
             textError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -308,11 +305,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HatOnResponse res = new org.openapis.openapi.models.operations.HatOnResponse() {{
+        org.openapis.openapi.models.operations.HatOnResponse res = new org.openapis.openapi.models.operations.HatOnResponse(contentType, httpRes.statusCode()) {{
             textError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,12 +341,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MbusApiResponse res = new org.openapis.openapi.models.operations.MbusApiResponse() {{
+        org.openapis.openapi.models.operations.MbusApiResponse res = new org.openapis.openapi.models.operations.MbusApiResponse(contentType, httpRes.statusCode()) {{
             yaml = null;
             textError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,12 +383,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScanResponse res = new org.openapis.openapi.models.operations.ScanResponse() {{
+        org.openapis.openapi.models.operations.ScanResponse res = new org.openapis.openapi.models.operations.ScanResponse(contentType, httpRes.statusCode()) {{
             slaves = null;
             textError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

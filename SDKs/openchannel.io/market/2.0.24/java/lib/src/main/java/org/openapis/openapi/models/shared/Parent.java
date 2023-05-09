@@ -15,9 +15,11 @@ public class Parent {
      */
     
     public Status status;
+
     public Parent withStatus(Status status) {
         this.status = status;
         return this;
     }
     
+    public Parent(){}
 }

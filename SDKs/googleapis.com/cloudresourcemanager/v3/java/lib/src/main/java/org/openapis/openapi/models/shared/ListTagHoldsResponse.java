@@ -18,6 +18,7 @@ public class ListTagHoldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTagHoldsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTagHoldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagHolds")
     public TagHold[] tagHolds;
+
     public ListTagHoldsResponse withTagHolds(TagHold[] tagHolds) {
         this.tagHolds = tagHolds;
         return this;
     }
     
+    public ListTagHoldsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MainAppResponse {
     
     public byte[] body;
+
     public MainAppResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class MainAppResponse {
     
     
     public String contentType;
+
     public MainAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class MainAppResponse {
     
     
     public Integer statusCode;
+
     public MainAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class MainAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MainAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class MainAppResponse {
      */
     
     public String mainApp400WildcardString;
+
     public MainAppResponse withMainApp400WildcardString(String mainApp400WildcardString) {
         this.mainApp400WildcardString = mainApp400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class MainAppResponse {
      */
     
     public String mainApp401WildcardString;
+
     public MainAppResponse withMainApp401WildcardString(String mainApp401WildcardString) {
         this.mainApp401WildcardString = mainApp401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class MainAppResponse {
      */
     
     public String mainApp404WildcardString;
+
     public MainAppResponse withMainApp404WildcardString(String mainApp404WildcardString) {
         this.mainApp404WildcardString = mainApp404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class MainAppResponse {
      */
     
     public String mainApp409WildcardString;
+
     public MainAppResponse withMainApp409WildcardString(String mainApp409WildcardString) {
         this.mainApp409WildcardString = mainApp409WildcardString;
         return this;
     }
     
+    public MainAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

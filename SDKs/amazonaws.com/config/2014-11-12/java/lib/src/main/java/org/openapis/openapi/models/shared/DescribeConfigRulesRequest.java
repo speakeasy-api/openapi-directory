@@ -15,6 +15,7 @@ public class DescribeConfigRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleNames")
     public String[] configRuleNames;
+
     public DescribeConfigRulesRequest withConfigRuleNames(String[] configRuleNames) {
         this.configRuleNames = configRuleNames;
         return this;
@@ -23,6 +24,7 @@ public class DescribeConfigRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public DescribeConfigRulesFilters filters;
+
     public DescribeConfigRulesRequest withFilters(DescribeConfigRulesFilters filters) {
         this.filters = filters;
         return this;
@@ -31,9 +33,11 @@ public class DescribeConfigRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConfigRulesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConfigRulesRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CategoriesOneRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ecosystem_id")
     public String ecosystemId;
+
     public CategoriesOneRequest withEcosystemId(String ecosystemId) {
         this.ecosystemId = ecosystemId;
         return this;
@@ -19,9 +21,14 @@ public class CategoriesOneRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public CategoriesOneRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CategoriesOneRequest(@JsonProperty("ecosystem_id") String ecosystemId, @JsonProperty("id") String id) {
+        this.ecosystemId = ecosystemId;
+        this.id = id;
+  }
 }

@@ -18,6 +18,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheFillBytes")
     public String cacheFillBytes;
+
     public HttpRequest withCacheFillBytes(String cacheFillBytes) {
         this.cacheFillBytes = cacheFillBytes;
         return this;
@@ -29,6 +30,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheHit")
     public Boolean cacheHit;
+
     public HttpRequest withCacheHit(Boolean cacheHit) {
         this.cacheHit = cacheHit;
         return this;
@@ -40,6 +42,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheLookup")
     public Boolean cacheLookup;
+
     public HttpRequest withCacheLookup(Boolean cacheLookup) {
         this.cacheLookup = cacheLookup;
         return this;
@@ -51,6 +54,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheValidatedWithOriginServer")
     public Boolean cacheValidatedWithOriginServer;
+
     public HttpRequest withCacheValidatedWithOriginServer(Boolean cacheValidatedWithOriginServer) {
         this.cacheValidatedWithOriginServer = cacheValidatedWithOriginServer;
         return this;
@@ -62,6 +66,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latency")
     public String latency;
+
     public HttpRequest withLatency(String latency) {
         this.latency = latency;
         return this;
@@ -73,6 +78,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public HttpRequest withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -84,6 +90,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referer")
     public String referer;
+
     public HttpRequest withReferer(String referer) {
         this.referer = referer;
         return this;
@@ -95,6 +102,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteIp")
     public String remoteIp;
+
     public HttpRequest withRemoteIp(String remoteIp) {
         this.remoteIp = remoteIp;
         return this;
@@ -106,6 +114,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMethod")
     public String requestMethod;
+
     public HttpRequest withRequestMethod(String requestMethod) {
         this.requestMethod = requestMethod;
         return this;
@@ -117,6 +126,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestSize")
     public String requestSize;
+
     public HttpRequest withRequestSize(String requestSize) {
         this.requestSize = requestSize;
         return this;
@@ -128,6 +138,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestUrl")
     public String requestUrl;
+
     public HttpRequest withRequestUrl(String requestUrl) {
         this.requestUrl = requestUrl;
         return this;
@@ -139,6 +150,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseSize")
     public String responseSize;
+
     public HttpRequest withResponseSize(String responseSize) {
         this.responseSize = responseSize;
         return this;
@@ -150,6 +162,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverIp")
     public String serverIp;
+
     public HttpRequest withServerIp(String serverIp) {
         this.serverIp = serverIp;
         return this;
@@ -161,6 +174,7 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public HttpRequest withStatus(Integer status) {
         this.status = status;
         return this;
@@ -172,9 +186,11 @@ public class HttpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public HttpRequest withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public HttpRequest(){}
 }

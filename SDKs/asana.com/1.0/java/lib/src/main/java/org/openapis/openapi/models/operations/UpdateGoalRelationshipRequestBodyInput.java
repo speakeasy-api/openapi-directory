@@ -15,9 +15,11 @@ public class UpdateGoalRelationshipRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.GoalRelationshipRequestInput data;
+
     public UpdateGoalRelationshipRequestBodyInput withData(org.openapis.openapi.models.shared.GoalRelationshipRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public UpdateGoalRelationshipRequestBodyInput(){}
 }

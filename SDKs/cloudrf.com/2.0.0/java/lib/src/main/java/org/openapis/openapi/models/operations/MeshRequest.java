@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeshRequest {
@@ -12,6 +13,7 @@ public class MeshRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public MeshRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +24,14 @@ public class MeshRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=network")
     public String network;
+
     public MeshRequest withNetwork(String network) {
         this.network = network;
         return this;
     }
     
+    public MeshRequest(@JsonProperty("name") String name, @JsonProperty("network") String network) {
+        this.name = name;
+        this.network = network;
+  }
 }

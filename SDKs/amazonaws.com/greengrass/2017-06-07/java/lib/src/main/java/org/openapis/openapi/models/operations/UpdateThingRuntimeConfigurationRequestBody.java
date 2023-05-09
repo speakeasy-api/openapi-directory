@@ -15,9 +15,11 @@ public class UpdateThingRuntimeConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TelemetryConfiguration")
     public UpdateThingRuntimeConfigurationRequestBodyTelemetryConfiguration telemetryConfiguration;
+
     public UpdateThingRuntimeConfigurationRequestBody withTelemetryConfiguration(UpdateThingRuntimeConfigurationRequestBodyTelemetryConfiguration telemetryConfiguration) {
         this.telemetryConfiguration = telemetryConfiguration;
         return this;
     }
     
+    public UpdateThingRuntimeConfigurationRequestBody(){}
 }

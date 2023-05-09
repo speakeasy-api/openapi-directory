@@ -18,6 +18,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Zone withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundary")
     public ZoneBoundary boundary;
+
     public Zone withBoundary(ZoneBoundary boundary) {
         this.boundary = boundary;
         return this;
@@ -40,6 +42,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childContainer")
     public ZoneChildContainer[] childContainer;
+
     public Zone withChildContainer(ZoneChildContainer[] childContainer) {
         this.childContainer = childContainer;
         return this;
@@ -51,6 +54,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Zone withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -62,6 +66,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Zone withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -73,6 +78,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Zone withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Zone withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -95,6 +102,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Zone withPath(String path) {
         this.path = path;
         return this;
@@ -106,6 +114,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Zone withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -117,6 +126,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeRestriction")
     public ZoneTypeRestriction typeRestriction;
+
     public Zone withTypeRestriction(ZoneTypeRestriction typeRestriction) {
         this.typeRestriction = typeRestriction;
         return this;
@@ -128,6 +138,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public Zone withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -139,9 +150,11 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zoneId")
     public String zoneId;
+
     public Zone withZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     
+    public Zone(){}
 }

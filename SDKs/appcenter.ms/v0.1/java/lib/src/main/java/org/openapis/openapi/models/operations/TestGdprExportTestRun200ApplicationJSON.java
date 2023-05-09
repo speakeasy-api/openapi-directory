@@ -15,6 +15,7 @@ public class TestGdprExportTestRun200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_hash_file_id")
     public String appHashFileId;
+
     public TestGdprExportTestRun200ApplicationJSON withAppHashFileId(String appHashFileId) {
         this.appHashFileId = appHashFileId;
         return this;
@@ -23,6 +24,7 @@ public class TestGdprExportTestRun200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_hash_file_url")
     public String appHashFileUrl;
+
     public TestGdprExportTestRun200ApplicationJSON withAppHashFileUrl(String appHashFileUrl) {
         this.appHashFileUrl = appHashFileUrl;
         return this;
@@ -31,6 +33,7 @@ public class TestGdprExportTestRun200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_icon_url")
     public String appIconUrl;
+
     public TestGdprExportTestRun200ApplicationJSON withAppIconUrl(String appIconUrl) {
         this.appIconUrl = appIconUrl;
         return this;
@@ -39,6 +42,7 @@ public class TestGdprExportTestRun200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsym_hash_file_id")
     public String dsymHashFileId;
+
     public TestGdprExportTestRun200ApplicationJSON withDsymHashFileId(String dsymHashFileId) {
         this.dsymHashFileId = dsymHashFileId;
         return this;
@@ -47,6 +51,7 @@ public class TestGdprExportTestRun200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsym_hash_file_url")
     public String dsymHashFileUrl;
+
     public TestGdprExportTestRun200ApplicationJSON withDsymHashFileUrl(String dsymHashFileUrl) {
         this.dsymHashFileUrl = dsymHashFileUrl;
         return this;
@@ -55,6 +60,7 @@ public class TestGdprExportTestRun200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestGdprExportTestRun200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -63,9 +69,11 @@ public class TestGdprExportTestRun200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public TestGdprExportTestRun200ApplicationJSON withLocale(String locale) {
         this.locale = locale;
         return this;
     }
     
+    public TestGdprExportTestRun200ApplicationJSON(){}
 }

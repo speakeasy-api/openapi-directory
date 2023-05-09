@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ScheduledInstancesLaunchSpecification - &lt;p&gt;Describes the launch specification for a Scheduled Instance.&lt;/p&gt; &lt;p&gt;If you are launching the Scheduled Instance in EC2-VPC, you must specify the ID of the subnet. You can specify the subnet using either &lt;code&gt;SubnetId&lt;/code&gt; or &lt;code&gt;NetworkInterface&lt;/code&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledInstancesLaunchSpecification {
     
     public ScheduledInstancesLaunchSpecificationBlockDeviceMappings[] blockDeviceMappings;
+
     public ScheduledInstancesLaunchSpecification withBlockDeviceMappings(ScheduledInstancesLaunchSpecificationBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -19,6 +20,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public Boolean ebsOptimized;
+
     public ScheduledInstancesLaunchSpecification withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -26,6 +28,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public ScheduledInstancesIamInstanceProfile iamInstanceProfile;
+
     public ScheduledInstancesLaunchSpecification withIamInstanceProfile(ScheduledInstancesIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -33,6 +36,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public String imageId;
+
     public ScheduledInstancesLaunchSpecification withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -40,6 +44,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public String instanceType;
+
     public ScheduledInstancesLaunchSpecification withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +52,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public String kernelId;
+
     public ScheduledInstancesLaunchSpecification withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -54,6 +60,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public String keyName;
+
     public ScheduledInstancesLaunchSpecification withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -61,6 +68,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public ScheduledInstancesMonitoring monitoring;
+
     public ScheduledInstancesLaunchSpecification withMonitoring(ScheduledInstancesMonitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -68,6 +76,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces[] networkInterfaces;
+
     public ScheduledInstancesLaunchSpecification withNetworkInterfaces(ScheduledInstancesLaunchSpecificationNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -75,6 +84,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public ScheduledInstancesPlacement placement;
+
     public ScheduledInstancesLaunchSpecification withPlacement(ScheduledInstancesPlacement placement) {
         this.placement = placement;
         return this;
@@ -82,6 +92,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public String ramdiskId;
+
     public ScheduledInstancesLaunchSpecification withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -89,6 +100,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public String[] securityGroupIds;
+
     public ScheduledInstancesLaunchSpecification withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -96,6 +108,7 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public String subnetId;
+
     public ScheduledInstancesLaunchSpecification withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -103,9 +116,13 @@ public class ScheduledInstancesLaunchSpecification {
     
     
     public String userData;
+
     public ScheduledInstancesLaunchSpecification withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public ScheduledInstancesLaunchSpecification(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

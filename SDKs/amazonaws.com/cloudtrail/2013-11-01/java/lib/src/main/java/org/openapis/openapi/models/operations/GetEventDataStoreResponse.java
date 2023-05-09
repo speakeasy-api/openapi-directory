@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventDataStoreResponse {
     
     public String contentType;
+
     public GetEventDataStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEventDataStoreResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public GetEventDataStoreResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -29,6 +32,7 @@ public class GetEventDataStoreResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public GetEventDataStoreResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetEventDataStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEventDataStoreResponse getEventDataStoreResponse;
+
     public GetEventDataStoreResponse withGetEventDataStoreResponse(org.openapis.openapi.models.shared.GetEventDataStoreResponse getEventDataStoreResponse) {
         this.getEventDataStoreResponse = getEventDataStoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetEventDataStoreResponse {
      */
     
     public Object invalidParameterException;
+
     public GetEventDataStoreResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetEventDataStoreResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public GetEventDataStoreResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -69,6 +76,7 @@ public class GetEventDataStoreResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetEventDataStoreResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -76,6 +84,7 @@ public class GetEventDataStoreResponse {
     
     
     public Integer statusCode;
+
     public GetEventDataStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetEventDataStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventDataStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetEventDataStoreResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetEventDataStoreResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetEventDataStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

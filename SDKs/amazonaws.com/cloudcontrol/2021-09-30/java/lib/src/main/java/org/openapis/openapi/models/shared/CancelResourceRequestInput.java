@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelResourceRequestInput {
     @JsonProperty("RequestToken")
     public String requestToken;
+
     public CancelResourceRequestInput withRequestToken(String requestToken) {
         this.requestToken = requestToken;
         return this;
     }
     
+    public CancelResourceRequestInput(@JsonProperty("RequestToken") String requestToken) {
+        this.requestToken = requestToken;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CustomerStorageMessage {
     
     public Double totalBackupSizeInMegaBytes;
+
     public CustomerStorageMessage withTotalBackupSizeInMegaBytes(Double totalBackupSizeInMegaBytes) {
         this.totalBackupSizeInMegaBytes = totalBackupSizeInMegaBytes;
         return this;
@@ -19,9 +20,11 @@ public class CustomerStorageMessage {
     
     
     public Double totalProvisionedStorageInMegaBytes;
+
     public CustomerStorageMessage withTotalProvisionedStorageInMegaBytes(Double totalProvisionedStorageInMegaBytes) {
         this.totalProvisionedStorageInMegaBytes = totalProvisionedStorageInMegaBytes;
         return this;
     }
     
+    public CustomerStorageMessage(){}
 }

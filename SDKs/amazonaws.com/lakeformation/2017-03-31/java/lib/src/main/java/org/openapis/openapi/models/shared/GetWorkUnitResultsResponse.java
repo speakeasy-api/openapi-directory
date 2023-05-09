@@ -15,9 +15,11 @@ public class GetWorkUnitResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultStream")
     public String resultStream;
+
     public GetWorkUnitResultsResponse withResultStream(String resultStream) {
         this.resultStream = resultStream;
         return this;
     }
     
+    public GetWorkUnitResultsResponse(){}
 }

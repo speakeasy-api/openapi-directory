@@ -18,6 +18,7 @@ public class GetAddressInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public GetAddressInfoResponse withAddress(String address) {
         this.address = address;
         return this;
@@ -29,9 +30,11 @@ public class GetAddressInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utxos")
     public GetAddressInfoResponseUtxos[] utxos;
+
     public GetAddressInfoResponse withUtxos(GetAddressInfoResponseUtxos[] utxos) {
         this.utxos = utxos;
         return this;
     }
     
+    public GetAddressInfoResponse(){}
 }

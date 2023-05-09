@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetrievePricingCountry401ApplicationJSON {
     @JsonProperty("code")
     public String code;
+
     public RetrievePricingCountry401ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class RetrievePricingCountry401ApplicationJSON {
     
     @JsonProperty("currency")
     public String currency;
+
     public RetrievePricingCountry401ApplicationJSON withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -26,9 +28,15 @@ public class RetrievePricingCountry401ApplicationJSON {
     
     @JsonProperty("error-code-label")
     public String errorCodeLabel;
+
     public RetrievePricingCountry401ApplicationJSON withErrorCodeLabel(String errorCodeLabel) {
         this.errorCodeLabel = errorCodeLabel;
         return this;
     }
     
+    public RetrievePricingCountry401ApplicationJSON(@JsonProperty("code") String code, @JsonProperty("currency") String currency, @JsonProperty("error-code-label") String errorCodeLabel) {
+        this.code = code;
+        this.currency = currency;
+        this.errorCodeLabel = errorCodeLabel;
+  }
 }

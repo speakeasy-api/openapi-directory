@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListUserTagsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListUserTagsActionEnum action;
+
     public GETListUserTagsRequest withAction(GETListUserTagsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListUserTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETListUserTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class GETListUserTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public GETListUserTagsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -39,6 +43,7 @@ public class GETListUserTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETListUserTagsRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -46,6 +51,7 @@ public class GETListUserTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListUserTagsVersionEnum version;
+
     public GETListUserTagsRequest withVersion(GETListUserTagsVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETListUserTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListUserTagsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETListUserTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListUserTagsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETListUserTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListUserTagsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETListUserTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListUserTagsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETListUserTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListUserTagsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETListUserTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListUserTagsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETListUserTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListUserTagsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListUserTagsRequest(@JsonProperty("Action") GETListUserTagsActionEnum action, @JsonProperty("UserName") String userName, @JsonProperty("Version") GETListUserTagsVersionEnum version) {
+        this.action = action;
+        this.userName = userName;
+        this.version = version;
+  }
 }

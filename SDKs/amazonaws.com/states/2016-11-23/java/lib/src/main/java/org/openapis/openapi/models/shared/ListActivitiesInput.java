@@ -12,6 +12,7 @@ public class ListActivitiesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListActivitiesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,9 +21,11 @@ public class ListActivitiesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListActivitiesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListActivitiesInput(){}
 }

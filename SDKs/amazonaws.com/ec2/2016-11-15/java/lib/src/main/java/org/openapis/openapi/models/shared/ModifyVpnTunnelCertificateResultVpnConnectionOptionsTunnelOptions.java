@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     public String dpdTimeoutAction;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withDpdTimeoutAction(String dpdTimeoutAction) {
         this.dpdTimeoutAction = dpdTimeoutAction;
         return this;
@@ -19,13 +20,23 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public Long dpdTimeoutSeconds;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withDpdTimeoutSeconds(Long dpdTimeoutSeconds) {
         this.dpdTimeoutSeconds = dpdTimeoutSeconds;
         return this;
     }
     
     
+    public Boolean enableTunnelLifecycleControl;
+
+    public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withEnableTunnelLifecycleControl(Boolean enableTunnelLifecycleControl) {
+        this.enableTunnelLifecycleControl = enableTunnelLifecycleControl;
+        return this;
+    }
+    
+    
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsIkeVersions[] ikeVersions;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withIkeVersions(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsIkeVersions[] ikeVersions) {
         this.ikeVersions = ikeVersions;
         return this;
@@ -33,6 +44,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsLogOptions logOptions;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withLogOptions(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsLogOptions logOptions) {
         this.logOptions = logOptions;
         return this;
@@ -40,6 +52,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public String outsideIpAddress;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withOutsideIpAddress(String outsideIpAddress) {
         this.outsideIpAddress = outsideIpAddress;
         return this;
@@ -47,6 +60,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase1DHGroupNumbers[] phase1DHGroupNumbers;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPhase1DHGroupNumbers(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase1DHGroupNumbers[] phase1DHGroupNumbers) {
         this.phase1DHGroupNumbers = phase1DHGroupNumbers;
         return this;
@@ -54,6 +68,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase1EncryptionAlgorithms[] phase1EncryptionAlgorithms;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPhase1EncryptionAlgorithms(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase1EncryptionAlgorithms[] phase1EncryptionAlgorithms) {
         this.phase1EncryptionAlgorithms = phase1EncryptionAlgorithms;
         return this;
@@ -61,6 +76,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase1IntegrityAlgorithms[] phase1IntegrityAlgorithms;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPhase1IntegrityAlgorithms(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase1IntegrityAlgorithms[] phase1IntegrityAlgorithms) {
         this.phase1IntegrityAlgorithms = phase1IntegrityAlgorithms;
         return this;
@@ -68,6 +84,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public Long phase1LifetimeSeconds;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPhase1LifetimeSeconds(Long phase1LifetimeSeconds) {
         this.phase1LifetimeSeconds = phase1LifetimeSeconds;
         return this;
@@ -75,6 +92,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase2DHGroupNumbers[] phase2DHGroupNumbers;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPhase2DHGroupNumbers(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase2DHGroupNumbers[] phase2DHGroupNumbers) {
         this.phase2DHGroupNumbers = phase2DHGroupNumbers;
         return this;
@@ -82,6 +100,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase2EncryptionAlgorithms[] phase2EncryptionAlgorithms;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPhase2EncryptionAlgorithms(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase2EncryptionAlgorithms[] phase2EncryptionAlgorithms) {
         this.phase2EncryptionAlgorithms = phase2EncryptionAlgorithms;
         return this;
@@ -89,6 +108,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase2IntegrityAlgorithms[] phase2IntegrityAlgorithms;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPhase2IntegrityAlgorithms(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsPhase2IntegrityAlgorithms[] phase2IntegrityAlgorithms) {
         this.phase2IntegrityAlgorithms = phase2IntegrityAlgorithms;
         return this;
@@ -96,6 +116,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public Long phase2LifetimeSeconds;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPhase2LifetimeSeconds(Long phase2LifetimeSeconds) {
         this.phase2LifetimeSeconds = phase2LifetimeSeconds;
         return this;
@@ -103,6 +124,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public String preSharedKey;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withPreSharedKey(String preSharedKey) {
         this.preSharedKey = preSharedKey;
         return this;
@@ -110,6 +132,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public Long rekeyFuzzPercentage;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withRekeyFuzzPercentage(Long rekeyFuzzPercentage) {
         this.rekeyFuzzPercentage = rekeyFuzzPercentage;
         return this;
@@ -117,6 +140,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public Long rekeyMarginTimeSeconds;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withRekeyMarginTimeSeconds(Long rekeyMarginTimeSeconds) {
         this.rekeyMarginTimeSeconds = rekeyMarginTimeSeconds;
         return this;
@@ -124,6 +148,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public Long replayWindowSize;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withReplayWindowSize(Long replayWindowSize) {
         this.replayWindowSize = replayWindowSize;
         return this;
@@ -131,6 +156,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public String startupAction;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withStartupAction(String startupAction) {
         this.startupAction = startupAction;
         return this;
@@ -138,6 +164,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public String tunnelInsideCidr;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withTunnelInsideCidr(String tunnelInsideCidr) {
         this.tunnelInsideCidr = tunnelInsideCidr;
         return this;
@@ -145,9 +172,11 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions {
     
     
     public String tunnelInsideIpv6Cidr;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions withTunnelInsideIpv6Cidr(String tunnelInsideIpv6Cidr) {
         this.tunnelInsideIpv6Cidr = tunnelInsideIpv6Cidr;
         return this;
     }
     
+    public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions(){}
 }

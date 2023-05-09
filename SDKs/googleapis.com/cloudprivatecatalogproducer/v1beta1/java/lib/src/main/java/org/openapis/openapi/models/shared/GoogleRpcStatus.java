@@ -21,6 +21,7 @@ public class GoogleRpcStatus {
      */
     
     public Integer code;
+
     public GoogleRpcStatus withCode(Integer code) {
         this.code = code;
         return this;
@@ -32,6 +33,7 @@ public class GoogleRpcStatus {
      */
     
     public java.util.Map<String, Object>[] details;
+
     public GoogleRpcStatus withDetails(java.util.Map<String, Object>[] details) {
         this.details = details;
         return this;
@@ -44,9 +46,11 @@ public class GoogleRpcStatus {
      */
     
     public String message;
+
     public GoogleRpcStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GoogleRpcStatus(){}
 }

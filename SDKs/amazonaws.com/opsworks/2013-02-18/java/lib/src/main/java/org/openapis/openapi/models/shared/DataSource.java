@@ -15,6 +15,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DataSource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DataSource withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -31,9 +33,11 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DataSource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DataSource(){}
 }

@@ -18,6 +18,7 @@ public class ListRolloutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRolloutsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListRolloutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollouts")
     public Rollout[] rollouts;
+
     public ListRolloutsResponse withRollouts(Rollout[] rollouts) {
         this.rollouts = rollouts;
         return this;
@@ -40,9 +42,11 @@ public class ListRolloutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListRolloutsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListRolloutsResponse(){}
 }

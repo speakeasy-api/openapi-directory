@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePhpMemoryLimitRequest {
@@ -12,6 +13,7 @@ public class ChangePhpMemoryLimitRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdatePhpMemoryLimitRequest updatePhpMemoryLimitRequest;
+
     public ChangePhpMemoryLimitRequest withUpdatePhpMemoryLimitRequest(org.openapis.openapi.models.shared.UpdatePhpMemoryLimitRequest updatePhpMemoryLimitRequest) {
         this.updatePhpMemoryLimitRequest = updatePhpMemoryLimitRequest;
         return this;
@@ -22,6 +24,7 @@ public class ChangePhpMemoryLimitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public ChangePhpMemoryLimitRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -32,9 +35,14 @@ public class ChangePhpMemoryLimitRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public ChangePhpMemoryLimitRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     
+    public ChangePhpMemoryLimitRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+  }
 }

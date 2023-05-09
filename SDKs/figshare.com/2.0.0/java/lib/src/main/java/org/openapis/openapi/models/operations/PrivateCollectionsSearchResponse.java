@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateCollectionsSearchResponse {
@@ -12,6 +13,7 @@ public class PrivateCollectionsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.Collection[] collections;
+
     public PrivateCollectionsSearchResponse withCollections(org.openapis.openapi.models.shared.Collection[] collections) {
         this.collections = collections;
         return this;
@@ -19,6 +21,7 @@ public class PrivateCollectionsSearchResponse {
     
     
     public String contentType;
+
     public PrivateCollectionsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PrivateCollectionsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateCollectionsSearchResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -36,6 +40,7 @@ public class PrivateCollectionsSearchResponse {
     
     
     public Integer statusCode;
+
     public PrivateCollectionsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PrivateCollectionsSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateCollectionsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateCollectionsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

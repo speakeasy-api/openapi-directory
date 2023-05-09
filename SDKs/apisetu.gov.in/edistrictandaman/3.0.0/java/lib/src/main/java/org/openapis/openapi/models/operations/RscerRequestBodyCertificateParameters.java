@@ -12,9 +12,13 @@ public class RscerRequestBodyCertificateParameters {
      */
     @JsonProperty("CertificateNumber")
     public String certificateNumber;
+
     public RscerRequestBodyCertificateParameters withCertificateNumber(String certificateNumber) {
         this.certificateNumber = certificateNumber;
         return this;
     }
     
+    public RscerRequestBodyCertificateParameters(@JsonProperty("CertificateNumber") String certificateNumber) {
+        this.certificateNumber = certificateNumber;
+  }
 }

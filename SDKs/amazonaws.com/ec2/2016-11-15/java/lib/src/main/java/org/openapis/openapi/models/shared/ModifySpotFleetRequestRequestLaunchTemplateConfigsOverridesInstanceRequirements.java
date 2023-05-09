@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements {
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorCount acceleratorCount;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withAcceleratorCount(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorCount acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -19,6 +20,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum[] acceleratorManufacturers;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withAcceleratorManufacturers(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum[] acceleratorManufacturers) {
         this.acceleratorManufacturers = acceleratorManufacturers;
         return this;
@@ -26,6 +28,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum[] acceleratorNames;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withAcceleratorNames(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum[] acceleratorNames) {
         this.acceleratorNames = acceleratorNames;
         return this;
@@ -33,6 +36,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTotalMemoryMiB acceleratorTotalMemoryMiB;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withAcceleratorTotalMemoryMiB(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTotalMemoryMiB acceleratorTotalMemoryMiB) {
         this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
         return this;
@@ -40,6 +44,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum[] acceleratorTypes;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withAcceleratorTypes(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -47,6 +52,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public String[] allowedInstanceTypes;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withAllowedInstanceTypes(String[] allowedInstanceTypes) {
         this.allowedInstanceTypes = allowedInstanceTypes;
         return this;
@@ -54,6 +60,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum bareMetal;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withBareMetal(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum bareMetal) {
         this.bareMetal = bareMetal;
         return this;
@@ -61,6 +68,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBaselineEbsBandwidthMbps baselineEbsBandwidthMbps;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withBaselineEbsBandwidthMbps(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBaselineEbsBandwidthMbps baselineEbsBandwidthMbps) {
         this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
         return this;
@@ -68,6 +76,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum burstablePerformance;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withBurstablePerformance(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum burstablePerformance) {
         this.burstablePerformance = burstablePerformance;
         return this;
@@ -75,6 +84,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCpuManufacturersEnum[] cpuManufacturers;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withCpuManufacturers(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCpuManufacturersEnum[] cpuManufacturers) {
         this.cpuManufacturers = cpuManufacturers;
         return this;
@@ -82,6 +92,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public String[] excludedInstanceTypes;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withExcludedInstanceTypes(String[] excludedInstanceTypes) {
         this.excludedInstanceTypes = excludedInstanceTypes;
         return this;
@@ -89,6 +100,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum[] instanceGenerations;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withInstanceGenerations(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum[] instanceGenerations) {
         this.instanceGenerations = instanceGenerations;
         return this;
@@ -96,6 +108,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum localStorage;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withLocalStorage(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum localStorage) {
         this.localStorage = localStorage;
         return this;
@@ -103,6 +116,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum[] localStorageTypes;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withLocalStorageTypes(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum[] localStorageTypes) {
         this.localStorageTypes = localStorageTypes;
         return this;
@@ -110,6 +124,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsMemoryGiBPerVCpu memoryGiBPerVCpu;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withMemoryGiBPerVCpu(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsMemoryGiBPerVCpu memoryGiBPerVCpu) {
         this.memoryGiBPerVCpu = memoryGiBPerVCpu;
         return this;
@@ -117,6 +132,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsMemoryMiB memoryMiB;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withMemoryMiB(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsMemoryMiB memoryMiB) {
         this.memoryMiB = memoryMiB;
         return this;
@@ -124,6 +140,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsNetworkBandwidthGbps networkBandwidthGbps;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withNetworkBandwidthGbps(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsNetworkBandwidthGbps networkBandwidthGbps) {
         this.networkBandwidthGbps = networkBandwidthGbps;
         return this;
@@ -131,6 +148,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsNetworkInterfaceCount networkInterfaceCount;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withNetworkInterfaceCount(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsNetworkInterfaceCount networkInterfaceCount) {
         this.networkInterfaceCount = networkInterfaceCount;
         return this;
@@ -138,6 +156,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public Long onDemandMaxPricePercentageOverLowestPrice;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withOnDemandMaxPricePercentageOverLowestPrice(Long onDemandMaxPricePercentageOverLowestPrice) {
         this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
         return this;
@@ -145,6 +164,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public Boolean requireHibernateSupport;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withRequireHibernateSupport(Boolean requireHibernateSupport) {
         this.requireHibernateSupport = requireHibernateSupport;
         return this;
@@ -152,6 +172,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public Long spotMaxPricePercentageOverLowestPrice;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withSpotMaxPricePercentageOverLowestPrice(Long spotMaxPricePercentageOverLowestPrice) {
         this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
         return this;
@@ -159,6 +180,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsTotalLocalStorageGB totalLocalStorageGB;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withTotalLocalStorageGB(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsTotalLocalStorageGB totalLocalStorageGB) {
         this.totalLocalStorageGB = totalLocalStorageGB;
         return this;
@@ -166,9 +188,11 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsVCpuCount vCpuCount;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements withVCpuCount(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsVCpuCount vCpuCount) {
         this.vCpuCount = vCpuCount;
         return this;
     }
     
+    public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements(){}
 }

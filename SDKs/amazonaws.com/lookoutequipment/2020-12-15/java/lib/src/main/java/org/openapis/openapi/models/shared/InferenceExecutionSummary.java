@@ -20,6 +20,7 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerResultObject")
     public S3Object customerResultObject;
+
     public InferenceExecutionSummary withCustomerResultObject(S3Object customerResultObject) {
         this.customerResultObject = customerResultObject;
         return this;
@@ -30,6 +31,7 @@ public class InferenceExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DataEndTime")
     public OffsetDateTime dataEndTime;
+
     public InferenceExecutionSummary withDataEndTime(OffsetDateTime dataEndTime) {
         this.dataEndTime = dataEndTime;
         return this;
@@ -38,6 +40,7 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataInputConfiguration")
     public InferenceInputConfiguration dataInputConfiguration;
+
     public InferenceExecutionSummary withDataInputConfiguration(InferenceInputConfiguration dataInputConfiguration) {
         this.dataInputConfiguration = dataInputConfiguration;
         return this;
@@ -46,6 +49,7 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataOutputConfiguration")
     public InferenceOutputConfiguration dataOutputConfiguration;
+
     public InferenceExecutionSummary withDataOutputConfiguration(InferenceOutputConfiguration dataOutputConfiguration) {
         this.dataOutputConfiguration = dataOutputConfiguration;
         return this;
@@ -56,6 +60,7 @@ public class InferenceExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DataStartTime")
     public OffsetDateTime dataStartTime;
+
     public InferenceExecutionSummary withDataStartTime(OffsetDateTime dataStartTime) {
         this.dataStartTime = dataStartTime;
         return this;
@@ -64,6 +69,7 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedReason")
     public String failedReason;
+
     public InferenceExecutionSummary withFailedReason(String failedReason) {
         this.failedReason = failedReason;
         return this;
@@ -72,6 +78,7 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerArn")
     public String inferenceSchedulerArn;
+
     public InferenceExecutionSummary withInferenceSchedulerArn(String inferenceSchedulerArn) {
         this.inferenceSchedulerArn = inferenceSchedulerArn;
         return this;
@@ -80,6 +87,7 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public InferenceExecutionSummary withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
@@ -88,6 +96,7 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public InferenceExecutionSummary withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -96,6 +105,7 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public InferenceExecutionSummary withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -106,6 +116,7 @@ public class InferenceExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledStartTime")
     public OffsetDateTime scheduledStartTime;
+
     public InferenceExecutionSummary withScheduledStartTime(OffsetDateTime scheduledStartTime) {
         this.scheduledStartTime = scheduledStartTime;
         return this;
@@ -114,9 +125,11 @@ public class InferenceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InferenceExecutionStatusEnum status;
+
     public InferenceExecutionSummary withStatus(InferenceExecutionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public InferenceExecutionSummary(){}
 }

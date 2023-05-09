@@ -12,9 +12,11 @@ public class ListImageCategoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public ListImageCategoriesRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
     }
     
+    public ListImageCategoriesRequest(){}
 }

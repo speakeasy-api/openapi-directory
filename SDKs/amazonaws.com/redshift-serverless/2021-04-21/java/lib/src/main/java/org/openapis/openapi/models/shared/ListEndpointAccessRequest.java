@@ -12,6 +12,7 @@ public class ListEndpointAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListEndpointAccessRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListEndpointAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEndpointAccessRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListEndpointAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public ListEndpointAccessRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -36,9 +39,11 @@ public class ListEndpointAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public ListEndpointAccessRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ListEndpointAccessRequest(){}
 }

@@ -15,9 +15,11 @@ public class DescribeTrailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trailList")
     public Trail[] trailList;
+
     public DescribeTrailsResponse withTrailList(Trail[] trailList) {
         this.trailList = trailList;
         return this;
     }
     
+    public DescribeTrailsResponse(){}
 }

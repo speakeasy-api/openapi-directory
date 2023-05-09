@@ -18,9 +18,11 @@ public class PostUsers2FALoginErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public PostUsers2FALoginErrorResponse withDetail(String detail) {
         this.detail = detail;
         return this;
     }
     
+    public PostUsers2FALoginErrorResponse(){}
 }

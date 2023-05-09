@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAssetModelPropertiesResponse {
     @JsonProperty("assetModelPropertySummaries")
     public AssetModelPropertySummary[] assetModelPropertySummaries;
+
     public ListAssetModelPropertiesResponse withAssetModelPropertySummaries(AssetModelPropertySummary[] assetModelPropertySummaries) {
         this.assetModelPropertySummaries = assetModelPropertySummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListAssetModelPropertiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssetModelPropertiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssetModelPropertiesResponse(@JsonProperty("assetModelPropertySummaries") AssetModelPropertySummary[] assetModelPropertySummaries) {
+        this.assetModelPropertySummaries = assetModelPropertySummaries;
+  }
 }

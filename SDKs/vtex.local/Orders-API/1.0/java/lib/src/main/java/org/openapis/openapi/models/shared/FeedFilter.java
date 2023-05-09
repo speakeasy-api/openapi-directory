@@ -18,6 +18,7 @@ public class FeedFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSingleFire")
     public Boolean disableSingleFire;
+
     public FeedFilter withDisableSingleFire(Boolean disableSingleFire) {
         this.disableSingleFire = disableSingleFire;
         return this;
@@ -29,6 +30,7 @@ public class FeedFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public FeedFilter withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -102,6 +104,7 @@ public class FeedFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String[] status;
+
     public FeedFilter withStatus(String[] status) {
         this.status = status;
         return this;
@@ -110,15 +113,19 @@ public class FeedFilter {
     /**
      * Determines what orders appear in the feed and how they are filtered. There are two possible values:
      * 
-     * -`FromWorkflow`: the feed will receive order updates only when order\u2019s statuses change and orders can be filtered by status, using the `status` field described below.
+     * -`FromWorkflow`: the feed will receive order updates only when order’s statuses change and orders can be filtered by status, using the `status` field described below.
      * 
      * -`FromOrders`: the feed gets updates whenever any change is made to an order. in this case, orders can be filtered by any property, according to JSONata expressions passed in the `expression` field described below.
      */
     @JsonProperty("type")
     public String type;
+
     public FeedFilter withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FeedFilter(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

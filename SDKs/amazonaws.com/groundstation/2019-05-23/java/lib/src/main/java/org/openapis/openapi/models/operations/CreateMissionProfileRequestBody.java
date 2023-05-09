@@ -15,6 +15,7 @@ public class CreateMissionProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPostPassDurationSeconds")
     public Long contactPostPassDurationSeconds;
+
     public CreateMissionProfileRequestBody withContactPostPassDurationSeconds(Long contactPostPassDurationSeconds) {
         this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
         return this;
@@ -26,6 +27,7 @@ public class CreateMissionProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPrePassDurationSeconds")
     public Long contactPrePassDurationSeconds;
+
     public CreateMissionProfileRequestBody withContactPrePassDurationSeconds(Long contactPrePassDurationSeconds) {
         this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
         return this;
@@ -36,6 +38,7 @@ public class CreateMissionProfileRequestBody {
      */
     @JsonProperty("dataflowEdges")
     public String[][] dataflowEdges;
+
     public CreateMissionProfileRequestBody withDataflowEdges(String[][] dataflowEdges) {
         this.dataflowEdges = dataflowEdges;
         return this;
@@ -46,6 +49,7 @@ public class CreateMissionProfileRequestBody {
      */
     @JsonProperty("minimumViableContactDurationSeconds")
     public Long minimumViableContactDurationSeconds;
+
     public CreateMissionProfileRequestBody withMinimumViableContactDurationSeconds(Long minimumViableContactDurationSeconds) {
         this.minimumViableContactDurationSeconds = minimumViableContactDurationSeconds;
         return this;
@@ -56,6 +60,7 @@ public class CreateMissionProfileRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateMissionProfileRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +72,7 @@ public class CreateMissionProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamsKmsKey")
     public CreateMissionProfileRequestBodyStreamsKmsKey streamsKmsKey;
+
     public CreateMissionProfileRequestBody withStreamsKmsKey(CreateMissionProfileRequestBodyStreamsKmsKey streamsKmsKey) {
         this.streamsKmsKey = streamsKmsKey;
         return this;
@@ -78,6 +84,7 @@ public class CreateMissionProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamsKmsRole")
     public String streamsKmsRole;
+
     public CreateMissionProfileRequestBody withStreamsKmsRole(String streamsKmsRole) {
         this.streamsKmsRole = streamsKmsRole;
         return this;
@@ -89,6 +96,7 @@ public class CreateMissionProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateMissionProfileRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -99,9 +107,16 @@ public class CreateMissionProfileRequestBody {
      */
     @JsonProperty("trackingConfigArn")
     public String trackingConfigArn;
+
     public CreateMissionProfileRequestBody withTrackingConfigArn(String trackingConfigArn) {
         this.trackingConfigArn = trackingConfigArn;
         return this;
     }
     
+    public CreateMissionProfileRequestBody(@JsonProperty("dataflowEdges") String[][] dataflowEdges, @JsonProperty("minimumViableContactDurationSeconds") Long minimumViableContactDurationSeconds, @JsonProperty("name") String name, @JsonProperty("trackingConfigArn") String trackingConfigArn) {
+        this.dataflowEdges = dataflowEdges;
+        this.minimumViableContactDurationSeconds = minimumViableContactDurationSeconds;
+        this.name = name;
+        this.trackingConfigArn = trackingConfigArn;
+  }
 }

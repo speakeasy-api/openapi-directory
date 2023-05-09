@@ -18,6 +18,7 @@ public class BooleanCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BooleanConditionTypeEnum type;
+
     public BooleanCondition withType(BooleanConditionTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class BooleanCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public ConditionValue[] values;
+
     public BooleanCondition withValues(ConditionValue[] values) {
         this.values = values;
         return this;
     }
     
+    public BooleanCondition(){}
 }

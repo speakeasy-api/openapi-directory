@@ -15,9 +15,11 @@ public class ResourcesUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public ResourceBulkUpdateModel[] resources;
+
     public ResourcesUpdateModel withResources(ResourceBulkUpdateModel[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ResourcesUpdateModel(){}
 }

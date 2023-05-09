@@ -15,6 +15,7 @@ public class ListXssMatchSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListXssMatchSetsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,9 +24,11 @@ public class ListXssMatchSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListXssMatchSetsRequest withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListXssMatchSetsRequest(){}
 }

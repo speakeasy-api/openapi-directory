@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeClientBrandingResponse {
@@ -12,6 +13,7 @@ public class DescribeClientBrandingResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeClientBrandingResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeClientBrandingResponse {
     
     
     public String contentType;
+
     public DescribeClientBrandingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeClientBrandingResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeClientBrandingResult describeClientBrandingResult;
+
     public DescribeClientBrandingResponse withDescribeClientBrandingResult(org.openapis.openapi.models.shared.DescribeClientBrandingResult describeClientBrandingResult) {
         this.describeClientBrandingResult = describeClientBrandingResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeClientBrandingResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DescribeClientBrandingResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeClientBrandingResponse {
     
     
     public Integer statusCode;
+
     public DescribeClientBrandingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeClientBrandingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeClientBrandingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeClientBrandingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeClientBrandingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeClientBrandingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

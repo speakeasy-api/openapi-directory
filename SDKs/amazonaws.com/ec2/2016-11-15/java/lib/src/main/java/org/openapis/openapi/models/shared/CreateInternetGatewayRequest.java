@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInternetGatewayRequest {
     
     public Boolean dryRun;
+
     public CreateInternetGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,11 @@ public class CreateInternetGatewayRequest {
     
     
     public CreateInternetGatewayRequestTagSpecifications[] tagSpecifications;
+
     public CreateInternetGatewayRequest withTagSpecifications(CreateInternetGatewayRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateInternetGatewayRequest(){}
 }

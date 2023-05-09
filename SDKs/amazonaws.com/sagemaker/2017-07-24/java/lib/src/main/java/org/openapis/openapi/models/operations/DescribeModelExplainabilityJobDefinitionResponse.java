@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeModelExplainabilityJobDefinitionResponse {
     
     public String contentType;
+
     public DescribeModelExplainabilityJobDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeModelExplainabilityJobDefinitionResponse describeModelExplainabilityJobDefinitionResponse;
+
     public DescribeModelExplainabilityJobDefinitionResponse withDescribeModelExplainabilityJobDefinitionResponse(org.openapis.openapi.models.shared.DescribeModelExplainabilityJobDefinitionResponse describeModelExplainabilityJobDefinitionResponse) {
         this.describeModelExplainabilityJobDefinitionResponse = describeModelExplainabilityJobDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeModelExplainabilityJobDefinitionResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DescribeModelExplainabilityJobDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeModelExplainabilityJobDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeModelExplainabilityJobDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeModelExplainabilityJobDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

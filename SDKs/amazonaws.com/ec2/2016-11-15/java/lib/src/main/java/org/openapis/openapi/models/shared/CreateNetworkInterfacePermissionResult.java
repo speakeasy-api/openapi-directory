@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfacePermissionResult {
     
     public CreateNetworkInterfacePermissionResultInterfacePermission interfacePermission;
+
     public CreateNetworkInterfacePermissionResult withInterfacePermission(CreateNetworkInterfacePermissionResultInterfacePermission interfacePermission) {
         this.interfacePermission = interfacePermission;
         return this;
     }
     
+    public CreateNetworkInterfacePermissionResult(){}
 }

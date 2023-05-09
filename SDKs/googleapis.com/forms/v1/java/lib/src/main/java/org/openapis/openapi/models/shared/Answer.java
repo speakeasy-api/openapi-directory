@@ -18,6 +18,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUploadAnswers")
     public FileUploadAnswers fileUploadAnswers;
+
     public Answer withFileUploadAnswers(FileUploadAnswers fileUploadAnswers) {
         this.fileUploadAnswers = fileUploadAnswers;
         return this;
@@ -29,6 +30,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grade")
     public Grade grade;
+
     public Answer withGrade(Grade grade) {
         this.grade = grade;
         return this;
@@ -40,6 +42,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questionId")
     public String questionId;
+
     public Answer withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
@@ -51,9 +54,11 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textAnswers")
     public TextAnswers textAnswers;
+
     public Answer withTextAnswers(TextAnswers textAnswers) {
         this.textAnswers = textAnswers;
         return this;
     }
     
+    public Answer(){}
 }

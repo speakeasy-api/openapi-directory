@@ -15,6 +15,7 @@ public class XksProxyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKeyId")
     public String accessKeyId;
+
     public XksProxyConfigurationType withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -23,6 +24,7 @@ public class XksProxyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connectivity")
     public XksProxyConnectivityTypeEnum connectivity;
+
     public XksProxyConfigurationType withConnectivity(XksProxyConnectivityTypeEnum connectivity) {
         this.connectivity = connectivity;
         return this;
@@ -31,6 +33,7 @@ public class XksProxyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UriEndpoint")
     public String uriEndpoint;
+
     public XksProxyConfigurationType withUriEndpoint(String uriEndpoint) {
         this.uriEndpoint = uriEndpoint;
         return this;
@@ -39,6 +42,7 @@ public class XksProxyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UriPath")
     public String uriPath;
+
     public XksProxyConfigurationType withUriPath(String uriPath) {
         this.uriPath = uriPath;
         return this;
@@ -47,9 +51,11 @@ public class XksProxyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointServiceName")
     public String vpcEndpointServiceName;
+
     public XksProxyConfigurationType withVpcEndpointServiceName(String vpcEndpointServiceName) {
         this.vpcEndpointServiceName = vpcEndpointServiceName;
         return this;
     }
     
+    public XksProxyConfigurationType(){}
 }

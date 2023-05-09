@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationApiRequestsResponse {
     
     public String contentType;
+
     public GetOrganizationApiRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganizationApiRequestsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrganizationApiRequestsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganizationApiRequestsResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationApiRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetOrganizationApiRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationApiRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetOrganizationApiRequestsResponse {
      */
     
     public java.util.Map<String, Object>[] getOrganizationApiRequests200ApplicationJSONObjects;
+
     public GetOrganizationApiRequestsResponse withGetOrganizationApiRequests200ApplicationJSONObjects(java.util.Map<String, Object>[] getOrganizationApiRequests200ApplicationJSONObjects) {
         this.getOrganizationApiRequests200ApplicationJSONObjects = getOrganizationApiRequests200ApplicationJSONObjects;
         return this;
     }
     
+    public GetOrganizationApiRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomRoutingListenerRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateCustomRoutingListenerRequest updateCustomRoutingListenerRequest;
+
     public UpdateCustomRoutingListenerRequest withUpdateCustomRoutingListenerRequest(org.openapis.openapi.models.shared.UpdateCustomRoutingListenerRequest updateCustomRoutingListenerRequest) {
         this.updateCustomRoutingListenerRequest = updateCustomRoutingListenerRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdateCustomRoutingListenerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateCustomRoutingListenerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateCustomRoutingListenerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateCustomRoutingListenerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateCustomRoutingListenerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateCustomRoutingListenerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateCustomRoutingListenerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateCustomRoutingListenerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateCustomRoutingListenerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateCustomRoutingListenerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateCustomRoutingListenerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateCustomRoutingListenerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateCustomRoutingListenerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateCustomRoutingListenerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class UpdateCustomRoutingListenerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public UpdateCustomRoutingListenerXAmzTargetEnum xAmzTarget;
+
     public UpdateCustomRoutingListenerRequest withXAmzTarget(UpdateCustomRoutingListenerXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public UpdateCustomRoutingListenerRequest(@JsonProperty("UpdateCustomRoutingListenerRequest") org.openapis.openapi.models.shared.UpdateCustomRoutingListenerRequest updateCustomRoutingListenerRequest, @JsonProperty("X-Amz-Target") UpdateCustomRoutingListenerXAmzTargetEnum xAmzTarget) {
+        this.updateCustomRoutingListenerRequest = updateCustomRoutingListenerRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

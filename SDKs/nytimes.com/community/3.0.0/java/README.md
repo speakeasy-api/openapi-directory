@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GETUserContentByDateJsonSecurity;
 import org.openapis.openapi.models.operations.GETUserContentByDateJsonRequest;
 import org.openapis.openapi.models.operations.GETUserContentByDateJsonResponse;
+import org.openapis.openapi.models.operations.GETUserContentByDateJsonSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,30 +28,32 @@ public class Application {
 
             GETUserContentByDateJsonRequest req = new GETUserContentByDateJsonRequest() {{
                 date = "corrupti";
-            }}            
+            }};            
 
-            GETUserContentByDateJsonResponse res = sdk.getUserContentByDateJson(req, new GETUserContentByDateJsonSecurity() {{
+            GETUserContentByDateJsonResponse res = sdk.getUserContentByDateJson(req, new GETUserContentByDateJsonSecurity("provident") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.getUserContentByDateJSON200ApplicationJSONObject.isPresent()) {
+            if (res.getUserContentByDateJSON200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getUserContentByDateJson` - Comments by Date
-* `getUserContentRecentJson` - Recent User Comments
-* `getUserContentUrlJson` - Comments by URL
-* `getUserContentUserJson` - Comments by User
+* [getUserContentByDateJson](docs/sdk/README.md#getusercontentbydatejson) - Comments by Date
+* [getUserContentRecentJson](docs/sdk/README.md#getusercontentrecentjson) - Recent User Comments
+* [getUserContentUrlJson](docs/sdk/README.md#getusercontenturljson) - Comments by URL
+* [getUserContentUserJson](docs/sdk/README.md#getusercontentuserjson) - Comments by User
 <!-- End SDK Available Operations -->
 
 ### Maturity

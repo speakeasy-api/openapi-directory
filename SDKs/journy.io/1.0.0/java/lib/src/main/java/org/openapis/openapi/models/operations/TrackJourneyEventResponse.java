@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TrackJourneyEventResponse {
     
     public String contentType;
+
     public TrackJourneyEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TrackJourneyEventResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TrackJourneyEventResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class TrackJourneyEventResponse {
     
     
     public Integer statusCode;
+
     public TrackJourneyEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TrackJourneyEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TrackJourneyEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class TrackJourneyEventResponse {
      */
     
     public TrackJourneyEvent201ApplicationJSON trackJourneyEvent201ApplicationJSONObject;
+
     public TrackJourneyEventResponse withTrackJourneyEvent201ApplicationJSONObject(TrackJourneyEvent201ApplicationJSON trackJourneyEvent201ApplicationJSONObject) {
         this.trackJourneyEvent201ApplicationJSONObject = trackJourneyEvent201ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class TrackJourneyEventResponse {
      */
     
     public TrackJourneyEvent400ApplicationJSON trackJourneyEvent400ApplicationJSONObject;
+
     public TrackJourneyEventResponse withTrackJourneyEvent400ApplicationJSONObject(TrackJourneyEvent400ApplicationJSON trackJourneyEvent400ApplicationJSONObject) {
         this.trackJourneyEvent400ApplicationJSONObject = trackJourneyEvent400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class TrackJourneyEventResponse {
      */
     
     public TrackJourneyEvent401ApplicationJSON trackJourneyEvent401ApplicationJSONObject;
+
     public TrackJourneyEventResponse withTrackJourneyEvent401ApplicationJSONObject(TrackJourneyEvent401ApplicationJSON trackJourneyEvent401ApplicationJSONObject) {
         this.trackJourneyEvent401ApplicationJSONObject = trackJourneyEvent401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class TrackJourneyEventResponse {
      */
     
     public TrackJourneyEvent403ApplicationJSON trackJourneyEvent403ApplicationJSONObject;
+
     public TrackJourneyEventResponse withTrackJourneyEvent403ApplicationJSONObject(TrackJourneyEvent403ApplicationJSON trackJourneyEvent403ApplicationJSONObject) {
         this.trackJourneyEvent403ApplicationJSONObject = trackJourneyEvent403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class TrackJourneyEventResponse {
      */
     
     public TrackJourneyEvent429ApplicationJSON trackJourneyEvent429ApplicationJSONObject;
+
     public TrackJourneyEventResponse withTrackJourneyEvent429ApplicationJSONObject(TrackJourneyEvent429ApplicationJSON trackJourneyEvent429ApplicationJSONObject) {
         this.trackJourneyEvent429ApplicationJSONObject = trackJourneyEvent429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class TrackJourneyEventResponse {
      */
     
     public TrackJourneyEvent500ApplicationJSON trackJourneyEvent500ApplicationJSONObject;
+
     public TrackJourneyEventResponse withTrackJourneyEvent500ApplicationJSONObject(TrackJourneyEvent500ApplicationJSON trackJourneyEvent500ApplicationJSONObject) {
         this.trackJourneyEvent500ApplicationJSONObject = trackJourneyEvent500ApplicationJSONObject;
         return this;
     }
     
+    public TrackJourneyEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

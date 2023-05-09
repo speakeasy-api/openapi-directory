@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssml")
     public String ssml;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech withSsml(String ssml) {
         this.ssml = ssml;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech(){}
 }

@@ -15,6 +15,7 @@ public class BucketCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsManaged")
     public Long kmsManaged;
+
     public BucketCountByEncryptionType withKmsManaged(Long kmsManaged) {
         this.kmsManaged = kmsManaged;
         return this;
@@ -23,6 +24,7 @@ public class BucketCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Managed")
     public Long s3Managed;
+
     public BucketCountByEncryptionType withS3Managed(Long s3Managed) {
         this.s3Managed = s3Managed;
         return this;
@@ -31,6 +33,7 @@ public class BucketCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unencrypted")
     public Long unencrypted;
+
     public BucketCountByEncryptionType withUnencrypted(Long unencrypted) {
         this.unencrypted = unencrypted;
         return this;
@@ -39,9 +42,11 @@ public class BucketCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknown")
     public Long unknown;
+
     public BucketCountByEncryptionType withUnknown(Long unknown) {
         this.unknown = unknown;
         return this;
     }
     
+    public BucketCountByEncryptionType(){}
 }

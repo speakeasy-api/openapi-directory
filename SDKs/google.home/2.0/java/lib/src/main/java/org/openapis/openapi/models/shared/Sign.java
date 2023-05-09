@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Sign {
     @JsonProperty("certificate")
     public String certificate;
+
     public Sign withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -16,6 +17,7 @@ public class Sign {
     
     @JsonProperty("intermediate_certs")
     public String[] intermediateCerts;
+
     public Sign withIntermediateCerts(String[] intermediateCerts) {
         this.intermediateCerts = intermediateCerts;
         return this;
@@ -23,6 +25,7 @@ public class Sign {
     
     @JsonProperty("nonce")
     public String nonce;
+
     public Sign withNonce(String nonce) {
         this.nonce = nonce;
         return this;
@@ -30,9 +33,16 @@ public class Sign {
     
     @JsonProperty("signed_data")
     public String signedData;
+
     public Sign withSignedData(String signedData) {
         this.signedData = signedData;
         return this;
     }
     
+    public Sign(@JsonProperty("certificate") String certificate, @JsonProperty("intermediate_certs") String[] intermediateCerts, @JsonProperty("nonce") String nonce, @JsonProperty("signed_data") String signedData) {
+        this.certificate = certificate;
+        this.intermediateCerts = intermediateCerts;
+        this.nonce = nonce;
+        this.signedData = signedData;
+  }
 }

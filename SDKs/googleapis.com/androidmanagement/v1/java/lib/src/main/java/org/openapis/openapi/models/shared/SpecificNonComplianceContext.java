@@ -18,6 +18,7 @@ public class SpecificNonComplianceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oncWifiContext")
     public OncWifiContext oncWifiContext;
+
     public SpecificNonComplianceContext withOncWifiContext(OncWifiContext oncWifiContext) {
         this.oncWifiContext = oncWifiContext;
         return this;
@@ -29,9 +30,11 @@ public class SpecificNonComplianceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordPoliciesContext")
     public PasswordPoliciesContext passwordPoliciesContext;
+
     public SpecificNonComplianceContext withPasswordPoliciesContext(PasswordPoliciesContext passwordPoliciesContext) {
         this.passwordPoliciesContext = passwordPoliciesContext;
         return this;
     }
     
+    public SpecificNonComplianceContext(){}
 }

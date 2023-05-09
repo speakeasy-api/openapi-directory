@@ -18,6 +18,7 @@ public class OBRisk1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryAddress")
     public OBRisk1DeliveryAddress deliveryAddress;
+
     public OBRisk1 withDeliveryAddress(OBRisk1DeliveryAddress deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
         return this;
@@ -29,6 +30,7 @@ public class OBRisk1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MerchantCategoryCode")
     public String merchantCategoryCode;
+
     public OBRisk1 withMerchantCategoryCode(String merchantCategoryCode) {
         this.merchantCategoryCode = merchantCategoryCode;
         return this;
@@ -40,6 +42,7 @@ public class OBRisk1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MerchantCustomerIdentification")
     public String merchantCustomerIdentification;
+
     public OBRisk1 withMerchantCustomerIdentification(String merchantCustomerIdentification) {
         this.merchantCustomerIdentification = merchantCustomerIdentification;
         return this;
@@ -51,9 +54,11 @@ public class OBRisk1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentContextCode")
     public OBRisk1PaymentContextCodeEnum paymentContextCode;
+
     public OBRisk1 withPaymentContextCode(OBRisk1PaymentContextCodeEnum paymentContextCode) {
         this.paymentContextCode = paymentContextCode;
         return this;
     }
     
+    public OBRisk1(){}
 }

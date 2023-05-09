@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminEnableOrDisableMaintenanceModeResponse {
     
     public String contentType;
+
     public EnterpriseAdminEnableOrDisableMaintenanceModeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminEnableOrDisableMaintenanceModeResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminEnableOrDisableMaintenanceModeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminEnableOrDisableMaintenanceModeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminEnableOrDisableMaintenanceModeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminEnableOrDisableMaintenanceModeResponse {
      */
     
     public org.openapis.openapi.models.shared.MaintenanceStatus maintenanceStatus;
+
     public EnterpriseAdminEnableOrDisableMaintenanceModeResponse withMaintenanceStatus(org.openapis.openapi.models.shared.MaintenanceStatus maintenanceStatus) {
         this.maintenanceStatus = maintenanceStatus;
         return this;
     }
     
+    public EnterpriseAdminEnableOrDisableMaintenanceModeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

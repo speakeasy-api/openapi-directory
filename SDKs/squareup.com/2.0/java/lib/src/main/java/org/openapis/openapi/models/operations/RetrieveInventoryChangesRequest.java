@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveInventoryChangesRequest {
@@ -12,6 +13,7 @@ public class RetrieveInventoryChangesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalog_object_id")
     public String catalogObjectId;
+
     public RetrieveInventoryChangesRequest withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -25,6 +27,7 @@ public class RetrieveInventoryChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public RetrieveInventoryChangesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -36,9 +39,13 @@ public class RetrieveInventoryChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_ids")
     public String locationIds;
+
     public RetrieveInventoryChangesRequest withLocationIds(String locationIds) {
         this.locationIds = locationIds;
         return this;
     }
     
+    public RetrieveInventoryChangesRequest(@JsonProperty("catalog_object_id") String catalogObjectId) {
+        this.catalogObjectId = catalogObjectId;
+  }
 }

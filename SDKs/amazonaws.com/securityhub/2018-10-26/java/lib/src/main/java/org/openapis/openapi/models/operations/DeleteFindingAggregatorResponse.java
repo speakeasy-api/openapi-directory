@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFindingAggregatorResponse {
@@ -12,6 +13,7 @@ public class DeleteFindingAggregatorResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteFindingAggregatorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFindingAggregatorResponse {
     
     
     public String contentType;
+
     public DeleteFindingAggregatorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFindingAggregatorResponse {
      */
     
     public java.util.Map<String, Object> deleteFindingAggregatorResponse;
+
     public DeleteFindingAggregatorResponse withDeleteFindingAggregatorResponse(java.util.Map<String, Object> deleteFindingAggregatorResponse) {
         this.deleteFindingAggregatorResponse = deleteFindingAggregatorResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFindingAggregatorResponse {
      */
     
     public Object internalException;
+
     public DeleteFindingAggregatorResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFindingAggregatorResponse {
      */
     
     public Object invalidAccessException;
+
     public DeleteFindingAggregatorResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteFindingAggregatorResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteFindingAggregatorResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteFindingAggregatorResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteFindingAggregatorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteFindingAggregatorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFindingAggregatorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteFindingAggregatorResponse {
     
     
     public Integer statusCode;
+
     public DeleteFindingAggregatorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DeleteFindingAggregatorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFindingAggregatorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteFindingAggregatorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveTeamdrivesCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TeamDrive teamDrive;
+
     public DriveTeamdrivesCreateRequest withTeamDrive(org.openapis.openapi.models.shared.TeamDrive teamDrive) {
         this.teamDrive = teamDrive;
         return this;
@@ -19,6 +21,7 @@ public class DriveTeamdrivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveTeamdrivesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class DriveTeamdrivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveTeamdrivesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +43,7 @@ public class DriveTeamdrivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveTeamdrivesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +54,7 @@ public class DriveTeamdrivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveTeamdrivesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +65,7 @@ public class DriveTeamdrivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveTeamdrivesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -69,6 +76,7 @@ public class DriveTeamdrivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveTeamdrivesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -79,6 +87,7 @@ public class DriveTeamdrivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public DriveTeamdrivesCreateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -89,9 +98,13 @@ public class DriveTeamdrivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveTeamdrivesCreateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveTeamdrivesCreateRequest(@JsonProperty("requestId") String requestId) {
+        this.requestId = requestId;
+  }
 }

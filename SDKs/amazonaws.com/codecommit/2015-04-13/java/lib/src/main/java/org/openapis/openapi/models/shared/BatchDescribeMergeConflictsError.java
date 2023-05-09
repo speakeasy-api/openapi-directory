@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDescribeMergeConflictsError {
     @JsonProperty("exceptionName")
     public String exceptionName;
+
     public BatchDescribeMergeConflictsError withExceptionName(String exceptionName) {
         this.exceptionName = exceptionName;
         return this;
@@ -19,6 +20,7 @@ public class BatchDescribeMergeConflictsError {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public BatchDescribeMergeConflictsError withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -26,9 +28,15 @@ public class BatchDescribeMergeConflictsError {
     
     @JsonProperty("message")
     public String message;
+
     public BatchDescribeMergeConflictsError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BatchDescribeMergeConflictsError(@JsonProperty("exceptionName") String exceptionName, @JsonProperty("filePath") String filePath, @JsonProperty("message") String message) {
+        this.exceptionName = exceptionName;
+        this.filePath = filePath;
+        this.message = message;
+  }
 }

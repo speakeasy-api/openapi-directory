@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RealtimebiddingBuyersUserListsOpenResponse {
     
     public String contentType;
+
     public RealtimebiddingBuyersUserListsOpenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RealtimebiddingBuyersUserListsOpenResponse {
     
     
     public Integer statusCode;
+
     public RealtimebiddingBuyersUserListsOpenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RealtimebiddingBuyersUserListsOpenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RealtimebiddingBuyersUserListsOpenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class RealtimebiddingBuyersUserListsOpenResponse {
      */
     
     public org.openapis.openapi.models.shared.UserList userList;
+
     public RealtimebiddingBuyersUserListsOpenResponse withUserList(org.openapis.openapi.models.shared.UserList userList) {
         this.userList = userList;
         return this;
     }
     
+    public RealtimebiddingBuyersUserListsOpenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

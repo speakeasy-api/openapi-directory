@@ -15,6 +15,7 @@ public class AdditionalAuthenticationProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public AdditionalAuthenticationProvider withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -23,6 +24,7 @@ public class AdditionalAuthenticationProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaAuthorizerConfig")
     public LambdaAuthorizerConfig lambdaAuthorizerConfig;
+
     public AdditionalAuthenticationProvider withLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
         this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
         return this;
@@ -31,6 +33,7 @@ public class AdditionalAuthenticationProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openIDConnectConfig")
     public OpenIDConnectConfig openIDConnectConfig;
+
     public AdditionalAuthenticationProvider withOpenIDConnectConfig(OpenIDConnectConfig openIDConnectConfig) {
         this.openIDConnectConfig = openIDConnectConfig;
         return this;
@@ -39,9 +42,11 @@ public class AdditionalAuthenticationProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPoolConfig")
     public CognitoUserPoolConfig userPoolConfig;
+
     public AdditionalAuthenticationProvider withUserPoolConfig(CognitoUserPoolConfig userPoolConfig) {
         this.userPoolConfig = userPoolConfig;
         return this;
     }
     
+    public AdditionalAuthenticationProvider(){}
 }

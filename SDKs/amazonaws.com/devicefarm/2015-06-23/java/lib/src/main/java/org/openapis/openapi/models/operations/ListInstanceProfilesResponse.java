@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInstanceProfilesResponse {
@@ -12,6 +13,7 @@ public class ListInstanceProfilesResponse {
      */
     
     public Object argumentException;
+
     public ListInstanceProfilesResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListInstanceProfilesResponse {
     
     
     public String contentType;
+
     public ListInstanceProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListInstanceProfilesResponse {
      */
     
     public Object limitExceededException;
+
     public ListInstanceProfilesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListInstanceProfilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInstanceProfilesResult listInstanceProfilesResult;
+
     public ListInstanceProfilesResponse withListInstanceProfilesResult(org.openapis.openapi.models.shared.ListInstanceProfilesResult listInstanceProfilesResult) {
         this.listInstanceProfilesResult = listInstanceProfilesResult;
         return this;
@@ -49,6 +54,7 @@ public class ListInstanceProfilesResponse {
      */
     
     public Object notFoundException;
+
     public ListInstanceProfilesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListInstanceProfilesResponse {
      */
     
     public Object serviceAccountException;
+
     public ListInstanceProfilesResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class ListInstanceProfilesResponse {
     
     
     public Integer statusCode;
+
     public ListInstanceProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListInstanceProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInstanceProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListInstanceProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

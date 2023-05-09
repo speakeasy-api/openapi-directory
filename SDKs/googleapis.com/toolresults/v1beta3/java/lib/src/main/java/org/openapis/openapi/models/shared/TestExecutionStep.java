@@ -18,6 +18,7 @@ public class TestExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testIssues")
     public TestIssue[] testIssues;
+
     public TestExecutionStep withTestIssues(TestIssue[] testIssues) {
         this.testIssues = testIssues;
         return this;
@@ -29,6 +30,7 @@ public class TestExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSuiteOverviews")
     public TestSuiteOverview[] testSuiteOverviews;
+
     public TestExecutionStep withTestSuiteOverviews(TestSuiteOverview[] testSuiteOverviews) {
         this.testSuiteOverviews = testSuiteOverviews;
         return this;
@@ -40,6 +42,7 @@ public class TestExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTiming")
     public TestTiming testTiming;
+
     public TestExecutionStep withTestTiming(TestTiming testTiming) {
         this.testTiming = testTiming;
         return this;
@@ -51,9 +54,11 @@ public class TestExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolExecution")
     public ToolExecution toolExecution;
+
     public TestExecutionStep withToolExecution(ToolExecution toolExecution) {
         this.toolExecution = toolExecution;
         return this;
     }
     
+    public TestExecutionStep(){}
 }

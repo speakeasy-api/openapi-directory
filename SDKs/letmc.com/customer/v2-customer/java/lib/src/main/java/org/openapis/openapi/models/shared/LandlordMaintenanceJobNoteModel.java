@@ -25,6 +25,7 @@ public class LandlordMaintenanceJobNoteModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public LandlordMaintenanceJobNoteModel withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +37,7 @@ public class LandlordMaintenanceJobNoteModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoteContents")
     public String noteContents;
+
     public LandlordMaintenanceJobNoteModel withNoteContents(String noteContents) {
         this.noteContents = noteContents;
         return this;
@@ -47,9 +49,11 @@ public class LandlordMaintenanceJobNoteModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public LandlordMaintenanceJobNoteModel withOid(String oid) {
         this.oid = oid;
         return this;
     }
     
+    public LandlordMaintenanceJobNoteModel(){}
 }

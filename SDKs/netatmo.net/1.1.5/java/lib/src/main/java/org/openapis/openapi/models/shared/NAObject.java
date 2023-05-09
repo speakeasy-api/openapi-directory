@@ -12,9 +12,11 @@ public class NAObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$id")
     public String dollarId;
+
     public NAObject withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
     }
     
+    public NAObject(){}
 }

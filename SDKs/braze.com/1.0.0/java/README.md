@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CampaignAnalyticsRequest;
 import org.openapis.openapi.models.operations.CampaignAnalyticsResponse;
 
@@ -30,7 +29,7 @@ public class Application {
                 campaignId = "{{campaign_identifier}}";
                 endingAt = "2020-06-28T23:59:59-5:00";
                 length = "7";
-            }}            
+            }};            
 
             CampaignAnalyticsResponse res = sdk.campaign.campaignAnalytics(req);
 
@@ -40,6 +39,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,113 +48,113 @@ public class Application {
 ## Available Resources and Operations
 
 
-### campaign
+### [campaign](docs/campaign/README.md)
 
-* `campaignAnalytics` - Campaign Analytics
-* `campaignDetails` - Campaign Details
-* `campaignList` - Campaign List
-* `sendAnalytics` - Send Analytics
+* [campaignAnalytics](docs/campaign/README.md#campaignanalytics) - Campaign Analytics
+* [campaignDetails](docs/campaign/README.md#campaigndetails) - Campaign Details
+* [campaignList](docs/campaign/README.md#campaignlist) - Campaign List
+* [sendAnalytics](docs/campaign/README.md#sendanalytics) - Send Analytics
 
-### canvas
+### [canvas](docs/canvas/README.md)
 
-* `canvasDataAnalyticsSummary` - Canvas Data Analytics Summary
-* `canvasDataSeriesAnalytics` - Canvas Data Series Analytics
-* `canvasDetails` - Canvas Details
-* `canvasList` - Canvas List
+* [canvasDataAnalyticsSummary](docs/canvas/README.md#canvasdataanalyticssummary) - Canvas Data Analytics Summary
+* [canvasDataSeriesAnalytics](docs/canvas/README.md#canvasdataseriesanalytics) - Canvas Data Series Analytics
+* [canvasDetails](docs/canvas/README.md#canvasdetails) - Canvas Details
+* [canvasList](docs/canvas/README.md#canvaslist) - Canvas List
 
-### contentBlocks
+### [contentBlocks](docs/contentblocks/README.md)
 
-* `listAvailableContentBlocks` - List Available Content Blocks
-* `seeContentBlockInformation` - See Content Block Information
+* [listAvailableContentBlocks](docs/contentblocks/README.md#listavailablecontentblocks) - List Available Content Blocks
+* [seeContentBlockInformation](docs/contentblocks/README.md#seecontentblockinformation) - See Content Block Information
 
-### customEvents
+### [customEvents](docs/customevents/README.md)
 
-* `customEventsAnalytics` - Custom Events Analytics
-* `customEventsList` - Custom Events List
+* [customEventsAnalytics](docs/customevents/README.md#customeventsanalytics) - Custom Events Analytics
+* [customEventsList](docs/customevents/README.md#customeventslist) - Custom Events List
 
-### emailListsAndAddresses
+### [emailListsAndAddresses](docs/emaillistsandaddresses/README.md)
 
-* `queryHardBouncedEmails` - Query Hard Bounced Emails
-* `queryListOfUnsubscribedEmailAddresses` - Query List of Unsubscribed Email Addresses
+* [queryHardBouncedEmails](docs/emaillistsandaddresses/README.md#queryhardbouncedemails) - Query Hard Bounced Emails
+* [queryListOfUnsubscribedEmailAddresses](docs/emaillistsandaddresses/README.md#querylistofunsubscribedemailaddresses) - Query List of Unsubscribed Email Addresses
 
-### emailTemplates
+### [emailTemplates](docs/emailtemplates/README.md)
 
-* `listAvailableEmailTemplates` - List Available Email Templates
-* `seeEmailTemplateInformation` - See Email Template Information
+* [listAvailableEmailTemplates](docs/emailtemplates/README.md#listavailableemailtemplates) - List Available Email Templates
+* [seeEmailTemplateInformation](docs/emailtemplates/README.md#seeemailtemplateinformation) - See Email Template Information
 
-### export
+### [export](docs/export/README.md)
 
-* `appSessionsByTime` - App Sessions by Time
-* `campaignAnalytics` - Campaign Analytics
-* `campaignDetails` - Campaign Details
-* `campaignList` - Campaign List
-* `canvasDataAnalyticsSummary` - Canvas Data Analytics Summary
-* `canvasDataSeriesAnalytics` - Canvas Data Series Analytics
-* `canvasDetails` - Canvas Details
-* `canvasList` - Canvas List
-* `customEventsAnalytics` - Custom Events Analytics
-* `customEventsList` - Custom Events List
-* `dailyActiveUsersByDate` - Daily Active Users by Date
-* `dailyNewUsersByDate` - Daily New Users by Date
-* `kpIsForDailyAppUninstallsByDate` - KPIs for Daily App Uninstalls by Date
-* `monthlyActiveUsersForLast30Days` - Monthly Active Users for Last 30 Days
-* `newsFeedCardAnalytics` - News Feed Card Analytics
-* `newsFeedCardsDetails` - News Feed Cards Details
-* `newsFeedCardsList` - News Feed Cards List
-* `segmentAnalytics` - Segment Analytics
-* `segmentDetails` - Segment Details
-* `segmentList` - Segment List
-* `sendAnalytics` - Send Analytics
+* [appSessionsByTime](docs/export/README.md#appsessionsbytime) - App Sessions by Time
+* [campaignAnalytics](docs/export/README.md#campaignanalytics) - Campaign Analytics
+* [campaignDetails](docs/export/README.md#campaigndetails) - Campaign Details
+* [campaignList](docs/export/README.md#campaignlist) - Campaign List
+* [canvasDataAnalyticsSummary](docs/export/README.md#canvasdataanalyticssummary) - Canvas Data Analytics Summary
+* [canvasDataSeriesAnalytics](docs/export/README.md#canvasdataseriesanalytics) - Canvas Data Series Analytics
+* [canvasDetails](docs/export/README.md#canvasdetails) - Canvas Details
+* [canvasList](docs/export/README.md#canvaslist) - Canvas List
+* [customEventsAnalytics](docs/export/README.md#customeventsanalytics) - Custom Events Analytics
+* [customEventsList](docs/export/README.md#customeventslist) - Custom Events List
+* [dailyActiveUsersByDate](docs/export/README.md#dailyactiveusersbydate) - Daily Active Users by Date
+* [dailyNewUsersByDate](docs/export/README.md#dailynewusersbydate) - Daily New Users by Date
+* [kpIsForDailyAppUninstallsByDate](docs/export/README.md#kpisfordailyappuninstallsbydate) - KPIs for Daily App Uninstalls by Date
+* [monthlyActiveUsersForLast30Days](docs/export/README.md#monthlyactiveusersforlast30days) - Monthly Active Users for Last 30 Days
+* [newsFeedCardAnalytics](docs/export/README.md#newsfeedcardanalytics) - News Feed Card Analytics
+* [newsFeedCardsDetails](docs/export/README.md#newsfeedcardsdetails) - News Feed Cards Details
+* [newsFeedCardsList](docs/export/README.md#newsfeedcardslist) - News Feed Cards List
+* [segmentAnalytics](docs/export/README.md#segmentanalytics) - Segment Analytics
+* [segmentDetails](docs/export/README.md#segmentdetails) - Segment Details
+* [segmentList](docs/export/README.md#segmentlist) - Segment List
+* [sendAnalytics](docs/export/README.md#sendanalytics) - Send Analytics
 
-### kpi
+### [kpi](docs/kpi/README.md)
 
-* `dailyActiveUsersByDate` - Daily Active Users by Date
-* `dailyNewUsersByDate` - Daily New Users by Date
-* `kpIsForDailyAppUninstallsByDate` - KPIs for Daily App Uninstalls by Date
-* `monthlyActiveUsersForLast30Days` - Monthly Active Users for Last 30 Days
+* [dailyActiveUsersByDate](docs/kpi/README.md#dailyactiveusersbydate) - Daily Active Users by Date
+* [dailyNewUsersByDate](docs/kpi/README.md#dailynewusersbydate) - Daily New Users by Date
+* [kpIsForDailyAppUninstallsByDate](docs/kpi/README.md#kpisfordailyappuninstallsbydate) - KPIs for Daily App Uninstalls by Date
+* [monthlyActiveUsersForLast30Days](docs/kpi/README.md#monthlyactiveusersforlast30days) - Monthly Active Users for Last 30 Days
 
-### messaging
+### [messaging](docs/messaging/README.md)
 
-* `getUpcomingScheduledCampaignsAndCanvases` - Get Upcoming Scheduled Campaigns and Canvases
-* `scheduleApiTriggeredCanvases` - Schedule API Triggered Canvases
+* [getUpcomingScheduledCampaignsAndCanvases](docs/messaging/README.md#getupcomingscheduledcampaignsandcanvases) - Get Upcoming Scheduled Campaigns and Canvases
+* [scheduleApiTriggeredCanvases](docs/messaging/README.md#scheduleapitriggeredcanvases) - Schedule API Triggered Canvases
 
-### newsFeed
+### [newsFeed](docs/newsfeed/README.md)
 
-* `newsFeedCardAnalytics` - News Feed Card Analytics
-* `newsFeedCardsDetails` - News Feed Cards Details
-* `newsFeedCardsList` - News Feed Cards List
+* [newsFeedCardAnalytics](docs/newsfeed/README.md#newsfeedcardanalytics) - News Feed Card Analytics
+* [newsFeedCardsDetails](docs/newsfeed/README.md#newsfeedcardsdetails) - News Feed Cards Details
+* [newsFeedCardsList](docs/newsfeed/README.md#newsfeedcardslist) - News Feed Cards List
 
-### sms
+### [sms](docs/sms/README.md)
 
-* `listUserSSubscriptionGroupSms` - List User's Subscription Group - SMS
-* `listUserSSubscriptionGroupStatusSms` - List User's  Subscription Group Status - SMS
+* [listUserSSubscriptionGroupSms](docs/sms/README.md#listuserssubscriptiongroupsms) - List User's Subscription Group - SMS
+* [listUserSSubscriptionGroupStatusSms](docs/sms/README.md#listuserssubscriptiongroupstatussms) - List User's  Subscription Group Status - SMS
 
-### scheduleMesages
+### [scheduleMesages](docs/schedulemesages/README.md)
 
-* `getUpcomingScheduledCampaignsAndCanvases` - Get Upcoming Scheduled Campaigns and Canvases
-* `scheduleApiTriggeredCanvases` - Schedule API Triggered Canvases
+* [getUpcomingScheduledCampaignsAndCanvases](docs/schedulemesages/README.md#getupcomingscheduledcampaignsandcanvases) - Get Upcoming Scheduled Campaigns and Canvases
+* [scheduleApiTriggeredCanvases](docs/schedulemesages/README.md#scheduleapitriggeredcanvases) - Schedule API Triggered Canvases
 
-### segment
+### [segment](docs/segment/README.md)
 
-* `segmentAnalytics` - Segment Analytics
-* `segmentDetails` - Segment Details
-* `segmentList` - Segment List
+* [segmentAnalytics](docs/segment/README.md#segmentanalytics) - Segment Analytics
+* [segmentDetails](docs/segment/README.md#segmentdetails) - Segment Details
+* [segmentList](docs/segment/README.md#segmentlist) - Segment List
 
-### sessionAnalytics
+### [sessionAnalytics](docs/sessionanalytics/README.md)
 
-* `appSessionsByTime` - App Sessions by Time
+* [appSessionsByTime](docs/sessionanalytics/README.md#appsessionsbytime) - App Sessions by Time
 
-### subscriptionGroups
+### [subscriptionGroups](docs/subscriptiongroups/README.md)
 
-* `listUserSSubscriptionGroupSms` - List User's Subscription Group - SMS
-* `listUserSSubscriptionGroupStatusSms` - List User's  Subscription Group Status - SMS
+* [listUserSSubscriptionGroupSms](docs/subscriptiongroups/README.md#listuserssubscriptiongroupsms) - List User's Subscription Group - SMS
+* [listUserSSubscriptionGroupStatusSms](docs/subscriptiongroups/README.md#listuserssubscriptiongroupstatussms) - List User's  Subscription Group Status - SMS
 
-### templates
+### [templates](docs/templates/README.md)
 
-* `listAvailableContentBlocks` - List Available Content Blocks
-* `listAvailableEmailTemplates` - List Available Email Templates
-* `seeContentBlockInformation` - See Content Block Information
-* `seeEmailTemplateInformation` - See Email Template Information
+* [listAvailableContentBlocks](docs/templates/README.md#listavailablecontentblocks) - List Available Content Blocks
+* [listAvailableEmailTemplates](docs/templates/README.md#listavailableemailtemplates) - List Available Email Templates
+* [seeContentBlockInformation](docs/templates/README.md#seecontentblockinformation) - See Content Block Information
+* [seeEmailTemplateInformation](docs/templates/README.md#seeemailtemplateinformation) - See Email Template Information
 <!-- End SDK Available Operations -->
 
 ### Maturity

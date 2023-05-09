@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsPersonalizationEnabled")
     public Boolean adsPersonalizationEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInput withAdsPersonalizationEnabled(Boolean adsPersonalizationEnabled) {
         this.adsPersonalizationEnabled = adsPersonalizationEnabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInput withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignDataSharingEnabled")
     public Boolean campaignDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInput withCampaignDataSharingEnabled(Boolean campaignDataSharingEnabled) {
         this.campaignDataSharingEnabled = campaignDataSharingEnabled;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costDataSharingEnabled")
     public Boolean costDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInput withCostDataSharingEnabled(Boolean costDataSharingEnabled) {
         this.costDataSharingEnabled = costDataSharingEnabled;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationEmail")
     public String validationEmail;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInput withValidationEmail(String validationEmail) {
         this.validationEmail = validationEmail;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInput(){}
 }

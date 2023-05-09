@@ -15,6 +15,7 @@ public class BasicError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public BasicError withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -23,6 +24,7 @@ public class BasicError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BasicError withMessage(String message) {
         this.message = message;
         return this;
@@ -31,6 +33,7 @@ public class BasicError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public BasicError withStatus(String status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class BasicError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BasicError withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BasicError(){}
 }

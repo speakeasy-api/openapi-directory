@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeHostedConnectionsResponse {
@@ -12,6 +13,7 @@ public class DescribeHostedConnectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.Connections connections;
+
     public DescribeHostedConnectionsResponse withConnections(org.openapis.openapi.models.shared.Connections connections) {
         this.connections = connections;
         return this;
@@ -19,6 +21,7 @@ public class DescribeHostedConnectionsResponse {
     
     
     public String contentType;
+
     public DescribeHostedConnectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeHostedConnectionsResponse {
      */
     
     public Object directConnectClientException;
+
     public DescribeHostedConnectionsResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeHostedConnectionsResponse {
      */
     
     public Object directConnectServerException;
+
     public DescribeHostedConnectionsResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeHostedConnectionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeHostedConnectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeHostedConnectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeHostedConnectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeHostedConnectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

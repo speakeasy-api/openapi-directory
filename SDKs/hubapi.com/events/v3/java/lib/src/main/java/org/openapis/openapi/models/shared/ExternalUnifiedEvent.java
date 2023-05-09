@@ -41,6 +41,7 @@ public class ExternalUnifiedEvent {
      */
     @JsonProperty("eventType")
     public String eventType;
+
     public ExternalUnifiedEvent withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -51,6 +52,7 @@ public class ExternalUnifiedEvent {
      */
     @JsonProperty("id")
     public String id;
+
     public ExternalUnifiedEvent withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +63,7 @@ public class ExternalUnifiedEvent {
      */
     @JsonProperty("objectId")
     public String objectId;
+
     public ExternalUnifiedEvent withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -71,6 +74,7 @@ public class ExternalUnifiedEvent {
      */
     @JsonProperty("objectType")
     public String objectType;
+
     public ExternalUnifiedEvent withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -83,6 +87,7 @@ public class ExternalUnifiedEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("occurredAt")
     public OffsetDateTime occurredAt;
+
     public ExternalUnifiedEvent withOccurredAt(OffsetDateTime occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -90,9 +95,18 @@ public class ExternalUnifiedEvent {
     
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public ExternalUnifiedEvent withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public ExternalUnifiedEvent(@JsonProperty("eventType") String eventType, @JsonProperty("id") String id, @JsonProperty("objectId") String objectId, @JsonProperty("objectType") String objectType, @JsonProperty("occurredAt") OffsetDateTime occurredAt, @JsonProperty("properties") java.util.Map<String, String> properties) {
+        this.eventType = eventType;
+        this.id = id;
+        this.objectId = objectId;
+        this.objectType = objectType;
+        this.occurredAt = occurredAt;
+        this.properties = properties;
+  }
 }

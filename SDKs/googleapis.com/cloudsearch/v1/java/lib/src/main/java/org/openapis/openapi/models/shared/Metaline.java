@@ -18,9 +18,11 @@ public class Metaline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public DisplayedProperty[] properties;
+
     public Metaline withProperties(DisplayedProperty[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public Metaline(){}
 }

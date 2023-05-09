@@ -17,6 +17,7 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteInternationalScheduledResponse6DataCharges[] charges;
+
     public OBWriteInternationalScheduledResponse6Data withCharges(OBWriteInternationalScheduledResponse6DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -27,6 +28,7 @@ public class OBWriteInternationalScheduledResponse6Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteInternationalScheduledResponse6Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -41,6 +43,7 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteInternationalScheduledResponse6Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteInternationalScheduledResponse6Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -63,6 +67,7 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRateInformation")
     public OBWriteInternationalScheduledResponse6DataExchangeRateInformation exchangeRateInformation;
+
     public OBWriteInternationalScheduledResponse6Data withExchangeRateInformation(OBWriteInternationalScheduledResponse6DataExchangeRateInformation exchangeRateInformation) {
         this.exchangeRateInformation = exchangeRateInformation;
         return this;
@@ -78,6 +83,7 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedExecutionDateTime")
     public OffsetDateTime expectedExecutionDateTime;
+
     public OBWriteInternationalScheduledResponse6Data withExpectedExecutionDateTime(OffsetDateTime expectedExecutionDateTime) {
         this.expectedExecutionDateTime = expectedExecutionDateTime;
         return this;
@@ -93,6 +99,7 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedSettlementDateTime")
     public OffsetDateTime expectedSettlementDateTime;
+
     public OBWriteInternationalScheduledResponse6Data withExpectedSettlementDateTime(OffsetDateTime expectedSettlementDateTime) {
         this.expectedSettlementDateTime = expectedSettlementDateTime;
         return this;
@@ -103,6 +110,7 @@ public class OBWriteInternationalScheduledResponse6Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalScheduledResponse6DataInitiation initiation;
+
     public OBWriteInternationalScheduledResponse6Data withInitiation(OBWriteInternationalScheduledResponse6DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -113,6 +121,7 @@ public class OBWriteInternationalScheduledResponse6Data {
      */
     @JsonProperty("InternationalScheduledPaymentId")
     public String internationalScheduledPaymentId;
+
     public OBWriteInternationalScheduledResponse6Data withInternationalScheduledPaymentId(String internationalScheduledPaymentId) {
         this.internationalScheduledPaymentId = internationalScheduledPaymentId;
         return this;
@@ -124,6 +133,7 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiAuthorisation")
     public OBWriteInternationalScheduledResponse6DataMultiAuthorisation multiAuthorisation;
+
     public OBWriteInternationalScheduledResponse6Data withMultiAuthorisation(OBWriteInternationalScheduledResponse6DataMultiAuthorisation multiAuthorisation) {
         this.multiAuthorisation = multiAuthorisation;
         return this;
@@ -132,6 +142,7 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Refund")
     public OBWriteInternationalScheduledResponse6DataRefund refund;
+
     public OBWriteInternationalScheduledResponse6Data withRefund(OBWriteInternationalScheduledResponse6DataRefund refund) {
         this.refund = refund;
         return this;
@@ -142,6 +153,7 @@ public class OBWriteInternationalScheduledResponse6Data {
      */
     @JsonProperty("Status")
     public OBWriteInternationalScheduledResponse6DataStatusEnum status;
+
     public OBWriteInternationalScheduledResponse6Data withStatus(OBWriteInternationalScheduledResponse6DataStatusEnum status) {
         this.status = status;
         return this;
@@ -156,9 +168,18 @@ public class OBWriteInternationalScheduledResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteInternationalScheduledResponse6Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteInternationalScheduledResponse6Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Initiation") OBWriteInternationalScheduledResponse6DataInitiation initiation, @JsonProperty("InternationalScheduledPaymentId") String internationalScheduledPaymentId, @JsonProperty("Status") OBWriteInternationalScheduledResponse6DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.initiation = initiation;
+        this.internationalScheduledPaymentId = internationalScheduledPaymentId;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

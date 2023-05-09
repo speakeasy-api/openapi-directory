@@ -12,6 +12,7 @@ public class AttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesEmitted")
     public Long bytesEmitted;
+
     public AttemptStats withBytesEmitted(Long bytesEmitted) {
         this.bytesEmitted = bytesEmitted;
         return this;
@@ -20,6 +21,7 @@ public class AttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedBytes")
     public Long estimatedBytes;
+
     public AttemptStats withEstimatedBytes(Long estimatedBytes) {
         this.estimatedBytes = estimatedBytes;
         return this;
@@ -28,6 +30,7 @@ public class AttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedRecords")
     public Long estimatedRecords;
+
     public AttemptStats withEstimatedRecords(Long estimatedRecords) {
         this.estimatedRecords = estimatedRecords;
         return this;
@@ -36,6 +39,7 @@ public class AttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsCommitted")
     public Long recordsCommitted;
+
     public AttemptStats withRecordsCommitted(Long recordsCommitted) {
         this.recordsCommitted = recordsCommitted;
         return this;
@@ -44,6 +48,7 @@ public class AttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsEmitted")
     public Long recordsEmitted;
+
     public AttemptStats withRecordsEmitted(Long recordsEmitted) {
         this.recordsEmitted = recordsEmitted;
         return this;
@@ -52,9 +57,11 @@ public class AttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMessagesEmitted")
     public Long stateMessagesEmitted;
+
     public AttemptStats withStateMessagesEmitted(Long stateMessagesEmitted) {
         this.stateMessagesEmitted = stateMessagesEmitted;
         return this;
     }
     
+    public AttemptStats(){}
 }

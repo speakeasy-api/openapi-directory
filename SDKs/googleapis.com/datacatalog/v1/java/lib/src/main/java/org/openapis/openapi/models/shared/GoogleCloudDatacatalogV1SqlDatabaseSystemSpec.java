@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1SqlDatabaseSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseVersion")
     public String databaseVersion;
+
     public GoogleCloudDatacatalogV1SqlDatabaseSystemSpec withDatabaseVersion(String databaseVersion) {
         this.databaseVersion = databaseVersion;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1SqlDatabaseSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceHost")
     public String instanceHost;
+
     public GoogleCloudDatacatalogV1SqlDatabaseSystemSpec withInstanceHost(String instanceHost) {
         this.instanceHost = instanceHost;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1SqlDatabaseSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlEngine")
     public String sqlEngine;
+
     public GoogleCloudDatacatalogV1SqlDatabaseSystemSpec withSqlEngine(String sqlEngine) {
         this.sqlEngine = sqlEngine;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1SqlDatabaseSystemSpec(){}
 }

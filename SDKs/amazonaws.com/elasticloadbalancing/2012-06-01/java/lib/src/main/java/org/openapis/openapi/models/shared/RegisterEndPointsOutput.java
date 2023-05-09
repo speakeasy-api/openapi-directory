@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RegisterEndPointsOutput {
     
     public Instance[] instances;
+
     public RegisterEndPointsOutput withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public RegisterEndPointsOutput(){}
 }

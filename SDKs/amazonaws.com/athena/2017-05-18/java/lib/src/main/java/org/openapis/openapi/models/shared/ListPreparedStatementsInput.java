@@ -12,6 +12,7 @@ public class ListPreparedStatementsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPreparedStatementsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListPreparedStatementsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPreparedStatementsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListPreparedStatementsInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public ListPreparedStatementsInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public ListPreparedStatementsInput(@JsonProperty("WorkGroup") String workGroup) {
+        this.workGroup = workGroup;
+  }
 }

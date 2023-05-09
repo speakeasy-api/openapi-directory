@@ -12,6 +12,7 @@ public class VerifyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public VerifyRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -19,6 +20,7 @@ public class VerifyRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public VerifyRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -26,6 +28,7 @@ public class VerifyRequest {
     
     @JsonProperty("Message")
     public String message;
+
     public VerifyRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -34,6 +37,7 @@ public class VerifyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public VerifyRequest withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -41,6 +45,7 @@ public class VerifyRequest {
     
     @JsonProperty("Signature")
     public String signature;
+
     public VerifyRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -48,9 +53,16 @@ public class VerifyRequest {
     
     @JsonProperty("SigningAlgorithm")
     public SigningAlgorithmSpecEnum signingAlgorithm;
+
     public VerifyRequest withSigningAlgorithm(SigningAlgorithmSpecEnum signingAlgorithm) {
         this.signingAlgorithm = signingAlgorithm;
         return this;
     }
     
+    public VerifyRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("Message") String message, @JsonProperty("Signature") String signature, @JsonProperty("SigningAlgorithm") SigningAlgorithmSpecEnum signingAlgorithm) {
+        this.keyId = keyId;
+        this.message = message;
+        this.signature = signature;
+        this.signingAlgorithm = signingAlgorithm;
+  }
 }

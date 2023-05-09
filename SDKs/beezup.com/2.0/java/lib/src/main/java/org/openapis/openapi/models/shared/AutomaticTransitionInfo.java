@@ -14,6 +14,7 @@ public class AutomaticTransitionInfo {
      */
     @JsonProperty("accountId")
     public Integer accountId;
+
     public AutomaticTransitionInfo withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -24,6 +25,7 @@ public class AutomaticTransitionInfo {
      */
     @JsonProperty("beezUPOrderStatus")
     public String beezUPOrderStatus;
+
     public AutomaticTransitionInfo withBeezUPOrderStatus(String beezUPOrderStatus) {
         this.beezUPOrderStatus = beezUPOrderStatus;
         return this;
@@ -31,6 +33,7 @@ public class AutomaticTransitionInfo {
     
     @JsonProperty("businessOperationType")
     public String businessOperationType;
+
     public AutomaticTransitionInfo withBusinessOperationType(String businessOperationType) {
         this.businessOperationType = businessOperationType;
         return this;
@@ -38,6 +41,7 @@ public class AutomaticTransitionInfo {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AutomaticTransitionInfo withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -46,6 +50,7 @@ public class AutomaticTransitionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public AutomaticTransitionInfoLinks links;
+
     public AutomaticTransitionInfo withLinks(AutomaticTransitionInfoLinks links) {
         this.links = links;
         return this;
@@ -56,6 +61,7 @@ public class AutomaticTransitionInfo {
      */
     @JsonProperty("marketplaceBusinessCode")
     public String marketplaceBusinessCode;
+
     public AutomaticTransitionInfo withMarketplaceBusinessCode(String marketplaceBusinessCode) {
         this.marketplaceBusinessCode = marketplaceBusinessCode;
         return this;
@@ -66,6 +72,7 @@ public class AutomaticTransitionInfo {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public AutomaticTransitionInfo withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -73,9 +80,19 @@ public class AutomaticTransitionInfo {
     
     @JsonProperty("orderStatusTransitionId")
     public Integer orderStatusTransitionId;
+
     public AutomaticTransitionInfo withOrderStatusTransitionId(Integer orderStatusTransitionId) {
         this.orderStatusTransitionId = orderStatusTransitionId;
         return this;
     }
     
+    public AutomaticTransitionInfo(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderStatus") String beezUPOrderStatus, @JsonProperty("businessOperationType") String businessOperationType, @JsonProperty("enabled") Boolean enabled, @JsonProperty("marketplaceBusinessCode") String marketplaceBusinessCode, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("orderStatusTransitionId") Integer orderStatusTransitionId) {
+        this.accountId = accountId;
+        this.beezUPOrderStatus = beezUPOrderStatus;
+        this.businessOperationType = businessOperationType;
+        this.enabled = enabled;
+        this.marketplaceBusinessCode = marketplaceBusinessCode;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.orderStatusTransitionId = orderStatusTransitionId;
+  }
 }

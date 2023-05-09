@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPsd2RegistrationsResponse {
     
     public String contentType;
+
     public GetPsd2RegistrationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPsd2RegistrationsResponse {
     
     
     public Integer statusCode;
+
     public GetPsd2RegistrationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPsd2RegistrationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPsd2RegistrationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetPsd2RegistrationsResponse {
      */
     
     public GetPsd2Registrations200ApplicationJSON getPsd2Registrations200ApplicationJSONObject;
+
     public GetPsd2RegistrationsResponse withGetPsd2Registrations200ApplicationJSONObject(GetPsd2Registrations200ApplicationJSON getPsd2Registrations200ApplicationJSONObject) {
         this.getPsd2Registrations200ApplicationJSONObject = getPsd2Registrations200ApplicationJSONObject;
         return this;
     }
     
+    public GetPsd2RegistrationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

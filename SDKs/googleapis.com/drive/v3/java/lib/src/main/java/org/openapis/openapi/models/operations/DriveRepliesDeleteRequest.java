@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveRepliesDeleteRequest {
@@ -12,6 +13,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveRepliesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commentId")
     public String commentId;
+
     public DriveRepliesDeleteRequest withCommentId(String commentId) {
         this.commentId = commentId;
         return this;
@@ -32,6 +35,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveRepliesDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DriveRepliesDeleteRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -52,6 +57,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveRepliesDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveRepliesDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveRepliesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveRepliesDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=replyId")
     public String replyId;
+
     public DriveRepliesDeleteRequest withReplyId(String replyId) {
         this.replyId = replyId;
         return this;
@@ -102,9 +112,15 @@ public class DriveRepliesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveRepliesDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveRepliesDeleteRequest(@JsonProperty("commentId") String commentId, @JsonProperty("fileId") String fileId, @JsonProperty("replyId") String replyId) {
+        this.commentId = commentId;
+        this.fileId = fileId;
+        this.replyId = replyId;
+  }
 }

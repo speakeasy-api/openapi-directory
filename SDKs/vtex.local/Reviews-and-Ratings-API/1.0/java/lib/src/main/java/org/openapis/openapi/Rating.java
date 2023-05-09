@@ -59,11 +59,9 @@ public class Rating {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductRatingResponse res = new org.openapis.openapi.models.operations.GetProductRatingResponse() {{
+        org.openapis.openapi.models.operations.GetProductRatingResponse res = new org.openapis.openapi.models.operations.GetProductRatingResponse(contentType, httpRes.statusCode()) {{
             getProductRating200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

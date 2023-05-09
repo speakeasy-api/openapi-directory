@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalysisRuleAggregation {
     @JsonProperty("aggregateColumns")
     public AggregateColumn[] aggregateColumns;
+
     public AnalysisRuleAggregation withAggregateColumns(AggregateColumn[] aggregateColumns) {
         this.aggregateColumns = aggregateColumns;
         return this;
@@ -21,6 +22,7 @@ public class AnalysisRuleAggregation {
     
     @JsonProperty("dimensionColumns")
     public String[] dimensionColumns;
+
     public AnalysisRuleAggregation withDimensionColumns(String[] dimensionColumns) {
         this.dimensionColumns = dimensionColumns;
         return this;
@@ -28,6 +30,7 @@ public class AnalysisRuleAggregation {
     
     @JsonProperty("joinColumns")
     public String[] joinColumns;
+
     public AnalysisRuleAggregation withJoinColumns(String[] joinColumns) {
         this.joinColumns = joinColumns;
         return this;
@@ -36,6 +39,7 @@ public class AnalysisRuleAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joinRequired")
     public JoinRequiredOptionEnum joinRequired;
+
     public AnalysisRuleAggregation withJoinRequired(JoinRequiredOptionEnum joinRequired) {
         this.joinRequired = joinRequired;
         return this;
@@ -43,6 +47,7 @@ public class AnalysisRuleAggregation {
     
     @JsonProperty("outputConstraints")
     public AggregationConstraint[] outputConstraints;
+
     public AnalysisRuleAggregation withOutputConstraints(AggregationConstraint[] outputConstraints) {
         this.outputConstraints = outputConstraints;
         return this;
@@ -50,9 +55,17 @@ public class AnalysisRuleAggregation {
     
     @JsonProperty("scalarFunctions")
     public ScalarFunctionsEnum[] scalarFunctions;
+
     public AnalysisRuleAggregation withScalarFunctions(ScalarFunctionsEnum[] scalarFunctions) {
         this.scalarFunctions = scalarFunctions;
         return this;
     }
     
+    public AnalysisRuleAggregation(@JsonProperty("aggregateColumns") AggregateColumn[] aggregateColumns, @JsonProperty("dimensionColumns") String[] dimensionColumns, @JsonProperty("joinColumns") String[] joinColumns, @JsonProperty("outputConstraints") AggregationConstraint[] outputConstraints, @JsonProperty("scalarFunctions") ScalarFunctionsEnum[] scalarFunctions) {
+        this.aggregateColumns = aggregateColumns;
+        this.dimensionColumns = dimensionColumns;
+        this.joinColumns = joinColumns;
+        this.outputConstraints = outputConstraints;
+        this.scalarFunctions = scalarFunctions;
+  }
 }

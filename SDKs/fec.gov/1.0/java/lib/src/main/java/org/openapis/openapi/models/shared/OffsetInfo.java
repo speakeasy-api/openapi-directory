@@ -12,6 +12,7 @@ public class OffsetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public OffsetInfo withCount(Integer count) {
         this.count = count;
         return this;
@@ -20,6 +21,7 @@ public class OffsetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Integer page;
+
     public OffsetInfo withPage(Integer page) {
         this.page = page;
         return this;
@@ -28,6 +30,7 @@ public class OffsetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public Integer pages;
+
     public OffsetInfo withPages(Integer pages) {
         this.pages = pages;
         return this;
@@ -36,9 +39,11 @@ public class OffsetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Integer perPage;
+
     public OffsetInfo withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public OffsetInfo(){}
 }

@@ -18,9 +18,11 @@ public class GoogleAudienceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public GoogleAudienceTargetingSetting[] settings;
+
     public GoogleAudienceGroup withSettings(GoogleAudienceTargetingSetting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public GoogleAudienceGroup(){}
 }

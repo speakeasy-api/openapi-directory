@@ -15,6 +15,7 @@ public class GroundStationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundStationId")
     public String groundStationId;
+
     public GroundStationData withGroundStationId(String groundStationId) {
         this.groundStationId = groundStationId;
         return this;
@@ -23,6 +24,7 @@ public class GroundStationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundStationName")
     public String groundStationName;
+
     public GroundStationData withGroundStationName(String groundStationName) {
         this.groundStationName = groundStationName;
         return this;
@@ -31,9 +33,11 @@ public class GroundStationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public GroundStationData withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public GroundStationData(){}
 }

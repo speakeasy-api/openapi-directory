@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class QueryStringKeyValuePair {
     
     public String key;
+
     public QueryStringKeyValuePair withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class QueryStringKeyValuePair {
     
     
     public String value;
+
     public QueryStringKeyValuePair withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public QueryStringKeyValuePair(){}
 }

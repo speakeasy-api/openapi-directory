@@ -18,9 +18,11 @@ public class AssignedInventorySourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceId")
     public String inventorySourceId;
+
     public AssignedInventorySourceInput withInventorySourceId(String inventorySourceId) {
         this.inventorySourceId = inventorySourceId;
         return this;
     }
     
+    public AssignedInventorySourceInput(){}
 }

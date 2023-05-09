@@ -15,6 +15,7 @@ public class PagespeedApiImageV2PageRect {
      */
     
     public Integer height;
+
     public PagespeedApiImageV2PageRect withHeight(Integer height) {
         this.height = height;
         return this;
@@ -25,6 +26,7 @@ public class PagespeedApiImageV2PageRect {
      */
     
     public Integer left;
+
     public PagespeedApiImageV2PageRect withLeft(Integer left) {
         this.left = left;
         return this;
@@ -35,6 +37,7 @@ public class PagespeedApiImageV2PageRect {
      */
     
     public Integer top;
+
     public PagespeedApiImageV2PageRect withTop(Integer top) {
         this.top = top;
         return this;
@@ -45,9 +48,11 @@ public class PagespeedApiImageV2PageRect {
      */
     
     public Integer width;
+
     public PagespeedApiImageV2PageRect withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public PagespeedApiImageV2PageRect(){}
 }

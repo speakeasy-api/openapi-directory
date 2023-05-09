@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeploymentGroupResponse {
@@ -12,6 +13,7 @@ public class GetDeploymentGroupResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public GetDeploymentGroupResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetDeploymentGroupResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public GetDeploymentGroupResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetDeploymentGroupResponse {
     
     
     public String contentType;
+
     public GetDeploymentGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDeploymentGroupResponse {
      */
     
     public Object deploymentConfigDoesNotExistException;
+
     public GetDeploymentGroupResponse withDeploymentConfigDoesNotExistException(Object deploymentConfigDoesNotExistException) {
         this.deploymentConfigDoesNotExistException = deploymentConfigDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class GetDeploymentGroupResponse {
      */
     
     public Object deploymentGroupDoesNotExistException;
+
     public GetDeploymentGroupResponse withDeploymentGroupDoesNotExistException(Object deploymentGroupDoesNotExistException) {
         this.deploymentGroupDoesNotExistException = deploymentGroupDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class GetDeploymentGroupResponse {
      */
     
     public Object deploymentGroupNameRequiredException;
+
     public GetDeploymentGroupResponse withDeploymentGroupNameRequiredException(Object deploymentGroupNameRequiredException) {
         this.deploymentGroupNameRequiredException = deploymentGroupNameRequiredException;
         return this;
@@ -69,6 +76,7 @@ public class GetDeploymentGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeploymentGroupOutput getDeploymentGroupOutput;
+
     public GetDeploymentGroupResponse withGetDeploymentGroupOutput(org.openapis.openapi.models.shared.GetDeploymentGroupOutput getDeploymentGroupOutput) {
         this.getDeploymentGroupOutput = getDeploymentGroupOutput;
         return this;
@@ -79,6 +87,7 @@ public class GetDeploymentGroupResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public GetDeploymentGroupResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -89,6 +98,7 @@ public class GetDeploymentGroupResponse {
      */
     
     public Object invalidDeploymentGroupNameException;
+
     public GetDeploymentGroupResponse withInvalidDeploymentGroupNameException(Object invalidDeploymentGroupNameException) {
         this.invalidDeploymentGroupNameException = invalidDeploymentGroupNameException;
         return this;
@@ -96,6 +106,7 @@ public class GetDeploymentGroupResponse {
     
     
     public Integer statusCode;
+
     public GetDeploymentGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class GetDeploymentGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeploymentGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeploymentGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

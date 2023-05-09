@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProdTtSasportalCustomersListResponse {
     
     public String contentType;
+
     public ProdTtSasportalCustomersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProdTtSasportalCustomersListResponse {
      */
     
     public org.openapis.openapi.models.shared.SasPortalListCustomersResponse sasPortalListCustomersResponse;
+
     public ProdTtSasportalCustomersListResponse withSasPortalListCustomersResponse(org.openapis.openapi.models.shared.SasPortalListCustomersResponse sasPortalListCustomersResponse) {
         this.sasPortalListCustomersResponse = sasPortalListCustomersResponse;
         return this;
@@ -26,6 +29,7 @@ public class ProdTtSasportalCustomersListResponse {
     
     
     public Integer statusCode;
+
     public ProdTtSasportalCustomersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProdTtSasportalCustomersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProdTtSasportalCustomersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProdTtSasportalCustomersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

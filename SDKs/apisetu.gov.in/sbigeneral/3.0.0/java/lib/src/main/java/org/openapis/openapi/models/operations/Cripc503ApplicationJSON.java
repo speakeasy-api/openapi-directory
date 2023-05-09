@@ -15,6 +15,7 @@ public class Cripc503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Cripc503ApplicationJSONErrorEnum error;
+
     public Cripc503ApplicationJSON withError(Cripc503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Cripc503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Cripc503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Cripc503ApplicationJSON withErrorDescription(Cripc503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Cripc503ApplicationJSON(){}
 }

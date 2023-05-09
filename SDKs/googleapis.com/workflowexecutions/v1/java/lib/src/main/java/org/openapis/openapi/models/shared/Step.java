@@ -18,6 +18,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routine")
     public String routine;
+
     public Step withRoutine(String routine) {
         this.routine = routine;
         return this;
@@ -29,9 +30,11 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step")
     public String step;
+
     public Step withStep(String step) {
         this.step = step;
         return this;
     }
     
+    public Step(){}
 }

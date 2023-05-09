@@ -48,11 +48,9 @@ public class UserDefinedFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserDefinedFieldsGetResponse res = new org.openapis.openapi.models.operations.UserDefinedFieldsGetResponse() {{
+        org.openapis.openapi.models.operations.UserDefinedFieldsGetResponse res = new org.openapis.openapi.models.operations.UserDefinedFieldsGetResponse(contentType, httpRes.statusCode()) {{
             pageResultUserDefinedFieldDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

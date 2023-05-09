@@ -18,6 +18,7 @@ public class FindMatchingLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchTime")
     public String matchTime;
+
     public FindMatchingLocationsResponse withMatchTime(String matchTime) {
         this.matchTime = matchTime;
         return this;
@@ -29,9 +30,11 @@ public class FindMatchingLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedLocations")
     public MatchedLocation[] matchedLocations;
+
     public FindMatchingLocationsResponse withMatchedLocations(MatchedLocation[] matchedLocations) {
         this.matchedLocations = matchedLocations;
         return this;
     }
     
+    public FindMatchingLocationsResponse(){}
 }

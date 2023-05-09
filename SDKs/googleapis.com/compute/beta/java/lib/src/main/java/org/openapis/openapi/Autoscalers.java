@@ -59,11 +59,9 @@ public class Autoscalers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAutoscalersAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeAutoscalersAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersAggregatedListResponse(contentType, httpRes.statusCode()) {{
             autoscalerAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Autoscalers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAutoscalersDeleteResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeAutoscalersDeleteResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Autoscalers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAutoscalersGetResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeAutoscalersGetResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersGetResponse(contentType, httpRes.statusCode()) {{
             autoscaler = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Autoscalers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAutoscalersInsertResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeAutoscalersInsertResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Autoscalers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAutoscalersListResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersListResponse() {{
+        org.openapis.openapi.models.operations.ComputeAutoscalersListResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersListResponse(contentType, httpRes.statusCode()) {{
             autoscalerList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Autoscalers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAutoscalersPatchResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeAutoscalersPatchResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class Autoscalers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAutoscalersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeAutoscalersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class Autoscalers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAutoscalersUpdateResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeAutoscalersUpdateResponse res = new org.openapis.openapi.models.operations.ComputeAutoscalersUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

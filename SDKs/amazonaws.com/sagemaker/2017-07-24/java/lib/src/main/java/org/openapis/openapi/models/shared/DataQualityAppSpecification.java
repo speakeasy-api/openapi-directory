@@ -15,6 +15,7 @@ public class DataQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerArguments")
     public String[] containerArguments;
+
     public DataQualityAppSpecification withContainerArguments(String[] containerArguments) {
         this.containerArguments = containerArguments;
         return this;
@@ -23,6 +24,7 @@ public class DataQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerEntrypoint")
     public String[] containerEntrypoint;
+
     public DataQualityAppSpecification withContainerEntrypoint(String[] containerEntrypoint) {
         this.containerEntrypoint = containerEntrypoint;
         return this;
@@ -31,6 +33,7 @@ public class DataQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public DataQualityAppSpecification withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -38,6 +41,7 @@ public class DataQualityAppSpecification {
     
     @JsonProperty("ImageUri")
     public String imageUri;
+
     public DataQualityAppSpecification withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -46,6 +50,7 @@ public class DataQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostAnalyticsProcessorSourceUri")
     public String postAnalyticsProcessorSourceUri;
+
     public DataQualityAppSpecification withPostAnalyticsProcessorSourceUri(String postAnalyticsProcessorSourceUri) {
         this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
         return this;
@@ -54,9 +59,13 @@ public class DataQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordPreprocessorSourceUri")
     public String recordPreprocessorSourceUri;
+
     public DataQualityAppSpecification withRecordPreprocessorSourceUri(String recordPreprocessorSourceUri) {
         this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
         return this;
     }
     
+    public DataQualityAppSpecification(@JsonProperty("ImageUri") String imageUri) {
+        this.imageUri = imageUri;
+  }
 }

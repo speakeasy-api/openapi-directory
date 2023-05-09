@@ -12,6 +12,7 @@ public class CreateGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateGroupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateGroupRequest {
     
     @JsonProperty("GroupName")
     public String groupName;
+
     public CreateGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -27,6 +29,7 @@ public class CreateGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Precedence")
     public Long precedence;
+
     public CreateGroupRequest withPrecedence(Long precedence) {
         this.precedence = precedence;
         return this;
@@ -35,6 +38,7 @@ public class CreateGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateGroupRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -42,9 +46,14 @@ public class CreateGroupRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public CreateGroupRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public CreateGroupRequest(@JsonProperty("GroupName") String groupName, @JsonProperty("UserPoolId") String userPoolId) {
+        this.groupName = groupName;
+        this.userPoolId = userPoolId;
+  }
 }

@@ -15,6 +15,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalARN")
     public String principalARN;
+
     public Principal withPrincipalARN(String principalARN) {
         this.principalARN = principalARN;
         return this;
@@ -23,9 +24,11 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalType")
     public PrincipalTypeEnum principalType;
+
     public Principal withPrincipalType(PrincipalTypeEnum principalType) {
         this.principalType = principalType;
         return this;
     }
     
+    public Principal(){}
 }

@@ -15,6 +15,7 @@ public class CsrExtensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyUsage")
     public KeyUsage keyUsage;
+
     public CsrExtensions withKeyUsage(KeyUsage keyUsage) {
         this.keyUsage = keyUsage;
         return this;
@@ -23,9 +24,11 @@ public class CsrExtensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubjectInformationAccess")
     public AccessDescription[] subjectInformationAccess;
+
     public CsrExtensions withSubjectInformationAccess(AccessDescription[] subjectInformationAccess) {
         this.subjectInformationAccess = subjectInformationAccess;
         return this;
     }
     
+    public CsrExtensions(){}
 }

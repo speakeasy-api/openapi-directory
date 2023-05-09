@@ -15,9 +15,11 @@ public class RetrievalImportance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importance")
     public RetrievalImportanceImportanceEnum importance;
+
     public RetrievalImportance withImportance(RetrievalImportanceImportanceEnum importance) {
         this.importance = importance;
         return this;
     }
     
+    public RetrievalImportance(){}
 }

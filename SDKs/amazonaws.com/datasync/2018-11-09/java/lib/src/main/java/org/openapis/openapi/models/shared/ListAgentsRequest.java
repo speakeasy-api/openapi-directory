@@ -15,6 +15,7 @@ public class ListAgentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAgentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,9 +24,11 @@ public class ListAgentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAgentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAgentsRequest(){}
 }

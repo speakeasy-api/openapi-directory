@@ -22,6 +22,7 @@ public class Project {
      */
     @JsonProperty("body")
     public String body;
+
     public Project withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class Project {
     
     @JsonProperty("columns_url")
     public String columnsUrl;
+
     public Project withColumnsUrl(String columnsUrl) {
         this.columnsUrl = columnsUrl;
         return this;
@@ -38,6 +40,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Project withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -48,6 +51,7 @@ public class Project {
      */
     @JsonProperty("creator")
     public NullableSimpleUser creator;
+
     public Project withCreator(NullableSimpleUser creator) {
         this.creator = creator;
         return this;
@@ -55,6 +59,7 @@ public class Project {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Project withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -62,6 +67,7 @@ public class Project {
     
     @JsonProperty("id")
     public Long id;
+
     public Project withId(Long id) {
         this.id = id;
         return this;
@@ -72,6 +78,7 @@ public class Project {
      */
     @JsonProperty("name")
     public String name;
+
     public Project withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +86,7 @@ public class Project {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Project withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -86,6 +94,7 @@ public class Project {
     
     @JsonProperty("number")
     public Long number;
+
     public Project withNumber(Long number) {
         this.number = number;
         return this;
@@ -97,6 +106,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_permission")
     public ProjectOrganizationPermissionEnum organizationPermission;
+
     public Project withOrganizationPermission(ProjectOrganizationPermissionEnum organizationPermission) {
         this.organizationPermission = organizationPermission;
         return this;
@@ -104,6 +114,7 @@ public class Project {
     
     @JsonProperty("owner_url")
     public String ownerUrl;
+
     public Project withOwnerUrl(String ownerUrl) {
         this.ownerUrl = ownerUrl;
         return this;
@@ -115,6 +126,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private")
     public Boolean private_;
+
     public Project withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -125,6 +137,7 @@ public class Project {
      */
     @JsonProperty("state")
     public String state;
+
     public Project withState(String state) {
         this.state = state;
         return this;
@@ -134,6 +147,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Project withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -141,9 +155,25 @@ public class Project {
     
     @JsonProperty("url")
     public String url;
+
     public Project withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Project(@JsonProperty("body") String body, @JsonProperty("columns_url") String columnsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("creator") NullableSimpleUser creator, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("owner_url") String ownerUrl, @JsonProperty("state") String state, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.body = body;
+        this.columnsUrl = columnsUrl;
+        this.createdAt = createdAt;
+        this.creator = creator;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.ownerUrl = ownerUrl;
+        this.state = state;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

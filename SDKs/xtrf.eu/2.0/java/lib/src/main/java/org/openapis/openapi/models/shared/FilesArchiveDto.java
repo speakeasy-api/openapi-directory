@@ -15,9 +15,11 @@ public class FilesArchiveDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveUrl")
     public String archiveUrl;
+
     public FilesArchiveDto withArchiveUrl(String archiveUrl) {
         this.archiveUrl = archiveUrl;
         return this;
     }
     
+    public FilesArchiveDto(){}
 }

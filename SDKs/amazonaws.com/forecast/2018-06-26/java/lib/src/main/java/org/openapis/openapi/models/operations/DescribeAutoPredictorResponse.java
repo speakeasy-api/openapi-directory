@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAutoPredictorResponse {
     
     public String contentType;
+
     public DescribeAutoPredictorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAutoPredictorResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAutoPredictorResponse describeAutoPredictorResponse;
+
     public DescribeAutoPredictorResponse withDescribeAutoPredictorResponse(org.openapis.openapi.models.shared.DescribeAutoPredictorResponse describeAutoPredictorResponse) {
         this.describeAutoPredictorResponse = describeAutoPredictorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAutoPredictorResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeAutoPredictorResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeAutoPredictorResponse {
     
     
     public Integer statusCode;
+
     public DescribeAutoPredictorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeAutoPredictorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAutoPredictorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeAutoPredictorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAutoPredictorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeAutoPredictorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

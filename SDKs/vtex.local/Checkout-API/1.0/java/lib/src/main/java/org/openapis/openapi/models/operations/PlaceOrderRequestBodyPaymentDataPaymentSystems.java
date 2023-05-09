@@ -15,6 +15,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withId(Long id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCustom")
     public Boolean isCustom;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withIsCustom(Boolean isCustom) {
         this.isCustom = isCustom;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresDocument")
     public Boolean requiresDocument;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withRequiresDocument(Boolean requiresDocument) {
         this.requiresDocument = requiresDocument;
         return this;
@@ -81,6 +87,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected")
     public Boolean selected;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withSelected(Boolean selected) {
         this.selected = selected;
         return this;
@@ -92,6 +99,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringId")
     public String stringId;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withStringId(String stringId) {
         this.stringId = stringId;
         return this;
@@ -103,6 +111,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withTemplate(String template) {
         this.template = template;
         return this;
@@ -114,9 +123,11 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validator")
     public PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator validator;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystems withValidator(PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator validator) {
         this.validator = validator;
         return this;
     }
     
+    public PlaceOrderRequestBodyPaymentDataPaymentSystems(){}
 }

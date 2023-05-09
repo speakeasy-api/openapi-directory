@@ -17,6 +17,7 @@ public class CDDriveFile {
      */
     @JsonProperty("createdDate")
     public String createdDate;
+
     public CDDriveFile withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -27,6 +28,7 @@ public class CDDriveFile {
      */
     @JsonProperty("id")
     public Long id;
+
     public CDDriveFile withId(Long id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class CDDriveFile {
      */
     @JsonProperty("lastModifiedDate")
     public String lastModifiedDate;
+
     public CDDriveFile withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -47,6 +50,7 @@ public class CDDriveFile {
      */
     @JsonProperty("name")
     public String name;
+
     public CDDriveFile withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +61,7 @@ public class CDDriveFile {
      */
     @JsonProperty("parentId")
     public Long parentId;
+
     public CDDriveFile withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -68,9 +73,17 @@ public class CDDriveFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public CDDriveFile withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public CDDriveFile(@JsonProperty("createdDate") String createdDate, @JsonProperty("id") Long id, @JsonProperty("lastModifiedDate") String lastModifiedDate, @JsonProperty("name") String name, @JsonProperty("parentId") Long parentId) {
+        this.createdDate = createdDate;
+        this.id = id;
+        this.lastModifiedDate = lastModifiedDate;
+        this.name = name;
+        this.parentId = parentId;
+  }
 }

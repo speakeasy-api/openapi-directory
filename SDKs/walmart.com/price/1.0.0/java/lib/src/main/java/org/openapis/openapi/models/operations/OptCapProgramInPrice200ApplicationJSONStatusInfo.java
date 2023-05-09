@@ -15,6 +15,7 @@ public class OptCapProgramInPrice200ApplicationJSONStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsidyEnrolled")
     public Boolean subsidyEnrolled;
+
     public OptCapProgramInPrice200ApplicationJSONStatusInfo withSubsidyEnrolled(Boolean subsidyEnrolled) {
         this.subsidyEnrolled = subsidyEnrolled;
         return this;
@@ -26,9 +27,11 @@ public class OptCapProgramInPrice200ApplicationJSONStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsidyPreference")
     public Boolean subsidyPreference;
+
     public OptCapProgramInPrice200ApplicationJSONStatusInfo withSubsidyPreference(Boolean subsidyPreference) {
         this.subsidyPreference = subsidyPreference;
         return this;
     }
     
+    public OptCapProgramInPrice200ApplicationJSONStatusInfo(){}
 }

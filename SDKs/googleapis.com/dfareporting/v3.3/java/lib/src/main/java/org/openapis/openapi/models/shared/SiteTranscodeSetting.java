@@ -18,6 +18,7 @@ public class SiteTranscodeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledVideoFormats")
     public Integer[] enabledVideoFormats;
+
     public SiteTranscodeSetting withEnabledVideoFormats(Integer[] enabledVideoFormats) {
         this.enabledVideoFormats = enabledVideoFormats;
         return this;
@@ -29,9 +30,11 @@ public class SiteTranscodeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SiteTranscodeSetting withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public SiteTranscodeSetting(){}
 }

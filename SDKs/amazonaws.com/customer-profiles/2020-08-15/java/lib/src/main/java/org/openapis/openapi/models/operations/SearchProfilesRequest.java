@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchProfilesRequest {
@@ -12,6 +13,7 @@ public class SearchProfilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainName")
     public String domainName;
+
     public SearchProfilesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -19,6 +21,7 @@ public class SearchProfilesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public SearchProfilesRequestBody requestBody;
+
     public SearchProfilesRequest withRequestBody(SearchProfilesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class SearchProfilesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public SearchProfilesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class SearchProfilesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public SearchProfilesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class SearchProfilesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public SearchProfilesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class SearchProfilesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public SearchProfilesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class SearchProfilesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public SearchProfilesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class SearchProfilesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public SearchProfilesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class SearchProfilesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public SearchProfilesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -78,6 +88,7 @@ public class SearchProfilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
     public Long maxResults;
+
     public SearchProfilesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -88,9 +99,14 @@ public class SearchProfilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
     public String nextToken;
+
     public SearchProfilesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchProfilesRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("RequestBody") SearchProfilesRequestBody requestBody) {
+        this.domainName = domainName;
+        this.requestBody = requestBody;
+  }
 }

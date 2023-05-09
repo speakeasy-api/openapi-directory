@@ -15,9 +15,11 @@ public class AllMonitors200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitors")
     public AllMonitors200ApplicationJSONMonitors[] monitors;
+
     public AllMonitors200ApplicationJSON withMonitors(AllMonitors200ApplicationJSONMonitors[] monitors) {
         this.monitors = monitors;
         return this;
     }
     
+    public AllMonitors200ApplicationJSON(){}
 }

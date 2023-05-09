@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateCacheSubnetGroupMessage - Represents the input of a &lt;code&gt;CreateCacheSubnetGroup&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCacheSubnetGroupMessage {
     
     public String cacheSubnetGroupDescription;
+
     public CreateCacheSubnetGroupMessage withCacheSubnetGroupDescription(String cacheSubnetGroupDescription) {
         this.cacheSubnetGroupDescription = cacheSubnetGroupDescription;
         return this;
@@ -19,6 +20,7 @@ public class CreateCacheSubnetGroupMessage {
     
     
     public String cacheSubnetGroupName;
+
     public CreateCacheSubnetGroupMessage withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -26,6 +28,7 @@ public class CreateCacheSubnetGroupMessage {
     
     
     public String[] subnetIds;
+
     public CreateCacheSubnetGroupMessage withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -33,9 +36,15 @@ public class CreateCacheSubnetGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateCacheSubnetGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCacheSubnetGroupMessage(@JsonProperty("CacheSubnetGroupDescription") String cacheSubnetGroupDescription, @JsonProperty("CacheSubnetGroupName") String cacheSubnetGroupName, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.cacheSubnetGroupDescription = cacheSubnetGroupDescription;
+        this.cacheSubnetGroupName = cacheSubnetGroupName;
+        this.subnetIds = subnetIds;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState {
     
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum state;
+
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState withState(DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlock
     
     
     public String statusMessage;
+
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState(){}
 }

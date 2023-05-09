@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceApiSendToAccountantFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.SendInvoiceToAccountantApiModel sendInvoiceToAccountantApiModel;
+
     public InvoiceApiSendToAccountantFormRequest withSendInvoiceToAccountantApiModel(org.openapis.openapi.models.shared.SendInvoiceToAccountantApiModel sendInvoiceToAccountantApiModel) {
         this.sendInvoiceToAccountantApiModel = sendInvoiceToAccountantApiModel;
         return this;
@@ -16,6 +18,7 @@ public class InvoiceApiSendToAccountantFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public InvoiceApiSendToAccountantFormRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class InvoiceApiSendToAccountantFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public InvoiceApiSendToAccountantFormRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public InvoiceApiSendToAccountantFormRequest(@JsonProperty("SendInvoiceToAccountantApiModel") org.openapis.openapi.models.shared.SendInvoiceToAccountantApiModel sendInvoiceToAccountantApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.sendInvoiceToAccountantApiModel = sendInvoiceToAccountantApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

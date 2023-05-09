@@ -15,6 +15,7 @@ public class StaticRouteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdated")
     public String lastUpdated;
+
     public StaticRouteConfig withLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -26,9 +27,11 @@ public class StaticRouteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeConfig")
     public java.util.Map<String, Object> routeConfig;
+
     public StaticRouteConfig withRouteConfig(java.util.Map<String, Object> routeConfig) {
         this.routeConfig = routeConfig;
         return this;
     }
     
+    public StaticRouteConfig(){}
 }

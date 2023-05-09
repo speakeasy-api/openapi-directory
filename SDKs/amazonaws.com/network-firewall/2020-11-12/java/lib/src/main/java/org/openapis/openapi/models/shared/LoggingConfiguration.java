@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LoggingConfiguration {
     @JsonProperty("LogDestinationConfigs")
     public LogDestinationConfig[] logDestinationConfigs;
+
     public LoggingConfiguration withLogDestinationConfigs(LogDestinationConfig[] logDestinationConfigs) {
         this.logDestinationConfigs = logDestinationConfigs;
         return this;
     }
     
+    public LoggingConfiguration(@JsonProperty("LogDestinationConfigs") LogDestinationConfig[] logDestinationConfigs) {
+        this.logDestinationConfigs = logDestinationConfigs;
+  }
 }

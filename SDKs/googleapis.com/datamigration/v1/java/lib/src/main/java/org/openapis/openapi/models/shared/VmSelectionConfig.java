@@ -18,9 +18,11 @@ public class VmSelectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmZone")
     public String vmZone;
+
     public VmSelectionConfig withVmZone(String vmZone) {
         this.vmZone = vmZone;
         return this;
     }
     
+    public VmSelectionConfig(){}
 }

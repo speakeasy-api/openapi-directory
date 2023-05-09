@@ -58,11 +58,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechOperationsGetResponse res = new org.openapis.openapi.models.operations.SpeechOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.SpeechOperationsGetResponse res = new org.openapis.openapi.models.operations.SpeechOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechOperationsListResponse res = new org.openapis.openapi.models.operations.SpeechOperationsListResponse() {{
+        org.openapis.openapi.models.operations.SpeechOperationsListResponse res = new org.openapis.openapi.models.operations.SpeechOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

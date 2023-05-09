@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConstraintPermutationsForEntitiesRequest {
@@ -12,6 +13,7 @@ public class GetConstraintPermutationsForEntitiesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
     public String xAppToken;
+
     public GetConstraintPermutationsForEntitiesRequest withXAppToken(String xAppToken) {
         this.xAppToken = xAppToken;
         return this;
@@ -23,6 +25,7 @@ public class GetConstraintPermutationsForEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
     public String appToken;
+
     public GetConstraintPermutationsForEntitiesRequest withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -33,6 +36,7 @@ public class GetConstraintPermutationsForEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constraint")
     public String constraint;
+
     public GetConstraintPermutationsForEntitiesRequest withConstraint(String constraint) {
         this.constraint = constraint;
         return this;
@@ -43,6 +47,7 @@ public class GetConstraintPermutationsForEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
     public String entityId;
+
     public GetConstraintPermutationsForEntitiesRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -53,9 +58,15 @@ public class GetConstraintPermutationsForEntitiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable")
     public String variable;
+
     public GetConstraintPermutationsForEntitiesRequest withVariable(String variable) {
         this.variable = variable;
         return this;
     }
     
+    public GetConstraintPermutationsForEntitiesRequest(@JsonProperty("constraint") String constraint, @JsonProperty("entity_id") String entityId, @JsonProperty("variable") String variable) {
+        this.constraint = constraint;
+        this.entityId = entityId;
+        this.variable = variable;
+  }
 }

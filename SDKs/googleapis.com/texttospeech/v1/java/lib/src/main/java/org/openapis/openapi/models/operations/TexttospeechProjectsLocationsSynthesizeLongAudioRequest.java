@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
@@ -12,6 +13,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SynthesizeLongAudioRequest synthesizeLongAudioRequest;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withSynthesizeLongAudioRequest(org.openapis.openapi.models.shared.SynthesizeLongAudioRequest synthesizeLongAudioRequest) {
         this.synthesizeLongAudioRequest = synthesizeLongAudioRequest;
         return this;
@@ -29,6 +32,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,16 +87,18 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
     }
     
     /**
-     * The resource states of the request in the form of `projects/* /locations/* /voices/*`.
+     * The resource states of the request in the form of `projects/* /locations/*`.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class TexttospeechProjectsLocationsSynthesizeLongAudioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TexttospeechProjectsLocationsSynthesizeLongAudioRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TexttospeechProjectsLocationsSynthesizeLongAudioRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRecoveryPointResponse {
@@ -12,6 +13,7 @@ public class GetRecoveryPointResponse {
      */
     
     public Object conflictException;
+
     public GetRecoveryPointResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class GetRecoveryPointResponse {
     
     
     public String contentType;
+
     public GetRecoveryPointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRecoveryPointResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRecoveryPointResponse getRecoveryPointResponse;
+
     public GetRecoveryPointResponse withGetRecoveryPointResponse(org.openapis.openapi.models.shared.GetRecoveryPointResponse getRecoveryPointResponse) {
         this.getRecoveryPointResponse = getRecoveryPointResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetRecoveryPointResponse {
      */
     
     public Object internalServerException;
+
     public GetRecoveryPointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetRecoveryPointResponse {
     
     
     public Integer statusCode;
+
     public GetRecoveryPointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetRecoveryPointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRecoveryPointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetRecoveryPointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRecoveryPointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetRecoveryPointResponse {
      */
     
     public Object validationException;
+
     public GetRecoveryPointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRecoveryPointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

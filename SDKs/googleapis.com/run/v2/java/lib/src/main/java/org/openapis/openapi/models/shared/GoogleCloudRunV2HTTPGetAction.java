@@ -18,6 +18,7 @@ public class GoogleCloudRunV2HTTPGetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpHeaders")
     public GoogleCloudRunV2HTTPHeader[] httpHeaders;
+
     public GoogleCloudRunV2HTTPGetAction withHttpHeaders(GoogleCloudRunV2HTTPHeader[] httpHeaders) {
         this.httpHeaders = httpHeaders;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2HTTPGetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GoogleCloudRunV2HTTPGetAction withPath(String path) {
         this.path = path;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRunV2HTTPGetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public GoogleCloudRunV2HTTPGetAction withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public GoogleCloudRunV2HTTPGetAction(){}
 }

@@ -13,6 +13,7 @@ public class GetInboxUnreadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetInboxUnreadRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +54,7 @@ public class GetInboxUnreadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetInboxUnreadRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -60,6 +62,7 @@ public class GetInboxUnreadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetInboxUnreadRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -67,6 +70,7 @@ public class GetInboxUnreadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetInboxUnreadRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -77,9 +81,11 @@ public class GetInboxUnreadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public Long since;
+
     public GetInboxUnreadRequest withSince(Long since) {
         this.since = since;
         return this;
     }
     
+    public GetInboxUnreadRequest(){}
 }

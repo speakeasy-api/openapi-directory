@@ -15,6 +15,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorType")
     public ProductionVariantAcceleratorTypeEnum acceleratorType;
+
     public ProductionVariant withAcceleratorType(ProductionVariantAcceleratorTypeEnum acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -23,6 +24,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerStartupHealthCheckTimeoutInSeconds")
     public Long containerStartupHealthCheckTimeoutInSeconds;
+
     public ProductionVariant withContainerStartupHealthCheckTimeoutInSeconds(Long containerStartupHealthCheckTimeoutInSeconds) {
         this.containerStartupHealthCheckTimeoutInSeconds = containerStartupHealthCheckTimeoutInSeconds;
         return this;
@@ -31,6 +33,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoreDumpConfig")
     public ProductionVariantCoreDumpConfig coreDumpConfig;
+
     public ProductionVariant withCoreDumpConfig(ProductionVariantCoreDumpConfig coreDumpConfig) {
         this.coreDumpConfig = coreDumpConfig;
         return this;
@@ -39,6 +42,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableSSMAccess")
     public Boolean enableSSMAccess;
+
     public ProductionVariant withEnableSSMAccess(Boolean enableSSMAccess) {
         this.enableSSMAccess = enableSSMAccess;
         return this;
@@ -47,6 +51,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitialInstanceCount")
     public Long initialInstanceCount;
+
     public ProductionVariant withInitialInstanceCount(Long initialInstanceCount) {
         this.initialInstanceCount = initialInstanceCount;
         return this;
@@ -55,6 +60,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitialVariantWeight")
     public Float initialVariantWeight;
+
     public ProductionVariant withInitialVariantWeight(Float initialVariantWeight) {
         this.initialVariantWeight = initialVariantWeight;
         return this;
@@ -63,6 +69,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public ProductionVariantInstanceTypeEnum instanceType;
+
     public ProductionVariant withInstanceType(ProductionVariantInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -71,6 +78,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDataDownloadTimeoutInSeconds")
     public Long modelDataDownloadTimeoutInSeconds;
+
     public ProductionVariant withModelDataDownloadTimeoutInSeconds(Long modelDataDownloadTimeoutInSeconds) {
         this.modelDataDownloadTimeoutInSeconds = modelDataDownloadTimeoutInSeconds;
         return this;
@@ -78,6 +86,7 @@ public class ProductionVariant {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public ProductionVariant withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -86,6 +95,7 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerlessConfig")
     public ProductionVariantServerlessConfig serverlessConfig;
+
     public ProductionVariant withServerlessConfig(ProductionVariantServerlessConfig serverlessConfig) {
         this.serverlessConfig = serverlessConfig;
         return this;
@@ -93,6 +103,7 @@ public class ProductionVariant {
     
     @JsonProperty("VariantName")
     public String variantName;
+
     public ProductionVariant withVariantName(String variantName) {
         this.variantName = variantName;
         return this;
@@ -101,9 +112,14 @@ public class ProductionVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public ProductionVariant withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public ProductionVariant(@JsonProperty("ModelName") String modelName, @JsonProperty("VariantName") String variantName) {
+        this.modelName = modelName;
+        this.variantName = variantName;
+  }
 }

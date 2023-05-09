@@ -18,6 +18,7 @@ public class SoftwareRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifacts")
     public SoftwareRecipeArtifact[] artifacts;
+
     public SoftwareRecipe withArtifacts(SoftwareRecipeArtifact[] artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredState")
     public SoftwareRecipeDesiredStateEnum desiredState;
+
     public SoftwareRecipe withDesiredState(SoftwareRecipeDesiredStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -40,6 +42,7 @@ public class SoftwareRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installSteps")
     public SoftwareRecipeStep[] installSteps;
+
     public SoftwareRecipe withInstallSteps(SoftwareRecipeStep[] installSteps) {
         this.installSteps = installSteps;
         return this;
@@ -51,6 +54,7 @@ public class SoftwareRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SoftwareRecipe withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class SoftwareRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateSteps")
     public SoftwareRecipeStep[] updateSteps;
+
     public SoftwareRecipe withUpdateSteps(SoftwareRecipeStep[] updateSteps) {
         this.updateSteps = updateSteps;
         return this;
@@ -73,9 +78,11 @@ public class SoftwareRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SoftwareRecipe withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SoftwareRecipe(){}
 }

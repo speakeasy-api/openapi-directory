@@ -12,6 +12,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes[] nodes;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventories withNodes(GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes[] nodes) {
         this.nodes = nodes;
         return this;
@@ -23,9 +24,11 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventories withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventories(){}
 }

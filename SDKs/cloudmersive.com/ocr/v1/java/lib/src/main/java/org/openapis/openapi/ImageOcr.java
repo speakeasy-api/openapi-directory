@@ -67,14 +67,12 @@ public class ImageOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationResponse res = new org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationResponse() {{
+        org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationResponse res = new org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationResponse(contentType, httpRes.statusCode()) {{
             imageToLinesWithLocationResult = null;
             imageToLinesWithLocationResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -137,14 +135,12 @@ public class ImageOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImageOcrImageWordsWithLocationResponse res = new org.openapis.openapi.models.operations.ImageOcrImageWordsWithLocationResponse() {{
+        org.openapis.openapi.models.operations.ImageOcrImageWordsWithLocationResponse res = new org.openapis.openapi.models.operations.ImageOcrImageWordsWithLocationResponse(contentType, httpRes.statusCode()) {{
             imageToWordsWithLocationResult = null;
             imageToWordsWithLocationResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,14 +195,12 @@ public class ImageOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeBusinessCardResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeBusinessCardResponse() {{
+        org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeBusinessCardResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeBusinessCardResponse(contentType, httpRes.statusCode()) {{
             businessCardRecognitionResult = null;
             businessCardRecognitionResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,14 +263,12 @@ public class ImageOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeFormAdvancedResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeFormAdvancedResponse() {{
+        org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeFormAdvancedResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeFormAdvancedResponse(contentType, httpRes.statusCode()) {{
             formRecognitionResult = null;
             formRecognitionResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,14 +331,12 @@ public class ImageOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeReceiptResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeReceiptResponse() {{
+        org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeReceiptResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoRecognizeReceiptResponse(contentType, httpRes.statusCode()) {{
             receiptRecognitionResult = null;
             receiptRecognitionResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,14 +399,12 @@ public class ImageOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImageOcrPhotoToTextResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoToTextResponse() {{
+        org.openapis.openapi.models.operations.ImageOcrPhotoToTextResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoToTextResponse(contentType, httpRes.statusCode()) {{
             imageToTextResponse = null;
             imageToTextResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -479,14 +467,12 @@ public class ImageOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImageOcrPhotoWordsWithLocationResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoWordsWithLocationResponse() {{
+        org.openapis.openapi.models.operations.ImageOcrPhotoWordsWithLocationResponse res = new org.openapis.openapi.models.operations.ImageOcrPhotoWordsWithLocationResponse(contentType, httpRes.statusCode()) {{
             photoToWordsWithLocationResult = null;
             photoToWordsWithLocationResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -549,14 +535,12 @@ public class ImageOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImageOcrPostResponse res = new org.openapis.openapi.models.operations.ImageOcrPostResponse() {{
+        org.openapis.openapi.models.operations.ImageOcrPostResponse res = new org.openapis.openapi.models.operations.ImageOcrPostResponse(contentType, httpRes.statusCode()) {{
             imageToTextResponse = null;
             imageToTextResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class ContainerId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ContainerId withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class ContainerId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flavor_id")
     public Long flavorId;
+
     public ContainerId withFlavorId(Long flavorId) {
         this.flavorId = flavorId;
         return this;
@@ -40,6 +42,7 @@ public class ContainerId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mem")
     public Long mem;
+
     public ContainerId withMem(Long mem) {
         this.mem = mem;
         return this;
@@ -51,9 +54,11 @@ public class ContainerId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcpu")
     public Long vcpu;
+
     public ContainerId withVcpu(Long vcpu) {
         this.vcpu = vcpu;
         return this;
     }
     
+    public ContainerId(){}
 }

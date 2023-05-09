@@ -18,6 +18,7 @@ public class OsUpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebootTime")
     public String rebootTime;
+
     public OsUpdateStatus withRebootTime(String rebootTime) {
         this.rebootTime = rebootTime;
         return this;
@@ -29,6 +30,7 @@ public class OsUpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public OsUpdateStatusStateEnum state;
+
     public OsUpdateStatus withState(OsUpdateStatusStateEnum state) {
         this.state = state;
         return this;
@@ -40,6 +42,7 @@ public class OsUpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetKioskAppVersion")
     public String targetKioskAppVersion;
+
     public OsUpdateStatus withTargetKioskAppVersion(String targetKioskAppVersion) {
         this.targetKioskAppVersion = targetKioskAppVersion;
         return this;
@@ -51,6 +54,7 @@ public class OsUpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetOsVersion")
     public String targetOsVersion;
+
     public OsUpdateStatus withTargetOsVersion(String targetOsVersion) {
         this.targetOsVersion = targetOsVersion;
         return this;
@@ -62,6 +66,7 @@ public class OsUpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateCheckTime")
     public String updateCheckTime;
+
     public OsUpdateStatus withUpdateCheckTime(String updateCheckTime) {
         this.updateCheckTime = updateCheckTime;
         return this;
@@ -73,9 +78,11 @@ public class OsUpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public OsUpdateStatus withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public OsUpdateStatus(){}
 }

@@ -15,9 +15,11 @@ public class PreprintsContributorsCreateContributorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public PreprintsContributorsCreateContributorAttributesInput attributes;
+
     public PreprintsContributorsCreateContributorInput withAttributes(PreprintsContributorsCreateContributorAttributesInput attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public PreprintsContributorsCreateContributorInput(){}
 }

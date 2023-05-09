@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CommLogsListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public CommLogsListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class CommLogsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public CommLogsListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class CommLogsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public CommLogsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -30,6 +33,7 @@ public class CommLogsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public CommLogsListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -37,9 +41,11 @@ public class CommLogsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public CommLogsListRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public CommLogsListRequest(){}
 }

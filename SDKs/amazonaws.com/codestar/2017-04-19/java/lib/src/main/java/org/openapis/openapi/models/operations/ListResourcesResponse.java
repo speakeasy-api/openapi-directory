@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourcesResponse {
     
     public String contentType;
+
     public ListResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourcesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResourcesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourcesResult listResourcesResult;
+
     public ListResourcesResponse withListResourcesResult(org.openapis.openapi.models.shared.ListResourcesResult listResourcesResult) {
         this.listResourcesResult = listResourcesResult;
         return this;
@@ -39,6 +43,7 @@ public class ListResourcesResponse {
      */
     
     public Object projectNotFoundException;
+
     public ListResourcesResponse withProjectNotFoundException(Object projectNotFoundException) {
         this.projectNotFoundException = projectNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListResourcesResponse {
      */
     
     public Object validationException;
+
     public ListResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class LogsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public LogsPolicyDestinationEnum destination;
+
     public LogsPolicy withDestination(LogsPolicyDestinationEnum destination) {
         this.destination = destination;
         return this;
@@ -29,9 +30,11 @@ public class LogsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logsPath")
     public String logsPath;
+
     public LogsPolicy withLogsPath(String logsPath) {
         this.logsPath = logsPath;
         return this;
     }
     
+    public LogsPolicy(){}
 }

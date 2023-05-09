@@ -15,9 +15,11 @@ public class GetBlueprintRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlueprintRun")
     public BlueprintRun blueprintRun;
+
     public GetBlueprintRunResponse withBlueprintRun(BlueprintRun blueprintRun) {
         this.blueprintRun = blueprintRun;
         return this;
     }
     
+    public GetBlueprintRunResponse(){}
 }

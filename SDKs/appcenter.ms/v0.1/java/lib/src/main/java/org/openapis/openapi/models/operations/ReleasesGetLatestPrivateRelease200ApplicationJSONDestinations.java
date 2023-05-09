@@ -18,6 +18,7 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_type")
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinationsDestinationTypeEnum destinationType;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations withDestinationType(ReleasesGetLatestPrivateRelease200ApplicationJSONDestinationsDestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -29,6 +30,7 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations withId(String id) {
         this.id = id;
         return this;
@@ -50,6 +53,7 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_latest")
     public Boolean isLatest;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations withIsLatest(Boolean isLatest) {
         this.isLatest = isLatest;
         return this;
@@ -61,6 +65,7 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +77,7 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishing_status")
     public String publishingStatus;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations withPublishingStatus(String publishingStatus) {
         this.publishingStatus = publishingStatus;
         return this;
@@ -83,9 +89,13 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinationsTypeEnum type;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations withType(ReleasesGetLatestPrivateRelease200ApplicationJSONDestinationsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReleasesGetLatestPrivateRelease200ApplicationJSONDestinations(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

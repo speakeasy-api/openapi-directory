@@ -15,6 +15,7 @@ public class DescribeBatchPredictionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBatchPredictionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeBatchPredictionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public BatchPrediction[] results;
+
     public DescribeBatchPredictionsOutput withResults(BatchPrediction[] results) {
         this.results = results;
         return this;
     }
     
+    public DescribeBatchPredictionsOutput(){}
 }

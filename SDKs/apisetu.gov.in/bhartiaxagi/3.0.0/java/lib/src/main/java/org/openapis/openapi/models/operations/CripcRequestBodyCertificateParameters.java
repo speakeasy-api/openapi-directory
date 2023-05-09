@@ -12,6 +12,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public CripcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNumber")
     public String policyNumber;
+
     public CripcRequestBodyCertificateParameters withPolicyNumber(String policyNumber) {
         this.policyNumber = policyNumber;
         return this;
     }
     
+    public CripcRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("PolicyNumber") String policyNumber) {
+        this.fullName = fullName;
+        this.policyNumber = policyNumber;
+  }
 }

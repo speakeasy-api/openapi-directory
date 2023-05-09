@@ -15,6 +15,7 @@ public class ListRepositoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRepositoriesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListRepositoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public OrderEnumEnum order;
+
     public ListRepositoriesInput withOrder(OrderEnumEnum order) {
         this.order = order;
         return this;
@@ -31,9 +33,11 @@ public class ListRepositoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public SortByEnumEnum sortBy;
+
     public ListRepositoriesInput withSortBy(SortByEnumEnum sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListRepositoriesInput(){}
 }

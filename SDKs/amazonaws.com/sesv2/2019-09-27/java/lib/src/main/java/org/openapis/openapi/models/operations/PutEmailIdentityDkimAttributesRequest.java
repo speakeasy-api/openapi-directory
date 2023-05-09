@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutEmailIdentityDkimAttributesRequest {
@@ -12,6 +13,7 @@ public class PutEmailIdentityDkimAttributesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmailIdentity")
     public String emailIdentity;
+
     public PutEmailIdentityDkimAttributesRequest withEmailIdentity(String emailIdentity) {
         this.emailIdentity = emailIdentity;
         return this;
@@ -19,6 +21,7 @@ public class PutEmailIdentityDkimAttributesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutEmailIdentityDkimAttributesRequestBody requestBody;
+
     public PutEmailIdentityDkimAttributesRequest withRequestBody(PutEmailIdentityDkimAttributesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class PutEmailIdentityDkimAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutEmailIdentityDkimAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class PutEmailIdentityDkimAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutEmailIdentityDkimAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class PutEmailIdentityDkimAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutEmailIdentityDkimAttributesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class PutEmailIdentityDkimAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutEmailIdentityDkimAttributesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class PutEmailIdentityDkimAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutEmailIdentityDkimAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class PutEmailIdentityDkimAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutEmailIdentityDkimAttributesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class PutEmailIdentityDkimAttributesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutEmailIdentityDkimAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public PutEmailIdentityDkimAttributesRequest(@JsonProperty("EmailIdentity") String emailIdentity, @JsonProperty("RequestBody") PutEmailIdentityDkimAttributesRequestBody requestBody) {
+        this.emailIdentity = emailIdentity;
+        this.requestBody = requestBody;
+  }
 }

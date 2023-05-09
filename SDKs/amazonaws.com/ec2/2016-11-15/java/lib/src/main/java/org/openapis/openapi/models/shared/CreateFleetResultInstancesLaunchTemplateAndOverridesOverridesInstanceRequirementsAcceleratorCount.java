@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorCount {
     
     public Long max;
+
     public CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstan
     
     
     public Long min;
+
     public CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorCount(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksDictionaryListOfflineMetadataResponse {
     
     public String contentType;
+
     public BooksDictionaryListOfflineMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BooksDictionaryListOfflineMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.Metadata metadata;
+
     public BooksDictionaryListOfflineMetadataResponse withMetadata(org.openapis.openapi.models.shared.Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -26,6 +29,7 @@ public class BooksDictionaryListOfflineMetadataResponse {
     
     
     public Integer statusCode;
+
     public BooksDictionaryListOfflineMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BooksDictionaryListOfflineMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksDictionaryListOfflineMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BooksDictionaryListOfflineMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

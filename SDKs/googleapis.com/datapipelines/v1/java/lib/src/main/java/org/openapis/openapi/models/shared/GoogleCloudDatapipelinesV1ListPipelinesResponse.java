@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1ListPipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatapipelinesV1ListPipelinesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatapipelinesV1ListPipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelines")
     public GoogleCloudDatapipelinesV1Pipeline[] pipelines;
+
     public GoogleCloudDatapipelinesV1ListPipelinesResponse withPipelines(GoogleCloudDatapipelinesV1Pipeline[] pipelines) {
         this.pipelines = pipelines;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1ListPipelinesResponse(){}
 }

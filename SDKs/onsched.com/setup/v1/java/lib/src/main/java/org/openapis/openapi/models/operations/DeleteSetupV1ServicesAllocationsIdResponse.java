@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSetupV1ServicesAllocationsIdResponse {
     
     public String contentType;
+
     public DeleteSetupV1ServicesAllocationsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSetupV1ServicesAllocationsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceAllocationViewModel serviceAllocationViewModel;
+
     public DeleteSetupV1ServicesAllocationsIdResponse withServiceAllocationViewModel(org.openapis.openapi.models.shared.ServiceAllocationViewModel serviceAllocationViewModel) {
         this.serviceAllocationViewModel = serviceAllocationViewModel;
         return this;
@@ -26,6 +29,7 @@ public class DeleteSetupV1ServicesAllocationsIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteSetupV1ServicesAllocationsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteSetupV1ServicesAllocationsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSetupV1ServicesAllocationsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSetupV1ServicesAllocationsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

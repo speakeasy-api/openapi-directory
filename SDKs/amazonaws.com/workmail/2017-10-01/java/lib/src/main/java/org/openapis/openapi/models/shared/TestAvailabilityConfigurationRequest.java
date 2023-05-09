@@ -12,6 +12,7 @@ public class TestAvailabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public TestAvailabilityConfigurationRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +24,7 @@ public class TestAvailabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EwsProvider")
     public EwsAvailabilityProvider ewsProvider;
+
     public TestAvailabilityConfigurationRequest withEwsProvider(EwsAvailabilityProvider ewsProvider) {
         this.ewsProvider = ewsProvider;
         return this;
@@ -34,6 +36,7 @@ public class TestAvailabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaProvider")
     public LambdaAvailabilityProvider lambdaProvider;
+
     public TestAvailabilityConfigurationRequest withLambdaProvider(LambdaAvailabilityProvider lambdaProvider) {
         this.lambdaProvider = lambdaProvider;
         return this;
@@ -41,9 +44,13 @@ public class TestAvailabilityConfigurationRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public TestAvailabilityConfigurationRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public TestAvailabilityConfigurationRequest(@JsonProperty("OrganizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

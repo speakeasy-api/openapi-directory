@@ -18,6 +18,7 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoAllocatedNatIps")
     public String[] autoAllocatedNatIps;
+
     public RouterStatusNatStatus withAutoAllocatedNatIps(String[] autoAllocatedNatIps) {
         this.autoAllocatedNatIps = autoAllocatedNatIps;
         return this;
@@ -29,6 +30,7 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drainAutoAllocatedNatIps")
     public String[] drainAutoAllocatedNatIps;
+
     public RouterStatusNatStatus withDrainAutoAllocatedNatIps(String[] drainAutoAllocatedNatIps) {
         this.drainAutoAllocatedNatIps = drainAutoAllocatedNatIps;
         return this;
@@ -40,6 +42,7 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drainUserAllocatedNatIps")
     public String[] drainUserAllocatedNatIps;
+
     public RouterStatusNatStatus withDrainUserAllocatedNatIps(String[] drainUserAllocatedNatIps) {
         this.drainUserAllocatedNatIps = drainUserAllocatedNatIps;
         return this;
@@ -51,6 +54,7 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minExtraNatIpsNeeded")
     public Integer minExtraNatIpsNeeded;
+
     public RouterStatusNatStatus withMinExtraNatIpsNeeded(Integer minExtraNatIpsNeeded) {
         this.minExtraNatIpsNeeded = minExtraNatIpsNeeded;
         return this;
@@ -62,6 +66,7 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RouterStatusNatStatus withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numVmEndpointsWithNatMappings")
     public Integer numVmEndpointsWithNatMappings;
+
     public RouterStatusNatStatus withNumVmEndpointsWithNatMappings(Integer numVmEndpointsWithNatMappings) {
         this.numVmEndpointsWithNatMappings = numVmEndpointsWithNatMappings;
         return this;
@@ -84,6 +90,7 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleStatus")
     public RouterStatusNatStatusNatRuleStatus[] ruleStatus;
+
     public RouterStatusNatStatus withRuleStatus(RouterStatusNatStatusNatRuleStatus[] ruleStatus) {
         this.ruleStatus = ruleStatus;
         return this;
@@ -95,6 +102,7 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAllocatedNatIpResources")
     public String[] userAllocatedNatIpResources;
+
     public RouterStatusNatStatus withUserAllocatedNatIpResources(String[] userAllocatedNatIpResources) {
         this.userAllocatedNatIpResources = userAllocatedNatIpResources;
         return this;
@@ -106,9 +114,11 @@ public class RouterStatusNatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAllocatedNatIps")
     public String[] userAllocatedNatIps;
+
     public RouterStatusNatStatus withUserAllocatedNatIps(String[] userAllocatedNatIps) {
         this.userAllocatedNatIps = userAllocatedNatIps;
         return this;
     }
     
+    public RouterStatusNatStatus(){}
 }

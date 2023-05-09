@@ -12,6 +12,7 @@ public class UpdateWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateWorkteamRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberDefinitions")
     public MemberDefinition[] memberDefinitions;
+
     public UpdateWorkteamRequest withMemberDefinitions(MemberDefinition[] memberDefinitions) {
         this.memberDefinitions = memberDefinitions;
         return this;
@@ -28,6 +30,7 @@ public class UpdateWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfiguration")
     public NotificationConfiguration notificationConfiguration;
+
     public UpdateWorkteamRequest withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
@@ -35,9 +38,13 @@ public class UpdateWorkteamRequest {
     
     @JsonProperty("WorkteamName")
     public String workteamName;
+
     public UpdateWorkteamRequest withWorkteamName(String workteamName) {
         this.workteamName = workteamName;
         return this;
     }
     
+    public UpdateWorkteamRequest(@JsonProperty("WorkteamName") String workteamName) {
+        this.workteamName = workteamName;
+  }
 }

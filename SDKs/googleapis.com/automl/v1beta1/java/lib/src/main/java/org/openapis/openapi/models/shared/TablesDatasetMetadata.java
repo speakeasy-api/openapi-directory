@@ -18,6 +18,7 @@ public class TablesDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mlUseColumnSpecId")
     public String mlUseColumnSpecId;
+
     public TablesDatasetMetadata withMlUseColumnSpecId(String mlUseColumnSpecId) {
         this.mlUseColumnSpecId = mlUseColumnSpecId;
         return this;
@@ -29,6 +30,7 @@ public class TablesDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryTableSpecId")
     public String primaryTableSpecId;
+
     public TablesDatasetMetadata withPrimaryTableSpecId(String primaryTableSpecId) {
         this.primaryTableSpecId = primaryTableSpecId;
         return this;
@@ -40,6 +42,7 @@ public class TablesDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statsUpdateTime")
     public String statsUpdateTime;
+
     public TablesDatasetMetadata withStatsUpdateTime(String statsUpdateTime) {
         this.statsUpdateTime = statsUpdateTime;
         return this;
@@ -51,6 +54,7 @@ public class TablesDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetColumnCorrelations")
     public java.util.Map<String, CorrelationStats> targetColumnCorrelations;
+
     public TablesDatasetMetadata withTargetColumnCorrelations(java.util.Map<String, CorrelationStats> targetColumnCorrelations) {
         this.targetColumnCorrelations = targetColumnCorrelations;
         return this;
@@ -62,6 +66,7 @@ public class TablesDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetColumnSpecId")
     public String targetColumnSpecId;
+
     public TablesDatasetMetadata withTargetColumnSpecId(String targetColumnSpecId) {
         this.targetColumnSpecId = targetColumnSpecId;
         return this;
@@ -73,9 +78,11 @@ public class TablesDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightColumnSpecId")
     public String weightColumnSpecId;
+
     public TablesDatasetMetadata withWeightColumnSpecId(String weightColumnSpecId) {
         this.weightColumnSpecId = weightColumnSpecId;
         return this;
     }
     
+    public TablesDatasetMetadata(){}
 }

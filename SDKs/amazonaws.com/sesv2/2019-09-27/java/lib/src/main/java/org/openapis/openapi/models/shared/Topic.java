@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Topic {
     @JsonProperty("DefaultSubscriptionStatus")
     public SubscriptionStatusEnum defaultSubscriptionStatus;
+
     public Topic withDefaultSubscriptionStatus(SubscriptionStatusEnum defaultSubscriptionStatus) {
         this.defaultSubscriptionStatus = defaultSubscriptionStatus;
         return this;
@@ -22,6 +23,7 @@ public class Topic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Topic withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +31,7 @@ public class Topic {
     
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Topic withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -36,9 +39,15 @@ public class Topic {
     
     @JsonProperty("TopicName")
     public String topicName;
+
     public Topic withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public Topic(@JsonProperty("DefaultSubscriptionStatus") SubscriptionStatusEnum defaultSubscriptionStatus, @JsonProperty("DisplayName") String displayName, @JsonProperty("TopicName") String topicName) {
+        this.defaultSubscriptionStatus = defaultSubscriptionStatus;
+        this.displayName = displayName;
+        this.topicName = topicName;
+  }
 }

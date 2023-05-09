@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2BulkJobsRequestBody {
@@ -12,6 +13,7 @@ public class PostV2BulkJobsRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PostV2BulkJobsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +24,13 @@ public class PostV2BulkJobsRequestBody {
      */
     @SpeakeasyMetadata("form:name=type")
     public String type;
+
     public PostV2BulkJobsRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostV2BulkJobsRequestBody(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

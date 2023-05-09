@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRootsResponse {
@@ -12,6 +13,7 @@ public class ListRootsResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListRootsResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListRootsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRootsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class ListRootsResponse {
     
     
     public String contentType;
+
     public ListRootsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListRootsResponse {
      */
     
     public Object invalidInputException;
+
     public ListRootsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListRootsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRootsResponse listRootsResponse;
+
     public ListRootsResponse withListRootsResponse(org.openapis.openapi.models.shared.ListRootsResponse listRootsResponse) {
         this.listRootsResponse = listRootsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListRootsResponse {
      */
     
     public Object serviceException;
+
     public ListRootsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class ListRootsResponse {
     
     
     public Integer statusCode;
+
     public ListRootsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListRootsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRootsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListRootsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListRootsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListRootsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

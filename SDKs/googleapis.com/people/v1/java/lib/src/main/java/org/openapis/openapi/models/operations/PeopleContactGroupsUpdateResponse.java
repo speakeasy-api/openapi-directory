@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PeopleContactGroupsUpdateResponse {
@@ -12,6 +13,7 @@ public class PeopleContactGroupsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.ContactGroup contactGroup;
+
     public PeopleContactGroupsUpdateResponse withContactGroup(org.openapis.openapi.models.shared.ContactGroup contactGroup) {
         this.contactGroup = contactGroup;
         return this;
@@ -19,6 +21,7 @@ public class PeopleContactGroupsUpdateResponse {
     
     
     public String contentType;
+
     public PeopleContactGroupsUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PeopleContactGroupsUpdateResponse {
     
     
     public Integer statusCode;
+
     public PeopleContactGroupsUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PeopleContactGroupsUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PeopleContactGroupsUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PeopleContactGroupsUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

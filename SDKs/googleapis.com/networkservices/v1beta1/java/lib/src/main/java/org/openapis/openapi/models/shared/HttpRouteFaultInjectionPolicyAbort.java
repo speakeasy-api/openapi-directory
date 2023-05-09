@@ -18,6 +18,7 @@ public class HttpRouteFaultInjectionPolicyAbort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatus")
     public Integer httpStatus;
+
     public HttpRouteFaultInjectionPolicyAbort withHttpStatus(Integer httpStatus) {
         this.httpStatus = httpStatus;
         return this;
@@ -29,9 +30,11 @@ public class HttpRouteFaultInjectionPolicyAbort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Integer percentage;
+
     public HttpRouteFaultInjectionPolicyAbort withPercentage(Integer percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public HttpRouteFaultInjectionPolicyAbort(){}
 }

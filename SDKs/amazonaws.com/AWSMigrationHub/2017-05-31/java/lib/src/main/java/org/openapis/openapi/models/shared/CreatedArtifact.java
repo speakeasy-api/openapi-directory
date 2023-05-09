@@ -15,6 +15,7 @@ public class CreatedArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatedArtifact withDescription(String description) {
         this.description = description;
         return this;
@@ -22,9 +23,13 @@ public class CreatedArtifact {
     
     @JsonProperty("Name")
     public String name;
+
     public CreatedArtifact withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreatedArtifact(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

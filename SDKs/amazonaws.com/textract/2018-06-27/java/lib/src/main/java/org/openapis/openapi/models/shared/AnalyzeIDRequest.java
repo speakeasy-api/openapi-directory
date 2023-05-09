@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyzeIDRequest {
     @JsonProperty("DocumentPages")
     public Document[] documentPages;
+
     public AnalyzeIDRequest withDocumentPages(Document[] documentPages) {
         this.documentPages = documentPages;
         return this;
     }
     
+    public AnalyzeIDRequest(@JsonProperty("DocumentPages") Document[] documentPages) {
+        this.documentPages = documentPages;
+  }
 }

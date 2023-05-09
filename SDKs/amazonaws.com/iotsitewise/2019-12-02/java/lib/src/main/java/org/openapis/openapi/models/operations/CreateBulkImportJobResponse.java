@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBulkImportJobResponse {
@@ -12,6 +13,7 @@ public class CreateBulkImportJobResponse {
      */
     
     public Object conflictingOperationException;
+
     public CreateBulkImportJobResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBulkImportJobResponse {
     
     
     public String contentType;
+
     public CreateBulkImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBulkImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBulkImportJobResponse createBulkImportJobResponse;
+
     public CreateBulkImportJobResponse withCreateBulkImportJobResponse(org.openapis.openapi.models.shared.CreateBulkImportJobResponse createBulkImportJobResponse) {
         this.createBulkImportJobResponse = createBulkImportJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateBulkImportJobResponse {
      */
     
     public Object internalFailureException;
+
     public CreateBulkImportJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBulkImportJobResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateBulkImportJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBulkImportJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateBulkImportJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateBulkImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateBulkImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateBulkImportJobResponse {
     
     
     public Integer statusCode;
+
     public CreateBulkImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateBulkImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBulkImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateBulkImportJobResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateBulkImportJobResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -103,9 +114,14 @@ public class CreateBulkImportJobResponse {
      */
     
     public Object throttlingException;
+
     public CreateBulkImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateBulkImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SingularSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public SingularSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public SingularSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

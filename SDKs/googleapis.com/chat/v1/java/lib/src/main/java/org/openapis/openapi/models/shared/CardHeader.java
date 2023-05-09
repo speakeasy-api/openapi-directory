@@ -15,6 +15,7 @@ public class CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageStyle")
     public CardHeaderImageStyleEnum imageStyle;
+
     public CardHeader withImageStyle(CardHeaderImageStyleEnum imageStyle) {
         this.imageStyle = imageStyle;
         return this;
@@ -26,6 +27,7 @@ public class CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public CardHeader withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -37,6 +39,7 @@ public class CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public CardHeader withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -48,9 +51,11 @@ public class CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CardHeader withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CardHeader(){}
 }

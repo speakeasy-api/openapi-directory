@@ -18,6 +18,7 @@ public class Offset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Float x;
+
     public Offset withX(Float x) {
         this.x = x;
         return this;
@@ -29,9 +30,11 @@ public class Offset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Float y;
+
     public Offset withY(Float y) {
         this.y = y;
         return this;
     }
     
+    public Offset(){}
 }

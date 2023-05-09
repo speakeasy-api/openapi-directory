@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel withId(Long id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel(){}
 }

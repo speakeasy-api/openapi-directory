@@ -18,6 +18,7 @@ public class SellerEligibilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("programType")
     public String programType;
+
     public SellerEligibilityResponse withProgramType(String programType) {
         this.programType = programType;
         return this;
@@ -29,6 +30,7 @@ public class SellerEligibilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public SellerEligibilityResponse withReason(String reason) {
         this.reason = reason;
         return this;
@@ -40,9 +42,11 @@ public class SellerEligibilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SellerEligibilityResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SellerEligibilityResponse(){}
 }

@@ -15,9 +15,11 @@ public class GetInstanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public Instance instance;
+
     public GetInstanceResult withInstance(Instance instance) {
         this.instance = instance;
         return this;
     }
     
+    public GetInstanceResult(){}
 }

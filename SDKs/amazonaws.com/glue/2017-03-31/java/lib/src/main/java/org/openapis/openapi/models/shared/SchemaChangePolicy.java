@@ -15,6 +15,7 @@ public class SchemaChangePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteBehavior")
     public DeleteBehaviorEnum deleteBehavior;
+
     public SchemaChangePolicy withDeleteBehavior(DeleteBehaviorEnum deleteBehavior) {
         this.deleteBehavior = deleteBehavior;
         return this;
@@ -23,9 +24,11 @@ public class SchemaChangePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateBehavior")
     public UpdateBehaviorEnum updateBehavior;
+
     public SchemaChangePolicy withUpdateBehavior(UpdateBehaviorEnum updateBehavior) {
         this.updateBehavior = updateBehavior;
         return this;
     }
     
+    public SchemaChangePolicy(){}
 }

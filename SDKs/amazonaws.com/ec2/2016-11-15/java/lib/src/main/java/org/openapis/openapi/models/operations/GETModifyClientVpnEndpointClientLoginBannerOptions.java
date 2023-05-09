@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyClientVpnEndpointClientLoginBannerOptions {
     @SpeakeasyMetadata("queryParam:name=BannerText")
     public String bannerText;
+
     public GETModifyClientVpnEndpointClientLoginBannerOptions withBannerText(String bannerText) {
         this.bannerText = bannerText;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyClientVpnEndpointClientLoginBannerOptions {
     
     @SpeakeasyMetadata("queryParam:name=Enabled")
     public Boolean enabled;
+
     public GETModifyClientVpnEndpointClientLoginBannerOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GETModifyClientVpnEndpointClientLoginBannerOptions(){}
 }

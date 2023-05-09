@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.webhooks;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PodcastDeletedResponse {
     
     public String contentType;
+
     public PodcastDeletedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PodcastDeletedResponse {
     
     
     public Integer statusCode;
+
     public PodcastDeletedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class PodcastDeletedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PodcastDeletedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PodcastDeletedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

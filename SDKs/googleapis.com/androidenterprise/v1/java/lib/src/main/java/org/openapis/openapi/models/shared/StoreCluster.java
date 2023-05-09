@@ -18,6 +18,7 @@ public class StoreCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StoreCluster withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class StoreCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public LocalizedText[] name;
+
     public StoreCluster withName(LocalizedText[] name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class StoreCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderInPage")
     public String orderInPage;
+
     public StoreCluster withOrderInPage(String orderInPage) {
         this.orderInPage = orderInPage;
         return this;
@@ -51,9 +54,11 @@ public class StoreCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String[] productId;
+
     public StoreCluster withProductId(String[] productId) {
         this.productId = productId;
         return this;
     }
     
+    public StoreCluster(){}
 }

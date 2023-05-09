@@ -15,6 +15,7 @@ public class LambdaVolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addGroupOwner")
     public Boolean addGroupOwner;
+
     public LambdaVolumeMount withAddGroupOwner(Boolean addGroupOwner) {
         this.addGroupOwner = addGroupOwner;
         return this;
@@ -22,6 +23,7 @@ public class LambdaVolumeMount {
     
     @JsonProperty("destinationPath")
     public String destinationPath;
+
     public LambdaVolumeMount withDestinationPath(String destinationPath) {
         this.destinationPath = destinationPath;
         return this;
@@ -30,6 +32,7 @@ public class LambdaVolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public LambdaFilesystemPermissionEnum permission;
+
     public LambdaVolumeMount withPermission(LambdaFilesystemPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -37,9 +40,14 @@ public class LambdaVolumeMount {
     
     @JsonProperty("sourcePath")
     public String sourcePath;
+
     public LambdaVolumeMount withSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
     }
     
+    public LambdaVolumeMount(@JsonProperty("destinationPath") String destinationPath, @JsonProperty("sourcePath") String sourcePath) {
+        this.destinationPath = destinationPath;
+        this.sourcePath = sourcePath;
+  }
 }

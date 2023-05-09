@@ -15,9 +15,11 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockRelationships {
      */
     
     public String schema;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockRelationships withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public SchemaResponseBlocksReadRegistrationSchemaBlockRelationships(){}
 }

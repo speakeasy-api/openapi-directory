@@ -18,6 +18,7 @@ public class GetTaxFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GetTaxFormResponse withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class GetTaxFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public GetTaxFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -40,6 +42,7 @@ public class GetTaxFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public GetTaxFormResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -51,6 +54,7 @@ public class GetTaxFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetTaxFormResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -62,9 +66,11 @@ public class GetTaxFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetTaxFormResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public GetTaxFormResponse(){}
 }

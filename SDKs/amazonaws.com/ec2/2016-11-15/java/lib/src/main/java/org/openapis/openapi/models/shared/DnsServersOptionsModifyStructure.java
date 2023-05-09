@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DnsServersOptionsModifyStructure {
     
     public String[] customDnsServers;
+
     public DnsServersOptionsModifyStructure withCustomDnsServers(String[] customDnsServers) {
         this.customDnsServers = customDnsServers;
         return this;
@@ -19,9 +20,11 @@ public class DnsServersOptionsModifyStructure {
     
     
     public Boolean enabled;
+
     public DnsServersOptionsModifyStructure withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public DnsServersOptionsModifyStructure(){}
 }

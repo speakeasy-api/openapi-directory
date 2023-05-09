@@ -15,6 +15,7 @@ public class CreateParticipantTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public CreateParticipantTokenRequestBody withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class CreateParticipantTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public org.openapis.openapi.models.shared.ParticipantTokenCapabilityEnum[] capabilities;
+
     public CreateParticipantTokenRequestBody withCapabilities(org.openapis.openapi.models.shared.ParticipantTokenCapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -37,6 +39,7 @@ public class CreateParticipantTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public CreateParticipantTokenRequestBody withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -47,6 +50,7 @@ public class CreateParticipantTokenRequestBody {
      */
     @JsonProperty("stageArn")
     public String stageArn;
+
     public CreateParticipantTokenRequestBody withStageArn(String stageArn) {
         this.stageArn = stageArn;
         return this;
@@ -58,9 +62,13 @@ public class CreateParticipantTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public CreateParticipantTokenRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CreateParticipantTokenRequestBody(@JsonProperty("stageArn") String stageArn) {
+        this.stageArn = stageArn;
+  }
 }

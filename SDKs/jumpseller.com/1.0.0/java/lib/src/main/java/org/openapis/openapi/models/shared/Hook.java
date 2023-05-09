@@ -15,9 +15,11 @@ public class Hook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hook")
     public HookFields hook;
+
     public Hook withHook(HookFields hook) {
         this.hook = hook;
         return this;
     }
     
+    public Hook(){}
 }

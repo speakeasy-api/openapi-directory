@@ -15,6 +15,7 @@ public class ManagedInstanceVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTemplate")
     public String instanceTemplate;
+
     public ManagedInstanceVersion withInstanceTemplate(String instanceTemplate) {
         this.instanceTemplate = instanceTemplate;
         return this;
@@ -26,9 +27,11 @@ public class ManagedInstanceVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ManagedInstanceVersion withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ManagedInstanceVersion(){}
 }

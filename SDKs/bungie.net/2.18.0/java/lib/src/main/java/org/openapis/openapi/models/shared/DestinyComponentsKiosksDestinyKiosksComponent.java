@@ -17,9 +17,11 @@ public class DestinyComponentsKiosksDestinyKiosksComponent {
      */
     
     public java.util.Map<String, DestinyComponentsKiosksDestinyKioskItem[]> kioskItems;
+
     public DestinyComponentsKiosksDestinyKiosksComponent withKioskItems(java.util.Map<String, DestinyComponentsKiosksDestinyKioskItem[]> kioskItems) {
         this.kioskItems = kioskItems;
         return this;
     }
     
+    public DestinyComponentsKiosksDestinyKiosksComponent(){}
 }

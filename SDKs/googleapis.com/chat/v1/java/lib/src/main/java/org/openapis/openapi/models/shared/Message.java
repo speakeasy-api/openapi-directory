@@ -18,6 +18,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionResponse")
     public ActionResponse actionResponse;
+
     public Message withActionResponse(ActionResponse actionResponse) {
         this.actionResponse = actionResponse;
         return this;
@@ -29,6 +30,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public Annotation[] annotations;
+
     public Message withAnnotations(Annotation[] annotations) {
         this.annotations = annotations;
         return this;
@@ -40,6 +42,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("argumentText")
     public String argumentText;
+
     public Message withArgumentText(String argumentText) {
         this.argumentText = argumentText;
         return this;
@@ -51,6 +54,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public Attachment[] attachment;
+
     public Message withAttachment(Attachment[] attachment) {
         this.attachment = attachment;
         return this;
@@ -62,6 +66,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public Card[] cards;
+
     public Message withCards(Card[] cards) {
         this.cards = cards;
         return this;
@@ -73,6 +78,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardsV2")
     public CardWithId[] cardsV2;
+
     public Message withCardsV2(CardWithId[] cardsV2) {
         this.cardsV2 = cardsV2;
         return this;
@@ -84,6 +90,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientAssignedMessageId")
     public String clientAssignedMessageId;
+
     public Message withClientAssignedMessageId(String clientAssignedMessageId) {
         this.clientAssignedMessageId = clientAssignedMessageId;
         return this;
@@ -95,6 +102,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Message withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -106,6 +114,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fallbackText")
     public String fallbackText;
+
     public Message withFallbackText(String fallbackText) {
         this.fallbackText = fallbackText;
         return this;
@@ -117,6 +126,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateTime")
     public String lastUpdateTime;
+
     public Message withLastUpdateTime(String lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -128,6 +138,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedUrl")
     public MatchedUrl matchedUrl;
+
     public Message withMatchedUrl(MatchedUrl matchedUrl) {
         this.matchedUrl = matchedUrl;
         return this;
@@ -139,6 +150,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Message withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sender")
     public User sender;
+
     public Message withSender(User sender) {
         this.sender = sender;
         return this;
@@ -161,6 +174,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slashCommand")
     public SlashCommand slashCommand;
+
     public Message withSlashCommand(SlashCommand slashCommand) {
         this.slashCommand = slashCommand;
         return this;
@@ -172,6 +186,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("space")
     public Space space;
+
     public Message withSpace(Space space) {
         this.space = space;
         return this;
@@ -183,6 +198,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Message withText(String text) {
         this.text = text;
         return this;
@@ -194,6 +210,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thread")
     public Thread thread;
+
     public Message withThread(Thread thread) {
         this.thread = thread;
         return this;
@@ -205,9 +222,11 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threadReply")
     public Boolean threadReply;
+
     public Message withThreadReply(Boolean threadReply) {
         this.threadReply = threadReply;
         return this;
     }
     
+    public Message(){}
 }

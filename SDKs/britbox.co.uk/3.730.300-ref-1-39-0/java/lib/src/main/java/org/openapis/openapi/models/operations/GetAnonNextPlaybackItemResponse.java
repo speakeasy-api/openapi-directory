@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAnonNextPlaybackItemResponse {
     
     public String contentType;
+
     public GetAnonNextPlaybackItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAnonNextPlaybackItemResponse {
      */
     
     public org.openapis.openapi.models.shared.NextPlaybackItem nextPlaybackItem;
+
     public GetAnonNextPlaybackItemResponse withNextPlaybackItem(org.openapis.openapi.models.shared.NextPlaybackItem nextPlaybackItem) {
         this.nextPlaybackItem = nextPlaybackItem;
         return this;
@@ -29,6 +32,7 @@ public class GetAnonNextPlaybackItemResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetAnonNextPlaybackItemResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetAnonNextPlaybackItemResponse {
     
     
     public Integer statusCode;
+
     public GetAnonNextPlaybackItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetAnonNextPlaybackItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAnonNextPlaybackItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAnonNextPlaybackItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

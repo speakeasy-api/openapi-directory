@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class CreateAccessKeyRequest {
     
     public String userName;
+
     public CreateAccessKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public CreateAccessKeyRequest(){}
 }

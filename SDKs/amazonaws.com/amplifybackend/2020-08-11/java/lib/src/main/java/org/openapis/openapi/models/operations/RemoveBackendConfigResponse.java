@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveBackendConfigResponse {
@@ -12,6 +13,7 @@ public class RemoveBackendConfigResponse {
      */
     
     public Object badRequestException;
+
     public RemoveBackendConfigResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveBackendConfigResponse {
     
     
     public String contentType;
+
     public RemoveBackendConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveBackendConfigResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public RemoveBackendConfigResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveBackendConfigResponse {
      */
     
     public Object notFoundException;
+
     public RemoveBackendConfigResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveBackendConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveBackendConfigResponse removeBackendConfigResponse;
+
     public RemoveBackendConfigResponse withRemoveBackendConfigResponse(org.openapis.openapi.models.shared.RemoveBackendConfigResponse removeBackendConfigResponse) {
         this.removeBackendConfigResponse = removeBackendConfigResponse;
         return this;
@@ -56,6 +62,7 @@ public class RemoveBackendConfigResponse {
     
     
     public Integer statusCode;
+
     public RemoveBackendConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RemoveBackendConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveBackendConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RemoveBackendConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RemoveBackendConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public RemoveBackendConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

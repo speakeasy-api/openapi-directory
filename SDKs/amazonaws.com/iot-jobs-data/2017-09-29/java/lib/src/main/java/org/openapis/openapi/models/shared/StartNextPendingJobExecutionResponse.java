@@ -15,9 +15,11 @@ public class StartNextPendingJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution")
     public JobExecution execution;
+
     public StartNextPendingJobExecutionResponse withExecution(JobExecution execution) {
         this.execution = execution;
         return this;
     }
     
+    public StartNextPendingJobExecutionResponse(){}
 }

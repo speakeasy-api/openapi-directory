@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateDRTRoleRequest {
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AssociateDRTRoleRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public AssociateDRTRoleRequest(@JsonProperty("RoleArn") String roleArn) {
+        this.roleArn = roleArn;
+  }
 }

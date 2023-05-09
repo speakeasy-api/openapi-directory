@@ -18,6 +18,7 @@ public class FlexibleRuntimeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystem")
     public String operatingSystem;
+
     public FlexibleRuntimeSettings withOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -29,9 +30,11 @@ public class FlexibleRuntimeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public FlexibleRuntimeSettings withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
     }
     
+    public FlexibleRuntimeSettings(){}
 }

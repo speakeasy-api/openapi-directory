@@ -18,6 +18,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public ProductCluster withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandInventoryStatus")
     public ProductClusterBrandInventoryStatusEnum brandInventoryStatus;
+
     public ProductCluster withBrandInventoryStatus(ProductClusterBrandInventoryStatusEnum brandInventoryStatus) {
         this.brandInventoryStatus = brandInventoryStatus;
         return this;
@@ -40,6 +42,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL1")
     public String categoryL1;
+
     public ProductCluster withCategoryL1(String categoryL1) {
         this.categoryL1 = categoryL1;
         return this;
@@ -51,6 +54,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL2")
     public String categoryL2;
+
     public ProductCluster withCategoryL2(String categoryL2) {
         this.categoryL2 = categoryL2;
         return this;
@@ -62,6 +66,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL3")
     public String categoryL3;
+
     public ProductCluster withCategoryL3(String categoryL3) {
         this.categoryL3 = categoryL3;
         return this;
@@ -73,6 +78,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL4")
     public String categoryL4;
+
     public ProductCluster withCategoryL4(String categoryL4) {
         this.categoryL4 = categoryL4;
         return this;
@@ -84,6 +90,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL5")
     public String categoryL5;
+
     public ProductCluster withCategoryL5(String categoryL5) {
         this.categoryL5 = categoryL5;
         return this;
@@ -95,6 +102,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryStatus")
     public ProductClusterInventoryStatusEnum inventoryStatus;
+
     public ProductCluster withInventoryStatus(ProductClusterInventoryStatusEnum inventoryStatus) {
         this.inventoryStatus = inventoryStatus;
         return this;
@@ -106,6 +114,7 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProductCluster withTitle(String title) {
         this.title = title;
         return this;
@@ -117,9 +126,11 @@ public class ProductCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantGtins")
     public String[] variantGtins;
+
     public ProductCluster withVariantGtins(String[] variantGtins) {
         this.variantGtins = variantGtins;
         return this;
     }
     
+    public ProductCluster(){}
 }

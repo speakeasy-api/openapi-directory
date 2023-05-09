@@ -14,6 +14,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsCommissionVotes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public GetLegalSearchDefaultApplicationJSONAdrsCommissionVotes withAction(String action) {
         this.action = action;
         return this;
@@ -23,9 +24,11 @@ public class GetLegalSearchDefaultApplicationJSONAdrsCommissionVotes {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("vote_date")
     public LocalDate voteDate;
+
     public GetLegalSearchDefaultApplicationJSONAdrsCommissionVotes withVoteDate(LocalDate voteDate) {
         this.voteDate = voteDate;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdrsCommissionVotes(){}
 }

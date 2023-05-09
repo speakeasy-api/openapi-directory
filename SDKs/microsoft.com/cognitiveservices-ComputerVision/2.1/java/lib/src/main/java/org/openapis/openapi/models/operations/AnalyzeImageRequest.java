@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyzeImageRequest {
@@ -12,6 +13,7 @@ public class AnalyzeImageRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public AnalyzeImageRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -22,6 +24,7 @@ public class AnalyzeImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=descriptionExclude")
     public org.openapis.openapi.models.shared.DescriptionExcludeEnum[] descriptionExclude;
+
     public AnalyzeImageRequest withDescriptionExclude(org.openapis.openapi.models.shared.DescriptionExcludeEnum[] descriptionExclude) {
         this.descriptionExclude = descriptionExclude;
         return this;
@@ -32,6 +35,7 @@ public class AnalyzeImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=details")
     public AnalyzeImageDetailsEnum[] details;
+
     public AnalyzeImageRequest withDetails(AnalyzeImageDetailsEnum[] details) {
         this.details = details;
         return this;
@@ -42,6 +46,7 @@ public class AnalyzeImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.ServiceLanguageEnum language;
+
     public AnalyzeImageRequest withLanguage(org.openapis.openapi.models.shared.ServiceLanguageEnum language) {
         this.language = language;
         return this;
@@ -52,9 +57,13 @@ public class AnalyzeImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=visualFeatures")
     public org.openapis.openapi.models.shared.VisualFeaturesEnum[] visualFeatures;
+
     public AnalyzeImageRequest withVisualFeatures(org.openapis.openapi.models.shared.VisualFeaturesEnum[] visualFeatures) {
         this.visualFeatures = visualFeatures;
         return this;
     }
     
+    public AnalyzeImageRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+  }
 }

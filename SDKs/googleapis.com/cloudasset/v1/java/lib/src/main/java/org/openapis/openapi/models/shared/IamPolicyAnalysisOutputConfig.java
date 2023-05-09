@@ -18,6 +18,7 @@ public class IamPolicyAnalysisOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryDestination")
     public GoogleCloudAssetV1BigQueryDestination bigqueryDestination;
+
     public IamPolicyAnalysisOutputConfig withBigqueryDestination(GoogleCloudAssetV1BigQueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
         return this;
@@ -29,9 +30,11 @@ public class IamPolicyAnalysisOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GoogleCloudAssetV1GcsDestination gcsDestination;
+
     public IamPolicyAnalysisOutputConfig withGcsDestination(GoogleCloudAssetV1GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public IamPolicyAnalysisOutputConfig(){}
 }

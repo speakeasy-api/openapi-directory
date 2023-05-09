@@ -15,9 +15,11 @@ public class ScaleOutPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuUtilizationPercentage")
     public Long cpuUtilizationPercentage;
+
     public ScaleOutPolicyDescription withCpuUtilizationPercentage(Long cpuUtilizationPercentage) {
         this.cpuUtilizationPercentage = cpuUtilizationPercentage;
         return this;
     }
     
+    public ScaleOutPolicyDescription(){}
 }

@@ -18,6 +18,7 @@ public class LibreOfficeConvertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public LibreOfficeConvertRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -26,6 +27,7 @@ public class LibreOfficeConvertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlinePdf")
     public Boolean inlinePdf;
+
     public LibreOfficeConvertRequest withInlinePdf(Boolean inlinePdf) {
         this.inlinePdf = inlinePdf;
         return this;
@@ -33,9 +35,13 @@ public class LibreOfficeConvertRequest {
     
     @JsonProperty("url")
     public String url;
+
     public LibreOfficeConvertRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LibreOfficeConvertRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

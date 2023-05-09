@@ -18,6 +18,7 @@ public class ListStreamsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListStreamsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListStreamsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streams")
     public Stream[] streams;
+
     public ListStreamsResponse withStreams(Stream[] streams) {
         this.streams = streams;
         return this;
@@ -40,9 +42,11 @@ public class ListStreamsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListStreamsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListStreamsResponse(){}
 }

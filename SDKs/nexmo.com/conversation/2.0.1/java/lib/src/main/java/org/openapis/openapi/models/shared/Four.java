@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Four {
     @JsonProperty("extension")
     public String extension;
+
     public Four withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -22,9 +23,14 @@ public class Four {
      */
     @JsonProperty("type")
     public String type;
+
     public Four withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Four(@JsonProperty("extension") String extension, @JsonProperty("type") String type) {
+        this.extension = extension;
+        this.type = type;
+  }
 }

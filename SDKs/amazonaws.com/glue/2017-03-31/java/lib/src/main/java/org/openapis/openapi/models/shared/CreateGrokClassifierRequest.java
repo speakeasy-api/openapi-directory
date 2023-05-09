@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGrokClassifierRequest {
     @JsonProperty("Classification")
     public String classification;
+
     public CreateGrokClassifierRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -22,6 +23,7 @@ public class CreateGrokClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomPatterns")
     public String customPatterns;
+
     public CreateGrokClassifierRequest withCustomPatterns(String customPatterns) {
         this.customPatterns = customPatterns;
         return this;
@@ -29,6 +31,7 @@ public class CreateGrokClassifierRequest {
     
     @JsonProperty("GrokPattern")
     public String grokPattern;
+
     public CreateGrokClassifierRequest withGrokPattern(String grokPattern) {
         this.grokPattern = grokPattern;
         return this;
@@ -36,9 +39,15 @@ public class CreateGrokClassifierRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateGrokClassifierRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateGrokClassifierRequest(@JsonProperty("Classification") String classification, @JsonProperty("GrokPattern") String grokPattern, @JsonProperty("Name") String name) {
+        this.classification = classification;
+        this.grokPattern = grokPattern;
+        this.name = name;
+  }
 }

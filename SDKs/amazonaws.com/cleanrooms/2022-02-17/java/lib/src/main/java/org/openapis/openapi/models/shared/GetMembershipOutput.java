@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMembershipOutput {
     @JsonProperty("membership")
     public Membership membership;
+
     public GetMembershipOutput withMembership(Membership membership) {
         this.membership = membership;
         return this;
     }
     
+    public GetMembershipOutput(@JsonProperty("membership") Membership membership) {
+        this.membership = membership;
+  }
 }

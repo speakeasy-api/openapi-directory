@@ -15,6 +15,7 @@ public class ListSupportedResourceTypesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSupportedResourceTypesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSupportedResourceTypesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public SupportedResourceType[] resourceTypes;
+
     public ListSupportedResourceTypesOutput withResourceTypes(SupportedResourceType[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public ListSupportedResourceTypesOutput(){}
 }

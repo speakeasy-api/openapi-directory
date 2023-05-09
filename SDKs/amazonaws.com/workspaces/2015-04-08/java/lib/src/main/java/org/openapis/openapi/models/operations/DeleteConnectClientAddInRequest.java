@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConnectClientAddInRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteConnectClientAddInRequest deleteConnectClientAddInRequest;
+
     public DeleteConnectClientAddInRequest withDeleteConnectClientAddInRequest(org.openapis.openapi.models.shared.DeleteConnectClientAddInRequest deleteConnectClientAddInRequest) {
         this.deleteConnectClientAddInRequest = deleteConnectClientAddInRequest;
         return this;
@@ -16,6 +18,7 @@ public class DeleteConnectClientAddInRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteConnectClientAddInRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DeleteConnectClientAddInRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteConnectClientAddInRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DeleteConnectClientAddInRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteConnectClientAddInRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DeleteConnectClientAddInRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteConnectClientAddInRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DeleteConnectClientAddInRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteConnectClientAddInRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DeleteConnectClientAddInRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteConnectClientAddInRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DeleteConnectClientAddInRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteConnectClientAddInRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DeleteConnectClientAddInRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DeleteConnectClientAddInXAmzTargetEnum xAmzTarget;
+
     public DeleteConnectClientAddInRequest withXAmzTarget(DeleteConnectClientAddInXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DeleteConnectClientAddInRequest(@JsonProperty("DeleteConnectClientAddInRequest") org.openapis.openapi.models.shared.DeleteConnectClientAddInRequest deleteConnectClientAddInRequest, @JsonProperty("X-Amz-Target") DeleteConnectClientAddInXAmzTargetEnum xAmzTarget) {
+        this.deleteConnectClientAddInRequest = deleteConnectClientAddInRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

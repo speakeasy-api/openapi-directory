@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListDataScansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataScans")
     public GoogleCloudDataplexV1DataScan[] dataScans;
+
     public GoogleCloudDataplexV1ListDataScansResponse withDataScans(GoogleCloudDataplexV1DataScan[] dataScans) {
         this.dataScans = dataScans;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ListDataScansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListDataScansResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1ListDataScansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public GoogleCloudDataplexV1ListDataScansResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListDataScansResponse(){}
 }

@@ -15,6 +15,7 @@ public class CreateThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentGroupName")
     public String parentGroupName;
+
     public CreateThingGroupRequestBody withParentGroupName(String parentGroupName) {
         this.parentGroupName = parentGroupName;
         return this;
@@ -26,6 +27,7 @@ public class CreateThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateThingGroupRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -37,9 +39,11 @@ public class CreateThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupProperties")
     public CreateThingGroupRequestBodyThingGroupProperties thingGroupProperties;
+
     public CreateThingGroupRequestBody withThingGroupProperties(CreateThingGroupRequestBodyThingGroupProperties thingGroupProperties) {
         this.thingGroupProperties = thingGroupProperties;
         return this;
     }
     
+    public CreateThingGroupRequestBody(){}
 }

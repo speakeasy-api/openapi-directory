@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public String entity;
+
     public GoogleCloudDataplexV1DataSource withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public GoogleCloudDataplexV1DataSource withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataSource(){}
 }

@@ -18,6 +18,7 @@ public class NodeSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public NodeInput node;
+
     public NodeSpecInput withNode(NodeInput node) {
         this.node = node;
         return this;
@@ -29,6 +30,7 @@ public class NodeSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeId")
     public String nodeId;
+
     public NodeSpecInput withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -40,9 +42,11 @@ public class NodeSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public NodeSpecInput withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public NodeSpecInput(){}
 }

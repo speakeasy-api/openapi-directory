@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEmbeddingResponse {
     @JsonProperty("data")
     public CreateEmbeddingResponseData[] data;
+
     public CreateEmbeddingResponse withData(CreateEmbeddingResponseData[] data) {
         this.data = data;
         return this;
@@ -19,6 +20,7 @@ public class CreateEmbeddingResponse {
     
     @JsonProperty("model")
     public String model;
+
     public CreateEmbeddingResponse withModel(String model) {
         this.model = model;
         return this;
@@ -26,6 +28,7 @@ public class CreateEmbeddingResponse {
     
     @JsonProperty("object")
     public String object;
+
     public CreateEmbeddingResponse withObject(String object) {
         this.object = object;
         return this;
@@ -33,9 +36,16 @@ public class CreateEmbeddingResponse {
     
     @JsonProperty("usage")
     public CreateEmbeddingResponseUsage usage;
+
     public CreateEmbeddingResponse withUsage(CreateEmbeddingResponseUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public CreateEmbeddingResponse(@JsonProperty("data") CreateEmbeddingResponseData[] data, @JsonProperty("model") String model, @JsonProperty("object") String object, @JsonProperty("usage") CreateEmbeddingResponseUsage usage) {
+        this.data = data;
+        this.model = model;
+        this.object = object;
+        this.usage = usage;
+  }
 }

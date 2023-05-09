@@ -12,6 +12,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public GetDriversRequest withAll(Boolean all) {
         this.all = all;
         return this;
@@ -22,6 +23,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
     public Long deviceId;
+
     public GetDriversRequest withDeviceId(Long deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -32,6 +34,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public Long groupId;
+
     public GetDriversRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -39,6 +42,7 @@ public class GetDriversRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refresh")
     public Boolean refresh;
+
     public GetDriversRequest withRefresh(Boolean refresh) {
         this.refresh = refresh;
         return this;
@@ -49,9 +53,11 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public Long userId;
+
     public GetDriversRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetDriversRequest(){}
 }

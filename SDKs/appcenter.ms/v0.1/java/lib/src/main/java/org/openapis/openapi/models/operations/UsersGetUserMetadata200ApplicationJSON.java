@@ -15,6 +15,7 @@ public class UsersGetUserMetadata200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public UsersGetUserMetadata200ApplicationJSON withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -23,9 +24,11 @@ public class UsersGetUserMetadata200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public UsersGetUserMetadata200ApplicationJSON withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UsersGetUserMetadata200ApplicationJSON(){}
 }

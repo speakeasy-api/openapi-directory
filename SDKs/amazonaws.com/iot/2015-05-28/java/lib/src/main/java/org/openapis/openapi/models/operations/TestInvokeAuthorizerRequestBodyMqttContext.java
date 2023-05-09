@@ -15,6 +15,7 @@ public class TestInvokeAuthorizerRequestBodyMqttContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public TestInvokeAuthorizerRequestBodyMqttContext withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class TestInvokeAuthorizerRequestBodyMqttContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public TestInvokeAuthorizerRequestBodyMqttContext withPassword(String password) {
         this.password = password;
         return this;
@@ -31,9 +33,11 @@ public class TestInvokeAuthorizerRequestBodyMqttContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public TestInvokeAuthorizerRequestBodyMqttContext withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public TestInvokeAuthorizerRequestBodyMqttContext(){}
 }

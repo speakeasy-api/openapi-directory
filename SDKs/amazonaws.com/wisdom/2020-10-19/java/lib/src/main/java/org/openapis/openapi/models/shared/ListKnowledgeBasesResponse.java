@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListKnowledgeBasesResponse {
     @JsonProperty("knowledgeBaseSummaries")
     public KnowledgeBaseSummary[] knowledgeBaseSummaries;
+
     public ListKnowledgeBasesResponse withKnowledgeBaseSummaries(KnowledgeBaseSummary[] knowledgeBaseSummaries) {
         this.knowledgeBaseSummaries = knowledgeBaseSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListKnowledgeBasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListKnowledgeBasesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListKnowledgeBasesResponse(@JsonProperty("knowledgeBaseSummaries") KnowledgeBaseSummary[] knowledgeBaseSummaries) {
+        this.knowledgeBaseSummaries = knowledgeBaseSummaries;
+  }
 }

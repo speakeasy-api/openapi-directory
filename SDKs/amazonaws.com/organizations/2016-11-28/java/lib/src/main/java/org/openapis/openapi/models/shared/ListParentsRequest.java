@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListParentsRequest {
     @JsonProperty("ChildId")
     public String childId;
+
     public ListParentsRequest withChildId(String childId) {
         this.childId = childId;
         return this;
@@ -19,6 +20,7 @@ public class ListParentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListParentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListParentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListParentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListParentsRequest(@JsonProperty("ChildId") String childId) {
+        this.childId = childId;
+  }
 }

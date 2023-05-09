@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersDeleteEmailForAuthenticatedResponse {
     
     public String contentType;
+
     public UsersDeleteEmailForAuthenticatedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersDeleteEmailForAuthenticatedResponse {
     
     
     public Integer statusCode;
+
     public UsersDeleteEmailForAuthenticatedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersDeleteEmailForAuthenticatedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersDeleteEmailForAuthenticatedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersDeleteEmailForAuthenticatedResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersDeleteEmailForAuthenticatedResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class UsersDeleteEmailForAuthenticatedResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public UsersDeleteEmailForAuthenticatedResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public UsersDeleteEmailForAuthenticatedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

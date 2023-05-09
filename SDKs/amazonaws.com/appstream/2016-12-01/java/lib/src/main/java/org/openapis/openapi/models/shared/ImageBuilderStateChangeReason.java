@@ -15,6 +15,7 @@ public class ImageBuilderStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public ImageBuilderStateChangeReasonCodeEnum code;
+
     public ImageBuilderStateChangeReason withCode(ImageBuilderStateChangeReasonCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class ImageBuilderStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ImageBuilderStateChangeReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ImageBuilderStateChangeReason(){}
 }

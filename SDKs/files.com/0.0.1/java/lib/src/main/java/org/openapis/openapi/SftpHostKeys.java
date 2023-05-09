@@ -55,10 +55,8 @@ public class SftpHostKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSftpHostKeysIdResponse res = new org.openapis.openapi.models.operations.DeleteSftpHostKeysIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSftpHostKeysIdResponse res = new org.openapis.openapi.models.operations.DeleteSftpHostKeysIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class SftpHostKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSftpHostKeysResponse res = new org.openapis.openapi.models.operations.GetSftpHostKeysResponse() {{
+        org.openapis.openapi.models.operations.GetSftpHostKeysResponse res = new org.openapis.openapi.models.operations.GetSftpHostKeysResponse(contentType, httpRes.statusCode()) {{
             sftpHostKeyEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class SftpHostKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSftpHostKeysIdResponse res = new org.openapis.openapi.models.operations.GetSftpHostKeysIdResponse() {{
+        org.openapis.openapi.models.operations.GetSftpHostKeysIdResponse res = new org.openapis.openapi.models.operations.GetSftpHostKeysIdResponse(contentType, httpRes.statusCode()) {{
             sftpHostKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class SftpHostKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchSftpHostKeysIdResponse res = new org.openapis.openapi.models.operations.PatchSftpHostKeysIdResponse() {{
+        org.openapis.openapi.models.operations.PatchSftpHostKeysIdResponse res = new org.openapis.openapi.models.operations.PatchSftpHostKeysIdResponse(contentType, httpRes.statusCode()) {{
             sftpHostKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,11 +213,9 @@ public class SftpHostKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSftpHostKeysResponse res = new org.openapis.openapi.models.operations.PostSftpHostKeysResponse() {{
+        org.openapis.openapi.models.operations.PostSftpHostKeysResponse res = new org.openapis.openapi.models.operations.PostSftpHostKeysResponse(contentType, httpRes.statusCode()) {{
             sftpHostKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

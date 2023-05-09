@@ -18,6 +18,7 @@ public class GoogleDomainsDns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsRecords")
     public DsRecord[] dsRecords;
+
     public GoogleDomainsDns withDsRecords(DsRecord[] dsRecords) {
         this.dsRecords = dsRecords;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDomainsDns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsState")
     public GoogleDomainsDnsDsStateEnum dsState;
+
     public GoogleDomainsDns withDsState(GoogleDomainsDnsDsStateEnum dsState) {
         this.dsState = dsState;
         return this;
@@ -40,9 +42,11 @@ public class GoogleDomainsDns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameServers")
     public String[] nameServers;
+
     public GoogleDomainsDns withNameServers(String[] nameServers) {
         this.nameServers = nameServers;
         return this;
     }
     
+    public GoogleDomainsDns(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAssociatedRoleResponse {
@@ -12,6 +13,7 @@ public class GetAssociatedRoleResponse {
      */
     
     public Object badRequestException;
+
     public GetAssociatedRoleResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetAssociatedRoleResponse {
     
     
     public String contentType;
+
     public GetAssociatedRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAssociatedRoleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAssociatedRoleResponse getAssociatedRoleResponse;
+
     public GetAssociatedRoleResponse withGetAssociatedRoleResponse(org.openapis.openapi.models.shared.GetAssociatedRoleResponse getAssociatedRoleResponse) {
         this.getAssociatedRoleResponse = getAssociatedRoleResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAssociatedRoleResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetAssociatedRoleResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class GetAssociatedRoleResponse {
     
     
     public Integer statusCode;
+
     public GetAssociatedRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetAssociatedRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAssociatedRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAssociatedRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

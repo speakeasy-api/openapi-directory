@@ -15,9 +15,13 @@ public class ItvProfileToken {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvProfileToken withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvProfileToken(@JsonProperty("profileToken") String profileToken) {
+        this.profileToken = profileToken;
+  }
 }

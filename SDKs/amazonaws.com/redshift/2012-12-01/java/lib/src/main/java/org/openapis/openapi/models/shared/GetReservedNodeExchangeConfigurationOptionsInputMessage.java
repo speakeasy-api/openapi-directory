@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetReservedNodeExchangeConfigurationOptionsInputMessage {
     
     public ReservedNodeExchangeActionTypeEnum actionType;
+
     public GetReservedNodeExchangeConfigurationOptionsInputMessage withActionType(ReservedNodeExchangeActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -16,6 +17,7 @@ public class GetReservedNodeExchangeConfigurationOptionsInputMessage {
     
     
     public String clusterIdentifier;
+
     public GetReservedNodeExchangeConfigurationOptionsInputMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class GetReservedNodeExchangeConfigurationOptionsInputMessage {
     
     
     public String marker;
+
     public GetReservedNodeExchangeConfigurationOptionsInputMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +33,7 @@ public class GetReservedNodeExchangeConfigurationOptionsInputMessage {
     
     
     public Long maxRecords;
+
     public GetReservedNodeExchangeConfigurationOptionsInputMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,9 +41,13 @@ public class GetReservedNodeExchangeConfigurationOptionsInputMessage {
     
     
     public String snapshotIdentifier;
+
     public GetReservedNodeExchangeConfigurationOptionsInputMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
     }
     
+    public GetReservedNodeExchangeConfigurationOptionsInputMessage(@JsonProperty("ActionType") ReservedNodeExchangeActionTypeEnum actionType) {
+        this.actionType = actionType;
+  }
 }

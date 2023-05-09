@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ChangeSetHookResourceTargetDetails {
     
     public String logicalResourceId;
+
     public ChangeSetHookResourceTargetDetails withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -19,6 +20,7 @@ public class ChangeSetHookResourceTargetDetails {
     
     
     public ChangeActionEnum resourceAction;
+
     public ChangeSetHookResourceTargetDetails withResourceAction(ChangeActionEnum resourceAction) {
         this.resourceAction = resourceAction;
         return this;
@@ -26,9 +28,11 @@ public class ChangeSetHookResourceTargetDetails {
     
     
     public String resourceType;
+
     public ChangeSetHookResourceTargetDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ChangeSetHookResourceTargetDetails(){}
 }

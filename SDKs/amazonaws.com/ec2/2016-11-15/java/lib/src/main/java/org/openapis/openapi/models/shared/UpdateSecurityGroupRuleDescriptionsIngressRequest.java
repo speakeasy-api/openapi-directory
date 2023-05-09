@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateSecurityGroupRuleDescriptionsIngressRequest {
     
     public Boolean dryRun;
+
     public UpdateSecurityGroupRuleDescriptionsIngressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class UpdateSecurityGroupRuleDescriptionsIngressRequest {
     
     
     public String groupId;
+
     public UpdateSecurityGroupRuleDescriptionsIngressRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,6 +25,7 @@ public class UpdateSecurityGroupRuleDescriptionsIngressRequest {
     
     
     public String groupName;
+
     public UpdateSecurityGroupRuleDescriptionsIngressRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -30,6 +33,7 @@ public class UpdateSecurityGroupRuleDescriptionsIngressRequest {
     
     
     public IpPermissionList[] ipPermissions;
+
     public UpdateSecurityGroupRuleDescriptionsIngressRequest withIpPermissions(IpPermissionList[] ipPermissions) {
         this.ipPermissions = ipPermissions;
         return this;
@@ -37,9 +41,11 @@ public class UpdateSecurityGroupRuleDescriptionsIngressRequest {
     
     
     public UpdateSecurityGroupRuleDescriptionsIngressRequestSecurityGroupRuleDescriptions[] securityGroupRuleDescriptions;
+
     public UpdateSecurityGroupRuleDescriptionsIngressRequest withSecurityGroupRuleDescriptions(UpdateSecurityGroupRuleDescriptionsIngressRequestSecurityGroupRuleDescriptions[] securityGroupRuleDescriptions) {
         this.securityGroupRuleDescriptions = securityGroupRuleDescriptions;
         return this;
     }
     
+    public UpdateSecurityGroupRuleDescriptionsIngressRequest(){}
 }

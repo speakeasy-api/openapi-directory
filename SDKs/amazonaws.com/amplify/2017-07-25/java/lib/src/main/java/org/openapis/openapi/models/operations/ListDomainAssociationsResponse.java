@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDomainAssociationsResponse {
@@ -12,6 +13,7 @@ public class ListDomainAssociationsResponse {
      */
     
     public Object badRequestException;
+
     public ListDomainAssociationsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListDomainAssociationsResponse {
     
     
     public String contentType;
+
     public ListDomainAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDomainAssociationsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDomainAssociationsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListDomainAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDomainAssociationsResult listDomainAssociationsResult;
+
     public ListDomainAssociationsResponse withListDomainAssociationsResult(org.openapis.openapi.models.shared.ListDomainAssociationsResult listDomainAssociationsResult) {
         this.listDomainAssociationsResult = listDomainAssociationsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListDomainAssociationsResponse {
     
     
     public Integer statusCode;
+
     public ListDomainAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDomainAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDomainAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListDomainAssociationsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListDomainAssociationsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListDomainAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

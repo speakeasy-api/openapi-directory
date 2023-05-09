@@ -15,6 +15,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public org.openapis.openapi.models.shared.Action[] actions;
+
     public UpdateResponsePlanRequestBody withActions(org.openapis.openapi.models.shared.Action[] actions) {
         this.actions = actions;
         return this;
@@ -25,6 +26,7 @@ public class UpdateResponsePlanRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateResponsePlanRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chatChannel")
     public UpdateResponsePlanRequestBodyChatChannel chatChannel;
+
     public UpdateResponsePlanRequestBody withChatChannel(UpdateResponsePlanRequestBodyChatChannel chatChannel) {
         this.chatChannel = chatChannel;
         return this;
@@ -47,6 +50,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateResponsePlanRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -58,6 +62,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UpdateResponsePlanRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -69,6 +74,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engagements")
     public String[] engagements;
+
     public UpdateResponsePlanRequestBody withEngagements(String[] engagements) {
         this.engagements = engagements;
         return this;
@@ -80,6 +86,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incidentTemplateDedupeString")
     public String incidentTemplateDedupeString;
+
     public UpdateResponsePlanRequestBody withIncidentTemplateDedupeString(String incidentTemplateDedupeString) {
         this.incidentTemplateDedupeString = incidentTemplateDedupeString;
         return this;
@@ -91,6 +98,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incidentTemplateImpact")
     public Long incidentTemplateImpact;
+
     public UpdateResponsePlanRequestBody withIncidentTemplateImpact(Long incidentTemplateImpact) {
         this.incidentTemplateImpact = incidentTemplateImpact;
         return this;
@@ -102,6 +110,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incidentTemplateNotificationTargets")
     public org.openapis.openapi.models.shared.NotificationTargetItem[] incidentTemplateNotificationTargets;
+
     public UpdateResponsePlanRequestBody withIncidentTemplateNotificationTargets(org.openapis.openapi.models.shared.NotificationTargetItem[] incidentTemplateNotificationTargets) {
         this.incidentTemplateNotificationTargets = incidentTemplateNotificationTargets;
         return this;
@@ -113,6 +122,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incidentTemplateSummary")
     public String incidentTemplateSummary;
+
     public UpdateResponsePlanRequestBody withIncidentTemplateSummary(String incidentTemplateSummary) {
         this.incidentTemplateSummary = incidentTemplateSummary;
         return this;
@@ -124,6 +134,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incidentTemplateTags")
     public java.util.Map<String, String> incidentTemplateTags;
+
     public UpdateResponsePlanRequestBody withIncidentTemplateTags(java.util.Map<String, String> incidentTemplateTags) {
         this.incidentTemplateTags = incidentTemplateTags;
         return this;
@@ -135,6 +146,7 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incidentTemplateTitle")
     public String incidentTemplateTitle;
+
     public UpdateResponsePlanRequestBody withIncidentTemplateTitle(String incidentTemplateTitle) {
         this.incidentTemplateTitle = incidentTemplateTitle;
         return this;
@@ -146,9 +158,13 @@ public class UpdateResponsePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrations")
     public org.openapis.openapi.models.shared.Integration[] integrations;
+
     public UpdateResponsePlanRequestBody withIntegrations(org.openapis.openapi.models.shared.Integration[] integrations) {
         this.integrations = integrations;
         return this;
     }
     
+    public UpdateResponsePlanRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

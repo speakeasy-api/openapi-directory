@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePortalResponse {
@@ -12,6 +13,7 @@ public class DeletePortalResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePortalResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeletePortalResponse {
      */
     
     public Object conflictException;
+
     public DeletePortalResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePortalResponse {
     
     
     public String contentType;
+
     public DeletePortalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeletePortalResponse {
      */
     
     public java.util.Map<String, Object> deletePortalResponse;
+
     public DeletePortalResponse withDeletePortalResponse(java.util.Map<String, Object> deletePortalResponse) {
         this.deletePortalResponse = deletePortalResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeletePortalResponse {
      */
     
     public Object internalServerException;
+
     public DeletePortalResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeletePortalResponse {
     
     
     public Integer statusCode;
+
     public DeletePortalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeletePortalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePortalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeletePortalResponse {
      */
     
     public Object throttlingException;
+
     public DeletePortalResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeletePortalResponse {
      */
     
     public Object validationException;
+
     public DeletePortalResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePortalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * FederatedUser - Identifiers for the federated user that is associated with the credentials.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FederatedUser {
     
     public String arn;
+
     public FederatedUser withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,14 @@ public class FederatedUser {
     
     
     public String federatedUserId;
+
     public FederatedUser withFederatedUserId(String federatedUserId) {
         this.federatedUserId = federatedUserId;
         return this;
     }
     
+    public FederatedUser(@JsonProperty("Arn") String arn, @JsonProperty("FederatedUserId") String federatedUserId) {
+        this.arn = arn;
+        this.federatedUserId = federatedUserId;
+  }
 }

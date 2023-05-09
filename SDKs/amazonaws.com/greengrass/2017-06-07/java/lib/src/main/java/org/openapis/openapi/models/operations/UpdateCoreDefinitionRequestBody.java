@@ -15,9 +15,11 @@ public class UpdateCoreDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateCoreDefinitionRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCoreDefinitionRequestBody(){}
 }

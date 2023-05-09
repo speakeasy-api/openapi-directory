@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamDataInput withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamDataInput(){}
 }

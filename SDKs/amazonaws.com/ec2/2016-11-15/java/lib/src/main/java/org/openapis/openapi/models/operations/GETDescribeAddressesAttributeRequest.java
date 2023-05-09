@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeAddressesAttributeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeAddressesAttributeActionEnum action;
+
     public GETDescribeAddressesAttributeRequest withAction(GETDescribeAddressesAttributeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeAddressesAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocationId")
     public String[] allocationId;
+
     public GETDescribeAddressesAttributeRequest withAllocationId(String[] allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeAddressesAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Attribute")
     public GETDescribeAddressesAttributeAttributeEnum attribute;
+
     public GETDescribeAddressesAttributeRequest withAttribute(GETDescribeAddressesAttributeAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeAddressesAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDescribeAddressesAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeAddressesAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public GETDescribeAddressesAttributeRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeAddressesAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETDescribeAddressesAttributeRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -66,6 +73,7 @@ public class GETDescribeAddressesAttributeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeAddressesAttributeVersionEnum version;
+
     public GETDescribeAddressesAttributeRequest withVersion(GETDescribeAddressesAttributeVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETDescribeAddressesAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeAddressesAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETDescribeAddressesAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeAddressesAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETDescribeAddressesAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeAddressesAttributeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETDescribeAddressesAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeAddressesAttributeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETDescribeAddressesAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeAddressesAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETDescribeAddressesAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeAddressesAttributeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,14 @@ public class GETDescribeAddressesAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeAddressesAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeAddressesAttributeRequest(@JsonProperty("Action") GETDescribeAddressesAttributeActionEnum action, @JsonProperty("Version") GETDescribeAddressesAttributeVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

@@ -18,9 +18,11 @@ public class MessageStatusWhatsAppWhatsapp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversation")
     public MessageStatusWhatsAppWhatsappConversation conversation;
+
     public MessageStatusWhatsAppWhatsapp withConversation(MessageStatusWhatsAppWhatsappConversation conversation) {
         this.conversation = conversation;
         return this;
     }
     
+    public MessageStatusWhatsAppWhatsapp(){}
 }

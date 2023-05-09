@@ -15,6 +15,7 @@ public class KerberosAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ADDomainJoinPassword")
     public String adDomainJoinPassword;
+
     public KerberosAttributes withADDomainJoinPassword(String adDomainJoinPassword) {
         this.adDomainJoinPassword = adDomainJoinPassword;
         return this;
@@ -23,6 +24,7 @@ public class KerberosAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ADDomainJoinUser")
     public String adDomainJoinUser;
+
     public KerberosAttributes withADDomainJoinUser(String adDomainJoinUser) {
         this.adDomainJoinUser = adDomainJoinUser;
         return this;
@@ -31,6 +33,7 @@ public class KerberosAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrossRealmTrustPrincipalPassword")
     public String crossRealmTrustPrincipalPassword;
+
     public KerberosAttributes withCrossRealmTrustPrincipalPassword(String crossRealmTrustPrincipalPassword) {
         this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;
         return this;
@@ -38,6 +41,7 @@ public class KerberosAttributes {
     
     @JsonProperty("KdcAdminPassword")
     public String kdcAdminPassword;
+
     public KerberosAttributes withKdcAdminPassword(String kdcAdminPassword) {
         this.kdcAdminPassword = kdcAdminPassword;
         return this;
@@ -45,9 +49,14 @@ public class KerberosAttributes {
     
     @JsonProperty("Realm")
     public String realm;
+
     public KerberosAttributes withRealm(String realm) {
         this.realm = realm;
         return this;
     }
     
+    public KerberosAttributes(@JsonProperty("KdcAdminPassword") String kdcAdminPassword, @JsonProperty("Realm") String realm) {
+        this.kdcAdminPassword = kdcAdminPassword;
+        this.realm = realm;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomInsurancePlanNamesReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public CustomInsurancePlanNamesReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -16,6 +18,7 @@ public class CustomInsurancePlanNamesReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public CustomInsurancePlanNamesReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class CustomInsurancePlanNamesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public CustomInsurancePlanNamesReadRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +34,7 @@ public class CustomInsurancePlanNamesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public CustomInsurancePlanNamesReadRequest withSince(String since) {
         this.since = since;
         return this;
@@ -37,9 +42,13 @@ public class CustomInsurancePlanNamesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
     public Long user;
+
     public CustomInsurancePlanNamesReadRequest withUser(Long user) {
         this.user = user;
         return this;
     }
     
+    public CustomInsurancePlanNamesReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

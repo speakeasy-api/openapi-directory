@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse {
     
     public String contentType;
+
     public ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse {
      */
     
     public java.util.Map<String, Object> googleChromePolicyVersionsV1RemoveNetworkResponse;
+
     public ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse withGoogleChromePolicyVersionsV1RemoveNetworkResponse(java.util.Map<String, Object> googleChromePolicyVersionsV1RemoveNetworkResponse) {
         this.googleChromePolicyVersionsV1RemoveNetworkResponse = googleChromePolicyVersionsV1RemoveNetworkResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse {
     
     
     public Integer statusCode;
+
     public ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

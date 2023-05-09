@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReportsTweetCreateResponse {
@@ -12,6 +13,7 @@ public class GetReportsTweetCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredError fourHundredError;
+
     public GetReportsTweetCreateResponse withFourHundredError(org.openapis.openapi.models.shared.FourHundredError fourHundredError) {
         this.fourHundredError = fourHundredError;
         return this;
@@ -22,6 +24,7 @@ public class GetReportsTweetCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError;
+
     public GetReportsTweetCreateResponse withFourHundredAndOneError(org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError) {
         this.fourHundredAndOneError = fourHundredAndOneError;
         return this;
@@ -32,6 +35,7 @@ public class GetReportsTweetCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError;
+
     public GetReportsTweetCreateResponse withFourHundredAndThreeError(org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError) {
         this.fourHundredAndThreeError = fourHundredAndThreeError;
         return this;
@@ -42,6 +46,7 @@ public class GetReportsTweetCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredError fiveHundredError;
+
     public GetReportsTweetCreateResponse withFiveHundredError(org.openapis.openapi.models.shared.FiveHundredError fiveHundredError) {
         this.fiveHundredError = fiveHundredError;
         return this;
@@ -49,6 +54,7 @@ public class GetReportsTweetCreateResponse {
     
     
     public String contentType;
+
     public GetReportsTweetCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class GetReportsTweetCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTweet createTweet;
+
     public GetReportsTweetCreateResponse withCreateTweet(org.openapis.openapi.models.shared.CreateTweet createTweet) {
         this.createTweet = createTweet;
         return this;
@@ -66,6 +73,7 @@ public class GetReportsTweetCreateResponse {
     
     
     public Integer statusCode;
+
     public GetReportsTweetCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetReportsTweetCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReportsTweetCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetReportsTweetCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

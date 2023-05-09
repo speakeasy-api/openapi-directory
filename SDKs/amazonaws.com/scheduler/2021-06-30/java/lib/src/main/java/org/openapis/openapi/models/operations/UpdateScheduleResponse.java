@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateScheduleResponse {
@@ -12,6 +13,7 @@ public class UpdateScheduleResponse {
      */
     
     public Object conflictException;
+
     public UpdateScheduleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateScheduleResponse {
     
     
     public String contentType;
+
     public UpdateScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateScheduleResponse {
      */
     
     public Object internalServerException;
+
     public UpdateScheduleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateScheduleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateScheduleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateScheduleResponse {
     
     
     public Integer statusCode;
+
     public UpdateScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateScheduleResponse {
      */
     
     public Object throttlingException;
+
     public UpdateScheduleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateScheduleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateScheduleOutput updateScheduleOutput;
+
     public UpdateScheduleResponse withUpdateScheduleOutput(org.openapis.openapi.models.shared.UpdateScheduleOutput updateScheduleOutput) {
         this.updateScheduleOutput = updateScheduleOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateScheduleResponse {
      */
     
     public Object validationException;
+
     public UpdateScheduleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

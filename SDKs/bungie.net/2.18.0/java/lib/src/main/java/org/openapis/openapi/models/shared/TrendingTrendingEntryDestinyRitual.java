@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class TrendingTrendingEntryDestinyRitual {
     
     public OffsetDateTime dateEnd;
+
     public TrendingTrendingEntryDestinyRitual withDateEnd(OffsetDateTime dateEnd) {
         this.dateEnd = dateEnd;
         return this;
@@ -16,6 +17,7 @@ public class TrendingTrendingEntryDestinyRitual {
     
     
     public OffsetDateTime dateStart;
+
     public TrendingTrendingEntryDestinyRitual withDateStart(OffsetDateTime dateStart) {
         this.dateStart = dateStart;
         return this;
@@ -26,6 +28,7 @@ public class TrendingTrendingEntryDestinyRitual {
      */
     
     public TrendingTrendingEntryDestinyRitualEventContent eventContent;
+
     public TrendingTrendingEntryDestinyRitual withEventContent(TrendingTrendingEntryDestinyRitualEventContent eventContent) {
         this.eventContent = eventContent;
         return this;
@@ -33,6 +36,7 @@ public class TrendingTrendingEntryDestinyRitual {
     
     
     public String icon;
+
     public TrendingTrendingEntryDestinyRitual withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -40,6 +44,7 @@ public class TrendingTrendingEntryDestinyRitual {
     
     
     public String image;
+
     public TrendingTrendingEntryDestinyRitual withImage(String image) {
         this.image = image;
         return this;
@@ -50,6 +55,7 @@ public class TrendingTrendingEntryDestinyRitual {
      */
     
     public TrendingTrendingEntryDestinyRitualMilestoneDetails milestoneDetails;
+
     public TrendingTrendingEntryDestinyRitual withMilestoneDetails(TrendingTrendingEntryDestinyRitualMilestoneDetails milestoneDetails) {
         this.milestoneDetails = milestoneDetails;
         return this;
@@ -57,6 +63,7 @@ public class TrendingTrendingEntryDestinyRitual {
     
     
     public String subtitle;
+
     public TrendingTrendingEntryDestinyRitual withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -64,9 +71,11 @@ public class TrendingTrendingEntryDestinyRitual {
     
     
     public String title;
+
     public TrendingTrendingEntryDestinyRitual withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public TrendingTrendingEntryDestinyRitual(){}
 }

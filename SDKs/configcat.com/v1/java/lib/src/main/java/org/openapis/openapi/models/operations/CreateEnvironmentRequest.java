@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEnvironmentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateEnvironmentModel createEnvironmentModel;
+
     public CreateEnvironmentRequest withCreateEnvironmentModel(org.openapis.openapi.models.shared.CreateEnvironmentModel createEnvironmentModel) {
         this.createEnvironmentModel = createEnvironmentModel;
         return this;
@@ -19,9 +21,14 @@ public class CreateEnvironmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public CreateEnvironmentRequest withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public CreateEnvironmentRequest(@JsonProperty("CreateEnvironmentModel") org.openapis.openapi.models.shared.CreateEnvironmentModel createEnvironmentModel, @JsonProperty("productId") String productId) {
+        this.createEnvironmentModel = createEnvironmentModel;
+        this.productId = productId;
+  }
 }

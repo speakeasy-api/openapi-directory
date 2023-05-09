@@ -18,6 +18,7 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nanos")
     public Integer nanos;
+
     public Duration withNanos(Integer nanos) {
         this.nanos = nanos;
         return this;
@@ -29,9 +30,11 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seconds")
     public String seconds;
+
     public Duration withSeconds(String seconds) {
         this.seconds = seconds;
         return this;
     }
     
+    public Duration(){}
 }

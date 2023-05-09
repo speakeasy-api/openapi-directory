@@ -18,6 +18,7 @@ public class RelativeDateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationDays")
     public Integer durationDays;
+
     public RelativeDateRange withDurationDays(Integer durationDays) {
         this.durationDays = durationDays;
         return this;
@@ -29,9 +30,11 @@ public class RelativeDateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetDays")
     public Integer offsetDays;
+
     public RelativeDateRange withOffsetDays(Integer offsetDays) {
         this.offsetDays = offsetDays;
         return this;
     }
     
+    public RelativeDateRange(){}
 }

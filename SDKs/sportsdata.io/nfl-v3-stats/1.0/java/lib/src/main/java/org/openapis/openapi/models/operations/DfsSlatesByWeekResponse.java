@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfsSlatesByWeekResponse {
     
     public String contentType;
+
     public DfsSlatesByWeekResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DfsSlatesByWeekResponse {
     
     
     public org.openapis.openapi.models.shared.DfsSlate[] dfsSlates;
+
     public DfsSlatesByWeekResponse withDfsSlates(org.openapis.openapi.models.shared.DfsSlate[] dfsSlates) {
         this.dfsSlates = dfsSlates;
         return this;
@@ -23,6 +26,7 @@ public class DfsSlatesByWeekResponse {
     
     
     public Integer statusCode;
+
     public DfsSlatesByWeekResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DfsSlatesByWeekResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfsSlatesByWeekResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfsSlatesByWeekResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

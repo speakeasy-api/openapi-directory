@@ -18,6 +18,7 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetNames")
     public String[] assetNames;
+
     public Feed withAssetNames(String[] assetNames) {
         this.assetNames = assetNames;
         return this;
@@ -29,6 +30,7 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetTypes")
     public String[] assetTypes;
+
     public Feed withAssetTypes(String[] assetTypes) {
         this.assetTypes = assetTypes;
         return this;
@@ -40,6 +42,7 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public Expr condition;
+
     public Feed withCondition(Expr condition) {
         this.condition = condition;
         return this;
@@ -51,6 +54,7 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public FeedContentTypeEnum contentType;
+
     public Feed withContentType(FeedContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -62,6 +66,7 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedOutputConfig")
     public FeedOutputConfig feedOutputConfig;
+
     public Feed withFeedOutputConfig(FeedOutputConfig feedOutputConfig) {
         this.feedOutputConfig = feedOutputConfig;
         return this;
@@ -73,6 +78,7 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Feed withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class Feed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipTypes")
     public String[] relationshipTypes;
+
     public Feed withRelationshipTypes(String[] relationshipTypes) {
         this.relationshipTypes = relationshipTypes;
         return this;
     }
     
+    public Feed(){}
 }

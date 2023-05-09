@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1TouchScreenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public GoogleChromeManagementV1TouchScreenDevice[] devices;
+
     public GoogleChromeManagementV1TouchScreenInfo withDevices(GoogleChromeManagementV1TouchScreenDevice[] devices) {
         this.devices = devices;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1TouchScreenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("touchpadLibrary")
     public String touchpadLibrary;
+
     public GoogleChromeManagementV1TouchScreenInfo withTouchpadLibrary(String touchpadLibrary) {
         this.touchpadLibrary = touchpadLibrary;
         return this;
     }
     
+    public GoogleChromeManagementV1TouchScreenInfo(){}
 }

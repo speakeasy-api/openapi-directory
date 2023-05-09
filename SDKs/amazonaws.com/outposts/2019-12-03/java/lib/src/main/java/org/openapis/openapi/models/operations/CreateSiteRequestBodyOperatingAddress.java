@@ -15,6 +15,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine1")
     public String addressLine1;
+
     public CreateSiteRequestBodyOperatingAddress withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -23,6 +24,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine2")
     public String addressLine2;
+
     public CreateSiteRequestBodyOperatingAddress withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -31,6 +33,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine3")
     public String addressLine3;
+
     public CreateSiteRequestBodyOperatingAddress withAddressLine3(String addressLine3) {
         this.addressLine3 = addressLine3;
         return this;
@@ -39,6 +42,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public CreateSiteRequestBodyOperatingAddress withCity(String city) {
         this.city = city;
         return this;
@@ -47,6 +51,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactName")
     public String contactName;
+
     public CreateSiteRequestBodyOperatingAddress withContactName(String contactName) {
         this.contactName = contactName;
         return this;
@@ -55,6 +60,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactPhoneNumber")
     public String contactPhoneNumber;
+
     public CreateSiteRequestBodyOperatingAddress withContactPhoneNumber(String contactPhoneNumber) {
         this.contactPhoneNumber = contactPhoneNumber;
         return this;
@@ -63,6 +69,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryCode")
     public String countryCode;
+
     public CreateSiteRequestBodyOperatingAddress withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -71,6 +78,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DistrictOrCounty")
     public String districtOrCounty;
+
     public CreateSiteRequestBodyOperatingAddress withDistrictOrCounty(String districtOrCounty) {
         this.districtOrCounty = districtOrCounty;
         return this;
@@ -79,6 +87,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Municipality")
     public String municipality;
+
     public CreateSiteRequestBodyOperatingAddress withMunicipality(String municipality) {
         this.municipality = municipality;
         return this;
@@ -87,6 +96,7 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalCode")
     public String postalCode;
+
     public CreateSiteRequestBodyOperatingAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -95,9 +105,11 @@ public class CreateSiteRequestBodyOperatingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateOrRegion")
     public String stateOrRegion;
+
     public CreateSiteRequestBodyOperatingAddress withStateOrRegion(String stateOrRegion) {
         this.stateOrRegion = stateOrRegion;
         return this;
     }
     
+    public CreateSiteRequestBodyOperatingAddress(){}
 }

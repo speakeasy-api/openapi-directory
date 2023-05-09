@@ -12,6 +12,7 @@ public class RitinRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public RitinRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
@@ -22,9 +23,14 @@ public class RitinRequestBodyCertificateParameters {
      */
     @JsonProperty("TokenNo")
     public String tokenNo;
+
     public RitinRequestBodyCertificateParameters withTokenNo(String tokenNo) {
         this.tokenNo = tokenNo;
         return this;
     }
     
+    public RitinRequestBodyCertificateParameters(@JsonProperty("RefNo") String refNo, @JsonProperty("TokenNo") String tokenNo) {
+        this.refNo = refNo;
+        this.tokenNo = tokenNo;
+  }
 }

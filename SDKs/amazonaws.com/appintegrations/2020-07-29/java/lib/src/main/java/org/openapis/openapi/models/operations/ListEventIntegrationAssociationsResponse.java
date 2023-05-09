@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEventIntegrationAssociationsResponse {
@@ -12,6 +13,7 @@ public class ListEventIntegrationAssociationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEventIntegrationAssociationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListEventIntegrationAssociationsResponse {
     
     
     public String contentType;
+
     public ListEventIntegrationAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEventIntegrationAssociationsResponse {
      */
     
     public Object internalServiceError;
+
     public ListEventIntegrationAssociationsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class ListEventIntegrationAssociationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListEventIntegrationAssociationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListEventIntegrationAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEventIntegrationAssociationsResponse listEventIntegrationAssociationsResponse;
+
     public ListEventIntegrationAssociationsResponse withListEventIntegrationAssociationsResponse(org.openapis.openapi.models.shared.ListEventIntegrationAssociationsResponse listEventIntegrationAssociationsResponse) {
         this.listEventIntegrationAssociationsResponse = listEventIntegrationAssociationsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListEventIntegrationAssociationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEventIntegrationAssociationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListEventIntegrationAssociationsResponse {
     
     
     public Integer statusCode;
+
     public ListEventIntegrationAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListEventIntegrationAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEventIntegrationAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListEventIntegrationAssociationsResponse {
      */
     
     public Object throttlingException;
+
     public ListEventIntegrationAssociationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListEventIntegrationAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

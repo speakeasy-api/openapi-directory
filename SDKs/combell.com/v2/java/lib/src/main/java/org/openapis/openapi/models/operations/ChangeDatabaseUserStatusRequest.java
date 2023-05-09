@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeDatabaseUserStatusRequest {
@@ -12,6 +13,7 @@ public class ChangeDatabaseUserStatusRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateUserStatusRequest updateUserStatusRequest;
+
     public ChangeDatabaseUserStatusRequest withUpdateUserStatusRequest(org.openapis.openapi.models.shared.UpdateUserStatusRequest updateUserStatusRequest) {
         this.updateUserStatusRequest = updateUserStatusRequest;
         return this;
@@ -22,6 +24,7 @@ public class ChangeDatabaseUserStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
     public String databaseNamePathParameter;
+
     public ChangeDatabaseUserStatusRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
         this.databaseNamePathParameter = databaseNamePathParameter;
         return this;
@@ -32,6 +35,7 @@ public class ChangeDatabaseUserStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
     public String databaseNameQueryParameter;
+
     public ChangeDatabaseUserStatusRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
         this.databaseNameQueryParameter = databaseNameQueryParameter;
         return this;
@@ -42,6 +46,7 @@ public class ChangeDatabaseUserStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userName")
     public String userNamePathParameter;
+
     public ChangeDatabaseUserStatusRequest withUserNamePathParameter(String userNamePathParameter) {
         this.userNamePathParameter = userNamePathParameter;
         return this;
@@ -52,9 +57,16 @@ public class ChangeDatabaseUserStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name")
     public String userNameQueryParameter;
+
     public ChangeDatabaseUserStatusRequest withUserNameQueryParameter(String userNameQueryParameter) {
         this.userNameQueryParameter = userNameQueryParameter;
         return this;
     }
     
+    public ChangeDatabaseUserStatusRequest(@JsonProperty("databaseNamePathParameter") String databaseNamePathParameter, @JsonProperty("database_nameQueryParameter") String databaseNameQueryParameter, @JsonProperty("userNamePathParameter") String userNamePathParameter, @JsonProperty("user_nameQueryParameter") String userNameQueryParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
+        this.userNamePathParameter = userNamePathParameter;
+        this.userNameQueryParameter = userNameQueryParameter;
+  }
 }

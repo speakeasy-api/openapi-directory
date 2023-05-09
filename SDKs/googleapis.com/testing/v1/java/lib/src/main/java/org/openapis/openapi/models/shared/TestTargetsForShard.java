@@ -18,9 +18,11 @@ public class TestTargetsForShard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTargets")
     public String[] testTargets;
+
     public TestTargetsForShard withTestTargets(String[] testTargets) {
         this.testTargets = testTargets;
         return this;
     }
     
+    public TestTargetsForShard(){}
 }

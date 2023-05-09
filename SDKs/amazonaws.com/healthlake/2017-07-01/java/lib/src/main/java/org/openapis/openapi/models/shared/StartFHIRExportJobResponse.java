@@ -15,6 +15,7 @@ public class StartFHIRExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public StartFHIRExportJobResponse withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -22,6 +23,7 @@ public class StartFHIRExportJobResponse {
     
     @JsonProperty("JobId")
     public String jobId;
+
     public StartFHIRExportJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -29,9 +31,14 @@ public class StartFHIRExportJobResponse {
     
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StartFHIRExportJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StartFHIRExportJobResponse(@JsonProperty("JobId") String jobId, @JsonProperty("JobStatus") JobStatusEnum jobStatus) {
+        this.jobId = jobId;
+        this.jobStatus = jobStatus;
+  }
 }

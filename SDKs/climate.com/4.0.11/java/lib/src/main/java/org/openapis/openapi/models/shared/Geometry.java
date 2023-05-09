@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Geometry {
     @JsonProperty("coordinates")
     public String[] coordinates;
+
     public Geometry withCoordinates(String[] coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -19,9 +20,14 @@ public class Geometry {
     
     @JsonProperty("type")
     public GeometryTypeEnum type;
+
     public Geometry withType(GeometryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Geometry(@JsonProperty("coordinates") String[] coordinates, @JsonProperty("type") GeometryTypeEnum type) {
+        this.coordinates = coordinates;
+        this.type = type;
+  }
 }

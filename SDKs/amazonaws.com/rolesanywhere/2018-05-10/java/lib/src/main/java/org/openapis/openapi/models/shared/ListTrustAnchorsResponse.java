@@ -15,6 +15,7 @@ public class ListTrustAnchorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTrustAnchorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTrustAnchorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustAnchors")
     public TrustAnchorDetail[] trustAnchors;
+
     public ListTrustAnchorsResponse withTrustAnchors(TrustAnchorDetail[] trustAnchors) {
         this.trustAnchors = trustAnchors;
         return this;
     }
     
+    public ListTrustAnchorsResponse(){}
 }

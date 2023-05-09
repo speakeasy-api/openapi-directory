@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCalculationExecutionResponse {
     
     public String contentType;
+
     public GetCalculationExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCalculationExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCalculationExecutionResponse getCalculationExecutionResponse;
+
     public GetCalculationExecutionResponse withGetCalculationExecutionResponse(org.openapis.openapi.models.shared.GetCalculationExecutionResponse getCalculationExecutionResponse) {
         this.getCalculationExecutionResponse = getCalculationExecutionResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCalculationExecutionResponse {
      */
     
     public Object internalServerException;
+
     public GetCalculationExecutionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetCalculationExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public GetCalculationExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetCalculationExecutionResponse {
     
     
     public Integer statusCode;
+
     public GetCalculationExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCalculationExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCalculationExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetCalculationExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCalculationExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetCalculationExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

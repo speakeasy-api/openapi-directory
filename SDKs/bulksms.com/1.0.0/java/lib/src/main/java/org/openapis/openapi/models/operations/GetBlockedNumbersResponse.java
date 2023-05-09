@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBlockedNumbersResponse {
@@ -12,6 +13,7 @@ public class GetBlockedNumbersResponse {
      */
     
     public org.openapis.openapi.models.shared.BlockedNumber blockedNumber;
+
     public GetBlockedNumbersResponse withBlockedNumber(org.openapis.openapi.models.shared.BlockedNumber blockedNumber) {
         this.blockedNumber = blockedNumber;
         return this;
@@ -19,6 +21,7 @@ public class GetBlockedNumbersResponse {
     
     
     public String contentType;
+
     public GetBlockedNumbersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetBlockedNumbersResponse {
     
     
     public Integer statusCode;
+
     public GetBlockedNumbersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetBlockedNumbersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBlockedNumbersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBlockedNumbersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

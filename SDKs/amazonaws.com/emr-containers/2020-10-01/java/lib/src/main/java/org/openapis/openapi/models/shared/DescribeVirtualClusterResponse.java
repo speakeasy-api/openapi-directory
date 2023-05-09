@@ -15,9 +15,11 @@ public class DescribeVirtualClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualCluster")
     public VirtualCluster virtualCluster;
+
     public DescribeVirtualClusterResponse withVirtualCluster(VirtualCluster virtualCluster) {
         this.virtualCluster = virtualCluster;
         return this;
     }
     
+    public DescribeVirtualClusterResponse(){}
 }

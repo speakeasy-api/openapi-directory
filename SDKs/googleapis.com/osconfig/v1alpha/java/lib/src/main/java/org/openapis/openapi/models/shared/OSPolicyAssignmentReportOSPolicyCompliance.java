@@ -18,6 +18,7 @@ public class OSPolicyAssignmentReportOSPolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceState")
     public OSPolicyAssignmentReportOSPolicyComplianceComplianceStateEnum complianceState;
+
     public OSPolicyAssignmentReportOSPolicyCompliance withComplianceState(OSPolicyAssignmentReportOSPolicyComplianceComplianceStateEnum complianceState) {
         this.complianceState = complianceState;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyAssignmentReportOSPolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceStateReason")
     public String complianceStateReason;
+
     public OSPolicyAssignmentReportOSPolicyCompliance withComplianceStateReason(String complianceStateReason) {
         this.complianceStateReason = complianceStateReason;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyAssignmentReportOSPolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyId")
     public String osPolicyId;
+
     public OSPolicyAssignmentReportOSPolicyCompliance withOsPolicyId(String osPolicyId) {
         this.osPolicyId = osPolicyId;
         return this;
@@ -51,9 +54,11 @@ public class OSPolicyAssignmentReportOSPolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyResourceCompliances")
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance[] osPolicyResourceCompliances;
+
     public OSPolicyAssignmentReportOSPolicyCompliance withOsPolicyResourceCompliances(OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance[] osPolicyResourceCompliances) {
         this.osPolicyResourceCompliances = osPolicyResourceCompliances;
         return this;
     }
     
+    public OSPolicyAssignmentReportOSPolicyCompliance(){}
 }

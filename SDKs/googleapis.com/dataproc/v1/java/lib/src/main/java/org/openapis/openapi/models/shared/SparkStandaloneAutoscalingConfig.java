@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class SparkStandaloneAutoscalingConfig {
     /**
-     * Required. Timeout for Spark graceful decommissioning of spark workers. Specifies the duration to wait for spark worker to complete spark decomissioning tasks before forcefully removing workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
+     * Required. Timeout for Spark graceful decommissioning of spark workers. Specifies the duration to wait for spark worker to complete spark decommissioning tasks before forcefully removing workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gracefulDecommissionTimeout")
     public String gracefulDecommissionTimeout;
+
     public SparkStandaloneAutoscalingConfig withGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
         this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
         return this;
@@ -29,6 +30,7 @@ public class SparkStandaloneAutoscalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleDownFactor")
     public Double scaleDownFactor;
+
     public SparkStandaloneAutoscalingConfig withScaleDownFactor(Double scaleDownFactor) {
         this.scaleDownFactor = scaleDownFactor;
         return this;
@@ -40,6 +42,7 @@ public class SparkStandaloneAutoscalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleDownMinWorkerFraction")
     public Double scaleDownMinWorkerFraction;
+
     public SparkStandaloneAutoscalingConfig withScaleDownMinWorkerFraction(Double scaleDownMinWorkerFraction) {
         this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
         return this;
@@ -51,6 +54,7 @@ public class SparkStandaloneAutoscalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleUpFactor")
     public Double scaleUpFactor;
+
     public SparkStandaloneAutoscalingConfig withScaleUpFactor(Double scaleUpFactor) {
         this.scaleUpFactor = scaleUpFactor;
         return this;
@@ -62,9 +66,11 @@ public class SparkStandaloneAutoscalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleUpMinWorkerFraction")
     public Double scaleUpMinWorkerFraction;
+
     public SparkStandaloneAutoscalingConfig withScaleUpMinWorkerFraction(Double scaleUpMinWorkerFraction) {
         this.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
         return this;
     }
     
+    public SparkStandaloneAutoscalingConfig(){}
 }

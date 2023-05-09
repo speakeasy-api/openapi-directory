@@ -15,9 +15,11 @@ public class GetMapGlyphsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blob")
     public String blob;
+
     public GetMapGlyphsResponse withBlob(String blob) {
         this.blob = blob;
         return this;
     }
     
+    public GetMapGlyphsResponse(){}
 }

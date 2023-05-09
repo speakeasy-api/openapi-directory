@@ -17,10 +17,24 @@ public class PaymentWrite {
     /**
      * Registered creditor account
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditor_account")
     public String creditorAccount;
+
     public PaymentWrite withCreditorAccount(String creditorAccount) {
         this.creditorAccount = creditorAccount;
+        return this;
+    }
+    
+    /**
+     * Creditor account
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creditor_object")
+    public CreditorAccountWrite creditorObject;
+
+    public PaymentWrite withCreditorObject(CreditorAccountWrite creditorObject) {
+        this.creditorObject = creditorObject;
         return this;
     }
     
@@ -30,6 +44,7 @@ public class PaymentWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_payment_id")
     public String customPaymentId;
+
     public PaymentWrite withCustomPaymentId(String customPaymentId) {
         this.customPaymentId = customPaymentId;
         return this;
@@ -41,6 +56,7 @@ public class PaymentWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PaymentWrite withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +67,7 @@ public class PaymentWrite {
      */
     @JsonProperty("instructed_amount")
     public InstructedAmount instructedAmount;
+
     public PaymentWrite withInstructedAmount(InstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -62,6 +79,7 @@ public class PaymentWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public PaymentWrite withLink(String link) {
         this.link = link;
         return this;
@@ -73,6 +91,7 @@ public class PaymentWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public PaymentWrite withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -80,10 +99,22 @@ public class PaymentWrite {
     
     /**
      * Payment product
+     * 
+     * * `T2P` - target-2-payments
+     * * `SCT` - sepa-credit-transfers
+     * * `ISCT` - instant-sepa-credit-transfer
+     * * `CBCT` - cross-border-credit-transfers
+     * * `BACS` - Back Payment Scheme
+     * * `CHAPS` - CHAPS Payment Scheme
+     * * `FPS` - Faster Payment Scheme
+     * * `SWIFT` - Swift Payment Service
+     * * `BT` - Balance Transfer
+     * * `MT` - Money Transfer
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_product")
     public PaymentWritePaymentProductEnum paymentProduct;
+
     public PaymentWrite withPaymentProduct(PaymentWritePaymentProductEnum paymentProduct) {
         this.paymentProduct = paymentProduct;
         return this;
@@ -91,10 +122,29 @@ public class PaymentWrite {
     
     /**
      * Payment end to end identification
+     * 
+     * * `INIT` - Initiated. Payment has been initiated.
+     * * `ERRE` - ExecutionError. We experienced error on payment execution.
+     * * `ERRS` - StatusError. We experienced error retrieving payment status. Try again.
+     * * `ACCC` - AcceptedSettlementCompleted. Settlement on the creditor's account has been completed
+     * * `ACCP` - AcceptedCustomerProfile. Preceding check of technical validation was successful. Customer profile check was successful
+     * * `ACSC` - AcceptedSettlementCompleted. Settlement on the debtor\u2019s account has been completed
+     * * `ACSP` - AcceptedSettlementInProcess. All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution
+     * * `ACTC` - AcceptedTechnicalValidation. Authentication and syntactical and semantical validation are successful
+     * * `ACWC` - AcceptedWithChange. Instruction is accepted but a change will be made, such as date or remittance not sent
+     * * `ACWP` - AcceptedWithoutPosting. Payment instruction included in the credit transfer is accepted without being posted to the creditor customer\u2019s account
+     * * `RCVD` - Received. Payment initiation has been received by the receiving agent
+     * * `PDNG` - Pending. Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed
+     * * `RJCT` - Rejected. Payment initiation or individual transaction included in the payment initiation has been rejected.
+     * * `CANC` - Cancelled. Payment initiation has been cancelled before execution
+     * * `ACFC` - AcceptedFundsChecked. Pre-ceeding check of technical validation and customer profile was successful and an automatic funds check was positive
+     * * `PATC` - PartiallyAcceptedTechnicalCorrect. The payment initiation needs multiple authentications, where some but not yet all have been performed
+     * * `PART` - PartiallyAccepted. A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_status")
     public PaymentWritePaymentStatusEnum paymentStatus;
+
     public PaymentWrite withPaymentStatus(PaymentWritePaymentStatusEnum paymentStatus) {
         this.paymentStatus = paymentStatus;
         return this;
@@ -102,10 +152,15 @@ public class PaymentWrite {
     
     /**
      * Payment Type
+     * 
+     * * `single-payment` - payment
+     * * `bulk-payment` - bulk-payments
+     * * `periodic-payment` - periodic-payments
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_type")
     public PaymentWritePaymentTypeEnum paymentType;
+
     public PaymentWrite withPaymentType(PaymentWritePaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -117,6 +172,7 @@ public class PaymentWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodic_payment")
     public PeriodicPayment periodicPayment;
+
     public PaymentWrite withPeriodicPayment(PeriodicPayment periodicPayment) {
         this.periodicPayment = periodicPayment;
         return this;
@@ -127,6 +183,7 @@ public class PaymentWrite {
      */
     @JsonProperty("redirect")
     public String redirect;
+
     public PaymentWrite withRedirect(String redirect) {
         this.redirect = redirect;
         return this;
@@ -139,9 +196,26 @@ public class PaymentWrite {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("requested_execution_date")
     public LocalDate requestedExecutionDate;
+
     public PaymentWrite withRequestedExecutionDate(LocalDate requestedExecutionDate) {
         this.requestedExecutionDate = requestedExecutionDate;
         return this;
     }
     
+    /**
+     * Indicates whether payment should be submitted separately
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("submit_payment")
+    public Boolean submitPayment;
+
+    public PaymentWrite withSubmitPayment(Boolean submitPayment) {
+        this.submitPayment = submitPayment;
+        return this;
+    }
+    
+    public PaymentWrite(@JsonProperty("instructed_amount") InstructedAmount instructedAmount, @JsonProperty("redirect") String redirect) {
+        this.instructedAmount = instructedAmount;
+        this.redirect = redirect;
+  }
 }

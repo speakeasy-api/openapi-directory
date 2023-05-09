@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDocumentClassificationJobsResponse {
     
     public String contentType;
+
     public ListDocumentClassificationJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDocumentClassificationJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListDocumentClassificationJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListDocumentClassificationJobsResponse {
      */
     
     public Object invalidFilterException;
+
     public ListDocumentClassificationJobsResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListDocumentClassificationJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDocumentClassificationJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListDocumentClassificationJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDocumentClassificationJobsResponse listDocumentClassificationJobsResponse;
+
     public ListDocumentClassificationJobsResponse withListDocumentClassificationJobsResponse(org.openapis.openapi.models.shared.ListDocumentClassificationJobsResponse listDocumentClassificationJobsResponse) {
         this.listDocumentClassificationJobsResponse = listDocumentClassificationJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListDocumentClassificationJobsResponse {
     
     
     public Integer statusCode;
+
     public ListDocumentClassificationJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDocumentClassificationJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDocumentClassificationJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListDocumentClassificationJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDocumentClassificationJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListDocumentClassificationJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

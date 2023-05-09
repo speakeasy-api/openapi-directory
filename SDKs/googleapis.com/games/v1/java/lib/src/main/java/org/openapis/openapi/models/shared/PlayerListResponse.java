@@ -18,6 +18,7 @@ public class PlayerListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Player[] items;
+
     public PlayerListResponse withItems(Player[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class PlayerListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlayerListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class PlayerListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public PlayerListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public PlayerListResponse(){}
 }

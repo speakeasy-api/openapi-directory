@@ -51,10 +51,8 @@ public class Indexes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateIndexWithPrimaryKeyResponse res = new org.openapis.openapi.models.operations.CreateIndexWithPrimaryKeyResponse() {{
+        org.openapis.openapi.models.operations.CreateIndexWithPrimaryKeyResponse res = new org.openapis.openapi.models.operations.CreateIndexWithPrimaryKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -83,10 +81,8 @@ public class Indexes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAnIndexResponse res = new org.openapis.openapi.models.operations.DeleteAnIndexResponse() {{
+        org.openapis.openapi.models.operations.DeleteAnIndexResponse res = new org.openapis.openapi.models.operations.DeleteAnIndexResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,10 +118,8 @@ public class Indexes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndexesResponse res = new org.openapis.openapi.models.operations.GetIndexesResponse() {{
+        org.openapis.openapi.models.operations.GetIndexesResponse res = new org.openapis.openapi.models.operations.GetIndexesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,10 +148,8 @@ public class Indexes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShowIndexResponse res = new org.openapis.openapi.models.operations.ShowIndexResponse() {{
+        org.openapis.openapi.models.operations.ShowIndexResponse res = new org.openapis.openapi.models.operations.ShowIndexResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,10 +181,8 @@ public class Indexes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SwapIndexesResponse res = new org.openapis.openapi.models.operations.SwapIndexesResponse() {{
+        org.openapis.openapi.models.operations.SwapIndexesResponse res = new org.openapis.openapi.models.operations.SwapIndexesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,13 +192,13 @@ public class Indexes {
     }
 
     /**
-     * Udpate index 
+     * Update index
      * Can only change the document identifier if it has not already been added before.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UdpateIndexResponse udpateIndex(org.openapis.openapi.models.operations.UdpateIndexRequestBody request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateIndexResponse updateIndex(org.openapis.openapi.models.operations.UpdateIndexRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books");
         
@@ -224,10 +214,8 @@ public class Indexes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UdpateIndexResponse res = new org.openapis.openapi.models.operations.UdpateIndexResponse() {{
+        org.openapis.openapi.models.operations.UpdateIndexResponse res = new org.openapis.openapi.models.operations.UpdateIndexResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

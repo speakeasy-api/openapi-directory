@@ -15,6 +15,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public String checkout;
+
     public NodesFilesReadFileAttributes withCheckout(String checkout) {
         this.checkout = checkout;
         return this;
@@ -25,6 +26,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public NodesFilesReadFileAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -35,6 +37,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public Long currentVersion;
+
     public NodesFilesReadFileAttributes withCurrentVersion(Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -45,6 +48,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public NodesFilesReadFileAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -55,6 +59,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public NodesFilesReadFileAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -65,6 +70,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public Boolean deleteAllowed;
+
     public NodesFilesReadFileAttributes withDeleteAllowed(Boolean deleteAllowed) {
         this.deleteAllowed = deleteAllowed;
         return this;
@@ -75,6 +81,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public java.util.Map<String, Object> extra;
+
     public NodesFilesReadFileAttributes withExtra(java.util.Map<String, Object> extra) {
         this.extra = extra;
         return this;
@@ -85,6 +92,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public String guid;
+
     public NodesFilesReadFileAttributes withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -95,6 +103,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public String kind;
+
     public NodesFilesReadFileAttributes withKind(String kind) {
         this.kind = kind;
         return this;
@@ -105,6 +114,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public OffsetDateTime lastTouched;
+
     public NodesFilesReadFileAttributes withLastTouched(OffsetDateTime lastTouched) {
         this.lastTouched = lastTouched;
         return this;
@@ -115,6 +125,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public String materializedPath;
+
     public NodesFilesReadFileAttributes withMaterializedPath(String materializedPath) {
         this.materializedPath = materializedPath;
         return this;
@@ -125,6 +136,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public String name;
+
     public NodesFilesReadFileAttributes withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +147,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public String path;
+
     public NodesFilesReadFileAttributes withPath(String path) {
         this.path = path;
         return this;
@@ -145,6 +158,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public String provider;
+
     public NodesFilesReadFileAttributes withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -155,6 +169,7 @@ public class NodesFilesReadFileAttributes {
      */
     
     public Long size;
+
     public NodesFilesReadFileAttributes withSize(Long size) {
         this.size = size;
         return this;
@@ -165,9 +180,11 @@ public class NodesFilesReadFileAttributes {
      */
     
     public String[] tags;
+
     public NodesFilesReadFileAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public NodesFilesReadFileAttributes(){}
 }

@@ -15,9 +15,11 @@ public class CreateLongTermPricingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongTermPricingId")
     public String longTermPricingId;
+
     public CreateLongTermPricingResult withLongTermPricingId(String longTermPricingId) {
         this.longTermPricingId = longTermPricingId;
         return this;
     }
     
+    public CreateLongTermPricingResult(){}
 }

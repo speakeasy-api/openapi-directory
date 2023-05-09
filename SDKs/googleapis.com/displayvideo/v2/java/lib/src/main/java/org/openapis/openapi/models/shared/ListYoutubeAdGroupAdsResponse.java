@@ -18,6 +18,7 @@ public class ListYoutubeAdGroupAdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListYoutubeAdGroupAdsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListYoutubeAdGroupAdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeAdGroupAds")
     public YoutubeAdGroupAd[] youtubeAdGroupAds;
+
     public ListYoutubeAdGroupAdsResponse withYoutubeAdGroupAds(YoutubeAdGroupAd[] youtubeAdGroupAds) {
         this.youtubeAdGroupAds = youtubeAdGroupAds;
         return this;
     }
     
+    public ListYoutubeAdGroupAdsResponse(){}
 }

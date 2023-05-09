@@ -12,6 +12,7 @@ public class SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Double failed;
+
     public SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions withFailed(Double failed) {
         this.failed = failed;
         return this;
@@ -20,9 +21,11 @@ public class SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions(){}
 }

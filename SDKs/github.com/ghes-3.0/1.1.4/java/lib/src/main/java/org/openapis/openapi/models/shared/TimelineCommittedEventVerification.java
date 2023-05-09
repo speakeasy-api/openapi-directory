@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimelineCommittedEventVerification {
     @JsonProperty("payload")
     public String payload;
+
     public TimelineCommittedEventVerification withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -16,6 +17,7 @@ public class TimelineCommittedEventVerification {
     
     @JsonProperty("reason")
     public String reason;
+
     public TimelineCommittedEventVerification withReason(String reason) {
         this.reason = reason;
         return this;
@@ -23,6 +25,7 @@ public class TimelineCommittedEventVerification {
     
     @JsonProperty("signature")
     public String signature;
+
     public TimelineCommittedEventVerification withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -30,9 +33,16 @@ public class TimelineCommittedEventVerification {
     
     @JsonProperty("verified")
     public Boolean verified;
+
     public TimelineCommittedEventVerification withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public TimelineCommittedEventVerification(@JsonProperty("payload") String payload, @JsonProperty("reason") String reason, @JsonProperty("signature") String signature, @JsonProperty("verified") Boolean verified) {
+        this.payload = payload;
+        this.reason = reason;
+        this.signature = signature;
+        this.verified = verified;
+  }
 }

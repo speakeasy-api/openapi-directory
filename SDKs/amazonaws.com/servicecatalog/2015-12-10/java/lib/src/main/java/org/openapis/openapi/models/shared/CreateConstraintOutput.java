@@ -15,6 +15,7 @@ public class CreateConstraintOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintDetail")
     public ConstraintDetail constraintDetail;
+
     public CreateConstraintOutput withConstraintDetail(ConstraintDetail constraintDetail) {
         this.constraintDetail = constraintDetail;
         return this;
@@ -23,6 +24,7 @@ public class CreateConstraintOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintParameters")
     public String constraintParameters;
+
     public CreateConstraintOutput withConstraintParameters(String constraintParameters) {
         this.constraintParameters = constraintParameters;
         return this;
@@ -31,9 +33,11 @@ public class CreateConstraintOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public CreateConstraintOutput withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateConstraintOutput(){}
 }

@@ -22,6 +22,7 @@ public class PlayerSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public PlayerSession withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public PlayerSession withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -38,6 +40,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public PlayerSession withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -46,6 +49,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public PlayerSession withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -54,6 +58,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionId")
     public String gameSessionId;
+
     public PlayerSession withGameSessionId(String gameSessionId) {
         this.gameSessionId = gameSessionId;
         return this;
@@ -62,6 +67,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public PlayerSession withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -70,6 +76,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerData")
     public String playerData;
+
     public PlayerSession withPlayerData(String playerData) {
         this.playerData = playerData;
         return this;
@@ -78,6 +85,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public String playerId;
+
     public PlayerSession withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
@@ -86,6 +94,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerSessionId")
     public String playerSessionId;
+
     public PlayerSession withPlayerSessionId(String playerSessionId) {
         this.playerSessionId = playerSessionId;
         return this;
@@ -94,6 +103,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public PlayerSession withPort(Long port) {
         this.port = port;
         return this;
@@ -102,6 +112,7 @@ public class PlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public PlayerSessionStatusEnum status;
+
     public PlayerSession withStatus(PlayerSessionStatusEnum status) {
         this.status = status;
         return this;
@@ -112,9 +123,11 @@ public class PlayerSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TerminationTime")
     public OffsetDateTime terminationTime;
+
     public PlayerSession withTerminationTime(OffsetDateTime terminationTime) {
         this.terminationTime = terminationTime;
         return this;
     }
     
+    public PlayerSession(){}
 }

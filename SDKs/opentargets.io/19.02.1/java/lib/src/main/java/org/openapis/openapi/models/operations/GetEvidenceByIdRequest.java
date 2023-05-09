@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEvidenceByIdRequest {
@@ -12,9 +13,13 @@ public class GetEvidenceByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetEvidenceByIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetEvidenceByIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

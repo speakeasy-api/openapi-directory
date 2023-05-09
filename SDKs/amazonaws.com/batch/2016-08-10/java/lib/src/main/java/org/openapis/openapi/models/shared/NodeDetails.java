@@ -15,6 +15,7 @@ public class NodeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMainNode")
     public Boolean isMainNode;
+
     public NodeDetails withIsMainNode(Boolean isMainNode) {
         this.isMainNode = isMainNode;
         return this;
@@ -23,9 +24,11 @@ public class NodeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeIndex")
     public Long nodeIndex;
+
     public NodeDetails withNodeIndex(Long nodeIndex) {
         this.nodeIndex = nodeIndex;
         return this;
     }
     
+    public NodeDetails(){}
 }

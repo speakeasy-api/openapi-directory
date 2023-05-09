@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourcesInProtectionGroupResponse {
     
     public String contentType;
+
     public ListResourcesInProtectionGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourcesInProtectionGroupResponse {
      */
     
     public Object internalErrorException;
+
     public ListResourcesInProtectionGroupResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourcesInProtectionGroupResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListResourcesInProtectionGroupResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourcesInProtectionGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourcesInProtectionGroupResponse listResourcesInProtectionGroupResponse;
+
     public ListResourcesInProtectionGroupResponse withListResourcesInProtectionGroupResponse(org.openapis.openapi.models.shared.ListResourcesInProtectionGroupResponse listResourcesInProtectionGroupResponse) {
         this.listResourcesInProtectionGroupResponse = listResourcesInProtectionGroupResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListResourcesInProtectionGroupResponse {
     
     
     public Integer statusCode;
+
     public ListResourcesInProtectionGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListResourcesInProtectionGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourcesInProtectionGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListResourcesInProtectionGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListResourcesInProtectionGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListResourcesInProtectionGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

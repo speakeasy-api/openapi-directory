@@ -15,9 +15,11 @@ public class VPCSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public VPCSettings withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public VPCSettings(){}
 }

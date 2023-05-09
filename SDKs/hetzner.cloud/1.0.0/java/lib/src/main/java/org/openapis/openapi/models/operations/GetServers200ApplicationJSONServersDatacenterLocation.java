@@ -12,6 +12,7 @@ public class GetServers200ApplicationJSONServersDatacenterLocation {
      */
     @JsonProperty("city")
     public String city;
+
     public GetServers200ApplicationJSONServersDatacenterLocation withCity(String city) {
         this.city = city;
         return this;
@@ -22,6 +23,7 @@ public class GetServers200ApplicationJSONServersDatacenterLocation {
      */
     @JsonProperty("country")
     public String country;
+
     public GetServers200ApplicationJSONServersDatacenterLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -32,6 +34,7 @@ public class GetServers200ApplicationJSONServersDatacenterLocation {
      */
     @JsonProperty("description")
     public String description;
+
     public GetServers200ApplicationJSONServersDatacenterLocation withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class GetServers200ApplicationJSONServersDatacenterLocation {
      */
     @JsonProperty("id")
     public Double id;
+
     public GetServers200ApplicationJSONServersDatacenterLocation withId(Double id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class GetServers200ApplicationJSONServersDatacenterLocation {
      */
     @JsonProperty("latitude")
     public Double latitude;
+
     public GetServers200ApplicationJSONServersDatacenterLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -62,6 +67,7 @@ public class GetServers200ApplicationJSONServersDatacenterLocation {
      */
     @JsonProperty("longitude")
     public Double longitude;
+
     public GetServers200ApplicationJSONServersDatacenterLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -72,6 +78,7 @@ public class GetServers200ApplicationJSONServersDatacenterLocation {
      */
     @JsonProperty("name")
     public String name;
+
     public GetServers200ApplicationJSONServersDatacenterLocation withName(String name) {
         this.name = name;
         return this;
@@ -82,9 +89,20 @@ public class GetServers200ApplicationJSONServersDatacenterLocation {
      */
     @JsonProperty("network_zone")
     public String networkZone;
+
     public GetServers200ApplicationJSONServersDatacenterLocation withNetworkZone(String networkZone) {
         this.networkZone = networkZone;
         return this;
     }
     
+    public GetServers200ApplicationJSONServersDatacenterLocation(@JsonProperty("city") String city, @JsonProperty("country") String country, @JsonProperty("description") String description, @JsonProperty("id") Double id, @JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude, @JsonProperty("name") String name, @JsonProperty("network_zone") String networkZone) {
+        this.city = city;
+        this.country = country;
+        this.description = description;
+        this.id = id;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.name = name;
+        this.networkZone = networkZone;
+  }
 }

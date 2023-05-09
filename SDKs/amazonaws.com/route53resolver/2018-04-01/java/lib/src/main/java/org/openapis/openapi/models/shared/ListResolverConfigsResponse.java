@@ -15,6 +15,7 @@ public class ListResolverConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResolverConfigsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResolverConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverConfigs")
     public ResolverConfig[] resolverConfigs;
+
     public ListResolverConfigsResponse withResolverConfigs(ResolverConfig[] resolverConfigs) {
         this.resolverConfigs = resolverConfigs;
         return this;
     }
     
+    public ListResolverConfigsResponse(){}
 }

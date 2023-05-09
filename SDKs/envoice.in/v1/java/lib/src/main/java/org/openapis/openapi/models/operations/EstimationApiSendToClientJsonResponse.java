@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EstimationApiSendToClientJsonResponse {
     
     public byte[] body;
+
     public EstimationApiSendToClientJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class EstimationApiSendToClientJsonResponse {
     
     
     public String contentType;
+
     public EstimationApiSendToClientJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class EstimationApiSendToClientJsonResponse {
      */
     
     public Integer estimationApiSendToClientJSON200ApplicationJSONInt32Integer;
+
     public EstimationApiSendToClientJsonResponse withEstimationApiSendToClientJSON200ApplicationJSONInt32Integer(Integer estimationApiSendToClientJSON200ApplicationJSONInt32Integer) {
         this.estimationApiSendToClientJSON200ApplicationJSONInt32Integer = estimationApiSendToClientJSON200ApplicationJSONInt32Integer;
         return this;
@@ -36,6 +40,7 @@ public class EstimationApiSendToClientJsonResponse {
      */
     
     public Integer estimationApiSendToClientJSON200TextJSONInt32Integer;
+
     public EstimationApiSendToClientJsonResponse withEstimationApiSendToClientJSON200TextJSONInt32Integer(Integer estimationApiSendToClientJSON200TextJSONInt32Integer) {
         this.estimationApiSendToClientJSON200TextJSONInt32Integer = estimationApiSendToClientJSON200TextJSONInt32Integer;
         return this;
@@ -43,6 +48,7 @@ public class EstimationApiSendToClientJsonResponse {
     
     
     public Integer statusCode;
+
     public EstimationApiSendToClientJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class EstimationApiSendToClientJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EstimationApiSendToClientJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EstimationApiSendToClientJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

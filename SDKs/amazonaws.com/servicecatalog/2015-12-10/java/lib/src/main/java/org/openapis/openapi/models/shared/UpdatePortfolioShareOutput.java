@@ -15,6 +15,7 @@ public class UpdatePortfolioShareOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioShareToken")
     public String portfolioShareToken;
+
     public UpdatePortfolioShareOutput withPortfolioShareToken(String portfolioShareToken) {
         this.portfolioShareToken = portfolioShareToken;
         return this;
@@ -23,9 +24,11 @@ public class UpdatePortfolioShareOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ShareStatusEnum status;
+
     public UpdatePortfolioShareOutput withStatus(ShareStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdatePortfolioShareOutput(){}
 }

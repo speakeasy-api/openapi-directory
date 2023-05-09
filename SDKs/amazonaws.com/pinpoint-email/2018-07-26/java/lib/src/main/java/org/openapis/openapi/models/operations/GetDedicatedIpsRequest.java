@@ -12,6 +12,7 @@ public class GetDedicatedIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GetDedicatedIpsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,6 +23,7 @@ public class GetDedicatedIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public Long pageSize;
+
     public GetDedicatedIpsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,6 +34,7 @@ public class GetDedicatedIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PoolName")
     public String poolName;
+
     public GetDedicatedIpsRequest withPoolName(String poolName) {
         this.poolName = poolName;
         return this;
@@ -39,6 +42,7 @@ public class GetDedicatedIpsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetDedicatedIpsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +50,7 @@ public class GetDedicatedIpsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetDedicatedIpsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +58,7 @@ public class GetDedicatedIpsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetDedicatedIpsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +66,7 @@ public class GetDedicatedIpsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetDedicatedIpsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +74,7 @@ public class GetDedicatedIpsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetDedicatedIpsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +82,7 @@ public class GetDedicatedIpsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetDedicatedIpsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +90,11 @@ public class GetDedicatedIpsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetDedicatedIpsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GetDedicatedIpsRequest(){}
 }

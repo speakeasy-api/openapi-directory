@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDeliverabilityTestReportResponse {
     @JsonProperty("DeliverabilityTestStatus")
     public DeliverabilityTestStatusEnum deliverabilityTestStatus;
+
     public CreateDeliverabilityTestReportResponse withDeliverabilityTestStatus(DeliverabilityTestStatusEnum deliverabilityTestStatus) {
         this.deliverabilityTestStatus = deliverabilityTestStatus;
         return this;
@@ -19,9 +20,14 @@ public class CreateDeliverabilityTestReportResponse {
     
     @JsonProperty("ReportId")
     public String reportId;
+
     public CreateDeliverabilityTestReportResponse withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public CreateDeliverabilityTestReportResponse(@JsonProperty("DeliverabilityTestStatus") DeliverabilityTestStatusEnum deliverabilityTestStatus, @JsonProperty("ReportId") String reportId) {
+        this.deliverabilityTestStatus = deliverabilityTestStatus;
+        this.reportId = reportId;
+  }
 }

@@ -15,6 +15,7 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public UserIdentity withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -22,6 +23,7 @@ public class UserIdentity {
     
     @JsonProperty("principalId")
     public String principalId;
+
     public UserIdentity withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -30,6 +32,7 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public UserIdentity withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -37,9 +40,14 @@ public class UserIdentity {
     
     @JsonProperty("userType")
     public UserTypeEnum userType;
+
     public UserIdentity withUserType(UserTypeEnum userType) {
         this.userType = userType;
         return this;
     }
     
+    public UserIdentity(@JsonProperty("principalId") String principalId, @JsonProperty("userType") UserTypeEnum userType) {
+        this.principalId = principalId;
+        this.userType = userType;
+  }
 }

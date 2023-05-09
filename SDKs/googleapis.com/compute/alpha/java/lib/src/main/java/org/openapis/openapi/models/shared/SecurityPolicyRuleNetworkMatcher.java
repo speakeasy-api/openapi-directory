@@ -18,6 +18,7 @@ public class SecurityPolicyRuleNetworkMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destIpRanges")
     public String[] destIpRanges;
+
     public SecurityPolicyRuleNetworkMatcher withDestIpRanges(String[] destIpRanges) {
         this.destIpRanges = destIpRanges;
         return this;
@@ -29,6 +30,7 @@ public class SecurityPolicyRuleNetworkMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destPorts")
     public String[] destPorts;
+
     public SecurityPolicyRuleNetworkMatcher withDestPorts(String[] destPorts) {
         this.destPorts = destPorts;
         return this;
@@ -40,6 +42,7 @@ public class SecurityPolicyRuleNetworkMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipProtocols")
     public String[] ipProtocols;
+
     public SecurityPolicyRuleNetworkMatcher withIpProtocols(String[] ipProtocols) {
         this.ipProtocols = ipProtocols;
         return this;
@@ -51,6 +54,7 @@ public class SecurityPolicyRuleNetworkMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcAsns")
     public Long[] srcAsns;
+
     public SecurityPolicyRuleNetworkMatcher withSrcAsns(Long[] srcAsns) {
         this.srcAsns = srcAsns;
         return this;
@@ -62,6 +66,7 @@ public class SecurityPolicyRuleNetworkMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcIpRanges")
     public String[] srcIpRanges;
+
     public SecurityPolicyRuleNetworkMatcher withSrcIpRanges(String[] srcIpRanges) {
         this.srcIpRanges = srcIpRanges;
         return this;
@@ -73,6 +78,7 @@ public class SecurityPolicyRuleNetworkMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcPorts")
     public String[] srcPorts;
+
     public SecurityPolicyRuleNetworkMatcher withSrcPorts(String[] srcPorts) {
         this.srcPorts = srcPorts;
         return this;
@@ -84,6 +90,7 @@ public class SecurityPolicyRuleNetworkMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcRegionCodes")
     public String[] srcRegionCodes;
+
     public SecurityPolicyRuleNetworkMatcher withSrcRegionCodes(String[] srcRegionCodes) {
         this.srcRegionCodes = srcRegionCodes;
         return this;
@@ -95,9 +102,11 @@ public class SecurityPolicyRuleNetworkMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDefinedFields")
     public SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch[] userDefinedFields;
+
     public SecurityPolicyRuleNetworkMatcher withUserDefinedFields(SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch[] userDefinedFields) {
         this.userDefinedFields = userDefinedFields;
         return this;
     }
     
+    public SecurityPolicyRuleNetworkMatcher(){}
 }

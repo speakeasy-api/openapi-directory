@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DrivePermissionsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DrivePermissionsGetSecurityOption1 option1;
+
     public DrivePermissionsGetSecurity withOption1(DrivePermissionsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DrivePermissionsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePermissionsGetSecurityOption2 option2;
+
     public DrivePermissionsGetSecurity withOption2(DrivePermissionsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DrivePermissionsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePermissionsGetSecurityOption3 option3;
+
     public DrivePermissionsGetSecurity withOption3(DrivePermissionsGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class DrivePermissionsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePermissionsGetSecurityOption4 option4;
+
     public DrivePermissionsGetSecurity withOption4(DrivePermissionsGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class DrivePermissionsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePermissionsGetSecurityOption5 option5;
+
     public DrivePermissionsGetSecurity withOption5(DrivePermissionsGetSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class DrivePermissionsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePermissionsGetSecurityOption6 option6;
+
     public DrivePermissionsGetSecurity withOption6(DrivePermissionsGetSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public DrivePermissionsGetSecurity(){}
 }

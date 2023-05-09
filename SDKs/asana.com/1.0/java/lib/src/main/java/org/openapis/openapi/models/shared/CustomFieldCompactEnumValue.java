@@ -28,6 +28,7 @@ public class CustomFieldCompactEnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public CustomFieldCompactEnumValue withColor(String color) {
         this.color = color;
         return this;
@@ -39,6 +40,7 @@ public class CustomFieldCompactEnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CustomFieldCompactEnumValue withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -50,6 +52,7 @@ public class CustomFieldCompactEnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public CustomFieldCompactEnumValue withGid(String gid) {
         this.gid = gid;
         return this;
@@ -61,6 +64,7 @@ public class CustomFieldCompactEnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomFieldCompactEnumValue withName(String name) {
         this.name = name;
         return this;
@@ -72,9 +76,11 @@ public class CustomFieldCompactEnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public CustomFieldCompactEnumValue withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public CustomFieldCompactEnumValue(){}
 }

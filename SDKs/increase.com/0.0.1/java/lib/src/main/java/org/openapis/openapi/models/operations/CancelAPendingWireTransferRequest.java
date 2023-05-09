@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelAPendingWireTransferRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wire_transfer_id")
     public String wireTransferId;
+
     public CancelAPendingWireTransferRequest withWireTransferId(String wireTransferId) {
         this.wireTransferId = wireTransferId;
         return this;
     }
     
+    public CancelAPendingWireTransferRequest(@JsonProperty("wire_transfer_id") String wireTransferId) {
+        this.wireTransferId = wireTransferId;
+  }
 }

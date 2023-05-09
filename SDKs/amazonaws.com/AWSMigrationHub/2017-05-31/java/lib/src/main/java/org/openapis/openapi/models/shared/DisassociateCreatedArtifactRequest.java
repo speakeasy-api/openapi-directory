@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateCreatedArtifactRequest {
     @JsonProperty("CreatedArtifactName")
     public String createdArtifactName;
+
     public DisassociateCreatedArtifactRequest withCreatedArtifactName(String createdArtifactName) {
         this.createdArtifactName = createdArtifactName;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateCreatedArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public DisassociateCreatedArtifactRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateCreatedArtifactRequest {
     
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public DisassociateCreatedArtifactRequest withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -33,9 +36,15 @@ public class DisassociateCreatedArtifactRequest {
     
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public DisassociateCreatedArtifactRequest withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
     }
     
+    public DisassociateCreatedArtifactRequest(@JsonProperty("CreatedArtifactName") String createdArtifactName, @JsonProperty("MigrationTaskName") String migrationTaskName, @JsonProperty("ProgressUpdateStream") String progressUpdateStream) {
+        this.createdArtifactName = createdArtifactName;
+        this.migrationTaskName = migrationTaskName;
+        this.progressUpdateStream = progressUpdateStream;
+  }
 }

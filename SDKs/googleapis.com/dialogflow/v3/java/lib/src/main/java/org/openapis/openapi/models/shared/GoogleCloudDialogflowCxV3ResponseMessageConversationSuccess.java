@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess(){}
 }

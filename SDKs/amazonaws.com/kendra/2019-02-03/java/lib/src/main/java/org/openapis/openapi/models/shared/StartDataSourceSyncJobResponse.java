@@ -15,9 +15,11 @@ public class StartDataSourceSyncJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionId")
     public String executionId;
+
     public StartDataSourceSyncJobResponse withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
     }
     
+    public StartDataSourceSyncJobResponse(){}
 }

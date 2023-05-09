@@ -20,6 +20,7 @@ public class DescribeMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Baseline")
     public Baseline baseline;
+
     public DescribeMonitorResponse withBaseline(Baseline baseline) {
         this.baseline = baseline;
         return this;
@@ -30,6 +31,7 @@ public class DescribeMonitorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeMonitorResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedEvaluationTimeRemainingInMinutes")
     public Long estimatedEvaluationTimeRemainingInMinutes;
+
     public DescribeMonitorResponse withEstimatedEvaluationTimeRemainingInMinutes(Long estimatedEvaluationTimeRemainingInMinutes) {
         this.estimatedEvaluationTimeRemainingInMinutes = estimatedEvaluationTimeRemainingInMinutes;
         return this;
@@ -46,6 +49,7 @@ public class DescribeMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastEvaluationState")
     public String lastEvaluationState;
+
     public DescribeMonitorResponse withLastEvaluationState(String lastEvaluationState) {
         this.lastEvaluationState = lastEvaluationState;
         return this;
@@ -56,6 +60,7 @@ public class DescribeMonitorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastEvaluationTime")
     public OffsetDateTime lastEvaluationTime;
+
     public DescribeMonitorResponse withLastEvaluationTime(OffsetDateTime lastEvaluationTime) {
         this.lastEvaluationTime = lastEvaluationTime;
         return this;
@@ -66,6 +71,7 @@ public class DescribeMonitorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeMonitorResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -74,6 +80,7 @@ public class DescribeMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeMonitorResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -82,6 +89,7 @@ public class DescribeMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public DescribeMonitorResponse withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -90,6 +98,7 @@ public class DescribeMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public DescribeMonitorResponse withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
@@ -98,6 +107,7 @@ public class DescribeMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DescribeMonitorResponse withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -106,9 +116,11 @@ public class DescribeMonitorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeMonitorResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DescribeMonitorResponse(){}
 }

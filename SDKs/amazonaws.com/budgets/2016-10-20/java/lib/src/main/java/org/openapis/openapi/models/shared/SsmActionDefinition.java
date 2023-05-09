@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SsmActionDefinition {
     @JsonProperty("ActionSubType")
     public ActionSubTypeEnum actionSubType;
+
     public SsmActionDefinition withActionSubType(ActionSubTypeEnum actionSubType) {
         this.actionSubType = actionSubType;
         return this;
@@ -19,6 +20,7 @@ public class SsmActionDefinition {
     
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public SsmActionDefinition withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -26,9 +28,15 @@ public class SsmActionDefinition {
     
     @JsonProperty("Region")
     public String region;
+
     public SsmActionDefinition withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public SsmActionDefinition(@JsonProperty("ActionSubType") ActionSubTypeEnum actionSubType, @JsonProperty("InstanceIds") String[] instanceIds, @JsonProperty("Region") String region) {
+        this.actionSubType = actionSubType;
+        this.instanceIds = instanceIds;
+        this.region = region;
+  }
 }

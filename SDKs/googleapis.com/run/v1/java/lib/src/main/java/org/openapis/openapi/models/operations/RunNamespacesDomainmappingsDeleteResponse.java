@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RunNamespacesDomainmappingsDeleteResponse {
     
     public String contentType;
+
     public RunNamespacesDomainmappingsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RunNamespacesDomainmappingsDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.Status status;
+
     public RunNamespacesDomainmappingsDeleteResponse withStatus(org.openapis.openapi.models.shared.Status status) {
         this.status = status;
         return this;
@@ -26,6 +29,7 @@ public class RunNamespacesDomainmappingsDeleteResponse {
     
     
     public Integer statusCode;
+
     public RunNamespacesDomainmappingsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RunNamespacesDomainmappingsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RunNamespacesDomainmappingsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RunNamespacesDomainmappingsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

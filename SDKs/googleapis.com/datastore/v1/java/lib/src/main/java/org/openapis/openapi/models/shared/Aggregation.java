@@ -18,6 +18,7 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public Aggregation withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -29,9 +30,11 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Count count;
+
     public Aggregation withCount(Count count) {
         this.count = count;
         return this;
     }
     
+    public Aggregation(){}
 }

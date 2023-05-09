@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStoryRequest {
@@ -12,6 +13,7 @@ public class UpdateStoryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateStoryRequestBodyInput requestBody;
+
     public UpdateStoryRequest withRequestBody(UpdateStoryRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class UpdateStoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public UpdateStoryRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class UpdateStoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public UpdateStoryRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class UpdateStoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_gid")
     public String storyGid;
+
     public UpdateStoryRequest withStoryGid(String storyGid) {
         this.storyGid = storyGid;
         return this;
     }
     
+    public UpdateStoryRequest(@JsonProperty("RequestBody") UpdateStoryRequestBodyInput requestBody, @JsonProperty("story_gid") String storyGid) {
+        this.requestBody = requestBody;
+        this.storyGid = storyGid;
+  }
 }

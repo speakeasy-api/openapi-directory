@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest {
@@ -12,6 +13,7 @@ public class PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyR
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
     public String apiCredentialId;
+
     public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest withApiCredentialId(String apiCredentialId) {
         this.apiCredentialId = apiCredentialId;
         return this;
@@ -22,9 +24,14 @@ public class PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyR
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest(@JsonProperty("apiCredentialId") String apiCredentialId, @JsonProperty("merchantId") String merchantId) {
+        this.apiCredentialId = apiCredentialId;
+        this.merchantId = merchantId;
+  }
 }

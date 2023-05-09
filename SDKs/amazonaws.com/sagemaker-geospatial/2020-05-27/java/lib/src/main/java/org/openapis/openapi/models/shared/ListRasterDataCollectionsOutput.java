@@ -15,6 +15,7 @@ public class ListRasterDataCollectionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRasterDataCollectionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListRasterDataCollectionsOutput {
     
     @JsonProperty("RasterDataCollectionSummaries")
     public RasterDataCollectionMetadata[] rasterDataCollectionSummaries;
+
     public ListRasterDataCollectionsOutput withRasterDataCollectionSummaries(RasterDataCollectionMetadata[] rasterDataCollectionSummaries) {
         this.rasterDataCollectionSummaries = rasterDataCollectionSummaries;
         return this;
     }
     
+    public ListRasterDataCollectionsOutput(@JsonProperty("RasterDataCollectionSummaries") RasterDataCollectionMetadata[] rasterDataCollectionSummaries) {
+        this.rasterDataCollectionSummaries = rasterDataCollectionSummaries;
+  }
 }

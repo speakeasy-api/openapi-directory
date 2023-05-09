@@ -12,6 +12,7 @@ public class GetFolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitSpecifier")
     public String commitSpecifier;
+
     public GetFolderInput withCommitSpecifier(String commitSpecifier) {
         this.commitSpecifier = commitSpecifier;
         return this;
@@ -19,6 +20,7 @@ public class GetFolderInput {
     
     @JsonProperty("folderPath")
     public String folderPath;
+
     public GetFolderInput withFolderPath(String folderPath) {
         this.folderPath = folderPath;
         return this;
@@ -26,9 +28,14 @@ public class GetFolderInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetFolderInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetFolderInput(@JsonProperty("folderPath") String folderPath, @JsonProperty("repositoryName") String repositoryName) {
+        this.folderPath = folderPath;
+        this.repositoryName = repositoryName;
+  }
 }

@@ -17,6 +17,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationType")
     public AssociationEdgeTypeEnum associationType;
+
     public ListAssociationsRequest withAssociationType(AssociationEdgeTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -27,6 +28,7 @@ public class ListAssociationsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public ListAssociationsRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -37,6 +39,7 @@ public class ListAssociationsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public ListAssociationsRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -45,6 +48,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public ListAssociationsRequest withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -53,6 +57,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationType")
     public String destinationType;
+
     public ListAssociationsRequest withDestinationType(String destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -61,6 +66,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -69,6 +75,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -77,6 +84,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortAssociationsByEnum sortBy;
+
     public ListAssociationsRequest withSortBy(SortAssociationsByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -85,6 +93,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListAssociationsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -93,6 +102,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public ListAssociationsRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -101,9 +111,11 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public ListAssociationsRequest withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public ListAssociationsRequest(){}
 }

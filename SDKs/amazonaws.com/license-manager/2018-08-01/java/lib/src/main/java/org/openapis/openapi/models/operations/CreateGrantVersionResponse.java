@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGrantVersionResponse {
@@ -12,6 +13,7 @@ public class CreateGrantVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateGrantVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateGrantVersionResponse {
      */
     
     public Object authorizationException;
+
     public CreateGrantVersionResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateGrantVersionResponse {
     
     
     public String contentType;
+
     public CreateGrantVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateGrantVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGrantVersionResponse createGrantVersionResponse;
+
     public CreateGrantVersionResponse withCreateGrantVersionResponse(org.openapis.openapi.models.shared.CreateGrantVersionResponse createGrantVersionResponse) {
         this.createGrantVersionResponse = createGrantVersionResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateGrantVersionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateGrantVersionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGrantVersionResponse {
      */
     
     public Object rateLimitExceededException;
+
     public CreateGrantVersionResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateGrantVersionResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateGrantVersionResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateGrantVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateGrantVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateGrantVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGrantVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateGrantVersionResponse {
      */
     
     public Object serverInternalException;
+
     public CreateGrantVersionResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,9 +114,14 @@ public class CreateGrantVersionResponse {
      */
     
     public Object validationException;
+
     public CreateGrantVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateGrantVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

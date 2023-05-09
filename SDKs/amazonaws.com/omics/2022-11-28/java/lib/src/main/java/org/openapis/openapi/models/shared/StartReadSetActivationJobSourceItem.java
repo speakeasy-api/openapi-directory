@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartReadSetActivationJobSourceItem {
     @JsonProperty("readSetId")
     public String readSetId;
+
     public StartReadSetActivationJobSourceItem withReadSetId(String readSetId) {
         this.readSetId = readSetId;
         return this;
     }
     
+    public StartReadSetActivationJobSourceItem(@JsonProperty("readSetId") String readSetId) {
+        this.readSetId = readSetId;
+  }
 }

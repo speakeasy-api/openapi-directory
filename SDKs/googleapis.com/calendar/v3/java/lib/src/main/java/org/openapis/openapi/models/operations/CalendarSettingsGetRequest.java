@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarSettingsGetRequest {
@@ -12,6 +13,7 @@ public class CalendarSettingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarSettingsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class CalendarSettingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarSettingsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class CalendarSettingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarSettingsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class CalendarSettingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarSettingsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class CalendarSettingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarSettingsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -62,6 +68,7 @@ public class CalendarSettingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarSettingsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -72,6 +79,7 @@ public class CalendarSettingsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=setting")
     public String setting;
+
     public CalendarSettingsGetRequest withSetting(String setting) {
         this.setting = setting;
         return this;
@@ -82,9 +90,13 @@ public class CalendarSettingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarSettingsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarSettingsGetRequest(@JsonProperty("setting") String setting) {
+        this.setting = setting;
+  }
 }

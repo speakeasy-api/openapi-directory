@@ -15,9 +15,13 @@ public class ItvRokuTransactionRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvRokuTransactionRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvRokuTransactionRequest(@JsonProperty("profileToken") String profileToken) {
+        this.profileToken = profileToken;
+  }
 }

@@ -12,6 +12,7 @@ public class ErrorField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorField withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,13 @@ public class ErrorField {
     
     @JsonProperty("name")
     public String name;
+
     public ErrorField withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ErrorField(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

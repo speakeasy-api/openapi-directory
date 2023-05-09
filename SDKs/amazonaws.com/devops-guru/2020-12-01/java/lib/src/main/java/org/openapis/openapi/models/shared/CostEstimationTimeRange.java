@@ -22,6 +22,7 @@ public class CostEstimationTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public CostEstimationTimeRange withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,9 +33,11 @@ public class CostEstimationTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public CostEstimationTimeRange withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CostEstimationTimeRange(){}
 }

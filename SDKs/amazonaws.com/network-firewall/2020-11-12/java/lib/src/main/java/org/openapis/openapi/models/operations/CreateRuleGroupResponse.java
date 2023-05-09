@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRuleGroupResponse {
     
     public String contentType;
+
     public CreateRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRuleGroupResponse createRuleGroupResponse;
+
     public CreateRuleGroupResponse withCreateRuleGroupResponse(org.openapis.openapi.models.shared.CreateRuleGroupResponse createRuleGroupResponse) {
         this.createRuleGroupResponse = createRuleGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object insufficientCapacityException;
+
     public CreateRuleGroupResponse withInsufficientCapacityException(Object insufficientCapacityException) {
         this.insufficientCapacityException = insufficientCapacityException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object internalServerError;
+
     public CreateRuleGroupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateRuleGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRuleGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateRuleGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateRuleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class HookFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public HookFields withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class HookFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public HookFields withEvent(String event) {
         this.event = event;
         return this;
@@ -37,6 +39,7 @@ public class HookFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public HookFields withId(Integer id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class HookFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HookFields withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,11 @@ public class HookFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public HookFields withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public HookFields(){}
 }

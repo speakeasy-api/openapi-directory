@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRobotResponse {
     
     public String contentType;
+
     public DeleteRobotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRobotResponse {
      */
     
     public java.util.Map<String, Object> deleteRobotResponse;
+
     public DeleteRobotResponse withDeleteRobotResponse(java.util.Map<String, Object> deleteRobotResponse) {
         this.deleteRobotResponse = deleteRobotResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRobotResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRobotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRobotResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteRobotResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRobotResponse {
     
     
     public Integer statusCode;
+
     public DeleteRobotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRobotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRobotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteRobotResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRobotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteRobotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

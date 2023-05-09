@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcePoliciesResponse {
@@ -12,6 +13,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetResourcePoliciesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetResourcePoliciesResponse {
     
     
     public String contentType;
+
     public GetResourcePoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourcePoliciesOutput getResourcePoliciesOutput;
+
     public GetResourcePoliciesResponse withGetResourcePoliciesOutput(org.openapis.openapi.models.shared.GetResourcePoliciesOutput getResourcePoliciesOutput) {
         this.getResourcePoliciesOutput = getResourcePoliciesOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object internalServerException;
+
     public GetResourcePoliciesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetResourcePoliciesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetResourcePoliciesResponse {
     
     
     public Integer statusCode;
+
     public GetResourcePoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetResourcePoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcePoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object throttlingException;
+
     public GetResourcePoliciesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object validationException;
+
     public GetResourcePoliciesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetResourcePoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

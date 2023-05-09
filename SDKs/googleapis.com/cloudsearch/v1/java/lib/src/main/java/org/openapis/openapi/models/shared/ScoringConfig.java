@@ -18,6 +18,7 @@ public class ScoringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableFreshness")
     public Boolean disableFreshness;
+
     public ScoringConfig withDisableFreshness(Boolean disableFreshness) {
         this.disableFreshness = disableFreshness;
         return this;
@@ -29,9 +30,11 @@ public class ScoringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disablePersonalization")
     public Boolean disablePersonalization;
+
     public ScoringConfig withDisablePersonalization(Boolean disablePersonalization) {
         this.disablePersonalization = disablePersonalization;
         return this;
     }
     
+    public ScoringConfig(){}
 }

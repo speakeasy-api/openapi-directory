@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse {
     
     public String contentType;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewRe
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1EntryOverview googleCloudDatacatalogV1EntryOverview;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse withGoogleCloudDatacatalogV1EntryOverview(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1EntryOverview googleCloudDatacatalogV1EntryOverview) {
         this.googleCloudDatacatalogV1EntryOverview = googleCloudDatacatalogV1EntryOverview;
         return this;
@@ -26,6 +29,7 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewRe
     
     
     public Integer statusCode;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

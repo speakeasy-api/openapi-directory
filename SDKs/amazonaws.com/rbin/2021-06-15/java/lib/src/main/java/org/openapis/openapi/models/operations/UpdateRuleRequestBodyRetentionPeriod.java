@@ -15,6 +15,7 @@ public class UpdateRuleRequestBodyRetentionPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriodUnit")
     public org.openapis.openapi.models.shared.RetentionPeriodUnitEnum retentionPeriodUnit;
+
     public UpdateRuleRequestBodyRetentionPeriod withRetentionPeriodUnit(org.openapis.openapi.models.shared.RetentionPeriodUnitEnum retentionPeriodUnit) {
         this.retentionPeriodUnit = retentionPeriodUnit;
         return this;
@@ -23,9 +24,11 @@ public class UpdateRuleRequestBodyRetentionPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriodValue")
     public Long retentionPeriodValue;
+
     public UpdateRuleRequestBodyRetentionPeriod withRetentionPeriodValue(Long retentionPeriodValue) {
         this.retentionPeriodValue = retentionPeriodValue;
         return this;
     }
     
+    public UpdateRuleRequestBodyRetentionPeriod(){}
 }

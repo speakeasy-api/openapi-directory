@@ -12,6 +12,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("allSpecifications")
     public String[] allSpecifications;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withAllSpecifications(String[] allSpecifications) {
         this.allSpecifications = allSpecifications;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("allSpecificationsGroups")
     public String[] allSpecificationsGroups;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withAllSpecificationsGroups(String[] allSpecificationsGroups) {
         this.allSpecificationsGroups = allSpecificationsGroups;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("brand")
     public String brand;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("brandId")
     public Long brandId;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withBrandId(Long brandId) {
         this.brandId = brandId;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("brandImageUrl")
     public String brandImageUrl;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withBrandImageUrl(String brandImageUrl) {
         this.brandImageUrl = brandImageUrl;
         return this;
@@ -62,6 +67,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("categories")
     public Object[] categories;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withCategories(Object[] categories) {
         this.categories = categories;
         return this;
@@ -72,6 +78,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("categoriesIds")
     public Object[] categoriesIds;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withCategoriesIds(Object[] categoriesIds) {
         this.categoriesIds = categoriesIds;
         return this;
@@ -82,6 +89,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("categoryId")
     public String categoryId;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -92,6 +100,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("clusterHighlights")
     public java.util.Map<String, Object> clusterHighlights;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withClusterHighlights(java.util.Map<String, Object> clusterHighlights) {
         this.clusterHighlights = clusterHighlights;
         return this;
@@ -102,6 +111,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("description")
     public String description;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -112,6 +122,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("items")
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems[] items;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withItems(ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems[] items) {
         this.items = items;
         return this;
@@ -122,6 +133,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("link")
     public String link;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withLink(String link) {
         this.link = link;
         return this;
@@ -132,6 +144,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("linkText")
     public String linkText;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withLinkText(String linkText) {
         this.linkText = linkText;
         return this;
@@ -142,6 +155,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("metaTagDescription")
     public String metaTagDescription;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withMetaTagDescription(String metaTagDescription) {
         this.metaTagDescription = metaTagDescription;
         return this;
@@ -152,6 +166,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("productClusters")
     public java.util.Map<String, Object> productClusters;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withProductClusters(java.util.Map<String, Object> productClusters) {
         this.productClusters = productClusters;
         return this;
@@ -162,6 +177,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("productId")
     public String productId;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -172,6 +188,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("productName")
     public String productName;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -182,6 +199,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("productReference")
     public String productReference;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withProductReference(String productReference) {
         this.productReference = productReference;
         return this;
@@ -192,6 +210,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("productReferenceCode")
     public Long productReferenceCode;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withProductReferenceCode(Long productReferenceCode) {
         this.productReferenceCode = productReferenceCode;
         return this;
@@ -202,6 +221,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("productTitle")
     public String productTitle;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withProductTitle(String productTitle) {
         this.productTitle = productTitle;
         return this;
@@ -212,6 +232,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("releaseDate")
     public String releaseDate;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
         return this;
@@ -222,9 +243,34 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSON {
      */
     @JsonProperty("searchableClusters")
     public java.util.Map<String, Object> searchableClusters;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON withSearchableClusters(java.util.Map<String, Object> searchableClusters) {
         this.searchableClusters = searchableClusters;
         return this;
     }
     
+    public ProductSearchWhoBoughtAlsoBought200ApplicationJSON(@JsonProperty("allSpecifications") String[] allSpecifications, @JsonProperty("allSpecificationsGroups") String[] allSpecificationsGroups, @JsonProperty("brand") String brand, @JsonProperty("brandId") Long brandId, @JsonProperty("brandImageUrl") String brandImageUrl, @JsonProperty("categories") Object[] categories, @JsonProperty("categoriesIds") Object[] categoriesIds, @JsonProperty("categoryId") String categoryId, @JsonProperty("clusterHighlights") java.util.Map<String, Object> clusterHighlights, @JsonProperty("description") String description, @JsonProperty("items") ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems[] items, @JsonProperty("link") String link, @JsonProperty("linkText") String linkText, @JsonProperty("metaTagDescription") String metaTagDescription, @JsonProperty("productClusters") java.util.Map<String, Object> productClusters, @JsonProperty("productId") String productId, @JsonProperty("productName") String productName, @JsonProperty("productReference") String productReference, @JsonProperty("productReferenceCode") Long productReferenceCode, @JsonProperty("productTitle") String productTitle, @JsonProperty("releaseDate") String releaseDate, @JsonProperty("searchableClusters") java.util.Map<String, Object> searchableClusters) {
+        this.allSpecifications = allSpecifications;
+        this.allSpecificationsGroups = allSpecificationsGroups;
+        this.brand = brand;
+        this.brandId = brandId;
+        this.brandImageUrl = brandImageUrl;
+        this.categories = categories;
+        this.categoriesIds = categoriesIds;
+        this.categoryId = categoryId;
+        this.clusterHighlights = clusterHighlights;
+        this.description = description;
+        this.items = items;
+        this.link = link;
+        this.linkText = linkText;
+        this.metaTagDescription = metaTagDescription;
+        this.productClusters = productClusters;
+        this.productId = productId;
+        this.productName = productName;
+        this.productReference = productReference;
+        this.productReferenceCode = productReferenceCode;
+        this.productTitle = productTitle;
+        this.releaseDate = releaseDate;
+        this.searchableClusters = searchableClusters;
+  }
 }

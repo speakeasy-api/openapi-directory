@@ -15,6 +15,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public S3DirectSourceAdditionalOptions additionalOptions;
+
     public S3JsonSource withAdditionalOptions(S3DirectSourceAdditionalOptions additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -23,6 +24,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionType")
     public CompressionTypeEnum compressionType;
+
     public S3JsonSource withCompressionType(CompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -31,6 +33,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exclusions")
     public String[] exclusions;
+
     public S3JsonSource withExclusions(String[] exclusions) {
         this.exclusions = exclusions;
         return this;
@@ -39,6 +42,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupFiles")
     public String groupFiles;
+
     public S3JsonSource withGroupFiles(String groupFiles) {
         this.groupFiles = groupFiles;
         return this;
@@ -47,6 +51,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupSize")
     public String groupSize;
+
     public S3JsonSource withGroupSize(String groupSize) {
         this.groupSize = groupSize;
         return this;
@@ -55,6 +60,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonPath")
     public String jsonPath;
+
     public S3JsonSource withJsonPath(String jsonPath) {
         this.jsonPath = jsonPath;
         return this;
@@ -63,6 +69,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxBand")
     public Long maxBand;
+
     public S3JsonSource withMaxBand(Long maxBand) {
         this.maxBand = maxBand;
         return this;
@@ -71,6 +78,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFilesInBand")
     public Long maxFilesInBand;
+
     public S3JsonSource withMaxFilesInBand(Long maxFilesInBand) {
         this.maxFilesInBand = maxFilesInBand;
         return this;
@@ -79,6 +87,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Multiline")
     public Boolean multiline;
+
     public S3JsonSource withMultiline(Boolean multiline) {
         this.multiline = multiline;
         return this;
@@ -86,6 +95,7 @@ public class S3JsonSource {
     
     @JsonProperty("Name")
     public String name;
+
     public S3JsonSource withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +104,7 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public S3JsonSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -101,6 +112,7 @@ public class S3JsonSource {
     
     @JsonProperty("Paths")
     public String[] paths;
+
     public S3JsonSource withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -109,9 +121,14 @@ public class S3JsonSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recurse")
     public Boolean recurse;
+
     public S3JsonSource withRecurse(Boolean recurse) {
         this.recurse = recurse;
         return this;
     }
     
+    public S3JsonSource(@JsonProperty("Name") String name, @JsonProperty("Paths") String[] paths) {
+        this.name = name;
+        this.paths = paths;
+  }
 }

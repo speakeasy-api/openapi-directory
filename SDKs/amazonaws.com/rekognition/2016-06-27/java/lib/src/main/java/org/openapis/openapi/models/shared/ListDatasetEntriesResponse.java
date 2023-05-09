@@ -15,6 +15,7 @@ public class ListDatasetEntriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetEntries")
     public String[] datasetEntries;
+
     public ListDatasetEntriesResponse withDatasetEntries(String[] datasetEntries) {
         this.datasetEntries = datasetEntries;
         return this;
@@ -23,9 +24,11 @@ public class ListDatasetEntriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatasetEntriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasetEntriesResponse(){}
 }

@@ -120,4 +120,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateExperimentTemplateTar
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateExperimentTemplateStopConditionInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateExperimentTemplateActionInputItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

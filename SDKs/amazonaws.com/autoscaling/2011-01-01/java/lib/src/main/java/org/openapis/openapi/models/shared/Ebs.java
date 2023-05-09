@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Ebs {
     
     public Boolean deleteOnTermination;
+
     public Ebs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class Ebs {
     
     
     public Boolean encrypted;
+
     public Ebs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class Ebs {
     
     
     public Long iops;
+
     public Ebs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class Ebs {
     
     
     public String snapshotId;
+
     public Ebs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -40,6 +44,7 @@ public class Ebs {
     
     
     public Long throughput;
+
     public Ebs withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -47,6 +52,7 @@ public class Ebs {
     
     
     public Long volumeSize;
+
     public Ebs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -54,9 +60,11 @@ public class Ebs {
     
     
     public String volumeType;
+
     public Ebs withVolumeType(String volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public Ebs(){}
 }

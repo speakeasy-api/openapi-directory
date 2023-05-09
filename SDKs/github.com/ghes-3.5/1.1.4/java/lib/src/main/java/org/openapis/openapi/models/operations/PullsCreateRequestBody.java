@@ -14,6 +14,7 @@ public class PullsCreateRequestBody {
      */
     @JsonProperty("base")
     public String base;
+
     public PullsCreateRequestBody withBase(String base) {
         this.base = base;
         return this;
@@ -25,6 +26,7 @@ public class PullsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public PullsCreateRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -36,6 +38,7 @@ public class PullsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draft")
     public Boolean draft;
+
     public PullsCreateRequestBody withDraft(Boolean draft) {
         this.draft = draft;
         return this;
@@ -46,6 +49,7 @@ public class PullsCreateRequestBody {
      */
     @JsonProperty("head")
     public String head;
+
     public PullsCreateRequestBody withHead(String head) {
         this.head = head;
         return this;
@@ -57,6 +61,7 @@ public class PullsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public Long issue;
+
     public PullsCreateRequestBody withIssue(Long issue) {
         this.issue = issue;
         return this;
@@ -68,6 +73,7 @@ public class PullsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintainer_can_modify")
     public Boolean maintainerCanModify;
+
     public PullsCreateRequestBody withMaintainerCanModify(Boolean maintainerCanModify) {
         this.maintainerCanModify = maintainerCanModify;
         return this;
@@ -79,9 +85,14 @@ public class PullsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PullsCreateRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PullsCreateRequestBody(@JsonProperty("base") String base, @JsonProperty("head") String head) {
+        this.base = base;
+        this.head = head;
+  }
 }

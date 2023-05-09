@@ -12,9 +12,13 @@ public class RemoveCustomFieldSettingRequest {
      */
     @JsonProperty("custom_field")
     public String customField;
+
     public RemoveCustomFieldSettingRequest withCustomField(String customField) {
         this.customField = customField;
         return this;
     }
     
+    public RemoveCustomFieldSettingRequest(@JsonProperty("custom_field") String customField) {
+        this.customField = customField;
+  }
 }

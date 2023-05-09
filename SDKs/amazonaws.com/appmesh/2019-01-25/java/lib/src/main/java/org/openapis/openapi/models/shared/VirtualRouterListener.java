@@ -15,9 +15,13 @@ public class VirtualRouterListener {
      */
     @JsonProperty("portMapping")
     public PortMapping portMapping;
+
     public VirtualRouterListener withPortMapping(PortMapping portMapping) {
         this.portMapping = portMapping;
         return this;
     }
     
+    public VirtualRouterListener(@JsonProperty("portMapping") PortMapping portMapping) {
+        this.portMapping = portMapping;
+  }
 }

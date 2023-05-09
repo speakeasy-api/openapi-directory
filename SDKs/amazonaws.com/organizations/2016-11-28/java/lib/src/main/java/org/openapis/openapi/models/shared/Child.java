@@ -15,6 +15,7 @@ public class Child {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Child withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class Child {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ChildTypeEnum type;
+
     public Child withType(ChildTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Child(){}
 }

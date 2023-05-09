@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEpisodesResponse {
     
     public String contentType;
+
     public GetEpisodesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEpisodesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEpisodesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetEpisodesResponse {
     
     
     public Integer statusCode;
+
     public GetEpisodesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetEpisodesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEpisodesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetEpisodesResponse {
      */
     
     public GetEpisodes200ApplicationVndApiPlusJson getEpisodes200ApplicationVndApiPlusJsonObject;
+
     public GetEpisodesResponse withGetEpisodes200ApplicationVndApiPlusJsonObject(GetEpisodes200ApplicationVndApiPlusJson getEpisodes200ApplicationVndApiPlusJsonObject) {
         this.getEpisodes200ApplicationVndApiPlusJsonObject = getEpisodes200ApplicationVndApiPlusJsonObject;
         return this;
@@ -54,9 +60,14 @@ public class GetEpisodesResponse {
      */
     
     public GetEpisodes400ApplicationVndApiPlusJson getEpisodes400ApplicationVndApiPlusJsonObject;
+
     public GetEpisodesResponse withGetEpisodes400ApplicationVndApiPlusJsonObject(GetEpisodes400ApplicationVndApiPlusJson getEpisodes400ApplicationVndApiPlusJsonObject) {
         this.getEpisodes400ApplicationVndApiPlusJsonObject = getEpisodes400ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetEpisodesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GetBenefitsDocumentUploadDownload429ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public GetBenefitsDocumentUploadDownload429ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetBenefitsDocumentUploadDownload429ApplicationJSON(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Matcher {
     
     public String grpcCode;
+
     public Matcher withGrpcCode(String grpcCode) {
         this.grpcCode = grpcCode;
         return this;
@@ -19,9 +20,11 @@ public class Matcher {
     
     
     public String httpCode;
+
     public Matcher withHttpCode(String httpCode) {
         this.httpCode = httpCode;
         return this;
     }
     
+    public Matcher(){}
 }

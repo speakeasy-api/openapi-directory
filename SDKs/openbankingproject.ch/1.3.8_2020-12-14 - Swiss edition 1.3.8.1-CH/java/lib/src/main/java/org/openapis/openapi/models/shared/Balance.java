@@ -22,6 +22,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Balance {
     @JsonProperty("balanceAmount")
     public Amount balanceAmount;
+
     public Balance withBalanceAmount(Amount balanceAmount) {
         this.balanceAmount = balanceAmount;
         return this;
@@ -76,6 +77,7 @@ public class Balance {
      */
     @JsonProperty("balanceType")
     public BalanceTypeEnum balanceType;
+
     public Balance withBalanceType(BalanceTypeEnum balanceType) {
         this.balanceType = balanceType;
         return this;
@@ -89,6 +91,7 @@ public class Balance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditLimitIncluded")
     public Boolean creditLimitIncluded;
+
     public Balance withCreditLimitIncluded(Boolean creditLimitIncluded) {
         this.creditLimitIncluded = creditLimitIncluded;
         return this;
@@ -104,6 +107,7 @@ public class Balance {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastChangeDateTime")
     public OffsetDateTime lastChangeDateTime;
+
     public Balance withLastChangeDateTime(OffsetDateTime lastChangeDateTime) {
         this.lastChangeDateTime = lastChangeDateTime;
         return this;
@@ -117,6 +121,7 @@ public class Balance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastCommittedTransaction")
     public String lastCommittedTransaction;
+
     public Balance withLastCommittedTransaction(String lastCommittedTransaction) {
         this.lastCommittedTransaction = lastCommittedTransaction;
         return this;
@@ -129,9 +134,14 @@ public class Balance {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("referenceDate")
     public LocalDate referenceDate;
+
     public Balance withReferenceDate(LocalDate referenceDate) {
         this.referenceDate = referenceDate;
         return this;
     }
     
+    public Balance(@JsonProperty("balanceAmount") Amount balanceAmount, @JsonProperty("balanceType") BalanceTypeEnum balanceType) {
+        this.balanceAmount = balanceAmount;
+        this.balanceType = balanceType;
+  }
 }

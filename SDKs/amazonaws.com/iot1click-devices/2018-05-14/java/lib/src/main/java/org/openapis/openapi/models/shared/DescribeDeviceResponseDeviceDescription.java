@@ -15,6 +15,7 @@ public class DescribeDeviceResponseDeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DescribeDeviceResponseDeviceDescription withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DescribeDeviceResponseDeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public DescribeDeviceResponseDeviceDescription withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -31,6 +33,7 @@ public class DescribeDeviceResponseDeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public DescribeDeviceResponseDeviceDescription withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -39,6 +42,7 @@ public class DescribeDeviceResponseDeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public DescribeDeviceResponseDeviceDescription withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -47,6 +51,7 @@ public class DescribeDeviceResponseDeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemainingLife")
     public Double remainingLife;
+
     public DescribeDeviceResponseDeviceDescription withRemainingLife(Double remainingLife) {
         this.remainingLife = remainingLife;
         return this;
@@ -55,6 +60,7 @@ public class DescribeDeviceResponseDeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeDeviceResponseDeviceDescription withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -63,9 +69,11 @@ public class DescribeDeviceResponseDeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DescribeDeviceResponseDeviceDescription withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DescribeDeviceResponseDeviceDescription(){}
 }

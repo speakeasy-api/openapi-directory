@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example1 {
     @JsonProperty("aogh")
     public Aogh aogh;
+
     public Example1 withAogh(Aogh aogh) {
         this.aogh = aogh;
         return this;
@@ -16,6 +17,7 @@ public class Example1 {
     
     @JsonProperty("audio")
     public Audio audio;
+
     public Example1 withAudio(Audio audio) {
         this.audio = audio;
         return this;
@@ -23,6 +25,7 @@ public class Example1 {
     
     @JsonProperty("build_info")
     public BuildInfo buildInfo;
+
     public Example1 withBuildInfo(BuildInfo buildInfo) {
         this.buildInfo = buildInfo;
         return this;
@@ -30,6 +33,7 @@ public class Example1 {
     
     @JsonProperty("detail")
     public Detail detail;
+
     public Example1 withDetail(Detail detail) {
         this.detail = detail;
         return this;
@@ -37,6 +41,7 @@ public class Example1 {
     
     @JsonProperty("device_info")
     public DeviceInfo deviceInfo;
+
     public Example1 withDeviceInfo(DeviceInfo deviceInfo) {
         this.deviceInfo = deviceInfo;
         return this;
@@ -44,6 +49,7 @@ public class Example1 {
     
     @JsonProperty("multizone")
     public Multizone multizone;
+
     public Example1 withMultizone(Multizone multizone) {
         this.multizone = multizone;
         return this;
@@ -51,6 +57,7 @@ public class Example1 {
     
     @JsonProperty("name")
     public String name;
+
     public Example1 withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +65,7 @@ public class Example1 {
     
     @JsonProperty("net")
     public Net net;
+
     public Example1 withNet(Net net) {
         this.net = net;
         return this;
@@ -65,6 +73,7 @@ public class Example1 {
     
     @JsonProperty("night_mode_params")
     public NightModeParams nightModeParams;
+
     public Example1 withNightModeParams(NightModeParams nightModeParams) {
         this.nightModeParams = nightModeParams;
         return this;
@@ -72,6 +81,7 @@ public class Example1 {
     
     @JsonProperty("opencast")
     public Opencast opencast;
+
     public Example1 withOpencast(Opencast opencast) {
         this.opencast = opencast;
         return this;
@@ -79,6 +89,7 @@ public class Example1 {
     
     @JsonProperty("opt_in")
     public OptIn optIn;
+
     public Example1 withOptIn(OptIn optIn) {
         this.optIn = optIn;
         return this;
@@ -86,6 +97,7 @@ public class Example1 {
     
     @JsonProperty("proxy")
     public Proxy proxy;
+
     public Example1 withProxy(Proxy proxy) {
         this.proxy = proxy;
         return this;
@@ -93,6 +105,7 @@ public class Example1 {
     
     @JsonProperty("settings")
     public Settings settings;
+
     public Example1 withSettings(Settings settings) {
         this.settings = settings;
         return this;
@@ -100,6 +113,7 @@ public class Example1 {
     
     @JsonProperty("setup")
     public Setup setup;
+
     public Example1 withSetup(Setup setup) {
         this.setup = setup;
         return this;
@@ -107,6 +121,7 @@ public class Example1 {
     
     @JsonProperty("sign")
     public Sign sign;
+
     public Example1 withSign(Sign sign) {
         this.sign = sign;
         return this;
@@ -114,6 +129,7 @@ public class Example1 {
     
     @JsonProperty("user_eq")
     public UserEq userEq;
+
     public Example1 withUserEq(UserEq userEq) {
         this.userEq = userEq;
         return this;
@@ -121,6 +137,7 @@ public class Example1 {
     
     @JsonProperty("version")
     public Integer version;
+
     public Example1 withVersion(Integer version) {
         this.version = version;
         return this;
@@ -128,9 +145,30 @@ public class Example1 {
     
     @JsonProperty("wifi")
     public Wifi wifi;
+
     public Example1 withWifi(Wifi wifi) {
         this.wifi = wifi;
         return this;
     }
     
+    public Example1(@JsonProperty("aogh") Aogh aogh, @JsonProperty("audio") Audio audio, @JsonProperty("build_info") BuildInfo buildInfo, @JsonProperty("detail") Detail detail, @JsonProperty("device_info") DeviceInfo deviceInfo, @JsonProperty("multizone") Multizone multizone, @JsonProperty("name") String name, @JsonProperty("net") Net net, @JsonProperty("night_mode_params") NightModeParams nightModeParams, @JsonProperty("opencast") Opencast opencast, @JsonProperty("opt_in") OptIn optIn, @JsonProperty("proxy") Proxy proxy, @JsonProperty("settings") Settings settings, @JsonProperty("setup") Setup setup, @JsonProperty("sign") Sign sign, @JsonProperty("user_eq") UserEq userEq, @JsonProperty("version") Integer version, @JsonProperty("wifi") Wifi wifi) {
+        this.aogh = aogh;
+        this.audio = audio;
+        this.buildInfo = buildInfo;
+        this.detail = detail;
+        this.deviceInfo = deviceInfo;
+        this.multizone = multizone;
+        this.name = name;
+        this.net = net;
+        this.nightModeParams = nightModeParams;
+        this.opencast = opencast;
+        this.optIn = optIn;
+        this.proxy = proxy;
+        this.settings = settings;
+        this.setup = setup;
+        this.sign = sign;
+        this.userEq = userEq;
+        this.version = version;
+        this.wifi = wifi;
+  }
 }

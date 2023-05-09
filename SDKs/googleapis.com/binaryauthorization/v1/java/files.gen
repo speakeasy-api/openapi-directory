@@ -86,4 +86,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AdmissionRuleEnforcementMod
 lib/src/main/java/org/openapis/openapi/models/shared/AdmissionRuleEvaluationModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdmissionRule.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdmissionWhitelistPattern.java
+docs/sdk/README.md
+docs/projects/README.md
+docs/systempolicy/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class GetColumnStatisticsForPartitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetColumnStatisticsForPartitionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class GetColumnStatisticsForPartitionRequest {
     
     @JsonProperty("ColumnNames")
     public String[] columnNames;
+
     public GetColumnStatisticsForPartitionRequest withColumnNames(String[] columnNames) {
         this.columnNames = columnNames;
         return this;
@@ -26,6 +28,7 @@ public class GetColumnStatisticsForPartitionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetColumnStatisticsForPartitionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -33,6 +36,7 @@ public class GetColumnStatisticsForPartitionRequest {
     
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public GetColumnStatisticsForPartitionRequest withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
@@ -40,9 +44,16 @@ public class GetColumnStatisticsForPartitionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetColumnStatisticsForPartitionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetColumnStatisticsForPartitionRequest(@JsonProperty("ColumnNames") String[] columnNames, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartitionValues") String[] partitionValues, @JsonProperty("TableName") String tableName) {
+        this.columnNames = columnNames;
+        this.databaseName = databaseName;
+        this.partitionValues = partitionValues;
+        this.tableName = tableName;
+  }
 }

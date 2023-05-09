@@ -12,6 +12,7 @@ public class ContinuousProjectDocumentProgressBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentName")
     public String documentName;
+
     public ContinuousProjectDocumentProgressBody withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -20,9 +21,11 @@ public class ContinuousProjectDocumentProgressBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterByLanguage")
     public String filterByLanguage;
+
     public ContinuousProjectDocumentProgressBody withFilterByLanguage(String filterByLanguage) {
         this.filterByLanguage = filterByLanguage;
         return this;
     }
     
+    public ContinuousProjectDocumentProgressBody(){}
 }

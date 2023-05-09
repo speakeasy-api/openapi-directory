@@ -18,9 +18,11 @@ public class UserAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public Asset asset;
+
     public UserAsset withAsset(Asset asset) {
         this.asset = asset;
         return this;
     }
     
+    public UserAsset(){}
 }

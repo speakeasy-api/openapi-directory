@@ -15,6 +15,7 @@ public class ServiceConnectService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientAliases")
     public ServiceConnectClientAlias[] clientAliases;
+
     public ServiceConnectService withClientAliases(ServiceConnectClientAlias[] clientAliases) {
         this.clientAliases = clientAliases;
         return this;
@@ -23,6 +24,7 @@ public class ServiceConnectService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoveryName")
     public String discoveryName;
+
     public ServiceConnectService withDiscoveryName(String discoveryName) {
         this.discoveryName = discoveryName;
         return this;
@@ -31,6 +33,7 @@ public class ServiceConnectService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressPortOverride")
     public Long ingressPortOverride;
+
     public ServiceConnectService withIngressPortOverride(Long ingressPortOverride) {
         this.ingressPortOverride = ingressPortOverride;
         return this;
@@ -38,9 +41,13 @@ public class ServiceConnectService {
     
     @JsonProperty("portName")
     public String portName;
+
     public ServiceConnectService withPortName(String portName) {
         this.portName = portName;
         return this;
     }
     
+    public ServiceConnectService(@JsonProperty("portName") String portName) {
+        this.portName = portName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAnnotationStoresResponse {
@@ -12,6 +13,7 @@ public class ListAnnotationStoresResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAnnotationStoresResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAnnotationStoresResponse {
     
     
     public String contentType;
+
     public ListAnnotationStoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAnnotationStoresResponse {
      */
     
     public Object internalServerException;
+
     public ListAnnotationStoresResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAnnotationStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAnnotationStoresResponse listAnnotationStoresResponse;
+
     public ListAnnotationStoresResponse withListAnnotationStoresResponse(org.openapis.openapi.models.shared.ListAnnotationStoresResponse listAnnotationStoresResponse) {
         this.listAnnotationStoresResponse = listAnnotationStoresResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAnnotationStoresResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAnnotationStoresResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListAnnotationStoresResponse {
     
     
     public Integer statusCode;
+
     public ListAnnotationStoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAnnotationStoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAnnotationStoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAnnotationStoresResponse {
      */
     
     public Object throttlingException;
+
     public ListAnnotationStoresResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAnnotationStoresResponse {
      */
     
     public Object validationException;
+
     public ListAnnotationStoresResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAnnotationStoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

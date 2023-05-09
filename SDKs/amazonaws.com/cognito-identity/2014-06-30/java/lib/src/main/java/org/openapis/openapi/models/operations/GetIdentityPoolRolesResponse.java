@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIdentityPoolRolesResponse {
     
     public String contentType;
+
     public GetIdentityPoolRolesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetIdentityPoolRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIdentityPoolRolesResponse getIdentityPoolRolesResponse;
+
     public GetIdentityPoolRolesResponse withGetIdentityPoolRolesResponse(org.openapis.openapi.models.shared.GetIdentityPoolRolesResponse getIdentityPoolRolesResponse) {
         this.getIdentityPoolRolesResponse = getIdentityPoolRolesResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetIdentityPoolRolesResponse {
      */
     
     public Object internalErrorException;
+
     public GetIdentityPoolRolesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetIdentityPoolRolesResponse {
      */
     
     public Object invalidParameterException;
+
     public GetIdentityPoolRolesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetIdentityPoolRolesResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetIdentityPoolRolesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class GetIdentityPoolRolesResponse {
     
     
     public Integer statusCode;
+
     public GetIdentityPoolRolesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetIdentityPoolRolesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIdentityPoolRolesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetIdentityPoolRolesResponse {
      */
     
     public Object resourceConflictException;
+
     public GetIdentityPoolRolesResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -83,6 +92,7 @@ public class GetIdentityPoolRolesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetIdentityPoolRolesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class GetIdentityPoolRolesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetIdentityPoolRolesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetIdentityPoolRolesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

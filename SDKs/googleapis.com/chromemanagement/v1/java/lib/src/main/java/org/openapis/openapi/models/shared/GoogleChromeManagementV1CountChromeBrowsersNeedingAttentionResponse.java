@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noRecentActivityCount")
     public String noRecentActivityCount;
+
     public GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse withNoRecentActivityCount(String noRecentActivityCount) {
         this.noRecentActivityCount = noRecentActivityCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingBrowserUpdateCount")
     public String pendingBrowserUpdateCount;
+
     public GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse withPendingBrowserUpdateCount(String pendingBrowserUpdateCount) {
         this.pendingBrowserUpdateCount = pendingBrowserUpdateCount;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentlyEnrolledCount")
     public String recentlyEnrolledCount;
+
     public GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse withRecentlyEnrolledCount(String recentlyEnrolledCount) {
         this.recentlyEnrolledCount = recentlyEnrolledCount;
         return this;
     }
     
+    public GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse(){}
 }

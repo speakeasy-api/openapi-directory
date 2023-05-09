@@ -12,6 +12,7 @@ public class UpdateMediaStorageConfigurationRequestBody {
      */
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public UpdateMediaStorageConfigurationRequestBody withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
@@ -22,9 +23,14 @@ public class UpdateMediaStorageConfigurationRequestBody {
      */
     @JsonProperty("MediaStorageConfiguration")
     public UpdateMediaStorageConfigurationRequestBodyMediaStorageConfiguration mediaStorageConfiguration;
+
     public UpdateMediaStorageConfigurationRequestBody withMediaStorageConfiguration(UpdateMediaStorageConfigurationRequestBodyMediaStorageConfiguration mediaStorageConfiguration) {
         this.mediaStorageConfiguration = mediaStorageConfiguration;
         return this;
     }
     
+    public UpdateMediaStorageConfigurationRequestBody(@JsonProperty("ChannelARN") String channelARN, @JsonProperty("MediaStorageConfiguration") UpdateMediaStorageConfigurationRequestBodyMediaStorageConfiguration mediaStorageConfiguration) {
+        this.channelARN = channelARN;
+        this.mediaStorageConfiguration = mediaStorageConfiguration;
+  }
 }

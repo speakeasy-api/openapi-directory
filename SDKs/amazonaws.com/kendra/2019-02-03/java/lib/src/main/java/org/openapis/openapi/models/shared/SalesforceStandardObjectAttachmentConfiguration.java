@@ -15,6 +15,7 @@ public class SalesforceStandardObjectAttachmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitleFieldName")
     public String documentTitleFieldName;
+
     public SalesforceStandardObjectAttachmentConfiguration withDocumentTitleFieldName(String documentTitleFieldName) {
         this.documentTitleFieldName = documentTitleFieldName;
         return this;
@@ -23,9 +24,11 @@ public class SalesforceStandardObjectAttachmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public SalesforceStandardObjectAttachmentConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
     }
     
+    public SalesforceStandardObjectAttachmentConfiguration(){}
 }

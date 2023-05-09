@@ -12,6 +12,7 @@ public class PutRecommendationPreferencesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedInfrastructureMetrics")
     public EnhancedInfrastructureMetricsEnum enhancedInfrastructureMetrics;
+
     public PutRecommendationPreferencesRequest withEnhancedInfrastructureMetrics(EnhancedInfrastructureMetricsEnum enhancedInfrastructureMetrics) {
         this.enhancedInfrastructureMetrics = enhancedInfrastructureMetrics;
         return this;
@@ -20,6 +21,7 @@ public class PutRecommendationPreferencesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalMetricsPreference")
     public ExternalMetricsPreference externalMetricsPreference;
+
     public PutRecommendationPreferencesRequest withExternalMetricsPreference(ExternalMetricsPreference externalMetricsPreference) {
         this.externalMetricsPreference = externalMetricsPreference;
         return this;
@@ -28,6 +30,7 @@ public class PutRecommendationPreferencesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredWorkloadTypes")
     public InferredWorkloadTypesPreferenceEnum inferredWorkloadTypes;
+
     public PutRecommendationPreferencesRequest withInferredWorkloadTypes(InferredWorkloadTypesPreferenceEnum inferredWorkloadTypes) {
         this.inferredWorkloadTypes = inferredWorkloadTypes;
         return this;
@@ -35,6 +38,7 @@ public class PutRecommendationPreferencesRequest {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public PutRecommendationPreferencesRequest withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -43,9 +47,13 @@ public class PutRecommendationPreferencesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public Scope scope;
+
     public PutRecommendationPreferencesRequest withScope(Scope scope) {
         this.scope = scope;
         return this;
     }
     
+    public PutRecommendationPreferencesRequest(@JsonProperty("resourceType") ResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
+  }
 }

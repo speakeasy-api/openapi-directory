@@ -25,9 +25,11 @@ public class GetCredits400ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetCredits400ApplicationVndApiPlusJsonErrors[] errors;
+
     public GetCredits400ApplicationVndApiPlusJson withErrors(GetCredits400ApplicationVndApiPlusJsonErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetCredits400ApplicationVndApiPlusJson(){}
 }

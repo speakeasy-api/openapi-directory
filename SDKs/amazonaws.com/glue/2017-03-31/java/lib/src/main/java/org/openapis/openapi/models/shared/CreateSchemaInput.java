@@ -12,6 +12,7 @@ public class CreateSchemaInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compatibility")
     public CompatibilityEnum compatibility;
+
     public CreateSchemaInput withCompatibility(CompatibilityEnum compatibility) {
         this.compatibility = compatibility;
         return this;
@@ -19,6 +20,7 @@ public class CreateSchemaInput {
     
     @JsonProperty("DataFormat")
     public DataFormatEnum dataFormat;
+
     public CreateSchemaInput withDataFormat(DataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -27,6 +29,7 @@ public class CreateSchemaInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateSchemaInput withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class CreateSchemaInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryId")
     public RegistryId registryId;
+
     public CreateSchemaInput withRegistryId(RegistryId registryId) {
         this.registryId = registryId;
         return this;
@@ -43,6 +47,7 @@ public class CreateSchemaInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaDefinition")
     public String schemaDefinition;
+
     public CreateSchemaInput withSchemaDefinition(String schemaDefinition) {
         this.schemaDefinition = schemaDefinition;
         return this;
@@ -50,6 +55,7 @@ public class CreateSchemaInput {
     
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public CreateSchemaInput withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -58,9 +64,14 @@ public class CreateSchemaInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateSchemaInput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSchemaInput(@JsonProperty("DataFormat") DataFormatEnum dataFormat, @JsonProperty("SchemaName") String schemaName) {
+        this.dataFormat = dataFormat;
+        this.schemaName = schemaName;
+  }
 }

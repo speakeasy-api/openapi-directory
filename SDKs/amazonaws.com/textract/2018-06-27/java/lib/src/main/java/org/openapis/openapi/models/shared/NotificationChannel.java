@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotificationChannel {
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public NotificationChannel withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -19,9 +20,14 @@ public class NotificationChannel {
     
     @JsonProperty("SNSTopicArn")
     public String snsTopicArn;
+
     public NotificationChannel withSNSTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public NotificationChannel(@JsonProperty("RoleArn") String roleArn, @JsonProperty("SNSTopicArn") String snsTopicArn) {
+        this.roleArn = roleArn;
+        this.snsTopicArn = snsTopicArn;
+  }
 }

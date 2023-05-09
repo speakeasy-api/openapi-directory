@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClassifyImageUrlFormResponse {
     
     public byte[] body;
+
     public ClassifyImageUrlFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ClassifyImageUrlFormResponse {
     
     
     public String contentType;
+
     public ClassifyImageUrlFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClassifyImageUrlFormResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public ClassifyImageUrlFormResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class ClassifyImageUrlFormResponse {
      */
     
     public org.openapis.openapi.models.shared.ImagePrediction imagePrediction;
+
     public ClassifyImageUrlFormResponse withImagePrediction(org.openapis.openapi.models.shared.ImagePrediction imagePrediction) {
         this.imagePrediction = imagePrediction;
         return this;
@@ -43,6 +48,7 @@ public class ClassifyImageUrlFormResponse {
     
     
     public Integer statusCode;
+
     public ClassifyImageUrlFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class ClassifyImageUrlFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClassifyImageUrlFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClassifyImageUrlFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

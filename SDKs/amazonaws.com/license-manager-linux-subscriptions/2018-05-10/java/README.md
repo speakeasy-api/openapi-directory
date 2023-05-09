@@ -16,49 +16,51 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetServiceSettingsRequest;
 import org.openapis.openapi.models.operations.GetServiceSettingsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetServiceSettingsRequest req = new GetServiceSettingsRequest() {{
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "provident";
-                xAmzCredential = "distinctio";
-                xAmzDate = "quibusdam";
-                xAmzSecurityToken = "unde";
-                xAmzSignature = "nulla";
-                xAmzSignedHeaders = "corrupti";
-            }}            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }};            
 
             GetServiceSettingsResponse res = sdk.getServiceSettings(req);
 
-            if (res.getServiceSettingsResponse.isPresent()) {
+            if (res.getServiceSettingsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getServiceSettings` - Lists the Linux subscriptions service settings.
-* `listLinuxSubscriptionInstances` - Lists the running Amazon EC2 instances that were discovered with commercial Linux subscriptions.
-* `listLinuxSubscriptions` - Lists the Linux subscriptions that have been discovered. If you have linked your organization, the returned results will include data aggregated across your accounts in Organizations.
-* `updateServiceSettings` - Updates the service settings for Linux subscriptions.
+* [getServiceSettings](docs/sdk/README.md#getservicesettings) - Lists the Linux subscriptions service settings.
+* [listLinuxSubscriptionInstances](docs/sdk/README.md#listlinuxsubscriptioninstances) - Lists the running Amazon EC2 instances that were discovered with commercial Linux subscriptions.
+* [listLinuxSubscriptions](docs/sdk/README.md#listlinuxsubscriptions) - Lists the Linux subscriptions that have been discovered. If you have linked your organization, the returned results will include data aggregated across your accounts in Organizations.
+* [updateServiceSettings](docs/sdk/README.md#updateservicesettings) - Updates the service settings for Linux subscriptions.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,6 +15,7 @@ public class UnloadService200ApplicationJSON {
      */
     @JsonProperty("api")
     public String api;
+
     public UnloadService200ApplicationJSON withApi(String api) {
         this.api = api;
         return this;
@@ -25,6 +26,7 @@ public class UnloadService200ApplicationJSON {
      */
     @JsonProperty("method")
     public String method;
+
     public UnloadService200ApplicationJSON withMethod(String method) {
         this.method = method;
         return this;
@@ -35,6 +37,7 @@ public class UnloadService200ApplicationJSON {
      */
     @JsonProperty("response")
     public String response;
+
     public UnloadService200ApplicationJSON withResponse(String response) {
         this.response = response;
         return this;
@@ -42,9 +45,16 @@ public class UnloadService200ApplicationJSON {
     
     @JsonProperty("status")
     public UnloadService200ApplicationJSONStatusEnum status;
+
     public UnloadService200ApplicationJSON withStatus(UnloadService200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UnloadService200ApplicationJSON(@JsonProperty("api") String api, @JsonProperty("method") String method, @JsonProperty("response") String response, @JsonProperty("status") UnloadService200ApplicationJSONStatusEnum status) {
+        this.api = api;
+        this.method = method;
+        this.response = response;
+        this.status = status;
+  }
 }

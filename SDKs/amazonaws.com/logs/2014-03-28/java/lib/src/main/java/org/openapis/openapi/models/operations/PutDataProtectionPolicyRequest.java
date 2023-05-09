@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDataProtectionPolicyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PutDataProtectionPolicyRequest putDataProtectionPolicyRequest;
+
     public PutDataProtectionPolicyRequest withPutDataProtectionPolicyRequest(org.openapis.openapi.models.shared.PutDataProtectionPolicyRequest putDataProtectionPolicyRequest) {
         this.putDataProtectionPolicyRequest = putDataProtectionPolicyRequest;
         return this;
@@ -16,6 +18,7 @@ public class PutDataProtectionPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutDataProtectionPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class PutDataProtectionPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutDataProtectionPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class PutDataProtectionPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutDataProtectionPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class PutDataProtectionPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutDataProtectionPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class PutDataProtectionPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutDataProtectionPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class PutDataProtectionPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutDataProtectionPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class PutDataProtectionPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutDataProtectionPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class PutDataProtectionPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public PutDataProtectionPolicyXAmzTargetEnum xAmzTarget;
+
     public PutDataProtectionPolicyRequest withXAmzTarget(PutDataProtectionPolicyXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public PutDataProtectionPolicyRequest(@JsonProperty("PutDataProtectionPolicyRequest") org.openapis.openapi.models.shared.PutDataProtectionPolicyRequest putDataProtectionPolicyRequest, @JsonProperty("X-Amz-Target") PutDataProtectionPolicyXAmzTargetEnum xAmzTarget) {
+        this.putDataProtectionPolicyRequest = putDataProtectionPolicyRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

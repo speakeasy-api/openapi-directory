@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEnvironmentsOutput {
     @JsonProperty("Environments")
     public String[] environments;
+
     public ListEnvironmentsOutput withEnvironments(String[] environments) {
         this.environments = environments;
         return this;
@@ -22,9 +23,13 @@ public class ListEnvironmentsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEnvironmentsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEnvironmentsOutput(@JsonProperty("Environments") String[] environments) {
+        this.environments = environments;
+  }
 }

@@ -96,4 +96,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/SchemaPropertiesFieldName.j
 lib/src/main/java/org/openapis/openapi/models/shared/SchemaProperties.java
 lib/src/main/java/org/openapis/openapi/models/shared/Schema.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/addresses/README.md
+docs/profiles/README.md
+docs/prospects/README.md
+docs/purchaseinformation/README.md
+docs/schemas/README.md
 USAGE.md

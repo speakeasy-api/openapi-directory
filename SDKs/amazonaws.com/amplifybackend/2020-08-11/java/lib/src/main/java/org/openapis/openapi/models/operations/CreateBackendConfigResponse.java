@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBackendConfigResponse {
@@ -12,6 +13,7 @@ public class CreateBackendConfigResponse {
      */
     
     public Object badRequestException;
+
     public CreateBackendConfigResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBackendConfigResponse {
     
     
     public String contentType;
+
     public CreateBackendConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBackendConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBackendConfigResponse createBackendConfigResponse;
+
     public CreateBackendConfigResponse withCreateBackendConfigResponse(org.openapis.openapi.models.shared.CreateBackendConfigResponse createBackendConfigResponse) {
         this.createBackendConfigResponse = createBackendConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateBackendConfigResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public CreateBackendConfigResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBackendConfigResponse {
      */
     
     public Object notFoundException;
+
     public CreateBackendConfigResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateBackendConfigResponse {
     
     
     public Integer statusCode;
+
     public CreateBackendConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateBackendConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBackendConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateBackendConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateBackendConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateBackendConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

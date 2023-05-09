@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomainNamesResponse {
@@ -12,6 +13,7 @@ public class GetDomainNamesResponse {
      */
     
     public Object badRequestException;
+
     public GetDomainNamesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetDomainNamesResponse {
     
     
     public String contentType;
+
     public GetDomainNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDomainNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDomainNamesResponse getDomainNamesResponse;
+
     public GetDomainNamesResponse withGetDomainNamesResponse(org.openapis.openapi.models.shared.GetDomainNamesResponse getDomainNamesResponse) {
         this.getDomainNamesResponse = getDomainNamesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDomainNamesResponse {
      */
     
     public Object notFoundException;
+
     public GetDomainNamesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetDomainNamesResponse {
     
     
     public Integer statusCode;
+
     public GetDomainNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDomainNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomainNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDomainNamesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetDomainNamesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetDomainNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

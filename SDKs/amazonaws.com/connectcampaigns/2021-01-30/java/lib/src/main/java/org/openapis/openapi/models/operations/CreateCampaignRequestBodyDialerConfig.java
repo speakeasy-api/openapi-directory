@@ -18,6 +18,7 @@ public class CreateCampaignRequestBodyDialerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictiveDialerConfig")
     public org.openapis.openapi.models.shared.PredictiveDialerConfig predictiveDialerConfig;
+
     public CreateCampaignRequestBodyDialerConfig withPredictiveDialerConfig(org.openapis.openapi.models.shared.PredictiveDialerConfig predictiveDialerConfig) {
         this.predictiveDialerConfig = predictiveDialerConfig;
         return this;
@@ -29,9 +30,11 @@ public class CreateCampaignRequestBodyDialerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressiveDialerConfig")
     public org.openapis.openapi.models.shared.ProgressiveDialerConfig progressiveDialerConfig;
+
     public CreateCampaignRequestBodyDialerConfig withProgressiveDialerConfig(org.openapis.openapi.models.shared.ProgressiveDialerConfig progressiveDialerConfig) {
         this.progressiveDialerConfig = progressiveDialerConfig;
         return this;
     }
     
+    public CreateCampaignRequestBodyDialerConfig(){}
 }

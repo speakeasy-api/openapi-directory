@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelMailboxExportJobRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CancelMailboxExportJobRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CancelMailboxExportJobRequest {
     
     @JsonProperty("JobId")
     public String jobId;
+
     public CancelMailboxExportJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -23,9 +25,15 @@ public class CancelMailboxExportJobRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public CancelMailboxExportJobRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public CancelMailboxExportJobRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("JobId") String jobId, @JsonProperty("OrganizationId") String organizationId) {
+        this.clientToken = clientToken;
+        this.jobId = jobId;
+        this.organizationId = organizationId;
+  }
 }

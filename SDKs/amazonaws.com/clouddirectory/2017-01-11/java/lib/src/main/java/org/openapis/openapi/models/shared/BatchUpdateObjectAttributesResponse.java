@@ -15,9 +15,11 @@ public class BatchUpdateObjectAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public BatchUpdateObjectAttributesResponse withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
     }
     
+    public BatchUpdateObjectAttributesResponse(){}
 }

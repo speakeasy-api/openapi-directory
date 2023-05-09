@@ -18,6 +18,7 @@ public class PricingConfigurationPriceVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerLimit")
     public Long lowerLimit;
+
     public PricingConfigurationPriceVariation withLowerLimit(Long lowerLimit) {
         this.lowerLimit = lowerLimit;
         return this;
@@ -29,9 +30,11 @@ public class PricingConfigurationPriceVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperLimit")
     public Long upperLimit;
+
     public PricingConfigurationPriceVariation withUpperLimit(Long upperLimit) {
         this.upperLimit = upperLimit;
         return this;
     }
     
+    public PricingConfigurationPriceVariation(){}
 }

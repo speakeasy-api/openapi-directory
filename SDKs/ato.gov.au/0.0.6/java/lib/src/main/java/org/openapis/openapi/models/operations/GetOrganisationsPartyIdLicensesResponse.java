@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganisationsPartyIdLicensesResponse {
     
     public String contentType;
+
     public GetOrganisationsPartyIdLicensesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganisationsPartyIdLicensesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrganisationsPartyIdLicensesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganisationsPartyIdLicensesResponse {
     
     
     public Integer statusCode;
+
     public GetOrganisationsPartyIdLicensesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetOrganisationsPartyIdLicensesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganisationsPartyIdLicensesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetOrganisationsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.License[] licenses;
+
     public GetOrganisationsPartyIdLicensesResponse withLicenses(org.openapis.openapi.models.shared.License[] licenses) {
         this.licenses = licenses;
         return this;
@@ -50,6 +56,7 @@ public class GetOrganisationsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetOrganisationsPartyIdLicensesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetOrganisationsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetOrganisationsPartyIdLicensesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetOrganisationsPartyIdLicensesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

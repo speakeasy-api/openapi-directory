@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2KMapEstimationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auxiliaryTables")
     public GooglePrivacyDlpV2AuxiliaryTable[] auxiliaryTables;
+
     public GooglePrivacyDlpV2KMapEstimationConfig withAuxiliaryTables(GooglePrivacyDlpV2AuxiliaryTable[] auxiliaryTables) {
         this.auxiliaryTables = auxiliaryTables;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2KMapEstimationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quasiIds")
     public GooglePrivacyDlpV2TaggedField[] quasiIds;
+
     public GooglePrivacyDlpV2KMapEstimationConfig withQuasiIds(GooglePrivacyDlpV2TaggedField[] quasiIds) {
         this.quasiIds = quasiIds;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2KMapEstimationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GooglePrivacyDlpV2KMapEstimationConfig withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public GooglePrivacyDlpV2KMapEstimationConfig(){}
 }

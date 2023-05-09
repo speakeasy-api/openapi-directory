@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ImportFlowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowContent")
     public String flowContent;
+
     public GoogleCloudDialogflowCxV3ImportFlowRequest withFlowContent(String flowContent) {
         this.flowContent = flowContent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3ImportFlowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowUri")
     public String flowUri;
+
     public GoogleCloudDialogflowCxV3ImportFlowRequest withFlowUri(String flowUri) {
         this.flowUri = flowUri;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3ImportFlowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importOption")
     public GoogleCloudDialogflowCxV3ImportFlowRequestImportOptionEnum importOption;
+
     public GoogleCloudDialogflowCxV3ImportFlowRequest withImportOption(GoogleCloudDialogflowCxV3ImportFlowRequestImportOptionEnum importOption) {
         this.importOption = importOption;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ImportFlowRequest(){}
 }

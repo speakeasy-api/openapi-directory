@@ -13,8 +13,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ExchangeCodeForTokenRequestBodyRequest {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientId")
+    public String clientId;
+
+    public ExchangeCodeForTokenRequestBodyRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ExchangeCodeForTokenRequestBodyRequest withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +33,11 @@ public class ExchangeCodeForTokenRequestBodyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUri")
     public String redirectUri;
+
     public ExchangeCodeForTokenRequestBodyRequest withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
     }
     
+    public ExchangeCodeForTokenRequestBodyRequest(){}
 }

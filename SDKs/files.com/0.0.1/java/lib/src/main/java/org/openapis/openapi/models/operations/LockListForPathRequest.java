@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LockListForPathRequest {
@@ -12,6 +13,7 @@ public class LockListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public LockListForPathRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class LockListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_children")
     public Boolean includeChildren;
+
     public LockListForPathRequest withIncludeChildren(Boolean includeChildren) {
         this.includeChildren = includeChildren;
         return this;
@@ -32,6 +35,7 @@ public class LockListForPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public LockListForPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -42,9 +46,13 @@ public class LockListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public LockListForPathRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public LockListForPathRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

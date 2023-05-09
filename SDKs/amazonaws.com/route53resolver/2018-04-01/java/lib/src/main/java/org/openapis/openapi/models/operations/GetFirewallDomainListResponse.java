@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFirewallDomainListResponse {
@@ -12,6 +13,7 @@ public class GetFirewallDomainListResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFirewallDomainListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetFirewallDomainListResponse {
     
     
     public String contentType;
+
     public GetFirewallDomainListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFirewallDomainListResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFirewallDomainListResponse getFirewallDomainListResponse;
+
     public GetFirewallDomainListResponse withGetFirewallDomainListResponse(org.openapis.openapi.models.shared.GetFirewallDomainListResponse getFirewallDomainListResponse) {
         this.getFirewallDomainListResponse = getFirewallDomainListResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetFirewallDomainListResponse {
      */
     
     public Object internalServiceErrorException;
+
     public GetFirewallDomainListResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetFirewallDomainListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFirewallDomainListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetFirewallDomainListResponse {
     
     
     public Integer statusCode;
+
     public GetFirewallDomainListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetFirewallDomainListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFirewallDomainListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetFirewallDomainListResponse {
      */
     
     public Object throttlingException;
+
     public GetFirewallDomainListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetFirewallDomainListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class TextAutoReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TextAutoReply withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class TextAutoReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword")
     public String keyword;
+
     public TextAutoReply withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -40,6 +42,7 @@ public class TextAutoReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public String match;
+
     public TextAutoReply withMatch(String match) {
         this.match = match;
         return this;
@@ -51,6 +54,7 @@ public class TextAutoReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TextAutoReply withMessage(String message) {
         this.message = message;
         return this;
@@ -62,9 +66,11 @@ public class TextAutoReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public TextAutoReply withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public TextAutoReply(){}
 }

@@ -18,9 +18,11 @@ public class RemovePublicKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public RemovePublicKeyRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public RemovePublicKeyRequest(){}
 }

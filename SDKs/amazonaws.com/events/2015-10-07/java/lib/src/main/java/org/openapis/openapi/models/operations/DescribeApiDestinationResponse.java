@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeApiDestinationResponse {
     
     public String contentType;
+
     public DescribeApiDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeApiDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeApiDestinationResponse describeApiDestinationResponse;
+
     public DescribeApiDestinationResponse withDescribeApiDestinationResponse(org.openapis.openapi.models.shared.DescribeApiDestinationResponse describeApiDestinationResponse) {
         this.describeApiDestinationResponse = describeApiDestinationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeApiDestinationResponse {
      */
     
     public Object internalException;
+
     public DescribeApiDestinationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeApiDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeApiDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeApiDestinationResponse {
     
     
     public Integer statusCode;
+
     public DescribeApiDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeApiDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeApiDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeApiDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -40,10 +40,11 @@ public class Uninstallation {
      * 
      * \u30a2\u30f3\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6642\u306e\u6ce8\u610f\u70b9\u306b\u3064\u3044\u3066\u306f\u3001[\u30a2\u30d7\u30ea\u306e\u30a2\u30f3\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb](https://app.shop-pro.jp/open_api#section/API/\u30a2\u30d7\u30ea\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb)\u3092\u53c2\u7167\u3057\u3066\u4e0b\u3055\u3044\u3002
      * 
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteInstallationResponse deleteInstallation() throws Exception {
+    public org.openapis.openapi.models.operations.DeleteInstallationResponse deleteInstallation(org.openapis.openapi.models.operations.DeleteInstallationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/appstore/v1/installation.json");
         
@@ -52,16 +53,15 @@ public class Uninstallation {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteInstallationResponse res = new org.openapis.openapi.models.operations.DeleteInstallationResponse() {{
+        org.openapis.openapi.models.operations.DeleteInstallationResponse res = new org.openapis.openapi.models.operations.DeleteInstallationResponse(contentType, httpRes.statusCode()) {{
             deleteInstallation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

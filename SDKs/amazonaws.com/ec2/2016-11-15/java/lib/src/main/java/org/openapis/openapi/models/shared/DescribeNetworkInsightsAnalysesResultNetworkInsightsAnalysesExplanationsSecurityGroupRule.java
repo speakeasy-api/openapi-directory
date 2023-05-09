@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule {
     
     public String cidr;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String direction;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRulePortRange portRange;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule withPortRange(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRulePortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String prefixListId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String protocol;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -47,9 +52,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String securityGroupId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsSecurityGroupRule(){}
 }

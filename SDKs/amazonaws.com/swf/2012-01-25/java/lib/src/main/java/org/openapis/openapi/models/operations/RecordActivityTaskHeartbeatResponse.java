@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecordActivityTaskHeartbeatResponse {
@@ -12,6 +13,7 @@ public class RecordActivityTaskHeartbeatResponse {
      */
     
     public org.openapis.openapi.models.shared.ActivityTaskStatus activityTaskStatus;
+
     public RecordActivityTaskHeartbeatResponse withActivityTaskStatus(org.openapis.openapi.models.shared.ActivityTaskStatus activityTaskStatus) {
         this.activityTaskStatus = activityTaskStatus;
         return this;
@@ -19,6 +21,7 @@ public class RecordActivityTaskHeartbeatResponse {
     
     
     public String contentType;
+
     public RecordActivityTaskHeartbeatResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RecordActivityTaskHeartbeatResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public RecordActivityTaskHeartbeatResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -36,6 +40,7 @@ public class RecordActivityTaskHeartbeatResponse {
     
     
     public Integer statusCode;
+
     public RecordActivityTaskHeartbeatResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RecordActivityTaskHeartbeatResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecordActivityTaskHeartbeatResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class RecordActivityTaskHeartbeatResponse {
      */
     
     public Object unknownResourceFault;
+
     public RecordActivityTaskHeartbeatResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public RecordActivityTaskHeartbeatResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class REPERTOIREcreatereponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public REPERTOIREcreatereponseEtat etat;
+
     public REPERTOIREcreatereponse withEtat(REPERTOIREcreatereponseEtat etat) {
         this.etat = etat;
         return this;
     }
     
+    public REPERTOIREcreatereponse(){}
 }

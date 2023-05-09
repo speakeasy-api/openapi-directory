@@ -12,6 +12,7 @@ public class GetApiV1TimelinesHomeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1TimelinesHomeRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetApiV1TimelinesHomeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
     public Boolean local;
+
     public GetApiV1TimelinesHomeRequest withLocal(Boolean local) {
         this.local = local;
         return this;
@@ -32,6 +34,7 @@ public class GetApiV1TimelinesHomeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
     public String maxId;
+
     public GetApiV1TimelinesHomeRequest withMaxId(String maxId) {
         this.maxId = maxId;
         return this;
@@ -42,6 +45,7 @@ public class GetApiV1TimelinesHomeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
     public String minId;
+
     public GetApiV1TimelinesHomeRequest withMinId(String minId) {
         this.minId = minId;
         return this;
@@ -52,9 +56,11 @@ public class GetApiV1TimelinesHomeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
     public String sinceId;
+
     public GetApiV1TimelinesHomeRequest withSinceId(String sinceId) {
         this.sinceId = sinceId;
         return this;
     }
     
+    public GetApiV1TimelinesHomeRequest(){}
 }

@@ -18,6 +18,7 @@ public class AutoscalerListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AutoscalerListWarningCodeEnum code;
+
     public AutoscalerListWarning withCode(AutoscalerListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class AutoscalerListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AutoscalerListWarningData[] data;
+
     public AutoscalerListWarning withData(AutoscalerListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class AutoscalerListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AutoscalerListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AutoscalerListWarning(){}
 }

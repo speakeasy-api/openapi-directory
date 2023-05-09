@@ -15,6 +15,7 @@ public class CustomerUserStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public CustomerUserStats withDate(Date date) {
         this.date = date;
         return this;
@@ -26,6 +27,7 @@ public class CustomerUserStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneDayActiveUsersCount")
     public String oneDayActiveUsersCount;
+
     public CustomerUserStats withOneDayActiveUsersCount(String oneDayActiveUsersCount) {
         this.oneDayActiveUsersCount = oneDayActiveUsersCount;
         return this;
@@ -37,6 +39,7 @@ public class CustomerUserStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sevenDaysActiveUsersCount")
     public String sevenDaysActiveUsersCount;
+
     public CustomerUserStats withSevenDaysActiveUsersCount(String sevenDaysActiveUsersCount) {
         this.sevenDaysActiveUsersCount = sevenDaysActiveUsersCount;
         return this;
@@ -48,9 +51,11 @@ public class CustomerUserStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirtyDaysActiveUsersCount")
     public String thirtyDaysActiveUsersCount;
+
     public CustomerUserStats withThirtyDaysActiveUsersCount(String thirtyDaysActiveUsersCount) {
         this.thirtyDaysActiveUsersCount = thirtyDaysActiveUsersCount;
         return this;
     }
     
+    public CustomerUserStats(){}
 }

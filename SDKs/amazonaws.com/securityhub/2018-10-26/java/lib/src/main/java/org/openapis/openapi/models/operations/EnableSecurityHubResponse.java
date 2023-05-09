@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableSecurityHubResponse {
@@ -12,6 +13,7 @@ public class EnableSecurityHubResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableSecurityHubResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class EnableSecurityHubResponse {
     
     
     public String contentType;
+
     public EnableSecurityHubResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableSecurityHubResponse {
      */
     
     public java.util.Map<String, Object> enableSecurityHubResponse;
+
     public EnableSecurityHubResponse withEnableSecurityHubResponse(java.util.Map<String, Object> enableSecurityHubResponse) {
         this.enableSecurityHubResponse = enableSecurityHubResponse;
         return this;
@@ -39,6 +43,7 @@ public class EnableSecurityHubResponse {
      */
     
     public Object internalException;
+
     public EnableSecurityHubResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class EnableSecurityHubResponse {
      */
     
     public Object invalidAccessException;
+
     public EnableSecurityHubResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -59,6 +65,7 @@ public class EnableSecurityHubResponse {
      */
     
     public Object limitExceededException;
+
     public EnableSecurityHubResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class EnableSecurityHubResponse {
      */
     
     public Object resourceConflictException;
+
     public EnableSecurityHubResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -76,6 +84,7 @@ public class EnableSecurityHubResponse {
     
     
     public Integer statusCode;
+
     public EnableSecurityHubResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class EnableSecurityHubResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableSecurityHubResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnableSecurityHubResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

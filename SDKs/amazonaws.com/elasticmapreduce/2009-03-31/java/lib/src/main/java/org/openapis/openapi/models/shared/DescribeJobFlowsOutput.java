@@ -15,9 +15,11 @@ public class DescribeJobFlowsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobFlows")
     public JobFlowDetail[] jobFlows;
+
     public DescribeJobFlowsOutput withJobFlows(JobFlowDetail[] jobFlows) {
         this.jobFlows = jobFlows;
         return this;
     }
     
+    public DescribeJobFlowsOutput(){}
 }

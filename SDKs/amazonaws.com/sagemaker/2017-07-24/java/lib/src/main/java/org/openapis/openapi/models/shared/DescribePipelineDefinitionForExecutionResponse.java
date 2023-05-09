@@ -22,6 +22,7 @@ public class DescribePipelineDefinitionForExecutionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribePipelineDefinitionForExecutionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,9 +31,11 @@ public class DescribePipelineDefinitionForExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDefinition")
     public String pipelineDefinition;
+
     public DescribePipelineDefinitionForExecutionResponse withPipelineDefinition(String pipelineDefinition) {
         this.pipelineDefinition = pipelineDefinition;
         return this;
     }
     
+    public DescribePipelineDefinitionForExecutionResponse(){}
 }

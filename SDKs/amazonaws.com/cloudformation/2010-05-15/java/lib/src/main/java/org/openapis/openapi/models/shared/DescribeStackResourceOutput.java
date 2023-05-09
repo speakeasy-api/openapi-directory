@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeStackResourceOutput {
     
     public StackResourceDetail stackResourceDetail;
+
     public DescribeStackResourceOutput withStackResourceDetail(StackResourceDetail stackResourceDetail) {
         this.stackResourceDetail = stackResourceDetail;
         return this;
     }
     
+    public DescribeStackResourceOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRouteRequest {
@@ -18,6 +19,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=algorithm")
     public GetRouteAlgorithmEnum algorithm;
+
     public GetRouteRequest withAlgorithm(GetRouteAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,6 +31,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternative_route.max_paths")
     public Integer alternativeRouteMaxPaths;
+
     public GetRouteRequest withAlternativeRouteMaxPaths(Integer alternativeRouteMaxPaths) {
         this.alternativeRouteMaxPaths = alternativeRouteMaxPaths;
         return this;
@@ -40,6 +43,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternative_route.max_share_factor")
     public Double alternativeRouteMaxShareFactor;
+
     public GetRouteRequest withAlternativeRouteMaxShareFactor(Double alternativeRouteMaxShareFactor) {
         this.alternativeRouteMaxShareFactor = alternativeRouteMaxShareFactor;
         return this;
@@ -51,6 +55,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternative_route.max_weight_factor")
     public Double alternativeRouteMaxWeightFactor;
+
     public GetRouteRequest withAlternativeRouteMaxWeightFactor(Double alternativeRouteMaxWeightFactor) {
         this.alternativeRouteMaxWeightFactor = alternativeRouteMaxWeightFactor;
         return this;
@@ -64,6 +69,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=avoid")
     public String avoid;
+
     public GetRouteRequest withAvoid(String avoid) {
         this.avoid = avoid;
         return this;
@@ -77,6 +83,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=block_area")
     public String blockArea;
+
     public GetRouteRequest withBlockArea(String blockArea) {
         this.blockArea = blockArea;
         return this;
@@ -88,6 +95,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calc_points")
     public Boolean calcPoints;
+
     public GetRouteRequest withCalcPoints(Boolean calcPoints) {
         this.calcPoints = calcPoints;
         return this;
@@ -99,6 +107,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ch.disable")
     public Boolean chDisable;
+
     public GetRouteRequest withChDisable(Boolean chDisable) {
         this.chDisable = chDisable;
         return this;
@@ -110,6 +119,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=curbside")
     public GetRouteCurbsideEnum[] curbside;
+
     public GetRouteRequest withCurbside(GetRouteCurbsideEnum[] curbside) {
         this.curbside = curbside;
         return this;
@@ -121,6 +131,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=debug")
     public Boolean debug;
+
     public GetRouteRequest withDebug(Boolean debug) {
         this.debug = debug;
         return this;
@@ -133,6 +144,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=details")
     public String[] details;
+
     public GetRouteRequest withDetails(String[] details) {
         this.details = details;
         return this;
@@ -148,6 +160,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=elevation")
     public Boolean elevation;
+
     public GetRouteRequest withElevation(Boolean elevation) {
         this.elevation = elevation;
         return this;
@@ -161,6 +174,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=heading")
     public Integer[] heading;
+
     public GetRouteRequest withHeading(Integer[] heading) {
         this.heading = heading;
         return this;
@@ -172,6 +186,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=heading_penalty")
     public Integer headingPenalty;
+
     public GetRouteRequest withHeadingPenalty(Integer headingPenalty) {
         this.headingPenalty = headingPenalty;
         return this;
@@ -183,6 +198,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instructions")
     public Boolean instructions;
+
     public GetRouteRequest withInstructions(Boolean instructions) {
         this.instructions = instructions;
         return this;
@@ -194,6 +210,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetRouteRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -207,6 +224,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optimize")
     public String optimize;
+
     public GetRouteRequest withOptimize(String optimize) {
         this.optimize = optimize;
         return this;
@@ -218,6 +236,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pass_through")
     public Boolean passThrough;
+
     public GetRouteRequest withPassThrough(Boolean passThrough) {
         this.passThrough = passThrough;
         return this;
@@ -230,6 +249,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
     public String[] point;
+
     public GetRouteRequest withPoint(String[] point) {
         this.point = point;
         return this;
@@ -241,6 +261,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point_hint")
     public String[] pointHint;
+
     public GetRouteRequest withPointHint(String[] pointHint) {
         this.pointHint = pointHint;
         return this;
@@ -255,6 +276,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=points_encoded")
     public Boolean pointsEncoded;
+
     public GetRouteRequest withPointsEncoded(Boolean pointsEncoded) {
         this.pointsEncoded = pointsEncoded;
         return this;
@@ -266,6 +288,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=round_trip.distance")
     public Integer roundTripDistance;
+
     public GetRouteRequest withRoundTripDistance(Integer roundTripDistance) {
         this.roundTripDistance = roundTripDistance;
         return this;
@@ -277,6 +300,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=round_trip.seed")
     public Long roundTripSeed;
+
     public GetRouteRequest withRoundTripSeed(Long roundTripSeed) {
         this.roundTripSeed = roundTripSeed;
         return this;
@@ -288,6 +312,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=snap_prevention")
     public String[] snapPrevention;
+
     public GetRouteRequest withSnapPrevention(String[] snapPrevention) {
         this.snapPrevention = snapPrevention;
         return this;
@@ -299,6 +324,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=turn_costs")
     public Boolean turnCosts;
+
     public GetRouteRequest withTurnCosts(Boolean turnCosts) {
         this.turnCosts = turnCosts;
         return this;
@@ -310,6 +336,7 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle")
     public org.openapis.openapi.models.shared.VehicleProfileIdEnum vehicle;
+
     public GetRouteRequest withVehicle(org.openapis.openapi.models.shared.VehicleProfileIdEnum vehicle) {
         this.vehicle = vehicle;
         return this;
@@ -321,9 +348,13 @@ public class GetRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weighting")
     public String weighting;
+
     public GetRouteRequest withWeighting(String weighting) {
         this.weighting = weighting;
         return this;
     }
     
+    public GetRouteRequest(@JsonProperty("point") String[] point) {
+        this.point = point;
+  }
 }

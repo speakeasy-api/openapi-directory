@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCollectionResponse {
     
     public String contentType;
+
     public UpdateCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateCollectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateCollectionResponse {
      */
     
     public UpdateCollection200ApplicationJSON updateCollection200ApplicationJSONObject;
+
     public UpdateCollectionResponse withUpdateCollection200ApplicationJSONObject(UpdateCollection200ApplicationJSON updateCollection200ApplicationJSONObject) {
         this.updateCollection200ApplicationJSONObject = updateCollection200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCollectionResponse {
      */
     
     public UpdateCollection400ApplicationJSON updateCollection400ApplicationJSONObject;
+
     public UpdateCollectionResponse withUpdateCollection400ApplicationJSONObject(UpdateCollection400ApplicationJSON updateCollection400ApplicationJSONObject) {
         this.updateCollection400ApplicationJSONObject = updateCollection400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCollectionResponse {
      */
     
     public UpdateCollection403ApplicationJSON updateCollection403ApplicationJSONObject;
+
     public UpdateCollectionResponse withUpdateCollection403ApplicationJSONObject(UpdateCollection403ApplicationJSON updateCollection403ApplicationJSONObject) {
         this.updateCollection403ApplicationJSONObject = updateCollection403ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCollectionResponse {
      */
     
     public UpdateCollection404ApplicationJSON updateCollection404ApplicationJSONObject;
+
     public UpdateCollectionResponse withUpdateCollection404ApplicationJSONObject(UpdateCollection404ApplicationJSON updateCollection404ApplicationJSONObject) {
         this.updateCollection404ApplicationJSONObject = updateCollection404ApplicationJSONObject;
         return this;
     }
     
+    public UpdateCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

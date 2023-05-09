@@ -15,6 +15,7 @@ public class InstantSnapshotListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public InstantSnapshotListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class InstantSnapshotListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InstantSnapshotListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstantSnapshotListWarningData(){}
 }

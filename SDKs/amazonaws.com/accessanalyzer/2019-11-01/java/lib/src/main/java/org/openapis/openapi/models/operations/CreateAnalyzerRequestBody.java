@@ -14,6 +14,7 @@ public class CreateAnalyzerRequestBody {
      */
     @JsonProperty("analyzerName")
     public String analyzerName;
+
     public CreateAnalyzerRequestBody withAnalyzerName(String analyzerName) {
         this.analyzerName = analyzerName;
         return this;
@@ -25,6 +26,7 @@ public class CreateAnalyzerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveRules")
     public org.openapis.openapi.models.shared.InlineArchiveRule[] archiveRules;
+
     public CreateAnalyzerRequestBody withArchiveRules(org.openapis.openapi.models.shared.InlineArchiveRule[] archiveRules) {
         this.archiveRules = archiveRules;
         return this;
@@ -36,6 +38,7 @@ public class CreateAnalyzerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAnalyzerRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -47,6 +50,7 @@ public class CreateAnalyzerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAnalyzerRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -57,9 +61,14 @@ public class CreateAnalyzerRequestBody {
      */
     @JsonProperty("type")
     public CreateAnalyzerRequestBodyTypeEnum type;
+
     public CreateAnalyzerRequestBody withType(CreateAnalyzerRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateAnalyzerRequestBody(@JsonProperty("analyzerName") String analyzerName, @JsonProperty("type") CreateAnalyzerRequestBodyTypeEnum type) {
+        this.analyzerName = analyzerName;
+        this.type = type;
+  }
 }

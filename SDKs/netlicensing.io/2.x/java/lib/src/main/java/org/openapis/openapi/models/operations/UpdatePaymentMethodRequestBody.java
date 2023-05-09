@@ -12,6 +12,7 @@ public class UpdatePaymentMethodRequestBody {
      */
     @SpeakeasyMetadata("form:name=active")
     public Boolean active;
+
     public UpdatePaymentMethodRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,9 +23,11 @@ public class UpdatePaymentMethodRequestBody {
      */
     @SpeakeasyMetadata("form:name=paypal.subject")
     public String paypalSubject;
+
     public UpdatePaymentMethodRequestBody withPaypalSubject(String paypalSubject) {
         this.paypalSubject = paypalSubject;
         return this;
     }
     
+    public UpdatePaymentMethodRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class AwsEc2PlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public AwsEc2PlatformDetails withLocation(String location) {
         this.location = location;
         return this;
@@ -29,9 +30,11 @@ public class AwsEc2PlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineTypeLabel")
     public String machineTypeLabel;
+
     public AwsEc2PlatformDetails withMachineTypeLabel(String machineTypeLabel) {
         this.machineTypeLabel = machineTypeLabel;
         return this;
     }
     
+    public AwsEc2PlatformDetails(){}
 }

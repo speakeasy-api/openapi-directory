@@ -15,6 +15,7 @@ public class BatchGetTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Triggers")
     public Trigger[] triggers;
+
     public BatchGetTriggersResponse withTriggers(Trigger[] triggers) {
         this.triggers = triggers;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggersNotFound")
     public String[] triggersNotFound;
+
     public BatchGetTriggersResponse withTriggersNotFound(String[] triggersNotFound) {
         this.triggersNotFound = triggersNotFound;
         return this;
     }
     
+    public BatchGetTriggersResponse(){}
 }

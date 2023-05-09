@@ -12,6 +12,7 @@ public class ListCreatedArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCreatedArtifactsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListCreatedArtifactsRequest {
     
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public ListCreatedArtifactsRequest withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -27,6 +29,7 @@ public class ListCreatedArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCreatedArtifactsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class ListCreatedArtifactsRequest {
     
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public ListCreatedArtifactsRequest withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
     }
     
+    public ListCreatedArtifactsRequest(@JsonProperty("MigrationTaskName") String migrationTaskName, @JsonProperty("ProgressUpdateStream") String progressUpdateStream) {
+        this.migrationTaskName = migrationTaskName;
+        this.progressUpdateStream = progressUpdateStream;
+  }
 }

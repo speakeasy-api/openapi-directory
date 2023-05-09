@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetDocumentStatusRequest {
     @JsonProperty("DocumentInfoList")
     public DocumentInfo[] documentInfoList;
+
     public BatchGetDocumentStatusRequest withDocumentInfoList(DocumentInfo[] documentInfoList) {
         this.documentInfoList = documentInfoList;
         return this;
@@ -16,9 +17,14 @@ public class BatchGetDocumentStatusRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public BatchGetDocumentStatusRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public BatchGetDocumentStatusRequest(@JsonProperty("DocumentInfoList") DocumentInfo[] documentInfoList, @JsonProperty("IndexId") String indexId) {
+        this.documentInfoList = documentInfoList;
+        this.indexId = indexId;
+  }
 }

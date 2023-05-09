@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInternationalScheduledPaymentConsentsRawRequest {
@@ -12,6 +13,7 @@ public class CreateInternationalScheduledPaymentConsentsRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CreateInternationalScheduledPaymentConsentsRawRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class CreateInternationalScheduledPaymentConsentsRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/jose+jwe")
     public byte[] requestBody;
+
     public CreateInternationalScheduledPaymentConsentsRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -32,6 +35,7 @@ public class CreateInternationalScheduledPaymentConsentsRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public CreateInternationalScheduledPaymentConsentsRawRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class CreateInternationalScheduledPaymentConsentsRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public CreateInternationalScheduledPaymentConsentsRawRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class CreateInternationalScheduledPaymentConsentsRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public CreateInternationalScheduledPaymentConsentsRawRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,6 +70,7 @@ public class CreateInternationalScheduledPaymentConsentsRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateInternationalScheduledPaymentConsentsRawRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
@@ -76,6 +83,7 @@ public class CreateInternationalScheduledPaymentConsentsRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
     public String xIdempotencyKey;
+
     public CreateInternationalScheduledPaymentConsentsRawRequest withXIdempotencyKey(String xIdempotencyKey) {
         this.xIdempotencyKey = xIdempotencyKey;
         return this;
@@ -86,9 +94,16 @@ public class CreateInternationalScheduledPaymentConsentsRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
     public String xJwsSignature;
+
     public CreateInternationalScheduledPaymentConsentsRawRequest withXJwsSignature(String xJwsSignature) {
         this.xJwsSignature = xJwsSignature;
         return this;
     }
     
+    public CreateInternationalScheduledPaymentConsentsRawRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("x-idempotency-key") String xIdempotencyKey, @JsonProperty("x-jws-signature") String xJwsSignature) {
+        this.authorization = authorization;
+        this.requestBody = requestBody;
+        this.xIdempotencyKey = xIdempotencyKey;
+        this.xJwsSignature = xJwsSignature;
+  }
 }

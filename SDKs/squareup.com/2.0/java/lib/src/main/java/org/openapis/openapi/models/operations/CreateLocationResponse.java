@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLocationResponse {
     
     public String contentType;
+
     public CreateLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLocationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLocationResponse createLocationResponse;
+
     public CreateLocationResponse withCreateLocationResponse(org.openapis.openapi.models.shared.CreateLocationResponse createLocationResponse) {
         this.createLocationResponse = createLocationResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateLocationResponse {
     
     
     public Integer statusCode;
+
     public CreateLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreateLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

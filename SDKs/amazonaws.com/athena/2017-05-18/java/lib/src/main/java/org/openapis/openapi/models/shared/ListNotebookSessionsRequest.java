@@ -12,6 +12,7 @@ public class ListNotebookSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListNotebookSessionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListNotebookSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotebookSessionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListNotebookSessionsRequest {
     
     @JsonProperty("NotebookId")
     public String notebookId;
+
     public ListNotebookSessionsRequest withNotebookId(String notebookId) {
         this.notebookId = notebookId;
         return this;
     }
     
+    public ListNotebookSessionsRequest(@JsonProperty("NotebookId") String notebookId) {
+        this.notebookId = notebookId;
+  }
 }

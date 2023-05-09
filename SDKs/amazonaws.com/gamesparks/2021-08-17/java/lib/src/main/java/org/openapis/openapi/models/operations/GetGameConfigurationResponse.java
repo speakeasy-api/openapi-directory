@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGameConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetGameConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetGameConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetGameConfigurationResponse {
     
     
     public String contentType;
+
     public GetGameConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGameConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGameConfigurationResult getGameConfigurationResult;
+
     public GetGameConfigurationResponse withGetGameConfigurationResult(org.openapis.openapi.models.shared.GetGameConfigurationResult getGameConfigurationResult) {
         this.getGameConfigurationResult = getGameConfigurationResult;
         return this;
@@ -39,6 +43,7 @@ public class GetGameConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetGameConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetGameConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetGameConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetGameConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetGameConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetGameConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGameConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetGameConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetGameConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetGameConfigurationResponse {
      */
     
     public Object validationException;
+
     public GetGameConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetGameConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

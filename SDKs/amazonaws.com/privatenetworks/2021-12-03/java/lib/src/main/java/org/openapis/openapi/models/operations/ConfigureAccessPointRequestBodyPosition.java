@@ -15,6 +15,7 @@ public class ConfigureAccessPointRequestBodyPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevation")
     public Double elevation;
+
     public ConfigureAccessPointRequestBodyPosition withElevation(Double elevation) {
         this.elevation = elevation;
         return this;
@@ -23,6 +24,7 @@ public class ConfigureAccessPointRequestBodyPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevationReference")
     public org.openapis.openapi.models.shared.ElevationReferenceEnum elevationReference;
+
     public ConfigureAccessPointRequestBodyPosition withElevationReference(org.openapis.openapi.models.shared.ElevationReferenceEnum elevationReference) {
         this.elevationReference = elevationReference;
         return this;
@@ -31,6 +33,7 @@ public class ConfigureAccessPointRequestBodyPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevationUnit")
     public org.openapis.openapi.models.shared.ElevationUnitEnum elevationUnit;
+
     public ConfigureAccessPointRequestBodyPosition withElevationUnit(org.openapis.openapi.models.shared.ElevationUnitEnum elevationUnit) {
         this.elevationUnit = elevationUnit;
         return this;
@@ -39,6 +42,7 @@ public class ConfigureAccessPointRequestBodyPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public ConfigureAccessPointRequestBodyPosition withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -47,9 +51,11 @@ public class ConfigureAccessPointRequestBodyPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public ConfigureAccessPointRequestBodyPosition withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public ConfigureAccessPointRequestBodyPosition(){}
 }

@@ -15,6 +15,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ResolverEndpoint withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public ResolverEndpoint withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +33,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public ResolverEndpoint withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -39,6 +42,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Direction")
     public ResolverEndpointDirectionEnum direction;
+
     public ResolverEndpoint withDirection(ResolverEndpointDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -47,6 +51,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostVPCId")
     public String hostVPCId;
+
     public ResolverEndpoint withHostVPCId(String hostVPCId) {
         this.hostVPCId = hostVPCId;
         return this;
@@ -55,6 +60,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResolverEndpoint withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddressCount")
     public Long ipAddressCount;
+
     public ResolverEndpoint withIpAddressCount(Long ipAddressCount) {
         this.ipAddressCount = ipAddressCount;
         return this;
@@ -71,6 +78,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModificationTime")
     public String modificationTime;
+
     public ResolverEndpoint withModificationTime(String modificationTime) {
         this.modificationTime = modificationTime;
         return this;
@@ -79,6 +87,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResolverEndpoint withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +96,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverEndpointType")
     public ResolverEndpointTypeEnum resolverEndpointType;
+
     public ResolverEndpoint withResolverEndpointType(ResolverEndpointTypeEnum resolverEndpointType) {
         this.resolverEndpointType = resolverEndpointType;
         return this;
@@ -95,6 +105,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public ResolverEndpoint withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -103,6 +114,7 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ResolverEndpointStatusEnum status;
+
     public ResolverEndpoint withStatus(ResolverEndpointStatusEnum status) {
         this.status = status;
         return this;
@@ -111,9 +123,11 @@ public class ResolverEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ResolverEndpoint withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ResolverEndpoint(){}
 }

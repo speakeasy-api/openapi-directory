@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FirehoseAction {
     @JsonProperty("deliveryStreamName")
     public String deliveryStreamName;
+
     public FirehoseAction withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -22,6 +23,7 @@ public class FirehoseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public Payload payload;
+
     public FirehoseAction withPayload(Payload payload) {
         this.payload = payload;
         return this;
@@ -30,9 +32,13 @@ public class FirehoseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("separator")
     public String separator;
+
     public FirehoseAction withSeparator(String separator) {
         this.separator = separator;
         return this;
     }
     
+    public FirehoseAction(@JsonProperty("deliveryStreamName") String deliveryStreamName) {
+        this.deliveryStreamName = deliveryStreamName;
+  }
 }

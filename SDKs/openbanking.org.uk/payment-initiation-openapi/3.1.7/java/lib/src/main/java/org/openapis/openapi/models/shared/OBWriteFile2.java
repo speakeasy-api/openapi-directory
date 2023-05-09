@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBWriteFile2 {
     @JsonProperty("Data")
     public OBWriteFile2Data data;
+
     public OBWriteFile2 withData(OBWriteFile2Data data) {
         this.data = data;
         return this;
     }
     
+    public OBWriteFile2(@JsonProperty("Data") OBWriteFile2Data data) {
+        this.data = data;
+  }
 }

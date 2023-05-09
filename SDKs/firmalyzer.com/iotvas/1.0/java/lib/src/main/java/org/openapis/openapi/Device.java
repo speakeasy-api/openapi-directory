@@ -58,12 +58,10 @@ public class Device {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectDeviceResponse res = new org.openapis.openapi.models.operations.DetectDeviceResponse() {{
+        org.openapis.openapi.models.operations.DetectDeviceResponse res = new org.openapis.openapi.models.operations.DetectDeviceResponse(contentType, httpRes.statusCode()) {{
             deviceInfo = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

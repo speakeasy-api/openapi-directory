@@ -15,6 +15,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public String attribute;
+
     public Attribute withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -23,6 +24,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Attribute withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public Attribute withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -39,6 +42,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Attribute withId(Long id) {
         this.id = id;
         return this;
@@ -50,9 +54,11 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Attribute withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Attribute(){}
 }

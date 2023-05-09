@@ -15,6 +15,7 @@ public class GetTranscriptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitialContactId")
     public String initialContactId;
+
     public GetTranscriptResponse withInitialContactId(String initialContactId) {
         this.initialContactId = initialContactId;
         return this;
@@ -23,6 +24,7 @@ public class GetTranscriptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTranscriptResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class GetTranscriptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Transcript")
     public Item[] transcript;
+
     public GetTranscriptResponse withTranscript(Item[] transcript) {
         this.transcript = transcript;
         return this;
     }
     
+    public GetTranscriptResponse(){}
 }

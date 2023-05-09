@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RunCommandTarget {
     @JsonProperty("Key")
     public String key;
+
     public RunCommandTarget withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class RunCommandTarget {
     
     @JsonProperty("Values")
     public String[] values;
+
     public RunCommandTarget withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public RunCommandTarget(@JsonProperty("Key") String key, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

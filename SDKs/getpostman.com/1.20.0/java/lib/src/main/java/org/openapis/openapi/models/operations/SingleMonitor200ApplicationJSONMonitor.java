@@ -12,6 +12,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionUid")
     public String collectionUid;
+
     public SingleMonitor200ApplicationJSONMonitor withCollectionUid(String collectionUid) {
         this.collectionUid = collectionUid;
         return this;
@@ -20,6 +21,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution")
     public Object[] distribution;
+
     public SingleMonitor200ApplicationJSONMonitor withDistribution(Object[] distribution) {
         this.distribution = distribution;
         return this;
@@ -28,6 +30,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentUid")
     public String environmentUid;
+
     public SingleMonitor200ApplicationJSONMonitor withEnvironmentUid(String environmentUid) {
         this.environmentUid = environmentUid;
         return this;
@@ -36,6 +39,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SingleMonitor200ApplicationJSONMonitor withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRun")
     public SingleMonitor200ApplicationJSONMonitorLastRun lastRun;
+
     public SingleMonitor200ApplicationJSONMonitor withLastRun(SingleMonitor200ApplicationJSONMonitorLastRun lastRun) {
         this.lastRun = lastRun;
         return this;
@@ -52,6 +57,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SingleMonitor200ApplicationJSONMonitor withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +66,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public SingleMonitor200ApplicationJSONMonitorNotifications notifications;
+
     public SingleMonitor200ApplicationJSONMonitor withNotifications(SingleMonitor200ApplicationJSONMonitorNotifications notifications) {
         this.notifications = notifications;
         return this;
@@ -68,6 +75,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public SingleMonitor200ApplicationJSONMonitorOptions options;
+
     public SingleMonitor200ApplicationJSONMonitor withOptions(SingleMonitor200ApplicationJSONMonitorOptions options) {
         this.options = options;
         return this;
@@ -76,6 +84,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public SingleMonitor200ApplicationJSONMonitor withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -84,6 +93,7 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public SingleMonitor200ApplicationJSONMonitorSchedule schedule;
+
     public SingleMonitor200ApplicationJSONMonitor withSchedule(SingleMonitor200ApplicationJSONMonitorSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -92,9 +102,11 @@ public class SingleMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public SingleMonitor200ApplicationJSONMonitor withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitor(){}
 }

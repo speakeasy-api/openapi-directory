@@ -15,6 +15,7 @@ public class SamsungPreviewSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public SamsungPreviewSection withPosition(Integer position) {
         this.position = position;
         return this;
@@ -25,6 +26,7 @@ public class SamsungPreviewSection {
      */
     @JsonProperty("tiles")
     public SamsungPreviewSectionTile[] tiles;
+
     public SamsungPreviewSection withTiles(SamsungPreviewSectionTile[] tiles) {
         this.tiles = tiles;
         return this;
@@ -36,9 +38,13 @@ public class SamsungPreviewSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SamsungPreviewSection withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SamsungPreviewSection(@JsonProperty("tiles") SamsungPreviewSectionTile[] tiles) {
+        this.tiles = tiles;
+  }
 }

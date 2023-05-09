@@ -19,6 +19,7 @@ public class GetMediaAssets400ApplicationVndApiPlusJsonErrorsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public GetMediaAssets400ApplicationVndApiPlusJsonErrorsSource withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -31,9 +32,11 @@ public class GetMediaAssets400ApplicationVndApiPlusJsonErrorsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointer")
     public String pointer;
+
     public GetMediaAssets400ApplicationVndApiPlusJsonErrorsSource withPointer(String pointer) {
         this.pointer = pointer;
         return this;
     }
     
+    public GetMediaAssets400ApplicationVndApiPlusJsonErrorsSource(){}
 }

@@ -15,6 +15,7 @@ public class V3RunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run")
     public V3Run run;
+
     public V3RunResponse withRun(V3Run run) {
         this.run = run;
         return this;
@@ -23,9 +24,11 @@ public class V3RunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public V3Status status;
+
     public V3RunResponse withStatus(V3Status status) {
         this.status = status;
         return this;
     }
     
+    public V3RunResponse(){}
 }

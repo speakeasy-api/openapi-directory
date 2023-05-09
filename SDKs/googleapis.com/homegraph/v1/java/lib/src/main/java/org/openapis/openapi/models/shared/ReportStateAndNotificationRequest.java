@@ -18,6 +18,7 @@ public class ReportStateAndNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentUserId")
     public String agentUserId;
+
     public ReportStateAndNotificationRequest withAgentUserId(String agentUserId) {
         this.agentUserId = agentUserId;
         return this;
@@ -29,6 +30,7 @@ public class ReportStateAndNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public ReportStateAndNotificationRequest withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -40,6 +42,7 @@ public class ReportStateAndNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followUpToken")
     public String followUpToken;
+
     public ReportStateAndNotificationRequest withFollowUpToken(String followUpToken) {
         this.followUpToken = followUpToken;
         return this;
@@ -51,6 +54,7 @@ public class ReportStateAndNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public StateAndNotificationPayload payload;
+
     public ReportStateAndNotificationRequest withPayload(StateAndNotificationPayload payload) {
         this.payload = payload;
         return this;
@@ -62,9 +66,11 @@ public class ReportStateAndNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ReportStateAndNotificationRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ReportStateAndNotificationRequest(){}
 }

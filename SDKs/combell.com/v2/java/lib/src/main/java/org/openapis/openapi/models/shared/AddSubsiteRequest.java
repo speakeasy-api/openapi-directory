@@ -18,6 +18,7 @@ public class AddSubsiteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public AddSubsiteRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -30,9 +31,11 @@ public class AddSubsiteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public AddSubsiteRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public AddSubsiteRequest(){}
 }

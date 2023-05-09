@@ -18,6 +18,7 @@ public class ListCreativeStatusBreakdownByCreativeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteredBidCreativeRows")
     public FilteredBidCreativeRow[] filteredBidCreativeRows;
+
     public ListCreativeStatusBreakdownByCreativeResponse withFilteredBidCreativeRows(FilteredBidCreativeRow[] filteredBidCreativeRows) {
         this.filteredBidCreativeRows = filteredBidCreativeRows;
         return this;
@@ -29,9 +30,11 @@ public class ListCreativeStatusBreakdownByCreativeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCreativeStatusBreakdownByCreativeResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCreativeStatusBreakdownByCreativeResponse(){}
 }

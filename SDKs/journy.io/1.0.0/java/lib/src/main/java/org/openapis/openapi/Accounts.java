@@ -61,15 +61,13 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddUserToAccountResponse res = new org.openapis.openapi.models.operations.AddUserToAccountResponse() {{
+        org.openapis.openapi.models.operations.AddUserToAccountResponse res = new org.openapis.openapi.models.operations.AddUserToAccountResponse(contentType, httpRes.statusCode()) {{
             addUserToAccount201ApplicationJSONObject = null;
             addUserToAccount400ApplicationJSONObject = null;
             addUserToAccount401ApplicationJSONObject = null;
             addUserToAccount429ApplicationJSONObject = null;
             addUserToAccount500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -147,7 +145,7 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAccountResponse res = new org.openapis.openapi.models.operations.DeleteAccountResponse() {{
+        org.openapis.openapi.models.operations.DeleteAccountResponse res = new org.openapis.openapi.models.operations.DeleteAccountResponse(contentType, httpRes.statusCode()) {{
             deleteAccount202ApplicationJSONObject = null;
             deleteAccount400ApplicationJSONObject = null;
             deleteAccount401ApplicationJSONObject = null;
@@ -155,8 +153,6 @@ public class Accounts {
             deleteAccount429ApplicationJSONObject = null;
             deleteAccount500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -246,15 +242,13 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveUserFromAccountResponse res = new org.openapis.openapi.models.operations.RemoveUserFromAccountResponse() {{
+        org.openapis.openapi.models.operations.RemoveUserFromAccountResponse res = new org.openapis.openapi.models.operations.RemoveUserFromAccountResponse(contentType, httpRes.statusCode()) {{
             removeUserFromAccount204ApplicationJSONObject = null;
             removeUserFromAccount400ApplicationJSONObject = null;
             removeUserFromAccount401ApplicationJSONObject = null;
             removeUserFromAccount429ApplicationJSONObject = null;
             removeUserFromAccount500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -332,7 +326,7 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpsertAccountResponse res = new org.openapis.openapi.models.operations.UpsertAccountResponse() {{
+        org.openapis.openapi.models.operations.UpsertAccountResponse res = new org.openapis.openapi.models.operations.UpsertAccountResponse(contentType, httpRes.statusCode()) {{
             upsertAccount201ApplicationJSONObject = null;
             upsertAccount400ApplicationJSONObject = null;
             upsertAccount401ApplicationJSONObject = null;
@@ -340,8 +334,6 @@ public class Accounts {
             upsertAccount429ApplicationJSONObject = null;
             upsertAccount500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

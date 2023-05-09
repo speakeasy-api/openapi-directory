@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServicesInScopeResponse {
@@ -12,6 +13,7 @@ public class GetServicesInScopeResponse {
      */
     
     public Object accessDeniedException;
+
     public GetServicesInScopeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetServicesInScopeResponse {
     
     
     public String contentType;
+
     public GetServicesInScopeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetServicesInScopeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServicesInScopeResponse getServicesInScopeResponse;
+
     public GetServicesInScopeResponse withGetServicesInScopeResponse(org.openapis.openapi.models.shared.GetServicesInScopeResponse getServicesInScopeResponse) {
         this.getServicesInScopeResponse = getServicesInScopeResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetServicesInScopeResponse {
      */
     
     public Object internalServerException;
+
     public GetServicesInScopeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetServicesInScopeResponse {
     
     
     public Integer statusCode;
+
     public GetServicesInScopeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetServicesInScopeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServicesInScopeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetServicesInScopeResponse {
      */
     
     public Object validationException;
+
     public GetServicesInScopeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetServicesInScopeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

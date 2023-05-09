@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDescribePrincipalIdFormatRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDescribePrincipalIdFormatActionEnum action;
+
     public POSTDescribePrincipalIdFormatRequest withAction(POSTDescribePrincipalIdFormatActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class POSTDescribePrincipalIdFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public POSTDescribePrincipalIdFormatRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class POSTDescribePrincipalIdFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public POSTDescribePrincipalIdFormatRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDescribePrincipalIdFormatRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -43,6 +48,7 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDescribePrincipalIdFormatVersionEnum version;
+
     public POSTDescribePrincipalIdFormatRequest withVersion(POSTDescribePrincipalIdFormatVersionEnum version) {
         this.version = version;
         return this;
@@ -50,6 +56,7 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDescribePrincipalIdFormatRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -57,6 +64,7 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDescribePrincipalIdFormatRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -64,6 +72,7 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDescribePrincipalIdFormatRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -71,6 +80,7 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDescribePrincipalIdFormatRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -78,6 +88,7 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDescribePrincipalIdFormatRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -85,6 +96,7 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDescribePrincipalIdFormatRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -92,9 +104,14 @@ public class POSTDescribePrincipalIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDescribePrincipalIdFormatRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDescribePrincipalIdFormatRequest(@JsonProperty("Action") POSTDescribePrincipalIdFormatActionEnum action, @JsonProperty("Version") POSTDescribePrincipalIdFormatVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

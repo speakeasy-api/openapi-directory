@@ -12,6 +12,7 @@ public class DescribeTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public TaskDefinitionFieldEnum[] include;
+
     public DescribeTaskDefinitionRequest withInclude(TaskDefinitionFieldEnum[] include) {
         this.include = include;
         return this;
@@ -19,9 +20,13 @@ public class DescribeTaskDefinitionRequest {
     
     @JsonProperty("taskDefinition")
     public String taskDefinition;
+
     public DescribeTaskDefinitionRequest withTaskDefinition(String taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
     }
     
+    public DescribeTaskDefinitionRequest(@JsonProperty("taskDefinition") String taskDefinition) {
+        this.taskDefinition = taskDefinition;
+  }
 }

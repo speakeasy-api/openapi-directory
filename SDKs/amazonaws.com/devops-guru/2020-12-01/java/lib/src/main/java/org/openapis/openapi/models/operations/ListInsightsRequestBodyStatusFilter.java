@@ -15,6 +15,7 @@ public class ListInsightsRequestBodyStatusFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Any")
     public org.openapis.openapi.models.shared.ListInsightsAnyStatusFilter any;
+
     public ListInsightsRequestBodyStatusFilter withAny(org.openapis.openapi.models.shared.ListInsightsAnyStatusFilter any) {
         this.any = any;
         return this;
@@ -23,6 +24,7 @@ public class ListInsightsRequestBodyStatusFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Closed")
     public org.openapis.openapi.models.shared.ListInsightsClosedStatusFilter closed;
+
     public ListInsightsRequestBodyStatusFilter withClosed(org.openapis.openapi.models.shared.ListInsightsClosedStatusFilter closed) {
         this.closed = closed;
         return this;
@@ -31,9 +33,11 @@ public class ListInsightsRequestBodyStatusFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ongoing")
     public org.openapis.openapi.models.shared.ListInsightsOngoingStatusFilter ongoing;
+
     public ListInsightsRequestBodyStatusFilter withOngoing(org.openapis.openapi.models.shared.ListInsightsOngoingStatusFilter ongoing) {
         this.ongoing = ongoing;
         return this;
     }
     
+    public ListInsightsRequestBodyStatusFilter(){}
 }

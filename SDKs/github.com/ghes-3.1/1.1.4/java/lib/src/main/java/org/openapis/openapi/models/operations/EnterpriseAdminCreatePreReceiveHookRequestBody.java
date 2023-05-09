@@ -15,6 +15,7 @@ public class EnterpriseAdminCreatePreReceiveHookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_downstream_configuration")
     public Boolean allowDownstreamConfiguration;
+
     public EnterpriseAdminCreatePreReceiveHookRequestBody withAllowDownstreamConfiguration(Boolean allowDownstreamConfiguration) {
         this.allowDownstreamConfiguration = allowDownstreamConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseAdminCreatePreReceiveHookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcement")
     public String enforcement;
+
     public EnterpriseAdminCreatePreReceiveHookRequestBody withEnforcement(String enforcement) {
         this.enforcement = enforcement;
         return this;
@@ -36,6 +38,7 @@ public class EnterpriseAdminCreatePreReceiveHookRequestBody {
      */
     @JsonProperty("environment")
     public java.util.Map<String, Object> environment;
+
     public EnterpriseAdminCreatePreReceiveHookRequestBody withEnvironment(java.util.Map<String, Object> environment) {
         this.environment = environment;
         return this;
@@ -46,6 +49,7 @@ public class EnterpriseAdminCreatePreReceiveHookRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public EnterpriseAdminCreatePreReceiveHookRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class EnterpriseAdminCreatePreReceiveHookRequestBody {
      */
     @JsonProperty("script")
     public String script;
+
     public EnterpriseAdminCreatePreReceiveHookRequestBody withScript(String script) {
         this.script = script;
         return this;
@@ -66,9 +71,16 @@ public class EnterpriseAdminCreatePreReceiveHookRequestBody {
      */
     @JsonProperty("script_repository")
     public java.util.Map<String, Object> scriptRepository;
+
     public EnterpriseAdminCreatePreReceiveHookRequestBody withScriptRepository(java.util.Map<String, Object> scriptRepository) {
         this.scriptRepository = scriptRepository;
         return this;
     }
     
+    public EnterpriseAdminCreatePreReceiveHookRequestBody(@JsonProperty("environment") java.util.Map<String, Object> environment, @JsonProperty("name") String name, @JsonProperty("script") String script, @JsonProperty("script_repository") java.util.Map<String, Object> scriptRepository) {
+        this.environment = environment;
+        this.name = name;
+        this.script = script;
+        this.scriptRepository = scriptRepository;
+  }
 }

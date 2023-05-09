@@ -12,6 +12,7 @@ public class MessageStatusLinksWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispatch_uuid")
     public String dispatchUuid;
+
     public MessageStatusLinksWorkflow withDispatchUuid(String dispatchUuid) {
         this.dispatchUuid = dispatchUuid;
         return this;
@@ -23,9 +24,11 @@ public class MessageStatusLinksWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public MessageStatusLinksWorkflow withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public MessageStatusLinksWorkflow(){}
 }

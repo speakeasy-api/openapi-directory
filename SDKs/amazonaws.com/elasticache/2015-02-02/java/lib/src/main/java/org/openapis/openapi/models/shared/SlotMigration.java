@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SlotMigration {
     
     public Double progressPercentage;
+
     public SlotMigration withProgressPercentage(Double progressPercentage) {
         this.progressPercentage = progressPercentage;
         return this;
     }
     
+    public SlotMigration(){}
 }

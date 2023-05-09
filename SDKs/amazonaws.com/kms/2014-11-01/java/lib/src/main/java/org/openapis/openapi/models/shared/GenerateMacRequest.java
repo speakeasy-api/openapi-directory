@@ -12,6 +12,7 @@ public class GenerateMacRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public GenerateMacRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -19,6 +20,7 @@ public class GenerateMacRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public GenerateMacRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -26,6 +28,7 @@ public class GenerateMacRequest {
     
     @JsonProperty("MacAlgorithm")
     public MacAlgorithmSpecEnum macAlgorithm;
+
     public GenerateMacRequest withMacAlgorithm(MacAlgorithmSpecEnum macAlgorithm) {
         this.macAlgorithm = macAlgorithm;
         return this;
@@ -33,9 +36,15 @@ public class GenerateMacRequest {
     
     @JsonProperty("Message")
     public String message;
+
     public GenerateMacRequest withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GenerateMacRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("MacAlgorithm") MacAlgorithmSpecEnum macAlgorithm, @JsonProperty("Message") String message) {
+        this.keyId = keyId;
+        this.macAlgorithm = macAlgorithm;
+        this.message = message;
+  }
 }

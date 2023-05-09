@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntitledApplication {
     @JsonProperty("ApplicationIdentifier")
     public String applicationIdentifier;
+
     public EntitledApplication withApplicationIdentifier(String applicationIdentifier) {
         this.applicationIdentifier = applicationIdentifier;
         return this;
     }
     
+    public EntitledApplication(@JsonProperty("ApplicationIdentifier") String applicationIdentifier) {
+        this.applicationIdentifier = applicationIdentifier;
+  }
 }

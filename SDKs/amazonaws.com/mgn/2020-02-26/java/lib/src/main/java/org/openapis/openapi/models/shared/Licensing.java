@@ -15,9 +15,11 @@ public class Licensing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osByol")
     public Boolean osByol;
+
     public Licensing withOsByol(Boolean osByol) {
         this.osByol = osByol;
         return this;
     }
     
+    public Licensing(){}
 }

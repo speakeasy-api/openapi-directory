@@ -18,6 +18,7 @@ public class ExportContextSqlExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlExportOptions")
     public ExportContextSqlExportOptionsMysqlExportOptions mysqlExportOptions;
+
     public ExportContextSqlExportOptions withMysqlExportOptions(ExportContextSqlExportOptionsMysqlExportOptions mysqlExportOptions) {
         this.mysqlExportOptions = mysqlExportOptions;
         return this;
@@ -29,6 +30,7 @@ public class ExportContextSqlExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaOnly")
     public Boolean schemaOnly;
+
     public ExportContextSqlExportOptions withSchemaOnly(Boolean schemaOnly) {
         this.schemaOnly = schemaOnly;
         return this;
@@ -40,9 +42,11 @@ public class ExportContextSqlExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tables")
     public String[] tables;
+
     public ExportContextSqlExportOptions withTables(String[] tables) {
         this.tables = tables;
         return this;
     }
     
+    public ExportContextSqlExportOptions(){}
 }

@@ -54,11 +54,9 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCampaignSoundResponse res = new org.openapis.openapi.models.operations.DeleteCampaignSoundResponse() {{
+        org.openapis.openapi.models.operations.DeleteCampaignSoundResponse res = new org.openapis.openapi.models.operations.DeleteCampaignSoundResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -101,12 +99,10 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindCampaignSoundsResponse res = new org.openapis.openapi.models.operations.FindCampaignSoundsResponse() {{
+        org.openapis.openapi.models.operations.FindCampaignSoundsResponse res = new org.openapis.openapi.models.operations.FindCampaignSoundsResponse(contentType, httpRes.statusCode()) {{
             campaignSoundPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,12 +152,10 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCampaignBatchResponse res = new org.openapis.openapi.models.operations.GetCampaignBatchResponse() {{
+        org.openapis.openapi.models.operations.GetCampaignBatchResponse res = new org.openapis.openapi.models.operations.GetCampaignBatchResponse(contentType, httpRes.statusCode()) {{
             batch = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,12 +205,10 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCampaignSoundResponse res = new org.openapis.openapi.models.operations.GetCampaignSoundResponse() {{
+        org.openapis.openapi.models.operations.GetCampaignSoundResponse res = new org.openapis.openapi.models.operations.GetCampaignSoundResponse(contentType, httpRes.statusCode()) {{
             campaignSound = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,11 +252,9 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Response res = new org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Response() {{
+        org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Response res = new org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -300,11 +290,9 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCampaignSoundDataWavResponse res = new org.openapis.openapi.models.operations.GetCampaignSoundDataWavResponse() {{
+        org.openapis.openapi.models.operations.GetCampaignSoundDataWavResponse res = new org.openapis.openapi.models.operations.GetCampaignSoundDataWavResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -348,12 +336,10 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCallCampaignSoundResponse res = new org.openapis.openapi.models.operations.PostCallCampaignSoundResponse() {{
+        org.openapis.openapi.models.operations.PostCallCampaignSoundResponse res = new org.openapis.openapi.models.operations.PostCallCampaignSoundResponse(contentType, httpRes.statusCode()) {{
             campaignSound = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -408,12 +394,10 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFileCampaignSoundResponse res = new org.openapis.openapi.models.operations.PostFileCampaignSoundResponse() {{
+        org.openapis.openapi.models.operations.PostFileCampaignSoundResponse res = new org.openapis.openapi.models.operations.PostFileCampaignSoundResponse(contentType, httpRes.statusCode()) {{
             campaignSound = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -465,12 +449,10 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTTSCampaignSoundResponse res = new org.openapis.openapi.models.operations.PostTTSCampaignSoundResponse() {{
+        org.openapis.openapi.models.operations.PostTTSCampaignSoundResponse res = new org.openapis.openapi.models.operations.PostTTSCampaignSoundResponse(contentType, httpRes.statusCode()) {{
             campaignSound = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -516,11 +498,9 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCampaignBatchResponse res = new org.openapis.openapi.models.operations.UpdateCampaignBatchResponse() {{
+        org.openapis.openapi.models.operations.UpdateCampaignBatchResponse res = new org.openapis.openapi.models.operations.UpdateCampaignBatchResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

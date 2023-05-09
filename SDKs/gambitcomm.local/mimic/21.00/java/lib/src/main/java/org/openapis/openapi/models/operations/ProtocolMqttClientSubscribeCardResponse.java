@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolMqttClientSubscribeCardResponse {
     
     public String contentType;
+
     public ProtocolMqttClientSubscribeCardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolMqttClientSubscribeCardResponse {
     
     
     public Integer statusCode;
+
     public ProtocolMqttClientSubscribeCardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolMqttClientSubscribeCardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolMqttClientSubscribeCardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolMqttClientSubscribeCardResponse {
      */
     
     public Integer[] protocolMqttClientSubscribeCard200ApplicationJSONInt32Integers;
+
     public ProtocolMqttClientSubscribeCardResponse withProtocolMqttClientSubscribeCard200ApplicationJSONInt32Integers(Integer[] protocolMqttClientSubscribeCard200ApplicationJSONInt32Integers) {
         this.protocolMqttClientSubscribeCard200ApplicationJSONInt32Integers = protocolMqttClientSubscribeCard200ApplicationJSONInt32Integers;
         return this;
     }
     
+    public ProtocolMqttClientSubscribeCardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

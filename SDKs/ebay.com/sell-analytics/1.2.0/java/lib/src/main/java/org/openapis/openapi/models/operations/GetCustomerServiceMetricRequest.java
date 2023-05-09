@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomerServiceMetricRequest {
@@ -12,6 +13,7 @@ public class GetCustomerServiceMetricRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_service_metric_type")
     public String customerServiceMetricType;
+
     public GetCustomerServiceMetricRequest withCustomerServiceMetricType(String customerServiceMetricType) {
         this.customerServiceMetricType = customerServiceMetricType;
         return this;
@@ -22,6 +24,7 @@ public class GetCustomerServiceMetricRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evaluation_marketplace_id")
     public String evaluationMarketplaceId;
+
     public GetCustomerServiceMetricRequest withEvaluationMarketplaceId(String evaluationMarketplaceId) {
         this.evaluationMarketplaceId = evaluationMarketplaceId;
         return this;
@@ -32,9 +35,15 @@ public class GetCustomerServiceMetricRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=evaluation_type")
     public String evaluationType;
+
     public GetCustomerServiceMetricRequest withEvaluationType(String evaluationType) {
         this.evaluationType = evaluationType;
         return this;
     }
     
+    public GetCustomerServiceMetricRequest(@JsonProperty("customer_service_metric_type") String customerServiceMetricType, @JsonProperty("evaluation_marketplace_id") String evaluationMarketplaceId, @JsonProperty("evaluation_type") String evaluationType) {
+        this.customerServiceMetricType = customerServiceMetricType;
+        this.evaluationMarketplaceId = evaluationMarketplaceId;
+        this.evaluationType = evaluationType;
+  }
 }

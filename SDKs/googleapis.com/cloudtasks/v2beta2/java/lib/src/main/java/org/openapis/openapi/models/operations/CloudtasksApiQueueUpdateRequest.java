@@ -12,6 +12,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudtasksApiQueueUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class CloudtasksApiQueueUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HttpBody httpBody;
+
     public CloudtasksApiQueueUpdateRequest withHttpBody(org.openapis.openapi.models.shared.HttpBody httpBody) {
         this.httpBody = httpBody;
         return this;
@@ -29,6 +31,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudtasksApiQueueUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudtasksApiQueueUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appId")
     public String appId;
+
     public CloudtasksApiQueueUpdateRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -59,6 +64,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudtasksApiQueueUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +75,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudtasksApiQueueUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +86,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudtasksApiQueueUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +97,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudtasksApiQueueUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +108,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudtasksApiQueueUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +119,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudtasksApiQueueUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +130,7 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudtasksApiQueueUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +141,11 @@ public class CloudtasksApiQueueUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudtasksApiQueueUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudtasksApiQueueUpdateRequest(){}
 }

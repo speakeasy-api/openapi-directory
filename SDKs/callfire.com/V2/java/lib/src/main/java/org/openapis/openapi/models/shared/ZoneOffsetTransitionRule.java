@@ -18,6 +18,7 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfMonthIndicator")
     public Integer dayOfMonthIndicator;
+
     public ZoneOffsetTransitionRule withDayOfMonthIndicator(Integer dayOfMonthIndicator) {
         this.dayOfMonthIndicator = dayOfMonthIndicator;
         return this;
@@ -29,6 +30,7 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public ZoneOffsetTransitionRuleDayOfWeekEnum dayOfWeek;
+
     public ZoneOffsetTransitionRule withDayOfWeek(ZoneOffsetTransitionRuleDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -40,6 +42,7 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localTime")
     public LocalTime localTime;
+
     public ZoneOffsetTransitionRule withLocalTime(LocalTime localTime) {
         this.localTime = localTime;
         return this;
@@ -51,6 +54,7 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("midnightEndOfDay")
     public Boolean midnightEndOfDay;
+
     public ZoneOffsetTransitionRule withMidnightEndOfDay(Boolean midnightEndOfDay) {
         this.midnightEndOfDay = midnightEndOfDay;
         return this;
@@ -62,6 +66,7 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public ZoneOffsetTransitionRuleMonthEnum month;
+
     public ZoneOffsetTransitionRule withMonth(ZoneOffsetTransitionRuleMonthEnum month) {
         this.month = month;
         return this;
@@ -73,6 +78,7 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetAfter")
     public ZoneOffset offsetAfter;
+
     public ZoneOffsetTransitionRule withOffsetAfter(ZoneOffset offsetAfter) {
         this.offsetAfter = offsetAfter;
         return this;
@@ -84,6 +90,7 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetBefore")
     public ZoneOffset offsetBefore;
+
     public ZoneOffsetTransitionRule withOffsetBefore(ZoneOffset offsetBefore) {
         this.offsetBefore = offsetBefore;
         return this;
@@ -95,6 +102,7 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardOffset")
     public ZoneOffset standardOffset;
+
     public ZoneOffsetTransitionRule withStandardOffset(ZoneOffset standardOffset) {
         this.standardOffset = standardOffset;
         return this;
@@ -106,9 +114,11 @@ public class ZoneOffsetTransitionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeDefinition")
     public ZoneOffsetTransitionRuleTimeDefinitionEnum timeDefinition;
+
     public ZoneOffsetTransitionRule withTimeDefinition(ZoneOffsetTransitionRuleTimeDefinitionEnum timeDefinition) {
         this.timeDefinition = timeDefinition;
         return this;
     }
     
+    public ZoneOffsetTransitionRule(){}
 }

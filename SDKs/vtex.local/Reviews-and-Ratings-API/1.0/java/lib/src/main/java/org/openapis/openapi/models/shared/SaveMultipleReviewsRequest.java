@@ -14,6 +14,7 @@ public class SaveMultipleReviewsRequest {
      */
     @JsonProperty("approved")
     public Boolean approved;
+
     public SaveMultipleReviewsRequest withApproved(Boolean approved) {
         this.approved = approved;
         return this;
@@ -25,6 +26,7 @@ public class SaveMultipleReviewsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SaveMultipleReviewsRequest withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class SaveMultipleReviewsRequest {
      */
     @JsonProperty("productId")
     public String productId;
+
     public SaveMultipleReviewsRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -45,6 +48,7 @@ public class SaveMultipleReviewsRequest {
      */
     @JsonProperty("rating")
     public Double rating;
+
     public SaveMultipleReviewsRequest withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -55,6 +59,7 @@ public class SaveMultipleReviewsRequest {
      */
     @JsonProperty("reviewerName")
     public String reviewerName;
+
     public SaveMultipleReviewsRequest withReviewerName(String reviewerName) {
         this.reviewerName = reviewerName;
         return this;
@@ -65,6 +70,7 @@ public class SaveMultipleReviewsRequest {
      */
     @JsonProperty("text")
     public String text;
+
     public SaveMultipleReviewsRequest withText(String text) {
         this.text = text;
         return this;
@@ -75,6 +81,7 @@ public class SaveMultipleReviewsRequest {
      */
     @JsonProperty("title")
     public String title;
+
     public SaveMultipleReviewsRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +92,19 @@ public class SaveMultipleReviewsRequest {
      */
     @JsonProperty("verifiedPurchaser")
     public Boolean verifiedPurchaser;
+
     public SaveMultipleReviewsRequest withVerifiedPurchaser(Boolean verifiedPurchaser) {
         this.verifiedPurchaser = verifiedPurchaser;
         return this;
     }
     
+    public SaveMultipleReviewsRequest(@JsonProperty("approved") Boolean approved, @JsonProperty("productId") String productId, @JsonProperty("rating") Double rating, @JsonProperty("reviewerName") String reviewerName, @JsonProperty("text") String text, @JsonProperty("title") String title, @JsonProperty("verifiedPurchaser") Boolean verifiedPurchaser) {
+        this.approved = approved;
+        this.productId = productId;
+        this.rating = rating;
+        this.reviewerName = reviewerName;
+        this.text = text;
+        this.title = title;
+        this.verifiedPurchaser = verifiedPurchaser;
+  }
 }

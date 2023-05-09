@@ -15,9 +15,11 @@ public class AddNotificationChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfiguration")
     public NotificationConfiguration notificationConfiguration;
+
     public AddNotificationChannelsResponse withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
     }
     
+    public AddNotificationChannelsResponse(){}
 }

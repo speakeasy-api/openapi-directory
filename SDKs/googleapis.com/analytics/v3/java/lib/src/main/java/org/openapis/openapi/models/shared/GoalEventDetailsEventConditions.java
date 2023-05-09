@@ -15,6 +15,7 @@ public class GoalEventDetailsEventConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonType")
     public String comparisonType;
+
     public GoalEventDetailsEventConditions withComparisonType(String comparisonType) {
         this.comparisonType = comparisonType;
         return this;
@@ -26,6 +27,7 @@ public class GoalEventDetailsEventConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public GoalEventDetailsEventConditions withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
@@ -37,6 +39,7 @@ public class GoalEventDetailsEventConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public GoalEventDetailsEventConditions withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -48,6 +51,7 @@ public class GoalEventDetailsEventConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public String matchType;
+
     public GoalEventDetailsEventConditions withMatchType(String matchType) {
         this.matchType = matchType;
         return this;
@@ -59,9 +63,11 @@ public class GoalEventDetailsEventConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoalEventDetailsEventConditions withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoalEventDetailsEventConditions(){}
 }

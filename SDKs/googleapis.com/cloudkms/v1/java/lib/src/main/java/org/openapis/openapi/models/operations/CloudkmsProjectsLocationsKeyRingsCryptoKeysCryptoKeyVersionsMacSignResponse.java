@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse {
     
     public String contentType;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSign
      */
     
     public org.openapis.openapi.models.shared.MacSignResponse macSignResponse;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse withMacSignResponse(org.openapis.openapi.models.shared.MacSignResponse macSignResponse) {
         this.macSignResponse = macSignResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSign
     
     
     public Integer statusCode;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSign
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

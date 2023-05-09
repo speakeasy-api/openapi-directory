@@ -12,6 +12,7 @@ public class CustomerDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine")
     public String addressLine;
+
     public CustomerDetailsDTO withAddressLine(String addressLine) {
         this.addressLine = addressLine;
         return this;
@@ -20,6 +21,7 @@ public class CustomerDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public CustomerDetailsDTO withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class CustomerDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public CustomerDetailsDTO withCountry(String country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class CustomerDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryId")
     public Long countryId;
+
     public CustomerDetailsDTO withCountryId(Long countryId) {
         this.countryId = countryId;
         return this;
@@ -44,6 +48,7 @@ public class CustomerDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomerDetailsDTO withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class CustomerDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CustomerDetailsDTO withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -60,9 +66,11 @@ public class CustomerDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatUE")
     public String vatUE;
+
     public CustomerDetailsDTO withVatUE(String vatUE) {
         this.vatUE = vatUE;
         return this;
     }
     
+    public CustomerDetailsDTO(){}
 }

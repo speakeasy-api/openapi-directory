@@ -67,13 +67,11 @@ public class MarketplacesOrdersV3List {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderListFullV3Response res = new org.openapis.openapi.models.operations.GetOrderListFullV3Response() {{
+        org.openapis.openapi.models.operations.GetOrderListFullV3Response res = new org.openapis.openapi.models.operations.GetOrderListFullV3Response(contentType, httpRes.statusCode()) {{
             orderListFullWithLinks = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -126,13 +124,11 @@ public class MarketplacesOrdersV3List {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderListLightV3Response res = new org.openapis.openapi.models.operations.GetOrderListLightV3Response() {{
+        org.openapis.openapi.models.operations.GetOrderListLightV3Response res = new org.openapis.openapi.models.operations.GetOrderListLightV3Response(contentType, httpRes.statusCode()) {{
             orderListLightWithLinks = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

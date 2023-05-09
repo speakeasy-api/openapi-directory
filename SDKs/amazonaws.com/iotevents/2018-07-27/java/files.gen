@@ -199,4 +199,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateAlarmModelResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateDetectorModelResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateInputResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

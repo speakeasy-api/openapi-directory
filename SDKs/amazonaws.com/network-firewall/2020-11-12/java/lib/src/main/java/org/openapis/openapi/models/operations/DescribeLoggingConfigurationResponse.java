@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLoggingConfigurationResponse {
     
     public String contentType;
+
     public DescribeLoggingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLoggingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLoggingConfigurationResponse describeLoggingConfigurationResponse;
+
     public DescribeLoggingConfigurationResponse withDescribeLoggingConfigurationResponse(org.openapis.openapi.models.shared.DescribeLoggingConfigurationResponse describeLoggingConfigurationResponse) {
         this.describeLoggingConfigurationResponse = describeLoggingConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLoggingConfigurationResponse {
      */
     
     public Object internalServerError;
+
     public DescribeLoggingConfigurationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLoggingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeLoggingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeLoggingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeLoggingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeLoggingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLoggingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeLoggingConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeLoggingConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeLoggingConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeLoggingConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeLoggingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

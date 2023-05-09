@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEndpointAccessResponse {
@@ -12,6 +13,7 @@ public class DeleteEndpointAccessResponse {
      */
     
     public Object conflictException;
+
     public DeleteEndpointAccessResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEndpointAccessResponse {
     
     
     public String contentType;
+
     public DeleteEndpointAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEndpointAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteEndpointAccessResponse deleteEndpointAccessResponse;
+
     public DeleteEndpointAccessResponse withDeleteEndpointAccessResponse(org.openapis.openapi.models.shared.DeleteEndpointAccessResponse deleteEndpointAccessResponse) {
         this.deleteEndpointAccessResponse = deleteEndpointAccessResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEndpointAccessResponse {
      */
     
     public Object internalServerException;
+
     public DeleteEndpointAccessResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteEndpointAccessResponse {
     
     
     public Integer statusCode;
+
     public DeleteEndpointAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteEndpointAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEndpointAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteEndpointAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEndpointAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteEndpointAccessResponse {
      */
     
     public Object validationException;
+
     public DeleteEndpointAccessResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteEndpointAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

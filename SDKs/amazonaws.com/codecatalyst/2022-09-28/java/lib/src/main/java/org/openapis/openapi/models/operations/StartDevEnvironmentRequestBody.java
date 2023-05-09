@@ -15,6 +15,7 @@ public class StartDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ides")
     public org.openapis.openapi.models.shared.IdeConfiguration[] ides;
+
     public StartDevEnvironmentRequestBody withIdes(org.openapis.openapi.models.shared.IdeConfiguration[] ides) {
         this.ides = ides;
         return this;
@@ -26,6 +27,7 @@ public class StartDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inactivityTimeoutMinutes")
     public Long inactivityTimeoutMinutes;
+
     public StartDevEnvironmentRequestBody withInactivityTimeoutMinutes(Long inactivityTimeoutMinutes) {
         this.inactivityTimeoutMinutes = inactivityTimeoutMinutes;
         return this;
@@ -37,9 +39,11 @@ public class StartDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public StartDevEnvironmentRequestBodyInstanceTypeEnum instanceType;
+
     public StartDevEnvironmentRequestBody withInstanceType(StartDevEnvironmentRequestBodyInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
     }
     
+    public StartDevEnvironmentRequestBody(){}
 }

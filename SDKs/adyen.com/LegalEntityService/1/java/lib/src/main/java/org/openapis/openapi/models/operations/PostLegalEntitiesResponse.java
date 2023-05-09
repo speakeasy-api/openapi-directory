@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostLegalEntitiesResponse {
     
     public String contentType;
+
     public PostLegalEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostLegalEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.LegalEntity legalEntity;
+
     public PostLegalEntitiesResponse withLegalEntity(org.openapis.openapi.models.shared.LegalEntity legalEntity) {
         this.legalEntity = legalEntity;
         return this;
@@ -29,6 +32,7 @@ public class PostLegalEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostLegalEntitiesResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostLegalEntitiesResponse {
     
     
     public Integer statusCode;
+
     public PostLegalEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostLegalEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostLegalEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostLegalEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

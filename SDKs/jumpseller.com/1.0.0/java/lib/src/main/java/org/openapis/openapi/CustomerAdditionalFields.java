@@ -57,12 +57,10 @@ public class CustomerAdditionalFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomersIdFieldsFieldIdResponse res = new org.openapis.openapi.models.operations.DeleteCustomersIdFieldsFieldIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomersIdFieldsFieldIdResponse res = new org.openapis.openapi.models.operations.DeleteCustomersIdFieldsFieldIdResponse(contentType, httpRes.statusCode()) {{
             deleteCustomersIdFieldsFieldId200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class CustomerAdditionalFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersIdFieldsResponse res = new org.openapis.openapi.models.operations.GetCustomersIdFieldsResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersIdFieldsResponse res = new org.openapis.openapi.models.operations.GetCustomersIdFieldsResponse(contentType, httpRes.statusCode()) {{
             customerAdditionalFields = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class CustomerAdditionalFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersIdFieldsFieldIdResponse res = new org.openapis.openapi.models.operations.GetCustomersIdFieldsFieldIdResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersIdFieldsFieldIdResponse res = new org.openapis.openapi.models.operations.GetCustomersIdFieldsFieldIdResponse(contentType, httpRes.statusCode()) {{
             customerAdditionalField = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,12 +211,10 @@ public class CustomerAdditionalFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCustomersIdFieldsResponse res = new org.openapis.openapi.models.operations.PostCustomersIdFieldsResponse() {{
+        org.openapis.openapi.models.operations.PostCustomersIdFieldsResponse res = new org.openapis.openapi.models.operations.PostCustomersIdFieldsResponse(contentType, httpRes.statusCode()) {{
             customerAdditionalField = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,13 +266,11 @@ public class CustomerAdditionalFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCustomersIdFieldsFieldIdResponse res = new org.openapis.openapi.models.operations.PutCustomersIdFieldsFieldIdResponse() {{
+        org.openapis.openapi.models.operations.PutCustomersIdFieldsFieldIdResponse res = new org.openapis.openapi.models.operations.PutCustomersIdFieldsFieldIdResponse(contentType, httpRes.statusCode()) {{
             customerAdditionalField = null;
             badParams = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

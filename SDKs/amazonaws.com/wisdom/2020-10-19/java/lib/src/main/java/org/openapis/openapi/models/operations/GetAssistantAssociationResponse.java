@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAssistantAssociationResponse {
@@ -12,6 +13,7 @@ public class GetAssistantAssociationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAssistantAssociationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAssistantAssociationResponse {
     
     
     public String contentType;
+
     public GetAssistantAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAssistantAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAssistantAssociationResponse getAssistantAssociationResponse;
+
     public GetAssistantAssociationResponse withGetAssistantAssociationResponse(org.openapis.openapi.models.shared.GetAssistantAssociationResponse getAssistantAssociationResponse) {
         this.getAssistantAssociationResponse = getAssistantAssociationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAssistantAssociationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAssistantAssociationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetAssistantAssociationResponse {
     
     
     public Integer statusCode;
+
     public GetAssistantAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAssistantAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAssistantAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetAssistantAssociationResponse {
      */
     
     public Object validationException;
+
     public GetAssistantAssociationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAssistantAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GetPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public ResourceSharePermissionDetail permission;
+
     public GetPermissionResponse withPermission(ResourceSharePermissionDetail permission) {
         this.permission = permission;
         return this;
     }
     
+    public GetPermissionResponse(){}
 }

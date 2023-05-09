@@ -18,9 +18,11 @@ public class CheckValidCredsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasValidCreds")
     public Boolean hasValidCreds;
+
     public CheckValidCredsResponse withHasValidCreds(Boolean hasValidCreds) {
         this.hasValidCreds = hasValidCreds;
         return this;
     }
     
+    public CheckValidCredsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFulfillmentsCountJsonResponse {
     
     public String contentType;
+
     public GetFulfillmentsCountJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFulfillmentsCountJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Count count;
+
     public GetFulfillmentsCountJsonResponse withCount(org.openapis.openapi.models.shared.Count count) {
         this.count = count;
         return this;
@@ -26,6 +29,7 @@ public class GetFulfillmentsCountJsonResponse {
     
     
     public Integer statusCode;
+
     public GetFulfillmentsCountJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetFulfillmentsCountJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFulfillmentsCountJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFulfillmentsCountJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

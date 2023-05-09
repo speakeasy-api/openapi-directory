@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetNamesChangesEmbedEnum - A flag to indicate whether to embed the corresponding 'feature' into each matching name
  */
 public enum GetNamesChangesEmbedEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetNamesChangesEmbedEnum(String value) {
+    private GetNamesChangesEmbedEnum(Long value) {
         this.value = value;
     }
 }

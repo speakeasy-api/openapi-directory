@@ -15,6 +15,7 @@ public class ListTaskExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTaskExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +24,7 @@ public class ListTaskExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTaskExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListTaskExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskArn")
     public String taskArn;
+
     public ListTaskExecutionsRequest withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
     }
     
+    public ListTaskExecutionsRequest(){}
 }

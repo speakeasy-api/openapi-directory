@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RestoreStatus {
     
     public Double currentRestoreRateInMegaBytesPerSecond;
+
     public RestoreStatus withCurrentRestoreRateInMegaBytesPerSecond(Double currentRestoreRateInMegaBytesPerSecond) {
         this.currentRestoreRateInMegaBytesPerSecond = currentRestoreRateInMegaBytesPerSecond;
         return this;
@@ -19,6 +20,7 @@ public class RestoreStatus {
     
     
     public Long elapsedTimeInSeconds;
+
     public RestoreStatus withElapsedTimeInSeconds(Long elapsedTimeInSeconds) {
         this.elapsedTimeInSeconds = elapsedTimeInSeconds;
         return this;
@@ -26,6 +28,7 @@ public class RestoreStatus {
     
     
     public Long estimatedTimeToCompletionInSeconds;
+
     public RestoreStatus withEstimatedTimeToCompletionInSeconds(Long estimatedTimeToCompletionInSeconds) {
         this.estimatedTimeToCompletionInSeconds = estimatedTimeToCompletionInSeconds;
         return this;
@@ -33,6 +36,7 @@ public class RestoreStatus {
     
     
     public Long progressInMegaBytes;
+
     public RestoreStatus withProgressInMegaBytes(Long progressInMegaBytes) {
         this.progressInMegaBytes = progressInMegaBytes;
         return this;
@@ -40,6 +44,7 @@ public class RestoreStatus {
     
     
     public Long snapshotSizeInMegaBytes;
+
     public RestoreStatus withSnapshotSizeInMegaBytes(Long snapshotSizeInMegaBytes) {
         this.snapshotSizeInMegaBytes = snapshotSizeInMegaBytes;
         return this;
@@ -47,9 +52,11 @@ public class RestoreStatus {
     
     
     public String status;
+
     public RestoreStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RestoreStatus(){}
 }

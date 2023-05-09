@@ -15,6 +15,7 @@ public class PostalCodeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodeRangeBegin")
     public String postalCodeRangeBegin;
+
     public PostalCodeRange withPostalCodeRangeBegin(String postalCodeRangeBegin) {
         this.postalCodeRangeBegin = postalCodeRangeBegin;
         return this;
@@ -26,9 +27,11 @@ public class PostalCodeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodeRangeEnd")
     public String postalCodeRangeEnd;
+
     public PostalCodeRange withPostalCodeRangeEnd(String postalCodeRangeEnd) {
         this.postalCodeRangeEnd = postalCodeRangeEnd;
         return this;
     }
     
+    public PostalCodeRange(){}
 }

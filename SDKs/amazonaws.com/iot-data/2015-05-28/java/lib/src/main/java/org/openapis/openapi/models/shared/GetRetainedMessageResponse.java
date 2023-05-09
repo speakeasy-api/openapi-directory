@@ -15,6 +15,7 @@ public class GetRetainedMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public Long lastModifiedTime;
+
     public GetRetainedMessageResponse withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -23,6 +24,7 @@ public class GetRetainedMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public GetRetainedMessageResponse withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -31,6 +33,7 @@ public class GetRetainedMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qos")
     public Long qos;
+
     public GetRetainedMessageResponse withQos(Long qos) {
         this.qos = qos;
         return this;
@@ -39,9 +42,20 @@ public class GetRetainedMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public GetRetainedMessageResponse withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userProperties")
+    public String userProperties;
+
+    public GetRetainedMessageResponse withUserProperties(String userProperties) {
+        this.userProperties = userProperties;
+        return this;
+    }
+    
+    public GetRetainedMessageResponse(){}
 }

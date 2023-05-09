@@ -15,6 +15,7 @@ public class SendCustomVerificationEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public SendCustomVerificationEmailRequestBody withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -25,6 +26,7 @@ public class SendCustomVerificationEmailRequestBody {
      */
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public SendCustomVerificationEmailRequestBody withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -35,9 +37,14 @@ public class SendCustomVerificationEmailRequestBody {
      */
     @JsonProperty("TemplateName")
     public String templateName;
+
     public SendCustomVerificationEmailRequestBody withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public SendCustomVerificationEmailRequestBody(@JsonProperty("EmailAddress") String emailAddress, @JsonProperty("TemplateName") String templateName) {
+        this.emailAddress = emailAddress;
+        this.templateName = templateName;
+  }
 }

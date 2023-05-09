@@ -18,6 +18,7 @@ public class OSPolicyResourcePackageResourceDeb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullDeps")
     public Boolean pullDeps;
+
     public OSPolicyResourcePackageResourceDeb withPullDeps(Boolean pullDeps) {
         this.pullDeps = pullDeps;
         return this;
@@ -29,9 +30,11 @@ public class OSPolicyResourcePackageResourceDeb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public OSPolicyResourceFile source;
+
     public OSPolicyResourcePackageResourceDeb withSource(OSPolicyResourceFile source) {
         this.source = source;
         return this;
     }
     
+    public OSPolicyResourcePackageResourceDeb(){}
 }

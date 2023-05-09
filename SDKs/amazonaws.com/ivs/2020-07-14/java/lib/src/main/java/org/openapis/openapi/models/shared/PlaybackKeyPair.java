@@ -15,6 +15,7 @@ public class PlaybackKeyPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public PlaybackKeyPair withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class PlaybackKeyPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public PlaybackKeyPair withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -31,6 +33,7 @@ public class PlaybackKeyPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaybackKeyPair withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class PlaybackKeyPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public PlaybackKeyPair withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public PlaybackKeyPair(){}
 }

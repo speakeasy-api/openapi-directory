@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetAwsNetworkPerformanceDataResult {
     
     public GetAwsNetworkPerformanceDataResultDataResponses[] dataResponses;
+
     public GetAwsNetworkPerformanceDataResult withDataResponses(GetAwsNetworkPerformanceDataResultDataResponses[] dataResponses) {
         this.dataResponses = dataResponses;
         return this;
@@ -19,9 +20,11 @@ public class GetAwsNetworkPerformanceDataResult {
     
     
     public String nextToken;
+
     public GetAwsNetworkPerformanceDataResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAwsNetworkPerformanceDataResult(){}
 }

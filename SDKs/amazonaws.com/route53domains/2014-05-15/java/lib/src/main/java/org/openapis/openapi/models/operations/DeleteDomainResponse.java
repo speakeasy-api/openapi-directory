@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDomainResponse {
     
     public String contentType;
+
     public DeleteDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDomainResponse deleteDomainResponse;
+
     public DeleteDomainResponse withDeleteDomainResponse(org.openapis.openapi.models.shared.DeleteDomainResponse deleteDomainResponse) {
         this.deleteDomainResponse = deleteDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDomainResponse {
      */
     
     public Object duplicateRequest;
+
     public DeleteDomainResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDomainResponse {
      */
     
     public Object invalidInput;
+
     public DeleteDomainResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDomainResponse {
     
     
     public Integer statusCode;
+
     public DeleteDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDomainResponse {
      */
     
     public Object tldRulesViolation;
+
     public DeleteDomainResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDomainResponse {
      */
     
     public Object unsupportedTLD;
+
     public DeleteDomainResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public DeleteDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class SuggestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peopleSuggestion")
     public PeopleSuggestion peopleSuggestion;
+
     public SuggestResult withPeopleSuggestion(PeopleSuggestion peopleSuggestion) {
         this.peopleSuggestion = peopleSuggestion;
         return this;
@@ -29,6 +30,7 @@ public class SuggestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("querySuggestion")
     public java.util.Map<String, Object> querySuggestion;
+
     public SuggestResult withQuerySuggestion(java.util.Map<String, Object> querySuggestion) {
         this.querySuggestion = querySuggestion;
         return this;
@@ -40,6 +42,7 @@ public class SuggestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public SuggestResult withSource(Source source) {
         this.source = source;
         return this;
@@ -51,9 +54,11 @@ public class SuggestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedQuery")
     public String suggestedQuery;
+
     public SuggestResult withSuggestedQuery(String suggestedQuery) {
         this.suggestedQuery = suggestedQuery;
         return this;
     }
     
+    public SuggestResult(){}
 }

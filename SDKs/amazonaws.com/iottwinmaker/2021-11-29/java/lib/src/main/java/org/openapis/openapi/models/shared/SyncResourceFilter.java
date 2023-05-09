@@ -15,6 +15,7 @@ public class SyncResourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public SyncResourceFilter withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -23,6 +24,7 @@ public class SyncResourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public SyncResourceFilter withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -31,6 +33,7 @@ public class SyncResourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public SyncResourceTypeEnum resourceType;
+
     public SyncResourceFilter withResourceType(SyncResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -39,9 +42,11 @@ public class SyncResourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SyncResourceStateEnum state;
+
     public SyncResourceFilter withState(SyncResourceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SyncResourceFilter(){}
 }

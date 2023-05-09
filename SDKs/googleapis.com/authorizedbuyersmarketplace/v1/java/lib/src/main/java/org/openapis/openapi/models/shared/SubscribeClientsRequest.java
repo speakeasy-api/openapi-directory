@@ -18,9 +18,11 @@ public class SubscribeClientsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clients")
     public String[] clients;
+
     public SubscribeClientsRequest withClients(String[] clients) {
         this.clients = clients;
         return this;
     }
     
+    public SubscribeClientsRequest(){}
 }

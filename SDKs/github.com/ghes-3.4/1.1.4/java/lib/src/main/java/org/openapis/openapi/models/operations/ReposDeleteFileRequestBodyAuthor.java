@@ -18,6 +18,7 @@ public class ReposDeleteFileRequestBodyAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ReposDeleteFileRequestBodyAuthor withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class ReposDeleteFileRequestBodyAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReposDeleteFileRequestBodyAuthor withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReposDeleteFileRequestBodyAuthor(){}
 }

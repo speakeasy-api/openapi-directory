@@ -53,10 +53,8 @@ public class Download {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetColoredPathwayResponse res = new org.openapis.openapi.models.operations.GetGetColoredPathwayResponse() {{
+        org.openapis.openapi.models.operations.GetGetColoredPathwayResponse res = new org.openapis.openapi.models.operations.GetGetColoredPathwayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,8 @@ public class Download {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwayAsResponse res = new org.openapis.openapi.models.operations.GetGetPathwayAsResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwayAsResponse res = new org.openapis.openapi.models.operations.GetGetPathwayAsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +125,8 @@ public class Download {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetXrefListResponse res = new org.openapis.openapi.models.operations.GetGetXrefListResponse() {{
+        org.openapis.openapi.models.operations.GetGetXrefListResponse res = new org.openapis.openapi.models.operations.GetGetXrefListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

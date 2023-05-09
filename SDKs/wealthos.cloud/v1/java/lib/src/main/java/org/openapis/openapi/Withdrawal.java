@@ -69,7 +69,7 @@ public class Withdrawal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWithdrawalResponse res = new org.openapis.openapi.models.operations.CreateWithdrawalResponse() {{
+        org.openapis.openapi.models.operations.CreateWithdrawalResponse res = new org.openapis.openapi.models.operations.CreateWithdrawalResponse(contentType, httpRes.statusCode()) {{
             rootTypeForWithdrawalCreationResponse = null;
             createWithdrawal400ApplicationJSONObject = null;
             createWithdrawal401ApplicationJSONObject = null;
@@ -79,8 +79,6 @@ public class Withdrawal {
             createWithdrawal429ApplicationJSONObject = null;
             createWithdrawal500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

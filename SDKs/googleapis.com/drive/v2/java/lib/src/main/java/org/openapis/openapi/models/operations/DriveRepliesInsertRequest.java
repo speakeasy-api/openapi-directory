@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveRepliesInsertRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CommentReply commentReply;
+
     public DriveRepliesInsertRequest withCommentReply(org.openapis.openapi.models.shared.CommentReply commentReply) {
         this.commentReply = commentReply;
         return this;
@@ -19,6 +21,7 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveRepliesInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commentId")
     public String commentId;
+
     public DriveRepliesInsertRequest withCommentId(String commentId) {
         this.commentId = commentId;
         return this;
@@ -39,6 +43,7 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveRepliesInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DriveRepliesInsertRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -59,6 +65,7 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveRepliesInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveRepliesInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveRepliesInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveRepliesInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,9 +109,14 @@ public class DriveRepliesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveRepliesInsertRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveRepliesInsertRequest(@JsonProperty("commentId") String commentId, @JsonProperty("fileId") String fileId) {
+        this.commentId = commentId;
+        this.fileId = fileId;
+  }
 }

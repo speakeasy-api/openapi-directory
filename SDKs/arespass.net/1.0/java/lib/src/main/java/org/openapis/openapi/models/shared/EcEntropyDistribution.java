@@ -15,6 +15,7 @@ public class EcEntropyDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("char")
     public String char_;
+
     public EcEntropyDistribution withChar(String char_) {
         this.char_ = char_;
         return this;
@@ -26,6 +27,7 @@ public class EcEntropyDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l33tchar")
     public String l33tchar;
+
     public EcEntropyDistribution withL33tchar(String l33tchar) {
         this.l33tchar = l33tchar;
         return this;
@@ -37,9 +39,11 @@ public class EcEntropyDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public EcEntropyDistribution withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public EcEntropyDistribution(){}
 }

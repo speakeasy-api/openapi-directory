@@ -15,6 +15,7 @@ public class GetAggregateConformancePackComplianceSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregateConformancePackComplianceSummaries")
     public AggregateConformancePackComplianceSummary[] aggregateConformancePackComplianceSummaries;
+
     public GetAggregateConformancePackComplianceSummaryResponse withAggregateConformancePackComplianceSummaries(AggregateConformancePackComplianceSummary[] aggregateConformancePackComplianceSummaries) {
         this.aggregateConformancePackComplianceSummaries = aggregateConformancePackComplianceSummaries;
         return this;
@@ -23,6 +24,7 @@ public class GetAggregateConformancePackComplianceSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupByKey")
     public String groupByKey;
+
     public GetAggregateConformancePackComplianceSummaryResponse withGroupByKey(String groupByKey) {
         this.groupByKey = groupByKey;
         return this;
@@ -31,9 +33,11 @@ public class GetAggregateConformancePackComplianceSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetAggregateConformancePackComplianceSummaryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAggregateConformancePackComplianceSummaryResponse(){}
 }

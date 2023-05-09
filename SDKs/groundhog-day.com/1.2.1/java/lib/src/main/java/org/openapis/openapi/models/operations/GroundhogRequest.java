@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroundhogRequest {
@@ -12,9 +13,13 @@ public class GroundhogRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
     public String slug;
+
     public GroundhogRequest withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public GroundhogRequest(@JsonProperty("slug") String slug) {
+        this.slug = slug;
+  }
 }

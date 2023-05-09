@@ -18,6 +18,7 @@ public class DetectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ImageMetadata metadata;
+
     public DetectResult withMetadata(ImageMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class DetectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
     public DetectedObject[] objects;
+
     public DetectResult withObjects(DetectedObject[] objects) {
         this.objects = objects;
         return this;
@@ -40,9 +42,11 @@ public class DetectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DetectResult withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public DetectResult(){}
 }

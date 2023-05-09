@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     public ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum complianceStatus;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withComplianceStatus(ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -19,6 +20,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public Double ipUsage;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withIpUsage(Double ipUsage) {
         this.ipUsage = ipUsage;
         return this;
@@ -26,6 +28,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String ipamId;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -33,6 +36,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String ipamPoolId;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -40,6 +44,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String ipamScopeId;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -47,6 +52,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum managementState;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withManagementState(ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum managementState) {
         this.managementState = managementState;
         return this;
@@ -54,6 +60,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum overlapStatus;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withOverlapStatus(ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum overlapStatus) {
         this.overlapStatus = overlapStatus;
         return this;
@@ -61,6 +68,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String resourceCidr;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withResourceCidr(String resourceCidr) {
         this.resourceCidr = resourceCidr;
         return this;
@@ -68,6 +76,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String resourceId;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -75,6 +84,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String resourceName;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -82,6 +92,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String resourceOwnerId;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -89,6 +100,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String resourceRegion;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
@@ -96,6 +108,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public ModifyIpamResourceCidrResultIpamResourceCidrResourceTags[] resourceTags;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withResourceTags(ModifyIpamResourceCidrResultIpamResourceCidrResourceTags[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -103,6 +116,7 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum resourceType;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withResourceType(ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -110,9 +124,11 @@ public class ModifyIpamResourceCidrResultIpamResourceCidr {
     
     
     public String vpcId;
+
     public ModifyIpamResourceCidrResultIpamResourceCidr withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ModifyIpamResourceCidrResultIpamResourceCidr(){}
 }

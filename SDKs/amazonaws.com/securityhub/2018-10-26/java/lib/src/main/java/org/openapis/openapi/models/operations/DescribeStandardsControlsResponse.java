@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStandardsControlsResponse {
     
     public String contentType;
+
     public DescribeStandardsControlsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStandardsControlsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStandardsControlsResponse describeStandardsControlsResponse;
+
     public DescribeStandardsControlsResponse withDescribeStandardsControlsResponse(org.openapis.openapi.models.shared.DescribeStandardsControlsResponse describeStandardsControlsResponse) {
         this.describeStandardsControlsResponse = describeStandardsControlsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStandardsControlsResponse {
      */
     
     public Object internalException;
+
     public DescribeStandardsControlsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStandardsControlsResponse {
      */
     
     public Object invalidAccessException;
+
     public DescribeStandardsControlsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeStandardsControlsResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeStandardsControlsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeStandardsControlsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeStandardsControlsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeStandardsControlsResponse {
     
     
     public Integer statusCode;
+
     public DescribeStandardsControlsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeStandardsControlsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStandardsControlsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeStandardsControlsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

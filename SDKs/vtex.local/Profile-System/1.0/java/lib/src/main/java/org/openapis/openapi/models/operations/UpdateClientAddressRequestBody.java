@@ -15,6 +15,7 @@ public class UpdateClientAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrativeAreaLevel1")
     public String administrativeAreaLevel1;
+
     public UpdateClientAddressRequestBody withAdministrativeAreaLevel1(String administrativeAreaLevel1) {
         this.administrativeAreaLevel1 = administrativeAreaLevel1;
         return this;
@@ -26,6 +27,7 @@ public class UpdateClientAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public UpdateClientAddressRequestBody withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -37,6 +39,7 @@ public class UpdateClientAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryName")
     public String countryName;
+
     public UpdateClientAddressRequestBody withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -48,6 +51,7 @@ public class UpdateClientAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public UpdateClientAddressRequestBody withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -59,6 +63,7 @@ public class UpdateClientAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localityAreaLevel1")
     public String localityAreaLevel1;
+
     public UpdateClientAddressRequestBody withLocalityAreaLevel1(String localityAreaLevel1) {
         this.localityAreaLevel1 = localityAreaLevel1;
         return this;
@@ -70,6 +75,7 @@ public class UpdateClientAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public UpdateClientAddressRequestBody withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -81,6 +87,7 @@ public class UpdateClientAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route")
     public String route;
+
     public UpdateClientAddressRequestBody withRoute(String route) {
         this.route = route;
         return this;
@@ -92,9 +99,11 @@ public class UpdateClientAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetNumber")
     public String streetNumber;
+
     public UpdateClientAddressRequestBody withStreetNumber(String streetNumber) {
         this.streetNumber = streetNumber;
         return this;
     }
     
+    public UpdateClientAddressRequestBody(){}
 }

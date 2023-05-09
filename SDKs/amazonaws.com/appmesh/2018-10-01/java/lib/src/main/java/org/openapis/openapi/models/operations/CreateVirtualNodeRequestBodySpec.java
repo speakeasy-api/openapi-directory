@@ -15,6 +15,7 @@ public class CreateVirtualNodeRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backends")
     public String[] backends;
+
     public CreateVirtualNodeRequestBodySpec withBackends(String[] backends) {
         this.backends = backends;
         return this;
@@ -23,6 +24,7 @@ public class CreateVirtualNodeRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listeners")
     public org.openapis.openapi.models.shared.Listener[] listeners;
+
     public CreateVirtualNodeRequestBodySpec withListeners(org.openapis.openapi.models.shared.Listener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -31,9 +33,11 @@ public class CreateVirtualNodeRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDiscovery")
     public org.openapis.openapi.models.shared.ServiceDiscovery serviceDiscovery;
+
     public CreateVirtualNodeRequestBodySpec withServiceDiscovery(org.openapis.openapi.models.shared.ServiceDiscovery serviceDiscovery) {
         this.serviceDiscovery = serviceDiscovery;
         return this;
     }
     
+    public CreateVirtualNodeRequestBodySpec(){}
 }

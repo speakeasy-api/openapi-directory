@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteSSHPublicKeyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteSSHPublicKeyActionEnum action;
+
     public GETDeleteSSHPublicKeyRequest withAction(GETDeleteSSHPublicKeyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteSSHPublicKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SSHPublicKeyId")
     public String sshPublicKeyId;
+
     public GETDeleteSSHPublicKeyRequest withSSHPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteSSHPublicKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETDeleteSSHPublicKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteSSHPublicKeyVersionEnum version;
+
     public GETDeleteSSHPublicKeyRequest withVersion(GETDeleteSSHPublicKeyVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteSSHPublicKeyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteSSHPublicKeyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteSSHPublicKeyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteSSHPublicKeyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteSSHPublicKeyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteSSHPublicKeyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDeleteSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteSSHPublicKeyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteSSHPublicKeyRequest(@JsonProperty("Action") GETDeleteSSHPublicKeyActionEnum action, @JsonProperty("SSHPublicKeyId") String sshPublicKeyId, @JsonProperty("UserName") String userName, @JsonProperty("Version") GETDeleteSSHPublicKeyVersionEnum version) {
+        this.action = action;
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.userName = userName;
+        this.version = version;
+  }
 }

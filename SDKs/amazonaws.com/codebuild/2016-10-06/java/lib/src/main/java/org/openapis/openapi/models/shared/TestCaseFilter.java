@@ -15,6 +15,7 @@ public class TestCaseFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword")
     public String keyword;
+
     public TestCaseFilter withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -23,9 +24,11 @@ public class TestCaseFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TestCaseFilter withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TestCaseFilter(){}
 }

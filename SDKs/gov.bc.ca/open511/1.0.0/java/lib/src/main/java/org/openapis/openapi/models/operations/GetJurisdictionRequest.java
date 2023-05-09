@@ -12,9 +12,11 @@ public class GetJurisdictionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetJurisdictionFormatEnum format;
+
     public GetJurisdictionRequest withFormat(GetJurisdictionFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public GetJurisdictionRequest(){}
 }

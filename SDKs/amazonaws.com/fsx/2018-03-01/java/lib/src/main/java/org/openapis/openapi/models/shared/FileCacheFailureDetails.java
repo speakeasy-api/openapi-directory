@@ -15,9 +15,11 @@ public class FileCacheFailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FileCacheFailureDetails withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FileCacheFailureDetails(){}
 }

@@ -18,9 +18,11 @@ public class EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, Object> fields;
+
     public EntityInput withFields(java.util.Map<String, Object> fields) {
         this.fields = fields;
         return this;
     }
     
+    public EntityInput(){}
 }

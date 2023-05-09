@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAutoPredictorRequest {
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public DescribeAutoPredictorRequest withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
     }
     
+    public DescribeAutoPredictorRequest(@JsonProperty("PredictorArn") String predictorArn) {
+        this.predictorArn = predictorArn;
+  }
 }

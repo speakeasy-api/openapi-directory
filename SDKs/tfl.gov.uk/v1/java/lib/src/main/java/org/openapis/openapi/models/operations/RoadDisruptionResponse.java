@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RoadDisruptionResponse {
     
     public byte[] body;
+
     public RoadDisruptionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class RoadDisruptionResponse {
     
     
     public String contentType;
+
     public RoadDisruptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class RoadDisruptionResponse {
     
     
     public Integer statusCode;
+
     public RoadDisruptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class RoadDisruptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RoadDisruptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class RoadDisruptionResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesRoadDisruption[] tflApiPresentationEntitiesRoadDisruptions;
+
     public RoadDisruptionResponse withTflApiPresentationEntitiesRoadDisruptions(org.openapis.openapi.models.shared.TflApiPresentationEntitiesRoadDisruption[] tflApiPresentationEntitiesRoadDisruptions) {
         this.tflApiPresentationEntitiesRoadDisruptions = tflApiPresentationEntitiesRoadDisruptions;
         return this;
     }
     
+    public RoadDisruptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

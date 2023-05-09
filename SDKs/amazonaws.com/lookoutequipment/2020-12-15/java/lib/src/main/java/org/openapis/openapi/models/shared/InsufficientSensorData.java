@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InsufficientSensorData {
     @JsonProperty("MissingCompleteSensorData")
     public MissingCompleteSensorData missingCompleteSensorData;
+
     public InsufficientSensorData withMissingCompleteSensorData(MissingCompleteSensorData missingCompleteSensorData) {
         this.missingCompleteSensorData = missingCompleteSensorData;
         return this;
@@ -19,9 +20,14 @@ public class InsufficientSensorData {
     
     @JsonProperty("SensorsWithShortDateRange")
     public SensorsWithShortDateRange sensorsWithShortDateRange;
+
     public InsufficientSensorData withSensorsWithShortDateRange(SensorsWithShortDateRange sensorsWithShortDateRange) {
         this.sensorsWithShortDateRange = sensorsWithShortDateRange;
         return this;
     }
     
+    public InsufficientSensorData(@JsonProperty("MissingCompleteSensorData") MissingCompleteSensorData missingCompleteSensorData, @JsonProperty("SensorsWithShortDateRange") SensorsWithShortDateRange sensorsWithShortDateRange) {
+        this.missingCompleteSensorData = missingCompleteSensorData;
+        this.sensorsWithShortDateRange = sensorsWithShortDateRange;
+  }
 }

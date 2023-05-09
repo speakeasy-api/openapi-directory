@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsUserDeletionUserDeletionRequestUpsertResponse {
     
     public String contentType;
+
     public AnalyticsUserDeletionUserDeletionRequestUpsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AnalyticsUserDeletionUserDeletionRequestUpsertResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsUserDeletionUserDeletionRequestUpsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AnalyticsUserDeletionUserDeletionRequestUpsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsUserDeletionUserDeletionRequestUpsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsUserDeletionUserDeletionRequestUpsertResponse {
      */
     
     public org.openapis.openapi.models.shared.UserDeletionRequest userDeletionRequest;
+
     public AnalyticsUserDeletionUserDeletionRequestUpsertResponse withUserDeletionRequest(org.openapis.openapi.models.shared.UserDeletionRequest userDeletionRequest) {
         this.userDeletionRequest = userDeletionRequest;
         return this;
     }
     
+    public AnalyticsUserDeletionUserDeletionRequestUpsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

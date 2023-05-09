@@ -13,6 +13,7 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public GetCmsV3DomainsGetPageRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -23,6 +24,7 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
     public Boolean archived;
+
     public GetCmsV3DomainsGetPageRequest withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -33,6 +35,7 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public OffsetDateTime createdAfter;
+
     public GetCmsV3DomainsGetPageRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -43,6 +46,7 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt")
     public OffsetDateTime createdAt;
+
     public GetCmsV3DomainsGetPageRequest withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -53,6 +57,7 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public OffsetDateTime createdBefore;
+
     public GetCmsV3DomainsGetPageRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -63,6 +68,7 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetCmsV3DomainsGetPageRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -70,6 +76,7 @@ public class GetCmsV3DomainsGetPageRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public GetCmsV3DomainsGetPageRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -80,6 +87,7 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
     public OffsetDateTime updatedAfter;
+
     public GetCmsV3DomainsGetPageRequest withUpdatedAfter(OffsetDateTime updatedAfter) {
         this.updatedAfter = updatedAfter;
         return this;
@@ -90,6 +98,7 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt")
     public OffsetDateTime updatedAt;
+
     public GetCmsV3DomainsGetPageRequest withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -100,9 +109,11 @@ public class GetCmsV3DomainsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedBefore")
     public OffsetDateTime updatedBefore;
+
     public GetCmsV3DomainsGetPageRequest withUpdatedBefore(OffsetDateTime updatedBefore) {
         this.updatedBefore = updatedBefore;
         return this;
     }
     
+    public GetCmsV3DomainsGetPageRequest(){}
 }

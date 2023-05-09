@@ -17,6 +17,7 @@ public class MessageStatusMessenger {
      */
     @JsonProperty("channel")
     public MessageStatusMessengerChannelEnum channel;
+
     public MessageStatusMessenger withChannel(MessageStatusMessengerChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -28,6 +29,7 @@ public class MessageStatusMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public MessageStatusMessenger withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -39,6 +41,7 @@ public class MessageStatusMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public MessageStatusMessengerError error;
+
     public MessageStatusMessenger withError(MessageStatusMessengerError error) {
         this.error = error;
         return this;
@@ -50,6 +53,7 @@ public class MessageStatusMessenger {
      */
     @JsonProperty("from")
     public String from;
+
     public MessageStatusMessenger withFrom(String from) {
         this.from = from;
         return this;
@@ -60,6 +64,7 @@ public class MessageStatusMessenger {
      */
     @JsonProperty("message_uuid")
     public String messageUuid;
+
     public MessageStatusMessenger withMessageUuid(String messageUuid) {
         this.messageUuid = messageUuid;
         return this;
@@ -67,6 +72,7 @@ public class MessageStatusMessenger {
     
     @JsonProperty("status")
     public MessageStatusMessengerStatusEnum status;
+
     public MessageStatusMessenger withStatus(MessageStatusMessengerStatusEnum status) {
         this.status = status;
         return this;
@@ -77,6 +83,7 @@ public class MessageStatusMessenger {
      */
     @JsonProperty("timestamp")
     public String timestamp;
+
     public MessageStatusMessenger withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -88,6 +95,7 @@ public class MessageStatusMessenger {
      */
     @JsonProperty("to")
     public String to;
+
     public MessageStatusMessenger withTo(String to) {
         this.to = to;
         return this;
@@ -96,9 +104,18 @@ public class MessageStatusMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public MessageStatusMessengerUsage usage;
+
     public MessageStatusMessenger withUsage(MessageStatusMessengerUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public MessageStatusMessenger(@JsonProperty("channel") MessageStatusMessengerChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_uuid") String messageUuid, @JsonProperty("status") MessageStatusMessengerStatusEnum status, @JsonProperty("timestamp") String timestamp, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.messageUuid = messageUuid;
+        this.status = status;
+        this.timestamp = timestamp;
+        this.to = to;
+  }
 }

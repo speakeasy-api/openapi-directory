@@ -17,6 +17,7 @@ public class CalendarNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public CalendarNotification withMethod(String method) {
         this.method = method;
         return this;
@@ -34,9 +35,11 @@ public class CalendarNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CalendarNotification withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CalendarNotification(){}
 }

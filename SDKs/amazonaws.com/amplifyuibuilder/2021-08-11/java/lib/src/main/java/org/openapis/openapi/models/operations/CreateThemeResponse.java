@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateThemeResponse {
     
     public String contentType;
+
     public CreateThemeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateThemeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateThemeResponse createThemeResponse;
+
     public CreateThemeResponse withCreateThemeResponse(org.openapis.openapi.models.shared.CreateThemeResponse createThemeResponse) {
         this.createThemeResponse = createThemeResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateThemeResponse {
      */
     
     public Object internalServerException;
+
     public CreateThemeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateThemeResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateThemeResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateThemeResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateThemeResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -59,6 +65,7 @@ public class CreateThemeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateThemeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateThemeResponse {
     
     
     public Integer statusCode;
+
     public CreateThemeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateThemeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateThemeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateThemeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

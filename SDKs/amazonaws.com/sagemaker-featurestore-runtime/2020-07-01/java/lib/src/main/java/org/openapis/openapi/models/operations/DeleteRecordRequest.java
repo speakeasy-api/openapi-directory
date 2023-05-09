@@ -4,14 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRecordRequest {
+    /**
+     * The name of the deletion mode for deleting the record. By default, the deletion mode is set to &lt;code&gt;SoftDelete&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionMode")
+    public DeleteRecordDeletionModeEnum deletionMode;
+
+    public DeleteRecordRequest withDeletionMode(DeleteRecordDeletionModeEnum deletionMode) {
+        this.deletionMode = deletionMode;
+        return this;
+    }
+    
     /**
      * Timestamp indicating when the deletion event occurred. &lt;code&gt;EventTime&lt;/code&gt; can be used to query data at a certain point in time.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EventTime")
     public String eventTime;
+
     public DeleteRecordRequest withEventTime(String eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -22,6 +35,7 @@ public class DeleteRecordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FeatureGroupName")
     public String featureGroupName;
+
     public DeleteRecordRequest withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -32,6 +46,7 @@ public class DeleteRecordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RecordIdentifierValueAsString")
     public String recordIdentifierValueAsString;
+
     public DeleteRecordRequest withRecordIdentifierValueAsString(String recordIdentifierValueAsString) {
         this.recordIdentifierValueAsString = recordIdentifierValueAsString;
         return this;
@@ -42,6 +57,7 @@ public class DeleteRecordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetStores")
     public org.openapis.openapi.models.shared.TargetStoreEnum[] targetStores;
+
     public DeleteRecordRequest withTargetStores(org.openapis.openapi.models.shared.TargetStoreEnum[] targetStores) {
         this.targetStores = targetStores;
         return this;
@@ -49,6 +65,7 @@ public class DeleteRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteRecordRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -56,6 +73,7 @@ public class DeleteRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteRecordRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -63,6 +81,7 @@ public class DeleteRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteRecordRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -70,6 +89,7 @@ public class DeleteRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteRecordRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -77,6 +97,7 @@ public class DeleteRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteRecordRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -84,6 +105,7 @@ public class DeleteRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteRecordRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -91,9 +113,15 @@ public class DeleteRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteRecordRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DeleteRecordRequest(@JsonProperty("EventTime") String eventTime, @JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("RecordIdentifierValueAsString") String recordIdentifierValueAsString) {
+        this.eventTime = eventTime;
+        this.featureGroupName = featureGroupName;
+        this.recordIdentifierValueAsString = recordIdentifierValueAsString;
+  }
 }

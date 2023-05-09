@@ -18,9 +18,11 @@ public class GoogleFirebaseAppdistroV1BatchRemoveTestersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public GoogleFirebaseAppdistroV1BatchRemoveTestersResponse withEmails(String[] emails) {
         this.emails = emails;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1BatchRemoveTestersResponse(){}
 }

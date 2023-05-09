@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PadUsersCountUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public PadUsersCountUsingPOSTRequest withPadID(String padID) {
         this.padID = padID;
         return this;
     }
     
+    public PadUsersCountUsingPOSTRequest(){}
 }

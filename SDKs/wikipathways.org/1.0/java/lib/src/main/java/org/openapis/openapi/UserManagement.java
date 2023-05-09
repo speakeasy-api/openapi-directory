@@ -53,10 +53,8 @@ public class UserManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetUserByOrcidResponse res = new org.openapis.openapi.models.operations.GetGetUserByOrcidResponse() {{
+        org.openapis.openapi.models.operations.GetGetUserByOrcidResponse res = new org.openapis.openapi.models.operations.GetGetUserByOrcidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,8 @@ public class UserManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLoginResponse res = new org.openapis.openapi.models.operations.GetLoginResponse() {{
+        org.openapis.openapi.models.operations.GetLoginResponse res = new org.openapis.openapi.models.operations.GetLoginResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

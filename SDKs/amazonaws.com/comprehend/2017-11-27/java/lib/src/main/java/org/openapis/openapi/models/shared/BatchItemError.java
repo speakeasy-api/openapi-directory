@@ -15,6 +15,7 @@ public class BatchItemError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public BatchItemError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class BatchItemError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public BatchItemError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class BatchItemError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public BatchItemError withIndex(Long index) {
         this.index = index;
         return this;
     }
     
+    public BatchItemError(){}
 }

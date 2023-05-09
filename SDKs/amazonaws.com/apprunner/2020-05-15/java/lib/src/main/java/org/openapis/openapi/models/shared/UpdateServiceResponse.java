@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateServiceResponse {
     @JsonProperty("OperationId")
     public String operationId;
+
     public UpdateServiceResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -19,9 +20,14 @@ public class UpdateServiceResponse {
     
     @JsonProperty("Service")
     public Service service;
+
     public UpdateServiceResponse withService(Service service) {
         this.service = service;
         return this;
     }
     
+    public UpdateServiceResponse(@JsonProperty("OperationId") String operationId, @JsonProperty("Service") Service service) {
+        this.operationId = operationId;
+        this.service = service;
+  }
 }

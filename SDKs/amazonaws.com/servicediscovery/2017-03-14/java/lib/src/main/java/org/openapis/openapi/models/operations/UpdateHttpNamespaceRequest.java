@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateHttpNamespaceRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateHttpNamespaceRequest updateHttpNamespaceRequest;
+
     public UpdateHttpNamespaceRequest withUpdateHttpNamespaceRequest(org.openapis.openapi.models.shared.UpdateHttpNamespaceRequest updateHttpNamespaceRequest) {
         this.updateHttpNamespaceRequest = updateHttpNamespaceRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdateHttpNamespaceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateHttpNamespaceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateHttpNamespaceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateHttpNamespaceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateHttpNamespaceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateHttpNamespaceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateHttpNamespaceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateHttpNamespaceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateHttpNamespaceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateHttpNamespaceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateHttpNamespaceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateHttpNamespaceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateHttpNamespaceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateHttpNamespaceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class UpdateHttpNamespaceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public UpdateHttpNamespaceXAmzTargetEnum xAmzTarget;
+
     public UpdateHttpNamespaceRequest withXAmzTarget(UpdateHttpNamespaceXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public UpdateHttpNamespaceRequest(@JsonProperty("UpdateHttpNamespaceRequest") org.openapis.openapi.models.shared.UpdateHttpNamespaceRequest updateHttpNamespaceRequest, @JsonProperty("X-Amz-Target") UpdateHttpNamespaceXAmzTargetEnum xAmzTarget) {
+        this.updateHttpNamespaceRequest = updateHttpNamespaceRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

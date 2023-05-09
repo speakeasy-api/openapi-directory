@@ -20,6 +20,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public InstanceAssociationStatusInfo withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -28,6 +29,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationName")
     public String associationName;
+
     public InstanceAssociationStatusInfo withAssociationName(String associationName) {
         this.associationName = associationName;
         return this;
@@ -36,6 +38,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersion")
     public String associationVersion;
+
     public InstanceAssociationStatusInfo withAssociationVersion(String associationVersion) {
         this.associationVersion = associationVersion;
         return this;
@@ -44,6 +47,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedStatus")
     public String detailedStatus;
+
     public InstanceAssociationStatusInfo withDetailedStatus(String detailedStatus) {
         this.detailedStatus = detailedStatus;
         return this;
@@ -52,6 +56,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public InstanceAssociationStatusInfo withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -60,6 +65,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public InstanceAssociationStatusInfo withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -70,6 +76,7 @@ public class InstanceAssociationStatusInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExecutionDate")
     public OffsetDateTime executionDate;
+
     public InstanceAssociationStatusInfo withExecutionDate(OffsetDateTime executionDate) {
         this.executionDate = executionDate;
         return this;
@@ -78,6 +85,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionSummary")
     public String executionSummary;
+
     public InstanceAssociationStatusInfo withExecutionSummary(String executionSummary) {
         this.executionSummary = executionSummary;
         return this;
@@ -86,6 +94,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public InstanceAssociationStatusInfo withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -94,6 +103,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InstanceAssociationStatusInfo withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputUrl")
     public InstanceAssociationOutputUrl outputUrl;
+
     public InstanceAssociationStatusInfo withOutputUrl(InstanceAssociationOutputUrl outputUrl) {
         this.outputUrl = outputUrl;
         return this;
@@ -110,9 +121,11 @@ public class InstanceAssociationStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public InstanceAssociationStatusInfo withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public InstanceAssociationStatusInfo(){}
 }

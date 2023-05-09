@@ -41,15 +41,13 @@ public class BoxConsolidationController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EpConsolidateResponse res = new org.openapis.openapi.models.operations.EpConsolidateResponse() {{
+        org.openapis.openapi.models.operations.EpConsolidateResponse res = new org.openapis.openapi.models.operations.EpConsolidateResponse(contentType, httpRes.statusCode()) {{
             body = null;
             epConsolidate400WildcardString = null;
             epConsolidate401WildcardString = null;
             epConsolidate404WildcardString = null;
             epConsolidate409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,15 +98,13 @@ public class BoxConsolidationController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MainApp1Response res = new org.openapis.openapi.models.operations.MainApp1Response() {{
+        org.openapis.openapi.models.operations.MainApp1Response res = new org.openapis.openapi.models.operations.MainApp1Response(contentType, httpRes.statusCode()) {{
             body = null;
             mainApp1400WildcardString = null;
             mainApp1401WildcardString = null;
             mainApp1404WildcardString = null;
             mainApp1409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

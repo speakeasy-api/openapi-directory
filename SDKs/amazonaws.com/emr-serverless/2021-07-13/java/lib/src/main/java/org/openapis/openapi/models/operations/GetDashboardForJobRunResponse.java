@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDashboardForJobRunResponse {
     
     public String contentType;
+
     public GetDashboardForJobRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDashboardForJobRunResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDashboardForJobRunResponse getDashboardForJobRunResponse;
+
     public GetDashboardForJobRunResponse withGetDashboardForJobRunResponse(org.openapis.openapi.models.shared.GetDashboardForJobRunResponse getDashboardForJobRunResponse) {
         this.getDashboardForJobRunResponse = getDashboardForJobRunResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDashboardForJobRunResponse {
      */
     
     public Object internalServerException;
+
     public GetDashboardForJobRunResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetDashboardForJobRunResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDashboardForJobRunResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetDashboardForJobRunResponse {
     
     
     public Integer statusCode;
+
     public GetDashboardForJobRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDashboardForJobRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDashboardForJobRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDashboardForJobRunResponse {
      */
     
     public Object validationException;
+
     public GetDashboardForJobRunResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDashboardForJobRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

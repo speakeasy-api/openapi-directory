@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSlotTypeResponse {
@@ -12,6 +13,7 @@ public class UpdateSlotTypeResponse {
      */
     
     public Object conflictException;
+
     public UpdateSlotTypeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSlotTypeResponse {
     
     
     public String contentType;
+
     public UpdateSlotTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSlotTypeResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSlotTypeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSlotTypeResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateSlotTypeResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateSlotTypeResponse {
     
     
     public Integer statusCode;
+
     public UpdateSlotTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSlotTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSlotTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSlotTypeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateSlotTypeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSlotTypeResponse {
      */
     
     public Object throttlingException;
+
     public UpdateSlotTypeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSlotTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSlotTypeResponse updateSlotTypeResponse;
+
     public UpdateSlotTypeResponse withUpdateSlotTypeResponse(org.openapis.openapi.models.shared.UpdateSlotTypeResponse updateSlotTypeResponse) {
         this.updateSlotTypeResponse = updateSlotTypeResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateSlotTypeResponse {
      */
     
     public Object validationException;
+
     public UpdateSlotTypeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSlotTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

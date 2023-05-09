@@ -15,6 +15,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeSessionId")
     public String activeSessionId;
+
     public Stage withActiveSessionId(String activeSessionId) {
         this.activeSessionId = activeSessionId;
         return this;
@@ -22,6 +23,7 @@ public class Stage {
     
     @JsonProperty("arn")
     public String arn;
+
     public Stage withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +32,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Stage withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +41,13 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Stage withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Stage(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

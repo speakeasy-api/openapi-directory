@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPhenotypeAnatomyAssociationsResponse {
     
     public String contentType;
+
     public GetPhenotypeAnatomyAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPhenotypeAnatomyAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.NamedObject[] namedObjects;
+
     public GetPhenotypeAnatomyAssociationsResponse withNamedObjects(org.openapis.openapi.models.shared.NamedObject[] namedObjects) {
         this.namedObjects = namedObjects;
         return this;
@@ -26,6 +29,7 @@ public class GetPhenotypeAnatomyAssociationsResponse {
     
     
     public Integer statusCode;
+
     public GetPhenotypeAnatomyAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPhenotypeAnatomyAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPhenotypeAnatomyAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPhenotypeAnatomyAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

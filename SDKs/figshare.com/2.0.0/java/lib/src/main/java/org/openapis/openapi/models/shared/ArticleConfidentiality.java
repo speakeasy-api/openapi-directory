@@ -15,6 +15,7 @@ public class ArticleConfidentiality {
      */
     @JsonProperty("is_confidential")
     public Boolean isConfidential;
+
     public ArticleConfidentiality withIsConfidential(Boolean isConfidential) {
         this.isConfidential = isConfidential;
         return this;
@@ -25,9 +26,14 @@ public class ArticleConfidentiality {
      */
     @JsonProperty("reason")
     public String reason;
+
     public ArticleConfidentiality withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ArticleConfidentiality(@JsonProperty("is_confidential") Boolean isConfidential, @JsonProperty("reason") String reason) {
+        this.isConfidential = isConfidential;
+        this.reason = reason;
+  }
 }

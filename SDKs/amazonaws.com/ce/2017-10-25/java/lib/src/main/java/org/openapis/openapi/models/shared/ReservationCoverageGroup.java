@@ -15,6 +15,7 @@ public class ReservationCoverageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public ReservationCoverageGroup withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class ReservationCoverageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Coverage")
     public Coverage coverage;
+
     public ReservationCoverageGroup withCoverage(Coverage coverage) {
         this.coverage = coverage;
         return this;
     }
     
+    public ReservationCoverageGroup(){}
 }

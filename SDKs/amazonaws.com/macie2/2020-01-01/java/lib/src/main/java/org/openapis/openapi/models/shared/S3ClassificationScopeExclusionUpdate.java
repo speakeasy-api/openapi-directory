@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3ClassificationScopeExclusionUpdate {
     @JsonProperty("bucketNames")
     public String[] bucketNames;
+
     public S3ClassificationScopeExclusionUpdate withBucketNames(String[] bucketNames) {
         this.bucketNames = bucketNames;
         return this;
@@ -19,9 +20,14 @@ public class S3ClassificationScopeExclusionUpdate {
     
     @JsonProperty("operation")
     public ClassificationScopeUpdateOperationEnum operation;
+
     public S3ClassificationScopeExclusionUpdate withOperation(ClassificationScopeUpdateOperationEnum operation) {
         this.operation = operation;
         return this;
     }
     
+    public S3ClassificationScopeExclusionUpdate(@JsonProperty("bucketNames") String[] bucketNames, @JsonProperty("operation") ClassificationScopeUpdateOperationEnum operation) {
+        this.bucketNames = bucketNames;
+        this.operation = operation;
+  }
 }

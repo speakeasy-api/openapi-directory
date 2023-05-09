@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetToken {
     @JsonProperty("contractaddress")
     public String contractaddress;
+
     public GetToken withContractaddress(String contractaddress) {
         this.contractaddress = contractaddress;
         return this;
@@ -16,6 +17,7 @@ public class GetToken {
     
     @JsonProperty("decimals")
     public Integer decimals;
+
     public GetToken withDecimals(Integer decimals) {
         this.decimals = decimals;
         return this;
@@ -23,6 +25,7 @@ public class GetToken {
     
     @JsonProperty("name")
     public String name;
+
     public GetToken withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +33,7 @@ public class GetToken {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetToken withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -37,6 +41,7 @@ public class GetToken {
     
     @JsonProperty("supply")
     public Long supply;
+
     public GetToken withSupply(Long supply) {
         this.supply = supply;
         return this;
@@ -44,9 +49,18 @@ public class GetToken {
     
     @JsonProperty("symbol")
     public String symbol;
+
     public GetToken withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public GetToken(@JsonProperty("contractaddress") String contractaddress, @JsonProperty("decimals") Integer decimals, @JsonProperty("name") String name, @JsonProperty("ok") Boolean ok, @JsonProperty("supply") Long supply, @JsonProperty("symbol") String symbol) {
+        this.contractaddress = contractaddress;
+        this.decimals = decimals;
+        this.name = name;
+        this.ok = ok;
+        this.supply = supply;
+        this.symbol = symbol;
+  }
 }

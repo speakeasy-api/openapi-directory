@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     public Boolean associatePublicIpAddress;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -19,6 +20,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public Boolean deleteOnTermination;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -26,6 +28,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public String description;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public Long deviceIndex;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -40,6 +44,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public String[] groups;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -47,6 +52,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public Long ipv6AddressCount;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withIpv6AddressCount(Long ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -54,6 +60,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public ScheduledInstancesLaunchSpecificationNetworkInterfacesIpv6Addresses[] ipv6Addresses;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withIpv6Addresses(ScheduledInstancesLaunchSpecificationNetworkInterfacesIpv6Addresses[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -61,6 +68,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public String networkInterfaceId;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -68,6 +76,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public String privateIpAddress;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -75,6 +84,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public ScheduledInstancesLaunchSpecificationNetworkInterfacesPrivateIpAddressConfigs[] privateIpAddressConfigs;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withPrivateIpAddressConfigs(ScheduledInstancesLaunchSpecificationNetworkInterfacesPrivateIpAddressConfigs[] privateIpAddressConfigs) {
         this.privateIpAddressConfigs = privateIpAddressConfigs;
         return this;
@@ -82,6 +92,7 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public Long secondaryPrivateIpAddressCount;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -89,9 +100,11 @@ public class ScheduledInstancesLaunchSpecificationNetworkInterfaces {
     
     
     public String subnetId;
+
     public ScheduledInstancesLaunchSpecificationNetworkInterfaces withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public ScheduledInstancesLaunchSpecificationNetworkInterfaces(){}
 }

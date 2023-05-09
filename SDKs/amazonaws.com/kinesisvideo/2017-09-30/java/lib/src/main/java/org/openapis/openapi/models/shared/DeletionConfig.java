@@ -15,6 +15,7 @@ public class DeletionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteAfterUpload")
     public Boolean deleteAfterUpload;
+
     public DeletionConfig withDeleteAfterUpload(Boolean deleteAfterUpload) {
         this.deleteAfterUpload = deleteAfterUpload;
         return this;
@@ -23,6 +24,7 @@ public class DeletionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgeRetentionInHours")
     public Long edgeRetentionInHours;
+
     public DeletionConfig withEdgeRetentionInHours(Long edgeRetentionInHours) {
         this.edgeRetentionInHours = edgeRetentionInHours;
         return this;
@@ -31,9 +33,11 @@ public class DeletionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalSizeConfig")
     public LocalSizeConfig localSizeConfig;
+
     public DeletionConfig withLocalSizeConfig(LocalSizeConfig localSizeConfig) {
         this.localSizeConfig = localSizeConfig;
         return this;
     }
     
+    public DeletionConfig(){}
 }

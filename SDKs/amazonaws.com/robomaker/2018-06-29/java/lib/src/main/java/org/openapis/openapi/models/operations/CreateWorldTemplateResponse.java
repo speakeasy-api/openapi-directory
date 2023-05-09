@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorldTemplateResponse {
     
     public String contentType;
+
     public CreateWorldTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorldTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorldTemplateResponse createWorldTemplateResponse;
+
     public CreateWorldTemplateResponse withCreateWorldTemplateResponse(org.openapis.openapi.models.shared.CreateWorldTemplateResponse createWorldTemplateResponse) {
         this.createWorldTemplateResponse = createWorldTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorldTemplateResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorldTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorldTemplateResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateWorldTemplateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorldTemplateResponse {
      */
     
     public Object limitExceededException;
+
     public CreateWorldTemplateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorldTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWorldTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateWorldTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateWorldTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateWorldTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorldTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateWorldTemplateResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateWorldTemplateResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateWorldTemplateResponse {
      */
     
     public Object throttlingException;
+
     public CreateWorldTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateWorldTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

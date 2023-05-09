@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePermissionsResponse {
     @JsonProperty("errors")
     public UpdateError[] errors;
+
     public UpdatePermissionsResponse withErrors(UpdateError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public UpdatePermissionsResponse(@JsonProperty("errors") UpdateError[] errors) {
+        this.errors = errors;
+  }
 }

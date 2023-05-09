@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetaccountconfigRequest {
@@ -12,6 +13,7 @@ public class GetaccountconfigRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetaccountconfigRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetaccountconfigRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetaccountconfigRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class GetaccountconfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public GetaccountconfigRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
     }
     
+    public GetaccountconfigRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+  }
 }

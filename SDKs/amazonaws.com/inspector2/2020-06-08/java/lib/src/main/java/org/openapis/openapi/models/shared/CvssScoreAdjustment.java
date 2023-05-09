@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CvssScoreAdjustment {
     @JsonProperty("metric")
     public String metric;
+
     public CvssScoreAdjustment withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -19,9 +20,14 @@ public class CvssScoreAdjustment {
     
     @JsonProperty("reason")
     public String reason;
+
     public CvssScoreAdjustment withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CvssScoreAdjustment(@JsonProperty("metric") String metric, @JsonProperty("reason") String reason) {
+        this.metric = metric;
+        this.reason = reason;
+  }
 }

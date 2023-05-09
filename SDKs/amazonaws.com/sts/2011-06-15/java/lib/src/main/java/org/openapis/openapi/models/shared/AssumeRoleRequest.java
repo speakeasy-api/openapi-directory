@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssumeRoleRequest {
     
     public Long durationSeconds;
+
     public AssumeRoleRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -16,6 +17,7 @@ public class AssumeRoleRequest {
     
     
     public String externalId;
+
     public AssumeRoleRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -23,6 +25,7 @@ public class AssumeRoleRequest {
     
     
     public String policy;
+
     public AssumeRoleRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -30,6 +33,7 @@ public class AssumeRoleRequest {
     
     
     public PolicyDescriptorType[] policyArns;
+
     public AssumeRoleRequest withPolicyArns(PolicyDescriptorType[] policyArns) {
         this.policyArns = policyArns;
         return this;
@@ -37,6 +41,7 @@ public class AssumeRoleRequest {
     
     
     public String roleArn;
+
     public AssumeRoleRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -44,6 +49,7 @@ public class AssumeRoleRequest {
     
     
     public String roleSessionName;
+
     public AssumeRoleRequest withRoleSessionName(String roleSessionName) {
         this.roleSessionName = roleSessionName;
         return this;
@@ -51,6 +57,7 @@ public class AssumeRoleRequest {
     
     
     public String serialNumber;
+
     public AssumeRoleRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -58,6 +65,7 @@ public class AssumeRoleRequest {
     
     
     public String sourceIdentity;
+
     public AssumeRoleRequest withSourceIdentity(String sourceIdentity) {
         this.sourceIdentity = sourceIdentity;
         return this;
@@ -65,6 +73,7 @@ public class AssumeRoleRequest {
     
     
     public Tag[] tags;
+
     public AssumeRoleRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -72,6 +81,7 @@ public class AssumeRoleRequest {
     
     
     public String tokenCode;
+
     public AssumeRoleRequest withTokenCode(String tokenCode) {
         this.tokenCode = tokenCode;
         return this;
@@ -79,9 +89,14 @@ public class AssumeRoleRequest {
     
     
     public String[] transitiveTagKeys;
+
     public AssumeRoleRequest withTransitiveTagKeys(String[] transitiveTagKeys) {
         this.transitiveTagKeys = transitiveTagKeys;
         return this;
     }
     
+    public AssumeRoleRequest(@JsonProperty("RoleArn") String roleArn, @JsonProperty("RoleSessionName") String roleSessionName) {
+        this.roleArn = roleArn;
+        this.roleSessionName = roleSessionName;
+  }
 }

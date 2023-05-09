@@ -12,6 +12,7 @@ public class ScheduleBEfilePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ScheduleBEfilePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleBEfilePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleBEfile[] results;
+
     public ScheduleBEfilePage withResults(ScheduleBEfile[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleBEfilePage(){}
 }

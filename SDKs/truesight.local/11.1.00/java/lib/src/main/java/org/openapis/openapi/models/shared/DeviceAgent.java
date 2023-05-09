@@ -15,6 +15,7 @@ public class DeviceAgent {
      */
     
     public String connectionStatus;
+
     public DeviceAgent withConnectionStatus(String connectionStatus) {
         this.connectionStatus = connectionStatus;
         return this;
@@ -25,6 +26,7 @@ public class DeviceAgent {
      */
     
     public String id;
+
     public DeviceAgent withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class DeviceAgent {
      */
     
     public String name;
+
     public DeviceAgent withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class DeviceAgent {
      */
     
     public String os;
+
     public DeviceAgent withOs(String os) {
         this.os = os;
         return this;
@@ -55,6 +59,7 @@ public class DeviceAgent {
      */
     
     public String port;
+
     public DeviceAgent withPort(String port) {
         this.port = port;
         return this;
@@ -65,6 +70,7 @@ public class DeviceAgent {
      */
     
     public String url;
+
     public DeviceAgent withUrl(String url) {
         this.url = url;
         return this;
@@ -75,9 +81,11 @@ public class DeviceAgent {
      */
     
     public String version;
+
     public DeviceAgent withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DeviceAgent(){}
 }

@@ -18,6 +18,7 @@ public class RuntimeNetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connections")
     public NetworkConnectionList connections;
+
     public RuntimeNetworkInfo withConnections(NetworkConnectionList connections) {
         this.connections = connections;
         return this;
@@ -29,6 +30,7 @@ public class RuntimeNetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netstat")
     public String netstat;
+
     public RuntimeNetworkInfo withNetstat(String netstat) {
         this.netstat = netstat;
         return this;
@@ -40,9 +42,11 @@ public class RuntimeNetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netstatTime")
     public DateTime netstatTime;
+
     public RuntimeNetworkInfo withNetstatTime(DateTime netstatTime) {
         this.netstatTime = netstatTime;
         return this;
     }
     
+    public RuntimeNetworkInfo(){}
 }

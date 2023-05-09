@@ -21,6 +21,7 @@ public class ProtectedQuery {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ProtectedQuery withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class ProtectedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ProtectedQueryError error;
+
     public ProtectedQuery withError(ProtectedQueryError error) {
         this.error = error;
         return this;
@@ -36,6 +38,7 @@ public class ProtectedQuery {
     
     @JsonProperty("id")
     public String id;
+
     public ProtectedQuery withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class ProtectedQuery {
     
     @JsonProperty("membershipArn")
     public String membershipArn;
+
     public ProtectedQuery withMembershipArn(String membershipArn) {
         this.membershipArn = membershipArn;
         return this;
@@ -50,6 +54,7 @@ public class ProtectedQuery {
     
     @JsonProperty("membershipId")
     public String membershipId;
+
     public ProtectedQuery withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -58,6 +63,7 @@ public class ProtectedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ProtectedQueryResult result;
+
     public ProtectedQuery withResult(ProtectedQueryResult result) {
         this.result = result;
         return this;
@@ -65,6 +71,7 @@ public class ProtectedQuery {
     
     @JsonProperty("resultConfiguration")
     public ProtectedQueryResultConfiguration resultConfiguration;
+
     public ProtectedQuery withResultConfiguration(ProtectedQueryResultConfiguration resultConfiguration) {
         this.resultConfiguration = resultConfiguration;
         return this;
@@ -72,6 +79,7 @@ public class ProtectedQuery {
     
     @JsonProperty("sqlParameters")
     public ProtectedQuerySQLParameters sqlParameters;
+
     public ProtectedQuery withSqlParameters(ProtectedQuerySQLParameters sqlParameters) {
         this.sqlParameters = sqlParameters;
         return this;
@@ -80,6 +88,7 @@ public class ProtectedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public ProtectedQueryStatistics statistics;
+
     public ProtectedQuery withStatistics(ProtectedQueryStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -87,9 +96,19 @@ public class ProtectedQuery {
     
     @JsonProperty("status")
     public ProtectedQueryStatusEnum status;
+
     public ProtectedQuery withStatus(ProtectedQueryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ProtectedQuery(@JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("id") String id, @JsonProperty("membershipArn") String membershipArn, @JsonProperty("membershipId") String membershipId, @JsonProperty("resultConfiguration") ProtectedQueryResultConfiguration resultConfiguration, @JsonProperty("sqlParameters") ProtectedQuerySQLParameters sqlParameters, @JsonProperty("status") ProtectedQueryStatusEnum status) {
+        this.createTime = createTime;
+        this.id = id;
+        this.membershipArn = membershipArn;
+        this.membershipId = membershipId;
+        this.resultConfiguration = resultConfiguration;
+        this.sqlParameters = sqlParameters;
+        this.status = status;
+  }
 }

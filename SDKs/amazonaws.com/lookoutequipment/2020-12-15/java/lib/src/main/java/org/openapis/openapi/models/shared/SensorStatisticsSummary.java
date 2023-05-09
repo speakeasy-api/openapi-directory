@@ -20,6 +20,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CategoricalValues")
     public CategoricalValues categoricalValues;
+
     public SensorStatisticsSummary withCategoricalValues(CategoricalValues categoricalValues) {
         this.categoricalValues = categoricalValues;
         return this;
@@ -28,6 +29,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentName")
     public String componentName;
+
     public SensorStatisticsSummary withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -38,6 +40,7 @@ public class SensorStatisticsSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DataEndTime")
     public OffsetDateTime dataEndTime;
+
     public SensorStatisticsSummary withDataEndTime(OffsetDateTime dataEndTime) {
         this.dataEndTime = dataEndTime;
         return this;
@@ -46,6 +49,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataExists")
     public Boolean dataExists;
+
     public SensorStatisticsSummary withDataExists(Boolean dataExists) {
         this.dataExists = dataExists;
         return this;
@@ -56,6 +60,7 @@ public class SensorStatisticsSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DataStartTime")
     public OffsetDateTime dataStartTime;
+
     public SensorStatisticsSummary withDataStartTime(OffsetDateTime dataStartTime) {
         this.dataStartTime = dataStartTime;
         return this;
@@ -64,6 +69,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DuplicateTimestamps")
     public CountPercent duplicateTimestamps;
+
     public SensorStatisticsSummary withDuplicateTimestamps(CountPercent duplicateTimestamps) {
         this.duplicateTimestamps = duplicateTimestamps;
         return this;
@@ -72,6 +78,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidDateEntries")
     public CountPercent invalidDateEntries;
+
     public SensorStatisticsSummary withInvalidDateEntries(CountPercent invalidDateEntries) {
         this.invalidDateEntries = invalidDateEntries;
         return this;
@@ -80,6 +87,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidValues")
     public CountPercent invalidValues;
+
     public SensorStatisticsSummary withInvalidValues(CountPercent invalidValues) {
         this.invalidValues = invalidValues;
         return this;
@@ -88,6 +96,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LargeTimestampGaps")
     public LargeTimestampGaps largeTimestampGaps;
+
     public SensorStatisticsSummary withLargeTimestampGaps(LargeTimestampGaps largeTimestampGaps) {
         this.largeTimestampGaps = largeTimestampGaps;
         return this;
@@ -96,6 +105,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MissingValues")
     public CountPercent missingValues;
+
     public SensorStatisticsSummary withMissingValues(CountPercent missingValues) {
         this.missingValues = missingValues;
         return this;
@@ -104,6 +114,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonotonicValues")
     public MonotonicValues monotonicValues;
+
     public SensorStatisticsSummary withMonotonicValues(MonotonicValues monotonicValues) {
         this.monotonicValues = monotonicValues;
         return this;
@@ -112,6 +123,7 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultipleOperatingModes")
     public MultipleOperatingModes multipleOperatingModes;
+
     public SensorStatisticsSummary withMultipleOperatingModes(MultipleOperatingModes multipleOperatingModes) {
         this.multipleOperatingModes = multipleOperatingModes;
         return this;
@@ -120,9 +132,11 @@ public class SensorStatisticsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SensorName")
     public String sensorName;
+
     public SensorStatisticsSummary withSensorName(String sensorName) {
         this.sensorName = sensorName;
         return this;
     }
     
+    public SensorStatisticsSummary(){}
 }

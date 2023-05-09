@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePrincipalIdFormatResult {
     
     public String nextToken;
+
     public DescribePrincipalIdFormatResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribePrincipalIdFormatResult {
     
     
     public DescribePrincipalIdFormatResultPrincipals[] principals;
+
     public DescribePrincipalIdFormatResult withPrincipals(DescribePrincipalIdFormatResultPrincipals[] principals) {
         this.principals = principals;
         return this;
     }
     
+    public DescribePrincipalIdFormatResult(){}
 }

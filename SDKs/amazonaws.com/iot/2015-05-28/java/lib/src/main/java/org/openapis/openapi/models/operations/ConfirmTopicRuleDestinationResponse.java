@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmTopicRuleDestinationResponse {
@@ -12,6 +13,7 @@ public class ConfirmTopicRuleDestinationResponse {
      */
     
     public java.util.Map<String, Object> confirmTopicRuleDestinationResponse;
+
     public ConfirmTopicRuleDestinationResponse withConfirmTopicRuleDestinationResponse(java.util.Map<String, Object> confirmTopicRuleDestinationResponse) {
         this.confirmTopicRuleDestinationResponse = confirmTopicRuleDestinationResponse;
         return this;
@@ -22,6 +24,7 @@ public class ConfirmTopicRuleDestinationResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public ConfirmTopicRuleDestinationResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -29,6 +32,7 @@ public class ConfirmTopicRuleDestinationResponse {
     
     
     public String contentType;
+
     public ConfirmTopicRuleDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ConfirmTopicRuleDestinationResponse {
      */
     
     public Object internalException;
+
     public ConfirmTopicRuleDestinationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class ConfirmTopicRuleDestinationResponse {
      */
     
     public Object invalidRequestException;
+
     public ConfirmTopicRuleDestinationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class ConfirmTopicRuleDestinationResponse {
     
     
     public Integer statusCode;
+
     public ConfirmTopicRuleDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ConfirmTopicRuleDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmTopicRuleDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ConfirmTopicRuleDestinationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ConfirmTopicRuleDestinationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class ConfirmTopicRuleDestinationResponse {
      */
     
     public Object unauthorizedException;
+
     public ConfirmTopicRuleDestinationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ConfirmTopicRuleDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DatafeedFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnDelimiter")
     public String columnDelimiter;
+
     public DatafeedFormat withColumnDelimiter(String columnDelimiter) {
         this.columnDelimiter = columnDelimiter;
         return this;
@@ -26,6 +27,7 @@ public class DatafeedFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileEncoding")
     public String fileEncoding;
+
     public DatafeedFormat withFileEncoding(String fileEncoding) {
         this.fileEncoding = fileEncoding;
         return this;
@@ -37,9 +39,11 @@ public class DatafeedFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotingMode")
     public String quotingMode;
+
     public DatafeedFormat withQuotingMode(String quotingMode) {
         this.quotingMode = quotingMode;
         return this;
     }
     
+    public DatafeedFormat(){}
 }

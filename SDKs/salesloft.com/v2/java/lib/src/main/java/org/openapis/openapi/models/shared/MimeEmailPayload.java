@@ -15,6 +15,7 @@ public class MimeEmailPayload {
      */
     
     public Long id;
+
     public MimeEmailPayload withId(Long id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class MimeEmailPayload {
      */
     
     public String mailbox;
+
     public MimeEmailPayload withMailbox(String mailbox) {
         this.mailbox = mailbox;
         return this;
@@ -35,6 +37,7 @@ public class MimeEmailPayload {
      */
     
     public String messageId;
+
     public MimeEmailPayload withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -45,9 +48,11 @@ public class MimeEmailPayload {
      */
     
     public String raw;
+
     public MimeEmailPayload withRaw(String raw) {
         this.raw = raw;
         return this;
     }
     
+    public MimeEmailPayload(){}
 }

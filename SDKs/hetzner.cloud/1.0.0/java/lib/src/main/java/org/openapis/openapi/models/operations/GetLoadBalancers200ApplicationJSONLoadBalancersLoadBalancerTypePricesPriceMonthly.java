@@ -15,6 +15,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePric
      */
     @JsonProperty("gross")
     public String gross;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceMonthly withGross(String gross) {
         this.gross = gross;
         return this;
@@ -25,9 +26,14 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePric
      */
     @JsonProperty("net")
     public String net;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceMonthly withNet(String net) {
         this.net = net;
         return this;
     }
     
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceMonthly(@JsonProperty("gross") String gross, @JsonProperty("net") String net) {
+        this.gross = gross;
+        this.net = net;
+  }
 }

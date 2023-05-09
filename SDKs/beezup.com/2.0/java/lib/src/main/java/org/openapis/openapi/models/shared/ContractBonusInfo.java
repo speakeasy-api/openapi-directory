@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContractBonusInfo {
     @JsonProperty("bonuses")
     public BonusInfo[] bonuses;
+
     public ContractBonusInfo withBonuses(BonusInfo[] bonuses) {
         this.bonuses = bonuses;
         return this;
     }
     
+    public ContractBonusInfo(@JsonProperty("bonuses") BonusInfo[] bonuses) {
+        this.bonuses = bonuses;
+  }
 }

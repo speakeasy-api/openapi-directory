@@ -19,6 +19,7 @@ public class UpdateOpsItemRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActualEndTime")
     public OffsetDateTime actualEndTime;
+
     public UpdateOpsItemRequest withActualEndTime(OffsetDateTime actualEndTime) {
         this.actualEndTime = actualEndTime;
         return this;
@@ -29,6 +30,7 @@ public class UpdateOpsItemRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActualStartTime")
     public OffsetDateTime actualStartTime;
+
     public UpdateOpsItemRequest withActualStartTime(OffsetDateTime actualStartTime) {
         this.actualStartTime = actualStartTime;
         return this;
@@ -37,6 +39,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public String category;
+
     public UpdateOpsItemRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -45,6 +48,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateOpsItemRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -53,6 +57,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notifications")
     public OpsItemNotification[] notifications;
+
     public UpdateOpsItemRequest withNotifications(OpsItemNotification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -61,6 +66,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationalData")
     public java.util.Map<String, OpsItemDataValue> operationalData;
+
     public UpdateOpsItemRequest withOperationalData(java.util.Map<String, OpsItemDataValue> operationalData) {
         this.operationalData = operationalData;
         return this;
@@ -69,6 +75,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationalDataToDelete")
     public String[] operationalDataToDelete;
+
     public UpdateOpsItemRequest withOperationalDataToDelete(String[] operationalDataToDelete) {
         this.operationalDataToDelete = operationalDataToDelete;
         return this;
@@ -77,6 +84,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemArn")
     public String opsItemArn;
+
     public UpdateOpsItemRequest withOpsItemArn(String opsItemArn) {
         this.opsItemArn = opsItemArn;
         return this;
@@ -84,6 +92,7 @@ public class UpdateOpsItemRequest {
     
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public UpdateOpsItemRequest withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
@@ -94,6 +103,7 @@ public class UpdateOpsItemRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PlannedEndTime")
     public OffsetDateTime plannedEndTime;
+
     public UpdateOpsItemRequest withPlannedEndTime(OffsetDateTime plannedEndTime) {
         this.plannedEndTime = plannedEndTime;
         return this;
@@ -104,6 +114,7 @@ public class UpdateOpsItemRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PlannedStartTime")
     public OffsetDateTime plannedStartTime;
+
     public UpdateOpsItemRequest withPlannedStartTime(OffsetDateTime plannedStartTime) {
         this.plannedStartTime = plannedStartTime;
         return this;
@@ -112,6 +123,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public UpdateOpsItemRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -120,6 +132,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedOpsItems")
     public RelatedOpsItem[] relatedOpsItems;
+
     public UpdateOpsItemRequest withRelatedOpsItems(RelatedOpsItem[] relatedOpsItems) {
         this.relatedOpsItems = relatedOpsItems;
         return this;
@@ -128,6 +141,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public String severity;
+
     public UpdateOpsItemRequest withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -136,6 +150,7 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OpsItemStatusEnum status;
+
     public UpdateOpsItemRequest withStatus(OpsItemStatusEnum status) {
         this.status = status;
         return this;
@@ -144,9 +159,13 @@ public class UpdateOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public UpdateOpsItemRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UpdateOpsItemRequest(@JsonProperty("OpsItemId") String opsItemId) {
+        this.opsItemId = opsItemId;
+  }
 }

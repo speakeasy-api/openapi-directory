@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteFleetsResultSuccessfulFleetDeletions {
     
     public DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum currentFleetState;
+
     public DeleteFleetsResultSuccessfulFleetDeletions withCurrentFleetState(DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum currentFleetState) {
         this.currentFleetState = currentFleetState;
         return this;
@@ -19,6 +20,7 @@ public class DeleteFleetsResultSuccessfulFleetDeletions {
     
     
     public String fleetId;
+
     public DeleteFleetsResultSuccessfulFleetDeletions withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -26,9 +28,11 @@ public class DeleteFleetsResultSuccessfulFleetDeletions {
     
     
     public DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum previousFleetState;
+
     public DeleteFleetsResultSuccessfulFleetDeletions withPreviousFleetState(DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum previousFleetState) {
         this.previousFleetState = previousFleetState;
         return this;
     }
     
+    public DeleteFleetsResultSuccessfulFleetDeletions(){}
 }

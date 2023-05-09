@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class AppGetApplicationApiUsageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
     public Integer applicationId;
+
     public AppGetApplicationApiUsageRequest withApplicationId(Integer applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +25,7 @@ public class AppGetApplicationApiUsageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public AppGetApplicationApiUsageRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -33,9 +36,13 @@ public class AppGetApplicationApiUsageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public AppGetApplicationApiUsageRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public AppGetApplicationApiUsageRequest(@JsonProperty("applicationId") Integer applicationId) {
+        this.applicationId = applicationId;
+  }
 }

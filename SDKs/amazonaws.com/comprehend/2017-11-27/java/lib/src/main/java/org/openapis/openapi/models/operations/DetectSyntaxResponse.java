@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectSyntaxResponse {
     
     public String contentType;
+
     public DetectSyntaxResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectSyntaxResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectSyntaxResponse detectSyntaxResponse;
+
     public DetectSyntaxResponse withDetectSyntaxResponse(org.openapis.openapi.models.shared.DetectSyntaxResponse detectSyntaxResponse) {
         this.detectSyntaxResponse = detectSyntaxResponse;
         return this;
@@ -29,6 +32,7 @@ public class DetectSyntaxResponse {
      */
     
     public Object internalServerException;
+
     public DetectSyntaxResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectSyntaxResponse {
      */
     
     public Object invalidRequestException;
+
     public DetectSyntaxResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DetectSyntaxResponse {
     
     
     public Integer statusCode;
+
     public DetectSyntaxResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DetectSyntaxResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectSyntaxResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DetectSyntaxResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectSyntaxResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -73,9 +81,14 @@ public class DetectSyntaxResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public DetectSyntaxResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public DetectSyntaxResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

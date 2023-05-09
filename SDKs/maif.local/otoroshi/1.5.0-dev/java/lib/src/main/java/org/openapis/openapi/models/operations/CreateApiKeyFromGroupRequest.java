@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateApiKeyFromGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiKey apiKey;
+
     public CreateApiKeyFromGroupRequest withApiKey(org.openapis.openapi.models.shared.ApiKey apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -19,9 +21,13 @@ public class CreateApiKeyFromGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public CreateApiKeyFromGroupRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public CreateApiKeyFromGroupRequest(@JsonProperty("groupId") String groupId) {
+        this.groupId = groupId;
+  }
 }

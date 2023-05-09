@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UndeprecateWorkflowTypeInput {
     @JsonProperty("domain")
     public String domain;
+
     public UndeprecateWorkflowTypeInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -16,9 +17,14 @@ public class UndeprecateWorkflowTypeInput {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public UndeprecateWorkflowTypeInput withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public UndeprecateWorkflowTypeInput(@JsonProperty("domain") String domain, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.domain = domain;
+        this.workflowType = workflowType;
+  }
 }

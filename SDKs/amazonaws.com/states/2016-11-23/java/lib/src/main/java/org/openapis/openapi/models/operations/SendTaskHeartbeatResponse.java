@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendTaskHeartbeatResponse {
     
     public String contentType;
+
     public SendTaskHeartbeatResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendTaskHeartbeatResponse {
      */
     
     public Object invalidToken;
+
     public SendTaskHeartbeatResponse withInvalidToken(Object invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -29,6 +32,7 @@ public class SendTaskHeartbeatResponse {
      */
     
     public java.util.Map<String, Object> sendTaskHeartbeatOutput;
+
     public SendTaskHeartbeatResponse withSendTaskHeartbeatOutput(java.util.Map<String, Object> sendTaskHeartbeatOutput) {
         this.sendTaskHeartbeatOutput = sendTaskHeartbeatOutput;
         return this;
@@ -36,6 +40,7 @@ public class SendTaskHeartbeatResponse {
     
     
     public Integer statusCode;
+
     public SendTaskHeartbeatResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class SendTaskHeartbeatResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendTaskHeartbeatResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class SendTaskHeartbeatResponse {
      */
     
     public Object taskDoesNotExist;
+
     public SendTaskHeartbeatResponse withTaskDoesNotExist(Object taskDoesNotExist) {
         this.taskDoesNotExist = taskDoesNotExist;
         return this;
@@ -63,9 +70,14 @@ public class SendTaskHeartbeatResponse {
      */
     
     public Object taskTimedOut;
+
     public SendTaskHeartbeatResponse withTaskTimedOut(Object taskTimedOut) {
         this.taskTimedOut = taskTimedOut;
         return this;
     }
     
+    public SendTaskHeartbeatResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

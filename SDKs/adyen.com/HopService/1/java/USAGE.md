@@ -3,13 +3,12 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostGetOnboardingUrlSecurity;
 import org.openapis.openapi.models.operations.PostGetOnboardingUrlResponse;
-import org.openapis.openapi.models.shared.GetOnboardingUrlRequest;
-import org.openapis.openapi.models.shared.ShowPages;
+import org.openapis.openapi.models.operations.PostGetOnboardingUrlSecurity;
 import org.openapis.openapi.models.shared.CollectInformation;
+import org.openapis.openapi.models.shared.GetOnboardingUrlRequest;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
+import org.openapis.openapi.models.shared.ShowPages;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,8 +16,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.GetOnboardingUrlRequest req = new GetOnboardingUrlRequest() {{
-                accountHolderCode = "corrupti";
+            org.openapis.openapi.models.shared.GetOnboardingUrlRequest req = new GetOnboardingUrlRequest("corrupti") {{
                 collectInformation = new CollectInformation() {{
                     bankDetails = false;
                     businessDetails = false;
@@ -26,7 +24,7 @@ public class Application {
                     legalArrangementDetails = false;
                     pciQuestionnaire = false;
                     shareholderDetails = false;
-                }};
+                }};;
                 editMode = false;
                 mobileOAuthCallbackUrl = "provident";
                 platformName = "distinctio";
@@ -42,18 +40,20 @@ public class Application {
                     manualBankAccountPage = false;
                     shareholderDetailsSummaryPage = false;
                     welcomePage = false;
-                }};
-            }}            
+                }};;
+            }};            
 
             PostGetOnboardingUrlResponse res = sdk.hostedOnboardingPage.postGetOnboardingUrl(req, new PostGetOnboardingUrlSecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.getOnboardingUrlResponse.isPresent()) {
+            if (res.getOnboardingUrlResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

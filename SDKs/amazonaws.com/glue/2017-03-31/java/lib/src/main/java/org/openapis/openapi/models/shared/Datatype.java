@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Datatype {
     @JsonProperty("Id")
     public String id;
+
     public Datatype withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class Datatype {
     
     @JsonProperty("Label")
     public String label;
+
     public Datatype withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public Datatype(@JsonProperty("Id") String id, @JsonProperty("Label") String label) {
+        this.id = id;
+        this.label = label;
+  }
 }

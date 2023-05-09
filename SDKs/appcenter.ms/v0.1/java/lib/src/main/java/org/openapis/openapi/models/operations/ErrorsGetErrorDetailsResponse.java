@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErrorsGetErrorDetailsResponse {
     
     public String contentType;
+
     public ErrorsGetErrorDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ErrorsGetErrorDetailsResponse {
      */
     
     public ErrorsGetErrorDetails200ApplicationJSON errorsGetErrorDetails200ApplicationJSONObject;
+
     public ErrorsGetErrorDetailsResponse withErrorsGetErrorDetails200ApplicationJSONObject(ErrorsGetErrorDetails200ApplicationJSON errorsGetErrorDetails200ApplicationJSONObject) {
         this.errorsGetErrorDetails200ApplicationJSONObject = errorsGetErrorDetails200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ErrorsGetErrorDetailsResponse {
      */
     
     public ErrorsGetErrorDetailsDefaultApplicationJSON errorsGetErrorDetailsDefaultApplicationJSONObject;
+
     public ErrorsGetErrorDetailsResponse withErrorsGetErrorDetailsDefaultApplicationJSONObject(ErrorsGetErrorDetailsDefaultApplicationJSON errorsGetErrorDetailsDefaultApplicationJSONObject) {
         this.errorsGetErrorDetailsDefaultApplicationJSONObject = errorsGetErrorDetailsDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ErrorsGetErrorDetailsResponse {
     
     
     public Integer statusCode;
+
     public ErrorsGetErrorDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ErrorsGetErrorDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErrorsGetErrorDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ErrorsGetErrorDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

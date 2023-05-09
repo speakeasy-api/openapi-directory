@@ -15,9 +15,11 @@ public class UpdateLoadBalancerAttributeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public UpdateLoadBalancerAttributeResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public UpdateLoadBalancerAttributeResult(){}
 }

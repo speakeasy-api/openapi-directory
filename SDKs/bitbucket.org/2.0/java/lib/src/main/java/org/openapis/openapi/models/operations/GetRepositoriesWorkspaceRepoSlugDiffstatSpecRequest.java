@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignore_whitespace")
     public Boolean ignoreWhitespace;
+
     public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest withIgnoreWhitespace(Boolean ignoreWhitespace) {
         this.ignoreWhitespace = ignoreWhitespace;
         return this;
@@ -31,6 +33,7 @@ public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merge")
     public Boolean merge;
+
     public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest withMerge(Boolean merge) {
         this.merge = merge;
         return this;
@@ -42,6 +45,7 @@ public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest withPath(String path) {
         this.path = path;
         return this;
@@ -52,6 +56,7 @@ public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=renames")
     public Boolean renames;
+
     public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest withRenames(Boolean renames) {
         this.renames = renames;
         return this;
@@ -64,6 +69,7 @@ public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -76,6 +82,7 @@ public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
     public String spec;
+
     public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -90,6 +97,7 @@ public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic")
     public Boolean topic;
+
     public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest withTopic(Boolean topic) {
         this.topic = topic;
         return this;
@@ -102,9 +110,15 @@ public class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("spec") String spec, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.spec = spec;
+        this.workspace = workspace;
+  }
 }

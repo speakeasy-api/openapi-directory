@@ -15,6 +15,7 @@ public class DocumentText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlights")
     public Highlight[] highlights;
+
     public DocumentText withHighlights(Highlight[] highlights) {
         this.highlights = highlights;
         return this;
@@ -23,9 +24,11 @@ public class DocumentText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public DocumentText withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DocumentText(){}
 }

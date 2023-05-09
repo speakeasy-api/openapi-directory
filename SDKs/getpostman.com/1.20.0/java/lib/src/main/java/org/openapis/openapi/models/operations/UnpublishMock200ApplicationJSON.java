@@ -15,9 +15,11 @@ public class UnpublishMock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public UnpublishMock200ApplicationJSONMock mock;
+
     public UnpublishMock200ApplicationJSON withMock(UnpublishMock200ApplicationJSONMock mock) {
         this.mock = mock;
         return this;
     }
     
+    public UnpublishMock200ApplicationJSON(){}
 }

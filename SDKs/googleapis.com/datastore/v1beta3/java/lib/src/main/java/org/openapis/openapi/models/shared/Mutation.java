@@ -18,6 +18,7 @@ public class Mutation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseVersion")
     public String baseVersion;
+
     public Mutation withBaseVersion(String baseVersion) {
         this.baseVersion = baseVersion;
         return this;
@@ -29,6 +30,7 @@ public class Mutation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public Key delete;
+
     public Mutation withDelete(Key delete) {
         this.delete = delete;
         return this;
@@ -40,6 +42,7 @@ public class Mutation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert")
     public Entity insert;
+
     public Mutation withInsert(Entity insert) {
         this.insert = insert;
         return this;
@@ -51,6 +54,7 @@ public class Mutation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Entity update;
+
     public Mutation withUpdate(Entity update) {
         this.update = update;
         return this;
@@ -62,6 +66,7 @@ public class Mutation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Mutation withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -73,9 +78,11 @@ public class Mutation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upsert")
     public Entity upsert;
+
     public Mutation withUpsert(Entity upsert) {
         this.upsert = upsert;
         return this;
     }
     
+    public Mutation(){}
 }

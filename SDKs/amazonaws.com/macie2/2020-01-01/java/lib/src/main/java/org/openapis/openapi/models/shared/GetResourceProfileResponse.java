@@ -22,6 +22,7 @@ public class GetResourceProfileResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("profileUpdatedAt")
     public OffsetDateTime profileUpdatedAt;
+
     public GetResourceProfileResponse withProfileUpdatedAt(OffsetDateTime profileUpdatedAt) {
         this.profileUpdatedAt = profileUpdatedAt;
         return this;
@@ -30,6 +31,7 @@ public class GetResourceProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitivityScore")
     public Long sensitivityScore;
+
     public GetResourceProfileResponse withSensitivityScore(Long sensitivityScore) {
         this.sensitivityScore = sensitivityScore;
         return this;
@@ -38,6 +40,7 @@ public class GetResourceProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitivityScoreOverridden")
     public Boolean sensitivityScoreOverridden;
+
     public GetResourceProfileResponse withSensitivityScoreOverridden(Boolean sensitivityScoreOverridden) {
         this.sensitivityScoreOverridden = sensitivityScoreOverridden;
         return this;
@@ -46,9 +49,11 @@ public class GetResourceProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public ResourceStatistics statistics;
+
     public GetResourceProfileResponse withStatistics(ResourceStatistics statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public GetResourceProfileResponse(){}
 }

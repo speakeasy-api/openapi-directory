@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataHibernationOptions {
     
     public Boolean configured;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataHibernationOptions withConfigured(Boolean configured) {
         this.configured = configured;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataHibernationOptions(){}
 }

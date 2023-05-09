@@ -15,9 +15,11 @@ public class ContainerServiceECRImagePullerRoleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public ContainerServiceECRImagePullerRoleRequest withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
     
+    public ContainerServiceECRImagePullerRoleRequest(){}
 }

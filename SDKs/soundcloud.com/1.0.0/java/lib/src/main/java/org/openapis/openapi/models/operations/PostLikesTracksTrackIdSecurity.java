@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLikesTracksTrackIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String authHeader;
+
     public PostLikesTracksTrackIdSecurity withAuthHeader(String authHeader) {
         this.authHeader = authHeader;
         return this;
     }
     
+    public PostLikesTracksTrackIdSecurity(@JsonProperty("AuthHeader") String authHeader) {
+        this.authHeader = authHeader;
+  }
 }

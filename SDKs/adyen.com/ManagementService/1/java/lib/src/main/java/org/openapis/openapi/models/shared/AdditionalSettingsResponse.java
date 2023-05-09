@@ -15,6 +15,7 @@ public class AdditionalSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeEventCodes")
     public String[] excludeEventCodes;
+
     public AdditionalSettingsResponse withExcludeEventCodes(String[] excludeEventCodes) {
         this.excludeEventCodes = excludeEventCodes;
         return this;
@@ -26,6 +27,7 @@ public class AdditionalSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeEventCodes")
     public String[] includeEventCodes;
+
     public AdditionalSettingsResponse withIncludeEventCodes(String[] includeEventCodes) {
         this.includeEventCodes = includeEventCodes;
         return this;
@@ -38,9 +40,11 @@ public class AdditionalSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Boolean> properties;
+
     public AdditionalSettingsResponse withProperties(java.util.Map<String, Boolean> properties) {
         this.properties = properties;
         return this;
     }
     
+    public AdditionalSettingsResponse(){}
 }

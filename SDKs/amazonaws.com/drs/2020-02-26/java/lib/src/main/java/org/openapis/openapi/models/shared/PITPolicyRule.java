@@ -15,6 +15,7 @@ public class PITPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PITPolicyRule withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -22,6 +23,7 @@ public class PITPolicyRule {
     
     @JsonProperty("interval")
     public Long interval;
+
     public PITPolicyRule withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -29,6 +31,7 @@ public class PITPolicyRule {
     
     @JsonProperty("retentionDuration")
     public Long retentionDuration;
+
     public PITPolicyRule withRetentionDuration(Long retentionDuration) {
         this.retentionDuration = retentionDuration;
         return this;
@@ -37,6 +40,7 @@ public class PITPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleID")
     public Long ruleID;
+
     public PITPolicyRule withRuleID(Long ruleID) {
         this.ruleID = ruleID;
         return this;
@@ -44,9 +48,15 @@ public class PITPolicyRule {
     
     @JsonProperty("units")
     public PITPolicyRuleUnitsEnum units;
+
     public PITPolicyRule withUnits(PITPolicyRuleUnitsEnum units) {
         this.units = units;
         return this;
     }
     
+    public PITPolicyRule(@JsonProperty("interval") Long interval, @JsonProperty("retentionDuration") Long retentionDuration, @JsonProperty("units") PITPolicyRuleUnitsEnum units) {
+        this.interval = interval;
+        this.retentionDuration = retentionDuration;
+        this.units = units;
+  }
 }

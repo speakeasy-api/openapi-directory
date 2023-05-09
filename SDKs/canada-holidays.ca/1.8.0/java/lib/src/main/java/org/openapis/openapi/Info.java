@@ -54,11 +54,9 @@ public class Info {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RootResponse res = new org.openapis.openapi.models.operations.RootResponse() {{
+        org.openapis.openapi.models.operations.RootResponse res = new org.openapis.openapi.models.operations.RootResponse(contentType, httpRes.statusCode()) {{
             root200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,10 +90,8 @@ public class Info {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpecResponse res = new org.openapis.openapi.models.operations.SpecResponse() {{
+        org.openapis.openapi.models.operations.SpecResponse res = new org.openapis.openapi.models.operations.SpecResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

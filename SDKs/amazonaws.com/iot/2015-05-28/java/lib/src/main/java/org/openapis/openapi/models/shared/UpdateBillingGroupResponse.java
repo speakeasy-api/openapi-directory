@@ -15,9 +15,11 @@ public class UpdateBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public UpdateBillingGroupResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public UpdateBillingGroupResponse(){}
 }

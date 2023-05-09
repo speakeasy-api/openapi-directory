@@ -12,6 +12,7 @@ public class Identifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compoundId")
     public String compoundId;
+
     public Identifier withCompoundId(String compoundId) {
         this.compoundId = compoundId;
         return this;
@@ -20,9 +21,11 @@ public class Identifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Identifier withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public Identifier(){}
 }

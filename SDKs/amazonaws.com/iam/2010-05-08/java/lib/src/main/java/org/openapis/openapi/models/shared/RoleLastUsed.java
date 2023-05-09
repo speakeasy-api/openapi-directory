@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RoleLastUsed {
     
     public OffsetDateTime lastUsedDate;
+
     public RoleLastUsed withLastUsedDate(OffsetDateTime lastUsedDate) {
         this.lastUsedDate = lastUsedDate;
         return this;
@@ -19,9 +20,11 @@ public class RoleLastUsed {
     
     
     public String region;
+
     public RoleLastUsed withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public RoleLastUsed(){}
 }

@@ -15,6 +15,7 @@ public class RateRetailRate {
      */
     @JsonProperty("taxesAndFees")
     public RateRetailRateTaxesAndFees taxesAndFees;
+
     public RateRetailRate withTaxesAndFees(RateRetailRateTaxesAndFees taxesAndFees) {
         this.taxesAndFees = taxesAndFees;
         return this;
@@ -25,9 +26,14 @@ public class RateRetailRate {
      */
     @JsonProperty("total")
     public Money total;
+
     public RateRetailRate withTotal(Money total) {
         this.total = total;
         return this;
     }
     
+    public RateRetailRate(@JsonProperty("taxesAndFees") RateRetailRateTaxesAndFees taxesAndFees, @JsonProperty("total") Money total) {
+        this.taxesAndFees = taxesAndFees;
+        this.total = total;
+  }
 }

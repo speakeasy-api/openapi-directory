@@ -18,9 +18,11 @@ public class PostServersIdActionsCreateImageCreateImageRequestLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelkey")
     public String labelkey;
+
     public PostServersIdActionsCreateImageCreateImageRequestLabels withLabelkey(String labelkey) {
         this.labelkey = labelkey;
         return this;
     }
     
+    public PostServersIdActionsCreateImageCreateImageRequestLabels(){}
 }

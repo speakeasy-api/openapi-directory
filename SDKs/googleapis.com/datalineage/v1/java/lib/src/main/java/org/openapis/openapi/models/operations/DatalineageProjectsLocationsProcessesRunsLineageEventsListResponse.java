@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse {
     
     public String contentType;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse 
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1ListLineageEventsResponse googleCloudDatacatalogLineageV1ListLineageEventsResponse;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse withGoogleCloudDatacatalogLineageV1ListLineageEventsResponse(org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1ListLineageEventsResponse googleCloudDatacatalogLineageV1ListLineageEventsResponse) {
         this.googleCloudDatacatalogLineageV1ListLineageEventsResponse = googleCloudDatacatalogLineageV1ListLineageEventsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse 
     
     
     public Integer statusCode;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

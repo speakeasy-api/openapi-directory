@@ -12,9 +12,11 @@ public class GetRevisionsCountUsingPOST200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public Long revisions;
+
     public GetRevisionsCountUsingPOST200ApplicationJSONData withRevisions(Long revisions) {
         this.revisions = revisions;
         return this;
     }
     
+    public GetRevisionsCountUsingPOST200ApplicationJSONData(){}
 }

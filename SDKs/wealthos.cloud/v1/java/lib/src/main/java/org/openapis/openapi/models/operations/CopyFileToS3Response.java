@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyFileToS3Response {
     
     public String contentType;
+
     public CopyFileToS3Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CopyFileToS3Response {
     
     
     public Integer statusCode;
+
     public CopyFileToS3Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CopyFileToS3Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyFileToS3Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CopyFileToS3Response {
      */
     
     public CopyFileToS3200ApplicationJSON copyFileToS3200ApplicationJSONObject;
+
     public CopyFileToS3Response withCopyFileToS3200ApplicationJSONObject(CopyFileToS3200ApplicationJSON copyFileToS3200ApplicationJSONObject) {
         this.copyFileToS3200ApplicationJSONObject = copyFileToS3200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CopyFileToS3Response {
      */
     
     public CopyFileToS3400ApplicationJSON copyFileToS3400ApplicationJSONObject;
+
     public CopyFileToS3Response withCopyFileToS3400ApplicationJSONObject(CopyFileToS3400ApplicationJSON copyFileToS3400ApplicationJSONObject) {
         this.copyFileToS3400ApplicationJSONObject = copyFileToS3400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CopyFileToS3Response {
      */
     
     public CopyFileToS3401ApplicationJSON copyFileToS3401ApplicationJSONObject;
+
     public CopyFileToS3Response withCopyFileToS3401ApplicationJSONObject(CopyFileToS3401ApplicationJSON copyFileToS3401ApplicationJSONObject) {
         this.copyFileToS3401ApplicationJSONObject = copyFileToS3401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CopyFileToS3Response {
      */
     
     public CopyFileToS3403ApplicationJSON copyFileToS3403ApplicationJSONObject;
+
     public CopyFileToS3Response withCopyFileToS3403ApplicationJSONObject(CopyFileToS3403ApplicationJSON copyFileToS3403ApplicationJSONObject) {
         this.copyFileToS3403ApplicationJSONObject = copyFileToS3403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CopyFileToS3Response {
      */
     
     public CopyFileToS3404ApplicationJSON copyFileToS3404ApplicationJSONObject;
+
     public CopyFileToS3Response withCopyFileToS3404ApplicationJSONObject(CopyFileToS3404ApplicationJSON copyFileToS3404ApplicationJSONObject) {
         this.copyFileToS3404ApplicationJSONObject = copyFileToS3404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CopyFileToS3Response {
      */
     
     public CopyFileToS3429ApplicationJSON copyFileToS3429ApplicationJSONObject;
+
     public CopyFileToS3Response withCopyFileToS3429ApplicationJSONObject(CopyFileToS3429ApplicationJSON copyFileToS3429ApplicationJSONObject) {
         this.copyFileToS3429ApplicationJSONObject = copyFileToS3429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CopyFileToS3Response {
      */
     
     public CopyFileToS3500ApplicationJSON copyFileToS3500ApplicationJSONObject;
+
     public CopyFileToS3Response withCopyFileToS3500ApplicationJSONObject(CopyFileToS3500ApplicationJSON copyFileToS3500ApplicationJSONObject) {
         this.copyFileToS3500ApplicationJSONObject = copyFileToS3500ApplicationJSONObject;
         return this;
     }
     
+    public CopyFileToS3Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

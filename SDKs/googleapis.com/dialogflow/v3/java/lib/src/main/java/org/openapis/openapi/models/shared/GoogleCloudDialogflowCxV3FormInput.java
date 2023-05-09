@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3FormInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudDialogflowCxV3FormParameterInput[] parameters;
+
     public GoogleCloudDialogflowCxV3FormInput withParameters(GoogleCloudDialogflowCxV3FormParameterInput[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3FormInput(){}
 }

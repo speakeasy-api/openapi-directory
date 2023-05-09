@@ -18,6 +18,7 @@ public class AnalyzeSyntaxRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Document document;
+
     public AnalyzeSyntaxRequest withDocument(Document document) {
         this.document = document;
         return this;
@@ -29,9 +30,11 @@ public class AnalyzeSyntaxRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodingType")
     public AnalyzeSyntaxRequestEncodingTypeEnum encodingType;
+
     public AnalyzeSyntaxRequest withEncodingType(AnalyzeSyntaxRequestEncodingTypeEnum encodingType) {
         this.encodingType = encodingType;
         return this;
     }
     
+    public AnalyzeSyntaxRequest(){}
 }

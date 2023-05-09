@@ -15,6 +15,7 @@ public class StartReadSetActivationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartReadSetActivationJobRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class StartReadSetActivationJobRequestBody {
      */
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.StartReadSetActivationJobSourceItem[] sources;
+
     public StartReadSetActivationJobRequestBody withSources(org.openapis.openapi.models.shared.StartReadSetActivationJobSourceItem[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public StartReadSetActivationJobRequestBody(@JsonProperty("sources") org.openapis.openapi.models.shared.StartReadSetActivationJobSourceItem[] sources) {
+        this.sources = sources;
+  }
 }

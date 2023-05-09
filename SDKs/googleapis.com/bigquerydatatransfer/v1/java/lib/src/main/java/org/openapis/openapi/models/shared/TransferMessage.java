@@ -18,6 +18,7 @@ public class TransferMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageText")
     public String messageText;
+
     public TransferMessage withMessageText(String messageText) {
         this.messageText = messageText;
         return this;
@@ -29,6 +30,7 @@ public class TransferMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageTime")
     public String messageTime;
+
     public TransferMessage withMessageTime(String messageTime) {
         this.messageTime = messageTime;
         return this;
@@ -40,9 +42,11 @@ public class TransferMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public TransferMessageSeverityEnum severity;
+
     public TransferMessage withSeverity(TransferMessageSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public TransferMessage(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayrollCalendarRequest {
@@ -12,6 +13,7 @@ public class GetPayrollCalendarRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayrollCalendarID")
     public String payrollCalendarID;
+
     public GetPayrollCalendarRequest withPayrollCalendarID(String payrollCalendarID) {
         this.payrollCalendarID = payrollCalendarID;
         return this;
@@ -22,9 +24,14 @@ public class GetPayrollCalendarRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public GetPayrollCalendarRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetPayrollCalendarRequest(@JsonProperty("PayrollCalendarID") String payrollCalendarID, @JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.payrollCalendarID = payrollCalendarID;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

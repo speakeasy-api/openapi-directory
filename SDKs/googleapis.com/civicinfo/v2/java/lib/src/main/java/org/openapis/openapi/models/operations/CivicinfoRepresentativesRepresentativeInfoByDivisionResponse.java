@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CivicinfoRepresentativesRepresentativeInfoByDivisionResponse {
     
     public String contentType;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionResponse {
      */
     
     public org.openapis.openapi.models.shared.RepresentativeInfoData representativeInfoData;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionResponse withRepresentativeInfoData(org.openapis.openapi.models.shared.RepresentativeInfoData representativeInfoData) {
         this.representativeInfoData = representativeInfoData;
         return this;
@@ -26,6 +29,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionResponse {
     
     
     public Integer statusCode;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("DeviceEncryptionKey")
     @SpeakeasyMetadata("form:name=DeviceEncryptionKey")
     public String deviceEncryptionKey;
+
     public SmartMeDeviceConfigurationContainer withDeviceEncryptionKey(String deviceEncryptionKey) {
         this.deviceEncryptionKey = deviceEncryptionKey;
         return this;
@@ -32,6 +33,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("DevicePinCode")
     @SpeakeasyMetadata("form:name=DevicePinCode")
     public String devicePinCode;
+
     public SmartMeDeviceConfigurationContainer withDevicePinCode(String devicePinCode) {
         this.devicePinCode = devicePinCode;
         return this;
@@ -44,6 +46,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("DnsUpdateState")
     @SpeakeasyMetadata("form:name=DnsUpdateState")
     public SmartMeDeviceConfigurationContainerDnsUpdateStateEnum dnsUpdateState;
+
     public SmartMeDeviceConfigurationContainer withDnsUpdateState(SmartMeDeviceConfigurationContainerDnsUpdateStateEnum dnsUpdateState) {
         this.dnsUpdateState = dnsUpdateState;
         return this;
@@ -56,6 +59,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("EnableModbusTcp")
     @SpeakeasyMetadata("form:name=EnableModbusTcp")
     public Boolean enableModbusTcp;
+
     public SmartMeDeviceConfigurationContainer withEnableModbusTcp(Boolean enableModbusTcp) {
         this.enableModbusTcp = enableModbusTcp;
         return this;
@@ -68,6 +72,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public String id;
+
     public SmartMeDeviceConfigurationContainer withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("InputConfiguration")
     @SpeakeasyMetadata("form:name=InputConfiguration,json")
     public InputConfigurationContainer[] inputConfiguration;
+
     public SmartMeDeviceConfigurationContainer withInputConfiguration(InputConfigurationContainer[] inputConfiguration) {
         this.inputConfiguration = inputConfiguration;
         return this;
@@ -92,6 +98,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("OutputConfiguration")
     @SpeakeasyMetadata("form:name=OutputConfiguration,json")
     public OutputConfigurationContainer[] outputConfiguration;
+
     public SmartMeDeviceConfigurationContainer withOutputConfiguration(OutputConfigurationContainer[] outputConfiguration) {
         this.outputConfiguration = outputConfiguration;
         return this;
@@ -104,6 +111,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("ShowReactiveEnergy")
     @SpeakeasyMetadata("form:name=ShowReactiveEnergy")
     public Boolean showReactiveEnergy;
+
     public SmartMeDeviceConfigurationContainer withShowReactiveEnergy(Boolean showReactiveEnergy) {
         this.showReactiveEnergy = showReactiveEnergy;
         return this;
@@ -116,6 +124,7 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("SwitchConfiguration")
     @SpeakeasyMetadata("form:name=SwitchConfiguration,json")
     public SwitchConfigurationContainer[] switchConfiguration;
+
     public SmartMeDeviceConfigurationContainer withSwitchConfiguration(SwitchConfigurationContainer[] switchConfiguration) {
         this.switchConfiguration = switchConfiguration;
         return this;
@@ -128,9 +137,11 @@ public class SmartMeDeviceConfigurationContainer {
     @JsonProperty("UploadInterval")
     @SpeakeasyMetadata("form:name=UploadInterval")
     public SmartMeDeviceConfigurationContainerUploadIntervalEnum uploadInterval;
+
     public SmartMeDeviceConfigurationContainer withUploadInterval(SmartMeDeviceConfigurationContainerUploadIntervalEnum uploadInterval) {
         this.uploadInterval = uploadInterval;
         return this;
     }
     
+    public SmartMeDeviceConfigurationContainer(){}
 }

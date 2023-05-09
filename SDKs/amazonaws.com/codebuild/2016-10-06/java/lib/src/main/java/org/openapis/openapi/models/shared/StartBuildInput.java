@@ -12,6 +12,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactsOverride")
     public ProjectArtifacts artifactsOverride;
+
     public StartBuildInput withArtifactsOverride(ProjectArtifacts artifactsOverride) {
         this.artifactsOverride = artifactsOverride;
         return this;
@@ -20,6 +21,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildStatusConfigOverride")
     public BuildStatusConfig buildStatusConfigOverride;
+
     public StartBuildInput withBuildStatusConfigOverride(BuildStatusConfig buildStatusConfigOverride) {
         this.buildStatusConfigOverride = buildStatusConfigOverride;
         return this;
@@ -28,6 +30,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildspecOverride")
     public String buildspecOverride;
+
     public StartBuildInput withBuildspecOverride(String buildspecOverride) {
         this.buildspecOverride = buildspecOverride;
         return this;
@@ -36,6 +39,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheOverride")
     public ProjectCache cacheOverride;
+
     public StartBuildInput withCacheOverride(ProjectCache cacheOverride) {
         this.cacheOverride = cacheOverride;
         return this;
@@ -44,6 +48,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateOverride")
     public String certificateOverride;
+
     public StartBuildInput withCertificateOverride(String certificateOverride) {
         this.certificateOverride = certificateOverride;
         return this;
@@ -52,6 +57,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeTypeOverride")
     public ComputeTypeEnum computeTypeOverride;
+
     public StartBuildInput withComputeTypeOverride(ComputeTypeEnum computeTypeOverride) {
         this.computeTypeOverride = computeTypeOverride;
         return this;
@@ -60,6 +66,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugSessionEnabled")
     public Boolean debugSessionEnabled;
+
     public StartBuildInput withDebugSessionEnabled(Boolean debugSessionEnabled) {
         this.debugSessionEnabled = debugSessionEnabled;
         return this;
@@ -68,6 +75,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKeyOverride")
     public String encryptionKeyOverride;
+
     public StartBuildInput withEncryptionKeyOverride(String encryptionKeyOverride) {
         this.encryptionKeyOverride = encryptionKeyOverride;
         return this;
@@ -76,6 +84,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentTypeOverride")
     public EnvironmentTypeEnum environmentTypeOverride;
+
     public StartBuildInput withEnvironmentTypeOverride(EnvironmentTypeEnum environmentTypeOverride) {
         this.environmentTypeOverride = environmentTypeOverride;
         return this;
@@ -84,6 +93,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentVariablesOverride")
     public EnvironmentVariable[] environmentVariablesOverride;
+
     public StartBuildInput withEnvironmentVariablesOverride(EnvironmentVariable[] environmentVariablesOverride) {
         this.environmentVariablesOverride = environmentVariablesOverride;
         return this;
@@ -92,6 +102,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitCloneDepthOverride")
     public Long gitCloneDepthOverride;
+
     public StartBuildInput withGitCloneDepthOverride(Long gitCloneDepthOverride) {
         this.gitCloneDepthOverride = gitCloneDepthOverride;
         return this;
@@ -100,6 +111,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitSubmodulesConfigOverride")
     public GitSubmodulesConfig gitSubmodulesConfigOverride;
+
     public StartBuildInput withGitSubmodulesConfigOverride(GitSubmodulesConfig gitSubmodulesConfigOverride) {
         this.gitSubmodulesConfigOverride = gitSubmodulesConfigOverride;
         return this;
@@ -108,6 +120,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageOverride")
     public String imageOverride;
+
     public StartBuildInput withImageOverride(String imageOverride) {
         this.imageOverride = imageOverride;
         return this;
@@ -116,6 +129,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePullCredentialsTypeOverride")
     public ImagePullCredentialsTypeEnum imagePullCredentialsTypeOverride;
+
     public StartBuildInput withImagePullCredentialsTypeOverride(ImagePullCredentialsTypeEnum imagePullCredentialsTypeOverride) {
         this.imagePullCredentialsTypeOverride = imagePullCredentialsTypeOverride;
         return this;
@@ -124,6 +138,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecureSslOverride")
     public Boolean insecureSslOverride;
+
     public StartBuildInput withInsecureSslOverride(Boolean insecureSslOverride) {
         this.insecureSslOverride = insecureSslOverride;
         return this;
@@ -132,6 +147,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logsConfigOverride")
     public LogsConfig logsConfigOverride;
+
     public StartBuildInput withLogsConfigOverride(LogsConfig logsConfigOverride) {
         this.logsConfigOverride = logsConfigOverride;
         return this;
@@ -140,6 +156,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privilegedModeOverride")
     public Boolean privilegedModeOverride;
+
     public StartBuildInput withPrivilegedModeOverride(Boolean privilegedModeOverride) {
         this.privilegedModeOverride = privilegedModeOverride;
         return this;
@@ -147,6 +164,7 @@ public class StartBuildInput {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public StartBuildInput withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -155,6 +173,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedTimeoutInMinutesOverride")
     public Long queuedTimeoutInMinutesOverride;
+
     public StartBuildInput withQueuedTimeoutInMinutesOverride(Long queuedTimeoutInMinutesOverride) {
         this.queuedTimeoutInMinutesOverride = queuedTimeoutInMinutesOverride;
         return this;
@@ -163,6 +182,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryCredentialOverride")
     public RegistryCredential registryCredentialOverride;
+
     public StartBuildInput withRegistryCredentialOverride(RegistryCredential registryCredentialOverride) {
         this.registryCredentialOverride = registryCredentialOverride;
         return this;
@@ -171,6 +191,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportBuildStatusOverride")
     public Boolean reportBuildStatusOverride;
+
     public StartBuildInput withReportBuildStatusOverride(Boolean reportBuildStatusOverride) {
         this.reportBuildStatusOverride = reportBuildStatusOverride;
         return this;
@@ -179,6 +200,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryArtifactsOverride")
     public ProjectArtifacts[] secondaryArtifactsOverride;
+
     public StartBuildInput withSecondaryArtifactsOverride(ProjectArtifacts[] secondaryArtifactsOverride) {
         this.secondaryArtifactsOverride = secondaryArtifactsOverride;
         return this;
@@ -187,6 +209,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondarySourcesOverride")
     public ProjectSource[] secondarySourcesOverride;
+
     public StartBuildInput withSecondarySourcesOverride(ProjectSource[] secondarySourcesOverride) {
         this.secondarySourcesOverride = secondarySourcesOverride;
         return this;
@@ -195,6 +218,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondarySourcesVersionOverride")
     public ProjectSourceVersion[] secondarySourcesVersionOverride;
+
     public StartBuildInput withSecondarySourcesVersionOverride(ProjectSourceVersion[] secondarySourcesVersionOverride) {
         this.secondarySourcesVersionOverride = secondarySourcesVersionOverride;
         return this;
@@ -203,6 +227,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRoleOverride")
     public String serviceRoleOverride;
+
     public StartBuildInput withServiceRoleOverride(String serviceRoleOverride) {
         this.serviceRoleOverride = serviceRoleOverride;
         return this;
@@ -211,6 +236,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAuthOverride")
     public SourceAuth sourceAuthOverride;
+
     public StartBuildInput withSourceAuthOverride(SourceAuth sourceAuthOverride) {
         this.sourceAuthOverride = sourceAuthOverride;
         return this;
@@ -219,6 +245,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLocationOverride")
     public String sourceLocationOverride;
+
     public StartBuildInput withSourceLocationOverride(String sourceLocationOverride) {
         this.sourceLocationOverride = sourceLocationOverride;
         return this;
@@ -227,6 +254,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTypeOverride")
     public SourceTypeEnum sourceTypeOverride;
+
     public StartBuildInput withSourceTypeOverride(SourceTypeEnum sourceTypeOverride) {
         this.sourceTypeOverride = sourceTypeOverride;
         return this;
@@ -235,6 +263,7 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public StartBuildInput withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
@@ -243,9 +272,13 @@ public class StartBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInMinutesOverride")
     public Long timeoutInMinutesOverride;
+
     public StartBuildInput withTimeoutInMinutesOverride(Long timeoutInMinutesOverride) {
         this.timeoutInMinutesOverride = timeoutInMinutesOverride;
         return this;
     }
     
+    public StartBuildInput(@JsonProperty("projectName") String projectName) {
+        this.projectName = projectName;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateVocabularyFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public CreateVocabularyFilterRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateVocabularyFilterRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public CreateVocabularyFilterRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -27,6 +29,7 @@ public class CreateVocabularyFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateVocabularyFilterRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -35,6 +38,7 @@ public class CreateVocabularyFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFilterFileUri")
     public String vocabularyFilterFileUri;
+
     public CreateVocabularyFilterRequest withVocabularyFilterFileUri(String vocabularyFilterFileUri) {
         this.vocabularyFilterFileUri = vocabularyFilterFileUri;
         return this;
@@ -42,6 +46,7 @@ public class CreateVocabularyFilterRequest {
     
     @JsonProperty("VocabularyFilterName")
     public String vocabularyFilterName;
+
     public CreateVocabularyFilterRequest withVocabularyFilterName(String vocabularyFilterName) {
         this.vocabularyFilterName = vocabularyFilterName;
         return this;
@@ -50,9 +55,14 @@ public class CreateVocabularyFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Words")
     public String[] words;
+
     public CreateVocabularyFilterRequest withWords(String[] words) {
         this.words = words;
         return this;
     }
     
+    public CreateVocabularyFilterRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("VocabularyFilterName") String vocabularyFilterName) {
+        this.languageCode = languageCode;
+        this.vocabularyFilterName = vocabularyFilterName;
+  }
 }

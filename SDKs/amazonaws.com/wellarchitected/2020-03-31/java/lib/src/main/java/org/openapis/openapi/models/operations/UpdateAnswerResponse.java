@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAnswerResponse {
@@ -12,6 +13,7 @@ public class UpdateAnswerResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAnswerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateAnswerResponse {
      */
     
     public Object conflictException;
+
     public UpdateAnswerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAnswerResponse {
     
     
     public String contentType;
+
     public UpdateAnswerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAnswerResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAnswerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAnswerResponse {
     
     
     public Integer statusCode;
+
     public UpdateAnswerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAnswerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAnswerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAnswerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAnswerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAnswerResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAnswerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAnswerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAnswerOutput updateAnswerOutput;
+
     public UpdateAnswerResponse withUpdateAnswerOutput(org.openapis.openapi.models.shared.UpdateAnswerOutput updateAnswerOutput) {
         this.updateAnswerOutput = updateAnswerOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateAnswerResponse {
      */
     
     public Object validationException;
+
     public UpdateAnswerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAnswerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

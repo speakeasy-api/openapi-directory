@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteLoadBalancerInput {
     
     public String loadBalancerArn;
+
     public DeleteLoadBalancerInput withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
     }
     
+    public DeleteLoadBalancerInput(@JsonProperty("LoadBalancerArn") String loadBalancerArn) {
+        this.loadBalancerArn = loadBalancerArn;
+  }
 }

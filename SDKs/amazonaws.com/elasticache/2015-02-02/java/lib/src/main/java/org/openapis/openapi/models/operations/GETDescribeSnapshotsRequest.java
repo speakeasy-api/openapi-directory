@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeSnapshotsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeSnapshotsActionEnum action;
+
     public GETDescribeSnapshotsRequest withAction(GETDescribeSnapshotsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterId")
     public String cacheClusterId;
+
     public GETDescribeSnapshotsRequest withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeSnapshotsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeSnapshotsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
     public String replicationGroupId;
+
     public GETDescribeSnapshotsRequest withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowNodeGroupConfig")
     public Boolean showNodeGroupConfig;
+
     public GETDescribeSnapshotsRequest withShowNodeGroupConfig(Boolean showNodeGroupConfig) {
         this.showNodeGroupConfig = showNodeGroupConfig;
         return this;
@@ -69,6 +76,7 @@ public class GETDescribeSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotName")
     public String snapshotName;
+
     public GETDescribeSnapshotsRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -79,6 +87,7 @@ public class GETDescribeSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotSource")
     public String snapshotSource;
+
     public GETDescribeSnapshotsRequest withSnapshotSource(String snapshotSource) {
         this.snapshotSource = snapshotSource;
         return this;
@@ -86,6 +95,7 @@ public class GETDescribeSnapshotsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeSnapshotsVersionEnum version;
+
     public GETDescribeSnapshotsRequest withVersion(GETDescribeSnapshotsVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETDescribeSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeSnapshotsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETDescribeSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeSnapshotsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETDescribeSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeSnapshotsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETDescribeSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeSnapshotsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETDescribeSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeSnapshotsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETDescribeSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeSnapshotsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,14 @@ public class GETDescribeSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeSnapshotsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeSnapshotsRequest(@JsonProperty("Action") GETDescribeSnapshotsActionEnum action, @JsonProperty("Version") GETDescribeSnapshotsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

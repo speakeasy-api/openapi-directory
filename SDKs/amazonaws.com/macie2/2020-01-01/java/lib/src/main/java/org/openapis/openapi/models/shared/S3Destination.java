@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Destination {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public S3Destination withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -22,6 +23,7 @@ public class S3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPrefix")
     public String keyPrefix;
+
     public S3Destination withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
@@ -29,9 +31,14 @@ public class S3Destination {
     
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public S3Destination withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public S3Destination(@JsonProperty("bucketName") String bucketName, @JsonProperty("kmsKeyArn") String kmsKeyArn) {
+        this.bucketName = bucketName;
+        this.kmsKeyArn = kmsKeyArn;
+  }
 }

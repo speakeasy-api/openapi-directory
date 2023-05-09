@@ -15,6 +15,7 @@ public class UpdateCanaryRequestBodyVisualReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseCanaryRunId")
     public String baseCanaryRunId;
+
     public UpdateCanaryRequestBodyVisualReference withBaseCanaryRunId(String baseCanaryRunId) {
         this.baseCanaryRunId = baseCanaryRunId;
         return this;
@@ -23,9 +24,11 @@ public class UpdateCanaryRequestBodyVisualReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseScreenshots")
     public org.openapis.openapi.models.shared.BaseScreenshot[] baseScreenshots;
+
     public UpdateCanaryRequestBodyVisualReference withBaseScreenshots(org.openapis.openapi.models.shared.BaseScreenshot[] baseScreenshots) {
         this.baseScreenshots = baseScreenshots;
         return this;
     }
     
+    public UpdateCanaryRequestBodyVisualReference(){}
 }

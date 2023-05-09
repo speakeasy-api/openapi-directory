@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPaymentInitiationScaStatusResponse {
     
     public String contentType;
+
     public GetPaymentInitiationScaStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS;
+
     public GetPaymentInitiationScaStatusResponse withError400NGPIS(org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS) {
         this.error400NGPIS = error400NGPIS;
         return this;
@@ -29,6 +32,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400PIS error400PIS;
+
     public GetPaymentInitiationScaStatusResponse withError400PIS(org.openapis.openapi.models.shared.Error400PIS error400PIS) {
         this.error400PIS = error400PIS;
         return this;
@@ -39,6 +43,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS;
+
     public GetPaymentInitiationScaStatusResponse withError401NGPIS(org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS) {
         this.error401NGPIS = error401NGPIS;
         return this;
@@ -49,6 +54,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401PIS error401PIS;
+
     public GetPaymentInitiationScaStatusResponse withError401PIS(org.openapis.openapi.models.shared.Error401PIS error401PIS) {
         this.error401PIS = error401PIS;
         return this;
@@ -59,6 +65,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS;
+
     public GetPaymentInitiationScaStatusResponse withError403NGPIS(org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS) {
         this.error403NGPIS = error403NGPIS;
         return this;
@@ -69,6 +76,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403PIS error403PIS;
+
     public GetPaymentInitiationScaStatusResponse withError403PIS(org.openapis.openapi.models.shared.Error403PIS error403PIS) {
         this.error403PIS = error403PIS;
         return this;
@@ -79,6 +87,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS;
+
     public GetPaymentInitiationScaStatusResponse withError404NGPIS(org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS) {
         this.error404NGPIS = error404NGPIS;
         return this;
@@ -89,6 +98,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404PIS error404PIS;
+
     public GetPaymentInitiationScaStatusResponse withError404PIS(org.openapis.openapi.models.shared.Error404PIS error404PIS) {
         this.error404PIS = error404PIS;
         return this;
@@ -99,6 +109,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405NGPIS error405NGPIS;
+
     public GetPaymentInitiationScaStatusResponse withError405NGPIS(org.openapis.openapi.models.shared.Error405NGPIS error405NGPIS) {
         this.error405NGPIS = error405NGPIS;
         return this;
@@ -109,6 +120,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405PIS error405PIS;
+
     public GetPaymentInitiationScaStatusResponse withError405PIS(org.openapis.openapi.models.shared.Error405PIS error405PIS) {
         this.error405PIS = error405PIS;
         return this;
@@ -119,6 +131,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS;
+
     public GetPaymentInitiationScaStatusResponse withError409NGPIS(org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS) {
         this.error409NGPIS = error409NGPIS;
         return this;
@@ -129,6 +142,7 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409PIS error409PIS;
+
     public GetPaymentInitiationScaStatusResponse withError409PIS(org.openapis.openapi.models.shared.Error409PIS error409PIS) {
         this.error409PIS = error409PIS;
         return this;
@@ -136,6 +150,7 @@ public class GetPaymentInitiationScaStatusResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPaymentInitiationScaStatusResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -143,6 +158,7 @@ public class GetPaymentInitiationScaStatusResponse {
     
     
     public Integer statusCode;
+
     public GetPaymentInitiationScaStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -150,6 +166,7 @@ public class GetPaymentInitiationScaStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPaymentInitiationScaStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -160,9 +177,14 @@ public class GetPaymentInitiationScaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ScaStatusResponse scaStatusResponse;
+
     public GetPaymentInitiationScaStatusResponse withScaStatusResponse(org.openapis.openapi.models.shared.ScaStatusResponse scaStatusResponse) {
         this.scaStatusResponse = scaStatusResponse;
         return this;
     }
     
+    public GetPaymentInitiationScaStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

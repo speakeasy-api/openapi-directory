@@ -15,6 +15,7 @@ public class ImportLensOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensArn")
     public String lensArn;
+
     public ImportLensOutput withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -23,9 +24,11 @@ public class ImportLensOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ImportLensStatusEnum status;
+
     public ImportLensOutput withStatus(ImportLensStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ImportLensOutput(){}
 }

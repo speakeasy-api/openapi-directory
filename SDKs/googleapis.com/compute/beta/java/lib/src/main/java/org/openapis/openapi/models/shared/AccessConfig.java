@@ -18,6 +18,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIpv6")
     public String externalIpv6;
+
     public AccessConfig withExternalIpv6(String externalIpv6) {
         this.externalIpv6 = externalIpv6;
         return this;
@@ -29,6 +30,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIpv6PrefixLength")
     public Integer externalIpv6PrefixLength;
+
     public AccessConfig withExternalIpv6PrefixLength(Integer externalIpv6PrefixLength) {
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
         return this;
@@ -40,6 +42,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccessConfig withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessConfig withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natIP")
     public String natIP;
+
     public AccessConfig withNatIP(String natIP) {
         this.natIP = natIP;
         return this;
@@ -73,6 +78,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTier")
     public AccessConfigNetworkTierEnum networkTier;
+
     public AccessConfig withNetworkTier(AccessConfigNetworkTierEnum networkTier) {
         this.networkTier = networkTier;
         return this;
@@ -84,6 +90,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicPtrDomainName")
     public String publicPtrDomainName;
+
     public AccessConfig withPublicPtrDomainName(String publicPtrDomainName) {
         this.publicPtrDomainName = publicPtrDomainName;
         return this;
@@ -95,6 +102,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setPublicPtr")
     public Boolean setPublicPtr;
+
     public AccessConfig withSetPublicPtr(Boolean setPublicPtr) {
         this.setPublicPtr = setPublicPtr;
         return this;
@@ -106,9 +114,11 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AccessConfigTypeEnum type;
+
     public AccessConfig withType(AccessConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccessConfig(){}
 }

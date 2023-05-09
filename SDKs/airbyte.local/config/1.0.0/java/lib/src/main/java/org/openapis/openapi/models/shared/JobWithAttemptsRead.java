@@ -12,6 +12,7 @@ public class JobWithAttemptsRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attempts")
     public AttemptRead[] attempts;
+
     public JobWithAttemptsRead withAttempts(AttemptRead[] attempts) {
         this.attempts = attempts;
         return this;
@@ -20,9 +21,11 @@ public class JobWithAttemptsRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public JobRead job;
+
     public JobWithAttemptsRead withJob(JobRead job) {
         this.job = job;
         return this;
     }
     
+    public JobWithAttemptsRead(){}
 }

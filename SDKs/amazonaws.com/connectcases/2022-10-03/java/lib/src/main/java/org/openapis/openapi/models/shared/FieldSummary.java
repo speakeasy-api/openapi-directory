@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FieldSummary {
     @JsonProperty("fieldArn")
     public String fieldArn;
+
     public FieldSummary withFieldArn(String fieldArn) {
         this.fieldArn = fieldArn;
         return this;
@@ -19,6 +20,7 @@ public class FieldSummary {
     
     @JsonProperty("fieldId")
     public String fieldId;
+
     public FieldSummary withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -26,6 +28,7 @@ public class FieldSummary {
     
     @JsonProperty("name")
     public String name;
+
     public FieldSummary withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class FieldSummary {
     
     @JsonProperty("namespace")
     public FieldNamespaceEnum namespace;
+
     public FieldSummary withNamespace(FieldNamespaceEnum namespace) {
         this.namespace = namespace;
         return this;
@@ -40,9 +44,17 @@ public class FieldSummary {
     
     @JsonProperty("type")
     public FieldTypeEnum type;
+
     public FieldSummary withType(FieldTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FieldSummary(@JsonProperty("fieldArn") String fieldArn, @JsonProperty("fieldId") String fieldId, @JsonProperty("name") String name, @JsonProperty("namespace") FieldNamespaceEnum namespace, @JsonProperty("type") FieldTypeEnum type) {
+        this.fieldArn = fieldArn;
+        this.fieldId = fieldId;
+        this.name = name;
+        this.namespace = namespace;
+        this.type = type;
+  }
 }

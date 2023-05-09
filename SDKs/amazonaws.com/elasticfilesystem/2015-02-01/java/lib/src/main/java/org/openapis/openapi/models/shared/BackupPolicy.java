@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BackupPolicy {
     @JsonProperty("Status")
     public StatusEnum status;
+
     public BackupPolicy withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BackupPolicy(@JsonProperty("Status") StatusEnum status) {
+        this.status = status;
+  }
 }

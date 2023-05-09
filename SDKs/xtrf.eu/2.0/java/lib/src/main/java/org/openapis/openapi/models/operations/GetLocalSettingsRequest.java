@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLocalSettingsRequest {
@@ -12,9 +13,13 @@ public class GetLocalSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public GetLocalSettingsRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public GetLocalSettingsRequest(@JsonProperty("viewId") Long viewId) {
+        this.viewId = viewId;
+  }
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAboutRequest;
 import org.openapis.openapi.models.operations.GetAboutResponse;
 
@@ -28,29 +27,31 @@ public class Application {
 
             GetAboutRequest req = new GetAboutRequest() {{
                 outputFormat = "corrupti";
-            }}            
+            }};            
 
             GetAboutResponse res = sdk.getAbout(req);
 
-            if (res.about.isPresent()) {
+            if (res.about != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getAbout` - Metadata about this API&#58; version number, release date and available languages.
+* [getAbout](docs/sdk/README.md#getabout) - Metadata about this API&#58; version number, release date and available languages.
 
 Metadata requests are NOT billed.
 
-* `getEc` - The entropy calculator - alias ec -, analyzes a password and calculates its entropy.
+* [getEc](docs/sdk/README.md#getec) - The entropy calculator - alias ec -, analyzes a password and calculates its entropy.
 
 Entropy calculator requests are billed.
 

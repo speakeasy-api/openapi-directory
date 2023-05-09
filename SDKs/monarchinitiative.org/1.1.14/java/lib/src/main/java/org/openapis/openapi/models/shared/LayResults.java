@@ -18,9 +18,11 @@ public class LayResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public LayAutocomplete[] results;
+
     public LayResults withResults(LayAutocomplete[] results) {
         this.results = results;
         return this;
     }
     
+    public LayResults(){}
 }

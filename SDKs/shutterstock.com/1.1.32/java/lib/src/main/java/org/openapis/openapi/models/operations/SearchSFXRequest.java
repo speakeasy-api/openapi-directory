@@ -13,6 +13,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date")
     public LocalDate addedDate;
+
     public SearchSFXRequest withAddedDate(LocalDate addedDate) {
         this.addedDate = addedDate;
         return this;
@@ -23,6 +24,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_end")
     public LocalDate addedDateEnd;
+
     public SearchSFXRequest withAddedDateEnd(LocalDate addedDateEnd) {
         this.addedDateEnd = addedDateEnd;
         return this;
@@ -33,6 +35,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_start")
     public LocalDate addedDateStart;
+
     public SearchSFXRequest withAddedDateStart(LocalDate addedDateStart) {
         this.addedDateStart = addedDateStart;
         return this;
@@ -43,6 +46,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
     public Long duration;
+
     public SearchSFXRequest withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -53,6 +57,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_from")
     public Long durationFrom;
+
     public SearchSFXRequest withDurationFrom(Long durationFrom) {
         this.durationFrom = durationFrom;
         return this;
@@ -63,6 +68,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_to")
     public Long durationTo;
+
     public SearchSFXRequest withDurationTo(Long durationTo) {
         this.durationTo = durationTo;
         return this;
@@ -73,6 +79,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public SearchSFXRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -83,6 +90,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchSFXRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -93,6 +101,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchSFXRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -103,6 +112,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchSFXRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -113,6 +123,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
     public Boolean safe;
+
     public SearchSFXRequest withSafe(Boolean safe) {
         this.safe = safe;
         return this;
@@ -123,6 +134,7 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchSFXSortEnum sort;
+
     public SearchSFXRequest withSort(SearchSFXSortEnum sort) {
         this.sort = sort;
         return this;
@@ -133,9 +145,11 @@ public class SearchSFXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public SearchSFXViewEnum view;
+
     public SearchSFXRequest withView(SearchSFXViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public SearchSFXRequest(){}
 }

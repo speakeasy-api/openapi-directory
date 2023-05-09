@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchCreateTableRowsResult {
     @JsonProperty("createdRows")
     public java.util.Map<String, String> createdRows;
+
     public BatchCreateTableRowsResult withCreatedRows(java.util.Map<String, String> createdRows) {
         this.createdRows = createdRows;
         return this;
@@ -22,6 +23,7 @@ public class BatchCreateTableRowsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedBatchItems")
     public FailedBatchItem[] failedBatchItems;
+
     public BatchCreateTableRowsResult withFailedBatchItems(FailedBatchItem[] failedBatchItems) {
         this.failedBatchItems = failedBatchItems;
         return this;
@@ -29,9 +31,14 @@ public class BatchCreateTableRowsResult {
     
     @JsonProperty("workbookCursor")
     public Long workbookCursor;
+
     public BatchCreateTableRowsResult withWorkbookCursor(Long workbookCursor) {
         this.workbookCursor = workbookCursor;
         return this;
     }
     
+    public BatchCreateTableRowsResult(@JsonProperty("createdRows") java.util.Map<String, String> createdRows, @JsonProperty("workbookCursor") Long workbookCursor) {
+        this.createdRows = createdRows;
+        this.workbookCursor = workbookCursor;
+  }
 }

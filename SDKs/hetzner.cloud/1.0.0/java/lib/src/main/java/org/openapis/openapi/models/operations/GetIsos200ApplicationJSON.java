@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetIsos200ApplicationJSON {
     @JsonProperty("isos")
     public GetIsos200ApplicationJSONIsos[] isos;
+
     public GetIsos200ApplicationJSON withIsos(GetIsos200ApplicationJSONIsos[] isos) {
         this.isos = isos;
         return this;
@@ -22,9 +23,13 @@ public class GetIsos200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetIsos200ApplicationJSONMeta meta;
+
     public GetIsos200ApplicationJSON withMeta(GetIsos200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetIsos200ApplicationJSON(@JsonProperty("isos") GetIsos200ApplicationJSONIsos[] isos) {
+        this.isos = isos;
+  }
 }

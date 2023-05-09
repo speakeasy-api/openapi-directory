@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             scanConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListResponse(contentType, httpRes.statusCode()) {{
             listScanConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchResponse(contentType, httpRes.statusCode()) {{
             scanConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse(contentType, httpRes.statusCode()) {{
             listCrawledUrlsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse(contentType, httpRes.statusCode()) {{
             listFindingTypeStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse(contentType, httpRes.statusCode()) {{
             finding = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -386,11 +372,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse(contentType, httpRes.statusCode()) {{
             listFindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -432,11 +416,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse(contentType, httpRes.statusCode()) {{
             listScanRunsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -480,11 +462,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse(contentType, httpRes.statusCode()) {{
             scanRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,11 +508,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartResponse() {{
+        org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartResponse res = new org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartResponse(contentType, httpRes.statusCode()) {{
             scanRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

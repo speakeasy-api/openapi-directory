@@ -15,6 +15,7 @@ public class TaxonomiesReadTaxonomyLinks {
      */
     
     public String[] parents;
+
     public TaxonomiesReadTaxonomyLinks withParents(String[] parents) {
         this.parents = parents;
         return this;
@@ -25,9 +26,11 @@ public class TaxonomiesReadTaxonomyLinks {
      */
     
     public String self;
+
     public TaxonomiesReadTaxonomyLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public TaxonomiesReadTaxonomyLinks(){}
 }

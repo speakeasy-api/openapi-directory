@@ -20,6 +20,7 @@ public class SampledHTTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public String action;
+
     public SampledHTTPRequest withAction(String action) {
         this.action = action;
         return this;
@@ -27,6 +28,7 @@ public class SampledHTTPRequest {
     
     @JsonProperty("Request")
     public HTTPRequest request;
+
     public SampledHTTPRequest withRequest(HTTPRequest request) {
         this.request = request;
         return this;
@@ -35,6 +37,7 @@ public class SampledHTTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleWithinRuleGroup")
     public String ruleWithinRuleGroup;
+
     public SampledHTTPRequest withRuleWithinRuleGroup(String ruleWithinRuleGroup) {
         this.ruleWithinRuleGroup = ruleWithinRuleGroup;
         return this;
@@ -45,6 +48,7 @@ public class SampledHTTPRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public SampledHTTPRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -52,9 +56,14 @@ public class SampledHTTPRequest {
     
     @JsonProperty("Weight")
     public Long weight;
+
     public SampledHTTPRequest withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public SampledHTTPRequest(@JsonProperty("Request") HTTPRequest request, @JsonProperty("Weight") Long weight) {
+        this.request = request;
+        this.weight = weight;
+  }
 }

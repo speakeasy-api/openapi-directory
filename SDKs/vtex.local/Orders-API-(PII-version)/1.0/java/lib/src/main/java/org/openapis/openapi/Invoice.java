@@ -73,11 +73,9 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceNotification2Response res = new org.openapis.openapi.models.operations.InvoiceNotification2Response() {{
+        org.openapis.openapi.models.operations.InvoiceNotification2Response res = new org.openapis.openapi.models.operations.InvoiceNotification2Response(contentType, httpRes.statusCode()) {{
             invoiceNotification2200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

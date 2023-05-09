@@ -15,6 +15,7 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CallRecipient[] requestBody;
+
     public SendCallsRequest withRequestBody(org.openapis.openapi.models.shared.CallRecipient[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -25,6 +26,7 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
     public Long campaignId;
+
     public SendCallsRequest withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -35,6 +37,7 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultLiveMessage")
     public String defaultLiveMessage;
+
     public SendCallsRequest withDefaultLiveMessage(String defaultLiveMessage) {
         this.defaultLiveMessage = defaultLiveMessage;
         return this;
@@ -45,6 +48,7 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultLiveMessageSoundId")
     public Long defaultLiveMessageSoundId;
+
     public SendCallsRequest withDefaultLiveMessageSoundId(Long defaultLiveMessageSoundId) {
         this.defaultLiveMessageSoundId = defaultLiveMessageSoundId;
         return this;
@@ -55,6 +59,7 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultMachineMessage")
     public String defaultMachineMessage;
+
     public SendCallsRequest withDefaultMachineMessage(String defaultMachineMessage) {
         this.defaultMachineMessage = defaultMachineMessage;
         return this;
@@ -65,6 +70,7 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultMachineMessageSoundId")
     public Long defaultMachineMessageSoundId;
+
     public SendCallsRequest withDefaultMachineMessageSoundId(Long defaultMachineMessageSoundId) {
         this.defaultMachineMessageSoundId = defaultMachineMessageSoundId;
         return this;
@@ -75,6 +81,7 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultVoice")
     public SendCallsDefaultVoiceEnum defaultVoice;
+
     public SendCallsRequest withDefaultVoice(SendCallsDefaultVoiceEnum defaultVoice) {
         this.defaultVoice = defaultVoice;
         return this;
@@ -85,6 +92,7 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SendCallsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -95,9 +103,11 @@ public class SendCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
     public Boolean strictValidation;
+
     public SendCallsRequest withStrictValidation(Boolean strictValidation) {
         this.strictValidation = strictValidation;
         return this;
     }
     
+    public SendCallsRequest(){}
 }

@@ -15,9 +15,11 @@ public class ConfidenceScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public ConfidenceScore withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public ConfidenceScore(){}
 }

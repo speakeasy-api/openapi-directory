@@ -18,6 +18,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeStatus")
     public EntityChangeStatusEnum changeStatus;
+
     public Entity withChangeStatus(EntityChangeStatusEnum changeStatus) {
         this.changeStatus = changeStatus;
         return this;
@@ -26,6 +27,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public Client client;
+
     public Entity withClient(Client client) {
         this.client = client;
         return this;
@@ -37,6 +39,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folder")
     public Folder folder;
+
     public Entity withFolder(Folder folder) {
         this.folder = folder;
         return this;
@@ -48,6 +51,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public Tag tag;
+
     public Entity withTag(Tag tag) {
         this.tag = tag;
         return this;
@@ -59,6 +63,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public Trigger trigger;
+
     public Entity withTrigger(Trigger trigger) {
         this.trigger = trigger;
         return this;
@@ -70,9 +75,11 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variable")
     public Variable variable;
+
     public Entity withVariable(Variable variable) {
         this.variable = variable;
         return this;
     }
     
+    public Entity(){}
 }

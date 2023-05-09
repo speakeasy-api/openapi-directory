@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopWorkflowRunResponse {
     
     public String contentType;
+
     public StopWorkflowRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopWorkflowRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public StopWorkflowRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StopWorkflowRunResponse {
      */
     
     public Object illegalWorkflowStateException;
+
     public StopWorkflowRunResponse withIllegalWorkflowStateException(Object illegalWorkflowStateException) {
         this.illegalWorkflowStateException = illegalWorkflowStateException;
         return this;
@@ -39,6 +43,7 @@ public class StopWorkflowRunResponse {
      */
     
     public Object internalServiceException;
+
     public StopWorkflowRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StopWorkflowRunResponse {
      */
     
     public Object invalidInputException;
+
     public StopWorkflowRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class StopWorkflowRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public StopWorkflowRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class StopWorkflowRunResponse {
     
     
     public Integer statusCode;
+
     public StopWorkflowRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StopWorkflowRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopWorkflowRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StopWorkflowRunResponse {
      */
     
     public java.util.Map<String, Object> stopWorkflowRunResponse;
+
     public StopWorkflowRunResponse withStopWorkflowRunResponse(java.util.Map<String, Object> stopWorkflowRunResponse) {
         this.stopWorkflowRunResponse = stopWorkflowRunResponse;
         return this;
     }
     
+    public StopWorkflowRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

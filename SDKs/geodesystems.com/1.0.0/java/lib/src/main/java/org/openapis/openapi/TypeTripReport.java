@@ -57,10 +57,8 @@ public class TypeTripReport {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTripReportResponse res = new org.openapis.openapi.models.operations.SearchTripReportResponse() {{
+        org.openapis.openapi.models.operations.SearchTripReportResponse res = new org.openapis.openapi.models.operations.SearchTripReportResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

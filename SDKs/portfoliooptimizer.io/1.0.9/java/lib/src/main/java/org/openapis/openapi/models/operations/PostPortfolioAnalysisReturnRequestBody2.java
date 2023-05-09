@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioAnalysisReturnRequestBody2 {
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisReturnRequestBody2Portfolios[] portfolios;
+
     public PostPortfolioAnalysisReturnRequestBody2 withPortfolios(PostPortfolioAnalysisReturnRequestBody2Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisReturnRequestBody2(@JsonProperty("portfolios") PostPortfolioAnalysisReturnRequestBody2Portfolios[] portfolios) {
+        this.portfolios = portfolios;
+  }
 }

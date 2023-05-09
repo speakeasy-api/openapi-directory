@@ -18,6 +18,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectation")
     public TestCaseExpectationEnum expectation;
+
     public TestCase withExpectation(TestCaseExpectationEnum expectation) {
         this.expectation = expectation;
         return this;
@@ -29,6 +30,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expressionReportLevel")
     public TestCaseExpressionReportLevelEnum expressionReportLevel;
+
     public TestCase withExpressionReportLevel(TestCaseExpressionReportLevelEnum expressionReportLevel) {
         this.expressionReportLevel = expressionReportLevel;
         return this;
@@ -40,6 +42,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionMocks")
     public FunctionMock[] functionMocks;
+
     public TestCase withFunctionMocks(FunctionMock[] functionMocks) {
         this.functionMocks = functionMocks;
         return this;
@@ -51,6 +54,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathEncoding")
     public TestCasePathEncodingEnum pathEncoding;
+
     public TestCase withPathEncoding(TestCasePathEncodingEnum pathEncoding) {
         this.pathEncoding = pathEncoding;
         return this;
@@ -62,6 +66,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public Object request;
+
     public TestCase withRequest(Object request) {
         this.request = request;
         return this;
@@ -73,9 +78,11 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public Object resource;
+
     public TestCase withResource(Object resource) {
         this.resource = resource;
         return this;
     }
     
+    public TestCase(){}
 }

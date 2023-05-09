@@ -15,6 +15,7 @@ public class StartVectorEnrichmentJobRequestBodyInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceConfig")
     public org.openapis.openapi.models.shared.VectorEnrichmentJobDataSourceConfigInput dataSourceConfig;
+
     public StartVectorEnrichmentJobRequestBodyInputConfig withDataSourceConfig(org.openapis.openapi.models.shared.VectorEnrichmentJobDataSourceConfigInput dataSourceConfig) {
         this.dataSourceConfig = dataSourceConfig;
         return this;
@@ -23,9 +24,11 @@ public class StartVectorEnrichmentJobRequestBodyInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public org.openapis.openapi.models.shared.VectorEnrichmentJobDocumentTypeEnum documentType;
+
     public StartVectorEnrichmentJobRequestBodyInputConfig withDocumentType(org.openapis.openapi.models.shared.VectorEnrichmentJobDocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
     }
     
+    public StartVectorEnrichmentJobRequestBodyInputConfig(){}
 }

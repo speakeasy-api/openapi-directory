@@ -18,6 +18,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absolute_magnitude_h")
     public Double absoluteMagnitudeH;
+
     public NearEarthObject withAbsoluteMagnitudeH(Double absoluteMagnitudeH) {
         this.absoluteMagnitudeH = absoluteMagnitudeH;
         return this;
@@ -29,6 +30,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("close_approach_data")
     public CloseApproachData[] closeApproachData;
+
     public NearEarthObject withCloseApproachData(CloseApproachData[] closeApproachData) {
         this.closeApproachData = closeApproachData;
         return this;
@@ -37,6 +39,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("designation")
     public String designation;
+
     public NearEarthObject withDesignation(String designation) {
         this.designation = designation;
         return this;
@@ -45,6 +48,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_diameter")
     public EstimatedDiameterContainer estimatedDiameter;
+
     public NearEarthObject withEstimatedDiameter(EstimatedDiameterContainer estimatedDiameter) {
         this.estimatedDiameter = estimatedDiameter;
         return this;
@@ -53,6 +57,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_potentially_hazardous_asteroid")
     public Boolean isPotentiallyHazardousAsteroid;
+
     public NearEarthObject withIsPotentiallyHazardousAsteroid(Boolean isPotentiallyHazardousAsteroid) {
         this.isPotentiallyHazardousAsteroid = isPotentiallyHazardousAsteroid;
         return this;
@@ -61,6 +66,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_sentry_object")
     public Boolean isSentryObject;
+
     public NearEarthObject withIsSentryObject(Boolean isSentryObject) {
         this.isSentryObject = isSentryObject;
         return this;
@@ -69,6 +75,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NearEarthObject withName(String name) {
         this.name = name;
         return this;
@@ -77,6 +84,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_limited")
     public String nameLimited;
+
     public NearEarthObject withNameLimited(String nameLimited) {
         this.nameLimited = nameLimited;
         return this;
@@ -88,6 +96,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nasa_jpl_url")
     public String nasaJplUrl;
+
     public NearEarthObject withNasaJplUrl(String nasaJplUrl) {
         this.nasaJplUrl = nasaJplUrl;
         return this;
@@ -99,6 +108,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neo_reference_id")
     public String neoReferenceId;
+
     public NearEarthObject withNeoReferenceId(String neoReferenceId) {
         this.neoReferenceId = neoReferenceId;
         return this;
@@ -107,6 +117,7 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orbital_data")
     public OrbitalData orbitalData;
+
     public NearEarthObject withOrbitalData(OrbitalData orbitalData) {
         this.orbitalData = orbitalData;
         return this;
@@ -115,9 +126,11 @@ public class NearEarthObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentry_data")
     public String sentryData;
+
     public NearEarthObject withSentryData(String sentryData) {
         this.sentryData = sentryData;
         return this;
     }
     
+    public NearEarthObject(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProvisioningArtifactResponse {
     
     public String contentType;
+
     public DeleteProvisioningArtifactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProvisioningArtifactResponse {
      */
     
     public java.util.Map<String, Object> deleteProvisioningArtifactOutput;
+
     public DeleteProvisioningArtifactResponse withDeleteProvisioningArtifactOutput(java.util.Map<String, Object> deleteProvisioningArtifactOutput) {
         this.deleteProvisioningArtifactOutput = deleteProvisioningArtifactOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProvisioningArtifactResponse {
      */
     
     public Object invalidParametersException;
+
     public DeleteProvisioningArtifactResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProvisioningArtifactResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteProvisioningArtifactResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProvisioningArtifactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProvisioningArtifactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteProvisioningArtifactResponse {
     
     
     public Integer statusCode;
+
     public DeleteProvisioningArtifactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteProvisioningArtifactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProvisioningArtifactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteProvisioningArtifactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

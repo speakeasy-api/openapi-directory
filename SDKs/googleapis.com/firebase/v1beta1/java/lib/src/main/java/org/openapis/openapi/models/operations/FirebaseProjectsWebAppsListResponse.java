@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseProjectsWebAppsListResponse {
     
     public String contentType;
+
     public FirebaseProjectsWebAppsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseProjectsWebAppsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWebAppsResponse listWebAppsResponse;
+
     public FirebaseProjectsWebAppsListResponse withListWebAppsResponse(org.openapis.openapi.models.shared.ListWebAppsResponse listWebAppsResponse) {
         this.listWebAppsResponse = listWebAppsResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseProjectsWebAppsListResponse {
     
     
     public Integer statusCode;
+
     public FirebaseProjectsWebAppsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseProjectsWebAppsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseProjectsWebAppsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseProjectsWebAppsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bio")
     public String bio;
+
     public User withBio(String bio) {
         this.bio = bio;
         return this;
@@ -28,6 +29,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public User withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -36,6 +38,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public User withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registered")
     public OffsetDateTime registered;
+
     public User withRegistered(OffsetDateTime registered) {
         this.registered = registered;
         return this;
@@ -54,9 +58,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public User(){}
 }

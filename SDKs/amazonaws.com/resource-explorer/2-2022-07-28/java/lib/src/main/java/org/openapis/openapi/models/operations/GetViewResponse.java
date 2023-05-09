@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetViewResponse {
@@ -12,6 +13,7 @@ public class GetViewResponse {
      */
     
     public Object accessDeniedException;
+
     public GetViewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetViewResponse {
     
     
     public String contentType;
+
     public GetViewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetViewResponse {
      */
     
     public org.openapis.openapi.models.shared.GetViewOutput getViewOutput;
+
     public GetViewResponse withGetViewOutput(org.openapis.openapi.models.shared.GetViewOutput getViewOutput) {
         this.getViewOutput = getViewOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetViewResponse {
      */
     
     public Object internalServerException;
+
     public GetViewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetViewResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetViewResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetViewResponse {
     
     
     public Integer statusCode;
+
     public GetViewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetViewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetViewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetViewResponse {
      */
     
     public Object throttlingException;
+
     public GetViewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class GetViewResponse {
      */
     
     public Object unauthorizedException;
+
     public GetViewResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,9 +103,14 @@ public class GetViewResponse {
      */
     
     public Object validationException;
+
     public GetViewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetViewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

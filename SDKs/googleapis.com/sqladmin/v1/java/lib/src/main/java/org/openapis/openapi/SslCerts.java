@@ -61,11 +61,9 @@ public class SslCerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralResponse res = new org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralResponse() {{
+        org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralResponse res = new org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralResponse(contentType, httpRes.statusCode()) {{
             sslCert = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class SslCerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlSslCertsDeleteResponse res = new org.openapis.openapi.models.operations.SqlSslCertsDeleteResponse() {{
+        org.openapis.openapi.models.operations.SqlSslCertsDeleteResponse res = new org.openapis.openapi.models.operations.SqlSslCertsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class SslCerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlSslCertsGetResponse res = new org.openapis.openapi.models.operations.SqlSslCertsGetResponse() {{
+        org.openapis.openapi.models.operations.SqlSslCertsGetResponse res = new org.openapis.openapi.models.operations.SqlSslCertsGetResponse(contentType, httpRes.statusCode()) {{
             sslCert = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class SslCerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlSslCertsInsertResponse res = new org.openapis.openapi.models.operations.SqlSslCertsInsertResponse() {{
+        org.openapis.openapi.models.operations.SqlSslCertsInsertResponse res = new org.openapis.openapi.models.operations.SqlSslCertsInsertResponse(contentType, httpRes.statusCode()) {{
             sslCertsInsertResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class SslCerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlSslCertsListResponse res = new org.openapis.openapi.models.operations.SqlSslCertsListResponse() {{
+        org.openapis.openapi.models.operations.SqlSslCertsListResponse res = new org.openapis.openapi.models.operations.SqlSslCertsListResponse(contentType, httpRes.statusCode()) {{
             sslCertsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

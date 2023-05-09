@@ -15,6 +15,7 @@ public class AwsEksClusterResourcesVpcConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointPublicAccess")
     public Boolean endpointPublicAccess;
+
     public AwsEksClusterResourcesVpcConfigDetails withEndpointPublicAccess(Boolean endpointPublicAccess) {
         this.endpointPublicAccess = endpointPublicAccess;
         return this;
@@ -23,6 +24,7 @@ public class AwsEksClusterResourcesVpcConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public AwsEksClusterResourcesVpcConfigDetails withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -31,9 +33,11 @@ public class AwsEksClusterResourcesVpcConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public AwsEksClusterResourcesVpcConfigDetails withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public AwsEksClusterResourcesVpcConfigDetails(){}
 }

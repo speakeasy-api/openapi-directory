@@ -15,6 +15,7 @@ public class Parent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Parent withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class Parent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ParentTypeEnum type;
+
     public Parent withType(ParentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Parent(){}
 }

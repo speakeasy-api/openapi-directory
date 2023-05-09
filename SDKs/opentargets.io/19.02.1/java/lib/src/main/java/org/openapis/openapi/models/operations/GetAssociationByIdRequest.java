@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationByIdRequest {
@@ -12,9 +13,13 @@ public class GetAssociationByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetAssociationByIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetAssociationByIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

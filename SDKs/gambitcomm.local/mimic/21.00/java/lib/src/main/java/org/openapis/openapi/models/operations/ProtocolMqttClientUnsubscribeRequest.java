@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientUnsubscribeRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientUnsubscribeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientUnsubscribeRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientUnsubscribeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subNum")
     public Integer subNum;
+
     public ProtocolMqttClientUnsubscribeRequest withSubNum(Integer subNum) {
         this.subNum = subNum;
         return this;
     }
     
+    public ProtocolMqttClientUnsubscribeRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("subNum") Integer subNum) {
+        this.agentNum = agentNum;
+        this.subNum = subNum;
+  }
 }

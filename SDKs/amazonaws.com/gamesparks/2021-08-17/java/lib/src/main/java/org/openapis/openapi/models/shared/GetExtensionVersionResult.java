@@ -15,9 +15,11 @@ public class GetExtensionVersionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtensionVersion")
     public ExtensionVersionDetails extensionVersion;
+
     public GetExtensionVersionResult withExtensionVersion(ExtensionVersionDetails extensionVersion) {
         this.extensionVersion = extensionVersion;
         return this;
     }
     
+    public GetExtensionVersionResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePipelineVariableForTeamRequest {
@@ -12,6 +13,7 @@ public class UpdatePipelineVariableForTeamRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdatePipelineVariableForTeamRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePipelineVariableForTeamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public UpdatePipelineVariableForTeamRequest withUsername(String username) {
         this.username = username;
         return this;
@@ -32,9 +35,15 @@ public class UpdatePipelineVariableForTeamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
     public String variableUuid;
+
     public UpdatePipelineVariableForTeamRequest withVariableUuid(String variableUuid) {
         this.variableUuid = variableUuid;
         return this;
     }
     
+    public UpdatePipelineVariableForTeamRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("username") String username, @JsonProperty("variable_uuid") String variableUuid) {
+        this.requestBody = requestBody;
+        this.username = username;
+        this.variableUuid = variableUuid;
+  }
 }

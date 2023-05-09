@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositoryConfigurationsDeleteDefaultApplicationJSON {
     @JsonProperty("code")
     public String code;
+
     public RepositoryConfigurationsDeleteDefaultApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class RepositoryConfigurationsDeleteDefaultApplicationJSON {
     
     @JsonProperty("id")
     public String id;
+
     public RepositoryConfigurationsDeleteDefaultApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,15 @@ public class RepositoryConfigurationsDeleteDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public RepositoryConfigurationsDeleteDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RepositoryConfigurationsDeleteDefaultApplicationJSON(@JsonProperty("code") String code, @JsonProperty("id") String id, @JsonProperty("message") String message) {
+        this.code = code;
+        this.id = id;
+        this.message = message;
+  }
 }

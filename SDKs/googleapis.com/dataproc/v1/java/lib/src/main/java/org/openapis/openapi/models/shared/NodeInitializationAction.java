@@ -18,6 +18,7 @@ public class NodeInitializationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executableFile")
     public String executableFile;
+
     public NodeInitializationAction withExecutableFile(String executableFile) {
         this.executableFile = executableFile;
         return this;
@@ -29,9 +30,11 @@ public class NodeInitializationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionTimeout")
     public String executionTimeout;
+
     public NodeInitializationAction withExecutionTimeout(String executionTimeout) {
         this.executionTimeout = executionTimeout;
         return this;
     }
     
+    public NodeInitializationAction(){}
 }

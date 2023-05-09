@@ -15,9 +15,11 @@ public class TriggerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scheduled")
     public ScheduledTriggerProperties scheduled;
+
     public TriggerProperties withScheduled(ScheduledTriggerProperties scheduled) {
         this.scheduled = scheduled;
         return this;
     }
     
+    public TriggerProperties(){}
 }

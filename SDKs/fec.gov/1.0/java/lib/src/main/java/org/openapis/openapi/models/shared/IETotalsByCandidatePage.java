@@ -12,6 +12,7 @@ public class IETotalsByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public IETotalsByCandidatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class IETotalsByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public IETotalsByCandidate[] results;
+
     public IETotalsByCandidatePage withResults(IETotalsByCandidate[] results) {
         this.results = results;
         return this;
     }
     
+    public IETotalsByCandidatePage(){}
 }

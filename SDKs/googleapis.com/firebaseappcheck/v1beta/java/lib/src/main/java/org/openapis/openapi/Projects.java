@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaBatchGetAppAttestConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaDebugToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaListDebugTokensResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaBatchGetDeviceCheckConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,11 +560,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaTokenResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaTokenResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +652,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,11 +698,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaAppCheckToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -774,11 +744,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -822,11 +790,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -868,11 +834,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -914,11 +878,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +922,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaBatchGetRecaptchaEnterpriseConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1006,11 +966,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaBatchGetRecaptchaV3ConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1052,11 +1010,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaBatchGetSafetyNetConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1056,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaBatchUpdateServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1146,11 +1100,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaService = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1192,11 +1144,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaListServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1240,11 +1190,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchResponse() {{
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseAppcheckV1betaService = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1252,6 +1200,52 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaService out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaService.class);
                 res.googleFirebaseAppcheckV1betaService = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Verifies the given App Check token and returns token usage signals that callers may act upon. This method currently only supports App Check tokens exchanged from the following attestation providers: * Play Integrity API * App Attest * DeviceCheck (`DCDevice` tokens) * reCAPTCHA Enterprise * reCAPTCHA v3 * Custom providers App Check tokens exchanged from debug secrets are also supported. Calling this method on an otherwise valid App Check token with an unsupported provider will cause an HTTP 400 error to be returned. Returns whether this token was already consumed before this call. If this is the first time this method has seen the given App Check token, the field `already_consumed` will contain the value `false`. The given token will then be marked as `already_consumed` for all future invocations of this method for that token. Note that if the given App Check token is invalid, an HTTP 403 error is returned instead of a response object, regardless whether the token was already consumed. Currently, when evaluating whether an App Check token was already consumed, only calls to this exact method are counted. Use of the App Check token elsewhere will not mark the token as being already consumed.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsVerifyAppCheckTokenResponse firebaseappcheckProjectsVerifyAppCheckToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsVerifyAppCheckTokenRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsVerifyAppCheckTokenSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsVerifyAppCheckTokenRequest.class, baseUrl, "/v1beta/{project}:verifyAppCheckToken", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsVerifyAppCheckTokenRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.FirebaseappcheckProjectsVerifyAppCheckTokenResponse res = new org.openapis.openapi.models.operations.FirebaseappcheckProjectsVerifyAppCheckTokenResponse(contentType, httpRes.statusCode()) {{
+            googleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse.class);
+                res.googleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse = out;
             }
         }
 

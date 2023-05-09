@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ElasticGpuSpecifications - A specification for an Elastic Graphics accelerator.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class ElasticGpuSpecifications {
     
     public String type;
+
     public ElasticGpuSpecifications withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ElasticGpuSpecifications(@JsonProperty("Type") String type) {
+        this.type = type;
+  }
 }

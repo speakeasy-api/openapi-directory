@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowManualPrice")
     public Boolean allowManualPrice;
+
     public ClearorderFormMessages200ApplicationJSON withAllowManualPrice(Boolean allowManualPrice) {
         this.allowManualPrice = allowManualPrice;
         return this;
@@ -29,6 +30,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAccounts")
     public String[] availableAccounts;
+
     public ClearorderFormMessages200ApplicationJSON withAvailableAccounts(String[] availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -40,6 +42,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAddresses")
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses[] availableAddresses;
+
     public ClearorderFormMessages200ApplicationJSON withAvailableAddresses(ClearorderFormMessages200ApplicationJSONAvailableAddresses[] availableAddresses) {
         this.availableAddresses = availableAddresses;
         return this;
@@ -51,6 +54,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canEditData")
     public Boolean canEditData;
+
     public ClearorderFormMessages200ApplicationJSON withCanEditData(Boolean canEditData) {
         this.canEditData = canEditData;
         return this;
@@ -62,6 +66,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPreferencesData")
     public ClearorderFormMessages200ApplicationJSONClientPreferencesData clientPreferencesData;
+
     public ClearorderFormMessages200ApplicationJSON withClientPreferencesData(ClearorderFormMessages200ApplicationJSONClientPreferencesData clientPreferencesData) {
         this.clientPreferencesData = clientPreferencesData;
         return this;
@@ -73,6 +78,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientProfileData")
     public ClearorderFormMessages200ApplicationJSONClientProfileData clientProfileData;
+
     public ClearorderFormMessages200ApplicationJSON withClientProfileData(ClearorderFormMessages200ApplicationJSONClientProfileData clientProfileData) {
         this.clientProfileData = clientProfileData;
         return this;
@@ -84,6 +90,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commercialConditionData")
     public java.util.Map<String, Object> commercialConditionData;
+
     public ClearorderFormMessages200ApplicationJSON withCommercialConditionData(java.util.Map<String, Object> commercialConditionData) {
         this.commercialConditionData = commercialConditionData;
         return this;
@@ -95,6 +102,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customData")
     public java.util.Map<String, Object> customData;
+
     public ClearorderFormMessages200ApplicationJSON withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -106,6 +114,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftRegistryData")
     public java.util.Map<String, Object> giftRegistryData;
+
     public ClearorderFormMessages200ApplicationJSON withGiftRegistryData(java.util.Map<String, Object> giftRegistryData) {
         this.giftRegistryData = giftRegistryData;
         return this;
@@ -117,6 +126,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooksData")
     public java.util.Map<String, Object> hooksData;
+
     public ClearorderFormMessages200ApplicationJSON withHooksData(java.util.Map<String, Object> hooksData) {
         this.hooksData = hooksData;
         return this;
@@ -128,6 +138,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreProfileData")
     public Boolean ignoreProfileData;
+
     public ClearorderFormMessages200ApplicationJSON withIgnoreProfileData(Boolean ignoreProfileData) {
         this.ignoreProfileData = ignoreProfileData;
         return this;
@@ -139,6 +150,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceData")
     public java.util.Map<String, Object> invoiceData;
+
     public ClearorderFormMessages200ApplicationJSON withInvoiceData(java.util.Map<String, Object> invoiceData) {
         this.invoiceData = invoiceData;
         return this;
@@ -150,6 +162,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCheckedIn")
     public Boolean isCheckedIn;
+
     public ClearorderFormMessages200ApplicationJSON withIsCheckedIn(Boolean isCheckedIn) {
         this.isCheckedIn = isCheckedIn;
         return this;
@@ -161,6 +174,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMetadata")
     public ClearorderFormMessages200ApplicationJSONItemMetadata itemMetadata;
+
     public ClearorderFormMessages200ApplicationJSON withItemMetadata(ClearorderFormMessages200ApplicationJSONItemMetadata itemMetadata) {
         this.itemMetadata = itemMetadata;
         return this;
@@ -172,6 +186,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ClearorderFormMessages200ApplicationJSONItems[] items;
+
     public ClearorderFormMessages200ApplicationJSON withItems(ClearorderFormMessages200ApplicationJSONItems[] items) {
         this.items = items;
         return this;
@@ -183,6 +198,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsOrdination")
     public ClearorderFormMessages200ApplicationJSONItemsOrdination itemsOrdination;
+
     public ClearorderFormMessages200ApplicationJSON withItemsOrdination(ClearorderFormMessages200ApplicationJSONItemsOrdination itemsOrdination) {
         this.itemsOrdination = itemsOrdination;
         return this;
@@ -194,6 +210,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggedIn")
     public Boolean loggedIn;
+
     public ClearorderFormMessages200ApplicationJSON withLoggedIn(Boolean loggedIn) {
         this.loggedIn = loggedIn;
         return this;
@@ -205,6 +222,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingData")
     public ClearorderFormMessages200ApplicationJSONMarketingData marketingData;
+
     public ClearorderFormMessages200ApplicationJSON withMarketingData(ClearorderFormMessages200ApplicationJSONMarketingData marketingData) {
         this.marketingData = marketingData;
         return this;
@@ -216,6 +234,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public Object[] messages;
+
     public ClearorderFormMessages200ApplicationJSON withMessages(Object[] messages) {
         this.messages = messages;
         return this;
@@ -227,6 +246,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openTextField")
     public String openTextField;
+
     public ClearorderFormMessages200ApplicationJSON withOpenTextField(String openTextField) {
         this.openTextField = openTextField;
         return this;
@@ -238,6 +258,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderFormId")
     public String orderFormId;
+
     public ClearorderFormMessages200ApplicationJSON withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
@@ -249,6 +270,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentData")
     public ClearorderFormMessages200ApplicationJSONPaymentData paymentData;
+
     public ClearorderFormMessages200ApplicationJSON withPaymentData(ClearorderFormMessages200ApplicationJSONPaymentData paymentData) {
         this.paymentData = paymentData;
         return this;
@@ -260,6 +282,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileProvider")
     public String profileProvider;
+
     public ClearorderFormMessages200ApplicationJSON withProfileProvider(String profileProvider) {
         this.profileProvider = profileProvider;
         return this;
@@ -271,6 +294,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratesAndBenefitsData")
     public ClearorderFormMessages200ApplicationJSONRatesAndBenefitsData ratesAndBenefitsData;
+
     public ClearorderFormMessages200ApplicationJSON withRatesAndBenefitsData(ClearorderFormMessages200ApplicationJSONRatesAndBenefitsData ratesAndBenefitsData) {
         this.ratesAndBenefitsData = ratesAndBenefitsData;
         return this;
@@ -282,6 +306,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public ClearorderFormMessages200ApplicationJSON withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -293,6 +318,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectableGifts")
     public Object[] selectableGifts;
+
     public ClearorderFormMessages200ApplicationJSON withSelectableGifts(Object[] selectableGifts) {
         this.selectableGifts = selectableGifts;
         return this;
@@ -304,6 +330,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellers")
     public ClearorderFormMessages200ApplicationJSONSellers[] sellers;
+
     public ClearorderFormMessages200ApplicationJSON withSellers(ClearorderFormMessages200ApplicationJSONSellers[] sellers) {
         this.sellers = sellers;
         return this;
@@ -315,6 +342,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingData")
     public ClearorderFormMessages200ApplicationJSONShippingData shippingData;
+
     public ClearorderFormMessages200ApplicationJSON withShippingData(ClearorderFormMessages200ApplicationJSONShippingData shippingData) {
         this.shippingData = shippingData;
         return this;
@@ -326,6 +354,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public ClearorderFormMessages200ApplicationJSON withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -337,6 +366,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storePreferencesData")
     public java.util.Map<String, Object> storePreferencesData;
+
     public ClearorderFormMessages200ApplicationJSON withStorePreferencesData(java.util.Map<String, Object> storePreferencesData) {
         this.storePreferencesData = storePreferencesData;
         return this;
@@ -348,6 +378,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionData")
     public java.util.Map<String, Object> subscriptionData;
+
     public ClearorderFormMessages200ApplicationJSON withSubscriptionData(java.util.Map<String, Object> subscriptionData) {
         this.subscriptionData = subscriptionData;
         return this;
@@ -359,6 +390,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalizers")
     public Object[] totalizers;
+
     public ClearorderFormMessages200ApplicationJSON withTotalizers(Object[] totalizers) {
         this.totalizers = totalizers;
         return this;
@@ -370,6 +402,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userProfileId")
     public String userProfileId;
+
     public ClearorderFormMessages200ApplicationJSON withUserProfileId(String userProfileId) {
         this.userProfileId = userProfileId;
         return this;
@@ -381,6 +414,7 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userType")
     public String userType;
+
     public ClearorderFormMessages200ApplicationJSON withUserType(String userType) {
         this.userType = userType;
         return this;
@@ -392,9 +426,11 @@ public class ClearorderFormMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public ClearorderFormMessages200ApplicationJSON withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSON(){}
 }

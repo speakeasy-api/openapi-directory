@@ -18,6 +18,7 @@ public class PlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsEc2Details")
     public AwsEc2PlatformDetails awsEc2Details;
+
     public PlatformDetails withAwsEc2Details(AwsEc2PlatformDetails awsEc2Details) {
         this.awsEc2Details = awsEc2Details;
         return this;
@@ -29,6 +30,7 @@ public class PlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azureVmDetails")
     public AzureVmPlatformDetails azureVmDetails;
+
     public PlatformDetails withAzureVmDetails(AzureVmPlatformDetails azureVmDetails) {
         this.azureVmDetails = azureVmDetails;
         return this;
@@ -40,6 +42,7 @@ public class PlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genericDetails")
     public GenericPlatformDetails genericDetails;
+
     public PlatformDetails withGenericDetails(GenericPlatformDetails genericDetails) {
         this.genericDetails = genericDetails;
         return this;
@@ -51,6 +54,7 @@ public class PlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalDetails")
     public PhysicalPlatformDetails physicalDetails;
+
     public PlatformDetails withPhysicalDetails(PhysicalPlatformDetails physicalDetails) {
         this.physicalDetails = physicalDetails;
         return this;
@@ -62,9 +66,11 @@ public class PlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmwareDetails")
     public VmwarePlatformDetails vmwareDetails;
+
     public PlatformDetails withVmwareDetails(VmwarePlatformDetails vmwareDetails) {
         this.vmwareDetails = vmwareDetails;
         return this;
     }
     
+    public PlatformDetails(){}
 }

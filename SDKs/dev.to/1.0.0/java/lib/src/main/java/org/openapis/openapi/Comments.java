@@ -56,10 +56,8 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommentByIdResponse res = new org.openapis.openapi.models.operations.GetCommentByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCommentByIdResponse res = new org.openapis.openapi.models.operations.GetCommentByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -98,11 +96,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommentsByArticleIdResponse res = new org.openapis.openapi.models.operations.GetCommentsByArticleIdResponse() {{
+        org.openapis.openapi.models.operations.GetCommentsByArticleIdResponse res = new org.openapis.openapi.models.operations.GetCommentsByArticleIdResponse(contentType, httpRes.statusCode()) {{
             comments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

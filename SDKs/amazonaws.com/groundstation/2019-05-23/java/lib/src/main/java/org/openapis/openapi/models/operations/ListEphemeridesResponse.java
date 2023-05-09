@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEphemeridesResponse {
     
     public String contentType;
+
     public ListEphemeridesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEphemeridesResponse {
      */
     
     public Object dependencyException;
+
     public ListEphemeridesResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class ListEphemeridesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListEphemeridesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListEphemeridesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEphemeridesResponse listEphemeridesResponse;
+
     public ListEphemeridesResponse withListEphemeridesResponse(org.openapis.openapi.models.shared.ListEphemeridesResponse listEphemeridesResponse) {
         this.listEphemeridesResponse = listEphemeridesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListEphemeridesResponse {
     
     
     public Integer statusCode;
+
     public ListEphemeridesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListEphemeridesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEphemeridesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListEphemeridesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEphemeridesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListEphemeridesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

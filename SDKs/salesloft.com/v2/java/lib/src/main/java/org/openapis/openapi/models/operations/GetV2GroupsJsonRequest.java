@@ -12,6 +12,7 @@ public class GetV2GroupsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2GroupsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -22,6 +23,7 @@ public class GetV2GroupsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2GroupsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -32,9 +34,11 @@ public class GetV2GroupsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2GroupsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public GetV2GroupsJsonRequest(){}
 }

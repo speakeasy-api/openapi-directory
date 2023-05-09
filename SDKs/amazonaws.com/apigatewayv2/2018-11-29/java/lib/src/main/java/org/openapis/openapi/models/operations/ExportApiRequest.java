@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportApiRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ExportApiRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ExportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ExportApiRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ExportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ExportApiRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ExportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ExportApiRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ExportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ExportApiRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ExportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ExportApiRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ExportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ExportApiRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ExportApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public ExportApiRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -71,6 +80,7 @@ public class ExportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exportVersion")
     public String exportVersion;
+
     public ExportApiRequest withExportVersion(String exportVersion) {
         this.exportVersion = exportVersion;
         return this;
@@ -81,6 +91,7 @@ public class ExportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeExtensions")
     public Boolean includeExtensions;
+
     public ExportApiRequest withIncludeExtensions(Boolean includeExtensions) {
         this.includeExtensions = includeExtensions;
         return this;
@@ -91,6 +102,7 @@ public class ExportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputType")
     public String outputType;
+
     public ExportApiRequest withOutputType(String outputType) {
         this.outputType = outputType;
         return this;
@@ -101,6 +113,7 @@ public class ExportApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=specification")
     public String specification;
+
     public ExportApiRequest withSpecification(String specification) {
         this.specification = specification;
         return this;
@@ -111,9 +124,15 @@ public class ExportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stageName")
     public String stageName;
+
     public ExportApiRequest withStageName(String stageName) {
         this.stageName = stageName;
         return this;
     }
     
+    public ExportApiRequest(@JsonProperty("apiId") String apiId, @JsonProperty("outputType") String outputType, @JsonProperty("specification") String specification) {
+        this.apiId = apiId;
+        this.outputType = outputType;
+        this.specification = specification;
+  }
 }

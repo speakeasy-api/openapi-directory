@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentRevisionHumanReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public GoogleCloudDocumentaiV1DocumentRevisionHumanReview withState(String state) {
         this.state = state;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1DocumentRevisionHumanReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMessage")
     public String stateMessage;
+
     public GoogleCloudDocumentaiV1DocumentRevisionHumanReview withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentRevisionHumanReview(){}
 }

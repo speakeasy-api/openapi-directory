@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateResourceDataSyncRequest {
     @JsonProperty("SyncName")
     public String syncName;
+
     public UpdateResourceDataSyncRequest withSyncName(String syncName) {
         this.syncName = syncName;
         return this;
@@ -16,6 +17,7 @@ public class UpdateResourceDataSyncRequest {
     
     @JsonProperty("SyncSource")
     public ResourceDataSyncSource syncSource;
+
     public UpdateResourceDataSyncRequest withSyncSource(ResourceDataSyncSource syncSource) {
         this.syncSource = syncSource;
         return this;
@@ -23,9 +25,15 @@ public class UpdateResourceDataSyncRequest {
     
     @JsonProperty("SyncType")
     public String syncType;
+
     public UpdateResourceDataSyncRequest withSyncType(String syncType) {
         this.syncType = syncType;
         return this;
     }
     
+    public UpdateResourceDataSyncRequest(@JsonProperty("SyncName") String syncName, @JsonProperty("SyncSource") ResourceDataSyncSource syncSource, @JsonProperty("SyncType") String syncType) {
+        this.syncName = syncName;
+        this.syncSource = syncSource;
+        this.syncType = syncType;
+  }
 }

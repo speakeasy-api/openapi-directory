@@ -49,14 +49,12 @@ public class PicoChargingHistory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PicoChargingHistoryGetResponse res = new org.openapis.openapi.models.operations.PicoChargingHistoryGetResponse() {{
+        org.openapis.openapi.models.operations.PicoChargingHistoryGetResponse res = new org.openapis.openapi.models.operations.PicoChargingHistoryGetResponse(contentType, httpRes.statusCode()) {{
             picoChargingHistoryData = null;
             picoChargingHistoryData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

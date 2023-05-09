@@ -59,11 +59,9 @@ public class RegionCommitments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionCommitmentsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionCommitmentsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             commitmentAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionCommitments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionCommitmentsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionCommitmentsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsGetResponse(contentType, httpRes.statusCode()) {{
             commitment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionCommitments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionCommitmentsInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionCommitmentsInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionCommitments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionCommitmentsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionCommitmentsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsListResponse(contentType, httpRes.statusCode()) {{
             commitmentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class RegionCommitments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionCommitmentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionCommitmentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class RegionCommitments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionCommitmentsUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionCommitmentsUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class RegionCommitments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionCommitmentsUpdateReservationsResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsUpdateReservationsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionCommitmentsUpdateReservationsResponse res = new org.openapis.openapi.models.operations.ComputeRegionCommitmentsUpdateReservationsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

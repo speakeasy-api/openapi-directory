@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLocalGatewayRouteTableRequest {
     
     public Boolean dryRun;
+
     public CreateLocalGatewayRouteTableRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateLocalGatewayRouteTableRequest {
     
     
     public String localGatewayId;
+
     public CreateLocalGatewayRouteTableRequest withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -23,6 +25,7 @@ public class CreateLocalGatewayRouteTableRequest {
     
     
     public LocalGatewayRouteTableModeEnum mode;
+
     public CreateLocalGatewayRouteTableRequest withMode(LocalGatewayRouteTableModeEnum mode) {
         this.mode = mode;
         return this;
@@ -30,9 +33,13 @@ public class CreateLocalGatewayRouteTableRequest {
     
     
     public CreateLocalGatewayRouteTableRequestTagSpecifications[] tagSpecifications;
+
     public CreateLocalGatewayRouteTableRequest withTagSpecifications(CreateLocalGatewayRouteTableRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableRequest(@JsonProperty("LocalGatewayId") String localGatewayId) {
+        this.localGatewayId = localGatewayId;
+  }
 }

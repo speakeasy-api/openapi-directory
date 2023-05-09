@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostFirewallsResponse {
     
     public String contentType;
+
     public PostFirewallsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostFirewallsResponse {
      */
     
     public PostFirewallsCreateFirewallResponse createFirewallResponse;
+
     public PostFirewallsResponse withCreateFirewallResponse(PostFirewallsCreateFirewallResponse createFirewallResponse) {
         this.createFirewallResponse = createFirewallResponse;
         return this;
@@ -26,6 +29,7 @@ public class PostFirewallsResponse {
     
     
     public Integer statusCode;
+
     public PostFirewallsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostFirewallsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostFirewallsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostFirewallsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

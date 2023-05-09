@@ -17,6 +17,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandId")
     public Long bandId;
+
     public BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired withBandId(Long bandId) {
         this.bandId = bandId;
         return this;
@@ -28,6 +29,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumCountRequired")
     public Long maximumCountRequired;
+
     public BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired withMaximumCountRequired(Long maximumCountRequired) {
         this.maximumCountRequired = maximumCountRequired;
         return this;
@@ -39,9 +41,11 @@ public class BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumCountRequired")
     public Long minimumCountRequired;
+
     public BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired withMinimumCountRequired(Long minimumCountRequired) {
         this.minimumCountRequired = minimumCountRequired;
         return this;
     }
     
+    public BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired(){}
 }

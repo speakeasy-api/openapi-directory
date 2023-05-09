@@ -15,6 +15,7 @@ public class NamespaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsProperties")
     public DnsProperties dnsProperties;
+
     public NamespaceProperties withDnsProperties(DnsProperties dnsProperties) {
         this.dnsProperties = dnsProperties;
         return this;
@@ -23,9 +24,11 @@ public class NamespaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpProperties")
     public HttpProperties httpProperties;
+
     public NamespaceProperties withHttpProperties(HttpProperties httpProperties) {
         this.httpProperties = httpProperties;
         return this;
     }
     
+    public NamespaceProperties(){}
 }

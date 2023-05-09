@@ -18,9 +18,11 @@ public class UpgradeRuntimeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public UpgradeRuntimeRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public UpgradeRuntimeRequest(){}
 }

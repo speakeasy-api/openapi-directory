@@ -17,6 +17,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("CreditCharged")
     public Boolean creditCharged;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest withCreditCharged(Boolean creditCharged) {
         this.creditCharged = creditCharged;
         return this;
@@ -25,9 +26,13 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditInterestGroup")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup[] creditInterestGroup;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest withCreditInterestGroup(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup[] creditInterestGroup) {
         this.creditInterestGroup = creditInterestGroup;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest(@JsonProperty("CreditCharged") Boolean creditCharged) {
+        this.creditCharged = creditCharged;
+  }
 }

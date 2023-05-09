@@ -15,6 +15,7 @@ public class ProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetAccounts")
     public String[] stackSetAccounts;
+
     public ProvisioningPreferences withStackSetAccounts(String[] stackSetAccounts) {
         this.stackSetAccounts = stackSetAccounts;
         return this;
@@ -23,6 +24,7 @@ public class ProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetFailureToleranceCount")
     public Long stackSetFailureToleranceCount;
+
     public ProvisioningPreferences withStackSetFailureToleranceCount(Long stackSetFailureToleranceCount) {
         this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
         return this;
@@ -31,6 +33,7 @@ public class ProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetFailureTolerancePercentage")
     public Long stackSetFailureTolerancePercentage;
+
     public ProvisioningPreferences withStackSetFailureTolerancePercentage(Long stackSetFailureTolerancePercentage) {
         this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;
         return this;
@@ -39,6 +42,7 @@ public class ProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetMaxConcurrencyCount")
     public Long stackSetMaxConcurrencyCount;
+
     public ProvisioningPreferences withStackSetMaxConcurrencyCount(Long stackSetMaxConcurrencyCount) {
         this.stackSetMaxConcurrencyCount = stackSetMaxConcurrencyCount;
         return this;
@@ -47,6 +51,7 @@ public class ProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetMaxConcurrencyPercentage")
     public Long stackSetMaxConcurrencyPercentage;
+
     public ProvisioningPreferences withStackSetMaxConcurrencyPercentage(Long stackSetMaxConcurrencyPercentage) {
         this.stackSetMaxConcurrencyPercentage = stackSetMaxConcurrencyPercentage;
         return this;
@@ -55,9 +60,11 @@ public class ProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetRegions")
     public String[] stackSetRegions;
+
     public ProvisioningPreferences withStackSetRegions(String[] stackSetRegions) {
         this.stackSetRegions = stackSetRegions;
         return this;
     }
     
+    public ProvisioningPreferences(){}
 }

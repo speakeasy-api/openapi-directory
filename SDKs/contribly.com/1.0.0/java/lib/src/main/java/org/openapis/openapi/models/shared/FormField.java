@@ -12,6 +12,7 @@ public class FormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FormField withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class FormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public FormField withLabel(String label) {
         this.label = label;
         return this;
@@ -28,6 +30,7 @@ public class FormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FormField withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class FormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public String[] options;
+
     public FormField withOptions(String[] options) {
         this.options = options;
         return this;
@@ -44,6 +48,7 @@ public class FormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public FormField withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -52,6 +57,7 @@ public class FormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public FormField withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -60,9 +66,11 @@ public class FormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FormField withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FormField(){}
 }

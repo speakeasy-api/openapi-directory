@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListReceiptRuleSetsResponse {
     
     public String nextToken;
+
     public ListReceiptRuleSetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListReceiptRuleSetsResponse {
     
     
     public ReceiptRuleSetMetadata[] ruleSets;
+
     public ListReceiptRuleSetsResponse withRuleSets(ReceiptRuleSetMetadata[] ruleSets) {
         this.ruleSets = ruleSets;
         return this;
     }
     
+    public ListReceiptRuleSetsResponse(){}
 }

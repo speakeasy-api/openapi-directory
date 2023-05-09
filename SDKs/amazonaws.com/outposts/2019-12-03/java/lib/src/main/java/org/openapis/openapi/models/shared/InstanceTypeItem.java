@@ -18,9 +18,11 @@ public class InstanceTypeItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public InstanceTypeItem withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
     
+    public InstanceTypeItem(){}
 }

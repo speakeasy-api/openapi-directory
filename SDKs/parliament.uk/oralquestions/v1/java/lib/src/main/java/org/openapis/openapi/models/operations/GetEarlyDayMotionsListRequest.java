@@ -13,6 +13,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.currentStatusDateEnd")
     public OffsetDateTime parametersCurrentStatusDateEnd;
+
     public GetEarlyDayMotionsListRequest withParametersCurrentStatusDateEnd(OffsetDateTime parametersCurrentStatusDateEnd) {
         this.parametersCurrentStatusDateEnd = parametersCurrentStatusDateEnd;
         return this;
@@ -23,6 +24,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.currentStatusDateStart")
     public OffsetDateTime parametersCurrentStatusDateStart;
+
     public GetEarlyDayMotionsListRequest withParametersCurrentStatusDateStart(OffsetDateTime parametersCurrentStatusDateStart) {
         this.parametersCurrentStatusDateStart = parametersCurrentStatusDateStart;
         return this;
@@ -33,6 +35,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.edmIds")
     public Integer[] parametersEdmIds;
+
     public GetEarlyDayMotionsListRequest withParametersEdmIds(Integer[] parametersEdmIds) {
         this.parametersEdmIds = parametersEdmIds;
         return this;
@@ -43,6 +46,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.includeSponsoredByMember")
     public Boolean parametersIncludeSponsoredByMember;
+
     public GetEarlyDayMotionsListRequest withParametersIncludeSponsoredByMember(Boolean parametersIncludeSponsoredByMember) {
         this.parametersIncludeSponsoredByMember = parametersIncludeSponsoredByMember;
         return this;
@@ -53,6 +57,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.isPrayer")
     public Boolean parametersIsPrayer;
+
     public GetEarlyDayMotionsListRequest withParametersIsPrayer(Boolean parametersIsPrayer) {
         this.parametersIsPrayer = parametersIsPrayer;
         return this;
@@ -63,6 +68,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.memberId")
     public Integer parametersMemberId;
+
     public GetEarlyDayMotionsListRequest withParametersMemberId(Integer parametersMemberId) {
         this.parametersMemberId = parametersMemberId;
         return this;
@@ -73,6 +79,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.orderBy")
     public GetEarlyDayMotionsListParametersOrderByEnum parametersOrderBy;
+
     public GetEarlyDayMotionsListRequest withParametersOrderBy(GetEarlyDayMotionsListParametersOrderByEnum parametersOrderBy) {
         this.parametersOrderBy = parametersOrderBy;
         return this;
@@ -83,6 +90,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.searchTerm")
     public String parametersSearchTerm;
+
     public GetEarlyDayMotionsListRequest withParametersSearchTerm(String parametersSearchTerm) {
         this.parametersSearchTerm = parametersSearchTerm;
         return this;
@@ -93,6 +101,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.skip")
     public Integer parametersSkip;
+
     public GetEarlyDayMotionsListRequest withParametersSkip(Integer parametersSkip) {
         this.parametersSkip = parametersSkip;
         return this;
@@ -103,6 +112,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.statuses")
     public GetEarlyDayMotionsListParametersStatusesEnum[] parametersStatuses;
+
     public GetEarlyDayMotionsListRequest withParametersStatuses(GetEarlyDayMotionsListParametersStatusesEnum[] parametersStatuses) {
         this.parametersStatuses = parametersStatuses;
         return this;
@@ -113,6 +123,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.tabledEndDate")
     public OffsetDateTime parametersTabledEndDate;
+
     public GetEarlyDayMotionsListRequest withParametersTabledEndDate(OffsetDateTime parametersTabledEndDate) {
         this.parametersTabledEndDate = parametersTabledEndDate;
         return this;
@@ -123,6 +134,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.tabledStartDate")
     public OffsetDateTime parametersTabledStartDate;
+
     public GetEarlyDayMotionsListRequest withParametersTabledStartDate(OffsetDateTime parametersTabledStartDate) {
         this.parametersTabledStartDate = parametersTabledStartDate;
         return this;
@@ -133,6 +145,7 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.take")
     public Integer parametersTake;
+
     public GetEarlyDayMotionsListRequest withParametersTake(Integer parametersTake) {
         this.parametersTake = parametersTake;
         return this;
@@ -143,9 +156,11 @@ public class GetEarlyDayMotionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.uINWithAmendmentSuffix")
     public String parametersUINWithAmendmentSuffix;
+
     public GetEarlyDayMotionsListRequest withParametersUINWithAmendmentSuffix(String parametersUINWithAmendmentSuffix) {
         this.parametersUINWithAmendmentSuffix = parametersUINWithAmendmentSuffix;
         return this;
     }
     
+    public GetEarlyDayMotionsListRequest(){}
 }

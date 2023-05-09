@@ -19,6 +19,7 @@ public class CreatePlaceIndexResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public CreatePlaceIndexResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class CreatePlaceIndexResponse {
     
     @JsonProperty("IndexArn")
     public String indexArn;
+
     public CreatePlaceIndexResponse withIndexArn(String indexArn) {
         this.indexArn = indexArn;
         return this;
@@ -33,9 +35,15 @@ public class CreatePlaceIndexResponse {
     
     @JsonProperty("IndexName")
     public String indexName;
+
     public CreatePlaceIndexResponse withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
     }
     
+    public CreatePlaceIndexResponse(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("IndexArn") String indexArn, @JsonProperty("IndexName") String indexName) {
+        this.createTime = createTime;
+        this.indexArn = indexArn;
+        this.indexName = indexName;
+  }
 }

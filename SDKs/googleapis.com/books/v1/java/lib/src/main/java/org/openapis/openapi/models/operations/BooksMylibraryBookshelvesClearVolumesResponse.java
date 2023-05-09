@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksMylibraryBookshelvesClearVolumesResponse {
     
     public String contentType;
+
     public BooksMylibraryBookshelvesClearVolumesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BooksMylibraryBookshelvesClearVolumesResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public BooksMylibraryBookshelvesClearVolumesResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class BooksMylibraryBookshelvesClearVolumesResponse {
     
     
     public Integer statusCode;
+
     public BooksMylibraryBookshelvesClearVolumesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BooksMylibraryBookshelvesClearVolumesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksMylibraryBookshelvesClearVolumesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BooksMylibraryBookshelvesClearVolumesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

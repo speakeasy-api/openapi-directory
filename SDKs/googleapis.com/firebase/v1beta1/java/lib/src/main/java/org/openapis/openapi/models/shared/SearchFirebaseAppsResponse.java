@@ -18,6 +18,7 @@ public class SearchFirebaseAppsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apps")
     public FirebaseAppInfo[] apps;
+
     public SearchFirebaseAppsResponse withApps(FirebaseAppInfo[] apps) {
         this.apps = apps;
         return this;
@@ -29,9 +30,11 @@ public class SearchFirebaseAppsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchFirebaseAppsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SearchFirebaseAppsResponse(){}
 }

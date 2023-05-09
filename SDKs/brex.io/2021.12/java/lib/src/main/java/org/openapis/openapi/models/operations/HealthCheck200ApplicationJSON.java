@@ -12,6 +12,7 @@ public class HealthCheck200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HealthCheck200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class HealthCheck200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public HealthCheck200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public HealthCheck200ApplicationJSON(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostOauthRevokeRequestBody {
     /**
@@ -12,6 +12,7 @@ public class PostOauthRevokeRequestBody {
      */
     
     public String clientId;
+
     public PostOauthRevokeRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +23,7 @@ public class PostOauthRevokeRequestBody {
      */
     
     public String clientSecret;
+
     public PostOauthRevokeRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -32,9 +34,15 @@ public class PostOauthRevokeRequestBody {
      */
     
     public String token;
+
     public PostOauthRevokeRequestBody withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PostOauthRevokeRequestBody(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret, @JsonProperty("token") String token) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.token = token;
+  }
 }

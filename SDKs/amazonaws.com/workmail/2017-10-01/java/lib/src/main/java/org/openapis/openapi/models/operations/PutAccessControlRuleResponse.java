@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccessControlRuleResponse {
     
     public String contentType;
+
     public PutAccessControlRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutAccessControlRuleResponse {
      */
     
     public Object entityNotFoundException;
+
     public PutAccessControlRuleResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutAccessControlRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public PutAccessControlRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class PutAccessControlRuleResponse {
      */
     
     public Object limitExceededException;
+
     public PutAccessControlRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutAccessControlRuleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public PutAccessControlRuleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutAccessControlRuleResponse {
      */
     
     public Object organizationStateException;
+
     public PutAccessControlRuleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -69,6 +76,7 @@ public class PutAccessControlRuleResponse {
      */
     
     public java.util.Map<String, Object> putAccessControlRuleResponse;
+
     public PutAccessControlRuleResponse withPutAccessControlRuleResponse(java.util.Map<String, Object> putAccessControlRuleResponse) {
         this.putAccessControlRuleResponse = putAccessControlRuleResponse;
         return this;
@@ -79,6 +87,7 @@ public class PutAccessControlRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutAccessControlRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class PutAccessControlRuleResponse {
     
     
     public Integer statusCode;
+
     public PutAccessControlRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class PutAccessControlRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccessControlRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutAccessControlRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

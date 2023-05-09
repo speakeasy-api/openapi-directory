@@ -21,6 +21,7 @@ public class Image {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Image withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Image withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Image withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -45,6 +48,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public Image withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -52,6 +56,7 @@ public class Image {
     
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public Image withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -59,6 +64,7 @@ public class Image {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public Image withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -66,6 +72,7 @@ public class Image {
     
     @JsonProperty("ImageStatus")
     public ImageStatusEnum imageStatus;
+
     public Image withImageStatus(ImageStatusEnum imageStatus) {
         this.imageStatus = imageStatus;
         return this;
@@ -75,9 +82,17 @@ public class Image {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Image withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public Image(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ImageArn") String imageArn, @JsonProperty("ImageName") String imageName, @JsonProperty("ImageStatus") ImageStatusEnum imageStatus, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.creationTime = creationTime;
+        this.imageArn = imageArn;
+        this.imageName = imageName;
+        this.imageStatus = imageStatus;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

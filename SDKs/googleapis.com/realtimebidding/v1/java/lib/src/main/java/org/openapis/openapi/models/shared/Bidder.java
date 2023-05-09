@@ -18,6 +18,7 @@ public class Bidder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bypassNonguaranteedDealsPretargeting")
     public Boolean bypassNonguaranteedDealsPretargeting;
+
     public Bidder withBypassNonguaranteedDealsPretargeting(Boolean bypassNonguaranteedDealsPretargeting) {
         this.bypassNonguaranteedDealsPretargeting = bypassNonguaranteedDealsPretargeting;
         return this;
@@ -29,6 +30,7 @@ public class Bidder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieMatchingNetworkId")
     public String cookieMatchingNetworkId;
+
     public Bidder withCookieMatchingNetworkId(String cookieMatchingNetworkId) {
         this.cookieMatchingNetworkId = cookieMatchingNetworkId;
         return this;
@@ -40,6 +42,7 @@ public class Bidder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieMatchingUrl")
     public String cookieMatchingUrl;
+
     public Bidder withCookieMatchingUrl(String cookieMatchingUrl) {
         this.cookieMatchingUrl = cookieMatchingUrl;
         return this;
@@ -51,6 +54,7 @@ public class Bidder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealsBillingId")
     public String dealsBillingId;
+
     public Bidder withDealsBillingId(String dealsBillingId) {
         this.dealsBillingId = dealsBillingId;
         return this;
@@ -62,9 +66,11 @@ public class Bidder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Bidder withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Bidder(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubDomain {
     @JsonProperty("dnsRecord")
     public String dnsRecord;
+
     public SubDomain withDnsRecord(String dnsRecord) {
         this.dnsRecord = dnsRecord;
         return this;
@@ -19,6 +20,7 @@ public class SubDomain {
     
     @JsonProperty("subDomainSetting")
     public SubDomainSetting subDomainSetting;
+
     public SubDomain withSubDomainSetting(SubDomainSetting subDomainSetting) {
         this.subDomainSetting = subDomainSetting;
         return this;
@@ -26,9 +28,15 @@ public class SubDomain {
     
     @JsonProperty("verified")
     public Boolean verified;
+
     public SubDomain withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public SubDomain(@JsonProperty("dnsRecord") String dnsRecord, @JsonProperty("subDomainSetting") SubDomainSetting subDomainSetting, @JsonProperty("verified") Boolean verified) {
+        this.dnsRecord = dnsRecord;
+        this.subDomainSetting = subDomainSetting;
+        this.verified = verified;
+  }
 }

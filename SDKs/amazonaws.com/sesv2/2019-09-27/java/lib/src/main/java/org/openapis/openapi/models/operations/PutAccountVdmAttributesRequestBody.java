@@ -12,9 +12,13 @@ public class PutAccountVdmAttributesRequestBody {
      */
     @JsonProperty("VdmAttributes")
     public PutAccountVdmAttributesRequestBodyVdmAttributes vdmAttributes;
+
     public PutAccountVdmAttributesRequestBody withVdmAttributes(PutAccountVdmAttributesRequestBodyVdmAttributes vdmAttributes) {
         this.vdmAttributes = vdmAttributes;
         return this;
     }
     
+    public PutAccountVdmAttributesRequestBody(@JsonProperty("VdmAttributes") PutAccountVdmAttributesRequestBodyVdmAttributes vdmAttributes) {
+        this.vdmAttributes = vdmAttributes;
+  }
 }

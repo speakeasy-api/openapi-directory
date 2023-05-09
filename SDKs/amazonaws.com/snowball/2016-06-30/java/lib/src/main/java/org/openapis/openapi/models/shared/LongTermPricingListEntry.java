@@ -20,6 +20,7 @@ public class LongTermPricingListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentActiveJob")
     public String currentActiveJob;
+
     public LongTermPricingListEntry withCurrentActiveJob(String currentActiveJob) {
         this.currentActiveJob = currentActiveJob;
         return this;
@@ -28,6 +29,7 @@ public class LongTermPricingListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsLongTermPricingAutoRenew")
     public Boolean isLongTermPricingAutoRenew;
+
     public LongTermPricingListEntry withIsLongTermPricingAutoRenew(Boolean isLongTermPricingAutoRenew) {
         this.isLongTermPricingAutoRenew = isLongTermPricingAutoRenew;
         return this;
@@ -36,6 +38,7 @@ public class LongTermPricingListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobIds")
     public String[] jobIds;
+
     public LongTermPricingListEntry withJobIds(String[] jobIds) {
         this.jobIds = jobIds;
         return this;
@@ -46,6 +49,7 @@ public class LongTermPricingListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LongTermPricingEndDate")
     public OffsetDateTime longTermPricingEndDate;
+
     public LongTermPricingListEntry withLongTermPricingEndDate(OffsetDateTime longTermPricingEndDate) {
         this.longTermPricingEndDate = longTermPricingEndDate;
         return this;
@@ -54,6 +58,7 @@ public class LongTermPricingListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongTermPricingId")
     public String longTermPricingId;
+
     public LongTermPricingListEntry withLongTermPricingId(String longTermPricingId) {
         this.longTermPricingId = longTermPricingId;
         return this;
@@ -64,6 +69,7 @@ public class LongTermPricingListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LongTermPricingStartDate")
     public OffsetDateTime longTermPricingStartDate;
+
     public LongTermPricingListEntry withLongTermPricingStartDate(OffsetDateTime longTermPricingStartDate) {
         this.longTermPricingStartDate = longTermPricingStartDate;
         return this;
@@ -72,6 +78,7 @@ public class LongTermPricingListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongTermPricingStatus")
     public String longTermPricingStatus;
+
     public LongTermPricingListEntry withLongTermPricingStatus(String longTermPricingStatus) {
         this.longTermPricingStatus = longTermPricingStatus;
         return this;
@@ -80,6 +87,7 @@ public class LongTermPricingListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongTermPricingType")
     public LongTermPricingTypeEnum longTermPricingType;
+
     public LongTermPricingListEntry withLongTermPricingType(LongTermPricingTypeEnum longTermPricingType) {
         this.longTermPricingType = longTermPricingType;
         return this;
@@ -88,6 +96,7 @@ public class LongTermPricingListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplacementJob")
     public String replacementJob;
+
     public LongTermPricingListEntry withReplacementJob(String replacementJob) {
         this.replacementJob = replacementJob;
         return this;
@@ -96,9 +105,11 @@ public class LongTermPricingListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballType")
     public SnowballTypeEnum snowballType;
+
     public LongTermPricingListEntry withSnowballType(SnowballTypeEnum snowballType) {
         this.snowballType = snowballType;
         return this;
     }
     
+    public LongTermPricingListEntry(){}
 }

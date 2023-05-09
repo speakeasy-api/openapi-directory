@@ -18,6 +18,7 @@ public class VenueBoxOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedPaymentDetails")
     public java.util.Map<String, String> acceptedPaymentDetails;
+
     public VenueBoxOfficeInfo withAcceptedPaymentDetails(java.util.Map<String, String> acceptedPaymentDetails) {
         this.acceptedPaymentDetails = acceptedPaymentDetails;
         return this;
@@ -29,6 +30,7 @@ public class VenueBoxOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openHoursDetails")
     public java.util.Map<String, String> openHoursDetails;
+
     public VenueBoxOfficeInfo withOpenHoursDetails(java.util.Map<String, String> openHoursDetails) {
         this.openHoursDetails = openHoursDetails;
         return this;
@@ -40,6 +42,7 @@ public class VenueBoxOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumberDetails")
     public java.util.Map<String, String> phoneNumberDetails;
+
     public VenueBoxOfficeInfo withPhoneNumberDetails(java.util.Map<String, String> phoneNumberDetails) {
         this.phoneNumberDetails = phoneNumberDetails;
         return this;
@@ -51,9 +54,11 @@ public class VenueBoxOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("willCallDetails")
     public java.util.Map<String, String> willCallDetails;
+
     public VenueBoxOfficeInfo withWillCallDetails(java.util.Map<String, String> willCallDetails) {
         this.willCallDetails = willCallDetails;
         return this;
     }
     
+    public VenueBoxOfficeInfo(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDeliveryStreamInputS3DestinationConfiguration {
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public CreateDeliveryStreamInputS3DestinationConfiguration withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
@@ -22,6 +23,7 @@ public class CreateDeliveryStreamInputS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public BufferingHints bufferingHints;
+
     public CreateDeliveryStreamInputS3DestinationConfiguration withBufferingHints(BufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -30,6 +32,7 @@ public class CreateDeliveryStreamInputS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public CreateDeliveryStreamInputS3DestinationConfiguration withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -38,6 +41,7 @@ public class CreateDeliveryStreamInputS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionFormat")
     public CompressionFormatEnum compressionFormat;
+
     public CreateDeliveryStreamInputS3DestinationConfiguration withCompressionFormat(CompressionFormatEnum compressionFormat) {
         this.compressionFormat = compressionFormat;
         return this;
@@ -46,6 +50,7 @@ public class CreateDeliveryStreamInputS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public CreateDeliveryStreamInputS3DestinationConfiguration withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -54,6 +59,7 @@ public class CreateDeliveryStreamInputS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorOutputPrefix")
     public String errorOutputPrefix;
+
     public CreateDeliveryStreamInputS3DestinationConfiguration withErrorOutputPrefix(String errorOutputPrefix) {
         this.errorOutputPrefix = errorOutputPrefix;
         return this;
@@ -62,6 +68,7 @@ public class CreateDeliveryStreamInputS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public CreateDeliveryStreamInputS3DestinationConfiguration withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -69,9 +76,14 @@ public class CreateDeliveryStreamInputS3DestinationConfiguration {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public CreateDeliveryStreamInputS3DestinationConfiguration withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public CreateDeliveryStreamInputS3DestinationConfiguration(@JsonProperty("BucketARN") String bucketARN, @JsonProperty("RoleARN") String roleARN) {
+        this.bucketARN = bucketARN;
+        this.roleARN = roleARN;
+  }
 }

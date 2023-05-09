@@ -15,6 +15,7 @@ public class DescribeBackupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Backups")
     public Backup[] backups;
+
     public DescribeBackupsResponse withBackups(Backup[] backups) {
         this.backups = backups;
         return this;
@@ -23,9 +24,11 @@ public class DescribeBackupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBackupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBackupsResponse(){}
 }

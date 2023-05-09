@@ -22,6 +22,7 @@ public class SolutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public SolutionSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -32,6 +33,7 @@ public class SolutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public SolutionSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -40,6 +42,7 @@ public class SolutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SolutionSummary withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class SolutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public SolutionSummary withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
@@ -56,6 +60,7 @@ public class SolutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionArn")
     public String solutionArn;
+
     public SolutionSummary withSolutionArn(String solutionArn) {
         this.solutionArn = solutionArn;
         return this;
@@ -64,9 +69,11 @@ public class SolutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SolutionSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SolutionSummary(){}
 }

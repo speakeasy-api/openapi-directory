@@ -15,6 +15,7 @@ public class HidBenefitLinkedRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefitId")
     public String benefitId;
+
     public HidBenefitLinkedRequestPayload withBenefitId(String benefitId) {
         this.benefitId = benefitId;
         return this;
@@ -23,6 +24,7 @@ public class HidBenefitLinkedRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefitName")
     public String benefitName;
+
     public HidBenefitLinkedRequestPayload withBenefitName(String benefitName) {
         this.benefitName = benefitName;
         return this;
@@ -31,6 +33,7 @@ public class HidBenefitLinkedRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateCode")
     public String stateCode;
+
     public HidBenefitLinkedRequestPayload withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
@@ -39,6 +42,7 @@ public class HidBenefitLinkedRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uidToken")
     public String uidToken;
+
     public HidBenefitLinkedRequestPayload withUidToken(String uidToken) {
         this.uidToken = uidToken;
         return this;
@@ -47,9 +51,11 @@ public class HidBenefitLinkedRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validity")
     public String validity;
+
     public HidBenefitLinkedRequestPayload withValidity(String validity) {
         this.validity = validity;
         return this;
     }
     
+    public HidBenefitLinkedRequestPayload(){}
 }

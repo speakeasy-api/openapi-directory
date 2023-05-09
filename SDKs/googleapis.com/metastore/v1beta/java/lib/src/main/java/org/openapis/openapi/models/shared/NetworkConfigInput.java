@@ -18,6 +18,7 @@ public class NetworkConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumers")
     public ConsumerInput[] consumers;
+
     public NetworkConfigInput withConsumers(ConsumerInput[] consumers) {
         this.consumers = consumers;
         return this;
@@ -29,9 +30,11 @@ public class NetworkConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customRoutesEnabled")
     public Boolean customRoutesEnabled;
+
     public NetworkConfigInput withCustomRoutesEnabled(Boolean customRoutesEnabled) {
         this.customRoutesEnabled = customRoutesEnabled;
         return this;
     }
     
+    public NetworkConfigInput(){}
 }

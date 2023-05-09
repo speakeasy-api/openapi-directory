@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserHostedPropertyValueRequest {
@@ -12,6 +13,7 @@ public class UpdateUserHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdateUserHostedPropertyValueRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateUserHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
     public String appKey;
+
     public UpdateUserHostedPropertyValueRequest withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -32,6 +35,7 @@ public class UpdateUserHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
     public String propertyName;
+
     public UpdateUserHostedPropertyValueRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -42,9 +46,16 @@ public class UpdateUserHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
     public String selectedUser;
+
     public UpdateUserHostedPropertyValueRequest withSelectedUser(String selectedUser) {
         this.selectedUser = selectedUser;
         return this;
     }
     
+    public UpdateUserHostedPropertyValueRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("app_key") String appKey, @JsonProperty("property_name") String propertyName, @JsonProperty("selected_user") String selectedUser) {
+        this.requestBody = requestBody;
+        this.appKey = appKey;
+        this.propertyName = propertyName;
+        this.selectedUser = selectedUser;
+  }
 }

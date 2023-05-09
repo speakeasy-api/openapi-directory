@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GETModifyCapacityReservationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Accept")
     public Boolean accept;
+
     public GETModifyCapacityReservationRequest withAccept(Boolean accept) {
         this.accept = accept;
         return this;
@@ -20,6 +22,7 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyCapacityReservationActionEnum action;
+
     public GETModifyCapacityReservationRequest withAction(GETModifyCapacityReservationActionEnum action) {
         this.action = action;
         return this;
@@ -30,6 +33,7 @@ public class GETModifyCapacityReservationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AdditionalInfo")
     public String additionalInfo;
+
     public GETModifyCapacityReservationRequest withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -40,6 +44,7 @@ public class GETModifyCapacityReservationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CapacityReservationId")
     public String capacityReservationId;
+
     public GETModifyCapacityReservationRequest withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -50,6 +55,7 @@ public class GETModifyCapacityReservationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyCapacityReservationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -60,6 +66,7 @@ public class GETModifyCapacityReservationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
     public OffsetDateTime endDate;
+
     public GETModifyCapacityReservationRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -70,6 +77,7 @@ public class GETModifyCapacityReservationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDateType")
     public GETModifyCapacityReservationEndDateTypeEnum endDateType;
+
     public GETModifyCapacityReservationRequest withEndDateType(GETModifyCapacityReservationEndDateTypeEnum endDateType) {
         this.endDateType = endDateType;
         return this;
@@ -80,6 +88,7 @@ public class GETModifyCapacityReservationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceCount")
     public Long instanceCount;
+
     public GETModifyCapacityReservationRequest withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -87,6 +96,7 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyCapacityReservationVersionEnum version;
+
     public GETModifyCapacityReservationRequest withVersion(GETModifyCapacityReservationVersionEnum version) {
         this.version = version;
         return this;
@@ -94,6 +104,7 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyCapacityReservationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -101,6 +112,7 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyCapacityReservationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -108,6 +120,7 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyCapacityReservationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -115,6 +128,7 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyCapacityReservationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -122,6 +136,7 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyCapacityReservationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -129,6 +144,7 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyCapacityReservationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -136,9 +152,15 @@ public class GETModifyCapacityReservationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyCapacityReservationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyCapacityReservationRequest(@JsonProperty("Action") GETModifyCapacityReservationActionEnum action, @JsonProperty("CapacityReservationId") String capacityReservationId, @JsonProperty("Version") GETModifyCapacityReservationVersionEnum version) {
+        this.action = action;
+        this.capacityReservationId = capacityReservationId;
+        this.version = version;
+  }
 }

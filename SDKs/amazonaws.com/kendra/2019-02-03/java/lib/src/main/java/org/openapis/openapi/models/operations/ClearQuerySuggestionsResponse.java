@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClearQuerySuggestionsResponse {
@@ -12,6 +13,7 @@ public class ClearQuerySuggestionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ClearQuerySuggestionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ClearQuerySuggestionsResponse {
      */
     
     public Object conflictException;
+
     public ClearQuerySuggestionsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ClearQuerySuggestionsResponse {
     
     
     public String contentType;
+
     public ClearQuerySuggestionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ClearQuerySuggestionsResponse {
      */
     
     public Object internalServerException;
+
     public ClearQuerySuggestionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class ClearQuerySuggestionsResponse {
     
     
     public Integer statusCode;
+
     public ClearQuerySuggestionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ClearQuerySuggestionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClearQuerySuggestionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ClearQuerySuggestionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ClearQuerySuggestionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ClearQuerySuggestionsResponse {
      */
     
     public Object throttlingException;
+
     public ClearQuerySuggestionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ClearQuerySuggestionsResponse {
      */
     
     public Object validationException;
+
     public ClearQuerySuggestionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ClearQuerySuggestionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

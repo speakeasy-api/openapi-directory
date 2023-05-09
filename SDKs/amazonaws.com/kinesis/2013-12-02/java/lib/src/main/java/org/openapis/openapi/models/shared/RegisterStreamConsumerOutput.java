@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterStreamConsumerOutput {
     @JsonProperty("Consumer")
     public Consumer consumer;
+
     public RegisterStreamConsumerOutput withConsumer(Consumer consumer) {
         this.consumer = consumer;
         return this;
     }
     
+    public RegisterStreamConsumerOutput(@JsonProperty("Consumer") Consumer consumer) {
+        this.consumer = consumer;
+  }
 }

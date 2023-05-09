@@ -62,11 +62,9 @@ public class ResourceRecordSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateResponse() {{
+        org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateResponse(contentType, httpRes.statusCode()) {{
             resourceRecordSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class ResourceRecordSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteResponse(contentType, httpRes.statusCode()) {{
             resourceRecordSetsDeleteResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class ResourceRecordSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResourceRecordSetsGetResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsGetResponse() {{
+        org.openapis.openapi.models.operations.DnsResourceRecordSetsGetResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsGetResponse(contentType, httpRes.statusCode()) {{
             resourceRecordSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class ResourceRecordSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResourceRecordSetsListResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsListResponse() {{
+        org.openapis.openapi.models.operations.DnsResourceRecordSetsListResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsListResponse(contentType, httpRes.statusCode()) {{
             resourceRecordSetsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class ResourceRecordSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchResponse() {{
+        org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchResponse res = new org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchResponse(contentType, httpRes.statusCode()) {{
             resourceRecordSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -62,11 +62,9 @@ public class Assistant {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessibilityResponse res = new org.openapis.openapi.models.operations.AccessibilityResponse() {{
+        org.openapis.openapi.models.operations.AccessibilityResponse res = new org.openapis.openapi.models.operations.AccessibilityResponse(contentType, httpRes.statusCode()) {{
             getcurrentvalues = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class Assistant {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlarmVolumeResponse res = new org.openapis.openapi.models.operations.AlarmVolumeResponse() {{
+        org.openapis.openapi.models.operations.AlarmVolumeResponse res = new org.openapis.openapi.models.operations.AlarmVolumeResponse(contentType, httpRes.statusCode()) {{
             getvolume = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Assistant {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAlarmsandTimersResponse res = new org.openapis.openapi.models.operations.DeleteAlarmsandTimersResponse() {{
+        org.openapis.openapi.models.operations.DeleteAlarmsandTimersResponse res = new org.openapis.openapi.models.operations.DeleteAlarmsandTimersResponse(contentType, httpRes.statusCode()) {{
             example19 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Assistant {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoNotDisturbResponse res = new org.openapis.openapi.models.operations.DoNotDisturbResponse() {{
+        org.openapis.openapi.models.operations.DoNotDisturbResponse res = new org.openapis.openapi.models.operations.DoNotDisturbResponse(contentType, httpRes.statusCode()) {{
             getcurrentstate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +245,9 @@ public class Assistant {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAlarmsandTimersResponse res = new org.openapis.openapi.models.operations.GetAlarmsandTimersResponse() {{
+        org.openapis.openapi.models.operations.GetAlarmsandTimersResponse res = new org.openapis.openapi.models.operations.GetAlarmsandTimersResponse(contentType, httpRes.statusCode()) {{
             example18 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -305,11 +295,9 @@ public class Assistant {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetEqualizerValuesResponse res = new org.openapis.openapi.models.operations.SetEqualizerValuesResponse() {{
+        org.openapis.openapi.models.operations.SetEqualizerValuesResponse res = new org.openapis.openapi.models.operations.SetEqualizerValuesResponse(contentType, httpRes.statusCode()) {{
             setEqualizerValues200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

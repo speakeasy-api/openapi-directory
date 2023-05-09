@@ -15,6 +15,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ResolverQueryLogConfig withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationCount")
     public Long associationCount;
+
     public ResolverQueryLogConfig withAssociationCount(Long associationCount) {
         this.associationCount = associationCount;
         return this;
@@ -31,6 +33,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public ResolverQueryLogConfig withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -39,6 +42,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public ResolverQueryLogConfig withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -47,6 +51,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public ResolverQueryLogConfig withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -55,6 +60,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResolverQueryLogConfig withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResolverQueryLogConfig withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public ResolverQueryLogConfig withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -79,6 +87,7 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareStatus")
     public ShareStatusEnum shareStatus;
+
     public ResolverQueryLogConfig withShareStatus(ShareStatusEnum shareStatus) {
         this.shareStatus = shareStatus;
         return this;
@@ -87,9 +96,11 @@ public class ResolverQueryLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ResolverQueryLogConfigStatusEnum status;
+
     public ResolverQueryLogConfig withStatus(ResolverQueryLogConfigStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ResolverQueryLogConfig(){}
 }

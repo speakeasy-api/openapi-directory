@@ -12,6 +12,7 @@ public class UpdateCallRequestTransferAnswerUrlDestination {
      */
     @JsonProperty("type")
     public String type;
+
     public UpdateCallRequestTransferAnswerUrlDestination withType(String type) {
         this.type = type;
         return this;
@@ -22,9 +23,14 @@ public class UpdateCallRequestTransferAnswerUrlDestination {
      */
     @JsonProperty("url")
     public String[] url;
+
     public UpdateCallRequestTransferAnswerUrlDestination withUrl(String[] url) {
         this.url = url;
         return this;
     }
     
+    public UpdateCallRequestTransferAnswerUrlDestination(@JsonProperty("type") String type, @JsonProperty("url") String[] url) {
+        this.type = type;
+        this.url = url;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUntagSAMLProviderRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUntagSAMLProviderActionEnum action;
+
     public GETUntagSAMLProviderRequest withAction(GETUntagSAMLProviderActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUntagSAMLProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SAMLProviderArn")
     public String samlProviderArn;
+
     public GETUntagSAMLProviderRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
@@ -29,6 +32,7 @@ public class GETUntagSAMLProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
     public String[] tagKeys;
+
     public GETUntagSAMLProviderRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -36,6 +40,7 @@ public class GETUntagSAMLProviderRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUntagSAMLProviderVersionEnum version;
+
     public GETUntagSAMLProviderRequest withVersion(GETUntagSAMLProviderVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUntagSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUntagSAMLProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUntagSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUntagSAMLProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUntagSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUntagSAMLProviderRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUntagSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUntagSAMLProviderRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUntagSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUntagSAMLProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUntagSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUntagSAMLProviderRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUntagSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUntagSAMLProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUntagSAMLProviderRequest(@JsonProperty("Action") GETUntagSAMLProviderActionEnum action, @JsonProperty("SAMLProviderArn") String samlProviderArn, @JsonProperty("TagKeys") String[] tagKeys, @JsonProperty("Version") GETUntagSAMLProviderVersionEnum version) {
+        this.action = action;
+        this.samlProviderArn = samlProviderArn;
+        this.tagKeys = tagKeys;
+        this.version = version;
+  }
 }

@@ -12,6 +12,7 @@ public class ImageUrlCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public Region[] regions;
+
     public ImageUrlCreateEntry withRegions(Region[] regions) {
         this.regions = regions;
         return this;
@@ -20,6 +21,7 @@ public class ImageUrlCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagIds")
     public String[] tagIds;
+
     public ImageUrlCreateEntry withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
@@ -28,9 +30,11 @@ public class ImageUrlCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ImageUrlCreateEntry withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImageUrlCreateEntry(){}
 }

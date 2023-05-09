@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListS3ResourcesResponse {
@@ -12,6 +13,7 @@ public class ListS3ResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListS3ResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListS3ResourcesResponse {
     
     
     public String contentType;
+
     public ListS3ResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListS3ResourcesResponse {
      */
     
     public Object internalException;
+
     public ListS3ResourcesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ListS3ResourcesResponse {
      */
     
     public Object invalidInputException;
+
     public ListS3ResourcesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListS3ResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListS3ResourcesResult listS3ResourcesResult;
+
     public ListS3ResourcesResponse withListS3ResourcesResult(org.openapis.openapi.models.shared.ListS3ResourcesResult listS3ResourcesResult) {
         this.listS3ResourcesResult = listS3ResourcesResult;
         return this;
@@ -56,6 +62,7 @@ public class ListS3ResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListS3ResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListS3ResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListS3ResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListS3ResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

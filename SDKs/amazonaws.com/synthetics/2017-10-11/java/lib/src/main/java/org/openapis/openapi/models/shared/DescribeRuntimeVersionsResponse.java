@@ -15,6 +15,7 @@ public class DescribeRuntimeVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeRuntimeVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRuntimeVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeVersions")
     public RuntimeVersion[] runtimeVersions;
+
     public DescribeRuntimeVersionsResponse withRuntimeVersions(RuntimeVersion[] runtimeVersions) {
         this.runtimeVersions = runtimeVersions;
         return this;
     }
     
+    public DescribeRuntimeVersionsResponse(){}
 }

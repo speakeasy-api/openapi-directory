@@ -18,6 +18,7 @@ public class EventTriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public EventTriggerInput withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -29,6 +30,7 @@ public class EventTriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventFilters")
     public EventFilter[] eventFilters;
+
     public EventTriggerInput withEventFilters(EventFilter[] eventFilters) {
         this.eventFilters = eventFilters;
         return this;
@@ -40,6 +42,7 @@ public class EventTriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public EventTriggerInput withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -51,6 +54,7 @@ public class EventTriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public EventTriggerInput withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
@@ -62,6 +66,7 @@ public class EventTriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPolicy")
     public EventTriggerRetryPolicyEnum retryPolicy;
+
     public EventTriggerInput withRetryPolicy(EventTriggerRetryPolicyEnum retryPolicy) {
         this.retryPolicy = retryPolicy;
         return this;
@@ -73,6 +78,7 @@ public class EventTriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public EventTriggerInput withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
@@ -84,9 +90,11 @@ public class EventTriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerRegion")
     public String triggerRegion;
+
     public EventTriggerInput withTriggerRegion(String triggerRegion) {
         this.triggerRegion = triggerRegion;
         return this;
     }
     
+    public EventTriggerInput(){}
 }

@@ -20,6 +20,7 @@ public class DeleteSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public DeleteSecretResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DeleteSecretResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletionDate")
     public OffsetDateTime deletionDate;
+
     public DeleteSecretResponse withDeletionDate(OffsetDateTime deletionDate) {
         this.deletionDate = deletionDate;
         return this;
@@ -38,9 +40,11 @@ public class DeleteSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DeleteSecretResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteSecretResponse(){}
 }

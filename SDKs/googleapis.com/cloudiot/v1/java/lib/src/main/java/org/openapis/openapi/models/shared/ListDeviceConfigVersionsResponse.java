@@ -18,9 +18,11 @@ public class ListDeviceConfigVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceConfigs")
     public DeviceConfig[] deviceConfigs;
+
     public ListDeviceConfigVersionsResponse withDeviceConfigs(DeviceConfig[] deviceConfigs) {
         this.deviceConfigs = deviceConfigs;
         return this;
     }
     
+    public ListDeviceConfigVersionsResponse(){}
 }

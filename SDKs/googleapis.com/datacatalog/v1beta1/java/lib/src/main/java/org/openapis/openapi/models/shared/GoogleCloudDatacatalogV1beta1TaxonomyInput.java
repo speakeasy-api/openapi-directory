@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1TaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activatedPolicyTypes")
     public GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum[] activatedPolicyTypes;
+
     public GoogleCloudDatacatalogV1beta1TaxonomyInput withActivatedPolicyTypes(GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum[] activatedPolicyTypes) {
         this.activatedPolicyTypes = activatedPolicyTypes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1TaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1beta1TaxonomyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1TaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1beta1TaxonomyInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1beta1TaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public GoogleCloudDatacatalogV1beta1TaxonomyService service;
+
     public GoogleCloudDatacatalogV1beta1TaxonomyInput withService(GoogleCloudDatacatalogV1beta1TaxonomyService service) {
         this.service = service;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatacatalogV1beta1TaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomyTimestamps")
     public GoogleCloudDatacatalogV1beta1SystemTimestampsInput taxonomyTimestamps;
+
     public GoogleCloudDatacatalogV1beta1TaxonomyInput withTaxonomyTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsInput taxonomyTimestamps) {
         this.taxonomyTimestamps = taxonomyTimestamps;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1TaxonomyInput(){}
 }

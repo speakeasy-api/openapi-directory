@@ -12,6 +12,7 @@ public class AccountGetIpBlacklistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public AccountGetIpBlacklistRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class AccountGetIpBlacklistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public AccountGetIpBlacklistRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public AccountGetIpBlacklistRequest(){}
 }

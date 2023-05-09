@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePermissionGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdatePermissionGroupRequest updatePermissionGroupRequest;
+
     public UpdatePermissionGroupRequest withUpdatePermissionGroupRequest(org.openapis.openapi.models.shared.UpdatePermissionGroupRequest updatePermissionGroupRequest) {
         this.updatePermissionGroupRequest = updatePermissionGroupRequest;
         return this;
@@ -19,9 +21,14 @@ public class UpdatePermissionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionGroupId")
     public Long permissionGroupId;
+
     public UpdatePermissionGroupRequest withPermissionGroupId(Long permissionGroupId) {
         this.permissionGroupId = permissionGroupId;
         return this;
     }
     
+    public UpdatePermissionGroupRequest(@JsonProperty("UpdatePermissionGroupRequest") org.openapis.openapi.models.shared.UpdatePermissionGroupRequest updatePermissionGroupRequest, @JsonProperty("permissionGroupId") Long permissionGroupId) {
+        this.updatePermissionGroupRequest = updatePermissionGroupRequest;
+        this.permissionGroupId = permissionGroupId;
+  }
 }

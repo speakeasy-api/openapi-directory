@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * StatisticSet - Represents a set of statistics that describes a specific metric. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StatisticSet {
     
     public Double maximum;
+
     public StatisticSet withMaximum(Double maximum) {
         this.maximum = maximum;
         return this;
@@ -19,6 +20,7 @@ public class StatisticSet {
     
     
     public Double minimum;
+
     public StatisticSet withMinimum(Double minimum) {
         this.minimum = minimum;
         return this;
@@ -26,6 +28,7 @@ public class StatisticSet {
     
     
     public Double sampleCount;
+
     public StatisticSet withSampleCount(Double sampleCount) {
         this.sampleCount = sampleCount;
         return this;
@@ -33,9 +36,16 @@ public class StatisticSet {
     
     
     public Double sum;
+
     public StatisticSet withSum(Double sum) {
         this.sum = sum;
         return this;
     }
     
+    public StatisticSet(@JsonProperty("Maximum") Double maximum, @JsonProperty("Minimum") Double minimum, @JsonProperty("SampleCount") Double sampleCount, @JsonProperty("Sum") Double sum) {
+        this.maximum = maximum;
+        this.minimum = minimum;
+        this.sampleCount = sampleCount;
+        this.sum = sum;
+  }
 }

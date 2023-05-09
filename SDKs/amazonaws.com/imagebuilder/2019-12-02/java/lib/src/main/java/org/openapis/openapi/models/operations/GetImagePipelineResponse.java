@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImagePipelineResponse {
@@ -12,6 +13,7 @@ public class GetImagePipelineResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetImagePipelineResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class GetImagePipelineResponse {
      */
     
     public Object clientException;
+
     public GetImagePipelineResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class GetImagePipelineResponse {
     
     
     public String contentType;
+
     public GetImagePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetImagePipelineResponse {
      */
     
     public Object forbiddenException;
+
     public GetImagePipelineResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class GetImagePipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImagePipelineResponse getImagePipelineResponse;
+
     public GetImagePipelineResponse withGetImagePipelineResponse(org.openapis.openapi.models.shared.GetImagePipelineResponse getImagePipelineResponse) {
         this.getImagePipelineResponse = getImagePipelineResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetImagePipelineResponse {
      */
     
     public Object invalidRequestException;
+
     public GetImagePipelineResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class GetImagePipelineResponse {
      */
     
     public Object serviceException;
+
     public GetImagePipelineResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetImagePipelineResponse {
     
     
     public Integer statusCode;
+
     public GetImagePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetImagePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImagePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetImagePipelineResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetImagePipelineResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetImagePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2LoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableStackdriverLogging")
     public Boolean enableStackdriverLogging;
+
     public GoogleCloudDialogflowV2LoggingConfig withEnableStackdriverLogging(Boolean enableStackdriverLogging) {
         this.enableStackdriverLogging = enableStackdriverLogging;
         return this;
     }
     
+    public GoogleCloudDialogflowV2LoggingConfig(){}
 }

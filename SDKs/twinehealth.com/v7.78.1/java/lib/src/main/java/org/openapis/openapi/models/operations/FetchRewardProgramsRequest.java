@@ -13,6 +13,7 @@ public class FetchRewardProgramsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
     public String filterGroups;
+
     public FetchRewardProgramsRequest withFilterGroups(String filterGroups) {
         this.filterGroups = filterGroups;
         return this;
@@ -24,9 +25,11 @@ public class FetchRewardProgramsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
     public String filterOrganization;
+
     public FetchRewardProgramsRequest withFilterOrganization(String filterOrganization) {
         this.filterOrganization = filterOrganization;
         return this;
     }
     
+    public FetchRewardProgramsRequest(){}
 }

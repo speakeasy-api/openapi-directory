@@ -54,11 +54,9 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationCancelResponse res = new org.openapis.openapi.models.operations.ImportationCancelResponse() {{
+        org.openapis.openapi.models.operations.ImportationCancelResponse res = new org.openapis.openapi.models.operations.ImportationCancelResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -94,11 +92,9 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationCommitResponse res = new org.openapis.openapi.models.operations.ImportationCommitResponse() {{
+        org.openapis.openapi.models.operations.ImportationCommitResponse res = new org.openapis.openapi.models.operations.ImportationCommitResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -134,11 +130,9 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationCommitColumnsResponse res = new org.openapis.openapi.models.operations.ImportationCommitColumnsResponse() {{
+        org.openapis.openapi.models.operations.ImportationCommitColumnsResponse res = new org.openapis.openapi.models.operations.ImportationCommitColumnsResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -175,11 +169,9 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationConfigureRemainingCatalogColumnsResponse res = new org.openapis.openapi.models.operations.ImportationConfigureRemainingCatalogColumnsResponse() {{
+        org.openapis.openapi.models.operations.ImportationConfigureRemainingCatalogColumnsResponse res = new org.openapis.openapi.models.operations.ImportationConfigureRemainingCatalogColumnsResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 409) {
@@ -215,12 +207,10 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationGetImportationMonitoringResponse res = new org.openapis.openapi.models.operations.ImportationGetImportationMonitoringResponse() {{
+        org.openapis.openapi.models.operations.ImportationGetImportationMonitoringResponse res = new org.openapis.openapi.models.operations.ImportationGetImportationMonitoringResponse(contentType, httpRes.statusCode()) {{
             importationMonitoring = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,11 +256,9 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationGetProductsReportResponse res = new org.openapis.openapi.models.operations.ImportationGetProductsReportResponse() {{
+        org.openapis.openapi.models.operations.ImportationGetProductsReportResponse res = new org.openapis.openapi.models.operations.ImportationGetProductsReportResponse(contentType, httpRes.statusCode()) {{
             getImportationProductsReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,11 +294,9 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationGetReportResponse res = new org.openapis.openapi.models.operations.ImportationGetReportResponse() {{
+        org.openapis.openapi.models.operations.ImportationGetReportResponse res = new org.openapis.openapi.models.operations.ImportationGetReportResponse(contentType, httpRes.statusCode()) {{
             getImportationReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,12 +332,10 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationGetReportingsResponse res = new org.openapis.openapi.models.operations.ImportationGetReportingsResponse() {{
+        org.openapis.openapi.models.operations.ImportationGetReportingsResponse res = new org.openapis.openapi.models.operations.ImportationGetReportingsResponse(contentType, httpRes.statusCode()) {{
             importationsResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,12 +375,10 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationGetReportingsAllStoresResponse res = new org.openapis.openapi.models.operations.ImportationGetReportingsAllStoresResponse() {{
+        org.openapis.openapi.models.operations.ImportationGetReportingsAllStoresResponse res = new org.openapis.openapi.models.operations.ImportationGetReportingsAllStoresResponse(contentType, httpRes.statusCode()) {{
             importationsPerStoreResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,13 +424,11 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationStartManualUpdateResponse res = new org.openapis.openapi.models.operations.ImportationStartManualUpdateResponse() {{
+        org.openapis.openapi.models.operations.ImportationStartManualUpdateResponse res = new org.openapis.openapi.models.operations.ImportationStartManualUpdateResponse(contentType, httpRes.statusCode()) {{
             linksImportationGetImportationMonitoringLink = null;
             importAlreadyInProgressResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -498,12 +478,10 @@ public class CatalogsImportationProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationTechnicalProgressionResponse res = new org.openapis.openapi.models.operations.ImportationTechnicalProgressionResponse() {{
+        org.openapis.openapi.models.operations.ImportationTechnicalProgressionResponse res = new org.openapis.openapi.models.operations.ImportationTechnicalProgressionResponse(contentType, httpRes.statusCode()) {{
             importationTechnicalProgression = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

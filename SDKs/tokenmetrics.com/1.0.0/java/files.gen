@@ -57,4 +57,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/TraderGradesRequest.jav
 lib/src/main/java/org/openapis/openapi/models/operations/TraderGradesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/TradingIndicatorRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TradingIndicatorResponse.java
+docs/sdk/README.md
 USAGE.md

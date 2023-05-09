@@ -15,6 +15,7 @@ public class TagHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzedResourceCount")
     public Long analyzedResourceCount;
+
     public TagHealth withAnalyzedResourceCount(Long analyzedResourceCount) {
         this.analyzedResourceCount = analyzedResourceCount;
         return this;
@@ -23,6 +24,7 @@ public class TagHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppBoundaryKey")
     public String appBoundaryKey;
+
     public TagHealth withAppBoundaryKey(String appBoundaryKey) {
         this.appBoundaryKey = appBoundaryKey;
         return this;
@@ -31,6 +33,7 @@ public class TagHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Insight")
     public InsightHealth insight;
+
     public TagHealth withInsight(InsightHealth insight) {
         this.insight = insight;
         return this;
@@ -39,9 +42,11 @@ public class TagHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValue")
     public String tagValue;
+
     public TagHealth withTagValue(String tagValue) {
         this.tagValue = tagValue;
         return this;
     }
     
+    public TagHealth(){}
 }

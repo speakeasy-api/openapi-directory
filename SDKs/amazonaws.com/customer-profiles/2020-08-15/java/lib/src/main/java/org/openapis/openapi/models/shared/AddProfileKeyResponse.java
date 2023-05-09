@@ -15,6 +15,7 @@ public class AddProfileKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyName")
     public String keyName;
+
     public AddProfileKeyResponse withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -23,9 +24,11 @@ public class AddProfileKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public AddProfileKeyResponse withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AddProfileKeyResponse(){}
 }

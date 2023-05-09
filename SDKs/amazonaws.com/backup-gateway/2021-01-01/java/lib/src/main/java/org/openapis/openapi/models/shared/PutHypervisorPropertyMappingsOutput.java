@@ -15,9 +15,11 @@ public class PutHypervisorPropertyMappingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public PutHypervisorPropertyMappingsOutput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
     }
     
+    public PutHypervisorPropertyMappingsOutput(){}
 }

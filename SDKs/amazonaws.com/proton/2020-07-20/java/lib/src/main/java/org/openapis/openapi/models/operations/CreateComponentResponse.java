@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateComponentResponse {
@@ -12,6 +13,7 @@ public class CreateComponentResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateComponentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateComponentResponse {
      */
     
     public Object conflictException;
+
     public CreateComponentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateComponentResponse {
     
     
     public String contentType;
+
     public CreateComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateComponentOutput createComponentOutput;
+
     public CreateComponentResponse withCreateComponentOutput(org.openapis.openapi.models.shared.CreateComponentOutput createComponentOutput) {
         this.createComponentOutput = createComponentOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateComponentResponse {
      */
     
     public Object internalServerException;
+
     public CreateComponentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateComponentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateComponentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateComponentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateComponentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateComponentResponse {
     
     
     public Integer statusCode;
+
     public CreateComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateComponentResponse {
      */
     
     public Object throttlingException;
+
     public CreateComponentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateComponentResponse {
      */
     
     public Object validationException;
+
     public CreateComponentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

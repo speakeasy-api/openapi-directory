@@ -57,12 +57,10 @@ public class FarmOrganizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchFarmOrganizationByTypeAndIdResponse res = new org.openapis.openapi.models.operations.FetchFarmOrganizationByTypeAndIdResponse() {{
+        org.openapis.openapi.models.operations.FetchFarmOrganizationByTypeAndIdResponse res = new org.openapis.openapi.models.operations.FetchFarmOrganizationByTypeAndIdResponse(contentType, httpRes.statusCode()) {{
             farmOrganization = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

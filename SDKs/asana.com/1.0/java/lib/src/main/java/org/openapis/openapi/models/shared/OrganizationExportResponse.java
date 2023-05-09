@@ -25,6 +25,7 @@ public class OrganizationExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public OrganizationExportResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +44,7 @@ public class OrganizationExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public OrganizationExportResponse withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -54,6 +56,7 @@ public class OrganizationExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public OrganizationExportResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -62,6 +65,7 @@ public class OrganizationExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public WorkspaceCompact organization;
+
     public OrganizationExportResponse withOrganization(WorkspaceCompact organization) {
         this.organization = organization;
         return this;
@@ -73,6 +77,7 @@ public class OrganizationExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public OrganizationExportResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -84,9 +89,11 @@ public class OrganizationExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public OrganizationExportResponseStateEnum state;
+
     public OrganizationExportResponse withState(OrganizationExportResponseStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public OrganizationExportResponse(){}
 }

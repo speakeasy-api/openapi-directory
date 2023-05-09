@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetFederationTokenRequest {
     
     public Long durationSeconds;
+
     public GetFederationTokenRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -16,6 +17,7 @@ public class GetFederationTokenRequest {
     
     
     public String name;
+
     public GetFederationTokenRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +25,7 @@ public class GetFederationTokenRequest {
     
     
     public String policy;
+
     public GetFederationTokenRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -30,6 +33,7 @@ public class GetFederationTokenRequest {
     
     
     public PolicyDescriptorType[] policyArns;
+
     public GetFederationTokenRequest withPolicyArns(PolicyDescriptorType[] policyArns) {
         this.policyArns = policyArns;
         return this;
@@ -37,9 +41,13 @@ public class GetFederationTokenRequest {
     
     
     public Tag[] tags;
+
     public GetFederationTokenRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetFederationTokenRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

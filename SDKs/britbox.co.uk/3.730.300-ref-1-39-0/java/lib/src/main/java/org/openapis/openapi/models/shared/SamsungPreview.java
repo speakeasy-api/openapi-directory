@@ -23,6 +23,7 @@ public class SamsungPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public Long expires;
+
     public SamsungPreview withExpires(Long expires) {
         this.expires = expires;
         return this;
@@ -37,6 +38,7 @@ public class SamsungPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_only")
     public Boolean expiresOnly;
+
     public SamsungPreview withExpiresOnly(Boolean expiresOnly) {
         this.expiresOnly = expiresOnly;
         return this;
@@ -47,9 +49,13 @@ public class SamsungPreview {
      */
     @JsonProperty("sections")
     public SamsungPreviewSection[] sections;
+
     public SamsungPreview withSections(SamsungPreviewSection[] sections) {
         this.sections = sections;
         return this;
     }
     
+    public SamsungPreview(@JsonProperty("sections") SamsungPreviewSection[] sections) {
+        this.sections = sections;
+  }
 }

@@ -15,9 +15,11 @@ public class EncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public EncryptionConfiguration withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
     }
     
+    public EncryptionConfiguration(){}
 }

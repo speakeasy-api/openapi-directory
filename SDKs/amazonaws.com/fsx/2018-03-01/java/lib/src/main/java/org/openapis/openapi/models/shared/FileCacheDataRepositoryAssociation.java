@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FileCacheDataRepositoryAssociation {
     @JsonProperty("DataRepositoryPath")
     public String dataRepositoryPath;
+
     public FileCacheDataRepositoryAssociation withDataRepositoryPath(String dataRepositoryPath) {
         this.dataRepositoryPath = dataRepositoryPath;
         return this;
@@ -22,6 +23,7 @@ public class FileCacheDataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRepositorySubdirectories")
     public String[] dataRepositorySubdirectories;
+
     public FileCacheDataRepositoryAssociation withDataRepositorySubdirectories(String[] dataRepositorySubdirectories) {
         this.dataRepositorySubdirectories = dataRepositorySubdirectories;
         return this;
@@ -29,6 +31,7 @@ public class FileCacheDataRepositoryAssociation {
     
     @JsonProperty("FileCachePath")
     public String fileCachePath;
+
     public FileCacheDataRepositoryAssociation withFileCachePath(String fileCachePath) {
         this.fileCachePath = fileCachePath;
         return this;
@@ -37,9 +40,14 @@ public class FileCacheDataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NFS")
     public FileCacheNFSConfiguration nfs;
+
     public FileCacheDataRepositoryAssociation withNfs(FileCacheNFSConfiguration nfs) {
         this.nfs = nfs;
         return this;
     }
     
+    public FileCacheDataRepositoryAssociation(@JsonProperty("DataRepositoryPath") String dataRepositoryPath, @JsonProperty("FileCachePath") String fileCachePath) {
+        this.dataRepositoryPath = dataRepositoryPath;
+        this.fileCachePath = fileCachePath;
+  }
 }

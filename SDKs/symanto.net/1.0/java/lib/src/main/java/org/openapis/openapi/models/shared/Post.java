@@ -15,6 +15,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Post withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class Post {
      */
     @JsonProperty("language")
     public String language;
+
     public Post withLanguage(String language) {
         this.language = language;
         return this;
@@ -35,9 +37,14 @@ public class Post {
      */
     @JsonProperty("text")
     public String text;
+
     public Post withText(String text) {
         this.text = text;
         return this;
     }
     
+    public Post(@JsonProperty("language") String language, @JsonProperty("text") String text) {
+        this.language = language;
+        this.text = text;
+  }
 }

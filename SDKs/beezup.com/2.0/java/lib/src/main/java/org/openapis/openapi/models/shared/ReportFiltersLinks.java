@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportFiltersLinks {
     @JsonProperty("save")
     public LinksSaveReportFilterLink save;
+
     public ReportFiltersLinks withSave(LinksSaveReportFilterLink save) {
         this.save = save;
         return this;
@@ -16,9 +17,14 @@ public class ReportFiltersLinks {
     
     @JsonProperty("self")
     public LinksGetReportFiltersLink self;
+
     public ReportFiltersLinks withSelf(LinksGetReportFiltersLink self) {
         this.self = self;
         return this;
     }
     
+    public ReportFiltersLinks(@JsonProperty("save") LinksSaveReportFilterLink save, @JsonProperty("self") LinksGetReportFiltersLink self) {
+        this.save = save;
+        this.self = self;
+  }
 }

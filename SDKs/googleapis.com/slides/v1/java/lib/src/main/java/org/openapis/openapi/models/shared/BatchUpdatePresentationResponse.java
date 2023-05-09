@@ -18,6 +18,7 @@ public class BatchUpdatePresentationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presentationId")
     public String presentationId;
+
     public BatchUpdatePresentationResponse withPresentationId(String presentationId) {
         this.presentationId = presentationId;
         return this;
@@ -29,6 +30,7 @@ public class BatchUpdatePresentationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public Response[] replies;
+
     public BatchUpdatePresentationResponse withReplies(Response[] replies) {
         this.replies = replies;
         return this;
@@ -40,9 +42,11 @@ public class BatchUpdatePresentationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeControl")
     public WriteControl writeControl;
+
     public BatchUpdatePresentationResponse withWriteControl(WriteControl writeControl) {
         this.writeControl = writeControl;
         return this;
     }
     
+    public BatchUpdatePresentationResponse(){}
 }

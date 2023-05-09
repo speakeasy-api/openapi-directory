@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateConnectionAliasResponse {
@@ -12,6 +13,7 @@ public class AssociateConnectionAliasResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateConnectionAliasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateConnectionAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateConnectionAliasResult associateConnectionAliasResult;
+
     public AssociateConnectionAliasResponse withAssociateConnectionAliasResult(org.openapis.openapi.models.shared.AssociateConnectionAliasResult associateConnectionAliasResult) {
         this.associateConnectionAliasResult = associateConnectionAliasResult;
         return this;
@@ -29,6 +32,7 @@ public class AssociateConnectionAliasResponse {
     
     
     public String contentType;
+
     public AssociateConnectionAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateConnectionAliasResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public AssociateConnectionAliasResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateConnectionAliasResponse {
      */
     
     public Object invalidResourceStateException;
+
     public AssociateConnectionAliasResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateConnectionAliasResponse {
      */
     
     public Object operationNotSupportedException;
+
     public AssociateConnectionAliasResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateConnectionAliasResponse {
      */
     
     public Object resourceAssociatedException;
+
     public AssociateConnectionAliasResponse withResourceAssociatedException(Object resourceAssociatedException) {
         this.resourceAssociatedException = resourceAssociatedException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateConnectionAliasResponse {
     
     
     public Integer statusCode;
+
     public AssociateConnectionAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateConnectionAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateConnectionAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class AssociateConnectionAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateConnectionAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateConnectionAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

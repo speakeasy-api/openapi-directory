@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAuditSuppressionResponse {
     
     public String contentType;
+
     public CreateAuditSuppressionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAuditSuppressionResponse {
      */
     
     public java.util.Map<String, Object> createAuditSuppressionResponse;
+
     public CreateAuditSuppressionResponse withCreateAuditSuppressionResponse(java.util.Map<String, Object> createAuditSuppressionResponse) {
         this.createAuditSuppressionResponse = createAuditSuppressionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAuditSuppressionResponse {
      */
     
     public Object internalFailureException;
+
     public CreateAuditSuppressionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAuditSuppressionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAuditSuppressionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAuditSuppressionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAuditSuppressionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAuditSuppressionResponse {
     
     
     public Integer statusCode;
+
     public CreateAuditSuppressionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAuditSuppressionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAuditSuppressionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateAuditSuppressionResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateAuditSuppressionResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateAuditSuppressionResponse {
      */
     
     public Object throttlingException;
+
     public CreateAuditSuppressionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateAuditSuppressionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

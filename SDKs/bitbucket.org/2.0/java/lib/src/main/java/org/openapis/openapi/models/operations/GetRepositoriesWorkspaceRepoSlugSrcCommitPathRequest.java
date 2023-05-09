@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -22,6 +24,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathFormatEnum format;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withFormat(GetRepositoriesWorkspaceRepoSlugSrcCommitPathFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_depth")
     public Long maxDepth;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withMaxDepth(Long maxDepth) {
         this.maxDepth = maxDepth;
         return this;
@@ -42,6 +46,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -52,6 +57,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withQ(String q) {
         this.q = q;
         return this;
@@ -64,6 +70,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -74,6 +81,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -86,9 +94,16 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest(@JsonProperty("commit") String commit, @JsonProperty("path") String path, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.commit = commit;
+        this.path = path;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

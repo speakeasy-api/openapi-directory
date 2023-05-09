@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateSnapshotRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateSnapshotRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,6 +23,7 @@ public class CreateSnapshotRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateSnapshotRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +35,7 @@ public class CreateSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateSnapshotRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -40,9 +43,14 @@ public class CreateSnapshotRequest {
     
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public CreateSnapshotRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public CreateSnapshotRequest(@JsonProperty("Name") String name, @JsonProperty("VolumeId") String volumeId) {
+        this.name = name;
+        this.volumeId = volumeId;
+  }
 }

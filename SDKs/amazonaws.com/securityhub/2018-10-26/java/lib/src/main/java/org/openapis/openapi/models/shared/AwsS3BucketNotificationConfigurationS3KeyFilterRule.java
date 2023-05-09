@@ -15,6 +15,7 @@ public class AwsS3BucketNotificationConfigurationS3KeyFilterRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum name;
+
     public AwsS3BucketNotificationConfigurationS3KeyFilterRule withName(AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketNotificationConfigurationS3KeyFilterRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsS3BucketNotificationConfigurationS3KeyFilterRule withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsS3BucketNotificationConfigurationS3KeyFilterRule(){}
 }

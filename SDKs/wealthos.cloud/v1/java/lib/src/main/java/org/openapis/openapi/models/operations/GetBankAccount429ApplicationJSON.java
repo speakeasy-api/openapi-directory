@@ -18,6 +18,7 @@ public class GetBankAccount429ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetBankAccount429ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetBankAccount429ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetBankAccount429ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetBankAccount429ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

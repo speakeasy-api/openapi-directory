@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFleetLocationsResponse {
@@ -12,6 +13,7 @@ public class CreateFleetLocationsResponse {
      */
     
     public Object conflictException;
+
     public CreateFleetLocationsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFleetLocationsResponse {
     
     
     public String contentType;
+
     public CreateFleetLocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFleetLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFleetLocationsOutput createFleetLocationsOutput;
+
     public CreateFleetLocationsResponse withCreateFleetLocationsOutput(org.openapis.openapi.models.shared.CreateFleetLocationsOutput createFleetLocationsOutput) {
         this.createFleetLocationsOutput = createFleetLocationsOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateFleetLocationsResponse {
      */
     
     public Object internalServiceException;
+
     public CreateFleetLocationsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFleetLocationsResponse {
      */
     
     public Object invalidFleetStatusException;
+
     public CreateFleetLocationsResponse withInvalidFleetStatusException(Object invalidFleetStatusException) {
         this.invalidFleetStatusException = invalidFleetStatusException;
         return this;
@@ -59,8 +65,20 @@ public class CreateFleetLocationsResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateFleetLocationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
+        return this;
+    }
+    
+    /**
+     * LimitExceededException
+     */
+    
+    public Object limitExceededException;
+
+    public CreateFleetLocationsResponse withLimitExceededException(Object limitExceededException) {
+        this.limitExceededException = limitExceededException;
         return this;
     }
     
@@ -69,6 +87,7 @@ public class CreateFleetLocationsResponse {
      */
     
     public Object notFoundException;
+
     public CreateFleetLocationsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +95,7 @@ public class CreateFleetLocationsResponse {
     
     
     public Integer statusCode;
+
     public CreateFleetLocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +103,7 @@ public class CreateFleetLocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFleetLocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +114,7 @@ public class CreateFleetLocationsResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateFleetLocationsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +125,14 @@ public class CreateFleetLocationsResponse {
      */
     
     public Object unsupportedRegionException;
+
     public CreateFleetLocationsResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public CreateFleetLocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

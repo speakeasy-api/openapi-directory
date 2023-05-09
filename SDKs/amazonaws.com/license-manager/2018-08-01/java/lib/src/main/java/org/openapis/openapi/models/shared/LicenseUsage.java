@@ -15,9 +15,11 @@ public class LicenseUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntitlementUsages")
     public EntitlementUsage[] entitlementUsages;
+
     public LicenseUsage withEntitlementUsages(EntitlementUsage[] entitlementUsages) {
         this.entitlementUsages = entitlementUsages;
         return this;
     }
     
+    public LicenseUsage(){}
 }

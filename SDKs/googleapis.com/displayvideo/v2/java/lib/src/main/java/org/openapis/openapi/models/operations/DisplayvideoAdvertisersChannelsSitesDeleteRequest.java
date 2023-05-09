@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -72,6 +79,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerId")
     public String partnerId;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -112,6 +123,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,9 +167,15 @@ public class DisplayvideoAdvertisersChannelsSitesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=urlOrAppId")
     public String urlOrAppId;
+
     public DisplayvideoAdvertisersChannelsSitesDeleteRequest withUrlOrAppId(String urlOrAppId) {
         this.urlOrAppId = urlOrAppId;
         return this;
     }
     
+    public DisplayvideoAdvertisersChannelsSitesDeleteRequest(@JsonProperty("advertiserId") String advertiserId, @JsonProperty("channelId") String channelId, @JsonProperty("urlOrAppId") String urlOrAppId) {
+        this.advertiserId = advertiserId;
+        this.channelId = channelId;
+        this.urlOrAppId = urlOrAppId;
+  }
 }

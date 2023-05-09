@@ -18,9 +18,11 @@ public class InventorySourceAccessorsAdvertiserAccessors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserIds")
     public String[] advertiserIds;
+
     public InventorySourceAccessorsAdvertiserAccessors withAdvertiserIds(String[] advertiserIds) {
         this.advertiserIds = advertiserIds;
         return this;
     }
     
+    public InventorySourceAccessorsAdvertiserAccessors(){}
 }

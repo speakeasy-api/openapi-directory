@@ -296,4 +296,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateActionTypeInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePipelineOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePipelineInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

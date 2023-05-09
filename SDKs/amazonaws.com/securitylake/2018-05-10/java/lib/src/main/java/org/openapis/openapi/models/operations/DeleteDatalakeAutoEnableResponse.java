@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatalakeAutoEnableResponse {
@@ -12,6 +13,7 @@ public class DeleteDatalakeAutoEnableResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDatalakeAutoEnableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDatalakeAutoEnableResponse {
      */
     
     public Object accountNotFoundException;
+
     public DeleteDatalakeAutoEnableResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatalakeAutoEnableResponse {
     
     
     public String contentType;
+
     public DeleteDatalakeAutoEnableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatalakeAutoEnableResponse {
      */
     
     public java.util.Map<String, Object> deleteDatalakeAutoEnableResponse;
+
     public DeleteDatalakeAutoEnableResponse withDeleteDatalakeAutoEnableResponse(java.util.Map<String, Object> deleteDatalakeAutoEnableResponse) {
         this.deleteDatalakeAutoEnableResponse = deleteDatalakeAutoEnableResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDatalakeAutoEnableResponse {
      */
     
     public Object internalServerException;
+
     public DeleteDatalakeAutoEnableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteDatalakeAutoEnableResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatalakeAutoEnableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDatalakeAutoEnableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatalakeAutoEnableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDatalakeAutoEnableResponse {
      */
     
     public Object validationException;
+
     public DeleteDatalakeAutoEnableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDatalakeAutoEnableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

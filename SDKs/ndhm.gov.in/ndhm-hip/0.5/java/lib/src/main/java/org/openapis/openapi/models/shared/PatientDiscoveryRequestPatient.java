@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientDiscoveryRequestPatient {
     @JsonProperty("gender")
     public PatientDiscoveryRequestPatientGenderEnum gender;
+
     public PatientDiscoveryRequestPatient withGender(PatientDiscoveryRequestPatientGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -21,6 +22,7 @@ public class PatientDiscoveryRequestPatient {
      */
     @JsonProperty("id")
     public String id;
+
     public PatientDiscoveryRequestPatient withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class PatientDiscoveryRequestPatient {
     
     @JsonProperty("name")
     public String name;
+
     public PatientDiscoveryRequestPatient withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class PatientDiscoveryRequestPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unverifiedIdentifiers")
     public Identifier[] unverifiedIdentifiers;
+
     public PatientDiscoveryRequestPatient withUnverifiedIdentifiers(Identifier[] unverifiedIdentifiers) {
         this.unverifiedIdentifiers = unverifiedIdentifiers;
         return this;
@@ -43,6 +47,7 @@ public class PatientDiscoveryRequestPatient {
     
     @JsonProperty("verifiedIdentifiers")
     public Identifier[] verifiedIdentifiers;
+
     public PatientDiscoveryRequestPatient withVerifiedIdentifiers(Identifier[] verifiedIdentifiers) {
         this.verifiedIdentifiers = verifiedIdentifiers;
         return this;
@@ -50,9 +55,17 @@ public class PatientDiscoveryRequestPatient {
     
     @JsonProperty("yearOfBirth")
     public Long yearOfBirth;
+
     public PatientDiscoveryRequestPatient withYearOfBirth(Long yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public PatientDiscoveryRequestPatient(@JsonProperty("gender") PatientDiscoveryRequestPatientGenderEnum gender, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("verifiedIdentifiers") Identifier[] verifiedIdentifiers, @JsonProperty("yearOfBirth") Long yearOfBirth) {
+        this.gender = gender;
+        this.id = id;
+        this.name = name;
+        this.verifiedIdentifiers = verifiedIdentifiers;
+        this.yearOfBirth = yearOfBirth;
+  }
 }

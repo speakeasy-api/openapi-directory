@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStreamingSessionStreamResponse {
@@ -12,6 +13,7 @@ public class GetStreamingSessionStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStreamingSessionStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetStreamingSessionStreamResponse {
      */
     
     public Object conflictException;
+
     public GetStreamingSessionStreamResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetStreamingSessionStreamResponse {
     
     
     public String contentType;
+
     public GetStreamingSessionStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetStreamingSessionStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStreamingSessionStreamResponse getStreamingSessionStreamResponse;
+
     public GetStreamingSessionStreamResponse withGetStreamingSessionStreamResponse(org.openapis.openapi.models.shared.GetStreamingSessionStreamResponse getStreamingSessionStreamResponse) {
         this.getStreamingSessionStreamResponse = getStreamingSessionStreamResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetStreamingSessionStreamResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetStreamingSessionStreamResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetStreamingSessionStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStreamingSessionStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetStreamingSessionStreamResponse {
     
     
     public Integer statusCode;
+
     public GetStreamingSessionStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetStreamingSessionStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStreamingSessionStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetStreamingSessionStreamResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetStreamingSessionStreamResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class GetStreamingSessionStreamResponse {
      */
     
     public Object throttlingException;
+
     public GetStreamingSessionStreamResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetStreamingSessionStreamResponse {
      */
     
     public Object validationException;
+
     public GetStreamingSessionStreamResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetStreamingSessionStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

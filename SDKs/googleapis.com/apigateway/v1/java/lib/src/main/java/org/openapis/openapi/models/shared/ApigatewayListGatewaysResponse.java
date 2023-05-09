@@ -18,6 +18,7 @@ public class ApigatewayListGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gateways")
     public ApigatewayGateway[] gateways;
+
     public ApigatewayListGatewaysResponse withGateways(ApigatewayGateway[] gateways) {
         this.gateways = gateways;
         return this;
@@ -29,6 +30,7 @@ public class ApigatewayListGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ApigatewayListGatewaysResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ApigatewayListGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachableLocations")
     public String[] unreachableLocations;
+
     public ApigatewayListGatewaysResponse withUnreachableLocations(String[] unreachableLocations) {
         this.unreachableLocations = unreachableLocations;
         return this;
     }
     
+    public ApigatewayListGatewaysResponse(){}
 }

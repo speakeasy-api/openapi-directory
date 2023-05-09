@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCustomerServiceMetricTaskRequest {
@@ -12,6 +13,7 @@ public class CreateCustomerServiceMetricTaskRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest createServiceMetricsTaskRequest;
+
     public CreateCustomerServiceMetricTaskRequest withCreateServiceMetricsTaskRequest(org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest createServiceMetricsTaskRequest) {
         this.createServiceMetricsTaskRequest = createServiceMetricsTaskRequest;
         return this;
@@ -22,9 +24,14 @@ public class CreateCustomerServiceMetricTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept-language")
     public String acceptLanguage;
+
     public CreateCustomerServiceMetricTaskRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    public CreateCustomerServiceMetricTaskRequest(@JsonProperty("CreateServiceMetricsTaskRequest") org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest createServiceMetricsTaskRequest, @JsonProperty("accept-language") String acceptLanguage) {
+        this.createServiceMetricsTaskRequest = createServiceMetricsTaskRequest;
+        this.acceptLanguage = acceptLanguage;
+  }
 }

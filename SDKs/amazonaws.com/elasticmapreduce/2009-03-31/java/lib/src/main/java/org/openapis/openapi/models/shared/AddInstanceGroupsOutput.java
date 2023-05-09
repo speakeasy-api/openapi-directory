@@ -15,6 +15,7 @@ public class AddInstanceGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public AddInstanceGroupsOutput withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -23,6 +24,7 @@ public class AddInstanceGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroupIds")
     public String[] instanceGroupIds;
+
     public AddInstanceGroupsOutput withInstanceGroupIds(String[] instanceGroupIds) {
         this.instanceGroupIds = instanceGroupIds;
         return this;
@@ -31,9 +33,11 @@ public class AddInstanceGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobFlowId")
     public String jobFlowId;
+
     public AddInstanceGroupsOutput withJobFlowId(String jobFlowId) {
         this.jobFlowId = jobFlowId;
         return this;
     }
     
+    public AddInstanceGroupsOutput(){}
 }

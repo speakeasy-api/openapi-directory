@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions {
     
     public String keyword;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -19,9 +20,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String[] settings;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions withSettings(String[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions(){}
 }

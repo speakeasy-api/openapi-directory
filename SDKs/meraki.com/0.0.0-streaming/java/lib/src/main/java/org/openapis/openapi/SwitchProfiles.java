@@ -52,11 +52,9 @@ public class SwitchProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesResponse res = new org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesResponse res = new org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesResponse(contentType, httpRes.statusCode()) {{
             getOrganizationConfigTemplateSwitchProfiles200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

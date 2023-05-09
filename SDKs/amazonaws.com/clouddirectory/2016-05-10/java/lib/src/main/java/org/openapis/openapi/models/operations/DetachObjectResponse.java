@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachObjectResponse {
@@ -12,6 +13,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public DetachObjectResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetachObjectResponse {
     
     
     public String contentType;
+
     public DetachObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.DetachObjectResponse detachObjectResponse;
+
     public DetachObjectResponse withDetachObjectResponse(org.openapis.openapi.models.shared.DetachObjectResponse detachObjectResponse) {
         this.detachObjectResponse = detachObjectResponse;
         return this;
@@ -39,6 +43,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException;
+
     public DetachObjectResponse withDirectoryNotEnabledException(org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public DetachObjectResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public DetachObjectResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public DetachObjectResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.NotNodeException notNodeException;
+
     public DetachObjectResponse withNotNodeException(org.openapis.openapi.models.shared.NotNodeException notNodeException) {
         this.notNodeException = notNodeException;
         return this;
@@ -86,6 +95,7 @@ public class DetachObjectResponse {
     
     
     public Integer statusCode;
+
     public DetachObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DetachObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public DetachObjectResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public DetachObjectResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public DetachObjectResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DetachObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

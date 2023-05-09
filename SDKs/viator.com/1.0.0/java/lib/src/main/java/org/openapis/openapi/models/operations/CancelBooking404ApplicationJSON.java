@@ -15,6 +15,7 @@ public class CancelBooking404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public CancelBooking404ApplicationJSONCodeEnum code;
+
     public CancelBooking404ApplicationJSON withCode(CancelBooking404ApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class CancelBooking404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public CancelBooking404ApplicationJSONMessageEnum message;
+
     public CancelBooking404ApplicationJSON withMessage(CancelBooking404ApplicationJSONMessageEnum message) {
         this.message = message;
         return this;
@@ -37,6 +39,7 @@ public class CancelBooking404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public CancelBooking404ApplicationJSON withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -48,9 +51,11 @@ public class CancelBooking404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public CancelBooking404ApplicationJSON withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public CancelBooking404ApplicationJSON(){}
 }

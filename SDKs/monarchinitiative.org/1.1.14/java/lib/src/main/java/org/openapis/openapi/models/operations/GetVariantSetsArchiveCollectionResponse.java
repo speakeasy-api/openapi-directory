@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVariantSetsArchiveCollectionResponse {
     
     public String contentType;
+
     public GetVariantSetsArchiveCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetVariantSetsArchiveCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.PageOfVariantSets pageOfVariantSets;
+
     public GetVariantSetsArchiveCollectionResponse withPageOfVariantSets(org.openapis.openapi.models.shared.PageOfVariantSets pageOfVariantSets) {
         this.pageOfVariantSets = pageOfVariantSets;
         return this;
@@ -26,6 +29,7 @@ public class GetVariantSetsArchiveCollectionResponse {
     
     
     public Integer statusCode;
+
     public GetVariantSetsArchiveCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetVariantSetsArchiveCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVariantSetsArchiveCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVariantSetsArchiveCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

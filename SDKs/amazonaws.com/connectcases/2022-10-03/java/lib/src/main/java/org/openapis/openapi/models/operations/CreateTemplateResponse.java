@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTemplateResponse {
      */
     
     public Object conflictException;
+
     public CreateTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTemplateResponse {
     
     
     public String contentType;
+
     public CreateTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTemplateResponse createTemplateResponse;
+
     public CreateTemplateResponse withCreateTemplateResponse(org.openapis.openapi.models.shared.CreateTemplateResponse createTemplateResponse) {
         this.createTemplateResponse = createTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateTemplateResponse {
      */
     
     public Object internalServerException;
+
     public CreateTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTemplateResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateTemplateResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class CreateTemplateResponse {
      */
     
     public Object throttlingException;
+
     public CreateTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateTemplateResponse {
      */
     
     public Object validationException;
+
     public CreateTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

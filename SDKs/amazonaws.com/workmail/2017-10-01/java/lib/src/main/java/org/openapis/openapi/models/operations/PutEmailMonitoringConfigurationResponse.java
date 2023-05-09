@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEmailMonitoringConfigurationResponse {
     
     public String contentType;
+
     public PutEmailMonitoringConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutEmailMonitoringConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public PutEmailMonitoringConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutEmailMonitoringConfigurationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public PutEmailMonitoringConfigurationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutEmailMonitoringConfigurationResponse {
      */
     
     public Object organizationStateException;
+
     public PutEmailMonitoringConfigurationResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -49,6 +54,7 @@ public class PutEmailMonitoringConfigurationResponse {
      */
     
     public java.util.Map<String, Object> putEmailMonitoringConfigurationResponse;
+
     public PutEmailMonitoringConfigurationResponse withPutEmailMonitoringConfigurationResponse(java.util.Map<String, Object> putEmailMonitoringConfigurationResponse) {
         this.putEmailMonitoringConfigurationResponse = putEmailMonitoringConfigurationResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutEmailMonitoringConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutEmailMonitoringConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class PutEmailMonitoringConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutEmailMonitoringConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutEmailMonitoringConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEmailMonitoringConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutEmailMonitoringConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

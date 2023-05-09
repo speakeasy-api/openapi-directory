@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroupsTags {
     
     public String key;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroupsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtual
     
     
     public String value;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroupsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroupsTags(){}
 }

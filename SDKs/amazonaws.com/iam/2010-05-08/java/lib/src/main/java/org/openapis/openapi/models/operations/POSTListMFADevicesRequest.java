@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTListMFADevicesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTListMFADevicesActionEnum action;
+
     public POSTListMFADevicesRequest withAction(POSTListMFADevicesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class POSTListMFADevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public POSTListMFADevicesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class POSTListMFADevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public String maxItems;
+
     public POSTListMFADevicesRequest withMaxItems(String maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -36,6 +40,7 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTListMFADevicesRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -43,6 +48,7 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTListMFADevicesVersionEnum version;
+
     public POSTListMFADevicesRequest withVersion(POSTListMFADevicesVersionEnum version) {
         this.version = version;
         return this;
@@ -50,6 +56,7 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTListMFADevicesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -57,6 +64,7 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTListMFADevicesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -64,6 +72,7 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTListMFADevicesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -71,6 +80,7 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTListMFADevicesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -78,6 +88,7 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTListMFADevicesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -85,6 +96,7 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTListMFADevicesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -92,9 +104,14 @@ public class POSTListMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTListMFADevicesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTListMFADevicesRequest(@JsonProperty("Action") POSTListMFADevicesActionEnum action, @JsonProperty("Version") POSTListMFADevicesVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

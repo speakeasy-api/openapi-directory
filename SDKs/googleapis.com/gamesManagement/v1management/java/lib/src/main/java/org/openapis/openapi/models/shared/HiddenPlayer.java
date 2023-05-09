@@ -18,6 +18,7 @@ public class HiddenPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenTimeMillis")
     public String hiddenTimeMillis;
+
     public HiddenPlayer withHiddenTimeMillis(String hiddenTimeMillis) {
         this.hiddenTimeMillis = hiddenTimeMillis;
         return this;
@@ -29,6 +30,7 @@ public class HiddenPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public HiddenPlayer withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class HiddenPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("player")
     public Player player;
+
     public HiddenPlayer withPlayer(Player player) {
         this.player = player;
         return this;
     }
     
+    public HiddenPlayer(){}
 }

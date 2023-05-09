@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class CreateTransactionRequestBody {
      */
     @SpeakeasyMetadata("form:name=active")
     public Boolean active;
+
     public CreateTransactionRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +22,7 @@ public class CreateTransactionRequestBody {
     
     @SpeakeasyMetadata("form:name=dateClosed")
     public OffsetDateTime dateClosed;
+
     public CreateTransactionRequestBody withDateClosed(OffsetDateTime dateClosed) {
         this.dateClosed = dateClosed;
         return this;
@@ -27,6 +30,7 @@ public class CreateTransactionRequestBody {
     
     @SpeakeasyMetadata("form:name=dateCreated")
     public OffsetDateTime dateCreated;
+
     public CreateTransactionRequestBody withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -34,6 +38,7 @@ public class CreateTransactionRequestBody {
     
     @SpeakeasyMetadata("form:name=licenseeNumber")
     public String licenseeNumber;
+
     public CreateTransactionRequestBody withLicenseeNumber(String licenseeNumber) {
         this.licenseeNumber = licenseeNumber;
         return this;
@@ -44,6 +49,7 @@ public class CreateTransactionRequestBody {
      */
     @SpeakeasyMetadata("form:name=number")
     public String number;
+
     public CreateTransactionRequestBody withNumber(String number) {
         this.number = number;
         return this;
@@ -51,6 +57,7 @@ public class CreateTransactionRequestBody {
     
     @SpeakeasyMetadata("form:name=paymentMethod")
     public String paymentMethod;
+
     public CreateTransactionRequestBody withPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -61,6 +68,7 @@ public class CreateTransactionRequestBody {
      */
     @SpeakeasyMetadata("form:name=source")
     public CreateTransactionRequestBodySourceEnum source;
+
     public CreateTransactionRequestBody withSource(CreateTransactionRequestBodySourceEnum source) {
         this.source = source;
         return this;
@@ -68,9 +76,15 @@ public class CreateTransactionRequestBody {
     
     @SpeakeasyMetadata("form:name=status")
     public CreateTransactionRequestBodyStatusEnum status;
+
     public CreateTransactionRequestBody withStatus(CreateTransactionRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateTransactionRequestBody(@JsonProperty("active") Boolean active, @JsonProperty("source") CreateTransactionRequestBodySourceEnum source, @JsonProperty("status") CreateTransactionRequestBodyStatusEnum status) {
+        this.active = active;
+        this.source = source;
+        this.status = status;
+  }
 }

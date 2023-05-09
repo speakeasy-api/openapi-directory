@@ -67,4 +67,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Accelerator.java
 lib/src/main/java/org/openapis/openapi/models/shared/Secret.java
 lib/src/main/java/org/openapis/openapi/models/shared/Action.java
 lib/src/main/java/org/openapis/openapi/models/shared/Mount.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

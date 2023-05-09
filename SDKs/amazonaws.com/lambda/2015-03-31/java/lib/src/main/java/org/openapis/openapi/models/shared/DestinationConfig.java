@@ -15,6 +15,7 @@ public class DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnFailure")
     public OnFailure onFailure;
+
     public DestinationConfig withOnFailure(OnFailure onFailure) {
         this.onFailure = onFailure;
         return this;
@@ -23,9 +24,11 @@ public class DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnSuccess")
     public OnSuccess onSuccess;
+
     public DestinationConfig withOnSuccess(OnSuccess onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }
     
+    public DestinationConfig(){}
 }

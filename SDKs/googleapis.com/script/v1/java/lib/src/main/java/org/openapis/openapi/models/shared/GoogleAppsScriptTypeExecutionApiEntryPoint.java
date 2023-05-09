@@ -18,9 +18,11 @@ public class GoogleAppsScriptTypeExecutionApiEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPointConfig")
     public GoogleAppsScriptTypeExecutionApiConfig entryPointConfig;
+
     public GoogleAppsScriptTypeExecutionApiEntryPoint withEntryPointConfig(GoogleAppsScriptTypeExecutionApiConfig entryPointConfig) {
         this.entryPointConfig = entryPointConfig;
         return this;
     }
     
+    public GoogleAppsScriptTypeExecutionApiEntryPoint(){}
 }

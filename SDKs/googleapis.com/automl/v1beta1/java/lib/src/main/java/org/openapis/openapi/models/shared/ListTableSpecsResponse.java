@@ -18,6 +18,7 @@ public class ListTableSpecsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTableSpecsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTableSpecsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableSpecs")
     public TableSpec[] tableSpecs;
+
     public ListTableSpecsResponse withTableSpecs(TableSpec[] tableSpecs) {
         this.tableSpecs = tableSpecs;
         return this;
     }
     
+    public ListTableSpecsResponse(){}
 }

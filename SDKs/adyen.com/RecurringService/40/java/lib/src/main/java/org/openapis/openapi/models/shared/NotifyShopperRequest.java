@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotifyShopperRequest {
     @JsonProperty("amount")
     public Amount amount;
+
     public NotifyShopperRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class NotifyShopperRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingDate")
     public String billingDate;
+
     public NotifyShopperRequest withBillingDate(String billingDate) {
         this.billingDate = billingDate;
         return this;
@@ -33,6 +35,7 @@ public class NotifyShopperRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingSequenceNumber")
     public String billingSequenceNumber;
+
     public NotifyShopperRequest withBillingSequenceNumber(String billingSequenceNumber) {
         this.billingSequenceNumber = billingSequenceNumber;
         return this;
@@ -44,6 +47,7 @@ public class NotifyShopperRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayedReference")
     public String displayedReference;
+
     public NotifyShopperRequest withDisplayedReference(String displayedReference) {
         this.displayedReference = displayedReference;
         return this;
@@ -54,6 +58,7 @@ public class NotifyShopperRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public NotifyShopperRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -65,6 +70,7 @@ public class NotifyShopperRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public NotifyShopperRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -75,6 +81,7 @@ public class NotifyShopperRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public NotifyShopperRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -87,6 +94,7 @@ public class NotifyShopperRequest {
      */
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public NotifyShopperRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -98,9 +106,16 @@ public class NotifyShopperRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storedPaymentMethodId")
     public String storedPaymentMethodId;
+
     public NotifyShopperRequest withStoredPaymentMethodId(String storedPaymentMethodId) {
         this.storedPaymentMethodId = storedPaymentMethodId;
         return this;
     }
     
+    public NotifyShopperRequest(@JsonProperty("amount") Amount amount, @JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("reference") String reference, @JsonProperty("shopperReference") String shopperReference) {
+        this.amount = amount;
+        this.merchantAccount = merchantAccount;
+        this.reference = reference;
+        this.shopperReference = shopperReference;
+  }
 }

@@ -15,6 +15,7 @@ public class DocumentAttributeValueCountPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public DocumentAttributeValueCountPair withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class DocumentAttributeValueCountPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentAttributeValue")
     public DocumentAttributeValue documentAttributeValue;
+
     public DocumentAttributeValueCountPair withDocumentAttributeValue(DocumentAttributeValue documentAttributeValue) {
         this.documentAttributeValue = documentAttributeValue;
         return this;
@@ -31,9 +33,11 @@ public class DocumentAttributeValueCountPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FacetResults")
     public FacetResult[] facetResults;
+
     public DocumentAttributeValueCountPair withFacetResults(FacetResult[] facetResults) {
         this.facetResults = facetResults;
         return this;
     }
     
+    public DocumentAttributeValueCountPair(){}
 }

@@ -15,9 +15,11 @@ public class DescribeLanguageModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageModel")
     public LanguageModel languageModel;
+
     public DescribeLanguageModelResponse withLanguageModel(LanguageModel languageModel) {
         this.languageModel = languageModel;
         return this;
     }
     
+    public DescribeLanguageModelResponse(){}
 }

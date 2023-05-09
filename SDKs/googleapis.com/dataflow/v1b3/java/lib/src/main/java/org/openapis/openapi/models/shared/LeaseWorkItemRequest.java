@@ -18,6 +18,7 @@ public class LeaseWorkItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentWorkerTime")
     public String currentWorkerTime;
+
     public LeaseWorkItemRequest withCurrentWorkerTime(String currentWorkerTime) {
         this.currentWorkerTime = currentWorkerTime;
         return this;
@@ -29,6 +30,7 @@ public class LeaseWorkItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public LeaseWorkItemRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class LeaseWorkItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLeaseDuration")
     public String requestedLeaseDuration;
+
     public LeaseWorkItemRequest withRequestedLeaseDuration(String requestedLeaseDuration) {
         this.requestedLeaseDuration = requestedLeaseDuration;
         return this;
@@ -51,6 +54,7 @@ public class LeaseWorkItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unifiedWorkerRequest")
     public java.util.Map<String, Object> unifiedWorkerRequest;
+
     public LeaseWorkItemRequest withUnifiedWorkerRequest(java.util.Map<String, Object> unifiedWorkerRequest) {
         this.unifiedWorkerRequest = unifiedWorkerRequest;
         return this;
@@ -62,6 +66,7 @@ public class LeaseWorkItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workItemTypes")
     public String[] workItemTypes;
+
     public LeaseWorkItemRequest withWorkItemTypes(String[] workItemTypes) {
         this.workItemTypes = workItemTypes;
         return this;
@@ -73,6 +78,7 @@ public class LeaseWorkItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerCapabilities")
     public String[] workerCapabilities;
+
     public LeaseWorkItemRequest withWorkerCapabilities(String[] workerCapabilities) {
         this.workerCapabilities = workerCapabilities;
         return this;
@@ -84,9 +90,11 @@ public class LeaseWorkItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerId")
     public String workerId;
+
     public LeaseWorkItemRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public LeaseWorkItemRequest(){}
 }

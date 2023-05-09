@@ -18,6 +18,7 @@ public class VmwareDiskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backingType")
     public VmwareDiskConfigBackingTypeEnum backingType;
+
     public VmwareDiskConfig withBackingType(VmwareDiskConfigBackingTypeEnum backingType) {
         this.backingType = backingType;
         return this;
@@ -29,6 +30,7 @@ public class VmwareDiskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rdmCompatibilityMode")
     public String rdmCompatibilityMode;
+
     public VmwareDiskConfig withRdmCompatibilityMode(String rdmCompatibilityMode) {
         this.rdmCompatibilityMode = rdmCompatibilityMode;
         return this;
@@ -40,6 +42,7 @@ public class VmwareDiskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared")
     public Boolean shared;
+
     public VmwareDiskConfig withShared(Boolean shared) {
         this.shared = shared;
         return this;
@@ -51,9 +54,11 @@ public class VmwareDiskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmdkDiskMode")
     public String vmdkDiskMode;
+
     public VmwareDiskConfig withVmdkDiskMode(String vmdkDiskMode) {
         this.vmdkDiskMode = vmdkDiskMode;
         return this;
     }
     
+    public VmwareDiskConfig(){}
 }

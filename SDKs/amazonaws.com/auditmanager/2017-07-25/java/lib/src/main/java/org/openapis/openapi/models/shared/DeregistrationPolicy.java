@@ -15,9 +15,11 @@ public class DeregistrationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteResources")
     public DeleteResourcesEnum deleteResources;
+
     public DeregistrationPolicy withDeleteResources(DeleteResourcesEnum deleteResources) {
         this.deleteResources = deleteResources;
         return this;
     }
     
+    public DeregistrationPolicy(){}
 }

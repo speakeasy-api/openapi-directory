@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDeliveryChannelResponse {
     
     public String contentType;
+
     public DeleteDeliveryChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDeliveryChannelResponse {
      */
     
     public Object lastDeliveryChannelDeleteFailedException;
+
     public DeleteDeliveryChannelResponse withLastDeliveryChannelDeleteFailedException(Object lastDeliveryChannelDeleteFailedException) {
         this.lastDeliveryChannelDeleteFailedException = lastDeliveryChannelDeleteFailedException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDeliveryChannelResponse {
      */
     
     public Object noSuchDeliveryChannelException;
+
     public DeleteDeliveryChannelResponse withNoSuchDeliveryChannelException(Object noSuchDeliveryChannelException) {
         this.noSuchDeliveryChannelException = noSuchDeliveryChannelException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteDeliveryChannelResponse {
     
     
     public Integer statusCode;
+
     public DeleteDeliveryChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteDeliveryChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDeliveryChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDeliveryChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

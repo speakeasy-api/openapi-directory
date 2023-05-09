@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJuniperSwitchRequest {
@@ -12,9 +13,13 @@ public class GetJuniperSwitchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetJuniperSwitchRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetJuniperSwitchRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

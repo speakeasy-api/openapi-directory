@@ -18,9 +18,11 @@ public class FormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quizSettings")
     public QuizSettings quizSettings;
+
     public FormSettings withQuizSettings(QuizSettings quizSettings) {
         this.quizSettings = quizSettings;
         return this;
     }
     
+    public FormSettings(){}
 }

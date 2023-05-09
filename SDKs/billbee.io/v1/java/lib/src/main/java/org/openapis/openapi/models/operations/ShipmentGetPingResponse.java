@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ShipmentGetPingResponse {
     
     public String contentType;
+
     public ShipmentGetPingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ShipmentGetPingResponse {
      */
     
     public java.util.Map<String, Object> shipmentGetPing200ApplicationJSONObject;
+
     public ShipmentGetPingResponse withShipmentGetPing200ApplicationJSONObject(java.util.Map<String, Object> shipmentGetPing200ApplicationJSONObject) {
         this.shipmentGetPing200ApplicationJSONObject = shipmentGetPing200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ShipmentGetPingResponse {
      */
     
     public java.util.Map<String, Object> shipmentGetPing200TextJSONObject;
+
     public ShipmentGetPingResponse withShipmentGetPing200TextJSONObject(java.util.Map<String, Object> shipmentGetPing200TextJSONObject) {
         this.shipmentGetPing200TextJSONObject = shipmentGetPing200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ShipmentGetPingResponse {
     
     
     public Integer statusCode;
+
     public ShipmentGetPingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ShipmentGetPingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ShipmentGetPingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ShipmentGetPingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

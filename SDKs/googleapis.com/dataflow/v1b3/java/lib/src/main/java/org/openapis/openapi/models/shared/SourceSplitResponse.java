@@ -18,6 +18,7 @@ public class SourceSplitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public DerivedSource[] bundles;
+
     public SourceSplitResponse withBundles(DerivedSource[] bundles) {
         this.bundles = bundles;
         return this;
@@ -29,6 +30,7 @@ public class SourceSplitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome")
     public SourceSplitResponseOutcomeEnum outcome;
+
     public SourceSplitResponse withOutcome(SourceSplitResponseOutcomeEnum outcome) {
         this.outcome = outcome;
         return this;
@@ -40,9 +42,11 @@ public class SourceSplitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shards")
     public SourceSplitShard[] shards;
+
     public SourceSplitResponse withShards(SourceSplitShard[] shards) {
         this.shards = shards;
         return this;
     }
     
+    public SourceSplitResponse(){}
 }

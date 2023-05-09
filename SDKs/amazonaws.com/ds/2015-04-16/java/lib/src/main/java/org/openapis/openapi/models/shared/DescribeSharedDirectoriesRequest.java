@@ -12,6 +12,7 @@ public class DescribeSharedDirectoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeSharedDirectoriesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class DescribeSharedDirectoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSharedDirectoriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class DescribeSharedDirectoriesRequest {
     
     @JsonProperty("OwnerDirectoryId")
     public String ownerDirectoryId;
+
     public DescribeSharedDirectoriesRequest withOwnerDirectoryId(String ownerDirectoryId) {
         this.ownerDirectoryId = ownerDirectoryId;
         return this;
@@ -35,9 +38,13 @@ public class DescribeSharedDirectoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedDirectoryIds")
     public String[] sharedDirectoryIds;
+
     public DescribeSharedDirectoriesRequest withSharedDirectoryIds(String[] sharedDirectoryIds) {
         this.sharedDirectoryIds = sharedDirectoryIds;
         return this;
     }
     
+    public DescribeSharedDirectoriesRequest(@JsonProperty("OwnerDirectoryId") String ownerDirectoryId) {
+        this.ownerDirectoryId = ownerDirectoryId;
+  }
 }

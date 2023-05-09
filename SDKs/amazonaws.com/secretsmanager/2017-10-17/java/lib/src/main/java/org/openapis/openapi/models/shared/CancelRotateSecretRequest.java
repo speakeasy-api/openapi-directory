@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelRotateSecretRequest {
     @JsonProperty("SecretId")
     public String secretId;
+
     public CancelRotateSecretRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public CancelRotateSecretRequest(@JsonProperty("SecretId") String secretId) {
+        this.secretId = secretId;
+  }
 }

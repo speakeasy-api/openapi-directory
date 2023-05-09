@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IsKeywordAvailableRequest {
@@ -12,9 +13,13 @@ public class IsKeywordAvailableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keyword")
     public String keyword;
+
     public IsKeywordAvailableRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
     
+    public IsKeywordAvailableRequest(@JsonProperty("keyword") String keyword) {
+        this.keyword = keyword;
+  }
 }

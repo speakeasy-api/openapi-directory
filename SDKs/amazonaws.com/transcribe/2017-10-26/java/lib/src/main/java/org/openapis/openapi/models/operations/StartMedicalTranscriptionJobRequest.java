@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartMedicalTranscriptionJobRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StartMedicalTranscriptionJobRequest startMedicalTranscriptionJobRequest;
+
     public StartMedicalTranscriptionJobRequest withStartMedicalTranscriptionJobRequest(org.openapis.openapi.models.shared.StartMedicalTranscriptionJobRequest startMedicalTranscriptionJobRequest) {
         this.startMedicalTranscriptionJobRequest = startMedicalTranscriptionJobRequest;
         return this;
@@ -16,6 +18,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartMedicalTranscriptionJobRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartMedicalTranscriptionJobRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartMedicalTranscriptionJobRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartMedicalTranscriptionJobRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartMedicalTranscriptionJobRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartMedicalTranscriptionJobRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartMedicalTranscriptionJobRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class StartMedicalTranscriptionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public StartMedicalTranscriptionJobXAmzTargetEnum xAmzTarget;
+
     public StartMedicalTranscriptionJobRequest withXAmzTarget(StartMedicalTranscriptionJobXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public StartMedicalTranscriptionJobRequest(@JsonProperty("StartMedicalTranscriptionJobRequest") org.openapis.openapi.models.shared.StartMedicalTranscriptionJobRequest startMedicalTranscriptionJobRequest, @JsonProperty("X-Amz-Target") StartMedicalTranscriptionJobXAmzTargetEnum xAmzTarget) {
+        this.startMedicalTranscriptionJobRequest = startMedicalTranscriptionJobRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgasMemoryInfo {
     
     public Long sizeInMiB;
+
     public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgasMemoryInfo withSizeInMiB(Long sizeInMiB) {
         this.sizeInMiB = sizeInMiB;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgasMemoryInfo(){}
 }

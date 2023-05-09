@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBSecurityGroupMembershipList {
     
     public String dbSecurityGroupName;
+
     public DBSecurityGroupMembershipList withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -19,9 +20,11 @@ public class DBSecurityGroupMembershipList {
     
     
     public String status;
+
     public DBSecurityGroupMembershipList withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DBSecurityGroupMembershipList(){}
 }

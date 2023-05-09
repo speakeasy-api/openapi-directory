@@ -18,6 +18,7 @@ public class PolicyBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member")
     public String member;
+
     public PolicyBinding withMember(String member) {
         this.member = member;
         return this;
@@ -29,9 +30,11 @@ public class PolicyBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public PolicyBinding withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public PolicyBinding(){}
 }

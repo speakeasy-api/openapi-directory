@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TaskListResponse {
@@ -12,6 +13,7 @@ public class TaskListResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public TaskListResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class TaskListResponse {
     
     
     public org.openapis.openapi.models.shared.CloudTaskListResult cloudTaskListResult;
+
     public TaskListResponse withCloudTaskListResult(org.openapis.openapi.models.shared.CloudTaskListResult cloudTaskListResult) {
         this.cloudTaskListResult = cloudTaskListResult;
         return this;
@@ -26,6 +29,7 @@ public class TaskListResponse {
     
     
     public String contentType;
+
     public TaskListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class TaskListResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TaskListResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class TaskListResponse {
     
     
     public Integer statusCode;
+
     public TaskListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class TaskListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TaskListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TaskListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

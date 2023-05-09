@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWFSInventoryRequest {
@@ -12,6 +13,7 @@ public class GetWFSInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
     public String wmConsumerChannelType;
+
     public GetWFSInventoryRequest withWmConsumerChannelType(String wmConsumerChannelType) {
         this.wmConsumerChannelType = wmConsumerChannelType;
         return this;
@@ -22,6 +24,7 @@ public class GetWFSInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
     public String wmQosCorrelationId;
+
     public GetWFSInventoryRequest withWmQosCorrelationId(String wmQosCorrelationId) {
         this.wmQosCorrelationId = wmQosCorrelationId;
         return this;
@@ -32,6 +35,7 @@ public class GetWFSInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
     public String wmSecAccessToken;
+
     public GetWFSInventoryRequest withWmSecAccessToken(String wmSecAccessToken) {
         this.wmSecAccessToken = wmSecAccessToken;
         return this;
@@ -42,6 +46,7 @@ public class GetWFSInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
     public String wmSvcName;
+
     public GetWFSInventoryRequest withWmSvcName(String wmSvcName) {
         this.wmSvcName = wmSvcName;
         return this;
@@ -52,6 +57,7 @@ public class GetWFSInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromModifiedDate")
     public String fromModifiedDate;
+
     public GetWFSInventoryRequest withFromModifiedDate(String fromModifiedDate) {
         this.fromModifiedDate = fromModifiedDate;
         return this;
@@ -62,6 +68,7 @@ public class GetWFSInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetWFSInventoryRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -72,16 +79,18 @@ public class GetWFSInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetWFSInventoryRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
     /**
-     * An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&amp;', "'", '(', ')', '*', '+', ',', ';', '=', \u2018 \u2019 as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
+     * An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&amp;', "'", '(', ')', '*', '+', ',', ';', '=', ‘ ’ as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sku")
     public String sku;
+
     public GetWFSInventoryRequest withSku(String sku) {
         this.sku = sku;
         return this;
@@ -92,9 +101,15 @@ public class GetWFSInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toModifiedDate")
     public String toModifiedDate;
+
     public GetWFSInventoryRequest withToModifiedDate(String toModifiedDate) {
         this.toModifiedDate = toModifiedDate;
         return this;
     }
     
+    public GetWFSInventoryRequest(@JsonProperty("WM_QOS.CORRELATION_ID") String wmQosCorrelationId, @JsonProperty("WM_SEC.ACCESS_TOKEN") String wmSecAccessToken, @JsonProperty("WM_SVC.NAME") String wmSvcName) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        this.wmSecAccessToken = wmSecAccessToken;
+        this.wmSvcName = wmSvcName;
+  }
 }

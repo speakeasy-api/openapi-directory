@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveAttributesFromFindingsResponse {
@@ -12,6 +13,7 @@ public class RemoveAttributesFromFindingsResponse {
      */
     
     public Object accessDeniedException;
+
     public RemoveAttributesFromFindingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveAttributesFromFindingsResponse {
     
     
     public String contentType;
+
     public RemoveAttributesFromFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveAttributesFromFindingsResponse {
      */
     
     public Object internalException;
+
     public RemoveAttributesFromFindingsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveAttributesFromFindingsResponse {
      */
     
     public Object invalidInputException;
+
     public RemoveAttributesFromFindingsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveAttributesFromFindingsResponse {
      */
     
     public Object noSuchEntityException;
+
     public RemoveAttributesFromFindingsResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveAttributesFromFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveAttributesFromFindingsResponse removeAttributesFromFindingsResponse;
+
     public RemoveAttributesFromFindingsResponse withRemoveAttributesFromFindingsResponse(org.openapis.openapi.models.shared.RemoveAttributesFromFindingsResponse removeAttributesFromFindingsResponse) {
         this.removeAttributesFromFindingsResponse = removeAttributesFromFindingsResponse;
         return this;
@@ -69,6 +76,7 @@ public class RemoveAttributesFromFindingsResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public RemoveAttributesFromFindingsResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class RemoveAttributesFromFindingsResponse {
     
     
     public Integer statusCode;
+
     public RemoveAttributesFromFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RemoveAttributesFromFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveAttributesFromFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveAttributesFromFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

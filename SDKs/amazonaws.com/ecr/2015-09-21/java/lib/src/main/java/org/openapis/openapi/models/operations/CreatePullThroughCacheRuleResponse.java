@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePullThroughCacheRuleResponse {
     
     public String contentType;
+
     public CreatePullThroughCacheRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePullThroughCacheRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePullThroughCacheRuleResponse createPullThroughCacheRuleResponse;
+
     public CreatePullThroughCacheRuleResponse withCreatePullThroughCacheRuleResponse(org.openapis.openapi.models.shared.CreatePullThroughCacheRuleResponse createPullThroughCacheRuleResponse) {
         this.createPullThroughCacheRuleResponse = createPullThroughCacheRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreatePullThroughCacheRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public CreatePullThroughCacheRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePullThroughCacheRuleResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePullThroughCacheRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePullThroughCacheRuleResponse {
      */
     
     public Object pullThroughCacheRuleAlreadyExistsException;
+
     public CreatePullThroughCacheRuleResponse withPullThroughCacheRuleAlreadyExistsException(Object pullThroughCacheRuleAlreadyExistsException) {
         this.pullThroughCacheRuleAlreadyExistsException = pullThroughCacheRuleAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePullThroughCacheRuleResponse {
      */
     
     public Object serverException;
+
     public CreatePullThroughCacheRuleResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class CreatePullThroughCacheRuleResponse {
     
     
     public Integer statusCode;
+
     public CreatePullThroughCacheRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreatePullThroughCacheRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePullThroughCacheRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreatePullThroughCacheRuleResponse {
      */
     
     public Object unsupportedUpstreamRegistryException;
+
     public CreatePullThroughCacheRuleResponse withUnsupportedUpstreamRegistryException(Object unsupportedUpstreamRegistryException) {
         this.unsupportedUpstreamRegistryException = unsupportedUpstreamRegistryException;
         return this;
@@ -93,9 +103,14 @@ public class CreatePullThroughCacheRuleResponse {
      */
     
     public Object validationException;
+
     public CreatePullThroughCacheRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePullThroughCacheRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

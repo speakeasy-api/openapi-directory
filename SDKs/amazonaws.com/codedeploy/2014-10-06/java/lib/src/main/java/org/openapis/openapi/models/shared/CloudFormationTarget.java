@@ -20,6 +20,7 @@ public class CloudFormationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public CloudFormationTarget withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -30,6 +31,7 @@ public class CloudFormationTarget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public CloudFormationTarget withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -38,6 +40,7 @@ public class CloudFormationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleEvents")
     public LifecycleEvent[] lifecycleEvents;
+
     public CloudFormationTarget withLifecycleEvents(LifecycleEvent[] lifecycleEvents) {
         this.lifecycleEvents = lifecycleEvents;
         return this;
@@ -46,6 +49,7 @@ public class CloudFormationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public CloudFormationTarget withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -54,6 +58,7 @@ public class CloudFormationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TargetStatusEnum status;
+
     public CloudFormationTarget withStatus(TargetStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +67,7 @@ public class CloudFormationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public String targetId;
+
     public CloudFormationTarget withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -70,9 +76,11 @@ public class CloudFormationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetVersionWeight")
     public Double targetVersionWeight;
+
     public CloudFormationTarget withTargetVersionWeight(Double targetVersionWeight) {
         this.targetVersionWeight = targetVersionWeight;
         return this;
     }
     
+    public CloudFormationTarget(){}
 }

@@ -15,6 +15,7 @@ public class TaskTimeCardVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_id")
     public Long taskId;
+
     public TaskTimeCardVO withTaskId(Long taskId) {
         this.taskId = taskId;
         return this;
@@ -23,9 +24,11 @@ public class TaskTimeCardVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_name")
     public String taskName;
+
     public TaskTimeCardVO withTaskName(String taskName) {
         this.taskName = taskName;
         return this;
     }
     
+    public TaskTimeCardVO(){}
 }

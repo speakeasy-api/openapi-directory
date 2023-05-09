@@ -15,9 +15,11 @@ public class RegistrationsContributorsReadContributorLinks {
      */
     
     public String self;
+
     public RegistrationsContributorsReadContributorLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationsContributorsReadContributorLinks(){}
 }

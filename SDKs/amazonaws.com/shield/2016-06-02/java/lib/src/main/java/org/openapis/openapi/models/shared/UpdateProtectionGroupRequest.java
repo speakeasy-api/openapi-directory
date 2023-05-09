@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateProtectionGroupRequest {
     @JsonProperty("Aggregation")
     public ProtectionGroupAggregationEnum aggregation;
+
     public UpdateProtectionGroupRequest withAggregation(ProtectionGroupAggregationEnum aggregation) {
         this.aggregation = aggregation;
         return this;
@@ -19,6 +20,7 @@ public class UpdateProtectionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Members")
     public String[] members;
+
     public UpdateProtectionGroupRequest withMembers(String[] members) {
         this.members = members;
         return this;
@@ -26,6 +28,7 @@ public class UpdateProtectionGroupRequest {
     
     @JsonProperty("Pattern")
     public ProtectionGroupPatternEnum pattern;
+
     public UpdateProtectionGroupRequest withPattern(ProtectionGroupPatternEnum pattern) {
         this.pattern = pattern;
         return this;
@@ -33,6 +36,7 @@ public class UpdateProtectionGroupRequest {
     
     @JsonProperty("ProtectionGroupId")
     public String protectionGroupId;
+
     public UpdateProtectionGroupRequest withProtectionGroupId(String protectionGroupId) {
         this.protectionGroupId = protectionGroupId;
         return this;
@@ -41,9 +45,15 @@ public class UpdateProtectionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ProtectedResourceTypeEnum resourceType;
+
     public UpdateProtectionGroupRequest withResourceType(ProtectedResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public UpdateProtectionGroupRequest(@JsonProperty("Aggregation") ProtectionGroupAggregationEnum aggregation, @JsonProperty("Pattern") ProtectionGroupPatternEnum pattern, @JsonProperty("ProtectionGroupId") String protectionGroupId) {
+        this.aggregation = aggregation;
+        this.pattern = pattern;
+        this.protectionGroupId = protectionGroupId;
+  }
 }

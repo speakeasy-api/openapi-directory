@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Metric - Represents a specific metric. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Metric {
     
     public MetricDimension[] dimensions;
+
     public Metric withDimensions(MetricDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -19,6 +20,7 @@ public class Metric {
     
     
     public String metricName;
+
     public Metric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -26,9 +28,14 @@ public class Metric {
     
     
     public String namespace;
+
     public Metric withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public Metric(@JsonProperty("MetricName") String metricName, @JsonProperty("Namespace") String namespace) {
+        this.metricName = metricName;
+        this.namespace = namespace;
+  }
 }

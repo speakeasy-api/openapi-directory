@@ -12,6 +12,7 @@ public class DeregisterContainerInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public DeregisterContainerInstanceRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,6 +20,7 @@ public class DeregisterContainerInstanceRequest {
     
     @JsonProperty("containerInstance")
     public String containerInstance;
+
     public DeregisterContainerInstanceRequest withContainerInstance(String containerInstance) {
         this.containerInstance = containerInstance;
         return this;
@@ -27,9 +29,13 @@ public class DeregisterContainerInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public DeregisterContainerInstanceRequest withForce(Boolean force) {
         this.force = force;
         return this;
     }
     
+    public DeregisterContainerInstanceRequest(@JsonProperty("containerInstance") String containerInstance) {
+        this.containerInstance = containerInstance;
+  }
 }

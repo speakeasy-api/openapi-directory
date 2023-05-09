@@ -15,6 +15,7 @@ public class ListGrantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Grants")
     public GrantListEntry[] grants;
+
     public ListGrantsResponse withGrants(GrantListEntry[] grants) {
         this.grants = grants;
         return this;
@@ -23,6 +24,7 @@ public class ListGrantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListGrantsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -31,9 +33,11 @@ public class ListGrantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Truncated")
     public Boolean truncated;
+
     public ListGrantsResponse withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public ListGrantsResponse(){}
 }

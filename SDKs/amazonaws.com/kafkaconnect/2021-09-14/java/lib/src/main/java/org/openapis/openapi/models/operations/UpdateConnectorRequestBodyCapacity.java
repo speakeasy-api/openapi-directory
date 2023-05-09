@@ -15,6 +15,7 @@ public class UpdateConnectorRequestBodyCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaling")
     public org.openapis.openapi.models.shared.AutoScalingUpdate autoScaling;
+
     public UpdateConnectorRequestBodyCapacity withAutoScaling(org.openapis.openapi.models.shared.AutoScalingUpdate autoScaling) {
         this.autoScaling = autoScaling;
         return this;
@@ -23,9 +24,11 @@ public class UpdateConnectorRequestBodyCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedCapacity")
     public org.openapis.openapi.models.shared.ProvisionedCapacityUpdate provisionedCapacity;
+
     public UpdateConnectorRequestBodyCapacity withProvisionedCapacity(org.openapis.openapi.models.shared.ProvisionedCapacityUpdate provisionedCapacity) {
         this.provisionedCapacity = provisionedCapacity;
         return this;
     }
     
+    public UpdateConnectorRequestBodyCapacity(){}
 }

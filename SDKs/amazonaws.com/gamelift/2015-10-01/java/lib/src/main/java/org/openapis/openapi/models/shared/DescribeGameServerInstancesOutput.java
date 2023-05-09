@@ -15,6 +15,7 @@ public class DescribeGameServerInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerInstances")
     public GameServerInstance[] gameServerInstances;
+
     public DescribeGameServerInstancesOutput withGameServerInstances(GameServerInstance[] gameServerInstances) {
         this.gameServerInstances = gameServerInstances;
         return this;
@@ -23,9 +24,11 @@ public class DescribeGameServerInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeGameServerInstancesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeGameServerInstancesOutput(){}
 }

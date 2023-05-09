@@ -26,6 +26,7 @@ public class UpsertCatalogObjectRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public UpsertCatalogObjectRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -58,9 +59,14 @@ public class UpsertCatalogObjectRequest {
      */
     @JsonProperty("object")
     public CatalogObject object;
+
     public UpsertCatalogObjectRequest withObject(CatalogObject object) {
         this.object = object;
         return this;
     }
     
+    public UpsertCatalogObjectRequest(@JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("object") CatalogObject object) {
+        this.idempotencyKey = idempotencyKey;
+        this.object = object;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateWorldExportJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateWorldExportJobRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateWorldExportJobRequestBody {
      */
     @JsonProperty("iamRole")
     public String iamRole;
+
     public CreateWorldExportJobRequestBody withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -35,6 +37,7 @@ public class CreateWorldExportJobRequestBody {
      */
     @JsonProperty("outputLocation")
     public CreateWorldExportJobRequestBodyOutputLocation outputLocation;
+
     public CreateWorldExportJobRequestBody withOutputLocation(CreateWorldExportJobRequestBodyOutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -46,6 +49,7 @@ public class CreateWorldExportJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorldExportJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -56,9 +60,15 @@ public class CreateWorldExportJobRequestBody {
      */
     @JsonProperty("worlds")
     public String[] worlds;
+
     public CreateWorldExportJobRequestBody withWorlds(String[] worlds) {
         this.worlds = worlds;
         return this;
     }
     
+    public CreateWorldExportJobRequestBody(@JsonProperty("iamRole") String iamRole, @JsonProperty("outputLocation") CreateWorldExportJobRequestBodyOutputLocation outputLocation, @JsonProperty("worlds") String[] worlds) {
+        this.iamRole = iamRole;
+        this.outputLocation = outputLocation;
+        this.worlds = worlds;
+  }
 }

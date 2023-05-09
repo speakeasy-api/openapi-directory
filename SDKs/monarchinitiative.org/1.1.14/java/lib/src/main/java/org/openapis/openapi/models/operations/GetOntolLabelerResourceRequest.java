@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntolLabelerResourceRequest {
@@ -12,9 +13,13 @@ public class GetOntolLabelerResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public GetOntolLabelerResourceRequest withId(String[] id) {
         this.id = id;
         return this;
     }
     
+    public GetOntolLabelerResourceRequest(@JsonProperty("id") String[] id) {
+        this.id = id;
+  }
 }

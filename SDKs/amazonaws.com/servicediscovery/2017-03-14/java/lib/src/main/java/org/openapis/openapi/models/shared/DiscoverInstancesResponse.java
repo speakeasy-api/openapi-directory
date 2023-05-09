@@ -15,9 +15,11 @@ public class DiscoverInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Instances")
     public HttpInstanceSummary[] instances;
+
     public DiscoverInstancesResponse withInstances(HttpInstanceSummary[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public DiscoverInstancesResponse(){}
 }

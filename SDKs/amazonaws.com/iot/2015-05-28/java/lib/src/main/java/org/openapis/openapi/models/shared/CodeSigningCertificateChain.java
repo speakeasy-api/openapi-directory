@@ -15,6 +15,7 @@ public class CodeSigningCertificateChain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateName")
     public String certificateName;
+
     public CodeSigningCertificateChain withCertificateName(String certificateName) {
         this.certificateName = certificateName;
         return this;
@@ -23,9 +24,11 @@ public class CodeSigningCertificateChain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineDocument")
     public String inlineDocument;
+
     public CodeSigningCertificateChain withInlineDocument(String inlineDocument) {
         this.inlineDocument = inlineDocument;
         return this;
     }
     
+    public CodeSigningCertificateChain(){}
 }

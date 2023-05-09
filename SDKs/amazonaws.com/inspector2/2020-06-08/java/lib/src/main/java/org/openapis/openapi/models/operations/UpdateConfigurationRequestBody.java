@@ -12,9 +12,13 @@ public class UpdateConfigurationRequestBody {
      */
     @JsonProperty("ecrConfiguration")
     public UpdateConfigurationRequestBodyEcrConfiguration ecrConfiguration;
+
     public UpdateConfigurationRequestBody withEcrConfiguration(UpdateConfigurationRequestBodyEcrConfiguration ecrConfiguration) {
         this.ecrConfiguration = ecrConfiguration;
         return this;
     }
     
+    public UpdateConfigurationRequestBody(@JsonProperty("ecrConfiguration") UpdateConfigurationRequestBodyEcrConfiguration ecrConfiguration) {
+        this.ecrConfiguration = ecrConfiguration;
+  }
 }

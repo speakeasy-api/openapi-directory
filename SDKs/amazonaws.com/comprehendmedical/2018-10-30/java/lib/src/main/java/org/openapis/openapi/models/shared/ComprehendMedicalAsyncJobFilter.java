@@ -20,6 +20,7 @@ public class ComprehendMedicalAsyncJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public ComprehendMedicalAsyncJobFilter withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -28,6 +29,7 @@ public class ComprehendMedicalAsyncJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public ComprehendMedicalAsyncJobFilter withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -38,6 +40,7 @@ public class ComprehendMedicalAsyncJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeAfter")
     public OffsetDateTime submitTimeAfter;
+
     public ComprehendMedicalAsyncJobFilter withSubmitTimeAfter(OffsetDateTime submitTimeAfter) {
         this.submitTimeAfter = submitTimeAfter;
         return this;
@@ -48,9 +51,11 @@ public class ComprehendMedicalAsyncJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeBefore")
     public OffsetDateTime submitTimeBefore;
+
     public ComprehendMedicalAsyncJobFilter withSubmitTimeBefore(OffsetDateTime submitTimeBefore) {
         this.submitTimeBefore = submitTimeBefore;
         return this;
     }
     
+    public ComprehendMedicalAsyncJobFilter(){}
 }

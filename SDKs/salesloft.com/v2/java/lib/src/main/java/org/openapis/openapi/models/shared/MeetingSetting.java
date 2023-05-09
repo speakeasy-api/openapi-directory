@@ -12,6 +12,7 @@ import java.time.LocalDate;
 public class MeetingSetting {
     
     public MeetingUrl activeMeetingUrl;
+
     public MeetingSetting withActiveMeetingUrl(MeetingUrl activeMeetingUrl) {
         this.activeMeetingUrl = activeMeetingUrl;
         return this;
@@ -22,6 +23,7 @@ public class MeetingSetting {
      */
     
     public Boolean allowBookingOnBehalf;
+
     public MeetingSetting withAllowBookingOnBehalf(Boolean allowBookingOnBehalf) {
         this.allowBookingOnBehalf = allowBookingOnBehalf;
         return this;
@@ -32,6 +34,7 @@ public class MeetingSetting {
      */
     
     public Boolean allowBookingOvertime;
+
     public MeetingSetting withAllowBookingOvertime(Boolean allowBookingOvertime) {
         this.allowBookingOvertime = allowBookingOvertime;
         return this;
@@ -42,6 +45,7 @@ public class MeetingSetting {
      */
     
     public Boolean allowEventOverlap;
+
     public MeetingSetting withAllowEventOverlap(Boolean allowEventOverlap) {
         this.allowEventOverlap = allowEventOverlap;
         return this;
@@ -52,6 +56,7 @@ public class MeetingSetting {
      */
     
     public Long availabilityLimit;
+
     public MeetingSetting withAvailabilityLimit(Long availabilityLimit) {
         this.availabilityLimit = availabilityLimit;
         return this;
@@ -62,6 +67,7 @@ public class MeetingSetting {
      */
     
     public Boolean availabilityLimitEnabled;
+
     public MeetingSetting withAvailabilityLimitEnabled(Boolean availabilityLimitEnabled) {
         this.availabilityLimitEnabled = availabilityLimitEnabled;
         return this;
@@ -72,6 +78,7 @@ public class MeetingSetting {
      */
     
     public Long bufferTimeDuration;
+
     public MeetingSetting withBufferTimeDuration(Long bufferTimeDuration) {
         this.bufferTimeDuration = bufferTimeDuration;
         return this;
@@ -82,6 +89,7 @@ public class MeetingSetting {
      */
     
     public String calendarType;
+
     public MeetingSetting withCalendarType(String calendarType) {
         this.calendarType = calendarType;
         return this;
@@ -92,6 +100,7 @@ public class MeetingSetting {
      */
     
     public LocalDate createdAt;
+
     public MeetingSetting withCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -102,6 +111,7 @@ public class MeetingSetting {
      */
     
     public Long defaultMeetingLength;
+
     public MeetingSetting withDefaultMeetingLength(Long defaultMeetingLength) {
         this.defaultMeetingLength = defaultMeetingLength;
         return this;
@@ -112,6 +122,7 @@ public class MeetingSetting {
      */
     
     public String description;
+
     public MeetingSetting withDescription(String description) {
         this.description = description;
         return this;
@@ -122,6 +133,7 @@ public class MeetingSetting {
      */
     
     public String emailAddress;
+
     public MeetingSetting withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -132,6 +144,7 @@ public class MeetingSetting {
      */
     
     public Boolean enableCalendarSync;
+
     public MeetingSetting withEnableCalendarSync(Boolean enableCalendarSync) {
         this.enableCalendarSync = enableCalendarSync;
         return this;
@@ -142,6 +155,7 @@ public class MeetingSetting {
      */
     
     public Boolean enableDynamicLocation;
+
     public MeetingSetting withEnableDynamicLocation(Boolean enableDynamicLocation) {
         this.enableDynamicLocation = enableDynamicLocation;
         return this;
@@ -152,6 +166,7 @@ public class MeetingSetting {
      */
     
     public Long id;
+
     public MeetingSetting withId(Long id) {
         this.id = id;
         return this;
@@ -162,6 +177,7 @@ public class MeetingSetting {
      */
     
     public String location;
+
     public MeetingSetting withLocation(String location) {
         this.location = location;
         return this;
@@ -172,6 +188,7 @@ public class MeetingSetting {
      */
     
     public Boolean primaryCalendarConnectionFailed;
+
     public MeetingSetting withPrimaryCalendarConnectionFailed(Boolean primaryCalendarConnectionFailed) {
         this.primaryCalendarConnectionFailed = primaryCalendarConnectionFailed;
         return this;
@@ -182,6 +199,7 @@ public class MeetingSetting {
      */
     
     public String primaryCalendarId;
+
     public MeetingSetting withPrimaryCalendarId(String primaryCalendarId) {
         this.primaryCalendarId = primaryCalendarId;
         return this;
@@ -192,8 +210,20 @@ public class MeetingSetting {
      */
     
     public String primaryCalendarName;
+
     public MeetingSetting withPrimaryCalendarName(String primaryCalendarName) {
         this.primaryCalendarName = primaryCalendarName;
+        return this;
+    }
+    
+    /**
+     * Determines if a user enabled reschedule meetings feature
+     */
+    
+    public Boolean rescheduleMeetingsEnabled;
+
+    public MeetingSetting withRescheduleMeetingsEnabled(Boolean rescheduleMeetingsEnabled) {
+        this.rescheduleMeetingsEnabled = rescheduleMeetingsEnabled;
         return this;
     }
     
@@ -202,6 +232,7 @@ public class MeetingSetting {
      */
     
     public Boolean scheduleBufferEnabled;
+
     public MeetingSetting withScheduleBufferEnabled(Boolean scheduleBufferEnabled) {
         this.scheduleBufferEnabled = scheduleBufferEnabled;
         return this;
@@ -212,6 +243,7 @@ public class MeetingSetting {
      */
     
     public Long scheduleDelay;
+
     public MeetingSetting withScheduleDelay(Long scheduleDelay) {
         this.scheduleDelay = scheduleDelay;
         return this;
@@ -222,6 +254,7 @@ public class MeetingSetting {
      */
     
     public Boolean shareEventDetail;
+
     public MeetingSetting withShareEventDetail(Boolean shareEventDetail) {
         this.shareEventDetail = shareEventDetail;
         return this;
@@ -232,6 +265,7 @@ public class MeetingSetting {
      */
     
     public String timeZone;
+
     public MeetingSetting withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -242,6 +276,7 @@ public class MeetingSetting {
      */
     
     public java.util.Map<String, Object> timesAvailable;
+
     public MeetingSetting withTimesAvailable(java.util.Map<String, Object> timesAvailable) {
         this.timesAvailable = timesAvailable;
         return this;
@@ -252,6 +287,7 @@ public class MeetingSetting {
      */
     
     public String title;
+
     public MeetingSetting withTitle(String title) {
         this.title = title;
         return this;
@@ -262,6 +298,7 @@ public class MeetingSetting {
      */
     
     public LocalDate updatedAt;
+
     public MeetingSetting withUpdatedAt(LocalDate updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -269,6 +306,7 @@ public class MeetingSetting {
     
     
     public EmbeddedResource user;
+
     public MeetingSetting withUser(EmbeddedResource user) {
         this.user = user;
         return this;
@@ -279,6 +317,7 @@ public class MeetingSetting {
      */
     
     public java.util.Map<String, Object> userDetails;
+
     public MeetingSetting withUserDetails(java.util.Map<String, Object> userDetails) {
         this.userDetails = userDetails;
         return this;
@@ -289,9 +328,11 @@ public class MeetingSetting {
      */
     
     public String userSlug;
+
     public MeetingSetting withUserSlug(String userSlug) {
         this.userSlug = userSlug;
         return this;
     }
     
+    public MeetingSetting(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcesTagsIdRelatedFormatResponse {
     
     public String contentType;
+
     public GetResourcesTagsIdRelatedFormatResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetResourcesTagsIdRelatedFormatResponse {
     
     
     public Integer statusCode;
+
     public GetResourcesTagsIdRelatedFormatResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetResourcesTagsIdRelatedFormatResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcesTagsIdRelatedFormatResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetResourcesTagsIdRelatedFormatResponse {
      */
     
     public org.openapis.openapi.models.shared.TagMarshallerWrapped[] tagMarshallerWrappeds;
+
     public GetResourcesTagsIdRelatedFormatResponse withTagMarshallerWrappeds(org.openapis.openapi.models.shared.TagMarshallerWrapped[] tagMarshallerWrappeds) {
         this.tagMarshallerWrappeds = tagMarshallerWrappeds;
         return this;
     }
     
+    public GetResourcesTagsIdRelatedFormatResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

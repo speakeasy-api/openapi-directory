@@ -15,6 +15,7 @@ public class JobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public JobFilterNameEnum name;
+
     public JobFilter withName(JobFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class JobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public JobFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public JobFilter(){}
 }

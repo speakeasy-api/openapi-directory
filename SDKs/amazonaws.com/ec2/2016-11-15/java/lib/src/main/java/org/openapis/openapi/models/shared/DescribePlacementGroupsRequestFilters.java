@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePlacementGroupsRequestFilters {
     
     public String name;
+
     public DescribePlacementGroupsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribePlacementGroupsRequestFilters {
     
     
     public String[] values;
+
     public DescribePlacementGroupsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribePlacementGroupsRequestFilters(){}
 }

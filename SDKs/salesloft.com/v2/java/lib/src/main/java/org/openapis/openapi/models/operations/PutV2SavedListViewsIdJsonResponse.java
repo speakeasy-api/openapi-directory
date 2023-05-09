@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutV2SavedListViewsIdJsonResponse {
     
     public byte[] body;
+
     public PutV2SavedListViewsIdJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PutV2SavedListViewsIdJsonResponse {
     
     
     public String contentType;
+
     public PutV2SavedListViewsIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PutV2SavedListViewsIdJsonResponse {
     
     
     public Integer statusCode;
+
     public PutV2SavedListViewsIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PutV2SavedListViewsIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutV2SavedListViewsIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutV2SavedListViewsIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

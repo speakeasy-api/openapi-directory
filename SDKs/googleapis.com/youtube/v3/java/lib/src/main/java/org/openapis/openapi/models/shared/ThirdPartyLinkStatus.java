@@ -15,9 +15,11 @@ public class ThirdPartyLinkStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkStatus")
     public ThirdPartyLinkStatusLinkStatusEnum linkStatus;
+
     public ThirdPartyLinkStatus withLinkStatus(ThirdPartyLinkStatusLinkStatusEnum linkStatus) {
         this.linkStatus = linkStatus;
         return this;
     }
     
+    public ThirdPartyLinkStatus(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DisableLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledPolicy")
     public GoogleAppsDriveLabelsV2LifecycleDisabledPolicy disabledPolicy;
+
     public GoogleAppsDriveLabelsV2DisableLabelRequest withDisabledPolicy(GoogleAppsDriveLabelsV2LifecycleDisabledPolicy disabledPolicy) {
         this.disabledPolicy = disabledPolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2DisableLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleAppsDriveLabelsV2DisableLabelRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2DisableLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleAppsDriveLabelsV2DisableLabelRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2DisableLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAdminAccess")
     public Boolean useAdminAccess;
+
     public GoogleAppsDriveLabelsV2DisableLabelRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsDriveLabelsV2DisableLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeControl")
     public GoogleAppsDriveLabelsV2WriteControl writeControl;
+
     public GoogleAppsDriveLabelsV2DisableLabelRequest withWriteControl(GoogleAppsDriveLabelsV2WriteControl writeControl) {
         this.writeControl = writeControl;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DisableLabelRequest(){}
 }

@@ -18,6 +18,7 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public StructuralElement[] content;
+
     public Header withContent(StructuralElement[] content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerId")
     public String headerId;
+
     public Header withHeaderId(String headerId) {
         this.headerId = headerId;
         return this;
     }
     
+    public Header(){}
 }

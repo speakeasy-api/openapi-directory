@@ -56,4 +56,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1DonationsCreat
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1DonationsCreateFundingSourceEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1DonationsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1DonationsCreateResponse.java
+docs/sdk/README.md
 USAGE.md

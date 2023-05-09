@@ -56,4 +56,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroubleshooterV1betaAccessTuple.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/iam/README.md
 USAGE.md

@@ -17,6 +17,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_rating")
     public Float avgRating;
+
     public Extension withAvgRating(Float avgRating) {
         this.avgRating = avgRating;
         return this;
@@ -25,6 +26,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension_id")
     public Long extensionId;
+
     public Extension withExtensionId(Long extensionId) {
         this.extensionId = extensionId;
         return this;
@@ -33,6 +35,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("install_count")
     public Long installCount;
+
     public Extension withInstallCount(Long installCount) {
         this.installCount = installCount;
         return this;
@@ -41,6 +44,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev_avg_rating")
     public Float prevAvgRating;
+
     public Extension withPrevAvgRating(Float prevAvgRating) {
         this.prevAvgRating = prevAvgRating;
         return this;
@@ -49,6 +53,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev_install_count")
     public Long prevInstallCount;
+
     public Extension withPrevInstallCount(Long prevInstallCount) {
         this.prevInstallCount = prevInstallCount;
         return this;
@@ -57,6 +62,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev_rating_count")
     public Long prevRatingCount;
+
     public Extension withPrevRatingCount(Long prevRatingCount) {
         this.prevRatingCount = prevRatingCount;
         return this;
@@ -65,6 +71,7 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating_count")
     public Long ratingCount;
+
     public Extension withRatingCount(Long ratingCount) {
         this.ratingCount = ratingCount;
         return this;
@@ -75,6 +82,7 @@ public class Extension {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("update_ts")
     public OffsetDateTime updateTs;
+
     public Extension withUpdateTs(OffsetDateTime updateTs) {
         this.updateTs = updateTs;
         return this;
@@ -83,9 +91,11 @@ public class Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Extension withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Extension(){}
 }

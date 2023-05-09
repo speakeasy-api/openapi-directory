@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInterconnectResponse {
     
     public String contentType;
+
     public CreateInterconnectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateInterconnectResponse {
      */
     
     public Object directConnectClientException;
+
     public CreateInterconnectResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class CreateInterconnectResponse {
      */
     
     public Object directConnectServerException;
+
     public CreateInterconnectResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateInterconnectResponse {
      */
     
     public Object duplicateTagKeysException;
+
     public CreateInterconnectResponse withDuplicateTagKeysException(Object duplicateTagKeysException) {
         this.duplicateTagKeysException = duplicateTagKeysException;
         return this;
@@ -49,6 +54,7 @@ public class CreateInterconnectResponse {
      */
     
     public org.openapis.openapi.models.shared.Interconnect interconnect;
+
     public CreateInterconnectResponse withInterconnect(org.openapis.openapi.models.shared.Interconnect interconnect) {
         this.interconnect = interconnect;
         return this;
@@ -56,6 +62,7 @@ public class CreateInterconnectResponse {
     
     
     public Integer statusCode;
+
     public CreateInterconnectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateInterconnectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInterconnectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateInterconnectResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateInterconnectResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateInterconnectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

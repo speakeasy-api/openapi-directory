@@ -15,9 +15,11 @@ public class TeamsAddOrUpdateMembershipForUserLegacyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum role;
+
     public TeamsAddOrUpdateMembershipForUserLegacyRequestBody withRole(TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public TeamsAddOrUpdateMembershipForUserLegacyRequestBody(){}
 }

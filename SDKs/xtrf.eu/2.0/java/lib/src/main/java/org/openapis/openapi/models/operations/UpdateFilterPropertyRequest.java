@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFilterPropertyRequest {
@@ -12,6 +13,7 @@ public class UpdateFilterPropertyRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FilterPropertyDTO filterPropertyDTO;
+
     public UpdateFilterPropertyRequest withFilterPropertyDTO(org.openapis.openapi.models.shared.FilterPropertyDTO filterPropertyDTO) {
         this.filterPropertyDTO = filterPropertyDTO;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFilterPropertyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filterProperty")
     public String filterProperty;
+
     public UpdateFilterPropertyRequest withFilterProperty(String filterProperty) {
         this.filterProperty = filterProperty;
         return this;
@@ -32,9 +35,15 @@ public class UpdateFilterPropertyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public UpdateFilterPropertyRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public UpdateFilterPropertyRequest(@JsonProperty("FilterPropertyDTO") org.openapis.openapi.models.shared.FilterPropertyDTO filterPropertyDTO, @JsonProperty("filterProperty") String filterProperty, @JsonProperty("viewId") Long viewId) {
+        this.filterPropertyDTO = filterPropertyDTO;
+        this.filterProperty = filterProperty;
+        this.viewId = viewId;
+  }
 }

@@ -15,9 +15,11 @@ public class SnowflakeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedRegions")
     public String[] supportedRegions;
+
     public SnowflakeMetadata withSupportedRegions(String[] supportedRegions) {
         this.supportedRegions = supportedRegions;
         return this;
     }
     
+    public SnowflakeMetadata(){}
 }

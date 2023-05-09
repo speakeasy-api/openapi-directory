@@ -18,6 +18,7 @@ public class PostVerifyPasswordChangeSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guid")
     public String guid;
+
     public PostVerifyPasswordChangeSample withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -29,9 +30,11 @@ public class PostVerifyPasswordChangeSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public PostVerifyPasswordChangeSample withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public PostVerifyPasswordChangeSample(){}
 }

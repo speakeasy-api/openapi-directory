@@ -15,6 +15,7 @@ public class OrderEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_fields")
     public OrderAdditionalFields[] additionalFields;
+
     public OrderEditFields withAdditionalFields(OrderAdditionalFields[] additionalFields) {
         this.additionalFields = additionalFields;
         return this;
@@ -26,6 +27,7 @@ public class OrderEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_information")
     public String additionalInformation;
+
     public OrderEditFields withAdditionalInformation(String additionalInformation) {
         this.additionalInformation = additionalInformation;
         return this;
@@ -37,6 +39,7 @@ public class OrderEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_status")
     public OrderEditFieldsShipmentStatusEnum shipmentStatus;
+
     public OrderEditFields withShipmentStatus(OrderEditFieldsShipmentStatusEnum shipmentStatus) {
         this.shipmentStatus = shipmentStatus;
         return this;
@@ -48,6 +51,7 @@ public class OrderEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OrderEditFieldsStatusEnum status;
+
     public OrderEditFields withStatus(OrderEditFieldsStatusEnum status) {
         this.status = status;
         return this;
@@ -59,6 +63,7 @@ public class OrderEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_company")
     public String trackingCompany;
+
     public OrderEditFields withTrackingCompany(String trackingCompany) {
         this.trackingCompany = trackingCompany;
         return this;
@@ -70,6 +75,7 @@ public class OrderEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
     public String trackingNumber;
+
     public OrderEditFields withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -81,9 +87,11 @@ public class OrderEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_url")
     public String trackingUrl;
+
     public OrderEditFields withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public OrderEditFields(){}
 }

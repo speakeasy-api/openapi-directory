@@ -12,6 +12,7 @@ public class GameStoreFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("game_id")
     public String gameId;
+
     public GameStoreFull withGameId(String gameId) {
         this.gameId = gameId;
         return this;
@@ -20,6 +21,7 @@ public class GameStoreFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GameStoreFull withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class GameStoreFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store_id")
     public String storeId;
+
     public GameStoreFull withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -35,9 +38,13 @@ public class GameStoreFull {
     
     @JsonProperty("url")
     public String url;
+
     public GameStoreFull withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GameStoreFull(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

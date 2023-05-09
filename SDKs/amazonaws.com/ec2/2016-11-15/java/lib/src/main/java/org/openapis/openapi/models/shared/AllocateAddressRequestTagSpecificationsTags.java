@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AllocateAddressRequestTagSpecificationsTags {
     
     public String key;
+
     public AllocateAddressRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class AllocateAddressRequestTagSpecificationsTags {
     
     
     public String value;
+
     public AllocateAddressRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AllocateAddressRequestTagSpecificationsTags(){}
 }

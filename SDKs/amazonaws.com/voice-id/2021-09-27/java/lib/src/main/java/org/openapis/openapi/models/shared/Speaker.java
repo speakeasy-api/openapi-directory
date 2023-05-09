@@ -22,6 +22,7 @@ public class Speaker {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Speaker withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class Speaker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerSpeakerId")
     public String customerSpeakerId;
+
     public Speaker withCustomerSpeakerId(String customerSpeakerId) {
         this.customerSpeakerId = customerSpeakerId;
         return this;
@@ -38,6 +40,7 @@ public class Speaker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public Speaker withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -46,6 +49,7 @@ public class Speaker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedSpeakerId")
     public String generatedSpeakerId;
+
     public Speaker withGeneratedSpeakerId(String generatedSpeakerId) {
         this.generatedSpeakerId = generatedSpeakerId;
         return this;
@@ -56,6 +60,7 @@ public class Speaker {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessedAt")
     public OffsetDateTime lastAccessedAt;
+
     public Speaker withLastAccessedAt(OffsetDateTime lastAccessedAt) {
         this.lastAccessedAt = lastAccessedAt;
         return this;
@@ -64,6 +69,7 @@ public class Speaker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SpeakerStatusEnum status;
+
     public Speaker withStatus(SpeakerStatusEnum status) {
         this.status = status;
         return this;
@@ -74,9 +80,11 @@ public class Speaker {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public Speaker withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Speaker(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEngineVersionsResponse {
     @JsonProperty("engineVersions")
     public EngineVersionsSummary[] engineVersions;
+
     public ListEngineVersionsResponse withEngineVersions(EngineVersionsSummary[] engineVersions) {
         this.engineVersions = engineVersions;
         return this;
@@ -22,9 +23,13 @@ public class ListEngineVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEngineVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEngineVersionsResponse(@JsonProperty("engineVersions") EngineVersionsSummary[] engineVersions) {
+        this.engineVersions = engineVersions;
+  }
 }

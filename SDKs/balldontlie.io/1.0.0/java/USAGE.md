@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AllGamesExampleParametersRequest;
 import org.openapis.openapi.models.operations.AllGamesExampleParametersResponse;
 
@@ -16,7 +15,7 @@ public class Application {
             AllGamesExampleParametersRequest req = new AllGamesExampleParametersRequest() {{
                 seasons = "2018";
                 teamIds = "1";
-            }}            
+            }};            
 
             AllGamesExampleParametersResponse res = sdk.games.allGamesExampleParameters(req);
 
@@ -26,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

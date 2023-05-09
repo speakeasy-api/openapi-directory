@@ -23,6 +23,7 @@ public class GetWorkerFleetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public GetWorkerFleetResponse withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -33,6 +34,7 @@ public class GetWorkerFleetResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public GetWorkerFleetResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -45,6 +47,7 @@ public class GetWorkerFleetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetWorkerFleetResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +58,7 @@ public class GetWorkerFleetResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public GetWorkerFleetResponse withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +69,7 @@ public class GetWorkerFleetResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public GetWorkerFleetResponse withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +80,7 @@ public class GetWorkerFleetResponse {
      */
     @JsonProperty("site")
     public String site;
+
     public GetWorkerFleetResponse withSite(String site) {
         this.site = site;
         return this;
@@ -87,9 +93,18 @@ public class GetWorkerFleetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public GetWorkerFleetResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetWorkerFleetResponse(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("site") String site, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.name = name;
+        this.site = site;
+        this.updatedAt = updatedAt;
+  }
 }

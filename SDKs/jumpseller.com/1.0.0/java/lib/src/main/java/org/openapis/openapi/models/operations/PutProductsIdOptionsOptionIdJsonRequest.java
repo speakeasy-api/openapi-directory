@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsIdOptionsOptionIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProductOptionEdit productOptionEdit;
+
     public PutProductsIdOptionsOptionIdJsonRequest withProductOptionEdit(org.openapis.openapi.models.shared.ProductOptionEdit productOptionEdit) {
         this.productOptionEdit = productOptionEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutProductsIdOptionsOptionIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutProductsIdOptionsOptionIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class PutProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutProductsIdOptionsOptionIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -52,9 +57,17 @@ public class PutProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=option_id")
     public Integer optionId;
+
     public PutProductsIdOptionsOptionIdJsonRequest withOptionId(Integer optionId) {
         this.optionId = optionId;
         return this;
     }
     
+    public PutProductsIdOptionsOptionIdJsonRequest(@JsonProperty("ProductOptionEdit") org.openapis.openapi.models.shared.ProductOptionEdit productOptionEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login, @JsonProperty("option_id") Integer optionId) {
+        this.productOptionEdit = productOptionEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+        this.optionId = optionId;
+  }
 }

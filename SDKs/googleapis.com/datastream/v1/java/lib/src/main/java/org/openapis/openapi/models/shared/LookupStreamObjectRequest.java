@@ -18,9 +18,11 @@ public class LookupStreamObjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceObjectIdentifier")
     public SourceObjectIdentifier sourceObjectIdentifier;
+
     public LookupStreamObjectRequest withSourceObjectIdentifier(SourceObjectIdentifier sourceObjectIdentifier) {
         this.sourceObjectIdentifier = sourceObjectIdentifier;
         return this;
     }
     
+    public LookupStreamObjectRequest(){}
 }

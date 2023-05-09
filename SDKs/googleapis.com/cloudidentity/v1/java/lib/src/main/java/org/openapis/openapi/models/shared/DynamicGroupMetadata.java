@@ -18,6 +18,7 @@ public class DynamicGroupMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queries")
     public DynamicGroupQuery[] queries;
+
     public DynamicGroupMetadata withQueries(DynamicGroupQuery[] queries) {
         this.queries = queries;
         return this;
@@ -29,9 +30,11 @@ public class DynamicGroupMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DynamicGroupStatus status;
+
     public DynamicGroupMetadata withStatus(DynamicGroupStatus status) {
         this.status = status;
         return this;
     }
     
+    public DynamicGroupMetadata(){}
 }

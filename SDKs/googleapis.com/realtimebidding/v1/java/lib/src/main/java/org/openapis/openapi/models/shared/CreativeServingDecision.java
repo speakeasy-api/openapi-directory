@@ -18,6 +18,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adTechnologyProviders")
     public AdTechnologyProviders adTechnologyProviders;
+
     public CreativeServingDecision withAdTechnologyProviders(AdTechnologyProviders adTechnologyProviders) {
         this.adTechnologyProviders = adTechnologyProviders;
         return this;
@@ -29,6 +30,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chinaPolicyCompliance")
     public PolicyCompliance chinaPolicyCompliance;
+
     public CreativeServingDecision withChinaPolicyCompliance(PolicyCompliance chinaPolicyCompliance) {
         this.chinaPolicyCompliance = chinaPolicyCompliance;
         return this;
@@ -40,6 +42,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealsPolicyCompliance")
     public PolicyCompliance dealsPolicyCompliance;
+
     public CreativeServingDecision withDealsPolicyCompliance(PolicyCompliance dealsPolicyCompliance) {
         this.dealsPolicyCompliance = dealsPolicyCompliance;
         return this;
@@ -51,6 +54,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedAdvertisers")
     public AdvertiserAndBrand[] detectedAdvertisers;
+
     public CreativeServingDecision withDetectedAdvertisers(AdvertiserAndBrand[] detectedAdvertisers) {
         this.detectedAdvertisers = detectedAdvertisers;
         return this;
@@ -62,6 +66,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedAttributes")
     public CreativeServingDecisionDetectedAttributesEnum[] detectedAttributes;
+
     public CreativeServingDecision withDetectedAttributes(CreativeServingDecisionDetectedAttributesEnum[] detectedAttributes) {
         this.detectedAttributes = detectedAttributes;
         return this;
@@ -73,6 +78,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedClickThroughUrls")
     public String[] detectedClickThroughUrls;
+
     public CreativeServingDecision withDetectedClickThroughUrls(String[] detectedClickThroughUrls) {
         this.detectedClickThroughUrls = detectedClickThroughUrls;
         return this;
@@ -84,6 +90,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedDomains")
     public String[] detectedDomains;
+
     public CreativeServingDecision withDetectedDomains(String[] detectedDomains) {
         this.detectedDomains = detectedDomains;
         return this;
@@ -95,6 +102,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public String[] detectedLanguages;
+
     public CreativeServingDecision withDetectedLanguages(String[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -106,6 +114,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedProductCategories")
     public Integer[] detectedProductCategories;
+
     public CreativeServingDecision withDetectedProductCategories(Integer[] detectedProductCategories) {
         this.detectedProductCategories = detectedProductCategories;
         return this;
@@ -117,6 +126,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedSensitiveCategories")
     public Integer[] detectedSensitiveCategories;
+
     public CreativeServingDecision withDetectedSensitiveCategories(Integer[] detectedSensitiveCategories) {
         this.detectedSensitiveCategories = detectedSensitiveCategories;
         return this;
@@ -128,6 +138,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedVendorIds")
     public Integer[] detectedVendorIds;
+
     public CreativeServingDecision withDetectedVendorIds(Integer[] detectedVendorIds) {
         this.detectedVendorIds = detectedVendorIds;
         return this;
@@ -139,6 +150,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStatusUpdate")
     public String lastStatusUpdate;
+
     public CreativeServingDecision withLastStatusUpdate(String lastStatusUpdate) {
         this.lastStatusUpdate = lastStatusUpdate;
         return this;
@@ -150,6 +162,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPolicyCompliance")
     public PolicyCompliance networkPolicyCompliance;
+
     public CreativeServingDecision withNetworkPolicyCompliance(PolicyCompliance networkPolicyCompliance) {
         this.networkPolicyCompliance = networkPolicyCompliance;
         return this;
@@ -161,6 +174,7 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformPolicyCompliance")
     public PolicyCompliance platformPolicyCompliance;
+
     public CreativeServingDecision withPlatformPolicyCompliance(PolicyCompliance platformPolicyCompliance) {
         this.platformPolicyCompliance = platformPolicyCompliance;
         return this;
@@ -172,9 +186,11 @@ public class CreativeServingDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("russiaPolicyCompliance")
     public PolicyCompliance russiaPolicyCompliance;
+
     public CreativeServingDecision withRussiaPolicyCompliance(PolicyCompliance russiaPolicyCompliance) {
         this.russiaPolicyCompliance = russiaPolicyCompliance;
         return this;
     }
     
+    public CreativeServingDecision(){}
 }

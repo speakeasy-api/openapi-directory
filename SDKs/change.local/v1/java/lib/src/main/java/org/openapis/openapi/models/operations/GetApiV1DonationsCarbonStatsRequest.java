@@ -12,9 +12,11 @@ public class GetApiV1DonationsCarbonStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Double id;
+
     public GetApiV1DonationsCarbonStatsRequest withId(Double id) {
         this.id = id;
         return this;
     }
     
+    public GetApiV1DonationsCarbonStatsRequest(){}
 }

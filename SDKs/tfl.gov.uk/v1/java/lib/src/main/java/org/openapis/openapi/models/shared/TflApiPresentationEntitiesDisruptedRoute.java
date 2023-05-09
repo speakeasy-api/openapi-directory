@@ -23,6 +23,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public TflApiPresentationEntitiesDisruptedRoute withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -34,6 +35,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesDisruptedRoute withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -45,6 +47,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesDisruptedRoute withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +59,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEntireRouteSection")
     public Boolean isEntireRouteSection;
+
     public TflApiPresentationEntitiesDisruptedRoute withIsEntireRouteSection(Boolean isEntireRouteSection) {
         this.isEntireRouteSection = isEntireRouteSection;
         return this;
@@ -67,6 +71,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineId")
     public String lineId;
+
     public TflApiPresentationEntitiesDisruptedRoute withLineId(String lineId) {
         this.lineId = lineId;
         return this;
@@ -78,6 +83,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineString")
     public String lineString;
+
     public TflApiPresentationEntitiesDisruptedRoute withLineString(String lineString) {
         this.lineString = lineString;
         return this;
@@ -89,6 +95,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesDisruptedRoute withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +107,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originationName")
     public String originationName;
+
     public TflApiPresentationEntitiesDisruptedRoute withOriginationName(String originationName) {
         this.originationName = originationName;
         return this;
@@ -111,6 +119,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeCode")
     public String routeCode;
+
     public TflApiPresentationEntitiesDisruptedRoute withRouteCode(String routeCode) {
         this.routeCode = routeCode;
         return this;
@@ -119,6 +128,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeSectionNaptanEntrySequence")
     public TflApiPresentationEntitiesRouteSectionNaptanEntrySequence[] routeSectionNaptanEntrySequence;
+
     public TflApiPresentationEntitiesDisruptedRoute withRouteSectionNaptanEntrySequence(TflApiPresentationEntitiesRouteSectionNaptanEntrySequence[] routeSectionNaptanEntrySequence) {
         this.routeSectionNaptanEntrySequence = routeSectionNaptanEntrySequence;
         return this;
@@ -132,6 +142,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validFrom")
     public OffsetDateTime validFrom;
+
     public TflApiPresentationEntitiesDisruptedRoute withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -145,6 +156,7 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validTo")
     public OffsetDateTime validTo;
+
     public TflApiPresentationEntitiesDisruptedRoute withValidTo(OffsetDateTime validTo) {
         this.validTo = validTo;
         return this;
@@ -153,9 +165,11 @@ public class TflApiPresentationEntitiesDisruptedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("via")
     public TflApiPresentationEntitiesRouteSectionNaptanEntrySequence via;
+
     public TflApiPresentationEntitiesDisruptedRoute withVia(TflApiPresentationEntitiesRouteSectionNaptanEntrySequence via) {
         this.via = via;
         return this;
     }
     
+    public TflApiPresentationEntitiesDisruptedRoute(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsError {
     
     public DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum code;
+
     public DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsError withCode(DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErr
     
     
     public String message;
+
     public DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsError(){}
 }

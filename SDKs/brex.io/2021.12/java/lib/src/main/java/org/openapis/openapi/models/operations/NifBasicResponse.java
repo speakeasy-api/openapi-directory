@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NifBasicResponse {
     
     public String contentType;
+
     public NifBasicResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class NifBasicResponse {
      */
     
     public NifBasic200ApplicationJSON nifBasic200ApplicationJSONObject;
+
     public NifBasicResponse withNifBasic200ApplicationJSONObject(NifBasic200ApplicationJSON nifBasic200ApplicationJSONObject) {
         this.nifBasic200ApplicationJSONObject = nifBasic200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class NifBasicResponse {
      */
     
     public NifBasicDefaultApplicationJSON nifBasicDefaultApplicationJSONObject;
+
     public NifBasicResponse withNifBasicDefaultApplicationJSONObject(NifBasicDefaultApplicationJSON nifBasicDefaultApplicationJSONObject) {
         this.nifBasicDefaultApplicationJSONObject = nifBasicDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class NifBasicResponse {
     
     
     public Integer statusCode;
+
     public NifBasicResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class NifBasicResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NifBasicResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public NifBasicResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

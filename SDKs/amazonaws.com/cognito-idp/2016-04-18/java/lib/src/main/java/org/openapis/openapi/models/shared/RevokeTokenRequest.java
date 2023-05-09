@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RevokeTokenRequest {
     @JsonProperty("ClientId")
     public String clientId;
+
     public RevokeTokenRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -19,6 +20,7 @@ public class RevokeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientSecret")
     public String clientSecret;
+
     public RevokeTokenRequest withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -26,9 +28,14 @@ public class RevokeTokenRequest {
     
     @JsonProperty("Token")
     public String token;
+
     public RevokeTokenRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RevokeTokenRequest(@JsonProperty("ClientId") String clientId, @JsonProperty("Token") String token) {
+        this.clientId = clientId;
+        this.token = token;
+  }
 }

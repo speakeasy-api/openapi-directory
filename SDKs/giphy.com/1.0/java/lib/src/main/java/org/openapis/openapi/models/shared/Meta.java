@@ -19,6 +19,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public Meta withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -30,6 +31,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_id")
     public String responseId;
+
     public Meta withResponseId(String responseId) {
         this.responseId = responseId;
         return this;
@@ -41,9 +43,11 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public Meta withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public Meta(){}
 }

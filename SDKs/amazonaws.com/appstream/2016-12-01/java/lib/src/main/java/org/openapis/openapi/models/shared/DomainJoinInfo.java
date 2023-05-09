@@ -15,6 +15,7 @@ public class DomainJoinInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryName")
     public String directoryName;
+
     public DomainJoinInfo withDirectoryName(String directoryName) {
         this.directoryName = directoryName;
         return this;
@@ -23,9 +24,11 @@ public class DomainJoinInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitDistinguishedName")
     public String organizationalUnitDistinguishedName;
+
     public DomainJoinInfo withOrganizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
         return this;
     }
     
+    public DomainJoinInfo(){}
 }

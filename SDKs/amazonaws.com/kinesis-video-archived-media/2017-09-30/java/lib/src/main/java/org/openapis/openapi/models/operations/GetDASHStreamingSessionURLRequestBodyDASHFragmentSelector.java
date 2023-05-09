@@ -15,6 +15,7 @@ public class GetDASHStreamingSessionURLRequestBodyDASHFragmentSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentSelectorType")
     public org.openapis.openapi.models.shared.DASHFragmentSelectorTypeEnum fragmentSelectorType;
+
     public GetDASHStreamingSessionURLRequestBodyDASHFragmentSelector withFragmentSelectorType(org.openapis.openapi.models.shared.DASHFragmentSelectorTypeEnum fragmentSelectorType) {
         this.fragmentSelectorType = fragmentSelectorType;
         return this;
@@ -23,9 +24,11 @@ public class GetDASHStreamingSessionURLRequestBodyDASHFragmentSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampRange")
     public org.openapis.openapi.models.shared.DASHTimestampRange timestampRange;
+
     public GetDASHStreamingSessionURLRequestBodyDASHFragmentSelector withTimestampRange(org.openapis.openapi.models.shared.DASHTimestampRange timestampRange) {
         this.timestampRange = timestampRange;
         return this;
     }
     
+    public GetDASHStreamingSessionURLRequestBodyDASHFragmentSelector(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * IdentityMailFromDomainAttributes - Represents the custom MAIL FROM domain attributes of a verified identity (email address or domain).
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IdentityMailFromDomainAttributes {
     
     public BehaviorOnMXFailureEnum behaviorOnMXFailure;
+
     public IdentityMailFromDomainAttributes withBehaviorOnMXFailure(BehaviorOnMXFailureEnum behaviorOnMXFailure) {
         this.behaviorOnMXFailure = behaviorOnMXFailure;
         return this;
@@ -19,6 +20,7 @@ public class IdentityMailFromDomainAttributes {
     
     
     public String mailFromDomain;
+
     public IdentityMailFromDomainAttributes withMailFromDomain(String mailFromDomain) {
         this.mailFromDomain = mailFromDomain;
         return this;
@@ -26,9 +28,15 @@ public class IdentityMailFromDomainAttributes {
     
     
     public CustomMailFromStatusEnum mailFromDomainStatus;
+
     public IdentityMailFromDomainAttributes withMailFromDomainStatus(CustomMailFromStatusEnum mailFromDomainStatus) {
         this.mailFromDomainStatus = mailFromDomainStatus;
         return this;
     }
     
+    public IdentityMailFromDomainAttributes(@JsonProperty("BehaviorOnMXFailure") BehaviorOnMXFailureEnum behaviorOnMXFailure, @JsonProperty("MailFromDomain") String mailFromDomain, @JsonProperty("MailFromDomainStatus") CustomMailFromStatusEnum mailFromDomainStatus) {
+        this.behaviorOnMXFailure = behaviorOnMXFailure;
+        this.mailFromDomain = mailFromDomain;
+        this.mailFromDomainStatus = mailFromDomainStatus;
+  }
 }

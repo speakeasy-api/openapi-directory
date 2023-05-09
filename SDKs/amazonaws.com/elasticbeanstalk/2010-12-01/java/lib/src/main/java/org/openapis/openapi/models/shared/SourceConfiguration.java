@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SourceConfiguration {
     
     public String applicationName;
+
     public SourceConfiguration withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,11 @@ public class SourceConfiguration {
     
     
     public String templateName;
+
     public SourceConfiguration withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public SourceConfiguration(){}
 }

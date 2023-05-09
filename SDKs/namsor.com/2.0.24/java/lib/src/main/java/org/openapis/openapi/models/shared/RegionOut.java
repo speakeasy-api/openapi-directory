@@ -18,9 +18,11 @@ public class RegionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countriesAndRegions")
     public RegionISO[] countriesAndRegions;
+
     public RegionOut withCountriesAndRegions(RegionISO[] countriesAndRegions) {
         this.countriesAndRegions = countriesAndRegions;
         return this;
     }
     
+    public RegionOut(){}
 }

@@ -62,12 +62,10 @@ public class Registration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterResponse res = new org.openapis.openapi.models.operations.RegisterResponse() {{
+        org.openapis.openapi.models.operations.RegisterResponse res = new org.openapis.openapi.models.operations.RegisterResponse(contentType, httpRes.statusCode()) {{
             accessTokens = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

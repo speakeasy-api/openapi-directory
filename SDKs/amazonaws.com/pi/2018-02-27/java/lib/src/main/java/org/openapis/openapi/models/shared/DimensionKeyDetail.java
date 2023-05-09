@@ -15,6 +15,7 @@ public class DimensionKeyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimension")
     public String dimension;
+
     public DimensionKeyDetail withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -23,6 +24,7 @@ public class DimensionKeyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DetailStatusEnum status;
+
     public DimensionKeyDetail withStatus(DetailStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class DimensionKeyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public DimensionKeyDetail withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DimensionKeyDetail(){}
 }

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1beta3ReviewDocumentRequest - Request message for review document method.
+ * GoogleCloudDocumentaiV1beta3ReviewDocumentRequest - Request message for the ReviewDocument method.
  */
 public class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public GoogleCloudDocumentaiV1beta3Document document;
+
     public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest withDocument(GoogleCloudDocumentaiV1beta3Document document) {
         this.document = document;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentSchema")
     public GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema;
+
     public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest withDocumentSchema(GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema) {
         this.documentSchema = documentSchema;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSchemaValidation")
     public Boolean enableSchemaValidation;
+
     public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest withEnableSchemaValidation(Boolean enableSchemaValidation) {
         this.enableSchemaValidation = enableSchemaValidation;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineDocument")
     public GoogleCloudDocumentaiV1beta3Document inlineDocument;
+
     public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest withInlineDocument(GoogleCloudDocumentaiV1beta3Document inlineDocument) {
         this.inlineDocument = inlineDocument;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum priority;
+
     public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest withPriority(GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum priority) {
         this.priority = priority;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest(){}
 }

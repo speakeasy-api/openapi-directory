@@ -16,9 +16,11 @@ public class GetStandardOffersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetStandardOffersRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    public GetStandardOffersRequest(){}
 }

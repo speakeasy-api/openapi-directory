@@ -15,6 +15,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLau
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplateId")
     public String launchTemplateId;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -23,6 +24,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLau
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplateName")
     public String launchTemplateName;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -31,9 +33,11 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLau
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification(){}
 }

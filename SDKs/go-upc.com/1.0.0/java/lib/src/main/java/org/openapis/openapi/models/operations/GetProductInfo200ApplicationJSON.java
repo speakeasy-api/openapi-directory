@@ -18,6 +18,7 @@ public class GetProductInfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcodeUrl")
     public String barcodeUrl;
+
     public GetProductInfo200ApplicationJSON withBarcodeUrl(String barcodeUrl) {
         this.barcodeUrl = barcodeUrl;
         return this;
@@ -29,6 +30,7 @@ public class GetProductInfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeType")
     public GetProductInfo200ApplicationJSONCodeTypeEnum codeType;
+
     public GetProductInfo200ApplicationJSON withCodeType(GetProductInfo200ApplicationJSONCodeTypeEnum codeType) {
         this.codeType = codeType;
         return this;
@@ -40,9 +42,11 @@ public class GetProductInfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public GetProductInfo200ApplicationJSONProduct product;
+
     public GetProductInfo200ApplicationJSON withProduct(GetProductInfo200ApplicationJSONProduct product) {
         this.product = product;
         return this;
     }
     
+    public GetProductInfo200ApplicationJSON(){}
 }

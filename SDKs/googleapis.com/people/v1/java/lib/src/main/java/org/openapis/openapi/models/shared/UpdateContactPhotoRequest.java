@@ -18,6 +18,7 @@ public class UpdateContactPhotoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personFields")
     public String personFields;
+
     public UpdateContactPhotoRequest withPersonFields(String personFields) {
         this.personFields = personFields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateContactPhotoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoBytes")
     public String photoBytes;
+
     public UpdateContactPhotoRequest withPhotoBytes(String photoBytes) {
         this.photoBytes = photoBytes;
         return this;
@@ -40,9 +42,11 @@ public class UpdateContactPhotoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public UpdateContactPhotoRequestSourcesEnum[] sources;
+
     public UpdateContactPhotoRequest withSources(UpdateContactPhotoRequestSourcesEnum[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public UpdateContactPhotoRequest(){}
 }

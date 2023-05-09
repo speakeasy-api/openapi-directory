@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteSelfHostedRunnerGroupFromOrgRequest {
@@ -12,6 +13,7 @@ public class ActionsDeleteSelfHostedRunnerGroupFromOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsDeleteSelfHostedRunnerGroupFromOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,9 +24,14 @@ public class ActionsDeleteSelfHostedRunnerGroupFromOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
     public Long runnerGroupId;
+
     public ActionsDeleteSelfHostedRunnerGroupFromOrgRequest withRunnerGroupId(Long runnerGroupId) {
         this.runnerGroupId = runnerGroupId;
         return this;
     }
     
+    public ActionsDeleteSelfHostedRunnerGroupFromOrgRequest(@JsonProperty("org") String org, @JsonProperty("runner_group_id") Long runnerGroupId) {
+        this.org = org;
+        this.runnerGroupId = runnerGroupId;
+  }
 }

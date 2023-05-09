@@ -12,6 +12,7 @@ public class UpdateDatasourcePackagesRequestBody {
      */
     @JsonProperty("DatasourcePackages")
     public org.openapis.openapi.models.shared.DatasourcePackageEnum[] datasourcePackages;
+
     public UpdateDatasourcePackagesRequestBody withDatasourcePackages(org.openapis.openapi.models.shared.DatasourcePackageEnum[] datasourcePackages) {
         this.datasourcePackages = datasourcePackages;
         return this;
@@ -22,9 +23,14 @@ public class UpdateDatasourcePackagesRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public UpdateDatasourcePackagesRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public UpdateDatasourcePackagesRequestBody(@JsonProperty("DatasourcePackages") org.openapis.openapi.models.shared.DatasourcePackageEnum[] datasourcePackages, @JsonProperty("GraphArn") String graphArn) {
+        this.datasourcePackages = datasourcePackages;
+        this.graphArn = graphArn;
+  }
 }

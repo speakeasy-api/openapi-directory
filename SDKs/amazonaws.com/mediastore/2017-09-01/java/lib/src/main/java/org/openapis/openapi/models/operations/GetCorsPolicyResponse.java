@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCorsPolicyResponse {
@@ -12,6 +13,7 @@ public class GetCorsPolicyResponse {
      */
     
     public Object containerInUseException;
+
     public GetCorsPolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class GetCorsPolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public GetCorsPolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetCorsPolicyResponse {
     
     
     public String contentType;
+
     public GetCorsPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetCorsPolicyResponse {
      */
     
     public Object corsPolicyNotFoundException;
+
     public GetCorsPolicyResponse withCorsPolicyNotFoundException(Object corsPolicyNotFoundException) {
         this.corsPolicyNotFoundException = corsPolicyNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetCorsPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCorsPolicyOutput getCorsPolicyOutput;
+
     public GetCorsPolicyResponse withGetCorsPolicyOutput(org.openapis.openapi.models.shared.GetCorsPolicyOutput getCorsPolicyOutput) {
         this.getCorsPolicyOutput = getCorsPolicyOutput;
         return this;
@@ -59,6 +65,7 @@ public class GetCorsPolicyResponse {
      */
     
     public Object internalServerError;
+
     public GetCorsPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class GetCorsPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetCorsPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetCorsPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCorsPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCorsPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalActionsRequest {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdTerminalActionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetCompaniesCompanyIdTerminalActionsRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetCompaniesCompanyIdTerminalActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetCompaniesCompanyIdTerminalActionsRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -32,6 +35,7 @@ public class GetCompaniesCompanyIdTerminalActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetCompaniesCompanyIdTerminalActionsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -43,6 +47,7 @@ public class GetCompaniesCompanyIdTerminalActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetCompaniesCompanyIdTerminalActionsRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -54,9 +59,13 @@ public class GetCompaniesCompanyIdTerminalActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetCompaniesCompanyIdTerminalActionsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetCompaniesCompanyIdTerminalActionsRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

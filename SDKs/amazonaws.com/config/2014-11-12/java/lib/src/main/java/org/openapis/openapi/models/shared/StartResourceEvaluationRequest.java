@@ -12,6 +12,7 @@ public class StartResourceEvaluationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartResourceEvaluationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class StartResourceEvaluationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationContext")
     public EvaluationContext evaluationContext;
+
     public StartResourceEvaluationRequest withEvaluationContext(EvaluationContext evaluationContext) {
         this.evaluationContext = evaluationContext;
         return this;
@@ -27,6 +29,7 @@ public class StartResourceEvaluationRequest {
     
     @JsonProperty("EvaluationMode")
     public EvaluationModeEnum evaluationMode;
+
     public StartResourceEvaluationRequest withEvaluationMode(EvaluationModeEnum evaluationMode) {
         this.evaluationMode = evaluationMode;
         return this;
@@ -35,6 +38,7 @@ public class StartResourceEvaluationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationTimeout")
     public Long evaluationTimeout;
+
     public StartResourceEvaluationRequest withEvaluationTimeout(Long evaluationTimeout) {
         this.evaluationTimeout = evaluationTimeout;
         return this;
@@ -42,9 +46,14 @@ public class StartResourceEvaluationRequest {
     
     @JsonProperty("ResourceDetails")
     public ResourceDetails resourceDetails;
+
     public StartResourceEvaluationRequest withResourceDetails(ResourceDetails resourceDetails) {
         this.resourceDetails = resourceDetails;
         return this;
     }
     
+    public StartResourceEvaluationRequest(@JsonProperty("EvaluationMode") EvaluationModeEnum evaluationMode, @JsonProperty("ResourceDetails") ResourceDetails resourceDetails) {
+        this.evaluationMode = evaluationMode;
+        this.resourceDetails = resourceDetails;
+  }
 }

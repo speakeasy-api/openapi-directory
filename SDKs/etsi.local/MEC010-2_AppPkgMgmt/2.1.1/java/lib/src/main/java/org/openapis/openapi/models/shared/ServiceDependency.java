@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ServiceDependency {
     /**
@@ -13,6 +13,7 @@ public class ServiceDependency {
      */
     
     public String[] requestedPermissions;
+
     public ServiceDependency withRequestedPermissions(String[] requestedPermissions) {
         this.requestedPermissions = requestedPermissions;
         return this;
@@ -23,6 +24,7 @@ public class ServiceDependency {
      */
     
     public Object serCategory;
+
     public ServiceDependency withSerCategory(Object serCategory) {
         this.serCategory = serCategory;
         return this;
@@ -33,6 +35,7 @@ public class ServiceDependency {
      */
     
     public String serName;
+
     public ServiceDependency withSerName(String serName) {
         this.serName = serName;
         return this;
@@ -43,6 +46,7 @@ public class ServiceDependency {
      */
     
     public TransportDependency[] serTransportDependencies;
+
     public ServiceDependency withSerTransportDependencies(TransportDependency[] serTransportDependencies) {
         this.serTransportDependencies = serTransportDependencies;
         return this;
@@ -53,9 +57,14 @@ public class ServiceDependency {
      */
     
     public String version;
+
     public ServiceDependency withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ServiceDependency(@JsonProperty("serName") String serName, @JsonProperty("version") String version) {
+        this.serName = serName;
+        this.version = version;
+  }
 }

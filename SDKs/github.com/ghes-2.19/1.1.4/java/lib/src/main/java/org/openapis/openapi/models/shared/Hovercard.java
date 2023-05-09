@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Hovercard {
     @JsonProperty("contexts")
     public HovercardContexts[] contexts;
+
     public Hovercard withContexts(HovercardContexts[] contexts) {
         this.contexts = contexts;
         return this;
     }
     
+    public Hovercard(@JsonProperty("contexts") HovercardContexts[] contexts) {
+        this.contexts = contexts;
+  }
 }

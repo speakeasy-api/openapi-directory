@@ -15,6 +15,7 @@ public class TargetInstancesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstances")
     public TargetInstance[] targetInstances;
+
     public TargetInstancesScopedList withTargetInstances(TargetInstance[] targetInstances) {
         this.targetInstances = targetInstances;
         return this;
@@ -26,9 +27,11 @@ public class TargetInstancesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public TargetInstancesScopedListWarning warning;
+
     public TargetInstancesScopedList withWarning(TargetInstancesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public TargetInstancesScopedList(){}
 }

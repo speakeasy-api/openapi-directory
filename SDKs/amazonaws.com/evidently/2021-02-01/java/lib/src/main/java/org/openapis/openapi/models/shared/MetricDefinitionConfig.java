@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricDefinitionConfig {
     @JsonProperty("entityIdKey")
     public String entityIdKey;
+
     public MetricDefinitionConfig withEntityIdKey(String entityIdKey) {
         this.entityIdKey = entityIdKey;
         return this;
@@ -22,6 +23,7 @@ public class MetricDefinitionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventPattern")
     public String eventPattern;
+
     public MetricDefinitionConfig withEventPattern(String eventPattern) {
         this.eventPattern = eventPattern;
         return this;
@@ -29,6 +31,7 @@ public class MetricDefinitionConfig {
     
     @JsonProperty("name")
     public String name;
+
     public MetricDefinitionConfig withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class MetricDefinitionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitLabel")
     public String unitLabel;
+
     public MetricDefinitionConfig withUnitLabel(String unitLabel) {
         this.unitLabel = unitLabel;
         return this;
@@ -44,9 +48,15 @@ public class MetricDefinitionConfig {
     
     @JsonProperty("valueKey")
     public String valueKey;
+
     public MetricDefinitionConfig withValueKey(String valueKey) {
         this.valueKey = valueKey;
         return this;
     }
     
+    public MetricDefinitionConfig(@JsonProperty("entityIdKey") String entityIdKey, @JsonProperty("name") String name, @JsonProperty("valueKey") String valueKey) {
+        this.entityIdKey = entityIdKey;
+        this.name = name;
+        this.valueKey = valueKey;
+  }
 }

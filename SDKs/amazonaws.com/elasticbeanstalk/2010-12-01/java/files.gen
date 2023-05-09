@@ -503,4 +503,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ValidationMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationSeverityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateConfigurationSettingsMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

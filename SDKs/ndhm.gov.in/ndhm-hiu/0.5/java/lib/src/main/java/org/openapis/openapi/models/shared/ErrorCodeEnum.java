@@ -7,13 +7,13 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ErrorCodeEnum {
-    ONE_THOUSAND("1000"),
-    TEN_THOUSAND_AND_ONE("10001");
+    ONE_THOUSAND(1000L),
+    TEN_THOUSAND_AND_ONE(10001L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private ErrorCodeEnum(String value) {
+    private ErrorCodeEnum(Long value) {
         this.value = value;
     }
 }

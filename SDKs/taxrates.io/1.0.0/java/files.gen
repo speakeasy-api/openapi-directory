@@ -46,4 +46,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/AllTaxRates500Applicati
 lib/src/main/java/org/openapis/openapi/models/operations/AllTaxRates200ApplicationJSONRates.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllTaxRates200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllTaxRatesResponse.java
+docs/sdk/README.md
+docs/v1tax/README.md
+docs/v3tax/README.md
 USAGE.md

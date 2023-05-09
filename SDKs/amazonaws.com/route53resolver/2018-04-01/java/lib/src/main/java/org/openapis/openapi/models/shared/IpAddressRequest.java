@@ -15,6 +15,7 @@ public class IpAddressRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ip")
     public String ip;
+
     public IpAddressRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -23,6 +24,7 @@ public class IpAddressRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6")
     public String ipv6;
+
     public IpAddressRequest withIpv6(String ipv6) {
         this.ipv6 = ipv6;
         return this;
@@ -30,9 +32,13 @@ public class IpAddressRequest {
     
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public IpAddressRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public IpAddressRequest(@JsonProperty("SubnetId") String subnetId) {
+        this.subnetId = subnetId;
+  }
 }

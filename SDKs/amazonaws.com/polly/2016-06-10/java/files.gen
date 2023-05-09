@@ -84,4 +84,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListSpeechSynthesisTasksOut
 lib/src/main/java/org/openapis/openapi/models/shared/StartSpeechSynthesisTaskOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/SynthesizeSpeechOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

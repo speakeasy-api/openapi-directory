@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateApplicationFromEntitlementResponse {
     
     public String contentType;
+
     public DisassociateApplicationFromEntitlementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateApplicationFromEntitlementResponse {
      */
     
     public java.util.Map<String, Object> disassociateApplicationFromEntitlementResult;
+
     public DisassociateApplicationFromEntitlementResponse withDisassociateApplicationFromEntitlementResult(java.util.Map<String, Object> disassociateApplicationFromEntitlementResult) {
         this.disassociateApplicationFromEntitlementResult = disassociateApplicationFromEntitlementResult;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateApplicationFromEntitlementResponse {
      */
     
     public Object entitlementNotFoundException;
+
     public DisassociateApplicationFromEntitlementResponse withEntitlementNotFoundException(Object entitlementNotFoundException) {
         this.entitlementNotFoundException = entitlementNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateApplicationFromEntitlementResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DisassociateApplicationFromEntitlementResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateApplicationFromEntitlementResponse {
     
     
     public Integer statusCode;
+
     public DisassociateApplicationFromEntitlementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateApplicationFromEntitlementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateApplicationFromEntitlementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateApplicationFromEntitlementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateApplicationFromEntitlementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisassociateApplicationFromEntitlementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

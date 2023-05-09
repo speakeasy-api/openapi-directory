@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteCarrierGatewayResultCarrierGatewayTags {
     
     public String key;
+
     public DeleteCarrierGatewayResultCarrierGatewayTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DeleteCarrierGatewayResultCarrierGatewayTags {
     
     
     public String value;
+
     public DeleteCarrierGatewayResultCarrierGatewayTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeleteCarrierGatewayResultCarrierGatewayTags(){}
 }

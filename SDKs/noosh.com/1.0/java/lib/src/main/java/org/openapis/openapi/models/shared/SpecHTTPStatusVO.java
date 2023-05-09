@@ -15,6 +15,7 @@ public class SpecHTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public SpecHTTPStatusVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
@@ -23,6 +24,7 @@ public class SpecHTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public SpecHTTPStatusVO withSpecName(String specName) {
         this.specName = specName;
         return this;
@@ -31,6 +33,7 @@ public class SpecHTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public SpecHTTPStatusVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -39,9 +42,11 @@ public class SpecHTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public SpecHTTPStatusVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public SpecHTTPStatusVO(){}
 }

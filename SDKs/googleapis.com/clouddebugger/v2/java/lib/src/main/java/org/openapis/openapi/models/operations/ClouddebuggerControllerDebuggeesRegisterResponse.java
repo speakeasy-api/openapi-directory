@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClouddebuggerControllerDebuggeesRegisterResponse {
     
     public String contentType;
+
     public ClouddebuggerControllerDebuggeesRegisterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClouddebuggerControllerDebuggeesRegisterResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterDebuggeeResponse registerDebuggeeResponse;
+
     public ClouddebuggerControllerDebuggeesRegisterResponse withRegisterDebuggeeResponse(org.openapis.openapi.models.shared.RegisterDebuggeeResponse registerDebuggeeResponse) {
         this.registerDebuggeeResponse = registerDebuggeeResponse;
         return this;
@@ -26,6 +29,7 @@ public class ClouddebuggerControllerDebuggeesRegisterResponse {
     
     
     public Integer statusCode;
+
     public ClouddebuggerControllerDebuggeesRegisterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClouddebuggerControllerDebuggeesRegisterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClouddebuggerControllerDebuggeesRegisterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClouddebuggerControllerDebuggeesRegisterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

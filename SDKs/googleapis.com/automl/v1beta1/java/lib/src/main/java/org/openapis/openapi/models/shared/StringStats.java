@@ -18,9 +18,11 @@ public class StringStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topUnigramStats")
     public UnigramStats[] topUnigramStats;
+
     public StringStats withTopUnigramStats(UnigramStats[] topUnigramStats) {
         this.topUnigramStats = topUnigramStats;
         return this;
     }
     
+    public StringStats(){}
 }

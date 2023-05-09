@@ -12,6 +12,7 @@ public class GetAppsListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultList")
     public Boolean defaultList;
+
     public GetAppsListRequest withDefaultList(Boolean defaultList) {
         this.defaultList = defaultList;
         return this;
@@ -19,9 +20,13 @@ public class GetAppsListRequest {
     
     @JsonProperty("ListId")
     public String listId;
+
     public GetAppsListRequest withListId(String listId) {
         this.listId = listId;
         return this;
     }
     
+    public GetAppsListRequest(@JsonProperty("ListId") String listId) {
+        this.listId = listId;
+  }
 }

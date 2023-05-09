@@ -18,6 +18,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalingSettings")
     public AutoscalingSettings autoscalingSettings;
+
     public WorkerPool withAutoscalingSettings(AutoscalingSettings autoscalingSettings) {
         this.autoscalingSettings = autoscalingSettings;
         return this;
@@ -29,6 +30,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDisks")
     public Disk[] dataDisks;
+
     public WorkerPool withDataDisks(Disk[] dataDisks) {
         this.dataDisks = dataDisks;
         return this;
@@ -40,6 +42,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPackageSet")
     public WorkerPoolDefaultPackageSetEnum defaultPackageSet;
+
     public WorkerPool withDefaultPackageSet(WorkerPoolDefaultPackageSetEnum defaultPackageSet) {
         this.defaultPackageSet = defaultPackageSet;
         return this;
@@ -51,6 +54,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public Integer diskSizeGb;
+
     public WorkerPool withDiskSizeGb(Integer diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -62,6 +66,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSourceImage")
     public String diskSourceImage;
+
     public WorkerPool withDiskSourceImage(String diskSourceImage) {
         this.diskSourceImage = diskSourceImage;
         return this;
@@ -73,6 +78,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public WorkerPool withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -84,6 +90,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipConfiguration")
     public WorkerPoolIpConfigurationEnum ipConfiguration;
+
     public WorkerPool withIpConfiguration(WorkerPoolIpConfigurationEnum ipConfiguration) {
         this.ipConfiguration = ipConfiguration;
         return this;
@@ -95,6 +102,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public WorkerPool withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public WorkerPool withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -117,6 +126,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public WorkerPool withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -128,6 +138,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public WorkerPool withNetwork(String network) {
         this.network = network;
         return this;
@@ -139,6 +150,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numThreadsPerWorker")
     public Integer numThreadsPerWorker;
+
     public WorkerPool withNumThreadsPerWorker(Integer numThreadsPerWorker) {
         this.numThreadsPerWorker = numThreadsPerWorker;
         return this;
@@ -150,6 +162,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numWorkers")
     public Integer numWorkers;
+
     public WorkerPool withNumWorkers(Integer numWorkers) {
         this.numWorkers = numWorkers;
         return this;
@@ -161,6 +174,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onHostMaintenance")
     public String onHostMaintenance;
+
     public WorkerPool withOnHostMaintenance(String onHostMaintenance) {
         this.onHostMaintenance = onHostMaintenance;
         return this;
@@ -172,6 +186,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public Package[] packages;
+
     public WorkerPool withPackages(Package[] packages) {
         this.packages = packages;
         return this;
@@ -183,6 +198,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolArgs")
     public java.util.Map<String, Object> poolArgs;
+
     public WorkerPool withPoolArgs(java.util.Map<String, Object> poolArgs) {
         this.poolArgs = poolArgs;
         return this;
@@ -194,6 +210,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkHarnessContainerImages")
     public SDKHarnessContainerImage[] sdkHarnessContainerImages;
+
     public WorkerPool withSDKHarnessContainerImages(SDKHarnessContainerImage[] sdkHarnessContainerImages) {
         this.sdkHarnessContainerImages = sdkHarnessContainerImages;
         return this;
@@ -205,6 +222,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public WorkerPool withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -216,6 +234,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskrunnerSettings")
     public TaskRunnerSettings taskrunnerSettings;
+
     public WorkerPool withTaskrunnerSettings(TaskRunnerSettings taskrunnerSettings) {
         this.taskrunnerSettings = taskrunnerSettings;
         return this;
@@ -227,6 +246,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teardownPolicy")
     public WorkerPoolTeardownPolicyEnum teardownPolicy;
+
     public WorkerPool withTeardownPolicy(WorkerPoolTeardownPolicyEnum teardownPolicy) {
         this.teardownPolicy = teardownPolicy;
         return this;
@@ -238,6 +258,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerHarnessContainerImage")
     public String workerHarnessContainerImage;
+
     public WorkerPool withWorkerHarnessContainerImage(String workerHarnessContainerImage) {
         this.workerHarnessContainerImage = workerHarnessContainerImage;
         return this;
@@ -249,9 +270,11 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public WorkerPool withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public WorkerPool(){}
 }

@@ -15,6 +15,7 @@ public class JobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2AmiResources")
     public Ec2AmiResource[] ec2AmiResources;
+
     public JobResource withEc2AmiResources(Ec2AmiResource[] ec2AmiResources) {
         this.ec2AmiResources = ec2AmiResources;
         return this;
@@ -23,6 +24,7 @@ public class JobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaResources")
     public LambdaResource[] lambdaResources;
+
     public JobResource withLambdaResources(LambdaResource[] lambdaResources) {
         this.lambdaResources = lambdaResources;
         return this;
@@ -31,9 +33,11 @@ public class JobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Resources")
     public S3Resource[] s3Resources;
+
     public JobResource withS3Resources(S3Resource[] s3Resources) {
         this.s3Resources = s3Resources;
         return this;
     }
     
+    public JobResource(){}
 }

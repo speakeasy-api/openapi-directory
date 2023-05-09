@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogGetCustomColumnsRequest {
@@ -12,9 +13,13 @@ public class CatalogGetCustomColumnsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public CatalogGetCustomColumnsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CatalogGetCustomColumnsRequest(@JsonProperty("storeId") String storeId) {
+        this.storeId = storeId;
+  }
 }

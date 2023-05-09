@@ -16,55 +16,55 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateMeshRequestBody;
 import org.openapis.openapi.models.operations.CreateMeshRequest;
+import org.openapis.openapi.models.operations.CreateMeshRequestBody;
 import org.openapis.openapi.models.operations.CreateMeshResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateMeshRequest req = new CreateMeshRequest() {{
-                requestBody = new CreateMeshRequestBody() {{
-                    clientToken = "corrupti";
-                    meshName = "provident";
-                }};
-                xAmzAlgorithm = "distinctio";
-                xAmzContentSha256 = "quibusdam";
-                xAmzCredential = "unde";
-                xAmzDate = "nulla";
-                xAmzSecurityToken = "corrupti";
-                xAmzSignature = "illum";
-                xAmzSignedHeaders = "vel";
-            }}            
+            CreateMeshRequest req = new CreateMeshRequest(                new CreateMeshRequestBody("provident") {{
+                                clientToken = "distinctio";
+                            }};) {{
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }};            
 
             CreateMeshResponse res = sdk.createMesh(req);
 
-            if (res.createMeshOutput.isPresent()) {
+            if (res.createMeshOutput != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createMesh` - <p>Creates a new service mesh. A service mesh is a logical boundary for network traffic
+* [createMesh](docs/sdk/README.md#createmesh) - <p>Creates a new service mesh. A service mesh is a logical boundary for network traffic
          between the services that reside within it.</p>
          <p>After you create your service mesh, you can create virtual nodes, virtual routers, and
          routes to distribute traffic between the applications in your mesh.</p>
-* `createRoute` - <p>Creates a new route that is associated with a virtual router.</p>
+* [createRoute](docs/sdk/README.md#createroute) - <p>Creates a new route that is associated with a virtual router.</p>
          <p>You can use the <code>prefix</code> parameter in your route specification for path-based
          routing of requests. For example, if your virtual router service name is
             <code>my-service.local</code>, and you want the route to match requests to
@@ -72,7 +72,7 @@ public class Application {
          <code>/metrics</code>.</p>
          <p>If your route matches a request, you can distribute traffic to one or more target
          virtual nodes with relative weighting.</p>
-* `createVirtualNode` - <p>Creates a new virtual node within a service mesh.</p>
+* [createVirtualNode](docs/sdk/README.md#createvirtualnode) - <p>Creates a new virtual node within a service mesh.</p>
          <p>A virtual node acts as logical pointer to a particular task group, such as an Amazon ECS
          service or a Kubernetes deployment. When you create a virtual node, you must specify the
          DNS service discovery name for your task group.</p>
@@ -91,29 +91,29 @@ public class Application {
                <code>APPMESH_VIRTUAL_NODE_NAME</code> with the
                <code>APPMESH_VIRTUAL_NODE_CLUSTER</code> environment variable.</p>
          </note>
-* `createVirtualRouter` - <p>Creates a new virtual router within a service mesh.</p>
+* [createVirtualRouter](docs/sdk/README.md#createvirtualrouter) - <p>Creates a new virtual router within a service mesh.</p>
          <p>Virtual routers handle traffic for one or more service names within your mesh. After you
          create your virtual router, create and associate routes for your virtual router that direct
          incoming requests to different virtual nodes.</p>
-* `deleteMesh` - <p>Deletes an existing service mesh.</p>
+* [deleteMesh](docs/sdk/README.md#deletemesh) - <p>Deletes an existing service mesh.</p>
          <p>You must delete all resources (routes, virtual routers, virtual nodes) in the service
          mesh before you can delete the mesh itself.</p>
-* `deleteRoute` - Deletes an existing route.
-* `deleteVirtualNode` - Deletes an existing virtual node.
-* `deleteVirtualRouter` - <p>Deletes an existing virtual router.</p>
+* [deleteRoute](docs/sdk/README.md#deleteroute) - Deletes an existing route.
+* [deleteVirtualNode](docs/sdk/README.md#deletevirtualnode) - Deletes an existing virtual node.
+* [deleteVirtualRouter](docs/sdk/README.md#deletevirtualrouter) - <p>Deletes an existing virtual router.</p>
          <p>You must delete any routes associated with the virtual router before you can delete the
          router itself.</p>
-* `describeMesh` - Describes an existing service mesh.
-* `describeRoute` - Describes an existing route.
-* `describeVirtualNode` - Describes an existing virtual node.
-* `describeVirtualRouter` - Describes an existing virtual router.
-* `listMeshes` - Returns a list of existing service meshes.
-* `listRoutes` - Returns a list of existing routes in a service mesh.
-* `listVirtualNodes` - Returns a list of existing virtual nodes.
-* `listVirtualRouters` - Returns a list of existing virtual routers in a service mesh.
-* `updateRoute` - Updates an existing route for a specified service mesh and virtual router.
-* `updateVirtualNode` - Updates an existing virtual node in a specified service mesh.
-* `updateVirtualRouter` - Updates an existing virtual router in a specified service mesh.
+* [describeMesh](docs/sdk/README.md#describemesh) - Describes an existing service mesh.
+* [describeRoute](docs/sdk/README.md#describeroute) - Describes an existing route.
+* [describeVirtualNode](docs/sdk/README.md#describevirtualnode) - Describes an existing virtual node.
+* [describeVirtualRouter](docs/sdk/README.md#describevirtualrouter) - Describes an existing virtual router.
+* [listMeshes](docs/sdk/README.md#listmeshes) - Returns a list of existing service meshes.
+* [listRoutes](docs/sdk/README.md#listroutes) - Returns a list of existing routes in a service mesh.
+* [listVirtualNodes](docs/sdk/README.md#listvirtualnodes) - Returns a list of existing virtual nodes.
+* [listVirtualRouters](docs/sdk/README.md#listvirtualrouters) - Returns a list of existing virtual routers in a service mesh.
+* [updateRoute](docs/sdk/README.md#updateroute) - Updates an existing route for a specified service mesh and virtual router.
+* [updateVirtualNode](docs/sdk/README.md#updatevirtualnode) - Updates an existing virtual node in a specified service mesh.
+* [updateVirtualRouter](docs/sdk/README.md#updatevirtualrouter) - Updates an existing virtual router in a specified service mesh.
 <!-- End SDK Available Operations -->
 
 ### Maturity

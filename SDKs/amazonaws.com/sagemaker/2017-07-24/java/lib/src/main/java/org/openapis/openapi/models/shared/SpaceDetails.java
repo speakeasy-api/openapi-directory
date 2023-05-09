@@ -22,6 +22,7 @@ public class SpaceDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public SpaceDetails withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class SpaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public SpaceDetails withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -40,6 +42,7 @@ public class SpaceDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public SpaceDetails withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -48,6 +51,7 @@ public class SpaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public SpaceDetails withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -56,9 +60,11 @@ public class SpaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SpaceStatusEnum status;
+
     public SpaceDetails withStatus(SpaceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SpaceDetails(){}
 }

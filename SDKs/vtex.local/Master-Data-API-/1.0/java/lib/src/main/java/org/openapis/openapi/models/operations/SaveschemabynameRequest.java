@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveschemabynameRequest {
@@ -12,6 +13,7 @@ public class SaveschemabynameRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SaveschemabynameRequest saveschemabynameRequest;
+
     public SaveschemabynameRequest withSaveschemabynameRequest(org.openapis.openapi.models.shared.SaveschemabynameRequest saveschemabynameRequest) {
         this.saveschemabynameRequest = saveschemabynameRequest;
         return this;
@@ -22,6 +24,7 @@ public class SaveschemabynameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public SaveschemabynameRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
@@ -32,9 +35,15 @@ public class SaveschemabynameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schemaName")
     public String schemaName;
+
     public SaveschemabynameRequest withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
     }
     
+    public SaveschemabynameRequest(@JsonProperty("SaveschemabynameRequest") org.openapis.openapi.models.shared.SaveschemabynameRequest saveschemabynameRequest, @JsonProperty("dataEntityName") String dataEntityName, @JsonProperty("schemaName") String schemaName) {
+        this.saveschemabynameRequest = saveschemabynameRequest;
+        this.dataEntityName = dataEntityName;
+        this.schemaName = schemaName;
+  }
 }

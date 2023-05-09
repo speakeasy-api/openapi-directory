@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelSpotFleetRequestsResponseSuccessfulFleetRequests {
     
     public CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum currentSpotFleetRequestState;
+
     public CancelSpotFleetRequestsResponseSuccessfulFleetRequests withCurrentSpotFleetRequestState(CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum currentSpotFleetRequestState) {
         this.currentSpotFleetRequestState = currentSpotFleetRequestState;
         return this;
@@ -19,6 +20,7 @@ public class CancelSpotFleetRequestsResponseSuccessfulFleetRequests {
     
     
     public CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum previousSpotFleetRequestState;
+
     public CancelSpotFleetRequestsResponseSuccessfulFleetRequests withPreviousSpotFleetRequestState(CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum previousSpotFleetRequestState) {
         this.previousSpotFleetRequestState = previousSpotFleetRequestState;
         return this;
@@ -26,9 +28,11 @@ public class CancelSpotFleetRequestsResponseSuccessfulFleetRequests {
     
     
     public String spotFleetRequestId;
+
     public CancelSpotFleetRequestsResponseSuccessfulFleetRequests withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
     }
     
+    public CancelSpotFleetRequestsResponseSuccessfulFleetRequests(){}
 }

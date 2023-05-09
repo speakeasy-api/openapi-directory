@@ -22,6 +22,7 @@ public class Record {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeviceLastModifiedDate")
     public OffsetDateTime deviceLastModifiedDate;
+
     public Record withDeviceLastModifiedDate(OffsetDateTime deviceLastModifiedDate) {
         this.deviceLastModifiedDate = deviceLastModifiedDate;
         return this;
@@ -30,6 +31,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public Record withKey(String key) {
         this.key = key;
         return this;
@@ -38,6 +40,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public Record withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -48,6 +51,7 @@ public class Record {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public Record withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -56,6 +60,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncCount")
     public Long syncCount;
+
     public Record withSyncCount(Long syncCount) {
         this.syncCount = syncCount;
         return this;
@@ -64,9 +69,11 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public Record withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Record(){}
 }

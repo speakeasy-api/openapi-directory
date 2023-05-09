@@ -15,6 +15,7 @@ public class GetVolumes200ApplicationJSONVolumesLocation {
      */
     @JsonProperty("city")
     public String city;
+
     public GetVolumes200ApplicationJSONVolumesLocation withCity(String city) {
         this.city = city;
         return this;
@@ -25,6 +26,7 @@ public class GetVolumes200ApplicationJSONVolumesLocation {
      */
     @JsonProperty("country")
     public String country;
+
     public GetVolumes200ApplicationJSONVolumesLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -35,6 +37,7 @@ public class GetVolumes200ApplicationJSONVolumesLocation {
      */
     @JsonProperty("description")
     public String description;
+
     public GetVolumes200ApplicationJSONVolumesLocation withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class GetVolumes200ApplicationJSONVolumesLocation {
      */
     @JsonProperty("id")
     public Double id;
+
     public GetVolumes200ApplicationJSONVolumesLocation withId(Double id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class GetVolumes200ApplicationJSONVolumesLocation {
      */
     @JsonProperty("latitude")
     public Double latitude;
+
     public GetVolumes200ApplicationJSONVolumesLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -65,6 +70,7 @@ public class GetVolumes200ApplicationJSONVolumesLocation {
      */
     @JsonProperty("longitude")
     public Double longitude;
+
     public GetVolumes200ApplicationJSONVolumesLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -75,6 +81,7 @@ public class GetVolumes200ApplicationJSONVolumesLocation {
      */
     @JsonProperty("name")
     public String name;
+
     public GetVolumes200ApplicationJSONVolumesLocation withName(String name) {
         this.name = name;
         return this;
@@ -85,9 +92,20 @@ public class GetVolumes200ApplicationJSONVolumesLocation {
      */
     @JsonProperty("network_zone")
     public String networkZone;
+
     public GetVolumes200ApplicationJSONVolumesLocation withNetworkZone(String networkZone) {
         this.networkZone = networkZone;
         return this;
     }
     
+    public GetVolumes200ApplicationJSONVolumesLocation(@JsonProperty("city") String city, @JsonProperty("country") String country, @JsonProperty("description") String description, @JsonProperty("id") Double id, @JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude, @JsonProperty("name") String name, @JsonProperty("network_zone") String networkZone) {
+        this.city = city;
+        this.country = country;
+        this.description = description;
+        this.id = id;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.name = name;
+        this.networkZone = networkZone;
+  }
 }

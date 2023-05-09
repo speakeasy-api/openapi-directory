@@ -15,6 +15,7 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanelArn")
     public String controlPanelArn;
+
     public RoutingControl withControlPanelArn(String controlPanelArn) {
         this.controlPanelArn = controlPanelArn;
         return this;
@@ -23,6 +24,7 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanelName")
     public String controlPanelName;
+
     public RoutingControl withControlPanelName(String controlPanelName) {
         this.controlPanelName = controlPanelName;
         return this;
@@ -31,6 +33,7 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControlArn")
     public String routingControlArn;
+
     public RoutingControl withRoutingControlArn(String routingControlArn) {
         this.routingControlArn = routingControlArn;
         return this;
@@ -39,6 +42,7 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControlName")
     public String routingControlName;
+
     public RoutingControl withRoutingControlName(String routingControlName) {
         this.routingControlName = routingControlName;
         return this;
@@ -47,9 +51,11 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControlState")
     public RoutingControlStateEnum routingControlState;
+
     public RoutingControl withRoutingControlState(RoutingControlStateEnum routingControlState) {
         this.routingControlState = routingControlState;
         return this;
     }
     
+    public RoutingControl(){}
 }

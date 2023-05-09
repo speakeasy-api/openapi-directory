@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportSnapshotRequest {
     @JsonProperty("sourceSnapshotName")
     public String sourceSnapshotName;
+
     public ExportSnapshotRequest withSourceSnapshotName(String sourceSnapshotName) {
         this.sourceSnapshotName = sourceSnapshotName;
         return this;
     }
     
+    public ExportSnapshotRequest(@JsonProperty("sourceSnapshotName") String sourceSnapshotName) {
+        this.sourceSnapshotName = sourceSnapshotName;
+  }
 }

@@ -15,6 +15,7 @@ public class ListTagsForStreamOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTagsForStreamOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTagsForStreamOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ListTagsForStreamOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsForStreamOutput(){}
 }

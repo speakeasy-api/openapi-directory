@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartWorkflowExecutionResponse {
     
     public String contentType;
+
     public StartWorkflowExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartWorkflowExecutionResponse {
      */
     
     public Object defaultUndefinedFault;
+
     public StartWorkflowExecutionResponse withDefaultUndefinedFault(Object defaultUndefinedFault) {
         this.defaultUndefinedFault = defaultUndefinedFault;
         return this;
@@ -29,6 +32,7 @@ public class StartWorkflowExecutionResponse {
      */
     
     public Object limitExceededFault;
+
     public StartWorkflowExecutionResponse withLimitExceededFault(Object limitExceededFault) {
         this.limitExceededFault = limitExceededFault;
         return this;
@@ -39,6 +43,7 @@ public class StartWorkflowExecutionResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public StartWorkflowExecutionResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -49,6 +54,7 @@ public class StartWorkflowExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.Run run;
+
     public StartWorkflowExecutionResponse withRun(org.openapis.openapi.models.shared.Run run) {
         this.run = run;
         return this;
@@ -56,6 +62,7 @@ public class StartWorkflowExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartWorkflowExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartWorkflowExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartWorkflowExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartWorkflowExecutionResponse {
      */
     
     public Object typeDeprecatedFault;
+
     public StartWorkflowExecutionResponse withTypeDeprecatedFault(Object typeDeprecatedFault) {
         this.typeDeprecatedFault = typeDeprecatedFault;
         return this;
@@ -83,6 +92,7 @@ public class StartWorkflowExecutionResponse {
      */
     
     public Object unknownResourceFault;
+
     public StartWorkflowExecutionResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
@@ -93,9 +103,14 @@ public class StartWorkflowExecutionResponse {
      */
     
     public Object workflowExecutionAlreadyStartedFault;
+
     public StartWorkflowExecutionResponse withWorkflowExecutionAlreadyStartedFault(Object workflowExecutionAlreadyStartedFault) {
         this.workflowExecutionAlreadyStartedFault = workflowExecutionAlreadyStartedFault;
         return this;
     }
     
+    public StartWorkflowExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

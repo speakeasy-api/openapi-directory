@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSectionRequest {
@@ -14,6 +15,7 @@ public class DeleteSectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public DeleteSectionRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class DeleteSectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public DeleteSectionRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,9 +38,13 @@ public class DeleteSectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section_gid")
     public String sectionGid;
+
     public DeleteSectionRequest withSectionGid(String sectionGid) {
         this.sectionGid = sectionGid;
         return this;
     }
     
+    public DeleteSectionRequest(@JsonProperty("section_gid") String sectionGid) {
+        this.sectionGid = sectionGid;
+  }
 }

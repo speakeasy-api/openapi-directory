@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInternationalPaymentConsentsJsonSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String tppoAuth2Security;
+
     public CreateInternationalPaymentConsentsJsonSecurity withTPPOAuth2Security(String tppoAuth2Security) {
         this.tppoAuth2Security = tppoAuth2Security;
         return this;
     }
     
+    public CreateInternationalPaymentConsentsJsonSecurity(@JsonProperty("TPPOAuth2Security") String tppoAuth2Security) {
+        this.tppoAuth2Security = tppoAuth2Security;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryperdockandwarehouseRequest {
@@ -12,6 +13,7 @@ public class InventoryperdockandwarehouseRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InventoryperdockandwarehouseRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InventoryperdockandwarehouseRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InventoryperdockandwarehouseRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class InventoryperdockandwarehouseRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dockId")
     public String dockId;
+
     public InventoryperdockandwarehouseRequest withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -36,6 +40,7 @@ public class InventoryperdockandwarehouseRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public InventoryperdockandwarehouseRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
@@ -43,9 +48,17 @@ public class InventoryperdockandwarehouseRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
     public String warehouseId;
+
     public InventoryperdockandwarehouseRequest withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public InventoryperdockandwarehouseRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("dockId") String dockId, @JsonProperty("skuId") String skuId, @JsonProperty("warehouseId") String warehouseId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.dockId = dockId;
+        this.skuId = skuId;
+        this.warehouseId = warehouseId;
+  }
 }

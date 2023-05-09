@@ -12,6 +12,7 @@ public class PutEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public PutEventsRequest withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -19,9 +20,13 @@ public class PutEventsRequest {
     
     @JsonProperty("Entries")
     public PutEventsRequestEntry[] entries;
+
     public PutEventsRequest withEntries(PutEventsRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public PutEventsRequest(@JsonProperty("Entries") PutEventsRequestEntry[] entries) {
+        this.entries = entries;
+  }
 }

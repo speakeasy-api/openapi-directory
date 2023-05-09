@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVPCEConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ListVPCEConfigurationsResponse {
      */
     
     public Object argumentException;
+
     public ListVPCEConfigurationsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListVPCEConfigurationsResponse {
     
     
     public String contentType;
+
     public ListVPCEConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListVPCEConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVPCEConfigurationsResult listVPCEConfigurationsResult;
+
     public ListVPCEConfigurationsResponse withListVPCEConfigurationsResult(org.openapis.openapi.models.shared.ListVPCEConfigurationsResult listVPCEConfigurationsResult) {
         this.listVPCEConfigurationsResult = listVPCEConfigurationsResult;
         return this;
@@ -36,6 +40,7 @@ public class ListVPCEConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListVPCEConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListVPCEConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVPCEConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListVPCEConfigurationsResponse {
      */
     
     public Object serviceAccountException;
+
     public ListVPCEConfigurationsResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
     }
     
+    public ListVPCEConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

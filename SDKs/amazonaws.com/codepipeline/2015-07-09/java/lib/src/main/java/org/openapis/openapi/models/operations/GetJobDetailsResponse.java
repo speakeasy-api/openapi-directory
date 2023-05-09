@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobDetailsResponse {
     
     public String contentType;
+
     public GetJobDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJobDetailsOutput getJobDetailsOutput;
+
     public GetJobDetailsResponse withGetJobDetailsOutput(org.openapis.openapi.models.shared.GetJobDetailsOutput getJobDetailsOutput) {
         this.getJobDetailsOutput = getJobDetailsOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetJobDetailsResponse {
      */
     
     public Object jobNotFoundException;
+
     public GetJobDetailsResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetJobDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetJobDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetJobDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetJobDetailsResponse {
      */
     
     public Object validationException;
+
     public GetJobDetailsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetJobDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

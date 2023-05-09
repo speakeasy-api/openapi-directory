@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCashDrawerShiftEventsRequest {
@@ -12,6 +13,7 @@ public class ListCashDrawerShiftEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListCashDrawerShiftEventsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +25,7 @@ public class ListCashDrawerShiftEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListCashDrawerShiftEventsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -33,6 +36,7 @@ public class ListCashDrawerShiftEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListCashDrawerShiftEventsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -43,9 +47,14 @@ public class ListCashDrawerShiftEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shift_id")
     public String shiftId;
+
     public ListCashDrawerShiftEventsRequest withShiftId(String shiftId) {
         this.shiftId = shiftId;
         return this;
     }
     
+    public ListCashDrawerShiftEventsRequest(@JsonProperty("location_id") String locationId, @JsonProperty("shift_id") String shiftId) {
+        this.locationId = locationId;
+        this.shiftId = shiftId;
+  }
 }

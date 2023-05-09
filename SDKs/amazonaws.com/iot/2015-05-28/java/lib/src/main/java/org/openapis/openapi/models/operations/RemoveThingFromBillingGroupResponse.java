@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveThingFromBillingGroupResponse {
     
     public String contentType;
+
     public RemoveThingFromBillingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveThingFromBillingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public RemoveThingFromBillingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveThingFromBillingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public RemoveThingFromBillingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveThingFromBillingGroupResponse {
      */
     
     public java.util.Map<String, Object> removeThingFromBillingGroupResponse;
+
     public RemoveThingFromBillingGroupResponse withRemoveThingFromBillingGroupResponse(java.util.Map<String, Object> removeThingFromBillingGroupResponse) {
         this.removeThingFromBillingGroupResponse = removeThingFromBillingGroupResponse;
         return this;
@@ -46,6 +51,7 @@ public class RemoveThingFromBillingGroupResponse {
     
     
     public Integer statusCode;
+
     public RemoveThingFromBillingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RemoveThingFromBillingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveThingFromBillingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RemoveThingFromBillingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveThingFromBillingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class RemoveThingFromBillingGroupResponse {
      */
     
     public Object throttlingException;
+
     public RemoveThingFromBillingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public RemoveThingFromBillingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BaseScreenshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IgnoreCoordinates")
     public String[] ignoreCoordinates;
+
     public BaseScreenshot withIgnoreCoordinates(String[] ignoreCoordinates) {
         this.ignoreCoordinates = ignoreCoordinates;
         return this;
@@ -22,9 +23,13 @@ public class BaseScreenshot {
     
     @JsonProperty("ScreenshotName")
     public String screenshotName;
+
     public BaseScreenshot withScreenshotName(String screenshotName) {
         this.screenshotName = screenshotName;
         return this;
     }
     
+    public BaseScreenshot(@JsonProperty("ScreenshotName") String screenshotName) {
+        this.screenshotName = screenshotName;
+  }
 }

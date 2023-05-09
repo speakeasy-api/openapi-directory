@@ -18,6 +18,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public InstanceInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public InstanceInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InstanceTypeEnum type;
+
     public InstanceInput withType(InstanceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InstanceInput(){}
 }

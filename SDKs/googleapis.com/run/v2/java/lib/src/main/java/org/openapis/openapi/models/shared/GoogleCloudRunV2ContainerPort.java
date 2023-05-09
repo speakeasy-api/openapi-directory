@@ -18,6 +18,7 @@ public class GoogleCloudRunV2ContainerPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPort")
     public Integer containerPort;
+
     public GoogleCloudRunV2ContainerPort withContainerPort(Integer containerPort) {
         this.containerPort = containerPort;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2ContainerPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2ContainerPort withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudRunV2ContainerPort(){}
 }

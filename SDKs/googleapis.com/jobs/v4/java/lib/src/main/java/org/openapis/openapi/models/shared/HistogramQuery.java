@@ -18,9 +18,11 @@ public class HistogramQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramQuery")
     public String histogramQuery;
+
     public HistogramQuery withHistogramQuery(String histogramQuery) {
         this.histogramQuery = histogramQuery;
         return this;
     }
     
+    public HistogramQuery(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetFlowLogsIntegrationTemplateRequest {
     
     public String configDeliveryS3DestinationArn;
+
     public GetFlowLogsIntegrationTemplateRequest withConfigDeliveryS3DestinationArn(String configDeliveryS3DestinationArn) {
         this.configDeliveryS3DestinationArn = configDeliveryS3DestinationArn;
         return this;
@@ -16,6 +17,7 @@ public class GetFlowLogsIntegrationTemplateRequest {
     
     
     public Boolean dryRun;
+
     public GetFlowLogsIntegrationTemplateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class GetFlowLogsIntegrationTemplateRequest {
     
     
     public String flowLogId;
+
     public GetFlowLogsIntegrationTemplateRequest withFlowLogId(String flowLogId) {
         this.flowLogId = flowLogId;
         return this;
@@ -30,9 +33,15 @@ public class GetFlowLogsIntegrationTemplateRequest {
     
     
     public GetFlowLogsIntegrationTemplateRequestIntegrateServices integrateServices;
+
     public GetFlowLogsIntegrationTemplateRequest withIntegrateServices(GetFlowLogsIntegrationTemplateRequestIntegrateServices integrateServices) {
         this.integrateServices = integrateServices;
         return this;
     }
     
+    public GetFlowLogsIntegrationTemplateRequest(@JsonProperty("ConfigDeliveryS3DestinationArn") String configDeliveryS3DestinationArn, @JsonProperty("FlowLogId") String flowLogId, @JsonProperty("IntegrateServices") GetFlowLogsIntegrationTemplateRequestIntegrateServices integrateServices) {
+        this.configDeliveryS3DestinationArn = configDeliveryS3DestinationArn;
+        this.flowLogId = flowLogId;
+        this.integrateServices = integrateServices;
+  }
 }

@@ -15,6 +15,7 @@ public class BatchDetectSyntaxItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public BatchDetectSyntaxItemResult withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,9 +24,11 @@ public class BatchDetectSyntaxItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyntaxTokens")
     public SyntaxToken[] syntaxTokens;
+
     public BatchDetectSyntaxItemResult withSyntaxTokens(SyntaxToken[] syntaxTokens) {
         this.syntaxTokens = syntaxTokens;
         return this;
     }
     
+    public BatchDetectSyntaxItemResult(){}
 }

@@ -12,6 +12,7 @@ public class GETListsBestSellersHistoryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=age-group")
     public String ageGroup;
+
     public GETListsBestSellersHistoryJsonRequest withAgeGroup(String ageGroup) {
         this.ageGroup = ageGroup;
         return this;
@@ -26,6 +27,7 @@ public class GETListsBestSellersHistoryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
     public String author;
+
     public GETListsBestSellersHistoryJsonRequest withAuthor(String author) {
         this.author = author;
         return this;
@@ -40,6 +42,7 @@ public class GETListsBestSellersHistoryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
     public String contributor;
+
     public GETListsBestSellersHistoryJsonRequest withContributor(String contributor) {
         this.contributor = contributor;
         return this;
@@ -52,6 +55,7 @@ public class GETListsBestSellersHistoryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isbn")
     public String isbn;
+
     public GETListsBestSellersHistoryJsonRequest withIsbn(String isbn) {
         this.isbn = isbn;
         return this;
@@ -62,6 +66,7 @@ public class GETListsBestSellersHistoryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=price")
     public String price;
+
     public GETListsBestSellersHistoryJsonRequest withPrice(String price) {
         this.price = price;
         return this;
@@ -72,6 +77,7 @@ public class GETListsBestSellersHistoryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publisher")
     public String publisher;
+
     public GETListsBestSellersHistoryJsonRequest withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -84,9 +90,11 @@ public class GETListsBestSellersHistoryJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public GETListsBestSellersHistoryJsonRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GETListsBestSellersHistoryJsonRequest(){}
 }

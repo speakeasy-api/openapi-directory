@@ -15,6 +15,7 @@ public class DescribeServiceUpdatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeServiceUpdatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeServiceUpdatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceUpdates")
     public ServiceUpdate[] serviceUpdates;
+
     public DescribeServiceUpdatesResponse withServiceUpdates(ServiceUpdate[] serviceUpdates) {
         this.serviceUpdates = serviceUpdates;
         return this;
     }
     
+    public DescribeServiceUpdatesResponse(){}
 }

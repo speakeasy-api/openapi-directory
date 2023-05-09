@@ -15,9 +15,11 @@ public class TermsAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBuckets")
     public Long maxBuckets;
+
     public TermsAggregation withMaxBuckets(Long maxBuckets) {
         this.maxBuckets = maxBuckets;
         return this;
     }
     
+    public TermsAggregation(){}
 }

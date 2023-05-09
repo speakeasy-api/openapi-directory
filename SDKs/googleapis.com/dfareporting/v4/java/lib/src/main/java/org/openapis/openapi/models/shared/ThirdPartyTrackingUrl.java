@@ -18,6 +18,7 @@ public class ThirdPartyTrackingUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyUrlType")
     public ThirdPartyTrackingUrlThirdPartyUrlTypeEnum thirdPartyUrlType;
+
     public ThirdPartyTrackingUrl withThirdPartyUrlType(ThirdPartyTrackingUrlThirdPartyUrlTypeEnum thirdPartyUrlType) {
         this.thirdPartyUrlType = thirdPartyUrlType;
         return this;
@@ -29,9 +30,11 @@ public class ThirdPartyTrackingUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ThirdPartyTrackingUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ThirdPartyTrackingUrl(){}
 }

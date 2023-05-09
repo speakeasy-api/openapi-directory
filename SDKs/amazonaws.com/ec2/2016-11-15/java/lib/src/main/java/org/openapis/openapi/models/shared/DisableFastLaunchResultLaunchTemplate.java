@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisableFastLaunchResultLaunchTemplate {
     
     public String launchTemplateId;
+
     public DisableFastLaunchResultLaunchTemplate withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -19,6 +20,7 @@ public class DisableFastLaunchResultLaunchTemplate {
     
     
     public String launchTemplateName;
+
     public DisableFastLaunchResultLaunchTemplate withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -26,9 +28,11 @@ public class DisableFastLaunchResultLaunchTemplate {
     
     
     public String version;
+
     public DisableFastLaunchResultLaunchTemplate withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DisableFastLaunchResultLaunchTemplate(){}
 }

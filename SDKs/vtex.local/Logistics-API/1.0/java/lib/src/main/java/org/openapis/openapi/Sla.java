@@ -69,11 +69,9 @@ public class Sla {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalculateSLAResponse res = new org.openapis.openapi.models.operations.CalculateSLAResponse() {{
+        org.openapis.openapi.models.operations.CalculateSLAResponse res = new org.openapis.openapi.models.operations.CalculateSLAResponse(contentType, httpRes.statusCode()) {{
             calculateSLA200ApplicationJSONArrays = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

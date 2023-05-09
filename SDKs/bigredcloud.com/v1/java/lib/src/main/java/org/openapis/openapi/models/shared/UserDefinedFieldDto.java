@@ -12,6 +12,7 @@ public class UserDefinedFieldDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTypeId")
     public Long categoryTypeId;
+
     public UserDefinedFieldDto withCategoryTypeId(Long categoryTypeId) {
         this.categoryTypeId = categoryTypeId;
         return this;
@@ -20,6 +21,7 @@ public class UserDefinedFieldDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UserDefinedFieldDto withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UserDefinedFieldDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public UserDefinedFieldDto withId(Long id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class UserDefinedFieldDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderIndex")
     public Integer orderIndex;
+
     public UserDefinedFieldDto withOrderIndex(Integer orderIndex) {
         this.orderIndex = orderIndex;
         return this;
     }
     
+    public UserDefinedFieldDto(){}
 }

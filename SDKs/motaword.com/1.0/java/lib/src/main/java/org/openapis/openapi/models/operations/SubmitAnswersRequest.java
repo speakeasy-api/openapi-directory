@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitAnswersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SurveyAnswers surveyAnswers;
+
     public SubmitAnswersRequest withSurveyAnswers(org.openapis.openapi.models.shared.SurveyAnswers surveyAnswers) {
         this.surveyAnswers = surveyAnswers;
         return this;
@@ -19,6 +21,7 @@ public class SubmitAnswersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scope")
     public String scope;
+
     public SubmitAnswersRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -29,9 +32,14 @@ public class SubmitAnswersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public SubmitAnswersRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SubmitAnswersRequest(@JsonProperty("scope") String scope, @JsonProperty("type") String type) {
+        this.scope = scope;
+        this.type = type;
+  }
 }

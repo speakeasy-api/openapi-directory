@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataRepositoryTaskResponse {
@@ -12,6 +13,7 @@ public class CreateDataRepositoryTaskResponse {
      */
     
     public Object badRequest;
+
     public CreateDataRepositoryTaskResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class CreateDataRepositoryTaskResponse {
     
     
     public String contentType;
+
     public CreateDataRepositoryTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataRepositoryTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDataRepositoryTaskResponse createDataRepositoryTaskResponse;
+
     public CreateDataRepositoryTaskResponse withCreateDataRepositoryTaskResponse(org.openapis.openapi.models.shared.CreateDataRepositoryTaskResponse createDataRepositoryTaskResponse) {
         this.createDataRepositoryTaskResponse = createDataRepositoryTaskResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataRepositoryTaskResponse {
      */
     
     public Object dataRepositoryTaskExecuting;
+
     public CreateDataRepositoryTaskResponse withDataRepositoryTaskExecuting(Object dataRepositoryTaskExecuting) {
         this.dataRepositoryTaskExecuting = dataRepositoryTaskExecuting;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataRepositoryTaskResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateDataRepositoryTaskResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class CreateDataRepositoryTaskResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateDataRepositoryTaskResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -69,6 +76,7 @@ public class CreateDataRepositoryTaskResponse {
      */
     
     public Object internalServerError;
+
     public CreateDataRepositoryTaskResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -76,6 +84,7 @@ public class CreateDataRepositoryTaskResponse {
     
     
     public Integer statusCode;
+
     public CreateDataRepositoryTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDataRepositoryTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataRepositoryTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateDataRepositoryTaskResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateDataRepositoryTaskResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -103,9 +114,14 @@ public class CreateDataRepositoryTaskResponse {
      */
     
     public Object unsupportedOperation;
+
     public CreateDataRepositoryTaskResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
     }
     
+    public CreateDataRepositoryTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

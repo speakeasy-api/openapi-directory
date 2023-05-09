@@ -12,6 +12,7 @@ public class PostNamespacesDeleteImagesRequestManifests {
      */
     @JsonProperty("digest")
     public String digest;
+
     public PostNamespacesDeleteImagesRequestManifests withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -22,9 +23,14 @@ public class PostNamespacesDeleteImagesRequestManifests {
      */
     @JsonProperty("repository")
     public String repository;
+
     public PostNamespacesDeleteImagesRequestManifests withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public PostNamespacesDeleteImagesRequestManifests(@JsonProperty("digest") String digest, @JsonProperty("repository") String repository) {
+        this.digest = digest;
+        this.repository = repository;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OriginRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
     public String firstName;
+
     public OriginRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -16,9 +18,14 @@ public class OriginRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
     public String lastName;
+
     public OriginRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public OriginRequest(@JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCharityOrgRequest {
@@ -12,6 +13,7 @@ public class GetCharityOrgRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetCharityOrgRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,9 +24,14 @@ public class GetCharityOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=charity_org_id")
     public String charityOrgId;
+
     public GetCharityOrgRequest withCharityOrgId(String charityOrgId) {
         this.charityOrgId = charityOrgId;
         return this;
     }
     
+    public GetCharityOrgRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId, @JsonProperty("charity_org_id") String charityOrgId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        this.charityOrgId = charityOrgId;
+  }
 }

@@ -15,9 +15,11 @@ public class MergeDeveloperIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public MergeDeveloperIdentitiesResponse withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
     }
     
+    public MergeDeveloperIdentitiesResponse(){}
 }

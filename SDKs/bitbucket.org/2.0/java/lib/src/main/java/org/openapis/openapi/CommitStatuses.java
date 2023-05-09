@@ -66,12 +66,10 @@ public class CommitStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse(contentType, httpRes.statusCode()) {{
             paginatedCommitstatuses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class CommitStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse(contentType, httpRes.statusCode()) {{
             commitstatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,12 +171,10 @@ public class CommitStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse(contentType, httpRes.statusCode()) {{
             paginatedCommitstatuses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,12 +245,10 @@ public class CommitStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse(contentType, httpRes.statusCode()) {{
             commitstatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -316,12 +308,10 @@ public class CommitStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse(contentType, httpRes.statusCode()) {{
             commitstatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

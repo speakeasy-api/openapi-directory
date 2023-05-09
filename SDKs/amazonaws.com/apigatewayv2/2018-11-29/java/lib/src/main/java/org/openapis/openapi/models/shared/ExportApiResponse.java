@@ -18,9 +18,11 @@ public class ExportApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public ExportApiResponse withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public ExportApiResponse(){}
 }

@@ -177,6 +177,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/AnalyzeIamPolicyResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/IamPolicyAnalysis.java
 lib/src/main/java/org/openapis/openapi/models/shared/IamPolicyAnalysisStateCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/IamPolicyAnalysisState.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeniedAccess.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssetV1DeniedAccessDenyDetail.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssetV1DeniedAccessResource.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssetV1DeniedAccessIdentity.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV2DenyRule.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssetV1DeniedAccessAccess.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssetV1DeniedAccessAccessTuple.java
 lib/src/main/java/org/openapis/openapi/models/shared/IamPolicyAnalysisResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssetV1IdentityList.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAssetV1Identity.java
@@ -243,4 +250,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/VersionedResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/RelatedResources.java
 lib/src/main/java/org/openapis/openapi/models/shared/RelatedResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/AttachedResource.java
+docs/sdk/README.md
+docs/assets/README.md
+docs/effectiveiampolicies/README.md
+docs/feeds/README.md
+docs/savedqueries/README.md
+docs/v1/README.md
 USAGE.md

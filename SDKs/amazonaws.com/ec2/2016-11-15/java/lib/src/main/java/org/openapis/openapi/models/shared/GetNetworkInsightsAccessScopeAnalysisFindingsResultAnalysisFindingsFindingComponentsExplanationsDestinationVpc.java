@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsDestinationVpc {
     
     public String arn;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsDestinationVpc withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String id;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsDestinationVpc withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String name;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsDestinationVpc withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsDestinationVpc(){}
 }

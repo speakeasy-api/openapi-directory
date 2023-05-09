@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetClusterSnapshotOutput {
     @JsonProperty("snapshot")
     public ClusterSnapshot snapshot;
+
     public GetClusterSnapshotOutput withSnapshot(ClusterSnapshot snapshot) {
         this.snapshot = snapshot;
         return this;
     }
     
+    public GetClusterSnapshotOutput(@JsonProperty("snapshot") ClusterSnapshot snapshot) {
+        this.snapshot = snapshot;
+  }
 }

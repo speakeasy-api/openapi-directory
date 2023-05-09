@@ -18,6 +18,7 @@ public class GroupFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupByResults")
     public GroupResult[] groupByResults;
+
     public GroupFindingsResponse withGroupByResults(GroupResult[] groupByResults) {
         this.groupByResults = groupByResults;
         return this;
@@ -29,6 +30,7 @@ public class GroupFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GroupFindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,6 +42,7 @@ public class GroupFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public GroupFindingsResponse withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -51,9 +54,11 @@ public class GroupFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public GroupFindingsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GroupFindingsResponse(){}
 }

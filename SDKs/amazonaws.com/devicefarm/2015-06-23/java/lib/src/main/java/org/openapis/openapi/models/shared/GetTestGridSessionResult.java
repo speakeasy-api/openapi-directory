@@ -15,9 +15,11 @@ public class GetTestGridSessionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testGridSession")
     public TestGridSession testGridSession;
+
     public GetTestGridSessionResult withTestGridSession(TestGridSession testGridSession) {
         this.testGridSession = testGridSession;
         return this;
     }
     
+    public GetTestGridSessionResult(){}
 }

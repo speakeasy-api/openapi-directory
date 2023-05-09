@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CitationsStylesListCitationStyle {
     /**
@@ -12,6 +12,7 @@ public class CitationsStylesListCitationStyle {
      */
     
     public CitationsStylesListCitationStyleAttributes attributes;
+
     public CitationsStylesListCitationStyle withAttributes(CitationsStylesListCitationStyleAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class CitationsStylesListCitationStyle {
      */
     
     public String id;
+
     public CitationsStylesListCitationStyle withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class CitationsStylesListCitationStyle {
      */
     
     public java.util.Map<String, Object> links;
+
     public CitationsStylesListCitationStyle withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
@@ -42,9 +45,15 @@ public class CitationsStylesListCitationStyle {
      */
     
     public String type;
+
     public CitationsStylesListCitationStyle withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CitationsStylesListCitationStyle(@JsonProperty("attributes") CitationsStylesListCitationStyleAttributes attributes, @JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.type = type;
+  }
 }

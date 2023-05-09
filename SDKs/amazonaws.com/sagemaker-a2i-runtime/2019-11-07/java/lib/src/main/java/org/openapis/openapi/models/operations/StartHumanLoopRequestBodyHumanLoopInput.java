@@ -15,9 +15,11 @@ public class StartHumanLoopRequestBodyHumanLoopInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputContent")
     public String inputContent;
+
     public StartHumanLoopRequestBodyHumanLoopInput withInputContent(String inputContent) {
         this.inputContent = inputContent;
         return this;
     }
     
+    public StartHumanLoopRequestBodyHumanLoopInput(){}
 }

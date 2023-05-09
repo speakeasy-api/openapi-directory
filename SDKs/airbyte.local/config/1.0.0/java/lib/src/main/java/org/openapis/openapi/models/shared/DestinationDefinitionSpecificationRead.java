@@ -15,6 +15,7 @@ public class DestinationDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedAuth")
     public AdvancedAuth advancedAuth;
+
     public DestinationDefinitionSpecificationRead withAdvancedAuth(AdvancedAuth advancedAuth) {
         this.advancedAuth = advancedAuth;
         return this;
@@ -23,6 +24,7 @@ public class DestinationDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authSpecification")
     public DestinationAuthSpecification authSpecification;
+
     public DestinationDefinitionSpecificationRead withAuthSpecification(DestinationAuthSpecification authSpecification) {
         this.authSpecification = authSpecification;
         return this;
@@ -34,6 +36,7 @@ public class DestinationDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionSpecification")
     public Object connectionSpecification;
+
     public DestinationDefinitionSpecificationRead withConnectionSpecification(Object connectionSpecification) {
         this.connectionSpecification = connectionSpecification;
         return this;
@@ -41,6 +44,7 @@ public class DestinationDefinitionSpecificationRead {
     
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationDefinitionSpecificationRead withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -49,6 +53,7 @@ public class DestinationDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentationUrl")
     public String documentationUrl;
+
     public DestinationDefinitionSpecificationRead withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -56,6 +61,7 @@ public class DestinationDefinitionSpecificationRead {
     
     @JsonProperty("jobInfo")
     public SynchronousJobRead jobInfo;
+
     public DestinationDefinitionSpecificationRead withJobInfo(SynchronousJobRead jobInfo) {
         this.jobInfo = jobInfo;
         return this;
@@ -64,9 +70,14 @@ public class DestinationDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedDestinationSyncModes")
     public DestinationSyncModeEnum[] supportedDestinationSyncModes;
+
     public DestinationDefinitionSpecificationRead withSupportedDestinationSyncModes(DestinationSyncModeEnum[] supportedDestinationSyncModes) {
         this.supportedDestinationSyncModes = supportedDestinationSyncModes;
         return this;
     }
     
+    public DestinationDefinitionSpecificationRead(@JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("jobInfo") SynchronousJobRead jobInfo) {
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.jobInfo = jobInfo;
+  }
 }

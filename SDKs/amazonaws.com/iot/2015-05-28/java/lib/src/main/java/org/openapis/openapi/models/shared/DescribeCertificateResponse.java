@@ -15,9 +15,11 @@ public class DescribeCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateDescription")
     public CertificateDescription certificateDescription;
+
     public DescribeCertificateResponse withCertificateDescription(CertificateDescription certificateDescription) {
         this.certificateDescription = certificateDescription;
         return this;
     }
     
+    public DescribeCertificateResponse(){}
 }

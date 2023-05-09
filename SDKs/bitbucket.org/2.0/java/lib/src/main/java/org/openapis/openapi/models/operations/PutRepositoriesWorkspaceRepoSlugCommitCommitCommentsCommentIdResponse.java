@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse {
     
     public String contentType;
+
     public PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRespon
     
     
     public java.util.Map<String, String[]> headers;
+
     public PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRespon
     
     
     public Integer statusCode;
+
     public PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

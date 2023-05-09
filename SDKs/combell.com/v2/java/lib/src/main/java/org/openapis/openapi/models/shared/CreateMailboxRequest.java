@@ -18,6 +18,7 @@ public class CreateMailboxRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public Integer accountId;
+
     public CreateMailboxRequest withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class CreateMailboxRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public CreateMailboxRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -41,9 +43,11 @@ public class CreateMailboxRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CreateMailboxRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public CreateMailboxRequest(){}
 }

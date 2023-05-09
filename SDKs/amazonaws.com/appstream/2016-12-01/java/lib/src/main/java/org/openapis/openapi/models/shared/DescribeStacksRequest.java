@@ -12,6 +12,7 @@ public class DescribeStacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public DescribeStacksRequest withNames(String[] names) {
         this.names = names;
         return this;
@@ -20,9 +21,11 @@ public class DescribeStacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeStacksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeStacksRequest(){}
 }

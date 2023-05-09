@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefineSuggesterResponse - The result of a &lt;code&gt;DefineSuggester&lt;/code&gt; request. Contains the status of the newly-configured suggester.
@@ -15,9 +15,13 @@ public class DefineSuggesterResponse {
      */
     
     public SuggesterStatus suggester;
+
     public DefineSuggesterResponse withSuggester(SuggesterStatus suggester) {
         this.suggester = suggester;
         return this;
     }
     
+    public DefineSuggesterResponse(@JsonProperty("Suggester") SuggesterStatus suggester) {
+        this.suggester = suggester;
+  }
 }

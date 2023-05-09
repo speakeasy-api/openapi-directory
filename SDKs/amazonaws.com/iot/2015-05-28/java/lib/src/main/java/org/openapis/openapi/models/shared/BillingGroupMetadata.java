@@ -22,9 +22,11 @@ public class BillingGroupMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public BillingGroupMetadata withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
     }
     
+    public BillingGroupMetadata(){}
 }

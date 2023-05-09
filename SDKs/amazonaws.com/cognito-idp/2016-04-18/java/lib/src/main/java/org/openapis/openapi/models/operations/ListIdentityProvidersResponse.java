@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIdentityProvidersResponse {
     
     public String contentType;
+
     public ListIdentityProvidersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object internalErrorException;
+
     public ListIdentityProvidersResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object invalidParameterException;
+
     public ListIdentityProvidersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIdentityProvidersResponse listIdentityProvidersResponse;
+
     public ListIdentityProvidersResponse withListIdentityProvidersResponse(org.openapis.openapi.models.shared.ListIdentityProvidersResponse listIdentityProvidersResponse) {
         this.listIdentityProvidersResponse = listIdentityProvidersResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListIdentityProvidersResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListIdentityProvidersResponse {
     
     
     public Integer statusCode;
+
     public ListIdentityProvidersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListIdentityProvidersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIdentityProvidersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListIdentityProvidersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListIdentityProvidersResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListIdentityProvidersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

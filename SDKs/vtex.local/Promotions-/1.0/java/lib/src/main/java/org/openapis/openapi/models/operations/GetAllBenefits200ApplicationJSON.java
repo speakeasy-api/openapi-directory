@@ -18,6 +18,7 @@ public class GetAllBenefits200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archivedItems")
     public String[] archivedItems;
+
     public GetAllBenefits200ApplicationJSON withArchivedItems(String[] archivedItems) {
         this.archivedItems = archivedItems;
         return this;
@@ -29,6 +30,7 @@ public class GetAllBenefits200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledItems")
     public Object[] disabledItems;
+
     public GetAllBenefits200ApplicationJSON withDisabledItems(Object[] disabledItems) {
         this.disabledItems = disabledItems;
         return this;
@@ -40,6 +42,7 @@ public class GetAllBenefits200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.GetPromotions[] items;
+
     public GetAllBenefits200ApplicationJSON withItems(org.openapis.openapi.models.shared.GetPromotions[] items) {
         this.items = items;
         return this;
@@ -51,6 +54,7 @@ public class GetAllBenefits200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitConfiguration")
     public GetAllBenefits200ApplicationJSONLimitConfiguration limitConfiguration;
+
     public GetAllBenefits200ApplicationJSON withLimitConfiguration(GetAllBenefits200ApplicationJSONLimitConfiguration limitConfiguration) {
         this.limitConfiguration = limitConfiguration;
         return this;
@@ -62,9 +66,11 @@ public class GetAllBenefits200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitConfigurationMaxPrice")
     public GetAllBenefits200ApplicationJSONLimitConfigurationMaxPrice limitConfigurationMaxPrice;
+
     public GetAllBenefits200ApplicationJSON withLimitConfigurationMaxPrice(GetAllBenefits200ApplicationJSONLimitConfigurationMaxPrice limitConfigurationMaxPrice) {
         this.limitConfigurationMaxPrice = limitConfigurationMaxPrice;
         return this;
     }
     
+    public GetAllBenefits200ApplicationJSON(){}
 }

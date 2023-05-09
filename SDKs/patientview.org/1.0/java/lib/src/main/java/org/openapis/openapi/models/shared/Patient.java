@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Patient {
     
     public Code[] diagnosisCodes;
+
     public Patient withDiagnosisCodes(Code[] diagnosisCodes) {
         this.diagnosisCodes = diagnosisCodes;
         return this;
@@ -16,6 +17,7 @@ public class Patient {
     
     
     public FhirAllergy[] fhirAllergies;
+
     public Patient withFhirAllergies(FhirAllergy[] fhirAllergies) {
         this.fhirAllergies = fhirAllergies;
         return this;
@@ -23,6 +25,7 @@ public class Patient {
     
     
     public FhirCondition[] fhirConditions;
+
     public Patient withFhirConditions(FhirCondition[] fhirConditions) {
         this.fhirConditions = fhirConditions;
         return this;
@@ -30,6 +33,7 @@ public class Patient {
     
     
     public FhirEncounter[] fhirEncounters;
+
     public Patient withFhirEncounters(FhirEncounter[] fhirEncounters) {
         this.fhirEncounters = fhirEncounters;
         return this;
@@ -37,6 +41,7 @@ public class Patient {
     
     
     public FhirObservation[] fhirObservations;
+
     public Patient withFhirObservations(FhirObservation[] fhirObservations) {
         this.fhirObservations = fhirObservations;
         return this;
@@ -44,6 +49,7 @@ public class Patient {
     
     
     public FhirPatient fhirPatient;
+
     public Patient withFhirPatient(FhirPatient fhirPatient) {
         this.fhirPatient = fhirPatient;
         return this;
@@ -51,6 +57,7 @@ public class Patient {
     
     
     public FhirPractitioner[] fhirPractitioners;
+
     public Patient withFhirPractitioners(FhirPractitioner[] fhirPractitioners) {
         this.fhirPractitioners = fhirPractitioners;
         return this;
@@ -58,6 +65,7 @@ public class Patient {
     
     
     public Group group;
+
     public Patient withGroup(Group group) {
         this.group = group;
         return this;
@@ -65,9 +73,11 @@ public class Patient {
     
     
     public Long id;
+
     public Patient withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public Patient(){}
 }

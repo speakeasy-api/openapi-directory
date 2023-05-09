@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConfiguredTableAnalysisRuleResponse {
@@ -12,6 +13,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateConfiguredTableAnalysisRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object conflictException;
+
     public UpdateConfiguredTableAnalysisRuleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
     
     
     public String contentType;
+
     public UpdateConfiguredTableAnalysisRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object internalServerException;
+
     public UpdateConfiguredTableAnalysisRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateConfiguredTableAnalysisRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateConfiguredTableAnalysisRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConfiguredTableAnalysisRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object throttlingException;
+
     public UpdateConfiguredTableAnalysisRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateConfiguredTableAnalysisRuleOutput updateConfiguredTableAnalysisRuleOutput;
+
     public UpdateConfiguredTableAnalysisRuleResponse withUpdateConfiguredTableAnalysisRuleOutput(org.openapis.openapi.models.shared.UpdateConfiguredTableAnalysisRuleOutput updateConfiguredTableAnalysisRuleOutput) {
         this.updateConfiguredTableAnalysisRuleOutput = updateConfiguredTableAnalysisRuleOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object validationException;
+
     public UpdateConfiguredTableAnalysisRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateConfiguredTableAnalysisRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

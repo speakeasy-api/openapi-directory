@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceHealthSummary {
     
     public Long degraded;
+
     public InstanceHealthSummary withDegraded(Long degraded) {
         this.degraded = degraded;
         return this;
@@ -19,6 +20,7 @@ public class InstanceHealthSummary {
     
     
     public Long info;
+
     public InstanceHealthSummary withInfo(Long info) {
         this.info = info;
         return this;
@@ -26,6 +28,7 @@ public class InstanceHealthSummary {
     
     
     public Long noData;
+
     public InstanceHealthSummary withNoData(Long noData) {
         this.noData = noData;
         return this;
@@ -33,6 +36,7 @@ public class InstanceHealthSummary {
     
     
     public Long ok;
+
     public InstanceHealthSummary withOk(Long ok) {
         this.ok = ok;
         return this;
@@ -40,6 +44,7 @@ public class InstanceHealthSummary {
     
     
     public Long pending;
+
     public InstanceHealthSummary withPending(Long pending) {
         this.pending = pending;
         return this;
@@ -47,6 +52,7 @@ public class InstanceHealthSummary {
     
     
     public Long severe;
+
     public InstanceHealthSummary withSevere(Long severe) {
         this.severe = severe;
         return this;
@@ -54,6 +60,7 @@ public class InstanceHealthSummary {
     
     
     public Long unknown;
+
     public InstanceHealthSummary withUnknown(Long unknown) {
         this.unknown = unknown;
         return this;
@@ -61,9 +68,11 @@ public class InstanceHealthSummary {
     
     
     public Long warning;
+
     public InstanceHealthSummary withWarning(Long warning) {
         this.warning = warning;
         return this;
     }
     
+    public InstanceHealthSummary(){}
 }

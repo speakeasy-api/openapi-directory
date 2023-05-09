@@ -15,6 +15,7 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentDeploymentPercentage")
     public Long concurrentDeploymentPercentage;
+
     public DeploymentConfig withConcurrentDeploymentPercentage(Long concurrentDeploymentPercentage) {
         this.concurrentDeploymentPercentage = concurrentDeploymentPercentage;
         return this;
@@ -23,6 +24,7 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadConditionFile")
     public S3Object downloadConditionFile;
+
     public DeploymentConfig withDownloadConditionFile(S3Object downloadConditionFile) {
         this.downloadConditionFile = downloadConditionFile;
         return this;
@@ -31,6 +33,7 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureThresholdPercentage")
     public Long failureThresholdPercentage;
+
     public DeploymentConfig withFailureThresholdPercentage(Long failureThresholdPercentage) {
         this.failureThresholdPercentage = failureThresholdPercentage;
         return this;
@@ -39,9 +42,11 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotDeploymentTimeoutInSeconds")
     public Long robotDeploymentTimeoutInSeconds;
+
     public DeploymentConfig withRobotDeploymentTimeoutInSeconds(Long robotDeploymentTimeoutInSeconds) {
         this.robotDeploymentTimeoutInSeconds = robotDeploymentTimeoutInSeconds;
         return this;
     }
     
+    public DeploymentConfig(){}
 }

@@ -18,9 +18,11 @@ public class ApproveRolloutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved")
     public Boolean approved;
+
     public ApproveRolloutRequest withApproved(Boolean approved) {
         this.approved = approved;
         return this;
     }
     
+    public ApproveRolloutRequest(){}
 }

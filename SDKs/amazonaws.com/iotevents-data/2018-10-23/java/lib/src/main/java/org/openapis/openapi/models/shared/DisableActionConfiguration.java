@@ -15,9 +15,11 @@ public class DisableActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public DisableActionConfiguration withNote(String note) {
         this.note = note;
         return this;
     }
     
+    public DisableActionConfiguration(){}
 }

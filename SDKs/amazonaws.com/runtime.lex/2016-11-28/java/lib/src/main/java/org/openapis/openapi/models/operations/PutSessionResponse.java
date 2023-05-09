@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSessionResponse {
@@ -12,6 +13,7 @@ public class PutSessionResponse {
      */
     
     public Object badGatewayException;
+
     public PutSessionResponse withBadGatewayException(Object badGatewayException) {
         this.badGatewayException = badGatewayException;
         return this;
@@ -22,6 +24,7 @@ public class PutSessionResponse {
      */
     
     public Object badRequestException;
+
     public PutSessionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class PutSessionResponse {
      */
     
     public Object conflictException;
+
     public PutSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class PutSessionResponse {
     
     
     public String contentType;
+
     public PutSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class PutSessionResponse {
      */
     
     public Object dependencyFailedException;
+
     public PutSessionResponse withDependencyFailedException(Object dependencyFailedException) {
         this.dependencyFailedException = dependencyFailedException;
         return this;
@@ -59,6 +65,7 @@ public class PutSessionResponse {
      */
     
     public Object internalFailureException;
+
     public PutSessionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -69,6 +76,7 @@ public class PutSessionResponse {
      */
     
     public Object limitExceededException;
+
     public PutSessionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PutSessionResponse {
      */
     
     public Object notAcceptableException;
+
     public PutSessionResponse withNotAcceptableException(Object notAcceptableException) {
         this.notAcceptableException = notAcceptableException;
         return this;
@@ -89,6 +98,7 @@ public class PutSessionResponse {
      */
     
     public Object notFoundException;
+
     public PutSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -99,6 +109,7 @@ public class PutSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.PutSessionResponse putSessionResponse;
+
     public PutSessionResponse withPutSessionResponse(org.openapis.openapi.models.shared.PutSessionResponse putSessionResponse) {
         this.putSessionResponse = putSessionResponse;
         return this;
@@ -106,6 +117,7 @@ public class PutSessionResponse {
     
     
     public Integer statusCode;
+
     public PutSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class PutSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

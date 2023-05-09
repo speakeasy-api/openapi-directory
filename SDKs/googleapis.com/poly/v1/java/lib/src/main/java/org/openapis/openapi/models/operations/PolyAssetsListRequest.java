@@ -12,6 +12,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public PolyAssetsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public PolyAssetsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PolyAssetsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PolyAssetsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public PolyAssetsListRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -62,6 +67,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=curated")
     public Boolean curated;
+
     public PolyAssetsListRequest withCurated(Boolean curated) {
         this.curated = curated;
         return this;
@@ -72,6 +78,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PolyAssetsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +89,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public PolyAssetsListRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -92,6 +100,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PolyAssetsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +111,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keywords")
     public String keywords;
+
     public PolyAssetsListRequest withKeywords(String keywords) {
         this.keywords = keywords;
         return this;
@@ -112,6 +122,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxComplexity")
     public PolyAssetsListMaxComplexityEnum maxComplexity;
+
     public PolyAssetsListRequest withMaxComplexity(PolyAssetsListMaxComplexityEnum maxComplexity) {
         this.maxComplexity = maxComplexity;
         return this;
@@ -122,6 +133,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PolyAssetsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -132,6 +144,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public PolyAssetsListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -142,6 +155,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public PolyAssetsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -152,6 +166,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public PolyAssetsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -162,6 +177,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PolyAssetsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -172,6 +188,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PolyAssetsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -182,6 +199,7 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public PolyAssetsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -192,9 +210,11 @@ public class PolyAssetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public PolyAssetsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public PolyAssetsListRequest(){}
 }

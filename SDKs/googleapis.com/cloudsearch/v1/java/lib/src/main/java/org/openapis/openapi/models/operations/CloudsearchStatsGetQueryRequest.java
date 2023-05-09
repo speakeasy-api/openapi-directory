@@ -12,6 +12,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudsearchStatsGetQueryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudsearchStatsGetQueryRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudsearchStatsGetQueryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudsearchStatsGetQueryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudsearchStatsGetQueryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate.day")
     public Long fromDateDay;
+
     public CloudsearchStatsGetQueryRequest withFromDateDay(Long fromDateDay) {
         this.fromDateDay = fromDateDay;
         return this;
@@ -72,6 +78,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate.month")
     public Long fromDateMonth;
+
     public CloudsearchStatsGetQueryRequest withFromDateMonth(Long fromDateMonth) {
         this.fromDateMonth = fromDateMonth;
         return this;
@@ -82,6 +89,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate.year")
     public Long fromDateYear;
+
     public CloudsearchStatsGetQueryRequest withFromDateYear(Long fromDateYear) {
         this.fromDateYear = fromDateYear;
         return this;
@@ -92,6 +100,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudsearchStatsGetQueryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +111,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudsearchStatsGetQueryRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +122,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudsearchStatsGetQueryRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +133,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudsearchStatsGetQueryRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +144,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate.day")
     public Long toDateDay;
+
     public CloudsearchStatsGetQueryRequest withToDateDay(Long toDateDay) {
         this.toDateDay = toDateDay;
         return this;
@@ -142,6 +155,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate.month")
     public Long toDateMonth;
+
     public CloudsearchStatsGetQueryRequest withToDateMonth(Long toDateMonth) {
         this.toDateMonth = toDateMonth;
         return this;
@@ -152,6 +166,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate.year")
     public Long toDateYear;
+
     public CloudsearchStatsGetQueryRequest withToDateYear(Long toDateYear) {
         this.toDateYear = toDateYear;
         return this;
@@ -162,6 +177,7 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudsearchStatsGetQueryRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +188,11 @@ public class CloudsearchStatsGetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudsearchStatsGetQueryRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudsearchStatsGetQueryRequest(){}
 }

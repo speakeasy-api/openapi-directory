@@ -15,6 +15,7 @@ public class UpdateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public UpdateWorkerRequestBody withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -26,6 +27,7 @@ public class UpdateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalTransientProperties")
     public String additionalTransientProperties;
+
     public UpdateWorkerRequestBody withAdditionalTransientProperties(String additionalTransientProperties) {
         this.additionalTransientProperties = additionalTransientProperties;
         return this;
@@ -36,6 +38,7 @@ public class UpdateWorkerRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateWorkerRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +50,7 @@ public class UpdateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkerRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class UpdateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public UpdateWorkerRequestBodyOrientation orientation;
+
     public UpdateWorkerRequestBody withOrientation(UpdateWorkerRequestBodyOrientation orientation) {
         this.orientation = orientation;
         return this;
@@ -69,6 +74,7 @@ public class UpdateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public UpdateWorkerRequestBodyPosition position;
+
     public UpdateWorkerRequestBody withPosition(UpdateWorkerRequestBodyPosition position) {
         this.position = position;
         return this;
@@ -80,9 +86,13 @@ public class UpdateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorProperties")
     public UpdateWorkerRequestBodyVendorProperties vendorProperties;
+
     public UpdateWorkerRequestBody withVendorProperties(UpdateWorkerRequestBodyVendorProperties vendorProperties) {
         this.vendorProperties = vendorProperties;
         return this;
     }
     
+    public UpdateWorkerRequestBody(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

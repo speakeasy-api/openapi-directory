@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2AlternatePolicySpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launch")
     public String launch;
+
     public GoogleCloudOrgpolicyV2AlternatePolicySpecInput withLaunch(String launch) {
         this.launch = launch;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudOrgpolicyV2AlternatePolicySpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public GoogleCloudOrgpolicyV2PolicySpecInput spec;
+
     public GoogleCloudOrgpolicyV2AlternatePolicySpecInput withSpec(GoogleCloudOrgpolicyV2PolicySpecInput spec) {
         this.spec = spec;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2AlternatePolicySpecInput(){}
 }

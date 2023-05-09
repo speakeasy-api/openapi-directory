@@ -12,6 +12,7 @@ public class FileCommitCommitVerification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public FileCommitCommitVerification withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -20,6 +21,7 @@ public class FileCommitCommitVerification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public FileCommitCommitVerification withReason(String reason) {
         this.reason = reason;
         return this;
@@ -28,6 +30,7 @@ public class FileCommitCommitVerification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public String signature;
+
     public FileCommitCommitVerification withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -36,9 +39,11 @@ public class FileCommitCommitVerification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verified")
     public Boolean verified;
+
     public FileCommitCommitVerification withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public FileCommitCommitVerification(){}
 }

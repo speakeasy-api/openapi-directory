@@ -21,6 +21,7 @@ public class Error405SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error405SBS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error405SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error405SBSAdditionalErrors[] additionalErrors;
+
     public Error405SBS withAdditionalErrors(Error405SBSAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error405SBS {
      */
     @JsonProperty("code")
     public MessageCode405SBSEnum code;
+
     public Error405SBS withCode(MessageCode405SBSEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error405SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error405SBS withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error405SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error405SBS withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error405SBS {
      */
     @JsonProperty("type")
     public String type;
+
     public Error405SBS withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error405SBS(@JsonProperty("code") MessageCode405SBSEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

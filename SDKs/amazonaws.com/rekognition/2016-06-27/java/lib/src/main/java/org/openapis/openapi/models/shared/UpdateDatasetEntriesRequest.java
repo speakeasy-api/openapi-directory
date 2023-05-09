@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDatasetEntriesRequest {
     @JsonProperty("Changes")
     public DatasetChanges changes;
+
     public UpdateDatasetEntriesRequest withChanges(DatasetChanges changes) {
         this.changes = changes;
         return this;
@@ -16,9 +17,14 @@ public class UpdateDatasetEntriesRequest {
     
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public UpdateDatasetEntriesRequest withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
     }
     
+    public UpdateDatasetEntriesRequest(@JsonProperty("Changes") DatasetChanges changes, @JsonProperty("DatasetArn") String datasetArn) {
+        this.changes = changes;
+        this.datasetArn = datasetArn;
+  }
 }

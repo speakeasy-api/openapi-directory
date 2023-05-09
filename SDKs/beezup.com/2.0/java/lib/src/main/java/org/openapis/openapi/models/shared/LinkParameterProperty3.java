@@ -15,6 +15,7 @@ public class LinkParameterProperty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LinkParameterProperty3 withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class LinkParameterProperty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public LinkParameterProperty3 withLabel(String label) {
         this.label = label;
         return this;
@@ -37,6 +39,7 @@ public class LinkParameterProperty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovLink")
     public LOVLink3 lovLink;
+
     public LinkParameterProperty3 withLovLink(LOVLink3 lovLink) {
         this.lovLink = lovLink;
         return this;
@@ -48,6 +51,7 @@ public class LinkParameterProperty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovRequired")
     public Boolean lovRequired;
+
     public LinkParameterProperty3 withLovRequired(Boolean lovRequired) {
         this.lovRequired = lovRequired;
         return this;
@@ -59,6 +63,7 @@ public class LinkParameterProperty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
     public String pattern;
+
     public LinkParameterProperty3 withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -67,6 +72,7 @@ public class LinkParameterProperty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public LinkParameterProperty3 withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -78,6 +84,7 @@ public class LinkParameterProperty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public LinkParameterProperty3 withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -88,6 +95,7 @@ public class LinkParameterProperty3 {
      */
     @JsonProperty("type")
     public ParameterTypeEnum type;
+
     public LinkParameterProperty3 withType(ParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -99,9 +107,13 @@ public class LinkParameterProperty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public LinkParameterProperty3 withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public LinkParameterProperty3(@JsonProperty("type") ParameterTypeEnum type) {
+        this.type = type;
+  }
 }

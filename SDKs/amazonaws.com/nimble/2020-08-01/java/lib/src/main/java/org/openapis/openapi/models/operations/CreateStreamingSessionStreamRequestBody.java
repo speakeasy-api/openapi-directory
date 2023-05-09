@@ -15,9 +15,11 @@ public class CreateStreamingSessionStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationInSeconds")
     public Long expirationInSeconds;
+
     public CreateStreamingSessionStreamRequestBody withExpirationInSeconds(Long expirationInSeconds) {
         this.expirationInSeconds = expirationInSeconds;
         return this;
     }
     
+    public CreateStreamingSessionStreamRequestBody(){}
 }

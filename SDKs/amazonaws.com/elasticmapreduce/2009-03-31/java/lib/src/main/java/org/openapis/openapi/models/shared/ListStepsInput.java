@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListStepsInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ListStepsInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -22,6 +23,7 @@ public class ListStepsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListStepsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +32,7 @@ public class ListStepsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepIds")
     public String[] stepIds;
+
     public ListStepsInput withStepIds(String[] stepIds) {
         this.stepIds = stepIds;
         return this;
@@ -38,9 +41,13 @@ public class ListStepsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepStates")
     public StepStateEnum[] stepStates;
+
     public ListStepsInput withStepStates(StepStateEnum[] stepStates) {
         this.stepStates = stepStates;
         return this;
     }
     
+    public ListStepsInput(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

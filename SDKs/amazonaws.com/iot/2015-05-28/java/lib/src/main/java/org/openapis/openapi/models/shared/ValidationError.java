@@ -15,9 +15,11 @@ public class ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ValidationError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public ValidationError(){}
 }

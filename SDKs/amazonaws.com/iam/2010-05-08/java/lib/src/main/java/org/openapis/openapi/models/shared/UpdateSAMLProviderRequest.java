@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateSAMLProviderRequest {
     
     public String samlMetadataDocument;
+
     public UpdateSAMLProviderRequest withSAMLMetadataDocument(String samlMetadataDocument) {
         this.samlMetadataDocument = samlMetadataDocument;
         return this;
@@ -16,9 +17,14 @@ public class UpdateSAMLProviderRequest {
     
     
     public String samlProviderArn;
+
     public UpdateSAMLProviderRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
     }
     
+    public UpdateSAMLProviderRequest(@JsonProperty("SAMLMetadataDocument") String samlMetadataDocument, @JsonProperty("SAMLProviderArn") String samlProviderArn) {
+        this.samlMetadataDocument = samlMetadataDocument;
+        this.samlProviderArn = samlProviderArn;
+  }
 }

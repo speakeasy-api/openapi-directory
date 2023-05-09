@@ -15,6 +15,7 @@ public class TeamMemberSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public TeamMemberSimpleVO withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -23,6 +24,7 @@ public class TeamMemberSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamMemberSimpleVO withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class TeamMemberSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public TeamMemberSimpleVO withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -39,6 +42,7 @@ public class TeamMemberSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public TeamMemberSimpleVO withRole(String role) {
         this.role = role;
         return this;
@@ -47,6 +51,7 @@ public class TeamMemberSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teammember_id")
     public Long teammemberId;
+
     public TeamMemberSimpleVO withTeammemberId(Long teammemberId) {
         this.teammemberId = teammemberId;
         return this;
@@ -55,6 +60,7 @@ public class TeamMemberSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public TeamMemberSimpleVO withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -63,9 +69,11 @@ public class TeamMemberSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_name")
     public String workgroupName;
+
     public TeamMemberSimpleVO withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public TeamMemberSimpleVO(){}
 }

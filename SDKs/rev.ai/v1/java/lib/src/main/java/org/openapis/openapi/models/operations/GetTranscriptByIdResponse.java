@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTranscriptByIdResponse {
     
     public String contentType;
+
     public GetTranscriptByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class GetTranscriptByIdResponse {
      */
     
     public GetTranscriptById401ApplicationProblemPlusJson getTranscriptById401ApplicationProblemPlusJsonObject;
+
     public GetTranscriptByIdResponse withGetTranscriptById401ApplicationProblemPlusJsonObject(GetTranscriptById401ApplicationProblemPlusJson getTranscriptById401ApplicationProblemPlusJsonObject) {
         this.getTranscriptById401ApplicationProblemPlusJsonObject = getTranscriptById401ApplicationProblemPlusJsonObject;
         return this;
@@ -32,6 +35,7 @@ public class GetTranscriptByIdResponse {
      */
     
     public GetTranscriptById404ApplicationProblemPlusJson getTranscriptById404ApplicationProblemPlusJsonObject;
+
     public GetTranscriptByIdResponse withGetTranscriptById404ApplicationProblemPlusJsonObject(GetTranscriptById404ApplicationProblemPlusJson getTranscriptById404ApplicationProblemPlusJsonObject) {
         this.getTranscriptById404ApplicationProblemPlusJsonObject = getTranscriptById404ApplicationProblemPlusJsonObject;
         return this;
@@ -42,6 +46,7 @@ public class GetTranscriptByIdResponse {
      */
     
     public GetTranscriptById406ApplicationProblemPlusJson getTranscriptById406ApplicationProblemPlusJsonObject;
+
     public GetTranscriptByIdResponse withGetTranscriptById406ApplicationProblemPlusJsonObject(GetTranscriptById406ApplicationProblemPlusJson getTranscriptById406ApplicationProblemPlusJsonObject) {
         this.getTranscriptById406ApplicationProblemPlusJsonObject = getTranscriptById406ApplicationProblemPlusJsonObject;
         return this;
@@ -55,6 +60,7 @@ public class GetTranscriptByIdResponse {
      */
     
     public GetTranscriptById409ApplicationProblemPlusJson getTranscriptById409ApplicationProblemPlusJsonObject;
+
     public GetTranscriptByIdResponse withGetTranscriptById409ApplicationProblemPlusJsonObject(GetTranscriptById409ApplicationProblemPlusJson getTranscriptById409ApplicationProblemPlusJsonObject) {
         this.getTranscriptById409ApplicationProblemPlusJsonObject = getTranscriptById409ApplicationProblemPlusJsonObject;
         return this;
@@ -62,6 +68,7 @@ public class GetTranscriptByIdResponse {
     
     
     public Integer statusCode;
+
     public GetTranscriptByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -69,6 +76,7 @@ public class GetTranscriptByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTranscriptByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -82,6 +90,7 @@ public class GetTranscriptByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Transcript transcript;
+
     public GetTranscriptByIdResponse withTranscript(org.openapis.openapi.models.shared.Transcript transcript) {
         this.transcript = transcript;
         return this;
@@ -95,9 +104,14 @@ public class GetTranscriptByIdResponse {
      */
     
     public String transcriptText;
+
     public GetTranscriptByIdResponse withTranscriptText(String transcriptText) {
         this.transcriptText = transcriptText;
         return this;
     }
     
+    public GetTranscriptByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

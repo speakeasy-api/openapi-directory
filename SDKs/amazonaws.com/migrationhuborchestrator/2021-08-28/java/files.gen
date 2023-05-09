@@ -150,4 +150,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateMigrationWorkflowResp
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkflowStepResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkflowStepGroupResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

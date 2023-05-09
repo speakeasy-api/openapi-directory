@@ -18,6 +18,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Dataset withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Dataset withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Dataset withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Dataset withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exampleCount")
     public Integer exampleCount;
+
     public Dataset withExampleCount(Integer exampleCount) {
         this.exampleCount = exampleCount;
         return this;
@@ -73,6 +78,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageClassificationDatasetMetadata")
     public ImageClassificationDatasetMetadata imageClassificationDatasetMetadata;
+
     public Dataset withImageClassificationDatasetMetadata(ImageClassificationDatasetMetadata imageClassificationDatasetMetadata) {
         this.imageClassificationDatasetMetadata = imageClassificationDatasetMetadata;
         return this;
@@ -84,6 +90,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageObjectDetectionDatasetMetadata")
     public java.util.Map<String, Object> imageObjectDetectionDatasetMetadata;
+
     public Dataset withImageObjectDetectionDatasetMetadata(java.util.Map<String, Object> imageObjectDetectionDatasetMetadata) {
         this.imageObjectDetectionDatasetMetadata = imageObjectDetectionDatasetMetadata;
         return this;
@@ -95,6 +102,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Dataset withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tablesDatasetMetadata")
     public TablesDatasetMetadata tablesDatasetMetadata;
+
     public Dataset withTablesDatasetMetadata(TablesDatasetMetadata tablesDatasetMetadata) {
         this.tablesDatasetMetadata = tablesDatasetMetadata;
         return this;
@@ -117,6 +126,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textClassificationDatasetMetadata")
     public TextClassificationDatasetMetadata textClassificationDatasetMetadata;
+
     public Dataset withTextClassificationDatasetMetadata(TextClassificationDatasetMetadata textClassificationDatasetMetadata) {
         this.textClassificationDatasetMetadata = textClassificationDatasetMetadata;
         return this;
@@ -128,6 +138,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textExtractionDatasetMetadata")
     public java.util.Map<String, Object> textExtractionDatasetMetadata;
+
     public Dataset withTextExtractionDatasetMetadata(java.util.Map<String, Object> textExtractionDatasetMetadata) {
         this.textExtractionDatasetMetadata = textExtractionDatasetMetadata;
         return this;
@@ -139,6 +150,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSentimentDatasetMetadata")
     public TextSentimentDatasetMetadata textSentimentDatasetMetadata;
+
     public Dataset withTextSentimentDatasetMetadata(TextSentimentDatasetMetadata textSentimentDatasetMetadata) {
         this.textSentimentDatasetMetadata = textSentimentDatasetMetadata;
         return this;
@@ -150,6 +162,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translationDatasetMetadata")
     public TranslationDatasetMetadata translationDatasetMetadata;
+
     public Dataset withTranslationDatasetMetadata(TranslationDatasetMetadata translationDatasetMetadata) {
         this.translationDatasetMetadata = translationDatasetMetadata;
         return this;
@@ -161,6 +174,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoClassificationDatasetMetadata")
     public java.util.Map<String, Object> videoClassificationDatasetMetadata;
+
     public Dataset withVideoClassificationDatasetMetadata(java.util.Map<String, Object> videoClassificationDatasetMetadata) {
         this.videoClassificationDatasetMetadata = videoClassificationDatasetMetadata;
         return this;
@@ -172,9 +186,11 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoObjectTrackingDatasetMetadata")
     public java.util.Map<String, Object> videoObjectTrackingDatasetMetadata;
+
     public Dataset withVideoObjectTrackingDatasetMetadata(java.util.Map<String, Object> videoObjectTrackingDatasetMetadata) {
         this.videoObjectTrackingDatasetMetadata = videoObjectTrackingDatasetMetadata;
         return this;
     }
     
+    public Dataset(){}
 }

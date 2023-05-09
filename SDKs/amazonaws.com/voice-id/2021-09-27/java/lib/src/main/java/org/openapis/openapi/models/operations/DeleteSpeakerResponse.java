@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSpeakerResponse {
@@ -12,6 +13,7 @@ public class DeleteSpeakerResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSpeakerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSpeakerResponse {
      */
     
     public Object conflictException;
+
     public DeleteSpeakerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSpeakerResponse {
     
     
     public String contentType;
+
     public DeleteSpeakerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSpeakerResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSpeakerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSpeakerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSpeakerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteSpeakerResponse {
     
     
     public Integer statusCode;
+
     public DeleteSpeakerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSpeakerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSpeakerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSpeakerResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSpeakerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteSpeakerResponse {
      */
     
     public Object validationException;
+
     public DeleteSpeakerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSpeakerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

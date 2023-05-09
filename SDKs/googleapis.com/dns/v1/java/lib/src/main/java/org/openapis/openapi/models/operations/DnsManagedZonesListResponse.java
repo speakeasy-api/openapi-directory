@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DnsManagedZonesListResponse {
     
     public String contentType;
+
     public DnsManagedZonesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DnsManagedZonesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ManagedZonesListResponse managedZonesListResponse;
+
     public DnsManagedZonesListResponse withManagedZonesListResponse(org.openapis.openapi.models.shared.ManagedZonesListResponse managedZonesListResponse) {
         this.managedZonesListResponse = managedZonesListResponse;
         return this;
@@ -26,6 +29,7 @@ public class DnsManagedZonesListResponse {
     
     
     public Integer statusCode;
+
     public DnsManagedZonesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DnsManagedZonesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DnsManagedZonesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DnsManagedZonesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

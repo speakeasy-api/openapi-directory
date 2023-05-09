@@ -15,9 +15,11 @@ public class DescribeAttachmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public Attachment attachment;
+
     public DescribeAttachmentResponse withAttachment(Attachment attachment) {
         this.attachment = attachment;
         return this;
     }
     
+    public DescribeAttachmentResponse(){}
 }

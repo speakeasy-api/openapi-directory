@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CatalogIndex {
     @JsonProperty("links")
     public CatalogIndexLinks links;
+
     public CatalogIndex withLinks(CatalogIndexLinks links) {
         this.links = links;
         return this;
@@ -21,6 +22,7 @@ public class CatalogIndex {
     
     @JsonProperty("lovLinks")
     public CatalogIndexLOVLinks lovLinks;
+
     public CatalogIndex withLovLinks(CatalogIndexLOVLinks lovLinks) {
         this.lovLinks = lovLinks;
         return this;
@@ -29,9 +31,14 @@ public class CatalogIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeLinks")
     public CatalogStoreIndexList storeLinks;
+
     public CatalogIndex withStoreLinks(CatalogStoreIndexList storeLinks) {
         this.storeLinks = storeLinks;
         return this;
     }
     
+    public CatalogIndex(@JsonProperty("links") CatalogIndexLinks links, @JsonProperty("lovLinks") CatalogIndexLOVLinks lovLinks) {
+        this.links = links;
+        this.lovLinks = lovLinks;
+  }
 }

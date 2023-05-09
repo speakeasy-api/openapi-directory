@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStagingAccountsResponse {
@@ -12,6 +13,7 @@ public class ListStagingAccountsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListStagingAccountsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListStagingAccountsResponse {
     
     
     public String contentType;
+
     public ListStagingAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListStagingAccountsResponse {
      */
     
     public Object internalServerException;
+
     public ListStagingAccountsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListStagingAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStagingAccountsResponse listStagingAccountsResponse;
+
     public ListStagingAccountsResponse withListStagingAccountsResponse(org.openapis.openapi.models.shared.ListStagingAccountsResponse listStagingAccountsResponse) {
         this.listStagingAccountsResponse = listStagingAccountsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListStagingAccountsResponse {
     
     
     public Integer statusCode;
+
     public ListStagingAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListStagingAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStagingAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListStagingAccountsResponse {
      */
     
     public Object throttlingException;
+
     public ListStagingAccountsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class ListStagingAccountsResponse {
      */
     
     public Object uninitializedAccountException;
+
     public ListStagingAccountsResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -83,9 +92,14 @@ public class ListStagingAccountsResponse {
      */
     
     public Object validationException;
+
     public ListStagingAccountsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListStagingAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

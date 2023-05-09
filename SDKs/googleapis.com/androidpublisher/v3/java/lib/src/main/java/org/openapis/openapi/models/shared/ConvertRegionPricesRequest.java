@@ -18,9 +18,11 @@ public class ConvertRegionPricesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Money price;
+
     public ConvertRegionPricesRequest withPrice(Money price) {
         this.price = price;
         return this;
     }
     
+    public ConvertRegionPricesRequest(){}
 }

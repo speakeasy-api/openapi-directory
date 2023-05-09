@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoadStatusRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRangeNullable.endDate")
     public OffsetDateTime dateRangeNullableEndDate;
+
     public RoadStatusRequest withDateRangeNullableEndDate(OffsetDateTime dateRangeNullableEndDate) {
         this.dateRangeNullableEndDate = dateRangeNullableEndDate;
         return this;
@@ -17,6 +19,7 @@ public class RoadStatusRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRangeNullable.startDate")
     public OffsetDateTime dateRangeNullableStartDate;
+
     public RoadStatusRequest withDateRangeNullableStartDate(OffsetDateTime dateRangeNullableStartDate) {
         this.dateRangeNullableStartDate = dateRangeNullableStartDate;
         return this;
@@ -27,9 +30,13 @@ public class RoadStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public RoadStatusRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public RoadStatusRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

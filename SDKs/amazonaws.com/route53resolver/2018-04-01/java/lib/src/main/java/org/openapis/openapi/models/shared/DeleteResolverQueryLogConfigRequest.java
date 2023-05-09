@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteResolverQueryLogConfigRequest {
     @JsonProperty("ResolverQueryLogConfigId")
     public String resolverQueryLogConfigId;
+
     public DeleteResolverQueryLogConfigRequest withResolverQueryLogConfigId(String resolverQueryLogConfigId) {
         this.resolverQueryLogConfigId = resolverQueryLogConfigId;
         return this;
     }
     
+    public DeleteResolverQueryLogConfigRequest(@JsonProperty("ResolverQueryLogConfigId") String resolverQueryLogConfigId) {
+        this.resolverQueryLogConfigId = resolverQueryLogConfigId;
+  }
 }

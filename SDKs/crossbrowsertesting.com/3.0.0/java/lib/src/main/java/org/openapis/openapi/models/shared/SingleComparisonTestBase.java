@@ -12,9 +12,11 @@ public class SingleComparisonTestBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshot")
     public Screenshot screenshot;
+
     public SingleComparisonTestBase withScreenshot(Screenshot screenshot) {
         this.screenshot = screenshot;
         return this;
     }
     
+    public SingleComparisonTestBase(){}
 }

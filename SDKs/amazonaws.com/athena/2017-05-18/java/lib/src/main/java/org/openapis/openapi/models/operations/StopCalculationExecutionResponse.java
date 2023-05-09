@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopCalculationExecutionResponse {
     
     public String contentType;
+
     public StopCalculationExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopCalculationExecutionResponse {
      */
     
     public Object internalServerException;
+
     public StopCalculationExecutionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopCalculationExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public StopCalculationExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopCalculationExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopCalculationExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopCalculationExecutionResponse {
     
     
     public Integer statusCode;
+
     public StopCalculationExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopCalculationExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopCalculationExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopCalculationExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopCalculationExecutionResponse stopCalculationExecutionResponse;
+
     public StopCalculationExecutionResponse withStopCalculationExecutionResponse(org.openapis.openapi.models.shared.StopCalculationExecutionResponse stopCalculationExecutionResponse) {
         this.stopCalculationExecutionResponse = stopCalculationExecutionResponse;
         return this;
     }
     
+    public StopCalculationExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

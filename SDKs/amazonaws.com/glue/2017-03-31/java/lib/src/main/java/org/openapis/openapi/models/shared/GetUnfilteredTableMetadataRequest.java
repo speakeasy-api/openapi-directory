@@ -12,6 +12,7 @@ public class GetUnfilteredTableMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditContext")
     public AuditContext auditContext;
+
     public GetUnfilteredTableMetadataRequest withAuditContext(AuditContext auditContext) {
         this.auditContext = auditContext;
         return this;
@@ -19,6 +20,7 @@ public class GetUnfilteredTableMetadataRequest {
     
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetUnfilteredTableMetadataRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -26,6 +28,7 @@ public class GetUnfilteredTableMetadataRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetUnfilteredTableMetadataRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -33,6 +36,7 @@ public class GetUnfilteredTableMetadataRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetUnfilteredTableMetadataRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +44,16 @@ public class GetUnfilteredTableMetadataRequest {
     
     @JsonProperty("SupportedPermissionTypes")
     public PermissionTypeEnum[] supportedPermissionTypes;
+
     public GetUnfilteredTableMetadataRequest withSupportedPermissionTypes(PermissionTypeEnum[] supportedPermissionTypes) {
         this.supportedPermissionTypes = supportedPermissionTypes;
         return this;
     }
     
+    public GetUnfilteredTableMetadataRequest(@JsonProperty("CatalogId") String catalogId, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("Name") String name, @JsonProperty("SupportedPermissionTypes") PermissionTypeEnum[] supportedPermissionTypes) {
+        this.catalogId = catalogId;
+        this.databaseName = databaseName;
+        this.name = name;
+        this.supportedPermissionTypes = supportedPermissionTypes;
+  }
 }

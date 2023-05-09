@@ -15,9 +15,11 @@ public class DeleteTemplateSyncConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateSyncConfig")
     public TemplateSyncConfig templateSyncConfig;
+
     public DeleteTemplateSyncConfigOutput withTemplateSyncConfig(TemplateSyncConfig templateSyncConfig) {
         this.templateSyncConfig = templateSyncConfig;
         return this;
     }
     
+    public DeleteTemplateSyncConfigOutput(){}
 }

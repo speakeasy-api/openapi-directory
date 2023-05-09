@@ -56,11 +56,9 @@ public class Elections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CivicinfoElectionsElectionQueryResponse res = new org.openapis.openapi.models.operations.CivicinfoElectionsElectionQueryResponse() {{
+        org.openapis.openapi.models.operations.CivicinfoElectionsElectionQueryResponse res = new org.openapis.openapi.models.operations.CivicinfoElectionsElectionQueryResponse(contentType, httpRes.statusCode()) {{
             electionsQueryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Elections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CivicinfoElectionsVoterInfoQueryResponse res = new org.openapis.openapi.models.operations.CivicinfoElectionsVoterInfoQueryResponse() {{
+        org.openapis.openapi.models.operations.CivicinfoElectionsVoterInfoQueryResponse res = new org.openapis.openapi.models.operations.CivicinfoElectionsVoterInfoQueryResponse(contentType, httpRes.statusCode()) {{
             voterInfoResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

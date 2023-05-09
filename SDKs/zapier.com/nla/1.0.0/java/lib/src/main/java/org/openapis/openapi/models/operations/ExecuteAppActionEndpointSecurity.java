@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ExecuteAppActionEndpointSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
     public String accessPointApiKeyHeader;
+
     public ExecuteAppActionEndpointSecurity withAccessPointApiKeyHeader(String accessPointApiKeyHeader) {
         this.accessPointApiKeyHeader = accessPointApiKeyHeader;
         return this;
@@ -16,6 +17,7 @@ public class ExecuteAppActionEndpointSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
     public String accessPointApiKeyQuery;
+
     public ExecuteAppActionEndpointSecurity withAccessPointApiKeyQuery(String accessPointApiKeyQuery) {
         this.accessPointApiKeyQuery = accessPointApiKeyQuery;
         return this;
@@ -23,6 +25,7 @@ public class ExecuteAppActionEndpointSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String accessPointOAuth;
+
     public ExecuteAppActionEndpointSecurity withAccessPointOAuth(String accessPointOAuth) {
         this.accessPointOAuth = accessPointOAuth;
         return this;
@@ -30,9 +33,11 @@ public class ExecuteAppActionEndpointSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie,name=sessionid")
     public String sessionAuth;
+
     public ExecuteAppActionEndpointSecurity withSessionAuth(String sessionAuth) {
         this.sessionAuth = sessionAuth;
         return this;
     }
     
+    public ExecuteAppActionEndpointSecurity(){}
 }

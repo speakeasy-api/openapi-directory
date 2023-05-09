@@ -15,6 +15,7 @@ public class ListRobotApplicationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListRobotApplicationsRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListRobotApplicationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListRobotApplicationsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListRobotApplicationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRobotApplicationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class ListRobotApplicationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionQualifier")
     public String versionQualifier;
+
     public ListRobotApplicationsRequestBody withVersionQualifier(String versionQualifier) {
         this.versionQualifier = versionQualifier;
         return this;
     }
     
+    public ListRobotApplicationsRequestBody(){}
 }

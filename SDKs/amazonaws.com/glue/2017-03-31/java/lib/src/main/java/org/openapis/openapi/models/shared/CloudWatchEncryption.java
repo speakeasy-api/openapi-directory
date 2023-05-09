@@ -15,6 +15,7 @@ public class CloudWatchEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchEncryptionMode")
     public CloudWatchEncryptionModeEnum cloudWatchEncryptionMode;
+
     public CloudWatchEncryption withCloudWatchEncryptionMode(CloudWatchEncryptionModeEnum cloudWatchEncryptionMode) {
         this.cloudWatchEncryptionMode = cloudWatchEncryptionMode;
         return this;
@@ -23,9 +24,11 @@ public class CloudWatchEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public CloudWatchEncryption withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public CloudWatchEncryption(){}
 }

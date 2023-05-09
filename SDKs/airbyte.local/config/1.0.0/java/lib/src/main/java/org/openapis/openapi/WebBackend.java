@@ -60,13 +60,11 @@ public class WebBackend {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStateTypeResponse res = new org.openapis.openapi.models.operations.GetStateTypeResponse() {{
+        org.openapis.openapi.models.operations.GetStateTypeResponse res = new org.openapis.openapi.models.operations.GetStateTypeResponse(contentType, httpRes.statusCode()) {{
             connectionStateType = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,11 +111,9 @@ public class WebBackend {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebBackendCheckUpdatesResponse res = new org.openapis.openapi.models.operations.WebBackendCheckUpdatesResponse() {{
+        org.openapis.openapi.models.operations.WebBackendCheckUpdatesResponse res = new org.openapis.openapi.models.operations.WebBackendCheckUpdatesResponse(contentType, httpRes.statusCode()) {{
             webBackendCheckUpdatesRead = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,12 +152,10 @@ public class WebBackend {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebBackendCreateConnectionResponse res = new org.openapis.openapi.models.operations.WebBackendCreateConnectionResponse() {{
+        org.openapis.openapi.models.operations.WebBackendCreateConnectionResponse res = new org.openapis.openapi.models.operations.WebBackendCreateConnectionResponse(contentType, httpRes.statusCode()) {{
             webBackendConnectionRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,13 +201,11 @@ public class WebBackend {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebBackendGetConnectionResponse res = new org.openapis.openapi.models.operations.WebBackendGetConnectionResponse() {{
+        org.openapis.openapi.models.operations.WebBackendGetConnectionResponse res = new org.openapis.openapi.models.operations.WebBackendGetConnectionResponse(contentType, httpRes.statusCode()) {{
             webBackendConnectionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,13 +255,11 @@ public class WebBackend {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebBackendGetWorkspaceStateResponse res = new org.openapis.openapi.models.operations.WebBackendGetWorkspaceStateResponse() {{
+        org.openapis.openapi.models.operations.WebBackendGetWorkspaceStateResponse res = new org.openapis.openapi.models.operations.WebBackendGetWorkspaceStateResponse(contentType, httpRes.statusCode()) {{
             webBackendWorkspaceStateResult = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,13 +312,11 @@ public class WebBackend {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebBackendListConnectionsForWorkspaceResponse res = new org.openapis.openapi.models.operations.WebBackendListConnectionsForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.WebBackendListConnectionsForWorkspaceResponse res = new org.openapis.openapi.models.operations.WebBackendListConnectionsForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             webBackendConnectionReadList = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -376,11 +364,9 @@ public class WebBackend {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebBackendListGeographiesResponse res = new org.openapis.openapi.models.operations.WebBackendListGeographiesResponse() {{
+        org.openapis.openapi.models.operations.WebBackendListGeographiesResponse res = new org.openapis.openapi.models.operations.WebBackendListGeographiesResponse(contentType, httpRes.statusCode()) {{
             webBackendGeographiesListResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -427,12 +413,10 @@ public class WebBackend {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebBackendUpdateConnectionResponse res = new org.openapis.openapi.models.operations.WebBackendUpdateConnectionResponse() {{
+        org.openapis.openapi.models.operations.WebBackendUpdateConnectionResponse res = new org.openapis.openapi.models.operations.WebBackendUpdateConnectionResponse(contentType, httpRes.statusCode()) {{
             webBackendConnectionRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

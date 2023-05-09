@@ -15,9 +15,11 @@ public class ListOfferingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListOfferingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListOfferingsRequest(){}
 }

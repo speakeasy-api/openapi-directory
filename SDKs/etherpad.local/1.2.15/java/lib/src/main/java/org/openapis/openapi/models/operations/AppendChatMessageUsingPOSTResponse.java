@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppendChatMessageUsingPOSTResponse {
     
     public String contentType;
+
     public AppendChatMessageUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppendChatMessageUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public AppendChatMessageUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppendChatMessageUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppendChatMessageUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppendChatMessageUsingPOSTResponse {
      */
     
     public AppendChatMessageUsingPOST200ApplicationJSON appendChatMessageUsingPOST200ApplicationJSONObject;
+
     public AppendChatMessageUsingPOSTResponse withAppendChatMessageUsingPOST200ApplicationJSONObject(AppendChatMessageUsingPOST200ApplicationJSON appendChatMessageUsingPOST200ApplicationJSONObject) {
         this.appendChatMessageUsingPOST200ApplicationJSONObject = appendChatMessageUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppendChatMessageUsingPOSTResponse {
      */
     
     public AppendChatMessageUsingPOST400ApplicationJSON appendChatMessageUsingPOST400ApplicationJSONObject;
+
     public AppendChatMessageUsingPOSTResponse withAppendChatMessageUsingPOST400ApplicationJSONObject(AppendChatMessageUsingPOST400ApplicationJSON appendChatMessageUsingPOST400ApplicationJSONObject) {
         this.appendChatMessageUsingPOST400ApplicationJSONObject = appendChatMessageUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AppendChatMessageUsingPOSTResponse {
      */
     
     public AppendChatMessageUsingPOST401ApplicationJSON appendChatMessageUsingPOST401ApplicationJSONObject;
+
     public AppendChatMessageUsingPOSTResponse withAppendChatMessageUsingPOST401ApplicationJSONObject(AppendChatMessageUsingPOST401ApplicationJSON appendChatMessageUsingPOST401ApplicationJSONObject) {
         this.appendChatMessageUsingPOST401ApplicationJSONObject = appendChatMessageUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class AppendChatMessageUsingPOSTResponse {
      */
     
     public AppendChatMessageUsingPOST500ApplicationJSON appendChatMessageUsingPOST500ApplicationJSONObject;
+
     public AppendChatMessageUsingPOSTResponse withAppendChatMessageUsingPOST500ApplicationJSONObject(AppendChatMessageUsingPOST500ApplicationJSON appendChatMessageUsingPOST500ApplicationJSONObject) {
         this.appendChatMessageUsingPOST500ApplicationJSONObject = appendChatMessageUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public AppendChatMessageUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

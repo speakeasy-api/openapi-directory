@@ -18,9 +18,11 @@ public class StartRuntimeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public StartRuntimeRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public StartRuntimeRequest(){}
 }

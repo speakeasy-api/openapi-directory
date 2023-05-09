@@ -12,9 +12,13 @@ public class ActionsSetSelfHostedRunnersInGroupForOrgRequestBody {
      */
     @JsonProperty("runners")
     public Long[] runners;
+
     public ActionsSetSelfHostedRunnersInGroupForOrgRequestBody withRunners(Long[] runners) {
         this.runners = runners;
         return this;
     }
     
+    public ActionsSetSelfHostedRunnersInGroupForOrgRequestBody(@JsonProperty("runners") Long[] runners) {
+        this.runners = runners;
+  }
 }

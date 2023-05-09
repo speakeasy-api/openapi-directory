@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFailedIPNs {
     @JsonProperty("failed_ipns")
     public FailedIpn[] failedIpns;
+
     public ListFailedIPNs withFailedIpns(FailedIpn[] failedIpns) {
         this.failedIpns = failedIpns;
         return this;
@@ -16,9 +17,14 @@ public class ListFailedIPNs {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public ListFailedIPNs withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public ListFailedIPNs(@JsonProperty("failed_ipns") FailedIpn[] failedIpns, @JsonProperty("ok") Boolean ok) {
+        this.failedIpns = failedIpns;
+        this.ok = ok;
+  }
 }

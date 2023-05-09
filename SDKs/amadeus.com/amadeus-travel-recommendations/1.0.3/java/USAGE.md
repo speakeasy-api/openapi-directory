@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetRecommendedLocationRequest;
 import org.openapis.openapi.models.operations.GetRecommendedLocationResponse;
 
@@ -13,19 +12,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRecommendedLocationRequest req = new GetRecommendedLocationRequest() {{
-                cityCodes = "corrupti";
+            GetRecommendedLocationRequest req = new GetRecommendedLocationRequest("corrupti") {{
                 destinationCountryCodes = "provident";
                 travelerCountryCode = "distinctio";
-            }}            
+            }};            
 
             GetRecommendedLocationResponse res = sdk.recommendedLocations.getRecommendedLocation(req);
 
-            if (res.getRecommendedLocation200ApplicationVndAmadeusPlusJsonObject.isPresent()) {
+            if (res.getRecommendedLocation200ApplicationVndAmadeusPlusJsonObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

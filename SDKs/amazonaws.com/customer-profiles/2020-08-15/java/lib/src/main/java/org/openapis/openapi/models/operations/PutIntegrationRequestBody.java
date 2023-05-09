@@ -15,6 +15,7 @@ public class PutIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowDefinition")
     public PutIntegrationRequestBodyFlowDefinition flowDefinition;
+
     public PutIntegrationRequestBody withFlowDefinition(PutIntegrationRequestBodyFlowDefinition flowDefinition) {
         this.flowDefinition = flowDefinition;
         return this;
@@ -26,6 +27,7 @@ public class PutIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectTypeName")
     public String objectTypeName;
+
     public PutIntegrationRequestBody withObjectTypeName(String objectTypeName) {
         this.objectTypeName = objectTypeName;
         return this;
@@ -37,6 +39,7 @@ public class PutIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectTypeNames")
     public java.util.Map<String, String> objectTypeNames;
+
     public PutIntegrationRequestBody withObjectTypeNames(java.util.Map<String, String> objectTypeNames) {
         this.objectTypeNames = objectTypeNames;
         return this;
@@ -48,6 +51,7 @@ public class PutIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public PutIntegrationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -59,9 +63,11 @@ public class PutIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Uri")
     public String uri;
+
     public PutIntegrationRequestBody withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public PutIntegrationRequestBody(){}
 }

@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyClientVpnEndpointClientConnectOptions {
     @SpeakeasyMetadata("queryParam:name=Enabled")
     public Boolean enabled;
+
     public GETModifyClientVpnEndpointClientConnectOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyClientVpnEndpointClientConnectOptions {
     
     @SpeakeasyMetadata("queryParam:name=LambdaFunctionArn")
     public String lambdaFunctionArn;
+
     public GETModifyClientVpnEndpointClientConnectOptions withLambdaFunctionArn(String lambdaFunctionArn) {
         this.lambdaFunctionArn = lambdaFunctionArn;
         return this;
     }
     
+    public GETModifyClientVpnEndpointClientConnectOptions(){}
 }

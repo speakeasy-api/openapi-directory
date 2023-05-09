@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGroupsResponse {
     
     public String contentType;
+
     public ListGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListGroupsResponse {
      */
     
     public Object internalErrorException;
+
     public ListGroupsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListGroupsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListGroupsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGroupsResponse listGroupsResponse;
+
     public ListGroupsResponse withListGroupsResponse(org.openapis.openapi.models.shared.ListGroupsResponse listGroupsResponse) {
         this.listGroupsResponse = listGroupsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListGroupsResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListGroupsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListGroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListGroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListGroupsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListGroupsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

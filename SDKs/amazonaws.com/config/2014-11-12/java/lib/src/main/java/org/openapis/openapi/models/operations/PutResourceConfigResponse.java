@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResourceConfigResponse {
     
     public String contentType;
+
     public PutResourceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutResourceConfigResponse {
      */
     
     public Object insufficientPermissionsException;
+
     public PutResourceConfigResponse withInsufficientPermissionsException(Object insufficientPermissionsException) {
         this.insufficientPermissionsException = insufficientPermissionsException;
         return this;
@@ -29,6 +32,7 @@ public class PutResourceConfigResponse {
      */
     
     public Object maxActiveResourcesExceededException;
+
     public PutResourceConfigResponse withMaxActiveResourcesExceededException(Object maxActiveResourcesExceededException) {
         this.maxActiveResourcesExceededException = maxActiveResourcesExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PutResourceConfigResponse {
      */
     
     public Object noRunningConfigurationRecorderException;
+
     public PutResourceConfigResponse withNoRunningConfigurationRecorderException(Object noRunningConfigurationRecorderException) {
         this.noRunningConfigurationRecorderException = noRunningConfigurationRecorderException;
         return this;
@@ -46,6 +51,7 @@ public class PutResourceConfigResponse {
     
     
     public Integer statusCode;
+
     public PutResourceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutResourceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResourceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutResourceConfigResponse {
      */
     
     public Object validationException;
+
     public PutResourceConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutResourceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

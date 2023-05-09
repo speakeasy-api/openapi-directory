@@ -15,6 +15,7 @@ public class RouterMd5AuthenticationKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public RouterMd5AuthenticationKey withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class RouterMd5AuthenticationKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RouterMd5AuthenticationKey withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RouterMd5AuthenticationKey(){}
 }

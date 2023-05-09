@@ -15,6 +15,7 @@ public class PricingPlanListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public PricingPlanListElement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class PricingPlanListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public Long creationTime;
+
     public PricingPlanListElement withCreationTime(Long creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +33,7 @@ public class PricingPlanListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PricingPlanListElement withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class PricingPlanListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTime")
     public Long lastModifiedTime;
+
     public PricingPlanListElement withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -47,6 +51,7 @@ public class PricingPlanListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PricingPlanListElement withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class PricingPlanListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public PricingPlanListElement withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public PricingPlanListElement(){}
 }

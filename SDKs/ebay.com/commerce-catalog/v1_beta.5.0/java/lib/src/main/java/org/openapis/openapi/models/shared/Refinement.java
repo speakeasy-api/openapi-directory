@@ -18,6 +18,7 @@ public class Refinement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspectDistributions")
     public AspectDistribution[] aspectDistributions;
+
     public Refinement withAspectDistributions(AspectDistribution[] aspectDistributions) {
         this.aspectDistributions = aspectDistributions;
         return this;
@@ -29,9 +30,11 @@ public class Refinement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dominantCategoryId")
     public String dominantCategoryId;
+
     public Refinement withDominantCategoryId(String dominantCategoryId) {
         this.dominantCategoryId = dominantCategoryId;
         return this;
     }
     
+    public Refinement(){}
 }

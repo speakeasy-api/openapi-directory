@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContentResponse {
@@ -12,6 +13,7 @@ public class UpdateContentResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateContentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateContentResponse {
     
     
     public String contentType;
+
     public UpdateContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateContentResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateContentResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateContentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateContentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateContentResponse {
     
     
     public Integer statusCode;
+
     public UpdateContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateContentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateContentResponse updateContentResponse;
+
     public UpdateContentResponse withUpdateContentResponse(org.openapis.openapi.models.shared.UpdateContentResponse updateContentResponse) {
         this.updateContentResponse = updateContentResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateContentResponse {
      */
     
     public Object validationException;
+
     public UpdateContentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

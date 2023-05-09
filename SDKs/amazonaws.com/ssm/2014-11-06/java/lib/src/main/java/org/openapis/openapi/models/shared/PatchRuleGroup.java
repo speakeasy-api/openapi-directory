@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatchRuleGroup {
     @JsonProperty("PatchRules")
     public PatchRule[] patchRules;
+
     public PatchRuleGroup withPatchRules(PatchRule[] patchRules) {
         this.patchRules = patchRules;
         return this;
     }
     
+    public PatchRuleGroup(@JsonProperty("PatchRules") PatchRule[] patchRules) {
+        this.patchRules = patchRules;
+  }
 }

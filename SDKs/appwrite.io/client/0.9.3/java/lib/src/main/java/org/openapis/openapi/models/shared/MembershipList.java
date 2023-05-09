@@ -15,6 +15,7 @@ public class MembershipList {
      */
     @JsonProperty("memberships")
     public Membership[] memberships;
+
     public MembershipList withMemberships(Membership[] memberships) {
         this.memberships = memberships;
         return this;
@@ -25,9 +26,14 @@ public class MembershipList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public MembershipList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public MembershipList(@JsonProperty("memberships") Membership[] memberships, @JsonProperty("sum") Integer sum) {
+        this.memberships = memberships;
+        this.sum = sum;
+  }
 }

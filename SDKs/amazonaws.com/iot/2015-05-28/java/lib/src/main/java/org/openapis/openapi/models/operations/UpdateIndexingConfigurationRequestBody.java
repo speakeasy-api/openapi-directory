@@ -15,6 +15,7 @@ public class UpdateIndexingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupIndexingConfiguration")
     public UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfiguration thingGroupIndexingConfiguration;
+
     public UpdateIndexingConfigurationRequestBody withThingGroupIndexingConfiguration(UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfiguration thingGroupIndexingConfiguration) {
         this.thingGroupIndexingConfiguration = thingGroupIndexingConfiguration;
         return this;
@@ -26,9 +27,11 @@ public class UpdateIndexingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingIndexingConfiguration")
     public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration thingIndexingConfiguration;
+
     public UpdateIndexingConfigurationRequestBody withThingIndexingConfiguration(UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration thingIndexingConfiguration) {
         this.thingIndexingConfiguration = thingIndexingConfiguration;
         return this;
     }
     
+    public UpdateIndexingConfigurationRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspaceSlugRequest {
@@ -12,6 +13,7 @@ public class GetWorkspacesWorkspaceSlugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_orbit_level_counts")
     public Boolean includeOrbitLevelCounts;
+
     public GetWorkspacesWorkspaceSlugRequest withIncludeOrbitLevelCounts(Boolean includeOrbitLevelCounts) {
         this.includeOrbitLevelCounts = includeOrbitLevelCounts;
         return this;
@@ -19,9 +21,13 @@ public class GetWorkspacesWorkspaceSlugRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public GetWorkspacesWorkspaceSlugRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public GetWorkspacesWorkspaceSlugRequest(@JsonProperty("workspace_slug") String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
+  }
 }

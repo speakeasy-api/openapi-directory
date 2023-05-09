@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppDGETRequest {
@@ -12,6 +13,7 @@ public class AppDGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all_fields")
     public String allFields;
+
     public AppDGETRequest withAllFields(String allFields) {
         this.allFields = allFields;
         return this;
@@ -22,6 +24,7 @@ public class AppDGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appDId")
     public String appDId;
+
     public AppDGETRequest withAppDId(String appDId) {
         this.appDId = appDId;
         return this;
@@ -32,6 +35,7 @@ public class AppDGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_default")
     public String excludeDefault;
+
     public AppDGETRequest withExcludeDefault(String excludeDefault) {
         this.excludeDefault = excludeDefault;
         return this;
@@ -42,6 +46,7 @@ public class AppDGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_fields")
     public String excludeFields;
+
     public AppDGETRequest withExcludeFields(String excludeFields) {
         this.excludeFields = excludeFields;
         return this;
@@ -52,6 +57,7 @@ public class AppDGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppDGETRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,9 +68,13 @@ public class AppDGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public AppDGETRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public AppDGETRequest(@JsonProperty("appDId") String appDId) {
+        this.appDId = appDId;
+  }
 }

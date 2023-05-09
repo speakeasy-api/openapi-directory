@@ -18,6 +18,7 @@ public class GoogleMapsPlayablelocationsV3SampleCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldsToReturn")
     public String fieldsToReturn;
+
     public GoogleMapsPlayablelocationsV3SampleCriterion withFieldsToReturn(String fieldsToReturn) {
         this.fieldsToReturn = fieldsToReturn;
         return this;
@@ -29,6 +30,7 @@ public class GoogleMapsPlayablelocationsV3SampleCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public GoogleMapsPlayablelocationsV3SampleFilter filter;
+
     public GoogleMapsPlayablelocationsV3SampleCriterion withFilter(GoogleMapsPlayablelocationsV3SampleFilter filter) {
         this.filter = filter;
         return this;
@@ -40,9 +42,11 @@ public class GoogleMapsPlayablelocationsV3SampleCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gameObjectType")
     public Integer gameObjectType;
+
     public GoogleMapsPlayablelocationsV3SampleCriterion withGameObjectType(Integer gameObjectType) {
         this.gameObjectType = gameObjectType;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3SampleCriterion(){}
 }

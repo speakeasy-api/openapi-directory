@@ -70,11 +70,9 @@ public class SalesChannelMapping {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveMappingResponse res = new org.openapis.openapi.models.operations.RetrieveMappingResponse() {{
+        org.openapis.openapi.models.operations.RetrieveMappingResponse res = new org.openapis.openapi.models.operations.RetrieveMappingResponse(contentType, httpRes.statusCode()) {{
             retrieveMapping200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,11 +127,9 @@ public class SalesChannelMapping {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpsertMappingResponse res = new org.openapis.openapi.models.operations.UpsertMappingResponse() {{
+        org.openapis.openapi.models.operations.UpsertMappingResponse res = new org.openapis.openapi.models.operations.UpsertMappingResponse(contentType, httpRes.statusCode()) {{
             upsertMapping200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

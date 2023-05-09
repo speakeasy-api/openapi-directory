@@ -15,9 +15,11 @@ public class WafOverrideAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public WafOverrideAction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public WafOverrideAction(){}
 }

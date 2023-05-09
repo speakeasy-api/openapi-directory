@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputProcessingConfiguration {
     @JsonProperty("InputLambdaProcessor")
     public InputLambdaProcessor inputLambdaProcessor;
+
     public InputProcessingConfiguration withInputLambdaProcessor(InputLambdaProcessor inputLambdaProcessor) {
         this.inputLambdaProcessor = inputLambdaProcessor;
         return this;
     }
     
+    public InputProcessingConfiguration(@JsonProperty("InputLambdaProcessor") InputLambdaProcessor inputLambdaProcessor) {
+        this.inputLambdaProcessor = inputLambdaProcessor;
+  }
 }

@@ -15,6 +15,7 @@ public class ThreatIntelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public ThreatIntelIndicatorCategoryEnum category;
+
     public ThreatIntelIndicator withCategory(ThreatIntelIndicatorCategoryEnum category) {
         this.category = category;
         return this;
@@ -23,6 +24,7 @@ public class ThreatIntelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastObservedAt")
     public String lastObservedAt;
+
     public ThreatIntelIndicator withLastObservedAt(String lastObservedAt) {
         this.lastObservedAt = lastObservedAt;
         return this;
@@ -31,6 +33,7 @@ public class ThreatIntelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public ThreatIntelIndicator withSource(String source) {
         this.source = source;
         return this;
@@ -39,6 +42,7 @@ public class ThreatIntelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceUrl")
     public String sourceUrl;
+
     public ThreatIntelIndicator withSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
@@ -47,6 +51,7 @@ public class ThreatIntelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ThreatIntelIndicatorTypeEnum type;
+
     public ThreatIntelIndicator withType(ThreatIntelIndicatorTypeEnum type) {
         this.type = type;
         return this;
@@ -55,9 +60,11 @@ public class ThreatIntelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ThreatIntelIndicator withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ThreatIntelIndicator(){}
 }

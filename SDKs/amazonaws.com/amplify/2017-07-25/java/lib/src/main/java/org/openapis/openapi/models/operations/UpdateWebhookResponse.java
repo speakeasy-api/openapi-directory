@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWebhookResponse {
@@ -12,6 +13,7 @@ public class UpdateWebhookResponse {
      */
     
     public Object badRequestException;
+
     public UpdateWebhookResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWebhookResponse {
     
     
     public String contentType;
+
     public UpdateWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWebhookResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public UpdateWebhookResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWebhookResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateWebhookResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateWebhookResponse {
      */
     
     public Object notFoundException;
+
     public UpdateWebhookResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateWebhookResponse {
     
     
     public Integer statusCode;
+
     public UpdateWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWebhookResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateWebhookResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWebhookResult updateWebhookResult;
+
     public UpdateWebhookResponse withUpdateWebhookResult(org.openapis.openapi.models.shared.UpdateWebhookResult updateWebhookResult) {
         this.updateWebhookResult = updateWebhookResult;
         return this;
     }
     
+    public UpdateWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

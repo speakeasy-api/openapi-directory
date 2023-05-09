@@ -18,6 +18,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Channel withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Channel withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -40,6 +42,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Channel withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Channel withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release")
     public Release release;
+
     public Channel withRelease(Release release) {
         this.release = release;
         return this;
@@ -73,6 +78,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retainedReleaseCount")
     public Integer retainedReleaseCount;
+
     public Channel withRetainedReleaseCount(Integer retainedReleaseCount) {
         this.retainedReleaseCount = retainedReleaseCount;
         return this;
@@ -84,6 +90,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public Channel withTtl(String ttl) {
         this.ttl = ttl;
         return this;
@@ -95,6 +102,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Channel withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -106,9 +114,11 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Channel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Channel(){}
 }

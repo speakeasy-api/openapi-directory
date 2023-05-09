@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRobotResponse {
     
     public String contentType;
+
     public CreateRobotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRobotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRobotResponse createRobotResponse;
+
     public CreateRobotResponse withCreateRobotResponse(org.openapis.openapi.models.shared.CreateRobotResponse createRobotResponse) {
         this.createRobotResponse = createRobotResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateRobotResponse {
      */
     
     public Object internalServerException;
+
     public CreateRobotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRobotResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateRobotResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateRobotResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRobotResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateRobotResponse {
     
     
     public Integer statusCode;
+
     public CreateRobotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateRobotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRobotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateRobotResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateRobotResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateRobotResponse {
      */
     
     public Object throttlingException;
+
     public CreateRobotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateRobotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

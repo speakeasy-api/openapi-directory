@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBlueprintResponse {
     
     public String contentType;
+
     public DeleteBlueprintResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBlueprintResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBlueprintResponse deleteBlueprintResponse;
+
     public DeleteBlueprintResponse withDeleteBlueprintResponse(org.openapis.openapi.models.shared.DeleteBlueprintResponse deleteBlueprintResponse) {
         this.deleteBlueprintResponse = deleteBlueprintResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBlueprintResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteBlueprintResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBlueprintResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteBlueprintResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBlueprintResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteBlueprintResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteBlueprintResponse {
     
     
     public Integer statusCode;
+
     public DeleteBlueprintResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteBlueprintResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBlueprintResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteBlueprintResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

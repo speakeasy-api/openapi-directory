@@ -12,6 +12,7 @@ public class UpdateStoreRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateStoreRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class UpdateStoreRequest {
      */
     @JsonProperty("sectors")
     public String[] sectors;
+
     public UpdateStoreRequest withSectors(String[] sectors) {
         this.sectors = sectors;
         return this;
@@ -32,9 +34,15 @@ public class UpdateStoreRequest {
      */
     @JsonProperty("url")
     public String url;
+
     public UpdateStoreRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UpdateStoreRequest(@JsonProperty("name") String name, @JsonProperty("sectors") String[] sectors, @JsonProperty("url") String url) {
+        this.name = name;
+        this.sectors = sectors;
+        this.url = url;
+  }
 }

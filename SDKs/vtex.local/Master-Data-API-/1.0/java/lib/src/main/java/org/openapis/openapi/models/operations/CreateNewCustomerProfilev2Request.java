@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNewCustomerProfilev2Request {
@@ -12,6 +13,7 @@ public class CreateNewCustomerProfilev2Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateNewCustomerProfilev2Request withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateNewCustomerProfilev2Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateNewCustomerProfilev2Request withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class CreateNewCustomerProfilev2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
     public String schema;
+
     public CreateNewCustomerProfilev2Request withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -39,9 +43,15 @@ public class CreateNewCustomerProfilev2Request {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateUpdateProfileRequests createUpdateProfileRequests;
+
     public CreateNewCustomerProfilev2Request withCreateUpdateProfileRequests(org.openapis.openapi.models.shared.CreateUpdateProfileRequests createUpdateProfileRequests) {
         this.createUpdateProfileRequests = createUpdateProfileRequests;
         return this;
     }
     
+    public CreateNewCustomerProfilev2Request(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("createUpdateProfileRequests") org.openapis.openapi.models.shared.CreateUpdateProfileRequests createUpdateProfileRequests) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.createUpdateProfileRequests = createUpdateProfileRequests;
+  }
 }

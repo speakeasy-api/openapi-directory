@@ -15,6 +15,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailsUrl")
     public String detailsUrl;
+
     public Application withDetailsUrl(String detailsUrl) {
         this.detailsUrl = detailsUrl;
         return this;
@@ -26,6 +27,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Application withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public Application withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -48,9 +51,11 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Application withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Application(){}
 }

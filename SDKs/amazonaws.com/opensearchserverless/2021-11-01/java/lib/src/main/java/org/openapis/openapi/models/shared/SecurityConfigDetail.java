@@ -15,6 +15,7 @@ public class SecurityConfigDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configVersion")
     public String configVersion;
+
     public SecurityConfigDetail withConfigVersion(String configVersion) {
         this.configVersion = configVersion;
         return this;
@@ -23,6 +24,7 @@ public class SecurityConfigDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdDate")
     public Long createdDate;
+
     public SecurityConfigDetail withCreatedDate(Long createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -31,6 +33,7 @@ public class SecurityConfigDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SecurityConfigDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class SecurityConfigDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SecurityConfigDetail withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class SecurityConfigDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDate")
     public Long lastModifiedDate;
+
     public SecurityConfigDetail withLastModifiedDate(Long lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -55,6 +60,7 @@ public class SecurityConfigDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlOptions")
     public SamlConfigOptions samlOptions;
+
     public SecurityConfigDetail withSamlOptions(SamlConfigOptions samlOptions) {
         this.samlOptions = samlOptions;
         return this;
@@ -63,9 +69,11 @@ public class SecurityConfigDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SecurityConfigTypeEnum type;
+
     public SecurityConfigDetail withType(SecurityConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SecurityConfigDetail(){}
 }

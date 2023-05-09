@@ -12,9 +12,13 @@ public class CreateUpdatePlaylistRequestPlaylistTracks {
      */
     @JsonProperty("id")
     public String id;
+
     public CreateUpdatePlaylistRequestPlaylistTracks withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateUpdatePlaylistRequestPlaylistTracks(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -12,6 +12,7 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Float lat;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPosition withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -20,9 +21,11 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Float lon;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPosition withLon(Float lon) {
         this.lon = lon;
         return this;
     }
     
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPosition(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UsernameConfigurationType {
     @JsonProperty("CaseSensitive")
     public Boolean caseSensitive;
+
     public UsernameConfigurationType withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
     }
     
+    public UsernameConfigurationType(@JsonProperty("CaseSensitive") Boolean caseSensitive) {
+        this.caseSensitive = caseSensitive;
+  }
 }

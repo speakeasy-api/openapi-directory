@@ -15,6 +15,7 @@ public class ListFunctionsByCodeSigningConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionArns")
     public String[] functionArns;
+
     public ListFunctionsByCodeSigningConfigResponse withFunctionArns(String[] functionArns) {
         this.functionArns = functionArns;
         return this;
@@ -23,9 +24,11 @@ public class ListFunctionsByCodeSigningConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListFunctionsByCodeSigningConfigResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListFunctionsByCodeSigningConfigResponse(){}
 }

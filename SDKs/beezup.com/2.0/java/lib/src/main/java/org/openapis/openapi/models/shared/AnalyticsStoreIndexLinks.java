@@ -12,6 +12,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimise")
     public LinksOptimiseLink optimise;
+
     public AnalyticsStoreIndexLinks withOptimise(LinksOptimiseLink optimise) {
         this.optimise = optimise;
         return this;
@@ -20,6 +21,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimiseAll")
     public LinksOptimiseAllLink optimiseAll;
+
     public AnalyticsStoreIndexLinks withOptimiseAll(LinksOptimiseAllLink optimiseAll) {
         this.optimiseAll = optimiseAll;
         return this;
@@ -28,6 +30,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimiseByCategory")
     public LinksOptimiseByCategoryLink optimiseByCategory;
+
     public AnalyticsStoreIndexLinks withOptimiseByCategory(LinksOptimiseByCategoryLink optimiseByCategory) {
         this.optimiseByCategory = optimiseByCategory;
         return this;
@@ -36,6 +39,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimiseByChannel")
     public LinksOptimiseByChannelLink optimiseByChannel;
+
     public AnalyticsStoreIndexLinks withOptimiseByChannel(LinksOptimiseByChannelLink optimiseByChannel) {
         this.optimiseByChannel = optimiseByChannel;
         return this;
@@ -44,6 +48,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimiseByProduct")
     public LinksOptimiseByProductLink optimiseByProduct;
+
     public AnalyticsStoreIndexLinks withOptimiseByProduct(LinksOptimiseByProductLink optimiseByProduct) {
         this.optimiseByProduct = optimiseByProduct;
         return this;
@@ -52,6 +57,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportByCategory")
     public LinksGetStoreReportByCategoryLink reportByCategory;
+
     public AnalyticsStoreIndexLinks withReportByCategory(LinksGetStoreReportByCategoryLink reportByCategory) {
         this.reportByCategory = reportByCategory;
         return this;
@@ -60,6 +66,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportByChannel")
     public LinksGetStoreReportByChannelLink reportByChannel;
+
     public AnalyticsStoreIndexLinks withReportByChannel(LinksGetStoreReportByChannelLink reportByChannel) {
         this.reportByChannel = reportByChannel;
         return this;
@@ -68,6 +75,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportByDay")
     public LinksGetStoreReportByDayLink reportByDay;
+
     public AnalyticsStoreIndexLinks withReportByDay(LinksGetStoreReportByDayLink reportByDay) {
         this.reportByDay = reportByDay;
         return this;
@@ -76,6 +84,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportByProduct")
     public LinksGetStoreReportByProductLink reportByProduct;
+
     public AnalyticsStoreIndexLinks withReportByProduct(LinksGetStoreReportByProductLink reportByProduct) {
         this.reportByProduct = reportByProduct;
         return this;
@@ -83,6 +92,7 @@ public class AnalyticsStoreIndexLinks {
     
     @JsonProperty("reportFilters")
     public LinksGetReportFiltersLink reportFilters;
+
     public AnalyticsStoreIndexLinks withReportFilters(LinksGetReportFiltersLink reportFilters) {
         this.reportFilters = reportFilters;
         return this;
@@ -91,6 +101,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public LinksGetRulesLink rules;
+
     public AnalyticsStoreIndexLinks withRules(LinksGetRulesLink rules) {
         this.rules = rules;
         return this;
@@ -98,6 +109,7 @@ public class AnalyticsStoreIndexLinks {
     
     @JsonProperty("self")
     public LinksAnalyticsIndexLink self;
+
     public AnalyticsStoreIndexLinks withSelf(LinksAnalyticsIndexLink self) {
         this.self = self;
         return this;
@@ -105,6 +117,7 @@ public class AnalyticsStoreIndexLinks {
     
     @JsonProperty("trackedClicks")
     public LinksGetStoreTrackedClicksLink trackedClicks;
+
     public AnalyticsStoreIndexLinks withTrackedClicks(LinksGetStoreTrackedClicksLink trackedClicks) {
         this.trackedClicks = trackedClicks;
         return this;
@@ -113,6 +126,7 @@ public class AnalyticsStoreIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackedExternalOrders")
     public LinksGetStoreTrackedExternalOrdersLink trackedExternalOrders;
+
     public AnalyticsStoreIndexLinks withTrackedExternalOrders(LinksGetStoreTrackedExternalOrdersLink trackedExternalOrders) {
         this.trackedExternalOrders = trackedExternalOrders;
         return this;
@@ -120,6 +134,7 @@ public class AnalyticsStoreIndexLinks {
     
     @JsonProperty("trackedOrders")
     public LinksGetStoreTrackedOrdersLink trackedOrders;
+
     public AnalyticsStoreIndexLinks withTrackedOrders(LinksGetStoreTrackedOrdersLink trackedOrders) {
         this.trackedOrders = trackedOrders;
         return this;
@@ -127,9 +142,17 @@ public class AnalyticsStoreIndexLinks {
     
     @JsonProperty("trackingStatus")
     public LinksGetStoreTrackingStatusLink trackingStatus;
+
     public AnalyticsStoreIndexLinks withTrackingStatus(LinksGetStoreTrackingStatusLink trackingStatus) {
         this.trackingStatus = trackingStatus;
         return this;
     }
     
+    public AnalyticsStoreIndexLinks(@JsonProperty("reportFilters") LinksGetReportFiltersLink reportFilters, @JsonProperty("self") LinksAnalyticsIndexLink self, @JsonProperty("trackedClicks") LinksGetStoreTrackedClicksLink trackedClicks, @JsonProperty("trackedOrders") LinksGetStoreTrackedOrdersLink trackedOrders, @JsonProperty("trackingStatus") LinksGetStoreTrackingStatusLink trackingStatus) {
+        this.reportFilters = reportFilters;
+        this.self = self;
+        this.trackedClicks = trackedClicks;
+        this.trackedOrders = trackedOrders;
+        this.trackingStatus = trackingStatus;
+  }
 }

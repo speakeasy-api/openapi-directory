@@ -12,9 +12,13 @@ public class ChecksCreateSuiteRequestBody {
      */
     @JsonProperty("head_sha")
     public String headSha;
+
     public ChecksCreateSuiteRequestBody withHeadSha(String headSha) {
         this.headSha = headSha;
         return this;
     }
     
+    public ChecksCreateSuiteRequestBody(@JsonProperty("head_sha") String headSha) {
+        this.headSha = headSha;
+  }
 }

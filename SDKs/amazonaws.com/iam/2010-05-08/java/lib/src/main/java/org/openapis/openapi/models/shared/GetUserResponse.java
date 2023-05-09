@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetUserResponse - Contains the response to a successful &lt;a&gt;GetUser&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetUserResponse {
     
     public User user;
+
     public GetUserResponse withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public GetUserResponse(@JsonProperty("User") User user) {
+        this.user = user;
+  }
 }

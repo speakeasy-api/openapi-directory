@@ -18,6 +18,7 @@ public class CategoryRatedAreas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryScores")
     public CategoryRatedAreasCategoryScores categoryScores;
+
     public CategoryRatedAreas withCategoryScores(CategoryRatedAreasCategoryScores categoryScores) {
         this.categoryScores = categoryScores;
         return this;
@@ -29,6 +30,7 @@ public class CategoryRatedAreas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCode")
     public CategoryRatedAreasGeoCode geoCode;
+
     public CategoryRatedAreas withGeoCode(CategoryRatedAreasGeoCode geoCode) {
         this.geoCode = geoCode;
         return this;
@@ -40,6 +42,7 @@ public class CategoryRatedAreas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radius")
     public Long radius;
+
     public CategoryRatedAreas withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -51,9 +54,11 @@ public class CategoryRatedAreas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CategoryRatedAreas withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CategoryRatedAreas(){}
 }

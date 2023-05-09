@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Answers {
     
     public Boolean accepted;
+
     public Answers withAccepted(Boolean accepted) {
         this.accepted = accepted;
         return this;
@@ -16,6 +17,7 @@ public class Answers {
     
     
     public Long answerId;
+
     public Answers withAnswerId(Long answerId) {
         this.answerId = answerId;
         return this;
@@ -23,6 +25,7 @@ public class Answers {
     
     
     public Long awardedBountyAmount;
+
     public Answers withAwardedBountyAmount(Long awardedBountyAmount) {
         this.awardedBountyAmount = awardedBountyAmount;
         return this;
@@ -30,6 +33,7 @@ public class Answers {
     
     
     public Object[] awardedBountyUsers;
+
     public Answers withAwardedBountyUsers(Object[] awardedBountyUsers) {
         this.awardedBountyUsers = awardedBountyUsers;
         return this;
@@ -37,6 +41,7 @@ public class Answers {
     
     
     public String body;
+
     public Answers withBody(String body) {
         this.body = body;
         return this;
@@ -44,6 +49,7 @@ public class Answers {
     
     
     public String bodyMarkdown;
+
     public Answers withBodyMarkdown(String bodyMarkdown) {
         this.bodyMarkdown = bodyMarkdown;
         return this;
@@ -51,6 +57,7 @@ public class Answers {
     
     
     public Boolean canFlag;
+
     public Answers withCanFlag(Boolean canFlag) {
         this.canFlag = canFlag;
         return this;
@@ -58,6 +65,7 @@ public class Answers {
     
     
     public Long commentCount;
+
     public Answers withCommentCount(Long commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -65,6 +73,7 @@ public class Answers {
     
     
     public Object[] comments;
+
     public Answers withComments(Object[] comments) {
         this.comments = comments;
         return this;
@@ -72,6 +81,7 @@ public class Answers {
     
     
     public Long communityOwnedDate;
+
     public Answers withCommunityOwnedDate(Long communityOwnedDate) {
         this.communityOwnedDate = communityOwnedDate;
         return this;
@@ -79,6 +89,7 @@ public class Answers {
     
     
     public Long creationDate;
+
     public Answers withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -86,6 +97,7 @@ public class Answers {
     
     
     public Long downVoteCount;
+
     public Answers withDownVoteCount(Long downVoteCount) {
         this.downVoteCount = downVoteCount;
         return this;
@@ -93,6 +105,7 @@ public class Answers {
     
     
     public Boolean downvoted;
+
     public Answers withDownvoted(Boolean downvoted) {
         this.downvoted = downvoted;
         return this;
@@ -100,6 +113,7 @@ public class Answers {
     
     
     public Boolean isAccepted;
+
     public Answers withIsAccepted(Boolean isAccepted) {
         this.isAccepted = isAccepted;
         return this;
@@ -107,6 +121,7 @@ public class Answers {
     
     
     public Long lastActivityDate;
+
     public Answers withLastActivityDate(Long lastActivityDate) {
         this.lastActivityDate = lastActivityDate;
         return this;
@@ -114,6 +129,7 @@ public class Answers {
     
     
     public Long lastEditDate;
+
     public Answers withLastEditDate(Long lastEditDate) {
         this.lastEditDate = lastEditDate;
         return this;
@@ -121,6 +137,7 @@ public class Answers {
     
     
     public AnswersLastEditor lastEditor;
+
     public Answers withLastEditor(AnswersLastEditor lastEditor) {
         this.lastEditor = lastEditor;
         return this;
@@ -128,6 +145,7 @@ public class Answers {
     
     
     public String link;
+
     public Answers withLink(String link) {
         this.link = link;
         return this;
@@ -135,6 +153,7 @@ public class Answers {
     
     
     public Long lockedDate;
+
     public Answers withLockedDate(Long lockedDate) {
         this.lockedDate = lockedDate;
         return this;
@@ -142,6 +161,7 @@ public class Answers {
     
     
     public AnswersOwner owner;
+
     public Answers withOwner(AnswersOwner owner) {
         this.owner = owner;
         return this;
@@ -149,6 +169,7 @@ public class Answers {
     
     
     public Long questionId;
+
     public Answers withQuestionId(Long questionId) {
         this.questionId = questionId;
         return this;
@@ -156,6 +177,7 @@ public class Answers {
     
     
     public Long score;
+
     public Answers withScore(Long score) {
         this.score = score;
         return this;
@@ -163,6 +185,7 @@ public class Answers {
     
     
     public String shareLink;
+
     public Answers withShareLink(String shareLink) {
         this.shareLink = shareLink;
         return this;
@@ -170,6 +193,7 @@ public class Answers {
     
     
     public Object[] tags;
+
     public Answers withTags(Object[] tags) {
         this.tags = tags;
         return this;
@@ -177,6 +201,7 @@ public class Answers {
     
     
     public String title;
+
     public Answers withTitle(String title) {
         this.title = title;
         return this;
@@ -184,6 +209,7 @@ public class Answers {
     
     
     public Long upVoteCount;
+
     public Answers withUpVoteCount(Long upVoteCount) {
         this.upVoteCount = upVoteCount;
         return this;
@@ -191,9 +217,11 @@ public class Answers {
     
     
     public Boolean upvoted;
+
     public Answers withUpvoted(Boolean upvoted) {
         this.upvoted = upvoted;
         return this;
     }
     
+    public Answers(){}
 }

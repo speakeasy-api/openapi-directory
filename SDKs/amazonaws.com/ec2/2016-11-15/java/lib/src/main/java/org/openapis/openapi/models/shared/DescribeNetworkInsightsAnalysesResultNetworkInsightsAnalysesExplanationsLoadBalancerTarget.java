@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTarget {
     
     public String address;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTarget withAddress(String address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String availabilityZone;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTarget withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTargetInstance instance;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTarget withInstance(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTargetInstance instance) {
         this.instance = instance;
         return this;
@@ -33,9 +36,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public Long port;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTarget withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsLoadBalancerTarget(){}
 }

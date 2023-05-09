@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * TransferReasonEnum - Additional information about the status of the transfer.
  */
 public enum TransferReasonEnum {
-    AMOUNT_LIMIT_EXCEDED("amountLimitExceded"),
+    AMOUNT_LIMIT_EXCEEDED("amountLimitExceeded"),
     APPROVED("approved"),
     COUNTERPARTY_ACCOUNT_BLOCKED("counterpartyAccountBlocked"),
     COUNTERPARTY_ACCOUNT_CLOSED("counterpartyAccountClosed"),

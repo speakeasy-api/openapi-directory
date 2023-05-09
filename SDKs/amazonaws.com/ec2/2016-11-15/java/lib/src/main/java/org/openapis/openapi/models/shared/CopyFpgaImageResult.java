@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CopyFpgaImageResult {
     
     public String fpgaImageId;
+
     public CopyFpgaImageResult withFpgaImageId(String fpgaImageId) {
         this.fpgaImageId = fpgaImageId;
         return this;
     }
     
+    public CopyFpgaImageResult(){}
 }

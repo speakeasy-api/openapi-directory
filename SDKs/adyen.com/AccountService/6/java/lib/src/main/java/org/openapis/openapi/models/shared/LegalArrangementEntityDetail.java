@@ -12,6 +12,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ViasAddress address;
+
     public LegalArrangementEntityDetail withAddress(ViasAddress address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessDetails")
     public BusinessDetails businessDetails;
+
     public LegalArrangementEntityDetail withBusinessDetails(BusinessDetails businessDetails) {
         this.businessDetails = businessDetails;
         return this;
@@ -31,6 +33,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public LegalArrangementEntityDetail withEmail(String email) {
         this.email = email;
         return this;
@@ -43,6 +46,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPhoneNumber")
     public String fullPhoneNumber;
+
     public LegalArrangementEntityDetail withFullPhoneNumber(String fullPhoneNumber) {
         this.fullPhoneNumber = fullPhoneNumber;
         return this;
@@ -51,6 +55,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individualDetails")
     public IndividualDetails individualDetails;
+
     public LegalArrangementEntityDetail withIndividualDetails(IndividualDetails individualDetails) {
         this.individualDetails = individualDetails;
         return this;
@@ -63,6 +68,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementEntityCode")
     public String legalArrangementEntityCode;
+
     public LegalArrangementEntityDetail withLegalArrangementEntityCode(String legalArrangementEntityCode) {
         this.legalArrangementEntityCode = legalArrangementEntityCode;
         return this;
@@ -74,6 +80,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementEntityReference")
     public String legalArrangementEntityReference;
+
     public LegalArrangementEntityDetail withLegalArrangementEntityReference(String legalArrangementEntityReference) {
         this.legalArrangementEntityReference = legalArrangementEntityReference;
         return this;
@@ -95,6 +102,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementMembers")
     public LegalArrangementEntityDetailLegalArrangementMembersEnum[] legalArrangementMembers;
+
     public LegalArrangementEntityDetail withLegalArrangementMembers(LegalArrangementEntityDetailLegalArrangementMembersEnum[] legalArrangementMembers) {
         this.legalArrangementMembers = legalArrangementMembers;
         return this;
@@ -108,6 +116,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalEntityType")
     public LegalArrangementEntityDetailLegalEntityTypeEnum legalEntityType;
+
     public LegalArrangementEntityDetail withLegalEntityType(LegalArrangementEntityDetailLegalEntityTypeEnum legalEntityType) {
         this.legalEntityType = legalEntityType;
         return this;
@@ -116,6 +125,7 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public ViasPhoneNumber phoneNumber;
+
     public LegalArrangementEntityDetail withPhoneNumber(ViasPhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -127,9 +137,11 @@ public class LegalArrangementEntityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public LegalArrangementEntityDetail withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
     }
     
+    public LegalArrangementEntityDetail(){}
 }

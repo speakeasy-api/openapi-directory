@@ -20,6 +20,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyOnlyAtCronInterval")
     public Boolean applyOnlyAtCronInterval;
+
     public AssociationVersionInfo withApplyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
         this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
         return this;
@@ -28,6 +29,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public AssociationVersionInfo withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -36,6 +38,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationName")
     public String associationName;
+
     public AssociationVersionInfo withAssociationName(String associationName) {
         this.associationName = associationName;
         return this;
@@ -44,6 +47,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersion")
     public String associationVersion;
+
     public AssociationVersionInfo withAssociationVersion(String associationVersion) {
         this.associationVersion = associationVersion;
         return this;
@@ -52,6 +56,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalendarNames")
     public String[] calendarNames;
+
     public AssociationVersionInfo withCalendarNames(String[] calendarNames) {
         this.calendarNames = calendarNames;
         return this;
@@ -60,6 +65,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSeverity")
     public AssociationComplianceSeverityEnum complianceSeverity;
+
     public AssociationVersionInfo withComplianceSeverity(AssociationComplianceSeverityEnum complianceSeverity) {
         this.complianceSeverity = complianceSeverity;
         return this;
@@ -70,6 +76,7 @@ public class AssociationVersionInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public AssociationVersionInfo withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -78,6 +85,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public AssociationVersionInfo withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -86,6 +94,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public AssociationVersionInfo withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -94,6 +103,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public AssociationVersionInfo withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -102,6 +112,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AssociationVersionInfo withName(String name) {
         this.name = name;
         return this;
@@ -110,6 +121,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public InstanceAssociationOutputLocation outputLocation;
+
     public AssociationVersionInfo withOutputLocation(InstanceAssociationOutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -118,6 +130,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public AssociationVersionInfo withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -126,6 +139,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public AssociationVersionInfo withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -134,6 +148,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public AssociationVersionInfo withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -142,6 +157,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncCompliance")
     public AssociationSyncComplianceEnum syncCompliance;
+
     public AssociationVersionInfo withSyncCompliance(AssociationSyncComplianceEnum syncCompliance) {
         this.syncCompliance = syncCompliance;
         return this;
@@ -150,6 +166,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocations")
     public TargetLocation[] targetLocations;
+
     public AssociationVersionInfo withTargetLocations(TargetLocation[] targetLocations) {
         this.targetLocations = targetLocations;
         return this;
@@ -158,6 +175,7 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public AssociationVersionInfo withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -166,9 +184,11 @@ public class AssociationVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public AssociationVersionInfo withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public AssociationVersionInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchandisedProductsRequest {
@@ -12,6 +13,7 @@ public class GetMerchandisedProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_filter")
     public String aspectFilter;
+
     public GetMerchandisedProductsRequest withAspectFilter(String aspectFilter) {
         this.aspectFilter = aspectFilter;
         return this;
@@ -22,6 +24,7 @@ public class GetMerchandisedProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
     public String categoryId;
+
     public GetMerchandisedProductsRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -32,6 +35,7 @@ public class GetMerchandisedProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetMerchandisedProductsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -42,9 +46,14 @@ public class GetMerchandisedProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric_name")
     public String metricName;
+
     public GetMerchandisedProductsRequest withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GetMerchandisedProductsRequest(@JsonProperty("category_id") String categoryId, @JsonProperty("metric_name") String metricName) {
+        this.categoryId = categoryId;
+        this.metricName = metricName;
+  }
 }

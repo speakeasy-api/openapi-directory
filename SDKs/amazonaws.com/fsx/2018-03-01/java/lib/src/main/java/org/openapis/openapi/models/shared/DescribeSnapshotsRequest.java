@@ -12,6 +12,7 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public SnapshotFilter[] filters;
+
     public DescribeSnapshotsRequest withFilters(SnapshotFilter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeSnapshotsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,6 +36,7 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSnapshotsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +45,11 @@ public class DescribeSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotIds")
     public String[] snapshotIds;
+
     public DescribeSnapshotsRequest withSnapshotIds(String[] snapshotIds) {
         this.snapshotIds = snapshotIds;
         return this;
     }
     
+    public DescribeSnapshotsRequest(){}
 }

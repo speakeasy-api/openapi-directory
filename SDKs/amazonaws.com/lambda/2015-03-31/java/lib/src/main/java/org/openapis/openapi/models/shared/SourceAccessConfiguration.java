@@ -15,6 +15,7 @@ public class SourceAccessConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SourceAccessTypeEnum type;
+
     public SourceAccessConfiguration withType(SourceAccessTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class SourceAccessConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URI")
     public String uri;
+
     public SourceAccessConfiguration withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public SourceAccessConfiguration(){}
 }

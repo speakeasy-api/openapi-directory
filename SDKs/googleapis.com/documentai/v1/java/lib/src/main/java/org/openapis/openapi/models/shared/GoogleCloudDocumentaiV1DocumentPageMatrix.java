@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentPageMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cols")
     public Integer cols;
+
     public GoogleCloudDocumentaiV1DocumentPageMatrix withCols(Integer cols) {
         this.cols = cols;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentPageMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public GoogleCloudDocumentaiV1DocumentPageMatrix withData(String data) {
         this.data = data;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1DocumentPageMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Integer rows;
+
     public GoogleCloudDocumentaiV1DocumentPageMatrix withRows(Integer rows) {
         this.rows = rows;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1DocumentPageMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Integer type;
+
     public GoogleCloudDocumentaiV1DocumentPageMatrix withType(Integer type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentPageMatrix(){}
 }

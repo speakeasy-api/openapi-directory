@@ -17,9 +17,13 @@ public class UpdateShiftRequest {
      */
     @JsonProperty("shift")
     public Shift shift;
+
     public UpdateShiftRequest withShift(Shift shift) {
         this.shift = shift;
         return this;
     }
     
+    public UpdateShiftRequest(@JsonProperty("shift") Shift shift) {
+        this.shift = shift;
+  }
 }

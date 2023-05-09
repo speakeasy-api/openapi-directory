@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetcompanymatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getcompanymatch200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetcompanymatchResponse.java
+docs/sdk/README.md
+docs/companynamesimilaritykey/README.md
 USAGE.md

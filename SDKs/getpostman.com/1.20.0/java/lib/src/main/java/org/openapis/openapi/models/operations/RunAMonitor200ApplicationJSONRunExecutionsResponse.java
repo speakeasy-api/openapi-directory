@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public RunAMonitor200ApplicationJSONRunExecutionsResponseBody body;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponse withBody(RunAMonitor200ApplicationJSONRunExecutionsResponseBody body) {
         this.body = body;
         return this;
@@ -20,6 +21,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Double code;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponse withCode(Double code) {
         this.code = code;
         return this;
@@ -28,6 +30,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders headers;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponse withHeaders(RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders headers) {
         this.headers = headers;
         return this;
@@ -36,6 +39,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseSize")
     public Double responseSize;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponse withResponseSize(Double responseSize) {
         this.responseSize = responseSize;
         return this;
@@ -44,9 +48,11 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseTime")
     public Double responseTime;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponse withResponseTime(Double responseTime) {
         this.responseTime = responseTime;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunExecutionsResponse(){}
 }

@@ -58,11 +58,9 @@ public class CustomerServiceMetric {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomerServiceMetricResponse res = new org.openapis.openapi.models.operations.GetCustomerServiceMetricResponse() {{
+        org.openapis.openapi.models.operations.GetCustomerServiceMetricResponse res = new org.openapis.openapi.models.operations.GetCustomerServiceMetricResponse(contentType, httpRes.statusCode()) {{
             getCustomerServiceMetricResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

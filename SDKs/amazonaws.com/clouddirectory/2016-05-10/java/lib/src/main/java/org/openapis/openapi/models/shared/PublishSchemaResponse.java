@@ -15,9 +15,11 @@ public class PublishSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublishedSchemaArn")
     public String publishedSchemaArn;
+
     public PublishSchemaResponse withPublishedSchemaArn(String publishedSchemaArn) {
         this.publishedSchemaArn = publishedSchemaArn;
         return this;
     }
     
+    public PublishSchemaResponse(){}
 }

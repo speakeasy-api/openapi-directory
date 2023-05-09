@@ -14,6 +14,7 @@ public class CreateExplainabilityExportRequest {
      */
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public CreateExplainabilityExportRequest withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -21,6 +22,7 @@ public class CreateExplainabilityExportRequest {
     
     @JsonProperty("ExplainabilityArn")
     public String explainabilityArn;
+
     public CreateExplainabilityExportRequest withExplainabilityArn(String explainabilityArn) {
         this.explainabilityArn = explainabilityArn;
         return this;
@@ -28,6 +30,7 @@ public class CreateExplainabilityExportRequest {
     
     @JsonProperty("ExplainabilityExportName")
     public String explainabilityExportName;
+
     public CreateExplainabilityExportRequest withExplainabilityExportName(String explainabilityExportName) {
         this.explainabilityExportName = explainabilityExportName;
         return this;
@@ -36,6 +39,7 @@ public class CreateExplainabilityExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CreateExplainabilityExportRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -44,9 +48,15 @@ public class CreateExplainabilityExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateExplainabilityExportRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateExplainabilityExportRequest(@JsonProperty("Destination") DataDestination destination, @JsonProperty("ExplainabilityArn") String explainabilityArn, @JsonProperty("ExplainabilityExportName") String explainabilityExportName) {
+        this.destination = destination;
+        this.explainabilityArn = explainabilityArn;
+        this.explainabilityExportName = explainabilityExportName;
+  }
 }

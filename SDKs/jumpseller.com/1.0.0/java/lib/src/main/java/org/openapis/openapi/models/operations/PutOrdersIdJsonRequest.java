@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrdersIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutOrdersIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrderEdit orderEdit;
+
     public PutOrdersIdJsonRequest withOrderEdit(org.openapis.openapi.models.shared.OrderEdit orderEdit) {
         this.orderEdit = orderEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutOrdersIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutOrdersIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutOrdersIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutOrdersIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PutOrdersIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutOrdersIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutOrdersIdJsonRequest(@JsonProperty("OrderEdit") org.openapis.openapi.models.shared.OrderEdit orderEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.orderEdit = orderEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

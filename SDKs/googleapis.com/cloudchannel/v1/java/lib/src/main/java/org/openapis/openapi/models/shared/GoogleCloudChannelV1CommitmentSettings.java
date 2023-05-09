@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1CommitmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudChannelV1CommitmentSettings withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1CommitmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalSettings")
     public GoogleCloudChannelV1RenewalSettings renewalSettings;
+
     public GoogleCloudChannelV1CommitmentSettings withRenewalSettings(GoogleCloudChannelV1RenewalSettings renewalSettings) {
         this.renewalSettings = renewalSettings;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1CommitmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudChannelV1CommitmentSettings withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudChannelV1CommitmentSettings(){}
 }

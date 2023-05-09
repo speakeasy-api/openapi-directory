@@ -18,9 +18,11 @@ public class AppContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appTypes")
     public AppContextAppTypesEnum[] appTypes;
+
     public AppContext withAppTypes(AppContextAppTypesEnum[] appTypes) {
         this.appTypes = appTypes;
         return this;
     }
     
+    public AppContext(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateReceivable1Request {
@@ -12,6 +13,7 @@ public class CreateReceivable1Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ReceivableCreateDTO receivableCreateDTO;
+
     public CreateReceivable1Request withReceivableCreateDTO(org.openapis.openapi.models.shared.ReceivableCreateDTO receivableCreateDTO) {
         this.receivableCreateDTO = receivableCreateDTO;
         return this;
@@ -22,9 +24,14 @@ public class CreateReceivable1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public CreateReceivable1Request withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public CreateReceivable1Request(@JsonProperty("ReceivableCreateDTO") org.openapis.openapi.models.shared.ReceivableCreateDTO receivableCreateDTO, @JsonProperty("quoteId") String quoteId) {
+        this.receivableCreateDTO = receivableCreateDTO;
+        this.quoteId = quoteId;
+  }
 }

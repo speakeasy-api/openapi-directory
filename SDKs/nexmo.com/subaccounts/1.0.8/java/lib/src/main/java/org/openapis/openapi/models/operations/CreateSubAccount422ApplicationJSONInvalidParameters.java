@@ -12,6 +12,7 @@ public class CreateSubAccount422ApplicationJSONInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateSubAccount422ApplicationJSONInvalidParameters withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class CreateSubAccount422ApplicationJSONInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CreateSubAccount422ApplicationJSONInvalidParameters withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CreateSubAccount422ApplicationJSONInvalidParameters(){}
 }

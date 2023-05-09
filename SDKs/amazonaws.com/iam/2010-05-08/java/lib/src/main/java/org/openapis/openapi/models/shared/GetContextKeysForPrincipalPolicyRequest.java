@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetContextKeysForPrincipalPolicyRequest {
     
     public String[] policyInputList;
+
     public GetContextKeysForPrincipalPolicyRequest withPolicyInputList(String[] policyInputList) {
         this.policyInputList = policyInputList;
         return this;
@@ -16,9 +17,13 @@ public class GetContextKeysForPrincipalPolicyRequest {
     
     
     public String policySourceArn;
+
     public GetContextKeysForPrincipalPolicyRequest withPolicySourceArn(String policySourceArn) {
         this.policySourceArn = policySourceArn;
         return this;
     }
     
+    public GetContextKeysForPrincipalPolicyRequest(@JsonProperty("PolicySourceArn") String policySourceArn) {
+        this.policySourceArn = policySourceArn;
+  }
 }

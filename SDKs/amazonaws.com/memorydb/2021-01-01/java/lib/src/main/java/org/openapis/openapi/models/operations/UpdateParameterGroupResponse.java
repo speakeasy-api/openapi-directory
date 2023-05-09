@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateParameterGroupResponse {
     
     public String contentType;
+
     public UpdateParameterGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateParameterGroupResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public UpdateParameterGroupResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateParameterGroupResponse {
      */
     
     public Object invalidParameterGroupStateFault;
+
     public UpdateParameterGroupResponse withInvalidParameterGroupStateFault(Object invalidParameterGroupStateFault) {
         this.invalidParameterGroupStateFault = invalidParameterGroupStateFault;
         return this;
@@ -39,6 +43,7 @@ public class UpdateParameterGroupResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateParameterGroupResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateParameterGroupResponse {
      */
     
     public Object parameterGroupNotFoundFault;
+
     public UpdateParameterGroupResponse withParameterGroupNotFoundFault(Object parameterGroupNotFoundFault) {
         this.parameterGroupNotFoundFault = parameterGroupNotFoundFault;
         return this;
@@ -59,6 +65,7 @@ public class UpdateParameterGroupResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public UpdateParameterGroupResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -66,6 +73,7 @@ public class UpdateParameterGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateParameterGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateParameterGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateParameterGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateParameterGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateParameterGroupResponse updateParameterGroupResponse;
+
     public UpdateParameterGroupResponse withUpdateParameterGroupResponse(org.openapis.openapi.models.shared.UpdateParameterGroupResponse updateParameterGroupResponse) {
         this.updateParameterGroupResponse = updateParameterGroupResponse;
         return this;
     }
     
+    public UpdateParameterGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

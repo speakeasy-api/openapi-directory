@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTagsToVaultRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddTagsToVaultRequestBody requestBody;
+
     public AddTagsToVaultRequest withRequestBody(AddTagsToVaultRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class AddTagsToVaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AddTagsToVaultRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AddTagsToVaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AddTagsToVaultRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AddTagsToVaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AddTagsToVaultRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AddTagsToVaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AddTagsToVaultRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AddTagsToVaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AddTagsToVaultRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AddTagsToVaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AddTagsToVaultRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AddTagsToVaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AddTagsToVaultRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class AddTagsToVaultRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AddTagsToVaultRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -75,6 +85,7 @@ public class AddTagsToVaultRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=operation")
     public AddTagsToVaultOperationEnum operation;
+
     public AddTagsToVaultRequest withOperation(AddTagsToVaultOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -85,9 +96,16 @@ public class AddTagsToVaultRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultName")
     public String vaultName;
+
     public AddTagsToVaultRequest withVaultName(String vaultName) {
         this.vaultName = vaultName;
         return this;
     }
     
+    public AddTagsToVaultRequest(@JsonProperty("RequestBody") AddTagsToVaultRequestBody requestBody, @JsonProperty("accountId") String accountId, @JsonProperty("operation") AddTagsToVaultOperationEnum operation, @JsonProperty("vaultName") String vaultName) {
+        this.requestBody = requestBody;
+        this.accountId = accountId;
+        this.operation = operation;
+        this.vaultName = vaultName;
+  }
 }

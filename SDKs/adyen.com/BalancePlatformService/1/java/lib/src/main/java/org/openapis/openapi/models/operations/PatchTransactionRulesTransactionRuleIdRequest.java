@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchTransactionRulesTransactionRuleIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TransactionRuleInfo transactionRuleInfo;
+
     public PatchTransactionRulesTransactionRuleIdRequest withTransactionRuleInfo(org.openapis.openapi.models.shared.TransactionRuleInfo transactionRuleInfo) {
         this.transactionRuleInfo = transactionRuleInfo;
         return this;
@@ -19,9 +21,13 @@ public class PatchTransactionRulesTransactionRuleIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionRuleId")
     public String transactionRuleId;
+
     public PatchTransactionRulesTransactionRuleIdRequest withTransactionRuleId(String transactionRuleId) {
         this.transactionRuleId = transactionRuleId;
         return this;
     }
     
+    public PatchTransactionRulesTransactionRuleIdRequest(@JsonProperty("transactionRuleId") String transactionRuleId) {
+        this.transactionRuleId = transactionRuleId;
+  }
 }

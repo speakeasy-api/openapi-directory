@@ -12,6 +12,7 @@ public class CreateWebhookRequestBodyWebhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public String collection;
+
     public CreateWebhookRequestBodyWebhook withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -20,9 +21,11 @@ public class CreateWebhookRequestBodyWebhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWebhookRequestBodyWebhook withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateWebhookRequestBodyWebhook(){}
 }

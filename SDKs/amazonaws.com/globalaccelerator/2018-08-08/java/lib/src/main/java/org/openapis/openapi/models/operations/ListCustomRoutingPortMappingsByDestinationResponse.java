@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomRoutingPortMappingsByDestinationResponse {
     
     public String contentType;
+
     public ListCustomRoutingPortMappingsByDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponse {
      */
     
     public Object endpointNotFoundException;
+
     public ListCustomRoutingPortMappingsByDestinationResponse withEndpointNotFoundException(Object endpointNotFoundException) {
         this.endpointNotFoundException = endpointNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListCustomRoutingPortMappingsByDestinationResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListCustomRoutingPortMappingsByDestinationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCustomRoutingPortMappingsByDestinationResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomRoutingPortMappingsByDestinationResponse listCustomRoutingPortMappingsByDestinationResponse;
+
     public ListCustomRoutingPortMappingsByDestinationResponse withListCustomRoutingPortMappingsByDestinationResponse(org.openapis.openapi.models.shared.ListCustomRoutingPortMappingsByDestinationResponse listCustomRoutingPortMappingsByDestinationResponse) {
         this.listCustomRoutingPortMappingsByDestinationResponse = listCustomRoutingPortMappingsByDestinationResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponse {
     
     
     public Integer statusCode;
+
     public ListCustomRoutingPortMappingsByDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListCustomRoutingPortMappingsByDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomRoutingPortMappingsByDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCustomRoutingPortMappingsByDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

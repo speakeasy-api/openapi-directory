@@ -20,6 +20,7 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public EndpointAccess withAddress(String address) {
         this.address = address;
         return this;
@@ -28,6 +29,7 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointArn")
     public String endpointArn;
+
     public EndpointAccess withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -38,6 +40,7 @@ public class EndpointAccess {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endpointCreateTime")
     public OffsetDateTime endpointCreateTime;
+
     public EndpointAccess withEndpointCreateTime(OffsetDateTime endpointCreateTime) {
         this.endpointCreateTime = endpointCreateTime;
         return this;
@@ -46,6 +49,7 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointName")
     public String endpointName;
+
     public EndpointAccess withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -54,6 +58,7 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointStatus")
     public String endpointStatus;
+
     public EndpointAccess withEndpointStatus(String endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -62,6 +67,7 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public EndpointAccess withPort(Long port) {
         this.port = port;
         return this;
@@ -70,6 +76,7 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public EndpointAccess withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -78,6 +85,7 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcEndpoint")
     public VpcEndpoint vpcEndpoint;
+
     public EndpointAccess withVpcEndpoint(VpcEndpoint vpcEndpoint) {
         this.vpcEndpoint = vpcEndpoint;
         return this;
@@ -86,6 +94,7 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcSecurityGroups")
     public VpcSecurityGroupMembership[] vpcSecurityGroups;
+
     public EndpointAccess withVpcSecurityGroups(VpcSecurityGroupMembership[] vpcSecurityGroups) {
         this.vpcSecurityGroups = vpcSecurityGroups;
         return this;
@@ -94,9 +103,11 @@ public class EndpointAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public EndpointAccess withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public EndpointAccess(){}
 }

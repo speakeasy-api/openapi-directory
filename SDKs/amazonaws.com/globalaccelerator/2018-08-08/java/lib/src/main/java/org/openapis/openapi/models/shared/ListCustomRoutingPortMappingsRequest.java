@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCustomRoutingPortMappingsRequest {
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public ListCustomRoutingPortMappingsRequest withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
@@ -19,6 +20,7 @@ public class ListCustomRoutingPortMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public ListCustomRoutingPortMappingsRequest withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
@@ -27,6 +29,7 @@ public class ListCustomRoutingPortMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCustomRoutingPortMappingsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListCustomRoutingPortMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomRoutingPortMappingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomRoutingPortMappingsRequest(@JsonProperty("AcceleratorArn") String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+  }
 }

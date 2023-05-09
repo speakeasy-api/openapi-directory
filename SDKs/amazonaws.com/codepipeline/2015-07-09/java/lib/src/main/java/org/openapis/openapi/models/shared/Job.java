@@ -15,6 +15,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Job withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public JobData data;
+
     public Job withData(JobData data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Job withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonce")
     public String nonce;
+
     public Job withNonce(String nonce) {
         this.nonce = nonce;
         return this;
     }
     
+    public Job(){}
 }

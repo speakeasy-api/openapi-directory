@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArticleDeleteImageFromProductResponse {
@@ -12,6 +13,7 @@ public class ArticleDeleteImageFromProductResponse {
      */
     
     public java.util.Map<String, Object> articleDeleteImageFromProduct200ApplicationJSONObject;
+
     public ArticleDeleteImageFromProductResponse withArticleDeleteImageFromProduct200ApplicationJSONObject(java.util.Map<String, Object> articleDeleteImageFromProduct200ApplicationJSONObject) {
         this.articleDeleteImageFromProduct200ApplicationJSONObject = articleDeleteImageFromProduct200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class ArticleDeleteImageFromProductResponse {
      */
     
     public java.util.Map<String, Object> articleDeleteImageFromProduct200TextJSONObject;
+
     public ArticleDeleteImageFromProductResponse withArticleDeleteImageFromProduct200TextJSONObject(java.util.Map<String, Object> articleDeleteImageFromProduct200TextJSONObject) {
         this.articleDeleteImageFromProduct200TextJSONObject = articleDeleteImageFromProduct200TextJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ArticleDeleteImageFromProductResponse {
     
     
     public String contentType;
+
     public ArticleDeleteImageFromProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class ArticleDeleteImageFromProductResponse {
     
     
     public Integer statusCode;
+
     public ArticleDeleteImageFromProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ArticleDeleteImageFromProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArticleDeleteImageFromProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ArticleDeleteImageFromProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

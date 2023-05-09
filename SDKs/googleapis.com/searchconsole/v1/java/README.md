@@ -16,24 +16,23 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption1;
-import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption2;
-import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurity;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryRequest;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurity;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption1;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.ApiDimensionFilter;
+import org.openapis.openapi.models.shared.ApiDimensionFilterDimensionEnum;
+import org.openapis.openapi.models.shared.ApiDimensionFilterGroup;
+import org.openapis.openapi.models.shared.ApiDimensionFilterGroupGroupTypeEnum;
+import org.openapis.openapi.models.shared.ApiDimensionFilterOperatorEnum;
+import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequest;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestAggregationTypeEnum;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDataStateEnum;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDimensionsEnum;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestSearchTypeEnum;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestTypeEnum;
-import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequest;
-import org.openapis.openapi.models.shared.ApiDimensionFilterGroupGroupTypeEnum;
-import org.openapis.openapi.models.shared.ApiDimensionFilterGroup;
-import org.openapis.openapi.models.shared.ApiDimensionFilterDimensionEnum;
-import org.openapis.openapi.models.shared.ApiDimensionFilterOperatorEnum;
-import org.openapis.openapi.models.shared.ApiDimensionFilter;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -42,146 +41,105 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            WebmastersSearchanalyticsQueryRequest req = new WebmastersSearchanalyticsQueryRequest() {{
-                dollarXgafv = "2";
+            WebmastersSearchanalyticsQueryRequest req = new WebmastersSearchanalyticsQueryRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 searchAnalyticsQueryRequest = new SearchAnalyticsQueryRequest() {{
-                    aggregationType = "BY_PROPERTY";
-                    dataState = "ALL";
+                    aggregationType = SearchAnalyticsQueryRequestAggregationTypeEnum.BY_PAGE;
+                    dataState = SearchAnalyticsQueryRequestDataStateEnum.ALL;
                     dimensionFilterGroups = new org.openapis.openapi.models.shared.ApiDimensionFilterGroup[]{{
                         add(new ApiDimensionFilterGroup() {{
                             filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "SEARCH_APPEARANCE";
-                                    expression = "corrupti";
-                                    operator = "EXCLUDING_REGEX";
+                                    dimension = ApiDimensionFilterDimensionEnum.COUNTRY;
+                                    expression = "illum";
+                                    operator = ApiDimensionFilterOperatorEnum.CONTAINS;
                                 }}),
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "COUNTRY";
-                                    expression = "error";
-                                    operator = "NOT_CONTAINS";
+                                    dimension = ApiDimensionFilterDimensionEnum.DEVICE;
+                                    expression = "deserunt";
+                                    operator = ApiDimensionFilterOperatorEnum.CONTAINS;
                                 }}),
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "PAGE";
-                                    expression = "iure";
-                                    operator = "NOT_EQUALS";
+                                    dimension = ApiDimensionFilterDimensionEnum.COUNTRY;
+                                    expression = "magnam";
+                                    operator = ApiDimensionFilterOperatorEnum.EXCLUDING_REGEX;
                                 }}),
-                            }};
-                            groupType = "AND";
-                        }}),
-                        add(new ApiDimensionFilterGroup() {{
-                            filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "QUERY";
+                                    dimension = ApiDimensionFilterDimensionEnum.QUERY;
                                     expression = "delectus";
-                                    operator = "NOT_EQUALS";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "PAGE";
-                                    expression = "molestiae";
-                                    operator = "INCLUDING_REGEX";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "SEARCH_APPEARANCE";
-                                    expression = "voluptatum";
-                                    operator = "CONTAINS";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "COUNTRY";
-                                    expression = "nisi";
-                                    operator = "EXCLUDING_REGEX";
+                                    operator = ApiDimensionFilterOperatorEnum.NOT_EQUALS;
                                 }}),
                             }};
-                            groupType = "AND";
+                            groupType = ApiDimensionFilterGroupGroupTypeEnum.AND;
                         }}),
                         add(new ApiDimensionFilterGroup() {{
                             filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "QUERY";
-                                    expression = "quis";
-                                    operator = "EQUALS";
+                                    dimension = ApiDimensionFilterDimensionEnum.COUNTRY;
+                                    expression = "minus";
+                                    operator = ApiDimensionFilterOperatorEnum.INCLUDING_REGEX;
                                 }}),
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "DEVICE";
-                                    expression = "perferendis";
-                                    operator = "CONTAINS";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "SEARCH_APPEARANCE";
-                                    expression = "sapiente";
-                                    operator = "INCLUDING_REGEX";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "QUERY";
-                                    expression = "at";
-                                    operator = "EXCLUDING_REGEX";
+                                    dimension = ApiDimensionFilterDimensionEnum.COUNTRY;
+                                    expression = "iusto";
+                                    operator = ApiDimensionFilterOperatorEnum.NOT_CONTAINS;
                                 }}),
                             }};
-                            groupType = "AND";
+                            groupType = ApiDimensionFilterGroupGroupTypeEnum.AND;
                         }}),
                         add(new ApiDimensionFilterGroup() {{
                             filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "COUNTRY";
-                                    expression = "quod";
-                                    operator = "INCLUDING_REGEX";
+                                    dimension = ApiDimensionFilterDimensionEnum.SEARCH_APPEARANCE;
+                                    expression = "temporibus";
+                                    operator = ApiDimensionFilterOperatorEnum.EQUALS;
                                 }}),
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "COUNTRY";
-                                    expression = "totam";
-                                    operator = "INCLUDING_REGEX";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "DEVICE";
-                                    expression = "dicta";
-                                    operator = "INCLUDING_REGEX";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "DEVICE";
-                                    expression = "occaecati";
-                                    operator = "EQUALS";
+                                    dimension = ApiDimensionFilterDimensionEnum.PAGE;
+                                    expression = "veritatis";
+                                    operator = ApiDimensionFilterOperatorEnum.NOT_CONTAINS;
                                 }}),
                             }};
-                            groupType = "AND";
+                            groupType = ApiDimensionFilterGroupGroupTypeEnum.AND;
                         }}),
                     }};
                     dimensions = new org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDimensionsEnum[]{{
-                        add("SEARCH_APPEARANCE"),
-                        add("DEVICE"),
-                        add("COUNTRY"),
+                        add(SearchAnalyticsQueryRequestDimensionsEnum.PAGE),
                     }};
-                    endDate = "beatae";
-                    rowLimit = 414662;
-                    searchType = "VIDEO";
-                    startDate = "modi";
-                    startRow = 186332;
-                    type = "DISCOVER";
-                }};
-                accessToken = "cum";
-                alt = "media";
-                callback = "ipsum";
-                fields = "excepturi";
-                key = "aspernatur";
-                oauthToken = "perferendis";
+                    endDate = "repellendus";
+                    rowLimit = 957156;
+                    searchType = SearchAnalyticsQueryRequestSearchTypeEnum.DISCOVER;
+                    startDate = "odit";
+                    startRow = 870013;
+                    type = SearchAnalyticsQueryRequestTypeEnum.GOOGLE_NEWS;
+                }};;
+                accessToken = "maiores";
+                alt = AltEnum.MEDIA;
+                callback = "quod";
+                fields = "quod";
+                key = "esse";
+                oauthToken = "totam";
                 prettyPrint = false;
-                quotaUser = "ad";
-                siteUrl = "natus";
-                uploadType = "sed";
-                uploadProtocol = "iste";
-            }}            
+                quotaUser = "porro";
+                uploadType = "dolorum";
+                uploadProtocol = "dicta";
+            }};            
 
             WebmastersSearchanalyticsQueryResponse res = sdk.searchanalytics.webmastersSearchanalyticsQuery(req, new WebmastersSearchanalyticsQuerySecurity() {{
-                option1 = new WebmastersSearchanalyticsQuerySecurityOption1() {{
+                option1 = new WebmastersSearchanalyticsQuerySecurityOption1("nam", "officia") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.searchAnalyticsQueryResponse.isPresent()) {
+            if (res.searchAnalyticsQueryResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -189,31 +147,31 @@ public class Application {
 ## Available Resources and Operations
 
 
-### searchanalytics
+### [searchanalytics](docs/searchanalytics/README.md)
 
-* `webmastersSearchanalyticsQuery` - Query your data with filters and parameters that you define. Returns zero or more rows grouped by the row keys that you define. You must define a date range of one or more days. When date is one of the group by values, any days without data are omitted from the result list. If you need to know which days have data, issue a broad date range query grouped by date for any metric, and see which day rows are returned.
+* [webmastersSearchanalyticsQuery](docs/searchanalytics/README.md#webmasterssearchanalyticsquery) - Query your data with filters and parameters that you define. Returns zero or more rows grouped by the row keys that you define. You must define a date range of one or more days. When date is one of the group by values, any days without data are omitted from the result list. If you need to know which days have data, issue a broad date range query grouped by date for any metric, and see which day rows are returned.
 
-### sitemaps
+### [sitemaps](docs/sitemaps/README.md)
 
-* `webmastersSitemapsDelete` - Deletes a sitemap from the Sitemaps report. Does not stop Google from crawling this sitemap or the URLs that were previously crawled in the deleted sitemap.
-* `webmastersSitemapsGet` - Retrieves information about a specific sitemap.
-* `webmastersSitemapsList` -  Lists the [sitemaps-entries](/webmaster-tools/v3/sitemaps) submitted for this site, or included in the sitemap index file (if `sitemapIndex` is specified in the request).
-* `webmastersSitemapsSubmit` - Submits a sitemap for a site.
+* [webmastersSitemapsDelete](docs/sitemaps/README.md#webmasterssitemapsdelete) - Deletes a sitemap from the Sitemaps report. Does not stop Google from crawling this sitemap or the URLs that were previously crawled in the deleted sitemap.
+* [webmastersSitemapsGet](docs/sitemaps/README.md#webmasterssitemapsget) - Retrieves information about a specific sitemap.
+* [webmastersSitemapsList](docs/sitemaps/README.md#webmasterssitemapslist) -  Lists the [sitemaps-entries](/webmaster-tools/v3/sitemaps) submitted for this site, or included in the sitemap index file (if `sitemapIndex` is specified in the request).
+* [webmastersSitemapsSubmit](docs/sitemaps/README.md#webmasterssitemapssubmit) - Submits a sitemap for a site.
 
-### sites
+### [sites](docs/sites/README.md)
 
-* `webmastersSitesAdd` -  Adds a site to the set of the user's sites in Search Console.
-* `webmastersSitesDelete` -  Removes a site from the set of the user's Search Console sites.
-* `webmastersSitesGet` -  Retrieves information about specific site.
-* `webmastersSitesList` -  Lists the user's Search Console sites.
+* [webmastersSitesAdd](docs/sites/README.md#webmasterssitesadd) -  Adds a site to the set of the user's sites in Search Console.
+* [webmastersSitesDelete](docs/sites/README.md#webmasterssitesdelete) -  Removes a site from the set of the user's Search Console sites.
+* [webmastersSitesGet](docs/sites/README.md#webmasterssitesget) -  Retrieves information about specific site.
+* [webmastersSitesList](docs/sites/README.md#webmasterssiteslist) -  Lists the user's Search Console sites.
 
-### urlInspection
+### [urlInspection](docs/urlinspection/README.md)
 
-* `searchconsoleUrlInspectionIndexInspect` - Index inspection.
+* [searchconsoleUrlInspectionIndexInspect](docs/urlinspection/README.md#searchconsoleurlinspectionindexinspect) - Index inspection.
 
-### urlTestingTools
+### [urlTestingTools](docs/urltestingtools/README.md)
 
-* `searchconsoleUrlTestingToolsMobileFriendlyTestRun` - Runs Mobile-Friendly Test for a given URL.
+* [searchconsoleUrlTestingToolsMobileFriendlyTestRun](docs/urltestingtools/README.md#searchconsoleurltestingtoolsmobilefriendlytestrun) - Runs Mobile-Friendly Test for a given URL.
 <!-- End SDK Available Operations -->
 
 ### Maturity

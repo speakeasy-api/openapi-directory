@@ -22,6 +22,7 @@ public class Connection {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public Connection withActive(Boolean active) {
         this.active = active;
         return this;
@@ -35,6 +36,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Connection withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -45,6 +47,7 @@ public class Connection {
      */
     @JsonProperty("id")
     public Long id;
+
     public Connection withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +58,7 @@ public class Connection {
      */
     @JsonProperty("id_connector")
     public Long idConnector;
+
     public Connection withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -66,6 +70,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_user")
     public Long idUser;
+
     public Connection withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -79,6 +84,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_push")
     public OffsetDateTime lastPush;
+
     public Connection withLastPush(OffsetDateTime lastPush) {
         this.lastPush = lastPush;
         return this;
@@ -92,6 +98,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_update")
     public OffsetDateTime lastUpdate;
+
     public Connection withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -105,9 +112,15 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("next_try")
     public OffsetDateTime nextTry;
+
     public Connection withNextTry(OffsetDateTime nextTry) {
         this.nextTry = nextTry;
         return this;
     }
     
+    public Connection(@JsonProperty("active") Boolean active, @JsonProperty("id") Long id, @JsonProperty("id_connector") Long idConnector) {
+        this.active = active;
+        this.id = id;
+        this.idConnector = idConnector;
+  }
 }

@@ -18,6 +18,7 @@ public class RegionInstanceGroupManagersApplyUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allInstances")
     public Boolean allInstances;
+
     public RegionInstanceGroupManagersApplyUpdatesRequest withAllInstances(Boolean allInstances) {
         this.allInstances = allInstances;
         return this;
@@ -29,6 +30,7 @@ public class RegionInstanceGroupManagersApplyUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public RegionInstanceGroupManagersApplyUpdatesRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -40,6 +42,7 @@ public class RegionInstanceGroupManagersApplyUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimalAction")
     public RegionInstanceGroupManagersApplyUpdatesRequestMinimalActionEnum minimalAction;
+
     public RegionInstanceGroupManagersApplyUpdatesRequest withMinimalAction(RegionInstanceGroupManagersApplyUpdatesRequestMinimalActionEnum minimalAction) {
         this.minimalAction = minimalAction;
         return this;
@@ -51,9 +54,11 @@ public class RegionInstanceGroupManagersApplyUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostDisruptiveAllowedAction")
     public RegionInstanceGroupManagersApplyUpdatesRequestMostDisruptiveAllowedActionEnum mostDisruptiveAllowedAction;
+
     public RegionInstanceGroupManagersApplyUpdatesRequest withMostDisruptiveAllowedAction(RegionInstanceGroupManagersApplyUpdatesRequestMostDisruptiveAllowedActionEnum mostDisruptiveAllowedAction) {
         this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
         return this;
     }
     
+    public RegionInstanceGroupManagersApplyUpdatesRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
@@ -12,6 +13,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FirewallPolicyAssociation firewallPolicyAssociation;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withFirewallPolicyAssociation(org.openapis.openapi.models.shared.FirewallPolicyAssociation firewallPolicyAssociation) {
         this.firewallPolicyAssociation = firewallPolicyAssociation;
         return this;
@@ -29,6 +32,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firewallPolicy")
     public String firewallPolicy;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withFirewallPolicy(String firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -79,6 +87,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +153,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=replaceExistingAssociation")
     public Boolean replaceExistingAssociation;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withReplaceExistingAssociation(Boolean replaceExistingAssociation) {
         this.replaceExistingAssociation = replaceExistingAssociation;
         return this;
@@ -149,6 +164,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -159,6 +175,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -169,6 +186,7 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -179,9 +197,15 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeRegionNetworkFirewallPoliciesAddAssociationRequest(@JsonProperty("firewallPolicy") String firewallPolicy, @JsonProperty("project") String project, @JsonProperty("region") String region) {
+        this.firewallPolicy = firewallPolicy;
+        this.project = project;
+        this.region = region;
+  }
 }

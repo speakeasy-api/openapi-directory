@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EnvironmentSessionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableFastStartup")
     public Boolean enableFastStartup;
+
     public GoogleCloudDataplexV1EnvironmentSessionSpec withEnableFastStartup(Boolean enableFastStartup) {
         this.enableFastStartup = enableFastStartup;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1EnvironmentSessionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxIdleDuration")
     public String maxIdleDuration;
+
     public GoogleCloudDataplexV1EnvironmentSessionSpec withMaxIdleDuration(String maxIdleDuration) {
         this.maxIdleDuration = maxIdleDuration;
         return this;
     }
     
+    public GoogleCloudDataplexV1EnvironmentSessionSpec(){}
 }

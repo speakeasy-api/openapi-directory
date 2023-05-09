@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFlowDefinitionRequest {
     @JsonProperty("FlowDefinitionName")
     public String flowDefinitionName;
+
     public DeleteFlowDefinitionRequest withFlowDefinitionName(String flowDefinitionName) {
         this.flowDefinitionName = flowDefinitionName;
         return this;
     }
     
+    public DeleteFlowDefinitionRequest(@JsonProperty("FlowDefinitionName") String flowDefinitionName) {
+        this.flowDefinitionName = flowDefinitionName;
+  }
 }

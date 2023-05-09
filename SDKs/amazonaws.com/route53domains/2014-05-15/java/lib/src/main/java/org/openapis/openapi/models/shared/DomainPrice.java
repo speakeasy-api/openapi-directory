@@ -15,6 +15,7 @@ public class DomainPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeOwnershipPrice")
     public PriceWithCurrency changeOwnershipPrice;
+
     public DomainPrice withChangeOwnershipPrice(PriceWithCurrency changeOwnershipPrice) {
         this.changeOwnershipPrice = changeOwnershipPrice;
         return this;
@@ -23,6 +24,7 @@ public class DomainPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DomainPrice withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class DomainPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrationPrice")
     public PriceWithCurrency registrationPrice;
+
     public DomainPrice withRegistrationPrice(PriceWithCurrency registrationPrice) {
         this.registrationPrice = registrationPrice;
         return this;
@@ -39,6 +42,7 @@ public class DomainPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RenewalPrice")
     public PriceWithCurrency renewalPrice;
+
     public DomainPrice withRenewalPrice(PriceWithCurrency renewalPrice) {
         this.renewalPrice = renewalPrice;
         return this;
@@ -47,6 +51,7 @@ public class DomainPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestorationPrice")
     public PriceWithCurrency restorationPrice;
+
     public DomainPrice withRestorationPrice(PriceWithCurrency restorationPrice) {
         this.restorationPrice = restorationPrice;
         return this;
@@ -55,9 +60,11 @@ public class DomainPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransferPrice")
     public PriceWithCurrency transferPrice;
+
     public DomainPrice withTransferPrice(PriceWithCurrency transferPrice) {
         this.transferPrice = transferPrice;
         return this;
     }
     
+    public DomainPrice(){}
 }

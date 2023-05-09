@@ -15,6 +15,7 @@ public class ListDatasetContentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetContentSummaries")
     public DatasetContentSummary[] datasetContentSummaries;
+
     public ListDatasetContentsResponse withDatasetContentSummaries(DatasetContentSummary[] datasetContentSummaries) {
         this.datasetContentSummaries = datasetContentSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListDatasetContentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDatasetContentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasetContentsResponse(){}
 }

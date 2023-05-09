@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDetectorModelAnalysisResponse {
     
     public String contentType;
+
     public StartDetectorModelAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartDetectorModelAnalysisResponse {
      */
     
     public Object internalFailureException;
+
     public StartDetectorModelAnalysisResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class StartDetectorModelAnalysisResponse {
      */
     
     public Object invalidRequestException;
+
     public StartDetectorModelAnalysisResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartDetectorModelAnalysisResponse {
      */
     
     public Object limitExceededException;
+
     public StartDetectorModelAnalysisResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartDetectorModelAnalysisResponse {
      */
     
     public Object serviceUnavailableException;
+
     public StartDetectorModelAnalysisResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -59,6 +65,7 @@ public class StartDetectorModelAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDetectorModelAnalysisResponse startDetectorModelAnalysisResponse;
+
     public StartDetectorModelAnalysisResponse withStartDetectorModelAnalysisResponse(org.openapis.openapi.models.shared.StartDetectorModelAnalysisResponse startDetectorModelAnalysisResponse) {
         this.startDetectorModelAnalysisResponse = startDetectorModelAnalysisResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartDetectorModelAnalysisResponse {
     
     
     public Integer statusCode;
+
     public StartDetectorModelAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartDetectorModelAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDetectorModelAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartDetectorModelAnalysisResponse {
      */
     
     public Object throttlingException;
+
     public StartDetectorModelAnalysisResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartDetectorModelAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

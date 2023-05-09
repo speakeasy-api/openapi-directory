@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpSecurity;
 import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpRequest;
 import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpResponse;
+import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,32 +26,32 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetFoodBrandedBarcodePhpRequest req = new GetFoodBrandedBarcodePhpRequest() {{
-                code = "corrupti";
-            }}            
+            GetFoodBrandedBarcodePhpRequest req = new GetFoodBrandedBarcodePhpRequest("corrupti");            
 
-            GetFoodBrandedBarcodePhpResponse res = sdk.getFoodBrandedBarcodePhp(req, new GetFoodBrandedBarcodePhpSecurity() {{
+            GetFoodBrandedBarcodePhpResponse res = sdk.getFoodBrandedBarcodePhp(req, new GetFoodBrandedBarcodePhpSecurity("provident") {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.brandedFoodObject.isPresent()) {
+            if (res.brandedFoodObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getFoodBrandedBarcodePhp` - Get a branded food item using a barcode
-* `getFoodBrandedNamePhp` - Get a branded food item by name
-* `getFoodBrandedSearchPhp` - Get data for branded food items using various search parameters
-* `getFoodIngredientSearchPhp` - Get raw/generic food ingredient item(s)
+* [getFoodBrandedBarcodePhp](docs/sdk/README.md#getfoodbrandedbarcodephp) - Get a branded food item using a barcode
+* [getFoodBrandedNamePhp](docs/sdk/README.md#getfoodbrandednamephp) - Get a branded food item by name
+* [getFoodBrandedSearchPhp](docs/sdk/README.md#getfoodbrandedsearchphp) - Get data for branded food items using various search parameters
+* [getFoodIngredientSearchPhp](docs/sdk/README.md#getfoodingredientsearchphp) - Get raw/generic food ingredient item(s)
 <!-- End SDK Available Operations -->
 
 ### Maturity

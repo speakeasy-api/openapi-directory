@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeTargetHttpsProxiesAggregatedListResponse {
     
     public String contentType;
+
     public ComputeTargetHttpsProxiesAggregatedListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ComputeTargetHttpsProxiesAggregatedListResponse {
     
     
     public Integer statusCode;
+
     public ComputeTargetHttpsProxiesAggregatedListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ComputeTargetHttpsProxiesAggregatedListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeTargetHttpsProxiesAggregatedListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ComputeTargetHttpsProxiesAggregatedListResponse {
      */
     
     public org.openapis.openapi.models.shared.TargetHttpsProxyAggregatedList targetHttpsProxyAggregatedList;
+
     public ComputeTargetHttpsProxiesAggregatedListResponse withTargetHttpsProxyAggregatedList(org.openapis.openapi.models.shared.TargetHttpsProxyAggregatedList targetHttpsProxyAggregatedList) {
         this.targetHttpsProxyAggregatedList = targetHttpsProxyAggregatedList;
         return this;
     }
     
+    public ComputeTargetHttpsProxiesAggregatedListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

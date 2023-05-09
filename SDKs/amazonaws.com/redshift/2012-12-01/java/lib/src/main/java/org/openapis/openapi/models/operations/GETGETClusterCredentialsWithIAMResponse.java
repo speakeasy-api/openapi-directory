@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGETClusterCredentialsWithIAMResponse {
     
     public byte[] body;
+
     public GETGETClusterCredentialsWithIAMResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETGETClusterCredentialsWithIAMResponse {
     
     
     public String contentType;
+
     public GETGETClusterCredentialsWithIAMResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETGETClusterCredentialsWithIAMResponse {
     
     
     public Integer statusCode;
+
     public GETGETClusterCredentialsWithIAMResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETGETClusterCredentialsWithIAMResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGETClusterCredentialsWithIAMResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGETClusterCredentialsWithIAMResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAssetPropertyValueResponse {
     
     public String contentType;
+
     public GetAssetPropertyValueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAssetPropertyValueResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAssetPropertyValueResponse getAssetPropertyValueResponse;
+
     public GetAssetPropertyValueResponse withGetAssetPropertyValueResponse(org.openapis.openapi.models.shared.GetAssetPropertyValueResponse getAssetPropertyValueResponse) {
         this.getAssetPropertyValueResponse = getAssetPropertyValueResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAssetPropertyValueResponse {
      */
     
     public Object internalFailureException;
+
     public GetAssetPropertyValueResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetAssetPropertyValueResponse {
      */
     
     public Object invalidRequestException;
+
     public GetAssetPropertyValueResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetAssetPropertyValueResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetAssetPropertyValueResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class GetAssetPropertyValueResponse {
     
     
     public Integer statusCode;
+
     public GetAssetPropertyValueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAssetPropertyValueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAssetPropertyValueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAssetPropertyValueResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAssetPropertyValueResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetAssetPropertyValueResponse {
      */
     
     public Object throttlingException;
+
     public GetAssetPropertyValueResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetAssetPropertyValueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

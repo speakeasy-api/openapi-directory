@@ -14,6 +14,7 @@ public class CreateContactListRequestBody {
      */
     @JsonProperty("ContactListName")
     public String contactListName;
+
     public CreateContactListRequestBody withContactListName(String contactListName) {
         this.contactListName = contactListName;
         return this;
@@ -25,6 +26,7 @@ public class CreateContactListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateContactListRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateContactListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateContactListRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +50,13 @@ public class CreateContactListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Topics")
     public org.openapis.openapi.models.shared.Topic[] topics;
+
     public CreateContactListRequestBody withTopics(org.openapis.openapi.models.shared.Topic[] topics) {
         this.topics = topics;
         return this;
     }
     
+    public CreateContactListRequestBody(@JsonProperty("ContactListName") String contactListName) {
+        this.contactListName = contactListName;
+  }
 }

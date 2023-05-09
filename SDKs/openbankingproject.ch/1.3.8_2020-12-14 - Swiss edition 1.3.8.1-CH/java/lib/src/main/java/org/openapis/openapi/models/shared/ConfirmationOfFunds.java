@@ -49,6 +49,7 @@ public class ConfirmationOfFunds {
      */
     @JsonProperty("account")
     public AccountReference16CH account;
+
     public ConfirmationOfFunds withAccount(AccountReference16CH account) {
         this.account = account;
         return this;
@@ -62,6 +63,7 @@ public class ConfirmationOfFunds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardNumber")
     public String cardNumber;
+
     public ConfirmationOfFunds withCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
         return this;
@@ -69,6 +71,7 @@ public class ConfirmationOfFunds {
     
     @JsonProperty("instructedAmount")
     public Amount instructedAmount;
+
     public ConfirmationOfFunds withInstructedAmount(Amount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -80,9 +83,14 @@ public class ConfirmationOfFunds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee")
     public String payee;
+
     public ConfirmationOfFunds withPayee(String payee) {
         this.payee = payee;
         return this;
     }
     
+    public ConfirmationOfFunds(@JsonProperty("account") AccountReference16CH account, @JsonProperty("instructedAmount") Amount instructedAmount) {
+        this.account = account;
+        this.instructedAmount = instructedAmount;
+  }
 }

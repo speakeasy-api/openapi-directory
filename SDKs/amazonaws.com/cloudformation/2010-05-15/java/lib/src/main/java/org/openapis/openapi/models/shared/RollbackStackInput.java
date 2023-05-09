@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RollbackStackInput {
     
     public String clientRequestToken;
+
     public RollbackStackInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -16,6 +17,7 @@ public class RollbackStackInput {
     
     
     public String roleARN;
+
     public RollbackStackInput withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -23,9 +25,13 @@ public class RollbackStackInput {
     
     
     public String stackName;
+
     public RollbackStackInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public RollbackStackInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

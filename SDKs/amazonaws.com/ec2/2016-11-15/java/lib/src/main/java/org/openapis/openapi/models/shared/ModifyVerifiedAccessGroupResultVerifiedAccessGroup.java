@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * ModifyVerifiedAccessGroupResultVerifiedAccessGroup - Details of Amazon Web Services Verified Access group.
+ * ModifyVerifiedAccessGroupResultVerifiedAccessGroup - Details of Verified Access group.
  */
 public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     public String creationTime;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String deletionTime;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String description;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String lastUpdatedTime;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String owner;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -47,6 +52,7 @@ public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroupTags[] tags;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withTags(ModifyVerifiedAccessGroupResultVerifiedAccessGroupTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessGroupArn;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessGroupArn(String verifiedAccessGroupArn) {
         this.verifiedAccessGroupArn = verifiedAccessGroupArn;
         return this;
@@ -61,6 +68,7 @@ public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessGroupId;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -68,9 +76,11 @@ public class ModifyVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessInstanceId;
+
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public ModifyVerifiedAccessGroupResultVerifiedAccessGroup(){}
 }

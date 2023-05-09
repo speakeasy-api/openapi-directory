@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNodeUpdateUserRequest {
@@ -12,6 +13,7 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NodeUpdateUserParameter nodeUpdateUserParameter;
+
     public ComputeNodeUpdateUserRequest withNodeUpdateUserParameter(org.openapis.openapi.models.shared.NodeUpdateUserParameter nodeUpdateUserParameter) {
         this.nodeUpdateUserParameter = nodeUpdateUserParameter;
         return this;
@@ -22,6 +24,7 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public ComputeNodeUpdateUserRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public ComputeNodeUpdateUserRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
     public String nodeId;
+
     public ComputeNodeUpdateUserRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -52,6 +57,7 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public ComputeNodeUpdateUserRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -62,6 +68,7 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public ComputeNodeUpdateUserRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -72,6 +79,7 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public ComputeNodeUpdateUserRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -82,6 +90,7 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public ComputeNodeUpdateUserRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
@@ -92,9 +101,17 @@ public class ComputeNodeUpdateUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userName")
     public String userName;
+
     public ComputeNodeUpdateUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ComputeNodeUpdateUserRequest(@JsonProperty("NodeUpdateUserParameter") org.openapis.openapi.models.shared.NodeUpdateUserParameter nodeUpdateUserParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("nodeId") String nodeId, @JsonProperty("poolId") String poolId, @JsonProperty("userName") String userName) {
+        this.nodeUpdateUserParameter = nodeUpdateUserParameter;
+        this.apiVersion = apiVersion;
+        this.nodeId = nodeId;
+        this.poolId = poolId;
+        this.userName = userName;
+  }
 }

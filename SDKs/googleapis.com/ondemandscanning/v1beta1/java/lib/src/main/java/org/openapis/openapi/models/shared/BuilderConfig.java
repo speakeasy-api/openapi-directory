@@ -12,9 +12,11 @@ public class BuilderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BuilderConfig withId(String id) {
         this.id = id;
         return this;
     }
     
+    public BuilderConfig(){}
 }

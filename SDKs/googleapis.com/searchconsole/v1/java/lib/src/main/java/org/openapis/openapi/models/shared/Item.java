@@ -18,6 +18,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public RichResultsIssue[] issues;
+
     public Item withIssues(RichResultsIssue[] issues) {
         this.issues = issues;
         return this;
@@ -29,9 +30,11 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Item withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Item(){}
 }

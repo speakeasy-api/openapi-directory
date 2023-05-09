@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisSharpeRatioBiasAdjustedRequestBodyPortfolios {
      */
     @JsonProperty("portfolioValues")
     public Double[] portfolioValues;
+
     public PostPortfolioAnalysisSharpeRatioBiasAdjustedRequestBodyPortfolios withPortfolioValues(Double[] portfolioValues) {
         this.portfolioValues = portfolioValues;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioBiasAdjustedRequestBodyPortfolios(@JsonProperty("portfolioValues") Double[] portfolioValues) {
+        this.portfolioValues = portfolioValues;
+  }
 }

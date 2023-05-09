@@ -18,6 +18,7 @@ public class ExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleTtl")
     public String idleTtl;
+
     public ExecutionConfig withIdleTtl(String idleTtl) {
         this.idleTtl = idleTtl;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKey")
     public String kmsKey;
+
     public ExecutionConfig withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -40,6 +42,7 @@ public class ExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTags")
     public String[] networkTags;
+
     public ExecutionConfig withNetworkTags(String[] networkTags) {
         this.networkTags = networkTags;
         return this;
@@ -51,6 +54,7 @@ public class ExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUri")
     public String networkUri;
+
     public ExecutionConfig withNetworkUri(String networkUri) {
         this.networkUri = networkUri;
         return this;
@@ -62,6 +66,7 @@ public class ExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public ExecutionConfig withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -73,6 +78,7 @@ public class ExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingBucket")
     public String stagingBucket;
+
     public ExecutionConfig withStagingBucket(String stagingBucket) {
         this.stagingBucket = stagingBucket;
         return this;
@@ -84,6 +90,7 @@ public class ExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworkUri")
     public String subnetworkUri;
+
     public ExecutionConfig withSubnetworkUri(String subnetworkUri) {
         this.subnetworkUri = subnetworkUri;
         return this;
@@ -95,9 +102,11 @@ public class ExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public ExecutionConfig withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public ExecutionConfig(){}
 }

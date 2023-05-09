@@ -15,6 +15,7 @@ public class ViewOnlyLinksReadViewOnlyLinksAttributes {
      */
     
     public Boolean anonymous;
+
     public ViewOnlyLinksReadViewOnlyLinksAttributes withAnonymous(Boolean anonymous) {
         this.anonymous = anonymous;
         return this;
@@ -25,6 +26,7 @@ public class ViewOnlyLinksReadViewOnlyLinksAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public ViewOnlyLinksReadViewOnlyLinksAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -35,6 +37,7 @@ public class ViewOnlyLinksReadViewOnlyLinksAttributes {
      */
     
     public String key;
+
     public ViewOnlyLinksReadViewOnlyLinksAttributes withKey(String key) {
         this.key = key;
         return this;
@@ -45,9 +48,11 @@ public class ViewOnlyLinksReadViewOnlyLinksAttributes {
      */
     
     public String name;
+
     public ViewOnlyLinksReadViewOnlyLinksAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ViewOnlyLinksReadViewOnlyLinksAttributes(){}
 }

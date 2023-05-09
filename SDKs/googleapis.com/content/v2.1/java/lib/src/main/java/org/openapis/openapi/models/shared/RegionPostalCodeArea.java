@@ -18,6 +18,7 @@ public class RegionPostalCodeArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodes")
     public RegionPostalCodeAreaPostalCodeRange[] postalCodes;
+
     public RegionPostalCodeArea withPostalCodes(RegionPostalCodeAreaPostalCodeRange[] postalCodes) {
         this.postalCodes = postalCodes;
         return this;
@@ -29,9 +30,11 @@ public class RegionPostalCodeArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public RegionPostalCodeArea withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public RegionPostalCodeArea(){}
 }

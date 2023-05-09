@@ -59,11 +59,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse() {{
+        org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse(contentType, httpRes.statusCode()) {{
             fetchVerificationOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse() {{
+        org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse(contentType, httpRes.statusCode()) {{
             voiceOfMerchantState = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,11 +145,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteResponse() {{
+        org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteResponse(contentType, httpRes.statusCode()) {{
             completeVerificationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListResponse(contentType, httpRes.statusCode()) {{
             listVerificationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +231,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyResponse() {{
+        org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyResponse res = new org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyResponse(contentType, httpRes.statusCode()) {{
             verifyLocationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

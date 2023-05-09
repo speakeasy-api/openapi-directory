@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVirtualGatewaysResponse {
@@ -12,6 +13,7 @@ public class ListVirtualGatewaysResponse {
      */
     
     public Object badRequestException;
+
     public ListVirtualGatewaysResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListVirtualGatewaysResponse {
     
     
     public String contentType;
+
     public ListVirtualGatewaysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListVirtualGatewaysResponse {
      */
     
     public Object forbiddenException;
+
     public ListVirtualGatewaysResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListVirtualGatewaysResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListVirtualGatewaysResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListVirtualGatewaysResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVirtualGatewaysOutput listVirtualGatewaysOutput;
+
     public ListVirtualGatewaysResponse withListVirtualGatewaysOutput(org.openapis.openapi.models.shared.ListVirtualGatewaysOutput listVirtualGatewaysOutput) {
         this.listVirtualGatewaysOutput = listVirtualGatewaysOutput;
         return this;
@@ -59,6 +65,7 @@ public class ListVirtualGatewaysResponse {
      */
     
     public Object notFoundException;
+
     public ListVirtualGatewaysResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListVirtualGatewaysResponse {
     
     
     public Integer statusCode;
+
     public ListVirtualGatewaysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListVirtualGatewaysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVirtualGatewaysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListVirtualGatewaysResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListVirtualGatewaysResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class ListVirtualGatewaysResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListVirtualGatewaysResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListVirtualGatewaysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BatchCreateObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchReferenceName")
     public String batchReferenceName;
+
     public BatchCreateObject withBatchReferenceName(String batchReferenceName) {
         this.batchReferenceName = batchReferenceName;
         return this;
@@ -23,6 +24,7 @@ public class BatchCreateObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkName")
     public String linkName;
+
     public BatchCreateObject withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -30,6 +32,7 @@ public class BatchCreateObject {
     
     @JsonProperty("ObjectAttributeList")
     public AttributeKeyAndValue[] objectAttributeList;
+
     public BatchCreateObject withObjectAttributeList(AttributeKeyAndValue[] objectAttributeList) {
         this.objectAttributeList = objectAttributeList;
         return this;
@@ -38,6 +41,7 @@ public class BatchCreateObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentReference")
     public ObjectReference parentReference;
+
     public BatchCreateObject withParentReference(ObjectReference parentReference) {
         this.parentReference = parentReference;
         return this;
@@ -45,9 +49,14 @@ public class BatchCreateObject {
     
     @JsonProperty("SchemaFacet")
     public SchemaFacet[] schemaFacet;
+
     public BatchCreateObject withSchemaFacet(SchemaFacet[] schemaFacet) {
         this.schemaFacet = schemaFacet;
         return this;
     }
     
+    public BatchCreateObject(@JsonProperty("ObjectAttributeList") AttributeKeyAndValue[] objectAttributeList, @JsonProperty("SchemaFacet") SchemaFacet[] schemaFacet) {
+        this.objectAttributeList = objectAttributeList;
+        this.schemaFacet = schemaFacet;
+  }
 }

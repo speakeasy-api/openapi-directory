@@ -18,9 +18,11 @@ public class GetIamPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public GetPolicyOptions options;
+
     public GetIamPolicyRequest withOptions(GetPolicyOptions options) {
         this.options = options;
         return this;
     }
     
+    public GetIamPolicyRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWebLoginTokenResponse {
@@ -12,6 +13,7 @@ public class CreateWebLoginTokenResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateWebLoginTokenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateWebLoginTokenResponse {
     
     
     public String contentType;
+
     public CreateWebLoginTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateWebLoginTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWebLoginTokenResponse createWebLoginTokenResponse;
+
     public CreateWebLoginTokenResponse withCreateWebLoginTokenResponse(org.openapis.openapi.models.shared.CreateWebLoginTokenResponse createWebLoginTokenResponse) {
         this.createWebLoginTokenResponse = createWebLoginTokenResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateWebLoginTokenResponse {
      */
     
     public Object internalServerException;
+
     public CreateWebLoginTokenResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateWebLoginTokenResponse {
     
     
     public Integer statusCode;
+
     public CreateWebLoginTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateWebLoginTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWebLoginTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateWebLoginTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWebLoginTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class CreateWebLoginTokenResponse {
      */
     
     public Object validationException;
+
     public CreateWebLoginTokenResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateWebLoginTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

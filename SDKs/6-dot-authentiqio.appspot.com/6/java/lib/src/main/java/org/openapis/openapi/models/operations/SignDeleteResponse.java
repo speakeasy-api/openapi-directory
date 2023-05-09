@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SignDeleteResponse {
     
     public byte[] body;
+
     public SignDeleteResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SignDeleteResponse {
     
     
     public String contentType;
+
     public SignDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SignDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public SignDeleteResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class SignDeleteResponse {
     
     
     public Integer statusCode;
+
     public SignDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class SignDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SignDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class SignDeleteResponse {
      */
     
     public SignDelete200ApplicationJSON signDelete200ApplicationJSONObject;
+
     public SignDeleteResponse withSignDelete200ApplicationJSONObject(SignDelete200ApplicationJSON signDelete200ApplicationJSONObject) {
         this.signDelete200ApplicationJSONObject = signDelete200ApplicationJSONObject;
         return this;
     }
     
+    public SignDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

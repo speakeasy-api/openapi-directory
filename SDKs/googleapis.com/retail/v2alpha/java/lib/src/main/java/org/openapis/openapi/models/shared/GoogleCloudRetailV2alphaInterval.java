@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusiveMaximum")
     public Double exclusiveMaximum;
+
     public GoogleCloudRetailV2alphaInterval withExclusiveMaximum(Double exclusiveMaximum) {
         this.exclusiveMaximum = exclusiveMaximum;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusiveMinimum")
     public Double exclusiveMinimum;
+
     public GoogleCloudRetailV2alphaInterval withExclusiveMinimum(Double exclusiveMinimum) {
         this.exclusiveMinimum = exclusiveMinimum;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public Double maximum;
+
     public GoogleCloudRetailV2alphaInterval withMaximum(Double maximum) {
         this.maximum = maximum;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2alphaInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public Double minimum;
+
     public GoogleCloudRetailV2alphaInterval withMinimum(Double minimum) {
         this.minimum = minimum;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaInterval(){}
 }

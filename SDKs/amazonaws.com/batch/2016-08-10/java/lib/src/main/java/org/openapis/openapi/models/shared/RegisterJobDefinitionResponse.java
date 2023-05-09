@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterJobDefinitionResponse {
     @JsonProperty("jobDefinitionArn")
     public String jobDefinitionArn;
+
     public RegisterJobDefinitionResponse withJobDefinitionArn(String jobDefinitionArn) {
         this.jobDefinitionArn = jobDefinitionArn;
         return this;
@@ -19,6 +20,7 @@ public class RegisterJobDefinitionResponse {
     
     @JsonProperty("jobDefinitionName")
     public String jobDefinitionName;
+
     public RegisterJobDefinitionResponse withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -26,9 +28,15 @@ public class RegisterJobDefinitionResponse {
     
     @JsonProperty("revision")
     public Long revision;
+
     public RegisterJobDefinitionResponse withRevision(Long revision) {
         this.revision = revision;
         return this;
     }
     
+    public RegisterJobDefinitionResponse(@JsonProperty("jobDefinitionArn") String jobDefinitionArn, @JsonProperty("jobDefinitionName") String jobDefinitionName, @JsonProperty("revision") Long revision) {
+        this.jobDefinitionArn = jobDefinitionArn;
+        this.jobDefinitionName = jobDefinitionName;
+        this.revision = revision;
+  }
 }

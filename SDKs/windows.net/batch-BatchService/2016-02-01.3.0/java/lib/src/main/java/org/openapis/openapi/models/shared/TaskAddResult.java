@@ -23,6 +23,7 @@ public class TaskAddResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public TaskAddResult withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -34,6 +35,7 @@ public class TaskAddResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public BatchError error;
+
     public TaskAddResult withError(BatchError error) {
         this.error = error;
         return this;
@@ -47,6 +49,7 @@ public class TaskAddResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public TaskAddResult withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -58,6 +61,7 @@ public class TaskAddResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public TaskAddResult withLocation(String location) {
         this.location = location;
         return this;
@@ -68,6 +72,7 @@ public class TaskAddResult {
      */
     @JsonProperty("status")
     public TaskAddResultStatusEnum status;
+
     public TaskAddResult withStatus(TaskAddResultStatusEnum status) {
         this.status = status;
         return this;
@@ -78,9 +83,14 @@ public class TaskAddResult {
      */
     @JsonProperty("taskId")
     public String taskId;
+
     public TaskAddResult withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public TaskAddResult(@JsonProperty("status") TaskAddResultStatusEnum status, @JsonProperty("taskId") String taskId) {
+        this.status = status;
+        this.taskId = taskId;
+  }
 }

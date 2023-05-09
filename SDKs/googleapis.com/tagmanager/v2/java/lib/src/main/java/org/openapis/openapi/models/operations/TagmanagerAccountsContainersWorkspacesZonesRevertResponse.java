@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagmanagerAccountsContainersWorkspacesZonesRevertResponse {
     
     public String contentType;
+
     public TagmanagerAccountsContainersWorkspacesZonesRevertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagmanagerAccountsContainersWorkspacesZonesRevertResponse {
      */
     
     public org.openapis.openapi.models.shared.RevertZoneResponse revertZoneResponse;
+
     public TagmanagerAccountsContainersWorkspacesZonesRevertResponse withRevertZoneResponse(org.openapis.openapi.models.shared.RevertZoneResponse revertZoneResponse) {
         this.revertZoneResponse = revertZoneResponse;
         return this;
@@ -26,6 +29,7 @@ public class TagmanagerAccountsContainersWorkspacesZonesRevertResponse {
     
     
     public Integer statusCode;
+
     public TagmanagerAccountsContainersWorkspacesZonesRevertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TagmanagerAccountsContainersWorkspacesZonesRevertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagmanagerAccountsContainersWorkspacesZonesRevertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TagmanagerAccountsContainersWorkspacesZonesRevertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

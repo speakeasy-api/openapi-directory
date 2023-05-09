@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcTenancyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVpcTenancyActionEnum action;
+
     public GETModifyVpcTenancyRequest withAction(GETModifyVpcTenancyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVpcTenancyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVpcTenancyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVpcTenancyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceTenancy")
     public GETModifyVpcTenancyInstanceTenancyEnum instanceTenancy;
+
     public GETModifyVpcTenancyRequest withInstanceTenancy(GETModifyVpcTenancyInstanceTenancyEnum instanceTenancy) {
         this.instanceTenancy = instanceTenancy;
         return this;
@@ -36,6 +40,7 @@ public class GETModifyVpcTenancyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVpcTenancyVersionEnum version;
+
     public GETModifyVpcTenancyRequest withVersion(GETModifyVpcTenancyVersionEnum version) {
         this.version = version;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyVpcTenancyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETModifyVpcTenancyRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyVpcTenancyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVpcTenancyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyVpcTenancyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVpcTenancyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyVpcTenancyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVpcTenancyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyVpcTenancyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVpcTenancyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyVpcTenancyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVpcTenancyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyVpcTenancyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVpcTenancyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETModifyVpcTenancyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVpcTenancyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVpcTenancyRequest(@JsonProperty("Action") GETModifyVpcTenancyActionEnum action, @JsonProperty("InstanceTenancy") GETModifyVpcTenancyInstanceTenancyEnum instanceTenancy, @JsonProperty("Version") GETModifyVpcTenancyVersionEnum version, @JsonProperty("VpcId") String vpcId) {
+        this.action = action;
+        this.instanceTenancy = instanceTenancy;
+        this.version = version;
+        this.vpcId = vpcId;
+  }
 }

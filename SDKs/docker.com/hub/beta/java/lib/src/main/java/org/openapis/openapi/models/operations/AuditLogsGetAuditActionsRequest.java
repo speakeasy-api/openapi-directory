@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuditLogsGetAuditActionsRequest {
@@ -12,9 +13,13 @@ public class AuditLogsGetAuditActionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
     public String account;
+
     public AuditLogsGetAuditActionsRequest withAccount(String account) {
         this.account = account;
         return this;
     }
     
+    public AuditLogsGetAuditActionsRequest(@JsonProperty("account") String account) {
+        this.account = account;
+  }
 }

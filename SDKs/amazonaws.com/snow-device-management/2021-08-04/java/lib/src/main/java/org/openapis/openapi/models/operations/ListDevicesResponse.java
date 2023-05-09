@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDevicesResponse {
@@ -12,6 +13,7 @@ public class ListDevicesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDevicesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDevicesResponse {
     
     
     public String contentType;
+
     public ListDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDevicesResponse {
      */
     
     public Object internalServerException;
+
     public ListDevicesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDevicesOutput listDevicesOutput;
+
     public ListDevicesResponse withListDevicesOutput(org.openapis.openapi.models.shared.ListDevicesOutput listDevicesOutput) {
         this.listDevicesOutput = listDevicesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListDevicesResponse {
     
     
     public Integer statusCode;
+
     public ListDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListDevicesResponse {
      */
     
     public Object throttlingException;
+
     public ListDevicesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListDevicesResponse {
      */
     
     public Object validationException;
+
     public ListDevicesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

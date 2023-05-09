@@ -18,9 +18,11 @@ public class DeleteProtectedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectedRangeId")
     public Integer protectedRangeId;
+
     public DeleteProtectedRangeRequest withProtectedRangeId(Integer protectedRangeId) {
         this.protectedRangeId = protectedRangeId;
         return this;
     }
     
+    public DeleteProtectedRangeRequest(){}
 }

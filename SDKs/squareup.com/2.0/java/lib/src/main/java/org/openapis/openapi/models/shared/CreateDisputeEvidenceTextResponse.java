@@ -18,6 +18,7 @@ public class CreateDisputeEvidenceTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateDisputeEvidenceTextResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -26,9 +27,11 @@ public class CreateDisputeEvidenceTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence")
     public DisputeEvidence evidence;
+
     public CreateDisputeEvidenceTextResponse withEvidence(DisputeEvidence evidence) {
         this.evidence = evidence;
         return this;
     }
     
+    public CreateDisputeEvidenceTextResponse(){}
 }

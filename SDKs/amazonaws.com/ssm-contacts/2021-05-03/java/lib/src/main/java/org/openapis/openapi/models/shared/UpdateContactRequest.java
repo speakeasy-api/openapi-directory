@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateContactRequest {
     @JsonProperty("ContactId")
     public String contactId;
+
     public UpdateContactRequest withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateContactRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,9 +29,13 @@ public class UpdateContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Plan")
     public Plan plan;
+
     public UpdateContactRequest withPlan(Plan plan) {
         this.plan = plan;
         return this;
     }
     
+    public UpdateContactRequest(@JsonProperty("ContactId") String contactId) {
+        this.contactId = contactId;
+  }
 }

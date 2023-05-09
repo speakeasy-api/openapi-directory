@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolIpmiGetTraceResponse {
@@ -12,6 +13,7 @@ public class ProtocolIpmiGetTraceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigIPMI configIPMI;
+
     public ProtocolIpmiGetTraceResponse withConfigIPMI(org.openapis.openapi.models.shared.ConfigIPMI configIPMI) {
         this.configIPMI = configIPMI;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolIpmiGetTraceResponse {
     
     
     public String contentType;
+
     public ProtocolIpmiGetTraceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolIpmiGetTraceResponse {
     
     
     public Integer statusCode;
+
     public ProtocolIpmiGetTraceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolIpmiGetTraceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolIpmiGetTraceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProtocolIpmiGetTraceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

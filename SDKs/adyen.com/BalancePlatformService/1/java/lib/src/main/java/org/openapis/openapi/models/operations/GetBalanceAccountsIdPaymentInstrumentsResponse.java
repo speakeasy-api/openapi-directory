@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBalanceAccountsIdPaymentInstrumentsResponse {
     
     public String contentType;
+
     public GetBalanceAccountsIdPaymentInstrumentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBalanceAccountsIdPaymentInstrumentsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedPaymentInstrumentsResponse paginatedPaymentInstrumentsResponse;
+
     public GetBalanceAccountsIdPaymentInstrumentsResponse withPaginatedPaymentInstrumentsResponse(org.openapis.openapi.models.shared.PaginatedPaymentInstrumentsResponse paginatedPaymentInstrumentsResponse) {
         this.paginatedPaymentInstrumentsResponse = paginatedPaymentInstrumentsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetBalanceAccountsIdPaymentInstrumentsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetBalanceAccountsIdPaymentInstrumentsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetBalanceAccountsIdPaymentInstrumentsResponse {
     
     
     public Integer statusCode;
+
     public GetBalanceAccountsIdPaymentInstrumentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetBalanceAccountsIdPaymentInstrumentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBalanceAccountsIdPaymentInstrumentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBalanceAccountsIdPaymentInstrumentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

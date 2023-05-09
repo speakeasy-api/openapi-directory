@@ -18,6 +18,7 @@ public class GoogleExampleLibraryagentV1Shelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleExampleLibraryagentV1Shelf withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleExampleLibraryagentV1Shelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("theme")
     public String theme;
+
     public GoogleExampleLibraryagentV1Shelf withTheme(String theme) {
         this.theme = theme;
         return this;
     }
     
+    public GoogleExampleLibraryagentV1Shelf(){}
 }

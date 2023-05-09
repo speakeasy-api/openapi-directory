@@ -15,9 +15,11 @@ public class UpdateResourceProfileDetectionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressDataIdentifiers")
     public org.openapis.openapi.models.shared.SuppressDataIdentifier[] suppressDataIdentifiers;
+
     public UpdateResourceProfileDetectionsRequestBody withSuppressDataIdentifiers(org.openapis.openapi.models.shared.SuppressDataIdentifier[] suppressDataIdentifiers) {
         this.suppressDataIdentifiers = suppressDataIdentifiers;
         return this;
     }
     
+    public UpdateResourceProfileDetectionsRequestBody(){}
 }

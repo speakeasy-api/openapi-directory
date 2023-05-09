@@ -57,10 +57,8 @@ public class TypeTypePointIcebridgeParis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypePointIcebridgeParisResponse res = new org.openapis.openapi.models.operations.SearchTypePointIcebridgeParisResponse() {{
+        org.openapis.openapi.models.operations.SearchTypePointIcebridgeParisResponse res = new org.openapis.openapi.models.operations.SearchTypePointIcebridgeParisResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

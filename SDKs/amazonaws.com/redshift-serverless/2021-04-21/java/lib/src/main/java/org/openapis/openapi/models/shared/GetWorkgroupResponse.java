@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetWorkgroupResponse {
     @JsonProperty("workgroup")
     public Workgroup workgroup;
+
     public GetWorkgroupResponse withWorkgroup(Workgroup workgroup) {
         this.workgroup = workgroup;
         return this;
     }
     
+    public GetWorkgroupResponse(@JsonProperty("workgroup") Workgroup workgroup) {
+        this.workgroup = workgroup;
+  }
 }

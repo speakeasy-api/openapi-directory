@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RespondToAuthChallengeResponse {
@@ -12,6 +13,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object aliasExistsException;
+
     public RespondToAuthChallengeResponse withAliasExistsException(Object aliasExistsException) {
         this.aliasExistsException = aliasExistsException;
         return this;
@@ -22,6 +24,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object codeMismatchException;
+
     public RespondToAuthChallengeResponse withCodeMismatchException(Object codeMismatchException) {
         this.codeMismatchException = codeMismatchException;
         return this;
@@ -29,6 +32,7 @@ public class RespondToAuthChallengeResponse {
     
     
     public String contentType;
+
     public RespondToAuthChallengeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object expiredCodeException;
+
     public RespondToAuthChallengeResponse withExpiredCodeException(Object expiredCodeException) {
         this.expiredCodeException = expiredCodeException;
         return this;
@@ -49,6 +54,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object forbiddenException;
+
     public RespondToAuthChallengeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object internalErrorException;
+
     public RespondToAuthChallengeResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -69,6 +76,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public RespondToAuthChallengeResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -79,6 +87,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object invalidParameterException;
+
     public RespondToAuthChallengeResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object invalidPasswordException;
+
     public RespondToAuthChallengeResponse withInvalidPasswordException(Object invalidPasswordException) {
         this.invalidPasswordException = invalidPasswordException;
         return this;
@@ -99,6 +109,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public RespondToAuthChallengeResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -109,6 +120,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public RespondToAuthChallengeResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -119,6 +131,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object invalidUserPoolConfigurationException;
+
     public RespondToAuthChallengeResponse withInvalidUserPoolConfigurationException(Object invalidUserPoolConfigurationException) {
         this.invalidUserPoolConfigurationException = invalidUserPoolConfigurationException;
         return this;
@@ -129,6 +142,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object mfaMethodNotFoundException;
+
     public RespondToAuthChallengeResponse withMFAMethodNotFoundException(Object mfaMethodNotFoundException) {
         this.mfaMethodNotFoundException = mfaMethodNotFoundException;
         return this;
@@ -139,6 +153,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object notAuthorizedException;
+
     public RespondToAuthChallengeResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -149,6 +164,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public RespondToAuthChallengeResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -159,6 +175,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RespondToAuthChallengeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -169,6 +186,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public org.openapis.openapi.models.shared.RespondToAuthChallengeResponse respondToAuthChallengeResponse;
+
     public RespondToAuthChallengeResponse withRespondToAuthChallengeResponse(org.openapis.openapi.models.shared.RespondToAuthChallengeResponse respondToAuthChallengeResponse) {
         this.respondToAuthChallengeResponse = respondToAuthChallengeResponse;
         return this;
@@ -176,6 +194,7 @@ public class RespondToAuthChallengeResponse {
     
     
     public Integer statusCode;
+
     public RespondToAuthChallengeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -183,6 +202,7 @@ public class RespondToAuthChallengeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RespondToAuthChallengeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -193,6 +213,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object softwareTokenMFANotFoundException;
+
     public RespondToAuthChallengeResponse withSoftwareTokenMFANotFoundException(Object softwareTokenMFANotFoundException) {
         this.softwareTokenMFANotFoundException = softwareTokenMFANotFoundException;
         return this;
@@ -203,6 +224,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RespondToAuthChallengeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -213,6 +235,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public RespondToAuthChallengeResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -223,6 +246,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object userLambdaValidationException;
+
     public RespondToAuthChallengeResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -233,6 +257,7 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object userNotConfirmedException;
+
     public RespondToAuthChallengeResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -243,9 +268,14 @@ public class RespondToAuthChallengeResponse {
      */
     
     public Object userNotFoundException;
+
     public RespondToAuthChallengeResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public RespondToAuthChallengeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

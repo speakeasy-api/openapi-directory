@@ -15,9 +15,13 @@ public class PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSON 
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSON(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

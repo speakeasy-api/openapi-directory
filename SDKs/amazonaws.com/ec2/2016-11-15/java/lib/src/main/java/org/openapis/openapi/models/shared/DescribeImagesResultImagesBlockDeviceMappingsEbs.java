@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     public Boolean deleteOnTermination;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     
     public Boolean encrypted;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     
     public Long iops;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     
     public String kmsKeyId;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     
     public String outpostArn;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     
     public String snapshotId;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     
     public Long throughput;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -61,6 +68,7 @@ public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     
     public Long volumeSize;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -68,9 +76,11 @@ public class DescribeImagesResultImagesBlockDeviceMappingsEbs {
     
     
     public DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum volumeType;
+
     public DescribeImagesResultImagesBlockDeviceMappingsEbs withVolumeType(DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public DescribeImagesResultImagesBlockDeviceMappingsEbs(){}
 }

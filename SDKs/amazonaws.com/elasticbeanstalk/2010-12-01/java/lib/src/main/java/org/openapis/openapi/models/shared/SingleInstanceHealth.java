@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class SingleInstanceHealth {
     
     public ApplicationMetrics applicationMetrics;
+
     public SingleInstanceHealth withApplicationMetrics(ApplicationMetrics applicationMetrics) {
         this.applicationMetrics = applicationMetrics;
         return this;
@@ -19,6 +20,7 @@ public class SingleInstanceHealth {
     
     
     public String availabilityZone;
+
     public SingleInstanceHealth withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class SingleInstanceHealth {
     
     
     public String[] causes;
+
     public SingleInstanceHealth withCauses(String[] causes) {
         this.causes = causes;
         return this;
@@ -33,6 +36,7 @@ public class SingleInstanceHealth {
     
     
     public String color;
+
     public SingleInstanceHealth withColor(String color) {
         this.color = color;
         return this;
@@ -40,6 +44,7 @@ public class SingleInstanceHealth {
     
     
     public Deployment deployment;
+
     public SingleInstanceHealth withDeployment(Deployment deployment) {
         this.deployment = deployment;
         return this;
@@ -47,6 +52,7 @@ public class SingleInstanceHealth {
     
     
     public String healthStatus;
+
     public SingleInstanceHealth withHealthStatus(String healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -54,6 +60,7 @@ public class SingleInstanceHealth {
     
     
     public String instanceId;
+
     public SingleInstanceHealth withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -61,6 +68,7 @@ public class SingleInstanceHealth {
     
     
     public String instanceType;
+
     public SingleInstanceHealth withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -68,6 +76,7 @@ public class SingleInstanceHealth {
     
     
     public OffsetDateTime launchedAt;
+
     public SingleInstanceHealth withLaunchedAt(OffsetDateTime launchedAt) {
         this.launchedAt = launchedAt;
         return this;
@@ -75,9 +84,11 @@ public class SingleInstanceHealth {
     
     
     public SystemStatus system;
+
     public SingleInstanceHealth withSystem(SystemStatus system) {
         this.system = system;
         return this;
     }
     
+    public SingleInstanceHealth(){}
 }

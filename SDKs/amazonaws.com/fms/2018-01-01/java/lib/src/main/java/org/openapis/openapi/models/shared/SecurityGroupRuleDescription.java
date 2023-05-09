@@ -15,6 +15,7 @@ public class SecurityGroupRuleDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromPort")
     public Long fromPort;
+
     public SecurityGroupRuleDescription withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -23,6 +24,7 @@ public class SecurityGroupRuleDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPV4Range")
     public String ipv4Range;
+
     public SecurityGroupRuleDescription withIpv4Range(String ipv4Range) {
         this.ipv4Range = ipv4Range;
         return this;
@@ -31,6 +33,7 @@ public class SecurityGroupRuleDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPV6Range")
     public String ipv6Range;
+
     public SecurityGroupRuleDescription withIpv6Range(String ipv6Range) {
         this.ipv6Range = ipv6Range;
         return this;
@@ -39,6 +42,7 @@ public class SecurityGroupRuleDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrefixListId")
     public String prefixListId;
+
     public SecurityGroupRuleDescription withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -47,6 +51,7 @@ public class SecurityGroupRuleDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public SecurityGroupRuleDescription withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -55,9 +60,11 @@ public class SecurityGroupRuleDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToPort")
     public Long toPort;
+
     public SecurityGroupRuleDescription withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public SecurityGroupRuleDescription(){}
 }

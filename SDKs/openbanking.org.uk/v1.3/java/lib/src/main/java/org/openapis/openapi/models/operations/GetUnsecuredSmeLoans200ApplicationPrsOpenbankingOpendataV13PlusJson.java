@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson {
     @JsonProperty("data")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData[] data;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson withData(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData[] data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("meta")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson withMeta(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson(@JsonProperty("data") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData[] data, @JsonProperty("meta") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta) {
+        this.data = data;
+        this.meta = meta;
+  }
 }

@@ -62,10 +62,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AffiliationByIdResponse res = new org.openapis.openapi.models.operations.AffiliationByIdResponse() {{
+        org.openapis.openapi.models.operations.AffiliationByIdResponse res = new org.openapis.openapi.models.operations.AffiliationByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,10 +102,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AffiliationsResponse res = new org.openapis.openapi.models.operations.AffiliationsResponse() {{
+        org.openapis.openapi.models.operations.AffiliationsResponse res = new org.openapis.openapi.models.operations.AffiliationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvailablePaymentMethodsResponse res = new org.openapis.openapi.models.operations.AvailablePaymentMethodsResponse() {{
+        org.openapis.openapi.models.operations.AvailablePaymentMethodsResponse res = new org.openapis.openapi.models.operations.AvailablePaymentMethodsResponse(contentType, httpRes.statusCode()) {{
             paymentSystemsResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,10 +195,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InsertAffiliationResponse res = new org.openapis.openapi.models.operations.InsertAffiliationResponse() {{
+        org.openapis.openapi.models.operations.InsertAffiliationResponse res = new org.openapis.openapi.models.operations.InsertAffiliationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,10 +240,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InsertRuleResponse res = new org.openapis.openapi.models.operations.InsertRuleResponse() {{
+        org.openapis.openapi.models.operations.InsertRuleResponse res = new org.openapis.openapi.models.operations.InsertRuleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,10 +285,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRuleByIdResponse res = new org.openapis.openapi.models.operations.PutRuleByIdResponse() {{
+        org.openapis.openapi.models.operations.PutRuleByIdResponse res = new org.openapis.openapi.models.operations.PutRuleByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,10 +325,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuleResponse res = new org.openapis.openapi.models.operations.RuleResponse() {{
+        org.openapis.openapi.models.operations.RuleResponse res = new org.openapis.openapi.models.operations.RuleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -379,10 +365,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuleByIdResponse res = new org.openapis.openapi.models.operations.RuleByIdResponse() {{
+        org.openapis.openapi.models.operations.RuleByIdResponse res = new org.openapis.openapi.models.operations.RuleByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -421,10 +405,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RulesResponse res = new org.openapis.openapi.models.operations.RulesResponse() {{
+        org.openapis.openapi.models.operations.RulesResponse res = new org.openapis.openapi.models.operations.RulesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -468,10 +450,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAffiliationResponse res = new org.openapis.openapi.models.operations.UpdateAffiliationResponse() {{
+        org.openapis.openapi.models.operations.UpdateAffiliationResponse res = new org.openapis.openapi.models.operations.UpdateAffiliationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class SavingsPlansUtilizationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmortizedCommitment")
     public SavingsPlansAmortizedCommitment amortizedCommitment;
+
     public SavingsPlansUtilizationAggregates withAmortizedCommitment(SavingsPlansAmortizedCommitment amortizedCommitment) {
         this.amortizedCommitment = amortizedCommitment;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansUtilizationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Savings")
     public SavingsPlansSavings savings;
+
     public SavingsPlansUtilizationAggregates withSavings(SavingsPlansSavings savings) {
         this.savings = savings;
         return this;
@@ -30,9 +32,13 @@ public class SavingsPlansUtilizationAggregates {
     
     @JsonProperty("Utilization")
     public SavingsPlansUtilization utilization;
+
     public SavingsPlansUtilizationAggregates withUtilization(SavingsPlansUtilization utilization) {
         this.utilization = utilization;
         return this;
     }
     
+    public SavingsPlansUtilizationAggregates(@JsonProperty("Utilization") SavingsPlansUtilization utilization) {
+        this.utilization = utilization;
+  }
 }

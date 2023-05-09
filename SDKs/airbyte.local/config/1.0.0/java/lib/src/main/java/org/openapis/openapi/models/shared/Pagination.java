@@ -12,6 +12,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Long pageSize;
+
     public Pagination withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -20,9 +21,11 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowOffset")
     public Long rowOffset;
+
     public Pagination withRowOffset(Long rowOffset) {
         this.rowOffset = rowOffset;
         return this;
     }
     
+    public Pagination(){}
 }

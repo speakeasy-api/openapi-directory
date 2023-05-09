@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRatesResponse {
     
     public String contentType;
+
     public GetRatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRatesResponse {
     
     
     public Integer statusCode;
+
     public GetRatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRatesResponse {
      */
     
     public GetRates200ApplicationJSON getRates200ApplicationJSONObject;
+
     public GetRatesResponse withGetRates200ApplicationJSONObject(GetRates200ApplicationJSON getRates200ApplicationJSONObject) {
         this.getRates200ApplicationJSONObject = getRates200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetRatesResponse {
      */
     
     public GetRates401ApplicationJSON getRates401ApplicationJSONObject;
+
     public GetRatesResponse withGetRates401ApplicationJSONObject(GetRates401ApplicationJSON getRates401ApplicationJSONObject) {
         this.getRates401ApplicationJSONObject = getRates401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetRatesResponse {
      */
     
     public GetRates403ApplicationJSON getRates403ApplicationJSONObject;
+
     public GetRatesResponse withGetRates403ApplicationJSONObject(GetRates403ApplicationJSON getRates403ApplicationJSONObject) {
         this.getRates403ApplicationJSONObject = getRates403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetRatesResponse {
      */
     
     public GetRates404ApplicationJSON getRates404ApplicationJSONObject;
+
     public GetRatesResponse withGetRates404ApplicationJSONObject(GetRates404ApplicationJSON getRates404ApplicationJSONObject) {
         this.getRates404ApplicationJSONObject = getRates404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetRatesResponse {
      */
     
     public GetRates429ApplicationJSON getRates429ApplicationJSONObject;
+
     public GetRatesResponse withGetRates429ApplicationJSONObject(GetRates429ApplicationJSON getRates429ApplicationJSONObject) {
         this.getRates429ApplicationJSONObject = getRates429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetRatesResponse {
      */
     
     public GetRates500ApplicationJSON getRates500ApplicationJSONObject;
+
     public GetRatesResponse withGetRates500ApplicationJSONObject(GetRates500ApplicationJSON getRates500ApplicationJSONObject) {
         this.getRates500ApplicationJSONObject = getRates500ApplicationJSONObject;
         return this;
     }
     
+    public GetRatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

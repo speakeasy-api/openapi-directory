@@ -15,6 +15,7 @@ public class AnomalyDateInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public AnomalyDateInterval withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -22,9 +23,13 @@ public class AnomalyDateInterval {
     
     @JsonProperty("StartDate")
     public String startDate;
+
     public AnomalyDateInterval withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public AnomalyDateInterval(@JsonProperty("StartDate") String startDate) {
+        this.startDate = startDate;
+  }
 }

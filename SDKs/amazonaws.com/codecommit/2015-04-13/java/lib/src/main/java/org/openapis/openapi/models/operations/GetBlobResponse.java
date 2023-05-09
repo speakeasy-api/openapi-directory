@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBlobResponse {
@@ -12,6 +13,7 @@ public class GetBlobResponse {
      */
     
     public Object blobIdDoesNotExistException;
+
     public GetBlobResponse withBlobIdDoesNotExistException(Object blobIdDoesNotExistException) {
         this.blobIdDoesNotExistException = blobIdDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetBlobResponse {
      */
     
     public Object blobIdRequiredException;
+
     public GetBlobResponse withBlobIdRequiredException(Object blobIdRequiredException) {
         this.blobIdRequiredException = blobIdRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetBlobResponse {
     
     
     public String contentType;
+
     public GetBlobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetBlobResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetBlobResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class GetBlobResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetBlobResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class GetBlobResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetBlobResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class GetBlobResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetBlobResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetBlobResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetBlobResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class GetBlobResponse {
      */
     
     public Object fileTooLargeException;
+
     public GetBlobResponse withFileTooLargeException(Object fileTooLargeException) {
         this.fileTooLargeException = fileTooLargeException;
         return this;
@@ -99,6 +109,7 @@ public class GetBlobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBlobOutput getBlobOutput;
+
     public GetBlobResponse withGetBlobOutput(org.openapis.openapi.models.shared.GetBlobOutput getBlobOutput) {
         this.getBlobOutput = getBlobOutput;
         return this;
@@ -109,6 +120,7 @@ public class GetBlobResponse {
      */
     
     public Object invalidBlobIdException;
+
     public GetBlobResponse withInvalidBlobIdException(Object invalidBlobIdException) {
         this.invalidBlobIdException = invalidBlobIdException;
         return this;
@@ -119,6 +131,7 @@ public class GetBlobResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetBlobResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -129,6 +142,7 @@ public class GetBlobResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetBlobResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -139,6 +153,7 @@ public class GetBlobResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetBlobResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -146,6 +161,7 @@ public class GetBlobResponse {
     
     
     public Integer statusCode;
+
     public GetBlobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -153,9 +169,14 @@ public class GetBlobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBlobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBlobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

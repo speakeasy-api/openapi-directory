@@ -15,6 +15,7 @@ public class FarmOrganization {
      */
     @JsonProperty("id")
     public String id;
+
     public FarmOrganization withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class FarmOrganization {
      */
     @JsonProperty("name")
     public String name;
+
     public FarmOrganization withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,15 @@ public class FarmOrganization {
      */
     @JsonProperty("type")
     public FarmOrganizationTypeEnum type;
+
     public FarmOrganization withType(FarmOrganizationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FarmOrganization(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") FarmOrganizationTypeEnum type) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

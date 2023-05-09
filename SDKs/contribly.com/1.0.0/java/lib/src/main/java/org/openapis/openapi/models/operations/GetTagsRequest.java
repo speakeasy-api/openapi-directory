@@ -12,6 +12,7 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
     public String ownedBy;
+
     public GetTagsRequest withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -22,6 +23,7 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagSet")
     public String tagSet;
+
     public GetTagsRequest withTagSet(String tagSet) {
         this.tagSet = tagSet;
         return this;
@@ -32,9 +34,11 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=urlWords")
     public String urlWords;
+
     public GetTagsRequest withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
     }
     
+    public GetTagsRequest(){}
 }

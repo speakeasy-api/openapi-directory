@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListJobsForWorkflowRunAttemptRequest {
@@ -12,6 +13,7 @@ public class ActionsListJobsForWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attempt_number")
     public Long attemptNumber;
+
     public ActionsListJobsForWorkflowRunAttemptRequest withAttemptNumber(Long attemptNumber) {
         this.attemptNumber = attemptNumber;
         return this;
@@ -22,6 +24,7 @@ public class ActionsListJobsForWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsListJobsForWorkflowRunAttemptRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ActionsListJobsForWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListJobsForWorkflowRunAttemptRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ActionsListJobsForWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListJobsForWorkflowRunAttemptRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +57,7 @@ public class ActionsListJobsForWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsListJobsForWorkflowRunAttemptRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -62,9 +68,16 @@ public class ActionsListJobsForWorkflowRunAttemptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
     public Long runId;
+
     public ActionsListJobsForWorkflowRunAttemptRequest withRunId(Long runId) {
         this.runId = runId;
         return this;
     }
     
+    public ActionsListJobsForWorkflowRunAttemptRequest(@JsonProperty("attempt_number") Long attemptNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("run_id") Long runId) {
+        this.attemptNumber = attemptNumber;
+        this.owner = owner;
+        this.repo = repo;
+        this.runId = runId;
+  }
 }

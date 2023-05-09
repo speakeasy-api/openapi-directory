@@ -15,6 +15,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountAggregation")
     public org.openapis.openapi.models.shared.AccountAggregation accountAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withAccountAggregation(org.openapis.openapi.models.shared.AccountAggregation accountAggregation) {
         this.accountAggregation = accountAggregation;
         return this;
@@ -23,6 +24,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amiAggregation")
     public org.openapis.openapi.models.shared.AmiAggregation amiAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withAmiAggregation(org.openapis.openapi.models.shared.AmiAggregation amiAggregation) {
         this.amiAggregation = amiAggregation;
         return this;
@@ -31,6 +33,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsEcrContainerAggregation")
     public org.openapis.openapi.models.shared.AwsEcrContainerAggregation awsEcrContainerAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withAwsEcrContainerAggregation(org.openapis.openapi.models.shared.AwsEcrContainerAggregation awsEcrContainerAggregation) {
         this.awsEcrContainerAggregation = awsEcrContainerAggregation;
         return this;
@@ -39,6 +42,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceAggregation")
     public org.openapis.openapi.models.shared.Ec2InstanceAggregation ec2InstanceAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withEc2InstanceAggregation(org.openapis.openapi.models.shared.Ec2InstanceAggregation ec2InstanceAggregation) {
         this.ec2InstanceAggregation = ec2InstanceAggregation;
         return this;
@@ -47,6 +51,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingTypeAggregation")
     public org.openapis.openapi.models.shared.FindingTypeAggregation findingTypeAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withFindingTypeAggregation(org.openapis.openapi.models.shared.FindingTypeAggregation findingTypeAggregation) {
         this.findingTypeAggregation = findingTypeAggregation;
         return this;
@@ -55,6 +60,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageLayerAggregation")
     public org.openapis.openapi.models.shared.ImageLayerAggregation imageLayerAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withImageLayerAggregation(org.openapis.openapi.models.shared.ImageLayerAggregation imageLayerAggregation) {
         this.imageLayerAggregation = imageLayerAggregation;
         return this;
@@ -63,6 +69,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionAggregation")
     public org.openapis.openapi.models.shared.LambdaFunctionAggregation lambdaFunctionAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withLambdaFunctionAggregation(org.openapis.openapi.models.shared.LambdaFunctionAggregation lambdaFunctionAggregation) {
         this.lambdaFunctionAggregation = lambdaFunctionAggregation;
         return this;
@@ -71,6 +78,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaLayerAggregation")
     public org.openapis.openapi.models.shared.LambdaLayerAggregation lambdaLayerAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withLambdaLayerAggregation(org.openapis.openapi.models.shared.LambdaLayerAggregation lambdaLayerAggregation) {
         this.lambdaLayerAggregation = lambdaLayerAggregation;
         return this;
@@ -79,6 +87,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageAggregation")
     public org.openapis.openapi.models.shared.PackageAggregation packageAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withPackageAggregation(org.openapis.openapi.models.shared.PackageAggregation packageAggregation) {
         this.packageAggregation = packageAggregation;
         return this;
@@ -87,6 +96,7 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryAggregation")
     public org.openapis.openapi.models.shared.RepositoryAggregation repositoryAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withRepositoryAggregation(org.openapis.openapi.models.shared.RepositoryAggregation repositoryAggregation) {
         this.repositoryAggregation = repositoryAggregation;
         return this;
@@ -95,9 +105,11 @@ public class ListFindingAggregationsRequestBodyAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("titleAggregation")
     public org.openapis.openapi.models.shared.TitleAggregation titleAggregation;
+
     public ListFindingAggregationsRequestBodyAggregationRequest withTitleAggregation(org.openapis.openapi.models.shared.TitleAggregation titleAggregation) {
         this.titleAggregation = titleAggregation;
         return this;
     }
     
+    public ListFindingAggregationsRequestBodyAggregationRequest(){}
 }

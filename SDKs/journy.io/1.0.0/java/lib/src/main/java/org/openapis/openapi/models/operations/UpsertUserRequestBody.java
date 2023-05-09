@@ -17,6 +17,7 @@ public class UpsertUserRequestBody {
      */
     @JsonProperty("identification")
     public UpsertUserRequestBodyIdentification identification;
+
     public UpsertUserRequestBody withIdentification(UpsertUserRequestBodyIdentification identification) {
         this.identification = identification;
         return this;
@@ -28,9 +29,13 @@ public class UpsertUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Object> properties;
+
     public UpsertUserRequestBody withProperties(java.util.Map<String, Object> properties) {
         this.properties = properties;
         return this;
     }
     
+    public UpsertUserRequestBody(@JsonProperty("identification") UpsertUserRequestBodyIdentification identification) {
+        this.identification = identification;
+  }
 }

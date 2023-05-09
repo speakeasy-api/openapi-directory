@@ -15,6 +15,7 @@ public class ListPipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListPipelinesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pipelines")
     public Pipeline[] pipelines;
+
     public ListPipelinesResponse withPipelines(Pipeline[] pipelines) {
         this.pipelines = pipelines;
         return this;
     }
     
+    public ListPipelinesResponse(){}
 }

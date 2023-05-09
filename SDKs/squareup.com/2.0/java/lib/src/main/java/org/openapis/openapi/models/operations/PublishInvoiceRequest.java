@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishInvoiceRequest {
@@ -14,6 +15,7 @@ public class PublishInvoiceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PublishInvoiceRequest publishInvoiceRequest;
+
     public PublishInvoiceRequest withPublishInvoiceRequest(org.openapis.openapi.models.shared.PublishInvoiceRequest publishInvoiceRequest) {
         this.publishInvoiceRequest = publishInvoiceRequest;
         return this;
@@ -24,9 +26,14 @@ public class PublishInvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
     public String invoiceId;
+
     public PublishInvoiceRequest withInvoiceId(String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
     
+    public PublishInvoiceRequest(@JsonProperty("PublishInvoiceRequest") org.openapis.openapi.models.shared.PublishInvoiceRequest publishInvoiceRequest, @JsonProperty("invoice_id") String invoiceId) {
+        this.publishInvoiceRequest = publishInvoiceRequest;
+        this.invoiceId = invoiceId;
+  }
 }

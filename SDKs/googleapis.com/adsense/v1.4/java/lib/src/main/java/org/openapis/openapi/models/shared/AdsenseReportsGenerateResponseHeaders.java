@@ -15,6 +15,7 @@ public class AdsenseReportsGenerateResponseHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public AdsenseReportsGenerateResponseHeaders withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -26,6 +27,7 @@ public class AdsenseReportsGenerateResponseHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdsenseReportsGenerateResponseHeaders withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class AdsenseReportsGenerateResponseHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AdsenseReportsGenerateResponseHeaders withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AdsenseReportsGenerateResponseHeaders(){}
 }

@@ -20,6 +20,7 @@ public class CreateBookingRequest {
      */
     @JsonProperty("booking")
     public Booking booking;
+
     public CreateBookingRequest withBooking(Booking booking) {
         this.booking = booking;
         return this;
@@ -31,9 +32,13 @@ public class CreateBookingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateBookingRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CreateBookingRequest(@JsonProperty("booking") Booking booking) {
+        this.booking = booking;
+  }
 }

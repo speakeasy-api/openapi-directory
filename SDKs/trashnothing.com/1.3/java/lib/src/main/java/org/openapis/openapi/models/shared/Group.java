@@ -19,6 +19,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public GroupCountry country;
+
     public Group withCountry(GroupCountry country) {
         this.country = country;
         return this;
@@ -27,6 +28,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     public String groupId;
+
     public Group withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -38,6 +40,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_questions")
     public Boolean hasQuestions;
+
     public Group withHasQuestions(Boolean hasQuestions) {
         this.hasQuestions = hasQuestions;
         return this;
@@ -49,6 +52,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homepage")
     public String homepage;
+
     public Group withHomepage(String homepage) {
         this.homepage = homepage;
         return this;
@@ -60,6 +64,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public Group withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -68,6 +73,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public Group withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -76,6 +82,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public Group withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -87,6 +94,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_count")
     public Long memberCount;
+
     public Group withMemberCount(Long memberCount) {
         this.memberCount = memberCount;
         return this;
@@ -99,6 +107,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership")
     public GroupMembership membership;
+
     public Group withMembership(GroupMembership membership) {
         this.membership = membership;
         return this;
@@ -110,6 +119,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -121,6 +131,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open_archives")
     public Boolean openArchives;
+
     public Group withOpenArchives(Boolean openArchives) {
         this.openArchives = openArchives;
         return this;
@@ -132,6 +143,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open_membership")
     public Boolean openMembership;
+
     public Group withOpenMembership(Boolean openMembership) {
         this.openMembership = openMembership;
         return this;
@@ -143,6 +155,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public GroupRegion region;
+
     public Group withRegion(GroupRegion region) {
         this.region = region;
         return this;
@@ -154,9 +167,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Group withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public Group(){}
 }

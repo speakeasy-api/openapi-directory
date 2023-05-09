@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Primary {
     @JsonProperty("HealthCheck")
     public String healthCheck;
+
     public Primary withHealthCheck(String healthCheck) {
         this.healthCheck = healthCheck;
         return this;
     }
     
+    public Primary(@JsonProperty("HealthCheck") String healthCheck) {
+        this.healthCheck = healthCheck;
+  }
 }

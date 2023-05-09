@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConfiguredInvestmentProductPrices200ApplicationJSON {
     @JsonProperty("investment_product_unit_prices")
     public GetConfiguredInvestmentProductPrices200ApplicationJSONInvestmentProductUnitPrices[] investmentProductUnitPrices;
+
     public GetConfiguredInvestmentProductPrices200ApplicationJSON withInvestmentProductUnitPrices(GetConfiguredInvestmentProductPrices200ApplicationJSONInvestmentProductUnitPrices[] investmentProductUnitPrices) {
         this.investmentProductUnitPrices = investmentProductUnitPrices;
         return this;
@@ -22,9 +23,14 @@ public class GetConfiguredInvestmentProductPrices200ApplicationJSON {
      */
     @JsonProperty("next_page_available")
     public Boolean nextPageAvailable;
+
     public GetConfiguredInvestmentProductPrices200ApplicationJSON withNextPageAvailable(Boolean nextPageAvailable) {
         this.nextPageAvailable = nextPageAvailable;
         return this;
     }
     
+    public GetConfiguredInvestmentProductPrices200ApplicationJSON(@JsonProperty("investment_product_unit_prices") GetConfiguredInvestmentProductPrices200ApplicationJSONInvestmentProductUnitPrices[] investmentProductUnitPrices, @JsonProperty("next_page_available") Boolean nextPageAvailable) {
+        this.investmentProductUnitPrices = investmentProductUnitPrices;
+        this.nextPageAvailable = nextPageAvailable;
+  }
 }

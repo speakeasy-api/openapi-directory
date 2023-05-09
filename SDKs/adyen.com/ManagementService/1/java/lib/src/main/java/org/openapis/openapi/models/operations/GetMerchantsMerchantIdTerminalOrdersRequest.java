@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdTerminalOrdersRequest {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerOrderReference")
     public String customerOrderReference;
+
     public GetMerchantsMerchantIdTerminalOrdersRequest withCustomerOrderReference(String customerOrderReference) {
         this.customerOrderReference = customerOrderReference;
         return this;
@@ -22,6 +24,7 @@ public class GetMerchantsMerchantIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetMerchantsMerchantIdTerminalOrdersRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -29,6 +32,7 @@ public class GetMerchantsMerchantIdTerminalOrdersRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public GetMerchantsMerchantIdTerminalOrdersRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -39,6 +43,7 @@ public class GetMerchantsMerchantIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetMerchantsMerchantIdTerminalOrdersRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -49,9 +54,13 @@ public class GetMerchantsMerchantIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetMerchantsMerchantIdTerminalOrdersRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetMerchantsMerchantIdTerminalOrdersRequest(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

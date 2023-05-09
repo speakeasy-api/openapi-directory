@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBuiltInSlotTypesResponse {
     
     public String contentType;
+
     public ListBuiltInSlotTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBuiltInSlotTypesResponse {
      */
     
     public Object internalServerException;
+
     public ListBuiltInSlotTypesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListBuiltInSlotTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBuiltInSlotTypesResponse listBuiltInSlotTypesResponse;
+
     public ListBuiltInSlotTypesResponse withListBuiltInSlotTypesResponse(org.openapis.openapi.models.shared.ListBuiltInSlotTypesResponse listBuiltInSlotTypesResponse) {
         this.listBuiltInSlotTypesResponse = listBuiltInSlotTypesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListBuiltInSlotTypesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListBuiltInSlotTypesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class ListBuiltInSlotTypesResponse {
     
     
     public Integer statusCode;
+
     public ListBuiltInSlotTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBuiltInSlotTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBuiltInSlotTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBuiltInSlotTypesResponse {
      */
     
     public Object throttlingException;
+
     public ListBuiltInSlotTypesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListBuiltInSlotTypesResponse {
      */
     
     public Object validationException;
+
     public ListBuiltInSlotTypesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListBuiltInSlotTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

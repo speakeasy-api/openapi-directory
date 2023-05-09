@@ -12,9 +12,13 @@ public class BatchPutGeofenceRequestBody {
      */
     @JsonProperty("Entries")
     public org.openapis.openapi.models.shared.BatchPutGeofenceRequestEntry[] entries;
+
     public BatchPutGeofenceRequestBody withEntries(org.openapis.openapi.models.shared.BatchPutGeofenceRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public BatchPutGeofenceRequestBody(@JsonProperty("Entries") org.openapis.openapi.models.shared.BatchPutGeofenceRequestEntry[] entries) {
+        this.entries = entries;
+  }
 }

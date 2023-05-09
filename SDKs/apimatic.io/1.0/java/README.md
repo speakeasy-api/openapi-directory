@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ConvertAPIRequestBody;
 import org.openapis.openapi.models.operations.ConvertAPIFormatEnum;
 import org.openapis.openapi.models.operations.ConvertAPIRequest;
+import org.openapis.openapi.models.operations.ConvertAPIRequestBody;
 import org.openapis.openapi.models.operations.ConvertAPIResponse;
 
 public class Application {
@@ -28,30 +27,31 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ConvertAPIRequest req = new ConvertAPIRequest() {{
+            ConvertAPIRequest req = new ConvertAPIRequest(ConvertAPIFormatEnum.APIBLUEPRINT) {{
                 requestBody = new ConvertAPIRequestBody() {{
-                    url = "corrupti";
-                }};
-                format = "wadl2009";
-            }}            
+                    url = "provident";
+                }};;
+            }};            
 
             ConvertAPIResponse res = sdk.convertAPI(req);
 
-            if (res.convertAPI200ApplicationJSONObject.isPresent()) {
+            if (res.convertAPI200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `convertAPI` - Transform API Descriptions from/to various formats
+* [convertAPI](docs/sdk/README.md#convertapi) - Transform API Descriptions from/to various formats
 <!-- End SDK Available Operations -->
 
 ### Maturity

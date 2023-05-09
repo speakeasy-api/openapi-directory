@@ -15,6 +15,7 @@ public class SalesforceSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTransferApi")
     public SalesforceDataTransferApiEnum dataTransferApi;
+
     public SalesforceSourceProperties withDataTransferApi(SalesforceDataTransferApiEnum dataTransferApi) {
         this.dataTransferApi = dataTransferApi;
         return this;
@@ -23,6 +24,7 @@ public class SalesforceSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableDynamicFieldUpdate")
     public Boolean enableDynamicFieldUpdate;
+
     public SalesforceSourceProperties withEnableDynamicFieldUpdate(Boolean enableDynamicFieldUpdate) {
         this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
         return this;
@@ -31,6 +33,7 @@ public class SalesforceSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeDeletedRecords")
     public Boolean includeDeletedRecords;
+
     public SalesforceSourceProperties withIncludeDeletedRecords(Boolean includeDeletedRecords) {
         this.includeDeletedRecords = includeDeletedRecords;
         return this;
@@ -38,9 +41,13 @@ public class SalesforceSourceProperties {
     
     @JsonProperty("object")
     public String object;
+
     public SalesforceSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public SalesforceSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

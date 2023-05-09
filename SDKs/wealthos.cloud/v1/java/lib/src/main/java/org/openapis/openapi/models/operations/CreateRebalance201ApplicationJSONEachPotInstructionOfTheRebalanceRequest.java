@@ -15,6 +15,7 @@ public class CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRe
      */
     @JsonProperty("portfolio_deviation")
     public String portfolioDeviation;
+
     public CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest withPortfolioDeviation(String portfolioDeviation) {
         this.portfolioDeviation = portfolioDeviation;
         return this;
@@ -25,6 +26,7 @@ public class CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRe
      */
     @JsonProperty("portfolio_template_id")
     public String portfolioTemplateId;
+
     public CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -35,6 +37,7 @@ public class CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRe
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -45,6 +48,7 @@ public class CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRe
      */
     @JsonProperty("reason")
     public String reason;
+
     public CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -55,9 +59,17 @@ public class CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRe
      */
     @JsonProperty("status")
     public CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum status;
+
     public CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest withStatus(CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest(@JsonProperty("portfolio_deviation") String portfolioDeviation, @JsonProperty("portfolio_template_id") String portfolioTemplateId, @JsonProperty("pot_id") String potId, @JsonProperty("reason") String reason, @JsonProperty("status") CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum status) {
+        this.portfolioDeviation = portfolioDeviation;
+        this.portfolioTemplateId = portfolioTemplateId;
+        this.potId = potId;
+        this.reason = reason;
+        this.status = status;
+  }
 }

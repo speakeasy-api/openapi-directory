@@ -15,6 +15,7 @@ public class GetRelationalDatabaseBundlesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public RelationalDatabaseBundle[] bundles;
+
     public GetRelationalDatabaseBundlesResult withBundles(RelationalDatabaseBundle[] bundles) {
         this.bundles = bundles;
         return this;
@@ -23,9 +24,11 @@ public class GetRelationalDatabaseBundlesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetRelationalDatabaseBundlesResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetRelationalDatabaseBundlesResult(){}
 }

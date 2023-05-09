@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartDBInstanceAutomatedBackupsReplicationMessage {
     
     public Long backupRetentionPeriod;
+
     public StartDBInstanceAutomatedBackupsReplicationMessage withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -16,6 +17,7 @@ public class StartDBInstanceAutomatedBackupsReplicationMessage {
     
     
     public String kmsKeyId;
+
     public StartDBInstanceAutomatedBackupsReplicationMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,6 +25,7 @@ public class StartDBInstanceAutomatedBackupsReplicationMessage {
     
     
     public String preSignedUrl;
+
     public StartDBInstanceAutomatedBackupsReplicationMessage withPreSignedUrl(String preSignedUrl) {
         this.preSignedUrl = preSignedUrl;
         return this;
@@ -30,9 +33,13 @@ public class StartDBInstanceAutomatedBackupsReplicationMessage {
     
     
     public String sourceDBInstanceArn;
+
     public StartDBInstanceAutomatedBackupsReplicationMessage withSourceDBInstanceArn(String sourceDBInstanceArn) {
         this.sourceDBInstanceArn = sourceDBInstanceArn;
         return this;
     }
     
+    public StartDBInstanceAutomatedBackupsReplicationMessage(@JsonProperty("SourceDBInstanceArn") String sourceDBInstanceArn) {
+        this.sourceDBInstanceArn = sourceDBInstanceArn;
+  }
 }

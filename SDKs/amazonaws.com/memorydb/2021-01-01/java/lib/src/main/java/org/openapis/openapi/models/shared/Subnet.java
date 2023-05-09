@@ -15,6 +15,7 @@ public class Subnet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public AvailabilityZone availabilityZone;
+
     public Subnet withAvailabilityZone(AvailabilityZone availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,9 +24,11 @@ public class Subnet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public Subnet withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public Subnet(){}
 }

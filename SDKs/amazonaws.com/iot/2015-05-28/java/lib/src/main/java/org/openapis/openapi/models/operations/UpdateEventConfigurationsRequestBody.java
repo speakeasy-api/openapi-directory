@@ -15,9 +15,11 @@ public class UpdateEventConfigurationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventConfigurations")
     public java.util.Map<String, org.openapis.openapi.models.shared.Configuration> eventConfigurations;
+
     public UpdateEventConfigurationsRequestBody withEventConfigurations(java.util.Map<String, org.openapis.openapi.models.shared.Configuration> eventConfigurations) {
         this.eventConfigurations = eventConfigurations;
         return this;
     }
     
+    public UpdateEventConfigurationsRequestBody(){}
 }

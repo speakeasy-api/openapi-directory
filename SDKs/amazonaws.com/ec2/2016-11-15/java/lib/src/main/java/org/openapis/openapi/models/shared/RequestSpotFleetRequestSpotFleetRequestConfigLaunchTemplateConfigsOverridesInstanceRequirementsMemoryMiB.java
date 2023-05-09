@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsMemoryMiB {
     
     public Long max;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsMemoryMiB withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsO
     
     
     public Long min;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsMemoryMiB withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsMemoryMiB(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpgradeLensReviewResponse {
@@ -12,6 +13,7 @@ public class UpgradeLensReviewResponse {
      */
     
     public Object accessDeniedException;
+
     public UpgradeLensReviewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpgradeLensReviewResponse {
      */
     
     public Object conflictException;
+
     public UpgradeLensReviewResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpgradeLensReviewResponse {
     
     
     public String contentType;
+
     public UpgradeLensReviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpgradeLensReviewResponse {
      */
     
     public Object internalServerException;
+
     public UpgradeLensReviewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpgradeLensReviewResponse {
     
     
     public Integer statusCode;
+
     public UpgradeLensReviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpgradeLensReviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpgradeLensReviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpgradeLensReviewResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpgradeLensReviewResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpgradeLensReviewResponse {
      */
     
     public Object throttlingException;
+
     public UpgradeLensReviewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpgradeLensReviewResponse {
      */
     
     public Object validationException;
+
     public UpgradeLensReviewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpgradeLensReviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

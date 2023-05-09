@@ -15,6 +15,7 @@ public class GmbAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public GmbAccounts withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,9 +27,11 @@ public class GmbAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gmbAccounts")
     public GmbAccountsGmbAccount[] gmbAccounts;
+
     public GmbAccounts withGmbAccounts(GmbAccountsGmbAccount[] gmbAccounts) {
         this.gmbAccounts = gmbAccounts;
         return this;
     }
     
+    public GmbAccounts(){}
 }

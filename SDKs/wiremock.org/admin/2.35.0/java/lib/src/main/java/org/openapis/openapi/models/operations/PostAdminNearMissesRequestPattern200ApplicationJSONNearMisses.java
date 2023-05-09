@@ -15,6 +15,7 @@ public class PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absoluteUrl")
     public String absoluteUrl;
+
     public PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses withAbsoluteUrl(String absoluteUrl) {
         this.absoluteUrl = absoluteUrl;
         return this;
@@ -26,6 +27,7 @@ public class PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses withBody(String body) {
         this.body = body;
         return this;
@@ -37,6 +39,7 @@ public class PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookies")
     public java.util.Map<String, Object> cookies;
+
     public PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses withCookies(java.util.Map<String, Object> cookies) {
         this.cookies = cookies;
         return this;
@@ -48,6 +51,7 @@ public class PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -59,6 +63,7 @@ public class PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses withMethod(String method) {
         this.method = method;
         return this;
@@ -70,9 +75,11 @@ public class PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses(){}
 }

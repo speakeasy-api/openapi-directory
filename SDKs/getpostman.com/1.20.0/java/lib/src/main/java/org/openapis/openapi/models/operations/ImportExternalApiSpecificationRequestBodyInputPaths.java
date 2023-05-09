@@ -12,9 +12,11 @@ public class ImportExternalApiSpecificationRequestBodyInputPaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("/pets")
     public ImportExternalApiSpecificationRequestBodyInputPathsPets rootPets;
+
     public ImportExternalApiSpecificationRequestBodyInputPaths withRootPets(ImportExternalApiSpecificationRequestBodyInputPathsPets rootPets) {
         this.rootPets = rootPets;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputPaths(){}
 }

@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetcountrystandardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getcountrystandard200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetcountrystandardResponse.java
+docs/sdk/README.md
+docs/countrynamestandardization/README.md
 USAGE.md

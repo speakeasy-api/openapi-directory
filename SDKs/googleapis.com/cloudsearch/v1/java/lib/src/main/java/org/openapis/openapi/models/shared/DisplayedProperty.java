@@ -18,9 +18,11 @@ public class DisplayedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public DisplayedProperty withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public DisplayedProperty(){}
 }

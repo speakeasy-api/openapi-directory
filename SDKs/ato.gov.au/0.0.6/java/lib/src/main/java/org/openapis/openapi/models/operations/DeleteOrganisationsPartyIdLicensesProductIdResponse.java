@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOrganisationsPartyIdLicensesProductIdResponse {
     
     public String contentType;
+
     public DeleteOrganisationsPartyIdLicensesProductIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteOrganisationsPartyIdLicensesProductIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteOrganisationsPartyIdLicensesProductIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteOrganisationsPartyIdLicensesProductIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOrganisationsPartyIdLicensesProductIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteOrganisationsPartyIdLicensesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteOrganisationsPartyIdLicensesProductIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -43,9 +48,14 @@ public class DeleteOrganisationsPartyIdLicensesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public DeleteOrganisationsPartyIdLicensesProductIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public DeleteOrganisationsPartyIdLicensesProductIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -43,4 +43,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPirateGenerateNameRe
 lib/src/main/java/org/openapis/openapi/models/operations/GetPirateTranslateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPirateTranslateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPirateTranslateResponse.java
+docs/sdk/README.md
+docs/generation/README.md
+docs/translation/README.md
 USAGE.md

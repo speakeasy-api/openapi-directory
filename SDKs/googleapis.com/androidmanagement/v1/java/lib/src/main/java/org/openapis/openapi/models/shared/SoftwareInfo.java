@@ -18,6 +18,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidBuildNumber")
     public String androidBuildNumber;
+
     public SoftwareInfo withAndroidBuildNumber(String androidBuildNumber) {
         this.androidBuildNumber = androidBuildNumber;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidBuildTime")
     public String androidBuildTime;
+
     public SoftwareInfo withAndroidBuildTime(String androidBuildTime) {
         this.androidBuildTime = androidBuildTime;
         return this;
@@ -40,6 +42,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidDevicePolicyVersionCode")
     public Integer androidDevicePolicyVersionCode;
+
     public SoftwareInfo withAndroidDevicePolicyVersionCode(Integer androidDevicePolicyVersionCode) {
         this.androidDevicePolicyVersionCode = androidDevicePolicyVersionCode;
         return this;
@@ -51,6 +54,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidDevicePolicyVersionName")
     public String androidDevicePolicyVersionName;
+
     public SoftwareInfo withAndroidDevicePolicyVersionName(String androidDevicePolicyVersionName) {
         this.androidDevicePolicyVersionName = androidDevicePolicyVersionName;
         return this;
@@ -62,6 +66,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidVersion")
     public String androidVersion;
+
     public SoftwareInfo withAndroidVersion(String androidVersion) {
         this.androidVersion = androidVersion;
         return this;
@@ -73,6 +78,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootloaderVersion")
     public String bootloaderVersion;
+
     public SoftwareInfo withBootloaderVersion(String bootloaderVersion) {
         this.bootloaderVersion = bootloaderVersion;
         return this;
@@ -84,6 +90,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceBuildSignature")
     public String deviceBuildSignature;
+
     public SoftwareInfo withDeviceBuildSignature(String deviceBuildSignature) {
         this.deviceBuildSignature = deviceBuildSignature;
         return this;
@@ -95,6 +102,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceKernelVersion")
     public String deviceKernelVersion;
+
     public SoftwareInfo withDeviceKernelVersion(String deviceKernelVersion) {
         this.deviceKernelVersion = deviceKernelVersion;
         return this;
@@ -106,6 +114,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryLanguageCode")
     public String primaryLanguageCode;
+
     public SoftwareInfo withPrimaryLanguageCode(String primaryLanguageCode) {
         this.primaryLanguageCode = primaryLanguageCode;
         return this;
@@ -117,6 +126,7 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPatchLevel")
     public String securityPatchLevel;
+
     public SoftwareInfo withSecurityPatchLevel(String securityPatchLevel) {
         this.securityPatchLevel = securityPatchLevel;
         return this;
@@ -128,9 +138,11 @@ public class SoftwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemUpdateInfo")
     public SystemUpdateInfo systemUpdateInfo;
+
     public SoftwareInfo withSystemUpdateInfo(SystemUpdateInfo systemUpdateInfo) {
         this.systemUpdateInfo = systemUpdateInfo;
         return this;
     }
     
+    public SoftwareInfo(){}
 }

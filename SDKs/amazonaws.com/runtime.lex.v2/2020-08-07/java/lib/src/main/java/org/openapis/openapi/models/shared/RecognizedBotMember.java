@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecognizedBotMember {
     @JsonProperty("botId")
     public String botId;
+
     public RecognizedBotMember withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -22,9 +23,13 @@ public class RecognizedBotMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botName")
     public String botName;
+
     public RecognizedBotMember withBotName(String botName) {
         this.botName = botName;
         return this;
     }
     
+    public RecognizedBotMember(@JsonProperty("botId") String botId) {
+        this.botId = botId;
+  }
 }

@@ -15,6 +15,7 @@ public class ServiceHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzedResourceCount")
     public Long analyzedResourceCount;
+
     public ServiceHealth withAnalyzedResourceCount(Long analyzedResourceCount) {
         this.analyzedResourceCount = analyzedResourceCount;
         return this;
@@ -23,6 +24,7 @@ public class ServiceHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Insight")
     public ServiceInsightHealth insight;
+
     public ServiceHealth withInsight(ServiceInsightHealth insight) {
         this.insight = insight;
         return this;
@@ -31,9 +33,11 @@ public class ServiceHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public ServiceNameEnum serviceName;
+
     public ServiceHealth withServiceName(ServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ServiceHealth(){}
 }

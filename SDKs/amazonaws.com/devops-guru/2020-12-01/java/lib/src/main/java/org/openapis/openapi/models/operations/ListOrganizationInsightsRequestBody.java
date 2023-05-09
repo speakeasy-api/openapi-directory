@@ -15,6 +15,7 @@ public class ListOrganizationInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public ListOrganizationInsightsRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -26,6 +27,7 @@ public class ListOrganizationInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListOrganizationInsightsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListOrganizationInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOrganizationInsightsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,6 +51,7 @@ public class ListOrganizationInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitIds")
     public String[] organizationalUnitIds;
+
     public ListOrganizationInsightsRequestBody withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
@@ -58,9 +62,13 @@ public class ListOrganizationInsightsRequestBody {
      */
     @JsonProperty("StatusFilter")
     public ListOrganizationInsightsRequestBodyStatusFilter statusFilter;
+
     public ListOrganizationInsightsRequestBody withStatusFilter(ListOrganizationInsightsRequestBodyStatusFilter statusFilter) {
         this.statusFilter = statusFilter;
         return this;
     }
     
+    public ListOrganizationInsightsRequestBody(@JsonProperty("StatusFilter") ListOrganizationInsightsRequestBodyStatusFilter statusFilter) {
+        this.statusFilter = statusFilter;
+  }
 }

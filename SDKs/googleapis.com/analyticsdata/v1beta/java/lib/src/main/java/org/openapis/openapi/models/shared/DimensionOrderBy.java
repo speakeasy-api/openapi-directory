@@ -18,6 +18,7 @@ public class DimensionOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionName")
     public String dimensionName;
+
     public DimensionOrderBy withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -29,9 +30,11 @@ public class DimensionOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderType")
     public DimensionOrderByOrderTypeEnum orderType;
+
     public DimensionOrderBy withOrderType(DimensionOrderByOrderTypeEnum orderType) {
         this.orderType = orderType;
         return this;
     }
     
+    public DimensionOrderBy(){}
 }

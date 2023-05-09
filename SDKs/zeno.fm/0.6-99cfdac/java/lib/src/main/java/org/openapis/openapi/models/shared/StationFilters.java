@@ -15,6 +15,7 @@ public class StationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String[] country;
+
     public StationFilters withCountry(String[] country) {
         this.country = country;
         return this;
@@ -23,6 +24,7 @@ public class StationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genre")
     public String[] genre;
+
     public StationFilters withGenre(String[] genre) {
         this.genre = genre;
         return this;
@@ -31,9 +33,11 @@ public class StationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String[] language;
+
     public StationFilters withLanguage(String[] language) {
         this.language = language;
         return this;
     }
     
+    public StationFilters(){}
 }

@@ -19,6 +19,7 @@ public class QuoteV1 {
      */
     @JsonProperty("bind_status")
     public QuoteV1BindStatusEnum bindStatus;
+
     public QuoteV1 withBindStatus(QuoteV1BindStatusEnum bindStatus) {
         this.bindStatus = bindStatus;
         return this;
@@ -27,6 +28,7 @@ public class QuoteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_values")
     public CoverageValueWriteV1[] coverageValues;
+
     public QuoteV1 withCoverageValues(CoverageValueWriteV1[] coverageValues) {
         this.coverageValues = coverageValues;
         return this;
@@ -38,6 +40,7 @@ public class QuoteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public FileMiniV1[] files;
+
     public QuoteV1 withFiles(FileMiniV1[] files) {
         this.files = files;
         return this;
@@ -48,6 +51,7 @@ public class QuoteV1 {
      */
     @JsonProperty("id")
     public String id;
+
     public QuoteV1 withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class QuoteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naic_code")
     public String naicCode;
+
     public QuoteV1 withNaicCode(String naicCode) {
         this.naicCode = naicCode;
         return this;
@@ -70,6 +75,7 @@ public class QuoteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal_link")
     public String portalLink;
+
     public QuoteV1 withPortalLink(String portalLink) {
         this.portalLink = portalLink;
         return this;
@@ -81,6 +87,7 @@ public class QuoteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prices")
     public QuotePriceV1 prices;
+
     public QuoteV1 withPrices(QuotePriceV1 prices) {
         this.prices = prices;
         return this;
@@ -88,6 +95,7 @@ public class QuoteV1 {
     
     @JsonProperty("product_id")
     public String productId;
+
     public QuoteV1 withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -98,6 +106,7 @@ public class QuoteV1 {
      */
     @JsonProperty("status")
     public QuoteV1StatusEnum status;
+
     public QuoteV1 withStatus(QuoteV1StatusEnum status) {
         this.status = status;
         return this;
@@ -109,6 +118,7 @@ public class QuoteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reasons")
     public StatusReason statusReasons;
+
     public QuoteV1 withStatusReasons(StatusReason statusReasons) {
         this.statusReasons = statusReasons;
         return this;
@@ -119,9 +129,17 @@ public class QuoteV1 {
      */
     @JsonProperty("submission_id")
     public String submissionId;
+
     public QuoteV1 withSubmissionId(String submissionId) {
         this.submissionId = submissionId;
         return this;
     }
     
+    public QuoteV1(@JsonProperty("bind_status") QuoteV1BindStatusEnum bindStatus, @JsonProperty("id") String id, @JsonProperty("product_id") String productId, @JsonProperty("status") QuoteV1StatusEnum status, @JsonProperty("submission_id") String submissionId) {
+        this.bindStatus = bindStatus;
+        this.id = id;
+        this.productId = productId;
+        this.status = status;
+        this.submissionId = submissionId;
+  }
 }

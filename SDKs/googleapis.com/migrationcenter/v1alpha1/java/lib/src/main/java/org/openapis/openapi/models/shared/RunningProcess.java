@@ -18,6 +18,7 @@ public class RunningProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public RunningProcess withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class RunningProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmdline")
     public String cmdline;
+
     public RunningProcess withCmdline(String cmdline) {
         this.cmdline = cmdline;
         return this;
@@ -40,6 +42,7 @@ public class RunningProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exePath")
     public String exePath;
+
     public RunningProcess withExePath(String exePath) {
         this.exePath = exePath;
         return this;
@@ -51,6 +54,7 @@ public class RunningProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public RunningProcess withPid(String pid) {
         this.pid = pid;
         return this;
@@ -62,9 +66,11 @@ public class RunningProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public RunningProcess withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public RunningProcess(){}
 }

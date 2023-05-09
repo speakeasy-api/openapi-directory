@@ -21,6 +21,7 @@ public class GetInsightImpactGraphRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetInsightImpactGraphRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -31,6 +32,7 @@ public class GetInsightImpactGraphRequestBody {
      */
     @JsonProperty("InsightId")
     public String insightId;
+
     public GetInsightImpactGraphRequestBody withInsightId(String insightId) {
         this.insightId = insightId;
         return this;
@@ -42,6 +44,7 @@ public class GetInsightImpactGraphRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInsightImpactGraphRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -54,9 +57,15 @@ public class GetInsightImpactGraphRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetInsightImpactGraphRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetInsightImpactGraphRequestBody(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("InsightId") String insightId, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.insightId = insightId;
+        this.startTime = startTime;
+  }
 }

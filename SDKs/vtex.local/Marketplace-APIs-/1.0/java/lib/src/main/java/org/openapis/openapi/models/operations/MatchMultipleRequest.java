@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MatchMultipleRequest {
@@ -12,6 +13,7 @@ public class MatchMultipleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public MatchMultipleRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class MatchMultipleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public MatchMultipleRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class MatchMultipleRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object[][] requestBody;
+
     public MatchMultipleRequest withRequestBody(Object[][] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,6 +43,7 @@ public class MatchMultipleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public MatchMultipleRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,9 +54,17 @@ public class MatchMultipleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionName")
     public String actionName;
+
     public MatchMultipleRequest withActionName(String actionName) {
         this.actionName = actionName;
         return this;
     }
     
+    public MatchMultipleRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") Object[][] requestBody, @JsonProperty("accountName") String accountName, @JsonProperty("actionName") String actionName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.accountName = accountName;
+        this.actionName = actionName;
+  }
 }

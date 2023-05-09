@@ -18,6 +18,7 @@ public class PostgresqlObjectIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public PostgresqlObjectIdentifier withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -29,9 +30,11 @@ public class PostgresqlObjectIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public PostgresqlObjectIdentifier withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public PostgresqlObjectIdentifier(){}
 }

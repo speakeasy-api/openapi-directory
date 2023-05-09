@@ -18,6 +18,7 @@ public class GeocodingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressUnderstood")
     public Boolean addressUnderstood;
+
     public GeocodingSummary withAddressUnderstood(Boolean addressUnderstood) {
         this.addressUnderstood = addressUnderstood;
         return this;
@@ -29,6 +30,7 @@ public class GeocodingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureId")
     public FeatureIdProto featureId;
+
     public GeocodingSummary withFeatureId(FeatureIdProto featureId) {
         this.featureId = featureId;
         return this;
@@ -40,6 +42,7 @@ public class GeocodingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureType")
     public GeocodingSummaryFeatureTypeEnum featureType;
+
     public GeocodingSummary withFeatureType(GeocodingSummaryFeatureTypeEnum featureType) {
         this.featureType = featureType;
         return this;
@@ -51,6 +54,7 @@ public class GeocodingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionPrecisionMeters")
     public Double positionPrecisionMeters;
+
     public GeocodingSummary withPositionPrecisionMeters(Double positionPrecisionMeters) {
         this.positionPrecisionMeters = positionPrecisionMeters;
         return this;
@@ -62,9 +66,11 @@ public class GeocodingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryString")
     public String queryString;
+
     public GeocodingSummary withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public GeocodingSummary(){}
 }

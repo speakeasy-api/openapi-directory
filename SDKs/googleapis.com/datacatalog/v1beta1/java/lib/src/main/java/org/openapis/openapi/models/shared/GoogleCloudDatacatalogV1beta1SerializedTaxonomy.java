@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1SerializedTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activatedPolicyTypes")
     public GoogleCloudDatacatalogV1beta1SerializedTaxonomyActivatedPolicyTypesEnum[] activatedPolicyTypes;
+
     public GoogleCloudDatacatalogV1beta1SerializedTaxonomy withActivatedPolicyTypes(GoogleCloudDatacatalogV1beta1SerializedTaxonomyActivatedPolicyTypesEnum[] activatedPolicyTypes) {
         this.activatedPolicyTypes = activatedPolicyTypes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1SerializedTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1beta1SerializedTaxonomy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1SerializedTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1beta1SerializedTaxonomy withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogV1beta1SerializedTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTags")
     public GoogleCloudDatacatalogV1beta1SerializedPolicyTag[] policyTags;
+
     public GoogleCloudDatacatalogV1beta1SerializedTaxonomy withPolicyTags(GoogleCloudDatacatalogV1beta1SerializedPolicyTag[] policyTags) {
         this.policyTags = policyTags;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1SerializedTaxonomy(){}
 }

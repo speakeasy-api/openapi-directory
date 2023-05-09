@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GroupResourceLinks {
     @JsonProperty("self")
     public String self;
+
     public GroupResourceLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public GroupResourceLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdministratorAccountResponse {
@@ -12,6 +13,7 @@ public class GetAdministratorAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAdministratorAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetAdministratorAccountResponse {
      */
     
     public Object conflictException;
+
     public GetAdministratorAccountResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetAdministratorAccountResponse {
     
     
     public String contentType;
+
     public GetAdministratorAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetAdministratorAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAdministratorAccountResponse getAdministratorAccountResponse;
+
     public GetAdministratorAccountResponse withGetAdministratorAccountResponse(org.openapis.openapi.models.shared.GetAdministratorAccountResponse getAdministratorAccountResponse) {
         this.getAdministratorAccountResponse = getAdministratorAccountResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetAdministratorAccountResponse {
      */
     
     public Object internalServerException;
+
     public GetAdministratorAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetAdministratorAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAdministratorAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetAdministratorAccountResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetAdministratorAccountResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetAdministratorAccountResponse {
     
     
     public Integer statusCode;
+
     public GetAdministratorAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetAdministratorAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdministratorAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetAdministratorAccountResponse {
      */
     
     public Object throttlingException;
+
     public GetAdministratorAccountResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetAdministratorAccountResponse {
      */
     
     public Object validationException;
+
     public GetAdministratorAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAdministratorAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

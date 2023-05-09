@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesTrainLoading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesTrainLoading withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -26,6 +27,7 @@ public class TflApiPresentationEntitiesTrainLoading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public String line;
+
     public TflApiPresentationEntitiesTrainLoading withLine(String line) {
         this.line = line;
         return this;
@@ -37,6 +39,7 @@ public class TflApiPresentationEntitiesTrainLoading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineDirection")
     public String lineDirection;
+
     public TflApiPresentationEntitiesTrainLoading withLineDirection(String lineDirection) {
         this.lineDirection = lineDirection;
         return this;
@@ -48,6 +51,7 @@ public class TflApiPresentationEntitiesTrainLoading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naptanTo")
     public String naptanTo;
+
     public TflApiPresentationEntitiesTrainLoading withNaptanTo(String naptanTo) {
         this.naptanTo = naptanTo;
         return this;
@@ -59,6 +63,7 @@ public class TflApiPresentationEntitiesTrainLoading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformDirection")
     public String platformDirection;
+
     public TflApiPresentationEntitiesTrainLoading withPlatformDirection(String platformDirection) {
         this.platformDirection = platformDirection;
         return this;
@@ -70,6 +75,7 @@ public class TflApiPresentationEntitiesTrainLoading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSlice")
     public String timeSlice;
+
     public TflApiPresentationEntitiesTrainLoading withTimeSlice(String timeSlice) {
         this.timeSlice = timeSlice;
         return this;
@@ -82,9 +88,11 @@ public class TflApiPresentationEntitiesTrainLoading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Integer value;
+
     public TflApiPresentationEntitiesTrainLoading withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public TflApiPresentationEntitiesTrainLoading(){}
 }

@@ -15,9 +15,11 @@ public class ValidationException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ValidationException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ValidationException(){}
 }

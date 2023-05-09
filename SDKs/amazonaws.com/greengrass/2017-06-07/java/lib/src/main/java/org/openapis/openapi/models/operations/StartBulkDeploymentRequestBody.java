@@ -14,6 +14,7 @@ public class StartBulkDeploymentRequestBody {
      */
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public StartBulkDeploymentRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -24,6 +25,7 @@ public class StartBulkDeploymentRequestBody {
      */
     @JsonProperty("InputFileUri")
     public String inputFileUri;
+
     public StartBulkDeploymentRequestBody withInputFileUri(String inputFileUri) {
         this.inputFileUri = inputFileUri;
         return this;
@@ -35,9 +37,14 @@ public class StartBulkDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartBulkDeploymentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartBulkDeploymentRequestBody(@JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("InputFileUri") String inputFileUri) {
+        this.executionRoleArn = executionRoleArn;
+        this.inputFileUri = inputFileUri;
+  }
 }

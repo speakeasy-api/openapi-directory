@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceState {
     
     public String description;
+
     public InstanceState withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class InstanceState {
     
     
     public String instanceId;
+
     public InstanceState withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,6 +28,7 @@ public class InstanceState {
     
     
     public String reasonCode;
+
     public InstanceState withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
@@ -33,9 +36,11 @@ public class InstanceState {
     
     
     public String state;
+
     public InstanceState withState(String state) {
         this.state = state;
         return this;
     }
     
+    public InstanceState(){}
 }

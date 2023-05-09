@@ -18,6 +18,7 @@ public class FsCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Integer left;
+
     public FsCommand withLeft(Integer left) {
         this.left = left;
         return this;
@@ -29,6 +30,7 @@ public class FsCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionOption")
     public FsCommandPositionOptionEnum positionOption;
+
     public FsCommand withPositionOption(FsCommandPositionOptionEnum positionOption) {
         this.positionOption = positionOption;
         return this;
@@ -40,6 +42,7 @@ public class FsCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Integer top;
+
     public FsCommand withTop(Integer top) {
         this.top = top;
         return this;
@@ -51,6 +54,7 @@ public class FsCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowHeight")
     public Integer windowHeight;
+
     public FsCommand withWindowHeight(Integer windowHeight) {
         this.windowHeight = windowHeight;
         return this;
@@ -62,9 +66,11 @@ public class FsCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowWidth")
     public Integer windowWidth;
+
     public FsCommand withWindowWidth(Integer windowWidth) {
         this.windowWidth = windowWidth;
         return this;
     }
     
+    public FsCommand(){}
 }

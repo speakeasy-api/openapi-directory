@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1AnnotationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorMetadata")
     public GoogleCloudDatalabelingV1beta1OperatorMetadata operatorMetadata;
+
     public GoogleCloudDatalabelingV1beta1AnnotationMetadata withOperatorMetadata(GoogleCloudDatalabelingV1beta1OperatorMetadata operatorMetadata) {
         this.operatorMetadata = operatorMetadata;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1AnnotationMetadata(){}
 }

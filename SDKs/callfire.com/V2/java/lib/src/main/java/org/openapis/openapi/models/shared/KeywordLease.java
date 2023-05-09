@@ -18,6 +18,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRenew")
     public Boolean autoRenew;
+
     public KeywordLease withAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -29,6 +30,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactListId")
     public Long contactListId;
+
     public KeywordLease withContactListId(Long contactListId) {
         this.contactListId = contactListId;
         return this;
@@ -40,6 +42,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleOptInEnabled")
     public Boolean doubleOptInEnabled;
+
     public KeywordLease withDoubleOptInEnabled(Boolean doubleOptInEnabled) {
         this.doubleOptInEnabled = doubleOptInEnabled;
         return this;
@@ -51,6 +54,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword")
     public String keyword;
+
     public KeywordLease withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -62,6 +66,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public KeywordLease withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaseBegin")
     public Long leaseBegin;
+
     public KeywordLease withLeaseBegin(Long leaseBegin) {
         this.leaseBegin = leaseBegin;
         return this;
@@ -84,6 +90,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaseEnd")
     public Long leaseEnd;
+
     public KeywordLease withLeaseEnd(Long leaseEnd) {
         this.leaseEnd = leaseEnd;
         return this;
@@ -95,6 +102,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public KeywordLease withNumber(String number) {
         this.number = number;
         return this;
@@ -106,6 +114,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optInConfirmationMessage")
     public String optInConfirmationMessage;
+
     public KeywordLease withOptInConfirmationMessage(String optInConfirmationMessage) {
         this.optInConfirmationMessage = optInConfirmationMessage;
         return this;
@@ -117,6 +126,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortCode")
     public String shortCode;
+
     public KeywordLease withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
@@ -128,6 +138,7 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public KeywordLeaseStatusEnum status;
+
     public KeywordLease withStatus(KeywordLeaseStatusEnum status) {
         this.status = status;
         return this;
@@ -139,9 +150,11 @@ public class KeywordLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public KeywordLeaseTypeEnum type;
+
     public KeywordLease withType(KeywordLeaseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public KeywordLease(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePaymentFormResponse {
     
     public String contentType;
+
     public CreatePaymentFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePaymentFormResponse {
      */
     
     public org.openapis.openapi.models.shared.PaymentWrite paymentWrite;
+
     public CreatePaymentFormResponse withPaymentWrite(org.openapis.openapi.models.shared.PaymentWrite paymentWrite) {
         this.paymentWrite = paymentWrite;
         return this;
@@ -26,6 +29,7 @@ public class CreatePaymentFormResponse {
     
     
     public Integer statusCode;
+
     public CreatePaymentFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreatePaymentFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePaymentFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreatePaymentFormResponse {
      */
     
     public java.util.Map<String, Object> createPaymentForm400ApplicationJSONObject;
+
     public CreatePaymentFormResponse withCreatePaymentForm400ApplicationJSONObject(java.util.Map<String, Object> createPaymentForm400ApplicationJSONObject) {
         this.createPaymentForm400ApplicationJSONObject = createPaymentForm400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreatePaymentFormResponse {
      */
     
     public java.util.Map<String, Object> createPaymentForm401ApplicationJSONObject;
+
     public CreatePaymentFormResponse withCreatePaymentForm401ApplicationJSONObject(java.util.Map<String, Object> createPaymentForm401ApplicationJSONObject) {
         this.createPaymentForm401ApplicationJSONObject = createPaymentForm401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreatePaymentFormResponse {
      */
     
     public java.util.Map<String, Object> createPaymentForm403ApplicationJSONObject;
+
     public CreatePaymentFormResponse withCreatePaymentForm403ApplicationJSONObject(java.util.Map<String, Object> createPaymentForm403ApplicationJSONObject) {
         this.createPaymentForm403ApplicationJSONObject = createPaymentForm403ApplicationJSONObject;
         return this;
     }
     
+    public CreatePaymentFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

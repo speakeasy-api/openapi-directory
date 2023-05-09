@@ -12,6 +12,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Draws")
     public Long draws;
+
     public Standing withDraws(Long draws) {
         this.draws = draws;
         return this;
@@ -20,6 +21,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Long games;
+
     public Standing withGames(Long games) {
         this.games = games;
         return this;
@@ -28,6 +30,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public Standing withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -36,6 +39,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoalsAgainst")
     public Long goalsAgainst;
+
     public Standing withGoalsAgainst(Long goalsAgainst) {
         this.goalsAgainst = goalsAgainst;
         return this;
@@ -44,6 +48,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoalsDifferential")
     public Long goalsDifferential;
+
     public Standing withGoalsDifferential(Long goalsDifferential) {
         this.goalsDifferential = goalsDifferential;
         return this;
@@ -52,6 +57,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoalsScored")
     public Long goalsScored;
+
     public Standing withGoalsScored(Long goalsScored) {
         this.goalsScored = goalsScored;
         return this;
@@ -60,6 +66,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public String group;
+
     public Standing withGroup(String group) {
         this.group = group;
         return this;
@@ -68,6 +75,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Losses")
     public Long losses;
+
     public Standing withLosses(Long losses) {
         this.losses = losses;
         return this;
@@ -76,6 +84,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Standing withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Order")
     public Long order;
+
     public Standing withOrder(Long order) {
         this.order = order;
         return this;
@@ -92,6 +102,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Points")
     public Long points;
+
     public Standing withPoints(Long points) {
         this.points = points;
         return this;
@@ -100,6 +111,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoundId")
     public Long roundId;
+
     public Standing withRoundId(Long roundId) {
         this.roundId = roundId;
         return this;
@@ -108,6 +120,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scope")
     public String scope;
+
     public Standing withScope(String scope) {
         this.scope = scope;
         return this;
@@ -116,6 +129,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public Standing withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -124,6 +138,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandingId")
     public Long standingId;
+
     public Standing withStandingId(Long standingId) {
         this.standingId = standingId;
         return this;
@@ -132,6 +147,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public Standing withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -140,9 +156,11 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wins")
     public Long wins;
+
     public Standing withWins(Long wins) {
         this.wins = wins;
         return this;
     }
     
+    public Standing(){}
 }

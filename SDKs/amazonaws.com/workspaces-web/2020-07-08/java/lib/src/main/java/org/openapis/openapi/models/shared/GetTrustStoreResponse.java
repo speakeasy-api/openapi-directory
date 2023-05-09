@@ -15,9 +15,11 @@ public class GetTrustStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustStore")
     public TrustStore trustStore;
+
     public GetTrustStoreResponse withTrustStore(TrustStore trustStore) {
         this.trustStore = trustStore;
         return this;
     }
     
+    public GetTrustStoreResponse(){}
 }

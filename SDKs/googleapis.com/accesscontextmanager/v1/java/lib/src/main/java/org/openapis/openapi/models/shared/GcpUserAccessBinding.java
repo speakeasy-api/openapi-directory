@@ -18,6 +18,7 @@ public class GcpUserAccessBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevels")
     public String[] accessLevels;
+
     public GcpUserAccessBinding withAccessLevels(String[] accessLevels) {
         this.accessLevels = accessLevels;
         return this;
@@ -29,6 +30,7 @@ public class GcpUserAccessBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dryRunAccessLevels")
     public String[] dryRunAccessLevels;
+
     public GcpUserAccessBinding withDryRunAccessLevels(String[] dryRunAccessLevels) {
         this.dryRunAccessLevels = dryRunAccessLevels;
         return this;
@@ -40,6 +42,7 @@ public class GcpUserAccessBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupKey")
     public String groupKey;
+
     public GcpUserAccessBinding withGroupKey(String groupKey) {
         this.groupKey = groupKey;
         return this;
@@ -51,9 +54,11 @@ public class GcpUserAccessBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GcpUserAccessBinding withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GcpUserAccessBinding(){}
 }

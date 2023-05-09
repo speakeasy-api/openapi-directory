@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEnvironmentStatusRequest {
     @JsonProperty("environmentId")
     public String environmentId;
+
     public DescribeEnvironmentStatusRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     
+    public DescribeEnvironmentStatusRequest(@JsonProperty("environmentId") String environmentId) {
+        this.environmentId = environmentId;
+  }
 }

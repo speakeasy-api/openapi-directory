@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class StackResourceDriftInformation {
     
     public OffsetDateTime lastCheckTimestamp;
+
     public StackResourceDriftInformation withLastCheckTimestamp(OffsetDateTime lastCheckTimestamp) {
         this.lastCheckTimestamp = lastCheckTimestamp;
         return this;
@@ -19,9 +21,13 @@ public class StackResourceDriftInformation {
     
     
     public StackResourceDriftStatusEnum stackResourceDriftStatus;
+
     public StackResourceDriftInformation withStackResourceDriftStatus(StackResourceDriftStatusEnum stackResourceDriftStatus) {
         this.stackResourceDriftStatus = stackResourceDriftStatus;
         return this;
     }
     
+    public StackResourceDriftInformation(@JsonProperty("StackResourceDriftStatus") StackResourceDriftStatusEnum stackResourceDriftStatus) {
+        this.stackResourceDriftStatus = stackResourceDriftStatus;
+  }
 }

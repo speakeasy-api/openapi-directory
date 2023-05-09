@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetglobalnumberinfoRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getglobalnumberinfo200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetglobalnumberinfoResponse.java
+docs/sdk/README.md
+docs/globalphonenumberinformation/README.md
 USAGE.md

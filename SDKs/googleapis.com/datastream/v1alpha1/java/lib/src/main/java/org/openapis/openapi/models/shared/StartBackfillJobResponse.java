@@ -18,9 +18,11 @@ public class StartBackfillJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public StreamObject object;
+
     public StartBackfillJobResponse withObject(StreamObject object) {
         this.object = object;
         return this;
     }
     
+    public StartBackfillJobResponse(){}
 }

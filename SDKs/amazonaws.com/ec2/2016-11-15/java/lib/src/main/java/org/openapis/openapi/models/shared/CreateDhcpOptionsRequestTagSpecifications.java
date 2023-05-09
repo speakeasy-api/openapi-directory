@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateDhcpOptionsRequestTagSpecifications {
     
     public CreateDhcpOptionsRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateDhcpOptionsRequestTagSpecifications withResourceType(CreateDhcpOptionsRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateDhcpOptionsRequestTagSpecifications {
     
     
     public CreateDhcpOptionsRequestTagSpecificationsTags[] tags;
+
     public CreateDhcpOptionsRequestTagSpecifications withTags(CreateDhcpOptionsRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDhcpOptionsRequestTagSpecifications(){}
 }

@@ -14,6 +14,7 @@ public class ListStreamKeysRequestBody {
      */
     @JsonProperty("channelArn")
     public String channelArn;
+
     public ListStreamKeysRequestBody withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -25,6 +26,7 @@ public class ListStreamKeysRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListStreamKeysRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListStreamKeysRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStreamKeysRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListStreamKeysRequestBody(@JsonProperty("channelArn") String channelArn) {
+        this.channelArn = channelArn;
+  }
 }

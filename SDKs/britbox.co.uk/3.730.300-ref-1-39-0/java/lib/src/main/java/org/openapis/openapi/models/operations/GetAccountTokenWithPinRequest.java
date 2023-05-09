@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountTokenWithPinRequest {
@@ -12,6 +13,7 @@ public class GetAccountTokenWithPinRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvPinAuthRequest itvPinAuthRequest;
+
     public GetAccountTokenWithPinRequest withItvPinAuthRequest(org.openapis.openapi.models.shared.ItvPinAuthRequest itvPinAuthRequest) {
         this.itvPinAuthRequest = itvPinAuthRequest;
         return this;
@@ -42,6 +44,7 @@ public class GetAccountTokenWithPinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetAccountTokenWithPinRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class GetAccountTokenWithPinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetAccountTokenWithPinRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetAccountTokenWithPinRequest(@JsonProperty("ItvPinAuthRequest") org.openapis.openapi.models.shared.ItvPinAuthRequest itvPinAuthRequest) {
+        this.itvPinAuthRequest = itvPinAuthRequest;
+  }
 }

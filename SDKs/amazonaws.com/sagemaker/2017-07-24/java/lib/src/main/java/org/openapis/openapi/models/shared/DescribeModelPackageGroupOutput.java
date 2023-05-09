@@ -22,6 +22,7 @@ public class DescribeModelPackageGroupOutput {
      */
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeModelPackageGroupOutput withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -31,6 +32,7 @@ public class DescribeModelPackageGroupOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeModelPackageGroupOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeModelPackageGroupOutput {
     
     @JsonProperty("ModelPackageGroupArn")
     public String modelPackageGroupArn;
+
     public DescribeModelPackageGroupOutput withModelPackageGroupArn(String modelPackageGroupArn) {
         this.modelPackageGroupArn = modelPackageGroupArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeModelPackageGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupDescription")
     public String modelPackageGroupDescription;
+
     public DescribeModelPackageGroupOutput withModelPackageGroupDescription(String modelPackageGroupDescription) {
         this.modelPackageGroupDescription = modelPackageGroupDescription;
         return this;
@@ -53,6 +57,7 @@ public class DescribeModelPackageGroupOutput {
     
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public DescribeModelPackageGroupOutput withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -60,9 +65,17 @@ public class DescribeModelPackageGroupOutput {
     
     @JsonProperty("ModelPackageGroupStatus")
     public ModelPackageGroupStatusEnum modelPackageGroupStatus;
+
     public DescribeModelPackageGroupOutput withModelPackageGroupStatus(ModelPackageGroupStatusEnum modelPackageGroupStatus) {
         this.modelPackageGroupStatus = modelPackageGroupStatus;
         return this;
     }
     
+    public DescribeModelPackageGroupOutput(@JsonProperty("CreatedBy") UserContext createdBy, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelPackageGroupArn") String modelPackageGroupArn, @JsonProperty("ModelPackageGroupName") String modelPackageGroupName, @JsonProperty("ModelPackageGroupStatus") ModelPackageGroupStatusEnum modelPackageGroupStatus) {
+        this.createdBy = createdBy;
+        this.creationTime = creationTime;
+        this.modelPackageGroupArn = modelPackageGroupArn;
+        this.modelPackageGroupName = modelPackageGroupName;
+        this.modelPackageGroupStatus = modelPackageGroupStatus;
+  }
 }

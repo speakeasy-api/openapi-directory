@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddFileLinks1Request {
@@ -12,6 +13,7 @@ public class AddFileLinks1Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FileLinkCategorizationsDto fileLinkCategorizationsDto;
+
     public AddFileLinks1Request withFileLinkCategorizationsDto(org.openapis.openapi.models.shared.FileLinkCategorizationsDto fileLinkCategorizationsDto) {
         this.fileLinkCategorizationsDto = fileLinkCategorizationsDto;
         return this;
@@ -22,9 +24,14 @@ public class AddFileLinks1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public AddFileLinks1Request withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public AddFileLinks1Request(@JsonProperty("FileLinkCategorizationsDto") org.openapis.openapi.models.shared.FileLinkCategorizationsDto fileLinkCategorizationsDto, @JsonProperty("projectId") String projectId) {
+        this.fileLinkCategorizationsDto = fileLinkCategorizationsDto;
+        this.projectId = projectId;
+  }
 }

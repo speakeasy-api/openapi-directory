@@ -18,6 +18,7 @@ public class CaptionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public CaptionListResponse withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class CaptionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public CaptionListResponse withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -40,6 +42,7 @@ public class CaptionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Caption[] items;
+
     public CaptionListResponse withItems(Caption[] items) {
         this.items = items;
         return this;
@@ -51,6 +54,7 @@ public class CaptionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CaptionListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,9 +66,11 @@ public class CaptionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitorId")
     public String visitorId;
+
     public CaptionListResponse withVisitorId(String visitorId) {
         this.visitorId = visitorId;
         return this;
     }
     
+    public CaptionListResponse(){}
 }

@@ -48,11 +48,9 @@ public class Books {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBooksResponse res = new org.openapis.openapi.models.operations.GetBooksResponse() {{
+        org.openapis.openapi.models.operations.GetBooksResponse res = new org.openapis.openapi.models.operations.GetBooksResponse(contentType, httpRes.statusCode()) {{
             getBooks200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

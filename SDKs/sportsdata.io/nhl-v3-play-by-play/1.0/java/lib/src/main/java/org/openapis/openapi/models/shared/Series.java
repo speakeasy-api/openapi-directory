@@ -12,6 +12,7 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamWins")
     public Long awayTeamWins;
+
     public Series withAwayTeamWins(Long awayTeamWins) {
         this.awayTeamWins = awayTeamWins;
         return this;
@@ -20,6 +21,7 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameNumber")
     public Long gameNumber;
+
     public Series withGameNumber(Long gameNumber) {
         this.gameNumber = gameNumber;
         return this;
@@ -28,6 +30,7 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamWins")
     public Long homeTeamWins;
+
     public Series withHomeTeamWins(Long homeTeamWins) {
         this.homeTeamWins = homeTeamWins;
         return this;
@@ -36,9 +39,11 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxLength")
     public Long maxLength;
+
     public Series withMaxLength(Long maxLength) {
         this.maxLength = maxLength;
         return this;
     }
     
+    public Series(){}
 }

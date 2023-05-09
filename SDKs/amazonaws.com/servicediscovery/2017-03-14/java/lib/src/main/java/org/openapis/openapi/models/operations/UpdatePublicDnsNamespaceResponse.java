@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePublicDnsNamespaceResponse {
     
     public String contentType;
+
     public UpdatePublicDnsNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePublicDnsNamespaceResponse {
      */
     
     public Object duplicateRequest;
+
     public UpdatePublicDnsNamespaceResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePublicDnsNamespaceResponse {
      */
     
     public Object invalidInput;
+
     public UpdatePublicDnsNamespaceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePublicDnsNamespaceResponse {
      */
     
     public Object namespaceNotFound;
+
     public UpdatePublicDnsNamespaceResponse withNamespaceNotFound(Object namespaceNotFound) {
         this.namespaceNotFound = namespaceNotFound;
         return this;
@@ -49,6 +54,7 @@ public class UpdatePublicDnsNamespaceResponse {
      */
     
     public Object resourceInUse;
+
     public UpdatePublicDnsNamespaceResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -56,6 +62,7 @@ public class UpdatePublicDnsNamespaceResponse {
     
     
     public Integer statusCode;
+
     public UpdatePublicDnsNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePublicDnsNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePublicDnsNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdatePublicDnsNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePublicDnsNamespaceResponse updatePublicDnsNamespaceResponse;
+
     public UpdatePublicDnsNamespaceResponse withUpdatePublicDnsNamespaceResponse(org.openapis.openapi.models.shared.UpdatePublicDnsNamespaceResponse updatePublicDnsNamespaceResponse) {
         this.updatePublicDnsNamespaceResponse = updatePublicDnsNamespaceResponse;
         return this;
     }
     
+    public UpdatePublicDnsNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportAddressRequest {
     @JsonProperty("content")
     public Content content;
+
     public ImportAddressRequest withContent(Content content) {
         this.content = content;
         return this;
@@ -16,6 +17,7 @@ public class ImportAddressRequest {
     
     @JsonProperty("filename")
     public String filename;
+
     public ImportAddressRequest withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -23,9 +25,15 @@ public class ImportAddressRequest {
     
     @JsonProperty("password")
     public String password;
+
     public ImportAddressRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public ImportAddressRequest(@JsonProperty("content") Content content, @JsonProperty("filename") String filename, @JsonProperty("password") String password) {
+        this.content = content;
+        this.filename = filename;
+        this.password = password;
+  }
 }

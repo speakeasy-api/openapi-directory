@@ -12,6 +12,7 @@ public class PutRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PutRuleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class PutRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public PutRuleRequest withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -28,6 +30,7 @@ public class PutRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventPattern")
     public String eventPattern;
+
     public PutRuleRequest withEventPattern(String eventPattern) {
         this.eventPattern = eventPattern;
         return this;
@@ -35,6 +38,7 @@ public class PutRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public PutRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class PutRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public PutRuleRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -51,6 +56,7 @@ public class PutRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public PutRuleRequest withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -59,6 +65,7 @@ public class PutRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public RuleStateEnum state;
+
     public PutRuleRequest withState(RuleStateEnum state) {
         this.state = state;
         return this;
@@ -67,9 +74,13 @@ public class PutRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public PutRuleRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutRuleRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -56,13 +56,11 @@ public class Delete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeyRevokeResponse res = new org.openapis.openapi.models.operations.KeyRevokeResponse() {{
+        org.openapis.openapi.models.operations.KeyRevokeResponse res = new org.openapis.openapi.models.operations.KeyRevokeResponse(contentType, httpRes.statusCode()) {{
             keyRevoke200ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,13 +113,11 @@ public class Delete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeyRevokeNosecretResponse res = new org.openapis.openapi.models.operations.KeyRevokeNosecretResponse() {{
+        org.openapis.openapi.models.operations.KeyRevokeNosecretResponse res = new org.openapis.openapi.models.operations.KeyRevokeNosecretResponse(contentType, httpRes.statusCode()) {{
             keyRevokeNosecret200ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,13 +164,11 @@ public class Delete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignDeleteResponse res = new org.openapis.openapi.models.operations.SignDeleteResponse() {{
+        org.openapis.openapi.models.operations.SignDeleteResponse res = new org.openapis.openapi.models.operations.SignDeleteResponse(contentType, httpRes.statusCode()) {{
             signDelete200ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

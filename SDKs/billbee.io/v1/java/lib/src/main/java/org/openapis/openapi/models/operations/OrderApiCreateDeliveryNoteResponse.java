@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiCreateDeliveryNoteResponse {
     
     public String contentType;
+
     public OrderApiCreateDeliveryNoteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrderApiCreateDeliveryNoteResponse {
      */
     
     public java.util.Map<String, Object> orderApiCreateDeliveryNote200ApplicationJSONObject;
+
     public OrderApiCreateDeliveryNoteResponse withOrderApiCreateDeliveryNote200ApplicationJSONObject(java.util.Map<String, Object> orderApiCreateDeliveryNote200ApplicationJSONObject) {
         this.orderApiCreateDeliveryNote200ApplicationJSONObject = orderApiCreateDeliveryNote200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class OrderApiCreateDeliveryNoteResponse {
      */
     
     public java.util.Map<String, Object> orderApiCreateDeliveryNote200TextJSONObject;
+
     public OrderApiCreateDeliveryNoteResponse withOrderApiCreateDeliveryNote200TextJSONObject(java.util.Map<String, Object> orderApiCreateDeliveryNote200TextJSONObject) {
         this.orderApiCreateDeliveryNote200TextJSONObject = orderApiCreateDeliveryNote200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class OrderApiCreateDeliveryNoteResponse {
     
     
     public Integer statusCode;
+
     public OrderApiCreateDeliveryNoteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class OrderApiCreateDeliveryNoteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiCreateDeliveryNoteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiCreateDeliveryNoteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

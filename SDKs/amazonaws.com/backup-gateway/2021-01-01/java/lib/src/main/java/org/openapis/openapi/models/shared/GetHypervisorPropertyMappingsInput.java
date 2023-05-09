@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetHypervisorPropertyMappingsInput {
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public GetHypervisorPropertyMappingsInput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
     }
     
+    public GetHypervisorPropertyMappingsInput(@JsonProperty("HypervisorArn") String hypervisorArn) {
+        this.hypervisorArn = hypervisorArn;
+  }
 }

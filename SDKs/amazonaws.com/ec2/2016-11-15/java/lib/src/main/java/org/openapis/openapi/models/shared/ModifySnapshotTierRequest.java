@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifySnapshotTierRequest {
     
     public Boolean dryRun;
+
     public ModifySnapshotTierRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifySnapshotTierRequest {
     
     
     public String snapshotId;
+
     public ModifySnapshotTierRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -23,9 +25,13 @@ public class ModifySnapshotTierRequest {
     
     
     public TargetStorageTierEnum storageTier;
+
     public ModifySnapshotTierRequest withStorageTier(TargetStorageTierEnum storageTier) {
         this.storageTier = storageTier;
         return this;
     }
     
+    public ModifySnapshotTierRequest(@JsonProperty("SnapshotId") String snapshotId) {
+        this.snapshotId = snapshotId;
+  }
 }

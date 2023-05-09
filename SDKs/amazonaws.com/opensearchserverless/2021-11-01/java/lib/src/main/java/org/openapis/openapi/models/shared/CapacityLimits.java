@@ -15,6 +15,7 @@ public class CapacityLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxIndexingCapacityInOCU")
     public Long maxIndexingCapacityInOCU;
+
     public CapacityLimits withMaxIndexingCapacityInOCU(Long maxIndexingCapacityInOCU) {
         this.maxIndexingCapacityInOCU = maxIndexingCapacityInOCU;
         return this;
@@ -23,9 +24,11 @@ public class CapacityLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSearchCapacityInOCU")
     public Long maxSearchCapacityInOCU;
+
     public CapacityLimits withMaxSearchCapacityInOCU(Long maxSearchCapacityInOCU) {
         this.maxSearchCapacityInOCU = maxSearchCapacityInOCU;
         return this;
     }
     
+    public CapacityLimits(){}
 }

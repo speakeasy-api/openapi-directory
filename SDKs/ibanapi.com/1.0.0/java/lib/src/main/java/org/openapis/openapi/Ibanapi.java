@@ -36,10 +36,11 @@ public class Ibanapi {
     /**
      * Get Account Balance
      * Returns the account balance and expiry
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBalanceResponse getBalance() throws Exception {
+    public org.openapis.openapi.models.operations.GetBalanceResponse getBalance(org.openapis.openapi.models.operations.GetBalanceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/balance");
         
@@ -48,20 +49,19 @@ public class Ibanapi {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBalanceResponse res = new org.openapis.openapi.models.operations.GetBalanceResponse() {{
+        org.openapis.openapi.models.operations.GetBalanceResponse res = new org.openapis.openapi.models.operations.GetBalanceResponse(contentType, httpRes.statusCode()) {{
             balanceResponse = null;
             fourHundred = null;
             fourHundredAndOne = null;
             fourHundredAndThree = null;
             fourHundredAndTwentyTwo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,15 +132,13 @@ public class Ibanapi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValidateIBANResponse res = new org.openapis.openapi.models.operations.ValidateIBANResponse() {{
+        org.openapis.openapi.models.operations.ValidateIBANResponse res = new org.openapis.openapi.models.operations.ValidateIBANResponse(contentType, httpRes.statusCode()) {{
             ibanResult = null;
             fourHundred = null;
             fourHundredAndOne = null;
             fourHundredAndThree = null;
             fourHundredAndTwentyTwo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,15 +209,13 @@ public class Ibanapi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValidateIBANBasicResponse res = new org.openapis.openapi.models.operations.ValidateIBANBasicResponse() {{
+        org.openapis.openapi.models.operations.ValidateIBANBasicResponse res = new org.openapis.openapi.models.operations.ValidateIBANBasicResponse(contentType, httpRes.statusCode()) {{
             ibanResultBasic = null;
             fourHundred = null;
             fourHundredAndOne = null;
             fourHundredAndThree = null;
             fourHundredAndTwentyTwo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

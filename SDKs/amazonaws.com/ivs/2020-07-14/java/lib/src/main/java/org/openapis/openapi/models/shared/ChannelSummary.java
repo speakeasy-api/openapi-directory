@@ -15,6 +15,7 @@ public class ChannelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ChannelSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,14 +24,25 @@ public class ChannelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorized")
     public Boolean authorized;
+
     public ChannelSummary withAuthorized(Boolean authorized) {
         this.authorized = authorized;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("insecureIngest")
+    public Boolean insecureIngest;
+
+    public ChannelSummary withInsecureIngest(Boolean insecureIngest) {
+        this.insecureIngest = insecureIngest;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latencyMode")
     public ChannelLatencyModeEnum latencyMode;
+
     public ChannelSummary withLatencyMode(ChannelLatencyModeEnum latencyMode) {
         this.latencyMode = latencyMode;
         return this;
@@ -39,6 +51,7 @@ public class ChannelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChannelSummary withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +60,7 @@ public class ChannelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordingConfigurationArn")
     public String recordingConfigurationArn;
+
     public ChannelSummary withRecordingConfigurationArn(String recordingConfigurationArn) {
         this.recordingConfigurationArn = recordingConfigurationArn;
         return this;
@@ -55,9 +69,11 @@ public class ChannelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ChannelSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ChannelSummary(){}
 }

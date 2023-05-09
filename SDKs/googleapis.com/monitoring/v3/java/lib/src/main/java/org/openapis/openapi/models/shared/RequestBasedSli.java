@@ -18,6 +18,7 @@ public class RequestBasedSli {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionCut")
     public DistributionCut distributionCut;
+
     public RequestBasedSli withDistributionCut(DistributionCut distributionCut) {
         this.distributionCut = distributionCut;
         return this;
@@ -29,9 +30,11 @@ public class RequestBasedSli {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goodTotalRatio")
     public TimeSeriesRatio goodTotalRatio;
+
     public RequestBasedSli withGoodTotalRatio(TimeSeriesRatio goodTotalRatio) {
         this.goodTotalRatio = goodTotalRatio;
         return this;
     }
     
+    public RequestBasedSli(){}
 }

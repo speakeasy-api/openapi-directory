@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDexIdsDexIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dexId")
     public String dexId;
+
     public GetDexIdsDexIdRequest withDexId(String dexId) {
         this.dexId = dexId;
         return this;
     }
     
+    public GetDexIdsDexIdRequest(@JsonProperty("dexId") String dexId) {
+        this.dexId = dexId;
+  }
 }

@@ -22,6 +22,7 @@ public class ListDeviceCodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListDeviceCodesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -33,6 +34,7 @@ public class ListDeviceCodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_codes")
     public DeviceCode[] deviceCodes;
+
     public ListDeviceCodesResponse withDeviceCodes(DeviceCode[] deviceCodes) {
         this.deviceCodes = deviceCodes;
         return this;
@@ -44,9 +46,11 @@ public class ListDeviceCodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListDeviceCodesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ListDeviceCodesResponse(){}
 }

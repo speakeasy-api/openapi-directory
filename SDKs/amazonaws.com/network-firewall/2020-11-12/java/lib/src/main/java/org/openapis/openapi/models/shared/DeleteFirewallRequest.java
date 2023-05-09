@@ -12,6 +12,7 @@ public class DeleteFirewallRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public DeleteFirewallRequest withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -20,9 +21,11 @@ public class DeleteFirewallRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public DeleteFirewallRequest withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
     }
     
+    public DeleteFirewallRequest(){}
 }

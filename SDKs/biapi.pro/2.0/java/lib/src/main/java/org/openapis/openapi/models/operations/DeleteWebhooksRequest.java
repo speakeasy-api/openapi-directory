@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeleteWebhooksRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public DeleteWebhooksRequest withExpand(String expand) {
         this.expand = expand;
         return this;
     }
     
+    public DeleteWebhooksRequest(){}
 }

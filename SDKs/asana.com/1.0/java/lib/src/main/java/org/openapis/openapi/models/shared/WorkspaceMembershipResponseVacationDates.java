@@ -18,6 +18,7 @@ public class WorkspaceMembershipResponseVacationDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_on")
     public String endOn;
+
     public WorkspaceMembershipResponseVacationDates withEndOn(String endOn) {
         this.endOn = endOn;
         return this;
@@ -29,9 +30,11 @@ public class WorkspaceMembershipResponseVacationDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_on")
     public String startOn;
+
     public WorkspaceMembershipResponseVacationDates withStartOn(String startOn) {
         this.startOn = startOn;
         return this;
     }
     
+    public WorkspaceMembershipResponseVacationDates(){}
 }

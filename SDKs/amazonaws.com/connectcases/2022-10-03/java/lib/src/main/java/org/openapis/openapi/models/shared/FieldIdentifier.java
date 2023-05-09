@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FieldIdentifier {
     @JsonProperty("id")
     public String id;
+
     public FieldIdentifier withId(String id) {
         this.id = id;
         return this;
     }
     
+    public FieldIdentifier(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

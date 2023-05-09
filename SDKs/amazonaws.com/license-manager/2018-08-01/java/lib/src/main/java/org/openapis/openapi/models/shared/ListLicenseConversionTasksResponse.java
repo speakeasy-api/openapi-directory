@@ -15,6 +15,7 @@ public class ListLicenseConversionTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConversionTasks")
     public LicenseConversionTask[] licenseConversionTasks;
+
     public ListLicenseConversionTasksResponse withLicenseConversionTasks(LicenseConversionTask[] licenseConversionTasks) {
         this.licenseConversionTasks = licenseConversionTasks;
         return this;
@@ -23,9 +24,11 @@ public class ListLicenseConversionTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLicenseConversionTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLicenseConversionTasksResponse(){}
 }

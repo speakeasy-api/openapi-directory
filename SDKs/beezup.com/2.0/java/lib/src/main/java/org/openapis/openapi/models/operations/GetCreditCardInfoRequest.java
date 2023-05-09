@@ -16,9 +16,11 @@ public class GetCreditCardInfoRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetCreditCardInfoRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    public GetCreditCardInfoRequest(){}
 }

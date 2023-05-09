@@ -15,9 +15,11 @@ public class TaskCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public TaskCredentials withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public TaskCredentials(){}
 }

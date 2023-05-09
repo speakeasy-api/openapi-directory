@@ -18,6 +18,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngineHttpTarget")
     public AppEngineHttpTarget appEngineHttpTarget;
+
     public Queue withAppEngineHttpTarget(AppEngineHttpTarget appEngineHttpTarget) {
         this.appEngineHttpTarget = appEngineHttpTarget;
         return this;
@@ -29,6 +30,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpTarget")
     public HttpTarget httpTarget;
+
     public Queue withHttpTarget(HttpTarget httpTarget) {
         this.httpTarget = httpTarget;
         return this;
@@ -40,6 +42,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Queue withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullTarget")
     public java.util.Map<String, Object> pullTarget;
+
     public Queue withPullTarget(java.util.Map<String, Object> pullTarget) {
         this.pullTarget = pullTarget;
         return this;
@@ -62,6 +66,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purgeTime")
     public String purgeTime;
+
     public Queue withPurgeTime(String purgeTime) {
         this.purgeTime = purgeTime;
         return this;
@@ -73,6 +78,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateLimits")
     public RateLimits rateLimits;
+
     public Queue withRateLimits(RateLimits rateLimits) {
         this.rateLimits = rateLimits;
         return this;
@@ -84,6 +90,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryConfig")
     public RetryConfig retryConfig;
+
     public Queue withRetryConfig(RetryConfig retryConfig) {
         this.retryConfig = retryConfig;
         return this;
@@ -95,6 +102,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public QueueStateEnum state;
+
     public Queue withState(QueueStateEnum state) {
         this.state = state;
         return this;
@@ -106,6 +114,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public QueueStats stats;
+
     public Queue withStats(QueueStats stats) {
         this.stats = stats;
         return this;
@@ -117,6 +126,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskTtl")
     public String taskTtl;
+
     public Queue withTaskTtl(String taskTtl) {
         this.taskTtl = taskTtl;
         return this;
@@ -128,9 +138,11 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tombstoneTtl")
     public String tombstoneTtl;
+
     public Queue withTombstoneTtl(String tombstoneTtl) {
         this.tombstoneTtl = tombstoneTtl;
         return this;
     }
     
+    public Queue(){}
 }

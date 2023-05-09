@@ -15,6 +15,7 @@ public class CreateSubscriberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArn")
     public String resourceShareArn;
+
     public CreateSubscriberResponse withResourceShareArn(String resourceShareArn) {
         this.resourceShareArn = resourceShareArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateSubscriberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareName")
     public String resourceShareName;
+
     public CreateSubscriberResponse withResourceShareName(String resourceShareName) {
         this.resourceShareName = resourceShareName;
         return this;
@@ -31,6 +33,7 @@ public class CreateSubscriberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateSubscriberResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -39,6 +42,7 @@ public class CreateSubscriberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketArn")
     public String s3BucketArn;
+
     public CreateSubscriberResponse withS3BucketArn(String s3BucketArn) {
         this.s3BucketArn = s3BucketArn;
         return this;
@@ -47,6 +51,7 @@ public class CreateSubscriberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snsArn")
     public String snsArn;
+
     public CreateSubscriberResponse withSnsArn(String snsArn) {
         this.snsArn = snsArn;
         return this;
@@ -54,9 +59,13 @@ public class CreateSubscriberResponse {
     
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public CreateSubscriberResponse withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public CreateSubscriberResponse(@JsonProperty("subscriptionId") String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+  }
 }

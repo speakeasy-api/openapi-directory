@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition {
     
     public String description;
+
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition {
     
     
     public Boolean hasIcon;
+
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition withHasIcon(Boolean hasIcon) {
         this.hasIcon = hasIcon;
         return this;
@@ -29,6 +31,7 @@ public class DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition {
      */
     
     public String highResIcon;
+
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition withHighResIcon(String highResIcon) {
         this.highResIcon = highResIcon;
         return this;
@@ -41,6 +44,7 @@ public class DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition {
      */
     
     public String icon;
+
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -48,6 +52,7 @@ public class DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition {
     
     
     public DestinyDefinitionsCommonDestinyIconSequenceDefinition[] iconSequences;
+
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition withIconSequences(DestinyDefinitionsCommonDestinyIconSequenceDefinition[] iconSequences) {
         this.iconSequences = iconSequences;
         return this;
@@ -55,9 +60,11 @@ public class DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition {
     
     
     public String name;
+
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SpotOptionsRequest {
     
     public SpotAllocationStrategyEnum allocationStrategy;
+
     public SpotOptionsRequest withAllocationStrategy(SpotAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -19,6 +20,7 @@ public class SpotOptionsRequest {
     
     
     public SpotInstanceInterruptionBehaviorEnum instanceInterruptionBehavior;
+
     public SpotOptionsRequest withInstanceInterruptionBehavior(SpotInstanceInterruptionBehaviorEnum instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -26,6 +28,7 @@ public class SpotOptionsRequest {
     
     
     public Long instancePoolsToUseCount;
+
     public SpotOptionsRequest withInstancePoolsToUseCount(Long instancePoolsToUseCount) {
         this.instancePoolsToUseCount = instancePoolsToUseCount;
         return this;
@@ -33,6 +36,7 @@ public class SpotOptionsRequest {
     
     
     public FleetSpotMaintenanceStrategiesRequest maintenanceStrategies;
+
     public SpotOptionsRequest withMaintenanceStrategies(FleetSpotMaintenanceStrategiesRequest maintenanceStrategies) {
         this.maintenanceStrategies = maintenanceStrategies;
         return this;
@@ -40,6 +44,7 @@ public class SpotOptionsRequest {
     
     
     public String maxTotalPrice;
+
     public SpotOptionsRequest withMaxTotalPrice(String maxTotalPrice) {
         this.maxTotalPrice = maxTotalPrice;
         return this;
@@ -47,6 +52,7 @@ public class SpotOptionsRequest {
     
     
     public Long minTargetCapacity;
+
     public SpotOptionsRequest withMinTargetCapacity(Long minTargetCapacity) {
         this.minTargetCapacity = minTargetCapacity;
         return this;
@@ -54,6 +60,7 @@ public class SpotOptionsRequest {
     
     
     public Boolean singleAvailabilityZone;
+
     public SpotOptionsRequest withSingleAvailabilityZone(Boolean singleAvailabilityZone) {
         this.singleAvailabilityZone = singleAvailabilityZone;
         return this;
@@ -61,9 +68,11 @@ public class SpotOptionsRequest {
     
     
     public Boolean singleInstanceType;
+
     public SpotOptionsRequest withSingleInstanceType(Boolean singleInstanceType) {
         this.singleInstanceType = singleInstanceType;
         return this;
     }
     
+    public SpotOptionsRequest(){}
 }

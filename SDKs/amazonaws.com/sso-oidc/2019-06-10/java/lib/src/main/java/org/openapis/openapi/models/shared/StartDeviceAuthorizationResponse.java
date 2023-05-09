@@ -15,6 +15,7 @@ public class StartDeviceAuthorizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCode")
     public String deviceCode;
+
     public StartDeviceAuthorizationResponse withDeviceCode(String deviceCode) {
         this.deviceCode = deviceCode;
         return this;
@@ -23,6 +24,7 @@ public class StartDeviceAuthorizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresIn")
     public Long expiresIn;
+
     public StartDeviceAuthorizationResponse withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -31,6 +33,7 @@ public class StartDeviceAuthorizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Long interval;
+
     public StartDeviceAuthorizationResponse withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -39,6 +42,7 @@ public class StartDeviceAuthorizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userCode")
     public String userCode;
+
     public StartDeviceAuthorizationResponse withUserCode(String userCode) {
         this.userCode = userCode;
         return this;
@@ -47,6 +51,7 @@ public class StartDeviceAuthorizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationUri")
     public String verificationUri;
+
     public StartDeviceAuthorizationResponse withVerificationUri(String verificationUri) {
         this.verificationUri = verificationUri;
         return this;
@@ -55,9 +60,11 @@ public class StartDeviceAuthorizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationUriComplete")
     public String verificationUriComplete;
+
     public StartDeviceAuthorizationResponse withVerificationUriComplete(String verificationUriComplete) {
         this.verificationUriComplete = verificationUriComplete;
         return this;
     }
     
+    public StartDeviceAuthorizationResponse(){}
 }

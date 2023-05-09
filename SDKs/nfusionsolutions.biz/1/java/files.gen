@@ -96,4 +96,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Rate.java
 lib/src/main/java/org/openapis/openapi/models/shared/SummaryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Summary.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/currencies/README.md
+docs/metals/README.md
 USAGE.md

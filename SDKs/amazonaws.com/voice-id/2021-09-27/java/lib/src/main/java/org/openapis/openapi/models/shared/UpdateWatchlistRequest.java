@@ -12,6 +12,7 @@ public class UpdateWatchlistRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateWatchlistRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateWatchlistRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public UpdateWatchlistRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateWatchlistRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateWatchlistRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,9 +37,14 @@ public class UpdateWatchlistRequest {
     
     @JsonProperty("WatchlistId")
     public String watchlistId;
+
     public UpdateWatchlistRequest withWatchlistId(String watchlistId) {
         this.watchlistId = watchlistId;
         return this;
     }
     
+    public UpdateWatchlistRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("WatchlistId") String watchlistId) {
+        this.domainId = domainId;
+        this.watchlistId = watchlistId;
+  }
 }

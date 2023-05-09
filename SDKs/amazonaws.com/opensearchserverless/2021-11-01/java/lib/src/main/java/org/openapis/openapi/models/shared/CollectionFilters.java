@@ -15,6 +15,7 @@ public class CollectionFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CollectionFilters withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class CollectionFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CollectionStatusEnum status;
+
     public CollectionFilters withStatus(CollectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CollectionFilters(){}
 }

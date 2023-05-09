@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetHypervisorPropertyMappingsResponse {
     
     public String contentType;
+
     public GetHypervisorPropertyMappingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetHypervisorPropertyMappingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetHypervisorPropertyMappingsOutput getHypervisorPropertyMappingsOutput;
+
     public GetHypervisorPropertyMappingsResponse withGetHypervisorPropertyMappingsOutput(org.openapis.openapi.models.shared.GetHypervisorPropertyMappingsOutput getHypervisorPropertyMappingsOutput) {
         this.getHypervisorPropertyMappingsOutput = getHypervisorPropertyMappingsOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetHypervisorPropertyMappingsResponse {
      */
     
     public Object internalServerException;
+
     public GetHypervisorPropertyMappingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetHypervisorPropertyMappingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetHypervisorPropertyMappingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetHypervisorPropertyMappingsResponse {
     
     
     public Integer statusCode;
+
     public GetHypervisorPropertyMappingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetHypervisorPropertyMappingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetHypervisorPropertyMappingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetHypervisorPropertyMappingsResponse {
      */
     
     public Object throttlingException;
+
     public GetHypervisorPropertyMappingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetHypervisorPropertyMappingsResponse {
      */
     
     public Object validationException;
+
     public GetHypervisorPropertyMappingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetHypervisorPropertyMappingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

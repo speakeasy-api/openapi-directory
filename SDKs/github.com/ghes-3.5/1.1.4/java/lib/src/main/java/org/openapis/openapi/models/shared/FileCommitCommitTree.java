@@ -12,6 +12,7 @@ public class FileCommitCommitTree {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha")
     public String sha;
+
     public FileCommitCommitTree withSha(String sha) {
         this.sha = sha;
         return this;
@@ -20,9 +21,11 @@ public class FileCommitCommitTree {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FileCommitCommitTree withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FileCommitCommitTree(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
@@ -12,6 +13,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Principal principal;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withPrincipal(org.openapis.openapi.models.shared.Principal principal) {
         this.principal = principal;
         return this;
@@ -29,6 +32,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=debugOptions.enableDebugging")
     public Boolean debugOptionsEnableDebugging;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withDebugOptionsEnableDebugging(Boolean debugOptionsEnableDebugging) {
         this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
         return this;
@@ -69,6 +76,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +109,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudsearchDebugDatasourcesItemsCheckAccessRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

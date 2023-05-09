@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthOnInitJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthOnInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthOnInitJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05UsersAuthOnInitJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientAuthInitResponse patientAuthInitResponse;
+
     public PostV05UsersAuthOnInitJsonRequest withPatientAuthInitResponse(org.openapis.openapi.models.shared.PatientAuthInitResponse patientAuthInitResponse) {
         this.patientAuthInitResponse = patientAuthInitResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostV05UsersAuthOnInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05UsersAuthOnInitJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
@@ -39,9 +43,16 @@ public class PostV05UsersAuthOnInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05UsersAuthOnInitJsonRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05UsersAuthOnInitJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientAuthInitResponse") org.openapis.openapi.models.shared.PatientAuthInitResponse patientAuthInitResponse, @JsonProperty("X-HIP-ID") String xHipId, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.patientAuthInitResponse = patientAuthInitResponse;
+        this.xHipId = xHipId;
+        this.xHiuId = xHiuId;
+  }
 }

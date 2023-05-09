@@ -465,4 +465,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetSearchApplicationSession
 lib/src/main/java/org/openapis/openapi/models/shared/SearchApplicationSessionStats.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetSearchApplicationUserStatsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchApplicationUserStats.java
+docs/sdk/README.md
+docs/debug/README.md
+docs/indexing/README.md
+docs/media/README.md
+docs/operations/README.md
+docs/query/README.md
+docs/settings/README.md
+docs/stats/README.md
+docs/v1/README.md
 USAGE.md

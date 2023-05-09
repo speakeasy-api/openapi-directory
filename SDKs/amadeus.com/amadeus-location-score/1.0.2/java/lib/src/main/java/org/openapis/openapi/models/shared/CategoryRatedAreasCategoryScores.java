@@ -18,6 +18,7 @@ public class CategoryRatedAreasCategoryScores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nightLife")
     public CategoryRatedAreasCategoryScoresNightLife nightLife;
+
     public CategoryRatedAreasCategoryScores withNightLife(CategoryRatedAreasCategoryScoresNightLife nightLife) {
         this.nightLife = nightLife;
         return this;
@@ -29,6 +30,7 @@ public class CategoryRatedAreasCategoryScores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restaurant")
     public CategoryRatedAreasCategoryScoresRestaurant restaurant;
+
     public CategoryRatedAreasCategoryScores withRestaurant(CategoryRatedAreasCategoryScoresRestaurant restaurant) {
         this.restaurant = restaurant;
         return this;
@@ -40,6 +42,7 @@ public class CategoryRatedAreasCategoryScores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopping")
     public CategoryRatedAreasCategoryScoresShopping shopping;
+
     public CategoryRatedAreasCategoryScores withShopping(CategoryRatedAreasCategoryScoresShopping shopping) {
         this.shopping = shopping;
         return this;
@@ -51,9 +54,11 @@ public class CategoryRatedAreasCategoryScores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sight")
     public CategoryRatedAreasCategoryScoresSight sight;
+
     public CategoryRatedAreasCategoryScores withSight(CategoryRatedAreasCategoryScoresSight sight) {
         this.sight = sight;
         return this;
     }
     
+    public CategoryRatedAreasCategoryScores(){}
 }

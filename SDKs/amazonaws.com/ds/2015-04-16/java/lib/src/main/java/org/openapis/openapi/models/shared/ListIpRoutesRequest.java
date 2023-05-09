@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListIpRoutesRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public ListIpRoutesRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,6 +20,7 @@ public class ListIpRoutesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListIpRoutesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,9 +29,13 @@ public class ListIpRoutesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIpRoutesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIpRoutesRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

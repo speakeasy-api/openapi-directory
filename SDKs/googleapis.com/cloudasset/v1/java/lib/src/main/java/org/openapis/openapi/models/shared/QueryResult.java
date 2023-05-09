@@ -18,6 +18,7 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public QueryResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public java.util.Map<String, Object>[] rows;
+
     public QueryResult withRows(java.util.Map<String, Object>[] rows) {
         this.rows = rows;
         return this;
@@ -40,6 +42,7 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public TableSchema schema;
+
     public QueryResult withSchema(TableSchema schema) {
         this.schema = schema;
         return this;
@@ -51,9 +54,11 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRows")
     public String totalRows;
+
     public QueryResult withTotalRows(String totalRows) {
         this.totalRows = totalRows;
         return this;
     }
     
+    public QueryResult(){}
 }

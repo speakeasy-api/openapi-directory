@@ -15,6 +15,7 @@ public class OrderAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public OrderAttachmentApiModel withLink(String link) {
         this.link = link;
         return this;
@@ -26,6 +27,7 @@ public class OrderAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObfuscatedFileName")
     public String obfuscatedFileName;
+
     public OrderAttachmentApiModel withObfuscatedFileName(String obfuscatedFileName) {
         this.obfuscatedFileName = obfuscatedFileName;
         return this;
@@ -37,6 +39,7 @@ public class OrderAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalFileName")
     public String originalFileName;
+
     public OrderAttachmentApiModel withOriginalFileName(String originalFileName) {
         this.originalFileName = originalFileName;
         return this;
@@ -48,6 +51,7 @@ public class OrderAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public OrderAttachmentApiModel withSize(Long size) {
         this.size = size;
         return this;
@@ -59,9 +63,11 @@ public class OrderAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OrderAttachmentApiModelTypeEnum type;
+
     public OrderAttachmentApiModel withType(OrderAttachmentApiModelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OrderAttachmentApiModel(){}
 }

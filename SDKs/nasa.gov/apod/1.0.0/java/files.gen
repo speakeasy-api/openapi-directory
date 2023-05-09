@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetApodSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApodRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApodResponse.java
+docs/sdk/README.md
+docs/requesttag/README.md
 USAGE.md

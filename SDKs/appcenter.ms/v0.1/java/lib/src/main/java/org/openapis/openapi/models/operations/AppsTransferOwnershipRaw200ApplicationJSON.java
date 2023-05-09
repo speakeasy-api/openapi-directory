@@ -17,6 +17,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -25,6 +26,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public AppsTransferOwnershipRaw200ApplicationJSONAzureSubscription azureSubscription;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withAzureSubscription(AppsTransferOwnershipRaw200ApplicationJSONAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -36,6 +38,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +50,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +61,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -68,6 +73,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -79,6 +85,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -89,6 +96,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum[] memberPermissions;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withMemberPermissions(AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -110,6 +119,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +130,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
      */
     @JsonProperty("origin")
     public AppsTransferOwnershipRaw200ApplicationJSONOriginEnum origin;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withOrigin(AppsTransferOwnershipRaw200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -130,6 +141,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
      */
     @JsonProperty("os")
     public AppsTransferOwnershipRaw200ApplicationJSONOsEnum os;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withOs(AppsTransferOwnershipRaw200ApplicationJSONOsEnum os) {
         this.os = os;
         return this;
@@ -140,6 +152,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
      */
     @JsonProperty("owner")
     public AppsTransferOwnershipRaw200ApplicationJSONOwner owner;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withOwner(AppsTransferOwnershipRaw200ApplicationJSONOwner owner) {
         this.owner = owner;
         return this;
@@ -150,6 +163,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
      */
     @JsonProperty("platform")
     public AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum platform;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withPlatform(AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -161,6 +175,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -172,9 +187,20 @@ public class AppsTransferOwnershipRaw200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public AppsTransferOwnershipRaw200ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AppsTransferOwnershipRaw200ApplicationJSON(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") AppsTransferOwnershipRaw200ApplicationJSONOriginEnum origin, @JsonProperty("os") AppsTransferOwnershipRaw200ApplicationJSONOsEnum os, @JsonProperty("owner") AppsTransferOwnershipRaw200ApplicationJSONOwner owner, @JsonProperty("platform") AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

@@ -15,6 +15,7 @@ public class ListWorkflowStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorkflowStepsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListWorkflowStepsResponse {
     
     @JsonProperty("workflowStepsSummary")
     public WorkflowStepSummary[] workflowStepsSummary;
+
     public ListWorkflowStepsResponse withWorkflowStepsSummary(WorkflowStepSummary[] workflowStepsSummary) {
         this.workflowStepsSummary = workflowStepsSummary;
         return this;
     }
     
+    public ListWorkflowStepsResponse(@JsonProperty("workflowStepsSummary") WorkflowStepSummary[] workflowStepsSummary) {
+        this.workflowStepsSummary = workflowStepsSummary;
+  }
 }

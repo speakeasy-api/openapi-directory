@@ -15,9 +15,11 @@ public class DeregisterOrganizationAdminAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminAccountId")
     public String adminAccountId;
+
     public DeregisterOrganizationAdminAccountRequestBody withAdminAccountId(String adminAccountId) {
         this.adminAccountId = adminAccountId;
         return this;
     }
     
+    public DeregisterOrganizationAdminAccountRequestBody(){}
 }

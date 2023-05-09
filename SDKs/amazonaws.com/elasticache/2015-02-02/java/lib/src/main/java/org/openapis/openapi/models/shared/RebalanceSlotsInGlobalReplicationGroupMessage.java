@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RebalanceSlotsInGlobalReplicationGroupMessage {
     
     public Boolean applyImmediately;
+
     public RebalanceSlotsInGlobalReplicationGroupMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -16,9 +17,14 @@ public class RebalanceSlotsInGlobalReplicationGroupMessage {
     
     
     public String globalReplicationGroupId;
+
     public RebalanceSlotsInGlobalReplicationGroupMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
     }
     
+    public RebalanceSlotsInGlobalReplicationGroupMessage(@JsonProperty("ApplyImmediately") Boolean applyImmediately, @JsonProperty("GlobalReplicationGroupId") String globalReplicationGroupId) {
+        this.applyImmediately = applyImmediately;
+        this.globalReplicationGroupId = globalReplicationGroupId;
+  }
 }

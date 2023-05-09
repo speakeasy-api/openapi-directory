@@ -14,6 +14,7 @@ public class StartNetworkResourceUpdateRequestBody {
      */
     @JsonProperty("networkResourceArn")
     public String networkResourceArn;
+
     public StartNetworkResourceUpdateRequestBody withNetworkResourceArn(String networkResourceArn) {
         this.networkResourceArn = networkResourceArn;
         return this;
@@ -25,6 +26,7 @@ public class StartNetworkResourceUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnReason")
     public String returnReason;
+
     public StartNetworkResourceUpdateRequestBody withReturnReason(String returnReason) {
         this.returnReason = returnReason;
         return this;
@@ -36,6 +38,7 @@ public class StartNetworkResourceUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingAddress")
     public StartNetworkResourceUpdateRequestBodyShippingAddress shippingAddress;
+
     public StartNetworkResourceUpdateRequestBody withShippingAddress(StartNetworkResourceUpdateRequestBodyShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -46,9 +49,14 @@ public class StartNetworkResourceUpdateRequestBody {
      */
     @JsonProperty("updateType")
     public StartNetworkResourceUpdateRequestBodyUpdateTypeEnum updateType;
+
     public StartNetworkResourceUpdateRequestBody withUpdateType(StartNetworkResourceUpdateRequestBodyUpdateTypeEnum updateType) {
         this.updateType = updateType;
         return this;
     }
     
+    public StartNetworkResourceUpdateRequestBody(@JsonProperty("networkResourceArn") String networkResourceArn, @JsonProperty("updateType") StartNetworkResourceUpdateRequestBodyUpdateTypeEnum updateType) {
+        this.networkResourceArn = networkResourceArn;
+        this.updateType = updateType;
+  }
 }

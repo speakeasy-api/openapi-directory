@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum action;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withAction(POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum version;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withVersion(POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationReq
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest(@JsonProperty("Action") POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum action, @JsonProperty("Version") POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

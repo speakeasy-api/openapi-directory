@@ -18,6 +18,7 @@ public class AttributeScores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spanScores")
     public SpanScore[] spanScores;
+
     public AttributeScores withSpanScores(SpanScore[] spanScores) {
         this.spanScores = spanScores;
         return this;
@@ -29,9 +30,11 @@ public class AttributeScores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaryScore")
     public Score summaryScore;
+
     public AttributeScores withSummaryScore(Score summaryScore) {
         this.summaryScore = summaryScore;
         return this;
     }
     
+    public AttributeScores(){}
 }

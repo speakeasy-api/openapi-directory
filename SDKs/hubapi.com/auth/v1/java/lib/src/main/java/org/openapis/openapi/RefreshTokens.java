@@ -43,11 +43,9 @@ public class RefreshTokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOauthV1RefreshTokensTokenArchiveResponse res = new org.openapis.openapi.models.operations.DeleteOauthV1RefreshTokensTokenArchiveResponse() {{
+        org.openapis.openapi.models.operations.DeleteOauthV1RefreshTokensTokenArchiveResponse res = new org.openapis.openapi.models.operations.DeleteOauthV1RefreshTokensTokenArchiveResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -76,12 +74,10 @@ public class RefreshTokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOauthV1RefreshTokensTokenGetResponse res = new org.openapis.openapi.models.operations.GetOauthV1RefreshTokensTokenGetResponse() {{
+        org.openapis.openapi.models.operations.GetOauthV1RefreshTokensTokenGetResponse res = new org.openapis.openapi.models.operations.GetOauthV1RefreshTokensTokenGetResponse(contentType, httpRes.statusCode()) {{
             refreshTokenInfoResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

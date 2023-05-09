@@ -267,4 +267,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/SearchDirectoryPeopleRespon
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateContactPhotoResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateContactPhotoRequestSourcesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateContactPhotoRequest.java
+docs/sdk/README.md
+docs/contactgroups/README.md
+docs/othercontacts/README.md
+docs/people/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class ListAccountAssignmentCreationStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public OperationStatusFilter filter;
+
     public ListAccountAssignmentCreationStatusRequest withFilter(OperationStatusFilter filter) {
         this.filter = filter;
         return this;
@@ -19,6 +20,7 @@ public class ListAccountAssignmentCreationStatusRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public ListAccountAssignmentCreationStatusRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -27,6 +29,7 @@ public class ListAccountAssignmentCreationStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAccountAssignmentCreationStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListAccountAssignmentCreationStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountAssignmentCreationStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccountAssignmentCreationStatusRequest(@JsonProperty("InstanceArn") String instanceArn) {
+        this.instanceArn = instanceArn;
+  }
 }

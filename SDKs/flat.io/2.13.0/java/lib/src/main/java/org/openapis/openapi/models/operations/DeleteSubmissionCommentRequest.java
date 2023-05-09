@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSubmissionCommentRequest {
@@ -12,6 +13,7 @@ public class DeleteSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
     public String assignment;
+
     public DeleteSubmissionCommentRequest withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public DeleteSubmissionCommentRequest withClass(String class_) {
         this.class_ = class_;
         return this;
@@ -32,6 +35,7 @@ public class DeleteSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment")
     public String comment;
+
     public DeleteSubmissionCommentRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -42,9 +46,16 @@ public class DeleteSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
     public String submission;
+
     public DeleteSubmissionCommentRequest withSubmission(String submission) {
         this.submission = submission;
         return this;
     }
     
+    public DeleteSubmissionCommentRequest(@JsonProperty("assignment") String assignment, @JsonProperty("class") String class_, @JsonProperty("comment") String comment, @JsonProperty("submission") String submission) {
+        this.assignment = assignment;
+        this.class_ = class_;
+        this.comment = comment;
+        this.submission = submission;
+  }
 }

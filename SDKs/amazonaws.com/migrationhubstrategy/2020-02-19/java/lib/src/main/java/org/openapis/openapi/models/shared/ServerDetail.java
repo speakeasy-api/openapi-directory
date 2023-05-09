@@ -20,6 +20,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportS3Object")
     public S3Object antipatternReportS3Object;
+
     public ServerDetail withAntipatternReportS3Object(S3Object antipatternReportS3Object) {
         this.antipatternReportS3Object = antipatternReportS3Object;
         return this;
@@ -28,6 +29,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportStatus")
     public AntipatternReportStatusEnum antipatternReportStatus;
+
     public ServerDetail withAntipatternReportStatus(AntipatternReportStatusEnum antipatternReportStatus) {
         this.antipatternReportStatus = antipatternReportStatus;
         return this;
@@ -36,6 +38,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportStatusMessage")
     public String antipatternReportStatusMessage;
+
     public ServerDetail withAntipatternReportStatusMessage(String antipatternReportStatusMessage) {
         this.antipatternReportStatusMessage = antipatternReportStatusMessage;
         return this;
@@ -44,6 +47,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationComponentStrategySummary")
     public StrategySummary[] applicationComponentStrategySummary;
+
     public ServerDetail withApplicationComponentStrategySummary(StrategySummary[] applicationComponentStrategySummary) {
         this.applicationComponentStrategySummary = applicationComponentStrategySummary;
         return this;
@@ -52,6 +56,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCollectionStatus")
     public RunTimeAssessmentStatusEnum dataCollectionStatus;
+
     public ServerDetail withDataCollectionStatus(RunTimeAssessmentStatusEnum dataCollectionStatus) {
         this.dataCollectionStatus = dataCollectionStatus;
         return this;
@@ -60,6 +65,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ServerDetail withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class ServerDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastAnalyzedTimestamp")
     public OffsetDateTime lastAnalyzedTimestamp;
+
     public ServerDetail withLastAnalyzedTimestamp(OffsetDateTime lastAnalyzedTimestamp) {
         this.lastAnalyzedTimestamp = lastAnalyzedTimestamp;
         return this;
@@ -78,6 +85,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listAntipatternSeveritySummary")
     public AntipatternSeveritySummary[] listAntipatternSeveritySummary;
+
     public ServerDetail withListAntipatternSeveritySummary(AntipatternSeveritySummary[] listAntipatternSeveritySummary) {
         this.listAntipatternSeveritySummary = listAntipatternSeveritySummary;
         return this;
@@ -86,6 +94,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServerDetail withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationSet")
     public RecommendationSet recommendationSet;
+
     public ServerDetail withRecommendationSet(RecommendationSet recommendationSet) {
         this.recommendationSet = recommendationSet;
         return this;
@@ -102,6 +112,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverError")
     public ServerError serverError;
+
     public ServerDetail withServerError(ServerError serverError) {
         this.serverError = serverError;
         return this;
@@ -110,6 +121,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverType")
     public String serverType;
+
     public ServerDetail withServerType(String serverType) {
         this.serverType = serverType;
         return this;
@@ -118,6 +130,7 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ServerDetail withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -126,9 +139,11 @@ public class ServerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemInfo")
     public SystemInfo systemInfo;
+
     public ServerDetail withSystemInfo(SystemInfo systemInfo) {
         this.systemInfo = systemInfo;
         return this;
     }
     
+    public ServerDetail(){}
 }

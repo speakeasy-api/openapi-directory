@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopConfigurationRecorderRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StopConfigurationRecorderRequest stopConfigurationRecorderRequest;
+
     public StopConfigurationRecorderRequest withStopConfigurationRecorderRequest(org.openapis.openapi.models.shared.StopConfigurationRecorderRequest stopConfigurationRecorderRequest) {
         this.stopConfigurationRecorderRequest = stopConfigurationRecorderRequest;
         return this;
@@ -16,6 +18,7 @@ public class StopConfigurationRecorderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StopConfigurationRecorderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StopConfigurationRecorderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StopConfigurationRecorderRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StopConfigurationRecorderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StopConfigurationRecorderRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StopConfigurationRecorderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StopConfigurationRecorderRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StopConfigurationRecorderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StopConfigurationRecorderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StopConfigurationRecorderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StopConfigurationRecorderRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StopConfigurationRecorderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StopConfigurationRecorderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class StopConfigurationRecorderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public StopConfigurationRecorderXAmzTargetEnum xAmzTarget;
+
     public StopConfigurationRecorderRequest withXAmzTarget(StopConfigurationRecorderXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public StopConfigurationRecorderRequest(@JsonProperty("StopConfigurationRecorderRequest") org.openapis.openapi.models.shared.StopConfigurationRecorderRequest stopConfigurationRecorderRequest, @JsonProperty("X-Amz-Target") StopConfigurationRecorderXAmzTargetEnum xAmzTarget) {
+        this.stopConfigurationRecorderRequest = stopConfigurationRecorderRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

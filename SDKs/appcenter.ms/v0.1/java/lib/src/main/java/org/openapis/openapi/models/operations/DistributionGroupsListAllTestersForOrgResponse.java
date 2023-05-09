@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DistributionGroupsListAllTestersForOrgResponse {
     
     public String contentType;
+
     public DistributionGroupsListAllTestersForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DistributionGroupsListAllTestersForOrgResponse {
     
     
     public Integer statusCode;
+
     public DistributionGroupsListAllTestersForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DistributionGroupsListAllTestersForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DistributionGroupsListAllTestersForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DistributionGroupsListAllTestersForOrgResponse {
      */
     
     public DistributionGroupsListAllTestersForOrg200ApplicationJSON[] distributionGroupsListAllTestersForOrg200ApplicationJSONObjects;
+
     public DistributionGroupsListAllTestersForOrgResponse withDistributionGroupsListAllTestersForOrg200ApplicationJSONObjects(DistributionGroupsListAllTestersForOrg200ApplicationJSON[] distributionGroupsListAllTestersForOrg200ApplicationJSONObjects) {
         this.distributionGroupsListAllTestersForOrg200ApplicationJSONObjects = distributionGroupsListAllTestersForOrg200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class DistributionGroupsListAllTestersForOrgResponse {
      */
     
     public DistributionGroupsListAllTestersForOrgDefaultApplicationJSON distributionGroupsListAllTestersForOrgDefaultApplicationJSONObject;
+
     public DistributionGroupsListAllTestersForOrgResponse withDistributionGroupsListAllTestersForOrgDefaultApplicationJSONObject(DistributionGroupsListAllTestersForOrgDefaultApplicationJSON distributionGroupsListAllTestersForOrgDefaultApplicationJSONObject) {
         this.distributionGroupsListAllTestersForOrgDefaultApplicationJSONObject = distributionGroupsListAllTestersForOrgDefaultApplicationJSONObject;
         return this;
     }
     
+    public DistributionGroupsListAllTestersForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

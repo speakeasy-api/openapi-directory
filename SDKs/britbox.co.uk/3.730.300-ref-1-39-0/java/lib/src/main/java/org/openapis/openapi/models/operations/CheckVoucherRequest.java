@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckVoucherRequest {
@@ -12,6 +13,7 @@ public class CheckVoucherRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvVoucherRequest itvVoucherRequest;
+
     public CheckVoucherRequest withItvVoucherRequest(org.openapis.openapi.models.shared.ItvVoucherRequest itvVoucherRequest) {
         this.itvVoucherRequest = itvVoucherRequest;
         return this;
@@ -32,6 +34,7 @@ public class CheckVoucherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public CheckVoucherRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class CheckVoucherRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public CheckVoucherRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public CheckVoucherRequest(@JsonProperty("ItvVoucherRequest") org.openapis.openapi.models.shared.ItvVoucherRequest itvVoucherRequest, @JsonProperty("platform") String platform) {
+        this.itvVoucherRequest = itvVoucherRequest;
+        this.platform = platform;
+  }
 }

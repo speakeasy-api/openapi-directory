@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApisRequest {
@@ -12,6 +13,7 @@ public class RegistryListApisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public RegistryListApisRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -22,6 +24,7 @@ public class RegistryListApisRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryListApisRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -32,6 +35,7 @@ public class RegistryListApisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public RegistryListApisRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -42,6 +46,7 @@ public class RegistryListApisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public RegistryListApisRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -52,9 +57,14 @@ public class RegistryListApisRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryListApisRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryListApisRequest(@JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.location = location;
+        this.project = project;
+  }
 }

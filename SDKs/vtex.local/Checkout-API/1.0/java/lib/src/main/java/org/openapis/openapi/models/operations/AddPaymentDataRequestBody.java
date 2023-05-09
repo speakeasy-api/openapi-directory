@@ -15,9 +15,11 @@ public class AddPaymentDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payments")
     public AddPaymentDataRequestBodyPayments[] payments;
+
     public AddPaymentDataRequestBody withPayments(AddPaymentDataRequestBodyPayments[] payments) {
         this.payments = payments;
         return this;
     }
     
+    public AddPaymentDataRequestBody(){}
 }

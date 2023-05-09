@@ -18,6 +18,7 @@ public class CopyTemplate401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public CopyTemplate401ApplicationJSONErrorEnum error;
+
     public CopyTemplate401ApplicationJSON withError(CopyTemplate401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class CopyTemplate401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public CopyTemplate401ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public CopyTemplate401ApplicationJSON(){}
 }

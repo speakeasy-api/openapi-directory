@@ -12,6 +12,7 @@ public class StartGameSessionPlacementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredPlayerSessions")
     public DesiredPlayerSession[] desiredPlayerSessions;
+
     public StartGameSessionPlacementInput withDesiredPlayerSessions(DesiredPlayerSession[] desiredPlayerSessions) {
         this.desiredPlayerSessions = desiredPlayerSessions;
         return this;
@@ -20,6 +21,7 @@ public class StartGameSessionPlacementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameProperties")
     public GameProperty[] gameProperties;
+
     public StartGameSessionPlacementInput withGameProperties(GameProperty[] gameProperties) {
         this.gameProperties = gameProperties;
         return this;
@@ -28,6 +30,7 @@ public class StartGameSessionPlacementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionData")
     public String gameSessionData;
+
     public StartGameSessionPlacementInput withGameSessionData(String gameSessionData) {
         this.gameSessionData = gameSessionData;
         return this;
@@ -36,6 +39,7 @@ public class StartGameSessionPlacementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionName")
     public String gameSessionName;
+
     public StartGameSessionPlacementInput withGameSessionName(String gameSessionName) {
         this.gameSessionName = gameSessionName;
         return this;
@@ -43,6 +47,7 @@ public class StartGameSessionPlacementInput {
     
     @JsonProperty("GameSessionQueueName")
     public String gameSessionQueueName;
+
     public StartGameSessionPlacementInput withGameSessionQueueName(String gameSessionQueueName) {
         this.gameSessionQueueName = gameSessionQueueName;
         return this;
@@ -50,6 +55,7 @@ public class StartGameSessionPlacementInput {
     
     @JsonProperty("MaximumPlayerSessionCount")
     public Long maximumPlayerSessionCount;
+
     public StartGameSessionPlacementInput withMaximumPlayerSessionCount(Long maximumPlayerSessionCount) {
         this.maximumPlayerSessionCount = maximumPlayerSessionCount;
         return this;
@@ -57,6 +63,7 @@ public class StartGameSessionPlacementInput {
     
     @JsonProperty("PlacementId")
     public String placementId;
+
     public StartGameSessionPlacementInput withPlacementId(String placementId) {
         this.placementId = placementId;
         return this;
@@ -65,9 +72,15 @@ public class StartGameSessionPlacementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerLatencies")
     public PlayerLatency[] playerLatencies;
+
     public StartGameSessionPlacementInput withPlayerLatencies(PlayerLatency[] playerLatencies) {
         this.playerLatencies = playerLatencies;
         return this;
     }
     
+    public StartGameSessionPlacementInput(@JsonProperty("GameSessionQueueName") String gameSessionQueueName, @JsonProperty("MaximumPlayerSessionCount") Long maximumPlayerSessionCount, @JsonProperty("PlacementId") String placementId) {
+        this.gameSessionQueueName = gameSessionQueueName;
+        this.maximumPlayerSessionCount = maximumPlayerSessionCount;
+        this.placementId = placementId;
+  }
 }

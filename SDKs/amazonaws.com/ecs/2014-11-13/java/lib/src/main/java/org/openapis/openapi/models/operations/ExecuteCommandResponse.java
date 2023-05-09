@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteCommandResponse {
@@ -12,6 +13,7 @@ public class ExecuteCommandResponse {
      */
     
     public Object accessDeniedException;
+
     public ExecuteCommandResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ExecuteCommandResponse {
      */
     
     public Object clientException;
+
     public ExecuteCommandResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class ExecuteCommandResponse {
      */
     
     public Object clusterNotFoundException;
+
     public ExecuteCommandResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteCommandResponse {
     
     
     public String contentType;
+
     public ExecuteCommandResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class ExecuteCommandResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteCommandResponse executeCommandResponse;
+
     public ExecuteCommandResponse withExecuteCommandResponse(org.openapis.openapi.models.shared.ExecuteCommandResponse executeCommandResponse) {
         this.executeCommandResponse = executeCommandResponse;
         return this;
@@ -59,6 +65,7 @@ public class ExecuteCommandResponse {
      */
     
     public Object invalidParameterException;
+
     public ExecuteCommandResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class ExecuteCommandResponse {
      */
     
     public Object serverException;
+
     public ExecuteCommandResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class ExecuteCommandResponse {
     
     
     public Integer statusCode;
+
     public ExecuteCommandResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ExecuteCommandResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteCommandResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ExecuteCommandResponse {
      */
     
     public Object targetNotConnectedException;
+
     public ExecuteCommandResponse withTargetNotConnectedException(Object targetNotConnectedException) {
         this.targetNotConnectedException = targetNotConnectedException;
         return this;
     }
     
+    public ExecuteCommandResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

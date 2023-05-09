@@ -61,11 +61,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             backendServiceAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesGetResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesGetResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesGetResponse(contentType, httpRes.statusCode()) {{
             backendService = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthResponse(contentType, httpRes.statusCode()) {{
             backendServiceGroupHealth = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesInsertResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesInsertResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesListResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesListResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesListResponse(contentType, httpRes.statusCode()) {{
             backendServiceList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,11 +463,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesPatchResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesPatchResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,11 +509,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -577,11 +555,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -625,11 +601,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,11 +647,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -721,11 +693,9 @@ public class BackendServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeBackendServicesUpdateResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeBackendServicesUpdateResponse res = new org.openapis.openapi.models.operations.ComputeBackendServicesUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

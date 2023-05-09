@@ -14,6 +14,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @JsonProperty("allowManualPrice")
     public Boolean allowManualPrice;
+
     public UpdateorderFormconfigurationRequest withAllowManualPrice(Boolean allowManualPrice) {
         this.allowManualPrice = allowManualPrice;
         return this;
@@ -24,6 +25,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @JsonProperty("allowMultipleDeliveries")
     public Boolean allowMultipleDeliveries;
+
     public UpdateorderFormconfigurationRequest withAllowMultipleDeliveries(Boolean allowMultipleDeliveries) {
         this.allowMultipleDeliveries = allowMultipleDeliveries;
         return this;
@@ -34,6 +36,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @JsonProperty("apps")
     public UpdateorderFormconfigurationRequestApps[] apps;
+
     public UpdateorderFormconfigurationRequest withApps(UpdateorderFormconfigurationRequestApps[] apps) {
         this.apps = apps;
         return this;
@@ -44,6 +47,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @JsonProperty("decimalDigitsPrecision")
     public Integer decimalDigitsPrecision;
+
     public UpdateorderFormconfigurationRequest withDecimalDigitsPrecision(Integer decimalDigitsPrecision) {
         this.decimalDigitsPrecision = decimalDigitsPrecision;
         return this;
@@ -55,6 +59,7 @@ public class UpdateorderFormconfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maskFirstPurchaseData")
     public Boolean maskFirstPurchaseData;
+
     public UpdateorderFormconfigurationRequest withMaskFirstPurchaseData(Boolean maskFirstPurchaseData) {
         this.maskFirstPurchaseData = maskFirstPurchaseData;
         return this;
@@ -66,6 +71,7 @@ public class UpdateorderFormconfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumberOfWhiteLabelSellers")
     public Long maxNumberOfWhiteLabelSellers;
+
     public UpdateorderFormconfigurationRequest withMaxNumberOfWhiteLabelSellers(Long maxNumberOfWhiteLabelSellers) {
         this.maxNumberOfWhiteLabelSellers = maxNumberOfWhiteLabelSellers;
         return this;
@@ -76,6 +82,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @JsonProperty("minimumQuantityAccumulatedForItems")
     public Integer minimumQuantityAccumulatedForItems;
+
     public UpdateorderFormconfigurationRequest withMinimumQuantityAccumulatedForItems(Integer minimumQuantityAccumulatedForItems) {
         this.minimumQuantityAccumulatedForItems = minimumQuantityAccumulatedForItems;
         return this;
@@ -86,6 +93,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @JsonProperty("minimumValueAccumulated")
     public Long minimumValueAccumulated;
+
     public UpdateorderFormconfigurationRequest withMinimumValueAccumulated(Long minimumValueAccumulated) {
         this.minimumValueAccumulated = minimumValueAccumulated;
         return this;
@@ -96,6 +104,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @JsonProperty("paymentConfiguration")
     public PaymentConfiguration paymentConfiguration;
+
     public UpdateorderFormconfigurationRequest withPaymentConfiguration(PaymentConfiguration paymentConfiguration) {
         this.paymentConfiguration = paymentConfiguration;
         return this;
@@ -107,6 +116,7 @@ public class UpdateorderFormconfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystemToCheckFirstInstallment")
     public String paymentSystemToCheckFirstInstallment;
+
     public UpdateorderFormconfigurationRequest withPaymentSystemToCheckFirstInstallment(String paymentSystemToCheckFirstInstallment) {
         this.paymentSystemToCheckFirstInstallment = paymentSystemToCheckFirstInstallment;
         return this;
@@ -123,6 +133,7 @@ public class UpdateorderFormconfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recaptchaValidation")
     public String recaptchaValidation;
+
     public UpdateorderFormconfigurationRequest withRecaptchaValidation(String recaptchaValidation) {
         this.recaptchaValidation = recaptchaValidation;
         return this;
@@ -133,9 +144,20 @@ public class UpdateorderFormconfigurationRequest {
      */
     @JsonProperty("taxConfiguration")
     public UpdateorderFormconfigurationRequestTaxConfiguration taxConfiguration;
+
     public UpdateorderFormconfigurationRequest withTaxConfiguration(UpdateorderFormconfigurationRequestTaxConfiguration taxConfiguration) {
         this.taxConfiguration = taxConfiguration;
         return this;
     }
     
+    public UpdateorderFormconfigurationRequest(@JsonProperty("allowManualPrice") Boolean allowManualPrice, @JsonProperty("allowMultipleDeliveries") Boolean allowMultipleDeliveries, @JsonProperty("apps") UpdateorderFormconfigurationRequestApps[] apps, @JsonProperty("decimalDigitsPrecision") Integer decimalDigitsPrecision, @JsonProperty("minimumQuantityAccumulatedForItems") Integer minimumQuantityAccumulatedForItems, @JsonProperty("minimumValueAccumulated") Long minimumValueAccumulated, @JsonProperty("paymentConfiguration") PaymentConfiguration paymentConfiguration, @JsonProperty("taxConfiguration") UpdateorderFormconfigurationRequestTaxConfiguration taxConfiguration) {
+        this.allowManualPrice = allowManualPrice;
+        this.allowMultipleDeliveries = allowMultipleDeliveries;
+        this.apps = apps;
+        this.decimalDigitsPrecision = decimalDigitsPrecision;
+        this.minimumQuantityAccumulatedForItems = minimumQuantityAccumulatedForItems;
+        this.minimumValueAccumulated = minimumValueAccumulated;
+        this.paymentConfiguration = paymentConfiguration;
+        this.taxConfiguration = taxConfiguration;
+  }
 }

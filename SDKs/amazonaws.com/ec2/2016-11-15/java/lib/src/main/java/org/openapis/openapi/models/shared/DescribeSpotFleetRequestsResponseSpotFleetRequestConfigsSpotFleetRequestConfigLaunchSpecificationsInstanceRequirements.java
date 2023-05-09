@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements {
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorCount acceleratorCount;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withAcceleratorCount(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorCount acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum[] acceleratorManufacturers;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withAcceleratorManufacturers(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum[] acceleratorManufacturers) {
         this.acceleratorManufacturers = acceleratorManufacturers;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum[] acceleratorNames;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withAcceleratorNames(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum[] acceleratorNames) {
         this.acceleratorNames = acceleratorNames;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTotalMemoryMiB acceleratorTotalMemoryMiB;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withAcceleratorTotalMemoryMiB(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTotalMemoryMiB acceleratorTotalMemoryMiB) {
         this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum[] acceleratorTypes;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withAcceleratorTypes(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String[] allowedInstanceTypes;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withAllowedInstanceTypes(String[] allowedInstanceTypes) {
         this.allowedInstanceTypes = allowedInstanceTypes;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum bareMetal;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withBareMetal(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum bareMetal) {
         this.bareMetal = bareMetal;
         return this;
@@ -61,6 +68,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBaselineEbsBandwidthMbps baselineEbsBandwidthMbps;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withBaselineEbsBandwidthMbps(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBaselineEbsBandwidthMbps baselineEbsBandwidthMbps) {
         this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
         return this;
@@ -68,6 +76,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum burstablePerformance;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withBurstablePerformance(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum burstablePerformance) {
         this.burstablePerformance = burstablePerformance;
         return this;
@@ -75,6 +84,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCpuManufacturersEnum[] cpuManufacturers;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withCpuManufacturers(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCpuManufacturersEnum[] cpuManufacturers) {
         this.cpuManufacturers = cpuManufacturers;
         return this;
@@ -82,6 +92,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String[] excludedInstanceTypes;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withExcludedInstanceTypes(String[] excludedInstanceTypes) {
         this.excludedInstanceTypes = excludedInstanceTypes;
         return this;
@@ -89,6 +100,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum[] instanceGenerations;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withInstanceGenerations(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum[] instanceGenerations) {
         this.instanceGenerations = instanceGenerations;
         return this;
@@ -96,6 +108,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum localStorage;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withLocalStorage(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum localStorage) {
         this.localStorage = localStorage;
         return this;
@@ -103,6 +116,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum[] localStorageTypes;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withLocalStorageTypes(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum[] localStorageTypes) {
         this.localStorageTypes = localStorageTypes;
         return this;
@@ -110,6 +124,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsMemoryGiBPerVCpu memoryGiBPerVCpu;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withMemoryGiBPerVCpu(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsMemoryGiBPerVCpu memoryGiBPerVCpu) {
         this.memoryGiBPerVCpu = memoryGiBPerVCpu;
         return this;
@@ -117,6 +132,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsMemoryMiB memoryMiB;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withMemoryMiB(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsMemoryMiB memoryMiB) {
         this.memoryMiB = memoryMiB;
         return this;
@@ -124,6 +140,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsNetworkBandwidthGbps networkBandwidthGbps;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withNetworkBandwidthGbps(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsNetworkBandwidthGbps networkBandwidthGbps) {
         this.networkBandwidthGbps = networkBandwidthGbps;
         return this;
@@ -131,6 +148,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsNetworkInterfaceCount networkInterfaceCount;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withNetworkInterfaceCount(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsNetworkInterfaceCount networkInterfaceCount) {
         this.networkInterfaceCount = networkInterfaceCount;
         return this;
@@ -138,6 +156,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long onDemandMaxPricePercentageOverLowestPrice;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withOnDemandMaxPricePercentageOverLowestPrice(Long onDemandMaxPricePercentageOverLowestPrice) {
         this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
         return this;
@@ -145,6 +164,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Boolean requireHibernateSupport;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withRequireHibernateSupport(Boolean requireHibernateSupport) {
         this.requireHibernateSupport = requireHibernateSupport;
         return this;
@@ -152,6 +172,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long spotMaxPricePercentageOverLowestPrice;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withSpotMaxPricePercentageOverLowestPrice(Long spotMaxPricePercentageOverLowestPrice) {
         this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
         return this;
@@ -159,6 +180,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsTotalLocalStorageGB totalLocalStorageGB;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withTotalLocalStorageGB(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsTotalLocalStorageGB totalLocalStorageGB) {
         this.totalLocalStorageGB = totalLocalStorageGB;
         return this;
@@ -166,9 +188,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsVCpuCount vCpuCount;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements withVCpuCount(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsVCpuCount vCpuCount) {
         this.vCpuCount = vCpuCount;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements(){}
 }

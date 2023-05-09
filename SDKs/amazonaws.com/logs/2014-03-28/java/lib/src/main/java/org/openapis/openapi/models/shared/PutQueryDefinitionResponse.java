@@ -15,9 +15,11 @@ public class PutQueryDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryDefinitionId")
     public String queryDefinitionId;
+
     public PutQueryDefinitionResponse withQueryDefinitionId(String queryDefinitionId) {
         this.queryDefinitionId = queryDefinitionId;
         return this;
     }
     
+    public PutQueryDefinitionResponse(){}
 }

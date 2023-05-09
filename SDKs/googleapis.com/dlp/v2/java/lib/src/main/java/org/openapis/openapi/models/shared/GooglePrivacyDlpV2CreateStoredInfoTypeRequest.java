@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CreateStoredInfoTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GooglePrivacyDlpV2StoredInfoTypeConfig config;
+
     public GooglePrivacyDlpV2CreateStoredInfoTypeRequest withConfig(GooglePrivacyDlpV2StoredInfoTypeConfig config) {
         this.config = config;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2CreateStoredInfoTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public GooglePrivacyDlpV2CreateStoredInfoTypeRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2CreateStoredInfoTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storedInfoTypeId")
     public String storedInfoTypeId;
+
     public GooglePrivacyDlpV2CreateStoredInfoTypeRequest withStoredInfoTypeId(String storedInfoTypeId) {
         this.storedInfoTypeId = storedInfoTypeId;
         return this;
     }
     
+    public GooglePrivacyDlpV2CreateStoredInfoTypeRequest(){}
 }

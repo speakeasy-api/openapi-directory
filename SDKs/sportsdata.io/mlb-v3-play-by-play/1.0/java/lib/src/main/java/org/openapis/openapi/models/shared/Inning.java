@@ -12,6 +12,7 @@ public class Inning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamRuns")
     public Long awayTeamRuns;
+
     public Inning withAwayTeamRuns(Long awayTeamRuns) {
         this.awayTeamRuns = awayTeamRuns;
         return this;
@@ -20,6 +21,7 @@ public class Inning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public Inning withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -28,6 +30,7 @@ public class Inning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamRuns")
     public Long homeTeamRuns;
+
     public Inning withHomeTeamRuns(Long homeTeamRuns) {
         this.homeTeamRuns = homeTeamRuns;
         return this;
@@ -36,6 +39,7 @@ public class Inning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningID")
     public Long inningID;
+
     public Inning withInningID(Long inningID) {
         this.inningID = inningID;
         return this;
@@ -44,9 +48,11 @@ public class Inning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningNumber")
     public Long inningNumber;
+
     public Inning withInningNumber(Long inningNumber) {
         this.inningNumber = inningNumber;
         return this;
     }
     
+    public Inning(){}
 }

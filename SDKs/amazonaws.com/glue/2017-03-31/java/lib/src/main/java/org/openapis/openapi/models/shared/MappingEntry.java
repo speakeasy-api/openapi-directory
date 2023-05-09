@@ -15,6 +15,7 @@ public class MappingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePath")
     public String sourcePath;
+
     public MappingEntry withSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
@@ -23,6 +24,7 @@ public class MappingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTable")
     public String sourceTable;
+
     public MappingEntry withSourceTable(String sourceTable) {
         this.sourceTable = sourceTable;
         return this;
@@ -31,6 +33,7 @@ public class MappingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public MappingEntry withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -39,6 +42,7 @@ public class MappingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetPath")
     public String targetPath;
+
     public MappingEntry withTargetPath(String targetPath) {
         this.targetPath = targetPath;
         return this;
@@ -47,6 +51,7 @@ public class MappingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTable")
     public String targetTable;
+
     public MappingEntry withTargetTable(String targetTable) {
         this.targetTable = targetTable;
         return this;
@@ -55,9 +60,11 @@ public class MappingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public MappingEntry withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public MappingEntry(){}
 }

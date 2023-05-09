@@ -18,6 +18,7 @@ public class Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embedUrl")
     public String embedUrl;
+
     public Video withEmbedUrl(String embedUrl) {
         this.embedUrl = embedUrl;
         return this;
@@ -28,6 +29,7 @@ public class Video {
      */
     @JsonProperty("licensingInformation")
     public LicensingInformation licensingInformation;
+
     public Video withLicensingInformation(LicensingInformation licensingInformation) {
         this.licensingInformation = licensingInformation;
         return this;
@@ -38,6 +40,7 @@ public class Video {
      */
     @JsonProperty("source")
     public Source source;
+
     public Video withSource(Source source) {
         this.source = source;
         return this;
@@ -48,9 +51,15 @@ public class Video {
      */
     @JsonProperty("url")
     public String url;
+
     public Video withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Video(@JsonProperty("licensingInformation") LicensingInformation licensingInformation, @JsonProperty("source") Source source, @JsonProperty("url") String url) {
+        this.licensingInformation = licensingInformation;
+        this.source = source;
+        this.url = url;
+  }
 }

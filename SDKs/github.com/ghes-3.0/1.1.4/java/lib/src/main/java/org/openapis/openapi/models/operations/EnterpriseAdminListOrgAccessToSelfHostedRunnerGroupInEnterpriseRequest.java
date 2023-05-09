@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,14 @@ public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
     public Long runnerGroupId;
+
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
         this.runnerGroupId = runnerGroupId;
         return this;
     }
     
+    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("runner_group_id") Long runnerGroupId) {
+        this.enterprise = enterprise;
+        this.runnerGroupId = runnerGroupId;
+  }
 }

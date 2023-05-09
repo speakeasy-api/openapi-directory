@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReimportApiRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReimportApiRequestBody requestBody;
+
     public ReimportApiRequest withRequestBody(ReimportApiRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ReimportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ReimportApiRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ReimportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ReimportApiRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ReimportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ReimportApiRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ReimportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ReimportApiRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ReimportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ReimportApiRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ReimportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ReimportApiRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ReimportApiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ReimportApiRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class ReimportApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public ReimportApiRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -78,6 +88,7 @@ public class ReimportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=basepath")
     public String basepath;
+
     public ReimportApiRequest withBasepath(String basepath) {
         this.basepath = basepath;
         return this;
@@ -88,9 +99,14 @@ public class ReimportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=failOnWarnings")
     public Boolean failOnWarnings;
+
     public ReimportApiRequest withFailOnWarnings(Boolean failOnWarnings) {
         this.failOnWarnings = failOnWarnings;
         return this;
     }
     
+    public ReimportApiRequest(@JsonProperty("RequestBody") ReimportApiRequestBody requestBody, @JsonProperty("apiId") String apiId) {
+        this.requestBody = requestBody;
+        this.apiId = apiId;
+  }
 }

@@ -18,9 +18,11 @@ public class SimulateMaintenanceEventRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerIds")
     public String[] workerIds;
+
     public SimulateMaintenanceEventRequest withWorkerIds(String[] workerIds) {
         this.workerIds = workerIds;
         return this;
     }
     
+    public SimulateMaintenanceEventRequest(){}
 }

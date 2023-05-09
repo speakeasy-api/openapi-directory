@@ -15,9 +15,11 @@ public class ResourceARNDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public ResourceARNDetail withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public ResourceARNDetail(){}
 }

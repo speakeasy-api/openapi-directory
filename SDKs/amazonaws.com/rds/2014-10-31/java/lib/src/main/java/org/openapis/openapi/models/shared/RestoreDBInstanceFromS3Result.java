@@ -15,9 +15,11 @@ public class RestoreDBInstanceFromS3Result {
      */
     
     public DBInstance dbInstance;
+
     public RestoreDBInstanceFromS3Result withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public RestoreDBInstanceFromS3Result(){}
 }

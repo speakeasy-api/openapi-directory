@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsCreateResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsCreateResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsCreateResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsCreateResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsExportDataResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsExportDataResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsExportDataResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsExportDataResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsImportDataResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsImportDataResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsImportDataResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsImportDataResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsListResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsListResponse(contentType, httpRes.statusCode()) {{
             listDatasetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListResponse(contentType, httpRes.statusCode()) {{
             listColumnSpecsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse(contentType, httpRes.statusCode()) {{
             columnSpec = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsListResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsTableSpecsListResponse(contentType, httpRes.statusCode()) {{
             listTableSpecsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsBatchPredictResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsBatchPredictResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsBatchPredictResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsBatchPredictResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsCreateResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsCreateResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsCreateResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsDeployResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsDeployResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsDeployResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsDeployResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,11 +560,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsExportResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsExportResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsExportResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsExportResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +694,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsListResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsListResponse(contentType, httpRes.statusCode()) {{
             listModelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -768,11 +738,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsModelEvaluationsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsModelEvaluationsListResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsModelEvaluationsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsModelEvaluationsListResponse(contentType, httpRes.statusCode()) {{
             listModelEvaluationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -816,11 +784,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsPredictResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsPredictResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsPredictResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsPredictResponse(contentType, httpRes.statusCode()) {{
             predictResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +830,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,11 +876,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsUndeployResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsUndeployResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsUndeployResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsModelsUndeployResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +922,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1006,11 +966,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1052,11 +1010,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1098,11 +1054,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1146,11 +1100,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsWaitResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsWaitResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsWaitResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsOperationsWaitResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1194,11 +1146,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomlProjectsLocationsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.AutomlProjectsLocationsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.AutomlProjectsLocationsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

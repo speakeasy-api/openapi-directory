@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEnvironmentResponse {
@@ -12,6 +13,7 @@ public class UpdateEnvironmentResponse {
      */
     
     public Object badRequestException;
+
     public UpdateEnvironmentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateEnvironmentResponse {
      */
     
     public Object conflictException;
+
     public UpdateEnvironmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEnvironmentResponse {
     
     
     public String contentType;
+
     public UpdateEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEnvironmentResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateEnvironmentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateEnvironmentResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateEnvironmentResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateEnvironmentResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateEnvironmentResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateEnvironmentResponse {
      */
     
     public Object notFoundException;
+
     public UpdateEnvironmentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public UpdateEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateEnvironmentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateEnvironmentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateEnvironmentResponse {
      */
     
     public java.util.Map<String, Object> updateEnvironmentResult;
+
     public UpdateEnvironmentResponse withUpdateEnvironmentResult(java.util.Map<String, Object> updateEnvironmentResult) {
         this.updateEnvironmentResult = updateEnvironmentResult;
         return this;
     }
     
+    public UpdateEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

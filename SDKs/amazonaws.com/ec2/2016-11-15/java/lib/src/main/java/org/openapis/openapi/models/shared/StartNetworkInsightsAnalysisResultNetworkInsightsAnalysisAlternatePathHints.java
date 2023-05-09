@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisAlternatePathHints {
     
     public String componentArn;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisAlternatePathHints withComponentArn(String componentArn) {
         this.componentArn = componentArn;
         return this;
@@ -19,9 +20,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisAlternateP
     
     
     public String componentId;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisAlternatePathHints withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisAlternatePathHints(){}
 }

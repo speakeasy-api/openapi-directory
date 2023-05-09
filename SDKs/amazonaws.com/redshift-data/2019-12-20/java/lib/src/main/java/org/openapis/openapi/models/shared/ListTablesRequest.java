@@ -12,6 +12,7 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterIdentifier")
     public String clusterIdentifier;
+
     public ListTablesRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -20,6 +21,7 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectedDatabase")
     public String connectedDatabase;
+
     public ListTablesRequest withConnectedDatabase(String connectedDatabase) {
         this.connectedDatabase = connectedDatabase;
         return this;
@@ -27,6 +29,7 @@ public class ListTablesRequest {
     
     @JsonProperty("Database")
     public String database;
+
     public ListTablesRequest withDatabase(String database) {
         this.database = database;
         return this;
@@ -35,6 +38,7 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbUser")
     public String dbUser;
+
     public ListTablesRequest withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -43,6 +47,7 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTablesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -51,6 +56,7 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTablesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,6 +65,7 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaPattern")
     public String schemaPattern;
+
     public ListTablesRequest withSchemaPattern(String schemaPattern) {
         this.schemaPattern = schemaPattern;
         return this;
@@ -67,6 +74,7 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public ListTablesRequest withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -75,6 +83,7 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TablePattern")
     public String tablePattern;
+
     public ListTablesRequest withTablePattern(String tablePattern) {
         this.tablePattern = tablePattern;
         return this;
@@ -83,9 +92,13 @@ public class ListTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkgroupName")
     public String workgroupName;
+
     public ListTablesRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ListTablesRequest(@JsonProperty("Database") String database) {
+        this.database = database;
+  }
 }

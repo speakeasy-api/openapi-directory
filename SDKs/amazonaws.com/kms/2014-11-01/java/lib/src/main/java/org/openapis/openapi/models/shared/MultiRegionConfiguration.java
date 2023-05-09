@@ -15,6 +15,7 @@ public class MultiRegionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiRegionKeyType")
     public MultiRegionKeyTypeEnum multiRegionKeyType;
+
     public MultiRegionConfiguration withMultiRegionKeyType(MultiRegionKeyTypeEnum multiRegionKeyType) {
         this.multiRegionKeyType = multiRegionKeyType;
         return this;
@@ -23,6 +24,7 @@ public class MultiRegionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryKey")
     public MultiRegionKey primaryKey;
+
     public MultiRegionConfiguration withPrimaryKey(MultiRegionKey primaryKey) {
         this.primaryKey = primaryKey;
         return this;
@@ -31,9 +33,11 @@ public class MultiRegionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaKeys")
     public MultiRegionKey[] replicaKeys;
+
     public MultiRegionConfiguration withReplicaKeys(MultiRegionKey[] replicaKeys) {
         this.replicaKeys = replicaKeys;
         return this;
     }
     
+    public MultiRegionConfiguration(){}
 }

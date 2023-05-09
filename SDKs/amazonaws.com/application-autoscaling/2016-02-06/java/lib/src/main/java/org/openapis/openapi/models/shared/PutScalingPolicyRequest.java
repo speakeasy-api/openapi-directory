@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutScalingPolicyRequest {
     @JsonProperty("PolicyName")
     public String policyName;
+
     public PutScalingPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -19,6 +20,7 @@ public class PutScalingPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyType")
     public PolicyTypeEnum policyType;
+
     public PutScalingPolicyRequest withPolicyType(PolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -26,6 +28,7 @@ public class PutScalingPolicyRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public PutScalingPolicyRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -33,6 +36,7 @@ public class PutScalingPolicyRequest {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public PutScalingPolicyRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -40,6 +44,7 @@ public class PutScalingPolicyRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public PutScalingPolicyRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -48,6 +53,7 @@ public class PutScalingPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepScalingPolicyConfiguration")
     public StepScalingPolicyConfiguration stepScalingPolicyConfiguration;
+
     public PutScalingPolicyRequest withStepScalingPolicyConfiguration(StepScalingPolicyConfiguration stepScalingPolicyConfiguration) {
         this.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
         return this;
@@ -56,9 +62,16 @@ public class PutScalingPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTrackingScalingPolicyConfiguration")
     public TargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
+
     public PutScalingPolicyRequest withTargetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
         this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
         return this;
     }
     
+    public PutScalingPolicyRequest(@JsonProperty("PolicyName") String policyName, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.policyName = policyName;
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

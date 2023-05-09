@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateComponentOutput {
     @JsonProperty("component")
     public Component component;
+
     public UpdateComponentOutput withComponent(Component component) {
         this.component = component;
         return this;
     }
     
+    public UpdateComponentOutput(@JsonProperty("component") Component component) {
+        this.component = component;
+  }
 }

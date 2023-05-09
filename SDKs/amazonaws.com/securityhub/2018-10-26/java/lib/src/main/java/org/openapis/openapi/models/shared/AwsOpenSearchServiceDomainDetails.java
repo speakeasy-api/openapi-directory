@@ -15,6 +15,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPolicies")
     public String accessPolicies;
+
     public AwsOpenSearchServiceDomainDetails withAccessPolicies(String accessPolicies) {
         this.accessPolicies = accessPolicies;
         return this;
@@ -23,6 +24,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvancedSecurityOptions")
     public AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails advancedSecurityOptions;
+
     public AwsOpenSearchServiceDomainDetails withAdvancedSecurityOptions(AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails advancedSecurityOptions) {
         this.advancedSecurityOptions = advancedSecurityOptions;
         return this;
@@ -31,6 +33,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsOpenSearchServiceDomainDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -39,6 +42,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterConfig")
     public AwsOpenSearchServiceDomainClusterConfigDetails clusterConfig;
+
     public AwsOpenSearchServiceDomainDetails withClusterConfig(AwsOpenSearchServiceDomainClusterConfigDetails clusterConfig) {
         this.clusterConfig = clusterConfig;
         return this;
@@ -47,6 +51,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainEndpoint")
     public String domainEndpoint;
+
     public AwsOpenSearchServiceDomainDetails withDomainEndpoint(String domainEndpoint) {
         this.domainEndpoint = domainEndpoint;
         return this;
@@ -55,6 +60,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainEndpointOptions")
     public AwsOpenSearchServiceDomainDomainEndpointOptionsDetails domainEndpointOptions;
+
     public AwsOpenSearchServiceDomainDetails withDomainEndpointOptions(AwsOpenSearchServiceDomainDomainEndpointOptionsDetails domainEndpointOptions) {
         this.domainEndpointOptions = domainEndpointOptions;
         return this;
@@ -63,6 +69,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainEndpoints")
     public java.util.Map<String, String> domainEndpoints;
+
     public AwsOpenSearchServiceDomainDetails withDomainEndpoints(java.util.Map<String, String> domainEndpoints) {
         this.domainEndpoints = domainEndpoints;
         return this;
@@ -71,6 +78,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public AwsOpenSearchServiceDomainDetails withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -79,6 +87,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionAtRestOptions")
     public AwsOpenSearchServiceDomainEncryptionAtRestOptionsDetails encryptionAtRestOptions;
+
     public AwsOpenSearchServiceDomainDetails withEncryptionAtRestOptions(AwsOpenSearchServiceDomainEncryptionAtRestOptionsDetails encryptionAtRestOptions) {
         this.encryptionAtRestOptions = encryptionAtRestOptions;
         return this;
@@ -87,6 +96,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public AwsOpenSearchServiceDomainDetails withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -95,6 +105,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public AwsOpenSearchServiceDomainDetails withId(String id) {
         this.id = id;
         return this;
@@ -103,6 +114,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogPublishingOptions")
     public AwsOpenSearchServiceDomainLogPublishingOptionsDetails logPublishingOptions;
+
     public AwsOpenSearchServiceDomainDetails withLogPublishingOptions(AwsOpenSearchServiceDomainLogPublishingOptionsDetails logPublishingOptions) {
         this.logPublishingOptions = logPublishingOptions;
         return this;
@@ -111,6 +123,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeToNodeEncryptionOptions")
     public AwsOpenSearchServiceDomainNodeToNodeEncryptionOptionsDetails nodeToNodeEncryptionOptions;
+
     public AwsOpenSearchServiceDomainDetails withNodeToNodeEncryptionOptions(AwsOpenSearchServiceDomainNodeToNodeEncryptionOptionsDetails nodeToNodeEncryptionOptions) {
         this.nodeToNodeEncryptionOptions = nodeToNodeEncryptionOptions;
         return this;
@@ -119,6 +132,7 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceSoftwareOptions")
     public AwsOpenSearchServiceDomainServiceSoftwareOptionsDetails serviceSoftwareOptions;
+
     public AwsOpenSearchServiceDomainDetails withServiceSoftwareOptions(AwsOpenSearchServiceDomainServiceSoftwareOptionsDetails serviceSoftwareOptions) {
         this.serviceSoftwareOptions = serviceSoftwareOptions;
         return this;
@@ -127,9 +141,11 @@ public class AwsOpenSearchServiceDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcOptions")
     public AwsOpenSearchServiceDomainVpcOptionsDetails vpcOptions;
+
     public AwsOpenSearchServiceDomainDetails withVpcOptions(AwsOpenSearchServiceDomainVpcOptionsDetails vpcOptions) {
         this.vpcOptions = vpcOptions;
         return this;
     }
     
+    public AwsOpenSearchServiceDomainDetails(){}
 }

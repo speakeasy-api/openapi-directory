@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferenceAccelerator {
     @JsonProperty("deviceName")
     public String deviceName;
+
     public InferenceAccelerator withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,9 +20,14 @@ public class InferenceAccelerator {
     
     @JsonProperty("deviceType")
     public String deviceType;
+
     public InferenceAccelerator withDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
     }
     
+    public InferenceAccelerator(@JsonProperty("deviceName") String deviceName, @JsonProperty("deviceType") String deviceType) {
+        this.deviceName = deviceName;
+        this.deviceType = deviceType;
+  }
 }

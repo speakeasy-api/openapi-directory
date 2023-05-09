@@ -18,9 +18,11 @@ public class CreateBatchPaymentNewBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchUuid")
     public String batchUuid;
+
     public CreateBatchPaymentNewBatchResponse withBatchUuid(String batchUuid) {
         this.batchUuid = batchUuid;
         return this;
     }
     
+    public CreateBatchPaymentNewBatchResponse(){}
 }

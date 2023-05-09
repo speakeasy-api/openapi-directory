@@ -15,6 +15,7 @@ public class UpdateDatastoreRequestBodyDatastoreStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedS3")
     public org.openapis.openapi.models.shared.CustomerManagedDatastoreS3Storage customerManagedS3;
+
     public UpdateDatastoreRequestBodyDatastoreStorage withCustomerManagedS3(org.openapis.openapi.models.shared.CustomerManagedDatastoreS3Storage customerManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         return this;
@@ -23,6 +24,7 @@ public class UpdateDatastoreRequestBodyDatastoreStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotSiteWiseMultiLayerStorage")
     public org.openapis.openapi.models.shared.DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage;
+
     public UpdateDatastoreRequestBodyDatastoreStorage withIotSiteWiseMultiLayerStorage(org.openapis.openapi.models.shared.DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage) {
         this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
         return this;
@@ -31,9 +33,11 @@ public class UpdateDatastoreRequestBodyDatastoreStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceManagedS3")
     public java.util.Map<String, Object> serviceManagedS3;
+
     public UpdateDatastoreRequestBodyDatastoreStorage withServiceManagedS3(java.util.Map<String, Object> serviceManagedS3) {
         this.serviceManagedS3 = serviceManagedS3;
         return this;
     }
     
+    public UpdateDatastoreRequestBodyDatastoreStorage(){}
 }

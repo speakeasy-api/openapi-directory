@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagations {
     
     public GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum state;
+
     public GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagations withState(GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachme
     
     
     public String transitGatewayRouteTableId;
+
     public GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagations withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagations(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsLogGroupResponse {
     
     public String contentType;
+
     public ListTagsLogGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsLogGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsLogGroupResponse listTagsLogGroupResponse;
+
     public ListTagsLogGroupResponse withListTagsLogGroupResponse(org.openapis.openapi.models.shared.ListTagsLogGroupResponse listTagsLogGroupResponse) {
         this.listTagsLogGroupResponse = listTagsLogGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsLogGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTagsLogGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class ListTagsLogGroupResponse {
     
     
     public Integer statusCode;
+
     public ListTagsLogGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListTagsLogGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsLogGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListTagsLogGroupResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListTagsLogGroupResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListTagsLogGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

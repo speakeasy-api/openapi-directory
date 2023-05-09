@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuickTestImageRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public QuickTestImageRequestBody requestBody;
+
     public QuickTestImageRequest withRequestBody(QuickTestImageRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class QuickTestImageRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public QuickTestImageRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -30,6 +33,7 @@ public class QuickTestImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public QuickTestImageRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -40,9 +44,15 @@ public class QuickTestImageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public QuickTestImageRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public QuickTestImageRequest(@JsonProperty("RequestBody") QuickTestImageRequestBody requestBody, @JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.requestBody = requestBody;
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

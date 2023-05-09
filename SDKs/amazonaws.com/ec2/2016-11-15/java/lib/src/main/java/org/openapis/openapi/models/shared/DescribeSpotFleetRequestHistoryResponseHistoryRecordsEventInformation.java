@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformation {
     
     public String eventDescription;
+
     public DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformation withEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformati
     
     
     public String eventSubType;
+
     public DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformation withEventSubType(String eventSubType) {
         this.eventSubType = eventSubType;
         return this;
@@ -26,9 +28,11 @@ public class DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformati
     
     
     public String instanceId;
+
     public DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformation withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformation(){}
 }

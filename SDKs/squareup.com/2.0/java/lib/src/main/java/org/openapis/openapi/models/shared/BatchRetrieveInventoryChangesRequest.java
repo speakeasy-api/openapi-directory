@@ -21,6 +21,7 @@ public class BatchRetrieveInventoryChangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_ids")
     public String[] catalogObjectIds;
+
     public BatchRetrieveInventoryChangesRequest withCatalogObjectIds(String[] catalogObjectIds) {
         this.catalogObjectIds = catalogObjectIds;
         return this;
@@ -35,6 +36,7 @@ public class BatchRetrieveInventoryChangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public BatchRetrieveInventoryChangesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -47,6 +49,7 @@ public class BatchRetrieveInventoryChangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public BatchRetrieveInventoryChangesRequest withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
@@ -60,6 +63,7 @@ public class BatchRetrieveInventoryChangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("states")
     public String[] states;
+
     public BatchRetrieveInventoryChangesRequest withStates(String[] states) {
         this.states = states;
         return this;
@@ -72,6 +76,7 @@ public class BatchRetrieveInventoryChangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public String[] types;
+
     public BatchRetrieveInventoryChangesRequest withTypes(String[] types) {
         this.types = types;
         return this;
@@ -85,6 +90,7 @@ public class BatchRetrieveInventoryChangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_after")
     public String updatedAfter;
+
     public BatchRetrieveInventoryChangesRequest withUpdatedAfter(String updatedAfter) {
         this.updatedAfter = updatedAfter;
         return this;
@@ -98,9 +104,11 @@ public class BatchRetrieveInventoryChangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_before")
     public String updatedBefore;
+
     public BatchRetrieveInventoryChangesRequest withUpdatedBefore(String updatedBefore) {
         this.updatedBefore = updatedBefore;
         return this;
     }
     
+    public BatchRetrieveInventoryChangesRequest(){}
 }

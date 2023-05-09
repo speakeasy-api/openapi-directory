@@ -18,6 +18,7 @@ public class SDKVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkSupportStatus")
     public SDKVersionSDKSupportStatusEnum sdkSupportStatus;
+
     public SDKVersion withSDKSupportStatus(SDKVersionSDKSupportStatusEnum sdkSupportStatus) {
         this.sdkSupportStatus = sdkSupportStatus;
         return this;
@@ -29,6 +30,7 @@ public class SDKVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SDKVersion withVersion(String version) {
         this.version = version;
         return this;
@@ -40,9 +42,11 @@ public class SDKVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionDisplayName")
     public String versionDisplayName;
+
     public SDKVersion withVersionDisplayName(String versionDisplayName) {
         this.versionDisplayName = versionDisplayName;
         return this;
     }
     
+    public SDKVersion(){}
 }

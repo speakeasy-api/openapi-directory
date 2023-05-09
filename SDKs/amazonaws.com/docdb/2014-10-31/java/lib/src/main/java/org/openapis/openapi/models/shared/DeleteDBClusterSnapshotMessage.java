@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteDBClusterSnapshotMessage - Represents the input to &lt;a&gt;DeleteDBClusterSnapshot&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteDBClusterSnapshotMessage {
     
     public String dbClusterSnapshotIdentifier;
+
     public DeleteDBClusterSnapshotMessage withDBClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
         this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
         return this;
     }
     
+    public DeleteDBClusterSnapshotMessage(@JsonProperty("DBClusterSnapshotIdentifier") String dbClusterSnapshotIdentifier) {
+        this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
+  }
 }

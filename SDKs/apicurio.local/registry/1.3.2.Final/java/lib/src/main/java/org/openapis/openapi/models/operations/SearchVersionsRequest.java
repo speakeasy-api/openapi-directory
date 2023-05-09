@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchVersionsRequest {
@@ -12,6 +13,7 @@ public class SearchVersionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public SearchVersionsRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -22,6 +24,7 @@ public class SearchVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public SearchVersionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,9 +35,15 @@ public class SearchVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public SearchVersionsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public SearchVersionsRequest(@JsonProperty("artifactId") String artifactId, @JsonProperty("limit") Long limit, @JsonProperty("offset") Long offset) {
+        this.artifactId = artifactId;
+        this.limit = limit;
+        this.offset = offset;
+  }
 }

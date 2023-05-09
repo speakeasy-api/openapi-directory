@@ -15,9 +15,11 @@ public class StartExpenseAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartExpenseAnalysisResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartExpenseAnalysisResponse(){}
 }

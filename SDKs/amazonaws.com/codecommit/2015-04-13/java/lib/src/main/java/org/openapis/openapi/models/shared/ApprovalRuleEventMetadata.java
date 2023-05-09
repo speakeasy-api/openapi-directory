@@ -15,6 +15,7 @@ public class ApprovalRuleEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRuleContent")
     public String approvalRuleContent;
+
     public ApprovalRuleEventMetadata withApprovalRuleContent(String approvalRuleContent) {
         this.approvalRuleContent = approvalRuleContent;
         return this;
@@ -23,6 +24,7 @@ public class ApprovalRuleEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRuleId")
     public String approvalRuleId;
+
     public ApprovalRuleEventMetadata withApprovalRuleId(String approvalRuleId) {
         this.approvalRuleId = approvalRuleId;
         return this;
@@ -31,9 +33,11 @@ public class ApprovalRuleEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRuleName")
     public String approvalRuleName;
+
     public ApprovalRuleEventMetadata withApprovalRuleName(String approvalRuleName) {
         this.approvalRuleName = approvalRuleName;
         return this;
     }
     
+    public ApprovalRuleEventMetadata(){}
 }

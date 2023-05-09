@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeUrlMapsPatchRequest {
@@ -12,6 +13,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeUrlMapsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeUrlMapsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UrlMap urlMap1;
+
     public ComputeUrlMapsPatchRequest withUrlMap1(org.openapis.openapi.models.shared.UrlMap urlMap1) {
         this.urlMap1 = urlMap1;
         return this;
@@ -29,6 +32,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeUrlMapsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeUrlMapsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeUrlMapsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeUrlMapsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeUrlMapsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeUrlMapsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeUrlMapsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeUrlMapsPatchRequest withProject(String project) {
         this.project = project;
         return this;
@@ -109,6 +120,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeUrlMapsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeUrlMapsPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -129,6 +142,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeUrlMapsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,6 +153,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeUrlMapsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -149,6 +164,7 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=urlMap")
     public String urlMapPathParameter;
+
     public ComputeUrlMapsPatchRequest withUrlMapPathParameter(String urlMapPathParameter) {
         this.urlMapPathParameter = urlMapPathParameter;
         return this;
@@ -159,9 +175,14 @@ public class ComputeUrlMapsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeUrlMapsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeUrlMapsPatchRequest(@JsonProperty("project") String project, @JsonProperty("urlMapPathParameter") String urlMapPathParameter) {
+        this.project = project;
+        this.urlMapPathParameter = urlMapPathParameter;
+  }
 }

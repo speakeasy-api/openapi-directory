@@ -12,6 +12,7 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchemaPropertiesCode code;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchemaProperties withCode(ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchemaPropertiesCode code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchemaPropertiesMessage message;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchemaProperties withMessage(ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchemaPropertiesMessage message) {
         this.message = message;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchemaProperties(){}
 }

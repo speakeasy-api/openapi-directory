@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutReturnsRmaResponseV2Items {
     @JsonProperty("quantityExpected")
     public Long quantityExpected;
+
     public PutReturnsRmaResponseV2Items withQuantityExpected(Long quantityExpected) {
         this.quantityExpected = quantityExpected;
         return this;
@@ -16,9 +17,14 @@ public class PutReturnsRmaResponseV2Items {
     
     @JsonProperty("sku")
     public String sku;
+
     public PutReturnsRmaResponseV2Items withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public PutReturnsRmaResponseV2Items(@JsonProperty("quantityExpected") Long quantityExpected, @JsonProperty("sku") String sku) {
+        this.quantityExpected = quantityExpected;
+        this.sku = sku;
+  }
 }

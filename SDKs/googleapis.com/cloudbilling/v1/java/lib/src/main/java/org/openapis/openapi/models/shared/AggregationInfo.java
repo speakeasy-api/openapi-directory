@@ -18,6 +18,7 @@ public class AggregationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationCount")
     public Integer aggregationCount;
+
     public AggregationInfo withAggregationCount(Integer aggregationCount) {
         this.aggregationCount = aggregationCount;
         return this;
@@ -26,6 +27,7 @@ public class AggregationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationInterval")
     public AggregationInfoAggregationIntervalEnum aggregationInterval;
+
     public AggregationInfo withAggregationInterval(AggregationInfoAggregationIntervalEnum aggregationInterval) {
         this.aggregationInterval = aggregationInterval;
         return this;
@@ -34,9 +36,11 @@ public class AggregationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationLevel")
     public AggregationInfoAggregationLevelEnum aggregationLevel;
+
     public AggregationInfo withAggregationLevel(AggregationInfoAggregationLevelEnum aggregationLevel) {
         this.aggregationLevel = aggregationLevel;
         return this;
     }
     
+    public AggregationInfo(){}
 }

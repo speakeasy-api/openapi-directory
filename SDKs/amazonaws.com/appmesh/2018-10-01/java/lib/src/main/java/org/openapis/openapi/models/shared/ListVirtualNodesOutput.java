@@ -15,6 +15,7 @@ public class ListVirtualNodesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVirtualNodesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListVirtualNodesOutput {
     
     @JsonProperty("virtualNodes")
     public VirtualNodeRef[] virtualNodes;
+
     public ListVirtualNodesOutput withVirtualNodes(VirtualNodeRef[] virtualNodes) {
         this.virtualNodes = virtualNodes;
         return this;
     }
     
+    public ListVirtualNodesOutput(@JsonProperty("virtualNodes") VirtualNodeRef[] virtualNodes) {
+        this.virtualNodes = virtualNodes;
+  }
 }

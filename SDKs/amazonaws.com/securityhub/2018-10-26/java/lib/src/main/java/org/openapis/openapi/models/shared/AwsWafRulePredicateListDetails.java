@@ -15,6 +15,7 @@ public class AwsWafRulePredicateListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataId")
     public String dataId;
+
     public AwsWafRulePredicateListDetails withDataId(String dataId) {
         this.dataId = dataId;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafRulePredicateListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Negated")
     public Boolean negated;
+
     public AwsWafRulePredicateListDetails withNegated(Boolean negated) {
         this.negated = negated;
         return this;
@@ -31,9 +33,11 @@ public class AwsWafRulePredicateListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsWafRulePredicateListDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsWafRulePredicateListDetails(){}
 }

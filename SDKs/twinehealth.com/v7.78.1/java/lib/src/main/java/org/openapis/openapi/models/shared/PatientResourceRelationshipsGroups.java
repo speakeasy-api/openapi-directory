@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientResourceRelationshipsGroups {
     @JsonProperty("data")
     public PatientResourceRelationshipsGroupsData[] data;
+
     public PatientResourceRelationshipsGroups withData(PatientResourceRelationshipsGroupsData[] data) {
         this.data = data;
         return this;
     }
     
+    public PatientResourceRelationshipsGroups(@JsonProperty("data") PatientResourceRelationshipsGroupsData[] data) {
+        this.data = data;
+  }
 }

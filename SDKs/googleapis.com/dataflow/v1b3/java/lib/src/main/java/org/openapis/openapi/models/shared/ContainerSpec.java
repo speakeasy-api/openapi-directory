@@ -18,6 +18,7 @@ public class ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultEnvironment")
     public FlexTemplateRuntimeEnvironment defaultEnvironment;
+
     public ContainerSpec withDefaultEnvironment(FlexTemplateRuntimeEnvironment defaultEnvironment) {
         this.defaultEnvironment = defaultEnvironment;
         return this;
@@ -29,6 +30,7 @@ public class ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public ContainerSpec withImage(String image) {
         this.image = image;
         return this;
@@ -40,6 +42,7 @@ public class ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRepositoryCertPath")
     public String imageRepositoryCertPath;
+
     public ContainerSpec withImageRepositoryCertPath(String imageRepositoryCertPath) {
         this.imageRepositoryCertPath = imageRepositoryCertPath;
         return this;
@@ -51,6 +54,7 @@ public class ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRepositoryPasswordSecretId")
     public String imageRepositoryPasswordSecretId;
+
     public ContainerSpec withImageRepositoryPasswordSecretId(String imageRepositoryPasswordSecretId) {
         this.imageRepositoryPasswordSecretId = imageRepositoryPasswordSecretId;
         return this;
@@ -62,6 +66,7 @@ public class ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRepositoryUsernameSecretId")
     public String imageRepositoryUsernameSecretId;
+
     public ContainerSpec withImageRepositoryUsernameSecretId(String imageRepositoryUsernameSecretId) {
         this.imageRepositoryUsernameSecretId = imageRepositoryUsernameSecretId;
         return this;
@@ -73,6 +78,7 @@ public class ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public TemplateMetadata metadata;
+
     public ContainerSpec withMetadata(TemplateMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -84,9 +90,11 @@ public class ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkInfo")
     public SDKInfo sdkInfo;
+
     public ContainerSpec withSDKInfo(SDKInfo sdkInfo) {
         this.sdkInfo = sdkInfo;
         return this;
     }
     
+    public ContainerSpec(){}
 }

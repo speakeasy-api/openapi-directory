@@ -15,6 +15,7 @@ public class MarketplaceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public MarketplaceInformation withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -23,9 +24,11 @@ public class MarketplaceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productUrl")
     public String productUrl;
+
     public MarketplaceInformation withProductUrl(String productUrl) {
         this.productUrl = productUrl;
         return this;
     }
     
+    public MarketplaceInformation(){}
 }

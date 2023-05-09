@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2ProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum state;
+
     public GoogleCloudIdentitytoolkitAdminV2ProviderConfig withState(GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum state) {
         this.state = state;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2ProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totpProviderConfig")
     public GoogleCloudIdentitytoolkitAdminV2TotpMfaProviderConfig totpProviderConfig;
+
     public GoogleCloudIdentitytoolkitAdminV2ProviderConfig withTotpProviderConfig(GoogleCloudIdentitytoolkitAdminV2TotpMfaProviderConfig totpProviderConfig) {
         this.totpProviderConfig = totpProviderConfig;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2ProviderConfig(){}
 }

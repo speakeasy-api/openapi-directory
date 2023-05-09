@@ -15,6 +15,7 @@ public class DescribedSecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fips")
     public Boolean fips;
+
     public DescribedSecurityPolicy withFips(Boolean fips) {
         this.fips = fips;
         return this;
@@ -22,6 +23,7 @@ public class DescribedSecurityPolicy {
     
     @JsonProperty("SecurityPolicyName")
     public String securityPolicyName;
+
     public DescribedSecurityPolicy withSecurityPolicyName(String securityPolicyName) {
         this.securityPolicyName = securityPolicyName;
         return this;
@@ -30,6 +32,7 @@ public class DescribedSecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshCiphers")
     public String[] sshCiphers;
+
     public DescribedSecurityPolicy withSshCiphers(String[] sshCiphers) {
         this.sshCiphers = sshCiphers;
         return this;
@@ -38,6 +41,7 @@ public class DescribedSecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshKexs")
     public String[] sshKexs;
+
     public DescribedSecurityPolicy withSshKexs(String[] sshKexs) {
         this.sshKexs = sshKexs;
         return this;
@@ -46,6 +50,7 @@ public class DescribedSecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshMacs")
     public String[] sshMacs;
+
     public DescribedSecurityPolicy withSshMacs(String[] sshMacs) {
         this.sshMacs = sshMacs;
         return this;
@@ -54,9 +59,13 @@ public class DescribedSecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlsCiphers")
     public String[] tlsCiphers;
+
     public DescribedSecurityPolicy withTlsCiphers(String[] tlsCiphers) {
         this.tlsCiphers = tlsCiphers;
         return this;
     }
     
+    public DescribedSecurityPolicy(@JsonProperty("SecurityPolicyName") String securityPolicyName) {
+        this.securityPolicyName = securityPolicyName;
+  }
 }

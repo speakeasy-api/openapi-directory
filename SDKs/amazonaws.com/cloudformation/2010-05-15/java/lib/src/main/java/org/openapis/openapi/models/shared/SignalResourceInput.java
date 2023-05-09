@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SignalResourceInput - The input for the &lt;a&gt;SignalResource&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SignalResourceInput {
     
     public String logicalResourceId;
+
     public SignalResourceInput withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -19,6 +20,7 @@ public class SignalResourceInput {
     
     
     public String stackName;
+
     public SignalResourceInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -26,6 +28,7 @@ public class SignalResourceInput {
     
     
     public ResourceSignalStatusEnum status;
+
     public SignalResourceInput withStatus(ResourceSignalStatusEnum status) {
         this.status = status;
         return this;
@@ -33,9 +36,16 @@ public class SignalResourceInput {
     
     
     public String uniqueId;
+
     public SignalResourceInput withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
     }
     
+    public SignalResourceInput(@JsonProperty("LogicalResourceId") String logicalResourceId, @JsonProperty("StackName") String stackName, @JsonProperty("Status") ResourceSignalStatusEnum status, @JsonProperty("UniqueId") String uniqueId) {
+        this.logicalResourceId = logicalResourceId;
+        this.stackName = stackName;
+        this.status = status;
+        this.uniqueId = uniqueId;
+  }
 }

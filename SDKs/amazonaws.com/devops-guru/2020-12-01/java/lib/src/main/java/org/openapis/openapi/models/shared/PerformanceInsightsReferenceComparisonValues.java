@@ -15,6 +15,7 @@ public class PerformanceInsightsReferenceComparisonValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceMetric")
     public PerformanceInsightsReferenceMetric referenceMetric;
+
     public PerformanceInsightsReferenceComparisonValues withReferenceMetric(PerformanceInsightsReferenceMetric referenceMetric) {
         this.referenceMetric = referenceMetric;
         return this;
@@ -23,9 +24,11 @@ public class PerformanceInsightsReferenceComparisonValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceScalar")
     public PerformanceInsightsReferenceScalar referenceScalar;
+
     public PerformanceInsightsReferenceComparisonValues withReferenceScalar(PerformanceInsightsReferenceScalar referenceScalar) {
         this.referenceScalar = referenceScalar;
         return this;
     }
     
+    public PerformanceInsightsReferenceComparisonValues(){}
 }

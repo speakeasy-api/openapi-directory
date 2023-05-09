@@ -14,6 +14,7 @@ public class Node {
      */
     @JsonProperty("id")
     public String id;
+
     public Node withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,13 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Node withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public Node(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule {
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRuleDestinationPorts[] destinationPorts;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule withDestinationPorts(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRuleDestinationPorts[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String[] destinations;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String direction;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String protocol;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String ruleAction;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule withRuleAction(String ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String ruleGroupArn;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule withRuleGroupArn(String ruleGroupArn) {
         this.ruleGroupArn = ruleGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRuleSourcePorts[] sourcePorts;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule withSourcePorts(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRuleSourcePorts[] sourcePorts) {
         this.sourcePorts = sourcePorts;
         return this;
@@ -61,9 +68,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String[] sources;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule withSources(String[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsFirewallStatefulRule(){}
 }

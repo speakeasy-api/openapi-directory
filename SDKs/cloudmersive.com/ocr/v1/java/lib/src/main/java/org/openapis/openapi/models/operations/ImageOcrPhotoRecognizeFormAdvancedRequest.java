@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImageOcrPhotoRecognizeFormAdvancedRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public ImageOcrPhotoRecognizeFormAdvancedRequestBody requestBody;
+
     public ImageOcrPhotoRecognizeFormAdvancedRequest withRequestBody(ImageOcrPhotoRecognizeFormAdvancedRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ImageOcrPhotoRecognizeFormAdvancedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=bucketID")
     public String bucketID;
+
     public ImageOcrPhotoRecognizeFormAdvancedRequest withBucketID(String bucketID) {
         this.bucketID = bucketID;
         return this;
@@ -29,6 +32,7 @@ public class ImageOcrPhotoRecognizeFormAdvancedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=bucketSecretKey")
     public String bucketSecretKey;
+
     public ImageOcrPhotoRecognizeFormAdvancedRequest withBucketSecretKey(String bucketSecretKey) {
         this.bucketSecretKey = bucketSecretKey;
         return this;
@@ -39,6 +43,7 @@ public class ImageOcrPhotoRecognizeFormAdvancedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=diagnostics")
     public String diagnostics;
+
     public ImageOcrPhotoRecognizeFormAdvancedRequest withDiagnostics(String diagnostics) {
         this.diagnostics = diagnostics;
         return this;
@@ -49,6 +54,7 @@ public class ImageOcrPhotoRecognizeFormAdvancedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=preprocessing")
     public String preprocessing;
+
     public ImageOcrPhotoRecognizeFormAdvancedRequest withPreprocessing(String preprocessing) {
         this.preprocessing = preprocessing;
         return this;
@@ -59,9 +65,13 @@ public class ImageOcrPhotoRecognizeFormAdvancedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=recognitionMode")
     public String recognitionMode;
+
     public ImageOcrPhotoRecognizeFormAdvancedRequest withRecognitionMode(String recognitionMode) {
         this.recognitionMode = recognitionMode;
         return this;
     }
     
+    public ImageOcrPhotoRecognizeFormAdvancedRequest(@JsonProperty("RequestBody") ImageOcrPhotoRecognizeFormAdvancedRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

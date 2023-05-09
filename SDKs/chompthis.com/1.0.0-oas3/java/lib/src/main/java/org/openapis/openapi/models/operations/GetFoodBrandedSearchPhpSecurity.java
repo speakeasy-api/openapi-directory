@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFoodBrandedSearchPhpSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
     public String apiKeyAuth;
+
     public GetFoodBrandedSearchPhpSecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
     }
     
+    public GetFoodBrandedSearchPhpSecurity(@JsonProperty("ApiKeyAuth") String apiKeyAuth) {
+        this.apiKeyAuth = apiKeyAuth;
+  }
 }

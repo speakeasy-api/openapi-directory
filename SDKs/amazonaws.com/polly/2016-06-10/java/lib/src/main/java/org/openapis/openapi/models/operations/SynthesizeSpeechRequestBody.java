@@ -15,6 +15,7 @@ public class SynthesizeSpeechRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public SynthesizeSpeechRequestBodyEngineEnum engine;
+
     public SynthesizeSpeechRequestBody withEngine(SynthesizeSpeechRequestBodyEngineEnum engine) {
         this.engine = engine;
         return this;
@@ -26,6 +27,7 @@ public class SynthesizeSpeechRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public SynthesizeSpeechRequestBodyLanguageCodeEnum languageCode;
+
     public SynthesizeSpeechRequestBody withLanguageCode(SynthesizeSpeechRequestBodyLanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -37,6 +39,7 @@ public class SynthesizeSpeechRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LexiconNames")
     public String[] lexiconNames;
+
     public SynthesizeSpeechRequestBody withLexiconNames(String[] lexiconNames) {
         this.lexiconNames = lexiconNames;
         return this;
@@ -47,6 +50,7 @@ public class SynthesizeSpeechRequestBody {
      */
     @JsonProperty("OutputFormat")
     public SynthesizeSpeechRequestBodyOutputFormatEnum outputFormat;
+
     public SynthesizeSpeechRequestBody withOutputFormat(SynthesizeSpeechRequestBodyOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -58,6 +62,7 @@ public class SynthesizeSpeechRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampleRate")
     public String sampleRate;
+
     public SynthesizeSpeechRequestBody withSampleRate(String sampleRate) {
         this.sampleRate = sampleRate;
         return this;
@@ -69,6 +74,7 @@ public class SynthesizeSpeechRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpeechMarkTypes")
     public org.openapis.openapi.models.shared.SpeechMarkTypeEnum[] speechMarkTypes;
+
     public SynthesizeSpeechRequestBody withSpeechMarkTypes(org.openapis.openapi.models.shared.SpeechMarkTypeEnum[] speechMarkTypes) {
         this.speechMarkTypes = speechMarkTypes;
         return this;
@@ -79,6 +85,7 @@ public class SynthesizeSpeechRequestBody {
      */
     @JsonProperty("Text")
     public String text;
+
     public SynthesizeSpeechRequestBody withText(String text) {
         this.text = text;
         return this;
@@ -90,6 +97,7 @@ public class SynthesizeSpeechRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextType")
     public SynthesizeSpeechRequestBodyTextTypeEnum textType;
+
     public SynthesizeSpeechRequestBody withTextType(SynthesizeSpeechRequestBodyTextTypeEnum textType) {
         this.textType = textType;
         return this;
@@ -100,9 +108,15 @@ public class SynthesizeSpeechRequestBody {
      */
     @JsonProperty("VoiceId")
     public SynthesizeSpeechRequestBodyVoiceIdEnum voiceId;
+
     public SynthesizeSpeechRequestBody withVoiceId(SynthesizeSpeechRequestBodyVoiceIdEnum voiceId) {
         this.voiceId = voiceId;
         return this;
     }
     
+    public SynthesizeSpeechRequestBody(@JsonProperty("OutputFormat") SynthesizeSpeechRequestBodyOutputFormatEnum outputFormat, @JsonProperty("Text") String text, @JsonProperty("VoiceId") SynthesizeSpeechRequestBodyVoiceIdEnum voiceId) {
+        this.outputFormat = outputFormat;
+        this.text = text;
+        this.voiceId = voiceId;
+  }
 }

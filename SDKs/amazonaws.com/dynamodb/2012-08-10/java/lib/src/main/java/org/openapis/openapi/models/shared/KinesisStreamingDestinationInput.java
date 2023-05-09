@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KinesisStreamingDestinationInput {
     @JsonProperty("StreamArn")
     public String streamArn;
+
     public KinesisStreamingDestinationInput withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
@@ -16,9 +17,14 @@ public class KinesisStreamingDestinationInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public KinesisStreamingDestinationInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public KinesisStreamingDestinationInput(@JsonProperty("StreamArn") String streamArn, @JsonProperty("TableName") String tableName) {
+        this.streamArn = streamArn;
+        this.tableName = tableName;
+  }
 }

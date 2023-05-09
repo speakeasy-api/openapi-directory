@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetValidity200ApplicationJSONData {
     @JsonProperty("permissions")
     public String[] permissions;
+
     public GetValidity200ApplicationJSONData withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GetValidity200ApplicationJSONData(@JsonProperty("permissions") String[] permissions) {
+        this.permissions = permissions;
+  }
 }

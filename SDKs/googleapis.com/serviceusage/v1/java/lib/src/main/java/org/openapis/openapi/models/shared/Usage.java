@@ -18,6 +18,7 @@ public class Usage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerNotificationChannel")
     public String producerNotificationChannel;
+
     public Usage withProducerNotificationChannel(String producerNotificationChannel) {
         this.producerNotificationChannel = producerNotificationChannel;
         return this;
@@ -29,6 +30,7 @@ public class Usage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirements")
     public String[] requirements;
+
     public Usage withRequirements(String[] requirements) {
         this.requirements = requirements;
         return this;
@@ -40,9 +42,11 @@ public class Usage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public UsageRule[] rules;
+
     public Usage withRules(UsageRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public Usage(){}
 }

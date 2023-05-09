@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccountSettingResponse {
@@ -12,6 +13,7 @@ public class DeleteAccountSettingResponse {
      */
     
     public Object clientException;
+
     public DeleteAccountSettingResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAccountSettingResponse {
     
     
     public String contentType;
+
     public DeleteAccountSettingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAccountSettingResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAccountSettingResponse deleteAccountSettingResponse;
+
     public DeleteAccountSettingResponse withDeleteAccountSettingResponse(org.openapis.openapi.models.shared.DeleteAccountSettingResponse deleteAccountSettingResponse) {
         this.deleteAccountSettingResponse = deleteAccountSettingResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAccountSettingResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteAccountSettingResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAccountSettingResponse {
      */
     
     public Object serverException;
+
     public DeleteAccountSettingResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAccountSettingResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccountSettingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAccountSettingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccountSettingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAccountSettingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,13 @@ public class DeleteRecommenderConfigurationResponse {
      */
     @JsonProperty("RecommenderConfigurationResponse")
     public RecommenderConfigurationResponse recommenderConfigurationResponse;
+
     public DeleteRecommenderConfigurationResponse withRecommenderConfigurationResponse(RecommenderConfigurationResponse recommenderConfigurationResponse) {
         this.recommenderConfigurationResponse = recommenderConfigurationResponse;
         return this;
     }
     
+    public DeleteRecommenderConfigurationResponse(@JsonProperty("RecommenderConfigurationResponse") RecommenderConfigurationResponse recommenderConfigurationResponse) {
+        this.recommenderConfigurationResponse = recommenderConfigurationResponse;
+  }
 }

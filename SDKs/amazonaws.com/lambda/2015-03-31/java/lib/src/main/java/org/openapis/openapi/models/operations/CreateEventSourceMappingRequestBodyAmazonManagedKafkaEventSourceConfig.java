@@ -15,9 +15,11 @@ public class CreateEventSourceMappingRequestBodyAmazonManagedKafkaEventSourceCon
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumerGroupId")
     public String consumerGroupId;
+
     public CreateEventSourceMappingRequestBodyAmazonManagedKafkaEventSourceConfig withConsumerGroupId(String consumerGroupId) {
         this.consumerGroupId = consumerGroupId;
         return this;
     }
     
+    public CreateEventSourceMappingRequestBodyAmazonManagedKafkaEventSourceConfig(){}
 }

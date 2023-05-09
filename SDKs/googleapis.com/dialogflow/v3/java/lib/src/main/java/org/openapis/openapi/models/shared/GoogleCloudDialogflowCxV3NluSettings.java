@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3NluSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationThreshold")
     public Float classificationThreshold;
+
     public GoogleCloudDialogflowCxV3NluSettings withClassificationThreshold(Float classificationThreshold) {
         this.classificationThreshold = classificationThreshold;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3NluSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelTrainingMode")
     public GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum modelTrainingMode;
+
     public GoogleCloudDialogflowCxV3NluSettings withModelTrainingMode(GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum modelTrainingMode) {
         this.modelTrainingMode = modelTrainingMode;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3NluSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelType")
     public GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum modelType;
+
     public GoogleCloudDialogflowCxV3NluSettings withModelType(GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum modelType) {
         this.modelType = modelType;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3NluSettings(){}
 }

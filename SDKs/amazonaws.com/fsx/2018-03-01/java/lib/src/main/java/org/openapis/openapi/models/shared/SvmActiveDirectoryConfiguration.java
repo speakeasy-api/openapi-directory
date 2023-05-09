@@ -15,6 +15,7 @@ public class SvmActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetBiosName")
     public String netBiosName;
+
     public SvmActiveDirectoryConfiguration withNetBiosName(String netBiosName) {
         this.netBiosName = netBiosName;
         return this;
@@ -26,9 +27,11 @@ public class SvmActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedActiveDirectoryConfiguration")
     public SelfManagedActiveDirectoryAttributes selfManagedActiveDirectoryConfiguration;
+
     public SvmActiveDirectoryConfiguration withSelfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryAttributes selfManagedActiveDirectoryConfiguration) {
         this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
         return this;
     }
     
+    public SvmActiveDirectoryConfiguration(){}
 }

@@ -18,6 +18,7 @@ public class SplitCapacityCommitmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public CapacityCommitment first;
+
     public SplitCapacityCommitmentResponse withFirst(CapacityCommitment first) {
         this.first = first;
         return this;
@@ -29,9 +30,11 @@ public class SplitCapacityCommitmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("second")
     public CapacityCommitment second;
+
     public SplitCapacityCommitmentResponse withSecond(CapacityCommitment second) {
         this.second = second;
         return this;
     }
     
+    public SplitCapacityCommitmentResponse(){}
 }

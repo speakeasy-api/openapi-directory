@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGoalRequest {
@@ -12,6 +13,7 @@ public class DeleteGoalRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=goal_gid")
     public String goalGid;
+
     public DeleteGoalRequest withGoalGid(String goalGid) {
         this.goalGid = goalGid;
         return this;
@@ -24,6 +26,7 @@ public class DeleteGoalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public DeleteGoalRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,9 +38,13 @@ public class DeleteGoalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public DeleteGoalRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public DeleteGoalRequest(@JsonProperty("goal_gid") String goalGid) {
+        this.goalGid = goalGid;
+  }
 }

@@ -18,6 +18,7 @@ public class DisksScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public DisksScopedListWarningCodeEnum code;
+
     public DisksScopedListWarning withCode(DisksScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class DisksScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public DisksScopedListWarningData[] data;
+
     public DisksScopedListWarning withData(DisksScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class DisksScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DisksScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DisksScopedListWarning(){}
 }

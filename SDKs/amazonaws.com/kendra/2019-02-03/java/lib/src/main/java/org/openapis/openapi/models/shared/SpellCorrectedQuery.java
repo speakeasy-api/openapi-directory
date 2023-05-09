@@ -15,6 +15,7 @@ public class SpellCorrectedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Corrections")
     public Correction[] corrections;
+
     public SpellCorrectedQuery withCorrections(Correction[] corrections) {
         this.corrections = corrections;
         return this;
@@ -23,9 +24,11 @@ public class SpellCorrectedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuggestedQueryText")
     public String suggestedQueryText;
+
     public SpellCorrectedQuery withSuggestedQueryText(String suggestedQueryText) {
         this.suggestedQueryText = suggestedQueryText;
         return this;
     }
     
+    public SpellCorrectedQuery(){}
 }

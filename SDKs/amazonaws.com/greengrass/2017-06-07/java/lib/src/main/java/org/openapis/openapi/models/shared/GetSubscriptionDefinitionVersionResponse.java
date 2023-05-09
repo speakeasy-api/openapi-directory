@@ -15,6 +15,7 @@ public class GetSubscriptionDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GetSubscriptionDefinitionVersionResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class GetSubscriptionDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTimestamp")
     public String creationTimestamp;
+
     public GetSubscriptionDefinitionVersionResponse withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -31,6 +33,7 @@ public class GetSubscriptionDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definition")
     public SubscriptionDefinitionVersion definition;
+
     public GetSubscriptionDefinitionVersionResponse withDefinition(SubscriptionDefinitionVersion definition) {
         this.definition = definition;
         return this;
@@ -39,6 +42,7 @@ public class GetSubscriptionDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public GetSubscriptionDefinitionVersionResponse withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class GetSubscriptionDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSubscriptionDefinitionVersionResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -55,9 +60,11 @@ public class GetSubscriptionDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public GetSubscriptionDefinitionVersionResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetSubscriptionDefinitionVersionResponse(){}
 }

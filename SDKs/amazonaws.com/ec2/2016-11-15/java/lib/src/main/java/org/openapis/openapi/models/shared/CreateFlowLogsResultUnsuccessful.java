@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFlowLogsResultUnsuccessful {
     
     public CreateFlowLogsResultUnsuccessfulError error;
+
     public CreateFlowLogsResultUnsuccessful withError(CreateFlowLogsResultUnsuccessfulError error) {
         this.error = error;
         return this;
@@ -19,9 +20,11 @@ public class CreateFlowLogsResultUnsuccessful {
     
     
     public String resourceId;
+
     public CreateFlowLogsResultUnsuccessful withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public CreateFlowLogsResultUnsuccessful(){}
 }

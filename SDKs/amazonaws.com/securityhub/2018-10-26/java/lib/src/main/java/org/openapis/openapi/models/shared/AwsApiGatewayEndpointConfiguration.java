@@ -15,9 +15,11 @@ public class AwsApiGatewayEndpointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Types")
     public String[] types;
+
     public AwsApiGatewayEndpointConfiguration withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public AwsApiGatewayEndpointConfiguration(){}
 }

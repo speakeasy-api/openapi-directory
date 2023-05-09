@@ -18,9 +18,11 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peeredNetwork")
     public String peeredNetwork;
+
     public NetworkConfig withPeeredNetwork(String peeredNetwork) {
         this.peeredNetwork = peeredNetwork;
         return this;
     }
     
+    public NetworkConfig(){}
 }

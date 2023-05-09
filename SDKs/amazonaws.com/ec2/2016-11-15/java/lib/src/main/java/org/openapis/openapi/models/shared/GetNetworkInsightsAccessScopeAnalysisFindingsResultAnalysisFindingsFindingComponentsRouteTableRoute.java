@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute {
     
     public String carrierGatewayId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String coreNetworkArn;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String destinationCidr;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withDestinationCidr(String destinationCidr) {
         this.destinationCidr = destinationCidr;
         return this;
@@ -33,6 +36,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String destinationPrefixListId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -40,6 +44,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String egressOnlyInternetGatewayId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -47,6 +52,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String gatewayId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -54,6 +60,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String instanceId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -61,6 +68,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String localGatewayId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -68,6 +76,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String natGatewayId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -75,6 +84,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String networkInterfaceId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -82,6 +92,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String origin;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -89,6 +100,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String state;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withState(String state) {
         this.state = state;
         return this;
@@ -96,6 +108,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String transitGatewayId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -103,9 +116,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String vpcPeeringConnectionId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute(){}
 }

@@ -19,6 +19,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blurhash")
     public String blurhash;
+
     public Attachment withBlurhash(String blurhash) {
         this.blurhash = blurhash;
         return this;
@@ -30,6 +31,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Attachment withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Attachment {
      */
     @JsonProperty("id")
     public String id;
+
     public Attachment withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public java.util.Map<String, Object> meta;
+
     public Attachment withMeta(java.util.Map<String, Object> meta) {
         this.meta = meta;
         return this;
@@ -61,6 +65,7 @@ public class Attachment {
      */
     @JsonProperty("preview_url")
     public String previewUrl;
+
     public Attachment withPreviewUrl(String previewUrl) {
         this.previewUrl = previewUrl;
         return this;
@@ -72,6 +77,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remote_url")
     public String remoteUrl;
+
     public Attachment withRemoteUrl(String remoteUrl) {
         this.remoteUrl = remoteUrl;
         return this;
@@ -83,6 +89,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_url")
     public String textUrl;
+
     public Attachment withTextUrl(String textUrl) {
         this.textUrl = textUrl;
         return this;
@@ -93,6 +100,7 @@ public class Attachment {
      */
     @JsonProperty("type")
     public AttachmentTypeEnum type;
+
     public Attachment withType(AttachmentTypeEnum type) {
         this.type = type;
         return this;
@@ -103,9 +111,16 @@ public class Attachment {
      */
     @JsonProperty("url")
     public String url;
+
     public Attachment withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Attachment(@JsonProperty("id") String id, @JsonProperty("preview_url") String previewUrl, @JsonProperty("type") AttachmentTypeEnum type, @JsonProperty("url") String url) {
+        this.id = id;
+        this.previewUrl = previewUrl;
+        this.type = type;
+        this.url = url;
+  }
 }

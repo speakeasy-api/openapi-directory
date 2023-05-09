@@ -12,9 +12,11 @@ public class CreateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook")
     public CreateWebhookRequestBodyWebhook webhook;
+
     public CreateWebhookRequestBody withWebhook(CreateWebhookRequestBodyWebhook webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public CreateWebhookRequestBody(){}
 }

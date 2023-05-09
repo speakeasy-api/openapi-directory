@@ -18,6 +18,7 @@ public class ListAutoscalingPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAutoscalingPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListAutoscalingPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public AutoscalingPolicy[] policies;
+
     public ListAutoscalingPoliciesResponse withPolicies(AutoscalingPolicy[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public ListAutoscalingPoliciesResponse(){}
 }

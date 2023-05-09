@@ -18,9 +18,11 @@ public class LabelIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelIds")
     public String[] labelIds;
+
     public LabelIds withLabelIds(String[] labelIds) {
         this.labelIds = labelIds;
         return this;
     }
     
+    public LabelIds(){}
 }

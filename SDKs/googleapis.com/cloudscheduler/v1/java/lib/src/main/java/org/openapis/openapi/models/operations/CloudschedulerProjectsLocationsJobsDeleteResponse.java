@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudschedulerProjectsLocationsJobsDeleteResponse {
     
     public String contentType;
+
     public CloudschedulerProjectsLocationsJobsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudschedulerProjectsLocationsJobsDeleteResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public CloudschedulerProjectsLocationsJobsDeleteResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class CloudschedulerProjectsLocationsJobsDeleteResponse {
     
     
     public Integer statusCode;
+
     public CloudschedulerProjectsLocationsJobsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudschedulerProjectsLocationsJobsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudschedulerProjectsLocationsJobsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudschedulerProjectsLocationsJobsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

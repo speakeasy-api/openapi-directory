@@ -12,9 +12,13 @@ public class DeleteQueuedSavingsPlanRequestBody {
      */
     @JsonProperty("savingsPlanId")
     public String savingsPlanId;
+
     public DeleteQueuedSavingsPlanRequestBody withSavingsPlanId(String savingsPlanId) {
         this.savingsPlanId = savingsPlanId;
         return this;
     }
     
+    public DeleteQueuedSavingsPlanRequestBody(@JsonProperty("savingsPlanId") String savingsPlanId) {
+        this.savingsPlanId = savingsPlanId;
+  }
 }

@@ -65,11 +65,9 @@ public class PublicIPAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContainersFloatingIpsResponse res = new org.openapis.openapi.models.operations.GetContainersFloatingIpsResponse() {{
+        org.openapis.openapi.models.operations.GetContainersFloatingIpsResponse res = new org.openapis.openapi.models.operations.GetContainersFloatingIpsResponse(contentType, httpRes.statusCode()) {{
             floatingIPS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,11 +112,9 @@ public class PublicIPAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersFloatingIpsRequestResponse res = new org.openapis.openapi.models.operations.PostContainersFloatingIpsRequestResponse() {{
+        org.openapis.openapi.models.operations.PostContainersFloatingIpsRequestResponse res = new org.openapis.openapi.models.operations.PostContainersFloatingIpsRequestResponse(contentType, httpRes.statusCode()) {{
             postContainersFloatingIpsRequest200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,10 +158,8 @@ public class PublicIPAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersFloatingIpsIpReleaseResponse res = new org.openapis.openapi.models.operations.PostContainersFloatingIpsIpReleaseResponse() {{
+        org.openapis.openapi.models.operations.PostContainersFloatingIpsIpReleaseResponse res = new org.openapis.openapi.models.operations.PostContainersFloatingIpsIpReleaseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -203,10 +197,8 @@ public class PublicIPAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpBindResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpBindResponse() {{
+        org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpBindResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpBindResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -244,10 +236,8 @@ public class PublicIPAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpUnbindResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpUnbindResponse() {{
+        org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpUnbindResponse res = new org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpUnbindResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

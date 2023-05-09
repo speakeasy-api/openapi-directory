@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetAllPostsChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_max")
     public OffsetDateTime dateMax;
+
     public GetAllPostsChangesRequest withDateMax(OffsetDateTime dateMax) {
         this.dateMax = dateMax;
         return this;
@@ -25,6 +27,7 @@ public class GetAllPostsChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_min")
     public OffsetDateTime dateMin;
+
     public GetAllPostsChangesRequest withDateMin(OffsetDateTime dateMin) {
         this.dateMin = dateMin;
         return this;
@@ -35,6 +38,7 @@ public class GetAllPostsChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetAllPostsChangesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -45,9 +49,14 @@ public class GetAllPostsChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetAllPostsChangesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetAllPostsChangesRequest(@JsonProperty("date_max") OffsetDateTime dateMax, @JsonProperty("date_min") OffsetDateTime dateMin) {
+        this.dateMax = dateMax;
+        this.dateMin = dateMin;
+  }
 }

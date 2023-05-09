@@ -18,9 +18,11 @@ public class DimensionalityReductionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalExplainedVarianceRatio")
     public Double totalExplainedVarianceRatio;
+
     public DimensionalityReductionMetrics withTotalExplainedVarianceRatio(Double totalExplainedVarianceRatio) {
         this.totalExplainedVarianceRatio = totalExplainedVarianceRatio;
         return this;
     }
     
+    public DimensionalityReductionMetrics(){}
 }

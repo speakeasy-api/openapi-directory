@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteHsmResponse {
@@ -12,6 +13,7 @@ public class DeleteHsmResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public DeleteHsmResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteHsmResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DeleteHsmResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteHsmResponse {
     
     
     public String contentType;
+
     public DeleteHsmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteHsmResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteHsmResponse deleteHsmResponse;
+
     public DeleteHsmResponse withDeleteHsmResponse(org.openapis.openapi.models.shared.DeleteHsmResponse deleteHsmResponse) {
         this.deleteHsmResponse = deleteHsmResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteHsmResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteHsmResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteHsmResponse {
     
     
     public Integer statusCode;
+
     public DeleteHsmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteHsmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteHsmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteHsmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TlsValidationContextSdsTrust {
     @JsonProperty("secretName")
     public String secretName;
+
     public TlsValidationContextSdsTrust withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public TlsValidationContextSdsTrust(@JsonProperty("secretName") String secretName) {
+        this.secretName = secretName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatasetEntriesResponse {
@@ -12,6 +13,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDatasetEntriesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDatasetEntriesResponse {
     
     
     public String contentType;
+
     public ListDatasetEntriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object internalServerError;
+
     public ListDatasetEntriesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListDatasetEntriesResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListDatasetEntriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatasetEntriesResponse listDatasetEntriesResponse;
+
     public ListDatasetEntriesResponse withListDatasetEntriesResponse(org.openapis.openapi.models.shared.ListDatasetEntriesResponse listDatasetEntriesResponse) {
         this.listDatasetEntriesResponse = listDatasetEntriesResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public ListDatasetEntriesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListDatasetEntriesResponse {
     
     
     public Integer statusCode;
+
     public ListDatasetEntriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListDatasetEntriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatasetEntriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object resourceInUseException;
+
     public ListDatasetEntriesResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -103,6 +114,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDatasetEntriesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object resourceNotReadyException;
+
     public ListDatasetEntriesResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -123,9 +136,14 @@ public class ListDatasetEntriesResponse {
      */
     
     public Object throttlingException;
+
     public ListDatasetEntriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDatasetEntriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

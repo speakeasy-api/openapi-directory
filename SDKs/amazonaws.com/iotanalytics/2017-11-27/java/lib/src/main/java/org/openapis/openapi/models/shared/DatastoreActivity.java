@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatastoreActivity {
     @JsonProperty("datastoreName")
     public String datastoreName;
+
     public DatastoreActivity withDatastoreName(String datastoreName) {
         this.datastoreName = datastoreName;
         return this;
@@ -19,9 +20,14 @@ public class DatastoreActivity {
     
     @JsonProperty("name")
     public String name;
+
     public DatastoreActivity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DatastoreActivity(@JsonProperty("datastoreName") String datastoreName, @JsonProperty("name") String name) {
+        this.datastoreName = datastoreName;
+        this.name = name;
+  }
 }

@@ -12,9 +12,13 @@ public class PostNetworksIdActionsChangeIPRangeChangeIPRangeRequest {
      */
     @JsonProperty("ip_range")
     public String ipRange;
+
     public PostNetworksIdActionsChangeIPRangeChangeIPRangeRequest withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
     }
     
+    public PostNetworksIdActionsChangeIPRangeChangeIPRangeRequest(@JsonProperty("ip_range") String ipRange) {
+        this.ipRange = ipRange;
+  }
 }

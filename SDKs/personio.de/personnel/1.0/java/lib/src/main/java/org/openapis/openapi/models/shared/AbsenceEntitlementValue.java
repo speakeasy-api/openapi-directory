@@ -12,6 +12,7 @@ public class AbsenceEntitlementValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public AbsenceEntitlementValueAttributes attributes;
+
     public AbsenceEntitlementValue withAttributes(AbsenceEntitlementValueAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,9 +21,11 @@ public class AbsenceEntitlementValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AbsenceEntitlementValueTypeEnum type;
+
     public AbsenceEntitlementValue withType(AbsenceEntitlementValueTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AbsenceEntitlementValue(){}
 }

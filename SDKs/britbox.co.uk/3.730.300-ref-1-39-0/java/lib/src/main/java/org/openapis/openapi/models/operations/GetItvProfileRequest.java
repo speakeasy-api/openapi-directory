@@ -22,9 +22,11 @@ public class GetItvProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItvProfileRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetItvProfileRequest(){}
 }

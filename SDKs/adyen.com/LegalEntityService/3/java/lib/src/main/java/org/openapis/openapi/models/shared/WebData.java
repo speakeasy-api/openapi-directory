@@ -15,6 +15,7 @@ public class WebData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public WebData withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
@@ -26,9 +27,11 @@ public class WebData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddressId")
     public String webAddressId;
+
     public WebData withWebAddressId(String webAddressId) {
         this.webAddressId = webAddressId;
         return this;
     }
     
+    public WebData(){}
 }

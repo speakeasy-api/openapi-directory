@@ -18,6 +18,7 @@ public class ListBuyersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyers")
     public Buyer[] buyers;
+
     public ListBuyersResponse withBuyers(Buyer[] buyers) {
         this.buyers = buyers;
         return this;
@@ -29,9 +30,11 @@ public class ListBuyersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBuyersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBuyersResponse(){}
 }

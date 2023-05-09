@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveKnowledgeBaseTemplateUriResponse {
@@ -12,6 +13,7 @@ public class RemoveKnowledgeBaseTemplateUriResponse {
      */
     
     public Object accessDeniedException;
+
     public RemoveKnowledgeBaseTemplateUriResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveKnowledgeBaseTemplateUriResponse {
     
     
     public String contentType;
+
     public RemoveKnowledgeBaseTemplateUriResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveKnowledgeBaseTemplateUriResponse {
      */
     
     public java.util.Map<String, Object> removeKnowledgeBaseTemplateUriResponse;
+
     public RemoveKnowledgeBaseTemplateUriResponse withRemoveKnowledgeBaseTemplateUriResponse(java.util.Map<String, Object> removeKnowledgeBaseTemplateUriResponse) {
         this.removeKnowledgeBaseTemplateUriResponse = removeKnowledgeBaseTemplateUriResponse;
         return this;
@@ -39,6 +43,7 @@ public class RemoveKnowledgeBaseTemplateUriResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveKnowledgeBaseTemplateUriResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class RemoveKnowledgeBaseTemplateUriResponse {
     
     
     public Integer statusCode;
+
     public RemoveKnowledgeBaseTemplateUriResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RemoveKnowledgeBaseTemplateUriResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveKnowledgeBaseTemplateUriResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class RemoveKnowledgeBaseTemplateUriResponse {
      */
     
     public Object validationException;
+
     public RemoveKnowledgeBaseTemplateUriResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RemoveKnowledgeBaseTemplateUriResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

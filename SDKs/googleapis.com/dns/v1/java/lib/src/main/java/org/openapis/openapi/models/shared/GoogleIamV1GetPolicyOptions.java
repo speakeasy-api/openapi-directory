@@ -18,9 +18,11 @@ public class GoogleIamV1GetPolicyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedPolicyVersion")
     public Integer requestedPolicyVersion;
+
     public GoogleIamV1GetPolicyOptions withRequestedPolicyVersion(Integer requestedPolicyVersion) {
         this.requestedPolicyVersion = requestedPolicyVersion;
         return this;
     }
     
+    public GoogleIamV1GetPolicyOptions(){}
 }

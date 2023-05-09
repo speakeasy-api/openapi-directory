@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsMetricsDestinyMetricsComponent {
     
     public java.util.Map<String, DestinyComponentsMetricsDestinyMetricComponent> metrics;
+
     public DestinyComponentsMetricsDestinyMetricsComponent withMetrics(java.util.Map<String, DestinyComponentsMetricsDestinyMetricComponent> metrics) {
         this.metrics = metrics;
         return this;
@@ -16,9 +17,11 @@ public class DestinyComponentsMetricsDestinyMetricsComponent {
     
     
     public Long metricsRootNodeHash;
+
     public DestinyComponentsMetricsDestinyMetricsComponent withMetricsRootNodeHash(Long metricsRootNodeHash) {
         this.metricsRootNodeHash = metricsRootNodeHash;
         return this;
     }
     
+    public DestinyComponentsMetricsDestinyMetricsComponent(){}
 }

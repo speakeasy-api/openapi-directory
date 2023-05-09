@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPaymentResponse {
     
     public String contentType;
+
     public GetPaymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPaymentResponse {
      */
     
     public GetPaymentRootTypeForPayments rootTypeForPayments;
+
     public GetPaymentResponse withRootTypeForPayments(GetPaymentRootTypeForPayments rootTypeForPayments) {
         this.rootTypeForPayments = rootTypeForPayments;
         return this;
@@ -26,6 +29,7 @@ public class GetPaymentResponse {
     
     
     public Integer statusCode;
+
     public GetPaymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetPaymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPaymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetPaymentResponse {
      */
     
     public GetPayment400ApplicationJSON getPayment400ApplicationJSONObject;
+
     public GetPaymentResponse withGetPayment400ApplicationJSONObject(GetPayment400ApplicationJSON getPayment400ApplicationJSONObject) {
         this.getPayment400ApplicationJSONObject = getPayment400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetPaymentResponse {
      */
     
     public GetPayment401ApplicationJSON getPayment401ApplicationJSONObject;
+
     public GetPaymentResponse withGetPayment401ApplicationJSONObject(GetPayment401ApplicationJSON getPayment401ApplicationJSONObject) {
         this.getPayment401ApplicationJSONObject = getPayment401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetPaymentResponse {
      */
     
     public GetPayment403ApplicationJSON getPayment403ApplicationJSONObject;
+
     public GetPaymentResponse withGetPayment403ApplicationJSONObject(GetPayment403ApplicationJSON getPayment403ApplicationJSONObject) {
         this.getPayment403ApplicationJSONObject = getPayment403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetPaymentResponse {
      */
     
     public GetPayment404ApplicationJSON getPayment404ApplicationJSONObject;
+
     public GetPaymentResponse withGetPayment404ApplicationJSONObject(GetPayment404ApplicationJSON getPayment404ApplicationJSONObject) {
         this.getPayment404ApplicationJSONObject = getPayment404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetPaymentResponse {
      */
     
     public GetPayment429ApplicationJSON getPayment429ApplicationJSONObject;
+
     public GetPaymentResponse withGetPayment429ApplicationJSONObject(GetPayment429ApplicationJSON getPayment429ApplicationJSONObject) {
         this.getPayment429ApplicationJSONObject = getPayment429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GetPaymentResponse {
      */
     
     public GetPayment500ApplicationJSON getPayment500ApplicationJSONObject;
+
     public GetPaymentResponse withGetPayment500ApplicationJSONObject(GetPayment500ApplicationJSON getPayment500ApplicationJSONObject) {
         this.getPayment500ApplicationJSONObject = getPayment500ApplicationJSONObject;
         return this;
     }
     
+    public GetPaymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

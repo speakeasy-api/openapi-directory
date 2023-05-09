@@ -18,9 +18,11 @@ public class GetCampaignStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CampaignStateEnum state;
+
     public GetCampaignStateResponse withState(CampaignStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GetCampaignStateResponse(){}
 }

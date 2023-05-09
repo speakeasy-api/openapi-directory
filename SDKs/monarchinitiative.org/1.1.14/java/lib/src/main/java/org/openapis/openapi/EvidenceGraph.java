@@ -54,11 +54,9 @@ public class EvidenceGraph {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEvidenceGraphObjectResponse res = new org.openapis.openapi.models.operations.GetEvidenceGraphObjectResponse() {{
+        org.openapis.openapi.models.operations.GetEvidenceGraphObjectResponse res = new org.openapis.openapi.models.operations.GetEvidenceGraphObjectResponse(contentType, httpRes.statusCode()) {{
             graphs = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class EvidenceGraph {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEvidenceGraphTableResponse res = new org.openapis.openapi.models.operations.GetEvidenceGraphTableResponse() {{
+        org.openapis.openapi.models.operations.GetEvidenceGraphTableResponse res = new org.openapis.openapi.models.operations.GetEvidenceGraphTableResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

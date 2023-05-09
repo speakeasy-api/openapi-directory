@@ -15,6 +15,7 @@ public class DescribeRouterConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerRouterConfig")
     public String customerRouterConfig;
+
     public DescribeRouterConfigurationResponse withCustomerRouterConfig(String customerRouterConfig) {
         this.customerRouterConfig = customerRouterConfig;
         return this;
@@ -23,6 +24,7 @@ public class DescribeRouterConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("router")
     public RouterType router;
+
     public DescribeRouterConfigurationResponse withRouter(RouterType router) {
         this.router = router;
         return this;
@@ -31,6 +33,7 @@ public class DescribeRouterConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public DescribeRouterConfigurationResponse withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
@@ -39,9 +42,11 @@ public class DescribeRouterConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceName")
     public String virtualInterfaceName;
+
     public DescribeRouterConfigurationResponse withVirtualInterfaceName(String virtualInterfaceName) {
         this.virtualInterfaceName = virtualInterfaceName;
         return this;
     }
     
+    public DescribeRouterConfigurationResponse(){}
 }

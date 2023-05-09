@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecordRequest {
@@ -12,6 +13,7 @@ public class GetRecordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FeatureGroupName")
     public String featureGroupName;
+
     public GetRecordRequest withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -22,6 +24,7 @@ public class GetRecordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FeatureName")
     public String[] featureName;
+
     public GetRecordRequest withFeatureName(String[] featureName) {
         this.featureName = featureName;
         return this;
@@ -32,6 +35,7 @@ public class GetRecordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RecordIdentifierValueAsString")
     public String recordIdentifierValueAsString;
+
     public GetRecordRequest withRecordIdentifierValueAsString(String recordIdentifierValueAsString) {
         this.recordIdentifierValueAsString = recordIdentifierValueAsString;
         return this;
@@ -39,6 +43,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetRecordRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetRecordRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetRecordRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetRecordRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetRecordRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetRecordRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,14 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetRecordRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GetRecordRequest(@JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("RecordIdentifierValueAsString") String recordIdentifierValueAsString) {
+        this.featureGroupName = featureGroupName;
+        this.recordIdentifierValueAsString = recordIdentifierValueAsString;
+  }
 }

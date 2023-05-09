@@ -15,9 +15,13 @@ public class AppPkgSubscriptionLinkList {
      */
     @JsonProperty("_links")
     public AppPkgSubscriptionLinkListLinks links;
+
     public AppPkgSubscriptionLinkList withLinks(AppPkgSubscriptionLinkListLinks links) {
         this.links = links;
         return this;
     }
     
+    public AppPkgSubscriptionLinkList(@JsonProperty("_links") AppPkgSubscriptionLinkListLinks links) {
+        this.links = links;
+  }
 }

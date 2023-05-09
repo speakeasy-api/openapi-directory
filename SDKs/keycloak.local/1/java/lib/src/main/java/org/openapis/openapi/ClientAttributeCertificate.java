@@ -51,11 +51,9 @@ public class ClientAttributeCertificate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmClientsIdCertificatesAttrResponse res = new org.openapis.openapi.models.operations.GetRealmClientsIdCertificatesAttrResponse() {{
+        org.openapis.openapi.models.operations.GetRealmClientsIdCertificatesAttrResponse res = new org.openapis.openapi.models.operations.GetRealmClientsIdCertificatesAttrResponse(contentType, httpRes.statusCode()) {{
             certificateRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -95,11 +93,9 @@ public class ClientAttributeCertificate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrDownloadResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrDownloadResponse() {{
+        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrDownloadResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrDownloadResponse(contentType, httpRes.statusCode()) {{
             postRealmClientsIdCertificatesAttrDownload2XXApplicationOctetStreamByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -133,11 +129,9 @@ public class ClientAttributeCertificate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateResponse() {{
+        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateResponse(contentType, httpRes.statusCode()) {{
             certificateRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -177,11 +171,9 @@ public class ClientAttributeCertificate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateAndDownloadResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateAndDownloadResponse() {{
+        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateAndDownloadResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateAndDownloadResponse(contentType, httpRes.statusCode()) {{
             postRealmClientsIdCertificatesAttrGenerateAndDownload2XXApplicationOctetStreamByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -215,11 +207,9 @@ public class ClientAttributeCertificate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadResponse() {{
+        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadResponse(contentType, httpRes.statusCode()) {{
             certificateRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -254,11 +244,9 @@ public class ClientAttributeCertificate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadCertificateResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadCertificateResponse() {{
+        org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadCertificateResponse res = new org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadCertificateResponse(contentType, httpRes.statusCode()) {{
             certificateRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

@@ -12,6 +12,7 @@ public class SubscribePushDeviceToChannelApplicationXWwwFormUrlencoded2 {
      */
     @SpeakeasyMetadata("form:name=channel")
     public String channel;
+
     public SubscribePushDeviceToChannelApplicationXWwwFormUrlencoded2 withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -22,9 +23,11 @@ public class SubscribePushDeviceToChannelApplicationXWwwFormUrlencoded2 {
      */
     @SpeakeasyMetadata("form:name=clientId")
     public String clientId;
+
     public SubscribePushDeviceToChannelApplicationXWwwFormUrlencoded2 withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public SubscribePushDeviceToChannelApplicationXWwwFormUrlencoded2(){}
 }

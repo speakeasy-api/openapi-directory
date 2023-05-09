@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagDeliveryStreamRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TagDeliveryStreamInput tagDeliveryStreamInput;
+
     public TagDeliveryStreamRequest withTagDeliveryStreamInput(org.openapis.openapi.models.shared.TagDeliveryStreamInput tagDeliveryStreamInput) {
         this.tagDeliveryStreamInput = tagDeliveryStreamInput;
         return this;
@@ -16,6 +18,7 @@ public class TagDeliveryStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public TagDeliveryStreamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class TagDeliveryStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public TagDeliveryStreamRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class TagDeliveryStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public TagDeliveryStreamRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class TagDeliveryStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public TagDeliveryStreamRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class TagDeliveryStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public TagDeliveryStreamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class TagDeliveryStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public TagDeliveryStreamRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class TagDeliveryStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public TagDeliveryStreamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class TagDeliveryStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public TagDeliveryStreamXAmzTargetEnum xAmzTarget;
+
     public TagDeliveryStreamRequest withXAmzTarget(TagDeliveryStreamXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public TagDeliveryStreamRequest(@JsonProperty("TagDeliveryStreamInput") org.openapis.openapi.models.shared.TagDeliveryStreamInput tagDeliveryStreamInput, @JsonProperty("X-Amz-Target") TagDeliveryStreamXAmzTargetEnum xAmzTarget) {
+        this.tagDeliveryStreamInput = tagDeliveryStreamInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

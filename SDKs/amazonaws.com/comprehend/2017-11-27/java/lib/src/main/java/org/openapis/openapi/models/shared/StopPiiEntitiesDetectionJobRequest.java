@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopPiiEntitiesDetectionJobRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public StopPiiEntitiesDetectionJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StopPiiEntitiesDetectionJobRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

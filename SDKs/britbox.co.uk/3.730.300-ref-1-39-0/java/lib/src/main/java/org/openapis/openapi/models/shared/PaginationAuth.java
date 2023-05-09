@@ -12,6 +12,7 @@ public class PaginationAuth {
      */
     @JsonProperty("scope")
     public PaginationAuthScopeEnum scope;
+
     public PaginationAuth withScope(PaginationAuthScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -22,9 +23,14 @@ public class PaginationAuth {
      */
     @JsonProperty("type")
     public PaginationAuthTypeEnum type;
+
     public PaginationAuth withType(PaginationAuthTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PaginationAuth(@JsonProperty("scope") PaginationAuthScopeEnum scope, @JsonProperty("type") PaginationAuthTypeEnum type) {
+        this.scope = scope;
+        this.type = type;
+  }
 }

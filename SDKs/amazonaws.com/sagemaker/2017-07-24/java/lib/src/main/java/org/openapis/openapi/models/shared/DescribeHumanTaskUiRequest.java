@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeHumanTaskUiRequest {
     @JsonProperty("HumanTaskUiName")
     public String humanTaskUiName;
+
     public DescribeHumanTaskUiRequest withHumanTaskUiName(String humanTaskUiName) {
         this.humanTaskUiName = humanTaskUiName;
         return this;
     }
     
+    public DescribeHumanTaskUiRequest(@JsonProperty("HumanTaskUiName") String humanTaskUiName) {
+        this.humanTaskUiName = humanTaskUiName;
+  }
 }

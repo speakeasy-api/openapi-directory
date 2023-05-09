@@ -18,9 +18,11 @@ public class CreateLineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateLineResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public CreateLineResponse(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualNodeServiceProvider {
     @JsonProperty("virtualNodeName")
     public String virtualNodeName;
+
     public VirtualNodeServiceProvider withVirtualNodeName(String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
         return this;
     }
     
+    public VirtualNodeServiceProvider(@JsonProperty("virtualNodeName") String virtualNodeName) {
+        this.virtualNodeName = virtualNodeName;
+  }
 }

@@ -177,4 +177,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostTruckRouteOutputFor
 lib/src/main/java/org/openapis/openapi/models/operations/PostTruckRouteOutputFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostTruckRouteOutputFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/directions/README.md
+docs/distance/README.md
+docs/route/README.md
 USAGE.md

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomMetricResponse {
     
     public String contentType;
+
     public DeleteCustomMetricResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomMetricResponse {
      */
     
     public java.util.Map<String, Object> deleteCustomMetricResponse;
+
     public DeleteCustomMetricResponse withDeleteCustomMetricResponse(java.util.Map<String, Object> deleteCustomMetricResponse) {
         this.deleteCustomMetricResponse = deleteCustomMetricResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomMetricResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteCustomMetricResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomMetricResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteCustomMetricResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteCustomMetricResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomMetricResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteCustomMetricResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomMetricResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteCustomMetricResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCustomMetricResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteCustomMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

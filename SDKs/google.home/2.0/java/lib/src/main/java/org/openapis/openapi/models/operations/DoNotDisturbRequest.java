@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoNotDisturbRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public DoNotDisturbRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public DoNotDisturbRequest(@JsonProperty("Content-Type") String contentType) {
+        this.contentType = contentType;
+  }
 }

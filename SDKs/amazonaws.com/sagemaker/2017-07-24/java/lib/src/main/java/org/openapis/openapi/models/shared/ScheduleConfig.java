@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScheduleConfig {
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public ScheduleConfig withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
     }
     
+    public ScheduleConfig(@JsonProperty("ScheduleExpression") String scheduleExpression) {
+        this.scheduleExpression = scheduleExpression;
+  }
 }

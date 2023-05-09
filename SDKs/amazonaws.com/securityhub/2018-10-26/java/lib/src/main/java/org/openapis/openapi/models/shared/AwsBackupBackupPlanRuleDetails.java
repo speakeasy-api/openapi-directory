@@ -15,6 +15,7 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionWindowMinutes")
     public Long completionWindowMinutes;
+
     public AwsBackupBackupPlanRuleDetails withCompletionWindowMinutes(Long completionWindowMinutes) {
         this.completionWindowMinutes = completionWindowMinutes;
         return this;
@@ -23,6 +24,7 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyActions")
     public AwsBackupBackupPlanRuleCopyActionsDetails[] copyActions;
+
     public AwsBackupBackupPlanRuleDetails withCopyActions(AwsBackupBackupPlanRuleCopyActionsDetails[] copyActions) {
         this.copyActions = copyActions;
         return this;
@@ -31,6 +33,7 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableContinuousBackup")
     public Boolean enableContinuousBackup;
+
     public AwsBackupBackupPlanRuleDetails withEnableContinuousBackup(Boolean enableContinuousBackup) {
         this.enableContinuousBackup = enableContinuousBackup;
         return this;
@@ -39,6 +42,7 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public AwsBackupBackupPlanLifecycleDetails lifecycle;
+
     public AwsBackupBackupPlanRuleDetails withLifecycle(AwsBackupBackupPlanLifecycleDetails lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -47,6 +51,7 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleId")
     public String ruleId;
+
     public AwsBackupBackupPlanRuleDetails withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -55,6 +60,7 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleName")
     public String ruleName;
+
     public AwsBackupBackupPlanRuleDetails withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -63,6 +69,7 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public AwsBackupBackupPlanRuleDetails withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -71,6 +78,7 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartWindowMinutes")
     public Long startWindowMinutes;
+
     public AwsBackupBackupPlanRuleDetails withStartWindowMinutes(Long startWindowMinutes) {
         this.startWindowMinutes = startWindowMinutes;
         return this;
@@ -79,9 +87,11 @@ public class AwsBackupBackupPlanRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetBackupVault")
     public String targetBackupVault;
+
     public AwsBackupBackupPlanRuleDetails withTargetBackupVault(String targetBackupVault) {
         this.targetBackupVault = targetBackupVault;
         return this;
     }
     
+    public AwsBackupBackupPlanRuleDetails(){}
 }

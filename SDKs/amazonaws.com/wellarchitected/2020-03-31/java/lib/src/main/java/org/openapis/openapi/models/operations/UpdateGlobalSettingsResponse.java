@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGlobalSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateGlobalSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateGlobalSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateGlobalSettingsResponse {
      */
     
     public Object conflictException;
+
     public UpdateGlobalSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGlobalSettingsResponse {
     
     
     public String contentType;
+
     public UpdateGlobalSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGlobalSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateGlobalSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateGlobalSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateGlobalSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateGlobalSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGlobalSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGlobalSettingsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateGlobalSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateGlobalSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateGlobalSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateGlobalSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

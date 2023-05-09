@@ -15,9 +15,11 @@ public class RegisterJobDefinitionRequestBodyTimeout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptDurationSeconds")
     public Long attemptDurationSeconds;
+
     public RegisterJobDefinitionRequestBodyTimeout withAttemptDurationSeconds(Long attemptDurationSeconds) {
         this.attemptDurationSeconds = attemptDurationSeconds;
         return this;
     }
     
+    public RegisterJobDefinitionRequestBodyTimeout(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FileBatchJobDefinition {
     @JsonProperty("fileName")
     public String fileName;
+
     public FileBatchJobDefinition withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -22,9 +23,13 @@ public class FileBatchJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folderPath")
     public String folderPath;
+
     public FileBatchJobDefinition withFolderPath(String folderPath) {
         this.folderPath = folderPath;
         return this;
     }
     
+    public FileBatchJobDefinition(@JsonProperty("fileName") String fileName) {
+        this.fileName = fileName;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1RepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustment")
     public GoogleCloudChannelV1RepricingAdjustment adjustment;
+
     public GoogleCloudChannelV1RepricingConfig withAdjustment(GoogleCloudChannelV1RepricingAdjustment adjustment) {
         this.adjustment = adjustment;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1RepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelPartnerGranularity")
     public java.util.Map<String, Object> channelPartnerGranularity;
+
     public GoogleCloudChannelV1RepricingConfig withChannelPartnerGranularity(java.util.Map<String, Object> channelPartnerGranularity) {
         this.channelPartnerGranularity = channelPartnerGranularity;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1RepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionalOverrides")
     public GoogleCloudChannelV1ConditionalOverride[] conditionalOverrides;
+
     public GoogleCloudChannelV1RepricingConfig withConditionalOverrides(GoogleCloudChannelV1ConditionalOverride[] conditionalOverrides) {
         this.conditionalOverrides = conditionalOverrides;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudChannelV1RepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveInvoiceMonth")
     public GoogleTypeDate effectiveInvoiceMonth;
+
     public GoogleCloudChannelV1RepricingConfig withEffectiveInvoiceMonth(GoogleTypeDate effectiveInvoiceMonth) {
         this.effectiveInvoiceMonth = effectiveInvoiceMonth;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudChannelV1RepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlementGranularity")
     public GoogleCloudChannelV1RepricingConfigEntitlementGranularity entitlementGranularity;
+
     public GoogleCloudChannelV1RepricingConfig withEntitlementGranularity(GoogleCloudChannelV1RepricingConfigEntitlementGranularity entitlementGranularity) {
         this.entitlementGranularity = entitlementGranularity;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudChannelV1RepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebillingBasis")
     public GoogleCloudChannelV1RepricingConfigRebillingBasisEnum rebillingBasis;
+
     public GoogleCloudChannelV1RepricingConfig withRebillingBasis(GoogleCloudChannelV1RepricingConfigRebillingBasisEnum rebillingBasis) {
         this.rebillingBasis = rebillingBasis;
         return this;
     }
     
+    public GoogleCloudChannelV1RepricingConfig(){}
 }

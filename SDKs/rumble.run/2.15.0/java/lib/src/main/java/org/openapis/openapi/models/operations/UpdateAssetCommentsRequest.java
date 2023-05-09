@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAssetCommentsRequest {
@@ -12,6 +13,7 @@ public class UpdateAssetCommentsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssetComments assetComments;
+
     public UpdateAssetCommentsRequest withAssetComments(org.openapis.openapi.models.shared.AssetComments assetComments) {
         this.assetComments = assetComments;
         return this;
@@ -22,9 +24,14 @@ public class UpdateAssetCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
     public String assetId;
+
     public UpdateAssetCommentsRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
     }
     
+    public UpdateAssetCommentsRequest(@JsonProperty("AssetComments") org.openapis.openapi.models.shared.AssetComments assetComments, @JsonProperty("asset_id") String assetId) {
+        this.assetComments = assetComments;
+        this.assetId = assetId;
+  }
 }

@@ -15,6 +15,7 @@ public class Insurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payer_id")
     public String payerId;
+
     public Insurance withPayerId(String payerId) {
         this.payerId = payerId;
         return this;
@@ -23,6 +24,7 @@ public class Insurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payer_name")
     public String payerName;
+
     public Insurance withPayerName(String payerName) {
         this.payerName = payerName;
         return this;
@@ -31,9 +33,11 @@ public class Insurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Insurance withState(String state) {
         this.state = state;
         return this;
     }
     
+    public Insurance(){}
 }

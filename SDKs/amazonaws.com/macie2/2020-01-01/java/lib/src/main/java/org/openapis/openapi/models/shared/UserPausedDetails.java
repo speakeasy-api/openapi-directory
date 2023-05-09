@@ -22,6 +22,7 @@ public class UserPausedDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("jobExpiresAt")
     public OffsetDateTime jobExpiresAt;
+
     public UserPausedDetails withJobExpiresAt(OffsetDateTime jobExpiresAt) {
         this.jobExpiresAt = jobExpiresAt;
         return this;
@@ -30,6 +31,7 @@ public class UserPausedDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobImminentExpirationHealthEventArn")
     public String jobImminentExpirationHealthEventArn;
+
     public UserPausedDetails withJobImminentExpirationHealthEventArn(String jobImminentExpirationHealthEventArn) {
         this.jobImminentExpirationHealthEventArn = jobImminentExpirationHealthEventArn;
         return this;
@@ -40,9 +42,11 @@ public class UserPausedDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("jobPausedAt")
     public OffsetDateTime jobPausedAt;
+
     public UserPausedDetails withJobPausedAt(OffsetDateTime jobPausedAt) {
         this.jobPausedAt = jobPausedAt;
         return this;
     }
     
+    public UserPausedDetails(){}
 }

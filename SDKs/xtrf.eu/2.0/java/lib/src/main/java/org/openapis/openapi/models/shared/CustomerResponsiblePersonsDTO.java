@@ -15,6 +15,7 @@ public class CustomerResponsiblePersonsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountManagerId")
     public Long accountManagerId;
+
     public CustomerResponsiblePersonsDTO withAccountManagerId(Long accountManagerId) {
         this.accountManagerId = accountManagerId;
         return this;
@@ -26,6 +27,7 @@ public class CustomerResponsiblePersonsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectCoordinatorId")
     public Long projectCoordinatorId;
+
     public CustomerResponsiblePersonsDTO withProjectCoordinatorId(Long projectCoordinatorId) {
         this.projectCoordinatorId = projectCoordinatorId;
         return this;
@@ -36,6 +38,7 @@ public class CustomerResponsiblePersonsDTO {
      */
     @JsonProperty("projectManagerId")
     public Long projectManagerId;
+
     public CustomerResponsiblePersonsDTO withProjectManagerId(Long projectManagerId) {
         this.projectManagerId = projectManagerId;
         return this;
@@ -46,9 +49,14 @@ public class CustomerResponsiblePersonsDTO {
      */
     @JsonProperty("salesPersonId")
     public Long salesPersonId;
+
     public CustomerResponsiblePersonsDTO withSalesPersonId(Long salesPersonId) {
         this.salesPersonId = salesPersonId;
         return this;
     }
     
+    public CustomerResponsiblePersonsDTO(@JsonProperty("projectManagerId") Long projectManagerId, @JsonProperty("salesPersonId") Long salesPersonId) {
+        this.projectManagerId = projectManagerId;
+        this.salesPersonId = salesPersonId;
+  }
 }

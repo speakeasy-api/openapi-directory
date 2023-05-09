@@ -18,9 +18,11 @@ public class TableRowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRowHeight")
     public Dimension minRowHeight;
+
     public TableRowProperties withMinRowHeight(Dimension minRowHeight) {
         this.minRowHeight = minRowHeight;
         return this;
     }
     
+    public TableRowProperties(){}
 }

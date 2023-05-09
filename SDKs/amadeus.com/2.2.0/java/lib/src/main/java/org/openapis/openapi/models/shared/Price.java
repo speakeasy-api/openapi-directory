@@ -15,6 +15,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public String base;
+
     public Price withBase(String base) {
         this.base = base;
         return this;
@@ -23,6 +24,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Price withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -34,6 +36,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fees")
     public Fee[] fees;
+
     public Price withFees(Fee[] fees) {
         this.fees = fees;
         return this;
@@ -45,6 +48,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundableTaxes")
     public String refundableTaxes;
+
     public Price withRefundableTaxes(String refundableTaxes) {
         this.refundableTaxes = refundableTaxes;
         return this;
@@ -53,6 +57,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public Tax[] taxes;
+
     public Price withTaxes(Tax[] taxes) {
         this.taxes = taxes;
         return this;
@@ -64,9 +69,11 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public String total;
+
     public Price withTotal(String total) {
         this.total = total;
         return this;
     }
     
+    public Price(){}
 }

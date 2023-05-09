@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBehaviorsResponse {
@@ -12,6 +13,7 @@ public class GetBehaviorsResponse {
      */
     
     public org.openapis.openapi.models.shared.BehaviorEntity[] behaviorEntities;
+
     public GetBehaviorsResponse withBehaviorEntities(org.openapis.openapi.models.shared.BehaviorEntity[] behaviorEntities) {
         this.behaviorEntities = behaviorEntities;
         return this;
@@ -19,6 +21,7 @@ public class GetBehaviorsResponse {
     
     
     public String contentType;
+
     public GetBehaviorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetBehaviorsResponse {
     
     
     public Integer statusCode;
+
     public GetBehaviorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetBehaviorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBehaviorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBehaviorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FetchGroupsResponse {
     @JsonProperty("data")
     public GroupResource[] data;
+
     public FetchGroupsResponse withData(GroupResource[] data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class FetchGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public FetchMetaResponse meta;
+
     public FetchGroupsResponse withMeta(FetchMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public FetchGroupsResponse(@JsonProperty("data") GroupResource[] data) {
+        this.data = data;
+  }
 }

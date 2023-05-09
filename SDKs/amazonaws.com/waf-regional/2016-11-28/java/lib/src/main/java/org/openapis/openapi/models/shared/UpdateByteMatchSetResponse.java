@@ -15,9 +15,11 @@ public class UpdateByteMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateByteMatchSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public UpdateByteMatchSetResponse(){}
 }

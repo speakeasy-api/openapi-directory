@@ -15,9 +15,11 @@ public class UpdateClusterConfigRequestBodyLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterLogging")
     public org.openapis.openapi.models.shared.LogSetup[] clusterLogging;
+
     public UpdateClusterConfigRequestBodyLogging withClusterLogging(org.openapis.openapi.models.shared.LogSetup[] clusterLogging) {
         this.clusterLogging = clusterLogging;
         return this;
     }
     
+    public UpdateClusterConfigRequestBodyLogging(){}
 }

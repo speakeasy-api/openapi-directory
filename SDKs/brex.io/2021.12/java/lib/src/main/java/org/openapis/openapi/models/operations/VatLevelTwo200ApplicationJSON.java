@@ -15,6 +15,7 @@ public class VatLevelTwo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public VatLevelTwo200ApplicationJSON withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class VatLevelTwo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmation")
     public String confirmation;
+
     public VatLevelTwo200ApplicationJSON withConfirmation(String confirmation) {
         this.confirmation = confirmation;
         return this;
@@ -30,6 +32,7 @@ public class VatLevelTwo200ApplicationJSON {
     
     @JsonProperty("level")
     public String level;
+
     public VatLevelTwo200ApplicationJSON withLevel(String level) {
         this.level = level;
         return this;
@@ -38,6 +41,7 @@ public class VatLevelTwo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VatLevelTwo200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +49,14 @@ public class VatLevelTwo200ApplicationJSON {
     
     @JsonProperty("validationStatus")
     public Boolean validationStatus;
+
     public VatLevelTwo200ApplicationJSON withValidationStatus(Boolean validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public VatLevelTwo200ApplicationJSON(@JsonProperty("level") String level, @JsonProperty("validationStatus") Boolean validationStatus) {
+        this.level = level;
+        this.validationStatus = validationStatus;
+  }
 }

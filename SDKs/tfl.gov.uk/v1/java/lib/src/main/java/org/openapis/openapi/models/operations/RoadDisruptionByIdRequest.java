@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoadDisruptionByIdRequest {
@@ -12,6 +13,7 @@ public class RoadDisruptionByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=disruptionIds")
     public String[] disruptionIds;
+
     public RoadDisruptionByIdRequest withDisruptionIds(String[] disruptionIds) {
         this.disruptionIds = disruptionIds;
         return this;
@@ -22,9 +24,13 @@ public class RoadDisruptionByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stripContent")
     public Boolean stripContent;
+
     public RoadDisruptionByIdRequest withStripContent(Boolean stripContent) {
         this.stripContent = stripContent;
         return this;
     }
     
+    public RoadDisruptionByIdRequest(@JsonProperty("disruptionIds") String[] disruptionIds) {
+        this.disruptionIds = disruptionIds;
+  }
 }

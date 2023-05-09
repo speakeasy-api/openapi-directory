@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3FormParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public Object defaultValue;
+
     public GoogleCloudDialogflowCxV3FormParameter withDefaultValue(Object defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3FormParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3FormParameter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3FormParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public String entityType;
+
     public GoogleCloudDialogflowCxV3FormParameter withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3FormParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fillBehavior")
     public GoogleCloudDialogflowCxV3FormParameterFillBehavior fillBehavior;
+
     public GoogleCloudDialogflowCxV3FormParameter withFillBehavior(GoogleCloudDialogflowCxV3FormParameterFillBehavior fillBehavior) {
         this.fillBehavior = fillBehavior;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3FormParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isList")
     public Boolean isList;
+
     public GoogleCloudDialogflowCxV3FormParameter withIsList(Boolean isList) {
         this.isList = isList;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3FormParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redact")
     public Boolean redact;
+
     public GoogleCloudDialogflowCxV3FormParameter withRedact(Boolean redact) {
         this.redact = redact;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowCxV3FormParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public GoogleCloudDialogflowCxV3FormParameter withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3FormParameter(){}
 }

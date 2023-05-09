@@ -59,10 +59,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetActivityCollectionResponse res = new org.openapis.openapi.models.operations.GetActivityCollectionResponse() {{
+        org.openapis.openapi.models.operations.GetActivityCollectionResponse res = new org.openapis.openapi.models.operations.GetActivityCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInstanceObjectResponse res = new org.openapis.openapi.models.operations.GetInstanceObjectResponse() {{
+        org.openapis.openapi.models.operations.GetInstanceObjectResponse res = new org.openapis.openapi.models.operations.GetInstanceObjectResponse(contentType, httpRes.statusCode()) {{
             associations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,10 +130,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelCollectionResponse res = new org.openapis.openapi.models.operations.GetModelCollectionResponse() {{
+        org.openapis.openapi.models.operations.GetModelCollectionResponse res = new org.openapis.openapi.models.operations.GetModelCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,10 +159,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelContributorsResponse res = new org.openapis.openapi.models.operations.GetModelContributorsResponse() {{
+        org.openapis.openapi.models.operations.GetModelContributorsResponse res = new org.openapis.openapi.models.operations.GetModelContributorsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,10 +188,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelInstancesResponse res = new org.openapis.openapi.models.operations.GetModelInstancesResponse() {{
+        org.openapis.openapi.models.operations.GetModelInstancesResponse res = new org.openapis.openapi.models.operations.GetModelInstancesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,10 +218,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelObjectResponse res = new org.openapis.openapi.models.operations.GetModelObjectResponse() {{
+        org.openapis.openapi.models.operations.GetModelObjectResponse res = new org.openapis.openapi.models.operations.GetModelObjectResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,10 +254,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelPropertiesResponse res = new org.openapis.openapi.models.operations.GetModelPropertiesResponse() {{
+        org.openapis.openapi.models.operations.GetModelPropertiesResponse res = new org.openapis.openapi.models.operations.GetModelPropertiesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -304,10 +290,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelPropertyValuesResponse res = new org.openapis.openapi.models.operations.GetModelPropertyValuesResponse() {{
+        org.openapis.openapi.models.operations.GetModelPropertyValuesResponse res = new org.openapis.openapi.models.operations.GetModelPropertyValuesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,10 +326,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelQueryResponse res = new org.openapis.openapi.models.operations.GetModelQueryResponse() {{
+        org.openapis.openapi.models.operations.GetModelQueryResponse res = new org.openapis.openapi.models.operations.GetModelQueryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -380,10 +362,8 @@ public class Cam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhysicalInteractionResponse res = new org.openapis.openapi.models.operations.GetPhysicalInteractionResponse() {{
+        org.openapis.openapi.models.operations.GetPhysicalInteractionResponse res = new org.openapis.openapi.models.operations.GetPhysicalInteractionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

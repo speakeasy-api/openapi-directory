@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Comic {
     
     public String alt;
+
     public Comic withAlt(String alt) {
         this.alt = alt;
         return this;
@@ -19,6 +20,7 @@ public class Comic {
     
     
     public String day;
+
     public Comic withDay(String day) {
         this.day = day;
         return this;
@@ -26,6 +28,7 @@ public class Comic {
     
     
     public String img;
+
     public Comic withImg(String img) {
         this.img = img;
         return this;
@@ -33,6 +36,7 @@ public class Comic {
     
     
     public String link;
+
     public Comic withLink(String link) {
         this.link = link;
         return this;
@@ -40,6 +44,7 @@ public class Comic {
     
     
     public String month;
+
     public Comic withMonth(String month) {
         this.month = month;
         return this;
@@ -47,6 +52,7 @@ public class Comic {
     
     
     public String news;
+
     public Comic withNews(String news) {
         this.news = news;
         return this;
@@ -54,6 +60,7 @@ public class Comic {
     
     
     public Double num;
+
     public Comic withNum(Double num) {
         this.num = num;
         return this;
@@ -61,6 +68,7 @@ public class Comic {
     
     
     public String safeTitle;
+
     public Comic withSafeTitle(String safeTitle) {
         this.safeTitle = safeTitle;
         return this;
@@ -68,6 +76,7 @@ public class Comic {
     
     
     public String title;
+
     public Comic withTitle(String title) {
         this.title = title;
         return this;
@@ -75,6 +84,7 @@ public class Comic {
     
     
     public String transcript;
+
     public Comic withTranscript(String transcript) {
         this.transcript = transcript;
         return this;
@@ -82,9 +92,11 @@ public class Comic {
     
     
     public String year;
+
     public Comic withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public Comic(){}
 }

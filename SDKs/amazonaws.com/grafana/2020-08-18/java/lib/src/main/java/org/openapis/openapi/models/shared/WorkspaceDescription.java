@@ -20,6 +20,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountAccessType")
     public AccountAccessTypeEnum accountAccessType;
+
     public WorkspaceDescription withAccountAccessType(AccountAccessTypeEnum accountAccessType) {
         this.accountAccessType = accountAccessType;
         return this;
@@ -27,6 +28,7 @@ public class WorkspaceDescription {
     
     @JsonProperty("authentication")
     public AuthenticationSummary authentication;
+
     public WorkspaceDescription withAuthentication(AuthenticationSummary authentication) {
         this.authentication = authentication;
         return this;
@@ -36,6 +38,7 @@ public class WorkspaceDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public WorkspaceDescription withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -43,6 +46,7 @@ public class WorkspaceDescription {
     
     @JsonProperty("dataSources")
     public DataSourceTypeEnum[] dataSources;
+
     public WorkspaceDescription withDataSources(DataSourceTypeEnum[] dataSources) {
         this.dataSources = dataSources;
         return this;
@@ -51,6 +55,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkspaceDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +63,7 @@ public class WorkspaceDescription {
     
     @JsonProperty("endpoint")
     public String endpoint;
+
     public WorkspaceDescription withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -66,6 +72,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeTrialConsumed")
     public Boolean freeTrialConsumed;
+
     public WorkspaceDescription withFreeTrialConsumed(Boolean freeTrialConsumed) {
         this.freeTrialConsumed = freeTrialConsumed;
         return this;
@@ -76,6 +83,7 @@ public class WorkspaceDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("freeTrialExpiration")
     public OffsetDateTime freeTrialExpiration;
+
     public WorkspaceDescription withFreeTrialExpiration(OffsetDateTime freeTrialExpiration) {
         this.freeTrialExpiration = freeTrialExpiration;
         return this;
@@ -83,6 +91,7 @@ public class WorkspaceDescription {
     
     @JsonProperty("grafanaVersion")
     public String grafanaVersion;
+
     public WorkspaceDescription withGrafanaVersion(String grafanaVersion) {
         this.grafanaVersion = grafanaVersion;
         return this;
@@ -90,6 +99,7 @@ public class WorkspaceDescription {
     
     @JsonProperty("id")
     public String id;
+
     public WorkspaceDescription withId(String id) {
         this.id = id;
         return this;
@@ -100,6 +110,7 @@ public class WorkspaceDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("licenseExpiration")
     public OffsetDateTime licenseExpiration;
+
     public WorkspaceDescription withLicenseExpiration(OffsetDateTime licenseExpiration) {
         this.licenseExpiration = licenseExpiration;
         return this;
@@ -108,6 +119,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseType")
     public LicenseTypeEnum licenseType;
+
     public WorkspaceDescription withLicenseType(LicenseTypeEnum licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -117,6 +129,7 @@ public class WorkspaceDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modified")
     public OffsetDateTime modified;
+
     public WorkspaceDescription withModified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
@@ -125,6 +138,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkspaceDescription withName(String name) {
         this.name = name;
         return this;
@@ -133,6 +147,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkAccessControl")
     public NetworkAccessConfiguration networkAccessControl;
+
     public WorkspaceDescription withNetworkAccessControl(NetworkAccessConfiguration networkAccessControl) {
         this.networkAccessControl = networkAccessControl;
         return this;
@@ -141,6 +156,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationDestinations")
     public NotificationDestinationTypeEnum[] notificationDestinations;
+
     public WorkspaceDescription withNotificationDestinations(NotificationDestinationTypeEnum[] notificationDestinations) {
         this.notificationDestinations = notificationDestinations;
         return this;
@@ -149,6 +165,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationRoleName")
     public String organizationRoleName;
+
     public WorkspaceDescription withOrganizationRoleName(String organizationRoleName) {
         this.organizationRoleName = organizationRoleName;
         return this;
@@ -157,6 +174,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationalUnits")
     public String[] organizationalUnits;
+
     public WorkspaceDescription withOrganizationalUnits(String[] organizationalUnits) {
         this.organizationalUnits = organizationalUnits;
         return this;
@@ -165,6 +183,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionType")
     public PermissionTypeEnum permissionType;
+
     public WorkspaceDescription withPermissionType(PermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
@@ -173,6 +192,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackSetName")
     public String stackSetName;
+
     public WorkspaceDescription withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -180,6 +200,7 @@ public class WorkspaceDescription {
     
     @JsonProperty("status")
     public WorkspaceStatusEnum status;
+
     public WorkspaceDescription withStatus(WorkspaceStatusEnum status) {
         this.status = status;
         return this;
@@ -188,6 +209,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public WorkspaceDescription withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -196,6 +218,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfiguration")
     public VpcConfiguration vpcConfiguration;
+
     public WorkspaceDescription withVpcConfiguration(VpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
@@ -204,9 +227,20 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceRoleArn")
     public String workspaceRoleArn;
+
     public WorkspaceDescription withWorkspaceRoleArn(String workspaceRoleArn) {
         this.workspaceRoleArn = workspaceRoleArn;
         return this;
     }
     
+    public WorkspaceDescription(@JsonProperty("authentication") AuthenticationSummary authentication, @JsonProperty("created") OffsetDateTime created, @JsonProperty("dataSources") DataSourceTypeEnum[] dataSources, @JsonProperty("endpoint") String endpoint, @JsonProperty("grafanaVersion") String grafanaVersion, @JsonProperty("id") String id, @JsonProperty("modified") OffsetDateTime modified, @JsonProperty("status") WorkspaceStatusEnum status) {
+        this.authentication = authentication;
+        this.created = created;
+        this.dataSources = dataSources;
+        this.endpoint = endpoint;
+        this.grafanaVersion = grafanaVersion;
+        this.id = id;
+        this.modified = modified;
+        this.status = status;
+  }
 }

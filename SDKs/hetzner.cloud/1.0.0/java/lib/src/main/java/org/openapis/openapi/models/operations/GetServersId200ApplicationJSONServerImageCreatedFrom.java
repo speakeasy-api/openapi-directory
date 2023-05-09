@@ -15,6 +15,7 @@ public class GetServersId200ApplicationJSONServerImageCreatedFrom {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetServersId200ApplicationJSONServerImageCreatedFrom withId(Long id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class GetServersId200ApplicationJSONServerImageCreatedFrom {
      */
     @JsonProperty("name")
     public String name;
+
     public GetServersId200ApplicationJSONServerImageCreatedFrom withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetServersId200ApplicationJSONServerImageCreatedFrom(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

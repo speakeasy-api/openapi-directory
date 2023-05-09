@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateFileCacheRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public UpdateFileCacheRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,6 +23,7 @@ public class UpdateFileCacheRequest {
     
     @JsonProperty("FileCacheId")
     public String fileCacheId;
+
     public UpdateFileCacheRequest withFileCacheId(String fileCacheId) {
         this.fileCacheId = fileCacheId;
         return this;
@@ -30,9 +32,13 @@ public class UpdateFileCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LustreConfiguration")
     public UpdateFileCacheLustreConfiguration lustreConfiguration;
+
     public UpdateFileCacheRequest withLustreConfiguration(UpdateFileCacheLustreConfiguration lustreConfiguration) {
         this.lustreConfiguration = lustreConfiguration;
         return this;
     }
     
+    public UpdateFileCacheRequest(@JsonProperty("FileCacheId") String fileCacheId) {
+        this.fileCacheId = fileCacheId;
+  }
 }

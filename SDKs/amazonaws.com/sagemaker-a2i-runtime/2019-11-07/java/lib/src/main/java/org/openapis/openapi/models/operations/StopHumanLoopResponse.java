@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopHumanLoopResponse {
     
     public String contentType;
+
     public StopHumanLoopResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopHumanLoopResponse {
      */
     
     public Object internalServerException;
+
     public StopHumanLoopResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class StopHumanLoopResponse {
     
     
     public Integer statusCode;
+
     public StopHumanLoopResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class StopHumanLoopResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopHumanLoopResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class StopHumanLoopResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopHumanLoopResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class StopHumanLoopResponse {
      */
     
     public java.util.Map<String, Object> stopHumanLoopResponse;
+
     public StopHumanLoopResponse withStopHumanLoopResponse(java.util.Map<String, Object> stopHumanLoopResponse) {
         this.stopHumanLoopResponse = stopHumanLoopResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopHumanLoopResponse {
      */
     
     public Object throttlingException;
+
     public StopHumanLoopResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class StopHumanLoopResponse {
      */
     
     public Object validationException;
+
     public StopHumanLoopResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopHumanLoopResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

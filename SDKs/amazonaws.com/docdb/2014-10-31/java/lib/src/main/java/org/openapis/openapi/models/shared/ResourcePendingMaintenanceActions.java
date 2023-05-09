@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourcePendingMaintenanceActions {
     
     public PendingMaintenanceActionDetails[] pendingMaintenanceActionDetails;
+
     public ResourcePendingMaintenanceActions withPendingMaintenanceActionDetails(PendingMaintenanceActionDetails[] pendingMaintenanceActionDetails) {
         this.pendingMaintenanceActionDetails = pendingMaintenanceActionDetails;
         return this;
@@ -19,9 +20,11 @@ public class ResourcePendingMaintenanceActions {
     
     
     public String resourceIdentifier;
+
     public ResourcePendingMaintenanceActions withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
     }
     
+    public ResourcePendingMaintenanceActions(){}
 }

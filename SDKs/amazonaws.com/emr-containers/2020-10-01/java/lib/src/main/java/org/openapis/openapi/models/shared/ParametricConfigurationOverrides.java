@@ -15,6 +15,7 @@ public class ParametricConfigurationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationConfiguration")
     public Configuration[] applicationConfiguration;
+
     public ParametricConfigurationOverrides withApplicationConfiguration(Configuration[] applicationConfiguration) {
         this.applicationConfiguration = applicationConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class ParametricConfigurationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringConfiguration")
     public ParametricMonitoringConfiguration monitoringConfiguration;
+
     public ParametricConfigurationOverrides withMonitoringConfiguration(ParametricMonitoringConfiguration monitoringConfiguration) {
         this.monitoringConfiguration = monitoringConfiguration;
         return this;
     }
     
+    public ParametricConfigurationOverrides(){}
 }

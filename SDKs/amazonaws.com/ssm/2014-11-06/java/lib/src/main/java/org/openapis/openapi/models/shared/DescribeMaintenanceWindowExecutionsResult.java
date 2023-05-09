@@ -15,6 +15,7 @@ public class DescribeMaintenanceWindowExecutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMaintenanceWindowExecutionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeMaintenanceWindowExecutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowExecutions")
     public MaintenanceWindowExecution[] windowExecutions;
+
     public DescribeMaintenanceWindowExecutionsResult withWindowExecutions(MaintenanceWindowExecution[] windowExecutions) {
         this.windowExecutions = windowExecutions;
         return this;
     }
     
+    public DescribeMaintenanceWindowExecutionsResult(){}
 }

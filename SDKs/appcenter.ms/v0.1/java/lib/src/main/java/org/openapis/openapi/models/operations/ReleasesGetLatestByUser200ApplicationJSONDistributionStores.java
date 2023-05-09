@@ -14,6 +14,7 @@ public class ReleasesGetLatestByUser200ApplicationJSONDistributionStores {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesGetLatestByUser200ApplicationJSONDistributionStores withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class ReleasesGetLatestByUser200ApplicationJSONDistributionStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReleasesGetLatestByUser200ApplicationJSONDistributionStores withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class ReleasesGetLatestByUser200ApplicationJSONDistributionStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishing_status")
     public String publishingStatus;
+
     public ReleasesGetLatestByUser200ApplicationJSONDistributionStores withPublishingStatus(String publishingStatus) {
         this.publishingStatus = publishingStatus;
         return this;
@@ -47,9 +50,13 @@ public class ReleasesGetLatestByUser200ApplicationJSONDistributionStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReleasesGetLatestByUser200ApplicationJSONDistributionStoresTypeEnum type;
+
     public ReleasesGetLatestByUser200ApplicationJSONDistributionStores withType(ReleasesGetLatestByUser200ApplicationJSONDistributionStoresTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReleasesGetLatestByUser200ApplicationJSONDistributionStores(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ScheduledUpdateGroupAction {
     
     public String autoScalingGroupName;
+
     public ScheduledUpdateGroupAction withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -19,6 +20,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public Long desiredCapacity;
+
     public ScheduledUpdateGroupAction withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -26,6 +28,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public OffsetDateTime endTime;
+
     public ScheduledUpdateGroupAction withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -33,6 +36,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public Long maxSize;
+
     public ScheduledUpdateGroupAction withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -40,6 +44,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public Long minSize;
+
     public ScheduledUpdateGroupAction withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -47,6 +52,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public String recurrence;
+
     public ScheduledUpdateGroupAction withRecurrence(String recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -54,6 +60,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public String scheduledActionARN;
+
     public ScheduledUpdateGroupAction withScheduledActionARN(String scheduledActionARN) {
         this.scheduledActionARN = scheduledActionARN;
         return this;
@@ -61,6 +68,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public String scheduledActionName;
+
     public ScheduledUpdateGroupAction withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -68,6 +76,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public OffsetDateTime startTime;
+
     public ScheduledUpdateGroupAction withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -75,6 +84,7 @@ public class ScheduledUpdateGroupAction {
     
     
     public OffsetDateTime time;
+
     public ScheduledUpdateGroupAction withTime(OffsetDateTime time) {
         this.time = time;
         return this;
@@ -82,9 +92,11 @@ public class ScheduledUpdateGroupAction {
     
     
     public String timeZone;
+
     public ScheduledUpdateGroupAction withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public ScheduledUpdateGroupAction(){}
 }

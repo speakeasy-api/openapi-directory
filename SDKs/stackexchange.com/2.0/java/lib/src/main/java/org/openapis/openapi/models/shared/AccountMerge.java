@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class AccountMerge {
     
     public Long mergeDate;
+
     public AccountMerge withMergeDate(Long mergeDate) {
         this.mergeDate = mergeDate;
         return this;
@@ -16,6 +17,7 @@ public class AccountMerge {
     
     
     public Long newAccountId;
+
     public AccountMerge withNewAccountId(Long newAccountId) {
         this.newAccountId = newAccountId;
         return this;
@@ -23,9 +25,11 @@ public class AccountMerge {
     
     
     public Long oldAccountId;
+
     public AccountMerge withOldAccountId(Long oldAccountId) {
         this.oldAccountId = oldAccountId;
         return this;
     }
     
+    public AccountMerge(){}
 }

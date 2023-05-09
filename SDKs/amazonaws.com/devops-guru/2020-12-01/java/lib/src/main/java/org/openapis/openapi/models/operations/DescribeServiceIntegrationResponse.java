@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeServiceIntegrationResponse {
@@ -12,6 +13,7 @@ public class DescribeServiceIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeServiceIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeServiceIntegrationResponse {
     
     
     public String contentType;
+
     public DescribeServiceIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeServiceIntegrationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeServiceIntegrationResponse describeServiceIntegrationResponse;
+
     public DescribeServiceIntegrationResponse withDescribeServiceIntegrationResponse(org.openapis.openapi.models.shared.DescribeServiceIntegrationResponse describeServiceIntegrationResponse) {
         this.describeServiceIntegrationResponse = describeServiceIntegrationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeServiceIntegrationResponse {
      */
     
     public Object internalServerException;
+
     public DescribeServiceIntegrationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeServiceIntegrationResponse {
     
     
     public Integer statusCode;
+
     public DescribeServiceIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeServiceIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeServiceIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeServiceIntegrationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeServiceIntegrationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeServiceIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeServiceIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeServiceIntegrationResponse {
      */
     
     public Object validationException;
+
     public DescribeServiceIntegrationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeServiceIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

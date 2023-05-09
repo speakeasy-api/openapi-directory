@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Workflow {
     @JsonProperty("badge_url")
     public String badgeUrl;
+
     public Workflow withBadgeUrl(String badgeUrl) {
         this.badgeUrl = badgeUrl;
         return this;
@@ -28,6 +29,7 @@ public class Workflow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Workflow withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Workflow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deleted_at")
     public OffsetDateTime deletedAt;
+
     public Workflow withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -45,6 +48,7 @@ public class Workflow {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Workflow withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -52,6 +56,7 @@ public class Workflow {
     
     @JsonProperty("id")
     public Long id;
+
     public Workflow withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +64,7 @@ public class Workflow {
     
     @JsonProperty("name")
     public String name;
+
     public Workflow withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +72,7 @@ public class Workflow {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Workflow withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -73,6 +80,7 @@ public class Workflow {
     
     @JsonProperty("path")
     public String path;
+
     public Workflow withPath(String path) {
         this.path = path;
         return this;
@@ -80,6 +88,7 @@ public class Workflow {
     
     @JsonProperty("state")
     public WorkflowStateEnum state;
+
     public Workflow withState(WorkflowStateEnum state) {
         this.state = state;
         return this;
@@ -89,6 +98,7 @@ public class Workflow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Workflow withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -96,9 +106,22 @@ public class Workflow {
     
     @JsonProperty("url")
     public String url;
+
     public Workflow withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Workflow(@JsonProperty("badge_url") String badgeUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("path") String path, @JsonProperty("state") WorkflowStateEnum state, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.badgeUrl = badgeUrl;
+        this.createdAt = createdAt;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.path = path;
+        this.state = state;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

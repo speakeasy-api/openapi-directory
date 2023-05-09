@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEmailIdentityResponse {
@@ -12,6 +13,7 @@ public class CreateEmailIdentityResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateEmailIdentityResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEmailIdentityResponse {
      */
     
     public Object badRequestException;
+
     public CreateEmailIdentityResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class CreateEmailIdentityResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateEmailIdentityResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateEmailIdentityResponse {
     
     
     public String contentType;
+
     public CreateEmailIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateEmailIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEmailIdentityResponse createEmailIdentityResponse;
+
     public CreateEmailIdentityResponse withCreateEmailIdentityResponse(org.openapis.openapi.models.shared.CreateEmailIdentityResponse createEmailIdentityResponse) {
         this.createEmailIdentityResponse = createEmailIdentityResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateEmailIdentityResponse {
      */
     
     public Object limitExceededException;
+
     public CreateEmailIdentityResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateEmailIdentityResponse {
      */
     
     public Object notFoundException;
+
     public CreateEmailIdentityResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateEmailIdentityResponse {
     
     
     public Integer statusCode;
+
     public CreateEmailIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateEmailIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEmailIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateEmailIdentityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateEmailIdentityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateEmailIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

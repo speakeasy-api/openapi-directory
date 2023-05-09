@@ -15,9 +15,11 @@ public class DescribeCustomRoutingListenerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Listener")
     public CustomRoutingListener listener;
+
     public DescribeCustomRoutingListenerResponse withListener(CustomRoutingListener listener) {
         this.listener = listener;
         return this;
     }
     
+    public DescribeCustomRoutingListenerResponse(){}
 }

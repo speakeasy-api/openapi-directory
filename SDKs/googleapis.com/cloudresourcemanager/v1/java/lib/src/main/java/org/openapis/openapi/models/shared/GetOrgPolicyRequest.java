@@ -18,9 +18,11 @@ public class GetOrgPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraint")
     public String constraint;
+
     public GetOrgPolicyRequest withConstraint(String constraint) {
         this.constraint = constraint;
         return this;
     }
     
+    public GetOrgPolicyRequest(){}
 }

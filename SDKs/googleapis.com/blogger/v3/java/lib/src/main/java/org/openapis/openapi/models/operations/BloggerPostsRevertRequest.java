@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BloggerPostsRevertRequest {
@@ -12,6 +13,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BloggerPostsRevertRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BloggerPostsRevertRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BloggerPostsRevertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class BloggerPostsRevertRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blogId")
     public String blogId;
+
     public BloggerPostsRevertRequest withBlogId(String blogId) {
         this.blogId = blogId;
         return this;
@@ -49,6 +54,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BloggerPostsRevertRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BloggerPostsRevertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BloggerPostsRevertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BloggerPostsRevertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -86,6 +95,7 @@ public class BloggerPostsRevertRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=postId")
     public String postId;
+
     public BloggerPostsRevertRequest withPostId(String postId) {
         this.postId = postId;
         return this;
@@ -96,6 +106,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BloggerPostsRevertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -106,6 +117,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BloggerPostsRevertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -116,6 +128,7 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BloggerPostsRevertRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -126,9 +139,14 @@ public class BloggerPostsRevertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BloggerPostsRevertRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BloggerPostsRevertRequest(@JsonProperty("blogId") String blogId, @JsonProperty("postId") String postId) {
+        this.blogId = blogId;
+        this.postId = postId;
+  }
 }

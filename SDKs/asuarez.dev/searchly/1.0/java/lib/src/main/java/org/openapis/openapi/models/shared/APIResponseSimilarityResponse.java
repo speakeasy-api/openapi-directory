@@ -18,9 +18,11 @@ public class APIResponseSimilarityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("similarity_list")
     public APIResponseSimilarityResponseSimilarityList[] similarityList;
+
     public APIResponseSimilarityResponse withSimilarityList(APIResponseSimilarityResponseSimilarityList[] similarityList) {
         this.similarityList = similarityList;
         return this;
     }
     
+    public APIResponseSimilarityResponse(){}
 }

@@ -15,6 +15,7 @@ public class ListProtectedQueriesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListProtectedQueriesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListProtectedQueriesOutput {
     
     @JsonProperty("protectedQueries")
     public ProtectedQuerySummary[] protectedQueries;
+
     public ListProtectedQueriesOutput withProtectedQueries(ProtectedQuerySummary[] protectedQueries) {
         this.protectedQueries = protectedQueries;
         return this;
     }
     
+    public ListProtectedQueriesOutput(@JsonProperty("protectedQueries") ProtectedQuerySummary[] protectedQueries) {
+        this.protectedQueries = protectedQueries;
+  }
 }

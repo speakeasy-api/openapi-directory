@@ -12,6 +12,7 @@ public class LearningOutcomes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LearningOutcomes withDescription(String description) {
         this.description = description;
         return this;
@@ -20,9 +21,11 @@ public class LearningOutcomes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LearningOutcomes withId(String id) {
         this.id = id;
         return this;
     }
     
+    public LearningOutcomes(){}
 }

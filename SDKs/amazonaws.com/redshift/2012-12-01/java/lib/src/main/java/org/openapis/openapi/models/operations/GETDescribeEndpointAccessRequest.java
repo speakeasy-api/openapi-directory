@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeEndpointAccessRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeEndpointAccessActionEnum action;
+
     public GETDescribeEndpointAccessRequest withAction(GETDescribeEndpointAccessActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETDescribeEndpointAccessRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndpointName")
     public String endpointName;
+
     public GETDescribeEndpointAccessRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeEndpointAccessRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeEndpointAccessRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceOwner")
     public String resourceOwner;
+
     public GETDescribeEndpointAccessRequest withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -66,6 +73,7 @@ public class GETDescribeEndpointAccessRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeEndpointAccessVersionEnum version;
+
     public GETDescribeEndpointAccessRequest withVersion(GETDescribeEndpointAccessVersionEnum version) {
         this.version = version;
         return this;
@@ -76,6 +84,7 @@ public class GETDescribeEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETDescribeEndpointAccessRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -83,6 +92,7 @@ public class GETDescribeEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeEndpointAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETDescribeEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeEndpointAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETDescribeEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeEndpointAccessRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETDescribeEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeEndpointAccessRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETDescribeEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeEndpointAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETDescribeEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeEndpointAccessRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,14 @@ public class GETDescribeEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeEndpointAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeEndpointAccessRequest(@JsonProperty("Action") GETDescribeEndpointAccessActionEnum action, @JsonProperty("Version") GETDescribeEndpointAccessVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

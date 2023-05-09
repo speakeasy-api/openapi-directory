@@ -15,6 +15,7 @@ public class ResultFormattedResultsRuleResults {
      */
     
     public String localizedRuleName;
+
     public ResultFormattedResultsRuleResults withLocalizedRuleName(String localizedRuleName) {
         this.localizedRuleName = localizedRuleName;
         return this;
@@ -25,6 +26,7 @@ public class ResultFormattedResultsRuleResults {
      */
     
     public Double ruleImpact;
+
     public ResultFormattedResultsRuleResults withRuleImpact(Double ruleImpact) {
         this.ruleImpact = ruleImpact;
         return this;
@@ -35,9 +37,11 @@ public class ResultFormattedResultsRuleResults {
      */
     
     public ResultFormattedResultsRuleResultsUrlBlocks[] urlBlocks;
+
     public ResultFormattedResultsRuleResults withUrlBlocks(ResultFormattedResultsRuleResultsUrlBlocks[] urlBlocks) {
         this.urlBlocks = urlBlocks;
         return this;
     }
     
+    public ResultFormattedResultsRuleResults(){}
 }

@@ -18,6 +18,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddressLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public ListAllPickupPpoints200ApplicationJSONAddressLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -29,9 +30,11 @@ public class ListAllPickupPpoints200ApplicationJSONAddressLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public ListAllPickupPpoints200ApplicationJSONAddressLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public ListAllPickupPpoints200ApplicationJSONAddressLocation(){}
 }

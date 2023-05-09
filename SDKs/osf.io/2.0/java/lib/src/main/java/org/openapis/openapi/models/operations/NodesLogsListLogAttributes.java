@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class NodesLogsListLogAttributes {
      */
     
     public String action;
+
     public NodesLogsListLogAttributes withAction(String action) {
         this.action = action;
         return this;
@@ -25,6 +27,7 @@ public class NodesLogsListLogAttributes {
      */
     
     public OffsetDateTime date;
+
     public NodesLogsListLogAttributes withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -35,9 +38,14 @@ public class NodesLogsListLogAttributes {
      */
     
     public NodesLogsListLogAttributesLogParams params;
+
     public NodesLogsListLogAttributes withParams(NodesLogsListLogAttributesLogParams params) {
         this.params = params;
         return this;
     }
     
+    public NodesLogsListLogAttributes(@JsonProperty("action") String action, @JsonProperty("date") OffsetDateTime date) {
+        this.action = action;
+        this.date = date;
+  }
 }

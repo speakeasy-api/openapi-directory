@@ -12,6 +12,7 @@ public class ServiceOptionsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerPadding")
     public Boolean consumerPadding;
+
     public ServiceOptionsInputModel withConsumerPadding(Boolean consumerPadding) {
         this.consumerPadding = consumerPadding;
         return this;
@@ -20,6 +21,7 @@ public class ServiceOptionsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultService")
     public Boolean defaultService;
+
     public ServiceOptionsInputModel withDefaultService(Boolean defaultService) {
         this.defaultService = defaultService;
         return this;
@@ -28,6 +30,7 @@ public class ServiceOptionsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationInterval")
     public Integer durationInterval;
+
     public ServiceOptionsInputModel withDurationInterval(Integer durationInterval) {
         this.durationInterval = durationInterval;
         return this;
@@ -36,6 +39,7 @@ public class ServiceOptionsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMax")
     public Integer durationMax;
+
     public ServiceOptionsInputModel withDurationMax(Integer durationMax) {
         this.durationMax = durationMax;
         return this;
@@ -44,6 +48,7 @@ public class ServiceOptionsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMin")
     public Integer durationMin;
+
     public ServiceOptionsInputModel withDurationMin(Integer durationMin) {
         this.durationMin = durationMin;
         return this;
@@ -52,6 +57,7 @@ public class ServiceOptionsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSelect")
     public Boolean durationSelect;
+
     public ServiceOptionsInputModel withDurationSelect(Boolean durationSelect) {
         this.durationSelect = durationSelect;
         return this;
@@ -60,9 +66,11 @@ public class ServiceOptionsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("padding")
     public Integer padding;
+
     public ServiceOptionsInputModel withPadding(Integer padding) {
         this.padding = padding;
         return this;
     }
     
+    public ServiceOptionsInputModel(){}
 }

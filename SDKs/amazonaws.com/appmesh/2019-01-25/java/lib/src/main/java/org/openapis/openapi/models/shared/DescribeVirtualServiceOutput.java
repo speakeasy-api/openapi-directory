@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeVirtualServiceOutput {
     @JsonProperty("virtualService")
     public VirtualServiceData virtualService;
+
     public DescribeVirtualServiceOutput withVirtualService(VirtualServiceData virtualService) {
         this.virtualService = virtualService;
         return this;
     }
     
+    public DescribeVirtualServiceOutput(@JsonProperty("virtualService") VirtualServiceData virtualService) {
+        this.virtualService = virtualService;
+  }
 }

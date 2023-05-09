@@ -15,6 +15,7 @@ public class ApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ApiCredentialLinks links;
+
     public ApiCredential withLinks(ApiCredentialLinks links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class ApiCredential {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public ApiCredential withActive(Boolean active) {
         this.active = active;
         return this;
@@ -38,6 +40,7 @@ public class ApiCredential {
      */
     @JsonProperty("allowedIpAddresses")
     public String[] allowedIpAddresses;
+
     public ApiCredential withAllowedIpAddresses(String[] allowedIpAddresses) {
         this.allowedIpAddresses = allowedIpAddresses;
         return this;
@@ -49,6 +52,7 @@ public class ApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrigins")
     public AllowedOrigin[] allowedOrigins;
+
     public ApiCredential withAllowedOrigins(AllowedOrigin[] allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -59,6 +63,7 @@ public class ApiCredential {
      */
     @JsonProperty("clientKey")
     public String clientKey;
+
     public ApiCredential withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -70,6 +75,7 @@ public class ApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApiCredential withDescription(String description) {
         this.description = description;
         return this;
@@ -80,6 +86,7 @@ public class ApiCredential {
      */
     @JsonProperty("id")
     public String id;
+
     public ApiCredential withId(String id) {
         this.id = id;
         return this;
@@ -90,6 +97,7 @@ public class ApiCredential {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public ApiCredential withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -100,9 +108,18 @@ public class ApiCredential {
      */
     @JsonProperty("username")
     public String username;
+
     public ApiCredential withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ApiCredential(@JsonProperty("active") Boolean active, @JsonProperty("allowedIpAddresses") String[] allowedIpAddresses, @JsonProperty("clientKey") String clientKey, @JsonProperty("id") String id, @JsonProperty("roles") String[] roles, @JsonProperty("username") String username) {
+        this.active = active;
+        this.allowedIpAddresses = allowedIpAddresses;
+        this.clientKey = clientKey;
+        this.id = id;
+        this.roles = roles;
+        this.username = username;
+  }
 }

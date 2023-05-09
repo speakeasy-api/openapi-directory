@@ -18,6 +18,7 @@ public class Occupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presenceConnections")
     public Long presenceConnections;
+
     public Occupancy withPresenceConnections(Long presenceConnections) {
         this.presenceConnections = presenceConnections;
         return this;
@@ -29,6 +30,7 @@ public class Occupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presenceMembers")
     public Long presenceMembers;
+
     public Occupancy withPresenceMembers(Long presenceMembers) {
         this.presenceMembers = presenceMembers;
         return this;
@@ -40,6 +42,7 @@ public class Occupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presenceSubscribers")
     public Long presenceSubscribers;
+
     public Occupancy withPresenceSubscribers(Long presenceSubscribers) {
         this.presenceSubscribers = presenceSubscribers;
         return this;
@@ -51,6 +54,7 @@ public class Occupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishers")
     public Long publishers;
+
     public Occupancy withPublishers(Long publishers) {
         this.publishers = publishers;
         return this;
@@ -62,9 +66,11 @@ public class Occupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscribers")
     public Long subscribers;
+
     public Occupancy withSubscribers(Long subscribers) {
         this.subscribers = subscribers;
         return this;
     }
     
+    public Occupancy(){}
 }

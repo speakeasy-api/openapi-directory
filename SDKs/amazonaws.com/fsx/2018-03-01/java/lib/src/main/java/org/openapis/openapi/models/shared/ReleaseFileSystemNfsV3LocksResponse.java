@@ -18,9 +18,11 @@ public class ReleaseFileSystemNfsV3LocksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystem")
     public FileSystem fileSystem;
+
     public ReleaseFileSystemNfsV3LocksResponse withFileSystem(FileSystem fileSystem) {
         this.fileSystem = fileSystem;
         return this;
     }
     
+    public ReleaseFileSystemNfsV3LocksResponse(){}
 }

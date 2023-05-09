@@ -35,6 +35,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetEventResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetEventsOptionsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsOptionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorUnauthorized.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorNotFound.java
@@ -62,4 +63,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/PaginationLinks.java
 lib/src/main/java/org/openapis/openapi/models/shared/NoContent.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuditEventTypesResp.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuditEventType.java
+docs/sdk/README.md
 USAGE.md

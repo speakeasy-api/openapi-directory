@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ResourceToImport - Describes the target resource of an import operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourceToImport {
     
     public String logicalResourceId;
+
     public ResourceToImport withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -19,6 +20,7 @@ public class ResourceToImport {
     
     
     public java.util.Map<String, String> resourceIdentifier;
+
     public ResourceToImport withResourceIdentifier(java.util.Map<String, String> resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -26,9 +28,15 @@ public class ResourceToImport {
     
     
     public String resourceType;
+
     public ResourceToImport withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceToImport(@JsonProperty("LogicalResourceId") String logicalResourceId, @JsonProperty("ResourceIdentifier") java.util.Map<String, String> resourceIdentifier, @JsonProperty("ResourceType") String resourceType) {
+        this.logicalResourceId = logicalResourceId;
+        this.resourceIdentifier = resourceIdentifier;
+        this.resourceType = resourceType;
+  }
 }

@@ -18,6 +18,7 @@ public class PackageSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimensions dimensions;
+
     public PackageSpecification withDimensions(Dimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,9 +30,11 @@ public class PackageSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Weight weight;
+
     public PackageSpecification withWeight(Weight weight) {
         this.weight = weight;
         return this;
     }
     
+    public PackageSpecification(){}
 }

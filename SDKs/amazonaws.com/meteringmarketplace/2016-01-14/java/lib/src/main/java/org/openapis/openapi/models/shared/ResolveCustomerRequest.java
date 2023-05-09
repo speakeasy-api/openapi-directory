@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResolveCustomerRequest {
     @JsonProperty("RegistrationToken")
     public String registrationToken;
+
     public ResolveCustomerRequest withRegistrationToken(String registrationToken) {
         this.registrationToken = registrationToken;
         return this;
     }
     
+    public ResolveCustomerRequest(@JsonProperty("RegistrationToken") String registrationToken) {
+        this.registrationToken = registrationToken;
+  }
 }

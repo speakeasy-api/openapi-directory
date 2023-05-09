@@ -15,6 +15,7 @@ public class CreateRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateRunGroupResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateRunGroupResponse withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class CreateRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRunGroupResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRunGroupResponse(){}
 }

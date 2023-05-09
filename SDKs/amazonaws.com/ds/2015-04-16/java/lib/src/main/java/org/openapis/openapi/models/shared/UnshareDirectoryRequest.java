@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnshareDirectoryRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public UnshareDirectoryRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -16,9 +17,14 @@ public class UnshareDirectoryRequest {
     
     @JsonProperty("UnshareTarget")
     public UnshareTarget unshareTarget;
+
     public UnshareDirectoryRequest withUnshareTarget(UnshareTarget unshareTarget) {
         this.unshareTarget = unshareTarget;
         return this;
     }
     
+    public UnshareDirectoryRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("UnshareTarget") UnshareTarget unshareTarget) {
+        this.directoryId = directoryId;
+        this.unshareTarget = unshareTarget;
+  }
 }

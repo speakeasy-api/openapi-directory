@@ -55,10 +55,8 @@ public class Management {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsManagementAccountsListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementAccountsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsManagementAccountsListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementAccountsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class Management {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsManagementGoalsListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementGoalsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsManagementGoalsListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementGoalsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,8 @@ public class Management {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsManagementProfilesListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementProfilesListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsManagementProfilesListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementProfilesListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,10 +169,8 @@ public class Management {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsManagementSegmentsListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementSegmentsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsManagementSegmentsListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementSegmentsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,10 +207,8 @@ public class Management {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsManagementWebpropertiesListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementWebpropertiesListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsManagementWebpropertiesListResponse res = new org.openapis.openapi.models.operations.AnalyticsManagementWebpropertiesListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

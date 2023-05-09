@@ -22,6 +22,7 @@ public class InstanceFleetTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public InstanceFleetTimeline withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -32,6 +33,7 @@ public class InstanceFleetTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDateTime")
     public OffsetDateTime endDateTime;
+
     public InstanceFleetTimeline withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -42,9 +44,11 @@ public class InstanceFleetTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReadyDateTime")
     public OffsetDateTime readyDateTime;
+
     public InstanceFleetTimeline withReadyDateTime(OffsetDateTime readyDateTime) {
         this.readyDateTime = readyDateTime;
         return this;
     }
     
+    public InstanceFleetTimeline(){}
 }

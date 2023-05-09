@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBFundsConfirmationConsent1 {
     @JsonProperty("Data")
     public OBFundsConfirmationConsent1Data data;
+
     public OBFundsConfirmationConsent1 withData(OBFundsConfirmationConsent1Data data) {
         this.data = data;
         return this;
     }
     
+    public OBFundsConfirmationConsent1(@JsonProperty("Data") OBFundsConfirmationConsent1Data data) {
+        this.data = data;
+  }
 }

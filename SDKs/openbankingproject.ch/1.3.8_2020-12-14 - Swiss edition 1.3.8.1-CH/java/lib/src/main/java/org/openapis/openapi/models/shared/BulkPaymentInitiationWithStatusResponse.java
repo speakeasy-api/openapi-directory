@@ -25,6 +25,7 @@ public class BulkPaymentInitiationWithStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("acceptorTransactionDateTime")
     public OffsetDateTime acceptorTransactionDateTime;
+
     public BulkPaymentInitiationWithStatusResponse withAcceptorTransactionDateTime(OffsetDateTime acceptorTransactionDateTime) {
         this.acceptorTransactionDateTime = acceptorTransactionDateTime;
         return this;
@@ -40,6 +41,7 @@ public class BulkPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchBookingPreferred")
     public Boolean batchBookingPreferred;
+
     public BulkPaymentInitiationWithStatusResponse withBatchBookingPreferred(Boolean batchBookingPreferred) {
         this.batchBookingPreferred = batchBookingPreferred;
         return this;
@@ -54,6 +56,7 @@ public class BulkPaymentInitiationWithStatusResponse {
      */
     @JsonProperty("debtorAccount")
     public AccountReference16CH debtorAccount;
+
     public BulkPaymentInitiationWithStatusResponse withDebtorAccount(AccountReference16CH debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -62,6 +65,7 @@ public class BulkPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInformationId")
     public String paymentInformationId;
+
     public BulkPaymentInitiationWithStatusResponse withPaymentInformationId(String paymentInformationId) {
         this.paymentInformationId = paymentInformationId;
         return this;
@@ -75,6 +79,7 @@ public class BulkPaymentInitiationWithStatusResponse {
      */
     @JsonProperty("payments")
     public PaymentInitiationBulkElementJson[] payments;
+
     public BulkPaymentInitiationWithStatusResponse withPayments(PaymentInitiationBulkElementJson[] payments) {
         this.payments = payments;
         return this;
@@ -84,6 +89,7 @@ public class BulkPaymentInitiationWithStatusResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("requestedExecutionDate")
     public LocalDate requestedExecutionDate;
+
     public BulkPaymentInitiationWithStatusResponse withRequestedExecutionDate(LocalDate requestedExecutionDate) {
         this.requestedExecutionDate = requestedExecutionDate;
         return this;
@@ -135,9 +141,14 @@ public class BulkPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionStatus")
     public TransactionStatusEnum transactionStatus;
+
     public BulkPaymentInitiationWithStatusResponse withTransactionStatus(TransactionStatusEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public BulkPaymentInitiationWithStatusResponse(@JsonProperty("debtorAccount") AccountReference16CH debtorAccount, @JsonProperty("payments") PaymentInitiationBulkElementJson[] payments) {
+        this.debtorAccount = debtorAccount;
+        this.payments = payments;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResolveAliasResponse {
     
     public String contentType;
+
     public ResolveAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResolveAliasResponse {
      */
     
     public Object internalServiceException;
+
     public ResolveAliasResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ResolveAliasResponse {
      */
     
     public Object invalidRequestException;
+
     public ResolveAliasResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ResolveAliasResponse {
      */
     
     public Object notFoundException;
+
     public ResolveAliasResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ResolveAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.ResolveAliasOutput resolveAliasOutput;
+
     public ResolveAliasResponse withResolveAliasOutput(org.openapis.openapi.models.shared.ResolveAliasOutput resolveAliasOutput) {
         this.resolveAliasOutput = resolveAliasOutput;
         return this;
@@ -56,6 +62,7 @@ public class ResolveAliasResponse {
     
     
     public Integer statusCode;
+
     public ResolveAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ResolveAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResolveAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ResolveAliasResponse {
      */
     
     public Object terminalRoutingStrategyException;
+
     public ResolveAliasResponse withTerminalRoutingStrategyException(Object terminalRoutingStrategyException) {
         this.terminalRoutingStrategyException = terminalRoutingStrategyException;
         return this;
@@ -83,9 +92,14 @@ public class ResolveAliasResponse {
      */
     
     public Object unauthorizedException;
+
     public ResolveAliasResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ResolveAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

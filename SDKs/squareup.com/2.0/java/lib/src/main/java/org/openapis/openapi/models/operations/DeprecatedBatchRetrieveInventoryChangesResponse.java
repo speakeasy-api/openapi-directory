@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeprecatedBatchRetrieveInventoryChangesResponse {
@@ -12,6 +13,7 @@ public class DeprecatedBatchRetrieveInventoryChangesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchRetrieveInventoryChangesResponse batchRetrieveInventoryChangesResponse;
+
     public DeprecatedBatchRetrieveInventoryChangesResponse withBatchRetrieveInventoryChangesResponse(org.openapis.openapi.models.shared.BatchRetrieveInventoryChangesResponse batchRetrieveInventoryChangesResponse) {
         this.batchRetrieveInventoryChangesResponse = batchRetrieveInventoryChangesResponse;
         return this;
@@ -19,6 +21,7 @@ public class DeprecatedBatchRetrieveInventoryChangesResponse {
     
     
     public String contentType;
+
     public DeprecatedBatchRetrieveInventoryChangesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeprecatedBatchRetrieveInventoryChangesResponse {
     
     
     public Integer statusCode;
+
     public DeprecatedBatchRetrieveInventoryChangesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeprecatedBatchRetrieveInventoryChangesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeprecatedBatchRetrieveInventoryChangesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeprecatedBatchRetrieveInventoryChangesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

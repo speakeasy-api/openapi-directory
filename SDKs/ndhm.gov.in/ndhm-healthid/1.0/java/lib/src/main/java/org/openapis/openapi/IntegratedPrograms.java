@@ -66,11 +66,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,11 +119,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTResponse res = new org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTResponse res = new org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +225,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindByAadharUsingPOSTResponse res = new org.openapis.openapi.models.operations.FindByAadharUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.FindByAadharUsingPOSTResponse res = new org.openapis.openapi.models.operations.FindByAadharUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,11 +278,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTResponse res = new org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTResponse res = new org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +331,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Response res = new org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Response() {{
+        org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Response res = new org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -396,11 +384,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -451,11 +437,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTResponse res = new org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTResponse res = new org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,11 +490,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTResponse res = new org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTResponse res = new org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -560,11 +542,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Response res = new org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Response() {{
+        org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Response res = new org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -614,11 +594,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTResponse res = new org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTResponse res = new org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -669,11 +647,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateStatusUsingPOSTResponse res = new org.openapis.openapi.models.operations.UpdateStatusUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.UpdateStatusUsingPOSTResponse res = new org.openapis.openapi.models.operations.UpdateStatusUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,11 +700,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -779,11 +753,9 @@ public class IntegratedPrograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyBioUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyBioUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.VerifyBioUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyBioUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

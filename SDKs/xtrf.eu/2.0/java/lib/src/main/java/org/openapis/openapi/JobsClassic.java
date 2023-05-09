@@ -53,10 +53,8 @@ public class JobsClassic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssignFileToJobOutputResponse res = new org.openapis.openapi.models.operations.AssignFileToJobOutputResponse() {{
+        org.openapis.openapi.models.operations.AssignFileToJobOutputResponse res = new org.openapis.openapi.models.operations.AssignFileToJobOutputResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -92,10 +90,8 @@ public class JobsClassic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssignVendorResponse res = new org.openapis.openapi.models.operations.AssignVendorResponse() {{
+        org.openapis.openapi.models.operations.AssignVendorResponse res = new org.openapis.openapi.models.operations.AssignVendorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -106,7 +102,7 @@ public class JobsClassic {
 
     /**
      * Changes job status if possible (400 Bad Request is returned otherwise).
-     * Changes job status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys:&lt;ul&gt;&lt;li&gt;OPEN \u2013 available when the job has one of the following statuses: ACCEPTED, CANCELED&lt;/li&gt;&lt;li&gt;ACCEPTED \u2013 available when the job has one of the following statuses: OPEN (Vendor and dates have to be set before calling the operation), STARTED&lt;/li&gt;&lt;li&gt;STARTED \u2013 available when the job has one of the following statuses: ACCEPTED, READY&lt;/li&gt;&lt;li&gt;READY \u2013 available when the job has one of the following statuses: STARTED&lt;/li&gt;&lt;li&gt;CANCELLED \u2013 available when the job has one of the following statuses: OPEN, ACCEPTED, STARTED, OFFERS_SENT&lt;/li&gt;&lt;li&gt;OFFERS_SENT \u2013 not available as a target status for this operation&lt;/li&gt;&lt;/ul&gt;
+     * Changes job status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys:&lt;ul&gt;&lt;li&gt;OPEN – available when the job has one of the following statuses: ACCEPTED, CANCELED&lt;/li&gt;&lt;li&gt;ACCEPTED – available when the job has one of the following statuses: OPEN (Vendor and dates have to be set before calling the operation), STARTED&lt;/li&gt;&lt;li&gt;STARTED – available when the job has one of the following statuses: ACCEPTED, READY&lt;/li&gt;&lt;li&gt;READY – available when the job has one of the following statuses: STARTED&lt;/li&gt;&lt;li&gt;CANCELLED – available when the job has one of the following statuses: OPEN, ACCEPTED, STARTED, OFFERS_SENT&lt;/li&gt;&lt;li&gt;OFFERS_SENT – not available as a target status for this operation&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -131,10 +127,8 @@ public class JobsClassic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeStatusResponse res = new org.openapis.openapi.models.operations.ChangeStatusResponse() {{
+        org.openapis.openapi.models.operations.ChangeStatusResponse res = new org.openapis.openapi.models.operations.ChangeStatusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -165,11 +159,9 @@ public class JobsClassic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJobDetailsResponse res = new org.openapis.openapi.models.operations.GetJobDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetJobDetailsResponse res = new org.openapis.openapi.models.operations.GetJobDetailsResponse(contentType, httpRes.statusCode()) {{
             jobDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -205,11 +197,9 @@ public class JobsClassic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJobFilesResponse res = new org.openapis.openapi.models.operations.GetJobFilesResponse() {{
+        org.openapis.openapi.models.operations.GetJobFilesResponse res = new org.openapis.openapi.models.operations.GetJobFilesResponse(contentType, httpRes.statusCode()) {{
             jobFilesDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +235,9 @@ public class JobsClassic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJobFiles1Response res = new org.openapis.openapi.models.operations.GetJobFiles1Response() {{
+        org.openapis.openapi.models.operations.GetJobFiles1Response res = new org.openapis.openapi.models.operations.GetJobFiles1Response(contentType, httpRes.statusCode()) {{
             fileMetadataDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,10 +278,8 @@ public class JobsClassic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDatesResponse res = new org.openapis.openapi.models.operations.UpdateDatesResponse() {{
+        org.openapis.openapi.models.operations.UpdateDatesResponse res = new org.openapis.openapi.models.operations.UpdateDatesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -329,10 +315,8 @@ public class JobsClassic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInstructionsResponse res = new org.openapis.openapi.models.operations.UpdateInstructionsResponse() {{
+        org.openapis.openapi.models.operations.UpdateInstructionsResponse res = new org.openapis.openapi.models.operations.UpdateInstructionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

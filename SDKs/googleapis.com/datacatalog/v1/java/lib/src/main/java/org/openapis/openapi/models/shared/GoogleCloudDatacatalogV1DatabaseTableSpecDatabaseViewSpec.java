@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseTable")
     public String baseTable;
+
     public GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec withBaseTable(String baseTable) {
         this.baseTable = baseTable;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlQuery")
     public String sqlQuery;
+
     public GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec withSqlQuery(String sqlQuery) {
         this.sqlQuery = sqlQuery;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewType")
     public GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpecViewTypeEnum viewType;
+
     public GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec withViewType(GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpecViewTypeEnum viewType) {
         this.viewType = viewType;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec(){}
 }

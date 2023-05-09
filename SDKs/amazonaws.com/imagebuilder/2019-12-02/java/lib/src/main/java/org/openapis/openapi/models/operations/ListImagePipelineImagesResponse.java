@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImagePipelineImagesResponse {
@@ -12,6 +13,7 @@ public class ListImagePipelineImagesResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ListImagePipelineImagesResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ListImagePipelineImagesResponse {
      */
     
     public Object clientException;
+
     public ListImagePipelineImagesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ListImagePipelineImagesResponse {
     
     
     public String contentType;
+
     public ListImagePipelineImagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListImagePipelineImagesResponse {
      */
     
     public Object forbiddenException;
+
     public ListImagePipelineImagesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListImagePipelineImagesResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListImagePipelineImagesResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListImagePipelineImagesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListImagePipelineImagesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListImagePipelineImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImagePipelineImagesResponse listImagePipelineImagesResponse;
+
     public ListImagePipelineImagesResponse withListImagePipelineImagesResponse(org.openapis.openapi.models.shared.ListImagePipelineImagesResponse listImagePipelineImagesResponse) {
         this.listImagePipelineImagesResponse = listImagePipelineImagesResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListImagePipelineImagesResponse {
      */
     
     public Object serviceException;
+
     public ListImagePipelineImagesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ListImagePipelineImagesResponse {
     
     
     public Integer statusCode;
+
     public ListImagePipelineImagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListImagePipelineImagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImagePipelineImagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ListImagePipelineImagesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListImagePipelineImagesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class ListImagePipelineImagesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListImagePipelineImagesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListImagePipelineImagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

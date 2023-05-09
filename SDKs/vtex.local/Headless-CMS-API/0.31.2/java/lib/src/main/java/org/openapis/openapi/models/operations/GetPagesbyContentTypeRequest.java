@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPagesbyContentTypeRequest {
@@ -12,6 +13,7 @@ public class GetPagesbyContentTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=builderId")
     public String builderId;
+
     public GetPagesbyContentTypeRequest withBuilderId(String builderId) {
         this.builderId = builderId;
         return this;
@@ -22,6 +24,7 @@ public class GetPagesbyContentTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=content-type")
     public String contentType;
+
     public GetPagesbyContentTypeRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +36,7 @@ public class GetPagesbyContentTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters[{field}]")
     public String filtersField;
+
     public GetPagesbyContentTypeRequest withFiltersField(String filtersField) {
         this.filtersField = filtersField;
         return this;
@@ -43,6 +47,7 @@ public class GetPagesbyContentTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=releaseId")
     public String releaseId;
+
     public GetPagesbyContentTypeRequest withReleaseId(String releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -53,9 +58,14 @@ public class GetPagesbyContentTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versionId")
     public String versionId;
+
     public GetPagesbyContentTypeRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public GetPagesbyContentTypeRequest(@JsonProperty("builderId") String builderId, @JsonProperty("content-type") String contentType) {
+        this.builderId = builderId;
+        this.contentType = contentType;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonOpenSearchServerlessDestinationConfiguration")
     public AmazonOpenSearchServerlessDestinationConfiguration amazonOpenSearchServerlessDestinationConfiguration;
+
     public CreateDeliveryStreamInput withAmazonOpenSearchServerlessDestinationConfiguration(AmazonOpenSearchServerlessDestinationConfiguration amazonOpenSearchServerlessDestinationConfiguration) {
         this.amazonOpenSearchServerlessDestinationConfiguration = amazonOpenSearchServerlessDestinationConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonopensearchserviceDestinationConfiguration")
     public AmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration;
+
     public CreateDeliveryStreamInput withAmazonopensearchserviceDestinationConfiguration(AmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration) {
         this.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryStreamEncryptionConfigurationInput")
     public DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput;
+
     public CreateDeliveryStreamInput withDeliveryStreamEncryptionConfigurationInput(DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput) {
         this.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;
         return this;
@@ -35,6 +38,7 @@ public class CreateDeliveryStreamInput {
     
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public CreateDeliveryStreamInput withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -43,6 +47,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryStreamType")
     public DeliveryStreamTypeEnum deliveryStreamType;
+
     public CreateDeliveryStreamInput withDeliveryStreamType(DeliveryStreamTypeEnum deliveryStreamType) {
         this.deliveryStreamType = deliveryStreamType;
         return this;
@@ -51,6 +56,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticsearchDestinationConfiguration")
     public ElasticsearchDestinationConfiguration elasticsearchDestinationConfiguration;
+
     public CreateDeliveryStreamInput withElasticsearchDestinationConfiguration(ElasticsearchDestinationConfiguration elasticsearchDestinationConfiguration) {
         this.elasticsearchDestinationConfiguration = elasticsearchDestinationConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedS3DestinationConfiguration")
     public ExtendedS3DestinationConfiguration extendedS3DestinationConfiguration;
+
     public CreateDeliveryStreamInput withExtendedS3DestinationConfiguration(ExtendedS3DestinationConfiguration extendedS3DestinationConfiguration) {
         this.extendedS3DestinationConfiguration = extendedS3DestinationConfiguration;
         return this;
@@ -67,6 +74,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpEndpointDestinationConfiguration")
     public HttpEndpointDestinationConfiguration httpEndpointDestinationConfiguration;
+
     public CreateDeliveryStreamInput withHttpEndpointDestinationConfiguration(HttpEndpointDestinationConfiguration httpEndpointDestinationConfiguration) {
         this.httpEndpointDestinationConfiguration = httpEndpointDestinationConfiguration;
         return this;
@@ -75,6 +83,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamSourceConfiguration")
     public KinesisStreamSourceConfiguration kinesisStreamSourceConfiguration;
+
     public CreateDeliveryStreamInput withKinesisStreamSourceConfiguration(KinesisStreamSourceConfiguration kinesisStreamSourceConfiguration) {
         this.kinesisStreamSourceConfiguration = kinesisStreamSourceConfiguration;
         return this;
@@ -83,6 +92,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftDestinationConfiguration")
     public RedshiftDestinationConfiguration redshiftDestinationConfiguration;
+
     public CreateDeliveryStreamInput withRedshiftDestinationConfiguration(RedshiftDestinationConfiguration redshiftDestinationConfiguration) {
         this.redshiftDestinationConfiguration = redshiftDestinationConfiguration;
         return this;
@@ -91,6 +101,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DestinationConfiguration")
     public CreateDeliveryStreamInputS3DestinationConfiguration s3DestinationConfiguration;
+
     public CreateDeliveryStreamInput withS3DestinationConfiguration(CreateDeliveryStreamInputS3DestinationConfiguration s3DestinationConfiguration) {
         this.s3DestinationConfiguration = s3DestinationConfiguration;
         return this;
@@ -99,6 +110,7 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplunkDestinationConfiguration")
     public SplunkDestinationConfiguration splunkDestinationConfiguration;
+
     public CreateDeliveryStreamInput withSplunkDestinationConfiguration(SplunkDestinationConfiguration splunkDestinationConfiguration) {
         this.splunkDestinationConfiguration = splunkDestinationConfiguration;
         return this;
@@ -107,9 +119,13 @@ public class CreateDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDeliveryStreamInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDeliveryStreamInput(@JsonProperty("DeliveryStreamName") String deliveryStreamName) {
+        this.deliveryStreamName = deliveryStreamName;
+  }
 }

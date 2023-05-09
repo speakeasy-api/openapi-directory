@@ -12,6 +12,7 @@ public class GetPirateGenerateNameRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPirateGenerateNameRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetPirateGenerateNameRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variation")
     public String variation;
+
     public GetPirateGenerateNameRequest withVariation(String variation) {
         this.variation = variation;
         return this;
     }
     
+    public GetPirateGenerateNameRequest(){}
 }

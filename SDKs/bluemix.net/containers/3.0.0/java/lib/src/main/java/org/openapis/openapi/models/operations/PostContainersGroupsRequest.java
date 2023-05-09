@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersGroupsRequest {
@@ -12,6 +13,7 @@ public class PostContainersGroupsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ContainersGroupsPostRequiredAttributes containersGroupsPostRequiredAttributes;
+
     public PostContainersGroupsRequest withContainersGroupsPostRequiredAttributes(org.openapis.openapi.models.shared.ContainersGroupsPostRequiredAttributes containersGroupsPostRequiredAttributes) {
         this.containersGroupsPostRequiredAttributes = containersGroupsPostRequiredAttributes;
         return this;
@@ -22,6 +24,7 @@ public class PostContainersGroupsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PostContainersGroupsRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -32,9 +35,15 @@ public class PostContainersGroupsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PostContainersGroupsRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
     }
     
+    public PostContainersGroupsRequest(@JsonProperty("ContainersGroupsPostRequiredAttributes") org.openapis.openapi.models.shared.ContainersGroupsPostRequiredAttributes containersGroupsPostRequiredAttributes, @JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken) {
+        this.containersGroupsPostRequiredAttributes = containersGroupsPostRequiredAttributes;
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+  }
 }

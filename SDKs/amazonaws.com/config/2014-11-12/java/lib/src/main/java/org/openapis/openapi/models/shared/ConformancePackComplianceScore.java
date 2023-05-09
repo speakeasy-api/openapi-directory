@@ -20,6 +20,7 @@ public class ConformancePackComplianceScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public ConformancePackComplianceScore withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
@@ -30,6 +31,7 @@ public class ConformancePackComplianceScore {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ConformancePackComplianceScore withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -38,9 +40,11 @@ public class ConformancePackComplianceScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public String score;
+
     public ConformancePackComplianceScore withScore(String score) {
         this.score = score;
         return this;
     }
     
+    public ConformancePackComplianceScore(){}
 }

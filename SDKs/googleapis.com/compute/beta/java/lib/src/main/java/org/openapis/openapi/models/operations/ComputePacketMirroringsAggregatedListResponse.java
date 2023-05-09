@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputePacketMirroringsAggregatedListResponse {
     
     public String contentType;
+
     public ComputePacketMirroringsAggregatedListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputePacketMirroringsAggregatedListResponse {
      */
     
     public org.openapis.openapi.models.shared.PacketMirroringAggregatedList packetMirroringAggregatedList;
+
     public ComputePacketMirroringsAggregatedListResponse withPacketMirroringAggregatedList(org.openapis.openapi.models.shared.PacketMirroringAggregatedList packetMirroringAggregatedList) {
         this.packetMirroringAggregatedList = packetMirroringAggregatedList;
         return this;
@@ -26,6 +29,7 @@ public class ComputePacketMirroringsAggregatedListResponse {
     
     
     public Integer statusCode;
+
     public ComputePacketMirroringsAggregatedListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputePacketMirroringsAggregatedListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputePacketMirroringsAggregatedListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputePacketMirroringsAggregatedListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

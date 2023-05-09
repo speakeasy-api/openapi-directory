@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgsListMembersResponse {
     
     public String contentType;
+
     public OrgsListMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrgsListMembersResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OrgsListMembersResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class OrgsListMembersResponse {
     
     
     public Integer statusCode;
+
     public OrgsListMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OrgsListMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgsListMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class OrgsListMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.SimpleUser[] simpleUsers;
+
     public OrgsListMembersResponse withSimpleUsers(org.openapis.openapi.models.shared.SimpleUser[] simpleUsers) {
         this.simpleUsers = simpleUsers;
         return this;
@@ -50,9 +56,14 @@ public class OrgsListMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public OrgsListMembersResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public OrgsListMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

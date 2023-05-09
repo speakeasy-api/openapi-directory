@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRevokeClusterSecurityGroupIngressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRevokeClusterSecurityGroupIngressActionEnum action;
+
     public GETRevokeClusterSecurityGroupIngressRequest withAction(GETRevokeClusterSecurityGroupIngressActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CIDRIP")
     public String cidrip;
+
     public GETRevokeClusterSecurityGroupIngressRequest withCidrip(String cidrip) {
         this.cidrip = cidrip;
         return this;
@@ -29,6 +32,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroupName")
     public String clusterSecurityGroupName;
+
     public GETRevokeClusterSecurityGroupIngressRequest withClusterSecurityGroupName(String clusterSecurityGroupName) {
         this.clusterSecurityGroupName = clusterSecurityGroupName;
         return this;
@@ -39,6 +43,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupName")
     public String ec2SecurityGroupName;
+
     public GETRevokeClusterSecurityGroupIngressRequest withEc2SecurityGroupName(String ec2SecurityGroupName) {
         this.ec2SecurityGroupName = ec2SecurityGroupName;
         return this;
@@ -49,6 +54,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupOwnerId")
     public String ec2SecurityGroupOwnerId;
+
     public GETRevokeClusterSecurityGroupIngressRequest withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
         this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
         return this;
@@ -56,6 +62,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRevokeClusterSecurityGroupIngressVersionEnum version;
+
     public GETRevokeClusterSecurityGroupIngressRequest withVersion(GETRevokeClusterSecurityGroupIngressVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRevokeClusterSecurityGroupIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRevokeClusterSecurityGroupIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRevokeClusterSecurityGroupIngressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRevokeClusterSecurityGroupIngressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRevokeClusterSecurityGroupIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRevokeClusterSecurityGroupIngressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETRevokeClusterSecurityGroupIngressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRevokeClusterSecurityGroupIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRevokeClusterSecurityGroupIngressRequest(@JsonProperty("Action") GETRevokeClusterSecurityGroupIngressActionEnum action, @JsonProperty("ClusterSecurityGroupName") String clusterSecurityGroupName, @JsonProperty("Version") GETRevokeClusterSecurityGroupIngressVersionEnum version) {
+        this.action = action;
+        this.clusterSecurityGroupName = clusterSecurityGroupName;
+        this.version = version;
+  }
 }

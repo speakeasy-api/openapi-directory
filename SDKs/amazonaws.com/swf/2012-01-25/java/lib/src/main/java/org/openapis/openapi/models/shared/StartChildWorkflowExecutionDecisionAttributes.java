@@ -15,6 +15,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childPolicy")
     public ChildPolicyEnum childPolicy;
+
     public StartChildWorkflowExecutionDecisionAttributes withChildPolicy(ChildPolicyEnum childPolicy) {
         this.childPolicy = childPolicy;
         return this;
@@ -23,6 +24,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public StartChildWorkflowExecutionDecisionAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -31,6 +33,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStartToCloseTimeout")
     public String executionStartToCloseTimeout;
+
     public StartChildWorkflowExecutionDecisionAttributes withExecutionStartToCloseTimeout(String executionStartToCloseTimeout) {
         this.executionStartToCloseTimeout = executionStartToCloseTimeout;
         return this;
@@ -39,6 +42,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public StartChildWorkflowExecutionDecisionAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -47,6 +51,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaRole")
     public String lambdaRole;
+
     public StartChildWorkflowExecutionDecisionAttributes withLambdaRole(String lambdaRole) {
         this.lambdaRole = lambdaRole;
         return this;
@@ -55,6 +60,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagList")
     public String[] tagList;
+
     public StartChildWorkflowExecutionDecisionAttributes withTagList(String[] tagList) {
         this.tagList = tagList;
         return this;
@@ -63,6 +69,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskList")
     public TaskList taskList;
+
     public StartChildWorkflowExecutionDecisionAttributes withTaskList(TaskList taskList) {
         this.taskList = taskList;
         return this;
@@ -71,6 +78,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskPriority")
     public String taskPriority;
+
     public StartChildWorkflowExecutionDecisionAttributes withTaskPriority(String taskPriority) {
         this.taskPriority = taskPriority;
         return this;
@@ -79,6 +87,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStartToCloseTimeout")
     public String taskStartToCloseTimeout;
+
     public StartChildWorkflowExecutionDecisionAttributes withTaskStartToCloseTimeout(String taskStartToCloseTimeout) {
         this.taskStartToCloseTimeout = taskStartToCloseTimeout;
         return this;
@@ -86,6 +95,7 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public StartChildWorkflowExecutionDecisionAttributes withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -93,9 +103,14 @@ public class StartChildWorkflowExecutionDecisionAttributes {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public StartChildWorkflowExecutionDecisionAttributes withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public StartChildWorkflowExecutionDecisionAttributes(@JsonProperty("workflowId") String workflowId, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.workflowId = workflowId;
+        this.workflowType = workflowType;
+  }
 }

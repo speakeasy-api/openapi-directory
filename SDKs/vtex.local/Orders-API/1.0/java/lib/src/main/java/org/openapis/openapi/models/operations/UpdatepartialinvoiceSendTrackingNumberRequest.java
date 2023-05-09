@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatepartialinvoiceSendTrackingNumberRequest {
@@ -12,6 +13,7 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumberRequest updatepartialinvoiceSendTrackingNumberRequest;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withUpdatepartialinvoiceSendTrackingNumberRequest(org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumberRequest updatepartialinvoiceSendTrackingNumberRequest) {
         this.updatepartialinvoiceSendTrackingNumberRequest = updatepartialinvoiceSendTrackingNumberRequest;
         return this;
@@ -39,6 +43,7 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceNumber")
     public String invoiceNumber;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -49,9 +54,17 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public UpdatepartialinvoiceSendTrackingNumberRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("Updatepartialinvoice.SendTrackingNumber.Request") org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumberRequest updatepartialinvoiceSendTrackingNumberRequest, @JsonProperty("invoiceNumber") String invoiceNumber, @JsonProperty("orderId") String orderId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.updatepartialinvoiceSendTrackingNumberRequest = updatepartialinvoiceSendTrackingNumberRequest;
+        this.invoiceNumber = invoiceNumber;
+        this.orderId = orderId;
+  }
 }

@@ -12,6 +12,7 @@ public class DescribeActivationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public DescribeActivationsFilter[] filters;
+
     public DescribeActivationsRequest withFilters(DescribeActivationsFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeActivationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeActivationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class DescribeActivationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeActivationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeActivationsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsContainersTagsGetRequest {
@@ -12,6 +13,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TagmanagerAccountsContainersTagsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TagmanagerAccountsContainersTagsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public TagmanagerAccountsContainersTagsGetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -42,6 +46,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TagmanagerAccountsContainersTagsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TagmanagerAccountsContainersTagsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=containerId")
     public String containerId;
+
     public TagmanagerAccountsContainersTagsGetRequest withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -72,6 +79,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TagmanagerAccountsContainersTagsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TagmanagerAccountsContainersTagsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TagmanagerAccountsContainersTagsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TagmanagerAccountsContainersTagsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TagmanagerAccountsContainersTagsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public String tagId;
+
     public TagmanagerAccountsContainersTagsGetRequest withTagId(String tagId) {
         this.tagId = tagId;
         return this;
@@ -132,6 +145,7 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TagmanagerAccountsContainersTagsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,15 @@ public class TagmanagerAccountsContainersTagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TagmanagerAccountsContainersTagsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TagmanagerAccountsContainersTagsGetRequest(@JsonProperty("accountId") String accountId, @JsonProperty("containerId") String containerId, @JsonProperty("tagId") String tagId) {
+        this.accountId = accountId;
+        this.containerId = containerId;
+        this.tagId = tagId;
+  }
 }

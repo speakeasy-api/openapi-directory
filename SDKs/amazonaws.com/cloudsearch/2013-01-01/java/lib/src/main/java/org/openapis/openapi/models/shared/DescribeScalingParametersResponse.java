@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeScalingParametersResponse - The result of a &lt;code&gt;DescribeScalingParameters&lt;/code&gt; request. Contains the scaling parameters configured for the domain specified in the request.
@@ -15,9 +15,13 @@ public class DescribeScalingParametersResponse {
      */
     
     public ScalingParametersStatus scalingParameters;
+
     public DescribeScalingParametersResponse withScalingParameters(ScalingParametersStatus scalingParameters) {
         this.scalingParameters = scalingParameters;
         return this;
     }
     
+    public DescribeScalingParametersResponse(@JsonProperty("ScalingParameters") ScalingParametersStatus scalingParameters) {
+        this.scalingParameters = scalingParameters;
+  }
 }

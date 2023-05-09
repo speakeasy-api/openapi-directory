@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseRequest {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -22,9 +24,14 @@ public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseRequest(@JsonProperty("offeringId") String offeringId, @JsonProperty("userEmail") String userEmail) {
+        this.offeringId = offeringId;
+        this.userEmail = userEmail;
+  }
 }

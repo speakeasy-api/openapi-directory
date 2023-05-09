@@ -15,6 +15,7 @@ public class SearchByMobileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public SearchByMobileRequest withGender(String gender) {
         this.gender = gender;
         return this;
@@ -23,6 +24,7 @@ public class SearchByMobileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public SearchByMobileRequest withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -31,6 +33,7 @@ public class SearchByMobileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SearchByMobileRequest withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class SearchByMobileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearOfBirth")
     public String yearOfBirth;
+
     public SearchByMobileRequest withYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public SearchByMobileRequest(){}
 }

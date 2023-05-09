@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListPoliciesGrantingServiceAccessRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListPoliciesGrantingServiceAccessActionEnum action;
+
     public GETListPoliciesGrantingServiceAccessRequest withAction(GETListPoliciesGrantingServiceAccessActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
     public String arn;
+
     public GETListPoliciesGrantingServiceAccessRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +32,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETListPoliciesGrantingServiceAccessRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceNamespaces")
     public String[] serviceNamespaces;
+
     public GETListPoliciesGrantingServiceAccessRequest withServiceNamespaces(String[] serviceNamespaces) {
         this.serviceNamespaces = serviceNamespaces;
         return this;
@@ -46,6 +51,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListPoliciesGrantingServiceAccessVersionEnum version;
+
     public GETListPoliciesGrantingServiceAccessRequest withVersion(GETListPoliciesGrantingServiceAccessVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListPoliciesGrantingServiceAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListPoliciesGrantingServiceAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListPoliciesGrantingServiceAccessRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListPoliciesGrantingServiceAccessRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListPoliciesGrantingServiceAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListPoliciesGrantingServiceAccessRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListPoliciesGrantingServiceAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListPoliciesGrantingServiceAccessRequest(@JsonProperty("Action") GETListPoliciesGrantingServiceAccessActionEnum action, @JsonProperty("Arn") String arn, @JsonProperty("ServiceNamespaces") String[] serviceNamespaces, @JsonProperty("Version") GETListPoliciesGrantingServiceAccessVersionEnum version) {
+        this.action = action;
+        this.arn = arn;
+        this.serviceNamespaces = serviceNamespaces;
+        this.version = version;
+  }
 }

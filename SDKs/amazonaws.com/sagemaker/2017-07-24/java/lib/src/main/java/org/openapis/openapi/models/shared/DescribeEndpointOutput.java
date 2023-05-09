@@ -20,6 +20,7 @@ public class DescribeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AsyncInferenceConfig")
     public AsyncInferenceConfig asyncInferenceConfig;
+
     public DescribeEndpointOutput withAsyncInferenceConfig(AsyncInferenceConfig asyncInferenceConfig) {
         this.asyncInferenceConfig = asyncInferenceConfig;
         return this;
@@ -29,6 +30,7 @@ public class DescribeEndpointOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeEndpointOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCaptureConfig")
     public DataCaptureConfigSummary dataCaptureConfig;
+
     public DescribeEndpointOutput withDataCaptureConfig(DataCaptureConfigSummary dataCaptureConfig) {
         this.dataCaptureConfig = dataCaptureConfig;
         return this;
@@ -47,6 +50,7 @@ public class DescribeEndpointOutput {
     
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public DescribeEndpointOutput withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -54,6 +58,7 @@ public class DescribeEndpointOutput {
     
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public DescribeEndpointOutput withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
@@ -61,6 +66,7 @@ public class DescribeEndpointOutput {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public DescribeEndpointOutput withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -68,6 +74,7 @@ public class DescribeEndpointOutput {
     
     @JsonProperty("EndpointStatus")
     public EndpointStatusEnum endpointStatus;
+
     public DescribeEndpointOutput withEndpointStatus(EndpointStatusEnum endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -76,6 +83,7 @@ public class DescribeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainerConfig")
     public ExplainerConfig explainerConfig;
+
     public DescribeEndpointOutput withExplainerConfig(ExplainerConfig explainerConfig) {
         this.explainerConfig = explainerConfig;
         return this;
@@ -84,6 +92,7 @@ public class DescribeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeEndpointOutput withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -92,6 +101,7 @@ public class DescribeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastDeploymentConfig")
     public DeploymentConfig lastDeploymentConfig;
+
     public DescribeEndpointOutput withLastDeploymentConfig(DeploymentConfig lastDeploymentConfig) {
         this.lastDeploymentConfig = lastDeploymentConfig;
         return this;
@@ -101,6 +111,7 @@ public class DescribeEndpointOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeEndpointOutput withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -109,6 +120,7 @@ public class DescribeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingDeploymentSummary")
     public PendingDeploymentSummary pendingDeploymentSummary;
+
     public DescribeEndpointOutput withPendingDeploymentSummary(PendingDeploymentSummary pendingDeploymentSummary) {
         this.pendingDeploymentSummary = pendingDeploymentSummary;
         return this;
@@ -117,6 +129,7 @@ public class DescribeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductionVariants")
     public ProductionVariantSummary[] productionVariants;
+
     public DescribeEndpointOutput withProductionVariants(ProductionVariantSummary[] productionVariants) {
         this.productionVariants = productionVariants;
         return this;
@@ -125,9 +138,18 @@ public class DescribeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShadowProductionVariants")
     public ProductionVariantSummary[] shadowProductionVariants;
+
     public DescribeEndpointOutput withShadowProductionVariants(ProductionVariantSummary[] shadowProductionVariants) {
         this.shadowProductionVariants = shadowProductionVariants;
         return this;
     }
     
+    public DescribeEndpointOutput(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("EndpointArn") String endpointArn, @JsonProperty("EndpointConfigName") String endpointConfigName, @JsonProperty("EndpointName") String endpointName, @JsonProperty("EndpointStatus") EndpointStatusEnum endpointStatus, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.creationTime = creationTime;
+        this.endpointArn = endpointArn;
+        this.endpointConfigName = endpointConfigName;
+        this.endpointName = endpointName;
+        this.endpointStatus = endpointStatus;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

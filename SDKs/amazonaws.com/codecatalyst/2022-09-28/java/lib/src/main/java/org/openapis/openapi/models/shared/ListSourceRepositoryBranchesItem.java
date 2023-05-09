@@ -20,6 +20,7 @@ public class ListSourceRepositoryBranchesItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headCommitId")
     public String headCommitId;
+
     public ListSourceRepositoryBranchesItem withHeadCommitId(String headCommitId) {
         this.headCommitId = headCommitId;
         return this;
@@ -30,6 +31,7 @@ public class ListSourceRepositoryBranchesItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ListSourceRepositoryBranchesItem withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -38,6 +40,7 @@ public class ListSourceRepositoryBranchesItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListSourceRepositoryBranchesItem withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,11 @@ public class ListSourceRepositoryBranchesItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ref")
     public String ref;
+
     public ListSourceRepositoryBranchesItem withRef(String ref) {
         this.ref = ref;
         return this;
     }
     
+    public ListSourceRepositoryBranchesItem(){}
 }

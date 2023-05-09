@@ -22,6 +22,7 @@ public class Recommender {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public Recommender withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public Recommender withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public Recommender withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -48,6 +51,7 @@ public class Recommender {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public Recommender withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -56,6 +60,7 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestRecommenderUpdate")
     public RecommenderUpdateSummary latestRecommenderUpdate;
+
     public Recommender withLatestRecommenderUpdate(RecommenderUpdateSummary latestRecommenderUpdate) {
         this.latestRecommenderUpdate = latestRecommenderUpdate;
         return this;
@@ -64,6 +69,7 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelMetrics")
     public java.util.Map<String, Double> modelMetrics;
+
     public Recommender withModelMetrics(java.util.Map<String, Double> modelMetrics) {
         this.modelMetrics = modelMetrics;
         return this;
@@ -72,6 +78,7 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Recommender withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public Recommender withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
@@ -88,6 +96,7 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public Recommender withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
@@ -96,6 +105,7 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderConfig")
     public RecommenderConfig recommenderConfig;
+
     public Recommender withRecommenderConfig(RecommenderConfig recommenderConfig) {
         this.recommenderConfig = recommenderConfig;
         return this;
@@ -104,9 +114,11 @@ public class Recommender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Recommender withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Recommender(){}
 }

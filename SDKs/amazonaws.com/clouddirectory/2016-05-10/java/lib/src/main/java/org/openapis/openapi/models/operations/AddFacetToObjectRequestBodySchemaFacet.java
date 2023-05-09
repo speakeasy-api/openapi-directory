@@ -15,6 +15,7 @@ public class AddFacetToObjectRequestBodySchemaFacet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FacetName")
     public String facetName;
+
     public AddFacetToObjectRequestBodySchemaFacet withFacetName(String facetName) {
         this.facetName = facetName;
         return this;
@@ -23,9 +24,11 @@ public class AddFacetToObjectRequestBodySchemaFacet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public AddFacetToObjectRequestBodySchemaFacet withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public AddFacetToObjectRequestBodySchemaFacet(){}
 }

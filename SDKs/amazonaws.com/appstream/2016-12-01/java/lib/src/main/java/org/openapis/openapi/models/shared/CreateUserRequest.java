@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUserRequest {
     @JsonProperty("AuthenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public CreateUserRequest withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -19,6 +20,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public CreateUserRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -27,6 +29,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public CreateUserRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -35,6 +38,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageAction")
     public MessageActionEnum messageAction;
+
     public CreateUserRequest withMessageAction(MessageActionEnum messageAction) {
         this.messageAction = messageAction;
         return this;
@@ -42,9 +46,14 @@ public class CreateUserRequest {
     
     @JsonProperty("UserName")
     public String userName;
+
     public CreateUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public CreateUserRequest(@JsonProperty("AuthenticationType") AuthenticationTypeEnum authenticationType, @JsonProperty("UserName") String userName) {
+        this.authenticationType = authenticationType;
+        this.userName = userName;
+  }
 }

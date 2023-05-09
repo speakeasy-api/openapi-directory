@@ -18,6 +18,7 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowHeight")
     public Dimension rowHeight;
+
     public TableRow withRowHeight(Dimension rowHeight) {
         this.rowHeight = rowHeight;
         return this;
@@ -29,6 +30,7 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCells")
     public TableCell[] tableCells;
+
     public TableRow withTableCells(TableCell[] tableCells) {
         this.tableCells = tableCells;
         return this;
@@ -40,9 +42,11 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRowProperties")
     public TableRowProperties tableRowProperties;
+
     public TableRow withTableRowProperties(TableRowProperties tableRowProperties) {
         this.tableRowProperties = tableRowProperties;
         return this;
     }
     
+    public TableRow(){}
 }

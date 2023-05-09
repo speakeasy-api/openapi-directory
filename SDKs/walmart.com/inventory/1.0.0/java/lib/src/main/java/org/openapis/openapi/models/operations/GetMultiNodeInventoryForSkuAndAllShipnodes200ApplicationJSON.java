@@ -15,6 +15,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes[] nodes;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSON withNodes(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes[] nodes) {
         this.nodes = nodes;
         return this;
@@ -26,9 +27,11 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSON(){}
 }

@@ -15,9 +15,11 @@ public class ClientProjectStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public ClientProjectStat[] stats;
+
     public ClientProjectStats withStats(ClientProjectStat[] stats) {
         this.stats = stats;
         return this;
     }
     
+    public ClientProjectStats(){}
 }

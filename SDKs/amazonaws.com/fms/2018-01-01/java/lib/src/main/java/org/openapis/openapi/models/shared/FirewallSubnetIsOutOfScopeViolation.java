@@ -15,6 +15,7 @@ public class FirewallSubnetIsOutOfScopeViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallSubnetId")
     public String firewallSubnetId;
+
     public FirewallSubnetIsOutOfScopeViolation withFirewallSubnetId(String firewallSubnetId) {
         this.firewallSubnetId = firewallSubnetId;
         return this;
@@ -23,6 +24,7 @@ public class FirewallSubnetIsOutOfScopeViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetAvailabilityZone")
     public String subnetAvailabilityZone;
+
     public FirewallSubnetIsOutOfScopeViolation withSubnetAvailabilityZone(String subnetAvailabilityZone) {
         this.subnetAvailabilityZone = subnetAvailabilityZone;
         return this;
@@ -31,6 +33,7 @@ public class FirewallSubnetIsOutOfScopeViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetAvailabilityZoneId")
     public String subnetAvailabilityZoneId;
+
     public FirewallSubnetIsOutOfScopeViolation withSubnetAvailabilityZoneId(String subnetAvailabilityZoneId) {
         this.subnetAvailabilityZoneId = subnetAvailabilityZoneId;
         return this;
@@ -39,6 +42,7 @@ public class FirewallSubnetIsOutOfScopeViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointId")
     public String vpcEndpointId;
+
     public FirewallSubnetIsOutOfScopeViolation withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -47,9 +51,11 @@ public class FirewallSubnetIsOutOfScopeViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public FirewallSubnetIsOutOfScopeViolation withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public FirewallSubnetIsOutOfScopeViolation(){}
 }

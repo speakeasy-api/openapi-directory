@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AspByDistanceUsV1AirspaceDistanceQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AirspaceByDistance airspaceByDistance;
+
     public AspByDistanceUsV1AirspaceDistanceQueryPostRequest withAirspaceByDistance(org.openapis.openapi.models.shared.AirspaceByDistance airspaceByDistance) {
         this.airspaceByDistance = airspaceByDistance;
         return this;
@@ -16,9 +18,13 @@ public class AspByDistanceUsV1AirspaceDistanceQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public AspByDistanceUsV1AirspaceDistanceQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public AspByDistanceUsV1AirspaceDistanceQueryPostRequest(@JsonProperty("AirspaceByDistance") org.openapis.openapi.models.shared.AirspaceByDistance airspaceByDistance) {
+        this.airspaceByDistance = airspaceByDistance;
+  }
 }

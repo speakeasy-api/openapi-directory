@@ -15,6 +15,7 @@ public class CreateCanaryRequestBodyCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Handler")
     public String handler;
+
     public CreateCanaryRequestBodyCode withHandler(String handler) {
         this.handler = handler;
         return this;
@@ -23,6 +24,7 @@ public class CreateCanaryRequestBodyCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Bucket")
     public String s3Bucket;
+
     public CreateCanaryRequestBodyCode withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -31,6 +33,7 @@ public class CreateCanaryRequestBodyCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Key")
     public String s3Key;
+
     public CreateCanaryRequestBodyCode withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
@@ -39,6 +42,7 @@ public class CreateCanaryRequestBodyCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Version")
     public String s3Version;
+
     public CreateCanaryRequestBodyCode withS3Version(String s3Version) {
         this.s3Version = s3Version;
         return this;
@@ -47,9 +51,11 @@ public class CreateCanaryRequestBodyCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZipFile")
     public String zipFile;
+
     public CreateCanaryRequestBodyCode withZipFile(String zipFile) {
         this.zipFile = zipFile;
         return this;
     }
     
+    public CreateCanaryRequestBodyCode(){}
 }

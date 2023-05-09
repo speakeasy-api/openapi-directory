@@ -15,6 +15,7 @@ public class ListMerchantUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public PaginationLinks links;
+
     public ListMerchantUsersResponse withLinks(PaginationLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class ListMerchantUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public User[] data;
+
     public ListMerchantUsersResponse withData(User[] data) {
         this.data = data;
         return this;
@@ -36,6 +38,7 @@ public class ListMerchantUsersResponse {
      */
     @JsonProperty("itemsTotal")
     public Integer itemsTotal;
+
     public ListMerchantUsersResponse withItemsTotal(Integer itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -46,9 +49,14 @@ public class ListMerchantUsersResponse {
      */
     @JsonProperty("pagesTotal")
     public Integer pagesTotal;
+
     public ListMerchantUsersResponse withPagesTotal(Integer pagesTotal) {
         this.pagesTotal = pagesTotal;
         return this;
     }
     
+    public ListMerchantUsersResponse(@JsonProperty("itemsTotal") Integer itemsTotal, @JsonProperty("pagesTotal") Integer pagesTotal) {
+        this.itemsTotal = itemsTotal;
+        this.pagesTotal = pagesTotal;
+  }
 }

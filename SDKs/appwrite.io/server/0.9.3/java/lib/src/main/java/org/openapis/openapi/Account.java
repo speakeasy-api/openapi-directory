@@ -59,11 +59,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountCreateRecoveryResponse res = new org.openapis.openapi.models.operations.AccountCreateRecoveryResponse() {{
+        org.openapis.openapi.models.operations.AccountCreateRecoveryResponse res = new org.openapis.openapi.models.operations.AccountCreateRecoveryResponse(contentType, httpRes.statusCode()) {{
             token = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -105,11 +103,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountCreateVerificationResponse res = new org.openapis.openapi.models.operations.AccountCreateVerificationResponse() {{
+        org.openapis.openapi.models.operations.AccountCreateVerificationResponse res = new org.openapis.openapi.models.operations.AccountCreateVerificationResponse(contentType, httpRes.statusCode()) {{
             token = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -126,10 +122,11 @@ public class Account {
     /**
      * Delete Account
      * Delete a currently logged in user account. Behind the scene, the user record is not deleted but permanently blocked from any access. This is done to avoid deleted accounts being overtaken by new users with the same email address. Any user-related resources like documents or storage files should be deleted separately.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountDeleteResponse accountDelete() throws Exception {
+    public org.openapis.openapi.models.operations.AccountDeleteResponse accountDelete(org.openapis.openapi.models.operations.AccountDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -138,15 +135,14 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountDeleteResponse res = new org.openapis.openapi.models.operations.AccountDeleteResponse() {{
+        org.openapis.openapi.models.operations.AccountDeleteResponse res = new org.openapis.openapi.models.operations.AccountDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -178,10 +174,8 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountDeleteSessionResponse res = new org.openapis.openapi.models.operations.AccountDeleteSessionResponse() {{
+        org.openapis.openapi.models.operations.AccountDeleteSessionResponse res = new org.openapis.openapi.models.operations.AccountDeleteSessionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -193,10 +187,11 @@ public class Account {
     /**
      * Delete All Account Sessions
      * Delete all sessions from the user account and remove any sessions cookies from the end client.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountDeleteSessionsResponse accountDeleteSessions() throws Exception {
+    public org.openapis.openapi.models.operations.AccountDeleteSessionsResponse accountDeleteSessions(org.openapis.openapi.models.operations.AccountDeleteSessionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/sessions");
         
@@ -205,15 +200,14 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountDeleteSessionsResponse res = new org.openapis.openapi.models.operations.AccountDeleteSessionsResponse() {{
+        org.openapis.openapi.models.operations.AccountDeleteSessionsResponse res = new org.openapis.openapi.models.operations.AccountDeleteSessionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -225,10 +219,11 @@ public class Account {
     /**
      * Get Account
      * Get currently logged in user data as JSON object.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetResponse accountGet() throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetResponse accountGet(org.openapis.openapi.models.operations.AccountGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -237,16 +232,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetResponse res = new org.openapis.openapi.models.operations.AccountGetResponse() {{
+        org.openapis.openapi.models.operations.AccountGetResponse res = new org.openapis.openapi.models.operations.AccountGetResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,10 +257,11 @@ public class Account {
     /**
      * Get Account Logs
      * Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetLogsResponse accountGetLogs() throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetLogsResponse accountGetLogs(org.openapis.openapi.models.operations.AccountGetLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/logs");
         
@@ -275,16 +270,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetLogsResponse res = new org.openapis.openapi.models.operations.AccountGetLogsResponse() {{
+        org.openapis.openapi.models.operations.AccountGetLogsResponse res = new org.openapis.openapi.models.operations.AccountGetLogsResponse(contentType, httpRes.statusCode()) {{
             logList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,10 +295,11 @@ public class Account {
     /**
      * Get Account Preferences
      * Get currently logged in user preferences as a key-value object.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetPrefsResponse accountGetPrefs() throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetPrefsResponse accountGetPrefs(org.openapis.openapi.models.operations.AccountGetPrefsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/prefs");
         
@@ -313,16 +308,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetPrefsResponse res = new org.openapis.openapi.models.operations.AccountGetPrefsResponse() {{
+        org.openapis.openapi.models.operations.AccountGetPrefsResponse res = new org.openapis.openapi.models.operations.AccountGetPrefsResponse(contentType, httpRes.statusCode()) {{
             preferences = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -359,11 +353,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetSessionResponse res = new org.openapis.openapi.models.operations.AccountGetSessionResponse() {{
+        org.openapis.openapi.models.operations.AccountGetSessionResponse res = new org.openapis.openapi.models.operations.AccountGetSessionResponse(contentType, httpRes.statusCode()) {{
             session = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -380,10 +372,11 @@ public class Account {
     /**
      * Get Account Sessions
      * Get currently logged in user list of active sessions across different devices.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetSessionsResponse accountGetSessions() throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetSessionsResponse accountGetSessions(org.openapis.openapi.models.operations.AccountGetSessionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/sessions");
         
@@ -392,16 +385,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetSessionsResponse res = new org.openapis.openapi.models.operations.AccountGetSessionsResponse() {{
+        org.openapis.openapi.models.operations.AccountGetSessionsResponse res = new org.openapis.openapi.models.operations.AccountGetSessionsResponse(contentType, httpRes.statusCode()) {{
             sessionList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,11 +433,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountUpdateEmailResponse res = new org.openapis.openapi.models.operations.AccountUpdateEmailResponse() {{
+        org.openapis.openapi.models.operations.AccountUpdateEmailResponse res = new org.openapis.openapi.models.operations.AccountUpdateEmailResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +474,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountUpdateNameResponse res = new org.openapis.openapi.models.operations.AccountUpdateNameResponse() {{
+        org.openapis.openapi.models.operations.AccountUpdateNameResponse res = new org.openapis.openapi.models.operations.AccountUpdateNameResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,11 +515,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountUpdatePasswordResponse res = new org.openapis.openapi.models.operations.AccountUpdatePasswordResponse() {{
+        org.openapis.openapi.models.operations.AccountUpdatePasswordResponse res = new org.openapis.openapi.models.operations.AccountUpdatePasswordResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -570,11 +556,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountUpdatePrefsResponse res = new org.openapis.openapi.models.operations.AccountUpdatePrefsResponse() {{
+        org.openapis.openapi.models.operations.AccountUpdatePrefsResponse res = new org.openapis.openapi.models.operations.AccountUpdatePrefsResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -615,11 +599,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountUpdateRecoveryResponse res = new org.openapis.openapi.models.operations.AccountUpdateRecoveryResponse() {{
+        org.openapis.openapi.models.operations.AccountUpdateRecoveryResponse res = new org.openapis.openapi.models.operations.AccountUpdateRecoveryResponse(contentType, httpRes.statusCode()) {{
             token = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -658,11 +640,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountUpdateVerificationResponse res = new org.openapis.openapi.models.operations.AccountUpdateVerificationResponse() {{
+        org.openapis.openapi.models.operations.AccountUpdateVerificationResponse res = new org.openapis.openapi.models.operations.AccountUpdateVerificationResponse(contentType, httpRes.statusCode()) {{
             token = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

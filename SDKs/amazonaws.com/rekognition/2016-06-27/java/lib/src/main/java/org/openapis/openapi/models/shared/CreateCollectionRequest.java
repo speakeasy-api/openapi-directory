@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCollectionRequest {
     @JsonProperty("CollectionId")
     public String collectionId;
+
     public CreateCollectionRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -19,9 +20,13 @@ public class CreateCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateCollectionRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCollectionRequest(@JsonProperty("CollectionId") String collectionId) {
+        this.collectionId = collectionId;
+  }
 }

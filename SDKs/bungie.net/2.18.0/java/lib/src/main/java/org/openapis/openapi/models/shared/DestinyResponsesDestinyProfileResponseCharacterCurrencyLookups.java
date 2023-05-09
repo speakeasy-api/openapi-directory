@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyProfileResponseCharacterCurrencyLookups {
     
     public java.util.Map<String, DestinyComponentsInventoryDestinyCurrenciesComponent> data;
+
     public DestinyResponsesDestinyProfileResponseCharacterCurrencyLookups withData(java.util.Map<String, DestinyComponentsInventoryDestinyCurrenciesComponent> data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class DestinyResponsesDestinyProfileResponseCharacterCurrencyLookups {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseCharacterCurrencyLookups withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -30,9 +32,11 @@ public class DestinyResponsesDestinyProfileResponseCharacterCurrencyLookups {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseCharacterCurrencyLookups withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseCharacterCurrencyLookups(){}
 }

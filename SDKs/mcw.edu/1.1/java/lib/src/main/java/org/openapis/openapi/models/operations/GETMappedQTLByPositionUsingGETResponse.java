@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETMappedQTLByPositionUsingGETResponse {
     
     public byte[] body;
+
     public GETMappedQTLByPositionUsingGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETMappedQTLByPositionUsingGETResponse {
     
     
     public String contentType;
+
     public GETMappedQTLByPositionUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETMappedQTLByPositionUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETMappedQTLByPositionUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETMappedQTLByPositionUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETMappedQTLByPositionUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETMappedQTLByPositionUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

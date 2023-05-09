@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugRefsResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugRefsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugRefsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugRefsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -35,6 +39,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugRefsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -45,9 +50,14 @@ public class GetRepositoriesWorkspaceRepoSlugRefsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedRefs paginatedRefs;
+
     public GetRepositoriesWorkspaceRepoSlugRefsResponse withPaginatedRefs(org.openapis.openapi.models.shared.PaginatedRefs paginatedRefs) {
         this.paginatedRefs = paginatedRefs;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugRefsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

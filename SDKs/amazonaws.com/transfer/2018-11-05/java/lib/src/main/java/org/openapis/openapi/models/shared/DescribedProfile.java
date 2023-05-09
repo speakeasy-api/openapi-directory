@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribedProfile {
     @JsonProperty("Arn")
     public String arn;
+
     public DescribedProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class DescribedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("As2Id")
     public String as2Id;
+
     public DescribedProfile withAs2Id(String as2Id) {
         this.as2Id = as2Id;
         return this;
@@ -30,6 +32,7 @@ public class DescribedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateIds")
     public String[] certificateIds;
+
     public DescribedProfile withCertificateIds(String[] certificateIds) {
         this.certificateIds = certificateIds;
         return this;
@@ -38,6 +41,7 @@ public class DescribedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileId")
     public String profileId;
+
     public DescribedProfile withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -46,6 +50,7 @@ public class DescribedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileType")
     public ProfileTypeEnum profileType;
+
     public DescribedProfile withProfileType(ProfileTypeEnum profileType) {
         this.profileType = profileType;
         return this;
@@ -54,9 +59,13 @@ public class DescribedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribedProfile withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribedProfile(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

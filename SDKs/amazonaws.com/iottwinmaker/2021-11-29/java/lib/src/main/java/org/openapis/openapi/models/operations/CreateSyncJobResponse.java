@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSyncJobResponse {
@@ -12,6 +13,7 @@ public class CreateSyncJobResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSyncJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSyncJobResponse {
      */
     
     public Object conflictException;
+
     public CreateSyncJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateSyncJobResponse {
     
     
     public String contentType;
+
     public CreateSyncJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateSyncJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSyncJobResponse createSyncJobResponse;
+
     public CreateSyncJobResponse withCreateSyncJobResponse(org.openapis.openapi.models.shared.CreateSyncJobResponse createSyncJobResponse) {
         this.createSyncJobResponse = createSyncJobResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateSyncJobResponse {
      */
     
     public Object internalServerException;
+
     public CreateSyncJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateSyncJobResponse {
     
     
     public Integer statusCode;
+
     public CreateSyncJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateSyncJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSyncJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateSyncJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSyncJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateSyncJobResponse {
      */
     
     public Object throttlingException;
+
     public CreateSyncJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSyncJobResponse {
      */
     
     public Object validationException;
+
     public CreateSyncJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSyncJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListJobsByPipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jobs")
     public Job[] jobs;
+
     public ListJobsByPipelineResponse withJobs(Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -23,9 +24,11 @@ public class ListJobsByPipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListJobsByPipelineResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListJobsByPipelineResponse(){}
 }

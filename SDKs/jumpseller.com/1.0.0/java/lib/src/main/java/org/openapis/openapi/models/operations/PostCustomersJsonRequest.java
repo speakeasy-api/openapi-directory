@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomersJsonRequest {
@@ -12,6 +13,7 @@ public class PostCustomersJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomerWithPasswordNoID customerWithPasswordNoID;
+
     public PostCustomersJsonRequest withCustomerWithPasswordNoID(org.openapis.openapi.models.shared.CustomerWithPasswordNoID customerWithPasswordNoID) {
         this.customerWithPasswordNoID = customerWithPasswordNoID;
         return this;
@@ -22,6 +24,7 @@ public class PostCustomersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostCustomersJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,9 +35,15 @@ public class PostCustomersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostCustomersJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostCustomersJsonRequest(@JsonProperty("CustomerWithPasswordNoID") org.openapis.openapi.models.shared.CustomerWithPasswordNoID customerWithPasswordNoID, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.customerWithPasswordNoID = customerWithPasswordNoID;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

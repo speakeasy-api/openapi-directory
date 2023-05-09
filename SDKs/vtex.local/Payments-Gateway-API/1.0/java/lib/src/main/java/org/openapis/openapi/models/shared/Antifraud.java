@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Antifraud {
     @JsonProperty("affiliationId")
     public String affiliationId;
+
     public Antifraud withAffiliationId(String affiliationId) {
         this.affiliationId = affiliationId;
         return this;
@@ -16,9 +17,14 @@ public class Antifraud {
     
     @JsonProperty("implementation")
     public String implementation;
+
     public Antifraud withImplementation(String implementation) {
         this.implementation = implementation;
         return this;
     }
     
+    public Antifraud(@JsonProperty("affiliationId") String affiliationId, @JsonProperty("implementation") String implementation) {
+        this.affiliationId = affiliationId;
+        this.implementation = implementation;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeSavingsPlanRatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeSavingsPlanRatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class DescribeSavingsPlanRatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanId")
     public String savingsPlanId;
+
     public DescribeSavingsPlanRatesResponse withSavingsPlanId(String savingsPlanId) {
         this.savingsPlanId = savingsPlanId;
         return this;
@@ -31,9 +33,11 @@ public class DescribeSavingsPlanRatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchResults")
     public SavingsPlanRate[] searchResults;
+
     public DescribeSavingsPlanRatesResponse withSearchResults(SavingsPlanRate[] searchResults) {
         this.searchResults = searchResults;
         return this;
     }
     
+    public DescribeSavingsPlanRatesResponse(){}
 }

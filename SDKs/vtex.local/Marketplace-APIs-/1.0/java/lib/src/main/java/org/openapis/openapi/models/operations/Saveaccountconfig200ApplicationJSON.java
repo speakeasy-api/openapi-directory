@@ -24,6 +24,7 @@ public class Saveaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchFlux")
     public String matchFlux;
+
     public Saveaccountconfig200ApplicationJSON withMatchFlux(String matchFlux) {
         this.matchFlux = matchFlux;
         return this;
@@ -35,6 +36,7 @@ public class Saveaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Matchers")
     public Object[] matchers;
+
     public Saveaccountconfig200ApplicationJSON withMatchers(Object[] matchers) {
         this.matchers = matchers;
         return this;
@@ -46,6 +48,7 @@ public class Saveaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public Saveaccountconfig200ApplicationJSONRules rules;
+
     public Saveaccountconfig200ApplicationJSON withRules(Saveaccountconfig200ApplicationJSONRules rules) {
         this.rules = rules;
         return this;
@@ -57,6 +60,7 @@ public class Saveaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Saveaccountconfig200ApplicationJSONScore score;
+
     public Saveaccountconfig200ApplicationJSON withScore(Saveaccountconfig200ApplicationJSONScore score) {
         this.score = score;
         return this;
@@ -68,9 +72,11 @@ public class Saveaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecificationsMapping")
     public Object[] specificationsMapping;
+
     public Saveaccountconfig200ApplicationJSON withSpecificationsMapping(Object[] specificationsMapping) {
         this.specificationsMapping = specificationsMapping;
         return this;
     }
     
+    public Saveaccountconfig200ApplicationJSON(){}
 }

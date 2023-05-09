@@ -19,6 +19,7 @@ public class ListModelCardExportJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListModelCardExportJobsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListModelCardExportJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListModelCardExportJobsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListModelCardExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListModelCardExportJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -45,6 +48,7 @@ public class ListModelCardExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardExportJobNameContains")
     public String modelCardExportJobNameContains;
+
     public ListModelCardExportJobsRequest withModelCardExportJobNameContains(String modelCardExportJobNameContains) {
         this.modelCardExportJobNameContains = modelCardExportJobNameContains;
         return this;
@@ -52,6 +56,7 @@ public class ListModelCardExportJobsRequest {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public ListModelCardExportJobsRequest withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -60,6 +65,7 @@ public class ListModelCardExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardVersion")
     public Long modelCardVersion;
+
     public ListModelCardExportJobsRequest withModelCardVersion(Long modelCardVersion) {
         this.modelCardVersion = modelCardVersion;
         return this;
@@ -68,6 +74,7 @@ public class ListModelCardExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelCardExportJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -76,6 +83,7 @@ public class ListModelCardExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ModelCardExportJobSortByEnum sortBy;
+
     public ListModelCardExportJobsRequest withSortBy(ModelCardExportJobSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -84,6 +92,7 @@ public class ListModelCardExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public ModelCardExportJobSortOrderEnum sortOrder;
+
     public ListModelCardExportJobsRequest withSortOrder(ModelCardExportJobSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -92,9 +101,13 @@ public class ListModelCardExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public ModelCardExportJobStatusEnum statusEquals;
+
     public ListModelCardExportJobsRequest withStatusEquals(ModelCardExportJobStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListModelCardExportJobsRequest(@JsonProperty("ModelCardName") String modelCardName) {
+        this.modelCardName = modelCardName;
+  }
 }

@@ -15,6 +15,7 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InAppStreamNames")
     public String[] inAppStreamNames;
+
     public InputDescription withInAppStreamNames(String[] inAppStreamNames) {
         this.inAppStreamNames = inAppStreamNames;
         return this;
@@ -23,6 +24,7 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputId")
     public String inputId;
+
     public InputDescription withInputId(String inputId) {
         this.inputId = inputId;
         return this;
@@ -31,6 +33,7 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputParallelism")
     public InputParallelism inputParallelism;
+
     public InputDescription withInputParallelism(InputParallelism inputParallelism) {
         this.inputParallelism = inputParallelism;
         return this;
@@ -39,6 +42,7 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputProcessingConfigurationDescription")
     public InputProcessingConfigurationDescription inputProcessingConfigurationDescription;
+
     public InputDescription withInputProcessingConfigurationDescription(InputProcessingConfigurationDescription inputProcessingConfigurationDescription) {
         this.inputProcessingConfigurationDescription = inputProcessingConfigurationDescription;
         return this;
@@ -47,6 +51,7 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputSchema")
     public SourceSchema inputSchema;
+
     public InputDescription withInputSchema(SourceSchema inputSchema) {
         this.inputSchema = inputSchema;
         return this;
@@ -55,6 +60,7 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputStartingPositionConfiguration")
     public InputStartingPositionConfiguration inputStartingPositionConfiguration;
+
     public InputDescription withInputStartingPositionConfiguration(InputStartingPositionConfiguration inputStartingPositionConfiguration) {
         this.inputStartingPositionConfiguration = inputStartingPositionConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseInputDescription")
     public KinesisFirehoseInputDescription kinesisFirehoseInputDescription;
+
     public InputDescription withKinesisFirehoseInputDescription(KinesisFirehoseInputDescription kinesisFirehoseInputDescription) {
         this.kinesisFirehoseInputDescription = kinesisFirehoseInputDescription;
         return this;
@@ -71,6 +78,7 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamsInputDescription")
     public KinesisStreamsInputDescription kinesisStreamsInputDescription;
+
     public InputDescription withKinesisStreamsInputDescription(KinesisStreamsInputDescription kinesisStreamsInputDescription) {
         this.kinesisStreamsInputDescription = kinesisStreamsInputDescription;
         return this;
@@ -79,9 +87,11 @@ public class InputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamePrefix")
     public String namePrefix;
+
     public InputDescription withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
     }
     
+    public InputDescription(){}
 }

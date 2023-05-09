@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaigns")
     public String[] campaigns;
+
     public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload withCampaigns(String[] campaigns) {
         this.campaigns = campaigns;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offering")
     public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum offering;
+
     public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload withOffering(GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum offering) {
         this.offering = offering;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannel")
     public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum salesChannel;
+
     public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload withSalesChannel(GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload(){}
 }

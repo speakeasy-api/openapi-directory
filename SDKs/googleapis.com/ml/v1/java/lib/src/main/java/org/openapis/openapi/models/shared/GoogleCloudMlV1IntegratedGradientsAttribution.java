@@ -18,9 +18,11 @@ public class GoogleCloudMlV1IntegratedGradientsAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numIntegralSteps")
     public Integer numIntegralSteps;
+
     public GoogleCloudMlV1IntegratedGradientsAttribution withNumIntegralSteps(Integer numIntegralSteps) {
         this.numIntegralSteps = numIntegralSteps;
         return this;
     }
     
+    public GoogleCloudMlV1IntegratedGradientsAttribution(){}
 }

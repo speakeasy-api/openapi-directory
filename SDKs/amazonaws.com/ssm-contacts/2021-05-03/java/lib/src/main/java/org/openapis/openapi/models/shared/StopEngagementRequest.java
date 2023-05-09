@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopEngagementRequest {
     @JsonProperty("EngagementId")
     public String engagementId;
+
     public StopEngagementRequest withEngagementId(String engagementId) {
         this.engagementId = engagementId;
         return this;
@@ -19,9 +20,13 @@ public class StopEngagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public StopEngagementRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public StopEngagementRequest(@JsonProperty("EngagementId") String engagementId) {
+        this.engagementId = engagementId;
+  }
 }

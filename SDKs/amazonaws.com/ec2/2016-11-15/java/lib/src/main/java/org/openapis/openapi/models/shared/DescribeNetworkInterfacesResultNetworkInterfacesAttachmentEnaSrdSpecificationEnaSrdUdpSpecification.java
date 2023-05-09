@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacesResultNetworkInterfacesAttachmentEnaSrdSpecificationEnaSrdUdpSpecification {
     
     public Boolean enaSrdUdpEnabled;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesAttachmentEnaSrdSpecificationEnaSrdUdpSpecification withEnaSrdUdpEnabled(Boolean enaSrdUdpEnabled) {
         this.enaSrdUdpEnabled = enaSrdUdpEnabled;
         return this;
     }
     
+    public DescribeNetworkInterfacesResultNetworkInterfacesAttachmentEnaSrdSpecificationEnaSrdUdpSpecification(){}
 }

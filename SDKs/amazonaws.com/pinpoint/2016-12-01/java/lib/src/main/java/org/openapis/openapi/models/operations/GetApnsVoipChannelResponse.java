@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApnsVoipChannelResponse {
@@ -12,6 +13,7 @@ public class GetApnsVoipChannelResponse {
      */
     
     public Object badRequestException;
+
     public GetApnsVoipChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetApnsVoipChannelResponse {
     
     
     public String contentType;
+
     public GetApnsVoipChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetApnsVoipChannelResponse {
      */
     
     public Object forbiddenException;
+
     public GetApnsVoipChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetApnsVoipChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApnsVoipChannelResponse getApnsVoipChannelResponse;
+
     public GetApnsVoipChannelResponse withGetApnsVoipChannelResponse(org.openapis.openapi.models.shared.GetApnsVoipChannelResponse getApnsVoipChannelResponse) {
         this.getApnsVoipChannelResponse = getApnsVoipChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetApnsVoipChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetApnsVoipChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetApnsVoipChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetApnsVoipChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetApnsVoipChannelResponse {
      */
     
     public Object notFoundException;
+
     public GetApnsVoipChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetApnsVoipChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetApnsVoipChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetApnsVoipChannelResponse {
     
     
     public Integer statusCode;
+
     public GetApnsVoipChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetApnsVoipChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApnsVoipChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetApnsVoipChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetApnsVoipChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetApnsVoipChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

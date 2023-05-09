@@ -21,6 +21,7 @@ public class ItemVariationLocationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventory_alert_threshold")
     public Long inventoryAlertThreshold;
+
     public ItemVariationLocationOverrides withInventoryAlertThreshold(Long inventoryAlertThreshold) {
         this.inventoryAlertThreshold = inventoryAlertThreshold;
         return this;
@@ -33,6 +34,7 @@ public class ItemVariationLocationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventory_alert_type")
     public String inventoryAlertType;
+
     public ItemVariationLocationOverrides withInventoryAlertType(String inventoryAlertType) {
         this.inventoryAlertType = inventoryAlertType;
         return this;
@@ -44,6 +46,7 @@ public class ItemVariationLocationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public ItemVariationLocationOverrides withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -60,6 +63,7 @@ public class ItemVariationLocationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_money")
     public Money priceMoney;
+
     public ItemVariationLocationOverrides withPriceMoney(Money priceMoney) {
         this.priceMoney = priceMoney;
         return this;
@@ -71,6 +75,7 @@ public class ItemVariationLocationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_type")
     public String pricingType;
+
     public ItemVariationLocationOverrides withPricingType(String pricingType) {
         this.pricingType = pricingType;
         return this;
@@ -82,9 +87,11 @@ public class ItemVariationLocationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track_inventory")
     public Boolean trackInventory;
+
     public ItemVariationLocationOverrides withTrackInventory(Boolean trackInventory) {
         this.trackInventory = trackInventory;
         return this;
     }
     
+    public ItemVariationLocationOverrides(){}
 }

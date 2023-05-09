@@ -18,6 +18,7 @@ public class ChromeOsDeviceRecentUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ChromeOsDeviceRecentUsers withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class ChromeOsDeviceRecentUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ChromeOsDeviceRecentUsers withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ChromeOsDeviceRecentUsers(){}
 }

@@ -12,6 +12,7 @@ public class StatisticalInfoF {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_range")
     public Long errorRange;
+
     public StatisticalInfoF withErrorRange(Long errorRange) {
         this.errorRange = errorRange;
         return this;
@@ -20,6 +21,7 @@ public class StatisticalInfoF {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lower_bound")
     public Long lowerBound;
+
     public StatisticalInfoF withLowerBound(Long lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -28,9 +30,11 @@ public class StatisticalInfoF {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upper_bound")
     public Long upperBound;
+
     public StatisticalInfoF withUpperBound(Long upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public StatisticalInfoF(){}
 }

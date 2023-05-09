@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringProjectsMonitoredResourceDescriptorsListResponse {
     
     public String contentType;
+
     public MonitoringProjectsMonitoredResourceDescriptorsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringProjectsMonitoredResourceDescriptorsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMonitoredResourceDescriptorsResponse listMonitoredResourceDescriptorsResponse;
+
     public MonitoringProjectsMonitoredResourceDescriptorsListResponse withListMonitoredResourceDescriptorsResponse(org.openapis.openapi.models.shared.ListMonitoredResourceDescriptorsResponse listMonitoredResourceDescriptorsResponse) {
         this.listMonitoredResourceDescriptorsResponse = listMonitoredResourceDescriptorsResponse;
         return this;
@@ -26,6 +29,7 @@ public class MonitoringProjectsMonitoredResourceDescriptorsListResponse {
     
     
     public Integer statusCode;
+
     public MonitoringProjectsMonitoredResourceDescriptorsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringProjectsMonitoredResourceDescriptorsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringProjectsMonitoredResourceDescriptorsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MonitoringProjectsMonitoredResourceDescriptorsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

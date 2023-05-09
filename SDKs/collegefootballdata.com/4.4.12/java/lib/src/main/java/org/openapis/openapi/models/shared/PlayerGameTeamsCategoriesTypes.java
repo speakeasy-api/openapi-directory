@@ -12,6 +12,7 @@ public class PlayerGameTeamsCategoriesTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("athletes")
     public PlayerGameTeamsCategoriesTypesAthletes[] athletes;
+
     public PlayerGameTeamsCategoriesTypes withAthletes(PlayerGameTeamsCategoriesTypesAthletes[] athletes) {
         this.athletes = athletes;
         return this;
@@ -20,9 +21,11 @@ public class PlayerGameTeamsCategoriesTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlayerGameTeamsCategoriesTypes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PlayerGameTeamsCategoriesTypes(){}
 }

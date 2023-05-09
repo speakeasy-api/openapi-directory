@@ -14,6 +14,7 @@ public class TeamsCreateRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsCreateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,13 @@ public class TeamsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public TeamsCreateRequestBody withRoles(String[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public TeamsCreateRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

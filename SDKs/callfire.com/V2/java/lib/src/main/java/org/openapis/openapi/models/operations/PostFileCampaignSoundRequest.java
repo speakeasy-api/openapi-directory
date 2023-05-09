@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFileCampaignSoundRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostFileCampaignSoundRequestBody requestBody;
+
     public PostFileCampaignSoundRequest withRequestBody(PostFileCampaignSoundRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PostFileCampaignSoundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PostFileCampaignSoundRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public PostFileCampaignSoundRequest(@JsonProperty("RequestBody") PostFileCampaignSoundRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

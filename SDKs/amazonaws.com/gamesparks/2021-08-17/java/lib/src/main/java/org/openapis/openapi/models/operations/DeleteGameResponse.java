@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGameResponse {
@@ -12,6 +13,7 @@ public class DeleteGameResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteGameResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteGameResponse {
      */
     
     public Object conflictException;
+
     public DeleteGameResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGameResponse {
     
     
     public String contentType;
+
     public DeleteGameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGameResponse {
      */
     
     public java.util.Map<String, Object> deleteGameResult;
+
     public DeleteGameResponse withDeleteGameResult(java.util.Map<String, Object> deleteGameResult) {
         this.deleteGameResult = deleteGameResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGameResponse {
      */
     
     public Object internalServerException;
+
     public DeleteGameResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteGameResponse {
     
     
     public Integer statusCode;
+
     public DeleteGameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteGameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteGameResponse {
      */
     
     public Object throttlingException;
+
     public DeleteGameResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteGameResponse {
      */
     
     public Object validationException;
+
     public DeleteGameResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteGameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

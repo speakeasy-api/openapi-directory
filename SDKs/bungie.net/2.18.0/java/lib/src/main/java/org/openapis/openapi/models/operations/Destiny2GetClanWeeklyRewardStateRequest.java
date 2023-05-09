@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetClanWeeklyRewardStateRequest {
@@ -12,9 +13,13 @@ public class Destiny2GetClanWeeklyRewardStateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public Destiny2GetClanWeeklyRewardStateRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public Destiny2GetClanWeeklyRewardStateRequest(@JsonProperty("groupId") Long groupId) {
+        this.groupId = groupId;
+  }
 }

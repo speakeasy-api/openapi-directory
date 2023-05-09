@@ -18,6 +18,7 @@ public class ExchangeReviewStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
     public ExchangeReviewStatusExchangeEnum exchange;
+
     public ExchangeReviewStatus withExchange(ExchangeReviewStatusExchangeEnum exchange) {
         this.exchange = exchange;
         return this;
@@ -29,9 +30,11 @@ public class ExchangeReviewStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExchangeReviewStatusStatusEnum status;
+
     public ExchangeReviewStatus withStatus(ExchangeReviewStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ExchangeReviewStatus(){}
 }

@@ -17,6 +17,7 @@ public class OBWriteInternationalConsent5DataInitiationCreditorAccount {
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBWriteInternationalConsent5DataInitiationCreditorAccount withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalConsent5DataInitiationCreditorAccount {
      */
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalConsent5DataInitiationCreditorAccount withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalConsent5DataInitiationCreditorAccount {
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBWriteInternationalConsent5DataInitiationCreditorAccount withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
@@ -51,9 +54,15 @@ public class OBWriteInternationalConsent5DataInitiationCreditorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryIdentification")
     public String secondaryIdentification;
+
     public OBWriteInternationalConsent5DataInitiationCreditorAccount withSecondaryIdentification(String secondaryIdentification) {
         this.secondaryIdentification = secondaryIdentification;
         return this;
     }
     
+    public OBWriteInternationalConsent5DataInitiationCreditorAccount(@JsonProperty("Identification") String identification, @JsonProperty("Name") String name, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.name = name;
+        this.schemeName = schemeName;
+  }
 }

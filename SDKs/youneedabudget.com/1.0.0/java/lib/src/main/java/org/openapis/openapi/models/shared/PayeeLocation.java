@@ -12,6 +12,7 @@ public class PayeeLocation {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public PayeeLocation withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -19,6 +20,7 @@ public class PayeeLocation {
     
     @JsonProperty("id")
     public String id;
+
     public PayeeLocation withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class PayeeLocation {
     
     @JsonProperty("latitude")
     public String latitude;
+
     public PayeeLocation withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -33,6 +36,7 @@ public class PayeeLocation {
     
     @JsonProperty("longitude")
     public String longitude;
+
     public PayeeLocation withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
@@ -40,9 +44,17 @@ public class PayeeLocation {
     
     @JsonProperty("payee_id")
     public String payeeId;
+
     public PayeeLocation withPayeeId(String payeeId) {
         this.payeeId = payeeId;
         return this;
     }
     
+    public PayeeLocation(@JsonProperty("deleted") Boolean deleted, @JsonProperty("id") String id, @JsonProperty("latitude") String latitude, @JsonProperty("longitude") String longitude, @JsonProperty("payee_id") String payeeId) {
+        this.deleted = deleted;
+        this.id = id;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.payeeId = payeeId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class HlipcResponse {
     
     public String contentType;
+
     public HlipcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class HlipcResponse {
     
     
     public Integer statusCode;
+
     public HlipcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class HlipcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public HlipcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class HlipcResponse {
      */
     
     public Hlipc400ApplicationJSON hlipc400ApplicationJSONObject;
+
     public HlipcResponse withHlipc400ApplicationJSONObject(Hlipc400ApplicationJSON hlipc400ApplicationJSONObject) {
         this.hlipc400ApplicationJSONObject = hlipc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class HlipcResponse {
      */
     
     public Hlipc401ApplicationJSON hlipc401ApplicationJSONObject;
+
     public HlipcResponse withHlipc401ApplicationJSONObject(Hlipc401ApplicationJSON hlipc401ApplicationJSONObject) {
         this.hlipc401ApplicationJSONObject = hlipc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class HlipcResponse {
      */
     
     public Hlipc404ApplicationJSON hlipc404ApplicationJSONObject;
+
     public HlipcResponse withHlipc404ApplicationJSONObject(Hlipc404ApplicationJSON hlipc404ApplicationJSONObject) {
         this.hlipc404ApplicationJSONObject = hlipc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class HlipcResponse {
      */
     
     public Hlipc500ApplicationJSON hlipc500ApplicationJSONObject;
+
     public HlipcResponse withHlipc500ApplicationJSONObject(Hlipc500ApplicationJSON hlipc500ApplicationJSONObject) {
         this.hlipc500ApplicationJSONObject = hlipc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class HlipcResponse {
      */
     
     public Hlipc502ApplicationJSON hlipc502ApplicationJSONObject;
+
     public HlipcResponse withHlipc502ApplicationJSONObject(Hlipc502ApplicationJSON hlipc502ApplicationJSONObject) {
         this.hlipc502ApplicationJSONObject = hlipc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class HlipcResponse {
      */
     
     public Hlipc503ApplicationJSON hlipc503ApplicationJSONObject;
+
     public HlipcResponse withHlipc503ApplicationJSONObject(Hlipc503ApplicationJSON hlipc503ApplicationJSONObject) {
         this.hlipc503ApplicationJSONObject = hlipc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class HlipcResponse {
      */
     
     public Hlipc504ApplicationJSON hlipc504ApplicationJSONObject;
+
     public HlipcResponse withHlipc504ApplicationJSONObject(Hlipc504ApplicationJSON hlipc504ApplicationJSONObject) {
         this.hlipc504ApplicationJSONObject = hlipc504ApplicationJSONObject;
         return this;
     }
     
+    public HlipcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

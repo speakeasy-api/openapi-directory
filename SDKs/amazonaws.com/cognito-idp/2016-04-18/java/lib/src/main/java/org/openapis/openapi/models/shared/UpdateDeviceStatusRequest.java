@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDeviceStatusRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public UpdateDeviceStatusRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -21,6 +22,7 @@ public class UpdateDeviceStatusRequest {
     
     @JsonProperty("DeviceKey")
     public String deviceKey;
+
     public UpdateDeviceStatusRequest withDeviceKey(String deviceKey) {
         this.deviceKey = deviceKey;
         return this;
@@ -29,9 +31,14 @@ public class UpdateDeviceStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceRememberedStatus")
     public DeviceRememberedStatusTypeEnum deviceRememberedStatus;
+
     public UpdateDeviceStatusRequest withDeviceRememberedStatus(DeviceRememberedStatusTypeEnum deviceRememberedStatus) {
         this.deviceRememberedStatus = deviceRememberedStatus;
         return this;
     }
     
+    public UpdateDeviceStatusRequest(@JsonProperty("AccessToken") String accessToken, @JsonProperty("DeviceKey") String deviceKey) {
+        this.accessToken = accessToken;
+        this.deviceKey = deviceKey;
+  }
 }

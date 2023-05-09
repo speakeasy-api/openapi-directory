@@ -20,6 +20,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Project withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifacts")
     public ProjectArtifacts artifacts;
+
     public Project withArtifacts(ProjectArtifacts artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -36,6 +38,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badge")
     public ProjectBadge badge;
+
     public Project withBadge(ProjectBadge badge) {
         this.badge = badge;
         return this;
@@ -44,6 +47,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildBatchConfig")
     public ProjectBuildBatchConfig buildBatchConfig;
+
     public Project withBuildBatchConfig(ProjectBuildBatchConfig buildBatchConfig) {
         this.buildBatchConfig = buildBatchConfig;
         return this;
@@ -52,6 +56,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cache")
     public ProjectCache cache;
+
     public Project withCache(ProjectCache cache) {
         this.cache = cache;
         return this;
@@ -60,6 +65,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentBuildLimit")
     public Long concurrentBuildLimit;
+
     public Project withConcurrentBuildLimit(Long concurrentBuildLimit) {
         this.concurrentBuildLimit = concurrentBuildLimit;
         return this;
@@ -70,6 +76,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Project withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -78,6 +85,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Project withDescription(String description) {
         this.description = description;
         return this;
@@ -86,6 +94,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public Project withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -94,6 +103,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public ProjectEnvironment environment;
+
     public Project withEnvironment(ProjectEnvironment environment) {
         this.environment = environment;
         return this;
@@ -102,6 +112,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSystemLocations")
     public ProjectFileSystemLocation[] fileSystemLocations;
+
     public Project withFileSystemLocations(ProjectFileSystemLocation[] fileSystemLocations) {
         this.fileSystemLocations = fileSystemLocations;
         return this;
@@ -112,6 +123,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public Project withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -120,6 +132,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logsConfig")
     public LogsConfig logsConfig;
+
     public Project withLogsConfig(LogsConfig logsConfig) {
         this.logsConfig = logsConfig;
         return this;
@@ -128,6 +141,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Project withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +153,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectVisibility")
     public ProjectVisibilityTypeEnum projectVisibility;
+
     public Project withProjectVisibility(ProjectVisibilityTypeEnum projectVisibility) {
         this.projectVisibility = projectVisibility;
         return this;
@@ -147,6 +162,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicProjectAlias")
     public String publicProjectAlias;
+
     public Project withPublicProjectAlias(String publicProjectAlias) {
         this.publicProjectAlias = publicProjectAlias;
         return this;
@@ -155,6 +171,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedTimeoutInMinutes")
     public Long queuedTimeoutInMinutes;
+
     public Project withQueuedTimeoutInMinutes(Long queuedTimeoutInMinutes) {
         this.queuedTimeoutInMinutes = queuedTimeoutInMinutes;
         return this;
@@ -163,6 +180,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceAccessRole")
     public String resourceAccessRole;
+
     public Project withResourceAccessRole(String resourceAccessRole) {
         this.resourceAccessRole = resourceAccessRole;
         return this;
@@ -171,6 +189,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryArtifacts")
     public ProjectArtifacts[] secondaryArtifacts;
+
     public Project withSecondaryArtifacts(ProjectArtifacts[] secondaryArtifacts) {
         this.secondaryArtifacts = secondaryArtifacts;
         return this;
@@ -179,6 +198,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondarySourceVersions")
     public ProjectSourceVersion[] secondarySourceVersions;
+
     public Project withSecondarySourceVersions(ProjectSourceVersion[] secondarySourceVersions) {
         this.secondarySourceVersions = secondarySourceVersions;
         return this;
@@ -187,6 +207,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondarySources")
     public ProjectSource[] secondarySources;
+
     public Project withSecondarySources(ProjectSource[] secondarySources) {
         this.secondarySources = secondarySources;
         return this;
@@ -195,6 +216,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRole")
     public String serviceRole;
+
     public Project withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -203,6 +225,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public ProjectSource source;
+
     public Project withSource(ProjectSource source) {
         this.source = source;
         return this;
@@ -211,6 +234,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public Project withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
@@ -219,6 +243,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Project withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -227,6 +252,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInMinutes")
     public Long timeoutInMinutes;
+
     public Project withTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
@@ -235,6 +261,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VpcConfig vpcConfig;
+
     public Project withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
@@ -243,9 +270,11 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook")
     public Webhook webhook;
+
     public Project withWebhook(Webhook webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public Project(){}
 }

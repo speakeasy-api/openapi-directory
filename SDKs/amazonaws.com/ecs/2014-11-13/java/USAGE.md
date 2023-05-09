@@ -3,68 +3,69 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateCapacityProviderXAmzTargetEnum;
 import org.openapis.openapi.models.operations.CreateCapacityProviderRequest;
 import org.openapis.openapi.models.operations.CreateCapacityProviderResponse;
-import org.openapis.openapi.models.shared.CreateCapacityProviderRequest;
-import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.operations.CreateCapacityProviderXAmzTargetEnum;
 import org.openapis.openapi.models.shared.AutoScalingGroupProvider;
-import org.openapis.openapi.models.shared.ManagedTerminationProtectionEnum;
+import org.openapis.openapi.models.shared.CreateCapacityProviderRequest;
 import org.openapis.openapi.models.shared.ManagedScaling;
 import org.openapis.openapi.models.shared.ManagedScalingStatusEnum;
+import org.openapis.openapi.models.shared.ManagedTerminationProtectionEnum;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateCapacityProviderRequest req = new CreateCapacityProviderRequest() {{
-                createCapacityProviderRequest = new CreateCapacityProviderRequest() {{
-                    autoScalingGroupProvider = new AutoScalingGroupProvider() {{
-                        autoScalingGroupArn = "corrupti";
-                        managedScaling = new ManagedScaling() {{
-                            instanceWarmupPeriod = 592845;
-                            maximumScalingStepSize = 715190;
-                            minimumScalingStepSize = 844266;
-                            status = "DISABLED";
-                            targetCapacity = 857946;
-                        }};
-                        managedTerminationProtection = "DISABLED";
-                    }};
-                    name = "illum";
-                    tags = new org.openapis.openapi.models.shared.Tag[]{{
-                        add(new Tag() {{
-                            key = "error";
-                            value = "deserunt";
-                        }}),
-                        add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
-                        }}),
-                    }};
-                }};
-                xAmzAlgorithm = "magnam";
-                xAmzContentSha256 = "debitis";
-                xAmzCredential = "ipsa";
-                xAmzDate = "delectus";
-                xAmzSecurityToken = "tempora";
-                xAmzSignature = "suscipit";
-                xAmzSignedHeaders = "molestiae";
-                xAmzTarget = "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider";
-            }}            
+            CreateCapacityProviderRequest req = new CreateCapacityProviderRequest(                new CreateCapacityProviderRequest(                new AutoScalingGroupProvider("provident") {{
+                                                managedScaling = new ManagedScaling() {{
+                                                    instanceWarmupPeriod = 715190L;
+                                                    maximumScalingStepSize = 844266L;
+                                                    minimumScalingStepSize = 602763L;
+                                                    status = ManagedScalingStatusEnum.DISABLED;
+                                                    targetCapacity = 544883L;
+                                                }};;
+                                                managedTerminationProtection = ManagedTerminationProtectionEnum.DISABLED;
+                                            }};, "vel") {{
+                                tags = new org.openapis.openapi.models.shared.Tag[]{{
+                                    add(new Tag() {{
+                                        key = "deserunt";
+                                        value = "suscipit";
+                                    }}),
+                                    add(new Tag() {{
+                                        key = "iure";
+                                        value = "magnam";
+                                    }}),
+                                    add(new Tag() {{
+                                        key = "debitis";
+                                        value = "ipsa";
+                                    }}),
+                                }};
+                            }};, CreateCapacityProviderXAmzTargetEnum.AMAZON_EC2_CONTAINER_SERVICE_V20141113_CREATE_CAPACITY_PROVIDER) {{
+                xAmzAlgorithm = "delectus";
+                xAmzContentSha256 = "tempora";
+                xAmzCredential = "suscipit";
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "minus";
+                xAmzSignature = "placeat";
+                xAmzSignedHeaders = "voluptatum";
+            }};            
 
             CreateCapacityProviderResponse res = sdk.createCapacityProvider(req);
 
-            if (res.createCapacityProviderResponse.isPresent()) {
+            if (res.createCapacityProviderResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

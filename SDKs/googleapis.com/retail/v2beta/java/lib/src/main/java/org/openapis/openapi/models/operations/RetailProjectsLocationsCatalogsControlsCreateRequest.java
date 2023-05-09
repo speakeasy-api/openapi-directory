@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsControlsCreateRequest {
@@ -12,6 +13,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudRetailV2betaControlInput googleCloudRetailV2betaControlInput;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withGoogleCloudRetailV2betaControlInput(org.openapis.openapi.models.shared.GoogleCloudRetailV2betaControlInput googleCloudRetailV2betaControlInput) {
         this.googleCloudRetailV2betaControlInput = googleCloudRetailV2betaControlInput;
         return this;
@@ -29,6 +32,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=controlId")
     public String controlId;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withControlId(String controlId) {
         this.controlId = controlId;
         return this;
@@ -69,6 +76,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class RetailProjectsLocationsCatalogsControlsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RetailProjectsLocationsCatalogsControlsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsControlsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

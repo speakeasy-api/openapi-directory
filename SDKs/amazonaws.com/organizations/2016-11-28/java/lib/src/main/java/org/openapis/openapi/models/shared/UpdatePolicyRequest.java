@@ -12,6 +12,7 @@ public class UpdatePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public UpdatePolicyRequest withContent(String content) {
         this.content = content;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePolicyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdatePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdatePolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class UpdatePolicyRequest {
     
     @JsonProperty("PolicyId")
     public String policyId;
+
     public UpdatePolicyRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public UpdatePolicyRequest(@JsonProperty("PolicyId") String policyId) {
+        this.policyId = policyId;
+  }
 }

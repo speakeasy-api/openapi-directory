@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersDeleteGpgKeyForAuthenticatedUserRequest {
@@ -12,9 +13,13 @@ public class UsersDeleteGpgKeyForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gpg_key_id")
     public Long gpgKeyId;
+
     public UsersDeleteGpgKeyForAuthenticatedUserRequest withGpgKeyId(Long gpgKeyId) {
         this.gpgKeyId = gpgKeyId;
         return this;
     }
     
+    public UsersDeleteGpgKeyForAuthenticatedUserRequest(@JsonProperty("gpg_key_id") Long gpgKeyId) {
+        this.gpgKeyId = gpgKeyId;
+  }
 }

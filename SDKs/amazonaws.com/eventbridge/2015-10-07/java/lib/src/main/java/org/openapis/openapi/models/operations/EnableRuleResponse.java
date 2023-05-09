@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableRuleResponse {
@@ -12,6 +13,7 @@ public class EnableRuleResponse {
      */
     
     public Object concurrentModificationException;
+
     public EnableRuleResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class EnableRuleResponse {
     
     
     public String contentType;
+
     public EnableRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableRuleResponse {
      */
     
     public Object internalException;
+
     public EnableRuleResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class EnableRuleResponse {
      */
     
     public Object managedRuleException;
+
     public EnableRuleResponse withManagedRuleException(Object managedRuleException) {
         this.managedRuleException = managedRuleException;
         return this;
@@ -49,6 +54,7 @@ public class EnableRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EnableRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class EnableRuleResponse {
     
     
     public Integer statusCode;
+
     public EnableRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class EnableRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnableRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

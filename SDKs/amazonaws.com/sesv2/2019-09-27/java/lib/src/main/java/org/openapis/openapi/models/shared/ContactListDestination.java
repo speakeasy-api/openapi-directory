@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContactListDestination {
     @JsonProperty("ContactListImportAction")
     public ContactListImportActionEnum contactListImportAction;
+
     public ContactListDestination withContactListImportAction(ContactListImportActionEnum contactListImportAction) {
         this.contactListImportAction = contactListImportAction;
         return this;
@@ -19,9 +20,14 @@ public class ContactListDestination {
     
     @JsonProperty("ContactListName")
     public String contactListName;
+
     public ContactListDestination withContactListName(String contactListName) {
         this.contactListName = contactListName;
         return this;
     }
     
+    public ContactListDestination(@JsonProperty("ContactListImportAction") ContactListImportActionEnum contactListImportAction, @JsonProperty("ContactListName") String contactListName) {
+        this.contactListImportAction = contactListImportAction;
+        this.contactListName = contactListName;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1StorageAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read")
     public GoogleCloudDataplexV1StorageAccessReadEnum read;
+
     public GoogleCloudDataplexV1StorageAccess withRead(GoogleCloudDataplexV1StorageAccessReadEnum read) {
         this.read = read;
         return this;
     }
     
+    public GoogleCloudDataplexV1StorageAccess(){}
 }

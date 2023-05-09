@@ -17,9 +17,11 @@ public class PostCallsRequestBodyOptionsPlayAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("announcement_id")
     public String announcementId;
+
     public PostCallsRequestBodyOptionsPlayAudio withAnnouncementId(String announcementId) {
         this.announcementId = announcementId;
         return this;
     }
     
+    public PostCallsRequestBodyOptionsPlayAudio(){}
 }

@@ -58,11 +58,9 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeSearchListResponse res = new org.openapis.openapi.models.operations.YoutubeSearchListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeSearchListResponse res = new org.openapis.openapi.models.operations.YoutubeSearchListResponse(contentType, httpRes.statusCode()) {{
             searchListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

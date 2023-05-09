@@ -18,6 +18,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminEmails")
     public String[] adminEmails;
+
     public Company withAdminEmails(String[] adminEmails) {
         this.adminEmails = adminEmails;
         return this;
@@ -29,6 +30,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public String companyId;
+
     public Company withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -40,6 +42,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public Company withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -51,6 +54,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleWorkspaceAccount")
     public GoogleWorkspaceAccount googleWorkspaceAccount;
+
     public Company withGoogleWorkspaceAccount(GoogleWorkspaceAccount googleWorkspaceAccount) {
         this.googleWorkspaceAccount = googleWorkspaceAccount;
         return this;
@@ -62,6 +66,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public Company withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -73,6 +78,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Company withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerEmails")
     public String[] ownerEmails;
+
     public Company withOwnerEmails(String[] ownerEmails) {
         this.ownerEmails = ownerEmails;
         return this;
@@ -95,6 +102,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipWelcomeEmail")
     public Boolean skipWelcomeEmail;
+
     public Company withSkipWelcomeEmail(Boolean skipWelcomeEmail) {
         this.skipWelcomeEmail = skipWelcomeEmail;
         return this;
@@ -106,9 +114,11 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsStatus")
     public CompanyTermsStatusEnum termsStatus;
+
     public Company withTermsStatus(CompanyTermsStatusEnum termsStatus) {
         this.termsStatus = termsStatus;
         return this;
     }
     
+    public Company(){}
 }

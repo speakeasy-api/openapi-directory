@@ -18,6 +18,7 @@ public class CampaignCreativeAssociationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignCreativeAssociations")
     public CampaignCreativeAssociation[] campaignCreativeAssociations;
+
     public CampaignCreativeAssociationsListResponse withCampaignCreativeAssociations(CampaignCreativeAssociation[] campaignCreativeAssociations) {
         this.campaignCreativeAssociations = campaignCreativeAssociations;
         return this;
@@ -29,6 +30,7 @@ public class CampaignCreativeAssociationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CampaignCreativeAssociationsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class CampaignCreativeAssociationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public CampaignCreativeAssociationsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public CampaignCreativeAssociationsListResponse(){}
 }

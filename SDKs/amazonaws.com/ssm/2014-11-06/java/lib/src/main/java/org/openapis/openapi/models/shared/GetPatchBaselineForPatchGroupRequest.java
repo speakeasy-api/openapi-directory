@@ -12,6 +12,7 @@ public class GetPatchBaselineForPatchGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public GetPatchBaselineForPatchGroupRequest withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -19,9 +20,13 @@ public class GetPatchBaselineForPatchGroupRequest {
     
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public GetPatchBaselineForPatchGroupRequest withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
     }
     
+    public GetPatchBaselineForPatchGroupRequest(@JsonProperty("PatchGroup") String patchGroup) {
+        this.patchGroup = patchGroup;
+  }
 }

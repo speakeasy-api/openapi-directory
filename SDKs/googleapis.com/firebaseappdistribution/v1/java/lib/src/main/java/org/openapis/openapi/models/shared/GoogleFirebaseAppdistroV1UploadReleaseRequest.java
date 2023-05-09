@@ -15,9 +15,11 @@ public class GoogleFirebaseAppdistroV1UploadReleaseRequest {
      */
     
     public GdataMedia blob;
+
     public GoogleFirebaseAppdistroV1UploadReleaseRequest withBlob(GdataMedia blob) {
         this.blob = blob;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1UploadReleaseRequest(){}
 }

@@ -18,6 +18,7 @@ public class ListRuntimeActionSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRuntimeActionSchemasResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRuntimeActionSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeActionSchemas")
     public RuntimeActionSchema[] runtimeActionSchemas;
+
     public ListRuntimeActionSchemasResponse withRuntimeActionSchemas(RuntimeActionSchema[] runtimeActionSchemas) {
         this.runtimeActionSchemas = runtimeActionSchemas;
         return this;
     }
     
+    public ListRuntimeActionSchemasResponse(){}
 }

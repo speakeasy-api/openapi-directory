@@ -15,6 +15,7 @@ public class ForwardingRulesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingRules")
     public ForwardingRule[] forwardingRules;
+
     public ForwardingRulesScopedList withForwardingRules(ForwardingRule[] forwardingRules) {
         this.forwardingRules = forwardingRules;
         return this;
@@ -26,9 +27,11 @@ public class ForwardingRulesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public ForwardingRulesScopedListWarning warning;
+
     public ForwardingRulesScopedList withWarning(ForwardingRulesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public ForwardingRulesScopedList(){}
 }

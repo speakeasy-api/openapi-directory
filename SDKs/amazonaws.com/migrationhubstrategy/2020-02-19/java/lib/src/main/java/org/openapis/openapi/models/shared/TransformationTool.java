@@ -15,6 +15,7 @@ public class TransformationTool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TransformationTool withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class TransformationTool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public TransformationToolNameEnum name;
+
     public TransformationTool withName(TransformationToolNameEnum name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class TransformationTool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tranformationToolInstallationLink")
     public String tranformationToolInstallationLink;
+
     public TransformationTool withTranformationToolInstallationLink(String tranformationToolInstallationLink) {
         this.tranformationToolInstallationLink = tranformationToolInstallationLink;
         return this;
     }
     
+    public TransformationTool(){}
 }

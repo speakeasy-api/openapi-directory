@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TestTypeInput {
     
     public String arn;
+
     public TestTypeInput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,6 +17,7 @@ public class TestTypeInput {
     
     
     public String logDeliveryBucket;
+
     public TestTypeInput withLogDeliveryBucket(String logDeliveryBucket) {
         this.logDeliveryBucket = logDeliveryBucket;
         return this;
@@ -23,6 +25,7 @@ public class TestTypeInput {
     
     
     public ThirdPartyTypeEnum type;
+
     public TestTypeInput withType(ThirdPartyTypeEnum type) {
         this.type = type;
         return this;
@@ -30,6 +33,7 @@ public class TestTypeInput {
     
     
     public String typeName;
+
     public TestTypeInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -37,9 +41,11 @@ public class TestTypeInput {
     
     
     public String versionId;
+
     public TestTypeInput withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public TestTypeInput(){}
 }

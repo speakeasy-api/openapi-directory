@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMultipleReviewsResponse {
     
     public String contentType;
+
     public DeleteMultipleReviewsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMultipleReviewsResponse {
      */
     
     public Boolean deleteMultipleReviews200ApplicationJSONBoolean;
+
     public DeleteMultipleReviewsResponse withDeleteMultipleReviews200ApplicationJSONBoolean(Boolean deleteMultipleReviews200ApplicationJSONBoolean) {
         this.deleteMultipleReviews200ApplicationJSONBoolean = deleteMultipleReviews200ApplicationJSONBoolean;
         return this;
@@ -26,6 +29,7 @@ public class DeleteMultipleReviewsResponse {
     
     
     public Integer statusCode;
+
     public DeleteMultipleReviewsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteMultipleReviewsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMultipleReviewsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMultipleReviewsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

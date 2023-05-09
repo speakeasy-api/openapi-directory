@@ -12,6 +12,7 @@ public class OrderIdentifierWithETag {
      */
     @JsonProperty("accountId")
     public Integer accountId;
+
     public OrderIdentifierWithETag withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class OrderIdentifierWithETag {
      */
     @JsonProperty("beezUPOrderId")
     public String beezUPOrderId;
+
     public OrderIdentifierWithETag withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -35,6 +37,7 @@ public class OrderIdentifierWithETag {
      */
     @JsonProperty("etag")
     public String etag;
+
     public OrderIdentifierWithETag withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -45,9 +48,16 @@ public class OrderIdentifierWithETag {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public OrderIdentifierWithETag withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public OrderIdentifierWithETag(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("etag") String etag, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.etag = etag;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

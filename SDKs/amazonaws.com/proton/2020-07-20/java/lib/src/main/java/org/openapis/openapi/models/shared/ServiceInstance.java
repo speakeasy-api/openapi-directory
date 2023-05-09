@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ServiceInstance {
     @JsonProperty("arn")
     public String arn;
+
     public ServiceInstance withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ServiceInstance {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ServiceInstance withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class ServiceInstance {
     
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public ServiceInstance withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -43,6 +46,7 @@ public class ServiceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public ServiceInstance withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -50,8 +54,18 @@ public class ServiceInstance {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public ServiceInstance withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastClientRequestToken")
+    public String lastClientRequestToken;
+
+    public ServiceInstance withLastClientRequestToken(String lastClientRequestToken) {
+        this.lastClientRequestToken = lastClientRequestToken;
         return this;
     }
     
@@ -59,6 +73,7 @@ public class ServiceInstance {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentAttemptedAt")
     public OffsetDateTime lastDeploymentAttemptedAt;
+
     public ServiceInstance withLastDeploymentAttemptedAt(OffsetDateTime lastDeploymentAttemptedAt) {
         this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
         return this;
@@ -68,6 +83,7 @@ public class ServiceInstance {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentSucceededAt")
     public OffsetDateTime lastDeploymentSucceededAt;
+
     public ServiceInstance withLastDeploymentSucceededAt(OffsetDateTime lastDeploymentSucceededAt) {
         this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
         return this;
@@ -75,6 +91,7 @@ public class ServiceInstance {
     
     @JsonProperty("name")
     public String name;
+
     public ServiceInstance withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +99,7 @@ public class ServiceInstance {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ServiceInstance withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -90,6 +108,7 @@ public class ServiceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public String spec;
+
     public ServiceInstance withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -97,6 +116,7 @@ public class ServiceInstance {
     
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public ServiceInstance withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -104,6 +124,7 @@ public class ServiceInstance {
     
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public ServiceInstance withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
@@ -111,9 +132,23 @@ public class ServiceInstance {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public ServiceInstance withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ServiceInstance(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deploymentStatus") DeploymentStatusEnum deploymentStatus, @JsonProperty("environmentName") String environmentName, @JsonProperty("lastDeploymentAttemptedAt") OffsetDateTime lastDeploymentAttemptedAt, @JsonProperty("lastDeploymentSucceededAt") OffsetDateTime lastDeploymentSucceededAt, @JsonProperty("name") String name, @JsonProperty("serviceName") String serviceName, @JsonProperty("templateMajorVersion") String templateMajorVersion, @JsonProperty("templateMinorVersion") String templateMinorVersion, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.deploymentStatus = deploymentStatus;
+        this.environmentName = environmentName;
+        this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
+        this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
+        this.name = name;
+        this.serviceName = serviceName;
+        this.templateMajorVersion = templateMajorVersion;
+        this.templateMinorVersion = templateMinorVersion;
+        this.templateName = templateName;
+  }
 }

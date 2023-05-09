@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeTerminationPolicyTypesAnswer {
     
     public String[] terminationPolicyTypes;
+
     public DescribeTerminationPolicyTypesAnswer withTerminationPolicyTypes(String[] terminationPolicyTypes) {
         this.terminationPolicyTypes = terminationPolicyTypes;
         return this;
     }
     
+    public DescribeTerminationPolicyTypesAnswer(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class HscerResponse {
     
     public byte[] body;
+
     public HscerResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class HscerResponse {
     
     
     public String contentType;
+
     public HscerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class HscerResponse {
     
     
     public Integer statusCode;
+
     public HscerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class HscerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public HscerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class HscerResponse {
      */
     
     public Hscer400ApplicationJSON hscer400ApplicationJSONObject;
+
     public HscerResponse withHscer400ApplicationJSONObject(Hscer400ApplicationJSON hscer400ApplicationJSONObject) {
         this.hscer400ApplicationJSONObject = hscer400ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class HscerResponse {
      */
     
     public Hscer401ApplicationJSON hscer401ApplicationJSONObject;
+
     public HscerResponse withHscer401ApplicationJSONObject(Hscer401ApplicationJSON hscer401ApplicationJSONObject) {
         this.hscer401ApplicationJSONObject = hscer401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class HscerResponse {
      */
     
     public Hscer404ApplicationJSON hscer404ApplicationJSONObject;
+
     public HscerResponse withHscer404ApplicationJSONObject(Hscer404ApplicationJSON hscer404ApplicationJSONObject) {
         this.hscer404ApplicationJSONObject = hscer404ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class HscerResponse {
      */
     
     public Hscer500ApplicationJSON hscer500ApplicationJSONObject;
+
     public HscerResponse withHscer500ApplicationJSONObject(Hscer500ApplicationJSON hscer500ApplicationJSONObject) {
         this.hscer500ApplicationJSONObject = hscer500ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class HscerResponse {
      */
     
     public Hscer502ApplicationJSON hscer502ApplicationJSONObject;
+
     public HscerResponse withHscer502ApplicationJSONObject(Hscer502ApplicationJSON hscer502ApplicationJSONObject) {
         this.hscer502ApplicationJSONObject = hscer502ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class HscerResponse {
      */
     
     public Hscer503ApplicationJSON hscer503ApplicationJSONObject;
+
     public HscerResponse withHscer503ApplicationJSONObject(Hscer503ApplicationJSON hscer503ApplicationJSONObject) {
         this.hscer503ApplicationJSONObject = hscer503ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class HscerResponse {
      */
     
     public Hscer504ApplicationJSON hscer504ApplicationJSONObject;
+
     public HscerResponse withHscer504ApplicationJSONObject(Hscer504ApplicationJSON hscer504ApplicationJSONObject) {
         this.hscer504ApplicationJSONObject = hscer504ApplicationJSONObject;
         return this;
     }
     
+    public HscerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaProductLevelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingestionProductType")
     public String ingestionProductType;
+
     public GoogleCloudRetailV2alphaProductLevelConfig withIngestionProductType(String ingestionProductType) {
         this.ingestionProductType = ingestionProductType;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaProductLevelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCenterProductIdField")
     public String merchantCenterProductIdField;
+
     public GoogleCloudRetailV2alphaProductLevelConfig withMerchantCenterProductIdField(String merchantCenterProductIdField) {
         this.merchantCenterProductIdField = merchantCenterProductIdField;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaProductLevelConfig(){}
 }

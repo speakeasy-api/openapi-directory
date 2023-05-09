@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkflowStepResponse {
@@ -12,6 +13,7 @@ public class CreateWorkflowStepResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateWorkflowStepResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorkflowStepResponse {
     
     
     public String contentType;
+
     public CreateWorkflowStepResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkflowStepResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkflowStepResponse createWorkflowStepResponse;
+
     public CreateWorkflowStepResponse withCreateWorkflowStepResponse(org.openapis.openapi.models.shared.CreateWorkflowStepResponse createWorkflowStepResponse) {
         this.createWorkflowStepResponse = createWorkflowStepResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkflowStepResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorkflowStepResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateWorkflowStepResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkflowStepResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateWorkflowStepResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkflowStepResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateWorkflowStepResponse {
      */
     
     public Object throttlingException;
+
     public CreateWorkflowStepResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class CreateWorkflowStepResponse {
      */
     
     public Object validationException;
+
     public CreateWorkflowStepResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateWorkflowStepResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

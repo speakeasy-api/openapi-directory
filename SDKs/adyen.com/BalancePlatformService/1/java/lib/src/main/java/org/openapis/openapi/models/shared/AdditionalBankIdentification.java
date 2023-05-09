@@ -15,6 +15,7 @@ public class AdditionalBankIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public AdditionalBankIdentification withCode(String code) {
         this.code = code;
         return this;
@@ -31,9 +32,11 @@ public class AdditionalBankIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AdditionalBankIdentificationTypeEnum type;
+
     public AdditionalBankIdentification withType(AdditionalBankIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AdditionalBankIdentification(){}
 }

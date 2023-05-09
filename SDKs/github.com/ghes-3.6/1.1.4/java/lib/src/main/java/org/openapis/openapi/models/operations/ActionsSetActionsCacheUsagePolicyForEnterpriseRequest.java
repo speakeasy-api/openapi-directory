@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetActionsCacheUsagePolicyForEnterpriseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise actionsCacheUsagePolicyEnterprise;
+
     public ActionsSetActionsCacheUsagePolicyForEnterpriseRequest withActionsCacheUsagePolicyEnterprise(org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise actionsCacheUsagePolicyEnterprise) {
         this.actionsCacheUsagePolicyEnterprise = actionsCacheUsagePolicyEnterprise;
         return this;
@@ -19,9 +21,14 @@ public class ActionsSetActionsCacheUsagePolicyForEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public ActionsSetActionsCacheUsagePolicyForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
     }
     
+    public ActionsSetActionsCacheUsagePolicyForEnterpriseRequest(@JsonProperty("actions-cache-usage-policy-enterprise") org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise actionsCacheUsagePolicyEnterprise, @JsonProperty("enterprise") String enterprise) {
+        this.actionsCacheUsagePolicyEnterprise = actionsCacheUsagePolicyEnterprise;
+        this.enterprise = enterprise;
+  }
 }

@@ -12,6 +12,7 @@ public class PutAppReplicationConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public PutAppReplicationConfigurationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -20,9 +21,11 @@ public class PutAppReplicationConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupReplicationConfigurations")
     public ServerGroupReplicationConfiguration[] serverGroupReplicationConfigurations;
+
     public PutAppReplicationConfigurationRequest withServerGroupReplicationConfigurations(ServerGroupReplicationConfiguration[] serverGroupReplicationConfigurations) {
         this.serverGroupReplicationConfigurations = serverGroupReplicationConfigurations;
         return this;
     }
     
+    public PutAppReplicationConfigurationRequest(){}
 }

@@ -19,6 +19,7 @@ public class EventTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FromTime")
     public OffsetDateTime fromTime;
+
     public EventTimeRange withFromTime(OffsetDateTime fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -28,9 +29,14 @@ public class EventTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ToTime")
     public OffsetDateTime toTime;
+
     public EventTimeRange withToTime(OffsetDateTime toTime) {
         this.toTime = toTime;
         return this;
     }
     
+    public EventTimeRange(@JsonProperty("FromTime") OffsetDateTime fromTime, @JsonProperty("ToTime") OffsetDateTime toTime) {
+        this.fromTime = fromTime;
+        this.toTime = toTime;
+  }
 }

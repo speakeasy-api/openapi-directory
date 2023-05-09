@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelDocumentResponse {
@@ -12,6 +13,7 @@ public class CancelDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public CancelDocumentResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelDocumentResponse {
     
     
     public String contentType;
+
     public CancelDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.Document document;
+
     public CancelDocumentResponse withDocument(org.openapis.openapi.models.shared.Document document) {
         this.document = document;
         return this;
@@ -36,6 +40,7 @@ public class CancelDocumentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CancelDocumentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -46,6 +51,7 @@ public class CancelDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public CancelDocumentResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class CancelDocumentResponse {
     
     
     public Integer statusCode;
+
     public CancelDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class CancelDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class CancelDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public CancelDocumentResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public CancelDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

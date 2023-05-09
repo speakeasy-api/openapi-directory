@@ -61,11 +61,9 @@ public class Marketplacedeals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteResponse(contentType, httpRes.statusCode()) {{
             deleteOrderDealsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Marketplacedeals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertResponse(contentType, httpRes.statusCode()) {{
             addOrderDealsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Marketplacedeals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListResponse(contentType, httpRes.statusCode()) {{
             getOrderDealsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Marketplacedeals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateResponse(contentType, httpRes.statusCode()) {{
             editAllOrderDealsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

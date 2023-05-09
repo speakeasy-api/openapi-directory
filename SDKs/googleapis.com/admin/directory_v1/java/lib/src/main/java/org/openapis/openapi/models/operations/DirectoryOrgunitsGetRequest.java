@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectoryOrgunitsGetRequest {
@@ -12,6 +13,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DirectoryOrgunitsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DirectoryOrgunitsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DirectoryOrgunitsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DirectoryOrgunitsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public String customerId;
+
     public DirectoryOrgunitsGetRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -62,6 +68,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DirectoryOrgunitsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DirectoryOrgunitsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DirectoryOrgunitsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orgUnitPath")
     public String orgUnitPath;
+
     public DirectoryOrgunitsGetRequest withOrgUnitPath(String orgUnitPath) {
         this.orgUnitPath = orgUnitPath;
         return this;
@@ -102,6 +112,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DirectoryOrgunitsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DirectoryOrgunitsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DirectoryOrgunitsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,9 +145,14 @@ public class DirectoryOrgunitsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DirectoryOrgunitsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DirectoryOrgunitsGetRequest(@JsonProperty("customerId") String customerId, @JsonProperty("orgUnitPath") String orgUnitPath) {
+        this.customerId = customerId;
+        this.orgUnitPath = orgUnitPath;
+  }
 }

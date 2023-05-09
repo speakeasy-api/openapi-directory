@@ -20,6 +20,7 @@ public class TopicRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public Action[] actions;
+
     public TopicRule withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -28,6 +29,7 @@ public class TopicRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsIotSqlVersion")
     public String awsIotSqlVersion;
+
     public TopicRule withAwsIotSqlVersion(String awsIotSqlVersion) {
         this.awsIotSqlVersion = awsIotSqlVersion;
         return this;
@@ -38,6 +40,7 @@ public class TopicRule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TopicRule withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class TopicRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TopicRule withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class TopicRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorAction")
     public Action errorAction;
+
     public TopicRule withErrorAction(Action errorAction) {
         this.errorAction = errorAction;
         return this;
@@ -62,6 +67,7 @@ public class TopicRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleDisabled")
     public Boolean ruleDisabled;
+
     public TopicRule withRuleDisabled(Boolean ruleDisabled) {
         this.ruleDisabled = ruleDisabled;
         return this;
@@ -70,6 +76,7 @@ public class TopicRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleName")
     public String ruleName;
+
     public TopicRule withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -78,9 +85,11 @@ public class TopicRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sql")
     public String sql;
+
     public TopicRule withSql(String sql) {
         this.sql = sql;
         return this;
     }
     
+    public TopicRule(){}
 }

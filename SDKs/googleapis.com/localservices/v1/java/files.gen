@@ -50,4 +50,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypeTimeZone.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocalservicesV1PhoneLead.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocalservicesV1MessageLead.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocalservicesV1BookingLead.java
+docs/sdk/README.md
+docs/accountreports/README.md
+docs/detailedleadreports/README.md
 USAGE.md

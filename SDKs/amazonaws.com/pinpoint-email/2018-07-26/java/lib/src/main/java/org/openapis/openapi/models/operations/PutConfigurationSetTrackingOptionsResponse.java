@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutConfigurationSetTrackingOptionsResponse {
@@ -12,6 +13,7 @@ public class PutConfigurationSetTrackingOptionsResponse {
      */
     
     public Object badRequestException;
+
     public PutConfigurationSetTrackingOptionsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutConfigurationSetTrackingOptionsResponse {
     
     
     public String contentType;
+
     public PutConfigurationSetTrackingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutConfigurationSetTrackingOptionsResponse {
      */
     
     public Object notFoundException;
+
     public PutConfigurationSetTrackingOptionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutConfigurationSetTrackingOptionsResponse {
      */
     
     public java.util.Map<String, Object> putConfigurationSetTrackingOptionsResponse;
+
     public PutConfigurationSetTrackingOptionsResponse withPutConfigurationSetTrackingOptionsResponse(java.util.Map<String, Object> putConfigurationSetTrackingOptionsResponse) {
         this.putConfigurationSetTrackingOptionsResponse = putConfigurationSetTrackingOptionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutConfigurationSetTrackingOptionsResponse {
     
     
     public Integer statusCode;
+
     public PutConfigurationSetTrackingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutConfigurationSetTrackingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutConfigurationSetTrackingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutConfigurationSetTrackingOptionsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutConfigurationSetTrackingOptionsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutConfigurationSetTrackingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

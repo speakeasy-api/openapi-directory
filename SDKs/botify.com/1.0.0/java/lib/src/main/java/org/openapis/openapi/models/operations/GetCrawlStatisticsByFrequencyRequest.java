@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCrawlStatisticsByFrequencyRequest {
@@ -12,6 +13,7 @@ public class GetCrawlStatisticsByFrequencyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
     public String analysisSlug;
+
     public GetCrawlStatisticsByFrequencyRequest withAnalysisSlug(String analysisSlug) {
         this.analysisSlug = analysisSlug;
         return this;
@@ -22,6 +24,7 @@ public class GetCrawlStatisticsByFrequencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=frequency")
     public GetCrawlStatisticsByFrequencyFrequencyEnum frequency;
+
     public GetCrawlStatisticsByFrequencyRequest withFrequency(GetCrawlStatisticsByFrequencyFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -32,6 +35,7 @@ public class GetCrawlStatisticsByFrequencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetCrawlStatisticsByFrequencyRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class GetCrawlStatisticsByFrequencyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetCrawlStatisticsByFrequencyRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -52,9 +57,16 @@ public class GetCrawlStatisticsByFrequencyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetCrawlStatisticsByFrequencyRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetCrawlStatisticsByFrequencyRequest(@JsonProperty("analysis_slug") String analysisSlug, @JsonProperty("frequency") GetCrawlStatisticsByFrequencyFrequencyEnum frequency, @JsonProperty("project_slug") String projectSlug, @JsonProperty("username") String username) {
+        this.analysisSlug = analysisSlug;
+        this.frequency = frequency;
+        this.projectSlug = projectSlug;
+        this.username = username;
+  }
 }

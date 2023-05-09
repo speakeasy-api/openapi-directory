@@ -15,6 +15,7 @@ public class CreateFleetOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetAttributes")
     public FleetAttributes fleetAttributes;
+
     public CreateFleetOutput withFleetAttributes(FleetAttributes fleetAttributes) {
         this.fleetAttributes = fleetAttributes;
         return this;
@@ -23,9 +24,11 @@ public class CreateFleetOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationStates")
     public LocationState[] locationStates;
+
     public CreateFleetOutput withLocationStates(LocationState[] locationStates) {
         this.locationStates = locationStates;
         return this;
     }
     
+    public CreateFleetOutput(){}
 }

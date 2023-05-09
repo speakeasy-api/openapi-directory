@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeCommitRepository {
     @JsonProperty("Name")
     public String name;
+
     public CodeCommitRepository withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CodeCommitRepository(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

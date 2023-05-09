@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostConfigAemPasswordResetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwdreset.authorizables")
     public String[] pwdresetAuthorizables;
+
     public PostConfigAemPasswordResetRequest withPwdresetAuthorizables(String[] pwdresetAuthorizables) {
         this.pwdresetAuthorizables = pwdresetAuthorizables;
         return this;
@@ -16,9 +17,11 @@ public class PostConfigAemPasswordResetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwdreset.authorizables@TypeHint")
     public String pwdresetAuthorizablesAtTypeHint;
+
     public PostConfigAemPasswordResetRequest withPwdresetAuthorizablesAtTypeHint(String pwdresetAuthorizablesAtTypeHint) {
         this.pwdresetAuthorizablesAtTypeHint = pwdresetAuthorizablesAtTypeHint;
         return this;
     }
     
+    public PostConfigAemPasswordResetRequest(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PromoteReadReplicaMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PromoteReadReplicaMessage {
     
     public Long backupRetentionPeriod;
+
     public PromoteReadReplicaMessage withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -19,6 +20,7 @@ public class PromoteReadReplicaMessage {
     
     
     public String dbInstanceIdentifier;
+
     public PromoteReadReplicaMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -26,9 +28,13 @@ public class PromoteReadReplicaMessage {
     
     
     public String preferredBackupWindow;
+
     public PromoteReadReplicaMessage withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
     }
     
+    public PromoteReadReplicaMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

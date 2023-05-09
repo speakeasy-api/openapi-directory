@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConformancePackResponse {
     
     public String contentType;
+
     public DeleteConformancePackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConformancePackResponse {
      */
     
     public Object noSuchConformancePackException;
+
     public DeleteConformancePackResponse withNoSuchConformancePackException(Object noSuchConformancePackException) {
         this.noSuchConformancePackException = noSuchConformancePackException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConformancePackResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteConformancePackResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteConformancePackResponse {
     
     
     public Integer statusCode;
+
     public DeleteConformancePackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteConformancePackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConformancePackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteConformancePackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

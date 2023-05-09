@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingStatusResponse {
@@ -12,6 +13,7 @@ public class GetOfferingStatusResponse {
      */
     
     public Object argumentException;
+
     public GetOfferingStatusResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingStatusResponse {
     
     
     public String contentType;
+
     public GetOfferingStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOfferingStatusResult getOfferingStatusResult;
+
     public GetOfferingStatusResponse withGetOfferingStatusResult(org.openapis.openapi.models.shared.GetOfferingStatusResult getOfferingStatusResult) {
         this.getOfferingStatusResult = getOfferingStatusResult;
         return this;
@@ -39,6 +43,7 @@ public class GetOfferingStatusResponse {
      */
     
     public Object limitExceededException;
+
     public GetOfferingStatusResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetOfferingStatusResponse {
      */
     
     public Object notEligibleException;
+
     public GetOfferingStatusResponse withNotEligibleException(Object notEligibleException) {
         this.notEligibleException = notEligibleException;
         return this;
@@ -59,6 +65,7 @@ public class GetOfferingStatusResponse {
      */
     
     public Object notFoundException;
+
     public GetOfferingStatusResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetOfferingStatusResponse {
      */
     
     public Object serviceAccountException;
+
     public GetOfferingStatusResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -76,6 +84,7 @@ public class GetOfferingStatusResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetOfferingStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

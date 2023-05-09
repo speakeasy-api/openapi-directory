@@ -18,6 +18,7 @@ public class Browser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserVersionId")
     public String browserVersionId;
+
     public Browser withBrowserVersionId(String browserVersionId) {
         this.browserVersionId = browserVersionId;
         return this;
@@ -29,6 +30,7 @@ public class Browser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dartId")
     public String dartId;
+
     public Browser withDartId(String dartId) {
         this.dartId = dartId;
         return this;
@@ -40,6 +42,7 @@ public class Browser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Browser withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class Browser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public Browser withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -62,6 +66,7 @@ public class Browser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minorVersion")
     public String minorVersion;
+
     public Browser withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -73,9 +78,11 @@ public class Browser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Browser withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Browser(){}
 }

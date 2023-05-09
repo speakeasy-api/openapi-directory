@@ -18,6 +18,7 @@ public class SendTokenRequestMetadataRulesExpiration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public SendTokenRequestMetadataRulesExpiration withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -29,9 +30,11 @@ public class SendTokenRequestMetadataRulesExpiration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validUntil")
     public Double validUntil;
+
     public SendTokenRequestMetadataRulesExpiration withValidUntil(Double validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public SendTokenRequestMetadataRulesExpiration(){}
 }

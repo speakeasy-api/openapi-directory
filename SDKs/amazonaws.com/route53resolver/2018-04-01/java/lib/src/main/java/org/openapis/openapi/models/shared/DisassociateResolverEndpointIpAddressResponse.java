@@ -15,9 +15,11 @@ public class DisassociateResolverEndpointIpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverEndpoint")
     public ResolverEndpoint resolverEndpoint;
+
     public DisassociateResolverEndpointIpAddressResponse withResolverEndpoint(ResolverEndpoint resolverEndpoint) {
         this.resolverEndpoint = resolverEndpoint;
         return this;
     }
     
+    public DisassociateResolverEndpointIpAddressResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSecurityIntrusionSettingsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkSecurityIntrusionSettingsRequestBody requestBody;
+
     public UpdateNetworkSecurityIntrusionSettingsRequest withRequestBody(UpdateNetworkSecurityIntrusionSettingsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UpdateNetworkSecurityIntrusionSettingsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkSecurityIntrusionSettingsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public UpdateNetworkSecurityIntrusionSettingsRequest(@JsonProperty("networkId") String networkId) {
+        this.networkId = networkId;
+  }
 }

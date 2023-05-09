@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdMerchantsRequest {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdMerchantsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetCompaniesCompanyIdMerchantsRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetCompaniesCompanyIdMerchantsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetCompaniesCompanyIdMerchantsRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -32,9 +35,13 @@ public class GetCompaniesCompanyIdMerchantsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetCompaniesCompanyIdMerchantsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetCompaniesCompanyIdMerchantsRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

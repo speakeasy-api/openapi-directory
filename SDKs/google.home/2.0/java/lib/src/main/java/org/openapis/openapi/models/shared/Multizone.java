@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Multizone {
     @JsonProperty("audio_output_delay")
     public Integer audioOutputDelay;
+
     public Multizone withAudioOutputDelay(Integer audioOutputDelay) {
         this.audioOutputDelay = audioOutputDelay;
         return this;
@@ -16,6 +17,7 @@ public class Multizone {
     
     @JsonProperty("audio_output_delay_hdmi")
     public Integer audioOutputDelayHdmi;
+
     public Multizone withAudioOutputDelayHdmi(Integer audioOutputDelayHdmi) {
         this.audioOutputDelayHdmi = audioOutputDelayHdmi;
         return this;
@@ -23,6 +25,7 @@ public class Multizone {
     
     @JsonProperty("audio_output_delay_oem")
     public Integer audioOutputDelayOem;
+
     public Multizone withAudioOutputDelayOem(Integer audioOutputDelayOem) {
         this.audioOutputDelayOem = audioOutputDelayOem;
         return this;
@@ -30,6 +33,7 @@ public class Multizone {
     
     @JsonProperty("aux_in_group")
     public String auxInGroup;
+
     public Multizone withAuxInGroup(String auxInGroup) {
         this.auxInGroup = auxInGroup;
         return this;
@@ -37,6 +41,7 @@ public class Multizone {
     
     @JsonProperty("dynamic_groups")
     public String[] dynamicGroups;
+
     public Multizone withDynamicGroups(String[] dynamicGroups) {
         this.dynamicGroups = dynamicGroups;
         return this;
@@ -44,6 +49,7 @@ public class Multizone {
     
     @JsonProperty("groups")
     public String[] groups;
+
     public Multizone withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -51,9 +57,19 @@ public class Multizone {
     
     @JsonProperty("multichannel_status")
     public Integer multichannelStatus;
+
     public Multizone withMultichannelStatus(Integer multichannelStatus) {
         this.multichannelStatus = multichannelStatus;
         return this;
     }
     
+    public Multizone(@JsonProperty("audio_output_delay") Integer audioOutputDelay, @JsonProperty("audio_output_delay_hdmi") Integer audioOutputDelayHdmi, @JsonProperty("audio_output_delay_oem") Integer audioOutputDelayOem, @JsonProperty("aux_in_group") String auxInGroup, @JsonProperty("dynamic_groups") String[] dynamicGroups, @JsonProperty("groups") String[] groups, @JsonProperty("multichannel_status") Integer multichannelStatus) {
+        this.audioOutputDelay = audioOutputDelay;
+        this.audioOutputDelayHdmi = audioOutputDelayHdmi;
+        this.audioOutputDelayOem = audioOutputDelayOem;
+        this.auxInGroup = auxInGroup;
+        this.dynamicGroups = dynamicGroups;
+        this.groups = groups;
+        this.multichannelStatus = multichannelStatus;
+  }
 }

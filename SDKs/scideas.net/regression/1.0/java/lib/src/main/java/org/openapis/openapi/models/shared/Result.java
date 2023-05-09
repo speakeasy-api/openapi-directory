@@ -12,6 +12,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calls\"")
     public ResultCalls calls;
+
     public Result withCalls(ResultCalls calls) {
         this.calls = calls;
         return this;
@@ -23,6 +24,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_count")
     public Long dataCount;
+
     public Result withDataCount(Long dataCount) {
         this.dataCount = dataCount;
         return this;
@@ -34,6 +36,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates_converted_to")
     public String datesConvertedTo;
+
     public Result withDatesConvertedTo(String datesConvertedTo) {
         this.datesConvertedTo = datesConvertedTo;
         return this;
@@ -45,6 +48,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer")
     public String footer;
+
     public Result withFooter(String footer) {
         this.footer = footer;
         return this;
@@ -56,6 +60,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public String header;
+
     public Result withHeader(String header) {
         this.header = header;
         return this;
@@ -67,6 +72,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_observations")
     public Long numberObservations;
+
     public Result withNumberObservations(Long numberObservations) {
         this.numberObservations = numberObservations;
         return this;
@@ -78,6 +84,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_tests")
     public Long numberTests;
+
     public Result withNumberTests(Long numberTests) {
         this.numberTests = numberTests;
         return this;
@@ -89,6 +96,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome_variable")
     public String outcomeVariable;
+
     public Result withOutcomeVariable(String outcomeVariable) {
         this.outcomeVariable = outcomeVariable;
         return this;
@@ -100,6 +108,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid")
     public String paid;
+
     public Result withPaid(String paid) {
         this.paid = paid;
         return this;
@@ -111,6 +120,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdf")
     public String pdf;
+
     public Result withPdf(String pdf) {
         this.pdf = pdf;
         return this;
@@ -122,6 +132,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prediction_mean_accuracy")
     public Long predictionMeanAccuracy;
+
     public Result withPredictionMeanAccuracy(Long predictionMeanAccuracy) {
         this.predictionMeanAccuracy = predictionMeanAccuracy;
         return this;
@@ -130,6 +141,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardized_coefficients")
     public ResultStandardizedCoefficients[] standardizedCoefficients;
+
     public Result withStandardizedCoefficients(ResultStandardizedCoefficients[] standardizedCoefficients) {
         this.standardizedCoefficients = standardizedCoefficients;
         return this;
@@ -138,6 +150,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public java.util.Map<String, Object>[] summary;
+
     public Result withSummary(java.util.Map<String, Object>[] summary) {
         this.summary = summary;
         return this;
@@ -146,9 +159,11 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tested_variables")
     public String[] testedVariables;
+
     public Result withTestedVariables(String[] testedVariables) {
         this.testedVariables = testedVariables;
         return this;
     }
     
+    public Result(){}
 }

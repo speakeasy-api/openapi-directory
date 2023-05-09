@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeUsersMessage {
     
     public String engine;
+
     public DescribeUsersMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -16,6 +17,7 @@ public class DescribeUsersMessage {
     
     
     public Filter[] filters;
+
     public DescribeUsersMessage withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeUsersMessage {
     
     
     public String marker;
+
     public DescribeUsersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +33,7 @@ public class DescribeUsersMessage {
     
     
     public Long maxRecords;
+
     public DescribeUsersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,9 +41,11 @@ public class DescribeUsersMessage {
     
     
     public String userId;
+
     public DescribeUsersMessage withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DescribeUsersMessage(){}
 }

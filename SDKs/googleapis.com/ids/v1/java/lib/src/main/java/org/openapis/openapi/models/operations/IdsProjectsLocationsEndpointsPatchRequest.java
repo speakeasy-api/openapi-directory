@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IdsProjectsLocationsEndpointsPatchRequest {
@@ -12,6 +13,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public IdsProjectsLocationsEndpointsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EndpointInput endpointInput;
+
     public IdsProjectsLocationsEndpointsPatchRequest withEndpointInput(org.openapis.openapi.models.shared.EndpointInput endpointInput) {
         this.endpointInput = endpointInput;
         return this;
@@ -29,6 +32,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public IdsProjectsLocationsEndpointsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public IdsProjectsLocationsEndpointsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public IdsProjectsLocationsEndpointsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public IdsProjectsLocationsEndpointsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IdsProjectsLocationsEndpointsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public IdsProjectsLocationsEndpointsPatchRequest withName(String name) {
         this.name = name;
         return this;
@@ -89,6 +98,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public IdsProjectsLocationsEndpointsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public IdsProjectsLocationsEndpointsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,16 +120,18 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public IdsProjectsLocationsEndpointsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
     }
     
     /**
-     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public IdsProjectsLocationsEndpointsPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -129,6 +142,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public IdsProjectsLocationsEndpointsPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -139,6 +153,7 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public IdsProjectsLocationsEndpointsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class IdsProjectsLocationsEndpointsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public IdsProjectsLocationsEndpointsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public IdsProjectsLocationsEndpointsPatchRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

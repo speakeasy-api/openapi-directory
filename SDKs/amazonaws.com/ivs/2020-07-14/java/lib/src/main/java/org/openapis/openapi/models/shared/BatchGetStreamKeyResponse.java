@@ -15,6 +15,7 @@ public class BatchGetStreamKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BatchError[] errors;
+
     public BatchGetStreamKeyResponse withErrors(BatchError[] errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetStreamKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamKeys")
     public StreamKey[] streamKeys;
+
     public BatchGetStreamKeyResponse withStreamKeys(StreamKey[] streamKeys) {
         this.streamKeys = streamKeys;
         return this;
     }
     
+    public BatchGetStreamKeyResponse(){}
 }

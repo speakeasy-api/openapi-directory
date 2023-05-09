@@ -15,9 +15,11 @@ public class DisassociatePricingRulesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DisassociatePricingRulesOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DisassociatePricingRulesOutput(){}
 }

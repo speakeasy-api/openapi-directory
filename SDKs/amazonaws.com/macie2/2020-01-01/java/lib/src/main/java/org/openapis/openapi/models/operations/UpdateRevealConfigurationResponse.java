@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRevealConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateRevealConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRevealConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRevealConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateRevealConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRevealConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRevealConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateRevealConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateRevealConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateRevealConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRevealConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRevealConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRevealConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRevealConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRevealConfigurationResponse updateRevealConfigurationResponse;
+
     public UpdateRevealConfigurationResponse withUpdateRevealConfigurationResponse(org.openapis.openapi.models.shared.UpdateRevealConfigurationResponse updateRevealConfigurationResponse) {
         this.updateRevealConfigurationResponse = updateRevealConfigurationResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateRevealConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateRevealConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRevealConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class LatencyPercentile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latencyMicros")
     public String latencyMicros;
+
     public LatencyPercentile withLatencyMicros(String latencyMicros) {
         this.latencyMicros = latencyMicros;
         return this;
@@ -29,9 +30,11 @@ public class LatencyPercentile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent")
     public Integer percent;
+
     public LatencyPercentile withPercent(Integer percent) {
         this.percent = percent;
         return this;
     }
     
+    public LatencyPercentile(){}
 }

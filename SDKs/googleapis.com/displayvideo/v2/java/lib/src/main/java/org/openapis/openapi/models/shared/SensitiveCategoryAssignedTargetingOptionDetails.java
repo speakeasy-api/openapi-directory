@@ -18,9 +18,11 @@ public class SensitiveCategoryAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedSensitiveCategory")
     public SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum excludedSensitiveCategory;
+
     public SensitiveCategoryAssignedTargetingOptionDetails withExcludedSensitiveCategory(SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum excludedSensitiveCategory) {
         this.excludedSensitiveCategory = excludedSensitiveCategory;
         return this;
     }
     
+    public SensitiveCategoryAssignedTargetingOptionDetails(){}
 }

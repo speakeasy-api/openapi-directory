@@ -14,6 +14,7 @@ public class LanguagePredicted {
      */
     @JsonProperty("detected_language")
     public String detectedLanguage;
+
     public LanguagePredicted withDetectedLanguage(String detectedLanguage) {
         this.detectedLanguage = detectedLanguage;
         return this;
@@ -25,9 +26,13 @@ public class LanguagePredicted {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LanguagePredicted withId(String id) {
         this.id = id;
         return this;
     }
     
+    public LanguagePredicted(@JsonProperty("detected_language") String detectedLanguage) {
+        this.detectedLanguage = detectedLanguage;
+  }
 }

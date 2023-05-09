@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroupsTags {
     
     public String key;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroupsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroupsTags {
     
     
     public String value;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroupsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVerifiedAccessGroupsResultVerifiedAccessGroupsTags(){}
 }

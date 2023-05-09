@@ -15,6 +15,7 @@ public class ImageTagCreateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public ImageTagCreateEntry[] created;
+
     public ImageTagCreateSummary withCreated(ImageTagCreateEntry[] created) {
         this.created = created;
         return this;
@@ -23,6 +24,7 @@ public class ImageTagCreateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicated")
     public ImageTagCreateEntry[] duplicated;
+
     public ImageTagCreateSummary withDuplicated(ImageTagCreateEntry[] duplicated) {
         this.duplicated = duplicated;
         return this;
@@ -31,9 +33,11 @@ public class ImageTagCreateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceeded")
     public ImageTagCreateEntry[] exceeded;
+
     public ImageTagCreateSummary withExceeded(ImageTagCreateEntry[] exceeded) {
         this.exceeded = exceeded;
         return this;
     }
     
+    public ImageTagCreateSummary(){}
 }

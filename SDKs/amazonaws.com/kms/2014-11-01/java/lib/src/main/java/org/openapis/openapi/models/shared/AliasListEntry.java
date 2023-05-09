@@ -20,6 +20,7 @@ public class AliasListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasArn")
     public String aliasArn;
+
     public AliasListEntry withAliasArn(String aliasArn) {
         this.aliasArn = aliasArn;
         return this;
@@ -28,6 +29,7 @@ public class AliasListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasName")
     public String aliasName;
+
     public AliasListEntry withAliasName(String aliasName) {
         this.aliasName = aliasName;
         return this;
@@ -38,6 +40,7 @@ public class AliasListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public AliasListEntry withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -48,6 +51,7 @@ public class AliasListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDate")
     public OffsetDateTime lastUpdatedDate;
+
     public AliasListEntry withLastUpdatedDate(OffsetDateTime lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -56,9 +60,11 @@ public class AliasListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetKeyId")
     public String targetKeyId;
+
     public AliasListEntry withTargetKeyId(String targetKeyId) {
         this.targetKeyId = targetKeyId;
         return this;
     }
     
+    public AliasListEntry(){}
 }

@@ -22,6 +22,7 @@ public class SubscriptionResponse {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public SubscriptionResponse withActive(Boolean active) {
         this.active = active;
         return this;
@@ -34,6 +35,7 @@ public class SubscriptionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SubscriptionResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +46,7 @@ public class SubscriptionResponse {
      */
     @JsonProperty("eventType")
     public SubscriptionResponseEventTypeEnum eventType;
+
     public SubscriptionResponse withEventType(SubscriptionResponseEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -54,6 +57,7 @@ public class SubscriptionResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public SubscriptionResponse withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +69,7 @@ public class SubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public SubscriptionResponse withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -78,9 +83,16 @@ public class SubscriptionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SubscriptionResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SubscriptionResponse(@JsonProperty("active") Boolean active, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("eventType") SubscriptionResponseEventTypeEnum eventType, @JsonProperty("id") String id) {
+        this.active = active;
+        this.createdAt = createdAt;
+        this.eventType = eventType;
+        this.id = id;
+  }
 }

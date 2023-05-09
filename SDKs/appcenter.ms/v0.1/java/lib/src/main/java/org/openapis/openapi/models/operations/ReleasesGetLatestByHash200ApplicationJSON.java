@@ -18,6 +18,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("android_min_api_level")
     public String androidMinApiLevel;
+
     public ReleasesGetLatestByHash200ApplicationJSON withAndroidMinApiLevel(String androidMinApiLevel) {
         this.androidMinApiLevel = androidMinApiLevel;
         return this;
@@ -28,6 +29,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
      */
     @JsonProperty("app_display_name")
     public String appDisplayName;
+
     public ReleasesGetLatestByHash200ApplicationJSON withAppDisplayName(String appDisplayName) {
         this.appDisplayName = appDisplayName;
         return this;
@@ -38,6 +40,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
      */
     @JsonProperty("app_icon_url")
     public String appIconUrl;
+
     public ReleasesGetLatestByHash200ApplicationJSON withAppIconUrl(String appIconUrl) {
         this.appIconUrl = appIconUrl;
         return this;
@@ -48,6 +51,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
      */
     @JsonProperty("app_name")
     public String appName;
+
     public ReleasesGetLatestByHash200ApplicationJSON withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -59,6 +63,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_os")
     public String appOs;
+
     public ReleasesGetLatestByHash200ApplicationJSON withAppOs(String appOs) {
         this.appOs = appOs;
         return this;
@@ -70,6 +75,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public ReleasesGetLatestByHash200ApplicationJSONBuild build;
+
     public ReleasesGetLatestByHash200ApplicationJSON withBuild(ReleasesGetLatestByHash200ApplicationJSONBuild build) {
         this.build = build;
         return this;
@@ -81,6 +87,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_identifier")
     public String bundleIdentifier;
+
     public ReleasesGetLatestByHash200ApplicationJSON withBundleIdentifier(String bundleIdentifier) {
         this.bundleIdentifier = bundleIdentifier;
         return this;
@@ -92,6 +99,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_resign")
     public Boolean canResign;
+
     public ReleasesGetLatestByHash200ApplicationJSON withCanResign(Boolean canResign) {
         this.canResign = canResign;
         return this;
@@ -107,6 +115,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_type")
     public ReleasesGetLatestByHash200ApplicationJSONDestinationTypeEnum destinationType;
+
     public ReleasesGetLatestByHash200ApplicationJSON withDestinationType(ReleasesGetLatestByHash200ApplicationJSONDestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -118,6 +127,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public ReleasesGetLatestByHash200ApplicationJSONDestinations[] destinations;
+
     public ReleasesGetLatestByHash200ApplicationJSON withDestinations(ReleasesGetLatestByHash200ApplicationJSONDestinations[] destinations) {
         this.destinations = destinations;
         return this;
@@ -129,6 +139,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_family")
     public String deviceFamily;
+
     public ReleasesGetLatestByHash200ApplicationJSON withDeviceFamily(String deviceFamily) {
         this.deviceFamily = deviceFamily;
         return this;
@@ -140,6 +151,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_groups")
     public ReleasesGetLatestByHash200ApplicationJSONDistributionGroups[] distributionGroups;
+
     public ReleasesGetLatestByHash200ApplicationJSON withDistributionGroups(ReleasesGetLatestByHash200ApplicationJSONDistributionGroups[] distributionGroups) {
         this.distributionGroups = distributionGroups;
         return this;
@@ -151,6 +163,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_stores")
     public ReleasesGetLatestByHash200ApplicationJSONDistributionStores[] distributionStores;
+
     public ReleasesGetLatestByHash200ApplicationJSON withDistributionStores(ReleasesGetLatestByHash200ApplicationJSONDistributionStores[] distributionStores) {
         this.distributionStores = distributionStores;
         return this;
@@ -162,6 +175,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public ReleasesGetLatestByHash200ApplicationJSON withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -172,6 +186,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ReleasesGetLatestByHash200ApplicationJSON withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -183,6 +198,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public ReleasesGetLatestByHash200ApplicationJSON withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -193,6 +209,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
      */
     @JsonProperty("id")
     public Long id;
+
     public ReleasesGetLatestByHash200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -204,6 +221,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("install_url")
     public String installUrl;
+
     public ReleasesGetLatestByHash200ApplicationJSON withInstallUrl(String installUrl) {
         this.installUrl = installUrl;
         return this;
@@ -215,6 +233,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_external_build")
     public Boolean isExternalBuild;
+
     public ReleasesGetLatestByHash200ApplicationJSON withIsExternalBuild(Boolean isExternalBuild) {
         this.isExternalBuild = isExternalBuild;
         return this;
@@ -226,6 +245,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_provisioning_profile_syncing")
     public Boolean isProvisioningProfileSyncing;
+
     public ReleasesGetLatestByHash200ApplicationJSON withIsProvisioningProfileSyncing(Boolean isProvisioningProfileSyncing) {
         this.isProvisioningProfileSyncing = isProvisioningProfileSyncing;
         return this;
@@ -237,6 +257,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_udid_provisioned")
     public Boolean isUdidProvisioned;
+
     public ReleasesGetLatestByHash200ApplicationJSON withIsUdidProvisioned(Boolean isUdidProvisioned) {
         this.isUdidProvisioned = isUdidProvisioned;
         return this;
@@ -248,6 +269,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_os")
     public String minOs;
+
     public ReleasesGetLatestByHash200ApplicationJSON withMinOs(String minOs) {
         this.minOs = minOs;
         return this;
@@ -259,6 +281,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public ReleasesGetLatestByHash200ApplicationJSONOriginEnum origin;
+
     public ReleasesGetLatestByHash200ApplicationJSON withOrigin(ReleasesGetLatestByHash200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -270,6 +293,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_hashes")
     public String[] packageHashes;
+
     public ReleasesGetLatestByHash200ApplicationJSON withPackageHashes(String[] packageHashes) {
         this.packageHashes = packageHashes;
         return this;
@@ -281,6 +305,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning_profile_expiry_date")
     public String provisioningProfileExpiryDate;
+
     public ReleasesGetLatestByHash200ApplicationJSON withProvisioningProfileExpiryDate(String provisioningProfileExpiryDate) {
         this.provisioningProfileExpiryDate = provisioningProfileExpiryDate;
         return this;
@@ -292,6 +317,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning_profile_name")
     public String provisioningProfileName;
+
     public ReleasesGetLatestByHash200ApplicationJSON withProvisioningProfileName(String provisioningProfileName) {
         this.provisioningProfileName = provisioningProfileName;
         return this;
@@ -303,6 +329,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning_profile_type")
     public ReleasesGetLatestByHash200ApplicationJSONProvisioningProfileTypeEnum provisioningProfileType;
+
     public ReleasesGetLatestByHash200ApplicationJSON withProvisioningProfileType(ReleasesGetLatestByHash200ApplicationJSONProvisioningProfileTypeEnum provisioningProfileType) {
         this.provisioningProfileType = provisioningProfileType;
         return this;
@@ -314,6 +341,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_notes")
     public String releaseNotes;
+
     public ReleasesGetLatestByHash200ApplicationJSON withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
@@ -325,6 +353,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondary_download_url")
     public String secondaryDownloadUrl;
+
     public ReleasesGetLatestByHash200ApplicationJSON withSecondaryDownloadUrl(String secondaryDownloadUrl) {
         this.secondaryDownloadUrl = secondaryDownloadUrl;
         return this;
@@ -338,6 +367,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
      */
     @JsonProperty("short_version")
     public String shortVersion;
+
     public ReleasesGetLatestByHash200ApplicationJSON withShortVersion(String shortVersion) {
         this.shortVersion = shortVersion;
         return this;
@@ -349,6 +379,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public ReleasesGetLatestByHash200ApplicationJSON withSize(Long size) {
         this.size = size;
         return this;
@@ -360,6 +391,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ReleasesGetLatestByHash200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -370,6 +402,7 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
      */
     @JsonProperty("uploaded_at")
     public String uploadedAt;
+
     public ReleasesGetLatestByHash200ApplicationJSON withUploadedAt(String uploadedAt) {
         this.uploadedAt = uploadedAt;
         return this;
@@ -383,9 +416,20 @@ public class ReleasesGetLatestByHash200ApplicationJSON {
      */
     @JsonProperty("version")
     public String version;
+
     public ReleasesGetLatestByHash200ApplicationJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ReleasesGetLatestByHash200ApplicationJSON(@JsonProperty("app_display_name") String appDisplayName, @JsonProperty("app_icon_url") String appIconUrl, @JsonProperty("app_name") String appName, @JsonProperty("enabled") Boolean enabled, @JsonProperty("id") Long id, @JsonProperty("short_version") String shortVersion, @JsonProperty("uploaded_at") String uploadedAt, @JsonProperty("version") String version) {
+        this.appDisplayName = appDisplayName;
+        this.appIconUrl = appIconUrl;
+        this.appName = appName;
+        this.enabled = enabled;
+        this.id = id;
+        this.shortVersion = shortVersion;
+        this.uploadedAt = uploadedAt;
+        this.version = version;
+  }
 }

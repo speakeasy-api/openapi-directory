@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImageOcrPhotoWordsWithLocationRequestBody {
@@ -12,9 +13,13 @@ public class ImageOcrPhotoWordsWithLocationRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public ImageOcrPhotoWordsWithLocationRequestBodyImageFile imageFile;
+
     public ImageOcrPhotoWordsWithLocationRequestBody withImageFile(ImageOcrPhotoWordsWithLocationRequestBodyImageFile imageFile) {
         this.imageFile = imageFile;
         return this;
     }
     
+    public ImageOcrPhotoWordsWithLocationRequestBody(@JsonProperty("imageFile") ImageOcrPhotoWordsWithLocationRequestBodyImageFile imageFile) {
+        this.imageFile = imageFile;
+  }
 }

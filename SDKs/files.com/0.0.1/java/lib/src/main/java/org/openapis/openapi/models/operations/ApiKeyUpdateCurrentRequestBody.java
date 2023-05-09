@@ -13,6 +13,7 @@ public class ApiKeyUpdateCurrentRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=expires_at")
     public OffsetDateTime expiresAt;
+
     public ApiKeyUpdateCurrentRequestBody withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -23,6 +24,7 @@ public class ApiKeyUpdateCurrentRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public ApiKeyUpdateCurrentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +35,11 @@ public class ApiKeyUpdateCurrentRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=permission_set")
     public ApiKeyUpdateCurrentRequestBodyPermissionSetEnum permissionSet;
+
     public ApiKeyUpdateCurrentRequestBody withPermissionSet(ApiKeyUpdateCurrentRequestBodyPermissionSetEnum permissionSet) {
         this.permissionSet = permissionSet;
         return this;
     }
     
+    public ApiKeyUpdateCurrentRequestBody(){}
 }

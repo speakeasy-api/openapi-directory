@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchLegalEntitiesIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LegalEntityInfoInput legalEntityInfoInput;
+
     public PatchLegalEntitiesIdRequest withLegalEntityInfoInput(org.openapis.openapi.models.shared.LegalEntityInfoInput legalEntityInfoInput) {
         this.legalEntityInfoInput = legalEntityInfoInput;
         return this;
@@ -19,9 +21,13 @@ public class PatchLegalEntitiesIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchLegalEntitiesIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PatchLegalEntitiesIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

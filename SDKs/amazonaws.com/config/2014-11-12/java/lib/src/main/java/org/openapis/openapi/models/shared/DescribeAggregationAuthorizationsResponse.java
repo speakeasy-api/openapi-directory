@@ -15,6 +15,7 @@ public class DescribeAggregationAuthorizationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregationAuthorizations")
     public AggregationAuthorization[] aggregationAuthorizations;
+
     public DescribeAggregationAuthorizationsResponse withAggregationAuthorizations(AggregationAuthorization[] aggregationAuthorizations) {
         this.aggregationAuthorizations = aggregationAuthorizations;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAggregationAuthorizationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAggregationAuthorizationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAggregationAuthorizationsResponse(){}
 }

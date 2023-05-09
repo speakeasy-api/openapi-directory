@@ -18,6 +18,7 @@ public class EditorialContentDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public EditorialContent[] data;
+
     public EditorialContentDataList withData(EditorialContent[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class EditorialContentDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public EditorialContentDataList withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class EditorialContentDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public EditorialContentDataList withMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +54,7 @@ public class EditorialContentDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public EditorialContentDataList withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +66,7 @@ public class EditorialContentDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public EditorialContentDataList withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -73,9 +78,11 @@ public class EditorialContentDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public EditorialContentDataList withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public EditorialContentDataList(){}
 }

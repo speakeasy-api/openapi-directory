@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCarrierGatewayRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateCarrierGatewayRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateCarrierGatewayRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateCarrierGatewayRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateCarrierGatewayRequestTagSpecificationsTags(){}
 }

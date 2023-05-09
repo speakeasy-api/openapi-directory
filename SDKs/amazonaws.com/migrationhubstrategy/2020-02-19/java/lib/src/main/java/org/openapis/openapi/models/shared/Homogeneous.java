@@ -15,9 +15,11 @@ public class Homogeneous {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDatabaseEngine")
     public HomogeneousTargetDatabaseEngineEnum[] targetDatabaseEngine;
+
     public Homogeneous withTargetDatabaseEngine(HomogeneousTargetDatabaseEngineEnum[] targetDatabaseEngine) {
         this.targetDatabaseEngine = targetDatabaseEngine;
         return this;
     }
     
+    public Homogeneous(){}
 }

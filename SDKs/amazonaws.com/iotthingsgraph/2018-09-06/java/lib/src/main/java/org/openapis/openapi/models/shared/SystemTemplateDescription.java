@@ -15,6 +15,7 @@ public class SystemTemplateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public DefinitionDocument definition;
+
     public SystemTemplateDescription withDefinition(DefinitionDocument definition) {
         this.definition = definition;
         return this;
@@ -23,6 +24,7 @@ public class SystemTemplateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public SystemTemplateSummary summary;
+
     public SystemTemplateDescription withSummary(SystemTemplateSummary summary) {
         this.summary = summary;
         return this;
@@ -31,9 +33,11 @@ public class SystemTemplateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validatedNamespaceVersion")
     public Long validatedNamespaceVersion;
+
     public SystemTemplateDescription withValidatedNamespaceVersion(Long validatedNamespaceVersion) {
         this.validatedNamespaceVersion = validatedNamespaceVersion;
         return this;
     }
     
+    public SystemTemplateDescription(){}
 }

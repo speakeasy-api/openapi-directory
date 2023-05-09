@@ -15,9 +15,11 @@ public class UpdateFlowTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public FlowTemplateSummary summary;
+
     public UpdateFlowTemplateResponse withSummary(FlowTemplateSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public UpdateFlowTemplateResponse(){}
 }

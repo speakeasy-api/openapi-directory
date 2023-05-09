@@ -15,6 +15,7 @@ public class AssessmentControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controls")
     public AssessmentControl[] controls;
+
     public AssessmentControlSet withControls(AssessmentControl[] controls) {
         this.controls = controls;
         return this;
@@ -23,6 +24,7 @@ public class AssessmentControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegations")
     public Delegation[] delegations;
+
     public AssessmentControlSet withDelegations(Delegation[] delegations) {
         this.delegations = delegations;
         return this;
@@ -31,6 +33,7 @@ public class AssessmentControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssessmentControlSet withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class AssessmentControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentControlSet withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class AssessmentControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualEvidenceCount")
     public Long manualEvidenceCount;
+
     public AssessmentControlSet withManualEvidenceCount(Long manualEvidenceCount) {
         this.manualEvidenceCount = manualEvidenceCount;
         return this;
@@ -55,6 +60,7 @@ public class AssessmentControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public Role[] roles;
+
     public AssessmentControlSet withRoles(Role[] roles) {
         this.roles = roles;
         return this;
@@ -63,6 +69,7 @@ public class AssessmentControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ControlSetStatusEnum status;
+
     public AssessmentControlSet withStatus(ControlSetStatusEnum status) {
         this.status = status;
         return this;
@@ -71,9 +78,11 @@ public class AssessmentControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemEvidenceCount")
     public Long systemEvidenceCount;
+
     public AssessmentControlSet withSystemEvidenceCount(Long systemEvidenceCount) {
         this.systemEvidenceCount = systemEvidenceCount;
         return this;
     }
     
+    public AssessmentControlSet(){}
 }

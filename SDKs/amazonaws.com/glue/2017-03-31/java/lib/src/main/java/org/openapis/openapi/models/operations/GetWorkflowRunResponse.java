@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkflowRunResponse {
     
     public String contentType;
+
     public GetWorkflowRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkflowRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetWorkflowRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkflowRunResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkflowRunResponse getWorkflowRunResponse;
+
     public GetWorkflowRunResponse withGetWorkflowRunResponse(org.openapis.openapi.models.shared.GetWorkflowRunResponse getWorkflowRunResponse) {
         this.getWorkflowRunResponse = getWorkflowRunResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetWorkflowRunResponse {
      */
     
     public Object internalServiceException;
+
     public GetWorkflowRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetWorkflowRunResponse {
      */
     
     public Object invalidInputException;
+
     public GetWorkflowRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetWorkflowRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetWorkflowRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetWorkflowRunResponse {
     
     
     public Integer statusCode;
+
     public GetWorkflowRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetWorkflowRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkflowRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetWorkflowRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

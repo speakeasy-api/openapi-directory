@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RoutingConfig {
     @JsonProperty("FailoverConfig")
     public FailoverConfig failoverConfig;
+
     public RoutingConfig withFailoverConfig(FailoverConfig failoverConfig) {
         this.failoverConfig = failoverConfig;
         return this;
     }
     
+    public RoutingConfig(@JsonProperty("FailoverConfig") FailoverConfig failoverConfig) {
+        this.failoverConfig = failoverConfig;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SqlSslCertsCreateEphemeralResponse {
     
     public String contentType;
+
     public SqlSslCertsCreateEphemeralResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SqlSslCertsCreateEphemeralResponse {
      */
     
     public org.openapis.openapi.models.shared.SslCert sslCert;
+
     public SqlSslCertsCreateEphemeralResponse withSslCert(org.openapis.openapi.models.shared.SslCert sslCert) {
         this.sslCert = sslCert;
         return this;
@@ -26,6 +29,7 @@ public class SqlSslCertsCreateEphemeralResponse {
     
     
     public Integer statusCode;
+
     public SqlSslCertsCreateEphemeralResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SqlSslCertsCreateEphemeralResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SqlSslCertsCreateEphemeralResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SqlSslCertsCreateEphemeralResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

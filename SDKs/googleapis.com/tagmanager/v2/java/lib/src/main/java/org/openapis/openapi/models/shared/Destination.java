@@ -18,6 +18,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Destination withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Destination withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public Destination withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -51,6 +54,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationLinkId")
     public String destinationLinkId;
+
     public Destination withDestinationLinkId(String destinationLinkId) {
         this.destinationLinkId = destinationLinkId;
         return this;
@@ -62,6 +66,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Destination withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -73,6 +78,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Destination withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Destination withPath(String path) {
         this.path = path;
         return this;
@@ -95,9 +102,11 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Destination withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
     }
     
+    public Destination(){}
 }

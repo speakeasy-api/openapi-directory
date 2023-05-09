@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatus {
     
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum code;
+
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatus withCode(DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatus {
     
     
     public String message;
+
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatus(){}
 }

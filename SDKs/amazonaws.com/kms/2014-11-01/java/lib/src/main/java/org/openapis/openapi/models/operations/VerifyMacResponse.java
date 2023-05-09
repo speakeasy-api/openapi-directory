@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifyMacResponse {
     
     public String contentType;
+
     public VerifyMacResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VerifyMacResponse {
      */
     
     public Object disabledException;
+
     public VerifyMacResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -29,6 +32,7 @@ public class VerifyMacResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public VerifyMacResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -39,6 +43,7 @@ public class VerifyMacResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public VerifyMacResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -49,6 +54,7 @@ public class VerifyMacResponse {
      */
     
     public Object kmsInternalException;
+
     public VerifyMacResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class VerifyMacResponse {
      */
     
     public Object kmsInvalidMacException;
+
     public VerifyMacResponse withKMSInvalidMacException(Object kmsInvalidMacException) {
         this.kmsInvalidMacException = kmsInvalidMacException;
         return this;
@@ -69,6 +76,7 @@ public class VerifyMacResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public VerifyMacResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -79,6 +87,7 @@ public class VerifyMacResponse {
      */
     
     public Object keyUnavailableException;
+
     public VerifyMacResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class VerifyMacResponse {
      */
     
     public Object notFoundException;
+
     public VerifyMacResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -96,6 +106,7 @@ public class VerifyMacResponse {
     
     
     public Integer statusCode;
+
     public VerifyMacResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class VerifyMacResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifyMacResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class VerifyMacResponse {
      */
     
     public org.openapis.openapi.models.shared.VerifyMacResponse verifyMacResponse;
+
     public VerifyMacResponse withVerifyMacResponse(org.openapis.openapi.models.shared.VerifyMacResponse verifyMacResponse) {
         this.verifyMacResponse = verifyMacResponse;
         return this;
     }
     
+    public VerifyMacResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

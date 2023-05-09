@@ -18,6 +18,7 @@ public class TeamsUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamsUpdate200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class TeamsUpdate200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsUpdate200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,6 +40,7 @@ public class TeamsUpdate200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public TeamsUpdate200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -48,9 +51,15 @@ public class TeamsUpdate200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsUpdate200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TeamsUpdate200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+  }
 }

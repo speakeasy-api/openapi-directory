@@ -15,9 +15,11 @@ public class Promotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotion")
     public PromotionFields promotion;
+
     public Promotion withPromotion(PromotionFields promotion) {
         this.promotion = promotion;
         return this;
     }
     
+    public Promotion(){}
 }

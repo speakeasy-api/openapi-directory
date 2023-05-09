@@ -15,6 +15,7 @@ public class Plan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationIds")
     public String[] rotationIds;
+
     public Plan withRotationIds(String[] rotationIds) {
         this.rotationIds = rotationIds;
         return this;
@@ -23,9 +24,11 @@ public class Plan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stages")
     public Stage[] stages;
+
     public Plan withStages(Stage[] stages) {
         this.stages = stages;
         return this;
     }
     
+    public Plan(){}
 }

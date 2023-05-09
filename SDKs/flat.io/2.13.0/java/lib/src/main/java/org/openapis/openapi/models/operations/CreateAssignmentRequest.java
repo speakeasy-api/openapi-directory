@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAssignmentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssignmentCreation assignmentCreation;
+
     public CreateAssignmentRequest withAssignmentCreation(org.openapis.openapi.models.shared.AssignmentCreation assignmentCreation) {
         this.assignmentCreation = assignmentCreation;
         return this;
@@ -19,9 +21,13 @@ public class CreateAssignmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public CreateAssignmentRequest withClass(String class_) {
         this.class_ = class_;
         return this;
     }
     
+    public CreateAssignmentRequest(@JsonProperty("class") String class_) {
+        this.class_ = class_;
+  }
 }

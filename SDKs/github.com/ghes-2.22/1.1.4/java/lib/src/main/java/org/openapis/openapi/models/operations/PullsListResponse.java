@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsListResponse {
     
     public String contentType;
+
     public PullsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsListResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PullsListResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PullsListResponse {
     
     
     public Integer statusCode;
+
     public PullsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PullsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PullsListResponse {
      */
     
     public org.openapis.openapi.models.shared.PullRequestSimple[] pullRequestSimples;
+
     public PullsListResponse withPullRequestSimples(org.openapis.openapi.models.shared.PullRequestSimple[] pullRequestSimples) {
         this.pullRequestSimples = pullRequestSimples;
         return this;
@@ -50,9 +56,14 @@ public class PullsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public PullsListResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public PullsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

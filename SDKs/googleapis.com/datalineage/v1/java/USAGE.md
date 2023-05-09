@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity;
 import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest;
 import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse;
+import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -17,40 +16,41 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DatalineageProjectsLocationsBatchSearchLinkProcessesRequest req = new DatalineageProjectsLocationsBatchSearchLinkProcessesRequest() {{
-                dollarXgafv = "2";
+            DatalineageProjectsLocationsBatchSearchLinkProcessesRequest req = new DatalineageProjectsLocationsBatchSearchLinkProcessesRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest = new GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest() {{
                     links = new String[]{{
-                        add("distinctio"),
                         add("quibusdam"),
                         add("unde"),
+                        add("nulla"),
                     }};
-                    pageSize = 857946;
-                    pageToken = "corrupti";
-                }};
-                accessToken = "illum";
-                alt = "media";
-                callback = "error";
-                fields = "deserunt";
-                key = "suscipit";
-                oauthToken = "iure";
-                parent = "magnam";
+                    pageSize = 544883;
+                    pageToken = "illum";
+                }};;
+                accessToken = "vel";
+                alt = AltEnum.MEDIA;
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                oauthToken = "magnam";
                 prettyPrint = false;
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
-            DatalineageProjectsLocationsBatchSearchLinkProcessesResponse res = sdk.projects.datalineageProjectsLocationsBatchSearchLinkProcesses(req, new DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity() {{
+            DatalineageProjectsLocationsBatchSearchLinkProcessesResponse res = sdk.projects.datalineageProjectsLocationsBatchSearchLinkProcesses(req, new DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity("tempora", "suscipit") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse.isPresent()) {
+            if (res.googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

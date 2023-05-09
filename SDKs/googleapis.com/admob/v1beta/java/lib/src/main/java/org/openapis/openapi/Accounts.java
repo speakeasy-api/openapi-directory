@@ -57,11 +57,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListResponse res = new org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListResponse() {{
+        org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListResponse res = new org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListResponse(contentType, httpRes.statusCode()) {{
             listAdSourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListResponse res = new org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListResponse() {{
+        org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListResponse res = new org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListResponse(contentType, httpRes.statusCode()) {{
             listAdUnitsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,11 +145,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdmobAccountsAppsListResponse res = new org.openapis.openapi.models.operations.AdmobAccountsAppsListResponse() {{
+        org.openapis.openapi.models.operations.AdmobAccountsAppsListResponse res = new org.openapis.openapi.models.operations.AdmobAccountsAppsListResponse(contentType, httpRes.statusCode()) {{
             listAppsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdmobAccountsGetResponse res = new org.openapis.openapi.models.operations.AdmobAccountsGetResponse() {{
+        org.openapis.openapi.models.operations.AdmobAccountsGetResponse res = new org.openapis.openapi.models.operations.AdmobAccountsGetResponse(contentType, httpRes.statusCode()) {{
             publisherAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdmobAccountsListResponse res = new org.openapis.openapi.models.operations.AdmobAccountsListResponse() {{
+        org.openapis.openapi.models.operations.AdmobAccountsListResponse res = new org.openapis.openapi.models.operations.AdmobAccountsListResponse(contentType, httpRes.statusCode()) {{
             listPublisherAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdmobAccountsMediationReportGenerateResponse res = new org.openapis.openapi.models.operations.AdmobAccountsMediationReportGenerateResponse() {{
+        org.openapis.openapi.models.operations.AdmobAccountsMediationReportGenerateResponse res = new org.openapis.openapi.models.operations.AdmobAccountsMediationReportGenerateResponse(contentType, httpRes.statusCode()) {{
             generateMediationReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdmobAccountsNetworkReportGenerateResponse res = new org.openapis.openapi.models.operations.AdmobAccountsNetworkReportGenerateResponse() {{
+        org.openapis.openapi.models.operations.AdmobAccountsNetworkReportGenerateResponse res = new org.openapis.openapi.models.operations.AdmobAccountsNetworkReportGenerateResponse(contentType, httpRes.statusCode()) {{
             generateNetworkReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

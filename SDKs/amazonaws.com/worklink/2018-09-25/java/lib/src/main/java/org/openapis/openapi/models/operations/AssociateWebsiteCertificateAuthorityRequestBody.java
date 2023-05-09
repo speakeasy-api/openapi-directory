@@ -14,6 +14,7 @@ public class AssociateWebsiteCertificateAuthorityRequestBody {
      */
     @JsonProperty("Certificate")
     public String certificate;
+
     public AssociateWebsiteCertificateAuthorityRequestBody withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -25,6 +26,7 @@ public class AssociateWebsiteCertificateAuthorityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public AssociateWebsiteCertificateAuthorityRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,9 +37,14 @@ public class AssociateWebsiteCertificateAuthorityRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public AssociateWebsiteCertificateAuthorityRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public AssociateWebsiteCertificateAuthorityRequestBody(@JsonProperty("Certificate") String certificate, @JsonProperty("FleetArn") String fleetArn) {
+        this.certificate = certificate;
+        this.fleetArn = fleetArn;
+  }
 }

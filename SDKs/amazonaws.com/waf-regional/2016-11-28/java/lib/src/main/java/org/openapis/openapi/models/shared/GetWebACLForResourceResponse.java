@@ -15,9 +15,11 @@ public class GetWebACLForResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebACLSummary")
     public WebACLSummary webACLSummary;
+
     public GetWebACLForResourceResponse withWebACLSummary(WebACLSummary webACLSummary) {
         this.webACLSummary = webACLSummary;
         return this;
     }
     
+    public GetWebACLForResourceResponse(){}
 }

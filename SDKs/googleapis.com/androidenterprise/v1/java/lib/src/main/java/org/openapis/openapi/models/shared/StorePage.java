@@ -18,6 +18,7 @@ public class StorePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StorePage withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class StorePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String[] link;
+
     public StorePage withLink(String[] link) {
         this.link = link;
         return this;
@@ -40,9 +42,11 @@ public class StorePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public LocalizedText[] name;
+
     public StorePage withName(LocalizedText[] name) {
         this.name = name;
         return this;
     }
     
+    public StorePage(){}
 }

@@ -18,6 +18,7 @@ public class ListLunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("luns")
     public Lun[] luns;
+
     public ListLunsResponse withLuns(Lun[] luns) {
         this.luns = luns;
         return this;
@@ -29,6 +30,7 @@ public class ListLunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListLunsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListLunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListLunsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListLunsResponse(){}
 }

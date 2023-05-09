@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterSnapshotCopyStatus {
     
     public String destinationRegion;
+
     public ClusterSnapshotCopyStatus withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -19,6 +20,7 @@ public class ClusterSnapshotCopyStatus {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public ClusterSnapshotCopyStatus withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -26,6 +28,7 @@ public class ClusterSnapshotCopyStatus {
     
     
     public Long retentionPeriod;
+
     public ClusterSnapshotCopyStatus withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -33,9 +36,11 @@ public class ClusterSnapshotCopyStatus {
     
     
     public String snapshotCopyGrantName;
+
     public ClusterSnapshotCopyStatus withSnapshotCopyGrantName(String snapshotCopyGrantName) {
         this.snapshotCopyGrantName = snapshotCopyGrantName;
         return this;
     }
     
+    public ClusterSnapshotCopyStatus(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskAddCollectionRequest {
@@ -12,6 +13,7 @@ public class TaskAddCollectionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TaskAddCollectionParameter taskAddCollectionParameter;
+
     public TaskAddCollectionRequest withTaskAddCollectionParameter(org.openapis.openapi.models.shared.TaskAddCollectionParameter taskAddCollectionParameter) {
         this.taskAddCollectionParameter = taskAddCollectionParameter;
         return this;
@@ -22,6 +24,7 @@ public class TaskAddCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public TaskAddCollectionRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class TaskAddCollectionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public TaskAddCollectionRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class TaskAddCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public TaskAddCollectionRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -52,6 +57,7 @@ public class TaskAddCollectionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public TaskAddCollectionRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -62,6 +68,7 @@ public class TaskAddCollectionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public TaskAddCollectionRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -72,9 +79,15 @@ public class TaskAddCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public TaskAddCollectionRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public TaskAddCollectionRequest(@JsonProperty("TaskAddCollectionParameter") org.openapis.openapi.models.shared.TaskAddCollectionParameter taskAddCollectionParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("jobId") String jobId) {
+        this.taskAddCollectionParameter = taskAddCollectionParameter;
+        this.apiVersion = apiVersion;
+        this.jobId = jobId;
+  }
 }

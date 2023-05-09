@@ -18,6 +18,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public FirstLastNameUSRaceEthnicityOut withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -26,6 +27,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirstLastNameUSRaceEthnicityOut withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public FirstLastNameUSRaceEthnicityOut withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -48,6 +51,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityAltCalibrated")
     public Double probabilityAltCalibrated;
+
     public FirstLastNameUSRaceEthnicityOut withProbabilityAltCalibrated(Double probabilityAltCalibrated) {
         this.probabilityAltCalibrated = probabilityAltCalibrated;
         return this;
@@ -59,6 +63,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityCalibrated")
     public Double probabilityCalibrated;
+
     public FirstLastNameUSRaceEthnicityOut withProbabilityCalibrated(Double probabilityCalibrated) {
         this.probabilityCalibrated = probabilityCalibrated;
         return this;
@@ -70,6 +75,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raceEthnicitiesTop")
     public String[] raceEthnicitiesTop;
+
     public FirstLastNameUSRaceEthnicityOut withRaceEthnicitiesTop(String[] raceEthnicitiesTop) {
         this.raceEthnicitiesTop = raceEthnicitiesTop;
         return this;
@@ -81,6 +87,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raceEthnicity")
     public FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum raceEthnicity;
+
     public FirstLastNameUSRaceEthnicityOut withRaceEthnicity(FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum raceEthnicity) {
         this.raceEthnicity = raceEthnicity;
         return this;
@@ -92,6 +99,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raceEthnicityAlt")
     public FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum raceEthnicityAlt;
+
     public FirstLastNameUSRaceEthnicityOut withRaceEthnicityAlt(FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum raceEthnicityAlt) {
         this.raceEthnicityAlt = raceEthnicityAlt;
         return this;
@@ -103,6 +111,7 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public FirstLastNameUSRaceEthnicityOut withScore(Double score) {
         this.score = score;
         return this;
@@ -111,9 +120,11 @@ public class FirstLastNameUSRaceEthnicityOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public FirstLastNameUSRaceEthnicityOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public FirstLastNameUSRaceEthnicityOut(){}
 }

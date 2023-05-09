@@ -15,6 +15,7 @@ public class Extensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificatePolicies")
     public PolicyInformation[] certificatePolicies;
+
     public Extensions withCertificatePolicies(PolicyInformation[] certificatePolicies) {
         this.certificatePolicies = certificatePolicies;
         return this;
@@ -23,6 +24,7 @@ public class Extensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomExtensions")
     public CustomExtension[] customExtensions;
+
     public Extensions withCustomExtensions(CustomExtension[] customExtensions) {
         this.customExtensions = customExtensions;
         return this;
@@ -31,6 +33,7 @@ public class Extensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedKeyUsage")
     public ExtendedKeyUsage[] extendedKeyUsage;
+
     public Extensions withExtendedKeyUsage(ExtendedKeyUsage[] extendedKeyUsage) {
         this.extendedKeyUsage = extendedKeyUsage;
         return this;
@@ -42,6 +45,7 @@ public class Extensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyUsage")
     public KeyUsage keyUsage;
+
     public Extensions withKeyUsage(KeyUsage keyUsage) {
         this.keyUsage = keyUsage;
         return this;
@@ -50,9 +54,11 @@ public class Extensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubjectAlternativeNames")
     public GeneralName[] subjectAlternativeNames;
+
     public Extensions withSubjectAlternativeNames(GeneralName[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
     }
     
+    public Extensions(){}
 }

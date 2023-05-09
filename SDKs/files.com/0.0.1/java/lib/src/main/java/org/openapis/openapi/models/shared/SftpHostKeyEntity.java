@@ -18,6 +18,7 @@ public class SftpHostKeyEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint_md5")
     public String fingerprintMd5;
+
     public SftpHostKeyEntity withFingerprintMd5(String fingerprintMd5) {
         this.fingerprintMd5 = fingerprintMd5;
         return this;
@@ -29,6 +30,7 @@ public class SftpHostKeyEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint_sha256")
     public String fingerprintSha256;
+
     public SftpHostKeyEntity withFingerprintSha256(String fingerprintSha256) {
         this.fingerprintSha256 = fingerprintSha256;
         return this;
@@ -40,6 +42,7 @@ public class SftpHostKeyEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public SftpHostKeyEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class SftpHostKeyEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SftpHostKeyEntity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SftpHostKeyEntity(){}
 }

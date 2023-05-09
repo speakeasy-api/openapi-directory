@@ -15,6 +15,7 @@ public class GetTerminalCheckoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout")
     public TerminalCheckout checkout;
+
     public GetTerminalCheckoutResponse withCheckout(TerminalCheckout checkout) {
         this.checkout = checkout;
         return this;
@@ -26,9 +27,11 @@ public class GetTerminalCheckoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public GetTerminalCheckoutResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetTerminalCheckoutResponse(){}
 }

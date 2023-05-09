@@ -15,6 +15,7 @@ public class OptimizationObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemAttribute")
     public String itemAttribute;
+
     public OptimizationObjective withItemAttribute(String itemAttribute) {
         this.itemAttribute = itemAttribute;
         return this;
@@ -23,9 +24,11 @@ public class OptimizationObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectiveSensitivity")
     public ObjectiveSensitivityEnum objectiveSensitivity;
+
     public OptimizationObjective withObjectiveSensitivity(ObjectiveSensitivityEnum objectiveSensitivity) {
         this.objectiveSensitivity = objectiveSensitivity;
         return this;
     }
     
+    public OptimizationObjective(){}
 }

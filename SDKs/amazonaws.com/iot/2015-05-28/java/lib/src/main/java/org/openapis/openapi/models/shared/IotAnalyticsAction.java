@@ -15,6 +15,7 @@ public class IotAnalyticsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchMode")
     public Boolean batchMode;
+
     public IotAnalyticsAction withBatchMode(Boolean batchMode) {
         this.batchMode = batchMode;
         return this;
@@ -23,6 +24,7 @@ public class IotAnalyticsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelArn")
     public String channelArn;
+
     public IotAnalyticsAction withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -31,6 +33,7 @@ public class IotAnalyticsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelName")
     public String channelName;
+
     public IotAnalyticsAction withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -39,9 +42,11 @@ public class IotAnalyticsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public IotAnalyticsAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public IotAnalyticsAction(){}
 }

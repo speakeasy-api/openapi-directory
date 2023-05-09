@@ -15,6 +15,7 @@ public class PostV2ActivitiesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=action_id")
     public Long actionId;
+
     public PostV2ActivitiesJsonRequestBody withActionId(Long actionId) {
         this.actionId = actionId;
         return this;
@@ -28,9 +29,11 @@ public class PostV2ActivitiesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=task_id")
     public Long taskId;
+
     public PostV2ActivitiesJsonRequestBody withTaskId(Long taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public PostV2ActivitiesJsonRequestBody(){}
 }

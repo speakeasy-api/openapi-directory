@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateChatCompletionResponse {
     
     public String contentType;
+
     public CreateChatCompletionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateChatCompletionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateChatCompletionResponse createChatCompletionResponse;
+
     public CreateChatCompletionResponse withCreateChatCompletionResponse(org.openapis.openapi.models.shared.CreateChatCompletionResponse createChatCompletionResponse) {
         this.createChatCompletionResponse = createChatCompletionResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateChatCompletionResponse {
     
     
     public Integer statusCode;
+
     public CreateChatCompletionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreateChatCompletionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateChatCompletionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateChatCompletionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

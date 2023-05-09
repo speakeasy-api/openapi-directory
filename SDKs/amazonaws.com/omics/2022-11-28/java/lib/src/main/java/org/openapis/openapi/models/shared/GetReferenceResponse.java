@@ -15,9 +15,11 @@ public class GetReferenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public GetReferenceResponse withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public GetReferenceResponse(){}
 }

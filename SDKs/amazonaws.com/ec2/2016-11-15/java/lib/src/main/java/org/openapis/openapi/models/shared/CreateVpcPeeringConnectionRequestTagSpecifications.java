@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcPeeringConnectionRequestTagSpecifications {
     
     public CreateVpcPeeringConnectionRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateVpcPeeringConnectionRequestTagSpecifications withResourceType(CreateVpcPeeringConnectionRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpcPeeringConnectionRequestTagSpecifications {
     
     
     public CreateVpcPeeringConnectionRequestTagSpecificationsTags[] tags;
+
     public CreateVpcPeeringConnectionRequestTagSpecifications withTags(CreateVpcPeeringConnectionRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateVpcPeeringConnectionRequestTagSpecifications(){}
 }

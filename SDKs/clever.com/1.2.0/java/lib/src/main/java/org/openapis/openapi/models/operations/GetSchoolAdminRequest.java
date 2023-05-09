@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchoolAdminRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSchoolAdminRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +18,13 @@ public class GetSchoolAdminRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public String include;
+
     public GetSchoolAdminRequest withInclude(String include) {
         this.include = include;
         return this;
     }
     
+    public GetSchoolAdminRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

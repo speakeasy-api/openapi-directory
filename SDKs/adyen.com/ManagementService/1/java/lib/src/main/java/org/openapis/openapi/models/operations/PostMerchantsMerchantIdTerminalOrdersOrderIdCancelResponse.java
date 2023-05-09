@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse {
     
     public String contentType;
+
     public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse {
     
     
     public Integer statusCode;
+
     public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminalOrder terminalOrder;
+
     public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse withTerminalOrder(org.openapis.openapi.models.shared.TerminalOrder terminalOrder) {
         this.terminalOrder = terminalOrder;
         return this;
     }
     
+    public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

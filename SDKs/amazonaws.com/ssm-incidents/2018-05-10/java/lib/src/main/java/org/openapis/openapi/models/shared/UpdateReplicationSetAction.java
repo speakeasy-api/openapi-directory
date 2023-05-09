@@ -15,6 +15,7 @@ public class UpdateReplicationSetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addRegionAction")
     public AddRegionAction addRegionAction;
+
     public UpdateReplicationSetAction withAddRegionAction(AddRegionAction addRegionAction) {
         this.addRegionAction = addRegionAction;
         return this;
@@ -23,9 +24,11 @@ public class UpdateReplicationSetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteRegionAction")
     public DeleteRegionAction deleteRegionAction;
+
     public UpdateReplicationSetAction withDeleteRegionAction(DeleteRegionAction deleteRegionAction) {
         this.deleteRegionAction = deleteRegionAction;
         return this;
     }
     
+    public UpdateReplicationSetAction(){}
 }

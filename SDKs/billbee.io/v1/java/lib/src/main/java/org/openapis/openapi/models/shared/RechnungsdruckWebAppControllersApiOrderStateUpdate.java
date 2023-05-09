@@ -20,9 +20,11 @@ public class RechnungsdruckWebAppControllersApiOrderStateUpdate {
     @JsonProperty("NewStateId")
     @SpeakeasyMetadata("form:name=NewStateId")
     public RechnungsdruckWebAppControllersApiOrderStateUpdateNewStateIdEnum newStateId;
+
     public RechnungsdruckWebAppControllersApiOrderStateUpdate withNewStateId(RechnungsdruckWebAppControllersApiOrderStateUpdateNewStateIdEnum newStateId) {
         this.newStateId = newStateId;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiOrderStateUpdate(){}
 }

@@ -14,6 +14,7 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRu
      */
     @JsonProperty("access")
     public String access;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules withAccess(String access) {
         this.access = access;
         return this;
@@ -25,6 +26,7 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedIps")
     public String[] allowedIps;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules withAllowedIps(String[] allowedIps) {
         this.allowedIps = allowedIps;
         return this;
@@ -35,6 +37,7 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRu
      */
     @JsonProperty("lanIp")
     public String lanIp;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules withLanIp(String lanIp) {
         this.lanIp = lanIp;
         return this;
@@ -45,6 +48,7 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRu
      */
     @JsonProperty("localPort")
     public String localPort;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules withLocalPort(String localPort) {
         this.localPort = localPort;
         return this;
@@ -56,6 +60,7 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +71,7 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRu
      */
     @JsonProperty("protocol")
     public String protocol;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -76,9 +82,17 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRu
      */
     @JsonProperty("publicPort")
     public String publicPort;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules withPublicPort(String publicPort) {
         this.publicPort = publicPort;
         return this;
     }
     
+    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules(@JsonProperty("access") String access, @JsonProperty("lanIp") String lanIp, @JsonProperty("localPort") String localPort, @JsonProperty("protocol") String protocol, @JsonProperty("publicPort") String publicPort) {
+        this.access = access;
+        this.lanIp = lanIp;
+        this.localPort = localPort;
+        this.protocol = protocol;
+        this.publicPort = publicPort;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudEssentialcontactsV1ListContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public GoogleCloudEssentialcontactsV1Contact[] contacts;
+
     public GoogleCloudEssentialcontactsV1ListContactsResponse withContacts(GoogleCloudEssentialcontactsV1Contact[] contacts) {
         this.contacts = contacts;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudEssentialcontactsV1ListContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudEssentialcontactsV1ListContactsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudEssentialcontactsV1ListContactsResponse(){}
 }

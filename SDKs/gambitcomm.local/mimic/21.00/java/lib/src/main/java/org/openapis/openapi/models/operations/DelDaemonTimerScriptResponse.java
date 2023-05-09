@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DelDaemonTimerScriptResponse {
     
     public String contentType;
+
     public DelDaemonTimerScriptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DelDaemonTimerScriptResponse {
     
     
     public Integer statusCode;
+
     public DelDaemonTimerScriptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DelDaemonTimerScriptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DelDaemonTimerScriptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DelDaemonTimerScriptResponse {
      */
     
     public String delDaemonTimerScript200ApplicationJSONString;
+
     public DelDaemonTimerScriptResponse withDelDaemonTimerScript200ApplicationJSONString(String delDaemonTimerScript200ApplicationJSONString) {
         this.delDaemonTimerScript200ApplicationJSONString = delDaemonTimerScript200ApplicationJSONString;
         return this;
     }
     
+    public DelDaemonTimerScriptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

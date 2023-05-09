@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchFlightOffersResponse {
     
     public String contentType;
+
     public SearchFlightOffersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +29,7 @@ public class SearchFlightOffersResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400 error400;
+
     public SearchFlightOffersResponse withError400(org.openapis.openapi.models.shared.Error400 error400) {
         this.error400 = error400;
         return this;
@@ -37,6 +40,7 @@ public class SearchFlightOffersResponse {
      */
     
     public org.openapis.openapi.models.shared.Error500 error500;
+
     public SearchFlightOffersResponse withError500(org.openapis.openapi.models.shared.Error500 error500) {
         this.error500 = error500;
         return this;
@@ -44,6 +48,7 @@ public class SearchFlightOffersResponse {
     
     
     public Integer statusCode;
+
     public SearchFlightOffersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -51,6 +56,7 @@ public class SearchFlightOffersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchFlightOffersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -61,9 +67,14 @@ public class SearchFlightOffersResponse {
      */
     
     public SearchFlightOffersSuccess success;
+
     public SearchFlightOffersResponse withSuccess(SearchFlightOffersSuccess success) {
         this.success = success;
         return this;
     }
     
+    public SearchFlightOffersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

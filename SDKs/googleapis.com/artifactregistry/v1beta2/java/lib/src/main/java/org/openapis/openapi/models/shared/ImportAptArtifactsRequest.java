@@ -18,9 +18,11 @@ public class ImportAptArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public ImportAptArtifactsGcsSource gcsSource;
+
     public ImportAptArtifactsRequest withGcsSource(ImportAptArtifactsGcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public ImportAptArtifactsRequest(){}
 }

@@ -12,6 +12,7 @@ public class DisassociateSubnetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public DisassociateSubnetsRequest withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -20,6 +21,7 @@ public class DisassociateSubnetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public DisassociateSubnetsRequest withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -27,6 +29,7 @@ public class DisassociateSubnetsRequest {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public DisassociateSubnetsRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -35,9 +38,13 @@ public class DisassociateSubnetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public DisassociateSubnetsRequest withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public DisassociateSubnetsRequest(@JsonProperty("SubnetIds") String[] subnetIds) {
+        this.subnetIds = subnetIds;
+  }
 }

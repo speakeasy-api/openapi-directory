@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetUserPolicyResponse - Contains the response to a successful &lt;a&gt;GetUserPolicy&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetUserPolicyResponse {
     
     public String policyDocument;
+
     public GetUserPolicyResponse withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -19,6 +20,7 @@ public class GetUserPolicyResponse {
     
     
     public String policyName;
+
     public GetUserPolicyResponse withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -26,9 +28,15 @@ public class GetUserPolicyResponse {
     
     
     public String userName;
+
     public GetUserPolicyResponse withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GetUserPolicyResponse(@JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("PolicyName") String policyName, @JsonProperty("UserName") String userName) {
+        this.policyDocument = policyDocument;
+        this.policyName = policyName;
+        this.userName = userName;
+  }
 }

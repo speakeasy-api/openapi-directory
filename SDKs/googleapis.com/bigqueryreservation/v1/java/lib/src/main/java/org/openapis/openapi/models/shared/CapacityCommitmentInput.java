@@ -18,6 +18,7 @@ public class CapacityCommitmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edition")
     public CapacityCommitmentEditionEnum edition;
+
     public CapacityCommitmentInput withEdition(CapacityCommitmentEditionEnum edition) {
         this.edition = edition;
         return this;
@@ -29,6 +30,7 @@ public class CapacityCommitmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureStatus")
     public Status failureStatus;
+
     public CapacityCommitmentInput withFailureStatus(Status failureStatus) {
         this.failureStatus = failureStatus;
         return this;
@@ -40,6 +42,7 @@ public class CapacityCommitmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiRegionAuxiliary")
     public Boolean multiRegionAuxiliary;
+
     public CapacityCommitmentInput withMultiRegionAuxiliary(Boolean multiRegionAuxiliary) {
         this.multiRegionAuxiliary = multiRegionAuxiliary;
         return this;
@@ -51,6 +54,7 @@ public class CapacityCommitmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public CapacityCommitmentPlanEnum plan;
+
     public CapacityCommitmentInput withPlan(CapacityCommitmentPlanEnum plan) {
         this.plan = plan;
         return this;
@@ -62,6 +66,7 @@ public class CapacityCommitmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalPlan")
     public CapacityCommitmentRenewalPlanEnum renewalPlan;
+
     public CapacityCommitmentInput withRenewalPlan(CapacityCommitmentRenewalPlanEnum renewalPlan) {
         this.renewalPlan = renewalPlan;
         return this;
@@ -73,9 +78,11 @@ public class CapacityCommitmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotCount")
     public String slotCount;
+
     public CapacityCommitmentInput withSlotCount(String slotCount) {
         this.slotCount = slotCount;
         return this;
     }
     
+    public CapacityCommitmentInput(){}
 }

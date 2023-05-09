@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdminRequestsUnmatchedResponse {
     
     public String contentType;
+
     public GetAdminRequestsUnmatchedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAdminRequestsUnmatchedResponse {
     
     
     public Integer statusCode;
+
     public GetAdminRequestsUnmatchedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class GetAdminRequestsUnmatchedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdminRequestsUnmatchedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAdminRequestsUnmatchedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

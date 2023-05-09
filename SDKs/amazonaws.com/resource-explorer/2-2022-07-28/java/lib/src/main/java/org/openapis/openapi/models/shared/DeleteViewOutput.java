@@ -15,9 +15,11 @@ public class DeleteViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public DeleteViewOutput withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public DeleteViewOutput(){}
 }

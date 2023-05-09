@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JoinStorageSessionResponse {
@@ -12,6 +13,7 @@ public class JoinStorageSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public JoinStorageSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class JoinStorageSessionResponse {
      */
     
     public Object clientLimitExceededException;
+
     public JoinStorageSessionResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class JoinStorageSessionResponse {
     
     
     public String contentType;
+
     public JoinStorageSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class JoinStorageSessionResponse {
      */
     
     public Object invalidArgumentException;
+
     public JoinStorageSessionResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -46,6 +51,7 @@ public class JoinStorageSessionResponse {
     
     
     public Integer statusCode;
+
     public JoinStorageSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class JoinStorageSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JoinStorageSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class JoinStorageSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public JoinStorageSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public JoinStorageSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

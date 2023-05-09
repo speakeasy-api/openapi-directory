@@ -15,9 +15,13 @@ public class RatePlanRestrictions {
      */
     @JsonProperty("lengthOfStay")
     public RatePlanRestrictionsLengthOfStay lengthOfStay;
+
     public RatePlanRestrictions withLengthOfStay(RatePlanRestrictionsLengthOfStay lengthOfStay) {
         this.lengthOfStay = lengthOfStay;
         return this;
     }
     
+    public RatePlanRestrictions(@JsonProperty("lengthOfStay") RatePlanRestrictionsLengthOfStay lengthOfStay) {
+        this.lengthOfStay = lengthOfStay;
+  }
 }

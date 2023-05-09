@@ -15,9 +15,11 @@ public class ListImportsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importIDs")
     public String[] importIDs;
+
     public ListImportsRequestBodyFilters withImportIDs(String[] importIDs) {
         this.importIDs = importIDs;
         return this;
     }
     
+    public ListImportsRequestBodyFilters(){}
 }

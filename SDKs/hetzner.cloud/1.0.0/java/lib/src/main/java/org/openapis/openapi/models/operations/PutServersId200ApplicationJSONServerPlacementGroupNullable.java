@@ -12,6 +12,7 @@ public class PutServersId200ApplicationJSONServerPlacementGroupNullable {
      */
     @JsonProperty("created")
     public String created;
+
     public PutServersId200ApplicationJSONServerPlacementGroupNullable withCreated(String created) {
         this.created = created;
         return this;
@@ -22,6 +23,7 @@ public class PutServersId200ApplicationJSONServerPlacementGroupNullable {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutServersId200ApplicationJSONServerPlacementGroupNullable withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PutServersId200ApplicationJSONServerPlacementGroupNullable {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PutServersId200ApplicationJSONServerPlacementGroupNullable withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -42,6 +45,7 @@ public class PutServersId200ApplicationJSONServerPlacementGroupNullable {
      */
     @JsonProperty("name")
     public String name;
+
     public PutServersId200ApplicationJSONServerPlacementGroupNullable withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class PutServersId200ApplicationJSONServerPlacementGroupNullable {
      */
     @JsonProperty("servers")
     public Long[] servers;
+
     public PutServersId200ApplicationJSONServerPlacementGroupNullable withServers(Long[] servers) {
         this.servers = servers;
         return this;
@@ -62,9 +67,18 @@ public class PutServersId200ApplicationJSONServerPlacementGroupNullable {
      */
     @JsonProperty("type")
     public PutServersId200ApplicationJSONServerPlacementGroupNullableTypeEnum type;
+
     public PutServersId200ApplicationJSONServerPlacementGroupNullable withType(PutServersId200ApplicationJSONServerPlacementGroupNullableTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutServersId200ApplicationJSONServerPlacementGroupNullable(@JsonProperty("created") String created, @JsonProperty("id") Long id, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("servers") Long[] servers, @JsonProperty("type") PutServersId200ApplicationJSONServerPlacementGroupNullableTypeEnum type) {
+        this.created = created;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.servers = servers;
+        this.type = type;
+  }
 }

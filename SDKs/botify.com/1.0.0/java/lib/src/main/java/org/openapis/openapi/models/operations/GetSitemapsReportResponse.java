@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSitemapsReportResponse {
     
     public String contentType;
+
     public GetSitemapsReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSitemapsReportResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetSitemapsReportResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -29,6 +32,7 @@ public class GetSitemapsReportResponse {
      */
     
     public org.openapis.openapi.models.shared.SitemapsReport sitemapsReport;
+
     public GetSitemapsReportResponse withSitemapsReport(org.openapis.openapi.models.shared.SitemapsReport sitemapsReport) {
         this.sitemapsReport = sitemapsReport;
         return this;
@@ -36,6 +40,7 @@ public class GetSitemapsReportResponse {
     
     
     public Integer statusCode;
+
     public GetSitemapsReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetSitemapsReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSitemapsReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSitemapsReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

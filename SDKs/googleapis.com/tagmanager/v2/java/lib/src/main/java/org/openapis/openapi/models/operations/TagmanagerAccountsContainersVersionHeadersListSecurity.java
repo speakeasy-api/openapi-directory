@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TagmanagerAccountsContainersVersionHeadersListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public TagmanagerAccountsContainersVersionHeadersListSecurityOption1 option1;
+
     public TagmanagerAccountsContainersVersionHeadersListSecurity withOption1(TagmanagerAccountsContainersVersionHeadersListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class TagmanagerAccountsContainersVersionHeadersListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public TagmanagerAccountsContainersVersionHeadersListSecurityOption2 option2;
+
     public TagmanagerAccountsContainersVersionHeadersListSecurity withOption2(TagmanagerAccountsContainersVersionHeadersListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class TagmanagerAccountsContainersVersionHeadersListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public TagmanagerAccountsContainersVersionHeadersListSecurityOption3 option3;
+
     public TagmanagerAccountsContainersVersionHeadersListSecurity withOption3(TagmanagerAccountsContainersVersionHeadersListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public TagmanagerAccountsContainersVersionHeadersListSecurity(){}
 }

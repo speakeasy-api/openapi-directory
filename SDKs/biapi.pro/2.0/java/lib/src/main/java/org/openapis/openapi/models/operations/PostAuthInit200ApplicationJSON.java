@@ -14,6 +14,7 @@ public class PostAuthInit200ApplicationJSON {
      */
     @JsonProperty("auth_token")
     public String authToken;
+
     public PostAuthInit200ApplicationJSON withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -25,6 +26,7 @@ public class PostAuthInit200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_in")
     public Long expiresIn;
+
     public PostAuthInit200ApplicationJSON withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -35,9 +37,14 @@ public class PostAuthInit200ApplicationJSON {
      */
     @JsonProperty("type")
     public String type;
+
     public PostAuthInit200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostAuthInit200ApplicationJSON(@JsonProperty("auth_token") String authToken, @JsonProperty("type") String type) {
+        this.authToken = authToken;
+        this.type = type;
+  }
 }

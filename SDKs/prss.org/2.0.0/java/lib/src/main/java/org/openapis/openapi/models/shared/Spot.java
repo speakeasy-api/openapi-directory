@@ -25,6 +25,7 @@ public class Spot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public Spot withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -36,6 +37,7 @@ public class Spot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Integer duration;
+
     public Spot withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -47,6 +49,7 @@ public class Spot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public Spot withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -58,6 +61,7 @@ public class Spot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSize")
     public Long fileSize;
+
     public Spot withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -69,6 +73,7 @@ public class Spot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Spot withId(Long id) {
         this.id = id;
         return this;
@@ -82,6 +87,7 @@ public class Spot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public Spot withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -95,6 +101,7 @@ public class Spot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUploadedDate")
     public OffsetDateTime lastUploadedDate;
+
     public Spot withLastUploadedDate(OffsetDateTime lastUploadedDate) {
         this.lastUploadedDate = lastUploadedDate;
         return this;
@@ -106,6 +113,7 @@ public class Spot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Spot withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +125,7 @@ public class Spot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Spot withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -128,9 +137,11 @@ public class Spot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalFileName")
     public String originalFileName;
+
     public Spot withOriginalFileName(String originalFileName) {
         this.originalFileName = originalFileName;
         return this;
     }
     
+    public Spot(){}
 }

@@ -12,6 +12,7 @@ public class PostServersIdActionsChangeTypeRequestBody {
      */
     @JsonProperty("server_type")
     public String serverType;
+
     public PostServersIdActionsChangeTypeRequestBody withServerType(String serverType) {
         this.serverType = serverType;
         return this;
@@ -22,9 +23,14 @@ public class PostServersIdActionsChangeTypeRequestBody {
      */
     @JsonProperty("upgrade_disk")
     public Boolean upgradeDisk;
+
     public PostServersIdActionsChangeTypeRequestBody withUpgradeDisk(Boolean upgradeDisk) {
         this.upgradeDisk = upgradeDisk;
         return this;
     }
     
+    public PostServersIdActionsChangeTypeRequestBody(@JsonProperty("server_type") String serverType, @JsonProperty("upgrade_disk") Boolean upgradeDisk) {
+        this.serverType = serverType;
+        this.upgradeDisk = upgradeDisk;
+  }
 }

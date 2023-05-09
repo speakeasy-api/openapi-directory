@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateUserResponse {
@@ -12,6 +13,7 @@ public class DisassociateUserResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateUserResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateUserResponse {
      */
     
     public Object conflictException;
+
     public DisassociateUserResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateUserResponse {
     
     
     public String contentType;
+
     public DisassociateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateUserResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateUserResponse disassociateUserResponse;
+
     public DisassociateUserResponse withDisassociateUserResponse(org.openapis.openapi.models.shared.DisassociateUserResponse disassociateUserResponse) {
         this.disassociateUserResponse = disassociateUserResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateUserResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateUserResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateUserResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DisassociateUserResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateUserResponse {
     
     
     public Integer statusCode;
+
     public DisassociateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DisassociateUserResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateUserResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DisassociateUserResponse {
      */
     
     public Object validationException;
+
     public DisassociateUserResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

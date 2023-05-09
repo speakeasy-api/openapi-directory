@@ -15,6 +15,7 @@ public class ListDevEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DevEndpointNames")
     public String[] devEndpointNames;
+
     public ListDevEndpointsResponse withDevEndpointNames(String[] devEndpointNames) {
         this.devEndpointNames = devEndpointNames;
         return this;
@@ -23,9 +24,11 @@ public class ListDevEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDevEndpointsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDevEndpointsResponse(){}
 }

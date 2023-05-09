@@ -55,13 +55,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdResponse(contentType, httpRes.statusCode()) {{
             completeUser = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,13 +115,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdCommentsResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdCommentsResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdCommentsResponse(contentType, httpRes.statusCode()) {{
             commentsList = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,7 +153,9 @@ public class Users {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetUsersUserIdFavoritesResponse getUsersUserIdFavorites(org.openapis.openapi.models.operations.GetUsersUserIdFavoritesRequest request, org.openapis.openapi.models.operations.GetUsersUserIdFavoritesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserIdFavoritesRequest.class, baseUrl, "/users/{user_id}/favorites", request, null);
@@ -179,12 +177,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdFavoritesResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdFavoritesResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdFavoritesResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdFavoritesResponse(contentType, httpRes.statusCode()) {{
             getUsersUserIdFavorites200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,12 +230,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdFollowersResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdFollowersResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdFollowersResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdFollowersResponse(contentType, httpRes.statusCode()) {{
             getUsersUserIdFollowers200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,12 +283,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdFollowingsResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdFollowingsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdFollowingsResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdFollowingsResponse(contentType, httpRes.statusCode()) {{
             getUsersUserIdFollowings200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,7 +314,9 @@ public class Users {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetUsersUserIdFollowingsFollowingIdResponse getUsersUserIdFollowingsFollowingId(org.openapis.openapi.models.operations.GetUsersUserIdFollowingsFollowingIdRequest request, org.openapis.openapi.models.operations.GetUsersUserIdFollowingsFollowingIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserIdFollowingsFollowingIdRequest.class, baseUrl, "/users/{user_id}/followings/{following_id}", request, null);
@@ -338,13 +332,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdFollowingsFollowingIdResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdFollowingsFollowingIdResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdFollowingsFollowingIdResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdFollowingsFollowingIdResponse(contentType, httpRes.statusCode()) {{
             completeUser = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -400,13 +392,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdLikesTracksResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdLikesTracksResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdLikesTracksResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdLikesTracksResponse(contentType, httpRes.statusCode()) {{
             getUsersUserIdLikesTracks200ApplicationJSONOneOf = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -462,12 +452,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdPlaylistsResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdPlaylistsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdPlaylistsResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdPlaylistsResponse(contentType, httpRes.statusCode()) {{
             getUsersUserIdPlaylists200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -516,12 +504,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdTracksResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdTracksResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdTracksResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdTracksResponse(contentType, httpRes.statusCode()) {{
             getUsersUserIdTracks200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -570,13 +556,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserIdWebProfilesResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdWebProfilesResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserIdWebProfilesResponse res = new org.openapis.openapi.models.operations.GetUsersUserIdWebProfilesResponse(contentType, httpRes.statusCode()) {{
             webProfiles = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

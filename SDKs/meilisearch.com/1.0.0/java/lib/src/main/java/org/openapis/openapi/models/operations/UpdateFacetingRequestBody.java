@@ -12,9 +12,11 @@ public class UpdateFacetingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValuesPerFacet")
     public Double maxValuesPerFacet;
+
     public UpdateFacetingRequestBody withMaxValuesPerFacet(Double maxValuesPerFacet) {
         this.maxValuesPerFacet = maxValuesPerFacet;
         return this;
     }
     
+    public UpdateFacetingRequestBody(){}
 }

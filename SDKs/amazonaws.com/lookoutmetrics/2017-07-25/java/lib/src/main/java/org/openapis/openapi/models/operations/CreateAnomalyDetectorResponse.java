@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAnomalyDetectorResponse {
@@ -12,6 +13,7 @@ public class CreateAnomalyDetectorResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAnomalyDetectorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAnomalyDetectorResponse {
      */
     
     public Object conflictException;
+
     public CreateAnomalyDetectorResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAnomalyDetectorResponse {
     
     
     public String contentType;
+
     public CreateAnomalyDetectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAnomalyDetectorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAnomalyDetectorResponse createAnomalyDetectorResponse;
+
     public CreateAnomalyDetectorResponse withCreateAnomalyDetectorResponse(org.openapis.openapi.models.shared.CreateAnomalyDetectorResponse createAnomalyDetectorResponse) {
         this.createAnomalyDetectorResponse = createAnomalyDetectorResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAnomalyDetectorResponse {
      */
     
     public Object internalServerException;
+
     public CreateAnomalyDetectorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAnomalyDetectorResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAnomalyDetectorResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAnomalyDetectorResponse {
     
     
     public Integer statusCode;
+
     public CreateAnomalyDetectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAnomalyDetectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAnomalyDetectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateAnomalyDetectorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateAnomalyDetectorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateAnomalyDetectorResponse {
      */
     
     public Object validationException;
+
     public CreateAnomalyDetectorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAnomalyDetectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

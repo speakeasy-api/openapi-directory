@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HitsGetHitsRequest {
@@ -12,6 +13,7 @@ public class HitsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public HitsGetHitsFilterEnum filter;
+
     public HitsGetHitsRequest withFilter(HitsGetHitsFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -22,6 +24,7 @@ public class HitsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public HitsGetHitsRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -32,6 +35,7 @@ public class HitsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public HitsGetHitsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class HitsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public HitsGetHitsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -52,6 +57,7 @@ public class HitsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeframe")
     public HitsGetHitsTimeframeEnum timeframe;
+
     public HitsGetHitsRequest withTimeframe(HitsGetHitsTimeframeEnum timeframe) {
         this.timeframe = timeframe;
         return this;
@@ -62,9 +68,13 @@ public class HitsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public HitsGetHitsRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public HitsGetHitsRequest(@JsonProperty("timeframe") HitsGetHitsTimeframeEnum timeframe) {
+        this.timeframe = timeframe;
+  }
 }

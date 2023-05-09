@@ -18,6 +18,7 @@ public class EphemerisTypeDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oem")
     public EphemerisDescription oem;
+
     public EphemerisTypeDescription withOem(EphemerisDescription oem) {
         this.oem = oem;
         return this;
@@ -29,9 +30,11 @@ public class EphemerisTypeDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tle")
     public EphemerisDescription tle;
+
     public EphemerisTypeDescription withTle(EphemerisDescription tle) {
         this.tle = tle;
         return this;
     }
     
+    public EphemerisTypeDescription(){}
 }

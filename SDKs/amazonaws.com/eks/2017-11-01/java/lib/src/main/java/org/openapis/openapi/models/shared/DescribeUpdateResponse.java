@@ -15,9 +15,11 @@ public class DescribeUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Update update;
+
     public DescribeUpdateResponse withUpdate(Update update) {
         this.update = update;
         return this;
     }
     
+    public DescribeUpdateResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeviceSelectionConfiguration {
     @JsonProperty("filters")
     public DeviceFilter[] filters;
+
     public DeviceSelectionConfiguration withFilters(DeviceFilter[] filters) {
         this.filters = filters;
         return this;
@@ -19,9 +20,14 @@ public class DeviceSelectionConfiguration {
     
     @JsonProperty("maxDevices")
     public Long maxDevices;
+
     public DeviceSelectionConfiguration withMaxDevices(Long maxDevices) {
         this.maxDevices = maxDevices;
         return this;
     }
     
+    public DeviceSelectionConfiguration(@JsonProperty("filters") DeviceFilter[] filters, @JsonProperty("maxDevices") Long maxDevices) {
+        this.filters = filters;
+        this.maxDevices = maxDevices;
+  }
 }

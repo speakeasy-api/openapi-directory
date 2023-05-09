@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetFederationTokenResponse {
     
     public Credentials credentials;
+
     public GetFederationTokenResponse withCredentials(Credentials credentials) {
         this.credentials = credentials;
         return this;
@@ -19,6 +20,7 @@ public class GetFederationTokenResponse {
     
     
     public FederatedUser federatedUser;
+
     public GetFederationTokenResponse withFederatedUser(FederatedUser federatedUser) {
         this.federatedUser = federatedUser;
         return this;
@@ -26,9 +28,11 @@ public class GetFederationTokenResponse {
     
     
     public Long packedPolicySize;
+
     public GetFederationTokenResponse withPackedPolicySize(Long packedPolicySize) {
         this.packedPolicySize = packedPolicySize;
         return this;
     }
     
+    public GetFederationTokenResponse(){}
 }

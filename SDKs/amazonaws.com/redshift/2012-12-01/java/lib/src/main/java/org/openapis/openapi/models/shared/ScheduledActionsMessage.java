@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledActionsMessage {
     
     public String marker;
+
     public ScheduledActionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class ScheduledActionsMessage {
     
     
     public ScheduledActionList[] scheduledActions;
+
     public ScheduledActionsMessage withScheduledActions(ScheduledActionList[] scheduledActions) {
         this.scheduledActions = scheduledActions;
         return this;
     }
     
+    public ScheduledActionsMessage(){}
 }

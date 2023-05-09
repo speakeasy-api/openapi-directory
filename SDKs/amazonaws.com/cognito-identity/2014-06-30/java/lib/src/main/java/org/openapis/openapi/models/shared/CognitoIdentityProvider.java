@@ -15,6 +15,7 @@ public class CognitoIdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public CognitoIdentityProvider withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class CognitoIdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderName")
     public String providerName;
+
     public CognitoIdentityProvider withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -31,9 +33,11 @@ public class CognitoIdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideTokenCheck")
     public Boolean serverSideTokenCheck;
+
     public CognitoIdentityProvider withServerSideTokenCheck(Boolean serverSideTokenCheck) {
         this.serverSideTokenCheck = serverSideTokenCheck;
         return this;
     }
     
+    public CognitoIdentityProvider(){}
 }

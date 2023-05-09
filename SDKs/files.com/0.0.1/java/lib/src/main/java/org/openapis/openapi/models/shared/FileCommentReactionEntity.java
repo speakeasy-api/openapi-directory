@@ -18,6 +18,7 @@ public class FileCommentReactionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emoji")
     public String emoji;
+
     public FileCommentReactionEntity withEmoji(String emoji) {
         this.emoji = emoji;
         return this;
@@ -29,9 +30,11 @@ public class FileCommentReactionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public FileCommentReactionEntity withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public FileCommentReactionEntity(){}
 }

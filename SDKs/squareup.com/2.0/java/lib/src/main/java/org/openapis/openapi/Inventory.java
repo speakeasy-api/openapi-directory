@@ -63,11 +63,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchChangeInventoryResponse res = new org.openapis.openapi.models.operations.BatchChangeInventoryResponse() {{
+        org.openapis.openapi.models.operations.BatchChangeInventoryResponse res = new org.openapis.openapi.models.operations.BatchChangeInventoryResponse(contentType, httpRes.statusCode()) {{
             batchChangeInventoryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,11 +114,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchRetrieveInventoryChangesResponse res = new org.openapis.openapi.models.operations.BatchRetrieveInventoryChangesResponse() {{
+        org.openapis.openapi.models.operations.BatchRetrieveInventoryChangesResponse res = new org.openapis.openapi.models.operations.BatchRetrieveInventoryChangesResponse(contentType, httpRes.statusCode()) {{
             batchRetrieveInventoryChangesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +168,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchRetrieveInventoryCountsResponse res = new org.openapis.openapi.models.operations.BatchRetrieveInventoryCountsResponse() {{
+        org.openapis.openapi.models.operations.BatchRetrieveInventoryCountsResponse res = new org.openapis.openapi.models.operations.BatchRetrieveInventoryCountsResponse(contentType, httpRes.statusCode()) {{
             batchRetrieveInventoryCountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +213,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeprecatedBatchChangeInventoryResponse res = new org.openapis.openapi.models.operations.DeprecatedBatchChangeInventoryResponse() {{
+        org.openapis.openapi.models.operations.DeprecatedBatchChangeInventoryResponse res = new org.openapis.openapi.models.operations.DeprecatedBatchChangeInventoryResponse(contentType, httpRes.statusCode()) {{
             batchChangeInventoryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,11 +258,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryChangesResponse res = new org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryChangesResponse() {{
+        org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryChangesResponse res = new org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryChangesResponse(contentType, httpRes.statusCode()) {{
             batchRetrieveInventoryChangesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,11 +303,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryCountsResponse res = new org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryCountsResponse() {{
+        org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryCountsResponse res = new org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryCountsResponse(contentType, httpRes.statusCode()) {{
             batchRetrieveInventoryCountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -355,11 +343,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentResponse res = new org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentResponse() {{
+        org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentResponse res = new org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentResponse(contentType, httpRes.statusCode()) {{
             retrieveInventoryAdjustmentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -397,11 +383,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountResponse res = new org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountResponse() {{
+        org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountResponse res = new org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountResponse(contentType, httpRes.statusCode()) {{
             retrieveInventoryPhysicalCountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentResponse() {{
+        org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentResponse(contentType, httpRes.statusCode()) {{
             retrieveInventoryAdjustmentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -498,11 +480,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveInventoryChangesResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryChangesResponse() {{
+        org.openapis.openapi.models.operations.RetrieveInventoryChangesResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryChangesResponse(contentType, httpRes.statusCode()) {{
             retrieveInventoryChangesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -548,11 +528,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveInventoryCountResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryCountResponse() {{
+        org.openapis.openapi.models.operations.RetrieveInventoryCountResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryCountResponse(contentType, httpRes.statusCode()) {{
             retrieveInventoryCountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -590,11 +568,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountResponse() {{
+        org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountResponse(contentType, httpRes.statusCode()) {{
             retrieveInventoryPhysicalCountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -632,11 +608,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveInventoryTransferResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryTransferResponse() {{
+        org.openapis.openapi.models.operations.RetrieveInventoryTransferResponse res = new org.openapis.openapi.models.operations.RetrieveInventoryTransferResponse(contentType, httpRes.statusCode()) {{
             retrieveInventoryTransferResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

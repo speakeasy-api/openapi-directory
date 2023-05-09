@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateSqlInjectionMatchSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateSqlInjectionMatchSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -19,6 +20,7 @@ public class UpdateSqlInjectionMatchSetRequest {
     
     @JsonProperty("SqlInjectionMatchSetId")
     public String sqlInjectionMatchSetId;
+
     public UpdateSqlInjectionMatchSetRequest withSqlInjectionMatchSetId(String sqlInjectionMatchSetId) {
         this.sqlInjectionMatchSetId = sqlInjectionMatchSetId;
         return this;
@@ -26,9 +28,15 @@ public class UpdateSqlInjectionMatchSetRequest {
     
     @JsonProperty("Updates")
     public SqlInjectionMatchSetUpdate[] updates;
+
     public UpdateSqlInjectionMatchSetRequest withUpdates(SqlInjectionMatchSetUpdate[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public UpdateSqlInjectionMatchSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("SqlInjectionMatchSetId") String sqlInjectionMatchSetId, @JsonProperty("Updates") SqlInjectionMatchSetUpdate[] updates) {
+        this.changeToken = changeToken;
+        this.sqlInjectionMatchSetId = sqlInjectionMatchSetId;
+        this.updates = updates;
+  }
 }

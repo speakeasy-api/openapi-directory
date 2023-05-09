@@ -15,6 +15,7 @@ public class QueryStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesScanned")
     public Long bytesScanned;
+
     public QueryStatistics withBytesScanned(Long bytesScanned) {
         this.bytesScanned = bytesScanned;
         return this;
@@ -23,6 +24,7 @@ public class QueryStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultsCount")
     public Long resultsCount;
+
     public QueryStatistics withResultsCount(Long resultsCount) {
         this.resultsCount = resultsCount;
         return this;
@@ -31,9 +33,11 @@ public class QueryStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalResultsCount")
     public Long totalResultsCount;
+
     public QueryStatistics withTotalResultsCount(Long totalResultsCount) {
         this.totalResultsCount = totalResultsCount;
         return this;
     }
     
+    public QueryStatistics(){}
 }

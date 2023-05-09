@@ -58,11 +58,9 @@ public class StreetAddressSimilarityKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetaddressmatchResponse res = new org.openapis.openapi.models.operations.GetaddressmatchResponse() {{
+        org.openapis.openapi.models.operations.GetaddressmatchResponse res = new org.openapis.openapi.models.operations.GetaddressmatchResponse(contentType, httpRes.statusCode()) {{
             getaddressmatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

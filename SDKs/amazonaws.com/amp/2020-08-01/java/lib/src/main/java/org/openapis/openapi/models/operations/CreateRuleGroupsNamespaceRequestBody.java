@@ -15,6 +15,7 @@ public class CreateRuleGroupsNamespaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateRuleGroupsNamespaceRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateRuleGroupsNamespaceRequestBody {
      */
     @JsonProperty("data")
     public String data;
+
     public CreateRuleGroupsNamespaceRequestBody withData(String data) {
         this.data = data;
         return this;
@@ -35,6 +37,7 @@ public class CreateRuleGroupsNamespaceRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateRuleGroupsNamespaceRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,14 @@ public class CreateRuleGroupsNamespaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRuleGroupsNamespaceRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRuleGroupsNamespaceRequestBody(@JsonProperty("data") String data, @JsonProperty("name") String name) {
+        this.data = data;
+        this.name = name;
+  }
 }

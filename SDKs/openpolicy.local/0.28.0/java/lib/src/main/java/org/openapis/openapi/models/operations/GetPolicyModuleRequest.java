@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPolicyModuleRequest {
@@ -12,6 +13,7 @@ public class GetPolicyModuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetPolicyModuleRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetPolicyModuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public GetPolicyModuleRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
     }
     
+    public GetPolicyModuleRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

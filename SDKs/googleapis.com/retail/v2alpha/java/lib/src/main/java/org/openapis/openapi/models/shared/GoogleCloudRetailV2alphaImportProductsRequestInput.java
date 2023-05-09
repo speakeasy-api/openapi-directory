@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaImportProductsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorsConfig")
     public GoogleCloudRetailV2alphaImportErrorsConfig errorsConfig;
+
     public GoogleCloudRetailV2alphaImportProductsRequestInput withErrorsConfig(GoogleCloudRetailV2alphaImportErrorsConfig errorsConfig) {
         this.errorsConfig = errorsConfig;
         return this;
@@ -29,17 +30,19 @@ public class GoogleCloudRetailV2alphaImportProductsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudRetailV2alphaProductInputConfigInput inputConfig;
+
     public GoogleCloudRetailV2alphaImportProductsRequestInput withInputConfig(GoogleCloudRetailV2alphaProductInputConfigInput inputConfig) {
         this.inputConfig = inputConfig;
         return this;
     }
     
     /**
-     * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is finished, a notification is sent to specified Pub/Sub topic. The message data is JSON string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has to be within the same project as ImportProductsRequest.parent. Make sure that `service-@gcp-sa-retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the topic.
+     * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is finished, a notification is sent to specified Pub/Sub topic. The message data is JSON string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has to be within the same project as ImportProductsRequest.parent. Make sure that both `cloud-retail-customer-data-access@system.gserviceaccount.com` and `service-@gcp-sa-retail.iam.gserviceaccount.com` have the `pubsub.topics.publish` IAM permission on the topic. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationPubsubTopic")
     public String notificationPubsubTopic;
+
     public GoogleCloudRetailV2alphaImportProductsRequestInput withNotificationPubsubTopic(String notificationPubsubTopic) {
         this.notificationPubsubTopic = notificationPubsubTopic;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2alphaImportProductsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconciliationMode")
     public GoogleCloudRetailV2alphaImportProductsRequestReconciliationModeEnum reconciliationMode;
+
     public GoogleCloudRetailV2alphaImportProductsRequestInput withReconciliationMode(GoogleCloudRetailV2alphaImportProductsRequestReconciliationModeEnum reconciliationMode) {
         this.reconciliationMode = reconciliationMode;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2alphaImportProductsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudRetailV2alphaImportProductsRequestInput withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2alphaImportProductsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipDefaultBranchProtection")
     public Boolean skipDefaultBranchProtection;
+
     public GoogleCloudRetailV2alphaImportProductsRequestInput withSkipDefaultBranchProtection(Boolean skipDefaultBranchProtection) {
         this.skipDefaultBranchProtection = skipDefaultBranchProtection;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudRetailV2alphaImportProductsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleCloudRetailV2alphaImportProductsRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaImportProductsRequestInput(){}
 }

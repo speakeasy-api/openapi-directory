@@ -18,6 +18,7 @@ public class APIResponseSong {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Boolean error;
+
     public APIResponseSong withError(Boolean error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class APIResponseSong {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public APIResponseSong withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class APIResponseSong {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public APIResponseSongResponse response;
+
     public APIResponseSong withResponse(APIResponseSongResponse response) {
         this.response = response;
         return this;
     }
     
+    public APIResponseSong(){}
 }

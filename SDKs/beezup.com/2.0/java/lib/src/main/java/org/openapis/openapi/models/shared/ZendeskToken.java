@@ -18,9 +18,11 @@ public class ZendeskToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public ZendeskToken withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public ZendeskToken(){}
 }

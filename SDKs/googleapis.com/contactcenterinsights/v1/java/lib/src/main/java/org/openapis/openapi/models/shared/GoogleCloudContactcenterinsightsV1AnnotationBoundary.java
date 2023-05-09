@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotationBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcriptIndex")
     public Integer transcriptIndex;
+
     public GoogleCloudContactcenterinsightsV1AnnotationBoundary withTranscriptIndex(Integer transcriptIndex) {
         this.transcriptIndex = transcriptIndex;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1AnnotationBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordIndex")
     public Integer wordIndex;
+
     public GoogleCloudContactcenterinsightsV1AnnotationBoundary withWordIndex(Integer wordIndex) {
         this.wordIndex = wordIndex;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundary(){}
 }

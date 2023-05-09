@@ -15,6 +15,7 @@ public class PipelineExperimentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public PipelineExperimentConfig withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -23,9 +24,11 @@ public class PipelineExperimentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialName")
     public String trialName;
+
     public PipelineExperimentConfig withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public PipelineExperimentConfig(){}
 }

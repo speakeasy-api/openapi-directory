@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTrainingJobsForHyperParameterTuningJobRequest {
     @JsonProperty("HyperParameterTuningJobName")
     public String hyperParameterTuningJobName;
+
     public ListTrainingJobsForHyperParameterTuningJobRequest withHyperParameterTuningJobName(String hyperParameterTuningJobName) {
         this.hyperParameterTuningJobName = hyperParameterTuningJobName;
         return this;
@@ -19,6 +20,7 @@ public class ListTrainingJobsForHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTrainingJobsForHyperParameterTuningJobRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListTrainingJobsForHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrainingJobsForHyperParameterTuningJobRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,6 +38,7 @@ public class ListTrainingJobsForHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public TrainingJobSortByOptionsEnum sortBy;
+
     public ListTrainingJobsForHyperParameterTuningJobRequest withSortBy(TrainingJobSortByOptionsEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -43,6 +47,7 @@ public class ListTrainingJobsForHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListTrainingJobsForHyperParameterTuningJobRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -51,9 +56,13 @@ public class ListTrainingJobsForHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public TrainingJobStatusEnum statusEquals;
+
     public ListTrainingJobsForHyperParameterTuningJobRequest withStatusEquals(TrainingJobStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListTrainingJobsForHyperParameterTuningJobRequest(@JsonProperty("HyperParameterTuningJobName") String hyperParameterTuningJobName) {
+        this.hyperParameterTuningJobName = hyperParameterTuningJobName;
+  }
 }

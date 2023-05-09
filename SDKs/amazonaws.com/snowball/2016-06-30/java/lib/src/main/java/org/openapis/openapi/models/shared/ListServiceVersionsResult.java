@@ -15,6 +15,7 @@ public class ListServiceVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DependentServices")
     public DependentService[] dependentServices;
+
     public ListServiceVersionsResult withDependentServices(DependentService[] dependentServices) {
         this.dependentServices = dependentServices;
         return this;
@@ -23,6 +24,7 @@ public class ListServiceVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListServiceVersionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,6 +32,7 @@ public class ListServiceVersionsResult {
     
     @JsonProperty("ServiceName")
     public ServiceNameEnum serviceName;
+
     public ListServiceVersionsResult withServiceName(ServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -37,9 +40,14 @@ public class ListServiceVersionsResult {
     
     @JsonProperty("ServiceVersions")
     public ServiceVersion[] serviceVersions;
+
     public ListServiceVersionsResult withServiceVersions(ServiceVersion[] serviceVersions) {
         this.serviceVersions = serviceVersions;
         return this;
     }
     
+    public ListServiceVersionsResult(@JsonProperty("ServiceName") ServiceNameEnum serviceName, @JsonProperty("ServiceVersions") ServiceVersion[] serviceVersions) {
+        this.serviceName = serviceName;
+        this.serviceVersions = serviceVersions;
+  }
 }

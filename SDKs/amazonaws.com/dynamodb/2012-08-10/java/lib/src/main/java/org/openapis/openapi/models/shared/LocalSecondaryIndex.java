@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LocalSecondaryIndex {
     @JsonProperty("IndexName")
     public String indexName;
+
     public LocalSecondaryIndex withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -19,6 +20,7 @@ public class LocalSecondaryIndex {
     
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public LocalSecondaryIndex withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -26,9 +28,15 @@ public class LocalSecondaryIndex {
     
     @JsonProperty("Projection")
     public Projection projection;
+
     public LocalSecondaryIndex withProjection(Projection projection) {
         this.projection = projection;
         return this;
     }
     
+    public LocalSecondaryIndex(@JsonProperty("IndexName") String indexName, @JsonProperty("KeySchema") KeySchemaElement[] keySchema, @JsonProperty("Projection") Projection projection) {
+        this.indexName = indexName;
+        this.keySchema = keySchema;
+        this.projection = projection;
+  }
 }

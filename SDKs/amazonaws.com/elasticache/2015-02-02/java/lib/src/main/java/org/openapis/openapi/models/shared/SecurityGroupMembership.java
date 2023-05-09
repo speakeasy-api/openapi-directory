@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SecurityGroupMembership {
     
     public String securityGroupId;
+
     public SecurityGroupMembership withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
@@ -19,9 +20,11 @@ public class SecurityGroupMembership {
     
     
     public String status;
+
     public SecurityGroupMembership withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SecurityGroupMembership(){}
 }

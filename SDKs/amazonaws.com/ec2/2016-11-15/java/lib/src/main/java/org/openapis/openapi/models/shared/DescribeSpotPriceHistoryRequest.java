@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeSpotPriceHistoryRequest {
     
     public String availabilityZone;
+
     public DescribeSpotPriceHistoryRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotPriceHistoryRequest {
     
     
     public Boolean dryRun;
+
     public DescribeSpotPriceHistoryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotPriceHistoryRequest {
     
     
     public OffsetDateTime endTime;
+
     public DescribeSpotPriceHistoryRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotPriceHistoryRequest {
     
     
     public DescribeSpotPriceHistoryRequestFilters[] filters;
+
     public DescribeSpotPriceHistoryRequest withFilters(DescribeSpotPriceHistoryRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSpotPriceHistoryRequest {
     
     
     public InstanceTypeEnum[] instanceTypes;
+
     public DescribeSpotPriceHistoryRequest withInstanceTypes(InstanceTypeEnum[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSpotPriceHistoryRequest {
     
     
     public Long maxResults;
+
     public DescribeSpotPriceHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSpotPriceHistoryRequest {
     
     
     public String nextToken;
+
     public DescribeSpotPriceHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,6 +68,7 @@ public class DescribeSpotPriceHistoryRequest {
     
     
     public String[] productDescriptions;
+
     public DescribeSpotPriceHistoryRequest withProductDescriptions(String[] productDescriptions) {
         this.productDescriptions = productDescriptions;
         return this;
@@ -68,9 +76,11 @@ public class DescribeSpotPriceHistoryRequest {
     
     
     public OffsetDateTime startTime;
+
     public DescribeSpotPriceHistoryRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeSpotPriceHistoryRequest(){}
 }

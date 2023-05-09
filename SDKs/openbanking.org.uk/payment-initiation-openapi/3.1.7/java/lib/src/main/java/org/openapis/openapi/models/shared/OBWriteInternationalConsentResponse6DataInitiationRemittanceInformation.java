@@ -21,6 +21,7 @@ public class OBWriteInternationalConsentResponse6DataInitiationRemittanceInforma
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public OBWriteInternationalConsentResponse6DataInitiationRemittanceInformation withReference(String reference) {
         this.reference = reference;
         return this;
@@ -32,9 +33,11 @@ public class OBWriteInternationalConsentResponse6DataInitiationRemittanceInforma
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unstructured")
     public String unstructured;
+
     public OBWriteInternationalConsentResponse6DataInitiationRemittanceInformation withUnstructured(String unstructured) {
         this.unstructured = unstructured;
         return this;
     }
     
+    public OBWriteInternationalConsentResponse6DataInitiationRemittanceInformation(){}
 }

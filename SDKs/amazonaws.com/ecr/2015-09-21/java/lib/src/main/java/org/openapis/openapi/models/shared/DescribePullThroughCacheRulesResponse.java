@@ -15,6 +15,7 @@ public class DescribePullThroughCacheRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribePullThroughCacheRulesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribePullThroughCacheRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullThroughCacheRules")
     public PullThroughCacheRule[] pullThroughCacheRules;
+
     public DescribePullThroughCacheRulesResponse withPullThroughCacheRules(PullThroughCacheRule[] pullThroughCacheRules) {
         this.pullThroughCacheRules = pullThroughCacheRules;
         return this;
     }
     
+    public DescribePullThroughCacheRulesResponse(){}
 }

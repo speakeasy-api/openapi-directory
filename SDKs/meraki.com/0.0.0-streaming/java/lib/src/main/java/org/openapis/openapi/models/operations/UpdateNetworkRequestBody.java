@@ -15,6 +15,7 @@ public class UpdateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableMyMerakiCom")
     public Boolean disableMyMerakiCom;
+
     public UpdateNetworkRequestBody withDisableMyMerakiCom(Boolean disableMyMerakiCom) {
         this.disableMyMerakiCom = disableMyMerakiCom;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableRemoteStatusPage")
     public Boolean disableRemoteStatusPage;
+
     public UpdateNetworkRequestBody withDisableRemoteStatusPage(Boolean disableRemoteStatusPage) {
         this.disableRemoteStatusPage = disableRemoteStatusPage;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrollmentString")
     public String enrollmentString;
+
     public UpdateNetworkRequestBody withEnrollmentString(String enrollmentString) {
         this.enrollmentString = enrollmentString;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class UpdateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public UpdateNetworkRequestBody withTags(String tags) {
         this.tags = tags;
         return this;
@@ -70,9 +75,11 @@ public class UpdateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public UpdateNetworkRequestBody withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public UpdateNetworkRequestBody(){}
 }

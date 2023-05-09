@@ -21,6 +21,7 @@ public class InventoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustment")
     public InventoryAdjustment adjustment;
+
     public InventoryChange withAdjustment(InventoryAdjustment adjustment) {
         this.adjustment = adjustment;
         return this;
@@ -33,6 +34,7 @@ public class InventoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurement_unit")
     public CatalogMeasurementUnit measurementUnit;
+
     public InventoryChange withMeasurementUnit(CatalogMeasurementUnit measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -44,6 +46,7 @@ public class InventoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurement_unit_id")
     public String measurementUnitId;
+
     public InventoryChange withMeasurementUnitId(String measurementUnitId) {
         this.measurementUnitId = measurementUnitId;
         return this;
@@ -58,6 +61,7 @@ public class InventoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physical_count")
     public InventoryPhysicalCount physicalCount;
+
     public InventoryChange withPhysicalCount(InventoryPhysicalCount physicalCount) {
         this.physicalCount = physicalCount;
         return this;
@@ -70,6 +74,7 @@ public class InventoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer")
     public InventoryTransfer transfer;
+
     public InventoryChange withTransfer(InventoryTransfer transfer) {
         this.transfer = transfer;
         return this;
@@ -82,9 +87,11 @@ public class InventoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public InventoryChange withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InventoryChange(){}
 }

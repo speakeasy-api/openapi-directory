@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1ListTestersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirebaseAppdistroV1ListTestersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppdistroV1ListTestersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testers")
     public GoogleFirebaseAppdistroV1Tester[] testers;
+
     public GoogleFirebaseAppdistroV1ListTestersResponse withTesters(GoogleFirebaseAppdistroV1Tester[] testers) {
         this.testers = testers;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1ListTestersResponse(){}
 }

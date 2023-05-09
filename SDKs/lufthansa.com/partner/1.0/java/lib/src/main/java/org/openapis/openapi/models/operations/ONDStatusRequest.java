@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ONDStatusRequest {
@@ -12,6 +13,7 @@ public class ONDStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ONDStatusRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ONDStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public ONDStatusRequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -32,6 +35,7 @@ public class ONDStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=new-routes")
     public String newRoutes;
+
     public ONDStatusRequest withNewRoutes(String newRoutes) {
         this.newRoutes = newRoutes;
         return this;
@@ -42,9 +46,13 @@ public class ONDStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=old-routes")
     public String oldRoutes;
+
     public ONDStatusRequest withOldRoutes(String oldRoutes) {
         this.oldRoutes = oldRoutes;
         return this;
     }
     
+    public ONDStatusRequest(@JsonProperty("Accept") String accept) {
+        this.accept = accept;
+  }
 }

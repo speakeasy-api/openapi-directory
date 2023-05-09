@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChunkedUploadRequest {
@@ -12,6 +13,7 @@ public class ChunkedUploadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Range")
     public String contentRange;
+
     public ChunkedUploadRequest withContentRange(String contentRange) {
         this.contentRange = contentRange;
         return this;
@@ -22,6 +24,7 @@ public class ChunkedUploadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ChunkedUploadRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class ChunkedUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uploadId")
     public String uploadId;
+
     public ChunkedUploadRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public ChunkedUploadRequest(@JsonProperty("Content-Range") String contentRange, @JsonProperty("Content-Type") String contentType, @JsonProperty("uploadId") String uploadId) {
+        this.contentRange = contentRange;
+        this.contentType = contentType;
+        this.uploadId = uploadId;
+  }
 }

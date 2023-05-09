@@ -15,9 +15,11 @@ public class GetSigningCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public GetSigningCertificateResponse withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
     }
     
+    public GetSigningCertificateResponse(){}
 }

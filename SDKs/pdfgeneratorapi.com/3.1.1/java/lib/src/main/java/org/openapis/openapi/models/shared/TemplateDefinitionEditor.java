@@ -15,9 +15,11 @@ public class TemplateDefinitionEditor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heightMultiplier")
     public Double heightMultiplier;
+
     public TemplateDefinitionEditor withHeightMultiplier(Double heightMultiplier) {
         this.heightMultiplier = heightMultiplier;
         return this;
     }
     
+    public TemplateDefinitionEditor(){}
 }

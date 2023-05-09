@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCuratedPodcastsResponse {
     @JsonProperty("curated_lists")
     public CuratedListSimple[] curatedLists;
+
     public GetCuratedPodcastsResponse withCuratedLists(CuratedListSimple[] curatedLists) {
         this.curatedLists = curatedLists;
         return this;
@@ -19,6 +20,7 @@ public class GetCuratedPodcastsResponse {
     
     @JsonProperty("has_next")
     public Boolean hasNext;
+
     public GetCuratedPodcastsResponse withHasNext(Boolean hasNext) {
         this.hasNext = hasNext;
         return this;
@@ -26,6 +28,7 @@ public class GetCuratedPodcastsResponse {
     
     @JsonProperty("has_previous")
     public Boolean hasPrevious;
+
     public GetCuratedPodcastsResponse withHasPrevious(Boolean hasPrevious) {
         this.hasPrevious = hasPrevious;
         return this;
@@ -33,6 +36,7 @@ public class GetCuratedPodcastsResponse {
     
     @JsonProperty("next_page_number")
     public Long nextPageNumber;
+
     public GetCuratedPodcastsResponse withNextPageNumber(Long nextPageNumber) {
         this.nextPageNumber = nextPageNumber;
         return this;
@@ -40,6 +44,7 @@ public class GetCuratedPodcastsResponse {
     
     @JsonProperty("page_number")
     public Long pageNumber;
+
     public GetCuratedPodcastsResponse withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -47,6 +52,7 @@ public class GetCuratedPodcastsResponse {
     
     @JsonProperty("previous_page_number")
     public Long previousPageNumber;
+
     public GetCuratedPodcastsResponse withPreviousPageNumber(Long previousPageNumber) {
         this.previousPageNumber = previousPageNumber;
         return this;
@@ -54,9 +60,19 @@ public class GetCuratedPodcastsResponse {
     
     @JsonProperty("total")
     public Long total;
+
     public GetCuratedPodcastsResponse withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetCuratedPodcastsResponse(@JsonProperty("curated_lists") CuratedListSimple[] curatedLists, @JsonProperty("has_next") Boolean hasNext, @JsonProperty("has_previous") Boolean hasPrevious, @JsonProperty("next_page_number") Long nextPageNumber, @JsonProperty("page_number") Long pageNumber, @JsonProperty("previous_page_number") Long previousPageNumber, @JsonProperty("total") Long total) {
+        this.curatedLists = curatedLists;
+        this.hasNext = hasNext;
+        this.hasPrevious = hasPrevious;
+        this.nextPageNumber = nextPageNumber;
+        this.pageNumber = pageNumber;
+        this.previousPageNumber = previousPageNumber;
+        this.total = total;
+  }
 }

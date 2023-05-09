@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FetchCoachesResponse {
     @JsonProperty("data")
     public CoachResource[] data;
+
     public FetchCoachesResponse withData(CoachResource[] data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class FetchCoachesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public FetchMetaResponse meta;
+
     public FetchCoachesResponse withMeta(FetchMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public FetchCoachesResponse(@JsonProperty("data") CoachResource[] data) {
+        this.data = data;
+  }
 }

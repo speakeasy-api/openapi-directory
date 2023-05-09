@@ -18,6 +18,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public Argument[] arguments;
+
     public Routine withArguments(Argument[] arguments) {
         this.arguments = arguments;
         return this;
@@ -29,6 +30,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public Routine withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitionBody")
     public String definitionBody;
+
     public Routine withDefinitionBody(String definitionBody) {
         this.definitionBody = definitionBody;
         return this;
@@ -51,6 +54,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Routine withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("determinismLevel")
     public RoutineDeterminismLevelEnum determinismLevel;
+
     public Routine withDeterminismLevel(RoutineDeterminismLevelEnum determinismLevel) {
         this.determinismLevel = determinismLevel;
         return this;
@@ -73,6 +78,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Routine withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -84,6 +90,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedLibraries")
     public String[] importedLibraries;
+
     public Routine withImportedLibraries(String[] importedLibraries) {
         this.importedLibraries = importedLibraries;
         return this;
@@ -95,6 +102,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public RoutineLanguageEnum language;
+
     public Routine withLanguage(RoutineLanguageEnum language) {
         this.language = language;
         return this;
@@ -106,6 +114,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public Routine withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -117,6 +126,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteFunctionOptions")
     public RemoteFunctionOptions remoteFunctionOptions;
+
     public Routine withRemoteFunctionOptions(RemoteFunctionOptions remoteFunctionOptions) {
         this.remoteFunctionOptions = remoteFunctionOptions;
         return this;
@@ -128,6 +138,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnTableType")
     public StandardSqlTableType returnTableType;
+
     public Routine withReturnTableType(StandardSqlTableType returnTableType) {
         this.returnTableType = returnTableType;
         return this;
@@ -139,6 +150,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnType")
     public StandardSqlDataType returnType;
+
     public Routine withReturnType(StandardSqlDataType returnType) {
         this.returnType = returnType;
         return this;
@@ -147,6 +159,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routineReference")
     public RoutineReference routineReference;
+
     public Routine withRoutineReference(RoutineReference routineReference) {
         this.routineReference = routineReference;
         return this;
@@ -158,6 +171,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routineType")
     public RoutineRoutineTypeEnum routineType;
+
     public Routine withRoutineType(RoutineRoutineTypeEnum routineType) {
         this.routineType = routineType;
         return this;
@@ -169,6 +183,7 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkOptions")
     public SparkOptions sparkOptions;
+
     public Routine withSparkOptions(SparkOptions sparkOptions) {
         this.sparkOptions = sparkOptions;
         return this;
@@ -180,9 +195,11 @@ public class Routine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strictMode")
     public Boolean strictMode;
+
     public Routine withStrictMode(Boolean strictMode) {
         this.strictMode = strictMode;
         return this;
     }
     
+    public Routine(){}
 }

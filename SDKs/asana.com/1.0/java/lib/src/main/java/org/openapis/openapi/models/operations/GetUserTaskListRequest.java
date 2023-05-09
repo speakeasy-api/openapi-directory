@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserTaskListRequest {
@@ -14,6 +15,7 @@ public class GetUserTaskListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetUserTaskListRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetUserTaskListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetUserTaskListRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,9 +38,13 @@ public class GetUserTaskListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_task_list_gid")
     public String userTaskListGid;
+
     public GetUserTaskListRequest withUserTaskListGid(String userTaskListGid) {
         this.userTaskListGid = userTaskListGid;
         return this;
     }
     
+    public GetUserTaskListRequest(@JsonProperty("user_task_list_gid") String userTaskListGid) {
+        this.userTaskListGid = userTaskListGid;
+  }
 }

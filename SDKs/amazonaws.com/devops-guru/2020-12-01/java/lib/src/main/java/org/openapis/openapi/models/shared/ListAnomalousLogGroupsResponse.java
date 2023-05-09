@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAnomalousLogGroupsResponse {
     @JsonProperty("AnomalousLogGroups")
     public AnomalousLogGroup[] anomalousLogGroups;
+
     public ListAnomalousLogGroupsResponse withAnomalousLogGroups(AnomalousLogGroup[] anomalousLogGroups) {
         this.anomalousLogGroups = anomalousLogGroups;
         return this;
@@ -21,6 +22,7 @@ public class ListAnomalousLogGroupsResponse {
     
     @JsonProperty("InsightId")
     public String insightId;
+
     public ListAnomalousLogGroupsResponse withInsightId(String insightId) {
         this.insightId = insightId;
         return this;
@@ -29,9 +31,14 @@ public class ListAnomalousLogGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalousLogGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnomalousLogGroupsResponse(@JsonProperty("AnomalousLogGroups") AnomalousLogGroup[] anomalousLogGroups, @JsonProperty("InsightId") String insightId) {
+        this.anomalousLogGroups = anomalousLogGroups;
+        this.insightId = insightId;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateConnectorRequestBodyKafkaClusterEncryptionInTransit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionType")
     public org.openapis.openapi.models.shared.KafkaClusterEncryptionInTransitTypeEnum encryptionType;
+
     public CreateConnectorRequestBodyKafkaClusterEncryptionInTransit withEncryptionType(org.openapis.openapi.models.shared.KafkaClusterEncryptionInTransitTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
     }
     
+    public CreateConnectorRequestBodyKafkaClusterEncryptionInTransit(){}
 }

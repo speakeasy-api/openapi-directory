@@ -15,6 +15,7 @@ public class Canary {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Canary withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -25,6 +26,7 @@ public class Canary {
      */
     @JsonProperty("root")
     public String root;
+
     public Canary withRoot(String root) {
         this.root = root;
         return this;
@@ -35,6 +37,7 @@ public class Canary {
      */
     @JsonProperty("targets")
     public Target[] targets;
+
     public Canary withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -45,9 +48,16 @@ public class Canary {
      */
     @JsonProperty("traffic")
     public Integer traffic;
+
     public Canary withTraffic(Integer traffic) {
         this.traffic = traffic;
         return this;
     }
     
+    public Canary(@JsonProperty("enabled") Boolean enabled, @JsonProperty("root") String root, @JsonProperty("targets") Target[] targets, @JsonProperty("traffic") Integer traffic) {
+        this.enabled = enabled;
+        this.root = root;
+        this.targets = targets;
+        this.traffic = traffic;
+  }
 }

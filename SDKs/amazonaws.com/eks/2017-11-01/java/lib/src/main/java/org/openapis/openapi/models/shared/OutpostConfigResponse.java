@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OutpostConfigResponse {
     @JsonProperty("controlPlaneInstanceType")
     public String controlPlaneInstanceType;
+
     public OutpostConfigResponse withControlPlaneInstanceType(String controlPlaneInstanceType) {
         this.controlPlaneInstanceType = controlPlaneInstanceType;
         return this;
@@ -22,6 +23,7 @@ public class OutpostConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPlanePlacement")
     public ControlPlanePlacementResponse controlPlanePlacement;
+
     public OutpostConfigResponse withControlPlanePlacement(ControlPlanePlacementResponse controlPlanePlacement) {
         this.controlPlanePlacement = controlPlanePlacement;
         return this;
@@ -29,9 +31,14 @@ public class OutpostConfigResponse {
     
     @JsonProperty("outpostArns")
     public String[] outpostArns;
+
     public OutpostConfigResponse withOutpostArns(String[] outpostArns) {
         this.outpostArns = outpostArns;
         return this;
     }
     
+    public OutpostConfigResponse(@JsonProperty("controlPlaneInstanceType") String controlPlaneInstanceType, @JsonProperty("outpostArns") String[] outpostArns) {
+        this.controlPlaneInstanceType = controlPlaneInstanceType;
+        this.outpostArns = outpostArns;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveEngineRequest {
@@ -13,9 +14,13 @@ public class RetrieveEngineRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=engine_id")
     public String engineId;
+
     public RetrieveEngineRequest withEngineId(String engineId) {
         this.engineId = engineId;
         return this;
     }
     
+    public RetrieveEngineRequest(@JsonProperty("engine_id") String engineId) {
+        this.engineId = engineId;
+  }
 }

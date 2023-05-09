@@ -18,9 +18,11 @@ public class WorkerThreadScalingReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentThreadCount")
     public Integer currentThreadCount;
+
     public WorkerThreadScalingReport withCurrentThreadCount(Integer currentThreadCount) {
         this.currentThreadCount = currentThreadCount;
         return this;
     }
     
+    public WorkerThreadScalingReport(){}
 }

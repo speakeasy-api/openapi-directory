@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdRequest {
@@ -12,6 +13,7 @@ public class DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
     public String assessmentId;
+
     public DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdRequest withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -32,9 +35,15 @@ public class DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdRequest(@JsonProperty("assessmentId") String assessmentId, @JsonProperty("offeringId") String offeringId, @JsonProperty("userEmail") String userEmail) {
+        this.assessmentId = assessmentId;
+        this.offeringId = offeringId;
+        this.userEmail = userEmail;
+  }
 }

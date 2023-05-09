@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CatalogGetCustomColumnsResponse {
@@ -12,6 +13,7 @@ public class CatalogGetCustomColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public CatalogGetCustomColumnsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class CatalogGetCustomColumnsResponse {
     
     
     public String contentType;
+
     public CatalogGetCustomColumnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CatalogGetCustomColumnsResponse {
     
     
     public Integer statusCode;
+
     public CatalogGetCustomColumnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CatalogGetCustomColumnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CatalogGetCustomColumnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CatalogGetCustomColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomColumnList customColumnList;
+
     public CatalogGetCustomColumnsResponse withCustomColumnList(org.openapis.openapi.models.shared.CustomColumnList customColumnList) {
         this.customColumnList = customColumnList;
         return this;
     }
     
+    public CatalogGetCustomColumnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

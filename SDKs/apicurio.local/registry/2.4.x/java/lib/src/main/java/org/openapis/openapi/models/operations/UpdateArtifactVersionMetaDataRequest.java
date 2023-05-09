@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactVersionMetaDataRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EditableMetaData editableMetaData;
+
     public UpdateArtifactVersionMetaDataRequest withEditableMetaData(org.openapis.openapi.models.shared.EditableMetaData editableMetaData) {
         this.editableMetaData = editableMetaData;
         return this;
@@ -19,6 +21,7 @@ public class UpdateArtifactVersionMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public UpdateArtifactVersionMetaDataRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -29,6 +32,7 @@ public class UpdateArtifactVersionMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public UpdateArtifactVersionMetaDataRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -39,9 +43,16 @@ public class UpdateArtifactVersionMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public UpdateArtifactVersionMetaDataRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateArtifactVersionMetaDataRequest(@JsonProperty("EditableMetaData") org.openapis.openapi.models.shared.EditableMetaData editableMetaData, @JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId, @JsonProperty("version") String version) {
+        this.editableMetaData = editableMetaData;
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+        this.version = version;
+  }
 }

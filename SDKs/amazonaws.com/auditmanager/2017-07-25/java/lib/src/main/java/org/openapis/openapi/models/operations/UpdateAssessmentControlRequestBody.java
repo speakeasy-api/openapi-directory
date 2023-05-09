@@ -15,6 +15,7 @@ public class UpdateAssessmentControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentBody")
     public String commentBody;
+
     public UpdateAssessmentControlRequestBody withCommentBody(String commentBody) {
         this.commentBody = commentBody;
         return this;
@@ -26,9 +27,11 @@ public class UpdateAssessmentControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlStatus")
     public UpdateAssessmentControlRequestBodyControlStatusEnum controlStatus;
+
     public UpdateAssessmentControlRequestBody withControlStatus(UpdateAssessmentControlRequestBodyControlStatusEnum controlStatus) {
         this.controlStatus = controlStatus;
         return this;
     }
     
+    public UpdateAssessmentControlRequestBody(){}
 }

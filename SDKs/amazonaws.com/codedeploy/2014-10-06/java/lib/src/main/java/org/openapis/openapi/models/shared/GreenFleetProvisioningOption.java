@@ -15,9 +15,11 @@ public class GreenFleetProvisioningOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public GreenFleetProvisioningActionEnum action;
+
     public GreenFleetProvisioningOption withAction(GreenFleetProvisioningActionEnum action) {
         this.action = action;
         return this;
     }
     
+    public GreenFleetProvisioningOption(){}
 }

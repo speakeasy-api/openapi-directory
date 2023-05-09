@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayRouteResultRoute {
     
     public String destinationCidrBlock;
+
     public DeleteTransitGatewayRouteResultRoute withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTransitGatewayRouteResultRoute {
     
     
     public String prefixListId;
+
     public DeleteTransitGatewayRouteResultRoute withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTransitGatewayRouteResultRoute {
     
     
     public DeleteTransitGatewayRouteResultRouteStateEnum state;
+
     public DeleteTransitGatewayRouteResultRoute withState(DeleteTransitGatewayRouteResultRouteStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class DeleteTransitGatewayRouteResultRoute {
     
     
     public DeleteTransitGatewayRouteResultRouteTransitGatewayAttachments[] transitGatewayAttachments;
+
     public DeleteTransitGatewayRouteResultRoute withTransitGatewayAttachments(DeleteTransitGatewayRouteResultRouteTransitGatewayAttachments[] transitGatewayAttachments) {
         this.transitGatewayAttachments = transitGatewayAttachments;
         return this;
@@ -40,6 +44,7 @@ public class DeleteTransitGatewayRouteResultRoute {
     
     
     public String transitGatewayRouteTableAnnouncementId;
+
     public DeleteTransitGatewayRouteResultRoute withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
@@ -47,9 +52,11 @@ public class DeleteTransitGatewayRouteResultRoute {
     
     
     public DeleteTransitGatewayRouteResultRouteTypeEnum type;
+
     public DeleteTransitGatewayRouteResultRoute withType(DeleteTransitGatewayRouteResultRouteTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DeleteTransitGatewayRouteResultRoute(){}
 }

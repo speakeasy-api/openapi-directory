@@ -15,6 +15,7 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RemediationAction withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2AssociateRouteTableAction")
     public Ec2AssociateRouteTableAction ec2AssociateRouteTableAction;
+
     public RemediationAction withEc2AssociateRouteTableAction(Ec2AssociateRouteTableAction ec2AssociateRouteTableAction) {
         this.ec2AssociateRouteTableAction = ec2AssociateRouteTableAction;
         return this;
@@ -31,6 +33,7 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2CopyRouteTableAction")
     public Ec2CopyRouteTableAction ec2CopyRouteTableAction;
+
     public RemediationAction withEc2CopyRouteTableAction(Ec2CopyRouteTableAction ec2CopyRouteTableAction) {
         this.ec2CopyRouteTableAction = ec2CopyRouteTableAction;
         return this;
@@ -39,6 +42,7 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2CreateRouteAction")
     public Ec2CreateRouteAction ec2CreateRouteAction;
+
     public RemediationAction withEc2CreateRouteAction(Ec2CreateRouteAction ec2CreateRouteAction) {
         this.ec2CreateRouteAction = ec2CreateRouteAction;
         return this;
@@ -47,6 +51,7 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2CreateRouteTableAction")
     public Ec2CreateRouteTableAction ec2CreateRouteTableAction;
+
     public RemediationAction withEc2CreateRouteTableAction(Ec2CreateRouteTableAction ec2CreateRouteTableAction) {
         this.ec2CreateRouteTableAction = ec2CreateRouteTableAction;
         return this;
@@ -55,6 +60,7 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2DeleteRouteAction")
     public Ec2DeleteRouteAction ec2DeleteRouteAction;
+
     public RemediationAction withEc2DeleteRouteAction(Ec2DeleteRouteAction ec2DeleteRouteAction) {
         this.ec2DeleteRouteAction = ec2DeleteRouteAction;
         return this;
@@ -63,6 +69,7 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2ReplaceRouteAction")
     public Ec2ReplaceRouteAction ec2ReplaceRouteAction;
+
     public RemediationAction withEc2ReplaceRouteAction(Ec2ReplaceRouteAction ec2ReplaceRouteAction) {
         this.ec2ReplaceRouteAction = ec2ReplaceRouteAction;
         return this;
@@ -71,6 +78,7 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2ReplaceRouteTableAssociationAction")
     public Ec2ReplaceRouteTableAssociationAction ec2ReplaceRouteTableAssociationAction;
+
     public RemediationAction withEc2ReplaceRouteTableAssociationAction(Ec2ReplaceRouteTableAssociationAction ec2ReplaceRouteTableAssociationAction) {
         this.ec2ReplaceRouteTableAssociationAction = ec2ReplaceRouteTableAssociationAction;
         return this;
@@ -79,9 +87,11 @@ public class RemediationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FMSPolicyUpdateFirewallCreationConfigAction")
     public FMSPolicyUpdateFirewallCreationConfigAction fmsPolicyUpdateFirewallCreationConfigAction;
+
     public RemediationAction withFMSPolicyUpdateFirewallCreationConfigAction(FMSPolicyUpdateFirewallCreationConfigAction fmsPolicyUpdateFirewallCreationConfigAction) {
         this.fmsPolicyUpdateFirewallCreationConfigAction = fmsPolicyUpdateFirewallCreationConfigAction;
         return this;
     }
     
+    public RemediationAction(){}
 }

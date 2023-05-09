@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateColumnsRequest {
@@ -12,6 +13,7 @@ public class UpdateColumnsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ColumnDTO[] requestBody;
+
     public UpdateColumnsRequest withRequestBody(org.openapis.openapi.models.shared.ColumnDTO[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class UpdateColumnsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public UpdateColumnsRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public UpdateColumnsRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.ColumnDTO[] requestBody, @JsonProperty("viewId") Long viewId) {
+        this.requestBody = requestBody;
+        this.viewId = viewId;
+  }
 }

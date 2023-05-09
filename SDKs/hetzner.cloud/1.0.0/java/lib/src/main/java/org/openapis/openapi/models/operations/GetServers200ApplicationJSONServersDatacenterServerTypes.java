@@ -15,6 +15,7 @@ public class GetServers200ApplicationJSONServersDatacenterServerTypes {
      */
     @JsonProperty("available")
     public Double[] available;
+
     public GetServers200ApplicationJSONServersDatacenterServerTypes withAvailable(Double[] available) {
         this.available = available;
         return this;
@@ -25,6 +26,7 @@ public class GetServers200ApplicationJSONServersDatacenterServerTypes {
      */
     @JsonProperty("available_for_migration")
     public Double[] availableForMigration;
+
     public GetServers200ApplicationJSONServersDatacenterServerTypes withAvailableForMigration(Double[] availableForMigration) {
         this.availableForMigration = availableForMigration;
         return this;
@@ -35,9 +37,15 @@ public class GetServers200ApplicationJSONServersDatacenterServerTypes {
      */
     @JsonProperty("supported")
     public Double[] supported;
+
     public GetServers200ApplicationJSONServersDatacenterServerTypes withSupported(Double[] supported) {
         this.supported = supported;
         return this;
     }
     
+    public GetServers200ApplicationJSONServersDatacenterServerTypes(@JsonProperty("available") Double[] available, @JsonProperty("available_for_migration") Double[] availableForMigration, @JsonProperty("supported") Double[] supported) {
+        this.available = available;
+        this.availableForMigration = availableForMigration;
+        this.supported = supported;
+  }
 }

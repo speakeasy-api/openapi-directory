@@ -12,6 +12,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absence_entitlement")
     public AbsenceEntitlement absenceEntitlement;
+
     public EmployeeResponseDataAttributes withAbsenceEntitlement(AbsenceEntitlement absenceEntitlement) {
         this.absenceEntitlement = absenceEntitlement;
         return this;
@@ -20,6 +21,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contract_end_date")
     public Attribute contractEndDate;
+
     public EmployeeResponseDataAttributes withContractEndDate(Attribute contractEndDate) {
         this.contractEndDate = contractEndDate;
         return this;
@@ -28,6 +30,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_centers")
     public CostCenters costCenters;
+
     public EmployeeResponseDataAttributes withCostCenters(CostCenters costCenters) {
         this.costCenters = costCenters;
         return this;
@@ -36,6 +39,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Attribute createdAt;
+
     public EmployeeResponseDataAttributes withCreatedAt(Attribute createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +48,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("department")
     public Department department;
+
     public EmployeeResponseDataAttributes withDepartment(Department department) {
         this.department = department;
         return this;
@@ -52,6 +57,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public Attribute email;
+
     public EmployeeResponseDataAttributes withEmail(Attribute email) {
         this.email = email;
         return this;
@@ -60,6 +66,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_type")
     public Attribute employmentType;
+
     public EmployeeResponseDataAttributes withEmploymentType(Attribute employmentType) {
         this.employmentType = employmentType;
         return this;
@@ -68,6 +75,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public Attribute firstName;
+
     public EmployeeResponseDataAttributes withFirstName(Attribute firstName) {
         this.firstName = firstName;
         return this;
@@ -76,6 +84,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fix_salary")
     public Attribute fixSalary;
+
     public EmployeeResponseDataAttributes withFixSalary(Attribute fixSalary) {
         this.fixSalary = fixSalary;
         return this;
@@ -84,6 +93,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public Attribute gender;
+
     public EmployeeResponseDataAttributes withGender(Attribute gender) {
         this.gender = gender;
         return this;
@@ -92,6 +102,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hire_date")
     public Attribute hireDate;
+
     public EmployeeResponseDataAttributes withHireDate(Attribute hireDate) {
         this.hireDate = hireDate;
         return this;
@@ -100,6 +111,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holiday_calendar")
     public HolidayCalendar holidayCalendar;
+
     public EmployeeResponseDataAttributes withHolidayCalendar(HolidayCalendar holidayCalendar) {
         this.holidayCalendar = holidayCalendar;
         return this;
@@ -108,6 +120,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourly_salary")
     public Attribute hourlySalary;
+
     public EmployeeResponseDataAttributes withHourlySalary(Attribute hourlySalary) {
         this.hourlySalary = hourlySalary;
         return this;
@@ -116,6 +129,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Attribute id;
+
     public EmployeeResponseDataAttributes withId(Attribute id) {
         this.id = id;
         return this;
@@ -124,6 +138,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public Attribute lastName;
+
     public EmployeeResponseDataAttributes withLastName(Attribute lastName) {
         this.lastName = lastName;
         return this;
@@ -132,6 +147,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office")
     public Office office;
+
     public EmployeeResponseDataAttributes withOffice(Office office) {
         this.office = office;
         return this;
@@ -140,6 +156,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Attribute position;
+
     public EmployeeResponseDataAttributes withPosition(Attribute position) {
         this.position = position;
         return this;
@@ -148,6 +165,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probation_period_end")
     public Attribute probationPeriodEnd;
+
     public EmployeeResponseDataAttributes withProbationPeriodEnd(Attribute probationPeriodEnd) {
         this.probationPeriodEnd = probationPeriodEnd;
         return this;
@@ -156,6 +174,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Attribute status;
+
     public EmployeeResponseDataAttributes withStatus(Attribute status) {
         this.status = status;
         return this;
@@ -164,6 +183,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supervisor")
     public Supervisor supervisor;
+
     public EmployeeResponseDataAttributes withSupervisor(Supervisor supervisor) {
         this.supervisor = supervisor;
         return this;
@@ -172,6 +192,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termination_date")
     public Attribute terminationDate;
+
     public EmployeeResponseDataAttributes withTerminationDate(Attribute terminationDate) {
         this.terminationDate = terminationDate;
         return this;
@@ -180,6 +201,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termination_reason")
     public Attribute terminationReason;
+
     public EmployeeResponseDataAttributes withTerminationReason(Attribute terminationReason) {
         this.terminationReason = terminationReason;
         return this;
@@ -188,6 +210,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termination_type")
     public Attribute terminationType;
+
     public EmployeeResponseDataAttributes withTerminationType(Attribute terminationType) {
         this.terminationType = terminationType;
         return this;
@@ -196,6 +219,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vacation_day_balance")
     public Attribute vacationDayBalance;
+
     public EmployeeResponseDataAttributes withVacationDayBalance(Attribute vacationDayBalance) {
         this.vacationDayBalance = vacationDayBalance;
         return this;
@@ -204,6 +228,7 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekly_working_hours")
     public Attribute weeklyWorkingHours;
+
     public EmployeeResponseDataAttributes withWeeklyWorkingHours(Attribute weeklyWorkingHours) {
         this.weeklyWorkingHours = weeklyWorkingHours;
         return this;
@@ -212,9 +237,11 @@ public class EmployeeResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_schedule")
     public WorkSchedule workSchedule;
+
     public EmployeeResponseDataAttributes withWorkSchedule(WorkSchedule workSchedule) {
         this.workSchedule = workSchedule;
         return this;
     }
     
+    public EmployeeResponseDataAttributes(){}
 }

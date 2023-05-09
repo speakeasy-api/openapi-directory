@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Consent {
     @JsonProperty("Currency")
     public String currency;
+
     public Consent withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -19,9 +20,14 @@ public class Consent {
     
     @JsonProperty("MaxPrice")
     public Double maxPrice;
+
     public Consent withMaxPrice(Double maxPrice) {
         this.maxPrice = maxPrice;
         return this;
     }
     
+    public Consent(@JsonProperty("Currency") String currency, @JsonProperty("MaxPrice") Double maxPrice) {
+        this.currency = currency;
+        this.maxPrice = maxPrice;
+  }
 }

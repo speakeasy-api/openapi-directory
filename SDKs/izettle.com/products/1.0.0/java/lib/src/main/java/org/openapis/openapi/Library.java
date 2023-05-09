@@ -73,11 +73,9 @@ public class Library {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLibraryResponse res = new org.openapis.openapi.models.operations.GetLibraryResponse() {{
+        org.openapis.openapi.models.operations.GetLibraryResponse res = new org.openapis.openapi.models.operations.GetLibraryResponse(contentType, httpRes.statusCode()) {{
             libraryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateResourceSharePermissionResponse {
@@ -12,6 +13,7 @@ public class AssociateResourceSharePermissionResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateResourceSharePermissionResponse associateResourceSharePermissionResponse;
+
     public AssociateResourceSharePermissionResponse withAssociateResourceSharePermissionResponse(org.openapis.openapi.models.shared.AssociateResourceSharePermissionResponse associateResourceSharePermissionResponse) {
         this.associateResourceSharePermissionResponse = associateResourceSharePermissionResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateResourceSharePermissionResponse {
     
     
     public String contentType;
+
     public AssociateResourceSharePermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateResourceSharePermissionResponse {
      */
     
     public Object invalidClientTokenException;
+
     public AssociateResourceSharePermissionResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateResourceSharePermissionResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateResourceSharePermissionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateResourceSharePermissionResponse {
      */
     
     public Object malformedArnException;
+
     public AssociateResourceSharePermissionResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateResourceSharePermissionResponse {
      */
     
     public Object operationNotPermittedException;
+
     public AssociateResourceSharePermissionResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class AssociateResourceSharePermissionResponse {
     
     
     public Integer statusCode;
+
     public AssociateResourceSharePermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AssociateResourceSharePermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateResourceSharePermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AssociateResourceSharePermissionResponse {
      */
     
     public Object serverInternalException;
+
     public AssociateResourceSharePermissionResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -93,6 +103,7 @@ public class AssociateResourceSharePermissionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AssociateResourceSharePermissionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class AssociateResourceSharePermissionResponse {
      */
     
     public Object unknownResourceException;
+
     public AssociateResourceSharePermissionResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public AssociateResourceSharePermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

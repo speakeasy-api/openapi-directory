@@ -22,6 +22,7 @@ public class StepTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public StepTimeline withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -32,6 +33,7 @@ public class StepTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDateTime")
     public OffsetDateTime endDateTime;
+
     public StepTimeline withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -42,9 +44,11 @@ public class StepTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDateTime")
     public OffsetDateTime startDateTime;
+
     public StepTimeline withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public StepTimeline(){}
 }

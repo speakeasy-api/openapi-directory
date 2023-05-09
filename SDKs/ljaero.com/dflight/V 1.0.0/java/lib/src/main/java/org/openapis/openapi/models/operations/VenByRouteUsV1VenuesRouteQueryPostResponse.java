@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VenByRouteUsV1VenuesRouteQueryPostResponse {
     
     public String contentType;
+
     public VenByRouteUsV1VenuesRouteQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VenByRouteUsV1VenuesRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public VenByRouteUsV1VenuesRouteQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class VenByRouteUsV1VenuesRouteQueryPostResponse {
     
     
     public Integer statusCode;
+
     public VenByRouteUsV1VenuesRouteQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class VenByRouteUsV1VenuesRouteQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VenByRouteUsV1VenuesRouteQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class VenByRouteUsV1VenuesRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.VenueRouteResponse venueRouteResponse;
+
     public VenByRouteUsV1VenuesRouteQueryPostResponse withVenueRouteResponse(org.openapis.openapi.models.shared.VenueRouteResponse venueRouteResponse) {
         this.venueRouteResponse = venueRouteResponse;
         return this;
     }
     
+    public VenByRouteUsV1VenuesRouteQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

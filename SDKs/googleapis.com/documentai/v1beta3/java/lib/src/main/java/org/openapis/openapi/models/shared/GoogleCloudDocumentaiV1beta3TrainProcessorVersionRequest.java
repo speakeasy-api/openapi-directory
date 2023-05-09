@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest - Request message for the create processor version method.
+ * GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest - Request message for the TrainProcessorVersion method.
  */
 public class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseProcessorVersion")
     public String baseProcessorVersion;
+
     public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest withBaseProcessorVersion(String baseProcessorVersion) {
         this.baseProcessorVersion = baseProcessorVersion;
         return this;
@@ -29,17 +30,19 @@ public class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentSchema")
     public GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema;
+
     public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest withDocumentSchema(GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema) {
         this.documentSchema = documentSchema;
         return this;
     }
     
     /**
-     * The input data used to train a new `ProcessorVersion`.
+     * The input data used to train a new ProcessorVersion.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputData")
     public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestInputData inputData;
+
     public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest withInputData(GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestInputData inputData) {
         this.inputData = inputData;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processorVersion")
     public GoogleCloudDocumentaiV1beta3ProcessorVersion processorVersion;
+
     public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest withProcessorVersion(GoogleCloudDocumentaiV1beta3ProcessorVersion processorVersion) {
         this.processorVersion = processorVersion;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest(){}
 }

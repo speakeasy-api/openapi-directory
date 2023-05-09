@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStatisticsResponse {
     
     public String contentType;
+
     public GetStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetStatisticsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStatisticsResponse getStatisticsResponse;
+
     public GetStatisticsResponse withGetStatisticsResponse(org.openapis.openapi.models.shared.GetStatisticsResponse getStatisticsResponse) {
         this.getStatisticsResponse = getStatisticsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetStatisticsResponse {
      */
     
     public Object indexNotReadyException;
+
     public GetStatisticsResponse withIndexNotReadyException(Object indexNotReadyException) {
         this.indexNotReadyException = indexNotReadyException;
         return this;
@@ -39,6 +43,7 @@ public class GetStatisticsResponse {
      */
     
     public Object internalFailureException;
+
     public GetStatisticsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetStatisticsResponse {
      */
     
     public Object invalidAggregationException;
+
     public GetStatisticsResponse withInvalidAggregationException(Object invalidAggregationException) {
         this.invalidAggregationException = invalidAggregationException;
         return this;
@@ -59,6 +65,7 @@ public class GetStatisticsResponse {
      */
     
     public Object invalidQueryException;
+
     public GetStatisticsResponse withInvalidQueryException(Object invalidQueryException) {
         this.invalidQueryException = invalidQueryException;
         return this;
@@ -69,6 +76,7 @@ public class GetStatisticsResponse {
      */
     
     public Object invalidRequestException;
+
     public GetStatisticsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class GetStatisticsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStatisticsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class GetStatisticsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetStatisticsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class GetStatisticsResponse {
     
     
     public Integer statusCode;
+
     public GetStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class GetStatisticsResponse {
      */
     
     public Object throttlingException;
+
     public GetStatisticsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class GetStatisticsResponse {
      */
     
     public Object unauthorizedException;
+
     public GetStatisticsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class OrdersCancelTestOrderByCustomerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrdersCancelTestOrderByCustomerResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public OrdersCancelTestOrderByCustomerResponse(){}
 }

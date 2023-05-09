@@ -15,6 +15,7 @@ public class DescribeSpendLimitsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSpendLimitsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSpendLimitsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpendLimits")
     public SpendLimit[] spendLimits;
+
     public DescribeSpendLimitsResult withSpendLimits(SpendLimit[] spendLimits) {
         this.spendLimits = spendLimits;
         return this;
     }
     
+    public DescribeSpendLimitsResult(){}
 }

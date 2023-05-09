@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeEngineDefaultParametersMessage - Represents the input of a &lt;code&gt;DescribeEngineDefaultParameters&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEngineDefaultParametersMessage {
     
     public String cacheParameterGroupFamily;
+
     public DescribeEngineDefaultParametersMessage withCacheParameterGroupFamily(String cacheParameterGroupFamily) {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEngineDefaultParametersMessage {
     
     
     public String marker;
+
     public DescribeEngineDefaultParametersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,13 @@ public class DescribeEngineDefaultParametersMessage {
     
     
     public Long maxRecords;
+
     public DescribeEngineDefaultParametersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeEngineDefaultParametersMessage(@JsonProperty("CacheParameterGroupFamily") String cacheParameterGroupFamily) {
+        this.cacheParameterGroupFamily = cacheParameterGroupFamily;
+  }
 }

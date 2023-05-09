@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetadataDTO {
     @JsonProperty("inPos")
     public Boolean inPos;
+
     public MetadataDTO withInPos(Boolean inPos) {
         this.inPos = inPos;
         return this;
@@ -19,9 +20,13 @@ public class MetadataDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public SourceDTO source;
+
     public MetadataDTO withSource(SourceDTO source) {
         this.source = source;
         return this;
     }
     
+    public MetadataDTO(@JsonProperty("inPos") Boolean inPos) {
+        this.inPos = inPos;
+  }
 }

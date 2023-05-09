@@ -54,10 +54,8 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllStatsExampleParametersResponse res = new org.openapis.openapi.models.operations.AllStatsExampleParametersResponse() {{
+        org.openapis.openapi.models.operations.AllStatsExampleParametersResponse res = new org.openapis.openapi.models.operations.AllStatsExampleParametersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

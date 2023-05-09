@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse {
     
     public String contentType;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJ
      */
     
     public java.util.Map<String, Object> retryJobResponse;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse withRetryJobResponse(java.util.Map<String, Object> retryJobResponse) {
         this.retryJobResponse = retryJobResponse;
         return this;
@@ -26,6 +29,7 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJ
     
     
     public Integer statusCode;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJ
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

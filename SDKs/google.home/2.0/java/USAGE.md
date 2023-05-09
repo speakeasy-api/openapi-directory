@@ -3,31 +3,30 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AccessibilityResponse;
 import org.openapis.openapi.models.shared.AccessibilityRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     castLocalAuthorizationToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            org.openapis.openapi.models.shared.AccessibilityRequest req = new AccessibilityRequest() {{
-                endpointEnabled = false;
-                hotwordEnabled = false;
-            }}            
+            org.openapis.openapi.models.shared.AccessibilityRequest req = new AccessibilityRequest(false, false);            
 
             AccessibilityResponse res = sdk.assistant.accessibility(req);
 
-            if (res.getcurrentvalues.isPresent()) {
+            if (res.getcurrentvalues != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

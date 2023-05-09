@@ -15,6 +15,7 @@ public class BurnTokenRequestTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public BurnTokenRequestTransfer withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class BurnTokenRequestTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public BurnTokenRequestTransfer withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -37,9 +39,11 @@ public class BurnTokenRequestTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenId")
     public String tokenId;
+
     public BurnTokenRequestTransfer withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public BurnTokenRequestTransfer(){}
 }

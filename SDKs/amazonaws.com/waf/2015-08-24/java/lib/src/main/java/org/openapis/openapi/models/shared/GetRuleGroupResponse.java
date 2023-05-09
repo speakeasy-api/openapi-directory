@@ -15,9 +15,11 @@ public class GetRuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroup")
     public RuleGroup ruleGroup;
+
     public GetRuleGroupResponse withRuleGroup(RuleGroup ruleGroup) {
         this.ruleGroup = ruleGroup;
         return this;
     }
     
+    public GetRuleGroupResponse(){}
 }

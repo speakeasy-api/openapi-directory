@@ -17,6 +17,7 @@ public class GetContainerStatus {
      */
     @JsonProperty("NameOrId")
     public String nameOrId;
+
     public GetContainerStatus withNameOrId(String nameOrId) {
         this.nameOrId = nameOrId;
         return this;
@@ -28,6 +29,7 @@ public class GetContainerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public GetContainerStatus withStatus(String status) {
         this.status = status;
         return this;
@@ -39,9 +41,13 @@ public class GetContainerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Transient")
     public Boolean transient_;
+
     public GetContainerStatus withTransient(Boolean transient_) {
         this.transient_ = transient_;
         return this;
     }
     
+    public GetContainerStatus(@JsonProperty("NameOrId") String nameOrId) {
+        this.nameOrId = nameOrId;
+  }
 }

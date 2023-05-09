@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportChannelCatalogProductInfoListRequest {
@@ -12,6 +13,7 @@ public class ExportChannelCatalogProductInfoListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public ExportChannelCatalogProductInfoListRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -22,6 +24,7 @@ public class ExportChannelCatalogProductInfoListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ExportFormatInQueryGeneralParameterEnum format;
+
     public ExportChannelCatalogProductInfoListRequest withFormat(org.openapis.openapi.models.shared.ExportFormatInQueryGeneralParameterEnum format) {
         this.format = format;
         return this;
@@ -32,9 +35,15 @@ public class ExportChannelCatalogProductInfoListRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest;
+
     public ExportChannelCatalogProductInfoListRequest withGetChannelCatalogProductInfoListRequest(org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest) {
         this.getChannelCatalogProductInfoListRequest = getChannelCatalogProductInfoListRequest;
         return this;
     }
     
+    public ExportChannelCatalogProductInfoListRequest(@JsonProperty("channelCatalogId") String channelCatalogId, @JsonProperty("format") org.openapis.openapi.models.shared.ExportFormatInQueryGeneralParameterEnum format, @JsonProperty("getChannelCatalogProductInfoListRequest") org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest) {
+        this.channelCatalogId = channelCatalogId;
+        this.format = format;
+        this.getChannelCatalogProductInfoListRequest = getChannelCatalogProductInfoListRequest;
+  }
 }

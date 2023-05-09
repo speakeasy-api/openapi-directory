@@ -15,6 +15,7 @@ public class AddEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointDescriptions")
     public EndpointDescription[] endpointDescriptions;
+
     public AddEndpointsResponse withEndpointDescriptions(EndpointDescription[] endpointDescriptions) {
         this.endpointDescriptions = endpointDescriptions;
         return this;
@@ -23,9 +24,11 @@ public class AddEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public AddEndpointsResponse withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
     }
     
+    public AddEndpointsResponse(){}
 }

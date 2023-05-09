@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteLaunchTemplateVersionsRequest {
     
     public Boolean dryRun;
+
     public DeleteLaunchTemplateVersionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DeleteLaunchTemplateVersionsRequest {
     
     
     public String launchTemplateId;
+
     public DeleteLaunchTemplateVersionsRequest withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -23,6 +25,7 @@ public class DeleteLaunchTemplateVersionsRequest {
     
     
     public String launchTemplateName;
+
     public DeleteLaunchTemplateVersionsRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -30,9 +33,13 @@ public class DeleteLaunchTemplateVersionsRequest {
     
     
     public String[] versions;
+
     public DeleteLaunchTemplateVersionsRequest withVersions(String[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public DeleteLaunchTemplateVersionsRequest(@JsonProperty("Versions") String[] versions) {
+        this.versions = versions;
+  }
 }

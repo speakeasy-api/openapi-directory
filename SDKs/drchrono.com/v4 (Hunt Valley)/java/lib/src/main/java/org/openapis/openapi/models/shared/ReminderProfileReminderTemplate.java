@@ -15,6 +15,7 @@ public class ReminderProfileReminderTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public ReminderProfileReminderTemplate withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -26,6 +27,7 @@ public class ReminderProfileReminderTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReminderProfileReminderTemplateTypeEnum type;
+
     public ReminderProfileReminderTemplate withType(ReminderProfileReminderTemplateTypeEnum type) {
         this.type = type;
         return this;
@@ -37,9 +39,11 @@ public class ReminderProfileReminderTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public ReminderProfileReminderTemplateUnitEnum unit;
+
     public ReminderProfileReminderTemplate withUnit(ReminderProfileReminderTemplateUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public ReminderProfileReminderTemplate(){}
 }

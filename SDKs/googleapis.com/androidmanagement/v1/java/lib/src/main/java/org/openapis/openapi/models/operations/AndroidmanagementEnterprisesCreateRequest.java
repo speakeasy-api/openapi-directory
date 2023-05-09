@@ -12,6 +12,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidmanagementEnterprisesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Enterprise enterprise;
+
     public AndroidmanagementEnterprisesCreateRequest withEnterprise(org.openapis.openapi.models.shared.Enterprise enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -29,6 +31,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidmanagementEnterprisesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=agreementAccepted")
     public Boolean agreementAccepted;
+
     public AndroidmanagementEnterprisesCreateRequest withAgreementAccepted(Boolean agreementAccepted) {
         this.agreementAccepted = agreementAccepted;
         return this;
@@ -49,6 +53,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidmanagementEnterprisesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +64,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidmanagementEnterprisesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +75,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enterpriseToken")
     public String enterpriseToken;
+
     public AndroidmanagementEnterprisesCreateRequest withEnterpriseToken(String enterpriseToken) {
         this.enterpriseToken = enterpriseToken;
         return this;
@@ -79,6 +86,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidmanagementEnterprisesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +97,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidmanagementEnterprisesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +108,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidmanagementEnterprisesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +119,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidmanagementEnterprisesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +130,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projectId")
     public String projectId;
+
     public AndroidmanagementEnterprisesCreateRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -129,6 +141,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidmanagementEnterprisesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +152,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signupUrlName")
     public String signupUrlName;
+
     public AndroidmanagementEnterprisesCreateRequest withSignupUrlName(String signupUrlName) {
         this.signupUrlName = signupUrlName;
         return this;
@@ -149,6 +163,7 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidmanagementEnterprisesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +174,11 @@ public class AndroidmanagementEnterprisesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidmanagementEnterprisesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidmanagementEnterprisesCreateRequest(){}
 }

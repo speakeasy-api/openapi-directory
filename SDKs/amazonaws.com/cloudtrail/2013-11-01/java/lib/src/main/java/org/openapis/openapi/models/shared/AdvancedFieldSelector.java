@@ -15,6 +15,7 @@ public class AdvancedFieldSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndsWith")
     public String[] endsWith;
+
     public AdvancedFieldSelector withEndsWith(String[] endsWith) {
         this.endsWith = endsWith;
         return this;
@@ -23,6 +24,7 @@ public class AdvancedFieldSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Equals")
     public String[] equals;
+
     public AdvancedFieldSelector withEquals(String[] equals) {
         this.equals = equals;
         return this;
@@ -30,6 +32,7 @@ public class AdvancedFieldSelector {
     
     @JsonProperty("Field")
     public String field;
+
     public AdvancedFieldSelector withField(String field) {
         this.field = field;
         return this;
@@ -38,6 +41,7 @@ public class AdvancedFieldSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotEndsWith")
     public String[] notEndsWith;
+
     public AdvancedFieldSelector withNotEndsWith(String[] notEndsWith) {
         this.notEndsWith = notEndsWith;
         return this;
@@ -46,6 +50,7 @@ public class AdvancedFieldSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotEquals")
     public String[] notEquals;
+
     public AdvancedFieldSelector withNotEquals(String[] notEquals) {
         this.notEquals = notEquals;
         return this;
@@ -54,6 +59,7 @@ public class AdvancedFieldSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotStartsWith")
     public String[] notStartsWith;
+
     public AdvancedFieldSelector withNotStartsWith(String[] notStartsWith) {
         this.notStartsWith = notStartsWith;
         return this;
@@ -62,9 +68,13 @@ public class AdvancedFieldSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartsWith")
     public String[] startsWith;
+
     public AdvancedFieldSelector withStartsWith(String[] startsWith) {
         this.startsWith = startsWith;
         return this;
     }
     
+    public AdvancedFieldSelector(@JsonProperty("Field") String field) {
+        this.field = field;
+  }
 }

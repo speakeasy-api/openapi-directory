@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetEnvironmentSecretResponse {
     
     public String contentType;
+
     public ActionsGetEnvironmentSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetEnvironmentSecretResponse {
     
     
     public Integer statusCode;
+
     public ActionsGetEnvironmentSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetEnvironmentSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetEnvironmentSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsGetEnvironmentSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionsSecret actionsSecret;
+
     public ActionsGetEnvironmentSecretResponse withActionsSecret(org.openapis.openapi.models.shared.ActionsSecret actionsSecret) {
         this.actionsSecret = actionsSecret;
         return this;
     }
     
+    public ActionsGetEnvironmentSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

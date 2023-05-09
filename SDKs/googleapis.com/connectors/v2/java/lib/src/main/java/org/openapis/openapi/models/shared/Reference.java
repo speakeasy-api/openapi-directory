@@ -15,6 +15,7 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Reference withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Reference withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Reference(){}
 }

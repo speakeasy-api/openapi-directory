@@ -22,6 +22,7 @@ public class UsageReportSubscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastGeneratedReportDate")
     public OffsetDateTime lastGeneratedReportDate;
+
     public UsageReportSubscription withLastGeneratedReportDate(OffsetDateTime lastGeneratedReportDate) {
         this.lastGeneratedReportDate = lastGeneratedReportDate;
         return this;
@@ -30,6 +31,7 @@ public class UsageReportSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public UsageReportSubscription withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -38,6 +40,7 @@ public class UsageReportSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public UsageReportScheduleEnum schedule;
+
     public UsageReportSubscription withSchedule(UsageReportScheduleEnum schedule) {
         this.schedule = schedule;
         return this;
@@ -46,9 +49,11 @@ public class UsageReportSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionErrors")
     public LastReportGenerationExecutionError[] subscriptionErrors;
+
     public UsageReportSubscription withSubscriptionErrors(LastReportGenerationExecutionError[] subscriptionErrors) {
         this.subscriptionErrors = subscriptionErrors;
         return this;
     }
     
+    public UsageReportSubscription(){}
 }

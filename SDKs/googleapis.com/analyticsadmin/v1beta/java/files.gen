@@ -221,4 +221,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleAnalyticsAdminV1betaA
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAnalyticsAdminV1betaAccessBetweenFilter.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAnalyticsAdminV1betaAccessDimension.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAnalyticsAdminV1betaAccessDateRange.java
+docs/sdk/README.md
+docs/accountsummaries/README.md
+docs/accounts/README.md
+docs/properties/README.md
 USAGE.md

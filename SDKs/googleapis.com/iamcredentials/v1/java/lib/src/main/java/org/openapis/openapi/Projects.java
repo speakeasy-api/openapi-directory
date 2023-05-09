@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse res = new org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse() {{
+        org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse res = new org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse(contentType, httpRes.statusCode()) {{
             generateAccessTokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenResponse res = new org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenResponse() {{
+        org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenResponse res = new org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenResponse(contentType, httpRes.statusCode()) {{
             generateIdTokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobResponse res = new org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobResponse() {{
+        org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobResponse res = new org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobResponse(contentType, httpRes.statusCode()) {{
             signBlobResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtResponse res = new org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtResponse() {{
+        org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtResponse res = new org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtResponse(contentType, httpRes.statusCode()) {{
             signJwtResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

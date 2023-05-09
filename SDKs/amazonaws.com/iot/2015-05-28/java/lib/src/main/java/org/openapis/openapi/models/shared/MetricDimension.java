@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricDimension {
     @JsonProperty("dimensionName")
     public String dimensionName;
+
     public MetricDimension withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -22,9 +23,13 @@ public class MetricDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public DimensionValueOperatorEnum operator;
+
     public MetricDimension withOperator(DimensionValueOperatorEnum operator) {
         this.operator = operator;
         return this;
     }
     
+    public MetricDimension(@JsonProperty("dimensionName") String dimensionName) {
+        this.dimensionName = dimensionName;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ClinicalNoteFieldValuesCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public ClinicalNoteFieldValuesCreateRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +17,7 @@ public class ClinicalNoteFieldValuesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_field")
     public Long clinicalNoteField;
+
     public ClinicalNoteFieldValuesCreateRequest withClinicalNoteField(Long clinicalNoteField) {
         this.clinicalNoteField = clinicalNoteField;
         return this;
@@ -23,6 +25,7 @@ public class ClinicalNoteFieldValuesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_template")
     public Long clinicalNoteTemplate;
+
     public ClinicalNoteFieldValuesCreateRequest withClinicalNoteTemplate(Long clinicalNoteTemplate) {
         this.clinicalNoteTemplate = clinicalNoteTemplate;
         return this;
@@ -30,6 +33,7 @@ public class ClinicalNoteFieldValuesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ClinicalNoteFieldValuesCreateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -37,9 +41,11 @@ public class ClinicalNoteFieldValuesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public ClinicalNoteFieldValuesCreateRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public ClinicalNoteFieldValuesCreateRequest(){}
 }

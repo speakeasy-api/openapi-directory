@@ -18,9 +18,11 @@ public class BatchGetAssetsHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public TemporalAsset[] assets;
+
     public BatchGetAssetsHistoryResponse withAssets(TemporalAsset[] assets) {
         this.assets = assets;
         return this;
     }
     
+    public BatchGetAssetsHistoryResponse(){}
 }

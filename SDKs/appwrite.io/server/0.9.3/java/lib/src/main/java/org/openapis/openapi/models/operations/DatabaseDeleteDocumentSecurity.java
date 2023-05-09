@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseDeleteDocumentSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-JWT")
     public String jwt;
+
     public DatabaseDeleteDocumentSecurity withJwt(String jwt) {
         this.jwt = jwt;
         return this;
@@ -16,6 +18,7 @@ public class DatabaseDeleteDocumentSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Key")
     public String key;
+
     public DatabaseDeleteDocumentSecurity withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +26,15 @@ public class DatabaseDeleteDocumentSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
     public String project;
+
     public DatabaseDeleteDocumentSecurity withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public DatabaseDeleteDocumentSecurity(@JsonProperty("JWT") String jwt, @JsonProperty("Key") String key, @JsonProperty("Project") String project) {
+        this.jwt = jwt;
+        this.key = key;
+        this.project = project;
+  }
 }

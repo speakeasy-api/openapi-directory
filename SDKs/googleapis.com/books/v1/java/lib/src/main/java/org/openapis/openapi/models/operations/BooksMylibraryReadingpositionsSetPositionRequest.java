@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksMylibraryReadingpositionsSetPositionRequest {
@@ -12,6 +13,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
     public BooksMylibraryReadingpositionsSetPositionActionEnum action;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withAction(BooksMylibraryReadingpositionsSetPositionActionEnum action) {
         this.action = action;
         return this;
@@ -42,6 +46,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentVersion")
     public String contentVersion;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withContentVersion(String contentVersion) {
         this.contentVersion = contentVersion;
         return this;
@@ -72,6 +79,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceCookie")
     public String deviceCookie;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withDeviceCookie(String deviceCookie) {
         this.deviceCookie = deviceCookie;
         return this;
@@ -82,6 +90,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +101,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
     public String position;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -122,6 +134,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withSource(String source) {
         this.source = source;
         return this;
@@ -152,6 +167,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
     public String timestamp;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -162,6 +178,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,6 +189,7 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -182,9 +200,15 @@ public class BooksMylibraryReadingpositionsSetPositionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=volumeId")
     public String volumeId;
+
     public BooksMylibraryReadingpositionsSetPositionRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public BooksMylibraryReadingpositionsSetPositionRequest(@JsonProperty("position") String position, @JsonProperty("timestamp") String timestamp, @JsonProperty("volumeId") String volumeId) {
+        this.position = position;
+        this.timestamp = timestamp;
+        this.volumeId = volumeId;
+  }
 }

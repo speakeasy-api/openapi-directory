@@ -15,9 +15,11 @@ public class EnableSharingWithAwsOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnValue")
     public Boolean returnValue;
+
     public EnableSharingWithAwsOrganizationResponse withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public EnableSharingWithAwsOrganizationResponse(){}
 }

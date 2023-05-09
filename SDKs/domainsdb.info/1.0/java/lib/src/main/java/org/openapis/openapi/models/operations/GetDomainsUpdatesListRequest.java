@@ -12,9 +12,11 @@ public class GetDomainsUpdatesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetDomainsUpdatesListRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GetDomainsUpdatesListRequest(){}
 }

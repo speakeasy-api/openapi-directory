@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListTagsForResourceMessage - Represents the input to &lt;a&gt;ListTagsForResource&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListTagsForResourceMessage {
     
     public FilterList[] filters;
+
     public ListTagsForResourceMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -19,9 +20,13 @@ public class ListTagsForResourceMessage {
     
     
     public String resourceName;
+
     public ListTagsForResourceMessage withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public ListTagsForResourceMessage(@JsonProperty("ResourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

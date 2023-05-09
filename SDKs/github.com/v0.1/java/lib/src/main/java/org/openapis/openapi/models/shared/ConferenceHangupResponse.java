@@ -18,6 +18,7 @@ public class ConferenceHangupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Members")
     public String[] members;
+
     public ConferenceHangupResponse withMembers(String[] members) {
         this.members = members;
         return this;
@@ -28,6 +29,7 @@ public class ConferenceHangupResponse {
      */
     @JsonProperty("Message")
     public ConferenceHangupResponseMessageEnum message;
+
     public ConferenceHangupResponse withMessage(ConferenceHangupResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -38,9 +40,14 @@ public class ConferenceHangupResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public ConferenceHangupResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ConferenceHangupResponse(@JsonProperty("Message") ConferenceHangupResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetentionConfiguration {
     @JsonProperty("Name")
     public String name;
+
     public RetentionConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class RetentionConfiguration {
     
     @JsonProperty("RetentionPeriodInDays")
     public Long retentionPeriodInDays;
+
     public RetentionConfiguration withRetentionPeriodInDays(Long retentionPeriodInDays) {
         this.retentionPeriodInDays = retentionPeriodInDays;
         return this;
     }
     
+    public RetentionConfiguration(@JsonProperty("Name") String name, @JsonProperty("RetentionPeriodInDays") Long retentionPeriodInDays) {
+        this.name = name;
+        this.retentionPeriodInDays = retentionPeriodInDays;
+  }
 }

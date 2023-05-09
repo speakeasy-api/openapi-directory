@@ -15,6 +15,7 @@ public class GetSavingsPlansPurchaseRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public SavingsPlansPurchaseRecommendationMetadata metadata;
+
     public GetSavingsPlansPurchaseRecommendationResponse withMetadata(SavingsPlansPurchaseRecommendationMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -23,6 +24,7 @@ public class GetSavingsPlansPurchaseRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetSavingsPlansPurchaseRecommendationResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -31,9 +33,11 @@ public class GetSavingsPlansPurchaseRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPlansPurchaseRecommendation")
     public SavingsPlansPurchaseRecommendation savingsPlansPurchaseRecommendation;
+
     public GetSavingsPlansPurchaseRecommendationResponse withSavingsPlansPurchaseRecommendation(SavingsPlansPurchaseRecommendation savingsPlansPurchaseRecommendation) {
         this.savingsPlansPurchaseRecommendation = savingsPlansPurchaseRecommendation;
         return this;
     }
     
+    public GetSavingsPlansPurchaseRecommendationResponse(){}
 }

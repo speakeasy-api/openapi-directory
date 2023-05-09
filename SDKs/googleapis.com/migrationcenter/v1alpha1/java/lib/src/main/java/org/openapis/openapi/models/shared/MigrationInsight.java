@@ -18,6 +18,7 @@ public class MigrationInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEngineTarget")
     public ComputeEngineMigrationTarget computeEngineTarget;
+
     public MigrationInsight withComputeEngineTarget(ComputeEngineMigrationTarget computeEngineTarget) {
         this.computeEngineTarget = computeEngineTarget;
         return this;
@@ -29,6 +30,7 @@ public class MigrationInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fit")
     public FitDescriptor fit;
+
     public MigrationInsight withFit(FitDescriptor fit) {
         this.fit = fit;
         return this;
@@ -40,6 +42,7 @@ public class MigrationInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeTarget")
     public java.util.Map<String, Object> gkeTarget;
+
     public MigrationInsight withGkeTarget(java.util.Map<String, Object> gkeTarget) {
         this.gkeTarget = gkeTarget;
         return this;
@@ -51,9 +54,11 @@ public class MigrationInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmwareEngineTarget")
     public java.util.Map<String, Object> vmwareEngineTarget;
+
     public MigrationInsight withVmwareEngineTarget(java.util.Map<String, Object> vmwareEngineTarget) {
         this.vmwareEngineTarget = vmwareEngineTarget;
         return this;
     }
     
+    public MigrationInsight(){}
 }

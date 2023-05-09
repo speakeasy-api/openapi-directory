@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PublishPushNotificationToDevicesApplicationXMsgpack {
     
     public org.openapis.openapi.models.shared.Push push;
+
     public PublishPushNotificationToDevicesApplicationXMsgpack withPush(org.openapis.openapi.models.shared.Push push) {
         this.push = push;
         return this;
@@ -19,9 +20,13 @@ public class PublishPushNotificationToDevicesApplicationXMsgpack {
      */
     
     public org.openapis.openapi.models.shared.Recipient recipient;
+
     public PublishPushNotificationToDevicesApplicationXMsgpack withRecipient(org.openapis.openapi.models.shared.Recipient recipient) {
         this.recipient = recipient;
         return this;
     }
     
+    public PublishPushNotificationToDevicesApplicationXMsgpack(@JsonProperty("recipient") org.openapis.openapi.models.shared.Recipient recipient) {
+        this.recipient = recipient;
+  }
 }

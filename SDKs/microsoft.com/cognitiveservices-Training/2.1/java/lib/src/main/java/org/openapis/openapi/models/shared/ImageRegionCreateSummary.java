@@ -15,6 +15,7 @@ public class ImageRegionCreateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public ImageRegionCreateResult[] created;
+
     public ImageRegionCreateSummary withCreated(ImageRegionCreateResult[] created) {
         this.created = created;
         return this;
@@ -23,6 +24,7 @@ public class ImageRegionCreateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicated")
     public ImageRegionCreateEntry[] duplicated;
+
     public ImageRegionCreateSummary withDuplicated(ImageRegionCreateEntry[] duplicated) {
         this.duplicated = duplicated;
         return this;
@@ -31,9 +33,11 @@ public class ImageRegionCreateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceeded")
     public ImageRegionCreateEntry[] exceeded;
+
     public ImageRegionCreateSummary withExceeded(ImageRegionCreateEntry[] exceeded) {
         this.exceeded = exceeded;
         return this;
     }
     
+    public ImageRegionCreateSummary(){}
 }

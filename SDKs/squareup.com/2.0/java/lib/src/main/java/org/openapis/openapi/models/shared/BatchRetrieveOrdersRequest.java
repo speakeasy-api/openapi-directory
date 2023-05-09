@@ -20,6 +20,7 @@ public class BatchRetrieveOrdersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public BatchRetrieveOrdersRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -30,9 +31,13 @@ public class BatchRetrieveOrdersRequest {
      */
     @JsonProperty("order_ids")
     public String[] orderIds;
+
     public BatchRetrieveOrdersRequest withOrderIds(String[] orderIds) {
         this.orderIds = orderIds;
         return this;
     }
     
+    public BatchRetrieveOrdersRequest(@JsonProperty("order_ids") String[] orderIds) {
+        this.orderIds = orderIds;
+  }
 }

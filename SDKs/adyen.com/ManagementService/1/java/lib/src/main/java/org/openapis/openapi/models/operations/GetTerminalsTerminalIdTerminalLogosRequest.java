@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTerminalsTerminalIdTerminalLogosRequest {
@@ -12,9 +13,13 @@ public class GetTerminalsTerminalIdTerminalLogosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=terminalId")
     public String terminalId;
+
     public GetTerminalsTerminalIdTerminalLogosRequest withTerminalId(String terminalId) {
         this.terminalId = terminalId;
         return this;
     }
     
+    public GetTerminalsTerminalIdTerminalLogosRequest(@JsonProperty("terminalId") String terminalId) {
+        this.terminalId = terminalId;
+  }
 }

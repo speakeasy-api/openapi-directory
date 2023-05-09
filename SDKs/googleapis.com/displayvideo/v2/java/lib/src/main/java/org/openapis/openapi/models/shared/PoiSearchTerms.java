@@ -18,9 +18,11 @@ public class PoiSearchTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poiQuery")
     public String poiQuery;
+
     public PoiSearchTerms withPoiQuery(String poiQuery) {
         this.poiQuery = poiQuery;
         return this;
     }
     
+    public PoiSearchTerms(){}
 }

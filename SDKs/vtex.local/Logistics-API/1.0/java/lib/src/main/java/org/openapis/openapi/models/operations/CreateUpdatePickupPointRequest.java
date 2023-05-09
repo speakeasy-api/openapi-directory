@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdatePickupPointRequest {
@@ -12,6 +13,7 @@ public class CreateUpdatePickupPointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateUpdatePickupPointRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateUpdatePickupPointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateUpdatePickupPointRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUpdatePickupPointRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateUpdatePickupPointRequestBody requestBody;
+
     public CreateUpdatePickupPointRequest withRequestBody(CreateUpdatePickupPointRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,16 @@ public class CreateUpdatePickupPointRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pickupPointId")
     public String pickupPointId;
+
     public CreateUpdatePickupPointRequest withPickupPointId(String pickupPointId) {
         this.pickupPointId = pickupPointId;
         return this;
     }
     
+    public CreateUpdatePickupPointRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") CreateUpdatePickupPointRequestBody requestBody, @JsonProperty("pickupPointId") String pickupPointId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.pickupPointId = pickupPointId;
+  }
 }

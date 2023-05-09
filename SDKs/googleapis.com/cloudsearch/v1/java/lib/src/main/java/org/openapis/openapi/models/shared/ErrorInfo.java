@@ -15,9 +15,11 @@ public class ErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessages")
     public ErrorMessage[] errorMessages;
+
     public ErrorInfo withErrorMessages(ErrorMessage[] errorMessages) {
         this.errorMessages = errorMessages;
         return this;
     }
     
+    public ErrorInfo(){}
 }

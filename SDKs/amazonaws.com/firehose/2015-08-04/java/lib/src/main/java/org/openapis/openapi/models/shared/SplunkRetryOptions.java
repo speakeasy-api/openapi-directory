@@ -15,9 +15,11 @@ public class SplunkRetryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public SplunkRetryOptions withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
     }
     
+    public SplunkRetryOptions(){}
 }

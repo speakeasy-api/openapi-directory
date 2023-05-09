@@ -6,6 +6,17 @@ package org.openapis.openapi.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
+/**
+ * PeriodicPaymentRequestFrequencyEnum - * `Daily` - Daily
+ * * `Weekly` - Weekly
+ * * `EveryTwoWeeks` - EveryTwoWeeks
+ * * `Monthly` - Monthly
+ * * `EveryTwoMonths` - EveryTwoMonths
+ * * `Quarterly` - Quarterly
+ * * `SemiAnnual` - SemiAnnual
+ * * `Annual` - Annual
+ * * `MonthlyVariable` - MonthlyVariable
+ */
 public enum PeriodicPaymentRequestFrequencyEnum {
     DAILY("Daily"),
     WEEKLY("Weekly"),

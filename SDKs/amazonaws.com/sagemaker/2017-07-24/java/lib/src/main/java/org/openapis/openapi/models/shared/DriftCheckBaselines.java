@@ -15,6 +15,7 @@ public class DriftCheckBaselines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bias")
     public DriftCheckBias bias;
+
     public DriftCheckBaselines withBias(DriftCheckBias bias) {
         this.bias = bias;
         return this;
@@ -23,6 +24,7 @@ public class DriftCheckBaselines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Explainability")
     public DriftCheckExplainability explainability;
+
     public DriftCheckBaselines withExplainability(DriftCheckExplainability explainability) {
         this.explainability = explainability;
         return this;
@@ -31,6 +33,7 @@ public class DriftCheckBaselines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDataQuality")
     public DriftCheckModelDataQuality modelDataQuality;
+
     public DriftCheckBaselines withModelDataQuality(DriftCheckModelDataQuality modelDataQuality) {
         this.modelDataQuality = modelDataQuality;
         return this;
@@ -39,9 +42,11 @@ public class DriftCheckBaselines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelQuality")
     public DriftCheckModelQuality modelQuality;
+
     public DriftCheckBaselines withModelQuality(DriftCheckModelQuality modelQuality) {
         this.modelQuality = modelQuality;
         return this;
     }
     
+    public DriftCheckBaselines(){}
 }

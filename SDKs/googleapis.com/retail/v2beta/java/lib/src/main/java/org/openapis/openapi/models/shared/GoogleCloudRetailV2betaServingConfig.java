@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boostControlIds")
     public String[] boostControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withBoostControlIds(String[] boostControlIds) {
         this.boostControlIds = boostControlIds;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2betaServingConfig withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diversityLevel")
     public String diversityLevel;
+
     public GoogleCloudRetailV2betaServingConfig withDiversityLevel(String diversityLevel) {
         this.diversityLevel = diversityLevel;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diversityType")
     public GoogleCloudRetailV2betaServingConfigDiversityTypeEnum diversityType;
+
     public GoogleCloudRetailV2betaServingConfig withDiversityType(GoogleCloudRetailV2betaServingConfigDiversityTypeEnum diversityType) {
         this.diversityType = diversityType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doNotAssociateControlIds")
     public String[] doNotAssociateControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withDoNotAssociateControlIds(String[] doNotAssociateControlIds) {
         this.doNotAssociateControlIds = doNotAssociateControlIds;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicFacetSpec")
     public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpec dynamicFacetSpec;
+
     public GoogleCloudRetailV2betaServingConfig withDynamicFacetSpec(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpec dynamicFacetSpec) {
         this.dynamicFacetSpec = dynamicFacetSpec;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableCategoryFilterLevel")
     public String enableCategoryFilterLevel;
+
     public GoogleCloudRetailV2betaServingConfig withEnableCategoryFilterLevel(String enableCategoryFilterLevel) {
         this.enableCategoryFilterLevel = enableCategoryFilterLevel;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facetControlIds")
     public String[] facetControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withFacetControlIds(String[] facetControlIds) {
         this.facetControlIds = facetControlIds;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterControlIds")
     public String[] filterControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withFilterControlIds(String[] filterControlIds) {
         this.filterControlIds = filterControlIds;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreControlIds")
     public String[] ignoreControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withIgnoreControlIds(String[] ignoreControlIds) {
         this.ignoreControlIds = ignoreControlIds;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelId")
     public String modelId;
+
     public GoogleCloudRetailV2betaServingConfig withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2betaServingConfig withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onewaySynonymsControlIds")
     public String[] onewaySynonymsControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withOnewaySynonymsControlIds(String[] onewaySynonymsControlIds) {
         this.onewaySynonymsControlIds = onewaySynonymsControlIds;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalizationSpec")
     public GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec;
+
     public GoogleCloudRetailV2betaServingConfig withPersonalizationSpec(GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec) {
         this.personalizationSpec = personalizationSpec;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceRerankingLevel")
     public String priceRerankingLevel;
+
     public GoogleCloudRetailV2betaServingConfig withPriceRerankingLevel(String priceRerankingLevel) {
         this.priceRerankingLevel = priceRerankingLevel;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectControlIds")
     public String[] redirectControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withRedirectControlIds(String[] redirectControlIds) {
         this.redirectControlIds = redirectControlIds;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacementControlIds")
     public String[] replacementControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withReplacementControlIds(String[] replacementControlIds) {
         this.replacementControlIds = replacementControlIds;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionTypes")
     public GoogleCloudRetailV2betaServingConfigSolutionTypesEnum[] solutionTypes;
+
     public GoogleCloudRetailV2betaServingConfig withSolutionTypes(GoogleCloudRetailV2betaServingConfigSolutionTypesEnum[] solutionTypes) {
         this.solutionTypes = solutionTypes;
         return this;
@@ -216,9 +234,11 @@ public class GoogleCloudRetailV2betaServingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twowaySynonymsControlIds")
     public String[] twowaySynonymsControlIds;
+
     public GoogleCloudRetailV2betaServingConfig withTwowaySynonymsControlIds(String[] twowaySynonymsControlIds) {
         this.twowaySynonymsControlIds = twowaySynonymsControlIds;
         return this;
     }
     
+    public GoogleCloudRetailV2betaServingConfig(){}
 }

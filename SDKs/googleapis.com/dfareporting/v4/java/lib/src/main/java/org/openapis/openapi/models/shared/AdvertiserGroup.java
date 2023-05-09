@@ -18,6 +18,7 @@ public class AdvertiserGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AdvertiserGroup withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class AdvertiserGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AdvertiserGroup withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class AdvertiserGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AdvertiserGroup withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class AdvertiserGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdvertiserGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AdvertiserGroup(){}
 }

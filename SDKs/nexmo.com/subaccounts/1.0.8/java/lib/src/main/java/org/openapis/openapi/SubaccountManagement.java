@@ -62,15 +62,13 @@ public class SubaccountManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubAccountResponse res = new org.openapis.openapi.models.operations.CreateSubAccountResponse() {{
+        org.openapis.openapi.models.operations.CreateSubAccountResponse res = new org.openapis.openapi.models.operations.CreateSubAccountResponse(contentType, httpRes.statusCode()) {{
             subaccountCreateResponse = null;
             createSubAccount401ApplicationJSONObject = null;
             unprovisionedErrorResponse = null;
             createSubAccount404ApplicationJSONObject = null;
             createSubAccount422ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,15 +139,13 @@ public class SubaccountManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModifySubaccountResponse res = new org.openapis.openapi.models.operations.ModifySubaccountResponse() {{
+        org.openapis.openapi.models.operations.ModifySubaccountResponse res = new org.openapis.openapi.models.operations.ModifySubaccountResponse(contentType, httpRes.statusCode()) {{
             subaccountResponse = null;
             modifySubaccount401ApplicationJSONObject = null;
             unprovisionedErrorResponse = null;
             modifySubaccount404ApplicationJSONObject = null;
             modifySubaccount422ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,14 +211,12 @@ public class SubaccountManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveSubaccountResponse res = new org.openapis.openapi.models.operations.RetrieveSubaccountResponse() {{
+        org.openapis.openapi.models.operations.RetrieveSubaccountResponse res = new org.openapis.openapi.models.operations.RetrieveSubaccountResponse(contentType, httpRes.statusCode()) {{
             subaccountResponse = null;
             retrieveSubaccount401ApplicationJSONObject = null;
             unprovisionedErrorResponse = null;
             retrieveSubaccount404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,14 +275,12 @@ public class SubaccountManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveSubaccountsListResponse res = new org.openapis.openapi.models.operations.RetrieveSubaccountsListResponse() {{
+        org.openapis.openapi.models.operations.RetrieveSubaccountsListResponse res = new org.openapis.openapi.models.operations.RetrieveSubaccountsListResponse(contentType, httpRes.statusCode()) {{
             subaccountsAllResponse = null;
             retrieveSubaccountsList401ApplicationJSONObject = null;
             unprovisionedErrorResponse = null;
             retrieveSubaccountsList404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

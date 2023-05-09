@@ -18,6 +18,7 @@ public class SasPortalDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SasPortalDeploymentInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sasUserIds")
     public String[] sasUserIds;
+
     public SasPortalDeploymentInput withSasUserIds(String[] sasUserIds) {
         this.sasUserIds = sasUserIds;
         return this;
     }
     
+    public SasPortalDeploymentInput(){}
 }

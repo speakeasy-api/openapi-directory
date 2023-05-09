@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFunctionConcurrencyResponse {
     
     public String contentType;
+
     public DeleteFunctionConcurrencyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFunctionConcurrencyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteFunctionConcurrencyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFunctionConcurrencyResponse {
      */
     
     public Object resourceConflictException;
+
     public DeleteFunctionConcurrencyResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFunctionConcurrencyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFunctionConcurrencyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFunctionConcurrencyResponse {
      */
     
     public Object serviceException;
+
     public DeleteFunctionConcurrencyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFunctionConcurrencyResponse {
     
     
     public Integer statusCode;
+
     public DeleteFunctionConcurrencyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFunctionConcurrencyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFunctionConcurrencyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteFunctionConcurrencyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteFunctionConcurrencyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteFunctionConcurrencyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

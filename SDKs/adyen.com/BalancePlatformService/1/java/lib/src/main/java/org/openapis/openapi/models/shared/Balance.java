@@ -12,6 +12,7 @@ public class Balance {
      */
     @JsonProperty("available")
     public Long available;
+
     public Balance withAvailable(Long available) {
         this.available = available;
         return this;
@@ -22,6 +23,7 @@ public class Balance {
      */
     @JsonProperty("balance")
     public Long balance;
+
     public Balance withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -32,6 +34,7 @@ public class Balance {
      */
     @JsonProperty("currency")
     public String currency;
+
     public Balance withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -42,9 +45,16 @@ public class Balance {
      */
     @JsonProperty("reserved")
     public Long reserved;
+
     public Balance withReserved(Long reserved) {
         this.reserved = reserved;
         return this;
     }
     
+    public Balance(@JsonProperty("available") Long available, @JsonProperty("balance") Long balance, @JsonProperty("currency") String currency, @JsonProperty("reserved") Long reserved) {
+        this.available = available;
+        this.balance = balance;
+        this.currency = currency;
+        this.reserved = reserved;
+  }
 }

@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ToolsShareFileMultipartFormData {
     @SpeakeasyMetadata("multipartForm:file")
     public ToolsShareFileMultipartFormDataMedia media;
+
     public ToolsShareFileMultipartFormData withMedia(ToolsShareFileMultipartFormDataMedia media) {
         this.media = media;
         return this;
     }
     
+    public ToolsShareFileMultipartFormData(){}
 }

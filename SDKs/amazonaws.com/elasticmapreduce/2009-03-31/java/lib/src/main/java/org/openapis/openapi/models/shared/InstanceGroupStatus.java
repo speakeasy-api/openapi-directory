@@ -15,6 +15,7 @@ public class InstanceGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public InstanceGroupStateEnum state;
+
     public InstanceGroupStatus withState(InstanceGroupStateEnum state) {
         this.state = state;
         return this;
@@ -23,6 +24,7 @@ public class InstanceGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public InstanceGroupStateChangeReason stateChangeReason;
+
     public InstanceGroupStatus withStateChangeReason(InstanceGroupStateChangeReason stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -31,9 +33,11 @@ public class InstanceGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeline")
     public InstanceGroupTimeline timeline;
+
     public InstanceGroupStatus withTimeline(InstanceGroupTimeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public InstanceGroupStatus(){}
 }

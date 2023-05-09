@@ -18,9 +18,11 @@ public class DescribeAuditFindingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finding")
     public AuditFinding finding;
+
     public DescribeAuditFindingResponse withFinding(AuditFinding finding) {
         this.finding = finding;
         return this;
     }
     
+    public DescribeAuditFindingResponse(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBInstanceList {
     
     public Boolean autoMinorVersionUpgrade;
+
     public DBInstanceList withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -19,6 +20,7 @@ public class DBInstanceList {
     
     
     public String availabilityZone;
+
     public DBInstanceList withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class DBInstanceList {
     
     
     public Long backupRetentionPeriod;
+
     public DBInstanceList withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -33,6 +36,7 @@ public class DBInstanceList {
     
     
     public String caCertificateIdentifier;
+
     public DBInstanceList withCACertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class DBInstanceList {
     
     
     public Boolean copyTagsToSnapshot;
+
     public DBInstanceList withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -47,6 +52,7 @@ public class DBInstanceList {
     
     
     public String dbClusterIdentifier;
+
     public DBInstanceList withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class DBInstanceList {
     
     
     public String dbInstanceArn;
+
     public DBInstanceList withDBInstanceArn(String dbInstanceArn) {
         this.dbInstanceArn = dbInstanceArn;
         return this;
@@ -61,6 +68,7 @@ public class DBInstanceList {
     
     
     public String dbInstanceClass;
+
     public DBInstanceList withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -68,6 +76,7 @@ public class DBInstanceList {
     
     
     public String dbInstanceIdentifier;
+
     public DBInstanceList withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -75,6 +84,7 @@ public class DBInstanceList {
     
     
     public String dbInstanceStatus;
+
     public DBInstanceList withDBInstanceStatus(String dbInstanceStatus) {
         this.dbInstanceStatus = dbInstanceStatus;
         return this;
@@ -82,6 +92,7 @@ public class DBInstanceList {
     
     
     public DBSubnetGroup dbSubnetGroup;
+
     public DBInstanceList withDBSubnetGroup(DBSubnetGroup dbSubnetGroup) {
         this.dbSubnetGroup = dbSubnetGroup;
         return this;
@@ -89,6 +100,7 @@ public class DBInstanceList {
     
     
     public String dbiResourceId;
+
     public DBInstanceList withDbiResourceId(String dbiResourceId) {
         this.dbiResourceId = dbiResourceId;
         return this;
@@ -96,6 +108,7 @@ public class DBInstanceList {
     
     
     public String[] enabledCloudwatchLogsExports;
+
     public DBInstanceList withEnabledCloudwatchLogsExports(String[] enabledCloudwatchLogsExports) {
         this.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
         return this;
@@ -103,6 +116,7 @@ public class DBInstanceList {
     
     
     public Endpoint endpoint;
+
     public DBInstanceList withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -110,6 +124,7 @@ public class DBInstanceList {
     
     
     public String engine;
+
     public DBInstanceList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -117,6 +132,7 @@ public class DBInstanceList {
     
     
     public String engineVersion;
+
     public DBInstanceList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -124,6 +140,7 @@ public class DBInstanceList {
     
     
     public OffsetDateTime instanceCreateTime;
+
     public DBInstanceList withInstanceCreateTime(OffsetDateTime instanceCreateTime) {
         this.instanceCreateTime = instanceCreateTime;
         return this;
@@ -131,6 +148,7 @@ public class DBInstanceList {
     
     
     public String kmsKeyId;
+
     public DBInstanceList withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -138,6 +156,7 @@ public class DBInstanceList {
     
     
     public OffsetDateTime latestRestorableTime;
+
     public DBInstanceList withLatestRestorableTime(OffsetDateTime latestRestorableTime) {
         this.latestRestorableTime = latestRestorableTime;
         return this;
@@ -145,6 +164,7 @@ public class DBInstanceList {
     
     
     public PendingModifiedValues pendingModifiedValues;
+
     public DBInstanceList withPendingModifiedValues(PendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -152,6 +172,7 @@ public class DBInstanceList {
     
     
     public String preferredBackupWindow;
+
     public DBInstanceList withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -159,6 +180,7 @@ public class DBInstanceList {
     
     
     public String preferredMaintenanceWindow;
+
     public DBInstanceList withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -166,6 +188,7 @@ public class DBInstanceList {
     
     
     public Long promotionTier;
+
     public DBInstanceList withPromotionTier(Long promotionTier) {
         this.promotionTier = promotionTier;
         return this;
@@ -173,6 +196,7 @@ public class DBInstanceList {
     
     
     public Boolean publiclyAccessible;
+
     public DBInstanceList withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -180,6 +204,7 @@ public class DBInstanceList {
     
     
     public DBInstanceStatusInfoList[] statusInfos;
+
     public DBInstanceList withStatusInfos(DBInstanceStatusInfoList[] statusInfos) {
         this.statusInfos = statusInfos;
         return this;
@@ -187,6 +212,7 @@ public class DBInstanceList {
     
     
     public Boolean storageEncrypted;
+
     public DBInstanceList withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
@@ -194,9 +220,11 @@ public class DBInstanceList {
     
     
     public VpcSecurityGroupMembershipList[] vpcSecurityGroups;
+
     public DBInstanceList withVpcSecurityGroups(VpcSecurityGroupMembershipList[] vpcSecurityGroups) {
         this.vpcSecurityGroups = vpcSecurityGroups;
         return this;
     }
     
+    public DBInstanceList(){}
 }

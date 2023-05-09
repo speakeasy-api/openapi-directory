@@ -92,12 +92,10 @@ public class Weather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WxByDistanceUsV1WxForecastDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.WxByDistanceUsV1WxForecastDistanceQueryPostResponse() {{
+        org.openapis.openapi.models.operations.WxByDistanceUsV1WxForecastDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.WxByDistanceUsV1WxForecastDistanceQueryPostResponse(contentType, httpRes.statusCode()) {{
             wxDistanceResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,12 +165,10 @@ public class Weather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WxByPolyUsV1WxForecastPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.WxByPolyUsV1WxForecastPolygonQueryPostResponse() {{
+        org.openapis.openapi.models.operations.WxByPolyUsV1WxForecastPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.WxByPolyUsV1WxForecastPolygonQueryPostResponse(contentType, httpRes.statusCode()) {{
             wxPolyResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,12 +238,10 @@ public class Weather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WxByRouteUsV1WxForecastRouteQueryPostResponse res = new org.openapis.openapi.models.operations.WxByRouteUsV1WxForecastRouteQueryPostResponse() {{
+        org.openapis.openapi.models.operations.WxByRouteUsV1WxForecastRouteQueryPostResponse res = new org.openapis.openapi.models.operations.WxByRouteUsV1WxForecastRouteQueryPostResponse(contentType, httpRes.statusCode()) {{
             wxRouteResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

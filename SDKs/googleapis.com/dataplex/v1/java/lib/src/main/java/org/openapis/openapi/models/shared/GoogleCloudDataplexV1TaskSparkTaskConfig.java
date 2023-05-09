@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskSparkTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveUris")
     public String[] archiveUris;
+
     public GoogleCloudDataplexV1TaskSparkTaskConfig withArchiveUris(String[] archiveUris) {
         this.archiveUris = archiveUris;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1TaskSparkTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUris")
     public String[] fileUris;
+
     public GoogleCloudDataplexV1TaskSparkTaskConfig withFileUris(String[] fileUris) {
         this.fileUris = fileUris;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1TaskSparkTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureSpec")
     public GoogleCloudDataplexV1TaskInfrastructureSpec infrastructureSpec;
+
     public GoogleCloudDataplexV1TaskSparkTaskConfig withInfrastructureSpec(GoogleCloudDataplexV1TaskInfrastructureSpec infrastructureSpec) {
         this.infrastructureSpec = infrastructureSpec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1TaskSparkTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainClass")
     public String mainClass;
+
     public GoogleCloudDataplexV1TaskSparkTaskConfig withMainClass(String mainClass) {
         this.mainClass = mainClass;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1TaskSparkTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainJarFileUri")
     public String mainJarFileUri;
+
     public GoogleCloudDataplexV1TaskSparkTaskConfig withMainJarFileUri(String mainJarFileUri) {
         this.mainJarFileUri = mainJarFileUri;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1TaskSparkTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonScriptFile")
     public String pythonScriptFile;
+
     public GoogleCloudDataplexV1TaskSparkTaskConfig withPythonScriptFile(String pythonScriptFile) {
         this.pythonScriptFile = pythonScriptFile;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1TaskSparkTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlScript")
     public String sqlScript;
+
     public GoogleCloudDataplexV1TaskSparkTaskConfig withSqlScript(String sqlScript) {
         this.sqlScript = sqlScript;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDataplexV1TaskSparkTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlScriptFile")
     public String sqlScriptFile;
+
     public GoogleCloudDataplexV1TaskSparkTaskConfig withSqlScriptFile(String sqlScriptFile) {
         this.sqlScriptFile = sqlScriptFile;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskSparkTaskConfig(){}
 }

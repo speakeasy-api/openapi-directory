@@ -18,6 +18,7 @@ public class OnClick {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public FormAction action;
+
     public OnClick withAction(FormAction action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class OnClick {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openLink")
     public OpenLink openLink;
+
     public OnClick withOpenLink(OpenLink openLink) {
         this.openLink = openLink;
         return this;
     }
     
+    public OnClick(){}
 }

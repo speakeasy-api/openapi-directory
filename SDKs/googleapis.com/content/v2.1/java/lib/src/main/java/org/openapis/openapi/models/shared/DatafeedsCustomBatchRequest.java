@@ -15,9 +15,11 @@ public class DatafeedsCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public DatafeedsCustomBatchRequestEntry[] entries;
+
     public DatafeedsCustomBatchRequest withEntries(DatafeedsCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public DatafeedsCustomBatchRequest(){}
 }

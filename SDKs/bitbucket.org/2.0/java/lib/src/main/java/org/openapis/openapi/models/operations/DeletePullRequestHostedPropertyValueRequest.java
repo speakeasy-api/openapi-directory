@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePullRequestHostedPropertyValueRequest {
@@ -12,6 +13,7 @@ public class DeletePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
     public String appKey;
+
     public DeletePullRequestHostedPropertyValueRequest withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -22,6 +24,7 @@ public class DeletePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
     public String propertyName;
+
     public DeletePullRequestHostedPropertyValueRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -32,6 +35,7 @@ public class DeletePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pullrequest_id")
     public String pullrequestId;
+
     public DeletePullRequestHostedPropertyValueRequest withPullrequestId(String pullrequestId) {
         this.pullrequestId = pullrequestId;
         return this;
@@ -42,6 +46,7 @@ public class DeletePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeletePullRequestHostedPropertyValueRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -52,9 +57,17 @@ public class DeletePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeletePullRequestHostedPropertyValueRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeletePullRequestHostedPropertyValueRequest(@JsonProperty("app_key") String appKey, @JsonProperty("property_name") String propertyName, @JsonProperty("pullrequest_id") String pullrequestId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.appKey = appKey;
+        this.propertyName = propertyName;
+        this.pullrequestId = pullrequestId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

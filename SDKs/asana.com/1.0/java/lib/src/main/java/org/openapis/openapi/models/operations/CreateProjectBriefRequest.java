@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectBriefRequest {
@@ -12,6 +13,7 @@ public class CreateProjectBriefRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateProjectBriefRequestBodyInput requestBody;
+
     public CreateProjectBriefRequest withRequestBody(CreateProjectBriefRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class CreateProjectBriefRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateProjectBriefRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class CreateProjectBriefRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateProjectBriefRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class CreateProjectBriefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
     public String projectGid;
+
     public CreateProjectBriefRequest withProjectGid(String projectGid) {
         this.projectGid = projectGid;
         return this;
     }
     
+    public CreateProjectBriefRequest(@JsonProperty("RequestBody") CreateProjectBriefRequestBodyInput requestBody, @JsonProperty("project_gid") String projectGid) {
+        this.requestBody = requestBody;
+        this.projectGid = projectGid;
+  }
 }

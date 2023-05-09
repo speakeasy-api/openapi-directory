@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountLimit {
     @JsonProperty("Max")
     public Long max;
+
     public AccountLimit withMax(Long max) {
         this.max = max;
         return this;
@@ -19,6 +20,7 @@ public class AccountLimit {
     
     @JsonProperty("Name")
     public AccountLimitNameEnum name;
+
     public AccountLimit withName(AccountLimitNameEnum name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class AccountLimit {
     
     @JsonProperty("Used")
     public Long used;
+
     public AccountLimit withUsed(Long used) {
         this.used = used;
         return this;
     }
     
+    public AccountLimit(@JsonProperty("Max") Long max, @JsonProperty("Name") AccountLimitNameEnum name, @JsonProperty("Used") Long used) {
+        this.max = max;
+        this.name = name;
+        this.used = used;
+  }
 }

@@ -18,6 +18,7 @@ public class ReleasesCreateReleaseUploadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_number")
     public String buildNumber;
+
     public ReleasesCreateReleaseUploadRequestBody withBuildNumber(String buildNumber) {
         this.buildNumber = buildNumber;
         return this;
@@ -29,9 +30,11 @@ public class ReleasesCreateReleaseUploadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_version")
     public String buildVersion;
+
     public ReleasesCreateReleaseUploadRequestBody withBuildVersion(String buildVersion) {
         this.buildVersion = buildVersion;
         return this;
     }
     
+    public ReleasesCreateReleaseUploadRequestBody(){}
 }

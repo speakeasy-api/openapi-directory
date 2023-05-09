@@ -15,6 +15,7 @@ public class ListDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public ListDatasetsResponse withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class ListDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Datasets")
     public Dataset[] datasets;
+
     public ListDatasetsResponse withDatasets(Dataset[] datasets) {
         this.datasets = datasets;
         return this;
@@ -31,9 +33,11 @@ public class ListDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatasetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasetsResponse(){}
 }

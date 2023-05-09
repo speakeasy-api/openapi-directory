@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionApiKeyRegistrations")
     public GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration[] predictionApiKeyRegistrations;
+
     public GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrationsResponse withPredictionApiKeyRegistrations(GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration[] predictionApiKeyRegistrations) {
         this.predictionApiKeyRegistrations = predictionApiKeyRegistrations;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrationsResponse(){}
 }

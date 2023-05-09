@@ -16,34 +16,32 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetrulesforapricetableRequest;
 import org.openapis.openapi.models.operations.GetrulesforapricetableResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetrulesforapricetableRequest req = new GetrulesforapricetableRequest() {{
-                accept = "application/json";
-                contentType = "corrupti";
-                priceTableId = "b2c";
-            }}            
+            GetrulesforapricetableRequest req = new GetrulesforapricetableRequest("application/json", "distinctio", "b2c");            
 
             GetrulesforapricetableResponse res = sdk.priceTables.getrulesforapricetable(req);
 
-            if (res.getrulesforapricetable200ApplicationJSONObject.isPresent()) {
+            if (res.getrulesforapricetable200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -51,28 +49,28 @@ public class Application {
 ## Available Resources and Operations
 
 
-### priceTables
+### [priceTables](docs/pricetables/README.md)
 
-* `getrulesforapricetable` - Get rules for a price table
-* `listpricetables` - List price tables
-* `getallpricetablesandrules` - Get all price tables and their rules
-* `putPricingPipelineCatalogPriceTableId` - Update rules for a price table
+* [getrulesforapricetable](docs/pricetables/README.md#getrulesforapricetable) - Get rules for a price table
+* [listpricetables](docs/pricetables/README.md#listpricetables) - List price tables
+* [getallpricetablesandrules](docs/pricetables/README.md#getallpricetablesandrules) - Get all price tables and their rules
+* [putPricingPipelineCatalogPriceTableId](docs/pricetables/README.md#putpricingpipelinecatalogpricetableid) - Update rules for a price table
 
-### pricesAndFixedPrices
+### [pricesAndFixedPrices](docs/pricesandfixedprices/README.md)
 
-* `createUpdatePriceOrFixedPrice` - Create or Update Base Price or Fixed Prices
-* `deletePrice` - Delete Price
-* `deletefixedpricesonapricetableortradepolicy` - Delete Fixed Prices on a price table or trade policy
-* `getComputedPricebypricetable` - Get Computed Price by price table or trade policy
-* `getFixedPrices` - Get Fixed Prices
-* `getFixedPricesonapricetable` - Get Fixed Prices on a price table or trade policy
-* `getPrice` - Get Price
-* `createorupdatefixedpricesonpricetableortradepolicy` - Create or Update Fixed Prices on a price table or trade policy
+* [createUpdatePriceOrFixedPrice](docs/pricesandfixedprices/README.md#createupdatepriceorfixedprice) - Create or Update Base Price or Fixed Prices
+* [deletePrice](docs/pricesandfixedprices/README.md#deleteprice) - Delete Price
+* [deletefixedpricesonapricetableortradepolicy](docs/pricesandfixedprices/README.md#deletefixedpricesonapricetableortradepolicy) - Delete Fixed Prices on a price table or trade policy
+* [getComputedPricebypricetable](docs/pricesandfixedprices/README.md#getcomputedpricebypricetable) - Get Computed Price by price table or trade policy
+* [getFixedPrices](docs/pricesandfixedprices/README.md#getfixedprices) - Get Fixed Prices
+* [getFixedPricesonapricetable](docs/pricesandfixedprices/README.md#getfixedpricesonapricetable) - Get Fixed Prices on a price table or trade policy
+* [getPrice](docs/pricesandfixedprices/README.md#getprice) - Get Price
+* [createorupdatefixedpricesonpricetableortradepolicy](docs/pricesandfixedprices/README.md#createorupdatefixedpricesonpricetableortradepolicy) - Create or Update Fixed Prices on a price table or trade policy
 
-### pricingConfiguration
+### [pricingConfiguration](docs/pricingconfiguration/README.md)
 
-* `getPricingConfig` - Get Pricing Configuration
-* `getPricingv2Status` - Get Pricing v2 Status
+* [getPricingConfig](docs/pricingconfiguration/README.md#getpricingconfig) - Get Pricing Configuration
+* [getPricingv2Status](docs/pricingconfiguration/README.md#getpricingv2status) - Get Pricing v2 Status
 <!-- End SDK Available Operations -->
 
 ### Maturity

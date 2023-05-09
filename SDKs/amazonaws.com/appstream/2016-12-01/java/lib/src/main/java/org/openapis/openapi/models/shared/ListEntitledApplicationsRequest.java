@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEntitledApplicationsRequest {
     @JsonProperty("EntitlementName")
     public String entitlementName;
+
     public ListEntitledApplicationsRequest withEntitlementName(String entitlementName) {
         this.entitlementName = entitlementName;
         return this;
@@ -19,6 +20,7 @@ public class ListEntitledApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEntitledApplicationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListEntitledApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntitledApplicationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class ListEntitledApplicationsRequest {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public ListEntitledApplicationsRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public ListEntitledApplicationsRequest(@JsonProperty("EntitlementName") String entitlementName, @JsonProperty("StackName") String stackName) {
+        this.entitlementName = entitlementName;
+        this.stackName = stackName;
+  }
 }

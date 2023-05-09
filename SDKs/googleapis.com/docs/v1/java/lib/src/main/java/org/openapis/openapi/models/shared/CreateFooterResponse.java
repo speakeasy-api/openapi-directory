@@ -18,9 +18,11 @@ public class CreateFooterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerId")
     public String footerId;
+
     public CreateFooterResponse withFooterId(String footerId) {
         this.footerId = footerId;
         return this;
     }
     
+    public CreateFooterResponse(){}
 }

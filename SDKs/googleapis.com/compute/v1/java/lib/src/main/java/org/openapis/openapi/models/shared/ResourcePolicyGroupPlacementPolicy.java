@@ -18,6 +18,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityDomainCount")
     public Integer availabilityDomainCount;
+
     public ResourcePolicyGroupPlacementPolicy withAvailabilityDomainCount(Integer availabilityDomainCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         return this;
@@ -29,6 +30,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collocation")
     public ResourcePolicyGroupPlacementPolicyCollocationEnum collocation;
+
     public ResourcePolicyGroupPlacementPolicy withCollocation(ResourcePolicyGroupPlacementPolicyCollocationEnum collocation) {
         this.collocation = collocation;
         return this;
@@ -40,9 +42,11 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmCount")
     public Integer vmCount;
+
     public ResourcePolicyGroupPlacementPolicy withVmCount(Integer vmCount) {
         this.vmCount = vmCount;
         return this;
     }
     
+    public ResourcePolicyGroupPlacementPolicy(){}
 }

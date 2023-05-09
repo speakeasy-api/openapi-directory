@@ -18,6 +18,7 @@ public class BatchUpdateJobsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public JobInput[] jobs;
+
     public BatchUpdateJobsRequestInput withJobs(JobInput[] jobs) {
         this.jobs = jobs;
         return this;
@@ -29,9 +30,11 @@ public class BatchUpdateJobsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public BatchUpdateJobsRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public BatchUpdateJobsRequestInput(){}
 }

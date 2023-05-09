@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsInstancesRequest {
@@ -12,6 +13,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarEventsInstancesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alwaysIncludeEmail")
     public Boolean alwaysIncludeEmail;
+
     public CalendarEventsInstancesRequest withAlwaysIncludeEmail(Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
         return this;
@@ -32,6 +35,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
     public String calendarId;
+
     public CalendarEventsInstancesRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -42,6 +46,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=eventId")
     public String eventId;
+
     public CalendarEventsInstancesRequest withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -52,6 +57,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarEventsInstancesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarEventsInstancesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAttendees")
     public Long maxAttendees;
+
     public CalendarEventsInstancesRequest withMaxAttendees(Long maxAttendees) {
         this.maxAttendees = maxAttendees;
         return this;
@@ -82,6 +90,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public CalendarEventsInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarEventsInstancesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=originalStart")
     public String originalStart;
+
     public CalendarEventsInstancesRequest withOriginalStart(String originalStart) {
         this.originalStart = originalStart;
         return this;
@@ -112,6 +123,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CalendarEventsInstancesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarEventsInstancesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarEventsInstancesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
     public Boolean showDeleted;
+
     public CalendarEventsInstancesRequest withShowDeleted(Boolean showDeleted) {
         this.showDeleted = showDeleted;
         return this;
@@ -152,6 +167,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeMax")
     public String timeMax;
+
     public CalendarEventsInstancesRequest withTimeMax(String timeMax) {
         this.timeMax = timeMax;
         return this;
@@ -162,6 +178,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeMin")
     public String timeMin;
+
     public CalendarEventsInstancesRequest withTimeMin(String timeMin) {
         this.timeMin = timeMin;
         return this;
@@ -172,6 +189,7 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeZone")
     public String timeZone;
+
     public CalendarEventsInstancesRequest withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -182,9 +200,14 @@ public class CalendarEventsInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarEventsInstancesRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarEventsInstancesRequest(@JsonProperty("calendarId") String calendarId, @JsonProperty("eventId") String eventId) {
+        this.calendarId = calendarId;
+        this.eventId = eventId;
+  }
 }

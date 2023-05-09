@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputContext {
     @JsonProperty("name")
     public String name;
+
     public InputContext withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InputContext(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

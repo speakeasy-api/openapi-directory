@@ -18,6 +18,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookmarkId")
     public String bookmarkId;
+
     public Link withBookmarkId(String bookmarkId) {
         this.bookmarkId = bookmarkId;
         return this;
@@ -29,6 +30,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headingId")
     public String headingId;
+
     public Link withHeadingId(String headingId) {
         this.headingId = headingId;
         return this;
@@ -40,9 +42,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Link withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Link(){}
 }

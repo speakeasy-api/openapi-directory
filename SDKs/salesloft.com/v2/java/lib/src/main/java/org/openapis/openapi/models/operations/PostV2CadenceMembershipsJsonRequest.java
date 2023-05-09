@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2CadenceMembershipsJsonRequest {
@@ -12,6 +13,7 @@ public class PostV2CadenceMembershipsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cadence_id")
     public Long cadenceId;
+
     public PostV2CadenceMembershipsJsonRequest withCadenceId(Long cadenceId) {
         this.cadenceId = cadenceId;
         return this;
@@ -22,6 +24,7 @@ public class PostV2CadenceMembershipsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=person_id")
     public Long personId;
+
     public PostV2CadenceMembershipsJsonRequest withPersonId(Long personId) {
         this.personId = personId;
         return this;
@@ -32,6 +35,7 @@ public class PostV2CadenceMembershipsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=step_id")
     public Long stepId;
+
     public PostV2CadenceMembershipsJsonRequest withStepId(Long stepId) {
         this.stepId = stepId;
         return this;
@@ -42,9 +46,14 @@ public class PostV2CadenceMembershipsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Long userId;
+
     public PostV2CadenceMembershipsJsonRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostV2CadenceMembershipsJsonRequest(@JsonProperty("cadence_id") Long cadenceId, @JsonProperty("person_id") Long personId) {
+        this.cadenceId = cadenceId;
+        this.personId = personId;
+  }
 }

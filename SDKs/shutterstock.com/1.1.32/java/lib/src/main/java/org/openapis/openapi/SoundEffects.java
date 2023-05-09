@@ -56,11 +56,9 @@ public class SoundEffects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadSfxResponse res = new org.openapis.openapi.models.operations.DownloadSfxResponse() {{
+        org.openapis.openapi.models.operations.DownloadSfxResponse res = new org.openapis.openapi.models.operations.DownloadSfxResponse(contentType, httpRes.statusCode()) {{
             sfxUrl = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class SoundEffects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSfxDetailsResponse res = new org.openapis.openapi.models.operations.GetSfxDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetSfxDetailsResponse res = new org.openapis.openapi.models.operations.GetSfxDetailsResponse(contentType, httpRes.statusCode()) {{
             sfx = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,7 +115,7 @@ public class SoundEffects {
                 res.sfx = out;
             }
         }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 503) {
         }
 
         return res;
@@ -154,11 +150,9 @@ public class SoundEffects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSfxLicenseListResponse res = new org.openapis.openapi.models.operations.GetSfxLicenseListResponse() {{
+        org.openapis.openapi.models.operations.GetSfxLicenseListResponse res = new org.openapis.openapi.models.operations.GetSfxLicenseListResponse(contentType, httpRes.statusCode()) {{
             downloadHistoryDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class SoundEffects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSfxListDetailsResponse res = new org.openapis.openapi.models.operations.GetSfxListDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetSfxListDetailsResponse res = new org.openapis.openapi.models.operations.GetSfxListDetailsResponse(contentType, httpRes.statusCode()) {{
             sfxDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class SoundEffects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensesSFXResponse res = new org.openapis.openapi.models.operations.LicensesSFXResponse() {{
+        org.openapis.openapi.models.operations.LicensesSFXResponse res = new org.openapis.openapi.models.operations.LicensesSFXResponse(contentType, httpRes.statusCode()) {{
             licenseSFXResultDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class SoundEffects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchSFXResponse res = new org.openapis.openapi.models.operations.SearchSFXResponse() {{
+        org.openapis.openapi.models.operations.SearchSFXResponse res = new org.openapis.openapi.models.operations.SearchSFXResponse(contentType, httpRes.statusCode()) {{
             sfxSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -314,7 +302,7 @@ public class SoundEffects {
                 res.sfxSearchResults = out;
             }
         }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 503) {
         }
 
         return res;

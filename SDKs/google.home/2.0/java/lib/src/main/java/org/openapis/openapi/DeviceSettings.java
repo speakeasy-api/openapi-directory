@@ -65,11 +65,9 @@ public class DeviceSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NightModesettingsResponse res = new org.openapis.openapi.models.operations.NightModesettingsResponse() {{
+        org.openapis.openapi.models.operations.NightModesettingsResponse res = new org.openapis.openapi.models.operations.NightModesettingsResponse(contentType, httpRes.statusCode()) {{
             example17 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class DeviceSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RebootandFactoryResetResponse res = new org.openapis.openapi.models.operations.RebootandFactoryResetResponse() {{
+        org.openapis.openapi.models.operations.RebootandFactoryResetResponse res = new org.openapis.openapi.models.operations.RebootandFactoryResetResponse(contentType, httpRes.statusCode()) {{
             rebootandFactoryReset200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,11 +156,9 @@ public class DeviceSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetEurekaInfoResponse res = new org.openapis.openapi.models.operations.SetEurekaInfoResponse() {{
+        org.openapis.openapi.models.operations.SetEurekaInfoResponse res = new org.openapis.openapi.models.operations.SetEurekaInfoResponse(contentType, httpRes.statusCode()) {{
             setEurekaInfo200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

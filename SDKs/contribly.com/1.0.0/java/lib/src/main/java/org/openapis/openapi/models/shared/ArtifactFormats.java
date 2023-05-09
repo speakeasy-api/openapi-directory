@@ -15,6 +15,7 @@ public class ArtifactFormats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contribution")
     public ArtifactFormat[] contribution;
+
     public ArtifactFormats withContribution(ArtifactFormat[] contribution) {
         this.contribution = contribution;
         return this;
@@ -23,6 +24,7 @@ public class ArtifactFormats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover")
     public ArtifactFormat[] cover;
+
     public ArtifactFormats withCover(ArtifactFormat[] cover) {
         this.cover = cover;
         return this;
@@ -31,9 +33,11 @@ public class ArtifactFormats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileImage")
     public ArtifactFormat[] profileImage;
+
     public ArtifactFormats withProfileImage(ArtifactFormat[] profileImage) {
         this.profileImage = profileImage;
         return this;
     }
     
+    public ArtifactFormats(){}
 }

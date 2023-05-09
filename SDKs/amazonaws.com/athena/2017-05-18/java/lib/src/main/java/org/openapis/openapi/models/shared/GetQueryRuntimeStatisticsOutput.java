@@ -15,9 +15,11 @@ public class GetQueryRuntimeStatisticsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryRuntimeStatistics")
     public QueryRuntimeStatistics queryRuntimeStatistics;
+
     public GetQueryRuntimeStatisticsOutput withQueryRuntimeStatistics(QueryRuntimeStatistics queryRuntimeStatistics) {
         this.queryRuntimeStatistics = queryRuntimeStatistics;
         return this;
     }
     
+    public GetQueryRuntimeStatisticsOutput(){}
 }

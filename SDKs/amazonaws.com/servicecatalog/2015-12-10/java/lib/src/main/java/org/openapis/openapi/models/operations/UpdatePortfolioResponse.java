@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePortfolioResponse {
     
     public String contentType;
+
     public UpdatePortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePortfolioResponse {
      */
     
     public Object invalidParametersException;
+
     public UpdatePortfolioResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePortfolioResponse {
      */
     
     public Object limitExceededException;
+
     public UpdatePortfolioResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePortfolioResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePortfolioResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePortfolioResponse {
     
     
     public Integer statusCode;
+
     public UpdatePortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePortfolioResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public UpdatePortfolioResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdatePortfolioResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePortfolioOutput updatePortfolioOutput;
+
     public UpdatePortfolioResponse withUpdatePortfolioOutput(org.openapis.openapi.models.shared.UpdatePortfolioOutput updatePortfolioOutput) {
         this.updatePortfolioOutput = updatePortfolioOutput;
         return this;
     }
     
+    public UpdatePortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

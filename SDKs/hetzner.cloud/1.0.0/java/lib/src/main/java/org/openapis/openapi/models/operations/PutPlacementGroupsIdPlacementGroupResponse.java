@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutPlacementGroupsIdPlacementGroupResponse {
     @JsonProperty("placement_group")
     public PutPlacementGroupsIdPlacementGroupResponsePlacementGroup placementGroup;
+
     public PutPlacementGroupsIdPlacementGroupResponse withPlacementGroup(PutPlacementGroupsIdPlacementGroupResponsePlacementGroup placementGroup) {
         this.placementGroup = placementGroup;
         return this;
     }
     
+    public PutPlacementGroupsIdPlacementGroupResponse(@JsonProperty("placement_group") PutPlacementGroupsIdPlacementGroupResponsePlacementGroup placementGroup) {
+        this.placementGroup = placementGroup;
+  }
 }

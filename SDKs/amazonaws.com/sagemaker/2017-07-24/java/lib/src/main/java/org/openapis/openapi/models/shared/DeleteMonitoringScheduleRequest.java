@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMonitoringScheduleRequest {
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public DeleteMonitoringScheduleRequest withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
     }
     
+    public DeleteMonitoringScheduleRequest(@JsonProperty("MonitoringScheduleName") String monitoringScheduleName) {
+        this.monitoringScheduleName = monitoringScheduleName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RulesRequest {
@@ -12,6 +13,7 @@ public class RulesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RulesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RulesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RulesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class RulesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
     public String xPROVIDERAPIAppKey;
+
     public RulesRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
         this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
         return this;
@@ -42,9 +46,16 @@ public class RulesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
     public String xPROVIDERAPIAppToken;
+
     public RulesRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
         this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
     }
     
+    public RulesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("X-PROVIDER-API-AppKey") String xPROVIDERAPIAppKey, @JsonProperty("X-PROVIDER-API-AppToken") String xPROVIDERAPIAppToken) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+  }
 }

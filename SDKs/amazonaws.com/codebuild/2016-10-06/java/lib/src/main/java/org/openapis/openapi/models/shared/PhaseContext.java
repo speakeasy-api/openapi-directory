@@ -15,6 +15,7 @@ public class PhaseContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PhaseContext withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class PhaseContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public String statusCode;
+
     public PhaseContext withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public PhaseContext(){}
 }

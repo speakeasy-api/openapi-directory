@@ -15,6 +15,7 @@ public class PardotConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessUnitId")
     public String businessUnitId;
+
     public PardotConnectorProfileProperties withBusinessUnitId(String businessUnitId) {
         this.businessUnitId = businessUnitId;
         return this;
@@ -23,6 +24,7 @@ public class PardotConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceUrl")
     public String instanceUrl;
+
     public PardotConnectorProfileProperties withInstanceUrl(String instanceUrl) {
         this.instanceUrl = instanceUrl;
         return this;
@@ -31,9 +33,11 @@ public class PardotConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSandboxEnvironment")
     public Boolean isSandboxEnvironment;
+
     public PardotConnectorProfileProperties withIsSandboxEnvironment(Boolean isSandboxEnvironment) {
         this.isSandboxEnvironment = isSandboxEnvironment;
         return this;
     }
     
+    public PardotConnectorProfileProperties(){}
 }

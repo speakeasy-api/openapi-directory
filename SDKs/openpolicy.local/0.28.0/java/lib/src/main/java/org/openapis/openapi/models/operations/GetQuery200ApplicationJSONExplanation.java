@@ -15,6 +15,7 @@ public class GetQuery200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locals")
     public GetQuery200ApplicationJSONExplanationLocals[] locals;
+
     public GetQuery200ApplicationJSONExplanation withLocals(GetQuery200ApplicationJSONExplanationLocals[] locals) {
         this.locals = locals;
         return this;
@@ -27,6 +28,7 @@ public class GetQuery200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public GetQuery200ApplicationJSONExplanationNode node;
+
     public GetQuery200ApplicationJSONExplanation withNode(GetQuery200ApplicationJSONExplanationNode node) {
         this.node = node;
         return this;
@@ -47,6 +49,7 @@ public class GetQuery200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public GetQuery200ApplicationJSONExplanationOpEnum op;
+
     public GetQuery200ApplicationJSONExplanation withOp(GetQuery200ApplicationJSONExplanationOpEnum op) {
         this.op = op;
         return this;
@@ -60,6 +63,7 @@ public class GetQuery200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Double parentId;
+
     public GetQuery200ApplicationJSONExplanation withParentId(Double parentId) {
         this.parentId = parentId;
         return this;
@@ -71,6 +75,7 @@ public class GetQuery200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_id")
     public Double queryId;
+
     public GetQuery200ApplicationJSONExplanation withQueryId(Double queryId) {
         this.queryId = queryId;
         return this;
@@ -82,9 +87,11 @@ public class GetQuery200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetQuery200ApplicationJSONExplanationTypeEnum type;
+
     public GetQuery200ApplicationJSONExplanation withType(GetQuery200ApplicationJSONExplanationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetQuery200ApplicationJSONExplanation(){}
 }

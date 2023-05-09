@@ -52,10 +52,8 @@ public class Pfm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAuthTokenResponse res = new org.openapis.openapi.models.operations.DeleteAuthTokenResponse() {{
+        org.openapis.openapi.models.operations.DeleteAuthTokenResponse res = new org.openapis.openapi.models.operations.DeleteAuthTokenResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -90,11 +88,9 @@ public class Pfm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -128,10 +124,8 @@ public class Pfm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserForecastResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserForecastResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserForecastResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserForecastResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,11 +160,9 @@ public class Pfm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserProfilesResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserProfilesResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserProfilesResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserProfilesResponse(contentType, httpRes.statusCode()) {{
             getUsersIdUserProfiles200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,11 +202,9 @@ public class Pfm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainResponse(contentType, httpRes.statusCode()) {{
             profile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -254,11 +244,9 @@ public class Pfm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileResponse(contentType, httpRes.statusCode()) {{
             profile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +283,9 @@ public class Pfm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAuthTokenResponse res = new org.openapis.openapi.models.operations.PostAuthTokenResponse() {{
+        org.openapis.openapi.models.operations.PostAuthTokenResponse res = new org.openapis.openapi.models.operations.PostAuthTokenResponse(contentType, httpRes.statusCode()) {{
             postAuthToken200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

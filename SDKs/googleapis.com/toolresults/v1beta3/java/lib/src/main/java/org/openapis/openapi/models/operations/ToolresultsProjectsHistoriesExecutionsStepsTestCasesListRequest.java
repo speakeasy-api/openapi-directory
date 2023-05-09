@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
@@ -12,6 +13,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -62,6 +68,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=historyId")
     public String historyId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withHistoryId(String historyId) {
         this.historyId = historyId;
         return this;
@@ -82,6 +90,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -142,6 +156,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stepId")
     public String stepId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withStepId(String stepId) {
         this.stepId = stepId;
         return this;
@@ -162,6 +178,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,16 @@ public class ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest(@JsonProperty("executionId") String executionId, @JsonProperty("historyId") String historyId, @JsonProperty("projectId") String projectId, @JsonProperty("stepId") String stepId) {
+        this.executionId = executionId;
+        this.historyId = historyId;
+        this.projectId = projectId;
+        this.stepId = stepId;
+  }
 }

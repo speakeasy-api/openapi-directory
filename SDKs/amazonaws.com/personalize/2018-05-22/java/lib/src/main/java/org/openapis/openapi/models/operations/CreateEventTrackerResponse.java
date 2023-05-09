@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEventTrackerResponse {
     
     public String contentType;
+
     public CreateEventTrackerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEventTrackerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEventTrackerResponse createEventTrackerResponse;
+
     public CreateEventTrackerResponse withCreateEventTrackerResponse(org.openapis.openapi.models.shared.CreateEventTrackerResponse createEventTrackerResponse) {
         this.createEventTrackerResponse = createEventTrackerResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateEventTrackerResponse {
      */
     
     public Object invalidInputException;
+
     public CreateEventTrackerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateEventTrackerResponse {
      */
     
     public Object limitExceededException;
+
     public CreateEventTrackerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateEventTrackerResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateEventTrackerResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEventTrackerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateEventTrackerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateEventTrackerResponse {
     
     
     public Integer statusCode;
+
     public CreateEventTrackerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateEventTrackerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEventTrackerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateEventTrackerResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateEventTrackerResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateEventTrackerResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateEventTrackerResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateEventTrackerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

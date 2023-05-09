@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentMethodRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public UpdatePaymentMethodRequestBody requestBody;
+
     public UpdatePaymentMethodRequest withRequestBody(UpdatePaymentMethodRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class UpdatePaymentMethodRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodNumber")
     public String paymentMethodNumber;
+
     public UpdatePaymentMethodRequest withPaymentMethodNumber(String paymentMethodNumber) {
         this.paymentMethodNumber = paymentMethodNumber;
         return this;
     }
     
+    public UpdatePaymentMethodRequest(@JsonProperty("paymentMethodNumber") String paymentMethodNumber) {
+        this.paymentMethodNumber = paymentMethodNumber;
+  }
 }

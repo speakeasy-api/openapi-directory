@@ -15,6 +15,7 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ResourceInfo withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceInfo withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceDetails")
     public ResourceDetails resourceDetails;
+
     public ResourceInfo withResourceDetails(ResourceDetails resourceDetails) {
         this.resourceDetails = resourceDetails;
         return this;
@@ -39,9 +42,11 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public ResourceInfo withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceInfo(){}
 }

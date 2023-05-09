@@ -40,4 +40,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/StatusRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/Status200ApplicationJSONLastHandshake.java
 lib/src/main/java/org/openapis/openapi/models/operations/Status200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/StatusResponse.java
+docs/sdk/README.md
 USAGE.md

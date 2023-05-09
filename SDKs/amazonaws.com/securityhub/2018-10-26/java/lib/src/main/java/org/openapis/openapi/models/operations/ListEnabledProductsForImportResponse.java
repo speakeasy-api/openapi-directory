@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEnabledProductsForImportResponse {
     
     public String contentType;
+
     public ListEnabledProductsForImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEnabledProductsForImportResponse {
      */
     
     public Object internalException;
+
     public ListEnabledProductsForImportResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListEnabledProductsForImportResponse {
      */
     
     public Object invalidAccessException;
+
     public ListEnabledProductsForImportResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class ListEnabledProductsForImportResponse {
      */
     
     public Object limitExceededException;
+
     public ListEnabledProductsForImportResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListEnabledProductsForImportResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEnabledProductsForImportResponse listEnabledProductsForImportResponse;
+
     public ListEnabledProductsForImportResponse withListEnabledProductsForImportResponse(org.openapis.openapi.models.shared.ListEnabledProductsForImportResponse listEnabledProductsForImportResponse) {
         this.listEnabledProductsForImportResponse = listEnabledProductsForImportResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListEnabledProductsForImportResponse {
     
     
     public Integer statusCode;
+
     public ListEnabledProductsForImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListEnabledProductsForImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEnabledProductsForImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListEnabledProductsForImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

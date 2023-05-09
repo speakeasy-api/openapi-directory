@@ -15,6 +15,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public OfferContent content;
+
     public Offer withContent(OfferContent content) {
         this.content = content;
         return this;
@@ -23,6 +24,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public BeezUPCommonInfoSummaries info;
+
     public Offer withInfo(BeezUPCommonInfoSummaries info) {
         this.info = info;
         return this;
@@ -34,9 +36,11 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public OfferLinks links;
+
     public Offer withLinks(OfferLinks links) {
         this.links = links;
         return this;
     }
     
+    public Offer(){}
 }

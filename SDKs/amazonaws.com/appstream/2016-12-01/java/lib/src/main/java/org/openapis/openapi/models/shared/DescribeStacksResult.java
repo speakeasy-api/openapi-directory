@@ -15,6 +15,7 @@ public class DescribeStacksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeStacksResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeStacksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stacks")
     public Stack[] stacks;
+
     public DescribeStacksResult withStacks(Stack[] stacks) {
         this.stacks = stacks;
         return this;
     }
     
+    public DescribeStacksResult(){}
 }

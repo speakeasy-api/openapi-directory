@@ -12,6 +12,7 @@ public class PostCallCampaignSoundRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CallCreateSound callCreateSound;
+
     public PostCallCampaignSoundRequest withCallCreateSound(org.openapis.openapi.models.shared.CallCreateSound callCreateSound) {
         this.callCreateSound = callCreateSound;
         return this;
@@ -22,9 +23,11 @@ public class PostCallCampaignSoundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PostCallCampaignSoundRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public PostCallCampaignSoundRequest(){}
 }

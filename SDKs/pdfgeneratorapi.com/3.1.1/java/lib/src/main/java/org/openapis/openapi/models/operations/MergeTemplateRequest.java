@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MergeTemplateRequest {
@@ -12,6 +13,7 @@ public class MergeTemplateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Data data;
+
     public MergeTemplateRequest withData(org.openapis.openapi.models.shared.Data data) {
         this.data = data;
         return this;
@@ -22,6 +24,7 @@ public class MergeTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public MergeTemplateRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class MergeTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public MergeTemplateRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class MergeTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
     public org.openapis.openapi.models.shared.OutputEnum output;
+
     public MergeTemplateRequest withOutput(org.openapis.openapi.models.shared.OutputEnum output) {
         this.output = output;
         return this;
@@ -52,9 +57,14 @@ public class MergeTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
     public Long templateId;
+
     public MergeTemplateRequest withTemplateId(Long templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public MergeTemplateRequest(@JsonProperty("Data") org.openapis.openapi.models.shared.Data data, @JsonProperty("templateId") Long templateId) {
+        this.data = data;
+        this.templateId = templateId;
+  }
 }

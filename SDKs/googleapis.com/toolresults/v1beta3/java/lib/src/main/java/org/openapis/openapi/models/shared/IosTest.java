@@ -18,6 +18,7 @@ public class IosTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosAppInfo")
     public IosAppInfo iosAppInfo;
+
     public IosTest withIosAppInfo(IosAppInfo iosAppInfo) {
         this.iosAppInfo = iosAppInfo;
         return this;
@@ -29,6 +30,7 @@ public class IosTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosRoboTest")
     public java.util.Map<String, Object> iosRoboTest;
+
     public IosTest withIosRoboTest(java.util.Map<String, Object> iosRoboTest) {
         this.iosRoboTest = iosRoboTest;
         return this;
@@ -40,6 +42,7 @@ public class IosTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosTestLoop")
     public IosTestLoop iosTestLoop;
+
     public IosTest withIosTestLoop(IosTestLoop iosTestLoop) {
         this.iosTestLoop = iosTestLoop;
         return this;
@@ -51,6 +54,7 @@ public class IosTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosXcTest")
     public IosXcTest iosXcTest;
+
     public IosTest withIosXcTest(IosXcTest iosXcTest) {
         this.iosXcTest = iosXcTest;
         return this;
@@ -62,9 +66,11 @@ public class IosTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTimeout")
     public Duration testTimeout;
+
     public IosTest withTestTimeout(Duration testTimeout) {
         this.testTimeout = testTimeout;
         return this;
     }
     
+    public IosTest(){}
 }

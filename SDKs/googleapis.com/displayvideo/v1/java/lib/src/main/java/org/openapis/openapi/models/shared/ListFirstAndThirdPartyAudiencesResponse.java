@@ -18,6 +18,7 @@ public class ListFirstAndThirdPartyAudiencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstAndThirdPartyAudiences")
     public FirstAndThirdPartyAudience[] firstAndThirdPartyAudiences;
+
     public ListFirstAndThirdPartyAudiencesResponse withFirstAndThirdPartyAudiences(FirstAndThirdPartyAudience[] firstAndThirdPartyAudiences) {
         this.firstAndThirdPartyAudiences = firstAndThirdPartyAudiences;
         return this;
@@ -29,9 +30,11 @@ public class ListFirstAndThirdPartyAudiencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFirstAndThirdPartyAudiencesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListFirstAndThirdPartyAudiencesResponse(){}
 }

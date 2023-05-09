@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1betaPanelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDiscoveryengineV1betaPanelInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDiscoveryengineV1betaPanelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panelId")
     public String panelId;
+
     public GoogleCloudDiscoveryengineV1betaPanelInfo withPanelId(String panelId) {
         this.panelId = panelId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDiscoveryengineV1betaPanelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panelPosition")
     public Integer panelPosition;
+
     public GoogleCloudDiscoveryengineV1betaPanelInfo withPanelPosition(Integer panelPosition) {
         this.panelPosition = panelPosition;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDiscoveryengineV1betaPanelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPanels")
     public Integer totalPanels;
+
     public GoogleCloudDiscoveryengineV1betaPanelInfo withTotalPanels(Integer totalPanels) {
         this.totalPanels = totalPanels;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaPanelInfo(){}
 }

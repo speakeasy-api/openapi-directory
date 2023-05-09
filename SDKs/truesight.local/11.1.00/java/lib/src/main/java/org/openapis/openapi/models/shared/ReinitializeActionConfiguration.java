@@ -18,6 +18,7 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetAlertActions")
     public ReinitializeActionConfigurationResetAlertActionsEnum resetAlertActions;
+
     public ReinitializeActionConfiguration withResetAlertActions(ReinitializeActionConfigurationResetAlertActionsEnum resetAlertActions) {
         this.resetAlertActions = resetAlertActions;
         return this;
@@ -29,6 +30,7 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetAlertAfterNTimes")
     public ReinitializeActionConfigurationResetAlertAfterNTimesEnum resetAlertAfterNTimes;
+
     public ReinitializeActionConfiguration withResetAlertAfterNTimes(ReinitializeActionConfigurationResetAlertAfterNTimesEnum resetAlertAfterNTimes) {
         this.resetAlertAfterNTimes = resetAlertAfterNTimes;
         return this;
@@ -40,6 +42,7 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetDebugMode")
     public ReinitializeActionConfigurationResetDebugModeEnum resetDebugMode;
+
     public ReinitializeActionConfiguration withResetDebugMode(ReinitializeActionConfigurationResetDebugModeEnum resetDebugMode) {
         this.resetDebugMode = resetDebugMode;
         return this;
@@ -51,6 +54,7 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetDiscoveryAndPollingIntervals")
     public ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum resetDiscoveryAndPollingIntervals;
+
     public ReinitializeActionConfiguration withResetDiscoveryAndPollingIntervals(ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum resetDiscoveryAndPollingIntervals) {
         this.resetDiscoveryAndPollingIntervals = resetDiscoveryAndPollingIntervals;
         return this;
@@ -62,6 +66,7 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetJavaSettings")
     public ReinitializeActionConfigurationResetJavaSettingsEnum resetJavaSettings;
+
     public ReinitializeActionConfiguration withResetJavaSettings(ReinitializeActionConfigurationResetJavaSettingsEnum resetJavaSettings) {
         this.resetJavaSettings = resetJavaSettings;
         return this;
@@ -73,6 +78,7 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetOtherAlertSettings")
     public ReinitializeActionConfigurationResetOtherAlertSettingsEnum resetOtherAlertSettings;
+
     public ReinitializeActionConfiguration withResetOtherAlertSettings(ReinitializeActionConfigurationResetOtherAlertSettingsEnum resetOtherAlertSettings) {
         this.resetOtherAlertSettings = resetOtherAlertSettings;
         return this;
@@ -84,6 +90,7 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetRemovedPausedObjectList")
     public ReinitializeActionConfigurationResetRemovedPausedObjectListEnum resetRemovedPausedObjectList;
+
     public ReinitializeActionConfiguration withResetRemovedPausedObjectList(ReinitializeActionConfigurationResetRemovedPausedObjectListEnum resetRemovedPausedObjectList) {
         this.resetRemovedPausedObjectList = resetRemovedPausedObjectList;
         return this;
@@ -95,6 +102,7 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetReportSettings")
     public ReinitializeActionConfigurationResetReportSettingsEnum resetReportSettings;
+
     public ReinitializeActionConfiguration withResetReportSettings(ReinitializeActionConfigurationResetReportSettingsEnum resetReportSettings) {
         this.resetReportSettings = resetReportSettings;
         return this;
@@ -106,9 +114,11 @@ public class ReinitializeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetThresholds")
     public ReinitializeActionConfigurationResetThresholdsEnum resetThresholds;
+
     public ReinitializeActionConfiguration withResetThresholds(ReinitializeActionConfigurationResetThresholdsEnum resetThresholds) {
         this.resetThresholds = resetThresholds;
         return this;
     }
     
+    public ReinitializeActionConfiguration(){}
 }

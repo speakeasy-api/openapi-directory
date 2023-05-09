@@ -15,6 +15,7 @@ public class MerchantCancellation200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelItems")
     public MerchantCancellation200ApplicationJSONDataCancelItems[] cancelItems;
+
     public MerchantCancellation200ApplicationJSONData withCancelItems(MerchantCancellation200ApplicationJSONDataCancelItems[] cancelItems) {
         this.cancelItems = cancelItems;
         return this;
@@ -26,6 +27,7 @@ public class MerchantCancellation200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorRef")
     public String distributorRef;
+
     public MerchantCancellation200ApplicationJSONData withDistributorRef(String distributorRef) {
         this.distributorRef = distributorRef;
         return this;
@@ -37,9 +39,11 @@ public class MerchantCancellation200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryId")
     public Long itineraryId;
+
     public MerchantCancellation200ApplicationJSONData withItineraryId(Long itineraryId) {
         this.itineraryId = itineraryId;
         return this;
     }
     
+    public MerchantCancellation200ApplicationJSONData(){}
 }

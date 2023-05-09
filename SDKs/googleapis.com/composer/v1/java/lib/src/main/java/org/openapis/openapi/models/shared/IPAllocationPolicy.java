@@ -18,6 +18,7 @@ public class IPAllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterIpv4CidrBlock")
     public String clusterIpv4CidrBlock;
+
     public IPAllocationPolicy withClusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         return this;
@@ -29,6 +30,7 @@ public class IPAllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterSecondaryRangeName")
     public String clusterSecondaryRangeName;
+
     public IPAllocationPolicy withClusterSecondaryRangeName(String clusterSecondaryRangeName) {
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         return this;
@@ -40,6 +42,7 @@ public class IPAllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicesIpv4CidrBlock")
     public String servicesIpv4CidrBlock;
+
     public IPAllocationPolicy withServicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
         return this;
@@ -51,6 +54,7 @@ public class IPAllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicesSecondaryRangeName")
     public String servicesSecondaryRangeName;
+
     public IPAllocationPolicy withServicesSecondaryRangeName(String servicesSecondaryRangeName) {
         this.servicesSecondaryRangeName = servicesSecondaryRangeName;
         return this;
@@ -62,9 +66,11 @@ public class IPAllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useIpAliases")
     public Boolean useIpAliases;
+
     public IPAllocationPolicy withUseIpAliases(Boolean useIpAliases) {
         this.useIpAliases = useIpAliases;
         return this;
     }
     
+    public IPAllocationPolicy(){}
 }

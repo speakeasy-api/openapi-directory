@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteIpamResultIpamOperatingRegions {
     
     public String regionName;
+
     public DeleteIpamResultIpamOperatingRegions withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public DeleteIpamResultIpamOperatingRegions(){}
 }

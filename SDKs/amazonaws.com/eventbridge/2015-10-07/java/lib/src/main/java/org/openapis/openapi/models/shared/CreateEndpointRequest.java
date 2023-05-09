@@ -12,6 +12,7 @@ public class CreateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateEndpointRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateEndpointRequest {
     
     @JsonProperty("EventBuses")
     public EndpointEventBus[] eventBuses;
+
     public CreateEndpointRequest withEventBuses(EndpointEventBus[] eventBuses) {
         this.eventBuses = eventBuses;
         return this;
@@ -26,6 +28,7 @@ public class CreateEndpointRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateEndpointRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class CreateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationConfig")
     public ReplicationConfig replicationConfig;
+
     public CreateEndpointRequest withReplicationConfig(ReplicationConfig replicationConfig) {
         this.replicationConfig = replicationConfig;
         return this;
@@ -42,6 +46,7 @@ public class CreateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateEndpointRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -49,9 +54,15 @@ public class CreateEndpointRequest {
     
     @JsonProperty("RoutingConfig")
     public RoutingConfig routingConfig;
+
     public CreateEndpointRequest withRoutingConfig(RoutingConfig routingConfig) {
         this.routingConfig = routingConfig;
         return this;
     }
     
+    public CreateEndpointRequest(@JsonProperty("EventBuses") EndpointEventBus[] eventBuses, @JsonProperty("Name") String name, @JsonProperty("RoutingConfig") RoutingConfig routingConfig) {
+        this.eventBuses = eventBuses;
+        this.name = name;
+        this.routingConfig = routingConfig;
+  }
 }

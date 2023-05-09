@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementProfileUserLinksUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EntityUserLinkInput entityUserLinkInput;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withEntityUserLinkInput(org.openapis.openapi.models.shared.EntityUserLinkInput entityUserLinkInput) {
         this.entityUserLinkInput = entityUserLinkInput;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=linkId")
     public String linkId;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withLinkId(String linkId) {
         this.linkId = linkId;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +120,7 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -119,9 +131,16 @@ public class AnalyticsManagementProfileUserLinksUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementProfileUserLinksUpdateRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementProfileUserLinksUpdateRequest(@JsonProperty("accountId") String accountId, @JsonProperty("linkId") String linkId, @JsonProperty("profileId") String profileId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.linkId = linkId;
+        this.profileId = profileId;
+        this.webPropertyId = webPropertyId;
+  }
 }

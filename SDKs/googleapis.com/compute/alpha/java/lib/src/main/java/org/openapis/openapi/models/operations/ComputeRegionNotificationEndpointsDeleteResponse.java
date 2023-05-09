@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionNotificationEndpointsDeleteResponse {
     
     public String contentType;
+
     public ComputeRegionNotificationEndpointsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionNotificationEndpointsDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ComputeRegionNotificationEndpointsDeleteResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionNotificationEndpointsDeleteResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionNotificationEndpointsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionNotificationEndpointsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionNotificationEndpointsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionNotificationEndpointsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

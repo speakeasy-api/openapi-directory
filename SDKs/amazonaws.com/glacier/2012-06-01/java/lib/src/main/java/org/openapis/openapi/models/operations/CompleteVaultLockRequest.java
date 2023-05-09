@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteVaultLockRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CompleteVaultLockRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class CompleteVaultLockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CompleteVaultLockRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class CompleteVaultLockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CompleteVaultLockRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class CompleteVaultLockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CompleteVaultLockRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class CompleteVaultLockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CompleteVaultLockRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class CompleteVaultLockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CompleteVaultLockRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class CompleteVaultLockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CompleteVaultLockRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class CompleteVaultLockRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public CompleteVaultLockRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -71,6 +80,7 @@ public class CompleteVaultLockRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lockId")
     public String lockId;
+
     public CompleteVaultLockRequest withLockId(String lockId) {
         this.lockId = lockId;
         return this;
@@ -81,9 +91,15 @@ public class CompleteVaultLockRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultName")
     public String vaultName;
+
     public CompleteVaultLockRequest withVaultName(String vaultName) {
         this.vaultName = vaultName;
         return this;
     }
     
+    public CompleteVaultLockRequest(@JsonProperty("accountId") String accountId, @JsonProperty("lockId") String lockId, @JsonProperty("vaultName") String vaultName) {
+        this.accountId = accountId;
+        this.lockId = lockId;
+        this.vaultName = vaultName;
+  }
 }

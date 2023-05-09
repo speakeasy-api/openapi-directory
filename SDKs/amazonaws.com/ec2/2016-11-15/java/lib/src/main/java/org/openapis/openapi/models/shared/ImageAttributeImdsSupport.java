@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImageAttributeImdsSupport {
     
     public String value;
+
     public ImageAttributeImdsSupport withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImageAttributeImdsSupport(){}
 }

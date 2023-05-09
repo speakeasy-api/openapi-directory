@@ -15,6 +15,7 @@ public class ListStreamProcessorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStreamProcessorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListStreamProcessorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamProcessors")
     public StreamProcessor[] streamProcessors;
+
     public ListStreamProcessorsResponse withStreamProcessors(StreamProcessor[] streamProcessors) {
         this.streamProcessors = streamProcessors;
         return this;
     }
     
+    public ListStreamProcessorsResponse(){}
 }

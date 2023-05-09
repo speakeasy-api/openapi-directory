@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListSecurity;
 import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListRequest;
 import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListResponse;
+import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,35 +28,36 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            LifesciencesProjectsLocationsListRequest req = new LifesciencesProjectsLocationsListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                name = "illum";
+            LifesciencesProjectsLocationsListRequest req = new LifesciencesProjectsLocationsListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
                 oauthToken = "vel";
-                pageSize = 623564;
+                pageSize = 623564L;
                 pageToken = "deserunt";
                 prettyPrint = false;
                 quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-            }}            
+            }};            
 
-            LifesciencesProjectsLocationsListResponse res = sdk.projects.lifesciencesProjectsLocationsList(req, new LifesciencesProjectsLocationsListSecurity() {{
+            LifesciencesProjectsLocationsListResponse res = sdk.projects.lifesciencesProjectsLocationsList(req, new LifesciencesProjectsLocationsListSecurity("debitis", "ipsa") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.listLocationsResponse.isPresent()) {
+            if (res.listLocationsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -65,13 +65,13 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `lifesciencesProjectsLocationsList` - Lists information about the supported locations for this service.
-* `lifesciencesProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or Operations.ListOperations to check whether the cancellation succeeded or the operation completed despite cancellation. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.cancel`
-* `lifesciencesProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.get`
-* `lifesciencesProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.list`
-* `lifesciencesProjectsLocationsPipelinesRun` - Runs a pipeline. The returned Operation's metadata field will contain a google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline execution. The response field will contain a google.cloud.lifesciences.v2beta.RunPipelineResponse object if the pipeline completes successfully. **Note:** Before you can use this method, the *Life Sciences Service Agent* must have access to your project. This is done automatically when the Cloud Life Sciences API is first enabled, but if you delete this permission you must disable and re-enable the API to grant the Life Sciences Service Agent the required permissions. Authorization requires the following [Google IAM](https://cloud.google.com/iam/) permission: * `lifesciences.workflows.run`
+* [lifesciencesProjectsLocationsList](docs/projects/README.md#lifesciencesprojectslocationslist) - Lists information about the supported locations for this service.
+* [lifesciencesProjectsLocationsOperationsCancel](docs/projects/README.md#lifesciencesprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or Operations.ListOperations to check whether the cancellation succeeded or the operation completed despite cancellation. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.cancel`
+* [lifesciencesProjectsLocationsOperationsGet](docs/projects/README.md#lifesciencesprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.get`
+* [lifesciencesProjectsLocationsOperationsList](docs/projects/README.md#lifesciencesprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.list`
+* [lifesciencesProjectsLocationsPipelinesRun](docs/projects/README.md#lifesciencesprojectslocationspipelinesrun) - Runs a pipeline. The returned Operation's metadata field will contain a google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline execution. The response field will contain a google.cloud.lifesciences.v2beta.RunPipelineResponse object if the pipeline completes successfully. **Note:** Before you can use this method, the *Life Sciences Service Agent* must have access to your project. This is done automatically when the Cloud Life Sciences API is first enabled, but if you delete this permission you must disable and re-enable the API to grant the Life Sciences Service Agent the required permissions. Authorization requires the following [Google IAM](https://cloud.google.com/iam/) permission: * `lifesciences.workflows.run`
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,6 +12,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NAStationModule withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_percent")
     public Integer batteryPercent;
+
     public NAStationModule withBatteryPercent(Integer batteryPercent) {
         this.batteryPercent = batteryPercent;
         return this;
@@ -55,6 +57,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_vp")
     public Integer batteryVp;
+
     public NAStationModule withBatteryVp(Integer batteryVp) {
         this.batteryVp = batteryVp;
         return this;
@@ -63,6 +66,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboard_data")
     public NADashboardData dashboardData;
+
     public NAStationModule withDashboardData(NADashboardData dashboardData) {
         this.dashboardData = dashboardData;
         return this;
@@ -71,6 +75,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_type")
     public String[] dataType;
+
     public NAStationModule withDataType(String[] dataType) {
         this.dataType = dataType;
         return this;
@@ -79,6 +84,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public Integer firmware;
+
     public NAStationModule withFirmware(Integer firmware) {
         this.firmware = firmware;
         return this;
@@ -87,6 +93,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_message")
     public Integer lastMessage;
+
     public NAStationModule withLastMessage(Integer lastMessage) {
         this.lastMessage = lastMessage;
         return this;
@@ -95,6 +102,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_seen")
     public Integer lastSeen;
+
     public NAStationModule withLastSeen(Integer lastSeen) {
         this.lastSeen = lastSeen;
         return this;
@@ -103,6 +111,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_setup")
     public Integer lastSetup;
+
     public NAStationModule withLastSetup(Integer lastSetup) {
         this.lastSetup = lastSetup;
         return this;
@@ -111,6 +120,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module_name")
     public String moduleName;
+
     public NAStationModule withModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -122,6 +132,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reachable")
     public Boolean reachable;
+
     public NAStationModule withReachable(Boolean reachable) {
         this.reachable = reachable;
         return this;
@@ -138,6 +149,7 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rf_status")
     public Integer rfStatus;
+
     public NAStationModule withRfStatus(Integer rfStatus) {
         this.rfStatus = rfStatus;
         return this;
@@ -156,9 +168,11 @@ public class NAStationModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAStationModule withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NAStationModule(){}
 }

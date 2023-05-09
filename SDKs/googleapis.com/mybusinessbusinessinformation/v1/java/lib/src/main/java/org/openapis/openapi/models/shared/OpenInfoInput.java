@@ -18,6 +18,7 @@ public class OpenInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openingDate")
     public Date openingDate;
+
     public OpenInfoInput withOpeningDate(Date openingDate) {
         this.openingDate = openingDate;
         return this;
@@ -29,9 +30,11 @@ public class OpenInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OpenInfoStatusEnum status;
+
     public OpenInfoInput withStatus(OpenInfoStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OpenInfoInput(){}
 }

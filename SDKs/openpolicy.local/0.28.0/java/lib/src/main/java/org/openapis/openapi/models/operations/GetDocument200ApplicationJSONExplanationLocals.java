@@ -12,6 +12,7 @@ public class GetDocument200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public GetDocument200ApplicationJSONExplanationLocalsKey key;
+
     public GetDocument200ApplicationJSONExplanationLocals withKey(GetDocument200ApplicationJSONExplanationLocalsKey key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class GetDocument200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GetDocument200ApplicationJSONExplanationLocalsValue value;
+
     public GetDocument200ApplicationJSONExplanationLocals withValue(GetDocument200ApplicationJSONExplanationLocalsValue value) {
         this.value = value;
         return this;
     }
     
+    public GetDocument200ApplicationJSONExplanationLocals(){}
 }

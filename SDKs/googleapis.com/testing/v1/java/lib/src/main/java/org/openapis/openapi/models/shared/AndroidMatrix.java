@@ -18,6 +18,7 @@ public class AndroidMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidModelIds")
     public String[] androidModelIds;
+
     public AndroidMatrix withAndroidModelIds(String[] androidModelIds) {
         this.androidModelIds = androidModelIds;
         return this;
@@ -29,6 +30,7 @@ public class AndroidMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidVersionIds")
     public String[] androidVersionIds;
+
     public AndroidMatrix withAndroidVersionIds(String[] androidVersionIds) {
         this.androidVersionIds = androidVersionIds;
         return this;
@@ -40,6 +42,7 @@ public class AndroidMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locales")
     public String[] locales;
+
     public AndroidMatrix withLocales(String[] locales) {
         this.locales = locales;
         return this;
@@ -51,9 +54,11 @@ public class AndroidMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientations")
     public String[] orientations;
+
     public AndroidMatrix withOrientations(String[] orientations) {
         this.orientations = orientations;
         return this;
     }
     
+    public AndroidMatrix(){}
 }

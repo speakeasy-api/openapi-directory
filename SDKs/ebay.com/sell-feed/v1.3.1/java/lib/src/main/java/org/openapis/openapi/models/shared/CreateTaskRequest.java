@@ -18,6 +18,7 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public String feedType;
+
     public CreateTaskRequest withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -29,9 +30,11 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public CreateTaskRequest withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public CreateTaskRequest(){}
 }

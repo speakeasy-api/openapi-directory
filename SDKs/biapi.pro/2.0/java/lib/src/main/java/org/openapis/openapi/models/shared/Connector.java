@@ -18,6 +18,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_mechanism")
     public String authMechanism;
+
     public Connector withAuthMechanism(String authMechanism) {
         this.authMechanism = authMechanism;
         return this;
@@ -28,6 +29,7 @@ public class Connector {
      */
     @JsonProperty("beta")
     public Boolean beta;
+
     public Connector withBeta(Boolean beta) {
         this.beta = beta;
         return this;
@@ -38,6 +40,7 @@ public class Connector {
      */
     @JsonProperty("charged")
     public Boolean charged;
+
     public Connector withCharged(Boolean charged) {
         this.charged = charged;
         return this;
@@ -49,6 +52,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Connector withCode(String code) {
         this.code = code;
         return this;
@@ -60,6 +64,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public Connector withColor(String color) {
         this.color = color;
         return this;
@@ -71,6 +76,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public Connector withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -81,6 +87,7 @@ public class Connector {
      */
     @JsonProperty("id")
     public Long id;
+
     public Connector withId(Long id) {
         this.id = id;
         return this;
@@ -92,6 +99,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("months_to_fetch")
     public Long monthsToFetch;
+
     public Connector withMonthsToFetch(Long monthsToFetch) {
         this.monthsToFetch = monthsToFetch;
         return this;
@@ -102,6 +110,7 @@ public class Connector {
      */
     @JsonProperty("name")
     public String name;
+
     public Connector withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +121,7 @@ public class Connector {
      */
     @JsonProperty("restricted")
     public Boolean restricted;
+
     public Connector withRestricted(Boolean restricted) {
         this.restricted = restricted;
         return this;
@@ -123,6 +133,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siret")
     public String siret;
+
     public Connector withSiret(String siret) {
         this.siret = siret;
         return this;
@@ -131,6 +142,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Connector withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -142,6 +154,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync_frequency")
     public Float syncFrequency;
+
     public Connector withSyncFrequency(Float syncFrequency) {
         this.syncFrequency = syncFrequency;
         return this;
@@ -152,9 +165,18 @@ public class Connector {
      */
     @JsonProperty("uuid")
     public String uuid;
+
     public Connector withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public Connector(@JsonProperty("beta") Boolean beta, @JsonProperty("charged") Boolean charged, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("restricted") Boolean restricted, @JsonProperty("uuid") String uuid) {
+        this.beta = beta;
+        this.charged = charged;
+        this.id = id;
+        this.name = name;
+        this.restricted = restricted;
+        this.uuid = uuid;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteFleetsRequest {
     
     public Boolean dryRun;
+
     public DeleteFleetsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DeleteFleetsRequest {
     
     
     public String[] fleetIds;
+
     public DeleteFleetsRequest withFleetIds(String[] fleetIds) {
         this.fleetIds = fleetIds;
         return this;
@@ -23,9 +25,14 @@ public class DeleteFleetsRequest {
     
     
     public Boolean terminateInstances;
+
     public DeleteFleetsRequest withTerminateInstances(Boolean terminateInstances) {
         this.terminateInstances = terminateInstances;
         return this;
     }
     
+    public DeleteFleetsRequest(@JsonProperty("FleetIds") String[] fleetIds, @JsonProperty("TerminateInstances") Boolean terminateInstances) {
+        this.fleetIds = fleetIds;
+        this.terminateInstances = terminateInstances;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishLayerVersionResponse {
@@ -12,6 +13,7 @@ public class PublishLayerVersionResponse {
      */
     
     public Object codeStorageExceededException;
+
     public PublishLayerVersionResponse withCodeStorageExceededException(Object codeStorageExceededException) {
         this.codeStorageExceededException = codeStorageExceededException;
         return this;
@@ -19,6 +21,7 @@ public class PublishLayerVersionResponse {
     
     
     public String contentType;
+
     public PublishLayerVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PublishLayerVersionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PublishLayerVersionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class PublishLayerVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.PublishLayerVersionResponse publishLayerVersionResponse;
+
     public PublishLayerVersionResponse withPublishLayerVersionResponse(org.openapis.openapi.models.shared.PublishLayerVersionResponse publishLayerVersionResponse) {
         this.publishLayerVersionResponse = publishLayerVersionResponse;
         return this;
@@ -49,6 +54,7 @@ public class PublishLayerVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PublishLayerVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PublishLayerVersionResponse {
      */
     
     public Object serviceException;
+
     public PublishLayerVersionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class PublishLayerVersionResponse {
     
     
     public Integer statusCode;
+
     public PublishLayerVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PublishLayerVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishLayerVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PublishLayerVersionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PublishLayerVersionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PublishLayerVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

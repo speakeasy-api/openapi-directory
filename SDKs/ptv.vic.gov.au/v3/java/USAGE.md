@@ -2,12 +2,12 @@
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum;
-import org.openapis.openapi.models.operations.DeparturesGetForStopRouteTypeEnum;
 import org.openapis.openapi.models.operations.DeparturesGetForStopRequest;
 import org.openapis.openapi.models.operations.DeparturesGetForStopResponse;
+import org.openapis.openapi.models.operations.DeparturesGetForStopRouteTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,38 +15,37 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeparturesGetForStopRequest req = new DeparturesGetForStopRequest() {{
-                dateUtc = "2021-10-25T05:21:43.948Z";
-                devid = "distinctio";
-                directionId = 844266;
+            DeparturesGetForStopRequest req = new DeparturesGetForStopRequest(DeparturesGetForStopRouteTypeEnum.TWO, 592845) {{
+                dateUtc = OffsetDateTime.parse("2021-04-24T16:27:50.833Z");
+                devid = "unde";
+                directionId = 857946;
                 expand = new org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum[]{{
-                    add("VehiclePosition"),
-                    add("Direction"),
-                    add("VehiclePosition"),
+                    add(DeparturesGetForStopExpandEnum.VEHICLE_POSITION),
+                    add(DeparturesGetForStopExpandEnum.RUN),
+                    add(DeparturesGetForStopExpandEnum.DISRUPTION),
                 }};
                 gtfs = false;
                 includeCancelled = false;
                 includeGeopath = false;
                 lookBackwards = false;
-                maxResults = 423655;
+                maxResults = 645894;
                 platformNumbers = new Integer[]{{
-                    add(645894),
-                    add(384382),
                     add(437587),
+                    add(297534),
                 }};
-                routeType = "1";
                 signature = "debitis";
-                stopId = 56713;
-                token = "delectus";
-            }}            
+                token = "ipsa";
+            }};            
 
             DeparturesGetForStopResponse res = sdk.departures.departuresGetForStop(req);
 
-            if (res.v3DeparturesResponse.isPresent()) {
+            if (res.v3DeparturesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,6 +15,7 @@ public class Aecmw504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Aecmw504ApplicationJSONErrorEnum error;
+
     public Aecmw504ApplicationJSON withError(Aecmw504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Aecmw504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Aecmw504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Aecmw504ApplicationJSON withErrorDescription(Aecmw504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Aecmw504ApplicationJSON(){}
 }

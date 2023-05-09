@@ -18,6 +18,7 @@ public class Usersettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Usersettings withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class Usersettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notesExport")
     public UsersettingsNotesExport notesExport;
+
     public Usersettings withNotesExport(UsersettingsNotesExport notesExport) {
         this.notesExport = notesExport;
         return this;
@@ -37,9 +39,11 @@ public class Usersettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public UsersettingsNotification notification;
+
     public Usersettings withNotification(UsersettingsNotification notification) {
         this.notification = notification;
         return this;
     }
     
+    public Usersettings(){}
 }

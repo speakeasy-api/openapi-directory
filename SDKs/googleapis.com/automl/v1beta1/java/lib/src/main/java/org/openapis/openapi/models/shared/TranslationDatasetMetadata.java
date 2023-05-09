@@ -18,6 +18,7 @@ public class TranslationDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageCode")
     public String sourceLanguageCode;
+
     public TranslationDatasetMetadata withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -29,9 +30,11 @@ public class TranslationDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageCode")
     public String targetLanguageCode;
+
     public TranslationDatasetMetadata withTargetLanguageCode(String targetLanguageCode) {
         this.targetLanguageCode = targetLanguageCode;
         return this;
     }
     
+    public TranslationDatasetMetadata(){}
 }

@@ -17,6 +17,7 @@ public class CustomConfiguration {
      */
     @JsonProperty("format")
     public CustomConfigurationFormatEnum format;
+
     public CustomConfiguration withFormat(CustomConfigurationFormatEnum format) {
         this.format = format;
         return this;
@@ -28,6 +29,7 @@ public class CustomConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameFormat")
     public String nameFormat;
+
     public CustomConfiguration withNameFormat(String nameFormat) {
         this.nameFormat = nameFormat;
         return this;
@@ -39,6 +41,7 @@ public class CustomConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receivingOrganization")
     public String receivingOrganization;
+
     public CustomConfiguration withReceivingOrganization(String receivingOrganization) {
         this.receivingOrganization = receivingOrganization;
         return this;
@@ -49,6 +52,7 @@ public class CustomConfiguration {
      */
     @JsonProperty("schemaName")
     public String schemaName;
+
     public CustomConfiguration withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -59,6 +63,7 @@ public class CustomConfiguration {
      */
     @JsonProperty("transport")
     public Object transport;
+
     public CustomConfiguration withTransport(Object transport) {
         this.transport = transport;
         return this;
@@ -69,9 +74,16 @@ public class CustomConfiguration {
      */
     @JsonProperty("type")
     public String type;
+
     public CustomConfiguration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CustomConfiguration(@JsonProperty("format") CustomConfigurationFormatEnum format, @JsonProperty("schemaName") String schemaName, @JsonProperty("transport") Object transport, @JsonProperty("type") String type) {
+        this.format = format;
+        this.schemaName = schemaName;
+        this.transport = transport;
+        this.type = type;
+  }
 }

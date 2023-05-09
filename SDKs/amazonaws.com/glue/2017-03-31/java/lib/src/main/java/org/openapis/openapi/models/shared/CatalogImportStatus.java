@@ -20,6 +20,7 @@ public class CatalogImportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportCompleted")
     public Boolean importCompleted;
+
     public CatalogImportStatus withImportCompleted(Boolean importCompleted) {
         this.importCompleted = importCompleted;
         return this;
@@ -30,6 +31,7 @@ public class CatalogImportStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ImportTime")
     public OffsetDateTime importTime;
+
     public CatalogImportStatus withImportTime(OffsetDateTime importTime) {
         this.importTime = importTime;
         return this;
@@ -38,9 +40,11 @@ public class CatalogImportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportedBy")
     public String importedBy;
+
     public CatalogImportStatus withImportedBy(String importedBy) {
         this.importedBy = importedBy;
         return this;
     }
     
+    public CatalogImportStatus(){}
 }

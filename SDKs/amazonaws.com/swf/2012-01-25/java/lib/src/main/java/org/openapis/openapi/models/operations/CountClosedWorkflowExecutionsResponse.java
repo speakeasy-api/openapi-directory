@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CountClosedWorkflowExecutionsResponse {
     
     public String contentType;
+
     public CountClosedWorkflowExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CountClosedWorkflowExecutionsResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public CountClosedWorkflowExecutionsResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class CountClosedWorkflowExecutionsResponse {
     
     
     public Integer statusCode;
+
     public CountClosedWorkflowExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CountClosedWorkflowExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CountClosedWorkflowExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CountClosedWorkflowExecutionsResponse {
      */
     
     public Object unknownResourceFault;
+
     public CountClosedWorkflowExecutionsResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
@@ -53,9 +59,14 @@ public class CountClosedWorkflowExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkflowExecutionCount workflowExecutionCount;
+
     public CountClosedWorkflowExecutionsResponse withWorkflowExecutionCount(org.openapis.openapi.models.shared.WorkflowExecutionCount workflowExecutionCount) {
         this.workflowExecutionCount = workflowExecutionCount;
         return this;
     }
     
+    public CountClosedWorkflowExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

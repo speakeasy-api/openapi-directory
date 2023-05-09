@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VersionhistoryPlatformsChannelsVersionsReleasesListResponse {
     
     public String contentType;
+
     public VersionhistoryPlatformsChannelsVersionsReleasesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VersionhistoryPlatformsChannelsVersionsReleasesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReleasesResponse listReleasesResponse;
+
     public VersionhistoryPlatformsChannelsVersionsReleasesListResponse withListReleasesResponse(org.openapis.openapi.models.shared.ListReleasesResponse listReleasesResponse) {
         this.listReleasesResponse = listReleasesResponse;
         return this;
@@ -26,6 +29,7 @@ public class VersionhistoryPlatformsChannelsVersionsReleasesListResponse {
     
     
     public Integer statusCode;
+
     public VersionhistoryPlatformsChannelsVersionsReleasesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VersionhistoryPlatformsChannelsVersionsReleasesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VersionhistoryPlatformsChannelsVersionsReleasesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VersionhistoryPlatformsChannelsVersionsReleasesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

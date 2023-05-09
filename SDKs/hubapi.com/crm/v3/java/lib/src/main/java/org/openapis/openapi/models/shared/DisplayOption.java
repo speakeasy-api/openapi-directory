@@ -15,6 +15,7 @@ public class DisplayOption {
      */
     @JsonProperty("label")
     public String label;
+
     public DisplayOption withLabel(String label) {
         this.label = label;
         return this;
@@ -25,6 +26,7 @@ public class DisplayOption {
      */
     @JsonProperty("name")
     public String name;
+
     public DisplayOption withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,15 @@ public class DisplayOption {
      */
     @JsonProperty("type")
     public DisplayOptionTypeEnum type;
+
     public DisplayOption withType(DisplayOptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DisplayOption(@JsonProperty("label") String label, @JsonProperty("name") String name, @JsonProperty("type") DisplayOptionTypeEnum type) {
+        this.label = label;
+        this.name = name;
+        this.type = type;
+  }
 }

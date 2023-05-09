@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountResource {
     @JsonProperty("attributes")
     public AccountResourceAttributes attributes;
+
     public AccountResource withAttributes(AccountResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class AccountResource {
      */
     @JsonProperty("id")
     public String id;
+
     public AccountResource withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class AccountResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public AccountResourceLinks links;
+
     public AccountResource withLinks(AccountResourceLinks links) {
         this.links = links;
         return this;
@@ -41,6 +44,7 @@ public class AccountResource {
     
     @JsonProperty("relationships")
     public AccountResourceRelationships relationships;
+
     public AccountResource withRelationships(AccountResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -51,9 +55,16 @@ public class AccountResource {
      */
     @JsonProperty("type")
     public String type;
+
     public AccountResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AccountResource(@JsonProperty("attributes") AccountResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("relationships") AccountResourceRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

@@ -18,6 +18,7 @@ public class OracleSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oracleTables")
     public OracleTable[] oracleTables;
+
     public OracleSchema withOracleTables(OracleTable[] oracleTables) {
         this.oracleTables = oracleTables;
         return this;
@@ -29,9 +30,11 @@ public class OracleSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public OracleSchema withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public OracleSchema(){}
 }

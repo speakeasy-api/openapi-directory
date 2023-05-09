@@ -12,6 +12,7 @@ public class Attachment {
      */
     @JsonProperty("body")
     public String body;
+
     public Attachment withBody(String body) {
         this.body = body;
         return this;
@@ -22,9 +23,14 @@ public class Attachment {
      */
     @JsonProperty("content_type")
     public String contentType;
+
     public Attachment withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public Attachment(@JsonProperty("body") String body, @JsonProperty("content_type") String contentType) {
+        this.body = body;
+        this.contentType = contentType;
+  }
 }

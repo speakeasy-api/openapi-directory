@@ -15,6 +15,7 @@ public class AddNotificationChannelRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public org.openapis.openapi.models.shared.NotificationFilterConfig filters;
+
     public AddNotificationChannelRequestBodyConfig withFilters(org.openapis.openapi.models.shared.NotificationFilterConfig filters) {
         this.filters = filters;
         return this;
@@ -23,9 +24,11 @@ public class AddNotificationChannelRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sns")
     public org.openapis.openapi.models.shared.SnsChannelConfig sns;
+
     public AddNotificationChannelRequestBodyConfig withSns(org.openapis.openapi.models.shared.SnsChannelConfig sns) {
         this.sns = sns;
         return this;
     }
     
+    public AddNotificationChannelRequestBodyConfig(){}
 }

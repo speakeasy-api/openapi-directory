@@ -12,9 +12,13 @@ public class DescribeCompanyNetworkConfigurationRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DescribeCompanyNetworkConfigurationRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public DescribeCompanyNetworkConfigurationRequestBody(@JsonProperty("FleetArn") String fleetArn) {
+        this.fleetArn = fleetArn;
+  }
 }

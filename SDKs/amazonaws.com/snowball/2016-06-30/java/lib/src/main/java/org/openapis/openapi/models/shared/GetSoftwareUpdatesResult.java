@@ -15,9 +15,11 @@ public class GetSoftwareUpdatesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatesURI")
     public String updatesURI;
+
     public GetSoftwareUpdatesResult withUpdatesURI(String updatesURI) {
         this.updatesURI = updatesURI;
         return this;
     }
     
+    public GetSoftwareUpdatesResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetCognitoEventsRequest {
@@ -12,6 +13,7 @@ public class SetCognitoEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityPoolId")
     public String identityPoolId;
+
     public SetCognitoEventsRequest withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -19,6 +21,7 @@ public class SetCognitoEventsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public SetCognitoEventsRequestBody requestBody;
+
     public SetCognitoEventsRequest withRequestBody(SetCognitoEventsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class SetCognitoEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public SetCognitoEventsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class SetCognitoEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public SetCognitoEventsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class SetCognitoEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public SetCognitoEventsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class SetCognitoEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public SetCognitoEventsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class SetCognitoEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public SetCognitoEventsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class SetCognitoEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public SetCognitoEventsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class SetCognitoEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public SetCognitoEventsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public SetCognitoEventsRequest(@JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("RequestBody") SetCognitoEventsRequestBody requestBody) {
+        this.identityPoolId = identityPoolId;
+        this.requestBody = requestBody;
+  }
 }

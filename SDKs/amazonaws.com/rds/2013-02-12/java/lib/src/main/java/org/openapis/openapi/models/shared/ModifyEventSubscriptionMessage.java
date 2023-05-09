@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyEventSubscriptionMessage {
     
     public Boolean enabled;
+
     public ModifyEventSubscriptionMessage withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -16,6 +17,7 @@ public class ModifyEventSubscriptionMessage {
     
     
     public String[] eventCategories;
+
     public ModifyEventSubscriptionMessage withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -23,6 +25,7 @@ public class ModifyEventSubscriptionMessage {
     
     
     public String snsTopicArn;
+
     public ModifyEventSubscriptionMessage withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -30,6 +33,7 @@ public class ModifyEventSubscriptionMessage {
     
     
     public String sourceType;
+
     public ModifyEventSubscriptionMessage withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -37,9 +41,13 @@ public class ModifyEventSubscriptionMessage {
     
     
     public String subscriptionName;
+
     public ModifyEventSubscriptionMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
     }
     
+    public ModifyEventSubscriptionMessage(@JsonProperty("SubscriptionName") String subscriptionName) {
+        this.subscriptionName = subscriptionName;
+  }
 }

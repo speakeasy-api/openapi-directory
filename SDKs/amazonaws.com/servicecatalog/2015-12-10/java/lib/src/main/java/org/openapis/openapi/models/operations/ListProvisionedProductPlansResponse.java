@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProvisionedProductPlansResponse {
     
     public String contentType;
+
     public ListProvisionedProductPlansResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProvisionedProductPlansResponse {
      */
     
     public Object invalidParametersException;
+
     public ListProvisionedProductPlansResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListProvisionedProductPlansResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProvisionedProductPlansOutput listProvisionedProductPlansOutput;
+
     public ListProvisionedProductPlansResponse withListProvisionedProductPlansOutput(org.openapis.openapi.models.shared.ListProvisionedProductPlansOutput listProvisionedProductPlansOutput) {
         this.listProvisionedProductPlansOutput = listProvisionedProductPlansOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListProvisionedProductPlansResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProvisionedProductPlansResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListProvisionedProductPlansResponse {
     
     
     public Integer statusCode;
+
     public ListProvisionedProductPlansResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListProvisionedProductPlansResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProvisionedProductPlansResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListProvisionedProductPlansResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

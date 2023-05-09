@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceOwnerResponse {
     
     public String contentType;
+
     public GetResourceOwnerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceOwnerResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetResourceOwnerResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetResourceOwnerResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetResourceOwnerResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class GetResourceOwnerResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceOwner resourceOwner;
+
     public GetResourceOwnerResponse withResourceOwner(org.openapis.openapi.models.shared.ResourceOwner resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -43,6 +48,7 @@ public class GetResourceOwnerResponse {
     
     
     public Integer statusCode;
+
     public GetResourceOwnerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetResourceOwnerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceOwnerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourceOwnerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

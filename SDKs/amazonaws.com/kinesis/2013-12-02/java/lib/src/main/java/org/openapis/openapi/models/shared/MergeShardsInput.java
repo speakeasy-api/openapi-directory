@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MergeShardsInput {
     @JsonProperty("AdjacentShardToMerge")
     public String adjacentShardToMerge;
+
     public MergeShardsInput withAdjacentShardToMerge(String adjacentShardToMerge) {
         this.adjacentShardToMerge = adjacentShardToMerge;
         return this;
@@ -21,6 +22,7 @@ public class MergeShardsInput {
     
     @JsonProperty("ShardToMerge")
     public String shardToMerge;
+
     public MergeShardsInput withShardToMerge(String shardToMerge) {
         this.shardToMerge = shardToMerge;
         return this;
@@ -29,6 +31,7 @@ public class MergeShardsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public MergeShardsInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -37,9 +40,14 @@ public class MergeShardsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public MergeShardsInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public MergeShardsInput(@JsonProperty("AdjacentShardToMerge") String adjacentShardToMerge, @JsonProperty("ShardToMerge") String shardToMerge) {
+        this.adjacentShardToMerge = adjacentShardToMerge;
+        this.shardToMerge = shardToMerge;
+  }
 }

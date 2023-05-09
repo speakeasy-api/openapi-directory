@@ -18,6 +18,7 @@ public class HttpHeaderAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestHeadersToAdd")
     public HttpHeaderOption[] requestHeadersToAdd;
+
     public HttpHeaderAction withRequestHeadersToAdd(HttpHeaderOption[] requestHeadersToAdd) {
         this.requestHeadersToAdd = requestHeadersToAdd;
         return this;
@@ -29,6 +30,7 @@ public class HttpHeaderAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestHeadersToRemove")
     public String[] requestHeadersToRemove;
+
     public HttpHeaderAction withRequestHeadersToRemove(String[] requestHeadersToRemove) {
         this.requestHeadersToRemove = requestHeadersToRemove;
         return this;
@@ -40,6 +42,7 @@ public class HttpHeaderAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseHeadersToAdd")
     public HttpHeaderOption[] responseHeadersToAdd;
+
     public HttpHeaderAction withResponseHeadersToAdd(HttpHeaderOption[] responseHeadersToAdd) {
         this.responseHeadersToAdd = responseHeadersToAdd;
         return this;
@@ -51,9 +54,11 @@ public class HttpHeaderAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseHeadersToRemove")
     public String[] responseHeadersToRemove;
+
     public HttpHeaderAction withResponseHeadersToRemove(String[] responseHeadersToRemove) {
         this.responseHeadersToRemove = responseHeadersToRemove;
         return this;
     }
     
+    public HttpHeaderAction(){}
 }

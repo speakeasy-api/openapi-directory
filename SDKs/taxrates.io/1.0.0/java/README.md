@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.TaxRatesByCountryCodeRequest;
 import org.openapis.openapi.models.operations.TaxRatesByCountryCodeResponse;
 
@@ -34,16 +33,18 @@ public class Application {
                 productCodes = "C010";
                 province = "provident";
                 zip = "71642";
-            }}            
+            }};            
 
             TaxRatesByCountryCodeResponse res = sdk.v1Tax.taxRatesByCountryCode(req);
 
-            if (res.taxRatesByCountryCode200ApplicationJSONObject.isPresent()) {
+            if (res.taxRatesByCountryCode200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -51,14 +52,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### v1Tax
+### [v1Tax](docs/v1tax/README.md)
 
-* `taxRatesByCountryCode` - Tax rates by Country Code
-* `taxRatesByIpAddress` - Tax rates by IP address
+* [taxRatesByCountryCode](docs/v1tax/README.md#taxratesbycountrycode) - Tax rates by Country Code
+* [taxRatesByIpAddress](docs/v1tax/README.md#taxratesbyipaddress) - Tax rates by IP address
 
-### v3Tax
+### [v3Tax](docs/v3tax/README.md)
 
-* `allTaxRates` - All tax rates
+* [allTaxRates](docs/v3tax/README.md#alltaxrates) - All tax rates
 <!-- End SDK Available Operations -->
 
 ### Maturity

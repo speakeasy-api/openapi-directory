@@ -17,6 +17,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetAccountingAccountingArrayV2AccountingV2Order withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Order {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("invoiceDate")
     public LocalDate invoiceDate;
+
     public GetAccountingAccountingArrayV2AccountingV2Order withInvoiceDate(LocalDate invoiceDate) {
         this.invoiceDate = invoiceDate;
         return this;
@@ -40,6 +42,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantOrderId")
     public Long merchantOrderId;
+
     public GetAccountingAccountingArrayV2AccountingV2Order withMerchantOrderId(Long merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -52,9 +55,11 @@ public class GetAccountingAccountingArrayV2AccountingV2Order {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("recordedDate")
     public LocalDate recordedDate;
+
     public GetAccountingAccountingArrayV2AccountingV2Order withRecordedDate(LocalDate recordedDate) {
         this.recordedDate = recordedDate;
         return this;
     }
     
+    public GetAccountingAccountingArrayV2AccountingV2Order(){}
 }

@@ -12,9 +12,11 @@ public class GetActionPackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetActionPackageSearchRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetActionPackageSearchRequest(){}
 }

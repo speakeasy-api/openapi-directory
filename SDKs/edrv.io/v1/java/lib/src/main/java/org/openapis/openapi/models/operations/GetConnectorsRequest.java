@@ -13,6 +13,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
     public OffsetDateTime createdAtDollarGte;
+
     public GetConnectorsRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
         this.createdAtDollarGte = createdAtDollarGte;
         return this;
@@ -23,6 +24,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
     public OffsetDateTime createdAtDollarLte;
+
     public GetConnectorsRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
         this.createdAtDollarLte = createdAtDollarLte;
         return this;
@@ -33,6 +35,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evse")
     public Boolean includeEvse;
+
     public GetConnectorsRequest withIncludeEvse(Boolean includeEvse) {
         this.includeEvse = includeEvse;
         return this;
@@ -43,6 +46,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetConnectorsRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
@@ -53,6 +57,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_rate")
     public Boolean includeRate;
+
     public GetConnectorsRequest withIncludeRate(Boolean includeRate) {
         this.includeRate = includeRate;
         return this;
@@ -63,6 +68,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
     public Boolean paginateEnabled;
+
     public GetConnectorsRequest withPaginateEnabled(Boolean paginateEnabled) {
         this.paginateEnabled = paginateEnabled;
         return this;
@@ -73,6 +79,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
     public Long paginateLimit;
+
     public GetConnectorsRequest withPaginateLimit(Long paginateLimit) {
         this.paginateLimit = paginateLimit;
         return this;
@@ -83,6 +90,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
     public String paginatePage;
+
     public GetConnectorsRequest withPaginatePage(String paginatePage) {
         this.paginatePage = paginatePage;
         return this;
@@ -93,6 +101,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetConnectorsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -103,6 +112,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+
     public GetConnectorsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -113,6 +123,7 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
     public OffsetDateTime updatedAtDollarGte;
+
     public GetConnectorsRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
         this.updatedAtDollarGte = updatedAtDollarGte;
         return this;
@@ -123,9 +134,11 @@ public class GetConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
     public OffsetDateTime updatedAtDollarLte;
+
     public GetConnectorsRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
         this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     
+    public GetConnectorsRequest(){}
 }

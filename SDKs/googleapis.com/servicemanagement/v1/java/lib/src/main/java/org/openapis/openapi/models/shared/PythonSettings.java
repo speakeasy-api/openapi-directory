@@ -18,9 +18,11 @@ public class PythonSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public CommonLanguageSettings common;
+
     public PythonSettings withCommon(CommonLanguageSettings common) {
         this.common = common;
         return this;
     }
     
+    public PythonSettings(){}
 }

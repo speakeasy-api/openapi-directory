@@ -15,6 +15,7 @@ public class PairwiseMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lcs")
     public IcNode lcs;
+
     public PairwiseMatch withLcs(IcNode lcs) {
         this.lcs = lcs;
         return this;
@@ -26,6 +27,7 @@ public class PairwiseMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public IcNode match;
+
     public PairwiseMatch withMatch(IcNode match) {
         this.match = match;
         return this;
@@ -37,9 +39,11 @@ public class PairwiseMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public IcNode reference;
+
     public PairwiseMatch withReference(IcNode reference) {
         this.reference = reference;
         return this;
     }
     
+    public PairwiseMatch(){}
 }

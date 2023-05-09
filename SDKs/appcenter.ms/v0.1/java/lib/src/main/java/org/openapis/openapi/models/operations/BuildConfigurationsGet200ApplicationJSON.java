@@ -18,9 +18,11 @@ public class BuildConfigurationsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yaml")
     public String yaml;
+
     public BuildConfigurationsGet200ApplicationJSON withYaml(String yaml) {
         this.yaml = yaml;
         return this;
     }
     
+    public BuildConfigurationsGet200ApplicationJSON(){}
 }

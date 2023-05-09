@@ -15,6 +15,7 @@ public class TransitionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public Action[] actions;
+
     public TransitionEvent withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -22,6 +23,7 @@ public class TransitionEvent {
     
     @JsonProperty("condition")
     public String condition;
+
     public TransitionEvent withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -29,6 +31,7 @@ public class TransitionEvent {
     
     @JsonProperty("eventName")
     public String eventName;
+
     public TransitionEvent withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -36,9 +39,15 @@ public class TransitionEvent {
     
     @JsonProperty("nextState")
     public String nextState;
+
     public TransitionEvent withNextState(String nextState) {
         this.nextState = nextState;
         return this;
     }
     
+    public TransitionEvent(@JsonProperty("condition") String condition, @JsonProperty("eventName") String eventName, @JsonProperty("nextState") String nextState) {
+        this.condition = condition;
+        this.eventName = eventName;
+        this.nextState = nextState;
+  }
 }

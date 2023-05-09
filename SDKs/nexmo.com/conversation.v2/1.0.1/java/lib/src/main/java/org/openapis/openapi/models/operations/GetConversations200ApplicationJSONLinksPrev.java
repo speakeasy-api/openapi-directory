@@ -12,9 +12,11 @@ public class GetConversations200ApplicationJSONLinksPrev {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GetConversations200ApplicationJSONLinksPrev withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public GetConversations200ApplicationJSONLinksPrev(){}
 }

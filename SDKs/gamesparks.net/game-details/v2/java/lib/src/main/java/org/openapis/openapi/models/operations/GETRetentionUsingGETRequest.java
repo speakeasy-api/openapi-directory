@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRetentionUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETRetentionUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GETRetentionUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class GETRetentionUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stage")
     public GETRetentionUsingGETStageEnum stage;
+
     public GETRetentionUsingGETRequest withStage(GETRetentionUsingGETStageEnum stage) {
         this.stage = stage;
         return this;
     }
     
+    public GETRetentionUsingGETRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("stage") GETRetentionUsingGETStageEnum stage) {
+        this.apiKey = apiKey;
+        this.stage = stage;
+  }
 }

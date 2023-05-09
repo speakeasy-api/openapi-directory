@@ -15,6 +15,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSuggestedResiliencyPoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListSuggestedResiliencyPoliciesResponse {
     
     @JsonProperty("resiliencyPolicies")
     public ResiliencyPolicy[] resiliencyPolicies;
+
     public ListSuggestedResiliencyPoliciesResponse withResiliencyPolicies(ResiliencyPolicy[] resiliencyPolicies) {
         this.resiliencyPolicies = resiliencyPolicies;
         return this;
     }
     
+    public ListSuggestedResiliencyPoliciesResponse(@JsonProperty("resiliencyPolicies") ResiliencyPolicy[] resiliencyPolicies) {
+        this.resiliencyPolicies = resiliencyPolicies;
+  }
 }

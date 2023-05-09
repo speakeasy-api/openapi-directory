@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum[] action;
+
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest withAction(GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum[] action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actorEmail")
     public String[] actorEmail;
+
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest withActorEmail(String[] actorEmail) {
         this.actorEmail = actorEmail;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earliestChangeTime")
     public String earliestChangeTime;
+
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest withEarliestChangeTime(String earliestChangeTime) {
         this.earliestChangeTime = earliestChangeTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestChangeTime")
     public String latestChangeTime;
+
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest withLatestChangeTime(String latestChangeTime) {
         this.latestChangeTime = latestChangeTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest withProperty(String property) {
         this.property = property;
         return this;
@@ -95,9 +102,11 @@ public class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum[] resourceType;
+
     public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest withResourceType(GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum[] resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest(){}
 }

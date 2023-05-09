@@ -18,9 +18,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public PageElement[] children;
+
     public Group withChildren(PageElement[] children) {
         this.children = children;
         return this;
     }
     
+    public Group(){}
 }

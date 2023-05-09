@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceIpConfig {
     @JsonProperty("Cidrs")
     public String[] cidrs;
+
     public SourceIpConfig withCidrs(String[] cidrs) {
         this.cidrs = cidrs;
         return this;
     }
     
+    public SourceIpConfig(@JsonProperty("Cidrs") String[] cidrs) {
+        this.cidrs = cidrs;
+  }
 }

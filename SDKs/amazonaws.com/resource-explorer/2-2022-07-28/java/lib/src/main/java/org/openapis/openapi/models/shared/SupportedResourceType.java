@@ -15,6 +15,7 @@ public class SupportedResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public SupportedResourceType withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -23,9 +24,11 @@ public class SupportedResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public String service;
+
     public SupportedResourceType withService(String service) {
         this.service = service;
         return this;
     }
     
+    public SupportedResourceType(){}
 }

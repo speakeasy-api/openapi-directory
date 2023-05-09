@@ -12,6 +12,7 @@ public class BatchBatchResponseBodySchemaResponses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public java.util.Map<String, Object> body;
+
     public BatchBatchResponseBodySchemaResponses withBody(java.util.Map<String, Object> body) {
         this.body = body;
         return this;
@@ -20,6 +21,7 @@ public class BatchBatchResponseBodySchemaResponses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public BatchBatchResponseBodySchemaResponses withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -27,6 +29,7 @@ public class BatchBatchResponseBodySchemaResponses {
     
     @JsonProperty("path")
     public String path;
+
     public BatchBatchResponseBodySchemaResponses withPath(String path) {
         this.path = path;
         return this;
@@ -34,9 +37,14 @@ public class BatchBatchResponseBodySchemaResponses {
     
     @JsonProperty("status")
     public Long status;
+
     public BatchBatchResponseBodySchemaResponses withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public BatchBatchResponseBodySchemaResponses(@JsonProperty("path") String path, @JsonProperty("status") Long status) {
+        this.path = path;
+        this.status = status;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV1StatusesIdResponse {
     
     public String contentType;
+
     public GetApiV1StatusesIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV1StatusesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetApiV1StatusesIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetApiV1StatusesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Status status;
+
     public GetApiV1StatusesIdResponse withStatus(org.openapis.openapi.models.shared.Status status) {
         this.status = status;
         return this;
@@ -36,6 +40,7 @@ public class GetApiV1StatusesIdResponse {
     
     
     public Integer statusCode;
+
     public GetApiV1StatusesIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetApiV1StatusesIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV1StatusesIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV1StatusesIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IndexStatistics {
     @JsonProperty("FaqStatistics")
     public FaqStatistics faqStatistics;
+
     public IndexStatistics withFaqStatistics(FaqStatistics faqStatistics) {
         this.faqStatistics = faqStatistics;
         return this;
@@ -19,9 +20,14 @@ public class IndexStatistics {
     
     @JsonProperty("TextDocumentStatistics")
     public TextDocumentStatistics textDocumentStatistics;
+
     public IndexStatistics withTextDocumentStatistics(TextDocumentStatistics textDocumentStatistics) {
         this.textDocumentStatistics = textDocumentStatistics;
         return this;
     }
     
+    public IndexStatistics(@JsonProperty("FaqStatistics") FaqStatistics faqStatistics, @JsonProperty("TextDocumentStatistics") TextDocumentStatistics textDocumentStatistics) {
+        this.faqStatistics = faqStatistics;
+        this.textDocumentStatistics = textDocumentStatistics;
+  }
 }

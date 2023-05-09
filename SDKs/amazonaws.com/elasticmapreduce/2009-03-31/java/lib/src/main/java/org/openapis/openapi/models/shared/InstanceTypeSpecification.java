@@ -15,6 +15,7 @@ public class InstanceTypeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BidPrice")
     public String bidPrice;
+
     public InstanceTypeSpecification withBidPrice(String bidPrice) {
         this.bidPrice = bidPrice;
         return this;
@@ -23,6 +24,7 @@ public class InstanceTypeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BidPriceAsPercentageOfOnDemandPrice")
     public Double bidPriceAsPercentageOfOnDemandPrice;
+
     public InstanceTypeSpecification withBidPriceAsPercentageOfOnDemandPrice(Double bidPriceAsPercentageOfOnDemandPrice) {
         this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
         return this;
@@ -31,6 +33,7 @@ public class InstanceTypeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public Configuration[] configurations;
+
     public InstanceTypeSpecification withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -39,6 +42,7 @@ public class InstanceTypeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomAmiId")
     public String customAmiId;
+
     public InstanceTypeSpecification withCustomAmiId(String customAmiId) {
         this.customAmiId = customAmiId;
         return this;
@@ -47,6 +51,7 @@ public class InstanceTypeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsBlockDevices")
     public EbsBlockDevice[] ebsBlockDevices;
+
     public InstanceTypeSpecification withEbsBlockDevices(EbsBlockDevice[] ebsBlockDevices) {
         this.ebsBlockDevices = ebsBlockDevices;
         return this;
@@ -55,6 +60,7 @@ public class InstanceTypeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsOptimized")
     public Boolean ebsOptimized;
+
     public InstanceTypeSpecification withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -63,6 +69,7 @@ public class InstanceTypeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public InstanceTypeSpecification withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -71,9 +78,11 @@ public class InstanceTypeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeightedCapacity")
     public Long weightedCapacity;
+
     public InstanceTypeSpecification withWeightedCapacity(Long weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public InstanceTypeSpecification(){}
 }

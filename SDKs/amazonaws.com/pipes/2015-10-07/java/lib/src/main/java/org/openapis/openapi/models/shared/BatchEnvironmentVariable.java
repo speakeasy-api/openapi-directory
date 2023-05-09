@@ -15,6 +15,7 @@ public class BatchEnvironmentVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BatchEnvironmentVariable withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class BatchEnvironmentVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public BatchEnvironmentVariable withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public BatchEnvironmentVariable(){}
 }

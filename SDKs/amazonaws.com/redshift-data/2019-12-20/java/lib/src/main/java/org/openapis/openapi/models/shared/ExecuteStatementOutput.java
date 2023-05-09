@@ -20,6 +20,7 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterIdentifier")
     public String clusterIdentifier;
+
     public ExecuteStatementOutput withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -30,6 +31,7 @@ public class ExecuteStatementOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ExecuteStatementOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public String database;
+
     public ExecuteStatementOutput withDatabase(String database) {
         this.database = database;
         return this;
@@ -46,6 +49,7 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbUser")
     public String dbUser;
+
     public ExecuteStatementOutput withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -54,6 +58,7 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ExecuteStatementOutput withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public ExecuteStatementOutput withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -70,9 +76,11 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkgroupName")
     public String workgroupName;
+
     public ExecuteStatementOutput withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ExecuteStatementOutput(){}
 }

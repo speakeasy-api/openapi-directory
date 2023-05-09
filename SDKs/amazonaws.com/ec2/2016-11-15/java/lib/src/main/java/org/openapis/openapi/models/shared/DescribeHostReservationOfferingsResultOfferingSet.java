@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHostReservationOfferingsResultOfferingSet {
     
     public DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum currencyCode;
+
     public DescribeHostReservationOfferingsResultOfferingSet withCurrencyCode(DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -19,6 +20,7 @@ public class DescribeHostReservationOfferingsResultOfferingSet {
     
     
     public Long duration;
+
     public DescribeHostReservationOfferingsResultOfferingSet withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class DescribeHostReservationOfferingsResultOfferingSet {
     
     
     public String hourlyPrice;
+
     public DescribeHostReservationOfferingsResultOfferingSet withHourlyPrice(String hourlyPrice) {
         this.hourlyPrice = hourlyPrice;
         return this;
@@ -33,6 +36,7 @@ public class DescribeHostReservationOfferingsResultOfferingSet {
     
     
     public String instanceFamily;
+
     public DescribeHostReservationOfferingsResultOfferingSet withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -40,6 +44,7 @@ public class DescribeHostReservationOfferingsResultOfferingSet {
     
     
     public String offeringId;
+
     public DescribeHostReservationOfferingsResultOfferingSet withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeHostReservationOfferingsResultOfferingSet {
     
     
     public DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum paymentOption;
+
     public DescribeHostReservationOfferingsResultOfferingSet withPaymentOption(DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -54,9 +60,11 @@ public class DescribeHostReservationOfferingsResultOfferingSet {
     
     
     public String upfrontPrice;
+
     public DescribeHostReservationOfferingsResultOfferingSet withUpfrontPrice(String upfrontPrice) {
         this.upfrontPrice = upfrontPrice;
         return this;
     }
     
+    public DescribeHostReservationOfferingsResultOfferingSet(){}
 }

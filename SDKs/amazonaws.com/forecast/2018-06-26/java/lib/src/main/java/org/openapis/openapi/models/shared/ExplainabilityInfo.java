@@ -15,6 +15,7 @@ public class ExplainabilityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityArn")
     public String explainabilityArn;
+
     public ExplainabilityInfo withExplainabilityArn(String explainabilityArn) {
         this.explainabilityArn = explainabilityArn;
         return this;
@@ -23,9 +24,11 @@ public class ExplainabilityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ExplainabilityInfo withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ExplainabilityInfo(){}
 }

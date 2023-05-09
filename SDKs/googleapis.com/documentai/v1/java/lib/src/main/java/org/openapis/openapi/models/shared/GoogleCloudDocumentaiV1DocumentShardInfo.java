@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentShardInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardCount")
     public String shardCount;
+
     public GoogleCloudDocumentaiV1DocumentShardInfo withShardCount(String shardCount) {
         this.shardCount = shardCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentShardInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardIndex")
     public String shardIndex;
+
     public GoogleCloudDocumentaiV1DocumentShardInfo withShardIndex(String shardIndex) {
         this.shardIndex = shardIndex;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1DocumentShardInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textOffset")
     public String textOffset;
+
     public GoogleCloudDocumentaiV1DocumentShardInfo withTextOffset(String textOffset) {
         this.textOffset = textOffset;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentShardInfo(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTableResponse {
     
     public String contentType;
+
     public CreateTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateTableResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTableOutput createTableOutput;
+
     public CreateTableResponse withCreateTableOutput(org.openapis.openapi.models.shared.CreateTableOutput createTableOutput) {
         this.createTableOutput = createTableOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateTableResponse {
      */
     
     public Object internalServerError;
+
     public CreateTableResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class CreateTableResponse {
      */
     
     public Object limitExceededException;
+
     public CreateTableResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateTableResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateTableResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class CreateTableResponse {
     
     
     public Integer statusCode;
+
     public CreateTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

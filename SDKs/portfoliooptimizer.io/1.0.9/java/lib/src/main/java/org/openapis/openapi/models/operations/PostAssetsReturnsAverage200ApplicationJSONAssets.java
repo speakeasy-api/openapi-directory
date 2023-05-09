@@ -12,9 +12,13 @@ public class PostAssetsReturnsAverage200ApplicationJSONAssets {
      */
     @JsonProperty("assetAverageReturn")
     public Double assetAverageReturn;
+
     public PostAssetsReturnsAverage200ApplicationJSONAssets withAssetAverageReturn(Double assetAverageReturn) {
         this.assetAverageReturn = assetAverageReturn;
         return this;
     }
     
+    public PostAssetsReturnsAverage200ApplicationJSONAssets(@JsonProperty("assetAverageReturn") Double assetAverageReturn) {
+        this.assetAverageReturn = assetAverageReturn;
+  }
 }

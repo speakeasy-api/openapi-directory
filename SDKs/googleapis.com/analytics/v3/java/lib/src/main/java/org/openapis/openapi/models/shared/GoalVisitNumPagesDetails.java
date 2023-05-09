@@ -18,6 +18,7 @@ public class GoalVisitNumPagesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonType")
     public String comparisonType;
+
     public GoalVisitNumPagesDetails withComparisonType(String comparisonType) {
         this.comparisonType = comparisonType;
         return this;
@@ -29,9 +30,11 @@ public class GoalVisitNumPagesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public GoalVisitNumPagesDetails withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
     }
     
+    public GoalVisitNumPagesDetails(){}
 }

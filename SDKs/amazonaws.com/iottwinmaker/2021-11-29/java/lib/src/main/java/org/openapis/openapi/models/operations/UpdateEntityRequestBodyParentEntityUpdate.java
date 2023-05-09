@@ -15,6 +15,7 @@ public class UpdateEntityRequestBodyParentEntityUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEntityId")
     public String parentEntityId;
+
     public UpdateEntityRequestBodyParentEntityUpdate withParentEntityId(String parentEntityId) {
         this.parentEntityId = parentEntityId;
         return this;
@@ -23,9 +24,11 @@ public class UpdateEntityRequestBodyParentEntityUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateType")
     public org.openapis.openapi.models.shared.ParentEntityUpdateTypeEnum updateType;
+
     public UpdateEntityRequestBodyParentEntityUpdate withUpdateType(org.openapis.openapi.models.shared.ParentEntityUpdateTypeEnum updateType) {
         this.updateType = updateType;
         return this;
     }
     
+    public UpdateEntityRequestBodyParentEntityUpdate(){}
 }

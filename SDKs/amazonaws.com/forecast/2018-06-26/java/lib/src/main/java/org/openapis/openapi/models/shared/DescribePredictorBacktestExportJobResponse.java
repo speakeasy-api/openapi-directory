@@ -22,6 +22,7 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribePredictorBacktestExportJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +34,7 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public DescribePredictorBacktestExportJobResponse withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -41,6 +43,7 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public DescribePredictorBacktestExportJobResponse withFormat(String format) {
         this.format = format;
         return this;
@@ -51,6 +54,7 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribePredictorBacktestExportJobResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -59,6 +63,7 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribePredictorBacktestExportJobResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -67,6 +72,7 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public DescribePredictorBacktestExportJobResponse withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
@@ -75,6 +81,7 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorBacktestExportJobArn")
     public String predictorBacktestExportJobArn;
+
     public DescribePredictorBacktestExportJobResponse withPredictorBacktestExportJobArn(String predictorBacktestExportJobArn) {
         this.predictorBacktestExportJobArn = predictorBacktestExportJobArn;
         return this;
@@ -83,6 +90,7 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorBacktestExportJobName")
     public String predictorBacktestExportJobName;
+
     public DescribePredictorBacktestExportJobResponse withPredictorBacktestExportJobName(String predictorBacktestExportJobName) {
         this.predictorBacktestExportJobName = predictorBacktestExportJobName;
         return this;
@@ -91,9 +99,11 @@ public class DescribePredictorBacktestExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribePredictorBacktestExportJobResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DescribePredictorBacktestExportJobResponse(){}
 }

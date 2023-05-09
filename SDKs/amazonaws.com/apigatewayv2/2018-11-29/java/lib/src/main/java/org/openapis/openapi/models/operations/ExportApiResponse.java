@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportApiResponse {
@@ -12,6 +13,7 @@ public class ExportApiResponse {
      */
     
     public Object badRequestException;
+
     public ExportApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ExportApiResponse {
     
     
     public String contentType;
+
     public ExportApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExportApiResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportApiResponse exportApiResponse;
+
     public ExportApiResponse withExportApiResponse(org.openapis.openapi.models.shared.ExportApiResponse exportApiResponse) {
         this.exportApiResponse = exportApiResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExportApiResponse {
      */
     
     public Object notFoundException;
+
     public ExportApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ExportApiResponse {
     
     
     public Integer statusCode;
+
     public ExportApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ExportApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ExportApiResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ExportApiResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ExportApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

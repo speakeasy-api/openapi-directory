@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SearchedGroup {
     @JsonProperty("createdBy")
     public String createdBy;
+
     public SearchedGroup withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -26,6 +27,7 @@ public class SearchedGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdOn")
     public OffsetDateTime createdOn;
+
     public SearchedGroup withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -33,6 +35,7 @@ public class SearchedGroup {
     
     @JsonProperty("description")
     public String description;
+
     public SearchedGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class SearchedGroup {
      */
     @JsonProperty("id")
     public String id;
+
     public SearchedGroup withId(String id) {
         this.id = id;
         return this;
@@ -50,6 +54,7 @@ public class SearchedGroup {
     
     @JsonProperty("modifiedBy")
     public String modifiedBy;
+
     public SearchedGroup withModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
@@ -59,9 +64,18 @@ public class SearchedGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedOn")
     public OffsetDateTime modifiedOn;
+
     public SearchedGroup withModifiedOn(OffsetDateTime modifiedOn) {
         this.modifiedOn = modifiedOn;
         return this;
     }
     
+    public SearchedGroup(@JsonProperty("createdBy") String createdBy, @JsonProperty("createdOn") OffsetDateTime createdOn, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("modifiedBy") String modifiedBy, @JsonProperty("modifiedOn") OffsetDateTime modifiedOn) {
+        this.createdBy = createdBy;
+        this.createdOn = createdOn;
+        this.description = description;
+        this.id = id;
+        this.modifiedBy = modifiedBy;
+        this.modifiedOn = modifiedOn;
+  }
 }

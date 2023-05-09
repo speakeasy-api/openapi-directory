@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingUserRolesInsertResponse {
     
     public String contentType;
+
     public DfareportingUserRolesInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DfareportingUserRolesInsertResponse {
     
     
     public Integer statusCode;
+
     public DfareportingUserRolesInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DfareportingUserRolesInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingUserRolesInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingUserRolesInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.UserRole userRole;
+
     public DfareportingUserRolesInsertResponse withUserRole(org.openapis.openapi.models.shared.UserRole userRole) {
         this.userRole = userRole;
         return this;
     }
     
+    public DfareportingUserRolesInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

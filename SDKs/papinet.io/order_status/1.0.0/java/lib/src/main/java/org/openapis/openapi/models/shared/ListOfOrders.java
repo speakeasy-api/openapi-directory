@@ -15,6 +15,7 @@ public class ListOfOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public PaginationLinks links;
+
     public ListOfOrders withLinks(PaginationLinks links) {
         this.links = links;
         return this;
@@ -23,9 +24,11 @@ public class ListOfOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public OrderHeader[] orders;
+
     public ListOfOrders withOrders(OrderHeader[] orders) {
         this.orders = orders;
         return this;
     }
     
+    public ListOfOrders(){}
 }

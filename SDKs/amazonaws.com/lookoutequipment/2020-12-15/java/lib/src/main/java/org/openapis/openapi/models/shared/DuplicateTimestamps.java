@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DuplicateTimestamps {
     @JsonProperty("TotalNumberOfDuplicateTimestamps")
     public Long totalNumberOfDuplicateTimestamps;
+
     public DuplicateTimestamps withTotalNumberOfDuplicateTimestamps(Long totalNumberOfDuplicateTimestamps) {
         this.totalNumberOfDuplicateTimestamps = totalNumberOfDuplicateTimestamps;
         return this;
     }
     
+    public DuplicateTimestamps(@JsonProperty("TotalNumberOfDuplicateTimestamps") Long totalNumberOfDuplicateTimestamps) {
+        this.totalNumberOfDuplicateTimestamps = totalNumberOfDuplicateTimestamps;
+  }
 }

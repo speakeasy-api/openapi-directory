@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateDeploymentBranchPolicyRequest {
@@ -12,6 +13,7 @@ public class ReposUpdateDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch_policy_id")
     public Long branchPolicyId;
+
     public ReposUpdateDeploymentBranchPolicyRequest withBranchPolicyId(Long branchPolicyId) {
         this.branchPolicyId = branchPolicyId;
         return this;
@@ -19,6 +21,7 @@ public class ReposUpdateDeploymentBranchPolicyRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern;
+
     public ReposUpdateDeploymentBranchPolicyRequest withDeploymentBranchPolicyNamePattern(org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern) {
         this.deploymentBranchPolicyNamePattern = deploymentBranchPolicyNamePattern;
         return this;
@@ -29,6 +32,7 @@ public class ReposUpdateDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
     public String environmentName;
+
     public ReposUpdateDeploymentBranchPolicyRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -39,6 +43,7 @@ public class ReposUpdateDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposUpdateDeploymentBranchPolicyRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -49,9 +54,17 @@ public class ReposUpdateDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposUpdateDeploymentBranchPolicyRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposUpdateDeploymentBranchPolicyRequest(@JsonProperty("branch_policy_id") Long branchPolicyId, @JsonProperty("deployment-branch-policy-name-pattern") org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern, @JsonProperty("environment_name") String environmentName, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.branchPolicyId = branchPolicyId;
+        this.deploymentBranchPolicyNamePattern = deploymentBranchPolicyNamePattern;
+        this.environmentName = environmentName;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

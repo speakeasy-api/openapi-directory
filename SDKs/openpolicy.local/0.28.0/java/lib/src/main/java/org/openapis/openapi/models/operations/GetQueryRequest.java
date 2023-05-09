@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQueryRequest {
@@ -12,6 +13,7 @@ public class GetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
     public String explain;
+
     public GetQueryRequest withExplain(String explain) {
         this.explain = explain;
         return this;
@@ -22,6 +24,7 @@ public class GetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
     public Boolean metrics;
+
     public GetQueryRequest withMetrics(Boolean metrics) {
         this.metrics = metrics;
         return this;
@@ -32,6 +35,7 @@ public class GetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public GetQueryRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
@@ -42,9 +46,13 @@ public class GetQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetQueryRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetQueryRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

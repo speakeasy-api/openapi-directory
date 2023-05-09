@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppApiWMMEndpointsWMMMagneticFieldRequest {
@@ -12,6 +13,7 @@ public class AppApiWMMEndpointsWMMMagneticFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=altitude")
     public Double altitude;
+
     public AppApiWMMEndpointsWMMMagneticFieldRequest withAltitude(Double altitude) {
         this.altitude = altitude;
         return this;
@@ -22,6 +24,7 @@ public class AppApiWMMEndpointsWMMMagneticFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
     public Double latitude;
+
     public AppApiWMMEndpointsWMMMagneticFieldRequest withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -32,6 +35,7 @@ public class AppApiWMMEndpointsWMMMagneticFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
     public Double longitude;
+
     public AppApiWMMEndpointsWMMMagneticFieldRequest withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -42,9 +46,16 @@ public class AppApiWMMEndpointsWMMMagneticFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Double year;
+
     public AppApiWMMEndpointsWMMMagneticFieldRequest withYear(Double year) {
         this.year = year;
         return this;
     }
     
+    public AppApiWMMEndpointsWMMMagneticFieldRequest(@JsonProperty("altitude") Double altitude, @JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude, @JsonProperty("year") Double year) {
+        this.altitude = altitude;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.year = year;
+  }
 }

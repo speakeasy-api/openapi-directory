@@ -18,6 +18,7 @@ public class UpdateLensReviewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensReview")
     public LensReview lensReview;
+
     public UpdateLensReviewOutput withLensReview(LensReview lensReview) {
         this.lensReview = lensReview;
         return this;
@@ -29,9 +30,11 @@ public class UpdateLensReviewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public UpdateLensReviewOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
     }
     
+    public UpdateLensReviewOutput(){}
 }

@@ -12,6 +12,7 @@ public class SingleEnvironment200ApplicationJSONEnvironmentValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public SingleEnvironment200ApplicationJSONEnvironmentValues withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -20,6 +21,7 @@ public class SingleEnvironment200ApplicationJSONEnvironmentValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hovered")
     public Boolean hovered;
+
     public SingleEnvironment200ApplicationJSONEnvironmentValues withHovered(Boolean hovered) {
         this.hovered = hovered;
         return this;
@@ -28,6 +30,7 @@ public class SingleEnvironment200ApplicationJSONEnvironmentValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SingleEnvironment200ApplicationJSONEnvironmentValues withKey(String key) {
         this.key = key;
         return this;
@@ -36,6 +39,7 @@ public class SingleEnvironment200ApplicationJSONEnvironmentValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SingleEnvironment200ApplicationJSONEnvironmentValues withType(String type) {
         this.type = type;
         return this;
@@ -44,9 +48,11 @@ public class SingleEnvironment200ApplicationJSONEnvironmentValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SingleEnvironment200ApplicationJSONEnvironmentValues withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SingleEnvironment200ApplicationJSONEnvironmentValues(){}
 }

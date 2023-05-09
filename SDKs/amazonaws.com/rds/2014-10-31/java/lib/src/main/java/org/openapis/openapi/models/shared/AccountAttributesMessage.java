@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AccountAttributesMessage {
     
     public AccountQuotaList[] accountQuotas;
+
     public AccountAttributesMessage withAccountQuotas(AccountQuotaList[] accountQuotas) {
         this.accountQuotas = accountQuotas;
         return this;
     }
     
+    public AccountAttributesMessage(){}
 }

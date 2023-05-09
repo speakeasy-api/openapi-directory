@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GovernedCatalogTarget {
     @JsonProperty("Database")
     public String database;
+
     public GovernedCatalogTarget withDatabase(String database) {
         this.database = database;
         return this;
@@ -21,6 +22,7 @@ public class GovernedCatalogTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public GovernedCatalogTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -28,6 +30,7 @@ public class GovernedCatalogTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public GovernedCatalogTarget withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class GovernedCatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public String[][] partitionKeys;
+
     public GovernedCatalogTarget withPartitionKeys(String[][] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -44,6 +48,7 @@ public class GovernedCatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaChangePolicy")
     public CatalogSchemaChangePolicy schemaChangePolicy;
+
     public GovernedCatalogTarget withSchemaChangePolicy(CatalogSchemaChangePolicy schemaChangePolicy) {
         this.schemaChangePolicy = schemaChangePolicy;
         return this;
@@ -51,9 +56,16 @@ public class GovernedCatalogTarget {
     
     @JsonProperty("Table")
     public String table;
+
     public GovernedCatalogTarget withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public GovernedCatalogTarget(@JsonProperty("Database") String database, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.inputs = inputs;
+        this.name = name;
+        this.table = table;
+  }
 }

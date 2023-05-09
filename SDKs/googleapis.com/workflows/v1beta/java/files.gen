@@ -62,4 +62,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/WorkflowInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkflowStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Workflow.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListWorkflowsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

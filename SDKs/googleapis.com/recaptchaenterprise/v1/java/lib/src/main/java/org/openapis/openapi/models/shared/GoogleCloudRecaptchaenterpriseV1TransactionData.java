@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress billingAddress;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withBillingAddress(GoogleCloudRecaptchaenterpriseV1TransactionDataAddress billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardBin")
     public String cardBin;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withCardBin(String cardBin) {
         this.cardBin = cardBin;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardLastFour")
     public String cardLastFour;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withCardLastFour(String cardLastFour) {
         this.cardLastFour = cardLastFour;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayInfo")
     public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo gatewayInfo;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withGatewayInfo(GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo gatewayInfo) {
         this.gatewayInfo = gatewayInfo;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GoogleCloudRecaptchaenterpriseV1TransactionDataItem[] items;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withItems(GoogleCloudRecaptchaenterpriseV1TransactionDataItem[] items) {
         this.items = items;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchants")
     public GoogleCloudRecaptchaenterpriseV1TransactionDataUser[] merchants;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withMerchants(GoogleCloudRecaptchaenterpriseV1TransactionDataUser[] merchants) {
         this.merchants = merchants;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethod")
     public String paymentMethod;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingAddress")
     public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress shippingAddress;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withShippingAddress(GoogleCloudRecaptchaenterpriseV1TransactionDataAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingValue")
     public Double shippingValue;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withShippingValue(Double shippingValue) {
         this.shippingValue = shippingValue;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public GoogleCloudRecaptchaenterpriseV1TransactionDataUser user;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withUser(GoogleCloudRecaptchaenterpriseV1TransactionDataUser user) {
         this.user = user;
         return this;
@@ -150,9 +162,11 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionData withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1TransactionData(){}
 }

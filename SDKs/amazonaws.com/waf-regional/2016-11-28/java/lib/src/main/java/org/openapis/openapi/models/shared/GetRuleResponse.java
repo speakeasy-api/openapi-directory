@@ -15,9 +15,11 @@ public class GetRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rule")
     public Rule rule;
+
     public GetRuleResponse withRule(Rule rule) {
         this.rule = rule;
         return this;
     }
     
+    public GetRuleResponse(){}
 }

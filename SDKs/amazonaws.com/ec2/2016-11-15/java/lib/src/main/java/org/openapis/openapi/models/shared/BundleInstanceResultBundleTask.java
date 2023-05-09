@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class BundleInstanceResultBundleTask {
     
     public String bundleId;
+
     public BundleInstanceResultBundleTask withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -19,6 +20,7 @@ public class BundleInstanceResultBundleTask {
     
     
     public BundleInstanceResultBundleTaskBundleTaskError bundleTaskError;
+
     public BundleInstanceResultBundleTask withBundleTaskError(BundleInstanceResultBundleTaskBundleTaskError bundleTaskError) {
         this.bundleTaskError = bundleTaskError;
         return this;
@@ -26,6 +28,7 @@ public class BundleInstanceResultBundleTask {
     
     
     public String instanceId;
+
     public BundleInstanceResultBundleTask withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,6 +36,7 @@ public class BundleInstanceResultBundleTask {
     
     
     public String progress;
+
     public BundleInstanceResultBundleTask withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -40,6 +44,7 @@ public class BundleInstanceResultBundleTask {
     
     
     public OffsetDateTime startTime;
+
     public BundleInstanceResultBundleTask withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -47,6 +52,7 @@ public class BundleInstanceResultBundleTask {
     
     
     public BundleInstanceResultBundleTaskStateEnum state;
+
     public BundleInstanceResultBundleTask withState(BundleInstanceResultBundleTaskStateEnum state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class BundleInstanceResultBundleTask {
     
     
     public BundleInstanceResultBundleTaskStorage storage;
+
     public BundleInstanceResultBundleTask withStorage(BundleInstanceResultBundleTaskStorage storage) {
         this.storage = storage;
         return this;
@@ -61,9 +68,11 @@ public class BundleInstanceResultBundleTask {
     
     
     public OffsetDateTime updateTime;
+
     public BundleInstanceResultBundleTask withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public BundleInstanceResultBundleTask(){}
 }

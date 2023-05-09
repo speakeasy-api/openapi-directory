@@ -33,7 +33,7 @@ public class Projects {
 	}
 
     /**
-     * Fetches processor types. Note that we do not use ListProcessorTypes here because it is not paginated.
+     * Fetches processor types. Note that we don't use ListProcessorTypes here, because it isn't paginated.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta3FetchProcessorTypesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudLocationListLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,11 +192,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesGetResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesGetResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesGetResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta3ProcessorType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +236,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta3ListProcessorTypesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,7 +253,7 @@ public class Projects {
     }
 
     /**
-     * Creates a processor from the type processor that the user chose. The processor will be at "ENABLED" state by default after its creation.
+     * Creates a processor from the ProcessorType provided. The processor will be at `ENABLED` state by default after its creation.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -292,11 +282,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta3Processor = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta3ListProcessorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -576,11 +554,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -624,11 +600,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -718,11 +690,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta3ListEvaluationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -766,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,11 +780,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta3ListProcessorVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,11 +826,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta3ProcessResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -879,7 +843,7 @@ public class Projects {
     }
 
     /**
-     * Trains a new processor version. Operation metadata is returned as cloud_documentai_core.TrainProcessorVersionMetadata.
+     * Trains a new processor version. Operation metadata is returned as TrainProcessorVersionMetadata.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -908,11 +872,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,11 +918,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1004,11 +964,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

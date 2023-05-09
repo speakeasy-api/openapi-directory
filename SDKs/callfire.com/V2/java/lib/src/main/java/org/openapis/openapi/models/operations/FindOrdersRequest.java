@@ -12,6 +12,7 @@ public class FindOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindOrdersRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class FindOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalBegin")
     public Long intervalBegin;
+
     public FindOrdersRequest withIntervalBegin(Long intervalBegin) {
         this.intervalBegin = intervalBegin;
         return this;
@@ -32,6 +34,7 @@ public class FindOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalEnd")
     public Long intervalEnd;
+
     public FindOrdersRequest withIntervalEnd(Long intervalEnd) {
         this.intervalEnd = intervalEnd;
         return this;
@@ -42,6 +45,7 @@ public class FindOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindOrdersRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +56,7 @@ public class FindOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindOrdersRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,9 +67,11 @@ public class FindOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String[] status;
+
     public FindOrdersRequest withStatus(String[] status) {
         this.status = status;
         return this;
     }
     
+    public FindOrdersRequest(){}
 }

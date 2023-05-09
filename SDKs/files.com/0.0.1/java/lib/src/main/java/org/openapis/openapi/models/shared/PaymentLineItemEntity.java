@@ -20,6 +20,7 @@ public class PaymentLineItemEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public PaymentLineItemEntity withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -33,6 +34,7 @@ public class PaymentLineItemEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public PaymentLineItemEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +46,7 @@ public class PaymentLineItemEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     public Integer invoiceId;
+
     public PaymentLineItemEntity withInvoiceId(Integer invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -55,9 +58,11 @@ public class PaymentLineItemEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public Integer paymentId;
+
     public PaymentLineItemEntity withPaymentId(Integer paymentId) {
         this.paymentId = paymentId;
         return this;
     }
     
+    public PaymentLineItemEntity(){}
 }

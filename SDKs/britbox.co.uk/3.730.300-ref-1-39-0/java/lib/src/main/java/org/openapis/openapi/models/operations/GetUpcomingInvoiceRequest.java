@@ -22,9 +22,11 @@ public class GetUpcomingInvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetUpcomingInvoiceRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetUpcomingInvoiceRequest(){}
 }

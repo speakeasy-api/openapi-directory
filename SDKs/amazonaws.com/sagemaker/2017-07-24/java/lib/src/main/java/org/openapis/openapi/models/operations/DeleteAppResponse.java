@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAppResponse {
     
     public String contentType;
+
     public DeleteAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAppResponse {
      */
     
     public Object resourceInUse;
+
     public DeleteAppResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAppResponse {
      */
     
     public Object resourceNotFound;
+
     public DeleteAppResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DeleteAppResponse {
     
     
     public Integer statusCode;
+
     public DeleteAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

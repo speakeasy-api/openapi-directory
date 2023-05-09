@@ -15,6 +15,7 @@ public class MessageBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public MessageBody withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class MessageBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestID")
     public String requestID;
+
     public MessageBody withRequestID(String requestID) {
         this.requestID = requestID;
         return this;
     }
     
+    public MessageBody(){}
 }

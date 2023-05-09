@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateHealthIdByMobileUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public CreateHealthIdByMobileUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class CreateHealthIdByMobileUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateHidMobileRequest createHidMobileRequest;
+
     public CreateHealthIdByMobileUsingPOSTRequest withCreateHidMobileRequest(org.openapis.openapi.models.shared.CreateHidMobileRequest createHidMobileRequest) {
         this.createHidMobileRequest = createHidMobileRequest;
         return this;
     }
     
+    public CreateHealthIdByMobileUsingPOSTRequest(@JsonProperty("CreateHidMobileRequest") org.openapis.openapi.models.shared.CreateHidMobileRequest createHidMobileRequest) {
+        this.createHidMobileRequest = createHidMobileRequest;
+  }
 }

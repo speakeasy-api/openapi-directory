@@ -12,6 +12,7 @@ public class GetFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetFollowersRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -22,6 +23,7 @@ public class GetFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetFollowersRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -34,9 +36,11 @@ public class GetFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetFollowersRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetFollowersRequest(){}
 }

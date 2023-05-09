@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDomainControllersResponse {
@@ -12,6 +13,7 @@ public class DescribeDomainControllersResponse {
      */
     
     public Object clientException;
+
     public DescribeDomainControllersResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDomainControllersResponse {
     
     
     public String contentType;
+
     public DescribeDomainControllersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDomainControllersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDomainControllersResult describeDomainControllersResult;
+
     public DescribeDomainControllersResponse withDescribeDomainControllersResult(org.openapis.openapi.models.shared.DescribeDomainControllersResult describeDomainControllersResult) {
         this.describeDomainControllersResult = describeDomainControllersResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDomainControllersResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DescribeDomainControllersResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDomainControllersResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeDomainControllersResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeDomainControllersResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeDomainControllersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeDomainControllersResponse {
      */
     
     public Object serviceException;
+
     public DescribeDomainControllersResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeDomainControllersResponse {
     
     
     public Integer statusCode;
+
     public DescribeDomainControllersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeDomainControllersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDomainControllersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeDomainControllersResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeDomainControllersResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeDomainControllersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

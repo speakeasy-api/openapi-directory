@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TasksTasksListRequest {
@@ -12,6 +13,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TasksTasksListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TasksTasksListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TasksTasksListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TasksTasksListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completedMax")
     public String completedMax;
+
     public TasksTasksListRequest withCompletedMax(String completedMax) {
         this.completedMax = completedMax;
         return this;
@@ -62,6 +68,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completedMin")
     public String completedMin;
+
     public TasksTasksListRequest withCompletedMin(String completedMin) {
         this.completedMin = completedMin;
         return this;
@@ -72,6 +79,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dueMax")
     public String dueMax;
+
     public TasksTasksListRequest withDueMax(String dueMax) {
         this.dueMax = dueMax;
         return this;
@@ -82,6 +90,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dueMin")
     public String dueMin;
+
     public TasksTasksListRequest withDueMin(String dueMin) {
         this.dueMin = dueMin;
         return this;
@@ -92,6 +101,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TasksTasksListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -102,6 +112,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TasksTasksListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -112,6 +123,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public TasksTasksListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -122,6 +134,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TasksTasksListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -132,6 +145,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public TasksTasksListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -142,6 +156,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TasksTasksListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TasksTasksListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showCompleted")
     public Boolean showCompleted;
+
     public TasksTasksListRequest withShowCompleted(Boolean showCompleted) {
         this.showCompleted = showCompleted;
         return this;
@@ -172,6 +189,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
     public Boolean showDeleted;
+
     public TasksTasksListRequest withShowDeleted(Boolean showDeleted) {
         this.showDeleted = showDeleted;
         return this;
@@ -182,6 +200,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showHidden")
     public Boolean showHidden;
+
     public TasksTasksListRequest withShowHidden(Boolean showHidden) {
         this.showHidden = showHidden;
         return this;
@@ -192,6 +211,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tasklist")
     public String tasklist;
+
     public TasksTasksListRequest withTasklist(String tasklist) {
         this.tasklist = tasklist;
         return this;
@@ -202,6 +222,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedMin")
     public String updatedMin;
+
     public TasksTasksListRequest withUpdatedMin(String updatedMin) {
         this.updatedMin = updatedMin;
         return this;
@@ -212,6 +233,7 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TasksTasksListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -222,9 +244,13 @@ public class TasksTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TasksTasksListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TasksTasksListRequest(@JsonProperty("tasklist") String tasklist) {
+        this.tasklist = tasklist;
+  }
 }

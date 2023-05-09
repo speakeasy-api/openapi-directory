@@ -15,9 +15,11 @@ public class GetCallAnalyticsJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CallAnalyticsJob")
     public CallAnalyticsJob callAnalyticsJob;
+
     public GetCallAnalyticsJobResponse withCallAnalyticsJob(CallAnalyticsJob callAnalyticsJob) {
         this.callAnalyticsJob = callAnalyticsJob;
         return this;
     }
     
+    public GetCallAnalyticsJobResponse(){}
 }

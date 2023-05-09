@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse {
     
     public String contentType;
+
     public BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse
      */
     
     public org.openapis.openapi.models.shared.ProvisioningConfig provisioningConfig;
+
     public BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse withProvisioningConfig(org.openapis.openapi.models.shared.ProvisioningConfig provisioningConfig) {
         this.provisioningConfig = provisioningConfig;
         return this;
@@ -26,6 +29,7 @@ public class BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse
     
     
     public Integer statusCode;
+
     public BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ public class AppConfigDisplay {
      */
     @JsonProperty("themes")
     public Theme[] themes;
+
     public AppConfigDisplay withThemes(Theme[] themes) {
         this.themes = themes;
         return this;
     }
     
+    public AppConfigDisplay(@JsonProperty("themes") Theme[] themes) {
+        this.themes = themes;
+  }
 }

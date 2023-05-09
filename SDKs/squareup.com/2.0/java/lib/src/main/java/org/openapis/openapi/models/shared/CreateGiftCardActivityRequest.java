@@ -15,6 +15,7 @@ public class CreateGiftCardActivityRequest {
      */
     @JsonProperty("gift_card_activity")
     public GiftCardActivity giftCardActivity;
+
     public CreateGiftCardActivityRequest withGiftCardActivity(GiftCardActivity giftCardActivity) {
         this.giftCardActivity = giftCardActivity;
         return this;
@@ -25,9 +26,14 @@ public class CreateGiftCardActivityRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateGiftCardActivityRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CreateGiftCardActivityRequest(@JsonProperty("gift_card_activity") GiftCardActivity giftCardActivity, @JsonProperty("idempotency_key") String idempotencyKey) {
+        this.giftCardActivity = giftCardActivity;
+        this.idempotencyKey = idempotencyKey;
+  }
 }

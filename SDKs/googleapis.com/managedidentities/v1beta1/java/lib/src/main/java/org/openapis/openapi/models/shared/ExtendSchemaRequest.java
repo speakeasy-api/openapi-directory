@@ -18,6 +18,7 @@ public class ExtendSchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ExtendSchemaRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ExtendSchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileContents")
     public String fileContents;
+
     public ExtendSchemaRequest withFileContents(String fileContents) {
         this.fileContents = fileContents;
         return this;
@@ -40,9 +42,11 @@ public class ExtendSchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPath")
     public String gcsPath;
+
     public ExtendSchemaRequest withGcsPath(String gcsPath) {
         this.gcsPath = gcsPath;
         return this;
     }
     
+    public ExtendSchemaRequest(){}
 }

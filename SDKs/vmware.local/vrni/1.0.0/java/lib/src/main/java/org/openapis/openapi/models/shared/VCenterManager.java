@@ -15,6 +15,7 @@ public class VCenterManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public VCenterManager withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class VCenterManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public VCenterManager withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -31,6 +33,7 @@ public class VCenterManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public VCenterManager withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -39,6 +42,7 @@ public class VCenterManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address")
     public IpV4Address ipAddress;
+
     public VCenterManager withIpAddress(IpV4Address ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -47,6 +51,7 @@ public class VCenterManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VCenterManager withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class VCenterManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nsx_manager")
     public Reference nsxManager;
+
     public VCenterManager withNsxManager(Reference nsxManager) {
         this.nsxManager = nsxManager;
         return this;
@@ -63,9 +69,11 @@ public class VCenterManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vm")
     public Reference vm;
+
     public VCenterManager withVm(Reference vm) {
         this.vm = vm;
         return this;
     }
     
+    public VCenterManager(){}
 }

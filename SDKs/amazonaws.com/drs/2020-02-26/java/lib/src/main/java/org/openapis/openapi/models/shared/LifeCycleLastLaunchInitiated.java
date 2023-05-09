@@ -15,6 +15,7 @@ public class LifeCycleLastLaunchInitiated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCallDateTime")
     public String apiCallDateTime;
+
     public LifeCycleLastLaunchInitiated withApiCallDateTime(String apiCallDateTime) {
         this.apiCallDateTime = apiCallDateTime;
         return this;
@@ -23,6 +24,7 @@ public class LifeCycleLastLaunchInitiated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobID")
     public String jobID;
+
     public LifeCycleLastLaunchInitiated withJobID(String jobID) {
         this.jobID = jobID;
         return this;
@@ -31,9 +33,11 @@ public class LifeCycleLastLaunchInitiated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LastLaunchTypeEnum type;
+
     public LifeCycleLastLaunchInitiated withType(LastLaunchTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LifeCycleLastLaunchInitiated(){}
 }

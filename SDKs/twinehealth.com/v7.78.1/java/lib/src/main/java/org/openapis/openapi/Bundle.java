@@ -59,12 +59,10 @@ public class Bundle {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBundleResponse res = new org.openapis.openapi.models.operations.CreateBundleResponse() {{
+        org.openapis.openapi.models.operations.CreateBundleResponse res = new org.openapis.openapi.models.operations.CreateBundleResponse(contentType, httpRes.statusCode()) {{
             createBundleResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class Bundle {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchBundleResponse res = new org.openapis.openapi.models.operations.FetchBundleResponse() {{
+        org.openapis.openapi.models.operations.FetchBundleResponse res = new org.openapis.openapi.models.operations.FetchBundleResponse(contentType, httpRes.statusCode()) {{
             fetchBundleResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,13 +154,11 @@ public class Bundle {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBundleResponse res = new org.openapis.openapi.models.operations.UpdateBundleResponse() {{
+        org.openapis.openapi.models.operations.UpdateBundleResponse res = new org.openapis.openapi.models.operations.UpdateBundleResponse(contentType, httpRes.statusCode()) {{
             updateBundleResponse = null;
             fetchErrorResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,9 +12,11 @@ public class AccountGetGuestsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public AccountGetGuestsCountRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
     }
     
+    public AccountGetGuestsCountRequest(){}
 }

@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1Process = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1ListProcessesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1Run = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1LineageEvent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1LineageEvent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1ListLineageEventsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1ListRunsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1Run = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksResponse() {{
+        org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksResponse res = new org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogLineageV1SearchLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

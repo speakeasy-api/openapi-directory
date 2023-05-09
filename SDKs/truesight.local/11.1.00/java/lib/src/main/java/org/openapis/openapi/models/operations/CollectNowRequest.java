@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectNowRequest {
@@ -12,6 +13,7 @@ public class CollectNowRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
     public Integer deviceId;
+
     public CollectNowRequest withDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,9 +24,14 @@ public class CollectNowRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorClass")
     public String monitorClass;
+
     public CollectNowRequest withMonitorClass(String monitorClass) {
         this.monitorClass = monitorClass;
         return this;
     }
     
+    public CollectNowRequest(@JsonProperty("deviceId") Integer deviceId, @JsonProperty("monitorClass") String monitorClass) {
+        this.deviceId = deviceId;
+        this.monitorClass = monitorClass;
+  }
 }

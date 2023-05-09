@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListPartnerEventSourceAccountsRequest {
     @JsonProperty("EventSourceName")
     public String eventSourceName;
+
     public ListPartnerEventSourceAccountsRequest withEventSourceName(String eventSourceName) {
         this.eventSourceName = eventSourceName;
         return this;
@@ -19,6 +20,7 @@ public class ListPartnerEventSourceAccountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListPartnerEventSourceAccountsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,9 +29,13 @@ public class ListPartnerEventSourceAccountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPartnerEventSourceAccountsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPartnerEventSourceAccountsRequest(@JsonProperty("EventSourceName") String eventSourceName) {
+        this.eventSourceName = eventSourceName;
+  }
 }

@@ -15,9 +15,11 @@ public class UpdateArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactArn")
     public String artifactArn;
+
     public UpdateArtifactResponse withArtifactArn(String artifactArn) {
         this.artifactArn = artifactArn;
         return this;
     }
     
+    public UpdateArtifactResponse(){}
 }

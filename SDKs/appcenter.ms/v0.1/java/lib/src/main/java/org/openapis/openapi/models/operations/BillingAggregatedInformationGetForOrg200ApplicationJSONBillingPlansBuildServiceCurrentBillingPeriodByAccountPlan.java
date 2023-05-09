@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, java.util.Map<String, Object>> attributes;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withAttributes(java.util.Map<String, java.util.Map<String, Object>> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limits")
     public java.util.Map<String, Double> limits;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withLimits(java.util.Map<String, Double> limits) {
         this.limits = limits;
         return this;
@@ -48,6 +51,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentId")
     public String parentId;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -59,6 +63,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSource")
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum paymentSource;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withPaymentSource(BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum paymentSource) {
         this.paymentSource = paymentSource;
         return this;
@@ -70,6 +75,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withPrice(Double price) {
         this.price = price;
         return this;
@@ -81,6 +87,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum service;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withService(BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum service) {
         this.service = service;
         return this;
@@ -92,9 +99,11 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan(){}
 }

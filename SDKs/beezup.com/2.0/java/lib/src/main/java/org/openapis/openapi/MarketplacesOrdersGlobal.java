@@ -38,7 +38,9 @@ public class MarketplacesOrdersGlobal {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationResponse getMarketplaceAccountsSynchronization(org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/status");
@@ -67,12 +69,10 @@ public class MarketplacesOrdersGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationResponse res = new org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationResponse() {{
+        org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationResponse res = new org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationResponse(contentType, httpRes.statusCode()) {{
             accountSynchronizationList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,7 +102,9 @@ public class MarketplacesOrdersGlobal {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetOrderIndexResponse getOrderIndex(org.openapis.openapi.models.operations.GetOrderIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/");
@@ -125,12 +127,10 @@ public class MarketplacesOrdersGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderIndexResponse res = new org.openapis.openapi.models.operations.GetOrderIndexResponse() {{
+        org.openapis.openapi.models.operations.GetOrderIndexResponse res = new org.openapis.openapi.models.operations.GetOrderIndexResponse(contentType, httpRes.statusCode()) {{
             orderIndex = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,7 +160,9 @@ public class MarketplacesOrdersGlobal {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.HarvestAllResponse harvestAll(org.openapis.openapi.models.operations.HarvestAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/harvest");
@@ -181,12 +183,10 @@ public class MarketplacesOrdersGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HarvestAllResponse res = new org.openapis.openapi.models.operations.HarvestAllResponse() {{
+        org.openapis.openapi.models.operations.HarvestAllResponse res = new org.openapis.openapi.models.operations.HarvestAllResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

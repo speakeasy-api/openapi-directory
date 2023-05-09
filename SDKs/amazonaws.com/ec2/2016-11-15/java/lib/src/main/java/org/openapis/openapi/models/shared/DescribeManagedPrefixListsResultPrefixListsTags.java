@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeManagedPrefixListsResultPrefixListsTags {
     
     public String key;
+
     public DescribeManagedPrefixListsResultPrefixListsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeManagedPrefixListsResultPrefixListsTags {
     
     
     public String value;
+
     public DescribeManagedPrefixListsResultPrefixListsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeManagedPrefixListsResultPrefixListsTags(){}
 }

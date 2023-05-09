@@ -25,6 +25,7 @@ public class LandlordMaintenanceCertificateModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Due")
     public OffsetDateTime due;
+
     public LandlordMaintenanceCertificateModel withDue(OffsetDateTime due) {
         this.due = due;
         return this;
@@ -36,6 +37,7 @@ public class LandlordMaintenanceCertificateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Files")
     public LettingsLandlordDocument[] files;
+
     public LandlordMaintenanceCertificateModel withFiles(LettingsLandlordDocument[] files) {
         this.files = files;
         return this;
@@ -47,6 +49,7 @@ public class LandlordMaintenanceCertificateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public LandlordMaintenanceCertificateModel withStatus(String status) {
         this.status = status;
         return this;
@@ -58,9 +61,11 @@ public class LandlordMaintenanceCertificateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public LandlordMaintenanceCertificateModel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LandlordMaintenanceCertificateModel(){}
 }

@@ -15,6 +15,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorPort")
     public Long acceleratorPort;
+
     public PortMapping withAcceleratorPort(Long acceleratorPort) {
         this.acceleratorPort = acceleratorPort;
         return this;
@@ -23,6 +24,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationSocketAddress")
     public SocketAddress destinationSocketAddress;
+
     public PortMapping withDestinationSocketAddress(SocketAddress destinationSocketAddress) {
         this.destinationSocketAddress = destinationSocketAddress;
         return this;
@@ -31,6 +33,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationTrafficState")
     public CustomRoutingDestinationTrafficStateEnum destinationTrafficState;
+
     public PortMapping withDestinationTrafficState(CustomRoutingDestinationTrafficStateEnum destinationTrafficState) {
         this.destinationTrafficState = destinationTrafficState;
         return this;
@@ -39,6 +42,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public PortMapping withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
@@ -47,6 +51,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public PortMapping withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -55,9 +60,11 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocols")
     public CustomRoutingProtocolEnum[] protocols;
+
     public PortMapping withProtocols(CustomRoutingProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
     }
     
+    public PortMapping(){}
 }

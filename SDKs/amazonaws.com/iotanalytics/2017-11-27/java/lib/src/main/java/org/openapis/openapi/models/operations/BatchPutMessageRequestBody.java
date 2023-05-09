@@ -12,6 +12,7 @@ public class BatchPutMessageRequestBody {
      */
     @JsonProperty("channelName")
     public String channelName;
+
     public BatchPutMessageRequestBody withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -22,9 +23,14 @@ public class BatchPutMessageRequestBody {
      */
     @JsonProperty("messages")
     public org.openapis.openapi.models.shared.Message[] messages;
+
     public BatchPutMessageRequestBody withMessages(org.openapis.openapi.models.shared.Message[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public BatchPutMessageRequestBody(@JsonProperty("channelName") String channelName, @JsonProperty("messages") org.openapis.openapi.models.shared.Message[] messages) {
+        this.channelName = channelName;
+        this.messages = messages;
+  }
 }

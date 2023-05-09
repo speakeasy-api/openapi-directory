@@ -15,9 +15,11 @@ public class JobNodeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobRuns")
     public JobRun[] jobRuns;
+
     public JobNodeDetails withJobRuns(JobRun[] jobRuns) {
         this.jobRuns = jobRuns;
         return this;
     }
     
+    public JobNodeDetails(){}
 }

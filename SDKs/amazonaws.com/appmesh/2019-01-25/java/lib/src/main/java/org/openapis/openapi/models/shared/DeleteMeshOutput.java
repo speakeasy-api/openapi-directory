@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMeshOutput {
     @JsonProperty("mesh")
     public MeshData mesh;
+
     public DeleteMeshOutput withMesh(MeshData mesh) {
         this.mesh = mesh;
         return this;
     }
     
+    public DeleteMeshOutput(@JsonProperty("mesh") MeshData mesh) {
+        this.mesh = mesh;
+  }
 }

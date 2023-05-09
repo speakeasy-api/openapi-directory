@@ -15,6 +15,7 @@ public class IpAddressesListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public IpAddressesListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class IpAddressesListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public IpAddressesListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public IpAddressesListWarningData(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSpinsResponse {
     
     public byte[] body;
+
     public GetSpinsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetSpinsResponse {
     
     
     public String contentType;
+
     public GetSpinsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetSpinsResponse {
     
     
     public Integer statusCode;
+
     public GetSpinsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetSpinsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSpinsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetSpinsResponse {
      */
     
     public GetSpins200ApplicationJSON getSpins200ApplicationJSONObject;
+
     public GetSpinsResponse withGetSpins200ApplicationJSONObject(GetSpins200ApplicationJSON getSpins200ApplicationJSONObject) {
         this.getSpins200ApplicationJSONObject = getSpins200ApplicationJSONObject;
         return this;
     }
     
+    public GetSpinsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

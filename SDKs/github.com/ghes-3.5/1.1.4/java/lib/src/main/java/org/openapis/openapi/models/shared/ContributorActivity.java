@@ -15,6 +15,7 @@ public class ContributorActivity {
      */
     @JsonProperty("author")
     public NullableSimpleUser author;
+
     public ContributorActivity withAuthor(NullableSimpleUser author) {
         this.author = author;
         return this;
@@ -22,6 +23,7 @@ public class ContributorActivity {
     
     @JsonProperty("total")
     public Long total;
+
     public ContributorActivity withTotal(Long total) {
         this.total = total;
         return this;
@@ -29,9 +31,15 @@ public class ContributorActivity {
     
     @JsonProperty("weeks")
     public ContributorActivityWeeks[] weeks;
+
     public ContributorActivity withWeeks(ContributorActivityWeeks[] weeks) {
         this.weeks = weeks;
         return this;
     }
     
+    public ContributorActivity(@JsonProperty("author") NullableSimpleUser author, @JsonProperty("total") Long total, @JsonProperty("weeks") ContributorActivityWeeks[] weeks) {
+        this.author = author;
+        this.total = total;
+        this.weeks = weeks;
+  }
 }

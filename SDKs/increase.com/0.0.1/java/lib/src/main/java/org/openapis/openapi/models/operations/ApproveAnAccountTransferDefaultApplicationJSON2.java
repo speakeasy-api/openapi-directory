@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApproveAnAccountTransferDefaultApplicationJSON2 {
     @JsonProperty("detail")
     public String detail;
+
     public ApproveAnAccountTransferDefaultApplicationJSON2 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -16,6 +17,7 @@ public class ApproveAnAccountTransferDefaultApplicationJSON2 {
     
     @JsonProperty("status")
     public ApproveAnAccountTransferDefaultApplicationJSON2StatusEnum status;
+
     public ApproveAnAccountTransferDefaultApplicationJSON2 withStatus(ApproveAnAccountTransferDefaultApplicationJSON2StatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +25,7 @@ public class ApproveAnAccountTransferDefaultApplicationJSON2 {
     
     @JsonProperty("title")
     public String title;
+
     public ApproveAnAccountTransferDefaultApplicationJSON2 withTitle(String title) {
         this.title = title;
         return this;
@@ -30,9 +33,16 @@ public class ApproveAnAccountTransferDefaultApplicationJSON2 {
     
     @JsonProperty("type")
     public ApproveAnAccountTransferDefaultApplicationJSON2TypeEnum type;
+
     public ApproveAnAccountTransferDefaultApplicationJSON2 withType(ApproveAnAccountTransferDefaultApplicationJSON2TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ApproveAnAccountTransferDefaultApplicationJSON2(@JsonProperty("detail") String detail, @JsonProperty("status") ApproveAnAccountTransferDefaultApplicationJSON2StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") ApproveAnAccountTransferDefaultApplicationJSON2TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

@@ -63,13 +63,11 @@ public class NameDirections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClassificationsNameDirectionsResponse res = new org.openapis.openapi.models.operations.GetClassificationsNameDirectionsResponse() {{
+        org.openapis.openapi.models.operations.GetClassificationsNameDirectionsResponse res = new org.openapis.openapi.models.operations.GetClassificationsNameDirectionsResponse(contentType, httpRes.statusCode()) {{
             nameDirections = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

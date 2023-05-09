@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateAssetsResponse {
@@ -12,6 +13,7 @@ public class AssociateAssetsResponse {
      */
     
     public Object conflictingOperationException;
+
     public AssociateAssetsResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class AssociateAssetsResponse {
     
     
     public String contentType;
+
     public AssociateAssetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateAssetsResponse {
      */
     
     public Object internalFailureException;
+
     public AssociateAssetsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateAssetsResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateAssetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateAssetsResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateAssetsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateAssetsResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public AssociateAssetsResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -66,6 +73,7 @@ public class AssociateAssetsResponse {
     
     
     public Integer statusCode;
+
     public AssociateAssetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AssociateAssetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateAssetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AssociateAssetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateAssetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateAssetsResponse {
      */
     
     public Object throttlingException;
+
     public AssociateAssetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateAssetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

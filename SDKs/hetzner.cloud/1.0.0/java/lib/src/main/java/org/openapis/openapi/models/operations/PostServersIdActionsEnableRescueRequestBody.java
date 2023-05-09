@@ -15,6 +15,7 @@ public class PostServersIdActionsEnableRescueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssh_keys")
     public Long[] sshKeys;
+
     public PostServersIdActionsEnableRescueRequestBody withSshKeys(Long[] sshKeys) {
         this.sshKeys = sshKeys;
         return this;
@@ -26,9 +27,11 @@ public class PostServersIdActionsEnableRescueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostServersIdActionsEnableRescueRequestBodyTypeEnum type;
+
     public PostServersIdActionsEnableRescueRequestBody withType(PostServersIdActionsEnableRescueRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostServersIdActionsEnableRescueRequestBody(){}
 }

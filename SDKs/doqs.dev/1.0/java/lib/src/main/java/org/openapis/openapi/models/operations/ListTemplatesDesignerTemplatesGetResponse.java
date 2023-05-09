@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTemplatesDesignerTemplatesGetResponse {
     
     public String contentType;
+
     public ListTemplatesDesignerTemplatesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTemplatesDesignerTemplatesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseError responseError;
+
     public ListTemplatesDesignerTemplatesGetResponse withResponseError(org.openapis.openapi.models.shared.ResponseError responseError) {
         this.responseError = responseError;
         return this;
@@ -29,6 +32,7 @@ public class ListTemplatesDesignerTemplatesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate responseOkListFillrEntitiesDesignerTemplateDesignerTemplate;
+
     public ListTemplatesDesignerTemplatesGetResponse withResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate(org.openapis.openapi.models.shared.ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate responseOkListFillrEntitiesDesignerTemplateDesignerTemplate) {
         this.responseOkListFillrEntitiesDesignerTemplateDesignerTemplate = responseOkListFillrEntitiesDesignerTemplateDesignerTemplate;
         return this;
@@ -36,6 +40,7 @@ public class ListTemplatesDesignerTemplatesGetResponse {
     
     
     public Integer statusCode;
+
     public ListTemplatesDesignerTemplatesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListTemplatesDesignerTemplatesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTemplatesDesignerTemplatesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTemplatesDesignerTemplatesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

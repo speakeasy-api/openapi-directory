@@ -18,6 +18,7 @@ public class SearchCatalogItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchCatalogItemsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -29,6 +30,7 @@ public class SearchCatalogItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchCatalogItemsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class SearchCatalogItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CatalogObject[] items;
+
     public SearchCatalogItemsResponse withItems(CatalogObject[] items) {
         this.items = items;
         return this;
@@ -51,9 +54,11 @@ public class SearchCatalogItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matched_variation_ids")
     public String[] matchedVariationIds;
+
     public SearchCatalogItemsResponse withMatchedVariationIds(String[] matchedVariationIds) {
         this.matchedVariationIds = matchedVariationIds;
         return this;
     }
     
+    public SearchCatalogItemsResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterParameterGroupsMessage {
     
     public DBClusterParameterGroupList[] dbClusterParameterGroups;
+
     public DBClusterParameterGroupsMessage withDBClusterParameterGroups(DBClusterParameterGroupList[] dbClusterParameterGroups) {
         this.dbClusterParameterGroups = dbClusterParameterGroups;
         return this;
@@ -19,9 +20,11 @@ public class DBClusterParameterGroupsMessage {
     
     
     public String marker;
+
     public DBClusterParameterGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBClusterParameterGroupsMessage(){}
 }

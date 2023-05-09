@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListExpandedDataSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expandedDataSets")
     public GoogleAnalyticsAdminV1alphaExpandedDataSet[] expandedDataSets;
+
     public GoogleAnalyticsAdminV1alphaListExpandedDataSetsResponse withExpandedDataSets(GoogleAnalyticsAdminV1alphaExpandedDataSet[] expandedDataSets) {
         this.expandedDataSets = expandedDataSets;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListExpandedDataSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListExpandedDataSetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListExpandedDataSetsResponse(){}
 }

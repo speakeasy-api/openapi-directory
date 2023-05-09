@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SentimentMultipartResponse {
     
     public String contentType;
+
     public SentimentMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SentimentMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.SentimentPredictResponse sentimentPredictResponse;
+
     public SentimentMultipartResponse withSentimentPredictResponse(org.openapis.openapi.models.shared.SentimentPredictResponse sentimentPredictResponse) {
         this.sentimentPredictResponse = sentimentPredictResponse;
         return this;
@@ -26,6 +29,7 @@ public class SentimentMultipartResponse {
     
     
     public Integer statusCode;
+
     public SentimentMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SentimentMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SentimentMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SentimentMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

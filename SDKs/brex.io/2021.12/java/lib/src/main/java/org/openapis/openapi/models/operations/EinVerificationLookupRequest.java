@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EinVerificationLookupRequest {
@@ -12,6 +13,7 @@ public class EinVerificationLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public EinVerificationLookupRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +24,7 @@ public class EinVerificationLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public EinVerificationLookupRequest withState(String state) {
         this.state = state;
         return this;
@@ -32,6 +35,7 @@ public class EinVerificationLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tight")
     public Boolean tight;
+
     public EinVerificationLookupRequest withTight(Boolean tight) {
         this.tight = tight;
         return this;
@@ -42,9 +46,13 @@ public class EinVerificationLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
     public String zip;
+
     public EinVerificationLookupRequest withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public EinVerificationLookupRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -17,6 +17,7 @@ public class Warning {
      */
     @JsonProperty("code")
     public Long code;
+
     public Warning withCode(Long code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class Warning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Warning withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -39,6 +41,7 @@ public class Warning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public WarningWarningSource source;
+
     public Warning withSource(WarningWarningSource source) {
         this.source = source;
         return this;
@@ -49,9 +52,14 @@ public class Warning {
      */
     @JsonProperty("title")
     public String title;
+
     public Warning withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Warning(@JsonProperty("code") Long code, @JsonProperty("title") String title) {
+        this.code = code;
+        this.title = title;
+  }
 }

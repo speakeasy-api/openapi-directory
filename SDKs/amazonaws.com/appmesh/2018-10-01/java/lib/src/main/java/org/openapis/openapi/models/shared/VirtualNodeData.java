@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualNodeData {
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualNodeData withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -22,6 +23,7 @@ public class VirtualNodeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResourceMetadata metadata;
+
     public VirtualNodeData withMetadata(ResourceMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -30,6 +32,7 @@ public class VirtualNodeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public VirtualNodeSpec spec;
+
     public VirtualNodeData withSpec(VirtualNodeSpec spec) {
         this.spec = spec;
         return this;
@@ -38,6 +41,7 @@ public class VirtualNodeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VirtualNodeStatus status;
+
     public VirtualNodeData withStatus(VirtualNodeStatus status) {
         this.status = status;
         return this;
@@ -45,9 +49,14 @@ public class VirtualNodeData {
     
     @JsonProperty("virtualNodeName")
     public String virtualNodeName;
+
     public VirtualNodeData withVirtualNodeName(String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
         return this;
     }
     
+    public VirtualNodeData(@JsonProperty("meshName") String meshName, @JsonProperty("virtualNodeName") String virtualNodeName) {
+        this.meshName = meshName;
+        this.virtualNodeName = virtualNodeName;
+  }
 }

@@ -10,34 +10,41 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ErrorDetail {
     /**
-     * El c\u00f3digo indica la familia del error. Por ejemplo, de 2000 a 2999 indican problemas en el login. Cada c\u00f3digo de error debe tratarse de forma diferente. Por ejemplo, si el c\u00f3digo indica "Login incorrecto", no se debe reintentar la llamada; si el c\u00f3digo indica "entidad en mantenimiento" s\u00ed se puede reintentar m\u00e1s tarde. Puedes obtener el listado completo en el m\u00e9todo error-codes.
+     * El código indica la familia del error. Por ejemplo, de 2000 a 2999 indican problemas en el login. Cada código de error debe tratarse de forma diferente. Por ejemplo, si el código indica "Login incorrecto", no se debe reintentar la llamada; si el código indica "entidad en mantenimiento" sí se puede reintentar más tarde. Puedes obtener el listado completo en el método error-codes.
      */
     @JsonProperty("code")
     public Long code;
+
     public ErrorDetail withCode(Long code) {
         this.code = code;
         return this;
     }
     
     /**
-     * Solamente estar\u00e1 informado cuando el valor de code sea 2020 (usuario multicontrato)
+     * Solamente estará informado cuando el valor de code sea 2020 (usuario multicontrato)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contracts")
     public java.util.Map<String, Object>[] contracts;
+
     public ErrorDetail withContracts(java.util.Map<String, Object>[] contracts) {
         this.contracts = contracts;
         return this;
     }
     
     /**
-     * Texto en el idioma de la entidad. Es seguro mostr\u00e1rselo al usuario y en muchos casos le ayudar\u00e1 a corregir el error
+     * Texto en el idioma de la entidad. Es seguro mostrárselo al usuario y en muchos casos le ayudará a corregir el error
      */
     @JsonProperty("message")
     public String message;
+
     public ErrorDetail withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorDetail(@JsonProperty("code") Long code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

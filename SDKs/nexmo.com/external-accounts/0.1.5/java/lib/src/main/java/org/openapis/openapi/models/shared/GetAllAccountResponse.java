@@ -14,6 +14,7 @@ public class GetAllAccountResponse {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public GetAllAccountResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -24,6 +25,7 @@ public class GetAllAccountResponse {
      */
     @JsonProperty("api_key")
     public String apiKey;
+
     public GetAllAccountResponse withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -35,6 +37,7 @@ public class GetAllAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public String[] applications;
+
     public GetAllAccountResponse withApplications(String[] applications) {
         this.applications = applications;
         return this;
@@ -45,6 +48,7 @@ public class GetAllAccountResponse {
      */
     @JsonProperty("external_id")
     public String externalId;
+
     public GetAllAccountResponse withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -56,6 +60,7 @@ public class GetAllAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAllAccountResponse withName(String name) {
         this.name = name;
         return this;
@@ -66,9 +71,16 @@ public class GetAllAccountResponse {
      */
     @JsonProperty("provider")
     public String provider;
+
     public GetAllAccountResponse withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public GetAllAccountResponse(@JsonProperty("access_token") String accessToken, @JsonProperty("api_key") String apiKey, @JsonProperty("external_id") String externalId, @JsonProperty("provider") String provider) {
+        this.accessToken = accessToken;
+        this.apiKey = apiKey;
+        this.externalId = externalId;
+        this.provider = provider;
+  }
 }

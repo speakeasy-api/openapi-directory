@@ -15,6 +15,7 @@ public class RightsizingRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalMetadata")
     public String additionalMetadata;
+
     public RightsizingRecommendationMetadata withAdditionalMetadata(String additionalMetadata) {
         this.additionalMetadata = additionalMetadata;
         return this;
@@ -23,6 +24,7 @@ public class RightsizingRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerationTimestamp")
     public String generationTimestamp;
+
     public RightsizingRecommendationMetadata withGenerationTimestamp(String generationTimestamp) {
         this.generationTimestamp = generationTimestamp;
         return this;
@@ -31,6 +33,7 @@ public class RightsizingRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LookbackPeriodInDays")
     public LookbackPeriodInDaysEnum lookbackPeriodInDays;
+
     public RightsizingRecommendationMetadata withLookbackPeriodInDays(LookbackPeriodInDaysEnum lookbackPeriodInDays) {
         this.lookbackPeriodInDays = lookbackPeriodInDays;
         return this;
@@ -39,9 +42,11 @@ public class RightsizingRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationId")
     public String recommendationId;
+
     public RightsizingRecommendationMetadata withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public RightsizingRecommendationMetadata(){}
 }

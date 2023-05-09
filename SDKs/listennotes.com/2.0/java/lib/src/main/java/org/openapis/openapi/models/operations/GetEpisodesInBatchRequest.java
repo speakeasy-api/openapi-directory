@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEpisodesInBatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.GetEpisodesInBatchForm getEpisodesInBatchForm;
+
     public GetEpisodesInBatchRequest withGetEpisodesInBatchForm(org.openapis.openapi.models.shared.GetEpisodesInBatchForm getEpisodesInBatchForm) {
         this.getEpisodesInBatchForm = getEpisodesInBatchForm;
         return this;
@@ -19,9 +21,14 @@ public class GetEpisodesInBatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public GetEpisodesInBatchRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
+    public GetEpisodesInBatchRequest(@JsonProperty("GetEpisodesInBatchForm") org.openapis.openapi.models.shared.GetEpisodesInBatchForm getEpisodesInBatchForm, @JsonProperty("X-ListenAPI-Key") String xListenAPIKey) {
+        this.getEpisodesInBatchForm = getEpisodesInBatchForm;
+        this.xListenAPIKey = xListenAPIKey;
+  }
 }

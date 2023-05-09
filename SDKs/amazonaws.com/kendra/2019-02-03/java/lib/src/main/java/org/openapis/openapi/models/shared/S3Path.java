@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Path {
     @JsonProperty("Bucket")
     public String bucket;
+
     public S3Path withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -19,9 +20,14 @@ public class S3Path {
     
     @JsonProperty("Key")
     public String key;
+
     public S3Path withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public S3Path(@JsonProperty("Bucket") String bucket, @JsonProperty("Key") String key) {
+        this.bucket = bucket;
+        this.key = key;
+  }
 }

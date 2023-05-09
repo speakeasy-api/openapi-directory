@@ -14,6 +14,7 @@ public class SendMessageRequestBody3TemplateTemplate {
      */
     @JsonProperty("name")
     public String name;
+
     public SendMessageRequestBody3TemplateTemplate withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,13 @@ public class SendMessageRequestBody3TemplateTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public String[] parameters;
+
     public SendMessageRequestBody3TemplateTemplate withParameters(String[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public SendMessageRequestBody3TemplateTemplate(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

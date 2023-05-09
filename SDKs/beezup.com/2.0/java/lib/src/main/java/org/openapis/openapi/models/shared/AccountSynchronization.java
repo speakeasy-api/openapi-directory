@@ -19,6 +19,7 @@ public class AccountSynchronization {
      */
     @JsonProperty("accountId")
     public Integer accountId;
+
     public AccountSynchronization withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class AccountSynchronization {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedHarvestSynchroUtcDate")
     public OffsetDateTime completedHarvestSynchroUtcDate;
+
     public AccountSynchronization withCompletedHarvestSynchroUtcDate(OffsetDateTime completedHarvestSynchroUtcDate) {
         this.completedHarvestSynchroUtcDate = completedHarvestSynchroUtcDate;
         return this;
@@ -39,6 +41,7 @@ public class AccountSynchronization {
      */
     @JsonProperty("marketplaceBusinessCode")
     public String marketplaceBusinessCode;
+
     public AccountSynchronization withMarketplaceBusinessCode(String marketplaceBusinessCode) {
         this.marketplaceBusinessCode = marketplaceBusinessCode;
         return this;
@@ -49,9 +52,15 @@ public class AccountSynchronization {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public AccountSynchronization withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public AccountSynchronization(@JsonProperty("accountId") Integer accountId, @JsonProperty("marketplaceBusinessCode") String marketplaceBusinessCode, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.marketplaceBusinessCode = marketplaceBusinessCode;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

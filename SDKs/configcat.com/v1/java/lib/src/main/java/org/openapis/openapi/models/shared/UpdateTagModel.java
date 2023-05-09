@@ -12,6 +12,7 @@ public class UpdateTagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public UpdateTagModel withColor(String color) {
         this.color = color;
         return this;
@@ -20,9 +21,11 @@ public class UpdateTagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateTagModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateTagModel(){}
 }

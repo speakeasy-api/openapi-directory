@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WxByPolyUsV1WxForecastPolygonQueryPostResponse {
     
     public String contentType;
+
     public WxByPolyUsV1WxForecastPolygonQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WxByPolyUsV1WxForecastPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public WxByPolyUsV1WxForecastPolygonQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class WxByPolyUsV1WxForecastPolygonQueryPostResponse {
     
     
     public Integer statusCode;
+
     public WxByPolyUsV1WxForecastPolygonQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class WxByPolyUsV1WxForecastPolygonQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WxByPolyUsV1WxForecastPolygonQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class WxByPolyUsV1WxForecastPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.WxPolyResponse wxPolyResponse;
+
     public WxByPolyUsV1WxForecastPolygonQueryPostResponse withWxPolyResponse(org.openapis.openapi.models.shared.WxPolyResponse wxPolyResponse) {
         this.wxPolyResponse = wxPolyResponse;
         return this;
     }
     
+    public WxByPolyUsV1WxForecastPolygonQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

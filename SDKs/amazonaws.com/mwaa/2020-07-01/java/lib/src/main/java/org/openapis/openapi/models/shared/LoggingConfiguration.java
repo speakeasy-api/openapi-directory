@@ -15,6 +15,7 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DagProcessingLogs")
     public ModuleLoggingConfiguration dagProcessingLogs;
+
     public LoggingConfiguration withDagProcessingLogs(ModuleLoggingConfiguration dagProcessingLogs) {
         this.dagProcessingLogs = dagProcessingLogs;
         return this;
@@ -23,6 +24,7 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchedulerLogs")
     public ModuleLoggingConfiguration schedulerLogs;
+
     public LoggingConfiguration withSchedulerLogs(ModuleLoggingConfiguration schedulerLogs) {
         this.schedulerLogs = schedulerLogs;
         return this;
@@ -31,6 +33,7 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskLogs")
     public ModuleLoggingConfiguration taskLogs;
+
     public LoggingConfiguration withTaskLogs(ModuleLoggingConfiguration taskLogs) {
         this.taskLogs = taskLogs;
         return this;
@@ -39,6 +42,7 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebserverLogs")
     public ModuleLoggingConfiguration webserverLogs;
+
     public LoggingConfiguration withWebserverLogs(ModuleLoggingConfiguration webserverLogs) {
         this.webserverLogs = webserverLogs;
         return this;
@@ -47,9 +51,11 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerLogs")
     public ModuleLoggingConfiguration workerLogs;
+
     public LoggingConfiguration withWorkerLogs(ModuleLoggingConfiguration workerLogs) {
         this.workerLogs = workerLogs;
         return this;
     }
     
+    public LoggingConfiguration(){}
 }

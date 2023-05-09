@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyCharacterResponseLoadouts {
     
     public DestinyComponentsLoadoutsDestinyLoadoutsComponent data;
+
     public DestinyResponsesDestinyCharacterResponseLoadouts withData(DestinyComponentsLoadoutsDestinyLoadoutsComponent data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class DestinyResponsesDestinyCharacterResponseLoadouts {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyCharacterResponseLoadouts withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -30,9 +32,11 @@ public class DestinyResponsesDestinyCharacterResponseLoadouts {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyCharacterResponseLoadouts withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponseLoadouts(){}
 }

@@ -18,6 +18,7 @@ public class SetupTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopOnSetupFailure")
     public Boolean stopOnSetupFailure;
+
     public SetupTag withStopOnSetupFailure(Boolean stopOnSetupFailure) {
         this.stopOnSetupFailure = stopOnSetupFailure;
         return this;
@@ -29,9 +30,11 @@ public class SetupTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagName")
     public String tagName;
+
     public SetupTag withTagName(String tagName) {
         this.tagName = tagName;
         return this;
     }
     
+    public SetupTag(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMapRunsInput {
     @JsonProperty("executionArn")
     public String executionArn;
+
     public ListMapRunsInput withExecutionArn(String executionArn) {
         this.executionArn = executionArn;
         return this;
@@ -19,6 +20,7 @@ public class ListMapRunsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListMapRunsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListMapRunsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMapRunsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMapRunsInput(@JsonProperty("executionArn") String executionArn) {
+        this.executionArn = executionArn;
+  }
 }

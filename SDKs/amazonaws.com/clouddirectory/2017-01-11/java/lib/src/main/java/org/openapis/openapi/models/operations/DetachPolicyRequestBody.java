@@ -12,6 +12,7 @@ public class DetachPolicyRequestBody {
      */
     @JsonProperty("ObjectReference")
     public DetachPolicyRequestBodyObjectReference objectReference;
+
     public DetachPolicyRequestBody withObjectReference(DetachPolicyRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
@@ -22,9 +23,14 @@ public class DetachPolicyRequestBody {
      */
     @JsonProperty("PolicyReference")
     public DetachPolicyRequestBodyPolicyReference policyReference;
+
     public DetachPolicyRequestBody withPolicyReference(DetachPolicyRequestBodyPolicyReference policyReference) {
         this.policyReference = policyReference;
         return this;
     }
     
+    public DetachPolicyRequestBody(@JsonProperty("ObjectReference") DetachPolicyRequestBodyObjectReference objectReference, @JsonProperty("PolicyReference") DetachPolicyRequestBodyPolicyReference policyReference) {
+        this.objectReference = objectReference;
+        this.policyReference = policyReference;
+  }
 }

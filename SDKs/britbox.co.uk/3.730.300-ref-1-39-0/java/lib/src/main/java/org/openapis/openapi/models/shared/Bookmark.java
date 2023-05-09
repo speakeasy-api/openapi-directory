@@ -22,6 +22,7 @@ public class Bookmark {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Bookmark withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -32,9 +33,14 @@ public class Bookmark {
      */
     @JsonProperty("itemId")
     public String itemId;
+
     public Bookmark withItemId(String itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public Bookmark(@JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("itemId") String itemId) {
+        this.creationDate = creationDate;
+        this.itemId = itemId;
+  }
 }

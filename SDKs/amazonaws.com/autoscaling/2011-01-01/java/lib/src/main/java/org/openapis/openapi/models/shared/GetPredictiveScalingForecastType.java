@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class GetPredictiveScalingForecastType {
     
     public String autoScalingGroupName;
+
     public GetPredictiveScalingForecastType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +18,7 @@ public class GetPredictiveScalingForecastType {
     
     
     public OffsetDateTime endTime;
+
     public GetPredictiveScalingForecastType withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +26,7 @@ public class GetPredictiveScalingForecastType {
     
     
     public String policyName;
+
     public GetPredictiveScalingForecastType withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -30,9 +34,16 @@ public class GetPredictiveScalingForecastType {
     
     
     public OffsetDateTime startTime;
+
     public GetPredictiveScalingForecastType withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetPredictiveScalingForecastType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("PolicyName") String policyName, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.endTime = endTime;
+        this.policyName = policyName;
+        this.startTime = startTime;
+  }
 }

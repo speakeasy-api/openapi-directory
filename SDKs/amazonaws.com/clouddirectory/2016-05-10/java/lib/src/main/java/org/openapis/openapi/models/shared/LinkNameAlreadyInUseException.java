@@ -15,9 +15,11 @@ public class LinkNameAlreadyInUseException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public LinkNameAlreadyInUseException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public LinkNameAlreadyInUseException(){}
 }

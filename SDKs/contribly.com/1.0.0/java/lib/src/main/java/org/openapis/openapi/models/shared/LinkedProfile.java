@@ -20,6 +20,7 @@ public class LinkedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bio")
     public String bio;
+
     public LinkedProfile withBio(String bio) {
         this.bio = bio;
         return this;
@@ -28,6 +29,7 @@ public class LinkedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public LinkedProfile withEmail(String email) {
         this.email = email;
         return this;
@@ -36,6 +38,7 @@ public class LinkedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LinkedProfile withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +47,7 @@ public class LinkedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LinkedProfile withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class LinkedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("picture")
     public String picture;
+
     public LinkedProfile withPicture(String picture) {
         this.picture = picture;
         return this;
@@ -60,6 +65,7 @@ public class LinkedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public String profile;
+
     public LinkedProfile withProfile(String profile) {
         this.profile = profile;
         return this;
@@ -70,9 +76,11 @@ public class LinkedProfile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registered")
     public OffsetDateTime registered;
+
     public LinkedProfile withRegistered(OffsetDateTime registered) {
         this.registered = registered;
         return this;
     }
     
+    public LinkedProfile(){}
 }

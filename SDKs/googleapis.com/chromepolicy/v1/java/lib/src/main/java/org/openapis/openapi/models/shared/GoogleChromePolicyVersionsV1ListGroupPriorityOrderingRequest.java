@@ -13,13 +13,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest {
     /**
-     * Required. The namespace of the policy type for the request.
+     * The namespace of the policy type for the request.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyNamespace")
     public String policyNamespace;
+
     public GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest withPolicyNamespace(String policyNamespace) {
         this.policyNamespace = policyNamespace;
+        return this;
+    }
+    
+    /**
+     * The schema name of the policy for the request.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("policySchema")
+    public String policySchema;
+
+    public GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest withPolicySchema(String policySchema) {
+        this.policySchema = policySchema;
         return this;
     }
     
@@ -29,9 +42,11 @@ public class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTargetKey")
     public GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey;
+
     public GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest withPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey) {
         this.policyTargetKey = policyTargetKey;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest(){}
 }

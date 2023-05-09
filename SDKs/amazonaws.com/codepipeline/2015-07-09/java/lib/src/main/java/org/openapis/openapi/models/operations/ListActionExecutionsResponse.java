@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListActionExecutionsResponse {
     
     public String contentType;
+
     public ListActionExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListActionExecutionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListActionExecutionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListActionExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListActionExecutionsOutput listActionExecutionsOutput;
+
     public ListActionExecutionsResponse withListActionExecutionsOutput(org.openapis.openapi.models.shared.ListActionExecutionsOutput listActionExecutionsOutput) {
         this.listActionExecutionsOutput = listActionExecutionsOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListActionExecutionsResponse {
      */
     
     public Object pipelineExecutionNotFoundException;
+
     public ListActionExecutionsResponse withPipelineExecutionNotFoundException(Object pipelineExecutionNotFoundException) {
         this.pipelineExecutionNotFoundException = pipelineExecutionNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListActionExecutionsResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public ListActionExecutionsResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListActionExecutionsResponse {
     
     
     public Integer statusCode;
+
     public ListActionExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListActionExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListActionExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListActionExecutionsResponse {
      */
     
     public Object validationException;
+
     public ListActionExecutionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListActionExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

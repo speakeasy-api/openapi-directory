@@ -15,6 +15,7 @@ public class GetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelArn")
     public String channelArn;
+
     public GetChannelResponse withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -23,6 +24,7 @@ public class GetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public Destination[] destinations;
+
     public GetChannelResponse withDestinations(Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -31,6 +33,7 @@ public class GetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IngestionStatus")
     public IngestionStatus ingestionStatus;
+
     public GetChannelResponse withIngestionStatus(IngestionStatus ingestionStatus) {
         this.ingestionStatus = ingestionStatus;
         return this;
@@ -39,6 +42,7 @@ public class GetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetChannelResponse withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class GetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public GetChannelResponse withSource(String source) {
         this.source = source;
         return this;
@@ -55,9 +60,11 @@ public class GetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceConfig")
     public SourceConfig sourceConfig;
+
     public GetChannelResponse withSourceConfig(SourceConfig sourceConfig) {
         this.sourceConfig = sourceConfig;
         return this;
     }
     
+    public GetChannelResponse(){}
 }

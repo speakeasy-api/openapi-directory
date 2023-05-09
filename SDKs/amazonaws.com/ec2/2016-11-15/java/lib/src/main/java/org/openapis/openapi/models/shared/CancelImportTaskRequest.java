@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CancelImportTaskRequest {
     
     public String cancelReason;
+
     public CancelImportTaskRequest withCancelReason(String cancelReason) {
         this.cancelReason = cancelReason;
         return this;
@@ -16,6 +17,7 @@ public class CancelImportTaskRequest {
     
     
     public Boolean dryRun;
+
     public CancelImportTaskRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,11 @@ public class CancelImportTaskRequest {
     
     
     public String importTaskId;
+
     public CancelImportTaskRequest withImportTaskId(String importTaskId) {
         this.importTaskId = importTaskId;
         return this;
     }
     
+    public CancelImportTaskRequest(){}
 }

@@ -15,9 +15,11 @@ public class CompleteWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public CompleteWorkflowExecutionDecisionAttributes withResult(String result) {
         this.result = result;
         return this;
     }
     
+    public CompleteWorkflowExecutionDecisionAttributes(){}
 }

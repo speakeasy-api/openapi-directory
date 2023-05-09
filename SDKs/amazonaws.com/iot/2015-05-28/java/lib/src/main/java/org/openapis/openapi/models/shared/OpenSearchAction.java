@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpenSearchAction {
     @JsonProperty("endpoint")
     public String endpoint;
+
     public OpenSearchAction withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -19,6 +20,7 @@ public class OpenSearchAction {
     
     @JsonProperty("id")
     public String id;
+
     public OpenSearchAction withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class OpenSearchAction {
     
     @JsonProperty("index")
     public String index;
+
     public OpenSearchAction withIndex(String index) {
         this.index = index;
         return this;
@@ -33,6 +36,7 @@ public class OpenSearchAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public OpenSearchAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -40,9 +44,17 @@ public class OpenSearchAction {
     
     @JsonProperty("type")
     public String type;
+
     public OpenSearchAction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public OpenSearchAction(@JsonProperty("endpoint") String endpoint, @JsonProperty("id") String id, @JsonProperty("index") String index, @JsonProperty("roleArn") String roleArn, @JsonProperty("type") String type) {
+        this.endpoint = endpoint;
+        this.id = id;
+        this.index = index;
+        this.roleArn = roleArn;
+        this.type = type;
+  }
 }

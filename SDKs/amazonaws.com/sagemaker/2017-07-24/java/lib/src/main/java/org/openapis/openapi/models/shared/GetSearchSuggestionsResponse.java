@@ -15,9 +15,11 @@ public class GetSearchSuggestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertyNameSuggestions")
     public PropertyNameSuggestion[] propertyNameSuggestions;
+
     public GetSearchSuggestionsResponse withPropertyNameSuggestions(PropertyNameSuggestion[] propertyNameSuggestions) {
         this.propertyNameSuggestions = propertyNameSuggestions;
         return this;
     }
     
+    public GetSearchSuggestionsResponse(){}
 }

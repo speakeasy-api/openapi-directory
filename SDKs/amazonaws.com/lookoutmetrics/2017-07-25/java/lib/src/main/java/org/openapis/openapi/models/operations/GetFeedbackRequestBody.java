@@ -14,6 +14,7 @@ public class GetFeedbackRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public GetFeedbackRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -24,6 +25,7 @@ public class GetFeedbackRequestBody {
      */
     @JsonProperty("AnomalyGroupTimeSeriesFeedback")
     public GetFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback anomalyGroupTimeSeriesFeedback;
+
     public GetFeedbackRequestBody withAnomalyGroupTimeSeriesFeedback(GetFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback anomalyGroupTimeSeriesFeedback) {
         this.anomalyGroupTimeSeriesFeedback = anomalyGroupTimeSeriesFeedback;
         return this;
@@ -35,6 +37,7 @@ public class GetFeedbackRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetFeedbackRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -46,9 +49,14 @@ public class GetFeedbackRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetFeedbackRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetFeedbackRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn, @JsonProperty("AnomalyGroupTimeSeriesFeedback") GetFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback anomalyGroupTimeSeriesFeedback) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+        this.anomalyGroupTimeSeriesFeedback = anomalyGroupTimeSeriesFeedback;
+  }
 }

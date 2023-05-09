@@ -18,9 +18,11 @@ public class ExecuteSqlQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, Object>[] results;
+
     public ExecuteSqlQueryResponse withResults(java.util.Map<String, Object>[] results) {
         this.results = results;
         return this;
     }
     
+    public ExecuteSqlQueryResponse(){}
 }

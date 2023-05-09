@@ -15,6 +15,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayProperties")
     public ArrayPropertiesSummary arrayProperties;
+
     public JobSummary withArrayProperties(ArrayPropertiesSummary arrayProperties) {
         this.arrayProperties = arrayProperties;
         return this;
@@ -23,6 +24,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public ContainerSummary container;
+
     public JobSummary withContainer(ContainerSummary container) {
         this.container = container;
         return this;
@@ -31,6 +33,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public JobSummary withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +42,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public JobSummary withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -47,6 +51,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDefinition")
     public String jobDefinition;
+
     public JobSummary withJobDefinition(String jobDefinition) {
         this.jobDefinition = jobDefinition;
         return this;
@@ -54,6 +59,7 @@ public class JobSummary {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public JobSummary withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -61,6 +67,7 @@ public class JobSummary {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public JobSummary withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -69,6 +76,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeProperties")
     public NodePropertiesSummary nodeProperties;
+
     public JobSummary withNodeProperties(NodePropertiesSummary nodeProperties) {
         this.nodeProperties = nodeProperties;
         return this;
@@ -77,6 +85,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedAt")
     public Long startedAt;
+
     public JobSummary withStartedAt(Long startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -85,6 +94,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public JobSummary withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -93,6 +103,7 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public JobSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -101,9 +112,14 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stoppedAt")
     public Long stoppedAt;
+
     public JobSummary withStoppedAt(Long stoppedAt) {
         this.stoppedAt = stoppedAt;
         return this;
     }
     
+    public JobSummary(@JsonProperty("jobId") String jobId, @JsonProperty("jobName") String jobName) {
+        this.jobId = jobId;
+        this.jobName = jobName;
+  }
 }

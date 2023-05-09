@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompileRequest {
@@ -12,6 +13,7 @@ public class CompileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CompileRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class CompileRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CompileRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -32,6 +35,7 @@ public class CompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doc-file-name")
     public String docFileName;
+
     public CompileRequest withDocFileName(String docFileName) {
         this.docFileName = docFileName;
         return this;
@@ -42,6 +46,7 @@ public class CompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doc-url-expires-in")
     public Long docUrlExpiresIn;
+
     public CompileRequest withDocUrlExpiresIn(Long docUrlExpiresIn) {
         this.docUrlExpiresIn = docUrlExpiresIn;
         return this;
@@ -52,6 +57,7 @@ public class CompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latex-compiler")
     public CompileLatexCompilerEnum latexCompiler;
+
     public CompileRequest withLatexCompiler(CompileLatexCompilerEnum latexCompiler) {
         this.latexCompiler = latexCompiler;
         return this;
@@ -62,6 +68,7 @@ public class CompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latex-runs ")
     public Long latexRuns;
+
     public CompileRequest withLatexRuns(Long latexRuns) {
         this.latexRuns = latexRuns;
         return this;
@@ -72,6 +79,7 @@ public class CompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=main-file-name")
     public String mainFileName;
+
     public CompileRequest withMainFileName(String mainFileName) {
         this.mainFileName = mainFileName;
         return this;
@@ -82,9 +90,14 @@ public class CompileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-token")
     public String templateToken;
+
     public CompileRequest withTemplateToken(String templateToken) {
         this.templateToken = templateToken;
         return this;
     }
     
+    public CompileRequest(@JsonProperty("Content-Type") String contentType, @JsonProperty("template-token") String templateToken) {
+        this.contentType = contentType;
+        this.templateToken = templateToken;
+  }
 }

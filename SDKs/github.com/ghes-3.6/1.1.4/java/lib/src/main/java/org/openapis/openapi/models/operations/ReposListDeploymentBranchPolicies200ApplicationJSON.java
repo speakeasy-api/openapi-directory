@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReposListDeploymentBranchPolicies200ApplicationJSON {
     @JsonProperty("branch_policies")
     public org.openapis.openapi.models.shared.DeploymentBranchPolicy[] branchPolicies;
+
     public ReposListDeploymentBranchPolicies200ApplicationJSON withBranchPolicies(org.openapis.openapi.models.shared.DeploymentBranchPolicy[] branchPolicies) {
         this.branchPolicies = branchPolicies;
         return this;
@@ -22,9 +23,14 @@ public class ReposListDeploymentBranchPolicies200ApplicationJSON {
      */
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ReposListDeploymentBranchPolicies200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ReposListDeploymentBranchPolicies200ApplicationJSON(@JsonProperty("branch_policies") org.openapis.openapi.models.shared.DeploymentBranchPolicy[] branchPolicies, @JsonProperty("total_count") Long totalCount) {
+        this.branchPolicies = branchPolicies;
+        this.totalCount = totalCount;
+  }
 }

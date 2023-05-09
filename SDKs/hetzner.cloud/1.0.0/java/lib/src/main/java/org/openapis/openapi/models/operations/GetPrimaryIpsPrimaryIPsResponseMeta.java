@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPrimaryIpsPrimaryIPsResponseMeta {
     @JsonProperty("pagination")
     public GetPrimaryIpsPrimaryIPsResponseMetaPagination pagination;
+
     public GetPrimaryIpsPrimaryIPsResponseMeta withPagination(GetPrimaryIpsPrimaryIPsResponseMetaPagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public GetPrimaryIpsPrimaryIPsResponseMeta(@JsonProperty("pagination") GetPrimaryIpsPrimaryIPsResponseMetaPagination pagination) {
+        this.pagination = pagination;
+  }
 }

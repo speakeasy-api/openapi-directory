@@ -15,6 +15,7 @@ public class CommentsForComparedCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afterBlobId")
     public String afterBlobId;
+
     public CommentsForComparedCommit withAfterBlobId(String afterBlobId) {
         this.afterBlobId = afterBlobId;
         return this;
@@ -23,6 +24,7 @@ public class CommentsForComparedCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afterCommitId")
     public String afterCommitId;
+
     public CommentsForComparedCommit withAfterCommitId(String afterCommitId) {
         this.afterCommitId = afterCommitId;
         return this;
@@ -31,6 +33,7 @@ public class CommentsForComparedCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforeBlobId")
     public String beforeBlobId;
+
     public CommentsForComparedCommit withBeforeBlobId(String beforeBlobId) {
         this.beforeBlobId = beforeBlobId;
         return this;
@@ -39,6 +42,7 @@ public class CommentsForComparedCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforeCommitId")
     public String beforeCommitId;
+
     public CommentsForComparedCommit withBeforeCommitId(String beforeCommitId) {
         this.beforeCommitId = beforeCommitId;
         return this;
@@ -47,6 +51,7 @@ public class CommentsForComparedCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public Comment[] comments;
+
     public CommentsForComparedCommit withComments(Comment[] comments) {
         this.comments = comments;
         return this;
@@ -55,6 +60,7 @@ public class CommentsForComparedCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public CommentsForComparedCommit withLocation(Location location) {
         this.location = location;
         return this;
@@ -63,9 +69,11 @@ public class CommentsForComparedCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CommentsForComparedCommit withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public CommentsForComparedCommit(){}
 }

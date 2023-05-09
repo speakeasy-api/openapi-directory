@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGoalRelationshipsRequest {
@@ -14,6 +15,7 @@ public class GetGoalRelationshipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetGoalRelationshipsRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetGoalRelationshipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetGoalRelationshipsRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,6 +38,7 @@ public class GetGoalRelationshipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_subtype")
     public String resourceSubtype;
+
     public GetGoalRelationshipsRequest withResourceSubtype(String resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -45,9 +49,13 @@ public class GetGoalRelationshipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supported_goal")
     public String supportedGoal;
+
     public GetGoalRelationshipsRequest withSupportedGoal(String supportedGoal) {
         this.supportedGoal = supportedGoal;
         return this;
     }
     
+    public GetGoalRelationshipsRequest(@JsonProperty("supported_goal") String supportedGoal) {
+        this.supportedGoal = supportedGoal;
+  }
 }

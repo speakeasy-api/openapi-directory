@@ -15,6 +15,7 @@ public class VectorEnrichmentJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MapMatchingConfig")
     public MapMatchingConfig mapMatchingConfig;
+
     public VectorEnrichmentJobConfig withMapMatchingConfig(MapMatchingConfig mapMatchingConfig) {
         this.mapMatchingConfig = mapMatchingConfig;
         return this;
@@ -23,9 +24,11 @@ public class VectorEnrichmentJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReverseGeocodingConfig")
     public ReverseGeocodingConfig reverseGeocodingConfig;
+
     public VectorEnrichmentJobConfig withReverseGeocodingConfig(ReverseGeocodingConfig reverseGeocodingConfig) {
         this.reverseGeocodingConfig = reverseGeocodingConfig;
         return this;
     }
     
+    public VectorEnrichmentJobConfig(){}
 }

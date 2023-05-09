@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteJobTemplateResponse {
     
     public String contentType;
+
     public DeleteJobTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteJobTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteJobTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteJobTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteJobTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteJobTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteJobTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteJobTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteJobTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteJobTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteJobTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteJobTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteJobTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteJobTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

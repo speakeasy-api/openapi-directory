@@ -18,9 +18,11 @@ public class BodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public StructuralElementInput[] content;
+
     public BodyInput withContent(StructuralElementInput[] content) {
         this.content = content;
         return this;
     }
     
+    public BodyInput(){}
 }

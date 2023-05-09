@@ -15,9 +15,11 @@ public class CustomPluginLocationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public S3LocationDescription s3Location;
+
     public CustomPluginLocationDescription withS3Location(S3LocationDescription s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public CustomPluginLocationDescription(){}
 }

@@ -18,6 +18,7 @@ public class VexAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cve")
     public String cve;
+
     public VexAssessment withCve(String cve) {
         this.cve = cve;
         return this;
@@ -29,6 +30,7 @@ public class VexAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impacts")
     public String[] impacts;
+
     public VexAssessment withImpacts(String[] impacts) {
         this.impacts = impacts;
         return this;
@@ -40,6 +42,7 @@ public class VexAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("justification")
     public Justification justification;
+
     public VexAssessment withJustification(Justification justification) {
         this.justification = justification;
         return this;
@@ -51,6 +54,7 @@ public class VexAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noteName")
     public String noteName;
+
     public VexAssessment withNoteName(String noteName) {
         this.noteName = noteName;
         return this;
@@ -62,6 +66,7 @@ public class VexAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedUris")
     public RelatedUrl[] relatedUris;
+
     public VexAssessment withRelatedUris(RelatedUrl[] relatedUris) {
         this.relatedUris = relatedUris;
         return this;
@@ -73,6 +78,7 @@ public class VexAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediations")
     public Remediation[] remediations;
+
     public VexAssessment withRemediations(Remediation[] remediations) {
         this.remediations = remediations;
         return this;
@@ -84,9 +90,11 @@ public class VexAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public VexAssessmentStateEnum state;
+
     public VexAssessment withState(VexAssessmentStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public VexAssessment(){}
 }

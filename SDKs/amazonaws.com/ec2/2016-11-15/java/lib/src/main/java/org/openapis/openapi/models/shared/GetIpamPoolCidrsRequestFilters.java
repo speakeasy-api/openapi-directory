@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamPoolCidrsRequestFilters {
     
     public String name;
+
     public GetIpamPoolCidrsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamPoolCidrsRequestFilters {
     
     
     public String[] values;
+
     public GetIpamPoolCidrsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GetIpamPoolCidrsRequestFilters(){}
 }

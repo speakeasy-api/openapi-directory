@@ -15,9 +15,11 @@ public class InstantSnapshotResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageSizeBytes")
     public String storageSizeBytes;
+
     public InstantSnapshotResourceStatus withStorageSizeBytes(String storageSizeBytes) {
         this.storageSizeBytes = storageSizeBytes;
         return this;
     }
     
+    public InstantSnapshotResourceStatus(){}
 }

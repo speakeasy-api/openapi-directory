@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProvisionalConfiguration {
     @JsonProperty("MaxTimeToLiveInMinutes")
     public Long maxTimeToLiveInMinutes;
+
     public ProvisionalConfiguration withMaxTimeToLiveInMinutes(Long maxTimeToLiveInMinutes) {
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
         return this;
     }
     
+    public ProvisionalConfiguration(@JsonProperty("MaxTimeToLiveInMinutes") Long maxTimeToLiveInMinutes) {
+        this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
+  }
 }

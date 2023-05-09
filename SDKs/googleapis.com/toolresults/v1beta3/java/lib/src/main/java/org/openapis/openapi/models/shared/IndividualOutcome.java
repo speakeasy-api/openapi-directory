@@ -18,6 +18,7 @@ public class IndividualOutcome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multistepNumber")
     public Integer multistepNumber;
+
     public IndividualOutcome withMultistepNumber(Integer multistepNumber) {
         this.multistepNumber = multistepNumber;
         return this;
@@ -26,6 +27,7 @@ public class IndividualOutcome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcomeSummary")
     public IndividualOutcomeOutcomeSummaryEnum outcomeSummary;
+
     public IndividualOutcome withOutcomeSummary(IndividualOutcomeOutcomeSummaryEnum outcomeSummary) {
         this.outcomeSummary = outcomeSummary;
         return this;
@@ -37,6 +39,7 @@ public class IndividualOutcome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runDuration")
     public Duration runDuration;
+
     public IndividualOutcome withRunDuration(Duration runDuration) {
         this.runDuration = runDuration;
         return this;
@@ -45,9 +48,11 @@ public class IndividualOutcome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepId")
     public String stepId;
+
     public IndividualOutcome withStepId(String stepId) {
         this.stepId = stepId;
         return this;
     }
     
+    public IndividualOutcome(){}
 }

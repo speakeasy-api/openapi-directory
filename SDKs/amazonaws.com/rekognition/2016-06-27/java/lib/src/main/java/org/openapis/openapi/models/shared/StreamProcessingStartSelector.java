@@ -15,9 +15,11 @@ public class StreamProcessingStartSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KVSStreamStartSelector")
     public KinesisVideoStreamStartSelector kvsStreamStartSelector;
+
     public StreamProcessingStartSelector withKVSStreamStartSelector(KinesisVideoStreamStartSelector kvsStreamStartSelector) {
         this.kvsStreamStartSelector = kvsStreamStartSelector;
         return this;
     }
     
+    public StreamProcessingStartSelector(){}
 }

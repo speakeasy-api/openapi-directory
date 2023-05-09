@@ -14,6 +14,7 @@ public class CreateGatewayRequestBody {
      */
     @JsonProperty("gatewayName")
     public String gatewayName;
+
     public CreateGatewayRequestBody withGatewayName(String gatewayName) {
         this.gatewayName = gatewayName;
         return this;
@@ -24,6 +25,7 @@ public class CreateGatewayRequestBody {
      */
     @JsonProperty("gatewayPlatform")
     public CreateGatewayRequestBodyGatewayPlatform gatewayPlatform;
+
     public CreateGatewayRequestBody withGatewayPlatform(CreateGatewayRequestBodyGatewayPlatform gatewayPlatform) {
         this.gatewayPlatform = gatewayPlatform;
         return this;
@@ -35,9 +37,14 @@ public class CreateGatewayRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateGatewayRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateGatewayRequestBody(@JsonProperty("gatewayName") String gatewayName, @JsonProperty("gatewayPlatform") CreateGatewayRequestBodyGatewayPlatform gatewayPlatform) {
+        this.gatewayName = gatewayName;
+        this.gatewayPlatform = gatewayPlatform;
+  }
 }

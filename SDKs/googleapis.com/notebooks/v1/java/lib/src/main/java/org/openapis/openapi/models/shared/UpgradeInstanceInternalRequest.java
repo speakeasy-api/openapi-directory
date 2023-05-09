@@ -18,6 +18,7 @@ public class UpgradeInstanceInternalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UpgradeInstanceInternalRequestTypeEnum type;
+
     public UpgradeInstanceInternalRequest withType(UpgradeInstanceInternalRequestTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class UpgradeInstanceInternalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmId")
     public String vmId;
+
     public UpgradeInstanceInternalRequest withVmId(String vmId) {
         this.vmId = vmId;
         return this;
     }
     
+    public UpgradeInstanceInternalRequest(){}
 }

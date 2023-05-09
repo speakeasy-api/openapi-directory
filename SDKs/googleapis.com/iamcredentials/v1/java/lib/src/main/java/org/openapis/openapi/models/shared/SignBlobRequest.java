@@ -15,6 +15,7 @@ public class SignBlobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegates")
     public String[] delegates;
+
     public SignBlobRequest withDelegates(String[] delegates) {
         this.delegates = delegates;
         return this;
@@ -26,9 +27,11 @@ public class SignBlobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public SignBlobRequest withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public SignBlobRequest(){}
 }

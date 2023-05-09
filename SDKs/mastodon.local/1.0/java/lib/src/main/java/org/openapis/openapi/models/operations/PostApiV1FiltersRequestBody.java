@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostApiV1FiltersRequestBody {
     /**
@@ -12,6 +12,7 @@ public class PostApiV1FiltersRequestBody {
      */
     
     public PostApiV1FiltersRequestBodyContextEnum[] context;
+
     public PostApiV1FiltersRequestBody withContext(PostApiV1FiltersRequestBodyContextEnum[] context) {
         this.context = context;
         return this;
@@ -22,6 +23,7 @@ public class PostApiV1FiltersRequestBody {
      */
     
     public Long expiresIn;
+
     public PostApiV1FiltersRequestBody withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -32,6 +34,7 @@ public class PostApiV1FiltersRequestBody {
      */
     
     public Boolean irreversible;
+
     public PostApiV1FiltersRequestBody withIrreversible(Boolean irreversible) {
         this.irreversible = irreversible;
         return this;
@@ -42,6 +45,7 @@ public class PostApiV1FiltersRequestBody {
      */
     
     public String phrase;
+
     public PostApiV1FiltersRequestBody withPhrase(String phrase) {
         this.phrase = phrase;
         return this;
@@ -52,9 +56,14 @@ public class PostApiV1FiltersRequestBody {
      */
     
     public Boolean wholeWord;
+
     public PostApiV1FiltersRequestBody withWholeWord(Boolean wholeWord) {
         this.wholeWord = wholeWord;
         return this;
     }
     
+    public PostApiV1FiltersRequestBody(@JsonProperty("context") PostApiV1FiltersRequestBodyContextEnum[] context, @JsonProperty("phrase") String phrase) {
+        this.context = context;
+        this.phrase = phrase;
+  }
 }

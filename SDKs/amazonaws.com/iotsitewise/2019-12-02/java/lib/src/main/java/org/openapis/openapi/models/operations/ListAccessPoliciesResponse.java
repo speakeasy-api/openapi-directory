@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccessPoliciesResponse {
     
     public String contentType;
+
     public ListAccessPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAccessPoliciesResponse {
      */
     
     public Object internalFailureException;
+
     public ListAccessPoliciesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListAccessPoliciesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAccessPoliciesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAccessPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccessPoliciesResponse listAccessPoliciesResponse;
+
     public ListAccessPoliciesResponse withListAccessPoliciesResponse(org.openapis.openapi.models.shared.ListAccessPoliciesResponse listAccessPoliciesResponse) {
         this.listAccessPoliciesResponse = listAccessPoliciesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAccessPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ListAccessPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAccessPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccessPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListAccessPoliciesResponse {
      */
     
     public Object throttlingException;
+
     public ListAccessPoliciesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListAccessPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

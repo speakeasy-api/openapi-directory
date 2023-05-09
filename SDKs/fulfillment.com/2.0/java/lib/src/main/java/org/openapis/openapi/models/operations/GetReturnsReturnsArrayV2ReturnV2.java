@@ -17,6 +17,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public GetReturnsReturnsArrayV2ReturnV2 withComments(String comments) {
         this.comments = comments;
         return this;
@@ -26,6 +27,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetReturnsReturnsArrayV2ReturnV2 withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -33,6 +35,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     
     @JsonProperty("createdBy")
     public org.openapis.openapi.models.shared.OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy createdBy;
+
     public GetReturnsReturnsArrayV2ReturnV2 withCreatedBy(org.openapis.openapi.models.shared.OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -40,6 +43,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     
     @JsonProperty("id")
     public Long id;
+
     public GetReturnsReturnsArrayV2ReturnV2 withId(Long id) {
         this.id = id;
         return this;
@@ -48,6 +52,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public GetReturnsReturnsArrayV2ReturnV2Order order;
+
     public GetReturnsReturnsArrayV2ReturnV2 withOrder(GetReturnsReturnsArrayV2ReturnV2Order order) {
         this.order = order;
         return this;
@@ -55,6 +60,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     
     @JsonProperty("reason")
     public GetReturnsReturnsArrayV2ReturnV2Reason reason;
+
     public GetReturnsReturnsArrayV2ReturnV2 withReason(GetReturnsReturnsArrayV2ReturnV2Reason reason) {
         this.reason = reason;
         return this;
@@ -63,6 +69,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnedBy")
     public String returnedBy;
+
     public GetReturnsReturnsArrayV2ReturnV2 withReturnedBy(String returnedBy) {
         this.returnedBy = returnedBy;
         return this;
@@ -71,6 +78,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rmaItems")
     public GetReturnsReturnsArrayV2ReturnV2RmaItemV2[] rmaItems;
+
     public GetReturnsReturnsArrayV2ReturnV2 withRmaItems(GetReturnsReturnsArrayV2ReturnV2RmaItemV2[] rmaItems) {
         this.rmaItems = rmaItems;
         return this;
@@ -79,6 +87,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rmaNumber")
     public String rmaNumber;
+
     public GetReturnsReturnsArrayV2ReturnV2 withRmaNumber(String rmaNumber) {
         this.rmaNumber = rmaNumber;
         return this;
@@ -86,6 +95,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     
     @JsonProperty("status")
     public GetReturnsReturnsArrayV2ReturnV2Status status;
+
     public GetReturnsReturnsArrayV2ReturnV2 withStatus(GetReturnsReturnsArrayV2ReturnV2Status status) {
         this.status = status;
         return this;
@@ -95,6 +105,7 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public GetReturnsReturnsArrayV2ReturnV2 withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -102,9 +113,19 @@ public class GetReturnsReturnsArrayV2ReturnV2 {
     
     @JsonProperty("updatedBy")
     public GetReturnsReturnsArrayV2ReturnV2UserV2 updatedBy;
+
     public GetReturnsReturnsArrayV2ReturnV2 withUpdatedBy(GetReturnsReturnsArrayV2ReturnV2UserV2 updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public GetReturnsReturnsArrayV2ReturnV2(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("createdBy") org.openapis.openapi.models.shared.OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy createdBy, @JsonProperty("id") Long id, @JsonProperty("reason") GetReturnsReturnsArrayV2ReturnV2Reason reason, @JsonProperty("status") GetReturnsReturnsArrayV2ReturnV2Status status, @JsonProperty("updatedAt") OffsetDateTime updatedAt, @JsonProperty("updatedBy") GetReturnsReturnsArrayV2ReturnV2UserV2 updatedBy) {
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
+        this.id = id;
+        this.reason = reason;
+        this.status = status;
+        this.updatedAt = updatedAt;
+        this.updatedBy = updatedBy;
+  }
 }

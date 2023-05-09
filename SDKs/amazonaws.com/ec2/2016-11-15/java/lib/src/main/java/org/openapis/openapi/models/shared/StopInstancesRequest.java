@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StopInstancesRequest {
     
     public Boolean dryRun;
+
     public StopInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class StopInstancesRequest {
     
     
     public Boolean force;
+
     public StopInstancesRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -23,6 +25,7 @@ public class StopInstancesRequest {
     
     
     public Boolean hibernate;
+
     public StopInstancesRequest withHibernate(Boolean hibernate) {
         this.hibernate = hibernate;
         return this;
@@ -30,9 +33,13 @@ public class StopInstancesRequest {
     
     
     public String[] instanceIds;
+
     public StopInstancesRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
     
+    public StopInstancesRequest(@JsonProperty("InstanceIds") String[] instanceIds) {
+        this.instanceIds = instanceIds;
+  }
 }

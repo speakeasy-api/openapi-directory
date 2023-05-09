@@ -18,6 +18,7 @@ public class SystemParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpHeader")
     public String httpHeader;
+
     public SystemParameter withHttpHeader(String httpHeader) {
         this.httpHeader = httpHeader;
         return this;
@@ -29,6 +30,7 @@ public class SystemParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SystemParameter withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class SystemParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlQueryParameter")
     public String urlQueryParameter;
+
     public SystemParameter withUrlQueryParameter(String urlQueryParameter) {
         this.urlQueryParameter = urlQueryParameter;
         return this;
     }
     
+    public SystemParameter(){}
 }

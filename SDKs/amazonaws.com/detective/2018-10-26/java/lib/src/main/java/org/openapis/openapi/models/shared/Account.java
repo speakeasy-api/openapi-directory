@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Account {
     @JsonProperty("AccountId")
     public String accountId;
+
     public Account withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,9 +20,14 @@ public class Account {
     
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public Account withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public Account(@JsonProperty("AccountId") String accountId, @JsonProperty("EmailAddress") String emailAddress) {
+        this.accountId = accountId;
+        this.emailAddress = emailAddress;
+  }
 }

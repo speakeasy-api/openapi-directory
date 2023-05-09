@@ -12,6 +12,7 @@ public class PlayMediaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity")
     public PlayMediaControlActivity activity;
+
     public PlayMediaControl withActivity(PlayMediaControlActivity activity) {
         this.activity = activity;
         return this;
@@ -20,6 +21,7 @@ public class PlayMediaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commands")
     public PlayMediaControlCommandSet commands;
+
     public PlayMediaControl withCommands(PlayMediaControlCommandSet commands) {
         this.commands = commands;
         return this;
@@ -27,9 +29,13 @@ public class PlayMediaControl {
     
     @JsonProperty("scheme")
     public PlayMediaControlSchemeEnum scheme;
+
     public PlayMediaControl withScheme(PlayMediaControlSchemeEnum scheme) {
         this.scheme = scheme;
         return this;
     }
     
+    public PlayMediaControl(@JsonProperty("scheme") PlayMediaControlSchemeEnum scheme) {
+        this.scheme = scheme;
+  }
 }

@@ -18,9 +18,11 @@ public class AddBandingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandedRange")
     public BandedRange bandedRange;
+
     public AddBandingResponse withBandedRange(BandedRange bandedRange) {
         this.bandedRange = bandedRange;
         return this;
     }
     
+    public AddBandingResponse(){}
 }

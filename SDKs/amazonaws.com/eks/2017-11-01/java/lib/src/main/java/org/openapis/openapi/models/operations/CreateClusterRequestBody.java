@@ -15,6 +15,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateClusterRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfig")
     public org.openapis.openapi.models.shared.EncryptionConfig[] encryptionConfig;
+
     public CreateClusterRequestBody withEncryptionConfig(org.openapis.openapi.models.shared.EncryptionConfig[] encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -37,6 +39,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubernetesNetworkConfig")
     public CreateClusterRequestBodyKubernetesNetworkConfig kubernetesNetworkConfig;
+
     public CreateClusterRequestBody withKubernetesNetworkConfig(CreateClusterRequestBodyKubernetesNetworkConfig kubernetesNetworkConfig) {
         this.kubernetesNetworkConfig = kubernetesNetworkConfig;
         return this;
@@ -48,6 +51,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public CreateClusterRequestBodyLogging logging;
+
     public CreateClusterRequestBody withLogging(CreateClusterRequestBodyLogging logging) {
         this.logging = logging;
         return this;
@@ -58,6 +62,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateClusterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +74,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outpostConfig")
     public CreateClusterRequestBodyOutpostConfig outpostConfig;
+
     public CreateClusterRequestBody withOutpostConfig(CreateClusterRequestBodyOutpostConfig outpostConfig) {
         this.outpostConfig = outpostConfig;
         return this;
@@ -79,6 +85,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("resourcesVpcConfig")
     public CreateClusterRequestBodyResourcesVpcConfig resourcesVpcConfig;
+
     public CreateClusterRequestBody withResourcesVpcConfig(CreateClusterRequestBodyResourcesVpcConfig resourcesVpcConfig) {
         this.resourcesVpcConfig = resourcesVpcConfig;
         return this;
@@ -89,6 +96,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateClusterRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -100,6 +108,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateClusterRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -111,9 +120,15 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public CreateClusterRequestBody withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CreateClusterRequestBody(@JsonProperty("name") String name, @JsonProperty("resourcesVpcConfig") CreateClusterRequestBodyResourcesVpcConfig resourcesVpcConfig, @JsonProperty("roleArn") String roleArn) {
+        this.name = name;
+        this.resourcesVpcConfig = resourcesVpcConfig;
+        this.roleArn = roleArn;
+  }
 }

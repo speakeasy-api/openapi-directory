@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateDomainEndpointOptionsRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;UpdateDomainEndpointOptions&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the domain endpoint options.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateDomainEndpointOptionsRequest {
     
     public DomainEndpointOptions domainEndpointOptions;
+
     public UpdateDomainEndpointOptionsRequest withDomainEndpointOptions(DomainEndpointOptions domainEndpointOptions) {
         this.domainEndpointOptions = domainEndpointOptions;
         return this;
@@ -19,9 +20,14 @@ public class UpdateDomainEndpointOptionsRequest {
     
     
     public String domainName;
+
     public UpdateDomainEndpointOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public UpdateDomainEndpointOptionsRequest(@JsonProperty("DomainEndpointOptions") DomainEndpointOptions domainEndpointOptions, @JsonProperty("DomainName") String domainName) {
+        this.domainEndpointOptions = domainEndpointOptions;
+        this.domainName = domainName;
+  }
 }

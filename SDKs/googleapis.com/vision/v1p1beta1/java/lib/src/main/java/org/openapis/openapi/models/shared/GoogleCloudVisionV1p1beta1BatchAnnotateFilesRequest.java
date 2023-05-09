@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleCloudVisionV1p1beta1AnnotateFileRequest[] requests;
+
     public GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest withRequests(GoogleCloudVisionV1p1beta1AnnotateFileRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest(){}
 }

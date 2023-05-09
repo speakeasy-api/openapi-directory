@@ -12,6 +12,7 @@ public class ListTranscriptionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobNameContains")
     public String jobNameContains;
+
     public ListTranscriptionJobsRequest withJobNameContains(String jobNameContains) {
         this.jobNameContains = jobNameContains;
         return this;
@@ -20,6 +21,7 @@ public class ListTranscriptionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTranscriptionJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListTranscriptionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTranscriptionJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListTranscriptionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TranscriptionJobStatusEnum status;
+
     public ListTranscriptionJobsRequest withStatus(TranscriptionJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListTranscriptionJobsRequest(){}
 }

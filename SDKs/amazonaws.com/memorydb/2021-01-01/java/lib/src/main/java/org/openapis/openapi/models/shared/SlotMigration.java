@@ -15,9 +15,11 @@ public class SlotMigration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressPercentage")
     public Double progressPercentage;
+
     public SlotMigration withProgressPercentage(Double progressPercentage) {
         this.progressPercentage = progressPercentage;
         return this;
     }
     
+    public SlotMigration(){}
 }

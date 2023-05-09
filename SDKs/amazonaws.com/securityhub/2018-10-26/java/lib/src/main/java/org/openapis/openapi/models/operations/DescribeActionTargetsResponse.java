@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeActionTargetsResponse {
     
     public String contentType;
+
     public DescribeActionTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeActionTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeActionTargetsResponse describeActionTargetsResponse;
+
     public DescribeActionTargetsResponse withDescribeActionTargetsResponse(org.openapis.openapi.models.shared.DescribeActionTargetsResponse describeActionTargetsResponse) {
         this.describeActionTargetsResponse = describeActionTargetsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeActionTargetsResponse {
      */
     
     public Object internalException;
+
     public DescribeActionTargetsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeActionTargetsResponse {
      */
     
     public Object invalidAccessException;
+
     public DescribeActionTargetsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeActionTargetsResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeActionTargetsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeActionTargetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeActionTargetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeActionTargetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeActionTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeActionTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeActionTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeActionTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

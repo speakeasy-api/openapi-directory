@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletePortalResponse {
     @JsonProperty("portalStatus")
     public PortalStatus portalStatus;
+
     public DeletePortalResponse withPortalStatus(PortalStatus portalStatus) {
         this.portalStatus = portalStatus;
         return this;
     }
     
+    public DeletePortalResponse(@JsonProperty("portalStatus") PortalStatus portalStatus) {
+        this.portalStatus = portalStatus;
+  }
 }

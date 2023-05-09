@@ -60,11 +60,9 @@ public class CharityOrg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCharityOrgResponse res = new org.openapis.openapi.models.operations.GetCharityOrgResponse() {{
+        org.openapis.openapi.models.operations.GetCharityOrgResponse res = new org.openapis.openapi.models.operations.GetCharityOrgResponse(contentType, httpRes.statusCode()) {{
             charityOrg = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,11 +114,9 @@ public class CharityOrg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCharityOrgsResponse res = new org.openapis.openapi.models.operations.GetCharityOrgsResponse() {{
+        org.openapis.openapi.models.operations.GetCharityOrgsResponse res = new org.openapis.openapi.models.operations.GetCharityOrgsResponse(contentType, httpRes.statusCode()) {{
             charitySearchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

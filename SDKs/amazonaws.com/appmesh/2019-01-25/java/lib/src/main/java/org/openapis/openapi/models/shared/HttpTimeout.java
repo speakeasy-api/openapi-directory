@@ -15,6 +15,7 @@ public class HttpTimeout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idle")
     public Duration idle;
+
     public HttpTimeout withIdle(Duration idle) {
         this.idle = idle;
         return this;
@@ -23,9 +24,11 @@ public class HttpTimeout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perRequest")
     public Duration perRequest;
+
     public HttpTimeout withPerRequest(Duration perRequest) {
         this.perRequest = perRequest;
         return this;
     }
     
+    public HttpTimeout(){}
 }

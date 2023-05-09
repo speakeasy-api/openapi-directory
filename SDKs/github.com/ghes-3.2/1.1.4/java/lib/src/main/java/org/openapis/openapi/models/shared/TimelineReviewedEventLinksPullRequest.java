@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimelineReviewedEventLinksPullRequest {
     @JsonProperty("href")
     public String href;
+
     public TimelineReviewedEventLinksPullRequest withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public TimelineReviewedEventLinksPullRequest(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

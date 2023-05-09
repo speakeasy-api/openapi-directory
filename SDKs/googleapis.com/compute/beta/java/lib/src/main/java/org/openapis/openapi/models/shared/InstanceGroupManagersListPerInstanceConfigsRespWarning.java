@@ -18,6 +18,7 @@ public class InstanceGroupManagersListPerInstanceConfigsRespWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstanceGroupManagersListPerInstanceConfigsRespWarningCodeEnum code;
+
     public InstanceGroupManagersListPerInstanceConfigsRespWarning withCode(InstanceGroupManagersListPerInstanceConfigsRespWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupManagersListPerInstanceConfigsRespWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstanceGroupManagersListPerInstanceConfigsRespWarningData[] data;
+
     public InstanceGroupManagersListPerInstanceConfigsRespWarning withData(InstanceGroupManagersListPerInstanceConfigsRespWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstanceGroupManagersListPerInstanceConfigsRespWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstanceGroupManagersListPerInstanceConfigsRespWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceGroupManagersListPerInstanceConfigsRespWarning(){}
 }

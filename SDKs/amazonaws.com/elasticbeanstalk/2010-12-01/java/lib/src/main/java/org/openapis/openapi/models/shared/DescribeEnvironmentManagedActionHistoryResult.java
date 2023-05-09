@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEnvironmentManagedActionHistoryResult {
     
     public ManagedActionHistoryItem[] managedActionHistoryItems;
+
     public DescribeEnvironmentManagedActionHistoryResult withManagedActionHistoryItems(ManagedActionHistoryItem[] managedActionHistoryItems) {
         this.managedActionHistoryItems = managedActionHistoryItems;
         return this;
@@ -19,9 +20,11 @@ public class DescribeEnvironmentManagedActionHistoryResult {
     
     
     public String nextToken;
+
     public DescribeEnvironmentManagedActionHistoryResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEnvironmentManagedActionHistoryResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkClientEventsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
     public String clientId;
+
     public GetNetworkClientEventsRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -19,6 +21,7 @@ public class GetNetworkClientEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
     public String endingBefore;
+
     public GetNetworkClientEventsRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -26,6 +29,7 @@ public class GetNetworkClientEventsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkClientEventsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -36,6 +40,7 @@ public class GetNetworkClientEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetNetworkClientEventsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -46,9 +51,14 @@ public class GetNetworkClientEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
     public String startingAfter;
+
     public GetNetworkClientEventsRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
     }
     
+    public GetNetworkClientEventsRequest(@JsonProperty("clientId") String clientId, @JsonProperty("networkId") String networkId) {
+        this.clientId = clientId;
+        this.networkId = networkId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceleratedmobilepageurlAmpUrlsBatchGetResponse {
@@ -12,6 +13,7 @@ public class AcceleratedmobilepageurlAmpUrlsBatchGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetAmpUrlsResponse batchGetAmpUrlsResponse;
+
     public AcceleratedmobilepageurlAmpUrlsBatchGetResponse withBatchGetAmpUrlsResponse(org.openapis.openapi.models.shared.BatchGetAmpUrlsResponse batchGetAmpUrlsResponse) {
         this.batchGetAmpUrlsResponse = batchGetAmpUrlsResponse;
         return this;
@@ -19,6 +21,7 @@ public class AcceleratedmobilepageurlAmpUrlsBatchGetResponse {
     
     
     public String contentType;
+
     public AcceleratedmobilepageurlAmpUrlsBatchGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AcceleratedmobilepageurlAmpUrlsBatchGetResponse {
     
     
     public Integer statusCode;
+
     public AcceleratedmobilepageurlAmpUrlsBatchGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AcceleratedmobilepageurlAmpUrlsBatchGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceleratedmobilepageurlAmpUrlsBatchGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AcceleratedmobilepageurlAmpUrlsBatchGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

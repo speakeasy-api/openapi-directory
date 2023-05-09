@@ -20,6 +20,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public TargetedSentimentDetectionJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -30,6 +31,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public TargetedSentimentDetectionJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -41,6 +43,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public TargetedSentimentDetectionJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -49,6 +52,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public TargetedSentimentDetectionJobProperties withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -57,6 +61,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public TargetedSentimentDetectionJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -65,6 +70,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public TargetedSentimentDetectionJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -73,6 +79,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public TargetedSentimentDetectionJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -81,6 +88,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public TargetedSentimentDetectionJobProperties withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -89,6 +97,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public TargetedSentimentDetectionJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -100,6 +109,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public TargetedSentimentDetectionJobProperties withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -110,6 +120,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public TargetedSentimentDetectionJobProperties withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -118,6 +129,7 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public TargetedSentimentDetectionJobProperties withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -129,9 +141,11 @@ public class TargetedSentimentDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public TargetedSentimentDetectionJobProperties withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public TargetedSentimentDetectionJobProperties(){}
 }

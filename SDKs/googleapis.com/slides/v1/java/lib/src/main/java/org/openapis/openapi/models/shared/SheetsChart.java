@@ -18,6 +18,7 @@ public class SheetsChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chartId")
     public Integer chartId;
+
     public SheetsChart withChartId(Integer chartId) {
         this.chartId = chartId;
         return this;
@@ -29,6 +30,7 @@ public class SheetsChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUrl")
     public String contentUrl;
+
     public SheetsChart withContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
         return this;
@@ -40,6 +42,7 @@ public class SheetsChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetsChartProperties")
     public SheetsChartProperties sheetsChartProperties;
+
     public SheetsChart withSheetsChartProperties(SheetsChartProperties sheetsChartProperties) {
         this.sheetsChartProperties = sheetsChartProperties;
         return this;
@@ -51,9 +54,11 @@ public class SheetsChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public SheetsChart withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
     }
     
+    public SheetsChart(){}
 }

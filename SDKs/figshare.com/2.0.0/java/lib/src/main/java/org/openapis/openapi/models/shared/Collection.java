@@ -12,6 +12,7 @@ public class Collection {
      */
     @JsonProperty("doi")
     public String doi;
+
     public Collection withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -22,6 +23,7 @@ public class Collection {
      */
     @JsonProperty("handle")
     public String handle;
+
     public Collection withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -32,6 +34,7 @@ public class Collection {
      */
     @JsonProperty("id")
     public Long id;
+
     public Collection withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class Collection {
      */
     @JsonProperty("published_date")
     public String publishedDate;
+
     public Collection withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -49,6 +53,7 @@ public class Collection {
     
     @JsonProperty("timeline")
     public Timeline timeline;
+
     public Collection withTimeline(Timeline timeline) {
         this.timeline = timeline;
         return this;
@@ -59,6 +64,7 @@ public class Collection {
      */
     @JsonProperty("title")
     public String title;
+
     public Collection withTitle(String title) {
         this.title = title;
         return this;
@@ -69,9 +75,19 @@ public class Collection {
      */
     @JsonProperty("url")
     public String url;
+
     public Collection withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Collection(@JsonProperty("doi") String doi, @JsonProperty("handle") String handle, @JsonProperty("id") Long id, @JsonProperty("published_date") String publishedDate, @JsonProperty("timeline") Timeline timeline, @JsonProperty("title") String title, @JsonProperty("url") String url) {
+        this.doi = doi;
+        this.handle = handle;
+        this.id = id;
+        this.publishedDate = publishedDate;
+        this.timeline = timeline;
+        this.title = title;
+        this.url = url;
+  }
 }

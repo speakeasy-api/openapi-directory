@@ -15,6 +15,7 @@ public class DatabaseInstanceSoftwareDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public String engine;
+
     public DatabaseInstanceSoftwareDetailsResponse withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -23,6 +24,7 @@ public class DatabaseInstanceSoftwareDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineEdition")
     public String engineEdition;
+
     public DatabaseInstanceSoftwareDetailsResponse withEngineEdition(String engineEdition) {
         this.engineEdition = engineEdition;
         return this;
@@ -31,6 +33,7 @@ public class DatabaseInstanceSoftwareDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public DatabaseInstanceSoftwareDetailsResponse withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -39,6 +42,7 @@ public class DatabaseInstanceSoftwareDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OsArchitecture")
     public Long osArchitecture;
+
     public DatabaseInstanceSoftwareDetailsResponse withOsArchitecture(Long osArchitecture) {
         this.osArchitecture = osArchitecture;
         return this;
@@ -47,6 +51,7 @@ public class DatabaseInstanceSoftwareDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServicePack")
     public String servicePack;
+
     public DatabaseInstanceSoftwareDetailsResponse withServicePack(String servicePack) {
         this.servicePack = servicePack;
         return this;
@@ -55,6 +60,7 @@ public class DatabaseInstanceSoftwareDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportLevel")
     public String supportLevel;
+
     public DatabaseInstanceSoftwareDetailsResponse withSupportLevel(String supportLevel) {
         this.supportLevel = supportLevel;
         return this;
@@ -63,9 +69,11 @@ public class DatabaseInstanceSoftwareDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tooltip")
     public String tooltip;
+
     public DatabaseInstanceSoftwareDetailsResponse withTooltip(String tooltip) {
         this.tooltip = tooltip;
         return this;
     }
     
+    public DatabaseInstanceSoftwareDetailsResponse(){}
 }

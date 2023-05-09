@@ -12,6 +12,7 @@ public class GetUserGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetUserGroupsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class GetUserGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
     public Integer groupId;
+
     public GetUserGroupsRequest withGroupId(Integer groupId) {
         this.groupId = groupId;
         return this;
@@ -32,6 +34,7 @@ public class GetUserGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetUserGroupsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +45,11 @@ public class GetUserGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetUserGroupsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUserGroupsRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListGeofenceCollectionsResponse {
     @JsonProperty("Entries")
     public ListGeofenceCollectionsResponseEntry[] entries;
+
     public ListGeofenceCollectionsResponse withEntries(ListGeofenceCollectionsResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -22,9 +23,13 @@ public class ListGeofenceCollectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGeofenceCollectionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGeofenceCollectionsResponse(@JsonProperty("Entries") ListGeofenceCollectionsResponseEntry[] entries) {
+        this.entries = entries;
+  }
 }

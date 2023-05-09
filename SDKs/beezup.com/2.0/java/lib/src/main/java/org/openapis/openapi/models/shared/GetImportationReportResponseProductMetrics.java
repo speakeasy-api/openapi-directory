@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImportationReportResponseProductMetrics {
     @JsonProperty("activeCount")
     public Long activeCount;
+
     public GetImportationReportResponseProductMetrics withActiveCount(Long activeCount) {
         this.activeCount = activeCount;
         return this;
@@ -16,6 +17,7 @@ public class GetImportationReportResponseProductMetrics {
     
     @JsonProperty("detectedCount")
     public Long detectedCount;
+
     public GetImportationReportResponseProductMetrics withDetectedCount(Long detectedCount) {
         this.detectedCount = detectedCount;
         return this;
@@ -23,6 +25,7 @@ public class GetImportationReportResponseProductMetrics {
     
     @JsonProperty("duplicatedCount")
     public Long duplicatedCount;
+
     public GetImportationReportResponseProductMetrics withDuplicatedCount(Long duplicatedCount) {
         this.duplicatedCount = duplicatedCount;
         return this;
@@ -30,9 +33,16 @@ public class GetImportationReportResponseProductMetrics {
     
     @JsonProperty("failedCount")
     public Long failedCount;
+
     public GetImportationReportResponseProductMetrics withFailedCount(Long failedCount) {
         this.failedCount = failedCount;
         return this;
     }
     
+    public GetImportationReportResponseProductMetrics(@JsonProperty("activeCount") Long activeCount, @JsonProperty("detectedCount") Long detectedCount, @JsonProperty("duplicatedCount") Long duplicatedCount, @JsonProperty("failedCount") Long failedCount) {
+        this.activeCount = activeCount;
+        this.detectedCount = detectedCount;
+        this.duplicatedCount = duplicatedCount;
+        this.failedCount = failedCount;
+  }
 }

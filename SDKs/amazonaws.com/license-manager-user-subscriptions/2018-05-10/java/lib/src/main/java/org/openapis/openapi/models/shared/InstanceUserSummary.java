@@ -15,6 +15,7 @@ public class InstanceUserSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationDate")
     public String associationDate;
+
     public InstanceUserSummary withAssociationDate(String associationDate) {
         this.associationDate = associationDate;
         return this;
@@ -23,6 +24,7 @@ public class InstanceUserSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisassociationDate")
     public String disassociationDate;
+
     public InstanceUserSummary withDisassociationDate(String disassociationDate) {
         this.disassociationDate = disassociationDate;
         return this;
@@ -31,6 +33,7 @@ public class InstanceUserSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public InstanceUserSummary withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -38,6 +41,7 @@ public class InstanceUserSummary {
     
     @JsonProperty("IdentityProvider")
     public IdentityProvider identityProvider;
+
     public InstanceUserSummary withIdentityProvider(IdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -45,6 +49,7 @@ public class InstanceUserSummary {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public InstanceUserSummary withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -52,6 +57,7 @@ public class InstanceUserSummary {
     
     @JsonProperty("Status")
     public String status;
+
     public InstanceUserSummary withStatus(String status) {
         this.status = status;
         return this;
@@ -60,6 +66,7 @@ public class InstanceUserSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public InstanceUserSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -67,9 +74,16 @@ public class InstanceUserSummary {
     
     @JsonProperty("Username")
     public String username;
+
     public InstanceUserSummary withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public InstanceUserSummary(@JsonProperty("IdentityProvider") IdentityProvider identityProvider, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Status") String status, @JsonProperty("Username") String username) {
+        this.identityProvider = identityProvider;
+        this.instanceId = instanceId;
+        this.status = status;
+        this.username = username;
+  }
 }

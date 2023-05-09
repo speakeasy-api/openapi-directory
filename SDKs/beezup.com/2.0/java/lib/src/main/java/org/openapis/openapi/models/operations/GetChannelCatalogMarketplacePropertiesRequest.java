@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCatalogMarketplacePropertiesRequest {
@@ -12,6 +13,7 @@ public class GetChannelCatalogMarketplacePropertiesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String[] acceptLanguage;
+
     public GetChannelCatalogMarketplacePropertiesRequest withAcceptLanguage(String[] acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogMarketplacePropertiesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public GetChannelCatalogMarketplacePropertiesRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -26,9 +29,14 @@ public class GetChannelCatalogMarketplacePropertiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirectionPageUrl")
     public String redirectionPageUrl;
+
     public GetChannelCatalogMarketplacePropertiesRequest withRedirectionPageUrl(String redirectionPageUrl) {
         this.redirectionPageUrl = redirectionPageUrl;
         return this;
     }
     
+    public GetChannelCatalogMarketplacePropertiesRequest(@JsonProperty("channelCatalogId") String channelCatalogId, @JsonProperty("redirectionPageUrl") String redirectionPageUrl) {
+        this.channelCatalogId = channelCatalogId;
+        this.redirectionPageUrl = redirectionPageUrl;
+  }
 }

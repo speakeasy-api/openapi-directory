@@ -18,9 +18,11 @@ public class CategoryTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CategoryTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public CategoryTargetingOptionDetails(){}
 }

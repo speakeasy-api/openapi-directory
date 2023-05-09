@@ -59,12 +59,10 @@ public class CustomerContracts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateContractResponse res = new org.openapis.openapi.models.operations.CreateContractResponse() {{
+        org.openapis.openapi.models.operations.CreateContractResponse res = new org.openapis.openapi.models.operations.CreateContractResponse(contentType, httpRes.statusCode()) {{
             createContractResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class CustomerContracts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNextContractResponse res = new org.openapis.openapi.models.operations.DeleteNextContractResponse() {{
+        org.openapis.openapi.models.operations.DeleteNextContractResponse res = new org.openapis.openapi.models.operations.DeleteNextContractResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -152,12 +148,10 @@ public class CustomerContracts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBillingPeriodsResponse res = new org.openapis.openapi.models.operations.GetBillingPeriodsResponse() {{
+        org.openapis.openapi.models.operations.GetBillingPeriodsResponse res = new org.openapis.openapi.models.operations.GetBillingPeriodsResponse(contentType, httpRes.statusCode()) {{
             billingPeriodList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,12 +204,10 @@ public class CustomerContracts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContractsResponse res = new org.openapis.openapi.models.operations.GetContractsResponse() {{
+        org.openapis.openapi.models.operations.GetContractsResponse res = new org.openapis.openapi.models.operations.GetContractsResponse(contentType, httpRes.statusCode()) {{
             contracts = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -267,12 +259,10 @@ public class CustomerContracts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferResponse res = new org.openapis.openapi.models.operations.GetOfferResponse() {{
+        org.openapis.openapi.models.operations.GetOfferResponse res = new org.openapis.openapi.models.operations.GetOfferResponse(contentType, httpRes.statusCode()) {{
             offer = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -321,12 +311,10 @@ public class CustomerContracts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStandardOffersResponse res = new org.openapis.openapi.models.operations.GetStandardOffersResponse() {{
+        org.openapis.openapi.models.operations.GetStandardOffersResponse res = new org.openapis.openapi.models.operations.GetStandardOffersResponse(contentType, httpRes.statusCode()) {{
             standardOffers = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -371,11 +359,9 @@ public class CustomerContracts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReactivateCurrentContractResponse res = new org.openapis.openapi.models.operations.ReactivateCurrentContractResponse() {{
+        org.openapis.openapi.models.operations.ReactivateCurrentContractResponse res = new org.openapis.openapi.models.operations.ReactivateCurrentContractResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -417,11 +403,9 @@ public class CustomerContracts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TerminateCurrentContractResponse res = new org.openapis.openapi.models.operations.TerminateCurrentContractResponse() {{
+        org.openapis.openapi.models.operations.TerminateCurrentContractResponse res = new org.openapis.openapi.models.operations.TerminateCurrentContractResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

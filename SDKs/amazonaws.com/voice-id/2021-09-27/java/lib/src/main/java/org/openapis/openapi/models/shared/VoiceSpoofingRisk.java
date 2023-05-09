@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VoiceSpoofingRisk {
     @JsonProperty("RiskScore")
     public Long riskScore;
+
     public VoiceSpoofingRisk withRiskScore(Long riskScore) {
         this.riskScore = riskScore;
         return this;
     }
     
+    public VoiceSpoofingRisk(@JsonProperty("RiskScore") Long riskScore) {
+        this.riskScore = riskScore;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListLensReviewsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public ListLensReviewsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -16,6 +18,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MilestoneNumber")
     public Long milestoneNumber;
+
     public ListLensReviewsRequest withMilestoneNumber(Long milestoneNumber) {
         this.milestoneNumber = milestoneNumber;
         return this;
@@ -23,6 +26,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListLensReviewsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,6 +34,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
     public String workloadId;
+
     public ListLensReviewsRequest withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -37,6 +42,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListLensReviewsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -44,6 +50,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListLensReviewsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -51,6 +58,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListLensReviewsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -58,6 +66,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListLensReviewsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -65,6 +74,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListLensReviewsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -72,6 +82,7 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListLensReviewsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -79,9 +90,13 @@ public class ListLensReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListLensReviewsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListLensReviewsRequest(@JsonProperty("WorkloadId") String workloadId) {
+        this.workloadId = workloadId;
+  }
 }

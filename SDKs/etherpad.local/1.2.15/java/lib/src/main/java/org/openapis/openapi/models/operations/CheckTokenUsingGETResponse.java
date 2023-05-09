@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckTokenUsingGETResponse {
     
     public String contentType;
+
     public CheckTokenUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CheckTokenUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CheckTokenUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CheckTokenUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckTokenUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CheckTokenUsingGETResponse {
      */
     
     public CheckTokenUsingGET200ApplicationJSON checkTokenUsingGET200ApplicationJSONObject;
+
     public CheckTokenUsingGETResponse withCheckTokenUsingGET200ApplicationJSONObject(CheckTokenUsingGET200ApplicationJSON checkTokenUsingGET200ApplicationJSONObject) {
         this.checkTokenUsingGET200ApplicationJSONObject = checkTokenUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CheckTokenUsingGETResponse {
      */
     
     public CheckTokenUsingGET400ApplicationJSON checkTokenUsingGET400ApplicationJSONObject;
+
     public CheckTokenUsingGETResponse withCheckTokenUsingGET400ApplicationJSONObject(CheckTokenUsingGET400ApplicationJSON checkTokenUsingGET400ApplicationJSONObject) {
         this.checkTokenUsingGET400ApplicationJSONObject = checkTokenUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CheckTokenUsingGETResponse {
      */
     
     public CheckTokenUsingGET401ApplicationJSON checkTokenUsingGET401ApplicationJSONObject;
+
     public CheckTokenUsingGETResponse withCheckTokenUsingGET401ApplicationJSONObject(CheckTokenUsingGET401ApplicationJSON checkTokenUsingGET401ApplicationJSONObject) {
         this.checkTokenUsingGET401ApplicationJSONObject = checkTokenUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CheckTokenUsingGETResponse {
      */
     
     public CheckTokenUsingGET500ApplicationJSON checkTokenUsingGET500ApplicationJSONObject;
+
     public CheckTokenUsingGETResponse withCheckTokenUsingGET500ApplicationJSONObject(CheckTokenUsingGET500ApplicationJSON checkTokenUsingGET500ApplicationJSONObject) {
         this.checkTokenUsingGET500ApplicationJSONObject = checkTokenUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CheckTokenUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

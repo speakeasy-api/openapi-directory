@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBankAccountResponse {
     
     public String contentType;
+
     public GetBankAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBankAccountResponse {
     
     
     public Integer statusCode;
+
     public GetBankAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBankAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBankAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetBankAccountResponse {
      */
     
     public GetBankAccount200ApplicationJSON getBankAccount200ApplicationJSONObject;
+
     public GetBankAccountResponse withGetBankAccount200ApplicationJSONObject(GetBankAccount200ApplicationJSON getBankAccount200ApplicationJSONObject) {
         this.getBankAccount200ApplicationJSONObject = getBankAccount200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetBankAccountResponse {
      */
     
     public GetBankAccount400ApplicationJSON getBankAccount400ApplicationJSONObject;
+
     public GetBankAccountResponse withGetBankAccount400ApplicationJSONObject(GetBankAccount400ApplicationJSON getBankAccount400ApplicationJSONObject) {
         this.getBankAccount400ApplicationJSONObject = getBankAccount400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetBankAccountResponse {
      */
     
     public GetBankAccount401ApplicationJSON getBankAccount401ApplicationJSONObject;
+
     public GetBankAccountResponse withGetBankAccount401ApplicationJSONObject(GetBankAccount401ApplicationJSON getBankAccount401ApplicationJSONObject) {
         this.getBankAccount401ApplicationJSONObject = getBankAccount401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetBankAccountResponse {
      */
     
     public GetBankAccount403ApplicationJSON getBankAccount403ApplicationJSONObject;
+
     public GetBankAccountResponse withGetBankAccount403ApplicationJSONObject(GetBankAccount403ApplicationJSON getBankAccount403ApplicationJSONObject) {
         this.getBankAccount403ApplicationJSONObject = getBankAccount403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetBankAccountResponse {
      */
     
     public GetBankAccount404ApplicationJSON getBankAccount404ApplicationJSONObject;
+
     public GetBankAccountResponse withGetBankAccount404ApplicationJSONObject(GetBankAccount404ApplicationJSON getBankAccount404ApplicationJSONObject) {
         this.getBankAccount404ApplicationJSONObject = getBankAccount404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetBankAccountResponse {
      */
     
     public GetBankAccount409ApplicationJSON getBankAccount409ApplicationJSONObject;
+
     public GetBankAccountResponse withGetBankAccount409ApplicationJSONObject(GetBankAccount409ApplicationJSON getBankAccount409ApplicationJSONObject) {
         this.getBankAccount409ApplicationJSONObject = getBankAccount409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class GetBankAccountResponse {
      */
     
     public GetBankAccount429ApplicationJSON getBankAccount429ApplicationJSONObject;
+
     public GetBankAccountResponse withGetBankAccount429ApplicationJSONObject(GetBankAccount429ApplicationJSON getBankAccount429ApplicationJSONObject) {
         this.getBankAccount429ApplicationJSONObject = getBankAccount429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class GetBankAccountResponse {
      */
     
     public GetBankAccount500ApplicationJSON getBankAccount500ApplicationJSONObject;
+
     public GetBankAccountResponse withGetBankAccount500ApplicationJSONObject(GetBankAccount500ApplicationJSON getBankAccount500ApplicationJSONObject) {
         this.getBankAccount500ApplicationJSONObject = getBankAccount500ApplicationJSONObject;
         return this;
     }
     
+    public GetBankAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

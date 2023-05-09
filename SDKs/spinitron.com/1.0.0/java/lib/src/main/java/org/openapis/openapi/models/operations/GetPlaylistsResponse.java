@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPlaylistsResponse {
     
     public byte[] body;
+
     public GetPlaylistsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetPlaylistsResponse {
     
     
     public String contentType;
+
     public GetPlaylistsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetPlaylistsResponse {
     
     
     public Integer statusCode;
+
     public GetPlaylistsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetPlaylistsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPlaylistsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetPlaylistsResponse {
      */
     
     public GetPlaylists200ApplicationJSON getPlaylists200ApplicationJSONObject;
+
     public GetPlaylistsResponse withGetPlaylists200ApplicationJSONObject(GetPlaylists200ApplicationJSON getPlaylists200ApplicationJSONObject) {
         this.getPlaylists200ApplicationJSONObject = getPlaylists200ApplicationJSONObject;
         return this;
     }
     
+    public GetPlaylistsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

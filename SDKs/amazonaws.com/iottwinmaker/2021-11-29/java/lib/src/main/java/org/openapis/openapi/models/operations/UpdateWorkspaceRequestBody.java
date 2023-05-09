@@ -15,6 +15,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateWorkspaceRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public UpdateWorkspaceRequestBody withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public UpdateWorkspaceRequestBody(){}
 }

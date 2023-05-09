@@ -15,6 +15,7 @@ public class GetResourceMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Features")
     public java.util.Map<String, FeatureMetadata> features;
+
     public GetResourceMetadataResponse withFeatures(java.util.Map<String, FeatureMetadata> features) {
         this.features = features;
         return this;
@@ -23,9 +24,11 @@ public class GetResourceMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetResourceMetadataResponse withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public GetResourceMetadataResponse(){}
 }

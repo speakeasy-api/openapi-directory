@@ -15,6 +15,7 @@ public class KinesisAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionKey")
     public String partitionKey;
+
     public KinesisAction withPartitionKey(String partitionKey) {
         this.partitionKey = partitionKey;
         return this;
@@ -22,6 +23,7 @@ public class KinesisAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public KinesisAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -29,9 +31,14 @@ public class KinesisAction {
     
     @JsonProperty("streamName")
     public String streamName;
+
     public KinesisAction withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public KinesisAction(@JsonProperty("roleArn") String roleArn, @JsonProperty("streamName") String streamName) {
+        this.roleArn = roleArn;
+        this.streamName = streamName;
+  }
 }

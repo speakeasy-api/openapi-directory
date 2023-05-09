@@ -15,6 +15,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Statement withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletedOn")
     public Long completedOn;
+
     public Statement withCompletedOn(Long completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -31,6 +33,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public Statement withId(Long id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Output")
     public StatementOutput output;
+
     public Statement withOutput(StatementOutput output) {
         this.output = output;
         return this;
@@ -47,6 +51,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Progress")
     public Double progress;
+
     public Statement withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -55,6 +60,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartedOn")
     public Long startedOn;
+
     public Statement withStartedOn(Long startedOn) {
         this.startedOn = startedOn;
         return this;
@@ -63,9 +69,11 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public StatementStateEnum state;
+
     public Statement withState(StatementStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Statement(){}
 }

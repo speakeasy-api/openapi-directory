@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1DataAccessSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readers")
     public String[] readers;
+
     public GoogleCloudDataplexV1DataAccessSpec withReaders(String[] readers) {
         this.readers = readers;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataAccessSpec(){}
 }

@@ -18,6 +18,7 @@ public class DsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public DsRecordAlgorithmEnum algorithm;
+
     public DsRecord withAlgorithm(DsRecordAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,6 +30,7 @@ public class DsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public DsRecord withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -40,6 +42,7 @@ public class DsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digestType")
     public DsRecordDigestTypeEnum digestType;
+
     public DsRecord withDigestType(DsRecordDigestTypeEnum digestType) {
         this.digestType = digestType;
         return this;
@@ -51,9 +54,11 @@ public class DsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyTag")
     public Integer keyTag;
+
     public DsRecord withKeyTag(Integer keyTag) {
         this.keyTag = keyTag;
         return this;
     }
     
+    public DsRecord(){}
 }

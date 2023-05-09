@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TerminateClientVpnConnectionsResultConnectionStatuses {
     
     public String connectionId;
+
     public TerminateClientVpnConnectionsResultConnectionStatuses withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -19,6 +20,7 @@ public class TerminateClientVpnConnectionsResultConnectionStatuses {
     
     
     public TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatus currentStatus;
+
     public TerminateClientVpnConnectionsResultConnectionStatuses withCurrentStatus(TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatus currentStatus) {
         this.currentStatus = currentStatus;
         return this;
@@ -26,9 +28,11 @@ public class TerminateClientVpnConnectionsResultConnectionStatuses {
     
     
     public TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatus previousStatus;
+
     public TerminateClientVpnConnectionsResultConnectionStatuses withPreviousStatus(TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatus previousStatus) {
         this.previousStatus = previousStatus;
         return this;
     }
     
+    public TerminateClientVpnConnectionsResultConnectionStatuses(){}
 }

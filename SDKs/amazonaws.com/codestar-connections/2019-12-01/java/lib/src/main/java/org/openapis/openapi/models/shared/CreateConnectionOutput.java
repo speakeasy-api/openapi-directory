@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionOutput {
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public CreateConnectionOutput withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -22,9 +23,13 @@ public class CreateConnectionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateConnectionOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConnectionOutput(@JsonProperty("ConnectionArn") String connectionArn) {
+        this.connectionArn = connectionArn;
+  }
 }

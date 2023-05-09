@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentPosDeleteRequest {
@@ -12,6 +13,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContentPosDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContentPosDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContentPosDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContentPosDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContentPosDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContentPosDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public ContentPosDeleteRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -82,6 +90,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContentPosDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContentPosDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContentPosDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeCode")
     public String storeCode;
+
     public ContentPosDeleteRequest withStoreCode(String storeCode) {
         this.storeCode = storeCode;
         return this;
@@ -122,6 +134,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetMerchantId")
     public String targetMerchantId;
+
     public ContentPosDeleteRequest withTargetMerchantId(String targetMerchantId) {
         this.targetMerchantId = targetMerchantId;
         return this;
@@ -132,6 +145,7 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContentPosDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,15 @@ public class ContentPosDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContentPosDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ContentPosDeleteRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("storeCode") String storeCode, @JsonProperty("targetMerchantId") String targetMerchantId) {
+        this.merchantId = merchantId;
+        this.storeCode = storeCode;
+        this.targetMerchantId = targetMerchantId;
+  }
 }

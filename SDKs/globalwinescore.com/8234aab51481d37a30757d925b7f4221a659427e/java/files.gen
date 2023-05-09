@@ -39,4 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSOrderi
 lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/globalwinescore/README.md
 USAGE.md

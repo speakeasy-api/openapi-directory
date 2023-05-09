@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddAristaSwitchSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String apiKeyAuth;
+
     public AddAristaSwitchSecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
     }
     
+    public AddAristaSwitchSecurity(@JsonProperty("ApiKeyAuth") String apiKeyAuth) {
+        this.apiKeyAuth = apiKeyAuth;
+  }
 }

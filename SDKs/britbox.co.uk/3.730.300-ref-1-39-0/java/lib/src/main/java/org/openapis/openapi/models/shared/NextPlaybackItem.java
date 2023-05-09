@@ -34,6 +34,7 @@ public class NextPlaybackItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstWatchedDate")
     public OffsetDateTime firstWatchedDate;
+
     public NextPlaybackItem withFirstWatchedDate(OffsetDateTime firstWatchedDate) {
         this.firstWatchedDate = firstWatchedDate;
         return this;
@@ -56,6 +57,7 @@ public class NextPlaybackItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastWatchedDate")
     public OffsetDateTime lastWatchedDate;
+
     public NextPlaybackItem withLastWatchedDate(OffsetDateTime lastWatchedDate) {
         this.lastWatchedDate = lastWatchedDate;
         return this;
@@ -64,6 +66,7 @@ public class NextPlaybackItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public ItemDetail next;
+
     public NextPlaybackItem withNext(ItemDetail next) {
         this.next = next;
         return this;
@@ -74,6 +77,7 @@ public class NextPlaybackItem {
      */
     @JsonProperty("sourceItemId")
     public String sourceItemId;
+
     public NextPlaybackItem withSourceItemId(String sourceItemId) {
         this.sourceItemId = sourceItemId;
         return this;
@@ -94,9 +98,13 @@ public class NextPlaybackItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestionType")
     public NextPlaybackItemSuggestionTypeEnum suggestionType;
+
     public NextPlaybackItem withSuggestionType(NextPlaybackItemSuggestionTypeEnum suggestionType) {
         this.suggestionType = suggestionType;
         return this;
     }
     
+    public NextPlaybackItem(@JsonProperty("sourceItemId") String sourceItemId) {
+        this.sourceItemId = sourceItemId;
+  }
 }

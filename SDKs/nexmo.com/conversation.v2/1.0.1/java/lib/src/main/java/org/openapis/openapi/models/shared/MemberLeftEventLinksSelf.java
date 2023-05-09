@@ -12,9 +12,11 @@ public class MemberLeftEventLinksSelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public MemberLeftEventLinksSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public MemberLeftEventLinksSelf(){}
 }

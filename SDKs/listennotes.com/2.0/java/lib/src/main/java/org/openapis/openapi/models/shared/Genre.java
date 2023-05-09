@@ -15,6 +15,7 @@ public class Genre {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Genre withId(Long id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class Genre {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Genre withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class Genre {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Long parentId;
+
     public Genre withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
     }
     
+    public Genre(){}
 }

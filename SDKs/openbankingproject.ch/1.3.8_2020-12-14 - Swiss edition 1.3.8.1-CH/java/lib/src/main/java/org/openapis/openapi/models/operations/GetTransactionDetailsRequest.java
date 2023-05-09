@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionDetailsRequest {
@@ -13,6 +14,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Consent-ID")
     public String consentID;
+
     public GetTransactionDetailsRequest withConsentID(String consentID) {
         this.consentID = consentID;
         return this;
@@ -23,6 +25,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public GetTransactionDetailsRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -34,6 +37,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public GetTransactionDetailsRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -45,6 +49,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public GetTransactionDetailsRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -56,6 +61,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public GetTransactionDetailsRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -67,6 +73,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public GetTransactionDetailsRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -80,6 +87,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public GetTransactionDetailsRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -91,6 +99,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public GetTransactionDetailsRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -108,6 +117,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public GetTransactionDetailsRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -121,6 +131,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public GetTransactionDetailsRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -132,6 +143,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public GetTransactionDetailsRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -143,6 +155,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public GetTransactionDetailsRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -154,6 +167,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public GetTransactionDetailsRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -166,6 +180,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public GetTransactionDetailsRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -176,6 +191,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public GetTransactionDetailsRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -190,6 +206,7 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account-id")
     public String accountId;
+
     public GetTransactionDetailsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -201,9 +218,16 @@ public class GetTransactionDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
     public String transactionId;
+
     public GetTransactionDetailsRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public GetTransactionDetailsRequest(@JsonProperty("Consent-ID") String consentID, @JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("account-id") String accountId, @JsonProperty("transactionId") String transactionId) {
+        this.consentID = consentID;
+        this.xRequestID = xRequestID;
+        this.accountId = accountId;
+        this.transactionId = transactionId;
+  }
 }

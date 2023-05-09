@@ -13,6 +13,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETDescribeUpdateActionsServiceUpdateTimeRange {
     @SpeakeasyMetadata("queryParam:name=EndTime")
     public OffsetDateTime endTime;
+
     public GETDescribeUpdateActionsServiceUpdateTimeRange withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -20,9 +21,11 @@ public class GETDescribeUpdateActionsServiceUpdateTimeRange {
     
     @SpeakeasyMetadata("queryParam:name=StartTime")
     public OffsetDateTime startTime;
+
     public GETDescribeUpdateActionsServiceUpdateTimeRange withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GETDescribeUpdateActionsServiceUpdateTimeRange(){}
 }

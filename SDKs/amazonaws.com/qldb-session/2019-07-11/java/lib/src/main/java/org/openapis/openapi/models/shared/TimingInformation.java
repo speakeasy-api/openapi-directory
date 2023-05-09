@@ -15,9 +15,11 @@ public class TimingInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingTimeMilliseconds")
     public Long processingTimeMilliseconds;
+
     public TimingInformation withProcessingTimeMilliseconds(Long processingTimeMilliseconds) {
         this.processingTimeMilliseconds = processingTimeMilliseconds;
         return this;
     }
     
+    public TimingInformation(){}
 }

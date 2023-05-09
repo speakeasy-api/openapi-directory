@@ -12,6 +12,7 @@ public class GetSubPartnerBalance200ApplicationJSONResultBalancesUsdtbsc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public GetSubPartnerBalance200ApplicationJSONResultBalancesUsdtbsc withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -20,9 +21,11 @@ public class GetSubPartnerBalance200ApplicationJSONResultBalancesUsdtbsc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingAmount")
     public Double pendingAmount;
+
     public GetSubPartnerBalance200ApplicationJSONResultBalancesUsdtbsc withPendingAmount(Double pendingAmount) {
         this.pendingAmount = pendingAmount;
         return this;
     }
     
+    public GetSubPartnerBalance200ApplicationJSONResultBalancesUsdtbsc(){}
 }

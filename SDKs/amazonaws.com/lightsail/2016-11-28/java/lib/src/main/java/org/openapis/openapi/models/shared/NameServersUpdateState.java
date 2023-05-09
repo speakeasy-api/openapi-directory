@@ -15,6 +15,7 @@ public class NameServersUpdateState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NameServersUpdateStateCodeEnum code;
+
     public NameServersUpdateState withCode(NameServersUpdateStateCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class NameServersUpdateState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NameServersUpdateState withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NameServersUpdateState(){}
 }

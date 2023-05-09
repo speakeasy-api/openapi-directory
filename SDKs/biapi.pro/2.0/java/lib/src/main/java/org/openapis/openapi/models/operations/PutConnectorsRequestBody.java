@@ -12,9 +12,11 @@ public class PutConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=hidden")
     public Boolean hidden;
+
     public PutConnectorsRequestBody withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
     }
     
+    public PutConnectorsRequestBody(){}
 }

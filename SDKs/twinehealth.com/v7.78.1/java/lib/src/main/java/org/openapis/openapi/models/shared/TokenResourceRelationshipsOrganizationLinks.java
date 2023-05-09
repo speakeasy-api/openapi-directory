@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TokenResourceRelationshipsOrganizationLinks {
     @JsonProperty("related")
     public String related;
+
     public TokenResourceRelationshipsOrganizationLinks withRelated(String related) {
         this.related = related;
         return this;
     }
     
+    public TokenResourceRelationshipsOrganizationLinks(@JsonProperty("related") String related) {
+        this.related = related;
+  }
 }

@@ -15,6 +15,7 @@ public class Classification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisoryText")
     public String advisoryText;
+
     public Classification withAdvisoryText(String advisoryText) {
         this.advisoryText = advisoryText;
         return this;
@@ -25,6 +26,7 @@ public class Classification {
      */
     @JsonProperty("code")
     public String code;
+
     public Classification withCode(String code) {
         this.code = code;
         return this;
@@ -32,6 +34,7 @@ public class Classification {
     
     @JsonProperty("images")
     public java.util.Map<String, String> images;
+
     public Classification withImages(java.util.Map<String, String> images) {
         this.images = images;
         return this;
@@ -45,6 +48,7 @@ public class Classification {
      */
     @JsonProperty("level")
     public Integer level;
+
     public Classification withLevel(Integer level) {
         this.level = level;
         return this;
@@ -55,6 +59,7 @@ public class Classification {
      */
     @JsonProperty("name")
     public String name;
+
     public Classification withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +70,17 @@ public class Classification {
      */
     @JsonProperty("system")
     public String system;
+
     public Classification withSystem(String system) {
         this.system = system;
         return this;
     }
     
+    public Classification(@JsonProperty("code") String code, @JsonProperty("images") java.util.Map<String, String> images, @JsonProperty("level") Integer level, @JsonProperty("name") String name, @JsonProperty("system") String system) {
+        this.code = code;
+        this.images = images;
+        this.level = level;
+        this.name = name;
+        this.system = system;
+  }
 }

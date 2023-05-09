@@ -12,6 +12,7 @@ public class GetFamilyDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
     public String ocpApimSubscriptionKey;
+
     public GetFamilyDetailsRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
         this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
@@ -22,9 +23,11 @@ public class GetFamilyDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetFamilyDetailsRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetFamilyDetailsRequest(){}
 }

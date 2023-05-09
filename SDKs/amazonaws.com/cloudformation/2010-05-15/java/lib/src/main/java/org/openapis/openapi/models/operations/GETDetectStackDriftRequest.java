@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDetectStackDriftRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDetectStackDriftActionEnum action;
+
     public GETDetectStackDriftRequest withAction(GETDetectStackDriftActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDetectStackDriftRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogicalResourceIds")
     public String[] logicalResourceIds;
+
     public GETDetectStackDriftRequest withLogicalResourceIds(String[] logicalResourceIds) {
         this.logicalResourceIds = logicalResourceIds;
         return this;
@@ -29,6 +32,7 @@ public class GETDetectStackDriftRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
     public String stackName;
+
     public GETDetectStackDriftRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -36,6 +40,7 @@ public class GETDetectStackDriftRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDetectStackDriftVersionEnum version;
+
     public GETDetectStackDriftRequest withVersion(GETDetectStackDriftVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDetectStackDriftRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDetectStackDriftRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDetectStackDriftRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDetectStackDriftRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDetectStackDriftRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDetectStackDriftRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDetectStackDriftRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDetectStackDriftRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDetectStackDriftRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDetectStackDriftRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDetectStackDriftRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDetectStackDriftRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDetectStackDriftRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDetectStackDriftRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDetectStackDriftRequest(@JsonProperty("Action") GETDetectStackDriftActionEnum action, @JsonProperty("StackName") String stackName, @JsonProperty("Version") GETDetectStackDriftVersionEnum version) {
+        this.action = action;
+        this.stackName = stackName;
+        this.version = version;
+  }
 }

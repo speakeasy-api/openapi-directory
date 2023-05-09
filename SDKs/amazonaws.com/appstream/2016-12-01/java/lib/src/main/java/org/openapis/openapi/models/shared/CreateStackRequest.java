@@ -12,6 +12,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessEndpoints")
     public AccessEndpoint[] accessEndpoints;
+
     public CreateStackRequest withAccessEndpoints(AccessEndpoint[] accessEndpoints) {
         this.accessEndpoints = accessEndpoints;
         return this;
@@ -20,6 +21,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSettings")
     public ApplicationSettings applicationSettings;
+
     public CreateStackRequest withApplicationSettings(ApplicationSettings applicationSettings) {
         this.applicationSettings = applicationSettings;
         return this;
@@ -28,6 +30,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateStackRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateStackRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -44,6 +48,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmbedHostDomains")
     public String[] embedHostDomains;
+
     public CreateStackRequest withEmbedHostDomains(String[] embedHostDomains) {
         this.embedHostDomains = embedHostDomains;
         return this;
@@ -52,6 +57,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackURL")
     public String feedbackURL;
+
     public CreateStackRequest withFeedbackURL(String feedbackURL) {
         this.feedbackURL = feedbackURL;
         return this;
@@ -59,6 +65,7 @@ public class CreateStackRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateStackRequest withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +74,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedirectURL")
     public String redirectURL;
+
     public CreateStackRequest withRedirectURL(String redirectURL) {
         this.redirectURL = redirectURL;
         return this;
@@ -75,6 +83,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageConnectors")
     public StorageConnector[] storageConnectors;
+
     public CreateStackRequest withStorageConnectors(StorageConnector[] storageConnectors) {
         this.storageConnectors = storageConnectors;
         return this;
@@ -83,6 +92,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingExperienceSettings")
     public StreamingExperienceSettings streamingExperienceSettings;
+
     public CreateStackRequest withStreamingExperienceSettings(StreamingExperienceSettings streamingExperienceSettings) {
         this.streamingExperienceSettings = streamingExperienceSettings;
         return this;
@@ -91,6 +101,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateStackRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -99,9 +110,13 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserSettings")
     public UserSetting[] userSettings;
+
     public CreateStackRequest withUserSettings(UserSetting[] userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public CreateStackRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

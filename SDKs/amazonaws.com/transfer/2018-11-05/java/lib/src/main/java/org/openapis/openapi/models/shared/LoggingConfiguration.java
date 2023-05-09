@@ -15,6 +15,7 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroupName")
     public String logGroupName;
+
     public LoggingConfiguration withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -23,9 +24,11 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingRole")
     public String loggingRole;
+
     public LoggingConfiguration withLoggingRole(String loggingRole) {
         this.loggingRole = loggingRole;
         return this;
     }
     
+    public LoggingConfiguration(){}
 }

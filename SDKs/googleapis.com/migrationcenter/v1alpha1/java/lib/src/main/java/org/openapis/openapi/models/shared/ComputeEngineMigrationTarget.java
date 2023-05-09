@@ -18,9 +18,11 @@ public class ComputeEngineMigrationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shape")
     public ComputeEngineShapeDescriptor shape;
+
     public ComputeEngineMigrationTarget withShape(ComputeEngineShapeDescriptor shape) {
         this.shape = shape;
         return this;
     }
     
+    public ComputeEngineMigrationTarget(){}
 }

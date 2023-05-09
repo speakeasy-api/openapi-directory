@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IPRangeList {
     
     public String cidrip;
+
     public IPRangeList withCidrip(String cidrip) {
         this.cidrip = cidrip;
         return this;
@@ -19,6 +20,7 @@ public class IPRangeList {
     
     
     public String status;
+
     public IPRangeList withStatus(String status) {
         this.status = status;
         return this;
@@ -26,9 +28,11 @@ public class IPRangeList {
     
     
     public TagList[] tags;
+
     public IPRangeList withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public IPRangeList(){}
 }

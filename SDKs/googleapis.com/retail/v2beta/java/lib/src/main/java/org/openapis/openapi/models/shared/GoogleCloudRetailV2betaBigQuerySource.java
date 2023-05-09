@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaBigQuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSchema")
     public String dataSchema;
+
     public GoogleCloudRetailV2betaBigQuerySource withDataSchema(String dataSchema) {
         this.dataSchema = dataSchema;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaBigQuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public GoogleCloudRetailV2betaBigQuerySource withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaBigQuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsStagingDir")
     public String gcsStagingDir;
+
     public GoogleCloudRetailV2betaBigQuerySource withGcsStagingDir(String gcsStagingDir) {
         this.gcsStagingDir = gcsStagingDir;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2betaBigQuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionDate")
     public GoogleTypeDate partitionDate;
+
     public GoogleCloudRetailV2betaBigQuerySource withPartitionDate(GoogleTypeDate partitionDate) {
         this.partitionDate = partitionDate;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2betaBigQuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudRetailV2betaBigQuerySource withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudRetailV2betaBigQuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public GoogleCloudRetailV2betaBigQuerySource withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public GoogleCloudRetailV2betaBigQuerySource(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPoly")
     public GoogleCloudVisionV1p1beta1BoundingPoly boundingPoly;
+
     public GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation withBoundingPoly(GoogleCloudVisionV1p1beta1BoundingPoly boundingPoly) {
         this.boundingPoly = boundingPoly;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mid")
     public String mid;
+
     public GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation withMid(String mid) {
         this.mid = mid;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation(){}
 }

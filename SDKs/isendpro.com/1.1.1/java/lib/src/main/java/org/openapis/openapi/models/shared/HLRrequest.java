@@ -12,6 +12,7 @@ public class HLRrequest {
      */
     @JsonProperty("getHLR")
     public HLRrequestGetHLREnum getHLR;
+
     public HLRrequest withGetHLR(HLRrequestGetHLREnum getHLR) {
         this.getHLR = getHLR;
         return this;
@@ -22,6 +23,7 @@ public class HLRrequest {
      */
     @JsonProperty("keyid")
     public String keyid;
+
     public HLRrequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -32,9 +34,15 @@ public class HLRrequest {
      */
     @JsonProperty("num")
     public String[] num;
+
     public HLRrequest withNum(String[] num) {
         this.num = num;
         return this;
     }
     
+    public HLRrequest(@JsonProperty("getHLR") HLRrequestGetHLREnum getHLR, @JsonProperty("keyid") String keyid, @JsonProperty("num") String[] num) {
+        this.getHLR = getHLR;
+        this.keyid = keyid;
+        this.num = num;
+  }
 }

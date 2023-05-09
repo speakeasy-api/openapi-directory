@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFunctionEventInvokeConfigsResponse {
     
     public String contentType;
+
     public ListFunctionEventInvokeConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFunctionEventInvokeConfigsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListFunctionEventInvokeConfigsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListFunctionEventInvokeConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFunctionEventInvokeConfigsResponse listFunctionEventInvokeConfigsResponse;
+
     public ListFunctionEventInvokeConfigsResponse withListFunctionEventInvokeConfigsResponse(org.openapis.openapi.models.shared.ListFunctionEventInvokeConfigsResponse listFunctionEventInvokeConfigsResponse) {
         this.listFunctionEventInvokeConfigsResponse = listFunctionEventInvokeConfigsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListFunctionEventInvokeConfigsResponse {
      */
     
     public Object serviceException;
+
     public ListFunctionEventInvokeConfigsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class ListFunctionEventInvokeConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListFunctionEventInvokeConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListFunctionEventInvokeConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFunctionEventInvokeConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListFunctionEventInvokeConfigsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFunctionEventInvokeConfigsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListFunctionEventInvokeConfigsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListFunctionEventInvokeConfigsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListFunctionEventInvokeConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,13 @@ public class DeleteAppResult {
      */
     @JsonProperty("app")
     public App app;
+
     public DeleteAppResult withApp(App app) {
         this.app = app;
         return this;
     }
     
+    public DeleteAppResult(@JsonProperty("app") App app) {
+        this.app = app;
+  }
 }

@@ -15,9 +15,11 @@ public class TimeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public TimeDTO withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public TimeDTO(){}
 }

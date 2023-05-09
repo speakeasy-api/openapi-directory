@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AssessmentTarget {
     @JsonProperty("arn")
     public String arn;
+
     public AssessmentTarget withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentTarget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AssessmentTarget withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class AssessmentTarget {
     
     @JsonProperty("name")
     public String name;
+
     public AssessmentTarget withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +46,7 @@ public class AssessmentTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupArn")
     public String resourceGroupArn;
+
     public AssessmentTarget withResourceGroupArn(String resourceGroupArn) {
         this.resourceGroupArn = resourceGroupArn;
         return this;
@@ -52,9 +56,16 @@ public class AssessmentTarget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public AssessmentTarget withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AssessmentTarget(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("name") String name, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.name = name;
+        this.updatedAt = updatedAt;
+  }
 }

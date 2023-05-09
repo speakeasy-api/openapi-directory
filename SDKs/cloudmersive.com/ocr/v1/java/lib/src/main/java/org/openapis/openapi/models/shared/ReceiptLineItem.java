@@ -18,6 +18,7 @@ public class ReceiptLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemDescription")
     public String itemDescription;
+
     public ReceiptLineItem withItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
         return this;
@@ -29,9 +30,11 @@ public class ReceiptLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemPrice")
     public Double itemPrice;
+
     public ReceiptLineItem withItemPrice(Double itemPrice) {
         this.itemPrice = itemPrice;
         return this;
     }
     
+    public ReceiptLineItem(){}
 }

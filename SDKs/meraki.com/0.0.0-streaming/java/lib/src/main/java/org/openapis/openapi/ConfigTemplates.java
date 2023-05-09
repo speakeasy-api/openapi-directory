@@ -52,10 +52,8 @@ public class ConfigTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -86,11 +84,9 @@ public class ConfigTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesResponse res = new org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesResponse res = new org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesResponse(contentType, httpRes.statusCode()) {{
             getOrganizationConfigTemplates200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

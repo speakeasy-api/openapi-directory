@@ -12,6 +12,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameUrl")
     public String frameUrl;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull withFrameUrl(String frameUrl) {
         this.frameUrl = frameUrl;
         return this;
@@ -20,6 +21,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull withHeight(Double height) {
         this.height = height;
         return this;
@@ -28,6 +30,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screen")
     public Double[] screen;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull withScreen(Double[] screen) {
         this.screen = screen;
         return this;
@@ -36,9 +39,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull(){}
 }

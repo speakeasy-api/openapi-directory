@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutPlaylistsPlaylistIdResponse {
     
     public String contentType;
+
     public PutPlaylistsPlaylistIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutPlaylistsPlaylistIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PutPlaylistsPlaylistIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PutPlaylistsPlaylistIdResponse {
     
     
     public Integer statusCode;
+
     public PutPlaylistsPlaylistIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutPlaylistsPlaylistIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutPlaylistsPlaylistIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PutPlaylistsPlaylistIdResponse {
      */
     
     public PutPlaylistsPlaylistId200ApplicationJSON putPlaylistsPlaylistId200ApplicationJSONObject;
+
     public PutPlaylistsPlaylistIdResponse withPutPlaylistsPlaylistId200ApplicationJSONObject(PutPlaylistsPlaylistId200ApplicationJSON putPlaylistsPlaylistId200ApplicationJSONObject) {
         this.putPlaylistsPlaylistId200ApplicationJSONObject = putPlaylistsPlaylistId200ApplicationJSONObject;
         return this;
     }
     
+    public PutPlaylistsPlaylistIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

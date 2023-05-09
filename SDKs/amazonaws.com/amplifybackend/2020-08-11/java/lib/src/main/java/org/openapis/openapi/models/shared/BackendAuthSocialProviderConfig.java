@@ -15,6 +15,7 @@ public class BackendAuthSocialProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public BackendAuthSocialProviderConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,9 +24,11 @@ public class BackendAuthSocialProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientSecret")
     public String clientSecret;
+
     public BackendAuthSocialProviderConfig withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public BackendAuthSocialProviderConfig(){}
 }

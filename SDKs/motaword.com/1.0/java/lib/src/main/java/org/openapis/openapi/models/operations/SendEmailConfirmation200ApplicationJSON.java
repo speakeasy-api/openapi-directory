@@ -15,9 +15,11 @@ public class SendEmailConfirmation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SendEmailConfirmation200ApplicationJSONStatusEnum status;
+
     public SendEmailConfirmation200ApplicationJSON withStatus(SendEmailConfirmation200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SendEmailConfirmation200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCheckoutCustomFieldsJsonResponse {
@@ -12,6 +13,7 @@ public class PostCheckoutCustomFieldsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckoutCustomField checkoutCustomField;
+
     public PostCheckoutCustomFieldsJsonResponse withCheckoutCustomField(org.openapis.openapi.models.shared.CheckoutCustomField checkoutCustomField) {
         this.checkoutCustomField = checkoutCustomField;
         return this;
@@ -19,6 +21,7 @@ public class PostCheckoutCustomFieldsJsonResponse {
     
     
     public String contentType;
+
     public PostCheckoutCustomFieldsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PostCheckoutCustomFieldsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PostCheckoutCustomFieldsJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class PostCheckoutCustomFieldsJsonResponse {
     
     
     public Integer statusCode;
+
     public PostCheckoutCustomFieldsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostCheckoutCustomFieldsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCheckoutCustomFieldsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCheckoutCustomFieldsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GetTokenMetadataResponseMetadataOfIssuance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetTokenMetadataResponseMetadataOfIssuanceData data;
+
     public GetTokenMetadataResponseMetadataOfIssuance withData(GetTokenMetadataResponseMetadataOfIssuanceData data) {
         this.data = data;
         return this;
     }
     
+    public GetTokenMetadataResponseMetadataOfIssuance(){}
 }

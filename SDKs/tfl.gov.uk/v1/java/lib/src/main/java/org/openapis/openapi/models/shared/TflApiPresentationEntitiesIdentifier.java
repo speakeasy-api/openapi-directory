@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crowding")
     public TflApiPresentationEntitiesCrowding crowding;
+
     public TflApiPresentationEntitiesIdentifier withCrowding(TflApiPresentationEntitiesCrowding crowding) {
         this.crowding = crowding;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public TflApiPresentationEntitiesIdentifier withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesIdentifier withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("motType")
     public String motType;
+
     public TflApiPresentationEntitiesIdentifier withMotType(String motType) {
         this.motType = motType;
         return this;
@@ -44,6 +48,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesIdentifier withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public TflApiPresentationEntitiesIdentifier withNetwork(String network) {
         this.network = network;
         return this;
@@ -60,6 +66,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeType")
     public TflApiPresentationEntitiesIdentifierRouteTypeEnum routeType;
+
     public TflApiPresentationEntitiesIdentifier withRouteType(TflApiPresentationEntitiesIdentifierRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -68,6 +75,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TflApiPresentationEntitiesIdentifierStatusEnum status;
+
     public TflApiPresentationEntitiesIdentifier withStatus(TflApiPresentationEntitiesIdentifierStatusEnum status) {
         this.status = status;
         return this;
@@ -76,6 +84,7 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TflApiPresentationEntitiesIdentifier withType(String type) {
         this.type = type;
         return this;
@@ -84,9 +93,11 @@ public class TflApiPresentationEntitiesIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public TflApiPresentationEntitiesIdentifier withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public TflApiPresentationEntitiesIdentifier(){}
 }

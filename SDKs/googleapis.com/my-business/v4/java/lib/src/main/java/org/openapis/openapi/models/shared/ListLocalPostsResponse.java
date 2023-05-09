@@ -18,6 +18,7 @@ public class ListLocalPostsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPosts")
     public LocalPost[] localPosts;
+
     public ListLocalPostsResponse withLocalPosts(LocalPost[] localPosts) {
         this.localPosts = localPosts;
         return this;
@@ -29,9 +30,11 @@ public class ListLocalPostsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListLocalPostsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListLocalPostsResponse(){}
 }

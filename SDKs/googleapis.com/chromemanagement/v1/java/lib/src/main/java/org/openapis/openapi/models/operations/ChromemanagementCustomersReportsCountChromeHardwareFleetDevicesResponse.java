@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse {
     
     public String contentType;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResp
      */
     
     public org.openapis.openapi.models.shared.GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse googleChromeManagementV1CountChromeHardwareFleetDevicesResponse;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse withGoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse(org.openapis.openapi.models.shared.GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse googleChromeManagementV1CountChromeHardwareFleetDevicesResponse) {
         this.googleChromeManagementV1CountChromeHardwareFleetDevicesResponse = googleChromeManagementV1CountChromeHardwareFleetDevicesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResp
     
     
     public Integer statusCode;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

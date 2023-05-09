@@ -15,6 +15,7 @@ public class GetPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PythonScript")
     public String pythonScript;
+
     public GetPlanResponse withPythonScript(String pythonScript) {
         this.pythonScript = pythonScript;
         return this;
@@ -23,9 +24,11 @@ public class GetPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalaCode")
     public String scalaCode;
+
     public GetPlanResponse withScalaCode(String scalaCode) {
         this.scalaCode = scalaCode;
         return this;
     }
     
+    public GetPlanResponse(){}
 }

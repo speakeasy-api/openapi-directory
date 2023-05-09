@@ -12,6 +12,7 @@ public class GetInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=externalSkuNames")
     public String[] externalSkuNames;
+
     public GetInventoryRequest withExternalSkuNames(String[] externalSkuNames) {
         this.externalSkuNames = externalSkuNames;
         return this;
@@ -22,6 +23,7 @@ public class GetInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetInventoryRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=merchantIds")
     public Long[] merchantIds;
+
     public GetInventoryRequest withMerchantIds(Long[] merchantIds) {
         this.merchantIds = merchantIds;
         return this;
@@ -42,6 +45,7 @@ public class GetInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetInventoryRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,9 +56,11 @@ public class GetInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=warehouseIds")
     public Long[] warehouseIds;
+
     public GetInventoryRequest withWarehouseIds(Long[] warehouseIds) {
         this.warehouseIds = warehouseIds;
         return this;
     }
     
+    public GetInventoryRequest(){}
 }

@@ -12,6 +12,7 @@ public class UpdateSynonymsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("harry potter")
     public String[] harryPotter;
+
     public UpdateSynonymsRequestBody withHarryPotter(String[] harryPotter) {
         this.harryPotter = harryPotter;
         return this;
@@ -20,9 +21,11 @@ public class UpdateSynonymsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hp")
     public String[] hp;
+
     public UpdateSynonymsRequestBody withHp(String[] hp) {
         this.hp = hp;
         return this;
     }
     
+    public UpdateSynonymsRequestBody(){}
 }

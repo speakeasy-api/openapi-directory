@@ -20,6 +20,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessEndpoints")
     public AccessEndpoint[] accessEndpoints;
+
     public Stack withAccessEndpoints(AccessEndpoint[] accessEndpoints) {
         this.accessEndpoints = accessEndpoints;
         return this;
@@ -28,6 +29,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSettings")
     public ApplicationSettingsResponse applicationSettings;
+
     public Stack withApplicationSettings(ApplicationSettingsResponse applicationSettings) {
         this.applicationSettings = applicationSettings;
         return this;
@@ -36,6 +38,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Stack withArn(String arn) {
         this.arn = arn;
         return this;
@@ -46,6 +49,7 @@ public class Stack {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public Stack withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -54,6 +58,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Stack withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Stack withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -70,6 +76,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmbedHostDomains")
     public String[] embedHostDomains;
+
     public Stack withEmbedHostDomains(String[] embedHostDomains) {
         this.embedHostDomains = embedHostDomains;
         return this;
@@ -78,6 +85,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackURL")
     public String feedbackURL;
+
     public Stack withFeedbackURL(String feedbackURL) {
         this.feedbackURL = feedbackURL;
         return this;
@@ -85,6 +93,7 @@ public class Stack {
     
     @JsonProperty("Name")
     public String name;
+
     public Stack withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +102,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedirectURL")
     public String redirectURL;
+
     public Stack withRedirectURL(String redirectURL) {
         this.redirectURL = redirectURL;
         return this;
@@ -101,6 +111,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackErrors")
     public StackError[] stackErrors;
+
     public Stack withStackErrors(StackError[] stackErrors) {
         this.stackErrors = stackErrors;
         return this;
@@ -109,6 +120,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageConnectors")
     public StorageConnector[] storageConnectors;
+
     public Stack withStorageConnectors(StorageConnector[] storageConnectors) {
         this.storageConnectors = storageConnectors;
         return this;
@@ -117,6 +129,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingExperienceSettings")
     public StreamingExperienceSettings streamingExperienceSettings;
+
     public Stack withStreamingExperienceSettings(StreamingExperienceSettings streamingExperienceSettings) {
         this.streamingExperienceSettings = streamingExperienceSettings;
         return this;
@@ -125,9 +138,13 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserSettings")
     public UserSetting[] userSettings;
+
     public Stack withUserSettings(UserSetting[] userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public Stack(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

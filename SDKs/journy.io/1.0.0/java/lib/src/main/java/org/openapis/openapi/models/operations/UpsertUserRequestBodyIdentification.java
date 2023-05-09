@@ -18,6 +18,7 @@ public class UpsertUserRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UpsertUserRequestBodyIdentification withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class UpsertUserRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public UpsertUserRequestBodyIdentification withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UpsertUserRequestBodyIdentification(){}
 }

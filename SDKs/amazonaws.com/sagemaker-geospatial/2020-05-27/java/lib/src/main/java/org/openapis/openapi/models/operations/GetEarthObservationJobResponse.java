@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEarthObservationJobResponse {
@@ -12,6 +13,7 @@ public class GetEarthObservationJobResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEarthObservationJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEarthObservationJobResponse {
     
     
     public String contentType;
+
     public GetEarthObservationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEarthObservationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEarthObservationJobOutput getEarthObservationJobOutput;
+
     public GetEarthObservationJobResponse withGetEarthObservationJobOutput(org.openapis.openapi.models.shared.GetEarthObservationJobOutput getEarthObservationJobOutput) {
         this.getEarthObservationJobOutput = getEarthObservationJobOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetEarthObservationJobResponse {
      */
     
     public Object internalServerException;
+
     public GetEarthObservationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEarthObservationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEarthObservationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetEarthObservationJobResponse {
     
     
     public Integer statusCode;
+
     public GetEarthObservationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetEarthObservationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEarthObservationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetEarthObservationJobResponse {
      */
     
     public Object throttlingException;
+
     public GetEarthObservationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetEarthObservationJobResponse {
      */
     
     public Object validationException;
+
     public GetEarthObservationJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEarthObservationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

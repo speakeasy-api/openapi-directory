@@ -15,6 +15,7 @@ public class PerformanceInsightsMetricDimensionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public String[] dimensions;
+
     public PerformanceInsightsMetricDimensionGroup withDimensions(String[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +24,7 @@ public class PerformanceInsightsMetricDimensionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public String group;
+
     public PerformanceInsightsMetricDimensionGroup withGroup(String group) {
         this.group = group;
         return this;
@@ -31,9 +33,11 @@ public class PerformanceInsightsMetricDimensionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public PerformanceInsightsMetricDimensionGroup withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public PerformanceInsightsMetricDimensionGroup(){}
 }

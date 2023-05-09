@@ -15,6 +15,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BundleId")
     public String bundleId;
+
     public Workspace withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -23,6 +24,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputerName")
     public String computerName;
+
     public Workspace withComputerName(String computerName) {
         this.computerName = computerName;
         return this;
@@ -31,6 +33,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public Workspace withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -39,6 +42,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public Workspace withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -47,6 +51,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public Workspace withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -55,6 +60,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public Workspace withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -63,6 +69,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModificationStates")
     public ModificationState[] modificationStates;
+
     public Workspace withModificationStates(ModificationState[] modificationStates) {
         this.modificationStates = modificationStates;
         return this;
@@ -71,6 +78,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedWorkspaces")
     public RelatedWorkspaceProperties[] relatedWorkspaces;
+
     public Workspace withRelatedWorkspaces(RelatedWorkspaceProperties[] relatedWorkspaces) {
         this.relatedWorkspaces = relatedWorkspaces;
         return this;
@@ -79,6 +87,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootVolumeEncryptionEnabled")
     public Boolean rootVolumeEncryptionEnabled;
+
     public Workspace withRootVolumeEncryptionEnabled(Boolean rootVolumeEncryptionEnabled) {
         this.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
         return this;
@@ -87,6 +96,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkspaceStateEnum state;
+
     public Workspace withState(WorkspaceStateEnum state) {
         this.state = state;
         return this;
@@ -95,6 +105,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public Workspace withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -103,6 +114,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public Workspace withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -111,6 +123,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserVolumeEncryptionEnabled")
     public Boolean userVolumeEncryptionEnabled;
+
     public Workspace withUserVolumeEncryptionEnabled(Boolean userVolumeEncryptionEnabled) {
         this.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
         return this;
@@ -119,6 +132,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeEncryptionKey")
     public String volumeEncryptionKey;
+
     public Workspace withVolumeEncryptionKey(String volumeEncryptionKey) {
         this.volumeEncryptionKey = volumeEncryptionKey;
         return this;
@@ -127,6 +141,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public Workspace withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -135,9 +150,11 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceProperties")
     public WorkspaceProperties workspaceProperties;
+
     public Workspace withWorkspaceProperties(WorkspaceProperties workspaceProperties) {
         this.workspaceProperties = workspaceProperties;
         return this;
     }
     
+    public Workspace(){}
 }

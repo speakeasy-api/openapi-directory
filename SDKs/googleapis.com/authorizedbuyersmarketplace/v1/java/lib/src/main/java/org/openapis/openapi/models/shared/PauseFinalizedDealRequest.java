@@ -18,9 +18,11 @@ public class PauseFinalizedDealRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public PauseFinalizedDealRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public PauseFinalizedDealRequest(){}
 }

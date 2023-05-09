@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyWorkspaceCreationPropertiesResponse {
@@ -12,6 +13,7 @@ public class ModifyWorkspaceCreationPropertiesResponse {
      */
     
     public Object accessDeniedException;
+
     public ModifyWorkspaceCreationPropertiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ModifyWorkspaceCreationPropertiesResponse {
     
     
     public String contentType;
+
     public ModifyWorkspaceCreationPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyWorkspaceCreationPropertiesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ModifyWorkspaceCreationPropertiesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class ModifyWorkspaceCreationPropertiesResponse {
      */
     
     public java.util.Map<String, Object> modifyWorkspaceCreationPropertiesResult;
+
     public ModifyWorkspaceCreationPropertiesResponse withModifyWorkspaceCreationPropertiesResult(java.util.Map<String, Object> modifyWorkspaceCreationPropertiesResult) {
         this.modifyWorkspaceCreationPropertiesResult = modifyWorkspaceCreationPropertiesResult;
         return this;
@@ -49,6 +54,7 @@ public class ModifyWorkspaceCreationPropertiesResponse {
      */
     
     public Object operationNotSupportedException;
+
     public ModifyWorkspaceCreationPropertiesResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -56,6 +62,7 @@ public class ModifyWorkspaceCreationPropertiesResponse {
     
     
     public Integer statusCode;
+
     public ModifyWorkspaceCreationPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ModifyWorkspaceCreationPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyWorkspaceCreationPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ModifyWorkspaceCreationPropertiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ModifyWorkspaceCreationPropertiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ModifyWorkspaceCreationPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

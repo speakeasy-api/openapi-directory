@@ -12,9 +12,13 @@ public class PostAssetsReturnsRequestBodyAssets {
      */
     @JsonProperty("assetPrices")
     public Double[] assetPrices;
+
     public PostAssetsReturnsRequestBodyAssets withAssetPrices(Double[] assetPrices) {
         this.assetPrices = assetPrices;
         return this;
     }
     
+    public PostAssetsReturnsRequestBodyAssets(@JsonProperty("assetPrices") Double[] assetPrices) {
+        this.assetPrices = assetPrices;
+  }
 }

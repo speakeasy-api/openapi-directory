@@ -18,6 +18,7 @@ public class InstallAndroidCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public InstallAndroidCertificateDetails withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -29,9 +30,11 @@ public class InstallAndroidCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InstallAndroidCertificateDetailsTypeEnum type;
+
     public InstallAndroidCertificateDetails withType(InstallAndroidCertificateDetailsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InstallAndroidCertificateDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecretScanningListAlertsForEnterpriseResponse {
     
     public String contentType;
+
     public SecretScanningListAlertsForEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SecretScanningListAlertsForEnterpriseResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public SecretScanningListAlertsForEnterpriseResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class SecretScanningListAlertsForEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public SecretScanningListAlertsForEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class SecretScanningListAlertsForEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecretScanningListAlertsForEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class SecretScanningListAlertsForEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public SecretScanningListAlertsForEnterpriseResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class SecretScanningListAlertsForEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.OrganizationSecretScanningAlert[] organizationSecretScanningAlerts;
+
     public SecretScanningListAlertsForEnterpriseResponse withOrganizationSecretScanningAlerts(org.openapis.openapi.models.shared.OrganizationSecretScanningAlert[] organizationSecretScanningAlerts) {
         this.organizationSecretScanningAlerts = organizationSecretScanningAlerts;
         return this;
@@ -60,9 +67,14 @@ public class SecretScanningListAlertsForEnterpriseResponse {
      */
     
     public SecretScanningListAlertsForEnterprise503ApplicationJSON secretScanningListAlertsForEnterprise503ApplicationJSONObject;
+
     public SecretScanningListAlertsForEnterpriseResponse withSecretScanningListAlertsForEnterprise503ApplicationJSONObject(SecretScanningListAlertsForEnterprise503ApplicationJSON secretScanningListAlertsForEnterprise503ApplicationJSONObject) {
         this.secretScanningListAlertsForEnterprise503ApplicationJSONObject = secretScanningListAlertsForEnterprise503ApplicationJSONObject;
         return this;
     }
     
+    public SecretScanningListAlertsForEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

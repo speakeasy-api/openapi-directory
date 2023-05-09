@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterMailDomainResponse {
     
     public String contentType;
+
     public RegisterMailDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterMailDomainResponse {
      */
     
     public Object invalidParameterException;
+
     public RegisterMailDomainResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterMailDomainResponse {
      */
     
     public Object limitExceededException;
+
     public RegisterMailDomainResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterMailDomainResponse {
      */
     
     public Object mailDomainInUseException;
+
     public RegisterMailDomainResponse withMailDomainInUseException(Object mailDomainInUseException) {
         this.mailDomainInUseException = mailDomainInUseException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterMailDomainResponse {
      */
     
     public Object organizationNotFoundException;
+
     public RegisterMailDomainResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterMailDomainResponse {
      */
     
     public Object organizationStateException;
+
     public RegisterMailDomainResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterMailDomainResponse {
      */
     
     public java.util.Map<String, Object> registerMailDomainResponse;
+
     public RegisterMailDomainResponse withRegisterMailDomainResponse(java.util.Map<String, Object> registerMailDomainResponse) {
         this.registerMailDomainResponse = registerMailDomainResponse;
         return this;
@@ -76,6 +84,7 @@ public class RegisterMailDomainResponse {
     
     
     public Integer statusCode;
+
     public RegisterMailDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RegisterMailDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterMailDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterMailDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

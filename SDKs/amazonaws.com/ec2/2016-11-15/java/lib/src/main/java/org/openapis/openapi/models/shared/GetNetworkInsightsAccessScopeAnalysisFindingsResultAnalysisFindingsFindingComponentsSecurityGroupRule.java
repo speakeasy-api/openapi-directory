@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule {
     
     public String cidr;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String direction;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRulePortRange portRange;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule withPortRange(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRulePortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -33,6 +36,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String prefixListId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -40,6 +44,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String protocol;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -47,9 +52,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String securityGroupId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule(){}
 }

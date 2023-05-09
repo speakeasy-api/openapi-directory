@@ -18,6 +18,7 @@ public class WorkloadCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkloadCostEstimate withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class WorkloadCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuCostEstimates")
     public SkuCostEstimate[] skuCostEstimates;
+
     public WorkloadCostEstimate withSkuCostEstimates(SkuCostEstimate[] skuCostEstimates) {
         this.skuCostEstimates = skuCostEstimates;
         return this;
@@ -40,9 +42,11 @@ public class WorkloadCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadTotalCostEstimate")
     public CostEstimate workloadTotalCostEstimate;
+
     public WorkloadCostEstimate withWorkloadTotalCostEstimate(CostEstimate workloadTotalCostEstimate) {
         this.workloadTotalCostEstimate = workloadTotalCostEstimate;
         return this;
     }
     
+    public WorkloadCostEstimate(){}
 }

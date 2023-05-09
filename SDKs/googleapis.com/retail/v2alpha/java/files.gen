@@ -87,9 +87,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocations
 lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsListResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse.java
@@ -167,6 +167,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCat
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCatalogAttributeInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCatalogAttributeTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCatalogAttribute.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaInterval.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaAddCatalogAttributeRequestInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
@@ -181,7 +183,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaAdd
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaLocalInventory.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaPriceInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaPriceInfoPriceRange.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaInterval.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCustomAttribute.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaProductAvailabilityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaProductTypeEnum.java
@@ -209,6 +210,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSet
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCompleteQueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCompleteQueryResponseRecentSearchResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSearchResponseFacet.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSearchResponseFacetFacetValue.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaImportCompletionDataRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaCompletionDataInputConfig.java
@@ -254,6 +257,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaMod
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaModelPageOptimizationConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaModelModelFeaturesConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaModelFrequentlyBoughtTogetherFeaturesConfigContextProductsTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaModelFrequentlyBoughtTogetherFeaturesConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaListModelsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaModelServingConfigList.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaServingConfigDiversityTypeEnum.java
@@ -280,8 +286,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSea
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSearchResponseSearchResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSearchResponseQueryExpansionInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSearchResponseFacet.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSearchResponseFacetFacetValue.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaExperimentInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaExperimentInfoServingConfigExperiment.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaSearchRequestRelevanceThresholdEnum.java
@@ -301,4 +305,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaPur
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaRejoinUserEventsRequestUserEventRejoinScopeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2alphaRejoinUserEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

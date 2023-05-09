@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTagsRequest {
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public ListTagsRequest withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -19,6 +20,7 @@ public class ListTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTagsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTagsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTagsRequest(@JsonProperty("CertificateAuthorityArn") String certificateAuthorityArn) {
+        this.certificateAuthorityArn = certificateAuthorityArn;
+  }
 }

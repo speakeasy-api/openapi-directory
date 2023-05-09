@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidpublisherSystemapksVariantsGetResponse {
     
     public String contentType;
+
     public AndroidpublisherSystemapksVariantsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AndroidpublisherSystemapksVariantsGetResponse {
     
     
     public Integer statusCode;
+
     public AndroidpublisherSystemapksVariantsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AndroidpublisherSystemapksVariantsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidpublisherSystemapksVariantsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AndroidpublisherSystemapksVariantsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Variant variant;
+
     public AndroidpublisherSystemapksVariantsGetResponse withVariant(org.openapis.openapi.models.shared.Variant variant) {
         this.variant = variant;
         return this;
     }
     
+    public AndroidpublisherSystemapksVariantsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

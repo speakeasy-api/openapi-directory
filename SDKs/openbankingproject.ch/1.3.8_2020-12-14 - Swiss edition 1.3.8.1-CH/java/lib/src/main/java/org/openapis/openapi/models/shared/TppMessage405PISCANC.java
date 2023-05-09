@@ -14,6 +14,7 @@ public class TppMessage405PISCANC {
      */
     @JsonProperty("category")
     public TppMessageCategoryEnum category;
+
     public TppMessage405PISCANC withCategory(TppMessageCategoryEnum category) {
         this.category = category;
         return this;
@@ -24,6 +25,7 @@ public class TppMessage405PISCANC {
      */
     @JsonProperty("code")
     public MessageCode405PISCANCEnum code;
+
     public TppMessage405PISCANC withCode(MessageCode405PISCANCEnum code) {
         this.code = code;
         return this;
@@ -32,6 +34,7 @@ public class TppMessage405PISCANC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public TppMessage405PISCANC withPath(String path) {
         this.path = path;
         return this;
@@ -43,9 +46,14 @@ public class TppMessage405PISCANC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TppMessage405PISCANC withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TppMessage405PISCANC(@JsonProperty("category") TppMessageCategoryEnum category, @JsonProperty("code") MessageCode405PISCANCEnum code) {
+        this.category = category;
+        this.code = code;
+  }
 }

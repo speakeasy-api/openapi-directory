@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkersWithQualificationTypeResponse {
     
     public String contentType;
+
     public ListWorkersWithQualificationTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkersWithQualificationTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkersWithQualificationTypeResponse listWorkersWithQualificationTypeResponse;
+
     public ListWorkersWithQualificationTypeResponse withListWorkersWithQualificationTypeResponse(org.openapis.openapi.models.shared.ListWorkersWithQualificationTypeResponse listWorkersWithQualificationTypeResponse) {
         this.listWorkersWithQualificationTypeResponse = listWorkersWithQualificationTypeResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkersWithQualificationTypeResponse {
      */
     
     public Object requestError;
+
     public ListWorkersWithQualificationTypeResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkersWithQualificationTypeResponse {
      */
     
     public Object serviceFault;
+
     public ListWorkersWithQualificationTypeResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class ListWorkersWithQualificationTypeResponse {
     
     
     public Integer statusCode;
+
     public ListWorkersWithQualificationTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListWorkersWithQualificationTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkersWithQualificationTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListWorkersWithQualificationTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

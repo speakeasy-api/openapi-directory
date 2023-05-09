@@ -15,6 +15,7 @@ public class AnomalySourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchMetrics")
     public CloudWatchMetricsDetail[] cloudWatchMetrics;
+
     public AnomalySourceDetails withCloudWatchMetrics(CloudWatchMetricsDetail[] cloudWatchMetrics) {
         this.cloudWatchMetrics = cloudWatchMetrics;
         return this;
@@ -23,9 +24,11 @@ public class AnomalySourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerformanceInsightsMetrics")
     public PerformanceInsightsMetricsDetail[] performanceInsightsMetrics;
+
     public AnomalySourceDetails withPerformanceInsightsMetrics(PerformanceInsightsMetricsDetail[] performanceInsightsMetrics) {
         this.performanceInsightsMetrics = performanceInsightsMetrics;
         return this;
     }
     
+    public AnomalySourceDetails(){}
 }

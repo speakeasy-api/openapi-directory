@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeInstanceRefreshesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeInstanceRefreshesActionEnum action;
+
     public GETDescribeInstanceRefreshesRequest withAction(GETDescribeInstanceRefreshesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeInstanceRefreshesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETDescribeInstanceRefreshesRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeInstanceRefreshesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceRefreshIds")
     public String[] instanceRefreshIds;
+
     public GETDescribeInstanceRefreshesRequest withInstanceRefreshIds(String[] instanceRefreshIds) {
         this.instanceRefreshIds = instanceRefreshIds;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeInstanceRefreshesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeInstanceRefreshesRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeInstanceRefreshesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETDescribeInstanceRefreshesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -56,6 +62,7 @@ public class GETDescribeInstanceRefreshesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeInstanceRefreshesVersionEnum version;
+
     public GETDescribeInstanceRefreshesRequest withVersion(GETDescribeInstanceRefreshesVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDescribeInstanceRefreshesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeInstanceRefreshesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDescribeInstanceRefreshesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeInstanceRefreshesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDescribeInstanceRefreshesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeInstanceRefreshesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDescribeInstanceRefreshesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeInstanceRefreshesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDescribeInstanceRefreshesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeInstanceRefreshesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDescribeInstanceRefreshesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeInstanceRefreshesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETDescribeInstanceRefreshesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeInstanceRefreshesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeInstanceRefreshesRequest(@JsonProperty("Action") GETDescribeInstanceRefreshesActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("Version") GETDescribeInstanceRefreshesVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.version = version;
+  }
 }

@@ -15,9 +15,11 @@ public class RestoreDBClusterFromS3Result {
      */
     
     public DBCluster dbCluster;
+
     public RestoreDBClusterFromS3Result withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public RestoreDBClusterFromS3Result(){}
 }

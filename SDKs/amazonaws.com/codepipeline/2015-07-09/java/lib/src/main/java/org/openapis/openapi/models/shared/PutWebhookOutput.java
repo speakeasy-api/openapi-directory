@@ -15,9 +15,11 @@ public class PutWebhookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook")
     public ListWebhookItem webhook;
+
     public PutWebhookOutput withWebhook(ListWebhookItem webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public PutWebhookOutput(){}
 }

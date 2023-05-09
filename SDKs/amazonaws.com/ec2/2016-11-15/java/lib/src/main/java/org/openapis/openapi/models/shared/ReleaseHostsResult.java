@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReleaseHostsResult {
     
     public String[] successful;
+
     public ReleaseHostsResult withSuccessful(String[] successful) {
         this.successful = successful;
         return this;
@@ -19,9 +20,11 @@ public class ReleaseHostsResult {
     
     
     public ReleaseHostsResultUnsuccessful[] unsuccessful;
+
     public ReleaseHostsResult withUnsuccessful(ReleaseHostsResultUnsuccessful[] unsuccessful) {
         this.unsuccessful = unsuccessful;
         return this;
     }
     
+    public ReleaseHostsResult(){}
 }

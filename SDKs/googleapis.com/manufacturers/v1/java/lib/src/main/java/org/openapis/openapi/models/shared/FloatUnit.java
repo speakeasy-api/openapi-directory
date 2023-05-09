@@ -18,6 +18,7 @@ public class FloatUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public FloatUnit withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -29,9 +30,11 @@ public class FloatUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public FloatUnit withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public FloatUnit(){}
 }

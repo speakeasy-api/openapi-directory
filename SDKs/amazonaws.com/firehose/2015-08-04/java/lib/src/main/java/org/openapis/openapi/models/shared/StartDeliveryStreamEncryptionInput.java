@@ -12,6 +12,7 @@ public class StartDeliveryStreamEncryptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryStreamEncryptionConfigurationInput")
     public DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput;
+
     public StartDeliveryStreamEncryptionInput withDeliveryStreamEncryptionConfigurationInput(DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput) {
         this.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;
         return this;
@@ -19,9 +20,13 @@ public class StartDeliveryStreamEncryptionInput {
     
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public StartDeliveryStreamEncryptionInput withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
     }
     
+    public StartDeliveryStreamEncryptionInput(@JsonProperty("DeliveryStreamName") String deliveryStreamName) {
+        this.deliveryStreamName = deliveryStreamName;
+  }
 }

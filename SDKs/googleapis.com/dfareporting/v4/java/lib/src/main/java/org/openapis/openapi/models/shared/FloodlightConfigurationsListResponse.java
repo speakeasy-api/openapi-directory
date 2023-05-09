@@ -18,6 +18,7 @@ public class FloodlightConfigurationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightConfigurations")
     public FloodlightConfiguration[] floodlightConfigurations;
+
     public FloodlightConfigurationsListResponse withFloodlightConfigurations(FloodlightConfiguration[] floodlightConfigurations) {
         this.floodlightConfigurations = floodlightConfigurations;
         return this;
@@ -29,9 +30,11 @@ public class FloodlightConfigurationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FloodlightConfigurationsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public FloodlightConfigurationsListResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTestGridProjectResponse {
@@ -12,6 +13,7 @@ public class UpdateTestGridProjectResponse {
      */
     
     public Object argumentException;
+
     public UpdateTestGridProjectResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTestGridProjectResponse {
     
     
     public String contentType;
+
     public UpdateTestGridProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTestGridProjectResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateTestGridProjectResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTestGridProjectResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateTestGridProjectResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTestGridProjectResponse {
      */
     
     public Object notFoundException;
+
     public UpdateTestGridProjectResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateTestGridProjectResponse {
     
     
     public Integer statusCode;
+
     public UpdateTestGridProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTestGridProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTestGridProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateTestGridProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTestGridProjectResult updateTestGridProjectResult;
+
     public UpdateTestGridProjectResponse withUpdateTestGridProjectResult(org.openapis.openapi.models.shared.UpdateTestGridProjectResult updateTestGridProjectResult) {
         this.updateTestGridProjectResult = updateTestGridProjectResult;
         return this;
     }
     
+    public UpdateTestGridProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

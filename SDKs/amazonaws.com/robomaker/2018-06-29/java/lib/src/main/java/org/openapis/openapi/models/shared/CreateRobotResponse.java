@@ -20,6 +20,7 @@ public class CreateRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public ArchitectureEnum architecture;
+
     public CreateRobotResponse withArchitecture(ArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -28,6 +29,7 @@ public class CreateRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateRobotResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -38,6 +40,7 @@ public class CreateRobotResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateRobotResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class CreateRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrassGroupId")
     public String greengrassGroupId;
+
     public CreateRobotResponse withGreengrassGroupId(String greengrassGroupId) {
         this.greengrassGroupId = greengrassGroupId;
         return this;
@@ -54,6 +58,7 @@ public class CreateRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateRobotResponse withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +67,11 @@ public class CreateRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRobotResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRobotResponse(){}
 }

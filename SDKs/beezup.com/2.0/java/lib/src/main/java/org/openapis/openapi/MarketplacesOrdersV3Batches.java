@@ -65,13 +65,11 @@ public class MarketplacesOrdersV3Batches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeOrderListV2Response res = new org.openapis.openapi.models.operations.ChangeOrderListV2Response() {{
+        org.openapis.openapi.models.operations.ChangeOrderListV2Response res = new org.openapis.openapi.models.operations.ChangeOrderListV2Response(contentType, httpRes.statusCode()) {{
             batchOrderOperationResponse = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -133,13 +131,11 @@ public class MarketplacesOrdersV3Batches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeOrderListV3Response res = new org.openapis.openapi.models.operations.ChangeOrderListV3Response() {{
+        org.openapis.openapi.models.operations.ChangeOrderListV3Response res = new org.openapis.openapi.models.operations.ChangeOrderListV3Response(contentType, httpRes.statusCode()) {{
             batchOrderOperationResponse = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -199,13 +195,11 @@ public class MarketplacesOrdersV3Batches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClearMerchantOrderInfoListV3Response res = new org.openapis.openapi.models.operations.ClearMerchantOrderInfoListV3Response() {{
+        org.openapis.openapi.models.operations.ClearMerchantOrderInfoListV3Response res = new org.openapis.openapi.models.operations.ClearMerchantOrderInfoListV3Response(contentType, httpRes.statusCode()) {{
             batchOrderOperationResponse = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -265,13 +259,11 @@ public class MarketplacesOrdersV3Batches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetMerchantOrderInfoListV3Response res = new org.openapis.openapi.models.operations.SetMerchantOrderInfoListV3Response() {{
+        org.openapis.openapi.models.operations.SetMerchantOrderInfoListV3Response res = new org.openapis.openapi.models.operations.SetMerchantOrderInfoListV3Response(contentType, httpRes.statusCode()) {{
             batchOrderOperationResponse = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

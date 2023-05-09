@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class AuthConfigTemplate {
     /**
+     * Identifier key for auth config
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("authKey")
+    public String authKey;
+
+    public AuthConfigTemplate withAuthKey(String authKey) {
+        this.authKey = authKey;
+        return this;
+    }
+    
+    /**
      * The type of authentication configured.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authType")
     public AuthConfigTemplateAuthTypeEnum authType;
+
     public AuthConfigTemplate withAuthType(AuthConfigTemplateAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -29,6 +42,7 @@ public class AuthConfigTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configVariableTemplates")
     public ConfigVariableTemplate[] configVariableTemplates;
+
     public AuthConfigTemplate withConfigVariableTemplates(ConfigVariableTemplate[] configVariableTemplates) {
         this.configVariableTemplates = configVariableTemplates;
         return this;
@@ -40,6 +54,7 @@ public class AuthConfigTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AuthConfigTemplate withDescription(String description) {
         this.description = description;
         return this;
@@ -51,9 +66,11 @@ public class AuthConfigTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AuthConfigTemplate withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public AuthConfigTemplate(){}
 }

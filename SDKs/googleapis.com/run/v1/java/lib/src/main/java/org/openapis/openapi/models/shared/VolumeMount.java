@@ -18,6 +18,7 @@ public class VolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPath")
     public String mountPath;
+
     public VolumeMount withMountPath(String mountPath) {
         this.mountPath = mountPath;
         return this;
@@ -29,6 +30,7 @@ public class VolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VolumeMount withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class VolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public VolumeMount withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -51,9 +54,11 @@ public class VolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subPath")
     public String subPath;
+
     public VolumeMount withSubPath(String subPath) {
         this.subPath = subPath;
         return this;
     }
     
+    public VolumeMount(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatalabelingProjectsEvaluationJobsResumeResponse {
     
     public String contentType;
+
     public DatalabelingProjectsEvaluationJobsResumeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatalabelingProjectsEvaluationJobsResumeResponse {
      */
     
     public java.util.Map<String, Object> googleProtobufEmpty;
+
     public DatalabelingProjectsEvaluationJobsResumeResponse withGoogleProtobufEmpty(java.util.Map<String, Object> googleProtobufEmpty) {
         this.googleProtobufEmpty = googleProtobufEmpty;
         return this;
@@ -26,6 +29,7 @@ public class DatalabelingProjectsEvaluationJobsResumeResponse {
     
     
     public Integer statusCode;
+
     public DatalabelingProjectsEvaluationJobsResumeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatalabelingProjectsEvaluationJobsResumeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatalabelingProjectsEvaluationJobsResumeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatalabelingProjectsEvaluationJobsResumeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class CustomFieldsUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public CustomFieldsUploadRequestBodyExternalFile externalFile;
+
     public CustomFieldsUploadRequestBody withExternalFile(CustomFieldsUploadRequestBodyExternalFile externalFile) {
         this.externalFile = externalFile;
         return this;
     }
     
+    public CustomFieldsUploadRequestBody(){}
 }

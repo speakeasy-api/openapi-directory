@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeListenerRequest {
     @JsonProperty("ListenerArn")
     public String listenerArn;
+
     public DescribeListenerRequest withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
     }
     
+    public DescribeListenerRequest(@JsonProperty("ListenerArn") String listenerArn) {
+        this.listenerArn = listenerArn;
+  }
 }

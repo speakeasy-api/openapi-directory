@@ -18,6 +18,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public Configuration withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -29,6 +30,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationId")
     public String configurationId;
+
     public Configuration withConfigurationId(String configurationId) {
         this.configurationId = configurationId;
         return this;
@@ -40,6 +42,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationName")
     public String configurationName;
+
     public Configuration withConfigurationName(String configurationName) {
         this.configurationName = configurationName;
         return this;
@@ -51,6 +54,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactEmail")
     public String contactEmail;
+
     public Configuration withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -62,6 +66,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPhone")
     public String contactPhone;
+
     public Configuration withContactPhone(String contactPhone) {
         this.contactPhone = contactPhone;
         return this;
@@ -73,6 +78,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMessage")
     public String customMessage;
+
     public Configuration withCustomMessage(String customMessage) {
         this.customMessage = customMessage;
         return this;
@@ -84,6 +90,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dpcExtras")
     public String dpcExtras;
+
     public Configuration withDpcExtras(String dpcExtras) {
         this.dpcExtras = dpcExtras;
         return this;
@@ -95,6 +102,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dpcResourcePath")
     public String dpcResourcePath;
+
     public Configuration withDpcResourcePath(String dpcResourcePath) {
         this.dpcResourcePath = dpcResourcePath;
         return this;
@@ -106,6 +114,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public Configuration withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -117,9 +126,11 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Configuration withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Configuration(){}
 }

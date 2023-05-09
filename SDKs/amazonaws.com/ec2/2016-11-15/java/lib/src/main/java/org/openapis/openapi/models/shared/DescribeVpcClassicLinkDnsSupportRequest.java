@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcClassicLinkDnsSupportRequest {
     
     public Long maxResults;
+
     public DescribeVpcClassicLinkDnsSupportRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVpcClassicLinkDnsSupportRequest {
     
     
     public String nextToken;
+
     public DescribeVpcClassicLinkDnsSupportRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +25,11 @@ public class DescribeVpcClassicLinkDnsSupportRequest {
     
     
     public String[] vpcIds;
+
     public DescribeVpcClassicLinkDnsSupportRequest withVpcIds(String[] vpcIds) {
         this.vpcIds = vpcIds;
         return this;
     }
     
+    public DescribeVpcClassicLinkDnsSupportRequest(){}
 }

@@ -58,8 +58,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Operation.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java
+lib/src/main/java/org/openapis/openapi/models/shared/WorkflowCallLogLevelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkflowInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkflowStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Workflow.java
+lib/src/main/java/org/openapis/openapi/models/shared/StateErrorTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/StateError.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListWorkflowsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

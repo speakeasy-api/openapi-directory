@@ -12,9 +12,11 @@ public class PutV2WebhookSubscriptionsIdRequestBody {
      */
     @SpeakeasyMetadata("form:name=enabled")
     public Boolean enabled;
+
     public PutV2WebhookSubscriptionsIdRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public PutV2WebhookSubscriptionsIdRequestBody(){}
 }

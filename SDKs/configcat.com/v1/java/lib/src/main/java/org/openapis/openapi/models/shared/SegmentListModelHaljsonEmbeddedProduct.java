@@ -12,6 +12,7 @@ public class SegmentListModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public SegmentListModelHaljsonEmbeddedProductEmbedded embedded;
+
     public SegmentListModelHaljsonEmbeddedProduct withEmbedded(SegmentListModelHaljsonEmbeddedProductEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -20,6 +21,7 @@ public class SegmentListModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SegmentListModelHaljsonEmbeddedProductLinks links;
+
     public SegmentListModelHaljsonEmbeddedProduct withLinks(SegmentListModelHaljsonEmbeddedProductLinks links) {
         this.links = links;
         return this;
@@ -28,6 +30,7 @@ public class SegmentListModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SegmentListModelHaljsonEmbeddedProduct withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class SegmentListModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SegmentListModelHaljsonEmbeddedProduct withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class SegmentListModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public SegmentListModelHaljsonEmbeddedProduct withOrder(Integer order) {
         this.order = order;
         return this;
@@ -52,6 +57,7 @@ public class SegmentListModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public SegmentListModelHaljsonEmbeddedProduct withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -60,9 +66,11 @@ public class SegmentListModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public SegmentListModelHaljsonEmbeddedProduct withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public SegmentListModelHaljsonEmbeddedProduct(){}
 }

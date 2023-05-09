@@ -16,350 +16,350 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteCacheRequest;
 import org.openapis.openapi.models.operations.DeleteCacheResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     mwoAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
-            DeleteCacheRequest req = new DeleteCacheRequest() {{
-                key = "corrupti";
-            }}            
+            DeleteCacheRequest req = new DeleteCacheRequest("provident");            
 
             DeleteCacheResponse res = sdk.deleteCache(req);
 
-            if (res.operationStatus.isPresent()) {
+            if (res.operationStatus != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteCache` - Clear cache by key
+* [deleteCache](docs/sdk/README.md#deletecache) - Clear cache by key
 
-### activity
+### [activity](docs/activity/README.md)
 
-* `getActivities` - Monitor project activities
-* `getActivity` - View an activity
-* `getActivityComments` - View activity comments
-* `getComments` - View all project comments
-* `getSalesActivities` - Get sales activities for a project
-* `insertSalesActivity` - Insert sales activity for a project
-* `submitCommentJson` - Submit comment to an activity
-* `submitCommentMultipart` - Submit comment to an activity
+* [getActivities](docs/activity/README.md#getactivities) - Monitor project activities
+* [getActivity](docs/activity/README.md#getactivity) - View an activity
+* [getActivityComments](docs/activity/README.md#getactivitycomments) - View activity comments
+* [getComments](docs/activity/README.md#getcomments) - View all project comments
+* [getSalesActivities](docs/activity/README.md#getsalesactivities) - Get sales activities for a project
+* [insertSalesActivity](docs/activity/README.md#insertsalesactivity) - Insert sales activity for a project
+* [submitCommentJson](docs/activity/README.md#submitcommentjson) - Submit comment to an activity
+* [submitCommentMultipart](docs/activity/README.md#submitcommentmultipart) - Submit comment to an activity
 
-### async
+### [async](docs/async/README.md)
 
-* `downloadAsync` - Download result of an async operation
+* [downloadAsync](docs/async/README.md#downloadasync) - Download result of an async operation
 
-### auth
+### [auth](docs/auth/README.md)
 
-* `getAccessToken` - Retrieve an access token
+* [getAccessToken](docs/auth/README.md#getaccesstoken) - Retrieve an access token
 
-### blog
+### [blog](docs/blog/README.md)
 
-* `getBlogPosts` - Get blog posts - ordered by created desc by default
+* [getBlogPosts](docs/blog/README.md#getblogposts) - Get blog posts - ordered by created desc by default
 
-### commission
+### [commission](docs/commission/README.md)
 
-* `getCommissions` - Returns a commission list of current client.
-* `getCommissionsByFilter` - Returns a commission list of current client.
+* [getCommissions](docs/commission/README.md#getcommissions) - Returns a commission list of current client.
+* [getCommissionsByFilter](docs/commission/README.md#getcommissionsbyfilter) - Returns a commission list of current client.
 
-### continuousProject
+### [continuousProject](docs/continuousproject/README.md)
 
-* `addDocument` - Add a new document to your continuous project
-* `collectAnalytics` - Save/collect analytics data from Active widget
-* `complete` - Complete continuous project
-* `completeContinuousDocument` - Complete a continuous project document
-* `completeLanguage` - Complete continuous project language
-* `createActiveWidget` - Create a new Active widget
-* `createContinuousProject` - Create a continuous project
-* `createSubscription` - Create subscription for continuous project
-* `deleteActiveWidget` - Delete a single widget for this Active project
-* `deleteContinuousProject` - Delete a continuous project
-* `deleteSubscription` - Delete subscription for continuous project
-* `getActiveWidget` - View an Active widget
-* `getActiveWidgets` - View Active widgets
-* `getAnalyticsToken` - Get JWT token to be used in analytics dashboards
-* `getContinuousProject` - View a continuous project
-* `getContinuousProjectDocument` - View a continuous document
-* `getContinuousProjectDocumentProgress` - Monitor progress of a continuous document
-* `getContinuousProjectDocuments` - View continuous documents
-* `getContinuousProjectInvoices` - Invoices of a continuous project
-* `getContinuousProjectProgress` - Monitor progress and status of a continous project
-* `getContinuousProjects` - View continuous projects
-* `getQuoteForDocument` - Get a quote for a continuous project document
-* `getQuoteForDocuments` - Get quote for documents
-* `getQuoteForLanguage` - Get quote for language
-* `getQuoteForLanguages` - Get quote for languages
-* `getSubscription` - Get subscription for continuous project
-* `postContinuousProjectDocumentProgress` - Get continuous project document progress for multiple IDs
-* `resetActiveWidgetToken` - Reset Active widget token
-* `translate` - Instantly translate your content
-* `updateActiveWidget` - Update Active widget settings.
-* `updateContinuousProject` - Update a continuous project
-* `updateDocument` - Update the document
-* `updateSubscription` - Update subscription for continuous project
-* `updateSubscriptionPaymentMethod` - Update subscription payment method for continuous project
+* [addDocument](docs/continuousproject/README.md#adddocument) - Add a new document to your continuous project
+* [collectAnalytics](docs/continuousproject/README.md#collectanalytics) - Save/collect analytics data from Active widget
+* [complete](docs/continuousproject/README.md#complete) - Complete continuous project
+* [completeContinuousDocument](docs/continuousproject/README.md#completecontinuousdocument) - Complete a continuous project document
+* [completeLanguage](docs/continuousproject/README.md#completelanguage) - Complete continuous project language
+* [createActiveWidget](docs/continuousproject/README.md#createactivewidget) - Create a new Active widget
+* [createContinuousProject](docs/continuousproject/README.md#createcontinuousproject) - Create a continuous project
+* [createSubscription](docs/continuousproject/README.md#createsubscription) - Create subscription for continuous project
+* [deleteActiveWidget](docs/continuousproject/README.md#deleteactivewidget) - Delete a single widget for this Active project
+* [deleteContinuousProject](docs/continuousproject/README.md#deletecontinuousproject) - Delete a continuous project
+* [deleteSubscription](docs/continuousproject/README.md#deletesubscription) - Delete subscription for continuous project
+* [getActiveWidget](docs/continuousproject/README.md#getactivewidget) - View an Active widget
+* [getActiveWidgets](docs/continuousproject/README.md#getactivewidgets) - View Active widgets
+* [getAnalyticsToken](docs/continuousproject/README.md#getanalyticstoken) - Get JWT token to be used in analytics dashboards
+* [getContinuousProject](docs/continuousproject/README.md#getcontinuousproject) - View a continuous project
+* [getContinuousProjectDocument](docs/continuousproject/README.md#getcontinuousprojectdocument) - View a continuous document
+* [getContinuousProjectDocumentProgress](docs/continuousproject/README.md#getcontinuousprojectdocumentprogress) - Monitor progress of a continuous document
+* [getContinuousProjectDocuments](docs/continuousproject/README.md#getcontinuousprojectdocuments) - View continuous documents
+* [getContinuousProjectInvoices](docs/continuousproject/README.md#getcontinuousprojectinvoices) - Invoices of a continuous project
+* [getContinuousProjectProgress](docs/continuousproject/README.md#getcontinuousprojectprogress) - Monitor progress and status of a continous project
+* [getContinuousProjects](docs/continuousproject/README.md#getcontinuousprojects) - View continuous projects
+* [getQuoteForDocument](docs/continuousproject/README.md#getquotefordocument) - Get a quote for a continuous project document
+* [getQuoteForDocuments](docs/continuousproject/README.md#getquotefordocuments) - Get quote for documents
+* [getQuoteForLanguage](docs/continuousproject/README.md#getquoteforlanguage) - Get quote for language
+* [getQuoteForLanguages](docs/continuousproject/README.md#getquoteforlanguages) - Get quote for languages
+* [getSubscription](docs/continuousproject/README.md#getsubscription) - Get subscription for continuous project
+* [postContinuousProjectDocumentProgress](docs/continuousproject/README.md#postcontinuousprojectdocumentprogress) - Get continuous project document progress for multiple IDs
+* [resetActiveWidgetToken](docs/continuousproject/README.md#resetactivewidgettoken) - Reset Active widget token
+* [translate](docs/continuousproject/README.md#translate) - Instantly translate your content
+* [updateActiveWidget](docs/continuousproject/README.md#updateactivewidget) - Update Active widget settings.
+* [updateContinuousProject](docs/continuousproject/README.md#updatecontinuousproject) - Update a continuous project
+* [updateDocument](docs/continuousproject/README.md#updatedocument) - Update the document
+* [updateSubscription](docs/continuousproject/README.md#updatesubscription) - Update subscription for continuous project
+* [updateSubscriptionPaymentMethod](docs/continuousproject/README.md#updatesubscriptionpaymentmethod) - Update subscription payment method for continuous project
 
-### corporate
+### [corporate](docs/corporate/README.md)
 
-* `getAvailableCorporatePermissions` - View available permissions
-* `getAvailableCorporatePermissionsById` - Get a list of available permissions for this corporate account. They are used when assigning permissions to corporate users.
-* `getCorporate` - View your corporate account
-* `getCorporateById` - Get details of this corporate account
-* `getCorporateUserGroups` - View user groups
-* `getCorporateUserGroupsById` - Get a list of user groups for this corporate account
-* `getCorporateUsers` - View users
-* `getCorporateUsersById` - Get a list of users for this corporate account
-* `getCorporatesList` - Get a list of corporate accounts
-* `saveCorporateUser` - Create or update a user
-* `saveCorporateUserGroup` - Create or update a corporate user group
-* `saveCorporateUserGroupById` - Create or update a corporate user group for this corporate account
+* [getAvailableCorporatePermissions](docs/corporate/README.md#getavailablecorporatepermissions) - View available permissions
+* [getAvailableCorporatePermissionsById](docs/corporate/README.md#getavailablecorporatepermissionsbyid) - Get a list of available permissions for this corporate account. They are used when assigning permissions to corporate users.
+* [getCorporate](docs/corporate/README.md#getcorporate) - View your corporate account
+* [getCorporateById](docs/corporate/README.md#getcorporatebyid) - Get details of this corporate account
+* [getCorporateUserGroups](docs/corporate/README.md#getcorporateusergroups) - View user groups
+* [getCorporateUserGroupsById](docs/corporate/README.md#getcorporateusergroupsbyid) - Get a list of user groups for this corporate account
+* [getCorporateUsers](docs/corporate/README.md#getcorporateusers) - View users
+* [getCorporateUsersById](docs/corporate/README.md#getcorporateusersbyid) - Get a list of users for this corporate account
+* [getCorporatesList](docs/corporate/README.md#getcorporateslist) - Get a list of corporate accounts
+* [saveCorporateUser](docs/corporate/README.md#savecorporateuser) - Create or update a user
+* [saveCorporateUserGroup](docs/corporate/README.md#savecorporateusergroup) - Create or update a corporate user group
+* [saveCorporateUserGroupById](docs/corporate/README.md#savecorporateusergroupbyid) - Create or update a corporate user group for this corporate account
 
-### document
+### [document](docs/document/README.md)
 
-* `getAllDocumentSubjects` - Get a list of subjects of projects
-* `getDocument` - View a single document
-* `getDocumentProgress` - View a document translation progress
-* `getDocuments` - View your documents
-* `getSimilarDocuments` - Find documents similar to this document.
-* `getUserDocuments` - Get a list of your documents
-* `regeneratePreview` - Regenerate preview and return preview URL for given file
-* `useAsDraft` - Use the translation of given source manual document as manual draft source for the given target document.
-* `useAsRegular` - Use the translation of the given manual document as a regular file.
+* [getAllDocumentSubjects](docs/document/README.md#getalldocumentsubjects) - Get a list of subjects of projects
+* [getDocument](docs/document/README.md#getdocument) - View a single document
+* [getDocumentProgress](docs/document/README.md#getdocumentprogress) - View a document translation progress
+* [getDocuments](docs/document/README.md#getdocuments) - View your documents
+* [getSimilarDocuments](docs/document/README.md#getsimilardocuments) - Find documents similar to this document.
+* [getUserDocuments](docs/document/README.md#getuserdocuments) - Get a list of your documents
+* [regeneratePreview](docs/document/README.md#regeneratepreview) - Regenerate preview and return preview URL for given file
+* [useAsDraft](docs/document/README.md#useasdraft) - Use the translation of given source manual document as manual draft source for the given target document.
+* [useAsRegular](docs/document/README.md#useasregular) - Use the translation of the given manual document as a regular file.
 
-### glossary
+### [glossary](docs/glossary/README.md)
 
-* `createGlossaryJson` - Upload a glossary file
-* `createGlossaryMultipart` - Upload a glossary file
-* `deleteGlossary` - Delete a glossary
-* `downloadGlobalGlossary` - Download account glossary.
-* `downloadGlossary` - Download a glossary
-* `getGlossaries` - View glossaries
-* `getGlossary` - View a glossary
-* `updateGlobalGlossaryJson` - Create or update the account glossary
-* `updateGlobalGlossaryMultipart` - Create or update the account glossary
-* `updateGlossaryJson` - Update a glossary
-* `updateGlossaryMultipart` - Update a glossary
+* [createGlossaryJson](docs/glossary/README.md#createglossaryjson) - Upload a glossary file
+* [createGlossaryMultipart](docs/glossary/README.md#createglossarymultipart) - Upload a glossary file
+* [deleteGlossary](docs/glossary/README.md#deleteglossary) - Delete a glossary
+* [downloadGlobalGlossary](docs/glossary/README.md#downloadglobalglossary) - Download account glossary.
+* [downloadGlossary](docs/glossary/README.md#downloadglossary) - Download a glossary
+* [getGlossaries](docs/glossary/README.md#getglossaries) - View glossaries
+* [getGlossary](docs/glossary/README.md#getglossary) - View a glossary
+* [updateGlobalGlossaryJson](docs/glossary/README.md#updateglobalglossaryjson) - Create or update the account glossary
+* [updateGlobalGlossaryMultipart](docs/glossary/README.md#updateglobalglossarymultipart) - Create or update the account glossary
+* [updateGlossaryJson](docs/glossary/README.md#updateglossaryjson) - Update a glossary
+* [updateGlossaryMultipart](docs/glossary/README.md#updateglossarymultipart) - Update a glossary
 
-### integrations
+### [integrations](docs/integrations/README.md)
 
-* `getIntegrationsToken` - Generate a new access token for MotaWord's integrations service
+* [getIntegrationsToken](docs/integrations/README.md#getintegrationstoken) - Generate a new access token for MotaWord's integrations service
 
-### invitation
+### [invitation](docs/invitation/README.md)
 
-* `getInvitationVendors` - Get vendor list for compiled invitation needs
+* [getInvitationVendors](docs/invitation/README.md#getinvitationvendors) - Get vendor list for compiled invitation needs
 
-### machineLearning
+### [machineLearning](docs/machinelearning/README.md)
 
-* `getDeliveryPrediction` - Get a delivery prediction for a project
+* [getDeliveryPrediction](docs/machinelearning/README.md#getdeliveryprediction) - Get a delivery prediction for a project
 
-### pam
+### [pam](docs/pam/README.md)
 
-* `getClientProfileForPam` - Get the Pam profile of a client for this client ID
-* `getProjectCompletionReportForPam` - Get completion report data of a project
-* `postMessage` - Sends a message to chat
+* [getClientProfileForPam](docs/pam/README.md#getclientprofileforpam) - Get the Pam profile of a client for this client ID
+* [getProjectCompletionReportForPam](docs/pam/README.md#getprojectcompletionreportforpam) - Get completion report data of a project
+* [postMessage](docs/pam/README.md#postmessage) - Sends a message to chat
 
-### payment
+### [payment](docs/payment/README.md)
 
-* `deleteCreditCard` - Delete credit card
-* `getCreditCard` - View saved credit card
-* `resetCardPaymentCode` - Reset credit card payment code
-* `resetCorporatePaymentCode` - Reset payment code
-* `toggleCorporateAutoCharge` - Manage automatic charges on your credit card
+* [deleteCreditCard](docs/payment/README.md#deletecreditcard) - Delete credit card
+* [getCreditCard](docs/payment/README.md#getcreditcard) - View saved credit card
+* [resetCardPaymentCode](docs/payment/README.md#resetcardpaymentcode) - Reset credit card payment code
+* [resetCorporatePaymentCode](docs/payment/README.md#resetcorporatepaymentcode) - Reset payment code
+* [toggleCorporateAutoCharge](docs/payment/README.md#togglecorporateautocharge) - Manage automatic charges on your credit card
 
-### project
+### [project](docs/project/README.md)
 
-* `assignCM` - Assign a CM to the project
-* `cancelProject` - Cancel your translation project
-* `createProjectJson` - Create a new project
-* `createProjectMultipart` - Create a new project
-* `deleteProject` - Delete your translation project
-* `deliverProject` - Deliver project
-* `download` - Download your translated project
-* `downloadHtmlInvoice` - Download project invoice (HTML)
-* `downloadLanguage` - Download your translated project language
-* `downloadPdfInvoice` - Download project invoice (PDF)
-* `getInvoice` - View project invoice
-* `getProgress` - View progress of a project
-* `getProject` - View a translation project
-* `getProjectVendors` - Get a list of vendors.
-* `getProjects` - View your translation projects
-* `getQuoteIdFromInternalId` - Get Quote Id
-* `getVendorProjects` - List projects as a vendor
-* `getVendorProjectsByUserId` - Get a list of user/vendor projects
-* `launchProject` - Launch your translation project
-* `package_` - Package your translated project
-* `packageLanguage` - Package your translated project language
-* `recreateProject` - Recreate your translation project from scratch. This is a risky action, you will lose current translations.
-* `sendQuoteEmail` - Send a quote email
-* `submitProjectReports` - Submit feedback report for a project
-* `trackPackage` - Track translation packaging status
-* `triggerCallback` - Trigger a call to your callback URL related to this project.
-* `updateProject` - Update project info and settings
+* [assignCM](docs/project/README.md#assigncm) - Assign a CM to the project
+* [cancelProject](docs/project/README.md#cancelproject) - Cancel your translation project
+* [createProjectJson](docs/project/README.md#createprojectjson) - Create a new project
+* [createProjectMultipart](docs/project/README.md#createprojectmultipart) - Create a new project
+* [deleteProject](docs/project/README.md#deleteproject) - Delete your translation project
+* [deliverProject](docs/project/README.md#deliverproject) - Deliver project
+* [download](docs/project/README.md#download) - Download your translated project
+* [downloadHtmlInvoice](docs/project/README.md#downloadhtmlinvoice) - Download project invoice (HTML)
+* [downloadLanguage](docs/project/README.md#downloadlanguage) - Download your translated project language
+* [downloadPdfInvoice](docs/project/README.md#downloadpdfinvoice) - Download project invoice (PDF)
+* [getInvoice](docs/project/README.md#getinvoice) - View project invoice
+* [getProgress](docs/project/README.md#getprogress) - View progress of a project
+* [getProject](docs/project/README.md#getproject) - View a translation project
+* [getProjectVendors](docs/project/README.md#getprojectvendors) - Get a list of vendors.
+* [getProjects](docs/project/README.md#getprojects) - View your translation projects
+* [getQuoteIdFromInternalId](docs/project/README.md#getquoteidfrominternalid) - Get Quote Id
+* [getVendorProjects](docs/project/README.md#getvendorprojects) - List projects as a vendor
+* [getVendorProjectsByUserId](docs/project/README.md#getvendorprojectsbyuserid) - Get a list of user/vendor projects
+* [launchProject](docs/project/README.md#launchproject) - Launch your translation project
+* [package_](docs/project/README.md#package_) - Package your translated project
+* [packageLanguage](docs/project/README.md#packagelanguage) - Package your translated project language
+* [recreateProject](docs/project/README.md#recreateproject) - Recreate your translation project from scratch. This is a risky action, you will lose current translations.
+* [sendQuoteEmail](docs/project/README.md#sendquoteemail) - Send a quote email
+* [submitProjectReports](docs/project/README.md#submitprojectreports) - Submit feedback report for a project
+* [trackPackage](docs/project/README.md#trackpackage) - Track translation packaging status
+* [triggerCallback](docs/project/README.md#triggercallback) - Trigger a call to your callback URL related to this project.
+* [updateProject](docs/project/README.md#updateproject) - Update project info and settings
 
-### projectDocument
+### [projectDocument](docs/projectdocument/README.md)
 
-* `createProjectDocument` - Upload a new document
-* `deleteProjectDocument` - Delete the document
-* `downloadProjectDocument` - Download a project source document
-* `downloadTranslatedDocumentForLanguage` - Download translated document
-* `getProjectDocument` - View a project source document
-* `getProjectDocuments` - View project source documents
-* `updateProjectDocumentJson` - Update the document.
-* `updateProjectDocumentMultipart` - Update the document.
+* [createProjectDocument](docs/projectdocument/README.md#createprojectdocument) - Upload a new document
+* [deleteProjectDocument](docs/projectdocument/README.md#deleteprojectdocument) - Delete the document
+* [downloadProjectDocument](docs/projectdocument/README.md#downloadprojectdocument) - Download a project source document
+* [downloadTranslatedDocumentForLanguage](docs/projectdocument/README.md#downloadtranslateddocumentforlanguage) - Download translated document
+* [getProjectDocument](docs/projectdocument/README.md#getprojectdocument) - View a project source document
+* [getProjectDocuments](docs/projectdocument/README.md#getprojectdocuments) - View project source documents
+* [updateProjectDocumentJson](docs/projectdocument/README.md#updateprojectdocumentjson) - Update the document.
+* [updateProjectDocumentMultipart](docs/projectdocument/README.md#updateprojectdocumentmultipart) - Update the document.
 
-### projectWebhooks
+### [projectWebhooks](docs/projectwebhooks/README.md)
 
-* `deleteProjectWebhook` - Delete project webhooks
-* `getProjectWebhooks` - View project webhooks
-* `postProjectWebhook` - Update project webhook
-* `updateProjectWebhook` - Update project webhook
+* [deleteProjectWebhook](docs/projectwebhooks/README.md#deleteprojectwebhook) - Delete project webhooks
+* [getProjectWebhooks](docs/projectwebhooks/README.md#getprojectwebhooks) - View project webhooks
+* [postProjectWebhook](docs/projectwebhooks/README.md#postprojectwebhook) - Update project webhook
+* [updateProjectWebhook](docs/projectwebhooks/README.md#updateprojectwebhook) - Update project webhook
 
-### report
+### [report](docs/report/README.md)
 
-* `generateQAReport` - Generate a QA report for given filter
-* `getFilterContents` - Returns available options for selected timeframe.
-* `getLanguagePairsReport` - Language pairs report
-* `getProjectsReport` - Projects report
-* `getUsersReport` - Company users report
+* [generateQAReport](docs/report/README.md#generateqareport) - Generate a QA report for given filter
+* [getFilterContents](docs/report/README.md#getfiltercontents) - Returns available options for selected timeframe.
+* [getLanguagePairsReport](docs/report/README.md#getlanguagepairsreport) - Language pairs report
+* [getProjectsReport](docs/report/README.md#getprojectsreport) - Projects report
+* [getUsersReport](docs/report/README.md#getusersreport) - Company users report
 
-### search
+### [search](docs/search/README.md)
 
-* `checkDocumentsReindex` - Check reindex status of the client source and translation documents.
-* `reindexDocuments` - Reindex for search all of the client source and translation documents.
-* `searchEverywhere` - Search everything in your account
+* [checkDocumentsReindex](docs/search/README.md#checkdocumentsreindex) - Check reindex status of the client source and translation documents.
+* [reindexDocuments](docs/search/README.md#reindexdocuments) - Reindex for search all of the client source and translation documents.
+* [searchEverywhere](docs/search/README.md#searcheverywhere) - Search everything in your account
 
-### static_
+### [static_](docs/static/README.md)
 
-* `getEndpoints` - Available endpoints
-* `getFormats` - List of supported file formats
-* `getLanguages` - List of supported languages
-* `getSwaggerYaml` - OpenAPI YAML representation of our API
+* [getEndpoints](docs/static/README.md#getendpoints) - Available endpoints
+* [getFormats](docs/static/README.md#getformats) - List of supported file formats
+* [getLanguages](docs/static/README.md#getlanguages) - List of supported languages
+* [getSwaggerYaml](docs/static/README.md#getswaggeryaml) - OpenAPI YAML representation of our API
 
-### stats
+### [stats](docs/stats/README.md)
 
-* `getCommissionStats` - Returns the total commissions stats.
-* `getCommissionStatsByFilter` - Returns the total commissions stats by report filter.
-* `getPopularPairs` - View your popular language pairs
-* `getProjectStats` - View your project statistics
-* `getStringStats` - View your translation statistics
+* [getCommissionStats](docs/stats/README.md#getcommissionstats) - Returns the total commissions stats.
+* [getCommissionStatsByFilter](docs/stats/README.md#getcommissionstatsbyfilter) - Returns the total commissions stats by report filter.
+* [getPopularPairs](docs/stats/README.md#getpopularpairs) - View your popular language pairs
+* [getProjectStats](docs/stats/README.md#getprojectstats) - View your project statistics
+* [getStringStats](docs/stats/README.md#getstringstats) - View your translation statistics
 
-### strings
+### [strings](docs/strings/README.md)
 
-* `clearTranslationCache` - Clear translation cache
-* `getContinuousProjectFileStrings` - View strings their translations in a continuous document
-* `getContinuousProjectStrings` - View strings and translations in continuous project
-* `getDocumentTranslations` - View strings and translations of a document
-* `getDocumentTranslationsForLanguage` - View strings and translations of a document for target language
-* `getProjectStrings` - View project strings and translations
-* `getProjectStringsForLanguage` - View strings and translations for target language
-* `getProjectTranslations` - Deprecated. Use /projects/{projectId}/strings instead.
-* `getProjectTranslationsForLanguage` - Deprecated. use /projects/{projectId}/strings/{language} instead.
-* `getStrings` - View account strings (translation memory)
-* `getTranslationCache` - View cached strings translations in continuous project
-* `packageProjectTranslationMemory` - Download project translation memory
-* `packageProjectTranslationMemoryForLanguage` - Download language-specific project translation memory
-* `packageProjectTranslationMemoryForLanguageStatus` - Check language-specific translation memory packaging status
-* `packageProjectTranslationMemoryStatus` - Check translation memory packaging status
-* `packageUserTranslationMemory` - Download account translation memory
-* `packageUserTranslationMemoryForLanguageStatus` - Check account translation memory packaging status
-* `postContinuousProjectFileStrings` - Get a list of strings and its translations in the project.
-* `postStrings` - Translate Strings with MT
-* `recacheTranslations` - Recache translations
-* `updateTranslationMemoryUnit` - Update string translation
+* [clearTranslationCache](docs/strings/README.md#cleartranslationcache) - Clear translation cache
+* [getContinuousProjectFileStrings](docs/strings/README.md#getcontinuousprojectfilestrings) - View strings their translations in a continuous document
+* [getContinuousProjectStrings](docs/strings/README.md#getcontinuousprojectstrings) - View strings and translations in continuous project
+* [getDocumentTranslations](docs/strings/README.md#getdocumenttranslations) - View strings and translations of a document
+* [getDocumentTranslationsForLanguage](docs/strings/README.md#getdocumenttranslationsforlanguage) - View strings and translations of a document for target language
+* [getProjectStrings](docs/strings/README.md#getprojectstrings) - View project strings and translations
+* [getProjectStringsForLanguage](docs/strings/README.md#getprojectstringsforlanguage) - View strings and translations for target language
+* [~~getProjectTranslations~~](docs/strings/README.md#getprojecttranslations) - Deprecated. Use /projects/{projectId}/strings instead. :warning: **Deprecated**
+* [~~getProjectTranslationsForLanguage~~](docs/strings/README.md#getprojecttranslationsforlanguage) - Deprecated. use /projects/{projectId}/strings/{language} instead. :warning: **Deprecated**
+* [getStrings](docs/strings/README.md#getstrings) - View account strings (translation memory)
+* [getTranslationCache](docs/strings/README.md#gettranslationcache) - View cached strings translations in continuous project
+* [packageProjectTranslationMemory](docs/strings/README.md#packageprojecttranslationmemory) - Download project translation memory
+* [packageProjectTranslationMemoryForLanguage](docs/strings/README.md#packageprojecttranslationmemoryforlanguage) - Download language-specific project translation memory
+* [packageProjectTranslationMemoryForLanguageStatus](docs/strings/README.md#packageprojecttranslationmemoryforlanguagestatus) - Check language-specific translation memory packaging status
+* [packageProjectTranslationMemoryStatus](docs/strings/README.md#packageprojecttranslationmemorystatus) - Check translation memory packaging status
+* [packageUserTranslationMemory](docs/strings/README.md#packageusertranslationmemory) - Download account translation memory
+* [packageUserTranslationMemoryForLanguageStatus](docs/strings/README.md#packageusertranslationmemoryforlanguagestatus) - Check account translation memory packaging status
+* [postContinuousProjectFileStrings](docs/strings/README.md#postcontinuousprojectfilestrings) - Get a list of strings and its translations in the project.
+* [~~postStrings~~](docs/strings/README.md#poststrings) - Translate Strings with MT :warning: **Deprecated**
+* [recacheTranslations](docs/strings/README.md#recachetranslations) - Recache translations
+* [updateTranslationMemoryUnit](docs/strings/README.md#updatetranslationmemoryunit) - Update string translation
 
-### styleGuide
+### [styleGuide](docs/styleguide/README.md)
 
-* `createStyleGuideJson` - Upload a new style guide
-* `createStyleGuideMultipart` - Upload a new style guide
-* `deleteStyleGuide` - Delete a style guide
-* `downloadGlobalStyleGuide` - Download account style guide
-* `downloadStyleGuide` - Download a style guide
-* `getStyleGuide` - View a style guide
-* `getStyleGuides` - View style guides
-* `updateGlobalStyleGuideJson` - Create or update the account style guide
-* `updateGlobalStyleGuideMultipart` - Create or update the account style guide
-* `updateStyleGuideJson` - Update a style guide
-* `updateStyleGuideMultipart` - Update a style guide
+* [createStyleGuideJson](docs/styleguide/README.md#createstyleguidejson) - Upload a new style guide
+* [createStyleGuideMultipart](docs/styleguide/README.md#createstyleguidemultipart) - Upload a new style guide
+* [deleteStyleGuide](docs/styleguide/README.md#deletestyleguide) - Delete a style guide
+* [downloadGlobalStyleGuide](docs/styleguide/README.md#downloadglobalstyleguide) - Download account style guide
+* [downloadStyleGuide](docs/styleguide/README.md#downloadstyleguide) - Download a style guide
+* [getStyleGuide](docs/styleguide/README.md#getstyleguide) - View a style guide
+* [getStyleGuides](docs/styleguide/README.md#getstyleguides) - View style guides
+* [updateGlobalStyleGuideJson](docs/styleguide/README.md#updateglobalstyleguidejson) - Create or update the account style guide
+* [updateGlobalStyleGuideMultipart](docs/styleguide/README.md#updateglobalstyleguidemultipart) - Create or update the account style guide
+* [updateStyleGuideJson](docs/styleguide/README.md#updatestyleguidejson) - Update a style guide
+* [updateStyleGuideMultipart](docs/styleguide/README.md#updatestyleguidemultipart) - Update a style guide
 
-### surveys
+### [surveys](docs/surveys/README.md)
 
-* `getQuestions` - Get survey questions in given scope and type
-* `submitAnswers` - Post survey answers for scope and type
+* [getQuestions](docs/surveys/README.md#getquestions) - Get survey questions in given scope and type
+* [submitAnswers](docs/surveys/README.md#submitanswers) - Post survey answers for scope and type
 
-### user
+### [user](docs/user/README.md)
 
-* `approveVendorApplication`
-* `createUser` - Create a new user
-* `deleteAccount` - Delete your account
-* `deleteUserAccount` - Delete requester account
-* `downgradeProofreader`
-* `downgradeUserProofreader`
-* `freezeAccount` - Freeze account
-* `freezeUserAccount` - Freeze requester account for project notifications
-* `getAllVendorTags` - Returns all vendor tags for vendors filter
-* `getEarnings` - View your vendor earnings
-* `getFilteredVendors` - Filter vendors based on provided parameters
-* `getMe` - View your account info
-* `getPaymentInfo` - View your payment and billing info
-* `getPermissions` - View your permissions
-* `getResponsivity` - View your vendor responsiveness
-* `getStats` - View your account statistics
-* `getThisUserGroups` - Returns a list of user groups that this user belongs to.
-* `getUser` - Get user information, including client or vendor specific info.
-* `getUserEarnings` - Returns your vendor earnings. Includes real-time earnings from ongoing projects, and fixed earnings from completed projects. Also includes total earnings and string edits.
-* `getUserGroups` - View your user groups
-* `getUserPaymentInfo` - View user's payment and billing info
-* `getUserPermissions` - Returns a list of permissions that this user is authorized for.
-* `getUserPopularPairs` - Returns the language pairs that the user has ordered most.
-* `getUserProjectStats` - Returns a user's project statistics.
-* `getUserResponsivity` - Returns a user's vendor responsivity stats
-* `getUserStats` - Returns a user's client and vendor statistics. This used to be called "summary" (\@deprecated).
-* `getUsers` - Get a list of platform users
-* `logLocation` - Log user's current location. This data is used in our Intelligent Project Manager for various data analysis, including project prioritization for vendors and account validation.
-* `makeProofreader`
-* `makeUserProofreader`
-* `rejectVendorApplication`
-* `sendEmailConfirmation` - Sends email confirmation email for current user
-* `sendPasswordReminder` - Sends password reset email to the user's registered email address
-* `sendUserEmailConfirmation` - Sends email confirmation email for a user
-* `subscribeNotification` - Subscribe to push notifications
-* `subscribeUserNotification`
-* `suspendUser`
-* `unfreezeAccount` - Defreeze your account
-* `unfreezeUserAccount` - Unfreeze requester account for project notifications
-* `unsubscribeNotification`
-* `unsubscribeUserNotification`
-* `updateMe` - Update your account info
-* `updatePassword` - Update your account password
-* `updatePaymentInfo` - Update payment info
-* `updateUser`
-* `updateUserGroup`
-* `updateUserPaymentInfo` - Update user payment info
-* `uploadProfilePictureJson` - Upload profile picture
-* `uploadProfilePictureMultipart` - Upload profile picture
-* `uploadUserProfilePictureJson`
-* `uploadUserProfilePictureMultipart`
+* [approveVendorApplication](docs/user/README.md#approvevendorapplication)
+* [createUser](docs/user/README.md#createuser) - Create a new user
+* [deleteAccount](docs/user/README.md#deleteaccount) - Delete your account
+* [deleteUserAccount](docs/user/README.md#deleteuseraccount) - Delete requester account
+* [downgradeProofreader](docs/user/README.md#downgradeproofreader)
+* [downgradeUserProofreader](docs/user/README.md#downgradeuserproofreader)
+* [freezeAccount](docs/user/README.md#freezeaccount) - Freeze account
+* [freezeUserAccount](docs/user/README.md#freezeuseraccount) - Freeze requester account for project notifications
+* [getAllVendorTags](docs/user/README.md#getallvendortags) - Returns all vendor tags for vendors filter
+* [getEarnings](docs/user/README.md#getearnings) - View your vendor earnings
+* [getFilteredVendors](docs/user/README.md#getfilteredvendors) - Filter vendors based on provided parameters
+* [getMe](docs/user/README.md#getme) - View your account info
+* [getPaymentInfo](docs/user/README.md#getpaymentinfo) - View your payment and billing info
+* [getPermissions](docs/user/README.md#getpermissions) - View your permissions
+* [getResponsivity](docs/user/README.md#getresponsivity) - View your vendor responsiveness
+* [getStats](docs/user/README.md#getstats) - View your account statistics
+* [getThisUserGroups](docs/user/README.md#getthisusergroups) - Returns a list of user groups that this user belongs to.
+* [getUser](docs/user/README.md#getuser) - Get user information, including client or vendor specific info.
+* [getUserEarnings](docs/user/README.md#getuserearnings) - Returns your vendor earnings. Includes real-time earnings from ongoing projects, and fixed earnings from completed projects. Also includes total earnings and string edits.
+* [getUserGroups](docs/user/README.md#getusergroups) - View your user groups
+* [getUserPaymentInfo](docs/user/README.md#getuserpaymentinfo) - View user's payment and billing info
+* [getUserPermissions](docs/user/README.md#getuserpermissions) - Returns a list of permissions that this user is authorized for.
+* [getUserPopularPairs](docs/user/README.md#getuserpopularpairs) - Returns the language pairs that the user has ordered most.
+* [getUserProjectStats](docs/user/README.md#getuserprojectstats) - Returns a user's project statistics.
+* [getUserResponsivity](docs/user/README.md#getuserresponsivity) - Returns a user's vendor responsivity stats
+* [getUserStats](docs/user/README.md#getuserstats) - Returns a user's client and vendor statistics. This used to be called "summary" (\@deprecated).
+* [getUsers](docs/user/README.md#getusers) - Get a list of platform users
+* [logLocation](docs/user/README.md#loglocation) - Log user's current location. This data is used in our Intelligent Project Manager for various data analysis, including project prioritization for vendors and account validation.
+* [makeProofreader](docs/user/README.md#makeproofreader)
+* [makeUserProofreader](docs/user/README.md#makeuserproofreader)
+* [rejectVendorApplication](docs/user/README.md#rejectvendorapplication)
+* [sendEmailConfirmation](docs/user/README.md#sendemailconfirmation) - Sends email confirmation email for current user
+* [sendPasswordReminder](docs/user/README.md#sendpasswordreminder) - Sends password reset email to the user's registered email address
+* [sendUserEmailConfirmation](docs/user/README.md#senduseremailconfirmation) - Sends email confirmation email for a user
+* [subscribeNotification](docs/user/README.md#subscribenotification) - Subscribe to push notifications
+* [subscribeUserNotification](docs/user/README.md#subscribeusernotification)
+* [suspendUser](docs/user/README.md#suspenduser)
+* [unfreezeAccount](docs/user/README.md#unfreezeaccount) - Defreeze your account
+* [unfreezeUserAccount](docs/user/README.md#unfreezeuseraccount) - Unfreeze requester account for project notifications
+* [unsubscribeNotification](docs/user/README.md#unsubscribenotification)
+* [unsubscribeUserNotification](docs/user/README.md#unsubscribeusernotification)
+* [updateMe](docs/user/README.md#updateme) - Update your account info
+* [updatePassword](docs/user/README.md#updatepassword) - Update your account password
+* [updatePaymentInfo](docs/user/README.md#updatepaymentinfo) - Update payment info
+* [updateUser](docs/user/README.md#updateuser)
+* [updateUserGroup](docs/user/README.md#updateusergroup)
+* [updateUserPaymentInfo](docs/user/README.md#updateuserpaymentinfo) - Update user payment info
+* [uploadProfilePictureJson](docs/user/README.md#uploadprofilepicturejson) - Upload profile picture
+* [uploadProfilePictureMultipart](docs/user/README.md#uploadprofilepicturemultipart) - Upload profile picture
+* [uploadUserProfilePictureJson](docs/user/README.md#uploaduserprofilepicturejson)
+* [uploadUserProfilePictureMultipart](docs/user/README.md#uploaduserprofilepicturemultipart)
 
-### vendor
+### [vendor](docs/vendor/README.md)
 
-* `getAvailableVendors` - Get a list of vendors available for the criteria given
+* [getAvailableVendors](docs/vendor/README.md#getavailablevendors) - Get a list of vendors available for the criteria given
 <!-- End SDK Available Operations -->
 
 ### Maturity

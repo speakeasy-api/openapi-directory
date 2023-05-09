@@ -57,12 +57,10 @@ public class SetListeNoire {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetListeNoireResponse res = new org.openapis.openapi.models.operations.SetListeNoireResponse() {{
+        org.openapis.openapi.models.operations.SetListeNoireResponse res = new org.openapis.openapi.models.operations.SetListeNoireResponse(contentType, httpRes.statusCode()) {{
             listenoireReponse = null;
             erreur = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

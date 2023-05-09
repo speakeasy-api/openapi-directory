@@ -18,6 +18,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public Item withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -29,6 +30,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public Label[] labels;
+
     public Item withLabels(Label[] labels) {
         this.labels = labels;
         return this;
@@ -40,9 +42,11 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Money price;
+
     public Item withPrice(Money price) {
         this.price = price;
         return this;
     }
     
+    public Item(){}
 }

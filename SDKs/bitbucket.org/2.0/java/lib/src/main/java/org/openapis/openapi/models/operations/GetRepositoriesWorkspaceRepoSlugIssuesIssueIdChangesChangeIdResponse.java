@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRespons
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRespons
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRespons
      */
     
     public java.util.Map<String, Object> issueChange;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse withIssueChange(java.util.Map<String, Object> issueChange) {
         this.issueChange = issueChange;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

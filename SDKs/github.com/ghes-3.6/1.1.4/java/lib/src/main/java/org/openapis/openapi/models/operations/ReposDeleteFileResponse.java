@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposDeleteFileResponse {
     
     public String contentType;
+
     public ReposDeleteFileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposDeleteFileResponse {
     
     
     public Integer statusCode;
+
     public ReposDeleteFileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposDeleteFileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposDeleteFileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposDeleteFileResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposDeleteFileResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposDeleteFileResponse {
      */
     
     public org.openapis.openapi.models.shared.FileCommit fileCommit;
+
     public ReposDeleteFileResponse withFileCommit(org.openapis.openapi.models.shared.FileCommit fileCommit) {
         this.fileCommit = fileCommit;
         return this;
@@ -53,6 +59,7 @@ public class ReposDeleteFileResponse {
      */
     
     public ReposDeleteFile503ApplicationJSON reposDeleteFile503ApplicationJSONObject;
+
     public ReposDeleteFileResponse withReposDeleteFile503ApplicationJSONObject(ReposDeleteFile503ApplicationJSON reposDeleteFile503ApplicationJSONObject) {
         this.reposDeleteFile503ApplicationJSONObject = reposDeleteFile503ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ReposDeleteFileResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposDeleteFileResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposDeleteFileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

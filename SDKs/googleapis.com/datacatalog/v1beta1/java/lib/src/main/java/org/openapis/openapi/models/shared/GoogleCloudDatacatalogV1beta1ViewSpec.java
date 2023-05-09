@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1beta1ViewSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewQuery")
     public String viewQuery;
+
     public GoogleCloudDatacatalogV1beta1ViewSpec withViewQuery(String viewQuery) {
         this.viewQuery = viewQuery;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1ViewSpec(){}
 }

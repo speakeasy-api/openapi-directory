@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeploymentmanagerDeploymentsSetIamPolicySecurity {
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerDeploymentsSetIamPolicySecurityOption1 option1;
+
     public DeploymentmanagerDeploymentsSetIamPolicySecurity withOption1(DeploymentmanagerDeploymentsSetIamPolicySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DeploymentmanagerDeploymentsSetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerDeploymentsSetIamPolicySecurityOption2 option2;
+
     public DeploymentmanagerDeploymentsSetIamPolicySecurity withOption2(DeploymentmanagerDeploymentsSetIamPolicySecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DeploymentmanagerDeploymentsSetIamPolicySecurity(){}
 }

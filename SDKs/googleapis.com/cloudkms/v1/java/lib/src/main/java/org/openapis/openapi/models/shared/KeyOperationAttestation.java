@@ -18,6 +18,7 @@ public class KeyOperationAttestation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certChains")
     public CertificateChains certChains;
+
     public KeyOperationAttestation withCertChains(CertificateChains certChains) {
         this.certChains = certChains;
         return this;
@@ -29,6 +30,7 @@ public class KeyOperationAttestation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public KeyOperationAttestation withContent(String content) {
         this.content = content;
         return this;
@@ -40,9 +42,11 @@ public class KeyOperationAttestation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public KeyOperationAttestationFormatEnum format;
+
     public KeyOperationAttestation withFormat(KeyOperationAttestationFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public KeyOperationAttestation(){}
 }

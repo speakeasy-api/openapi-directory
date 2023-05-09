@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportImageTasksResultExportImageTasks {
     
     public String description;
+
     public DescribeExportImageTasksResultExportImageTasks withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeExportImageTasksResultExportImageTasks {
     
     
     public String exportImageTaskId;
+
     public DescribeExportImageTasksResultExportImageTasks withExportImageTaskId(String exportImageTaskId) {
         this.exportImageTaskId = exportImageTaskId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeExportImageTasksResultExportImageTasks {
     
     
     public String imageId;
+
     public DescribeExportImageTasksResultExportImageTasks withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeExportImageTasksResultExportImageTasks {
     
     
     public String progress;
+
     public DescribeExportImageTasksResultExportImageTasks withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -40,6 +44,7 @@ public class DescribeExportImageTasksResultExportImageTasks {
     
     
     public DescribeExportImageTasksResultExportImageTasksS3ExportLocation s3ExportLocation;
+
     public DescribeExportImageTasksResultExportImageTasks withS3ExportLocation(DescribeExportImageTasksResultExportImageTasksS3ExportLocation s3ExportLocation) {
         this.s3ExportLocation = s3ExportLocation;
         return this;
@@ -47,6 +52,7 @@ public class DescribeExportImageTasksResultExportImageTasks {
     
     
     public String status;
+
     public DescribeExportImageTasksResultExportImageTasks withStatus(String status) {
         this.status = status;
         return this;
@@ -54,6 +60,7 @@ public class DescribeExportImageTasksResultExportImageTasks {
     
     
     public String statusMessage;
+
     public DescribeExportImageTasksResultExportImageTasks withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -61,9 +68,11 @@ public class DescribeExportImageTasksResultExportImageTasks {
     
     
     public DescribeExportImageTasksResultExportImageTasksTags[] tags;
+
     public DescribeExportImageTasksResultExportImageTasks withTags(DescribeExportImageTasksResultExportImageTasksTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeExportImageTasksResultExportImageTasks(){}
 }

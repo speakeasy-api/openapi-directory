@@ -21,6 +21,7 @@ public class ScheduledStatus {
      */
     @JsonProperty("id")
     public String id;
+
     public ScheduledStatus withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +32,7 @@ public class ScheduledStatus {
      */
     @JsonProperty("media_attachments")
     public Attachment[] mediaAttachments;
+
     public ScheduledStatus withMediaAttachments(Attachment[] mediaAttachments) {
         this.mediaAttachments = mediaAttachments;
         return this;
@@ -38,6 +40,7 @@ public class ScheduledStatus {
     
     @JsonProperty("params")
     public StatusParams params;
+
     public ScheduledStatus withParams(StatusParams params) {
         this.params = params;
         return this;
@@ -50,9 +53,16 @@ public class ScheduledStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduled_at")
     public OffsetDateTime scheduledAt;
+
     public ScheduledStatus withScheduledAt(OffsetDateTime scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
     }
     
+    public ScheduledStatus(@JsonProperty("id") String id, @JsonProperty("media_attachments") Attachment[] mediaAttachments, @JsonProperty("params") StatusParams params, @JsonProperty("scheduled_at") OffsetDateTime scheduledAt) {
+        this.id = id;
+        this.mediaAttachments = mediaAttachments;
+        this.params = params;
+        this.scheduledAt = scheduledAt;
+  }
 }

@@ -20,6 +20,7 @@ public class DetectMitigationActionExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public String actionName;
+
     public DetectMitigationActionExecution withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -28,6 +29,7 @@ public class DetectMitigationActionExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public DetectMitigationActionExecution withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -38,6 +40,7 @@ public class DetectMitigationActionExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("executionEndDate")
     public OffsetDateTime executionEndDate;
+
     public DetectMitigationActionExecution withExecutionEndDate(OffsetDateTime executionEndDate) {
         this.executionEndDate = executionEndDate;
         return this;
@@ -48,6 +51,7 @@ public class DetectMitigationActionExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("executionStartDate")
     public OffsetDateTime executionStartDate;
+
     public DetectMitigationActionExecution withExecutionStartDate(OffsetDateTime executionStartDate) {
         this.executionStartDate = executionStartDate;
         return this;
@@ -56,6 +60,7 @@ public class DetectMitigationActionExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DetectMitigationActionExecution withMessage(String message) {
         this.message = message;
         return this;
@@ -64,6 +69,7 @@ public class DetectMitigationActionExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DetectMitigationActionExecutionStatusEnum status;
+
     public DetectMitigationActionExecution withStatus(DetectMitigationActionExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -72,6 +78,7 @@ public class DetectMitigationActionExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public DetectMitigationActionExecution withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -80,6 +87,7 @@ public class DetectMitigationActionExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public DetectMitigationActionExecution withThingName(String thingName) {
         this.thingName = thingName;
         return this;
@@ -88,9 +96,11 @@ public class DetectMitigationActionExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationId")
     public String violationId;
+
     public DetectMitigationActionExecution withViolationId(String violationId) {
         this.violationId = violationId;
         return this;
     }
     
+    public DetectMitigationActionExecution(){}
 }

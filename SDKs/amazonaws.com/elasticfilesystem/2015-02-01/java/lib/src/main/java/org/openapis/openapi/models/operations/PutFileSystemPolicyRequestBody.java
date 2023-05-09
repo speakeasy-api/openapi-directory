@@ -15,6 +15,7 @@ public class PutFileSystemPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BypassPolicyLockoutSafetyCheck")
     public Boolean bypassPolicyLockoutSafetyCheck;
+
     public PutFileSystemPolicyRequestBody withBypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
         this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
         return this;
@@ -25,9 +26,13 @@ public class PutFileSystemPolicyRequestBody {
      */
     @JsonProperty("Policy")
     public String policy;
+
     public PutFileSystemPolicyRequestBody withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public PutFileSystemPolicyRequestBody(@JsonProperty("Policy") String policy) {
+        this.policy = policy;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BeezUPCommonErrorResponseMessage {
     @JsonProperty("errors")
     public BeezUPCommonUserErrorMessage[] errors;
+
     public BeezUPCommonErrorResponseMessage withErrors(BeezUPCommonUserErrorMessage[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BeezUPCommonErrorResponseMessage(@JsonProperty("errors") BeezUPCommonUserErrorMessage[] errors) {
+        this.errors = errors;
+  }
 }

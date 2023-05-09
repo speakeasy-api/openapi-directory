@@ -15,6 +15,7 @@ public class MinorUnitsMonetaryValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Integer amount;
+
     public MinorUnitsMonetaryValue withAmount(Integer amount) {
         this.amount = amount;
         return this;
@@ -26,9 +27,11 @@ public class MinorUnitsMonetaryValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public MinorUnitsMonetaryValue withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
     
+    public MinorUnitsMonetaryValue(){}
 }

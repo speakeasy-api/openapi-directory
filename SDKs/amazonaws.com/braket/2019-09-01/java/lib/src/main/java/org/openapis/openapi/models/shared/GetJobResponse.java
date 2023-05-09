@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetJobResponse {
     @JsonProperty("algorithmSpecification")
     public AlgorithmSpecification algorithmSpecification;
+
     public GetJobResponse withAlgorithmSpecification(AlgorithmSpecification algorithmSpecification) {
         this.algorithmSpecification = algorithmSpecification;
         return this;
@@ -27,6 +28,7 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billableDuration")
     public Long billableDuration;
+
     public GetJobResponse withBillableDuration(Long billableDuration) {
         this.billableDuration = billableDuration;
         return this;
@@ -35,6 +37,7 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkpointConfig")
     public JobCheckpointConfig checkpointConfig;
+
     public GetJobResponse withCheckpointConfig(JobCheckpointConfig checkpointConfig) {
         this.checkpointConfig = checkpointConfig;
         return this;
@@ -44,6 +47,7 @@ public class GetJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetJobResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -52,6 +56,7 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceConfig")
     public DeviceConfig deviceConfig;
+
     public GetJobResponse withDeviceConfig(DeviceConfig deviceConfig) {
         this.deviceConfig = deviceConfig;
         return this;
@@ -62,6 +67,7 @@ public class GetJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endedAt")
     public OffsetDateTime endedAt;
+
     public GetJobResponse withEndedAt(OffsetDateTime endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -70,6 +76,7 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public JobEventDetails[] events;
+
     public GetJobResponse withEvents(JobEventDetails[] events) {
         this.events = events;
         return this;
@@ -78,6 +85,7 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public GetJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -86,6 +94,7 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hyperParameters")
     public java.util.Map<String, String> hyperParameters;
+
     public GetJobResponse withHyperParameters(java.util.Map<String, String> hyperParameters) {
         this.hyperParameters = hyperParameters;
         return this;
@@ -94,6 +103,7 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDataConfig")
     public InputFileConfig[] inputDataConfig;
+
     public GetJobResponse withInputDataConfig(InputFileConfig[] inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -101,6 +111,7 @@ public class GetJobResponse {
     
     @JsonProperty("instanceConfig")
     public InstanceConfig instanceConfig;
+
     public GetJobResponse withInstanceConfig(InstanceConfig instanceConfig) {
         this.instanceConfig = instanceConfig;
         return this;
@@ -108,6 +119,7 @@ public class GetJobResponse {
     
     @JsonProperty("jobArn")
     public String jobArn;
+
     public GetJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -115,6 +127,7 @@ public class GetJobResponse {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public GetJobResponse withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -122,6 +135,7 @@ public class GetJobResponse {
     
     @JsonProperty("outputDataConfig")
     public JobOutputDataConfig outputDataConfig;
+
     public GetJobResponse withOutputDataConfig(JobOutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -129,6 +143,7 @@ public class GetJobResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public GetJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -139,6 +154,7 @@ public class GetJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public GetJobResponse withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -146,6 +162,7 @@ public class GetJobResponse {
     
     @JsonProperty("status")
     public JobPrimaryStatusEnum status;
+
     public GetJobResponse withStatus(JobPrimaryStatusEnum status) {
         this.status = status;
         return this;
@@ -154,6 +171,7 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stoppingCondition")
     public JobStoppingCondition stoppingCondition;
+
     public GetJobResponse withStoppingCondition(JobStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -162,9 +180,20 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetJobResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetJobResponse(@JsonProperty("algorithmSpecification") AlgorithmSpecification algorithmSpecification, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("instanceConfig") InstanceConfig instanceConfig, @JsonProperty("jobArn") String jobArn, @JsonProperty("jobName") String jobName, @JsonProperty("outputDataConfig") JobOutputDataConfig outputDataConfig, @JsonProperty("roleArn") String roleArn, @JsonProperty("status") JobPrimaryStatusEnum status) {
+        this.algorithmSpecification = algorithmSpecification;
+        this.createdAt = createdAt;
+        this.instanceConfig = instanceConfig;
+        this.jobArn = jobArn;
+        this.jobName = jobName;
+        this.outputDataConfig = outputDataConfig;
+        this.roleArn = roleArn;
+        this.status = status;
+  }
 }

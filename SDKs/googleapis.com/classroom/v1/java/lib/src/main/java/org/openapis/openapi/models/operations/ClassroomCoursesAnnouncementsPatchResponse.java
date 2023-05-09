@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClassroomCoursesAnnouncementsPatchResponse {
@@ -12,6 +13,7 @@ public class ClassroomCoursesAnnouncementsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.Announcement announcement;
+
     public ClassroomCoursesAnnouncementsPatchResponse withAnnouncement(org.openapis.openapi.models.shared.Announcement announcement) {
         this.announcement = announcement;
         return this;
@@ -19,6 +21,7 @@ public class ClassroomCoursesAnnouncementsPatchResponse {
     
     
     public String contentType;
+
     public ClassroomCoursesAnnouncementsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClassroomCoursesAnnouncementsPatchResponse {
     
     
     public Integer statusCode;
+
     public ClassroomCoursesAnnouncementsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClassroomCoursesAnnouncementsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClassroomCoursesAnnouncementsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClassroomCoursesAnnouncementsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

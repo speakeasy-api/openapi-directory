@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCance
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse withGoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal) {
         this.googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal = googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCance
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCance
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSourceRepositoryBranchResponse {
@@ -12,6 +13,7 @@ public class CreateSourceRepositoryBranchResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSourceRepositoryBranchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSourceRepositoryBranchResponse {
      */
     
     public Object conflictException;
+
     public CreateSourceRepositoryBranchResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateSourceRepositoryBranchResponse {
     
     
     public String contentType;
+
     public CreateSourceRepositoryBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateSourceRepositoryBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSourceRepositoryBranchResponse createSourceRepositoryBranchResponse;
+
     public CreateSourceRepositoryBranchResponse withCreateSourceRepositoryBranchResponse(org.openapis.openapi.models.shared.CreateSourceRepositoryBranchResponse createSourceRepositoryBranchResponse) {
         this.createSourceRepositoryBranchResponse = createSourceRepositoryBranchResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateSourceRepositoryBranchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSourceRepositoryBranchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSourceRepositoryBranchResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSourceRepositoryBranchResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateSourceRepositoryBranchResponse {
     
     
     public Integer statusCode;
+
     public CreateSourceRepositoryBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateSourceRepositoryBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSourceRepositoryBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateSourceRepositoryBranchResponse {
      */
     
     public Object throttlingException;
+
     public CreateSourceRepositoryBranchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSourceRepositoryBranchResponse {
      */
     
     public Object validationException;
+
     public CreateSourceRepositoryBranchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSourceRepositoryBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

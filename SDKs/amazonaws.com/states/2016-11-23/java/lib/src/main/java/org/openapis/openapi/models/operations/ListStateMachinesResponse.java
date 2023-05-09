@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStateMachinesResponse {
     
     public String contentType;
+
     public ListStateMachinesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListStateMachinesResponse {
      */
     
     public Object invalidToken;
+
     public ListStateMachinesResponse withInvalidToken(Object invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -29,6 +32,7 @@ public class ListStateMachinesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStateMachinesOutput listStateMachinesOutput;
+
     public ListStateMachinesResponse withListStateMachinesOutput(org.openapis.openapi.models.shared.ListStateMachinesOutput listStateMachinesOutput) {
         this.listStateMachinesOutput = listStateMachinesOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListStateMachinesResponse {
     
     
     public Integer statusCode;
+
     public ListStateMachinesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListStateMachinesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStateMachinesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListStateMachinesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

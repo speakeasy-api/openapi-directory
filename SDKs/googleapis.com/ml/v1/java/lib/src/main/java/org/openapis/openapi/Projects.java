@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsExplainResponse res = new org.openapis.openapi.models.operations.MlProjectsExplainResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsExplainResponse res = new org.openapis.openapi.models.operations.MlProjectsExplainResponse(contentType, httpRes.statusCode()) {{
             googleApiHttpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsGetConfigResponse res = new org.openapis.openapi.models.operations.MlProjectsGetConfigResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsGetConfigResponse res = new org.openapis.openapi.models.operations.MlProjectsGetConfigResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1GetConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsJobsCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsJobsCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsJobsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1Job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsJobsListResponse res = new org.openapis.openapi.models.operations.MlProjectsJobsListResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsJobsListResponse res = new org.openapis.openapi.models.operations.MlProjectsJobsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1ListJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1ListLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesCreateResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1Study = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesListResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesListResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesListResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1ListStudiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsAddMeasurementResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsAddMeasurementResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsAddMeasurementResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsAddMeasurementResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1Trial = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCheckEarlyStoppingStateResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCheckEarlyStoppingStateResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCheckEarlyStoppingStateResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCheckEarlyStoppingStateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCompleteResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCompleteResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCompleteResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCompleteResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1Trial = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCreateResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1Trial = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsListResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsListResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsListResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1ListTrialsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsListOptimalTrialsResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsListOptimalTrialsResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsListOptimalTrialsResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsListOptimalTrialsResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1ListOptimalTrialsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsStopResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsStopResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsStopResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsStopResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1Trial = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,11 +696,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsSuggestResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsSuggestResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsSuggestResponse res = new org.openapis.openapi.models.operations.MlProjectsLocationsStudiesTrialsSuggestResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -772,11 +742,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsCreateResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1Model = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -818,11 +786,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +830,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsListResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsListResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsListResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1ListModelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,11 +876,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +922,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             googleIamV1TestIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1008,11 +968,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsVersionsCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsCreateResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsVersionsCreateResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,11 +1012,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsVersionsDeleteResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsVersionsDeleteResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1056,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsVersionsListResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsListResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsVersionsListResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1ListVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1148,11 +1102,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsVersionsPatchResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsPatchResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsVersionsPatchResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsPatchResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1196,11 +1148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsModelsVersionsSetDefaultResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsSetDefaultResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsModelsVersionsSetDefaultResponse res = new org.openapis.openapi.models.operations.MlProjectsModelsVersionsSetDefaultResponse(contentType, httpRes.statusCode()) {{
             googleCloudMlV1Version = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1244,11 +1194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.MlProjectsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.MlProjectsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1290,11 +1238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.MlProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.MlProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1336,11 +1282,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.MlProjectsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.MlProjectsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1384,11 +1328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MlProjectsPredictResponse res = new org.openapis.openapi.models.operations.MlProjectsPredictResponse() {{
+        org.openapis.openapi.models.operations.MlProjectsPredictResponse res = new org.openapis.openapi.models.operations.MlProjectsPredictResponse(contentType, httpRes.statusCode()) {{
             googleApiHttpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

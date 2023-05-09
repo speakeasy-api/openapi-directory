@@ -18,6 +18,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalProperties")
     public TflApiPresentationEntitiesAdditionalProperties[] additionalProperties;
+
     public TflApiPresentationEntitiesPlace withAdditionalProperties(TflApiPresentationEntitiesAdditionalProperties[] additionalProperties) {
         this.additionalProperties = additionalProperties;
         return this;
@@ -26,6 +27,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public TflApiPresentationEntitiesPlace[] children;
+
     public TflApiPresentationEntitiesPlace withChildren(TflApiPresentationEntitiesPlace[] children) {
         this.children = children;
         return this;
@@ -34,6 +36,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childrenUrls")
     public String[] childrenUrls;
+
     public TflApiPresentationEntitiesPlace withChildrenUrls(String[] childrenUrls) {
         this.childrenUrls = childrenUrls;
         return this;
@@ -45,6 +48,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public TflApiPresentationEntitiesPlace withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -57,6 +61,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Double distance;
+
     public TflApiPresentationEntitiesPlace withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -68,6 +73,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesPlace withId(String id) {
         this.id = id;
         return this;
@@ -79,6 +85,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public TflApiPresentationEntitiesPlace withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -90,6 +97,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public TflApiPresentationEntitiesPlace withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -101,6 +109,7 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeType")
     public String placeType;
+
     public TflApiPresentationEntitiesPlace withPlaceType(String placeType) {
         this.placeType = placeType;
         return this;
@@ -112,9 +121,11 @@ public class TflApiPresentationEntitiesPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TflApiPresentationEntitiesPlace withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TflApiPresentationEntitiesPlace(){}
 }

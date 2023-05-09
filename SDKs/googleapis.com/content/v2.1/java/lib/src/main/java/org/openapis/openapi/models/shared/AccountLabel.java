@@ -18,6 +18,7 @@ public class AccountLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountLabel withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class AccountLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AccountLabel withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class AccountLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelId")
     public String labelId;
+
     public AccountLabel withLabelId(String labelId) {
         this.labelId = labelId;
         return this;
@@ -51,6 +54,7 @@ public class AccountLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelType")
     public AccountLabelLabelTypeEnum labelType;
+
     public AccountLabel withLabelType(AccountLabelLabelTypeEnum labelType) {
         this.labelType = labelType;
         return this;
@@ -62,9 +66,11 @@ public class AccountLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountLabel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AccountLabel(){}
 }

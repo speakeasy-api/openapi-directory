@@ -15,6 +15,7 @@ public class DeleteCustomVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DeleteCustomVocabularyResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class DeleteCustomVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public DeleteCustomVocabularyResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -31,6 +33,7 @@ public class DeleteCustomVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customVocabularyStatus")
     public CustomVocabularyStatusEnum customVocabularyStatus;
+
     public DeleteCustomVocabularyResponse withCustomVocabularyStatus(CustomVocabularyStatusEnum customVocabularyStatus) {
         this.customVocabularyStatus = customVocabularyStatus;
         return this;
@@ -39,9 +42,11 @@ public class DeleteCustomVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public DeleteCustomVocabularyResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
     }
     
+    public DeleteCustomVocabularyResponse(){}
 }

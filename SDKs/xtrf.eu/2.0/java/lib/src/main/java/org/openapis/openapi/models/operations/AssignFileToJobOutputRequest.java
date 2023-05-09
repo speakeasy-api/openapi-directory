@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignFileToJobOutputRequest {
@@ -12,6 +13,7 @@ public class AssignFileToJobOutputRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TaskFileDTO taskFileDTO;
+
     public AssignFileToJobOutputRequest withTaskFileDTO(org.openapis.openapi.models.shared.TaskFileDTO taskFileDTO) {
         this.taskFileDTO = taskFileDTO;
         return this;
@@ -22,9 +24,14 @@ public class AssignFileToJobOutputRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public AssignFileToJobOutputRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public AssignFileToJobOutputRequest(@JsonProperty("TaskFileDTO") org.openapis.openapi.models.shared.TaskFileDTO taskFileDTO, @JsonProperty("jobId") String jobId) {
+        this.taskFileDTO = taskFileDTO;
+        this.jobId = jobId;
+  }
 }

@@ -18,6 +18,7 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public Double devices;
+
     public TestStopTestRunTestRunTestRunStatistics withDevices(Double devices) {
         this.devices = devices;
         return this;
@@ -29,6 +30,7 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicesFailed")
     public Double devicesFailed;
+
     public TestStopTestRunTestRunTestRunStatistics withDevicesFailed(Double devicesFailed) {
         this.devicesFailed = devicesFailed;
         return this;
@@ -40,6 +42,7 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicesFinished")
     public Double devicesFinished;
+
     public TestStopTestRunTestRunTestRunStatistics withDevicesFinished(Double devicesFinished) {
         this.devicesFinished = devicesFinished;
         return this;
@@ -51,6 +54,7 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Double failed;
+
     public TestStopTestRunTestRunTestRunStatistics withFailed(Double failed) {
         this.failed = failed;
         return this;
@@ -62,6 +66,7 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passed")
     public Double passed;
+
     public TestStopTestRunTestRunTestRunStatistics withPassed(Double passed) {
         this.passed = passed;
         return this;
@@ -73,6 +78,7 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peakMemory")
     public Double peakMemory;
+
     public TestStopTestRunTestRunTestRunStatistics withPeakMemory(Double peakMemory) {
         this.peakMemory = peakMemory;
         return this;
@@ -84,6 +90,7 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipped")
     public Double skipped;
+
     public TestStopTestRunTestRunTestRunStatistics withSkipped(Double skipped) {
         this.skipped = skipped;
         return this;
@@ -95,6 +102,7 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public TestStopTestRunTestRunTestRunStatistics withTotal(Double total) {
         this.total = total;
         return this;
@@ -106,9 +114,11 @@ public class TestStopTestRunTestRunTestRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDeviceMinutes")
     public Double totalDeviceMinutes;
+
     public TestStopTestRunTestRunTestRunStatistics withTotalDeviceMinutes(Double totalDeviceMinutes) {
         this.totalDeviceMinutes = totalDeviceMinutes;
         return this;
     }
     
+    public TestStopTestRunTestRunTestRunStatistics(){}
 }

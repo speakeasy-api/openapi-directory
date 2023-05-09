@@ -18,6 +18,7 @@ public class PolicyControllerResourceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public String cpu;
+
     public PolicyControllerResourceList withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -29,9 +30,11 @@ public class PolicyControllerResourceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public String memory;
+
     public PolicyControllerResourceList withMemory(String memory) {
         this.memory = memory;
         return this;
     }
     
+    public PolicyControllerResourceList(){}
 }

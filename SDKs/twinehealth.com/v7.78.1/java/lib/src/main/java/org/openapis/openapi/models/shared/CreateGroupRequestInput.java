@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGroupRequestInput {
     @JsonProperty("data")
     public GroupResourceInput data;
+
     public CreateGroupRequestInput withData(GroupResourceInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateGroupRequestInput(@JsonProperty("data") GroupResourceInput data) {
+        this.data = data;
+  }
 }

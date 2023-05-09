@@ -12,6 +12,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confirmed")
     public Boolean confirmed;
+
     public Lineup withConfirmed(Boolean confirmed) {
         this.confirmed = confirmed;
         return this;
@@ -20,6 +21,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public Lineup withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -28,6 +30,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public Lineup withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -36,6 +39,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public Lineup withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -44,6 +48,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public Lineup withPosition(String position) {
         this.position = position;
         return this;
@@ -52,6 +57,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Starting")
     public Boolean starting;
+
     public Lineup withStarting(Boolean starting) {
         this.starting = starting;
         return this;
@@ -60,6 +66,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public Lineup withTeam(String team) {
         this.team = team;
         return this;
@@ -68,9 +75,11 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public Lineup withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
     }
     
+    public Lineup(){}
 }

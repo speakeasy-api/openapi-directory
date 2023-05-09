@@ -12,6 +12,7 @@ public class SalesActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public SalesActivity withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class SalesActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public SalesActivity withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class SalesActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public SalesActivity withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -39,9 +42,11 @@ public class SalesActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SalesActivity withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SalesActivity(){}
 }

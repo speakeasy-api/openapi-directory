@@ -15,6 +15,7 @@ public class EmailMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfig")
     public JourneyEmailMessage messageConfig;
+
     public EmailMessageActivity withMessageConfig(JourneyEmailMessage messageConfig) {
         this.messageConfig = messageConfig;
         return this;
@@ -23,6 +24,7 @@ public class EmailMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public EmailMessageActivity withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
@@ -31,6 +33,7 @@ public class EmailMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateName")
     public String templateName;
+
     public EmailMessageActivity withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -39,9 +42,11 @@ public class EmailMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateVersion")
     public String templateVersion;
+
     public EmailMessageActivity withTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     
+    public EmailMessageActivity(){}
 }

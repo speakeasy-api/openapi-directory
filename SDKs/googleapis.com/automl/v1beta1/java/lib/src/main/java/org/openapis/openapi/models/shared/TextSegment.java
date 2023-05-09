@@ -18,6 +18,7 @@ public class TextSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public TextSegment withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class TextSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOffset")
     public String endOffset;
+
     public TextSegment withEndOffset(String endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -40,9 +42,11 @@ public class TextSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startOffset")
     public String startOffset;
+
     public TextSegment withStartOffset(String startOffset) {
         this.startOffset = startOffset;
         return this;
     }
     
+    public TextSegment(){}
 }

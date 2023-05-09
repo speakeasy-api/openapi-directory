@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Kdfparams {
     @JsonProperty("dklen")
     public Integer dklen;
+
     public Kdfparams withDklen(Integer dklen) {
         this.dklen = dklen;
         return this;
@@ -16,6 +17,7 @@ public class Kdfparams {
     
     @JsonProperty("n")
     public Integer n;
+
     public Kdfparams withN(Integer n) {
         this.n = n;
         return this;
@@ -23,6 +25,7 @@ public class Kdfparams {
     
     @JsonProperty("p")
     public Integer p;
+
     public Kdfparams withP(Integer p) {
         this.p = p;
         return this;
@@ -30,6 +33,7 @@ public class Kdfparams {
     
     @JsonProperty("r")
     public Integer r;
+
     public Kdfparams withR(Integer r) {
         this.r = r;
         return this;
@@ -37,9 +41,17 @@ public class Kdfparams {
     
     @JsonProperty("salt")
     public String salt;
+
     public Kdfparams withSalt(String salt) {
         this.salt = salt;
         return this;
     }
     
+    public Kdfparams(@JsonProperty("dklen") Integer dklen, @JsonProperty("n") Integer n, @JsonProperty("p") Integer p, @JsonProperty("r") Integer r, @JsonProperty("salt") String salt) {
+        this.dklen = dklen;
+        this.n = n;
+        this.p = p;
+        this.r = r;
+        this.salt = salt;
+  }
 }

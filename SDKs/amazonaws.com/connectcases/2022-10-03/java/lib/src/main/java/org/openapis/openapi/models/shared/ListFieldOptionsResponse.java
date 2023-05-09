@@ -15,6 +15,7 @@ public class ListFieldOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFieldOptionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListFieldOptionsResponse {
     
     @JsonProperty("options")
     public FieldOption[] options;
+
     public ListFieldOptionsResponse withOptions(FieldOption[] options) {
         this.options = options;
         return this;
     }
     
+    public ListFieldOptionsResponse(@JsonProperty("options") FieldOption[] options) {
+        this.options = options;
+  }
 }

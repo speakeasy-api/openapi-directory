@@ -15,6 +15,7 @@ public class GetImagesId200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Image data;
+
     public GetImagesId200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.Image data) {
         this.data = data;
         return this;
@@ -26,9 +27,11 @@ public class GetImagesId200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.ResourceLink links;
+
     public GetImagesId200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.ResourceLink links) {
         this.links = links;
         return this;
     }
     
+    public GetImagesId200ApplicationVndApiPlusJson(){}
 }

@@ -18,6 +18,7 @@ public class ManagedProductTaxAndComplianceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eeaWithdrawalRightType")
     public ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum eeaWithdrawalRightType;
+
     public ManagedProductTaxAndComplianceSettings withEeaWithdrawalRightType(ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum eeaWithdrawalRightType) {
         this.eeaWithdrawalRightType = eeaWithdrawalRightType;
         return this;
@@ -29,9 +30,11 @@ public class ManagedProductTaxAndComplianceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxRateInfoByRegionCode")
     public java.util.Map<String, RegionalTaxRateInfo> taxRateInfoByRegionCode;
+
     public ManagedProductTaxAndComplianceSettings withTaxRateInfoByRegionCode(java.util.Map<String, RegionalTaxRateInfo> taxRateInfoByRegionCode) {
         this.taxRateInfoByRegionCode = taxRateInfoByRegionCode;
         return this;
     }
     
+    public ManagedProductTaxAndComplianceSettings(){}
 }

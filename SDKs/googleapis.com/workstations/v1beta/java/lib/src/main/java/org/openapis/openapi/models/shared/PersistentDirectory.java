@@ -18,6 +18,7 @@ public class PersistentDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcePd")
     public GceRegionalPersistentDisk gcePd;
+
     public PersistentDirectory withGcePd(GceRegionalPersistentDisk gcePd) {
         this.gcePd = gcePd;
         return this;
@@ -29,9 +30,11 @@ public class PersistentDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPath")
     public String mountPath;
+
     public PersistentDirectory withMountPath(String mountPath) {
         this.mountPath = mountPath;
         return this;
     }
     
+    public PersistentDirectory(){}
 }

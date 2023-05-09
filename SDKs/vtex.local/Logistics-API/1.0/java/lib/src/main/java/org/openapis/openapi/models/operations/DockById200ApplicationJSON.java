@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DockById200ApplicationJSON {
     @JsonProperty("dockTimeFake")
     public String dockTimeFake;
+
     public DockById200ApplicationJSON withDockTimeFake(String dockTimeFake) {
         this.dockTimeFake = dockTimeFake;
         return this;
@@ -19,6 +20,7 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("freightTableIds")
     public String[] freightTableIds;
+
     public DockById200ApplicationJSON withFreightTableIds(String[] freightTableIds) {
         this.freightTableIds = freightTableIds;
         return this;
@@ -26,6 +28,7 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("id")
     public String id;
+
     public DockById200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +36,7 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("name")
     public String name;
+
     public DockById200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +44,7 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("pickupStoreInfo")
     public DockById200ApplicationJSONPickupStoreInfo1 pickupStoreInfo;
+
     public DockById200ApplicationJSON withPickupStoreInfo(DockById200ApplicationJSONPickupStoreInfo1 pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -47,6 +52,7 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("priority")
     public Integer priority;
+
     public DockById200ApplicationJSON withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -54,6 +60,7 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public DockById200ApplicationJSON withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -61,6 +68,7 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("salesChannels")
     public String[] salesChannels;
+
     public DockById200ApplicationJSON withSalesChannels(String[] salesChannels) {
         this.salesChannels = salesChannels;
         return this;
@@ -68,6 +76,7 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("timeFakeOverhead")
     public String timeFakeOverhead;
+
     public DockById200ApplicationJSON withTimeFakeOverhead(String timeFakeOverhead) {
         this.timeFakeOverhead = timeFakeOverhead;
         return this;
@@ -75,9 +84,22 @@ public class DockById200ApplicationJSON {
     
     @JsonProperty("wmsEndPoint")
     public String wmsEndPoint;
+
     public DockById200ApplicationJSON withWmsEndPoint(String wmsEndPoint) {
         this.wmsEndPoint = wmsEndPoint;
         return this;
     }
     
+    public DockById200ApplicationJSON(@JsonProperty("dockTimeFake") String dockTimeFake, @JsonProperty("freightTableIds") String[] freightTableIds, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("pickupStoreInfo") DockById200ApplicationJSONPickupStoreInfo1 pickupStoreInfo, @JsonProperty("priority") Integer priority, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("salesChannels") String[] salesChannels, @JsonProperty("timeFakeOverhead") String timeFakeOverhead, @JsonProperty("wmsEndPoint") String wmsEndPoint) {
+        this.dockTimeFake = dockTimeFake;
+        this.freightTableIds = freightTableIds;
+        this.id = id;
+        this.name = name;
+        this.pickupStoreInfo = pickupStoreInfo;
+        this.priority = priority;
+        this.salesChannel = salesChannel;
+        this.salesChannels = salesChannels;
+        this.timeFakeOverhead = timeFakeOverhead;
+        this.wmsEndPoint = wmsEndPoint;
+  }
 }

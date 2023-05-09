@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("andGroup")
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpressionList andGroup;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression withAndGroup(GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpressionList andGroup) {
         this.andGroup = andGroup;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilter filter;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression withFilter(GoogleAnalyticsAdminV1alphaExpandedDataSetFilter filter) {
         this.filter = filter;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notExpression")
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression notExpression;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression withNotExpression(GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression notExpression) {
         this.notExpression = notExpression;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression(){}
 }

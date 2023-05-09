@@ -15,9 +15,11 @@ public class ProjectsAddCollaboratorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public ProjectsAddCollaboratorRequestBodyPermissionEnum permission;
+
     public ProjectsAddCollaboratorRequestBody withPermission(ProjectsAddCollaboratorRequestBodyPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public ProjectsAddCollaboratorRequestBody(){}
 }

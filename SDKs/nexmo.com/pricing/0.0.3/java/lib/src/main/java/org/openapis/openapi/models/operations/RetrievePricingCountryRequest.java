@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievePricingCountryRequest {
@@ -12,6 +13,7 @@ public class RetrievePricingCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public RetrievePricingCountryRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class RetrievePricingCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
     public String apiSecret;
+
     public RetrievePricingCountryRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class RetrievePricingCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public RetrievePricingCountryRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -42,9 +46,16 @@ public class RetrievePricingCountryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public RetrievePricingCountryRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RetrievePricingCountryRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("country") String country, @JsonProperty("type") String type) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.country = country;
+        this.type = type;
+  }
 }

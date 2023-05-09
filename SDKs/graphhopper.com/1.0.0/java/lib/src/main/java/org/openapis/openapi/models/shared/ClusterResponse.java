@@ -15,6 +15,7 @@ public class ClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public Cluster[] clusters;
+
     public ClusterResponse withClusters(Cluster[] clusters) {
         this.clusters = clusters;
         return this;
@@ -23,6 +24,7 @@ public class ClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyrights")
     public String[] copyrights;
+
     public ClusterResponse withCopyrights(String[] copyrights) {
         this.copyrights = copyrights;
         return this;
@@ -31,6 +33,7 @@ public class ClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_time")
     public Double processingTime;
+
     public ClusterResponse withProcessingTime(Double processingTime) {
         this.processingTime = processingTime;
         return this;
@@ -42,6 +45,7 @@ public class ClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ClusterResponseStatusEnum status;
+
     public ClusterResponse withStatus(ClusterResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -50,9 +54,11 @@ public class ClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waiting_time_in_queue")
     public Double waitingTimeInQueue;
+
     public ClusterResponse withWaitingTimeInQueue(Double waitingTimeInQueue) {
         this.waitingTimeInQueue = waitingTimeInQueue;
         return this;
     }
     
+    public ClusterResponse(){}
 }

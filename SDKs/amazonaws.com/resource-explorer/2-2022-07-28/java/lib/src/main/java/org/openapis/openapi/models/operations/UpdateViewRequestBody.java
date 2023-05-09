@@ -15,6 +15,7 @@ public class UpdateViewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public UpdateViewRequestBodyFilters filters;
+
     public UpdateViewRequestBody withFilters(UpdateViewRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class UpdateViewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludedProperties")
     public org.openapis.openapi.models.shared.IncludedProperty[] includedProperties;
+
     public UpdateViewRequestBody withIncludedProperties(org.openapis.openapi.models.shared.IncludedProperty[] includedProperties) {
         this.includedProperties = includedProperties;
         return this;
@@ -36,9 +38,13 @@ public class UpdateViewRequestBody {
      */
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public UpdateViewRequestBody withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public UpdateViewRequestBody(@JsonProperty("ViewArn") String viewArn) {
+        this.viewArn = viewArn;
+  }
 }

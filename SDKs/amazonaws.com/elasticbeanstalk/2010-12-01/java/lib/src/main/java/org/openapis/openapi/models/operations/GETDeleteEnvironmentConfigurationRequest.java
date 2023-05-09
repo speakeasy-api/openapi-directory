@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteEnvironmentConfigurationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteEnvironmentConfigurationActionEnum action;
+
     public GETDeleteEnvironmentConfigurationRequest withAction(GETDeleteEnvironmentConfigurationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
     public String applicationName;
+
     public GETDeleteEnvironmentConfigurationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
     public String environmentName;
+
     public GETDeleteEnvironmentConfigurationRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteEnvironmentConfigurationVersionEnum version;
+
     public GETDeleteEnvironmentConfigurationRequest withVersion(GETDeleteEnvironmentConfigurationVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteEnvironmentConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteEnvironmentConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteEnvironmentConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteEnvironmentConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteEnvironmentConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteEnvironmentConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteEnvironmentConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDeleteEnvironmentConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteEnvironmentConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteEnvironmentConfigurationRequest(@JsonProperty("Action") GETDeleteEnvironmentConfigurationActionEnum action, @JsonProperty("ApplicationName") String applicationName, @JsonProperty("EnvironmentName") String environmentName, @JsonProperty("Version") GETDeleteEnvironmentConfigurationVersionEnum version) {
+        this.action = action;
+        this.applicationName = applicationName;
+        this.environmentName = environmentName;
+        this.version = version;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteVpnConnectionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteVpnConnectionActionEnum action;
+
     public GETDeleteVpnConnectionRequest withAction(GETDeleteVpnConnectionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteVpnConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteVpnConnectionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +29,7 @@ public class GETDeleteVpnConnectionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteVpnConnectionVersionEnum version;
+
     public GETDeleteVpnConnectionRequest withVersion(GETDeleteVpnConnectionVersionEnum version) {
         this.version = version;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteVpnConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnConnectionId")
     public String vpnConnectionId;
+
     public GETDeleteVpnConnectionRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteVpnConnectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteVpnConnectionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteVpnConnectionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteVpnConnectionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteVpnConnectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteVpnConnectionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeleteVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteVpnConnectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteVpnConnectionRequest(@JsonProperty("Action") GETDeleteVpnConnectionActionEnum action, @JsonProperty("Version") GETDeleteVpnConnectionVersionEnum version, @JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.action = action;
+        this.version = version;
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

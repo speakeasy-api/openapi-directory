@@ -20,6 +20,7 @@ public class Error404NGSBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error404NGSBS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -28,9 +29,11 @@ public class Error404NGSBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tppMessages")
     public TppMessage404SBS[] tppMessages;
+
     public Error404NGSBS withTppMessages(TppMessage404SBS[] tppMessages) {
         this.tppMessages = tppMessages;
         return this;
     }
     
+    public Error404NGSBS(){}
 }

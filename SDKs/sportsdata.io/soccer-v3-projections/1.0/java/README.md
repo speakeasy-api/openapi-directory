@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DfsSlatesByDateFormatEnum;
 import org.openapis.openapi.models.operations.DfsSlatesByDateRequest;
 import org.openapis.openapi.models.operations.DfsSlatesByDateResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,33 +30,32 @@ public class Application {
                 }})
                 .build();
 
-            DfsSlatesByDateRequest req = new DfsSlatesByDateRequest() {{
-                date = "corrupti";
-                format = "xml";
-            }}            
+            DfsSlatesByDateRequest req = new DfsSlatesByDateRequest("corrupti", DfsSlatesByDateFormatEnum.XML);            
 
             DfsSlatesByDateResponse res = sdk.dfsSlatesByDate(req);
 
-            if (res.dfsSlates.isPresent()) {
+            if (res.dfsSlates != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `dfsSlatesByDate` - Dfs Slates By Date
-* `injuredPlayersByCompetition` - Injured Players By Competition
-* `projectedPlayerGameStatsByCompetitionWDfsSalaries` - Projected Player Game Stats by Competition (w/ DFS Salaries)
-* `projectedPlayerGameStatsByDateWDfsSalaries` - Projected Player Game Stats by Date (w/ DFS Salaries)
-* `projectedPlayerGameStatsByPlayerWDfsSalaries` - Projected Player Game Stats by Player (w/ DFS Salaries)
-* `upcomingDfsSlatesByCompetition` - Upcoming Dfs Slates By Competition
+* [dfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - Dfs Slates By Date
+* [injuredPlayersByCompetition](docs/sdk/README.md#injuredplayersbycompetition) - Injured Players By Competition
+* [projectedPlayerGameStatsByCompetitionWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbycompetitionwdfssalaries) - Projected Player Game Stats by Competition (w/ DFS Salaries)
+* [projectedPlayerGameStatsByDateWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbydatewdfssalaries) - Projected Player Game Stats by Date (w/ DFS Salaries)
+* [projectedPlayerGameStatsByPlayerWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyplayerwdfssalaries) - Projected Player Game Stats by Player (w/ DFS Salaries)
+* [upcomingDfsSlatesByCompetition](docs/sdk/README.md#upcomingdfsslatesbycompetition) - Upcoming Dfs Slates By Competition
 <!-- End SDK Available Operations -->
 
 ### Maturity

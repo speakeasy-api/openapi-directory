@@ -15,9 +15,11 @@ public class UpdateVolumeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volume")
     public Volume volume;
+
     public UpdateVolumeResponse withVolume(Volume volume) {
         this.volume = volume;
         return this;
     }
     
+    public UpdateVolumeResponse(){}
 }

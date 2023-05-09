@@ -18,9 +18,11 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public SingleUser[] values;
+
     public UserList withValues(SingleUser[] values) {
         this.values = values;
         return this;
     }
     
+    public UserList(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClientVpnAuthenticationRequest {
     
     public DirectoryServiceAuthenticationRequest activeDirectory;
+
     public ClientVpnAuthenticationRequest withActiveDirectory(DirectoryServiceAuthenticationRequest activeDirectory) {
         this.activeDirectory = activeDirectory;
         return this;
@@ -19,6 +20,7 @@ public class ClientVpnAuthenticationRequest {
     
     
     public FederatedAuthenticationRequest federatedAuthentication;
+
     public ClientVpnAuthenticationRequest withFederatedAuthentication(FederatedAuthenticationRequest federatedAuthentication) {
         this.federatedAuthentication = federatedAuthentication;
         return this;
@@ -26,6 +28,7 @@ public class ClientVpnAuthenticationRequest {
     
     
     public CertificateAuthenticationRequest mutualAuthentication;
+
     public ClientVpnAuthenticationRequest withMutualAuthentication(CertificateAuthenticationRequest mutualAuthentication) {
         this.mutualAuthentication = mutualAuthentication;
         return this;
@@ -33,9 +36,11 @@ public class ClientVpnAuthenticationRequest {
     
     
     public ClientVpnAuthenticationTypeEnum type;
+
     public ClientVpnAuthenticationRequest withType(ClientVpnAuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ClientVpnAuthenticationRequest(){}
 }

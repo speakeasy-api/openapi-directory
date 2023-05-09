@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SageMakerPipelineParameter {
     @JsonProperty("Name")
     public String name;
+
     public SageMakerPipelineParameter withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SageMakerPipelineParameter {
     
     @JsonProperty("Value")
     public String value;
+
     public SageMakerPipelineParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SageMakerPipelineParameter(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

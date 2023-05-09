@@ -12,6 +12,7 @@ public class GetCompaniesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetCompaniesRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -22,9 +23,11 @@ public class GetCompaniesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetCompaniesRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetCompaniesRequest(){}
 }

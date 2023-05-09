@@ -17,6 +17,7 @@ public class DefaultResponseDTOOfStatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isError")
     public Boolean isError;
+
     public DefaultResponseDTOOfStatusDTO withIsError(Boolean isError) {
         this.isError = isError;
         return this;
@@ -25,6 +26,7 @@ public class DefaultResponseDTOOfStatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DefaultResponseDTOOfStatusDTO withMessage(String message) {
         this.message = message;
         return this;
@@ -33,6 +35,7 @@ public class DefaultResponseDTOOfStatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseException")
     public Object responseException;
+
     public DefaultResponseDTOOfStatusDTO withResponseException(Object responseException) {
         this.responseException = responseException;
         return this;
@@ -41,9 +44,11 @@ public class DefaultResponseDTOOfStatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Object result;
+
     public DefaultResponseDTOOfStatusDTO withResult(Object result) {
         this.result = result;
         return this;
     }
     
+    public DefaultResponseDTOOfStatusDTO(){}
 }

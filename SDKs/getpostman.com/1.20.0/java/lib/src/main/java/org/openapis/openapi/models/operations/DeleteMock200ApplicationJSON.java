@@ -15,9 +15,11 @@ public class DeleteMock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public DeleteMock200ApplicationJSONMock mock;
+
     public DeleteMock200ApplicationJSON withMock(DeleteMock200ApplicationJSONMock mock) {
         this.mock = mock;
         return this;
     }
     
+    public DeleteMock200ApplicationJSON(){}
 }

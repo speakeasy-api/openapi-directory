@@ -18,6 +18,7 @@ public class QueryParticipationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public QueryParticipationReportResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class QueryParticipationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ParticipationResult[] results;
+
     public QueryParticipationReportResponse withResults(ParticipationResult[] results) {
         this.results = results;
         return this;
     }
     
+    public QueryParticipationReportResponse(){}
 }

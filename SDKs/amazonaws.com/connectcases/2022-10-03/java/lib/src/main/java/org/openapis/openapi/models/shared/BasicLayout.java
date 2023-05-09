@@ -15,6 +15,7 @@ public class BasicLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreInfo")
     public LayoutSections moreInfo;
+
     public BasicLayout withMoreInfo(LayoutSections moreInfo) {
         this.moreInfo = moreInfo;
         return this;
@@ -23,9 +24,11 @@ public class BasicLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topPanel")
     public LayoutSections topPanel;
+
     public BasicLayout withTopPanel(LayoutSections topPanel) {
         this.topPanel = topPanel;
         return this;
     }
     
+    public BasicLayout(){}
 }

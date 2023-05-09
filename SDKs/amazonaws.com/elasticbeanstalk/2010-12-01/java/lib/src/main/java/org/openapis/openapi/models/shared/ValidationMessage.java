@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ValidationMessage {
     
     public String message;
+
     public ValidationMessage withMessage(String message) {
         this.message = message;
         return this;
@@ -19,6 +20,7 @@ public class ValidationMessage {
     
     
     public String namespace;
+
     public ValidationMessage withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -26,6 +28,7 @@ public class ValidationMessage {
     
     
     public String optionName;
+
     public ValidationMessage withOptionName(String optionName) {
         this.optionName = optionName;
         return this;
@@ -33,9 +36,11 @@ public class ValidationMessage {
     
     
     public ValidationSeverityEnum severity;
+
     public ValidationMessage withSeverity(ValidationSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public ValidationMessage(){}
 }

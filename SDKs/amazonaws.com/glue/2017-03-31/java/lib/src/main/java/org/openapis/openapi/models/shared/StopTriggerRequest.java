@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopTriggerRequest {
     @JsonProperty("Name")
     public String name;
+
     public StopTriggerRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StopTriggerRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

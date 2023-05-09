@@ -15,6 +15,7 @@ public class CodeErrorLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public Long column;
+
     public CodeErrorLocation withColumn(Long column) {
         this.column = column;
         return this;
@@ -23,6 +24,7 @@ public class CodeErrorLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Long line;
+
     public CodeErrorLocation withLine(Long line) {
         this.line = line;
         return this;
@@ -31,9 +33,11 @@ public class CodeErrorLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("span")
     public Long span;
+
     public CodeErrorLocation withSpan(Long span) {
         this.span = span;
         return this;
     }
     
+    public CodeErrorLocation(){}
 }

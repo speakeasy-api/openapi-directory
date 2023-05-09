@@ -18,6 +18,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquiring_channel")
     public SessionCreateAcquiringChannelEnum acquiringChannel;
+
     public SessionCreateInput withAcquiringChannel(SessionCreateAcquiringChannelEnum acquiringChannel) {
         this.acquiringChannel = acquiringChannel;
         return this;
@@ -26,6 +27,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public Attachment attachment;
+
     public SessionCreateInput withAttachment(Attachment attachment) {
         this.attachment = attachment;
         return this;
@@ -34,6 +36,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public SessionCreateInput withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -45,6 +48,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_payment_method_ids")
     public String[] customPaymentMethodIds;
+
     public SessionCreateInput withCustomPaymentMethodIds(String[] customPaymentMethodIds) {
         this.customPaymentMethodIds = customPaymentMethodIds;
         return this;
@@ -53,6 +57,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public Customer customer;
+
     public SessionCreateInput withCustomer(Customer customer) {
         this.customer = customer;
         return this;
@@ -64,6 +69,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("design")
     public String design;
+
     public SessionCreateInput withDesign(String design) {
         this.design = design;
         return this;
@@ -75,6 +81,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public SessionCreateIntentEnum intent;
+
     public SessionCreateInput withIntent(SessionCreateIntentEnum intent) {
         this.intent = intent;
         return this;
@@ -102,6 +109,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public SessionCreateInput withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -113,6 +121,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_data")
     public String merchantData;
+
     public SessionCreateInput withMerchantData(String merchantData) {
         this.merchantData = merchantData;
         return this;
@@ -124,6 +133,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_reference1")
     public String merchantReference1;
+
     public SessionCreateInput withMerchantReference1(String merchantReference1) {
         this.merchantReference1 = merchantReference1;
         return this;
@@ -135,6 +145,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_reference2")
     public String merchantReference2;
+
     public SessionCreateInput withMerchantReference2(String merchantReference2) {
         this.merchantReference2 = merchantReference2;
         return this;
@@ -143,6 +154,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_urls")
     public MerchantUrls merchantUrls;
+
     public SessionCreateInput withMerchantUrls(MerchantUrls merchantUrls) {
         this.merchantUrls = merchantUrls;
         return this;
@@ -151,6 +163,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Options options;
+
     public SessionCreateInput withOptions(Options options) {
         this.options = options;
         return this;
@@ -161,6 +174,7 @@ public class SessionCreateInput {
      */
     @JsonProperty("order_amount")
     public Long orderAmount;
+
     public SessionCreateInput withOrderAmount(Long orderAmount) {
         this.orderAmount = orderAmount;
         return this;
@@ -171,6 +185,7 @@ public class SessionCreateInput {
      */
     @JsonProperty("order_lines")
     public OrderLine[] orderLines;
+
     public SessionCreateInput withOrderLines(OrderLine[] orderLines) {
         this.orderLines = orderLines;
         return this;
@@ -182,6 +197,7 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_tax_amount")
     public Long orderTaxAmount;
+
     public SessionCreateInput withOrderTaxAmount(Long orderTaxAmount) {
         this.orderTaxAmount = orderTaxAmount;
         return this;
@@ -192,6 +208,7 @@ public class SessionCreateInput {
      */
     @JsonProperty("purchase_country")
     public String purchaseCountry;
+
     public SessionCreateInput withPurchaseCountry(String purchaseCountry) {
         this.purchaseCountry = purchaseCountry;
         return this;
@@ -202,6 +219,7 @@ public class SessionCreateInput {
      */
     @JsonProperty("purchase_currency")
     public String purchaseCurrency;
+
     public SessionCreateInput withPurchaseCurrency(String purchaseCurrency) {
         this.purchaseCurrency = purchaseCurrency;
         return this;
@@ -210,9 +228,16 @@ public class SessionCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public SessionCreateInput withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
     
+    public SessionCreateInput(@JsonProperty("order_amount") Long orderAmount, @JsonProperty("order_lines") OrderLine[] orderLines, @JsonProperty("purchase_country") String purchaseCountry, @JsonProperty("purchase_currency") String purchaseCurrency) {
+        this.orderAmount = orderAmount;
+        this.orderLines = orderLines;
+        this.purchaseCountry = purchaseCountry;
+        this.purchaseCurrency = purchaseCurrency;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateAttachmentRequestInput {
      */
     
     public AttachmentInput attachment;
+
     public CreateAttachmentRequestInput withAttachment(AttachmentInput attachment) {
         this.attachment = attachment;
         return this;
     }
     
+    public CreateAttachmentRequestInput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetCombinedStatusForRefResponse {
     
     public String contentType;
+
     public ReposGetCombinedStatusForRefResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetCombinedStatusForRefResponse {
     
     
     public Integer statusCode;
+
     public ReposGetCombinedStatusForRefResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetCombinedStatusForRefResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetCombinedStatusForRefResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetCombinedStatusForRefResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetCombinedStatusForRefResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetCombinedStatusForRefResponse {
      */
     
     public org.openapis.openapi.models.shared.CombinedCommitStatus combinedCommitStatus;
+
     public ReposGetCombinedStatusForRefResponse withCombinedCommitStatus(org.openapis.openapi.models.shared.CombinedCommitStatus combinedCommitStatus) {
         this.combinedCommitStatus = combinedCommitStatus;
         return this;
     }
     
+    public ReposGetCombinedStatusForRefResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

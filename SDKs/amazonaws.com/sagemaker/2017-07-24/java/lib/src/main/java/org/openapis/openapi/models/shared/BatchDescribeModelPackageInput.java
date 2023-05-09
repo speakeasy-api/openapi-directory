@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDescribeModelPackageInput {
     @JsonProperty("ModelPackageArnList")
     public String[] modelPackageArnList;
+
     public BatchDescribeModelPackageInput withModelPackageArnList(String[] modelPackageArnList) {
         this.modelPackageArnList = modelPackageArnList;
         return this;
     }
     
+    public BatchDescribeModelPackageInput(@JsonProperty("ModelPackageArnList") String[] modelPackageArnList) {
+        this.modelPackageArnList = modelPackageArnList;
+  }
 }

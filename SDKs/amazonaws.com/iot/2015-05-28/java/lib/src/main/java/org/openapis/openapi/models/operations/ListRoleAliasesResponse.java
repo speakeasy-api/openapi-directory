@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRoleAliasesResponse {
     
     public String contentType;
+
     public ListRoleAliasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRoleAliasesResponse {
      */
     
     public Object internalFailureException;
+
     public ListRoleAliasesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListRoleAliasesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListRoleAliasesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListRoleAliasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRoleAliasesResponse listRoleAliasesResponse;
+
     public ListRoleAliasesResponse withListRoleAliasesResponse(org.openapis.openapi.models.shared.ListRoleAliasesResponse listRoleAliasesResponse) {
         this.listRoleAliasesResponse = listRoleAliasesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListRoleAliasesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListRoleAliasesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListRoleAliasesResponse {
     
     
     public Integer statusCode;
+
     public ListRoleAliasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListRoleAliasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRoleAliasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListRoleAliasesResponse {
      */
     
     public Object throttlingException;
+
     public ListRoleAliasesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListRoleAliasesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListRoleAliasesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListRoleAliasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

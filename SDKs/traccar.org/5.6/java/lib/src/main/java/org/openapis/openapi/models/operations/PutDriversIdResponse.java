@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDriversIdResponse {
     
     public String contentType;
+
     public PutDriversIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutDriversIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Driver driver;
+
     public PutDriversIdResponse withDriver(org.openapis.openapi.models.shared.Driver driver) {
         this.driver = driver;
         return this;
@@ -26,6 +29,7 @@ public class PutDriversIdResponse {
     
     
     public Integer statusCode;
+
     public PutDriversIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PutDriversIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDriversIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutDriversIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

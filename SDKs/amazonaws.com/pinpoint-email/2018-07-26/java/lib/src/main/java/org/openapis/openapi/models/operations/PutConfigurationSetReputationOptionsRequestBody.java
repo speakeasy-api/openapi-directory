@@ -15,9 +15,11 @@ public class PutConfigurationSetReputationOptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReputationMetricsEnabled")
     public Boolean reputationMetricsEnabled;
+
     public PutConfigurationSetReputationOptionsRequestBody withReputationMetricsEnabled(Boolean reputationMetricsEnabled) {
         this.reputationMetricsEnabled = reputationMetricsEnabled;
         return this;
     }
     
+    public PutConfigurationSetReputationOptionsRequestBody(){}
 }

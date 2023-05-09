@@ -18,6 +18,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public Long creator;
+
     public Tag withCreator(Long creator) {
         this.creator = creator;
         return this;
@@ -29,6 +30,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("full_size")
     public Long fullSize;
+
     public Tag withFullSize(Long fullSize) {
         this.fullSize = fullSize;
         return this;
@@ -40,6 +42,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Tag withId(Long id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public Image images;
+
     public Tag withImages(Image images) {
         this.images = images;
         return this;
@@ -59,6 +63,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_updated")
     public String lastUpdated;
+
     public Tag withLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -70,6 +75,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_updater")
     public Long lastUpdater;
+
     public Tag withLastUpdater(Long lastUpdater) {
         this.lastUpdater = lastUpdater;
         return this;
@@ -81,6 +87,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_updater_username")
     public String lastUpdaterUsername;
+
     public Tag withLastUpdaterUsername(String lastUpdaterUsername) {
         this.lastUpdaterUsername = lastUpdaterUsername;
         return this;
@@ -92,6 +99,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public Long repository;
+
     public Tag withRepository(Long repository) {
         this.repository = repository;
         return this;
@@ -114,6 +123,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TagStatusEnum status;
+
     public Tag withStatus(TagStatusEnum status) {
         this.status = status;
         return this;
@@ -125,6 +135,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_last_pulled")
     public String tagLastPulled;
+
     public Tag withTagLastPulled(String tagLastPulled) {
         this.tagLastPulled = tagLastPulled;
         return this;
@@ -136,6 +147,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_last_pushed")
     public String tagLastPushed;
+
     public Tag withTagLastPushed(String tagLastPushed) {
         this.tagLastPushed = tagLastPushed;
         return this;
@@ -147,9 +159,11 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v2")
     public String v2;
+
     public Tag withV2(String v2) {
         this.v2 = v2;
         return this;
     }
     
+    public Tag(){}
 }

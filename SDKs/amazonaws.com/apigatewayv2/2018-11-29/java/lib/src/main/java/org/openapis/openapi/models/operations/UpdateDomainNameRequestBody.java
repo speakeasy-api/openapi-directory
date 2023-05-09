@@ -15,6 +15,7 @@ public class UpdateDomainNameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainNameConfigurations")
     public org.openapis.openapi.models.shared.DomainNameConfiguration[] domainNameConfigurations;
+
     public UpdateDomainNameRequestBody withDomainNameConfigurations(org.openapis.openapi.models.shared.DomainNameConfiguration[] domainNameConfigurations) {
         this.domainNameConfigurations = domainNameConfigurations;
         return this;
@@ -26,9 +27,11 @@ public class UpdateDomainNameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutualTlsAuthentication")
     public UpdateDomainNameRequestBodyMutualTlsAuthentication mutualTlsAuthentication;
+
     public UpdateDomainNameRequestBody withMutualTlsAuthentication(UpdateDomainNameRequestBodyMutualTlsAuthentication mutualTlsAuthentication) {
         this.mutualTlsAuthentication = mutualTlsAuthentication;
         return this;
     }
     
+    public UpdateDomainNameRequestBody(){}
 }

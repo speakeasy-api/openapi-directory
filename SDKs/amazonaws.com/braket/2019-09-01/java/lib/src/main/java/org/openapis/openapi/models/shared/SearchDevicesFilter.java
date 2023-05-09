@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchDevicesFilter {
     @JsonProperty("name")
     public String name;
+
     public SearchDevicesFilter withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SearchDevicesFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public SearchDevicesFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SearchDevicesFilter(@JsonProperty("name") String name, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

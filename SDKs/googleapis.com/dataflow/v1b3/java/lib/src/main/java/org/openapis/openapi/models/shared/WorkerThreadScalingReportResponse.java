@@ -18,9 +18,11 @@ public class WorkerThreadScalingReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedThreadCount")
     public Integer recommendedThreadCount;
+
     public WorkerThreadScalingReportResponse withRecommendedThreadCount(Integer recommendedThreadCount) {
         this.recommendedThreadCount = recommendedThreadCount;
         return this;
     }
     
+    public WorkerThreadScalingReportResponse(){}
 }

@@ -12,6 +12,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
      */
     
     public String avatar;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withAvatar(String avatar) {
         this.avatar = avatar;
         return this;
@@ -22,6 +23,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
      */
     
     public Boolean bot;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withBot(Boolean bot) {
         this.bot = bot;
         return this;
@@ -32,6 +34,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
      */
     
     public String discoverable;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withDiscoverable(String discoverable) {
         this.discoverable = discoverable;
         return this;
@@ -42,6 +45,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
      */
     
     public String displayName;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -52,6 +56,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
      */
     
     public java.util.Map<String, Object> fieldsAttributes;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withFieldsAttributes(java.util.Map<String, Object> fieldsAttributes) {
         this.fieldsAttributes = fieldsAttributes;
         return this;
@@ -62,6 +67,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
      */
     
     public String header;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withHeader(String header) {
         this.header = header;
         return this;
@@ -72,6 +78,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
      */
     
     public Boolean locked;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -82,6 +89,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
      */
     
     public String note;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -89,9 +97,11 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBody {
     
     
     public PatchApiV1AccountsUpdateCredentialsRequestBodySource source;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBody withSource(PatchApiV1AccountsUpdateCredentialsRequestBodySource source) {
         this.source = source;
         return this;
     }
     
+    public PatchApiV1AccountsUpdateCredentialsRequestBody(){}
 }

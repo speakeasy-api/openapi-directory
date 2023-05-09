@@ -51,12 +51,10 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdMessagesGetResponse res = new org.openapis.openapi.models.operations.StoryIdMessagesGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdMessagesGetResponse res = new org.openapis.openapi.models.operations.StoryIdMessagesGetResponse(contentType, httpRes.statusCode()) {{
             messages = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdMessagesPostResponse res = new org.openapis.openapi.models.operations.StoryIdMessagesPostResponse() {{
+        org.openapis.openapi.models.operations.StoryIdMessagesPostResponse res = new org.openapis.openapi.models.operations.StoryIdMessagesPostResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

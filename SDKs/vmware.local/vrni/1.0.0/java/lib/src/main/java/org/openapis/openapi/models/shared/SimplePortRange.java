@@ -12,6 +12,7 @@ public class SimplePortRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Integer end;
+
     public SimplePortRange withEnd(Integer end) {
         this.end = end;
         return this;
@@ -20,9 +21,11 @@ public class SimplePortRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Integer start;
+
     public SimplePortRange withStart(Integer start) {
         this.start = start;
         return this;
     }
     
+    public SimplePortRange(){}
 }

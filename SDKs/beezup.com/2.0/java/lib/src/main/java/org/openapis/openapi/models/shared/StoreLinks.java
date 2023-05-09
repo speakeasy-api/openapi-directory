@@ -15,6 +15,7 @@ public class StoreLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteStore")
     public LinksDeleteStoreLink deleteStore;
+
     public StoreLinks withDeleteStore(LinksDeleteStoreLink deleteStore) {
         this.deleteStore = deleteStore;
         return this;
@@ -23,6 +24,7 @@ public class StoreLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetStoreLink self;
+
     public StoreLinks withSelf(LinksGetStoreLink self) {
         this.self = self;
         return this;
@@ -31,6 +33,7 @@ public class StoreLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("share")
     public LinksShareStoreLink share;
+
     public StoreLinks withShare(LinksShareStoreLink share) {
         this.share = share;
         return this;
@@ -39,6 +42,7 @@ public class StoreLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shares")
     public LinksGetStoreSharesLink shares;
+
     public StoreLinks withShares(LinksGetStoreSharesLink shares) {
         this.shares = shares;
         return this;
@@ -47,9 +51,11 @@ public class StoreLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateStore")
     public LinksUpdateStoreLink updateStore;
+
     public StoreLinks withUpdateStore(LinksUpdateStoreLink updateStore) {
         this.updateStore = updateStore;
         return this;
     }
     
+    public StoreLinks(){}
 }

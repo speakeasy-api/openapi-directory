@@ -12,6 +12,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=api_token")
     public String apiToken;
+
     public PostRemoteServersIdConfigurationFileRequestBody withApiToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
@@ -22,6 +23,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=config_version")
     public String configVersion;
+
     public PostRemoteServersIdConfigurationFileRequestBody withConfigVersion(String configVersion) {
         this.configVersion = configVersion;
         return this;
@@ -29,6 +31,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=hostname")
     public String hostname;
+
     public PostRemoteServersIdConfigurationFileRequestBody withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -36,6 +39,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=permission_set")
     public String permissionSet;
+
     public PostRemoteServersIdConfigurationFileRequestBody withPermissionSet(String permissionSet) {
         this.permissionSet = permissionSet;
         return this;
@@ -46,6 +50,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=port")
     public Integer port;
+
     public PostRemoteServersIdConfigurationFileRequestBody withPort(Integer port) {
         this.port = port;
         return this;
@@ -56,6 +61,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=private_key")
     public String privateKey;
+
     public PostRemoteServersIdConfigurationFileRequestBody withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -66,6 +72,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=public_key")
     public String publicKey;
+
     public PostRemoteServersIdConfigurationFileRequestBody withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -76,6 +83,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=root")
     public String root;
+
     public PostRemoteServersIdConfigurationFileRequestBody withRoot(String root) {
         this.root = root;
         return this;
@@ -83,6 +91,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=server_host_key")
     public String serverHostKey;
+
     public PostRemoteServersIdConfigurationFileRequestBody withServerHostKey(String serverHostKey) {
         this.serverHostKey = serverHostKey;
         return this;
@@ -93,6 +102,7 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=status")
     public String status;
+
     public PostRemoteServersIdConfigurationFileRequestBody withStatus(String status) {
         this.status = status;
         return this;
@@ -100,9 +110,11 @@ public class PostRemoteServersIdConfigurationFileRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=subdomain")
     public String subdomain;
+
     public PostRemoteServersIdConfigurationFileRequestBody withSubdomain(String subdomain) {
         this.subdomain = subdomain;
         return this;
     }
     
+    public PostRemoteServersIdConfigurationFileRequestBody(){}
 }

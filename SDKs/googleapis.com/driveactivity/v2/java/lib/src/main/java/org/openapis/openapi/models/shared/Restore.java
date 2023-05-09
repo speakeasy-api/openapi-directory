@@ -18,9 +18,11 @@ public class Restore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RestoreTypeEnum type;
+
     public Restore withType(RestoreTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Restore(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetMerchantOrderInfoListResponse {
@@ -12,6 +13,7 @@ public class SetMerchantOrderInfoListResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public SetMerchantOrderInfoListResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class SetMerchantOrderInfoListResponse {
     
     
     public String contentType;
+
     public SetMerchantOrderInfoListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SetMerchantOrderInfoListResponse {
     
     
     public Integer statusCode;
+
     public SetMerchantOrderInfoListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SetMerchantOrderInfoListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetMerchantOrderInfoListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SetMerchantOrderInfoListResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchOrderOperationResponse batchOrderOperationResponse;
+
     public SetMerchantOrderInfoListResponse withBatchOrderOperationResponse(org.openapis.openapi.models.shared.BatchOrderOperationResponse batchOrderOperationResponse) {
         this.batchOrderOperationResponse = batchOrderOperationResponse;
         return this;
     }
     
+    public SetMerchantOrderInfoListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

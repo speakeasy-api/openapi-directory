@@ -15,6 +15,7 @@ public class WgSpecPrdTypeRegPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableDifferentiatePrdTypePreference")
     public Boolean enableDifferentiatePrdTypePreference;
+
     public WgSpecPrdTypeRegPersistVO withEnableDifferentiatePrdTypePreference(Boolean enableDifferentiatePrdTypePreference) {
         this.enableDifferentiatePrdTypePreference = enableDifferentiatePrdTypePreference;
         return this;
@@ -23,9 +24,11 @@ public class WgSpecPrdTypeRegPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_prdType_list")
     public SpecTypePersistVO[] specPrdTypeList;
+
     public WgSpecPrdTypeRegPersistVO withSpecPrdTypeList(SpecTypePersistVO[] specPrdTypeList) {
         this.specPrdTypeList = specPrdTypeList;
         return this;
     }
     
+    public WgSpecPrdTypeRegPersistVO(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopCrawlerScheduleRequest {
     @JsonProperty("CrawlerName")
     public String crawlerName;
+
     public StopCrawlerScheduleRequest withCrawlerName(String crawlerName) {
         this.crawlerName = crawlerName;
         return this;
     }
     
+    public StopCrawlerScheduleRequest(@JsonProperty("CrawlerName") String crawlerName) {
+        this.crawlerName = crawlerName;
+  }
 }

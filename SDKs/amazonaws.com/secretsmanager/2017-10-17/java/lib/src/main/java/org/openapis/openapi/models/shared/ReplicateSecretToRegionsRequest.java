@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicateSecretToRegionsRequest {
     @JsonProperty("AddReplicaRegions")
     public ReplicaRegionType[] addReplicaRegions;
+
     public ReplicateSecretToRegionsRequest withAddReplicaRegions(ReplicaRegionType[] addReplicaRegions) {
         this.addReplicaRegions = addReplicaRegions;
         return this;
@@ -19,6 +20,7 @@ public class ReplicateSecretToRegionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceOverwriteReplicaSecret")
     public Boolean forceOverwriteReplicaSecret;
+
     public ReplicateSecretToRegionsRequest withForceOverwriteReplicaSecret(Boolean forceOverwriteReplicaSecret) {
         this.forceOverwriteReplicaSecret = forceOverwriteReplicaSecret;
         return this;
@@ -26,9 +28,14 @@ public class ReplicateSecretToRegionsRequest {
     
     @JsonProperty("SecretId")
     public String secretId;
+
     public ReplicateSecretToRegionsRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public ReplicateSecretToRegionsRequest(@JsonProperty("AddReplicaRegions") ReplicaRegionType[] addReplicaRegions, @JsonProperty("SecretId") String secretId) {
+        this.addReplicaRegions = addReplicaRegions;
+        this.secretId = secretId;
+  }
 }

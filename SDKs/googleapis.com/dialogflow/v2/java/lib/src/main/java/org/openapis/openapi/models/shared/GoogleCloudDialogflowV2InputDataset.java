@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2InputDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public GoogleCloudDialogflowV2InputDataset withDataset(String dataset) {
         this.dataset = dataset;
         return this;
     }
     
+    public GoogleCloudDialogflowV2InputDataset(){}
 }

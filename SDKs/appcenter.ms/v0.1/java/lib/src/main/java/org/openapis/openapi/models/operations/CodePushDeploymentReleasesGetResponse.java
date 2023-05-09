@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushDeploymentReleasesGetResponse {
     
     public String contentType;
+
     public CodePushDeploymentReleasesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushDeploymentReleasesGetResponse {
     
     
     public Integer statusCode;
+
     public CodePushDeploymentReleasesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushDeploymentReleasesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushDeploymentReleasesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushDeploymentReleasesGetResponse {
      */
     
     public CodePushDeploymentReleasesGet200ApplicationJSON[] codePushDeploymentReleasesGet200ApplicationJSONAnies;
+
     public CodePushDeploymentReleasesGetResponse withCodePushDeploymentReleasesGet200ApplicationJSONAnies(CodePushDeploymentReleasesGet200ApplicationJSON[] codePushDeploymentReleasesGet200ApplicationJSONAnies) {
         this.codePushDeploymentReleasesGet200ApplicationJSONAnies = codePushDeploymentReleasesGet200ApplicationJSONAnies;
         return this;
@@ -43,9 +48,14 @@ public class CodePushDeploymentReleasesGetResponse {
      */
     
     public CodePushDeploymentReleasesGetDefaultApplicationJSON codePushDeploymentReleasesGetDefaultApplicationJSONObject;
+
     public CodePushDeploymentReleasesGetResponse withCodePushDeploymentReleasesGetDefaultApplicationJSONObject(CodePushDeploymentReleasesGetDefaultApplicationJSON codePushDeploymentReleasesGetDefaultApplicationJSONObject) {
         this.codePushDeploymentReleasesGetDefaultApplicationJSONObject = codePushDeploymentReleasesGetDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushDeploymentReleasesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

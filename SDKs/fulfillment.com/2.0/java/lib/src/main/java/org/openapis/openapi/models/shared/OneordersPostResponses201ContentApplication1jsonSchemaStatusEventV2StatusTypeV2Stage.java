@@ -12,6 +12,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaStatusEventV2
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaStatusEventV2StatusTypeV2Stage withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaStatusEventV2
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaStatusEventV2StatusTypeV2Stage withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OneordersPostResponses201ContentApplication1jsonSchemaStatusEventV2StatusTypeV2Stage(){}
 }

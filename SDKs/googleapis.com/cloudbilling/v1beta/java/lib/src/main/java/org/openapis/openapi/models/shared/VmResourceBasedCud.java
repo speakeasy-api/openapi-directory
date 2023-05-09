@@ -18,6 +18,7 @@ public class VmResourceBasedCud {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAccelerator")
     public GuestAccelerator guestAccelerator;
+
     public VmResourceBasedCud withGuestAccelerator(GuestAccelerator guestAccelerator) {
         this.guestAccelerator = guestAccelerator;
         return this;
@@ -29,6 +30,7 @@ public class VmResourceBasedCud {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineSeries")
     public String machineSeries;
+
     public VmResourceBasedCud withMachineSeries(String machineSeries) {
         this.machineSeries = machineSeries;
         return this;
@@ -40,6 +42,7 @@ public class VmResourceBasedCud {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memorySizeGb")
     public Double memorySizeGb;
+
     public VmResourceBasedCud withMemorySizeGb(Double memorySizeGb) {
         this.memorySizeGb = memorySizeGb;
         return this;
@@ -51,6 +54,7 @@ public class VmResourceBasedCud {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public VmResourceBasedCudPlanEnum plan;
+
     public VmResourceBasedCud withPlan(VmResourceBasedCudPlanEnum plan) {
         this.plan = plan;
         return this;
@@ -62,6 +66,7 @@ public class VmResourceBasedCud {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public VmResourceBasedCud withRegion(String region) {
         this.region = region;
         return this;
@@ -73,9 +78,11 @@ public class VmResourceBasedCud {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualCpuCount")
     public String virtualCpuCount;
+
     public VmResourceBasedCud withVirtualCpuCount(String virtualCpuCount) {
         this.virtualCpuCount = virtualCpuCount;
         return this;
     }
     
+    public VmResourceBasedCud(){}
 }

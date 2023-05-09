@@ -15,6 +15,7 @@ public class FleetCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public FleetCapacity withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -23,6 +24,7 @@ public class FleetCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public FleetCapacity withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -34,6 +36,7 @@ public class FleetCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCounts")
     public Ec2InstanceCounts instanceCounts;
+
     public FleetCapacity withInstanceCounts(Ec2InstanceCounts instanceCounts) {
         this.instanceCounts = instanceCounts;
         return this;
@@ -42,6 +45,7 @@ public class FleetCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public Ec2InstanceTypeEnum instanceType;
+
     public FleetCapacity withInstanceType(Ec2InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -50,9 +54,11 @@ public class FleetCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public FleetCapacity withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public FleetCapacity(){}
 }

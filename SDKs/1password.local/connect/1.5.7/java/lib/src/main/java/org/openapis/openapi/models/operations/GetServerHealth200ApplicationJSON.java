@@ -15,6 +15,7 @@ public class GetServerHealth200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependencies")
     public org.openapis.openapi.models.shared.ServiceDependency[] dependencies;
+
     public GetServerHealth200ApplicationJSON withDependencies(org.openapis.openapi.models.shared.ServiceDependency[] dependencies) {
         this.dependencies = dependencies;
         return this;
@@ -22,6 +23,7 @@ public class GetServerHealth200ApplicationJSON {
     
     @JsonProperty("name")
     public String name;
+
     public GetServerHealth200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,14 @@ public class GetServerHealth200ApplicationJSON {
      */
     @JsonProperty("version")
     public String version;
+
     public GetServerHealth200ApplicationJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetServerHealth200ApplicationJSON(@JsonProperty("name") String name, @JsonProperty("version") String version) {
+        this.name = name;
+        this.version = version;
+  }
 }

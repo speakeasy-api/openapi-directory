@@ -15,6 +15,7 @@ public class VpcPeeringConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public VpcPeeringConnectionStatus withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class VpcPeeringConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public VpcPeeringConnectionStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public VpcPeeringConnectionStatus(){}
 }

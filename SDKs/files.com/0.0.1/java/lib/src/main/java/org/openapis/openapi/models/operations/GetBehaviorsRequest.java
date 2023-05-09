@@ -8,10 +8,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBehaviorsRequest {
     /**
-     * If set, only shows folder behaviors matching this behavior type.
+     * If set, return records where the specified field is equal to the supplied value.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=behavior")
     public String behavior;
+
     public GetBehaviorsRequest withBehavior(String behavior) {
         this.behavior = behavior;
         return this;
@@ -22,6 +23,7 @@ public class GetBehaviorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetBehaviorsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,58 +34,20 @@ public class GetBehaviorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetBehaviorsRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `behavior`.
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `behavior`.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
-    public java.util.Map<String, Object> filterGt;
-    public GetBehaviorsRequest withFilterGt(java.util.Map<String, Object> filterGt) {
-        this.filterGt = filterGt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `behavior`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
-    public java.util.Map<String, Object> filterGteq;
-    public GetBehaviorsRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
-        this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `behavior`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetBehaviorsRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `behavior`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
-    public java.util.Map<String, Object> filterLt;
-    public GetBehaviorsRequest withFilterLt(java.util.Map<String, Object> filterLt) {
-        this.filterLt = filterLt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `behavior`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
-    public java.util.Map<String, Object> filterLteq;
-    public GetBehaviorsRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
-        this.filterLteq = filterLteq;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_prefix")
+    public java.util.Map<String, Object> filterPrefix;
+
+    public GetBehaviorsRequest withFilterPrefix(java.util.Map<String, Object> filterPrefix) {
+        this.filterPrefix = filterPrefix;
         return this;
     }
     
@@ -92,6 +56,7 @@ public class GetBehaviorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetBehaviorsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -102,9 +67,11 @@ public class GetBehaviorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetBehaviorsRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetBehaviorsRequest(){}
 }

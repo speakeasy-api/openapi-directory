@@ -12,6 +12,7 @@ public class DisableRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public DisableRuleRequest withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -19,9 +20,13 @@ public class DisableRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DisableRuleRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DisableRuleRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

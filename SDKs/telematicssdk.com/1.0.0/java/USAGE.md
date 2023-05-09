@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.TripsTripDetailsRequest;
 import org.openapis.openapi.models.operations.TripsTripDetailsResponse;
 
@@ -15,15 +14,17 @@ public class Application {
 
             TripsTripDetailsRequest req = new TripsTripDetailsRequest() {{
                 trackToken = "corrupti";
-            }}            
+            }};            
 
             TripsTripDetailsResponse res = sdk.twoForMobileAppOptional.tripsTripDetails(req);
 
-            if (res.tripsTripDetails200ApplicationJSONObject.isPresent()) {
+            if (res.tripsTripDetails200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

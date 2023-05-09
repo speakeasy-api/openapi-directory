@@ -12,9 +12,13 @@ public class DeleteRobotRequestBody {
      */
     @JsonProperty("robot")
     public String robot;
+
     public DeleteRobotRequestBody withRobot(String robot) {
         this.robot = robot;
         return this;
     }
     
+    public DeleteRobotRequestBody(@JsonProperty("robot") String robot) {
+        this.robot = robot;
+  }
 }

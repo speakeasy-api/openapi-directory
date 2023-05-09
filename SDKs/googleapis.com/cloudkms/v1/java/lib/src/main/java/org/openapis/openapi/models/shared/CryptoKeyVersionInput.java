@@ -18,6 +18,7 @@ public class CryptoKeyVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestation")
     public KeyOperationAttestationInput attestation;
+
     public CryptoKeyVersionInput withAttestation(KeyOperationAttestationInput attestation) {
         this.attestation = attestation;
         return this;
@@ -29,6 +30,7 @@ public class CryptoKeyVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalProtectionLevelOptions")
     public ExternalProtectionLevelOptions externalProtectionLevelOptions;
+
     public CryptoKeyVersionInput withExternalProtectionLevelOptions(ExternalProtectionLevelOptions externalProtectionLevelOptions) {
         this.externalProtectionLevelOptions = externalProtectionLevelOptions;
         return this;
@@ -40,9 +42,11 @@ public class CryptoKeyVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CryptoKeyVersionStateEnum state;
+
     public CryptoKeyVersionInput withState(CryptoKeyVersionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CryptoKeyVersionInput(){}
 }

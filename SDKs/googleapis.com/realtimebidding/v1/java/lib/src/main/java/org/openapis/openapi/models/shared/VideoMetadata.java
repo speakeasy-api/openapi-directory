@@ -18,6 +18,7 @@ public class VideoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public VideoMetadata withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -29,6 +30,7 @@ public class VideoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isValidVast")
     public Boolean isValidVast;
+
     public VideoMetadata withIsValidVast(Boolean isValidVast) {
         this.isValidVast = isValidVast;
         return this;
@@ -40,6 +42,7 @@ public class VideoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isVpaid")
     public Boolean isVpaid;
+
     public VideoMetadata withIsVpaid(Boolean isVpaid) {
         this.isVpaid = isVpaid;
         return this;
@@ -51,6 +54,7 @@ public class VideoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaFiles")
     public MediaFile[] mediaFiles;
+
     public VideoMetadata withMediaFiles(MediaFile[] mediaFiles) {
         this.mediaFiles = mediaFiles;
         return this;
@@ -62,6 +66,7 @@ public class VideoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipOffset")
     public String skipOffset;
+
     public VideoMetadata withSkipOffset(String skipOffset) {
         this.skipOffset = skipOffset;
         return this;
@@ -73,9 +78,11 @@ public class VideoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vastVersion")
     public VideoMetadataVastVersionEnum vastVersion;
+
     public VideoMetadata withVastVersion(VideoMetadataVastVersionEnum vastVersion) {
         this.vastVersion = vastVersion;
         return this;
     }
     
+    public VideoMetadata(){}
 }

@@ -12,6 +12,7 @@ public class ListNotebookMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public FilterDefinition filters;
+
     public ListNotebookMetadataInput withFilters(FilterDefinition filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListNotebookMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListNotebookMetadataInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListNotebookMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotebookMetadataInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class ListNotebookMetadataInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public ListNotebookMetadataInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public ListNotebookMetadataInput(@JsonProperty("WorkGroup") String workGroup) {
+        this.workGroup = workGroup;
+  }
 }

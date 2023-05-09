@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateMaintenanceWindowRequest {
     @JsonProperty("AllowUnassociatedTargets")
     public Boolean allowUnassociatedTargets;
+
     public CreateMaintenanceWindowRequest withAllowUnassociatedTargets(Boolean allowUnassociatedTargets) {
         this.allowUnassociatedTargets = allowUnassociatedTargets;
         return this;
@@ -19,6 +20,7 @@ public class CreateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateMaintenanceWindowRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +28,7 @@ public class CreateMaintenanceWindowRequest {
     
     @JsonProperty("Cutoff")
     public Long cutoff;
+
     public CreateMaintenanceWindowRequest withCutoff(Long cutoff) {
         this.cutoff = cutoff;
         return this;
@@ -34,6 +37,7 @@ public class CreateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateMaintenanceWindowRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -41,6 +45,7 @@ public class CreateMaintenanceWindowRequest {
     
     @JsonProperty("Duration")
     public Long duration;
+
     public CreateMaintenanceWindowRequest withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -49,6 +54,7 @@ public class CreateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public CreateMaintenanceWindowRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -56,6 +62,7 @@ public class CreateMaintenanceWindowRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateMaintenanceWindowRequest withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +70,7 @@ public class CreateMaintenanceWindowRequest {
     
     @JsonProperty("Schedule")
     public String schedule;
+
     public CreateMaintenanceWindowRequest withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -71,6 +79,7 @@ public class CreateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public CreateMaintenanceWindowRequest withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -79,6 +88,7 @@ public class CreateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleTimezone")
     public String scheduleTimezone;
+
     public CreateMaintenanceWindowRequest withScheduleTimezone(String scheduleTimezone) {
         this.scheduleTimezone = scheduleTimezone;
         return this;
@@ -87,6 +97,7 @@ public class CreateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public CreateMaintenanceWindowRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -95,9 +106,17 @@ public class CreateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateMaintenanceWindowRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMaintenanceWindowRequest(@JsonProperty("AllowUnassociatedTargets") Boolean allowUnassociatedTargets, @JsonProperty("Cutoff") Long cutoff, @JsonProperty("Duration") Long duration, @JsonProperty("Name") String name, @JsonProperty("Schedule") String schedule) {
+        this.allowUnassociatedTargets = allowUnassociatedTargets;
+        this.cutoff = cutoff;
+        this.duration = duration;
+        this.name = name;
+        this.schedule = schedule;
+  }
 }

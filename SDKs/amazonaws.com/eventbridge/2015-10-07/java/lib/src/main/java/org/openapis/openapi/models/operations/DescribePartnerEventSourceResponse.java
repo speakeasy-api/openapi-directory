@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePartnerEventSourceResponse {
     
     public String contentType;
+
     public DescribePartnerEventSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePartnerEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePartnerEventSourceResponse describePartnerEventSourceResponse;
+
     public DescribePartnerEventSourceResponse withDescribePartnerEventSourceResponse(org.openapis.openapi.models.shared.DescribePartnerEventSourceResponse describePartnerEventSourceResponse) {
         this.describePartnerEventSourceResponse = describePartnerEventSourceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePartnerEventSourceResponse {
      */
     
     public Object internalException;
+
     public DescribePartnerEventSourceResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePartnerEventSourceResponse {
      */
     
     public Object operationDisabledException;
+
     public DescribePartnerEventSourceResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePartnerEventSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePartnerEventSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePartnerEventSourceResponse {
     
     
     public Integer statusCode;
+
     public DescribePartnerEventSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribePartnerEventSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePartnerEventSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribePartnerEventSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

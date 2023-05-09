@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAlertManagerDefinitionResponse {
     @JsonProperty("status")
     public AlertManagerDefinitionStatus status;
+
     public CreateAlertManagerDefinitionResponse withStatus(AlertManagerDefinitionStatus status) {
         this.status = status;
         return this;
     }
     
+    public CreateAlertManagerDefinitionResponse(@JsonProperty("status") AlertManagerDefinitionStatus status) {
+        this.status = status;
+  }
 }

@@ -15,6 +15,7 @@ public class ContactTargetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactId")
     public String contactId;
+
     public ContactTargetInfo withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -22,9 +23,13 @@ public class ContactTargetInfo {
     
     @JsonProperty("IsEssential")
     public Boolean isEssential;
+
     public ContactTargetInfo withIsEssential(Boolean isEssential) {
         this.isEssential = isEssential;
         return this;
     }
     
+    public ContactTargetInfo(@JsonProperty("IsEssential") Boolean isEssential) {
+        this.isEssential = isEssential;
+  }
 }

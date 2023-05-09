@@ -12,6 +12,7 @@ public class CardLegal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expanded")
     public Boolean expanded;
+
     public CardLegal withExpanded(Boolean expanded) {
         this.expanded = expanded;
         return this;
@@ -20,9 +21,11 @@ public class CardLegal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standard")
     public Boolean standard;
+
     public CardLegal withStandard(Boolean standard) {
         this.standard = standard;
         return this;
     }
     
+    public CardLegal(){}
 }

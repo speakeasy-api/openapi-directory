@@ -18,6 +18,7 @@ public class ListTunnelDestGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTunnelDestGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTunnelDestGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnelDestGroups")
     public TunnelDestGroup[] tunnelDestGroups;
+
     public ListTunnelDestGroupsResponse withTunnelDestGroups(TunnelDestGroup[] tunnelDestGroups) {
         this.tunnelDestGroups = tunnelDestGroups;
         return this;
     }
     
+    public ListTunnelDestGroupsResponse(){}
 }

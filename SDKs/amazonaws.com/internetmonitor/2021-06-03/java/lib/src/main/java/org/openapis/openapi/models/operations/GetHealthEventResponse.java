@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetHealthEventResponse {
@@ -12,6 +13,7 @@ public class GetHealthEventResponse {
      */
     
     public Object accessDeniedException;
+
     public GetHealthEventResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetHealthEventResponse {
     
     
     public String contentType;
+
     public GetHealthEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetHealthEventResponse {
      */
     
     public org.openapis.openapi.models.shared.GetHealthEventOutput getHealthEventOutput;
+
     public GetHealthEventResponse withGetHealthEventOutput(org.openapis.openapi.models.shared.GetHealthEventOutput getHealthEventOutput) {
         this.getHealthEventOutput = getHealthEventOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetHealthEventResponse {
      */
     
     public Object internalServerException;
+
     public GetHealthEventResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetHealthEventResponse {
     
     
     public Integer statusCode;
+
     public GetHealthEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetHealthEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetHealthEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetHealthEventResponse {
      */
     
     public Object throttlingException;
+
     public GetHealthEventResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetHealthEventResponse {
      */
     
     public Object validationException;
+
     public GetHealthEventResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetHealthEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

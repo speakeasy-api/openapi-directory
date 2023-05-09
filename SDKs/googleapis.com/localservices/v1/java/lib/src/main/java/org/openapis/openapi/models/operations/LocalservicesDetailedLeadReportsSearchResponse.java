@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LocalservicesDetailedLeadReportsSearchResponse {
     
     public String contentType;
+
     public LocalservicesDetailedLeadReportsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LocalservicesDetailedLeadReportsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse googleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse;
+
     public LocalservicesDetailedLeadReportsSearchResponse withGoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse(org.openapis.openapi.models.shared.GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse googleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse) {
         this.googleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse = googleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse;
         return this;
@@ -26,6 +29,7 @@ public class LocalservicesDetailedLeadReportsSearchResponse {
     
     
     public Integer statusCode;
+
     public LocalservicesDetailedLeadReportsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LocalservicesDetailedLeadReportsSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LocalservicesDetailedLeadReportsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LocalservicesDetailedLeadReportsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ParallelismConfiguration {
     @JsonProperty("MaxParallelExecutionSteps")
     public Long maxParallelExecutionSteps;
+
     public ParallelismConfiguration withMaxParallelExecutionSteps(Long maxParallelExecutionSteps) {
         this.maxParallelExecutionSteps = maxParallelExecutionSteps;
         return this;
     }
     
+    public ParallelismConfiguration(@JsonProperty("MaxParallelExecutionSteps") Long maxParallelExecutionSteps) {
+        this.maxParallelExecutionSteps = maxParallelExecutionSteps;
+  }
 }

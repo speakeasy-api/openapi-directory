@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesConfigurationLeaderboardConfigurationsListRequest {
@@ -12,6 +13,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
     public String applicationId;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -52,6 +57,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -112,6 +123,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class GamesConfigurationLeaderboardConfigurationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public GamesConfigurationLeaderboardConfigurationsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public GamesConfigurationLeaderboardConfigurationsListRequest(@JsonProperty("applicationId") String applicationId) {
+        this.applicationId = applicationId;
+  }
 }

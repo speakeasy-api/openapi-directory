@@ -15,6 +15,7 @@ public class ImportationCustomColumn {
      */
     @JsonProperty("configuration")
     public ColumnConfiguration configuration;
+
     public ImportationCustomColumn withConfiguration(ColumnConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -25,6 +26,7 @@ public class ImportationCustomColumn {
      */
     @JsonProperty("id")
     public String id;
+
     public ImportationCustomColumn withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class ImportationCustomColumn {
     
     @JsonProperty("links")
     public ImportationCustomColumnLinks links;
+
     public ImportationCustomColumn withLinks(ImportationCustomColumnLinks links) {
         this.links = links;
         return this;
@@ -42,9 +45,16 @@ public class ImportationCustomColumn {
      */
     @JsonProperty("userColumName")
     public String userColumName;
+
     public ImportationCustomColumn withUserColumName(String userColumName) {
         this.userColumName = userColumName;
         return this;
     }
     
+    public ImportationCustomColumn(@JsonProperty("configuration") ColumnConfiguration configuration, @JsonProperty("id") String id, @JsonProperty("links") ImportationCustomColumnLinks links, @JsonProperty("userColumName") String userColumName) {
+        this.configuration = configuration;
+        this.id = id;
+        this.links = links;
+        this.userColumName = userColumName;
+  }
 }

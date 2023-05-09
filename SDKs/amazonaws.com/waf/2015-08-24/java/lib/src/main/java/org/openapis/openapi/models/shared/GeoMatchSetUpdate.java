@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GeoMatchSetUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public GeoMatchSetUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class GeoMatchSetUpdate {
     
     @JsonProperty("GeoMatchConstraint")
     public GeoMatchConstraint geoMatchConstraint;
+
     public GeoMatchSetUpdate withGeoMatchConstraint(GeoMatchConstraint geoMatchConstraint) {
         this.geoMatchConstraint = geoMatchConstraint;
         return this;
     }
     
+    public GeoMatchSetUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("GeoMatchConstraint") GeoMatchConstraint geoMatchConstraint) {
+        this.action = action;
+        this.geoMatchConstraint = geoMatchConstraint;
+  }
 }

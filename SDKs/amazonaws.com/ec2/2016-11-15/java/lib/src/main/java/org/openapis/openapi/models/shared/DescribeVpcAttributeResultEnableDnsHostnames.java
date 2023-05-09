@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcAttributeResultEnableDnsHostnames {
     
     public Boolean value;
+
     public DescribeVpcAttributeResultEnableDnsHostnames withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVpcAttributeResultEnableDnsHostnames(){}
 }

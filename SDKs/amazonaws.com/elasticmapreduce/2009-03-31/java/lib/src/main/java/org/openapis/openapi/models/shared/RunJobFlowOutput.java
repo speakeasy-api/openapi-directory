@@ -15,6 +15,7 @@ public class RunJobFlowOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public RunJobFlowOutput withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -23,9 +24,11 @@ public class RunJobFlowOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobFlowId")
     public String jobFlowId;
+
     public RunJobFlowOutput withJobFlowId(String jobFlowId) {
         this.jobFlowId = jobFlowId;
         return this;
     }
     
+    public RunJobFlowOutput(){}
 }

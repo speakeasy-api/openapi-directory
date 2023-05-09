@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ForgotPasswordResponse {
@@ -12,6 +13,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object codeDeliveryFailureException;
+
     public ForgotPasswordResponse withCodeDeliveryFailureException(Object codeDeliveryFailureException) {
         this.codeDeliveryFailureException = codeDeliveryFailureException;
         return this;
@@ -19,6 +21,7 @@ public class ForgotPasswordResponse {
     
     
     public String contentType;
+
     public ForgotPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object forbiddenException;
+
     public ForgotPasswordResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ForgotPasswordResponse {
      */
     
     public org.openapis.openapi.models.shared.ForgotPasswordResponse forgotPasswordResponse;
+
     public ForgotPasswordResponse withForgotPasswordResponse(org.openapis.openapi.models.shared.ForgotPasswordResponse forgotPasswordResponse) {
         this.forgotPasswordResponse = forgotPasswordResponse;
         return this;
@@ -49,6 +54,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object internalErrorException;
+
     public ForgotPasswordResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -59,6 +65,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object invalidEmailRoleAccessPolicyException;
+
     public ForgotPasswordResponse withInvalidEmailRoleAccessPolicyException(Object invalidEmailRoleAccessPolicyException) {
         this.invalidEmailRoleAccessPolicyException = invalidEmailRoleAccessPolicyException;
         return this;
@@ -69,6 +76,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public ForgotPasswordResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -79,6 +87,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object invalidParameterException;
+
     public ForgotPasswordResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public ForgotPasswordResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -99,6 +109,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public ForgotPasswordResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -109,6 +120,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object limitExceededException;
+
     public ForgotPasswordResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -119,6 +131,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object notAuthorizedException;
+
     public ForgotPasswordResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -129,6 +142,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ForgotPasswordResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -136,6 +150,7 @@ public class ForgotPasswordResponse {
     
     
     public Integer statusCode;
+
     public ForgotPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class ForgotPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ForgotPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,6 +169,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ForgotPasswordResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -163,6 +180,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public ForgotPasswordResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -173,6 +191,7 @@ public class ForgotPasswordResponse {
      */
     
     public Object userLambdaValidationException;
+
     public ForgotPasswordResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -183,9 +202,14 @@ public class ForgotPasswordResponse {
      */
     
     public Object userNotFoundException;
+
     public ForgotPasswordResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public ForgotPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

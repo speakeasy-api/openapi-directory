@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LinksTopDomains {
     @JsonProperty("domain")
     public String domain;
+
     public LinksTopDomains withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -16,6 +17,7 @@ public class LinksTopDomains {
     
     @JsonProperty("follow_links")
     public Long followLinks;
+
     public LinksTopDomains withFollowLinks(Long followLinks) {
         this.followLinks = followLinks;
         return this;
@@ -23,6 +25,7 @@ public class LinksTopDomains {
     
     @JsonProperty("follow_samples")
     public LinksTopDomainsSamples[] followSamples;
+
     public LinksTopDomains withFollowSamples(LinksTopDomainsSamples[] followSamples) {
         this.followSamples = followSamples;
         return this;
@@ -30,6 +33,7 @@ public class LinksTopDomains {
     
     @JsonProperty("nofollow_links")
     public Long nofollowLinks;
+
     public LinksTopDomains withNofollowLinks(Long nofollowLinks) {
         this.nofollowLinks = nofollowLinks;
         return this;
@@ -37,6 +41,7 @@ public class LinksTopDomains {
     
     @JsonProperty("nofollow_samples")
     public LinksTopDomainsSamples[] nofollowSamples;
+
     public LinksTopDomains withNofollowSamples(LinksTopDomainsSamples[] nofollowSamples) {
         this.nofollowSamples = nofollowSamples;
         return this;
@@ -44,6 +49,7 @@ public class LinksTopDomains {
     
     @JsonProperty("unique_follow_links")
     public Long uniqueFollowLinks;
+
     public LinksTopDomains withUniqueFollowLinks(Long uniqueFollowLinks) {
         this.uniqueFollowLinks = uniqueFollowLinks;
         return this;
@@ -51,9 +57,19 @@ public class LinksTopDomains {
     
     @JsonProperty("unique_nofollow_links")
     public Long uniqueNofollowLinks;
+
     public LinksTopDomains withUniqueNofollowLinks(Long uniqueNofollowLinks) {
         this.uniqueNofollowLinks = uniqueNofollowLinks;
         return this;
     }
     
+    public LinksTopDomains(@JsonProperty("domain") String domain, @JsonProperty("follow_links") Long followLinks, @JsonProperty("follow_samples") LinksTopDomainsSamples[] followSamples, @JsonProperty("nofollow_links") Long nofollowLinks, @JsonProperty("nofollow_samples") LinksTopDomainsSamples[] nofollowSamples, @JsonProperty("unique_follow_links") Long uniqueFollowLinks, @JsonProperty("unique_nofollow_links") Long uniqueNofollowLinks) {
+        this.domain = domain;
+        this.followLinks = followLinks;
+        this.followSamples = followSamples;
+        this.nofollowLinks = nofollowLinks;
+        this.nofollowSamples = nofollowSamples;
+        this.uniqueFollowLinks = uniqueFollowLinks;
+        this.uniqueNofollowLinks = uniqueNofollowLinks;
+  }
 }

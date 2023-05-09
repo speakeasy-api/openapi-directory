@@ -18,9 +18,11 @@ public class PostgresqlRdbms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postgresqlSchemas")
     public PostgresqlSchema[] postgresqlSchemas;
+
     public PostgresqlRdbms withPostgresqlSchemas(PostgresqlSchema[] postgresqlSchemas) {
         this.postgresqlSchemas = postgresqlSchemas;
         return this;
     }
     
+    public PostgresqlRdbms(){}
 }

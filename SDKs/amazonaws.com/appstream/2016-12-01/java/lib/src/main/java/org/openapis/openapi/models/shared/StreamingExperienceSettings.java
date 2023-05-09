@@ -15,9 +15,11 @@ public class StreamingExperienceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredProtocol")
     public PreferredProtocolEnum preferredProtocol;
+
     public StreamingExperienceSettings withPreferredProtocol(PreferredProtocolEnum preferredProtocol) {
         this.preferredProtocol = preferredProtocol;
         return this;
     }
     
+    public StreamingExperienceSettings(){}
 }

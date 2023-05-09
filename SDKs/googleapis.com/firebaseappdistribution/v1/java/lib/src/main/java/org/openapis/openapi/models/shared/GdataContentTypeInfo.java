@@ -15,6 +15,7 @@ public class GdataContentTypeInfo {
      */
     
     public String bestGuess;
+
     public GdataContentTypeInfo withBestGuess(String bestGuess) {
         this.bestGuess = bestGuess;
         return this;
@@ -25,6 +26,7 @@ public class GdataContentTypeInfo {
      */
     
     public String fromBytes;
+
     public GdataContentTypeInfo withFromBytes(String fromBytes) {
         this.fromBytes = fromBytes;
         return this;
@@ -35,6 +37,7 @@ public class GdataContentTypeInfo {
      */
     
     public String fromFileName;
+
     public GdataContentTypeInfo withFromFileName(String fromFileName) {
         this.fromFileName = fromFileName;
         return this;
@@ -45,6 +48,7 @@ public class GdataContentTypeInfo {
      */
     
     public String fromHeader;
+
     public GdataContentTypeInfo withFromHeader(String fromHeader) {
         this.fromHeader = fromHeader;
         return this;
@@ -55,9 +59,11 @@ public class GdataContentTypeInfo {
      */
     
     public String fromUrlPath;
+
     public GdataContentTypeInfo withFromUrlPath(String fromUrlPath) {
         this.fromUrlPath = fromUrlPath;
         return this;
     }
     
+    public GdataContentTypeInfo(){}
 }

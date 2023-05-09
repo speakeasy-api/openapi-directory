@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFunctionUrlConfigResponse {
     @JsonProperty("AuthType")
     public FunctionUrlAuthTypeEnum authType;
+
     public GetFunctionUrlConfigResponse withAuthType(FunctionUrlAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -22,6 +23,7 @@ public class GetFunctionUrlConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cors")
     public Cors cors;
+
     public GetFunctionUrlConfigResponse withCors(Cors cors) {
         this.cors = cors;
         return this;
@@ -29,6 +31,7 @@ public class GetFunctionUrlConfigResponse {
     
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public GetFunctionUrlConfigResponse withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +39,7 @@ public class GetFunctionUrlConfigResponse {
     
     @JsonProperty("FunctionArn")
     public String functionArn;
+
     public GetFunctionUrlConfigResponse withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -43,16 +47,34 @@ public class GetFunctionUrlConfigResponse {
     
     @JsonProperty("FunctionUrl")
     public String functionUrl;
+
     public GetFunctionUrlConfigResponse withFunctionUrl(String functionUrl) {
         this.functionUrl = functionUrl;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InvokeMode")
+    public InvokeModeEnum invokeMode;
+
+    public GetFunctionUrlConfigResponse withInvokeMode(InvokeModeEnum invokeMode) {
+        this.invokeMode = invokeMode;
+        return this;
+    }
+    
     @JsonProperty("LastModifiedTime")
     public String lastModifiedTime;
+
     public GetFunctionUrlConfigResponse withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public GetFunctionUrlConfigResponse(@JsonProperty("AuthType") FunctionUrlAuthTypeEnum authType, @JsonProperty("CreationTime") String creationTime, @JsonProperty("FunctionArn") String functionArn, @JsonProperty("FunctionUrl") String functionUrl, @JsonProperty("LastModifiedTime") String lastModifiedTime) {
+        this.authType = authType;
+        this.creationTime = creationTime;
+        this.functionArn = functionArn;
+        this.functionUrl = functionUrl;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

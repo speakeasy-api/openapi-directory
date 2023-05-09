@@ -15,6 +15,7 @@ public class UpdateVirtualGatewayRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateVirtualGatewayRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class UpdateVirtualGatewayRequestBody {
      */
     @JsonProperty("spec")
     public UpdateVirtualGatewayRequestBodySpec spec;
+
     public UpdateVirtualGatewayRequestBody withSpec(UpdateVirtualGatewayRequestBodySpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public UpdateVirtualGatewayRequestBody(@JsonProperty("spec") UpdateVirtualGatewayRequestBodySpec spec) {
+        this.spec = spec;
+  }
 }

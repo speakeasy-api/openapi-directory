@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetInstancesResult {
     
     public DescribeFleetInstancesResultActiveInstances[] activeInstances;
+
     public DescribeFleetInstancesResult withActiveInstances(DescribeFleetInstancesResultActiveInstances[] activeInstances) {
         this.activeInstances = activeInstances;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetInstancesResult {
     
     
     public String fleetId;
+
     public DescribeFleetInstancesResult withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -26,9 +28,11 @@ public class DescribeFleetInstancesResult {
     
     
     public String nextToken;
+
     public DescribeFleetInstancesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetInstancesResult(){}
 }

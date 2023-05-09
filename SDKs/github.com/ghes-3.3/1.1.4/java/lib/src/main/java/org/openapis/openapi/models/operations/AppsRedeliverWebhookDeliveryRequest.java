@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsRedeliverWebhookDeliveryRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=delivery_id")
     public Long deliveryId;
+
     public AppsRedeliverWebhookDeliveryRequest withDeliveryId(Long deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
     
+    public AppsRedeliverWebhookDeliveryRequest(@JsonProperty("delivery_id") Long deliveryId) {
+        this.deliveryId = deliveryId;
+  }
 }

@@ -17,6 +17,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("APRRate")
     public String aprRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withAPRRate(String aprRate) {
         this.aprRate = aprRate;
         return this;
@@ -28,6 +29,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbilityToSetIndividualLimits")
     public Boolean abilityToSetIndividualLimits;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withAbilityToSetIndividualLimits(Boolean abilityToSetIndividualLimits) {
         this.abilityToSetIndividualLimits = abilityToSetIndividualLimits;
         return this;
@@ -38,6 +40,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("AccessToOnlineDataReportingTool")
     public Boolean accessToOnlineDataReportingTool;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withAccessToOnlineDataReportingTool(Boolean accessToOnlineDataReportingTool) {
         this.accessToOnlineDataReportingTool = accessToOnlineDataReportingTool;
         return this;
@@ -49,6 +52,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocationofRepayment")
     public String allocationofRepayment;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withAllocationofRepayment(String allocationofRepayment) {
         this.allocationofRepayment = allocationofRepayment;
         return this;
@@ -60,6 +64,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnnualAccountFeeType")
     public String annualAccountFeeType;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withAnnualAccountFeeType(String annualAccountFeeType) {
         this.annualAccountFeeType = annualAccountFeeType;
         return this;
@@ -70,6 +75,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("AnnualFeeAmount")
     public String annualFeeAmount;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withAnnualFeeAmount(String annualFeeAmount) {
         this.annualFeeAmount = annualFeeAmount;
         return this;
@@ -81,6 +87,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BalanceTransferInterestRatePeriod")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum balanceTransferInterestRatePeriod;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withBalanceTransferInterestRatePeriod(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum balanceTransferInterestRatePeriod) {
         this.balanceTransferInterestRatePeriod = balanceTransferInterestRatePeriod;
         return this;
@@ -92,6 +99,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BalanceTransferRate")
     public String balanceTransferRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withBalanceTransferRate(String balanceTransferRate) {
         this.balanceTransferRate = balanceTransferRate;
         return this;
@@ -102,6 +110,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("CardScheme")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItemCardSchemeEnum cardScheme;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withCardScheme(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItemCardSchemeEnum cardScheme) {
         this.cardScheme = cardScheme;
         return this;
@@ -112,6 +121,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("CashAdvanceRate")
     public String cashAdvanceRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withCashAdvanceRate(String cashAdvanceRate) {
         this.cashAdvanceRate = cashAdvanceRate;
         return this;
@@ -122,6 +132,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("CashWithdrawalsAllowed")
     public Boolean cashWithdrawalsAllowed;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withCashWithdrawalsAllowed(Boolean cashWithdrawalsAllowed) {
         this.cashWithdrawalsAllowed = cashWithdrawalsAllowed;
         return this;
@@ -133,6 +144,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CashbackPercent")
     public String cashbackPercent;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withCashbackPercent(String cashbackPercent) {
         this.cashbackPercent = cashbackPercent;
         return this;
@@ -144,6 +156,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChequeFeePercent")
     public String chequeFeePercent;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withChequeFeePercent(String chequeFeePercent) {
         this.chequeFeePercent = chequeFeePercent;
         return this;
@@ -154,6 +167,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("ConvenienceCheque")
     public Boolean convenienceCheque;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withConvenienceCheque(Boolean convenienceCheque) {
         this.convenienceCheque = convenienceCheque;
         return this;
@@ -165,6 +179,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateOfChange")
     public String dateOfChange;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withDateOfChange(String dateOfChange) {
         this.dateOfChange = dateOfChange;
         return this;
@@ -175,6 +190,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("DaysInterestFreeCreditIfPaymentFull")
     public Long daysInterestFreeCreditIfPaymentFull;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withDaysInterestFreeCreditIfPaymentFull(Long daysInterestFreeCreditIfPaymentFull) {
         this.daysInterestFreeCreditIfPaymentFull = daysInterestFreeCreditIfPaymentFull;
         return this;
@@ -185,6 +201,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("ExchangeRateAdjustment")
     public String exchangeRateAdjustment;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withExchangeRateAdjustment(String exchangeRateAdjustment) {
         this.exchangeRateAdjustment = exchangeRateAdjustment;
         return this;
@@ -196,6 +213,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeesOnCheque")
     public String feesOnCheque;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withFeesOnCheque(String feesOnCheque) {
         this.feesOnCheque = feesOnCheque;
         return this;
@@ -207,6 +225,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForeignCashFee")
     public String foreignCashFee;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withForeignCashFee(String foreignCashFee) {
         this.foreignCashFee = foreignCashFee;
         return this;
@@ -218,6 +237,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForeignCashFeeRate")
     public String foreignCashFeeRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withForeignCashFeeRate(String foreignCashFeeRate) {
         this.foreignCashFeeRate = foreignCashFeeRate;
         return this;
@@ -229,6 +249,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForeignPurchaseFee")
     public String foreignPurchaseFee;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withForeignPurchaseFee(String foreignPurchaseFee) {
         this.foreignPurchaseFee = foreignPurchaseFee;
         return this;
@@ -240,6 +261,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForeignPurchaseFeeRate")
     public String foreignPurchaseFeeRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withForeignPurchaseFeeRate(String foreignPurchaseFeeRate) {
         this.foreignPurchaseFeeRate = foreignPurchaseFeeRate;
         return this;
@@ -250,6 +272,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("IssuingEmergencyCardsFees")
     public String issuingEmergencyCardsFees;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withIssuingEmergencyCardsFees(String issuingEmergencyCardsFees) {
         this.issuingEmergencyCardsFees = issuingEmergencyCardsFees;
         return this;
@@ -261,6 +284,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LengthPromotionalInDays")
     public Long lengthPromotionalInDays;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withLengthPromotionalInDays(Long lengthPromotionalInDays) {
         this.lengthPromotionalInDays = lengthPromotionalInDays;
         return this;
@@ -272,6 +296,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumNumberOfCardsPermitted")
     public Long maximumNumberOfCardsPermitted;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withMaximumNumberOfCardsPermitted(Long maximumNumberOfCardsPermitted) {
         this.maximumNumberOfCardsPermitted = maximumNumberOfCardsPermitted;
         return this;
@@ -282,6 +307,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("MinimumCreditLimit")
     public String minimumCreditLimit;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withMinimumCreditLimit(String minimumCreditLimit) {
         this.minimumCreditLimit = minimumCreditLimit;
         return this;
@@ -293,6 +319,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumLendingAmount")
     public String minimumLendingAmount;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withMinimumLendingAmount(String minimumLendingAmount) {
         this.minimumLendingAmount = minimumLendingAmount;
         return this;
@@ -304,6 +331,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumRepaymentAmount")
     public String minimumRepaymentAmount;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withMinimumRepaymentAmount(String minimumRepaymentAmount) {
         this.minimumRepaymentAmount = minimumRepaymentAmount;
         return this;
@@ -315,6 +343,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumRepaymentPercentage")
     public String minimumRepaymentPercentage;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withMinimumRepaymentPercentage(String minimumRepaymentPercentage) {
         this.minimumRepaymentPercentage = minimumRepaymentPercentage;
         return this;
@@ -326,6 +355,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonSterlingCashFee")
     public String nonSterlingCashFee;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withNonSterlingCashFee(String nonSterlingCashFee) {
         this.nonSterlingCashFee = nonSterlingCashFee;
         return this;
@@ -337,6 +367,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonSterlingCashFeeRate")
     public String nonSterlingCashFeeRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withNonSterlingCashFeeRate(String nonSterlingCashFeeRate) {
         this.nonSterlingCashFeeRate = nonSterlingCashFeeRate;
         return this;
@@ -348,6 +379,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonSterlingPurchaseFee")
     public String nonSterlingPurchaseFee;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withNonSterlingPurchaseFee(String nonSterlingPurchaseFee) {
         this.nonSterlingPurchaseFee = nonSterlingPurchaseFee;
         return this;
@@ -359,6 +391,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonSterlingPurchaseFeeRate")
     public String nonSterlingPurchaseFeeRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withNonSterlingPurchaseFeeRate(String nonSterlingPurchaseFeeRate) {
         this.nonSterlingPurchaseFeeRate = nonSterlingPurchaseFeeRate;
         return this;
@@ -370,6 +403,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonSterlingTransactionFee")
     public String nonSterlingTransactionFee;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withNonSterlingTransactionFee(String nonSterlingTransactionFee) {
         this.nonSterlingTransactionFee = nonSterlingTransactionFee;
         return this;
@@ -381,6 +415,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonSterlingTransactionFeeRate")
     public String nonSterlingTransactionFeeRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withNonSterlingTransactionFeeRate(String nonSterlingTransactionFeeRate) {
         this.nonSterlingTransactionFeeRate = nonSterlingTransactionFeeRate;
         return this;
@@ -392,6 +427,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverLimitFee")
     public String overLimitFee;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withOverLimitFee(String overLimitFee) {
         this.overLimitFee = overLimitFee;
         return this;
@@ -402,6 +438,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("PaymentDaysAfterStatement")
     public Long paymentDaysAfterStatement;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withPaymentDaysAfterStatement(Long paymentDaysAfterStatement) {
         this.paymentDaysAfterStatement = paymentDaysAfterStatement;
         return this;
@@ -413,6 +450,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentSchemeExchangeFee")
     public String paymentSchemeExchangeFee;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withPaymentSchemeExchangeFee(String paymentSchemeExchangeFee) {
         this.paymentSchemeExchangeFee = paymentSchemeExchangeFee;
         return this;
@@ -424,6 +462,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentSchemeExchangeFeeRate")
     public String paymentSchemeExchangeFeeRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withPaymentSchemeExchangeFeeRate(String paymentSchemeExchangeFeeRate) {
         this.paymentSchemeExchangeFeeRate = paymentSchemeExchangeFeeRate;
         return this;
@@ -435,6 +474,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentSchemeExchangeRate")
     public String paymentSchemeExchangeRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withPaymentSchemeExchangeRate(String paymentSchemeExchangeRate) {
         this.paymentSchemeExchangeRate = paymentSchemeExchangeRate;
         return this;
@@ -445,6 +485,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("PurchaseRate")
     public String purchaseRate;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withPurchaseRate(String purchaseRate) {
         this.purchaseRate = purchaseRate;
         return this;
@@ -455,6 +496,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("RepaymentFrequency")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum repaymentFrequency;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withRepaymentFrequency(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum repaymentFrequency) {
         this.repaymentFrequency = repaymentFrequency;
         return this;
@@ -466,6 +508,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepaymentNotes")
     public String repaymentNotes;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withRepaymentNotes(String repaymentNotes) {
         this.repaymentNotes = repaymentNotes;
         return this;
@@ -477,6 +520,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPromotionOrFutureTerms")
     public String startPromotionOrFutureTerms;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withStartPromotionOrFutureTerms(String startPromotionOrFutureTerms) {
         this.startPromotionOrFutureTerms = startPromotionOrFutureTerms;
         return this;
@@ -487,6 +531,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("StatementAtAccountLevel")
     public Boolean statementAtAccountLevel;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withStatementAtAccountLevel(Boolean statementAtAccountLevel) {
         this.statementAtAccountLevel = statementAtAccountLevel;
         return this;
@@ -497,6 +542,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("StatementAtPersonalLevel")
     public Boolean statementAtPersonalLevel;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withStatementAtPersonalLevel(Boolean statementAtPersonalLevel) {
         this.statementAtPersonalLevel = statementAtPersonalLevel;
         return this;
@@ -508,9 +554,28 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopPromotionOrFutureTerms")
     public String stopPromotionOrFutureTerms;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem withStopPromotionOrFutureTerms(String stopPromotionOrFutureTerms) {
         this.stopPromotionOrFutureTerms = stopPromotionOrFutureTerms;
         return this;
     }
     
+    public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItem(@JsonProperty("APRRate") String aprRate, @JsonProperty("AccessToOnlineDataReportingTool") Boolean accessToOnlineDataReportingTool, @JsonProperty("AnnualFeeAmount") String annualFeeAmount, @JsonProperty("CardScheme") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItemCardSchemeEnum cardScheme, @JsonProperty("CashAdvanceRate") String cashAdvanceRate, @JsonProperty("CashWithdrawalsAllowed") Boolean cashWithdrawalsAllowed, @JsonProperty("ConvenienceCheque") Boolean convenienceCheque, @JsonProperty("DaysInterestFreeCreditIfPaymentFull") Long daysInterestFreeCreditIfPaymentFull, @JsonProperty("ExchangeRateAdjustment") String exchangeRateAdjustment, @JsonProperty("IssuingEmergencyCardsFees") String issuingEmergencyCardsFees, @JsonProperty("MinimumCreditLimit") String minimumCreditLimit, @JsonProperty("PaymentDaysAfterStatement") Long paymentDaysAfterStatement, @JsonProperty("PurchaseRate") String purchaseRate, @JsonProperty("RepaymentFrequency") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum repaymentFrequency, @JsonProperty("StatementAtAccountLevel") Boolean statementAtAccountLevel, @JsonProperty("StatementAtPersonalLevel") Boolean statementAtPersonalLevel) {
+        this.aprRate = aprRate;
+        this.accessToOnlineDataReportingTool = accessToOnlineDataReportingTool;
+        this.annualFeeAmount = annualFeeAmount;
+        this.cardScheme = cardScheme;
+        this.cashAdvanceRate = cashAdvanceRate;
+        this.cashWithdrawalsAllowed = cashWithdrawalsAllowed;
+        this.convenienceCheque = convenienceCheque;
+        this.daysInterestFreeCreditIfPaymentFull = daysInterestFreeCreditIfPaymentFull;
+        this.exchangeRateAdjustment = exchangeRateAdjustment;
+        this.issuingEmergencyCardsFees = issuingEmergencyCardsFees;
+        this.minimumCreditLimit = minimumCreditLimit;
+        this.paymentDaysAfterStatement = paymentDaysAfterStatement;
+        this.purchaseRate = purchaseRate;
+        this.repaymentFrequency = repaymentFrequency;
+        this.statementAtAccountLevel = statementAtAccountLevel;
+        this.statementAtPersonalLevel = statementAtPersonalLevel;
+  }
 }

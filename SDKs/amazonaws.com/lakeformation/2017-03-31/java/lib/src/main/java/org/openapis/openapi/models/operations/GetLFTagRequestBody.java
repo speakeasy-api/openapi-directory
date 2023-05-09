@@ -15,6 +15,7 @@ public class GetLFTagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetLFTagRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,9 +26,13 @@ public class GetLFTagRequestBody {
      */
     @JsonProperty("TagKey")
     public String tagKey;
+
     public GetLFTagRequestBody withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
     }
     
+    public GetLFTagRequestBody(@JsonProperty("TagKey") String tagKey) {
+        this.tagKey = tagKey;
+  }
 }

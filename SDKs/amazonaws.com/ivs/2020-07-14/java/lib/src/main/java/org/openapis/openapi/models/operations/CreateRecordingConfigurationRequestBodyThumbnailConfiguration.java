@@ -15,6 +15,7 @@ public class CreateRecordingConfigurationRequestBodyThumbnailConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordingMode")
     public org.openapis.openapi.models.shared.RecordingModeEnum recordingMode;
+
     public CreateRecordingConfigurationRequestBodyThumbnailConfiguration withRecordingMode(org.openapis.openapi.models.shared.RecordingModeEnum recordingMode) {
         this.recordingMode = recordingMode;
         return this;
@@ -23,9 +24,11 @@ public class CreateRecordingConfigurationRequestBodyThumbnailConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIntervalSeconds")
     public Long targetIntervalSeconds;
+
     public CreateRecordingConfigurationRequestBodyThumbnailConfiguration withTargetIntervalSeconds(Long targetIntervalSeconds) {
         this.targetIntervalSeconds = targetIntervalSeconds;
         return this;
     }
     
+    public CreateRecordingConfigurationRequestBodyThumbnailConfiguration(){}
 }

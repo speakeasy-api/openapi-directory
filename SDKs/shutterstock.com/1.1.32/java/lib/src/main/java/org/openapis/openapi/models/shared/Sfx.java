@@ -26,6 +26,7 @@ public class Sfx {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("added_date")
     public LocalDate addedDate;
+
     public Sfx withAddedDate(LocalDate addedDate) {
         this.addedDate = addedDate;
         return this;
@@ -37,6 +38,7 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affiliate_url")
     public String affiliateUrl;
+
     public Sfx withAffiliateUrl(String affiliateUrl) {
         this.affiliateUrl = affiliateUrl;
         return this;
@@ -48,6 +50,7 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artist")
     public String artist;
+
     public Sfx withArtist(String artist) {
         this.artist = artist;
         return this;
@@ -59,6 +62,7 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public SFXAssets assets;
+
     public Sfx withAssets(SFXAssets assets) {
         this.assets = assets;
         return this;
@@ -69,6 +73,7 @@ public class Sfx {
      */
     @JsonProperty("contributor")
     public Contributor contributor;
+
     public Sfx withContributor(Contributor contributor) {
         this.contributor = contributor;
         return this;
@@ -80,6 +85,7 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Sfx withDescription(String description) {
         this.description = description;
         return this;
@@ -91,6 +97,7 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Double duration;
+
     public Sfx withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -101,6 +108,7 @@ public class Sfx {
      */
     @JsonProperty("id")
     public String id;
+
     public Sfx withId(String id) {
         this.id = id;
         return this;
@@ -112,6 +120,7 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public Sfx withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -122,6 +131,7 @@ public class Sfx {
      */
     @JsonProperty("media_type")
     public String mediaType;
+
     public Sfx withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -133,6 +143,7 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releases")
     public String[] releases;
+
     public Sfx withReleases(String[] releases) {
         this.releases = releases;
         return this;
@@ -144,6 +155,7 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Sfx withTitle(String title) {
         this.title = title;
         return this;
@@ -157,6 +169,7 @@ public class Sfx {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_time")
     public OffsetDateTime updatedTime;
+
     public Sfx withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
@@ -165,9 +178,15 @@ public class Sfx {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Sfx withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Sfx(@JsonProperty("contributor") Contributor contributor, @JsonProperty("id") String id, @JsonProperty("media_type") String mediaType) {
+        this.contributor = contributor;
+        this.id = id;
+        this.mediaType = mediaType;
+  }
 }

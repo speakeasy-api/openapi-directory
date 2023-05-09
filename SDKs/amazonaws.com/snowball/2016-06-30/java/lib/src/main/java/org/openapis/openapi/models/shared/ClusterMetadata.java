@@ -20,6 +20,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressId")
     public String addressId;
+
     public ClusterMetadata withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -28,6 +29,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ClusterMetadata withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -36,6 +38,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterState")
     public ClusterStateEnum clusterState;
+
     public ClusterMetadata withClusterState(ClusterStateEnum clusterState) {
         this.clusterState = clusterState;
         return this;
@@ -46,6 +49,7 @@ public class ClusterMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public ClusterMetadata withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -54,6 +58,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ClusterMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForwardingAddressId")
     public String forwardingAddressId;
+
     public ClusterMetadata withForwardingAddressId(String forwardingAddressId) {
         this.forwardingAddressId = forwardingAddressId;
         return this;
@@ -70,6 +76,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobType")
     public JobTypeEnum jobType;
+
     public ClusterMetadata withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -78,6 +85,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyARN")
     public String kmsKeyARN;
+
     public ClusterMetadata withKmsKeyARN(String kmsKeyARN) {
         this.kmsKeyARN = kmsKeyARN;
         return this;
@@ -86,6 +94,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notification")
     public Notification notification;
+
     public ClusterMetadata withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -94,6 +103,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDeviceServiceConfiguration")
     public OnDeviceServiceConfiguration onDeviceServiceConfiguration;
+
     public ClusterMetadata withOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
         this.onDeviceServiceConfiguration = onDeviceServiceConfiguration;
         return this;
@@ -102,6 +112,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public JobResource resources;
+
     public ClusterMetadata withResources(JobResource resources) {
         this.resources = resources;
         return this;
@@ -110,6 +121,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public ClusterMetadata withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -118,6 +130,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingOption")
     public ShippingOptionEnum shippingOption;
+
     public ClusterMetadata withShippingOption(ShippingOptionEnum shippingOption) {
         this.shippingOption = shippingOption;
         return this;
@@ -126,6 +139,7 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballType")
     public SnowballTypeEnum snowballType;
+
     public ClusterMetadata withSnowballType(SnowballTypeEnum snowballType) {
         this.snowballType = snowballType;
         return this;
@@ -134,9 +148,11 @@ public class ClusterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxDocuments")
     public TaxDocuments taxDocuments;
+
     public ClusterMetadata withTaxDocuments(TaxDocuments taxDocuments) {
         this.taxDocuments = taxDocuments;
         return this;
     }
     
+    public ClusterMetadata(){}
 }

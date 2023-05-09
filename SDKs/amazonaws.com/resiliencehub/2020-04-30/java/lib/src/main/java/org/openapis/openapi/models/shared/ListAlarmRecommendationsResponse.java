@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAlarmRecommendationsResponse {
     @JsonProperty("alarmRecommendations")
     public AlarmRecommendation[] alarmRecommendations;
+
     public ListAlarmRecommendationsResponse withAlarmRecommendations(AlarmRecommendation[] alarmRecommendations) {
         this.alarmRecommendations = alarmRecommendations;
         return this;
@@ -22,9 +23,13 @@ public class ListAlarmRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAlarmRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAlarmRecommendationsResponse(@JsonProperty("alarmRecommendations") AlarmRecommendation[] alarmRecommendations) {
+        this.alarmRecommendations = alarmRecommendations;
+  }
 }

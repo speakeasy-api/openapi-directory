@@ -15,6 +15,7 @@ public class ComponentVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public java.util.Map<String, java.util.Map<String, String>> overrides;
+
     public ComponentVariant withOverrides(java.util.Map<String, java.util.Map<String, String>> overrides) {
         this.overrides = overrides;
         return this;
@@ -23,9 +24,11 @@ public class ComponentVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantValues")
     public java.util.Map<String, String> variantValues;
+
     public ComponentVariant withVariantValues(java.util.Map<String, String> variantValues) {
         this.variantValues = variantValues;
         return this;
     }
     
+    public ComponentVariant(){}
 }

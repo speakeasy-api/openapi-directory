@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuerySuggestedImageCountRawRequest {
@@ -12,6 +13,7 @@ public class QuerySuggestedImageCountRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public QuerySuggestedImageCountRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class QuerySuggestedImageCountRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public QuerySuggestedImageCountRawRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -32,6 +35,7 @@ public class QuerySuggestedImageCountRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public QuerySuggestedImageCountRawRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -42,9 +46,16 @@ public class QuerySuggestedImageCountRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public QuerySuggestedImageCountRawRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public QuerySuggestedImageCountRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("Training-Key") String trainingKey, @JsonProperty("iterationId") String iterationId, @JsonProperty("projectId") String projectId) {
+        this.requestBody = requestBody;
+        this.trainingKey = trainingKey;
+        this.iterationId = iterationId;
+        this.projectId = projectId;
+  }
 }

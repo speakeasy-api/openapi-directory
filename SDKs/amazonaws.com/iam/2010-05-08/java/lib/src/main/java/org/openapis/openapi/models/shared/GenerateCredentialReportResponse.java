@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GenerateCredentialReportResponse {
     
     public String description;
+
     public GenerateCredentialReportResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,11 @@ public class GenerateCredentialReportResponse {
     
     
     public ReportStateTypeEnum state;
+
     public GenerateCredentialReportResponse withState(ReportStateTypeEnum state) {
         this.state = state;
         return this;
     }
     
+    public GenerateCredentialReportResponse(){}
 }

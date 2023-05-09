@@ -12,9 +12,11 @@ public class EndUserRouteEmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public EndUserRoute data;
+
     public EndUserRouteEmbeddedObject withData(EndUserRoute data) {
         this.data = data;
         return this;
     }
     
+    public EndUserRouteEmbeddedObject(){}
 }

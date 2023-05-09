@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConnectionsIdConnectionLogs200ApplicationJSON {
     @JsonProperty("connectionlogs")
     public org.openapis.openapi.models.shared.ConnectionLog[] connectionlogs;
+
     public GetConnectionsIdConnectionLogs200ApplicationJSON withConnectionlogs(org.openapis.openapi.models.shared.ConnectionLog[] connectionlogs) {
         this.connectionlogs = connectionlogs;
         return this;
@@ -25,9 +26,13 @@ public class GetConnectionsIdConnectionLogs200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetConnectionsIdConnectionLogs200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetConnectionsIdConnectionLogs200ApplicationJSON(@JsonProperty("connectionlogs") org.openapis.openapi.models.shared.ConnectionLog[] connectionlogs) {
+        this.connectionlogs = connectionlogs;
+  }
 }

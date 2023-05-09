@@ -18,6 +18,7 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public FailureInfoErrorCodeEnum errorCode;
+
     public FailureInfo withErrorCode(FailureInfoErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,6 +30,7 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public FailureInfo withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,6 +42,7 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printer")
     public Printer printer;
+
     public FailureInfo withPrinter(Printer printer) {
         this.printer = printer;
         return this;
@@ -51,9 +54,11 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printerId")
     public String printerId;
+
     public FailureInfo withPrinterId(String printerId) {
         this.printerId = printerId;
         return this;
     }
     
+    public FailureInfo(){}
 }

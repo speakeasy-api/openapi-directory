@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1IngressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public GoogleIdentityAccesscontextmanagerV1ApiOperation[] operations;
+
     public GoogleIdentityAccesscontextmanagerV1IngressTo withOperations(GoogleIdentityAccesscontextmanagerV1ApiOperation[] operations) {
         this.operations = operations;
         return this;
@@ -29,9 +30,11 @@ public class GoogleIdentityAccesscontextmanagerV1IngressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public GoogleIdentityAccesscontextmanagerV1IngressTo withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1IngressTo(){}
 }

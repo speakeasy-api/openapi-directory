@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTimelineEventResponse {
@@ -12,6 +13,7 @@ public class UpdateTimelineEventResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateTimelineEventResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateTimelineEventResponse {
      */
     
     public Object conflictException;
+
     public UpdateTimelineEventResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTimelineEventResponse {
     
     
     public String contentType;
+
     public UpdateTimelineEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTimelineEventResponse {
      */
     
     public Object internalServerException;
+
     public UpdateTimelineEventResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateTimelineEventResponse {
     
     
     public Integer statusCode;
+
     public UpdateTimelineEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateTimelineEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTimelineEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTimelineEventResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateTimelineEventResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateTimelineEventResponse {
      */
     
     public Object throttlingException;
+
     public UpdateTimelineEventResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateTimelineEventResponse {
      */
     
     public java.util.Map<String, Object> updateTimelineEventOutput;
+
     public UpdateTimelineEventResponse withUpdateTimelineEventOutput(java.util.Map<String, Object> updateTimelineEventOutput) {
         this.updateTimelineEventOutput = updateTimelineEventOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateTimelineEventResponse {
      */
     
     public Object validationException;
+
     public UpdateTimelineEventResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateTimelineEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

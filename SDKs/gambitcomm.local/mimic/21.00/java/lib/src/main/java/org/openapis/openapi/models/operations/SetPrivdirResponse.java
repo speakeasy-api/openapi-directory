@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetPrivdirResponse {
     
     public String contentType;
+
     public SetPrivdirResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetPrivdirResponse {
     
     
     public Integer statusCode;
+
     public SetPrivdirResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetPrivdirResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetPrivdirResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SetPrivdirResponse {
      */
     
     public String setPrivdir200ApplicationJSONString;
+
     public SetPrivdirResponse withSetPrivdir200ApplicationJSONString(String setPrivdir200ApplicationJSONString) {
         this.setPrivdir200ApplicationJSONString = setPrivdir200ApplicationJSONString;
         return this;
     }
     
+    public SetPrivdirResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

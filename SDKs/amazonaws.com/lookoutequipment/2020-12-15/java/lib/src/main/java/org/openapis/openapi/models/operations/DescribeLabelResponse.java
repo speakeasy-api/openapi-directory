@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLabelResponse {
@@ -12,6 +13,7 @@ public class DescribeLabelResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeLabelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLabelResponse {
     
     
     public String contentType;
+
     public DescribeLabelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLabelResponse describeLabelResponse;
+
     public DescribeLabelResponse withDescribeLabelResponse(org.openapis.openapi.models.shared.DescribeLabelResponse describeLabelResponse) {
         this.describeLabelResponse = describeLabelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLabelResponse {
      */
     
     public Object internalServerException;
+
     public DescribeLabelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeLabelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeLabelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeLabelResponse {
     
     
     public Integer statusCode;
+
     public DescribeLabelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeLabelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLabelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeLabelResponse {
      */
     
     public Object throttlingException;
+
     public DescribeLabelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeLabelResponse {
      */
     
     public Object validationException;
+
     public DescribeLabelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeLabelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

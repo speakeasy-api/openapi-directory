@@ -57,10 +57,8 @@ public class TypeMediaVideoChannel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchMediaVideoChannelResponse res = new org.openapis.openapi.models.operations.SearchMediaVideoChannelResponse() {{
+        org.openapis.openapi.models.operations.SearchMediaVideoChannelResponse res = new org.openapis.openapi.models.operations.SearchMediaVideoChannelResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

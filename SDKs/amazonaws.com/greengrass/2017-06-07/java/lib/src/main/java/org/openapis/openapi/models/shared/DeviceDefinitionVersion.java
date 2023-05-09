@@ -15,9 +15,11 @@ public class DeviceDefinitionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Devices")
     public Device[] devices;
+
     public DeviceDefinitionVersion withDevices(Device[] devices) {
         this.devices = devices;
         return this;
     }
     
+    public DeviceDefinitionVersion(){}
 }

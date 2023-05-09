@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RenameField {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public RenameField withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -19,6 +20,7 @@ public class RenameField {
     
     @JsonProperty("Name")
     public String name;
+
     public RenameField withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class RenameField {
     
     @JsonProperty("SourcePath")
     public String[] sourcePath;
+
     public RenameField withSourcePath(String[] sourcePath) {
         this.sourcePath = sourcePath;
         return this;
@@ -33,9 +36,16 @@ public class RenameField {
     
     @JsonProperty("TargetPath")
     public String[] targetPath;
+
     public RenameField withTargetPath(String[] targetPath) {
         this.targetPath = targetPath;
         return this;
     }
     
+    public RenameField(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("SourcePath") String[] sourcePath, @JsonProperty("TargetPath") String[] targetPath) {
+        this.inputs = inputs;
+        this.name = name;
+        this.sourcePath = sourcePath;
+        this.targetPath = targetPath;
+  }
 }

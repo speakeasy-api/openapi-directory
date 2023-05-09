@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFaxRequest {
@@ -12,9 +13,13 @@ public class FetchFaxRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
     public String sid;
+
     public FetchFaxRequest withSid(String sid) {
         this.sid = sid;
         return this;
     }
     
+    public FetchFaxRequest(@JsonProperty("Sid") String sid) {
+        this.sid = sid;
+  }
 }

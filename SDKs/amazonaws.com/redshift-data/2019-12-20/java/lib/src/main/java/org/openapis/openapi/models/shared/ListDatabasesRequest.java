@@ -12,6 +12,7 @@ public class ListDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterIdentifier")
     public String clusterIdentifier;
+
     public ListDatabasesRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class ListDatabasesRequest {
     
     @JsonProperty("Database")
     public String database;
+
     public ListDatabasesRequest withDatabase(String database) {
         this.database = database;
         return this;
@@ -27,6 +29,7 @@ public class ListDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbUser")
     public String dbUser;
+
     public ListDatabasesRequest withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -35,6 +38,7 @@ public class ListDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDatabasesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -43,6 +47,7 @@ public class ListDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatabasesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,6 +56,7 @@ public class ListDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public ListDatabasesRequest withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -59,9 +65,13 @@ public class ListDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkgroupName")
     public String workgroupName;
+
     public ListDatabasesRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ListDatabasesRequest(@JsonProperty("Database") String database) {
+        this.database = database;
+  }
 }

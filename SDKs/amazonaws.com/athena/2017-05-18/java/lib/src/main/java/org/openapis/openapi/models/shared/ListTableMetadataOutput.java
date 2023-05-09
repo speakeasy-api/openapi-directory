@@ -15,6 +15,7 @@ public class ListTableMetadataOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTableMetadataOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTableMetadataOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableMetadataList")
     public TableMetadata[] tableMetadataList;
+
     public ListTableMetadataOutput withTableMetadataList(TableMetadata[] tableMetadataList) {
         this.tableMetadataList = tableMetadataList;
         return this;
     }
     
+    public ListTableMetadataOutput(){}
 }

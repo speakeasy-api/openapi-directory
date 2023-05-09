@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateLoadBalancerListenerInput - Contains the parameters for CreateLoadBalancerListeners.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLoadBalancerListenerInput {
     
     public Listener[] listeners;
+
     public CreateLoadBalancerListenerInput withListeners(Listener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -19,9 +20,14 @@ public class CreateLoadBalancerListenerInput {
     
     
     public String loadBalancerName;
+
     public CreateLoadBalancerListenerInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public CreateLoadBalancerListenerInput(@JsonProperty("Listeners") Listener[] listeners, @JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.listeners = listeners;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

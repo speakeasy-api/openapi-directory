@@ -15,6 +15,7 @@ public class ListAnomalyDetectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAnomalyDetectorsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,9 +27,11 @@ public class ListAnomalyDetectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalyDetectorsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnomalyDetectorsRequestBody(){}
 }

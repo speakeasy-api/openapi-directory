@@ -12,6 +12,7 @@ public class ThirtyFive44 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Long average;
+
     public ThirtyFive44 withAverage(Long average) {
         this.average = average;
         return this;
@@ -20,6 +21,7 @@ public class ThirtyFive44 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiplicity")
     public Long multiplicity;
+
     public ThirtyFive44 withMultiplicity(Long multiplicity) {
         this.multiplicity = multiplicity;
         return this;
@@ -28,6 +30,7 @@ public class ThirtyFive44 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentile")
     public Long percentile;
+
     public ThirtyFive44 withPercentile(Long percentile) {
         this.percentile = percentile;
         return this;
@@ -36,6 +39,7 @@ public class ThirtyFive44 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistical_info")
     public StatisticalInfo35 statisticalInfo;
+
     public ThirtyFive44 withStatisticalInfo(StatisticalInfo35 statisticalInfo) {
         this.statisticalInfo = statisticalInfo;
         return this;
@@ -44,6 +48,7 @@ public class ThirtyFive44 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stdev")
     public Long stdev;
+
     public ThirtyFive44 withStdev(Long stdev) {
         this.stdev = stdev;
         return this;
@@ -52,9 +57,11 @@ public class ThirtyFive44 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public ThirtyFive44 withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ThirtyFive44(){}
 }

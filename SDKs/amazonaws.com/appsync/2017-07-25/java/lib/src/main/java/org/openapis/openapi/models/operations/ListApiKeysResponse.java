@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApiKeysResponse {
@@ -12,6 +13,7 @@ public class ListApiKeysResponse {
      */
     
     public Object badRequestException;
+
     public ListApiKeysResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListApiKeysResponse {
     
     
     public String contentType;
+
     public ListApiKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListApiKeysResponse {
      */
     
     public Object internalFailureException;
+
     public ListApiKeysResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListApiKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApiKeysResponse listApiKeysResponse;
+
     public ListApiKeysResponse withListApiKeysResponse(org.openapis.openapi.models.shared.ListApiKeysResponse listApiKeysResponse) {
         this.listApiKeysResponse = listApiKeysResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListApiKeysResponse {
      */
     
     public Object notFoundException;
+
     public ListApiKeysResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListApiKeysResponse {
     
     
     public Integer statusCode;
+
     public ListApiKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListApiKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApiKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListApiKeysResponse {
      */
     
     public Object unauthorizedException;
+
     public ListApiKeysResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListApiKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

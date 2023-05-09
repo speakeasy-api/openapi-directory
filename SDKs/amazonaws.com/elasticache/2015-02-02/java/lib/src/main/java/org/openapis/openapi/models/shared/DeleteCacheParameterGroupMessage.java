@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteCacheParameterGroupMessage - Represents the input of a &lt;code&gt;DeleteCacheParameterGroup&lt;/code&gt; operation.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteCacheParameterGroupMessage {
     
     public String cacheParameterGroupName;
+
     public DeleteCacheParameterGroupMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
     }
     
+    public DeleteCacheParameterGroupMessage(@JsonProperty("CacheParameterGroupName") String cacheParameterGroupName) {
+        this.cacheParameterGroupName = cacheParameterGroupName;
+  }
 }

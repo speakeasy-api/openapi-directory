@@ -12,9 +12,11 @@ public class ImageRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media_assets")
     public ImageRelationshipsAllMediaAssetsAvailableForThisImage mediaAssets;
+
     public ImageRelationships withMediaAssets(ImageRelationshipsAllMediaAssetsAvailableForThisImage mediaAssets) {
         this.mediaAssets = mediaAssets;
         return this;
     }
     
+    public ImageRelationships(){}
 }

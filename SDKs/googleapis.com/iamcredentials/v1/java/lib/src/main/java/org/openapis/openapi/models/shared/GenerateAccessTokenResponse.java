@@ -18,6 +18,7 @@ public class GenerateAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public GenerateAccessTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,9 +30,11 @@ public class GenerateAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GenerateAccessTokenResponse withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
     
+    public GenerateAccessTokenResponse(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3ResourceClassification {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public S3ResourceClassification withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -21,6 +22,7 @@ public class S3ResourceClassification {
     
     @JsonProperty("classificationType")
     public ClassificationType classificationType;
+
     public S3ResourceClassification withClassificationType(ClassificationType classificationType) {
         this.classificationType = classificationType;
         return this;
@@ -29,9 +31,14 @@ public class S3ResourceClassification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public S3ResourceClassification withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public S3ResourceClassification(@JsonProperty("bucketName") String bucketName, @JsonProperty("classificationType") ClassificationType classificationType) {
+        this.bucketName = bucketName;
+        this.classificationType = classificationType;
+  }
 }

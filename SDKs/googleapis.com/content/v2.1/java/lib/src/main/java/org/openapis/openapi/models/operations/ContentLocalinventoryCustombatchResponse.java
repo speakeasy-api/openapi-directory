@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentLocalinventoryCustombatchResponse {
     
     public String contentType;
+
     public ContentLocalinventoryCustombatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentLocalinventoryCustombatchResponse {
      */
     
     public org.openapis.openapi.models.shared.LocalinventoryCustomBatchResponse localinventoryCustomBatchResponse;
+
     public ContentLocalinventoryCustombatchResponse withLocalinventoryCustomBatchResponse(org.openapis.openapi.models.shared.LocalinventoryCustomBatchResponse localinventoryCustomBatchResponse) {
         this.localinventoryCustomBatchResponse = localinventoryCustomBatchResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentLocalinventoryCustombatchResponse {
     
     
     public Integer statusCode;
+
     public ContentLocalinventoryCustombatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentLocalinventoryCustombatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentLocalinventoryCustombatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentLocalinventoryCustombatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

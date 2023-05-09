@@ -15,9 +15,11 @@ public class StatefulPolicyPreservedStateNetworkIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDelete")
     public StatefulPolicyPreservedStateNetworkIpAutoDeleteEnum autoDelete;
+
     public StatefulPolicyPreservedStateNetworkIp withAutoDelete(StatefulPolicyPreservedStateNetworkIpAutoDeleteEnum autoDelete) {
         this.autoDelete = autoDelete;
         return this;
     }
     
+    public StatefulPolicyPreservedStateNetworkIp(){}
 }

@@ -12,6 +12,7 @@ public class MarkedEpisodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public MarkedEpisodeEmbedded embedded;
+
     public MarkedEpisodeInput withEmbedded(MarkedEpisodeEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class MarkedEpisodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marked_at")
     public Long markedAt;
+
     public MarkedEpisodeInput withMarkedAt(Long markedAt) {
         this.markedAt = markedAt;
         return this;
@@ -34,9 +36,11 @@ public class MarkedEpisodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
+
     public MarkedEpisodeInput withType(Object type) {
         this.type = type;
         return this;
     }
     
+    public MarkedEpisodeInput(){}
 }

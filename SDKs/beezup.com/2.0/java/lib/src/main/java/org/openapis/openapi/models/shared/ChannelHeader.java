@@ -15,6 +15,7 @@ public class ChannelHeader {
      */
     @JsonProperty("channelId")
     public String channelId;
+
     public ChannelHeader withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -25,6 +26,7 @@ public class ChannelHeader {
      */
     @JsonProperty("channelLogoUrl")
     public String channelLogoUrl;
+
     public ChannelHeader withChannelLogoUrl(String channelLogoUrl) {
         this.channelLogoUrl = channelLogoUrl;
         return this;
@@ -35,6 +37,7 @@ public class ChannelHeader {
      */
     @JsonProperty("channelName")
     public String channelName;
+
     public ChannelHeader withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -45,6 +48,7 @@ public class ChannelHeader {
      */
     @JsonProperty("links")
     public ChannelHeaderLinks links;
+
     public ChannelHeader withLinks(ChannelHeaderLinks links) {
         this.links = links;
         return this;
@@ -55,9 +59,17 @@ public class ChannelHeader {
      */
     @JsonProperty("types")
     public String[] types;
+
     public ChannelHeader withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public ChannelHeader(@JsonProperty("channelId") String channelId, @JsonProperty("channelLogoUrl") String channelLogoUrl, @JsonProperty("channelName") String channelName, @JsonProperty("links") ChannelHeaderLinks links, @JsonProperty("types") String[] types) {
+        this.channelId = channelId;
+        this.channelLogoUrl = channelLogoUrl;
+        this.channelName = channelName;
+        this.links = links;
+        this.types = types;
+  }
 }

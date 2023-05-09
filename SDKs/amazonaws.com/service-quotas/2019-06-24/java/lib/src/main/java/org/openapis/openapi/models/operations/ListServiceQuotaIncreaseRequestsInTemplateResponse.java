@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
@@ -12,6 +13,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public Object awsServiceAccessNotEnabledException;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withAWSServiceAccessNotEnabledException(Object awsServiceAccessNotEnabledException) {
         this.awsServiceAccessNotEnabledException = awsServiceAccessNotEnabledException;
         return this;
@@ -22,6 +24,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
     
     
     public String contentType;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public Object dependencyAccessDeniedException;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withDependencyAccessDeniedException(Object dependencyAccessDeniedException) {
         this.dependencyAccessDeniedException = dependencyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public Object illegalArgumentException;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServiceQuotaIncreaseRequestsInTemplateResponse listServiceQuotaIncreaseRequestsInTemplateResponse;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withListServiceQuotaIncreaseRequestsInTemplateResponse(org.openapis.openapi.models.shared.ListServiceQuotaIncreaseRequestsInTemplateResponse listServiceQuotaIncreaseRequestsInTemplateResponse) {
         this.listServiceQuotaIncreaseRequestsInTemplateResponse = listServiceQuotaIncreaseRequestsInTemplateResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public Object noAvailableOrganizationException;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withNoAvailableOrganizationException(Object noAvailableOrganizationException) {
         this.noAvailableOrganizationException = noAvailableOrganizationException;
         return this;
@@ -76,6 +84,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
     
     
     public Integer statusCode;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public Object serviceException;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,6 +114,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public Object templatesNotAvailableInRegionException;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withTemplatesNotAvailableInRegionException(Object templatesNotAvailableInRegionException) {
         this.templatesNotAvailableInRegionException = templatesNotAvailableInRegionException;
         return this;
@@ -113,9 +125,14 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListServiceQuotaIncreaseRequestsInTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,20 +18,23 @@ public class CreateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment")
     public Deployment deployment;
+
     public CreateProfileRequest withDeployment(Deployment deployment) {
         this.deployment = deployment;
         return this;
     }
     
     /**
-     * Required. One or more profile types that the agent is capable of providing.
+     * One or more profile types that the agent is capable of providing.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileType")
     public CreateProfileRequestProfileTypeEnum[] profileType;
+
     public CreateProfileRequest withProfileType(CreateProfileRequestProfileTypeEnum[] profileType) {
         this.profileType = profileType;
         return this;
     }
     
+    public CreateProfileRequest(){}
 }

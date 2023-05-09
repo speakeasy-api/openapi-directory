@@ -15,6 +15,7 @@ public class OrderInvoiceGeneralSettings {
      */
     @JsonProperty("cultureName")
     public String cultureName;
+
     public OrderInvoiceGeneralSettings withCultureName(String cultureName) {
         this.cultureName = cultureName;
         return this;
@@ -25,6 +26,7 @@ public class OrderInvoiceGeneralSettings {
      */
     @JsonProperty("invoicePrefix")
     public String invoicePrefix;
+
     public OrderInvoiceGeneralSettings withInvoicePrefix(String invoicePrefix) {
         this.invoicePrefix = invoicePrefix;
         return this;
@@ -35,6 +37,7 @@ public class OrderInvoiceGeneralSettings {
      */
     @JsonProperty("invoiceStartingSequenceNumber")
     public Long invoiceStartingSequenceNumber;
+
     public OrderInvoiceGeneralSettings withInvoiceStartingSequenceNumber(Long invoiceStartingSequenceNumber) {
         this.invoiceStartingSequenceNumber = invoiceStartingSequenceNumber;
         return this;
@@ -45,6 +48,7 @@ public class OrderInvoiceGeneralSettings {
      */
     @JsonProperty("productVATPercent")
     public Double productVATPercent;
+
     public OrderInvoiceGeneralSettings withProductVATPercent(Double productVATPercent) {
         this.productVATPercent = productVATPercent;
         return this;
@@ -55,9 +59,17 @@ public class OrderInvoiceGeneralSettings {
      */
     @JsonProperty("shippingVATPercent")
     public Double shippingVATPercent;
+
     public OrderInvoiceGeneralSettings withShippingVATPercent(Double shippingVATPercent) {
         this.shippingVATPercent = shippingVATPercent;
         return this;
     }
     
+    public OrderInvoiceGeneralSettings(@JsonProperty("cultureName") String cultureName, @JsonProperty("invoicePrefix") String invoicePrefix, @JsonProperty("invoiceStartingSequenceNumber") Long invoiceStartingSequenceNumber, @JsonProperty("productVATPercent") Double productVATPercent, @JsonProperty("shippingVATPercent") Double shippingVATPercent) {
+        this.cultureName = cultureName;
+        this.invoicePrefix = invoicePrefix;
+        this.invoiceStartingSequenceNumber = invoiceStartingSequenceNumber;
+        this.productVATPercent = productVATPercent;
+        this.shippingVATPercent = shippingVATPercent;
+  }
 }

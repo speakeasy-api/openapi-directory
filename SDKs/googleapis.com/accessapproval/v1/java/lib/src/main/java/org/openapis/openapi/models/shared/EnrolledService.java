@@ -18,6 +18,7 @@ public class EnrolledService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudProduct")
     public String cloudProduct;
+
     public EnrolledService withCloudProduct(String cloudProduct) {
         this.cloudProduct = cloudProduct;
         return this;
@@ -29,9 +30,11 @@ public class EnrolledService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrollmentLevel")
     public EnrolledServiceEnrollmentLevelEnum enrollmentLevel;
+
     public EnrolledService withEnrollmentLevel(EnrolledServiceEnrollmentLevelEnum enrollmentLevel) {
         this.enrollmentLevel = enrollmentLevel;
         return this;
     }
     
+    public EnrolledService(){}
 }

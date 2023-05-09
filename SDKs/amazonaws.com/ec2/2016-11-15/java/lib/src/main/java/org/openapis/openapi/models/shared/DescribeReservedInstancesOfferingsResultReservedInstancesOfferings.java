@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings {
     
     public String availabilityZone;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsCurrencyCodeEnum currencyCode;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withCurrencyCode(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public Long duration;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public Float fixedPrice;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withFixedPrice(Float fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -40,6 +44,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTenancyEnum instanceTenancy;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withInstanceTenancy(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTenancyEnum instanceTenancy) {
         this.instanceTenancy = instanceTenancy;
         return this;
@@ -47,6 +52,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum instanceType;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withInstanceType(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -54,6 +60,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public Boolean marketplace;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withMarketplace(Boolean marketplace) {
         this.marketplace = marketplace;
         return this;
@@ -61,6 +68,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsOfferingClassEnum offeringClass;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withOfferingClass(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsOfferingClassEnum offeringClass) {
         this.offeringClass = offeringClass;
         return this;
@@ -68,6 +76,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsOfferingTypeEnum offeringType;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withOfferingType(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsOfferingTypeEnum offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -75,6 +84,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsPricingDetails[] pricingDetails;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withPricingDetails(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsPricingDetails[] pricingDetails) {
         this.pricingDetails = pricingDetails;
         return this;
@@ -82,6 +92,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsProductDescriptionEnum productDescription;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withProductDescription(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsProductDescriptionEnum productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -89,6 +100,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsRecurringCharges[] recurringCharges;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withRecurringCharges(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsRecurringCharges[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -96,6 +108,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public String reservedInstancesOfferingId;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withReservedInstancesOfferingId(String reservedInstancesOfferingId) {
         this.reservedInstancesOfferingId = reservedInstancesOfferingId;
         return this;
@@ -103,6 +116,7 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsScopeEnum scope;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withScope(DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -110,9 +124,11 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferings 
     
     
     public Float usagePrice;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings withUsagePrice(Float usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings(){}
 }

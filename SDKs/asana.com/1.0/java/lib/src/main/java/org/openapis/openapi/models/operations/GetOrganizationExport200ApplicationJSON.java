@@ -15,9 +15,11 @@ public class GetOrganizationExport200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.OrganizationExportResponse data;
+
     public GetOrganizationExport200ApplicationJSON withData(org.openapis.openapi.models.shared.OrganizationExportResponse data) {
         this.data = data;
         return this;
     }
     
+    public GetOrganizationExport200ApplicationJSON(){}
 }

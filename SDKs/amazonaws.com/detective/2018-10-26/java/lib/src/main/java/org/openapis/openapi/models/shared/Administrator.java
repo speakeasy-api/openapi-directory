@@ -20,6 +20,7 @@ public class Administrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public Administrator withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class Administrator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DelegationTime")
     public OffsetDateTime delegationTime;
+
     public Administrator withDelegationTime(OffsetDateTime delegationTime) {
         this.delegationTime = delegationTime;
         return this;
@@ -38,9 +40,11 @@ public class Administrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public Administrator withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public Administrator(){}
 }

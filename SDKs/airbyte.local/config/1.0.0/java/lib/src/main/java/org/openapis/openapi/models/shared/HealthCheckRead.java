@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HealthCheckRead {
     @JsonProperty("available")
     public Boolean available;
+
     public HealthCheckRead withAvailable(Boolean available) {
         this.available = available;
         return this;
     }
     
+    public HealthCheckRead(@JsonProperty("available") Boolean available) {
+        this.available = available;
+  }
 }

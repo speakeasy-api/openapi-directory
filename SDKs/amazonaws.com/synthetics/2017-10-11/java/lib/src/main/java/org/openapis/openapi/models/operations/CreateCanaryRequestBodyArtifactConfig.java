@@ -15,9 +15,11 @@ public class CreateCanaryRequestBodyArtifactConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Encryption")
     public org.openapis.openapi.models.shared.S3EncryptionConfig s3Encryption;
+
     public CreateCanaryRequestBodyArtifactConfig withS3Encryption(org.openapis.openapi.models.shared.S3EncryptionConfig s3Encryption) {
         this.s3Encryption = s3Encryption;
         return this;
     }
     
+    public CreateCanaryRequestBodyArtifactConfig(){}
 }

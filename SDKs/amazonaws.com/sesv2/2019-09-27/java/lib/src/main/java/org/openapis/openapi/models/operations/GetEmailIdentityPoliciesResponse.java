@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEmailIdentityPoliciesResponse {
@@ -12,6 +13,7 @@ public class GetEmailIdentityPoliciesResponse {
      */
     
     public Object badRequestException;
+
     public GetEmailIdentityPoliciesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetEmailIdentityPoliciesResponse {
     
     
     public String contentType;
+
     public GetEmailIdentityPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEmailIdentityPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEmailIdentityPoliciesResponse getEmailIdentityPoliciesResponse;
+
     public GetEmailIdentityPoliciesResponse withGetEmailIdentityPoliciesResponse(org.openapis.openapi.models.shared.GetEmailIdentityPoliciesResponse getEmailIdentityPoliciesResponse) {
         this.getEmailIdentityPoliciesResponse = getEmailIdentityPoliciesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEmailIdentityPoliciesResponse {
      */
     
     public Object notFoundException;
+
     public GetEmailIdentityPoliciesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetEmailIdentityPoliciesResponse {
     
     
     public Integer statusCode;
+
     public GetEmailIdentityPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetEmailIdentityPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEmailIdentityPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetEmailIdentityPoliciesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetEmailIdentityPoliciesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetEmailIdentityPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class CreateOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proposals")
     public Proposal[] proposals;
+
     public CreateOrdersResponse withProposals(Proposal[] proposals) {
         this.proposals = proposals;
         return this;
     }
     
+    public CreateOrdersResponse(){}
 }

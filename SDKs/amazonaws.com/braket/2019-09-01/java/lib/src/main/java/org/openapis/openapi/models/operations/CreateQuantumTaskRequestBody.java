@@ -14,6 +14,7 @@ public class CreateQuantumTaskRequestBody {
      */
     @JsonProperty("action")
     public String action;
+
     public CreateQuantumTaskRequestBody withAction(String action) {
         this.action = action;
         return this;
@@ -24,6 +25,7 @@ public class CreateQuantumTaskRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateQuantumTaskRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -34,6 +36,7 @@ public class CreateQuantumTaskRequestBody {
      */
     @JsonProperty("deviceArn")
     public String deviceArn;
+
     public CreateQuantumTaskRequestBody withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -45,6 +48,7 @@ public class CreateQuantumTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceParameters")
     public String deviceParameters;
+
     public CreateQuantumTaskRequestBody withDeviceParameters(String deviceParameters) {
         this.deviceParameters = deviceParameters;
         return this;
@@ -56,6 +60,7 @@ public class CreateQuantumTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobToken")
     public String jobToken;
+
     public CreateQuantumTaskRequestBody withJobToken(String jobToken) {
         this.jobToken = jobToken;
         return this;
@@ -66,6 +71,7 @@ public class CreateQuantumTaskRequestBody {
      */
     @JsonProperty("outputS3Bucket")
     public String outputS3Bucket;
+
     public CreateQuantumTaskRequestBody withOutputS3Bucket(String outputS3Bucket) {
         this.outputS3Bucket = outputS3Bucket;
         return this;
@@ -76,6 +82,7 @@ public class CreateQuantumTaskRequestBody {
      */
     @JsonProperty("outputS3KeyPrefix")
     public String outputS3KeyPrefix;
+
     public CreateQuantumTaskRequestBody withOutputS3KeyPrefix(String outputS3KeyPrefix) {
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         return this;
@@ -86,6 +93,7 @@ public class CreateQuantumTaskRequestBody {
      */
     @JsonProperty("shots")
     public Long shots;
+
     public CreateQuantumTaskRequestBody withShots(Long shots) {
         this.shots = shots;
         return this;
@@ -97,9 +105,18 @@ public class CreateQuantumTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateQuantumTaskRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateQuantumTaskRequestBody(@JsonProperty("action") String action, @JsonProperty("clientToken") String clientToken, @JsonProperty("deviceArn") String deviceArn, @JsonProperty("outputS3Bucket") String outputS3Bucket, @JsonProperty("outputS3KeyPrefix") String outputS3KeyPrefix, @JsonProperty("shots") Long shots) {
+        this.action = action;
+        this.clientToken = clientToken;
+        this.deviceArn = deviceArn;
+        this.outputS3Bucket = outputS3Bucket;
+        this.outputS3KeyPrefix = outputS3KeyPrefix;
+        this.shots = shots;
+  }
 }

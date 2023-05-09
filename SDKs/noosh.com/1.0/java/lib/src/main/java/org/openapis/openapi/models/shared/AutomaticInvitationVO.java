@@ -15,6 +15,7 @@ public class AutomaticInvitationVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatic_invitation_type_name")
     public String automaticInvitationTypeName;
+
     public AutomaticInvitationVO withAutomaticInvitationTypeName(String automaticInvitationTypeName) {
         this.automaticInvitationTypeName = automaticInvitationTypeName;
         return this;
@@ -26,9 +27,11 @@ public class AutomaticInvitationVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_template")
     public TeamTemplateSimpleVO teamTemplate;
+
     public AutomaticInvitationVO withTeamTemplate(TeamTemplateSimpleVO teamTemplate) {
         this.teamTemplate = teamTemplate;
         return this;
     }
     
+    public AutomaticInvitationVO(){}
 }

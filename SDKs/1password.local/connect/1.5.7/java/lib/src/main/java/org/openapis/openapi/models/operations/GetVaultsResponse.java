@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVaultsResponse {
     
     public String contentType;
+
     public GetVaultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetVaultsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetVaultsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetVaultsResponse {
     
     
     public Integer statusCode;
+
     public GetVaultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetVaultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVaultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetVaultsResponse {
      */
     
     public org.openapis.openapi.models.shared.Vault[] vaults;
+
     public GetVaultsResponse withVaults(org.openapis.openapi.models.shared.Vault[] vaults) {
         this.vaults = vaults;
         return this;
     }
     
+    public GetVaultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

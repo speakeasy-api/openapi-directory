@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImageAttributeBootMode {
     
     public String value;
+
     public ImageAttributeBootMode withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImageAttributeBootMode(){}
 }

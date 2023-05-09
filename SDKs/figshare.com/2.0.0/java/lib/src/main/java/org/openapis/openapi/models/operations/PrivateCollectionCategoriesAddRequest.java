@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionCategoriesAddRequest {
@@ -12,6 +13,7 @@ public class PrivateCollectionCategoriesAddRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CategoriesCreator categoriesCreator;
+
     public PrivateCollectionCategoriesAddRequest withCategoriesCreator(org.openapis.openapi.models.shared.CategoriesCreator categoriesCreator) {
         this.categoriesCreator = categoriesCreator;
         return this;
@@ -22,9 +24,14 @@ public class PrivateCollectionCategoriesAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public Long collectionId;
+
     public PrivateCollectionCategoriesAddRequest withCollectionId(Long collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public PrivateCollectionCategoriesAddRequest(@JsonProperty("CategoriesCreator") org.openapis.openapi.models.shared.CategoriesCreator categoriesCreator, @JsonProperty("collection_id") Long collectionId) {
+        this.categoriesCreator = categoriesCreator;
+        this.collectionId = collectionId;
+  }
 }

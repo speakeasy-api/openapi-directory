@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications {
     
     public String addressingType;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withAddressingType(String addressingType) {
         this.addressingType = addressingType;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappings[] blockDeviceMappings;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withBlockDeviceMappings(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Boolean ebsOptimized;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsIamInstanceProfile iamInstanceProfile;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withIamInstanceProfile(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String imageId;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements instanceRequirements;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withInstanceRequirements(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirements instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum instanceType;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withInstanceType(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -61,6 +68,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String kernelId;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String keyName;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -75,6 +84,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsMonitoring monitoring;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withMonitoring(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsMonitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -82,6 +92,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsNetworkInterfaces[] networkInterfaces;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withNetworkInterfaces(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -89,6 +100,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsPlacement placement;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withPlacement(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsPlacement placement) {
         this.placement = placement;
         return this;
@@ -96,6 +108,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String ramdiskId;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -103,6 +116,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsSecurityGroups[] securityGroups;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withSecurityGroups(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsSecurityGroups[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -110,6 +124,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String spotPrice;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withSpotPrice(String spotPrice) {
         this.spotPrice = spotPrice;
         return this;
@@ -117,6 +132,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String subnetId;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -124,6 +140,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsTagSpecifications[] tagSpecifications;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withTagSpecifications(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -131,6 +148,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String userData;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withUserData(String userData) {
         this.userData = userData;
         return this;
@@ -138,9 +156,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Double weightedCapacity;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications withWeightedCapacity(Double weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications(){}
 }

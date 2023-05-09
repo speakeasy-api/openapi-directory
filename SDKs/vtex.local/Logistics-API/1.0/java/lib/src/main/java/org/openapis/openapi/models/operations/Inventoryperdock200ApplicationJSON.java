@@ -15,6 +15,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableQuantity")
     public Long availableQuantity;
+
     public Inventoryperdock200ApplicationJSON withAvailableQuantity(Long availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
@@ -26,6 +27,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfSupplyUtc")
     public String dateOfSupplyUtc;
+
     public Inventoryperdock200ApplicationJSON withDateOfSupplyUtc(String dateOfSupplyUtc) {
         this.dateOfSupplyUtc = dateOfSupplyUtc;
         return this;
@@ -37,6 +39,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryChannel")
     public String[] deliveryChannel;
+
     public Inventoryperdock200ApplicationJSON withDeliveryChannel(String[] deliveryChannel) {
         this.deliveryChannel = deliveryChannel;
         return this;
@@ -48,6 +51,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public Inventoryperdock200ApplicationJSON withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -59,6 +63,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUnlimited")
     public Boolean isUnlimited;
+
     public Inventoryperdock200ApplicationJSON withIsUnlimited(Boolean isUnlimited) {
         this.isUnlimited = isUnlimited;
         return this;
@@ -70,6 +75,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepSellingAfterExpiration")
     public Boolean keepSellingAfterExpiration;
+
     public Inventoryperdock200ApplicationJSON withKeepSellingAfterExpiration(Boolean keepSellingAfterExpiration) {
         this.keepSellingAfterExpiration = keepSellingAfterExpiration;
         return this;
@@ -81,6 +87,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedQuantity")
     public Long reservedQuantity;
+
     public Inventoryperdock200ApplicationJSON withReservedQuantity(Long reservedQuantity) {
         this.reservedQuantity = reservedQuantity;
         return this;
@@ -92,6 +99,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannel")
     public String[] salesChannel;
+
     public Inventoryperdock200ApplicationJSON withSalesChannel(String[] salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -103,6 +111,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuId")
     public String skuId;
+
     public Inventoryperdock200ApplicationJSON withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
@@ -114,6 +123,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeToRefill")
     public String timeToRefill;
+
     public Inventoryperdock200ApplicationJSON withTimeToRefill(String timeToRefill) {
         this.timeToRefill = timeToRefill;
         return this;
@@ -125,6 +135,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalQuantity")
     public Long totalQuantity;
+
     public Inventoryperdock200ApplicationJSON withTotalQuantity(Long totalQuantity) {
         this.totalQuantity = totalQuantity;
         return this;
@@ -136,6 +147,7 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer")
     public String transfer;
+
     public Inventoryperdock200ApplicationJSON withTransfer(String transfer) {
         this.transfer = transfer;
         return this;
@@ -147,9 +159,11 @@ public class Inventoryperdock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouseId")
     public String warehouseId;
+
     public Inventoryperdock200ApplicationJSON withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public Inventoryperdock200ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class MacroRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("async")
     public Boolean async;
+
     public MacroRequestDTO withAsync(Boolean async) {
         this.async = async;
         return this;
@@ -29,6 +30,7 @@ public class MacroRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public Long[] ids;
+
     public MacroRequestDTO withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -40,9 +42,11 @@ public class MacroRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, java.util.Map<String, Object>> params;
+
     public MacroRequestDTO withParams(java.util.Map<String, java.util.Map<String, Object>> params) {
         this.params = params;
         return this;
     }
     
+    public MacroRequestDTO(){}
 }

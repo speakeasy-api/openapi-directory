@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1DataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePayload")
     public GoogleCloudDatalabelingV1beta1ImagePayload imagePayload;
+
     public GoogleCloudDatalabelingV1beta1DataItem withImagePayload(GoogleCloudDatalabelingV1beta1ImagePayload imagePayload) {
         this.imagePayload = imagePayload;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1DataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatalabelingV1beta1DataItem withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatalabelingV1beta1DataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textPayload")
     public GoogleCloudDatalabelingV1beta1TextPayload textPayload;
+
     public GoogleCloudDatalabelingV1beta1DataItem withTextPayload(GoogleCloudDatalabelingV1beta1TextPayload textPayload) {
         this.textPayload = textPayload;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatalabelingV1beta1DataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoPayload")
     public GoogleCloudDatalabelingV1beta1VideoPayload videoPayload;
+
     public GoogleCloudDatalabelingV1beta1DataItem withVideoPayload(GoogleCloudDatalabelingV1beta1VideoPayload videoPayload) {
         this.videoPayload = videoPayload;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1DataItem(){}
 }

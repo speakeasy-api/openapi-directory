@@ -18,9 +18,11 @@ public class AddNamedRangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRange")
     public NamedRange namedRange;
+
     public AddNamedRangeResponse withNamedRange(NamedRange namedRange) {
         this.namedRange = namedRange;
         return this;
     }
     
+    public AddNamedRangeResponse(){}
 }

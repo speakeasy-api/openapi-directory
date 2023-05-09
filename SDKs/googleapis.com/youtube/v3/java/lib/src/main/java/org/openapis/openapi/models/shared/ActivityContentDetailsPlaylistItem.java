@@ -18,6 +18,7 @@ public class ActivityContentDetailsPlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playlistId")
     public String playlistId;
+
     public ActivityContentDetailsPlaylistItem withPlaylistId(String playlistId) {
         this.playlistId = playlistId;
         return this;
@@ -29,6 +30,7 @@ public class ActivityContentDetailsPlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playlistItemId")
     public String playlistItemId;
+
     public ActivityContentDetailsPlaylistItem withPlaylistItemId(String playlistItemId) {
         this.playlistItemId = playlistItemId;
         return this;
@@ -40,9 +42,11 @@ public class ActivityContentDetailsPlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public ResourceId resourceId;
+
     public ActivityContentDetailsPlaylistItem withResourceId(ResourceId resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ActivityContentDetailsPlaylistItem(){}
 }

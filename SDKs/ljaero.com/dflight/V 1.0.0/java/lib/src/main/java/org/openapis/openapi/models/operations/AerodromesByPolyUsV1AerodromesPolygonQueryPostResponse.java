@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse {
@@ -12,6 +13,7 @@ public class AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.AerodromePolyResponse aerodromePolyResponse;
+
     public AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse withAerodromePolyResponse(org.openapis.openapi.models.shared.AerodromePolyResponse aerodromePolyResponse) {
         this.aerodromePolyResponse = aerodromePolyResponse;
         return this;
@@ -19,6 +21,7 @@ public class AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse {
     
     
     public String contentType;
+
     public AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse {
     
     
     public Integer statusCode;
+
     public AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

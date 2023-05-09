@@ -12,9 +12,13 @@ public class UpdateAutomatedDiscoveryConfigurationRequestBody {
      */
     @JsonProperty("status")
     public UpdateAutomatedDiscoveryConfigurationRequestBodyStatusEnum status;
+
     public UpdateAutomatedDiscoveryConfigurationRequestBody withStatus(UpdateAutomatedDiscoveryConfigurationRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateAutomatedDiscoveryConfigurationRequestBody(@JsonProperty("status") UpdateAutomatedDiscoveryConfigurationRequestBodyStatusEnum status) {
+        this.status = status;
+  }
 }

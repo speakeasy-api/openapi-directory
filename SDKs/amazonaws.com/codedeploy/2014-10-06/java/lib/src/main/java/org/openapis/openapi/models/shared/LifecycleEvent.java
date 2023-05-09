@@ -20,6 +20,7 @@ public class LifecycleEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnostics")
     public Diagnostics diagnostics;
+
     public LifecycleEvent withDiagnostics(Diagnostics diagnostics) {
         this.diagnostics = diagnostics;
         return this;
@@ -30,6 +31,7 @@ public class LifecycleEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public LifecycleEvent withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class LifecycleEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleEventName")
     public String lifecycleEventName;
+
     public LifecycleEvent withLifecycleEventName(String lifecycleEventName) {
         this.lifecycleEventName = lifecycleEventName;
         return this;
@@ -48,6 +51,7 @@ public class LifecycleEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public LifecycleEvent withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,9 +60,11 @@ public class LifecycleEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public LifecycleEventStatusEnum status;
+
     public LifecycleEvent withStatus(LifecycleEventStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LifecycleEvent(){}
 }

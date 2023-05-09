@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyItemSocketCategoryDefinition {
      */
     
     public Long socketCategoryHash;
+
     public DestinyDefinitionsDestinyItemSocketCategoryDefinition withSocketCategoryHash(Long socketCategoryHash) {
         this.socketCategoryHash = socketCategoryHash;
         return this;
@@ -25,9 +26,11 @@ public class DestinyDefinitionsDestinyItemSocketCategoryDefinition {
      */
     
     public Integer[] socketIndexes;
+
     public DestinyDefinitionsDestinyItemSocketCategoryDefinition withSocketIndexes(Integer[] socketIndexes) {
         this.socketIndexes = socketIndexes;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemSocketCategoryDefinition(){}
 }

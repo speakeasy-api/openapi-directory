@@ -15,9 +15,11 @@ public class ChromeOsMoveDevicesToOu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIds")
     public String[] deviceIds;
+
     public ChromeOsMoveDevicesToOu withDeviceIds(String[] deviceIds) {
         this.deviceIds = deviceIds;
         return this;
     }
     
+    public ChromeOsMoveDevicesToOu(){}
 }

@@ -15,6 +15,7 @@ public class TasksCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Task[] data;
+
     public TasksCollection withData(Task[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class TasksCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionLinks links;
+
     public TasksCollection withLinks(CollectionLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class TasksCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CollectionMetadata meta;
+
     public TasksCollection withMeta(CollectionMetadata meta) {
         this.meta = meta;
         return this;
     }
     
+    public TasksCollection(){}
 }

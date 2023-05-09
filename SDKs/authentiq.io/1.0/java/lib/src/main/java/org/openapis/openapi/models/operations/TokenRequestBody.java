@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokenRequestBody {
@@ -13,6 +14,7 @@ public class TokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=client_id")
     public String clientId;
+
     public TokenRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -24,6 +26,7 @@ public class TokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=client_secret")
     public String clientSecret;
+
     public TokenRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -35,6 +38,7 @@ public class TokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=code")
     public String code;
+
     public TokenRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -46,6 +50,7 @@ public class TokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=grant_type")
     public String grantType;
+
     public TokenRequestBody withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -57,9 +62,17 @@ public class TokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=redirect_uri")
     public String redirectUri;
+
     public TokenRequestBody withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
     }
     
+    public TokenRequestBody(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret, @JsonProperty("code") String code, @JsonProperty("grant_type") String grantType, @JsonProperty("redirect_uri") String redirectUri) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.code = code;
+        this.grantType = grantType;
+        this.redirectUri = redirectUri;
+  }
 }

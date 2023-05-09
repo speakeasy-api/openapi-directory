@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLinksPercentilesResponse {
     
     public String contentType;
+
     public GetLinksPercentilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLinksPercentilesResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetLinksPercentilesResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -29,6 +32,7 @@ public class GetLinksPercentilesResponse {
      */
     
     public org.openapis.openapi.models.shared.LinksPercentiles linksPercentiles;
+
     public GetLinksPercentilesResponse withLinksPercentiles(org.openapis.openapi.models.shared.LinksPercentiles linksPercentiles) {
         this.linksPercentiles = linksPercentiles;
         return this;
@@ -36,6 +40,7 @@ public class GetLinksPercentilesResponse {
     
     
     public Integer statusCode;
+
     public GetLinksPercentilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetLinksPercentilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLinksPercentilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLinksPercentilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStreamConsumerResponse {
     
     public String contentType;
+
     public DescribeStreamConsumerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStreamConsumerResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStreamConsumerOutput describeStreamConsumerOutput;
+
     public DescribeStreamConsumerResponse withDescribeStreamConsumerOutput(org.openapis.openapi.models.shared.DescribeStreamConsumerOutput describeStreamConsumerOutput) {
         this.describeStreamConsumerOutput = describeStreamConsumerOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStreamConsumerResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeStreamConsumerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStreamConsumerResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeStreamConsumerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeStreamConsumerResponse {
     
     
     public Integer statusCode;
+
     public DescribeStreamConsumerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeStreamConsumerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStreamConsumerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeStreamConsumerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeStreamConsumerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeStreamConsumerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

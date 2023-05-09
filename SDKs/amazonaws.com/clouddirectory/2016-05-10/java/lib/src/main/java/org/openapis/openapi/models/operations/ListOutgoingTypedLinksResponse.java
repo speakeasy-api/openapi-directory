@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOutgoingTypedLinksResponse {
@@ -12,6 +13,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public ListOutgoingTypedLinksResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListOutgoingTypedLinksResponse {
     
     
     public String contentType;
+
     public ListOutgoingTypedLinksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException;
+
     public ListOutgoingTypedLinksResponse withDirectoryNotEnabledException(org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.FacetValidationException facetValidationException;
+
     public ListOutgoingTypedLinksResponse withFacetValidationException(org.openapis.openapi.models.shared.FacetValidationException facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public ListOutgoingTypedLinksResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public ListOutgoingTypedLinksResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException;
+
     public ListOutgoingTypedLinksResponse withInvalidNextTokenException(org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -79,6 +87,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public ListOutgoingTypedLinksResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOutgoingTypedLinksResponse listOutgoingTypedLinksResponse;
+
     public ListOutgoingTypedLinksResponse withListOutgoingTypedLinksResponse(org.openapis.openapi.models.shared.ListOutgoingTypedLinksResponse listOutgoingTypedLinksResponse) {
         this.listOutgoingTypedLinksResponse = listOutgoingTypedLinksResponse;
         return this;
@@ -96,6 +106,7 @@ public class ListOutgoingTypedLinksResponse {
     
     
     public Integer statusCode;
+
     public ListOutgoingTypedLinksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class ListOutgoingTypedLinksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOutgoingTypedLinksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public ListOutgoingTypedLinksResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public ListOutgoingTypedLinksResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -133,9 +147,14 @@ public class ListOutgoingTypedLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public ListOutgoingTypedLinksResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListOutgoingTypedLinksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

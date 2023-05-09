@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchemaAsJsonResponse {
@@ -12,6 +13,7 @@ public class GetSchemaAsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public GetSchemaAsJsonResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSchemaAsJsonResponse {
     
     
     public String contentType;
+
     public GetSchemaAsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSchemaAsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSchemaAsJsonResponse getSchemaAsJsonResponse;
+
     public GetSchemaAsJsonResponse withGetSchemaAsJsonResponse(org.openapis.openapi.models.shared.GetSchemaAsJsonResponse getSchemaAsJsonResponse) {
         this.getSchemaAsJsonResponse = getSchemaAsJsonResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSchemaAsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public GetSchemaAsJsonResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetSchemaAsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public GetSchemaAsJsonResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class GetSchemaAsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public GetSchemaAsJsonResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetSchemaAsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetSchemaAsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetSchemaAsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchemaAsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetSchemaAsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public GetSchemaAsJsonResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class GetSchemaAsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public GetSchemaAsJsonResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -103,9 +114,14 @@ public class GetSchemaAsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public GetSchemaAsJsonResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSchemaAsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

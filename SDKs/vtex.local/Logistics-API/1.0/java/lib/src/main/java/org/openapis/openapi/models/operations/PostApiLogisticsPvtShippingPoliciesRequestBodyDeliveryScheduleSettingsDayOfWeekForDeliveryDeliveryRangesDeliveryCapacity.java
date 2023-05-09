@@ -12,6 +12,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSetti
      */
     @JsonProperty("capacityType")
     public String capacityType;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRangesDeliveryCapacity withCapacityType(String capacityType) {
         this.capacityType = capacityType;
         return this;
@@ -22,9 +23,14 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSetti
      */
     @JsonProperty("maxValue")
     public Double maxValue;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRangesDeliveryCapacity withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRangesDeliveryCapacity(@JsonProperty("capacityType") String capacityType, @JsonProperty("maxValue") Double maxValue) {
+        this.capacityType = capacityType;
+        this.maxValue = maxValue;
+  }
 }

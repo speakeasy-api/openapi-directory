@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelCapacityReservationFleetsRequest {
     
     public String[] capacityReservationFleetIds;
+
     public CancelCapacityReservationFleetsRequest withCapacityReservationFleetIds(String[] capacityReservationFleetIds) {
         this.capacityReservationFleetIds = capacityReservationFleetIds;
         return this;
@@ -16,9 +17,13 @@ public class CancelCapacityReservationFleetsRequest {
     
     
     public Boolean dryRun;
+
     public CancelCapacityReservationFleetsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public CancelCapacityReservationFleetsRequest(@JsonProperty("CapacityReservationFleetIds") String[] capacityReservationFleetIds) {
+        this.capacityReservationFleetIds = capacityReservationFleetIds;
+  }
 }

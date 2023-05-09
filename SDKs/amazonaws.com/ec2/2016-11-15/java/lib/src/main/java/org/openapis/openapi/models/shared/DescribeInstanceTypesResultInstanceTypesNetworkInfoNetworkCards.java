@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards {
     
     public Long maximumNetworkInterfaces;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards withMaximumNetworkInterfaces(Long maximumNetworkInterfaces) {
         this.maximumNetworkInterfaces = maximumNetworkInterfaces;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards {
     
     
     public Long networkCardIndex;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -26,9 +28,11 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards {
     
     
     public String networkPerformance;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards withNetworkPerformance(String networkPerformance) {
         this.networkPerformance = networkPerformance;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards(){}
 }

@@ -12,9 +12,11 @@ public class GetActionOrganizationRevisionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetActionOrganizationRevisionListRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetActionOrganizationRevisionListRequest(){}
 }

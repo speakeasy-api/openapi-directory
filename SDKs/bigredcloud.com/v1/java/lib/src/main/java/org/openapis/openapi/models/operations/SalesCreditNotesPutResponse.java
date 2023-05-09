@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SalesCreditNotesPutResponse {
     
     public String contentType;
+
     public SalesCreditNotesPutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SalesCreditNotesPutResponse {
      */
     
     public java.util.Map<String, Object> salesCreditNotesPut200ApplicationJSONObject;
+
     public SalesCreditNotesPutResponse withSalesCreditNotesPut200ApplicationJSONObject(java.util.Map<String, Object> salesCreditNotesPut200ApplicationJSONObject) {
         this.salesCreditNotesPut200ApplicationJSONObject = salesCreditNotesPut200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class SalesCreditNotesPutResponse {
     
     
     public Integer statusCode;
+
     public SalesCreditNotesPutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SalesCreditNotesPutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SalesCreditNotesPutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SalesCreditNotesPutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

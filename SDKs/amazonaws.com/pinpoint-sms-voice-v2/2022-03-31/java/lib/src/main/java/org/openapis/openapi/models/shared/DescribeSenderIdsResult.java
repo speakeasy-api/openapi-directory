@@ -15,6 +15,7 @@ public class DescribeSenderIdsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSenderIdsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSenderIdsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SenderIds")
     public SenderIdInformation[] senderIds;
+
     public DescribeSenderIdsResult withSenderIds(SenderIdInformation[] senderIds) {
         this.senderIds = senderIds;
         return this;
     }
     
+    public DescribeSenderIdsResult(){}
 }

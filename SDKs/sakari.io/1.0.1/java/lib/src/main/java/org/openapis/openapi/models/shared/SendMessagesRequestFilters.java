@@ -12,6 +12,7 @@ public class SendMessagesRequestFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object>[] attributes;
+
     public SendMessagesRequestFilters withAttributes(java.util.Map<String, Object>[] attributes) {
         this.attributes = attributes;
         return this;
@@ -20,9 +21,11 @@ public class SendMessagesRequestFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public SendMessagesRequestFilters withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public SendMessagesRequestFilters(){}
 }

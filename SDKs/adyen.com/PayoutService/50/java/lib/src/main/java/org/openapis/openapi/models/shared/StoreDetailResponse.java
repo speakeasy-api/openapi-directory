@@ -18,6 +18,7 @@ public class StoreDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public StoreDetailResponse withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -28,6 +29,7 @@ public class StoreDetailResponse {
      */
     @JsonProperty("pspReference")
     public String pspReference;
+
     public StoreDetailResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -38,6 +40,7 @@ public class StoreDetailResponse {
      */
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public StoreDetailResponse withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -48,9 +51,15 @@ public class StoreDetailResponse {
      */
     @JsonProperty("resultCode")
     public String resultCode;
+
     public StoreDetailResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public StoreDetailResponse(@JsonProperty("pspReference") String pspReference, @JsonProperty("recurringDetailReference") String recurringDetailReference, @JsonProperty("resultCode") String resultCode) {
+        this.pspReference = pspReference;
+        this.recurringDetailReference = recurringDetailReference;
+        this.resultCode = resultCode;
+  }
 }

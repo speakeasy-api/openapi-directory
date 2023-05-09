@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteContactResponse {
@@ -12,6 +13,7 @@ public class DeleteContactResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteContactResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteContactResponse {
      */
     
     public Object conflictException;
+
     public DeleteContactResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteContactResponse {
     
     
     public String contentType;
+
     public DeleteContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteContactResponse {
      */
     
     public java.util.Map<String, Object> deleteContactResult;
+
     public DeleteContactResponse withDeleteContactResult(java.util.Map<String, Object> deleteContactResult) {
         this.deleteContactResult = deleteContactResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteContactResponse {
      */
     
     public Object internalServerException;
+
     public DeleteContactResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteContactResponse {
     
     
     public Integer statusCode;
+
     public DeleteContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteContactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteContactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteContactResponse {
      */
     
     public Object throttlingException;
+
     public DeleteContactResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteContactResponse {
      */
     
     public Object validationException;
+
     public DeleteContactResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

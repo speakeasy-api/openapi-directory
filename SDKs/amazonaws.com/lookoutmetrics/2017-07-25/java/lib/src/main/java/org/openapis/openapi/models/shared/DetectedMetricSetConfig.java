@@ -15,6 +15,7 @@ public class DetectedMetricSetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetFrequency")
     public DetectedField metricSetFrequency;
+
     public DetectedMetricSetConfig withMetricSetFrequency(DetectedField metricSetFrequency) {
         this.metricSetFrequency = metricSetFrequency;
         return this;
@@ -23,6 +24,7 @@ public class DetectedMetricSetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSource")
     public DetectedMetricSource metricSource;
+
     public DetectedMetricSetConfig withMetricSource(DetectedMetricSource metricSource) {
         this.metricSource = metricSource;
         return this;
@@ -31,9 +33,11 @@ public class DetectedMetricSetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Offset")
     public DetectedField offset;
+
     public DetectedMetricSetConfig withOffset(DetectedField offset) {
         this.offset = offset;
         return this;
     }
     
+    public DetectedMetricSetConfig(){}
 }

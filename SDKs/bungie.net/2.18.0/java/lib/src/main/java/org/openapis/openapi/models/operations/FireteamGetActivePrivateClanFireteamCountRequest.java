@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FireteamGetActivePrivateClanFireteamCountRequest {
@@ -12,9 +13,13 @@ public class FireteamGetActivePrivateClanFireteamCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public FireteamGetActivePrivateClanFireteamCountRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public FireteamGetActivePrivateClanFireteamCountRequest(@JsonProperty("groupId") Long groupId) {
+        this.groupId = groupId;
+  }
 }

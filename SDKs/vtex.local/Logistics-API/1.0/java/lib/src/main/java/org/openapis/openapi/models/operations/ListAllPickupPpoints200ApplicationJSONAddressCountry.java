@@ -15,6 +15,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddressCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acronym")
     public String acronym;
+
     public ListAllPickupPpoints200ApplicationJSONAddressCountry withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -26,9 +27,11 @@ public class ListAllPickupPpoints200ApplicationJSONAddressCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListAllPickupPpoints200ApplicationJSONAddressCountry withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ListAllPickupPpoints200ApplicationJSONAddressCountry(){}
 }

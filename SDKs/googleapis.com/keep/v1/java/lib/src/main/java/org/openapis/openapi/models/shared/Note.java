@@ -18,6 +18,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public Attachment[] attachments;
+
     public Note withAttachments(Attachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -29,6 +30,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public Section body;
+
     public Note withBody(Section body) {
         this.body = body;
         return this;
@@ -40,6 +42,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Note withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Note withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public Permission[] permissions;
+
     public Note withPermissions(Permission[] permissions) {
         this.permissions = permissions;
         return this;
@@ -73,6 +78,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Note withTitle(String title) {
         this.title = title;
         return this;
@@ -84,6 +90,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trashTime")
     public String trashTime;
+
     public Note withTrashTime(String trashTime) {
         this.trashTime = trashTime;
         return this;
@@ -95,6 +102,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trashed")
     public Boolean trashed;
+
     public Note withTrashed(Boolean trashed) {
         this.trashed = trashed;
         return this;
@@ -106,9 +114,11 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Note withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Note(){}
 }

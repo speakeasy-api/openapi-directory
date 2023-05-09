@@ -58,12 +58,10 @@ public class TestHarness {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTestHarnessScenarioUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateTestHarnessScenarioUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateTestHarnessScenarioUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateTestHarnessScenarioUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             testHarnessScenarioModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -106,11 +104,9 @@ public class TestHarness {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DELETETestHarnessScenarioUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETETestHarnessScenarioUsingDELETEResponse() {{
+        org.openapis.openapi.models.operations.DELETETestHarnessScenarioUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETETestHarnessScenarioUsingDELETEResponse(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -146,12 +142,10 @@ public class TestHarness {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETTestHarnessScenarioUsingGETResponse res = new org.openapis.openapi.models.operations.GETTestHarnessScenarioUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETTestHarnessScenarioUsingGETResponse res = new org.openapis.openapi.models.operations.GETTestHarnessScenarioUsingGETResponse(contentType, httpRes.statusCode()) {{
             testHarnessScenarioModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,12 +188,10 @@ public class TestHarness {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETTestHarnessScenariosUsingGETResponse res = new org.openapis.openapi.models.operations.GETTestHarnessScenariosUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETTestHarnessScenariosUsingGETResponse res = new org.openapis.openapi.models.operations.GETTestHarnessScenariosUsingGETResponse(contentType, httpRes.statusCode()) {{
             testHarnessScenarioModels = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,12 +239,10 @@ public class TestHarness {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTestHarnessScenarioUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateTestHarnessScenarioUsingPUTResponse() {{
+        org.openapis.openapi.models.operations.UpdateTestHarnessScenarioUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateTestHarnessScenarioUsingPUTResponse(contentType, httpRes.statusCode()) {{
             testHarnessScenarioModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

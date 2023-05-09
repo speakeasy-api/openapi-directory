@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportSystemPackagesRequest {
@@ -12,6 +13,7 @@ public class ExportSystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[description]")
     public String filterDescription;
+
     public ExportSystemPackagesRequest withFilterDescription(String filterDescription) {
         this.filterDescription = filterDescription;
         return this;
@@ -22,6 +24,7 @@ public class ExportSystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[evra]")
     public String filterEvra;
+
     public ExportSystemPackagesRequest withFilterEvra(String filterEvra) {
         this.filterEvra = filterEvra;
         return this;
@@ -32,6 +35,7 @@ public class ExportSystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
     public String filterName;
+
     public ExportSystemPackagesRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -42,6 +46,7 @@ public class ExportSystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[summary]")
     public String filterSummary;
+
     public ExportSystemPackagesRequest withFilterSummary(String filterSummary) {
         this.filterSummary = filterSummary;
         return this;
@@ -52,6 +57,7 @@ public class ExportSystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updatable]")
     public Boolean filterUpdatable;
+
     public ExportSystemPackagesRequest withFilterUpdatable(Boolean filterUpdatable) {
         this.filterUpdatable = filterUpdatable;
         return this;
@@ -62,6 +68,7 @@ public class ExportSystemPackagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
     public String inventoryId;
+
     public ExportSystemPackagesRequest withInventoryId(String inventoryId) {
         this.inventoryId = inventoryId;
         return this;
@@ -72,9 +79,13 @@ public class ExportSystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ExportSystemPackagesRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public ExportSystemPackagesRequest(@JsonProperty("inventory_id") String inventoryId) {
+        this.inventoryId = inventoryId;
+  }
 }

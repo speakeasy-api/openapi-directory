@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FcmdataProjectsAndroidAppsDeliveryDataListResponse {
     
     public String contentType;
+
     public FcmdataProjectsAndroidAppsDeliveryDataListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FcmdataProjectsAndroidAppsDeliveryDataListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse googleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse;
+
     public FcmdataProjectsAndroidAppsDeliveryDataListResponse withGoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse(org.openapis.openapi.models.shared.GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse googleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse) {
         this.googleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse = googleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse;
         return this;
@@ -26,6 +29,7 @@ public class FcmdataProjectsAndroidAppsDeliveryDataListResponse {
     
     
     public Integer statusCode;
+
     public FcmdataProjectsAndroidAppsDeliveryDataListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FcmdataProjectsAndroidAppsDeliveryDataListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FcmdataProjectsAndroidAppsDeliveryDataListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FcmdataProjectsAndroidAppsDeliveryDataListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

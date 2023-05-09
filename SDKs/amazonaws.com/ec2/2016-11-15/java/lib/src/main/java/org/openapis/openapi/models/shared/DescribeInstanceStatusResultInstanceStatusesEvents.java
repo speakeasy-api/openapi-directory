@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeInstanceStatusResultInstanceStatusesEvents {
     
     public DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum code;
+
     public DescribeInstanceStatusResultInstanceStatusesEvents withCode(DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceStatusResultInstanceStatusesEvents {
     
     
     public String description;
+
     public DescribeInstanceStatusResultInstanceStatusesEvents withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceStatusResultInstanceStatusesEvents {
     
     
     public String instanceEventId;
+
     public DescribeInstanceStatusResultInstanceStatusesEvents withInstanceEventId(String instanceEventId) {
         this.instanceEventId = instanceEventId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstanceStatusResultInstanceStatusesEvents {
     
     
     public OffsetDateTime notAfter;
+
     public DescribeInstanceStatusResultInstanceStatusesEvents withNotAfter(OffsetDateTime notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstanceStatusResultInstanceStatusesEvents {
     
     
     public OffsetDateTime notBefore;
+
     public DescribeInstanceStatusResultInstanceStatusesEvents withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -47,9 +52,11 @@ public class DescribeInstanceStatusResultInstanceStatusesEvents {
     
     
     public OffsetDateTime notBeforeDeadline;
+
     public DescribeInstanceStatusResultInstanceStatusesEvents withNotBeforeDeadline(OffsetDateTime notBeforeDeadline) {
         this.notBeforeDeadline = notBeforeDeadline;
         return this;
     }
     
+    public DescribeInstanceStatusResultInstanceStatusesEvents(){}
 }

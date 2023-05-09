@@ -15,6 +15,7 @@ public class StartPolicyGenerationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartPolicyGenerationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class StartPolicyGenerationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudTrailDetails")
     public StartPolicyGenerationRequestBodyCloudTrailDetails cloudTrailDetails;
+
     public StartPolicyGenerationRequestBody withCloudTrailDetails(StartPolicyGenerationRequestBodyCloudTrailDetails cloudTrailDetails) {
         this.cloudTrailDetails = cloudTrailDetails;
         return this;
@@ -36,9 +38,13 @@ public class StartPolicyGenerationRequestBody {
      */
     @JsonProperty("policyGenerationDetails")
     public StartPolicyGenerationRequestBodyPolicyGenerationDetails policyGenerationDetails;
+
     public StartPolicyGenerationRequestBody withPolicyGenerationDetails(StartPolicyGenerationRequestBodyPolicyGenerationDetails policyGenerationDetails) {
         this.policyGenerationDetails = policyGenerationDetails;
         return this;
     }
     
+    public StartPolicyGenerationRequestBody(@JsonProperty("policyGenerationDetails") StartPolicyGenerationRequestBodyPolicyGenerationDetails policyGenerationDetails) {
+        this.policyGenerationDetails = policyGenerationDetails;
+  }
 }

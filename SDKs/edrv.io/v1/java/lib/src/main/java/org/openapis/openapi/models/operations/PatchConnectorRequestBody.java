@@ -15,6 +15,7 @@ public class PatchConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargestation")
     public String chargestation;
+
     public PatchConnectorRequestBody withChargestation(String chargestation) {
         this.chargestation = chargestation;
         return this;
@@ -23,6 +24,7 @@ public class PatchConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public PatchConnectorRequestBody withFormat(String format) {
         this.format = format;
         return this;
@@ -31,6 +33,7 @@ public class PatchConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("power")
     public Long power;
+
     public PatchConnectorRequestBody withPower(Long power) {
         this.power = power;
         return this;
@@ -39,6 +42,7 @@ public class PatchConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("power_type")
     public String powerType;
+
     public PatchConnectorRequestBody withPowerType(String powerType) {
         this.powerType = powerType;
         return this;
@@ -47,6 +51,7 @@ public class PatchConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public String rate;
+
     public PatchConnectorRequestBody withRate(String rate) {
         this.rate = rate;
         return this;
@@ -55,9 +60,11 @@ public class PatchConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PatchConnectorRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PatchConnectorRequestBody(){}
 }

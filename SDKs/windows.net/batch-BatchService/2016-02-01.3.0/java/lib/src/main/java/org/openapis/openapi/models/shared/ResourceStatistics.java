@@ -20,6 +20,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("avgCPUPercentage")
     public Double avgCPUPercentage;
+
     public ResourceStatistics withAvgCPUPercentage(Double avgCPUPercentage) {
         this.avgCPUPercentage = avgCPUPercentage;
         return this;
@@ -30,6 +31,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("avgDiskGiB")
     public Double avgDiskGiB;
+
     public ResourceStatistics withAvgDiskGiB(Double avgDiskGiB) {
         this.avgDiskGiB = avgDiskGiB;
         return this;
@@ -40,6 +42,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("avgMemoryGiB")
     public Double avgMemoryGiB;
+
     public ResourceStatistics withAvgMemoryGiB(Double avgMemoryGiB) {
         this.avgMemoryGiB = avgMemoryGiB;
         return this;
@@ -50,6 +53,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("diskReadGiB")
     public Double diskReadGiB;
+
     public ResourceStatistics withDiskReadGiB(Double diskReadGiB) {
         this.diskReadGiB = diskReadGiB;
         return this;
@@ -60,6 +64,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("diskReadIOps")
     public Long diskReadIOps;
+
     public ResourceStatistics withDiskReadIOps(Long diskReadIOps) {
         this.diskReadIOps = diskReadIOps;
         return this;
@@ -70,6 +75,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("diskWriteGiB")
     public Double diskWriteGiB;
+
     public ResourceStatistics withDiskWriteGiB(Double diskWriteGiB) {
         this.diskWriteGiB = diskWriteGiB;
         return this;
@@ -80,6 +86,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("diskWriteIOps")
     public Long diskWriteIOps;
+
     public ResourceStatistics withDiskWriteIOps(Long diskWriteIOps) {
         this.diskWriteIOps = diskWriteIOps;
         return this;
@@ -92,6 +99,7 @@ public class ResourceStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public ResourceStatistics withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -102,6 +110,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("networkReadGiB")
     public Double networkReadGiB;
+
     public ResourceStatistics withNetworkReadGiB(Double networkReadGiB) {
         this.networkReadGiB = networkReadGiB;
         return this;
@@ -112,6 +121,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("networkWriteGiB")
     public Double networkWriteGiB;
+
     public ResourceStatistics withNetworkWriteGiB(Double networkWriteGiB) {
         this.networkWriteGiB = networkWriteGiB;
         return this;
@@ -122,6 +132,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("peakDiskGiB")
     public Double peakDiskGiB;
+
     public ResourceStatistics withPeakDiskGiB(Double peakDiskGiB) {
         this.peakDiskGiB = peakDiskGiB;
         return this;
@@ -132,6 +143,7 @@ public class ResourceStatistics {
      */
     @JsonProperty("peakMemoryGiB")
     public Double peakMemoryGiB;
+
     public ResourceStatistics withPeakMemoryGiB(Double peakMemoryGiB) {
         this.peakMemoryGiB = peakMemoryGiB;
         return this;
@@ -144,9 +156,25 @@ public class ResourceStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ResourceStatistics withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ResourceStatistics(@JsonProperty("avgCPUPercentage") Double avgCPUPercentage, @JsonProperty("avgDiskGiB") Double avgDiskGiB, @JsonProperty("avgMemoryGiB") Double avgMemoryGiB, @JsonProperty("diskReadGiB") Double diskReadGiB, @JsonProperty("diskReadIOps") Long diskReadIOps, @JsonProperty("diskWriteGiB") Double diskWriteGiB, @JsonProperty("diskWriteIOps") Long diskWriteIOps, @JsonProperty("lastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("networkReadGiB") Double networkReadGiB, @JsonProperty("networkWriteGiB") Double networkWriteGiB, @JsonProperty("peakDiskGiB") Double peakDiskGiB, @JsonProperty("peakMemoryGiB") Double peakMemoryGiB, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.avgCPUPercentage = avgCPUPercentage;
+        this.avgDiskGiB = avgDiskGiB;
+        this.avgMemoryGiB = avgMemoryGiB;
+        this.diskReadGiB = diskReadGiB;
+        this.diskReadIOps = diskReadIOps;
+        this.diskWriteGiB = diskWriteGiB;
+        this.diskWriteIOps = diskWriteIOps;
+        this.lastUpdateTime = lastUpdateTime;
+        this.networkReadGiB = networkReadGiB;
+        this.networkWriteGiB = networkWriteGiB;
+        this.peakDiskGiB = peakDiskGiB;
+        this.peakMemoryGiB = peakMemoryGiB;
+        this.startTime = startTime;
+  }
 }

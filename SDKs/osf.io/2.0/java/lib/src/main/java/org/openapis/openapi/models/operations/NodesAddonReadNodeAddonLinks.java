@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * NodesAddonReadNodeAddonLinks - URLs to alternative representations of the node addon entity.
@@ -15,9 +15,13 @@ public class NodesAddonReadNodeAddonLinks {
      */
     
     public String self;
+
     public NodesAddonReadNodeAddonLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesAddonReadNodeAddonLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

@@ -15,6 +15,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public Model withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +24,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Model withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelId")
     public String modelId;
+
     public Model withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -38,6 +41,7 @@ public class Model {
     
     @JsonProperty("Name")
     public String name;
+
     public Model withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +50,13 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public String schema;
+
     public Model withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public Model(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

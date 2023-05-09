@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AssociateAddressResult {
     
     public String associationId;
+
     public AssociateAddressResult withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
     }
     
+    public AssociateAddressResult(){}
 }

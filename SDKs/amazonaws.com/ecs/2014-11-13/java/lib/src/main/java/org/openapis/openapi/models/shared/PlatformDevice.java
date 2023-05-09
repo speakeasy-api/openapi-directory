@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PlatformDevice {
     @JsonProperty("id")
     public String id;
+
     public PlatformDevice withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class PlatformDevice {
     
     @JsonProperty("type")
     public PlatformDeviceTypeEnum type;
+
     public PlatformDevice withType(PlatformDeviceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PlatformDevice(@JsonProperty("id") String id, @JsonProperty("type") PlatformDeviceTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

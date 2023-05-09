@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteBudgetActionResponse {
@@ -12,6 +13,7 @@ public class ExecuteBudgetActionResponse {
      */
     
     public Object accessDeniedException;
+
     public ExecuteBudgetActionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ExecuteBudgetActionResponse {
     
     
     public String contentType;
+
     public ExecuteBudgetActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExecuteBudgetActionResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteBudgetActionResponse executeBudgetActionResponse;
+
     public ExecuteBudgetActionResponse withExecuteBudgetActionResponse(org.openapis.openapi.models.shared.ExecuteBudgetActionResponse executeBudgetActionResponse) {
         this.executeBudgetActionResponse = executeBudgetActionResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteBudgetActionResponse {
      */
     
     public Object internalErrorException;
+
     public ExecuteBudgetActionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ExecuteBudgetActionResponse {
      */
     
     public Object invalidParameterException;
+
     public ExecuteBudgetActionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ExecuteBudgetActionResponse {
      */
     
     public Object notFoundException;
+
     public ExecuteBudgetActionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ExecuteBudgetActionResponse {
      */
     
     public Object resourceLockedException;
+
     public ExecuteBudgetActionResponse withResourceLockedException(Object resourceLockedException) {
         this.resourceLockedException = resourceLockedException;
         return this;
@@ -76,6 +84,7 @@ public class ExecuteBudgetActionResponse {
     
     
     public Integer statusCode;
+
     public ExecuteBudgetActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ExecuteBudgetActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteBudgetActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ExecuteBudgetActionResponse {
      */
     
     public Object throttlingException;
+
     public ExecuteBudgetActionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ExecuteBudgetActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

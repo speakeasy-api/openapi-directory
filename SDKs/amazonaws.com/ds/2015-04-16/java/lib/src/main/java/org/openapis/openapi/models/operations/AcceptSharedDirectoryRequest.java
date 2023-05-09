@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AcceptSharedDirectoryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AcceptSharedDirectoryRequest acceptSharedDirectoryRequest;
+
     public AcceptSharedDirectoryRequest withAcceptSharedDirectoryRequest(org.openapis.openapi.models.shared.AcceptSharedDirectoryRequest acceptSharedDirectoryRequest) {
         this.acceptSharedDirectoryRequest = acceptSharedDirectoryRequest;
         return this;
@@ -16,6 +18,7 @@ public class AcceptSharedDirectoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AcceptSharedDirectoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AcceptSharedDirectoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AcceptSharedDirectoryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AcceptSharedDirectoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AcceptSharedDirectoryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AcceptSharedDirectoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AcceptSharedDirectoryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AcceptSharedDirectoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AcceptSharedDirectoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AcceptSharedDirectoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AcceptSharedDirectoryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AcceptSharedDirectoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AcceptSharedDirectoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class AcceptSharedDirectoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public AcceptSharedDirectoryXAmzTargetEnum xAmzTarget;
+
     public AcceptSharedDirectoryRequest withXAmzTarget(AcceptSharedDirectoryXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public AcceptSharedDirectoryRequest(@JsonProperty("AcceptSharedDirectoryRequest") org.openapis.openapi.models.shared.AcceptSharedDirectoryRequest acceptSharedDirectoryRequest, @JsonProperty("X-Amz-Target") AcceptSharedDirectoryXAmzTargetEnum xAmzTarget) {
+        this.acceptSharedDirectoryRequest = acceptSharedDirectoryRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

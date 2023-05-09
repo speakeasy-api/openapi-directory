@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CommitSearchResultItemCommit {
     @JsonProperty("author")
     public CommitSearchResultItemCommitAuthor author;
+
     public CommitSearchResultItemCommit withAuthor(CommitSearchResultItemCommitAuthor author) {
         this.author = author;
         return this;
@@ -18,6 +19,7 @@ public class CommitSearchResultItemCommit {
     
     @JsonProperty("comment_count")
     public Long commentCount;
+
     public CommitSearchResultItemCommit withCommentCount(Long commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -28,6 +30,7 @@ public class CommitSearchResultItemCommit {
      */
     @JsonProperty("committer")
     public NullableGitUser committer;
+
     public CommitSearchResultItemCommit withCommitter(NullableGitUser committer) {
         this.committer = committer;
         return this;
@@ -35,6 +38,7 @@ public class CommitSearchResultItemCommit {
     
     @JsonProperty("message")
     public String message;
+
     public CommitSearchResultItemCommit withMessage(String message) {
         this.message = message;
         return this;
@@ -42,6 +46,7 @@ public class CommitSearchResultItemCommit {
     
     @JsonProperty("tree")
     public CommitSearchResultItemCommitTree tree;
+
     public CommitSearchResultItemCommit withTree(CommitSearchResultItemCommitTree tree) {
         this.tree = tree;
         return this;
@@ -49,6 +54,7 @@ public class CommitSearchResultItemCommit {
     
     @JsonProperty("url")
     public String url;
+
     public CommitSearchResultItemCommit withUrl(String url) {
         this.url = url;
         return this;
@@ -57,9 +63,18 @@ public class CommitSearchResultItemCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public Verification verification;
+
     public CommitSearchResultItemCommit withVerification(Verification verification) {
         this.verification = verification;
         return this;
     }
     
+    public CommitSearchResultItemCommit(@JsonProperty("author") CommitSearchResultItemCommitAuthor author, @JsonProperty("comment_count") Long commentCount, @JsonProperty("committer") NullableGitUser committer, @JsonProperty("message") String message, @JsonProperty("tree") CommitSearchResultItemCommitTree tree, @JsonProperty("url") String url) {
+        this.author = author;
+        this.commentCount = commentCount;
+        this.committer = committer;
+        this.message = message;
+        this.tree = tree;
+        this.url = url;
+  }
 }

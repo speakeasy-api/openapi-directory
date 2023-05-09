@@ -15,9 +15,11 @@ public class GetPipelineExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecution")
     public PipelineExecution pipelineExecution;
+
     public GetPipelineExecutionOutput withPipelineExecution(PipelineExecution pipelineExecution) {
         this.pipelineExecution = pipelineExecution;
         return this;
     }
     
+    public GetPipelineExecutionOutput(){}
 }

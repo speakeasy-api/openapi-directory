@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAccountRequest {
     @JsonProperty("AccountName")
     public String accountName;
+
     public CreateAccountRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -18,6 +19,7 @@ public class CreateAccountRequest {
     
     @JsonProperty("Email")
     public String email;
+
     public CreateAccountRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +28,7 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamUserAccessToBilling")
     public IAMUserAccessToBillingEnum iamUserAccessToBilling;
+
     public CreateAccountRequest withIamUserAccessToBilling(IAMUserAccessToBillingEnum iamUserAccessToBilling) {
         this.iamUserAccessToBilling = iamUserAccessToBilling;
         return this;
@@ -34,6 +37,7 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleName")
     public String roleName;
+
     public CreateAccountRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -42,9 +46,14 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAccountRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAccountRequest(@JsonProperty("AccountName") String accountName, @JsonProperty("Email") String email) {
+        this.accountName = accountName;
+        this.email = email;
+  }
 }

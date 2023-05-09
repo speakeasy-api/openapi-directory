@@ -22,6 +22,7 @@ public class SubStatementData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public SubStatementData withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class SubStatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public SubStatementData withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -38,6 +40,7 @@ public class SubStatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public SubStatementData withError(String error) {
         this.error = error;
         return this;
@@ -46,6 +49,7 @@ public class SubStatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasResultSet")
     public Boolean hasResultSet;
+
     public SubStatementData withHasResultSet(Boolean hasResultSet) {
         this.hasResultSet = hasResultSet;
         return this;
@@ -53,6 +57,7 @@ public class SubStatementData {
     
     @JsonProperty("Id")
     public String id;
+
     public SubStatementData withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +66,7 @@ public class SubStatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryString")
     public String queryString;
+
     public SubStatementData withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -69,6 +75,7 @@ public class SubStatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftQueryId")
     public Long redshiftQueryId;
+
     public SubStatementData withRedshiftQueryId(Long redshiftQueryId) {
         this.redshiftQueryId = redshiftQueryId;
         return this;
@@ -77,6 +84,7 @@ public class SubStatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultRows")
     public Long resultRows;
+
     public SubStatementData withResultRows(Long resultRows) {
         this.resultRows = resultRows;
         return this;
@@ -85,6 +93,7 @@ public class SubStatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultSize")
     public Long resultSize;
+
     public SubStatementData withResultSize(Long resultSize) {
         this.resultSize = resultSize;
         return this;
@@ -93,6 +102,7 @@ public class SubStatementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatementStatusStringEnum status;
+
     public SubStatementData withStatus(StatementStatusStringEnum status) {
         this.status = status;
         return this;
@@ -103,9 +113,13 @@ public class SubStatementData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public SubStatementData withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SubStatementData(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

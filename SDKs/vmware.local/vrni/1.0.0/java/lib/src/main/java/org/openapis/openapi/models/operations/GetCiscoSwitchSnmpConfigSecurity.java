@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCiscoSwitchSnmpConfigSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String apiKeyAuth;
+
     public GetCiscoSwitchSnmpConfigSecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
     }
     
+    public GetCiscoSwitchSnmpConfigSecurity(@JsonProperty("ApiKeyAuth") String apiKeyAuth) {
+        this.apiKeyAuth = apiKeyAuth;
+  }
 }

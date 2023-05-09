@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVoiceTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateVoiceTemplateResponse {
      */
     
     public Object badRequestException;
+
     public CreateVoiceTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateVoiceTemplateResponse {
     
     
     public String contentType;
+
     public CreateVoiceTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateVoiceTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVoiceTemplateResponse createVoiceTemplateResponse;
+
     public CreateVoiceTemplateResponse withCreateVoiceTemplateResponse(org.openapis.openapi.models.shared.CreateVoiceTemplateResponse createVoiceTemplateResponse) {
         this.createVoiceTemplateResponse = createVoiceTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateVoiceTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public CreateVoiceTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class CreateVoiceTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateVoiceTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreateVoiceTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public CreateVoiceTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -66,6 +73,7 @@ public class CreateVoiceTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateVoiceTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateVoiceTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVoiceTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateVoiceTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateVoiceTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateVoiceTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class ContactIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ContactIdentifiers withEmail(String email) {
         this.email = email;
         return this;
@@ -20,6 +21,7 @@ public class ContactIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public ContactIdentifiers withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -28,6 +30,7 @@ public class ContactIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ContactIdentifiers withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class ContactIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public ContactIdentifiers withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -44,9 +48,11 @@ public class ContactIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public ContactIdentifiersMobile mobile;
+
     public ContactIdentifiers withMobile(ContactIdentifiersMobile mobile) {
         this.mobile = mobile;
         return this;
     }
     
+    public ContactIdentifiers(){}
 }

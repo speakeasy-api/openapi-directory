@@ -15,6 +15,7 @@ public class RecommendationRelatedAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyId")
     public String anomalyId;
+
     public RecommendationRelatedAnomaly withAnomalyId(String anomalyId) {
         this.anomalyId = anomalyId;
         return this;
@@ -23,6 +24,7 @@ public class RecommendationRelatedAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public RecommendationRelatedAnomalyResource[] resources;
+
     public RecommendationRelatedAnomaly withResources(RecommendationRelatedAnomalyResource[] resources) {
         this.resources = resources;
         return this;
@@ -31,9 +33,11 @@ public class RecommendationRelatedAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDetails")
     public RecommendationRelatedAnomalySourceDetail[] sourceDetails;
+
     public RecommendationRelatedAnomaly withSourceDetails(RecommendationRelatedAnomalySourceDetail[] sourceDetails) {
         this.sourceDetails = sourceDetails;
         return this;
     }
     
+    public RecommendationRelatedAnomaly(){}
 }

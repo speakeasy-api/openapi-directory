@@ -12,6 +12,7 @@ public class DescribeConfigurationAggregatorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationAggregatorNames")
     public String[] configurationAggregatorNames;
+
     public DescribeConfigurationAggregatorsRequest withConfigurationAggregatorNames(String[] configurationAggregatorNames) {
         this.configurationAggregatorNames = configurationAggregatorNames;
         return this;
@@ -20,6 +21,7 @@ public class DescribeConfigurationAggregatorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeConfigurationAggregatorsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,9 +30,11 @@ public class DescribeConfigurationAggregatorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConfigurationAggregatorsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConfigurationAggregatorsRequest(){}
 }

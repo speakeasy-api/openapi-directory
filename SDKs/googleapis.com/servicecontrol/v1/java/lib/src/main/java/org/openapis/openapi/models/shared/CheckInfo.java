@@ -18,6 +18,7 @@ public class CheckInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerInfo")
     public ConsumerInfo consumerInfo;
+
     public CheckInfo withConsumerInfo(ConsumerInfo consumerInfo) {
         this.consumerInfo = consumerInfo;
         return this;
@@ -29,9 +30,11 @@ public class CheckInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unusedArguments")
     public String[] unusedArguments;
+
     public CheckInfo withUnusedArguments(String[] unusedArguments) {
         this.unusedArguments = unusedArguments;
         return this;
     }
     
+    public CheckInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBucketsResponse {
@@ -12,6 +13,7 @@ public class GetBucketsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetBucketsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetBucketsResponse {
     
     
     public String contentType;
+
     public GetBucketsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBucketsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBucketsResult getBucketsResult;
+
     public GetBucketsResponse withGetBucketsResult(org.openapis.openapi.models.shared.GetBucketsResult getBucketsResult) {
         this.getBucketsResult = getBucketsResult;
         return this;
@@ -39,6 +43,7 @@ public class GetBucketsResponse {
      */
     
     public Object invalidInputException;
+
     public GetBucketsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetBucketsResponse {
      */
     
     public Object notFoundException;
+
     public GetBucketsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetBucketsResponse {
      */
     
     public Object serviceException;
+
     public GetBucketsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetBucketsResponse {
     
     
     public Integer statusCode;
+
     public GetBucketsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetBucketsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBucketsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetBucketsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetBucketsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetBucketsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

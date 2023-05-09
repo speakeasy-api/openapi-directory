@@ -15,9 +15,11 @@ public class TableFieldSchemaPolicyTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public TableFieldSchemaPolicyTags withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public TableFieldSchemaPolicyTags(){}
 }

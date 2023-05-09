@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListTimeSeriesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListTimeSeriesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +17,7 @@ public class ListTimeSeriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListTimeSeriesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +25,7 @@ public class ListTimeSeriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListTimeSeriesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +33,7 @@ public class ListTimeSeriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListTimeSeriesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +41,7 @@ public class ListTimeSeriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListTimeSeriesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +49,7 @@ public class ListTimeSeriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListTimeSeriesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +57,7 @@ public class ListTimeSeriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListTimeSeriesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +68,7 @@ public class ListTimeSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliasPrefix")
     public String aliasPrefix;
+
     public ListTimeSeriesRequest withAliasPrefix(String aliasPrefix) {
         this.aliasPrefix = aliasPrefix;
         return this;
@@ -71,6 +79,7 @@ public class ListTimeSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetId")
     public String assetId;
+
     public ListTimeSeriesRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -81,6 +90,7 @@ public class ListTimeSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListTimeSeriesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -91,6 +101,7 @@ public class ListTimeSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListTimeSeriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -101,9 +112,11 @@ public class ListTimeSeriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeSeriesType")
     public ListTimeSeriesTimeSeriesTypeEnum timeSeriesType;
+
     public ListTimeSeriesRequest withTimeSeriesType(ListTimeSeriesTimeSeriesTypeEnum timeSeriesType) {
         this.timeSeriesType = timeSeriesType;
         return this;
     }
     
+    public ListTimeSeriesRequest(){}
 }

@@ -15,6 +15,7 @@ public class GetCostCategoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostCategoryName")
     public String costCategoryName;
+
     public GetCostCategoriesRequest withCostCategoryName(String costCategoryName) {
         this.costCategoryName = costCategoryName;
         return this;
@@ -26,6 +27,7 @@ public class GetCostCategoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetCostCategoriesRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -34,6 +36,7 @@ public class GetCostCategoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetCostCategoriesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -42,6 +45,7 @@ public class GetCostCategoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetCostCategoriesRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -50,6 +54,7 @@ public class GetCostCategoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SearchString")
     public String searchString;
+
     public GetCostCategoriesRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
@@ -58,6 +63,7 @@ public class GetCostCategoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortDefinition[] sortBy;
+
     public GetCostCategoriesRequest withSortBy(SortDefinition[] sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -68,9 +74,13 @@ public class GetCostCategoriesRequest {
      */
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetCostCategoriesRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetCostCategoriesRequest(@JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.timePeriod = timePeriod;
+  }
 }

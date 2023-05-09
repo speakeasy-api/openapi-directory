@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TpuProjectsLocationsGenerateServiceIdentityResponse {
     
     public String contentType;
+
     public TpuProjectsLocationsGenerateServiceIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TpuProjectsLocationsGenerateServiceIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateServiceIdentityResponse generateServiceIdentityResponse;
+
     public TpuProjectsLocationsGenerateServiceIdentityResponse withGenerateServiceIdentityResponse(org.openapis.openapi.models.shared.GenerateServiceIdentityResponse generateServiceIdentityResponse) {
         this.generateServiceIdentityResponse = generateServiceIdentityResponse;
         return this;
@@ -26,6 +29,7 @@ public class TpuProjectsLocationsGenerateServiceIdentityResponse {
     
     
     public Integer statusCode;
+
     public TpuProjectsLocationsGenerateServiceIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TpuProjectsLocationsGenerateServiceIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TpuProjectsLocationsGenerateServiceIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TpuProjectsLocationsGenerateServiceIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

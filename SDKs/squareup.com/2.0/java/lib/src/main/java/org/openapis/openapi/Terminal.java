@@ -53,11 +53,9 @@ public class Terminal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelTerminalCheckoutResponse res = new org.openapis.openapi.models.operations.CancelTerminalCheckoutResponse() {{
+        org.openapis.openapi.models.operations.CancelTerminalCheckoutResponse res = new org.openapis.openapi.models.operations.CancelTerminalCheckoutResponse(contentType, httpRes.statusCode()) {{
             cancelTerminalCheckoutResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Terminal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelTerminalRefundResponse res = new org.openapis.openapi.models.operations.CancelTerminalRefundResponse() {{
+        org.openapis.openapi.models.operations.CancelTerminalRefundResponse res = new org.openapis.openapi.models.operations.CancelTerminalRefundResponse(contentType, httpRes.statusCode()) {{
             cancelTerminalRefundResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Terminal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTerminalCheckoutResponse res = new org.openapis.openapi.models.operations.CreateTerminalCheckoutResponse() {{
+        org.openapis.openapi.models.operations.CreateTerminalCheckoutResponse res = new org.openapis.openapi.models.operations.CreateTerminalCheckoutResponse(contentType, httpRes.statusCode()) {{
             createTerminalCheckoutResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +181,9 @@ public class Terminal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTerminalRefundResponse res = new org.openapis.openapi.models.operations.CreateTerminalRefundResponse() {{
+        org.openapis.openapi.models.operations.CreateTerminalRefundResponse res = new org.openapis.openapi.models.operations.CreateTerminalRefundResponse(contentType, httpRes.statusCode()) {{
             createTerminalRefundResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,11 +220,9 @@ public class Terminal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTerminalCheckoutResponse res = new org.openapis.openapi.models.operations.GetTerminalCheckoutResponse() {{
+        org.openapis.openapi.models.operations.GetTerminalCheckoutResponse res = new org.openapis.openapi.models.operations.GetTerminalCheckoutResponse(contentType, httpRes.statusCode()) {{
             getTerminalCheckoutResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,11 +259,9 @@ public class Terminal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTerminalRefundResponse res = new org.openapis.openapi.models.operations.GetTerminalRefundResponse() {{
+        org.openapis.openapi.models.operations.GetTerminalRefundResponse res = new org.openapis.openapi.models.operations.GetTerminalRefundResponse(contentType, httpRes.statusCode()) {{
             getTerminalRefundResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,11 +303,9 @@ public class Terminal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTerminalCheckoutsResponse res = new org.openapis.openapi.models.operations.SearchTerminalCheckoutsResponse() {{
+        org.openapis.openapi.models.operations.SearchTerminalCheckoutsResponse res = new org.openapis.openapi.models.operations.SearchTerminalCheckoutsResponse(contentType, httpRes.statusCode()) {{
             searchTerminalCheckoutsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,11 +347,9 @@ public class Terminal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTerminalRefundsResponse res = new org.openapis.openapi.models.operations.SearchTerminalRefundsResponse() {{
+        org.openapis.openapi.models.operations.SearchTerminalRefundsResponse res = new org.openapis.openapi.models.operations.SearchTerminalRefundsResponse(contentType, httpRes.statusCode()) {{
             searchTerminalRefundsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

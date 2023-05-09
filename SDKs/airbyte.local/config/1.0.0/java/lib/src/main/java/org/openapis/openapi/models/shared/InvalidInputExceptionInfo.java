@@ -15,6 +15,7 @@ public class InvalidInputExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionClassName")
     public String exceptionClassName;
+
     public InvalidInputExceptionInfo withExceptionClassName(String exceptionClassName) {
         this.exceptionClassName = exceptionClassName;
         return this;
@@ -23,6 +24,7 @@ public class InvalidInputExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionStack")
     public String[] exceptionStack;
+
     public InvalidInputExceptionInfo withExceptionStack(String[] exceptionStack) {
         this.exceptionStack = exceptionStack;
         return this;
@@ -30,6 +32,7 @@ public class InvalidInputExceptionInfo {
     
     @JsonProperty("message")
     public String message;
+
     public InvalidInputExceptionInfo withMessage(String message) {
         this.message = message;
         return this;
@@ -37,9 +40,14 @@ public class InvalidInputExceptionInfo {
     
     @JsonProperty("validationErrors")
     public InvalidInputProperty[] validationErrors;
+
     public InvalidInputExceptionInfo withValidationErrors(InvalidInputProperty[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public InvalidInputExceptionInfo(@JsonProperty("message") String message, @JsonProperty("validationErrors") InvalidInputProperty[] validationErrors) {
+        this.message = message;
+        this.validationErrors = validationErrors;
+  }
 }

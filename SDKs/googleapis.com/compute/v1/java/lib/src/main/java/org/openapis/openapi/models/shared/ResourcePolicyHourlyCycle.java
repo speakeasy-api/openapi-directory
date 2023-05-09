@@ -18,6 +18,7 @@ public class ResourcePolicyHourlyCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public ResourcePolicyHourlyCycle withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -29,6 +30,7 @@ public class ResourcePolicyHourlyCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hoursInCycle")
     public Integer hoursInCycle;
+
     public ResourcePolicyHourlyCycle withHoursInCycle(Integer hoursInCycle) {
         this.hoursInCycle = hoursInCycle;
         return this;
@@ -40,9 +42,11 @@ public class ResourcePolicyHourlyCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public ResourcePolicyHourlyCycle withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ResourcePolicyHourlyCycle(){}
 }

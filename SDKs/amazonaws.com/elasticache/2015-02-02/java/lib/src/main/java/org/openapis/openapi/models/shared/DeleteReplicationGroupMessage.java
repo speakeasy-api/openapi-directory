@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteReplicationGroupMessage - Represents the input of a &lt;code&gt;DeleteReplicationGroup&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteReplicationGroupMessage {
     
     public String finalSnapshotIdentifier;
+
     public DeleteReplicationGroupMessage withFinalSnapshotIdentifier(String finalSnapshotIdentifier) {
         this.finalSnapshotIdentifier = finalSnapshotIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DeleteReplicationGroupMessage {
     
     
     public String replicationGroupId;
+
     public DeleteReplicationGroupMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -26,9 +28,13 @@ public class DeleteReplicationGroupMessage {
     
     
     public Boolean retainPrimaryCluster;
+
     public DeleteReplicationGroupMessage withRetainPrimaryCluster(Boolean retainPrimaryCluster) {
         this.retainPrimaryCluster = retainPrimaryCluster;
         return this;
     }
     
+    public DeleteReplicationGroupMessage(@JsonProperty("ReplicationGroupId") String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+  }
 }

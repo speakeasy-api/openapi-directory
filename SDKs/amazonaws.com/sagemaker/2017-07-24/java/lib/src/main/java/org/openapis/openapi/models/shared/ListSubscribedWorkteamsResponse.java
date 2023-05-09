@@ -15,6 +15,7 @@ public class ListSubscribedWorkteamsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSubscribedWorkteamsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListSubscribedWorkteamsResponse {
     
     @JsonProperty("SubscribedWorkteams")
     public SubscribedWorkteam[] subscribedWorkteams;
+
     public ListSubscribedWorkteamsResponse withSubscribedWorkteams(SubscribedWorkteam[] subscribedWorkteams) {
         this.subscribedWorkteams = subscribedWorkteams;
         return this;
     }
     
+    public ListSubscribedWorkteamsResponse(@JsonProperty("SubscribedWorkteams") SubscribedWorkteam[] subscribedWorkteams) {
+        this.subscribedWorkteams = subscribedWorkteams;
+  }
 }

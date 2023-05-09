@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFlywheelResponse {
     
     public String contentType;
+
     public CreateFlywheelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFlywheelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFlywheelResponse createFlywheelResponse;
+
     public CreateFlywheelResponse withCreateFlywheelResponse(org.openapis.openapi.models.shared.CreateFlywheelResponse createFlywheelResponse) {
         this.createFlywheelResponse = createFlywheelResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object internalServerException;
+
     public CreateFlywheelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateFlywheelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public CreateFlywheelResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
         return this;
@@ -56,6 +62,7 @@ public class CreateFlywheelResponse {
     
     
     public Integer statusCode;
+
     public CreateFlywheelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFlywheelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFlywheelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateFlywheelResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateFlywheelResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFlywheelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object resourceUnavailableException;
+
     public CreateFlywheelResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -113,6 +125,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateFlywheelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,6 +136,7 @@ public class CreateFlywheelResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateFlywheelResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -133,9 +147,14 @@ public class CreateFlywheelResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public CreateFlywheelResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public CreateFlywheelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

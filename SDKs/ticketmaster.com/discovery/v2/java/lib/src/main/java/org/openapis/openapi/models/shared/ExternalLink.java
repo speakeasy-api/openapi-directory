@@ -15,6 +15,7 @@ public class ExternalLink {
      */
     
     public String id;
+
     public ExternalLink withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,11 @@ public class ExternalLink {
      */
     
     public String url;
+
     public ExternalLink withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ExternalLink(){}
 }

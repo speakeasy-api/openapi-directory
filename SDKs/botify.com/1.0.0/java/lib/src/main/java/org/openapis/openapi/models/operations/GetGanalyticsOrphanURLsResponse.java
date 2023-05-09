@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGanalyticsOrphanURLsResponse {
     
     public String contentType;
+
     public GetGanalyticsOrphanURLsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetGanalyticsOrphanURLsResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetGanalyticsOrphanURLsResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -26,6 +29,7 @@ public class GetGanalyticsOrphanURLsResponse {
     
     
     public Integer statusCode;
+
     public GetGanalyticsOrphanURLsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetGanalyticsOrphanURLsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGanalyticsOrphanURLsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetGanalyticsOrphanURLsResponse {
      */
     
     public GetGanalyticsOrphanURLs200ApplicationJSON getGanalyticsOrphanURLs200ApplicationJSONObject;
+
     public GetGanalyticsOrphanURLsResponse withGetGanalyticsOrphanURLs200ApplicationJSONObject(GetGanalyticsOrphanURLs200ApplicationJSON getGanalyticsOrphanURLs200ApplicationJSONObject) {
         this.getGanalyticsOrphanURLs200ApplicationJSONObject = getGanalyticsOrphanURLs200ApplicationJSONObject;
         return this;
     }
     
+    public GetGanalyticsOrphanURLsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

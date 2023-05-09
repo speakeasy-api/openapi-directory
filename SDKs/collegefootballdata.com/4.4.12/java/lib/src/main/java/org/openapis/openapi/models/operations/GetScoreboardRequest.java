@@ -12,6 +12,7 @@ public class GetScoreboardRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
     public String classification;
+
     public GetScoreboardRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -22,9 +23,11 @@ public class GetScoreboardRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetScoreboardRequest withConference(String conference) {
         this.conference = conference;
         return this;
     }
     
+    public GetScoreboardRequest(){}
 }

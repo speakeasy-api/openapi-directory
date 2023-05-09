@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListTypesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListTypesActionEnum action;
+
     public GETListTypesRequest withAction(GETListTypesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeprecatedStatus")
     public GETListTypesDeprecatedStatusEnum deprecatedStatus;
+
     public GETListTypesRequest withDeprecatedStatus(GETListTypesDeprecatedStatusEnum deprecatedStatus) {
         this.deprecatedStatus = deprecatedStatus;
         return this;
@@ -29,6 +32,7 @@ public class GETListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Filters")
     public GETListTypesFilters filters;
+
     public GETListTypesRequest withFilters(GETListTypesFilters filters) {
         this.filters = filters;
         return this;
@@ -39,6 +43,7 @@ public class GETListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public GETListTypesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -49,6 +54,7 @@ public class GETListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETListTypesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,6 +65,7 @@ public class GETListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProvisioningType")
     public GETListTypesProvisioningTypeEnum provisioningType;
+
     public GETListTypesRequest withProvisioningType(GETListTypesProvisioningTypeEnum provisioningType) {
         this.provisioningType = provisioningType;
         return this;
@@ -69,6 +76,7 @@ public class GETListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public GETListTypesTypeEnum type;
+
     public GETListTypesRequest withType(GETListTypesTypeEnum type) {
         this.type = type;
         return this;
@@ -76,6 +84,7 @@ public class GETListTypesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListTypesVersionEnum version;
+
     public GETListTypesRequest withVersion(GETListTypesVersionEnum version) {
         this.version = version;
         return this;
@@ -86,6 +95,7 @@ public class GETListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Visibility")
     public GETListTypesVisibilityEnum visibility;
+
     public GETListTypesRequest withVisibility(GETListTypesVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
@@ -93,6 +103,7 @@ public class GETListTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListTypesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETListTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListTypesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETListTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListTypesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETListTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListTypesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETListTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListTypesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETListTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListTypesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,14 @@ public class GETListTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListTypesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListTypesRequest(@JsonProperty("Action") GETListTypesActionEnum action, @JsonProperty("Version") GETListTypesVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

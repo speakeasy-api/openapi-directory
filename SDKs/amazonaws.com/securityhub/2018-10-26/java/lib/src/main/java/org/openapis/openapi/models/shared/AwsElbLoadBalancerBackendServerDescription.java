@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerBackendServerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancePort")
     public Long instancePort;
+
     public AwsElbLoadBalancerBackendServerDescription withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -23,9 +24,11 @@ public class AwsElbLoadBalancerBackendServerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyNames")
     public String[] policyNames;
+
     public AwsElbLoadBalancerBackendServerDescription withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public AwsElbLoadBalancerBackendServerDescription(){}
 }

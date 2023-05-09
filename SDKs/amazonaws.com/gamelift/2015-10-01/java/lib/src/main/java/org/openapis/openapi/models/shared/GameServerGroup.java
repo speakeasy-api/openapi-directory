@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * GameServerGroup - &lt;p&gt; &lt;b&gt;This data type is used with the GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Properties that describe a game server group resource. A game server group manages certain properties related to a corresponding Amazon EC2 Auto Scaling group. &lt;/p&gt; &lt;p&gt;A game server group is created by a successful call to &lt;code&gt;CreateGameServerGroup&lt;/code&gt; and deleted by calling &lt;code&gt;DeleteGameServerGroup&lt;/code&gt;. Game server group activity can be temporarily suspended and resumed by calling &lt;code&gt;SuspendGameServerGroup&lt;/code&gt; and &lt;code&gt;ResumeGameServerGroup&lt;/code&gt;, respectively. &lt;/p&gt;
+ * GameServerGroup - &lt;p&gt; &lt;b&gt;This data type is used with the Amazon GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Properties that describe a game server group resource. A game server group manages certain properties related to a corresponding Amazon EC2 Auto Scaling group. &lt;/p&gt; &lt;p&gt;A game server group is created by a successful call to &lt;code&gt;CreateGameServerGroup&lt;/code&gt; and deleted by calling &lt;code&gt;DeleteGameServerGroup&lt;/code&gt;. Game server group activity can be temporarily suspended and resumed by calling &lt;code&gt;SuspendGameServerGroup&lt;/code&gt; and &lt;code&gt;ResumeGameServerGroup&lt;/code&gt;, respectively. &lt;/p&gt;
  */
 public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingGroupArn")
     public String autoScalingGroupArn;
+
     public GameServerGroup withAutoScalingGroupArn(String autoScalingGroupArn) {
         this.autoScalingGroupArn = autoScalingGroupArn;
         return this;
@@ -28,6 +29,7 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BalancingStrategy")
     public BalancingStrategyEnum balancingStrategy;
+
     public GameServerGroup withBalancingStrategy(BalancingStrategyEnum balancingStrategy) {
         this.balancingStrategy = balancingStrategy;
         return this;
@@ -38,6 +40,7 @@ public class GameServerGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public GameServerGroup withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroupArn")
     public String gameServerGroupArn;
+
     public GameServerGroup withGameServerGroupArn(String gameServerGroupArn) {
         this.gameServerGroupArn = gameServerGroupArn;
         return this;
@@ -54,6 +58,7 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public GameServerGroup withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -62,6 +67,7 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerProtectionPolicy")
     public GameServerProtectionPolicyEnum gameServerProtectionPolicy;
+
     public GameServerGroup withGameServerProtectionPolicy(GameServerProtectionPolicyEnum gameServerProtectionPolicy) {
         this.gameServerProtectionPolicy = gameServerProtectionPolicy;
         return this;
@@ -70,6 +76,7 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceDefinitions")
     public InstanceDefinition[] instanceDefinitions;
+
     public GameServerGroup withInstanceDefinitions(InstanceDefinition[] instanceDefinitions) {
         this.instanceDefinitions = instanceDefinitions;
         return this;
@@ -80,6 +87,7 @@ public class GameServerGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public GameServerGroup withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -88,6 +96,7 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public GameServerGroup withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -96,6 +105,7 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public GameServerGroupStatusEnum status;
+
     public GameServerGroup withStatus(GameServerGroupStatusEnum status) {
         this.status = status;
         return this;
@@ -104,6 +114,7 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public GameServerGroup withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -112,9 +123,11 @@ public class GameServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuspendedActions")
     public GameServerGroupActionEnum[] suspendedActions;
+
     public GameServerGroup withSuspendedActions(GameServerGroupActionEnum[] suspendedActions) {
         this.suspendedActions = suspendedActions;
         return this;
     }
     
+    public GameServerGroup(){}
 }

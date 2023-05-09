@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoryPipelineKnownHostRequest {
@@ -12,6 +13,7 @@ public class DeleteRepositoryPipelineKnownHostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=known_host_uuid")
     public String knownHostUuid;
+
     public DeleteRepositoryPipelineKnownHostRequest withKnownHostUuid(String knownHostUuid) {
         this.knownHostUuid = knownHostUuid;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRepositoryPipelineKnownHostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeleteRepositoryPipelineKnownHostRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,9 +35,15 @@ public class DeleteRepositoryPipelineKnownHostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteRepositoryPipelineKnownHostRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteRepositoryPipelineKnownHostRequest(@JsonProperty("known_host_uuid") String knownHostUuid, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.knownHostUuid = knownHostUuid;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

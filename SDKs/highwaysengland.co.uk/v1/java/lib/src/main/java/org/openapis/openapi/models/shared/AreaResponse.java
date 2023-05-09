@@ -12,6 +12,7 @@ public class AreaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areas")
     public Area[] areas;
+
     public AreaResponse withAreas(Area[] areas) {
         this.areas = areas;
         return this;
@@ -20,9 +21,11 @@ public class AreaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row_count")
     public Integer rowCount;
+
     public AreaResponse withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
     }
     
+    public AreaResponse(){}
 }

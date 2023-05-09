@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateTemplateResponse {
     
     public String contentType;
+
     public GenerateTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateTemplateResponse generateTemplateResponse;
+
     public GenerateTemplateResponse withGenerateTemplateResponse(org.openapis.openapi.models.shared.GenerateTemplateResponse generateTemplateResponse) {
         this.generateTemplateResponse = generateTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class GenerateTemplateResponse {
      */
     
     public Object internalError;
+
     public GenerateTemplateResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class GenerateTemplateResponse {
      */
     
     public Object invalidParameterException;
+
     public GenerateTemplateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GenerateTemplateResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GenerateTemplateResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GenerateTemplateResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GenerateTemplateResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class GenerateTemplateResponse {
     
     
     public Integer statusCode;
+
     public GenerateTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GenerateTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GenerateTemplateResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GenerateTemplateResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GenerateTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

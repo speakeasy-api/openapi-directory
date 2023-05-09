@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeGlobalPublicDelegatedPrefixesListResponse {
     
     public String contentType;
+
     public ComputeGlobalPublicDelegatedPrefixesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeGlobalPublicDelegatedPrefixesListResponse {
      */
     
     public org.openapis.openapi.models.shared.PublicDelegatedPrefixList publicDelegatedPrefixList;
+
     public ComputeGlobalPublicDelegatedPrefixesListResponse withPublicDelegatedPrefixList(org.openapis.openapi.models.shared.PublicDelegatedPrefixList publicDelegatedPrefixList) {
         this.publicDelegatedPrefixList = publicDelegatedPrefixList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeGlobalPublicDelegatedPrefixesListResponse {
     
     
     public Integer statusCode;
+
     public ComputeGlobalPublicDelegatedPrefixesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeGlobalPublicDelegatedPrefixesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeGlobalPublicDelegatedPrefixesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeGlobalPublicDelegatedPrefixesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRegexPatternSetResponse {
     
     public String contentType;
+
     public DeleteRegexPatternSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRegexPatternSetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRegexPatternSetResponse deleteRegexPatternSetResponse;
+
     public DeleteRegexPatternSetResponse withDeleteRegexPatternSetResponse(org.openapis.openapi.models.shared.DeleteRegexPatternSetResponse deleteRegexPatternSetResponse) {
         this.deleteRegexPatternSetResponse = deleteRegexPatternSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteRegexPatternSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteRegexPatternSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteRegexPatternSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRegexPatternSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteRegexPatternSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteRegexPatternSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRegexPatternSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteRegexPatternSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRegexPatternSetResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteRegexPatternSetResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRegexPatternSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteRegexPatternSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRegexPatternSetResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteRegexPatternSetResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteRegexPatternSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteRegexPatternSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public DeleteRegexPatternSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateSLACalculateSLARequestItem3 {
     @JsonProperty("additionalHandlingTime")
     public String additionalHandlingTime;
+
     public CalculateSLACalculateSLARequestItem3 withAdditionalHandlingTime(String additionalHandlingTime) {
         this.additionalHandlingTime = additionalHandlingTime;
         return this;
@@ -16,6 +17,7 @@ public class CalculateSLACalculateSLARequestItem3 {
     
     @JsonProperty("dimension")
     public CalculateSLACalculateSLARequestItem3Dimension dimension;
+
     public CalculateSLACalculateSLARequestItem3 withDimension(CalculateSLACalculateSLARequestItem3Dimension dimension) {
         this.dimension = dimension;
         return this;
@@ -23,6 +25,7 @@ public class CalculateSLACalculateSLARequestItem3 {
     
     @JsonProperty("groupItemId")
     public String groupItemId;
+
     public CalculateSLACalculateSLARequestItem3 withGroupItemId(String groupItemId) {
         this.groupItemId = groupItemId;
         return this;
@@ -30,6 +33,7 @@ public class CalculateSLACalculateSLARequestItem3 {
     
     @JsonProperty("id")
     public String id;
+
     public CalculateSLACalculateSLARequestItem3 withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +41,7 @@ public class CalculateSLACalculateSLARequestItem3 {
     
     @JsonProperty("kitItem")
     public CalculateSLACalculateSLARequestItem3KitItem[] kitItem;
+
     public CalculateSLACalculateSLARequestItem3 withKitItem(CalculateSLACalculateSLARequestItem3KitItem[] kitItem) {
         this.kitItem = kitItem;
         return this;
@@ -44,6 +49,7 @@ public class CalculateSLACalculateSLARequestItem3 {
     
     @JsonProperty("price")
     public Integer price;
+
     public CalculateSLACalculateSLARequestItem3 withPrice(Integer price) {
         this.price = price;
         return this;
@@ -51,9 +57,19 @@ public class CalculateSLACalculateSLARequestItem3 {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public CalculateSLACalculateSLARequestItem3 withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public CalculateSLACalculateSLARequestItem3(@JsonProperty("additionalHandlingTime") String additionalHandlingTime, @JsonProperty("dimension") CalculateSLACalculateSLARequestItem3Dimension dimension, @JsonProperty("groupItemId") String groupItemId, @JsonProperty("id") String id, @JsonProperty("kitItem") CalculateSLACalculateSLARequestItem3KitItem[] kitItem, @JsonProperty("price") Integer price, @JsonProperty("quantity") Integer quantity) {
+        this.additionalHandlingTime = additionalHandlingTime;
+        this.dimension = dimension;
+        this.groupItemId = groupItemId;
+        this.id = id;
+        this.kitItem = kitItem;
+        this.price = price;
+        this.quantity = quantity;
+  }
 }

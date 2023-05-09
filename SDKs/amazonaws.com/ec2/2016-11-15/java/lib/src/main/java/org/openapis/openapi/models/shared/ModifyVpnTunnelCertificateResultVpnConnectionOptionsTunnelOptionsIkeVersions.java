@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsIkeVersions {
     
     public String value;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsIkeVersions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptionsIkeVersions(){}
 }

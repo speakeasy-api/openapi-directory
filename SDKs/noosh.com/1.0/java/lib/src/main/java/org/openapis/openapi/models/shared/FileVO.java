@@ -15,6 +15,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FileVO withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_link")
     public String downloadLink;
+
     public FileVO withDownloadLink(String downloadLink) {
         this.downloadLink = downloadLink;
         return this;
@@ -31,6 +33,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_id")
     public Long fileId;
+
     public FileVO withFileId(Long fileId) {
         this.fileId = fileId;
         return this;
@@ -39,6 +42,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public FileVO withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -50,6 +54,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_size")
     public Object fileSize;
+
     public FileVO withFileSize(Object fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -58,6 +63,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_type")
     public String fileType;
+
     public FileVO withFileType(String fileType) {
         this.fileType = fileType;
         return this;
@@ -66,6 +72,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_remote")
     public Boolean isRemote;
+
     public FileVO withIsRemote(Boolean isRemote) {
         this.isRemote = isRemote;
         return this;
@@ -74,6 +81,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public FileVO withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -82,6 +90,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagList")
     public TagVO[] tagList;
+
     public FileVO withTagList(TagVO[] tagList) {
         this.tagList = tagList;
         return this;
@@ -90,6 +99,7 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_date")
     public String uploadDate;
+
     public FileVO withUploadDate(String uploadDate) {
         this.uploadDate = uploadDate;
         return this;
@@ -98,9 +108,11 @@ public class FileVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploaded_by")
     public String uploadedBy;
+
     public FileVO withUploadedBy(String uploadedBy) {
         this.uploadedBy = uploadedBy;
         return this;
     }
     
+    public FileVO(){}
 }

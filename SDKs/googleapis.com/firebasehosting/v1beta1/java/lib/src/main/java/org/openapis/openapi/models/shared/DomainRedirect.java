@@ -18,6 +18,7 @@ public class DomainRedirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public DomainRedirect withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,9 +30,11 @@ public class DomainRedirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DomainRedirectTypeEnum type;
+
     public DomainRedirect withType(DomainRedirectTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DomainRedirect(){}
 }

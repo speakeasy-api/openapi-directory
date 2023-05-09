@@ -18,6 +18,7 @@ public class BusinessChainAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public BusinessChainAssignedTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class BusinessChainAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximityRadiusAmount")
     public Double proximityRadiusAmount;
+
     public BusinessChainAssignedTargetingOptionDetails withProximityRadiusAmount(Double proximityRadiusAmount) {
         this.proximityRadiusAmount = proximityRadiusAmount;
         return this;
@@ -40,6 +42,7 @@ public class BusinessChainAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximityRadiusUnit")
     public BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum proximityRadiusUnit;
+
     public BusinessChainAssignedTargetingOptionDetails withProximityRadiusUnit(BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum proximityRadiusUnit) {
         this.proximityRadiusUnit = proximityRadiusUnit;
         return this;
@@ -51,9 +54,11 @@ public class BusinessChainAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public BusinessChainAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public BusinessChainAssignedTargetingOptionDetails(){}
 }

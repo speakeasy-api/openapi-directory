@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplateHibernationOptionsRequest {
     
     public Boolean configured;
+
     public LaunchTemplateHibernationOptionsRequest withConfigured(Boolean configured) {
         this.configured = configured;
         return this;
     }
     
+    public LaunchTemplateHibernationOptionsRequest(){}
 }

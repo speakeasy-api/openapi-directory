@@ -18,6 +18,7 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public String weight;
+
     public Row withWeight(String weight) {
         this.weight = weight;
         return this;
@@ -29,9 +30,11 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widgets")
     public Widget[] widgets;
+
     public Row withWidgets(Widget[] widgets) {
         this.widgets = widgets;
         return this;
     }
     
+    public Row(){}
 }

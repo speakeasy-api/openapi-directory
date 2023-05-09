@@ -15,6 +15,7 @@ public class RegistryScanningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public RegistryScanningRule[] rules;
+
     public RegistryScanningConfiguration withRules(RegistryScanningRule[] rules) {
         this.rules = rules;
         return this;
@@ -23,9 +24,11 @@ public class RegistryScanningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanType")
     public ScanTypeEnum scanType;
+
     public RegistryScanningConfiguration withScanType(ScanTypeEnum scanType) {
         this.scanType = scanType;
         return this;
     }
     
+    public RegistryScanningConfiguration(){}
 }

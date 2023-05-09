@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamEventsByYearKeysResponse {
     
     public String contentType;
+
     public GetTeamEventsByYearKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamEventsByYearKeysResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamEventsByYearKeysResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetTeamEventsByYearKeysResponse {
     
     
     public Integer statusCode;
+
     public GetTeamEventsByYearKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetTeamEventsByYearKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamEventsByYearKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamEventsByYearKeysResponse {
      */
     
     public String[] getTeamEventsByYearKeys200ApplicationJSONStrings;
+
     public GetTeamEventsByYearKeysResponse withGetTeamEventsByYearKeys200ApplicationJSONStrings(String[] getTeamEventsByYearKeys200ApplicationJSONStrings) {
         this.getTeamEventsByYearKeys200ApplicationJSONStrings = getTeamEventsByYearKeys200ApplicationJSONStrings;
         return this;
     }
     
+    public GetTeamEventsByYearKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

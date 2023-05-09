@@ -15,6 +15,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public MerchantLinks links;
+
     public Merchant withLinks(MerchantLinks links) {
         this.links = links;
         return this;
@@ -31,6 +32,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captureDelay")
     public String captureDelay;
+
     public Merchant withCaptureDelay(String captureDelay) {
         this.captureDelay = captureDelay;
         return this;
@@ -42,6 +44,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public String companyId;
+
     public Merchant withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -55,6 +58,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCenters")
     public DataCenter[] dataCenters;
+
     public Merchant withDataCenters(DataCenter[] dataCenters) {
         this.dataCenters = dataCenters;
         return this;
@@ -66,6 +70,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultShopperInteraction")
     public String defaultShopperInteraction;
+
     public Merchant withDefaultShopperInteraction(String defaultShopperInteraction) {
         this.defaultShopperInteraction = defaultShopperInteraction;
         return this;
@@ -77,6 +82,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Merchant withDescription(String description) {
         this.description = description;
         return this;
@@ -88,6 +94,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Merchant withId(String id) {
         this.id = id;
         return this;
@@ -99,6 +106,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCity")
     public String merchantCity;
+
     public Merchant withMerchantCity(String merchantCity) {
         this.merchantCity = merchantCity;
         return this;
@@ -110,6 +118,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Merchant withName(String name) {
         this.name = name;
         return this;
@@ -121,6 +130,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingPlan")
     public String pricingPlan;
+
     public Merchant withPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -132,6 +142,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primarySettlementCurrency")
     public String primarySettlementCurrency;
+
     public Merchant withPrimarySettlementCurrency(String primarySettlementCurrency) {
         this.primarySettlementCurrency = primarySettlementCurrency;
         return this;
@@ -143,6 +154,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public Merchant withReference(String reference) {
         this.reference = reference;
         return this;
@@ -154,6 +166,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopWebAddress")
     public String shopWebAddress;
+
     public Merchant withShopWebAddress(String shopWebAddress) {
         this.shopWebAddress = shopWebAddress;
         return this;
@@ -173,9 +186,11 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Merchant withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Merchant(){}
 }

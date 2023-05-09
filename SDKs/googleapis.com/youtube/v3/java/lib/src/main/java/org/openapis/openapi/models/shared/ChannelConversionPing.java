@@ -18,6 +18,7 @@ public class ChannelConversionPing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public ChannelConversionPingContextEnum context;
+
     public ChannelConversionPing withContext(ChannelConversionPingContextEnum context) {
         this.context = context;
         return this;
@@ -29,9 +30,11 @@ public class ChannelConversionPing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionUrl")
     public String conversionUrl;
+
     public ChannelConversionPing withConversionUrl(String conversionUrl) {
         this.conversionUrl = conversionUrl;
         return this;
     }
     
+    public ChannelConversionPing(){}
 }

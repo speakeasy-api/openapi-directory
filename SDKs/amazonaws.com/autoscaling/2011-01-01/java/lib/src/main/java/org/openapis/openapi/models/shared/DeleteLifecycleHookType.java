@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteLifecycleHookType {
     
     public String autoScalingGroupName;
+
     public DeleteLifecycleHookType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteLifecycleHookType {
     
     
     public String lifecycleHookName;
+
     public DeleteLifecycleHookType withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
     }
     
+    public DeleteLifecycleHookType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("LifecycleHookName") String lifecycleHookName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.lifecycleHookName = lifecycleHookName;
+  }
 }

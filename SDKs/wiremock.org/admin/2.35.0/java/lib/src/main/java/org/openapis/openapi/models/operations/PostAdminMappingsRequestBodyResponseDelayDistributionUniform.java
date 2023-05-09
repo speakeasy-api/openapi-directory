@@ -15,6 +15,7 @@ public class PostAdminMappingsRequestBodyResponseDelayDistributionUniform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lower")
     public Long lower;
+
     public PostAdminMappingsRequestBodyResponseDelayDistributionUniform withLower(Long lower) {
         this.lower = lower;
         return this;
@@ -23,6 +24,7 @@ public class PostAdminMappingsRequestBodyResponseDelayDistributionUniform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostAdminMappingsRequestBodyResponseDelayDistributionUniformTypeEnum type;
+
     public PostAdminMappingsRequestBodyResponseDelayDistributionUniform withType(PostAdminMappingsRequestBodyResponseDelayDistributionUniformTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class PostAdminMappingsRequestBodyResponseDelayDistributionUniform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upper")
     public Long upper;
+
     public PostAdminMappingsRequestBodyResponseDelayDistributionUniform withUpper(Long upper) {
         this.upper = upper;
         return this;
     }
     
+    public PostAdminMappingsRequestBodyResponseDelayDistributionUniform(){}
 }

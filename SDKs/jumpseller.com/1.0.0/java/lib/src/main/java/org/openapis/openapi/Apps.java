@@ -57,12 +57,10 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteJsappsCodeJsonResponse res = new org.openapis.openapi.models.operations.DeleteJsappsCodeJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteJsappsCodeJsonResponse res = new org.openapis.openapi.models.operations.DeleteJsappsCodeJsonResponse(contentType, httpRes.statusCode()) {{
             deleteJsappsCodeJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJsappsJsonResponse res = new org.openapis.openapi.models.operations.GetJsappsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetJsappsJsonResponse res = new org.openapis.openapi.models.operations.GetJsappsJsonResponse(contentType, httpRes.statusCode()) {{
             app = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJsappsCodeJsonResponse res = new org.openapis.openapi.models.operations.GetJsappsCodeJsonResponse() {{
+        org.openapis.openapi.models.operations.GetJsappsCodeJsonResponse res = new org.openapis.openapi.models.operations.GetJsappsCodeJsonResponse(contentType, httpRes.statusCode()) {{
             jsApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostJsappsJsonResponse res = new org.openapis.openapi.models.operations.PostJsappsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostJsappsJsonResponse res = new org.openapis.openapi.models.operations.PostJsappsJsonResponse(contentType, httpRes.statusCode()) {{
             jsApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class GetProtocolsListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultList")
     public Boolean defaultList;
+
     public GetProtocolsListRequest withDefaultList(Boolean defaultList) {
         this.defaultList = defaultList;
         return this;
@@ -19,9 +20,13 @@ public class GetProtocolsListRequest {
     
     @JsonProperty("ListId")
     public String listId;
+
     public GetProtocolsListRequest withListId(String listId) {
         this.listId = listId;
         return this;
     }
     
+    public GetProtocolsListRequest(@JsonProperty("ListId") String listId) {
+        this.listId = listId;
+  }
 }

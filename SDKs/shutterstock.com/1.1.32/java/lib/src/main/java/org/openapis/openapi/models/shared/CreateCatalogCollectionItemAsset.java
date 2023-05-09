@@ -12,6 +12,7 @@ public class CreateCatalogCollectionItemAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateCatalogCollectionItemAsset withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,13 @@ public class CreateCatalogCollectionItemAsset {
     
     @JsonProperty("type")
     public String type;
+
     public CreateCatalogCollectionItemAsset withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateCatalogCollectionItemAsset(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

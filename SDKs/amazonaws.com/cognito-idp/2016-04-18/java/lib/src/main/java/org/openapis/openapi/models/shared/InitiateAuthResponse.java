@@ -15,6 +15,7 @@ public class InitiateAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationResult")
     public AuthenticationResultType authenticationResult;
+
     public InitiateAuthResponse withAuthenticationResult(AuthenticationResultType authenticationResult) {
         this.authenticationResult = authenticationResult;
         return this;
@@ -23,6 +24,7 @@ public class InitiateAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeName")
     public ChallengeNameTypeEnum challengeName;
+
     public InitiateAuthResponse withChallengeName(ChallengeNameTypeEnum challengeName) {
         this.challengeName = challengeName;
         return this;
@@ -31,6 +33,7 @@ public class InitiateAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeParameters")
     public java.util.Map<String, String> challengeParameters;
+
     public InitiateAuthResponse withChallengeParameters(java.util.Map<String, String> challengeParameters) {
         this.challengeParameters = challengeParameters;
         return this;
@@ -39,9 +42,11 @@ public class InitiateAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Session")
     public String session;
+
     public InitiateAuthResponse withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public InitiateAuthResponse(){}
 }

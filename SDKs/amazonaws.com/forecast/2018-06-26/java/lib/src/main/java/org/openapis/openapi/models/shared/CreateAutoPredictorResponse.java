@@ -15,9 +15,11 @@ public class CreateAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public CreateAutoPredictorResponse withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
     }
     
+    public CreateAutoPredictorResponse(){}
 }

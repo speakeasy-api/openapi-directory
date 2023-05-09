@@ -15,6 +15,7 @@ public class TaskScheduledEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heartbeatInSeconds")
     public Long heartbeatInSeconds;
+
     public TaskScheduledEventDetails withHeartbeatInSeconds(Long heartbeatInSeconds) {
         this.heartbeatInSeconds = heartbeatInSeconds;
         return this;
@@ -22,6 +23,7 @@ public class TaskScheduledEventDetails {
     
     @JsonProperty("parameters")
     public String parameters;
+
     public TaskScheduledEventDetails withParameters(String parameters) {
         this.parameters = parameters;
         return this;
@@ -29,6 +31,7 @@ public class TaskScheduledEventDetails {
     
     @JsonProperty("region")
     public String region;
+
     public TaskScheduledEventDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -36,6 +39,7 @@ public class TaskScheduledEventDetails {
     
     @JsonProperty("resource")
     public String resource;
+
     public TaskScheduledEventDetails withResource(String resource) {
         this.resource = resource;
         return this;
@@ -43,6 +47,7 @@ public class TaskScheduledEventDetails {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public TaskScheduledEventDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -51,6 +56,7 @@ public class TaskScheduledEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCredentials")
     public TaskCredentials taskCredentials;
+
     public TaskScheduledEventDetails withTaskCredentials(TaskCredentials taskCredentials) {
         this.taskCredentials = taskCredentials;
         return this;
@@ -59,9 +65,16 @@ public class TaskScheduledEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInSeconds")
     public Long timeoutInSeconds;
+
     public TaskScheduledEventDetails withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public TaskScheduledEventDetails(@JsonProperty("parameters") String parameters, @JsonProperty("region") String region, @JsonProperty("resource") String resource, @JsonProperty("resourceType") String resourceType) {
+        this.parameters = parameters;
+        this.region = region;
+        this.resource = resource;
+        this.resourceType = resourceType;
+  }
 }

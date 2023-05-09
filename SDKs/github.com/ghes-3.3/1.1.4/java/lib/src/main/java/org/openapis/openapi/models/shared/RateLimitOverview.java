@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RateLimitOverview {
     @JsonProperty("rate")
     public RateLimit rate;
+
     public RateLimitOverview withRate(RateLimit rate) {
         this.rate = rate;
         return this;
@@ -19,9 +20,14 @@ public class RateLimitOverview {
     
     @JsonProperty("resources")
     public RateLimitOverviewResources resources;
+
     public RateLimitOverview withResources(RateLimitOverviewResources resources) {
         this.resources = resources;
         return this;
     }
     
+    public RateLimitOverview(@JsonProperty("rate") RateLimit rate, @JsonProperty("resources") RateLimitOverviewResources resources) {
+        this.rate = rate;
+        this.resources = resources;
+  }
 }

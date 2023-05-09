@@ -12,6 +12,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Event withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -20,6 +21,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Object data;
+
     public Event withData(Object data) {
         this.data = data;
         return this;
@@ -28,6 +30,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public Event withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -36,9 +39,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EventTypeEnum type;
+
     public Event withType(EventTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Event(){}
 }

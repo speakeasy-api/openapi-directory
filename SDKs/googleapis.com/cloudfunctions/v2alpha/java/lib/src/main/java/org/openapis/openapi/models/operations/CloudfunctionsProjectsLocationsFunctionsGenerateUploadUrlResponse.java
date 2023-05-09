@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse {
     
     public String contentType;
+
     public CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateUploadUrlResponse generateUploadUrlResponse;
+
     public CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse withGenerateUploadUrlResponse(org.openapis.openapi.models.shared.GenerateUploadUrlResponse generateUploadUrlResponse) {
         this.generateUploadUrlResponse = generateUploadUrlResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse {
     
     
     public Integer statusCode;
+
     public CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

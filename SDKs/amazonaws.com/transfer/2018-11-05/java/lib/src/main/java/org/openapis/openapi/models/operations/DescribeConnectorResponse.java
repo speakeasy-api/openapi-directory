@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConnectorResponse {
     
     public String contentType;
+
     public DescribeConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConnectorResponse describeConnectorResponse;
+
     public DescribeConnectorResponse withDescribeConnectorResponse(org.openapis.openapi.models.shared.DescribeConnectorResponse describeConnectorResponse) {
         this.describeConnectorResponse = describeConnectorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConnectorResponse {
      */
     
     public Object internalServiceError;
+
     public DescribeConnectorResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConnectorResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeConnectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConnectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeConnectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeConnectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeConnectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeConnectorResponse {
     
     
     public Integer statusCode;
+
     public DescribeConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

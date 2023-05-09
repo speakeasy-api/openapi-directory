@@ -22,6 +22,7 @@ public class GetWorkflowStepResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetWorkflowStepResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetWorkflowStepResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GetWorkflowStepResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetWorkflowStepResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -50,6 +53,7 @@ public class GetWorkflowStepResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStartTime")
     public OffsetDateTime lastStartTime;
+
     public GetWorkflowStepResponse withLastStartTime(OffsetDateTime lastStartTime) {
         this.lastStartTime = lastStartTime;
         return this;
@@ -58,6 +62,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetWorkflowStepResponse withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +71,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public GetWorkflowStepResponse withNext(String[] next) {
         this.next = next;
         return this;
@@ -74,6 +80,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noOfSrvCompleted")
     public Long noOfSrvCompleted;
+
     public GetWorkflowStepResponse withNoOfSrvCompleted(Long noOfSrvCompleted) {
         this.noOfSrvCompleted = noOfSrvCompleted;
         return this;
@@ -82,6 +89,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noOfSrvFailed")
     public Long noOfSrvFailed;
+
     public GetWorkflowStepResponse withNoOfSrvFailed(Long noOfSrvFailed) {
         this.noOfSrvFailed = noOfSrvFailed;
         return this;
@@ -90,6 +98,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public WorkflowStepOutput[] outputs;
+
     public GetWorkflowStepResponse withOutputs(WorkflowStepOutput[] outputs) {
         this.outputs = outputs;
         return this;
@@ -98,6 +107,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public OwnerEnum owner;
+
     public GetWorkflowStepResponse withOwner(OwnerEnum owner) {
         this.owner = owner;
         return this;
@@ -106,6 +116,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public GetWorkflowStepResponse withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -114,6 +125,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptOutputLocation")
     public String scriptOutputLocation;
+
     public GetWorkflowStepResponse withScriptOutputLocation(String scriptOutputLocation) {
         this.scriptOutputLocation = scriptOutputLocation;
         return this;
@@ -122,6 +134,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StepStatusEnum status;
+
     public GetWorkflowStepResponse withStatus(StepStatusEnum status) {
         this.status = status;
         return this;
@@ -130,6 +143,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetWorkflowStepResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -138,6 +152,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepActionType")
     public StepActionTypeEnum stepActionType;
+
     public GetWorkflowStepResponse withStepActionType(StepActionTypeEnum stepActionType) {
         this.stepActionType = stepActionType;
         return this;
@@ -146,6 +161,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepGroupId")
     public String stepGroupId;
+
     public GetWorkflowStepResponse withStepGroupId(String stepGroupId) {
         this.stepGroupId = stepGroupId;
         return this;
@@ -154,6 +170,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepId")
     public String stepId;
+
     public GetWorkflowStepResponse withStepId(String stepId) {
         this.stepId = stepId;
         return this;
@@ -162,6 +179,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepTarget")
     public String[] stepTarget;
+
     public GetWorkflowStepResponse withStepTarget(String[] stepTarget) {
         this.stepTarget = stepTarget;
         return this;
@@ -170,6 +188,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNoOfSrv")
     public Long totalNoOfSrv;
+
     public GetWorkflowStepResponse withTotalNoOfSrv(Long totalNoOfSrv) {
         this.totalNoOfSrv = totalNoOfSrv;
         return this;
@@ -178,6 +197,7 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public GetWorkflowStepResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -186,9 +206,11 @@ public class GetWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowStepAutomationConfiguration")
     public WorkflowStepAutomationConfiguration workflowStepAutomationConfiguration;
+
     public GetWorkflowStepResponse withWorkflowStepAutomationConfiguration(WorkflowStepAutomationConfiguration workflowStepAutomationConfiguration) {
         this.workflowStepAutomationConfiguration = workflowStepAutomationConfiguration;
         return this;
     }
     
+    public GetWorkflowStepResponse(){}
 }

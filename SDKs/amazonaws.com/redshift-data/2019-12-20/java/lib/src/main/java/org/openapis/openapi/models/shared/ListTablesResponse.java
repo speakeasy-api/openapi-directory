@@ -15,6 +15,7 @@ public class ListTablesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTablesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTablesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tables")
     public TableMember[] tables;
+
     public ListTablesResponse withTables(TableMember[] tables) {
         this.tables = tables;
         return this;
     }
     
+    public ListTablesResponse(){}
 }

@@ -15,9 +15,11 @@ public class NetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignPublicIp")
     public AssignPublicIpEnum assignPublicIp;
+
     public NetworkConfiguration withAssignPublicIp(AssignPublicIpEnum assignPublicIp) {
         this.assignPublicIp = assignPublicIp;
         return this;
     }
     
+    public NetworkConfiguration(){}
 }

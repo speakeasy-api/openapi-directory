@@ -15,6 +15,7 @@ public class RemoveTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntries")
     public RemoveTargetsResultEntry[] failedEntries;
+
     public RemoveTargetsResponse withFailedEntries(RemoveTargetsResultEntry[] failedEntries) {
         this.failedEntries = failedEntries;
         return this;
@@ -23,9 +24,11 @@ public class RemoveTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntryCount")
     public Long failedEntryCount;
+
     public RemoveTargetsResponse withFailedEntryCount(Long failedEntryCount) {
         this.failedEntryCount = failedEntryCount;
         return this;
     }
     
+    public RemoveTargetsResponse(){}
 }

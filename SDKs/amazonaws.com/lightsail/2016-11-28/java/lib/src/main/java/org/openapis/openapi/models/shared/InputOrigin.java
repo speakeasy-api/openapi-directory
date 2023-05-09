@@ -15,6 +15,7 @@ public class InputOrigin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InputOrigin withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class InputOrigin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocolPolicy")
     public OriginProtocolPolicyEnumEnum protocolPolicy;
+
     public InputOrigin withProtocolPolicy(OriginProtocolPolicyEnumEnum protocolPolicy) {
         this.protocolPolicy = protocolPolicy;
         return this;
@@ -31,9 +33,11 @@ public class InputOrigin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionName")
     public RegionNameEnum regionName;
+
     public InputOrigin withRegionName(RegionNameEnum regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public InputOrigin(){}
 }

@@ -15,6 +15,7 @@ public class ForecastResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeanValue")
     public String meanValue;
+
     public ForecastResult withMeanValue(String meanValue) {
         this.meanValue = meanValue;
         return this;
@@ -23,6 +24,7 @@ public class ForecastResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictionIntervalLowerBound")
     public String predictionIntervalLowerBound;
+
     public ForecastResult withPredictionIntervalLowerBound(String predictionIntervalLowerBound) {
         this.predictionIntervalLowerBound = predictionIntervalLowerBound;
         return this;
@@ -31,6 +33,7 @@ public class ForecastResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictionIntervalUpperBound")
     public String predictionIntervalUpperBound;
+
     public ForecastResult withPredictionIntervalUpperBound(String predictionIntervalUpperBound) {
         this.predictionIntervalUpperBound = predictionIntervalUpperBound;
         return this;
@@ -39,9 +42,11 @@ public class ForecastResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public ForecastResult withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public ForecastResult(){}
 }

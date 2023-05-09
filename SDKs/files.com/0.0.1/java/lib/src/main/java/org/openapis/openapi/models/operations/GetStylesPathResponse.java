@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStylesPathResponse {
     
     public String contentType;
+
     public GetStylesPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetStylesPathResponse {
     
     
     public Integer statusCode;
+
     public GetStylesPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetStylesPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStylesPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetStylesPathResponse {
      */
     
     public org.openapis.openapi.models.shared.StyleEntity styleEntity;
+
     public GetStylesPathResponse withStyleEntity(org.openapis.openapi.models.shared.StyleEntity styleEntity) {
         this.styleEntity = styleEntity;
         return this;
     }
     
+    public GetStylesPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

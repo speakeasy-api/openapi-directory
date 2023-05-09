@@ -15,6 +15,7 @@ public class UpdateDestinationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public UpdateDestinationRequestBody withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -25,6 +26,7 @@ public class UpdateDestinationRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateDestinationRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class UpdateDestinationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateDestinationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +50,13 @@ public class UpdateDestinationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public UpdateDestinationRequestBodyStateEnum state;
+
     public UpdateDestinationRequestBody withState(UpdateDestinationRequestBodyStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public UpdateDestinationRequestBody(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

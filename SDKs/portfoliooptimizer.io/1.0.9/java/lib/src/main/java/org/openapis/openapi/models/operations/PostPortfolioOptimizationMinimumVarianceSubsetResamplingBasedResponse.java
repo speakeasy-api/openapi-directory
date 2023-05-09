@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRespon
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRespon
      */
     
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSON postPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSONObject;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse withPostPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSONObject(PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSON postPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSONObject) {
         this.postPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSONObject = postPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

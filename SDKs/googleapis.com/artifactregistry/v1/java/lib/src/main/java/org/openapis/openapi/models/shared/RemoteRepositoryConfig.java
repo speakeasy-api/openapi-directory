@@ -18,6 +18,7 @@ public class RemoteRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RemoteRepositoryConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class RemoteRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerRepository")
     public DockerRepository dockerRepository;
+
     public RemoteRepositoryConfig withDockerRepository(DockerRepository dockerRepository) {
         this.dockerRepository = dockerRepository;
         return this;
@@ -40,6 +42,7 @@ public class RemoteRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mavenRepository")
     public MavenRepository mavenRepository;
+
     public RemoteRepositoryConfig withMavenRepository(MavenRepository mavenRepository) {
         this.mavenRepository = mavenRepository;
         return this;
@@ -51,6 +54,7 @@ public class RemoteRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("npmRepository")
     public NpmRepository npmRepository;
+
     public RemoteRepositoryConfig withNpmRepository(NpmRepository npmRepository) {
         this.npmRepository = npmRepository;
         return this;
@@ -62,9 +66,11 @@ public class RemoteRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonRepository")
     public PythonRepository pythonRepository;
+
     public RemoteRepositoryConfig withPythonRepository(PythonRepository pythonRepository) {
         this.pythonRepository = pythonRepository;
         return this;
     }
     
+    public RemoteRepositoryConfig(){}
 }

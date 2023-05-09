@@ -15,6 +15,7 @@ public class DeleteImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importId")
     public String importId;
+
     public DeleteImportResponse withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -23,9 +24,11 @@ public class DeleteImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importStatus")
     public ImportStatusEnum importStatus;
+
     public DeleteImportResponse withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
     }
     
+    public DeleteImportResponse(){}
 }

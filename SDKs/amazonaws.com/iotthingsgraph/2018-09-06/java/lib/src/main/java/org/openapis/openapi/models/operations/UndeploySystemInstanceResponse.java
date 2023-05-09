@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UndeploySystemInstanceResponse {
     
     public String contentType;
+
     public UndeploySystemInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UndeploySystemInstanceResponse {
      */
     
     public Object internalFailureException;
+
     public UndeploySystemInstanceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UndeploySystemInstanceResponse {
      */
     
     public Object invalidRequestException;
+
     public UndeploySystemInstanceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UndeploySystemInstanceResponse {
      */
     
     public Object resourceInUseException;
+
     public UndeploySystemInstanceResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class UndeploySystemInstanceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UndeploySystemInstanceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UndeploySystemInstanceResponse {
     
     
     public Integer statusCode;
+
     public UndeploySystemInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UndeploySystemInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UndeploySystemInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UndeploySystemInstanceResponse {
      */
     
     public Object throttlingException;
+
     public UndeploySystemInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UndeploySystemInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.UndeploySystemInstanceResponse undeploySystemInstanceResponse;
+
     public UndeploySystemInstanceResponse withUndeploySystemInstanceResponse(org.openapis.openapi.models.shared.UndeploySystemInstanceResponse undeploySystemInstanceResponse) {
         this.undeploySystemInstanceResponse = undeploySystemInstanceResponse;
         return this;
     }
     
+    public UndeploySystemInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

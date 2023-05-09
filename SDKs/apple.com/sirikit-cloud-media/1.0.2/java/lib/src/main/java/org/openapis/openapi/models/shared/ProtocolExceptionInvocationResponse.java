@@ -12,6 +12,7 @@ public class ProtocolExceptionInvocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debug")
     public String debug;
+
     public ProtocolExceptionInvocationResponse withDebug(String debug) {
         this.debug = debug;
         return this;
@@ -19,6 +20,7 @@ public class ProtocolExceptionInvocationResponse {
     
     @JsonProperty("exception")
     public ProtocolException exception;
+
     public ProtocolExceptionInvocationResponse withException(ProtocolException exception) {
         this.exception = exception;
         return this;
@@ -26,6 +28,7 @@ public class ProtocolExceptionInvocationResponse {
     
     @JsonProperty("method")
     public String method;
+
     public ProtocolExceptionInvocationResponse withMethod(String method) {
         this.method = method;
         return this;
@@ -34,6 +37,7 @@ public class ProtocolExceptionInvocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public ExecutionMetrics metrics;
+
     public ProtocolExceptionInvocationResponse withMetrics(ExecutionMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -41,9 +45,15 @@ public class ProtocolExceptionInvocationResponse {
     
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public ProtocolExceptionInvocationResponse withResult(java.util.Map<String, Object> result) {
         this.result = result;
         return this;
     }
     
+    public ProtocolExceptionInvocationResponse(@JsonProperty("exception") ProtocolException exception, @JsonProperty("method") String method, @JsonProperty("result") java.util.Map<String, Object> result) {
+        this.exception = exception;
+        this.method = method;
+        this.result = result;
+  }
 }

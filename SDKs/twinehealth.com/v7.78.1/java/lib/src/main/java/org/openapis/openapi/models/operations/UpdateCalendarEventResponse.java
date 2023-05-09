@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCalendarEventResponse {
     
     public String contentType;
+
     public UpdateCalendarEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCalendarEventResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOrUpdateErrorResponse createOrUpdateErrorResponse;
+
     public UpdateCalendarEventResponse withCreateOrUpdateErrorResponse(org.openapis.openapi.models.shared.CreateOrUpdateErrorResponse createOrUpdateErrorResponse) {
         this.createOrUpdateErrorResponse = createOrUpdateErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCalendarEventResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse;
+
     public UpdateCalendarEventResponse withFetchErrorResponse(org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse) {
         this.fetchErrorResponse = fetchErrorResponse;
         return this;
@@ -36,6 +40,7 @@ public class UpdateCalendarEventResponse {
     
     
     public Integer statusCode;
+
     public UpdateCalendarEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCalendarEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCalendarEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateCalendarEventResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCalendarEventResponse updateCalendarEventResponse;
+
     public UpdateCalendarEventResponse withUpdateCalendarEventResponse(org.openapis.openapi.models.shared.UpdateCalendarEventResponse updateCalendarEventResponse) {
         this.updateCalendarEventResponse = updateCalendarEventResponse;
         return this;
     }
     
+    public UpdateCalendarEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAccessControlEffectRequest {
     @JsonProperty("Action")
     public String action;
+
     public GetAccessControlEffectRequest withAction(String action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class GetAccessControlEffectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImpersonationRoleId")
     public String impersonationRoleId;
+
     public GetAccessControlEffectRequest withImpersonationRoleId(String impersonationRoleId) {
         this.impersonationRoleId = impersonationRoleId;
         return this;
@@ -26,6 +28,7 @@ public class GetAccessControlEffectRequest {
     
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public GetAccessControlEffectRequest withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -33,6 +36,7 @@ public class GetAccessControlEffectRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public GetAccessControlEffectRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -41,9 +45,15 @@ public class GetAccessControlEffectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public GetAccessControlEffectRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetAccessControlEffectRequest(@JsonProperty("Action") String action, @JsonProperty("IpAddress") String ipAddress, @JsonProperty("OrganizationId") String organizationId) {
+        this.action = action;
+        this.ipAddress = ipAddress;
+        this.organizationId = organizationId;
+  }
 }

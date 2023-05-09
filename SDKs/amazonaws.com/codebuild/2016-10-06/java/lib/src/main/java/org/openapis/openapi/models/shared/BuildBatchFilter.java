@@ -15,9 +15,11 @@ public class BuildBatchFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusTypeEnum status;
+
     public BuildBatchFilter withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public BuildBatchFilter(){}
 }

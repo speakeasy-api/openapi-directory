@@ -20,6 +20,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public Database withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -28,6 +29,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Database withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentId")
     public String componentId;
+
     public Database withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -44,6 +47,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public ApplicationCredential[] credentials;
+
     public Database withCredentials(ApplicationCredential[] credentials) {
         this.credentials = credentials;
         return this;
@@ -52,6 +56,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public Database withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -60,6 +65,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public Database withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -68,6 +74,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseType")
     public DatabaseTypeEnum databaseType;
+
     public Database withDatabaseType(DatabaseTypeEnum databaseType) {
         this.databaseType = databaseType;
         return this;
@@ -78,6 +85,7 @@ public class Database {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public Database withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -86,6 +94,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryHost")
     public String primaryHost;
+
     public Database withPrimaryHost(String primaryHost) {
         this.primaryHost = primaryHost;
         return this;
@@ -94,6 +103,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SQLPort")
     public Long sqlPort;
+
     public Database withSQLPort(Long sqlPort) {
         this.sqlPort = sqlPort;
         return this;
@@ -102,9 +112,11 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DatabaseStatusEnum status;
+
     public Database withStatus(DatabaseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Database(){}
 }

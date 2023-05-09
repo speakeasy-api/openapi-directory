@@ -15,6 +15,7 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public DataValue[] allowedValues;
+
     public DataType withAllowedValues(DataValue[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -23,6 +24,7 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestedType")
     public DataType nestedType;
+
     public DataType withNestedType(DataType nestedType) {
         this.nestedType = nestedType;
         return this;
@@ -31,6 +33,7 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationship")
     public Relationship relationship;
+
     public DataType withRelationship(Relationship relationship) {
         this.relationship = relationship;
         return this;
@@ -38,6 +41,7 @@ public class DataType {
     
     @JsonProperty("type")
     public TypeEnum type;
+
     public DataType withType(TypeEnum type) {
         this.type = type;
         return this;
@@ -46,9 +50,13 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitOfMeasure")
     public String unitOfMeasure;
+
     public DataType withUnitOfMeasure(String unitOfMeasure) {
         this.unitOfMeasure = unitOfMeasure;
         return this;
     }
     
+    public DataType(@JsonProperty("type") TypeEnum type) {
+        this.type = type;
+  }
 }

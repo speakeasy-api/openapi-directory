@@ -3,42 +3,63 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.operations.AddStorageSystemRequest;
+import org.openapis.openapi.models.operations.AddStorageSystemResponse;
+import org.openapis.openapi.models.operations.AddStorageSystemXAmzTargetEnum;
+import org.openapis.openapi.models.shared.AddStorageSystemRequest;
+import org.openapis.openapi.models.shared.Credentials;
+import org.openapis.openapi.models.shared.DiscoveryServerConfiguration;
+import org.openapis.openapi.models.shared.DiscoverySystemTypeEnum;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelTaskExecutionXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CancelTaskExecutionRequest;
-import org.openapis.openapi.models.operations.CancelTaskExecutionResponse;
-import org.openapis.openapi.models.shared.CancelTaskExecutionRequest;
+import org.openapis.openapi.models.shared.TagListEntry;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CancelTaskExecutionRequest req = new CancelTaskExecutionRequest() {{
-                cancelTaskExecutionRequest = new CancelTaskExecutionRequest() {{
-                    taskExecutionArn = "corrupti";
-                }};
-                xAmzAlgorithm = "provident";
-                xAmzContentSha256 = "distinctio";
-                xAmzCredential = "quibusdam";
-                xAmzDate = "unde";
-                xAmzSecurityToken = "nulla";
-                xAmzSignature = "corrupti";
-                xAmzSignedHeaders = "illum";
-                xAmzTarget = "FmrsService.CancelTaskExecution";
-            }}            
+            AddStorageSystemRequest req = new AddStorageSystemRequest(                new AddStorageSystemRequest(                new String[]{{
+                                                add("distinctio"),
+                                                add("quibusdam"),
+                                                add("unde"),
+                                            }}, "nulla",                 new Credentials("corrupti", "illum");,                 new DiscoveryServerConfiguration("vel") {{
+                                                serverPort = 623564L;
+                                            }};, DiscoverySystemTypeEnum.NET_APP_ONTAP) {{
+                                cloudWatchLogGroupArn = "deserunt";
+                                name = "Willie Gulgowski DVM";
+                                tags = new org.openapis.openapi.models.shared.TagListEntry[]{{
+                                    add(new TagListEntry("minus") {{
+                                        key = "suscipit";
+                                        value = "molestiae";
+                                    }}),
+                                    add(new TagListEntry("iusto") {{
+                                        key = "placeat";
+                                        value = "voluptatum";
+                                    }}),
+                                }};
+                            }};, AddStorageSystemXAmzTargetEnum.FMRS_SERVICE_ADD_STORAGE_SYSTEM) {{
+                xAmzAlgorithm = "excepturi";
+                xAmzContentSha256 = "nisi";
+                xAmzCredential = "recusandae";
+                xAmzDate = "temporibus";
+                xAmzSecurityToken = "ab";
+                xAmzSignature = "quis";
+                xAmzSignedHeaders = "veritatis";
+            }};            
 
-            CancelTaskExecutionResponse res = sdk.cancelTaskExecution(req);
+            AddStorageSystemResponse res = sdk.addStorageSystem(req);
 
-            if (res.cancelTaskExecutionResponse.isPresent()) {
+            if (res.addStorageSystemResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

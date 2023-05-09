@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ArtifactSourceType {
     @JsonProperty("SourceIdType")
     public ArtifactSourceIdTypeEnum sourceIdType;
+
     public ArtifactSourceType withSourceIdType(ArtifactSourceIdTypeEnum sourceIdType) {
         this.sourceIdType = sourceIdType;
         return this;
@@ -19,9 +20,14 @@ public class ArtifactSourceType {
     
     @JsonProperty("Value")
     public String value;
+
     public ArtifactSourceType withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ArtifactSourceType(@JsonProperty("SourceIdType") ArtifactSourceIdTypeEnum sourceIdType, @JsonProperty("Value") String value) {
+        this.sourceIdType = sourceIdType;
+        this.value = value;
+  }
 }

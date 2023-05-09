@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2ConversationsCallsRequestBody {
@@ -12,6 +13,7 @@ public class PostV2ConversationsCallsRequestBody {
      */
     @SpeakeasyMetadata("form:name=call_created_at")
     public String callCreatedAt;
+
     public PostV2ConversationsCallsRequestBody withCallCreatedAt(String callCreatedAt) {
         this.callCreatedAt = callCreatedAt;
         return this;
@@ -22,6 +24,7 @@ public class PostV2ConversationsCallsRequestBody {
      */
     @SpeakeasyMetadata("form:name=direction")
     public String direction;
+
     public PostV2ConversationsCallsRequestBody withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -32,6 +35,7 @@ public class PostV2ConversationsCallsRequestBody {
      */
     @SpeakeasyMetadata("form:name=duration")
     public Double duration;
+
     public PostV2ConversationsCallsRequestBody withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -42,6 +46,7 @@ public class PostV2ConversationsCallsRequestBody {
      */
     @SpeakeasyMetadata("form:name=from")
     public String from;
+
     public PostV2ConversationsCallsRequestBody withFrom(String from) {
         this.from = from;
         return this;
@@ -52,6 +57,7 @@ public class PostV2ConversationsCallsRequestBody {
      */
     @SpeakeasyMetadata("form:name=recording,json")
     public java.util.Map<String, Object> recording;
+
     public PostV2ConversationsCallsRequestBody withRecording(java.util.Map<String, Object> recording) {
         this.recording = recording;
         return this;
@@ -62,6 +68,7 @@ public class PostV2ConversationsCallsRequestBody {
      */
     @SpeakeasyMetadata("form:name=to")
     public String to;
+
     public PostV2ConversationsCallsRequestBody withTo(String to) {
         this.to = to;
         return this;
@@ -72,9 +79,16 @@ public class PostV2ConversationsCallsRequestBody {
      */
     @SpeakeasyMetadata("form:name=user_guid")
     public String userGuid;
+
     public PostV2ConversationsCallsRequestBody withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public PostV2ConversationsCallsRequestBody(@JsonProperty("duration") Double duration, @JsonProperty("from") String from, @JsonProperty("recording") java.util.Map<String, Object> recording, @JsonProperty("to") String to) {
+        this.duration = duration;
+        this.from = from;
+        this.recording = recording;
+        this.to = to;
+  }
 }

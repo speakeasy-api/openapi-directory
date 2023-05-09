@@ -15,6 +15,7 @@ public class WorkflowStepOutputUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public Long integerValue;
+
     public WorkflowStepOutputUnion withIntegerValue(Long integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -23,6 +24,7 @@ public class WorkflowStepOutputUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listOfStringValue")
     public String[] listOfStringValue;
+
     public WorkflowStepOutputUnion withListOfStringValue(String[] listOfStringValue) {
         this.listOfStringValue = listOfStringValue;
         return this;
@@ -31,9 +33,11 @@ public class WorkflowStepOutputUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public WorkflowStepOutputUnion withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public WorkflowStepOutputUnion(){}
 }

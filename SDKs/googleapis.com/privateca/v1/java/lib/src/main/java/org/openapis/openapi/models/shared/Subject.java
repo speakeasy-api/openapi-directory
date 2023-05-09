@@ -18,6 +18,7 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public Subject withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -29,6 +30,7 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Subject withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -40,6 +42,7 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public Subject withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -51,6 +54,7 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public Subject withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -62,6 +66,7 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationalUnit")
     public String organizationalUnit;
+
     public Subject withOrganizationalUnit(String organizationalUnit) {
         this.organizationalUnit = organizationalUnit;
         return this;
@@ -73,6 +78,7 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public Subject withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -84,6 +90,7 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("province")
     public String province;
+
     public Subject withProvince(String province) {
         this.province = province;
         return this;
@@ -95,9 +102,11 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetAddress")
     public String streetAddress;
+
     public Subject withStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
         return this;
     }
     
+    public Subject(){}
 }

@@ -15,6 +15,7 @@ public class ApplicationCodeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeContent")
     public CodeContent codeContent;
+
     public ApplicationCodeConfiguration withCodeContent(CodeContent codeContent) {
         this.codeContent = codeContent;
         return this;
@@ -22,9 +23,13 @@ public class ApplicationCodeConfiguration {
     
     @JsonProperty("CodeContentType")
     public CodeContentTypeEnum codeContentType;
+
     public ApplicationCodeConfiguration withCodeContentType(CodeContentTypeEnum codeContentType) {
         this.codeContentType = codeContentType;
         return this;
     }
     
+    public ApplicationCodeConfiguration(@JsonProperty("CodeContentType") CodeContentTypeEnum codeContentType) {
+        this.codeContentType = codeContentType;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FourDoauthorizationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FourDoauthorizationRequest fourDoauthorizationRequest;
+
     public FourDoauthorizationRequest withFourDoauthorizationRequest(org.openapis.openapi.models.shared.FourDoauthorizationRequest fourDoauthorizationRequest) {
         this.fourDoauthorizationRequest = fourDoauthorizationRequest;
         return this;
@@ -19,6 +21,7 @@ public class FourDoauthorizationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public FourDoauthorizationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -29,6 +32,7 @@ public class FourDoauthorizationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public FourDoauthorizationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class FourDoauthorizationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
     public String xPROVIDERAPIAppKey;
+
     public FourDoauthorizationRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
         this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
         return this;
@@ -49,6 +54,7 @@ public class FourDoauthorizationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
     public String xPROVIDERAPIAppToken;
+
     public FourDoauthorizationRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
         this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
@@ -56,9 +62,18 @@ public class FourDoauthorizationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
     public String transactionId;
+
     public FourDoauthorizationRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public FourDoauthorizationRequest(@JsonProperty("4.DoauthorizationRequest") org.openapis.openapi.models.shared.FourDoauthorizationRequest fourDoauthorizationRequest, @JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("X-PROVIDER-API-AppKey") String xPROVIDERAPIAppKey, @JsonProperty("X-PROVIDER-API-AppToken") String xPROVIDERAPIAppToken, @JsonProperty("transactionId") String transactionId) {
+        this.fourDoauthorizationRequest = fourDoauthorizationRequest;
+        this.accept = accept;
+        this.contentType = contentType;
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        this.transactionId = transactionId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRepositoryPolicyResponse {
     
     public String contentType;
+
     public DeleteRepositoryPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRepositoryPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRepositoryPolicyResponse deleteRepositoryPolicyResponse;
+
     public DeleteRepositoryPolicyResponse withDeleteRepositoryPolicyResponse(org.openapis.openapi.models.shared.DeleteRepositoryPolicyResponse deleteRepositoryPolicyResponse) {
         this.deleteRepositoryPolicyResponse = deleteRepositoryPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRepositoryPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteRepositoryPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRepositoryPolicyResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public DeleteRepositoryPolicyResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRepositoryPolicyResponse {
      */
     
     public Object repositoryPolicyNotFoundException;
+
     public DeleteRepositoryPolicyResponse withRepositoryPolicyNotFoundException(Object repositoryPolicyNotFoundException) {
         this.repositoryPolicyNotFoundException = repositoryPolicyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRepositoryPolicyResponse {
      */
     
     public Object serverException;
+
     public DeleteRepositoryPolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteRepositoryPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteRepositoryPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRepositoryPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRepositoryPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteRepositoryPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

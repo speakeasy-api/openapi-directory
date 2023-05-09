@@ -12,6 +12,7 @@ public class Material {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public java.util.Map<String, String> digest;
+
     public Material withDigest(java.util.Map<String, String> digest) {
         this.digest = digest;
         return this;
@@ -20,9 +21,11 @@ public class Material {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Material withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Material(){}
 }

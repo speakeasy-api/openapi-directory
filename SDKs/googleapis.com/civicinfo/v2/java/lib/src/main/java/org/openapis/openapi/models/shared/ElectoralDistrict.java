@@ -18,6 +18,7 @@ public class ElectoralDistrict {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ElectoralDistrict withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class ElectoralDistrict {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ElectoralDistrict withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ElectoralDistrict {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public ElectoralDistrictScopeEnum scope;
+
     public ElectoralDistrict withScope(ElectoralDistrictScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public ElectoralDistrict(){}
 }

@@ -45,6 +45,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjec
 lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaResponse.java
@@ -121,6 +124,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/DomainStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Domain.java
 lib/src/main/java/org/openapis/openapi/models/shared/DomainInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/DetachTrustRequestInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/DomainJoinMachineResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/DomainJoinMachineRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExtendSchemaRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/LDAPSSettingsInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/LDAPSSettingsStateEnum.java
@@ -146,4 +151,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

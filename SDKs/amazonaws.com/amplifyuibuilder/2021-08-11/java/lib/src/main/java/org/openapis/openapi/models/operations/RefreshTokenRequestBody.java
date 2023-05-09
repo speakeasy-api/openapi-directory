@@ -12,9 +12,13 @@ public class RefreshTokenRequestBody {
      */
     @JsonProperty("refreshTokenBody")
     public RefreshTokenRequestBodyRefreshTokenBody refreshTokenBody;
+
     public RefreshTokenRequestBody withRefreshTokenBody(RefreshTokenRequestBodyRefreshTokenBody refreshTokenBody) {
         this.refreshTokenBody = refreshTokenBody;
         return this;
     }
     
+    public RefreshTokenRequestBody(@JsonProperty("refreshTokenBody") RefreshTokenRequestBodyRefreshTokenBody refreshTokenBody) {
+        this.refreshTokenBody = refreshTokenBody;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTeamMemberResponse {
@@ -12,6 +13,7 @@ public class UpdateTeamMemberResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateTeamMemberResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTeamMemberResponse {
     
     
     public String contentType;
+
     public UpdateTeamMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTeamMemberResponse {
      */
     
     public Object invalidServiceRoleException;
+
     public UpdateTeamMemberResponse withInvalidServiceRoleException(Object invalidServiceRoleException) {
         this.invalidServiceRoleException = invalidServiceRoleException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTeamMemberResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateTeamMemberResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTeamMemberResponse {
      */
     
     public Object projectConfigurationException;
+
     public UpdateTeamMemberResponse withProjectConfigurationException(Object projectConfigurationException) {
         this.projectConfigurationException = projectConfigurationException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateTeamMemberResponse {
      */
     
     public Object projectNotFoundException;
+
     public UpdateTeamMemberResponse withProjectNotFoundException(Object projectNotFoundException) {
         this.projectNotFoundException = projectNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateTeamMemberResponse {
     
     
     public Integer statusCode;
+
     public UpdateTeamMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateTeamMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTeamMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateTeamMemberResponse {
      */
     
     public Object teamMemberNotFoundException;
+
     public UpdateTeamMemberResponse withTeamMemberNotFoundException(Object teamMemberNotFoundException) {
         this.teamMemberNotFoundException = teamMemberNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateTeamMemberResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTeamMemberResult updateTeamMemberResult;
+
     public UpdateTeamMemberResponse withUpdateTeamMemberResult(org.openapis.openapi.models.shared.UpdateTeamMemberResult updateTeamMemberResult) {
         this.updateTeamMemberResult = updateTeamMemberResult;
         return this;
@@ -103,9 +114,14 @@ public class UpdateTeamMemberResponse {
      */
     
     public Object validationException;
+
     public UpdateTeamMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateTeamMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

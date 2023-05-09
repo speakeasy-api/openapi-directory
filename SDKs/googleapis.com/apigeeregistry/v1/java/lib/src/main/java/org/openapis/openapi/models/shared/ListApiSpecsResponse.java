@@ -18,6 +18,7 @@ public class ListApiSpecsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiSpecs")
     public ApiSpec[] apiSpecs;
+
     public ListApiSpecsResponse withApiSpecs(ApiSpec[] apiSpecs) {
         this.apiSpecs = apiSpecs;
         return this;
@@ -29,9 +30,11 @@ public class ListApiSpecsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListApiSpecsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListApiSpecsResponse(){}
 }

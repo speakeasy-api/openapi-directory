@@ -18,9 +18,11 @@ public class GetWorkloadOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Workload")
     public Workload workload;
+
     public GetWorkloadOutput withWorkload(Workload workload) {
         this.workload = workload;
         return this;
     }
     
+    public GetWorkloadOutput(){}
 }

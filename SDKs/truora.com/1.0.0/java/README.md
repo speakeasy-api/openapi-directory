@@ -15,14 +15,15 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ReportBehaviorSecurity;
 import org.openapis.openapi.models.operations.ReportBehaviorResponse;
+import org.openapis.openapi.models.operations.ReportBehaviorSecurity;
+import org.openapis.openapi.models.shared.CreateBehaviorInput;
 import org.openapis.openapi.models.shared.CreateBehaviorInputCountryEnum;
 import org.openapis.openapi.models.shared.CreateBehaviorInputDocumentTypeEnum;
 import org.openapis.openapi.models.shared.CreateBehaviorInputReasonEnum;
-import org.openapis.openapi.models.shared.CreateBehaviorInput;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,29 +31,22 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.CreateBehaviorInput req = new CreateBehaviorInput() {{
-                birthDate = "2021-10-25T05:21:43.948Z";
-                country = "cr";
-                documentId = "quibusdam";
-                documentType = "name";
-                email = "Karley_Stamm@hotmail.com";
-                feedbackDate = "2022-03-26T09:37:56.283Z";
-                firstName = "Hunter";
-                lastName = "Gulgowski";
-                phoneNumber = "debitis";
-                reason = "rape";
-            }}            
+            org.openapis.openapi.models.shared.CreateBehaviorInput req = new CreateBehaviorInput(OffsetDateTime.parse("2021-10-25T05:21:43.948Z"), CreateBehaviorInputCountryEnum.CR, "quibusdam", CreateBehaviorInputDocumentTypeEnum.NAME, "nulla", OffsetDateTime.parse("2021-04-22T12:08:58.275Z"), "vel", "error", CreateBehaviorInputReasonEnum.DRUG_POSSESSION) {{
+                phoneNumber = "suscipit";
+            }};            
 
-            ReportBehaviorResponse res = sdk.behavior.reportBehavior(req, new ReportBehaviorSecurity() {{
+            ReportBehaviorResponse res = sdk.behavior.reportBehavior(req, new ReportBehaviorSecurity("iure") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.behaviourOutput.isPresent()) {
+            if (res.behaviourOutput != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -60,52 +54,52 @@ public class Application {
 ## Available Resources and Operations
 
 
-### behavior
+### [behavior](docs/behavior/README.md)
 
-* `reportBehavior` - Report Behavior
+* [reportBehavior](docs/behavior/README.md#reportbehavior) - Report Behavior
 
-### checks
+### [checks](docs/checks/README.md)
 
-* `getHealthDashboard` - Get Health Dashboard
-* `createCheck` - Create a background check
-* `getCheck` - Get Background Check
-* `listCheckDetails` - List Check Details
-* `listChecks` - List Checks
+* [getHealthDashboard](docs/checks/README.md#gethealthdashboard) - Get Health Dashboard
+* [createCheck](docs/checks/README.md#createcheck) - Create a background check
+* [getCheck](docs/checks/README.md#getcheck) - Get Background Check
+* [listCheckDetails](docs/checks/README.md#listcheckdetails) - List Check Details
+* [listChecks](docs/checks/README.md#listchecks) - List Checks
 
-### continuous
+### [continuous](docs/continuous/README.md)
 
-* `getContinuousCheck` - Lists history associated with a Check. It can be paginated
-* `listContinuousChecks` - Lists all continuous checks
-* `updateContinuousCheck` - Updates a continuous check
-* `createContinuousCheck` - Creates a continuous check that will run background checks recurrently according to the frequency provided.
-* `getV1ContinuousChecksContinuousCheckIdHistory` - Lists background check logs. It can be paginated
+* [getContinuousCheck](docs/continuous/README.md#getcontinuouscheck) - Lists history associated with a Check. It can be paginated
+* [listContinuousChecks](docs/continuous/README.md#listcontinuouschecks) - Lists all continuous checks
+* [updateContinuousCheck](docs/continuous/README.md#updatecontinuouscheck) - Updates a continuous check
+* [createContinuousCheck](docs/continuous/README.md#createcontinuouscheck) - Creates a continuous check that will run background checks recurrently according to the frequency provided.
+* [getV1ContinuousChecksContinuousCheckIdHistory](docs/continuous/README.md#getv1continuouscheckscontinuouscheckidhistory) - Lists background check logs. It can be paginated
 
 
-### customType
+### [customType](docs/customtype/README.md)
 
-* `deleteCustomType` - Delete Custom Type
-* `updateCustomType` - Update Custom Type
-* `createScoreConfig` - Create Score Configurations
-* `listScoreConfigs` - List Score Configurations
+* [deleteCustomType](docs/customtype/README.md#deletecustomtype) - Delete Custom Type
+* [updateCustomType](docs/customtype/README.md#updatecustomtype) - Update Custom Type
+* [createScoreConfig](docs/customtype/README.md#createscoreconfig) - Create Score Configurations
+* [listScoreConfigs](docs/customtype/README.md#listscoreconfigs) - List Score Configurations
 
-### hooks
+### [hooks](docs/hooks/README.md)
 
-* `createHook` - Creates a hook subscription
-* `deletHook` - Deletes hook
-* `listHook` - Lists all hooks
-* `updateHook` - Updates hook
+* [createHook](docs/hooks/README.md#createhook) - Creates a hook subscription
+* [deletHook](docs/hooks/README.md#delethook) - Deletes hook
+* [listHook](docs/hooks/README.md#listhook) - Lists all hooks
+* [updateHook](docs/hooks/README.md#updatehook) - Updates hook
 
-### pdf
+### [pdf](docs/pdf/README.md)
 
-* `createPDF` - Create PDF
-* `getPDF` - Get PDF
+* [createPDF](docs/pdf/README.md#createpdf) - Create PDF
+* [getPDF](docs/pdf/README.md#getpdf) - Get PDF
 
-### reports
+### [reports](docs/reports/README.md)
 
-* `batchUpload` - Batch Upload
-* `createReport` - Create Report
-* `getReport` - Get Report
-* `listReports` - List Reports
+* [batchUpload](docs/reports/README.md#batchupload) - Batch Upload
+* [createReport](docs/reports/README.md#createreport) - Create Report
+* [getReport](docs/reports/README.md#getreport) - Get Report
+* [listReports](docs/reports/README.md#listreports) - List Reports
 <!-- End SDK Available Operations -->
 
 ### Maturity

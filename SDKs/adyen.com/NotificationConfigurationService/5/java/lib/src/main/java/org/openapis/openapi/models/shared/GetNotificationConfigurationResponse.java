@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetNotificationConfigurationResponse {
     @JsonProperty("configurationDetails")
     public NotificationConfigurationDetails configurationDetails;
+
     public GetNotificationConfigurationResponse withConfigurationDetails(NotificationConfigurationDetails configurationDetails) {
         this.configurationDetails = configurationDetails;
         return this;
@@ -25,6 +26,7 @@ public class GetNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public GetNotificationConfigurationResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -36,6 +38,7 @@ public class GetNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetNotificationConfigurationResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -47,9 +50,13 @@ public class GetNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetNotificationConfigurationResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public GetNotificationConfigurationResponse(@JsonProperty("configurationDetails") NotificationConfigurationDetails configurationDetails) {
+        this.configurationDetails = configurationDetails;
+  }
 }

@@ -15,9 +15,11 @@ public class AwsApiCallActionDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public AwsApiCallActionDomainDetails withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public AwsApiCallActionDomainDetails(){}
 }

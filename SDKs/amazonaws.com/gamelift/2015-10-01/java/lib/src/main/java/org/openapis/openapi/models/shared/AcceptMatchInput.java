@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AcceptMatchInput {
     @JsonProperty("AcceptanceType")
     public AcceptanceTypeEnum acceptanceType;
+
     public AcceptMatchInput withAcceptanceType(AcceptanceTypeEnum acceptanceType) {
         this.acceptanceType = acceptanceType;
         return this;
@@ -16,6 +17,7 @@ public class AcceptMatchInput {
     
     @JsonProperty("PlayerIds")
     public String[] playerIds;
+
     public AcceptMatchInput withPlayerIds(String[] playerIds) {
         this.playerIds = playerIds;
         return this;
@@ -23,9 +25,15 @@ public class AcceptMatchInput {
     
     @JsonProperty("TicketId")
     public String ticketId;
+
     public AcceptMatchInput withTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
     }
     
+    public AcceptMatchInput(@JsonProperty("AcceptanceType") AcceptanceTypeEnum acceptanceType, @JsonProperty("PlayerIds") String[] playerIds, @JsonProperty("TicketId") String ticketId) {
+        this.acceptanceType = acceptanceType;
+        this.playerIds = playerIds;
+        this.ticketId = ticketId;
+  }
 }

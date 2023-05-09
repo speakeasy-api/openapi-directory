@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AudioSpecification {
     @JsonProperty("endTimeoutMs")
     public Long endTimeoutMs;
+
     public AudioSpecification withEndTimeoutMs(Long endTimeoutMs) {
         this.endTimeoutMs = endTimeoutMs;
         return this;
@@ -19,9 +20,14 @@ public class AudioSpecification {
     
     @JsonProperty("maxLengthMs")
     public Long maxLengthMs;
+
     public AudioSpecification withMaxLengthMs(Long maxLengthMs) {
         this.maxLengthMs = maxLengthMs;
         return this;
     }
     
+    public AudioSpecification(@JsonProperty("endTimeoutMs") Long endTimeoutMs, @JsonProperty("maxLengthMs") Long maxLengthMs) {
+        this.endTimeoutMs = endTimeoutMs;
+        this.maxLengthMs = maxLengthMs;
+  }
 }

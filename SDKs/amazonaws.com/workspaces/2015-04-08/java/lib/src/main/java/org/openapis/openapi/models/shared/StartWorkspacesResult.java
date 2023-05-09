@@ -15,9 +15,11 @@ public class StartWorkspacesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedRequests")
     public FailedWorkspaceChangeRequest[] failedRequests;
+
     public StartWorkspacesResult withFailedRequests(FailedWorkspaceChangeRequest[] failedRequests) {
         this.failedRequests = failedRequests;
         return this;
     }
     
+    public StartWorkspacesResult(){}
 }

@@ -15,6 +15,7 @@ public class ArtifactStore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public EncryptionKey encryptionKey;
+
     public ArtifactStore withEncryptionKey(EncryptionKey encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -22,6 +23,7 @@ public class ArtifactStore {
     
     @JsonProperty("location")
     public String location;
+
     public ArtifactStore withLocation(String location) {
         this.location = location;
         return this;
@@ -29,9 +31,14 @@ public class ArtifactStore {
     
     @JsonProperty("type")
     public ArtifactStoreTypeEnum type;
+
     public ArtifactStore withType(ArtifactStoreTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ArtifactStore(@JsonProperty("location") String location, @JsonProperty("type") ArtifactStoreTypeEnum type) {
+        this.location = location;
+        this.type = type;
+  }
 }

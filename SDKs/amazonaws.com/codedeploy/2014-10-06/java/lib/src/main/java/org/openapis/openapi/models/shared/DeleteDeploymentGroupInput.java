@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDeploymentGroupInput {
     @JsonProperty("applicationName")
     public String applicationName;
+
     public DeleteDeploymentGroupInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteDeploymentGroupInput {
     
     @JsonProperty("deploymentGroupName")
     public String deploymentGroupName;
+
     public DeleteDeploymentGroupInput withDeploymentGroupName(String deploymentGroupName) {
         this.deploymentGroupName = deploymentGroupName;
         return this;
     }
     
+    public DeleteDeploymentGroupInput(@JsonProperty("applicationName") String applicationName, @JsonProperty("deploymentGroupName") String deploymentGroupName) {
+        this.applicationName = applicationName;
+        this.deploymentGroupName = deploymentGroupName;
+  }
 }

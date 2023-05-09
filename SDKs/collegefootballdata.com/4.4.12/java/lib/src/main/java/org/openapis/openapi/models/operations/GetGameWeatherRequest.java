@@ -12,6 +12,7 @@ public class GetGameWeatherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
     public String classification;
+
     public GetGameWeatherRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -22,6 +23,7 @@ public class GetGameWeatherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetGameWeatherRequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -32,6 +34,7 @@ public class GetGameWeatherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
     public Long gameId;
+
     public GetGameWeatherRequest withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -42,6 +45,7 @@ public class GetGameWeatherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
     public String seasonType;
+
     public GetGameWeatherRequest withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -52,6 +56,7 @@ public class GetGameWeatherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetGameWeatherRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -62,6 +67,7 @@ public class GetGameWeatherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetGameWeatherRequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -72,9 +78,11 @@ public class GetGameWeatherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetGameWeatherRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetGameWeatherRequest(){}
 }

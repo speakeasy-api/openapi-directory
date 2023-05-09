@@ -15,6 +15,7 @@ public class DestinationFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public DestinationFlowConfig withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -23,6 +24,7 @@ public class DestinationFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileName")
     public String connectorProfileName;
+
     public DestinationFlowConfig withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -30,6 +32,7 @@ public class DestinationFlowConfig {
     
     @JsonProperty("connectorType")
     public ConnectorTypeEnum connectorType;
+
     public DestinationFlowConfig withConnectorType(ConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -37,9 +40,14 @@ public class DestinationFlowConfig {
     
     @JsonProperty("destinationConnectorProperties")
     public DestinationConnectorProperties destinationConnectorProperties;
+
     public DestinationFlowConfig withDestinationConnectorProperties(DestinationConnectorProperties destinationConnectorProperties) {
         this.destinationConnectorProperties = destinationConnectorProperties;
         return this;
     }
     
+    public DestinationFlowConfig(@JsonProperty("connectorType") ConnectorTypeEnum connectorType, @JsonProperty("destinationConnectorProperties") DestinationConnectorProperties destinationConnectorProperties) {
+        this.connectorType = connectorType;
+        this.destinationConnectorProperties = destinationConnectorProperties;
+  }
 }

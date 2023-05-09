@@ -15,9 +15,11 @@ public class GetAllBankAccounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccounts")
     public GetAllBankAccounts200ApplicationJSONBankAccounts[] bankAccounts;
+
     public GetAllBankAccounts200ApplicationJSON withBankAccounts(GetAllBankAccounts200ApplicationJSONBankAccounts[] bankAccounts) {
         this.bankAccounts = bankAccounts;
         return this;
     }
     
+    public GetAllBankAccounts200ApplicationJSON(){}
 }

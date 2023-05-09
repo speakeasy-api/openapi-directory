@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignedTargetingOptionId")
     public String assignedTargetingOptionId;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withAssignedTargetingOptionId(String assignedTargetingOptionId) {
         this.assignedTargetingOptionId = assignedTargetingOptionId;
         return this;
@@ -62,6 +68,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -72,6 +79,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lineItemId")
     public String lineItemId;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -102,6 +112,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetingType")
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteTargetingTypeEnum targetingType;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withTargetingType(DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteTargetingTypeEnum targetingType) {
         this.targetingType = targetingType;
         return this;
@@ -142,6 +156,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,16 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest(@JsonProperty("advertiserId") String advertiserId, @JsonProperty("assignedTargetingOptionId") String assignedTargetingOptionId, @JsonProperty("lineItemId") String lineItemId, @JsonProperty("targetingType") DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteTargetingTypeEnum targetingType) {
+        this.advertiserId = advertiserId;
+        this.assignedTargetingOptionId = assignedTargetingOptionId;
+        this.lineItemId = lineItemId;
+        this.targetingType = targetingType;
+  }
 }

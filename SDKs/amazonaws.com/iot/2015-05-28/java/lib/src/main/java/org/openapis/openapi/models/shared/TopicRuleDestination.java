@@ -20,6 +20,7 @@ public class TopicRuleDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public TopicRuleDestination withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class TopicRuleDestination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TopicRuleDestination withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class TopicRuleDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpUrlProperties")
     public HttpUrlDestinationProperties httpUrlProperties;
+
     public TopicRuleDestination withHttpUrlProperties(HttpUrlDestinationProperties httpUrlProperties) {
         this.httpUrlProperties = httpUrlProperties;
         return this;
@@ -48,6 +51,7 @@ public class TopicRuleDestination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public TopicRuleDestination withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -56,6 +60,7 @@ public class TopicRuleDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TopicRuleDestinationStatusEnum status;
+
     public TopicRuleDestination withStatus(TopicRuleDestinationStatusEnum status) {
         this.status = status;
         return this;
@@ -64,6 +69,7 @@ public class TopicRuleDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public TopicRuleDestination withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -72,9 +78,11 @@ public class TopicRuleDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcProperties")
     public VpcDestinationProperties vpcProperties;
+
     public TopicRuleDestination withVpcProperties(VpcDestinationProperties vpcProperties) {
         this.vpcProperties = vpcProperties;
         return this;
     }
     
+    public TopicRuleDestination(){}
 }

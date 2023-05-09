@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerManagerLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managerCustomer")
     public String managerCustomer;
+
     public GoogleAdsSearchads360V0ResourcesCustomerManagerLink withManagerCustomer(String managerCustomer) {
         this.managerCustomer = managerCustomer;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerManagerLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managerLinkId")
     public String managerLinkId;
+
     public GoogleAdsSearchads360V0ResourcesCustomerManagerLink withManagerLinkId(String managerLinkId) {
         this.managerLinkId = managerLinkId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerManagerLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesCustomerManagerLink withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAdsSearchads360V0ResourcesCustomerManagerLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleAdsSearchads360V0ResourcesCustomerManagerLinkStatusEnum status;
+
     public GoogleAdsSearchads360V0ResourcesCustomerManagerLink withStatus(GoogleAdsSearchads360V0ResourcesCustomerManagerLinkStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCustomerManagerLink(){}
 }

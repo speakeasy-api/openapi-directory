@@ -18,9 +18,11 @@ public class MoveFolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationParent")
     public String destinationParent;
+
     public MoveFolderRequest withDestinationParent(String destinationParent) {
         this.destinationParent = destinationParent;
         return this;
     }
     
+    public MoveFolderRequest(){}
 }

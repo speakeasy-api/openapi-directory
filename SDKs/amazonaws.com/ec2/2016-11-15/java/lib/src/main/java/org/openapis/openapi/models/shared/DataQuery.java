@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DataQuery {
     
     public String destination;
+
     public DataQuery withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class DataQuery {
     
     
     public String id;
+
     public DataQuery withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class DataQuery {
     
     
     public MetricTypeEnum metric;
+
     public DataQuery withMetric(MetricTypeEnum metric) {
         this.metric = metric;
         return this;
@@ -33,6 +36,7 @@ public class DataQuery {
     
     
     public PeriodTypeEnum period;
+
     public DataQuery withPeriod(PeriodTypeEnum period) {
         this.period = period;
         return this;
@@ -40,6 +44,7 @@ public class DataQuery {
     
     
     public String source;
+
     public DataQuery withSource(String source) {
         this.source = source;
         return this;
@@ -47,9 +52,11 @@ public class DataQuery {
     
     
     public StatisticTypeEnum statistic;
+
     public DataQuery withStatistic(StatisticTypeEnum statistic) {
         this.statistic = statistic;
         return this;
     }
     
+    public DataQuery(){}
 }

@@ -15,9 +15,11 @@ public class KinesisVideoStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public KinesisVideoStream withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public KinesisVideoStream(){}
 }

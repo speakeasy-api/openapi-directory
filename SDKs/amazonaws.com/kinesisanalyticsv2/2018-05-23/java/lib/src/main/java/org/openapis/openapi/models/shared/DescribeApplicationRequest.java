@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeApplicationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public DescribeApplicationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,13 @@ public class DescribeApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeAdditionalDetails")
     public Boolean includeAdditionalDetails;
+
     public DescribeApplicationRequest withIncludeAdditionalDetails(Boolean includeAdditionalDetails) {
         this.includeAdditionalDetails = includeAdditionalDetails;
         return this;
     }
     
+    public DescribeApplicationRequest(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

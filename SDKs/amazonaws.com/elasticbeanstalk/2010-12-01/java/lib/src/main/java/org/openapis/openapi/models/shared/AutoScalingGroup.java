@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AutoScalingGroup {
     
     public String name;
+
     public AutoScalingGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AutoScalingGroup(){}
 }

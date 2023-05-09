@@ -22,6 +22,7 @@ public class StoredImagePrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public StoredImagePrediction withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class StoredImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public StoredImagePrediction withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -38,6 +40,7 @@ public class StoredImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StoredImagePrediction withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class StoredImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public StoredImagePrediction withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -54,6 +58,7 @@ public class StoredImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iteration")
     public String iteration;
+
     public StoredImagePrediction withIteration(String iteration) {
         this.iteration = iteration;
         return this;
@@ -62,6 +67,7 @@ public class StoredImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictions")
     public Prediction[] predictions;
+
     public StoredImagePrediction withPredictions(Prediction[] predictions) {
         this.predictions = predictions;
         return this;
@@ -70,6 +76,7 @@ public class StoredImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public StoredImagePrediction withProject(String project) {
         this.project = project;
         return this;
@@ -78,9 +85,11 @@ public class StoredImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUri")
     public String thumbnailUri;
+
     public StoredImagePrediction withThumbnailUri(String thumbnailUri) {
         this.thumbnailUri = thumbnailUri;
         return this;
     }
     
+    public StoredImagePrediction(){}
 }

@@ -15,6 +15,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public Group withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public Long groupId;
+
     public Group withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -31,6 +33,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Group withId(Long id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Group(){}
 }

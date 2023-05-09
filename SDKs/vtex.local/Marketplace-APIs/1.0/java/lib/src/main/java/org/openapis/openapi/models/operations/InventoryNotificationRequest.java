@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryNotificationRequest {
@@ -12,6 +13,7 @@ public class InventoryNotificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InventoryNotificationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InventoryNotificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InventoryNotificationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class InventoryNotificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public InventoryNotificationRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class InventoryNotificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public InventoryNotificationRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -52,6 +57,7 @@ public class InventoryNotificationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public InventoryNotificationRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -62,9 +68,18 @@ public class InventoryNotificationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public InventoryNotificationRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public InventoryNotificationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment, @JsonProperty("sellerId") String sellerId, @JsonProperty("skuId") String skuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.environment = environment;
+        this.sellerId = sellerId;
+        this.skuId = skuId;
+  }
 }

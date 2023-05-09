@@ -18,9 +18,11 @@ public class QueryRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public AgentDeviceId[] devices;
+
     public QueryRequestPayload withDevices(AgentDeviceId[] devices) {
         this.devices = devices;
         return this;
     }
     
+    public QueryRequestPayload(){}
 }

@@ -12,6 +12,7 @@ public class GetByExternalIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalId")
     public String externalId;
+
     public GetByExternalIdRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -22,9 +23,11 @@ public class GetByExternalIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalProjectId")
     public String externalProjectId;
+
     public GetByExternalIdRequest withExternalProjectId(String externalProjectId) {
         this.externalProjectId = externalProjectId;
         return this;
     }
     
+    public GetByExternalIdRequest(){}
 }

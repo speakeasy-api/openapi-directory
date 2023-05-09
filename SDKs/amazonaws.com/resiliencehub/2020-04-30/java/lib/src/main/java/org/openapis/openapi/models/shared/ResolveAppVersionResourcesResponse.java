@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResolveAppVersionResourcesResponse {
     @JsonProperty("appArn")
     public String appArn;
+
     public ResolveAppVersionResourcesResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -19,6 +20,7 @@ public class ResolveAppVersionResourcesResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public ResolveAppVersionResourcesResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -26,6 +28,7 @@ public class ResolveAppVersionResourcesResponse {
     
     @JsonProperty("resolutionId")
     public String resolutionId;
+
     public ResolveAppVersionResourcesResponse withResolutionId(String resolutionId) {
         this.resolutionId = resolutionId;
         return this;
@@ -33,9 +36,16 @@ public class ResolveAppVersionResourcesResponse {
     
     @JsonProperty("status")
     public ResourceResolutionStatusTypeEnum status;
+
     public ResolveAppVersionResourcesResponse withStatus(ResourceResolutionStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public ResolveAppVersionResourcesResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion, @JsonProperty("resolutionId") String resolutionId, @JsonProperty("status") ResourceResolutionStatusTypeEnum status) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+        this.resolutionId = resolutionId;
+        this.status = status;
+  }
 }

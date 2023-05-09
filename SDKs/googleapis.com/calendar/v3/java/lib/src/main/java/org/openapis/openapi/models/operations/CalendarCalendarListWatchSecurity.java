@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CalendarCalendarListWatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CalendarCalendarListWatchSecurityOption1 option1;
+
     public CalendarCalendarListWatchSecurity withOption1(CalendarCalendarListWatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CalendarCalendarListWatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CalendarCalendarListWatchSecurityOption2 option2;
+
     public CalendarCalendarListWatchSecurity withOption2(CalendarCalendarListWatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CalendarCalendarListWatchSecurity(){}
 }

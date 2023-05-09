@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationGrantApp {
     @JsonProperty("client_id")
     public String clientId;
+
     public ApplicationGrantApp withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -16,6 +17,7 @@ public class ApplicationGrantApp {
     
     @JsonProperty("name")
     public String name;
+
     public ApplicationGrantApp withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +25,15 @@ public class ApplicationGrantApp {
     
     @JsonProperty("url")
     public String url;
+
     public ApplicationGrantApp withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ApplicationGrantApp(@JsonProperty("client_id") String clientId, @JsonProperty("name") String name, @JsonProperty("url") String url) {
+        this.clientId = clientId;
+        this.name = name;
+        this.url = url;
+  }
 }

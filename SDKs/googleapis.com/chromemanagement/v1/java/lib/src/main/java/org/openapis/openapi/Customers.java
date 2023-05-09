@@ -58,11 +58,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1CountChromeAppRequestsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1CountChromeHardwareFleetDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +278,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1CountChromeVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1CountInstalledAppsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,98 +332,6 @@ public class Customers {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleChromeManagementV1CountInstalledAppsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleChromeManagementV1CountInstalledAppsResponse.class);
                 res.googleChromeManagementV1CountInstalledAppsResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Get a summary of printing done by each printer.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterResponse chromemanagementCustomersReportsCountPrintJobsByPrinter(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest.class, baseUrl, "/v1/{customer}/reports:countPrintJobsByPrinter", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterResponse() {{
-            googleChromeManagementV1CountPrintJobsByPrinterResponse = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.GoogleChromeManagementV1CountPrintJobsByPrinterResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleChromeManagementV1CountPrintJobsByPrinterResponse.class);
-                res.googleChromeManagementV1CountPrintJobsByPrinterResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Get a summary of printing done by each user.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserResponse chromemanagementCustomersReportsCountPrintJobsByUser(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest.class, baseUrl, "/v1/{customer}/reports:countPrintJobsByUser", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserResponse() {{
-            googleChromeManagementV1CountPrintJobsByUserResponse = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.GoogleChromeManagementV1CountPrintJobsByUserResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleChromeManagementV1CountPrintJobsByUserResponse.class);
-                res.googleChromeManagementV1CountPrintJobsByUserResponse = out;
             }
         }
 
@@ -472,11 +366,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1FindInstalledAppDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -518,11 +410,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1ListTelemetryDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -564,11 +454,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1ListTelemetryEventsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -610,11 +498,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1TelemetryUser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -656,11 +542,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListResponse() {{
+        org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListResponse res = new org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListResponse(contentType, httpRes.statusCode()) {{
             googleChromeManagementV1ListTelemetryUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

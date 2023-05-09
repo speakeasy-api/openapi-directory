@@ -20,6 +20,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvisoryIds")
     public String[] advisoryIds;
+
     public Patch withAdvisoryIds(String[] advisoryIds) {
         this.advisoryIds = advisoryIds;
         return this;
@@ -28,6 +29,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arch")
     public String arch;
+
     public Patch withArch(String arch) {
         this.arch = arch;
         return this;
@@ -36,6 +38,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BugzillaIds")
     public String[] bugzillaIds;
+
     public Patch withBugzillaIds(String[] bugzillaIds) {
         this.bugzillaIds = bugzillaIds;
         return this;
@@ -44,6 +47,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CVEIds")
     public String[] cveIds;
+
     public Patch withCVEIds(String[] cveIds) {
         this.cveIds = cveIds;
         return this;
@@ -52,6 +56,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classification")
     public String classification;
+
     public Patch withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -60,6 +65,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentUrl")
     public String contentUrl;
+
     public Patch withContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
         return this;
@@ -68,6 +74,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Patch withDescription(String description) {
         this.description = description;
         return this;
@@ -76,6 +83,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Epoch")
     public Long epoch;
+
     public Patch withEpoch(Long epoch) {
         this.epoch = epoch;
         return this;
@@ -84,6 +92,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Patch withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +101,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KbNumber")
     public String kbNumber;
+
     public Patch withKbNumber(String kbNumber) {
         this.kbNumber = kbNumber;
         return this;
@@ -100,6 +110,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public Patch withLanguage(String language) {
         this.language = language;
         return this;
@@ -108,6 +119,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MsrcNumber")
     public String msrcNumber;
+
     public Patch withMsrcNumber(String msrcNumber) {
         this.msrcNumber = msrcNumber;
         return this;
@@ -116,6 +128,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MsrcSeverity")
     public String msrcSeverity;
+
     public Patch withMsrcSeverity(String msrcSeverity) {
         this.msrcSeverity = msrcSeverity;
         return this;
@@ -124,6 +137,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Patch withName(String name) {
         this.name = name;
         return this;
@@ -132,6 +146,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Product")
     public String product;
+
     public Patch withProduct(String product) {
         this.product = product;
         return this;
@@ -140,6 +155,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductFamily")
     public String productFamily;
+
     public Patch withProductFamily(String productFamily) {
         this.productFamily = productFamily;
         return this;
@@ -148,6 +164,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Release")
     public String release;
+
     public Patch withRelease(String release) {
         this.release = release;
         return this;
@@ -158,6 +175,7 @@ public class Patch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReleaseDate")
     public OffsetDateTime releaseDate;
+
     public Patch withReleaseDate(OffsetDateTime releaseDate) {
         this.releaseDate = releaseDate;
         return this;
@@ -166,6 +184,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Repository")
     public String repository;
+
     public Patch withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -174,6 +193,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public String severity;
+
     public Patch withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -182,6 +202,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Patch withTitle(String title) {
         this.title = title;
         return this;
@@ -190,6 +211,7 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Vendor")
     public String vendor;
+
     public Patch withVendor(String vendor) {
         this.vendor = vendor;
         return this;
@@ -198,9 +220,11 @@ public class Patch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public Patch withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Patch(){}
 }

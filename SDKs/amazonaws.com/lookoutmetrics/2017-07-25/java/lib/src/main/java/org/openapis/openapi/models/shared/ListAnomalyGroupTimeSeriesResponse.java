@@ -15,6 +15,7 @@ public class ListAnomalyGroupTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroupId")
     public String anomalyGroupId;
+
     public ListAnomalyGroupTimeSeriesResponse withAnomalyGroupId(String anomalyGroupId) {
         this.anomalyGroupId = anomalyGroupId;
         return this;
@@ -23,6 +24,7 @@ public class ListAnomalyGroupTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public ListAnomalyGroupTimeSeriesResponse withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -31,6 +33,7 @@ public class ListAnomalyGroupTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalyGroupTimeSeriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +42,7 @@ public class ListAnomalyGroupTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesList")
     public TimeSeries[] timeSeriesList;
+
     public ListAnomalyGroupTimeSeriesResponse withTimeSeriesList(TimeSeries[] timeSeriesList) {
         this.timeSeriesList = timeSeriesList;
         return this;
@@ -47,9 +51,11 @@ public class ListAnomalyGroupTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampList")
     public String[] timestampList;
+
     public ListAnomalyGroupTimeSeriesResponse withTimestampList(String[] timestampList) {
         this.timestampList = timestampList;
         return this;
     }
     
+    public ListAnomalyGroupTimeSeriesResponse(){}
 }

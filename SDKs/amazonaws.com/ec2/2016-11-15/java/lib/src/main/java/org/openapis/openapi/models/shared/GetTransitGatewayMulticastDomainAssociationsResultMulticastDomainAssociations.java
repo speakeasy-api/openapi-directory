@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations {
     
     public String resourceId;
+
     public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAs
     
     
     public String resourceOwnerId;
+
     public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -26,6 +28,7 @@ public class GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAs
     
     
     public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociationsResourceTypeEnum resourceType;
+
     public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations withResourceType(GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -33,6 +36,7 @@ public class GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAs
     
     
     public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociationsSubnet subnet;
+
     public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations withSubnet(GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociationsSubnet subnet) {
         this.subnet = subnet;
         return this;
@@ -40,9 +44,11 @@ public class GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAs
     
     
     public String transitGatewayAttachmentId;
+
     public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public GetTransitGatewayMulticastDomainAssociationsResultMulticastDomainAssociations(){}
 }

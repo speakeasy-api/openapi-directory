@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UntrashScoreRequest {
@@ -13,9 +14,13 @@ public class UntrashScoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public UntrashScoreRequest withScore(String score) {
         this.score = score;
         return this;
     }
     
+    public UntrashScoreRequest(@JsonProperty("score") String score) {
+        this.score = score;
+  }
 }

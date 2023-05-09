@@ -18,6 +18,7 @@ public class GoogleCloudMlV1BuiltInAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framework")
     public String framework;
+
     public GoogleCloudMlV1BuiltInAlgorithmOutput withFramework(String framework) {
         this.framework = framework;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1BuiltInAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelPath")
     public String modelPath;
+
     public GoogleCloudMlV1BuiltInAlgorithmOutput withModelPath(String modelPath) {
         this.modelPath = modelPath;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1BuiltInAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonVersion")
     public String pythonVersion;
+
     public GoogleCloudMlV1BuiltInAlgorithmOutput withPythonVersion(String pythonVersion) {
         this.pythonVersion = pythonVersion;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudMlV1BuiltInAlgorithmOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public GoogleCloudMlV1BuiltInAlgorithmOutput withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
     }
     
+    public GoogleCloudMlV1BuiltInAlgorithmOutput(){}
 }

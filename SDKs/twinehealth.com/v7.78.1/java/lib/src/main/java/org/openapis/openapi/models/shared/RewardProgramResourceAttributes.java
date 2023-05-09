@@ -15,6 +15,7 @@ public class RewardProgramResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_unit")
     public RewardProgramResourceAttributesBudgetUnitEnum budgetUnit;
+
     public RewardProgramResourceAttributes withBudgetUnit(RewardProgramResourceAttributesBudgetUnitEnum budgetUnit) {
         this.budgetUnit = budgetUnit;
         return this;
@@ -25,6 +26,7 @@ public class RewardProgramResourceAttributes {
      */
     @JsonProperty("budget_value")
     public Double budgetValue;
+
     public RewardProgramResourceAttributes withBudgetValue(Double budgetValue) {
         this.budgetValue = budgetValue;
         return this;
@@ -36,6 +38,7 @@ public class RewardProgramResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RewardProgramResourceAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class RewardProgramResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration_active")
     public Double durationActive;
+
     public RewardProgramResourceAttributes withDurationActive(Double durationActive) {
         this.durationActive = durationActive;
         return this;
@@ -57,6 +61,7 @@ public class RewardProgramResourceAttributes {
      */
     @JsonProperty("end_at")
     public String endAt;
+
     public RewardProgramResourceAttributes withEndAt(String endAt) {
         this.endAt = endAt;
         return this;
@@ -68,6 +73,7 @@ public class RewardProgramResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frozen")
     public Boolean frozen;
+
     public RewardProgramResourceAttributes withFrozen(Boolean frozen) {
         this.frozen = frozen;
         return this;
@@ -79,6 +85,7 @@ public class RewardProgramResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfill_as_earned")
     public Boolean fulfillAsEarned;
+
     public RewardProgramResourceAttributes withFulfillAsEarned(Boolean fulfillAsEarned) {
         this.fulfillAsEarned = fulfillAsEarned;
         return this;
@@ -89,6 +96,7 @@ public class RewardProgramResourceAttributes {
      */
     @JsonProperty("name")
     public String name;
+
     public RewardProgramResourceAttributes withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +107,7 @@ public class RewardProgramResourceAttributes {
      */
     @JsonProperty("start_at")
     public String startAt;
+
     public RewardProgramResourceAttributes withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
@@ -110,9 +119,16 @@ public class RewardProgramResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagline")
     public String tagline;
+
     public RewardProgramResourceAttributes withTagline(String tagline) {
         this.tagline = tagline;
         return this;
     }
     
+    public RewardProgramResourceAttributes(@JsonProperty("budget_value") Double budgetValue, @JsonProperty("end_at") String endAt, @JsonProperty("name") String name, @JsonProperty("start_at") String startAt) {
+        this.budgetValue = budgetValue;
+        this.endAt = endAt;
+        this.name = name;
+        this.startAt = startAt;
+  }
 }

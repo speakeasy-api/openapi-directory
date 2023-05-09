@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeHsmConfigurationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeHsmConfigurationsActionEnum action;
+
     public GETDescribeHsmConfigurationsRequest withAction(GETDescribeHsmConfigurationsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeHsmConfigurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmConfigurationIdentifier")
     public String hsmConfigurationIdentifier;
+
     public GETDescribeHsmConfigurationsRequest withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeHsmConfigurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeHsmConfigurationsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeHsmConfigurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeHsmConfigurationsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeHsmConfigurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
     public String[] tagKeys;
+
     public GETDescribeHsmConfigurationsRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeHsmConfigurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagValues")
     public String[] tagValues;
+
     public GETDescribeHsmConfigurationsRequest withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
@@ -66,6 +73,7 @@ public class GETDescribeHsmConfigurationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeHsmConfigurationsVersionEnum version;
+
     public GETDescribeHsmConfigurationsRequest withVersion(GETDescribeHsmConfigurationsVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETDescribeHsmConfigurationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeHsmConfigurationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETDescribeHsmConfigurationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeHsmConfigurationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETDescribeHsmConfigurationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeHsmConfigurationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETDescribeHsmConfigurationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeHsmConfigurationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETDescribeHsmConfigurationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeHsmConfigurationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETDescribeHsmConfigurationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeHsmConfigurationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,14 @@ public class GETDescribeHsmConfigurationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeHsmConfigurationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeHsmConfigurationsRequest(@JsonProperty("Action") GETDescribeHsmConfigurationsActionEnum action, @JsonProperty("Version") GETDescribeHsmConfigurationsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

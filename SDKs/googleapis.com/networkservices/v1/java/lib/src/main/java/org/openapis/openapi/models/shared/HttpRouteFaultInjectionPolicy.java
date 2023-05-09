@@ -18,6 +18,7 @@ public class HttpRouteFaultInjectionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abort")
     public HttpRouteFaultInjectionPolicyAbort abort;
+
     public HttpRouteFaultInjectionPolicy withAbort(HttpRouteFaultInjectionPolicyAbort abort) {
         this.abort = abort;
         return this;
@@ -29,9 +30,11 @@ public class HttpRouteFaultInjectionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delay")
     public HttpRouteFaultInjectionPolicyDelay delay;
+
     public HttpRouteFaultInjectionPolicy withDelay(HttpRouteFaultInjectionPolicyDelay delay) {
         this.delay = delay;
         return this;
     }
     
+    public HttpRouteFaultInjectionPolicy(){}
 }

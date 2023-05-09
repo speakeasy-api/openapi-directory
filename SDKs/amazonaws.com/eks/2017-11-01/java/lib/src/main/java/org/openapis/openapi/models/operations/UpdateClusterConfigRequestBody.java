@@ -15,6 +15,7 @@ public class UpdateClusterConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public UpdateClusterConfigRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -26,6 +27,7 @@ public class UpdateClusterConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public UpdateClusterConfigRequestBodyLogging logging;
+
     public UpdateClusterConfigRequestBody withLogging(UpdateClusterConfigRequestBodyLogging logging) {
         this.logging = logging;
         return this;
@@ -37,9 +39,11 @@ public class UpdateClusterConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcesVpcConfig")
     public UpdateClusterConfigRequestBodyResourcesVpcConfig resourcesVpcConfig;
+
     public UpdateClusterConfigRequestBody withResourcesVpcConfig(UpdateClusterConfigRequestBodyResourcesVpcConfig resourcesVpcConfig) {
         this.resourcesVpcConfig = resourcesVpcConfig;
         return this;
     }
     
+    public UpdateClusterConfigRequestBody(){}
 }

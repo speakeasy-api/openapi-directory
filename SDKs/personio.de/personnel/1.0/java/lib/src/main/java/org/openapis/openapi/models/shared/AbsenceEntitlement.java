@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AbsenceEntitlement {
     @JsonProperty("label")
     public String label;
+
     public AbsenceEntitlement withLabel(String label) {
         this.label = label;
         return this;
@@ -16,9 +17,14 @@ public class AbsenceEntitlement {
     
     @JsonProperty("value")
     public AbsenceEntitlementValue[] value;
+
     public AbsenceEntitlement withValue(AbsenceEntitlementValue[] value) {
         this.value = value;
         return this;
     }
     
+    public AbsenceEntitlement(@JsonProperty("label") String label, @JsonProperty("value") AbsenceEntitlementValue[] value) {
+        this.label = label;
+        this.value = value;
+  }
 }

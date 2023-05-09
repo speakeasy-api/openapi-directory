@@ -15,6 +15,7 @@ public class BatchLookupPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchLookupPolicyResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class BatchLookupPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyToPathList")
     public PolicyToPath[] policyToPathList;
+
     public BatchLookupPolicyResponse withPolicyToPathList(PolicyToPath[] policyToPathList) {
         this.policyToPathList = policyToPathList;
         return this;
     }
     
+    public BatchLookupPolicyResponse(){}
 }

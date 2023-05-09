@@ -15,9 +15,11 @@ public class DetectSyntaxResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyntaxTokens")
     public SyntaxToken[] syntaxTokens;
+
     public DetectSyntaxResponse withSyntaxTokens(SyntaxToken[] syntaxTokens) {
         this.syntaxTokens = syntaxTokens;
         return this;
     }
     
+    public DetectSyntaxResponse(){}
 }

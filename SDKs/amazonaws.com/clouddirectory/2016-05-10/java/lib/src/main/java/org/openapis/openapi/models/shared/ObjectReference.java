@@ -15,9 +15,11 @@ public class ObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public ObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public ObjectReference(){}
 }

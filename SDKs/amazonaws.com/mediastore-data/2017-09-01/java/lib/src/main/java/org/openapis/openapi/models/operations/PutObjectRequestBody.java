@@ -12,9 +12,13 @@ public class PutObjectRequestBody {
      */
     @JsonProperty("Body")
     public String body;
+
     public PutObjectRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public PutObjectRequestBody(@JsonProperty("Body") String body) {
+        this.body = body;
+  }
 }

@@ -25,6 +25,7 @@ public class ZoneOffsetTransition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateTimeAfter")
     public OffsetDateTime dateTimeAfter;
+
     public ZoneOffsetTransition withDateTimeAfter(OffsetDateTime dateTimeAfter) {
         this.dateTimeAfter = dateTimeAfter;
         return this;
@@ -38,6 +39,7 @@ public class ZoneOffsetTransition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateTimeBefore")
     public OffsetDateTime dateTimeBefore;
+
     public ZoneOffsetTransition withDateTimeBefore(OffsetDateTime dateTimeBefore) {
         this.dateTimeBefore = dateTimeBefore;
         return this;
@@ -49,6 +51,7 @@ public class ZoneOffsetTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Duration duration;
+
     public ZoneOffsetTransition withDuration(Duration duration) {
         this.duration = duration;
         return this;
@@ -60,6 +63,7 @@ public class ZoneOffsetTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gap")
     public Boolean gap;
+
     public ZoneOffsetTransition withGap(Boolean gap) {
         this.gap = gap;
         return this;
@@ -71,6 +75,7 @@ public class ZoneOffsetTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instant")
     public Long instant;
+
     public ZoneOffsetTransition withInstant(Long instant) {
         this.instant = instant;
         return this;
@@ -82,6 +87,7 @@ public class ZoneOffsetTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetAfter")
     public ZoneOffset offsetAfter;
+
     public ZoneOffsetTransition withOffsetAfter(ZoneOffset offsetAfter) {
         this.offsetAfter = offsetAfter;
         return this;
@@ -93,6 +99,7 @@ public class ZoneOffsetTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetBefore")
     public ZoneOffset offsetBefore;
+
     public ZoneOffsetTransition withOffsetBefore(ZoneOffset offsetBefore) {
         this.offsetBefore = offsetBefore;
         return this;
@@ -104,9 +111,11 @@ public class ZoneOffsetTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overlap")
     public Boolean overlap;
+
     public ZoneOffsetTransition withOverlap(Boolean overlap) {
         this.overlap = overlap;
         return this;
     }
     
+    public ZoneOffsetTransition(){}
 }

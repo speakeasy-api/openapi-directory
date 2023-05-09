@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposRemoveAppAccessRestrictionsResponse {
     
     public String contentType;
+
     public ReposRemoveAppAccessRestrictionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposRemoveAppAccessRestrictionsResponse {
     
     
     public Integer statusCode;
+
     public ReposRemoveAppAccessRestrictionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposRemoveAppAccessRestrictionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposRemoveAppAccessRestrictionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposRemoveAppAccessRestrictionsResponse {
      */
     
     public org.openapis.openapi.models.shared.Integration[] integrations;
+
     public ReposRemoveAppAccessRestrictionsResponse withIntegrations(org.openapis.openapi.models.shared.Integration[] integrations) {
         this.integrations = integrations;
         return this;
@@ -43,9 +48,14 @@ public class ReposRemoveAppAccessRestrictionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposRemoveAppAccessRestrictionsResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposRemoveAppAccessRestrictionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

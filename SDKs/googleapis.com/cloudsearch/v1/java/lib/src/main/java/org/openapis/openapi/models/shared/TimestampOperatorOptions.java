@@ -18,6 +18,7 @@ public class TimestampOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greaterThanOperatorName")
     public String greaterThanOperatorName;
+
     public TimestampOperatorOptions withGreaterThanOperatorName(String greaterThanOperatorName) {
         this.greaterThanOperatorName = greaterThanOperatorName;
         return this;
@@ -29,6 +30,7 @@ public class TimestampOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lessThanOperatorName")
     public String lessThanOperatorName;
+
     public TimestampOperatorOptions withLessThanOperatorName(String lessThanOperatorName) {
         this.lessThanOperatorName = lessThanOperatorName;
         return this;
@@ -40,9 +42,11 @@ public class TimestampOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public TimestampOperatorOptions withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
     }
     
+    public TimestampOperatorOptions(){}
 }

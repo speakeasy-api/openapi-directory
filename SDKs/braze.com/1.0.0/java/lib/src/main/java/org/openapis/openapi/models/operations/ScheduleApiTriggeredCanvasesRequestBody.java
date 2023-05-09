@@ -12,6 +12,7 @@ public class ScheduleApiTriggeredCanvasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audience")
     public ScheduleApiTriggeredCanvasesRequestBodyAudience audience;
+
     public ScheduleApiTriggeredCanvasesRequestBody withAudience(ScheduleApiTriggeredCanvasesRequestBodyAudience audience) {
         this.audience = audience;
         return this;
@@ -20,6 +21,7 @@ public class ScheduleApiTriggeredCanvasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("broadcast")
     public Boolean broadcast;
+
     public ScheduleApiTriggeredCanvasesRequestBody withBroadcast(Boolean broadcast) {
         this.broadcast = broadcast;
         return this;
@@ -28,6 +30,7 @@ public class ScheduleApiTriggeredCanvasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canvas_entry_properties")
     public java.util.Map<String, Object> canvasEntryProperties;
+
     public ScheduleApiTriggeredCanvasesRequestBody withCanvasEntryProperties(java.util.Map<String, Object> canvasEntryProperties) {
         this.canvasEntryProperties = canvasEntryProperties;
         return this;
@@ -36,6 +39,7 @@ public class ScheduleApiTriggeredCanvasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canvas_id")
     public String canvasId;
+
     public ScheduleApiTriggeredCanvasesRequestBody withCanvasId(String canvasId) {
         this.canvasId = canvasId;
         return this;
@@ -44,6 +48,7 @@ public class ScheduleApiTriggeredCanvasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipients")
     public ScheduleApiTriggeredCanvasesRequestBodyRecipients[] recipients;
+
     public ScheduleApiTriggeredCanvasesRequestBody withRecipients(ScheduleApiTriggeredCanvasesRequestBodyRecipients[] recipients) {
         this.recipients = recipients;
         return this;
@@ -52,9 +57,11 @@ public class ScheduleApiTriggeredCanvasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ScheduleApiTriggeredCanvasesRequestBodySchedule schedule;
+
     public ScheduleApiTriggeredCanvasesRequestBody withSchedule(ScheduleApiTriggeredCanvasesRequestBodySchedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public ScheduleApiTriggeredCanvasesRequestBody(){}
 }

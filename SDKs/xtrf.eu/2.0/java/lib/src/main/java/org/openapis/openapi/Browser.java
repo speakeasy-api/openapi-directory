@@ -63,11 +63,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BrowseCSVResponse res = new org.openapis.openapi.models.operations.BrowseCSVResponse() {{
+        org.openapis.openapi.models.operations.BrowseCSVResponse res = new org.openapis.openapi.models.operations.BrowseCSVResponse(contentType, httpRes.statusCode()) {{
             browseCSVDefaultApplicationVndXtrfV1PlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -109,11 +107,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BrowseJSONResponse res = new org.openapis.openapi.models.operations.BrowseJSONResponse() {{
+        org.openapis.openapi.models.operations.BrowseJSONResponse res = new org.openapis.openapi.models.operations.BrowseJSONResponse(contentType, httpRes.statusCode()) {{
             browseJSONDefaultApplicationVndXtrfV1PlusJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -154,11 +150,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateResponse res = new org.openapis.openapi.models.operations.CreateResponse() {{
+        org.openapis.openapi.models.operations.CreateResponse res = new org.openapis.openapi.models.operations.CreateResponse(contentType, httpRes.statusCode()) {{
             viewWithIdDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -194,10 +188,8 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse() {{
+        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -228,11 +220,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteColumnResponse res = new org.openapis.openapi.models.operations.DeleteColumnResponse() {{
+        org.openapis.openapi.models.operations.DeleteColumnResponse res = new org.openapis.openapi.models.operations.DeleteColumnResponse(contentType, httpRes.statusCode()) {{
             columnDTOS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -268,11 +258,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse() {{
+        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse(contentType, httpRes.statusCode()) {{
             viewDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -308,11 +296,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetColumnSettingsResponse res = new org.openapis.openapi.models.operations.GetColumnSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetColumnSettingsResponse res = new org.openapis.openapi.models.operations.GetColumnSettingsResponse(contentType, httpRes.statusCode()) {{
             getColumnSettingsDefaultApplicationVndXtrfV1PlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -348,11 +334,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetColumnsResponse res = new org.openapis.openapi.models.operations.GetColumnsResponse() {{
+        org.openapis.openapi.models.operations.GetColumnsResponse res = new org.openapis.openapi.models.operations.GetColumnsResponse(contentType, httpRes.statusCode()) {{
             columnDTOS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -394,11 +378,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCurrentViewDetailsResponse res = new org.openapis.openapi.models.operations.GetCurrentViewDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetCurrentViewDetailsResponse res = new org.openapis.openapi.models.operations.GetCurrentViewDetailsResponse(contentType, httpRes.statusCode()) {{
             viewDetailsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -434,11 +416,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilterResponse res = new org.openapis.openapi.models.operations.GetFilterResponse() {{
+        org.openapis.openapi.models.operations.GetFilterResponse res = new org.openapis.openapi.models.operations.GetFilterResponse(contentType, httpRes.statusCode()) {{
             filterDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -474,11 +454,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLocalSettingsResponse res = new org.openapis.openapi.models.operations.GetLocalSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetLocalSettingsResponse res = new org.openapis.openapi.models.operations.GetLocalSettingsResponse(contentType, httpRes.statusCode()) {{
             localSettingsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -514,11 +492,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderResponse res = new org.openapis.openapi.models.operations.GetOrderResponse() {{
+        org.openapis.openapi.models.operations.GetOrderResponse res = new org.openapis.openapi.models.operations.GetOrderResponse(contentType, httpRes.statusCode()) {{
             orderDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -554,11 +530,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPermissionsResponse res = new org.openapis.openapi.models.operations.GetPermissionsResponse() {{
+        org.openapis.openapi.models.operations.GetPermissionsResponse res = new org.openapis.openapi.models.operations.GetPermissionsResponse(contentType, httpRes.statusCode()) {{
             permissionsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -594,11 +568,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsResponse res = new org.openapis.openapi.models.operations.GetSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsResponse res = new org.openapis.openapi.models.operations.GetSettingsResponse(contentType, httpRes.statusCode()) {{
             settingsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -640,11 +612,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetViewDetailsResponse res = new org.openapis.openapi.models.operations.GetViewDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetViewDetailsResponse res = new org.openapis.openapi.models.operations.GetViewDetailsResponse(contentType, httpRes.statusCode()) {{
             viewDetailsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -686,11 +656,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetViewsBriefResponse res = new org.openapis.openapi.models.operations.GetViewsBriefResponse() {{
+        org.openapis.openapi.models.operations.GetViewsBriefResponse res = new org.openapis.openapi.models.operations.GetViewsBriefResponse(contentType, httpRes.statusCode()) {{
             viewsBriefDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -732,11 +700,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsResponse res = new org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsResponse() {{
+        org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsResponse res = new org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsResponse(contentType, httpRes.statusCode()) {{
             viewDetailsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -777,11 +743,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateResponse res = new org.openapis.openapi.models.operations.UpdateResponse() {{
+        org.openapis.openapi.models.operations.UpdateResponse res = new org.openapis.openapi.models.operations.UpdateResponse(contentType, httpRes.statusCode()) {{
             viewDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -822,11 +786,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateColumnSettingsResponse res = new org.openapis.openapi.models.operations.UpdateColumnSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateColumnSettingsResponse res = new org.openapis.openapi.models.operations.UpdateColumnSettingsResponse(contentType, httpRes.statusCode()) {{
             updateColumnSettingsDefaultApplicationVndXtrfV1PlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -867,11 +829,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateColumnsResponse res = new org.openapis.openapi.models.operations.UpdateColumnsResponse() {{
+        org.openapis.openapi.models.operations.UpdateColumnsResponse res = new org.openapis.openapi.models.operations.UpdateColumnsResponse(contentType, httpRes.statusCode()) {{
             columnDTOS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -912,11 +872,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFilterResponse res = new org.openapis.openapi.models.operations.UpdateFilterResponse() {{
+        org.openapis.openapi.models.operations.UpdateFilterResponse res = new org.openapis.openapi.models.operations.UpdateFilterResponse(contentType, httpRes.statusCode()) {{
             filterDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -957,11 +915,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFilterPropertyResponse res = new org.openapis.openapi.models.operations.UpdateFilterPropertyResponse() {{
+        org.openapis.openapi.models.operations.UpdateFilterPropertyResponse res = new org.openapis.openapi.models.operations.UpdateFilterPropertyResponse(contentType, httpRes.statusCode()) {{
             updateFilterPropertyDefaultApplicationVndXtrfV1PlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -1002,11 +958,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLocalSettingsResponse res = new org.openapis.openapi.models.operations.UpdateLocalSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateLocalSettingsResponse res = new org.openapis.openapi.models.operations.UpdateLocalSettingsResponse(contentType, httpRes.statusCode()) {{
             localSettingsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -1047,11 +1001,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateOrderResponse res = new org.openapis.openapi.models.operations.UpdateOrderResponse() {{
+        org.openapis.openapi.models.operations.UpdateOrderResponse res = new org.openapis.openapi.models.operations.UpdateOrderResponse(contentType, httpRes.statusCode()) {{
             orderDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -1092,11 +1044,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePermissionsResponse res = new org.openapis.openapi.models.operations.UpdatePermissionsResponse() {{
+        org.openapis.openapi.models.operations.UpdatePermissionsResponse res = new org.openapis.openapi.models.operations.UpdatePermissionsResponse(contentType, httpRes.statusCode()) {{
             permissionsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -1137,11 +1087,9 @@ public class Browser {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSettingsResponse res = new org.openapis.openapi.models.operations.UpdateSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateSettingsResponse res = new org.openapis.openapi.models.operations.UpdateSettingsResponse(contentType, httpRes.statusCode()) {{
             settingsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

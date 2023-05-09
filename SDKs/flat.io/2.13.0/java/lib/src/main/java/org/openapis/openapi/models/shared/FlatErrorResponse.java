@@ -18,6 +18,7 @@ public class FlatErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public FlatErrorResponse withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class FlatErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FlatErrorResponse withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class FlatErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FlatErrorResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -51,9 +54,11 @@ public class FlatErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param")
     public String param;
+
     public FlatErrorResponse withParam(String param) {
         this.param = param;
         return this;
     }
     
+    public FlatErrorResponse(){}
 }

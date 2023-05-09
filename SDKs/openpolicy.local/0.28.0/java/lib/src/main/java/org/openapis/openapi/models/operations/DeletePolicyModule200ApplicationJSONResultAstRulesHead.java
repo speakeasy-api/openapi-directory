@@ -15,6 +15,7 @@ public class DeletePolicyModule200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public DeletePolicyModule200ApplicationJSONResultAstRulesHeadKey key;
+
     public DeletePolicyModule200ApplicationJSONResultAstRulesHead withKey(DeletePolicyModule200ApplicationJSONResultAstRulesHeadKey key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class DeletePolicyModule200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeletePolicyModule200ApplicationJSONResultAstRulesHead withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONResultAstRulesHead(){}
 }

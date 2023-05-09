@@ -15,9 +15,11 @@ public class KeyFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public KeyFailure withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public KeyFailure(){}
 }

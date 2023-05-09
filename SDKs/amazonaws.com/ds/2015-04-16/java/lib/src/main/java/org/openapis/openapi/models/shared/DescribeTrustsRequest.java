@@ -15,6 +15,7 @@ public class DescribeTrustsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DescribeTrustsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -23,6 +24,7 @@ public class DescribeTrustsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeTrustsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -31,6 +33,7 @@ public class DescribeTrustsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeTrustsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,9 +42,11 @@ public class DescribeTrustsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustIds")
     public String[] trustIds;
+
     public DescribeTrustsRequest withTrustIds(String[] trustIds) {
         this.trustIds = trustIds;
         return this;
     }
     
+    public DescribeTrustsRequest(){}
 }

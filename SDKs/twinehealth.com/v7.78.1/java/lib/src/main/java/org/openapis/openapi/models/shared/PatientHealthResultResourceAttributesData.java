@@ -15,9 +15,11 @@ public class PatientHealthResultResourceAttributesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public PatientHealthResultResourceAttributesData withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public PatientHealthResultResourceAttributesData(){}
 }

@@ -55,11 +55,9 @@ public class OwnershipFindOwnership {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOwnershipResponse res = new org.openapis.openapi.models.operations.GetOwnershipResponse() {{
+        org.openapis.openapi.models.operations.GetOwnershipResponse res = new org.openapis.openapi.models.operations.GetOwnershipResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -96,11 +94,9 @@ public class OwnershipFindOwnership {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOwnershipOwnershipIdResponse res = new org.openapis.openapi.models.operations.GetOwnershipOwnershipIdResponse() {{
+        org.openapis.openapi.models.operations.GetOwnershipOwnershipIdResponse res = new org.openapis.openapi.models.operations.GetOwnershipOwnershipIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -143,11 +139,9 @@ public class OwnershipFindOwnership {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdResponse res = new org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdResponse() {{
+        org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdResponse res = new org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -190,11 +184,9 @@ public class OwnershipFindOwnership {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOwnershipInstallResponse res = new org.openapis.openapi.models.operations.PostOwnershipInstallResponse() {{
+        org.openapis.openapi.models.operations.PostOwnershipInstallResponse res = new org.openapis.openapi.models.operations.PostOwnershipInstallResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 402 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412) {
@@ -237,11 +229,9 @@ public class OwnershipFindOwnership {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdResponse res = new org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdResponse() {{
+        org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdResponse res = new org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409) {
@@ -284,11 +274,9 @@ public class OwnershipFindOwnership {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOwnershipOwnershipIdResponse res = new org.openapis.openapi.models.operations.PostOwnershipOwnershipIdResponse() {{
+        org.openapis.openapi.models.operations.PostOwnershipOwnershipIdResponse res = new org.openapis.openapi.models.operations.PostOwnershipOwnershipIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {

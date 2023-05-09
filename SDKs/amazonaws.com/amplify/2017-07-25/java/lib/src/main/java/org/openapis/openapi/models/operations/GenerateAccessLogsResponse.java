@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateAccessLogsResponse {
@@ -12,6 +13,7 @@ public class GenerateAccessLogsResponse {
      */
     
     public Object badRequestException;
+
     public GenerateAccessLogsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GenerateAccessLogsResponse {
     
     
     public String contentType;
+
     public GenerateAccessLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GenerateAccessLogsResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateAccessLogsResult generateAccessLogsResult;
+
     public GenerateAccessLogsResponse withGenerateAccessLogsResult(org.openapis.openapi.models.shared.GenerateAccessLogsResult generateAccessLogsResult) {
         this.generateAccessLogsResult = generateAccessLogsResult;
         return this;
@@ -39,6 +43,7 @@ public class GenerateAccessLogsResponse {
      */
     
     public Object internalFailureException;
+
     public GenerateAccessLogsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GenerateAccessLogsResponse {
      */
     
     public Object notFoundException;
+
     public GenerateAccessLogsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GenerateAccessLogsResponse {
     
     
     public Integer statusCode;
+
     public GenerateAccessLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GenerateAccessLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateAccessLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GenerateAccessLogsResponse {
      */
     
     public Object unauthorizedException;
+
     public GenerateAccessLogsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GenerateAccessLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2MessageAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containEntities")
     public Boolean containEntities;
+
     public GoogleCloudDialogflowV2MessageAnnotation withContainEntities(Boolean containEntities) {
         this.containEntities = containEntities;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2MessageAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parts")
     public GoogleCloudDialogflowV2AnnotatedMessagePart[] parts;
+
     public GoogleCloudDialogflowV2MessageAnnotation withParts(GoogleCloudDialogflowV2AnnotatedMessagePart[] parts) {
         this.parts = parts;
         return this;
     }
     
+    public GoogleCloudDialogflowV2MessageAnnotation(){}
 }

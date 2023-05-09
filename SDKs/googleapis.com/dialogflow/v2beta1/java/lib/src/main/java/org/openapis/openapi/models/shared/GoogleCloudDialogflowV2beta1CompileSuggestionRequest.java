@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1CompileSuggestionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextSize")
     public Integer contextSize;
+
     public GoogleCloudDialogflowV2beta1CompileSuggestionRequest withContextSize(Integer contextSize) {
         this.contextSize = contextSize;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1CompileSuggestionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestMessage")
     public String latestMessage;
+
     public GoogleCloudDialogflowV2beta1CompileSuggestionRequest withLatestMessage(String latestMessage) {
         this.latestMessage = latestMessage;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1CompileSuggestionRequest(){}
 }

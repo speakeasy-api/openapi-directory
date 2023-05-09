@@ -15,6 +15,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestTrialId")
     public String bestTrialId;
+
     public ModelInput withBestTrialId(String bestTrialId) {
         this.bestTrialId = bestTrialId;
         return this;
@@ -26,6 +27,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ModelInput withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +36,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public ModelInput withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -45,6 +48,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTime")
     public String expirationTime;
+
     public ModelInput withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -56,6 +60,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public ModelInput withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -67,6 +72,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hparamSearchSpaces")
     public HparamSearchSpaces hparamSearchSpaces;
+
     public ModelInput withHparamSearchSpaces(HparamSearchSpaces hparamSearchSpaces) {
         this.hparamSearchSpaces = hparamSearchSpaces;
         return this;
@@ -78,6 +84,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ModelInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -86,6 +93,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelReference")
     public ModelReference modelReference;
+
     public ModelInput withModelReference(ModelReference modelReference) {
         this.modelReference = modelReference;
         return this;
@@ -97,9 +105,11 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingRuns")
     public TrainingRunInput[] trainingRuns;
+
     public ModelInput withTrainingRuns(TrainingRunInput[] trainingRuns) {
         this.trainingRuns = trainingRuns;
         return this;
     }
     
+    public ModelInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCelebrityInfoResponse {
@@ -12,6 +13,7 @@ public class GetCelebrityInfoResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCelebrityInfoResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCelebrityInfoResponse {
     
     
     public String contentType;
+
     public GetCelebrityInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCelebrityInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCelebrityInfoResponse getCelebrityInfoResponse;
+
     public GetCelebrityInfoResponse withGetCelebrityInfoResponse(org.openapis.openapi.models.shared.GetCelebrityInfoResponse getCelebrityInfoResponse) {
         this.getCelebrityInfoResponse = getCelebrityInfoResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCelebrityInfoResponse {
      */
     
     public Object internalServerError;
+
     public GetCelebrityInfoResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetCelebrityInfoResponse {
      */
     
     public Object invalidParameterException;
+
     public GetCelebrityInfoResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetCelebrityInfoResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetCelebrityInfoResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetCelebrityInfoResponse {
     
     
     public Integer statusCode;
+
     public GetCelebrityInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetCelebrityInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCelebrityInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetCelebrityInfoResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCelebrityInfoResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class GetCelebrityInfoResponse {
      */
     
     public Object throttlingException;
+
     public GetCelebrityInfoResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetCelebrityInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

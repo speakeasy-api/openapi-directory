@@ -15,6 +15,7 @@ public class TagList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public TagList withSum(Integer sum) {
         this.sum = sum;
         return this;
@@ -25,9 +26,14 @@ public class TagList {
      */
     @JsonProperty("tags")
     public Tag[] tags;
+
     public TagList withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagList(@JsonProperty("sum") Integer sum, @JsonProperty("tags") Tag[] tags) {
+        this.sum = sum;
+        this.tags = tags;
+  }
 }

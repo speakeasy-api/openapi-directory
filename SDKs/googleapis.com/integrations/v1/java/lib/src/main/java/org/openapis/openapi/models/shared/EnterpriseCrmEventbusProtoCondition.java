@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventPropertyKey")
     public String eventPropertyKey;
+
     public EnterpriseCrmEventbusProtoCondition withEventPropertyKey(String eventPropertyKey) {
         this.eventPropertyKey = eventPropertyKey;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public EnterpriseCrmEventbusProtoConditionOperatorEnum operator;
+
     public EnterpriseCrmEventbusProtoCondition withOperator(EnterpriseCrmEventbusProtoConditionOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -40,9 +42,11 @@ public class EnterpriseCrmEventbusProtoCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public EnterpriseCrmEventbusProtoValueType value;
+
     public EnterpriseCrmEventbusProtoCondition withValue(EnterpriseCrmEventbusProtoValueType value) {
         this.value = value;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoCondition(){}
 }

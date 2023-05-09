@@ -20,6 +20,7 @@ public class ActionToPost {
     @JsonProperty("Actions")
     @SpeakeasyMetadata("form:name=Actions,json")
     public ActionToPostItem[] actions;
+
     public ActionToPost withActions(ActionToPostItem[] actions) {
         this.actions = actions;
         return this;
@@ -32,9 +33,11 @@ public class ActionToPost {
     @JsonProperty("DeviceID")
     @SpeakeasyMetadata("form:name=DeviceID")
     public String deviceID;
+
     public ActionToPost withDeviceID(String deviceID) {
         this.deviceID = deviceID;
         return this;
     }
     
+    public ActionToPost(){}
 }

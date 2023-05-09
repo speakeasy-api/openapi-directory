@@ -18,6 +18,7 @@ public class ServiceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ServiceType withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class ServiceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceTypeId")
     public String serviceTypeId;
+
     public ServiceType withServiceTypeId(String serviceTypeId) {
         this.serviceTypeId = serviceTypeId;
         return this;
     }
     
+    public ServiceType(){}
 }

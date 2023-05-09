@@ -18,6 +18,7 @@ public class OfferDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basePlanId")
     public String basePlanId;
+
     public OfferDetails withBasePlanId(String basePlanId) {
         this.basePlanId = basePlanId;
         return this;
@@ -29,6 +30,7 @@ public class OfferDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public OfferDetails withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -40,9 +42,11 @@ public class OfferDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerTags")
     public String[] offerTags;
+
     public OfferDetails withOfferTags(String[] offerTags) {
         this.offerTags = offerTags;
         return this;
     }
     
+    public OfferDetails(){}
 }

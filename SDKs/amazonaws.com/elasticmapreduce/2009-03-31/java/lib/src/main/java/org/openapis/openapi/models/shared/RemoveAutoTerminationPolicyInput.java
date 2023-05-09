@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveAutoTerminationPolicyInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public RemoveAutoTerminationPolicyInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     
+    public RemoveAutoTerminationPolicyInput(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

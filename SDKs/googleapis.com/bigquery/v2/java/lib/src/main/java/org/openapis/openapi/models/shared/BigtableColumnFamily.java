@@ -15,6 +15,7 @@ public class BigtableColumnFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public BigtableColumn[] columns;
+
     public BigtableColumnFamily withColumns(BigtableColumn[] columns) {
         this.columns = columns;
         return this;
@@ -26,6 +27,7 @@ public class BigtableColumnFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public BigtableColumnFamily withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -37,6 +39,7 @@ public class BigtableColumnFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyId")
     public String familyId;
+
     public BigtableColumnFamily withFamilyId(String familyId) {
         this.familyId = familyId;
         return this;
@@ -48,6 +51,7 @@ public class BigtableColumnFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyReadLatest")
     public Boolean onlyReadLatest;
+
     public BigtableColumnFamily withOnlyReadLatest(Boolean onlyReadLatest) {
         this.onlyReadLatest = onlyReadLatest;
         return this;
@@ -59,9 +63,11 @@ public class BigtableColumnFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public BigtableColumnFamily withType(String type) {
         this.type = type;
         return this;
     }
     
+    public BigtableColumnFamily(){}
 }

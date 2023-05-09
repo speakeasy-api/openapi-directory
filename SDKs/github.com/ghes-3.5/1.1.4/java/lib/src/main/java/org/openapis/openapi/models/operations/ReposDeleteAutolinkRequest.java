@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteAutolinkRequest {
@@ -12,6 +13,7 @@ public class ReposDeleteAutolinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=autolink_id")
     public Long autolinkId;
+
     public ReposDeleteAutolinkRequest withAutolinkId(Long autolinkId) {
         this.autolinkId = autolinkId;
         return this;
@@ -22,6 +24,7 @@ public class ReposDeleteAutolinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposDeleteAutolinkRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,9 +35,15 @@ public class ReposDeleteAutolinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposDeleteAutolinkRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposDeleteAutolinkRequest(@JsonProperty("autolink_id") Long autolinkId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.autolinkId = autolinkId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

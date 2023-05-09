@@ -18,6 +18,7 @@ public class AddTargetedSitesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public String[] sites;
+
     public AddTargetedSitesRequest withSites(String[] sites) {
         this.sites = sites;
         return this;
@@ -29,9 +30,11 @@ public class AddTargetedSitesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingMode")
     public AddTargetedSitesRequestTargetingModeEnum targetingMode;
+
     public AddTargetedSitesRequest withTargetingMode(AddTargetedSitesRequestTargetingModeEnum targetingMode) {
         this.targetingMode = targetingMode;
         return this;
     }
     
+    public AddTargetedSitesRequest(){}
 }

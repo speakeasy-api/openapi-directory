@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBatchPredictionResponse {
     
     public String contentType;
+
     public UpdateBatchPredictionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBatchPredictionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateBatchPredictionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBatchPredictionResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateBatchPredictionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBatchPredictionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateBatchPredictionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateBatchPredictionResponse {
     
     
     public Integer statusCode;
+
     public UpdateBatchPredictionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBatchPredictionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBatchPredictionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateBatchPredictionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBatchPredictionOutput updateBatchPredictionOutput;
+
     public UpdateBatchPredictionResponse withUpdateBatchPredictionOutput(org.openapis.openapi.models.shared.UpdateBatchPredictionOutput updateBatchPredictionOutput) {
         this.updateBatchPredictionOutput = updateBatchPredictionOutput;
         return this;
     }
     
+    public UpdateBatchPredictionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

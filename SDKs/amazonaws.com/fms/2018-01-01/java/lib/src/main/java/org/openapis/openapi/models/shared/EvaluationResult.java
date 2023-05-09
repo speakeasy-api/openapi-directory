@@ -15,6 +15,7 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceStatus")
     public PolicyComplianceStatusTypeEnum complianceStatus;
+
     public EvaluationResult withComplianceStatus(PolicyComplianceStatusTypeEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -23,6 +24,7 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationLimitExceeded")
     public Boolean evaluationLimitExceeded;
+
     public EvaluationResult withEvaluationLimitExceeded(Boolean evaluationLimitExceeded) {
         this.evaluationLimitExceeded = evaluationLimitExceeded;
         return this;
@@ -31,9 +33,11 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolatorCount")
     public Long violatorCount;
+
     public EvaluationResult withViolatorCount(Long violatorCount) {
         this.violatorCount = violatorCount;
         return this;
     }
     
+    public EvaluationResult(){}
 }

@@ -15,9 +15,11 @@ public class OneannouncementsPostResponses403ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OneannouncementsPostResponses403ContentApplication1jsonSchema withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OneannouncementsPostResponses403ContentApplication1jsonSchema(){}
 }

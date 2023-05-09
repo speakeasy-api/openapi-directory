@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomPlugin {
     @JsonProperty("customPluginArn")
     public String customPluginArn;
+
     public CustomPlugin withCustomPluginArn(String customPluginArn) {
         this.customPluginArn = customPluginArn;
         return this;
@@ -19,9 +20,14 @@ public class CustomPlugin {
     
     @JsonProperty("revision")
     public Long revision;
+
     public CustomPlugin withRevision(Long revision) {
         this.revision = revision;
         return this;
     }
     
+    public CustomPlugin(@JsonProperty("customPluginArn") String customPluginArn, @JsonProperty("revision") Long revision) {
+        this.customPluginArn = customPluginArn;
+        this.revision = revision;
+  }
 }

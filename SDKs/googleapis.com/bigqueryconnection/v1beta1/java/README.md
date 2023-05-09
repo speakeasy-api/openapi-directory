@@ -16,17 +16,16 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1;
-import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption2;
-import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity;
 import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest;
 import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.ConnectionInput;
-import org.openapis.openapi.models.shared.CloudSqlPropertiesTypeEnum;
-import org.openapis.openapi.models.shared.CloudSqlPropertiesInput;
 import org.openapis.openapi.models.shared.CloudSqlCredential;
+import org.openapis.openapi.models.shared.CloudSqlPropertiesInput;
+import org.openapis.openapi.models.shared.CloudSqlPropertiesTypeEnum;
+import org.openapis.openapi.models.shared.ConnectionInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -35,49 +34,50 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            BigqueryconnectionProjectsLocationsConnectionsCreateRequest req = new BigqueryconnectionProjectsLocationsConnectionsCreateRequest() {{
-                dollarXgafv = "2";
+            BigqueryconnectionProjectsLocationsConnectionsCreateRequest req = new BigqueryconnectionProjectsLocationsConnectionsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 connectionInput = new ConnectionInput() {{
                     cloudSql = new CloudSqlPropertiesInput() {{
                         credential = new CloudSqlCredential() {{
-                            password = "provident";
-                            username = "Micheal_Sporer";
-                        }};
-                        database = "corrupti";
-                        instanceId = "illum";
-                        type = "POSTGRES";
-                    }};
-                    description = "error";
-                    friendlyName = "deserunt";
-                    name = "suscipit";
-                }};
-                accessToken = "iure";
-                alt = "json";
-                callback = "debitis";
-                connectionId = "ipsa";
-                fields = "delectus";
-                key = "tempora";
-                oauthToken = "suscipit";
-                parent = "molestiae";
+                            password = "distinctio";
+                            username = "Rosalinda_Mitchell84";
+                        }};;
+                        database = "vel";
+                        instanceId = "error";
+                        type = CloudSqlPropertiesTypeEnum.POSTGRES;
+                    }};;
+                    description = "suscipit";
+                    friendlyName = "iure";
+                    name = "Raquel Bednar";
+                }};;
+                accessToken = "suscipit";
+                alt = AltEnum.MEDIA;
+                callback = "minus";
+                connectionId = "placeat";
+                fields = "voluptatum";
+                key = "iusto";
+                oauthToken = "excepturi";
                 prettyPrint = false;
-                quotaUser = "minus";
-                uploadType = "placeat";
-                uploadProtocol = "voluptatum";
-            }}            
+                quotaUser = "nisi";
+                uploadType = "recusandae";
+                uploadProtocol = "temporibus";
+            }};            
 
             BigqueryconnectionProjectsLocationsConnectionsCreateResponse res = sdk.projects.bigqueryconnectionProjectsLocationsConnectionsCreate(req, new BigqueryconnectionProjectsLocationsConnectionsCreateSecurity() {{
-                option1 = new BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1() {{
+                option1 = new BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1("ab", "quis") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.connection.isPresent()) {
+            if (res.connection != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -85,16 +85,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `bigqueryconnectionProjectsLocationsConnectionsCreate` - Creates a new connection.
-* `bigqueryconnectionProjectsLocationsConnectionsDelete` - Deletes connection and associated credential.
-* `bigqueryconnectionProjectsLocationsConnectionsGet` - Returns specified connection.
-* `bigqueryconnectionProjectsLocationsConnectionsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `bigqueryconnectionProjectsLocationsConnectionsList` - Returns a list of connections in the given project.
-* `bigqueryconnectionProjectsLocationsConnectionsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `bigqueryconnectionProjectsLocationsConnectionsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-* `bigqueryconnectionProjectsLocationsConnectionsUpdateCredential` - Sets the credential for the specified connection.
+* [bigqueryconnectionProjectsLocationsConnectionsCreate](docs/projects/README.md#bigqueryconnectionprojectslocationsconnectionscreate) - Creates a new connection.
+* [bigqueryconnectionProjectsLocationsConnectionsDelete](docs/projects/README.md#bigqueryconnectionprojectslocationsconnectionsdelete) - Deletes connection and associated credential.
+* [bigqueryconnectionProjectsLocationsConnectionsGet](docs/projects/README.md#bigqueryconnectionprojectslocationsconnectionsget) - Returns specified connection.
+* [bigqueryconnectionProjectsLocationsConnectionsGetIamPolicy](docs/projects/README.md#bigqueryconnectionprojectslocationsconnectionsgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [bigqueryconnectionProjectsLocationsConnectionsList](docs/projects/README.md#bigqueryconnectionprojectslocationsconnectionslist) - Returns a list of connections in the given project.
+* [bigqueryconnectionProjectsLocationsConnectionsSetIamPolicy](docs/projects/README.md#bigqueryconnectionprojectslocationsconnectionssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [bigqueryconnectionProjectsLocationsConnectionsTestIamPermissions](docs/projects/README.md#bigqueryconnectionprojectslocationsconnectionstestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [bigqueryconnectionProjectsLocationsConnectionsUpdateCredential](docs/projects/README.md#bigqueryconnectionprojectslocationsconnectionsupdatecredential) - Sets the credential for the specified connection.
 <!-- End SDK Available Operations -->
 
 ### Maturity

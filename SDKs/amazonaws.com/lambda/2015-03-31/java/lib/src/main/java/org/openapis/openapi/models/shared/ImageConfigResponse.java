@@ -15,6 +15,7 @@ public class ImageConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public ImageConfigError error;
+
     public ImageConfigResponse withError(ImageConfigError error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class ImageConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageConfig")
     public ImageConfig imageConfig;
+
     public ImageConfigResponse withImageConfig(ImageConfig imageConfig) {
         this.imageConfig = imageConfig;
         return this;
     }
     
+    public ImageConfigResponse(){}
 }

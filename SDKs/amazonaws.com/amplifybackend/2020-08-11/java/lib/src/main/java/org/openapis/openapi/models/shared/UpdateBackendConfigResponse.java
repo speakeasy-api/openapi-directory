@@ -15,6 +15,7 @@ public class UpdateBackendConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public UpdateBackendConfigResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBackendConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackendManagerAppId")
     public String backendManagerAppId;
+
     public UpdateBackendConfigResponse withBackendManagerAppId(String backendManagerAppId) {
         this.backendManagerAppId = backendManagerAppId;
         return this;
@@ -31,6 +33,7 @@ public class UpdateBackendConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public UpdateBackendConfigResponse withError(String error) {
         this.error = error;
         return this;
@@ -39,9 +42,11 @@ public class UpdateBackendConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoginAuthConfig")
     public UpdateBackendConfigResponseLoginAuthConfig loginAuthConfig;
+
     public UpdateBackendConfigResponse withLoginAuthConfig(UpdateBackendConfigResponseLoginAuthConfig loginAuthConfig) {
         this.loginAuthConfig = loginAuthConfig;
         return this;
     }
     
+    public UpdateBackendConfigResponse(){}
 }

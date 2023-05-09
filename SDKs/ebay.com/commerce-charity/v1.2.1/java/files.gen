@@ -42,4 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/GeoCoordinates.java
 lib/src/main/java/org/openapis/openapi/models/shared/Address.java
 lib/src/main/java/org/openapis/openapi/models/shared/CharitySearchResponse.java
+docs/sdk/README.md
+docs/charityorg/README.md
 USAGE.md

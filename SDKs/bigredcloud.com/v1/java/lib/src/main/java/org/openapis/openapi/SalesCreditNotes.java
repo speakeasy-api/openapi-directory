@@ -59,11 +59,9 @@ public class SalesCreditNotes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesCreditNotesDeleteResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesDeleteResponse() {{
+        org.openapis.openapi.models.operations.SalesCreditNotesDeleteResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesDeleteResponse(contentType, httpRes.statusCode()) {{
             salesCreditNotesDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class SalesCreditNotes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesCreditNotesGetResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesGetResponse() {{
+        org.openapis.openapi.models.operations.SalesCreditNotesGetResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesGetResponse(contentType, httpRes.statusCode()) {{
             pageResultSalesCreditNoteQueryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class SalesCreditNotes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesCreditNotesPostResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesPostResponse() {{
+        org.openapis.openapi.models.operations.SalesCreditNotesPostResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesPostResponse(contentType, httpRes.statusCode()) {{
             salesCreditNotesPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class SalesCreditNotes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesCreditNotesProcessBatchResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.SalesCreditNotesProcessBatchResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesProcessBatchResponse(contentType, httpRes.statusCode()) {{
             salesCreditNotesProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class SalesCreditNotes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesCreditNotesPutResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesPutResponse() {{
+        org.openapis.openapi.models.operations.SalesCreditNotesPutResponse res = new org.openapis.openapi.models.operations.SalesCreditNotesPutResponse(contentType, httpRes.statusCode()) {{
             salesCreditNotesPut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class SalesCreditNotes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1SalesCreditNotesIdResponse res = new org.openapis.openapi.models.operations.GetV1SalesCreditNotesIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1SalesCreditNotesIdResponse res = new org.openapis.openapi.models.operations.GetV1SalesCreditNotesIdResponse(contentType, httpRes.statusCode()) {{
             salesInvoiceCreditNoteDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

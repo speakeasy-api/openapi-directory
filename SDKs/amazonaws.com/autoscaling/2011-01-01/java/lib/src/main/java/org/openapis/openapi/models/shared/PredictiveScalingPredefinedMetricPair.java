@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PredictiveScalingPredefinedMetricPair - Represents a metric pair for a predictive scaling policy. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PredictiveScalingPredefinedMetricPair {
     
     public PredefinedMetricPairTypeEnum predefinedMetricType;
+
     public PredictiveScalingPredefinedMetricPair withPredefinedMetricType(PredefinedMetricPairTypeEnum predefinedMetricType) {
         this.predefinedMetricType = predefinedMetricType;
         return this;
@@ -19,9 +20,13 @@ public class PredictiveScalingPredefinedMetricPair {
     
     
     public String resourceLabel;
+
     public PredictiveScalingPredefinedMetricPair withResourceLabel(String resourceLabel) {
         this.resourceLabel = resourceLabel;
         return this;
     }
     
+    public PredictiveScalingPredefinedMetricPair(@JsonProperty("PredefinedMetricType") PredefinedMetricPairTypeEnum predefinedMetricType) {
+        this.predefinedMetricType = predefinedMetricType;
+  }
 }

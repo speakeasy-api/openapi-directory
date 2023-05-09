@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse {
     
     public String contentType;
+
     public CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.OrgPolicy orgPolicy;
+
     public CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse withOrgPolicy(org.openapis.openapi.models.shared.OrgPolicy orgPolicy) {
         this.orgPolicy = orgPolicy;
         return this;
@@ -26,6 +29,7 @@ public class CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse {
     
     
     public Integer statusCode;
+
     public CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

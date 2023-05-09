@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CustomDemographicsReadResponse {
     
     public String contentType;
+
     public CustomDemographicsReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CustomDemographicsReadResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomPatientFieldType customPatientFieldType;
+
     public CustomDemographicsReadResponse withCustomPatientFieldType(org.openapis.openapi.models.shared.CustomPatientFieldType customPatientFieldType) {
         this.customPatientFieldType = customPatientFieldType;
         return this;
@@ -26,6 +29,7 @@ public class CustomDemographicsReadResponse {
     
     
     public Integer statusCode;
+
     public CustomDemographicsReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CustomDemographicsReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CustomDemographicsReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CustomDemographicsReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -64,12 +64,10 @@ public class UsersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersResponse(contentType, httpRes.statusCode()) {{
             listCompanyUsersResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class UsersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdResponse(contentType, httpRes.statusCode()) {{
             companyUser = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,12 +168,10 @@ public class UsersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdResponse res = new org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdResponse() {{
+        org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdResponse res = new org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdResponse(contentType, httpRes.statusCode()) {{
             companyUser = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,12 +221,10 @@ public class UsersCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersResponse(contentType, httpRes.statusCode()) {{
             createCompanyUserResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

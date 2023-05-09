@@ -12,6 +12,7 @@ public class EgipcRequestBodyCertificateParameters {
      */
     @JsonProperty("INSCODE")
     public String inscode;
+
     public EgipcRequestBodyCertificateParameters withInscode(String inscode) {
         this.inscode = inscode;
         return this;
@@ -22,6 +23,7 @@ public class EgipcRequestBodyCertificateParameters {
      */
     @JsonProperty("POLNO")
     public String polno;
+
     public EgipcRequestBodyCertificateParameters withPolno(String polno) {
         this.polno = polno;
         return this;
@@ -32,9 +34,15 @@ public class EgipcRequestBodyCertificateParameters {
      */
     @JsonProperty("STARTDT")
     public String startdt;
+
     public EgipcRequestBodyCertificateParameters withStartdt(String startdt) {
         this.startdt = startdt;
         return this;
     }
     
+    public EgipcRequestBodyCertificateParameters(@JsonProperty("INSCODE") String inscode, @JsonProperty("POLNO") String polno, @JsonProperty("STARTDT") String startdt) {
+        this.inscode = inscode;
+        this.polno = polno;
+        this.startdt = startdt;
+  }
 }

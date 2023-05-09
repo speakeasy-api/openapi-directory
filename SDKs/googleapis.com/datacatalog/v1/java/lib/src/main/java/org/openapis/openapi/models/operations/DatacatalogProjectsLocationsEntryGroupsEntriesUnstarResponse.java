@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse {
     
     public String contentType;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse {
      */
     
     public java.util.Map<String, Object> googleCloudDatacatalogV1UnstarEntryResponse;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse withGoogleCloudDatacatalogV1UnstarEntryResponse(java.util.Map<String, Object> googleCloudDatacatalogV1UnstarEntryResponse) {
         this.googleCloudDatacatalogV1UnstarEntryResponse = googleCloudDatacatalogV1UnstarEntryResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse {
     
     
     public Integer statusCode;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

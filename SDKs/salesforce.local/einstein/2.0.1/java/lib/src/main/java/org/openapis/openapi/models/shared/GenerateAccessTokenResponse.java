@@ -15,6 +15,7 @@ public class GenerateAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public GenerateAccessTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,6 +24,7 @@ public class GenerateAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_in")
     public String expiresIn;
+
     public GenerateAccessTokenResponse withExpiresIn(String expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -31,6 +33,7 @@ public class GenerateAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public GenerateAccessTokenResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -39,9 +42,11 @@ public class GenerateAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_type")
     public String tokenType;
+
     public GenerateAccessTokenResponse withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public GenerateAccessTokenResponse(){}
 }

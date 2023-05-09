@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAppAssessmentResponse {
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public DeleteAppAssessmentResponse withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -19,9 +20,14 @@ public class DeleteAppAssessmentResponse {
     
     @JsonProperty("assessmentStatus")
     public AssessmentStatusEnum assessmentStatus;
+
     public DeleteAppAssessmentResponse withAssessmentStatus(AssessmentStatusEnum assessmentStatus) {
         this.assessmentStatus = assessmentStatus;
         return this;
     }
     
+    public DeleteAppAssessmentResponse(@JsonProperty("assessmentArn") String assessmentArn, @JsonProperty("assessmentStatus") AssessmentStatusEnum assessmentStatus) {
+        this.assessmentArn = assessmentArn;
+        this.assessmentStatus = assessmentStatus;
+  }
 }

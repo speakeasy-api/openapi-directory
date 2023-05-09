@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRuleGroupResponse {
     
     public String contentType;
+
     public UpdateRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRuleGroupResponse updateRuleGroupResponse;
+
     public UpdateRuleGroupResponse withUpdateRuleGroupResponse(org.openapis.openapi.models.shared.UpdateRuleGroupResponse updateRuleGroupResponse) {
         this.updateRuleGroupResponse = updateRuleGroupResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateRuleGroupResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateRuleGroupResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateRuleGroupResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateRuleGroupResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateRuleGroupResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateRuleGroupResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateRuleGroupResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public UpdateRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -53,4 +53,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TraceSpanKindEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TraceSpan.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTracesResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

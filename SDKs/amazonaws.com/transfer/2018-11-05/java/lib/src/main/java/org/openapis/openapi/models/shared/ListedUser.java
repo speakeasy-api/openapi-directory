@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListedUser {
     @JsonProperty("Arn")
     public String arn;
+
     public ListedUser withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class ListedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectory")
     public String homeDirectory;
+
     public ListedUser withHomeDirectory(String homeDirectory) {
         this.homeDirectory = homeDirectory;
         return this;
@@ -30,6 +32,7 @@ public class ListedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectoryType")
     public HomeDirectoryTypeEnum homeDirectoryType;
+
     public ListedUser withHomeDirectoryType(HomeDirectoryTypeEnum homeDirectoryType) {
         this.homeDirectoryType = homeDirectoryType;
         return this;
@@ -38,6 +41,7 @@ public class ListedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public ListedUser withRole(String role) {
         this.role = role;
         return this;
@@ -46,6 +50,7 @@ public class ListedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshPublicKeyCount")
     public Long sshPublicKeyCount;
+
     public ListedUser withSshPublicKeyCount(Long sshPublicKeyCount) {
         this.sshPublicKeyCount = sshPublicKeyCount;
         return this;
@@ -54,9 +59,13 @@ public class ListedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public ListedUser withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ListedUser(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

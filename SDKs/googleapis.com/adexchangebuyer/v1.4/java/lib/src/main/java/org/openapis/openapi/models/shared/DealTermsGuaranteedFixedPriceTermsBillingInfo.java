@@ -15,6 +15,7 @@ public class DealTermsGuaranteedFixedPriceTermsBillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyConversionTimeMs")
     public String currencyConversionTimeMs;
+
     public DealTermsGuaranteedFixedPriceTermsBillingInfo withCurrencyConversionTimeMs(String currencyConversionTimeMs) {
         this.currencyConversionTimeMs = currencyConversionTimeMs;
         return this;
@@ -26,6 +27,7 @@ public class DealTermsGuaranteedFixedPriceTermsBillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dfpLineItemId")
     public String dfpLineItemId;
+
     public DealTermsGuaranteedFixedPriceTermsBillingInfo withDfpLineItemId(String dfpLineItemId) {
         this.dfpLineItemId = dfpLineItemId;
         return this;
@@ -37,6 +39,7 @@ public class DealTermsGuaranteedFixedPriceTermsBillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalContractedQuantity")
     public String originalContractedQuantity;
+
     public DealTermsGuaranteedFixedPriceTermsBillingInfo withOriginalContractedQuantity(String originalContractedQuantity) {
         this.originalContractedQuantity = originalContractedQuantity;
         return this;
@@ -45,9 +48,11 @@ public class DealTermsGuaranteedFixedPriceTermsBillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public DealTermsGuaranteedFixedPriceTermsBillingInfo withPrice(Price price) {
         this.price = price;
         return this;
     }
     
+    public DealTermsGuaranteedFixedPriceTermsBillingInfo(){}
 }

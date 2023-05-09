@@ -127,6 +127,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -150,12 +155,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdResponse res = new org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdResponse res = new org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdResponse(contentType, httpRes.statusCode()) {{
             response = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,12 +199,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCompanyTimeOffsIdResponse res = new org.openapis.openapi.models.operations.DeleteCompanyTimeOffsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCompanyTimeOffsIdResponse res = new org.openapis.openapi.models.operations.DeleteCompanyTimeOffsIdResponse(contentType, httpRes.statusCode()) {{
             response = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +249,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompanyAttendancesResponse res = new org.openapis.openapi.models.operations.GetCompanyAttendancesResponse() {{
+        org.openapis.openapi.models.operations.GetCompanyAttendancesResponse res = new org.openapis.openapi.models.operations.GetCompanyAttendancesResponse(contentType, httpRes.statusCode()) {{
             attendancePeriodsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +284,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompanyEmployeesResponse res = new org.openapis.openapi.models.operations.GetCompanyEmployeesResponse() {{
+        org.openapis.openapi.models.operations.GetCompanyEmployeesResponse res = new org.openapis.openapi.models.operations.GetCompanyEmployeesResponse(contentType, httpRes.statusCode()) {{
             employeesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,11 +320,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdResponse res = new org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdResponse res = new org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdResponse(contentType, httpRes.statusCode()) {{
             employeeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,11 +356,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse res = new org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse() {{
+        org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse res = new org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse(contentType, httpRes.statusCode()) {{
             getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -404,11 +397,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompanyTimeOffTypesResponse res = new org.openapis.openapi.models.operations.GetCompanyTimeOffTypesResponse() {{
+        org.openapis.openapi.models.operations.GetCompanyTimeOffTypesResponse res = new org.openapis.openapi.models.operations.GetCompanyTimeOffTypesResponse(contentType, httpRes.statusCode()) {{
             getCompanyTimeOffTypes200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,11 +439,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompanyTimeOffsResponse res = new org.openapis.openapi.models.operations.GetCompanyTimeOffsResponse() {{
+        org.openapis.openapi.models.operations.GetCompanyTimeOffsResponse res = new org.openapis.openapi.models.operations.GetCompanyTimeOffsResponse(contentType, httpRes.statusCode()) {{
             absencePeriodsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +475,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompanyTimeOffsIdResponse res = new org.openapis.openapi.models.operations.GetCompanyTimeOffsIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompanyTimeOffsIdResponse res = new org.openapis.openapi.models.operations.GetCompanyTimeOffsIdResponse(contentType, httpRes.statusCode()) {{
             absencePeriodResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,12 +516,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchCompanyAttendancesIdResponse res = new org.openapis.openapi.models.operations.PatchCompanyAttendancesIdResponse() {{
+        org.openapis.openapi.models.operations.PatchCompanyAttendancesIdResponse res = new org.openapis.openapi.models.operations.PatchCompanyAttendancesIdResponse(contentType, httpRes.statusCode()) {{
             response = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,12 +565,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompanyAttendancesResponse res = new org.openapis.openapi.models.operations.PostCompanyAttendancesResponse() {{
+        org.openapis.openapi.models.operations.PostCompanyAttendancesResponse res = new org.openapis.openapi.models.operations.PostCompanyAttendancesResponse(contentType, httpRes.statusCode()) {{
             newAttendancePeriodResponse = null;
             detailedErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -633,11 +616,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompanyEmployeesResponse res = new org.openapis.openapi.models.operations.PostCompanyEmployeesResponse() {{
+        org.openapis.openapi.models.operations.PostCompanyEmployeesResponse res = new org.openapis.openapi.models.operations.PostCompanyEmployeesResponse(contentType, httpRes.statusCode()) {{
             response = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,12 +657,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompanyTimeOffsResponse res = new org.openapis.openapi.models.operations.PostCompanyTimeOffsResponse() {{
+        org.openapis.openapi.models.operations.PostCompanyTimeOffsResponse res = new org.openapis.openapi.models.operations.PostCompanyTimeOffsResponse(contentType, httpRes.statusCode()) {{
             postCompanyTimeOffs201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

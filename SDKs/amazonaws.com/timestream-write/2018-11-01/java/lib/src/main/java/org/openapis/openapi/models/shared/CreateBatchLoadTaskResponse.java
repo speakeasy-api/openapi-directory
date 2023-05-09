@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBatchLoadTaskResponse {
     @JsonProperty("TaskId")
     public String taskId;
+
     public CreateBatchLoadTaskResponse withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public CreateBatchLoadTaskResponse(@JsonProperty("TaskId") String taskId) {
+        this.taskId = taskId;
+  }
 }

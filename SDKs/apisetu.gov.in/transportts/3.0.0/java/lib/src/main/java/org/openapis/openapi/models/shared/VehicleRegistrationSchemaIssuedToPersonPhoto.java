@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class VehicleRegistrationSchemaIssuedToPersonPhoto {
     
     public String format;
+
     public VehicleRegistrationSchemaIssuedToPersonPhoto withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public VehicleRegistrationSchemaIssuedToPersonPhoto(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

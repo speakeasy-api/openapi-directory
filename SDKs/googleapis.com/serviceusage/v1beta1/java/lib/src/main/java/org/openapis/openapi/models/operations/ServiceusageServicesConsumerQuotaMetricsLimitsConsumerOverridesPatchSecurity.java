@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurityOption1 option1;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurity withOption1(ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatc
     
     @SpeakeasyMetadata("security:option=true")
     public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurityOption2 option2;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurity withOption2(ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurity(){}
 }

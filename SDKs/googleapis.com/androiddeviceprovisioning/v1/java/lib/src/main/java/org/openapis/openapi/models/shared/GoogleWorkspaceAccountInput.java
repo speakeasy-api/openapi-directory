@@ -18,9 +18,11 @@ public class GoogleWorkspaceAccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public GoogleWorkspaceAccountInput withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public GoogleWorkspaceAccountInput(){}
 }

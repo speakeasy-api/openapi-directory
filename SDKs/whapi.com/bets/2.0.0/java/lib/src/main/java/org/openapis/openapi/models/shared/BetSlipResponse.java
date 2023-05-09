@@ -12,9 +12,11 @@ public class BetSlipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betslip")
     public Betslipbet[] betslip;
+
     public BetSlipResponse withBetslip(Betslipbet[] betslip) {
         this.betslip = betslip;
         return this;
     }
     
+    public BetSlipResponse(){}
 }

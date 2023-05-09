@@ -18,6 +18,7 @@ public class SendWithFailoverMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failover")
     public FailoverProperty failover;
+
     public SendWithFailoverMessage withFailover(FailoverProperty failover) {
         this.failover = failover;
         return this;
@@ -25,6 +26,7 @@ public class SendWithFailoverMessage {
     
     @JsonProperty("from")
     public FromProperty from;
+
     public SendWithFailoverMessage withFrom(FromProperty from) {
         this.from = from;
         return this;
@@ -32,6 +34,7 @@ public class SendWithFailoverMessage {
     
     @JsonProperty("message")
     public MessageProperty message;
+
     public SendWithFailoverMessage withMessage(MessageProperty message) {
         this.message = message;
         return this;
@@ -39,9 +42,15 @@ public class SendWithFailoverMessage {
     
     @JsonProperty("to")
     public ToProperty to;
+
     public SendWithFailoverMessage withTo(ToProperty to) {
         this.to = to;
         return this;
     }
     
+    public SendWithFailoverMessage(@JsonProperty("from") FromProperty from, @JsonProperty("message") MessageProperty message, @JsonProperty("to") ToProperty to) {
+        this.from = from;
+        this.message = message;
+        this.to = to;
+  }
 }

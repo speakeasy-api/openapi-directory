@@ -15,6 +15,7 @@ public class PagespeedApiPagespeedResponseV4FormattedResultsRuleResults {
      */
     
     public Boolean beta;
+
     public PagespeedApiPagespeedResponseV4FormattedResultsRuleResults withBeta(Boolean beta) {
         this.beta = beta;
         return this;
@@ -25,6 +26,7 @@ public class PagespeedApiPagespeedResponseV4FormattedResultsRuleResults {
      */
     
     public String[] groups;
+
     public PagespeedApiPagespeedResponseV4FormattedResultsRuleResults withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -35,6 +37,7 @@ public class PagespeedApiPagespeedResponseV4FormattedResultsRuleResults {
      */
     
     public String localizedRuleName;
+
     public PagespeedApiPagespeedResponseV4FormattedResultsRuleResults withLocalizedRuleName(String localizedRuleName) {
         this.localizedRuleName = localizedRuleName;
         return this;
@@ -45,6 +48,7 @@ public class PagespeedApiPagespeedResponseV4FormattedResultsRuleResults {
      */
     
     public Double ruleImpact;
+
     public PagespeedApiPagespeedResponseV4FormattedResultsRuleResults withRuleImpact(Double ruleImpact) {
         this.ruleImpact = ruleImpact;
         return this;
@@ -52,6 +56,7 @@ public class PagespeedApiPagespeedResponseV4FormattedResultsRuleResults {
     
     
     public PagespeedApiFormatStringV4 summary;
+
     public PagespeedApiPagespeedResponseV4FormattedResultsRuleResults withSummary(PagespeedApiFormatStringV4 summary) {
         this.summary = summary;
         return this;
@@ -62,9 +67,11 @@ public class PagespeedApiPagespeedResponseV4FormattedResultsRuleResults {
      */
     
     public PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks[] urlBlocks;
+
     public PagespeedApiPagespeedResponseV4FormattedResultsRuleResults withUrlBlocks(PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks[] urlBlocks) {
         this.urlBlocks = urlBlocks;
         return this;
     }
     
+    public PagespeedApiPagespeedResponseV4FormattedResultsRuleResults(){}
 }

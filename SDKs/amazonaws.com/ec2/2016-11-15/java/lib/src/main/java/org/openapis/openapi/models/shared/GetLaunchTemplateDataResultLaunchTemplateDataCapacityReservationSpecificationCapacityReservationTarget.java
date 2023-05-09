@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTarget {
     
     public String capacityReservationId;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTarget withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -19,9 +20,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpe
     
     
     public String capacityReservationResourceGroupArn;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTarget withCapacityReservationResourceGroupArn(String capacityReservationResourceGroupArn) {
         this.capacityReservationResourceGroupArn = capacityReservationResourceGroupArn;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTarget(){}
 }

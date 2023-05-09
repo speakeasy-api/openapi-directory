@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment {
     
     public OffsetDateTime attachTime;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAttach
     
     
     public String attachmentId;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAttach
     
     
     public Boolean deleteOnTermination;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAttach
     
     
     public Long deviceIndex;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAttach
     
     
     public Long networkCardIndex;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -47,9 +52,11 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAttach
     
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum status;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment withStatus(DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment(){}
 }

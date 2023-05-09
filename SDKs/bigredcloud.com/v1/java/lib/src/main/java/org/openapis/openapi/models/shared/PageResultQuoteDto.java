@@ -15,6 +15,7 @@ public class PageResultQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultQuoteDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public QuoteDto[] items;
+
     public PageResultQuoteDto withItems(QuoteDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultQuoteDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultQuoteDto(){}
 }

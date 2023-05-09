@@ -15,6 +15,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiGatewayManaged")
     public Boolean apiGatewayManaged;
+
     public Route withApiGatewayManaged(Boolean apiGatewayManaged) {
         this.apiGatewayManaged = apiGatewayManaged;
         return this;
@@ -23,6 +24,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeyRequired")
     public Boolean apiKeyRequired;
+
     public Route withApiKeyRequired(Boolean apiKeyRequired) {
         this.apiKeyRequired = apiKeyRequired;
         return this;
@@ -31,6 +33,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationScopes")
     public String[] authorizationScopes;
+
     public Route withAuthorizationScopes(String[] authorizationScopes) {
         this.authorizationScopes = authorizationScopes;
         return this;
@@ -39,6 +42,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationType")
     public RouteAuthorizationTypeEnum authorizationType;
+
     public Route withAuthorizationType(RouteAuthorizationTypeEnum authorizationType) {
         this.authorizationType = authorizationType;
         return this;
@@ -47,6 +51,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizerId")
     public String authorizerId;
+
     public Route withAuthorizerId(String authorizerId) {
         this.authorizerId = authorizerId;
         return this;
@@ -55,6 +60,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelSelectionExpression")
     public String modelSelectionExpression;
+
     public Route withModelSelectionExpression(String modelSelectionExpression) {
         this.modelSelectionExpression = modelSelectionExpression;
         return this;
@@ -63,6 +69,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationName")
     public String operationName;
+
     public Route withOperationName(String operationName) {
         this.operationName = operationName;
         return this;
@@ -71,6 +78,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestModels")
     public java.util.Map<String, String> requestModels;
+
     public Route withRequestModels(java.util.Map<String, String> requestModels) {
         this.requestModels = requestModels;
         return this;
@@ -79,6 +87,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestParameters")
     public java.util.Map<String, ParameterConstraints> requestParameters;
+
     public Route withRequestParameters(java.util.Map<String, ParameterConstraints> requestParameters) {
         this.requestParameters = requestParameters;
         return this;
@@ -87,6 +96,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteId")
     public String routeId;
+
     public Route withRouteId(String routeId) {
         this.routeId = routeId;
         return this;
@@ -94,6 +104,7 @@ public class Route {
     
     @JsonProperty("RouteKey")
     public String routeKey;
+
     public Route withRouteKey(String routeKey) {
         this.routeKey = routeKey;
         return this;
@@ -102,6 +113,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteResponseSelectionExpression")
     public String routeResponseSelectionExpression;
+
     public Route withRouteResponseSelectionExpression(String routeResponseSelectionExpression) {
         this.routeResponseSelectionExpression = routeResponseSelectionExpression;
         return this;
@@ -110,9 +122,13 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public Route withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public Route(@JsonProperty("RouteKey") String routeKey) {
+        this.routeKey = routeKey;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePresignedNotebookUrlResponse {
     
     public String contentType;
+
     public CreatePresignedNotebookUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePresignedNotebookUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePresignedNotebookUrlResponse createPresignedNotebookUrlResponse;
+
     public CreatePresignedNotebookUrlResponse withCreatePresignedNotebookUrlResponse(org.openapis.openapi.models.shared.CreatePresignedNotebookUrlResponse createPresignedNotebookUrlResponse) {
         this.createPresignedNotebookUrlResponse = createPresignedNotebookUrlResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreatePresignedNotebookUrlResponse {
      */
     
     public Object internalServerException;
+
     public CreatePresignedNotebookUrlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePresignedNotebookUrlResponse {
      */
     
     public Object invalidRequestException;
+
     public CreatePresignedNotebookUrlResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreatePresignedNotebookUrlResponse {
     
     
     public Integer statusCode;
+
     public CreatePresignedNotebookUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreatePresignedNotebookUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePresignedNotebookUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreatePresignedNotebookUrlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePresignedNotebookUrlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreatePresignedNotebookUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

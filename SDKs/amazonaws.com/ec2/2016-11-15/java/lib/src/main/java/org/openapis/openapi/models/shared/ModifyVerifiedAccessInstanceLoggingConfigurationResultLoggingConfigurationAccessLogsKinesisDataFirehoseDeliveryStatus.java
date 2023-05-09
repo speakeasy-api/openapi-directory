@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatus {
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum code;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatus withCode(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public String message;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatus(){}
 }

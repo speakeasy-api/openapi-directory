@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent {
     
     public java.util.Map<String, DestinyComponentsItemsDestinyItemReusablePlugsComponent> data;
+
     public DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent withData(java.util.Map<String, DestinyComponentsItemsDestinyItemReusablePlugsComponent> data) {
         this.data = data;
         return this;
@@ -19,6 +20,7 @@ public class DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsCompo
      */
     
     public Boolean disabled;
+
     public DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -26,9 +28,11 @@ public class DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsCompo
     
     
     public Integer privacy;
+
     public DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent(){}
 }

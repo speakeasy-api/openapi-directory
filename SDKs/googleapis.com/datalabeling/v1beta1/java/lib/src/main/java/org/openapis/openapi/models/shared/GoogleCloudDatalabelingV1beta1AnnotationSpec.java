@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpec withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpec withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpec withIndex(Integer index) {
         this.index = index;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1AnnotationSpec(){}
 }

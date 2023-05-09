@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2InspectTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GooglePrivacyDlpV2InspectTemplateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2InspectTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GooglePrivacyDlpV2InspectTemplateInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2InspectTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectConfig")
     public GooglePrivacyDlpV2InspectConfig inspectConfig;
+
     public GooglePrivacyDlpV2InspectTemplateInput withInspectConfig(GooglePrivacyDlpV2InspectConfig inspectConfig) {
         this.inspectConfig = inspectConfig;
         return this;
     }
     
+    public GooglePrivacyDlpV2InspectTemplateInput(){}
 }

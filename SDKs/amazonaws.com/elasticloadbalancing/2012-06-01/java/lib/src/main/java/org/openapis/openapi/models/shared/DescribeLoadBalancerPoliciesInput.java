@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLoadBalancerPoliciesInput {
     
     public String loadBalancerName;
+
     public DescribeLoadBalancerPoliciesInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLoadBalancerPoliciesInput {
     
     
     public String[] policyNames;
+
     public DescribeLoadBalancerPoliciesInput withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public DescribeLoadBalancerPoliciesInput(){}
 }

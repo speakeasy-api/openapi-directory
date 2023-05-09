@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDataQualityJobDefinitionsResponse {
     @JsonProperty("JobDefinitionSummaries")
     public MonitoringJobDefinitionSummary[] jobDefinitionSummaries;
+
     public ListDataQualityJobDefinitionsResponse withJobDefinitionSummaries(MonitoringJobDefinitionSummary[] jobDefinitionSummaries) {
         this.jobDefinitionSummaries = jobDefinitionSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListDataQualityJobDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataQualityJobDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataQualityJobDefinitionsResponse(@JsonProperty("JobDefinitionSummaries") MonitoringJobDefinitionSummary[] jobDefinitionSummaries) {
+        this.jobDefinitionSummaries = jobDefinitionSummaries;
+  }
 }

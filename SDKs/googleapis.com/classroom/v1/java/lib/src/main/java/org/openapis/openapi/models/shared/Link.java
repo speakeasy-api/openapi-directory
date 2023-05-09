@@ -18,6 +18,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUrl")
     public String thumbnailUrl;
+
     public Link withThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
         return this;
@@ -29,6 +30,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Link withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +42,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Link withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Link(){}
 }

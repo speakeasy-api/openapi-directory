@@ -18,6 +18,7 @@ public class AccessSecretVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessSecretVersionResponse withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class AccessSecretVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public SecretPayload payload;
+
     public AccessSecretVersionResponse withPayload(SecretPayload payload) {
         this.payload = payload;
         return this;
     }
     
+    public AccessSecretVersionResponse(){}
 }

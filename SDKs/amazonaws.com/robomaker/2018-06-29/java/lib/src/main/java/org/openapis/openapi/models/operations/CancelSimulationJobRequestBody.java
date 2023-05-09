@@ -12,9 +12,13 @@ public class CancelSimulationJobRequestBody {
      */
     @JsonProperty("job")
     public String job;
+
     public CancelSimulationJobRequestBody withJob(String job) {
         this.job = job;
         return this;
     }
     
+    public CancelSimulationJobRequestBody(@JsonProperty("job") String job) {
+        this.job = job;
+  }
 }

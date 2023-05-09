@@ -15,9 +15,11 @@ public class OpenInstancePublicPortsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public OpenInstancePublicPortsResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public OpenInstancePublicPortsResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExecuteSellTrasactionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ExecuteSellTrasactionSellTransactionRequest requestBody;
+
     public ExecuteSellTrasactionRequest withRequestBody(ExecuteSellTrasactionSellTransactionRequest requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class ExecuteSellTrasactionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public ExecuteSellTrasactionRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public ExecuteSellTrasactionRequest(@JsonProperty("x-api-key") String xApiKey) {
+        this.xApiKey = xApiKey;
+  }
 }

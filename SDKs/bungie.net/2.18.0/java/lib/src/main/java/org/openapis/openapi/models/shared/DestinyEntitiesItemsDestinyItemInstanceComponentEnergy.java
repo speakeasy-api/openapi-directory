@@ -15,6 +15,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponentEnergy {
      */
     
     public Integer energyCapacity;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponentEnergy withEnergyCapacity(Integer energyCapacity) {
         this.energyCapacity = energyCapacity;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponentEnergy {
      */
     
     public Integer energyType;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponentEnergy withEnergyType(Integer energyType) {
         this.energyType = energyType;
         return this;
@@ -35,6 +37,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponentEnergy {
      */
     
     public Long energyTypeHash;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponentEnergy withEnergyTypeHash(Long energyTypeHash) {
         this.energyTypeHash = energyTypeHash;
         return this;
@@ -45,6 +48,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponentEnergy {
      */
     
     public Integer energyUnused;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponentEnergy withEnergyUnused(Integer energyUnused) {
         this.energyUnused = energyUnused;
         return this;
@@ -55,9 +59,11 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponentEnergy {
      */
     
     public Integer energyUsed;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponentEnergy withEnergyUsed(Integer energyUsed) {
         this.energyUsed = energyUsed;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemInstanceComponentEnergy(){}
 }

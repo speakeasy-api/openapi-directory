@@ -18,6 +18,7 @@ public class State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public java.util.Map<String, String> names;
+
     public State withNames(java.util.Map<String, String> names) {
         this.names = names;
         return this;
@@ -29,9 +30,11 @@ public class State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateCode")
     public String stateCode;
+
     public State withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
     }
     
+    public State(){}
 }

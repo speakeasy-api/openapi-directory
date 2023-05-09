@@ -15,6 +15,7 @@ public class ListImageRecipesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRecipeSummaryList")
     public ImageRecipeSummary[] imageRecipeSummaryList;
+
     public ListImageRecipesResponse withImageRecipeSummaryList(ImageRecipeSummary[] imageRecipeSummaryList) {
         this.imageRecipeSummaryList = imageRecipeSummaryList;
         return this;
@@ -23,6 +24,7 @@ public class ListImageRecipesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImageRecipesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListImageRecipesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ListImageRecipesResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ListImageRecipesResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionSslCertificatesDeleteResponse {
     
     public String contentType;
+
     public ComputeRegionSslCertificatesDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionSslCertificatesDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ComputeRegionSslCertificatesDeleteResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionSslCertificatesDeleteResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionSslCertificatesDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionSslCertificatesDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionSslCertificatesDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionSslCertificatesDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TwoHundredResultResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TwoHundredResultResultAstPackagePathTypeEnum type;
+
     public TwoHundredResultResultAstPackagePath withType(TwoHundredResultResultAstPackagePathTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class TwoHundredResultResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public TwoHundredResultResultAstPackagePath withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TwoHundredResultResultAstPackagePath(){}
 }

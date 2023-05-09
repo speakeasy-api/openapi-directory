@@ -15,9 +15,11 @@ public class MonitoringJsonDatasetFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Line")
     public Boolean line;
+
     public MonitoringJsonDatasetFormat withLine(Boolean line) {
         this.line = line;
         return this;
     }
     
+    public MonitoringJsonDatasetFormat(){}
 }

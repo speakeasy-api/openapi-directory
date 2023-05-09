@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRemediationExecutionStatusResponse {
     
     public String contentType;
+
     public DescribeRemediationExecutionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRemediationExecutionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRemediationExecutionStatusResponse describeRemediationExecutionStatusResponse;
+
     public DescribeRemediationExecutionStatusResponse withDescribeRemediationExecutionStatusResponse(org.openapis.openapi.models.shared.DescribeRemediationExecutionStatusResponse describeRemediationExecutionStatusResponse) {
         this.describeRemediationExecutionStatusResponse = describeRemediationExecutionStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRemediationExecutionStatusResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeRemediationExecutionStatusResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRemediationExecutionStatusResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeRemediationExecutionStatusResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRemediationExecutionStatusResponse {
      */
     
     public Object noSuchRemediationConfigurationException;
+
     public DescribeRemediationExecutionStatusResponse withNoSuchRemediationConfigurationException(Object noSuchRemediationConfigurationException) {
         this.noSuchRemediationConfigurationException = noSuchRemediationConfigurationException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeRemediationExecutionStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeRemediationExecutionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeRemediationExecutionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRemediationExecutionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeRemediationExecutionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

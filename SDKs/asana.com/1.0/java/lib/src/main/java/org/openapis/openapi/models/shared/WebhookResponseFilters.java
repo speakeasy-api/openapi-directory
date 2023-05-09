@@ -18,6 +18,7 @@ public class WebhookResponseFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public WebhookResponseFilters withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class WebhookResponseFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String[] fields;
+
     public WebhookResponseFilters withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class WebhookResponseFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public String resourceSubtype;
+
     public WebhookResponseFilters withResourceSubtype(String resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -51,9 +54,11 @@ public class WebhookResponseFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public WebhookResponseFilters withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public WebhookResponseFilters(){}
 }

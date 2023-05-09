@@ -14,6 +14,7 @@ public class UpdateNetworkSmDeviceFieldsRequestBody {
      */
     @JsonProperty("deviceFields")
     public UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields deviceFields;
+
     public UpdateNetworkSmDeviceFieldsRequestBody withDeviceFields(UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields deviceFields) {
         this.deviceFields = deviceFields;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNetworkSmDeviceFieldsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateNetworkSmDeviceFieldsRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class UpdateNetworkSmDeviceFieldsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serial")
     public String serial;
+
     public UpdateNetworkSmDeviceFieldsRequestBody withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -47,9 +50,13 @@ public class UpdateNetworkSmDeviceFieldsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiMac")
     public String wifiMac;
+
     public UpdateNetworkSmDeviceFieldsRequestBody withWifiMac(String wifiMac) {
         this.wifiMac = wifiMac;
         return this;
     }
     
+    public UpdateNetworkSmDeviceFieldsRequestBody(@JsonProperty("deviceFields") UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields deviceFields) {
+        this.deviceFields = deviceFields;
+  }
 }

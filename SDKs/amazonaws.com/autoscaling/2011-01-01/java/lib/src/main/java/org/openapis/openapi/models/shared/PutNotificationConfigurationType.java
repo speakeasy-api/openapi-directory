@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutNotificationConfigurationType {
     
     public String autoScalingGroupName;
+
     public PutNotificationConfigurationType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class PutNotificationConfigurationType {
     
     
     public String[] notificationTypes;
+
     public PutNotificationConfigurationType withNotificationTypes(String[] notificationTypes) {
         this.notificationTypes = notificationTypes;
         return this;
@@ -23,9 +25,15 @@ public class PutNotificationConfigurationType {
     
     
     public String topicARN;
+
     public PutNotificationConfigurationType withTopicARN(String topicARN) {
         this.topicARN = topicARN;
         return this;
     }
     
+    public PutNotificationConfigurationType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("NotificationTypes") String[] notificationTypes, @JsonProperty("TopicARN") String topicARN) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.notificationTypes = notificationTypes;
+        this.topicARN = topicARN;
+  }
 }

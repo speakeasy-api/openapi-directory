@@ -18,6 +18,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public String accountType;
+
     public UserResponse withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -29,6 +30,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessAccount")
     public BusinessAccount businessAccount;
+
     public UserResponse withBusinessAccount(BusinessAccount businessAccount) {
         this.businessAccount = businessAccount;
         return this;
@@ -40,6 +42,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individualAccount")
     public IndividualAccount individualAccount;
+
     public UserResponse withIndividualAccount(IndividualAccount individualAccount) {
         this.individualAccount = individualAccount;
         return this;
@@ -51,6 +54,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationMarketplaceId")
     public String registrationMarketplaceId;
+
     public UserResponse withRegistrationMarketplaceId(String registrationMarketplaceId) {
         this.registrationMarketplaceId = registrationMarketplaceId;
         return this;
@@ -62,6 +66,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public UserResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -73,6 +78,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public UserResponse withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -84,9 +90,11 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public UserResponse withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UserResponse(){}
 }

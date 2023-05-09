@@ -12,9 +12,11 @@ public class EnvironmentModelHaljsonEmbeddedProductEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public EnvironmentModelHaljsonEmbeddedProductEmbeddedOrganization organization;
+
     public EnvironmentModelHaljsonEmbeddedProductEmbedded withOrganization(EnvironmentModelHaljsonEmbeddedProductEmbeddedOrganization organization) {
         this.organization = organization;
         return this;
     }
     
+    public EnvironmentModelHaljsonEmbeddedProductEmbedded(){}
 }

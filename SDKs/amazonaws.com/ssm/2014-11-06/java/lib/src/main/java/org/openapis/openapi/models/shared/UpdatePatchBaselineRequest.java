@@ -12,6 +12,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovalRules")
     public PatchRuleGroup approvalRules;
+
     public UpdatePatchBaselineRequest withApprovalRules(PatchRuleGroup approvalRules) {
         this.approvalRules = approvalRules;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatches")
     public String[] approvedPatches;
+
     public UpdatePatchBaselineRequest withApprovedPatches(String[] approvedPatches) {
         this.approvedPatches = approvedPatches;
         return this;
@@ -28,6 +30,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatchesComplianceLevel")
     public PatchComplianceLevelEnum approvedPatchesComplianceLevel;
+
     public UpdatePatchBaselineRequest withApprovedPatchesComplianceLevel(PatchComplianceLevelEnum approvedPatchesComplianceLevel) {
         this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
         return this;
@@ -36,6 +39,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
+
     public UpdatePatchBaselineRequest withApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
         this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
         return this;
@@ -43,6 +47,7 @@ public class UpdatePatchBaselineRequest {
     
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public UpdatePatchBaselineRequest withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -51,6 +56,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePatchBaselineRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +65,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalFilters")
     public PatchFilterGroup globalFilters;
+
     public UpdatePatchBaselineRequest withGlobalFilters(PatchFilterGroup globalFilters) {
         this.globalFilters = globalFilters;
         return this;
@@ -67,6 +74,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdatePatchBaselineRequest withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +83,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RejectedPatches")
     public String[] rejectedPatches;
+
     public UpdatePatchBaselineRequest withRejectedPatches(String[] rejectedPatches) {
         this.rejectedPatches = rejectedPatches;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RejectedPatchesAction")
     public PatchActionEnum rejectedPatchesAction;
+
     public UpdatePatchBaselineRequest withRejectedPatchesAction(PatchActionEnum rejectedPatchesAction) {
         this.rejectedPatchesAction = rejectedPatchesAction;
         return this;
@@ -91,6 +101,7 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Replace")
     public Boolean replace;
+
     public UpdatePatchBaselineRequest withReplace(Boolean replace) {
         this.replace = replace;
         return this;
@@ -99,9 +110,13 @@ public class UpdatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sources")
     public PatchSource[] sources;
+
     public UpdatePatchBaselineRequest withSources(PatchSource[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public UpdatePatchBaselineRequest(@JsonProperty("BaselineId") String baselineId) {
+        this.baselineId = baselineId;
+  }
 }

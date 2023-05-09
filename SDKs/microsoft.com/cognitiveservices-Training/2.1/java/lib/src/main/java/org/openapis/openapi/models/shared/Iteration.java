@@ -23,6 +23,7 @@ public class Iteration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationType")
     public IterationClassificationTypeEnum classificationType;
+
     public Iteration withClassificationType(IterationClassificationTypeEnum classificationType) {
         this.classificationType = classificationType;
         return this;
@@ -36,6 +37,7 @@ public class Iteration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Iteration withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -47,6 +49,7 @@ public class Iteration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainId")
     public String domainId;
+
     public Iteration withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -58,6 +61,7 @@ public class Iteration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportable")
     public Boolean exportable;
+
     public Iteration withExportable(Boolean exportable) {
         this.exportable = exportable;
         return this;
@@ -69,6 +73,7 @@ public class Iteration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Iteration withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class Iteration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public Iteration withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -93,6 +99,7 @@ public class Iteration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public Iteration withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -104,6 +111,7 @@ public class Iteration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Iteration withName(String name) {
         this.name = name;
         return this;
@@ -115,6 +123,7 @@ public class Iteration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public Iteration withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -126,6 +135,7 @@ public class Iteration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Iteration withStatus(String status) {
         this.status = status;
         return this;
@@ -139,9 +149,11 @@ public class Iteration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("trainedAt")
     public OffsetDateTime trainedAt;
+
     public Iteration withTrainedAt(OffsetDateTime trainedAt) {
         this.trainedAt = trainedAt;
         return this;
     }
     
+    public Iteration(){}
 }

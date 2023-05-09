@@ -12,6 +12,7 @@ public class UpdateTrialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateTrialRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -19,9 +20,13 @@ public class UpdateTrialRequest {
     
     @JsonProperty("TrialName")
     public String trialName;
+
     public UpdateTrialRequest withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public UpdateTrialRequest(@JsonProperty("TrialName") String trialName) {
+        this.trialName = trialName;
+  }
 }

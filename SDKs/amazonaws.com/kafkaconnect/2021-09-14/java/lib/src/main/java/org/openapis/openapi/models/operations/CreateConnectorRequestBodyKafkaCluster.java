@@ -15,9 +15,11 @@ public class CreateConnectorRequestBodyKafkaCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apacheKafkaCluster")
     public org.openapis.openapi.models.shared.ApacheKafkaCluster apacheKafkaCluster;
+
     public CreateConnectorRequestBodyKafkaCluster withApacheKafkaCluster(org.openapis.openapi.models.shared.ApacheKafkaCluster apacheKafkaCluster) {
         this.apacheKafkaCluster = apacheKafkaCluster;
         return this;
     }
     
+    public CreateConnectorRequestBodyKafkaCluster(){}
 }

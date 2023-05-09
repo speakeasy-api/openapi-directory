@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class WarmPoolConfiguration {
     
     public InstanceReusePolicy instanceReusePolicy;
+
     public WarmPoolConfiguration withInstanceReusePolicy(InstanceReusePolicy instanceReusePolicy) {
         this.instanceReusePolicy = instanceReusePolicy;
         return this;
@@ -19,6 +20,7 @@ public class WarmPoolConfiguration {
     
     
     public Long maxGroupPreparedCapacity;
+
     public WarmPoolConfiguration withMaxGroupPreparedCapacity(Long maxGroupPreparedCapacity) {
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         return this;
@@ -26,6 +28,7 @@ public class WarmPoolConfiguration {
     
     
     public Long minSize;
+
     public WarmPoolConfiguration withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -33,6 +36,7 @@ public class WarmPoolConfiguration {
     
     
     public WarmPoolStateEnum poolState;
+
     public WarmPoolConfiguration withPoolState(WarmPoolStateEnum poolState) {
         this.poolState = poolState;
         return this;
@@ -40,9 +44,11 @@ public class WarmPoolConfiguration {
     
     
     public WarmPoolStatusEnum status;
+
     public WarmPoolConfiguration withStatus(WarmPoolStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public WarmPoolConfiguration(){}
 }

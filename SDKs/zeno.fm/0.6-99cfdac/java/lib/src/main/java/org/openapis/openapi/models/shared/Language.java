@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class Language {
     
     public String name;
+
     public Language withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Language(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingPlacementGroupsListRequest {
@@ -12,6 +13,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingPlacementGroupsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingPlacementGroupsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserIds")
     public String[] advertiserIds;
+
     public DfareportingPlacementGroupsListRequest withAdvertiserIds(String[] advertiserIds) {
         this.advertiserIds = advertiserIds;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingPlacementGroupsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
     public Boolean archived;
+
     public DfareportingPlacementGroupsListRequest withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingPlacementGroupsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignIds")
     public String[] campaignIds;
+
     public DfareportingPlacementGroupsListRequest withCampaignIds(String[] campaignIds) {
         this.campaignIds = campaignIds;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentCategoryIds")
     public String[] contentCategoryIds;
+
     public DfareportingPlacementGroupsListRequest withContentCategoryIds(String[] contentCategoryIds) {
         this.contentCategoryIds = contentCategoryIds;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=directorySiteIds")
     public String[] directorySiteIds;
+
     public DfareportingPlacementGroupsListRequest withDirectorySiteIds(String[] directorySiteIds) {
         this.directorySiteIds = directorySiteIds;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingPlacementGroupsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public DfareportingPlacementGroupsListRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingPlacementGroupsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxEndDate")
     public String maxEndDate;
+
     public DfareportingPlacementGroupsListRequest withMaxEndDate(String maxEndDate) {
         this.maxEndDate = maxEndDate;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DfareportingPlacementGroupsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxStartDate")
     public String maxStartDate;
+
     public DfareportingPlacementGroupsListRequest withMaxStartDate(String maxStartDate) {
         this.maxStartDate = maxStartDate;
         return this;
@@ -162,6 +178,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minEndDate")
     public String minEndDate;
+
     public DfareportingPlacementGroupsListRequest withMinEndDate(String minEndDate) {
         this.minEndDate = minEndDate;
         return this;
@@ -172,6 +189,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minStartDate")
     public String minStartDate;
+
     public DfareportingPlacementGroupsListRequest withMinStartDate(String minStartDate) {
         this.minStartDate = minStartDate;
         return this;
@@ -182,6 +200,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingPlacementGroupsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -192,6 +211,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DfareportingPlacementGroupsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -202,6 +222,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placementGroupType")
     public DfareportingPlacementGroupsListPlacementGroupTypeEnum placementGroupType;
+
     public DfareportingPlacementGroupsListRequest withPlacementGroupType(DfareportingPlacementGroupsListPlacementGroupTypeEnum placementGroupType) {
         this.placementGroupType = placementGroupType;
         return this;
@@ -212,6 +233,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placementStrategyIds")
     public String[] placementStrategyIds;
+
     public DfareportingPlacementGroupsListRequest withPlacementStrategyIds(String[] placementStrategyIds) {
         this.placementStrategyIds = placementStrategyIds;
         return this;
@@ -222,6 +244,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingPlacementGroupsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -232,6 +255,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pricingTypes")
     public DfareportingPlacementGroupsListPricingTypesEnum[] pricingTypes;
+
     public DfareportingPlacementGroupsListRequest withPricingTypes(DfareportingPlacementGroupsListPricingTypesEnum[] pricingTypes) {
         this.pricingTypes = pricingTypes;
         return this;
@@ -242,6 +266,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingPlacementGroupsListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -252,6 +277,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingPlacementGroupsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -262,6 +288,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
     public String searchString;
+
     public DfareportingPlacementGroupsListRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
@@ -272,6 +299,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=siteIds")
     public String[] siteIds;
+
     public DfareportingPlacementGroupsListRequest withSiteIds(String[] siteIds) {
         this.siteIds = siteIds;
         return this;
@@ -282,6 +310,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public DfareportingPlacementGroupsListSortFieldEnum sortField;
+
     public DfareportingPlacementGroupsListRequest withSortField(DfareportingPlacementGroupsListSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -292,6 +321,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DfareportingPlacementGroupsListSortOrderEnum sortOrder;
+
     public DfareportingPlacementGroupsListRequest withSortOrder(DfareportingPlacementGroupsListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -302,6 +332,7 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingPlacementGroupsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -312,9 +343,13 @@ public class DfareportingPlacementGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingPlacementGroupsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingPlacementGroupsListRequest(@JsonProperty("profileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

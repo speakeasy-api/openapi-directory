@@ -16,6 +16,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public OrderLine withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -27,6 +28,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_data")
     public String merchantData;
+
     public OrderLine withMerchantData(String merchantData) {
         this.merchantData = merchantData;
         return this;
@@ -37,6 +39,7 @@ public class OrderLine {
      */
     @JsonProperty("name")
     public String name;
+
     public OrderLine withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_identifiers")
     public ProductIdentifiers productIdentifiers;
+
     public OrderLine withProductIdentifiers(ProductIdentifiers productIdentifiers) {
         this.productIdentifiers = productIdentifiers;
         return this;
@@ -56,6 +60,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_url")
     public String productUrl;
+
     public OrderLine withProductUrl(String productUrl) {
         this.productUrl = productUrl;
         return this;
@@ -66,6 +71,7 @@ public class OrderLine {
      */
     @JsonProperty("quantity")
     public Long quantity;
+
     public OrderLine withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -77,6 +83,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_unit")
     public String quantityUnit;
+
     public OrderLine withQuantityUnit(String quantityUnit) {
         this.quantityUnit = quantityUnit;
         return this;
@@ -88,6 +95,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public OrderLine withReference(String reference) {
         this.reference = reference;
         return this;
@@ -96,6 +104,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public Subscription subscription;
+
     public OrderLine withSubscription(Subscription subscription) {
         this.subscription = subscription;
         return this;
@@ -107,6 +116,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_rate")
     public Long taxRate;
+
     public OrderLine withTaxRate(Long taxRate) {
         this.taxRate = taxRate;
         return this;
@@ -119,6 +129,7 @@ public class OrderLine {
      */
     @JsonProperty("total_amount")
     public Long totalAmount;
+
     public OrderLine withTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -130,6 +141,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_discount_amount")
     public Long totalDiscountAmount;
+
     public OrderLine withTotalDiscountAmount(Long totalDiscountAmount) {
         this.totalDiscountAmount = totalDiscountAmount;
         return this;
@@ -141,6 +153,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_tax_amount")
     public Long totalTaxAmount;
+
     public OrderLine withTotalTaxAmount(Long totalTaxAmount) {
         this.totalTaxAmount = totalTaxAmount;
         return this;
@@ -161,6 +174,7 @@ public class OrderLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderLine withType(String type) {
         this.type = type;
         return this;
@@ -171,9 +185,16 @@ public class OrderLine {
      */
     @JsonProperty("unit_price")
     public Long unitPrice;
+
     public OrderLine withUnitPrice(Long unitPrice) {
         this.unitPrice = unitPrice;
         return this;
     }
     
+    public OrderLine(@JsonProperty("name") String name, @JsonProperty("quantity") Long quantity, @JsonProperty("total_amount") Long totalAmount, @JsonProperty("unit_price") Long unitPrice) {
+        this.name = name;
+        this.quantity = quantity;
+        this.totalAmount = totalAmount;
+        this.unitPrice = unitPrice;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFreeBetsResponse {
     
     public String contentType;
+
     public GetFreeBetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetFreeBetsResponse {
     
     
     public Integer statusCode;
+
     public GetFreeBetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetFreeBetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFreeBetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetFreeBetsResponse {
      */
     
     public org.openapis.openapi.models.shared.FreeBetDetail[] freeBet;
+
     public GetFreeBetsResponse withFreeBet(org.openapis.openapi.models.shared.FreeBetDetail[] freeBet) {
         this.freeBet = freeBet;
         return this;
     }
     
+    public GetFreeBetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

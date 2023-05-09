@@ -18,6 +18,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public PatchDeployment withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PatchDeployment withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public PatchDeployment withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -51,6 +54,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceFilter")
     public PatchInstanceFilter instanceFilter;
+
     public PatchDeployment withInstanceFilter(PatchInstanceFilter instanceFilter) {
         this.instanceFilter = instanceFilter;
         return this;
@@ -62,6 +66,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastExecuteTime")
     public String lastExecuteTime;
+
     public PatchDeployment withLastExecuteTime(String lastExecuteTime) {
         this.lastExecuteTime = lastExecuteTime;
         return this;
@@ -73,6 +78,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatchDeployment withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneTimeSchedule")
     public OneTimeSchedule oneTimeSchedule;
+
     public PatchDeployment withOneTimeSchedule(OneTimeSchedule oneTimeSchedule) {
         this.oneTimeSchedule = oneTimeSchedule;
         return this;
@@ -95,6 +102,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patchConfig")
     public PatchConfig patchConfig;
+
     public PatchDeployment withPatchConfig(PatchConfig patchConfig) {
         this.patchConfig = patchConfig;
         return this;
@@ -106,6 +114,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringSchedule")
     public RecurringSchedule recurringSchedule;
+
     public PatchDeployment withRecurringSchedule(RecurringSchedule recurringSchedule) {
         this.recurringSchedule = recurringSchedule;
         return this;
@@ -117,6 +126,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public PatchRollout rollout;
+
     public PatchDeployment withRollout(PatchRollout rollout) {
         this.rollout = rollout;
         return this;
@@ -128,6 +138,7 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public PatchDeploymentStateEnum state;
+
     public PatchDeployment withState(PatchDeploymentStateEnum state) {
         this.state = state;
         return this;
@@ -139,9 +150,11 @@ public class PatchDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public PatchDeployment withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public PatchDeployment(){}
 }

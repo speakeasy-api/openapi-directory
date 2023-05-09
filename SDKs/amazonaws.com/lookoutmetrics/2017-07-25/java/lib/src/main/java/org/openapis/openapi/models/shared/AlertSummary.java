@@ -20,6 +20,7 @@ public class AlertSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertArn")
     public String alertArn;
+
     public AlertSummary withAlertArn(String alertArn) {
         this.alertArn = alertArn;
         return this;
@@ -28,6 +29,7 @@ public class AlertSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertName")
     public String alertName;
+
     public AlertSummary withAlertName(String alertName) {
         this.alertName = alertName;
         return this;
@@ -36,6 +38,7 @@ public class AlertSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertSensitivityThreshold")
     public Long alertSensitivityThreshold;
+
     public AlertSummary withAlertSensitivityThreshold(Long alertSensitivityThreshold) {
         this.alertSensitivityThreshold = alertSensitivityThreshold;
         return this;
@@ -44,6 +47,7 @@ public class AlertSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertStatus")
     public AlertStatusEnum alertStatus;
+
     public AlertSummary withAlertStatus(AlertStatusEnum alertStatus) {
         this.alertStatus = alertStatus;
         return this;
@@ -52,6 +56,7 @@ public class AlertSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertType")
     public AlertTypeEnum alertType;
+
     public AlertSummary withAlertType(AlertTypeEnum alertType) {
         this.alertType = alertType;
         return this;
@@ -60,6 +65,7 @@ public class AlertSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public AlertSummary withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -70,6 +76,7 @@ public class AlertSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AlertSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -80,6 +87,7 @@ public class AlertSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public AlertSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -88,9 +96,11 @@ public class AlertSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public AlertSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public AlertSummary(){}
 }

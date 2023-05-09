@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClickwrapsIdResponse {
@@ -12,6 +13,7 @@ public class GetClickwrapsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ClickwrapEntity clickwrapEntity;
+
     public GetClickwrapsIdResponse withClickwrapEntity(org.openapis.openapi.models.shared.ClickwrapEntity clickwrapEntity) {
         this.clickwrapEntity = clickwrapEntity;
         return this;
@@ -19,6 +21,7 @@ public class GetClickwrapsIdResponse {
     
     
     public String contentType;
+
     public GetClickwrapsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetClickwrapsIdResponse {
     
     
     public Integer statusCode;
+
     public GetClickwrapsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetClickwrapsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClickwrapsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetClickwrapsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

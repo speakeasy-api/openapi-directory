@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IsoalResponse {
     
     public String contentType;
+
     public IsoalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IsoalResponse {
     
     
     public Integer statusCode;
+
     public IsoalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IsoalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IsoalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IsoalResponse {
      */
     
     public Isoal400ApplicationJSON isoal400ApplicationJSONObject;
+
     public IsoalResponse withIsoal400ApplicationJSONObject(Isoal400ApplicationJSON isoal400ApplicationJSONObject) {
         this.isoal400ApplicationJSONObject = isoal400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class IsoalResponse {
      */
     
     public Isoal401ApplicationJSON isoal401ApplicationJSONObject;
+
     public IsoalResponse withIsoal401ApplicationJSONObject(Isoal401ApplicationJSON isoal401ApplicationJSONObject) {
         this.isoal401ApplicationJSONObject = isoal401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class IsoalResponse {
      */
     
     public Isoal404ApplicationJSON isoal404ApplicationJSONObject;
+
     public IsoalResponse withIsoal404ApplicationJSONObject(Isoal404ApplicationJSON isoal404ApplicationJSONObject) {
         this.isoal404ApplicationJSONObject = isoal404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class IsoalResponse {
      */
     
     public Isoal500ApplicationJSON isoal500ApplicationJSONObject;
+
     public IsoalResponse withIsoal500ApplicationJSONObject(Isoal500ApplicationJSON isoal500ApplicationJSONObject) {
         this.isoal500ApplicationJSONObject = isoal500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class IsoalResponse {
      */
     
     public Isoal502ApplicationJSON isoal502ApplicationJSONObject;
+
     public IsoalResponse withIsoal502ApplicationJSONObject(Isoal502ApplicationJSON isoal502ApplicationJSONObject) {
         this.isoal502ApplicationJSONObject = isoal502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class IsoalResponse {
      */
     
     public Isoal503ApplicationJSON isoal503ApplicationJSONObject;
+
     public IsoalResponse withIsoal503ApplicationJSONObject(Isoal503ApplicationJSON isoal503ApplicationJSONObject) {
         this.isoal503ApplicationJSONObject = isoal503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class IsoalResponse {
      */
     
     public Isoal504ApplicationJSON isoal504ApplicationJSONObject;
+
     public IsoalResponse withIsoal504ApplicationJSONObject(Isoal504ApplicationJSON isoal504ApplicationJSONObject) {
         this.isoal504ApplicationJSONObject = isoal504ApplicationJSONObject;
         return this;
     }
     
+    public IsoalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

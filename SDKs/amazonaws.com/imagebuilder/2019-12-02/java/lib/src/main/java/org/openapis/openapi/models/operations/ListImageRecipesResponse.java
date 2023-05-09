@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImageRecipesResponse {
@@ -12,6 +13,7 @@ public class ListImageRecipesResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ListImageRecipesResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ListImageRecipesResponse {
      */
     
     public Object clientException;
+
     public ListImageRecipesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ListImageRecipesResponse {
     
     
     public String contentType;
+
     public ListImageRecipesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListImageRecipesResponse {
      */
     
     public Object forbiddenException;
+
     public ListImageRecipesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListImageRecipesResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListImageRecipesResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListImageRecipesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListImageRecipesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListImageRecipesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImageRecipesResponse listImageRecipesResponse;
+
     public ListImageRecipesResponse withListImageRecipesResponse(org.openapis.openapi.models.shared.ListImageRecipesResponse listImageRecipesResponse) {
         this.listImageRecipesResponse = listImageRecipesResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListImageRecipesResponse {
      */
     
     public Object serviceException;
+
     public ListImageRecipesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ListImageRecipesResponse {
     
     
     public Integer statusCode;
+
     public ListImageRecipesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListImageRecipesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImageRecipesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListImageRecipesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListImageRecipesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListImageRecipesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

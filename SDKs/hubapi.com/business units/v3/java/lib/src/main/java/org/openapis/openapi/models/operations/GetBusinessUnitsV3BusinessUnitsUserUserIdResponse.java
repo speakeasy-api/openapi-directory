@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBusinessUnitsV3BusinessUnitsUserUserIdResponse {
     
     public byte[] body;
+
     public GetBusinessUnitsV3BusinessUnitsUserUserIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetBusinessUnitsV3BusinessUnitsUserUserIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CollectionResponsePublicBusinessUnitNoPaging collectionResponsePublicBusinessUnitNoPaging;
+
     public GetBusinessUnitsV3BusinessUnitsUserUserIdResponse withCollectionResponsePublicBusinessUnitNoPaging(org.openapis.openapi.models.shared.CollectionResponsePublicBusinessUnitNoPaging collectionResponsePublicBusinessUnitNoPaging) {
         this.collectionResponsePublicBusinessUnitNoPaging = collectionResponsePublicBusinessUnitNoPaging;
         return this;
@@ -26,6 +29,7 @@ public class GetBusinessUnitsV3BusinessUnitsUserUserIdResponse {
     
     
     public String contentType;
+
     public GetBusinessUnitsV3BusinessUnitsUserUserIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetBusinessUnitsV3BusinessUnitsUserUserIdResponse {
     
     
     public Integer statusCode;
+
     public GetBusinessUnitsV3BusinessUnitsUserUserIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetBusinessUnitsV3BusinessUnitsUserUserIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBusinessUnitsV3BusinessUnitsUserUserIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBusinessUnitsV3BusinessUnitsUserUserIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

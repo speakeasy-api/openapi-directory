@@ -121,4 +121,16 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetUpdatePathwayRespons
 lib/src/main/java/org/openapis/openapi/models/operations/PostCreatePathwayFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCreatePathwayRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCreatePathwayResponse.java
+docs/sdk/README.md
+docs/allfunctions/README.md
+docs/curationtags/README.md
+docs/download/README.md
+docs/history/README.md
+docs/ontologytags/README.md
+docs/organismlist/README.md
+docs/pathwayinformation/README.md
+docs/pathwaylist/README.md
+docs/search/README.md
+docs/usermanagement/README.md
+docs/writecreateupdatedelete/README.md
 USAGE.md

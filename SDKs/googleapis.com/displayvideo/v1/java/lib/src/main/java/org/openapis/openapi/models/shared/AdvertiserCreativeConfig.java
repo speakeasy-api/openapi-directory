@@ -18,6 +18,7 @@ public class AdvertiserCreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicCreativeEnabled")
     public Boolean dynamicCreativeEnabled;
+
     public AdvertiserCreativeConfig withDynamicCreativeEnabled(Boolean dynamicCreativeEnabled) {
         this.dynamicCreativeEnabled = dynamicCreativeEnabled;
         return this;
@@ -29,6 +30,7 @@ public class AdvertiserCreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iasClientId")
     public String iasClientId;
+
     public AdvertiserCreativeConfig withIasClientId(String iasClientId) {
         this.iasClientId = iasClientId;
         return this;
@@ -40,6 +42,7 @@ public class AdvertiserCreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obaComplianceDisabled")
     public Boolean obaComplianceDisabled;
+
     public AdvertiserCreativeConfig withObaComplianceDisabled(Boolean obaComplianceDisabled) {
         this.obaComplianceDisabled = obaComplianceDisabled;
         return this;
@@ -51,9 +54,11 @@ public class AdvertiserCreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoCreativeDataSharingAuthorized")
     public Boolean videoCreativeDataSharingAuthorized;
+
     public AdvertiserCreativeConfig withVideoCreativeDataSharingAuthorized(Boolean videoCreativeDataSharingAuthorized) {
         this.videoCreativeDataSharingAuthorized = videoCreativeDataSharingAuthorized;
         return this;
     }
     
+    public AdvertiserCreativeConfig(){}
 }

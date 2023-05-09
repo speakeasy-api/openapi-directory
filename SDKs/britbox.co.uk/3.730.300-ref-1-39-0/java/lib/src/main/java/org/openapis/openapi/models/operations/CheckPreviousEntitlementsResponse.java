@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckPreviousEntitlementsResponse {
     
     public String contentType;
+
     public CheckPreviousEntitlementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CheckPreviousEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.ItvHadEntitlement itvHadEntitlement;
+
     public CheckPreviousEntitlementsResponse withItvHadEntitlement(org.openapis.openapi.models.shared.ItvHadEntitlement itvHadEntitlement) {
         this.itvHadEntitlement = itvHadEntitlement;
         return this;
@@ -29,6 +32,7 @@ public class CheckPreviousEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public CheckPreviousEntitlementsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class CheckPreviousEntitlementsResponse {
     
     
     public Integer statusCode;
+
     public CheckPreviousEntitlementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CheckPreviousEntitlementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckPreviousEntitlementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CheckPreviousEntitlementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

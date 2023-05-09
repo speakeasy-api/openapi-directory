@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebBackendListGeographiesResponse {
     
     public String contentType;
+
     public WebBackendListGeographiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WebBackendListGeographiesResponse {
     
     
     public Integer statusCode;
+
     public WebBackendListGeographiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WebBackendListGeographiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebBackendListGeographiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class WebBackendListGeographiesResponse {
      */
     
     public org.openapis.openapi.models.shared.WebBackendGeographiesListResult webBackendGeographiesListResult;
+
     public WebBackendListGeographiesResponse withWebBackendGeographiesListResult(org.openapis.openapi.models.shared.WebBackendGeographiesListResult webBackendGeographiesListResult) {
         this.webBackendGeographiesListResult = webBackendGeographiesListResult;
         return this;
     }
     
+    public WebBackendListGeographiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

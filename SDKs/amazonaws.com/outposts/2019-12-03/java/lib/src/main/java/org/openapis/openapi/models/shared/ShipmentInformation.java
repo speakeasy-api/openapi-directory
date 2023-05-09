@@ -15,6 +15,7 @@ public class ShipmentInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShipmentCarrier")
     public ShipmentCarrierEnum shipmentCarrier;
+
     public ShipmentInformation withShipmentCarrier(ShipmentCarrierEnum shipmentCarrier) {
         this.shipmentCarrier = shipmentCarrier;
         return this;
@@ -23,9 +24,11 @@ public class ShipmentInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShipmentTrackingNumber")
     public String shipmentTrackingNumber;
+
     public ShipmentInformation withShipmentTrackingNumber(String shipmentTrackingNumber) {
         this.shipmentTrackingNumber = shipmentTrackingNumber;
         return this;
     }
     
+    public ShipmentInformation(){}
 }

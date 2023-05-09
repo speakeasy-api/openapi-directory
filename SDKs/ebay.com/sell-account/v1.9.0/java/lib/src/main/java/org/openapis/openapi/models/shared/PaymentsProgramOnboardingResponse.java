@@ -18,6 +18,7 @@ public class PaymentsProgramOnboardingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onboardingStatus")
     public String onboardingStatus;
+
     public PaymentsProgramOnboardingResponse withOnboardingStatus(String onboardingStatus) {
         this.onboardingStatus = onboardingStatus;
         return this;
@@ -29,9 +30,11 @@ public class PaymentsProgramOnboardingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public PaymentsProgramOnboardingSteps[] steps;
+
     public PaymentsProgramOnboardingResponse withSteps(PaymentsProgramOnboardingSteps[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public PaymentsProgramOnboardingResponse(){}
 }

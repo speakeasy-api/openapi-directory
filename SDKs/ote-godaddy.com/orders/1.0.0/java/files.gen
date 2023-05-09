@@ -58,4 +58,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Pagination.java
 lib/src/main/java/org/openapis/openapi/models/shared/OrderSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/OrderSummaryPricing.java
 lib/src/main/java/org/openapis/openapi/models/shared/LineItemSummary.java
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

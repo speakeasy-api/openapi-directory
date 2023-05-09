@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFleetResponse {
     
     public String contentType;
+
     public DeleteFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFleetResponse {
      */
     
     public java.util.Map<String, Object> deleteFleetResponse;
+
     public DeleteFleetResponse withDeleteFleetResponse(java.util.Map<String, Object> deleteFleetResponse) {
         this.deleteFleetResponse = deleteFleetResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFleetResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteFleetResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFleetResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteFleetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteFleetResponse {
     
     
     public Integer statusCode;
+
     public DeleteFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFleetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteFleetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteFleetResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteFleetResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

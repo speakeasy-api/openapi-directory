@@ -18,6 +18,7 @@ public class ScheduleTemplateCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public ScheduleTemplateCollection withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class ScheduleTemplateCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public ScheduleTemplateCollection withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class ScheduleTemplateCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ScheduleTemplateCollection withNext(String next) {
         this.next = next;
         return this;
@@ -51,6 +54,7 @@ public class ScheduleTemplateCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public ScheduleTemplateCollection withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +66,7 @@ public class ScheduleTemplateCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public String prev;
+
     public ScheduleTemplateCollection withPrev(String prev) {
         this.prev = prev;
         return this;
@@ -73,6 +78,7 @@ public class ScheduleTemplateCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTemplates")
     public ScheduleTemplateResponse[] scheduleTemplates;
+
     public ScheduleTemplateCollection withScheduleTemplates(ScheduleTemplateResponse[] scheduleTemplates) {
         this.scheduleTemplates = scheduleTemplates;
         return this;
@@ -84,9 +90,11 @@ public class ScheduleTemplateCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public ScheduleTemplateCollection withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public ScheduleTemplateCollection(){}
 }

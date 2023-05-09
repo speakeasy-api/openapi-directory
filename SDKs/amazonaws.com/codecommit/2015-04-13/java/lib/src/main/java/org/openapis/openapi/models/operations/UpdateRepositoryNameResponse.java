@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRepositoryNameResponse {
     
     public String contentType;
+
     public UpdateRepositoryNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRepositoryNameResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public UpdateRepositoryNameResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRepositoryNameResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public UpdateRepositoryNameResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRepositoryNameResponse {
      */
     
     public Object repositoryNameExistsException;
+
     public UpdateRepositoryNameResponse withRepositoryNameExistsException(Object repositoryNameExistsException) {
         this.repositoryNameExistsException = repositoryNameExistsException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRepositoryNameResponse {
     
     
     public Integer statusCode;
+
     public UpdateRepositoryNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRepositoryNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRepositoryNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateRepositoryNameResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public UpdateRepositoryNameResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
     }
     
+    public UpdateRepositoryNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

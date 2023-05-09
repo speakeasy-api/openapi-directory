@@ -15,6 +15,7 @@ public class CrlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomCname")
     public String customCname;
+
     public CrlConfiguration withCustomCname(String customCname) {
         this.customCname = customCname;
         return this;
@@ -22,6 +23,7 @@ public class CrlConfiguration {
     
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public CrlConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -30,6 +32,7 @@ public class CrlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationInDays")
     public Long expirationInDays;
+
     public CrlConfiguration withExpirationInDays(Long expirationInDays) {
         this.expirationInDays = expirationInDays;
         return this;
@@ -38,6 +41,7 @@ public class CrlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public CrlConfiguration withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -46,9 +50,13 @@ public class CrlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3ObjectAcl")
     public S3ObjectAclEnum s3ObjectAcl;
+
     public CrlConfiguration withS3ObjectAcl(S3ObjectAclEnum s3ObjectAcl) {
         this.s3ObjectAcl = s3ObjectAcl;
         return this;
     }
     
+    public CrlConfiguration(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

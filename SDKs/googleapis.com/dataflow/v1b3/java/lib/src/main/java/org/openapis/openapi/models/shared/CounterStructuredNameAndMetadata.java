@@ -18,6 +18,7 @@ public class CounterStructuredNameAndMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public CounterMetadata metadata;
+
     public CounterStructuredNameAndMetadata withMetadata(CounterMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class CounterStructuredNameAndMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public CounterStructuredName name;
+
     public CounterStructuredNameAndMetadata withName(CounterStructuredName name) {
         this.name = name;
         return this;
     }
     
+    public CounterStructuredNameAndMetadata(){}
 }

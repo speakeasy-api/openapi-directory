@@ -15,6 +15,7 @@ public class DescribeAccountAuditConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditCheckConfigurations")
     public java.util.Map<String, AuditCheckConfiguration> auditCheckConfigurations;
+
     public DescribeAccountAuditConfigurationResponse withAuditCheckConfigurations(java.util.Map<String, AuditCheckConfiguration> auditCheckConfigurations) {
         this.auditCheckConfigurations = auditCheckConfigurations;
         return this;
@@ -23,6 +24,7 @@ public class DescribeAccountAuditConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditNotificationTargetConfigurations")
     public java.util.Map<String, AuditNotificationTarget> auditNotificationTargetConfigurations;
+
     public DescribeAccountAuditConfigurationResponse withAuditNotificationTargetConfigurations(java.util.Map<String, AuditNotificationTarget> auditNotificationTargetConfigurations) {
         this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
         return this;
@@ -31,9 +33,11 @@ public class DescribeAccountAuditConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DescribeAccountAuditConfigurationResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeAccountAuditConfigurationResponse(){}
 }

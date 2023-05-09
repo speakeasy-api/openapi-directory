@@ -15,6 +15,7 @@ public class RuleGroupSourceStatelessRulesAndCustomActionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomActions")
     public RuleGroupSourceCustomActionsDetails[] customActions;
+
     public RuleGroupSourceStatelessRulesAndCustomActionsDetails withCustomActions(RuleGroupSourceCustomActionsDetails[] customActions) {
         this.customActions = customActions;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupSourceStatelessRulesAndCustomActionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessRules")
     public RuleGroupSourceStatelessRulesDetails[] statelessRules;
+
     public RuleGroupSourceStatelessRulesAndCustomActionsDetails withStatelessRules(RuleGroupSourceStatelessRulesDetails[] statelessRules) {
         this.statelessRules = statelessRules;
         return this;
     }
     
+    public RuleGroupSourceStatelessRulesAndCustomActionsDetails(){}
 }

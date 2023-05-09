@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHypervisorsResponse {
     
     public String contentType;
+
     public ListHypervisorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListHypervisorsResponse {
      */
     
     public Object internalServerException;
+
     public ListHypervisorsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListHypervisorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHypervisorsOutput listHypervisorsOutput;
+
     public ListHypervisorsResponse withListHypervisorsOutput(org.openapis.openapi.models.shared.ListHypervisorsOutput listHypervisorsOutput) {
         this.listHypervisorsOutput = listHypervisorsOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListHypervisorsResponse {
     
     
     public Integer statusCode;
+
     public ListHypervisorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListHypervisorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHypervisorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListHypervisorsResponse {
      */
     
     public Object throttlingException;
+
     public ListHypervisorsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListHypervisorsResponse {
      */
     
     public Object validationException;
+
     public ListHypervisorsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListHypervisorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

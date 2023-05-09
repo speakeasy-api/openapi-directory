@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAgentRequest {
     @JsonProperty("ActivationKey")
     public String activationKey;
+
     public CreateAgentRequest withActivationKey(String activationKey) {
         this.activationKey = activationKey;
         return this;
@@ -22,6 +23,7 @@ public class CreateAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentName")
     public String agentName;
+
     public CreateAgentRequest withAgentName(String agentName) {
         this.agentName = agentName;
         return this;
@@ -30,6 +32,7 @@ public class CreateAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public CreateAgentRequest withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -38,6 +41,7 @@ public class CreateAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetArns")
     public String[] subnetArns;
+
     public CreateAgentRequest withSubnetArns(String[] subnetArns) {
         this.subnetArns = subnetArns;
         return this;
@@ -46,6 +50,7 @@ public class CreateAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateAgentRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +59,13 @@ public class CreateAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointId")
     public String vpcEndpointId;
+
     public CreateAgentRequest withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
     }
     
+    public CreateAgentRequest(@JsonProperty("ActivationKey") String activationKey) {
+        this.activationKey = activationKey;
+  }
 }

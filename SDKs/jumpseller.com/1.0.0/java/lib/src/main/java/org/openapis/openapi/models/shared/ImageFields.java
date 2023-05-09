@@ -15,6 +15,7 @@ public class ImageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ImageFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class ImageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public ImageFields withPosition(Integer position) {
         this.position = position;
         return this;
@@ -37,9 +39,11 @@ public class ImageFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ImageFields withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImageFields(){}
 }

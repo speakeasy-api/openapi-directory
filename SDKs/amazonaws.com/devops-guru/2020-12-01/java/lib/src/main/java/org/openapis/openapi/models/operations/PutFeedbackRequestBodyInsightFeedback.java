@@ -15,6 +15,7 @@ public class PutFeedbackRequestBodyInsightFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Feedback")
     public org.openapis.openapi.models.shared.InsightFeedbackOptionEnum feedback;
+
     public PutFeedbackRequestBodyInsightFeedback withFeedback(org.openapis.openapi.models.shared.InsightFeedbackOptionEnum feedback) {
         this.feedback = feedback;
         return this;
@@ -23,9 +24,11 @@ public class PutFeedbackRequestBodyInsightFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public PutFeedbackRequestBodyInsightFeedback withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutFeedbackRequestBodyInsightFeedback(){}
 }

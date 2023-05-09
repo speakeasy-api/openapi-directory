@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetSearchV1FieldsRequest;
 import org.openapis.openapi.models.operations.GetSearchV1FieldsResponse;
 
@@ -28,28 +27,30 @@ public class Application {
 
             GetSearchV1FieldsRequest req = new GetSearchV1FieldsRequest() {{
                 callback = "corrupti";
-            }}            
+            }};            
 
             GetSearchV1FieldsResponse res = sdk.getSearchV1Fields(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getSearchV1Fields` - Fields that can be requested
-* `getSearchV1Organic` - Return relevance-based results from search queries
+* [getSearchV1Fields](docs/sdk/README.md#getsearchv1fields) - Fields that can be requested
+* [getSearchV1Organic](docs/sdk/README.md#getsearchv1organic) - Return relevance-based results from search queries
 
-* `getSearchV1Scrape` - Scrape search results from Internet Archive, allowing a scrolling cursor
+* [getSearchV1Scrape](docs/sdk/README.md#getsearchv1scrape) - Scrape search results from Internet Archive, allowing a scrolling cursor
 
 <!-- End SDK Available Operations -->
 

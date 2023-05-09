@@ -15,6 +15,7 @@ public class CreateUpdatedImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canUpdateImage")
     public Boolean canUpdateImage;
+
     public CreateUpdatedImageResult withCanUpdateImage(Boolean canUpdateImage) {
         this.canUpdateImage = canUpdateImage;
         return this;
@@ -26,9 +27,11 @@ public class CreateUpdatedImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public CreateUpdatedImageResult withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public CreateUpdatedImageResult(){}
 }

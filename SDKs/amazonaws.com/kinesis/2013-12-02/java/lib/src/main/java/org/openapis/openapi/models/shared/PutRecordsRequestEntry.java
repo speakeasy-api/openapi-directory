@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRecordsRequestEntry {
     @JsonProperty("Data")
     public String data;
+
     public PutRecordsRequestEntry withData(String data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class PutRecordsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplicitHashKey")
     public String explicitHashKey;
+
     public PutRecordsRequestEntry withExplicitHashKey(String explicitHashKey) {
         this.explicitHashKey = explicitHashKey;
         return this;
@@ -29,9 +31,14 @@ public class PutRecordsRequestEntry {
     
     @JsonProperty("PartitionKey")
     public String partitionKey;
+
     public PutRecordsRequestEntry withPartitionKey(String partitionKey) {
         this.partitionKey = partitionKey;
         return this;
     }
     
+    public PutRecordsRequestEntry(@JsonProperty("Data") String data, @JsonProperty("PartitionKey") String partitionKey) {
+        this.data = data;
+        this.partitionKey = partitionKey;
+  }
 }

@@ -45,6 +45,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocati
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsOperationsListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsOperationsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsOperationsListResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesAlterLocationSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesAlterLocationRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesAlterLocationResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesBackupsCreateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesBackupsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesBackupsCreateResponse.java
@@ -81,6 +84,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocati
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesMetadataImportsPatchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesMetadataImportsPatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesMetadataImportsPatchResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesMoveTableToDatabaseSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesQueryMetadataSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesQueryMetadataRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesQueryMetadataResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesRestoreSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesRestoreRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MetastoreProjectsLocationsServicesRestoreResponse.java
@@ -100,6 +109,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListFederationsResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/AlterMetadataResourceLocationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/BackupStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Backup.java
 lib/src/main/java/org/openapis/openapi/models/shared/BackupInput.java
@@ -151,8 +161,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/DatabaseDumpDatabaseTypeEnu
 lib/src/main/java/org/openapis/openapi/models/shared/DatabaseDumpTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DatabaseDump.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListMetadataImportsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/MoveTableToDatabaseRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/QueryMetadataRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/RestoreServiceRequestRestoreTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RestoreServiceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

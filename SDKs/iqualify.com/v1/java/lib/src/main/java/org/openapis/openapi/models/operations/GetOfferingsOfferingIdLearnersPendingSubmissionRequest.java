@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdLearnersPendingSubmissionRequest {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdLearnersPendingSubmissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=days")
     public String days;
+
     public GetOfferingsOfferingIdLearnersPendingSubmissionRequest withDays(String days) {
         this.days = days;
         return this;
@@ -22,9 +24,13 @@ public class GetOfferingsOfferingIdLearnersPendingSubmissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public GetOfferingsOfferingIdLearnersPendingSubmissionRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public GetOfferingsOfferingIdLearnersPendingSubmissionRequest(@JsonProperty("offeringId") String offeringId) {
+        this.offeringId = offeringId;
+  }
 }

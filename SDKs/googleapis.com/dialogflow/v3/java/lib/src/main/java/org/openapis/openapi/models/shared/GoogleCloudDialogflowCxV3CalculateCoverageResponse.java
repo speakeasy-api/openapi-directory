@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3CalculateCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent")
     public String agent;
+
     public GoogleCloudDialogflowCxV3CalculateCoverageResponse withAgent(String agent) {
         this.agent = agent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3CalculateCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentCoverage")
     public GoogleCloudDialogflowCxV3IntentCoverage intentCoverage;
+
     public GoogleCloudDialogflowCxV3CalculateCoverageResponse withIntentCoverage(GoogleCloudDialogflowCxV3IntentCoverage intentCoverage) {
         this.intentCoverage = intentCoverage;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3CalculateCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeGroupCoverage")
     public GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage routeGroupCoverage;
+
     public GoogleCloudDialogflowCxV3CalculateCoverageResponse withRouteGroupCoverage(GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage routeGroupCoverage) {
         this.routeGroupCoverage = routeGroupCoverage;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowCxV3CalculateCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionCoverage")
     public GoogleCloudDialogflowCxV3TransitionCoverage transitionCoverage;
+
     public GoogleCloudDialogflowCxV3CalculateCoverageResponse withTransitionCoverage(GoogleCloudDialogflowCxV3TransitionCoverage transitionCoverage) {
         this.transitionCoverage = transitionCoverage;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3CalculateCoverageResponse(){}
 }

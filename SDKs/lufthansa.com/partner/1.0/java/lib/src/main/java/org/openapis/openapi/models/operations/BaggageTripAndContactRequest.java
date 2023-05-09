@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BaggageTripAndContactRequest {
@@ -12,6 +13,7 @@ public class BaggageTripAndContactRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public BaggageTripAndContactRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,9 +24,14 @@ public class BaggageTripAndContactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchID")
     public String searchID;
+
     public BaggageTripAndContactRequest withSearchID(String searchID) {
         this.searchID = searchID;
         return this;
     }
     
+    public BaggageTripAndContactRequest(@JsonProperty("Accept") String accept, @JsonProperty("searchID") String searchID) {
+        this.accept = accept;
+        this.searchID = searchID;
+  }
 }

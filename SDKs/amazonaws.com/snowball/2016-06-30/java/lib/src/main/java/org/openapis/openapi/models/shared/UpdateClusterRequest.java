@@ -12,6 +12,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressId")
     public String addressId;
+
     public UpdateClusterRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateClusterRequest {
     
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public UpdateClusterRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateClusterRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForwardingAddressId")
     public String forwardingAddressId;
+
     public UpdateClusterRequest withForwardingAddressId(String forwardingAddressId) {
         this.forwardingAddressId = forwardingAddressId;
         return this;
@@ -43,6 +47,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notification")
     public Notification notification;
+
     public UpdateClusterRequest withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -51,6 +56,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDeviceServiceConfiguration")
     public OnDeviceServiceConfiguration onDeviceServiceConfiguration;
+
     public UpdateClusterRequest withOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
         this.onDeviceServiceConfiguration = onDeviceServiceConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public JobResource resources;
+
     public UpdateClusterRequest withResources(JobResource resources) {
         this.resources = resources;
         return this;
@@ -67,6 +74,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public UpdateClusterRequest withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -75,9 +83,13 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingOption")
     public ShippingOptionEnum shippingOption;
+
     public UpdateClusterRequest withShippingOption(ShippingOptionEnum shippingOption) {
         this.shippingOption = shippingOption;
         return this;
     }
     
+    public UpdateClusterRequest(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

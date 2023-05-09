@@ -15,6 +15,7 @@ public class GetEventSelectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvancedEventSelectors")
     public AdvancedEventSelector[] advancedEventSelectors;
+
     public GetEventSelectorsResponse withAdvancedEventSelectors(AdvancedEventSelector[] advancedEventSelectors) {
         this.advancedEventSelectors = advancedEventSelectors;
         return this;
@@ -23,6 +24,7 @@ public class GetEventSelectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSelectors")
     public EventSelector[] eventSelectors;
+
     public GetEventSelectorsResponse withEventSelectors(EventSelector[] eventSelectors) {
         this.eventSelectors = eventSelectors;
         return this;
@@ -31,9 +33,11 @@ public class GetEventSelectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrailARN")
     public String trailARN;
+
     public GetEventSelectorsResponse withTrailARN(String trailARN) {
         this.trailARN = trailARN;
         return this;
     }
     
+    public GetEventSelectorsResponse(){}
 }

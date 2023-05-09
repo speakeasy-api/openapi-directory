@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTemplateRequest {
@@ -12,9 +13,13 @@ public class DeleteTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
     public Long templateId;
+
     public DeleteTemplateRequest withTemplateId(Long templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public DeleteTemplateRequest(@JsonProperty("templateId") Long templateId) {
+        this.templateId = templateId;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateTemplate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public org.openapis.openapi.models.shared.TemplateDefinition response;
+
     public CreateTemplate200ApplicationJSON withResponse(org.openapis.openapi.models.shared.TemplateDefinition response) {
         this.response = response;
         return this;
     }
     
+    public CreateTemplate200ApplicationJSON(){}
 }

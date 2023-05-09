@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListContributorInsightsResponse {
     
     public String contentType;
+
     public ListContributorInsightsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListContributorInsightsResponse {
      */
     
     public Object internalServerError;
+
     public ListContributorInsightsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListContributorInsightsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListContributorInsightsOutput listContributorInsightsOutput;
+
     public ListContributorInsightsResponse withListContributorInsightsOutput(org.openapis.openapi.models.shared.ListContributorInsightsOutput listContributorInsightsOutput) {
         this.listContributorInsightsOutput = listContributorInsightsOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListContributorInsightsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListContributorInsightsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListContributorInsightsResponse {
     
     
     public Integer statusCode;
+
     public ListContributorInsightsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListContributorInsightsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListContributorInsightsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListContributorInsightsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

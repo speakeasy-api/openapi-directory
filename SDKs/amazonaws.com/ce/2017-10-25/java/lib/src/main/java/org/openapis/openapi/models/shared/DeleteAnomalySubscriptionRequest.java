@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAnomalySubscriptionRequest {
     @JsonProperty("SubscriptionArn")
     public String subscriptionArn;
+
     public DeleteAnomalySubscriptionRequest withSubscriptionArn(String subscriptionArn) {
         this.subscriptionArn = subscriptionArn;
         return this;
     }
     
+    public DeleteAnomalySubscriptionRequest(@JsonProperty("SubscriptionArn") String subscriptionArn) {
+        this.subscriptionArn = subscriptionArn;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckDocumentsReindexResponse {
@@ -12,6 +13,7 @@ public class CheckDocumentsReindexResponse {
      */
     
     public org.openapis.openapi.models.shared.AsyncOperationStatus asyncOperationStatus;
+
     public CheckDocumentsReindexResponse withAsyncOperationStatus(org.openapis.openapi.models.shared.AsyncOperationStatus asyncOperationStatus) {
         this.asyncOperationStatus = asyncOperationStatus;
         return this;
@@ -19,6 +21,7 @@ public class CheckDocumentsReindexResponse {
     
     
     public String contentType;
+
     public CheckDocumentsReindexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CheckDocumentsReindexResponse {
     
     
     public Integer statusCode;
+
     public CheckDocumentsReindexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CheckDocumentsReindexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckDocumentsReindexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CheckDocumentsReindexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

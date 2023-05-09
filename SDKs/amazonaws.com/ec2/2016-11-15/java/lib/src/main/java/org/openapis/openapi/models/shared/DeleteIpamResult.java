@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteIpamResult {
     
     public DeleteIpamResultIpam ipam;
+
     public DeleteIpamResult withIpam(DeleteIpamResultIpam ipam) {
         this.ipam = ipam;
         return this;
     }
     
+    public DeleteIpamResult(){}
 }

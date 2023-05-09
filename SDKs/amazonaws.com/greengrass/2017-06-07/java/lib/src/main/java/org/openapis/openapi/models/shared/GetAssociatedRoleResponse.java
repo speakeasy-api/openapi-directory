@@ -15,6 +15,7 @@ public class GetAssociatedRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedAt")
     public String associatedAt;
+
     public GetAssociatedRoleResponse withAssociatedAt(String associatedAt) {
         this.associatedAt = associatedAt;
         return this;
@@ -23,9 +24,11 @@ public class GetAssociatedRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public GetAssociatedRoleResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public GetAssociatedRoleResponse(){}
 }

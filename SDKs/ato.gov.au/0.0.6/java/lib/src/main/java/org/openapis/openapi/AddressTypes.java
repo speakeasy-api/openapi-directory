@@ -63,13 +63,11 @@ public class AddressTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClassificationsAddressTypesResponse res = new org.openapis.openapi.models.operations.GetClassificationsAddressTypesResponse() {{
+        org.openapis.openapi.models.operations.GetClassificationsAddressTypesResponse res = new org.openapis.openapi.models.operations.GetClassificationsAddressTypesResponse(contentType, httpRes.statusCode()) {{
             addressTypes = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

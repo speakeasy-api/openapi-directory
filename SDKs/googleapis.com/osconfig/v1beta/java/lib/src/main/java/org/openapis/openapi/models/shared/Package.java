@@ -18,6 +18,7 @@ public class Package {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredState")
     public PackageDesiredStateEnum desiredState;
+
     public Package withDesiredState(PackageDesiredStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -29,6 +30,7 @@ public class Package {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manager")
     public PackageManagerEnum manager;
+
     public Package withManager(PackageManagerEnum manager) {
         this.manager = manager;
         return this;
@@ -40,9 +42,11 @@ public class Package {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Package withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Package(){}
 }

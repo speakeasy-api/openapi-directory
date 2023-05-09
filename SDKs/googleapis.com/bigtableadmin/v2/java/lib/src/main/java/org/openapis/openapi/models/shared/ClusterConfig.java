@@ -18,9 +18,11 @@ public class ClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterAutoscalingConfig")
     public ClusterAutoscalingConfig clusterAutoscalingConfig;
+
     public ClusterConfig withClusterAutoscalingConfig(ClusterAutoscalingConfig clusterAutoscalingConfig) {
         this.clusterAutoscalingConfig = clusterAutoscalingConfig;
         return this;
     }
     
+    public ClusterConfig(){}
 }

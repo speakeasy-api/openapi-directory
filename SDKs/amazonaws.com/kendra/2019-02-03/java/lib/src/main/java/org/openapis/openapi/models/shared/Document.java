@@ -15,6 +15,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessControlConfigurationId")
     public String accessControlConfigurationId;
+
     public Document withAccessControlConfigurationId(String accessControlConfigurationId) {
         this.accessControlConfigurationId = accessControlConfigurationId;
         return this;
@@ -23,6 +24,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessControlList")
     public Principal[] accessControlList;
+
     public Document withAccessControlList(Principal[] accessControlList) {
         this.accessControlList = accessControlList;
         return this;
@@ -31,6 +33,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public DocumentAttribute[] attributes;
+
     public Document withAttributes(DocumentAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -39,6 +42,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blob")
     public String blob;
+
     public Document withBlob(String blob) {
         this.blob = blob;
         return this;
@@ -47,6 +51,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public ContentTypeEnum contentType;
+
     public Document withContentType(ContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -55,6 +60,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HierarchicalAccessControlList")
     public HierarchicalPrincipal[] hierarchicalAccessControlList;
+
     public Document withHierarchicalAccessControlList(HierarchicalPrincipal[] hierarchicalAccessControlList) {
         this.hierarchicalAccessControlList = hierarchicalAccessControlList;
         return this;
@@ -62,6 +68,7 @@ public class Document {
     
     @JsonProperty("Id")
     public String id;
+
     public Document withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +80,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Path")
     public S3Path s3Path;
+
     public Document withS3Path(S3Path s3Path) {
         this.s3Path = s3Path;
         return this;
@@ -81,9 +89,13 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Document withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Document(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

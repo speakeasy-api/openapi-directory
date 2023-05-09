@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutMetricStreamInput {
     
     public MetricStreamFilter[] excludeFilters;
+
     public PutMetricStreamInput withExcludeFilters(MetricStreamFilter[] excludeFilters) {
         this.excludeFilters = excludeFilters;
         return this;
@@ -16,6 +17,7 @@ public class PutMetricStreamInput {
     
     
     public String firehoseArn;
+
     public PutMetricStreamInput withFirehoseArn(String firehoseArn) {
         this.firehoseArn = firehoseArn;
         return this;
@@ -23,6 +25,7 @@ public class PutMetricStreamInput {
     
     
     public MetricStreamFilter[] includeFilters;
+
     public PutMetricStreamInput withIncludeFilters(MetricStreamFilter[] includeFilters) {
         this.includeFilters = includeFilters;
         return this;
@@ -30,6 +33,7 @@ public class PutMetricStreamInput {
     
     
     public Boolean includeLinkedAccountsMetrics;
+
     public PutMetricStreamInput withIncludeLinkedAccountsMetrics(Boolean includeLinkedAccountsMetrics) {
         this.includeLinkedAccountsMetrics = includeLinkedAccountsMetrics;
         return this;
@@ -37,6 +41,7 @@ public class PutMetricStreamInput {
     
     
     public String name;
+
     public PutMetricStreamInput withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class PutMetricStreamInput {
     
     
     public MetricStreamOutputFormatEnum outputFormat;
+
     public PutMetricStreamInput withOutputFormat(MetricStreamOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -51,6 +57,7 @@ public class PutMetricStreamInput {
     
     
     public String roleArn;
+
     public PutMetricStreamInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -58,6 +65,7 @@ public class PutMetricStreamInput {
     
     
     public MetricStreamStatisticsConfiguration[] statisticsConfigurations;
+
     public PutMetricStreamInput withStatisticsConfigurations(MetricStreamStatisticsConfiguration[] statisticsConfigurations) {
         this.statisticsConfigurations = statisticsConfigurations;
         return this;
@@ -65,9 +73,16 @@ public class PutMetricStreamInput {
     
     
     public Tag[] tags;
+
     public PutMetricStreamInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutMetricStreamInput(@JsonProperty("FirehoseArn") String firehoseArn, @JsonProperty("Name") String name, @JsonProperty("OutputFormat") MetricStreamOutputFormatEnum outputFormat, @JsonProperty("RoleArn") String roleArn) {
+        this.firehoseArn = firehoseArn;
+        this.name = name;
+        this.outputFormat = outputFormat;
+        this.roleArn = roleArn;
+  }
 }

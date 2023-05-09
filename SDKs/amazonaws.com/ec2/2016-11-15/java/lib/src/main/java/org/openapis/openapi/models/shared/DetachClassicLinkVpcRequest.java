@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DetachClassicLinkVpcRequest {
     
     public Boolean dryRun;
+
     public DetachClassicLinkVpcRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DetachClassicLinkVpcRequest {
     
     
     public String instanceId;
+
     public DetachClassicLinkVpcRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -23,9 +25,14 @@ public class DetachClassicLinkVpcRequest {
     
     
     public String vpcId;
+
     public DetachClassicLinkVpcRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DetachClassicLinkVpcRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("VpcId") String vpcId) {
+        this.instanceId = instanceId;
+        this.vpcId = vpcId;
+  }
 }

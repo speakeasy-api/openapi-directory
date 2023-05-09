@@ -15,9 +15,11 @@ public class GetClipOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payload")
     public String payload;
+
     public GetClipOutput withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public GetClipOutput(){}
 }

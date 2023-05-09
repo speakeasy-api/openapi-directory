@@ -18,6 +18,7 @@ public class DeviceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryData")
     public String binaryData;
+
     public DeviceState withBinaryData(String binaryData) {
         this.binaryData = binaryData;
         return this;
@@ -29,9 +30,11 @@ public class DeviceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public DeviceState withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DeviceState(){}
 }

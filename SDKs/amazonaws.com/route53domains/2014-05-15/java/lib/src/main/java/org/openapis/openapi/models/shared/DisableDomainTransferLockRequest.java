@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableDomainTransferLockRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public DisableDomainTransferLockRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DisableDomainTransferLockRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

@@ -18,9 +18,11 @@ public class AppEngine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moduleId")
     public String moduleId;
+
     public AppEngine withModuleId(String moduleId) {
         this.moduleId = moduleId;
         return this;
     }
     
+    public AppEngine(){}
 }

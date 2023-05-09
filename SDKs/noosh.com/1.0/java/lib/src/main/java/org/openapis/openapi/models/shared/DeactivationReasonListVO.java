@@ -15,6 +15,7 @@ public class DeactivationReasonListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public DeactivationReasonVO[] results;
+
     public DeactivationReasonListVO withResults(DeactivationReasonVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class DeactivationReasonListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public DeactivationReasonListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class DeactivationReasonListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public DeactivationReasonListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public DeactivationReasonListVO(){}
 }

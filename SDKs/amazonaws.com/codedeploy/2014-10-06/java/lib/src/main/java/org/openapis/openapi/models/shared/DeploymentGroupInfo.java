@@ -15,6 +15,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public DeploymentGroupInfo withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationName")
     public String applicationName;
+
     public DeploymentGroupInfo withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -31,6 +33,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRollbackConfiguration")
     public AutoRollbackConfiguration autoRollbackConfiguration;
+
     public DeploymentGroupInfo withAutoRollbackConfiguration(AutoRollbackConfiguration autoRollbackConfiguration) {
         this.autoRollbackConfiguration = autoRollbackConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroups")
     public AutoScalingGroup[] autoScalingGroups;
+
     public DeploymentGroupInfo withAutoScalingGroups(AutoScalingGroup[] autoScalingGroups) {
         this.autoScalingGroups = autoScalingGroups;
         return this;
@@ -47,6 +51,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueGreenDeploymentConfiguration")
     public BlueGreenDeploymentConfiguration blueGreenDeploymentConfiguration;
+
     public DeploymentGroupInfo withBlueGreenDeploymentConfiguration(BlueGreenDeploymentConfiguration blueGreenDeploymentConfiguration) {
         this.blueGreenDeploymentConfiguration = blueGreenDeploymentConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computePlatform")
     public ComputePlatformEnum computePlatform;
+
     public DeploymentGroupInfo withComputePlatform(ComputePlatformEnum computePlatform) {
         this.computePlatform = computePlatform;
         return this;
@@ -63,6 +69,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfigName")
     public String deploymentConfigName;
+
     public DeploymentGroupInfo withDeploymentConfigName(String deploymentConfigName) {
         this.deploymentConfigName = deploymentConfigName;
         return this;
@@ -71,6 +78,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentGroupId")
     public String deploymentGroupId;
+
     public DeploymentGroupInfo withDeploymentGroupId(String deploymentGroupId) {
         this.deploymentGroupId = deploymentGroupId;
         return this;
@@ -79,6 +87,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentGroupName")
     public String deploymentGroupName;
+
     public DeploymentGroupInfo withDeploymentGroupName(String deploymentGroupName) {
         this.deploymentGroupName = deploymentGroupName;
         return this;
@@ -87,6 +96,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStyle")
     public DeploymentStyle deploymentStyle;
+
     public DeploymentGroupInfo withDeploymentStyle(DeploymentStyle deploymentStyle) {
         this.deploymentStyle = deploymentStyle;
         return this;
@@ -95,6 +105,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2TagFilters")
     public Ec2TagFilter[] ec2TagFilters;
+
     public DeploymentGroupInfo withEc2TagFilters(Ec2TagFilter[] ec2TagFilters) {
         this.ec2TagFilters = ec2TagFilters;
         return this;
@@ -103,6 +114,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2TagSet")
     public Ec2TagSet ec2TagSet;
+
     public DeploymentGroupInfo withEc2TagSet(Ec2TagSet ec2TagSet) {
         this.ec2TagSet = ec2TagSet;
         return this;
@@ -111,6 +123,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecsServices")
     public ECSService[] ecsServices;
+
     public DeploymentGroupInfo withEcsServices(ECSService[] ecsServices) {
         this.ecsServices = ecsServices;
         return this;
@@ -119,6 +132,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastAttemptedDeployment")
     public LastDeploymentInfo lastAttemptedDeployment;
+
     public DeploymentGroupInfo withLastAttemptedDeployment(LastDeploymentInfo lastAttemptedDeployment) {
         this.lastAttemptedDeployment = lastAttemptedDeployment;
         return this;
@@ -127,6 +141,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSuccessfulDeployment")
     public LastDeploymentInfo lastSuccessfulDeployment;
+
     public DeploymentGroupInfo withLastSuccessfulDeployment(LastDeploymentInfo lastSuccessfulDeployment) {
         this.lastSuccessfulDeployment = lastSuccessfulDeployment;
         return this;
@@ -135,6 +150,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancerInfo")
     public LoadBalancerInfo loadBalancerInfo;
+
     public DeploymentGroupInfo withLoadBalancerInfo(LoadBalancerInfo loadBalancerInfo) {
         this.loadBalancerInfo = loadBalancerInfo;
         return this;
@@ -143,6 +159,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onPremisesInstanceTagFilters")
     public TagFilter[] onPremisesInstanceTagFilters;
+
     public DeploymentGroupInfo withOnPremisesInstanceTagFilters(TagFilter[] onPremisesInstanceTagFilters) {
         this.onPremisesInstanceTagFilters = onPremisesInstanceTagFilters;
         return this;
@@ -151,6 +168,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onPremisesTagSet")
     public OnPremisesTagSet onPremisesTagSet;
+
     public DeploymentGroupInfo withOnPremisesTagSet(OnPremisesTagSet onPremisesTagSet) {
         this.onPremisesTagSet = onPremisesTagSet;
         return this;
@@ -159,6 +177,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outdatedInstancesStrategy")
     public OutdatedInstancesStrategyEnum outdatedInstancesStrategy;
+
     public DeploymentGroupInfo withOutdatedInstancesStrategy(OutdatedInstancesStrategyEnum outdatedInstancesStrategy) {
         this.outdatedInstancesStrategy = outdatedInstancesStrategy;
         return this;
@@ -167,6 +186,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRoleArn")
     public String serviceRoleArn;
+
     public DeploymentGroupInfo withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -175,6 +195,7 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetRevision")
     public RevisionLocation targetRevision;
+
     public DeploymentGroupInfo withTargetRevision(RevisionLocation targetRevision) {
         this.targetRevision = targetRevision;
         return this;
@@ -183,9 +204,11 @@ public class DeploymentGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerConfigurations")
     public TriggerConfig[] triggerConfigurations;
+
     public DeploymentGroupInfo withTriggerConfigurations(TriggerConfig[] triggerConfigurations) {
         this.triggerConfigurations = triggerConfigurations;
         return this;
     }
     
+    public DeploymentGroupInfo(){}
 }

@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * VectorEnrichmentJobDataSourceConfigInput - &lt;p/&gt;
+ * VectorEnrichmentJobDataSourceConfigInput - The input structure for the data source that represents the storage type of the input data objects.
  */
 public class VectorEnrichmentJobDataSourceConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Data")
     public VectorEnrichmentJobS3Data s3Data;
+
     public VectorEnrichmentJobDataSourceConfigInput withS3Data(VectorEnrichmentJobS3Data s3Data) {
         this.s3Data = s3Data;
         return this;
     }
     
+    public VectorEnrichmentJobDataSourceConfigInput(){}
 }

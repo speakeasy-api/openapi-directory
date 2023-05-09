@@ -12,6 +12,7 @@ public class UseAsDraftPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromFileId")
     public Double fromFileId;
+
     public UseAsDraftPayload withFromFileId(Double fromFileId) {
         this.fromFileId = fromFileId;
         return this;
@@ -20,6 +21,7 @@ public class UseAsDraftPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromManualTranslationFileId")
     public Double fromManualTranslationFileId;
+
     public UseAsDraftPayload withFromManualTranslationFileId(Double fromManualTranslationFileId) {
         this.fromManualTranslationFileId = fromManualTranslationFileId;
         return this;
@@ -28,9 +30,11 @@ public class UseAsDraftPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toManualTranslationFileId")
     public Double toManualTranslationFileId;
+
     public UseAsDraftPayload withToManualTranslationFileId(Double toManualTranslationFileId) {
         this.toManualTranslationFileId = toManualTranslationFileId;
         return this;
     }
     
+    public UseAsDraftPayload(){}
 }

@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneRewardCategory {
      */
     
     public DestinyMilestonesDestinyMilestoneRewardEntry[] entries;
+
     public DestinyMilestonesDestinyMilestoneRewardCategory withEntries(DestinyMilestonesDestinyMilestoneRewardEntry[] entries) {
         this.entries = entries;
         return this;
@@ -25,9 +26,11 @@ public class DestinyMilestonesDestinyMilestoneRewardCategory {
      */
     
     public Long rewardCategoryHash;
+
     public DestinyMilestonesDestinyMilestoneRewardCategory withRewardCategoryHash(Long rewardCategoryHash) {
         this.rewardCategoryHash = rewardCategoryHash;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneRewardCategory(){}
 }

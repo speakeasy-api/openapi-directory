@@ -18,6 +18,7 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovalDate")
     public String disapprovalDate;
+
     public ShoppingAdsProgramStatusRegionStatus withDisapprovalDate(String disapprovalDate) {
         this.disapprovalDate = disapprovalDate;
         return this;
@@ -29,6 +30,7 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eligibilityStatus")
     public ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum eligibilityStatus;
+
     public ShoppingAdsProgramStatusRegionStatus withEligibilityStatus(ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum eligibilityStatus) {
         this.eligibilityStatus = eligibilityStatus;
         return this;
@@ -40,6 +42,7 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onboardingIssues")
     public String[] onboardingIssues;
+
     public ShoppingAdsProgramStatusRegionStatus withOnboardingIssues(String[] onboardingIssues) {
         this.onboardingIssues = onboardingIssues;
         return this;
@@ -51,6 +54,7 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCodes")
     public String[] regionCodes;
+
     public ShoppingAdsProgramStatusRegionStatus withRegionCodes(String[] regionCodes) {
         this.regionCodes = regionCodes;
         return this;
@@ -62,6 +66,7 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewEligibilityStatus")
     public ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum reviewEligibilityStatus;
+
     public ShoppingAdsProgramStatusRegionStatus withReviewEligibilityStatus(ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum reviewEligibilityStatus) {
         this.reviewEligibilityStatus = reviewEligibilityStatus;
         return this;
@@ -73,6 +78,7 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewIneligibilityReason")
     public ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum reviewIneligibilityReason;
+
     public ShoppingAdsProgramStatusRegionStatus withReviewIneligibilityReason(ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum reviewIneligibilityReason) {
         this.reviewIneligibilityReason = reviewIneligibilityReason;
         return this;
@@ -84,6 +90,7 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewIneligibilityReasonDescription")
     public String reviewIneligibilityReasonDescription;
+
     public ShoppingAdsProgramStatusRegionStatus withReviewIneligibilityReasonDescription(String reviewIneligibilityReasonDescription) {
         this.reviewIneligibilityReasonDescription = reviewIneligibilityReasonDescription;
         return this;
@@ -95,6 +102,7 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewIneligibilityReasonDetails")
     public ShoppingAdsProgramStatusReviewIneligibilityReasonDetails reviewIneligibilityReasonDetails;
+
     public ShoppingAdsProgramStatusRegionStatus withReviewIneligibilityReasonDetails(ShoppingAdsProgramStatusReviewIneligibilityReasonDetails reviewIneligibilityReasonDetails) {
         this.reviewIneligibilityReasonDetails = reviewIneligibilityReasonDetails;
         return this;
@@ -106,9 +114,11 @@ public class ShoppingAdsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewIssues")
     public String[] reviewIssues;
+
     public ShoppingAdsProgramStatusRegionStatus withReviewIssues(String[] reviewIssues) {
         this.reviewIssues = reviewIssues;
         return this;
     }
     
+    public ShoppingAdsProgramStatusRegionStatus(){}
 }

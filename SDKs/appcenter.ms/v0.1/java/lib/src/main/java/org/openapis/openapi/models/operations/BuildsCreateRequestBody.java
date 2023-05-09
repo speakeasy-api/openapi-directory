@@ -18,6 +18,7 @@ public class BuildsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debug")
     public Boolean debug;
+
     public BuildsCreateRequestBody withDebug(Boolean debug) {
         this.debug = debug;
         return this;
@@ -29,9 +30,11 @@ public class BuildsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public BuildsCreateRequestBody withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
     }
     
+    public BuildsCreateRequestBody(){}
 }

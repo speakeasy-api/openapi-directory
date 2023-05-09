@@ -12,6 +12,7 @@ public class SetMerchantOrderInfoListRequest {
      */
     @JsonProperty("order_MerchantECommerceSoftwareName")
     public String orderMerchantECommerceSoftwareName;
+
     public SetMerchantOrderInfoListRequest withOrderMerchantECommerceSoftwareName(String orderMerchantECommerceSoftwareName) {
         this.orderMerchantECommerceSoftwareName = orderMerchantECommerceSoftwareName;
         return this;
@@ -22,6 +23,7 @@ public class SetMerchantOrderInfoListRequest {
      */
     @JsonProperty("order_MerchantECommerceSoftwareVersion")
     public String orderMerchantECommerceSoftwareVersion;
+
     public SetMerchantOrderInfoListRequest withOrderMerchantECommerceSoftwareVersion(String orderMerchantECommerceSoftwareVersion) {
         this.orderMerchantECommerceSoftwareVersion = orderMerchantECommerceSoftwareVersion;
         return this;
@@ -29,9 +31,15 @@ public class SetMerchantOrderInfoListRequest {
     
     @JsonProperty("orders")
     public SetMerchantOrderInfoListRequestItem[] orders;
+
     public SetMerchantOrderInfoListRequest withOrders(SetMerchantOrderInfoListRequestItem[] orders) {
         this.orders = orders;
         return this;
     }
     
+    public SetMerchantOrderInfoListRequest(@JsonProperty("order_MerchantECommerceSoftwareName") String orderMerchantECommerceSoftwareName, @JsonProperty("order_MerchantECommerceSoftwareVersion") String orderMerchantECommerceSoftwareVersion, @JsonProperty("orders") SetMerchantOrderInfoListRequestItem[] orders) {
+        this.orderMerchantECommerceSoftwareName = orderMerchantECommerceSoftwareName;
+        this.orderMerchantECommerceSoftwareVersion = orderMerchantECommerceSoftwareVersion;
+        this.orders = orders;
+  }
 }

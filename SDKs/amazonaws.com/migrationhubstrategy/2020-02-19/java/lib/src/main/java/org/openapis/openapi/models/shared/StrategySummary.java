@@ -15,6 +15,7 @@ public class StrategySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public StrategySummary withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class StrategySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strategy")
     public StrategyEnum strategy;
+
     public StrategySummary withStrategy(StrategyEnum strategy) {
         this.strategy = strategy;
         return this;
     }
     
+    public StrategySummary(){}
 }

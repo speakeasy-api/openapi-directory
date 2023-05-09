@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDelegationsResponse {
@@ -12,6 +13,7 @@ public class GetDelegationsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDelegationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDelegationsResponse {
     
     
     public String contentType;
+
     public GetDelegationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDelegationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDelegationsResponse getDelegationsResponse;
+
     public GetDelegationsResponse withGetDelegationsResponse(org.openapis.openapi.models.shared.GetDelegationsResponse getDelegationsResponse) {
         this.getDelegationsResponse = getDelegationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDelegationsResponse {
      */
     
     public Object internalServerException;
+
     public GetDelegationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetDelegationsResponse {
     
     
     public Integer statusCode;
+
     public GetDelegationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDelegationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDelegationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDelegationsResponse {
      */
     
     public Object validationException;
+
     public GetDelegationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDelegationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

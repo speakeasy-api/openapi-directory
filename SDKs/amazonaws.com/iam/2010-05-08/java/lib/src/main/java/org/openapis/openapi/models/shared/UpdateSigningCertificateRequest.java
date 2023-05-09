@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateSigningCertificateRequest {
     
     public String certificateId;
+
     public UpdateSigningCertificateRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateSigningCertificateRequest {
     
     
     public StatusTypeEnum status;
+
     public UpdateSigningCertificateRequest withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -23,9 +25,14 @@ public class UpdateSigningCertificateRequest {
     
     
     public String userName;
+
     public UpdateSigningCertificateRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UpdateSigningCertificateRequest(@JsonProperty("CertificateId") String certificateId, @JsonProperty("Status") StatusTypeEnum status) {
+        this.certificateId = certificateId;
+        this.status = status;
+  }
 }

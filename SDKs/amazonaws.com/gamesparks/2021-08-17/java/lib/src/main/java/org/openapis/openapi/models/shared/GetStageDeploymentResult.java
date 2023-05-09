@@ -15,9 +15,11 @@ public class GetStageDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StageDeployment")
     public StageDeploymentDetails stageDeployment;
+
     public GetStageDeploymentResult withStageDeployment(StageDeploymentDetails stageDeployment) {
         this.stageDeployment = stageDeployment;
         return this;
     }
     
+    public GetStageDeploymentResult(){}
 }

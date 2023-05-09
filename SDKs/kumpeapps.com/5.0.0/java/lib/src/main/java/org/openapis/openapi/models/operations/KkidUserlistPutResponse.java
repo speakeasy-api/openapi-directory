@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KkidUserlistPutResponse {
@@ -12,6 +13,7 @@ public class KkidUserlistPutResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive;
+
     public KkidUserlistPutResponse withFourHundredAndFive(org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive) {
         this.fourHundredAndFive = fourHundredAndFive;
         return this;
@@ -22,6 +24,7 @@ public class KkidUserlistPutResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve;
+
     public KkidUserlistPutResponse withFourHundredAndTwelve(org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve) {
         this.fourHundredAndTwelve = fourHundredAndTwelve;
         return this;
@@ -29,6 +32,7 @@ public class KkidUserlistPutResponse {
     
     
     public String contentType;
+
     public KkidUserlistPutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class KkidUserlistPutResponse {
     
     
     public Integer statusCode;
+
     public KkidUserlistPutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class KkidUserlistPutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KkidUserlistPutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class KkidUserlistPutResponse {
      */
     
     public org.openapis.openapi.models.shared.AddUserResponse addUserResponse;
+
     public KkidUserlistPutResponse withAddUserResponse(org.openapis.openapi.models.shared.AddUserResponse addUserResponse) {
         this.addUserResponse = addUserResponse;
         return this;
     }
     
+    public KkidUserlistPutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

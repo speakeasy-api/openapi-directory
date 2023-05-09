@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StoreDetail {
     @JsonProperty("address")
     public ViasAddress address;
+
     public StoreDetail withAddress(ViasAddress address) {
         this.address = address;
         return this;
@@ -24,6 +25,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPhoneNumber")
     public String fullPhoneNumber;
+
     public StoreDetail withFullPhoneNumber(String fullPhoneNumber) {
         this.fullPhoneNumber = fullPhoneNumber;
         return this;
@@ -35,6 +37,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public StoreDetail withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -45,6 +48,7 @@ public class StoreDetail {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoreDetail withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -55,6 +59,7 @@ public class StoreDetail {
      */
     @JsonProperty("merchantCategoryCode")
     public String merchantCategoryCode;
+
     public StoreDetail withMerchantCategoryCode(String merchantCategoryCode) {
         this.merchantCategoryCode = merchantCategoryCode;
         return this;
@@ -66,6 +71,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantHouseNumber")
     public String merchantHouseNumber;
+
     public StoreDetail withMerchantHouseNumber(String merchantHouseNumber) {
         this.merchantHouseNumber = merchantHouseNumber;
         return this;
@@ -74,6 +80,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public ViasPhoneNumber phoneNumber;
+
     public StoreDetail withPhoneNumber(ViasPhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -85,6 +92,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public StoreDetailShopperInteractionEnum shopperInteraction;
+
     public StoreDetail withShopperInteraction(StoreDetailShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -96,6 +104,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitConfigurationUUID")
     public String splitConfigurationUUID;
+
     public StoreDetail withSplitConfigurationUUID(String splitConfigurationUUID) {
         this.splitConfigurationUUID = splitConfigurationUUID;
         return this;
@@ -107,6 +116,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StoreDetailStatusEnum status;
+
     public StoreDetail withStatus(StoreDetailStatusEnum status) {
         this.status = status;
         return this;
@@ -118,6 +128,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public StoreDetail withStore(String store) {
         this.store = store;
         return this;
@@ -133,6 +144,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeName")
     public String storeName;
+
     public StoreDetail withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
@@ -148,6 +160,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeReference")
     public String storeReference;
+
     public StoreDetail withStoreReference(String storeReference) {
         this.storeReference = storeReference;
         return this;
@@ -159,6 +172,7 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualAccount")
     public String virtualAccount;
+
     public StoreDetail withVirtualAccount(String virtualAccount) {
         this.virtualAccount = virtualAccount;
         return this;
@@ -170,9 +184,15 @@ public class StoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public StoreDetail withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
     }
     
+    public StoreDetail(@JsonProperty("address") ViasAddress address, @JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("merchantCategoryCode") String merchantCategoryCode) {
+        this.address = address;
+        this.merchantAccount = merchantAccount;
+        this.merchantCategoryCode = merchantCategoryCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TaxonomiesListTaxonomyAttributes {
      */
     
     public Long childCount;
+
     public TaxonomiesListTaxonomyAttributes withChildCount(Long childCount) {
         this.childCount = childCount;
         return this;
@@ -25,6 +26,7 @@ public class TaxonomiesListTaxonomyAttributes {
      */
     
     public String[] parents;
+
     public TaxonomiesListTaxonomyAttributes withParents(String[] parents) {
         this.parents = parents;
         return this;
@@ -35,9 +37,11 @@ public class TaxonomiesListTaxonomyAttributes {
      */
     
     public String text;
+
     public TaxonomiesListTaxonomyAttributes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TaxonomiesListTaxonomyAttributes(){}
 }

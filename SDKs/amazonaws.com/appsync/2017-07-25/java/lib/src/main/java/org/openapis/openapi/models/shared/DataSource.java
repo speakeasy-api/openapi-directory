@@ -15,6 +15,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceArn")
     public String dataSourceArn;
+
     public DataSource withDataSourceArn(String dataSourceArn) {
         this.dataSourceArn = dataSourceArn;
         return this;
@@ -23,6 +24,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DataSource withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamodbConfig")
     public DynamodbDataSourceConfig dynamodbConfig;
+
     public DataSource withDynamodbConfig(DynamodbDataSourceConfig dynamodbConfig) {
         this.dynamodbConfig = dynamodbConfig;
         return this;
@@ -39,6 +42,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elasticsearchConfig")
     public ElasticsearchDataSourceConfig elasticsearchConfig;
+
     public DataSource withElasticsearchConfig(ElasticsearchDataSourceConfig elasticsearchConfig) {
         this.elasticsearchConfig = elasticsearchConfig;
         return this;
@@ -47,6 +51,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventBridgeConfig")
     public EventBridgeDataSourceConfig eventBridgeConfig;
+
     public DataSource withEventBridgeConfig(EventBridgeDataSourceConfig eventBridgeConfig) {
         this.eventBridgeConfig = eventBridgeConfig;
         return this;
@@ -55,6 +60,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpConfig")
     public HttpDataSourceConfig httpConfig;
+
     public DataSource withHttpConfig(HttpDataSourceConfig httpConfig) {
         this.httpConfig = httpConfig;
         return this;
@@ -63,6 +69,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaConfig")
     public LambdaDataSourceConfig lambdaConfig;
+
     public DataSource withLambdaConfig(LambdaDataSourceConfig lambdaConfig) {
         this.lambdaConfig = lambdaConfig;
         return this;
@@ -71,6 +78,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataSource withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openSearchServiceConfig")
     public OpenSearchServiceDataSourceConfig openSearchServiceConfig;
+
     public DataSource withOpenSearchServiceConfig(OpenSearchServiceDataSourceConfig openSearchServiceConfig) {
         this.openSearchServiceConfig = openSearchServiceConfig;
         return this;
@@ -87,6 +96,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseConfig")
     public RelationalDatabaseDataSourceConfig relationalDatabaseConfig;
+
     public DataSource withRelationalDatabaseConfig(RelationalDatabaseDataSourceConfig relationalDatabaseConfig) {
         this.relationalDatabaseConfig = relationalDatabaseConfig;
         return this;
@@ -95,6 +105,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRoleArn")
     public String serviceRoleArn;
+
     public DataSource withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -103,9 +114,11 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DataSourceTypeEnum type;
+
     public DataSource withType(DataSourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataSource(){}
 }

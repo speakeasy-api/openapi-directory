@@ -15,6 +15,7 @@ public class ListObjectParentPathsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListObjectParentPathsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListObjectParentPathsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathToObjectIdentifiersList")
     public PathToObjectIdentifiers[] pathToObjectIdentifiersList;
+
     public ListObjectParentPathsResponse withPathToObjectIdentifiersList(PathToObjectIdentifiers[] pathToObjectIdentifiersList) {
         this.pathToObjectIdentifiersList = pathToObjectIdentifiersList;
         return this;
     }
     
+    public ListObjectParentPathsResponse(){}
 }

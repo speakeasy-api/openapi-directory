@@ -15,6 +15,7 @@ public class AssociateResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationArn")
     public String applicationArn;
+
     public AssociateResourceResponse withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -23,9 +24,11 @@ public class AssociateResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public AssociateResourceResponse withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public AssociateResourceResponse(){}
 }

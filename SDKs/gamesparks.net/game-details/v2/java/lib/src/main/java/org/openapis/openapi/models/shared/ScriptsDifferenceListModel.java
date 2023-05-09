@@ -15,9 +15,11 @@ public class ScriptsDifferenceListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("differences")
     public ScriptsDifferenceModel[] differences;
+
     public ScriptsDifferenceListModel withDifferences(ScriptsDifferenceModel[] differences) {
         this.differences = differences;
         return this;
     }
     
+    public ScriptsDifferenceListModel(){}
 }

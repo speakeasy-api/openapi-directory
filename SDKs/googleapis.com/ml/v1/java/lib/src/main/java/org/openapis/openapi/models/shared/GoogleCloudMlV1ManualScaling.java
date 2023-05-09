@@ -18,9 +18,11 @@ public class GoogleCloudMlV1ManualScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public Integer nodes;
+
     public GoogleCloudMlV1ManualScaling withNodes(Integer nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public GoogleCloudMlV1ManualScaling(){}
 }

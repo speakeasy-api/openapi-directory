@@ -15,6 +15,7 @@ public class GetObjectInformationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public GetObjectInformationResponse withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class GetObjectInformationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaFacets")
     public SchemaFacet[] schemaFacets;
+
     public GetObjectInformationResponse withSchemaFacets(SchemaFacet[] schemaFacets) {
         this.schemaFacets = schemaFacets;
         return this;
     }
     
+    public GetObjectInformationResponse(){}
 }

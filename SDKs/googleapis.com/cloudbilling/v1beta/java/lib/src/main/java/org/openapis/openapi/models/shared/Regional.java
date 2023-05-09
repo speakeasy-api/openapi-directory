@@ -18,9 +18,11 @@ public class Regional {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Regional withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Regional(){}
 }

@@ -13,13 +13,50 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GatewayInput {
     /**
+     * Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addresses")
+    public String[] addresses;
+
+    public GatewayInput withAddresses(String[] addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+    
+    /**
+     * Optional. A fully-qualified Certificates URL reference. The proxy presents a Certificate (selected based on SNI) when establishing a TLS connection. This feature only applies to gateways of type 'SECURE_WEB_GATEWAY'.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("certificateUrls")
+    public String[] certificateUrls;
+
+    public GatewayInput withCertificateUrls(String[] certificateUrls) {
+        this.certificateUrls = certificateUrls;
+        return this;
+    }
+    
+    /**
      * Optional. A free-text description of the resource. Max length 1024 characters.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GatewayInput withDescription(String description) {
         this.description = description;
+        return this;
+    }
+    
+    /**
+     * Optional. A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: `projects/* /locations/* /gatewaySecurityPolicies/swg-policy`. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("gatewaySecurityPolicy")
+    public String gatewaySecurityPolicy;
+
+    public GatewayInput withGatewaySecurityPolicy(String gatewaySecurityPolicy) {
+        this.gatewaySecurityPolicy = gatewaySecurityPolicy;
         return this;
     }
     
@@ -29,6 +66,7 @@ public class GatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GatewayInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,8 +78,21 @@ public class GatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GatewayInput withName(String name) {
         this.name = name;
+        return this;
+    }
+    
+    /**
+     * Optional. The relative resource name identifying the VPC network that is using this configuration. For example: `projects/* /global/networks/network-1`. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("network")
+    public String network;
+
+    public GatewayInput withNetwork(String network) {
+        this.network = network;
         return this;
     }
     
@@ -51,6 +102,7 @@ public class GatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public Integer[] ports;
+
     public GatewayInput withPorts(Integer[] ports) {
         this.ports = ports;
         return this;
@@ -62,6 +114,7 @@ public class GatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public GatewayInput withScope(String scope) {
         this.scope = scope;
         return this;
@@ -73,8 +126,21 @@ public class GatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverTlsPolicy")
     public String serverTlsPolicy;
+
     public GatewayInput withServerTlsPolicy(String serverTlsPolicy) {
         this.serverTlsPolicy = serverTlsPolicy;
+        return this;
+    }
+    
+    /**
+     * Optional. The relative resource name identifying the subnetwork in which this SWG is allocated. For example: `projects/* /regions/us-central1/subnetworks/network-1` Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY".
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subnetwork")
+    public String subnetwork;
+
+    public GatewayInput withSubnetwork(String subnetwork) {
+        this.subnetwork = subnetwork;
         return this;
     }
     
@@ -84,9 +150,11 @@ public class GatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GatewayTypeEnum type;
+
     public GatewayInput withType(GatewayTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GatewayInput(){}
 }

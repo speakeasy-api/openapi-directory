@@ -15,9 +15,13 @@ public class GetNetworksId200ApplicationJSONNetworkProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public GetNetworksId200ApplicationJSONNetworkProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public GetNetworksId200ApplicationJSONNetworkProtection(@JsonProperty("delete") Boolean delete) {
+        this.delete = delete;
+  }
 }

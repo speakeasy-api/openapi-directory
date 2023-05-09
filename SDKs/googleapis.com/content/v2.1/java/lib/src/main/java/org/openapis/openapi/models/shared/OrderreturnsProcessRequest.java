@@ -15,6 +15,7 @@ public class OrderreturnsProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullChargeReturnShippingCost")
     public Boolean fullChargeReturnShippingCost;
+
     public OrderreturnsProcessRequest withFullChargeReturnShippingCost(Boolean fullChargeReturnShippingCost) {
         this.fullChargeReturnShippingCost = fullChargeReturnShippingCost;
         return this;
@@ -26,6 +27,7 @@ public class OrderreturnsProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrderreturnsProcessRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -34,6 +36,7 @@ public class OrderreturnsProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundShippingFee")
     public OrderreturnsRefundOperation refundShippingFee;
+
     public OrderreturnsProcessRequest withRefundShippingFee(OrderreturnsRefundOperation refundShippingFee) {
         this.refundShippingFee = refundShippingFee;
         return this;
@@ -45,9 +48,11 @@ public class OrderreturnsProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnItems")
     public OrderreturnsReturnItem[] returnItems;
+
     public OrderreturnsProcessRequest withReturnItems(OrderreturnsReturnItem[] returnItems) {
         this.returnItems = returnItems;
         return this;
     }
     
+    public OrderreturnsProcessRequest(){}
 }

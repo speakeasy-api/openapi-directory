@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportAutoScalingGroupRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportAutoScalingGroupRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
     
     
     public String contentType;
+
     public ExportAutoScalingGroupRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportAutoScalingGroupRecommendationsResponse exportAutoScalingGroupRecommendationsResponse;
+
     public ExportAutoScalingGroupRecommendationsResponse withExportAutoScalingGroupRecommendationsResponse(org.openapis.openapi.models.shared.ExportAutoScalingGroupRecommendationsResponse exportAutoScalingGroupRecommendationsResponse) {
         this.exportAutoScalingGroupRecommendationsResponse = exportAutoScalingGroupRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ExportAutoScalingGroupRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ExportAutoScalingGroupRecommendationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public Object limitExceededException;
+
     public ExportAutoScalingGroupRecommendationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public ExportAutoScalingGroupRecommendationsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -79,6 +87,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public Object optInRequiredException;
+
     public ExportAutoScalingGroupRecommendationsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -86,6 +95,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ExportAutoScalingGroupRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportAutoScalingGroupRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ExportAutoScalingGroupRecommendationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class ExportAutoScalingGroupRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ExportAutoScalingGroupRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ExportAutoScalingGroupRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

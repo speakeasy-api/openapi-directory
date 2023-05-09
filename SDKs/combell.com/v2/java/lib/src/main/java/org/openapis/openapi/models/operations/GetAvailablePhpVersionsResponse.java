@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAvailablePhpVersionsResponse {
     
     public String contentType;
+
     public GetAvailablePhpVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAvailablePhpVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.PhpVersion[] phpVersions;
+
     public GetAvailablePhpVersionsResponse withPhpVersions(org.openapis.openapi.models.shared.PhpVersion[] phpVersions) {
         this.phpVersions = phpVersions;
         return this;
@@ -26,6 +29,7 @@ public class GetAvailablePhpVersionsResponse {
     
     
     public Integer statusCode;
+
     public GetAvailablePhpVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAvailablePhpVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAvailablePhpVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAvailablePhpVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

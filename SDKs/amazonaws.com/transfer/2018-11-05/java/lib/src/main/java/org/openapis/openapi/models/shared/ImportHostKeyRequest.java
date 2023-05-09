@@ -12,6 +12,7 @@ public class ImportHostKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ImportHostKeyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ImportHostKeyRequest {
     
     @JsonProperty("HostKeyBody")
     public String hostKeyBody;
+
     public ImportHostKeyRequest withHostKeyBody(String hostKeyBody) {
         this.hostKeyBody = hostKeyBody;
         return this;
@@ -26,6 +28,7 @@ public class ImportHostKeyRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public ImportHostKeyRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -34,9 +37,14 @@ public class ImportHostKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ImportHostKeyRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportHostKeyRequest(@JsonProperty("HostKeyBody") String hostKeyBody, @JsonProperty("ServerId") String serverId) {
+        this.hostKeyBody = hostKeyBody;
+        this.serverId = serverId;
+  }
 }

@@ -18,6 +18,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public ProductCertification withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certification")
     public Certification[] certification;
+
     public ProductCertification withCertification(Certification[] certification) {
         this.certification = certification;
         return this;
@@ -40,6 +42,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String[] countryCode;
+
     public ProductCertification withCountryCode(String[] countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -51,6 +54,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationStatuses")
     public DestinationStatus[] destinationStatuses;
+
     public ProductCertification withDestinationStatuses(DestinationStatus[] destinationStatuses) {
         this.destinationStatuses = destinationStatuses;
         return this;
@@ -62,6 +66,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public Issue[] issues;
+
     public ProductCertification withIssues(Issue[] issues) {
         this.issues = issues;
         return this;
@@ -73,6 +78,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String[] mpn;
+
     public ProductCertification withMpn(String[] mpn) {
         this.mpn = mpn;
         return this;
@@ -84,6 +90,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductCertification withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String[] productCode;
+
     public ProductCertification withProductCode(String[] productCode) {
         this.productCode = productCode;
         return this;
@@ -106,6 +114,7 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productType")
     public String[] productType;
+
     public ProductCertification withProductType(String[] productType) {
         this.productType = productType;
         return this;
@@ -117,9 +126,11 @@ public class ProductCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProductCertification withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProductCertification(){}
 }

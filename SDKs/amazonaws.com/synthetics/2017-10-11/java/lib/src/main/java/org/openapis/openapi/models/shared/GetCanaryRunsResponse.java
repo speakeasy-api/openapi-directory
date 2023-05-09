@@ -15,6 +15,7 @@ public class GetCanaryRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanaryRuns")
     public CanaryRun[] canaryRuns;
+
     public GetCanaryRunsResponse withCanaryRuns(CanaryRun[] canaryRuns) {
         this.canaryRuns = canaryRuns;
         return this;
@@ -23,9 +24,11 @@ public class GetCanaryRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetCanaryRunsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetCanaryRunsResponse(){}
 }

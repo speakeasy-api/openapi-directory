@@ -12,6 +12,7 @@ public class FhirProcedure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bodySite")
     public String bodySite;
+
     public FhirProcedure withBodySite(String bodySite) {
         this.bodySite = bodySite;
         return this;
@@ -20,6 +21,7 @@ public class FhirProcedure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FhirProcedure withId(Long id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class FhirProcedure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FhirProcedure withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FhirProcedure(){}
 }

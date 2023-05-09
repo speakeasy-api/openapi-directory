@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSiteTestWebhookRequestBody {
@@ -12,6 +13,7 @@ public class PostSiteTestWebhookRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=action")
     public String action;
+
     public PostSiteTestWebhookRequestBody withAction(String action) {
         this.action = action;
         return this;
@@ -22,6 +24,7 @@ public class PostSiteTestWebhookRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=body,json")
     public java.util.Map<String, Object> body;
+
     public PostSiteTestWebhookRequestBody withBody(java.util.Map<String, Object> body) {
         this.body = body;
         return this;
@@ -32,6 +35,7 @@ public class PostSiteTestWebhookRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=encoding")
     public String encoding;
+
     public PostSiteTestWebhookRequestBody withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -42,6 +46,7 @@ public class PostSiteTestWebhookRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=headers,json")
     public java.util.Map<String, Object> headers;
+
     public PostSiteTestWebhookRequestBody withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -52,6 +57,7 @@ public class PostSiteTestWebhookRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=method")
     public String method;
+
     public PostSiteTestWebhookRequestBody withMethod(String method) {
         this.method = method;
         return this;
@@ -62,9 +68,13 @@ public class PostSiteTestWebhookRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=url")
     public String url;
+
     public PostSiteTestWebhookRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostSiteTestWebhookRequestBody(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

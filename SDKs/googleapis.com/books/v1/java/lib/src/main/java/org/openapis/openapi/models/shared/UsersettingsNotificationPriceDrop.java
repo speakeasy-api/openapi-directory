@@ -12,9 +12,11 @@ public class UsersettingsNotificationPriceDrop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opted_state")
     public String optedState;
+
     public UsersettingsNotificationPriceDrop withOptedState(String optedState) {
         this.optedState = optedState;
         return this;
     }
     
+    public UsersettingsNotificationPriceDrop(){}
 }

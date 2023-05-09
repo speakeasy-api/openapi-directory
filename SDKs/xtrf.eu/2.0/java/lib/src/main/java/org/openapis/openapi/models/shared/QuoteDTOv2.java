@@ -15,6 +15,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budgetCode")
     public String budgetCode;
+
     public QuoteDTOv2 withBudgetCode(String budgetCode) {
         this.budgetCode = budgetCode;
         return this;
@@ -23,6 +24,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessDays")
     public Long businessDays;
+
     public QuoteDTOv2 withBusinessDays(Long businessDays) {
         this.businessDays = businessDays;
         return this;
@@ -31,6 +33,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryIds")
     public Long[] categoryIds;
+
     public QuoteDTOv2 withCategoryIds(Long[] categoryIds) {
         this.categoryIds = categoryIds;
         return this;
@@ -39,6 +42,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientDeadline")
     public Long clientDeadline;
+
     public QuoteDTOv2 withClientDeadline(Long clientDeadline) {
         this.clientDeadline = clientDeadline;
         return this;
@@ -47,6 +51,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public Long clientId;
+
     public QuoteDTOv2 withClientId(Long clientId) {
         this.clientId = clientId;
         return this;
@@ -55,6 +60,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientNotes")
     public String clientNotes;
+
     public QuoteDTOv2 withClientNotes(String clientNotes) {
         this.clientNotes = clientNotes;
         return this;
@@ -63,6 +69,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientReferenceNumber")
     public String clientReferenceNumber;
+
     public QuoteDTOv2 withClientReferenceNumber(String clientReferenceNumber) {
         this.clientReferenceNumber = clientReferenceNumber;
         return this;
@@ -71,6 +78,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdOn")
     public Long createdOn;
+
     public QuoteDTOv2 withCreatedOn(Long createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -79,6 +87,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public DocumentsDTO documents;
+
     public QuoteDTOv2 withDocuments(DocumentsDTO documents) {
         this.documents = documents;
         return this;
@@ -87,6 +96,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedDeliveryDate")
     public Long expectedDeliveryDate;
+
     public QuoteDTOv2 withExpectedDeliveryDate(Long expectedDeliveryDate) {
         this.expectedDeliveryDate = expectedDeliveryDate;
         return this;
@@ -95,6 +105,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public QuoteDTOv2 withId(String id) {
         this.id = id;
         return this;
@@ -103,6 +114,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructionsForAllJobs")
     public String instructionsForAllJobs;
+
     public QuoteDTOv2 withInstructionsForAllJobs(String instructionsForAllJobs) {
         this.instructionsForAllJobs = instructionsForAllJobs;
         return this;
@@ -111,6 +123,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalNotes")
     public String internalNotes;
+
     public QuoteDTOv2 withInternalNotes(String internalNotes) {
         this.internalNotes = internalNotes;
         return this;
@@ -119,6 +132,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isClassicQuote")
     public Boolean isClassicQuote;
+
     public QuoteDTOv2 withIsClassicQuote(Boolean isClassicQuote) {
         this.isClassicQuote = isClassicQuote;
         return this;
@@ -127,6 +141,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public ProjectLanguagesDTO languages;
+
     public QuoteDTOv2 withLanguages(ProjectLanguagesDTO languages) {
         this.languages = languages;
         return this;
@@ -135,6 +150,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public QuoteDTOv2 withName(String name) {
         this.name = name;
         return this;
@@ -143,6 +159,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public QuoteDTOv2 withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -151,6 +168,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public PeopleDTO people;
+
     public QuoteDTOv2 withPeople(PeopleDTO people) {
         this.people = people;
         return this;
@@ -159,6 +177,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteExpiry")
     public Long quoteExpiry;
+
     public QuoteDTOv2 withQuoteExpiry(Long quoteExpiry) {
         this.quoteExpiry = quoteExpiry;
         return this;
@@ -167,6 +186,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteId")
     public String quoteId;
+
     public QuoteDTOv2 withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -175,6 +195,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteIdNumber")
     public String quoteIdNumber;
+
     public QuoteDTOv2 withQuoteIdNumber(String quoteIdNumber) {
         this.quoteIdNumber = quoteIdNumber;
         return this;
@@ -183,6 +204,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public Long serviceId;
+
     public QuoteDTOv2 withServiceId(Long serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -191,6 +213,7 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public QuoteDTOv2 withStatus(String status) {
         this.status = status;
         return this;
@@ -199,9 +222,11 @@ public class QuoteDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volume")
     public VolumeDTO volume;
+
     public QuoteDTOv2 withVolume(VolumeDTO volume) {
         this.volume = volume;
         return this;
     }
     
+    public QuoteDTOv2(){}
 }

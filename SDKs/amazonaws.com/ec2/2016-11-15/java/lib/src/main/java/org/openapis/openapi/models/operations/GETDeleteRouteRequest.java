@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteRouteRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteRouteActionEnum action;
+
     public GETDeleteRouteRequest withAction(GETDeleteRouteActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public GETDeleteRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationIpv6CidrBlock")
     public String destinationIpv6CidrBlock;
+
     public GETDeleteRouteRequest withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
     public String destinationPrefixListId;
+
     public GETDeleteRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -49,6 +54,7 @@ public class GETDeleteRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -59,6 +65,7 @@ public class GETDeleteRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RouteTableId")
     public String routeTableId;
+
     public GETDeleteRouteRequest withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -66,6 +73,7 @@ public class GETDeleteRouteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteRouteVersionEnum version;
+
     public GETDeleteRouteRequest withVersion(GETDeleteRouteVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETDeleteRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETDeleteRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETDeleteRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteRouteRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETDeleteRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteRouteRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETDeleteRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETDeleteRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteRouteRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETDeleteRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteRouteRequest(@JsonProperty("Action") GETDeleteRouteActionEnum action, @JsonProperty("RouteTableId") String routeTableId, @JsonProperty("Version") GETDeleteRouteVersionEnum version) {
+        this.action = action;
+        this.routeTableId = routeTableId;
+        this.version = version;
+  }
 }

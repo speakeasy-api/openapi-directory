@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnregisterAllPushDevicesResponse {
     
     public byte[] body;
+
     public UnregisterAllPushDevicesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class UnregisterAllPushDevicesResponse {
     
     
     public String contentType;
+
     public UnregisterAllPushDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UnregisterAllPushDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public UnregisterAllPushDevicesResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class UnregisterAllPushDevicesResponse {
     
     
     public Integer statusCode;
+
     public UnregisterAllPushDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class UnregisterAllPushDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnregisterAllPushDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UnregisterAllPushDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

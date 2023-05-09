@@ -12,9 +12,13 @@ public class UpdateNetworkOneToOneNatRulesRequestBody {
      */
     @JsonProperty("rules")
     public UpdateNetworkOneToOneNatRulesRequestBodyRules[] rules;
+
     public UpdateNetworkOneToOneNatRulesRequestBody withRules(UpdateNetworkOneToOneNatRulesRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public UpdateNetworkOneToOneNatRulesRequestBody(@JsonProperty("rules") UpdateNetworkOneToOneNatRulesRequestBodyRules[] rules) {
+        this.rules = rules;
+  }
 }

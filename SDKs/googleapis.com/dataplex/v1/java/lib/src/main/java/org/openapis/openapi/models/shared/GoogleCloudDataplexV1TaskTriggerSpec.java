@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskTriggerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public GoogleCloudDataplexV1TaskTriggerSpec withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1TaskTriggerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRetries")
     public Integer maxRetries;
+
     public GoogleCloudDataplexV1TaskTriggerSpec withMaxRetries(Integer maxRetries) {
         this.maxRetries = maxRetries;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1TaskTriggerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public String schedule;
+
     public GoogleCloudDataplexV1TaskTriggerSpec withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1TaskTriggerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDataplexV1TaskTriggerSpec withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDataplexV1TaskTriggerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1TaskTriggerSpecTypeEnum type;
+
     public GoogleCloudDataplexV1TaskTriggerSpec withType(GoogleCloudDataplexV1TaskTriggerSpecTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskTriggerSpec(){}
 }

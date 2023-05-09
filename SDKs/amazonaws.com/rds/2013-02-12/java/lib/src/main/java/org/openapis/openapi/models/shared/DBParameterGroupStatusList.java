@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DBParameterGroupStatusList {
     
     public String dbParameterGroupName;
+
     public DBParameterGroupStatusList withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -16,9 +17,11 @@ public class DBParameterGroupStatusList {
     
     
     public String parameterApplyStatus;
+
     public DBParameterGroupStatusList withParameterApplyStatus(String parameterApplyStatus) {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
     }
     
+    public DBParameterGroupStatusList(){}
 }

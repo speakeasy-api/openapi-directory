@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClusterSolutionRequest {
@@ -12,9 +13,13 @@ public class GetClusterSolutionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public GetClusterSolutionRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public GetClusterSolutionRequest(@JsonProperty("jobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCatcherId")
     public String errorCatcherId;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withErrorCatcherId(String errorCatcherId) {
         this.errorCatcherId = errorCatcherId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalTaskType")
     public GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum externalTaskType;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withExternalTaskType(GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum externalTaskType) {
         this.externalTaskType = externalTaskType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failurePolicy")
     public GoogleCloudIntegrationsV1alphaFailurePolicy failurePolicy;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withFailurePolicy(GoogleCloudIntegrationsV1alphaFailurePolicy failurePolicy) {
         this.failurePolicy = failurePolicy;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonValidationOption")
     public GoogleCloudIntegrationsV1alphaTaskConfigJsonValidationOptionEnum jsonValidationOption;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withJsonValidationOption(GoogleCloudIntegrationsV1alphaTaskConfigJsonValidationOptionEnum jsonValidationOption) {
         this.jsonValidationOption = jsonValidationOption;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTasks")
     public GoogleCloudIntegrationsV1alphaNextTask[] nextTasks;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withNextTasks(GoogleCloudIntegrationsV1alphaNextTask[] nextTasks) {
         this.nextTasks = nextTasks;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTasksExecutionPolicy")
     public GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum nextTasksExecutionPolicy;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withNextTasksExecutionPolicy(GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum nextTasksExecutionPolicy) {
         this.nextTasksExecutionPolicy = nextTasksExecutionPolicy;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, GoogleCloudIntegrationsV1alphaEventParameter> parameters;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaEventParameter> parameters) {
         this.parameters = parameters;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public GoogleCloudIntegrationsV1alphaCoordinate position;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withPosition(GoogleCloudIntegrationsV1alphaCoordinate position) {
         this.position = position;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successPolicy")
     public GoogleCloudIntegrationsV1alphaSuccessPolicy successPolicy;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withSuccessPolicy(GoogleCloudIntegrationsV1alphaSuccessPolicy successPolicy) {
         this.successPolicy = successPolicy;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synchronousCallFailurePolicy")
     public GoogleCloudIntegrationsV1alphaFailurePolicy synchronousCallFailurePolicy;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withSynchronousCallFailurePolicy(GoogleCloudIntegrationsV1alphaFailurePolicy synchronousCallFailurePolicy) {
         this.synchronousCallFailurePolicy = synchronousCallFailurePolicy;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public String task;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withTask(String task) {
         this.task = task;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskExecutionStrategy")
     public GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum taskExecutionStrategy;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withTaskExecutionStrategy(GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum taskExecutionStrategy) {
         this.taskExecutionStrategy = taskExecutionStrategy;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -183,9 +198,11 @@ public class GoogleCloudIntegrationsV1alphaTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskTemplate")
     public String taskTemplate;
+
     public GoogleCloudIntegrationsV1alphaTaskConfig withTaskTemplate(String taskTemplate) {
         this.taskTemplate = taskTemplate;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaTaskConfig(){}
 }

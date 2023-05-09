@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMonitoredResourcesResponse {
     
     public String contentType;
+
     public ListMonitoredResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMonitoredResourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListMonitoredResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListMonitoredResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMonitoredResourcesResponse listMonitoredResourcesResponse;
+
     public ListMonitoredResourcesResponse withListMonitoredResourcesResponse(org.openapis.openapi.models.shared.ListMonitoredResourcesResponse listMonitoredResourcesResponse) {
         this.listMonitoredResourcesResponse = listMonitoredResourcesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListMonitoredResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListMonitoredResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListMonitoredResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListMonitoredResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListMonitoredResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMonitoredResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListMonitoredResourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListMonitoredResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListMonitoredResourcesResponse {
      */
     
     public Object validationException;
+
     public ListMonitoredResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListMonitoredResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

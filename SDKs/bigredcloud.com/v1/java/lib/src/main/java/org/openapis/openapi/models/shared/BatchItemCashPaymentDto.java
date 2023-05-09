@@ -12,6 +12,7 @@ public class BatchItemCashPaymentDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public CashPaymentDto item;
+
     public BatchItemCashPaymentDto withItem(CashPaymentDto item) {
         this.item = item;
         return this;
@@ -25,9 +26,11 @@ public class BatchItemCashPaymentDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opCode")
     public BatchItemCashPaymentDtoOpCodeEnum opCode;
+
     public BatchItemCashPaymentDto withOpCode(BatchItemCashPaymentDtoOpCodeEnum opCode) {
         this.opCode = opCode;
         return this;
     }
     
+    public BatchItemCashPaymentDto(){}
 }

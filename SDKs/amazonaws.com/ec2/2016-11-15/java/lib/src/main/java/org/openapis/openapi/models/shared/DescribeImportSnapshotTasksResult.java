@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImportSnapshotTasksResult {
     
     public DescribeImportSnapshotTasksResultImportSnapshotTasks[] importSnapshotTasks;
+
     public DescribeImportSnapshotTasksResult withImportSnapshotTasks(DescribeImportSnapshotTasksResultImportSnapshotTasks[] importSnapshotTasks) {
         this.importSnapshotTasks = importSnapshotTasks;
         return this;
@@ -19,9 +20,11 @@ public class DescribeImportSnapshotTasksResult {
     
     
     public String nextToken;
+
     public DescribeImportSnapshotTasksResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeImportSnapshotTasksResult(){}
 }

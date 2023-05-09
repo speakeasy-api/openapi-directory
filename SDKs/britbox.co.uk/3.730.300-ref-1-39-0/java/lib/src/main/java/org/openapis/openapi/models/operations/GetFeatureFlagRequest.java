@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeatureFlagRequest {
@@ -12,6 +13,7 @@ public class GetFeatureFlagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=feature")
     public String feature;
+
     public GetFeatureFlagRequest withFeature(String feature) {
         this.feature = feature;
         return this;
@@ -32,9 +34,13 @@ public class GetFeatureFlagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetFeatureFlagRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetFeatureFlagRequest(@JsonProperty("feature") String feature) {
+        this.feature = feature;
+  }
 }

@@ -18,6 +18,7 @@ public class StandardUnitDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public StandardUnitDescription withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -29,6 +30,7 @@ public class StandardUnitDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StandardUnitDescription withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +44,11 @@ public class StandardUnitDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public MeasurementUnit unit;
+
     public StandardUnitDescription withUnit(MeasurementUnit unit) {
         this.unit = unit;
         return this;
     }
     
+    public StandardUnitDescription(){}
 }

@@ -12,9 +12,13 @@ public class DeleteNotificationRuleRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public DeleteNotificationRuleRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteNotificationRuleRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

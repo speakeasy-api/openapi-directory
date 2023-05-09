@@ -12,6 +12,7 @@ public class BoxScoreTeamsExplosiveness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public BoxScoreTeamsExplosivenessOverall overall;
+
     public BoxScoreTeamsExplosiveness withOverall(BoxScoreTeamsExplosivenessOverall overall) {
         this.overall = overall;
         return this;
@@ -20,9 +21,11 @@ public class BoxScoreTeamsExplosiveness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public BoxScoreTeamsExplosiveness withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public BoxScoreTeamsExplosiveness(){}
 }

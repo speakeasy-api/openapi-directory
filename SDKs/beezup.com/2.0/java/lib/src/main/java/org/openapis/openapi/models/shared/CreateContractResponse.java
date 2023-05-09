@@ -15,6 +15,7 @@ public class CreateContractResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public BeezUPCommonInfoSummaries info;
+
     public CreateContractResponse withInfo(BeezUPCommonInfoSummaries info) {
         this.info = info;
         return this;
@@ -23,9 +24,11 @@ public class CreateContractResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CreateContractResponseLinks links;
+
     public CreateContractResponse withLinks(CreateContractResponseLinks links) {
         this.links = links;
         return this;
     }
     
+    public CreateContractResponse(){}
 }

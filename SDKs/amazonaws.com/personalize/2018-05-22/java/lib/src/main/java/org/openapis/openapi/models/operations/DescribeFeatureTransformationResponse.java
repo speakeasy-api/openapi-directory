@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFeatureTransformationResponse {
     
     public String contentType;
+
     public DescribeFeatureTransformationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFeatureTransformationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFeatureTransformationResponse describeFeatureTransformationResponse;
+
     public DescribeFeatureTransformationResponse withDescribeFeatureTransformationResponse(org.openapis.openapi.models.shared.DescribeFeatureTransformationResponse describeFeatureTransformationResponse) {
         this.describeFeatureTransformationResponse = describeFeatureTransformationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFeatureTransformationResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeFeatureTransformationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeFeatureTransformationResponse {
     
     
     public Integer statusCode;
+
     public DescribeFeatureTransformationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeFeatureTransformationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFeatureTransformationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeFeatureTransformationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFeatureTransformationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeFeatureTransformationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

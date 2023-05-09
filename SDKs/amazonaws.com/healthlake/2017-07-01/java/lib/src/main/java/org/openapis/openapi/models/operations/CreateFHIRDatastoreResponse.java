@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFHIRDatastoreResponse {
@@ -12,6 +13,7 @@ public class CreateFHIRDatastoreResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFHIRDatastoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFHIRDatastoreResponse {
     
     
     public String contentType;
+
     public CreateFHIRDatastoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFHIRDatastoreResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFHIRDatastoreResponse createFHIRDatastoreResponse;
+
     public CreateFHIRDatastoreResponse withCreateFHIRDatastoreResponse(org.openapis.openapi.models.shared.CreateFHIRDatastoreResponse createFHIRDatastoreResponse) {
         this.createFHIRDatastoreResponse = createFHIRDatastoreResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateFHIRDatastoreResponse {
      */
     
     public Object internalServerException;
+
     public CreateFHIRDatastoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateFHIRDatastoreResponse {
     
     
     public Integer statusCode;
+
     public CreateFHIRDatastoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateFHIRDatastoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFHIRDatastoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateFHIRDatastoreResponse {
      */
     
     public Object throttlingException;
+
     public CreateFHIRDatastoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class CreateFHIRDatastoreResponse {
      */
     
     public Object validationException;
+
     public CreateFHIRDatastoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFHIRDatastoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class OwnerOpeningBalanceVatEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public OwnerOpeningBalanceVatEntryDto withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -20,9 +21,11 @@ public class OwnerOpeningBalanceVatEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatRateId")
     public Long vatRateId;
+
     public OwnerOpeningBalanceVatEntryDto withVatRateId(Long vatRateId) {
         this.vatRateId = vatRateId;
         return this;
     }
     
+    public OwnerOpeningBalanceVatEntryDto(){}
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetActionNotificationExportResultsRequest;
 import org.openapis.openapi.models.operations.GetActionNotificationExportResultsResponse;
 
@@ -13,20 +12,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetActionNotificationExportResultsRequest req = new GetActionNotificationExportResultsRequest() {{
-                actionNotificationExportId = 548814;
+            GetActionNotificationExportResultsRequest req = new GetActionNotificationExportResultsRequest(548814) {{
                 cursor = "provident";
                 perPage = 715190;
                 userId = 844266;
-            }}            
+            }};            
 
             GetActionNotificationExportResultsResponse res = sdk.actionNotificationExportResults.getActionNotificationExportResults(req);
 
-            if (res.actionNotificationExportResultEntities.isPresent()) {
+            if (res.actionNotificationExportResultEntities != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

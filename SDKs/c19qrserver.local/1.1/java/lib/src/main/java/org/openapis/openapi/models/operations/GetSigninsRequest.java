@@ -12,6 +12,7 @@ public class GetSigninsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=less_than")
     public Long lessThan;
+
     public GetSigninsRequest withLessThan(Long lessThan) {
         this.lessThan = lessThan;
         return this;
@@ -22,9 +23,11 @@ public class GetSigninsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return_count")
     public Long returnCount;
+
     public GetSigninsRequest withReturnCount(Long returnCount) {
         this.returnCount = returnCount;
         return this;
     }
     
+    public GetSigninsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RepositoryConfigurationsCreateOrUpdateResponse {
     
     public String contentType;
+
     public RepositoryConfigurationsCreateOrUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RepositoryConfigurationsCreateOrUpdateResponse {
     
     
     public Integer statusCode;
+
     public RepositoryConfigurationsCreateOrUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RepositoryConfigurationsCreateOrUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RepositoryConfigurationsCreateOrUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RepositoryConfigurationsCreateOrUpdateResponse {
      */
     
     public RepositoryConfigurationsCreateOrUpdate200ApplicationJSON repositoryConfigurationsCreateOrUpdate200ApplicationJSONObject;
+
     public RepositoryConfigurationsCreateOrUpdateResponse withRepositoryConfigurationsCreateOrUpdate200ApplicationJSONObject(RepositoryConfigurationsCreateOrUpdate200ApplicationJSON repositoryConfigurationsCreateOrUpdate200ApplicationJSONObject) {
         this.repositoryConfigurationsCreateOrUpdate200ApplicationJSONObject = repositoryConfigurationsCreateOrUpdate200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class RepositoryConfigurationsCreateOrUpdateResponse {
      */
     
     public RepositoryConfigurationsCreateOrUpdateDefaultApplicationJSON repositoryConfigurationsCreateOrUpdateDefaultApplicationJSONObject;
+
     public RepositoryConfigurationsCreateOrUpdateResponse withRepositoryConfigurationsCreateOrUpdateDefaultApplicationJSONObject(RepositoryConfigurationsCreateOrUpdateDefaultApplicationJSON repositoryConfigurationsCreateOrUpdateDefaultApplicationJSONObject) {
         this.repositoryConfigurationsCreateOrUpdateDefaultApplicationJSONObject = repositoryConfigurationsCreateOrUpdateDefaultApplicationJSONObject;
         return this;
     }
     
+    public RepositoryConfigurationsCreateOrUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Quotas {
      */
     @JsonProperty("authorizedCallsPerDay")
     public Long authorizedCallsPerDay;
+
     public Quotas withAuthorizedCallsPerDay(Long authorizedCallsPerDay) {
         this.authorizedCallsPerDay = authorizedCallsPerDay;
         return this;
@@ -25,6 +26,7 @@ public class Quotas {
      */
     @JsonProperty("authorizedCallsPerMonth")
     public Long authorizedCallsPerMonth;
+
     public Quotas withAuthorizedCallsPerMonth(Long authorizedCallsPerMonth) {
         this.authorizedCallsPerMonth = authorizedCallsPerMonth;
         return this;
@@ -35,6 +37,7 @@ public class Quotas {
      */
     @JsonProperty("authorizedCallsPerSec")
     public Long authorizedCallsPerSec;
+
     public Quotas withAuthorizedCallsPerSec(Long authorizedCallsPerSec) {
         this.authorizedCallsPerSec = authorizedCallsPerSec;
         return this;
@@ -45,6 +48,7 @@ public class Quotas {
      */
     @JsonProperty("currentCallsPerDay")
     public Long currentCallsPerDay;
+
     public Quotas withCurrentCallsPerDay(Long currentCallsPerDay) {
         this.currentCallsPerDay = currentCallsPerDay;
         return this;
@@ -55,6 +59,7 @@ public class Quotas {
      */
     @JsonProperty("currentCallsPerMonth")
     public Long currentCallsPerMonth;
+
     public Quotas withCurrentCallsPerMonth(Long currentCallsPerMonth) {
         this.currentCallsPerMonth = currentCallsPerMonth;
         return this;
@@ -65,6 +70,7 @@ public class Quotas {
      */
     @JsonProperty("currentCallsPerSec")
     public Long currentCallsPerSec;
+
     public Quotas withCurrentCallsPerSec(Long currentCallsPerSec) {
         this.currentCallsPerSec = currentCallsPerSec;
         return this;
@@ -75,6 +81,7 @@ public class Quotas {
      */
     @JsonProperty("remainingCallsPerDay")
     public Long remainingCallsPerDay;
+
     public Quotas withRemainingCallsPerDay(Long remainingCallsPerDay) {
         this.remainingCallsPerDay = remainingCallsPerDay;
         return this;
@@ -85,6 +92,7 @@ public class Quotas {
      */
     @JsonProperty("remainingCallsPerMonth")
     public Long remainingCallsPerMonth;
+
     public Quotas withRemainingCallsPerMonth(Long remainingCallsPerMonth) {
         this.remainingCallsPerMonth = remainingCallsPerMonth;
         return this;
@@ -95,9 +103,21 @@ public class Quotas {
      */
     @JsonProperty("remainingCallsPerSec")
     public Long remainingCallsPerSec;
+
     public Quotas withRemainingCallsPerSec(Long remainingCallsPerSec) {
         this.remainingCallsPerSec = remainingCallsPerSec;
         return this;
     }
     
+    public Quotas(@JsonProperty("authorizedCallsPerDay") Long authorizedCallsPerDay, @JsonProperty("authorizedCallsPerMonth") Long authorizedCallsPerMonth, @JsonProperty("authorizedCallsPerSec") Long authorizedCallsPerSec, @JsonProperty("currentCallsPerDay") Long currentCallsPerDay, @JsonProperty("currentCallsPerMonth") Long currentCallsPerMonth, @JsonProperty("currentCallsPerSec") Long currentCallsPerSec, @JsonProperty("remainingCallsPerDay") Long remainingCallsPerDay, @JsonProperty("remainingCallsPerMonth") Long remainingCallsPerMonth, @JsonProperty("remainingCallsPerSec") Long remainingCallsPerSec) {
+        this.authorizedCallsPerDay = authorizedCallsPerDay;
+        this.authorizedCallsPerMonth = authorizedCallsPerMonth;
+        this.authorizedCallsPerSec = authorizedCallsPerSec;
+        this.currentCallsPerDay = currentCallsPerDay;
+        this.currentCallsPerMonth = currentCallsPerMonth;
+        this.currentCallsPerSec = currentCallsPerSec;
+        this.remainingCallsPerDay = remainingCallsPerDay;
+        this.remainingCallsPerMonth = remainingCallsPerMonth;
+        this.remainingCallsPerSec = remainingCallsPerSec;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceMetadataOptionsRequest {
     
     public InstanceMetadataEndpointStateEnum httpEndpoint;
+
     public InstanceMetadataOptionsRequest withHttpEndpoint(InstanceMetadataEndpointStateEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class InstanceMetadataOptionsRequest {
     
     
     public InstanceMetadataProtocolStateEnum httpProtocolIpv6;
+
     public InstanceMetadataOptionsRequest withHttpProtocolIpv6(InstanceMetadataProtocolStateEnum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -26,6 +28,7 @@ public class InstanceMetadataOptionsRequest {
     
     
     public Long httpPutResponseHopLimit;
+
     public InstanceMetadataOptionsRequest withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -33,6 +36,7 @@ public class InstanceMetadataOptionsRequest {
     
     
     public HttpTokensStateEnum httpTokens;
+
     public InstanceMetadataOptionsRequest withHttpTokens(HttpTokensStateEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -40,9 +44,11 @@ public class InstanceMetadataOptionsRequest {
     
     
     public InstanceMetadataTagsStateEnum instanceMetadataTags;
+
     public InstanceMetadataOptionsRequest withInstanceMetadataTags(InstanceMetadataTagsStateEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
     }
     
+    public InstanceMetadataOptionsRequest(){}
 }

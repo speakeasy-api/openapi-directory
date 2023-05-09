@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetProfileRequest;
 import org.openapis.openapi.models.operations.GetProfileResponse;
 
@@ -29,7 +28,7 @@ public class Application {
             GetProfileRequest req = new GetProfileRequest() {{
                 id = "{{your-member-id}}";
                 service = "{{service-identifier}}";
-            }}            
+            }};            
 
             GetProfileResponse res = sdk.getProfile(req);
 
@@ -39,16 +38,18 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getProfile` - Get Profile
-* `getToken` - Get Token
+* [getProfile](docs/sdk/README.md#getprofile) - Get Profile
+* [getToken](docs/sdk/README.md#gettoken) - Get Token
 <!-- End SDK Available Operations -->
 
 ### Maturity

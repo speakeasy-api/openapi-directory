@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CalendarAclGetResponse {
@@ -12,6 +13,7 @@ public class CalendarAclGetResponse {
      */
     
     public org.openapis.openapi.models.shared.AclRule aclRule;
+
     public CalendarAclGetResponse withAclRule(org.openapis.openapi.models.shared.AclRule aclRule) {
         this.aclRule = aclRule;
         return this;
@@ -19,6 +21,7 @@ public class CalendarAclGetResponse {
     
     
     public String contentType;
+
     public CalendarAclGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CalendarAclGetResponse {
     
     
     public Integer statusCode;
+
     public CalendarAclGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CalendarAclGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CalendarAclGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CalendarAclGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

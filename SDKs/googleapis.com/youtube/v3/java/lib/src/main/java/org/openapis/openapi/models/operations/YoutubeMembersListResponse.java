@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class YoutubeMembersListResponse {
     
     public String contentType;
+
     public YoutubeMembersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class YoutubeMembersListResponse {
      */
     
     public org.openapis.openapi.models.shared.MemberListResponse memberListResponse;
+
     public YoutubeMembersListResponse withMemberListResponse(org.openapis.openapi.models.shared.MemberListResponse memberListResponse) {
         this.memberListResponse = memberListResponse;
         return this;
@@ -26,6 +29,7 @@ public class YoutubeMembersListResponse {
     
     
     public Integer statusCode;
+
     public YoutubeMembersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class YoutubeMembersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public YoutubeMembersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public YoutubeMembersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

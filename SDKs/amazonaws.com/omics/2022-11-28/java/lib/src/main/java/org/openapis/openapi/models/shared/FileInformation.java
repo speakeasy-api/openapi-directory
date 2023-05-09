@@ -15,6 +15,7 @@ public class FileInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLength")
     public Long contentLength;
+
     public FileInformation withContentLength(Long contentLength) {
         this.contentLength = contentLength;
         return this;
@@ -23,6 +24,7 @@ public class FileInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partSize")
     public Long partSize;
+
     public FileInformation withPartSize(Long partSize) {
         this.partSize = partSize;
         return this;
@@ -31,9 +33,11 @@ public class FileInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalParts")
     public Long totalParts;
+
     public FileInformation withTotalParts(Long totalParts) {
         this.totalParts = totalParts;
         return this;
     }
     
+    public FileInformation(){}
 }

@@ -15,6 +15,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddRecordTimestamp")
     public String addRecordTimestamp;
+
     public KafkaStreamingSourceOptions withAddRecordTimestamp(String addRecordTimestamp) {
         this.addRecordTimestamp = addRecordTimestamp;
         return this;
@@ -23,6 +24,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assign")
     public String assign;
+
     public KafkaStreamingSourceOptions withAssign(String assign) {
         this.assign = assign;
         return this;
@@ -31,6 +33,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BootstrapServers")
     public String bootstrapServers;
+
     public KafkaStreamingSourceOptions withBootstrapServers(String bootstrapServers) {
         this.bootstrapServers = bootstrapServers;
         return this;
@@ -39,6 +42,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classification")
     public String classification;
+
     public KafkaStreamingSourceOptions withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -47,6 +51,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public KafkaStreamingSourceOptions withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -55,6 +60,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delimiter")
     public String delimiter;
+
     public KafkaStreamingSourceOptions withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -63,6 +69,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmitConsumerLagMetrics")
     public String emitConsumerLagMetrics;
+
     public KafkaStreamingSourceOptions withEmitConsumerLagMetrics(String emitConsumerLagMetrics) {
         this.emitConsumerLagMetrics = emitConsumerLagMetrics;
         return this;
@@ -71,6 +78,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndingOffsets")
     public String endingOffsets;
+
     public KafkaStreamingSourceOptions withEndingOffsets(String endingOffsets) {
         this.endingOffsets = endingOffsets;
         return this;
@@ -79,6 +87,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeHeaders")
     public Boolean includeHeaders;
+
     public KafkaStreamingSourceOptions withIncludeHeaders(Boolean includeHeaders) {
         this.includeHeaders = includeHeaders;
         return this;
@@ -87,6 +96,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxOffsetsPerTrigger")
     public Long maxOffsetsPerTrigger;
+
     public KafkaStreamingSourceOptions withMaxOffsetsPerTrigger(Long maxOffsetsPerTrigger) {
         this.maxOffsetsPerTrigger = maxOffsetsPerTrigger;
         return this;
@@ -95,6 +105,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinPartitions")
     public Long minPartitions;
+
     public KafkaStreamingSourceOptions withMinPartitions(Long minPartitions) {
         this.minPartitions = minPartitions;
         return this;
@@ -103,6 +114,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumRetries")
     public Long numRetries;
+
     public KafkaStreamingSourceOptions withNumRetries(Long numRetries) {
         this.numRetries = numRetries;
         return this;
@@ -111,6 +123,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PollTimeoutMs")
     public Long pollTimeoutMs;
+
     public KafkaStreamingSourceOptions withPollTimeoutMs(Long pollTimeoutMs) {
         this.pollTimeoutMs = pollTimeoutMs;
         return this;
@@ -119,6 +132,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryIntervalMs")
     public Long retryIntervalMs;
+
     public KafkaStreamingSourceOptions withRetryIntervalMs(Long retryIntervalMs) {
         this.retryIntervalMs = retryIntervalMs;
         return this;
@@ -127,6 +141,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityProtocol")
     public String securityProtocol;
+
     public KafkaStreamingSourceOptions withSecurityProtocol(String securityProtocol) {
         this.securityProtocol = securityProtocol;
         return this;
@@ -135,6 +150,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartingOffsets")
     public String startingOffsets;
+
     public KafkaStreamingSourceOptions withStartingOffsets(String startingOffsets) {
         this.startingOffsets = startingOffsets;
         return this;
@@ -143,6 +159,7 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscribePattern")
     public String subscribePattern;
+
     public KafkaStreamingSourceOptions withSubscribePattern(String subscribePattern) {
         this.subscribePattern = subscribePattern;
         return this;
@@ -151,9 +168,11 @@ public class KafkaStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicName")
     public String topicName;
+
     public KafkaStreamingSourceOptions withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public KafkaStreamingSourceOptions(){}
 }

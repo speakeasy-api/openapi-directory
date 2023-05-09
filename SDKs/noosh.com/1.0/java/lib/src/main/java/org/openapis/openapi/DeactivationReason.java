@@ -50,7 +50,7 @@ public class DeactivationReason {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeactivationReasonListResponse res = new org.openapis.openapi.models.operations.GetDeactivationReasonListResponse() {{
+        org.openapis.openapi.models.operations.GetDeactivationReasonListResponse res = new org.openapis.openapi.models.operations.GetDeactivationReasonListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -68,8 +68,6 @@ public class DeactivationReason {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

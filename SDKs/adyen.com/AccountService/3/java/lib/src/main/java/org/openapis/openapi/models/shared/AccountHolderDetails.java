@@ -12,6 +12,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ViasAddress address;
+
     public AccountHolderDetails withAddress(ViasAddress address) {
         this.address = address;
         return this;
@@ -22,8 +23,9 @@ public class AccountHolderDetails {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountDetails")
-    public BankAccountDetail[] bankAccountDetails;
-    public AccountHolderDetails withBankAccountDetails(BankAccountDetail[] bankAccountDetails) {
+    public BankAccountDetailWrapper[] bankAccountDetails;
+
+    public AccountHolderDetails withBankAccountDetails(BankAccountDetailWrapper[] bankAccountDetails) {
         this.bankAccountDetails = bankAccountDetails;
         return this;
     }
@@ -31,6 +33,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessDetails")
     public BusinessDetails businessDetails;
+
     public AccountHolderDetails withBusinessDetails(BusinessDetails businessDetails) {
         this.businessDetails = businessDetails;
         return this;
@@ -42,6 +45,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AccountHolderDetails withEmail(String email) {
         this.email = email;
         return this;
@@ -54,6 +58,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPhoneNumber")
     public String fullPhoneNumber;
+
     public AccountHolderDetails withFullPhoneNumber(String fullPhoneNumber) {
         this.fullPhoneNumber = fullPhoneNumber;
         return this;
@@ -62,6 +67,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individualDetails")
     public IndividualDetails individualDetails;
+
     public AccountHolderDetails withIndividualDetails(IndividualDetails individualDetails) {
         this.individualDetails = individualDetails;
         return this;
@@ -73,6 +79,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastReviewDate")
     public String lastReviewDate;
+
     public AccountHolderDetails withLastReviewDate(String lastReviewDate) {
         this.lastReviewDate = lastReviewDate;
         return this;
@@ -85,6 +92,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCategoryCode")
     public String merchantCategoryCode;
+
     public AccountHolderDetails withMerchantCategoryCode(String merchantCategoryCode) {
         this.merchantCategoryCode = merchantCategoryCode;
         return this;
@@ -99,6 +107,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public AccountHolderDetails withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -107,6 +116,7 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalBusinessAddress")
     public ViasAddress principalBusinessAddress;
+
     public AccountHolderDetails withPrincipalBusinessAddress(ViasAddress principalBusinessAddress) {
         this.principalBusinessAddress = principalBusinessAddress;
         return this;
@@ -118,9 +128,11 @@ public class AccountHolderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public AccountHolderDetails withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
     }
     
+    public AccountHolderDetails(){}
 }

@@ -15,6 +15,7 @@ public class PutActionRevisionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newRevision")
     public Boolean newRevision;
+
     public PutActionRevisionOutput withNewRevision(Boolean newRevision) {
         this.newRevision = newRevision;
         return this;
@@ -23,9 +24,11 @@ public class PutActionRevisionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public PutActionRevisionOutput withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
     }
     
+    public PutActionRevisionOutput(){}
 }

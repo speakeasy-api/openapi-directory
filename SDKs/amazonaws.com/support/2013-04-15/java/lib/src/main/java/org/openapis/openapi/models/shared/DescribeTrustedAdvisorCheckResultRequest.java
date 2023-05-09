@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTrustedAdvisorCheckResultRequest {
     @JsonProperty("checkId")
     public String checkId;
+
     public DescribeTrustedAdvisorCheckResultRequest withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -22,9 +23,13 @@ public class DescribeTrustedAdvisorCheckResultRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public DescribeTrustedAdvisorCheckResultRequest withLanguage(String language) {
         this.language = language;
         return this;
     }
     
+    public DescribeTrustedAdvisorCheckResultRequest(@JsonProperty("checkId") String checkId) {
+        this.checkId = checkId;
+  }
 }

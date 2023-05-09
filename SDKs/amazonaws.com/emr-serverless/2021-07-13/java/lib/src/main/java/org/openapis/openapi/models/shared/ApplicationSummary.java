@@ -20,6 +20,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public ArchitectureEnum architecture;
+
     public ApplicationSummary withArchitecture(ArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -27,6 +28,7 @@ public class ApplicationSummary {
     
     @JsonProperty("arn")
     public String arn;
+
     public ApplicationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class ApplicationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ApplicationSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +46,7 @@ public class ApplicationSummary {
     
     @JsonProperty("id")
     public String id;
+
     public ApplicationSummary withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApplicationSummary withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +63,7 @@ public class ApplicationSummary {
     
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public ApplicationSummary withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -65,6 +71,7 @@ public class ApplicationSummary {
     
     @JsonProperty("state")
     public ApplicationStateEnum state;
+
     public ApplicationSummary withState(ApplicationStateEnum state) {
         this.state = state;
         return this;
@@ -73,6 +80,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDetails")
     public String stateDetails;
+
     public ApplicationSummary withStateDetails(String stateDetails) {
         this.stateDetails = stateDetails;
         return this;
@@ -80,6 +88,7 @@ public class ApplicationSummary {
     
     @JsonProperty("type")
     public String type;
+
     public ApplicationSummary withType(String type) {
         this.type = type;
         return this;
@@ -89,9 +98,19 @@ public class ApplicationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public ApplicationSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ApplicationSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("releaseLabel") String releaseLabel, @JsonProperty("state") ApplicationStateEnum state, @JsonProperty("type") String type, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.releaseLabel = releaseLabel;
+        this.state = state;
+        this.type = type;
+        this.updatedAt = updatedAt;
+  }
 }

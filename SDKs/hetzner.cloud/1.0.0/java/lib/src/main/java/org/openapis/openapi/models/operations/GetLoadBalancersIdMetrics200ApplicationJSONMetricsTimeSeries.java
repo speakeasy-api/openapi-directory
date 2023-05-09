@@ -12,9 +12,13 @@ public class GetLoadBalancersIdMetrics200ApplicationJSONMetricsTimeSeries {
      */
     @JsonProperty("values")
     public Object[][] values;
+
     public GetLoadBalancersIdMetrics200ApplicationJSONMetricsTimeSeries withValues(Object[][] values) {
         this.values = values;
         return this;
     }
     
+    public GetLoadBalancersIdMetrics200ApplicationJSONMetricsTimeSeries(@JsonProperty("values") Object[][] values) {
+        this.values = values;
+  }
 }

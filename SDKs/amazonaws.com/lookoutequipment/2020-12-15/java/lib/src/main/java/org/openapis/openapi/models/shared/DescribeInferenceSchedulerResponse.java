@@ -22,6 +22,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeInferenceSchedulerResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataDelayOffsetInMinutes")
     public Long dataDelayOffsetInMinutes;
+
     public DescribeInferenceSchedulerResponse withDataDelayOffsetInMinutes(Long dataDelayOffsetInMinutes) {
         this.dataDelayOffsetInMinutes = dataDelayOffsetInMinutes;
         return this;
@@ -38,6 +40,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataInputConfiguration")
     public InferenceInputConfiguration dataInputConfiguration;
+
     public DescribeInferenceSchedulerResponse withDataInputConfiguration(InferenceInputConfiguration dataInputConfiguration) {
         this.dataInputConfiguration = dataInputConfiguration;
         return this;
@@ -46,6 +49,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataOutputConfiguration")
     public InferenceOutputConfiguration dataOutputConfiguration;
+
     public DescribeInferenceSchedulerResponse withDataOutputConfiguration(InferenceOutputConfiguration dataOutputConfiguration) {
         this.dataOutputConfiguration = dataOutputConfiguration;
         return this;
@@ -54,6 +58,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataUploadFrequency")
     public DataUploadFrequencyEnum dataUploadFrequency;
+
     public DescribeInferenceSchedulerResponse withDataUploadFrequency(DataUploadFrequencyEnum dataUploadFrequency) {
         this.dataUploadFrequency = dataUploadFrequency;
         return this;
@@ -62,6 +67,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerArn")
     public String inferenceSchedulerArn;
+
     public DescribeInferenceSchedulerResponse withInferenceSchedulerArn(String inferenceSchedulerArn) {
         this.inferenceSchedulerArn = inferenceSchedulerArn;
         return this;
@@ -70,6 +76,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public DescribeInferenceSchedulerResponse withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
@@ -78,6 +85,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestInferenceResult")
     public LatestInferenceResultEnum latestInferenceResult;
+
     public DescribeInferenceSchedulerResponse withLatestInferenceResult(LatestInferenceResultEnum latestInferenceResult) {
         this.latestInferenceResult = latestInferenceResult;
         return this;
@@ -86,6 +94,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public DescribeInferenceSchedulerResponse withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -94,6 +103,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public DescribeInferenceSchedulerResponse withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -102,6 +112,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeInferenceSchedulerResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -110,6 +121,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideKmsKeyId")
     public String serverSideKmsKeyId;
+
     public DescribeInferenceSchedulerResponse withServerSideKmsKeyId(String serverSideKmsKeyId) {
         this.serverSideKmsKeyId = serverSideKmsKeyId;
         return this;
@@ -118,6 +130,7 @@ public class DescribeInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InferenceSchedulerStatusEnum status;
+
     public DescribeInferenceSchedulerResponse withStatus(InferenceSchedulerStatusEnum status) {
         this.status = status;
         return this;
@@ -128,9 +141,11 @@ public class DescribeInferenceSchedulerResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeInferenceSchedulerResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DescribeInferenceSchedulerResponse(){}
 }

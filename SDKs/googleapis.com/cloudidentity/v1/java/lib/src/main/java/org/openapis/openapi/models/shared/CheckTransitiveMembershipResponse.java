@@ -18,9 +18,11 @@ public class CheckTransitiveMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMembership")
     public Boolean hasMembership;
+
     public CheckTransitiveMembershipResponse withHasMembership(Boolean hasMembership) {
         this.hasMembership = hasMembership;
         return this;
     }
     
+    public CheckTransitiveMembershipResponse(){}
 }

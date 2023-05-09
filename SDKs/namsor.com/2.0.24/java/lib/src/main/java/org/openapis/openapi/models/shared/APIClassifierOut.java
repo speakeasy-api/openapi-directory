@@ -18,6 +18,7 @@ public class APIClassifierOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifierName")
     public String classifierName;
+
     public APIClassifierOut withClassifierName(String classifierName) {
         this.classifierName = classifierName;
         return this;
@@ -29,6 +30,7 @@ public class APIClassifierOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learning")
     public Boolean learning;
+
     public APIClassifierOut withLearning(Boolean learning) {
         this.learning = learning;
         return this;
@@ -40,6 +42,7 @@ public class APIClassifierOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityCalibrated")
     public Boolean probabilityCalibrated;
+
     public APIClassifierOut withProbabilityCalibrated(Boolean probabilityCalibrated) {
         this.probabilityCalibrated = probabilityCalibrated;
         return this;
@@ -51,6 +54,7 @@ public class APIClassifierOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serving")
     public Boolean serving;
+
     public APIClassifierOut withServing(Boolean serving) {
         this.serving = serving;
         return this;
@@ -62,9 +66,11 @@ public class APIClassifierOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shuttingDown")
     public Boolean shuttingDown;
+
     public APIClassifierOut withShuttingDown(Boolean shuttingDown) {
         this.shuttingDown = shuttingDown;
         return this;
     }
     
+    public APIClassifierOut(){}
 }

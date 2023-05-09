@@ -18,9 +18,11 @@ public class FeedbackLoopOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedbackCredits")
     public Long feedbackCredits;
+
     public FeedbackLoopOut withFeedbackCredits(Long feedbackCredits) {
         this.feedbackCredits = feedbackCredits;
         return this;
     }
     
+    public FeedbackLoopOut(){}
 }

@@ -12,6 +12,7 @@ public class DescribeCapacityProvidersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviders")
     public String[] capacityProviders;
+
     public DescribeCapacityProvidersRequest withCapacityProviders(String[] capacityProviders) {
         this.capacityProviders = capacityProviders;
         return this;
@@ -20,6 +21,7 @@ public class DescribeCapacityProvidersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public CapacityProviderFieldEnum[] include;
+
     public DescribeCapacityProvidersRequest withInclude(CapacityProviderFieldEnum[] include) {
         this.include = include;
         return this;
@@ -28,6 +30,7 @@ public class DescribeCapacityProvidersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeCapacityProvidersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class DescribeCapacityProvidersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeCapacityProvidersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCapacityProvidersRequest(){}
 }

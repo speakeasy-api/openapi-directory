@@ -59,11 +59,9 @@ public class Reviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherReviewsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherReviewsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherReviewsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherReviewsGetResponse(contentType, httpRes.statusCode()) {{
             review = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Reviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherReviewsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherReviewsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherReviewsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherReviewsListResponse(contentType, httpRes.statusCode()) {{
             reviewsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Reviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherReviewsReplyResponse res = new org.openapis.openapi.models.operations.AndroidpublisherReviewsReplyResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherReviewsReplyResponse res = new org.openapis.openapi.models.operations.AndroidpublisherReviewsReplyResponse(contentType, httpRes.statusCode()) {{
             reviewsReplyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

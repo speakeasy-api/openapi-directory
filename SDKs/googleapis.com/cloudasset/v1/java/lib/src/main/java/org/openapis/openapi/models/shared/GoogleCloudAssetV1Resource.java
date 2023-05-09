@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisState")
     public IamPolicyAnalysisState analysisState;
+
     public GoogleCloudAssetV1Resource withAnalysisState(IamPolicyAnalysisState analysisState) {
         this.analysisState = analysisState;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullResourceName")
     public String fullResourceName;
+
     public GoogleCloudAssetV1Resource withFullResourceName(String fullResourceName) {
         this.fullResourceName = fullResourceName;
         return this;
     }
     
+    public GoogleCloudAssetV1Resource(){}
 }

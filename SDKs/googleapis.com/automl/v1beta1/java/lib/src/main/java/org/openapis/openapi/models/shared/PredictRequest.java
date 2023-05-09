@@ -18,6 +18,7 @@ public class PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, String> params;
+
     public PredictRequest withParams(java.util.Map<String, String> params) {
         this.params = params;
         return this;
@@ -29,9 +30,11 @@ public class PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public ExamplePayload payload;
+
     public PredictRequest withPayload(ExamplePayload payload) {
         this.payload = payload;
         return this;
     }
     
+    public PredictRequest(){}
 }

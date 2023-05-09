@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRepositoriesForApprovalRuleTemplateResponse {
@@ -12,6 +13,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateDoesNotExistException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withApprovalRuleTemplateDoesNotExistException(Object approvalRuleTemplateDoesNotExistException) {
         this.approvalRuleTemplateDoesNotExistException = approvalRuleTemplateDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateNameRequiredException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withApprovalRuleTemplateNameRequiredException(Object approvalRuleTemplateNameRequiredException) {
         this.approvalRuleTemplateNameRequiredException = approvalRuleTemplateNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
     
     
     public String contentType;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object invalidApprovalRuleTemplateNameException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withInvalidApprovalRuleTemplateNameException(Object invalidApprovalRuleTemplateNameException) {
         this.invalidApprovalRuleTemplateNameException = invalidApprovalRuleTemplateNameException;
         return this;
@@ -99,6 +109,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -109,6 +120,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -119,6 +131,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRepositoriesForApprovalRuleTemplateOutput listRepositoriesForApprovalRuleTemplateOutput;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withListRepositoriesForApprovalRuleTemplateOutput(org.openapis.openapi.models.shared.ListRepositoriesForApprovalRuleTemplateOutput listRepositoriesForApprovalRuleTemplateOutput) {
         this.listRepositoriesForApprovalRuleTemplateOutput = listRepositoriesForApprovalRuleTemplateOutput;
         return this;
@@ -126,6 +139,7 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
     
     
     public Integer statusCode;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class ListRepositoriesForApprovalRuleTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRepositoriesForApprovalRuleTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListRepositoriesForApprovalRuleTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

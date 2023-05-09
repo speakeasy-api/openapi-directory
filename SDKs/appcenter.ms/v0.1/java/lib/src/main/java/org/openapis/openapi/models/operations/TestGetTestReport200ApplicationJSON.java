@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestGetTestReport200ApplicationJSON {
     @JsonProperty("app_upload_id")
     public String appUploadId;
+
     public TestGetTestReport200ApplicationJSON withAppUploadId(String appUploadId) {
         this.appUploadId = appUploadId;
         return this;
@@ -21,6 +22,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("date")
     public String date;
+
     public TestGetTestReport200ApplicationJSON withDate(String date) {
         this.date = date;
         return this;
@@ -28,6 +30,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("date_finished")
     public String dateFinished;
+
     public TestGetTestReport200ApplicationJSON withDateFinished(String dateFinished) {
         this.dateFinished = dateFinished;
         return this;
@@ -35,6 +38,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("device_logs")
     public TestGetTestReport200ApplicationJSONDeviceLogs[] deviceLogs;
+
     public TestGetTestReport200ApplicationJSON withDeviceLogs(TestGetTestReport200ApplicationJSONDeviceLogs[] deviceLogs) {
         this.deviceLogs = deviceLogs;
         return this;
@@ -43,6 +47,7 @@ public class TestGetTestReport200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public TestGetTestReport200ApplicationJSON withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -50,6 +55,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("features")
     public TestGetTestReport200ApplicationJSONFeatures[] features;
+
     public TestGetTestReport200ApplicationJSON withFeatures(TestGetTestReport200ApplicationJSONFeatures[] features) {
         this.features = features;
         return this;
@@ -57,6 +63,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("finished_device_snapshots")
     public String[] finishedDeviceSnapshots;
+
     public TestGetTestReport200ApplicationJSON withFinishedDeviceSnapshots(String[] finishedDeviceSnapshots) {
         this.finishedDeviceSnapshots = finishedDeviceSnapshots;
         return this;
@@ -64,6 +71,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("id")
     public String id;
+
     public TestGetTestReport200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +79,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("platform")
     public String platform;
+
     public TestGetTestReport200ApplicationJSON withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -78,6 +87,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("revision")
     public Double revision;
+
     public TestGetTestReport200ApplicationJSON withRevision(Double revision) {
         this.revision = revision;
         return this;
@@ -85,6 +95,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("schema_version")
     public Double schemaVersion;
+
     public TestGetTestReport200ApplicationJSON withSchemaVersion(Double schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -93,6 +104,7 @@ public class TestGetTestReport200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshot_fatal_errors")
     public TestGetTestReport200ApplicationJSONSnapshotFatalErrors[] snapshotFatalErrors;
+
     public TestGetTestReport200ApplicationJSON withSnapshotFatalErrors(TestGetTestReport200ApplicationJSONSnapshotFatalErrors[] snapshotFatalErrors) {
         this.snapshotFatalErrors = snapshotFatalErrors;
         return this;
@@ -100,6 +112,7 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("stats")
     public TestGetTestReport200ApplicationJSONStats stats;
+
     public TestGetTestReport200ApplicationJSON withStats(TestGetTestReport200ApplicationJSONStats stats) {
         this.stats = stats;
         return this;
@@ -107,9 +120,24 @@ public class TestGetTestReport200ApplicationJSON {
     
     @JsonProperty("testType")
     public String testType;
+
     public TestGetTestReport200ApplicationJSON withTestType(String testType) {
         this.testType = testType;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSON(@JsonProperty("app_upload_id") String appUploadId, @JsonProperty("date") String date, @JsonProperty("date_finished") String dateFinished, @JsonProperty("device_logs") TestGetTestReport200ApplicationJSONDeviceLogs[] deviceLogs, @JsonProperty("features") TestGetTestReport200ApplicationJSONFeatures[] features, @JsonProperty("finished_device_snapshots") String[] finishedDeviceSnapshots, @JsonProperty("id") String id, @JsonProperty("platform") String platform, @JsonProperty("revision") Double revision, @JsonProperty("schema_version") Double schemaVersion, @JsonProperty("stats") TestGetTestReport200ApplicationJSONStats stats, @JsonProperty("testType") String testType) {
+        this.appUploadId = appUploadId;
+        this.date = date;
+        this.dateFinished = dateFinished;
+        this.deviceLogs = deviceLogs;
+        this.features = features;
+        this.finishedDeviceSnapshots = finishedDeviceSnapshots;
+        this.id = id;
+        this.platform = platform;
+        this.revision = revision;
+        this.schemaVersion = schemaVersion;
+        this.stats = stats;
+        this.testType = testType;
+  }
 }

@@ -15,9 +15,11 @@ public class CreatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public CreatePatchBaselineResult withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
     }
     
+    public CreatePatchBaselineResult(){}
 }

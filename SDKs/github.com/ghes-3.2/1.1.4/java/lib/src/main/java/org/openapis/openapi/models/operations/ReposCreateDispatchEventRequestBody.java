@@ -15,6 +15,7 @@ public class ReposCreateDispatchEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_payload")
     public java.util.Map<String, Object> clientPayload;
+
     public ReposCreateDispatchEventRequestBody withClientPayload(java.util.Map<String, Object> clientPayload) {
         this.clientPayload = clientPayload;
         return this;
@@ -25,9 +26,13 @@ public class ReposCreateDispatchEventRequestBody {
      */
     @JsonProperty("event_type")
     public String eventType;
+
     public ReposCreateDispatchEventRequestBody withEventType(String eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public ReposCreateDispatchEventRequestBody(@JsonProperty("event_type") String eventType) {
+        this.eventType = eventType;
+  }
 }

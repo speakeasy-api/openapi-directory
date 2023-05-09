@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddLFTagsToResourceResponse {
@@ -12,6 +13,7 @@ public class AddLFTagsToResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public AddLFTagsToResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AddLFTagsToResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.AddLFTagsToResourceResponse addLFTagsToResourceResponse;
+
     public AddLFTagsToResourceResponse withAddLFTagsToResourceResponse(org.openapis.openapi.models.shared.AddLFTagsToResourceResponse addLFTagsToResourceResponse) {
         this.addLFTagsToResourceResponse = addLFTagsToResourceResponse;
         return this;
@@ -32,6 +35,7 @@ public class AddLFTagsToResourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public AddLFTagsToResourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class AddLFTagsToResourceResponse {
     
     
     public String contentType;
+
     public AddLFTagsToResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AddLFTagsToResourceResponse {
      */
     
     public Object entityNotFoundException;
+
     public AddLFTagsToResourceResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class AddLFTagsToResourceResponse {
      */
     
     public Object internalServiceException;
+
     public AddLFTagsToResourceResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class AddLFTagsToResourceResponse {
      */
     
     public Object invalidInputException;
+
     public AddLFTagsToResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class AddLFTagsToResourceResponse {
      */
     
     public Object operationTimeoutException;
+
     public AddLFTagsToResourceResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +95,7 @@ public class AddLFTagsToResourceResponse {
     
     
     public Integer statusCode;
+
     public AddLFTagsToResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class AddLFTagsToResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddLFTagsToResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddLFTagsToResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

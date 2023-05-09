@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAuthorUsingGETResponse {
     
     public String contentType;
+
     public CreateAuthorUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateAuthorUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CreateAuthorUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateAuthorUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAuthorUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateAuthorUsingGETResponse {
      */
     
     public CreateAuthorUsingGET200ApplicationJSON createAuthorUsingGET200ApplicationJSONObject;
+
     public CreateAuthorUsingGETResponse withCreateAuthorUsingGET200ApplicationJSONObject(CreateAuthorUsingGET200ApplicationJSON createAuthorUsingGET200ApplicationJSONObject) {
         this.createAuthorUsingGET200ApplicationJSONObject = createAuthorUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateAuthorUsingGETResponse {
      */
     
     public CreateAuthorUsingGET400ApplicationJSON createAuthorUsingGET400ApplicationJSONObject;
+
     public CreateAuthorUsingGETResponse withCreateAuthorUsingGET400ApplicationJSONObject(CreateAuthorUsingGET400ApplicationJSON createAuthorUsingGET400ApplicationJSONObject) {
         this.createAuthorUsingGET400ApplicationJSONObject = createAuthorUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateAuthorUsingGETResponse {
      */
     
     public CreateAuthorUsingGET401ApplicationJSON createAuthorUsingGET401ApplicationJSONObject;
+
     public CreateAuthorUsingGETResponse withCreateAuthorUsingGET401ApplicationJSONObject(CreateAuthorUsingGET401ApplicationJSON createAuthorUsingGET401ApplicationJSONObject) {
         this.createAuthorUsingGET401ApplicationJSONObject = createAuthorUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateAuthorUsingGETResponse {
      */
     
     public CreateAuthorUsingGET500ApplicationJSON createAuthorUsingGET500ApplicationJSONObject;
+
     public CreateAuthorUsingGETResponse withCreateAuthorUsingGET500ApplicationJSONObject(CreateAuthorUsingGET500ApplicationJSON createAuthorUsingGET500ApplicationJSONObject) {
         this.createAuthorUsingGET500ApplicationJSONObject = createAuthorUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CreateAuthorUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

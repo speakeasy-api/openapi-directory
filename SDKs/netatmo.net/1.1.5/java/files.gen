@@ -43,6 +43,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DevicelistResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetthermstateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetthermstateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetthermstateResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetuserSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetuserResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GethomecoachsdataSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GethomecoachsdataRequest.java
@@ -52,6 +53,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetmeasureScaleEnum.jav
 lib/src/main/java/org/openapis/openapi/models/operations/GetmeasureTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetmeasureRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetmeasureResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PartnerdevicesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PartnerdevicesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetpublicdataSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetpublicdataRequiredDataEnum.java
@@ -171,4 +173,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/NAWelcomeCamera.java
 lib/src/main/java/org/openapis/openapi/models/shared/NAWelcomeGlobalInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/NAWelcomePersonsAwayResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/NAWelcomePersonsHomeResponse.java
+docs/sdk/README.md
+docs/deprecated/README.md
+docs/healthyhomecoach/README.md
+docs/partner/README.md
+docs/public/README.md
+docs/station/README.md
+docs/thermostat/README.md
+docs/welcome/README.md
 USAGE.md

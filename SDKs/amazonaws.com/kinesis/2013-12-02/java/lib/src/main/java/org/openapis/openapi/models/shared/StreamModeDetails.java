@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StreamModeDetails {
     @JsonProperty("StreamMode")
     public StreamModeEnum streamMode;
+
     public StreamModeDetails withStreamMode(StreamModeEnum streamMode) {
         this.streamMode = streamMode;
         return this;
     }
     
+    public StreamModeDetails(@JsonProperty("StreamMode") StreamModeEnum streamMode) {
+        this.streamMode = streamMode;
+  }
 }

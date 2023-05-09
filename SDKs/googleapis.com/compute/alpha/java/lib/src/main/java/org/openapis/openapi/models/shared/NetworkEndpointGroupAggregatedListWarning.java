@@ -18,6 +18,7 @@ public class NetworkEndpointGroupAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NetworkEndpointGroupAggregatedListWarningCodeEnum code;
+
     public NetworkEndpointGroupAggregatedListWarning withCode(NetworkEndpointGroupAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpointGroupAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public NetworkEndpointGroupAggregatedListWarningData[] data;
+
     public NetworkEndpointGroupAggregatedListWarning withData(NetworkEndpointGroupAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class NetworkEndpointGroupAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NetworkEndpointGroupAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NetworkEndpointGroupAggregatedListWarning(){}
 }

@@ -15,6 +15,7 @@ public class ResourceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appRegistryAppName")
     public String appRegistryAppName;
+
     public ResourceMapping withAppRegistryAppName(String appRegistryAppName) {
         this.appRegistryAppName = appRegistryAppName;
         return this;
@@ -23,6 +24,7 @@ public class ResourceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksSourceName")
     public String eksSourceName;
+
     public ResourceMapping withEksSourceName(String eksSourceName) {
         this.eksSourceName = eksSourceName;
         return this;
@@ -31,6 +33,7 @@ public class ResourceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalStackName")
     public String logicalStackName;
+
     public ResourceMapping withLogicalStackName(String logicalStackName) {
         this.logicalStackName = logicalStackName;
         return this;
@@ -38,6 +41,7 @@ public class ResourceMapping {
     
     @JsonProperty("mappingType")
     public ResourceMappingTypeEnum mappingType;
+
     public ResourceMapping withMappingType(ResourceMappingTypeEnum mappingType) {
         this.mappingType = mappingType;
         return this;
@@ -45,6 +49,7 @@ public class ResourceMapping {
     
     @JsonProperty("physicalResourceId")
     public PhysicalResourceId physicalResourceId;
+
     public ResourceMapping withPhysicalResourceId(PhysicalResourceId physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -53,6 +58,7 @@ public class ResourceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupName")
     public String resourceGroupName;
+
     public ResourceMapping withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -61,6 +67,7 @@ public class ResourceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ResourceMapping withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -69,9 +76,14 @@ public class ResourceMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terraformSourceName")
     public String terraformSourceName;
+
     public ResourceMapping withTerraformSourceName(String terraformSourceName) {
         this.terraformSourceName = terraformSourceName;
         return this;
     }
     
+    public ResourceMapping(@JsonProperty("mappingType") ResourceMappingTypeEnum mappingType, @JsonProperty("physicalResourceId") PhysicalResourceId physicalResourceId) {
+        this.mappingType = mappingType;
+        this.physicalResourceId = physicalResourceId;
+  }
 }

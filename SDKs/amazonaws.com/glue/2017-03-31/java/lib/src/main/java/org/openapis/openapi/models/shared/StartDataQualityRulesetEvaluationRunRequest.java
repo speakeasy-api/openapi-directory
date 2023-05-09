@@ -12,6 +12,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalRunOptions")
     public DataQualityEvaluationRunAdditionalRunOptions additionalRunOptions;
+
     public StartDataQualityRulesetEvaluationRunRequest withAdditionalRunOptions(DataQualityEvaluationRunAdditionalRunOptions additionalRunOptions) {
         this.additionalRunOptions = additionalRunOptions;
         return this;
@@ -20,6 +21,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartDataQualityRulesetEvaluationRunRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -27,6 +29,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public StartDataQualityRulesetEvaluationRunRequest withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -35,6 +38,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public StartDataQualityRulesetEvaluationRunRequest withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -42,6 +46,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @JsonProperty("Role")
     public String role;
+
     public StartDataQualityRulesetEvaluationRunRequest withRole(String role) {
         this.role = role;
         return this;
@@ -49,6 +54,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @JsonProperty("RulesetNames")
     public String[] rulesetNames;
+
     public StartDataQualityRulesetEvaluationRunRequest withRulesetNames(String[] rulesetNames) {
         this.rulesetNames = rulesetNames;
         return this;
@@ -57,9 +63,15 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public StartDataQualityRulesetEvaluationRunRequest withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public StartDataQualityRulesetEvaluationRunRequest(@JsonProperty("DataSource") DataSource dataSource, @JsonProperty("Role") String role, @JsonProperty("RulesetNames") String[] rulesetNames) {
+        this.dataSource = dataSource;
+        this.role = role;
+        this.rulesetNames = rulesetNames;
+  }
 }

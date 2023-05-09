@@ -19,6 +19,7 @@ public class HarvestActivitySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public HarvestActivitySummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +32,7 @@ public class HarvestActivitySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public HarvestActivitySummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -41,6 +43,7 @@ public class HarvestActivitySummary {
      */
     @JsonProperty("fieldIds")
     public String[] fieldIds;
+
     public HarvestActivitySummary withFieldIds(String[] fieldIds) {
         this.fieldIds = fieldIds;
         return this;
@@ -51,6 +54,7 @@ public class HarvestActivitySummary {
      */
     @JsonProperty("id")
     public String id;
+
     public HarvestActivitySummary withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +65,7 @@ public class HarvestActivitySummary {
      */
     @JsonProperty("length")
     public Long length;
+
     public HarvestActivitySummary withLength(Long length) {
         this.length = length;
         return this;
@@ -73,6 +78,7 @@ public class HarvestActivitySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public HarvestActivitySummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -85,9 +91,19 @@ public class HarvestActivitySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public HarvestActivitySummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public HarvestActivitySummary(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("fieldIds") String[] fieldIds, @JsonProperty("id") String id, @JsonProperty("length") Long length, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.endTime = endTime;
+        this.fieldIds = fieldIds;
+        this.id = id;
+        this.length = length;
+        this.startTime = startTime;
+        this.updatedAt = updatedAt;
+  }
 }

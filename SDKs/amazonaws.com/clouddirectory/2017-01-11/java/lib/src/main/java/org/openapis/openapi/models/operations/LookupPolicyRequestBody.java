@@ -15,6 +15,7 @@ public class LookupPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public LookupPolicyRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class LookupPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public LookupPolicyRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class LookupPolicyRequestBody {
      */
     @JsonProperty("ObjectReference")
     public LookupPolicyRequestBodyObjectReference objectReference;
+
     public LookupPolicyRequestBody withObjectReference(LookupPolicyRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public LookupPolicyRequestBody(@JsonProperty("ObjectReference") LookupPolicyRequestBodyObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

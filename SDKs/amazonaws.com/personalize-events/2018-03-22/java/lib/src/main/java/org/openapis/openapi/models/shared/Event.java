@@ -20,6 +20,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public Event withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -27,6 +28,7 @@ public class Event {
     
     @JsonProperty("eventType")
     public String eventType;
+
     public Event withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -35,6 +37,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventValue")
     public Float eventValue;
+
     public Event withEventValue(Float eventValue) {
         this.eventValue = eventValue;
         return this;
@@ -43,6 +46,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impression")
     public String[] impression;
+
     public Event withImpression(String[] impression) {
         this.impression = impression;
         return this;
@@ -51,6 +55,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public Event withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -59,6 +64,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAttribution")
     public MetricAttribution metricAttribution;
+
     public Event withMetricAttribution(MetricAttribution metricAttribution) {
         this.metricAttribution = metricAttribution;
         return this;
@@ -70,6 +76,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public Event withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -78,6 +85,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationId")
     public String recommendationId;
+
     public Event withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
@@ -87,9 +95,14 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("sentAt")
     public OffsetDateTime sentAt;
+
     public Event withSentAt(OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
     }
     
+    public Event(@JsonProperty("eventType") String eventType, @JsonProperty("sentAt") OffsetDateTime sentAt) {
+        this.eventType = eventType;
+        this.sentAt = sentAt;
+  }
 }

@@ -18,6 +18,7 @@ public class StationSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public StationFilters filters;
+
     public StationSearchParams withFilters(StationFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class StationSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hitsPerPage")
     public Integer hitsPerPage;
+
     public StationSearchParams withHitsPerPage(Integer hitsPerPage) {
         this.hitsPerPage = hitsPerPage;
         return this;
@@ -34,6 +36,7 @@ public class StationSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Integer page;
+
     public StationSearchParams withPage(Integer page) {
         this.page = page;
         return this;
@@ -42,9 +45,11 @@ public class StationSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public StationSearchParams withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public StationSearchParams(){}
 }

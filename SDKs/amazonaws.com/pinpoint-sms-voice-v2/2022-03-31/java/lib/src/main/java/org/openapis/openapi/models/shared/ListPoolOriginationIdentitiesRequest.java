@@ -12,6 +12,7 @@ public class ListPoolOriginationIdentitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public PoolOriginationIdentitiesFilter[] filters;
+
     public ListPoolOriginationIdentitiesRequest withFilters(PoolOriginationIdentitiesFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListPoolOriginationIdentitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPoolOriginationIdentitiesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListPoolOriginationIdentitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPoolOriginationIdentitiesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @JsonProperty("PoolId")
     public String poolId;
+
     public ListPoolOriginationIdentitiesRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public ListPoolOriginationIdentitiesRequest(@JsonProperty("PoolId") String poolId) {
+        this.poolId = poolId;
+  }
 }

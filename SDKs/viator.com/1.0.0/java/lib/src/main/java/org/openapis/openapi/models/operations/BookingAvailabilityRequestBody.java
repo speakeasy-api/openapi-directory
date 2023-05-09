@@ -15,6 +15,7 @@ public class BookingAvailabilityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageBands")
     public BookingAvailabilityRequestBodyAgeBands[] ageBands;
+
     public BookingAvailabilityRequestBody withAgeBands(BookingAvailabilityRequestBodyAgeBands[] ageBands) {
         this.ageBands = ageBands;
         return this;
@@ -26,6 +27,7 @@ public class BookingAvailabilityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingAvailabilityRequestBody withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -37,6 +39,7 @@ public class BookingAvailabilityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public String month;
+
     public BookingAvailabilityRequestBody withMonth(String month) {
         this.month = month;
         return this;
@@ -48,6 +51,7 @@ public class BookingAvailabilityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String productCode;
+
     public BookingAvailabilityRequestBody withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -59,9 +63,11 @@ public class BookingAvailabilityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public String year;
+
     public BookingAvailabilityRequestBody withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public BookingAvailabilityRequestBody(){}
 }

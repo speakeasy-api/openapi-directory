@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetPathwaysByOntologyTermRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetGetPathwaysByOntologyTermFormatEnum format;
+
     public GetGetPathwaysByOntologyTermRequest withFormat(GetGetPathwaysByOntologyTermFormatEnum format) {
         this.format = format;
         return this;
@@ -19,9 +21,13 @@ public class GetGetPathwaysByOntologyTermRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term")
     public String term;
+
     public GetGetPathwaysByOntologyTermRequest withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public GetGetPathwaysByOntologyTermRequest(@JsonProperty("term") String term) {
+        this.term = term;
+  }
 }

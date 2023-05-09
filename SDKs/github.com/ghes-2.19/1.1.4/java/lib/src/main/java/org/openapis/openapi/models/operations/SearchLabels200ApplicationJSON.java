@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchLabels200ApplicationJSON {
     @JsonProperty("incomplete_results")
     public Boolean incompleteResults;
+
     public SearchLabels200ApplicationJSON withIncompleteResults(Boolean incompleteResults) {
         this.incompleteResults = incompleteResults;
         return this;
@@ -19,6 +20,7 @@ public class SearchLabels200ApplicationJSON {
     
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.LabelSearchResultItem[] items;
+
     public SearchLabels200ApplicationJSON withItems(org.openapis.openapi.models.shared.LabelSearchResultItem[] items) {
         this.items = items;
         return this;
@@ -26,9 +28,15 @@ public class SearchLabels200ApplicationJSON {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public SearchLabels200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public SearchLabels200ApplicationJSON(@JsonProperty("incomplete_results") Boolean incompleteResults, @JsonProperty("items") org.openapis.openapi.models.shared.LabelSearchResultItem[] items, @JsonProperty("total_count") Long totalCount) {
+        this.incompleteResults = incompleteResults;
+        this.items = items;
+        this.totalCount = totalCount;
+  }
 }

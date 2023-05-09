@@ -18,6 +18,7 @@ public class AnalyzeIamPolicyLongrunningRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisQuery")
     public IamPolicyAnalysisQuery analysisQuery;
+
     public AnalyzeIamPolicyLongrunningRequest withAnalysisQuery(IamPolicyAnalysisQuery analysisQuery) {
         this.analysisQuery = analysisQuery;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzeIamPolicyLongrunningRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public IamPolicyAnalysisOutputConfig outputConfig;
+
     public AnalyzeIamPolicyLongrunningRequest withOutputConfig(IamPolicyAnalysisOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -40,9 +42,11 @@ public class AnalyzeIamPolicyLongrunningRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savedAnalysisQuery")
     public String savedAnalysisQuery;
+
     public AnalyzeIamPolicyLongrunningRequest withSavedAnalysisQuery(String savedAnalysisQuery) {
         this.savedAnalysisQuery = savedAnalysisQuery;
         return this;
     }
     
+    public AnalyzeIamPolicyLongrunningRequest(){}
 }

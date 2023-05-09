@@ -18,6 +18,7 @@ public class TrinoJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTags")
     public String[] clientTags;
+
     public TrinoJob withClientTags(String[] clientTags) {
         this.clientTags = clientTags;
         return this;
@@ -29,6 +30,7 @@ public class TrinoJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continueOnFailure")
     public Boolean continueOnFailure;
+
     public TrinoJob withContinueOnFailure(Boolean continueOnFailure) {
         this.continueOnFailure = continueOnFailure;
         return this;
@@ -40,6 +42,7 @@ public class TrinoJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public LoggingConfig loggingConfig;
+
     public TrinoJob withLoggingConfig(LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -51,6 +54,7 @@ public class TrinoJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputFormat")
     public String outputFormat;
+
     public TrinoJob withOutputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -62,6 +66,7 @@ public class TrinoJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public TrinoJob withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -73,6 +78,7 @@ public class TrinoJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryFileUri")
     public String queryFileUri;
+
     public TrinoJob withQueryFileUri(String queryFileUri) {
         this.queryFileUri = queryFileUri;
         return this;
@@ -84,9 +90,11 @@ public class TrinoJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryList")
     public QueryList queryList;
+
     public TrinoJob withQueryList(QueryList queryList) {
         this.queryList = queryList;
         return this;
     }
     
+    public TrinoJob(){}
 }

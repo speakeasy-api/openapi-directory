@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectRequest {
     @JsonProperty("clientKey")
     public String clientKey;
+
     public ConnectRequest withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -16,9 +17,14 @@ public class ConnectRequest {
     
     @JsonProperty("jiraJwtToken")
     public String jiraJwtToken;
+
     public ConnectRequest withJiraJwtToken(String jiraJwtToken) {
         this.jiraJwtToken = jiraJwtToken;
         return this;
     }
     
+    public ConnectRequest(@JsonProperty("clientKey") String clientKey, @JsonProperty("jiraJwtToken") String jiraJwtToken) {
+        this.clientKey = clientKey;
+        this.jiraJwtToken = jiraJwtToken;
+  }
 }

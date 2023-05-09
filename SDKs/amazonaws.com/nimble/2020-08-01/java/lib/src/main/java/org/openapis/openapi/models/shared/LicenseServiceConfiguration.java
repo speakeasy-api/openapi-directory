@@ -15,9 +15,11 @@ public class LicenseServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public LicenseServiceConfiguration withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public LicenseServiceConfiguration(){}
 }

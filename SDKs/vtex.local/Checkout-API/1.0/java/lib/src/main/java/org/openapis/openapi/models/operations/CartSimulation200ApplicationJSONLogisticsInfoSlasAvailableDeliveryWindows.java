@@ -18,6 +18,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryW
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateUtc")
     public String endDateUtc;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryWindows withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -29,6 +30,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryW
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lisPrice")
     public Long lisPrice;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryWindows withLisPrice(Long lisPrice) {
         this.lisPrice = lisPrice;
         return this;
@@ -40,6 +42,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryW
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryWindows withPrice(Long price) {
         this.price = price;
         return this;
@@ -51,6 +54,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryW
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateUtc")
     public String startDateUtc;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryWindows withStartDateUtc(String startDateUtc) {
         this.startDateUtc = startDateUtc;
         return this;
@@ -62,9 +66,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryW
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Long tax;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryWindows withTax(Long tax) {
         this.tax = tax;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryWindows(){}
 }

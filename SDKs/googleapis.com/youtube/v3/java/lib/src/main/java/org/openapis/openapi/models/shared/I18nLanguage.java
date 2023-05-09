@@ -18,6 +18,7 @@ public class I18nLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public I18nLanguage withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class I18nLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public I18nLanguage withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class I18nLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public I18nLanguage withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class I18nLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public I18nLanguageSnippet snippet;
+
     public I18nLanguage withSnippet(I18nLanguageSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public I18nLanguage(){}
 }

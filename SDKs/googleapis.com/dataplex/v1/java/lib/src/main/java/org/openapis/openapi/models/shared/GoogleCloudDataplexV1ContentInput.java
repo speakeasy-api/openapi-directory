@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ContentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataText")
     public String dataText;
+
     public GoogleCloudDataplexV1ContentInput withDataText(String dataText) {
         this.dataText = dataText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ContentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1ContentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1ContentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1ContentInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1ContentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notebook")
     public GoogleCloudDataplexV1ContentNotebook notebook;
+
     public GoogleCloudDataplexV1ContentInput withNotebook(GoogleCloudDataplexV1ContentNotebook notebook) {
         this.notebook = notebook;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1ContentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GoogleCloudDataplexV1ContentInput withPath(String path) {
         this.path = path;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDataplexV1ContentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlScript")
     public GoogleCloudDataplexV1ContentSqlScript sqlScript;
+
     public GoogleCloudDataplexV1ContentInput withSqlScript(GoogleCloudDataplexV1ContentSqlScript sqlScript) {
         this.sqlScript = sqlScript;
         return this;
     }
     
+    public GoogleCloudDataplexV1ContentInput(){}
 }

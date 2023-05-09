@@ -12,6 +12,7 @@ public class CreateRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogData")
     public RepositoryCatalogDataInput catalogData;
+
     public CreateRepositoryRequest withCatalogData(RepositoryCatalogDataInput catalogData) {
         this.catalogData = catalogData;
         return this;
@@ -19,6 +20,7 @@ public class CreateRepositoryRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CreateRepositoryRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -27,9 +29,13 @@ public class CreateRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateRepositoryRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRepositoryRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

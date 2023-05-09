@@ -15,6 +15,7 @@ public class Error {
      */
     @JsonProperty("message")
     public String message;
+
     public Error withMessage(String message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class Error {
      */
     @JsonProperty("stack")
     public String stack;
+
     public Error withStack(String stack) {
         this.stack = stack;
         return this;
     }
     
+    public Error(@JsonProperty("message") String message, @JsonProperty("stack") String stack) {
+        this.message = message;
+        this.stack = stack;
+  }
 }

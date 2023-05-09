@@ -18,6 +18,7 @@ public class ListEnterprisesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enterprises")
     public Enterprise[] enterprises;
+
     public ListEnterprisesResponse withEnterprises(Enterprise[] enterprises) {
         this.enterprises = enterprises;
         return this;
@@ -29,9 +30,11 @@ public class ListEnterprisesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEnterprisesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListEnterprisesResponse(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesUpdateDetailsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Token")
     public String apiToken;
+
     public ReleasesUpdateDetailsSecurity withAPIToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
     }
     
+    public ReleasesUpdateDetailsSecurity(@JsonProperty("APIToken") String apiToken) {
+        this.apiToken = apiToken;
+  }
 }

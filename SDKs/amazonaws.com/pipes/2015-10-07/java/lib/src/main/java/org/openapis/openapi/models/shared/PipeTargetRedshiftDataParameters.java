@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PipeTargetRedshiftDataParameters {
     @JsonProperty("Database")
     public String database;
+
     public PipeTargetRedshiftDataParameters withDatabase(String database) {
         this.database = database;
         return this;
@@ -22,6 +23,7 @@ public class PipeTargetRedshiftDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbUser")
     public String dbUser;
+
     public PipeTargetRedshiftDataParameters withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -30,6 +32,7 @@ public class PipeTargetRedshiftDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretManagerArn")
     public String secretManagerArn;
+
     public PipeTargetRedshiftDataParameters withSecretManagerArn(String secretManagerArn) {
         this.secretManagerArn = secretManagerArn;
         return this;
@@ -37,6 +40,7 @@ public class PipeTargetRedshiftDataParameters {
     
     @JsonProperty("Sqls")
     public String[] sqls;
+
     public PipeTargetRedshiftDataParameters withSqls(String[] sqls) {
         this.sqls = sqls;
         return this;
@@ -45,6 +49,7 @@ public class PipeTargetRedshiftDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementName")
     public String statementName;
+
     public PipeTargetRedshiftDataParameters withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -53,9 +58,14 @@ public class PipeTargetRedshiftDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WithEvent")
     public Boolean withEvent;
+
     public PipeTargetRedshiftDataParameters withWithEvent(Boolean withEvent) {
         this.withEvent = withEvent;
         return this;
     }
     
+    public PipeTargetRedshiftDataParameters(@JsonProperty("Database") String database, @JsonProperty("Sqls") String[] sqls) {
+        this.database = database;
+        this.sqls = sqls;
+  }
 }

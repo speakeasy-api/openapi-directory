@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Long listPrice;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions withListPrice(Long listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -37,6 +39,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions withPrice(Long price) {
         this.price = price;
         return this;
@@ -48,6 +51,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -59,6 +63,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerChain")
     public Object[] sellerChain;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions withSellerChain(Object[] sellerChain) {
         this.sellerChain = sellerChain;
         return this;
@@ -70,9 +75,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slas")
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditionsSlas[] slas;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions withSlas(CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditionsSlas[] slas) {
         this.slas = slas;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions(){}
 }

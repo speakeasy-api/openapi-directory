@@ -15,6 +15,7 @@ public class PortRangeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginInclusive")
     public Long beginInclusive;
+
     public PortRangeFilter withBeginInclusive(Long beginInclusive) {
         this.beginInclusive = beginInclusive;
         return this;
@@ -23,9 +24,11 @@ public class PortRangeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endInclusive")
     public Long endInclusive;
+
     public PortRangeFilter withEndInclusive(Long endInclusive) {
         this.endInclusive = endInclusive;
         return this;
     }
     
+    public PortRangeFilter(){}
 }

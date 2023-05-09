@@ -18,6 +18,7 @@ public class Overlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("animations")
     public Animation[] animations;
+
     public Overlay withAnimations(Animation[] animations) {
         this.animations = animations;
         return this;
@@ -29,9 +30,11 @@ public class Overlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public Overlay withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public Overlay(){}
 }

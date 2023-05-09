@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAttributionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquisitionConversionEventLookbackWindow")
     public GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum acquisitionConversionEventLookbackWindow;
+
     public GoogleAnalyticsAdminV1alphaAttributionSettings withAcquisitionConversionEventLookbackWindow(GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum acquisitionConversionEventLookbackWindow) {
         this.acquisitionConversionEventLookbackWindow = acquisitionConversionEventLookbackWindow;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAttributionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaAttributionSettings withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaAttributionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherConversionEventLookbackWindow")
     public GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum otherConversionEventLookbackWindow;
+
     public GoogleAnalyticsAdminV1alphaAttributionSettings withOtherConversionEventLookbackWindow(GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum otherConversionEventLookbackWindow) {
         this.otherConversionEventLookbackWindow = otherConversionEventLookbackWindow;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAnalyticsAdminV1alphaAttributionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingAttributionModel")
     public GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum reportingAttributionModel;
+
     public GoogleAnalyticsAdminV1alphaAttributionSettings withReportingAttributionModel(GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum reportingAttributionModel) {
         this.reportingAttributionModel = reportingAttributionModel;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAttributionSettings(){}
 }

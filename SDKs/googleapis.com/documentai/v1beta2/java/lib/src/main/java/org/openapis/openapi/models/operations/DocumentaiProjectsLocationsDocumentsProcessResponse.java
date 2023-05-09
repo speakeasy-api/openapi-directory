@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DocumentaiProjectsLocationsDocumentsProcessResponse {
     
     public String contentType;
+
     public DocumentaiProjectsLocationsDocumentsProcessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DocumentaiProjectsLocationsDocumentsProcessResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Document googleCloudDocumentaiV1beta2Document;
+
     public DocumentaiProjectsLocationsDocumentsProcessResponse withGoogleCloudDocumentaiV1beta2Document(org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Document googleCloudDocumentaiV1beta2Document) {
         this.googleCloudDocumentaiV1beta2Document = googleCloudDocumentaiV1beta2Document;
         return this;
@@ -26,6 +29,7 @@ public class DocumentaiProjectsLocationsDocumentsProcessResponse {
     
     
     public Integer statusCode;
+
     public DocumentaiProjectsLocationsDocumentsProcessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DocumentaiProjectsLocationsDocumentsProcessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DocumentaiProjectsLocationsDocumentsProcessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DocumentaiProjectsLocationsDocumentsProcessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

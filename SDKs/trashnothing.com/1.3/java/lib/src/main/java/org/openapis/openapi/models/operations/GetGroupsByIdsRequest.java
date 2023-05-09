@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupsByIdsRequest {
@@ -12,9 +13,13 @@ public class GetGroupsByIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_ids")
     public String groupIds;
+
     public GetGroupsByIdsRequest withGroupIds(String groupIds) {
         this.groupIds = groupIds;
         return this;
     }
     
+    public GetGroupsByIdsRequest(@JsonProperty("group_ids") String groupIds) {
+        this.groupIds = groupIds;
+  }
 }

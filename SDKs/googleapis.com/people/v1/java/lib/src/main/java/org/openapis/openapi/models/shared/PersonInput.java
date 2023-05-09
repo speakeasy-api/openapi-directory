@@ -18,6 +18,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public AddressInput[] addresses;
+
     public PersonInput withAddresses(AddressInput[] addresses) {
         this.addresses = addresses;
         return this;
@@ -29,6 +30,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biographies")
     public BiographyInput[] biographies;
+
     public PersonInput withBiographies(BiographyInput[] biographies) {
         this.biographies = biographies;
         return this;
@@ -40,6 +42,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthdays")
     public BirthdayInput[] birthdays;
+
     public PersonInput withBirthdays(BirthdayInput[] birthdays) {
         this.birthdays = birthdays;
         return this;
@@ -51,6 +54,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("braggingRights")
     public BraggingRightsInput[] braggingRights;
+
     public PersonInput withBraggingRights(BraggingRightsInput[] braggingRights) {
         this.braggingRights = braggingRights;
         return this;
@@ -62,6 +66,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarUrls")
     public CalendarUrlInput[] calendarUrls;
+
     public PersonInput withCalendarUrls(CalendarUrlInput[] calendarUrls) {
         this.calendarUrls = calendarUrls;
         return this;
@@ -73,6 +78,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientData")
     public ClientDataInput[] clientData;
+
     public PersonInput withClientData(ClientDataInput[] clientData) {
         this.clientData = clientData;
         return this;
@@ -84,6 +90,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddresses")
     public EmailAddressInput[] emailAddresses;
+
     public PersonInput withEmailAddresses(EmailAddressInput[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
@@ -95,6 +102,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public PersonInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -106,6 +114,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public EventInput[] events;
+
     public PersonInput withEvents(EventInput[] events) {
         this.events = events;
         return this;
@@ -117,6 +126,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIds")
     public ExternalIdInput[] externalIds;
+
     public PersonInput withExternalIds(ExternalIdInput[] externalIds) {
         this.externalIds = externalIds;
         return this;
@@ -128,6 +138,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileAses")
     public FileAsInput[] fileAses;
+
     public PersonInput withFileAses(FileAsInput[] fileAses) {
         this.fileAses = fileAses;
         return this;
@@ -139,6 +150,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genders")
     public GenderInput[] genders;
+
     public PersonInput withGenders(GenderInput[] genders) {
         this.genders = genders;
         return this;
@@ -150,6 +162,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imClients")
     public ImClientInput[] imClients;
+
     public PersonInput withImClients(ImClientInput[] imClients) {
         this.imClients = imClients;
         return this;
@@ -161,6 +174,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interests")
     public InterestInput[] interests;
+
     public PersonInput withInterests(InterestInput[] interests) {
         this.interests = interests;
         return this;
@@ -172,6 +186,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locales")
     public LocaleInput[] locales;
+
     public PersonInput withLocales(LocaleInput[] locales) {
         this.locales = locales;
         return this;
@@ -183,6 +198,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public LocationInput[] locations;
+
     public PersonInput withLocations(LocationInput[] locations) {
         this.locations = locations;
         return this;
@@ -194,6 +210,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberships")
     public MembershipInput[] memberships;
+
     public PersonInput withMemberships(MembershipInput[] memberships) {
         this.memberships = memberships;
         return this;
@@ -205,6 +222,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public PersonMetadataInput metadata;
+
     public PersonInput withMetadata(PersonMetadataInput metadata) {
         this.metadata = metadata;
         return this;
@@ -216,6 +234,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("miscKeywords")
     public MiscKeywordInput[] miscKeywords;
+
     public PersonInput withMiscKeywords(MiscKeywordInput[] miscKeywords) {
         this.miscKeywords = miscKeywords;
         return this;
@@ -227,6 +246,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public NameInput[] names;
+
     public PersonInput withNames(NameInput[] names) {
         this.names = names;
         return this;
@@ -238,6 +258,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nicknames")
     public NicknameInput[] nicknames;
+
     public PersonInput withNicknames(NicknameInput[] nicknames) {
         this.nicknames = nicknames;
         return this;
@@ -249,6 +270,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occupations")
     public OccupationInput[] occupations;
+
     public PersonInput withOccupations(OccupationInput[] occupations) {
         this.occupations = occupations;
         return this;
@@ -260,6 +282,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizations")
     public OrganizationInput[] organizations;
+
     public PersonInput withOrganizations(OrganizationInput[] organizations) {
         this.organizations = organizations;
         return this;
@@ -271,6 +294,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumbers")
     public PhoneNumberInput[] phoneNumbers;
+
     public PersonInput withPhoneNumbers(PhoneNumberInput[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
@@ -282,6 +306,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relations")
     public RelationInput[] relations;
+
     public PersonInput withRelations(RelationInput[] relations) {
         this.relations = relations;
         return this;
@@ -293,6 +318,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("residences")
     public ResidenceInput[] residences;
+
     public PersonInput withResidences(ResidenceInput[] residences) {
         this.residences = residences;
         return this;
@@ -304,6 +330,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public PersonInput withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -315,6 +342,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipAddresses")
     public SipAddressInput[] sipAddresses;
+
     public PersonInput withSipAddresses(SipAddressInput[] sipAddresses) {
         this.sipAddresses = sipAddresses;
         return this;
@@ -326,6 +354,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skills")
     public SkillInput[] skills;
+
     public PersonInput withSkills(SkillInput[] skills) {
         this.skills = skills;
         return this;
@@ -337,6 +366,7 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public UrlInput[] urls;
+
     public PersonInput withUrls(UrlInput[] urls) {
         this.urls = urls;
         return this;
@@ -348,9 +378,11 @@ public class PersonInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDefined")
     public UserDefinedInput[] userDefined;
+
     public PersonInput withUserDefined(UserDefinedInput[] userDefined) {
         this.userDefined = userDefined;
         return this;
     }
     
+    public PersonInput(){}
 }

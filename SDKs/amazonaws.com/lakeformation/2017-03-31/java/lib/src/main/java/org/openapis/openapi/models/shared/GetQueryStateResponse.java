@@ -15,6 +15,7 @@ public class GetQueryStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public GetQueryStateResponse withError(String error) {
         this.error = error;
         return this;
@@ -22,9 +23,13 @@ public class GetQueryStateResponse {
     
     @JsonProperty("State")
     public QueryStateStringEnum state;
+
     public GetQueryStateResponse withState(QueryStateStringEnum state) {
         this.state = state;
         return this;
     }
     
+    public GetQueryStateResponse(@JsonProperty("State") QueryStateStringEnum state) {
+        this.state = state;
+  }
 }

@@ -18,6 +18,7 @@ public class InterconnectLocationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InterconnectLocationListWarningCodeEnum code;
+
     public InterconnectLocationListWarning withCode(InterconnectLocationListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectLocationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InterconnectLocationListWarningData[] data;
+
     public InterconnectLocationListWarning withData(InterconnectLocationListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InterconnectLocationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InterconnectLocationListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InterconnectLocationListWarning(){}
 }

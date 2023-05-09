@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePlacementGroupsResultPlacementGroups {
     
     public String groupArn;
+
     public DescribePlacementGroupsResultPlacementGroups withGroupArn(String groupArn) {
         this.groupArn = groupArn;
         return this;
@@ -19,6 +20,7 @@ public class DescribePlacementGroupsResultPlacementGroups {
     
     
     public String groupId;
+
     public DescribePlacementGroupsResultPlacementGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class DescribePlacementGroupsResultPlacementGroups {
     
     
     public String groupName;
+
     public DescribePlacementGroupsResultPlacementGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class DescribePlacementGroupsResultPlacementGroups {
     
     
     public Long partitionCount;
+
     public DescribePlacementGroupsResultPlacementGroups withPartitionCount(Long partitionCount) {
         this.partitionCount = partitionCount;
         return this;
@@ -40,6 +44,7 @@ public class DescribePlacementGroupsResultPlacementGroups {
     
     
     public DescribePlacementGroupsResultPlacementGroupsSpreadLevelEnum spreadLevel;
+
     public DescribePlacementGroupsResultPlacementGroups withSpreadLevel(DescribePlacementGroupsResultPlacementGroupsSpreadLevelEnum spreadLevel) {
         this.spreadLevel = spreadLevel;
         return this;
@@ -47,6 +52,7 @@ public class DescribePlacementGroupsResultPlacementGroups {
     
     
     public DescribePlacementGroupsResultPlacementGroupsStateEnum state;
+
     public DescribePlacementGroupsResultPlacementGroups withState(DescribePlacementGroupsResultPlacementGroupsStateEnum state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class DescribePlacementGroupsResultPlacementGroups {
     
     
     public DescribePlacementGroupsResultPlacementGroupsStrategyEnum strategy;
+
     public DescribePlacementGroupsResultPlacementGroups withStrategy(DescribePlacementGroupsResultPlacementGroupsStrategyEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -61,9 +68,11 @@ public class DescribePlacementGroupsResultPlacementGroups {
     
     
     public DescribePlacementGroupsResultPlacementGroupsTags[] tags;
+
     public DescribePlacementGroupsResultPlacementGroups withTags(DescribePlacementGroupsResultPlacementGroupsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribePlacementGroupsResultPlacementGroups(){}
 }

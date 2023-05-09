@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVocabularyFilterResponse {
@@ -12,6 +13,7 @@ public class UpdateVocabularyFilterResponse {
      */
     
     public Object badRequestException;
+
     public UpdateVocabularyFilterResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVocabularyFilterResponse {
     
     
     public String contentType;
+
     public UpdateVocabularyFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVocabularyFilterResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateVocabularyFilterResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateVocabularyFilterResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateVocabularyFilterResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateVocabularyFilterResponse {
      */
     
     public Object notFoundException;
+
     public UpdateVocabularyFilterResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateVocabularyFilterResponse {
     
     
     public Integer statusCode;
+
     public UpdateVocabularyFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateVocabularyFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVocabularyFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateVocabularyFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVocabularyFilterResponse updateVocabularyFilterResponse;
+
     public UpdateVocabularyFilterResponse withUpdateVocabularyFilterResponse(org.openapis.openapi.models.shared.UpdateVocabularyFilterResponse updateVocabularyFilterResponse) {
         this.updateVocabularyFilterResponse = updateVocabularyFilterResponse;
         return this;
     }
     
+    public UpdateVocabularyFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

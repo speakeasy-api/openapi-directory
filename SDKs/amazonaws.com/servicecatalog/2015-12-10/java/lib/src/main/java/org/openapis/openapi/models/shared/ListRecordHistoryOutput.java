@@ -15,6 +15,7 @@ public class ListRecordHistoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListRecordHistoryOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRecordHistoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordDetails")
     public RecordDetail[] recordDetails;
+
     public ListRecordHistoryOutput withRecordDetails(RecordDetail[] recordDetails) {
         this.recordDetails = recordDetails;
         return this;
     }
     
+    public ListRecordHistoryOutput(){}
 }

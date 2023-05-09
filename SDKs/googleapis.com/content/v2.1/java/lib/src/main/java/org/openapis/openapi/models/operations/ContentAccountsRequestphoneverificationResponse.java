@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentAccountsRequestphoneverificationResponse {
     
     public String contentType;
+
     public ContentAccountsRequestphoneverificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentAccountsRequestphoneverificationResponse {
      */
     
     public org.openapis.openapi.models.shared.RequestPhoneVerificationResponse requestPhoneVerificationResponse;
+
     public ContentAccountsRequestphoneverificationResponse withRequestPhoneVerificationResponse(org.openapis.openapi.models.shared.RequestPhoneVerificationResponse requestPhoneVerificationResponse) {
         this.requestPhoneVerificationResponse = requestPhoneVerificationResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentAccountsRequestphoneverificationResponse {
     
     
     public Integer statusCode;
+
     public ContentAccountsRequestphoneverificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentAccountsRequestphoneverificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentAccountsRequestphoneverificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentAccountsRequestphoneverificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

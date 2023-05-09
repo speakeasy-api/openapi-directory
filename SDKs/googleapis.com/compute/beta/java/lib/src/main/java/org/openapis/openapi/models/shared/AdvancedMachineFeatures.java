@@ -18,6 +18,7 @@ public class AdvancedMachineFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableNestedVirtualization")
     public Boolean enableNestedVirtualization;
+
     public AdvancedMachineFeatures withEnableNestedVirtualization(Boolean enableNestedVirtualization) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         return this;
@@ -29,6 +30,7 @@ public class AdvancedMachineFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableUefiNetworking")
     public Boolean enableUefiNetworking;
+
     public AdvancedMachineFeatures withEnableUefiNetworking(Boolean enableUefiNetworking) {
         this.enableUefiNetworking = enableUefiNetworking;
         return this;
@@ -40,6 +42,7 @@ public class AdvancedMachineFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threadsPerCore")
     public Integer threadsPerCore;
+
     public AdvancedMachineFeatures withThreadsPerCore(Integer threadsPerCore) {
         this.threadsPerCore = threadsPerCore;
         return this;
@@ -51,9 +54,11 @@ public class AdvancedMachineFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibleCoreCount")
     public Integer visibleCoreCount;
+
     public AdvancedMachineFeatures withVisibleCoreCount(Integer visibleCoreCount) {
         this.visibleCoreCount = visibleCoreCount;
         return this;
     }
     
+    public AdvancedMachineFeatures(){}
 }

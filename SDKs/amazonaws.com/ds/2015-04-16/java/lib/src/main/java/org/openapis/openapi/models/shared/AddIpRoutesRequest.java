@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddIpRoutesRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public AddIpRoutesRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -18,6 +19,7 @@ public class AddIpRoutesRequest {
     
     @JsonProperty("IpRoutes")
     public IpRoute[] ipRoutes;
+
     public AddIpRoutesRequest withIpRoutes(IpRoute[] ipRoutes) {
         this.ipRoutes = ipRoutes;
         return this;
@@ -26,9 +28,14 @@ public class AddIpRoutesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateSecurityGroupForDirectoryControllers")
     public Boolean updateSecurityGroupForDirectoryControllers;
+
     public AddIpRoutesRequest withUpdateSecurityGroupForDirectoryControllers(Boolean updateSecurityGroupForDirectoryControllers) {
         this.updateSecurityGroupForDirectoryControllers = updateSecurityGroupForDirectoryControllers;
         return this;
     }
     
+    public AddIpRoutesRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("IpRoutes") IpRoute[] ipRoutes) {
+        this.directoryId = directoryId;
+        this.ipRoutes = ipRoutes;
+  }
 }

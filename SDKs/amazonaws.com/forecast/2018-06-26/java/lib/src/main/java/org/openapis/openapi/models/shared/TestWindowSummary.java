@@ -20,6 +20,7 @@ public class TestWindowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public TestWindowSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class TestWindowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public TestWindowSummary withStatus(String status) {
         this.status = status;
         return this;
@@ -38,6 +40,7 @@ public class TestWindowSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TestWindowEnd")
     public OffsetDateTime testWindowEnd;
+
     public TestWindowSummary withTestWindowEnd(OffsetDateTime testWindowEnd) {
         this.testWindowEnd = testWindowEnd;
         return this;
@@ -48,9 +51,11 @@ public class TestWindowSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TestWindowStart")
     public OffsetDateTime testWindowStart;
+
     public TestWindowSummary withTestWindowStart(OffsetDateTime testWindowStart) {
         this.testWindowStart = testWindowStart;
         return this;
     }
     
+    public TestWindowSummary(){}
 }

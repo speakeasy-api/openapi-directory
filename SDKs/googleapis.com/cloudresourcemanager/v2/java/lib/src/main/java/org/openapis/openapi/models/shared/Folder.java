@@ -18,6 +18,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Folder withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Folder withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleState")
     public FolderLifecycleStateEnum lifecycleState;
+
     public Folder withLifecycleState(FolderLifecycleStateEnum lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -51,6 +54,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Folder withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public Folder withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public Folder(){}
 }

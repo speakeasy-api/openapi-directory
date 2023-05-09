@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkClientLatencyHistoryRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
     public String clientId;
+
     public GetNetworkClientLatencyHistoryRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkClientLatencyHistoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkClientLatencyHistoryRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -26,6 +29,7 @@ public class GetNetworkClientLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public Long resolution;
+
     public GetNetworkClientLatencyHistoryRequest withResolution(Long resolution) {
         this.resolution = resolution;
         return this;
@@ -36,6 +40,7 @@ public class GetNetworkClientLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetNetworkClientLatencyHistoryRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -46,6 +51,7 @@ public class GetNetworkClientLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
     public String t1;
+
     public GetNetworkClientLatencyHistoryRequest withT1(String t1) {
         this.t1 = t1;
         return this;
@@ -56,9 +62,14 @@ public class GetNetworkClientLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetNetworkClientLatencyHistoryRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
     }
     
+    public GetNetworkClientLatencyHistoryRequest(@JsonProperty("clientId") String clientId, @JsonProperty("networkId") String networkId) {
+        this.clientId = clientId;
+        this.networkId = networkId;
+  }
 }

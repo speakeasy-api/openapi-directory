@@ -18,6 +18,7 @@ public class DirectorySiteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeViewOptOut")
     public Boolean activeViewOptOut;
+
     public DirectorySiteSettings withActiveViewOptOut(Boolean activeViewOptOut) {
         this.activeViewOptOut = activeViewOptOut;
         return this;
@@ -29,6 +30,7 @@ public class DirectorySiteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dfpSettings")
     public DfpSettings dfpSettings;
+
     public DirectorySiteSettings withDfpSettings(DfpSettings dfpSettings) {
         this.dfpSettings = dfpSettings;
         return this;
@@ -40,6 +42,7 @@ public class DirectorySiteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instreamVideoPlacementAccepted")
     public Boolean instreamVideoPlacementAccepted;
+
     public DirectorySiteSettings withInstreamVideoPlacementAccepted(Boolean instreamVideoPlacementAccepted) {
         this.instreamVideoPlacementAccepted = instreamVideoPlacementAccepted;
         return this;
@@ -51,9 +54,11 @@ public class DirectorySiteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interstitialPlacementAccepted")
     public Boolean interstitialPlacementAccepted;
+
     public DirectorySiteSettings withInterstitialPlacementAccepted(Boolean interstitialPlacementAccepted) {
         this.interstitialPlacementAccepted = interstitialPlacementAccepted;
         return this;
     }
     
+    public DirectorySiteSettings(){}
 }

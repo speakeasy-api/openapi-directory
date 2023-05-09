@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetQueryResponse {
@@ -12,6 +13,7 @@ public class GetQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundred fourHundred;
+
     public GetQueryResponse withFourHundred(org.openapis.openapi.models.shared.FourHundred fourHundred) {
         this.fourHundred = fourHundred;
         return this;
@@ -19,6 +21,7 @@ public class GetQueryResponse {
     
     
     public String contentType;
+
     public GetQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetQueryResponse {
     
     
     public Integer statusCode;
+
     public GetQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetQueryResponse {
      */
     
     public GetQuery200ApplicationJSON getQuery200ApplicationJSONObject;
+
     public GetQueryResponse withGetQuery200ApplicationJSONObject(GetQuery200ApplicationJSON getQuery200ApplicationJSONObject) {
         this.getQuery200ApplicationJSONObject = getQuery200ApplicationJSONObject;
         return this;
     }
     
+    public GetQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

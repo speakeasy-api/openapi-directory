@@ -17,14 +17,50 @@ public class CreditorAccountWrite {
      */
     @JsonProperty("account")
     public String account;
+
     public CreditorAccountWrite withAccount(String account) {
         this.account = account;
         return this;
     }
     
+    /**
+     * * `AT` - Austria
+     * * `BE` - Belgium
+     * * `BG` - Bulgaria
+     * * `HR` - Croatia
+     * * `CY` - Cyprus
+     * * `CZ` - Czechia
+     * * `DK` - Denmark
+     * * `EE` - Estonia
+     * * `FI` - Finland
+     * * `FR` - France
+     * * `DE` - Germany
+     * * `GR` - Greece
+     * * `HU` - Hungary
+     * * `IS` - Iceland
+     * * `IE` - Ireland
+     * * `IT` - Italy
+     * * `LV` - Latvia
+     * * `LI` - Liechtenstein
+     * * `LT` - Lithuania
+     * * `LU` - Luxembourg
+     * * `MT` - Malta
+     * * `NL` - Netherlands
+     * * `NO` - Norway
+     * * `PL` - Poland
+     * * `PT` - Portugal
+     * * `RO` - Romania
+     * * `SK` - Slovakia
+     * * `SI` - Slovenia
+     * * `ES` - Spain
+     * * `SE` - Sweden
+     * * `GB` - United Kingdom
+     * * `US` - United States of America
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_country")
     public AddressCountryEnumEnum addressCountry;
+
     public CreditorAccountWrite withAddressCountry(AddressCountryEnumEnum addressCountry) {
         this.addressCountry = addressCountry;
         return this;
@@ -36,6 +72,7 @@ public class CreditorAccountWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_street")
     public String addressStreet;
+
     public CreditorAccountWrite withAddressStreet(String addressStreet) {
         this.addressStreet = addressStreet;
         return this;
@@ -47,6 +84,7 @@ public class CreditorAccountWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent")
     public String agent;
+
     public CreditorAccountWrite withAgent(String agent) {
         this.agent = agent;
         return this;
@@ -58,6 +96,7 @@ public class CreditorAccountWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent_name")
     public String agentName;
+
     public CreditorAccountWrite withAgentName(String agentName) {
         this.agentName = agentName;
         return this;
@@ -68,6 +107,7 @@ public class CreditorAccountWrite {
      */
     @JsonProperty("currency")
     public String currency;
+
     public CreditorAccountWrite withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -79,6 +119,7 @@ public class CreditorAccountWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreditorAccountWrite withId(String id) {
         this.id = id;
         return this;
@@ -90,6 +131,7 @@ public class CreditorAccountWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institution_id")
     public String institutionId;
+
     public CreditorAccountWrite withInstitutionId(String institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -100,6 +142,7 @@ public class CreditorAccountWrite {
      */
     @JsonProperty("name")
     public String name;
+
     public CreditorAccountWrite withName(String name) {
         this.name = name;
         return this;
@@ -111,6 +154,7 @@ public class CreditorAccountWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_code")
     public String postCode;
+
     public CreditorAccountWrite withPostCode(String postCode) {
         this.postCode = postCode;
         return this;
@@ -118,13 +162,22 @@ public class CreditorAccountWrite {
     
     /**
      * Creditor account type
+     * 
+     * * `IBAN` - IBAN
+     * * `SCAN` - SortCodeAccountNumber
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreditorAccountWriteTypeEnum type;
+
     public CreditorAccountWrite withType(CreditorAccountWriteTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreditorAccountWrite(@JsonProperty("account") String account, @JsonProperty("currency") String currency, @JsonProperty("name") String name) {
+        this.account = account;
+        this.currency = currency;
+        this.name = name;
+  }
 }

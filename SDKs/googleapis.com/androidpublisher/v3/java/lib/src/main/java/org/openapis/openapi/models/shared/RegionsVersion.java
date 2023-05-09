@@ -18,9 +18,11 @@ public class RegionsVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public RegionsVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RegionsVersion(){}
 }

@@ -12,6 +12,7 @@ public class GetApiV1DirectoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1DirectoryRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetApiV1DirectoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
     public Boolean local;
+
     public GetApiV1DirectoryRequest withLocal(Boolean local) {
         this.local = local;
         return this;
@@ -32,6 +34,7 @@ public class GetApiV1DirectoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetApiV1DirectoryRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,9 +45,11 @@ public class GetApiV1DirectoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetApiV1DirectoryOrderEnum order;
+
     public GetApiV1DirectoryRequest withOrder(GetApiV1DirectoryOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public GetApiV1DirectoryRequest(){}
 }

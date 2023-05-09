@@ -15,9 +15,11 @@ public class Count {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public Count withCount(Integer count) {
         this.count = count;
         return this;
     }
     
+    public Count(){}
 }

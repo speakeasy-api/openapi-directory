@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePipeResponse {
     
     public String contentType;
+
     public DescribePipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePipeResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePipeResponse describePipeResponse;
+
     public DescribePipeResponse withDescribePipeResponse(org.openapis.openapi.models.shared.DescribePipeResponse describePipeResponse) {
         this.describePipeResponse = describePipeResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePipeResponse {
      */
     
     public Object internalException;
+
     public DescribePipeResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePipeResponse {
      */
     
     public Object notFoundException;
+
     public DescribePipeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribePipeResponse {
     
     
     public Integer statusCode;
+
     public DescribePipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribePipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribePipeResponse {
      */
     
     public Object throttlingException;
+
     public DescribePipeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribePipeResponse {
      */
     
     public Object validationException;
+
     public DescribePipeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribePipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

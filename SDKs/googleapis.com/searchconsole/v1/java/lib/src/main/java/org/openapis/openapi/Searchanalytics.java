@@ -61,11 +61,9 @@ public class Searchanalytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse res = new org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse res = new org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse(contentType, httpRes.statusCode()) {{
             searchAnalyticsQueryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

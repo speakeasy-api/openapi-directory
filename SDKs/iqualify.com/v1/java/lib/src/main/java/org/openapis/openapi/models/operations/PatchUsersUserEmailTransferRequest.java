@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchUsersUserEmailTransferRequest {
@@ -12,6 +13,7 @@ public class PatchUsersUserEmailTransferRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TransferRequest transferRequest;
+
     public PatchUsersUserEmailTransferRequest withTransferRequest(org.openapis.openapi.models.shared.TransferRequest transferRequest) {
         this.transferRequest = transferRequest;
         return this;
@@ -22,9 +24,14 @@ public class PatchUsersUserEmailTransferRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public PatchUsersUserEmailTransferRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public PatchUsersUserEmailTransferRequest(@JsonProperty("TransferRequest") org.openapis.openapi.models.shared.TransferRequest transferRequest, @JsonProperty("userEmail") String userEmail) {
+        this.transferRequest = transferRequest;
+        this.userEmail = userEmail;
+  }
 }

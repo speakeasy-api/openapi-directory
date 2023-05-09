@@ -15,9 +15,11 @@ public class GetContentSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentSummary")
     public ContentSummary contentSummary;
+
     public GetContentSummaryResponse withContentSummary(ContentSummary contentSummary) {
         this.contentSummary = contentSummary;
         return this;
     }
     
+    public GetContentSummaryResponse(){}
 }

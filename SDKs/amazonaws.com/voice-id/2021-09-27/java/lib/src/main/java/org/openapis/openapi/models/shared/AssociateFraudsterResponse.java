@@ -18,9 +18,11 @@ public class AssociateFraudsterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fraudster")
     public Fraudster fraudster;
+
     public AssociateFraudsterResponse withFraudster(Fraudster fraudster) {
         this.fraudster = fraudster;
         return this;
     }
     
+    public AssociateFraudsterResponse(){}
 }

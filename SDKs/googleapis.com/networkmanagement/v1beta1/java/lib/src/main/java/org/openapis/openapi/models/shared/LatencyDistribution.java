@@ -18,9 +18,11 @@ public class LatencyDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latencyPercentiles")
     public LatencyPercentile[] latencyPercentiles;
+
     public LatencyDistribution withLatencyPercentiles(LatencyPercentile[] latencyPercentiles) {
         this.latencyPercentiles = latencyPercentiles;
         return this;
     }
     
+    public LatencyDistribution(){}
 }

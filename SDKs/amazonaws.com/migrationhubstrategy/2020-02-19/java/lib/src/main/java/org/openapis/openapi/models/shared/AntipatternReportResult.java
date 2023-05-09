@@ -15,6 +15,7 @@ public class AntipatternReportResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyzerName")
     public AnalyzerNameUnion analyzerName;
+
     public AntipatternReportResult withAnalyzerName(AnalyzerNameUnion analyzerName) {
         this.analyzerName = analyzerName;
         return this;
@@ -26,6 +27,7 @@ public class AntipatternReportResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antiPatternReportS3Object")
     public S3Object antiPatternReportS3Object;
+
     public AntipatternReportResult withAntiPatternReportS3Object(S3Object antiPatternReportS3Object) {
         this.antiPatternReportS3Object = antiPatternReportS3Object;
         return this;
@@ -34,6 +36,7 @@ public class AntipatternReportResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportStatus")
     public AntipatternReportStatusEnum antipatternReportStatus;
+
     public AntipatternReportResult withAntipatternReportStatus(AntipatternReportStatusEnum antipatternReportStatus) {
         this.antipatternReportStatus = antipatternReportStatus;
         return this;
@@ -42,9 +45,11 @@ public class AntipatternReportResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportStatusMessage")
     public String antipatternReportStatusMessage;
+
     public AntipatternReportResult withAntipatternReportStatusMessage(String antipatternReportStatusMessage) {
         this.antipatternReportStatusMessage = antipatternReportStatusMessage;
         return this;
     }
     
+    public AntipatternReportResult(){}
 }

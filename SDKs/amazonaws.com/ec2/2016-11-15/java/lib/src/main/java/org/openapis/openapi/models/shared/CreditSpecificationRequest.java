@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreditSpecificationRequest - The credit option for CPU usage of a T instance.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreditSpecificationRequest {
     
     public String cpuCredits;
+
     public CreditSpecificationRequest withCpuCredits(String cpuCredits) {
         this.cpuCredits = cpuCredits;
         return this;
     }
     
+    public CreditSpecificationRequest(@JsonProperty("CpuCredits") String cpuCredits) {
+        this.cpuCredits = cpuCredits;
+  }
 }

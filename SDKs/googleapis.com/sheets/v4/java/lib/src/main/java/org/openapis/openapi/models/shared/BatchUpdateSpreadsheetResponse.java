@@ -18,6 +18,7 @@ public class BatchUpdateSpreadsheetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public Response[] replies;
+
     public BatchUpdateSpreadsheetResponse withReplies(Response[] replies) {
         this.replies = replies;
         return this;
@@ -29,6 +30,7 @@ public class BatchUpdateSpreadsheetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public BatchUpdateSpreadsheetResponse withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
@@ -40,9 +42,11 @@ public class BatchUpdateSpreadsheetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedSpreadsheet")
     public Spreadsheet updatedSpreadsheet;
+
     public BatchUpdateSpreadsheetResponse withUpdatedSpreadsheet(Spreadsheet updatedSpreadsheet) {
         this.updatedSpreadsheet = updatedSpreadsheet;
         return this;
     }
     
+    public BatchUpdateSpreadsheetResponse(){}
 }

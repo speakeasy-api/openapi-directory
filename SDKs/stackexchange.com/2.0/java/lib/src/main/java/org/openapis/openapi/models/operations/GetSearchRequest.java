@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchRequest {
@@ -13,6 +14,7 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetSearchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetSearchRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetSearchRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -70,6 +74,7 @@ public class GetSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intitle")
     public String intitle;
+
     public GetSearchRequest withIntitle(String intitle) {
         this.intitle = intitle;
         return this;
@@ -84,6 +89,7 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetSearchRequest withMax(String max) {
         this.max = max;
         return this;
@@ -98,6 +104,7 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetSearchRequest withMin(String min) {
         this.min = min;
         return this;
@@ -108,6 +115,7 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nottagged")
     public String nottagged;
+
     public GetSearchRequest withNottagged(String nottagged) {
         this.nottagged = nottagged;
         return this;
@@ -115,6 +123,7 @@ public class GetSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetSearchOrderEnum order;
+
     public GetSearchRequest withOrder(GetSearchOrderEnum order) {
         this.order = order;
         return this;
@@ -122,6 +131,7 @@ public class GetSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSearchRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -129,6 +139,7 @@ public class GetSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetSearchRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -140,6 +151,7 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetSearchRequest withSite(String site) {
         this.site = site;
         return this;
@@ -147,6 +159,7 @@ public class GetSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetSearchSortEnum sort;
+
     public GetSearchRequest withSort(GetSearchSortEnum sort) {
         this.sort = sort;
         return this;
@@ -157,6 +170,7 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagged")
     public String tagged;
+
     public GetSearchRequest withTagged(String tagged) {
         this.tagged = tagged;
         return this;
@@ -167,9 +181,13 @@ public class GetSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetSearchRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetSearchRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

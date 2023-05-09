@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TargetTrackingMetricStat {
     @JsonProperty("Metric")
     public TargetTrackingMetric metric;
+
     public TargetTrackingMetricStat withMetric(TargetTrackingMetric metric) {
         this.metric = metric;
         return this;
@@ -21,6 +22,7 @@ public class TargetTrackingMetricStat {
     
     @JsonProperty("Stat")
     public String stat;
+
     public TargetTrackingMetricStat withStat(String stat) {
         this.stat = stat;
         return this;
@@ -29,9 +31,14 @@ public class TargetTrackingMetricStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public TargetTrackingMetricStat withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public TargetTrackingMetricStat(@JsonProperty("Metric") TargetTrackingMetric metric, @JsonProperty("Stat") String stat) {
+        this.metric = metric;
+        this.stat = stat;
+  }
 }

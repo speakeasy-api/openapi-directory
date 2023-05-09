@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDeploymentJobResponse {
@@ -12,6 +13,7 @@ public class CreateDeploymentJobResponse {
      */
     
     public Object concurrentDeploymentException;
+
     public CreateDeploymentJobResponse withConcurrentDeploymentException(Object concurrentDeploymentException) {
         this.concurrentDeploymentException = concurrentDeploymentException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDeploymentJobResponse {
     
     
     public String contentType;
+
     public CreateDeploymentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDeploymentJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDeploymentJobResponse createDeploymentJobResponse;
+
     public CreateDeploymentJobResponse withCreateDeploymentJobResponse(org.openapis.openapi.models.shared.CreateDeploymentJobResponse createDeploymentJobResponse) {
         this.createDeploymentJobResponse = createDeploymentJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDeploymentJobResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateDeploymentJobResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDeploymentJobResponse {
      */
     
     public Object internalServerException;
+
     public CreateDeploymentJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDeploymentJobResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateDeploymentJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDeploymentJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDeploymentJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDeploymentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDeploymentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateDeploymentJobResponse {
     
     
     public Integer statusCode;
+
     public CreateDeploymentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateDeploymentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDeploymentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateDeploymentJobResponse {
      */
     
     public Object throttlingException;
+
     public CreateDeploymentJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateDeploymentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

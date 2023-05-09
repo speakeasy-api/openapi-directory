@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RunTaskResponse {
@@ -12,6 +13,7 @@ public class RunTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public RunTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RunTaskResponse {
      */
     
     public Object blockedException;
+
     public RunTaskResponse withBlockedException(Object blockedException) {
         this.blockedException = blockedException;
         return this;
@@ -32,6 +35,7 @@ public class RunTaskResponse {
      */
     
     public Object clientException;
+
     public RunTaskResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -42,6 +46,7 @@ public class RunTaskResponse {
      */
     
     public Object clusterNotFoundException;
+
     public RunTaskResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RunTaskResponse {
     
     
     public String contentType;
+
     public RunTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class RunTaskResponse {
      */
     
     public Object invalidParameterException;
+
     public RunTaskResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class RunTaskResponse {
      */
     
     public Object platformTaskDefinitionIncompatibilityException;
+
     public RunTaskResponse withPlatformTaskDefinitionIncompatibilityException(Object platformTaskDefinitionIncompatibilityException) {
         this.platformTaskDefinitionIncompatibilityException = platformTaskDefinitionIncompatibilityException;
         return this;
@@ -79,6 +87,7 @@ public class RunTaskResponse {
      */
     
     public Object platformUnknownException;
+
     public RunTaskResponse withPlatformUnknownException(Object platformUnknownException) {
         this.platformUnknownException = platformUnknownException;
         return this;
@@ -89,6 +98,7 @@ public class RunTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.RunTaskResponse runTaskResponse;
+
     public RunTaskResponse withRunTaskResponse(org.openapis.openapi.models.shared.RunTaskResponse runTaskResponse) {
         this.runTaskResponse = runTaskResponse;
         return this;
@@ -99,6 +109,7 @@ public class RunTaskResponse {
      */
     
     public Object serverException;
+
     public RunTaskResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -106,6 +117,7 @@ public class RunTaskResponse {
     
     
     public Integer statusCode;
+
     public RunTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class RunTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RunTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class RunTaskResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public RunTaskResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
     }
     
+    public RunTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

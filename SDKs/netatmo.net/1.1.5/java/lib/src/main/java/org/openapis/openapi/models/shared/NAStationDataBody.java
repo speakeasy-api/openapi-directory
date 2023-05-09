@@ -12,6 +12,7 @@ public class NAStationDataBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public NAMain[] devices;
+
     public NAStationDataBody withDevices(NAMain[] devices) {
         this.devices = devices;
         return this;
@@ -20,9 +21,11 @@ public class NAStationDataBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public NAUser user;
+
     public NAStationDataBody withUser(NAUser user) {
         this.user = user;
         return this;
     }
     
+    public NAStationDataBody(){}
 }

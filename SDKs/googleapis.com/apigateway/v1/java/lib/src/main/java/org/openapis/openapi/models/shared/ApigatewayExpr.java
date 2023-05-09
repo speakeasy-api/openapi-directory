@@ -18,6 +18,7 @@ public class ApigatewayExpr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApigatewayExpr withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ApigatewayExpr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public ApigatewayExpr withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -40,6 +42,7 @@ public class ApigatewayExpr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ApigatewayExpr withLocation(String location) {
         this.location = location;
         return this;
@@ -51,9 +54,11 @@ public class ApigatewayExpr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ApigatewayExpr withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ApigatewayExpr(){}
 }

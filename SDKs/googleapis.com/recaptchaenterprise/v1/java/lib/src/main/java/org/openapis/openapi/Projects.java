@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1AnnotateAssessmentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1Assessment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1FirewallPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1Key = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1Metrics = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1ListKeysResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1Key = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1Key = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse() {{
+        org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse res = new org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

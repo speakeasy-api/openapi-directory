@@ -3,41 +3,39 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelJobRequestBody;
 import org.openapis.openapi.models.operations.CancelJobRequest;
+import org.openapis.openapi.models.operations.CancelJobRequestBody;
 import org.openapis.openapi.models.operations.CancelJobResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CancelJobRequest req = new CancelJobRequest() {{
-                requestBody = new CancelJobRequestBody() {{
-                    jobId = "corrupti";
-                    reason = "provident";
-                }};
-                xAmzAlgorithm = "distinctio";
-                xAmzContentSha256 = "quibusdam";
-                xAmzCredential = "unde";
-                xAmzDate = "nulla";
-                xAmzSecurityToken = "corrupti";
-                xAmzSignature = "illum";
-                xAmzSignedHeaders = "vel";
-            }}            
+            CancelJobRequest req = new CancelJobRequest(                new CancelJobRequestBody("provident", "distinctio");) {{
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }};            
 
             CancelJobResponse res = sdk.cancelJob(req);
 
-            if (res.cancelJobResponse.isPresent()) {
+            if (res.cancelJobResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

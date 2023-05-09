@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeCacheEngineVersionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeCacheEngineVersionsActionEnum action;
+
     public GETDescribeCacheEngineVersionsRequest withAction(GETDescribeCacheEngineVersionsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeCacheEngineVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheParameterGroupFamily")
     public String cacheParameterGroupFamily;
+
     public GETDescribeCacheEngineVersionsRequest withCacheParameterGroupFamily(String cacheParameterGroupFamily) {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeCacheEngineVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultOnly")
     public Boolean defaultOnly;
+
     public GETDescribeCacheEngineVersionsRequest withDefaultOnly(Boolean defaultOnly) {
         this.defaultOnly = defaultOnly;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeCacheEngineVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
     public String engine;
+
     public GETDescribeCacheEngineVersionsRequest withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeCacheEngineVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
     public String engineVersion;
+
     public GETDescribeCacheEngineVersionsRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeCacheEngineVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeCacheEngineVersionsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -69,6 +76,7 @@ public class GETDescribeCacheEngineVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeCacheEngineVersionsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -76,6 +84,7 @@ public class GETDescribeCacheEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeCacheEngineVersionsVersionEnum version;
+
     public GETDescribeCacheEngineVersionsRequest withVersion(GETDescribeCacheEngineVersionsVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETDescribeCacheEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeCacheEngineVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETDescribeCacheEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeCacheEngineVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETDescribeCacheEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeCacheEngineVersionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETDescribeCacheEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeCacheEngineVersionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETDescribeCacheEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeCacheEngineVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETDescribeCacheEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeCacheEngineVersionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,14 @@ public class GETDescribeCacheEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeCacheEngineVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeCacheEngineVersionsRequest(@JsonProperty("Action") GETDescribeCacheEngineVersionsActionEnum action, @JsonProperty("Version") GETDescribeCacheEngineVersionsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCustomRoutingAcceleratorAttributesResponse {
@@ -12,6 +13,7 @@ public class UpdateCustomRoutingAcceleratorAttributesResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public UpdateCustomRoutingAcceleratorAttributesResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCustomRoutingAcceleratorAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateCustomRoutingAcceleratorAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCustomRoutingAcceleratorAttributesResponse {
     
     
     public String contentType;
+
     public UpdateCustomRoutingAcceleratorAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCustomRoutingAcceleratorAttributesResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateCustomRoutingAcceleratorAttributesResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCustomRoutingAcceleratorAttributesResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateCustomRoutingAcceleratorAttributesResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateCustomRoutingAcceleratorAttributesResponse {
     
     
     public Integer statusCode;
+
     public UpdateCustomRoutingAcceleratorAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCustomRoutingAcceleratorAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCustomRoutingAcceleratorAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateCustomRoutingAcceleratorAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCustomRoutingAcceleratorAttributesResponse updateCustomRoutingAcceleratorAttributesResponse;
+
     public UpdateCustomRoutingAcceleratorAttributesResponse withUpdateCustomRoutingAcceleratorAttributesResponse(org.openapis.openapi.models.shared.UpdateCustomRoutingAcceleratorAttributesResponse updateCustomRoutingAcceleratorAttributesResponse) {
         this.updateCustomRoutingAcceleratorAttributesResponse = updateCustomRoutingAcceleratorAttributesResponse;
         return this;
     }
     
+    public UpdateCustomRoutingAcceleratorAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

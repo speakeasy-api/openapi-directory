@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudidentityInboundSsoAssignmentsGetResponse {
     
     public String contentType;
+
     public CloudidentityInboundSsoAssignmentsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudidentityInboundSsoAssignmentsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.InboundSsoAssignment inboundSsoAssignment;
+
     public CloudidentityInboundSsoAssignmentsGetResponse withInboundSsoAssignment(org.openapis.openapi.models.shared.InboundSsoAssignment inboundSsoAssignment) {
         this.inboundSsoAssignment = inboundSsoAssignment;
         return this;
@@ -26,6 +29,7 @@ public class CloudidentityInboundSsoAssignmentsGetResponse {
     
     
     public Integer statusCode;
+
     public CloudidentityInboundSsoAssignmentsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudidentityInboundSsoAssignmentsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudidentityInboundSsoAssignmentsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudidentityInboundSsoAssignmentsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

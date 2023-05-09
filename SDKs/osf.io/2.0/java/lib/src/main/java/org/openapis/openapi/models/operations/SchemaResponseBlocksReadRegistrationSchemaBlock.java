@@ -15,6 +15,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlock {
      */
     
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes attributes;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlock withAttributes(SchemaResponseBlocksReadRegistrationSchemaBlockAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlock {
      */
     
     public String id;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlock withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlock {
      */
     
     public SchemaResponseBlocksReadRegistrationSchemaBlockLinks links;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlock withLinks(SchemaResponseBlocksReadRegistrationSchemaBlockLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlock {
      */
     
     public SchemaResponseBlocksReadRegistrationSchemaBlockRelationships relationships;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlock withRelationships(SchemaResponseBlocksReadRegistrationSchemaBlockRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,11 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlock {
      */
     
     public String type;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlock withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SchemaResponseBlocksReadRegistrationSchemaBlock(){}
 }

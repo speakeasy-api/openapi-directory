@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitAccountsMfaSignInStartResponse {
     
     public String contentType;
+
     public IdentitytoolkitAccountsMfaSignInStartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitAccountsMfaSignInStartResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartMfaSignInResponse googleCloudIdentitytoolkitV2StartMfaSignInResponse;
+
     public IdentitytoolkitAccountsMfaSignInStartResponse withGoogleCloudIdentitytoolkitV2StartMfaSignInResponse(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartMfaSignInResponse googleCloudIdentitytoolkitV2StartMfaSignInResponse) {
         this.googleCloudIdentitytoolkitV2StartMfaSignInResponse = googleCloudIdentitytoolkitV2StartMfaSignInResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitAccountsMfaSignInStartResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitAccountsMfaSignInStartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitAccountsMfaSignInStartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitAccountsMfaSignInStartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitAccountsMfaSignInStartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

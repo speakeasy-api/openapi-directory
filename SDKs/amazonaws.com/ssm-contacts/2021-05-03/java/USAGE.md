@@ -3,49 +3,46 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AcceptPageXAmzTargetEnum;
 import org.openapis.openapi.models.operations.AcceptPageRequest;
 import org.openapis.openapi.models.operations.AcceptPageResponse;
+import org.openapis.openapi.models.operations.AcceptPageXAmzTargetEnum;
+import org.openapis.openapi.models.shared.AcceptCodeValidationEnum;
 import org.openapis.openapi.models.shared.AcceptPageRequest;
 import org.openapis.openapi.models.shared.AcceptTypeEnum;
-import org.openapis.openapi.models.shared.AcceptCodeValidationEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AcceptPageRequest req = new AcceptPageRequest() {{
-                acceptPageRequest = new AcceptPageRequest() {{
-                    acceptCode = "corrupti";
-                    acceptCodeValidation = "ENFORCE";
-                    acceptType = "READ";
-                    contactChannelId = "quibusdam";
-                    note = "unde";
-                    pageId = "nulla";
-                }};
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "illum";
-                xAmzCredential = "vel";
-                xAmzDate = "error";
-                xAmzSecurityToken = "deserunt";
-                xAmzSignature = "suscipit";
-                xAmzSignedHeaders = "iure";
-                xAmzTarget = "SSMContacts.AcceptPage";
-            }}            
+            AcceptPageRequest req = new AcceptPageRequest(                new AcceptPageRequest("provident", AcceptTypeEnum.READ, "quibusdam") {{
+                                acceptCodeValidation = AcceptCodeValidationEnum.ENFORCE;
+                                contactChannelId = "nulla";
+                                note = "corrupti";
+                            }};, AcceptPageXAmzTargetEnum.SSM_CONTACTS_ACCEPT_PAGE) {{
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+            }};            
 
             AcceptPageResponse res = sdk.acceptPage(req);
 
-            if (res.acceptPageResult.isPresent()) {
+            if (res.acceptPageResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

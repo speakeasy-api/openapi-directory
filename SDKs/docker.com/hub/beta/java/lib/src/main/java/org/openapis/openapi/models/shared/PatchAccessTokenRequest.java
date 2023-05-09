@@ -12,6 +12,7 @@ public class PatchAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public PatchAccessTokenRequest withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -20,9 +21,11 @@ public class PatchAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_label")
     public String tokenLabel;
+
     public PatchAccessTokenRequest withTokenLabel(String tokenLabel) {
         this.tokenLabel = tokenLabel;
         return this;
     }
     
+    public PatchAccessTokenRequest(){}
 }

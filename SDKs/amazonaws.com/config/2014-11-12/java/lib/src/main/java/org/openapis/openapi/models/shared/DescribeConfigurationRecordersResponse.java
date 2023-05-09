@@ -15,9 +15,11 @@ public class DescribeConfigurationRecordersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationRecorders")
     public ConfigurationRecorder[] configurationRecorders;
+
     public DescribeConfigurationRecordersResponse withConfigurationRecorders(ConfigurationRecorder[] configurationRecorders) {
         this.configurationRecorders = configurationRecorders;
         return this;
     }
     
+    public DescribeConfigurationRecordersResponse(){}
 }

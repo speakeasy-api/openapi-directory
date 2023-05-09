@@ -18,6 +18,7 @@ public class RegionInstanceGroupManagersListErrorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public InstanceManagedByIgmError[] items;
+
     public RegionInstanceGroupManagersListErrorsResponse withItems(InstanceManagedByIgmError[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class RegionInstanceGroupManagersListErrorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public RegionInstanceGroupManagersListErrorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public RegionInstanceGroupManagersListErrorsResponse(){}
 }

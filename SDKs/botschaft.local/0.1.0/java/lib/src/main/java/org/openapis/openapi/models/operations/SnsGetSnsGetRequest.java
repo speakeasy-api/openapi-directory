@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SnsGetSnsGetRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
     public String authorization;
+
     public SnsGetSnsGetRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -16,6 +17,7 @@ public class SnsGetSnsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base64_message")
     public String base64Message;
+
     public SnsGetSnsGetRequest withBase64Message(String base64Message) {
         this.base64Message = base64Message;
         return this;
@@ -23,9 +25,11 @@ public class SnsGetSnsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
     public String message;
+
     public SnsGetSnsGetRequest withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SnsGetSnsGetRequest(){}
 }

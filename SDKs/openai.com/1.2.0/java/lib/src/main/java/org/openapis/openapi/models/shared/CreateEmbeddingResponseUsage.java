@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEmbeddingResponseUsage {
     @JsonProperty("prompt_tokens")
     public Long promptTokens;
+
     public CreateEmbeddingResponseUsage withPromptTokens(Long promptTokens) {
         this.promptTokens = promptTokens;
         return this;
@@ -16,9 +17,14 @@ public class CreateEmbeddingResponseUsage {
     
     @JsonProperty("total_tokens")
     public Long totalTokens;
+
     public CreateEmbeddingResponseUsage withTotalTokens(Long totalTokens) {
         this.totalTokens = totalTokens;
         return this;
     }
     
+    public CreateEmbeddingResponseUsage(@JsonProperty("prompt_tokens") Long promptTokens, @JsonProperty("total_tokens") Long totalTokens) {
+        this.promptTokens = promptTokens;
+        this.totalTokens = totalTokens;
+  }
 }

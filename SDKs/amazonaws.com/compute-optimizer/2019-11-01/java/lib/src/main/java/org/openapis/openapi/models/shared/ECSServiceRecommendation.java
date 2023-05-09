@@ -20,6 +20,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public ECSServiceRecommendation withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPerformanceRisk")
     public CurrentPerformanceRiskEnum currentPerformanceRisk;
+
     public ECSServiceRecommendation withCurrentPerformanceRisk(CurrentPerformanceRiskEnum currentPerformanceRisk) {
         this.currentPerformanceRisk = currentPerformanceRisk;
         return this;
@@ -36,6 +38,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentServiceConfiguration")
     public ServiceConfiguration currentServiceConfiguration;
+
     public ECSServiceRecommendation withCurrentServiceConfiguration(ServiceConfiguration currentServiceConfiguration) {
         this.currentServiceConfiguration = currentServiceConfiguration;
         return this;
@@ -44,6 +47,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finding")
     public ECSServiceRecommendationFindingEnum finding;
+
     public ECSServiceRecommendation withFinding(ECSServiceRecommendationFindingEnum finding) {
         this.finding = finding;
         return this;
@@ -52,6 +56,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingReasonCodes")
     public ECSServiceRecommendationFindingReasonCodeEnum[] findingReasonCodes;
+
     public ECSServiceRecommendation withFindingReasonCodes(ECSServiceRecommendationFindingReasonCodeEnum[] findingReasonCodes) {
         this.findingReasonCodes = findingReasonCodes;
         return this;
@@ -62,6 +67,7 @@ public class ECSServiceRecommendation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRefreshTimestamp")
     public OffsetDateTime lastRefreshTimestamp;
+
     public ECSServiceRecommendation withLastRefreshTimestamp(OffsetDateTime lastRefreshTimestamp) {
         this.lastRefreshTimestamp = lastRefreshTimestamp;
         return this;
@@ -70,6 +76,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchType")
     public ECSServiceLaunchTypeEnum launchType;
+
     public ECSServiceRecommendation withLaunchType(ECSServiceLaunchTypeEnum launchType) {
         this.launchType = launchType;
         return this;
@@ -78,6 +85,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookbackPeriodInDays")
     public Double lookbackPeriodInDays;
+
     public ECSServiceRecommendation withLookbackPeriodInDays(Double lookbackPeriodInDays) {
         this.lookbackPeriodInDays = lookbackPeriodInDays;
         return this;
@@ -86,6 +94,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceArn")
     public String serviceArn;
+
     public ECSServiceRecommendation withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -94,6 +103,7 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRecommendationOptions")
     public ECSServiceRecommendationOption[] serviceRecommendationOptions;
+
     public ECSServiceRecommendation withServiceRecommendationOptions(ECSServiceRecommendationOption[] serviceRecommendationOptions) {
         this.serviceRecommendationOptions = serviceRecommendationOptions;
         return this;
@@ -102,9 +112,11 @@ public class ECSServiceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationMetrics")
     public ECSServiceUtilizationMetric[] utilizationMetrics;
+
     public ECSServiceRecommendation withUtilizationMetrics(ECSServiceUtilizationMetric[] utilizationMetrics) {
         this.utilizationMetrics = utilizationMetrics;
         return this;
     }
     
+    public ECSServiceRecommendation(){}
 }

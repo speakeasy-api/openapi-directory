@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVirtualGatewayResponse {
@@ -12,6 +13,7 @@ public class DeleteVirtualGatewayResponse {
      */
     
     public Object badRequestException;
+
     public DeleteVirtualGatewayResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVirtualGatewayResponse {
     
     
     public String contentType;
+
     public DeleteVirtualGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVirtualGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVirtualGatewayOutput deleteVirtualGatewayOutput;
+
     public DeleteVirtualGatewayResponse withDeleteVirtualGatewayOutput(org.openapis.openapi.models.shared.DeleteVirtualGatewayOutput deleteVirtualGatewayOutput) {
         this.deleteVirtualGatewayOutput = deleteVirtualGatewayOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVirtualGatewayResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteVirtualGatewayResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVirtualGatewayResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteVirtualGatewayResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteVirtualGatewayResponse {
      */
     
     public Object notFoundException;
+
     public DeleteVirtualGatewayResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteVirtualGatewayResponse {
     
     
     public Integer statusCode;
+
     public DeleteVirtualGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteVirtualGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVirtualGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteVirtualGatewayResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteVirtualGatewayResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteVirtualGatewayResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteVirtualGatewayResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteVirtualGatewayResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteVirtualGatewayResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteVirtualGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

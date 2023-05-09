@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemoveFromGlobalClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRemoveFromGlobalClusterActionEnum action;
+
     public GETRemoveFromGlobalClusterRequest withAction(GETRemoveFromGlobalClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRemoveFromGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbClusterIdentifier")
     public String dbClusterIdentifier;
+
     public GETRemoveFromGlobalClusterRequest withDbClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETRemoveFromGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalClusterIdentifier")
     public String globalClusterIdentifier;
+
     public GETRemoveFromGlobalClusterRequest withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -36,6 +40,7 @@ public class GETRemoveFromGlobalClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRemoveFromGlobalClusterVersionEnum version;
+
     public GETRemoveFromGlobalClusterRequest withVersion(GETRemoveFromGlobalClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETRemoveFromGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRemoveFromGlobalClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETRemoveFromGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRemoveFromGlobalClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETRemoveFromGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRemoveFromGlobalClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETRemoveFromGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRemoveFromGlobalClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETRemoveFromGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRemoveFromGlobalClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETRemoveFromGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRemoveFromGlobalClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETRemoveFromGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRemoveFromGlobalClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRemoveFromGlobalClusterRequest(@JsonProperty("Action") GETRemoveFromGlobalClusterActionEnum action, @JsonProperty("DbClusterIdentifier") String dbClusterIdentifier, @JsonProperty("GlobalClusterIdentifier") String globalClusterIdentifier, @JsonProperty("Version") GETRemoveFromGlobalClusterVersionEnum version) {
+        this.action = action;
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.globalClusterIdentifier = globalClusterIdentifier;
+        this.version = version;
+  }
 }

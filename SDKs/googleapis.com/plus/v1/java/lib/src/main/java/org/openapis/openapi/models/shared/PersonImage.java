@@ -18,6 +18,7 @@ public class PersonImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public PersonImage withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -29,9 +30,11 @@ public class PersonImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PersonImage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PersonImage(){}
 }

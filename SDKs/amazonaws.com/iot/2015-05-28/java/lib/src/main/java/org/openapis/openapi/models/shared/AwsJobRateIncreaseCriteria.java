@@ -15,6 +15,7 @@ public class AwsJobRateIncreaseCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfNotifiedThings")
     public Long numberOfNotifiedThings;
+
     public AwsJobRateIncreaseCriteria withNumberOfNotifiedThings(Long numberOfNotifiedThings) {
         this.numberOfNotifiedThings = numberOfNotifiedThings;
         return this;
@@ -23,9 +24,11 @@ public class AwsJobRateIncreaseCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfSucceededThings")
     public Long numberOfSucceededThings;
+
     public AwsJobRateIncreaseCriteria withNumberOfSucceededThings(Long numberOfSucceededThings) {
         this.numberOfSucceededThings = numberOfSucceededThings;
         return this;
     }
     
+    public AwsJobRateIncreaseCriteria(){}
 }

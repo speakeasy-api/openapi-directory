@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProjectVisibilityResponse {
     
     public String contentType;
+
     public UpdateProjectVisibilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProjectVisibilityResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateProjectVisibilityResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProjectVisibilityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProjectVisibilityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateProjectVisibilityResponse {
     
     
     public Integer statusCode;
+
     public UpdateProjectVisibilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateProjectVisibilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProjectVisibilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateProjectVisibilityResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateProjectVisibilityOutput updateProjectVisibilityOutput;
+
     public UpdateProjectVisibilityResponse withUpdateProjectVisibilityOutput(org.openapis.openapi.models.shared.UpdateProjectVisibilityOutput updateProjectVisibilityOutput) {
         this.updateProjectVisibilityOutput = updateProjectVisibilityOutput;
         return this;
     }
     
+    public UpdateProjectVisibilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

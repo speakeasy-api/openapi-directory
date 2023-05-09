@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2LabelDisplayHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public GoogleAppsDriveLabelsV2LabelDisplayHints withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2LabelDisplayHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenInSearch")
     public Boolean hiddenInSearch;
+
     public GoogleAppsDriveLabelsV2LabelDisplayHints withHiddenInSearch(Boolean hiddenInSearch) {
         this.hiddenInSearch = hiddenInSearch;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2LabelDisplayHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public String priority;
+
     public GoogleAppsDriveLabelsV2LabelDisplayHints withPriority(String priority) {
         this.priority = priority;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsDriveLabelsV2LabelDisplayHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shownInApply")
     public Boolean shownInApply;
+
     public GoogleAppsDriveLabelsV2LabelDisplayHints withShownInApply(Boolean shownInApply) {
         this.shownInApply = shownInApply;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LabelDisplayHints(){}
 }

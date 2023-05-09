@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetCollectibleNodeDetailsRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetCollectibleNodeDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
     public Long characterId;
+
     public Destiny2GetCollectibleNodeDetailsRequest withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetCollectibleNodeDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectiblePresentationNodeHash")
     public Long collectiblePresentationNodeHash;
+
     public Destiny2GetCollectibleNodeDetailsRequest withCollectiblePresentationNodeHash(Long collectiblePresentationNodeHash) {
         this.collectiblePresentationNodeHash = collectiblePresentationNodeHash;
         return this;
@@ -32,6 +35,7 @@ public class Destiny2GetCollectibleNodeDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
     public Integer[] components;
+
     public Destiny2GetCollectibleNodeDetailsRequest withComponents(Integer[] components) {
         this.components = components;
         return this;
@@ -42,6 +46,7 @@ public class Destiny2GetCollectibleNodeDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetCollectibleNodeDetailsRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -52,9 +57,16 @@ public class Destiny2GetCollectibleNodeDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetCollectibleNodeDetailsRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public Destiny2GetCollectibleNodeDetailsRequest(@JsonProperty("characterId") Long characterId, @JsonProperty("collectiblePresentationNodeHash") Long collectiblePresentationNodeHash, @JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.characterId = characterId;
+        this.collectiblePresentationNodeHash = collectiblePresentationNodeHash;
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+  }
 }

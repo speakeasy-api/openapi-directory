@@ -18,6 +18,7 @@ public class Topic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseId")
     public String courseId;
+
     public Topic withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
@@ -29,6 +30,7 @@ public class Topic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Topic withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Topic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicId")
     public String topicId;
+
     public Topic withTopicId(String topicId) {
         this.topicId = topicId;
         return this;
@@ -51,9 +54,11 @@ public class Topic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Topic withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Topic(){}
 }

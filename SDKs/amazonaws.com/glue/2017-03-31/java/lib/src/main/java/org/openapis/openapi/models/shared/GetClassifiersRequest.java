@@ -12,6 +12,7 @@ public class GetClassifiersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetClassifiersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,9 +21,11 @@ public class GetClassifiersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetClassifiersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetClassifiersRequest(){}
 }

@@ -15,6 +15,7 @@ public class SharingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookOutputOption")
     public NotebookOutputOptionEnum notebookOutputOption;
+
     public SharingSettings withNotebookOutputOption(NotebookOutputOptionEnum notebookOutputOption) {
         this.notebookOutputOption = notebookOutputOption;
         return this;
@@ -23,6 +24,7 @@ public class SharingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KmsKeyId")
     public String s3KmsKeyId;
+
     public SharingSettings withS3KmsKeyId(String s3KmsKeyId) {
         this.s3KmsKeyId = s3KmsKeyId;
         return this;
@@ -31,9 +33,11 @@ public class SharingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public SharingSettings withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public SharingSettings(){}
 }

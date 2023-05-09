@@ -18,17 +18,19 @@ public class GoogleAppsCardV1Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collapsible")
     public Boolean collapsible;
+
     public GoogleAppsCardV1Section withCollapsible(Boolean collapsible) {
         this.collapsible = collapsible;
         return this;
     }
     
     /**
-     * Text that appears at the top of a section. Supports [simple HTML formatted text](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+     * Text that appears at the top of a section. Supports simple HTML formatted text. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public String header;
+
     public GoogleAppsCardV1Section withHeader(String header) {
         this.header = header;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uncollapsibleWidgetsCount")
     public Integer uncollapsibleWidgetsCount;
+
     public GoogleAppsCardV1Section withUncollapsibleWidgetsCount(Integer uncollapsibleWidgetsCount) {
         this.uncollapsibleWidgetsCount = uncollapsibleWidgetsCount;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsCardV1Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widgets")
     public GoogleAppsCardV1Widget[] widgets;
+
     public GoogleAppsCardV1Section withWidgets(GoogleAppsCardV1Widget[] widgets) {
         this.widgets = widgets;
         return this;
     }
     
+    public GoogleAppsCardV1Section(){}
 }

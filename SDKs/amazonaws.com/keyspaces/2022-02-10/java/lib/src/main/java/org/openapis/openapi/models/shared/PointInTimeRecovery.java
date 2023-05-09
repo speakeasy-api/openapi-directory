@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointInTimeRecovery {
     @JsonProperty("status")
     public PointInTimeRecoveryStatusEnum status;
+
     public PointInTimeRecovery withStatus(PointInTimeRecoveryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PointInTimeRecovery(@JsonProperty("status") PointInTimeRecoveryStatusEnum status) {
+        this.status = status;
+  }
 }

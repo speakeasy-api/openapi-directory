@@ -20,6 +20,7 @@ public class TaskStatistics {
      */
     @JsonProperty("kernelCPUTime")
     public String kernelCPUTime;
+
     public TaskStatistics withKernelCPUTime(String kernelCPUTime) {
         this.kernelCPUTime = kernelCPUTime;
         return this;
@@ -32,6 +33,7 @@ public class TaskStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public TaskStatistics withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -42,6 +44,7 @@ public class TaskStatistics {
      */
     @JsonProperty("readIOGiB")
     public Double readIOGiB;
+
     public TaskStatistics withReadIOGiB(Double readIOGiB) {
         this.readIOGiB = readIOGiB;
         return this;
@@ -52,6 +55,7 @@ public class TaskStatistics {
      */
     @JsonProperty("readIOps")
     public Long readIOps;
+
     public TaskStatistics withReadIOps(Long readIOps) {
         this.readIOps = readIOps;
         return this;
@@ -64,6 +68,7 @@ public class TaskStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public TaskStatistics withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -74,6 +79,7 @@ public class TaskStatistics {
      */
     @JsonProperty("url")
     public String url;
+
     public TaskStatistics withUrl(String url) {
         this.url = url;
         return this;
@@ -84,6 +90,7 @@ public class TaskStatistics {
      */
     @JsonProperty("userCPUTime")
     public String userCPUTime;
+
     public TaskStatistics withUserCPUTime(String userCPUTime) {
         this.userCPUTime = userCPUTime;
         return this;
@@ -94,6 +101,7 @@ public class TaskStatistics {
      */
     @JsonProperty("waitTime")
     public String waitTime;
+
     public TaskStatistics withWaitTime(String waitTime) {
         this.waitTime = waitTime;
         return this;
@@ -104,6 +112,7 @@ public class TaskStatistics {
      */
     @JsonProperty("wallClockTime")
     public String wallClockTime;
+
     public TaskStatistics withWallClockTime(String wallClockTime) {
         this.wallClockTime = wallClockTime;
         return this;
@@ -114,6 +123,7 @@ public class TaskStatistics {
      */
     @JsonProperty("writeIOGiB")
     public Double writeIOGiB;
+
     public TaskStatistics withWriteIOGiB(Double writeIOGiB) {
         this.writeIOGiB = writeIOGiB;
         return this;
@@ -124,9 +134,23 @@ public class TaskStatistics {
      */
     @JsonProperty("writeIOps")
     public Long writeIOps;
+
     public TaskStatistics withWriteIOps(Long writeIOps) {
         this.writeIOps = writeIOps;
         return this;
     }
     
+    public TaskStatistics(@JsonProperty("kernelCPUTime") String kernelCPUTime, @JsonProperty("lastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("readIOGiB") Double readIOGiB, @JsonProperty("readIOps") Long readIOps, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("url") String url, @JsonProperty("userCPUTime") String userCPUTime, @JsonProperty("waitTime") String waitTime, @JsonProperty("wallClockTime") String wallClockTime, @JsonProperty("writeIOGiB") Double writeIOGiB, @JsonProperty("writeIOps") Long writeIOps) {
+        this.kernelCPUTime = kernelCPUTime;
+        this.lastUpdateTime = lastUpdateTime;
+        this.readIOGiB = readIOGiB;
+        this.readIOps = readIOps;
+        this.startTime = startTime;
+        this.url = url;
+        this.userCPUTime = userCPUTime;
+        this.waitTime = waitTime;
+        this.wallClockTime = wallClockTime;
+        this.writeIOGiB = writeIOGiB;
+        this.writeIOps = writeIOps;
+  }
 }

@@ -12,6 +12,7 @@ public class ListAccessesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAccessesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListAccessesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccessesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListAccessesRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public ListAccessesRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public ListAccessesRequest(@JsonProperty("ServerId") String serverId) {
+        this.serverId = serverId;
+  }
 }

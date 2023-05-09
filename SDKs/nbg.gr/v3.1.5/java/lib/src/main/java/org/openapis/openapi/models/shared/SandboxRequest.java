@@ -15,9 +15,13 @@ public class SandboxRequest {
      */
     @JsonProperty("sandboxId")
     public String sandboxId;
+
     public SandboxRequest withSandboxId(String sandboxId) {
         this.sandboxId = sandboxId;
         return this;
     }
     
+    public SandboxRequest(@JsonProperty("sandboxId") String sandboxId) {
+        this.sandboxId = sandboxId;
+  }
 }

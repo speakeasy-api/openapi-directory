@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGraphqlApiResponse {
@@ -12,6 +13,7 @@ public class UpdateGraphqlApiResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateGraphqlApiResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateGraphqlApiResponse {
      */
     
     public Object badRequestException;
+
     public UpdateGraphqlApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateGraphqlApiResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateGraphqlApiResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGraphqlApiResponse {
     
     
     public String contentType;
+
     public UpdateGraphqlApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateGraphqlApiResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateGraphqlApiResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateGraphqlApiResponse {
      */
     
     public Object notFoundException;
+
     public UpdateGraphqlApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateGraphqlApiResponse {
     
     
     public Integer statusCode;
+
     public UpdateGraphqlApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateGraphqlApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGraphqlApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateGraphqlApiResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateGraphqlApiResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateGraphqlApiResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGraphqlApiResponse updateGraphqlApiResponse;
+
     public UpdateGraphqlApiResponse withUpdateGraphqlApiResponse(org.openapis.openapi.models.shared.UpdateGraphqlApiResponse updateGraphqlApiResponse) {
         this.updateGraphqlApiResponse = updateGraphqlApiResponse;
         return this;
     }
     
+    public UpdateGraphqlApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

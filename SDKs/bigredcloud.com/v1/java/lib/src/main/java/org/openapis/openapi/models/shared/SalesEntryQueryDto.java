@@ -17,6 +17,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acCode")
     public String acCode;
+
     public SalesEntryQueryDto withAcCode(String acCode) {
         this.acCode = acCode;
         return this;
@@ -25,6 +26,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acEntries")
     public AcEntryDto[] acEntries;
+
     public SalesEntryQueryDto withAcEntries(AcEntryDto[] acEntries) {
         this.acEntries = acEntries;
         return this;
@@ -33,6 +35,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTranTypeId")
     public Long bookTranTypeId;
+
     public SalesEntryQueryDto withBookTranTypeId(Long bookTranTypeId) {
         this.bookTranTypeId = bookTranTypeId;
         return this;
@@ -41,6 +44,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public AcudfValueDto[] customFields;
+
     public SalesEntryQueryDto withCustomFields(AcudfValueDto[] customFields) {
         this.customFields = customFields;
         return this;
@@ -49,6 +53,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public SalesEntryQueryDto withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -57,6 +62,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailCollection")
     public String[] detailCollection;
+
     public SalesEntryQueryDto withDetailCollection(String[] detailCollection) {
         this.detailCollection = detailCollection;
         return this;
@@ -65,6 +71,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public SalesEntryQueryDto withDetails(String details) {
         this.details = details;
         return this;
@@ -75,6 +82,7 @@ public class SalesEntryQueryDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("entryDate")
     public OffsetDateTime entryDate;
+
     public SalesEntryQueryDto withEntryDate(OffsetDateTime entryDate) {
         this.entryDate = entryDate;
         return this;
@@ -83,6 +91,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public SalesEntryQueryDto withId(Long id) {
         this.id = id;
         return this;
@@ -91,6 +100,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netGoods")
     public Double netGoods;
+
     public SalesEntryQueryDto withNetGoods(Double netGoods) {
         this.netGoods = netGoods;
         return this;
@@ -99,6 +109,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netServices")
     public Double netServices;
+
     public SalesEntryQueryDto withNetServices(Double netServices) {
         this.netServices = netServices;
         return this;
@@ -107,6 +118,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public SalesEntryQueryDto withNote(String note) {
         this.note = note;
         return this;
@@ -117,6 +129,7 @@ public class SalesEntryQueryDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public SalesEntryQueryDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
@@ -125,6 +138,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public SalesEntryQueryDto withReference(String reference) {
         this.reference = reference;
         return this;
@@ -133,6 +147,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public SalesEntryQueryDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -141,6 +156,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public SalesEntryQueryDto withTotal(Double total) {
         this.total = total;
         return this;
@@ -149,6 +165,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNet")
     public Double totalNet;
+
     public SalesEntryQueryDto withTotalNet(Double totalNet) {
         this.totalNet = totalNet;
         return this;
@@ -157,6 +174,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalVAT")
     public Double totalVAT;
+
     public SalesEntryQueryDto withTotalVAT(Double totalVAT) {
         this.totalVAT = totalVAT;
         return this;
@@ -165,6 +183,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unpaid")
     public Double unpaid;
+
     public SalesEntryQueryDto withUnpaid(Double unpaid) {
         this.unpaid = unpaid;
         return this;
@@ -173,6 +192,7 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatEntries")
     public VatEntryDto[] vatEntries;
+
     public SalesEntryQueryDto withVatEntries(VatEntryDto[] vatEntries) {
         this.vatEntries = vatEntries;
         return this;
@@ -181,9 +201,11 @@ public class SalesEntryQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatTypeId")
     public Long vatTypeId;
+
     public SalesEntryQueryDto withVatTypeId(Long vatTypeId) {
         this.vatTypeId = vatTypeId;
         return this;
     }
     
+    public SalesEntryQueryDto(){}
 }

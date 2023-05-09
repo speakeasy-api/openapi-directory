@@ -15,6 +15,7 @@ public class CreateGatewayRequestBodyGatewayPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrass")
     public org.openapis.openapi.models.shared.Greengrass greengrass;
+
     public CreateGatewayRequestBodyGatewayPlatform withGreengrass(org.openapis.openapi.models.shared.Greengrass greengrass) {
         this.greengrass = greengrass;
         return this;
@@ -23,9 +24,11 @@ public class CreateGatewayRequestBodyGatewayPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrassV2")
     public org.openapis.openapi.models.shared.GreengrassV2 greengrassV2;
+
     public CreateGatewayRequestBodyGatewayPlatform withGreengrassV2(org.openapis.openapi.models.shared.GreengrassV2 greengrassV2) {
         this.greengrassV2 = greengrassV2;
         return this;
     }
     
+    public CreateGatewayRequestBodyGatewayPlatform(){}
 }

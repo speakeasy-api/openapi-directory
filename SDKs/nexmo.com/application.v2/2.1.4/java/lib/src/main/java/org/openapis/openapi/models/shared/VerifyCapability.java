@@ -18,6 +18,7 @@ public class VerifyCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public VerifyCapabilityVersionEnum version;
+
     public VerifyCapability withVersion(VerifyCapabilityVersionEnum version) {
         this.version = version;
         return this;
@@ -26,9 +27,11 @@ public class VerifyCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhooks")
     public VerifyCapabilityWebhooks webhooks;
+
     public VerifyCapability withWebhooks(VerifyCapabilityWebhooks webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public VerifyCapability(){}
 }

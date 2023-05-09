@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETIdentityPoliciesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETIdentityPoliciesActionEnum action;
+
     public GETGETIdentityPoliciesRequest withAction(GETGETIdentityPoliciesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETIdentityPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
     public String identity;
+
     public GETGETIdentityPoliciesRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -29,6 +32,7 @@ public class GETGETIdentityPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyNames")
     public String[] policyNames;
+
     public GETGETIdentityPoliciesRequest withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
@@ -36,6 +40,7 @@ public class GETGETIdentityPoliciesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETIdentityPoliciesVersionEnum version;
+
     public GETGETIdentityPoliciesRequest withVersion(GETGETIdentityPoliciesVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETGETIdentityPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETIdentityPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETGETIdentityPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETIdentityPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETGETIdentityPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETIdentityPoliciesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETGETIdentityPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETIdentityPoliciesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETGETIdentityPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETIdentityPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETGETIdentityPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETIdentityPoliciesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETGETIdentityPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETIdentityPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETIdentityPoliciesRequest(@JsonProperty("Action") GETGETIdentityPoliciesActionEnum action, @JsonProperty("Identity") String identity, @JsonProperty("PolicyNames") String[] policyNames, @JsonProperty("Version") GETGETIdentityPoliciesVersionEnum version) {
+        this.action = action;
+        this.identity = identity;
+        this.policyNames = policyNames;
+        this.version = version;
+  }
 }

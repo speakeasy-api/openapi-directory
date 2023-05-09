@@ -18,6 +18,7 @@ public class CloudCdnWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheFillOriginService")
     public CloudCdnWorkloadCacheFillOriginServiceEnum cacheFillOriginService;
+
     public CloudCdnWorkload withCacheFillOriginService(CloudCdnWorkloadCacheFillOriginServiceEnum cacheFillOriginService) {
         this.cacheFillOriginService = cacheFillOriginService;
         return this;
@@ -29,6 +30,7 @@ public class CloudCdnWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheFillRate")
     public Usage cacheFillRate;
+
     public CloudCdnWorkload withCacheFillRate(Usage cacheFillRate) {
         this.cacheFillRate = cacheFillRate;
         return this;
@@ -40,6 +42,7 @@ public class CloudCdnWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheFillRegions")
     public CacheFillRegions cacheFillRegions;
+
     public CloudCdnWorkload withCacheFillRegions(CacheFillRegions cacheFillRegions) {
         this.cacheFillRegions = cacheFillRegions;
         return this;
@@ -51,9 +54,11 @@ public class CloudCdnWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheLookUpRate")
     public Usage cacheLookUpRate;
+
     public CloudCdnWorkload withCacheLookUpRate(Usage cacheLookUpRate) {
         this.cacheLookUpRate = cacheLookUpRate;
         return this;
     }
     
+    public CloudCdnWorkload(){}
 }

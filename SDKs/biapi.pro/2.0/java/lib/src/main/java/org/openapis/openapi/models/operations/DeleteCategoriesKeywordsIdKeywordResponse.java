@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCategoriesKeywordsIdKeywordResponse {
     
     public String contentType;
+
     public DeleteCategoriesKeywordsIdKeywordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCategoriesKeywordsIdKeywordResponse {
      */
     
     public org.openapis.openapi.models.shared.Keyword keyword;
+
     public DeleteCategoriesKeywordsIdKeywordResponse withKeyword(org.openapis.openapi.models.shared.Keyword keyword) {
         this.keyword = keyword;
         return this;
@@ -26,6 +29,7 @@ public class DeleteCategoriesKeywordsIdKeywordResponse {
     
     
     public Integer statusCode;
+
     public DeleteCategoriesKeywordsIdKeywordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteCategoriesKeywordsIdKeywordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCategoriesKeywordsIdKeywordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCategoriesKeywordsIdKeywordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningGetSarifRequest {
@@ -12,6 +13,7 @@ public class CodeScanningGetSarifRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public CodeScanningGetSarifRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class CodeScanningGetSarifRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public CodeScanningGetSarifRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -32,9 +35,15 @@ public class CodeScanningGetSarifRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sarif_id")
     public String sarifId;
+
     public CodeScanningGetSarifRequest withSarifId(String sarifId) {
         this.sarifId = sarifId;
         return this;
     }
     
+    public CodeScanningGetSarifRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("sarif_id") String sarifId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.sarifId = sarifId;
+  }
 }

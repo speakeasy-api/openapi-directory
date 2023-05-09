@@ -15,6 +15,7 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public ErrorCodeEnum errorCode;
+
     public FailureInfo withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public FailureInfo withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public FailureInfo withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public FailureInfo(){}
 }

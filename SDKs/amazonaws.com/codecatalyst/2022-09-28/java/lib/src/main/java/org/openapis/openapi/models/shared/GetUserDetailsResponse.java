@@ -15,6 +15,7 @@ public class GetUserDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GetUserDetailsResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -23,6 +24,7 @@ public class GetUserDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryEmail")
     public EmailAddress primaryEmail;
+
     public GetUserDetailsResponse withPrimaryEmail(EmailAddress primaryEmail) {
         this.primaryEmail = primaryEmail;
         return this;
@@ -31,6 +33,7 @@ public class GetUserDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GetUserDetailsResponse withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -39,6 +42,7 @@ public class GetUserDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public GetUserDetailsResponse withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -47,9 +51,11 @@ public class GetUserDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GetUserDetailsResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetUserDetailsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetActivityHistoryRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetActivityHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
     public Long characterId;
+
     public Destiny2GetActivityHistoryRequest withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetActivityHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public Destiny2GetActivityHistoryRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -32,6 +35,7 @@ public class Destiny2GetActivityHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetActivityHistoryRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -42,6 +46,7 @@ public class Destiny2GetActivityHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetActivityHistoryRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -52,6 +57,7 @@ public class Destiny2GetActivityHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mode")
     public Integer mode;
+
     public Destiny2GetActivityHistoryRequest withMode(Integer mode) {
         this.mode = mode;
         return this;
@@ -62,9 +68,15 @@ public class Destiny2GetActivityHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public Destiny2GetActivityHistoryRequest withPage(Integer page) {
         this.page = page;
         return this;
     }
     
+    public Destiny2GetActivityHistoryRequest(@JsonProperty("characterId") Long characterId, @JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.characterId = characterId;
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+  }
 }

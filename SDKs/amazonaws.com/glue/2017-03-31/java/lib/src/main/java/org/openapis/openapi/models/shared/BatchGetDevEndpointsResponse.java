@@ -15,6 +15,7 @@ public class BatchGetDevEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DevEndpoints")
     public DevEndpoint[] devEndpoints;
+
     public BatchGetDevEndpointsResponse withDevEndpoints(DevEndpoint[] devEndpoints) {
         this.devEndpoints = devEndpoints;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetDevEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DevEndpointsNotFound")
     public String[] devEndpointsNotFound;
+
     public BatchGetDevEndpointsResponse withDevEndpointsNotFound(String[] devEndpointsNotFound) {
         this.devEndpointsNotFound = devEndpointsNotFound;
         return this;
     }
     
+    public BatchGetDevEndpointsResponse(){}
 }

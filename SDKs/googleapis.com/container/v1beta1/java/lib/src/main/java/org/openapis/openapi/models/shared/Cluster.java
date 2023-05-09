@@ -18,6 +18,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonsConfig")
     public AddonsConfig addonsConfig;
+
     public Cluster withAddonsConfig(AddonsConfig addonsConfig) {
         this.addonsConfig = addonsConfig;
         return this;
@@ -29,6 +30,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticatorGroupsConfig")
     public AuthenticatorGroupsConfig authenticatorGroupsConfig;
+
     public Cluster withAuthenticatorGroupsConfig(AuthenticatorGroupsConfig authenticatorGroupsConfig) {
         this.authenticatorGroupsConfig = authenticatorGroupsConfig;
         return this;
@@ -40,6 +42,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autopilot")
     public Autopilot autopilot;
+
     public Cluster withAutopilot(Autopilot autopilot) {
         this.autopilot = autopilot;
         return this;
@@ -51,6 +54,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscaling")
     public ClusterAutoscaling autoscaling;
+
     public Cluster withAutoscaling(ClusterAutoscaling autoscaling) {
         this.autoscaling = autoscaling;
         return this;
@@ -62,6 +66,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryAuthorization")
     public BinaryAuthorization binaryAuthorization;
+
     public Cluster withBinaryAuthorization(BinaryAuthorization binaryAuthorization) {
         this.binaryAuthorization = binaryAuthorization;
         return this;
@@ -73,6 +78,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterIpv4Cidr")
     public String clusterIpv4Cidr;
+
     public Cluster withClusterIpv4Cidr(String clusterIpv4Cidr) {
         this.clusterIpv4Cidr = clusterIpv4Cidr;
         return this;
@@ -84,6 +90,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterTelemetry")
     public ClusterTelemetry clusterTelemetry;
+
     public Cluster withClusterTelemetry(ClusterTelemetry clusterTelemetry) {
         this.clusterTelemetry = clusterTelemetry;
         return this;
@@ -95,6 +102,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public StatusCondition[] conditions;
+
     public Cluster withConditions(StatusCondition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -106,6 +114,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialNodes")
     public ConfidentialNodes confidentialNodes;
+
     public Cluster withConfidentialNodes(ConfidentialNodes confidentialNodes) {
         this.confidentialNodes = confidentialNodes;
         return this;
@@ -117,6 +126,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costManagementConfig")
     public CostManagementConfig costManagementConfig;
+
     public Cluster withCostManagementConfig(CostManagementConfig costManagementConfig) {
         this.costManagementConfig = costManagementConfig;
         return this;
@@ -128,6 +138,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Cluster withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -139,6 +150,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentMasterVersion")
     public String currentMasterVersion;
+
     public Cluster withCurrentMasterVersion(String currentMasterVersion) {
         this.currentMasterVersion = currentMasterVersion;
         return this;
@@ -150,6 +162,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentNodeCount")
     public Integer currentNodeCount;
+
     public Cluster withCurrentNodeCount(Integer currentNodeCount) {
         this.currentNodeCount = currentNodeCount;
         return this;
@@ -161,6 +174,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentNodeVersion")
     public String currentNodeVersion;
+
     public Cluster withCurrentNodeVersion(String currentNodeVersion) {
         this.currentNodeVersion = currentNodeVersion;
         return this;
@@ -172,6 +186,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseEncryption")
     public DatabaseEncryption databaseEncryption;
+
     public Cluster withDatabaseEncryption(DatabaseEncryption databaseEncryption) {
         this.databaseEncryption = databaseEncryption;
         return this;
@@ -183,6 +198,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultMaxPodsConstraint")
     public MaxPodsConstraint defaultMaxPodsConstraint;
+
     public Cluster withDefaultMaxPodsConstraint(MaxPodsConstraint defaultMaxPodsConstraint) {
         this.defaultMaxPodsConstraint = defaultMaxPodsConstraint;
         return this;
@@ -194,6 +210,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Cluster withDescription(String description) {
         this.description = description;
         return this;
@@ -205,6 +222,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableKubernetesAlpha")
     public Boolean enableKubernetesAlpha;
+
     public Cluster withEnableKubernetesAlpha(Boolean enableKubernetesAlpha) {
         this.enableKubernetesAlpha = enableKubernetesAlpha;
         return this;
@@ -216,6 +234,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableTpu")
     public Boolean enableTpu;
+
     public Cluster withEnableTpu(Boolean enableTpu) {
         this.enableTpu = enableTpu;
         return this;
@@ -227,6 +246,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public Cluster withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -238,6 +258,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Cluster withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -249,6 +270,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Cluster withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -260,6 +282,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public Fleet fleet;
+
     public Cluster withFleet(Fleet fleet) {
         this.fleet = fleet;
         return this;
@@ -271,6 +294,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Cluster withId(String id) {
         this.id = id;
         return this;
@@ -282,6 +306,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityServiceConfig")
     public IdentityServiceConfig identityServiceConfig;
+
     public Cluster withIdentityServiceConfig(IdentityServiceConfig identityServiceConfig) {
         this.identityServiceConfig = identityServiceConfig;
         return this;
@@ -293,6 +318,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialClusterVersion")
     public String initialClusterVersion;
+
     public Cluster withInitialClusterVersion(String initialClusterVersion) {
         this.initialClusterVersion = initialClusterVersion;
         return this;
@@ -304,6 +330,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialNodeCount")
     public Integer initialNodeCount;
+
     public Cluster withInitialNodeCount(Integer initialNodeCount) {
         this.initialNodeCount = initialNodeCount;
         return this;
@@ -315,6 +342,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceGroupUrls")
     public String[] instanceGroupUrls;
+
     public Cluster withInstanceGroupUrls(String[] instanceGroupUrls) {
         this.instanceGroupUrls = instanceGroupUrls;
         return this;
@@ -326,6 +354,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAllocationPolicy")
     public IPAllocationPolicy ipAllocationPolicy;
+
     public Cluster withIpAllocationPolicy(IPAllocationPolicy ipAllocationPolicy) {
         this.ipAllocationPolicy = ipAllocationPolicy;
         return this;
@@ -337,6 +366,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public Cluster withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -348,6 +378,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyAbac")
     public LegacyAbac legacyAbac;
+
     public Cluster withLegacyAbac(LegacyAbac legacyAbac) {
         this.legacyAbac = legacyAbac;
         return this;
@@ -359,6 +390,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Cluster withLocation(String location) {
         this.location = location;
         return this;
@@ -370,6 +402,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public String[] locations;
+
     public Cluster withLocations(String[] locations) {
         this.locations = locations;
         return this;
@@ -381,6 +414,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public LoggingConfig loggingConfig;
+
     public Cluster withLoggingConfig(LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -392,6 +426,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingService")
     public String loggingService;
+
     public Cluster withLoggingService(String loggingService) {
         this.loggingService = loggingService;
         return this;
@@ -403,6 +438,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenancePolicy")
     public MaintenancePolicy maintenancePolicy;
+
     public Cluster withMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
         this.maintenancePolicy = maintenancePolicy;
         return this;
@@ -414,6 +450,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("master")
     public java.util.Map<String, Object> master;
+
     public Cluster withMaster(java.util.Map<String, Object> master) {
         this.master = master;
         return this;
@@ -425,6 +462,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterAuth")
     public MasterAuth masterAuth;
+
     public Cluster withMasterAuth(MasterAuth masterAuth) {
         this.masterAuth = masterAuth;
         return this;
@@ -436,6 +474,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterAuthorizedNetworksConfig")
     public MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig;
+
     public Cluster withMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig) {
         this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
         return this;
@@ -447,6 +486,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterIpv4CidrBlock")
     public String masterIpv4CidrBlock;
+
     public Cluster withMasterIpv4CidrBlock(String masterIpv4CidrBlock) {
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;
         return this;
@@ -458,6 +498,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshCertificates")
     public MeshCertificates meshCertificates;
+
     public Cluster withMeshCertificates(MeshCertificates meshCertificates) {
         this.meshCertificates = meshCertificates;
         return this;
@@ -469,6 +510,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringConfig")
     public MonitoringConfig monitoringConfig;
+
     public Cluster withMonitoringConfig(MonitoringConfig monitoringConfig) {
         this.monitoringConfig = monitoringConfig;
         return this;
@@ -480,6 +522,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringService")
     public String monitoringService;
+
     public Cluster withMonitoringService(String monitoringService) {
         this.monitoringService = monitoringService;
         return this;
@@ -491,6 +534,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Cluster withName(String name) {
         this.name = name;
         return this;
@@ -502,6 +546,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Cluster withNetwork(String network) {
         this.network = network;
         return this;
@@ -513,6 +558,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfig")
     public NetworkConfig networkConfig;
+
     public Cluster withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -524,6 +570,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPolicy")
     public NetworkPolicy networkPolicy;
+
     public Cluster withNetworkPolicy(NetworkPolicy networkPolicy) {
         this.networkPolicy = networkPolicy;
         return this;
@@ -535,6 +582,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeConfig")
     public NodeConfig nodeConfig;
+
     public Cluster withNodeConfig(NodeConfig nodeConfig) {
         this.nodeConfig = nodeConfig;
         return this;
@@ -546,6 +594,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeIpv4CidrSize")
     public Integer nodeIpv4CidrSize;
+
     public Cluster withNodeIpv4CidrSize(Integer nodeIpv4CidrSize) {
         this.nodeIpv4CidrSize = nodeIpv4CidrSize;
         return this;
@@ -557,6 +606,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolAutoConfig")
     public NodePoolAutoConfig nodePoolAutoConfig;
+
     public Cluster withNodePoolAutoConfig(NodePoolAutoConfig nodePoolAutoConfig) {
         this.nodePoolAutoConfig = nodePoolAutoConfig;
         return this;
@@ -568,6 +618,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolDefaults")
     public NodePoolDefaults nodePoolDefaults;
+
     public Cluster withNodePoolDefaults(NodePoolDefaults nodePoolDefaults) {
         this.nodePoolDefaults = nodePoolDefaults;
         return this;
@@ -579,6 +630,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePools")
     public NodePool[] nodePools;
+
     public Cluster withNodePools(NodePool[] nodePools) {
         this.nodePools = nodePools;
         return this;
@@ -590,6 +642,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfig")
     public NotificationConfig notificationConfig;
+
     public Cluster withNotificationConfig(NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -601,6 +654,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podSecurityPolicyConfig")
     public PodSecurityPolicyConfig podSecurityPolicyConfig;
+
     public Cluster withPodSecurityPolicyConfig(PodSecurityPolicyConfig podSecurityPolicyConfig) {
         this.podSecurityPolicyConfig = podSecurityPolicyConfig;
         return this;
@@ -612,6 +666,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateCluster")
     public Boolean privateCluster;
+
     public Cluster withPrivateCluster(Boolean privateCluster) {
         this.privateCluster = privateCluster;
         return this;
@@ -623,6 +678,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateClusterConfig")
     public PrivateClusterConfig privateClusterConfig;
+
     public Cluster withPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
         this.privateClusterConfig = privateClusterConfig;
         return this;
@@ -634,6 +690,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectConfig")
     public ProtectConfig protectConfig;
+
     public Cluster withProtectConfig(ProtectConfig protectConfig) {
         this.protectConfig = protectConfig;
         return this;
@@ -645,6 +702,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseChannel")
     public ReleaseChannel releaseChannel;
+
     public Cluster withReleaseChannel(ReleaseChannel releaseChannel) {
         this.releaseChannel = releaseChannel;
         return this;
@@ -656,6 +714,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLabels")
     public java.util.Map<String, String> resourceLabels;
+
     public Cluster withResourceLabels(java.util.Map<String, String> resourceLabels) {
         this.resourceLabels = resourceLabels;
         return this;
@@ -667,6 +726,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUsageExportConfig")
     public ResourceUsageExportConfig resourceUsageExportConfig;
+
     public Cluster withResourceUsageExportConfig(ResourceUsageExportConfig resourceUsageExportConfig) {
         this.resourceUsageExportConfig = resourceUsageExportConfig;
         return this;
@@ -678,6 +738,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Cluster withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -689,6 +750,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicesIpv4Cidr")
     public String servicesIpv4Cidr;
+
     public Cluster withServicesIpv4Cidr(String servicesIpv4Cidr) {
         this.servicesIpv4Cidr = servicesIpv4Cidr;
         return this;
@@ -700,6 +762,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedNodes")
     public ShieldedNodes shieldedNodes;
+
     public Cluster withShieldedNodes(ShieldedNodes shieldedNodes) {
         this.shieldedNodes = shieldedNodes;
         return this;
@@ -711,6 +774,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ClusterStatusEnum status;
+
     public Cluster withStatus(ClusterStatusEnum status) {
         this.status = status;
         return this;
@@ -722,6 +786,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Cluster withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -733,6 +798,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public Cluster withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -744,6 +810,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpuConfig")
     public TpuConfig tpuConfig;
+
     public Cluster withTpuConfig(TpuConfig tpuConfig) {
         this.tpuConfig = tpuConfig;
         return this;
@@ -755,6 +822,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpuIpv4CidrBlock")
     public String tpuIpv4CidrBlock;
+
     public Cluster withTpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
         this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
         return this;
@@ -766,6 +834,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verticalPodAutoscaling")
     public VerticalPodAutoscaling verticalPodAutoscaling;
+
     public Cluster withVerticalPodAutoscaling(VerticalPodAutoscaling verticalPodAutoscaling) {
         this.verticalPodAutoscaling = verticalPodAutoscaling;
         return this;
@@ -777,6 +846,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadAltsConfig")
     public WorkloadALTSConfig workloadAltsConfig;
+
     public Cluster withWorkloadAltsConfig(WorkloadALTSConfig workloadAltsConfig) {
         this.workloadAltsConfig = workloadAltsConfig;
         return this;
@@ -788,6 +858,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadCertificates")
     public WorkloadCertificates workloadCertificates;
+
     public Cluster withWorkloadCertificates(WorkloadCertificates workloadCertificates) {
         this.workloadCertificates = workloadCertificates;
         return this;
@@ -799,6 +870,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadIdentityConfig")
     public WorkloadIdentityConfig workloadIdentityConfig;
+
     public Cluster withWorkloadIdentityConfig(WorkloadIdentityConfig workloadIdentityConfig) {
         this.workloadIdentityConfig = workloadIdentityConfig;
         return this;
@@ -810,9 +882,11 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public Cluster withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public Cluster(){}
 }

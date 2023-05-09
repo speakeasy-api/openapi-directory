@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PosixUser {
     @JsonProperty("Gid")
     public Long gid;
+
     public PosixUser withGid(Long gid) {
         this.gid = gid;
         return this;
@@ -22,6 +23,7 @@ public class PosixUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryGids")
     public Long[] secondaryGids;
+
     public PosixUser withSecondaryGids(Long[] secondaryGids) {
         this.secondaryGids = secondaryGids;
         return this;
@@ -29,9 +31,14 @@ public class PosixUser {
     
     @JsonProperty("Uid")
     public Long uid;
+
     public PosixUser withUid(Long uid) {
         this.uid = uid;
         return this;
     }
     
+    public PosixUser(@JsonProperty("Gid") Long gid, @JsonProperty("Uid") Long uid) {
+        this.gid = gid;
+        this.uid = uid;
+  }
 }

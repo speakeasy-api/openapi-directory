@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddItemForPortfolioRequest {
@@ -12,6 +13,7 @@ public class AddItemForPortfolioRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddItemForPortfolioRequestBody requestBody;
+
     public AddItemForPortfolioRequest withRequestBody(AddItemForPortfolioRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class AddItemForPortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public AddItemForPortfolioRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class AddItemForPortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public AddItemForPortfolioRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class AddItemForPortfolioRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_gid")
     public String portfolioGid;
+
     public AddItemForPortfolioRequest withPortfolioGid(String portfolioGid) {
         this.portfolioGid = portfolioGid;
         return this;
     }
     
+    public AddItemForPortfolioRequest(@JsonProperty("RequestBody") AddItemForPortfolioRequestBody requestBody, @JsonProperty("portfolio_gid") String portfolioGid) {
+        this.requestBody = requestBody;
+        this.portfolioGid = portfolioGid;
+  }
 }

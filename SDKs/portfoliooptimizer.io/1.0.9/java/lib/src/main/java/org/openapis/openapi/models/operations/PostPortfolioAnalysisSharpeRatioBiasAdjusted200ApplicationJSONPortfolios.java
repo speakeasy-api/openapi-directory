@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisSharpeRatioBiasAdjusted200ApplicationJSONPortf
      */
     @JsonProperty("portfolioBiasAdjustedSharpeRatio")
     public Double portfolioBiasAdjustedSharpeRatio;
+
     public PostPortfolioAnalysisSharpeRatioBiasAdjusted200ApplicationJSONPortfolios withPortfolioBiasAdjustedSharpeRatio(Double portfolioBiasAdjustedSharpeRatio) {
         this.portfolioBiasAdjustedSharpeRatio = portfolioBiasAdjustedSharpeRatio;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioBiasAdjusted200ApplicationJSONPortfolios(@JsonProperty("portfolioBiasAdjustedSharpeRatio") Double portfolioBiasAdjustedSharpeRatio) {
+        this.portfolioBiasAdjustedSharpeRatio = portfolioBiasAdjustedSharpeRatio;
+  }
 }

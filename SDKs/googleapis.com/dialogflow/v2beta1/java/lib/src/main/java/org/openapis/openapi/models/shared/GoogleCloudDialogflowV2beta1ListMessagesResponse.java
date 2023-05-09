@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1ListMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public GoogleCloudDialogflowV2beta1Message[] messages;
+
     public GoogleCloudDialogflowV2beta1ListMessagesResponse withMessages(GoogleCloudDialogflowV2beta1Message[] messages) {
         this.messages = messages;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1ListMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2beta1ListMessagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1ListMessagesResponse(){}
 }

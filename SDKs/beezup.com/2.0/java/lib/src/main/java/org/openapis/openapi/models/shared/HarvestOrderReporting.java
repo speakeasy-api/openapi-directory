@@ -23,6 +23,7 @@ public class HarvestOrderReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPForcedStatus")
     public String beezUPForcedStatus;
+
     public HarvestOrderReporting withBeezUPForcedStatus(String beezUPForcedStatus) {
         this.beezUPForcedStatus = beezUPForcedStatus;
         return this;
@@ -34,6 +35,7 @@ public class HarvestOrderReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPStatus")
     public String beezUPStatus;
+
     public HarvestOrderReporting withBeezUPStatus(String beezUPStatus) {
         this.beezUPStatus = beezUPStatus;
         return this;
@@ -47,6 +49,7 @@ public class HarvestOrderReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationUtcDate")
     public OffsetDateTime creationUtcDate;
+
     public HarvestOrderReporting withCreationUtcDate(OffsetDateTime creationUtcDate) {
         this.creationUtcDate = creationUtcDate;
         return this;
@@ -58,6 +61,7 @@ public class HarvestOrderReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public HarvestOrderReporting withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -69,6 +73,7 @@ public class HarvestOrderReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionUUID")
     public String executionUUID;
+
     public HarvestOrderReporting withExecutionUUID(String executionUUID) {
         this.executionUUID = executionUUID;
         return this;
@@ -82,6 +87,7 @@ public class HarvestOrderReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateUtcDate")
     public OffsetDateTime lastUpdateUtcDate;
+
     public HarvestOrderReporting withLastUpdateUtcDate(OffsetDateTime lastUpdateUtcDate) {
         this.lastUpdateUtcDate = lastUpdateUtcDate;
         return this;
@@ -93,6 +99,7 @@ public class HarvestOrderReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceStatus")
     public String marketplaceStatus;
+
     public HarvestOrderReporting withMarketplaceStatus(String marketplaceStatus) {
         this.marketplaceStatus = marketplaceStatus;
         return this;
@@ -104,6 +111,7 @@ public class HarvestOrderReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingStatus")
     public String processingStatus;
+
     public HarvestOrderReporting withProcessingStatus(String processingStatus) {
         this.processingStatus = processingStatus;
         return this;
@@ -115,9 +123,11 @@ public class HarvestOrderReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningMessage")
     public String warningMessage;
+
     public HarvestOrderReporting withWarningMessage(String warningMessage) {
         this.warningMessage = warningMessage;
         return this;
     }
     
+    public HarvestOrderReporting(){}
 }

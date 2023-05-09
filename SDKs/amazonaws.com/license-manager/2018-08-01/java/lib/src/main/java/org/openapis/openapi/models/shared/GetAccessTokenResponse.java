@@ -15,9 +15,11 @@ public class GetAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public GetAccessTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
+    public GetAccessTokenResponse(){}
 }

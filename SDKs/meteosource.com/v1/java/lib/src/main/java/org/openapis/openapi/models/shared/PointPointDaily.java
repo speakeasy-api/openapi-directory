@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointPointDaily {
     @JsonProperty("data")
     public PointPointDailyData[] data;
+
     public PointPointDaily withData(PointPointDailyData[] data) {
         this.data = data;
         return this;
     }
     
+    public PointPointDaily(@JsonProperty("data") PointPointDailyData[] data) {
+        this.data = data;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkflowResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteWorkflowResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWorkflowResponse {
     
     
     public String contentType;
+
     public DeleteWorkflowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkflowResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteWorkflowResponse deleteWorkflowResponse;
+
     public DeleteWorkflowResponse withDeleteWorkflowResponse(org.openapis.openapi.models.shared.DeleteWorkflowResponse deleteWorkflowResponse) {
         this.deleteWorkflowResponse = deleteWorkflowResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteWorkflowResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteWorkflowResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteWorkflowResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteWorkflowResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkflowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteWorkflowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkflowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteWorkflowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

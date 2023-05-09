@@ -15,6 +15,7 @@ public class GetCalendarStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AtTime")
     public String atTime;
+
     public GetCalendarStateResponse withAtTime(String atTime) {
         this.atTime = atTime;
         return this;
@@ -23,6 +24,7 @@ public class GetCalendarStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextTransitionTime")
     public String nextTransitionTime;
+
     public GetCalendarStateResponse withNextTransitionTime(String nextTransitionTime) {
         this.nextTransitionTime = nextTransitionTime;
         return this;
@@ -31,9 +33,11 @@ public class GetCalendarStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CalendarStateEnum state;
+
     public GetCalendarStateResponse withState(CalendarStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GetCalendarStateResponse(){}
 }

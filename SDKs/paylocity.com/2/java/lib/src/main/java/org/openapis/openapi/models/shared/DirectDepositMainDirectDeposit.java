@@ -18,6 +18,7 @@ public class DirectDepositMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public DirectDepositMainDirectDeposit withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -29,6 +30,7 @@ public class DirectDepositMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public String accountType;
+
     public DirectDepositMainDirectDeposit withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -40,6 +42,7 @@ public class DirectDepositMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockSpecial")
     public Boolean blockSpecial;
+
     public DirectDepositMainDirectDeposit withBlockSpecial(Boolean blockSpecial) {
         this.blockSpecial = blockSpecial;
         return this;
@@ -51,6 +54,7 @@ public class DirectDepositMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSkipPreNote")
     public Boolean isSkipPreNote;
+
     public DirectDepositMainDirectDeposit withIsSkipPreNote(Boolean isSkipPreNote) {
         this.isSkipPreNote = isSkipPreNote;
         return this;
@@ -62,6 +66,7 @@ public class DirectDepositMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameOnAccount")
     public String nameOnAccount;
+
     public DirectDepositMainDirectDeposit withNameOnAccount(String nameOnAccount) {
         this.nameOnAccount = nameOnAccount;
         return this;
@@ -73,6 +78,7 @@ public class DirectDepositMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preNoteDate")
     public String preNoteDate;
+
     public DirectDepositMainDirectDeposit withPreNoteDate(String preNoteDate) {
         this.preNoteDate = preNoteDate;
         return this;
@@ -84,9 +90,11 @@ public class DirectDepositMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routingNumber")
     public String routingNumber;
+
     public DirectDepositMainDirectDeposit withRoutingNumber(String routingNumber) {
         this.routingNumber = routingNumber;
         return this;
     }
     
+    public DirectDepositMainDirectDeposit(){}
 }

@@ -21,6 +21,7 @@ public class DescribeKeyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public DescribeKeyResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeKeyResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class DescribeKeyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpireTime")
     public OffsetDateTime expireTime;
+
     public DescribeKeyResponse withExpireTime(OffsetDateTime expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -45,6 +48,7 @@ public class DescribeKeyResponse {
     
     @JsonProperty("Key")
     public String key;
+
     public DescribeKeyResponse withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +56,7 @@ public class DescribeKeyResponse {
     
     @JsonProperty("KeyArn")
     public String keyArn;
+
     public DescribeKeyResponse withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -59,6 +64,7 @@ public class DescribeKeyResponse {
     
     @JsonProperty("KeyName")
     public String keyName;
+
     public DescribeKeyResponse withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -69,6 +75,7 @@ public class DescribeKeyResponse {
      */
     @JsonProperty("Restrictions")
     public ApiKeyRestrictions restrictions;
+
     public DescribeKeyResponse withRestrictions(ApiKeyRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -77,6 +84,7 @@ public class DescribeKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeKeyResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -86,9 +94,19 @@ public class DescribeKeyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public DescribeKeyResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribeKeyResponse(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("ExpireTime") OffsetDateTime expireTime, @JsonProperty("Key") String key, @JsonProperty("KeyArn") String keyArn, @JsonProperty("KeyName") String keyName, @JsonProperty("Restrictions") ApiKeyRestrictions restrictions, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.expireTime = expireTime;
+        this.key = key;
+        this.keyArn = keyArn;
+        this.keyName = keyName;
+        this.restrictions = restrictions;
+        this.updateTime = updateTime;
+  }
 }

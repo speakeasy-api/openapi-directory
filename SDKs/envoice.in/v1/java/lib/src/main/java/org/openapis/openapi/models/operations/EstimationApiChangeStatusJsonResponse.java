@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EstimationApiChangeStatusJsonResponse {
     
     public byte[] body;
+
     public EstimationApiChangeStatusJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class EstimationApiChangeStatusJsonResponse {
     
     
     public String contentType;
+
     public EstimationApiChangeStatusJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class EstimationApiChangeStatusJsonResponse {
      */
     
     public Boolean estimationApiChangeStatusJSON200ApplicationJSONBoolean;
+
     public EstimationApiChangeStatusJsonResponse withEstimationApiChangeStatusJSON200ApplicationJSONBoolean(Boolean estimationApiChangeStatusJSON200ApplicationJSONBoolean) {
         this.estimationApiChangeStatusJSON200ApplicationJSONBoolean = estimationApiChangeStatusJSON200ApplicationJSONBoolean;
         return this;
@@ -36,6 +40,7 @@ public class EstimationApiChangeStatusJsonResponse {
      */
     
     public Boolean estimationApiChangeStatusJSON200TextJSONBoolean;
+
     public EstimationApiChangeStatusJsonResponse withEstimationApiChangeStatusJSON200TextJSONBoolean(Boolean estimationApiChangeStatusJSON200TextJSONBoolean) {
         this.estimationApiChangeStatusJSON200TextJSONBoolean = estimationApiChangeStatusJSON200TextJSONBoolean;
         return this;
@@ -43,6 +48,7 @@ public class EstimationApiChangeStatusJsonResponse {
     
     
     public Integer statusCode;
+
     public EstimationApiChangeStatusJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class EstimationApiChangeStatusJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EstimationApiChangeStatusJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EstimationApiChangeStatusJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class BundleNotificationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_id")
     public Integer bundleId;
+
     public BundleNotificationEntity withBundleId(Integer bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -29,6 +30,7 @@ public class BundleNotificationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public BundleNotificationEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class BundleNotificationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notify_on_registration")
     public Boolean notifyOnRegistration;
+
     public BundleNotificationEntity withNotifyOnRegistration(Boolean notifyOnRegistration) {
         this.notifyOnRegistration = notifyOnRegistration;
         return this;
@@ -51,6 +54,7 @@ public class BundleNotificationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notify_on_upload")
     public Boolean notifyOnUpload;
+
     public BundleNotificationEntity withNotifyOnUpload(Boolean notifyOnUpload) {
         this.notifyOnUpload = notifyOnUpload;
         return this;
@@ -62,9 +66,11 @@ public class BundleNotificationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Integer userId;
+
     public BundleNotificationEntity withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public BundleNotificationEntity(){}
 }

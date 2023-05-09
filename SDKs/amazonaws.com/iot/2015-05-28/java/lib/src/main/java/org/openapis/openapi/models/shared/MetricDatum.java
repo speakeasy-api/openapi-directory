@@ -22,6 +22,7 @@ public class MetricDatum {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public MetricDatum withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -30,9 +31,11 @@ public class MetricDatum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public MetricValue value;
+
     public MetricDatum withValue(MetricValue value) {
         this.value = value;
         return this;
     }
     
+    public MetricDatum(){}
 }

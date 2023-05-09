@@ -15,6 +15,7 @@ public class SvgconvertFileUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blob_name")
     public String blobName;
+
     public SvgconvertFileUrl withBlobName(String blobName) {
         this.blobName = blobName;
         return this;
@@ -23,9 +24,11 @@ public class SvgconvertFileUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blob_url")
     public String blobUrl;
+
     public SvgconvertFileUrl withBlobUrl(String blobUrl) {
         this.blobUrl = blobUrl;
         return this;
     }
     
+    public SvgconvertFileUrl(){}
 }

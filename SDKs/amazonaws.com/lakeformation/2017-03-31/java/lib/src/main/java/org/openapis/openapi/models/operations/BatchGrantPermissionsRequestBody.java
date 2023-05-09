@@ -15,6 +15,7 @@ public class BatchGrantPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public BatchGrantPermissionsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,9 +26,13 @@ public class BatchGrantPermissionsRequestBody {
      */
     @JsonProperty("Entries")
     public org.openapis.openapi.models.shared.BatchPermissionsRequestEntry[] entries;
+
     public BatchGrantPermissionsRequestBody withEntries(org.openapis.openapi.models.shared.BatchPermissionsRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public BatchGrantPermissionsRequestBody(@JsonProperty("Entries") org.openapis.openapi.models.shared.BatchPermissionsRequestEntry[] entries) {
+        this.entries = entries;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1SearchExampleComparisonsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exampleComparisons")
     public GoogleCloudDatalabelingV1beta1ExampleComparison[] exampleComparisons;
+
     public GoogleCloudDatalabelingV1beta1SearchExampleComparisonsResponse withExampleComparisons(GoogleCloudDatalabelingV1beta1ExampleComparison[] exampleComparisons) {
         this.exampleComparisons = exampleComparisons;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1SearchExampleComparisonsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatalabelingV1beta1SearchExampleComparisonsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1SearchExampleComparisonsResponse(){}
 }

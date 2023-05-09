@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TableSummary {
     @JsonProperty("keyspaceName")
     public String keyspaceName;
+
     public TableSummary withKeyspaceName(String keyspaceName) {
         this.keyspaceName = keyspaceName;
         return this;
@@ -19,6 +20,7 @@ public class TableSummary {
     
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public TableSummary withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -26,9 +28,15 @@ public class TableSummary {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public TableSummary withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public TableSummary(@JsonProperty("keyspaceName") String keyspaceName, @JsonProperty("resourceArn") String resourceArn, @JsonProperty("tableName") String tableName) {
+        this.keyspaceName = keyspaceName;
+        this.resourceArn = resourceArn;
+        this.tableName = tableName;
+  }
 }

@@ -18,6 +18,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Document withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsContentUri")
     public String gcsContentUri;
+
     public Document withGcsContentUri(String gcsContentUri) {
         this.gcsContentUri = gcsContentUri;
         return this;
@@ -40,6 +42,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Document withLanguage(String language) {
         this.language = language;
         return this;
@@ -51,9 +54,11 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DocumentTypeEnum type;
+
     public Document withType(DocumentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Document(){}
 }

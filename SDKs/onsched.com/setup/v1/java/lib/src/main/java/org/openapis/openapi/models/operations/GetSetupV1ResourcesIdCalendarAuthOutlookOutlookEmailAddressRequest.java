@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest {
@@ -12,6 +13,7 @@ public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
     public String outlookAuthReturnUrl;
+
     public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
         this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
@@ -32,9 +35,14 @@ public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outlookEmailAddress")
     public String outlookEmailAddress;
+
     public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest withOutlookEmailAddress(String outlookEmailAddress) {
         this.outlookEmailAddress = outlookEmailAddress;
         return this;
     }
     
+    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest(@JsonProperty("id") String id, @JsonProperty("outlookEmailAddress") String outlookEmailAddress) {
+        this.id = id;
+        this.outlookEmailAddress = outlookEmailAddress;
+  }
 }

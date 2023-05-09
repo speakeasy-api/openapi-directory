@@ -15,9 +15,11 @@ public class GetComplianceDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyComplianceDetail")
     public PolicyComplianceDetail policyComplianceDetail;
+
     public GetComplianceDetailResponse withPolicyComplianceDetail(PolicyComplianceDetail policyComplianceDetail) {
         this.policyComplianceDetail = policyComplianceDetail;
         return this;
     }
     
+    public GetComplianceDetailResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidenterpriseProductsListRequest {
@@ -12,6 +13,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidenterpriseProductsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidenterpriseProductsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidenterpriseProductsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=approved")
     public Boolean approved;
+
     public AndroidenterpriseProductsListRequest withApproved(Boolean approved) {
         this.approved = approved;
         return this;
@@ -52,6 +57,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidenterpriseProductsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterpriseId")
     public String enterpriseId;
+
     public AndroidenterpriseProductsListRequest withEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
         return this;
@@ -72,6 +79,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidenterpriseProductsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidenterpriseProductsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public AndroidenterpriseProductsListRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -102,6 +112,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AndroidenterpriseProductsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -112,6 +123,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidenterpriseProductsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidenterpriseProductsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public AndroidenterpriseProductsListRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -142,6 +156,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidenterpriseProductsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public AndroidenterpriseProductsListRequest withToken(String token) {
         this.token = token;
         return this;
@@ -162,6 +178,7 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidenterpriseProductsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,13 @@ public class AndroidenterpriseProductsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidenterpriseProductsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidenterpriseProductsListRequest(@JsonProperty("enterpriseId") String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+  }
 }

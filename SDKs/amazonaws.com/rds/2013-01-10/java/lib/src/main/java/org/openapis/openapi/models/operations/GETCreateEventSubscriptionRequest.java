@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateEventSubscriptionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateEventSubscriptionActionEnum action;
+
     public GETCreateEventSubscriptionRequest withAction(GETCreateEventSubscriptionActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Enabled")
     public Boolean enabled;
+
     public GETCreateEventSubscriptionRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +26,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EventCategories")
     public String[] eventCategories;
+
     public GETCreateEventSubscriptionRequest withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -30,6 +34,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnsTopicArn")
     public String snsTopicArn;
+
     public GETCreateEventSubscriptionRequest withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -37,6 +42,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceIds")
     public String[] sourceIds;
+
     public GETCreateEventSubscriptionRequest withSourceIds(String[] sourceIds) {
         this.sourceIds = sourceIds;
         return this;
@@ -44,6 +50,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceType")
     public String sourceType;
+
     public GETCreateEventSubscriptionRequest withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -51,6 +58,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubscriptionName")
     public String subscriptionName;
+
     public GETCreateEventSubscriptionRequest withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -58,6 +66,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateEventSubscriptionVersionEnum version;
+
     public GETCreateEventSubscriptionRequest withVersion(GETCreateEventSubscriptionVersionEnum version) {
         this.version = version;
         return this;
@@ -65,6 +74,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateEventSubscriptionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -72,6 +82,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateEventSubscriptionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -79,6 +90,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateEventSubscriptionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -86,6 +98,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateEventSubscriptionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -93,6 +106,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateEventSubscriptionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -100,6 +114,7 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateEventSubscriptionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -107,9 +122,16 @@ public class GETCreateEventSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateEventSubscriptionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateEventSubscriptionRequest(@JsonProperty("Action") GETCreateEventSubscriptionActionEnum action, @JsonProperty("SnsTopicArn") String snsTopicArn, @JsonProperty("SubscriptionName") String subscriptionName, @JsonProperty("Version") GETCreateEventSubscriptionVersionEnum version) {
+        this.action = action;
+        this.snsTopicArn = snsTopicArn;
+        this.subscriptionName = subscriptionName;
+        this.version = version;
+  }
 }

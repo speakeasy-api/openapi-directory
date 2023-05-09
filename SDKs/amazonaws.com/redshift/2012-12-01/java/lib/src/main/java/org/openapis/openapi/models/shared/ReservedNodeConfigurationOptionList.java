@@ -15,6 +15,7 @@ public class ReservedNodeConfigurationOptionList {
      */
     
     public ReservedNode sourceReservedNode;
+
     public ReservedNodeConfigurationOptionList withSourceReservedNode(ReservedNode sourceReservedNode) {
         this.sourceReservedNode = sourceReservedNode;
         return this;
@@ -22,6 +23,7 @@ public class ReservedNodeConfigurationOptionList {
     
     
     public Long targetReservedNodeCount;
+
     public ReservedNodeConfigurationOptionList withTargetReservedNodeCount(Long targetReservedNodeCount) {
         this.targetReservedNodeCount = targetReservedNodeCount;
         return this;
@@ -32,9 +34,11 @@ public class ReservedNodeConfigurationOptionList {
      */
     
     public ReservedNodeOffering targetReservedNodeOffering;
+
     public ReservedNodeConfigurationOptionList withTargetReservedNodeOffering(ReservedNodeOffering targetReservedNodeOffering) {
         this.targetReservedNodeOffering = targetReservedNodeOffering;
         return this;
     }
     
+    public ReservedNodeConfigurationOptionList(){}
 }

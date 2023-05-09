@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateThingRuntimeConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateThingRuntimeConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public UpdateThingRuntimeConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateThingRuntimeConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateThingRuntimeConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateThingRuntimeConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateThingRuntimeConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateThingRuntimeConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateThingRuntimeConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateThingRuntimeConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateThingRuntimeConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateThingRuntimeConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateThingRuntimeConfigurationResponse;
+
     public UpdateThingRuntimeConfigurationResponse withUpdateThingRuntimeConfigurationResponse(java.util.Map<String, Object> updateThingRuntimeConfigurationResponse) {
         this.updateThingRuntimeConfigurationResponse = updateThingRuntimeConfigurationResponse;
         return this;
     }
     
+    public UpdateThingRuntimeConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BatchRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeTypesAllowed")
     public String[] computeTypesAllowed;
+
     public BatchRestrictions withComputeTypesAllowed(String[] computeTypesAllowed) {
         this.computeTypesAllowed = computeTypesAllowed;
         return this;
@@ -23,9 +24,11 @@ public class BatchRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumBuildsAllowed")
     public Long maximumBuildsAllowed;
+
     public BatchRestrictions withMaximumBuildsAllowed(Long maximumBuildsAllowed) {
         this.maximumBuildsAllowed = maximumBuildsAllowed;
         return this;
     }
     
+    public BatchRestrictions(){}
 }

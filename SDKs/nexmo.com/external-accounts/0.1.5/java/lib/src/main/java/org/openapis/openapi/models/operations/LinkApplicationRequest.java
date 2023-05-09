@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LinkApplicationRequest {
@@ -12,6 +13,7 @@ public class LinkApplicationRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public LinkApplicationRequestBody requestBody;
+
     public LinkApplicationRequest withRequestBody(LinkApplicationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class LinkApplicationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
     public String externalId;
+
     public LinkApplicationRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -32,9 +35,15 @@ public class LinkApplicationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
     public LinkApplicationProviderEnum provider;
+
     public LinkApplicationRequest withProvider(LinkApplicationProviderEnum provider) {
         this.provider = provider;
         return this;
     }
     
+    public LinkApplicationRequest(@JsonProperty("RequestBody") LinkApplicationRequestBody requestBody, @JsonProperty("external_id") String externalId, @JsonProperty("provider") LinkApplicationProviderEnum provider) {
+        this.requestBody = requestBody;
+        this.externalId = externalId;
+        this.provider = provider;
+  }
 }

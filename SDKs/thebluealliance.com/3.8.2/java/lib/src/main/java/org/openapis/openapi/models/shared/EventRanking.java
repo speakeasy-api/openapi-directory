@@ -18,6 +18,7 @@ public class EventRanking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_stats_info")
     public EventRankingExtraStatsInfo[] extraStatsInfo;
+
     public EventRanking withExtraStatsInfo(EventRankingExtraStatsInfo[] extraStatsInfo) {
         this.extraStatsInfo = extraStatsInfo;
         return this;
@@ -28,6 +29,7 @@ public class EventRanking {
      */
     @JsonProperty("rankings")
     public EventRankingRankings[] rankings;
+
     public EventRanking withRankings(EventRankingRankings[] rankings) {
         this.rankings = rankings;
         return this;
@@ -38,9 +40,14 @@ public class EventRanking {
      */
     @JsonProperty("sort_order_info")
     public EventRankingSortOrderInfo[] sortOrderInfo;
+
     public EventRanking withSortOrderInfo(EventRankingSortOrderInfo[] sortOrderInfo) {
         this.sortOrderInfo = sortOrderInfo;
         return this;
     }
     
+    public EventRanking(@JsonProperty("rankings") EventRankingRankings[] rankings, @JsonProperty("sort_order_info") EventRankingSortOrderInfo[] sortOrderInfo) {
+        this.rankings = rankings;
+        this.sortOrderInfo = sortOrderInfo;
+  }
 }

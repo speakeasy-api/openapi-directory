@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetThemeResponse {
     
     public String contentType;
+
     public GetThemeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetThemeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetThemeResponse getThemeResponse;
+
     public GetThemeResponse withGetThemeResponse(org.openapis.openapi.models.shared.GetThemeResponse getThemeResponse) {
         this.getThemeResponse = getThemeResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetThemeResponse {
      */
     
     public Object internalServerException;
+
     public GetThemeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetThemeResponse {
      */
     
     public Object invalidParameterException;
+
     public GetThemeResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetThemeResponse {
     
     
     public Integer statusCode;
+
     public GetThemeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetThemeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetThemeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetThemeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetThemeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetThemeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

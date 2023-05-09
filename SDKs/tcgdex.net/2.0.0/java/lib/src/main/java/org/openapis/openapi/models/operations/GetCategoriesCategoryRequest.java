@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoriesCategoryRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
     public String category;
+
     public GetCategoriesCategoryRequest withCategory(String category) {
         this.category = category;
         return this;
     }
     
+    public GetCategoriesCategoryRequest(@JsonProperty("category") String category) {
+        this.category = category;
+  }
 }

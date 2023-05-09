@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateUserSettingsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AssociateUserSettingsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class AssociateUserSettingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AssociateUserSettingsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class AssociateUserSettingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AssociateUserSettingsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class AssociateUserSettingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AssociateUserSettingsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class AssociateUserSettingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AssociateUserSettingsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class AssociateUserSettingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AssociateUserSettingsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class AssociateUserSettingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AssociateUserSettingsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class AssociateUserSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portalArn")
     public String portalArn;
+
     public AssociateUserSettingsRequest withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
@@ -71,9 +80,14 @@ public class AssociateUserSettingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userSettingsArn")
     public String userSettingsArn;
+
     public AssociateUserSettingsRequest withUserSettingsArn(String userSettingsArn) {
         this.userSettingsArn = userSettingsArn;
         return this;
     }
     
+    public AssociateUserSettingsRequest(@JsonProperty("portalArn") String portalArn, @JsonProperty("userSettingsArn") String userSettingsArn) {
+        this.portalArn = portalArn;
+        this.userSettingsArn = userSettingsArn;
+  }
 }

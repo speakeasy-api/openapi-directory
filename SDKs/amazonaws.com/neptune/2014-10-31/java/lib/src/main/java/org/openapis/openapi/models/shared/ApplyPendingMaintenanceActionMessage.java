@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ApplyPendingMaintenanceActionMessage {
     
     public String applyAction;
+
     public ApplyPendingMaintenanceActionMessage withApplyAction(String applyAction) {
         this.applyAction = applyAction;
         return this;
@@ -16,6 +17,7 @@ public class ApplyPendingMaintenanceActionMessage {
     
     
     public String optInType;
+
     public ApplyPendingMaintenanceActionMessage withOptInType(String optInType) {
         this.optInType = optInType;
         return this;
@@ -23,9 +25,15 @@ public class ApplyPendingMaintenanceActionMessage {
     
     
     public String resourceIdentifier;
+
     public ApplyPendingMaintenanceActionMessage withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
     }
     
+    public ApplyPendingMaintenanceActionMessage(@JsonProperty("ApplyAction") String applyAction, @JsonProperty("OptInType") String optInType, @JsonProperty("ResourceIdentifier") String resourceIdentifier) {
+        this.applyAction = applyAction;
+        this.optInType = optInType;
+        this.resourceIdentifier = resourceIdentifier;
+  }
 }

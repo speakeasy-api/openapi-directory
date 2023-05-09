@@ -18,9 +18,11 @@ public class WindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAutomaticUpdates")
     public Boolean enableAutomaticUpdates;
+
     public WindowsConfiguration withEnableAutomaticUpdates(Boolean enableAutomaticUpdates) {
         this.enableAutomaticUpdates = enableAutomaticUpdates;
         return this;
     }
     
+    public WindowsConfiguration(){}
 }

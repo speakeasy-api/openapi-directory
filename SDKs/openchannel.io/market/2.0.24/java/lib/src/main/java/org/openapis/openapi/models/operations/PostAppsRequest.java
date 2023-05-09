@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAppsRequest {
@@ -12,6 +13,7 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access")
     public String access;
+
     public PostAppsRequest withAccess(String access) {
         this.access = access;
         return this;
@@ -22,6 +24,7 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allow")
     public String allow;
+
     public PostAppsRequest withAllow(String allow) {
         this.allow = allow;
         return this;
@@ -32,6 +35,7 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributes")
     public String attributes;
+
     public PostAppsRequest withAttributes(String attributes) {
         this.attributes = attributes;
         return this;
@@ -42,6 +46,7 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PostAppsRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -52,6 +57,7 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public PostAppsRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -62,6 +68,7 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public PostAppsRequest withModel(String model) {
         this.model = model;
         return this;
@@ -72,6 +79,7 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public PostAppsRequest withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +90,7 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=restrict")
     public String restrict;
+
     public PostAppsRequest withRestrict(String restrict) {
         this.restrict = restrict;
         return this;
@@ -92,9 +101,14 @@ public class PostAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public PostAppsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostAppsRequest(@JsonProperty("developerId") String developerId, @JsonProperty("name") String name) {
+        this.developerId = developerId;
+        this.name = name;
+  }
 }

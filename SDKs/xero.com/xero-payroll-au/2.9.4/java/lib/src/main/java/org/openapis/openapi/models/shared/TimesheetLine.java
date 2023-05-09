@@ -15,6 +15,7 @@ public class TimesheetLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarningsRateID")
     public String earningsRateID;
+
     public TimesheetLine withEarningsRateID(String earningsRateID) {
         this.earningsRateID = earningsRateID;
         return this;
@@ -26,6 +27,7 @@ public class TimesheetLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfUnits")
     public Double[] numberOfUnits;
+
     public TimesheetLine withNumberOfUnits(Double[] numberOfUnits) {
         this.numberOfUnits = numberOfUnits;
         return this;
@@ -37,6 +39,7 @@ public class TimesheetLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackingItemID")
     public String trackingItemID;
+
     public TimesheetLine withTrackingItemID(String trackingItemID) {
         this.trackingItemID = trackingItemID;
         return this;
@@ -48,9 +51,11 @@ public class TimesheetLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedDateUTC")
     public String updatedDateUTC;
+
     public TimesheetLine withUpdatedDateUTC(String updatedDateUTC) {
         this.updatedDateUTC = updatedDateUTC;
         return this;
     }
     
+    public TimesheetLine(){}
 }

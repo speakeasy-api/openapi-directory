@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateInstanceAccessControlAttributeConfigurationRequest updateInstanceAccessControlAttributeConfigurationRequest;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withUpdateInstanceAccessControlAttributeConfigurationRequest(org.openapis.openapi.models.shared.UpdateInstanceAccessControlAttributeConfigurationRequest updateInstanceAccessControlAttributeConfigurationRequest) {
         this.updateInstanceAccessControlAttributeConfigurationRequest = updateInstanceAccessControlAttributeConfigurationRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum xAmzTarget;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withXAmzTarget(UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public UpdateInstanceAccessControlAttributeConfigurationRequest(@JsonProperty("UpdateInstanceAccessControlAttributeConfigurationRequest") org.openapis.openapi.models.shared.UpdateInstanceAccessControlAttributeConfigurationRequest updateInstanceAccessControlAttributeConfigurationRequest, @JsonProperty("X-Amz-Target") UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum xAmzTarget) {
+        this.updateInstanceAccessControlAttributeConfigurationRequest = updateInstanceAccessControlAttributeConfigurationRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

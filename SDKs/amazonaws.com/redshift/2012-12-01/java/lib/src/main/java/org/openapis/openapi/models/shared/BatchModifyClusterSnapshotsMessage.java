@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BatchModifyClusterSnapshotsMessage {
     
     public Boolean force;
+
     public BatchModifyClusterSnapshotsMessage withForce(Boolean force) {
         this.force = force;
         return this;
@@ -16,6 +17,7 @@ public class BatchModifyClusterSnapshotsMessage {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public BatchModifyClusterSnapshotsMessage withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -23,9 +25,13 @@ public class BatchModifyClusterSnapshotsMessage {
     
     
     public String[] snapshotIdentifierList;
+
     public BatchModifyClusterSnapshotsMessage withSnapshotIdentifierList(String[] snapshotIdentifierList) {
         this.snapshotIdentifierList = snapshotIdentifierList;
         return this;
     }
     
+    public BatchModifyClusterSnapshotsMessage(@JsonProperty("SnapshotIdentifierList") String[] snapshotIdentifierList) {
+        this.snapshotIdentifierList = snapshotIdentifierList;
+  }
 }

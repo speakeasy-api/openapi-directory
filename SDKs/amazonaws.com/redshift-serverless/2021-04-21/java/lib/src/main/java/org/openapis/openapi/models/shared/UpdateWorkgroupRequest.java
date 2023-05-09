@@ -12,6 +12,7 @@ public class UpdateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCapacity")
     public Long baseCapacity;
+
     public UpdateWorkgroupRequest withBaseCapacity(Long baseCapacity) {
         this.baseCapacity = baseCapacity;
         return this;
@@ -20,6 +21,7 @@ public class UpdateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configParameters")
     public ConfigParameter[] configParameters;
+
     public UpdateWorkgroupRequest withConfigParameters(ConfigParameter[] configParameters) {
         this.configParameters = configParameters;
         return this;
@@ -28,6 +30,7 @@ public class UpdateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedVpcRouting")
     public Boolean enhancedVpcRouting;
+
     public UpdateWorkgroupRequest withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -36,6 +39,7 @@ public class UpdateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public UpdateWorkgroupRequest withPort(Long port) {
         this.port = port;
         return this;
@@ -44,6 +48,7 @@ public class UpdateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Boolean publiclyAccessible;
+
     public UpdateWorkgroupRequest withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -52,6 +57,7 @@ public class UpdateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public UpdateWorkgroupRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -60,6 +66,7 @@ public class UpdateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public UpdateWorkgroupRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -67,9 +74,13 @@ public class UpdateWorkgroupRequest {
     
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public UpdateWorkgroupRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public UpdateWorkgroupRequest(@JsonProperty("workgroupName") String workgroupName) {
+        this.workgroupName = workgroupName;
+  }
 }

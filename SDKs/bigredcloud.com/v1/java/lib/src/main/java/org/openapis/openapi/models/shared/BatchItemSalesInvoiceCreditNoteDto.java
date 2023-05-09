@@ -12,6 +12,7 @@ public class BatchItemSalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public SalesInvoiceCreditNoteDto item;
+
     public BatchItemSalesInvoiceCreditNoteDto withItem(SalesInvoiceCreditNoteDto item) {
         this.item = item;
         return this;
@@ -25,9 +26,11 @@ public class BatchItemSalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opCode")
     public BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum opCode;
+
     public BatchItemSalesInvoiceCreditNoteDto withOpCode(BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum opCode) {
         this.opCode = opCode;
         return this;
     }
     
+    public BatchItemSalesInvoiceCreditNoteDto(){}
 }

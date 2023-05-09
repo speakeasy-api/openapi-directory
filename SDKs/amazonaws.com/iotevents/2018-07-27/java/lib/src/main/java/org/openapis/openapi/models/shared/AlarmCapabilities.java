@@ -15,6 +15,7 @@ public class AlarmCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgeFlow")
     public AcknowledgeFlow acknowledgeFlow;
+
     public AlarmCapabilities withAcknowledgeFlow(AcknowledgeFlow acknowledgeFlow) {
         this.acknowledgeFlow = acknowledgeFlow;
         return this;
@@ -23,9 +24,11 @@ public class AlarmCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initializationConfiguration")
     public InitializationConfiguration initializationConfiguration;
+
     public AlarmCapabilities withInitializationConfiguration(InitializationConfiguration initializationConfiguration) {
         this.initializationConfiguration = initializationConfiguration;
         return this;
     }
     
+    public AlarmCapabilities(){}
 }

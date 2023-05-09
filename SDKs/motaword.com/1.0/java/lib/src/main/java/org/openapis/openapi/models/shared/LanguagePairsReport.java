@@ -15,6 +15,7 @@ public class LanguagePairsReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public LanguagePairsReport withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class LanguagePairsReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report")
     public LanguagePairsReportReport[] report;
+
     public LanguagePairsReport withReport(LanguagePairsReportReport[] report) {
         this.report = report;
         return this;
     }
     
+    public LanguagePairsReport(){}
 }

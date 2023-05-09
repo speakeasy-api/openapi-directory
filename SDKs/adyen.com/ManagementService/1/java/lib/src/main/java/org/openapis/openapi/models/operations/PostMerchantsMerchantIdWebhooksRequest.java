@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdWebhooksRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateMerchantWebhookRequest createMerchantWebhookRequest;
+
     public PostMerchantsMerchantIdWebhooksRequest withCreateMerchantWebhookRequest(org.openapis.openapi.models.shared.CreateMerchantWebhookRequest createMerchantWebhookRequest) {
         this.createMerchantWebhookRequest = createMerchantWebhookRequest;
         return this;
@@ -19,9 +21,13 @@ public class PostMerchantsMerchantIdWebhooksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PostMerchantsMerchantIdWebhooksRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    public PostMerchantsMerchantIdWebhooksRequest(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

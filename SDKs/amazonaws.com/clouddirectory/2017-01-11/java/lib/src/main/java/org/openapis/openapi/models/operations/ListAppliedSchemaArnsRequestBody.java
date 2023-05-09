@@ -14,6 +14,7 @@ public class ListAppliedSchemaArnsRequestBody {
      */
     @JsonProperty("DirectoryArn")
     public String directoryArn;
+
     public ListAppliedSchemaArnsRequestBody withDirectoryArn(String directoryArn) {
         this.directoryArn = directoryArn;
         return this;
@@ -25,6 +26,7 @@ public class ListAppliedSchemaArnsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAppliedSchemaArnsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +38,7 @@ public class ListAppliedSchemaArnsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAppliedSchemaArnsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,9 +50,13 @@ public class ListAppliedSchemaArnsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public ListAppliedSchemaArnsRequestBody withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public ListAppliedSchemaArnsRequestBody(@JsonProperty("DirectoryArn") String directoryArn) {
+        this.directoryArn = directoryArn;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurations {
     
     public DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum bgpStatus;
+
     public DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurations withBgpStatus(DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum bgpStatus) {
         this.bgpStatus = bgpStatus;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersC
     
     
     public String peerAddress;
+
     public DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurations withPeerAddress(String peerAddress) {
         this.peerAddress = peerAddress;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersC
     
     
     public Long peerAsn;
+
     public DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurations withPeerAsn(Long peerAsn) {
         this.peerAsn = peerAsn;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersC
     
     
     public String transitGatewayAddress;
+
     public DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurations withTransitGatewayAddress(String transitGatewayAddress) {
         this.transitGatewayAddress = transitGatewayAddress;
         return this;
@@ -40,9 +44,11 @@ public class DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersC
     
     
     public Long transitGatewayAsn;
+
     public DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurations withTransitGatewayAsn(Long transitGatewayAsn) {
         this.transitGatewayAsn = transitGatewayAsn;
         return this;
     }
     
+    public DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurations(){}
 }

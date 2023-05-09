@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecordRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public GetRecordRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -16,6 +18,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetRecordRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -23,6 +26,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
     public String[] fields;
+
     public GetRecordRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -30,6 +34,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
     public String bucketId;
+
     public GetRecordRequest withBucketId(String bucketId) {
         this.bucketId = bucketId;
         return this;
@@ -37,6 +42,7 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public String collectionId;
+
     public GetRecordRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -44,9 +50,15 @@ public class GetRecordRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetRecordRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetRecordRequest(@JsonProperty("bucket_id") String bucketId, @JsonProperty("collection_id") String collectionId, @JsonProperty("id") String id) {
+        this.bucketId = bucketId;
+        this.collectionId = collectionId;
+        this.id = id;
+  }
 }

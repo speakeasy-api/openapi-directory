@@ -12,6 +12,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayedAttributes")
     public String[] displayedAttributes;
+
     public UpdateSettingsRequestBody withDisplayedAttributes(String[] displayedAttributes) {
         this.displayedAttributes = displayedAttributes;
         return this;
@@ -20,6 +21,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterableAttributes")
     public String[] filterableAttributes;
+
     public UpdateSettingsRequestBody withFilterableAttributes(String[] filterableAttributes) {
         this.filterableAttributes = filterableAttributes;
         return this;
@@ -28,6 +30,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchableAttributes")
     public String[] searchableAttributes;
+
     public UpdateSettingsRequestBody withSearchableAttributes(String[] searchableAttributes) {
         this.searchableAttributes = searchableAttributes;
         return this;
@@ -36,6 +39,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortableAttributes")
     public String[] sortableAttributes;
+
     public UpdateSettingsRequestBody withSortableAttributes(String[] sortableAttributes) {
         this.sortableAttributes = sortableAttributes;
         return this;
@@ -44,9 +48,11 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopWords")
     public String[] stopWords;
+
     public UpdateSettingsRequestBody withStopWords(String[] stopWords) {
         this.stopWords = stopWords;
         return this;
     }
     
+    public UpdateSettingsRequestBody(){}
 }

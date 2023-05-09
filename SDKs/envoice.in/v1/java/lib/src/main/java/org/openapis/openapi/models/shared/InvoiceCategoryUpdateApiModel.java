@@ -17,6 +17,7 @@ public class InvoiceCategoryUpdateApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public InvoiceCategoryUpdateApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class InvoiceCategoryUpdateApiModel {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public InvoiceCategoryUpdateApiModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InvoiceCategoryUpdateApiModel(){}
 }

@@ -25,6 +25,7 @@ public class Segment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Segment withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -36,6 +37,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public Segment withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -47,6 +49,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Segment withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +61,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Segment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -69,6 +73,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Segment withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +85,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public Segment withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -91,6 +97,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Segment withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -102,6 +109,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Segment withType(String type) {
         this.type = type;
         return this;
@@ -115,9 +123,11 @@ public class Segment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public Segment withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public Segment(){}
 }

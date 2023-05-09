@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateImageResult {
     
     public String imageId;
+
     public CreateImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public CreateImageResult(){}
 }

@@ -12,6 +12,7 @@ public class GetFeaturedImageCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_hint")
     public GetFeaturedImageCollectionListAssetHintEnum assetHint;
+
     public GetFeaturedImageCollectionListRequest withAssetHint(GetFeaturedImageCollectionListAssetHintEnum assetHint) {
         this.assetHint = assetHint;
         return this;
@@ -22,6 +23,7 @@ public class GetFeaturedImageCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetFeaturedImageCollectionListEmbedEnum embed;
+
     public GetFeaturedImageCollectionListRequest withEmbed(GetFeaturedImageCollectionListEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -32,9 +34,11 @@ public class GetFeaturedImageCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetFeaturedImageCollectionListTypeEnum[] type;
+
     public GetFeaturedImageCollectionListRequest withType(GetFeaturedImageCollectionListTypeEnum[] type) {
         this.type = type;
         return this;
     }
     
+    public GetFeaturedImageCollectionListRequest(){}
 }

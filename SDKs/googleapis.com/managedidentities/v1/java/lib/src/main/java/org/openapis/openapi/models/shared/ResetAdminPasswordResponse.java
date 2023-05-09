@@ -18,9 +18,11 @@ public class ResetAdminPasswordResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public ResetAdminPasswordResponse withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public ResetAdminPasswordResponse(){}
 }

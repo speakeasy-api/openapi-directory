@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecuritycenterProjectsBigQueryExportsCreateResponse {
     
     public String contentType;
+
     public SecuritycenterProjectsBigQueryExportsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SecuritycenterProjectsBigQueryExportsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1BigQueryExport googleCloudSecuritycenterV1BigQueryExport;
+
     public SecuritycenterProjectsBigQueryExportsCreateResponse withGoogleCloudSecuritycenterV1BigQueryExport(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1BigQueryExport googleCloudSecuritycenterV1BigQueryExport) {
         this.googleCloudSecuritycenterV1BigQueryExport = googleCloudSecuritycenterV1BigQueryExport;
         return this;
@@ -26,6 +29,7 @@ public class SecuritycenterProjectsBigQueryExportsCreateResponse {
     
     
     public Integer statusCode;
+
     public SecuritycenterProjectsBigQueryExportsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SecuritycenterProjectsBigQueryExportsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecuritycenterProjectsBigQueryExportsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SecuritycenterProjectsBigQueryExportsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

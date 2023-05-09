@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectAccessControlsPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ObjectAccessControl objectAccessControl;
+
     public StorageObjectAccessControlsPatchRequest withObjectAccessControl(org.openapis.openapi.models.shared.ObjectAccessControl objectAccessControl) {
         this.objectAccessControl = objectAccessControl;
         return this;
@@ -19,6 +21,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageObjectAccessControlsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
     public String bucket;
+
     public StorageObjectAccessControlsPatchRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -39,6 +43,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entity")
     public String entity;
+
     public StorageObjectAccessControlsPatchRequest withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -49,6 +54,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageObjectAccessControlsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=generation")
     public String generation;
+
     public StorageObjectAccessControlsPatchRequest withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -69,6 +76,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageObjectAccessControlsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageObjectAccessControlsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String object;
+
     public StorageObjectAccessControlsPatchRequest withObject(String object) {
         this.object = object;
         return this;
@@ -99,6 +109,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageObjectAccessControlsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageObjectAccessControlsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,9 +131,15 @@ public class StorageObjectAccessControlsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageObjectAccessControlsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public StorageObjectAccessControlsPatchRequest(@JsonProperty("bucket") String bucket, @JsonProperty("entity") String entity, @JsonProperty("object") String object) {
+        this.bucket = bucket;
+        this.entity = entity;
+        this.object = object;
+  }
 }

@@ -12,9 +12,11 @@ public class SearchContentMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lines")
     public SearchLine[] lines;
+
     public SearchContentMatch withLines(SearchLine[] lines) {
         this.lines = lines;
         return this;
     }
     
+    public SearchContentMatch(){}
 }

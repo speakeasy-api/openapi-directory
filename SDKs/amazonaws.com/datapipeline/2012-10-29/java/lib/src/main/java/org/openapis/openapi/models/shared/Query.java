@@ -15,9 +15,11 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectors")
     public Selector[] selectors;
+
     public Query withSelectors(Selector[] selectors) {
         this.selectors = selectors;
         return this;
     }
     
+    public Query(){}
 }

@@ -53,12 +53,10 @@ public class SegmentQueryFilters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSegmentQueryFiltersConfigUsingGETResponse res = new org.openapis.openapi.models.operations.GETSegmentQueryFiltersConfigUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETSegmentQueryFiltersConfigUsingGETResponse res = new org.openapis.openapi.models.operations.GETSegmentQueryFiltersConfigUsingGETResponse(contentType, httpRes.statusCode()) {{
             segmentQueryFilterConfigModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,12 +99,10 @@ public class SegmentQueryFilters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSegmentQueryFiltersUsingGETResponse res = new org.openapis.openapi.models.operations.GETSegmentQueryFiltersUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETSegmentQueryFiltersUsingGETResponse res = new org.openapis.openapi.models.operations.GETSegmentQueryFiltersUsingGETResponse(contentType, httpRes.statusCode()) {{
             segmentQueryFilterListModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,12 +145,10 @@ public class SegmentQueryFilters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSegmentQueryStandardFiltersUsingGETResponse res = new org.openapis.openapi.models.operations.GETSegmentQueryStandardFiltersUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETSegmentQueryStandardFiltersUsingGETResponse res = new org.openapis.openapi.models.operations.GETSegmentQueryStandardFiltersUsingGETResponse(contentType, httpRes.statusCode()) {{
             segmentQueryFilterListModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,12 +196,10 @@ public class SegmentQueryFilters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSegmentQueryFiltersConfigUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateSegmentQueryFiltersConfigUsingPUTResponse() {{
+        org.openapis.openapi.models.operations.UpdateSegmentQueryFiltersConfigUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateSegmentQueryFiltersConfigUsingPUTResponse(contentType, httpRes.statusCode()) {{
             segmentQueryFilterConfigModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

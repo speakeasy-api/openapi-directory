@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateConnectionFromLagResponse {
@@ -12,6 +13,7 @@ public class DisassociateConnectionFromLagResponse {
      */
     
     public org.openapis.openapi.models.shared.Connection connection;
+
     public DisassociateConnectionFromLagResponse withConnection(org.openapis.openapi.models.shared.Connection connection) {
         this.connection = connection;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateConnectionFromLagResponse {
     
     
     public String contentType;
+
     public DisassociateConnectionFromLagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateConnectionFromLagResponse {
      */
     
     public Object directConnectClientException;
+
     public DisassociateConnectionFromLagResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateConnectionFromLagResponse {
      */
     
     public Object directConnectServerException;
+
     public DisassociateConnectionFromLagResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateConnectionFromLagResponse {
     
     
     public Integer statusCode;
+
     public DisassociateConnectionFromLagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DisassociateConnectionFromLagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateConnectionFromLagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateConnectionFromLagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

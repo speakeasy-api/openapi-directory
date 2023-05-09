@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeExportResponse {
     
     public String contentType;
+
     public DescribeExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeExportResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeExportOutput describeExportOutput;
+
     public DescribeExportResponse withDescribeExportOutput(org.openapis.openapi.models.shared.DescribeExportOutput describeExportOutput) {
         this.describeExportOutput = describeExportOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeExportResponse {
      */
     
     public Object exportNotFoundException;
+
     public DescribeExportResponse withExportNotFoundException(Object exportNotFoundException) {
         this.exportNotFoundException = exportNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeExportResponse {
      */
     
     public Object internalServerError;
+
     public DescribeExportResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeExportResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeExportResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeExportResponse {
     
     
     public Integer statusCode;
+
     public DescribeExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

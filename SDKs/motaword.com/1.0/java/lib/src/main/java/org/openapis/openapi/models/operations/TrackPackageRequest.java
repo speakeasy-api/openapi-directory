@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrackPackageRequest {
@@ -12,6 +13,7 @@ public class TrackPackageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public TrackPackageRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class TrackPackageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TrackPackageRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public TrackPackageRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

@@ -12,9 +12,11 @@ public class KkidWishlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
     public Long kidUserId;
+
     public KkidWishlistGetRequest withKidUserId(Long kidUserId) {
         this.kidUserId = kidUserId;
         return this;
     }
     
+    public KkidWishlistGetRequest(){}
 }

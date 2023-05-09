@@ -15,6 +15,7 @@ public class PortProbeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalIpDetails")
     public ActionLocalIpDetails localIpDetails;
+
     public PortProbeDetail withLocalIpDetails(ActionLocalIpDetails localIpDetails) {
         this.localIpDetails = localIpDetails;
         return this;
@@ -23,6 +24,7 @@ public class PortProbeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPortDetails")
     public ActionLocalPortDetails localPortDetails;
+
     public PortProbeDetail withLocalPortDetails(ActionLocalPortDetails localPortDetails) {
         this.localPortDetails = localPortDetails;
         return this;
@@ -31,9 +33,11 @@ public class PortProbeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoteIpDetails")
     public ActionRemoteIpDetails remoteIpDetails;
+
     public PortProbeDetail withRemoteIpDetails(ActionRemoteIpDetails remoteIpDetails) {
         this.remoteIpDetails = remoteIpDetails;
         return this;
     }
     
+    public PortProbeDetail(){}
 }

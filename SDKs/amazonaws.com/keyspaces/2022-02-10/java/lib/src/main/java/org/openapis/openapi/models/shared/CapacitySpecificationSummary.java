@@ -22,6 +22,7 @@ public class CapacitySpecificationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateToPayPerRequestTimestamp")
     public OffsetDateTime lastUpdateToPayPerRequestTimestamp;
+
     public CapacitySpecificationSummary withLastUpdateToPayPerRequestTimestamp(OffsetDateTime lastUpdateToPayPerRequestTimestamp) {
         this.lastUpdateToPayPerRequestTimestamp = lastUpdateToPayPerRequestTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class CapacitySpecificationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readCapacityUnits")
     public Long readCapacityUnits;
+
     public CapacitySpecificationSummary withReadCapacityUnits(Long readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
@@ -37,6 +39,7 @@ public class CapacitySpecificationSummary {
     
     @JsonProperty("throughputMode")
     public ThroughputModeEnum throughputMode;
+
     public CapacitySpecificationSummary withThroughputMode(ThroughputModeEnum throughputMode) {
         this.throughputMode = throughputMode;
         return this;
@@ -45,9 +48,13 @@ public class CapacitySpecificationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeCapacityUnits")
     public Long writeCapacityUnits;
+
     public CapacitySpecificationSummary withWriteCapacityUnits(Long writeCapacityUnits) {
         this.writeCapacityUnits = writeCapacityUnits;
         return this;
     }
     
+    public CapacitySpecificationSummary(@JsonProperty("throughputMode") ThroughputModeEnum throughputMode) {
+        this.throughputMode = throughputMode;
+  }
 }

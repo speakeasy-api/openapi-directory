@@ -12,6 +12,7 @@ public class BundleResourceRelationshipsActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public BundleResourceRelationshipsActionsData data;
+
     public BundleResourceRelationshipsActions withData(BundleResourceRelationshipsActionsData data) {
         this.data = data;
         return this;
@@ -20,9 +21,11 @@ public class BundleResourceRelationshipsActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, Object> links;
+
     public BundleResourceRelationshipsActions withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
     }
     
+    public BundleResourceRelationshipsActions(){}
 }

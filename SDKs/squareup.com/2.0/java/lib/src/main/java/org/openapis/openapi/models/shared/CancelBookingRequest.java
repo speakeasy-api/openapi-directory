@@ -20,6 +20,7 @@ public class CancelBookingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booking_version")
     public Long bookingVersion;
+
     public CancelBookingRequest withBookingVersion(Long bookingVersion) {
         this.bookingVersion = bookingVersion;
         return this;
@@ -31,9 +32,11 @@ public class CancelBookingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CancelBookingRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CancelBookingRequest(){}
 }

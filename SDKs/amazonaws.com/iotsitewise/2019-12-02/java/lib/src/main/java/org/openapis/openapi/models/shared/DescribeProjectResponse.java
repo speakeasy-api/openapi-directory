@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeProjectResponse {
     @JsonProperty("portalId")
     public String portalId;
+
     public DescribeProjectResponse withPortalId(String portalId) {
         this.portalId = portalId;
         return this;
@@ -26,6 +27,7 @@ public class DescribeProjectResponse {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public DescribeProjectResponse withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -35,6 +37,7 @@ public class DescribeProjectResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("projectCreationDate")
     public OffsetDateTime projectCreationDate;
+
     public DescribeProjectResponse withProjectCreationDate(OffsetDateTime projectCreationDate) {
         this.projectCreationDate = projectCreationDate;
         return this;
@@ -43,6 +46,7 @@ public class DescribeProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectDescription")
     public String projectDescription;
+
     public DescribeProjectResponse withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -50,6 +54,7 @@ public class DescribeProjectResponse {
     
     @JsonProperty("projectId")
     public String projectId;
+
     public DescribeProjectResponse withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -59,6 +64,7 @@ public class DescribeProjectResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("projectLastUpdateDate")
     public OffsetDateTime projectLastUpdateDate;
+
     public DescribeProjectResponse withProjectLastUpdateDate(OffsetDateTime projectLastUpdateDate) {
         this.projectLastUpdateDate = projectLastUpdateDate;
         return this;
@@ -66,9 +72,18 @@ public class DescribeProjectResponse {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public DescribeProjectResponse withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     
+    public DescribeProjectResponse(@JsonProperty("portalId") String portalId, @JsonProperty("projectArn") String projectArn, @JsonProperty("projectCreationDate") OffsetDateTime projectCreationDate, @JsonProperty("projectId") String projectId, @JsonProperty("projectLastUpdateDate") OffsetDateTime projectLastUpdateDate, @JsonProperty("projectName") String projectName) {
+        this.portalId = portalId;
+        this.projectArn = projectArn;
+        this.projectCreationDate = projectCreationDate;
+        this.projectId = projectId;
+        this.projectLastUpdateDate = projectLastUpdateDate;
+        this.projectName = projectName;
+  }
 }

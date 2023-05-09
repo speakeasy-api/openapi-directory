@@ -21,6 +21,7 @@ public class Error405PISCANC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error405PISCANC withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error405PISCANC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error405PISCANCAdditionalErrors[] additionalErrors;
+
     public Error405PISCANC withAdditionalErrors(Error405PISCANCAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error405PISCANC {
      */
     @JsonProperty("code")
     public MessageCode405PISCANCEnum code;
+
     public Error405PISCANC withCode(MessageCode405PISCANCEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error405PISCANC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error405PISCANC withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error405PISCANC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error405PISCANC withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error405PISCANC {
      */
     @JsonProperty("type")
     public String type;
+
     public Error405PISCANC withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error405PISCANC(@JsonProperty("code") MessageCode405PISCANCEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

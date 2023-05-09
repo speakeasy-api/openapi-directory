@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesAccidentStatsCasualty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("age")
     public Integer age;
+
     public TflApiPresentationEntitiesAccidentStatsCasualty withAge(Integer age) {
         this.age = age;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesAccidentStatsCasualty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageBand")
     public String ageBand;
+
     public TflApiPresentationEntitiesAccidentStatsCasualty withAgeBand(String ageBand) {
         this.ageBand = ageBand;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesAccidentStatsCasualty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("class")
     public String class_;
+
     public TflApiPresentationEntitiesAccidentStatsCasualty withClass(String class_) {
         this.class_ = class_;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesAccidentStatsCasualty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public TflApiPresentationEntitiesAccidentStatsCasualty withMode(String mode) {
         this.mode = mode;
         return this;
@@ -44,9 +48,11 @@ public class TflApiPresentationEntitiesAccidentStatsCasualty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public TflApiPresentationEntitiesAccidentStatsCasualty withSeverity(String severity) {
         this.severity = severity;
         return this;
     }
     
+    public TflApiPresentationEntitiesAccidentStatsCasualty(){}
 }

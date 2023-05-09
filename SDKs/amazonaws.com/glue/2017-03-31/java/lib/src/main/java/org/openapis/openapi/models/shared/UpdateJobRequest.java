@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateJobRequest {
     @JsonProperty("JobName")
     public String jobName;
+
     public UpdateJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -16,9 +17,14 @@ public class UpdateJobRequest {
     
     @JsonProperty("JobUpdate")
     public JobUpdate jobUpdate;
+
     public UpdateJobRequest withJobUpdate(JobUpdate jobUpdate) {
         this.jobUpdate = jobUpdate;
         return this;
     }
     
+    public UpdateJobRequest(@JsonProperty("JobName") String jobName, @JsonProperty("JobUpdate") JobUpdate jobUpdate) {
+        this.jobName = jobName;
+        this.jobUpdate = jobUpdate;
+  }
 }

@@ -18,20 +18,35 @@ public class GoogleCloudRunV2ResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuIdle")
     public Boolean cpuIdle;
+
     public GoogleCloudRunV2ResourceRequirements withCpuIdle(Boolean cpuIdle) {
         this.cpuIdle = cpuIdle;
         return this;
     }
     
     /**
-     * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+     * Only \u00b4memory\u00b4 and 'cpu' are supported. Notes: * The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory' values and syntax, go to https://cloud.google.com/run/docs/configuring/memory-limits
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limits")
     public java.util.Map<String, String> limits;
+
     public GoogleCloudRunV2ResourceRequirements withLimits(java.util.Map<String, String> limits) {
         this.limits = limits;
         return this;
     }
     
+    /**
+     * Determines whether CPU should be boosted on startup of a new container instance above the requested CPU threshold, this can help reduce cold-start latency.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("startupCpuBoost")
+    public Boolean startupCpuBoost;
+
+    public GoogleCloudRunV2ResourceRequirements withStartupCpuBoost(Boolean startupCpuBoost) {
+        this.startupCpuBoost = startupCpuBoost;
+        return this;
+    }
+    
+    public GoogleCloudRunV2ResourceRequirements(){}
 }

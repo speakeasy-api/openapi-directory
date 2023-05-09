@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetApiV1BlocksRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1BlocksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -16,6 +17,7 @@ public class GetApiV1BlocksRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
     public String maxId;
+
     public GetApiV1BlocksRequest withMaxId(String maxId) {
         this.maxId = maxId;
         return this;
@@ -23,9 +25,11 @@ public class GetApiV1BlocksRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
     public String sinceId;
+
     public GetApiV1BlocksRequest withSinceId(String sinceId) {
         this.sinceId = sinceId;
         return this;
     }
     
+    public GetApiV1BlocksRequest(){}
 }

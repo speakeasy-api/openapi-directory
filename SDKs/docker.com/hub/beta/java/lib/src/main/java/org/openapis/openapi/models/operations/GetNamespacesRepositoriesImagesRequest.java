@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespacesRepositoriesImagesRequest {
@@ -16,6 +17,7 @@ public class GetNamespacesRepositoriesImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active_from")
     public String activeFrom;
+
     public GetNamespacesRepositoriesImagesRequest withActiveFrom(String activeFrom) {
         this.activeFrom = activeFrom;
         return this;
@@ -29,6 +31,7 @@ public class GetNamespacesRepositoriesImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currently_tagged")
     public Boolean currentlyTagged;
+
     public GetNamespacesRepositoriesImagesRequest withCurrentlyTagged(Boolean currentlyTagged) {
         this.currentlyTagged = currentlyTagged;
         return this;
@@ -39,6 +42,7 @@ public class GetNamespacesRepositoriesImagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public GetNamespacesRepositoriesImagesRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -52,6 +56,7 @@ public class GetNamespacesRepositoriesImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
     public GetNamespacesRepositoriesImagesOrderingEnum ordering;
+
     public GetNamespacesRepositoriesImagesRequest withOrdering(GetNamespacesRepositoriesImagesOrderingEnum ordering) {
         this.ordering = ordering;
         return this;
@@ -62,6 +67,7 @@ public class GetNamespacesRepositoriesImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetNamespacesRepositoriesImagesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -72,6 +78,7 @@ public class GetNamespacesRepositoriesImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetNamespacesRepositoriesImagesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -82,6 +89,7 @@ public class GetNamespacesRepositoriesImagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
     public String repository;
+
     public GetNamespacesRepositoriesImagesRequest withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -92,9 +100,14 @@ public class GetNamespacesRepositoriesImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetNamespacesRepositoriesImagesStatusEnum status;
+
     public GetNamespacesRepositoriesImagesRequest withStatus(GetNamespacesRepositoriesImagesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetNamespacesRepositoriesImagesRequest(@JsonProperty("namespace") String namespace, @JsonProperty("repository") String repository) {
+        this.namespace = namespace;
+        this.repository = repository;
+  }
 }

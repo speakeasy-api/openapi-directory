@@ -15,6 +15,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRules {
      */
     @JsonProperty("context")
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext context;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRules withContext(PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext context) {
         this.context = context;
         return this;
@@ -25,6 +26,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRules {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRules withId(Long id) {
         this.id = id;
         return this;
@@ -35,9 +37,15 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRules {
      */
     @JsonProperty("percentualModifier")
     public Double percentualModifier;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRules withPercentualModifier(Double percentualModifier) {
         this.percentualModifier = percentualModifier;
         return this;
     }
     
+    public PutPricingPipelineCatalogPriceTableIdRequestBodyRules(@JsonProperty("context") PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext context, @JsonProperty("id") Long id, @JsonProperty("percentualModifier") Double percentualModifier) {
+        this.context = context;
+        this.id = id;
+        this.percentualModifier = percentualModifier;
+  }
 }

@@ -15,9 +15,11 @@ public class ListAggregatedUtterancesRequestBodyAggregationDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeAggregationDuration")
     public org.openapis.openapi.models.shared.RelativeAggregationDuration relativeAggregationDuration;
+
     public ListAggregatedUtterancesRequestBodyAggregationDuration withRelativeAggregationDuration(org.openapis.openapi.models.shared.RelativeAggregationDuration relativeAggregationDuration) {
         this.relativeAggregationDuration = relativeAggregationDuration;
         return this;
     }
     
+    public ListAggregatedUtterancesRequestBodyAggregationDuration(){}
 }

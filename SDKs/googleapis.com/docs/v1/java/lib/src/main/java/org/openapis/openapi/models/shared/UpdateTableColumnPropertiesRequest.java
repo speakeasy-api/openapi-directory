@@ -18,6 +18,7 @@ public class UpdateTableColumnPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnIndices")
     public Integer[] columnIndices;
+
     public UpdateTableColumnPropertiesRequest withColumnIndices(Integer[] columnIndices) {
         this.columnIndices = columnIndices;
         return this;
@@ -29,6 +30,7 @@ public class UpdateTableColumnPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateTableColumnPropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class UpdateTableColumnPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableColumnProperties")
     public TableColumnProperties tableColumnProperties;
+
     public UpdateTableColumnPropertiesRequest withTableColumnProperties(TableColumnProperties tableColumnProperties) {
         this.tableColumnProperties = tableColumnProperties;
         return this;
@@ -51,9 +54,11 @@ public class UpdateTableColumnPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableStartLocation")
     public Location tableStartLocation;
+
     public UpdateTableColumnPropertiesRequest withTableStartLocation(Location tableStartLocation) {
         this.tableStartLocation = tableStartLocation;
         return this;
     }
     
+    public UpdateTableColumnPropertiesRequest(){}
 }

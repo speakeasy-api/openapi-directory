@@ -8,14 +8,14 @@ import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * Our API uses a REST based design, leverages the JSON data format, and relies upon HTTPS for transport. We respond with meaningful HTTP response codes and if an error occurs, we include error details in the response body.  API Documentation is at https://api.youneedabudget.com
+ * Our API uses a REST based design, leverages the JSON data format, and relies upon HTTPS for transport. We respond with meaningful HTTP response codes and if an error occurs, we include error details in the response body.  API Documentation is at https://api.ynab.com
  */
 public class SDK {
 	/**
 	 * SERVERS contains the list of server urls available to the SDK.
 	 */
 	public static final String[] SERVERS = {
-        "https://api.youneedabudget.com/v1",
+        "https://api.ynab.com/v1",
 	};
   	
     /**
@@ -33,7 +33,7 @@ public class SDK {
      */
     public Months months;
     /**
-     * When you enter a transaction and specify a payee on the YNAB mobile apps, the GPS coordinates for that location are stored, with your permission, so that the next time you are in the same place (like the Grocery store) we can pre-populate nearby payees for you!  It\u2019s handy and saves you time.  This resource makes these locations available.  Locations will not be available for all payees.
+     * When you enter a transaction and specify a payee on the YNAB mobile apps, the GPS coordinates for that location are stored, with your permission, so that the next time you are in the same place (like the Grocery store) we can pre-populate nearby payees for you!  It’s handy and saves you time.  This resource makes these locations available.  Locations will not be available for all payees.
      */
     public PayeeLocations payeeLocations;
     /**
@@ -152,6 +152,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.accounts = new Accounts(

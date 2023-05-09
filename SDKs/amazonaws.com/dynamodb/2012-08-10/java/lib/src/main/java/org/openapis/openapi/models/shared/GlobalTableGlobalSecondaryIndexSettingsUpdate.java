@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GlobalTableGlobalSecondaryIndexSettingsUpdate {
     @JsonProperty("IndexName")
     public String indexName;
+
     public GlobalTableGlobalSecondaryIndexSettingsUpdate withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -22,6 +23,7 @@ public class GlobalTableGlobalSecondaryIndexSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedWriteCapacityAutoScalingSettingsUpdate")
     public AutoScalingSettingsUpdate provisionedWriteCapacityAutoScalingSettingsUpdate;
+
     public GlobalTableGlobalSecondaryIndexSettingsUpdate withProvisionedWriteCapacityAutoScalingSettingsUpdate(AutoScalingSettingsUpdate provisionedWriteCapacityAutoScalingSettingsUpdate) {
         this.provisionedWriteCapacityAutoScalingSettingsUpdate = provisionedWriteCapacityAutoScalingSettingsUpdate;
         return this;
@@ -30,9 +32,13 @@ public class GlobalTableGlobalSecondaryIndexSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedWriteCapacityUnits")
     public Long provisionedWriteCapacityUnits;
+
     public GlobalTableGlobalSecondaryIndexSettingsUpdate withProvisionedWriteCapacityUnits(Long provisionedWriteCapacityUnits) {
         this.provisionedWriteCapacityUnits = provisionedWriteCapacityUnits;
         return this;
     }
     
+    public GlobalTableGlobalSecondaryIndexSettingsUpdate(@JsonProperty("IndexName") String indexName) {
+        this.indexName = indexName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FolderSettingsPostRawResponse {
     
     public byte[] body;
+
     public FolderSettingsPostRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class FolderSettingsPostRawResponse {
     
     
     public String contentType;
+
     public FolderSettingsPostRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FolderSettingsPostRawResponse {
      */
     
     public org.openapis.openapi.models.shared.FolderMenuItem folderMenuItem;
+
     public FolderSettingsPostRawResponse withFolderMenuItem(org.openapis.openapi.models.shared.FolderMenuItem folderMenuItem) {
         this.folderMenuItem = folderMenuItem;
         return this;
@@ -33,6 +37,7 @@ public class FolderSettingsPostRawResponse {
     
     
     public Integer statusCode;
+
     public FolderSettingsPostRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class FolderSettingsPostRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FolderSettingsPostRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FolderSettingsPostRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

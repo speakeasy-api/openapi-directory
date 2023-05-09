@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingFloodlightActivitiesUpdateResponse {
     
     public String contentType;
+
     public DfareportingFloodlightActivitiesUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingFloodlightActivitiesUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.FloodlightActivity floodlightActivity;
+
     public DfareportingFloodlightActivitiesUpdateResponse withFloodlightActivity(org.openapis.openapi.models.shared.FloodlightActivity floodlightActivity) {
         this.floodlightActivity = floodlightActivity;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingFloodlightActivitiesUpdateResponse {
     
     
     public Integer statusCode;
+
     public DfareportingFloodlightActivitiesUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingFloodlightActivitiesUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingFloodlightActivitiesUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingFloodlightActivitiesUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

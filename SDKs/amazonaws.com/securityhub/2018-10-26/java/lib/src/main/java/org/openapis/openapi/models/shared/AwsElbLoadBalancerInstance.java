@@ -15,9 +15,11 @@ public class AwsElbLoadBalancerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public AwsElbLoadBalancerInstance withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public AwsElbLoadBalancerInstance(){}
 }

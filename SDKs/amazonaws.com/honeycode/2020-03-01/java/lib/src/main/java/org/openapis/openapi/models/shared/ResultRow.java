@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResultRow {
     @JsonProperty("dataItems")
     public DataItem[] dataItems;
+
     public ResultRow withDataItems(DataItem[] dataItems) {
         this.dataItems = dataItems;
         return this;
@@ -22,9 +23,13 @@ public class ResultRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowId")
     public String rowId;
+
     public ResultRow withRowId(String rowId) {
         this.rowId = rowId;
         return this;
     }
     
+    public ResultRow(@JsonProperty("dataItems") DataItem[] dataItems) {
+        this.dataItems = dataItems;
+  }
 }

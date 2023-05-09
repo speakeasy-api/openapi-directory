@@ -12,6 +12,7 @@ public class GetAppsVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public GetAppsVersionsRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -22,6 +23,7 @@ public class GetAppsVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAppsVersionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetAppsVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Long pageNumber;
+
     public GetAppsVersionsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -42,6 +45,7 @@ public class GetAppsVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetAppsVersionsRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -52,9 +56,11 @@ public class GetAppsVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetAppsVersionsRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetAppsVersionsRequest(){}
 }

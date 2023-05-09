@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebriskProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.WebriskProjectsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.WebriskProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.WebriskProjectsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebriskProjectsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.WebriskProjectsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.WebriskProjectsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.WebriskProjectsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebriskProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.WebriskProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.WebriskProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.WebriskProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebriskProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.WebriskProjectsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.WebriskProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.WebriskProjectsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebriskProjectsSubmissionsCreateResponse res = new org.openapis.openapi.models.operations.WebriskProjectsSubmissionsCreateResponse() {{
+        org.openapis.openapi.models.operations.WebriskProjectsSubmissionsCreateResponse res = new org.openapis.openapi.models.operations.WebriskProjectsSubmissionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudWebriskV1Submission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

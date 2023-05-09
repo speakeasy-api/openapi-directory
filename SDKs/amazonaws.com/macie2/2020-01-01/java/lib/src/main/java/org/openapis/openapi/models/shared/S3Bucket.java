@@ -20,6 +20,7 @@ public class S3Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsUnencryptedObjectUploads")
     public AllowsUnencryptedObjectUploadsEnum allowsUnencryptedObjectUploads;
+
     public S3Bucket withAllowsUnencryptedObjectUploads(AllowsUnencryptedObjectUploadsEnum allowsUnencryptedObjectUploads) {
         this.allowsUnencryptedObjectUploads = allowsUnencryptedObjectUploads;
         return this;
@@ -28,6 +29,7 @@ public class S3Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public S3Bucket withArn(String arn) {
         this.arn = arn;
         return this;
@@ -38,6 +40,7 @@ public class S3Bucket {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public S3Bucket withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class S3Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultServerSideEncryption")
     public ServerSideEncryption defaultServerSideEncryption;
+
     public S3Bucket withDefaultServerSideEncryption(ServerSideEncryption defaultServerSideEncryption) {
         this.defaultServerSideEncryption = defaultServerSideEncryption;
         return this;
@@ -54,6 +58,7 @@ public class S3Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public S3Bucket withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class S3Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public S3BucketOwner owner;
+
     public S3Bucket withOwner(S3BucketOwner owner) {
         this.owner = owner;
         return this;
@@ -70,6 +76,7 @@ public class S3Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicAccess")
     public BucketPublicAccess publicAccess;
+
     public S3Bucket withPublicAccess(BucketPublicAccess publicAccess) {
         this.publicAccess = publicAccess;
         return this;
@@ -78,9 +85,11 @@ public class S3Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public KeyValuePair[] tags;
+
     public S3Bucket withTags(KeyValuePair[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public S3Bucket(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetAssetPropertyAggregatesResponse {
     @JsonProperty("errorEntries")
     public BatchGetAssetPropertyAggregatesErrorEntry[] errorEntries;
+
     public BatchGetAssetPropertyAggregatesResponse withErrorEntries(BatchGetAssetPropertyAggregatesErrorEntry[] errorEntries) {
         this.errorEntries = errorEntries;
         return this;
@@ -22,6 +23,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public BatchGetAssetPropertyAggregatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,6 +31,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
     
     @JsonProperty("skippedEntries")
     public BatchGetAssetPropertyAggregatesSkippedEntry[] skippedEntries;
+
     public BatchGetAssetPropertyAggregatesResponse withSkippedEntries(BatchGetAssetPropertyAggregatesSkippedEntry[] skippedEntries) {
         this.skippedEntries = skippedEntries;
         return this;
@@ -36,9 +39,15 @@ public class BatchGetAssetPropertyAggregatesResponse {
     
     @JsonProperty("successEntries")
     public BatchGetAssetPropertyAggregatesSuccessEntry[] successEntries;
+
     public BatchGetAssetPropertyAggregatesResponse withSuccessEntries(BatchGetAssetPropertyAggregatesSuccessEntry[] successEntries) {
         this.successEntries = successEntries;
         return this;
     }
     
+    public BatchGetAssetPropertyAggregatesResponse(@JsonProperty("errorEntries") BatchGetAssetPropertyAggregatesErrorEntry[] errorEntries, @JsonProperty("skippedEntries") BatchGetAssetPropertyAggregatesSkippedEntry[] skippedEntries, @JsonProperty("successEntries") BatchGetAssetPropertyAggregatesSuccessEntry[] successEntries) {
+        this.errorEntries = errorEntries;
+        this.skippedEntries = skippedEntries;
+        this.successEntries = successEntries;
+  }
 }

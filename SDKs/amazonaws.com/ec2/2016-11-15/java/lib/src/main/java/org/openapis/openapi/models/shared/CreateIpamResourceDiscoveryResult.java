@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamResourceDiscoveryResult {
     
     public CreateIpamResourceDiscoveryResultIpamResourceDiscovery ipamResourceDiscovery;
+
     public CreateIpamResourceDiscoveryResult withIpamResourceDiscovery(CreateIpamResourceDiscoveryResultIpamResourceDiscovery ipamResourceDiscovery) {
         this.ipamResourceDiscovery = ipamResourceDiscovery;
         return this;
     }
     
+    public CreateIpamResourceDiscoveryResult(){}
 }

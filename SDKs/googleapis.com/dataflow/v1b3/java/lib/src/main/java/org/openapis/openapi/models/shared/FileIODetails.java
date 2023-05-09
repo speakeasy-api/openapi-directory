@@ -18,9 +18,11 @@ public class FileIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePattern")
     public String filePattern;
+
     public FileIODetails withFilePattern(String filePattern) {
         this.filePattern = filePattern;
         return this;
     }
     
+    public FileIODetails(){}
 }

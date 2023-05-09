@@ -70,11 +70,9 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesResponse res = new org.openapis.openapi.models.operations.GetCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesResponse res = new org.openapis.openapi.models.operations.GetCategoriesResponse(contentType, httpRes.statusCode()) {{
             listCategoriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesIdResponse res = new org.openapis.openapi.models.operations.GetCategoriesIdResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesIdResponse res = new org.openapis.openapi.models.operations.GetCategoriesIdResponse(contentType, httpRes.statusCode()) {{
             getCategoryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,10 +157,8 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchTransactionsTransactionIdRelationshipsCategoryResponse res = new org.openapis.openapi.models.operations.PatchTransactionsTransactionIdRelationshipsCategoryResponse() {{
+        org.openapis.openapi.models.operations.PatchTransactionsTransactionIdRelationshipsCategoryResponse res = new org.openapis.openapi.models.operations.PatchTransactionsTransactionIdRelationshipsCategoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

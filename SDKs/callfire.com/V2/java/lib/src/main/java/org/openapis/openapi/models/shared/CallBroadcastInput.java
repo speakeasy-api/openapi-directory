@@ -18,6 +18,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answeringMachineConfig")
     public CallBroadcastAnsweringMachineConfigEnum answeringMachineConfig;
+
     public CallBroadcastInput withAnsweringMachineConfig(CallBroadcastAnsweringMachineConfigEnum answeringMachineConfig) {
         this.answeringMachineConfig = answeringMachineConfig;
         return this;
@@ -29,6 +30,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialplanXml")
     public String dialplanXml;
+
     public CallBroadcastInput withDialplanXml(String dialplanXml) {
         this.dialplanXml = dialplanXml;
         return this;
@@ -40,6 +42,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public CallBroadcastInput withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -51,6 +54,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CallBroadcastInput withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public CallBroadcastInput withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localTimeRestriction")
     public LocalTimeRestriction localTimeRestriction;
+
     public CallBroadcastInput withLocalTimeRestriction(LocalTimeRestriction localTimeRestriction) {
         this.localTimeRestriction = localTimeRestriction;
         return this;
@@ -84,6 +90,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxActive")
     public Integer maxActive;
+
     public CallBroadcastInput withMaxActive(Integer maxActive) {
         this.maxActive = maxActive;
         return this;
@@ -95,6 +102,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxActiveTransfers")
     public Integer maxActiveTransfers;
+
     public CallBroadcastInput withMaxActiveTransfers(Integer maxActiveTransfers) {
         this.maxActiveTransfers = maxActiveTransfers;
         return this;
@@ -106,6 +114,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CallBroadcastInput withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipients")
     public Recipient[] recipients;
+
     public CallBroadcastInput withRecipients(Recipient[] recipients) {
         this.recipients = recipients;
         return this;
@@ -128,6 +138,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resumeNextDay")
     public Boolean resumeNextDay;
+
     public CallBroadcastInput withResumeNextDay(Boolean resumeNextDay) {
         this.resumeNextDay = resumeNextDay;
         return this;
@@ -139,6 +150,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryConfig")
     public RetryConfig retryConfig;
+
     public CallBroadcastInput withRetryConfig(RetryConfig retryConfig) {
         this.retryConfig = retryConfig;
         return this;
@@ -150,6 +162,7 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedules")
     public Schedule[] schedules;
+
     public CallBroadcastInput withSchedules(Schedule[] schedules) {
         this.schedules = schedules;
         return this;
@@ -161,9 +174,11 @@ public class CallBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sounds")
     public CallBroadcastSounds sounds;
+
     public CallBroadcastInput withSounds(CallBroadcastSounds sounds) {
         this.sounds = sounds;
         return this;
     }
     
+    public CallBroadcastInput(){}
 }

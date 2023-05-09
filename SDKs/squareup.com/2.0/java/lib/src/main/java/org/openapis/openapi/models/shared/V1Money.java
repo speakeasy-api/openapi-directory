@@ -16,6 +16,7 @@ public class V1Money {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public V1Money withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -24,9 +25,11 @@ public class V1Money {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public V1Money withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
     
+    public V1Money(){}
 }

@@ -18,6 +18,7 @@ public class EventResponseChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public EventResponseChange withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class EventResponseChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("added_value")
     public Object addedValue;
+
     public EventResponseChange withAddedValue(Object addedValue) {
         this.addedValue = addedValue;
         return this;
@@ -40,6 +42,7 @@ public class EventResponseChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public EventResponseChange withField(String field) {
         this.field = field;
         return this;
@@ -51,6 +54,7 @@ public class EventResponseChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_value")
     public Object newValue;
+
     public EventResponseChange withNewValue(Object newValue) {
         this.newValue = newValue;
         return this;
@@ -62,9 +66,11 @@ public class EventResponseChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removed_value")
     public Object removedValue;
+
     public EventResponseChange withRemovedValue(Object removedValue) {
         this.removedValue = removedValue;
         return this;
     }
     
+    public EventResponseChange(){}
 }

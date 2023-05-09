@@ -12,6 +12,7 @@ public class TrendingHashtagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=green")
     public Boolean green;
+
     public TrendingHashtagsRequest withGreen(Boolean green) {
         this.green = green;
         return this;
@@ -22,9 +23,11 @@ public class TrendingHashtagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latin")
     public Boolean latin;
+
     public TrendingHashtagsRequest withLatin(Boolean latin) {
         this.latin = latin;
         return this;
     }
     
+    public TrendingHashtagsRequest(){}
 }

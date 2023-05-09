@@ -12,9 +12,13 @@ public class DescribeDeviceEc2InstancesRequestBody {
      */
     @JsonProperty("instanceIds")
     public String[] instanceIds;
+
     public DescribeDeviceEc2InstancesRequestBody withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
     
+    public DescribeDeviceEc2InstancesRequestBody(@JsonProperty("instanceIds") String[] instanceIds) {
+        this.instanceIds = instanceIds;
+  }
 }

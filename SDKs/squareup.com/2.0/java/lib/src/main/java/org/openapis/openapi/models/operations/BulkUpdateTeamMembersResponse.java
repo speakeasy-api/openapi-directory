@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BulkUpdateTeamMembersResponse {
@@ -12,6 +13,7 @@ public class BulkUpdateTeamMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.BulkUpdateTeamMembersResponse bulkUpdateTeamMembersResponse;
+
     public BulkUpdateTeamMembersResponse withBulkUpdateTeamMembersResponse(org.openapis.openapi.models.shared.BulkUpdateTeamMembersResponse bulkUpdateTeamMembersResponse) {
         this.bulkUpdateTeamMembersResponse = bulkUpdateTeamMembersResponse;
         return this;
@@ -19,6 +21,7 @@ public class BulkUpdateTeamMembersResponse {
     
     
     public String contentType;
+
     public BulkUpdateTeamMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BulkUpdateTeamMembersResponse {
     
     
     public Integer statusCode;
+
     public BulkUpdateTeamMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BulkUpdateTeamMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BulkUpdateTeamMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BulkUpdateTeamMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

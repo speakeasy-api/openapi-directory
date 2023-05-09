@@ -12,6 +12,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Constituency")
     public String constituency;
+
     public MemberForDate withConstituency(String constituency) {
         this.constituency = constituency;
         return this;
@@ -20,6 +21,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListAs")
     public String listAs;
+
     public MemberForDate withListAs(String listAs) {
         this.listAs = listAs;
         return this;
@@ -28,6 +30,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MnisId")
     public Integer mnisId;
+
     public MemberForDate withMnisId(Integer mnisId) {
         this.mnisId = mnisId;
         return this;
@@ -36,6 +39,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MemberForDate withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Party")
     public String party;
+
     public MemberForDate withParty(String party) {
         this.party = party;
         return this;
@@ -52,6 +57,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartyColour")
     public String partyColour;
+
     public MemberForDate withPartyColour(String partyColour) {
         this.partyColour = partyColour;
         return this;
@@ -60,6 +66,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartyId")
     public Integer partyId;
+
     public MemberForDate withPartyId(Integer partyId) {
         this.partyId = partyId;
         return this;
@@ -68,6 +75,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhotoUrl")
     public String photoUrl;
+
     public MemberForDate withPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
         return this;
@@ -76,6 +84,7 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PimsId")
     public Integer pimsId;
+
     public MemberForDate withPimsId(Integer pimsId) {
         this.pimsId = pimsId;
         return this;
@@ -84,9 +93,11 @@ public class MemberForDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public MemberForDate withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public MemberForDate(){}
 }

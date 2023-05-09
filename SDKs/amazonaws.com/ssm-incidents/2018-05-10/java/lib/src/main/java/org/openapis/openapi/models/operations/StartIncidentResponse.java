@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartIncidentResponse {
@@ -12,6 +13,7 @@ public class StartIncidentResponse {
      */
     
     public Object accessDeniedException;
+
     public StartIncidentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartIncidentResponse {
      */
     
     public Object conflictException;
+
     public StartIncidentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartIncidentResponse {
     
     
     public String contentType;
+
     public StartIncidentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartIncidentResponse {
      */
     
     public Object internalServerException;
+
     public StartIncidentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartIncidentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartIncidentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartIncidentResponse {
      */
     
     public org.openapis.openapi.models.shared.StartIncidentOutput startIncidentOutput;
+
     public StartIncidentResponse withStartIncidentOutput(org.openapis.openapi.models.shared.StartIncidentOutput startIncidentOutput) {
         this.startIncidentOutput = startIncidentOutput;
         return this;
@@ -66,6 +73,7 @@ public class StartIncidentResponse {
     
     
     public Integer statusCode;
+
     public StartIncidentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartIncidentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartIncidentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartIncidentResponse {
      */
     
     public Object throttlingException;
+
     public StartIncidentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartIncidentResponse {
      */
     
     public Object validationException;
+
     public StartIncidentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartIncidentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

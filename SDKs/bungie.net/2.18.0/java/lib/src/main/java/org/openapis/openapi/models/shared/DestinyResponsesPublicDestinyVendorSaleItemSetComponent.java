@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesPublicDestinyVendorSaleItemSetComponent {
     
     public java.util.Map<String, DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent> saleItems;
+
     public DestinyResponsesPublicDestinyVendorSaleItemSetComponent withSaleItems(java.util.Map<String, DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent> saleItems) {
         this.saleItems = saleItems;
         return this;
     }
     
+    public DestinyResponsesPublicDestinyVendorSaleItemSetComponent(){}
 }

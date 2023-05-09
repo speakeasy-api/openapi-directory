@@ -18,6 +18,7 @@ public class ExistenceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ExistenceFilter withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class ExistenceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public Integer targetId;
+
     public ExistenceFilter withTargetId(Integer targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public ExistenceFilter(){}
 }

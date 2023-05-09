@@ -12,6 +12,7 @@ public class FetchFieldsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Limit")
     public Integer xLimit;
+
     public FetchFieldsRequest withXLimit(Integer xLimit) {
         this.xLimit = xLimit;
         return this;
@@ -22,6 +23,7 @@ public class FetchFieldsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Next-Token")
     public String xNextToken;
+
     public FetchFieldsRequest withXNextToken(String xNextToken) {
         this.xNextToken = xNextToken;
         return this;
@@ -32,9 +34,11 @@ public class FetchFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldName")
     public String fieldName;
+
     public FetchFieldsRequest withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
     
+    public FetchFieldsRequest(){}
 }

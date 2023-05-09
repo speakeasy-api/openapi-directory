@@ -18,6 +18,7 @@ public class HeldAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public HeldAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class HeldAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public HeldAccount withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class HeldAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public HeldAccount withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -51,6 +54,7 @@ public class HeldAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holdTime")
     public String holdTime;
+
     public HeldAccount withHoldTime(String holdTime) {
         this.holdTime = holdTime;
         return this;
@@ -62,9 +66,11 @@ public class HeldAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public HeldAccount withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public HeldAccount(){}
 }

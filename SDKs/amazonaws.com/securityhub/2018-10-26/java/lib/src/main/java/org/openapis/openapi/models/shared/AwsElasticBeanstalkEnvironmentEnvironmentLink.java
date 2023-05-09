@@ -15,6 +15,7 @@ public class AwsElasticBeanstalkEnvironmentEnvironmentLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentName")
     public String environmentName;
+
     public AwsElasticBeanstalkEnvironmentEnvironmentLink withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -23,9 +24,11 @@ public class AwsElasticBeanstalkEnvironmentEnvironmentLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkName")
     public String linkName;
+
     public AwsElasticBeanstalkEnvironmentEnvironmentLink withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
     }
     
+    public AwsElasticBeanstalkEnvironmentEnvironmentLink(){}
 }

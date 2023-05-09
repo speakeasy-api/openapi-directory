@@ -15,9 +15,11 @@ public class RuleEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleRuleEvaluation")
     public SimpleRuleEvaluation simpleRuleEvaluation;
+
     public RuleEvaluation withSimpleRuleEvaluation(SimpleRuleEvaluation simpleRuleEvaluation) {
         this.simpleRuleEvaluation = simpleRuleEvaluation;
         return this;
     }
     
+    public RuleEvaluation(){}
 }

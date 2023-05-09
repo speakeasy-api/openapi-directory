@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuggestRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public SuggestRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class SuggestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public SuggestRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class SuggestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public SuggestRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class SuggestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public SuggestRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class SuggestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public SuggestRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class SuggestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public SuggestRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class SuggestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public SuggestRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -58,6 +66,7 @@ public class SuggestRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public SuggestFormatEnum format;
+
     public SuggestRequest withFormat(SuggestFormatEnum format) {
         this.format = format;
         return this;
@@ -65,6 +74,7 @@ public class SuggestRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public SuggestPrettyEnum pretty;
+
     public SuggestRequest withPretty(SuggestPrettyEnum pretty) {
         this.pretty = pretty;
         return this;
@@ -75,6 +85,7 @@ public class SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SuggestRequest withQ(String q) {
         this.q = q;
         return this;
@@ -85,6 +96,7 @@ public class SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public SuggestRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -95,9 +107,16 @@ public class SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=suggester")
     public String suggester;
+
     public SuggestRequest withSuggester(String suggester) {
         this.suggester = suggester;
         return this;
     }
     
+    public SuggestRequest(@JsonProperty("format") SuggestFormatEnum format, @JsonProperty("pretty") SuggestPrettyEnum pretty, @JsonProperty("q") String q, @JsonProperty("suggester") String suggester) {
+        this.format = format;
+        this.pretty = pretty;
+        this.q = q;
+        this.suggester = suggester;
+  }
 }

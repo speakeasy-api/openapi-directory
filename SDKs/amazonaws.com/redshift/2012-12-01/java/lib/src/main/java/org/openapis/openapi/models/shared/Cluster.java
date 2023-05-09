@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Cluster {
     
     public Boolean allowVersionUpgrade;
+
     public Cluster withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         return this;
@@ -19,6 +20,7 @@ public class Cluster {
     
     
     public AquaConfiguration aquaConfiguration;
+
     public Cluster withAquaConfiguration(AquaConfiguration aquaConfiguration) {
         this.aquaConfiguration = aquaConfiguration;
         return this;
@@ -26,6 +28,7 @@ public class Cluster {
     
     
     public Long automatedSnapshotRetentionPeriod;
+
     public Cluster withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
@@ -33,6 +36,7 @@ public class Cluster {
     
     
     public String availabilityZone;
+
     public Cluster withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -40,6 +44,7 @@ public class Cluster {
     
     
     public String availabilityZoneRelocationStatus;
+
     public Cluster withAvailabilityZoneRelocationStatus(String availabilityZoneRelocationStatus) {
         this.availabilityZoneRelocationStatus = availabilityZoneRelocationStatus;
         return this;
@@ -47,6 +52,7 @@ public class Cluster {
     
     
     public String clusterAvailabilityStatus;
+
     public Cluster withClusterAvailabilityStatus(String clusterAvailabilityStatus) {
         this.clusterAvailabilityStatus = clusterAvailabilityStatus;
         return this;
@@ -54,6 +60,7 @@ public class Cluster {
     
     
     public OffsetDateTime clusterCreateTime;
+
     public Cluster withClusterCreateTime(OffsetDateTime clusterCreateTime) {
         this.clusterCreateTime = clusterCreateTime;
         return this;
@@ -61,6 +68,7 @@ public class Cluster {
     
     
     public String clusterIdentifier;
+
     public Cluster withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -68,6 +76,7 @@ public class Cluster {
     
     
     public String clusterNamespaceArn;
+
     public Cluster withClusterNamespaceArn(String clusterNamespaceArn) {
         this.clusterNamespaceArn = clusterNamespaceArn;
         return this;
@@ -75,6 +84,7 @@ public class Cluster {
     
     
     public ClusterNode[] clusterNodes;
+
     public Cluster withClusterNodes(ClusterNode[] clusterNodes) {
         this.clusterNodes = clusterNodes;
         return this;
@@ -82,6 +92,7 @@ public class Cluster {
     
     
     public ClusterParameterGroupStatusList[] clusterParameterGroups;
+
     public Cluster withClusterParameterGroups(ClusterParameterGroupStatusList[] clusterParameterGroups) {
         this.clusterParameterGroups = clusterParameterGroups;
         return this;
@@ -89,6 +100,7 @@ public class Cluster {
     
     
     public String clusterPublicKey;
+
     public Cluster withClusterPublicKey(String clusterPublicKey) {
         this.clusterPublicKey = clusterPublicKey;
         return this;
@@ -96,6 +108,7 @@ public class Cluster {
     
     
     public String clusterRevisionNumber;
+
     public Cluster withClusterRevisionNumber(String clusterRevisionNumber) {
         this.clusterRevisionNumber = clusterRevisionNumber;
         return this;
@@ -103,6 +116,7 @@ public class Cluster {
     
     
     public ClusterSecurityGroupMembershipList[] clusterSecurityGroups;
+
     public Cluster withClusterSecurityGroups(ClusterSecurityGroupMembershipList[] clusterSecurityGroups) {
         this.clusterSecurityGroups = clusterSecurityGroups;
         return this;
@@ -110,6 +124,7 @@ public class Cluster {
     
     
     public ClusterSnapshotCopyStatus clusterSnapshotCopyStatus;
+
     public Cluster withClusterSnapshotCopyStatus(ClusterSnapshotCopyStatus clusterSnapshotCopyStatus) {
         this.clusterSnapshotCopyStatus = clusterSnapshotCopyStatus;
         return this;
@@ -117,6 +132,7 @@ public class Cluster {
     
     
     public String clusterStatus;
+
     public Cluster withClusterStatus(String clusterStatus) {
         this.clusterStatus = clusterStatus;
         return this;
@@ -124,6 +140,7 @@ public class Cluster {
     
     
     public String clusterSubnetGroupName;
+
     public Cluster withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -131,6 +148,7 @@ public class Cluster {
     
     
     public String clusterVersion;
+
     public Cluster withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -138,6 +156,7 @@ public class Cluster {
     
     
     public String dbName;
+
     public Cluster withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -145,6 +164,7 @@ public class Cluster {
     
     
     public DataTransferProgress dataTransferProgress;
+
     public Cluster withDataTransferProgress(DataTransferProgress dataTransferProgress) {
         this.dataTransferProgress = dataTransferProgress;
         return this;
@@ -152,6 +172,7 @@ public class Cluster {
     
     
     public String defaultIamRoleArn;
+
     public Cluster withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -159,6 +180,7 @@ public class Cluster {
     
     
     public DeferredMaintenanceWindowsList[] deferredMaintenanceWindows;
+
     public Cluster withDeferredMaintenanceWindows(DeferredMaintenanceWindowsList[] deferredMaintenanceWindows) {
         this.deferredMaintenanceWindows = deferredMaintenanceWindows;
         return this;
@@ -166,6 +188,7 @@ public class Cluster {
     
     
     public ElasticIpStatus elasticIpStatus;
+
     public Cluster withElasticIpStatus(ElasticIpStatus elasticIpStatus) {
         this.elasticIpStatus = elasticIpStatus;
         return this;
@@ -173,6 +196,7 @@ public class Cluster {
     
     
     public String elasticResizeNumberOfNodeOptions;
+
     public Cluster withElasticResizeNumberOfNodeOptions(String elasticResizeNumberOfNodeOptions) {
         this.elasticResizeNumberOfNodeOptions = elasticResizeNumberOfNodeOptions;
         return this;
@@ -180,6 +204,7 @@ public class Cluster {
     
     
     public Boolean encrypted;
+
     public Cluster withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -187,6 +212,7 @@ public class Cluster {
     
     
     public Endpoint endpoint;
+
     public Cluster withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -194,6 +220,7 @@ public class Cluster {
     
     
     public Boolean enhancedVpcRouting;
+
     public Cluster withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -201,6 +228,7 @@ public class Cluster {
     
     
     public OffsetDateTime expectedNextSnapshotScheduleTime;
+
     public Cluster withExpectedNextSnapshotScheduleTime(OffsetDateTime expectedNextSnapshotScheduleTime) {
         this.expectedNextSnapshotScheduleTime = expectedNextSnapshotScheduleTime;
         return this;
@@ -208,6 +236,7 @@ public class Cluster {
     
     
     public String expectedNextSnapshotScheduleTimeStatus;
+
     public Cluster withExpectedNextSnapshotScheduleTimeStatus(String expectedNextSnapshotScheduleTimeStatus) {
         this.expectedNextSnapshotScheduleTimeStatus = expectedNextSnapshotScheduleTimeStatus;
         return this;
@@ -215,6 +244,7 @@ public class Cluster {
     
     
     public HsmStatus hsmStatus;
+
     public Cluster withHsmStatus(HsmStatus hsmStatus) {
         this.hsmStatus = hsmStatus;
         return this;
@@ -222,6 +252,7 @@ public class Cluster {
     
     
     public ClusterIamRoleList[] iamRoles;
+
     public Cluster withIamRoles(ClusterIamRoleList[] iamRoles) {
         this.iamRoles = iamRoles;
         return this;
@@ -229,6 +260,7 @@ public class Cluster {
     
     
     public String kmsKeyId;
+
     public Cluster withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -236,6 +268,7 @@ public class Cluster {
     
     
     public String maintenanceTrackName;
+
     public Cluster withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -243,6 +276,7 @@ public class Cluster {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public Cluster withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -250,6 +284,7 @@ public class Cluster {
     
     
     public String masterUsername;
+
     public Cluster withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -257,6 +292,7 @@ public class Cluster {
     
     
     public String modifyStatus;
+
     public Cluster withModifyStatus(String modifyStatus) {
         this.modifyStatus = modifyStatus;
         return this;
@@ -264,6 +300,7 @@ public class Cluster {
     
     
     public OffsetDateTime nextMaintenanceWindowStartTime;
+
     public Cluster withNextMaintenanceWindowStartTime(OffsetDateTime nextMaintenanceWindowStartTime) {
         this.nextMaintenanceWindowStartTime = nextMaintenanceWindowStartTime;
         return this;
@@ -271,6 +308,7 @@ public class Cluster {
     
     
     public String nodeType;
+
     public Cluster withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -278,6 +316,7 @@ public class Cluster {
     
     
     public Long numberOfNodes;
+
     public Cluster withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -285,6 +324,7 @@ public class Cluster {
     
     
     public String[] pendingActions;
+
     public Cluster withPendingActions(String[] pendingActions) {
         this.pendingActions = pendingActions;
         return this;
@@ -292,6 +332,7 @@ public class Cluster {
     
     
     public PendingModifiedValues pendingModifiedValues;
+
     public Cluster withPendingModifiedValues(PendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -299,6 +340,7 @@ public class Cluster {
     
     
     public String preferredMaintenanceWindow;
+
     public Cluster withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -306,6 +348,7 @@ public class Cluster {
     
     
     public Boolean publiclyAccessible;
+
     public Cluster withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -313,6 +356,7 @@ public class Cluster {
     
     
     public ReservedNodeExchangeStatus reservedNodeExchangeStatus;
+
     public Cluster withReservedNodeExchangeStatus(ReservedNodeExchangeStatus reservedNodeExchangeStatus) {
         this.reservedNodeExchangeStatus = reservedNodeExchangeStatus;
         return this;
@@ -320,6 +364,7 @@ public class Cluster {
     
     
     public ResizeInfo resizeInfo;
+
     public Cluster withResizeInfo(ResizeInfo resizeInfo) {
         this.resizeInfo = resizeInfo;
         return this;
@@ -327,6 +372,7 @@ public class Cluster {
     
     
     public RestoreStatus restoreStatus;
+
     public Cluster withRestoreStatus(RestoreStatus restoreStatus) {
         this.restoreStatus = restoreStatus;
         return this;
@@ -334,6 +380,7 @@ public class Cluster {
     
     
     public String snapshotScheduleIdentifier;
+
     public Cluster withSnapshotScheduleIdentifier(String snapshotScheduleIdentifier) {
         this.snapshotScheduleIdentifier = snapshotScheduleIdentifier;
         return this;
@@ -341,6 +388,7 @@ public class Cluster {
     
     
     public ScheduleStateEnum snapshotScheduleState;
+
     public Cluster withSnapshotScheduleState(ScheduleStateEnum snapshotScheduleState) {
         this.snapshotScheduleState = snapshotScheduleState;
         return this;
@@ -348,6 +396,7 @@ public class Cluster {
     
     
     public TagList[] tags;
+
     public Cluster withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -355,6 +404,7 @@ public class Cluster {
     
     
     public Long totalStorageCapacityInMegaBytes;
+
     public Cluster withTotalStorageCapacityInMegaBytes(Long totalStorageCapacityInMegaBytes) {
         this.totalStorageCapacityInMegaBytes = totalStorageCapacityInMegaBytes;
         return this;
@@ -362,6 +412,7 @@ public class Cluster {
     
     
     public String vpcId;
+
     public Cluster withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -369,9 +420,11 @@ public class Cluster {
     
     
     public VpcSecurityGroupMembershipList[] vpcSecurityGroups;
+
     public Cluster withVpcSecurityGroups(VpcSecurityGroupMembershipList[] vpcSecurityGroups) {
         this.vpcSecurityGroups = vpcSecurityGroups;
         return this;
     }
     
+    public Cluster(){}
 }

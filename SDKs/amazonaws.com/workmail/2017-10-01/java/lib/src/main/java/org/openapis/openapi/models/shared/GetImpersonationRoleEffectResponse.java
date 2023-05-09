@@ -15,6 +15,7 @@ public class GetImpersonationRoleEffectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Effect")
     public AccessEffectEnum effect;
+
     public GetImpersonationRoleEffectResponse withEffect(AccessEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -23,6 +24,7 @@ public class GetImpersonationRoleEffectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchedRules")
     public ImpersonationMatchedRule[] matchedRules;
+
     public GetImpersonationRoleEffectResponse withMatchedRules(ImpersonationMatchedRule[] matchedRules) {
         this.matchedRules = matchedRules;
         return this;
@@ -31,9 +33,11 @@ public class GetImpersonationRoleEffectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ImpersonationRoleTypeEnum type;
+
     public GetImpersonationRoleEffectResponse withType(ImpersonationRoleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetImpersonationRoleEffectResponse(){}
 }

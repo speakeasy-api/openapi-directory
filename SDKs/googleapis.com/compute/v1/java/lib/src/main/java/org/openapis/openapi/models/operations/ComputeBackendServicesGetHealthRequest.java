@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeBackendServicesGetHealthRequest {
@@ -12,6 +13,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeBackendServicesGetHealthRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeBackendServicesGetHealthRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourceGroupReference resourceGroupReference;
+
     public ComputeBackendServicesGetHealthRequest withResourceGroupReference(org.openapis.openapi.models.shared.ResourceGroupReference resourceGroupReference) {
         this.resourceGroupReference = resourceGroupReference;
         return this;
@@ -29,6 +32,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeBackendServicesGetHealthRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeBackendServicesGetHealthRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=backendService")
     public String backendService;
+
     public ComputeBackendServicesGetHealthRequest withBackendService(String backendService) {
         this.backendService = backendService;
         return this;
@@ -59,6 +65,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeBackendServicesGetHealthRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeBackendServicesGetHealthRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeBackendServicesGetHealthRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeBackendServicesGetHealthRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeBackendServicesGetHealthRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -106,6 +117,7 @@ public class ComputeBackendServicesGetHealthRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeBackendServicesGetHealthRequest withProject(String project) {
         this.project = project;
         return this;
@@ -116,6 +128,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeBackendServicesGetHealthRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -126,6 +139,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeBackendServicesGetHealthRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -136,6 +150,7 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeBackendServicesGetHealthRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -146,9 +161,14 @@ public class ComputeBackendServicesGetHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeBackendServicesGetHealthRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeBackendServicesGetHealthRequest(@JsonProperty("backendService") String backendService, @JsonProperty("project") String project) {
+        this.backendService = backendService;
+        this.project = project;
+  }
 }

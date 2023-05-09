@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetHostnameSuggestionResponse {
     
     public String contentType;
+
     public GetHostnameSuggestionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetHostnameSuggestionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetHostnameSuggestionResult getHostnameSuggestionResult;
+
     public GetHostnameSuggestionResponse withGetHostnameSuggestionResult(org.openapis.openapi.models.shared.GetHostnameSuggestionResult getHostnameSuggestionResult) {
         this.getHostnameSuggestionResult = getHostnameSuggestionResult;
         return this;
@@ -29,6 +32,7 @@ public class GetHostnameSuggestionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetHostnameSuggestionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetHostnameSuggestionResponse {
     
     
     public Integer statusCode;
+
     public GetHostnameSuggestionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetHostnameSuggestionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetHostnameSuggestionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetHostnameSuggestionResponse {
      */
     
     public Object validationException;
+
     public GetHostnameSuggestionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetHostnameSuggestionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

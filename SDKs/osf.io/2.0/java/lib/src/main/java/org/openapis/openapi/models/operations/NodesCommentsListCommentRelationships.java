@@ -15,6 +15,7 @@ public class NodesCommentsListCommentRelationships {
      */
     
     public String node;
+
     public NodesCommentsListCommentRelationships withNode(String node) {
         this.node = node;
         return this;
@@ -25,6 +26,7 @@ public class NodesCommentsListCommentRelationships {
      */
     
     public String replies;
+
     public NodesCommentsListCommentRelationships withReplies(String replies) {
         this.replies = replies;
         return this;
@@ -35,6 +37,7 @@ public class NodesCommentsListCommentRelationships {
      */
     
     public String reports;
+
     public NodesCommentsListCommentRelationships withReports(String reports) {
         this.reports = reports;
         return this;
@@ -45,6 +48,7 @@ public class NodesCommentsListCommentRelationships {
      */
     
     public String target;
+
     public NodesCommentsListCommentRelationships withTarget(String target) {
         this.target = target;
         return this;
@@ -55,9 +59,11 @@ public class NodesCommentsListCommentRelationships {
      */
     
     public String user;
+
     public NodesCommentsListCommentRelationships withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public NodesCommentsListCommentRelationships(){}
 }

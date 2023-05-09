@@ -12,6 +12,7 @@ public class GetTokenHoldersResponseHolders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public GetTokenHoldersResponseHolders withAddress(String address) {
         this.address = address;
         return this;
@@ -20,9 +21,11 @@ public class GetTokenHoldersResponseHolders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public GetTokenHoldersResponseHolders withAmount(Double amount) {
         this.amount = amount;
         return this;
     }
     
+    public GetTokenHoldersResponseHolders(){}
 }

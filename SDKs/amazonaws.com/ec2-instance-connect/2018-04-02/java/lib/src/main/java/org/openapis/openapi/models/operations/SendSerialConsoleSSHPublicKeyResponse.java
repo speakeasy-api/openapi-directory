@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendSerialConsoleSSHPublicKeyResponse {
@@ -12,6 +13,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object authException;
+
     public SendSerialConsoleSSHPublicKeyResponse withAuthException(Object authException) {
         this.authException = authException;
         return this;
@@ -19,6 +21,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
     
     
     public String contentType;
+
     public SendSerialConsoleSSHPublicKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object ec2InstanceNotFoundException;
+
     public SendSerialConsoleSSHPublicKeyResponse withEc2InstanceNotFoundException(Object ec2InstanceNotFoundException) {
         this.ec2InstanceNotFoundException = ec2InstanceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object ec2InstanceStateInvalidException;
+
     public SendSerialConsoleSSHPublicKeyResponse withEc2InstanceStateInvalidException(Object ec2InstanceStateInvalidException) {
         this.ec2InstanceStateInvalidException = ec2InstanceStateInvalidException;
         return this;
@@ -49,6 +54,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object ec2InstanceTypeInvalidException;
+
     public SendSerialConsoleSSHPublicKeyResponse withEc2InstanceTypeInvalidException(Object ec2InstanceTypeInvalidException) {
         this.ec2InstanceTypeInvalidException = ec2InstanceTypeInvalidException;
         return this;
@@ -59,6 +65,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object ec2InstanceUnavailableException;
+
     public SendSerialConsoleSSHPublicKeyResponse withEc2InstanceUnavailableException(Object ec2InstanceUnavailableException) {
         this.ec2InstanceUnavailableException = ec2InstanceUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object invalidArgsException;
+
     public SendSerialConsoleSSHPublicKeyResponse withInvalidArgsException(Object invalidArgsException) {
         this.invalidArgsException = invalidArgsException;
         return this;
@@ -79,6 +87,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.SendSerialConsoleSSHPublicKeyResponse sendSerialConsoleSSHPublicKeyResponse;
+
     public SendSerialConsoleSSHPublicKeyResponse withSendSerialConsoleSSHPublicKeyResponse(org.openapis.openapi.models.shared.SendSerialConsoleSSHPublicKeyResponse sendSerialConsoleSSHPublicKeyResponse) {
         this.sendSerialConsoleSSHPublicKeyResponse = sendSerialConsoleSSHPublicKeyResponse;
         return this;
@@ -89,6 +98,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object serialConsoleSessionUnavailableException;
+
     public SendSerialConsoleSSHPublicKeyResponse withSerialConsoleSessionUnavailableException(Object serialConsoleSessionUnavailableException) {
         this.serialConsoleSessionUnavailableException = serialConsoleSessionUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
     
     
     public Integer statusCode;
+
     public SendSerialConsoleSSHPublicKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendSerialConsoleSSHPublicKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object serialConsoleAccessDisabledException;
+
     public SendSerialConsoleSSHPublicKeyResponse withSerialConsoleAccessDisabledException(Object serialConsoleAccessDisabledException) {
         this.serialConsoleAccessDisabledException = serialConsoleAccessDisabledException;
         return this;
@@ -123,6 +136,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object serialConsoleSessionLimitExceededException;
+
     public SendSerialConsoleSSHPublicKeyResponse withSerialConsoleSessionLimitExceededException(Object serialConsoleSessionLimitExceededException) {
         this.serialConsoleSessionLimitExceededException = serialConsoleSessionLimitExceededException;
         return this;
@@ -133,6 +147,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object serviceException;
+
     public SendSerialConsoleSSHPublicKeyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -143,9 +158,14 @@ public class SendSerialConsoleSSHPublicKeyResponse {
      */
     
     public Object throttlingException;
+
     public SendSerialConsoleSSHPublicKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SendSerialConsoleSSHPublicKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DailyFantasyScoringRequest {
@@ -14,6 +15,7 @@ public class DailyFantasyScoringRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public DailyFantasyScoringRequest withDate(String date) {
         this.date = date;
         return this;
@@ -24,9 +26,14 @@ public class DailyFantasyScoringRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public DailyFantasyScoringFormatEnum format;
+
     public DailyFantasyScoringRequest withFormat(DailyFantasyScoringFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public DailyFantasyScoringRequest(@JsonProperty("date") String date, @JsonProperty("format") DailyFantasyScoringFormatEnum format) {
+        this.date = date;
+        this.format = format;
+  }
 }

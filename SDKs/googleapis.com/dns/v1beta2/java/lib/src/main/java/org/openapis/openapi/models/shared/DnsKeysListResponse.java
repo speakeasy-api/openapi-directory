@@ -18,6 +18,7 @@ public class DnsKeysListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsKeys")
     public DnsKey[] dnsKeys;
+
     public DnsKeysListResponse withDnsKeys(DnsKey[] dnsKeys) {
         this.dnsKeys = dnsKeys;
         return this;
@@ -29,6 +30,7 @@ public class DnsKeysListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public ResponseHeader header;
+
     public DnsKeysListResponse withHeader(ResponseHeader header) {
         this.header = header;
         return this;
@@ -40,6 +42,7 @@ public class DnsKeysListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DnsKeysListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class DnsKeysListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DnsKeysListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public DnsKeysListResponse(){}
 }

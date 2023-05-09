@@ -20,6 +20,7 @@ public class PreparedStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PreparedStatement withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class PreparedStatement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public PreparedStatement withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -38,6 +40,7 @@ public class PreparedStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStatement")
     public String queryStatement;
+
     public PreparedStatement withQueryStatement(String queryStatement) {
         this.queryStatement = queryStatement;
         return this;
@@ -46,6 +49,7 @@ public class PreparedStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementName")
     public String statementName;
+
     public PreparedStatement withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -54,9 +58,11 @@ public class PreparedStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkGroupName")
     public String workGroupName;
+
     public PreparedStatement withWorkGroupName(String workGroupName) {
         this.workGroupName = workGroupName;
         return this;
     }
     
+    public PreparedStatement(){}
 }

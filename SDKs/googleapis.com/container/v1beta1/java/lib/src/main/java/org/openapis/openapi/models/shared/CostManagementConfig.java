@@ -18,9 +18,11 @@ public class CostManagementConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CostManagementConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public CostManagementConfig(){}
 }

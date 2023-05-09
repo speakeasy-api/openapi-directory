@@ -15,6 +15,7 @@ public class PostQuery200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostQuery200ApplicationJSONResultAstPackagePathTypeEnum type;
+
     public PostQuery200ApplicationJSONResultAstPackagePath withType(PostQuery200ApplicationJSONResultAstPackagePathTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class PostQuery200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PostQuery200ApplicationJSONResultAstPackagePath withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PostQuery200ApplicationJSONResultAstPackagePath(){}
 }

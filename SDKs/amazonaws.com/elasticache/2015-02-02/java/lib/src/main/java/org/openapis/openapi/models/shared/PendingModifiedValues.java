@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PendingModifiedValues {
     
     public AuthTokenUpdateStatusEnum authTokenStatus;
+
     public PendingModifiedValues withAuthTokenStatus(AuthTokenUpdateStatusEnum authTokenStatus) {
         this.authTokenStatus = authTokenStatus;
         return this;
@@ -19,6 +20,7 @@ public class PendingModifiedValues {
     
     
     public String[] cacheNodeIdsToRemove;
+
     public PendingModifiedValues withCacheNodeIdsToRemove(String[] cacheNodeIdsToRemove) {
         this.cacheNodeIdsToRemove = cacheNodeIdsToRemove;
         return this;
@@ -26,6 +28,7 @@ public class PendingModifiedValues {
     
     
     public String cacheNodeType;
+
     public PendingModifiedValues withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -33,6 +36,7 @@ public class PendingModifiedValues {
     
     
     public String engineVersion;
+
     public PendingModifiedValues withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -40,6 +44,7 @@ public class PendingModifiedValues {
     
     
     public PendingLogDeliveryConfiguration[] logDeliveryConfigurations;
+
     public PendingModifiedValues withLogDeliveryConfigurations(PendingLogDeliveryConfiguration[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -47,6 +52,7 @@ public class PendingModifiedValues {
     
     
     public Long numCacheNodes;
+
     public PendingModifiedValues withNumCacheNodes(Long numCacheNodes) {
         this.numCacheNodes = numCacheNodes;
         return this;
@@ -54,6 +60,7 @@ public class PendingModifiedValues {
     
     
     public Boolean transitEncryptionEnabled;
+
     public PendingModifiedValues withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
@@ -61,9 +68,11 @@ public class PendingModifiedValues {
     
     
     public TransitEncryptionModeEnum transitEncryptionMode;
+
     public PendingModifiedValues withTransitEncryptionMode(TransitEncryptionModeEnum transitEncryptionMode) {
         this.transitEncryptionMode = transitEncryptionMode;
         return this;
     }
     
+    public PendingModifiedValues(){}
 }

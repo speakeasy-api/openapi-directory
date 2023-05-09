@@ -15,6 +15,7 @@ public class RegisteredDomainDelegationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameServersUpdateState")
     public NameServersUpdateState nameServersUpdateState;
+
     public RegisteredDomainDelegationInfo withNameServersUpdateState(NameServersUpdateState nameServersUpdateState) {
         this.nameServersUpdateState = nameServersUpdateState;
         return this;
@@ -23,9 +24,11 @@ public class RegisteredDomainDelegationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("r53HostedZoneDeletionState")
     public R53HostedZoneDeletionState r53HostedZoneDeletionState;
+
     public RegisteredDomainDelegationInfo withR53HostedZoneDeletionState(R53HostedZoneDeletionState r53HostedZoneDeletionState) {
         this.r53HostedZoneDeletionState = r53HostedZoneDeletionState;
         return this;
     }
     
+    public RegisteredDomainDelegationInfo(){}
 }

@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * InstanceDefinition - &lt;p&gt; &lt;b&gt;This data type is used with the GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;An allowed instance type for a game server group. All game server groups must have at least two instance types defined for it. GameLift FleetIQ periodically evaluates each defined instance type for viability. It then updates the Auto Scaling group with the list of viable instance types.&lt;/p&gt;
+ * InstanceDefinition - &lt;p&gt; &lt;b&gt;This data type is used with the Amazon GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;An allowed instance type for a game server group. All game server groups must have at least two instance types defined for it. Amazon GameLift FleetIQ periodically evaluates each defined instance type for viability. It then updates the Auto Scaling group with the list of viable instance types.&lt;/p&gt;
  */
 public class InstanceDefinition {
     @JsonProperty("InstanceType")
     public GameServerGroupInstanceTypeEnum instanceType;
+
     public InstanceDefinition withInstanceType(GameServerGroupInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -22,9 +23,13 @@ public class InstanceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeightedCapacity")
     public String weightedCapacity;
+
     public InstanceDefinition withWeightedCapacity(String weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public InstanceDefinition(@JsonProperty("InstanceType") GameServerGroupInstanceTypeEnum instanceType) {
+        this.instanceType = instanceType;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastEpisodeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=episodeKey")
     public String episodeKey;
+
     public GetPodcastEpisodeRequest withEpisodeKey(String episodeKey) {
         this.episodeKey = episodeKey;
         return this;
@@ -16,9 +18,14 @@ public class GetPodcastEpisodeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=podcastKey")
     public String podcastKey;
+
     public GetPodcastEpisodeRequest withPodcastKey(String podcastKey) {
         this.podcastKey = podcastKey;
         return this;
     }
     
+    public GetPodcastEpisodeRequest(@JsonProperty("episodeKey") String episodeKey, @JsonProperty("podcastKey") String podcastKey) {
+        this.episodeKey = episodeKey;
+        this.podcastKey = podcastKey;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsRemoveFromPlacementGroupRequest {
@@ -12,9 +13,13 @@ public class PostServersIdActionsRemoveFromPlacementGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PostServersIdActionsRemoveFromPlacementGroupRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostServersIdActionsRemoveFromPlacementGroupRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

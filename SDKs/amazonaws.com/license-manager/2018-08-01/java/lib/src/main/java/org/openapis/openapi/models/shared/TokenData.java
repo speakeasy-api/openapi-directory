@@ -15,6 +15,7 @@ public class TokenData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationTime")
     public String expirationTime;
+
     public TokenData withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -23,6 +24,7 @@ public class TokenData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public TokenData withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -31,6 +33,7 @@ public class TokenData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArns")
     public String[] roleArns;
+
     public TokenData withRoleArns(String[] roleArns) {
         this.roleArns = roleArns;
         return this;
@@ -39,6 +42,7 @@ public class TokenData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public TokenData withStatus(String status) {
         this.status = status;
         return this;
@@ -47,6 +51,7 @@ public class TokenData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenId")
     public String tokenId;
+
     public TokenData withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -55,6 +60,7 @@ public class TokenData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenProperties")
     public String[] tokenProperties;
+
     public TokenData withTokenProperties(String[] tokenProperties) {
         this.tokenProperties = tokenProperties;
         return this;
@@ -63,9 +69,11 @@ public class TokenData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenType")
     public String tokenType;
+
     public TokenData withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public TokenData(){}
 }

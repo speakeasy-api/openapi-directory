@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CategoryResource {
     @JsonProperty("attributes")
     public CategoryResourceAttributes attributes;
+
     public CategoryResource withAttributes(CategoryResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -27,6 +28,7 @@ public class CategoryResource {
      */
     @JsonProperty("id")
     public String id;
+
     public CategoryResource withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class CategoryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CategoryResourceLinks links;
+
     public CategoryResource withLinks(CategoryResourceLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class CategoryResource {
     
     @JsonProperty("relationships")
     public CategoryResourceRelationships relationships;
+
     public CategoryResource withRelationships(CategoryResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,16 @@ public class CategoryResource {
      */
     @JsonProperty("type")
     public String type;
+
     public CategoryResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CategoryResource(@JsonProperty("attributes") CategoryResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("relationships") CategoryResourceRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

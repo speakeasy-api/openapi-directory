@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEndpointResponse {
     
     public String contentType;
+
     public CreateEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEndpointResponse createEndpointResponse;
+
     public CreateEndpointResponse withCreateEndpointResponse(org.openapis.openapi.models.shared.CreateEndpointResponse createEndpointResponse) {
         this.createEndpointResponse = createEndpointResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateEndpointResponse {
      */
     
     public Object internalException;
+
     public CreateEndpointResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateEndpointResponse {
      */
     
     public Object limitExceededException;
+
     public CreateEndpointResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateEndpointResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateEndpointResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateEndpointResponse {
     
     
     public Integer statusCode;
+
     public CreateEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

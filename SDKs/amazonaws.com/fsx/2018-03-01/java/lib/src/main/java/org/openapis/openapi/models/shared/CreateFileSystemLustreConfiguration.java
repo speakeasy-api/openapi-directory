@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * CreateFileSystemLustreConfiguration - &lt;p&gt;The Lustre configuration for the file system being created.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The following parameters are not supported for file systems with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type. Instead, use &lt;code&gt;CreateDataRepositoryAssociation&lt;/code&gt; to create a data repository association to link your Lustre file system to a data repository.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutoImportPolicy&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ExportPath&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ImportedChunkSize&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ImportPath&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
+ * CreateFileSystemLustreConfiguration - &lt;p&gt;The Lustre configuration for the file system being created.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The following parameters are not supported for file systems with a data repository association created with .&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutoImportPolicy&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ExportPath&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ImportedChunkSize&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ImportPath&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
  */
 public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoImportPolicy")
     public AutoImportPolicyTypeEnum autoImportPolicy;
+
     public CreateFileSystemLustreConfiguration withAutoImportPolicy(AutoImportPolicyTypeEnum autoImportPolicy) {
         this.autoImportPolicy = autoImportPolicy;
         return this;
@@ -26,6 +27,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public CreateFileSystemLustreConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -34,6 +36,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public CreateFileSystemLustreConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -45,6 +48,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public CreateFileSystemLustreConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -53,6 +57,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCompressionType")
     public DataCompressionTypeEnum dataCompressionType;
+
     public CreateFileSystemLustreConfiguration withDataCompressionType(DataCompressionTypeEnum dataCompressionType) {
         this.dataCompressionType = dataCompressionType;
         return this;
@@ -61,6 +66,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentType")
     public LustreDeploymentTypeEnum deploymentType;
+
     public CreateFileSystemLustreConfiguration withDeploymentType(LustreDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -69,6 +75,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriveCacheType")
     public DriveCacheTypeEnum driveCacheType;
+
     public CreateFileSystemLustreConfiguration withDriveCacheType(DriveCacheTypeEnum driveCacheType) {
         this.driveCacheType = driveCacheType;
         return this;
@@ -77,6 +84,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportPath")
     public String exportPath;
+
     public CreateFileSystemLustreConfiguration withExportPath(String exportPath) {
         this.exportPath = exportPath;
         return this;
@@ -85,6 +93,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportPath")
     public String importPath;
+
     public CreateFileSystemLustreConfiguration withImportPath(String importPath) {
         this.importPath = importPath;
         return this;
@@ -93,6 +102,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportedFileChunkSize")
     public Long importedFileChunkSize;
+
     public CreateFileSystemLustreConfiguration withImportedFileChunkSize(Long importedFileChunkSize) {
         this.importedFileChunkSize = importedFileChunkSize;
         return this;
@@ -101,6 +111,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogConfiguration")
     public LustreLogCreateConfiguration logConfiguration;
+
     public CreateFileSystemLustreConfiguration withLogConfiguration(LustreLogCreateConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -109,6 +120,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerUnitStorageThroughput")
     public Long perUnitStorageThroughput;
+
     public CreateFileSystemLustreConfiguration withPerUnitStorageThroughput(Long perUnitStorageThroughput) {
         this.perUnitStorageThroughput = perUnitStorageThroughput;
         return this;
@@ -117,6 +129,7 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootSquashConfiguration")
     public LustreRootSquashConfiguration rootSquashConfiguration;
+
     public CreateFileSystemLustreConfiguration withRootSquashConfiguration(LustreRootSquashConfiguration rootSquashConfiguration) {
         this.rootSquashConfiguration = rootSquashConfiguration;
         return this;
@@ -125,9 +138,11 @@ public class CreateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public CreateFileSystemLustreConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public CreateFileSystemLustreConfiguration(){}
 }

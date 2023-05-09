@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersFloatingIpsIpReleaseRequest {
@@ -12,6 +13,7 @@ public class PostContainersFloatingIpsIpReleaseRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PostContainersFloatingIpsIpReleaseRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -22,6 +24,7 @@ public class PostContainersFloatingIpsIpReleaseRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PostContainersFloatingIpsIpReleaseRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -32,9 +35,15 @@ public class PostContainersFloatingIpsIpReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ip")
     public String ip;
+
     public PostContainersFloatingIpsIpReleaseRequest withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public PostContainersFloatingIpsIpReleaseRequest(@JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken, @JsonProperty("ip") String ip) {
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+        this.ip = ip;
+  }
 }

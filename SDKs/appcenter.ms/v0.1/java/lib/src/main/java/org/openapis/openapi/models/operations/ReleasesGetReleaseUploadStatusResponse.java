@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesGetReleaseUploadStatusResponse {
     
     public String contentType;
+
     public ReleasesGetReleaseUploadStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesGetReleaseUploadStatusResponse {
     
     
     public Integer statusCode;
+
     public ReleasesGetReleaseUploadStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesGetReleaseUploadStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesGetReleaseUploadStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesGetReleaseUploadStatusResponse {
      */
     
     public ReleasesGetReleaseUploadStatus200ApplicationJSON releasesGetReleaseUploadStatus200ApplicationJSONObject;
+
     public ReleasesGetReleaseUploadStatusResponse withReleasesGetReleaseUploadStatus200ApplicationJSONObject(ReleasesGetReleaseUploadStatus200ApplicationJSON releasesGetReleaseUploadStatus200ApplicationJSONObject) {
         this.releasesGetReleaseUploadStatus200ApplicationJSONObject = releasesGetReleaseUploadStatus200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ReleasesGetReleaseUploadStatusResponse {
      */
     
     public ReleasesGetReleaseUploadStatus400ApplicationJSON releasesGetReleaseUploadStatus400ApplicationJSONObject;
+
     public ReleasesGetReleaseUploadStatusResponse withReleasesGetReleaseUploadStatus400ApplicationJSONObject(ReleasesGetReleaseUploadStatus400ApplicationJSON releasesGetReleaseUploadStatus400ApplicationJSONObject) {
         this.releasesGetReleaseUploadStatus400ApplicationJSONObject = releasesGetReleaseUploadStatus400ApplicationJSONObject;
         return this;
@@ -55,9 +61,14 @@ public class ReleasesGetReleaseUploadStatusResponse {
      */
     
     public ReleasesGetReleaseUploadStatus404ApplicationJSON releasesGetReleaseUploadStatus404ApplicationJSONObject;
+
     public ReleasesGetReleaseUploadStatusResponse withReleasesGetReleaseUploadStatus404ApplicationJSONObject(ReleasesGetReleaseUploadStatus404ApplicationJSON releasesGetReleaseUploadStatus404ApplicationJSONObject) {
         this.releasesGetReleaseUploadStatus404ApplicationJSONObject = releasesGetReleaseUploadStatus404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesGetReleaseUploadStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

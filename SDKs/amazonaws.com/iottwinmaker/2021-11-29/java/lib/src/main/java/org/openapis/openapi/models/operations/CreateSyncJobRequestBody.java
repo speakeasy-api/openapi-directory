@@ -14,6 +14,7 @@ public class CreateSyncJobRequestBody {
      */
     @JsonProperty("syncRole")
     public String syncRole;
+
     public CreateSyncJobRequestBody withSyncRole(String syncRole) {
         this.syncRole = syncRole;
         return this;
@@ -25,9 +26,13 @@ public class CreateSyncJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSyncJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSyncJobRequestBody(@JsonProperty("syncRole") String syncRole) {
+        this.syncRole = syncRole;
+  }
 }

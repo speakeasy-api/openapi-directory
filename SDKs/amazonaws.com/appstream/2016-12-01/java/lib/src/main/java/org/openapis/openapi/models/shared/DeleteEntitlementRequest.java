@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEntitlementRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteEntitlementRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class DeleteEntitlementRequest {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public DeleteEntitlementRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public DeleteEntitlementRequest(@JsonProperty("Name") String name, @JsonProperty("StackName") String stackName) {
+        this.name = name;
+        this.stackName = stackName;
+  }
 }

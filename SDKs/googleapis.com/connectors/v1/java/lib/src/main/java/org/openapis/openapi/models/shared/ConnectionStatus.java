@@ -18,6 +18,7 @@ public class ConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConnectionStatus withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ConnectionStatusStateEnum state;
+
     public ConnectionStatus withState(ConnectionStatusStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +42,11 @@ public class ConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ConnectionStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ConnectionStatus(){}
 }

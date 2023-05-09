@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBusinessUnitsV3BusinessUnitsUserUserIdRequest {
@@ -12,6 +13,7 @@ public class GetBusinessUnitsV3BusinessUnitsUserUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String[] name;
+
     public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withName(String[] name) {
         this.name = name;
         return this;
@@ -22,6 +24,7 @@ public class GetBusinessUnitsV3BusinessUnitsUserUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=properties")
     public String[] properties;
+
     public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withProperties(String[] properties) {
         this.properties = properties;
         return this;
@@ -32,9 +35,13 @@ public class GetBusinessUnitsV3BusinessUnitsUserUserIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest(@JsonProperty("userId") String userId) {
+        this.userId = userId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AuthkeyGetResponse {
@@ -12,6 +13,7 @@ public class AuthkeyGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThree fourHundredAndThree;
+
     public AuthkeyGetResponse withFourHundredAndThree(org.openapis.openapi.models.shared.FourHundredAndThree fourHundredAndThree) {
         this.fourHundredAndThree = fourHundredAndThree;
         return this;
@@ -22,6 +24,7 @@ public class AuthkeyGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFortyNine fourHundredAndFortyNine;
+
     public AuthkeyGetResponse withFourHundredAndFortyNine(org.openapis.openapi.models.shared.FourHundredAndFortyNine fourHundredAndFortyNine) {
         this.fourHundredAndFortyNine = fourHundredAndFortyNine;
         return this;
@@ -29,6 +32,7 @@ public class AuthkeyGetResponse {
     
     
     public String contentType;
+
     public AuthkeyGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AuthkeyGetResponse {
     
     
     public Integer statusCode;
+
     public AuthkeyGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class AuthkeyGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AuthkeyGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class AuthkeyGetResponse {
      */
     
     public org.openapis.openapi.models.shared.InlineResponse2011 inlineResponse2011;
+
     public AuthkeyGetResponse withInlineResponse2011(org.openapis.openapi.models.shared.InlineResponse2011 inlineResponse2011) {
         this.inlineResponse2011 = inlineResponse2011;
         return this;
     }
     
+    public AuthkeyGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

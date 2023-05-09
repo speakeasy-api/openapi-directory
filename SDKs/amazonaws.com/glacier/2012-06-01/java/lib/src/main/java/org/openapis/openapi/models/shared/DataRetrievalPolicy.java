@@ -15,9 +15,11 @@ public class DataRetrievalPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public DataRetrievalRule[] rules;
+
     public DataRetrievalPolicy withRules(DataRetrievalRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public DataRetrievalPolicy(){}
 }

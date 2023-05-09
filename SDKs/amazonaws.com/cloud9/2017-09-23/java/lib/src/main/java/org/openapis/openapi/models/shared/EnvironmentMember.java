@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EnvironmentMember {
     @JsonProperty("environmentId")
     public String environmentId;
+
     public EnvironmentMember withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -29,6 +30,7 @@ public class EnvironmentMember {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastAccess")
     public OffsetDateTime lastAccess;
+
     public EnvironmentMember withLastAccess(OffsetDateTime lastAccess) {
         this.lastAccess = lastAccess;
         return this;
@@ -36,6 +38,7 @@ public class EnvironmentMember {
     
     @JsonProperty("permissions")
     public PermissionsEnum permissions;
+
     public EnvironmentMember withPermissions(PermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
@@ -43,6 +46,7 @@ public class EnvironmentMember {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public EnvironmentMember withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
@@ -50,9 +54,16 @@ public class EnvironmentMember {
     
     @JsonProperty("userId")
     public String userId;
+
     public EnvironmentMember withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public EnvironmentMember(@JsonProperty("environmentId") String environmentId, @JsonProperty("permissions") PermissionsEnum permissions, @JsonProperty("userArn") String userArn, @JsonProperty("userId") String userId) {
+        this.environmentId = environmentId;
+        this.permissions = permissions;
+        this.userArn = userArn;
+        this.userId = userId;
+  }
 }

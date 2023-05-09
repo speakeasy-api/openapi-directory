@@ -15,6 +15,7 @@ public class BillingPeriodList {
      */
     @JsonProperty("billingPeriods")
     public BillingPeriod[] billingPeriods;
+
     public BillingPeriodList withBillingPeriods(BillingPeriod[] billingPeriods) {
         this.billingPeriods = billingPeriods;
         return this;
@@ -22,9 +23,14 @@ public class BillingPeriodList {
     
     @JsonProperty("links")
     public BillingPeriodListLinks links;
+
     public BillingPeriodList withLinks(BillingPeriodListLinks links) {
         this.links = links;
         return this;
     }
     
+    public BillingPeriodList(@JsonProperty("billingPeriods") BillingPeriod[] billingPeriods, @JsonProperty("links") BillingPeriodListLinks links) {
+        this.billingPeriods = billingPeriods;
+        this.links = links;
+  }
 }

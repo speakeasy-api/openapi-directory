@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEnvironmentResponse {
@@ -12,6 +13,7 @@ public class CreateEnvironmentResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateEnvironmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEnvironmentResponse {
      */
     
     public Object conflictException;
+
     public CreateEnvironmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEnvironmentResponse {
     
     
     public String contentType;
+
     public CreateEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEnvironmentOutput createEnvironmentOutput;
+
     public CreateEnvironmentResponse withCreateEnvironmentOutput(org.openapis.openapi.models.shared.CreateEnvironmentOutput createEnvironmentOutput) {
         this.createEnvironmentOutput = createEnvironmentOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateEnvironmentResponse {
      */
     
     public Object internalServerException;
+
     public CreateEnvironmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEnvironmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateEnvironmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateEnvironmentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateEnvironmentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public CreateEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateEnvironmentResponse {
      */
     
     public Object throttlingException;
+
     public CreateEnvironmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateEnvironmentResponse {
      */
     
     public Object validationException;
+
     public CreateEnvironmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

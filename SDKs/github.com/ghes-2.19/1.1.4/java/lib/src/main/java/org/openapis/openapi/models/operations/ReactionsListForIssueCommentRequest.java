@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForIssueCommentRequest {
@@ -12,6 +13,7 @@ public class ReactionsListForIssueCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public ReactionsListForIssueCommentRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -22,6 +24,7 @@ public class ReactionsListForIssueCommentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
     public ReactionsListForIssueCommentContentEnum content;
+
     public ReactionsListForIssueCommentRequest withContent(ReactionsListForIssueCommentContentEnum content) {
         this.content = content;
         return this;
@@ -29,6 +32,7 @@ public class ReactionsListForIssueCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReactionsListForIssueCommentRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,6 +43,7 @@ public class ReactionsListForIssueCommentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReactionsListForIssueCommentRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -49,6 +54,7 @@ public class ReactionsListForIssueCommentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReactionsListForIssueCommentRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -56,9 +62,15 @@ public class ReactionsListForIssueCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReactionsListForIssueCommentRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReactionsListForIssueCommentRequest(@JsonProperty("comment_id") Long commentId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.commentId = commentId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

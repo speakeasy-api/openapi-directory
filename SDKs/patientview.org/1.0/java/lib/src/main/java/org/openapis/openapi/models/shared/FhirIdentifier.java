@@ -12,6 +12,7 @@ public class FhirIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FhirIdentifier withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class FhirIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public FhirIdentifier withLabel(String label) {
         this.label = label;
         return this;
@@ -28,9 +30,11 @@ public class FhirIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FhirIdentifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FhirIdentifier(){}
 }

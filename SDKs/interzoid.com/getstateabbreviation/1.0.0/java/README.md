@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetstateabbreviationRequest;
 import org.openapis.openapi.models.operations.GetstateabbreviationResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetstateabbreviationRequest req = new GetstateabbreviationRequest() {{
-                license = "corrupti";
-                state = "provident";
-            }}            
+            GetstateabbreviationRequest req = new GetstateabbreviationRequest("corrupti", "provident");            
 
             GetstateabbreviationResponse res = sdk.stateDataStandardization.getstateabbreviation(req);
 
-            if (res.getstateabbreviation200ApplicationJSONObject.isPresent()) {
+            if (res.getstateabbreviation200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### stateDataStandardization
+### [stateDataStandardization](docs/statedatastandardization/README.md)
 
-* `getstateabbreviation` - Gets a two-letter abbreviation for a state or province name data
+* [getstateabbreviation](docs/statedatastandardization/README.md#getstateabbreviation) - Gets a two-letter abbreviation for a state or province name data
 <!-- End SDK Available Operations -->
 
 ### Maturity

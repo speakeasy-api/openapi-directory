@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEventSourceMappingsResponse {
     
     public String contentType;
+
     public ListEventSourceMappingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEventSourceMappingsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListEventSourceMappingsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListEventSourceMappingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEventSourceMappingsResponse listEventSourceMappingsResponse;
+
     public ListEventSourceMappingsResponse withListEventSourceMappingsResponse(org.openapis.openapi.models.shared.ListEventSourceMappingsResponse listEventSourceMappingsResponse) {
         this.listEventSourceMappingsResponse = listEventSourceMappingsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListEventSourceMappingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEventSourceMappingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListEventSourceMappingsResponse {
      */
     
     public Object serviceException;
+
     public ListEventSourceMappingsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class ListEventSourceMappingsResponse {
     
     
     public Integer statusCode;
+
     public ListEventSourceMappingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListEventSourceMappingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEventSourceMappingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListEventSourceMappingsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListEventSourceMappingsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListEventSourceMappingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

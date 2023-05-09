@@ -12,6 +12,7 @@ public class ApiDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public String dimension;
+
     public ApiDimensionFilter withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -20,6 +21,7 @@ public class ApiDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public ApiDimensionFilter withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -28,9 +30,11 @@ public class ApiDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public String operator;
+
     public ApiDimensionFilter withOperator(String operator) {
         this.operator = operator;
         return this;
     }
     
+    public ApiDimensionFilter(){}
 }

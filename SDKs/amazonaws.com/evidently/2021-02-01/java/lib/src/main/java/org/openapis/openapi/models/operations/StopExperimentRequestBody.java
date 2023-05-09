@@ -15,6 +15,7 @@ public class StopExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredState")
     public StopExperimentRequestBodyDesiredStateEnum desiredState;
+
     public StopExperimentRequestBody withDesiredState(StopExperimentRequestBodyDesiredStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -26,9 +27,11 @@ public class StopExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public StopExperimentRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public StopExperimentRequestBody(){}
 }

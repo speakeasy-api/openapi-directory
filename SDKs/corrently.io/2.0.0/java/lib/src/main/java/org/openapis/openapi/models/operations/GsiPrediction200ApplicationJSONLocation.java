@@ -18,6 +18,7 @@ public class GsiPrediction200ApplicationJSONLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public GsiPrediction200ApplicationJSONLocation withCity(String city) {
         this.city = city;
         return this;
@@ -29,9 +30,11 @@ public class GsiPrediction200ApplicationJSONLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public GsiPrediction200ApplicationJSONLocation withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public GsiPrediction200ApplicationJSONLocation(){}
 }

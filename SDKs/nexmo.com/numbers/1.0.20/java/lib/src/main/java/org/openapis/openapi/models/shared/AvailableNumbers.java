@@ -18,6 +18,7 @@ public class AvailableNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public AvailableNumbers withCount(Long count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class AvailableNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numbers")
     public Availablenumber[] numbers;
+
     public AvailableNumbers withNumbers(Availablenumber[] numbers) {
         this.numbers = numbers;
         return this;
     }
     
+    public AvailableNumbers(){}
 }

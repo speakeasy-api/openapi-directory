@@ -15,6 +15,7 @@ public class JourneyChannelSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectCampaignArn")
     public String connectCampaignArn;
+
     public JourneyChannelSettings withConnectCampaignArn(String connectCampaignArn) {
         this.connectCampaignArn = connectCampaignArn;
         return this;
@@ -23,9 +24,11 @@ public class JourneyChannelSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectCampaignExecutionRoleArn")
     public String connectCampaignExecutionRoleArn;
+
     public JourneyChannelSettings withConnectCampaignExecutionRoleArn(String connectCampaignExecutionRoleArn) {
         this.connectCampaignExecutionRoleArn = connectCampaignExecutionRoleArn;
         return this;
     }
     
+    public JourneyChannelSettings(){}
 }

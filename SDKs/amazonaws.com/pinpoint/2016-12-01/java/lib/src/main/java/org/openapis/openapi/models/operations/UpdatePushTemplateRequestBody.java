@@ -12,9 +12,13 @@ public class UpdatePushTemplateRequestBody {
      */
     @JsonProperty("PushNotificationTemplateRequest")
     public UpdatePushTemplateRequestBodyPushNotificationTemplateRequest pushNotificationTemplateRequest;
+
     public UpdatePushTemplateRequestBody withPushNotificationTemplateRequest(UpdatePushTemplateRequestBodyPushNotificationTemplateRequest pushNotificationTemplateRequest) {
         this.pushNotificationTemplateRequest = pushNotificationTemplateRequest;
         return this;
     }
     
+    public UpdatePushTemplateRequestBody(@JsonProperty("PushNotificationTemplateRequest") UpdatePushTemplateRequestBodyPushNotificationTemplateRequest pushNotificationTemplateRequest) {
+        this.pushNotificationTemplateRequest = pushNotificationTemplateRequest;
+  }
 }

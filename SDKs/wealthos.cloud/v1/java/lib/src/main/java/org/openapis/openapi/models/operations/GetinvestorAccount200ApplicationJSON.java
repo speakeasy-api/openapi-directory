@@ -22,6 +22,7 @@ public class GetinvestorAccount200ApplicationJSON {
      */
     @JsonProperty("account_id")
     public String accountId;
+
     public GetinvestorAccount200ApplicationJSON withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_type")
     public GetinvestorAccount200ApplicationJSONAccountTypeEnum accountType;
+
     public GetinvestorAccount200ApplicationJSON withAccountType(GetinvestorAccount200ApplicationJSONAccountTypeEnum accountType) {
         this.accountType = accountType;
         return this;
@@ -40,6 +42,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetinvestorAccount200ApplicationJSON withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -51,6 +54,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_year_subscription")
     public Boolean currentYearSubscription;
+
     public GetinvestorAccount200ApplicationJSON withCurrentYearSubscription(Boolean currentYearSubscription) {
         this.currentYearSubscription = currentYearSubscription;
         return this;
@@ -62,6 +66,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_year_total_contribution")
     public String currentYearTotalContribution;
+
     public GetinvestorAccount200ApplicationJSON withCurrentYearTotalContribution(String currentYearTotalContribution) {
         this.currentYearTotalContribution = currentYearTotalContribution;
         return this;
@@ -73,6 +78,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_year_total_isa_contribution")
     public String currentYearTotalIsaContribution;
+
     public GetinvestorAccount200ApplicationJSON withCurrentYearTotalIsaContribution(String currentYearTotalIsaContribution) {
         this.currentYearTotalIsaContribution = currentYearTotalIsaContribution;
         return this;
@@ -84,6 +90,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_year_total_isa_withdrawals")
     public String currentYearTotalIsaWithdrawals;
+
     public GetinvestorAccount200ApplicationJSON withCurrentYearTotalIsaWithdrawals(String currentYearTotalIsaWithdrawals) {
         this.currentYearTotalIsaWithdrawals = currentYearTotalIsaWithdrawals;
         return this;
@@ -95,6 +102,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_year_total_withdrawals")
     public String currentYearTotalWithdrawals;
+
     public GetinvestorAccount200ApplicationJSON withCurrentYearTotalWithdrawals(String currentYearTotalWithdrawals) {
         this.currentYearTotalWithdrawals = currentYearTotalWithdrawals;
         return this;
@@ -106,6 +114,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_account_activation")
     public String dateOfAccountActivation;
+
     public GetinvestorAccount200ApplicationJSON withDateOfAccountActivation(String dateOfAccountActivation) {
         this.dateOfAccountActivation = dateOfAccountActivation;
         return this;
@@ -113,6 +122,7 @@ public class GetinvestorAccount200ApplicationJSON {
     
     @JsonProperty("financial_product_id")
     public String financialProductId;
+
     public GetinvestorAccount200ApplicationJSON withFinancialProductId(String financialProductId) {
         this.financialProductId = financialProductId;
         return this;
@@ -124,6 +134,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_subscription_date_for_current_year")
     public String firstSubscriptionDateForCurrentYear;
+
     public GetinvestorAccount200ApplicationJSON withFirstSubscriptionDateForCurrentYear(String firstSubscriptionDateForCurrentYear) {
         this.firstSubscriptionDateForCurrentYear = firstSubscriptionDateForCurrentYear;
         return this;
@@ -131,6 +142,7 @@ public class GetinvestorAccount200ApplicationJSON {
     
     @JsonProperty("investor_id")
     public String investorId;
+
     public GetinvestorAccount200ApplicationJSON withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -142,6 +154,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isa_allowance_remaining")
     public String isaAllowanceRemaining;
+
     public GetinvestorAccount200ApplicationJSON withIsaAllowanceRemaining(String isaAllowanceRemaining) {
         this.isaAllowanceRemaining = isaAllowanceRemaining;
         return this;
@@ -152,6 +165,7 @@ public class GetinvestorAccount200ApplicationJSON {
      */
     @JsonProperty("pot_id")
     public String[] potId;
+
     public GetinvestorAccount200ApplicationJSON withPotId(String[] potId) {
         this.potId = potId;
         return this;
@@ -162,6 +176,7 @@ public class GetinvestorAccount200ApplicationJSON {
      */
     @JsonProperty("status")
     public GetinvestorAccount200ApplicationJSONStatusEnum status;
+
     public GetinvestorAccount200ApplicationJSON withStatus(GetinvestorAccount200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -173,6 +188,7 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_market_value")
     public String totalMarketValue;
+
     public GetinvestorAccount200ApplicationJSON withTotalMarketValue(String totalMarketValue) {
         this.totalMarketValue = totalMarketValue;
         return this;
@@ -183,9 +199,17 @@ public class GetinvestorAccount200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GetinvestorAccount200ApplicationJSON withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetinvestorAccount200ApplicationJSON(@JsonProperty("account_id") String accountId, @JsonProperty("financial_product_id") String financialProductId, @JsonProperty("investor_id") String investorId, @JsonProperty("pot_id") String[] potId, @JsonProperty("status") GetinvestorAccount200ApplicationJSONStatusEnum status) {
+        this.accountId = accountId;
+        this.financialProductId = financialProductId;
+        this.investorId = investorId;
+        this.potId = potId;
+        this.status = status;
+  }
 }

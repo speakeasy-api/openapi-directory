@@ -22,6 +22,7 @@ public class ReputationOptions {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastFreshStart")
     public OffsetDateTime lastFreshStart;
+
     public ReputationOptions withLastFreshStart(OffsetDateTime lastFreshStart) {
         this.lastFreshStart = lastFreshStart;
         return this;
@@ -30,9 +31,11 @@ public class ReputationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReputationMetricsEnabled")
     public Boolean reputationMetricsEnabled;
+
     public ReputationOptions withReputationMetricsEnabled(Boolean reputationMetricsEnabled) {
         this.reputationMetricsEnabled = reputationMetricsEnabled;
         return this;
     }
     
+    public ReputationOptions(){}
 }

@@ -15,6 +15,7 @@ public class GetDetectorModelAnalysisResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisResults")
     public AnalysisResult[] analysisResults;
+
     public GetDetectorModelAnalysisResultsResponse withAnalysisResults(AnalysisResult[] analysisResults) {
         this.analysisResults = analysisResults;
         return this;
@@ -23,9 +24,11 @@ public class GetDetectorModelAnalysisResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetDetectorModelAnalysisResultsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDetectorModelAnalysisResultsResponse(){}
 }

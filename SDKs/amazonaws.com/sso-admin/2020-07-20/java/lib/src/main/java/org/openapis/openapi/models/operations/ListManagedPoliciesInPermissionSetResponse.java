@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListManagedPoliciesInPermissionSetResponse {
@@ -12,6 +13,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public ListManagedPoliciesInPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
     
     
     public String contentType;
+
     public ListManagedPoliciesInPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public ListManagedPoliciesInPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
      */
     
     public org.openapis.openapi.models.shared.ListManagedPoliciesInPermissionSetResponse listManagedPoliciesInPermissionSetResponse;
+
     public ListManagedPoliciesInPermissionSetResponse withListManagedPoliciesInPermissionSetResponse(org.openapis.openapi.models.shared.ListManagedPoliciesInPermissionSetResponse listManagedPoliciesInPermissionSetResponse) {
         this.listManagedPoliciesInPermissionSetResponse = listManagedPoliciesInPermissionSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListManagedPoliciesInPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public ListManagedPoliciesInPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListManagedPoliciesInPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public ListManagedPoliciesInPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListManagedPoliciesInPermissionSetResponse {
      */
     
     public Object validationException;
+
     public ListManagedPoliciesInPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListManagedPoliciesInPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

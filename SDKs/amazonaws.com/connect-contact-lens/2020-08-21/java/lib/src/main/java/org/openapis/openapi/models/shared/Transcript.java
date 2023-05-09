@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Transcript {
     @JsonProperty("BeginOffsetMillis")
     public Long beginOffsetMillis;
+
     public Transcript withBeginOffsetMillis(Long beginOffsetMillis) {
         this.beginOffsetMillis = beginOffsetMillis;
         return this;
@@ -21,6 +22,7 @@ public class Transcript {
     
     @JsonProperty("Content")
     public String content;
+
     public Transcript withContent(String content) {
         this.content = content;
         return this;
@@ -28,6 +30,7 @@ public class Transcript {
     
     @JsonProperty("EndOffsetMillis")
     public Long endOffsetMillis;
+
     public Transcript withEndOffsetMillis(Long endOffsetMillis) {
         this.endOffsetMillis = endOffsetMillis;
         return this;
@@ -35,6 +38,7 @@ public class Transcript {
     
     @JsonProperty("Id")
     public String id;
+
     public Transcript withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +47,7 @@ public class Transcript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IssuesDetected")
     public IssueDetected[] issuesDetected;
+
     public Transcript withIssuesDetected(IssueDetected[] issuesDetected) {
         this.issuesDetected = issuesDetected;
         return this;
@@ -50,6 +55,7 @@ public class Transcript {
     
     @JsonProperty("ParticipantId")
     public String participantId;
+
     public Transcript withParticipantId(String participantId) {
         this.participantId = participantId;
         return this;
@@ -57,6 +63,7 @@ public class Transcript {
     
     @JsonProperty("ParticipantRole")
     public String participantRole;
+
     public Transcript withParticipantRole(String participantRole) {
         this.participantRole = participantRole;
         return this;
@@ -64,9 +71,19 @@ public class Transcript {
     
     @JsonProperty("Sentiment")
     public SentimentValueEnum sentiment;
+
     public Transcript withSentiment(SentimentValueEnum sentiment) {
         this.sentiment = sentiment;
         return this;
     }
     
+    public Transcript(@JsonProperty("BeginOffsetMillis") Long beginOffsetMillis, @JsonProperty("Content") String content, @JsonProperty("EndOffsetMillis") Long endOffsetMillis, @JsonProperty("Id") String id, @JsonProperty("ParticipantId") String participantId, @JsonProperty("ParticipantRole") String participantRole, @JsonProperty("Sentiment") SentimentValueEnum sentiment) {
+        this.beginOffsetMillis = beginOffsetMillis;
+        this.content = content;
+        this.endOffsetMillis = endOffsetMillis;
+        this.id = id;
+        this.participantId = participantId;
+        this.participantRole = participantRole;
+        this.sentiment = sentiment;
+  }
 }

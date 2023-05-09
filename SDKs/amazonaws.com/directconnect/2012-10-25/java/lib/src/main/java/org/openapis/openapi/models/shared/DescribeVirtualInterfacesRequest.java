@@ -12,6 +12,7 @@ public class DescribeVirtualInterfacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public DescribeVirtualInterfacesRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -20,9 +21,11 @@ public class DescribeVirtualInterfacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public DescribeVirtualInterfacesRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public DescribeVirtualInterfacesRequest(){}
 }

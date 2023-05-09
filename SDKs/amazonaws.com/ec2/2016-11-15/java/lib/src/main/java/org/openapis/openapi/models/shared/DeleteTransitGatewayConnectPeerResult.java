@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayConnectPeerResult {
     
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeer transitGatewayConnectPeer;
+
     public DeleteTransitGatewayConnectPeerResult withTransitGatewayConnectPeer(DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeer transitGatewayConnectPeer) {
         this.transitGatewayConnectPeer = transitGatewayConnectPeer;
         return this;
     }
     
+    public DeleteTransitGatewayConnectPeerResult(){}
 }

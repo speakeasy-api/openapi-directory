@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1SequentialSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Integer end;
+
     public GoogleCloudDatalabelingV1beta1SequentialSegment withEnd(Integer end) {
         this.end = end;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1SequentialSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Integer start;
+
     public GoogleCloudDatalabelingV1beta1SequentialSegment withStart(Integer start) {
         this.start = start;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1SequentialSegment(){}
 }

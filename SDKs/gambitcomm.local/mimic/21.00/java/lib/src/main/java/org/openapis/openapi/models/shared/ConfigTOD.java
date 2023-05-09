@@ -15,6 +15,7 @@ public class ConfigTOD {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public ConfigTOD withPort(Integer port) {
         this.port = port;
         return this;
@@ -23,6 +24,7 @@ public class ConfigTOD {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retries")
     public Integer retries;
+
     public ConfigTOD withRetries(Integer retries) {
         this.retries = retries;
         return this;
@@ -31,6 +33,7 @@ public class ConfigTOD {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public ConfigTOD withScript(String script) {
         this.script = script;
         return this;
@@ -39,6 +42,7 @@ public class ConfigTOD {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public String server;
+
     public ConfigTOD withServer(String server) {
         this.server = server;
         return this;
@@ -47,9 +51,11 @@ public class ConfigTOD {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public Integer timeout;
+
     public ConfigTOD withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ConfigTOD(){}
 }

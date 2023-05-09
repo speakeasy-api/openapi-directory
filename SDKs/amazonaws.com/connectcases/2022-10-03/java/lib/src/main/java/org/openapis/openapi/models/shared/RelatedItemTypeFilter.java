@@ -15,6 +15,7 @@ public class RelatedItemTypeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public java.util.Map<String, Object> comment;
+
     public RelatedItemTypeFilter withComment(java.util.Map<String, Object> comment) {
         this.comment = comment;
         return this;
@@ -23,9 +24,11 @@ public class RelatedItemTypeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public ContactFilter contact;
+
     public RelatedItemTypeFilter withContact(ContactFilter contact) {
         this.contact = contact;
         return this;
     }
     
+    public RelatedItemTypeFilter(){}
 }

@@ -21,6 +21,7 @@ public class InventoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculated_at")
     public String calculatedAt;
+
     public InventoryCount withCalculatedAt(String calculatedAt) {
         this.calculatedAt = calculatedAt;
         return this;
@@ -33,6 +34,7 @@ public class InventoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public InventoryCount withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -46,6 +48,7 @@ public class InventoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_type")
     public String catalogObjectType;
+
     public InventoryCount withCatalogObjectType(String catalogObjectType) {
         this.catalogObjectType = catalogObjectType;
         return this;
@@ -61,6 +64,7 @@ public class InventoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_estimated")
     public Boolean isEstimated;
+
     public InventoryCount withIsEstimated(Boolean isEstimated) {
         this.isEstimated = isEstimated;
         return this;
@@ -73,6 +77,7 @@ public class InventoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public InventoryCount withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -85,6 +90,7 @@ public class InventoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public InventoryCount withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -97,9 +103,11 @@ public class InventoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public InventoryCount withState(String state) {
         this.state = state;
         return this;
     }
     
+    public InventoryCount(){}
 }

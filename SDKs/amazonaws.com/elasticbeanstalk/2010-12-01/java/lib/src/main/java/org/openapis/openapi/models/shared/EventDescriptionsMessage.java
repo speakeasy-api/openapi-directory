@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EventDescriptionsMessage {
     
     public EventDescription[] events;
+
     public EventDescriptionsMessage withEvents(EventDescription[] events) {
         this.events = events;
         return this;
@@ -19,9 +20,11 @@ public class EventDescriptionsMessage {
     
     
     public String nextToken;
+
     public EventDescriptionsMessage withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public EventDescriptionsMessage(){}
 }

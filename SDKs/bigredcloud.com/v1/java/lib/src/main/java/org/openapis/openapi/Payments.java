@@ -59,11 +59,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsDeleteResponse res = new org.openapis.openapi.models.operations.PaymentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.PaymentsDeleteResponse res = new org.openapis.openapi.models.operations.PaymentsDeleteResponse(contentType, httpRes.statusCode()) {{
             paymentsDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsGetResponse res = new org.openapis.openapi.models.operations.PaymentsGetResponse() {{
+        org.openapis.openapi.models.operations.PaymentsGetResponse res = new org.openapis.openapi.models.operations.PaymentsGetResponse(contentType, httpRes.statusCode()) {{
             pageResultPaymentQueryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsPostResponse res = new org.openapis.openapi.models.operations.PaymentsPostResponse() {{
+        org.openapis.openapi.models.operations.PaymentsPostResponse res = new org.openapis.openapi.models.operations.PaymentsPostResponse(contentType, httpRes.statusCode()) {{
             paymentsPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsProcessBatchResponse res = new org.openapis.openapi.models.operations.PaymentsProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.PaymentsProcessBatchResponse res = new org.openapis.openapi.models.operations.PaymentsProcessBatchResponse(contentType, httpRes.statusCode()) {{
             paymentsProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsPutResponse res = new org.openapis.openapi.models.operations.PaymentsPutResponse() {{
+        org.openapis.openapi.models.operations.PaymentsPutResponse res = new org.openapis.openapi.models.operations.PaymentsPutResponse(contentType, httpRes.statusCode()) {{
             paymentsPut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1PaymentsIdResponse res = new org.openapis.openapi.models.operations.GetV1PaymentsIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1PaymentsIdResponse res = new org.openapis.openapi.models.operations.GetV1PaymentsIdResponse(contentType, httpRes.statusCode()) {{
             paymentDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

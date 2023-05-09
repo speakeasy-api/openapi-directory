@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAs2StationsResponse {
@@ -12,6 +13,7 @@ public class PostAs2StationsResponse {
      */
     
     public org.openapis.openapi.models.shared.As2StationEntity as2StationEntity;
+
     public PostAs2StationsResponse withAs2StationEntity(org.openapis.openapi.models.shared.As2StationEntity as2StationEntity) {
         this.as2StationEntity = as2StationEntity;
         return this;
@@ -19,6 +21,7 @@ public class PostAs2StationsResponse {
     
     
     public String contentType;
+
     public PostAs2StationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostAs2StationsResponse {
     
     
     public Integer statusCode;
+
     public PostAs2StationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostAs2StationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAs2StationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostAs2StationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

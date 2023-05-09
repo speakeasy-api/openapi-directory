@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public ViewOnlyLinksNodeListNodeAttributesCategoryEnum category;
+
     public ViewOnlyLinksNodeListNodeAttributes withCategory(ViewOnlyLinksNodeListNodeAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,6 +27,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public Boolean collection;
+
     public ViewOnlyLinksNodeListNodeAttributes withCollection(Boolean collection) {
         this.collection = collection;
         return this;
@@ -35,6 +38,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public ViewOnlyLinksNodeListNodeAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -45,6 +49,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public ViewOnlyLinksNodeListNodeAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -55,6 +60,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public ViewOnlyLinksNodeListNodeAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -65,6 +71,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public ViewOnlyLinksNodeListNodeAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -75,6 +82,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public String description;
+
     public ViewOnlyLinksNodeListNodeAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -85,6 +93,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public Boolean fork;
+
     public ViewOnlyLinksNodeListNodeAttributes withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -95,6 +104,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public OffsetDateTime forkedDate;
+
     public ViewOnlyLinksNodeListNodeAttributes withForkedDate(OffsetDateTime forkedDate) {
         this.forkedDate = forkedDate;
         return this;
@@ -105,6 +115,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public String nodeLicense;
+
     public ViewOnlyLinksNodeListNodeAttributes withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -115,6 +126,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public Boolean preprint;
+
     public ViewOnlyLinksNodeListNodeAttributes withPreprint(Boolean preprint) {
         this.preprint = preprint;
         return this;
@@ -125,6 +137,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public Boolean public_;
+
     public ViewOnlyLinksNodeListNodeAttributes withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -135,6 +148,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public Boolean registration;
+
     public ViewOnlyLinksNodeListNodeAttributes withRegistration(Boolean registration) {
         this.registration = registration;
         return this;
@@ -145,6 +159,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public String[] tags;
+
     public ViewOnlyLinksNodeListNodeAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -155,6 +170,7 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public String templateFrom;
+
     public ViewOnlyLinksNodeListNodeAttributes withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -165,9 +181,14 @@ public class ViewOnlyLinksNodeListNodeAttributes {
      */
     
     public String title;
+
     public ViewOnlyLinksNodeListNodeAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ViewOnlyLinksNodeListNodeAttributes(@JsonProperty("category") ViewOnlyLinksNodeListNodeAttributesCategoryEnum category, @JsonProperty("title") String title) {
+        this.category = category;
+        this.title = title;
+  }
 }

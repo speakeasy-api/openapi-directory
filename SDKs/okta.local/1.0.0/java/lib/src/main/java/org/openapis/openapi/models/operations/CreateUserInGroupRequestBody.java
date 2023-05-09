@@ -12,6 +12,7 @@ public class CreateUserInGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupIds")
     public String[] groupIds;
+
     public CreateUserInGroupRequestBody withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -20,9 +21,11 @@ public class CreateUserInGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public CreateUserInGroupRequestBodyProfile profile;
+
     public CreateUserInGroupRequestBody withProfile(CreateUserInGroupRequestBodyProfile profile) {
         this.profile = profile;
         return this;
     }
     
+    public CreateUserInGroupRequestBody(){}
 }

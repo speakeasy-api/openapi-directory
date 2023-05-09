@@ -247,4 +247,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/TwoHundredResultResultAstRu
 lib/src/main/java/org/openapis/openapi/models/shared/TwoHundredResultResultAst.java
 lib/src/main/java/org/openapis/openapi/models/shared/TwoHundredResultResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/TwoHundredResult.java
+docs/sdk/README.md
+docs/compileapi/README.md
+docs/configapi/README.md
+docs/dataapi/README.md
+docs/healthapi/README.md
+docs/policyapi/README.md
+docs/queryapi/README.md
 USAGE.md

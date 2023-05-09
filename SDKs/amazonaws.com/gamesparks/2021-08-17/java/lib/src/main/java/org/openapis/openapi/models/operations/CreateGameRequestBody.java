@@ -15,6 +15,7 @@ public class CreateGameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateGameRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateGameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateGameRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateGameRequestBody {
      */
     @JsonProperty("GameName")
     public String gameName;
+
     public CreateGameRequestBody withGameName(String gameName) {
         this.gameName = gameName;
         return this;
@@ -47,9 +50,13 @@ public class CreateGameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateGameRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateGameRequestBody(@JsonProperty("GameName") String gameName) {
+        this.gameName = gameName;
+  }
 }

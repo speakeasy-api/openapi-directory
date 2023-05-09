@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegistryCreateApiDeploymentResponse {
@@ -12,6 +13,7 @@ public class RegistryCreateApiDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiDeployment apiDeployment;
+
     public RegistryCreateApiDeploymentResponse withApiDeployment(org.openapis.openapi.models.shared.ApiDeployment apiDeployment) {
         this.apiDeployment = apiDeployment;
         return this;
@@ -19,6 +21,7 @@ public class RegistryCreateApiDeploymentResponse {
     
     
     public String contentType;
+
     public RegistryCreateApiDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegistryCreateApiDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Status status;
+
     public RegistryCreateApiDeploymentResponse withStatus(org.openapis.openapi.models.shared.Status status) {
         this.status = status;
         return this;
@@ -36,6 +40,7 @@ public class RegistryCreateApiDeploymentResponse {
     
     
     public Integer statusCode;
+
     public RegistryCreateApiDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RegistryCreateApiDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegistryCreateApiDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegistryCreateApiDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

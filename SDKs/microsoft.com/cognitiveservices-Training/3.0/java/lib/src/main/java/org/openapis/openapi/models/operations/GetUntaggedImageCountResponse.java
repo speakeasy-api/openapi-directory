@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUntaggedImageCountResponse {
     
     public byte[] body;
+
     public GetUntaggedImageCountResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetUntaggedImageCountResponse {
     
     
     public String contentType;
+
     public GetUntaggedImageCountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetUntaggedImageCountResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public GetUntaggedImageCountResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class GetUntaggedImageCountResponse {
      */
     
     public Integer getUntaggedImageCount200ApplicationJSONInt32Integer;
+
     public GetUntaggedImageCountResponse withGetUntaggedImageCount200ApplicationJSONInt32Integer(Integer getUntaggedImageCount200ApplicationJSONInt32Integer) {
         this.getUntaggedImageCount200ApplicationJSONInt32Integer = getUntaggedImageCount200ApplicationJSONInt32Integer;
         return this;
@@ -43,6 +48,7 @@ public class GetUntaggedImageCountResponse {
     
     
     public Integer statusCode;
+
     public GetUntaggedImageCountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetUntaggedImageCountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUntaggedImageCountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUntaggedImageCountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

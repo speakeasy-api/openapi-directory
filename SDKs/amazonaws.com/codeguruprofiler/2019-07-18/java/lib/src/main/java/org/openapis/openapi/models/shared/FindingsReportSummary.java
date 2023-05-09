@@ -20,6 +20,7 @@ public class FindingsReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FindingsReportSummary withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +31,7 @@ public class FindingsReportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("profileEndTime")
     public OffsetDateTime profileEndTime;
+
     public FindingsReportSummary withProfileEndTime(OffsetDateTime profileEndTime) {
         this.profileEndTime = profileEndTime;
         return this;
@@ -40,6 +42,7 @@ public class FindingsReportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("profileStartTime")
     public OffsetDateTime profileStartTime;
+
     public FindingsReportSummary withProfileStartTime(OffsetDateTime profileStartTime) {
         this.profileStartTime = profileStartTime;
         return this;
@@ -48,6 +51,7 @@ public class FindingsReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilingGroupName")
     public String profilingGroupName;
+
     public FindingsReportSummary withProfilingGroupName(String profilingGroupName) {
         this.profilingGroupName = profilingGroupName;
         return this;
@@ -56,9 +60,11 @@ public class FindingsReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNumberOfFindings")
     public Long totalNumberOfFindings;
+
     public FindingsReportSummary withTotalNumberOfFindings(Long totalNumberOfFindings) {
         this.totalNumberOfFindings = totalNumberOfFindings;
         return this;
     }
     
+    public FindingsReportSummary(){}
 }

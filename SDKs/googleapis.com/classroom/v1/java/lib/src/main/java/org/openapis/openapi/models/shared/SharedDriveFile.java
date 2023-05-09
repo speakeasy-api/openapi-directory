@@ -18,6 +18,7 @@ public class SharedDriveFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveFile")
     public DriveFile driveFile;
+
     public SharedDriveFile withDriveFile(DriveFile driveFile) {
         this.driveFile = driveFile;
         return this;
@@ -29,9 +30,11 @@ public class SharedDriveFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareMode")
     public SharedDriveFileShareModeEnum shareMode;
+
     public SharedDriveFile withShareMode(SharedDriveFileShareModeEnum shareMode) {
         this.shareMode = shareMode;
         return this;
     }
     
+    public SharedDriveFile(){}
 }

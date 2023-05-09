@@ -15,6 +15,7 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation {
      */
     @JsonProperty("city")
     public String city;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation withCity(String city) {
         this.city = city;
         return this;
@@ -25,6 +26,7 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation {
      */
     @JsonProperty("country")
     public String country;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -35,6 +37,7 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation {
      */
     @JsonProperty("description")
     public String description;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation {
      */
     @JsonProperty("id")
     public Double id;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation withId(Double id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation {
      */
     @JsonProperty("latitude")
     public Double latitude;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -65,6 +70,7 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation {
      */
     @JsonProperty("longitude")
     public Double longitude;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -75,6 +81,7 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation {
      */
     @JsonProperty("name")
     public String name;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation withName(String name) {
         this.name = name;
         return this;
@@ -85,9 +92,20 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation {
      */
     @JsonProperty("network_zone")
     public String networkZone;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation withNetworkZone(String networkZone) {
         this.networkZone = networkZone;
         return this;
     }
     
+    public GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation(@JsonProperty("city") String city, @JsonProperty("country") String country, @JsonProperty("description") String description, @JsonProperty("id") Double id, @JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude, @JsonProperty("name") String name, @JsonProperty("network_zone") String networkZone) {
+        this.city = city;
+        this.country = country;
+        this.description = description;
+        this.id = id;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.name = name;
+        this.networkZone = networkZone;
+  }
 }

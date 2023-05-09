@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupReferencesResult {
     
     public DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet[] securityGroupReferenceSet;
+
     public DescribeSecurityGroupReferencesResult withSecurityGroupReferenceSet(DescribeSecurityGroupReferencesResultSecurityGroupReferenceSet[] securityGroupReferenceSet) {
         this.securityGroupReferenceSet = securityGroupReferenceSet;
         return this;
     }
     
+    public DescribeSecurityGroupReferencesResult(){}
 }

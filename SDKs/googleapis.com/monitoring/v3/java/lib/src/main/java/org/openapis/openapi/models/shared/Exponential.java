@@ -18,6 +18,7 @@ public class Exponential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("growthFactor")
     public Double growthFactor;
+
     public Exponential withGrowthFactor(Double growthFactor) {
         this.growthFactor = growthFactor;
         return this;
@@ -29,6 +30,7 @@ public class Exponential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numFiniteBuckets")
     public Integer numFiniteBuckets;
+
     public Exponential withNumFiniteBuckets(Integer numFiniteBuckets) {
         this.numFiniteBuckets = numFiniteBuckets;
         return this;
@@ -40,9 +42,11 @@ public class Exponential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public Double scale;
+
     public Exponential withScale(Double scale) {
         this.scale = scale;
         return this;
     }
     
+    public Exponential(){}
 }

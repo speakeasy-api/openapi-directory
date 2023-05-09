@@ -59,11 +59,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteResponse(contentType, httpRes.statusCode()) {{
             customChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetResponse(contentType, httpRes.statusCode()) {{
             customChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertResponse(contentType, httpRes.statusCode()) {{
             customChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostCustomchannelsListResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsListResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostCustomchannelsListResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsListResponse(contentType, httpRes.statusCode()) {{
             customChannels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchResponse(contentType, httpRes.statusCode()) {{
             customChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateResponse res = new org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateResponse(contentType, httpRes.statusCode()) {{
             customChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

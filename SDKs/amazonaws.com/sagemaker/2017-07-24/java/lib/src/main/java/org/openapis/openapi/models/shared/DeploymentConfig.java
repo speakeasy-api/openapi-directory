@@ -15,6 +15,7 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoRollbackConfiguration")
     public AutoRollbackConfig autoRollbackConfiguration;
+
     public DeploymentConfig withAutoRollbackConfiguration(AutoRollbackConfig autoRollbackConfiguration) {
         this.autoRollbackConfiguration = autoRollbackConfiguration;
         return this;
@@ -22,9 +23,13 @@ public class DeploymentConfig {
     
     @JsonProperty("BlueGreenUpdatePolicy")
     public BlueGreenUpdatePolicy blueGreenUpdatePolicy;
+
     public DeploymentConfig withBlueGreenUpdatePolicy(BlueGreenUpdatePolicy blueGreenUpdatePolicy) {
         this.blueGreenUpdatePolicy = blueGreenUpdatePolicy;
         return this;
     }
     
+    public DeploymentConfig(@JsonProperty("BlueGreenUpdatePolicy") BlueGreenUpdatePolicy blueGreenUpdatePolicy) {
+        this.blueGreenUpdatePolicy = blueGreenUpdatePolicy;
+  }
 }

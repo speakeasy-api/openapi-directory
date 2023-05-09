@@ -18,6 +18,7 @@ public class Cursor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("before")
     public Boolean before;
+
     public Cursor withBefore(Boolean before) {
         this.before = before;
         return this;
@@ -29,9 +30,11 @@ public class Cursor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Value[] values;
+
     public Cursor withValues(Value[] values) {
         this.values = values;
         return this;
     }
     
+    public Cursor(){}
 }

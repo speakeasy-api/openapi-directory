@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDedicatedIpWarmupAttributesResponse {
@@ -12,6 +13,7 @@ public class PutDedicatedIpWarmupAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutDedicatedIpWarmupAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutDedicatedIpWarmupAttributesResponse {
     
     
     public String contentType;
+
     public PutDedicatedIpWarmupAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutDedicatedIpWarmupAttributesResponse {
      */
     
     public Object notFoundException;
+
     public PutDedicatedIpWarmupAttributesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutDedicatedIpWarmupAttributesResponse {
      */
     
     public java.util.Map<String, Object> putDedicatedIpWarmupAttributesResponse;
+
     public PutDedicatedIpWarmupAttributesResponse withPutDedicatedIpWarmupAttributesResponse(java.util.Map<String, Object> putDedicatedIpWarmupAttributesResponse) {
         this.putDedicatedIpWarmupAttributesResponse = putDedicatedIpWarmupAttributesResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutDedicatedIpWarmupAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutDedicatedIpWarmupAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutDedicatedIpWarmupAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDedicatedIpWarmupAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutDedicatedIpWarmupAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutDedicatedIpWarmupAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutDedicatedIpWarmupAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

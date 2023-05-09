@@ -19,6 +19,7 @@ public class OBFundsConfirmationConsentResponse1Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBFundsConfirmationConsentResponse1Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -33,6 +34,7 @@ public class OBFundsConfirmationConsentResponse1Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBFundsConfirmationConsentResponse1Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -43,6 +45,7 @@ public class OBFundsConfirmationConsentResponse1Data {
      */
     @JsonProperty("DebtorAccount")
     public OBFundsConfirmationConsentResponse1DataDebtorAccount debtorAccount;
+
     public OBFundsConfirmationConsentResponse1Data withDebtorAccount(OBFundsConfirmationConsentResponse1DataDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -59,6 +62,7 @@ public class OBFundsConfirmationConsentResponse1Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBFundsConfirmationConsentResponse1Data withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -69,6 +73,7 @@ public class OBFundsConfirmationConsentResponse1Data {
      */
     @JsonProperty("Status")
     public OBFundsConfirmationConsentResponse1DataStatusEnum status;
+
     public OBFundsConfirmationConsentResponse1Data withStatus(OBFundsConfirmationConsentResponse1DataStatusEnum status) {
         this.status = status;
         return this;
@@ -83,9 +88,17 @@ public class OBFundsConfirmationConsentResponse1Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBFundsConfirmationConsentResponse1Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBFundsConfirmationConsentResponse1Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("DebtorAccount") OBFundsConfirmationConsentResponse1DataDebtorAccount debtorAccount, @JsonProperty("Status") OBFundsConfirmationConsentResponse1DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.debtorAccount = debtorAccount;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

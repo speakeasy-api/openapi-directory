@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ParameterObject {
     @JsonProperty("attributes")
     public ParameterAttribute[] attributes;
+
     public ParameterObject withAttributes(ParameterAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -19,9 +20,14 @@ public class ParameterObject {
     
     @JsonProperty("id")
     public String id;
+
     public ParameterObject withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ParameterObject(@JsonProperty("attributes") ParameterAttribute[] attributes, @JsonProperty("id") String id) {
+        this.attributes = attributes;
+        this.id = id;
+  }
 }

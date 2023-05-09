@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectPiiEntitiesResponse {
     
     public String contentType;
+
     public DetectPiiEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectPiiEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectPiiEntitiesResponse detectPiiEntitiesResponse;
+
     public DetectPiiEntitiesResponse withDetectPiiEntitiesResponse(org.openapis.openapi.models.shared.DetectPiiEntitiesResponse detectPiiEntitiesResponse) {
         this.detectPiiEntitiesResponse = detectPiiEntitiesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DetectPiiEntitiesResponse {
      */
     
     public Object internalServerException;
+
     public DetectPiiEntitiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectPiiEntitiesResponse {
      */
     
     public Object invalidRequestException;
+
     public DetectPiiEntitiesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DetectPiiEntitiesResponse {
     
     
     public Integer statusCode;
+
     public DetectPiiEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DetectPiiEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectPiiEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DetectPiiEntitiesResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectPiiEntitiesResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -73,9 +81,14 @@ public class DetectPiiEntitiesResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public DetectPiiEntitiesResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public DetectPiiEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

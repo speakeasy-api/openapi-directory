@@ -15,6 +15,7 @@ public class AutoMLJobCompletionCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAutoMLJobRuntimeInSeconds")
     public Long maxAutoMLJobRuntimeInSeconds;
+
     public AutoMLJobCompletionCriteria withMaxAutoMLJobRuntimeInSeconds(Long maxAutoMLJobRuntimeInSeconds) {
         this.maxAutoMLJobRuntimeInSeconds = maxAutoMLJobRuntimeInSeconds;
         return this;
@@ -23,6 +24,7 @@ public class AutoMLJobCompletionCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCandidates")
     public Long maxCandidates;
+
     public AutoMLJobCompletionCriteria withMaxCandidates(Long maxCandidates) {
         this.maxCandidates = maxCandidates;
         return this;
@@ -31,9 +33,11 @@ public class AutoMLJobCompletionCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRuntimePerTrainingJobInSeconds")
     public Long maxRuntimePerTrainingJobInSeconds;
+
     public AutoMLJobCompletionCriteria withMaxRuntimePerTrainingJobInSeconds(Long maxRuntimePerTrainingJobInSeconds) {
         this.maxRuntimePerTrainingJobInSeconds = maxRuntimePerTrainingJobInSeconds;
         return this;
     }
     
+    public AutoMLJobCompletionCriteria(){}
 }

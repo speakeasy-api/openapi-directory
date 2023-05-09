@@ -18,6 +18,7 @@ public class Explanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribution")
     public Double attribution;
+
     public Explanation withAttribution(Double attribution) {
         this.attribution = attribution;
         return this;
@@ -29,9 +30,11 @@ public class Explanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureName")
     public String featureName;
+
     public Explanation withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
     }
     
+    public Explanation(){}
 }

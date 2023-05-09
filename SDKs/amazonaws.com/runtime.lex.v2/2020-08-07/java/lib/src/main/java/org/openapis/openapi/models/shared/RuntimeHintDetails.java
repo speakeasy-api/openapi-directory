@@ -15,6 +15,7 @@ public class RuntimeHintDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeHintValues")
     public RuntimeHintValue[] runtimeHintValues;
+
     public RuntimeHintDetails withRuntimeHintValues(RuntimeHintValue[] runtimeHintValues) {
         this.runtimeHintValues = runtimeHintValues;
         return this;
@@ -23,9 +24,11 @@ public class RuntimeHintDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSlotHints")
     public java.util.Map<String, RuntimeHintDetails> subSlotHints;
+
     public RuntimeHintDetails withSubSlotHints(java.util.Map<String, RuntimeHintDetails> subSlotHints) {
         this.subSlotHints = subSlotHints;
         return this;
     }
     
+    public RuntimeHintDetails(){}
 }

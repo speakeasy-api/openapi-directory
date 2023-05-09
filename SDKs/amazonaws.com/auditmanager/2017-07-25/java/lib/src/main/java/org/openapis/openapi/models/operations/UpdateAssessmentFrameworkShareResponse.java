@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssessmentFrameworkShareResponse {
@@ -12,6 +13,7 @@ public class UpdateAssessmentFrameworkShareResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAssessmentFrameworkShareResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAssessmentFrameworkShareResponse {
     
     
     public String contentType;
+
     public UpdateAssessmentFrameworkShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssessmentFrameworkShareResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAssessmentFrameworkShareResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAssessmentFrameworkShareResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssessmentFrameworkShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAssessmentFrameworkShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssessmentFrameworkShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAssessmentFrameworkShareResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAssessmentFrameworkShareResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAssessmentFrameworkShareResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateAssessmentFrameworkShareResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAssessmentFrameworkShareResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAssessmentFrameworkShareResponse updateAssessmentFrameworkShareResponse;
+
     public UpdateAssessmentFrameworkShareResponse withUpdateAssessmentFrameworkShareResponse(org.openapis.openapi.models.shared.UpdateAssessmentFrameworkShareResponse updateAssessmentFrameworkShareResponse) {
         this.updateAssessmentFrameworkShareResponse = updateAssessmentFrameworkShareResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAssessmentFrameworkShareResponse {
      */
     
     public Object validationException;
+
     public UpdateAssessmentFrameworkShareResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAssessmentFrameworkShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

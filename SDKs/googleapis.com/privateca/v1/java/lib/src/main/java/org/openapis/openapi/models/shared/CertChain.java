@@ -15,9 +15,11 @@ public class CertChain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public String[] certificates;
+
     public CertChain withCertificates(String[] certificates) {
         this.certificates = certificates;
         return this;
     }
     
+    public CertChain(){}
 }

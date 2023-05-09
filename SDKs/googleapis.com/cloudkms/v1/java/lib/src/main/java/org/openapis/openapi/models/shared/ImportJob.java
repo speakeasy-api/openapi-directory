@@ -18,6 +18,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestation")
     public KeyOperationAttestation attestation;
+
     public ImportJob withAttestation(KeyOperationAttestation attestation) {
         this.attestation = attestation;
         return this;
@@ -29,6 +30,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ImportJob withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireEventTime")
     public String expireEventTime;
+
     public ImportJob withExpireEventTime(String expireEventTime) {
         this.expireEventTime = expireEventTime;
         return this;
@@ -51,6 +54,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public ImportJob withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -62,6 +66,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generateTime")
     public String generateTime;
+
     public ImportJob withGenerateTime(String generateTime) {
         this.generateTime = generateTime;
         return this;
@@ -73,6 +78,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importMethod")
     public ImportJobImportMethodEnum importMethod;
+
     public ImportJob withImportMethod(ImportJobImportMethodEnum importMethod) {
         this.importMethod = importMethod;
         return this;
@@ -84,6 +90,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportJob withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectionLevel")
     public ImportJobProtectionLevelEnum protectionLevel;
+
     public ImportJob withProtectionLevel(ImportJobProtectionLevelEnum protectionLevel) {
         this.protectionLevel = protectionLevel;
         return this;
@@ -106,6 +114,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public WrappingPublicKey publicKey;
+
     public ImportJob withPublicKey(WrappingPublicKey publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -117,9 +126,11 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ImportJobStateEnum state;
+
     public ImportJob withState(ImportJobStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ImportJob(){}
 }

@@ -15,6 +15,7 @@ public class ReactionValueFormats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emoji")
     public String emoji;
+
     public ReactionValueFormats withEmoji(String emoji) {
         this.emoji = emoji;
         return this;
@@ -23,6 +24,7 @@ public class ReactionValueFormats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortCode")
     public String shortCode;
+
     public ReactionValueFormats withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
@@ -31,9 +33,11 @@ public class ReactionValueFormats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unicode")
     public String unicode;
+
     public ReactionValueFormats withUnicode(String unicode) {
         this.unicode = unicode;
         return this;
     }
     
+    public ReactionValueFormats(){}
 }

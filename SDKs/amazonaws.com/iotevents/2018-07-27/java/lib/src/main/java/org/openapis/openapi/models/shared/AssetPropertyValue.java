@@ -15,6 +15,7 @@ public class AssetPropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quality")
     public String quality;
+
     public AssetPropertyValue withQuality(String quality) {
         this.quality = quality;
         return this;
@@ -23,6 +24,7 @@ public class AssetPropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public AssetPropertyTimestamp timestamp;
+
     public AssetPropertyValue withTimestamp(AssetPropertyTimestamp timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -31,9 +33,11 @@ public class AssetPropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public AssetPropertyVariant value;
+
     public AssetPropertyValue withValue(AssetPropertyVariant value) {
         this.value = value;
         return this;
     }
     
+    public AssetPropertyValue(){}
 }

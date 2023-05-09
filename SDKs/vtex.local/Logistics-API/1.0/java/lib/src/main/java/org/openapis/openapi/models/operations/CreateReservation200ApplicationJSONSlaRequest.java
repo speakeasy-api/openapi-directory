@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservation200ApplicationJSONSlaRequest {
     @JsonProperty("deliveryWindows")
     public String deliveryWindows;
+
     public CreateReservation200ApplicationJSONSlaRequest withDeliveryWindows(String deliveryWindows) {
         this.deliveryWindows = deliveryWindows;
         return this;
@@ -16,6 +17,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("dockId")
     public String dockId;
+
     public CreateReservation200ApplicationJSONSlaRequest withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -23,6 +25,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("dockTime")
     public String dockTime;
+
     public CreateReservation200ApplicationJSONSlaRequest withDockTime(String dockTime) {
         this.dockTime = dockTime;
         return this;
@@ -30,6 +33,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("freightTableId")
     public String freightTableId;
+
     public CreateReservation200ApplicationJSONSlaRequest withFreightTableId(String freightTableId) {
         this.freightTableId = freightTableId;
         return this;
@@ -37,6 +41,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("freightTableName")
     public String freightTableName;
+
     public CreateReservation200ApplicationJSONSlaRequest withFreightTableName(String freightTableName) {
         this.freightTableName = freightTableName;
         return this;
@@ -44,6 +49,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("item")
     public CreateReservation200ApplicationJSONSlaRequestItem1 item;
+
     public CreateReservation200ApplicationJSONSlaRequest withItem(CreateReservation200ApplicationJSONSlaRequestItem1 item) {
         this.item = item;
         return this;
@@ -51,6 +57,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public CreateReservation200ApplicationJSONSlaRequest withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -58,6 +65,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("location")
     public CreateReservation200ApplicationJSONSlaRequestLocation1 location;
+
     public CreateReservation200ApplicationJSONSlaRequest withLocation(CreateReservation200ApplicationJSONSlaRequestLocation1 location) {
         this.location = location;
         return this;
@@ -65,6 +73,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("pickupStoreInfo")
     public String pickupStoreInfo;
+
     public CreateReservation200ApplicationJSONSlaRequest withPickupStoreInfo(String pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -72,6 +81,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("promotionalPrice")
     public Double promotionalPrice;
+
     public CreateReservation200ApplicationJSONSlaRequest withPromotionalPrice(Double promotionalPrice) {
         this.promotionalPrice = promotionalPrice;
         return this;
@@ -79,6 +89,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("slaType")
     public String slaType;
+
     public CreateReservation200ApplicationJSONSlaRequest withSlaType(String slaType) {
         this.slaType = slaType;
         return this;
@@ -86,6 +97,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("slaTypeName")
     public String slaTypeName;
+
     public CreateReservation200ApplicationJSONSlaRequest withSlaTypeName(String slaTypeName) {
         this.slaTypeName = slaTypeName;
         return this;
@@ -93,6 +105,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("timeToDockPlusDockTime")
     public String timeToDockPlusDockTime;
+
     public CreateReservation200ApplicationJSONSlaRequest withTimeToDockPlusDockTime(String timeToDockPlusDockTime) {
         this.timeToDockPlusDockTime = timeToDockPlusDockTime;
         return this;
@@ -100,6 +113,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("totalTime")
     public String totalTime;
+
     public CreateReservation200ApplicationJSONSlaRequest withTotalTime(String totalTime) {
         this.totalTime = totalTime;
         return this;
@@ -107,6 +121,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("transitTime")
     public String transitTime;
+
     public CreateReservation200ApplicationJSONSlaRequest withTransitTime(String transitTime) {
         this.transitTime = transitTime;
         return this;
@@ -114,6 +129,7 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("wareHouseId")
     public String wareHouseId;
+
     public CreateReservation200ApplicationJSONSlaRequest withWareHouseId(String wareHouseId) {
         this.wareHouseId = wareHouseId;
         return this;
@@ -121,9 +137,29 @@ public class CreateReservation200ApplicationJSONSlaRequest {
     
     @JsonProperty("wmsEndPoint")
     public String wmsEndPoint;
+
     public CreateReservation200ApplicationJSONSlaRequest withWmsEndPoint(String wmsEndPoint) {
         this.wmsEndPoint = wmsEndPoint;
         return this;
     }
     
+    public CreateReservation200ApplicationJSONSlaRequest(@JsonProperty("deliveryWindows") String deliveryWindows, @JsonProperty("dockId") String dockId, @JsonProperty("dockTime") String dockTime, @JsonProperty("freightTableId") String freightTableId, @JsonProperty("freightTableName") String freightTableName, @JsonProperty("item") CreateReservation200ApplicationJSONSlaRequestItem1 item, @JsonProperty("listPrice") Double listPrice, @JsonProperty("location") CreateReservation200ApplicationJSONSlaRequestLocation1 location, @JsonProperty("pickupStoreInfo") String pickupStoreInfo, @JsonProperty("promotionalPrice") Double promotionalPrice, @JsonProperty("slaType") String slaType, @JsonProperty("slaTypeName") String slaTypeName, @JsonProperty("timeToDockPlusDockTime") String timeToDockPlusDockTime, @JsonProperty("totalTime") String totalTime, @JsonProperty("transitTime") String transitTime, @JsonProperty("wareHouseId") String wareHouseId, @JsonProperty("wmsEndPoint") String wmsEndPoint) {
+        this.deliveryWindows = deliveryWindows;
+        this.dockId = dockId;
+        this.dockTime = dockTime;
+        this.freightTableId = freightTableId;
+        this.freightTableName = freightTableName;
+        this.item = item;
+        this.listPrice = listPrice;
+        this.location = location;
+        this.pickupStoreInfo = pickupStoreInfo;
+        this.promotionalPrice = promotionalPrice;
+        this.slaType = slaType;
+        this.slaTypeName = slaTypeName;
+        this.timeToDockPlusDockTime = timeToDockPlusDockTime;
+        this.totalTime = totalTime;
+        this.transitTime = transitTime;
+        this.wareHouseId = wareHouseId;
+        this.wmsEndPoint = wmsEndPoint;
+  }
 }

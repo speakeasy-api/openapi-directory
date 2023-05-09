@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPriceListFileUrlResponse {
@@ -12,6 +13,7 @@ public class GetPriceListFileUrlResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPriceListFileUrlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPriceListFileUrlResponse {
     
     
     public String contentType;
+
     public GetPriceListFileUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPriceListFileUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPriceListFileUrlResponse getPriceListFileUrlResponse;
+
     public GetPriceListFileUrlResponse withGetPriceListFileUrlResponse(org.openapis.openapi.models.shared.GetPriceListFileUrlResponse getPriceListFileUrlResponse) {
         this.getPriceListFileUrlResponse = getPriceListFileUrlResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPriceListFileUrlResponse {
      */
     
     public Object internalErrorException;
+
     public GetPriceListFileUrlResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetPriceListFileUrlResponse {
      */
     
     public Object invalidParameterException;
+
     public GetPriceListFileUrlResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetPriceListFileUrlResponse {
      */
     
     public Object notFoundException;
+
     public GetPriceListFileUrlResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetPriceListFileUrlResponse {
     
     
     public Integer statusCode;
+
     public GetPriceListFileUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetPriceListFileUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPriceListFileUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPriceListFileUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

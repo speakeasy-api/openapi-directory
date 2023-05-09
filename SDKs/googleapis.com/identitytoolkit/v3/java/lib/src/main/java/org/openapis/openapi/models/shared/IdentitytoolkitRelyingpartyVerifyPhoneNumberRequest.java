@@ -15,6 +15,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -31,6 +33,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public String operation;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -39,6 +42,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -50,6 +54,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInfo")
     public String sessionInfo;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest withSessionInfo(String sessionInfo) {
         this.sessionInfo = sessionInfo;
         return this;
@@ -58,6 +63,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temporaryProof")
     public String temporaryProof;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest withTemporaryProof(String temporaryProof) {
         this.temporaryProof = temporaryProof;
         return this;
@@ -66,9 +72,11 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationProof")
     public String verificationProof;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest withVerificationProof(String verificationProof) {
         this.verificationProof = verificationProof;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest(){}
 }

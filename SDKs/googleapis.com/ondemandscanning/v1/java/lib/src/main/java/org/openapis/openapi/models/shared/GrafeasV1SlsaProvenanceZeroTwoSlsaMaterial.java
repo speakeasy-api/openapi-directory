@@ -15,6 +15,7 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public java.util.Map<String, String> digest;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial withDigest(java.util.Map<String, String> digest) {
         this.digest = digest;
         return this;
@@ -23,9 +24,11 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial(){}
 }

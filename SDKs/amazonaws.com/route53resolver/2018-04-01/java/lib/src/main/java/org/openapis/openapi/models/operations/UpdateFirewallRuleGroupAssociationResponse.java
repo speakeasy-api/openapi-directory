@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFirewallRuleGroupAssociationResponse {
@@ -12,6 +13,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateFirewallRuleGroupAssociationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
      */
     
     public Object conflictException;
+
     public UpdateFirewallRuleGroupAssociationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
     
     
     public String contentType;
+
     public UpdateFirewallRuleGroupAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateFirewallRuleGroupAssociationResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
     
     
     public Integer statusCode;
+
     public UpdateFirewallRuleGroupAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFirewallRuleGroupAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFirewallRuleGroupAssociationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFirewallRuleGroupAssociationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFirewallRuleGroupAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFirewallRuleGroupAssociationResponse updateFirewallRuleGroupAssociationResponse;
+
     public UpdateFirewallRuleGroupAssociationResponse withUpdateFirewallRuleGroupAssociationResponse(org.openapis.openapi.models.shared.UpdateFirewallRuleGroupAssociationResponse updateFirewallRuleGroupAssociationResponse) {
         this.updateFirewallRuleGroupAssociationResponse = updateFirewallRuleGroupAssociationResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateFirewallRuleGroupAssociationResponse {
      */
     
     public Object validationException;
+
     public UpdateFirewallRuleGroupAssociationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateFirewallRuleGroupAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

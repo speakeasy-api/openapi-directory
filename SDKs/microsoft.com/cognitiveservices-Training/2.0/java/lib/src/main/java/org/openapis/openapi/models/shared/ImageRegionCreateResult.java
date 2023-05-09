@@ -19,6 +19,7 @@ public class ImageRegionCreateResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public ImageRegionCreateResult withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class ImageRegionCreateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Float height;
+
     public ImageRegionCreateResult withHeight(Float height) {
         this.height = height;
         return this;
@@ -35,6 +37,7 @@ public class ImageRegionCreateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public String imageId;
+
     public ImageRegionCreateResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -43,6 +46,7 @@ public class ImageRegionCreateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Float left;
+
     public ImageRegionCreateResult withLeft(Float left) {
         this.left = left;
         return this;
@@ -51,6 +55,7 @@ public class ImageRegionCreateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionId")
     public String regionId;
+
     public ImageRegionCreateResult withRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -59,6 +64,7 @@ public class ImageRegionCreateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public String tagId;
+
     public ImageRegionCreateResult withTagId(String tagId) {
         this.tagId = tagId;
         return this;
@@ -67,6 +73,7 @@ public class ImageRegionCreateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagName")
     public String tagName;
+
     public ImageRegionCreateResult withTagName(String tagName) {
         this.tagName = tagName;
         return this;
@@ -75,6 +82,7 @@ public class ImageRegionCreateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Float top;
+
     public ImageRegionCreateResult withTop(Float top) {
         this.top = top;
         return this;
@@ -83,9 +91,11 @@ public class ImageRegionCreateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public ImageRegionCreateResult withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public ImageRegionCreateResult(){}
 }

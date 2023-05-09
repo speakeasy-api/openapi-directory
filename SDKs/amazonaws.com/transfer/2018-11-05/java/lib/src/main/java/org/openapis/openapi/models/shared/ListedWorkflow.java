@@ -15,6 +15,7 @@ public class ListedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListedWorkflow withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ListedWorkflow withDescription(String description) {
         this.description = description;
         return this;
@@ -31,9 +33,11 @@ public class ListedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public ListedWorkflow withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public ListedWorkflow(){}
 }

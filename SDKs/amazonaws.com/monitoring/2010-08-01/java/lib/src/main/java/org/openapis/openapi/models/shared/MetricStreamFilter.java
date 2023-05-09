@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class MetricStreamFilter {
     
     public String namespace;
+
     public MetricStreamFilter withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public MetricStreamFilter(){}
 }

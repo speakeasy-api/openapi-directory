@@ -12,6 +12,7 @@ public class CommitTransactionRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public CommitTransactionRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -22,6 +23,7 @@ public class CommitTransactionRequestBody {
      */
     @JsonProperty("secretArn")
     public String secretArn;
+
     public CommitTransactionRequestBody withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -32,9 +34,15 @@ public class CommitTransactionRequestBody {
      */
     @JsonProperty("transactionId")
     public String transactionId;
+
     public CommitTransactionRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public CommitTransactionRequestBody(@JsonProperty("resourceArn") String resourceArn, @JsonProperty("secretArn") String secretArn, @JsonProperty("transactionId") String transactionId) {
+        this.resourceArn = resourceArn;
+        this.secretArn = secretArn;
+        this.transactionId = transactionId;
+  }
 }

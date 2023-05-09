@@ -18,6 +18,7 @@ public class RangePartitioningRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public RangePartitioningRange withEnd(String end) {
         this.end = end;
         return this;
@@ -29,6 +30,7 @@ public class RangePartitioningRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public String interval;
+
     public RangePartitioningRange withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -40,9 +42,11 @@ public class RangePartitioningRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public RangePartitioningRange withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public RangePartitioningRange(){}
 }

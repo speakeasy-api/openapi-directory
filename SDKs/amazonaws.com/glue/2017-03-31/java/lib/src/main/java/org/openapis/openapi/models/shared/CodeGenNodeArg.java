@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeGenNodeArg {
     @JsonProperty("Name")
     public String name;
+
     public CodeGenNodeArg withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class CodeGenNodeArg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Param")
     public Boolean param;
+
     public CodeGenNodeArg withParam(Boolean param) {
         this.param = param;
         return this;
@@ -29,9 +31,14 @@ public class CodeGenNodeArg {
     
     @JsonProperty("Value")
     public String value;
+
     public CodeGenNodeArg withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CodeGenNodeArg(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

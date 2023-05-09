@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExecutionsResponse {
     
     public String contentType;
+
     public ListExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListExecutionsResponse {
      */
     
     public Object internalServiceError;
+
     public ListExecutionsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListExecutionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListExecutionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListExecutionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListExecutionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExecutionsResponse listExecutionsResponse;
+
     public ListExecutionsResponse withListExecutionsResponse(org.openapis.openapi.models.shared.ListExecutionsResponse listExecutionsResponse) {
         this.listExecutionsResponse = listExecutionsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListExecutionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListExecutionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListExecutionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListExecutionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListExecutionsResponse {
     
     
     public Integer statusCode;
+
     public ListExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

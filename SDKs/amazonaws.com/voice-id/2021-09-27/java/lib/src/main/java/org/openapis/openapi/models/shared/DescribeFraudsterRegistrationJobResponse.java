@@ -15,9 +15,11 @@ public class DescribeFraudsterRegistrationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Job")
     public FraudsterRegistrationJob job;
+
     public DescribeFraudsterRegistrationJobResponse withJob(FraudsterRegistrationJob job) {
         this.job = job;
         return this;
     }
     
+    public DescribeFraudsterRegistrationJobResponse(){}
 }

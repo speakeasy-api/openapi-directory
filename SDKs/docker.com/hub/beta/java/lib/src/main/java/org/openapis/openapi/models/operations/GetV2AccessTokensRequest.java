@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetV2AccessTokensRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Double page;
+
     public GetV2AccessTokensRequest withPage(Double page) {
         this.page = page;
         return this;
@@ -16,9 +17,11 @@ public class GetV2AccessTokensRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Double pageSize;
+
     public GetV2AccessTokensRequest withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetV2AccessTokensRequest(){}
 }

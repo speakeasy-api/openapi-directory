@@ -15,6 +15,7 @@ public class NetworkOriginConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internetConfiguration")
     public java.util.Map<String, Object> internetConfiguration;
+
     public NetworkOriginConfiguration withInternetConfiguration(java.util.Map<String, Object> internetConfiguration) {
         this.internetConfiguration = internetConfiguration;
         return this;
@@ -26,9 +27,11 @@ public class NetworkOriginConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfiguration")
     public VpcConfiguration vpcConfiguration;
+
     public NetworkOriginConfiguration withVpcConfiguration(VpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public NetworkOriginConfiguration(){}
 }

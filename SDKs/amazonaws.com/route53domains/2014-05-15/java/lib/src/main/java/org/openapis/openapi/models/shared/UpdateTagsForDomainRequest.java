@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTagsForDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public UpdateTagsForDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,13 @@ public class UpdateTagsForDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagsToUpdate")
     public Tag[] tagsToUpdate;
+
     public UpdateTagsForDomainRequest withTagsToUpdate(Tag[] tagsToUpdate) {
         this.tagsToUpdate = tagsToUpdate;
         return this;
     }
     
+    public UpdateTagsForDomainRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

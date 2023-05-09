@@ -15,9 +15,11 @@ public class BatchDeleteDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedDocuments")
     public BatchDeleteDocumentResponseFailedDocument[] failedDocuments;
+
     public BatchDeleteDocumentResponse withFailedDocuments(BatchDeleteDocumentResponseFailedDocument[] failedDocuments) {
         this.failedDocuments = failedDocuments;
         return this;
     }
     
+    public BatchDeleteDocumentResponse(){}
 }

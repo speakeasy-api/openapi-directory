@@ -18,6 +18,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionDate")
     public String completionDate;
+
     public Task withCompletionDate(String completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -29,6 +30,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public Task withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -40,6 +42,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailHref")
     public String detailHref;
+
     public Task withDetailHref(String detailHref) {
         this.detailHref = detailHref;
         return this;
@@ -51,6 +54,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public String feedType;
+
     public Task withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -62,6 +66,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public Task withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -73,6 +78,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Task withStatus(String status) {
         this.status = status;
         return this;
@@ -84,6 +90,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public Task withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -95,9 +102,11 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadSummary")
     public UploadSummary uploadSummary;
+
     public Task withUploadSummary(UploadSummary uploadSummary) {
         this.uploadSummary = uploadSummary;
         return this;
     }
     
+    public Task(){}
 }

@@ -19,6 +19,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListMonitoringExecutionsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListMonitoringExecutionsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public ListMonitoringExecutionsRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -47,6 +50,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListMonitoringExecutionsRequest withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -57,6 +61,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListMonitoringExecutionsRequest withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -65,6 +70,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMonitoringExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -73,6 +79,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringJobDefinitionName")
     public String monitoringJobDefinitionName;
+
     public ListMonitoringExecutionsRequest withMonitoringJobDefinitionName(String monitoringJobDefinitionName) {
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         return this;
@@ -81,6 +88,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public ListMonitoringExecutionsRequest withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
@@ -89,6 +97,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringTypeEquals")
     public MonitoringTypeEnum monitoringTypeEquals;
+
     public ListMonitoringExecutionsRequest withMonitoringTypeEquals(MonitoringTypeEnum monitoringTypeEquals) {
         this.monitoringTypeEquals = monitoringTypeEquals;
         return this;
@@ -97,6 +106,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitoringExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -107,6 +117,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledTimeAfter")
     public OffsetDateTime scheduledTimeAfter;
+
     public ListMonitoringExecutionsRequest withScheduledTimeAfter(OffsetDateTime scheduledTimeAfter) {
         this.scheduledTimeAfter = scheduledTimeAfter;
         return this;
@@ -117,6 +128,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledTimeBefore")
     public OffsetDateTime scheduledTimeBefore;
+
     public ListMonitoringExecutionsRequest withScheduledTimeBefore(OffsetDateTime scheduledTimeBefore) {
         this.scheduledTimeBefore = scheduledTimeBefore;
         return this;
@@ -125,6 +137,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public MonitoringExecutionSortKeyEnum sortBy;
+
     public ListMonitoringExecutionsRequest withSortBy(MonitoringExecutionSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -133,6 +146,7 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListMonitoringExecutionsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -141,9 +155,11 @@ public class ListMonitoringExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public ExecutionStatusEnum statusEquals;
+
     public ListMonitoringExecutionsRequest withStatusEquals(ExecutionStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListMonitoringExecutionsRequest(){}
 }

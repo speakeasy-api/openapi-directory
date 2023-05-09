@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetFlowLogsIntegrationTemplateRequestIntegrateServices {
     
     public GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegrations[] athenaIntegrations;
+
     public GetFlowLogsIntegrationTemplateRequestIntegrateServices withAthenaIntegrations(GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegrations[] athenaIntegrations) {
         this.athenaIntegrations = athenaIntegrations;
         return this;
     }
     
+    public GetFlowLogsIntegrationTemplateRequestIntegrateServices(){}
 }

@@ -13,6 +13,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bookedBy")
     public String bookedBy;
+
     public GetSetupV1AppointmentsRequest withBookedBy(String bookedBy) {
         this.bookedBy = bookedBy;
         return this;
@@ -23,6 +24,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendarId")
     public String calendarId;
+
     public GetSetupV1AppointmentsRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -33,6 +35,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerId")
     public String customerId;
+
     public GetSetupV1AppointmentsRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -43,6 +46,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetSetupV1AppointmentsRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -53,6 +57,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public GetSetupV1AppointmentsRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -63,6 +68,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastname")
     public String lastname;
+
     public GetSetupV1AppointmentsRequest withLastname(String lastname) {
         this.lastname = lastname;
         return this;
@@ -73,6 +79,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1AppointmentsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -83,6 +90,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetSetupV1AppointmentsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -93,6 +101,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1AppointmentsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -103,6 +112,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
     public String resourceId;
+
     public GetSetupV1AppointmentsRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -113,6 +123,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceAllocationId")
     public String serviceAllocationId;
+
     public GetSetupV1AppointmentsRequest withServiceAllocationId(String serviceAllocationId) {
         this.serviceAllocationId = serviceAllocationId;
         return this;
@@ -123,6 +134,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
     public String serviceId;
+
     public GetSetupV1AppointmentsRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -133,6 +145,7 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public GetSetupV1AppointmentsRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -143,9 +156,11 @@ public class GetSetupV1AppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetSetupV1AppointmentsRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetSetupV1AppointmentsRequest(){}
 }

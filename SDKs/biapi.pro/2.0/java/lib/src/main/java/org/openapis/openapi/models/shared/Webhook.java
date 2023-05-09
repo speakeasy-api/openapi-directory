@@ -23,6 +23,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("add_to_data")
     public String addToData;
+
     public Webhook withAddToData(String addToData) {
         this.addToData = addToData;
         return this;
@@ -35,6 +36,7 @@ public class Webhook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Webhook withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -48,6 +50,7 @@ public class Webhook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deleted")
     public OffsetDateTime deleted;
+
     public Webhook withDeleted(OffsetDateTime deleted) {
         this.deleted = deleted;
         return this;
@@ -59,6 +62,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flush_fail")
     public String flushFail;
+
     public Webhook withFlushFail(String flushFail) {
         this.flushFail = flushFail;
         return this;
@@ -69,6 +73,7 @@ public class Webhook {
      */
     @JsonProperty("id")
     public Long id;
+
     public Webhook withId(Long id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_auth")
     public Long idAuth;
+
     public Webhook withIdAuth(Long idAuth) {
         this.idAuth = idAuth;
         return this;
@@ -91,6 +97,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_event")
     public Long idEvent;
+
     public Webhook withIdEvent(Long idEvent) {
         this.idEvent = idEvent;
         return this;
@@ -102,6 +109,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_service")
     public Long idService;
+
     public Webhook withIdService(Long idService) {
         this.idService = idService;
         return this;
@@ -113,6 +121,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_user")
     public Long idUser;
+
     public Webhook withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -125,6 +134,7 @@ public class Webhook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public Webhook withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
@@ -136,9 +146,15 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Webhook withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Webhook(@JsonProperty("created") OffsetDateTime created, @JsonProperty("id") Long id, @JsonProperty("updated") OffsetDateTime updated) {
+        this.created = created;
+        this.id = id;
+        this.updated = updated;
+  }
 }

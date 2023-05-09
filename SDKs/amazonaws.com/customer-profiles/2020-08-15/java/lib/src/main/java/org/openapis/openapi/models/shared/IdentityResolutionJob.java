@@ -20,6 +20,7 @@ public class IdentityResolutionJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public IdentityResolutionJob withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -28,6 +29,7 @@ public class IdentityResolutionJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportingLocation")
     public ExportingLocation exportingLocation;
+
     public IdentityResolutionJob withExportingLocation(ExportingLocation exportingLocation) {
         this.exportingLocation = exportingLocation;
         return this;
@@ -38,6 +40,7 @@ public class IdentityResolutionJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("JobEndTime")
     public OffsetDateTime jobEndTime;
+
     public IdentityResolutionJob withJobEndTime(OffsetDateTime jobEndTime) {
         this.jobEndTime = jobEndTime;
         return this;
@@ -46,6 +49,7 @@ public class IdentityResolutionJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public IdentityResolutionJob withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -56,6 +60,7 @@ public class IdentityResolutionJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("JobStartTime")
     public OffsetDateTime jobStartTime;
+
     public IdentityResolutionJob withJobStartTime(OffsetDateTime jobStartTime) {
         this.jobStartTime = jobStartTime;
         return this;
@@ -64,6 +69,7 @@ public class IdentityResolutionJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStats")
     public JobStats jobStats;
+
     public IdentityResolutionJob withJobStats(JobStats jobStats) {
         this.jobStats = jobStats;
         return this;
@@ -72,6 +78,7 @@ public class IdentityResolutionJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public IdentityResolutionJob withMessage(String message) {
         this.message = message;
         return this;
@@ -80,9 +87,11 @@ public class IdentityResolutionJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public IdentityResolutionJobStatusEnum status;
+
     public IdentityResolutionJob withStatus(IdentityResolutionJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public IdentityResolutionJob(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesUpdateMilestoneRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public IssuesUpdateMilestoneRequestBody requestBody;
+
     public IssuesUpdateMilestoneRequest withRequestBody(IssuesUpdateMilestoneRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class IssuesUpdateMilestoneRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=milestone_number")
     public Long milestoneNumber;
+
     public IssuesUpdateMilestoneRequest withMilestoneNumber(Long milestoneNumber) {
         this.milestoneNumber = milestoneNumber;
         return this;
@@ -29,6 +32,7 @@ public class IssuesUpdateMilestoneRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesUpdateMilestoneRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,15 @@ public class IssuesUpdateMilestoneRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesUpdateMilestoneRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public IssuesUpdateMilestoneRequest(@JsonProperty("milestone_number") Long milestoneNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.milestoneNumber = milestoneNumber;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

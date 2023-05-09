@@ -23,6 +23,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public Dispute withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -34,6 +35,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand_dispute_id")
     public String brandDisputeId;
+
     public Dispute withBrandDisputeId(String brandDisputeId) {
         this.brandDisputeId = brandDisputeId;
         return this;
@@ -45,6 +47,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_brand")
     public String cardBrand;
+
     public Dispute withCardBrand(String cardBrand) {
         this.cardBrand = cardBrand;
         return this;
@@ -56,6 +59,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Dispute withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -67,6 +71,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispute_id")
     public String disputeId;
+
     public Dispute withDisputeId(String disputeId) {
         this.disputeId = disputeId;
         return this;
@@ -78,6 +83,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disputed_payment")
     public DisputedPayment disputedPayment;
+
     public Dispute withDisputedPayment(DisputedPayment disputedPayment) {
         this.disputedPayment = disputedPayment;
         return this;
@@ -89,6 +95,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     public String dueAt;
+
     public Dispute withDueAt(String dueAt) {
         this.dueAt = dueAt;
         return this;
@@ -100,6 +107,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence_ids")
     public String[] evidenceIds;
+
     public Dispute withEvidenceIds(String[] evidenceIds) {
         this.evidenceIds = evidenceIds;
         return this;
@@ -111,6 +119,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Dispute withId(String id) {
         this.id = id;
         return this;
@@ -122,6 +131,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Dispute withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -133,6 +143,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Dispute withReason(String reason) {
         this.reason = reason;
         return this;
@@ -144,6 +155,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reported_at")
     public String reportedAt;
+
     public Dispute withReportedAt(String reportedAt) {
         this.reportedAt = reportedAt;
         return this;
@@ -155,6 +167,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reported_date")
     public String reportedDate;
+
     public Dispute withReportedDate(String reportedDate) {
         this.reportedDate = reportedDate;
         return this;
@@ -166,6 +179,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Dispute withState(String state) {
         this.state = state;
         return this;
@@ -177,6 +191,7 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Dispute withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -188,9 +203,11 @@ public class Dispute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Dispute withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Dispute(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PublicDnsPropertiesMutableChange {
     @JsonProperty("SOA")
     public SOAChange soa;
+
     public PublicDnsPropertiesMutableChange withSoa(SOAChange soa) {
         this.soa = soa;
         return this;
     }
     
+    public PublicDnsPropertiesMutableChange(@JsonProperty("SOA") SOAChange soa) {
+        this.soa = soa;
+  }
 }

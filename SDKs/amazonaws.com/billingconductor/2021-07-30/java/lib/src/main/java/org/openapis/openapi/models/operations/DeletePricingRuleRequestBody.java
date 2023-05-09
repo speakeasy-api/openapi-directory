@@ -12,9 +12,13 @@ public class DeletePricingRuleRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public DeletePricingRuleRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeletePricingRuleRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

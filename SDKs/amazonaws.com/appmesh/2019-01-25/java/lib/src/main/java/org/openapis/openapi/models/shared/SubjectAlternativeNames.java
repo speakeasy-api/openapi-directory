@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubjectAlternativeNames {
     @JsonProperty("match")
     public SubjectAlternativeNameMatchers match;
+
     public SubjectAlternativeNames withMatch(SubjectAlternativeNameMatchers match) {
         this.match = match;
         return this;
     }
     
+    public SubjectAlternativeNames(@JsonProperty("match") SubjectAlternativeNameMatchers match) {
+        this.match = match;
+  }
 }

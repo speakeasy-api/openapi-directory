@@ -12,6 +12,7 @@ public class ItemClipFiles {
      */
     @JsonProperty("clips")
     public java.util.Map<String, Object>[] clips;
+
     public ItemClipFiles withClips(java.util.Map<String, Object>[] clips) {
         this.clips = clips;
         return this;
@@ -22,9 +23,14 @@ public class ItemClipFiles {
      */
     @JsonProperty("id")
     public String id;
+
     public ItemClipFiles withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ItemClipFiles(@JsonProperty("clips") java.util.Map<String, Object>[] clips, @JsonProperty("id") String id) {
+        this.clips = clips;
+        this.id = id;
+  }
 }

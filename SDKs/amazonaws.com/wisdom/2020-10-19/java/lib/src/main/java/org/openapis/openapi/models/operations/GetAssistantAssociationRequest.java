@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssistantAssociationRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetAssistantAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetAssistantAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetAssistantAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetAssistantAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetAssistantAssociationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetAssistantAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetAssistantAssociationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetAssistantAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetAssistantAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetAssistantAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetAssistantAssociationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetAssistantAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetAssistantAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetAssistantAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assistantAssociationId")
     public String assistantAssociationId;
+
     public GetAssistantAssociationRequest withAssistantAssociationId(String assistantAssociationId) {
         this.assistantAssociationId = assistantAssociationId;
         return this;
@@ -71,9 +80,14 @@ public class GetAssistantAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assistantId")
     public String assistantId;
+
     public GetAssistantAssociationRequest withAssistantId(String assistantId) {
         this.assistantId = assistantId;
         return this;
     }
     
+    public GetAssistantAssociationRequest(@JsonProperty("assistantAssociationId") String assistantAssociationId, @JsonProperty("assistantId") String assistantId) {
+        this.assistantAssociationId = assistantAssociationId;
+        this.assistantId = assistantId;
+  }
 }

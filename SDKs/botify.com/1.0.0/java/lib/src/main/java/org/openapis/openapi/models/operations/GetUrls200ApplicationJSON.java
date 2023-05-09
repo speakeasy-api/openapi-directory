@@ -15,6 +15,7 @@ public class GetUrls200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public GetUrls200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class GetUrls200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public GetUrls200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -31,6 +33,7 @@ public class GetUrls200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public GetUrls200ApplicationJSON withPage(Long page) {
         this.page = page;
         return this;
@@ -39,6 +42,7 @@ public class GetUrls200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public GetUrls200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -47,6 +51,7 @@ public class GetUrls200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, Object>[] results;
+
     public GetUrls200ApplicationJSON withResults(java.util.Map<String, Object>[] results) {
         this.results = results;
         return this;
@@ -55,9 +60,11 @@ public class GetUrls200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public GetUrls200ApplicationJSON withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public GetUrls200ApplicationJSON(){}
 }

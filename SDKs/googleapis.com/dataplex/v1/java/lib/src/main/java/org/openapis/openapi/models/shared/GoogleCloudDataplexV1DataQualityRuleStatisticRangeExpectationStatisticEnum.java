@@ -6,6 +6,9 @@ package org.openapis.openapi.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
+/**
+ * GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum - The aggregate metric to evaluate.
+ */
 public enum GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum {
     STATISTIC_UNDEFINED("STATISTIC_UNDEFINED"),
     MEAN("MEAN"),

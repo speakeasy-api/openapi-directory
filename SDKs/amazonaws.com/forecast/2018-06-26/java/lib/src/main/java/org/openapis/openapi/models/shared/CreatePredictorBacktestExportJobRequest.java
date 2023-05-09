@@ -14,6 +14,7 @@ public class CreatePredictorBacktestExportJobRequest {
      */
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public CreatePredictorBacktestExportJobRequest withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -22,6 +23,7 @@ public class CreatePredictorBacktestExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CreatePredictorBacktestExportJobRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -29,6 +31,7 @@ public class CreatePredictorBacktestExportJobRequest {
     
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public CreatePredictorBacktestExportJobRequest withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
@@ -36,6 +39,7 @@ public class CreatePredictorBacktestExportJobRequest {
     
     @JsonProperty("PredictorBacktestExportJobName")
     public String predictorBacktestExportJobName;
+
     public CreatePredictorBacktestExportJobRequest withPredictorBacktestExportJobName(String predictorBacktestExportJobName) {
         this.predictorBacktestExportJobName = predictorBacktestExportJobName;
         return this;
@@ -44,9 +48,15 @@ public class CreatePredictorBacktestExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePredictorBacktestExportJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePredictorBacktestExportJobRequest(@JsonProperty("Destination") DataDestination destination, @JsonProperty("PredictorArn") String predictorArn, @JsonProperty("PredictorBacktestExportJobName") String predictorBacktestExportJobName) {
+        this.destination = destination;
+        this.predictorArn = predictorArn;
+        this.predictorBacktestExportJobName = predictorBacktestExportJobName;
+  }
 }

@@ -18,6 +18,7 @@ public class ComputeNodeInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affinityId")
     public String affinityId;
+
     public ComputeNodeInformation withAffinityId(String affinityId) {
         this.affinityId = affinityId;
         return this;
@@ -29,6 +30,7 @@ public class ComputeNodeInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeId")
     public String nodeId;
+
     public ComputeNodeInformation withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -40,6 +42,7 @@ public class ComputeNodeInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeUrl")
     public String nodeUrl;
+
     public ComputeNodeInformation withNodeUrl(String nodeUrl) {
         this.nodeUrl = nodeUrl;
         return this;
@@ -51,6 +54,7 @@ public class ComputeNodeInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolId")
     public String poolId;
+
     public ComputeNodeInformation withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -62,6 +66,7 @@ public class ComputeNodeInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskRootDirectory")
     public String taskRootDirectory;
+
     public ComputeNodeInformation withTaskRootDirectory(String taskRootDirectory) {
         this.taskRootDirectory = taskRootDirectory;
         return this;
@@ -73,9 +78,11 @@ public class ComputeNodeInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskRootDirectoryUrl")
     public String taskRootDirectoryUrl;
+
     public ComputeNodeInformation withTaskRootDirectoryUrl(String taskRootDirectoryUrl) {
         this.taskRootDirectoryUrl = taskRootDirectoryUrl;
         return this;
     }
     
+    public ComputeNodeInformation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SpellcheckRequest {
@@ -12,6 +13,7 @@ public class SpellcheckRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public SpellcheckRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -23,9 +25,14 @@ public class SpellcheckRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SpellcheckRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public SpellcheckRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey, @JsonProperty("q") String q) {
+        this.xListenAPIKey = xListenAPIKey;
+        this.q = q;
+  }
 }

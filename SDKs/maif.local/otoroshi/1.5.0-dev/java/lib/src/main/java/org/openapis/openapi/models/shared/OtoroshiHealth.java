@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OtoroshiHealth {
     @JsonProperty("datastore")
     public OtoroshiHealthDatastoreEnum datastore;
+
     public OtoroshiHealth withDatastore(OtoroshiHealthDatastoreEnum datastore) {
         this.datastore = datastore;
         return this;
@@ -19,9 +20,14 @@ public class OtoroshiHealth {
     
     @JsonProperty("otoroshi")
     public OtoroshiHealthOtoroshiEnum otoroshi;
+
     public OtoroshiHealth withOtoroshi(OtoroshiHealthOtoroshiEnum otoroshi) {
         this.otoroshi = otoroshi;
         return this;
     }
     
+    public OtoroshiHealth(@JsonProperty("datastore") OtoroshiHealthDatastoreEnum datastore, @JsonProperty("otoroshi") OtoroshiHealthOtoroshiEnum otoroshi) {
+        this.datastore = datastore;
+        this.otoroshi = otoroshi;
+  }
 }

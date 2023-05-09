@@ -15,6 +15,7 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("pot_currency")
     public String potCurrency;
+
     public GetPotValue200ApplicationJSON withPotCurrency(String potCurrency) {
         this.potCurrency = potCurrency;
         return this;
@@ -25,6 +26,7 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public GetPotValue200ApplicationJSON withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -35,6 +37,7 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("settled_cash_position")
     public String settledCashPosition;
+
     public GetPotValue200ApplicationJSON withSettledCashPosition(String settledCashPosition) {
         this.settledCashPosition = settledCashPosition;
         return this;
@@ -45,6 +48,7 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("total_cash_value")
     public String totalCashValue;
+
     public GetPotValue200ApplicationJSON withTotalCashValue(String totalCashValue) {
         this.totalCashValue = totalCashValue;
         return this;
@@ -55,6 +59,7 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("total_free_cash_value")
     public String totalFreeCashValue;
+
     public GetPotValue200ApplicationJSON withTotalFreeCashValue(String totalFreeCashValue) {
         this.totalFreeCashValue = totalFreeCashValue;
         return this;
@@ -65,6 +70,7 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("total_free_value")
     public String totalFreeValue;
+
     public GetPotValue200ApplicationJSON withTotalFreeValue(String totalFreeValue) {
         this.totalFreeValue = totalFreeValue;
         return this;
@@ -75,6 +81,7 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("total_locked_cash_value")
     public String totalLockedCashValue;
+
     public GetPotValue200ApplicationJSON withTotalLockedCashValue(String totalLockedCashValue) {
         this.totalLockedCashValue = totalLockedCashValue;
         return this;
@@ -85,6 +92,7 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("total_locked_value")
     public String totalLockedValue;
+
     public GetPotValue200ApplicationJSON withTotalLockedValue(String totalLockedValue) {
         this.totalLockedValue = totalLockedValue;
         return this;
@@ -95,9 +103,21 @@ public class GetPotValue200ApplicationJSON {
      */
     @JsonProperty("total_value")
     public String totalValue;
+
     public GetPotValue200ApplicationJSON withTotalValue(String totalValue) {
         this.totalValue = totalValue;
         return this;
     }
     
+    public GetPotValue200ApplicationJSON(@JsonProperty("pot_currency") String potCurrency, @JsonProperty("pot_id") String potId, @JsonProperty("settled_cash_position") String settledCashPosition, @JsonProperty("total_cash_value") String totalCashValue, @JsonProperty("total_free_cash_value") String totalFreeCashValue, @JsonProperty("total_free_value") String totalFreeValue, @JsonProperty("total_locked_cash_value") String totalLockedCashValue, @JsonProperty("total_locked_value") String totalLockedValue, @JsonProperty("total_value") String totalValue) {
+        this.potCurrency = potCurrency;
+        this.potId = potId;
+        this.settledCashPosition = settledCashPosition;
+        this.totalCashValue = totalCashValue;
+        this.totalFreeCashValue = totalFreeCashValue;
+        this.totalFreeValue = totalFreeValue;
+        this.totalLockedCashValue = totalLockedCashValue;
+        this.totalLockedValue = totalLockedValue;
+        this.totalValue = totalValue;
+  }
 }

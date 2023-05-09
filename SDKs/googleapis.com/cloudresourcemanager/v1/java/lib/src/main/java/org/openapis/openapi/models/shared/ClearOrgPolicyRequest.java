@@ -18,6 +18,7 @@ public class ClearOrgPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraint")
     public String constraint;
+
     public ClearOrgPolicyRequest withConstraint(String constraint) {
         this.constraint = constraint;
         return this;
@@ -29,9 +30,11 @@ public class ClearOrgPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ClearOrgPolicyRequest withEtag(String etag) {
         this.etag = etag;
         return this;
     }
     
+    public ClearOrgPolicyRequest(){}
 }

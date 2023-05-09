@@ -15,6 +15,7 @@ public class TargetOnDeviceService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public DeviceServiceNameEnum serviceName;
+
     public TargetOnDeviceService withServiceName(DeviceServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -23,9 +24,11 @@ public class TargetOnDeviceService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransferOption")
     public TransferOptionEnum transferOption;
+
     public TargetOnDeviceService withTransferOption(TransferOptionEnum transferOption) {
         this.transferOption = transferOption;
         return this;
     }
     
+    public TargetOnDeviceService(){}
 }

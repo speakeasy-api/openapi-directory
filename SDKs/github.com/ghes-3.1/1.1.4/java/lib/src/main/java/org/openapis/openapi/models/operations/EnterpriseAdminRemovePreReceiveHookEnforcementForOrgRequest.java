@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,9 +24,14 @@ public class EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
     public Long preReceiveHookId;
+
     public EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest withPreReceiveHookId(Long preReceiveHookId) {
         this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     
+    public EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest(@JsonProperty("org") String org, @JsonProperty("pre_receive_hook_id") Long preReceiveHookId) {
+        this.org = org;
+        this.preReceiveHookId = preReceiveHookId;
+  }
 }

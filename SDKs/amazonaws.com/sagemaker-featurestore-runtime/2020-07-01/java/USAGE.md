@@ -3,81 +3,95 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchGetRecordRequestBody;
 import org.openapis.openapi.models.operations.BatchGetRecordRequest;
+import org.openapis.openapi.models.operations.BatchGetRecordRequestBody;
 import org.openapis.openapi.models.operations.BatchGetRecordResponse;
 import org.openapis.openapi.models.shared.BatchGetRecordIdentifier;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            BatchGetRecordRequest req = new BatchGetRecordRequest() {{
-                requestBody = new BatchGetRecordRequestBody() {{
-                    identifiers = new org.openapis.openapi.models.shared.BatchGetRecordIdentifier[]{{
-                        add(new BatchGetRecordIdentifier() {{
-                            featureGroupName = "provident";
-                            featureNames = new String[]{{
-                                add("quibusdam"),
-                                add("unde"),
-                                add("nulla"),
-                            }};
-                            recordIdentifiersValueAsString = new String[]{{
-                                add("illum"),
-                                add("vel"),
-                                add("error"),
-                            }};
-                        }}),
-                        add(new BatchGetRecordIdentifier() {{
-                            featureGroupName = "deserunt";
-                            featureNames = new String[]{{
-                                add("iure"),
-                                add("magnam"),
-                            }};
-                            recordIdentifiersValueAsString = new String[]{{
-                                add("ipsa"),
-                                add("delectus"),
-                                add("tempora"),
-                                add("suscipit"),
-                            }};
-                        }}),
-                        add(new BatchGetRecordIdentifier() {{
-                            featureGroupName = "molestiae";
-                            featureNames = new String[]{{
-                                add("placeat"),
-                                add("voluptatum"),
-                                add("iusto"),
-                                add("excepturi"),
-                            }};
-                            recordIdentifiersValueAsString = new String[]{{
-                                add("recusandae"),
-                                add("temporibus"),
-                            }};
-                        }}),
-                    }};
-                }};
-                xAmzAlgorithm = "ab";
-                xAmzContentSha256 = "quis";
-                xAmzCredential = "veritatis";
-                xAmzDate = "deserunt";
-                xAmzSecurityToken = "perferendis";
-                xAmzSignature = "ipsam";
-                xAmzSignedHeaders = "repellendus";
-            }}            
+            BatchGetRecordRequest req = new BatchGetRecordRequest(                new BatchGetRecordRequestBody(                new org.openapis.openapi.models.shared.BatchGetRecordIdentifier[]{{
+                                                add(new BatchGetRecordIdentifier("suscipit",                 new String[]{{
+                                                                    add("magnam"),
+                                                                    add("debitis"),
+                                                                }}) {{
+                                                    featureGroupName = "distinctio";
+                                                    featureNames = new String[]{{
+                                                        add("unde"),
+                                                        add("nulla"),
+                                                        add("corrupti"),
+                                                        add("illum"),
+                                                    }};
+                                                    recordIdentifiersValueAsString = new String[]{{
+                                                        add("error"),
+                                                        add("deserunt"),
+                                                    }};
+                                                }}),
+                                                add(new BatchGetRecordIdentifier("recusandae",                 new String[]{{
+                                                                    add("ab"),
+                                                                    add("quis"),
+                                                                    add("veritatis"),
+                                                                    add("deserunt"),
+                                                                }}) {{
+                                                    featureGroupName = "ipsa";
+                                                    featureNames = new String[]{{
+                                                        add("tempora"),
+                                                        add("suscipit"),
+                                                        add("molestiae"),
+                                                        add("minus"),
+                                                    }};
+                                                    recordIdentifiersValueAsString = new String[]{{
+                                                        add("voluptatum"),
+                                                        add("iusto"),
+                                                        add("excepturi"),
+                                                        add("nisi"),
+                                                    }};
+                                                }}),
+                                                add(new BatchGetRecordIdentifier("molestiae",                 new String[]{{
+                                                                    add("quod"),
+                                                                    add("esse"),
+                                                                    add("totam"),
+                                                                    add("porro"),
+                                                                }}) {{
+                                                    featureGroupName = "perferendis";
+                                                    featureNames = new String[]{{
+                                                        add("repellendus"),
+                                                        add("sapiente"),
+                                                    }};
+                                                    recordIdentifiersValueAsString = new String[]{{
+                                                        add("odit"),
+                                                        add("at"),
+                                                        add("at"),
+                                                        add("maiores"),
+                                                    }};
+                                                }}),
+                                            }});) {{
+                xAmzAlgorithm = "dolorum";
+                xAmzContentSha256 = "dicta";
+                xAmzCredential = "nam";
+                xAmzDate = "officia";
+                xAmzSecurityToken = "occaecati";
+                xAmzSignature = "fugit";
+                xAmzSignedHeaders = "deleniti";
+            }};            
 
             BatchGetRecordResponse res = sdk.batchGetRecord(req);
 
-            if (res.batchGetRecordResponse.isPresent()) {
+            if (res.batchGetRecordResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

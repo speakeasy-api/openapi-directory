@@ -15,6 +15,7 @@ public class UpdateDataSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelKmsKeyId")
     public String modelKmsKeyId;
+
     public UpdateDataSecurityConfig withModelKmsKeyId(String modelKmsKeyId) {
         this.modelKmsKeyId = modelKmsKeyId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateDataSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public UpdateDataSecurityConfig withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -34,9 +36,11 @@ public class UpdateDataSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public UpdateDataSecurityConfig withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public UpdateDataSecurityConfig(){}
 }

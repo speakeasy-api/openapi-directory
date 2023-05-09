@@ -53,11 +53,9 @@ public class SplashSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSsidSplashSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkSsidSplashSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSsidSplashSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkSsidSplashSettingsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSsidSplashSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class SplashSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSsidSplashSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSsidSplashSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSsidSplashSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSsidSplashSettingsResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSsidSplashSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

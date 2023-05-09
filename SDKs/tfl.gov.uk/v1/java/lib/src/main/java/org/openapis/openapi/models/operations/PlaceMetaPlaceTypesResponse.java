@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlaceMetaPlaceTypesResponse {
     
     public byte[] body;
+
     public PlaceMetaPlaceTypesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PlaceMetaPlaceTypesResponse {
     
     
     public String contentType;
+
     public PlaceMetaPlaceTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PlaceMetaPlaceTypesResponse {
     
     
     public Integer statusCode;
+
     public PlaceMetaPlaceTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PlaceMetaPlaceTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlaceMetaPlaceTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class PlaceMetaPlaceTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesPlaceCategory[] tflApiPresentationEntitiesPlaceCategories;
+
     public PlaceMetaPlaceTypesResponse withTflApiPresentationEntitiesPlaceCategories(org.openapis.openapi.models.shared.TflApiPresentationEntitiesPlaceCategory[] tflApiPresentationEntitiesPlaceCategories) {
         this.tflApiPresentationEntitiesPlaceCategories = tflApiPresentationEntitiesPlaceCategories;
         return this;
     }
     
+    public PlaceMetaPlaceTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShareProfileAcknowledgement {
     @JsonProperty("healthId")
     public String healthId;
+
     public ShareProfileAcknowledgement withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -16,9 +17,14 @@ public class ShareProfileAcknowledgement {
     
     @JsonProperty("status")
     public ShareProfileAcknowledgementStatusEnum status;
+
     public ShareProfileAcknowledgement withStatus(ShareProfileAcknowledgementStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ShareProfileAcknowledgement(@JsonProperty("healthId") String healthId, @JsonProperty("status") ShareProfileAcknowledgementStatusEnum status) {
+        this.healthId = healthId;
+        this.status = status;
+  }
 }

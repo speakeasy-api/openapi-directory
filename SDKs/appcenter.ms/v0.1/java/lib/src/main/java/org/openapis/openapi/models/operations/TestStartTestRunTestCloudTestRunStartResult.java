@@ -18,6 +18,7 @@ public class TestStartTestRunTestCloudTestRunStartResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accepted_devices")
     public String[] acceptedDevices;
+
     public TestStartTestRunTestCloudTestRunStartResult withAcceptedDevices(String[] acceptedDevices) {
         this.acceptedDevices = acceptedDevices;
         return this;
@@ -29,9 +30,11 @@ public class TestStartTestRunTestCloudTestRunStartResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_devices")
     public String[] rejectedDevices;
+
     public TestStartTestRunTestCloudTestRunStartResult withRejectedDevices(String[] rejectedDevices) {
         this.rejectedDevices = rejectedDevices;
         return this;
     }
     
+    public TestStartTestRunTestCloudTestRunStartResult(){}
 }

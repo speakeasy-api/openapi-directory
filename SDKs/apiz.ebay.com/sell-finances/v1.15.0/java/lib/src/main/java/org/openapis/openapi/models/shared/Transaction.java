@@ -18,6 +18,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public Transaction withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingEntry")
     public String bookingEntry;
+
     public Transaction withBookingEntry(String bookingEntry) {
         this.bookingEntry = bookingEntry;
         return this;
@@ -40,6 +42,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public Buyer buyer;
+
     public Transaction withBuyer(Buyer buyer) {
         this.buyer = buyer;
         return this;
@@ -51,6 +54,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eBayCollectedTaxAmount")
     public Amount eBayCollectedTaxAmount;
+
     public Transaction withEBayCollectedTaxAmount(Amount eBayCollectedTaxAmount) {
         this.eBayCollectedTaxAmount = eBayCollectedTaxAmount;
         return this;
@@ -62,6 +66,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeJurisdiction")
     public FeeJurisdiction feeJurisdiction;
+
     public Transaction withFeeJurisdiction(FeeJurisdiction feeJurisdiction) {
         this.feeJurisdiction = feeJurisdiction;
         return this;
@@ -73,6 +78,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeType")
     public String feeType;
+
     public Transaction withFeeType(String feeType) {
         this.feeType = feeType;
         return this;
@@ -84,6 +90,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public Transaction withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -95,6 +102,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderLineItems")
     public OrderLineItem[] orderLineItems;
+
     public Transaction withOrderLineItems(OrderLineItem[] orderLineItems) {
         this.orderLineItems = orderLineItems;
         return this;
@@ -106,6 +114,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsEntity")
     public String paymentsEntity;
+
     public Transaction withPaymentsEntity(String paymentsEntity) {
         this.paymentsEntity = paymentsEntity;
         return this;
@@ -117,6 +126,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutId")
     public String payoutId;
+
     public Transaction withPayoutId(String payoutId) {
         this.payoutId = payoutId;
         return this;
@@ -128,6 +138,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("references")
     public Reference[] references;
+
     public Transaction withReferences(Reference[] references) {
         this.references = references;
         return this;
@@ -139,6 +150,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesRecordReference")
     public String salesRecordReference;
+
     public Transaction withSalesRecordReference(String salesRecordReference) {
         this.salesRecordReference = salesRecordReference;
         return this;
@@ -150,6 +162,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalFeeAmount")
     public Amount totalFeeAmount;
+
     public Transaction withTotalFeeAmount(Amount totalFeeAmount) {
         this.totalFeeAmount = totalFeeAmount;
         return this;
@@ -161,6 +174,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalFeeBasisAmount")
     public Amount totalFeeBasisAmount;
+
     public Transaction withTotalFeeBasisAmount(Amount totalFeeBasisAmount) {
         this.totalFeeBasisAmount = totalFeeBasisAmount;
         return this;
@@ -172,6 +186,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionDate")
     public String transactionDate;
+
     public Transaction withTransactionDate(String transactionDate) {
         this.transactionDate = transactionDate;
         return this;
@@ -183,6 +198,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public Transaction withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -194,6 +210,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionMemo")
     public String transactionMemo;
+
     public Transaction withTransactionMemo(String transactionMemo) {
         this.transactionMemo = transactionMemo;
         return this;
@@ -205,6 +222,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionStatus")
     public String transactionStatus;
+
     public Transaction withTransactionStatus(String transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
@@ -216,9 +234,11 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionType")
     public String transactionType;
+
     public Transaction withTransactionType(String transactionType) {
         this.transactionType = transactionType;
         return this;
     }
     
+    public Transaction(){}
 }

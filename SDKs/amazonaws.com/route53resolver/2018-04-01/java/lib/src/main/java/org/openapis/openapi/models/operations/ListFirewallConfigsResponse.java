@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFirewallConfigsResponse {
@@ -12,6 +13,7 @@ public class ListFirewallConfigsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFirewallConfigsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFirewallConfigsResponse {
     
     
     public String contentType;
+
     public ListFirewallConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFirewallConfigsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListFirewallConfigsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListFirewallConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFirewallConfigsResponse listFirewallConfigsResponse;
+
     public ListFirewallConfigsResponse withListFirewallConfigsResponse(org.openapis.openapi.models.shared.ListFirewallConfigsResponse listFirewallConfigsResponse) {
         this.listFirewallConfigsResponse = listFirewallConfigsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListFirewallConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListFirewallConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListFirewallConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFirewallConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListFirewallConfigsResponse {
      */
     
     public Object throttlingException;
+
     public ListFirewallConfigsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListFirewallConfigsResponse {
      */
     
     public Object validationException;
+
     public ListFirewallConfigsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFirewallConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

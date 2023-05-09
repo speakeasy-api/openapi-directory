@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetServiceLinkedRoleDeletionStatusResponse - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetServiceLinkedRoleDeletionStatusResponse {
     
     public DeletionTaskFailureReasonType reason;
+
     public GetServiceLinkedRoleDeletionStatusResponse withReason(DeletionTaskFailureReasonType reason) {
         this.reason = reason;
         return this;
@@ -19,9 +20,13 @@ public class GetServiceLinkedRoleDeletionStatusResponse {
     
     
     public DeletionTaskStatusTypeEnum status;
+
     public GetServiceLinkedRoleDeletionStatusResponse withStatus(DeletionTaskStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetServiceLinkedRoleDeletionStatusResponse(@JsonProperty("Status") DeletionTaskStatusTypeEnum status) {
+        this.status = status;
+  }
 }

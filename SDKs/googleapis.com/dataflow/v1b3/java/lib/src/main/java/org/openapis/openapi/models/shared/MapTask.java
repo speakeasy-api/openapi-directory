@@ -18,6 +18,7 @@ public class MapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counterPrefix")
     public String counterPrefix;
+
     public MapTask withCounterPrefix(String counterPrefix) {
         this.counterPrefix = counterPrefix;
         return this;
@@ -29,6 +30,7 @@ public class MapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     public ParallelInstruction[] instructions;
+
     public MapTask withInstructions(ParallelInstruction[] instructions) {
         this.instructions = instructions;
         return this;
@@ -40,6 +42,7 @@ public class MapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageName")
     public String stageName;
+
     public MapTask withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -51,9 +54,11 @@ public class MapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemName")
     public String systemName;
+
     public MapTask withSystemName(String systemName) {
         this.systemName = systemName;
         return this;
     }
     
+    public MapTask(){}
 }

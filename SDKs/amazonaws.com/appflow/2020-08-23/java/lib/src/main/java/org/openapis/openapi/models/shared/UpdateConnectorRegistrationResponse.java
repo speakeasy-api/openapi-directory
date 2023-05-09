@@ -15,9 +15,11 @@ public class UpdateConnectorRegistrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorArn")
     public String connectorArn;
+
     public UpdateConnectorRegistrationResponse withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
     }
     
+    public UpdateConnectorRegistrationResponse(){}
 }

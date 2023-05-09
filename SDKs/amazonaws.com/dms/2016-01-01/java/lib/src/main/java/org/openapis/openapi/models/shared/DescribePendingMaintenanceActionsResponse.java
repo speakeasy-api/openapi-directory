@@ -15,6 +15,7 @@ public class DescribePendingMaintenanceActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribePendingMaintenanceActionsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class DescribePendingMaintenanceActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingMaintenanceActions")
     public ResourcePendingMaintenanceActions[] pendingMaintenanceActions;
+
     public DescribePendingMaintenanceActionsResponse withPendingMaintenanceActions(ResourcePendingMaintenanceActions[] pendingMaintenanceActions) {
         this.pendingMaintenanceActions = pendingMaintenanceActions;
         return this;
     }
     
+    public DescribePendingMaintenanceActionsResponse(){}
 }

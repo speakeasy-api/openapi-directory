@@ -18,6 +18,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataSourceParameter withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRangeId")
     public String namedRangeId;
+
     public DataSourceParameter withNamedRangeId(String namedRangeId) {
         this.namedRangeId = namedRangeId;
         return this;
@@ -40,9 +42,11 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public DataSourceParameter withRange(GridRange range) {
         this.range = range;
         return this;
     }
     
+    public DataSourceParameter(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRule {
     
     public String cidr;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRule withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String direction;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRule withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRulePortRange portRange;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRule withPortRange(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRulePortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String prefixListId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRule withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String protocol;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -47,9 +52,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnP
     
     
     public String securityGroupId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRule withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponentsExplanationsSecurityGroupRule(){}
 }

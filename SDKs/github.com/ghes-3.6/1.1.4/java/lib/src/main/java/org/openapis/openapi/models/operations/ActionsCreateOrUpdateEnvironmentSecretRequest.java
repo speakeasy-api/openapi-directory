@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateOrUpdateEnvironmentSecretRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ActionsCreateOrUpdateEnvironmentSecretRequestBody requestBody;
+
     public ActionsCreateOrUpdateEnvironmentSecretRequest withRequestBody(ActionsCreateOrUpdateEnvironmentSecretRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ActionsCreateOrUpdateEnvironmentSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
     public String environmentName;
+
     public ActionsCreateOrUpdateEnvironmentSecretRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -29,6 +32,7 @@ public class ActionsCreateOrUpdateEnvironmentSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
     public Long repositoryId;
+
     public ActionsCreateOrUpdateEnvironmentSecretRequest withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -39,9 +43,16 @@ public class ActionsCreateOrUpdateEnvironmentSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
     public String secretName;
+
     public ActionsCreateOrUpdateEnvironmentSecretRequest withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public ActionsCreateOrUpdateEnvironmentSecretRequest(@JsonProperty("RequestBody") ActionsCreateOrUpdateEnvironmentSecretRequestBody requestBody, @JsonProperty("environment_name") String environmentName, @JsonProperty("repository_id") Long repositoryId, @JsonProperty("secret_name") String secretName) {
+        this.requestBody = requestBody;
+        this.environmentName = environmentName;
+        this.repositoryId = repositoryId;
+        this.secretName = secretName;
+  }
 }

@@ -18,9 +18,11 @@ public class SubordinateConfigChain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pemCertificates")
     public String[] pemCertificates;
+
     public SubordinateConfigChain withPemCertificates(String[] pemCertificates) {
         this.pemCertificates = pemCertificates;
         return this;
     }
     
+    public SubordinateConfigChain(){}
 }

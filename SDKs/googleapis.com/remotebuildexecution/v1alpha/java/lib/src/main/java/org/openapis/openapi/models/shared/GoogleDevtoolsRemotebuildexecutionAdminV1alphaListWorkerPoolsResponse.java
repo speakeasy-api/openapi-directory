@@ -18,9 +18,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPoolsRespon
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerPools")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool[] workerPools;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPoolsResponse withWorkerPools(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool[] workerPools) {
         this.workerPools = workerPools;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPoolsResponse(){}
 }

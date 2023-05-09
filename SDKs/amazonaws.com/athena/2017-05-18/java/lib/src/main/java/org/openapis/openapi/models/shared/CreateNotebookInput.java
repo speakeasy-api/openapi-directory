@@ -12,6 +12,7 @@ public class CreateNotebookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateNotebookInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateNotebookInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateNotebookInput withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,14 @@ public class CreateNotebookInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public CreateNotebookInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public CreateNotebookInput(@JsonProperty("Name") String name, @JsonProperty("WorkGroup") String workGroup) {
+        this.name = name;
+        this.workGroup = workGroup;
+  }
 }

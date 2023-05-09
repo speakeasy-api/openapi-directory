@@ -25,6 +25,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public Project withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -36,6 +37,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentIterationId")
     public String currentIterationId;
+
     public Project withCurrentIterationId(String currentIterationId) {
         this.currentIterationId = currentIterationId;
         return this;
@@ -47,6 +49,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Project withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +61,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Project withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +75,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModified")
     public OffsetDateTime lastModified;
+
     public Project withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -82,6 +87,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Project withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +99,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public ProjectSettings settings;
+
     public Project withSettings(ProjectSettings settings) {
         this.settings = settings;
         return this;
@@ -104,9 +111,11 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailUri")
     public String thumbnailUri;
+
     public Project withThumbnailUri(String thumbnailUri) {
         this.thumbnailUri = thumbnailUri;
         return this;
     }
     
+    public Project(){}
 }

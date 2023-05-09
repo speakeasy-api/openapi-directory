@@ -15,6 +15,7 @@ public class ImportReferenceSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ImportReferenceSourceItem withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ImportReferenceSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportReferenceSourceItem withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ImportReferenceSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceFile")
     public String sourceFile;
+
     public ImportReferenceSourceItem withSourceFile(String sourceFile) {
         this.sourceFile = sourceFile;
         return this;
@@ -38,6 +41,7 @@ public class ImportReferenceSourceItem {
     
     @JsonProperty("status")
     public ReferenceImportJobItemStatusEnum status;
+
     public ImportReferenceSourceItem withStatus(ReferenceImportJobItemStatusEnum status) {
         this.status = status;
         return this;
@@ -46,6 +50,7 @@ public class ImportReferenceSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ImportReferenceSourceItem withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -54,9 +59,13 @@ public class ImportReferenceSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ImportReferenceSourceItem withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportReferenceSourceItem(@JsonProperty("status") ReferenceImportJobItemStatusEnum status) {
+        this.status = status;
+  }
 }

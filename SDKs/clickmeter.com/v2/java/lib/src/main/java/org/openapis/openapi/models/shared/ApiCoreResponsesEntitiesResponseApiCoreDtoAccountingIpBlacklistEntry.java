@@ -12,9 +12,11 @@ public class ApiCoreResponsesEntitiesResponseApiCoreDtoAccountingIpBlacklistEntr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public ApiCoreDtoAccountingIpBlacklistEntry[] entities;
+
     public ApiCoreResponsesEntitiesResponseApiCoreDtoAccountingIpBlacklistEntry withEntities(ApiCoreDtoAccountingIpBlacklistEntry[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public ApiCoreResponsesEntitiesResponseApiCoreDtoAccountingIpBlacklistEntry(){}
 }

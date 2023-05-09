@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSnippetsWorkspaceEncodedIdNodeIdResponse {
     
     public byte[] body;
+
     public PutSnippetsWorkspaceEncodedIdNodeIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PutSnippetsWorkspaceEncodedIdNodeIdResponse {
     
     
     public String contentType;
+
     public PutSnippetsWorkspaceEncodedIdNodeIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PutSnippetsWorkspaceEncodedIdNodeIdResponse {
     
     
     public Integer statusCode;
+
     public PutSnippetsWorkspaceEncodedIdNodeIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PutSnippetsWorkspaceEncodedIdNodeIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSnippetsWorkspaceEncodedIdNodeIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PutSnippetsWorkspaceEncodedIdNodeIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutSnippetsWorkspaceEncodedIdNodeIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -50,9 +56,14 @@ public class PutSnippetsWorkspaceEncodedIdNodeIdResponse {
      */
     
     public java.util.Map<String, Object> snippet;
+
     public PutSnippetsWorkspaceEncodedIdNodeIdResponse withSnippet(java.util.Map<String, Object> snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public PutSnippetsWorkspaceEncodedIdNodeIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

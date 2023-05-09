@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecSet")
     public String annotationSpecSet;
+
     public GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig withAnnotationSpecSet(String annotationSpecSet) {
         this.annotationSpecSet = annotationSpecSet;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig(){}
 }

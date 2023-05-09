@@ -15,9 +15,11 @@ public class ListCuratedEnvironmentImagesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platforms")
     public EnvironmentPlatform[] platforms;
+
     public ListCuratedEnvironmentImagesOutput withPlatforms(EnvironmentPlatform[] platforms) {
         this.platforms = platforms;
         return this;
     }
     
+    public ListCuratedEnvironmentImagesOutput(){}
 }

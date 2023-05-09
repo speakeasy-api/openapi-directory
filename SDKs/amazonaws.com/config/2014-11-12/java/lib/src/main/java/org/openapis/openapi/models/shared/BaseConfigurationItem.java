@@ -20,6 +20,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public BaseConfigurationItem withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public BaseConfigurationItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public BaseConfigurationItem withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -44,6 +47,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public BaseConfigurationItem withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -52,6 +56,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public String configuration;
+
     public BaseConfigurationItem withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -62,6 +67,7 @@ public class BaseConfigurationItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("configurationItemCaptureTime")
     public OffsetDateTime configurationItemCaptureTime;
+
     public BaseConfigurationItem withConfigurationItemCaptureTime(OffsetDateTime configurationItemCaptureTime) {
         this.configurationItemCaptureTime = configurationItemCaptureTime;
         return this;
@@ -70,6 +76,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationItemStatus")
     public ConfigurationItemStatusEnum configurationItemStatus;
+
     public BaseConfigurationItem withConfigurationItemStatus(ConfigurationItemStatusEnum configurationItemStatus) {
         this.configurationItemStatus = configurationItemStatus;
         return this;
@@ -78,6 +85,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationStateId")
     public String configurationStateId;
+
     public BaseConfigurationItem withConfigurationStateId(String configurationStateId) {
         this.configurationStateId = configurationStateId;
         return this;
@@ -88,6 +96,7 @@ public class BaseConfigurationItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("resourceCreationTime")
     public OffsetDateTime resourceCreationTime;
+
     public BaseConfigurationItem withResourceCreationTime(OffsetDateTime resourceCreationTime) {
         this.resourceCreationTime = resourceCreationTime;
         return this;
@@ -96,6 +105,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public BaseConfigurationItem withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -104,6 +114,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public BaseConfigurationItem withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -112,6 +123,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public BaseConfigurationItem withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -120,6 +132,7 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplementaryConfiguration")
     public java.util.Map<String, String> supplementaryConfiguration;
+
     public BaseConfigurationItem withSupplementaryConfiguration(java.util.Map<String, String> supplementaryConfiguration) {
         this.supplementaryConfiguration = supplementaryConfiguration;
         return this;
@@ -128,9 +141,11 @@ public class BaseConfigurationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public BaseConfigurationItem withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public BaseConfigurationItem(){}
 }

@@ -15,6 +15,7 @@ public class CloudWatchOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogGroupName")
     public String cloudWatchLogGroupName;
+
     public CloudWatchOutputConfig withCloudWatchLogGroupName(String cloudWatchLogGroupName) {
         this.cloudWatchLogGroupName = cloudWatchLogGroupName;
         return this;
@@ -23,9 +24,11 @@ public class CloudWatchOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchOutputEnabled")
     public Boolean cloudWatchOutputEnabled;
+
     public CloudWatchOutputConfig withCloudWatchOutputEnabled(Boolean cloudWatchOutputEnabled) {
         this.cloudWatchOutputEnabled = cloudWatchOutputEnabled;
         return this;
     }
     
+    public CloudWatchOutputConfig(){}
 }

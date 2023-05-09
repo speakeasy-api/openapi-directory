@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetCredentialTypesForTargetAccountRequest {
@@ -12,9 +13,13 @@ public class UserGetCredentialTypesForTargetAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public Long membershipId;
+
     public UserGetCredentialTypesForTargetAccountRequest withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
     }
     
+    public UserGetCredentialTypesForTargetAccountRequest(@JsonProperty("membershipId") Long membershipId) {
+        this.membershipId = membershipId;
+  }
 }

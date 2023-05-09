@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLegacyTrackingChannelCatalogsResponse {
@@ -12,6 +13,7 @@ public class GetLegacyTrackingChannelCatalogsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetLegacyTrackingChannelCatalogsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetLegacyTrackingChannelCatalogsResponse {
     
     
     public String contentType;
+
     public GetLegacyTrackingChannelCatalogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetLegacyTrackingChannelCatalogsResponse {
     
     
     public Integer statusCode;
+
     public GetLegacyTrackingChannelCatalogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetLegacyTrackingChannelCatalogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLegacyTrackingChannelCatalogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetLegacyTrackingChannelCatalogsResponse {
      */
     
     public org.openapis.openapi.models.shared.LegacyTrackingChannelCatalogList legacyTrackingChannelCatalogList;
+
     public GetLegacyTrackingChannelCatalogsResponse withLegacyTrackingChannelCatalogList(org.openapis.openapi.models.shared.LegacyTrackingChannelCatalogList legacyTrackingChannelCatalogList) {
         this.legacyTrackingChannelCatalogList = legacyTrackingChannelCatalogList;
         return this;
     }
     
+    public GetLegacyTrackingChannelCatalogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

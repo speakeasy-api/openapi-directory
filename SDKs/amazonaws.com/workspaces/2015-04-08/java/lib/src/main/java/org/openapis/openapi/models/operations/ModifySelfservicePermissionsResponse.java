@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifySelfservicePermissionsResponse {
@@ -12,6 +13,7 @@ public class ModifySelfservicePermissionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ModifySelfservicePermissionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ModifySelfservicePermissionsResponse {
     
     
     public String contentType;
+
     public ModifySelfservicePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifySelfservicePermissionsResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ModifySelfservicePermissionsResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class ModifySelfservicePermissionsResponse {
      */
     
     public java.util.Map<String, Object> modifySelfservicePermissionsResult;
+
     public ModifySelfservicePermissionsResponse withModifySelfservicePermissionsResult(java.util.Map<String, Object> modifySelfservicePermissionsResult) {
         this.modifySelfservicePermissionsResult = modifySelfservicePermissionsResult;
         return this;
@@ -46,6 +51,7 @@ public class ModifySelfservicePermissionsResponse {
     
     
     public Integer statusCode;
+
     public ModifySelfservicePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ModifySelfservicePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifySelfservicePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ModifySelfservicePermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ModifySelfservicePermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ModifySelfservicePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

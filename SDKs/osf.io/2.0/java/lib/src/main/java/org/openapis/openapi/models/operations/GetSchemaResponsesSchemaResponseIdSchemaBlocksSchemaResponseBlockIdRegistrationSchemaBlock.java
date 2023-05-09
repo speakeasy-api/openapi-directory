@@ -15,6 +15,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes attributes;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlock withAttributes(GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public String id;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlock withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockLinks links;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlock withLinks(GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockRelationships relationships;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlock withRelationships(GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,11 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public String type;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlock withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlock(){}
 }

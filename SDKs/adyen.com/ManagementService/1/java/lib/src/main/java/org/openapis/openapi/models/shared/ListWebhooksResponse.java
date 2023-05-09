@@ -15,6 +15,7 @@ public class ListWebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public PaginationLinks links;
+
     public ListWebhooksResponse withLinks(PaginationLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class ListWebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountReference")
     public String accountReference;
+
     public ListWebhooksResponse withAccountReference(String accountReference) {
         this.accountReference = accountReference;
         return this;
@@ -37,6 +39,7 @@ public class ListWebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Webhook[] data;
+
     public ListWebhooksResponse withData(Webhook[] data) {
         this.data = data;
         return this;
@@ -47,6 +50,7 @@ public class ListWebhooksResponse {
      */
     @JsonProperty("itemsTotal")
     public Integer itemsTotal;
+
     public ListWebhooksResponse withItemsTotal(Integer itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -57,9 +61,14 @@ public class ListWebhooksResponse {
      */
     @JsonProperty("pagesTotal")
     public Integer pagesTotal;
+
     public ListWebhooksResponse withPagesTotal(Integer pagesTotal) {
         this.pagesTotal = pagesTotal;
         return this;
     }
     
+    public ListWebhooksResponse(@JsonProperty("itemsTotal") Integer itemsTotal, @JsonProperty("pagesTotal") Integer pagesTotal) {
+        this.itemsTotal = itemsTotal;
+        this.pagesTotal = pagesTotal;
+  }
 }

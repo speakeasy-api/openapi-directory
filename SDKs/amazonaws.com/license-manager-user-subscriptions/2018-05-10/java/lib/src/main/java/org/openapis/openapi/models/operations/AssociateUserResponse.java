@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateUserResponse {
@@ -12,6 +13,7 @@ public class AssociateUserResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateUserResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateUserResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateUserResponse associateUserResponse;
+
     public AssociateUserResponse withAssociateUserResponse(org.openapis.openapi.models.shared.AssociateUserResponse associateUserResponse) {
         this.associateUserResponse = associateUserResponse;
         return this;
@@ -32,6 +35,7 @@ public class AssociateUserResponse {
      */
     
     public Object conflictException;
+
     public AssociateUserResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateUserResponse {
     
     
     public String contentType;
+
     public AssociateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateUserResponse {
      */
     
     public Object internalServerException;
+
     public AssociateUserResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateUserResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AssociateUserResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateUserResponse {
     
     
     public Integer statusCode;
+
     public AssociateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociateUserResponse {
      */
     
     public Object throttlingException;
+
     public AssociateUserResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AssociateUserResponse {
      */
     
     public Object validationException;
+
     public AssociateUserResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

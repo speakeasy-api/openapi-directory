@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VaultMattersUndeleteResponse {
     
     public String contentType;
+
     public VaultMattersUndeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VaultMattersUndeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.Matter matter;
+
     public VaultMattersUndeleteResponse withMatter(org.openapis.openapi.models.shared.Matter matter) {
         this.matter = matter;
         return this;
@@ -26,6 +29,7 @@ public class VaultMattersUndeleteResponse {
     
     
     public Integer statusCode;
+
     public VaultMattersUndeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VaultMattersUndeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VaultMattersUndeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VaultMattersUndeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

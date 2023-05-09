@@ -15,6 +15,7 @@ public class UpdateAuditStreamConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditStreamArn")
     public String auditStreamArn;
+
     public UpdateAuditStreamConfigurationRequestBody withAuditStreamArn(String auditStreamArn) {
         this.auditStreamArn = auditStreamArn;
         return this;
@@ -25,9 +26,13 @@ public class UpdateAuditStreamConfigurationRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public UpdateAuditStreamConfigurationRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public UpdateAuditStreamConfigurationRequestBody(@JsonProperty("FleetArn") String fleetArn) {
+        this.fleetArn = fleetArn;
+  }
 }

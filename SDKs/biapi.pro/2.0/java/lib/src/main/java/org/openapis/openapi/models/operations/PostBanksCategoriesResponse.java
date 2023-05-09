@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostBanksCategoriesResponse {
@@ -12,6 +13,7 @@ public class PostBanksCategoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectorCategory connectorCategory;
+
     public PostBanksCategoriesResponse withConnectorCategory(org.openapis.openapi.models.shared.ConnectorCategory connectorCategory) {
         this.connectorCategory = connectorCategory;
         return this;
@@ -19,6 +21,7 @@ public class PostBanksCategoriesResponse {
     
     
     public String contentType;
+
     public PostBanksCategoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostBanksCategoriesResponse {
     
     
     public Integer statusCode;
+
     public PostBanksCategoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostBanksCategoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostBanksCategoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostBanksCategoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

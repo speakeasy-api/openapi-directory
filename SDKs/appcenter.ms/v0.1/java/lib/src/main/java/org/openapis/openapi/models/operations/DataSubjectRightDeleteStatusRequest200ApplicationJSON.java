@@ -17,6 +17,7 @@ public class DataSubjectRightDeleteStatusRequest200ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public DataSubjectRightDeleteStatusRequest200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class DataSubjectRightDeleteStatusRequest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sasUrl")
     public String sasUrl;
+
     public DataSubjectRightDeleteStatusRequest200ApplicationJSON withSasUrl(String sasUrl) {
         this.sasUrl = sasUrl;
         return this;
@@ -39,6 +41,7 @@ public class DataSubjectRightDeleteStatusRequest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sasUrlExpired")
     public Boolean sasUrlExpired;
+
     public DataSubjectRightDeleteStatusRequest200ApplicationJSON withSasUrlExpired(Boolean sasUrlExpired) {
         this.sasUrlExpired = sasUrlExpired;
         return this;
@@ -49,9 +52,14 @@ public class DataSubjectRightDeleteStatusRequest200ApplicationJSON {
      */
     @JsonProperty("status")
     public DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum status;
+
     public DataSubjectRightDeleteStatusRequest200ApplicationJSON withStatus(DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DataSubjectRightDeleteStatusRequest200ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

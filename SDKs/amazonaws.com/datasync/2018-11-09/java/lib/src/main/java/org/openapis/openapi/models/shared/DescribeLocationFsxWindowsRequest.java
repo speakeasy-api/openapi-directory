@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLocationFsxWindowsRequest {
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationFsxWindowsRequest withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
     }
     
+    public DescribeLocationFsxWindowsRequest(@JsonProperty("LocationArn") String locationArn) {
+        this.locationArn = locationArn;
+  }
 }

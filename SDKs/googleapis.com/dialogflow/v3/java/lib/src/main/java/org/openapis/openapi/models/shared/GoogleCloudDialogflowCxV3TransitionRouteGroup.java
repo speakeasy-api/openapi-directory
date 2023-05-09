@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3TransitionRouteGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3TransitionRouteGroup withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3TransitionRouteGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3TransitionRouteGroup withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3TransitionRouteGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionRoutes")
     public GoogleCloudDialogflowCxV3TransitionRoute[] transitionRoutes;
+
     public GoogleCloudDialogflowCxV3TransitionRouteGroup withTransitionRoutes(GoogleCloudDialogflowCxV3TransitionRoute[] transitionRoutes) {
         this.transitionRoutes = transitionRoutes;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3TransitionRouteGroup(){}
 }

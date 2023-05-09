@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProtectionRequest {
@@ -12,6 +13,7 @@ public class GetProtectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public Double alt;
+
     public GetProtectionRequest withAlt(Double alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class GetProtectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Double from;
+
     public GetProtectionRequest withFrom(Double from) {
         this.from = from;
         return this;
@@ -32,6 +35,7 @@ public class GetProtectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public Double lat;
+
     public GetProtectionRequest withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -42,6 +46,7 @@ public class GetProtectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lng")
     public Double lng;
+
     public GetProtectionRequest withLng(Double lng) {
         this.lng = lng;
         return this;
@@ -52,6 +57,7 @@ public class GetProtectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ozone")
     public Double ozone;
+
     public GetProtectionRequest withOzone(Double ozone) {
         this.ozone = ozone;
         return this;
@@ -62,6 +68,7 @@ public class GetProtectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public Double to;
+
     public GetProtectionRequest withTo(Double to) {
         this.to = to;
         return this;
@@ -72,9 +79,17 @@ public class GetProtectionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-access-token")
     public String xAccessToken;
+
     public GetProtectionRequest withXAccessToken(String xAccessToken) {
         this.xAccessToken = xAccessToken;
         return this;
     }
     
+    public GetProtectionRequest(@JsonProperty("from") Double from, @JsonProperty("lat") Double lat, @JsonProperty("lng") Double lng, @JsonProperty("to") Double to, @JsonProperty("x-access-token") String xAccessToken) {
+        this.from = from;
+        this.lat = lat;
+        this.lng = lng;
+        this.to = to;
+        this.xAccessToken = xAccessToken;
+  }
 }

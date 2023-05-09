@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactRuleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Rule rule;
+
     public CreateArtifactRuleRequest withRule(org.openapis.openapi.models.shared.Rule rule) {
         this.rule = rule;
         return this;
@@ -19,6 +21,7 @@ public class CreateArtifactRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public CreateArtifactRuleRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -29,9 +32,15 @@ public class CreateArtifactRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public CreateArtifactRuleRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public CreateArtifactRuleRequest(@JsonProperty("Rule") org.openapis.openapi.models.shared.Rule rule, @JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId) {
+        this.rule = rule;
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+  }
 }

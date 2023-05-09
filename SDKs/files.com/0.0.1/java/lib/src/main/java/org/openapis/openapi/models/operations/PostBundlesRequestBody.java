@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=clickwrap_id")
     public Integer clickwrapId;
+
     public PostBundlesRequestBody withClickwrapId(Integer clickwrapId) {
         this.clickwrapId = clickwrapId;
         return this;
@@ -23,6 +25,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=code")
     public String code;
+
     public PostBundlesRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -33,6 +36,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PostBundlesRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +47,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=dont_separate_submissions_by_folder")
     public Boolean dontSeparateSubmissionsByFolder;
+
     public PostBundlesRequestBody withDontSeparateSubmissionsByFolder(Boolean dontSeparateSubmissionsByFolder) {
         this.dontSeparateSubmissionsByFolder = dontSeparateSubmissionsByFolder;
         return this;
@@ -53,6 +58,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=expires_at")
     public OffsetDateTime expiresAt;
+
     public PostBundlesRequestBody withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -63,6 +69,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=form_field_set_id")
     public Integer formFieldSetId;
+
     public PostBundlesRequestBody withFormFieldSetId(Integer formFieldSetId) {
         this.formFieldSetId = formFieldSetId;
         return this;
@@ -73,6 +80,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=inbox_id")
     public Integer inboxId;
+
     public PostBundlesRequestBody withInboxId(Integer inboxId) {
         this.inboxId = inboxId;
         return this;
@@ -83,6 +91,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=max_uses")
     public Integer maxUses;
+
     public PostBundlesRequestBody withMaxUses(Integer maxUses) {
         this.maxUses = maxUses;
         return this;
@@ -93,6 +102,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=note")
     public String note;
+
     public PostBundlesRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -103,6 +113,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public PostBundlesRequestBody withPassword(String password) {
         this.password = password;
         return this;
@@ -113,6 +124,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path_template")
     public String pathTemplate;
+
     public PostBundlesRequestBody withPathTemplate(String pathTemplate) {
         this.pathTemplate = pathTemplate;
         return this;
@@ -123,6 +135,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=paths")
     public String[] paths;
+
     public PostBundlesRequestBody withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -133,6 +146,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=permissions")
     public PostBundlesRequestBodyPermissionsEnum permissions;
+
     public PostBundlesRequestBody withPermissions(PostBundlesRequestBodyPermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
@@ -143,6 +157,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=preview_only")
     public Boolean previewOnly;
+
     public PostBundlesRequestBody withPreviewOnly(Boolean previewOnly) {
         this.previewOnly = previewOnly;
         return this;
@@ -153,6 +168,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=require_registration")
     public Boolean requireRegistration;
+
     public PostBundlesRequestBody withRequireRegistration(Boolean requireRegistration) {
         this.requireRegistration = requireRegistration;
         return this;
@@ -163,6 +179,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=require_share_recipient")
     public Boolean requireShareRecipient;
+
     public PostBundlesRequestBody withRequireShareRecipient(Boolean requireShareRecipient) {
         this.requireShareRecipient = requireShareRecipient;
         return this;
@@ -173,6 +190,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=send_email_receipt_to_uploader")
     public Boolean sendEmailReceiptToUploader;
+
     public PostBundlesRequestBody withSendEmailReceiptToUploader(Boolean sendEmailReceiptToUploader) {
         this.sendEmailReceiptToUploader = sendEmailReceiptToUploader;
         return this;
@@ -183,6 +201,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=skip_company")
     public Boolean skipCompany;
+
     public PostBundlesRequestBody withSkipCompany(Boolean skipCompany) {
         this.skipCompany = skipCompany;
         return this;
@@ -193,6 +212,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=skip_email")
     public Boolean skipEmail;
+
     public PostBundlesRequestBody withSkipEmail(Boolean skipEmail) {
         this.skipEmail = skipEmail;
         return this;
@@ -203,6 +223,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=skip_name")
     public Boolean skipName;
+
     public PostBundlesRequestBody withSkipName(Boolean skipName) {
         this.skipName = skipName;
         return this;
@@ -213,6 +234,7 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_id")
     public Integer userId;
+
     public PostBundlesRequestBody withUserId(Integer userId) {
         this.userId = userId;
         return this;
@@ -223,9 +245,13 @@ public class PostBundlesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PostBundlesRequestBodyWatermarkAttachmentFile watermarkAttachmentFile;
+
     public PostBundlesRequestBody withWatermarkAttachmentFile(PostBundlesRequestBodyWatermarkAttachmentFile watermarkAttachmentFile) {
         this.watermarkAttachmentFile = watermarkAttachmentFile;
         return this;
     }
     
+    public PostBundlesRequestBody(@JsonProperty("paths") String[] paths) {
+        this.paths = paths;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVerifiedAccessInstanceLoggingConfigurationRequest {
     
     public VerifiedAccessLogOptions accessLogs;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationRequest withAccessLogs(VerifiedAccessLogOptions accessLogs) {
         this.accessLogs = accessLogs;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationRequest {
     
     
     public String clientToken;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,9 +33,14 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationRequest {
     
     
     public String verifiedAccessInstanceId;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationRequest withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceLoggingConfigurationRequest(@JsonProperty("AccessLogs") VerifiedAccessLogOptions accessLogs, @JsonProperty("VerifiedAccessInstanceId") String verifiedAccessInstanceId) {
+        this.accessLogs = accessLogs;
+        this.verifiedAccessInstanceId = verifiedAccessInstanceId;
+  }
 }

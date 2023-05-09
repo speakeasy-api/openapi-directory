@@ -18,6 +18,7 @@ public class ResourceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobSource")
     public String blobSource;
+
     public ResourceFile withBlobSource(String blobSource) {
         this.blobSource = blobSource;
         return this;
@@ -29,9 +30,11 @@ public class ResourceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public ResourceFile withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
     }
     
+    public ResourceFile(){}
 }

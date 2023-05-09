@@ -23,6 +23,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public IndividualAddressAddressTypeEnum addressType;
+
     public IndividualAddress withAddressType(IndividualAddressAddressTypeEnum addressType) {
         this.addressType = addressType;
         return this;
@@ -34,6 +35,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public IndividualAddress withCity(String city) {
         this.city = city;
         return this;
@@ -45,6 +47,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public IndividualAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -58,6 +61,7 @@ public class IndividualAddress {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public IndividualAddress withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -69,6 +73,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public IndividualAddress withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line1")
     public String line1;
+
     public IndividualAddress withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -91,6 +97,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line2")
     public String line2;
+
     public IndividualAddress withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -102,6 +109,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line3")
     public String line3;
+
     public IndividualAddress withLine3(String line3) {
         this.line3 = line3;
         return this;
@@ -113,6 +121,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IndividualAddress withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +133,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public IndividualAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -135,6 +145,7 @@ public class IndividualAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suburb")
     public String suburb;
+
     public IndividualAddress withSuburb(String suburb) {
         this.suburb = suburb;
         return this;
@@ -148,9 +159,11 @@ public class IndividualAddress {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public IndividualAddress withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public IndividualAddress(){}
 }

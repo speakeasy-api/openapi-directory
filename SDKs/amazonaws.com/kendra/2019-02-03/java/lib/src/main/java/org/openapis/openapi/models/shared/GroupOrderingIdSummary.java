@@ -20,6 +20,7 @@ public class GroupOrderingIdSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public GroupOrderingIdSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -30,6 +31,7 @@ public class GroupOrderingIdSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GroupOrderingIdSummary withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -38,6 +40,7 @@ public class GroupOrderingIdSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderingId")
     public Long orderingId;
+
     public GroupOrderingIdSummary withOrderingId(Long orderingId) {
         this.orderingId = orderingId;
         return this;
@@ -48,6 +51,7 @@ public class GroupOrderingIdSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReceivedAt")
     public OffsetDateTime receivedAt;
+
     public GroupOrderingIdSummary withReceivedAt(OffsetDateTime receivedAt) {
         this.receivedAt = receivedAt;
         return this;
@@ -56,9 +60,11 @@ public class GroupOrderingIdSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public PrincipalMappingStatusEnum status;
+
     public GroupOrderingIdSummary withStatus(PrincipalMappingStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GroupOrderingIdSummary(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateCacheClusterMessage - Represents the input of a CreateCacheCluster operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCacheClusterMessage {
     
     public AZModeEnum azMode;
+
     public CreateCacheClusterMessage withAZMode(AZModeEnum azMode) {
         this.azMode = azMode;
         return this;
@@ -19,6 +20,7 @@ public class CreateCacheClusterMessage {
     
     
     public String authToken;
+
     public CreateCacheClusterMessage withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -26,6 +28,7 @@ public class CreateCacheClusterMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public CreateCacheClusterMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -33,6 +36,7 @@ public class CreateCacheClusterMessage {
     
     
     public String cacheClusterId;
+
     public CreateCacheClusterMessage withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -40,6 +44,7 @@ public class CreateCacheClusterMessage {
     
     
     public String cacheNodeType;
+
     public CreateCacheClusterMessage withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -47,6 +52,7 @@ public class CreateCacheClusterMessage {
     
     
     public String cacheParameterGroupName;
+
     public CreateCacheClusterMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -54,6 +60,7 @@ public class CreateCacheClusterMessage {
     
     
     public String[] cacheSecurityGroupNames;
+
     public CreateCacheClusterMessage withCacheSecurityGroupNames(String[] cacheSecurityGroupNames) {
         this.cacheSecurityGroupNames = cacheSecurityGroupNames;
         return this;
@@ -61,6 +68,7 @@ public class CreateCacheClusterMessage {
     
     
     public String cacheSubnetGroupName;
+
     public CreateCacheClusterMessage withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -68,6 +76,7 @@ public class CreateCacheClusterMessage {
     
     
     public String engine;
+
     public CreateCacheClusterMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -75,6 +84,7 @@ public class CreateCacheClusterMessage {
     
     
     public String engineVersion;
+
     public CreateCacheClusterMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -82,6 +92,7 @@ public class CreateCacheClusterMessage {
     
     
     public IpDiscoveryEnum ipDiscovery;
+
     public CreateCacheClusterMessage withIpDiscovery(IpDiscoveryEnum ipDiscovery) {
         this.ipDiscovery = ipDiscovery;
         return this;
@@ -89,6 +100,7 @@ public class CreateCacheClusterMessage {
     
     
     public LogDeliveryConfigurationRequestList[] logDeliveryConfigurations;
+
     public CreateCacheClusterMessage withLogDeliveryConfigurations(LogDeliveryConfigurationRequestList[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -96,6 +108,7 @@ public class CreateCacheClusterMessage {
     
     
     public NetworkTypeEnum networkType;
+
     public CreateCacheClusterMessage withNetworkType(NetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -103,6 +116,7 @@ public class CreateCacheClusterMessage {
     
     
     public String notificationTopicArn;
+
     public CreateCacheClusterMessage withNotificationTopicArn(String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
         return this;
@@ -110,6 +124,7 @@ public class CreateCacheClusterMessage {
     
     
     public Long numCacheNodes;
+
     public CreateCacheClusterMessage withNumCacheNodes(Long numCacheNodes) {
         this.numCacheNodes = numCacheNodes;
         return this;
@@ -117,6 +132,7 @@ public class CreateCacheClusterMessage {
     
     
     public OutpostModeEnum outpostMode;
+
     public CreateCacheClusterMessage withOutpostMode(OutpostModeEnum outpostMode) {
         this.outpostMode = outpostMode;
         return this;
@@ -124,6 +140,7 @@ public class CreateCacheClusterMessage {
     
     
     public Long port;
+
     public CreateCacheClusterMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -131,6 +148,7 @@ public class CreateCacheClusterMessage {
     
     
     public String preferredAvailabilityZone;
+
     public CreateCacheClusterMessage withPreferredAvailabilityZone(String preferredAvailabilityZone) {
         this.preferredAvailabilityZone = preferredAvailabilityZone;
         return this;
@@ -138,6 +156,7 @@ public class CreateCacheClusterMessage {
     
     
     public String[] preferredAvailabilityZones;
+
     public CreateCacheClusterMessage withPreferredAvailabilityZones(String[] preferredAvailabilityZones) {
         this.preferredAvailabilityZones = preferredAvailabilityZones;
         return this;
@@ -145,6 +164,7 @@ public class CreateCacheClusterMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public CreateCacheClusterMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -152,6 +172,7 @@ public class CreateCacheClusterMessage {
     
     
     public String preferredOutpostArn;
+
     public CreateCacheClusterMessage withPreferredOutpostArn(String preferredOutpostArn) {
         this.preferredOutpostArn = preferredOutpostArn;
         return this;
@@ -159,6 +180,7 @@ public class CreateCacheClusterMessage {
     
     
     public String[] preferredOutpostArns;
+
     public CreateCacheClusterMessage withPreferredOutpostArns(String[] preferredOutpostArns) {
         this.preferredOutpostArns = preferredOutpostArns;
         return this;
@@ -166,6 +188,7 @@ public class CreateCacheClusterMessage {
     
     
     public String replicationGroupId;
+
     public CreateCacheClusterMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -173,6 +196,7 @@ public class CreateCacheClusterMessage {
     
     
     public String[] securityGroupIds;
+
     public CreateCacheClusterMessage withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -180,6 +204,7 @@ public class CreateCacheClusterMessage {
     
     
     public String[] snapshotArns;
+
     public CreateCacheClusterMessage withSnapshotArns(String[] snapshotArns) {
         this.snapshotArns = snapshotArns;
         return this;
@@ -187,6 +212,7 @@ public class CreateCacheClusterMessage {
     
     
     public String snapshotName;
+
     public CreateCacheClusterMessage withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -194,6 +220,7 @@ public class CreateCacheClusterMessage {
     
     
     public Long snapshotRetentionLimit;
+
     public CreateCacheClusterMessage withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -201,6 +228,7 @@ public class CreateCacheClusterMessage {
     
     
     public String snapshotWindow;
+
     public CreateCacheClusterMessage withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
@@ -208,6 +236,7 @@ public class CreateCacheClusterMessage {
     
     
     public TagList[] tags;
+
     public CreateCacheClusterMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -215,9 +244,13 @@ public class CreateCacheClusterMessage {
     
     
     public Boolean transitEncryptionEnabled;
+
     public CreateCacheClusterMessage withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
     }
     
+    public CreateCacheClusterMessage(@JsonProperty("CacheClusterId") String cacheClusterId) {
+        this.cacheClusterId = cacheClusterId;
+  }
 }

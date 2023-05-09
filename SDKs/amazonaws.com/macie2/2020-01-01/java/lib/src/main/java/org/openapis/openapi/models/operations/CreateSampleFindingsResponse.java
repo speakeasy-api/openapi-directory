@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSampleFindingsResponse {
@@ -12,6 +13,7 @@ public class CreateSampleFindingsResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSampleFindingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSampleFindingsResponse {
      */
     
     public Object conflictException;
+
     public CreateSampleFindingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateSampleFindingsResponse {
     
     
     public String contentType;
+
     public CreateSampleFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateSampleFindingsResponse {
      */
     
     public java.util.Map<String, Object> createSampleFindingsResponse;
+
     public CreateSampleFindingsResponse withCreateSampleFindingsResponse(java.util.Map<String, Object> createSampleFindingsResponse) {
         this.createSampleFindingsResponse = createSampleFindingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateSampleFindingsResponse {
      */
     
     public Object internalServerException;
+
     public CreateSampleFindingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSampleFindingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSampleFindingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSampleFindingsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSampleFindingsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateSampleFindingsResponse {
     
     
     public Integer statusCode;
+
     public CreateSampleFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateSampleFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSampleFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateSampleFindingsResponse {
      */
     
     public Object throttlingException;
+
     public CreateSampleFindingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateSampleFindingsResponse {
      */
     
     public Object validationException;
+
     public CreateSampleFindingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSampleFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

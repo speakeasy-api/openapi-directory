@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RegisterEndPointsInput - Contains the parameters for RegisterInstancesWithLoadBalancer.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RegisterEndPointsInput {
     
     public Instance[] instances;
+
     public RegisterEndPointsInput withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -19,9 +20,14 @@ public class RegisterEndPointsInput {
     
     
     public String loadBalancerName;
+
     public RegisterEndPointsInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public RegisterEndPointsInput(@JsonProperty("Instances") Instance[] instances, @JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.instances = instances;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

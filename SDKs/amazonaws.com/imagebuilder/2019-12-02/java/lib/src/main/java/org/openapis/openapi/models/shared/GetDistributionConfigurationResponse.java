@@ -15,6 +15,7 @@ public class GetDistributionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionConfiguration")
     public DistributionConfiguration distributionConfiguration;
+
     public GetDistributionConfigurationResponse withDistributionConfiguration(DistributionConfiguration distributionConfiguration) {
         this.distributionConfiguration = distributionConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class GetDistributionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GetDistributionConfigurationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetDistributionConfigurationResponse(){}
 }

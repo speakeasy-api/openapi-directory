@@ -15,6 +15,7 @@ public class RdsRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequirementsToTarget")
     public RdsRequirements requirementsToTarget;
+
     public RdsRecommendation withRequirementsToTarget(RdsRequirements requirementsToTarget) {
         this.requirementsToTarget = requirementsToTarget;
         return this;
@@ -23,9 +24,11 @@ public class RdsRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetConfiguration")
     public RdsConfiguration targetConfiguration;
+
     public RdsRecommendation withTargetConfiguration(RdsConfiguration targetConfiguration) {
         this.targetConfiguration = targetConfiguration;
         return this;
     }
     
+    public RdsRecommendation(){}
 }

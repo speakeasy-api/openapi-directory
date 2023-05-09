@@ -15,6 +15,7 @@ public class DataSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakeKmsKeyId")
     public String dataLakeKmsKeyId;
+
     public DataSecurityConfig withDataLakeKmsKeyId(String dataLakeKmsKeyId) {
         this.dataLakeKmsKeyId = dataLakeKmsKeyId;
         return this;
@@ -23,6 +24,7 @@ public class DataSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelKmsKeyId")
     public String modelKmsKeyId;
+
     public DataSecurityConfig withModelKmsKeyId(String modelKmsKeyId) {
         this.modelKmsKeyId = modelKmsKeyId;
         return this;
@@ -31,6 +33,7 @@ public class DataSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public DataSecurityConfig withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -42,9 +45,11 @@ public class DataSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public DataSecurityConfig withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public DataSecurityConfig(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAppResult {
     @JsonProperty("app")
     public App app;
+
     public UpdateAppResult withApp(App app) {
         this.app = app;
         return this;
     }
     
+    public UpdateAppResult(@JsonProperty("app") App app) {
+        this.app = app;
+  }
 }

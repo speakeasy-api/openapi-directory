@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Assessment assessment;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest withAssessment(org.openapis.openapi.models.shared.Assessment assessment) {
         this.assessment = assessment;
         return this;
@@ -19,6 +21,7 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
     public String assessmentId;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -29,9 +32,15 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest(@JsonProperty("Assessment") org.openapis.openapi.models.shared.Assessment assessment, @JsonProperty("assessmentId") String assessmentId, @JsonProperty("offeringId") String offeringId) {
+        this.assessment = assessment;
+        this.assessmentId = assessmentId;
+        this.offeringId = offeringId;
+  }
 }

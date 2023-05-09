@@ -15,6 +15,7 @@ public class GETLastEditedUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GETLastEditedUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GETLastEditedUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GETLastEditedUsingGET200ApplicationJSONData data;
+
     public GETLastEditedUsingGET200ApplicationJSON withData(GETLastEditedUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class GETLastEditedUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GETLastEditedUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GETLastEditedUsingGET200ApplicationJSON(){}
 }

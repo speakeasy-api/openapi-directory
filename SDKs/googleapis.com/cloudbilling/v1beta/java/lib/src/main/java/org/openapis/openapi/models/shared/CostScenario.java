@@ -18,6 +18,7 @@ public class CostScenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitments")
     public Commitment[] commitments;
+
     public CostScenario withCommitments(Commitment[] commitments) {
         this.commitments = commitments;
         return this;
@@ -29,6 +30,7 @@ public class CostScenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarioConfig")
     public ScenarioConfig scenarioConfig;
+
     public CostScenario withScenarioConfig(ScenarioConfig scenarioConfig) {
         this.scenarioConfig = scenarioConfig;
         return this;
@@ -40,9 +42,11 @@ public class CostScenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloads")
     public Workload[] workloads;
+
     public CostScenario withWorkloads(Workload[] workloads) {
         this.workloads = workloads;
         return this;
     }
     
+    public CostScenario(){}
 }

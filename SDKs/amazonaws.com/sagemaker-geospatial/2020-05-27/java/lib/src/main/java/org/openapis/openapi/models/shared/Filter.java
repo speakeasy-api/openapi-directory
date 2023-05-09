@@ -15,6 +15,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Maximum")
     public Float maximum;
+
     public Filter withMaximum(Float maximum) {
         this.maximum = maximum;
         return this;
@@ -23,6 +24,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Minimum")
     public Float minimum;
+
     public Filter withMinimum(Float minimum) {
         this.minimum = minimum;
         return this;
@@ -30,6 +32,7 @@ public class Filter {
     
     @JsonProperty("Name")
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class Filter {
     
     @JsonProperty("Type")
     public String type;
+
     public Filter withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Filter(@JsonProperty("Name") String name, @JsonProperty("Type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

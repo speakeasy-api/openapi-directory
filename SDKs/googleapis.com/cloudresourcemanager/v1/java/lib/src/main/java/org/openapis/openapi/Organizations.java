@@ -59,11 +59,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetResponse(contentType, httpRes.statusCode()) {{
             organization = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchResponse(contentType, httpRes.statusCode()) {{
             searchOrganizationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

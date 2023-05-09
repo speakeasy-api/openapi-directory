@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostWalletAccountIdErc20Response {
     
     public String contentType;
+
     public PostWalletAccountIdErc20Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostWalletAccountIdErc20Response {
      */
     
     public java.util.Map<String, Object> empty;
+
     public PostWalletAccountIdErc20Response withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class PostWalletAccountIdErc20Response {
     
     
     public Integer statusCode;
+
     public PostWalletAccountIdErc20Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostWalletAccountIdErc20Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostWalletAccountIdErc20Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostWalletAccountIdErc20Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

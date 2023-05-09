@@ -12,6 +12,7 @@ public class UpdateCallRequestTransferNcco {
      */
     @JsonProperty("action")
     public RequestTransferActionParamEnum action;
+
     public UpdateCallRequestTransferNcco withAction(RequestTransferActionParamEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class UpdateCallRequestTransferNcco {
     
     @JsonProperty("destination")
     public UpdateCallRequestTransferNccoDestination destination;
+
     public UpdateCallRequestTransferNcco withDestination(UpdateCallRequestTransferNccoDestination destination) {
         this.destination = destination;
         return this;
     }
     
+    public UpdateCallRequestTransferNcco(@JsonProperty("action") RequestTransferActionParamEnum action, @JsonProperty("destination") UpdateCallRequestTransferNccoDestination destination) {
+        this.action = action;
+        this.destination = destination;
+  }
 }

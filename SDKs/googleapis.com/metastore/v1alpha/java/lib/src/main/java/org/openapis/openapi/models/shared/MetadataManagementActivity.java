@@ -18,6 +18,7 @@ public class MetadataManagementActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataExports")
     public MetadataExport[] metadataExports;
+
     public MetadataManagementActivity withMetadataExports(MetadataExport[] metadataExports) {
         this.metadataExports = metadataExports;
         return this;
@@ -29,9 +30,11 @@ public class MetadataManagementActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restores")
     public Restore[] restores;
+
     public MetadataManagementActivity withRestores(Restore[] restores) {
         this.restores = restores;
         return this;
     }
     
+    public MetadataManagementActivity(){}
 }

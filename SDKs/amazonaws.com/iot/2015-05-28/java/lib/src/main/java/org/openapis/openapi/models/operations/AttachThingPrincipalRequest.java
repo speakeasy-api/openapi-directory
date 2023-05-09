@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AttachThingPrincipalRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AttachThingPrincipalRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class AttachThingPrincipalRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AttachThingPrincipalRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class AttachThingPrincipalRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AttachThingPrincipalRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class AttachThingPrincipalRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AttachThingPrincipalRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class AttachThingPrincipalRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AttachThingPrincipalRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class AttachThingPrincipalRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AttachThingPrincipalRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class AttachThingPrincipalRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AttachThingPrincipalRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class AttachThingPrincipalRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thingName")
     public String thingName;
+
     public AttachThingPrincipalRequest withThingName(String thingName) {
         this.thingName = thingName;
         return this;
@@ -71,9 +80,14 @@ public class AttachThingPrincipalRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amzn-principal")
     public String xAmznPrincipal;
+
     public AttachThingPrincipalRequest withXAmznPrincipal(String xAmznPrincipal) {
         this.xAmznPrincipal = xAmznPrincipal;
         return this;
     }
     
+    public AttachThingPrincipalRequest(@JsonProperty("thingName") String thingName, @JsonProperty("x-amzn-principal") String xAmznPrincipal) {
+        this.thingName = thingName;
+        this.xAmznPrincipal = xAmznPrincipal;
+  }
 }

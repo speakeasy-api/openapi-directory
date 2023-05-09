@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeForecastRequest {
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public DescribeForecastRequest withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
     }
     
+    public DescribeForecastRequest(@JsonProperty("ForecastArn") String forecastArn) {
+        this.forecastArn = forecastArn;
+  }
 }

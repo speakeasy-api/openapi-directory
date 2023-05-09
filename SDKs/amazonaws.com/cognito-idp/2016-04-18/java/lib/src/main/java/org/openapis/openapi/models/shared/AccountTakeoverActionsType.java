@@ -15,6 +15,7 @@ public class AccountTakeoverActionsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HighAction")
     public AccountTakeoverActionType highAction;
+
     public AccountTakeoverActionsType withHighAction(AccountTakeoverActionType highAction) {
         this.highAction = highAction;
         return this;
@@ -23,6 +24,7 @@ public class AccountTakeoverActionsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LowAction")
     public AccountTakeoverActionType lowAction;
+
     public AccountTakeoverActionsType withLowAction(AccountTakeoverActionType lowAction) {
         this.lowAction = lowAction;
         return this;
@@ -31,9 +33,11 @@ public class AccountTakeoverActionsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediumAction")
     public AccountTakeoverActionType mediumAction;
+
     public AccountTakeoverActionsType withMediumAction(AccountTakeoverActionType mediumAction) {
         this.mediumAction = mediumAction;
         return this;
     }
     
+    public AccountTakeoverActionsType(){}
 }

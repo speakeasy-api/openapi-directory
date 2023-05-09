@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTableResponse {
@@ -12,6 +13,7 @@ public class CreateTableResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateTableResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTableResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateTableResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTableResponse {
     
     
     public String contentType;
+
     public CreateTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTableResponse {
      */
     
     public java.util.Map<String, Object> createTableResponse;
+
     public CreateTableResponse withCreateTableResponse(java.util.Map<String, Object> createTableResponse) {
         this.createTableResponse = createTableResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateTableResponse {
      */
     
     public Object entityNotFoundException;
+
     public CreateTableResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTableResponse {
      */
     
     public Object glueEncryptionException;
+
     public CreateTableResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -69,6 +76,7 @@ public class CreateTableResponse {
      */
     
     public Object internalServiceException;
+
     public CreateTableResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -79,6 +87,7 @@ public class CreateTableResponse {
      */
     
     public Object invalidInputException;
+
     public CreateTableResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class CreateTableResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateTableResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -99,6 +109,7 @@ public class CreateTableResponse {
      */
     
     public Object resourceNotReadyException;
+
     public CreateTableResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -109,6 +120,7 @@ public class CreateTableResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateTableResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -116,6 +128,7 @@ public class CreateTableResponse {
     
     
     public Integer statusCode;
+
     public CreateTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class CreateTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

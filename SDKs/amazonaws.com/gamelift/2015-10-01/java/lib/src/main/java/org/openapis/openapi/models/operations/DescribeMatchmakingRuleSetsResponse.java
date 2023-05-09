@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMatchmakingRuleSetsResponse {
     
     public String contentType;
+
     public DescribeMatchmakingRuleSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMatchmakingRuleSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMatchmakingRuleSetsOutput describeMatchmakingRuleSetsOutput;
+
     public DescribeMatchmakingRuleSetsResponse withDescribeMatchmakingRuleSetsOutput(org.openapis.openapi.models.shared.DescribeMatchmakingRuleSetsOutput describeMatchmakingRuleSetsOutput) {
         this.describeMatchmakingRuleSetsOutput = describeMatchmakingRuleSetsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMatchmakingRuleSetsResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeMatchmakingRuleSetsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMatchmakingRuleSetsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeMatchmakingRuleSetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMatchmakingRuleSetsResponse {
      */
     
     public Object notFoundException;
+
     public DescribeMatchmakingRuleSetsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeMatchmakingRuleSetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeMatchmakingRuleSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeMatchmakingRuleSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMatchmakingRuleSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeMatchmakingRuleSetsResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DescribeMatchmakingRuleSetsResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DescribeMatchmakingRuleSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

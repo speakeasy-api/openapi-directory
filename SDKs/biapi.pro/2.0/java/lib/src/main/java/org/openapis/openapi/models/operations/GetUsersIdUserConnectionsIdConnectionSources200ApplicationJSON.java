@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUsersIdUserConnectionsIdConnectionSources200ApplicationJSON {
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.ConnectionSource[] sources;
+
     public GetUsersIdUserConnectionsIdConnectionSources200ApplicationJSON withSources(org.openapis.openapi.models.shared.ConnectionSource[] sources) {
         this.sources = sources;
         return this;
@@ -25,9 +26,13 @@ public class GetUsersIdUserConnectionsIdConnectionSources200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetUsersIdUserConnectionsIdConnectionSources200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionSources200ApplicationJSON(@JsonProperty("sources") org.openapis.openapi.models.shared.ConnectionSource[] sources) {
+        this.sources = sources;
+  }
 }

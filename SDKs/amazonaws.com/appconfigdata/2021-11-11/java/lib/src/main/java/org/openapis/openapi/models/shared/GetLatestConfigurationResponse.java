@@ -15,9 +15,11 @@ public class GetLatestConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public String configuration;
+
     public GetLatestConfigurationResponse withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public GetLatestConfigurationResponse(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateStoreImageTaskRequest {
     
     public String bucket;
+
     public CreateStoreImageTaskRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -16,6 +17,7 @@ public class CreateStoreImageTaskRequest {
     
     
     public Boolean dryRun;
+
     public CreateStoreImageTaskRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateStoreImageTaskRequest {
     
     
     public String imageId;
+
     public CreateStoreImageTaskRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -30,9 +33,14 @@ public class CreateStoreImageTaskRequest {
     
     
     public CreateStoreImageTaskRequestS3ObjectTags[] s3ObjectTags;
+
     public CreateStoreImageTaskRequest withS3ObjectTags(CreateStoreImageTaskRequestS3ObjectTags[] s3ObjectTags) {
         this.s3ObjectTags = s3ObjectTags;
         return this;
     }
     
+    public CreateStoreImageTaskRequest(@JsonProperty("Bucket") String bucket, @JsonProperty("ImageId") String imageId) {
+        this.bucket = bucket;
+        this.imageId = imageId;
+  }
 }

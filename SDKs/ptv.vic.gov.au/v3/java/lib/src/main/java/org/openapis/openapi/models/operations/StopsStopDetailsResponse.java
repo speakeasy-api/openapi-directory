@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopsStopDetailsResponse {
     
     public byte[] body;
+
     public StopsStopDetailsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class StopsStopDetailsResponse {
     
     
     public String contentType;
+
     public StopsStopDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class StopsStopDetailsResponse {
     
     
     public Integer statusCode;
+
     public StopsStopDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class StopsStopDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopsStopDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class StopsStopDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public StopsStopDetailsResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class StopsStopDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.V3StopResponse v3StopResponse;
+
     public StopsStopDetailsResponse withV3StopResponse(org.openapis.openapi.models.shared.V3StopResponse v3StopResponse) {
         this.v3StopResponse = v3StopResponse;
         return this;
     }
     
+    public StopsStopDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class EmployeeCustomNumberFields {
      */
     @JsonProperty("category")
     public EmployeeCustomNumberFieldsCategoryEnum category;
+
     public EmployeeCustomNumberFields withCategory(EmployeeCustomNumberFieldsCategoryEnum category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class EmployeeCustomNumberFields {
      */
     @JsonProperty("label")
     public String label;
+
     public EmployeeCustomNumberFields withLabel(String label) {
         this.label = label;
         return this;
@@ -32,9 +34,15 @@ public class EmployeeCustomNumberFields {
      */
     @JsonProperty("value")
     public Double value;
+
     public EmployeeCustomNumberFields withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public EmployeeCustomNumberFields(@JsonProperty("category") EmployeeCustomNumberFieldsCategoryEnum category, @JsonProperty("label") String label, @JsonProperty("value") Double value) {
+        this.category = category;
+        this.label = label;
+        this.value = value;
+  }
 }

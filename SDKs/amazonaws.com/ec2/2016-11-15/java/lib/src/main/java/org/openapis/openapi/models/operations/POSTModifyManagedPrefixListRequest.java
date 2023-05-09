@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTModifyManagedPrefixListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTModifyManagedPrefixListActionEnum action;
+
     public POSTModifyManagedPrefixListRequest withAction(POSTModifyManagedPrefixListActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTModifyManagedPrefixListRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTModifyManagedPrefixListVersionEnum version;
+
     public POSTModifyManagedPrefixListRequest withVersion(POSTModifyManagedPrefixListVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTModifyManagedPrefixListRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTModifyManagedPrefixListRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTModifyManagedPrefixListRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTModifyManagedPrefixListRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTModifyManagedPrefixListRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTModifyManagedPrefixListRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTModifyManagedPrefixListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTModifyManagedPrefixListRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTModifyManagedPrefixListRequest(@JsonProperty("Action") POSTModifyManagedPrefixListActionEnum action, @JsonProperty("Version") POSTModifyManagedPrefixListVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

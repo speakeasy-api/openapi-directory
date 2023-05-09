@@ -15,6 +15,7 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerHostname")
     public String containerHostname;
+
     public ModelPackageContainerDefinition withContainerHostname(String containerHostname) {
         this.containerHostname = containerHostname;
         return this;
@@ -23,6 +24,7 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public ModelPackageContainerDefinition withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Framework")
     public String framework;
+
     public ModelPackageContainerDefinition withFramework(String framework) {
         this.framework = framework;
         return this;
@@ -39,6 +42,7 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FrameworkVersion")
     public String frameworkVersion;
+
     public ModelPackageContainerDefinition withFrameworkVersion(String frameworkVersion) {
         this.frameworkVersion = frameworkVersion;
         return this;
@@ -46,6 +50,7 @@ public class ModelPackageContainerDefinition {
     
     @JsonProperty("Image")
     public String image;
+
     public ModelPackageContainerDefinition withImage(String image) {
         this.image = image;
         return this;
@@ -54,6 +59,7 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageDigest")
     public String imageDigest;
+
     public ModelPackageContainerDefinition withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -62,6 +68,7 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDataUrl")
     public String modelDataUrl;
+
     public ModelPackageContainerDefinition withModelDataUrl(String modelDataUrl) {
         this.modelDataUrl = modelDataUrl;
         return this;
@@ -70,6 +77,7 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelInput")
     public ModelInput modelInput;
+
     public ModelPackageContainerDefinition withModelInput(ModelInput modelInput) {
         this.modelInput = modelInput;
         return this;
@@ -78,6 +86,7 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NearestModelName")
     public String nearestModelName;
+
     public ModelPackageContainerDefinition withNearestModelName(String nearestModelName) {
         this.nearestModelName = nearestModelName;
         return this;
@@ -86,9 +95,13 @@ public class ModelPackageContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public ModelPackageContainerDefinition withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ModelPackageContainerDefinition(@JsonProperty("Image") String image) {
+        this.image = image;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveDisputeRequest {
@@ -12,9 +13,13 @@ public class RetrieveDisputeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
     public String disputeId;
+
     public RetrieveDisputeRequest withDisputeId(String disputeId) {
         this.disputeId = disputeId;
         return this;
     }
     
+    public RetrieveDisputeRequest(@JsonProperty("dispute_id") String disputeId) {
+        this.disputeId = disputeId;
+  }
 }

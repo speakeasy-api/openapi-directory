@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ServiceTemplateVersion {
     @JsonProperty("arn")
     public String arn;
+
     public ServiceTemplateVersion withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class ServiceTemplateVersion {
     
     @JsonProperty("compatibleEnvironmentTemplates")
     public CompatibleEnvironmentTemplate[] compatibleEnvironmentTemplates;
+
     public ServiceTemplateVersion withCompatibleEnvironmentTemplates(CompatibleEnvironmentTemplate[] compatibleEnvironmentTemplates) {
         this.compatibleEnvironmentTemplates = compatibleEnvironmentTemplates;
         return this;
@@ -35,6 +37,7 @@ public class ServiceTemplateVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ServiceTemplateVersion withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +46,7 @@ public class ServiceTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceTemplateVersion withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +56,7 @@ public class ServiceTemplateVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public ServiceTemplateVersion withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -59,6 +64,7 @@ public class ServiceTemplateVersion {
     
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public ServiceTemplateVersion withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -66,6 +72,7 @@ public class ServiceTemplateVersion {
     
     @JsonProperty("minorVersion")
     public String minorVersion;
+
     public ServiceTemplateVersion withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -74,6 +81,7 @@ public class ServiceTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedMinorVersion")
     public String recommendedMinorVersion;
+
     public ServiceTemplateVersion withRecommendedMinorVersion(String recommendedMinorVersion) {
         this.recommendedMinorVersion = recommendedMinorVersion;
         return this;
@@ -82,6 +90,7 @@ public class ServiceTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public ServiceTemplateVersion withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -89,6 +98,7 @@ public class ServiceTemplateVersion {
     
     @JsonProperty("status")
     public TemplateVersionStatusEnum status;
+
     public ServiceTemplateVersion withStatus(TemplateVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -97,6 +107,7 @@ public class ServiceTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ServiceTemplateVersion withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -105,6 +116,7 @@ public class ServiceTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedComponentSources")
     public ServiceTemplateSupportedComponentSourceTypeEnum[] supportedComponentSources;
+
     public ServiceTemplateVersion withSupportedComponentSources(ServiceTemplateSupportedComponentSourceTypeEnum[] supportedComponentSources) {
         this.supportedComponentSources = supportedComponentSources;
         return this;
@@ -112,9 +124,20 @@ public class ServiceTemplateVersion {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public ServiceTemplateVersion withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ServiceTemplateVersion(@JsonProperty("arn") String arn, @JsonProperty("compatibleEnvironmentTemplates") CompatibleEnvironmentTemplate[] compatibleEnvironmentTemplates, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("majorVersion") String majorVersion, @JsonProperty("minorVersion") String minorVersion, @JsonProperty("status") TemplateVersionStatusEnum status, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.compatibleEnvironmentTemplates = compatibleEnvironmentTemplates;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.majorVersion = majorVersion;
+        this.minorVersion = minorVersion;
+        this.status = status;
+        this.templateName = templateName;
+  }
 }

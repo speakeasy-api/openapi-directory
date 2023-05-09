@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBackupResponse {
@@ -12,6 +13,7 @@ public class DeleteBackupResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public DeleteBackupResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteBackupResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public DeleteBackupResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteBackupResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public DeleteBackupResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class DeleteBackupResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public DeleteBackupResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class DeleteBackupResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DeleteBackupResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBackupResponse {
     
     
     public String contentType;
+
     public DeleteBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class DeleteBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBackupResponse deleteBackupResponse;
+
     public DeleteBackupResponse withDeleteBackupResponse(org.openapis.openapi.models.shared.DeleteBackupResponse deleteBackupResponse) {
         this.deleteBackupResponse = deleteBackupResponse;
         return this;
@@ -76,6 +84,7 @@ public class DeleteBackupResponse {
     
     
     public Integer statusCode;
+
     public DeleteBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

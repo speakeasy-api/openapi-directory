@@ -18,6 +18,7 @@ public class PullResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ackId")
     public String ackId;
+
     public PullResponse withAckId(String ackId) {
         this.ackId = ackId;
         return this;
@@ -29,9 +30,11 @@ public class PullResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubEvent")
     public PubsubEvent pubsubEvent;
+
     public PullResponse withPubsubEvent(PubsubEvent pubsubEvent) {
         this.pubsubEvent = pubsubEvent;
         return this;
     }
     
+    public PullResponse(){}
 }

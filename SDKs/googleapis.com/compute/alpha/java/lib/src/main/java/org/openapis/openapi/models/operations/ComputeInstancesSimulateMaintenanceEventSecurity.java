@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstancesSimulateMaintenanceEventSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesSimulateMaintenanceEventSecurityOption1 option1;
+
     public ComputeInstancesSimulateMaintenanceEventSecurity withOption1(ComputeInstancesSimulateMaintenanceEventSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeInstancesSimulateMaintenanceEventSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesSimulateMaintenanceEventSecurityOption2 option2;
+
     public ComputeInstancesSimulateMaintenanceEventSecurity withOption2(ComputeInstancesSimulateMaintenanceEventSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeInstancesSimulateMaintenanceEventSecurity(){}
 }

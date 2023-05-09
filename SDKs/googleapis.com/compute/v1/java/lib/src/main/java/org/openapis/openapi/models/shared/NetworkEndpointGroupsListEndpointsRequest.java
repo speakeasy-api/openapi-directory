@@ -15,9 +15,11 @@ public class NetworkEndpointGroupsListEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public NetworkEndpointGroupsListEndpointsRequestHealthStatusEnum healthStatus;
+
     public NetworkEndpointGroupsListEndpointsRequest withHealthStatus(NetworkEndpointGroupsListEndpointsRequestHealthStatusEnum healthStatus) {
         this.healthStatus = healthStatus;
         return this;
     }
     
+    public NetworkEndpointGroupsListEndpointsRequest(){}
 }

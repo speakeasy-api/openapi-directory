@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudassetSavedQueriesPatchResponse {
     
     public String contentType;
+
     public CloudassetSavedQueriesPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudassetSavedQueriesPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.SavedQuery savedQuery;
+
     public CloudassetSavedQueriesPatchResponse withSavedQuery(org.openapis.openapi.models.shared.SavedQuery savedQuery) {
         this.savedQuery = savedQuery;
         return this;
@@ -26,6 +29,7 @@ public class CloudassetSavedQueriesPatchResponse {
     
     
     public Integer statusCode;
+
     public CloudassetSavedQueriesPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudassetSavedQueriesPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudassetSavedQueriesPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudassetSavedQueriesPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

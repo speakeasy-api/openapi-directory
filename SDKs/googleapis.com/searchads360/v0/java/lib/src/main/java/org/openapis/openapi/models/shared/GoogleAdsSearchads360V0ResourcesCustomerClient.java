@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedLabels")
     public String[] appliedLabels;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withAppliedLabels(String[] appliedLabels) {
         this.appliedLabels = appliedLabels;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCustomer")
     public String clientCustomer;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withClientCustomer(String clientCustomer) {
         this.clientCustomer = clientCustomer;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptiveName")
     public String descriptiveName;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withDescriptiveName(String descriptiveName) {
         this.descriptiveName = descriptiveName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withLevel(String level) {
         this.level = level;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manager")
     public Boolean manager;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withManager(Boolean manager) {
         this.manager = manager;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum status;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withStatus(GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum status) {
         this.status = status;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testAccount")
     public Boolean testAccount;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withTestAccount(Boolean testAccount) {
         this.testAccount = testAccount;
         return this;
@@ -139,9 +150,11 @@ public class GoogleAdsSearchads360V0ResourcesCustomerClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleAdsSearchads360V0ResourcesCustomerClient withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCustomerClient(){}
 }

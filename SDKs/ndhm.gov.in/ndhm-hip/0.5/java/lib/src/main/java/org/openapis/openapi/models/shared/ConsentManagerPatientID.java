@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConsentManagerPatientID {
     @JsonProperty("id")
     public String id;
+
     public ConsentManagerPatientID withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ConsentManagerPatientID(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

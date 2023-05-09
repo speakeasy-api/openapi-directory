@@ -15,9 +15,11 @@ public class InputSerialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csv")
     public CSVInput csv;
+
     public InputSerialization withCsv(CSVInput csv) {
         this.csv = csv;
         return this;
     }
     
+    public InputSerialization(){}
 }

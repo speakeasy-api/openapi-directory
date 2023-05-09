@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutWorkgroupRawResponse {
     
     public byte[] body;
+
     public PutWorkgroupRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PutWorkgroupRawResponse {
     
     
     public String contentType;
+
     public PutWorkgroupRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PutWorkgroupRawResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public PutWorkgroupRawResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class PutWorkgroupRawResponse {
     
     
     public Integer statusCode;
+
     public PutWorkgroupRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class PutWorkgroupRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutWorkgroupRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class PutWorkgroupRawResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkgroupHTTPStatusVO workgroupHTTPStatusVO;
+
     public PutWorkgroupRawResponse withWorkgroupHTTPStatusVO(org.openapis.openapi.models.shared.WorkgroupHTTPStatusVO workgroupHTTPStatusVO) {
         this.workgroupHTTPStatusVO = workgroupHTTPStatusVO;
         return this;
     }
     
+    public PutWorkgroupRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

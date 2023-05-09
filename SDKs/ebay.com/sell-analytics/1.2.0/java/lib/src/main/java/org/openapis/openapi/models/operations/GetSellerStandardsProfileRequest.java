@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSellerStandardsProfileRequest {
@@ -12,6 +13,7 @@ public class GetSellerStandardsProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cycle")
     public String cycle;
+
     public GetSellerStandardsProfileRequest withCycle(String cycle) {
         this.cycle = cycle;
         return this;
@@ -22,9 +24,14 @@ public class GetSellerStandardsProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=program")
     public String program;
+
     public GetSellerStandardsProfileRequest withProgram(String program) {
         this.program = program;
         return this;
     }
     
+    public GetSellerStandardsProfileRequest(@JsonProperty("cycle") String cycle, @JsonProperty("program") String program) {
+        this.cycle = cycle;
+        this.program = program;
+  }
 }

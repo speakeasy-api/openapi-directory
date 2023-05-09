@@ -15,6 +15,7 @@ public class DeleteObjectsOnCancelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteObjectsOnCancelRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class DeleteObjectsOnCancelRequestBody {
      */
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeleteObjectsOnCancelRequestBody withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -35,6 +37,7 @@ public class DeleteObjectsOnCancelRequestBody {
      */
     @JsonProperty("Objects")
     public org.openapis.openapi.models.shared.VirtualObject[] objects;
+
     public DeleteObjectsOnCancelRequestBody withObjects(org.openapis.openapi.models.shared.VirtualObject[] objects) {
         this.objects = objects;
         return this;
@@ -45,6 +48,7 @@ public class DeleteObjectsOnCancelRequestBody {
      */
     @JsonProperty("TableName")
     public String tableName;
+
     public DeleteObjectsOnCancelRequestBody withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -55,9 +59,16 @@ public class DeleteObjectsOnCancelRequestBody {
      */
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public DeleteObjectsOnCancelRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public DeleteObjectsOnCancelRequestBody(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("Objects") org.openapis.openapi.models.shared.VirtualObject[] objects, @JsonProperty("TableName") String tableName, @JsonProperty("TransactionId") String transactionId) {
+        this.databaseName = databaseName;
+        this.objects = objects;
+        this.tableName = tableName;
+        this.transactionId = transactionId;
+  }
 }

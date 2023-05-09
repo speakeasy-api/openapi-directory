@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class PullRequest {
     @JsonProperty("_links")
     public PullRequestLinks links;
+
     public PullRequest withLinks(PullRequestLinks links) {
         this.links = links;
         return this;
@@ -27,6 +28,7 @@ public class PullRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_lock_reason")
     public String activeLockReason;
+
     public PullRequest withActiveLockReason(String activeLockReason) {
         this.activeLockReason = activeLockReason;
         return this;
@@ -34,6 +36,7 @@ public class PullRequest {
     
     @JsonProperty("additions")
     public Long additions;
+
     public PullRequest withAdditions(Long additions) {
         this.additions = additions;
         return this;
@@ -44,6 +47,7 @@ public class PullRequest {
      */
     @JsonProperty("assignee")
     public NullableSimpleUser assignee;
+
     public PullRequest withAssignee(NullableSimpleUser assignee) {
         this.assignee = assignee;
         return this;
@@ -52,6 +56,7 @@ public class PullRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees")
     public SimpleUser[] assignees;
+
     public PullRequest withAssignees(SimpleUser[] assignees) {
         this.assignees = assignees;
         return this;
@@ -62,6 +67,7 @@ public class PullRequest {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public PullRequest withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -72,6 +78,7 @@ public class PullRequest {
      */
     @JsonProperty("auto_merge")
     public AutoMerge autoMerge;
+
     public PullRequest withAutoMerge(AutoMerge autoMerge) {
         this.autoMerge = autoMerge;
         return this;
@@ -79,6 +86,7 @@ public class PullRequest {
     
     @JsonProperty("base")
     public PullRequestBase base;
+
     public PullRequest withBase(PullRequestBase base) {
         this.base = base;
         return this;
@@ -86,6 +94,7 @@ public class PullRequest {
     
     @JsonProperty("body")
     public String body;
+
     public PullRequest withBody(String body) {
         this.body = body;
         return this;
@@ -93,6 +102,7 @@ public class PullRequest {
     
     @JsonProperty("changed_files")
     public Long changedFiles;
+
     public PullRequest withChangedFiles(Long changedFiles) {
         this.changedFiles = changedFiles;
         return this;
@@ -102,6 +112,7 @@ public class PullRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("closed_at")
     public OffsetDateTime closedAt;
+
     public PullRequest withClosedAt(OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -109,6 +120,7 @@ public class PullRequest {
     
     @JsonProperty("comments")
     public Long comments;
+
     public PullRequest withComments(Long comments) {
         this.comments = comments;
         return this;
@@ -116,6 +128,7 @@ public class PullRequest {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public PullRequest withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -123,6 +136,7 @@ public class PullRequest {
     
     @JsonProperty("commits")
     public Long commits;
+
     public PullRequest withCommits(Long commits) {
         this.commits = commits;
         return this;
@@ -130,6 +144,7 @@ public class PullRequest {
     
     @JsonProperty("commits_url")
     public String commitsUrl;
+
     public PullRequest withCommitsUrl(String commitsUrl) {
         this.commitsUrl = commitsUrl;
         return this;
@@ -139,6 +154,7 @@ public class PullRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public PullRequest withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -146,6 +162,7 @@ public class PullRequest {
     
     @JsonProperty("deletions")
     public Long deletions;
+
     public PullRequest withDeletions(Long deletions) {
         this.deletions = deletions;
         return this;
@@ -153,6 +170,7 @@ public class PullRequest {
     
     @JsonProperty("diff_url")
     public String diffUrl;
+
     public PullRequest withDiffUrl(String diffUrl) {
         this.diffUrl = diffUrl;
         return this;
@@ -164,6 +182,7 @@ public class PullRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draft")
     public Boolean draft;
+
     public PullRequest withDraft(Boolean draft) {
         this.draft = draft;
         return this;
@@ -171,6 +190,7 @@ public class PullRequest {
     
     @JsonProperty("head")
     public PullRequestHead head;
+
     public PullRequest withHead(PullRequestHead head) {
         this.head = head;
         return this;
@@ -178,6 +198,7 @@ public class PullRequest {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public PullRequest withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -185,6 +206,7 @@ public class PullRequest {
     
     @JsonProperty("id")
     public Long id;
+
     public PullRequest withId(Long id) {
         this.id = id;
         return this;
@@ -192,6 +214,7 @@ public class PullRequest {
     
     @JsonProperty("issue_url")
     public String issueUrl;
+
     public PullRequest withIssueUrl(String issueUrl) {
         this.issueUrl = issueUrl;
         return this;
@@ -199,6 +222,7 @@ public class PullRequest {
     
     @JsonProperty("labels")
     public PullRequestLabels[] labels;
+
     public PullRequest withLabels(PullRequestLabels[] labels) {
         this.labels = labels;
         return this;
@@ -206,6 +230,7 @@ public class PullRequest {
     
     @JsonProperty("locked")
     public Boolean locked;
+
     public PullRequest withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -216,6 +241,7 @@ public class PullRequest {
      */
     @JsonProperty("maintainer_can_modify")
     public Boolean maintainerCanModify;
+
     public PullRequest withMaintainerCanModify(Boolean maintainerCanModify) {
         this.maintainerCanModify = maintainerCanModify;
         return this;
@@ -223,6 +249,7 @@ public class PullRequest {
     
     @JsonProperty("merge_commit_sha")
     public String mergeCommitSha;
+
     public PullRequest withMergeCommitSha(String mergeCommitSha) {
         this.mergeCommitSha = mergeCommitSha;
         return this;
@@ -230,6 +257,7 @@ public class PullRequest {
     
     @JsonProperty("mergeable")
     public Boolean mergeable;
+
     public PullRequest withMergeable(Boolean mergeable) {
         this.mergeable = mergeable;
         return this;
@@ -237,6 +265,7 @@ public class PullRequest {
     
     @JsonProperty("mergeable_state")
     public String mergeableState;
+
     public PullRequest withMergeableState(String mergeableState) {
         this.mergeableState = mergeableState;
         return this;
@@ -244,6 +273,7 @@ public class PullRequest {
     
     @JsonProperty("merged")
     public Boolean merged;
+
     public PullRequest withMerged(Boolean merged) {
         this.merged = merged;
         return this;
@@ -253,6 +283,7 @@ public class PullRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("merged_at")
     public OffsetDateTime mergedAt;
+
     public PullRequest withMergedAt(OffsetDateTime mergedAt) {
         this.mergedAt = mergedAt;
         return this;
@@ -263,6 +294,7 @@ public class PullRequest {
      */
     @JsonProperty("merged_by")
     public NullableSimpleUser mergedBy;
+
     public PullRequest withMergedBy(NullableSimpleUser mergedBy) {
         this.mergedBy = mergedBy;
         return this;
@@ -273,6 +305,7 @@ public class PullRequest {
      */
     @JsonProperty("milestone")
     public NullableMilestone milestone;
+
     public PullRequest withMilestone(NullableMilestone milestone) {
         this.milestone = milestone;
         return this;
@@ -280,6 +313,7 @@ public class PullRequest {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public PullRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -290,6 +324,7 @@ public class PullRequest {
      */
     @JsonProperty("number")
     public Long number;
+
     public PullRequest withNumber(Long number) {
         this.number = number;
         return this;
@@ -297,6 +332,7 @@ public class PullRequest {
     
     @JsonProperty("patch_url")
     public String patchUrl;
+
     public PullRequest withPatchUrl(String patchUrl) {
         this.patchUrl = patchUrl;
         return this;
@@ -305,6 +341,7 @@ public class PullRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebaseable")
     public Boolean rebaseable;
+
     public PullRequest withRebaseable(Boolean rebaseable) {
         this.rebaseable = rebaseable;
         return this;
@@ -313,6 +350,7 @@ public class PullRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_reviewers")
     public SimpleUser[] requestedReviewers;
+
     public PullRequest withRequestedReviewers(SimpleUser[] requestedReviewers) {
         this.requestedReviewers = requestedReviewers;
         return this;
@@ -321,6 +359,7 @@ public class PullRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_teams")
     public TeamSimple[] requestedTeams;
+
     public PullRequest withRequestedTeams(TeamSimple[] requestedTeams) {
         this.requestedTeams = requestedTeams;
         return this;
@@ -328,6 +367,7 @@ public class PullRequest {
     
     @JsonProperty("review_comment_url")
     public String reviewCommentUrl;
+
     public PullRequest withReviewCommentUrl(String reviewCommentUrl) {
         this.reviewCommentUrl = reviewCommentUrl;
         return this;
@@ -335,6 +375,7 @@ public class PullRequest {
     
     @JsonProperty("review_comments")
     public Long reviewComments;
+
     public PullRequest withReviewComments(Long reviewComments) {
         this.reviewComments = reviewComments;
         return this;
@@ -342,6 +383,7 @@ public class PullRequest {
     
     @JsonProperty("review_comments_url")
     public String reviewCommentsUrl;
+
     public PullRequest withReviewCommentsUrl(String reviewCommentsUrl) {
         this.reviewCommentsUrl = reviewCommentsUrl;
         return this;
@@ -352,6 +394,7 @@ public class PullRequest {
      */
     @JsonProperty("state")
     public PullRequestStateEnum state;
+
     public PullRequest withState(PullRequestStateEnum state) {
         this.state = state;
         return this;
@@ -359,6 +402,7 @@ public class PullRequest {
     
     @JsonProperty("statuses_url")
     public String statusesUrl;
+
     public PullRequest withStatusesUrl(String statusesUrl) {
         this.statusesUrl = statusesUrl;
         return this;
@@ -369,6 +413,7 @@ public class PullRequest {
      */
     @JsonProperty("title")
     public String title;
+
     public PullRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -378,6 +423,7 @@ public class PullRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public PullRequest withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -385,6 +431,7 @@ public class PullRequest {
     
     @JsonProperty("url")
     public String url;
+
     public PullRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -395,9 +442,54 @@ public class PullRequest {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public PullRequest withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public PullRequest(@JsonProperty("_links") PullRequestLinks links, @JsonProperty("additions") Long additions, @JsonProperty("assignee") NullableSimpleUser assignee, @JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("auto_merge") AutoMerge autoMerge, @JsonProperty("base") PullRequestBase base, @JsonProperty("body") String body, @JsonProperty("changed_files") Long changedFiles, @JsonProperty("closed_at") OffsetDateTime closedAt, @JsonProperty("comments") Long comments, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("commits") Long commits, @JsonProperty("commits_url") String commitsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("deletions") Long deletions, @JsonProperty("diff_url") String diffUrl, @JsonProperty("head") PullRequestHead head, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("issue_url") String issueUrl, @JsonProperty("labels") PullRequestLabels[] labels, @JsonProperty("locked") Boolean locked, @JsonProperty("maintainer_can_modify") Boolean maintainerCanModify, @JsonProperty("merge_commit_sha") String mergeCommitSha, @JsonProperty("mergeable") Boolean mergeable, @JsonProperty("mergeable_state") String mergeableState, @JsonProperty("merged") Boolean merged, @JsonProperty("merged_at") OffsetDateTime mergedAt, @JsonProperty("merged_by") NullableSimpleUser mergedBy, @JsonProperty("milestone") NullableMilestone milestone, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("patch_url") String patchUrl, @JsonProperty("review_comment_url") String reviewCommentUrl, @JsonProperty("review_comments") Long reviewComments, @JsonProperty("review_comments_url") String reviewCommentsUrl, @JsonProperty("state") PullRequestStateEnum state, @JsonProperty("statuses_url") String statusesUrl, @JsonProperty("title") String title, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.links = links;
+        this.additions = additions;
+        this.assignee = assignee;
+        this.authorAssociation = authorAssociation;
+        this.autoMerge = autoMerge;
+        this.base = base;
+        this.body = body;
+        this.changedFiles = changedFiles;
+        this.closedAt = closedAt;
+        this.comments = comments;
+        this.commentsUrl = commentsUrl;
+        this.commits = commits;
+        this.commitsUrl = commitsUrl;
+        this.createdAt = createdAt;
+        this.deletions = deletions;
+        this.diffUrl = diffUrl;
+        this.head = head;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.issueUrl = issueUrl;
+        this.labels = labels;
+        this.locked = locked;
+        this.maintainerCanModify = maintainerCanModify;
+        this.mergeCommitSha = mergeCommitSha;
+        this.mergeable = mergeable;
+        this.mergeableState = mergeableState;
+        this.merged = merged;
+        this.mergedAt = mergedAt;
+        this.mergedBy = mergedBy;
+        this.milestone = milestone;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.patchUrl = patchUrl;
+        this.reviewCommentUrl = reviewCommentUrl;
+        this.reviewComments = reviewComments;
+        this.reviewCommentsUrl = reviewCommentsUrl;
+        this.state = state;
+        this.statusesUrl = statusesUrl;
+        this.title = title;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

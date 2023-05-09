@@ -18,6 +18,7 @@ public class PostLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public PostLocation withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -29,6 +30,7 @@ public class PostLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lng")
     public Double lng;
+
     public PostLocation withLng(Double lng) {
         this.lng = lng;
         return this;
@@ -40,6 +42,7 @@ public class PostLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostLocation withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class PostLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("span")
     public String span;
+
     public PostLocation withSpan(String span) {
         this.span = span;
         return this;
     }
     
+    public PostLocation(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindFormsResponse {
     
     public String contentType;
+
     public FindFormsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FindFormsResponse {
     
     
     public Integer statusCode;
+
     public FindFormsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class FindFormsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindFormsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class FindFormsResponse {
      */
     
     public FindForms200ApplicationJSON findForms200ApplicationJSONObject;
+
     public FindFormsResponse withFindForms200ApplicationJSONObject(FindForms200ApplicationJSON findForms200ApplicationJSONObject) {
         this.findForms200ApplicationJSONObject = findForms200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class FindFormsResponse {
      */
     
     public FindForms401ApplicationJSON findForms401ApplicationJSONObject;
+
     public FindFormsResponse withFindForms401ApplicationJSONObject(FindForms401ApplicationJSON findForms401ApplicationJSONObject) {
         this.findForms401ApplicationJSONObject = findForms401ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class FindFormsResponse {
      */
     
     public FindForms429ApplicationJSON findForms429ApplicationJSONObject;
+
     public FindFormsResponse withFindForms429ApplicationJSONObject(FindForms429ApplicationJSON findForms429ApplicationJSONObject) {
         this.findForms429ApplicationJSONObject = findForms429ApplicationJSONObject;
         return this;
     }
     
+    public FindFormsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class MerchantCancellationRequestBodyCancelItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelCode")
     public String cancelCode;
+
     public MerchantCancellationRequestBodyCancelItems withCancelCode(String cancelCode) {
         this.cancelCode = cancelCode;
         return this;
@@ -28,6 +29,7 @@ public class MerchantCancellationRequestBodyCancelItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelDescription")
     public String cancelDescription;
+
     public MerchantCancellationRequestBodyCancelItems withCancelDescription(String cancelDescription) {
         this.cancelDescription = cancelDescription;
         return this;
@@ -39,6 +41,7 @@ public class MerchantCancellationRequestBodyCancelItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorItemRef")
     public String distributorItemRef;
+
     public MerchantCancellationRequestBodyCancelItems withDistributorItemRef(String distributorItemRef) {
         this.distributorItemRef = distributorItemRef;
         return this;
@@ -50,9 +53,11 @@ public class MerchantCancellationRequestBodyCancelItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public Long itemId;
+
     public MerchantCancellationRequestBodyCancelItems withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public MerchantCancellationRequestBodyCancelItems(){}
 }

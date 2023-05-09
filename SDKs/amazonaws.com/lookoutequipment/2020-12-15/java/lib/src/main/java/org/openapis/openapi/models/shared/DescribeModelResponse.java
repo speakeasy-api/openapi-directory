@@ -22,6 +22,7 @@ public class DescribeModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeModelResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataPreProcessingConfiguration")
     public DataPreProcessingConfiguration dataPreProcessingConfiguration;
+
     public DescribeModelResponse withDataPreProcessingConfiguration(DataPreProcessingConfiguration dataPreProcessingConfiguration) {
         this.dataPreProcessingConfiguration = dataPreProcessingConfiguration;
         return this;
@@ -38,6 +40,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public DescribeModelResponse withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public DescribeModelResponse withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -56,6 +60,7 @@ public class DescribeModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EvaluationDataEndTime")
     public OffsetDateTime evaluationDataEndTime;
+
     public DescribeModelResponse withEvaluationDataEndTime(OffsetDateTime evaluationDataEndTime) {
         this.evaluationDataEndTime = evaluationDataEndTime;
         return this;
@@ -66,6 +71,7 @@ public class DescribeModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EvaluationDataStartTime")
     public OffsetDateTime evaluationDataStartTime;
+
     public DescribeModelResponse withEvaluationDataStartTime(OffsetDateTime evaluationDataStartTime) {
         this.evaluationDataStartTime = evaluationDataStartTime;
         return this;
@@ -74,6 +80,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedReason")
     public String failedReason;
+
     public DescribeModelResponse withFailedReason(String failedReason) {
         this.failedReason = failedReason;
         return this;
@@ -82,6 +89,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelsInputConfiguration")
     public LabelsInputConfiguration labelsInputConfiguration;
+
     public DescribeModelResponse withLabelsInputConfiguration(LabelsInputConfiguration labelsInputConfiguration) {
         this.labelsInputConfiguration = labelsInputConfiguration;
         return this;
@@ -92,6 +100,7 @@ public class DescribeModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public DescribeModelResponse withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -100,6 +109,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public DescribeModelResponse withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -108,6 +118,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelMetrics")
     public String modelMetrics;
+
     public DescribeModelResponse withModelMetrics(String modelMetrics) {
         this.modelMetrics = modelMetrics;
         return this;
@@ -116,6 +127,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public DescribeModelResponse withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -124,6 +136,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffCondition")
     public String offCondition;
+
     public DescribeModelResponse withOffCondition(String offCondition) {
         this.offCondition = offCondition;
         return this;
@@ -132,6 +145,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeModelResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -140,6 +154,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public String schema;
+
     public DescribeModelResponse withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -148,6 +163,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideKmsKeyId")
     public String serverSideKmsKeyId;
+
     public DescribeModelResponse withServerSideKmsKeyId(String serverSideKmsKeyId) {
         this.serverSideKmsKeyId = serverSideKmsKeyId;
         return this;
@@ -156,6 +172,7 @@ public class DescribeModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ModelStatusEnum status;
+
     public DescribeModelResponse withStatus(ModelStatusEnum status) {
         this.status = status;
         return this;
@@ -166,6 +183,7 @@ public class DescribeModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingDataEndTime")
     public OffsetDateTime trainingDataEndTime;
+
     public DescribeModelResponse withTrainingDataEndTime(OffsetDateTime trainingDataEndTime) {
         this.trainingDataEndTime = trainingDataEndTime;
         return this;
@@ -176,6 +194,7 @@ public class DescribeModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingDataStartTime")
     public OffsetDateTime trainingDataStartTime;
+
     public DescribeModelResponse withTrainingDataStartTime(OffsetDateTime trainingDataStartTime) {
         this.trainingDataStartTime = trainingDataStartTime;
         return this;
@@ -186,6 +205,7 @@ public class DescribeModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingExecutionEndTime")
     public OffsetDateTime trainingExecutionEndTime;
+
     public DescribeModelResponse withTrainingExecutionEndTime(OffsetDateTime trainingExecutionEndTime) {
         this.trainingExecutionEndTime = trainingExecutionEndTime;
         return this;
@@ -196,9 +216,11 @@ public class DescribeModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingExecutionStartTime")
     public OffsetDateTime trainingExecutionStartTime;
+
     public DescribeModelResponse withTrainingExecutionStartTime(OffsetDateTime trainingExecutionStartTime) {
         this.trainingExecutionStartTime = trainingExecutionStartTime;
         return this;
     }
     
+    public DescribeModelResponse(){}
 }

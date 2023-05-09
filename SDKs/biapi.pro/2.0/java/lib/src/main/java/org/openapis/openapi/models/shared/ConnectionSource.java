@@ -25,6 +25,7 @@ public class ConnectionSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("access_expire")
     public OffsetDateTime accessExpire;
+
     public ConnectionSource withAccessExpire(OffsetDateTime accessExpire) {
         this.accessExpire = accessExpire;
         return this;
@@ -37,6 +38,7 @@ public class ConnectionSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public ConnectionSource withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -50,6 +52,7 @@ public class ConnectionSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("disabled")
     public OffsetDateTime disabled;
+
     public ConnectionSource withDisabled(OffsetDateTime disabled) {
         this.disabled = disabled;
         return this;
@@ -63,6 +66,7 @@ public class ConnectionSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expire")
     public OffsetDateTime expire;
+
     public ConnectionSource withExpire(OffsetDateTime expire) {
         this.expire = expire;
         return this;
@@ -73,6 +77,7 @@ public class ConnectionSource {
      */
     @JsonProperty("id")
     public Long id;
+
     public ConnectionSource withId(Long id) {
         this.id = id;
         return this;
@@ -83,6 +88,7 @@ public class ConnectionSource {
      */
     @JsonProperty("id_connection")
     public Long idConnection;
+
     public ConnectionSource withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -93,6 +99,7 @@ public class ConnectionSource {
      */
     @JsonProperty("id_connector_source")
     public Long idConnectorSource;
+
     public ConnectionSource withIdConnectorSource(Long idConnectorSource) {
         this.idConnectorSource = idConnectorSource;
         return this;
@@ -106,6 +113,7 @@ public class ConnectionSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_update")
     public OffsetDateTime lastUpdate;
+
     public ConnectionSource withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -116,6 +124,7 @@ public class ConnectionSource {
      */
     @JsonProperty("name")
     public String name;
+
     public ConnectionSource withName(String name) {
         this.name = name;
         return this;
@@ -129,6 +138,7 @@ public class ConnectionSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("next_try")
     public OffsetDateTime nextTry;
+
     public ConnectionSource withNextTry(OffsetDateTime nextTry) {
         this.nextTry = nextTry;
         return this;
@@ -140,9 +150,17 @@ public class ConnectionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ConnectionSource withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ConnectionSource(@JsonProperty("created") OffsetDateTime created, @JsonProperty("id") Long id, @JsonProperty("id_connection") Long idConnection, @JsonProperty("id_connector_source") Long idConnectorSource, @JsonProperty("name") String name) {
+        this.created = created;
+        this.id = id;
+        this.idConnection = idConnection;
+        this.idConnectorSource = idConnectorSource;
+        this.name = name;
+  }
 }

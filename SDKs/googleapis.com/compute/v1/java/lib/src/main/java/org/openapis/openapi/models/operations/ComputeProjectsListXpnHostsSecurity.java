@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeProjectsListXpnHostsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsListXpnHostsSecurityOption1 option1;
+
     public ComputeProjectsListXpnHostsSecurity withOption1(ComputeProjectsListXpnHostsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeProjectsListXpnHostsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsListXpnHostsSecurityOption2 option2;
+
     public ComputeProjectsListXpnHostsSecurity withOption2(ComputeProjectsListXpnHostsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeProjectsListXpnHostsSecurity(){}
 }

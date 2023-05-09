@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateImageRequest {
     
     public CreateImageRequestBlockDeviceMappings[] blockDeviceMappings;
+
     public CreateImageRequest withBlockDeviceMappings(CreateImageRequestBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -16,6 +17,7 @@ public class CreateImageRequest {
     
     
     public String description;
+
     public CreateImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateImageRequest {
     
     
     public Boolean dryRun;
+
     public CreateImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateImageRequest {
     
     
     public String instanceId;
+
     public CreateImageRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -37,6 +41,7 @@ public class CreateImageRequest {
     
     
     public String name;
+
     public CreateImageRequest withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class CreateImageRequest {
     
     
     public Boolean noReboot;
+
     public CreateImageRequest withNoReboot(Boolean noReboot) {
         this.noReboot = noReboot;
         return this;
@@ -51,9 +57,14 @@ public class CreateImageRequest {
     
     
     public CreateImageRequestTagSpecifications[] tagSpecifications;
+
     public CreateImageRequest withTagSpecifications(CreateImageRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateImageRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("Name") String name) {
+        this.instanceId = instanceId;
+        this.name = name;
+  }
 }

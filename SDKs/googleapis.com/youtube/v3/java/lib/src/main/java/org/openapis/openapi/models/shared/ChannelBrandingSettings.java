@@ -18,6 +18,7 @@ public class ChannelBrandingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public ChannelSettings channel;
+
     public ChannelBrandingSettings withChannel(ChannelSettings channel) {
         this.channel = channel;
         return this;
@@ -29,6 +30,7 @@ public class ChannelBrandingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hints")
     public PropertyValue[] hints;
+
     public ChannelBrandingSettings withHints(PropertyValue[] hints) {
         this.hints = hints;
         return this;
@@ -40,6 +42,7 @@ public class ChannelBrandingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public ImageSettings image;
+
     public ChannelBrandingSettings withImage(ImageSettings image) {
         this.image = image;
         return this;
@@ -51,9 +54,11 @@ public class ChannelBrandingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watch")
     public WatchSettings watch;
+
     public ChannelBrandingSettings withWatch(WatchSettings watch) {
         this.watch = watch;
         return this;
     }
     
+    public ChannelBrandingSettings(){}
 }

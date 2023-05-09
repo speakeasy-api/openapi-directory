@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest {
@@ -12,6 +13,7 @@ public class DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateName")
     public String templateName;
+
     public DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest(@JsonProperty("id") String id, @JsonProperty("templateName") String templateName) {
+        this.id = id;
+        this.templateName = templateName;
+  }
 }

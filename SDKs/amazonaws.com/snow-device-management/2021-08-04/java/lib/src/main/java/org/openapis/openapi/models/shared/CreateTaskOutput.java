@@ -15,6 +15,7 @@ public class CreateTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskArn")
     public String taskArn;
+
     public CreateTaskOutput withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public CreateTaskOutput withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public CreateTaskOutput(){}
 }

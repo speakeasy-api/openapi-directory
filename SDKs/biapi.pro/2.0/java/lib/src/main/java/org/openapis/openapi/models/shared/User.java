@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class User {
     @JsonProperty("id")
     public Long id;
+
     public User withId(Long id) {
         this.id = id;
         return this;
@@ -24,6 +25,7 @@ public class User {
     
     @JsonProperty("platform")
     public UserPlatformEnum platform;
+
     public User withPlatform(UserPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -33,9 +35,15 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("signin")
     public OffsetDateTime signin;
+
     public User withSignin(OffsetDateTime signin) {
         this.signin = signin;
         return this;
     }
     
+    public User(@JsonProperty("id") Long id, @JsonProperty("platform") UserPlatformEnum platform, @JsonProperty("signin") OffsetDateTime signin) {
+        this.id = id;
+        this.platform = platform;
+        this.signin = signin;
+  }
 }

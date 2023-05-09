@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeregisterGameServerInput {
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public DeregisterGameServerInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -16,9 +17,14 @@ public class DeregisterGameServerInput {
     
     @JsonProperty("GameServerId")
     public String gameServerId;
+
     public DeregisterGameServerInput withGameServerId(String gameServerId) {
         this.gameServerId = gameServerId;
         return this;
     }
     
+    public DeregisterGameServerInput(@JsonProperty("GameServerGroupName") String gameServerGroupName, @JsonProperty("GameServerId") String gameServerId) {
+        this.gameServerGroupName = gameServerGroupName;
+        this.gameServerId = gameServerId;
+  }
 }

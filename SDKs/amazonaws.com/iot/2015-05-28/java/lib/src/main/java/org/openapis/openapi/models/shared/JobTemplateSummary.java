@@ -22,6 +22,7 @@ public class JobTemplateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public JobTemplateSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class JobTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public JobTemplateSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class JobTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplateArn")
     public String jobTemplateArn;
+
     public JobTemplateSummary withJobTemplateArn(String jobTemplateArn) {
         this.jobTemplateArn = jobTemplateArn;
         return this;
@@ -46,9 +49,11 @@ public class JobTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplateId")
     public String jobTemplateId;
+
     public JobTemplateSummary withJobTemplateId(String jobTemplateId) {
         this.jobTemplateId = jobTemplateId;
         return this;
     }
     
+    public JobTemplateSummary(){}
 }

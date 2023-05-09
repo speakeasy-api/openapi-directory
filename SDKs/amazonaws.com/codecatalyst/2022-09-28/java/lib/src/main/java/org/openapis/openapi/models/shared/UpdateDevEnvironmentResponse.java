@@ -15,6 +15,7 @@ public class UpdateDevEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public UpdateDevEnvironmentResponse withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -23,6 +24,7 @@ public class UpdateDevEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateDevEnvironmentResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -30,6 +32,7 @@ public class UpdateDevEnvironmentResponse {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateDevEnvironmentResponse withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +41,7 @@ public class UpdateDevEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ides")
     public IdeConfiguration[] ides;
+
     public UpdateDevEnvironmentResponse withIdes(IdeConfiguration[] ides) {
         this.ides = ides;
         return this;
@@ -46,6 +50,7 @@ public class UpdateDevEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inactivityTimeoutMinutes")
     public Long inactivityTimeoutMinutes;
+
     public UpdateDevEnvironmentResponse withInactivityTimeoutMinutes(Long inactivityTimeoutMinutes) {
         this.inactivityTimeoutMinutes = inactivityTimeoutMinutes;
         return this;
@@ -54,6 +59,7 @@ public class UpdateDevEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public InstanceTypeEnum instanceType;
+
     public UpdateDevEnvironmentResponse withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -61,6 +67,7 @@ public class UpdateDevEnvironmentResponse {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public UpdateDevEnvironmentResponse withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -68,9 +75,15 @@ public class UpdateDevEnvironmentResponse {
     
     @JsonProperty("spaceName")
     public String spaceName;
+
     public UpdateDevEnvironmentResponse withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public UpdateDevEnvironmentResponse(@JsonProperty("id") String id, @JsonProperty("projectName") String projectName, @JsonProperty("spaceName") String spaceName) {
+        this.id = id;
+        this.projectName = projectName;
+        this.spaceName = spaceName;
+  }
 }

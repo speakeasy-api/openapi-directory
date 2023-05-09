@@ -15,9 +15,11 @@ public class AssistantAssociationOutputData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBaseAssociation")
     public KnowledgeBaseAssociationData knowledgeBaseAssociation;
+
     public AssistantAssociationOutputData withKnowledgeBaseAssociation(KnowledgeBaseAssociationData knowledgeBaseAssociation) {
         this.knowledgeBaseAssociation = knowledgeBaseAssociation;
         return this;
     }
     
+    public AssistantAssociationOutputData(){}
 }

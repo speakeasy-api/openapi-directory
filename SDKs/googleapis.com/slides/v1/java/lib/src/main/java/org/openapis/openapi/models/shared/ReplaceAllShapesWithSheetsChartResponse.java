@@ -18,9 +18,11 @@ public class ReplaceAllShapesWithSheetsChartResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrencesChanged")
     public Integer occurrencesChanged;
+
     public ReplaceAllShapesWithSheetsChartResponse withOccurrencesChanged(Integer occurrencesChanged) {
         this.occurrencesChanged = occurrencesChanged;
         return this;
     }
     
+    public ReplaceAllShapesWithSheetsChartResponse(){}
 }

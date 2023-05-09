@@ -67,11 +67,9 @@ public class HealthFacility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthenticateHealthFacilityUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthenticateHealthFacilityUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.AuthenticateHealthFacilityUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthenticateHealthFacilityUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             authenticateHealthFacilityUsingPOST200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,11 +120,9 @@ public class HealthFacility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePasswordUsingPOSTResponse res = new org.openapis.openapi.models.operations.ChangePasswordUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ChangePasswordUsingPOSTResponse res = new org.openapis.openapi.models.operations.ChangePasswordUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             changePasswordUsingPOST200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class HealthFacility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOST1Response res = new org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOST1Response() {{
+        org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOST1Response res = new org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOST1Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +225,9 @@ public class HealthFacility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateFacilityOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateFacilityOTPUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GenerateFacilityOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateFacilityOTPUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,11 +278,9 @@ public class HealthFacility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneratePasswordUsingPOSTResponse res = new org.openapis.openapi.models.operations.GeneratePasswordUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GeneratePasswordUsingPOSTResponse res = new org.openapis.openapi.models.operations.GeneratePasswordUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             generatePasswordUsingPOST200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,11 +325,9 @@ public class HealthFacility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateSvgCardUsingGET1Response res = new org.openapis.openapi.models.operations.GenerateSvgCardUsingGET1Response() {{
+        org.openapis.openapi.models.operations.GenerateSvgCardUsingGET1Response res = new org.openapis.openapi.models.operations.GenerateSvgCardUsingGET1Response(contentType, httpRes.statusCode()) {{
             generateSvgCardUsingGET1200WildcardByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +378,9 @@ public class HealthFacility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetPasswordUsingPOSTResponse res = new org.openapis.openapi.models.operations.ResetPasswordUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ResetPasswordUsingPOSTResponse res = new org.openapis.openapi.models.operations.ResetPasswordUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             resetPasswordUsingPOST200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class OEMEphemeris {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oemData")
     public String oemData;
+
     public OEMEphemeris withOemData(String oemData) {
         this.oemData = oemData;
         return this;
@@ -23,9 +24,11 @@ public class OEMEphemeris {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Object")
     public S3Object s3Object;
+
     public OEMEphemeris withS3Object(S3Object s3Object) {
         this.s3Object = s3Object;
         return this;
     }
     
+    public OEMEphemeris(){}
 }

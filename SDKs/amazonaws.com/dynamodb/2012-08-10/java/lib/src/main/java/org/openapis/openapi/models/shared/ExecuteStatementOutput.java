@@ -18,6 +18,7 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity consumedCapacity;
+
     public ExecuteStatementOutput withConsumedCapacity(ConsumedCapacity consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -26,6 +27,7 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public java.util.Map<String, AttributeValue>[] items;
+
     public ExecuteStatementOutput withItems(java.util.Map<String, AttributeValue>[] items) {
         this.items = items;
         return this;
@@ -34,6 +36,7 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastEvaluatedKey")
     public java.util.Map<String, AttributeValue> lastEvaluatedKey;
+
     public ExecuteStatementOutput withLastEvaluatedKey(java.util.Map<String, AttributeValue> lastEvaluatedKey) {
         this.lastEvaluatedKey = lastEvaluatedKey;
         return this;
@@ -42,9 +45,11 @@ public class ExecuteStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ExecuteStatementOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ExecuteStatementOutput(){}
 }

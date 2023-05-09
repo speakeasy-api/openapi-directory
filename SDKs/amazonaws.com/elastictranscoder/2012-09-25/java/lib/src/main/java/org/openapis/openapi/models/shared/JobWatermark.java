@@ -15,6 +15,7 @@ public class JobWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public Encryption encryption;
+
     public JobWatermark withEncryption(Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -23,6 +24,7 @@ public class JobWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputKey")
     public String inputKey;
+
     public JobWatermark withInputKey(String inputKey) {
         this.inputKey = inputKey;
         return this;
@@ -31,9 +33,11 @@ public class JobWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PresetWatermarkId")
     public String presetWatermarkId;
+
     public JobWatermark withPresetWatermarkId(String presetWatermarkId) {
         this.presetWatermarkId = presetWatermarkId;
         return this;
     }
     
+    public JobWatermark(){}
 }

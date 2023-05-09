@@ -18,6 +18,7 @@ public class LookupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deferred")
     public Key[] deferred;
+
     public LookupResponse withDeferred(Key[] deferred) {
         this.deferred = deferred;
         return this;
@@ -29,6 +30,7 @@ public class LookupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("found")
     public EntityResult[] found;
+
     public LookupResponse withFound(EntityResult[] found) {
         this.found = found;
         return this;
@@ -40,6 +42,7 @@ public class LookupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missing")
     public EntityResult[] missing;
+
     public LookupResponse withMissing(EntityResult[] missing) {
         this.missing = missing;
         return this;
@@ -51,6 +54,7 @@ public class LookupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public LookupResponse withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -62,9 +66,11 @@ public class LookupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public LookupResponse withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public LookupResponse(){}
 }

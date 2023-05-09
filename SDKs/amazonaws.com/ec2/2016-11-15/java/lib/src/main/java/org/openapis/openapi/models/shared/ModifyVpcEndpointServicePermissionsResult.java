@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpcEndpointServicePermissionsResult {
     
     public ModifyVpcEndpointServicePermissionsResultAddedPrincipals[] addedPrincipals;
+
     public ModifyVpcEndpointServicePermissionsResult withAddedPrincipals(ModifyVpcEndpointServicePermissionsResultAddedPrincipals[] addedPrincipals) {
         this.addedPrincipals = addedPrincipals;
         return this;
@@ -19,9 +20,11 @@ public class ModifyVpcEndpointServicePermissionsResult {
     
     
     public Boolean returnValue;
+
     public ModifyVpcEndpointServicePermissionsResult withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public ModifyVpcEndpointServicePermissionsResult(){}
 }

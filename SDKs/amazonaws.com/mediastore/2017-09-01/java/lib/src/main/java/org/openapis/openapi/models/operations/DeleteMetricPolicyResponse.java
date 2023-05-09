@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMetricPolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteMetricPolicyResponse {
      */
     
     public Object containerInUseException;
+
     public DeleteMetricPolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteMetricPolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public DeleteMetricPolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMetricPolicyResponse {
     
     
     public String contentType;
+
     public DeleteMetricPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMetricPolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteMetricPolicyOutput;
+
     public DeleteMetricPolicyResponse withDeleteMetricPolicyOutput(java.util.Map<String, Object> deleteMetricPolicyOutput) {
         this.deleteMetricPolicyOutput = deleteMetricPolicyOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMetricPolicyResponse {
      */
     
     public Object internalServerError;
+
     public DeleteMetricPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DeleteMetricPolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public DeleteMetricPolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteMetricPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteMetricPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteMetricPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMetricPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMetricPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

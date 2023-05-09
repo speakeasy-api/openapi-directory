@@ -15,6 +15,7 @@ public class CreateDelegationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public CreateDelegationRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -23,6 +24,7 @@ public class CreateDelegationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSetId")
     public String controlSetId;
+
     public CreateDelegationRequest withControlSetId(String controlSetId) {
         this.controlSetId = controlSetId;
         return this;
@@ -31,6 +33,7 @@ public class CreateDelegationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateDelegationRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -39,9 +42,11 @@ public class CreateDelegationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleType")
     public RoleTypeEnum roleType;
+
     public CreateDelegationRequest withRoleType(RoleTypeEnum roleType) {
         this.roleType = roleType;
         return this;
     }
     
+    public CreateDelegationRequest(){}
 }

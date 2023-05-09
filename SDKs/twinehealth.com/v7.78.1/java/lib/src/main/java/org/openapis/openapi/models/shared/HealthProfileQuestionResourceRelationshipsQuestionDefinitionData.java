@@ -12,6 +12,7 @@ public class HealthProfileQuestionResourceRelationshipsQuestionDefinitionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public HealthProfileQuestionResourceRelationshipsQuestionDefinitionData withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class HealthProfileQuestionResourceRelationshipsQuestionDefinitionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public HealthProfileQuestionResourceRelationshipsQuestionDefinitionData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public HealthProfileQuestionResourceRelationshipsQuestionDefinitionData(){}
 }

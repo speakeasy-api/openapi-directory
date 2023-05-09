@@ -12,6 +12,7 @@ public class AssociatePricingRulesRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public AssociatePricingRulesRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,14 @@ public class AssociatePricingRulesRequestBody {
      */
     @JsonProperty("PricingRuleArns")
     public String[] pricingRuleArns;
+
     public AssociatePricingRulesRequestBody withPricingRuleArns(String[] pricingRuleArns) {
         this.pricingRuleArns = pricingRuleArns;
         return this;
     }
     
+    public AssociatePricingRulesRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("PricingRuleArns") String[] pricingRuleArns) {
+        this.arn = arn;
+        this.pricingRuleArns = pricingRuleArns;
+  }
 }

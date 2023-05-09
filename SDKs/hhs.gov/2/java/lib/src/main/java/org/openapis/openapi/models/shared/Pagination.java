@@ -12,6 +12,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Pagination withCount(Long count) {
         this.count = count;
         return this;
@@ -20,6 +21,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentUrl")
     public String currentUrl;
+
     public Pagination withCurrentUrl(String currentUrl) {
         this.currentUrl = currentUrl;
         return this;
@@ -28,6 +30,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Long max;
+
     public Pagination withMax(Long max) {
         this.max = max;
         return this;
@@ -36,6 +39,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextUrl")
     public String nextUrl;
+
     public Pagination withNextUrl(String nextUrl) {
         this.nextUrl = nextUrl;
         return this;
@@ -44,6 +48,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public Pagination withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -52,6 +57,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNum")
     public Long pageNum;
+
     public Pagination withPageNum(Long pageNum) {
         this.pageNum = pageNum;
         return this;
@@ -60,6 +66,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousUrl")
     public String previousUrl;
+
     public Pagination withPreviousUrl(String previousUrl) {
         this.previousUrl = previousUrl;
         return this;
@@ -68,6 +75,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public String sort;
+
     public Pagination withSort(String sort) {
         this.sort = sort;
         return this;
@@ -76,6 +84,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public Pagination withTotal(Long total) {
         this.total = total;
         return this;
@@ -84,9 +93,11 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPages")
     public Long totalPages;
+
     public Pagination withTotalPages(Long totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public Pagination(){}
 }

@@ -18,9 +18,11 @@ public class RemoveCustomFieldSettingForPortfolio200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public RemoveCustomFieldSettingForPortfolio200ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
     }
     
+    public RemoveCustomFieldSettingForPortfolio200ApplicationJSON(){}
 }

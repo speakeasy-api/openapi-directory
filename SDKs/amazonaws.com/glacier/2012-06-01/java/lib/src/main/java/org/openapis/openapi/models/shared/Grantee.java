@@ -15,6 +15,7 @@ public class Grantee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Grantee withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -23,6 +24,7 @@ public class Grantee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public Grantee withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -31,6 +33,7 @@ public class Grantee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ID")
     public String id;
+
     public Grantee withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +41,7 @@ public class Grantee {
     
     @JsonProperty("Type")
     public TypeEnum type;
+
     public Grantee withType(TypeEnum type) {
         this.type = type;
         return this;
@@ -46,9 +50,13 @@ public class Grantee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URI")
     public String uri;
+
     public Grantee withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Grantee(@JsonProperty("Type") TypeEnum type) {
+        this.type = type;
+  }
 }

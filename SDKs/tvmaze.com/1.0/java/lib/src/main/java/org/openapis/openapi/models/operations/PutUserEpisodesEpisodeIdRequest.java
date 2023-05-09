@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUserEpisodesEpisodeIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MarkedEpisodeInput markedEpisodeInput;
+
     public PutUserEpisodesEpisodeIdRequest withMarkedEpisodeInput(org.openapis.openapi.models.shared.MarkedEpisodeInput markedEpisodeInput) {
         this.markedEpisodeInput = markedEpisodeInput;
         return this;
@@ -16,9 +18,13 @@ public class PutUserEpisodesEpisodeIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=episode_id")
     public Long episodeId;
+
     public PutUserEpisodesEpisodeIdRequest withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
     }
     
+    public PutUserEpisodesEpisodeIdRequest(@JsonProperty("episode_id") Long episodeId) {
+        this.episodeId = episodeId;
+  }
 }

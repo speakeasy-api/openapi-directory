@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdateFreightValuesRequest {
@@ -12,6 +13,7 @@ public class CreateUpdateFreightValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateUpdateFreightValuesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateUpdateFreightValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateUpdateFreightValuesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUpdateFreightValuesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest[] requestBody;
+
     public CreateUpdateFreightValuesRequest withRequestBody(CreateUpdateFreightValuesCreateUpdateFreightValuesRequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,9 +40,16 @@ public class CreateUpdateFreightValuesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrierId")
     public String carrierId;
+
     public CreateUpdateFreightValuesRequest withCarrierId(String carrierId) {
         this.carrierId = carrierId;
         return this;
     }
     
+    public CreateUpdateFreightValuesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") CreateUpdateFreightValuesCreateUpdateFreightValuesRequest[] requestBody, @JsonProperty("carrierId") String carrierId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.carrierId = carrierId;
+  }
 }

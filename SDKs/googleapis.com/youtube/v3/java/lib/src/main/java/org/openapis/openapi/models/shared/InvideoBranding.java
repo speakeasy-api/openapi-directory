@@ -15,6 +15,7 @@ public class InvideoBranding {
      */
     
     public String imageBytes;
+
     public InvideoBranding withImageBytes(String imageBytes) {
         this.imageBytes = imageBytes;
         return this;
@@ -25,6 +26,7 @@ public class InvideoBranding {
      */
     
     public String imageUrl;
+
     public InvideoBranding withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -35,6 +37,7 @@ public class InvideoBranding {
      */
     
     public InvideoPosition position;
+
     public InvideoBranding withPosition(InvideoPosition position) {
         this.position = position;
         return this;
@@ -45,6 +48,7 @@ public class InvideoBranding {
      */
     
     public String targetChannelId;
+
     public InvideoBranding withTargetChannelId(String targetChannelId) {
         this.targetChannelId = targetChannelId;
         return this;
@@ -55,9 +59,11 @@ public class InvideoBranding {
      */
     
     public InvideoTiming timing;
+
     public InvideoBranding withTiming(InvideoTiming timing) {
         this.timing = timing;
         return this;
     }
     
+    public InvideoBranding(){}
 }

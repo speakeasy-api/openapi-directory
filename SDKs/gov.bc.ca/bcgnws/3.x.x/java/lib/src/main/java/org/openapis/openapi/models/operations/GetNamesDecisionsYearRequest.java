@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesDecisionsYearRequest {
@@ -12,6 +13,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetNamesDecisionsYearEmbedEnum embed;
+
     public GetNamesDecisionsYearRequest withEmbed(GetNamesDecisionsYearEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -22,6 +24,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
     public String featureCategory;
+
     public GetNamesDecisionsYearRequest withFeatureCategory(String featureCategory) {
         this.featureCategory = featureCategory;
         return this;
@@ -32,6 +35,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
     public String featureClass;
+
     public GetNamesDecisionsYearRequest withFeatureClass(String featureClass) {
         this.featureClass = featureClass;
         return this;
@@ -42,6 +46,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
     public String featureType;
+
     public GetNamesDecisionsYearRequest withFeatureType(String featureType) {
         this.featureType = featureType;
         return this;
@@ -52,6 +57,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
     public Long itemsPerPage;
+
     public GetNamesDecisionsYearRequest withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -62,6 +68,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public GetNamesDecisionsYearOutputFormatEnum outputFormat;
+
     public GetNamesDecisionsYearRequest withOutputFormat(GetNamesDecisionsYearOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -72,6 +79,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetNamesDecisionsYearOutputSrsEnum outputSRS;
+
     public GetNamesDecisionsYearRequest withOutputSRS(GetNamesDecisionsYearOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -82,6 +90,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
     public GetNamesDecisionsYearOutputStyleEnum outputStyle;
+
     public GetNamesDecisionsYearRequest withOutputStyle(GetNamesDecisionsYearOutputStyleEnum outputStyle) {
         this.outputStyle = outputStyle;
         return this;
@@ -92,6 +101,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public GetNamesDecisionsYearSortByEnum sortBy;
+
     public GetNamesDecisionsYearRequest withSortBy(GetNamesDecisionsYearSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -102,6 +112,7 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public GetNamesDecisionsYearRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -112,9 +123,14 @@ public class GetNamesDecisionsYearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetNamesDecisionsYearRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetNamesDecisionsYearRequest(@JsonProperty("outputFormat") GetNamesDecisionsYearOutputFormatEnum outputFormat, @JsonProperty("year") Long year) {
+        this.outputFormat = outputFormat;
+        this.year = year;
+  }
 }

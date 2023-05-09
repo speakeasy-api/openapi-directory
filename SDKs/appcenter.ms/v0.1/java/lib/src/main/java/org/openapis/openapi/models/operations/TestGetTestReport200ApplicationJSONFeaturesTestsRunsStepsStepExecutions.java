@@ -12,6 +12,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecut
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_snapshot_id")
     public String deviceSnapshotId;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecutions withDeviceSnapshotId(String deviceSnapshotId) {
         this.deviceSnapshotId = deviceSnapshotId;
         return this;
@@ -20,6 +21,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecut
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecutions withStatus(String status) {
         this.status = status;
         return this;
@@ -28,9 +30,11 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecut
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Double timestamp;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecutions withTimestamp(Double timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSONFeaturesTestsRunsStepsStepExecutions(){}
 }

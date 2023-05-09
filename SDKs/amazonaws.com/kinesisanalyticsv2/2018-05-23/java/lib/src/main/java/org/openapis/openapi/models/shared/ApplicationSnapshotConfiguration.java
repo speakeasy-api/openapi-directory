@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationSnapshotConfiguration {
     @JsonProperty("SnapshotsEnabled")
     public Boolean snapshotsEnabled;
+
     public ApplicationSnapshotConfiguration withSnapshotsEnabled(Boolean snapshotsEnabled) {
         this.snapshotsEnabled = snapshotsEnabled;
         return this;
     }
     
+    public ApplicationSnapshotConfiguration(@JsonProperty("SnapshotsEnabled") Boolean snapshotsEnabled) {
+        this.snapshotsEnabled = snapshotsEnabled;
+  }
 }

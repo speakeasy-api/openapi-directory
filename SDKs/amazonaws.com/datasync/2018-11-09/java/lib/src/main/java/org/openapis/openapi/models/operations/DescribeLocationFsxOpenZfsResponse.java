@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLocationFsxOpenZfsResponse {
     
     public String contentType;
+
     public DescribeLocationFsxOpenZfsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLocationFsxOpenZfsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLocationFsxOpenZfsResponse describeLocationFsxOpenZfsResponse;
+
     public DescribeLocationFsxOpenZfsResponse withDescribeLocationFsxOpenZfsResponse(org.openapis.openapi.models.shared.DescribeLocationFsxOpenZfsResponse describeLocationFsxOpenZfsResponse) {
         this.describeLocationFsxOpenZfsResponse = describeLocationFsxOpenZfsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLocationFsxOpenZfsResponse {
      */
     
     public Object internalException;
+
     public DescribeLocationFsxOpenZfsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLocationFsxOpenZfsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeLocationFsxOpenZfsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeLocationFsxOpenZfsResponse {
     
     
     public Integer statusCode;
+
     public DescribeLocationFsxOpenZfsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeLocationFsxOpenZfsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLocationFsxOpenZfsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLocationFsxOpenZfsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateReplicationGroupMessage - Represents the input of a &lt;code&gt;CreateReplicationGroup&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateReplicationGroupMessage {
     
     public Boolean atRestEncryptionEnabled;
+
     public CreateReplicationGroupMessage withAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
         return this;
@@ -19,6 +20,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String authToken;
+
     public CreateReplicationGroupMessage withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -26,6 +28,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public CreateReplicationGroupMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -33,6 +36,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Boolean automaticFailoverEnabled;
+
     public CreateReplicationGroupMessage withAutomaticFailoverEnabled(Boolean automaticFailoverEnabled) {
         this.automaticFailoverEnabled = automaticFailoverEnabled;
         return this;
@@ -40,6 +44,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String cacheNodeType;
+
     public CreateReplicationGroupMessage withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -47,6 +52,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String cacheParameterGroupName;
+
     public CreateReplicationGroupMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -54,6 +60,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String[] cacheSecurityGroupNames;
+
     public CreateReplicationGroupMessage withCacheSecurityGroupNames(String[] cacheSecurityGroupNames) {
         this.cacheSecurityGroupNames = cacheSecurityGroupNames;
         return this;
@@ -61,6 +68,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String cacheSubnetGroupName;
+
     public CreateReplicationGroupMessage withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -68,6 +76,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Boolean dataTieringEnabled;
+
     public CreateReplicationGroupMessage withDataTieringEnabled(Boolean dataTieringEnabled) {
         this.dataTieringEnabled = dataTieringEnabled;
         return this;
@@ -75,6 +84,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String engine;
+
     public CreateReplicationGroupMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -82,6 +92,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String engineVersion;
+
     public CreateReplicationGroupMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -89,6 +100,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String globalReplicationGroupId;
+
     public CreateReplicationGroupMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -96,6 +108,7 @@ public class CreateReplicationGroupMessage {
     
     
     public IpDiscoveryEnum ipDiscovery;
+
     public CreateReplicationGroupMessage withIpDiscovery(IpDiscoveryEnum ipDiscovery) {
         this.ipDiscovery = ipDiscovery;
         return this;
@@ -103,6 +116,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String kmsKeyId;
+
     public CreateReplicationGroupMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -110,6 +124,7 @@ public class CreateReplicationGroupMessage {
     
     
     public LogDeliveryConfigurationRequestList[] logDeliveryConfigurations;
+
     public CreateReplicationGroupMessage withLogDeliveryConfigurations(LogDeliveryConfigurationRequestList[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -117,6 +132,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Boolean multiAZEnabled;
+
     public CreateReplicationGroupMessage withMultiAZEnabled(Boolean multiAZEnabled) {
         this.multiAZEnabled = multiAZEnabled;
         return this;
@@ -124,6 +140,7 @@ public class CreateReplicationGroupMessage {
     
     
     public NetworkTypeEnum networkType;
+
     public CreateReplicationGroupMessage withNetworkType(NetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -131,6 +148,7 @@ public class CreateReplicationGroupMessage {
     
     
     public NodeGroupConfigurationList[] nodeGroupConfiguration;
+
     public CreateReplicationGroupMessage withNodeGroupConfiguration(NodeGroupConfigurationList[] nodeGroupConfiguration) {
         this.nodeGroupConfiguration = nodeGroupConfiguration;
         return this;
@@ -138,6 +156,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String notificationTopicArn;
+
     public CreateReplicationGroupMessage withNotificationTopicArn(String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
         return this;
@@ -145,6 +164,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Long numCacheClusters;
+
     public CreateReplicationGroupMessage withNumCacheClusters(Long numCacheClusters) {
         this.numCacheClusters = numCacheClusters;
         return this;
@@ -152,6 +172,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Long numNodeGroups;
+
     public CreateReplicationGroupMessage withNumNodeGroups(Long numNodeGroups) {
         this.numNodeGroups = numNodeGroups;
         return this;
@@ -159,6 +180,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Long port;
+
     public CreateReplicationGroupMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -166,6 +188,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String[] preferredCacheClusterAZs;
+
     public CreateReplicationGroupMessage withPreferredCacheClusterAZs(String[] preferredCacheClusterAZs) {
         this.preferredCacheClusterAZs = preferredCacheClusterAZs;
         return this;
@@ -173,6 +196,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public CreateReplicationGroupMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -180,6 +204,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String primaryClusterId;
+
     public CreateReplicationGroupMessage withPrimaryClusterId(String primaryClusterId) {
         this.primaryClusterId = primaryClusterId;
         return this;
@@ -187,6 +212,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Long replicasPerNodeGroup;
+
     public CreateReplicationGroupMessage withReplicasPerNodeGroup(Long replicasPerNodeGroup) {
         this.replicasPerNodeGroup = replicasPerNodeGroup;
         return this;
@@ -194,6 +220,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String replicationGroupDescription;
+
     public CreateReplicationGroupMessage withReplicationGroupDescription(String replicationGroupDescription) {
         this.replicationGroupDescription = replicationGroupDescription;
         return this;
@@ -201,6 +228,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String replicationGroupId;
+
     public CreateReplicationGroupMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -208,6 +236,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String[] securityGroupIds;
+
     public CreateReplicationGroupMessage withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -215,6 +244,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String[] snapshotArns;
+
     public CreateReplicationGroupMessage withSnapshotArns(String[] snapshotArns) {
         this.snapshotArns = snapshotArns;
         return this;
@@ -222,6 +252,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String snapshotName;
+
     public CreateReplicationGroupMessage withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -229,6 +260,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Long snapshotRetentionLimit;
+
     public CreateReplicationGroupMessage withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -236,6 +268,7 @@ public class CreateReplicationGroupMessage {
     
     
     public String snapshotWindow;
+
     public CreateReplicationGroupMessage withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
@@ -243,6 +276,7 @@ public class CreateReplicationGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateReplicationGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -250,6 +284,7 @@ public class CreateReplicationGroupMessage {
     
     
     public Boolean transitEncryptionEnabled;
+
     public CreateReplicationGroupMessage withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
@@ -257,6 +292,7 @@ public class CreateReplicationGroupMessage {
     
     
     public TransitEncryptionModeEnum transitEncryptionMode;
+
     public CreateReplicationGroupMessage withTransitEncryptionMode(TransitEncryptionModeEnum transitEncryptionMode) {
         this.transitEncryptionMode = transitEncryptionMode;
         return this;
@@ -264,9 +300,14 @@ public class CreateReplicationGroupMessage {
     
     
     public String[] userGroupIds;
+
     public CreateReplicationGroupMessage withUserGroupIds(String[] userGroupIds) {
         this.userGroupIds = userGroupIds;
         return this;
     }
     
+    public CreateReplicationGroupMessage(@JsonProperty("ReplicationGroupDescription") String replicationGroupDescription, @JsonProperty("ReplicationGroupId") String replicationGroupId) {
+        this.replicationGroupDescription = replicationGroupDescription;
+        this.replicationGroupId = replicationGroupId;
+  }
 }

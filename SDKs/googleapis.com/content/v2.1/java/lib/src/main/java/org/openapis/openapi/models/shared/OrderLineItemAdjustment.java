@@ -12,6 +12,7 @@ public class OrderLineItemAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceAdjustment")
     public Price priceAdjustment;
+
     public OrderLineItemAdjustment withPriceAdjustment(Price priceAdjustment) {
         this.priceAdjustment = priceAdjustment;
         return this;
@@ -20,6 +21,7 @@ public class OrderLineItemAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxAdjustment")
     public Price taxAdjustment;
+
     public OrderLineItemAdjustment withTaxAdjustment(Price taxAdjustment) {
         this.taxAdjustment = taxAdjustment;
         return this;
@@ -31,9 +33,11 @@ public class OrderLineItemAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderLineItemAdjustment withType(String type) {
         this.type = type;
         return this;
     }
     
+    public OrderLineItemAdjustment(){}
 }

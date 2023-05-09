@@ -12,9 +12,13 @@ public class CheckoutUtilityRequest {
      */
     @JsonProperty("originDomains")
     public String[] originDomains;
+
     public CheckoutUtilityRequest withOriginDomains(String[] originDomains) {
         this.originDomains = originDomains;
         return this;
     }
     
+    public CheckoutUtilityRequest(@JsonProperty("originDomains") String[] originDomains) {
+        this.originDomains = originDomains;
+  }
 }

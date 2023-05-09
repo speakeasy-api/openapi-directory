@@ -12,6 +12,7 @@ public class GetPersonasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public GetPersonasRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -22,6 +23,7 @@ public class GetPersonasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String[] expand;
+
     public GetPersonasRequest withExpand(String[] expand) {
         this.expand = expand;
         return this;
@@ -32,6 +34,7 @@ public class GetPersonasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String[] fields;
+
     public GetPersonasRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -42,6 +45,7 @@ public class GetPersonasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetPersonasRequest withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +56,11 @@ public class GetPersonasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetPersonasRequest withPage(Long page) {
         this.page = page;
         return this;
     }
     
+    public GetPersonasRequest(){}
 }

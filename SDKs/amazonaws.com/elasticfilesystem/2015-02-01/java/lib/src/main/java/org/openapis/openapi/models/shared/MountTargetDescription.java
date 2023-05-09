@@ -15,6 +15,7 @@ public class MountTargetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneId")
     public String availabilityZoneId;
+
     public MountTargetDescription withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -23,6 +24,7 @@ public class MountTargetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneName")
     public String availabilityZoneName;
+
     public MountTargetDescription withAvailabilityZoneName(String availabilityZoneName) {
         this.availabilityZoneName = availabilityZoneName;
         return this;
@@ -30,6 +32,7 @@ public class MountTargetDescription {
     
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public MountTargetDescription withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -38,6 +41,7 @@ public class MountTargetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public MountTargetDescription withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -45,6 +49,7 @@ public class MountTargetDescription {
     
     @JsonProperty("LifeCycleState")
     public LifeCycleStateEnum lifeCycleState;
+
     public MountTargetDescription withLifeCycleState(LifeCycleStateEnum lifeCycleState) {
         this.lifeCycleState = lifeCycleState;
         return this;
@@ -52,6 +57,7 @@ public class MountTargetDescription {
     
     @JsonProperty("MountTargetId")
     public String mountTargetId;
+
     public MountTargetDescription withMountTargetId(String mountTargetId) {
         this.mountTargetId = mountTargetId;
         return this;
@@ -60,6 +66,7 @@ public class MountTargetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceId")
     public String networkInterfaceId;
+
     public MountTargetDescription withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -68,6 +75,7 @@ public class MountTargetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public MountTargetDescription withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -75,6 +83,7 @@ public class MountTargetDescription {
     
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public MountTargetDescription withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -83,9 +92,16 @@ public class MountTargetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public MountTargetDescription withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public MountTargetDescription(@JsonProperty("FileSystemId") String fileSystemId, @JsonProperty("LifeCycleState") LifeCycleStateEnum lifeCycleState, @JsonProperty("MountTargetId") String mountTargetId, @JsonProperty("SubnetId") String subnetId) {
+        this.fileSystemId = fileSystemId;
+        this.lifeCycleState = lifeCycleState;
+        this.mountTargetId = mountTargetId;
+        this.subnetId = subnetId;
+  }
 }

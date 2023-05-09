@@ -53,11 +53,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTicketResponse res = new org.openapis.openapi.models.operations.CreateTicketResponse() {{
+        org.openapis.openapi.models.operations.CreateTicketResponse res = new org.openapis.openapi.models.operations.CreateTicketResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTicketInfoResponse res = new org.openapis.openapi.models.operations.GetTicketInfoResponse() {{
+        org.openapis.openapi.models.operations.GetTicketInfoResponse res = new org.openapis.openapi.models.operations.GetTicketInfoResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -135,11 +131,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTicketsResponse res = new org.openapis.openapi.models.operations.GetTicketsResponse() {{
+        org.openapis.openapi.models.operations.GetTicketsResponse res = new org.openapis.openapi.models.operations.GetTicketsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 422) {

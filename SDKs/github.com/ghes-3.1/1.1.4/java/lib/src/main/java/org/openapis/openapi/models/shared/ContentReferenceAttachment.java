@@ -17,6 +17,7 @@ public class ContentReferenceAttachment {
      */
     @JsonProperty("body")
     public String body;
+
     public ContentReferenceAttachment withBody(String body) {
         this.body = body;
         return this;
@@ -27,6 +28,7 @@ public class ContentReferenceAttachment {
      */
     @JsonProperty("id")
     public Long id;
+
     public ContentReferenceAttachment withId(Long id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class ContentReferenceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public ContentReferenceAttachment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -48,9 +51,15 @@ public class ContentReferenceAttachment {
      */
     @JsonProperty("title")
     public String title;
+
     public ContentReferenceAttachment withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ContentReferenceAttachment(@JsonProperty("body") String body, @JsonProperty("id") Long id, @JsonProperty("title") String title) {
+        this.body = body;
+        this.id = id;
+        this.title = title;
+  }
 }

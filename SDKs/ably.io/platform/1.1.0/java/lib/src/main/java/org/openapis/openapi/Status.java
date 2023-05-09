@@ -68,7 +68,7 @@ public class Status {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMetadataOfAllChannelsResponse res = new org.openapis.openapi.models.operations.GetMetadataOfAllChannelsResponse() {{
+        org.openapis.openapi.models.operations.GetMetadataOfAllChannelsResponse res = new org.openapis.openapi.models.operations.GetMetadataOfAllChannelsResponse(contentType, httpRes.statusCode()) {{
             getMetadataOfAllChannels2XXApplicationJSONOneOf = null;
             body = null;
             getMetadataOfAllChannels2XXTextHTMLString = null;
@@ -76,8 +76,6 @@ public class Status {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -152,14 +150,12 @@ public class Status {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMetadataOfChannelResponse res = new org.openapis.openapi.models.operations.GetMetadataOfChannelResponse() {{
+        org.openapis.openapi.models.operations.GetMetadataOfChannelResponse res = new org.openapis.openapi.models.operations.GetMetadataOfChannelResponse(contentType, httpRes.statusCode()) {{
             channelDetails = null;
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,7 +220,7 @@ public class Status {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPresenceOfChannelResponse res = new org.openapis.openapi.models.operations.GetPresenceOfChannelResponse() {{
+        org.openapis.openapi.models.operations.GetPresenceOfChannelResponse res = new org.openapis.openapi.models.operations.GetPresenceOfChannelResponse(contentType, httpRes.statusCode()) {{
             presenceMessages = null;
             body = null;
             getPresenceOfChannel200TextHTMLString = null;
@@ -232,8 +228,6 @@ public class Status {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

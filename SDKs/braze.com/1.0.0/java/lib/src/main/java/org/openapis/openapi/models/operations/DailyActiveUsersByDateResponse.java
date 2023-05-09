@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DailyActiveUsersByDateResponse {
     
     public String contentType;
+
     public DailyActiveUsersByDateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DailyActiveUsersByDateResponse {
     
     
     public Integer statusCode;
+
     public DailyActiveUsersByDateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class DailyActiveUsersByDateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DailyActiveUsersByDateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DailyActiveUsersByDateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

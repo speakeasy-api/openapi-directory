@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInventoryEntriesResponse {
     
     public String contentType;
+
     public ListInventoryEntriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListInventoryEntriesResponse {
      */
     
     public Object internalServerError;
+
     public ListInventoryEntriesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListInventoryEntriesResponse {
      */
     
     public Object invalidFilter;
+
     public ListInventoryEntriesResponse withInvalidFilter(Object invalidFilter) {
         this.invalidFilter = invalidFilter;
         return this;
@@ -39,6 +43,7 @@ public class ListInventoryEntriesResponse {
      */
     
     public Object invalidInstanceId;
+
     public ListInventoryEntriesResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -49,6 +54,7 @@ public class ListInventoryEntriesResponse {
      */
     
     public Object invalidNextToken;
+
     public ListInventoryEntriesResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -59,6 +65,7 @@ public class ListInventoryEntriesResponse {
      */
     
     public Object invalidTypeNameException;
+
     public ListInventoryEntriesResponse withInvalidTypeNameException(Object invalidTypeNameException) {
         this.invalidTypeNameException = invalidTypeNameException;
         return this;
@@ -69,6 +76,7 @@ public class ListInventoryEntriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInventoryEntriesResult listInventoryEntriesResult;
+
     public ListInventoryEntriesResponse withListInventoryEntriesResult(org.openapis.openapi.models.shared.ListInventoryEntriesResult listInventoryEntriesResult) {
         this.listInventoryEntriesResult = listInventoryEntriesResult;
         return this;
@@ -76,6 +84,7 @@ public class ListInventoryEntriesResponse {
     
     
     public Integer statusCode;
+
     public ListInventoryEntriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListInventoryEntriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInventoryEntriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListInventoryEntriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

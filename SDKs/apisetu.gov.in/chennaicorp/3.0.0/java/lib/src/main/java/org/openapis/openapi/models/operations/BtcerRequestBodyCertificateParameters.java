@@ -12,6 +12,7 @@ public class BtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DATEOFBIRTH")
     public String dateofbirth;
+
     public BtcerRequestBodyCertificateParameters withDateofbirth(String dateofbirth) {
         this.dateofbirth = dateofbirth;
         return this;
@@ -22,9 +23,14 @@ public class BtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("REGNO")
     public String regno;
+
     public BtcerRequestBodyCertificateParameters withRegno(String regno) {
         this.regno = regno;
         return this;
     }
     
+    public BtcerRequestBodyCertificateParameters(@JsonProperty("DATEOFBIRTH") String dateofbirth, @JsonProperty("REGNO") String regno) {
+        this.dateofbirth = dateofbirth;
+        this.regno = regno;
+  }
 }

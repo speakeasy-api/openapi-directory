@@ -15,6 +15,7 @@ public class MerchandisedProduct {
      */
     
     public String averageRating;
+
     public MerchandisedProduct withAverageRating(String averageRating) {
         this.averageRating = averageRating;
         return this;
@@ -25,6 +26,7 @@ public class MerchandisedProduct {
      */
     
     public String epid;
+
     public MerchandisedProduct withEpid(String epid) {
         this.epid = epid;
         return this;
@@ -35,6 +37,7 @@ public class MerchandisedProduct {
      */
     
     public Image image;
+
     public MerchandisedProduct withImage(Image image) {
         this.image = image;
         return this;
@@ -45,6 +48,7 @@ public class MerchandisedProduct {
      */
     
     public MarketPriceDetail[] marketPriceDetails;
+
     public MerchandisedProduct withMarketPriceDetails(MarketPriceDetail[] marketPriceDetails) {
         this.marketPriceDetails = marketPriceDetails;
         return this;
@@ -55,6 +59,7 @@ public class MerchandisedProduct {
      */
     
     public RatingAspect[] ratingAspects;
+
     public MerchandisedProduct withRatingAspects(RatingAspect[] ratingAspects) {
         this.ratingAspects = ratingAspects;
         return this;
@@ -65,6 +70,7 @@ public class MerchandisedProduct {
      */
     
     public Long ratingCount;
+
     public MerchandisedProduct withRatingCount(Long ratingCount) {
         this.ratingCount = ratingCount;
         return this;
@@ -75,6 +81,7 @@ public class MerchandisedProduct {
      */
     
     public Long reviewCount;
+
     public MerchandisedProduct withReviewCount(Long reviewCount) {
         this.reviewCount = reviewCount;
         return this;
@@ -85,9 +92,11 @@ public class MerchandisedProduct {
      */
     
     public String title;
+
     public MerchandisedProduct withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public MerchandisedProduct(){}
 }

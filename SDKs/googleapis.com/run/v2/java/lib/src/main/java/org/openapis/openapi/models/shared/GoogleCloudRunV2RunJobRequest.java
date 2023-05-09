@@ -18,6 +18,7 @@ public class GoogleCloudRunV2RunJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudRunV2RunJobRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2RunJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public GoogleCloudRunV2RunJobRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public GoogleCloudRunV2RunJobRequest(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopApplicationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public StopApplicationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,13 @@ public class StopApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Force")
     public Boolean force;
+
     public StopApplicationRequest withForce(Boolean force) {
         this.force = force;
         return this;
     }
     
+    public StopApplicationRequest(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

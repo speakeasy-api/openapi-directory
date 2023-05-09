@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterCrossAccountAccessRoleResponse {
@@ -12,6 +13,7 @@ public class RegisterCrossAccountAccessRoleResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterCrossAccountAccessRoleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterCrossAccountAccessRoleResponse {
     
     
     public String contentType;
+
     public RegisterCrossAccountAccessRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterCrossAccountAccessRoleResponse {
      */
     
     public Object internalException;
+
     public RegisterCrossAccountAccessRoleResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterCrossAccountAccessRoleResponse {
      */
     
     public Object invalidCrossAccountRoleException;
+
     public RegisterCrossAccountAccessRoleResponse withInvalidCrossAccountRoleException(Object invalidCrossAccountRoleException) {
         this.invalidCrossAccountRoleException = invalidCrossAccountRoleException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterCrossAccountAccessRoleResponse {
      */
     
     public Object invalidInputException;
+
     public RegisterCrossAccountAccessRoleResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterCrossAccountAccessRoleResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public RegisterCrossAccountAccessRoleResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class RegisterCrossAccountAccessRoleResponse {
     
     
     public Integer statusCode;
+
     public RegisterCrossAccountAccessRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RegisterCrossAccountAccessRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterCrossAccountAccessRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterCrossAccountAccessRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationsRegisteredIdentifierTypesResponse {
     
     public String contentType;
+
     public GetClassificationsRegisteredIdentifierTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationsRegisteredIdentifierTypesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationsRegisteredIdentifierTypesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationsRegisteredIdentifierTypesResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationsRegisteredIdentifierTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationsRegisteredIdentifierTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationsRegisteredIdentifierTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationsRegisteredIdentifierTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetClassificationsRegisteredIdentifierTypesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -50,6 +56,7 @@ public class GetClassificationsRegisteredIdentifierTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisteredIdentifierType[] registeredIdentifierTypes;
+
     public GetClassificationsRegisteredIdentifierTypesResponse withRegisteredIdentifierTypes(org.openapis.openapi.models.shared.RegisteredIdentifierType[] registeredIdentifierTypes) {
         this.registeredIdentifierTypes = registeredIdentifierTypes;
         return this;
@@ -60,9 +67,14 @@ public class GetClassificationsRegisteredIdentifierTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetClassificationsRegisteredIdentifierTypesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetClassificationsRegisteredIdentifierTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SnsPostSnsPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SnsMessageRequest snsMessageRequest;
+
     public SnsPostSnsPostRequest withSnsMessageRequest(org.openapis.openapi.models.shared.SnsMessageRequest snsMessageRequest) {
         this.snsMessageRequest = snsMessageRequest;
         return this;
@@ -16,9 +18,13 @@ public class SnsPostSnsPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
     public String authorization;
+
     public SnsPostSnsPostRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }
     
+    public SnsPostSnsPostRequest(@JsonProperty("SnsMessageRequest") org.openapis.openapi.models.shared.SnsMessageRequest snsMessageRequest) {
+        this.snsMessageRequest = snsMessageRequest;
+  }
 }

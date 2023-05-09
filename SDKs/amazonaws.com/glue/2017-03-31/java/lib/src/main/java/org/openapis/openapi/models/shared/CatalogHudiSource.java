@@ -15,6 +15,7 @@ public class CatalogHudiSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalHudiOptions")
     public java.util.Map<String, String> additionalHudiOptions;
+
     public CatalogHudiSource withAdditionalHudiOptions(java.util.Map<String, String> additionalHudiOptions) {
         this.additionalHudiOptions = additionalHudiOptions;
         return this;
@@ -22,6 +23,7 @@ public class CatalogHudiSource {
     
     @JsonProperty("Database")
     public String database;
+
     public CatalogHudiSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -29,6 +31,7 @@ public class CatalogHudiSource {
     
     @JsonProperty("Name")
     public String name;
+
     public CatalogHudiSource withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class CatalogHudiSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public CatalogHudiSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -44,9 +48,15 @@ public class CatalogHudiSource {
     
     @JsonProperty("Table")
     public String table;
+
     public CatalogHudiSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public CatalogHudiSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubmitFeedbackResponse {
     
     public String contentType;
+
     public SubmitFeedbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SubmitFeedbackResponse {
      */
     
     public Object internalServerException;
+
     public SubmitFeedbackResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class SubmitFeedbackResponse {
     
     
     public Integer statusCode;
+
     public SubmitFeedbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SubmitFeedbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubmitFeedbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class SubmitFeedbackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SubmitFeedbackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class SubmitFeedbackResponse {
      */
     
     public java.util.Map<String, Object> submitFeedbackResponse;
+
     public SubmitFeedbackResponse withSubmitFeedbackResponse(java.util.Map<String, Object> submitFeedbackResponse) {
         this.submitFeedbackResponse = submitFeedbackResponse;
         return this;
@@ -63,6 +70,7 @@ public class SubmitFeedbackResponse {
      */
     
     public Object throttlingException;
+
     public SubmitFeedbackResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class SubmitFeedbackResponse {
      */
     
     public Object validationException;
+
     public SubmitFeedbackResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SubmitFeedbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

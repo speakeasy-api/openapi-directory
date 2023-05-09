@@ -59,10 +59,8 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCommentsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCommentsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCommentsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCommentsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsInsertResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCommentsListResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCommentsListResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsListResponse(contentType, httpRes.statusCode()) {{
             commentListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,10 +187,8 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCommentsMarkAsSpamResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsMarkAsSpamResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCommentsMarkAsSpamResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsMarkAsSpamResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,10 +225,8 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCommentsSetModerationStatusResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsSetModerationStatusResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCommentsSetModerationStatusResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsSetModerationStatusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -275,11 +265,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCommentsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCommentsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeCommentsUpdateResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

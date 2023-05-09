@@ -51,7 +51,7 @@ public class ExchangeRate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExchangeRateListResponse res = new org.openapis.openapi.models.operations.GetExchangeRateListResponse() {{
+        org.openapis.openapi.models.operations.GetExchangeRateListResponse res = new org.openapis.openapi.models.operations.GetExchangeRateListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -69,8 +69,6 @@ public class ExchangeRate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,7 +170,7 @@ public class ExchangeRate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostExchangeRateJsonResponse res = new org.openapis.openapi.models.operations.PostExchangeRateJsonResponse() {{
+        org.openapis.openapi.models.operations.PostExchangeRateJsonResponse res = new org.openapis.openapi.models.operations.PostExchangeRateJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -190,8 +188,6 @@ public class ExchangeRate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,7 +289,7 @@ public class ExchangeRate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostExchangeRateRawResponse res = new org.openapis.openapi.models.operations.PostExchangeRateRawResponse() {{
+        org.openapis.openapi.models.operations.PostExchangeRateRawResponse res = new org.openapis.openapi.models.operations.PostExchangeRateRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -311,8 +307,6 @@ public class ExchangeRate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

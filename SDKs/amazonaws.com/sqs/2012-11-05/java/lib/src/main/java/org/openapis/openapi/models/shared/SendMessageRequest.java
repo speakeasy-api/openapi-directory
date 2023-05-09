@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendMessageRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendMessageRequest {
     
     public Long delaySeconds;
+
     public SendMessageRequest withDelaySeconds(Long delaySeconds) {
         this.delaySeconds = delaySeconds;
         return this;
@@ -19,6 +20,7 @@ public class SendMessageRequest {
     
     
     public java.util.Map<String, MessageAttributeValue> messageAttributes;
+
     public SendMessageRequest withMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
         this.messageAttributes = messageAttributes;
         return this;
@@ -26,6 +28,7 @@ public class SendMessageRequest {
     
     
     public String messageBody;
+
     public SendMessageRequest withMessageBody(String messageBody) {
         this.messageBody = messageBody;
         return this;
@@ -33,6 +36,7 @@ public class SendMessageRequest {
     
     
     public String messageDeduplicationId;
+
     public SendMessageRequest withMessageDeduplicationId(String messageDeduplicationId) {
         this.messageDeduplicationId = messageDeduplicationId;
         return this;
@@ -40,6 +44,7 @@ public class SendMessageRequest {
     
     
     public String messageGroupId;
+
     public SendMessageRequest withMessageGroupId(String messageGroupId) {
         this.messageGroupId = messageGroupId;
         return this;
@@ -47,6 +52,7 @@ public class SendMessageRequest {
     
     
     public java.util.Map<String, MessageSystemAttributeValue> messageSystemAttributes;
+
     public SendMessageRequest withMessageSystemAttributes(java.util.Map<String, MessageSystemAttributeValue> messageSystemAttributes) {
         this.messageSystemAttributes = messageSystemAttributes;
         return this;
@@ -54,9 +60,14 @@ public class SendMessageRequest {
     
     
     public String queueUrl;
+
     public SendMessageRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public SendMessageRequest(@JsonProperty("MessageBody") String messageBody, @JsonProperty("QueueUrl") String queueUrl) {
+        this.messageBody = messageBody;
+        this.queueUrl = queueUrl;
+  }
 }

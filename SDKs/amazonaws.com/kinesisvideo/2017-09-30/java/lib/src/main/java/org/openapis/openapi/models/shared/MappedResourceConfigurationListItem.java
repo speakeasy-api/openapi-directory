@@ -15,6 +15,7 @@ public class MappedResourceConfigurationListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public MappedResourceConfigurationListItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class MappedResourceConfigurationListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public MappedResourceConfigurationListItem withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MappedResourceConfigurationListItem(){}
 }

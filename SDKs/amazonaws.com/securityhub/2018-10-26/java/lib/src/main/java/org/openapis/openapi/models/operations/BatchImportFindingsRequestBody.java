@@ -12,9 +12,13 @@ public class BatchImportFindingsRequestBody {
      */
     @JsonProperty("Findings")
     public org.openapis.openapi.models.shared.AwsSecurityFinding[] findings;
+
     public BatchImportFindingsRequestBody withFindings(org.openapis.openapi.models.shared.AwsSecurityFinding[] findings) {
         this.findings = findings;
         return this;
     }
     
+    public BatchImportFindingsRequestBody(@JsonProperty("Findings") org.openapis.openapi.models.shared.AwsSecurityFinding[] findings) {
+        this.findings = findings;
+  }
 }

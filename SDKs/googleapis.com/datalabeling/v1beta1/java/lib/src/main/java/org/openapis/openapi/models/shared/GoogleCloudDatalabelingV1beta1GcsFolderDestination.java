@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1GcsFolderDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputFolderUri")
     public String outputFolderUri;
+
     public GoogleCloudDatalabelingV1beta1GcsFolderDestination withOutputFolderUri(String outputFolderUri) {
         this.outputFolderUri = outputFolderUri;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1GcsFolderDestination(){}
 }

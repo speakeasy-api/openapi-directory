@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateRepositoryResponse {
@@ -12,6 +13,7 @@ public class DisassociateRepositoryResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateRepositoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateRepositoryResponse {
      */
     
     public Object conflictException;
+
     public DisassociateRepositoryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateRepositoryResponse {
     
     
     public String contentType;
+
     public DisassociateRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateRepositoryResponse disassociateRepositoryResponse;
+
     public DisassociateRepositoryResponse withDisassociateRepositoryResponse(org.openapis.openapi.models.shared.DisassociateRepositoryResponse disassociateRepositoryResponse) {
         this.disassociateRepositoryResponse = disassociateRepositoryResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateRepositoryResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateRepositoryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateRepositoryResponse {
      */
     
     public Object notFoundException;
+
     public DisassociateRepositoryResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateRepositoryResponse {
     
     
     public Integer statusCode;
+
     public DisassociateRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateRepositoryResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateRepositoryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateRepositoryResponse {
      */
     
     public Object validationException;
+
     public DisassociateRepositoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

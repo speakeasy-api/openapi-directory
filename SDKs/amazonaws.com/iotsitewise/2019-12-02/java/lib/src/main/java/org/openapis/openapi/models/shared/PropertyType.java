@@ -15,6 +15,7 @@ public class PropertyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public Attribute attribute;
+
     public PropertyType withAttribute(Attribute attribute) {
         this.attribute = attribute;
         return this;
@@ -23,6 +24,7 @@ public class PropertyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurement")
     public Measurement measurement;
+
     public PropertyType withMeasurement(Measurement measurement) {
         this.measurement = measurement;
         return this;
@@ -31,6 +33,7 @@ public class PropertyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public Metric metric;
+
     public PropertyType withMetric(Metric metric) {
         this.metric = metric;
         return this;
@@ -39,9 +42,11 @@ public class PropertyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transform")
     public Transform transform;
+
     public PropertyType withTransform(Transform transform) {
         this.transform = transform;
         return this;
     }
     
+    public PropertyType(){}
 }

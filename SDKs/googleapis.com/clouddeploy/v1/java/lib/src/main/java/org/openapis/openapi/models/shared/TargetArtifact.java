@@ -18,6 +18,7 @@ public class TargetArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactUri")
     public String artifactUri;
+
     public TargetArtifact withArtifactUri(String artifactUri) {
         this.artifactUri = artifactUri;
         return this;
@@ -29,6 +30,7 @@ public class TargetArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifestPath")
     public String manifestPath;
+
     public TargetArtifact withManifestPath(String manifestPath) {
         this.manifestPath = manifestPath;
         return this;
@@ -40,6 +42,7 @@ public class TargetArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phaseArtifacts")
     public java.util.Map<String, PhaseArtifact> phaseArtifacts;
+
     public TargetArtifact withPhaseArtifacts(java.util.Map<String, PhaseArtifact> phaseArtifacts) {
         this.phaseArtifacts = phaseArtifacts;
         return this;
@@ -51,9 +54,11 @@ public class TargetArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skaffoldConfigPath")
     public String skaffoldConfigPath;
+
     public TargetArtifact withSkaffoldConfigPath(String skaffoldConfigPath) {
         this.skaffoldConfigPath = skaffoldConfigPath;
         return this;
     }
     
+    public TargetArtifact(){}
 }

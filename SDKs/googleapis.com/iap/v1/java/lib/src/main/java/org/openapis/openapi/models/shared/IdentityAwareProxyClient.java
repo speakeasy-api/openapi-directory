@@ -18,6 +18,7 @@ public class IdentityAwareProxyClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public IdentityAwareProxyClient withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class IdentityAwareProxyClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IdentityAwareProxyClient withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class IdentityAwareProxyClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public IdentityAwareProxyClient withSecret(String secret) {
         this.secret = secret;
         return this;
     }
     
+    public IdentityAwareProxyClient(){}
 }

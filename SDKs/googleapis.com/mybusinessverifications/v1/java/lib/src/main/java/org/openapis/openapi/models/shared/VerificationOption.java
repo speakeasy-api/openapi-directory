@@ -18,6 +18,7 @@ public class VerificationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressData")
     public AddressVerificationData addressData;
+
     public VerificationOption withAddressData(AddressVerificationData addressData) {
         this.addressData = addressData;
         return this;
@@ -29,6 +30,7 @@ public class VerificationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("announcement")
     public String announcement;
+
     public VerificationOption withAnnouncement(String announcement) {
         this.announcement = announcement;
         return this;
@@ -40,6 +42,7 @@ public class VerificationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailData")
     public EmailVerificationData emailData;
+
     public VerificationOption withEmailData(EmailVerificationData emailData) {
         this.emailData = emailData;
         return this;
@@ -51,6 +54,7 @@ public class VerificationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public VerificationOption withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -62,9 +66,11 @@ public class VerificationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationMethod")
     public VerificationOptionVerificationMethodEnum verificationMethod;
+
     public VerificationOption withVerificationMethod(VerificationOptionVerificationMethodEnum verificationMethod) {
         this.verificationMethod = verificationMethod;
         return this;
     }
     
+    public VerificationOption(){}
 }

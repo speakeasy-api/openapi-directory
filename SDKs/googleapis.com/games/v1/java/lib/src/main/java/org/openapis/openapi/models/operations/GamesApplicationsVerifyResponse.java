@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GamesApplicationsVerifyResponse {
@@ -12,6 +13,7 @@ public class GamesApplicationsVerifyResponse {
      */
     
     public org.openapis.openapi.models.shared.ApplicationVerifyResponse applicationVerifyResponse;
+
     public GamesApplicationsVerifyResponse withApplicationVerifyResponse(org.openapis.openapi.models.shared.ApplicationVerifyResponse applicationVerifyResponse) {
         this.applicationVerifyResponse = applicationVerifyResponse;
         return this;
@@ -19,6 +21,7 @@ public class GamesApplicationsVerifyResponse {
     
     
     public String contentType;
+
     public GamesApplicationsVerifyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GamesApplicationsVerifyResponse {
     
     
     public Integer statusCode;
+
     public GamesApplicationsVerifyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GamesApplicationsVerifyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GamesApplicationsVerifyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GamesApplicationsVerifyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

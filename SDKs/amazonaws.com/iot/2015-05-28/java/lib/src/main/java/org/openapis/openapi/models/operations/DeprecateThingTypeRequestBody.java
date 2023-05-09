@@ -15,9 +15,11 @@ public class DeprecateThingTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("undoDeprecate")
     public Boolean undoDeprecate;
+
     public DeprecateThingTypeRequestBody withUndoDeprecate(Boolean undoDeprecate) {
         this.undoDeprecate = undoDeprecate;
         return this;
     }
     
+    public DeprecateThingTypeRequestBody(){}
 }

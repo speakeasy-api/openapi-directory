@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationConfigureCatalogColumnResponse {
@@ -12,6 +13,7 @@ public class ImportationConfigureCatalogColumnResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationConfigureCatalogColumnResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ImportationConfigureCatalogColumnResponse {
     
     
     public String contentType;
+
     public ImportationConfigureCatalogColumnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ImportationConfigureCatalogColumnResponse {
     
     
     public Integer statusCode;
+
     public ImportationConfigureCatalogColumnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ImportationConfigureCatalogColumnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationConfigureCatalogColumnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImportationConfigureCatalogColumnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

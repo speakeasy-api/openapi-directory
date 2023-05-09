@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportLibraryV2Request {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BulkImportRequest bulkImportRequest;
+
     public ImportLibraryV2Request withBulkImportRequest(org.openapis.openapi.models.shared.BulkImportRequest bulkImportRequest) {
         this.bulkImportRequest = bulkImportRequest;
         return this;
@@ -16,9 +18,14 @@ public class ImportLibraryV2Request {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public ImportLibraryV2Request withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
     }
     
+    public ImportLibraryV2Request(@JsonProperty("BulkImportRequest") org.openapis.openapi.models.shared.BulkImportRequest bulkImportRequest, @JsonProperty("organizationUuid") String organizationUuid) {
+        this.bulkImportRequest = bulkImportRequest;
+        this.organizationUuid = organizationUuid;
+  }
 }

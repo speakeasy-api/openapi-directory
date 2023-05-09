@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservedDBInstanceList {
     
     public String currencyCode;
+
     public ReservedDBInstanceList withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -19,6 +20,7 @@ public class ReservedDBInstanceList {
     
     
     public String dbInstanceClass;
+
     public ReservedDBInstanceList withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -26,6 +28,7 @@ public class ReservedDBInstanceList {
     
     
     public Long dbInstanceCount;
+
     public ReservedDBInstanceList withDBInstanceCount(Long dbInstanceCount) {
         this.dbInstanceCount = dbInstanceCount;
         return this;
@@ -33,6 +36,7 @@ public class ReservedDBInstanceList {
     
     
     public Long duration;
+
     public ReservedDBInstanceList withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -40,6 +44,7 @@ public class ReservedDBInstanceList {
     
     
     public Double fixedPrice;
+
     public ReservedDBInstanceList withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -47,6 +52,7 @@ public class ReservedDBInstanceList {
     
     
     public String leaseId;
+
     public ReservedDBInstanceList withLeaseId(String leaseId) {
         this.leaseId = leaseId;
         return this;
@@ -54,6 +60,7 @@ public class ReservedDBInstanceList {
     
     
     public Boolean multiAZ;
+
     public ReservedDBInstanceList withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -61,6 +68,7 @@ public class ReservedDBInstanceList {
     
     
     public String offeringType;
+
     public ReservedDBInstanceList withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -68,6 +76,7 @@ public class ReservedDBInstanceList {
     
     
     public String productDescription;
+
     public ReservedDBInstanceList withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -75,6 +84,7 @@ public class ReservedDBInstanceList {
     
     
     public RecurringChargeList[] recurringCharges;
+
     public ReservedDBInstanceList withRecurringCharges(RecurringChargeList[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -82,6 +92,7 @@ public class ReservedDBInstanceList {
     
     
     public String reservedDBInstanceArn;
+
     public ReservedDBInstanceList withReservedDBInstanceArn(String reservedDBInstanceArn) {
         this.reservedDBInstanceArn = reservedDBInstanceArn;
         return this;
@@ -89,6 +100,7 @@ public class ReservedDBInstanceList {
     
     
     public String reservedDBInstanceId;
+
     public ReservedDBInstanceList withReservedDBInstanceId(String reservedDBInstanceId) {
         this.reservedDBInstanceId = reservedDBInstanceId;
         return this;
@@ -96,6 +108,7 @@ public class ReservedDBInstanceList {
     
     
     public String reservedDBInstancesOfferingId;
+
     public ReservedDBInstanceList withReservedDBInstancesOfferingId(String reservedDBInstancesOfferingId) {
         this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
         return this;
@@ -103,6 +116,7 @@ public class ReservedDBInstanceList {
     
     
     public OffsetDateTime startTime;
+
     public ReservedDBInstanceList withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -110,6 +124,7 @@ public class ReservedDBInstanceList {
     
     
     public String state;
+
     public ReservedDBInstanceList withState(String state) {
         this.state = state;
         return this;
@@ -117,9 +132,11 @@ public class ReservedDBInstanceList {
     
     
     public Double usagePrice;
+
     public ReservedDBInstanceList withUsagePrice(Double usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public ReservedDBInstanceList(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReplicationSetOutput {
     @JsonProperty("arn")
     public String arn;
+
     public CreateReplicationSetOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreateReplicationSetOutput(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

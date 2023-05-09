@@ -15,6 +15,7 @@ public class CreateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelCompositeModels")
     public org.openapis.openapi.models.shared.AssetModelCompositeModelDefinition[] assetModelCompositeModels;
+
     public CreateAssetModelRequestBody withAssetModelCompositeModels(org.openapis.openapi.models.shared.AssetModelCompositeModelDefinition[] assetModelCompositeModels) {
         this.assetModelCompositeModels = assetModelCompositeModels;
         return this;
@@ -26,6 +27,7 @@ public class CreateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelDescription")
     public String assetModelDescription;
+
     public CreateAssetModelRequestBody withAssetModelDescription(String assetModelDescription) {
         this.assetModelDescription = assetModelDescription;
         return this;
@@ -37,6 +39,7 @@ public class CreateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelHierarchies")
     public org.openapis.openapi.models.shared.AssetModelHierarchyDefinition[] assetModelHierarchies;
+
     public CreateAssetModelRequestBody withAssetModelHierarchies(org.openapis.openapi.models.shared.AssetModelHierarchyDefinition[] assetModelHierarchies) {
         this.assetModelHierarchies = assetModelHierarchies;
         return this;
@@ -47,6 +50,7 @@ public class CreateAssetModelRequestBody {
      */
     @JsonProperty("assetModelName")
     public String assetModelName;
+
     public CreateAssetModelRequestBody withAssetModelName(String assetModelName) {
         this.assetModelName = assetModelName;
         return this;
@@ -58,6 +62,7 @@ public class CreateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelProperties")
     public org.openapis.openapi.models.shared.AssetModelPropertyDefinition[] assetModelProperties;
+
     public CreateAssetModelRequestBody withAssetModelProperties(org.openapis.openapi.models.shared.AssetModelPropertyDefinition[] assetModelProperties) {
         this.assetModelProperties = assetModelProperties;
         return this;
@@ -69,6 +74,7 @@ public class CreateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAssetModelRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -80,9 +86,13 @@ public class CreateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAssetModelRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAssetModelRequestBody(@JsonProperty("assetModelName") String assetModelName) {
+        this.assetModelName = assetModelName;
+  }
 }

@@ -16,6 +16,7 @@ public class EndDates {
      */
     
     public Boolean approximate;
+
     public EndDates withApproximate(Boolean approximate) {
         this.approximate = approximate;
         return this;
@@ -26,6 +27,7 @@ public class EndDates {
      */
     
     public OffsetDateTime dateTime;
+
     public EndDates withDateTime(OffsetDateTime dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -36,6 +38,7 @@ public class EndDates {
      */
     
     public LocalDate localDate;
+
     public EndDates withLocalDate(LocalDate localDate) {
         this.localDate = localDate;
         return this;
@@ -43,6 +46,7 @@ public class EndDates {
     
     
     public LocalTime localTime;
+
     public EndDates withLocalTime(LocalTime localTime) {
         this.localTime = localTime;
         return this;
@@ -53,9 +57,11 @@ public class EndDates {
      */
     
     public Boolean noSpecificTime;
+
     public EndDates withNoSpecificTime(Boolean noSpecificTime) {
         this.noSpecificTime = noSpecificTime;
         return this;
     }
     
+    public EndDates(){}
 }

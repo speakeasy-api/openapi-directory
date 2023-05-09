@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVpcIngressConnectionResponse {
     
     public String contentType;
+
     public DeleteVpcIngressConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVpcIngressConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVpcIngressConnectionResponse deleteVpcIngressConnectionResponse;
+
     public DeleteVpcIngressConnectionResponse withDeleteVpcIngressConnectionResponse(org.openapis.openapi.models.shared.DeleteVpcIngressConnectionResponse deleteVpcIngressConnectionResponse) {
         this.deleteVpcIngressConnectionResponse = deleteVpcIngressConnectionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVpcIngressConnectionResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteVpcIngressConnectionResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVpcIngressConnectionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteVpcIngressConnectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVpcIngressConnectionResponse {
      */
     
     public Object invalidStateException;
+
     public DeleteVpcIngressConnectionResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteVpcIngressConnectionResponse {
     
     
     public Integer statusCode;
+
     public DeleteVpcIngressConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteVpcIngressConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVpcIngressConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteVpcIngressConnectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteVpcIngressConnectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteVpcIngressConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

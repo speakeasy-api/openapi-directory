@@ -15,6 +15,7 @@ public class BatchListObjectPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachedPolicyIds")
     public String[] attachedPolicyIds;
+
     public BatchListObjectPoliciesResponse withAttachedPolicyIds(String[] attachedPolicyIds) {
         this.attachedPolicyIds = attachedPolicyIds;
         return this;
@@ -23,9 +24,11 @@ public class BatchListObjectPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListObjectPoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public BatchListObjectPoliciesResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateGatewayToServerResponse {
@@ -12,6 +13,7 @@ public class AssociateGatewayToServerResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateGatewayToServerOutput associateGatewayToServerOutput;
+
     public AssociateGatewayToServerResponse withAssociateGatewayToServerOutput(org.openapis.openapi.models.shared.AssociateGatewayToServerOutput associateGatewayToServerOutput) {
         this.associateGatewayToServerOutput = associateGatewayToServerOutput;
         return this;
@@ -22,6 +24,7 @@ public class AssociateGatewayToServerResponse {
      */
     
     public Object conflictException;
+
     public AssociateGatewayToServerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateGatewayToServerResponse {
     
     
     public String contentType;
+
     public AssociateGatewayToServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateGatewayToServerResponse {
      */
     
     public Object internalServerException;
+
     public AssociateGatewayToServerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateGatewayToServerResponse {
     
     
     public Integer statusCode;
+
     public AssociateGatewayToServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AssociateGatewayToServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateGatewayToServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AssociateGatewayToServerResponse {
      */
     
     public Object throttlingException;
+
     public AssociateGatewayToServerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class AssociateGatewayToServerResponse {
      */
     
     public Object validationException;
+
     public AssociateGatewayToServerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateGatewayToServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

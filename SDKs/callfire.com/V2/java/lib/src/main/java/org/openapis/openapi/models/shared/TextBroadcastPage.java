@@ -15,6 +15,7 @@ public class TextBroadcastPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public TextBroadcast[] items;
+
     public TextBroadcastPage withItems(TextBroadcast[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class TextBroadcastPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public TextBroadcastPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class TextBroadcastPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public TextBroadcastPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class TextBroadcastPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public TextBroadcastPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public TextBroadcastPage(){}
 }

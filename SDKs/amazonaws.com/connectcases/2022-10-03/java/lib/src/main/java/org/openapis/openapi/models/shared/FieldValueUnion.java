@@ -15,6 +15,7 @@ public class FieldValueUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public FieldValueUnion withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -23,6 +24,7 @@ public class FieldValueUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public FieldValueUnion withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -31,9 +33,11 @@ public class FieldValueUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public FieldValueUnion withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public FieldValueUnion(){}
 }

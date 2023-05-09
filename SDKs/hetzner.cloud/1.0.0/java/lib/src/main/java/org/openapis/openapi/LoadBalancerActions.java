@@ -58,11 +58,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLoadBalancersIdActionsResponse res = new org.openapis.openapi.models.operations.GetLoadBalancersIdActionsResponse() {{
+        org.openapis.openapi.models.operations.GetLoadBalancersIdActionsResponse res = new org.openapis.openapi.models.operations.GetLoadBalancersIdActionsResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLoadBalancersIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetLoadBalancersIdActionsActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetLoadBalancersIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetLoadBalancersIdActionsActionIdResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddServiceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddServiceResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddServiceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddServiceResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -198,11 +192,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddTargetResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddTargetResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddTargetResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddTargetResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -248,11 +240,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAttachToNetworkResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAttachToNetworkResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAttachToNetworkResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAttachToNetworkResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -289,11 +279,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeAlgorithmResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeAlgorithmResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeAlgorithmResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeAlgorithmResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -333,11 +321,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeDnsPtrResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeDnsPtrResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeDnsPtrResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeDnsPtrResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -374,11 +360,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeProtectionResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeProtectionResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -422,11 +406,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeTypeResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeTypeResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeTypeResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeTypeResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -463,11 +445,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDeleteServiceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDeleteServiceResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDeleteServiceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDeleteServiceResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -504,11 +484,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDetachFromNetworkResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDetachFromNetworkResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDetachFromNetworkResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDetachFromNetworkResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -551,11 +529,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDisablePublicInterfaceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDisablePublicInterfaceResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDisablePublicInterfaceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDisablePublicInterfaceResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -590,11 +566,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsEnablePublicInterfaceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsEnablePublicInterfaceResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsEnablePublicInterfaceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsEnablePublicInterfaceResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -631,11 +605,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsRemoveTargetResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsRemoveTargetResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsRemoveTargetResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsRemoveTargetResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -679,11 +651,9 @@ public class LoadBalancerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsUpdateServiceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsUpdateServiceResponse() {{
+        org.openapis.openapi.models.operations.PostLoadBalancersIdActionsUpdateServiceResponse res = new org.openapis.openapi.models.operations.PostLoadBalancersIdActionsUpdateServiceResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

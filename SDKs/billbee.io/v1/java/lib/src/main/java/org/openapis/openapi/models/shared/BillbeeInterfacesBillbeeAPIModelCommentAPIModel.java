@@ -19,6 +19,7 @@ public class BillbeeInterfacesBillbeeAPIModelCommentAPIModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public BillbeeInterfacesBillbeeAPIModelCommentAPIModel withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class BillbeeInterfacesBillbeeAPIModelCommentAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromCustomer")
     public Boolean fromCustomer;
+
     public BillbeeInterfacesBillbeeAPIModelCommentAPIModel withFromCustomer(Boolean fromCustomer) {
         this.fromCustomer = fromCustomer;
         return this;
@@ -35,6 +37,7 @@ public class BillbeeInterfacesBillbeeAPIModelCommentAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelCommentAPIModel withId(Long id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class BillbeeInterfacesBillbeeAPIModelCommentAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelCommentAPIModel withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +55,11 @@ public class BillbeeInterfacesBillbeeAPIModelCommentAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public BillbeeInterfacesBillbeeAPIModelCommentAPIModel withText(String text) {
         this.text = text;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelCommentAPIModel(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRetentionConfigurationsResponse {
     
     public String contentType;
+
     public DescribeRetentionConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRetentionConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRetentionConfigurationsResponse describeRetentionConfigurationsResponse;
+
     public DescribeRetentionConfigurationsResponse withDescribeRetentionConfigurationsResponse(org.openapis.openapi.models.shared.DescribeRetentionConfigurationsResponse describeRetentionConfigurationsResponse) {
         this.describeRetentionConfigurationsResponse = describeRetentionConfigurationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRetentionConfigurationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeRetentionConfigurationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRetentionConfigurationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeRetentionConfigurationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRetentionConfigurationsResponse {
      */
     
     public Object noSuchRetentionConfigurationException;
+
     public DescribeRetentionConfigurationsResponse withNoSuchRetentionConfigurationException(Object noSuchRetentionConfigurationException) {
         this.noSuchRetentionConfigurationException = noSuchRetentionConfigurationException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeRetentionConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeRetentionConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeRetentionConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRetentionConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeRetentionConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

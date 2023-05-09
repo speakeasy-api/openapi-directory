@@ -15,6 +15,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VOIP")
     public Boolean voip;
+
     public PhoneValidation200ApplicationJSON withVoip(Boolean voip) {
         this.voip = voip;
         return this;
@@ -23,6 +24,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PhoneValidation200ApplicationJSON withActive(Boolean active) {
         this.active = active;
         return this;
@@ -31,6 +33,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_status")
     public String activeStatus;
+
     public PhoneValidation200ApplicationJSON withActiveStatus(String activeStatus) {
         this.activeStatus = activeStatus;
         return this;
@@ -39,6 +42,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associated_email_addresses")
     public PhoneValidation200ApplicationJSONAssociatedEmailAddresses associatedEmailAddresses;
+
     public PhoneValidation200ApplicationJSON withAssociatedEmailAddresses(PhoneValidation200ApplicationJSONAssociatedEmailAddresses associatedEmailAddresses) {
         this.associatedEmailAddresses = associatedEmailAddresses;
         return this;
@@ -47,6 +51,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public PhoneValidation200ApplicationJSON withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -55,6 +60,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public PhoneValidation200ApplicationJSON withCity(String city) {
         this.city = city;
         return this;
@@ -63,6 +69,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public PhoneValidation200ApplicationJSON withCountry(String country) {
         this.country = country;
         return this;
@@ -71,6 +78,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialing_code")
     public Double dialingCode;
+
     public PhoneValidation200ApplicationJSON withDialingCode(Double dialingCode) {
         this.dialingCode = dialingCode;
         return this;
@@ -79,6 +87,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("do_not_call")
     public Boolean doNotCall;
+
     public PhoneValidation200ApplicationJSON withDoNotCall(Boolean doNotCall) {
         this.doNotCall = doNotCall;
         return this;
@@ -87,6 +96,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
     public String formatted;
+
     public PhoneValidation200ApplicationJSON withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
@@ -95,6 +105,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraud_score")
     public Double fraudScore;
+
     public PhoneValidation200ApplicationJSON withFraudScore(Double fraudScore) {
         this.fraudScore = fraudScore;
         return this;
@@ -103,6 +114,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaked")
     public Boolean leaked;
+
     public PhoneValidation200ApplicationJSON withLeaked(Boolean leaked) {
         this.leaked = leaked;
         return this;
@@ -111,6 +123,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_type")
     public String lineType;
+
     public PhoneValidation200ApplicationJSON withLineType(String lineType) {
         this.lineType = lineType;
         return this;
@@ -119,6 +132,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("local_format")
     public String localFormat;
+
     public PhoneValidation200ApplicationJSON withLocalFormat(String localFormat) {
         this.localFormat = localFormat;
         return this;
@@ -127,6 +141,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcc")
     public String mcc;
+
     public PhoneValidation200ApplicationJSON withMcc(String mcc) {
         this.mcc = mcc;
         return this;
@@ -135,6 +150,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PhoneValidation200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -143,6 +159,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mnc")
     public String mnc;
+
     public PhoneValidation200ApplicationJSON withMnc(String mnc) {
         this.mnc = mnc;
         return this;
@@ -151,6 +168,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PhoneValidation200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -159,6 +177,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prepaid")
     public String prepaid;
+
     public PhoneValidation200ApplicationJSON withPrepaid(String prepaid) {
         this.prepaid = prepaid;
         return this;
@@ -167,6 +186,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recent_abuse")
     public Boolean recentAbuse;
+
     public PhoneValidation200ApplicationJSON withRecentAbuse(Boolean recentAbuse) {
         this.recentAbuse = recentAbuse;
         return this;
@@ -175,6 +195,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public PhoneValidation200ApplicationJSON withRegion(String region) {
         this.region = region;
         return this;
@@ -183,6 +204,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public PhoneValidation200ApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -191,6 +213,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risky")
     public Boolean risky;
+
     public PhoneValidation200ApplicationJSON withRisky(Boolean risky) {
         this.risky = risky;
         return this;
@@ -199,6 +222,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sms_domain")
     public String smsDomain;
+
     public PhoneValidation200ApplicationJSON withSmsDomain(String smsDomain) {
         this.smsDomain = smsDomain;
         return this;
@@ -207,6 +231,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sms_email")
     public String smsEmail;
+
     public PhoneValidation200ApplicationJSON withSmsEmail(String smsEmail) {
         this.smsEmail = smsEmail;
         return this;
@@ -215,6 +240,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spammer")
     public Boolean spammer;
+
     public PhoneValidation200ApplicationJSON withSpammer(Boolean spammer) {
         this.spammer = spammer;
         return this;
@@ -223,6 +249,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public PhoneValidation200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -231,6 +258,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public PhoneValidation200ApplicationJSON withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -239,6 +267,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_activity")
     public String userActivity;
+
     public PhoneValidation200ApplicationJSON withUserActivity(String userActivity) {
         this.userActivity = userActivity;
         return this;
@@ -247,6 +276,7 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid")
     public Boolean valid;
+
     public PhoneValidation200ApplicationJSON withValid(Boolean valid) {
         this.valid = valid;
         return this;
@@ -255,9 +285,11 @@ public class PhoneValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip_code")
     public String zipCode;
+
     public PhoneValidation200ApplicationJSON withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public PhoneValidation200ApplicationJSON(){}
 }

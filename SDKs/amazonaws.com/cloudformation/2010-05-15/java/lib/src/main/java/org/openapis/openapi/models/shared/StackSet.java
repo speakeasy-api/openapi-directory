@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StackSet {
     
     public String administrationRoleARN;
+
     public StackSet withAdministrationRoleARN(String administrationRoleARN) {
         this.administrationRoleARN = administrationRoleARN;
         return this;
@@ -19,6 +20,7 @@ public class StackSet {
     
     
     public AutoDeployment autoDeployment;
+
     public StackSet withAutoDeployment(AutoDeployment autoDeployment) {
         this.autoDeployment = autoDeployment;
         return this;
@@ -26,6 +28,7 @@ public class StackSet {
     
     
     public CapabilityEnum[] capabilities;
+
     public StackSet withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -33,6 +36,7 @@ public class StackSet {
     
     
     public String description;
+
     public StackSet withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class StackSet {
     
     
     public String executionRoleName;
+
     public StackSet withExecutionRoleName(String executionRoleName) {
         this.executionRoleName = executionRoleName;
         return this;
@@ -47,6 +52,7 @@ public class StackSet {
     
     
     public ManagedExecution managedExecution;
+
     public StackSet withManagedExecution(ManagedExecution managedExecution) {
         this.managedExecution = managedExecution;
         return this;
@@ -54,6 +60,7 @@ public class StackSet {
     
     
     public String[] organizationalUnitIds;
+
     public StackSet withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
@@ -61,6 +68,7 @@ public class StackSet {
     
     
     public Parameter[] parameters;
+
     public StackSet withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -68,6 +76,7 @@ public class StackSet {
     
     
     public PermissionModelsEnum permissionModel;
+
     public StackSet withPermissionModel(PermissionModelsEnum permissionModel) {
         this.permissionModel = permissionModel;
         return this;
@@ -75,6 +84,7 @@ public class StackSet {
     
     
     public String[] regions;
+
     public StackSet withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -82,6 +92,7 @@ public class StackSet {
     
     
     public String stackSetARN;
+
     public StackSet withStackSetARN(String stackSetARN) {
         this.stackSetARN = stackSetARN;
         return this;
@@ -89,6 +100,7 @@ public class StackSet {
     
     
     public StackSetDriftDetectionDetails stackSetDriftDetectionDetails;
+
     public StackSet withStackSetDriftDetectionDetails(StackSetDriftDetectionDetails stackSetDriftDetectionDetails) {
         this.stackSetDriftDetectionDetails = stackSetDriftDetectionDetails;
         return this;
@@ -96,6 +108,7 @@ public class StackSet {
     
     
     public String stackSetId;
+
     public StackSet withStackSetId(String stackSetId) {
         this.stackSetId = stackSetId;
         return this;
@@ -103,6 +116,7 @@ public class StackSet {
     
     
     public String stackSetName;
+
     public StackSet withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -110,6 +124,7 @@ public class StackSet {
     
     
     public StackSetStatusEnum status;
+
     public StackSet withStatus(StackSetStatusEnum status) {
         this.status = status;
         return this;
@@ -117,6 +132,7 @@ public class StackSet {
     
     
     public Tag[] tags;
+
     public StackSet withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -124,9 +140,11 @@ public class StackSet {
     
     
     public String templateBody;
+
     public StackSet withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
     }
     
+    public StackSet(){}
 }

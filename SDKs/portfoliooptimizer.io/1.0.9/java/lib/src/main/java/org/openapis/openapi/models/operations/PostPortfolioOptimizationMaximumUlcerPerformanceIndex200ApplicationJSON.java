@@ -15,9 +15,13 @@ public class PostPortfolioOptimizationMaximumUlcerPerformanceIndex200Application
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioOptimizationMaximumUlcerPerformanceIndex200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumUlcerPerformanceIndex200ApplicationJSON(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

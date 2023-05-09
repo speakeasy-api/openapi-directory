@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlaydeveloperreportingVitalsErrorsIssuesSearchResponse {
     
     public String contentType;
+
     public PlaydeveloperreportingVitalsErrorsIssuesSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PlaydeveloperreportingVitalsErrorsIssuesSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglePlayDeveloperReportingV1beta1SearchErrorIssuesResponse googlePlayDeveloperReportingV1beta1SearchErrorIssuesResponse;
+
     public PlaydeveloperreportingVitalsErrorsIssuesSearchResponse withGooglePlayDeveloperReportingV1beta1SearchErrorIssuesResponse(org.openapis.openapi.models.shared.GooglePlayDeveloperReportingV1beta1SearchErrorIssuesResponse googlePlayDeveloperReportingV1beta1SearchErrorIssuesResponse) {
         this.googlePlayDeveloperReportingV1beta1SearchErrorIssuesResponse = googlePlayDeveloperReportingV1beta1SearchErrorIssuesResponse;
         return this;
@@ -26,6 +29,7 @@ public class PlaydeveloperreportingVitalsErrorsIssuesSearchResponse {
     
     
     public Integer statusCode;
+
     public PlaydeveloperreportingVitalsErrorsIssuesSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PlaydeveloperreportingVitalsErrorsIssuesSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlaydeveloperreportingVitalsErrorsIssuesSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlaydeveloperreportingVitalsErrorsIssuesSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

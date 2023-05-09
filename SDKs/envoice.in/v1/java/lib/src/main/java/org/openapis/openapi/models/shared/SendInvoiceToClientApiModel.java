@@ -17,6 +17,7 @@ public class SendInvoiceToClientApiModel {
     @JsonProperty("AttachPdf")
     @SpeakeasyMetadata("form:name=AttachPdf")
     public Boolean attachPdf;
+
     public SendInvoiceToClientApiModel withAttachPdf(Boolean attachPdf) {
         this.attachPdf = attachPdf;
         return this;
@@ -29,6 +30,7 @@ public class SendInvoiceToClientApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public SendInvoiceToClientApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -41,6 +43,7 @@ public class SendInvoiceToClientApiModel {
     @JsonProperty("InvoiceId")
     @SpeakeasyMetadata("form:name=InvoiceId")
     public Integer invoiceId;
+
     public SendInvoiceToClientApiModel withInvoiceId(Integer invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -53,6 +56,7 @@ public class SendInvoiceToClientApiModel {
     @JsonProperty("Message")
     @SpeakeasyMetadata("form:name=Message")
     public String message;
+
     public SendInvoiceToClientApiModel withMessage(String message) {
         this.message = message;
         return this;
@@ -65,6 +69,7 @@ public class SendInvoiceToClientApiModel {
     @JsonProperty("SendToSelf")
     @SpeakeasyMetadata("form:name=SendToSelf")
     public Boolean sendToSelf;
+
     public SendInvoiceToClientApiModel withSendToSelf(Boolean sendToSelf) {
         this.sendToSelf = sendToSelf;
         return this;
@@ -77,9 +82,11 @@ public class SendInvoiceToClientApiModel {
     @JsonProperty("Subject")
     @SpeakeasyMetadata("form:name=Subject")
     public String subject;
+
     public SendInvoiceToClientApiModel withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public SendInvoiceToClientApiModel(){}
 }

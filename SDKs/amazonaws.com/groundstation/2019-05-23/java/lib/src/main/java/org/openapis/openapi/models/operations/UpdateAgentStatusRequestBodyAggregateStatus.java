@@ -15,6 +15,7 @@ public class UpdateAgentStatusRequestBodyAggregateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureMap")
     public java.util.Map<String, Boolean> signatureMap;
+
     public UpdateAgentStatusRequestBodyAggregateStatus withSignatureMap(java.util.Map<String, Boolean> signatureMap) {
         this.signatureMap = signatureMap;
         return this;
@@ -23,9 +24,11 @@ public class UpdateAgentStatusRequestBodyAggregateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public org.openapis.openapi.models.shared.AgentStatusEnum status;
+
     public UpdateAgentStatusRequestBodyAggregateStatus withStatus(org.openapis.openapi.models.shared.AgentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateAgentStatusRequestBodyAggregateStatus(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetCustomVerificationEmailTemplateRequest - Represents a request to retrieve an existing custom verification email template.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetCustomVerificationEmailTemplateRequest {
     
     public String templateName;
+
     public GetCustomVerificationEmailTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public GetCustomVerificationEmailTemplateRequest(@JsonProperty("TemplateName") String templateName) {
+        this.templateName = templateName;
+  }
 }

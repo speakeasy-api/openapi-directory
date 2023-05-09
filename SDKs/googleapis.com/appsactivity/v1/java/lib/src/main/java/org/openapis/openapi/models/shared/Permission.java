@@ -18,6 +18,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Permission withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionId")
     public String permissionId;
+
     public Permission withPermissionId(String permissionId) {
         this.permissionId = permissionId;
         return this;
@@ -40,6 +42,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public PermissionRoleEnum role;
+
     public Permission withRole(PermissionRoleEnum role) {
         this.role = role;
         return this;
@@ -51,6 +54,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PermissionTypeEnum type;
+
     public Permission withType(PermissionTypeEnum type) {
         this.type = type;
         return this;
@@ -62,6 +66,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User user;
+
     public Permission withUser(User user) {
         this.user = user;
         return this;
@@ -73,9 +78,11 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withLink")
     public Boolean withLink;
+
     public Permission withWithLink(Boolean withLink) {
         this.withLink = withLink;
         return this;
     }
     
+    public Permission(){}
 }

@@ -7,7 +7,8 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum SyncTypeEnum {
-    TEMPLATE_SYNC("TEMPLATE_SYNC");
+    TEMPLATE_SYNC("TEMPLATE_SYNC"),
+    SERVICE_SYNC("SERVICE_SYNC");
 
     @JsonValue
     public final String value;

@@ -15,6 +15,7 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public Acl withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Clusters")
     public String[] clusters;
+
     public Acl withClusters(String[] clusters) {
         this.clusters = clusters;
         return this;
@@ -31,6 +33,7 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumEngineVersion")
     public String minimumEngineVersion;
+
     public Acl withMinimumEngineVersion(String minimumEngineVersion) {
         this.minimumEngineVersion = minimumEngineVersion;
         return this;
@@ -39,6 +42,7 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Acl withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingChanges")
     public ACLPendingChanges pendingChanges;
+
     public Acl withPendingChanges(ACLPendingChanges pendingChanges) {
         this.pendingChanges = pendingChanges;
         return this;
@@ -55,6 +60,7 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Acl withStatus(String status) {
         this.status = status;
         return this;
@@ -63,9 +69,11 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserNames")
     public String[] userNames;
+
     public Acl withUserNames(String[] userNames) {
         this.userNames = userNames;
         return this;
     }
     
+    public Acl(){}
 }

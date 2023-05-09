@@ -14,9 +14,11 @@ public class InvoiceCategoryDeleteApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public InvoiceCategoryDeleteApiModel withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public InvoiceCategoryDeleteApiModel(){}
 }

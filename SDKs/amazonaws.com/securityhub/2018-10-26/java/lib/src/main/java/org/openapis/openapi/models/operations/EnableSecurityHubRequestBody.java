@@ -15,6 +15,7 @@ public class EnableSecurityHubRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlFindingGenerator")
     public EnableSecurityHubRequestBodyControlFindingGeneratorEnum controlFindingGenerator;
+
     public EnableSecurityHubRequestBody withControlFindingGenerator(EnableSecurityHubRequestBodyControlFindingGeneratorEnum controlFindingGenerator) {
         this.controlFindingGenerator = controlFindingGenerator;
         return this;
@@ -26,6 +27,7 @@ public class EnableSecurityHubRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDefaultStandards")
     public Boolean enableDefaultStandards;
+
     public EnableSecurityHubRequestBody withEnableDefaultStandards(Boolean enableDefaultStandards) {
         this.enableDefaultStandards = enableDefaultStandards;
         return this;
@@ -37,9 +39,11 @@ public class EnableSecurityHubRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public EnableSecurityHubRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public EnableSecurityHubRequestBody(){}
 }

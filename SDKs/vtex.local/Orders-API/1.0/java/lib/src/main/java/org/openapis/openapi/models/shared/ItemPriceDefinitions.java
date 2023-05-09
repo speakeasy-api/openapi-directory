@@ -15,6 +15,7 @@ public class ItemPriceDefinitions {
      */
     @JsonProperty("calculatedSellingPrice")
     public Long calculatedSellingPrice;
+
     public ItemPriceDefinitions withCalculatedSellingPrice(Long calculatedSellingPrice) {
         this.calculatedSellingPrice = calculatedSellingPrice;
         return this;
@@ -25,6 +26,7 @@ public class ItemPriceDefinitions {
      */
     @JsonProperty("sellingPrices")
     public ItemPriceDefinitionsSellingPrices[] sellingPrices;
+
     public ItemPriceDefinitions withSellingPrices(ItemPriceDefinitionsSellingPrices[] sellingPrices) {
         this.sellingPrices = sellingPrices;
         return this;
@@ -35,9 +37,15 @@ public class ItemPriceDefinitions {
      */
     @JsonProperty("total")
     public Long total;
+
     public ItemPriceDefinitions withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public ItemPriceDefinitions(@JsonProperty("calculatedSellingPrice") Long calculatedSellingPrice, @JsonProperty("sellingPrices") ItemPriceDefinitionsSellingPrices[] sellingPrices, @JsonProperty("total") Long total) {
+        this.calculatedSellingPrice = calculatedSellingPrice;
+        this.sellingPrices = sellingPrices;
+        this.total = total;
+  }
 }

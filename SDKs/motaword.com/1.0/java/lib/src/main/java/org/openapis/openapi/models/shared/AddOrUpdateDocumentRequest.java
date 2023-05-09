@@ -12,9 +12,11 @@ public class AddOrUpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public FileAsData document;
+
     public AddOrUpdateDocumentRequest withDocument(FileAsData document) {
         this.document = document;
         return this;
     }
     
+    public AddOrUpdateDocumentRequest(){}
 }

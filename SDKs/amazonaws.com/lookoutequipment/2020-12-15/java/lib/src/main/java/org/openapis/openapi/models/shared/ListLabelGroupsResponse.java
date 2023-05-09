@@ -15,6 +15,7 @@ public class ListLabelGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupSummaries")
     public LabelGroupSummary[] labelGroupSummaries;
+
     public ListLabelGroupsResponse withLabelGroupSummaries(LabelGroupSummary[] labelGroupSummaries) {
         this.labelGroupSummaries = labelGroupSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListLabelGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLabelGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLabelGroupsResponse(){}
 }

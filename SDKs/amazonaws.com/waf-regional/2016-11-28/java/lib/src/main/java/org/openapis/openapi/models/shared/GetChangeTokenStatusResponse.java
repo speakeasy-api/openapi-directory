@@ -15,9 +15,11 @@ public class GetChangeTokenStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeTokenStatus")
     public ChangeTokenStatusEnum changeTokenStatus;
+
     public GetChangeTokenStatusResponse withChangeTokenStatus(ChangeTokenStatusEnum changeTokenStatus) {
         this.changeTokenStatus = changeTokenStatus;
         return this;
     }
     
+    public GetChangeTokenStatusResponse(){}
 }

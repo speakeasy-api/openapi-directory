@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImportsResponse {
     
     public String contentType;
+
     public ListImportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListImportsResponse {
      */
     
     public Object limitExceededException;
+
     public ListImportsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class ListImportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImportsOutput listImportsOutput;
+
     public ListImportsResponse withListImportsOutput(org.openapis.openapi.models.shared.ListImportsOutput listImportsOutput) {
         this.listImportsOutput = listImportsOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListImportsResponse {
     
     
     public Integer statusCode;
+
     public ListImportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListImportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListImportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

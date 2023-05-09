@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EpConsolidateResponse {
     
     public byte[] body;
+
     public EpConsolidateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class EpConsolidateResponse {
     
     
     public String contentType;
+
     public EpConsolidateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class EpConsolidateResponse {
     
     
     public Integer statusCode;
+
     public EpConsolidateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class EpConsolidateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EpConsolidateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class EpConsolidateResponse {
      */
     
     public String epConsolidate400WildcardString;
+
     public EpConsolidateResponse withEpConsolidate400WildcardString(String epConsolidate400WildcardString) {
         this.epConsolidate400WildcardString = epConsolidate400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class EpConsolidateResponse {
      */
     
     public String epConsolidate401WildcardString;
+
     public EpConsolidateResponse withEpConsolidate401WildcardString(String epConsolidate401WildcardString) {
         this.epConsolidate401WildcardString = epConsolidate401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class EpConsolidateResponse {
      */
     
     public String epConsolidate404WildcardString;
+
     public EpConsolidateResponse withEpConsolidate404WildcardString(String epConsolidate404WildcardString) {
         this.epConsolidate404WildcardString = epConsolidate404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class EpConsolidateResponse {
      */
     
     public String epConsolidate409WildcardString;
+
     public EpConsolidateResponse withEpConsolidate409WildcardString(String epConsolidate409WildcardString) {
         this.epConsolidate409WildcardString = epConsolidate409WildcardString;
         return this;
     }
     
+    public EpConsolidateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

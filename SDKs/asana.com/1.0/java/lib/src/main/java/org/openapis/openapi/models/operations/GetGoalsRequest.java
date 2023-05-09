@@ -12,6 +12,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_workspace_level")
     public Boolean isWorkspaceLevel;
+
     public GetGoalsRequest withIsWorkspaceLevel(Boolean isWorkspaceLevel) {
         this.isWorkspaceLevel = isWorkspaceLevel;
         return this;
@@ -23,6 +24,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetGoalsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +37,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetGoalsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -47,6 +50,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetGoalsRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -58,6 +62,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetGoalsRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -68,6 +73,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=portfolio")
     public String portfolio;
+
     public GetGoalsRequest withPortfolio(String portfolio) {
         this.portfolio = portfolio;
         return this;
@@ -78,6 +84,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
     public String project;
+
     public GetGoalsRequest withProject(String project) {
         this.project = project;
         return this;
@@ -88,6 +95,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetGoalsRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -98,6 +106,7 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_periods")
     public String[] timePeriods;
+
     public GetGoalsRequest withTimePeriods(String[] timePeriods) {
         this.timePeriods = timePeriods;
         return this;
@@ -108,9 +117,11 @@ public class GetGoalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetGoalsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetGoalsRequest(){}
 }

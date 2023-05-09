@@ -12,6 +12,7 @@ public class FhirContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FhirContact withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class FhirContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("system")
     public String system;
+
     public FhirContact withSystem(String system) {
         this.system = system;
         return this;
@@ -28,6 +30,7 @@ public class FhirContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use")
     public String use;
+
     public FhirContact withUse(String use) {
         this.use = use;
         return this;
@@ -36,9 +39,11 @@ public class FhirContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FhirContact withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FhirContact(){}
 }

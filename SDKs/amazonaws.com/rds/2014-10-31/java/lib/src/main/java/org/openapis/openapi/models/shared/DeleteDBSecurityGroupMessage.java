@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteDBSecurityGroupMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteDBSecurityGroupMessage {
     
     public String dbSecurityGroupName;
+
     public DeleteDBSecurityGroupMessage withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
     }
     
+    public DeleteDBSecurityGroupMessage(@JsonProperty("DBSecurityGroupName") String dbSecurityGroupName) {
+        this.dbSecurityGroupName = dbSecurityGroupName;
+  }
 }

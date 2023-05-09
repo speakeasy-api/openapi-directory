@@ -18,6 +18,7 @@ public class Building {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public BuildingAddress address;
+
     public Building withAddress(BuildingAddress address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class Building {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildingId")
     public String buildingId;
+
     public Building withBuildingId(String buildingId) {
         this.buildingId = buildingId;
         return this;
@@ -40,6 +42,7 @@ public class Building {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildingName")
     public String buildingName;
+
     public Building withBuildingName(String buildingName) {
         this.buildingName = buildingName;
         return this;
@@ -51,6 +54,7 @@ public class Building {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinates")
     public BuildingCoordinates coordinates;
+
     public Building withCoordinates(BuildingCoordinates coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -62,6 +66,7 @@ public class Building {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Building withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class Building {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etags")
     public String etags;
+
     public Building withEtags(String etags) {
         this.etags = etags;
         return this;
@@ -84,6 +90,7 @@ public class Building {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorNames")
     public String[] floorNames;
+
     public Building withFloorNames(String[] floorNames) {
         this.floorNames = floorNames;
         return this;
@@ -95,9 +102,11 @@ public class Building {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Building withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Building(){}
 }

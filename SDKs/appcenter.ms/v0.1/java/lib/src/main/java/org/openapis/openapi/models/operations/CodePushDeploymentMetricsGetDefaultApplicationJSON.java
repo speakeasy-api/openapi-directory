@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodePushDeploymentMetricsGetDefaultApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public CodePushDeploymentMetricsGetDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CodePushDeploymentMetricsGetDefaultApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

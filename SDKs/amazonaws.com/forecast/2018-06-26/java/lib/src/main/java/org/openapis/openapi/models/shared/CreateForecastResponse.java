@@ -15,9 +15,11 @@ public class CreateForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public CreateForecastResponse withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
     }
     
+    public CreateForecastResponse(){}
 }

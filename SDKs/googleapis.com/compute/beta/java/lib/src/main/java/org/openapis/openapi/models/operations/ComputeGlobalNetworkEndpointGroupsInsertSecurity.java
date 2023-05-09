@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeGlobalNetworkEndpointGroupsInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalNetworkEndpointGroupsInsertSecurityOption1 option1;
+
     public ComputeGlobalNetworkEndpointGroupsInsertSecurity withOption1(ComputeGlobalNetworkEndpointGroupsInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeGlobalNetworkEndpointGroupsInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalNetworkEndpointGroupsInsertSecurityOption2 option2;
+
     public ComputeGlobalNetworkEndpointGroupsInsertSecurity withOption2(ComputeGlobalNetworkEndpointGroupsInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeGlobalNetworkEndpointGroupsInsertSecurity(){}
 }

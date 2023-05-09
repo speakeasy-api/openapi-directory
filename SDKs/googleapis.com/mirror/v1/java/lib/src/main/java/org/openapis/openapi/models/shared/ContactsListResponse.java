@@ -15,6 +15,7 @@ public class ContactsListResponse {
      */
     
     public Contact[] items;
+
     public ContactsListResponse withItems(Contact[] items) {
         this.items = items;
         return this;
@@ -25,9 +26,11 @@ public class ContactsListResponse {
      */
     
     public String kind;
+
     public ContactsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ContactsListResponse(){}
 }

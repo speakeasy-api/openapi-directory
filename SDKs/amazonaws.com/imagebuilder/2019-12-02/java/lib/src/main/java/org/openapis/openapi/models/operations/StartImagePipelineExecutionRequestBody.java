@@ -12,6 +12,7 @@ public class StartImagePipelineExecutionRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartImagePipelineExecutionRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -22,9 +23,14 @@ public class StartImagePipelineExecutionRequestBody {
      */
     @JsonProperty("imagePipelineArn")
     public String imagePipelineArn;
+
     public StartImagePipelineExecutionRequestBody withImagePipelineArn(String imagePipelineArn) {
         this.imagePipelineArn = imagePipelineArn;
         return this;
     }
     
+    public StartImagePipelineExecutionRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("imagePipelineArn") String imagePipelineArn) {
+        this.clientToken = clientToken;
+        this.imagePipelineArn = imagePipelineArn;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class YoutubeVideoAbuseReportReasonsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public YoutubeVideoAbuseReportReasonsListSecurityOption1 option1;
+
     public YoutubeVideoAbuseReportReasonsListSecurity withOption1(YoutubeVideoAbuseReportReasonsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class YoutubeVideoAbuseReportReasonsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeVideoAbuseReportReasonsListSecurityOption2 option2;
+
     public YoutubeVideoAbuseReportReasonsListSecurity withOption2(YoutubeVideoAbuseReportReasonsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class YoutubeVideoAbuseReportReasonsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeVideoAbuseReportReasonsListSecurityOption3 option3;
+
     public YoutubeVideoAbuseReportReasonsListSecurity withOption3(YoutubeVideoAbuseReportReasonsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public YoutubeVideoAbuseReportReasonsListSecurity(){}
 }

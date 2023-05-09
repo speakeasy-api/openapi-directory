@@ -85,10 +85,8 @@ public class EmailListsAndAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QueryHardBouncedEmailsResponse res = new org.openapis.openapi.models.operations.QueryHardBouncedEmailsResponse() {{
+        org.openapis.openapi.models.operations.QueryHardBouncedEmailsResponse res = new org.openapis.openapi.models.operations.QueryHardBouncedEmailsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -126,10 +124,8 @@ public class EmailListsAndAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QueryListOfUnsubscribedEmailAddressesResponse res = new org.openapis.openapi.models.operations.QueryListOfUnsubscribedEmailAddressesResponse() {{
+        org.openapis.openapi.models.operations.QueryListOfUnsubscribedEmailAddressesResponse res = new org.openapis.openapi.models.operations.QueryListOfUnsubscribedEmailAddressesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

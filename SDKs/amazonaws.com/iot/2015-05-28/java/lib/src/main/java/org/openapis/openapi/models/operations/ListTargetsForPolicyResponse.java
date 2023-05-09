@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTargetsForPolicyResponse {
     
     public String contentType;
+
     public ListTargetsForPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTargetsForPolicyResponse {
      */
     
     public Object internalFailureException;
+
     public ListTargetsForPolicyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListTargetsForPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public ListTargetsForPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListTargetsForPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public ListTargetsForPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListTargetsForPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTargetsForPolicyResponse listTargetsForPolicyResponse;
+
     public ListTargetsForPolicyResponse withListTargetsForPolicyResponse(org.openapis.openapi.models.shared.ListTargetsForPolicyResponse listTargetsForPolicyResponse) {
         this.listTargetsForPolicyResponse = listTargetsForPolicyResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListTargetsForPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTargetsForPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListTargetsForPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListTargetsForPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListTargetsForPolicyResponse {
     
     
     public Integer statusCode;
+
     public ListTargetsForPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListTargetsForPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTargetsForPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListTargetsForPolicyResponse {
      */
     
     public Object throttlingException;
+
     public ListTargetsForPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListTargetsForPolicyResponse {
      */
     
     public Object unauthorizedException;
+
     public ListTargetsForPolicyResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListTargetsForPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

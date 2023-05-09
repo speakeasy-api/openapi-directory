@@ -15,9 +15,11 @@ public class PutSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioStream")
     public String audioStream;
+
     public PutSessionResponse withAudioStream(String audioStream) {
         this.audioStream = audioStream;
         return this;
     }
     
+    public PutSessionResponse(){}
 }

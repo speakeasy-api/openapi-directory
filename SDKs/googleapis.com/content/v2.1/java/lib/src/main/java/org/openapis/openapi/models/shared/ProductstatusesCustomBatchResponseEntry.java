@@ -18,6 +18,7 @@ public class ProductstatusesCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public ProductstatusesCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -29,6 +30,7 @@ public class ProductstatusesCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public ProductstatusesCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class ProductstatusesCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ProductstatusesCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class ProductstatusesCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productStatus")
     public ProductStatus productStatus;
+
     public ProductstatusesCustomBatchResponseEntry withProductStatus(ProductStatus productStatus) {
         this.productStatus = productStatus;
         return this;
     }
     
+    public ProductstatusesCustomBatchResponseEntry(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteIpGroupResponse {
@@ -12,6 +13,7 @@ public class DeleteIpGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteIpGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteIpGroupResponse {
     
     
     public String contentType;
+
     public DeleteIpGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteIpGroupResponse {
      */
     
     public java.util.Map<String, Object> deleteIpGroupResult;
+
     public DeleteIpGroupResponse withDeleteIpGroupResult(java.util.Map<String, Object> deleteIpGroupResult) {
         this.deleteIpGroupResult = deleteIpGroupResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteIpGroupResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DeleteIpGroupResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteIpGroupResponse {
      */
     
     public Object resourceAssociatedException;
+
     public DeleteIpGroupResponse withResourceAssociatedException(Object resourceAssociatedException) {
         this.resourceAssociatedException = resourceAssociatedException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteIpGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteIpGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteIpGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteIpGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteIpGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteIpGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteIpGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountTakeoverActionType {
     @JsonProperty("EventAction")
     public AccountTakeoverEventActionTypeEnum eventAction;
+
     public AccountTakeoverActionType withEventAction(AccountTakeoverEventActionTypeEnum eventAction) {
         this.eventAction = eventAction;
         return this;
@@ -19,9 +20,14 @@ public class AccountTakeoverActionType {
     
     @JsonProperty("Notify")
     public Boolean notify;
+
     public AccountTakeoverActionType withNotify(Boolean notify) {
         this.notify = notify;
         return this;
     }
     
+    public AccountTakeoverActionType(@JsonProperty("EventAction") AccountTakeoverEventActionTypeEnum eventAction, @JsonProperty("Notify") Boolean notify) {
+        this.eventAction = eventAction;
+        this.notify = notify;
+  }
 }

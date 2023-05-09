@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservationCreateReservationRequestDeliveryItemOption {
     @JsonProperty("aditionalTimeBlockedDays")
     public String aditionalTimeBlockedDays;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withAditionalTimeBlockedDays(String aditionalTimeBlockedDays) {
         this.aditionalTimeBlockedDays = aditionalTimeBlockedDays;
         return this;
@@ -16,6 +17,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("deliveryWindows")
     public String[] deliveryWindows;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withDeliveryWindows(String[] deliveryWindows) {
         this.deliveryWindows = deliveryWindows;
         return this;
@@ -23,6 +25,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("dockId")
     public String dockId;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -30,6 +33,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("dockTime")
     public String dockTime;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withDockTime(String dockTime) {
         this.dockTime = dockTime;
         return this;
@@ -37,6 +41,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("item")
     public CreateReservationCreateReservationRequestDeliveryItemOptionItem item;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withItem(CreateReservationCreateReservationRequestDeliveryItemOptionItem item) {
         this.item = item;
         return this;
@@ -44,6 +49,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -51,6 +57,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("location")
     public CreateReservationCreateReservationRequestDeliveryItemOptionLocation location;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withLocation(CreateReservationCreateReservationRequestDeliveryItemOptionLocation location) {
         this.location = location;
         return this;
@@ -58,6 +65,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("promotionalPrice")
     public Double promotionalPrice;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withPromotionalPrice(Double promotionalPrice) {
         this.promotionalPrice = promotionalPrice;
         return this;
@@ -65,6 +73,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("slaType")
     public String slaType;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withSlaType(String slaType) {
         this.slaType = slaType;
         return this;
@@ -72,6 +81,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("slaTypeName")
     public String slaTypeName;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withSlaTypeName(String slaTypeName) {
         this.slaTypeName = slaTypeName;
         return this;
@@ -79,6 +89,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("timeToDockPlusDockTime")
     public String timeToDockPlusDockTime;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withTimeToDockPlusDockTime(String timeToDockPlusDockTime) {
         this.timeToDockPlusDockTime = timeToDockPlusDockTime;
         return this;
@@ -86,6 +97,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("totalTime")
     public String totalTime;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withTotalTime(String totalTime) {
         this.totalTime = totalTime;
         return this;
@@ -93,6 +105,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("transitTime")
     public String transitTime;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withTransitTime(String transitTime) {
         this.transitTime = transitTime;
         return this;
@@ -100,9 +113,26 @@ public class CreateReservationCreateReservationRequestDeliveryItemOption {
     
     @JsonProperty("wareHouseId")
     public String wareHouseId;
+
     public CreateReservationCreateReservationRequestDeliveryItemOption withWareHouseId(String wareHouseId) {
         this.wareHouseId = wareHouseId;
         return this;
     }
     
+    public CreateReservationCreateReservationRequestDeliveryItemOption(@JsonProperty("aditionalTimeBlockedDays") String aditionalTimeBlockedDays, @JsonProperty("deliveryWindows") String[] deliveryWindows, @JsonProperty("dockId") String dockId, @JsonProperty("dockTime") String dockTime, @JsonProperty("item") CreateReservationCreateReservationRequestDeliveryItemOptionItem item, @JsonProperty("listPrice") Double listPrice, @JsonProperty("location") CreateReservationCreateReservationRequestDeliveryItemOptionLocation location, @JsonProperty("promotionalPrice") Double promotionalPrice, @JsonProperty("slaType") String slaType, @JsonProperty("slaTypeName") String slaTypeName, @JsonProperty("timeToDockPlusDockTime") String timeToDockPlusDockTime, @JsonProperty("totalTime") String totalTime, @JsonProperty("transitTime") String transitTime, @JsonProperty("wareHouseId") String wareHouseId) {
+        this.aditionalTimeBlockedDays = aditionalTimeBlockedDays;
+        this.deliveryWindows = deliveryWindows;
+        this.dockId = dockId;
+        this.dockTime = dockTime;
+        this.item = item;
+        this.listPrice = listPrice;
+        this.location = location;
+        this.promotionalPrice = promotionalPrice;
+        this.slaType = slaType;
+        this.slaTypeName = slaTypeName;
+        this.timeToDockPlusDockTime = timeToDockPlusDockTime;
+        this.totalTime = totalTime;
+        this.transitTime = transitTime;
+        this.wareHouseId = wareHouseId;
+  }
 }

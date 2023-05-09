@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3CompareVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowCxV3CompareVersionsRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3CompareVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetVersion")
     public String targetVersion;
+
     public GoogleCloudDialogflowCxV3CompareVersionsRequest withTargetVersion(String targetVersion) {
         this.targetVersion = targetVersion;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3CompareVersionsRequest(){}
 }

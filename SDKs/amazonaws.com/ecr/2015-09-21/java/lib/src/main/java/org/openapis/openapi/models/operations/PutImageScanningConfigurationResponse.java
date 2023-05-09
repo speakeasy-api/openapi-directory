@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutImageScanningConfigurationResponse {
     
     public String contentType;
+
     public PutImageScanningConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutImageScanningConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public PutImageScanningConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutImageScanningConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutImageScanningConfigurationResponse putImageScanningConfigurationResponse;
+
     public PutImageScanningConfigurationResponse withPutImageScanningConfigurationResponse(org.openapis.openapi.models.shared.PutImageScanningConfigurationResponse putImageScanningConfigurationResponse) {
         this.putImageScanningConfigurationResponse = putImageScanningConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutImageScanningConfigurationResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public PutImageScanningConfigurationResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class PutImageScanningConfigurationResponse {
      */
     
     public Object serverException;
+
     public PutImageScanningConfigurationResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class PutImageScanningConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutImageScanningConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutImageScanningConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutImageScanningConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class PutImageScanningConfigurationResponse {
      */
     
     public Object validationException;
+
     public PutImageScanningConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutImageScanningConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

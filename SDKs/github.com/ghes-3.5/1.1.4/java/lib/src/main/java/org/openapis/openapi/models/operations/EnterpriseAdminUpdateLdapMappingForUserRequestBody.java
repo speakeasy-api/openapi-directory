@@ -12,9 +12,13 @@ public class EnterpriseAdminUpdateLdapMappingForUserRequestBody {
      */
     @JsonProperty("ldap_dn")
     public String ldapDn;
+
     public EnterpriseAdminUpdateLdapMappingForUserRequestBody withLdapDn(String ldapDn) {
         this.ldapDn = ldapDn;
         return this;
     }
     
+    public EnterpriseAdminUpdateLdapMappingForUserRequestBody(@JsonProperty("ldap_dn") String ldapDn) {
+        this.ldapDn = ldapDn;
+  }
 }

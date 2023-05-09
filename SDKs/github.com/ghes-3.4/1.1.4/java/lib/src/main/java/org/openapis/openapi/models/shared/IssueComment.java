@@ -22,6 +22,7 @@ public class IssueComment {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public IssueComment withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -33,6 +34,7 @@ public class IssueComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public IssueComment withBody(String body) {
         this.body = body;
         return this;
@@ -41,6 +43,7 @@ public class IssueComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public IssueComment withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -49,6 +52,7 @@ public class IssueComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public IssueComment withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -58,6 +62,7 @@ public class IssueComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public IssueComment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -65,6 +70,7 @@ public class IssueComment {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public IssueComment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -75,6 +81,7 @@ public class IssueComment {
      */
     @JsonProperty("id")
     public Long id;
+
     public IssueComment withId(Long id) {
         this.id = id;
         return this;
@@ -82,6 +89,7 @@ public class IssueComment {
     
     @JsonProperty("issue_url")
     public String issueUrl;
+
     public IssueComment withIssueUrl(String issueUrl) {
         this.issueUrl = issueUrl;
         return this;
@@ -89,6 +97,7 @@ public class IssueComment {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public IssueComment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -100,6 +109,7 @@ public class IssueComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public IssueComment withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -108,6 +118,7 @@ public class IssueComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public IssueComment withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -117,6 +128,7 @@ public class IssueComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public IssueComment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -127,6 +139,7 @@ public class IssueComment {
      */
     @JsonProperty("url")
     public String url;
+
     public IssueComment withUrl(String url) {
         this.url = url;
         return this;
@@ -137,9 +150,21 @@ public class IssueComment {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public IssueComment withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public IssueComment(@JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("issue_url") String issueUrl, @JsonProperty("node_id") String nodeId, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.authorAssociation = authorAssociation;
+        this.createdAt = createdAt;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.issueUrl = issueUrl;
+        this.nodeId = nodeId;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

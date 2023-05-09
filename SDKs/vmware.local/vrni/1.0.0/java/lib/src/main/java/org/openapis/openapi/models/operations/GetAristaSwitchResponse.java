@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAristaSwitchResponse {
     
     public String contentType;
+
     public GetAristaSwitchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAristaSwitchResponse {
     
     
     public Integer statusCode;
+
     public GetAristaSwitchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAristaSwitchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAristaSwitchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetAristaSwitchResponse {
      */
     
     public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+
     public GetAristaSwitchResponse withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
         this.switchDataSource = switchDataSource;
         return this;
     }
     
+    public GetAristaSwitchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

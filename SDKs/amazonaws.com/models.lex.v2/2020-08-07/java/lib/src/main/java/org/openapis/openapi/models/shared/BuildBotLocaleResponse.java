@@ -20,6 +20,7 @@ public class BuildBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public BuildBotLocaleResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class BuildBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleStatus")
     public BotLocaleStatusEnum botLocaleStatus;
+
     public BuildBotLocaleResponse withBotLocaleStatus(BotLocaleStatusEnum botLocaleStatus) {
         this.botLocaleStatus = botLocaleStatus;
         return this;
@@ -36,6 +38,7 @@ public class BuildBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public BuildBotLocaleResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -46,6 +49,7 @@ public class BuildBotLocaleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastBuildSubmittedDateTime")
     public OffsetDateTime lastBuildSubmittedDateTime;
+
     public BuildBotLocaleResponse withLastBuildSubmittedDateTime(OffsetDateTime lastBuildSubmittedDateTime) {
         this.lastBuildSubmittedDateTime = lastBuildSubmittedDateTime;
         return this;
@@ -54,9 +58,11 @@ public class BuildBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public BuildBotLocaleResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
     }
     
+    public BuildBotLocaleResponse(){}
 }

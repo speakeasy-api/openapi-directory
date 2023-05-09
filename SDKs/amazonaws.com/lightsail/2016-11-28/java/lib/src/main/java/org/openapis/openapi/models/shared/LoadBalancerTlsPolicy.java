@@ -15,6 +15,7 @@ public class LoadBalancerTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ciphers")
     public String[] ciphers;
+
     public LoadBalancerTlsPolicy withCiphers(String[] ciphers) {
         this.ciphers = ciphers;
         return this;
@@ -23,6 +24,7 @@ public class LoadBalancerTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LoadBalancerTlsPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class LoadBalancerTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public LoadBalancerTlsPolicy withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -39,6 +42,7 @@ public class LoadBalancerTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LoadBalancerTlsPolicy withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class LoadBalancerTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocols")
     public String[] protocols;
+
     public LoadBalancerTlsPolicy withProtocols(String[] protocols) {
         this.protocols = protocols;
         return this;
     }
     
+    public LoadBalancerTlsPolicy(){}
 }

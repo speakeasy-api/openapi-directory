@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuestionsRequest {
@@ -12,6 +13,7 @@ public class GetQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attach_answers_for_project")
     public Long attachAnswersForProject;
+
     public GetQuestionsRequest withAttachAnswersForProject(Long attachAnswersForProject) {
         this.attachAnswersForProject = attachAnswersForProject;
         return this;
@@ -22,6 +24,7 @@ public class GetQuestionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scope")
     public String scope;
+
     public GetQuestionsRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -32,9 +35,14 @@ public class GetQuestionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public GetQuestionsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetQuestionsRequest(@JsonProperty("scope") String scope, @JsonProperty("type") String type) {
+        this.scope = scope;
+        this.type = type;
+  }
 }

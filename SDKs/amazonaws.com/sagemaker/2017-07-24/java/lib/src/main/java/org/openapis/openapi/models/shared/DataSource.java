@@ -15,6 +15,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemDataSource")
     public FileSystemDataSource fileSystemDataSource;
+
     public DataSource withFileSystemDataSource(FileSystemDataSource fileSystemDataSource) {
         this.fileSystemDataSource = fileSystemDataSource;
         return this;
@@ -23,9 +24,11 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DataSource")
     public S3DataSource s3DataSource;
+
     public DataSource withS3DataSource(S3DataSource s3DataSource) {
         this.s3DataSource = s3DataSource;
         return this;
     }
     
+    public DataSource(){}
 }

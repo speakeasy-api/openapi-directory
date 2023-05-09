@@ -17,6 +17,7 @@ public class SourceRead {
      */
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public SourceRead withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -25,6 +26,7 @@ public class SourceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public SourceRead withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -32,6 +34,7 @@ public class SourceRead {
     
     @JsonProperty("name")
     public String name;
+
     public SourceRead withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class SourceRead {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceRead withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
@@ -46,6 +50,7 @@ public class SourceRead {
     
     @JsonProperty("sourceId")
     public String sourceId;
+
     public SourceRead withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -53,6 +58,7 @@ public class SourceRead {
     
     @JsonProperty("sourceName")
     public String sourceName;
+
     public SourceRead withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -60,9 +66,18 @@ public class SourceRead {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public SourceRead withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public SourceRead(@JsonProperty("connectionConfiguration") Object connectionConfiguration, @JsonProperty("name") String name, @JsonProperty("sourceDefinitionId") String sourceDefinitionId, @JsonProperty("sourceId") String sourceId, @JsonProperty("sourceName") String sourceName, @JsonProperty("workspaceId") String workspaceId) {
+        this.connectionConfiguration = connectionConfiguration;
+        this.name = name;
+        this.sourceDefinitionId = sourceDefinitionId;
+        this.sourceId = sourceId;
+        this.sourceName = sourceName;
+        this.workspaceId = workspaceId;
+  }
 }

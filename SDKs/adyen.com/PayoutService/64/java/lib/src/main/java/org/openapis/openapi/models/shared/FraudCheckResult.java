@@ -12,6 +12,7 @@ public class FraudCheckResult {
      */
     @JsonProperty("accountScore")
     public Integer accountScore;
+
     public FraudCheckResult withAccountScore(Integer accountScore) {
         this.accountScore = accountScore;
         return this;
@@ -22,6 +23,7 @@ public class FraudCheckResult {
      */
     @JsonProperty("checkId")
     public Integer checkId;
+
     public FraudCheckResult withCheckId(Integer checkId) {
         this.checkId = checkId;
         return this;
@@ -32,9 +34,15 @@ public class FraudCheckResult {
      */
     @JsonProperty("name")
     public String name;
+
     public FraudCheckResult withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FraudCheckResult(@JsonProperty("accountScore") Integer accountScore, @JsonProperty("checkId") Integer checkId, @JsonProperty("name") String name) {
+        this.accountScore = accountScore;
+        this.checkId = checkId;
+        this.name = name;
+  }
 }

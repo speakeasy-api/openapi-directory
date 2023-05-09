@@ -15,9 +15,11 @@ public class GoogleCloudDocumentaiV1beta2GcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDocumentaiV1beta2GcsSource withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2GcsSource(){}
 }

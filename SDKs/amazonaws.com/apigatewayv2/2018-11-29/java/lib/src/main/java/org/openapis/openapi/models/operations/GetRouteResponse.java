@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRouteResponse {
     
     public String contentType;
+
     public GetRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRouteResult getRouteResult;
+
     public GetRouteResponse withGetRouteResult(org.openapis.openapi.models.shared.GetRouteResult getRouteResult) {
         this.getRouteResult = getRouteResult;
         return this;
@@ -29,6 +32,7 @@ public class GetRouteResponse {
      */
     
     public Object notFoundException;
+
     public GetRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetRouteResponse {
     
     
     public Integer statusCode;
+
     public GetRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

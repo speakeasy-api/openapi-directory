@@ -18,6 +18,7 @@ public class Found {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Found withLocation(String location) {
         this.location = location;
         return this;
@@ -29,9 +30,11 @@ public class Found {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Found withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Found(){}
 }

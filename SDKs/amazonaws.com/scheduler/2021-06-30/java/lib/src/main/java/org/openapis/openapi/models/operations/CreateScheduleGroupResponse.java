@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateScheduleGroupResponse {
@@ -12,6 +13,7 @@ public class CreateScheduleGroupResponse {
      */
     
     public Object conflictException;
+
     public CreateScheduleGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateScheduleGroupResponse {
     
     
     public String contentType;
+
     public CreateScheduleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateScheduleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateScheduleGroupOutput createScheduleGroupOutput;
+
     public CreateScheduleGroupResponse withCreateScheduleGroupOutput(org.openapis.openapi.models.shared.CreateScheduleGroupOutput createScheduleGroupOutput) {
         this.createScheduleGroupOutput = createScheduleGroupOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateScheduleGroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateScheduleGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateScheduleGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateScheduleGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateScheduleGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateScheduleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateScheduleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateScheduleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateScheduleGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateScheduleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CreateScheduleGroupResponse {
      */
     
     public Object validationException;
+
     public CreateScheduleGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateScheduleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

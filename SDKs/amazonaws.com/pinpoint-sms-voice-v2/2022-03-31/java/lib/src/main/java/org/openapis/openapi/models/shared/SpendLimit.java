@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SpendLimit {
     @JsonProperty("EnforcedLimit")
     public Long enforcedLimit;
+
     public SpendLimit withEnforcedLimit(Long enforcedLimit) {
         this.enforcedLimit = enforcedLimit;
         return this;
@@ -19,6 +20,7 @@ public class SpendLimit {
     
     @JsonProperty("MaxLimit")
     public Long maxLimit;
+
     public SpendLimit withMaxLimit(Long maxLimit) {
         this.maxLimit = maxLimit;
         return this;
@@ -26,6 +28,7 @@ public class SpendLimit {
     
     @JsonProperty("Name")
     public SpendLimitNameEnum name;
+
     public SpendLimit withName(SpendLimitNameEnum name) {
         this.name = name;
         return this;
@@ -33,9 +36,16 @@ public class SpendLimit {
     
     @JsonProperty("Overridden")
     public Boolean overridden;
+
     public SpendLimit withOverridden(Boolean overridden) {
         this.overridden = overridden;
         return this;
     }
     
+    public SpendLimit(@JsonProperty("EnforcedLimit") Long enforcedLimit, @JsonProperty("MaxLimit") Long maxLimit, @JsonProperty("Name") SpendLimitNameEnum name, @JsonProperty("Overridden") Boolean overridden) {
+        this.enforcedLimit = enforcedLimit;
+        this.maxLimit = maxLimit;
+        this.name = name;
+        this.overridden = overridden;
+  }
 }

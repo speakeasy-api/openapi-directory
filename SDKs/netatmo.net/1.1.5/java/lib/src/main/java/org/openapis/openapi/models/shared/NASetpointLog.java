@@ -12,6 +12,7 @@ public class NASetpointLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint")
     public NASetpoint setpoint;
+
     public NASetpointLog withSetpoint(NASetpoint setpoint) {
         this.setpoint = setpoint;
         return this;
@@ -20,9 +21,11 @@ public class NASetpointLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public NASetpointLog withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public NASetpointLog(){}
 }

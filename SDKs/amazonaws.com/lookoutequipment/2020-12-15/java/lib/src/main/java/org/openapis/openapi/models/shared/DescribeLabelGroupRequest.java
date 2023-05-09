@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLabelGroupRequest {
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public DescribeLabelGroupRequest withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
     }
     
+    public DescribeLabelGroupRequest(@JsonProperty("LabelGroupName") String labelGroupName) {
+        this.labelGroupName = labelGroupName;
+  }
 }

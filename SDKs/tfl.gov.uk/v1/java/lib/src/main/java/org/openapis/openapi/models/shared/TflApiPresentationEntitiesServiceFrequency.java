@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesServiceFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highestFrequency")
     public Double highestFrequency;
+
     public TflApiPresentationEntitiesServiceFrequency withHighestFrequency(Double highestFrequency) {
         this.highestFrequency = highestFrequency;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesServiceFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowestFrequency")
     public Double lowestFrequency;
+
     public TflApiPresentationEntitiesServiceFrequency withLowestFrequency(Double lowestFrequency) {
         this.lowestFrequency = lowestFrequency;
         return this;
     }
     
+    public TflApiPresentationEntitiesServiceFrequency(){}
 }

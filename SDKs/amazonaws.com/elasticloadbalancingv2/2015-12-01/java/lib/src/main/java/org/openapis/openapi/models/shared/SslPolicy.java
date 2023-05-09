@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SslPolicy {
     
     public Cipher[] ciphers;
+
     public SslPolicy withCiphers(Cipher[] ciphers) {
         this.ciphers = ciphers;
         return this;
@@ -19,6 +20,7 @@ public class SslPolicy {
     
     
     public String name;
+
     public SslPolicy withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class SslPolicy {
     
     
     public String[] sslProtocols;
+
     public SslPolicy withSslProtocols(String[] sslProtocols) {
         this.sslProtocols = sslProtocols;
         return this;
@@ -33,9 +36,11 @@ public class SslPolicy {
     
     
     public String[] supportedLoadBalancerTypes;
+
     public SslPolicy withSupportedLoadBalancerTypes(String[] supportedLoadBalancerTypes) {
         this.supportedLoadBalancerTypes = supportedLoadBalancerTypes;
         return this;
     }
     
+    public SslPolicy(){}
 }

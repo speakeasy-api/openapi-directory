@@ -12,6 +12,7 @@ public class AccountUpdateRecoveryRequestBody {
      */
     @JsonProperty("password")
     public String password;
+
     public AccountUpdateRecoveryRequestBody withPassword(String password) {
         this.password = password;
         return this;
@@ -22,6 +23,7 @@ public class AccountUpdateRecoveryRequestBody {
      */
     @JsonProperty("passwordAgain")
     public String passwordAgain;
+
     public AccountUpdateRecoveryRequestBody withPasswordAgain(String passwordAgain) {
         this.passwordAgain = passwordAgain;
         return this;
@@ -32,6 +34,7 @@ public class AccountUpdateRecoveryRequestBody {
      */
     @JsonProperty("secret")
     public String secret;
+
     public AccountUpdateRecoveryRequestBody withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -42,9 +45,15 @@ public class AccountUpdateRecoveryRequestBody {
      */
     @JsonProperty("userId")
     public String userId;
+
     public AccountUpdateRecoveryRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AccountUpdateRecoveryRequestBody(@JsonProperty("userId") String userId, @JsonProperty("password") String password, @JsonProperty("secret") String secret) {
+        this.userId = userId;
+        this.password = password;
+        this.secret = secret;
+  }
 }

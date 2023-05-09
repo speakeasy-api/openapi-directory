@@ -18,6 +18,7 @@ public class Threshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public ThresholdColorEnum color;
+
     public Threshold withColor(ThresholdColorEnum color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class Threshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public ThresholdDirectionEnum direction;
+
     public Threshold withDirection(ThresholdDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -40,6 +42,7 @@ public class Threshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Threshold withLabel(String label) {
         this.label = label;
         return this;
@@ -51,6 +54,7 @@ public class Threshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetAxis")
     public ThresholdTargetAxisEnum targetAxis;
+
     public Threshold withTargetAxis(ThresholdTargetAxisEnum targetAxis) {
         this.targetAxis = targetAxis;
         return this;
@@ -62,9 +66,11 @@ public class Threshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public Threshold withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Threshold(){}
 }

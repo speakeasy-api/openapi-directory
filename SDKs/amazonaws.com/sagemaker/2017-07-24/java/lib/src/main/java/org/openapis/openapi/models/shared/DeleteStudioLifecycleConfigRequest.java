@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteStudioLifecycleConfigRequest {
     @JsonProperty("StudioLifecycleConfigName")
     public String studioLifecycleConfigName;
+
     public DeleteStudioLifecycleConfigRequest withStudioLifecycleConfigName(String studioLifecycleConfigName) {
         this.studioLifecycleConfigName = studioLifecycleConfigName;
         return this;
     }
     
+    public DeleteStudioLifecycleConfigRequest(@JsonProperty("StudioLifecycleConfigName") String studioLifecycleConfigName) {
+        this.studioLifecycleConfigName = studioLifecycleConfigName;
+  }
 }

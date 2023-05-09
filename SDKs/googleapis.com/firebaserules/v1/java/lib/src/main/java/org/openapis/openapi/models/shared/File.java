@@ -18,6 +18,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public File withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public File withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -40,9 +42,11 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public File withName(String name) {
         this.name = name;
         return this;
     }
     
+    public File(){}
 }

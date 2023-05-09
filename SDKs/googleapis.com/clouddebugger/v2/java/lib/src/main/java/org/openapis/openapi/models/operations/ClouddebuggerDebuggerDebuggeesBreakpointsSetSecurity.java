@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurityOption1 option1;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity withOption1(ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurityOption2 option2;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity withOption2(ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity(){}
 }

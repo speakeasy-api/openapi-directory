@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResult {
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion launchTemplateVersion;
+
     public CreateLaunchTemplateVersionResult withLaunchTemplateVersion(CreateLaunchTemplateVersionResultLaunchTemplateVersion launchTemplateVersion) {
         this.launchTemplateVersion = launchTemplateVersion;
         return this;
@@ -19,9 +20,11 @@ public class CreateLaunchTemplateVersionResult {
     
     
     public CreateLaunchTemplateVersionResultWarning warning;
+
     public CreateLaunchTemplateVersionResult withWarning(CreateLaunchTemplateVersionResultWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResult(){}
 }

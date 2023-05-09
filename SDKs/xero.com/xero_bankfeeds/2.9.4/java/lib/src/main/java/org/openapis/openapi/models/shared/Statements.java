@@ -16,6 +16,7 @@ public class Statements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Statement[] items;
+
     public Statements withItems(Statement[] items) {
         this.items = items;
         return this;
@@ -24,9 +25,11 @@ public class Statements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public Pagination pagination;
+
     public Statements withPagination(Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public Statements(){}
 }

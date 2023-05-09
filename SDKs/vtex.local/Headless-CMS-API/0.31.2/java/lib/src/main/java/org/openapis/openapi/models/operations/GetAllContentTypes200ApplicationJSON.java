@@ -18,9 +18,11 @@ public class GetAllContentTypes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentTypes")
     public GetAllContentTypes200ApplicationJSONContentTypes[] contentTypes;
+
     public GetAllContentTypes200ApplicationJSON withContentTypes(GetAllContentTypes200ApplicationJSONContentTypes[] contentTypes) {
         this.contentTypes = contentTypes;
         return this;
     }
     
+    public GetAllContentTypes200ApplicationJSON(){}
 }

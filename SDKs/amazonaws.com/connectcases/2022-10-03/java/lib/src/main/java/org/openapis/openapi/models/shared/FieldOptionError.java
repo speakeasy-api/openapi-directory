@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FieldOptionError {
     @JsonProperty("errorCode")
     public String errorCode;
+
     public FieldOptionError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,6 +20,7 @@ public class FieldOptionError {
     
     @JsonProperty("message")
     public String message;
+
     public FieldOptionError withMessage(String message) {
         this.message = message;
         return this;
@@ -26,9 +28,15 @@ public class FieldOptionError {
     
     @JsonProperty("value")
     public String value;
+
     public FieldOptionError withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FieldOptionError(@JsonProperty("errorCode") String errorCode, @JsonProperty("message") String message, @JsonProperty("value") String value) {
+        this.errorCode = errorCode;
+        this.message = message;
+        this.value = value;
+  }
 }

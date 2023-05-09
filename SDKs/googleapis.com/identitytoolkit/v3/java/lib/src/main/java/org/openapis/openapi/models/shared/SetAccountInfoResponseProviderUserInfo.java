@@ -15,6 +15,7 @@ public class SetAccountInfoResponseProviderUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SetAccountInfoResponseProviderUserInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,6 +27,7 @@ public class SetAccountInfoResponseProviderUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federatedId")
     public String federatedId;
+
     public SetAccountInfoResponseProviderUserInfo withFederatedId(String federatedId) {
         this.federatedId = federatedId;
         return this;
@@ -37,6 +39,7 @@ public class SetAccountInfoResponseProviderUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoUrl")
     public String photoUrl;
+
     public SetAccountInfoResponseProviderUserInfo withPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
         return this;
@@ -48,9 +51,11 @@ public class SetAccountInfoResponseProviderUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerId")
     public String providerId;
+
     public SetAccountInfoResponseProviderUserInfo withProviderId(String providerId) {
         this.providerId = providerId;
         return this;
     }
     
+    public SetAccountInfoResponseProviderUserInfo(){}
 }

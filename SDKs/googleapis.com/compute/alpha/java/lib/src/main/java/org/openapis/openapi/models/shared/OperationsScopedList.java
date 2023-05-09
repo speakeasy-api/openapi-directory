@@ -15,6 +15,7 @@ public class OperationsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public OperationsScopedList withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
@@ -26,9 +27,11 @@ public class OperationsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public OperationsScopedListWarning warning;
+
     public OperationsScopedList withWarning(OperationsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public OperationsScopedList(){}
 }

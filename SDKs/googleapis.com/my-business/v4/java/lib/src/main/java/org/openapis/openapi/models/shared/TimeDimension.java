@@ -18,6 +18,7 @@ public class TimeDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public TimeDimensionDayOfWeekEnum dayOfWeek;
+
     public TimeDimension withDayOfWeek(TimeDimensionDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -29,6 +30,7 @@ public class TimeDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeOfDay")
     public TimeOfDay timeOfDay;
+
     public TimeDimension withTimeOfDay(TimeOfDay timeOfDay) {
         this.timeOfDay = timeOfDay;
         return this;
@@ -40,9 +42,11 @@ public class TimeDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeRange")
     public TimeRange timeRange;
+
     public TimeDimension withTimeRange(TimeRange timeRange) {
         this.timeRange = timeRange;
         return this;
     }
     
+    public TimeDimension(){}
 }

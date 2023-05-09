@@ -15,6 +15,7 @@ public class BucketPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsPublicReadAccess")
     public Boolean allowsPublicReadAccess;
+
     public BucketPolicy withAllowsPublicReadAccess(Boolean allowsPublicReadAccess) {
         this.allowsPublicReadAccess = allowsPublicReadAccess;
         return this;
@@ -23,9 +24,11 @@ public class BucketPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsPublicWriteAccess")
     public Boolean allowsPublicWriteAccess;
+
     public BucketPolicy withAllowsPublicWriteAccess(Boolean allowsPublicWriteAccess) {
         this.allowsPublicWriteAccess = allowsPublicWriteAccess;
         return this;
     }
     
+    public BucketPolicy(){}
 }

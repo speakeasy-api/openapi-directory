@@ -61,11 +61,9 @@ public class AutomationRuns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomationRunsResponse res = new org.openapis.openapi.models.operations.GetAutomationRunsResponse() {{
+        org.openapis.openapi.models.operations.GetAutomationRunsResponse res = new org.openapis.openapi.models.operations.GetAutomationRunsResponse(contentType, httpRes.statusCode()) {{
             automationRunEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class AutomationRuns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomationRunsIdResponse res = new org.openapis.openapi.models.operations.GetAutomationRunsIdResponse() {{
+        org.openapis.openapi.models.operations.GetAutomationRunsIdResponse res = new org.openapis.openapi.models.operations.GetAutomationRunsIdResponse(contentType, httpRes.statusCode()) {{
             automationRunEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

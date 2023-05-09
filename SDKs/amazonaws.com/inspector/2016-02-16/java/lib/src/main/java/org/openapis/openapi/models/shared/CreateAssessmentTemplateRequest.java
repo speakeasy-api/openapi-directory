@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAssessmentTemplateRequest {
     @JsonProperty("assessmentTargetArn")
     public String assessmentTargetArn;
+
     public CreateAssessmentTemplateRequest withAssessmentTargetArn(String assessmentTargetArn) {
         this.assessmentTargetArn = assessmentTargetArn;
         return this;
@@ -18,6 +19,7 @@ public class CreateAssessmentTemplateRequest {
     
     @JsonProperty("assessmentTemplateName")
     public String assessmentTemplateName;
+
     public CreateAssessmentTemplateRequest withAssessmentTemplateName(String assessmentTemplateName) {
         this.assessmentTemplateName = assessmentTemplateName;
         return this;
@@ -25,6 +27,7 @@ public class CreateAssessmentTemplateRequest {
     
     @JsonProperty("durationInSeconds")
     public Long durationInSeconds;
+
     public CreateAssessmentTemplateRequest withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -32,6 +35,7 @@ public class CreateAssessmentTemplateRequest {
     
     @JsonProperty("rulesPackageArns")
     public String[] rulesPackageArns;
+
     public CreateAssessmentTemplateRequest withRulesPackageArns(String[] rulesPackageArns) {
         this.rulesPackageArns = rulesPackageArns;
         return this;
@@ -40,9 +44,16 @@ public class CreateAssessmentTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAttributesForFindings")
     public Attribute[] userAttributesForFindings;
+
     public CreateAssessmentTemplateRequest withUserAttributesForFindings(Attribute[] userAttributesForFindings) {
         this.userAttributesForFindings = userAttributesForFindings;
         return this;
     }
     
+    public CreateAssessmentTemplateRequest(@JsonProperty("assessmentTargetArn") String assessmentTargetArn, @JsonProperty("assessmentTemplateName") String assessmentTemplateName, @JsonProperty("durationInSeconds") Long durationInSeconds, @JsonProperty("rulesPackageArns") String[] rulesPackageArns) {
+        this.assessmentTargetArn = assessmentTargetArn;
+        this.assessmentTemplateName = assessmentTemplateName;
+        this.durationInSeconds = durationInSeconds;
+        this.rulesPackageArns = rulesPackageArns;
+  }
 }

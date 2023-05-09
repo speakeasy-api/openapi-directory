@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProductionVariantServerlessConfig {
     @JsonProperty("MaxConcurrency")
     public Long maxConcurrency;
+
     public ProductionVariantServerlessConfig withMaxConcurrency(Long maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -19,9 +20,14 @@ public class ProductionVariantServerlessConfig {
     
     @JsonProperty("MemorySizeInMB")
     public Long memorySizeInMB;
+
     public ProductionVariantServerlessConfig withMemorySizeInMB(Long memorySizeInMB) {
         this.memorySizeInMB = memorySizeInMB;
         return this;
     }
     
+    public ProductionVariantServerlessConfig(@JsonProperty("MaxConcurrency") Long maxConcurrency, @JsonProperty("MemorySizeInMB") Long memorySizeInMB) {
+        this.maxConcurrency = maxConcurrency;
+        this.memorySizeInMB = memorySizeInMB;
+  }
 }

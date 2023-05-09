@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataSubjectRightExportStatusRequestResponse {
     
     public String contentType;
+
     public DataSubjectRightExportStatusRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataSubjectRightExportStatusRequestResponse {
      */
     
     public DataSubjectRightExportStatusRequest200ApplicationJSON dataSubjectRightExportStatusRequest200ApplicationJSONObject;
+
     public DataSubjectRightExportStatusRequestResponse withDataSubjectRightExportStatusRequest200ApplicationJSONObject(DataSubjectRightExportStatusRequest200ApplicationJSON dataSubjectRightExportStatusRequest200ApplicationJSONObject) {
         this.dataSubjectRightExportStatusRequest200ApplicationJSONObject = dataSubjectRightExportStatusRequest200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class DataSubjectRightExportStatusRequestResponse {
      */
     
     public DataSubjectRightExportStatusRequestDefaultApplicationJSON dataSubjectRightExportStatusRequestDefaultApplicationJSONObject;
+
     public DataSubjectRightExportStatusRequestResponse withDataSubjectRightExportStatusRequestDefaultApplicationJSONObject(DataSubjectRightExportStatusRequestDefaultApplicationJSON dataSubjectRightExportStatusRequestDefaultApplicationJSONObject) {
         this.dataSubjectRightExportStatusRequestDefaultApplicationJSONObject = dataSubjectRightExportStatusRequestDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class DataSubjectRightExportStatusRequestResponse {
     
     
     public Integer statusCode;
+
     public DataSubjectRightExportStatusRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DataSubjectRightExportStatusRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataSubjectRightExportStatusRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataSubjectRightExportStatusRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

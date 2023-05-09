@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2NotesJsonRequestBody {
@@ -12,6 +13,7 @@ public class PostV2NotesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=associated_with_id")
     public Long associatedWithId;
+
     public PostV2NotesJsonRequestBody withAssociatedWithId(Long associatedWithId) {
         this.associatedWithId = associatedWithId;
         return this;
@@ -22,6 +24,7 @@ public class PostV2NotesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=associated_with_type")
     public String associatedWithType;
+
     public PostV2NotesJsonRequestBody withAssociatedWithType(String associatedWithType) {
         this.associatedWithType = associatedWithType;
         return this;
@@ -32,6 +35,7 @@ public class PostV2NotesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=call_id")
     public Long callId;
+
     public PostV2NotesJsonRequestBody withCallId(Long callId) {
         this.callId = callId;
         return this;
@@ -42,6 +46,7 @@ public class PostV2NotesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=content")
     public String content;
+
     public PostV2NotesJsonRequestBody withContent(String content) {
         this.content = content;
         return this;
@@ -52,6 +57,7 @@ public class PostV2NotesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=skip_crm_sync")
     public Boolean skipCrmSync;
+
     public PostV2NotesJsonRequestBody withSkipCrmSync(Boolean skipCrmSync) {
         this.skipCrmSync = skipCrmSync;
         return this;
@@ -62,6 +68,7 @@ public class PostV2NotesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=subject")
     public String subject;
+
     public PostV2NotesJsonRequestBody withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -72,9 +79,15 @@ public class PostV2NotesJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=user_guid")
     public String userGuid;
+
     public PostV2NotesJsonRequestBody withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public PostV2NotesJsonRequestBody(@JsonProperty("associated_with_id") Long associatedWithId, @JsonProperty("associated_with_type") String associatedWithType, @JsonProperty("content") String content) {
+        this.associatedWithId = associatedWithId;
+        this.associatedWithType = associatedWithType;
+        this.content = content;
+  }
 }

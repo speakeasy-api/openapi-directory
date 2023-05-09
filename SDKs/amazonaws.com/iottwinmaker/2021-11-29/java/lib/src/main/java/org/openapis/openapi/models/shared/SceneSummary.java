@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SceneSummary {
     @JsonProperty("arn")
     public String arn;
+
     public SceneSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class SceneSummary {
     
     @JsonProperty("contentLocation")
     public String contentLocation;
+
     public SceneSummary withContentLocation(String contentLocation) {
         this.contentLocation = contentLocation;
         return this;
@@ -35,6 +37,7 @@ public class SceneSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public SceneSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -43,6 +46,7 @@ public class SceneSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SceneSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +54,7 @@ public class SceneSummary {
     
     @JsonProperty("sceneId")
     public String sceneId;
+
     public SceneSummary withSceneId(String sceneId) {
         this.sceneId = sceneId;
         return this;
@@ -59,9 +64,17 @@ public class SceneSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public SceneSummary withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public SceneSummary(@JsonProperty("arn") String arn, @JsonProperty("contentLocation") String contentLocation, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("sceneId") String sceneId, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime) {
+        this.arn = arn;
+        this.contentLocation = contentLocation;
+        this.creationDateTime = creationDateTime;
+        this.sceneId = sceneId;
+        this.updateDateTime = updateDateTime;
+  }
 }

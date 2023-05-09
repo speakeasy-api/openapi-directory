@@ -3,9 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BrowseCSVRequest;
 import org.openapis.openapi.models.operations.BrowseCSVResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -20,8 +20,8 @@ public class Application {
                 additionalOrder = "corrupti";
                 secondarySeparator = "provident";
                 separator = "distinctio";
-                viewId = 844266;
-            }}            
+                viewId = 844266L;
+            }};            
 
             BrowseCSVResponse res = sdk.browser.browseCSV(req);
 
@@ -31,5 +31,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

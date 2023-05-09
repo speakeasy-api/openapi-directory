@@ -15,9 +15,13 @@ public class UpdateWageSettingRequest {
      */
     @JsonProperty("wage_setting")
     public WageSetting wageSetting;
+
     public UpdateWageSettingRequest withWageSetting(WageSetting wageSetting) {
         this.wageSetting = wageSetting;
         return this;
     }
     
+    public UpdateWageSettingRequest(@JsonProperty("wage_setting") WageSetting wageSetting) {
+        this.wageSetting = wageSetting;
+  }
 }

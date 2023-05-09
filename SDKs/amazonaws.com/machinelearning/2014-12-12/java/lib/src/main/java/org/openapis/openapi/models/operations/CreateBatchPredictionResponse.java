@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBatchPredictionResponse {
     
     public String contentType;
+
     public CreateBatchPredictionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateBatchPredictionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBatchPredictionOutput createBatchPredictionOutput;
+
     public CreateBatchPredictionResponse withCreateBatchPredictionOutput(org.openapis.openapi.models.shared.CreateBatchPredictionOutput createBatchPredictionOutput) {
         this.createBatchPredictionOutput = createBatchPredictionOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateBatchPredictionResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateBatchPredictionResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateBatchPredictionResponse {
      */
     
     public Object internalServerException;
+
     public CreateBatchPredictionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBatchPredictionResponse {
      */
     
     public Object invalidInputException;
+
     public CreateBatchPredictionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class CreateBatchPredictionResponse {
     
     
     public Integer statusCode;
+
     public CreateBatchPredictionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateBatchPredictionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBatchPredictionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateBatchPredictionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

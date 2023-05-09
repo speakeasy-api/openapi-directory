@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchPlaceIndexForPositionResponse {
@@ -12,6 +13,7 @@ public class SearchPlaceIndexForPositionResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchPlaceIndexForPositionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchPlaceIndexForPositionResponse {
     
     
     public String contentType;
+
     public SearchPlaceIndexForPositionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchPlaceIndexForPositionResponse {
      */
     
     public Object internalServerException;
+
     public SearchPlaceIndexForPositionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class SearchPlaceIndexForPositionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchPlaceIndexForPositionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SearchPlaceIndexForPositionResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchPlaceIndexForPositionResponse searchPlaceIndexForPositionResponse;
+
     public SearchPlaceIndexForPositionResponse withSearchPlaceIndexForPositionResponse(org.openapis.openapi.models.shared.SearchPlaceIndexForPositionResponse searchPlaceIndexForPositionResponse) {
         this.searchPlaceIndexForPositionResponse = searchPlaceIndexForPositionResponse;
         return this;
@@ -56,6 +62,7 @@ public class SearchPlaceIndexForPositionResponse {
     
     
     public Integer statusCode;
+
     public SearchPlaceIndexForPositionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SearchPlaceIndexForPositionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchPlaceIndexForPositionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class SearchPlaceIndexForPositionResponse {
      */
     
     public Object throttlingException;
+
     public SearchPlaceIndexForPositionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class SearchPlaceIndexForPositionResponse {
      */
     
     public Object validationException;
+
     public SearchPlaceIndexForPositionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchPlaceIndexForPositionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

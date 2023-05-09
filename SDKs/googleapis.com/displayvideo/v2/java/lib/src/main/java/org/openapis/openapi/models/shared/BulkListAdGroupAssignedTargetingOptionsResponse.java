@@ -18,6 +18,7 @@ public class BulkListAdGroupAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public BulkListAdGroupAssignedTargetingOptionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class BulkListAdGroupAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeAdGroupAssignedTargetingOptions")
     public YoutubeAdGroupAssignedTargetingOption[] youtubeAdGroupAssignedTargetingOptions;
+
     public BulkListAdGroupAssignedTargetingOptionsResponse withYoutubeAdGroupAssignedTargetingOptions(YoutubeAdGroupAssignedTargetingOption[] youtubeAdGroupAssignedTargetingOptions) {
         this.youtubeAdGroupAssignedTargetingOptions = youtubeAdGroupAssignedTargetingOptions;
         return this;
     }
     
+    public BulkListAdGroupAssignedTargetingOptionsResponse(){}
 }

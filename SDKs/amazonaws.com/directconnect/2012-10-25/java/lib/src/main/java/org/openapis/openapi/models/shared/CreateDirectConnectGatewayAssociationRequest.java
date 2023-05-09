@@ -12,6 +12,7 @@ public class CreateDirectConnectGatewayAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addAllowedPrefixesToDirectConnectGateway")
     public RouteFilterPrefix[] addAllowedPrefixesToDirectConnectGateway;
+
     public CreateDirectConnectGatewayAssociationRequest withAddAllowedPrefixesToDirectConnectGateway(RouteFilterPrefix[] addAllowedPrefixesToDirectConnectGateway) {
         this.addAllowedPrefixesToDirectConnectGateway = addAllowedPrefixesToDirectConnectGateway;
         return this;
@@ -19,6 +20,7 @@ public class CreateDirectConnectGatewayAssociationRequest {
     
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public CreateDirectConnectGatewayAssociationRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -27,6 +29,7 @@ public class CreateDirectConnectGatewayAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayId")
     public String gatewayId;
+
     public CreateDirectConnectGatewayAssociationRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -35,9 +38,13 @@ public class CreateDirectConnectGatewayAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayId")
     public String virtualGatewayId;
+
     public CreateDirectConnectGatewayAssociationRequest withVirtualGatewayId(String virtualGatewayId) {
         this.virtualGatewayId = virtualGatewayId;
         return this;
     }
     
+    public CreateDirectConnectGatewayAssociationRequest(@JsonProperty("directConnectGatewayId") String directConnectGatewayId) {
+        this.directConnectGatewayId = directConnectGatewayId;
+  }
 }

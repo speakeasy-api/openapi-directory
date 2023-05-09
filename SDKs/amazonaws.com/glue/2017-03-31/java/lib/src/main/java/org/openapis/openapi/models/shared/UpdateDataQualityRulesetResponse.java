@@ -15,6 +15,7 @@ public class UpdateDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateDataQualityRulesetResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class UpdateDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateDataQualityRulesetResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class UpdateDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ruleset")
     public String ruleset;
+
     public UpdateDataQualityRulesetResponse withRuleset(String ruleset) {
         this.ruleset = ruleset;
         return this;
     }
     
+    public UpdateDataQualityRulesetResponse(){}
 }

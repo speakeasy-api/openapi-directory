@@ -18,6 +18,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("local_amount")
     public Double localAmount;
+
     public Price withLocalAmount(Double localAmount) {
         this.localAmount = localAmount;
         return this;
@@ -29,9 +30,11 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("local_currency")
     public String localCurrency;
+
     public Price withLocalCurrency(String localCurrency) {
         this.localCurrency = localCurrency;
         return this;
     }
     
+    public Price(){}
 }

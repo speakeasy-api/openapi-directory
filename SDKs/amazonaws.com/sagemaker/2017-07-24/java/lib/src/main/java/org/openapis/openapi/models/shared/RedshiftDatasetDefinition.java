@@ -17,6 +17,7 @@ public class RedshiftDatasetDefinition {
      */
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public RedshiftDatasetDefinition withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -24,6 +25,7 @@ public class RedshiftDatasetDefinition {
     
     @JsonProperty("ClusterRoleArn")
     public String clusterRoleArn;
+
     public RedshiftDatasetDefinition withClusterRoleArn(String clusterRoleArn) {
         this.clusterRoleArn = clusterRoleArn;
         return this;
@@ -34,6 +36,7 @@ public class RedshiftDatasetDefinition {
      */
     @JsonProperty("Database")
     public String database;
+
     public RedshiftDatasetDefinition withDatabase(String database) {
         this.database = database;
         return this;
@@ -44,6 +47,7 @@ public class RedshiftDatasetDefinition {
      */
     @JsonProperty("DbUser")
     public String dbUser;
+
     public RedshiftDatasetDefinition withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -52,6 +56,7 @@ public class RedshiftDatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public RedshiftDatasetDefinition withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -63,6 +68,7 @@ public class RedshiftDatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputCompression")
     public RedshiftResultCompressionTypeEnum outputCompression;
+
     public RedshiftDatasetDefinition withOutputCompression(RedshiftResultCompressionTypeEnum outputCompression) {
         this.outputCompression = outputCompression;
         return this;
@@ -73,6 +79,7 @@ public class RedshiftDatasetDefinition {
      */
     @JsonProperty("OutputFormat")
     public RedshiftResultFormatEnum outputFormat;
+
     public RedshiftDatasetDefinition withOutputFormat(RedshiftResultFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -80,6 +87,7 @@ public class RedshiftDatasetDefinition {
     
     @JsonProperty("OutputS3Uri")
     public String outputS3Uri;
+
     public RedshiftDatasetDefinition withOutputS3Uri(String outputS3Uri) {
         this.outputS3Uri = outputS3Uri;
         return this;
@@ -90,9 +98,19 @@ public class RedshiftDatasetDefinition {
      */
     @JsonProperty("QueryString")
     public String queryString;
+
     public RedshiftDatasetDefinition withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public RedshiftDatasetDefinition(@JsonProperty("ClusterId") String clusterId, @JsonProperty("ClusterRoleArn") String clusterRoleArn, @JsonProperty("Database") String database, @JsonProperty("DbUser") String dbUser, @JsonProperty("OutputFormat") RedshiftResultFormatEnum outputFormat, @JsonProperty("OutputS3Uri") String outputS3Uri, @JsonProperty("QueryString") String queryString) {
+        this.clusterId = clusterId;
+        this.clusterRoleArn = clusterRoleArn;
+        this.database = database;
+        this.dbUser = dbUser;
+        this.outputFormat = outputFormat;
+        this.outputS3Uri = outputS3Uri;
+        this.queryString = queryString;
+  }
 }

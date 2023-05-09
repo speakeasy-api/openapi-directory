@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SlackGetSlackGetResponse {
     
     public String contentType;
+
     public SlackGetSlackGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SlackGetSlackGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public SlackGetSlackGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class SlackGetSlackGetResponse {
     
     
     public Integer statusCode;
+
     public SlackGetSlackGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SlackGetSlackGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SlackGetSlackGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SlackGetSlackGetResponse {
      */
     
     public Object slackGetSlackGet200ApplicationJSONAny;
+
     public SlackGetSlackGetResponse withSlackGetSlackGet200ApplicationJSONAny(Object slackGetSlackGet200ApplicationJSONAny) {
         this.slackGetSlackGet200ApplicationJSONAny = slackGetSlackGet200ApplicationJSONAny;
         return this;
     }
     
+    public SlackGetSlackGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

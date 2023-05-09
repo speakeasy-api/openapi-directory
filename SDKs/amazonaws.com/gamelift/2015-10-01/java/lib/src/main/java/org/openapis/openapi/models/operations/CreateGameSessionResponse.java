@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGameSessionResponse {
@@ -12,6 +13,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object conflictException;
+
     public CreateGameSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateGameSessionResponse {
     
     
     public String contentType;
+
     public CreateGameSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateGameSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGameSessionOutput createGameSessionOutput;
+
     public CreateGameSessionResponse withCreateGameSessionOutput(org.openapis.openapi.models.shared.CreateGameSessionOutput createGameSessionOutput) {
         this.createGameSessionOutput = createGameSessionOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object fleetCapacityExceededException;
+
     public CreateGameSessionResponse withFleetCapacityExceededException(Object fleetCapacityExceededException) {
         this.fleetCapacityExceededException = fleetCapacityExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateGameSessionResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object internalServiceException;
+
     public CreateGameSessionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object invalidFleetStatusException;
+
     public CreateGameSessionResponse withInvalidFleetStatusException(Object invalidFleetStatusException) {
         this.invalidFleetStatusException = invalidFleetStatusException;
         return this;
@@ -79,6 +87,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateGameSessionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -89,6 +98,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGameSessionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object notFoundException;
+
     public CreateGameSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -106,6 +117,7 @@ public class CreateGameSessionResponse {
     
     
     public Integer statusCode;
+
     public CreateGameSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateGameSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGameSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object terminalRoutingStrategyException;
+
     public CreateGameSessionResponse withTerminalRoutingStrategyException(Object terminalRoutingStrategyException) {
         this.terminalRoutingStrategyException = terminalRoutingStrategyException;
         return this;
@@ -133,6 +147,7 @@ public class CreateGameSessionResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateGameSessionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -143,9 +158,14 @@ public class CreateGameSessionResponse {
      */
     
     public Object unsupportedRegionException;
+
     public CreateGameSessionResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public CreateGameSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

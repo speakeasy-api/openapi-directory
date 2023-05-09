@@ -18,9 +18,11 @@ public class BatchFirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public FirstLastNameDiasporaedOut[] personalNames;
+
     public BatchFirstLastNameDiasporaedOut withPersonalNames(FirstLastNameDiasporaedOut[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchFirstLastNameDiasporaedOut(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomFieldsUploadRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public CustomFieldsUploadRequestBody requestBody;
+
     public CustomFieldsUploadRequest withRequestBody(CustomFieldsUploadRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class CustomFieldsUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_id")
     public Long customFieldId;
+
     public CustomFieldsUploadRequest withCustomFieldId(Long customFieldId) {
         this.customFieldId = customFieldId;
         return this;
     }
     
+    public CustomFieldsUploadRequest(@JsonProperty("custom_field_id") Long customFieldId) {
+        this.customFieldId = customFieldId;
+  }
 }

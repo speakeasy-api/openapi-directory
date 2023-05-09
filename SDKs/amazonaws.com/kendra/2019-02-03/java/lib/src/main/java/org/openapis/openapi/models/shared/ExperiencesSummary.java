@@ -22,6 +22,7 @@ public class ExperiencesSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ExperiencesSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ExperiencesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public ExperienceEndpoint[] endpoints;
+
     public ExperiencesSummary withEndpoints(ExperienceEndpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -38,6 +40,7 @@ public class ExperiencesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ExperiencesSummary withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class ExperiencesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ExperiencesSummary withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,11 @@ public class ExperiencesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ExperienceStatusEnum status;
+
     public ExperiencesSummary withStatus(ExperienceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ExperiencesSummary(){}
 }

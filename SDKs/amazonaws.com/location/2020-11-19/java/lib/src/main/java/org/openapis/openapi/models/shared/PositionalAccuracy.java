@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PositionalAccuracy {
     @JsonProperty("Horizontal")
     public Double horizontal;
+
     public PositionalAccuracy withHorizontal(Double horizontal) {
         this.horizontal = horizontal;
         return this;
     }
     
+    public PositionalAccuracy(@JsonProperty("Horizontal") Double horizontal) {
+        this.horizontal = horizontal;
+  }
 }

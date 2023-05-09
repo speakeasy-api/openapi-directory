@@ -18,6 +18,7 @@ public class AddClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateDocument")
     public String corporateDocument;
+
     public AddClientProfileRequestBody withCorporateDocument(String corporateDocument) {
         this.corporateDocument = corporateDocument;
         return this;
@@ -29,6 +30,7 @@ public class AddClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateName")
     public String corporateName;
+
     public AddClientProfileRequestBody withCorporateName(String corporateName) {
         this.corporateName = corporateName;
         return this;
@@ -40,6 +42,7 @@ public class AddClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporatePhone")
     public String corporatePhone;
+
     public AddClientProfileRequestBody withCorporatePhone(String corporatePhone) {
         this.corporatePhone = corporatePhone;
         return this;
@@ -50,6 +53,7 @@ public class AddClientProfileRequestBody {
      */
     @JsonProperty("document")
     public String document;
+
     public AddClientProfileRequestBody withDocument(String document) {
         this.document = document;
         return this;
@@ -60,6 +64,7 @@ public class AddClientProfileRequestBody {
      */
     @JsonProperty("documentType")
     public String documentType;
+
     public AddClientProfileRequestBody withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -70,6 +75,7 @@ public class AddClientProfileRequestBody {
      */
     @JsonProperty("email")
     public String email;
+
     public AddClientProfileRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -80,6 +86,7 @@ public class AddClientProfileRequestBody {
      */
     @JsonProperty("firstName")
     public String firstName;
+
     public AddClientProfileRequestBody withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -91,6 +98,7 @@ public class AddClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCorporate")
     public Boolean isCorporate;
+
     public AddClientProfileRequestBody withIsCorporate(Boolean isCorporate) {
         this.isCorporate = isCorporate;
         return this;
@@ -101,6 +109,7 @@ public class AddClientProfileRequestBody {
      */
     @JsonProperty("lastName")
     public String lastName;
+
     public AddClientProfileRequestBody withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -112,6 +121,7 @@ public class AddClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public AddClientProfileRequestBody withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -123,6 +133,7 @@ public class AddClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateInscription")
     public String stateInscription;
+
     public AddClientProfileRequestBody withStateInscription(String stateInscription) {
         this.stateInscription = stateInscription;
         return this;
@@ -134,9 +145,17 @@ public class AddClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradeName")
     public String tradeName;
+
     public AddClientProfileRequestBody withTradeName(String tradeName) {
         this.tradeName = tradeName;
         return this;
     }
     
+    public AddClientProfileRequestBody(@JsonProperty("document") String document, @JsonProperty("documentType") String documentType, @JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName) {
+        this.document = document;
+        this.documentType = documentType;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SslSetupRequestBodyCertificateFile {
     @SpeakeasyMetadata("multipartForm:name=certificateFile")
     public String certificateFile;
+
     public SslSetupRequestBodyCertificateFile withCertificateFile(String certificateFile) {
         this.certificateFile = certificateFile;
         return this;
@@ -16,9 +18,14 @@ public class SslSetupRequestBodyCertificateFile {
     
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public SslSetupRequestBodyCertificateFile withContent(byte[] content) {
         this.content = content;
         return this;
     }
     
+    public SslSetupRequestBodyCertificateFile(@JsonProperty("certificateFile") String certificateFile, @JsonProperty("content") byte[] content) {
+        this.certificateFile = certificateFile;
+        this.content = content;
+  }
 }

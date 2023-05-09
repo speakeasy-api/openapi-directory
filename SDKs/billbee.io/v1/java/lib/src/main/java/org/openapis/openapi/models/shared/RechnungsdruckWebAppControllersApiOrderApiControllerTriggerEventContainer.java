@@ -17,6 +17,7 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventCon
     @JsonProperty("DelayInMinutes")
     @SpeakeasyMetadata("form:name=DelayInMinutes")
     public Integer delayInMinutes;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer withDelayInMinutes(Integer delayInMinutes) {
         this.delayInMinutes = delayInMinutes;
         return this;
@@ -29,9 +30,11 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventCon
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer(){}
 }

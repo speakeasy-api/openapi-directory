@@ -15,6 +15,7 @@ public class Difference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afterBlob")
     public BlobMetadata afterBlob;
+
     public Difference withAfterBlob(BlobMetadata afterBlob) {
         this.afterBlob = afterBlob;
         return this;
@@ -23,6 +24,7 @@ public class Difference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforeBlob")
     public BlobMetadata beforeBlob;
+
     public Difference withBeforeBlob(BlobMetadata beforeBlob) {
         this.beforeBlob = beforeBlob;
         return this;
@@ -31,9 +33,11 @@ public class Difference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeType")
     public ChangeTypeEnumEnum changeType;
+
     public Difference withChangeType(ChangeTypeEnumEnum changeType) {
         this.changeType = changeType;
         return this;
     }
     
+    public Difference(){}
 }

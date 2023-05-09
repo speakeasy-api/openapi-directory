@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ChangeSetHook {
     
     public HookFailureModeEnum failureMode;
+
     public ChangeSetHook withFailureMode(HookFailureModeEnum failureMode) {
         this.failureMode = failureMode;
         return this;
@@ -19,6 +20,7 @@ public class ChangeSetHook {
     
     
     public HookInvocationPointEnum invocationPoint;
+
     public ChangeSetHook withInvocationPoint(HookInvocationPointEnum invocationPoint) {
         this.invocationPoint = invocationPoint;
         return this;
@@ -26,6 +28,7 @@ public class ChangeSetHook {
     
     
     public ChangeSetHookTargetDetails targetDetails;
+
     public ChangeSetHook withTargetDetails(ChangeSetHookTargetDetails targetDetails) {
         this.targetDetails = targetDetails;
         return this;
@@ -33,6 +36,7 @@ public class ChangeSetHook {
     
     
     public String typeConfigurationVersionId;
+
     public ChangeSetHook withTypeConfigurationVersionId(String typeConfigurationVersionId) {
         this.typeConfigurationVersionId = typeConfigurationVersionId;
         return this;
@@ -40,6 +44,7 @@ public class ChangeSetHook {
     
     
     public String typeName;
+
     public ChangeSetHook withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -47,9 +52,11 @@ public class ChangeSetHook {
     
     
     public String typeVersionId;
+
     public ChangeSetHook withTypeVersionId(String typeVersionId) {
         this.typeVersionId = typeVersionId;
         return this;
     }
     
+    public ChangeSetHook(){}
 }

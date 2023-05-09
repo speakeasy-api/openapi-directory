@@ -26,6 +26,7 @@ public class TokenRefreshRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieType")
     public TokenRefreshRequestCookieTypeEnum cookieType;
+
     public TokenRefreshRequest withCookieType(TokenRefreshRequestCookieTypeEnum cookieType) {
         this.cookieType = cookieType;
         return this;
@@ -36,9 +37,13 @@ public class TokenRefreshRequest {
      */
     @JsonProperty("token")
     public String token;
+
     public TokenRefreshRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public TokenRefreshRequest(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

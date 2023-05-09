@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadProfileImageRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public byte[] requestBody;
+
     public UploadProfileImageRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UploadProfileImageRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public UploadProfileImageRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public UploadProfileImageRequest(@JsonProperty("workgroup_id") String workgroupId) {
+        this.workgroupId = workgroupId;
+  }
 }

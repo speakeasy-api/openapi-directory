@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2EvaluationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasets")
     public GoogleCloudDialogflowV2InputDataset[] datasets;
+
     public GoogleCloudDialogflowV2EvaluationConfig withDatasets(GoogleCloudDialogflowV2InputDataset[] datasets) {
         this.datasets = datasets;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2EvaluationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartComposeConfig")
     public GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig smartComposeConfig;
+
     public GoogleCloudDialogflowV2EvaluationConfig withSmartComposeConfig(GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig smartComposeConfig) {
         this.smartComposeConfig = smartComposeConfig;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2EvaluationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartReplyConfig")
     public GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig smartReplyConfig;
+
     public GoogleCloudDialogflowV2EvaluationConfig withSmartReplyConfig(GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig smartReplyConfig) {
         this.smartReplyConfig = smartReplyConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowV2EvaluationConfig(){}
 }

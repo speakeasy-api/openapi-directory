@@ -15,6 +15,7 @@ public class ListSlotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListSlotsResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class ListSlotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListSlotsResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -31,6 +33,7 @@ public class ListSlotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentId")
     public String intentId;
+
     public ListSlotsResponse withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -39,6 +42,7 @@ public class ListSlotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListSlotsResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -47,6 +51,7 @@ public class ListSlotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSlotsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -55,9 +60,11 @@ public class ListSlotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotSummaries")
     public SlotSummary[] slotSummaries;
+
     public ListSlotsResponse withSlotSummaries(SlotSummary[] slotSummaries) {
         this.slotSummaries = slotSummaries;
         return this;
     }
     
+    public ListSlotsResponse(){}
 }

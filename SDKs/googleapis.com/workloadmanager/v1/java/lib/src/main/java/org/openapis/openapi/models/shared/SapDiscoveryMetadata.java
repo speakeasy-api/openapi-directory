@@ -18,6 +18,7 @@ public class SapDiscoveryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerRegion")
     public String customerRegion;
+
     public SapDiscoveryMetadata withCustomerRegion(String customerRegion) {
         this.customerRegion = customerRegion;
         return this;
@@ -29,6 +30,7 @@ public class SapDiscoveryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definedSystem")
     public String definedSystem;
+
     public SapDiscoveryMetadata withDefinedSystem(String definedSystem) {
         this.definedSystem = definedSystem;
         return this;
@@ -40,6 +42,7 @@ public class SapDiscoveryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentType")
     public String environmentType;
+
     public SapDiscoveryMetadata withEnvironmentType(String environmentType) {
         this.environmentType = environmentType;
         return this;
@@ -51,9 +54,11 @@ public class SapDiscoveryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sapProduct")
     public String sapProduct;
+
     public SapDiscoveryMetadata withSapProduct(String sapProduct) {
         this.sapProduct = sapProduct;
         return this;
     }
     
+    public SapDiscoveryMetadata(){}
 }

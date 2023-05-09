@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Amazon Web Services Verified Access trust provider.
+ * AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Verified Access trust provider.
  */
 public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider {
     
     public String creationTime;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public String description;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions deviceOptions;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withDeviceOptions(AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions deviceOptions) {
         this.deviceOptions = deviceOptions;
         return this;
@@ -33,6 +36,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum deviceTrustProviderType;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withDeviceTrustProviderType(AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum deviceTrustProviderType) {
         this.deviceTrustProviderType = deviceTrustProviderType;
         return this;
@@ -40,6 +44,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public String lastUpdatedTime;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -47,6 +52,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions oidcOptions;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withOidcOptions(AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions oidcOptions) {
         this.oidcOptions = oidcOptions;
         return this;
@@ -54,6 +60,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public String policyReferenceName;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withPolicyReferenceName(String policyReferenceName) {
         this.policyReferenceName = policyReferenceName;
         return this;
@@ -61,6 +68,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTags[] tags;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withTags(AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTags[] tags) {
         this.tags = tags;
         return this;
@@ -68,6 +76,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum trustProviderType;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withTrustProviderType(AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum trustProviderType) {
         this.trustProviderType = trustProviderType;
         return this;
@@ -75,6 +84,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum userTrustProviderType;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withUserTrustProviderType(AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum userTrustProviderType) {
         this.userTrustProviderType = userTrustProviderType;
         return this;
@@ -82,9 +92,11 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public String verifiedAccessTrustProviderId;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withVerifiedAccessTrustProviderId(String verifiedAccessTrustProviderId) {
         this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
         return this;
     }
     
+    public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider(){}
 }

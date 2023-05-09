@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyMode")
     public GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum copyMode;
+
     public GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy withCopyMode(GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum copyMode) {
         this.copyMode = copyMode;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy(){}
 }

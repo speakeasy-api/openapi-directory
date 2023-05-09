@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPublicKeyResponse {
     
     public String contentType;
+
     public GetPublicKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GetPublicKeyResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object disabledException;
+
     public GetPublicKeyResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class GetPublicKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPublicKeyResponse getPublicKeyResponse;
+
     public GetPublicKeyResponse withGetPublicKeyResponse(org.openapis.openapi.models.shared.GetPublicKeyResponse getPublicKeyResponse) {
         this.getPublicKeyResponse = getPublicKeyResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object invalidArnException;
+
     public GetPublicKeyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public GetPublicKeyResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -69,6 +76,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public GetPublicKeyResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -79,6 +87,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object kmsInternalException;
+
     public GetPublicKeyResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -89,6 +98,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GetPublicKeyResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -99,6 +109,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object keyUnavailableException;
+
     public GetPublicKeyResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -109,6 +120,7 @@ public class GetPublicKeyResponse {
      */
     
     public Object notFoundException;
+
     public GetPublicKeyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -116,6 +128,7 @@ public class GetPublicKeyResponse {
     
     
     public Integer statusCode;
+
     public GetPublicKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class GetPublicKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPublicKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class GetPublicKeyResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetPublicKeyResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetPublicKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

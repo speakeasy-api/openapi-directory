@@ -15,6 +15,7 @@ public class DescribeManagedJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeManagedJobTemplateResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class DescribeManagedJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public DescribeManagedJobTemplateResponse withDocument(String document) {
         this.document = document;
         return this;
@@ -31,6 +33,7 @@ public class DescribeManagedJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentParameters")
     public DocumentParameter[] documentParameters;
+
     public DescribeManagedJobTemplateResponse withDocumentParameters(DocumentParameter[] documentParameters) {
         this.documentParameters = documentParameters;
         return this;
@@ -39,6 +42,7 @@ public class DescribeManagedJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public String[] environments;
+
     public DescribeManagedJobTemplateResponse withEnvironments(String[] environments) {
         this.environments = environments;
         return this;
@@ -47,6 +51,7 @@ public class DescribeManagedJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateArn")
     public String templateArn;
+
     public DescribeManagedJobTemplateResponse withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
@@ -55,6 +60,7 @@ public class DescribeManagedJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateName")
     public String templateName;
+
     public DescribeManagedJobTemplateResponse withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -63,9 +69,11 @@ public class DescribeManagedJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateVersion")
     public String templateVersion;
+
     public DescribeManagedJobTemplateResponse withTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     
+    public DescribeManagedJobTemplateResponse(){}
 }

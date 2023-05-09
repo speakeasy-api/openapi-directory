@@ -15,9 +15,11 @@ public class ExecuteProvisionedProductPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordDetail")
     public RecordDetail recordDetail;
+
     public ExecuteProvisionedProductPlanOutput withRecordDetail(RecordDetail recordDetail) {
         this.recordDetail = recordDetail;
         return this;
     }
     
+    public ExecuteProvisionedProductPlanOutput(){}
 }

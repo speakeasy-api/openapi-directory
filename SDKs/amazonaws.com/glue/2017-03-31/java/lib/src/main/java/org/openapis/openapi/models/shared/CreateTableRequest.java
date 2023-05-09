@@ -12,6 +12,7 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public CreateTableRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class CreateTableRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public CreateTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -27,6 +29,7 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionIndexes")
     public PartitionIndex[] partitionIndexes;
+
     public CreateTableRequest withPartitionIndexes(PartitionIndex[] partitionIndexes) {
         this.partitionIndexes = partitionIndexes;
         return this;
@@ -34,6 +37,7 @@ public class CreateTableRequest {
     
     @JsonProperty("TableInput")
     public TableInput tableInput;
+
     public CreateTableRequest withTableInput(TableInput tableInput) {
         this.tableInput = tableInput;
         return this;
@@ -42,9 +46,14 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public CreateTableRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public CreateTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableInput") TableInput tableInput) {
+        this.databaseName = databaseName;
+        this.tableInput = tableInput;
+  }
 }

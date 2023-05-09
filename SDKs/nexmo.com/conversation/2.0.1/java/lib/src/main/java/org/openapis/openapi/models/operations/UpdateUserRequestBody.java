@@ -15,6 +15,7 @@ public class UpdateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public org.openapis.openapi.models.shared.Channel channels;
+
     public UpdateUserRequestBody withChannels(org.openapis.openapi.models.shared.Channel channels) {
         this.channels = channels;
         return this;
@@ -26,6 +27,7 @@ public class UpdateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public UpdateUserRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -37,6 +39,7 @@ public class UpdateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public UpdateUserRequestBody withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -48,9 +51,11 @@ public class UpdateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateUserRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateUserRequestBody(){}
 }

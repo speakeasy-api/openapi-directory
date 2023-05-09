@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
@@ -12,6 +13,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SpokeInput spokeInput;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withSpokeInput(org.openapis.openapi.models.shared.SpokeInput spokeInput) {
         this.spokeInput = spokeInput;
         return this;
@@ -29,6 +32,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withName(String name) {
         this.name = name;
         return this;
@@ -89,6 +98,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -129,6 +142,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -139,6 +153,7 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class NetworkconnectivityProjectsLocationsSpokesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public NetworkconnectivityProjectsLocationsSpokesPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public NetworkconnectivityProjectsLocationsSpokesPatchRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class StatefulRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Override")
     public NetworkFirewallStatefulRuleGroupOverride override;
+
     public StatefulRuleGroup withOverride(NetworkFirewallStatefulRuleGroupOverride override) {
         this.override = override;
         return this;
@@ -23,6 +24,7 @@ public class StatefulRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public StatefulRuleGroup withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -31,6 +33,7 @@ public class StatefulRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public StatefulRuleGroup withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -39,9 +42,11 @@ public class StatefulRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupName")
     public String ruleGroupName;
+
     public StatefulRuleGroup withRuleGroupName(String ruleGroupName) {
         this.ruleGroupName = ruleGroupName;
         return this;
     }
     
+    public StatefulRuleGroup(){}
 }

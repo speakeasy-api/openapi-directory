@@ -18,6 +18,7 @@ public class GoogleCloudBillingBudgetsV1NotificationsRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableDefaultIamRecipients")
     public Boolean disableDefaultIamRecipients;
+
     public GoogleCloudBillingBudgetsV1NotificationsRule withDisableDefaultIamRecipients(Boolean disableDefaultIamRecipients) {
         this.disableDefaultIamRecipients = disableDefaultIamRecipients;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBillingBudgetsV1NotificationsRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringNotificationChannels")
     public String[] monitoringNotificationChannels;
+
     public GoogleCloudBillingBudgetsV1NotificationsRule withMonitoringNotificationChannels(String[] monitoringNotificationChannels) {
         this.monitoringNotificationChannels = monitoringNotificationChannels;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudBillingBudgetsV1NotificationsRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public GoogleCloudBillingBudgetsV1NotificationsRule withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudBillingBudgetsV1NotificationsRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public GoogleCloudBillingBudgetsV1NotificationsRule withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public GoogleCloudBillingBudgetsV1NotificationsRule(){}
 }

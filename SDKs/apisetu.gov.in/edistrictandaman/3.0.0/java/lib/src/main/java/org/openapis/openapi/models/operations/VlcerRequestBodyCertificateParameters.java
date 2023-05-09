@@ -12,9 +12,13 @@ public class VlcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CertificateNumber")
     public String certificateNumber;
+
     public VlcerRequestBodyCertificateParameters withCertificateNumber(String certificateNumber) {
         this.certificateNumber = certificateNumber;
         return this;
     }
     
+    public VlcerRequestBodyCertificateParameters(@JsonProperty("CertificateNumber") String certificateNumber) {
+        this.certificateNumber = certificateNumber;
+  }
 }

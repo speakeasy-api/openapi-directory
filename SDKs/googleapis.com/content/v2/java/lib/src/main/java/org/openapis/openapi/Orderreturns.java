@@ -58,11 +58,9 @@ public class Orderreturns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentOrderreturnsGetResponse res = new org.openapis.openapi.models.operations.ContentOrderreturnsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentOrderreturnsGetResponse res = new org.openapis.openapi.models.operations.ContentOrderreturnsGetResponse(contentType, httpRes.statusCode()) {{
             merchantOrderReturn = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Orderreturns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentOrderreturnsListResponse res = new org.openapis.openapi.models.operations.ContentOrderreturnsListResponse() {{
+        org.openapis.openapi.models.operations.ContentOrderreturnsListResponse res = new org.openapis.openapi.models.operations.ContentOrderreturnsListResponse(contentType, httpRes.statusCode()) {{
             orderreturnsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

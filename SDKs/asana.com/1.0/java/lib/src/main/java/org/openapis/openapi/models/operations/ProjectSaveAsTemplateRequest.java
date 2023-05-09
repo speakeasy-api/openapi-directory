@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectSaveAsTemplateRequest {
@@ -12,6 +13,7 @@ public class ProjectSaveAsTemplateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ProjectSaveAsTemplateRequestBody requestBody;
+
     public ProjectSaveAsTemplateRequest withRequestBody(ProjectSaveAsTemplateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class ProjectSaveAsTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public ProjectSaveAsTemplateRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class ProjectSaveAsTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public ProjectSaveAsTemplateRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class ProjectSaveAsTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
     public String projectGid;
+
     public ProjectSaveAsTemplateRequest withProjectGid(String projectGid) {
         this.projectGid = projectGid;
         return this;
     }
     
+    public ProjectSaveAsTemplateRequest(@JsonProperty("RequestBody") ProjectSaveAsTemplateRequestBody requestBody, @JsonProperty("project_gid") String projectGid) {
+        this.requestBody = requestBody;
+        this.projectGid = projectGid;
+  }
 }

@@ -59,11 +59,9 @@ public class Budget {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerBudgetGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBudgetGetResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerBudgetGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBudgetGetResponse(contentType, httpRes.statusCode()) {{
             budget = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Budget {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerBudgetPatchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBudgetPatchResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerBudgetPatchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBudgetPatchResponse(contentType, httpRes.statusCode()) {{
             budget = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Budget {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerBudgetUpdateResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBudgetUpdateResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerBudgetUpdateResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBudgetUpdateResponse(contentType, httpRes.statusCode()) {{
             budget = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

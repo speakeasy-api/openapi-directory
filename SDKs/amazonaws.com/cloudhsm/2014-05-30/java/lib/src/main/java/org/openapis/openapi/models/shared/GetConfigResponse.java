@@ -15,6 +15,7 @@ public class GetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigCred")
     public String configCred;
+
     public GetConfigResponse withConfigCred(String configCred) {
         this.configCred = configCred;
         return this;
@@ -23,6 +24,7 @@ public class GetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigFile")
     public String configFile;
+
     public GetConfigResponse withConfigFile(String configFile) {
         this.configFile = configFile;
         return this;
@@ -31,9 +33,11 @@ public class GetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigType")
     public String configType;
+
     public GetConfigResponse withConfigType(String configType) {
         this.configType = configType;
         return this;
     }
     
+    public GetConfigResponse(){}
 }

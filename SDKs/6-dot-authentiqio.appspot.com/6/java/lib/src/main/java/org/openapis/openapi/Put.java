@@ -55,13 +55,11 @@ public class Put {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeyBindResponse res = new org.openapis.openapi.models.operations.KeyBindResponse() {{
+        org.openapis.openapi.models.operations.KeyBindResponse res = new org.openapis.openapi.models.operations.KeyBindResponse(contentType, httpRes.statusCode()) {{
             keyBind200ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class Put {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignUpdateResponse res = new org.openapis.openapi.models.operations.SignUpdateResponse() {{
+        org.openapis.openapi.models.operations.SignUpdateResponse res = new org.openapis.openapi.models.operations.SignUpdateResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409) {

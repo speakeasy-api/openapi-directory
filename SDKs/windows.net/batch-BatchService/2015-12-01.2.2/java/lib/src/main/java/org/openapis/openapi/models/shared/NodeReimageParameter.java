@@ -18,9 +18,11 @@ public class NodeReimageParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeReimageOption")
     public NodeReimageParameterNodeReimageOptionEnum nodeReimageOption;
+
     public NodeReimageParameter withNodeReimageOption(NodeReimageParameterNodeReimageOptionEnum nodeReimageOption) {
         this.nodeReimageOption = nodeReimageOption;
         return this;
     }
     
+    public NodeReimageParameter(){}
 }

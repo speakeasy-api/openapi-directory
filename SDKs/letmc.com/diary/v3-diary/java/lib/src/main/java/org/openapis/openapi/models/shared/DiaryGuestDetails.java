@@ -18,6 +18,7 @@ public class DiaryGuestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowMarketingCorrespondence")
     public Boolean allowMarketingCorrespondence;
+
     public DiaryGuestDetails withAllowMarketingCorrespondence(Boolean allowMarketingCorrespondence) {
         this.allowMarketingCorrespondence = allowMarketingCorrespondence;
         return this;
@@ -29,6 +30,7 @@ public class DiaryGuestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public DiaryGuestDetails withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -40,6 +42,7 @@ public class DiaryGuestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Forename")
     public String forename;
+
     public DiaryGuestDetails withForename(String forename) {
         this.forename = forename;
         return this;
@@ -51,6 +54,7 @@ public class DiaryGuestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MobilePhone")
     public String mobilePhone;
+
     public DiaryGuestDetails withMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
         return this;
@@ -62,6 +66,7 @@ public class DiaryGuestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public DiaryGuestDetails withOid(String oid) {
         this.oid = oid;
         return this;
@@ -73,9 +78,11 @@ public class DiaryGuestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Surname")
     public String surname;
+
     public DiaryGuestDetails withSurname(String surname) {
         this.surname = surname;
         return this;
     }
     
+    public DiaryGuestDetails(){}
 }

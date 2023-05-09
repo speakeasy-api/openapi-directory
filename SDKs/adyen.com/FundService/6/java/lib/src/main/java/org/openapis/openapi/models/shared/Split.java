@@ -17,6 +17,7 @@ public class Split {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public Split withAccount(String account) {
         this.account = account;
         return this;
@@ -24,6 +25,7 @@ public class Split {
     
     @JsonProperty("amount")
     public SplitAmount amount;
+
     public Split withAmount(SplitAmount amount) {
         this.amount = amount;
         return this;
@@ -35,6 +37,7 @@ public class Split {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Split withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class Split {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public Split withReference(String reference) {
         this.reference = reference;
         return this;
@@ -59,9 +63,14 @@ public class Split {
      */
     @JsonProperty("type")
     public SplitTypeEnum type;
+
     public Split withType(SplitTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Split(@JsonProperty("amount") SplitAmount amount, @JsonProperty("type") SplitTypeEnum type) {
+        this.amount = amount;
+        this.type = type;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BuyANumberResponse {
     
     public byte[] body;
+
     public BuyANumberResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class BuyANumberResponse {
     
     
     public String contentType;
+
     public BuyANumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class BuyANumberResponse {
     
     
     public Integer statusCode;
+
     public BuyANumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class BuyANumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BuyANumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class BuyANumberResponse {
      */
     
     public org.openapis.openapi.models.shared.Response response;
+
     public BuyANumberResponse withResponse(org.openapis.openapi.models.shared.Response response) {
         this.response = response;
         return this;
@@ -50,6 +56,7 @@ public class BuyANumberResponse {
      */
     
     public org.openapis.openapi.models.shared.Response420 response420;
+
     public BuyANumberResponse withResponse420(org.openapis.openapi.models.shared.Response420 response420) {
         this.response420 = response420;
         return this;
@@ -60,9 +67,14 @@ public class BuyANumberResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthorized unauthorized;
+
     public BuyANumberResponse withUnauthorized(org.openapis.openapi.models.shared.Unauthorized unauthorized) {
         this.unauthorized = unauthorized;
         return this;
     }
     
+    public BuyANumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

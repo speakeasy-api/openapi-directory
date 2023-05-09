@@ -15,9 +15,11 @@ public class OpsItemIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public OpsItemIdentity withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public OpsItemIdentity(){}
 }

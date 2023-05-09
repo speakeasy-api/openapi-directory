@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConnectionsIdConnectionSourcesIdSourceResponse {
@@ -12,6 +13,7 @@ public class DeleteConnectionsIdConnectionSourcesIdSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectionSource connectionSource;
+
     public DeleteConnectionsIdConnectionSourcesIdSourceResponse withConnectionSource(org.openapis.openapi.models.shared.ConnectionSource connectionSource) {
         this.connectionSource = connectionSource;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConnectionsIdConnectionSourcesIdSourceResponse {
     
     
     public String contentType;
+
     public DeleteConnectionsIdConnectionSourcesIdSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteConnectionsIdConnectionSourcesIdSourceResponse {
     
     
     public Integer statusCode;
+
     public DeleteConnectionsIdConnectionSourcesIdSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteConnectionsIdConnectionSourcesIdSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConnectionsIdConnectionSourcesIdSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteConnectionsIdConnectionSourcesIdSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

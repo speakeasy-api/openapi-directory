@@ -12,6 +12,7 @@ public class GetReportingDatesDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public org.openapis.openapi.models.shared.OffsetInfo pagination;
+
     public GetReportingDatesDefaultApplicationJSON withPagination(org.openapis.openapi.models.shared.OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class GetReportingDatesDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.ReportDate[] results;
+
     public GetReportingDatesDefaultApplicationJSON withResults(org.openapis.openapi.models.shared.ReportDate[] results) {
         this.results = results;
         return this;
     }
     
+    public GetReportingDatesDefaultApplicationJSON(){}
 }

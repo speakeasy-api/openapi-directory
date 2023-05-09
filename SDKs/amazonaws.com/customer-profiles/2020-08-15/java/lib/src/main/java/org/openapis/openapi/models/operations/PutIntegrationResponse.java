@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutIntegrationResponse {
@@ -12,6 +13,7 @@ public class PutIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public PutIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutIntegrationResponse {
      */
     
     public Object badRequestException;
+
     public PutIntegrationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class PutIntegrationResponse {
     
     
     public String contentType;
+
     public PutIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutIntegrationResponse {
      */
     
     public Object internalServerException;
+
     public PutIntegrationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutIntegrationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutIntegrationResponse putIntegrationResponse;
+
     public PutIntegrationResponse withPutIntegrationResponse(org.openapis.openapi.models.shared.PutIntegrationResponse putIntegrationResponse) {
         this.putIntegrationResponse = putIntegrationResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutIntegrationResponse {
     
     
     public Integer statusCode;
+
     public PutIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutIntegrationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutIntegrationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class PutIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public PutIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public PutIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

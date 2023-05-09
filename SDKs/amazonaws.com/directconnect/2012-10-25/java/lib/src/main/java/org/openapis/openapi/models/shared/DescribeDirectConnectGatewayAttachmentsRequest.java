@@ -12,6 +12,7 @@ public class DescribeDirectConnectGatewayAttachmentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public DescribeDirectConnectGatewayAttachmentsRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeDirectConnectGatewayAttachmentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeDirectConnectGatewayAttachmentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeDirectConnectGatewayAttachmentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeDirectConnectGatewayAttachmentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribeDirectConnectGatewayAttachmentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public DescribeDirectConnectGatewayAttachmentsRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public DescribeDirectConnectGatewayAttachmentsRequest(){}
 }

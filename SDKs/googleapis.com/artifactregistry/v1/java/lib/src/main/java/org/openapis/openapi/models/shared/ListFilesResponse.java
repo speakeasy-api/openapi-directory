@@ -18,6 +18,7 @@ public class ListFilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public GoogleDevtoolsArtifactregistryV1File[] files;
+
     public ListFilesResponse withFiles(GoogleDevtoolsArtifactregistryV1File[] files) {
         this.files = files;
         return this;
@@ -29,9 +30,11 @@ public class ListFilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFilesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListFilesResponse(){}
 }

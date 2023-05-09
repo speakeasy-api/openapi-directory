@@ -41,5 +41,17 @@ lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/VerifyChallengeResponseResultKeyTrustLevelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/VerifyChallengeResponseResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignalsDiskEncryptionEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignalsOperatingSystemEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignalsOsFirewallEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignalsPasswordProtectionWarningTriggerEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignalsRealtimeUrlCheckModeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignalsSafeBrowsingProtectionLevelEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignalsScreenLockSecuredEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignalsSecureBootModeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeviceSignals.java
+lib/src/main/java/org/openapis/openapi/models/shared/CrowdStrikeAgent.java
 lib/src/main/java/org/openapis/openapi/models/shared/VerifyChallengeResponseRequest.java
+docs/sdk/README.md
+docs/challenge/README.md
 USAGE.md

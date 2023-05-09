@@ -15,6 +15,7 @@ public class DescribeAnomalyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProactiveAnomaly")
     public ProactiveAnomaly proactiveAnomaly;
+
     public DescribeAnomalyResponse withProactiveAnomaly(ProactiveAnomaly proactiveAnomaly) {
         this.proactiveAnomaly = proactiveAnomaly;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAnomalyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReactiveAnomaly")
     public ReactiveAnomaly reactiveAnomaly;
+
     public DescribeAnomalyResponse withReactiveAnomaly(ReactiveAnomaly reactiveAnomaly) {
         this.reactiveAnomaly = reactiveAnomaly;
         return this;
     }
     
+    public DescribeAnomalyResponse(){}
 }

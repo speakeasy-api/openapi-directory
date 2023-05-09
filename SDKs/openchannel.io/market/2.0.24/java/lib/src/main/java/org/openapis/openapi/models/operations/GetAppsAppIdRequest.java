@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppsAppIdRequest {
@@ -12,6 +13,7 @@ public class GetAppsAppIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public GetAppsAppIdRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class GetAppsAppIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackViews")
     public Boolean trackViews;
+
     public GetAppsAppIdRequest withTrackViews(Boolean trackViews) {
         this.trackViews = trackViews;
         return this;
@@ -32,9 +35,13 @@ public class GetAppsAppIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public GetAppsAppIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetAppsAppIdRequest(@JsonProperty("appId") String appId) {
+        this.appId = appId;
+  }
 }

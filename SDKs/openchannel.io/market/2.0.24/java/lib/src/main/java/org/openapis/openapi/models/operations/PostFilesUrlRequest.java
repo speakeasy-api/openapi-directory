@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFilesUrlRequest {
@@ -12,6 +13,7 @@ public class PostFilesUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isPrivate")
     public Boolean isPrivate;
+
     public PostFilesUrlRequest withIsPrivate(Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
@@ -22,9 +24,13 @@ public class PostFilesUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public PostFilesUrlRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostFilesUrlRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

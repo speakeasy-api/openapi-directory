@@ -15,6 +15,7 @@ public class ShippingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public ShippingLocation withAddress(Address address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class ShippingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public Contact contact;
+
     public ShippingLocation withContact(Contact contact) {
         this.contact = contact;
         return this;
@@ -34,6 +36,7 @@ public class ShippingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ShippingLocation withId(String id) {
         this.id = id;
         return this;
@@ -45,9 +48,11 @@ public class ShippingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ShippingLocation withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ShippingLocation(){}
 }

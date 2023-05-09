@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCallAnalyticsCategoriesResponse {
@@ -12,6 +13,7 @@ public class ListCallAnalyticsCategoriesResponse {
      */
     
     public Object badRequestException;
+
     public ListCallAnalyticsCategoriesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListCallAnalyticsCategoriesResponse {
     
     
     public String contentType;
+
     public ListCallAnalyticsCategoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCallAnalyticsCategoriesResponse {
      */
     
     public Object internalFailureException;
+
     public ListCallAnalyticsCategoriesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListCallAnalyticsCategoriesResponse {
      */
     
     public Object limitExceededException;
+
     public ListCallAnalyticsCategoriesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListCallAnalyticsCategoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCallAnalyticsCategoriesResponse listCallAnalyticsCategoriesResponse;
+
     public ListCallAnalyticsCategoriesResponse withListCallAnalyticsCategoriesResponse(org.openapis.openapi.models.shared.ListCallAnalyticsCategoriesResponse listCallAnalyticsCategoriesResponse) {
         this.listCallAnalyticsCategoriesResponse = listCallAnalyticsCategoriesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListCallAnalyticsCategoriesResponse {
     
     
     public Integer statusCode;
+
     public ListCallAnalyticsCategoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListCallAnalyticsCategoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCallAnalyticsCategoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCallAnalyticsCategoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

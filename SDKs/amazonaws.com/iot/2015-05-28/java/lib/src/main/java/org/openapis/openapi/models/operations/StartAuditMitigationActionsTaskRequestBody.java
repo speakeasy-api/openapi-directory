@@ -12,6 +12,7 @@ public class StartAuditMitigationActionsTaskRequestBody {
      */
     @JsonProperty("auditCheckToActionsMapping")
     public java.util.Map<String, String[]> auditCheckToActionsMapping;
+
     public StartAuditMitigationActionsTaskRequestBody withAuditCheckToActionsMapping(java.util.Map<String, String[]> auditCheckToActionsMapping) {
         this.auditCheckToActionsMapping = auditCheckToActionsMapping;
         return this;
@@ -22,6 +23,7 @@ public class StartAuditMitigationActionsTaskRequestBody {
      */
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public StartAuditMitigationActionsTaskRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -32,9 +34,15 @@ public class StartAuditMitigationActionsTaskRequestBody {
      */
     @JsonProperty("target")
     public StartAuditMitigationActionsTaskRequestBodyTarget target;
+
     public StartAuditMitigationActionsTaskRequestBody withTarget(StartAuditMitigationActionsTaskRequestBodyTarget target) {
         this.target = target;
         return this;
     }
     
+    public StartAuditMitigationActionsTaskRequestBody(@JsonProperty("auditCheckToActionsMapping") java.util.Map<String, String[]> auditCheckToActionsMapping, @JsonProperty("clientRequestToken") String clientRequestToken, @JsonProperty("target") StartAuditMitigationActionsTaskRequestBodyTarget target) {
+        this.auditCheckToActionsMapping = auditCheckToActionsMapping;
+        this.clientRequestToken = clientRequestToken;
+        this.target = target;
+  }
 }

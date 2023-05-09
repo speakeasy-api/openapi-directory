@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     public String availabilityZone;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public String availabilityZoneId;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -26,6 +28,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public String capacityReservationId;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -33,6 +36,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public OffsetDateTime createDate;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -40,6 +44,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public Boolean ebsOptimized;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -47,6 +52,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public Double fulfilledCapacity;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withFulfilledCapacity(Double fulfilledCapacity) {
         this.fulfilledCapacity = fulfilledCapacity;
         return this;
@@ -54,6 +60,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum instancePlatform;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withInstancePlatform(CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum instancePlatform) {
         this.instancePlatform = instancePlatform;
         return this;
@@ -61,6 +68,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum instanceType;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withInstanceType(CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -68,6 +76,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public Long priority;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -75,6 +84,7 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public Long totalInstanceCount;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withTotalInstanceCount(Long totalInstanceCount) {
         this.totalInstanceCount = totalInstanceCount;
         return this;
@@ -82,9 +92,11 @@ public class CreateCapacityReservationFleetResultFleetCapacityReservations {
     
     
     public Double weight;
+
     public CreateCapacityReservationFleetResultFleetCapacityReservations withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public CreateCapacityReservationFleetResultFleetCapacityReservations(){}
 }

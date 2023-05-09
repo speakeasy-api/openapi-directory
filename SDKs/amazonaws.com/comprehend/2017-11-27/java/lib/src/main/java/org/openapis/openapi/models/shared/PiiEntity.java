@@ -15,6 +15,7 @@ public class PiiEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public PiiEntity withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class PiiEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public PiiEntity withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -31,6 +33,7 @@ public class PiiEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public PiiEntity withScore(Float score) {
         this.score = score;
         return this;
@@ -39,9 +42,11 @@ public class PiiEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public PiiEntityTypeEnum type;
+
     public PiiEntity withType(PiiEntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PiiEntity(){}
 }

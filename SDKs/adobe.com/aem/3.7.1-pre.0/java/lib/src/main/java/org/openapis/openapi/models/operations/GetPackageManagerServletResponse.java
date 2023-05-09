@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPackageManagerServletResponse {
     
     public String contentType;
+
     public GetPackageManagerServletResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPackageManagerServletResponse {
     
     
     public Integer statusCode;
+
     public GetPackageManagerServletResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPackageManagerServletResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPackageManagerServletResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPackageManagerServletResponse {
      */
     
     public String getPackageManagerServlet404TextHTMLString;
+
     public GetPackageManagerServletResponse withGetPackageManagerServlet404TextHTMLString(String getPackageManagerServlet404TextHTMLString) {
         this.getPackageManagerServlet404TextHTMLString = getPackageManagerServlet404TextHTMLString;
         return this;
@@ -43,9 +48,14 @@ public class GetPackageManagerServletResponse {
      */
     
     public String getPackageManagerServlet405TextHTMLString;
+
     public GetPackageManagerServletResponse withGetPackageManagerServlet405TextHTMLString(String getPackageManagerServlet405TextHTMLString) {
         this.getPackageManagerServlet405TextHTMLString = getPackageManagerServlet405TextHTMLString;
         return this;
     }
     
+    public GetPackageManagerServletResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

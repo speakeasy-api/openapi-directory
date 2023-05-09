@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2DeidentifyContentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2InspectContentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2ReidentifyContentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2DeidentifyTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2ListDeidentifyTemplatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -348,11 +336,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2DlpJob = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -396,11 +382,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,11 +426,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2ListDlpJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -490,11 +472,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2RedactImageResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -538,11 +518,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2InspectTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -584,11 +562,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2ListInspectTemplatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -632,11 +608,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2DlpJob = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -680,11 +654,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2JobTrigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -728,11 +700,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2HybridInspectResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -774,11 +744,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListResponse res = new org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2ListJobTriggersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -822,11 +790,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2StoredInfoType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -868,11 +834,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -914,11 +878,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2StoredInfoType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +922,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2ListStoredInfoTypesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1008,11 +968,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchResponse() {{
+        org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchResponse res = new org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchResponse(contentType, httpRes.statusCode()) {{
             googlePrivacyDlpV2StoredInfoType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

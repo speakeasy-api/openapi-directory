@@ -15,6 +15,7 @@ public class ListLayersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Layers")
     public LayersListItem[] layers;
+
     public ListLayersResponse withLayers(LayersListItem[] layers) {
         this.layers = layers;
         return this;
@@ -23,9 +24,11 @@ public class ListLayersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListLayersResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListLayersResponse(){}
 }

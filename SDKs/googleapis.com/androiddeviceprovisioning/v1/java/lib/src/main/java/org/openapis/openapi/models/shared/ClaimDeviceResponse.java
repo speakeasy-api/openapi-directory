@@ -18,6 +18,7 @@ public class ClaimDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public ClaimDeviceResponse withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,9 +30,11 @@ public class ClaimDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public ClaimDeviceResponse withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
     }
     
+    public ClaimDeviceResponse(){}
 }

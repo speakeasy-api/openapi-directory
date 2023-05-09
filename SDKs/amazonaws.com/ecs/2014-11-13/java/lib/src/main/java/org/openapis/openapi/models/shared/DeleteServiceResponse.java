@@ -15,9 +15,11 @@ public class DeleteServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public Service service;
+
     public DeleteServiceResponse withService(Service service) {
         this.service = service;
         return this;
     }
     
+    public DeleteServiceResponse(){}
 }

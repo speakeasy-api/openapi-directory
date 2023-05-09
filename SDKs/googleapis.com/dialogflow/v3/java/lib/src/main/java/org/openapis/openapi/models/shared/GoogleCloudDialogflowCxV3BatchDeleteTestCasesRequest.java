@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3BatchDeleteTestCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public GoogleCloudDialogflowCxV3BatchDeleteTestCasesRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3BatchDeleteTestCasesRequest(){}
 }

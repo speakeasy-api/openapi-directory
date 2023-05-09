@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeChannelsListRequest {
@@ -12,6 +13,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeChannelsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeChannelsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeChannelsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeChannelsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryId")
     public String categoryId;
+
     public YoutubeChannelsListRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -62,6 +68,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeChannelsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forUsername")
     public String forUsername;
+
     public YoutubeChannelsListRequest withForUsername(String forUsername) {
         this.forUsername = forUsername;
         return this;
@@ -82,6 +90,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hl")
     public String hl;
+
     public YoutubeChannelsListRequest withHl(String hl) {
         this.hl = hl;
         return this;
@@ -92,6 +101,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public YoutubeChannelsListRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -102,6 +112,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeChannelsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -112,6 +123,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=managedByMe")
     public Boolean managedByMe;
+
     public YoutubeChannelsListRequest withManagedByMe(Boolean managedByMe) {
         this.managedByMe = managedByMe;
         return this;
@@ -122,6 +134,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public YoutubeChannelsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -132,6 +145,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mine")
     public Boolean mine;
+
     public YoutubeChannelsListRequest withMine(Boolean mine) {
         this.mine = mine;
         return this;
@@ -142,6 +156,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mySubscribers")
     public Boolean mySubscribers;
+
     public YoutubeChannelsListRequest withMySubscribers(Boolean mySubscribers) {
         this.mySubscribers = mySubscribers;
         return this;
@@ -152,6 +167,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeChannelsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -162,6 +178,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubeChannelsListRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -172,6 +189,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public YoutubeChannelsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -182,6 +200,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeChannelsListRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -192,6 +211,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeChannelsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -202,6 +222,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeChannelsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -212,6 +233,7 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeChannelsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -222,9 +244,13 @@ public class YoutubeChannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeChannelsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeChannelsListRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

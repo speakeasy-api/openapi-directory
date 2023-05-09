@@ -59,10 +59,8 @@ public class NlpAnnotate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnnotateResponse res = new org.openapis.openapi.models.operations.GetAnnotateResponse() {{
+        org.openapis.openapi.models.operations.GetAnnotateResponse res = new org.openapis.openapi.models.operations.GetAnnotateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class NlpAnnotate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnnotateEntitiesResponse res = new org.openapis.openapi.models.operations.GetAnnotateEntitiesResponse() {{
+        org.openapis.openapi.models.operations.GetAnnotateEntitiesResponse res = new org.openapis.openapi.models.operations.GetAnnotateEntitiesResponse(contentType, httpRes.statusCode()) {{
             entityAnnotationResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,10 +137,8 @@ public class NlpAnnotate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAnnotateResponse res = new org.openapis.openapi.models.operations.PostAnnotateResponse() {{
+        org.openapis.openapi.models.operations.PostAnnotateResponse res = new org.openapis.openapi.models.operations.PostAnnotateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +173,9 @@ public class NlpAnnotate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAnnotateEntitiesResponse res = new org.openapis.openapi.models.operations.PostAnnotateEntitiesResponse() {{
+        org.openapis.openapi.models.operations.PostAnnotateEntitiesResponse res = new org.openapis.openapi.models.operations.PostAnnotateEntitiesResponse(contentType, httpRes.statusCode()) {{
             entityAnnotationResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -17,6 +17,7 @@ public class SGLocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public SGLocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -27,6 +28,7 @@ public class SGLocalAccountIdentification {
      */
     @JsonProperty("bic")
     public String bic;
+
     public SGLocalAccountIdentification withBic(String bic) {
         this.bic = bic;
         return this;
@@ -38,9 +40,14 @@ public class SGLocalAccountIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SGLocalAccountIdentificationTypeEnum type;
+
     public SGLocalAccountIdentification withType(SGLocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SGLocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("bic") String bic) {
+        this.accountNumber = accountNumber;
+        this.bic = bic;
+  }
 }

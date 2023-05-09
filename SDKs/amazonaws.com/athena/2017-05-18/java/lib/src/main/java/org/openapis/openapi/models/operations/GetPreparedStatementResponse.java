@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPreparedStatementResponse {
     
     public String contentType;
+
     public GetPreparedStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPreparedStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPreparedStatementOutput getPreparedStatementOutput;
+
     public GetPreparedStatementResponse withGetPreparedStatementOutput(org.openapis.openapi.models.shared.GetPreparedStatementOutput getPreparedStatementOutput) {
         this.getPreparedStatementOutput = getPreparedStatementOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetPreparedStatementResponse {
      */
     
     public Object internalServerException;
+
     public GetPreparedStatementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetPreparedStatementResponse {
      */
     
     public Object invalidRequestException;
+
     public GetPreparedStatementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetPreparedStatementResponse {
     
     
     public Integer statusCode;
+
     public GetPreparedStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetPreparedStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPreparedStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetPreparedStatementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPreparedStatementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetPreparedStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

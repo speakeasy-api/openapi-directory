@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsCollectiblesDestinyCollectibleComponent {
     
     public Integer state;
+
     public DestinyComponentsCollectiblesDestinyCollectibleComponent withState(Integer state) {
         this.state = state;
         return this;
     }
     
+    public DestinyComponentsCollectiblesDestinyCollectibleComponent(){}
 }

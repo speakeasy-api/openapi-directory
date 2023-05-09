@@ -15,9 +15,11 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaParentOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaParentOrder withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OneordersPostResponses201ContentApplication1jsonSchemaParentOrder(){}
 }

@@ -15,9 +15,11 @@ public class GetHLSStreamingSessionURLOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HLSStreamingSessionURL")
     public String hlsStreamingSessionURL;
+
     public GetHLSStreamingSessionURLOutput withHLSStreamingSessionURL(String hlsStreamingSessionURL) {
         this.hlsStreamingSessionURL = hlsStreamingSessionURL;
         return this;
     }
     
+    public GetHLSStreamingSessionURLOutput(){}
 }

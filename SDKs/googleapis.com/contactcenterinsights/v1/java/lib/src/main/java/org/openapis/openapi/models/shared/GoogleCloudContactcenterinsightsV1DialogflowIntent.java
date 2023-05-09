@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1DialogflowIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudContactcenterinsightsV1DialogflowIntent withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1DialogflowIntent(){}
 }

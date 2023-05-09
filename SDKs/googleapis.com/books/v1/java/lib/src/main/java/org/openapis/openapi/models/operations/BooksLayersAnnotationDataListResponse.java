@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksLayersAnnotationDataListResponse {
@@ -12,6 +13,7 @@ public class BooksLayersAnnotationDataListResponse {
      */
     
     public org.openapis.openapi.models.shared.Annotationsdata annotationsdata;
+
     public BooksLayersAnnotationDataListResponse withAnnotationsdata(org.openapis.openapi.models.shared.Annotationsdata annotationsdata) {
         this.annotationsdata = annotationsdata;
         return this;
@@ -19,6 +21,7 @@ public class BooksLayersAnnotationDataListResponse {
     
     
     public String contentType;
+
     public BooksLayersAnnotationDataListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BooksLayersAnnotationDataListResponse {
     
     
     public Integer statusCode;
+
     public BooksLayersAnnotationDataListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BooksLayersAnnotationDataListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksLayersAnnotationDataListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BooksLayersAnnotationDataListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

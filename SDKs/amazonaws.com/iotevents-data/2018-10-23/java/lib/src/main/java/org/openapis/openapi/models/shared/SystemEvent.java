@@ -15,6 +15,7 @@ public class SystemEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public EventTypeEnum eventType;
+
     public SystemEvent withEventType(EventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -23,9 +24,11 @@ public class SystemEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateChangeConfiguration")
     public StateChangeConfiguration stateChangeConfiguration;
+
     public SystemEvent withStateChangeConfiguration(StateChangeConfiguration stateChangeConfiguration) {
         this.stateChangeConfiguration = stateChangeConfiguration;
         return this;
     }
     
+    public SystemEvent(){}
 }

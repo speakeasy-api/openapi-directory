@@ -15,6 +15,7 @@ public class CanaryRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactS3Location")
     public String artifactS3Location;
+
     public CanaryRun withArtifactS3Location(String artifactS3Location) {
         this.artifactS3Location = artifactS3Location;
         return this;
@@ -23,6 +24,7 @@ public class CanaryRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CanaryRun withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class CanaryRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CanaryRun withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class CanaryRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CanaryRunStatus status;
+
     public CanaryRun withStatus(CanaryRunStatus status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class CanaryRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeline")
     public CanaryRunTimeline timeline;
+
     public CanaryRun withTimeline(CanaryRunTimeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public CanaryRun(){}
 }

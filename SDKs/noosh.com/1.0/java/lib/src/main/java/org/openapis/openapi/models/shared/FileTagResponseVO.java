@@ -15,6 +15,7 @@ public class FileTagResponseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public TagRepoVO[] result;
+
     public FileTagResponseVO withResult(TagRepoVO[] result) {
         this.result = result;
         return this;
@@ -23,6 +24,7 @@ public class FileTagResponseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public FileTagResponseVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class FileTagResponseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public FileTagResponseVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public FileTagResponseVO(){}
 }

@@ -12,6 +12,7 @@ public class ListForecastsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public ListForecastsRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListForecastsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListForecastsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListForecastsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListForecastsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListForecastsRequest(){}
 }

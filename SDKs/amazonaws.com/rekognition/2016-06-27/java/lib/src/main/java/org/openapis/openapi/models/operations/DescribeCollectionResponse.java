@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCollectionResponse {
@@ -12,6 +13,7 @@ public class DescribeCollectionResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeCollectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCollectionResponse {
     
     
     public String contentType;
+
     public DescribeCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCollectionResponse describeCollectionResponse;
+
     public DescribeCollectionResponse withDescribeCollectionResponse(org.openapis.openapi.models.shared.DescribeCollectionResponse describeCollectionResponse) {
         this.describeCollectionResponse = describeCollectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCollectionResponse {
      */
     
     public Object internalServerError;
+
     public DescribeCollectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCollectionResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeCollectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeCollectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DescribeCollectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeCollectionResponse {
     
     
     public Integer statusCode;
+
     public DescribeCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeCollectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCollectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeCollectionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeCollectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

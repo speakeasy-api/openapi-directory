@@ -12,9 +12,11 @@ public class PatchOrganizationRequestBodyTheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colors")
     public PatchOrganizationRequestBodyThemeColors colors;
+
     public PatchOrganizationRequestBodyTheme withColors(PatchOrganizationRequestBodyThemeColors colors) {
         this.colors = colors;
         return this;
     }
     
+    public PatchOrganizationRequestBodyTheme(){}
 }

@@ -53,11 +53,9 @@ public class MVSense {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveResponse(contentType, httpRes.statusCode()) {{
             getDeviceCameraAnalyticsLive200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class MVSense {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewResponse(contentType, httpRes.statusCode()) {{
             getDeviceCameraAnalyticsOverview200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class MVSense {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentResponse(contentType, httpRes.statusCode()) {{
             getDeviceCameraAnalyticsRecent200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,11 +185,9 @@ public class MVSense {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryResponse(contentType, httpRes.statusCode()) {{
             getDeviceCameraAnalyticsZoneHistory200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +223,9 @@ public class MVSense {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesResponse(contentType, httpRes.statusCode()) {{
             getDeviceCameraAnalyticsZones200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

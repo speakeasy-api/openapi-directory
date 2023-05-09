@@ -15,6 +15,7 @@ public class EndpointUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAttributes")
     public java.util.Map<String, String[]> userAttributes;
+
     public EndpointUser withUserAttributes(java.util.Map<String, String[]> userAttributes) {
         this.userAttributes = userAttributes;
         return this;
@@ -23,9 +24,11 @@ public class EndpointUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public EndpointUser withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public EndpointUser(){}
 }

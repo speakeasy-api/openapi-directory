@@ -18,6 +18,7 @@ public class DataSourceSheetDimensionRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnReferences")
     public DataSourceColumnReference[] columnReferences;
+
     public DataSourceSheetDimensionRange withColumnReferences(DataSourceColumnReference[] columnReferences) {
         this.columnReferences = columnReferences;
         return this;
@@ -29,9 +30,11 @@ public class DataSourceSheetDimensionRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public DataSourceSheetDimensionRange withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
     }
     
+    public DataSourceSheetDimensionRange(){}
 }

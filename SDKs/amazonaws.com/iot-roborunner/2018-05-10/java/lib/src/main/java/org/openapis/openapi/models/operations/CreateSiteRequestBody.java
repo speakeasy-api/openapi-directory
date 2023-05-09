@@ -15,6 +15,7 @@ public class CreateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateSiteRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateSiteRequestBody {
      */
     @JsonProperty("countryCode")
     public String countryCode;
+
     public CreateSiteRequestBody withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -36,6 +38,7 @@ public class CreateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSiteRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -46,9 +49,14 @@ public class CreateSiteRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateSiteRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateSiteRequestBody(@JsonProperty("countryCode") String countryCode, @JsonProperty("name") String name) {
+        this.countryCode = countryCode;
+        this.name = name;
+  }
 }

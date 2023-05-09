@@ -18,9 +18,11 @@ public class GetautoApprovevaluefromconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public GetautoApprovevaluefromconfig200ApplicationJSON withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GetautoApprovevaluefromconfig200ApplicationJSON(){}
 }

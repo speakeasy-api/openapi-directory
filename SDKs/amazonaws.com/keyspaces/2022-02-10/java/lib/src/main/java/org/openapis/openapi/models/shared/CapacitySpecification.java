@@ -15,6 +15,7 @@ public class CapacitySpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readCapacityUnits")
     public Long readCapacityUnits;
+
     public CapacitySpecification withReadCapacityUnits(Long readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
@@ -22,6 +23,7 @@ public class CapacitySpecification {
     
     @JsonProperty("throughputMode")
     public ThroughputModeEnum throughputMode;
+
     public CapacitySpecification withThroughputMode(ThroughputModeEnum throughputMode) {
         this.throughputMode = throughputMode;
         return this;
@@ -30,9 +32,13 @@ public class CapacitySpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeCapacityUnits")
     public Long writeCapacityUnits;
+
     public CapacitySpecification withWriteCapacityUnits(Long writeCapacityUnits) {
         this.writeCapacityUnits = writeCapacityUnits;
         return this;
     }
     
+    public CapacitySpecification(@JsonProperty("throughputMode") ThroughputModeEnum throughputMode) {
+        this.throughputMode = throughputMode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetListOfAspspsAspspsAspspCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GetListOfAspspsAspspsAspspCountry withCode(String code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class GetListOfAspspsAspspsAspspCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetListOfAspspsAspspsAspspCountry withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetListOfAspspsAspspsAspspCountry(){}
 }

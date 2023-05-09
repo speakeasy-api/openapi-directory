@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeliverabilityTestReportsResponse {
@@ -12,6 +13,7 @@ public class ListDeliverabilityTestReportsResponse {
      */
     
     public Object badRequestException;
+
     public ListDeliverabilityTestReportsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListDeliverabilityTestReportsResponse {
     
     
     public String contentType;
+
     public ListDeliverabilityTestReportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDeliverabilityTestReportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeliverabilityTestReportsResponse listDeliverabilityTestReportsResponse;
+
     public ListDeliverabilityTestReportsResponse withListDeliverabilityTestReportsResponse(org.openapis.openapi.models.shared.ListDeliverabilityTestReportsResponse listDeliverabilityTestReportsResponse) {
         this.listDeliverabilityTestReportsResponse = listDeliverabilityTestReportsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListDeliverabilityTestReportsResponse {
      */
     
     public Object notFoundException;
+
     public ListDeliverabilityTestReportsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListDeliverabilityTestReportsResponse {
     
     
     public Integer statusCode;
+
     public ListDeliverabilityTestReportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDeliverabilityTestReportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeliverabilityTestReportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListDeliverabilityTestReportsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDeliverabilityTestReportsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListDeliverabilityTestReportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

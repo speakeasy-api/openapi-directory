@@ -12,6 +12,7 @@ public class SettingModelHaljsonEmbeddedTagsEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public SettingModelHaljsonEmbeddedTagsEmbeddedProductEmbedded embedded;
+
     public SettingModelHaljsonEmbeddedTagsEmbeddedProduct withEmbedded(SettingModelHaljsonEmbeddedTagsEmbeddedProductEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -20,6 +21,7 @@ public class SettingModelHaljsonEmbeddedTagsEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SettingModelHaljsonEmbeddedTagsEmbeddedProductLinks links;
+
     public SettingModelHaljsonEmbeddedTagsEmbeddedProduct withLinks(SettingModelHaljsonEmbeddedTagsEmbeddedProductLinks links) {
         this.links = links;
         return this;
@@ -28,6 +30,7 @@ public class SettingModelHaljsonEmbeddedTagsEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SettingModelHaljsonEmbeddedTagsEmbeddedProduct withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class SettingModelHaljsonEmbeddedTagsEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SettingModelHaljsonEmbeddedTagsEmbeddedProduct withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class SettingModelHaljsonEmbeddedTagsEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public SettingModelHaljsonEmbeddedTagsEmbeddedProduct withOrder(Integer order) {
         this.order = order;
         return this;
@@ -52,6 +57,7 @@ public class SettingModelHaljsonEmbeddedTagsEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public SettingModelHaljsonEmbeddedTagsEmbeddedProduct withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -60,9 +66,11 @@ public class SettingModelHaljsonEmbeddedTagsEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public SettingModelHaljsonEmbeddedTagsEmbeddedProduct withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public SettingModelHaljsonEmbeddedTagsEmbeddedProduct(){}
 }

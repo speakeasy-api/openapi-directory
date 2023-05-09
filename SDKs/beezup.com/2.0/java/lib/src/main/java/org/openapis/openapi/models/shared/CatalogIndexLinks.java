@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CatalogIndexLinks {
     @JsonProperty("beezUPColumns")
     public LinksCatalogGetBeezUPColumnsLink beezUPColumns;
+
     public CatalogIndexLinks withBeezUPColumns(LinksCatalogGetBeezUPColumnsLink beezUPColumns) {
         this.beezUPColumns = beezUPColumns;
         return this;
@@ -16,9 +17,14 @@ public class CatalogIndexLinks {
     
     @JsonProperty("self")
     public LinksCatalogIndexLink self;
+
     public CatalogIndexLinks withSelf(LinksCatalogIndexLink self) {
         this.self = self;
         return this;
     }
     
+    public CatalogIndexLinks(@JsonProperty("beezUPColumns") LinksCatalogGetBeezUPColumnsLink beezUPColumns, @JsonProperty("self") LinksCatalogIndexLink self) {
+        this.beezUPColumns = beezUPColumns;
+        this.self = self;
+  }
 }

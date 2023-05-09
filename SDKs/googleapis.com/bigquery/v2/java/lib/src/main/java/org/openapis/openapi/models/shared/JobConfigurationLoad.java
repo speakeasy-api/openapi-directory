@@ -15,6 +15,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowJaggedRows")
     public Boolean allowJaggedRows;
+
     public JobConfigurationLoad withAllowJaggedRows(Boolean allowJaggedRows) {
         this.allowJaggedRows = allowJaggedRows;
         return this;
@@ -26,6 +27,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowQuotedNewlines")
     public Boolean allowQuotedNewlines;
+
     public JobConfigurationLoad withAllowQuotedNewlines(Boolean allowQuotedNewlines) {
         this.allowQuotedNewlines = allowQuotedNewlines;
         return this;
@@ -37,6 +39,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autodetect")
     public Boolean autodetect;
+
     public JobConfigurationLoad withAutodetect(Boolean autodetect) {
         this.autodetect = autodetect;
         return this;
@@ -45,6 +48,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clustering")
     public Clustering clustering;
+
     public JobConfigurationLoad withClustering(Clustering clustering) {
         this.clustering = clustering;
         return this;
@@ -56,6 +60,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionProperties")
     public ConnectionProperty[] connectionProperties;
+
     public JobConfigurationLoad withConnectionProperties(ConnectionProperty[] connectionProperties) {
         this.connectionProperties = connectionProperties;
         return this;
@@ -67,6 +72,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDisposition")
     public String createDisposition;
+
     public JobConfigurationLoad withCreateDisposition(String createDisposition) {
         this.createDisposition = createDisposition;
         return this;
@@ -78,6 +84,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSession")
     public Boolean createSession;
+
     public JobConfigurationLoad withCreateSession(Boolean createSession) {
         this.createSession = createSession;
         return this;
@@ -89,6 +96,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decimalTargetTypes")
     public String[] decimalTargetTypes;
+
     public JobConfigurationLoad withDecimalTargetTypes(String[] decimalTargetTypes) {
         this.decimalTargetTypes = decimalTargetTypes;
         return this;
@@ -97,6 +105,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationEncryptionConfiguration")
     public EncryptionConfiguration destinationEncryptionConfiguration;
+
     public JobConfigurationLoad withDestinationEncryptionConfiguration(EncryptionConfiguration destinationEncryptionConfiguration) {
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
         return this;
@@ -105,6 +114,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationTable")
     public TableReference destinationTable;
+
     public JobConfigurationLoad withDestinationTable(TableReference destinationTable) {
         this.destinationTable = destinationTable;
         return this;
@@ -113,6 +123,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationTableProperties")
     public DestinationTableProperties destinationTableProperties;
+
     public JobConfigurationLoad withDestinationTableProperties(DestinationTableProperties destinationTableProperties) {
         this.destinationTableProperties = destinationTableProperties;
         return this;
@@ -124,6 +135,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public JobConfigurationLoad withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -135,6 +147,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldDelimiter")
     public String fieldDelimiter;
+
     public JobConfigurationLoad withFieldDelimiter(String fieldDelimiter) {
         this.fieldDelimiter = fieldDelimiter;
         return this;
@@ -143,6 +156,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hivePartitioningOptions")
     public HivePartitioningOptions hivePartitioningOptions;
+
     public JobConfigurationLoad withHivePartitioningOptions(HivePartitioningOptions hivePartitioningOptions) {
         this.hivePartitioningOptions = hivePartitioningOptions;
         return this;
@@ -154,6 +168,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreUnknownValues")
     public Boolean ignoreUnknownValues;
+
     public JobConfigurationLoad withIgnoreUnknownValues(Boolean ignoreUnknownValues) {
         this.ignoreUnknownValues = ignoreUnknownValues;
         return this;
@@ -165,6 +180,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonExtension")
     public String jsonExtension;
+
     public JobConfigurationLoad withJsonExtension(String jsonExtension) {
         this.jsonExtension = jsonExtension;
         return this;
@@ -176,6 +192,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBadRecords")
     public Integer maxBadRecords;
+
     public JobConfigurationLoad withMaxBadRecords(Integer maxBadRecords) {
         this.maxBadRecords = maxBadRecords;
         return this;
@@ -187,6 +204,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullMarker")
     public String nullMarker;
+
     public JobConfigurationLoad withNullMarker(String nullMarker) {
         this.nullMarker = nullMarker;
         return this;
@@ -195,6 +213,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parquetOptions")
     public ParquetOptions parquetOptions;
+
     public JobConfigurationLoad withParquetOptions(ParquetOptions parquetOptions) {
         this.parquetOptions = parquetOptions;
         return this;
@@ -206,6 +225,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveAsciiControlCharacters")
     public Boolean preserveAsciiControlCharacters;
+
     public JobConfigurationLoad withPreserveAsciiControlCharacters(Boolean preserveAsciiControlCharacters) {
         this.preserveAsciiControlCharacters = preserveAsciiControlCharacters;
         return this;
@@ -217,6 +237,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectionFields")
     public String[] projectionFields;
+
     public JobConfigurationLoad withProjectionFields(String[] projectionFields) {
         this.projectionFields = projectionFields;
         return this;
@@ -228,6 +249,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote")
     public String quote;
+
     public JobConfigurationLoad withQuote(String quote) {
         this.quote = quote;
         return this;
@@ -236,6 +258,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangePartitioning")
     public RangePartitioning rangePartitioning;
+
     public JobConfigurationLoad withRangePartitioning(RangePartitioning rangePartitioning) {
         this.rangePartitioning = rangePartitioning;
         return this;
@@ -247,6 +270,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceFileSchemaUri")
     public String referenceFileSchemaUri;
+
     public JobConfigurationLoad withReferenceFileSchemaUri(String referenceFileSchemaUri) {
         this.referenceFileSchemaUri = referenceFileSchemaUri;
         return this;
@@ -255,6 +279,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public TableSchema schema;
+
     public JobConfigurationLoad withSchema(TableSchema schema) {
         this.schema = schema;
         return this;
@@ -266,6 +291,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaInline")
     public String schemaInline;
+
     public JobConfigurationLoad withSchemaInline(String schemaInline) {
         this.schemaInline = schemaInline;
         return this;
@@ -277,6 +303,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaInlineFormat")
     public String schemaInlineFormat;
+
     public JobConfigurationLoad withSchemaInlineFormat(String schemaInlineFormat) {
         this.schemaInlineFormat = schemaInlineFormat;
         return this;
@@ -288,6 +315,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaUpdateOptions")
     public String[] schemaUpdateOptions;
+
     public JobConfigurationLoad withSchemaUpdateOptions(String[] schemaUpdateOptions) {
         this.schemaUpdateOptions = schemaUpdateOptions;
         return this;
@@ -299,6 +327,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipLeadingRows")
     public Integer skipLeadingRows;
+
     public JobConfigurationLoad withSkipLeadingRows(Integer skipLeadingRows) {
         this.skipLeadingRows = skipLeadingRows;
         return this;
@@ -310,6 +339,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceFormat")
     public String sourceFormat;
+
     public JobConfigurationLoad withSourceFormat(String sourceFormat) {
         this.sourceFormat = sourceFormat;
         return this;
@@ -321,6 +351,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUris")
     public String[] sourceUris;
+
     public JobConfigurationLoad withSourceUris(String[] sourceUris) {
         this.sourceUris = sourceUris;
         return this;
@@ -329,6 +360,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timePartitioning")
     public TimePartitioning timePartitioning;
+
     public JobConfigurationLoad withTimePartitioning(TimePartitioning timePartitioning) {
         this.timePartitioning = timePartitioning;
         return this;
@@ -340,6 +372,7 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAvroLogicalTypes")
     public Boolean useAvroLogicalTypes;
+
     public JobConfigurationLoad withUseAvroLogicalTypes(Boolean useAvroLogicalTypes) {
         this.useAvroLogicalTypes = useAvroLogicalTypes;
         return this;
@@ -351,9 +384,11 @@ public class JobConfigurationLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeDisposition")
     public String writeDisposition;
+
     public JobConfigurationLoad withWriteDisposition(String writeDisposition) {
         this.writeDisposition = writeDisposition;
         return this;
     }
     
+    public JobConfigurationLoad(){}
 }

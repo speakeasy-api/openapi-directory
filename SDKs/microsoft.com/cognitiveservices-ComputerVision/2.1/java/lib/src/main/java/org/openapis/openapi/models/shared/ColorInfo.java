@@ -18,6 +18,7 @@ public class ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accentColor")
     public String accentColor;
+
     public ColorInfo withAccentColor(String accentColor) {
         this.accentColor = accentColor;
         return this;
@@ -29,6 +30,7 @@ public class ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dominantColorBackground")
     public String dominantColorBackground;
+
     public ColorInfo withDominantColorBackground(String dominantColorBackground) {
         this.dominantColorBackground = dominantColorBackground;
         return this;
@@ -40,6 +42,7 @@ public class ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dominantColorForeground")
     public String dominantColorForeground;
+
     public ColorInfo withDominantColorForeground(String dominantColorForeground) {
         this.dominantColorForeground = dominantColorForeground;
         return this;
@@ -51,6 +54,7 @@ public class ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dominantColors")
     public String[] dominantColors;
+
     public ColorInfo withDominantColors(String[] dominantColors) {
         this.dominantColors = dominantColors;
         return this;
@@ -62,9 +66,11 @@ public class ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBWImg")
     public Boolean isBWImg;
+
     public ColorInfo withIsBWImg(Boolean isBWImg) {
         this.isBWImg = isBWImg;
         return this;
     }
     
+    public ColorInfo(){}
 }

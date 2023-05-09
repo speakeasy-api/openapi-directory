@@ -15,6 +15,7 @@ public class InvoiceCreateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cost")
     public Double cost;
+
     public InvoiceCreateItemApiModel withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -26,6 +27,7 @@ public class InvoiceCreateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public InvoiceCreateItemApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class InvoiceCreateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountPercentage")
     public Double discountPercentage;
+
     public InvoiceCreateItemApiModel withDiscountPercentage(Double discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -48,6 +51,7 @@ public class InvoiceCreateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Double quantity;
+
     public InvoiceCreateItemApiModel withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -59,6 +63,7 @@ public class InvoiceCreateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxId")
     public Integer taxId;
+
     public InvoiceCreateItemApiModel withTaxId(Integer taxId) {
         this.taxId = taxId;
         return this;
@@ -70,6 +75,7 @@ public class InvoiceCreateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxPercentage")
     public Double taxPercentage;
+
     public InvoiceCreateItemApiModel withTaxPercentage(Double taxPercentage) {
         this.taxPercentage = taxPercentage;
         return this;
@@ -81,9 +87,11 @@ public class InvoiceCreateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkTypeId")
     public Integer workTypeId;
+
     public InvoiceCreateItemApiModel withWorkTypeId(Integer workTypeId) {
         this.workTypeId = workTypeId;
         return this;
     }
     
+    public InvoiceCreateItemApiModel(){}
 }

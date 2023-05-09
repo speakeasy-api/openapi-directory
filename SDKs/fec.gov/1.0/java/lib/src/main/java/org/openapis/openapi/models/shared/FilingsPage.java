@@ -12,6 +12,7 @@ public class FilingsPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public FilingsPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class FilingsPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public Filings[] results;
+
     public FilingsPage withResults(Filings[] results) {
         this.results = results;
         return this;
     }
     
+    public FilingsPage(){}
 }

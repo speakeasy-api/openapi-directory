@@ -15,6 +15,7 @@ public class CreateDevicePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateDevicePoolRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class CreateDevicePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDevices")
     public Long maxDevices;
+
     public CreateDevicePoolRequest withMaxDevices(Long maxDevices) {
         this.maxDevices = maxDevices;
         return this;
@@ -30,6 +32,7 @@ public class CreateDevicePoolRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateDevicePoolRequest withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class CreateDevicePoolRequest {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public CreateDevicePoolRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -44,9 +48,15 @@ public class CreateDevicePoolRequest {
     
     @JsonProperty("rules")
     public Rule[] rules;
+
     public CreateDevicePoolRequest withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public CreateDevicePoolRequest(@JsonProperty("name") String name, @JsonProperty("projectArn") String projectArn, @JsonProperty("rules") Rule[] rules) {
+        this.name = name;
+        this.projectArn = projectArn;
+        this.rules = rules;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreTableToPointInTimeResponse {
     
     public String contentType;
+
     public RestoreTableToPointInTimeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RestoreTableToPointInTimeResponse {
      */
     
     public Object internalServerError;
+
     public RestoreTableToPointInTimeResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class RestoreTableToPointInTimeResponse {
      */
     
     public Object invalidRestoreTimeException;
+
     public RestoreTableToPointInTimeResponse withInvalidRestoreTimeException(Object invalidRestoreTimeException) {
         this.invalidRestoreTimeException = invalidRestoreTimeException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreTableToPointInTimeResponse {
      */
     
     public Object limitExceededException;
+
     public RestoreTableToPointInTimeResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreTableToPointInTimeResponse {
      */
     
     public Object pointInTimeRecoveryUnavailableException;
+
     public RestoreTableToPointInTimeResponse withPointInTimeRecoveryUnavailableException(Object pointInTimeRecoveryUnavailableException) {
         this.pointInTimeRecoveryUnavailableException = pointInTimeRecoveryUnavailableException;
         return this;
@@ -59,6 +65,7 @@ public class RestoreTableToPointInTimeResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreTableToPointInTimeOutput restoreTableToPointInTimeOutput;
+
     public RestoreTableToPointInTimeResponse withRestoreTableToPointInTimeOutput(org.openapis.openapi.models.shared.RestoreTableToPointInTimeOutput restoreTableToPointInTimeOutput) {
         this.restoreTableToPointInTimeOutput = restoreTableToPointInTimeOutput;
         return this;
@@ -66,6 +73,7 @@ public class RestoreTableToPointInTimeResponse {
     
     
     public Integer statusCode;
+
     public RestoreTableToPointInTimeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RestoreTableToPointInTimeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreTableToPointInTimeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class RestoreTableToPointInTimeResponse {
      */
     
     public Object tableAlreadyExistsException;
+
     public RestoreTableToPointInTimeResponse withTableAlreadyExistsException(Object tableAlreadyExistsException) {
         this.tableAlreadyExistsException = tableAlreadyExistsException;
         return this;
@@ -93,6 +103,7 @@ public class RestoreTableToPointInTimeResponse {
      */
     
     public Object tableInUseException;
+
     public RestoreTableToPointInTimeResponse withTableInUseException(Object tableInUseException) {
         this.tableInUseException = tableInUseException;
         return this;
@@ -103,9 +114,14 @@ public class RestoreTableToPointInTimeResponse {
      */
     
     public Object tableNotFoundException;
+
     public RestoreTableToPointInTimeResponse withTableNotFoundException(Object tableNotFoundException) {
         this.tableNotFoundException = tableNotFoundException;
         return this;
     }
     
+    public RestoreTableToPointInTimeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

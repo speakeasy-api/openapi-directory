@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddApplicationInputResponse {
@@ -12,6 +13,7 @@ public class AddApplicationInputResponse {
      */
     
     public org.openapis.openapi.models.shared.AddApplicationInputResponse addApplicationInputResponse;
+
     public AddApplicationInputResponse withAddApplicationInputResponse(org.openapis.openapi.models.shared.AddApplicationInputResponse addApplicationInputResponse) {
         this.addApplicationInputResponse = addApplicationInputResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddApplicationInputResponse {
      */
     
     public Object codeValidationException;
+
     public AddApplicationInputResponse withCodeValidationException(Object codeValidationException) {
         this.codeValidationException = codeValidationException;
         return this;
@@ -32,6 +35,7 @@ public class AddApplicationInputResponse {
      */
     
     public Object concurrentModificationException;
+
     public AddApplicationInputResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class AddApplicationInputResponse {
     
     
     public String contentType;
+
     public AddApplicationInputResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AddApplicationInputResponse {
      */
     
     public Object invalidArgumentException;
+
     public AddApplicationInputResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class AddApplicationInputResponse {
      */
     
     public Object invalidRequestException;
+
     public AddApplicationInputResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class AddApplicationInputResponse {
      */
     
     public Object resourceInUseException;
+
     public AddApplicationInputResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -79,6 +87,7 @@ public class AddApplicationInputResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddApplicationInputResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class AddApplicationInputResponse {
     
     
     public Integer statusCode;
+
     public AddApplicationInputResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class AddApplicationInputResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddApplicationInputResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddApplicationInputResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ListUptimeCheckIpsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListUptimeCheckIpsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListUptimeCheckIpsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uptimeCheckIps")
     public UptimeCheckIp[] uptimeCheckIps;
+
     public ListUptimeCheckIpsResponse withUptimeCheckIps(UptimeCheckIp[] uptimeCheckIps) {
         this.uptimeCheckIps = uptimeCheckIps;
         return this;
     }
     
+    public ListUptimeCheckIpsResponse(){}
 }

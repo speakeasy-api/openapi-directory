@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse - Response message for fetch processor types.
+ * GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse - Response message for the FetchProcessorTypes method.
  */
 public class GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse {
     /**
@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processorTypes")
     public GoogleCloudDocumentaiV1beta3ProcessorType[] processorTypes;
+
     public GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse withProcessorTypes(GoogleCloudDocumentaiV1beta3ProcessorType[] processorTypes) {
         this.processorTypes = processorTypes;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse(){}
 }

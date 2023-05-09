@@ -15,6 +15,7 @@ public class ConflictResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteFiles")
     public DeleteFileEntry[] deleteFiles;
+
     public ConflictResolution withDeleteFiles(DeleteFileEntry[] deleteFiles) {
         this.deleteFiles = deleteFiles;
         return this;
@@ -23,6 +24,7 @@ public class ConflictResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceContents")
     public ReplaceContentEntry[] replaceContents;
+
     public ConflictResolution withReplaceContents(ReplaceContentEntry[] replaceContents) {
         this.replaceContents = replaceContents;
         return this;
@@ -31,9 +33,11 @@ public class ConflictResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setFileModes")
     public SetFileModeEntry[] setFileModes;
+
     public ConflictResolution withSetFileModes(SetFileModeEntry[] setFileModes) {
         this.setFileModes = setFileModes;
         return this;
     }
     
+    public ConflictResolution(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetSubnetsInput {
     
     public IpAddressTypeEnum ipAddressType;
+
     public SetSubnetsInput withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -16,6 +17,7 @@ public class SetSubnetsInput {
     
     
     public String loadBalancerArn;
+
     public SetSubnetsInput withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -23,6 +25,7 @@ public class SetSubnetsInput {
     
     
     public SubnetMapping[] subnetMappings;
+
     public SetSubnetsInput withSubnetMappings(SubnetMapping[] subnetMappings) {
         this.subnetMappings = subnetMappings;
         return this;
@@ -30,9 +33,13 @@ public class SetSubnetsInput {
     
     
     public String[] subnets;
+
     public SetSubnetsInput withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public SetSubnetsInput(@JsonProperty("LoadBalancerArn") String loadBalancerArn) {
+        this.loadBalancerArn = loadBalancerArn;
+  }
 }

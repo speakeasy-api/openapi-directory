@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EvaluateOnExit {
     @JsonProperty("action")
     public RetryActionEnum action;
+
     public EvaluateOnExit withAction(RetryActionEnum action) {
         this.action = action;
         return this;
@@ -22,6 +23,7 @@ public class EvaluateOnExit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onExitCode")
     public String onExitCode;
+
     public EvaluateOnExit withOnExitCode(String onExitCode) {
         this.onExitCode = onExitCode;
         return this;
@@ -30,6 +32,7 @@ public class EvaluateOnExit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onReason")
     public String onReason;
+
     public EvaluateOnExit withOnReason(String onReason) {
         this.onReason = onReason;
         return this;
@@ -38,9 +41,13 @@ public class EvaluateOnExit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onStatusReason")
     public String onStatusReason;
+
     public EvaluateOnExit withOnStatusReason(String onStatusReason) {
         this.onStatusReason = onStatusReason;
         return this;
     }
     
+    public EvaluateOnExit(@JsonProperty("action") RetryActionEnum action) {
+        this.action = action;
+  }
 }

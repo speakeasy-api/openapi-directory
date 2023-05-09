@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugForksResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugForksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugForksResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugForksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugForksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugForksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetRepositoriesWorkspaceRepoSlugForksResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedRepositories paginatedRepositories;
+
     public GetRepositoriesWorkspaceRepoSlugForksResponse withPaginatedRepositories(org.openapis.openapi.models.shared.PaginatedRepositories paginatedRepositories) {
         this.paginatedRepositories = paginatedRepositories;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugForksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GetVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
     public String labelSelector;
+
     public GetVolumesRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -22,6 +23,7 @@ public class GetVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetVolumesRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class GetVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetVolumesSortEnum sort;
+
     public GetVolumesRequest withSort(GetVolumesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -42,9 +45,11 @@ public class GetVolumesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetVolumesStatusEnum status;
+
     public GetVolumesRequest withStatus(GetVolumesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetVolumesRequest(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservedCacheNodeList {
     
     public Long cacheNodeCount;
+
     public ReservedCacheNodeList withCacheNodeCount(Long cacheNodeCount) {
         this.cacheNodeCount = cacheNodeCount;
         return this;
@@ -19,6 +20,7 @@ public class ReservedCacheNodeList {
     
     
     public String cacheNodeType;
+
     public ReservedCacheNodeList withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -26,6 +28,7 @@ public class ReservedCacheNodeList {
     
     
     public Long duration;
+
     public ReservedCacheNodeList withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -33,6 +36,7 @@ public class ReservedCacheNodeList {
     
     
     public Double fixedPrice;
+
     public ReservedCacheNodeList withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -40,6 +44,7 @@ public class ReservedCacheNodeList {
     
     
     public String offeringType;
+
     public ReservedCacheNodeList withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -47,6 +52,7 @@ public class ReservedCacheNodeList {
     
     
     public String productDescription;
+
     public ReservedCacheNodeList withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -54,6 +60,7 @@ public class ReservedCacheNodeList {
     
     
     public RecurringChargeList[] recurringCharges;
+
     public ReservedCacheNodeList withRecurringCharges(RecurringChargeList[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -61,6 +68,7 @@ public class ReservedCacheNodeList {
     
     
     public String reservationARN;
+
     public ReservedCacheNodeList withReservationARN(String reservationARN) {
         this.reservationARN = reservationARN;
         return this;
@@ -68,6 +76,7 @@ public class ReservedCacheNodeList {
     
     
     public String reservedCacheNodeId;
+
     public ReservedCacheNodeList withReservedCacheNodeId(String reservedCacheNodeId) {
         this.reservedCacheNodeId = reservedCacheNodeId;
         return this;
@@ -75,6 +84,7 @@ public class ReservedCacheNodeList {
     
     
     public String reservedCacheNodesOfferingId;
+
     public ReservedCacheNodeList withReservedCacheNodesOfferingId(String reservedCacheNodesOfferingId) {
         this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
         return this;
@@ -82,6 +92,7 @@ public class ReservedCacheNodeList {
     
     
     public OffsetDateTime startTime;
+
     public ReservedCacheNodeList withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -89,6 +100,7 @@ public class ReservedCacheNodeList {
     
     
     public String state;
+
     public ReservedCacheNodeList withState(String state) {
         this.state = state;
         return this;
@@ -96,9 +108,11 @@ public class ReservedCacheNodeList {
     
     
     public Double usagePrice;
+
     public ReservedCacheNodeList withUsagePrice(Double usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public ReservedCacheNodeList(){}
 }

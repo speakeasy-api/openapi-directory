@@ -15,6 +15,7 @@ public class PlusAclentryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PlusAclentryResource withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,6 +27,7 @@ public class PlusAclentryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlusAclentryResource withId(String id) {
         this.id = id;
         return this;
@@ -43,9 +45,11 @@ public class PlusAclentryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PlusAclentryResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PlusAclentryResource(){}
 }

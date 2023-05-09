@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeServiceAccessPoliciesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeServiceAccessPoliciesActionEnum action;
+
     public GETDescribeServiceAccessPoliciesRequest withAction(GETDescribeServiceAccessPoliciesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Deployed")
     public Boolean deployed;
+
     public GETDescribeServiceAccessPoliciesRequest withDeployed(Boolean deployed) {
         this.deployed = deployed;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETDescribeServiceAccessPoliciesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -36,6 +40,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeServiceAccessPoliciesVersionEnum version;
+
     public GETDescribeServiceAccessPoliciesRequest withVersion(GETDescribeServiceAccessPoliciesVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeServiceAccessPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeServiceAccessPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeServiceAccessPoliciesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeServiceAccessPoliciesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeServiceAccessPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDescribeServiceAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeServiceAccessPoliciesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDescribeServiceAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeServiceAccessPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeServiceAccessPoliciesRequest(@JsonProperty("Action") GETDescribeServiceAccessPoliciesActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("Version") GETDescribeServiceAccessPoliciesVersionEnum version) {
+        this.action = action;
+        this.domainName = domainName;
+        this.version = version;
+  }
 }

@@ -29,9 +29,11 @@ public class Bank {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public BankPriorityEnum priority;
+
     public Bank withPriority(BankPriorityEnum priority) {
         this.priority = priority;
         return this;
     }
     
+    public Bank(){}
 }

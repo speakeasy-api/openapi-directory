@@ -58,11 +58,9 @@ public class BillingInfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerBillingInfoGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBillingInfoGetResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerBillingInfoGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBillingInfoGetResponse(contentType, httpRes.statusCode()) {{
             billingInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class BillingInfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerBillingInfoListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBillingInfoListResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerBillingInfoListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerBillingInfoListResponse(contentType, httpRes.statusCode()) {{
             billingInfoList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class Logo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public Logo withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -20,6 +21,7 @@ public class Logo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Logo withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Logo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LogoTypeEnum type;
+
     public Logo withType(LogoTypeEnum type) {
         this.type = type;
         return this;
@@ -35,9 +38,13 @@ public class Logo {
     
     @JsonProperty("url")
     public String url;
+
     public Logo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Logo(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

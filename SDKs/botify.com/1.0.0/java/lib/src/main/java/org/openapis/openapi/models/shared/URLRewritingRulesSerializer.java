@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class URLRewritingRulesSerializer {
     @JsonProperty("rules")
     public RewritingRuleSerializer[] rules;
+
     public URLRewritingRulesSerializer withRules(RewritingRuleSerializer[] rules) {
         this.rules = rules;
         return this;
@@ -19,9 +20,14 @@ public class URLRewritingRulesSerializer {
     
     @JsonProperty("urls")
     public String[] urls;
+
     public URLRewritingRulesSerializer withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public URLRewritingRulesSerializer(@JsonProperty("rules") RewritingRuleSerializer[] rules, @JsonProperty("urls") String[] urls) {
+        this.rules = rules;
+        this.urls = urls;
+  }
 }

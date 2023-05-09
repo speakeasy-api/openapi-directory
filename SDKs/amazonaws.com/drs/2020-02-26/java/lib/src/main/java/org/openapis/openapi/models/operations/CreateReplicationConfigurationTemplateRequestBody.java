@@ -14,8 +14,21 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("associateDefaultSecurityGroup")
     public Boolean associateDefaultSecurityGroup;
+
     public CreateReplicationConfigurationTemplateRequestBody withAssociateDefaultSecurityGroup(Boolean associateDefaultSecurityGroup) {
         this.associateDefaultSecurityGroup = associateDefaultSecurityGroup;
+        return this;
+    }
+    
+    /**
+     * Whether to allow the AWS replication agent to automatically replicate newly added disks.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("autoReplicateNewDisks")
+    public Boolean autoReplicateNewDisks;
+
+    public CreateReplicationConfigurationTemplateRequestBody withAutoReplicateNewDisks(Boolean autoReplicateNewDisks) {
+        this.autoReplicateNewDisks = autoReplicateNewDisks;
         return this;
     }
     
@@ -24,6 +37,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("bandwidthThrottling")
     public Long bandwidthThrottling;
+
     public CreateReplicationConfigurationTemplateRequestBody withBandwidthThrottling(Long bandwidthThrottling) {
         this.bandwidthThrottling = bandwidthThrottling;
         return this;
@@ -34,6 +48,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("createPublicIP")
     public Boolean createPublicIP;
+
     public CreateReplicationConfigurationTemplateRequestBody withCreatePublicIP(Boolean createPublicIP) {
         this.createPublicIP = createPublicIP;
         return this;
@@ -44,6 +59,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("dataPlaneRouting")
     public CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum dataPlaneRouting;
+
     public CreateReplicationConfigurationTemplateRequestBody withDataPlaneRouting(CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum dataPlaneRouting) {
         this.dataPlaneRouting = dataPlaneRouting;
         return this;
@@ -54,6 +70,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("defaultLargeStagingDiskType")
     public CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType;
+
     public CreateReplicationConfigurationTemplateRequestBody withDefaultLargeStagingDiskType(CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType) {
         this.defaultLargeStagingDiskType = defaultLargeStagingDiskType;
         return this;
@@ -64,6 +81,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("ebsEncryption")
     public CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum ebsEncryption;
+
     public CreateReplicationConfigurationTemplateRequestBody withEbsEncryption(CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum ebsEncryption) {
         this.ebsEncryption = ebsEncryption;
         return this;
@@ -75,6 +93,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsEncryptionKeyArn")
     public String ebsEncryptionKeyArn;
+
     public CreateReplicationConfigurationTemplateRequestBody withEbsEncryptionKeyArn(String ebsEncryptionKeyArn) {
         this.ebsEncryptionKeyArn = ebsEncryptionKeyArn;
         return this;
@@ -85,6 +104,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("pitPolicy")
     public org.openapis.openapi.models.shared.PITPolicyRule[] pitPolicy;
+
     public CreateReplicationConfigurationTemplateRequestBody withPitPolicy(org.openapis.openapi.models.shared.PITPolicyRule[] pitPolicy) {
         this.pitPolicy = pitPolicy;
         return this;
@@ -95,6 +115,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("replicationServerInstanceType")
     public String replicationServerInstanceType;
+
     public CreateReplicationConfigurationTemplateRequestBody withReplicationServerInstanceType(String replicationServerInstanceType) {
         this.replicationServerInstanceType = replicationServerInstanceType;
         return this;
@@ -105,6 +126,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("replicationServersSecurityGroupsIDs")
     public String[] replicationServersSecurityGroupsIDs;
+
     public CreateReplicationConfigurationTemplateRequestBody withReplicationServersSecurityGroupsIDs(String[] replicationServersSecurityGroupsIDs) {
         this.replicationServersSecurityGroupsIDs = replicationServersSecurityGroupsIDs;
         return this;
@@ -115,6 +137,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("stagingAreaSubnetId")
     public String stagingAreaSubnetId;
+
     public CreateReplicationConfigurationTemplateRequestBody withStagingAreaSubnetId(String stagingAreaSubnetId) {
         this.stagingAreaSubnetId = stagingAreaSubnetId;
         return this;
@@ -125,6 +148,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("stagingAreaTags")
     public java.util.Map<String, String> stagingAreaTags;
+
     public CreateReplicationConfigurationTemplateRequestBody withStagingAreaTags(java.util.Map<String, String> stagingAreaTags) {
         this.stagingAreaTags = stagingAreaTags;
         return this;
@@ -136,6 +160,7 @@ public class CreateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateReplicationConfigurationTemplateRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -146,9 +171,24 @@ public class CreateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("useDedicatedReplicationServer")
     public Boolean useDedicatedReplicationServer;
+
     public CreateReplicationConfigurationTemplateRequestBody withUseDedicatedReplicationServer(Boolean useDedicatedReplicationServer) {
         this.useDedicatedReplicationServer = useDedicatedReplicationServer;
         return this;
     }
     
+    public CreateReplicationConfigurationTemplateRequestBody(@JsonProperty("associateDefaultSecurityGroup") Boolean associateDefaultSecurityGroup, @JsonProperty("bandwidthThrottling") Long bandwidthThrottling, @JsonProperty("createPublicIP") Boolean createPublicIP, @JsonProperty("dataPlaneRouting") CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum dataPlaneRouting, @JsonProperty("defaultLargeStagingDiskType") CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType, @JsonProperty("ebsEncryption") CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum ebsEncryption, @JsonProperty("pitPolicy") org.openapis.openapi.models.shared.PITPolicyRule[] pitPolicy, @JsonProperty("replicationServerInstanceType") String replicationServerInstanceType, @JsonProperty("replicationServersSecurityGroupsIDs") String[] replicationServersSecurityGroupsIDs, @JsonProperty("stagingAreaSubnetId") String stagingAreaSubnetId, @JsonProperty("stagingAreaTags") java.util.Map<String, String> stagingAreaTags, @JsonProperty("useDedicatedReplicationServer") Boolean useDedicatedReplicationServer) {
+        this.associateDefaultSecurityGroup = associateDefaultSecurityGroup;
+        this.bandwidthThrottling = bandwidthThrottling;
+        this.createPublicIP = createPublicIP;
+        this.dataPlaneRouting = dataPlaneRouting;
+        this.defaultLargeStagingDiskType = defaultLargeStagingDiskType;
+        this.ebsEncryption = ebsEncryption;
+        this.pitPolicy = pitPolicy;
+        this.replicationServerInstanceType = replicationServerInstanceType;
+        this.replicationServersSecurityGroupsIDs = replicationServersSecurityGroupsIDs;
+        this.stagingAreaSubnetId = stagingAreaSubnetId;
+        this.stagingAreaTags = stagingAreaTags;
+        this.useDedicatedReplicationServer = useDedicatedReplicationServer;
+  }
 }

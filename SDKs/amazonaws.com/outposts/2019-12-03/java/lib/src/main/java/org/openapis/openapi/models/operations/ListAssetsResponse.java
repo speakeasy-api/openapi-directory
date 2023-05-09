@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssetsResponse {
@@ -12,6 +13,7 @@ public class ListAssetsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAssetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAssetsResponse {
     
     
     public String contentType;
+
     public ListAssetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAssetsResponse {
      */
     
     public Object internalServerException;
+
     public ListAssetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssetsOutput listAssetsOutput;
+
     public ListAssetsResponse withListAssetsOutput(org.openapis.openapi.models.shared.ListAssetsOutput listAssetsOutput) {
         this.listAssetsOutput = listAssetsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListAssetsResponse {
      */
     
     public Object notFoundException;
+
     public ListAssetsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListAssetsResponse {
     
     
     public Integer statusCode;
+
     public ListAssetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAssetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListAssetsResponse {
      */
     
     public Object validationException;
+
     public ListAssetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAssetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

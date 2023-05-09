@@ -12,9 +12,13 @@ public class CopyFileToS3RequestBody {
      */
     @JsonProperty("file_paths")
     public CopyFileToS3RequestBodyFilePaths[] filePaths;
+
     public CopyFileToS3RequestBody withFilePaths(CopyFileToS3RequestBodyFilePaths[] filePaths) {
         this.filePaths = filePaths;
         return this;
     }
     
+    public CopyFileToS3RequestBody(@JsonProperty("file_paths") CopyFileToS3RequestBodyFilePaths[] filePaths) {
+        this.filePaths = filePaths;
+  }
 }

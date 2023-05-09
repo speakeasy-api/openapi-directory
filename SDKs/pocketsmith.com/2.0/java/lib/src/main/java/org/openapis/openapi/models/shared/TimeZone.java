@@ -15,6 +15,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public TimeZone withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -26,6 +27,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted_name")
     public String formattedName;
+
     public TimeZone withFormattedName(String formattedName) {
         this.formattedName = formattedName;
         return this;
@@ -37,6 +39,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted_offset")
     public String formattedOffset;
+
     public TimeZone withFormattedOffset(String formattedOffset) {
         this.formattedOffset = formattedOffset;
         return this;
@@ -48,6 +51,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public TimeZone withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -59,6 +63,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TimeZone withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +75,11 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utc_offset")
     public Long utcOffset;
+
     public TimeZone withUtcOffset(Long utcOffset) {
         this.utcOffset = utcOffset;
         return this;
     }
     
+    public TimeZone(){}
 }

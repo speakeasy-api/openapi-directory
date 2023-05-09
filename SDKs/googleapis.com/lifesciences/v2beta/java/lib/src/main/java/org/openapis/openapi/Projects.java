@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsPipelinesRunResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsPipelinesRunResponse() {{
+        org.openapis.openapi.models.operations.LifesciencesProjectsLocationsPipelinesRunResponse res = new org.openapis.openapi.models.operations.LifesciencesProjectsLocationsPipelinesRunResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class ListTaskDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyPrefix")
     public String familyPrefix;
+
     public ListTaskDefinitionsRequest withFamilyPrefix(String familyPrefix) {
         this.familyPrefix = familyPrefix;
         return this;
@@ -20,6 +21,7 @@ public class ListTaskDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListTaskDefinitionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListTaskDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTaskDefinitionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListTaskDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public SortOrderEnum sort;
+
     public ListTaskDefinitionsRequest withSort(SortOrderEnum sort) {
         this.sort = sort;
         return this;
@@ -44,9 +48,11 @@ public class ListTaskDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TaskDefinitionStatusEnum status;
+
     public ListTaskDefinitionsRequest withStatus(TaskDefinitionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListTaskDefinitionsRequest(){}
 }

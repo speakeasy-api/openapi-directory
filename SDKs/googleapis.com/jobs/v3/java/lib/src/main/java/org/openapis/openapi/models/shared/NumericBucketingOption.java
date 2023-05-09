@@ -18,6 +18,7 @@ public class NumericBucketingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketBounds")
     public Double[] bucketBounds;
+
     public NumericBucketingOption withBucketBounds(Double[] bucketBounds) {
         this.bucketBounds = bucketBounds;
         return this;
@@ -29,9 +30,11 @@ public class NumericBucketingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresMinMax")
     public Boolean requiresMinMax;
+
     public NumericBucketingOption withRequiresMinMax(Boolean requiresMinMax) {
         this.requiresMinMax = requiresMinMax;
         return this;
     }
     
+    public NumericBucketingOption(){}
 }

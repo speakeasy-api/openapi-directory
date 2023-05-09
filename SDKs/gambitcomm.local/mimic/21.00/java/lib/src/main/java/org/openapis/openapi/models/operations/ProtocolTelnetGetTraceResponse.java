@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolTelnetGetTraceResponse {
@@ -12,6 +13,7 @@ public class ProtocolTelnetGetTraceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigTELNET configTELNET;
+
     public ProtocolTelnetGetTraceResponse withConfigTELNET(org.openapis.openapi.models.shared.ConfigTELNET configTELNET) {
         this.configTELNET = configTELNET;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolTelnetGetTraceResponse {
     
     
     public String contentType;
+
     public ProtocolTelnetGetTraceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolTelnetGetTraceResponse {
     
     
     public Integer statusCode;
+
     public ProtocolTelnetGetTraceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolTelnetGetTraceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolTelnetGetTraceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProtocolTelnetGetTraceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

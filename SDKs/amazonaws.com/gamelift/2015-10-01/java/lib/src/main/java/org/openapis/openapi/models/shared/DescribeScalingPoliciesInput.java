@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeScalingPoliciesInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DescribeScalingPoliciesInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeScalingPoliciesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeScalingPoliciesInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class DescribeScalingPoliciesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public DescribeScalingPoliciesInput withLocation(String location) {
         this.location = location;
         return this;
@@ -35,6 +38,7 @@ public class DescribeScalingPoliciesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScalingPoliciesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class DescribeScalingPoliciesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusFilter")
     public ScalingStatusTypeEnum statusFilter;
+
     public DescribeScalingPoliciesInput withStatusFilter(ScalingStatusTypeEnum statusFilter) {
         this.statusFilter = statusFilter;
         return this;
     }
     
+    public DescribeScalingPoliciesInput(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

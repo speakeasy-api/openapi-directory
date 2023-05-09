@@ -18,9 +18,11 @@ public class TelemetryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logFormat")
     public TelemetryConfigLogFormatEnum logFormat;
+
     public TelemetryConfig withLogFormat(TelemetryConfigLogFormatEnum logFormat) {
         this.logFormat = logFormat;
         return this;
     }
     
+    public TelemetryConfig(){}
 }

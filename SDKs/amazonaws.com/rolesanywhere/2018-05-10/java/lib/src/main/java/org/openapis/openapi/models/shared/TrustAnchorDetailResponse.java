@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrustAnchorDetailResponse {
     @JsonProperty("trustAnchor")
     public TrustAnchorDetail trustAnchor;
+
     public TrustAnchorDetailResponse withTrustAnchor(TrustAnchorDetail trustAnchor) {
         this.trustAnchor = trustAnchor;
         return this;
     }
     
+    public TrustAnchorDetailResponse(@JsonProperty("trustAnchor") TrustAnchorDetail trustAnchor) {
+        this.trustAnchor = trustAnchor;
+  }
 }

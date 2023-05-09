@@ -15,6 +15,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkpointLabel")
     public String checkpointLabel;
+
     public IntentSummary withCheckpointLabel(String checkpointLabel) {
         this.checkpointLabel = checkpointLabel;
         return this;
@@ -23,6 +24,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationStatus")
     public ConfirmationStatusEnum confirmationStatus;
+
     public IntentSummary withConfirmationStatus(ConfirmationStatusEnum confirmationStatus) {
         this.confirmationStatus = confirmationStatus;
         return this;
@@ -30,6 +32,7 @@ public class IntentSummary {
     
     @JsonProperty("dialogActionType")
     public DialogActionTypeEnum dialogActionType;
+
     public IntentSummary withDialogActionType(DialogActionTypeEnum dialogActionType) {
         this.dialogActionType = dialogActionType;
         return this;
@@ -38,6 +41,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentState")
     public FulfillmentStateEnum fulfillmentState;
+
     public IntentSummary withFulfillmentState(FulfillmentStateEnum fulfillmentState) {
         this.fulfillmentState = fulfillmentState;
         return this;
@@ -46,6 +50,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentName")
     public String intentName;
+
     public IntentSummary withIntentName(String intentName) {
         this.intentName = intentName;
         return this;
@@ -54,6 +59,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotToElicit")
     public String slotToElicit;
+
     public IntentSummary withSlotToElicit(String slotToElicit) {
         this.slotToElicit = slotToElicit;
         return this;
@@ -62,9 +68,13 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slots")
     public java.util.Map<String, String> slots;
+
     public IntentSummary withSlots(java.util.Map<String, String> slots) {
         this.slots = slots;
         return this;
     }
     
+    public IntentSummary(@JsonProperty("dialogActionType") DialogActionTypeEnum dialogActionType) {
+        this.dialogActionType = dialogActionType;
+  }
 }

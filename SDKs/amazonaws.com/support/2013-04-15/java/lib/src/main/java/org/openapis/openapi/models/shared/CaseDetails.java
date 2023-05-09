@@ -15,6 +15,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseId")
     public String caseId;
+
     public CaseDetails withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -23,6 +24,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryCode")
     public String categoryCode;
+
     public CaseDetails withCategoryCode(String categoryCode) {
         this.categoryCode = categoryCode;
         return this;
@@ -31,6 +33,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ccEmailAddresses")
     public String[] ccEmailAddresses;
+
     public CaseDetails withCcEmailAddresses(String[] ccEmailAddresses) {
         this.ccEmailAddresses = ccEmailAddresses;
         return this;
@@ -39,6 +42,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayId")
     public String displayId;
+
     public CaseDetails withDisplayId(String displayId) {
         this.displayId = displayId;
         return this;
@@ -47,6 +51,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public CaseDetails withLanguage(String language) {
         this.language = language;
         return this;
@@ -55,6 +60,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentCommunications")
     public RecentCaseCommunications recentCommunications;
+
     public CaseDetails withRecentCommunications(RecentCaseCommunications recentCommunications) {
         this.recentCommunications = recentCommunications;
         return this;
@@ -63,6 +69,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceCode")
     public String serviceCode;
+
     public CaseDetails withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
@@ -71,6 +78,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCode")
     public String severityCode;
+
     public CaseDetails withSeverityCode(String severityCode) {
         this.severityCode = severityCode;
         return this;
@@ -79,6 +87,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CaseDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -87,6 +96,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public CaseDetails withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -95,6 +105,7 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedBy")
     public String submittedBy;
+
     public CaseDetails withSubmittedBy(String submittedBy) {
         this.submittedBy = submittedBy;
         return this;
@@ -103,9 +114,11 @@ public class CaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeCreated")
     public String timeCreated;
+
     public CaseDetails withTimeCreated(String timeCreated) {
         this.timeCreated = timeCreated;
         return this;
     }
     
+    public CaseDetails(){}
 }

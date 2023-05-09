@@ -12,6 +12,7 @@ public class CreateAvailabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateAvailabilityConfigurationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateAvailabilityConfigurationRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public CreateAvailabilityConfigurationRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -27,6 +29,7 @@ public class CreateAvailabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EwsProvider")
     public EwsAvailabilityProvider ewsProvider;
+
     public CreateAvailabilityConfigurationRequest withEwsProvider(EwsAvailabilityProvider ewsProvider) {
         this.ewsProvider = ewsProvider;
         return this;
@@ -35,6 +38,7 @@ public class CreateAvailabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaProvider")
     public LambdaAvailabilityProvider lambdaProvider;
+
     public CreateAvailabilityConfigurationRequest withLambdaProvider(LambdaAvailabilityProvider lambdaProvider) {
         this.lambdaProvider = lambdaProvider;
         return this;
@@ -42,9 +46,14 @@ public class CreateAvailabilityConfigurationRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public CreateAvailabilityConfigurationRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public CreateAvailabilityConfigurationRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("OrganizationId") String organizationId) {
+        this.domainName = domainName;
+        this.organizationId = organizationId;
+  }
 }

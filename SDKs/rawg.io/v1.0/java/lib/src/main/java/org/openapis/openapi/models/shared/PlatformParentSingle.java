@@ -12,6 +12,7 @@ public class PlatformParentSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PlatformParentSingle withId(Long id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class PlatformParentSingle {
     
     @JsonProperty("name")
     public String name;
+
     public PlatformParentSingle withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class PlatformParentSingle {
     
     @JsonProperty("platforms")
     public Platform[] platforms;
+
     public PlatformParentSingle withPlatforms(Platform[] platforms) {
         this.platforms = platforms;
         return this;
@@ -34,9 +37,14 @@ public class PlatformParentSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public PlatformParentSingle withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public PlatformParentSingle(@JsonProperty("name") String name, @JsonProperty("platforms") Platform[] platforms) {
+        this.name = name;
+        this.platforms = platforms;
+  }
 }

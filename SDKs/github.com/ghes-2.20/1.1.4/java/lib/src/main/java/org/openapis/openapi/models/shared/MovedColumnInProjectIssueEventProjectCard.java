@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MovedColumnInProjectIssueEventProjectCard {
     @JsonProperty("column_name")
     public String columnName;
+
     public MovedColumnInProjectIssueEventProjectCard withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -18,6 +19,7 @@ public class MovedColumnInProjectIssueEventProjectCard {
     
     @JsonProperty("id")
     public Long id;
+
     public MovedColumnInProjectIssueEventProjectCard withId(Long id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class MovedColumnInProjectIssueEventProjectCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_column_name")
     public String previousColumnName;
+
     public MovedColumnInProjectIssueEventProjectCard withPreviousColumnName(String previousColumnName) {
         this.previousColumnName = previousColumnName;
         return this;
@@ -33,6 +36,7 @@ public class MovedColumnInProjectIssueEventProjectCard {
     
     @JsonProperty("project_id")
     public Long projectId;
+
     public MovedColumnInProjectIssueEventProjectCard withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -40,6 +44,7 @@ public class MovedColumnInProjectIssueEventProjectCard {
     
     @JsonProperty("project_url")
     public String projectUrl;
+
     public MovedColumnInProjectIssueEventProjectCard withProjectUrl(String projectUrl) {
         this.projectUrl = projectUrl;
         return this;
@@ -47,9 +52,17 @@ public class MovedColumnInProjectIssueEventProjectCard {
     
     @JsonProperty("url")
     public String url;
+
     public MovedColumnInProjectIssueEventProjectCard withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MovedColumnInProjectIssueEventProjectCard(@JsonProperty("column_name") String columnName, @JsonProperty("id") Long id, @JsonProperty("project_id") Long projectId, @JsonProperty("project_url") String projectUrl, @JsonProperty("url") String url) {
+        this.columnName = columnName;
+        this.id = id;
+        this.projectId = projectId;
+        this.projectUrl = projectUrl;
+        this.url = url;
+  }
 }

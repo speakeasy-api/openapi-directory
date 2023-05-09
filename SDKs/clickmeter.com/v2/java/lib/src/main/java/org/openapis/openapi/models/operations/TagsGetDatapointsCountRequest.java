@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetDatapointsCountRequest {
@@ -12,6 +13,7 @@ public class TagsGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public TagsGetDatapointsCountRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +24,7 @@ public class TagsGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public TagsGetDatapointsCountRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +35,7 @@ public class TagsGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public TagsGetDatapointsCountStatusEnum status;
+
     public TagsGetDatapointsCountRequest withStatus(TagsGetDatapointsCountStatusEnum status) {
         this.status = status;
         return this;
@@ -42,6 +46,7 @@ public class TagsGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public Long tagId;
+
     public TagsGetDatapointsCountRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
@@ -52,6 +57,7 @@ public class TagsGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public TagsGetDatapointsCountRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -62,9 +68,13 @@ public class TagsGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public TagsGetDatapointsCountTypeEnum type;
+
     public TagsGetDatapointsCountRequest withType(TagsGetDatapointsCountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TagsGetDatapointsCountRequest(@JsonProperty("tagId") Long tagId) {
+        this.tagId = tagId;
+  }
 }

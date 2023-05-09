@@ -15,6 +15,7 @@ public class TimerStartedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public TimerStartedEventAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -22,6 +23,7 @@ public class TimerStartedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public TimerStartedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -29,6 +31,7 @@ public class TimerStartedEventAttributes {
     
     @JsonProperty("startToFireTimeout")
     public String startToFireTimeout;
+
     public TimerStartedEventAttributes withStartToFireTimeout(String startToFireTimeout) {
         this.startToFireTimeout = startToFireTimeout;
         return this;
@@ -36,9 +39,15 @@ public class TimerStartedEventAttributes {
     
     @JsonProperty("timerId")
     public String timerId;
+
     public TimerStartedEventAttributes withTimerId(String timerId) {
         this.timerId = timerId;
         return this;
     }
     
+    public TimerStartedEventAttributes(@JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("startToFireTimeout") String startToFireTimeout, @JsonProperty("timerId") String timerId) {
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.startToFireTimeout = startToFireTimeout;
+        this.timerId = timerId;
+  }
 }

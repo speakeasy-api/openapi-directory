@@ -15,9 +15,11 @@ public class OrderServiceOffering200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_id")
     public String taskId;
+
     public OrderServiceOffering200ApplicationJSON withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public OrderServiceOffering200ApplicationJSON(){}
 }

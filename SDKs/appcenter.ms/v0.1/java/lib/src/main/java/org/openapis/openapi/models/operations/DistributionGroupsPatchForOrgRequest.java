@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsPatchForOrgRequest {
@@ -12,6 +13,7 @@ public class DistributionGroupsPatchForOrgRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DistributionGroupsPatchForOrgRequestBody requestBody;
+
     public DistributionGroupsPatchForOrgRequest withRequestBody(DistributionGroupsPatchForOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class DistributionGroupsPatchForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public DistributionGroupsPatchForOrgRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -32,9 +35,14 @@ public class DistributionGroupsPatchForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public DistributionGroupsPatchForOrgRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
     }
     
+    public DistributionGroupsPatchForOrgRequest(@JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("org_name") String orgName) {
+        this.distributionGroupName = distributionGroupName;
+        this.orgName = orgName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBatchSegmentJobResponse {
     
     public String contentType;
+
     public CreateBatchSegmentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateBatchSegmentJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBatchSegmentJobResponse createBatchSegmentJobResponse;
+
     public CreateBatchSegmentJobResponse withCreateBatchSegmentJobResponse(org.openapis.openapi.models.shared.CreateBatchSegmentJobResponse createBatchSegmentJobResponse) {
         this.createBatchSegmentJobResponse = createBatchSegmentJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateBatchSegmentJobResponse {
      */
     
     public Object invalidInputException;
+
     public CreateBatchSegmentJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateBatchSegmentJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateBatchSegmentJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBatchSegmentJobResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateBatchSegmentJobResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class CreateBatchSegmentJobResponse {
     
     
     public Integer statusCode;
+
     public CreateBatchSegmentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateBatchSegmentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBatchSegmentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateBatchSegmentJobResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateBatchSegmentJobResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreateBatchSegmentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateBatchSegmentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateBatchSegmentJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateBatchSegmentJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateBatchSegmentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

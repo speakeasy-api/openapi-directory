@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GenuineToken {
     
     public String issuer;
+
     public GenuineToken withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -16,6 +17,7 @@ public class GenuineToken {
     
     
     public String tokenId;
+
     public GenuineToken withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -23,6 +25,7 @@ public class GenuineToken {
     
     
     public String tokenName;
+
     public GenuineToken withTokenName(String tokenName) {
         this.tokenName = tokenName;
         return this;
@@ -30,9 +33,15 @@ public class GenuineToken {
     
     
     public Boolean uniqueName;
+
     public GenuineToken withUniqueName(Boolean uniqueName) {
         this.uniqueName = uniqueName;
         return this;
     }
     
+    public GenuineToken(@JsonProperty("tokenId") String tokenId, @JsonProperty("tokenName") String tokenName, @JsonProperty("uniqueName") Boolean uniqueName) {
+        this.tokenId = tokenId;
+        this.tokenName = tokenName;
+        this.uniqueName = uniqueName;
+  }
 }

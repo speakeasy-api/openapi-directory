@@ -18,9 +18,11 @@ public class PackageNameList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageNames")
     public String[] packageNames;
+
     public PackageNameList withPackageNames(String[] packageNames) {
         this.packageNames = packageNames;
         return this;
     }
     
+    public PackageNameList(){}
 }

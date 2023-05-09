@@ -18,9 +18,71 @@ public class DotnetSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public CommonLanguageSettings common;
+
     public DotnetSettings withCommon(CommonLanguageSettings common) {
         this.common = common;
         return this;
     }
     
+    /**
+     * Namespaces which must be aliased in snippets due to a known (but non-generator-predictable) naming collision
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("forcedNamespaceAliases")
+    public String[] forcedNamespaceAliases;
+
+    public DotnetSettings withForcedNamespaceAliases(String[] forcedNamespaceAliases) {
+        this.forcedNamespaceAliases = forcedNamespaceAliases;
+        return this;
+    }
+    
+    /**
+     * Method signatures (in the form "service.method(signature)") which are provided separately, so shouldn't be generated. Snippets *calling* these methods are still generated, however.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("handwrittenSignatures")
+    public String[] handwrittenSignatures;
+
+    public DotnetSettings withHandwrittenSignatures(String[] handwrittenSignatures) {
+        this.handwrittenSignatures = handwrittenSignatures;
+        return this;
+    }
+    
+    /**
+     * List of full resource types to ignore during generation. This is typically used for API-specific Location resources, which should be handled by the generator as if they were actually the common Location resources. Example entry: "documentai.googleapis.com/Location"
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ignoredResources")
+    public String[] ignoredResources;
+
+    public DotnetSettings withIgnoredResources(String[] ignoredResources) {
+        this.ignoredResources = ignoredResources;
+        return this;
+    }
+    
+    /**
+     * Map from full resource types to the effective short name for the resource. This is used when otherwise resource named from different services would cause naming collisions. Example entry: "datalabeling.googleapis.com/Dataset": "DataLabelingDataset"
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("renamedResources")
+    public java.util.Map<String, String> renamedResources;
+
+    public DotnetSettings withRenamedResources(java.util.Map<String, String> renamedResources) {
+        this.renamedResources = renamedResources;
+        return this;
+    }
+    
+    /**
+     * Map from original service names to renamed versions. This is used when the default generated types would cause a naming conflict. (Neither name is fully-qualified.) Example: Subscriber to SubscriberServiceApi.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("renamedServices")
+    public java.util.Map<String, String> renamedServices;
+
+    public DotnetSettings withRenamedServices(java.util.Map<String, String> renamedServices) {
+        this.renamedServices = renamedServices;
+        return this;
+    }
+    
+    public DotnetSettings(){}
 }

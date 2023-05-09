@@ -52,11 +52,9 @@ public class Individual {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualResponse res = new org.openapis.openapi.models.operations.GetIndividualResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualResponse res = new org.openapis.openapi.models.operations.GetIndividualResponse(contentType, httpRes.statusCode()) {{
             associations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -90,11 +88,9 @@ public class Individual {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPedigreeResponse res = new org.openapis.openapi.models.operations.GetPedigreeResponse() {{
+        org.openapis.openapi.models.operations.GetPedigreeResponse res = new org.openapis.openapi.models.operations.GetPedigreeResponse(contentType, httpRes.statusCode()) {{
             associations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

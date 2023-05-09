@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsLoadoutsDestinyLoadoutItemComponent {
     
     public Long itemInstanceId;
+
     public DestinyComponentsLoadoutsDestinyLoadoutItemComponent withItemInstanceId(Long itemInstanceId) {
         this.itemInstanceId = itemInstanceId;
         return this;
@@ -16,9 +17,11 @@ public class DestinyComponentsLoadoutsDestinyLoadoutItemComponent {
     
     
     public Long[] plugItemHashes;
+
     public DestinyComponentsLoadoutsDestinyLoadoutItemComponent withPlugItemHashes(Long[] plugItemHashes) {
         this.plugItemHashes = plugItemHashes;
         return this;
     }
     
+    public DestinyComponentsLoadoutsDestinyLoadoutItemComponent(){}
 }

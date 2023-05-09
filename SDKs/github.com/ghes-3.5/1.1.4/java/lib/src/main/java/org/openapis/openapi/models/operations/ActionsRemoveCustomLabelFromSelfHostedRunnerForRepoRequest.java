@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest {
@@ -12,6 +13,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +24,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -42,9 +46,16 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
     public Long runnerId;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
     }
     
+    public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest(@JsonProperty("name") String name, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("runner_id") Long runnerId) {
+        this.name = name;
+        this.owner = owner;
+        this.repo = repo;
+        this.runnerId = runnerId;
+  }
 }

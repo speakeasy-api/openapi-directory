@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=channels")
     public String[] channels;
+
     public GetSchedulesRequest withChannels(String[] channels) {
         this.channels = channels;
         return this;
@@ -26,6 +28,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public LocalDate date;
+
     public GetSchedulesRequest withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -36,6 +39,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetSchedulesRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -51,6 +55,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
     public Integer duration;
+
     public GetSchedulesRequest withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -81,6 +86,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetSchedulesRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -95,6 +101,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hour")
     public Integer hour;
+
     public GetSchedulesRequest withHour(Integer hour) {
         this.hour = hour;
         return this;
@@ -113,6 +120,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intersect")
     public Boolean intersect;
+
     public GetSchedulesRequest withIntersect(Boolean intersect) {
         this.intersect = intersect;
         return this;
@@ -133,6 +141,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetSchedulesRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -143,6 +152,7 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetSchedulesRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -153,9 +163,16 @@ public class GetSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetSchedulesRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetSchedulesRequest(@JsonProperty("channels") String[] channels, @JsonProperty("date") LocalDate date, @JsonProperty("duration") Integer duration, @JsonProperty("hour") Integer hour) {
+        this.channels = channels;
+        this.date = date;
+        this.duration = duration;
+        this.hour = hour;
+  }
 }

@@ -18,6 +18,7 @@ public class BlogLocale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public BlogLocale withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class BlogLocale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public BlogLocale withLanguage(String language) {
         this.language = language;
         return this;
@@ -40,9 +42,11 @@ public class BlogLocale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant")
     public String variant;
+
     public BlogLocale withVariant(String variant) {
         this.variant = variant;
         return this;
     }
     
+    public BlogLocale(){}
 }

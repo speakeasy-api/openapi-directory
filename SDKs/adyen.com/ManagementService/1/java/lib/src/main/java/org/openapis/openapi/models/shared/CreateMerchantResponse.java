@@ -18,6 +18,7 @@ public class CreateMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineId")
     public String businessLineId;
+
     public CreateMerchantResponse withBusinessLineId(String businessLineId) {
         this.businessLineId = businessLineId;
         return this;
@@ -29,6 +30,7 @@ public class CreateMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public String companyId;
+
     public CreateMerchantResponse withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -40,6 +42,7 @@ public class CreateMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateMerchantResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class CreateMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateMerchantResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class CreateMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public CreateMerchantResponse withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -73,6 +78,7 @@ public class CreateMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingPlan")
     public String pricingPlan;
+
     public CreateMerchantResponse withPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -84,9 +90,11 @@ public class CreateMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public CreateMerchantResponse withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public CreateMerchantResponse(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopPipelineExecutionRequest {
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StopPipelineExecutionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -16,9 +17,14 @@ public class StopPipelineExecutionRequest {
     
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public StopPipelineExecutionRequest withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
     }
     
+    public StopPipelineExecutionRequest(@JsonProperty("ClientRequestToken") String clientRequestToken, @JsonProperty("PipelineExecutionArn") String pipelineExecutionArn) {
+        this.clientRequestToken = clientRequestToken;
+        this.pipelineExecutionArn = pipelineExecutionArn;
+  }
 }

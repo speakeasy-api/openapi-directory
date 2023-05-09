@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class HIRequest {
     @JsonProperty("hiRequest")
     public HIRequestHIRequest hiRequest;
+
     public HIRequest withHiRequest(HIRequestHIRequest hiRequest) {
         this.hiRequest = hiRequest;
         return this;
@@ -21,6 +22,7 @@ public class HIRequest {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public HIRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -33,9 +35,15 @@ public class HIRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HIRequest(@JsonProperty("hiRequest") HIRequestHIRequest hiRequest, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.hiRequest = hiRequest;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

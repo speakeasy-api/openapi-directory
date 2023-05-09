@@ -18,6 +18,7 @@ public class KubernetesResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectResources")
     public ResourceManifest[] connectResources;
+
     public KubernetesResource withConnectResources(ResourceManifest[] connectResources) {
         this.connectResources = connectResources;
         return this;
@@ -29,6 +30,7 @@ public class KubernetesResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipCrManifest")
     public String membershipCrManifest;
+
     public KubernetesResource withMembershipCrManifest(String membershipCrManifest) {
         this.membershipCrManifest = membershipCrManifest;
         return this;
@@ -40,6 +42,7 @@ public class KubernetesResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipResources")
     public ResourceManifest[] membershipResources;
+
     public KubernetesResource withMembershipResources(ResourceManifest[] membershipResources) {
         this.membershipResources = membershipResources;
         return this;
@@ -51,9 +54,11 @@ public class KubernetesResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceOptions")
     public ResourceOptions resourceOptions;
+
     public KubernetesResource withResourceOptions(ResourceOptions resourceOptions) {
         this.resourceOptions = resourceOptions;
         return this;
     }
     
+    public KubernetesResource(){}
 }

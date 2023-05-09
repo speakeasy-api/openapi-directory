@@ -15,9 +15,11 @@ public class MonitoringGroundTruthS3Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public MonitoringGroundTruthS3Input withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public MonitoringGroundTruthS3Input(){}
 }

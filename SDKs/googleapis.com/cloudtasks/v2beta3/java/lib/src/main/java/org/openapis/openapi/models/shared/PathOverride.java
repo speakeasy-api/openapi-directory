@@ -18,9 +18,11 @@ public class PathOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public PathOverride withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PathOverride(){}
 }

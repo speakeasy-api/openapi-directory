@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkforceVpcConfigResponse {
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public WorkforceVpcConfigResponse withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -21,6 +22,7 @@ public class WorkforceVpcConfigResponse {
     
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public WorkforceVpcConfigResponse withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -29,6 +31,7 @@ public class WorkforceVpcConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointId")
     public String vpcEndpointId;
+
     public WorkforceVpcConfigResponse withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -36,9 +39,15 @@ public class WorkforceVpcConfigResponse {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public WorkforceVpcConfigResponse withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public WorkforceVpcConfigResponse(@JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("Subnets") String[] subnets, @JsonProperty("VpcId") String vpcId) {
+        this.securityGroupIds = securityGroupIds;
+        this.subnets = subnets;
+        this.vpcId = vpcId;
+  }
 }

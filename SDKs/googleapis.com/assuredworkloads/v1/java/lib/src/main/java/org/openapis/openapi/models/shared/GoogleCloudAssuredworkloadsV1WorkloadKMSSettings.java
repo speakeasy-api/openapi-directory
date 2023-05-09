@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadKMSSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextRotationTime")
     public String nextRotationTime;
+
     public GoogleCloudAssuredworkloadsV1WorkloadKMSSettings withNextRotationTime(String nextRotationTime) {
         this.nextRotationTime = nextRotationTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssuredworkloadsV1WorkloadKMSSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotationPeriod")
     public String rotationPeriod;
+
     public GoogleCloudAssuredworkloadsV1WorkloadKMSSettings withRotationPeriod(String rotationPeriod) {
         this.rotationPeriod = rotationPeriod;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1WorkloadKMSSettings(){}
 }

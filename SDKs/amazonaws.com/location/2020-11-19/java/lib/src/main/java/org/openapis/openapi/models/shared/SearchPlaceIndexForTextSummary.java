@@ -15,6 +15,7 @@ public class SearchPlaceIndexForTextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BiasPosition")
     public Double[] biasPosition;
+
     public SearchPlaceIndexForTextSummary withBiasPosition(Double[] biasPosition) {
         this.biasPosition = biasPosition;
         return this;
@@ -22,6 +23,7 @@ public class SearchPlaceIndexForTextSummary {
     
     @JsonProperty("DataSource")
     public String dataSource;
+
     public SearchPlaceIndexForTextSummary withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -30,6 +32,7 @@ public class SearchPlaceIndexForTextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterBBox")
     public Double[] filterBBox;
+
     public SearchPlaceIndexForTextSummary withFilterBBox(Double[] filterBBox) {
         this.filterBBox = filterBBox;
         return this;
@@ -38,6 +41,7 @@ public class SearchPlaceIndexForTextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterCountries")
     public String[] filterCountries;
+
     public SearchPlaceIndexForTextSummary withFilterCountries(String[] filterCountries) {
         this.filterCountries = filterCountries;
         return this;
@@ -46,6 +50,7 @@ public class SearchPlaceIndexForTextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public SearchPlaceIndexForTextSummary withLanguage(String language) {
         this.language = language;
         return this;
@@ -54,6 +59,7 @@ public class SearchPlaceIndexForTextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchPlaceIndexForTextSummary withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class SearchPlaceIndexForTextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultBBox")
     public Double[] resultBBox;
+
     public SearchPlaceIndexForTextSummary withResultBBox(Double[] resultBBox) {
         this.resultBBox = resultBBox;
         return this;
@@ -69,9 +76,14 @@ public class SearchPlaceIndexForTextSummary {
     
     @JsonProperty("Text")
     public String text;
+
     public SearchPlaceIndexForTextSummary withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SearchPlaceIndexForTextSummary(@JsonProperty("DataSource") String dataSource, @JsonProperty("Text") String text) {
+        this.dataSource = dataSource;
+        this.text = text;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterForRealtimeApiPostFormResponse {
     
     public String contentType;
+
     public RegisterForRealtimeApiPostFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RegisterForRealtimeApiPostFormResponse {
     
     
     public Integer statusCode;
+
     public RegisterForRealtimeApiPostFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class RegisterForRealtimeApiPostFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterForRealtimeApiPostFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterForRealtimeApiPostFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

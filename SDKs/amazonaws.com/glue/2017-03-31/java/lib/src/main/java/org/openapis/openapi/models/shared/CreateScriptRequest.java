@@ -12,6 +12,7 @@ public class CreateScriptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DagEdges")
     public CodeGenEdge[] dagEdges;
+
     public CreateScriptRequest withDagEdges(CodeGenEdge[] dagEdges) {
         this.dagEdges = dagEdges;
         return this;
@@ -20,6 +21,7 @@ public class CreateScriptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DagNodes")
     public CodeGenNode[] dagNodes;
+
     public CreateScriptRequest withDagNodes(CodeGenNode[] dagNodes) {
         this.dagNodes = dagNodes;
         return this;
@@ -28,9 +30,11 @@ public class CreateScriptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public LanguageEnum language;
+
     public CreateScriptRequest withLanguage(LanguageEnum language) {
         this.language = language;
         return this;
     }
     
+    public CreateScriptRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTestResponse {
@@ -12,6 +13,7 @@ public class GetTestResponse {
      */
     
     public Object argumentException;
+
     public GetTestResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetTestResponse {
     
     
     public String contentType;
+
     public GetTestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTestResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTestResult getTestResult;
+
     public GetTestResponse withGetTestResult(org.openapis.openapi.models.shared.GetTestResult getTestResult) {
         this.getTestResult = getTestResult;
         return this;
@@ -39,6 +43,7 @@ public class GetTestResponse {
      */
     
     public Object limitExceededException;
+
     public GetTestResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetTestResponse {
      */
     
     public Object notFoundException;
+
     public GetTestResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetTestResponse {
      */
     
     public Object serviceAccountException;
+
     public GetTestResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetTestResponse {
     
     
     public Integer statusCode;
+
     public GetTestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetTestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

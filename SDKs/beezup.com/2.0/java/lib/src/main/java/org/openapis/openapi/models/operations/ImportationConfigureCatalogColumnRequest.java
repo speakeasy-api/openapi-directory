@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationConfigureCatalogColumnRequest {
@@ -12,6 +13,7 @@ public class ImportationConfigureCatalogColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public ImportationConfigureCatalogColumnRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -19,6 +21,7 @@ public class ImportationConfigureCatalogColumnRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ConfigureCatalogColumnCatalogRequest configureCatalogColumnCatalogRequest;
+
     public ImportationConfigureCatalogColumnRequest withConfigureCatalogColumnCatalogRequest(org.openapis.openapi.models.shared.ConfigureCatalogColumnCatalogRequest configureCatalogColumnCatalogRequest) {
         this.configureCatalogColumnCatalogRequest = configureCatalogColumnCatalogRequest;
         return this;
@@ -29,6 +32,7 @@ public class ImportationConfigureCatalogColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ImportationConfigureCatalogColumnRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -39,9 +43,16 @@ public class ImportationConfigureCatalogColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public ImportationConfigureCatalogColumnRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ImportationConfigureCatalogColumnRequest(@JsonProperty("columnId") String columnId, @JsonProperty("configureCatalogColumnCatalogRequest") org.openapis.openapi.models.shared.ConfigureCatalogColumnCatalogRequest configureCatalogColumnCatalogRequest, @JsonProperty("executionId") String executionId, @JsonProperty("storeId") String storeId) {
+        this.columnId = columnId;
+        this.configureCatalogColumnCatalogRequest = configureCatalogColumnCatalogRequest;
+        this.executionId = executionId;
+        this.storeId = storeId;
+  }
 }

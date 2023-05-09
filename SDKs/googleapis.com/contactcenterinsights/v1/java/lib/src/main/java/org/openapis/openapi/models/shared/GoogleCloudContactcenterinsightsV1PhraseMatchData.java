@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1PhraseMatchData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudContactcenterinsightsV1PhraseMatchData withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1PhraseMatchData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseMatcher")
     public String phraseMatcher;
+
     public GoogleCloudContactcenterinsightsV1PhraseMatchData withPhraseMatcher(String phraseMatcher) {
         this.phraseMatcher = phraseMatcher;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1PhraseMatchData(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelComponentDeploymentResponse {
@@ -12,6 +13,7 @@ public class CancelComponentDeploymentResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelComponentDeploymentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelComponentDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelComponentDeploymentOutput cancelComponentDeploymentOutput;
+
     public CancelComponentDeploymentResponse withCancelComponentDeploymentOutput(org.openapis.openapi.models.shared.CancelComponentDeploymentOutput cancelComponentDeploymentOutput) {
         this.cancelComponentDeploymentOutput = cancelComponentDeploymentOutput;
         return this;
@@ -32,6 +35,7 @@ public class CancelComponentDeploymentResponse {
      */
     
     public Object conflictException;
+
     public CancelComponentDeploymentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class CancelComponentDeploymentResponse {
     
     
     public String contentType;
+
     public CancelComponentDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CancelComponentDeploymentResponse {
      */
     
     public Object internalServerException;
+
     public CancelComponentDeploymentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CancelComponentDeploymentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelComponentDeploymentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CancelComponentDeploymentResponse {
     
     
     public Integer statusCode;
+
     public CancelComponentDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CancelComponentDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelComponentDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CancelComponentDeploymentResponse {
      */
     
     public Object throttlingException;
+
     public CancelComponentDeploymentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CancelComponentDeploymentResponse {
      */
     
     public Object validationException;
+
     public CancelComponentDeploymentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelComponentDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

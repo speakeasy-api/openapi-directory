@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountsAccountIdStatementsStatementIdTransactionsResponse {
     
     public String contentType;
+
     public GetAccountsAccountIdStatementsStatementIdTransactionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAccountsAccountIdStatementsStatementIdTransactionsResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetAccountsAccountIdStatementsStatementIdTransactionsResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -29,6 +32,7 @@ public class GetAccountsAccountIdStatementsStatementIdTransactionsResponse {
      */
     
     public org.openapis.openapi.models.shared.OBReadTransaction6 obReadTransaction6;
+
     public GetAccountsAccountIdStatementsStatementIdTransactionsResponse withOBReadTransaction6(org.openapis.openapi.models.shared.OBReadTransaction6 obReadTransaction6) {
         this.obReadTransaction6 = obReadTransaction6;
         return this;
@@ -36,6 +40,7 @@ public class GetAccountsAccountIdStatementsStatementIdTransactionsResponse {
     
     
     public Integer statusCode;
+
     public GetAccountsAccountIdStatementsStatementIdTransactionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetAccountsAccountIdStatementsStatementIdTransactionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountsAccountIdStatementsStatementIdTransactionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAccountsAccountIdStatementsStatementIdTransactionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

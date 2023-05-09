@@ -18,6 +18,7 @@ public class RetrieveLoyaltyProgramResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveLoyaltyProgramResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -31,9 +32,11 @@ public class RetrieveLoyaltyProgramResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("program")
     public LoyaltyProgram program;
+
     public RetrieveLoyaltyProgramResponse withProgram(LoyaltyProgram program) {
         this.program = program;
         return this;
     }
     
+    public RetrieveLoyaltyProgramResponse(){}
 }

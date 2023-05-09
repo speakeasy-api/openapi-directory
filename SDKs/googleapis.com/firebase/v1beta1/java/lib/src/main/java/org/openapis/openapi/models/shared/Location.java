@@ -18,6 +18,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public LocationFeaturesEnum[] features;
+
     public Location withFeatures(LocationFeaturesEnum[] features) {
         this.features = features;
         return this;
@@ -29,6 +30,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public Location withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -40,9 +42,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LocationTypeEnum type;
+
     public Location withType(LocationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Location(){}
 }

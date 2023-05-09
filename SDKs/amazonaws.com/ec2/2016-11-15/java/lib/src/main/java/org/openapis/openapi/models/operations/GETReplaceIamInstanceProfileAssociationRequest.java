@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReplaceIamInstanceProfileAssociationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETReplaceIamInstanceProfileAssociationActionEnum action;
+
     public GETReplaceIamInstanceProfileAssociationRequest withAction(GETReplaceIamInstanceProfileAssociationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
     public String associationId;
+
     public GETReplaceIamInstanceProfileAssociationRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -29,6 +32,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IamInstanceProfile")
     public GETReplaceIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile;
+
     public GETReplaceIamInstanceProfileAssociationRequest withIamInstanceProfile(GETReplaceIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -36,6 +40,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETReplaceIamInstanceProfileAssociationVersionEnum version;
+
     public GETReplaceIamInstanceProfileAssociationRequest withVersion(GETReplaceIamInstanceProfileAssociationVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETReplaceIamInstanceProfileAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETReplaceIamInstanceProfileAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETReplaceIamInstanceProfileAssociationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETReplaceIamInstanceProfileAssociationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETReplaceIamInstanceProfileAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETReplaceIamInstanceProfileAssociationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETReplaceIamInstanceProfileAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETReplaceIamInstanceProfileAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETReplaceIamInstanceProfileAssociationRequest(@JsonProperty("Action") GETReplaceIamInstanceProfileAssociationActionEnum action, @JsonProperty("AssociationId") String associationId, @JsonProperty("IamInstanceProfile") GETReplaceIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile, @JsonProperty("Version") GETReplaceIamInstanceProfileAssociationVersionEnum version) {
+        this.action = action;
+        this.associationId = associationId;
+        this.iamInstanceProfile = iamInstanceProfile;
+        this.version = version;
+  }
 }

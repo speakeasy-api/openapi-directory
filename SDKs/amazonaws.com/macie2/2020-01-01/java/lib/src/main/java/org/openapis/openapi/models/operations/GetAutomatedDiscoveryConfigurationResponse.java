@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomatedDiscoveryConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAutomatedDiscoveryConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     
     
     public String contentType;
+
     public GetAutomatedDiscoveryConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAutomatedDiscoveryConfigurationResponse getAutomatedDiscoveryConfigurationResponse;
+
     public GetAutomatedDiscoveryConfigurationResponse withGetAutomatedDiscoveryConfigurationResponse(org.openapis.openapi.models.shared.GetAutomatedDiscoveryConfigurationResponse getAutomatedDiscoveryConfigurationResponse) {
         this.getAutomatedDiscoveryConfigurationResponse = getAutomatedDiscoveryConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetAutomatedDiscoveryConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetAutomatedDiscoveryConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomatedDiscoveryConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetAutomatedDiscoveryConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetAutomatedDiscoveryConfigurationResponse {
      */
     
     public Object validationException;
+
     public GetAutomatedDiscoveryConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAutomatedDiscoveryConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

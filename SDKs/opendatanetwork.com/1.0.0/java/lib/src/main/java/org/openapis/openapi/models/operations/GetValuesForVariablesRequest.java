@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetValuesForVariablesRequest {
@@ -12,6 +13,7 @@ public class GetValuesForVariablesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
     public String xAppToken;
+
     public GetValuesForVariablesRequest withXAppToken(String xAppToken) {
         this.xAppToken = xAppToken;
         return this;
@@ -23,6 +25,7 @@ public class GetValuesForVariablesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
     public String appToken;
+
     public GetValuesForVariablesRequest withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -37,6 +40,7 @@ public class GetValuesForVariablesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=describe")
     public Boolean describe;
+
     public GetValuesForVariablesRequest withDescribe(Boolean describe) {
         this.describe = describe;
         return this;
@@ -50,6 +54,7 @@ public class GetValuesForVariablesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
     public String entityId;
+
     public GetValuesForVariablesRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -67,6 +72,7 @@ public class GetValuesForVariablesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forecast")
     public Double forecast;
+
     public GetValuesForVariablesRequest withForecast(Double forecast) {
         this.forecast = forecast;
         return this;
@@ -80,6 +86,7 @@ public class GetValuesForVariablesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetValuesForVariablesFormatEnum format;
+
     public GetValuesForVariablesRequest withFormat(GetValuesForVariablesFormatEnum format) {
         this.format = format;
         return this;
@@ -96,9 +103,13 @@ public class GetValuesForVariablesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variable")
     public String variable;
+
     public GetValuesForVariablesRequest withVariable(String variable) {
         this.variable = variable;
         return this;
     }
     
+    public GetValuesForVariablesRequest(@JsonProperty("variable") String variable) {
+        this.variable = variable;
+  }
 }

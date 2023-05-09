@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Weight {
     @JsonProperty("unit")
     public WeightUnitEnum unit;
+
     public Weight withUnit(WeightUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -16,9 +17,14 @@ public class Weight {
     
     @JsonProperty("weight")
     public Double weight;
+
     public Weight withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public Weight(@JsonProperty("unit") WeightUnitEnum unit, @JsonProperty("weight") Double weight) {
+        this.unit = unit;
+        this.weight = weight;
+  }
 }

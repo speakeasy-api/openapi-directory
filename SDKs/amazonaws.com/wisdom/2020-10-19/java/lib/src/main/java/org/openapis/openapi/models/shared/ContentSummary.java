@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContentSummary {
     @JsonProperty("contentArn")
     public String contentArn;
+
     public ContentSummary withContentArn(String contentArn) {
         this.contentArn = contentArn;
         return this;
@@ -21,6 +22,7 @@ public class ContentSummary {
     
     @JsonProperty("contentId")
     public String contentId;
+
     public ContentSummary withContentId(String contentId) {
         this.contentId = contentId;
         return this;
@@ -28,6 +30,7 @@ public class ContentSummary {
     
     @JsonProperty("contentType")
     public String contentType;
+
     public ContentSummary withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -35,6 +38,7 @@ public class ContentSummary {
     
     @JsonProperty("knowledgeBaseArn")
     public String knowledgeBaseArn;
+
     public ContentSummary withKnowledgeBaseArn(String knowledgeBaseArn) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         return this;
@@ -42,6 +46,7 @@ public class ContentSummary {
     
     @JsonProperty("knowledgeBaseId")
     public String knowledgeBaseId;
+
     public ContentSummary withKnowledgeBaseId(String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
         return this;
@@ -49,6 +54,7 @@ public class ContentSummary {
     
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public ContentSummary withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -56,6 +62,7 @@ public class ContentSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ContentSummary withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +70,7 @@ public class ContentSummary {
     
     @JsonProperty("revisionId")
     public String revisionId;
+
     public ContentSummary withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -70,6 +78,7 @@ public class ContentSummary {
     
     @JsonProperty("status")
     public ContentStatusEnum status;
+
     public ContentSummary withStatus(ContentStatusEnum status) {
         this.status = status;
         return this;
@@ -78,6 +87,7 @@ public class ContentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ContentSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -85,9 +95,22 @@ public class ContentSummary {
     
     @JsonProperty("title")
     public String title;
+
     public ContentSummary withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ContentSummary(@JsonProperty("contentArn") String contentArn, @JsonProperty("contentId") String contentId, @JsonProperty("contentType") String contentType, @JsonProperty("knowledgeBaseArn") String knowledgeBaseArn, @JsonProperty("knowledgeBaseId") String knowledgeBaseId, @JsonProperty("metadata") java.util.Map<String, String> metadata, @JsonProperty("name") String name, @JsonProperty("revisionId") String revisionId, @JsonProperty("status") ContentStatusEnum status, @JsonProperty("title") String title) {
+        this.contentArn = contentArn;
+        this.contentId = contentId;
+        this.contentType = contentType;
+        this.knowledgeBaseArn = knowledgeBaseArn;
+        this.knowledgeBaseId = knowledgeBaseId;
+        this.metadata = metadata;
+        this.name = name;
+        this.revisionId = revisionId;
+        this.status = status;
+        this.title = title;
+  }
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetRequest;
 import org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -28,29 +27,30 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AcmednsAcmeChallengeSetsGetRequest req = new AcmednsAcmeChallengeSetsGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
+            AcmednsAcmeChallengeSetsGetRequest req = new AcmednsAcmeChallengeSetsGetRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
                 prettyPrint = false;
-                quotaUser = "illum";
-                rootDomain = "vel";
+                quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             AcmednsAcmeChallengeSetsGetResponse res = sdk.acmeChallengeSets.acmednsAcmeChallengeSetsGet(req);
 
-            if (res.acmeChallengeSet.isPresent()) {
+            if (res.acmeChallengeSet != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -58,10 +58,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### acmeChallengeSets
+### [acmeChallengeSets](docs/acmechallengesets/README.md)
 
-* `acmednsAcmeChallengeSetsGet` - Gets the ACME challenge set for a given domain name. Domain names must be provided in Punycode.
-* `acmednsAcmeChallengeSetsRotateChallenges` - Rotate the ACME challenges for a given domain name. By default, removes any challenges that are older than 30 days. Domain names must be provided in Punycode.
+* [acmednsAcmeChallengeSetsGet](docs/acmechallengesets/README.md#acmednsacmechallengesetsget) - Gets the ACME challenge set for a given domain name. Domain names must be provided in Punycode.
+* [acmednsAcmeChallengeSetsRotateChallenges](docs/acmechallengesets/README.md#acmednsacmechallengesetsrotatechallenges) - Rotate the ACME challenges for a given domain name. By default, removes any challenges that are older than 30 days. Domain names must be provided in Punycode.
 <!-- End SDK Available Operations -->
 
 ### Maturity

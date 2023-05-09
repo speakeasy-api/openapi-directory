@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResolverDnssecConfigResponse {
@@ -12,6 +13,7 @@ public class GetResolverDnssecConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public GetResolverDnssecConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetResolverDnssecConfigResponse {
     
     
     public String contentType;
+
     public GetResolverDnssecConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetResolverDnssecConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResolverDnssecConfigResponse getResolverDnssecConfigResponse;
+
     public GetResolverDnssecConfigResponse withGetResolverDnssecConfigResponse(org.openapis.openapi.models.shared.GetResolverDnssecConfigResponse getResolverDnssecConfigResponse) {
         this.getResolverDnssecConfigResponse = getResolverDnssecConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetResolverDnssecConfigResponse {
      */
     
     public Object internalServiceErrorException;
+
     public GetResolverDnssecConfigResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetResolverDnssecConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public GetResolverDnssecConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetResolverDnssecConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public GetResolverDnssecConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -66,6 +73,7 @@ public class GetResolverDnssecConfigResponse {
     
     
     public Integer statusCode;
+
     public GetResolverDnssecConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetResolverDnssecConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResolverDnssecConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetResolverDnssecConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetResolverDnssecConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class GetResolverDnssecConfigResponse {
      */
     
     public Object throttlingException;
+
     public GetResolverDnssecConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetResolverDnssecConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

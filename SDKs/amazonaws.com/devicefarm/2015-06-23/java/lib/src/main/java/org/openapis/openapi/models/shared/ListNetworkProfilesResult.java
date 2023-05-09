@@ -15,6 +15,7 @@ public class ListNetworkProfilesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkProfiles")
     public NetworkProfile[] networkProfiles;
+
     public ListNetworkProfilesResult withNetworkProfiles(NetworkProfile[] networkProfiles) {
         this.networkProfiles = networkProfiles;
         return this;
@@ -23,9 +24,11 @@ public class ListNetworkProfilesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListNetworkProfilesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNetworkProfilesResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse {
@@ -12,6 +13,7 @@ public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse {
      */
     
     public org.openapis.openapi.models.shared.CalendarAuthViewModel calendarAuthViewModel;
+
     public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse withCalendarAuthViewModel(org.openapis.openapi.models.shared.CalendarAuthViewModel calendarAuthViewModel) {
         this.calendarAuthViewModel = calendarAuthViewModel;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse {
     
     
     public String contentType;
+
     public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

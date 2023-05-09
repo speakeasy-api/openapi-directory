@@ -15,6 +15,7 @@ public class UpdateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateTemplateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutConfiguration")
     public UpdateTemplateRequestBodyLayoutConfiguration layoutConfiguration;
+
     public UpdateTemplateRequestBody withLayoutConfiguration(UpdateTemplateRequestBodyLayoutConfiguration layoutConfiguration) {
         this.layoutConfiguration = layoutConfiguration;
         return this;
@@ -37,6 +39,7 @@ public class UpdateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateTemplateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class UpdateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredFields")
     public org.openapis.openapi.models.shared.RequiredField[] requiredFields;
+
     public UpdateTemplateRequestBody withRequiredFields(org.openapis.openapi.models.shared.RequiredField[] requiredFields) {
         this.requiredFields = requiredFields;
         return this;
@@ -59,9 +63,11 @@ public class UpdateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UpdateTemplateRequestBodyStatusEnum status;
+
     public UpdateTemplateRequestBody withStatus(UpdateTemplateRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateTemplateRequestBody(){}
 }

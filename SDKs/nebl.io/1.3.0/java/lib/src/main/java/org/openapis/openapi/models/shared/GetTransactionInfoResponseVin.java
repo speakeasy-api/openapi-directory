@@ -12,6 +12,7 @@ public class GetTransactionInfoResponseVin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousOutput")
     public GetTransactionInfoResponseVinPreviousOutput previousOutput;
+
     public GetTransactionInfoResponseVin withPreviousOutput(GetTransactionInfoResponseVinPreviousOutput previousOutput) {
         this.previousOutput = previousOutput;
         return this;
@@ -20,6 +21,7 @@ public class GetTransactionInfoResponseVin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptSig")
     public GetTransactionInfoResponseVinScriptSig scriptSig;
+
     public GetTransactionInfoResponseVin withScriptSig(GetTransactionInfoResponseVinScriptSig scriptSig) {
         this.scriptSig = scriptSig;
         return this;
@@ -28,6 +30,7 @@ public class GetTransactionInfoResponseVin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence")
     public Double sequence;
+
     public GetTransactionInfoResponseVin withSequence(Double sequence) {
         this.sequence = sequence;
         return this;
@@ -36,6 +39,7 @@ public class GetTransactionInfoResponseVin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokens")
     public GetTransactionInfoResponseVinTokens[] tokens;
+
     public GetTransactionInfoResponseVin withTokens(GetTransactionInfoResponseVinTokens[] tokens) {
         this.tokens = tokens;
         return this;
@@ -47,6 +51,7 @@ public class GetTransactionInfoResponseVin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txid")
     public String txid;
+
     public GetTransactionInfoResponseVin withTxid(String txid) {
         this.txid = txid;
         return this;
@@ -58,6 +63,7 @@ public class GetTransactionInfoResponseVin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public GetTransactionInfoResponseVin withValue(Double value) {
         this.value = value;
         return this;
@@ -69,9 +75,11 @@ public class GetTransactionInfoResponseVin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vout")
     public Double vout;
+
     public GetTransactionInfoResponseVin withVout(Double vout) {
         this.vout = vout;
         return this;
     }
     
+    public GetTransactionInfoResponseVin(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTStartDBInstanceAutomatedBackupsReplicationResponse {
     
     public byte[] body;
+
     public POSTStartDBInstanceAutomatedBackupsReplicationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTStartDBInstanceAutomatedBackupsReplicationResponse {
     
     
     public String contentType;
+
     public POSTStartDBInstanceAutomatedBackupsReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTStartDBInstanceAutomatedBackupsReplicationResponse {
     
     
     public Integer statusCode;
+
     public POSTStartDBInstanceAutomatedBackupsReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTStartDBInstanceAutomatedBackupsReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTStartDBInstanceAutomatedBackupsReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTStartDBInstanceAutomatedBackupsReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

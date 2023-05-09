@@ -18,6 +18,7 @@ public class AnalyticsTestAudienceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_properties")
     public java.util.Map<String, AnalyticsTestAudienceRequestBodyCustomPropertiesEnum> customProperties;
+
     public AnalyticsTestAudienceRequestBody withCustomProperties(java.util.Map<String, AnalyticsTestAudienceRequestBodyCustomPropertiesEnum> customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -28,6 +29,7 @@ public class AnalyticsTestAudienceRequestBody {
      */
     @JsonProperty("definition")
     public String definition;
+
     public AnalyticsTestAudienceRequestBody withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -39,6 +41,7 @@ public class AnalyticsTestAudienceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AnalyticsTestAudienceRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -47,9 +50,13 @@ public class AnalyticsTestAudienceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AnalyticsTestAudienceRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AnalyticsTestAudienceRequestBody(@JsonProperty("definition") String definition) {
+        this.definition = definition;
+  }
 }

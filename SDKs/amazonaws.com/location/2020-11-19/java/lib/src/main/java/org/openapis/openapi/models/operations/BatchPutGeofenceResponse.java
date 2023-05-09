@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchPutGeofenceResponse {
@@ -12,6 +13,7 @@ public class BatchPutGeofenceResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchPutGeofenceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchPutGeofenceResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPutGeofenceResponse batchPutGeofenceResponse;
+
     public BatchPutGeofenceResponse withBatchPutGeofenceResponse(org.openapis.openapi.models.shared.BatchPutGeofenceResponse batchPutGeofenceResponse) {
         this.batchPutGeofenceResponse = batchPutGeofenceResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchPutGeofenceResponse {
     
     
     public String contentType;
+
     public BatchPutGeofenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchPutGeofenceResponse {
      */
     
     public Object internalServerException;
+
     public BatchPutGeofenceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchPutGeofenceResponse {
     
     
     public Integer statusCode;
+
     public BatchPutGeofenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchPutGeofenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchPutGeofenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchPutGeofenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchPutGeofenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class BatchPutGeofenceResponse {
      */
     
     public Object throttlingException;
+
     public BatchPutGeofenceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchPutGeofenceResponse {
      */
     
     public Object validationException;
+
     public BatchPutGeofenceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchPutGeofenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

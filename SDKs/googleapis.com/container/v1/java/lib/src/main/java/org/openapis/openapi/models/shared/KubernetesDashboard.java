@@ -18,9 +18,11 @@ public class KubernetesDashboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public KubernetesDashboard withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
     }
     
+    public KubernetesDashboard(){}
 }

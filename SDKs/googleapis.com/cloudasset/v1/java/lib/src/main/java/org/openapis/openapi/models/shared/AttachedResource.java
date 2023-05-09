@@ -18,6 +18,7 @@ public class AttachedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public String assetType;
+
     public AttachedResource withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -29,9 +30,11 @@ public class AttachedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionedResources")
     public VersionedResource[] versionedResources;
+
     public AttachedResource withVersionedResources(VersionedResource[] versionedResources) {
         this.versionedResources = versionedResources;
         return this;
     }
     
+    public AttachedResource(){}
 }

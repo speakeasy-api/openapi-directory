@@ -15,6 +15,7 @@ public class ClarifyCheckStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineUsedForDriftCheckConstraints")
     public String baselineUsedForDriftCheckConstraints;
+
     public ClarifyCheckStepMetadata withBaselineUsedForDriftCheckConstraints(String baselineUsedForDriftCheckConstraints) {
         this.baselineUsedForDriftCheckConstraints = baselineUsedForDriftCheckConstraints;
         return this;
@@ -23,6 +24,7 @@ public class ClarifyCheckStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculatedBaselineConstraints")
     public String calculatedBaselineConstraints;
+
     public ClarifyCheckStepMetadata withCalculatedBaselineConstraints(String calculatedBaselineConstraints) {
         this.calculatedBaselineConstraints = calculatedBaselineConstraints;
         return this;
@@ -31,6 +33,7 @@ public class ClarifyCheckStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckJobArn")
     public String checkJobArn;
+
     public ClarifyCheckStepMetadata withCheckJobArn(String checkJobArn) {
         this.checkJobArn = checkJobArn;
         return this;
@@ -39,6 +42,7 @@ public class ClarifyCheckStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckType")
     public String checkType;
+
     public ClarifyCheckStepMetadata withCheckType(String checkType) {
         this.checkType = checkType;
         return this;
@@ -47,6 +51,7 @@ public class ClarifyCheckStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public ClarifyCheckStepMetadata withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -55,6 +60,7 @@ public class ClarifyCheckStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegisterNewBaseline")
     public Boolean registerNewBaseline;
+
     public ClarifyCheckStepMetadata withRegisterNewBaseline(Boolean registerNewBaseline) {
         this.registerNewBaseline = registerNewBaseline;
         return this;
@@ -63,6 +69,7 @@ public class ClarifyCheckStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkipCheck")
     public Boolean skipCheck;
+
     public ClarifyCheckStepMetadata withSkipCheck(Boolean skipCheck) {
         this.skipCheck = skipCheck;
         return this;
@@ -71,9 +78,11 @@ public class ClarifyCheckStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationReport")
     public String violationReport;
+
     public ClarifyCheckStepMetadata withViolationReport(String violationReport) {
         this.violationReport = violationReport;
         return this;
     }
     
+    public ClarifyCheckStepMetadata(){}
 }

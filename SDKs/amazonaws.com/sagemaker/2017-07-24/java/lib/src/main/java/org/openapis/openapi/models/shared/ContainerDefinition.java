@@ -15,6 +15,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerHostname")
     public String containerHostname;
+
     public ContainerDefinition withContainerHostname(String containerHostname) {
         this.containerHostname = containerHostname;
         return this;
@@ -23,6 +24,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public ContainerDefinition withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public String image;
+
     public ContainerDefinition withImage(String image) {
         this.image = image;
         return this;
@@ -39,6 +42,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageConfig")
     public ImageConfig imageConfig;
+
     public ContainerDefinition withImageConfig(ImageConfig imageConfig) {
         this.imageConfig = imageConfig;
         return this;
@@ -47,6 +51,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSpecificationName")
     public String inferenceSpecificationName;
+
     public ContainerDefinition withInferenceSpecificationName(String inferenceSpecificationName) {
         this.inferenceSpecificationName = inferenceSpecificationName;
         return this;
@@ -55,6 +60,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public ContainerModeEnum mode;
+
     public ContainerDefinition withMode(ContainerModeEnum mode) {
         this.mode = mode;
         return this;
@@ -63,6 +69,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDataUrl")
     public String modelDataUrl;
+
     public ContainerDefinition withModelDataUrl(String modelDataUrl) {
         this.modelDataUrl = modelDataUrl;
         return this;
@@ -71,6 +78,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageName")
     public String modelPackageName;
+
     public ContainerDefinition withModelPackageName(String modelPackageName) {
         this.modelPackageName = modelPackageName;
         return this;
@@ -79,9 +87,11 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiModelConfig")
     public MultiModelConfig multiModelConfig;
+
     public ContainerDefinition withMultiModelConfig(MultiModelConfig multiModelConfig) {
         this.multiModelConfig = multiModelConfig;
         return this;
     }
     
+    public ContainerDefinition(){}
 }

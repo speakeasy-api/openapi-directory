@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetECSServiceRecommendationProjectedMetricsResponse {
@@ -12,6 +13,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
     
     
     public String contentType;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetECSServiceRecommendationProjectedMetricsResponse getECSServiceRecommendationProjectedMetricsResponse;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withGetECSServiceRecommendationProjectedMetricsResponse(org.openapis.openapi.models.shared.GetECSServiceRecommendationProjectedMetricsResponse getECSServiceRecommendationProjectedMetricsResponse) {
         this.getECSServiceRecommendationProjectedMetricsResponse = getECSServiceRecommendationProjectedMetricsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public Object internalServerException;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -69,6 +76,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public Object optInRequiredException;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
      */
     
     public Object throttlingException;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetECSServiceRecommendationProjectedMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

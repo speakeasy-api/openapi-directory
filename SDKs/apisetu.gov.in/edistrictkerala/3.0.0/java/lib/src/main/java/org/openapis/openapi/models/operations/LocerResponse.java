@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LocerResponse {
     
     public String contentType;
+
     public LocerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LocerResponse {
     
     
     public Integer statusCode;
+
     public LocerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LocerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LocerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class LocerResponse {
      */
     
     public Locer400ApplicationJSON locer400ApplicationJSONObject;
+
     public LocerResponse withLocer400ApplicationJSONObject(Locer400ApplicationJSON locer400ApplicationJSONObject) {
         this.locer400ApplicationJSONObject = locer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class LocerResponse {
      */
     
     public Locer401ApplicationJSON locer401ApplicationJSONObject;
+
     public LocerResponse withLocer401ApplicationJSONObject(Locer401ApplicationJSON locer401ApplicationJSONObject) {
         this.locer401ApplicationJSONObject = locer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class LocerResponse {
      */
     
     public Locer404ApplicationJSON locer404ApplicationJSONObject;
+
     public LocerResponse withLocer404ApplicationJSONObject(Locer404ApplicationJSON locer404ApplicationJSONObject) {
         this.locer404ApplicationJSONObject = locer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class LocerResponse {
      */
     
     public Locer500ApplicationJSON locer500ApplicationJSONObject;
+
     public LocerResponse withLocer500ApplicationJSONObject(Locer500ApplicationJSON locer500ApplicationJSONObject) {
         this.locer500ApplicationJSONObject = locer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class LocerResponse {
      */
     
     public Locer502ApplicationJSON locer502ApplicationJSONObject;
+
     public LocerResponse withLocer502ApplicationJSONObject(Locer502ApplicationJSON locer502ApplicationJSONObject) {
         this.locer502ApplicationJSONObject = locer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class LocerResponse {
      */
     
     public Locer503ApplicationJSON locer503ApplicationJSONObject;
+
     public LocerResponse withLocer503ApplicationJSONObject(Locer503ApplicationJSON locer503ApplicationJSONObject) {
         this.locer503ApplicationJSONObject = locer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class LocerResponse {
      */
     
     public Locer504ApplicationJSON locer504ApplicationJSONObject;
+
     public LocerResponse withLocer504ApplicationJSONObject(Locer504ApplicationJSON locer504ApplicationJSONObject) {
         this.locer504ApplicationJSONObject = locer504ApplicationJSONObject;
         return this;
     }
     
+    public LocerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMet
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionAttempt")
     public Integer executionAttempt;
+
     public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata withExecutionAttempt(Integer executionAttempt) {
         this.executionAttempt = executionAttempt;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMet
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public String task;
+
     public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata withTask(String task) {
         this.task = task;
         return this;
@@ -40,8 +42,21 @@ public class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMet
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskAttempt")
     public Integer taskAttempt;
+
     public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata withTaskAttempt(Integer taskAttempt) {
         this.taskAttempt = taskAttempt;
+        return this;
+    }
+    
+    /**
+     * the task label associated with this snapshot. Could be empty.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taskLabel")
+    public String taskLabel;
+
+    public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata withTaskLabel(String taskLabel) {
+        this.taskLabel = taskLabel;
         return this;
     }
     
@@ -51,9 +66,11 @@ public class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMet
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumber")
     public String taskNumber;
+
     public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata withTaskNumber(String taskNumber) {
         this.taskNumber = taskNumber;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata(){}
 }

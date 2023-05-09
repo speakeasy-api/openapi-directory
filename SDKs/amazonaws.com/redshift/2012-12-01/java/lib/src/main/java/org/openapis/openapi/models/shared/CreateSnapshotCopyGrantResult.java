@@ -15,9 +15,11 @@ public class CreateSnapshotCopyGrantResult {
      */
     
     public SnapshotCopyGrant snapshotCopyGrant;
+
     public CreateSnapshotCopyGrantResult withSnapshotCopyGrant(SnapshotCopyGrant snapshotCopyGrant) {
         this.snapshotCopyGrant = snapshotCopyGrant;
         return this;
     }
     
+    public CreateSnapshotCopyGrantResult(){}
 }

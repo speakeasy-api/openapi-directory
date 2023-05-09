@@ -15,6 +15,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public ProductItems withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -23,6 +24,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryName")
     public String categoryName;
+
     public ProductItems withCategoryName(String categoryName) {
         this.categoryName = categoryName;
         return this;
@@ -31,6 +33,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consoleUrlMask")
     public String consoleUrlMask;
+
     public ProductItems withConsoleUrlMask(String consoleUrlMask) {
         this.consoleUrlMask = consoleUrlMask;
         return this;
@@ -39,6 +42,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProductItems withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProductItems withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +63,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductItems withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +72,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productResources")
     public String productResources;
+
     public ProductItems withProductResources(String productResources) {
         this.productResources = productResources;
         return this;
@@ -74,6 +81,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ProductItems withUrl(String url) {
         this.url = url;
         return this;
@@ -82,6 +90,7 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlConfiguration")
     public String urlConfiguration;
+
     public ProductItems withUrlConfiguration(String urlConfiguration) {
         this.urlConfiguration = urlConfiguration;
         return this;
@@ -90,9 +99,11 @@ public class ProductItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webApiUrlMask")
     public String webApiUrlMask;
+
     public ProductItems withWebApiUrlMask(String webApiUrlMask) {
         this.webApiUrlMask = webApiUrlMask;
         return this;
     }
     
+    public ProductItems(){}
 }

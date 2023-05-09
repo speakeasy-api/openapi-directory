@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateBackendAPIModelsResponse {
@@ -12,6 +13,7 @@ public class GenerateBackendAPIModelsResponse {
      */
     
     public Object badRequestException;
+
     public GenerateBackendAPIModelsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GenerateBackendAPIModelsResponse {
     
     
     public String contentType;
+
     public GenerateBackendAPIModelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GenerateBackendAPIModelsResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public GenerateBackendAPIModelsResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class GenerateBackendAPIModelsResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateBackendAPIModelsResponse generateBackendAPIModelsResponse;
+
     public GenerateBackendAPIModelsResponse withGenerateBackendAPIModelsResponse(org.openapis.openapi.models.shared.GenerateBackendAPIModelsResponse generateBackendAPIModelsResponse) {
         this.generateBackendAPIModelsResponse = generateBackendAPIModelsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GenerateBackendAPIModelsResponse {
      */
     
     public Object notFoundException;
+
     public GenerateBackendAPIModelsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GenerateBackendAPIModelsResponse {
     
     
     public Integer statusCode;
+
     public GenerateBackendAPIModelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GenerateBackendAPIModelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateBackendAPIModelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GenerateBackendAPIModelsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GenerateBackendAPIModelsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GenerateBackendAPIModelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

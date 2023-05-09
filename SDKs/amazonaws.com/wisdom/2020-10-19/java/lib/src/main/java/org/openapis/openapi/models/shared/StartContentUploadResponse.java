@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class StartContentUploadResponse {
     @JsonProperty("headersToInclude")
     public java.util.Map<String, String> headersToInclude;
+
     public StartContentUploadResponse withHeadersToInclude(java.util.Map<String, String> headersToInclude) {
         this.headersToInclude = headersToInclude;
         return this;
@@ -24,6 +25,7 @@ public class StartContentUploadResponse {
     
     @JsonProperty("uploadId")
     public String uploadId;
+
     public StartContentUploadResponse withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
@@ -31,6 +33,7 @@ public class StartContentUploadResponse {
     
     @JsonProperty("url")
     public String url;
+
     public StartContentUploadResponse withUrl(String url) {
         this.url = url;
         return this;
@@ -40,9 +43,16 @@ public class StartContentUploadResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("urlExpiry")
     public OffsetDateTime urlExpiry;
+
     public StartContentUploadResponse withUrlExpiry(OffsetDateTime urlExpiry) {
         this.urlExpiry = urlExpiry;
         return this;
     }
     
+    public StartContentUploadResponse(@JsonProperty("headersToInclude") java.util.Map<String, String> headersToInclude, @JsonProperty("uploadId") String uploadId, @JsonProperty("url") String url, @JsonProperty("urlExpiry") OffsetDateTime urlExpiry) {
+        this.headersToInclude = headersToInclude;
+        this.uploadId = uploadId;
+        this.url = url;
+        this.urlExpiry = urlExpiry;
+  }
 }

@@ -15,9 +15,11 @@ public class ExperimentCloudWatchLogsLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupArn")
     public String logGroupArn;
+
     public ExperimentCloudWatchLogsLogConfiguration withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
     }
     
+    public ExperimentCloudWatchLogsLogConfiguration(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NOTAMsRouteResponse {
     @JsonProperty("found")
     public java.util.Map<String, Object> found;
+
     public NOTAMsRouteResponse withFound(java.util.Map<String, Object> found) {
         this.found = found;
         return this;
     }
     
+    public NOTAMsRouteResponse(@JsonProperty("found") java.util.Map<String, Object> found) {
+        this.found = found;
+  }
 }

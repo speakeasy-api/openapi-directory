@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyImageResponse {
     
     public String contentType;
+
     public CopyImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CopyImageResponse {
      */
     
     public org.openapis.openapi.models.shared.CopyImageResponse copyImageResponse;
+
     public CopyImageResponse withCopyImageResponse(org.openapis.openapi.models.shared.CopyImageResponse copyImageResponse) {
         this.copyImageResponse = copyImageResponse;
         return this;
@@ -29,6 +32,7 @@ public class CopyImageResponse {
      */
     
     public Object incompatibleImageException;
+
     public CopyImageResponse withIncompatibleImageException(Object incompatibleImageException) {
         this.incompatibleImageException = incompatibleImageException;
         return this;
@@ -39,6 +43,7 @@ public class CopyImageResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public CopyImageResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -49,6 +54,7 @@ public class CopyImageResponse {
      */
     
     public Object limitExceededException;
+
     public CopyImageResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CopyImageResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CopyImageResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class CopyImageResponse {
      */
     
     public Object resourceNotAvailableException;
+
     public CopyImageResponse withResourceNotAvailableException(Object resourceNotAvailableException) {
         this.resourceNotAvailableException = resourceNotAvailableException;
         return this;
@@ -76,6 +84,7 @@ public class CopyImageResponse {
     
     
     public Integer statusCode;
+
     public CopyImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CopyImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CopyImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CopyImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CopyImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

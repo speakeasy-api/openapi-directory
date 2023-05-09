@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DBSubnetGroups {
     
     public String dbSubnetGroupDescription;
+
     public DBSubnetGroups withDBSubnetGroupDescription(String dbSubnetGroupDescription) {
         this.dbSubnetGroupDescription = dbSubnetGroupDescription;
         return this;
@@ -16,6 +17,7 @@ public class DBSubnetGroups {
     
     
     public String dbSubnetGroupName;
+
     public DBSubnetGroups withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -23,6 +25,7 @@ public class DBSubnetGroups {
     
     
     public String subnetGroupStatus;
+
     public DBSubnetGroups withSubnetGroupStatus(String subnetGroupStatus) {
         this.subnetGroupStatus = subnetGroupStatus;
         return this;
@@ -30,6 +33,7 @@ public class DBSubnetGroups {
     
     
     public SubnetList[] subnets;
+
     public DBSubnetGroups withSubnets(SubnetList[] subnets) {
         this.subnets = subnets;
         return this;
@@ -37,9 +41,11 @@ public class DBSubnetGroups {
     
     
     public String vpcId;
+
     public DBSubnetGroups withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DBSubnetGroups(){}
 }

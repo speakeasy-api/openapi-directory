@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameImageCollectionRequest {
@@ -12,6 +13,7 @@ public class RenameImageCollectionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest;
+
     public RenameImageCollectionRequest withCollectionUpdateRequest(org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest) {
         this.collectionUpdateRequest = collectionUpdateRequest;
         return this;
@@ -22,9 +24,14 @@ public class RenameImageCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public RenameImageCollectionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public RenameImageCollectionRequest(@JsonProperty("CollectionUpdateRequest") org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest, @JsonProperty("id") String id) {
+        this.collectionUpdateRequest = collectionUpdateRequest;
+        this.id = id;
+  }
 }

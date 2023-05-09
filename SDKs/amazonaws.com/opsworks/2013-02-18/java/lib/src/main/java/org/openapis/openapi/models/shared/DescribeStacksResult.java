@@ -15,9 +15,11 @@ public class DescribeStacksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stacks")
     public Stack[] stacks;
+
     public DescribeStacksResult withStacks(Stack[] stacks) {
         this.stacks = stacks;
         return this;
     }
     
+    public DescribeStacksResult(){}
 }

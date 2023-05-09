@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetProfileRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -20,6 +22,7 @@ public class GetProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -27,6 +30,7 @@ public class GetProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -34,6 +38,7 @@ public class GetProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetProfileRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -41,6 +46,7 @@ public class GetProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetProfileRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -48,6 +54,7 @@ public class GetProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -55,6 +62,7 @@ public class GetProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetProfileRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -62,6 +70,7 @@ public class GetProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -72,6 +81,7 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
     public OffsetDateTime endTime;
+
     public GetProfileRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -82,6 +92,7 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDepth")
     public Long maxDepth;
+
     public GetProfileRequest withMaxDepth(Long maxDepth) {
         this.maxDepth = maxDepth;
         return this;
@@ -92,6 +103,7 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public String period;
+
     public GetProfileRequest withPeriod(String period) {
         this.period = period;
         return this;
@@ -102,6 +114,7 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
     public String profilingGroupName;
+
     public GetProfileRequest withProfilingGroupName(String profilingGroupName) {
         this.profilingGroupName = profilingGroupName;
         return this;
@@ -112,9 +125,13 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
     public OffsetDateTime startTime;
+
     public GetProfileRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetProfileRequest(@JsonProperty("profilingGroupName") String profilingGroupName) {
+        this.profilingGroupName = profilingGroupName;
+  }
 }

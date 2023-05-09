@@ -15,6 +15,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToSnapshots")
     public Boolean copyTagsToSnapshots;
+
     public OpenZFSVolumeConfiguration withCopyTagsToSnapshots(Boolean copyTagsToSnapshots) {
         this.copyTagsToSnapshots = copyTagsToSnapshots;
         return this;
@@ -23,6 +24,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCompressionType")
     public OpenZFSDataCompressionTypeEnum dataCompressionType;
+
     public OpenZFSVolumeConfiguration withDataCompressionType(OpenZFSDataCompressionTypeEnum dataCompressionType) {
         this.dataCompressionType = dataCompressionType;
         return this;
@@ -31,6 +33,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteClonedVolumes")
     public Boolean deleteClonedVolumes;
+
     public OpenZFSVolumeConfiguration withDeleteClonedVolumes(Boolean deleteClonedVolumes) {
         this.deleteClonedVolumes = deleteClonedVolumes;
         return this;
@@ -39,6 +42,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteIntermediateSnaphots")
     public Boolean deleteIntermediateSnaphots;
+
     public OpenZFSVolumeConfiguration withDeleteIntermediateSnaphots(Boolean deleteIntermediateSnaphots) {
         this.deleteIntermediateSnaphots = deleteIntermediateSnaphots;
         return this;
@@ -47,6 +51,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NfsExports")
     public OpenZFSNfsExport[] nfsExports;
+
     public OpenZFSVolumeConfiguration withNfsExports(OpenZFSNfsExport[] nfsExports) {
         this.nfsExports = nfsExports;
         return this;
@@ -55,6 +60,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginSnapshot")
     public OpenZFSOriginSnapshotConfiguration originSnapshot;
+
     public OpenZFSVolumeConfiguration withOriginSnapshot(OpenZFSOriginSnapshotConfiguration originSnapshot) {
         this.originSnapshot = originSnapshot;
         return this;
@@ -63,6 +69,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentVolumeId")
     public String parentVolumeId;
+
     public OpenZFSVolumeConfiguration withParentVolumeId(String parentVolumeId) {
         this.parentVolumeId = parentVolumeId;
         return this;
@@ -71,6 +78,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadOnly")
     public Boolean readOnly;
+
     public OpenZFSVolumeConfiguration withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -79,6 +87,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordSizeKiB")
     public Long recordSizeKiB;
+
     public OpenZFSVolumeConfiguration withRecordSizeKiB(Long recordSizeKiB) {
         this.recordSizeKiB = recordSizeKiB;
         return this;
@@ -87,6 +96,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestoreToSnapshot")
     public String restoreToSnapshot;
+
     public OpenZFSVolumeConfiguration withRestoreToSnapshot(String restoreToSnapshot) {
         this.restoreToSnapshot = restoreToSnapshot;
         return this;
@@ -95,6 +105,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageCapacityQuotaGiB")
     public Long storageCapacityQuotaGiB;
+
     public OpenZFSVolumeConfiguration withStorageCapacityQuotaGiB(Long storageCapacityQuotaGiB) {
         this.storageCapacityQuotaGiB = storageCapacityQuotaGiB;
         return this;
@@ -103,6 +114,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageCapacityReservationGiB")
     public Long storageCapacityReservationGiB;
+
     public OpenZFSVolumeConfiguration withStorageCapacityReservationGiB(Long storageCapacityReservationGiB) {
         this.storageCapacityReservationGiB = storageCapacityReservationGiB;
         return this;
@@ -111,6 +123,7 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAndGroupQuotas")
     public OpenZFSUserOrGroupQuota[] userAndGroupQuotas;
+
     public OpenZFSVolumeConfiguration withUserAndGroupQuotas(OpenZFSUserOrGroupQuota[] userAndGroupQuotas) {
         this.userAndGroupQuotas = userAndGroupQuotas;
         return this;
@@ -119,9 +132,11 @@ public class OpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumePath")
     public String volumePath;
+
     public OpenZFSVolumeConfiguration withVolumePath(String volumePath) {
         this.volumePath = volumePath;
         return this;
     }
     
+    public OpenZFSVolumeConfiguration(){}
 }

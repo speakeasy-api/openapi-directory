@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsToCertificateResponse {
     
     public String contentType;
+
     public AddTagsToCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddTagsToCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public AddTagsToCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class AddTagsToCertificateResponse {
      */
     
     public Object invalidParameterException;
+
     public AddTagsToCertificateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class AddTagsToCertificateResponse {
      */
     
     public Object invalidTagException;
+
     public AddTagsToCertificateResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -49,6 +54,7 @@ public class AddTagsToCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddTagsToCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class AddTagsToCertificateResponse {
     
     
     public Integer statusCode;
+
     public AddTagsToCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AddTagsToCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsToCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AddTagsToCertificateResponse {
      */
     
     public Object tagPolicyException;
+
     public AddTagsToCertificateResponse withTagPolicyException(Object tagPolicyException) {
         this.tagPolicyException = tagPolicyException;
         return this;
@@ -83,6 +92,7 @@ public class AddTagsToCertificateResponse {
      */
     
     public Object throttlingException;
+
     public AddTagsToCertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AddTagsToCertificateResponse {
      */
     
     public Object tooManyTagsException;
+
     public AddTagsToCertificateResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public AddTagsToCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,13 @@ public class TableRow {
      */
     @JsonProperty("cells")
     public TableCell[] cells;
+
     public TableRow withCells(TableCell[] cells) {
         this.cells = cells;
         return this;
     }
     
+    public TableRow(@JsonProperty("cells") TableCell[] cells) {
+        this.cells = cells;
+  }
 }

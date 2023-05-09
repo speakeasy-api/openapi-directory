@@ -23,6 +23,7 @@ public class GetDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public GetDestinationResponse withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -33,6 +34,7 @@ public class GetDestinationResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public GetDestinationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -45,6 +47,7 @@ public class GetDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetDestinationResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +58,7 @@ public class GetDestinationResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public GetDestinationResponse withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +69,7 @@ public class GetDestinationResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public GetDestinationResponse withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +80,7 @@ public class GetDestinationResponse {
      */
     @JsonProperty("site")
     public String site;
+
     public GetDestinationResponse withSite(String site) {
         this.site = site;
         return this;
@@ -85,6 +91,7 @@ public class GetDestinationResponse {
      */
     @JsonProperty("state")
     public DestinationStateEnum state;
+
     public GetDestinationResponse withState(DestinationStateEnum state) {
         this.state = state;
         return this;
@@ -97,9 +104,19 @@ public class GetDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public GetDestinationResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetDestinationResponse(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("site") String site, @JsonProperty("state") DestinationStateEnum state, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.name = name;
+        this.site = site;
+        this.state = state;
+        this.updatedAt = updatedAt;
+  }
 }

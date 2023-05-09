@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse {
     
     public byte[] body;
+
     public GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse {
     
     
     public String contentType;
+
     public GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse {
      */
     
     public org.openapis.openapi.models.shared.SpecListVO specListVO;
+
     public GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse withSpecListVO(org.openapis.openapi.models.shared.SpecListVO specListVO) {
         this.specListVO = specListVO;
         return this;
@@ -43,6 +48,7 @@ public class GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse {
     
     
     public Integer statusCode;
+
     public GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

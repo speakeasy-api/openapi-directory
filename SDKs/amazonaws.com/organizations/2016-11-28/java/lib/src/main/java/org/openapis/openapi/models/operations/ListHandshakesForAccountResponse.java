@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHandshakesForAccountResponse {
@@ -12,6 +13,7 @@ public class ListHandshakesForAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public ListHandshakesForAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListHandshakesForAccountResponse {
      */
     
     public Object concurrentModificationException;
+
     public ListHandshakesForAccountResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class ListHandshakesForAccountResponse {
     
     
     public String contentType;
+
     public ListHandshakesForAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListHandshakesForAccountResponse {
      */
     
     public Object invalidInputException;
+
     public ListHandshakesForAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListHandshakesForAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHandshakesForAccountResponse listHandshakesForAccountResponse;
+
     public ListHandshakesForAccountResponse withListHandshakesForAccountResponse(org.openapis.openapi.models.shared.ListHandshakesForAccountResponse listHandshakesForAccountResponse) {
         this.listHandshakesForAccountResponse = listHandshakesForAccountResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListHandshakesForAccountResponse {
      */
     
     public Object serviceException;
+
     public ListHandshakesForAccountResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class ListHandshakesForAccountResponse {
     
     
     public Integer statusCode;
+
     public ListHandshakesForAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListHandshakesForAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHandshakesForAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListHandshakesForAccountResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListHandshakesForAccountResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListHandshakesForAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

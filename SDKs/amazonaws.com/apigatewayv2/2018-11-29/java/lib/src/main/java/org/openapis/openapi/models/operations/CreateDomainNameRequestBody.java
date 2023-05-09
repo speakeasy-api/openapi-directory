@@ -14,6 +14,7 @@ public class CreateDomainNameRequestBody {
      */
     @JsonProperty("domainName")
     public String domainName;
+
     public CreateDomainNameRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -25,6 +26,7 @@ public class CreateDomainNameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainNameConfigurations")
     public org.openapis.openapi.models.shared.DomainNameConfiguration[] domainNameConfigurations;
+
     public CreateDomainNameRequestBody withDomainNameConfigurations(org.openapis.openapi.models.shared.DomainNameConfiguration[] domainNameConfigurations) {
         this.domainNameConfigurations = domainNameConfigurations;
         return this;
@@ -36,6 +38,7 @@ public class CreateDomainNameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutualTlsAuthentication")
     public CreateDomainNameRequestBodyMutualTlsAuthentication mutualTlsAuthentication;
+
     public CreateDomainNameRequestBody withMutualTlsAuthentication(CreateDomainNameRequestBodyMutualTlsAuthentication mutualTlsAuthentication) {
         this.mutualTlsAuthentication = mutualTlsAuthentication;
         return this;
@@ -47,9 +50,13 @@ public class CreateDomainNameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateDomainNameRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDomainNameRequestBody(@JsonProperty("domainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

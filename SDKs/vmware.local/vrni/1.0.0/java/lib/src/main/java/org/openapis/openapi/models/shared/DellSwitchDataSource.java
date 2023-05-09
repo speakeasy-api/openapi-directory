@@ -15,6 +15,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentials")
     public PasswordCredentials credentials;
+
     public DellSwitchDataSource withCredentials(PasswordCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -23,6 +24,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public DellSwitchDataSource withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public DellSwitchDataSource withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -39,6 +42,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public DataSourceTypeEnum entityType;
+
     public DellSwitchDataSource withEntityType(DataSourceTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -47,6 +51,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public DellSwitchDataSource withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -55,6 +60,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public DellSwitchDataSource withIp(String ip) {
         this.ip = ip;
         return this;
@@ -63,6 +69,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public DellSwitchDataSource withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -71,6 +78,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public DellSwitchDataSource withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -82,6 +90,7 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxy_id")
     public String proxyId;
+
     public DellSwitchDataSource withProxyId(String proxyId) {
         this.proxyId = proxyId;
         return this;
@@ -90,9 +99,11 @@ public class DellSwitchDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switch_type")
     public DellSwitchTypeEnum switchType;
+
     public DellSwitchDataSource withSwitchType(DellSwitchTypeEnum switchType) {
         this.switchType = switchType;
         return this;
     }
     
+    public DellSwitchDataSource(){}
 }

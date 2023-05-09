@@ -18,6 +18,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("btc_price_satoshi")
     public Double btcPriceSatoshi;
+
     public V1Order withBtcPriceSatoshi(Double btcPriceSatoshi) {
         this.btcPriceSatoshi = btcPriceSatoshi;
         return this;
@@ -29,6 +30,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("btc_receive_address")
     public String btcReceiveAddress;
+
     public V1Order withBtcReceiveAddress(String btcReceiveAddress) {
         this.btcReceiveAddress = btcReceiveAddress;
         return this;
@@ -40,6 +42,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_email")
     public String buyerEmail;
+
     public V1Order withBuyerEmail(String buyerEmail) {
         this.buyerEmail = buyerEmail;
         return this;
@@ -51,6 +54,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_note")
     public String buyerNote;
+
     public V1Order withBuyerNote(String buyerNote) {
         this.buyerNote = buyerNote;
         return this;
@@ -62,6 +66,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_note")
     public String canceledNote;
+
     public V1Order withCanceledNote(String canceledNote) {
         this.canceledNote = canceledNote;
         return this;
@@ -73,6 +78,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_note")
     public String completedNote;
+
     public V1Order withCompletedNote(String completedNote) {
         this.completedNote = completedNote;
         return this;
@@ -84,6 +90,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public V1Order withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -95,6 +102,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public V1Order withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -106,6 +114,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public V1Order withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -117,6 +126,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public V1Order withId(String id) {
         this.id = id;
         return this;
@@ -128,6 +138,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_history")
     public V1OrderHistoryEntry[] orderHistory;
+
     public V1Order withOrderHistory(V1OrderHistoryEntry[] orderHistory) {
         this.orderHistory = orderHistory;
         return this;
@@ -139,6 +150,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public V1Order withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -150,6 +162,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promo_code")
     public String promoCode;
+
     public V1Order withPromoCode(String promoCode) {
         this.promoCode = promoCode;
         return this;
@@ -161,6 +174,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_name")
     public String recipientName;
+
     public V1Order withRecipientName(String recipientName) {
         this.recipientName = recipientName;
         return this;
@@ -172,6 +186,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_phone_number")
     public String recipientPhoneNumber;
+
     public V1Order withRecipientPhoneNumber(String recipientPhoneNumber) {
         this.recipientPhoneNumber = recipientPhoneNumber;
         return this;
@@ -183,6 +198,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_note")
     public String refundedNote;
+
     public V1Order withRefundedNote(String refundedNote) {
         this.refundedNote = refundedNote;
         return this;
@@ -221,6 +237,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public V1Order withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -232,6 +249,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public V1Order withState(String state) {
         this.state = state;
         return this;
@@ -240,6 +258,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtotal_money")
     public V1Money subtotalMoney;
+
     public V1Order withSubtotalMoney(V1Money subtotalMoney) {
         this.subtotalMoney = subtotalMoney;
         return this;
@@ -272,6 +291,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tender")
     public V1Tender tender;
+
     public V1Order withTender(V1Tender tender) {
         this.tender = tender;
         return this;
@@ -280,6 +300,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_discount_money")
     public V1Money totalDiscountMoney;
+
     public V1Order withTotalDiscountMoney(V1Money totalDiscountMoney) {
         this.totalDiscountMoney = totalDiscountMoney;
         return this;
@@ -288,6 +309,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_price_money")
     public V1Money totalPriceMoney;
+
     public V1Order withTotalPriceMoney(V1Money totalPriceMoney) {
         this.totalPriceMoney = totalPriceMoney;
         return this;
@@ -296,6 +318,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_shipping_money")
     public V1Money totalShippingMoney;
+
     public V1Order withTotalShippingMoney(V1Money totalShippingMoney) {
         this.totalShippingMoney = totalShippingMoney;
         return this;
@@ -304,6 +327,7 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_tax_money")
     public V1Money totalTaxMoney;
+
     public V1Order withTotalTaxMoney(V1Money totalTaxMoney) {
         this.totalTaxMoney = totalTaxMoney;
         return this;
@@ -315,9 +339,11 @@ public class V1Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public V1Order withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public V1Order(){}
 }

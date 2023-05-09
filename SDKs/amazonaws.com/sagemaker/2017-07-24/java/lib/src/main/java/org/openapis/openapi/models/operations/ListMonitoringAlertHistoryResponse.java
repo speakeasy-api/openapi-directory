@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMonitoringAlertHistoryResponse {
     
     public String contentType;
+
     public ListMonitoringAlertHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMonitoringAlertHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMonitoringAlertHistoryResponse listMonitoringAlertHistoryResponse;
+
     public ListMonitoringAlertHistoryResponse withListMonitoringAlertHistoryResponse(org.openapis.openapi.models.shared.ListMonitoringAlertHistoryResponse listMonitoringAlertHistoryResponse) {
         this.listMonitoringAlertHistoryResponse = listMonitoringAlertHistoryResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListMonitoringAlertHistoryResponse {
      */
     
     public Object resourceNotFound;
+
     public ListMonitoringAlertHistoryResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class ListMonitoringAlertHistoryResponse {
     
     
     public Integer statusCode;
+
     public ListMonitoringAlertHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListMonitoringAlertHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMonitoringAlertHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMonitoringAlertHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

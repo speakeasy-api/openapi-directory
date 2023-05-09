@@ -18,6 +18,7 @@ public class ProximityLocationListAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximityLocationListId")
     public String proximityLocationListId;
+
     public ProximityLocationListAssignedTargetingOptionDetails withProximityLocationListId(String proximityLocationListId) {
         this.proximityLocationListId = proximityLocationListId;
         return this;
@@ -29,9 +30,11 @@ public class ProximityLocationListAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximityRadiusRange")
     public ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusRangeEnum proximityRadiusRange;
+
     public ProximityLocationListAssignedTargetingOptionDetails withProximityRadiusRange(ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusRangeEnum proximityRadiusRange) {
         this.proximityRadiusRange = proximityRadiusRange;
         return this;
     }
     
+    public ProximityLocationListAssignedTargetingOptionDetails(){}
 }

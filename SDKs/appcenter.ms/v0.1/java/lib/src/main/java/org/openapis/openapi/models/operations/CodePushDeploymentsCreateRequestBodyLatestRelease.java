@@ -12,6 +12,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blob_url")
     public String blobUrl;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withBlobUrl(String blobUrl) {
         this.blobUrl = blobUrl;
         return this;
@@ -20,6 +21,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diff_package_map")
     public java.util.Map<String, CodePushDeploymentsCreateRequestBodyLatestReleaseDiffPackageMap> diffPackageMap;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withDiffPackageMap(java.util.Map<String, CodePushDeploymentsCreateRequestBodyLatestReleaseDiffPackageMap> diffPackageMap) {
         this.diffPackageMap = diffPackageMap;
         return this;
@@ -36,6 +39,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_disabled")
     public Boolean isDisabled;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -44,6 +48,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_mandatory")
     public Boolean isMandatory;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withIsMandatory(Boolean isMandatory) {
         this.isMandatory = isMandatory;
         return this;
@@ -52,6 +57,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withLabel(String label) {
         this.label = label;
         return this;
@@ -63,6 +69,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_deployment")
     public String originalDeployment;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withOriginalDeployment(String originalDeployment) {
         this.originalDeployment = originalDeployment;
         return this;
@@ -74,6 +81,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_label")
     public String originalLabel;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withOriginalLabel(String originalLabel) {
         this.originalLabel = originalLabel;
         return this;
@@ -82,6 +90,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_hash")
     public String packageHash;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withPackageHash(String packageHash) {
         this.packageHash = packageHash;
         return this;
@@ -93,6 +102,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_method")
     public CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum releaseMethod;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withReleaseMethod(CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum releaseMethod) {
         this.releaseMethod = releaseMethod;
         return this;
@@ -101,6 +111,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("released_by")
     public String releasedBy;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withReleasedBy(String releasedBy) {
         this.releasedBy = releasedBy;
         return this;
@@ -109,6 +120,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public Long rollout;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withRollout(Long rollout) {
         this.rollout = rollout;
         return this;
@@ -117,6 +129,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Double size;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withSize(Double size) {
         this.size = size;
         return this;
@@ -125,6 +138,7 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_binary_range")
     public String targetBinaryRange;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withTargetBinaryRange(String targetBinaryRange) {
         this.targetBinaryRange = targetBinaryRange;
         return this;
@@ -133,9 +147,11 @@ public class CodePushDeploymentsCreateRequestBodyLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_time")
     public Long uploadTime;
+
     public CodePushDeploymentsCreateRequestBodyLatestRelease withUploadTime(Long uploadTime) {
         this.uploadTime = uploadTime;
         return this;
     }
     
+    public CodePushDeploymentsCreateRequestBodyLatestRelease(){}
 }

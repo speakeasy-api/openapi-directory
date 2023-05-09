@@ -12,6 +12,7 @@ public class GaDataDataTableCols {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GaDataDataTableCols withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class GaDataDataTableCols {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public GaDataDataTableCols withLabel(String label) {
         this.label = label;
         return this;
@@ -28,9 +30,11 @@ public class GaDataDataTableCols {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GaDataDataTableCols withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GaDataDataTableCols(){}
 }

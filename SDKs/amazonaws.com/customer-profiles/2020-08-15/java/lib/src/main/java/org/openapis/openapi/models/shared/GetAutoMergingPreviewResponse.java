@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAutoMergingPreviewResponse {
     @JsonProperty("DomainName")
     public String domainName;
+
     public GetAutoMergingPreviewResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,6 +23,7 @@ public class GetAutoMergingPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfMatchesInSample")
     public Long numberOfMatchesInSample;
+
     public GetAutoMergingPreviewResponse withNumberOfMatchesInSample(Long numberOfMatchesInSample) {
         this.numberOfMatchesInSample = numberOfMatchesInSample;
         return this;
@@ -30,6 +32,7 @@ public class GetAutoMergingPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfProfilesInSample")
     public Long numberOfProfilesInSample;
+
     public GetAutoMergingPreviewResponse withNumberOfProfilesInSample(Long numberOfProfilesInSample) {
         this.numberOfProfilesInSample = numberOfProfilesInSample;
         return this;
@@ -38,9 +41,13 @@ public class GetAutoMergingPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfProfilesWillBeMerged")
     public Long numberOfProfilesWillBeMerged;
+
     public GetAutoMergingPreviewResponse withNumberOfProfilesWillBeMerged(Long numberOfProfilesWillBeMerged) {
         this.numberOfProfilesWillBeMerged = numberOfProfilesWillBeMerged;
         return this;
     }
     
+    public GetAutoMergingPreviewResponse(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

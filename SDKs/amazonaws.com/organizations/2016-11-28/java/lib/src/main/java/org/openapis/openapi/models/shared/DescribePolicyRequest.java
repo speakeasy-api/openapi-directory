@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribePolicyRequest {
     @JsonProperty("PolicyId")
     public String policyId;
+
     public DescribePolicyRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public DescribePolicyRequest(@JsonProperty("PolicyId") String policyId) {
+        this.policyId = policyId;
+  }
 }

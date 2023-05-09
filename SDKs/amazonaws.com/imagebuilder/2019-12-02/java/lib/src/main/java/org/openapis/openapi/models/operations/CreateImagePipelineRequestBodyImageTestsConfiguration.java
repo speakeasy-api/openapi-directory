@@ -15,6 +15,7 @@ public class CreateImagePipelineRequestBodyImageTestsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTestsEnabled")
     public Boolean imageTestsEnabled;
+
     public CreateImagePipelineRequestBodyImageTestsConfiguration withImageTestsEnabled(Boolean imageTestsEnabled) {
         this.imageTestsEnabled = imageTestsEnabled;
         return this;
@@ -23,9 +24,11 @@ public class CreateImagePipelineRequestBodyImageTestsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutMinutes")
     public Long timeoutMinutes;
+
     public CreateImagePipelineRequestBodyImageTestsConfiguration withTimeoutMinutes(Long timeoutMinutes) {
         this.timeoutMinutes = timeoutMinutes;
         return this;
     }
     
+    public CreateImagePipelineRequestBodyImageTestsConfiguration(){}
 }

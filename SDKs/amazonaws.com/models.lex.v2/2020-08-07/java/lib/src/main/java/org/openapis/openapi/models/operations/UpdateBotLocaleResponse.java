@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBotLocaleResponse {
@@ -12,6 +13,7 @@ public class UpdateBotLocaleResponse {
      */
     
     public Object conflictException;
+
     public UpdateBotLocaleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBotLocaleResponse {
     
     
     public String contentType;
+
     public UpdateBotLocaleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBotLocaleResponse {
      */
     
     public Object internalServerException;
+
     public UpdateBotLocaleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBotLocaleResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateBotLocaleResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateBotLocaleResponse {
     
     
     public Integer statusCode;
+
     public UpdateBotLocaleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBotLocaleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBotLocaleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBotLocaleResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateBotLocaleResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBotLocaleResponse {
      */
     
     public Object throttlingException;
+
     public UpdateBotLocaleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateBotLocaleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBotLocaleResponse updateBotLocaleResponse;
+
     public UpdateBotLocaleResponse withUpdateBotLocaleResponse(org.openapis.openapi.models.shared.UpdateBotLocaleResponse updateBotLocaleResponse) {
         this.updateBotLocaleResponse = updateBotLocaleResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateBotLocaleResponse {
      */
     
     public Object validationException;
+
     public UpdateBotLocaleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateBotLocaleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

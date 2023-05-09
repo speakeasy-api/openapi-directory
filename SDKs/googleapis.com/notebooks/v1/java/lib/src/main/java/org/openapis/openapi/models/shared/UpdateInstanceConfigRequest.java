@@ -18,9 +18,11 @@ public class UpdateInstanceConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public InstanceConfig config;
+
     public UpdateInstanceConfigRequest withConfig(InstanceConfig config) {
         this.config = config;
         return this;
     }
     
+    public UpdateInstanceConfigRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChromosomesByAssemblyUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETChromosomesByAssemblyUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapKey")
     public Integer mapKey;
+
     public GETChromosomesByAssemblyUsingGETRequest withMapKey(Integer mapKey) {
         this.mapKey = mapKey;
         return this;
     }
     
+    public GETChromosomesByAssemblyUsingGETRequest(@JsonProperty("mapKey") Integer mapKey) {
+        this.mapKey = mapKey;
+  }
 }

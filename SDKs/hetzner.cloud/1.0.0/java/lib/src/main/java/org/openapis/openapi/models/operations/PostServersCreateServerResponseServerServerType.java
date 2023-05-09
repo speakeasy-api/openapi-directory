@@ -15,6 +15,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("cores")
     public Double cores;
+
     public PostServersCreateServerResponseServerServerType withCores(Double cores) {
         this.cores = cores;
         return this;
@@ -25,6 +26,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("cpu_type")
     public PostServersCreateServerResponseServerServerTypeCpuTypeEnum cpuType;
+
     public PostServersCreateServerResponseServerServerType withCpuType(PostServersCreateServerResponseServerServerTypeCpuTypeEnum cpuType) {
         this.cpuType = cpuType;
         return this;
@@ -35,6 +37,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("deprecated")
     public Boolean deprecated;
+
     public PostServersCreateServerResponseServerServerType withDeprecated(Boolean deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -45,6 +48,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("description")
     public String description;
+
     public PostServersCreateServerResponseServerServerType withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +59,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("disk")
     public Double disk;
+
     public PostServersCreateServerResponseServerServerType withDisk(Double disk) {
         this.disk = disk;
         return this;
@@ -65,6 +70,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersCreateServerResponseServerServerType withId(Long id) {
         this.id = id;
         return this;
@@ -75,6 +81,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("memory")
     public Double memory;
+
     public PostServersCreateServerResponseServerServerType withMemory(Double memory) {
         this.memory = memory;
         return this;
@@ -85,6 +92,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("name")
     public String name;
+
     public PostServersCreateServerResponseServerServerType withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +103,7 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("prices")
     public PostServersCreateServerResponseServerServerTypePrices[] prices;
+
     public PostServersCreateServerResponseServerServerType withPrices(PostServersCreateServerResponseServerServerTypePrices[] prices) {
         this.prices = prices;
         return this;
@@ -105,9 +114,22 @@ public class PostServersCreateServerResponseServerServerType {
      */
     @JsonProperty("storage_type")
     public PostServersCreateServerResponseServerServerTypeStorageTypeEnum storageType;
+
     public PostServersCreateServerResponseServerServerType withStorageType(PostServersCreateServerResponseServerServerTypeStorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public PostServersCreateServerResponseServerServerType(@JsonProperty("cores") Double cores, @JsonProperty("cpu_type") PostServersCreateServerResponseServerServerTypeCpuTypeEnum cpuType, @JsonProperty("deprecated") Boolean deprecated, @JsonProperty("description") String description, @JsonProperty("disk") Double disk, @JsonProperty("id") Long id, @JsonProperty("memory") Double memory, @JsonProperty("name") String name, @JsonProperty("prices") PostServersCreateServerResponseServerServerTypePrices[] prices, @JsonProperty("storage_type") PostServersCreateServerResponseServerServerTypeStorageTypeEnum storageType) {
+        this.cores = cores;
+        this.cpuType = cpuType;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.disk = disk;
+        this.id = id;
+        this.memory = memory;
+        this.name = name;
+        this.prices = prices;
+        this.storageType = storageType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProjectVersionsResponse {
@@ -12,6 +13,7 @@ public class DescribeProjectVersionsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeProjectVersionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProjectVersionsResponse {
     
     
     public String contentType;
+
     public DescribeProjectVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProjectVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProjectVersionsResponse describeProjectVersionsResponse;
+
     public DescribeProjectVersionsResponse withDescribeProjectVersionsResponse(org.openapis.openapi.models.shared.DescribeProjectVersionsResponse describeProjectVersionsResponse) {
         this.describeProjectVersionsResponse = describeProjectVersionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProjectVersionsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeProjectVersionsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeProjectVersionsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public DescribeProjectVersionsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeProjectVersionsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeProjectVersionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeProjectVersionsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DescribeProjectVersionsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeProjectVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProjectVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeProjectVersionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeProjectVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeProjectVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProjectVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DescribeProjectVersionsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeProjectVersionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeProjectVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

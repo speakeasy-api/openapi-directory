@@ -15,6 +15,7 @@ public class NetworkListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public NetworkListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class NetworkListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public NetworkListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NetworkListWarningData(){}
 }

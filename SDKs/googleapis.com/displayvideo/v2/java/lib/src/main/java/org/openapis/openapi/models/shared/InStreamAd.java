@@ -18,6 +18,7 @@ public class InStreamAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonInStreamAttribute")
     public CommonInStreamAttribute commonInStreamAttribute;
+
     public InStreamAd withCommonInStreamAttribute(CommonInStreamAttribute commonInStreamAttribute) {
         this.commonInStreamAttribute = commonInStreamAttribute;
         return this;
@@ -29,9 +30,11 @@ public class InStreamAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customParameters")
     public java.util.Map<String, String> customParameters;
+
     public InStreamAd withCustomParameters(java.util.Map<String, String> customParameters) {
         this.customParameters = customParameters;
         return this;
     }
     
+    public InStreamAd(){}
 }

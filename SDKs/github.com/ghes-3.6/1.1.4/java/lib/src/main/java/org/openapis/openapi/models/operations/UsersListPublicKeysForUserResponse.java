@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersListPublicKeysForUserResponse {
     
     public String contentType;
+
     public UsersListPublicKeysForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersListPublicKeysForUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UsersListPublicKeysForUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UsersListPublicKeysForUserResponse {
     
     
     public Integer statusCode;
+
     public UsersListPublicKeysForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UsersListPublicKeysForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersListPublicKeysForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class UsersListPublicKeysForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.KeySimple[] keySimples;
+
     public UsersListPublicKeysForUserResponse withKeySimples(org.openapis.openapi.models.shared.KeySimple[] keySimples) {
         this.keySimples = keySimples;
         return this;
     }
     
+    public UsersListPublicKeysForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

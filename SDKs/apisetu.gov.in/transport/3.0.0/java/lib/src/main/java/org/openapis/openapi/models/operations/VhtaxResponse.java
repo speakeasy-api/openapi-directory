@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VhtaxResponse {
     
     public String contentType;
+
     public VhtaxResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VhtaxResponse {
     
     
     public Integer statusCode;
+
     public VhtaxResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class VhtaxResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VhtaxResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class VhtaxResponse {
      */
     
     public Vhtax400ApplicationJSON vhtax400ApplicationJSONObject;
+
     public VhtaxResponse withVhtax400ApplicationJSONObject(Vhtax400ApplicationJSON vhtax400ApplicationJSONObject) {
         this.vhtax400ApplicationJSONObject = vhtax400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class VhtaxResponse {
      */
     
     public Vhtax401ApplicationJSON vhtax401ApplicationJSONObject;
+
     public VhtaxResponse withVhtax401ApplicationJSONObject(Vhtax401ApplicationJSON vhtax401ApplicationJSONObject) {
         this.vhtax401ApplicationJSONObject = vhtax401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class VhtaxResponse {
      */
     
     public Vhtax404ApplicationJSON vhtax404ApplicationJSONObject;
+
     public VhtaxResponse withVhtax404ApplicationJSONObject(Vhtax404ApplicationJSON vhtax404ApplicationJSONObject) {
         this.vhtax404ApplicationJSONObject = vhtax404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class VhtaxResponse {
      */
     
     public Vhtax500ApplicationJSON vhtax500ApplicationJSONObject;
+
     public VhtaxResponse withVhtax500ApplicationJSONObject(Vhtax500ApplicationJSON vhtax500ApplicationJSONObject) {
         this.vhtax500ApplicationJSONObject = vhtax500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class VhtaxResponse {
      */
     
     public Vhtax502ApplicationJSON vhtax502ApplicationJSONObject;
+
     public VhtaxResponse withVhtax502ApplicationJSONObject(Vhtax502ApplicationJSON vhtax502ApplicationJSONObject) {
         this.vhtax502ApplicationJSONObject = vhtax502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class VhtaxResponse {
      */
     
     public Vhtax503ApplicationJSON vhtax503ApplicationJSONObject;
+
     public VhtaxResponse withVhtax503ApplicationJSONObject(Vhtax503ApplicationJSON vhtax503ApplicationJSONObject) {
         this.vhtax503ApplicationJSONObject = vhtax503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class VhtaxResponse {
      */
     
     public Vhtax504ApplicationJSON vhtax504ApplicationJSONObject;
+
     public VhtaxResponse withVhtax504ApplicationJSONObject(Vhtax504ApplicationJSON vhtax504ApplicationJSONObject) {
         this.vhtax504ApplicationJSONObject = vhtax504ApplicationJSONObject;
         return this;
     }
     
+    public VhtaxResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

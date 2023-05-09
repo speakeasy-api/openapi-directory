@@ -18,6 +18,7 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newTransaction")
     public TransactionOptions newTransaction;
+
     public RunQueryRequest withNewTransaction(TransactionOptions newTransaction) {
         this.newTransaction = newTransaction;
         return this;
@@ -29,6 +30,7 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public RunQueryRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -40,6 +42,7 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredQuery")
     public StructuredQuery structuredQuery;
+
     public RunQueryRequest withStructuredQuery(StructuredQuery structuredQuery) {
         this.structuredQuery = structuredQuery;
         return this;
@@ -51,9 +54,11 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public RunQueryRequest withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public RunQueryRequest(){}
 }

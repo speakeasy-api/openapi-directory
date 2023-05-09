@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentOrdersCanceltestorderbycustomerResponse {
     
     public String contentType;
+
     public ContentOrdersCanceltestorderbycustomerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentOrdersCanceltestorderbycustomerResponse {
      */
     
     public org.openapis.openapi.models.shared.OrdersCancelTestOrderByCustomerResponse ordersCancelTestOrderByCustomerResponse;
+
     public ContentOrdersCanceltestorderbycustomerResponse withOrdersCancelTestOrderByCustomerResponse(org.openapis.openapi.models.shared.OrdersCancelTestOrderByCustomerResponse ordersCancelTestOrderByCustomerResponse) {
         this.ordersCancelTestOrderByCustomerResponse = ordersCancelTestOrderByCustomerResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentOrdersCanceltestorderbycustomerResponse {
     
     
     public Integer statusCode;
+
     public ContentOrdersCanceltestorderbycustomerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentOrdersCanceltestorderbycustomerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentOrdersCanceltestorderbycustomerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentOrdersCanceltestorderbycustomerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

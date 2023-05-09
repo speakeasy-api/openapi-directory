@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFargateProfilesResponse {
@@ -12,6 +13,7 @@ public class ListFargateProfilesResponse {
      */
     
     public Object clientException;
+
     public ListFargateProfilesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListFargateProfilesResponse {
     
     
     public String contentType;
+
     public ListFargateProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFargateProfilesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListFargateProfilesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListFargateProfilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFargateProfilesResponse listFargateProfilesResponse;
+
     public ListFargateProfilesResponse withListFargateProfilesResponse(org.openapis.openapi.models.shared.ListFargateProfilesResponse listFargateProfilesResponse) {
         this.listFargateProfilesResponse = listFargateProfilesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListFargateProfilesResponse {
     
     
     public Integer statusCode;
+
     public ListFargateProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListFargateProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFargateProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListFargateProfilesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFargateProfilesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListFargateProfilesResponse {
      */
     
     public Object serverException;
+
     public ListFargateProfilesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public ListFargateProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

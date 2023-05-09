@@ -12,9 +12,11 @@ public class SuspendedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public SuspendedRequest withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
     }
     
+    public SuspendedRequest(){}
 }

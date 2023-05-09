@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRecordLifecycleActionHeartbeatRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRecordLifecycleActionHeartbeatActionEnum action;
+
     public GETRecordLifecycleActionHeartbeatRequest withAction(GETRecordLifecycleActionHeartbeatActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETRecordLifecycleActionHeartbeatRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETRecordLifecycleActionHeartbeatRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,6 +43,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleActionToken")
     public String lifecycleActionToken;
+
     public GETRecordLifecycleActionHeartbeatRequest withLifecycleActionToken(String lifecycleActionToken) {
         this.lifecycleActionToken = lifecycleActionToken;
         return this;
@@ -49,6 +54,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleHookName")
     public String lifecycleHookName;
+
     public GETRecordLifecycleActionHeartbeatRequest withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
@@ -56,6 +62,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRecordLifecycleActionHeartbeatVersionEnum version;
+
     public GETRecordLifecycleActionHeartbeatRequest withVersion(GETRecordLifecycleActionHeartbeatVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRecordLifecycleActionHeartbeatRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRecordLifecycleActionHeartbeatRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRecordLifecycleActionHeartbeatRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRecordLifecycleActionHeartbeatRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRecordLifecycleActionHeartbeatRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETRecordLifecycleActionHeartbeatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRecordLifecycleActionHeartbeatRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETRecordLifecycleActionHeartbeatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRecordLifecycleActionHeartbeatRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRecordLifecycleActionHeartbeatRequest(@JsonProperty("Action") GETRecordLifecycleActionHeartbeatActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("LifecycleHookName") String lifecycleHookName, @JsonProperty("Version") GETRecordLifecycleActionHeartbeatVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.lifecycleHookName = lifecycleHookName;
+        this.version = version;
+  }
 }

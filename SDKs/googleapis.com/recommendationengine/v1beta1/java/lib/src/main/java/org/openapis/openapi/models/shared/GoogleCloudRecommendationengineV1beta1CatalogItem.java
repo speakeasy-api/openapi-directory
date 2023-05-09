@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryHierarchies")
     public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy[] categoryHierarchies;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withCategoryHierarchies(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy[] categoryHierarchies) {
         this.categoryHierarchies = categoryHierarchies;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemAttributes")
     public GoogleCloudRecommendationengineV1beta1FeatureMap itemAttributes;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withItemAttributes(GoogleCloudRecommendationengineV1beta1FeatureMap itemAttributes) {
         this.itemAttributes = itemAttributes;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupId")
     public String itemGroupId;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withItemGroupId(String itemGroupId) {
         this.itemGroupId = itemGroupId;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productMetadata")
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItem productMetadata;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withProductMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItem productMetadata) {
         this.productMetadata = productMetadata;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1CatalogItem(){}
 }

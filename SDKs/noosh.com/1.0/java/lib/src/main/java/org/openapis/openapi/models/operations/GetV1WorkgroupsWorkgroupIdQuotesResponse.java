@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV1WorkgroupsWorkgroupIdQuotesResponse {
     
     public byte[] body;
+
     public GetV1WorkgroupsWorkgroupIdQuotesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetV1WorkgroupsWorkgroupIdQuotesResponse {
     
     
     public String contentType;
+
     public GetV1WorkgroupsWorkgroupIdQuotesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetV1WorkgroupsWorkgroupIdQuotesResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetV1WorkgroupsWorkgroupIdQuotesResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetV1WorkgroupsWorkgroupIdQuotesResponse {
      */
     
     public org.openapis.openapi.models.shared.QuoteOfWgLevelSimpleVO quoteOfWgLevelSimpleVO;
+
     public GetV1WorkgroupsWorkgroupIdQuotesResponse withQuoteOfWgLevelSimpleVO(org.openapis.openapi.models.shared.QuoteOfWgLevelSimpleVO quoteOfWgLevelSimpleVO) {
         this.quoteOfWgLevelSimpleVO = quoteOfWgLevelSimpleVO;
         return this;
@@ -43,6 +48,7 @@ public class GetV1WorkgroupsWorkgroupIdQuotesResponse {
     
     
     public Integer statusCode;
+
     public GetV1WorkgroupsWorkgroupIdQuotesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetV1WorkgroupsWorkgroupIdQuotesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV1WorkgroupsWorkgroupIdQuotesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV1WorkgroupsWorkgroupIdQuotesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

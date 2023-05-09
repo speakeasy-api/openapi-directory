@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GicerResponse {
     
     public String contentType;
+
     public GicerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GicerResponse {
     
     
     public Integer statusCode;
+
     public GicerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GicerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GicerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GicerResponse {
      */
     
     public Gicer400ApplicationJSON gicer400ApplicationJSONObject;
+
     public GicerResponse withGicer400ApplicationJSONObject(Gicer400ApplicationJSON gicer400ApplicationJSONObject) {
         this.gicer400ApplicationJSONObject = gicer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GicerResponse {
      */
     
     public Gicer401ApplicationJSON gicer401ApplicationJSONObject;
+
     public GicerResponse withGicer401ApplicationJSONObject(Gicer401ApplicationJSON gicer401ApplicationJSONObject) {
         this.gicer401ApplicationJSONObject = gicer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GicerResponse {
      */
     
     public Gicer404ApplicationJSON gicer404ApplicationJSONObject;
+
     public GicerResponse withGicer404ApplicationJSONObject(Gicer404ApplicationJSON gicer404ApplicationJSONObject) {
         this.gicer404ApplicationJSONObject = gicer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GicerResponse {
      */
     
     public Gicer500ApplicationJSON gicer500ApplicationJSONObject;
+
     public GicerResponse withGicer500ApplicationJSONObject(Gicer500ApplicationJSON gicer500ApplicationJSONObject) {
         this.gicer500ApplicationJSONObject = gicer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GicerResponse {
      */
     
     public Gicer502ApplicationJSON gicer502ApplicationJSONObject;
+
     public GicerResponse withGicer502ApplicationJSONObject(Gicer502ApplicationJSON gicer502ApplicationJSONObject) {
         this.gicer502ApplicationJSONObject = gicer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GicerResponse {
      */
     
     public Gicer503ApplicationJSON gicer503ApplicationJSONObject;
+
     public GicerResponse withGicer503ApplicationJSONObject(Gicer503ApplicationJSON gicer503ApplicationJSONObject) {
         this.gicer503ApplicationJSONObject = gicer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GicerResponse {
      */
     
     public Gicer504ApplicationJSON gicer504ApplicationJSONObject;
+
     public GicerResponse withGicer504ApplicationJSONObject(Gicer504ApplicationJSON gicer504ApplicationJSONObject) {
         this.gicer504ApplicationJSONObject = gicer504ApplicationJSONObject;
         return this;
     }
     
+    public GicerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

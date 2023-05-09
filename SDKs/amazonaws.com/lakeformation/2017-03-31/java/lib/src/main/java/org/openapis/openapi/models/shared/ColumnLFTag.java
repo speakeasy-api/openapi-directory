@@ -15,6 +15,7 @@ public class ColumnLFTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTags")
     public LFTagPair[] lfTags;
+
     public ColumnLFTag withLFTags(LFTagPair[] lfTags) {
         this.lfTags = lfTags;
         return this;
@@ -23,9 +24,11 @@ public class ColumnLFTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ColumnLFTag withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ColumnLFTag(){}
 }

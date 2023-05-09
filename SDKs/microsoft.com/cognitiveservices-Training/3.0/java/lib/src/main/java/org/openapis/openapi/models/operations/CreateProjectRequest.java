@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectRequest {
@@ -12,6 +13,7 @@ public class CreateProjectRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public CreateProjectRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -22,6 +24,7 @@ public class CreateProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationType")
     public CreateProjectClassificationTypeEnum classificationType;
+
     public CreateProjectRequest withClassificationType(CreateProjectClassificationTypeEnum classificationType) {
         this.classificationType = classificationType;
         return this;
@@ -32,6 +35,7 @@ public class CreateProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public CreateProjectRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +46,7 @@ public class CreateProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainId")
     public String domainId;
+
     public CreateProjectRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -52,6 +57,7 @@ public class CreateProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public CreateProjectRequest withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +68,14 @@ public class CreateProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=targetExportPlatforms")
     public CreateProjectTargetExportPlatformsEnum[] targetExportPlatforms;
+
     public CreateProjectRequest withTargetExportPlatforms(CreateProjectTargetExportPlatformsEnum[] targetExportPlatforms) {
         this.targetExportPlatforms = targetExportPlatforms;
         return this;
     }
     
+    public CreateProjectRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("name") String name) {
+        this.trainingKey = trainingKey;
+        this.name = name;
+  }
 }

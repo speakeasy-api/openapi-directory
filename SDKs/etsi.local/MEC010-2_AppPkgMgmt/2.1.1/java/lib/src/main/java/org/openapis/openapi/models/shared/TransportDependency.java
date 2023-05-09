@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TransportDependency {
     /**
@@ -12,6 +12,7 @@ public class TransportDependency {
      */
     
     public String[] labels;
+
     public TransportDependency withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -22,6 +23,7 @@ public class TransportDependency {
      */
     
     public String[] serializers;
+
     public TransportDependency withSerializers(String[] serializers) {
         this.serializers = serializers;
         return this;
@@ -29,9 +31,15 @@ public class TransportDependency {
     
     
     public TransportDescriptor transport;
+
     public TransportDependency withTransport(TransportDescriptor transport) {
         this.transport = transport;
         return this;
     }
     
+    public TransportDependency(@JsonProperty("labels") String[] labels, @JsonProperty("serializers") String[] serializers, @JsonProperty("transport") TransportDescriptor transport) {
+        this.labels = labels;
+        this.serializers = serializers;
+        this.transport = transport;
+  }
 }

@@ -15,6 +15,7 @@ public class PutDataProtectionPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedTime")
     public Long lastUpdatedTime;
+
     public PutDataProtectionPolicyResponse withLastUpdatedTime(Long lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -23,6 +24,7 @@ public class PutDataProtectionPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupIdentifier")
     public String logGroupIdentifier;
+
     public PutDataProtectionPolicyResponse withLogGroupIdentifier(String logGroupIdentifier) {
         this.logGroupIdentifier = logGroupIdentifier;
         return this;
@@ -31,9 +33,11 @@ public class PutDataProtectionPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public PutDataProtectionPolicyResponse withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
     }
     
+    public PutDataProtectionPolicyResponse(){}
 }

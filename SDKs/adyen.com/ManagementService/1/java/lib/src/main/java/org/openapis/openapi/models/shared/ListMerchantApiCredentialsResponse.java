@@ -15,6 +15,7 @@ public class ListMerchantApiCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public PaginationLinks links;
+
     public ListMerchantApiCredentialsResponse withLinks(PaginationLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class ListMerchantApiCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ApiCredential[] data;
+
     public ListMerchantApiCredentialsResponse withData(ApiCredential[] data) {
         this.data = data;
         return this;
@@ -36,6 +38,7 @@ public class ListMerchantApiCredentialsResponse {
      */
     @JsonProperty("itemsTotal")
     public Integer itemsTotal;
+
     public ListMerchantApiCredentialsResponse withItemsTotal(Integer itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -46,9 +49,14 @@ public class ListMerchantApiCredentialsResponse {
      */
     @JsonProperty("pagesTotal")
     public Integer pagesTotal;
+
     public ListMerchantApiCredentialsResponse withPagesTotal(Integer pagesTotal) {
         this.pagesTotal = pagesTotal;
         return this;
     }
     
+    public ListMerchantApiCredentialsResponse(@JsonProperty("itemsTotal") Integer itemsTotal, @JsonProperty("pagesTotal") Integer pagesTotal) {
+        this.itemsTotal = itemsTotal;
+        this.pagesTotal = pagesTotal;
+  }
 }

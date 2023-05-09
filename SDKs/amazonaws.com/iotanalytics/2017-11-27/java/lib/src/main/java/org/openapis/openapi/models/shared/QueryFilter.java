@@ -15,9 +15,11 @@ public class QueryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaTime")
     public DeltaTime deltaTime;
+
     public QueryFilter withDeltaTime(DeltaTime deltaTime) {
         this.deltaTime = deltaTime;
         return this;
     }
     
+    public QueryFilter(){}
 }

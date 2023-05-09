@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostConnectorsRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostConnectorsRequestBody requestBody;
+
     public PostConnectorsRequest withRequestBody(PostConnectorsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class PostConnectorsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostConnectorsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
     }
     
+    public PostConnectorsRequest(@JsonProperty("RequestBody") PostConnectorsRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChcerResponse {
     
     public String contentType;
+
     public ChcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ChcerResponse {
     
     
     public Integer statusCode;
+
     public ChcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ChcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ChcerResponse {
      */
     
     public Chcer400ApplicationJSON chcer400ApplicationJSONObject;
+
     public ChcerResponse withChcer400ApplicationJSONObject(Chcer400ApplicationJSON chcer400ApplicationJSONObject) {
         this.chcer400ApplicationJSONObject = chcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ChcerResponse {
      */
     
     public Chcer401ApplicationJSON chcer401ApplicationJSONObject;
+
     public ChcerResponse withChcer401ApplicationJSONObject(Chcer401ApplicationJSON chcer401ApplicationJSONObject) {
         this.chcer401ApplicationJSONObject = chcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ChcerResponse {
      */
     
     public Chcer404ApplicationJSON chcer404ApplicationJSONObject;
+
     public ChcerResponse withChcer404ApplicationJSONObject(Chcer404ApplicationJSON chcer404ApplicationJSONObject) {
         this.chcer404ApplicationJSONObject = chcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ChcerResponse {
      */
     
     public Chcer500ApplicationJSON chcer500ApplicationJSONObject;
+
     public ChcerResponse withChcer500ApplicationJSONObject(Chcer500ApplicationJSON chcer500ApplicationJSONObject) {
         this.chcer500ApplicationJSONObject = chcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ChcerResponse {
      */
     
     public Chcer502ApplicationJSON chcer502ApplicationJSONObject;
+
     public ChcerResponse withChcer502ApplicationJSONObject(Chcer502ApplicationJSON chcer502ApplicationJSONObject) {
         this.chcer502ApplicationJSONObject = chcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ChcerResponse {
      */
     
     public Chcer503ApplicationJSON chcer503ApplicationJSONObject;
+
     public ChcerResponse withChcer503ApplicationJSONObject(Chcer503ApplicationJSON chcer503ApplicationJSONObject) {
         this.chcer503ApplicationJSONObject = chcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class ChcerResponse {
      */
     
     public Chcer504ApplicationJSON chcer504ApplicationJSONObject;
+
     public ChcerResponse withChcer504ApplicationJSONObject(Chcer504ApplicationJSON chcer504ApplicationJSONObject) {
         this.chcer504ApplicationJSONObject = chcer504ApplicationJSONObject;
         return this;
     }
     
+    public ChcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

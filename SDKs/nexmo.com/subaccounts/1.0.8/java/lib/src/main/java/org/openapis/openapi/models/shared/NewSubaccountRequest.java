@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NewSubaccountRequest {
     @JsonProperty("name")
     public String name;
+
     public NewSubaccountRequest withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class NewSubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public NewSubaccountRequest withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -27,9 +29,13 @@ public class NewSubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_primary_account_balance")
     public Boolean usePrimaryAccountBalance;
+
     public NewSubaccountRequest withUsePrimaryAccountBalance(Boolean usePrimaryAccountBalance) {
         this.usePrimaryAccountBalance = usePrimaryAccountBalance;
         return this;
     }
     
+    public NewSubaccountRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

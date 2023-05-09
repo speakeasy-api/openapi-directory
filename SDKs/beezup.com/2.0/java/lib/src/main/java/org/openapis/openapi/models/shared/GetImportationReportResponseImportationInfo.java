@@ -19,6 +19,7 @@ public class GetImportationReportResponseImportationInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginUtcDate")
     public OffsetDateTime beginUtcDate;
+
     public GetImportationReportResponseImportationInfo withBeginUtcDate(OffsetDateTime beginUtcDate) {
         this.beginUtcDate = beginUtcDate;
         return this;
@@ -31,6 +32,7 @@ public class GetImportationReportResponseImportationInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endUtcDate")
     public OffsetDateTime endUtcDate;
+
     public GetImportationReportResponseImportationInfo withEndUtcDate(OffsetDateTime endUtcDate) {
         this.endUtcDate = endUtcDate;
         return this;
@@ -41,6 +43,7 @@ public class GetImportationReportResponseImportationInfo {
      */
     @JsonProperty("inputConfiguration")
     public InputFileConfiguration inputConfiguration;
+
     public GetImportationReportResponseImportationInfo withInputConfiguration(InputFileConfiguration inputConfiguration) {
         this.inputConfiguration = inputConfiguration;
         return this;
@@ -51,9 +54,16 @@ public class GetImportationReportResponseImportationInfo {
      */
     @JsonProperty("userId")
     public String userId;
+
     public GetImportationReportResponseImportationInfo withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetImportationReportResponseImportationInfo(@JsonProperty("beginUtcDate") OffsetDateTime beginUtcDate, @JsonProperty("endUtcDate") OffsetDateTime endUtcDate, @JsonProperty("inputConfiguration") InputFileConfiguration inputConfiguration, @JsonProperty("userId") String userId) {
+        this.beginUtcDate = beginUtcDate;
+        this.endUtcDate = endUtcDate;
+        this.inputConfiguration = inputConfiguration;
+        this.userId = userId;
+  }
 }

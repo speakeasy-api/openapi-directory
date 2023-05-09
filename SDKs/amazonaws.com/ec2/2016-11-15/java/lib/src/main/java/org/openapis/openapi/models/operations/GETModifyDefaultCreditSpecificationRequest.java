@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDefaultCreditSpecificationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyDefaultCreditSpecificationActionEnum action;
+
     public GETModifyDefaultCreditSpecificationRequest withAction(GETModifyDefaultCreditSpecificationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CpuCredits")
     public String cpuCredits;
+
     public GETModifyDefaultCreditSpecificationRequest withCpuCredits(String cpuCredits) {
         this.cpuCredits = cpuCredits;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyDefaultCreditSpecificationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceFamily")
     public GETModifyDefaultCreditSpecificationInstanceFamilyEnum instanceFamily;
+
     public GETModifyDefaultCreditSpecificationRequest withInstanceFamily(GETModifyDefaultCreditSpecificationInstanceFamilyEnum instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyDefaultCreditSpecificationVersionEnum version;
+
     public GETModifyDefaultCreditSpecificationRequest withVersion(GETModifyDefaultCreditSpecificationVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyDefaultCreditSpecificationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyDefaultCreditSpecificationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyDefaultCreditSpecificationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyDefaultCreditSpecificationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyDefaultCreditSpecificationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyDefaultCreditSpecificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyDefaultCreditSpecificationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETModifyDefaultCreditSpecificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyDefaultCreditSpecificationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyDefaultCreditSpecificationRequest(@JsonProperty("Action") GETModifyDefaultCreditSpecificationActionEnum action, @JsonProperty("CpuCredits") String cpuCredits, @JsonProperty("InstanceFamily") GETModifyDefaultCreditSpecificationInstanceFamilyEnum instanceFamily, @JsonProperty("Version") GETModifyDefaultCreditSpecificationVersionEnum version) {
+        this.action = action;
+        this.cpuCredits = cpuCredits;
+        this.instanceFamily = instanceFamily;
+        this.version = version;
+  }
 }

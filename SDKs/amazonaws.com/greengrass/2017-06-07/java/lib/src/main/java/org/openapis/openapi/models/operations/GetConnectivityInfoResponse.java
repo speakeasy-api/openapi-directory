@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConnectivityInfoResponse {
@@ -12,6 +13,7 @@ public class GetConnectivityInfoResponse {
      */
     
     public Object badRequestException;
+
     public GetConnectivityInfoResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetConnectivityInfoResponse {
     
     
     public String contentType;
+
     public GetConnectivityInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetConnectivityInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConnectivityInfoResponse getConnectivityInfoResponse;
+
     public GetConnectivityInfoResponse withGetConnectivityInfoResponse(org.openapis.openapi.models.shared.GetConnectivityInfoResponse getConnectivityInfoResponse) {
         this.getConnectivityInfoResponse = getConnectivityInfoResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetConnectivityInfoResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetConnectivityInfoResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class GetConnectivityInfoResponse {
     
     
     public Integer statusCode;
+
     public GetConnectivityInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetConnectivityInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConnectivityInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConnectivityInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

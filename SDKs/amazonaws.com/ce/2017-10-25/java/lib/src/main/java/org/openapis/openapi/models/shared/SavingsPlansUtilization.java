@@ -15,6 +15,7 @@ public class SavingsPlansUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCommitment")
     public String totalCommitment;
+
     public SavingsPlansUtilization withTotalCommitment(String totalCommitment) {
         this.totalCommitment = totalCommitment;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnusedCommitment")
     public String unusedCommitment;
+
     public SavingsPlansUtilization withUnusedCommitment(String unusedCommitment) {
         this.unusedCommitment = unusedCommitment;
         return this;
@@ -31,6 +33,7 @@ public class SavingsPlansUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsedCommitment")
     public String usedCommitment;
+
     public SavingsPlansUtilization withUsedCommitment(String usedCommitment) {
         this.usedCommitment = usedCommitment;
         return this;
@@ -39,9 +42,11 @@ public class SavingsPlansUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UtilizationPercentage")
     public String utilizationPercentage;
+
     public SavingsPlansUtilization withUtilizationPercentage(String utilizationPercentage) {
         this.utilizationPercentage = utilizationPercentage;
         return this;
     }
     
+    public SavingsPlansUtilization(){}
 }

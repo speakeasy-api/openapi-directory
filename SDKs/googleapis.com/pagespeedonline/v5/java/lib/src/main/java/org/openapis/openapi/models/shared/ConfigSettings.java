@@ -18,6 +18,7 @@ public class ConfigSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public ConfigSettings withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -29,6 +30,7 @@ public class ConfigSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emulatedFormFactor")
     public String emulatedFormFactor;
+
     public ConfigSettings withEmulatedFormFactor(String emulatedFormFactor) {
         this.emulatedFormFactor = emulatedFormFactor;
         return this;
@@ -40,6 +42,7 @@ public class ConfigSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFactor")
     public String formFactor;
+
     public ConfigSettings withFormFactor(String formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -51,6 +54,7 @@ public class ConfigSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public ConfigSettings withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -62,9 +66,11 @@ public class ConfigSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyCategories")
     public Object onlyCategories;
+
     public ConfigSettings withOnlyCategories(Object onlyCategories) {
         this.onlyCategories = onlyCategories;
         return this;
     }
     
+    public ConfigSettings(){}
 }

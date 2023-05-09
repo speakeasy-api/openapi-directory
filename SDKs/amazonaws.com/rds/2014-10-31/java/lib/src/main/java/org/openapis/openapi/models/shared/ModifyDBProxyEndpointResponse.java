@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBProxyEndpointResponse {
     
     public DBProxyEndpoint dbProxyEndpoint;
+
     public ModifyDBProxyEndpointResponse withDBProxyEndpoint(DBProxyEndpoint dbProxyEndpoint) {
         this.dbProxyEndpoint = dbProxyEndpoint;
         return this;
     }
     
+    public ModifyDBProxyEndpointResponse(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddApplicationReferenceDataSourceRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public AddApplicationReferenceDataSourceRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -16,6 +17,7 @@ public class AddApplicationReferenceDataSourceRequest {
     
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public AddApplicationReferenceDataSourceRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
@@ -23,9 +25,15 @@ public class AddApplicationReferenceDataSourceRequest {
     
     @JsonProperty("ReferenceDataSource")
     public ReferenceDataSource referenceDataSource;
+
     public AddApplicationReferenceDataSourceRequest withReferenceDataSource(ReferenceDataSource referenceDataSource) {
         this.referenceDataSource = referenceDataSource;
         return this;
     }
     
+    public AddApplicationReferenceDataSourceRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("CurrentApplicationVersionId") Long currentApplicationVersionId, @JsonProperty("ReferenceDataSource") ReferenceDataSource referenceDataSource) {
+        this.applicationName = applicationName;
+        this.currentApplicationVersionId = currentApplicationVersionId;
+        this.referenceDataSource = referenceDataSource;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class EnableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     public String destination;
+
     public EnableAwsNetworkPerformanceMetricSubscriptionRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -16,6 +17,7 @@ public class EnableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     
     public Boolean dryRun;
+
     public EnableAwsNetworkPerformanceMetricSubscriptionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class EnableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     
     public MetricTypeEnum metric;
+
     public EnableAwsNetworkPerformanceMetricSubscriptionRequest withMetric(MetricTypeEnum metric) {
         this.metric = metric;
         return this;
@@ -30,6 +33,7 @@ public class EnableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     
     public String source;
+
     public EnableAwsNetworkPerformanceMetricSubscriptionRequest withSource(String source) {
         this.source = source;
         return this;
@@ -37,9 +41,11 @@ public class EnableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     
     public StatisticTypeEnum statistic;
+
     public EnableAwsNetworkPerformanceMetricSubscriptionRequest withStatistic(StatisticTypeEnum statistic) {
         this.statistic = statistic;
         return this;
     }
     
+    public EnableAwsNetworkPerformanceMetricSubscriptionRequest(){}
 }

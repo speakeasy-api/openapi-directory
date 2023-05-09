@@ -18,6 +18,7 @@ public class GoogleAppsCardV1Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardActions")
     public GoogleAppsCardV1CardAction[] cardActions;
+
     public GoogleAppsCardV1Card withCardActions(GoogleAppsCardV1CardAction[] cardActions) {
         this.cardActions = cardActions;
         return this;
@@ -29,17 +30,19 @@ public class GoogleAppsCardV1Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayStyle")
     public GoogleAppsCardV1CardDisplayStyleEnum displayStyle;
+
     public GoogleAppsCardV1Card withDisplayStyle(GoogleAppsCardV1CardDisplayStyleEnum displayStyle) {
         this.displayStyle = displayStyle;
         return this;
     }
     
     /**
-     * A persistent (sticky) footer that that appears at the bottom of the card. Setting `fixedFooter` without specifying a `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card messages](https://developers.google.com/chat/api/guides/message-formats/cards).
+     * A persistent (sticky) footer that that appears at the bottom of the card. Setting `fixedFooter` without specifying a `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons and Chat apps. For Chat apps, you can use fixed footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card messages](https://developers.google.com/chat/api/guides/message-formats/cards).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedFooter")
     public GoogleAppsCardV1CardFixedFooter fixedFooter;
+
     public GoogleAppsCardV1Card withFixedFooter(GoogleAppsCardV1CardFixedFooter fixedFooter) {
         this.fixedFooter = fixedFooter;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public GoogleAppsCardV1CardHeader header;
+
     public GoogleAppsCardV1Card withHeader(GoogleAppsCardV1CardHeader header) {
         this.header = header;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsCardV1Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsCardV1Card withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsCardV1Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peekCardHeader")
     public GoogleAppsCardV1CardHeader peekCardHeader;
+
     public GoogleAppsCardV1Card withPeekCardHeader(GoogleAppsCardV1CardHeader peekCardHeader) {
         this.peekCardHeader = peekCardHeader;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAppsCardV1Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sections")
     public GoogleAppsCardV1Section[] sections;
+
     public GoogleAppsCardV1Card withSections(GoogleAppsCardV1Section[] sections) {
         this.sections = sections;
         return this;
     }
     
+    public GoogleAppsCardV1Card(){}
 }

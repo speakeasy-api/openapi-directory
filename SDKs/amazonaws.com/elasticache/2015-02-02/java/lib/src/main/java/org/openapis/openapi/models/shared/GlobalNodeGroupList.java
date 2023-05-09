@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GlobalNodeGroupList {
     
     public String globalNodeGroupId;
+
     public GlobalNodeGroupList withGlobalNodeGroupId(String globalNodeGroupId) {
         this.globalNodeGroupId = globalNodeGroupId;
         return this;
@@ -19,9 +20,11 @@ public class GlobalNodeGroupList {
     
     
     public String slots;
+
     public GlobalNodeGroupList withSlots(String slots) {
         this.slots = slots;
         return this;
     }
     
+    public GlobalNodeGroupList(){}
 }

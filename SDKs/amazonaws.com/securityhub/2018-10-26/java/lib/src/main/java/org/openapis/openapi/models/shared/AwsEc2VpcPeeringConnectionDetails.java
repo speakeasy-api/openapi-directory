@@ -15,6 +15,7 @@ public class AwsEc2VpcPeeringConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccepterVpcInfo")
     public AwsEc2VpcPeeringConnectionVpcInfoDetails accepterVpcInfo;
+
     public AwsEc2VpcPeeringConnectionDetails withAccepterVpcInfo(AwsEc2VpcPeeringConnectionVpcInfoDetails accepterVpcInfo) {
         this.accepterVpcInfo = accepterVpcInfo;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2VpcPeeringConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationTime")
     public String expirationTime;
+
     public AwsEc2VpcPeeringConnectionDetails withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2VpcPeeringConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterVpcInfo")
     public AwsEc2VpcPeeringConnectionVpcInfoDetails requesterVpcInfo;
+
     public AwsEc2VpcPeeringConnectionDetails withRequesterVpcInfo(AwsEc2VpcPeeringConnectionVpcInfoDetails requesterVpcInfo) {
         this.requesterVpcInfo = requesterVpcInfo;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2VpcPeeringConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AwsEc2VpcPeeringConnectionStatusDetails status;
+
     public AwsEc2VpcPeeringConnectionDetails withStatus(AwsEc2VpcPeeringConnectionStatusDetails status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class AwsEc2VpcPeeringConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcPeeringConnectionId")
     public String vpcPeeringConnectionId;
+
     public AwsEc2VpcPeeringConnectionDetails withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public AwsEc2VpcPeeringConnectionDetails(){}
 }

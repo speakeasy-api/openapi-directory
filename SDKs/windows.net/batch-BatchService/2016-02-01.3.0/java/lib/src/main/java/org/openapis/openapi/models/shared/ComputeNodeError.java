@@ -18,6 +18,7 @@ public class ComputeNodeError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ComputeNodeError withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ComputeNodeError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDetails")
     public NameValuePair[] errorDetails;
+
     public ComputeNodeError withErrorDetails(NameValuePair[] errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -40,9 +42,11 @@ public class ComputeNodeError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ComputeNodeError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ComputeNodeError(){}
 }

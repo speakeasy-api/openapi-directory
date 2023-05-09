@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendPipelineExecutionStepFailureRequest {
     @JsonProperty("CallbackToken")
     public String callbackToken;
+
     public SendPipelineExecutionStepFailureRequest withCallbackToken(String callbackToken) {
         this.callbackToken = callbackToken;
         return this;
@@ -19,6 +20,7 @@ public class SendPipelineExecutionStepFailureRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public SendPipelineExecutionStepFailureRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -27,9 +29,13 @@ public class SendPipelineExecutionStepFailureRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public SendPipelineExecutionStepFailureRequest withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
     }
     
+    public SendPipelineExecutionStepFailureRequest(@JsonProperty("CallbackToken") String callbackToken) {
+        this.callbackToken = callbackToken;
+  }
 }

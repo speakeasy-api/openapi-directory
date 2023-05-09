@@ -19,6 +19,7 @@ public class PayOrderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public PayOrderResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -35,9 +36,11 @@ public class PayOrderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Order order;
+
     public PayOrderResponse withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public PayOrderResponse(){}
 }

@@ -18,6 +18,7 @@ public class PatchJobInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptCount")
     public String attemptCount;
+
     public PatchJobInstanceDetails withAttemptCount(String attemptCount) {
         this.attemptCount = attemptCount;
         return this;
@@ -29,6 +30,7 @@ public class PatchJobInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public PatchJobInstanceDetails withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -40,6 +42,7 @@ public class PatchJobInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceSystemId")
     public String instanceSystemId;
+
     public PatchJobInstanceDetails withInstanceSystemId(String instanceSystemId) {
         this.instanceSystemId = instanceSystemId;
         return this;
@@ -51,6 +54,7 @@ public class PatchJobInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatchJobInstanceDetails withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class PatchJobInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public PatchJobInstanceDetailsStateEnum state;
+
     public PatchJobInstanceDetails withState(PatchJobInstanceDetailsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public PatchJobInstanceDetails(){}
 }

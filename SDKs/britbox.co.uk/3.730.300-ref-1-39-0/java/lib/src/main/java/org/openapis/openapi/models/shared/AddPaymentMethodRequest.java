@@ -23,6 +23,7 @@ public class AddPaymentMethodRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("makeDefault")
     public Boolean makeDefault;
+
     public AddPaymentMethodRequest withMakeDefault(Boolean makeDefault) {
         this.makeDefault = makeDefault;
         return this;
@@ -35,6 +36,7 @@ public class AddPaymentMethodRequest {
      */
     @JsonProperty("token")
     public String token;
+
     public AddPaymentMethodRequest withToken(String token) {
         this.token = token;
         return this;
@@ -45,9 +47,14 @@ public class AddPaymentMethodRequest {
      */
     @JsonProperty("type")
     public AddPaymentMethodRequestTypeEnum type;
+
     public AddPaymentMethodRequest withType(AddPaymentMethodRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AddPaymentMethodRequest(@JsonProperty("token") String token, @JsonProperty("type") AddPaymentMethodRequestTypeEnum type) {
+        this.token = token;
+        this.type = type;
+  }
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListRequest;
 import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -28,31 +27,32 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AdmobAccountsAdSourcesListRequest req = new AdmobAccountsAdSourcesListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
-                pageSize = 847252;
-                pageToken = "vel";
-                parent = "error";
+            AdmobAccountsAdSourcesListRequest req = new AdmobAccountsAdSourcesListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                pageSize = 423655L;
+                pageToken = "error";
                 prettyPrint = false;
                 quotaUser = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
             AdmobAccountsAdSourcesListResponse res = sdk.accounts.admobAccountsAdSourcesList(req);
 
-            if (res.listAdSourcesResponse.isPresent()) {
+            if (res.listAdSourcesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -60,15 +60,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `admobAccountsAdSourcesList` - List the ad sources.
-* `admobAccountsAdUnitsList` - List the ad units under the specified AdMob account.
-* `admobAccountsAppsList` - List the apps under the specified AdMob account.
-* `admobAccountsGet` - Gets information about the specified AdMob publisher account.
-* `admobAccountsList` - Lists the AdMob publisher account that was most recently signed in to from the AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
-* `admobAccountsMediationReportGenerate` - Generates an AdMob mediation report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
-* `admobAccountsNetworkReportGenerate` - Generates an AdMob Network report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
+* [admobAccountsAdSourcesList](docs/accounts/README.md#admobaccountsadsourceslist) - List the ad sources.
+* [admobAccountsAdUnitsList](docs/accounts/README.md#admobaccountsadunitslist) - List the ad units under the specified AdMob account.
+* [admobAccountsAppsList](docs/accounts/README.md#admobaccountsappslist) - List the apps under the specified AdMob account.
+* [admobAccountsGet](docs/accounts/README.md#admobaccountsget) - Gets information about the specified AdMob publisher account.
+* [admobAccountsList](docs/accounts/README.md#admobaccountslist) - Lists the AdMob publisher account that was most recently signed in to from the AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
+* [admobAccountsMediationReportGenerate](docs/accounts/README.md#admobaccountsmediationreportgenerate) - Generates an AdMob mediation report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
+* [admobAccountsNetworkReportGenerate](docs/accounts/README.md#admobaccountsnetworkreportgenerate) - Generates an AdMob Network report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
 <!-- End SDK Available Operations -->
 
 ### Maturity

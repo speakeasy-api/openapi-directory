@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetCapacityResponse {
     
     public String contentType;
+
     public DescribeFleetCapacityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetCapacityResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetCapacityOutput describeFleetCapacityOutput;
+
     public DescribeFleetCapacityResponse withDescribeFleetCapacityOutput(org.openapis.openapi.models.shared.DescribeFleetCapacityOutput describeFleetCapacityOutput) {
         this.describeFleetCapacityOutput = describeFleetCapacityOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetCapacityResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeFleetCapacityResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFleetCapacityResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeFleetCapacityResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFleetCapacityResponse {
      */
     
     public Object notFoundException;
+
     public DescribeFleetCapacityResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeFleetCapacityResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetCapacityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFleetCapacityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetCapacityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFleetCapacityResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeFleetCapacityResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeFleetCapacityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

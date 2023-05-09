@@ -15,9 +15,11 @@ public class GetServersId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public GetServersId200ApplicationJSONServer server;
+
     public GetServersId200ApplicationJSON withServer(GetServersId200ApplicationJSONServer server) {
         this.server = server;
         return this;
     }
     
+    public GetServersId200ApplicationJSON(){}
 }

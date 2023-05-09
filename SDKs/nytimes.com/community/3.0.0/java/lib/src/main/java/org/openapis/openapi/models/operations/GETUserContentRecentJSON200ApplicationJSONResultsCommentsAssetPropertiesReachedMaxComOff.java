@@ -12,6 +12,7 @@ public class GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPrope
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupID")
     public Long groupID;
+
     public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesReachedMaxComOff withGroupID(Long groupID) {
         this.groupID = groupID;
         return this;
@@ -20,9 +21,11 @@ public class GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPrope
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomyID")
     public Long taxonomyID;
+
     public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesReachedMaxComOff withTaxonomyID(Long taxonomyID) {
         this.taxonomyID = taxonomyID;
         return this;
     }
     
+    public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesReachedMaxComOff(){}
 }

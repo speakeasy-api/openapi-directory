@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePolicyVersionResponse {
     
     public String contentType;
+
     public CreatePolicyVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePolicyVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePolicyVersionResponse createPolicyVersionResponse;
+
     public CreatePolicyVersionResponse withCreatePolicyVersionResponse(org.openapis.openapi.models.shared.CreatePolicyVersionResponse createPolicyVersionResponse) {
         this.createPolicyVersionResponse = createPolicyVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreatePolicyVersionResponse {
      */
     
     public Object internalFailureException;
+
     public CreatePolicyVersionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePolicyVersionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreatePolicyVersionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePolicyVersionResponse {
      */
     
     public Object malformedPolicyException;
+
     public CreatePolicyVersionResponse withMalformedPolicyException(Object malformedPolicyException) {
         this.malformedPolicyException = malformedPolicyException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePolicyVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePolicyVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePolicyVersionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreatePolicyVersionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class CreatePolicyVersionResponse {
     
     
     public Integer statusCode;
+
     public CreatePolicyVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreatePolicyVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePolicyVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreatePolicyVersionResponse {
      */
     
     public Object throttlingException;
+
     public CreatePolicyVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,6 +114,7 @@ public class CreatePolicyVersionResponse {
      */
     
     public Object unauthorizedException;
+
     public CreatePolicyVersionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -113,9 +125,14 @@ public class CreatePolicyVersionResponse {
      */
     
     public Object versionsLimitExceededException;
+
     public CreatePolicyVersionResponse withVersionsLimitExceededException(Object versionsLimitExceededException) {
         this.versionsLimitExceededException = versionsLimitExceededException;
         return this;
     }
     
+    public CreatePolicyVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRecommendedIntentsResponse {
     
     public String contentType;
+
     public ListRecommendedIntentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRecommendedIntentsResponse {
      */
     
     public Object internalServerException;
+
     public ListRecommendedIntentsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListRecommendedIntentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRecommendedIntentsResponse listRecommendedIntentsResponse;
+
     public ListRecommendedIntentsResponse withListRecommendedIntentsResponse(org.openapis.openapi.models.shared.ListRecommendedIntentsResponse listRecommendedIntentsResponse) {
         this.listRecommendedIntentsResponse = listRecommendedIntentsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListRecommendedIntentsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRecommendedIntentsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListRecommendedIntentsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListRecommendedIntentsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class ListRecommendedIntentsResponse {
     
     
     public Integer statusCode;
+
     public ListRecommendedIntentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListRecommendedIntentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRecommendedIntentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListRecommendedIntentsResponse {
      */
     
     public Object throttlingException;
+
     public ListRecommendedIntentsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListRecommendedIntentsResponse {
      */
     
     public Object validationException;
+
     public ListRecommendedIntentsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRecommendedIntentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

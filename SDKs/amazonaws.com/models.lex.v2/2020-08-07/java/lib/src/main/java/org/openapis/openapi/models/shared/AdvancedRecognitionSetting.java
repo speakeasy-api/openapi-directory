@@ -15,9 +15,11 @@ public class AdvancedRecognitionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioRecognitionStrategy")
     public AudioRecognitionStrategyEnum audioRecognitionStrategy;
+
     public AdvancedRecognitionSetting withAudioRecognitionStrategy(AudioRecognitionStrategyEnum audioRecognitionStrategy) {
         this.audioRecognitionStrategy = audioRecognitionStrategy;
         return this;
     }
     
+    public AdvancedRecognitionSetting(){}
 }

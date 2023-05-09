@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTrainingJobResponse {
     
     public String contentType;
+
     public DescribeTrainingJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTrainingJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTrainingJobResponse describeTrainingJobResponse;
+
     public DescribeTrainingJobResponse withDescribeTrainingJobResponse(org.openapis.openapi.models.shared.DescribeTrainingJobResponse describeTrainingJobResponse) {
         this.describeTrainingJobResponse = describeTrainingJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTrainingJobResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeTrainingJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribeTrainingJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeTrainingJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeTrainingJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTrainingJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTrainingJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConnectorDefinitionVersionRequest {
@@ -12,6 +13,7 @@ public class GetConnectorDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectorDefinitionId")
     public String connectorDefinitionId;
+
     public GetConnectorDefinitionVersionRequest withConnectorDefinitionId(String connectorDefinitionId) {
         this.connectorDefinitionId = connectorDefinitionId;
         return this;
@@ -22,6 +24,7 @@ public class GetConnectorDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectorDefinitionVersionId")
     public String connectorDefinitionVersionId;
+
     public GetConnectorDefinitionVersionRequest withConnectorDefinitionVersionId(String connectorDefinitionVersionId) {
         this.connectorDefinitionVersionId = connectorDefinitionVersionId;
         return this;
@@ -32,6 +35,7 @@ public class GetConnectorDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GetConnectorDefinitionVersionRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +43,7 @@ public class GetConnectorDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetConnectorDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class GetConnectorDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetConnectorDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class GetConnectorDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetConnectorDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class GetConnectorDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetConnectorDefinitionVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class GetConnectorDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetConnectorDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class GetConnectorDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetConnectorDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,14 @@ public class GetConnectorDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetConnectorDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GetConnectorDefinitionVersionRequest(@JsonProperty("ConnectorDefinitionId") String connectorDefinitionId, @JsonProperty("ConnectorDefinitionVersionId") String connectorDefinitionVersionId) {
+        this.connectorDefinitionId = connectorDefinitionId;
+        this.connectorDefinitionVersionId = connectorDefinitionVersionId;
+  }
 }

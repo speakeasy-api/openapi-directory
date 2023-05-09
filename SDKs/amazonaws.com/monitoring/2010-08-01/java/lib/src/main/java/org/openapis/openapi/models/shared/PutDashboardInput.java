@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutDashboardInput {
     
     public String dashboardBody;
+
     public PutDashboardInput withDashboardBody(String dashboardBody) {
         this.dashboardBody = dashboardBody;
         return this;
@@ -16,9 +17,14 @@ public class PutDashboardInput {
     
     
     public String dashboardName;
+
     public PutDashboardInput withDashboardName(String dashboardName) {
         this.dashboardName = dashboardName;
         return this;
     }
     
+    public PutDashboardInput(@JsonProperty("DashboardBody") String dashboardBody, @JsonProperty("DashboardName") String dashboardName) {
+        this.dashboardBody = dashboardBody;
+        this.dashboardName = dashboardName;
+  }
 }

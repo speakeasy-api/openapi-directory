@@ -15,6 +15,7 @@ public class BulkDeploymentMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidInputRecords")
     public Long invalidInputRecords;
+
     public BulkDeploymentMetrics withInvalidInputRecords(Long invalidInputRecords) {
         this.invalidInputRecords = invalidInputRecords;
         return this;
@@ -23,6 +24,7 @@ public class BulkDeploymentMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordsProcessed")
     public Long recordsProcessed;
+
     public BulkDeploymentMetrics withRecordsProcessed(Long recordsProcessed) {
         this.recordsProcessed = recordsProcessed;
         return this;
@@ -31,9 +33,11 @@ public class BulkDeploymentMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryAttempts")
     public Long retryAttempts;
+
     public BulkDeploymentMetrics withRetryAttempts(Long retryAttempts) {
         this.retryAttempts = retryAttempts;
         return this;
     }
     
+    public BulkDeploymentMetrics(){}
 }

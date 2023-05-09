@@ -15,6 +15,7 @@ public class SpecTypeVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_type_id")
     public Long specTypeId;
+
     public SpecTypeVO withSpecTypeId(Long specTypeId) {
         this.specTypeId = specTypeId;
         return this;
@@ -23,9 +24,11 @@ public class SpecTypeVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_type_name")
     public String specTypeName;
+
     public SpecTypeVO withSpecTypeName(String specTypeName) {
         this.specTypeName = specTypeName;
         return this;
     }
     
+    public SpecTypeVO(){}
 }

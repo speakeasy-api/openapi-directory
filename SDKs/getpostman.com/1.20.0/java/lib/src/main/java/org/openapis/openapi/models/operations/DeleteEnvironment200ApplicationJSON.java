@@ -15,9 +15,11 @@ public class DeleteEnvironment200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public DeleteEnvironment200ApplicationJSONEnvironment environment;
+
     public DeleteEnvironment200ApplicationJSON withEnvironment(DeleteEnvironment200ApplicationJSONEnvironment environment) {
         this.environment = environment;
         return this;
     }
     
+    public DeleteEnvironment200ApplicationJSON(){}
 }

@@ -15,9 +15,13 @@ public class StoresPatchRequestBody {
      */
     @JsonProperty("service_connection_id")
     public String serviceConnectionId;
+
     public StoresPatchRequestBody withServiceConnectionId(String serviceConnectionId) {
         this.serviceConnectionId = serviceConnectionId;
         return this;
     }
     
+    public StoresPatchRequestBody(@JsonProperty("service_connection_id") String serviceConnectionId) {
+        this.serviceConnectionId = serviceConnectionId;
+  }
 }

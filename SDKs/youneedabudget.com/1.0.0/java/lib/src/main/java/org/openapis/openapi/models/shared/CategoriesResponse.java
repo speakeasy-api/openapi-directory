@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CategoriesResponse {
     @JsonProperty("data")
     public CategoriesResponseData data;
+
     public CategoriesResponse withData(CategoriesResponseData data) {
         this.data = data;
         return this;
     }
     
+    public CategoriesResponse(@JsonProperty("data") CategoriesResponseData data) {
+        this.data = data;
+  }
 }

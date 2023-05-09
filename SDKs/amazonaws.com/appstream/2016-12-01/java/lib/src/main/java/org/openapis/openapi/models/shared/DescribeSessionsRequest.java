@@ -12,6 +12,7 @@ public class DescribeSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public DescribeSessionsRequest withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSessionsRequest {
     
     @JsonProperty("FleetName")
     public String fleetName;
+
     public DescribeSessionsRequest withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
@@ -27,6 +29,7 @@ public class DescribeSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeSessionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +38,7 @@ public class DescribeSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSessionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,6 +46,7 @@ public class DescribeSessionsRequest {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public DescribeSessionsRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -50,9 +55,14 @@ public class DescribeSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public DescribeSessionsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DescribeSessionsRequest(@JsonProperty("FleetName") String fleetName, @JsonProperty("StackName") String stackName) {
+        this.fleetName = fleetName;
+        this.stackName = stackName;
+  }
 }

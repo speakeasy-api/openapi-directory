@@ -18,6 +18,7 @@ public class SetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetLabelsRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class SetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public SetLabelsRequest withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -40,6 +42,7 @@ public class SetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetLabelsRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetLabelsRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,6 +66,7 @@ public class SetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLabels")
     public java.util.Map<String, String> resourceLabels;
+
     public SetLabelsRequest withResourceLabels(java.util.Map<String, String> resourceLabels) {
         this.resourceLabels = resourceLabels;
         return this;
@@ -73,9 +78,11 @@ public class SetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetLabelsRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetLabelsRequest(){}
 }

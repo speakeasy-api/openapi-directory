@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SelectAggregateResourceConfigResponse {
     
     public String contentType;
+
     public SelectAggregateResourceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SelectAggregateResourceConfigResponse {
      */
     
     public Object invalidExpressionException;
+
     public SelectAggregateResourceConfigResponse withInvalidExpressionException(Object invalidExpressionException) {
         this.invalidExpressionException = invalidExpressionException;
         return this;
@@ -29,6 +32,7 @@ public class SelectAggregateResourceConfigResponse {
      */
     
     public Object invalidLimitException;
+
     public SelectAggregateResourceConfigResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class SelectAggregateResourceConfigResponse {
      */
     
     public Object invalidNextTokenException;
+
     public SelectAggregateResourceConfigResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class SelectAggregateResourceConfigResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public SelectAggregateResourceConfigResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -59,6 +65,7 @@ public class SelectAggregateResourceConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.SelectAggregateResourceConfigResponse selectAggregateResourceConfigResponse;
+
     public SelectAggregateResourceConfigResponse withSelectAggregateResourceConfigResponse(org.openapis.openapi.models.shared.SelectAggregateResourceConfigResponse selectAggregateResourceConfigResponse) {
         this.selectAggregateResourceConfigResponse = selectAggregateResourceConfigResponse;
         return this;
@@ -66,6 +73,7 @@ public class SelectAggregateResourceConfigResponse {
     
     
     public Integer statusCode;
+
     public SelectAggregateResourceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class SelectAggregateResourceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SelectAggregateResourceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SelectAggregateResourceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

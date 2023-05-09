@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateAccountsResponse {
@@ -12,6 +13,7 @@ public class AssociateAccountsResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateAccountsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateAccountsOutput associateAccountsOutput;
+
     public AssociateAccountsResponse withAssociateAccountsOutput(org.openapis.openapi.models.shared.AssociateAccountsOutput associateAccountsOutput) {
         this.associateAccountsOutput = associateAccountsOutput;
         return this;
@@ -32,6 +35,7 @@ public class AssociateAccountsResponse {
      */
     
     public Object conflictException;
+
     public AssociateAccountsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateAccountsResponse {
     
     
     public String contentType;
+
     public AssociateAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateAccountsResponse {
      */
     
     public Object internalServerException;
+
     public AssociateAccountsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateAccountsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateAccountsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateAccountsResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public AssociateAccountsResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateAccountsResponse {
     
     
     public Integer statusCode;
+
     public AssociateAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociateAccountsResponse {
      */
     
     public Object throttlingException;
+
     public AssociateAccountsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AssociateAccountsResponse {
      */
     
     public Object validationException;
+
     public AssociateAccountsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

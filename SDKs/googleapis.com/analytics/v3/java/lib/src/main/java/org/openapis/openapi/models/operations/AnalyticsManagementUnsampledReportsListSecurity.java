@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsManagementUnsampledReportsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementUnsampledReportsListSecurityOption1 option1;
+
     public AnalyticsManagementUnsampledReportsListSecurity withOption1(AnalyticsManagementUnsampledReportsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class AnalyticsManagementUnsampledReportsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementUnsampledReportsListSecurityOption2 option2;
+
     public AnalyticsManagementUnsampledReportsListSecurity withOption2(AnalyticsManagementUnsampledReportsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class AnalyticsManagementUnsampledReportsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementUnsampledReportsListSecurityOption3 option3;
+
     public AnalyticsManagementUnsampledReportsListSecurity withOption3(AnalyticsManagementUnsampledReportsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public AnalyticsManagementUnsampledReportsListSecurity(){}
 }

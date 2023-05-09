@@ -12,6 +12,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public String created;
+
     public School withCreated(String created) {
         this.created = created;
         return this;
@@ -20,6 +21,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district")
     public String district;
+
     public School withDistrict(String district) {
         this.district = district;
         return this;
@@ -28,6 +30,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high_grade")
     public SchoolHighGradeEnum highGrade;
+
     public School withHighGrade(SchoolHighGradeEnum highGrade) {
         this.highGrade = highGrade;
         return this;
@@ -36,6 +39,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public School withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_modified")
     public String lastModified;
+
     public School withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -52,6 +57,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public School withLocation(Location location) {
         this.location = location;
         return this;
@@ -60,6 +66,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("low_grade")
     public SchoolLowGradeEnum lowGrade;
+
     public School withLowGrade(SchoolLowGradeEnum lowGrade) {
         this.lowGrade = lowGrade;
         return this;
@@ -68,6 +75,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdr_number")
     public String mdrNumber;
+
     public School withMdrNumber(String mdrNumber) {
         this.mdrNumber = mdrNumber;
         return this;
@@ -76,6 +84,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public School withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nces_id")
     public String ncesId;
+
     public School withNcesId(String ncesId) {
         this.ncesId = ncesId;
         return this;
@@ -92,6 +102,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public School withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -100,6 +111,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public Principal principal;
+
     public School withPrincipal(Principal principal) {
         this.principal = principal;
         return this;
@@ -108,6 +120,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("school_number")
     public String schoolNumber;
+
     public School withSchoolNumber(String schoolNumber) {
         this.schoolNumber = schoolNumber;
         return this;
@@ -116,6 +129,7 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sis_id")
     public String sisId;
+
     public School withSisId(String sisId) {
         this.sisId = sisId;
         return this;
@@ -124,9 +138,11 @@ public class School {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_id")
     public String stateId;
+
     public School withStateId(String stateId) {
         this.stateId = stateId;
         return this;
     }
     
+    public School(){}
 }

@@ -18,9 +18,11 @@ public class QueryContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamPolicyAnalysisQuery")
     public IamPolicyAnalysisQuery iamPolicyAnalysisQuery;
+
     public QueryContent withIamPolicyAnalysisQuery(IamPolicyAnalysisQuery iamPolicyAnalysisQuery) {
         this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
         return this;
     }
     
+    public QueryContent(){}
 }

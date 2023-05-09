@@ -15,6 +15,7 @@ public class FunctionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("implementedBy")
     public DataConnector implementedBy;
+
     public FunctionRequest withImplementedBy(DataConnector implementedBy) {
         this.implementedBy = implementedBy;
         return this;
@@ -23,6 +24,7 @@ public class FunctionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredProperties")
     public String[] requiredProperties;
+
     public FunctionRequest withRequiredProperties(String[] requiredProperties) {
         this.requiredProperties = requiredProperties;
         return this;
@@ -31,9 +33,11 @@ public class FunctionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public ScopeEnum scope;
+
     public FunctionRequest withScope(ScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public FunctionRequest(){}
 }

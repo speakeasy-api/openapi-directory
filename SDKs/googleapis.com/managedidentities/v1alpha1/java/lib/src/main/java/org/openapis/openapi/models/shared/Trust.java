@@ -18,6 +18,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Trust withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastKnownTrustConnectedHeartbeatTime")
     public String lastKnownTrustConnectedHeartbeatTime;
+
     public Trust withLastKnownTrustConnectedHeartbeatTime(String lastKnownTrustConnectedHeartbeatTime) {
         this.lastKnownTrustConnectedHeartbeatTime = lastKnownTrustConnectedHeartbeatTime;
         return this;
@@ -40,6 +42,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectiveAuthentication")
     public Boolean selectiveAuthentication;
+
     public Trust withSelectiveAuthentication(Boolean selectiveAuthentication) {
         this.selectiveAuthentication = selectiveAuthentication;
         return this;
@@ -51,6 +54,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public TrustStateEnum state;
+
     public Trust withState(TrustStateEnum state) {
         this.state = state;
         return this;
@@ -62,6 +66,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDescription")
     public String stateDescription;
+
     public Trust withStateDescription(String stateDescription) {
         this.stateDescription = stateDescription;
         return this;
@@ -73,6 +78,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDnsIpAddresses")
     public String[] targetDnsIpAddresses;
+
     public Trust withTargetDnsIpAddresses(String[] targetDnsIpAddresses) {
         this.targetDnsIpAddresses = targetDnsIpAddresses;
         return this;
@@ -84,6 +90,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDomainName")
     public String targetDomainName;
+
     public Trust withTargetDomainName(String targetDomainName) {
         this.targetDomainName = targetDomainName;
         return this;
@@ -95,6 +102,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustDirection")
     public TrustTrustDirectionEnum trustDirection;
+
     public Trust withTrustDirection(TrustTrustDirectionEnum trustDirection) {
         this.trustDirection = trustDirection;
         return this;
@@ -106,6 +114,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustHandshakeSecret")
     public String trustHandshakeSecret;
+
     public Trust withTrustHandshakeSecret(String trustHandshakeSecret) {
         this.trustHandshakeSecret = trustHandshakeSecret;
         return this;
@@ -117,6 +126,7 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustType")
     public TrustTrustTypeEnum trustType;
+
     public Trust withTrustType(TrustTrustTypeEnum trustType) {
         this.trustType = trustType;
         return this;
@@ -128,9 +138,11 @@ public class Trust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Trust withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Trust(){}
 }

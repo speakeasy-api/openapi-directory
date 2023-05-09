@@ -15,9 +15,11 @@ public class DetachObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetachedObjectIdentifier")
     public String detachedObjectIdentifier;
+
     public DetachObjectResponse withDetachedObjectIdentifier(String detachedObjectIdentifier) {
         this.detachedObjectIdentifier = detachedObjectIdentifier;
         return this;
     }
     
+    public DetachObjectResponse(){}
 }

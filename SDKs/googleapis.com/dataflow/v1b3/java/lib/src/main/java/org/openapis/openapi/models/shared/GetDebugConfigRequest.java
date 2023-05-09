@@ -18,6 +18,7 @@ public class GetDebugConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentId")
     public String componentId;
+
     public GetDebugConfigRequest withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -29,6 +30,7 @@ public class GetDebugConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GetDebugConfigRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class GetDebugConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerId")
     public String workerId;
+
     public GetDebugConfigRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public GetDebugConfigRequest(){}
 }

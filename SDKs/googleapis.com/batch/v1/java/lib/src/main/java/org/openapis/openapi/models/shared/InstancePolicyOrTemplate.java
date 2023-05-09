@@ -18,6 +18,7 @@ public class InstancePolicyOrTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installGpuDrivers")
     public Boolean installGpuDrivers;
+
     public InstancePolicyOrTemplate withInstallGpuDrivers(Boolean installGpuDrivers) {
         this.installGpuDrivers = installGpuDrivers;
         return this;
@@ -29,6 +30,7 @@ public class InstancePolicyOrTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTemplate")
     public String instanceTemplate;
+
     public InstancePolicyOrTemplate withInstanceTemplate(String instanceTemplate) {
         this.instanceTemplate = instanceTemplate;
         return this;
@@ -40,9 +42,11 @@ public class InstancePolicyOrTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public InstancePolicy policy;
+
     public InstancePolicyOrTemplate withPolicy(InstancePolicy policy) {
         this.policy = policy;
         return this;
     }
     
+    public InstancePolicyOrTemplate(){}
 }

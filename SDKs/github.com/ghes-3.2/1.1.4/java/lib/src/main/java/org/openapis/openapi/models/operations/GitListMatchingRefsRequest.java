@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitListMatchingRefsRequest {
@@ -12,6 +13,7 @@ public class GitListMatchingRefsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public GitListMatchingRefsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class GitListMatchingRefsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
     public String ref;
+
     public GitListMatchingRefsRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -32,9 +35,15 @@ public class GitListMatchingRefsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public GitListMatchingRefsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public GitListMatchingRefsRequest(@JsonProperty("owner") String owner, @JsonProperty("ref") String ref, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.ref = ref;
+        this.repo = repo;
+  }
 }

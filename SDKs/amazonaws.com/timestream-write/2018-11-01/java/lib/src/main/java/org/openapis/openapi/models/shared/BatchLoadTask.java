@@ -22,6 +22,7 @@ public class BatchLoadTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public BatchLoadTask withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class BatchLoadTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public BatchLoadTask withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -40,6 +42,7 @@ public class BatchLoadTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public BatchLoadTask withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -50,6 +53,7 @@ public class BatchLoadTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ResumableUntil")
     public OffsetDateTime resumableUntil;
+
     public BatchLoadTask withResumableUntil(OffsetDateTime resumableUntil) {
         this.resumableUntil = resumableUntil;
         return this;
@@ -58,6 +62,7 @@ public class BatchLoadTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public BatchLoadTask withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -66,6 +71,7 @@ public class BatchLoadTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskId")
     public String taskId;
+
     public BatchLoadTask withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -74,9 +80,11 @@ public class BatchLoadTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskStatus")
     public BatchLoadStatusEnum taskStatus;
+
     public BatchLoadTask withTaskStatus(BatchLoadStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
     }
     
+    public BatchLoadTask(){}
 }

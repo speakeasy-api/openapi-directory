@@ -18,6 +18,7 @@ public class DropRowRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteAllDataFromTable")
     public Boolean deleteAllDataFromTable;
+
     public DropRowRangeRequest withDeleteAllDataFromTable(Boolean deleteAllDataFromTable) {
         this.deleteAllDataFromTable = deleteAllDataFromTable;
         return this;
@@ -29,9 +30,11 @@ public class DropRowRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowKeyPrefix")
     public String rowKeyPrefix;
+
     public DropRowRangeRequest withRowKeyPrefix(String rowKeyPrefix) {
         this.rowKeyPrefix = rowKeyPrefix;
         return this;
     }
     
+    public DropRowRangeRequest(){}
 }

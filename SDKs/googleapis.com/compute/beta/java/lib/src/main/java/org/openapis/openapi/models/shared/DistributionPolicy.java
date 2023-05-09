@@ -15,6 +15,7 @@ public class DistributionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetShape")
     public DistributionPolicyTargetShapeEnum targetShape;
+
     public DistributionPolicy withTargetShape(DistributionPolicyTargetShapeEnum targetShape) {
         this.targetShape = targetShape;
         return this;
@@ -26,9 +27,11 @@ public class DistributionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zones")
     public DistributionPolicyZoneConfiguration[] zones;
+
     public DistributionPolicy withZones(DistributionPolicyZoneConfiguration[] zones) {
         this.zones = zones;
         return this;
     }
     
+    public DistributionPolicy(){}
 }

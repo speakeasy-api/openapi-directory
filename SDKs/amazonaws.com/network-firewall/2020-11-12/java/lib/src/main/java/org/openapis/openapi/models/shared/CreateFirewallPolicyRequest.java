@@ -12,6 +12,7 @@ public class CreateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateFirewallPolicyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public CreateFirewallPolicyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -28,6 +30,7 @@ public class CreateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public CreateFirewallPolicyRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -35,6 +38,7 @@ public class CreateFirewallPolicyRequest {
     
     @JsonProperty("FirewallPolicy")
     public FirewallPolicy firewallPolicy;
+
     public CreateFirewallPolicyRequest withFirewallPolicy(FirewallPolicy firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -42,6 +46,7 @@ public class CreateFirewallPolicyRequest {
     
     @JsonProperty("FirewallPolicyName")
     public String firewallPolicyName;
+
     public CreateFirewallPolicyRequest withFirewallPolicyName(String firewallPolicyName) {
         this.firewallPolicyName = firewallPolicyName;
         return this;
@@ -50,9 +55,14 @@ public class CreateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFirewallPolicyRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFirewallPolicyRequest(@JsonProperty("FirewallPolicy") FirewallPolicy firewallPolicy, @JsonProperty("FirewallPolicyName") String firewallPolicyName) {
+        this.firewallPolicy = firewallPolicy;
+        this.firewallPolicyName = firewallPolicyName;
+  }
 }

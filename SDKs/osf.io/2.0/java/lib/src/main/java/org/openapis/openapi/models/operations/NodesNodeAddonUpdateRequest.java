@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesNodeAddonUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public NodesNodeAddonUpdateRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class NodesNodeAddonUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
     public String nodeId;
+
     public NodesNodeAddonUpdateRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -29,9 +32,15 @@ public class NodesNodeAddonUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
     public String provider;
+
     public NodesNodeAddonUpdateRequest withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public NodesNodeAddonUpdateRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("node_id") String nodeId, @JsonProperty("provider") String provider) {
+        this.requestBody = requestBody;
+        this.nodeId = nodeId;
+        this.provider = provider;
+  }
 }

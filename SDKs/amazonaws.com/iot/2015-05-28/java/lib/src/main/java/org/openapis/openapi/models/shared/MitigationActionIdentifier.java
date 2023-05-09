@@ -20,6 +20,7 @@ public class MitigationActionIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionArn")
     public String actionArn;
+
     public MitigationActionIdentifier withActionArn(String actionArn) {
         this.actionArn = actionArn;
         return this;
@@ -28,6 +29,7 @@ public class MitigationActionIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public String actionName;
+
     public MitigationActionIdentifier withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -38,9 +40,11 @@ public class MitigationActionIdentifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public MitigationActionIdentifier withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
     }
     
+    public MitigationActionIdentifier(){}
 }

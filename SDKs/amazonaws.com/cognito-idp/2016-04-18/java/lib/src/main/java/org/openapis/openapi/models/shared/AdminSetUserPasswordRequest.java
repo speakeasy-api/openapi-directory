@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdminSetUserPasswordRequest {
     @JsonProperty("Password")
     public String password;
+
     public AdminSetUserPasswordRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -19,6 +20,7 @@ public class AdminSetUserPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permanent")
     public Boolean permanent;
+
     public AdminSetUserPasswordRequest withPermanent(Boolean permanent) {
         this.permanent = permanent;
         return this;
@@ -26,6 +28,7 @@ public class AdminSetUserPasswordRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminSetUserPasswordRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -33,9 +36,14 @@ public class AdminSetUserPasswordRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminSetUserPasswordRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminSetUserPasswordRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Password") String password) {
+        this.userPoolId = userPoolId;
+        this.password = password;
+  }
 }

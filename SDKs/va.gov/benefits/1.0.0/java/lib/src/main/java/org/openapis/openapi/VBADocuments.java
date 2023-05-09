@@ -56,7 +56,7 @@ public class VBADocuments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse res = new org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse() {{
+        org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse res = new org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse(contentType, httpRes.statusCode()) {{
             getBenefitsDocumentUploadDownload200ApplicationZipBinaryString = null;
             getBenefitsDocumentUploadDownload401ApplicationJSONObject = null;
             getBenefitsDocumentUploadDownload403ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class VBADocuments {
             getBenefitsDocumentUploadDownload429ApplicationJSONObject = null;
             getBenefitsDocumentUploadDownload500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,7 +133,7 @@ public class VBADocuments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusResponse res = new org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusResponse() {{
+        org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusResponse res = new org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusResponse(contentType, httpRes.statusCode()) {{
             getBenefitsDocumentUploadStatus200ApplicationJSONObject = null;
             getBenefitsDocumentUploadStatus401ApplicationJSONObject = null;
             getBenefitsDocumentUploadStatus403ApplicationJSONObject = null;
@@ -143,8 +141,6 @@ public class VBADocuments {
             getBenefitsDocumentUploadStatus429ApplicationJSONObject = null;
             getBenefitsDocumentUploadStatus500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,7 +216,7 @@ public class VBADocuments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusReportResponse res = new org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusReportResponse() {{
+        org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusReportResponse res = new org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusReportResponse(contentType, httpRes.statusCode()) {{
             getBenefitsDocumentUploadStatusReport200ApplicationJSONObject = null;
             getBenefitsDocumentUploadStatusReport401ApplicationJSONObject = null;
             getBenefitsDocumentUploadStatusReport403ApplicationJSONObject = null;
@@ -228,8 +224,6 @@ public class VBADocuments {
             getBenefitsDocumentUploadStatusReport429ApplicationJSONObject = null;
             getBenefitsDocumentUploadStatusReport500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,10 +276,11 @@ public class VBADocuments {
 
     /**
      * Get a location for subsequent document upload PUT request
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBenefitsDocumentUploadResponse postBenefitsDocumentUpload() throws Exception {
+    public org.openapis.openapi.models.operations.PostBenefitsDocumentUploadResponse postBenefitsDocumentUpload(org.openapis.openapi.models.operations.PostBenefitsDocumentUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads");
         
@@ -294,12 +289,13 @@ public class VBADocuments {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBenefitsDocumentUploadResponse res = new org.openapis.openapi.models.operations.PostBenefitsDocumentUploadResponse() {{
+        org.openapis.openapi.models.operations.PostBenefitsDocumentUploadResponse res = new org.openapis.openapi.models.operations.PostBenefitsDocumentUploadResponse(contentType, httpRes.statusCode()) {{
             postBenefitsDocumentUpload202ApplicationJSONObject = null;
             postBenefitsDocumentUpload401ApplicationJSONObject = null;
             postBenefitsDocumentUpload403ApplicationJSONObject = null;
@@ -307,8 +303,6 @@ public class VBADocuments {
             postBenefitsDocumentUpload429ApplicationJSONObject = null;
             postBenefitsDocumentUpload500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -395,7 +389,7 @@ public class VBADocuments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBenefitsDocumentUploadValidateDocumentResponse res = new org.openapis.openapi.models.operations.PostBenefitsDocumentUploadValidateDocumentResponse() {{
+        org.openapis.openapi.models.operations.PostBenefitsDocumentUploadValidateDocumentResponse res = new org.openapis.openapi.models.operations.PostBenefitsDocumentUploadValidateDocumentResponse(contentType, httpRes.statusCode()) {{
             postBenefitsDocumentUploadValidateDocument200ApplicationJSONObject = null;
             postBenefitsDocumentUploadValidateDocument401ApplicationJSONObject = null;
             postBenefitsDocumentUploadValidateDocument403ApplicationJSONObject = null;
@@ -403,8 +397,6 @@ public class VBADocuments {
             postBenefitsDocumentUploadValidateDocument429ApplicationJSONObject = null;
             postBenefitsDocumentUploadValidateDocument500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,15 +524,13 @@ public class VBADocuments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutBenefitsDocumentUploadResponse res = new org.openapis.openapi.models.operations.PutBenefitsDocumentUploadResponse() {{
+        org.openapis.openapi.models.operations.PutBenefitsDocumentUploadResponse res = new org.openapis.openapi.models.operations.PutBenefitsDocumentUploadResponse(contentType, httpRes.statusCode()) {{
             putBenefitsDocumentUpload401ApplicationJSONObject = null;
             body = null;
             putBenefitsDocumentUpload422ApplicationJSONObject = null;
             putBenefitsDocumentUpload429ApplicationJSONObject = null;
             putBenefitsDocumentUpload500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

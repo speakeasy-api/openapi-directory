@@ -58,10 +58,8 @@ public class BaseConversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersBaseResponse res = new org.openapis.openapi.models.operations.GetNumbersBaseResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersBaseResponse res = new org.openapis.openapi.models.operations.GetNumbersBaseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -98,10 +96,8 @@ public class BaseConversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersBaseBinaryResponse res = new org.openapis.openapi.models.operations.GetNumbersBaseBinaryResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersBaseBinaryResponse res = new org.openapis.openapi.models.operations.GetNumbersBaseBinaryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -138,10 +134,8 @@ public class BaseConversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersBaseHexResponse res = new org.openapis.openapi.models.operations.GetNumbersBaseHexResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersBaseHexResponse res = new org.openapis.openapi.models.operations.GetNumbersBaseHexResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -178,10 +172,8 @@ public class BaseConversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersBaseOctalResponse res = new org.openapis.openapi.models.operations.GetNumbersBaseOctalResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersBaseOctalResponse res = new org.openapis.openapi.models.operations.GetNumbersBaseOctalResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1CrossRegionalSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomy")
     public String taxonomy;
+
     public GoogleCloudDatacatalogV1CrossRegionalSource withTaxonomy(String taxonomy) {
         this.taxonomy = taxonomy;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1CrossRegionalSource(){}
 }

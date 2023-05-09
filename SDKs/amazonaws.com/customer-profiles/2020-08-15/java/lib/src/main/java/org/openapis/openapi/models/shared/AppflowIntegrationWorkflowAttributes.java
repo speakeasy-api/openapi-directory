@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppflowIntegrationWorkflowAttributes {
     @JsonProperty("ConnectorProfileName")
     public String connectorProfileName;
+
     public AppflowIntegrationWorkflowAttributes withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -22,6 +23,7 @@ public class AppflowIntegrationWorkflowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AppflowIntegrationWorkflowAttributes withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -29,9 +31,14 @@ public class AppflowIntegrationWorkflowAttributes {
     
     @JsonProperty("SourceConnectorType")
     public SourceConnectorTypeEnum sourceConnectorType;
+
     public AppflowIntegrationWorkflowAttributes withSourceConnectorType(SourceConnectorTypeEnum sourceConnectorType) {
         this.sourceConnectorType = sourceConnectorType;
         return this;
     }
     
+    public AppflowIntegrationWorkflowAttributes(@JsonProperty("ConnectorProfileName") String connectorProfileName, @JsonProperty("SourceConnectorType") SourceConnectorTypeEnum sourceConnectorType) {
+        this.connectorProfileName = connectorProfileName;
+        this.sourceConnectorType = sourceConnectorType;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CacheClusterList {
     
     public String arn;
+
     public CacheClusterList withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class CacheClusterList {
     
     
     public Boolean atRestEncryptionEnabled;
+
     public CacheClusterList withAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
         return this;
@@ -26,6 +28,7 @@ public class CacheClusterList {
     
     
     public Boolean authTokenEnabled;
+
     public CacheClusterList withAuthTokenEnabled(Boolean authTokenEnabled) {
         this.authTokenEnabled = authTokenEnabled;
         return this;
@@ -33,6 +36,7 @@ public class CacheClusterList {
     
     
     public OffsetDateTime authTokenLastModifiedDate;
+
     public CacheClusterList withAuthTokenLastModifiedDate(OffsetDateTime authTokenLastModifiedDate) {
         this.authTokenLastModifiedDate = authTokenLastModifiedDate;
         return this;
@@ -40,6 +44,7 @@ public class CacheClusterList {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public CacheClusterList withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -47,6 +52,7 @@ public class CacheClusterList {
     
     
     public OffsetDateTime cacheClusterCreateTime;
+
     public CacheClusterList withCacheClusterCreateTime(OffsetDateTime cacheClusterCreateTime) {
         this.cacheClusterCreateTime = cacheClusterCreateTime;
         return this;
@@ -54,6 +60,7 @@ public class CacheClusterList {
     
     
     public String cacheClusterId;
+
     public CacheClusterList withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -61,6 +68,7 @@ public class CacheClusterList {
     
     
     public String cacheClusterStatus;
+
     public CacheClusterList withCacheClusterStatus(String cacheClusterStatus) {
         this.cacheClusterStatus = cacheClusterStatus;
         return this;
@@ -68,6 +76,7 @@ public class CacheClusterList {
     
     
     public String cacheNodeType;
+
     public CacheClusterList withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -75,6 +84,7 @@ public class CacheClusterList {
     
     
     public CacheNodeList[] cacheNodes;
+
     public CacheClusterList withCacheNodes(CacheNodeList[] cacheNodes) {
         this.cacheNodes = cacheNodes;
         return this;
@@ -82,6 +92,7 @@ public class CacheClusterList {
     
     
     public CacheParameterGroupStatus cacheParameterGroup;
+
     public CacheClusterList withCacheParameterGroup(CacheParameterGroupStatus cacheParameterGroup) {
         this.cacheParameterGroup = cacheParameterGroup;
         return this;
@@ -89,6 +100,7 @@ public class CacheClusterList {
     
     
     public CacheSecurityGroupMembershipList[] cacheSecurityGroups;
+
     public CacheClusterList withCacheSecurityGroups(CacheSecurityGroupMembershipList[] cacheSecurityGroups) {
         this.cacheSecurityGroups = cacheSecurityGroups;
         return this;
@@ -96,6 +108,7 @@ public class CacheClusterList {
     
     
     public String cacheSubnetGroupName;
+
     public CacheClusterList withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -103,6 +116,7 @@ public class CacheClusterList {
     
     
     public String clientDownloadLandingPage;
+
     public CacheClusterList withClientDownloadLandingPage(String clientDownloadLandingPage) {
         this.clientDownloadLandingPage = clientDownloadLandingPage;
         return this;
@@ -110,6 +124,7 @@ public class CacheClusterList {
     
     
     public Endpoint configurationEndpoint;
+
     public CacheClusterList withConfigurationEndpoint(Endpoint configurationEndpoint) {
         this.configurationEndpoint = configurationEndpoint;
         return this;
@@ -117,6 +132,7 @@ public class CacheClusterList {
     
     
     public String engine;
+
     public CacheClusterList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -124,6 +140,7 @@ public class CacheClusterList {
     
     
     public String engineVersion;
+
     public CacheClusterList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -131,6 +148,7 @@ public class CacheClusterList {
     
     
     public IpDiscoveryEnum ipDiscovery;
+
     public CacheClusterList withIpDiscovery(IpDiscoveryEnum ipDiscovery) {
         this.ipDiscovery = ipDiscovery;
         return this;
@@ -138,6 +156,7 @@ public class CacheClusterList {
     
     
     public LogDeliveryConfigurationList[] logDeliveryConfigurations;
+
     public CacheClusterList withLogDeliveryConfigurations(LogDeliveryConfigurationList[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -145,6 +164,7 @@ public class CacheClusterList {
     
     
     public NetworkTypeEnum networkType;
+
     public CacheClusterList withNetworkType(NetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -152,6 +172,7 @@ public class CacheClusterList {
     
     
     public NotificationConfiguration notificationConfiguration;
+
     public CacheClusterList withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
@@ -159,6 +180,7 @@ public class CacheClusterList {
     
     
     public Long numCacheNodes;
+
     public CacheClusterList withNumCacheNodes(Long numCacheNodes) {
         this.numCacheNodes = numCacheNodes;
         return this;
@@ -169,6 +191,7 @@ public class CacheClusterList {
      */
     
     public PendingModifiedValues pendingModifiedValues;
+
     public CacheClusterList withPendingModifiedValues(PendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -176,6 +199,7 @@ public class CacheClusterList {
     
     
     public String preferredAvailabilityZone;
+
     public CacheClusterList withPreferredAvailabilityZone(String preferredAvailabilityZone) {
         this.preferredAvailabilityZone = preferredAvailabilityZone;
         return this;
@@ -183,6 +207,7 @@ public class CacheClusterList {
     
     
     public String preferredMaintenanceWindow;
+
     public CacheClusterList withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -190,6 +215,7 @@ public class CacheClusterList {
     
     
     public String preferredOutpostArn;
+
     public CacheClusterList withPreferredOutpostArn(String preferredOutpostArn) {
         this.preferredOutpostArn = preferredOutpostArn;
         return this;
@@ -197,6 +223,7 @@ public class CacheClusterList {
     
     
     public String replicationGroupId;
+
     public CacheClusterList withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -204,6 +231,7 @@ public class CacheClusterList {
     
     
     public Boolean replicationGroupLogDeliveryEnabled;
+
     public CacheClusterList withReplicationGroupLogDeliveryEnabled(Boolean replicationGroupLogDeliveryEnabled) {
         this.replicationGroupLogDeliveryEnabled = replicationGroupLogDeliveryEnabled;
         return this;
@@ -211,6 +239,7 @@ public class CacheClusterList {
     
     
     public SecurityGroupMembership[] securityGroups;
+
     public CacheClusterList withSecurityGroups(SecurityGroupMembership[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -218,6 +247,7 @@ public class CacheClusterList {
     
     
     public Long snapshotRetentionLimit;
+
     public CacheClusterList withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -225,6 +255,7 @@ public class CacheClusterList {
     
     
     public String snapshotWindow;
+
     public CacheClusterList withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
@@ -232,6 +263,7 @@ public class CacheClusterList {
     
     
     public Boolean transitEncryptionEnabled;
+
     public CacheClusterList withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
@@ -239,9 +271,11 @@ public class CacheClusterList {
     
     
     public TransitEncryptionModeEnum transitEncryptionMode;
+
     public CacheClusterList withTransitEncryptionMode(TransitEncryptionModeEnum transitEncryptionMode) {
         this.transitEncryptionMode = transitEncryptionMode;
         return this;
     }
     
+    public CacheClusterList(){}
 }

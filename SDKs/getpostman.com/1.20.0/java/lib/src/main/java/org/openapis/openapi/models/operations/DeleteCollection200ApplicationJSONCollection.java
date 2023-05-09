@@ -12,6 +12,7 @@ public class DeleteCollection200ApplicationJSONCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteCollection200ApplicationJSONCollection withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class DeleteCollection200ApplicationJSONCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public DeleteCollection200ApplicationJSONCollection withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public DeleteCollection200ApplicationJSONCollection(){}
 }

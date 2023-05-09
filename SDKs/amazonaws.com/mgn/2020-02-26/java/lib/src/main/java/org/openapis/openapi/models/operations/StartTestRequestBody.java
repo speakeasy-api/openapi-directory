@@ -14,6 +14,7 @@ public class StartTestRequestBody {
      */
     @JsonProperty("sourceServerIDs")
     public String[] sourceServerIDs;
+
     public StartTestRequestBody withSourceServerIDs(String[] sourceServerIDs) {
         this.sourceServerIDs = sourceServerIDs;
         return this;
@@ -25,9 +26,13 @@ public class StartTestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartTestRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartTestRequestBody(@JsonProperty("sourceServerIDs") String[] sourceServerIDs) {
+        this.sourceServerIDs = sourceServerIDs;
+  }
 }

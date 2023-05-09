@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputePublicAdvertisedPrefixesGetRequest {
@@ -12,6 +13,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputePublicAdvertisedPrefixesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputePublicAdvertisedPrefixesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputePublicAdvertisedPrefixesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputePublicAdvertisedPrefixesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputePublicAdvertisedPrefixesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputePublicAdvertisedPrefixesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputePublicAdvertisedPrefixesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputePublicAdvertisedPrefixesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputePublicAdvertisedPrefixesGetRequest withProject(String project) {
         this.project = project;
         return this;
@@ -102,6 +112,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publicAdvertisedPrefix")
     public String publicAdvertisedPrefix;
+
     public ComputePublicAdvertisedPrefixesGetRequest withPublicAdvertisedPrefix(String publicAdvertisedPrefix) {
         this.publicAdvertisedPrefix = publicAdvertisedPrefix;
         return this;
@@ -112,6 +123,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputePublicAdvertisedPrefixesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputePublicAdvertisedPrefixesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputePublicAdvertisedPrefixesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,9 +156,14 @@ public class ComputePublicAdvertisedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputePublicAdvertisedPrefixesGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputePublicAdvertisedPrefixesGetRequest(@JsonProperty("project") String project, @JsonProperty("publicAdvertisedPrefix") String publicAdvertisedPrefix) {
+        this.project = project;
+        this.publicAdvertisedPrefix = publicAdvertisedPrefix;
+  }
 }

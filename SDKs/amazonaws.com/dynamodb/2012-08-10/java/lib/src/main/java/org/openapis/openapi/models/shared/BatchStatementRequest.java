@@ -15,6 +15,7 @@ public class BatchStatementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public BatchStatementRequest withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -23,6 +24,7 @@ public class BatchStatementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public AttributeValue[] parameters;
+
     public BatchStatementRequest withParameters(AttributeValue[] parameters) {
         this.parameters = parameters;
         return this;
@@ -30,9 +32,13 @@ public class BatchStatementRequest {
     
     @JsonProperty("Statement")
     public String statement;
+
     public BatchStatementRequest withStatement(String statement) {
         this.statement = statement;
         return this;
     }
     
+    public BatchStatementRequest(@JsonProperty("Statement") String statement) {
+        this.statement = statement;
+  }
 }

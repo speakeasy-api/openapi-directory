@@ -15,6 +15,7 @@ public class AccountHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public AccountHealth withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class AccountHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Insight")
     public AccountInsightHealth insight;
+
     public AccountHealth withInsight(AccountInsightHealth insight) {
         this.insight = insight;
         return this;
     }
     
+    public AccountHealth(){}
 }

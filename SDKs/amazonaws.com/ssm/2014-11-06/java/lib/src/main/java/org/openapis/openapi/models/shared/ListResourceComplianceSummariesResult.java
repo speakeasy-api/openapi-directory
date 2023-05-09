@@ -15,6 +15,7 @@ public class ListResourceComplianceSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceComplianceSummariesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResourceComplianceSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceComplianceSummaryItems")
     public ResourceComplianceSummaryItem[] resourceComplianceSummaryItems;
+
     public ListResourceComplianceSummariesResult withResourceComplianceSummaryItems(ResourceComplianceSummaryItem[] resourceComplianceSummaryItems) {
         this.resourceComplianceSummaryItems = resourceComplianceSummaryItems;
         return this;
     }
     
+    public ListResourceComplianceSummariesResult(){}
 }

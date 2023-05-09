@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GitTagObject {
     @JsonProperty("sha")
     public String sha;
+
     public GitTagObject withSha(String sha) {
         this.sha = sha;
         return this;
@@ -16,6 +17,7 @@ public class GitTagObject {
     
     @JsonProperty("type")
     public String type;
+
     public GitTagObject withType(String type) {
         this.type = type;
         return this;
@@ -23,9 +25,15 @@ public class GitTagObject {
     
     @JsonProperty("url")
     public String url;
+
     public GitTagObject withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GitTagObject(@JsonProperty("sha") String sha, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.sha = sha;
+        this.type = type;
+        this.url = url;
+  }
 }

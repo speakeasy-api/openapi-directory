@@ -15,6 +15,7 @@ public class FacetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentAttributeKey")
     public String documentAttributeKey;
+
     public FacetResult withDocumentAttributeKey(String documentAttributeKey) {
         this.documentAttributeKey = documentAttributeKey;
         return this;
@@ -23,6 +24,7 @@ public class FacetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentAttributeValueCountPairs")
     public DocumentAttributeValueCountPair[] documentAttributeValueCountPairs;
+
     public FacetResult withDocumentAttributeValueCountPairs(DocumentAttributeValueCountPair[] documentAttributeValueCountPairs) {
         this.documentAttributeValueCountPairs = documentAttributeValueCountPairs;
         return this;
@@ -31,9 +33,11 @@ public class FacetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentAttributeValueType")
     public DocumentAttributeValueTypeEnum documentAttributeValueType;
+
     public FacetResult withDocumentAttributeValueType(DocumentAttributeValueTypeEnum documentAttributeValueType) {
         this.documentAttributeValueType = documentAttributeValueType;
         return this;
     }
     
+    public FacetResult(){}
 }

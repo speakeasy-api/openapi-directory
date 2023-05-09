@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GeneralLabelsSettings - Contains filters for the object labels returned by DetectLabels. Filters can be inclusive, exclusive, or a combination of both and can be applied to individual l abels or entire label categories.
+ * GeneralLabelsSettings - Contains filters for the object labels returned by DetectLabels. Filters can be inclusive, exclusive, or a combination of both and can be applied to individual labels or entire label categories. To see a list of label categories, see &lt;a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html"&gt;Detecting Labels&lt;/a&gt;.
  */
 public class GeneralLabelsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelCategoryExclusionFilters")
     public String[] labelCategoryExclusionFilters;
+
     public GeneralLabelsSettings withLabelCategoryExclusionFilters(String[] labelCategoryExclusionFilters) {
         this.labelCategoryExclusionFilters = labelCategoryExclusionFilters;
         return this;
@@ -23,6 +24,7 @@ public class GeneralLabelsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelCategoryInclusionFilters")
     public String[] labelCategoryInclusionFilters;
+
     public GeneralLabelsSettings withLabelCategoryInclusionFilters(String[] labelCategoryInclusionFilters) {
         this.labelCategoryInclusionFilters = labelCategoryInclusionFilters;
         return this;
@@ -31,6 +33,7 @@ public class GeneralLabelsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelExclusionFilters")
     public String[] labelExclusionFilters;
+
     public GeneralLabelsSettings withLabelExclusionFilters(String[] labelExclusionFilters) {
         this.labelExclusionFilters = labelExclusionFilters;
         return this;
@@ -39,9 +42,11 @@ public class GeneralLabelsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelInclusionFilters")
     public String[] labelInclusionFilters;
+
     public GeneralLabelsSettings withLabelInclusionFilters(String[] labelInclusionFilters) {
         this.labelInclusionFilters = labelInclusionFilters;
         return this;
     }
     
+    public GeneralLabelsSettings(){}
 }

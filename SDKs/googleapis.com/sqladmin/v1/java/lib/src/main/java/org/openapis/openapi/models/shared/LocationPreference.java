@@ -18,6 +18,7 @@ public class LocationPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followGaeApplication")
     public String followGaeApplication;
+
     public LocationPreference withFollowGaeApplication(String followGaeApplication) {
         this.followGaeApplication = followGaeApplication;
         return this;
@@ -29,6 +30,7 @@ public class LocationPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LocationPreference withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class LocationPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryZone")
     public String secondaryZone;
+
     public LocationPreference withSecondaryZone(String secondaryZone) {
         this.secondaryZone = secondaryZone;
         return this;
@@ -51,9 +54,11 @@ public class LocationPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public LocationPreference withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public LocationPreference(){}
 }

@@ -20,6 +20,7 @@ public class NullableIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public NullableIntegration withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -28,6 +29,7 @@ public class NullableIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public NullableIntegration withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -37,6 +39,7 @@ public class NullableIntegration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public NullableIntegration withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class NullableIntegration {
     
     @JsonProperty("description")
     public String description;
+
     public NullableIntegration withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class NullableIntegration {
      */
     @JsonProperty("events")
     public String[] events;
+
     public NullableIntegration withEvents(String[] events) {
         this.events = events;
         return this;
@@ -61,6 +66,7 @@ public class NullableIntegration {
     
     @JsonProperty("external_url")
     public String externalUrl;
+
     public NullableIntegration withExternalUrl(String externalUrl) {
         this.externalUrl = externalUrl;
         return this;
@@ -68,6 +74,7 @@ public class NullableIntegration {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public NullableIntegration withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -78,6 +85,7 @@ public class NullableIntegration {
      */
     @JsonProperty("id")
     public Long id;
+
     public NullableIntegration withId(Long id) {
         this.id = id;
         return this;
@@ -89,6 +97,7 @@ public class NullableIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installations_count")
     public Long installationsCount;
+
     public NullableIntegration withInstallationsCount(Long installationsCount) {
         this.installationsCount = installationsCount;
         return this;
@@ -99,6 +108,7 @@ public class NullableIntegration {
      */
     @JsonProperty("name")
     public String name;
+
     public NullableIntegration withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +116,7 @@ public class NullableIntegration {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public NullableIntegration withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -116,6 +127,7 @@ public class NullableIntegration {
      */
     @JsonProperty("owner")
     public NullableSimpleUser owner;
+
     public NullableIntegration withOwner(NullableSimpleUser owner) {
         this.owner = owner;
         return this;
@@ -124,6 +136,7 @@ public class NullableIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pem")
     public String pem;
+
     public NullableIntegration withPem(String pem) {
         this.pem = pem;
         return this;
@@ -134,6 +147,7 @@ public class NullableIntegration {
      */
     @JsonProperty("permissions")
     public java.util.Map<String, String> permissions;
+
     public NullableIntegration withPermissions(java.util.Map<String, String> permissions) {
         this.permissions = permissions;
         return this;
@@ -145,6 +159,7 @@ public class NullableIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public NullableIntegration withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -154,6 +169,7 @@ public class NullableIntegration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public NullableIntegration withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -162,9 +178,23 @@ public class NullableIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_secret")
     public String webhookSecret;
+
     public NullableIntegration withWebhookSecret(String webhookSecret) {
         this.webhookSecret = webhookSecret;
         return this;
     }
     
+    public NullableIntegration(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("description") String description, @JsonProperty("events") String[] events, @JsonProperty("external_url") String externalUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("owner") NullableSimpleUser owner, @JsonProperty("permissions") java.util.Map<String, String> permissions, @JsonProperty("updated_at") OffsetDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.description = description;
+        this.events = events;
+        this.externalUrl = externalUrl;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.owner = owner;
+        this.permissions = permissions;
+        this.updatedAt = updatedAt;
+  }
 }

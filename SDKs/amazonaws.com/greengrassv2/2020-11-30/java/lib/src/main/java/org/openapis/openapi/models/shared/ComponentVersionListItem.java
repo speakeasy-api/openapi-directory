@@ -15,6 +15,7 @@ public class ComponentVersionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ComponentVersionListItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ComponentVersionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public ComponentVersionListItem withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -31,9 +33,11 @@ public class ComponentVersionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersion")
     public String componentVersion;
+
     public ComponentVersionListItem withComponentVersion(String componentVersion) {
         this.componentVersion = componentVersion;
         return this;
     }
     
+    public ComponentVersionListItem(){}
 }

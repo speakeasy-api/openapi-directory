@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePortfolioResponse {
     
     public String contentType;
+
     public DescribePortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePortfolioResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePortfolioOutput describePortfolioOutput;
+
     public DescribePortfolioResponse withDescribePortfolioOutput(org.openapis.openapi.models.shared.DescribePortfolioOutput describePortfolioOutput) {
         this.describePortfolioOutput = describePortfolioOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribePortfolioResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePortfolioResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribePortfolioResponse {
     
     
     public Integer statusCode;
+
     public DescribePortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribePortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribePortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

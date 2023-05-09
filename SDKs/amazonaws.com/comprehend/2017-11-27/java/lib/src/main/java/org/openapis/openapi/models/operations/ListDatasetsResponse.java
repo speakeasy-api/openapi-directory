@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatasetsResponse {
     
     public String contentType;
+
     public ListDatasetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDatasetsResponse {
      */
     
     public Object internalServerException;
+
     public ListDatasetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListDatasetsResponse {
      */
     
     public Object invalidFilterException;
+
     public ListDatasetsResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListDatasetsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDatasetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListDatasetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatasetsResponse listDatasetsResponse;
+
     public ListDatasetsResponse withListDatasetsResponse(org.openapis.openapi.models.shared.ListDatasetsResponse listDatasetsResponse) {
         this.listDatasetsResponse = listDatasetsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListDatasetsResponse {
     
     
     public Integer statusCode;
+
     public ListDatasetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDatasetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatasetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListDatasetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDatasetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListDatasetsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDatasetsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListDatasetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

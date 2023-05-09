@@ -15,6 +15,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGeneric
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel[] data;
+
     public RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel withData(BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGeneric
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModelErrorCodeEnum errorCode;
+
     public RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel withErrorCode(RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModelErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,6 +33,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGeneric
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDescription")
     public RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModelErrorDescriptionEnum errorDescription;
+
     public RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel withErrorDescription(RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModelErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -39,9 +42,11 @@ public class RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGeneric
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel(){}
 }

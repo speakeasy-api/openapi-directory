@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UseAsRegularRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UseAsRegularPayload useAsRegularPayload;
+
     public UseAsRegularRequest withUseAsRegularPayload(org.openapis.openapi.models.shared.UseAsRegularPayload useAsRegularPayload) {
         this.useAsRegularPayload = useAsRegularPayload;
         return this;
@@ -19,9 +21,13 @@ public class UseAsRegularRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public UseAsRegularRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
     }
     
+    public UseAsRegularRequest(@JsonProperty("documentId") Long documentId) {
+        this.documentId = documentId;
+  }
 }

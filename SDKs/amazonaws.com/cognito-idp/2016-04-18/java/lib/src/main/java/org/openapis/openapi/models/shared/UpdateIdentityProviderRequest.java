@@ -12,6 +12,7 @@ public class UpdateIdentityProviderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeMapping")
     public java.util.Map<String, String> attributeMapping;
+
     public UpdateIdentityProviderRequest withAttributeMapping(java.util.Map<String, String> attributeMapping) {
         this.attributeMapping = attributeMapping;
         return this;
@@ -20,6 +21,7 @@ public class UpdateIdentityProviderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdpIdentifiers")
     public String[] idpIdentifiers;
+
     public UpdateIdentityProviderRequest withIdpIdentifiers(String[] idpIdentifiers) {
         this.idpIdentifiers = idpIdentifiers;
         return this;
@@ -28,6 +30,7 @@ public class UpdateIdentityProviderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderDetails")
     public java.util.Map<String, String> providerDetails;
+
     public UpdateIdentityProviderRequest withProviderDetails(java.util.Map<String, String> providerDetails) {
         this.providerDetails = providerDetails;
         return this;
@@ -35,6 +38,7 @@ public class UpdateIdentityProviderRequest {
     
     @JsonProperty("ProviderName")
     public String providerName;
+
     public UpdateIdentityProviderRequest withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -42,9 +46,14 @@ public class UpdateIdentityProviderRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public UpdateIdentityProviderRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public UpdateIdentityProviderRequest(@JsonProperty("ProviderName") String providerName, @JsonProperty("UserPoolId") String userPoolId) {
+        this.providerName = providerName;
+        this.userPoolId = userPoolId;
+  }
 }

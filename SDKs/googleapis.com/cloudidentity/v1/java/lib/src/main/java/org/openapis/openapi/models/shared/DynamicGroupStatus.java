@@ -18,6 +18,7 @@ public class DynamicGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DynamicGroupStatusStatusEnum status;
+
     public DynamicGroupStatus withStatus(DynamicGroupStatusStatusEnum status) {
         this.status = status;
         return this;
@@ -29,9 +30,11 @@ public class DynamicGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusTime")
     public String statusTime;
+
     public DynamicGroupStatus withStatusTime(String statusTime) {
         this.statusTime = statusTime;
         return this;
     }
     
+    public DynamicGroupStatus(){}
 }

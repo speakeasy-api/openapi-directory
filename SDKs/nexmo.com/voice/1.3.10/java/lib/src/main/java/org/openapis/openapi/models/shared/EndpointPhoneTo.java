@@ -18,6 +18,7 @@ public class EndpointPhoneTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtmfAnswer")
     public String dtmfAnswer;
+
     public EndpointPhoneTo withDtmfAnswer(String dtmfAnswer) {
         this.dtmfAnswer = dtmfAnswer;
         return this;
@@ -28,6 +29,7 @@ public class EndpointPhoneTo {
      */
     @JsonProperty("number")
     public String number;
+
     public EndpointPhoneTo withNumber(String number) {
         this.number = number;
         return this;
@@ -38,9 +40,14 @@ public class EndpointPhoneTo {
      */
     @JsonProperty("type")
     public String type;
+
     public EndpointPhoneTo withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EndpointPhoneTo(@JsonProperty("number") String number, @JsonProperty("type") String type) {
+        this.number = number;
+        this.type = type;
+  }
 }

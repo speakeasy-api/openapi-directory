@@ -18,6 +18,7 @@ public class FieldValueChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public FieldValueChange withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class FieldValueChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldId")
     public String fieldId;
+
     public FieldValueChange withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -40,6 +42,7 @@ public class FieldValueChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newValue")
     public FieldValue newValue;
+
     public FieldValueChange withNewValue(FieldValue newValue) {
         this.newValue = newValue;
         return this;
@@ -51,9 +54,11 @@ public class FieldValueChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldValue")
     public FieldValue oldValue;
+
     public FieldValueChange withOldValue(FieldValue oldValue) {
         this.oldValue = oldValue;
         return this;
     }
     
+    public FieldValueChange(){}
 }

@@ -15,6 +15,7 @@ public class UpdateContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesData")
     public String attributesData;
+
     public UpdateContactRequestBody withAttributesData(String attributesData) {
         this.attributesData = attributesData;
         return this;
@@ -26,6 +27,7 @@ public class UpdateContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicPreferences")
     public org.openapis.openapi.models.shared.TopicPreference[] topicPreferences;
+
     public UpdateContactRequestBody withTopicPreferences(org.openapis.openapi.models.shared.TopicPreference[] topicPreferences) {
         this.topicPreferences = topicPreferences;
         return this;
@@ -37,9 +39,11 @@ public class UpdateContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnsubscribeAll")
     public Boolean unsubscribeAll;
+
     public UpdateContactRequestBody withUnsubscribeAll(Boolean unsubscribeAll) {
         this.unsubscribeAll = unsubscribeAll;
         return this;
     }
     
+    public UpdateContactRequestBody(){}
 }

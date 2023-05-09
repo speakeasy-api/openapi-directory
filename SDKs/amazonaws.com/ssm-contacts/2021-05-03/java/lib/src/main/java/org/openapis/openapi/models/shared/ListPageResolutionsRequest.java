@@ -12,6 +12,7 @@ public class ListPageResolutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPageResolutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,13 @@ public class ListPageResolutionsRequest {
     
     @JsonProperty("PageId")
     public String pageId;
+
     public ListPageResolutionsRequest withPageId(String pageId) {
         this.pageId = pageId;
         return this;
     }
     
+    public ListPageResolutionsRequest(@JsonProperty("PageId") String pageId) {
+        this.pageId = pageId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class HmipcResponse {
     
     public String contentType;
+
     public HmipcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class HmipcResponse {
     
     
     public Integer statusCode;
+
     public HmipcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class HmipcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public HmipcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class HmipcResponse {
      */
     
     public Hmipc400ApplicationJSON hmipc400ApplicationJSONObject;
+
     public HmipcResponse withHmipc400ApplicationJSONObject(Hmipc400ApplicationJSON hmipc400ApplicationJSONObject) {
         this.hmipc400ApplicationJSONObject = hmipc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class HmipcResponse {
      */
     
     public Hmipc401ApplicationJSON hmipc401ApplicationJSONObject;
+
     public HmipcResponse withHmipc401ApplicationJSONObject(Hmipc401ApplicationJSON hmipc401ApplicationJSONObject) {
         this.hmipc401ApplicationJSONObject = hmipc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class HmipcResponse {
      */
     
     public Hmipc404ApplicationJSON hmipc404ApplicationJSONObject;
+
     public HmipcResponse withHmipc404ApplicationJSONObject(Hmipc404ApplicationJSON hmipc404ApplicationJSONObject) {
         this.hmipc404ApplicationJSONObject = hmipc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class HmipcResponse {
      */
     
     public Hmipc500ApplicationJSON hmipc500ApplicationJSONObject;
+
     public HmipcResponse withHmipc500ApplicationJSONObject(Hmipc500ApplicationJSON hmipc500ApplicationJSONObject) {
         this.hmipc500ApplicationJSONObject = hmipc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class HmipcResponse {
      */
     
     public Hmipc502ApplicationJSON hmipc502ApplicationJSONObject;
+
     public HmipcResponse withHmipc502ApplicationJSONObject(Hmipc502ApplicationJSON hmipc502ApplicationJSONObject) {
         this.hmipc502ApplicationJSONObject = hmipc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class HmipcResponse {
      */
     
     public Hmipc503ApplicationJSON hmipc503ApplicationJSONObject;
+
     public HmipcResponse withHmipc503ApplicationJSONObject(Hmipc503ApplicationJSON hmipc503ApplicationJSONObject) {
         this.hmipc503ApplicationJSONObject = hmipc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class HmipcResponse {
      */
     
     public Hmipc504ApplicationJSON hmipc504ApplicationJSONObject;
+
     public HmipcResponse withHmipc504ApplicationJSONObject(Hmipc504ApplicationJSON hmipc504ApplicationJSONObject) {
         this.hmipc504ApplicationJSONObject = hmipc504ApplicationJSONObject;
         return this;
     }
     
+    public HmipcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

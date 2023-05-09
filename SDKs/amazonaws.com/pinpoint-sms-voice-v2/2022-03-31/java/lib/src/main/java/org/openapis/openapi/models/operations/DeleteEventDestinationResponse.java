@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEventDestinationResponse {
@@ -12,6 +13,7 @@ public class DeleteEventDestinationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteEventDestinationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEventDestinationResponse {
     
     
     public String contentType;
+
     public DeleteEventDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEventDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteEventDestinationResult deleteEventDestinationResult;
+
     public DeleteEventDestinationResponse withDeleteEventDestinationResult(org.openapis.openapi.models.shared.DeleteEventDestinationResult deleteEventDestinationResult) {
         this.deleteEventDestinationResult = deleteEventDestinationResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEventDestinationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteEventDestinationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEventDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEventDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteEventDestinationResponse {
     
     
     public Integer statusCode;
+
     public DeleteEventDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteEventDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEventDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteEventDestinationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteEventDestinationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteEventDestinationResponse {
      */
     
     public Object validationException;
+
     public DeleteEventDestinationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteEventDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

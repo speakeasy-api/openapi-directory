@@ -15,6 +15,7 @@ public class UpdateFleetPortSettingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public UpdateFleetPortSettingsOutput withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateFleetPortSettingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public UpdateFleetPortSettingsOutput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public UpdateFleetPortSettingsOutput(){}
 }

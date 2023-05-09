@@ -18,6 +18,7 @@ public class Deinterlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bwdif")
     public BwdifConfig bwdif;
+
     public Deinterlace withBwdif(BwdifConfig bwdif) {
         this.bwdif = bwdif;
         return this;
@@ -29,9 +30,11 @@ public class Deinterlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yadif")
     public YadifConfig yadif;
+
     public Deinterlace withYadif(YadifConfig yadif) {
         this.yadif = yadif;
         return this;
     }
     
+    public Deinterlace(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutscorebyfieldRequest {
     @JsonProperty("key")
     public String key;
+
     public PutscorebyfieldRequest withKey(String key) {
         this.key = key;
         return this;
@@ -16,6 +17,7 @@ public class PutscorebyfieldRequest {
     
     @JsonProperty("point")
     public Integer point;
+
     public PutscorebyfieldRequest withPoint(Integer point) {
         this.point = point;
         return this;
@@ -23,9 +25,15 @@ public class PutscorebyfieldRequest {
     
     @JsonProperty("until")
     public String until;
+
     public PutscorebyfieldRequest withUntil(String until) {
         this.until = until;
         return this;
     }
     
+    public PutscorebyfieldRequest(@JsonProperty("key") String key, @JsonProperty("point") Integer point, @JsonProperty("until") String until) {
+        this.key = key;
+        this.point = point;
+        this.until = until;
+  }
 }

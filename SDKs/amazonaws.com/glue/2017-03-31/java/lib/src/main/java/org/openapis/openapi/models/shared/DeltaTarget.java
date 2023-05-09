@@ -15,6 +15,7 @@ public class DeltaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public DeltaTarget withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -23,6 +24,7 @@ public class DeltaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateNativeDeltaTable")
     public Boolean createNativeDeltaTable;
+
     public DeltaTarget withCreateNativeDeltaTable(Boolean createNativeDeltaTable) {
         this.createNativeDeltaTable = createNativeDeltaTable;
         return this;
@@ -31,6 +33,7 @@ public class DeltaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeltaTables")
     public String[] deltaTables;
+
     public DeltaTarget withDeltaTables(String[] deltaTables) {
         this.deltaTables = deltaTables;
         return this;
@@ -39,9 +42,11 @@ public class DeltaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteManifest")
     public Boolean writeManifest;
+
     public DeltaTarget withWriteManifest(Boolean writeManifest) {
         this.writeManifest = writeManifest;
         return this;
     }
     
+    public DeltaTarget(){}
 }

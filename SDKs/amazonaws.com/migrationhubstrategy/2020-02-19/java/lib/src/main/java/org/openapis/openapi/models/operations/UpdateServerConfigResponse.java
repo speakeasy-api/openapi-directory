@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServerConfigResponse {
     
     public String contentType;
+
     public UpdateServerConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateServerConfigResponse {
      */
     
     public Object internalServerException;
+
     public UpdateServerConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateServerConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateServerConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateServerConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServerConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateServerConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateServerConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServerConfigResponse {
      */
     
     public Object throttlingException;
+
     public UpdateServerConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateServerConfigResponse {
      */
     
     public java.util.Map<String, Object> updateServerConfigResponse;
+
     public UpdateServerConfigResponse withUpdateServerConfigResponse(java.util.Map<String, Object> updateServerConfigResponse) {
         this.updateServerConfigResponse = updateServerConfigResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateServerConfigResponse {
      */
     
     public Object validationException;
+
     public UpdateServerConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateServerConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

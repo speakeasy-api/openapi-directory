@@ -15,6 +15,7 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionTime")
     public Long executionTime;
+
     public QueryStage withExecutionTime(Long executionTime) {
         this.executionTime = executionTime;
         return this;
@@ -23,6 +24,7 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputBytes")
     public Long inputBytes;
+
     public QueryStage withInputBytes(Long inputBytes) {
         this.inputBytes = inputBytes;
         return this;
@@ -31,6 +33,7 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputRows")
     public Long inputRows;
+
     public QueryStage withInputRows(Long inputRows) {
         this.inputRows = inputRows;
         return this;
@@ -39,6 +42,7 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputBytes")
     public Long outputBytes;
+
     public QueryStage withOutputBytes(Long outputBytes) {
         this.outputBytes = outputBytes;
         return this;
@@ -47,6 +51,7 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputRows")
     public Long outputRows;
+
     public QueryStage withOutputRows(Long outputRows) {
         this.outputRows = outputRows;
         return this;
@@ -55,6 +60,7 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStagePlan")
     public QueryStagePlanNode queryStagePlan;
+
     public QueryStage withQueryStagePlan(QueryStagePlanNode queryStagePlan) {
         this.queryStagePlan = queryStagePlan;
         return this;
@@ -63,6 +69,7 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StageId")
     public Long stageId;
+
     public QueryStage withStageId(Long stageId) {
         this.stageId = stageId;
         return this;
@@ -71,6 +78,7 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public QueryStage withState(String state) {
         this.state = state;
         return this;
@@ -79,9 +87,11 @@ public class QueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubStages")
     public QueryStage[] subStages;
+
     public QueryStage withSubStages(QueryStage[] subStages) {
         this.subStages = subStages;
         return this;
     }
     
+    public QueryStage(){}
 }

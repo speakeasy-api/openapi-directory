@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFiltersFiltersRequest {
@@ -12,9 +13,13 @@ public class GetFiltersFiltersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filters")
     public String filters;
+
     public GetFiltersFiltersRequest withFilters(String filters) {
         this.filters = filters;
         return this;
     }
     
+    public GetFiltersFiltersRequest(@JsonProperty("filters") String filters) {
+        this.filters = filters;
+  }
 }

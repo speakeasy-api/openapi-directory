@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProductionVariantCoreDumpConfig {
     @JsonProperty("DestinationS3Uri")
     public String destinationS3Uri;
+
     public ProductionVariantCoreDumpConfig withDestinationS3Uri(String destinationS3Uri) {
         this.destinationS3Uri = destinationS3Uri;
         return this;
@@ -22,9 +23,13 @@ public class ProductionVariantCoreDumpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ProductionVariantCoreDumpConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public ProductionVariantCoreDumpConfig(@JsonProperty("DestinationS3Uri") String destinationS3Uri) {
+        this.destinationS3Uri = destinationS3Uri;
+  }
 }

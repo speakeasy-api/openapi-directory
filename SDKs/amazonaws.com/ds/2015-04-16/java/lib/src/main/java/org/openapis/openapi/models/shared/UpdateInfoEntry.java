@@ -20,6 +20,7 @@ public class UpdateInfoEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitiatedBy")
     public String initiatedBy;
+
     public UpdateInfoEntry withInitiatedBy(String initiatedBy) {
         this.initiatedBy = initiatedBy;
         return this;
@@ -30,6 +31,7 @@ public class UpdateInfoEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public UpdateInfoEntry withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -38,6 +40,7 @@ public class UpdateInfoEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewValue")
     public UpdateValue newValue;
+
     public UpdateInfoEntry withNewValue(UpdateValue newValue) {
         this.newValue = newValue;
         return this;
@@ -46,6 +49,7 @@ public class UpdateInfoEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreviousValue")
     public UpdateValue previousValue;
+
     public UpdateInfoEntry withPreviousValue(UpdateValue previousValue) {
         this.previousValue = previousValue;
         return this;
@@ -54,6 +58,7 @@ public class UpdateInfoEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public UpdateInfoEntry withRegion(String region) {
         this.region = region;
         return this;
@@ -64,6 +69,7 @@ public class UpdateInfoEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public UpdateInfoEntry withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -72,6 +78,7 @@ public class UpdateInfoEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UpdateStatusEnum status;
+
     public UpdateInfoEntry withStatus(UpdateStatusEnum status) {
         this.status = status;
         return this;
@@ -80,9 +87,11 @@ public class UpdateInfoEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public UpdateInfoEntry withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public UpdateInfoEntry(){}
 }

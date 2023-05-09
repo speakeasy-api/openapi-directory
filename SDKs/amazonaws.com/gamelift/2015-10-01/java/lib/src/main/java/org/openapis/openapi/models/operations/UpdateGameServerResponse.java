@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGameServerResponse {
     
     public String contentType;
+
     public UpdateGameServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGameServerResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateGameServerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGameServerResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateGameServerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGameServerResponse {
      */
     
     public Object notFoundException;
+
     public UpdateGameServerResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateGameServerResponse {
     
     
     public Integer statusCode;
+
     public UpdateGameServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateGameServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGameServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGameServerResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateGameServerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateGameServerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGameServerOutput updateGameServerOutput;
+
     public UpdateGameServerResponse withUpdateGameServerOutput(org.openapis.openapi.models.shared.UpdateGameServerOutput updateGameServerOutput) {
         this.updateGameServerOutput = updateGameServerOutput;
         return this;
     }
     
+    public UpdateGameServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

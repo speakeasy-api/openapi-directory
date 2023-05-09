@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders {
     
     public String description;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAcc
     
     
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum deviceTrustProviderType;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders withDeviceTrustProviderType(ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum deviceTrustProviderType) {
         this.deviceTrustProviderType = deviceTrustProviderType;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAcc
     
     
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum trustProviderType;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders withTrustProviderType(ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum trustProviderType) {
         this.trustProviderType = trustProviderType;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAcc
     
     
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum userTrustProviderType;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders withUserTrustProviderType(ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum userTrustProviderType) {
         this.userTrustProviderType = userTrustProviderType;
         return this;
@@ -40,9 +44,11 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAcc
     
     
     public String verifiedAccessTrustProviderId;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders withVerifiedAccessTrustProviderId(String verifiedAccessTrustProviderId) {
         this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementCustomDimensionsPatchResponse {
     
     public String contentType;
+
     public AnalyticsManagementCustomDimensionsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementCustomDimensionsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomDimension customDimension;
+
     public AnalyticsManagementCustomDimensionsPatchResponse withCustomDimension(org.openapis.openapi.models.shared.CustomDimension customDimension) {
         this.customDimension = customDimension;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsManagementCustomDimensionsPatchResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementCustomDimensionsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementCustomDimensionsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementCustomDimensionsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsManagementCustomDimensionsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

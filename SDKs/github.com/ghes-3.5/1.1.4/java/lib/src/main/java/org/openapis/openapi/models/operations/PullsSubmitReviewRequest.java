@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsSubmitReviewRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PullsSubmitReviewRequestBody requestBody;
+
     public PullsSubmitReviewRequest withRequestBody(PullsSubmitReviewRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PullsSubmitReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsSubmitReviewRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class PullsSubmitReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
     public Long pullNumber;
+
     public PullsSubmitReviewRequest withPullNumber(Long pullNumber) {
         this.pullNumber = pullNumber;
         return this;
@@ -39,6 +43,7 @@ public class PullsSubmitReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsSubmitReviewRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -49,9 +54,17 @@ public class PullsSubmitReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=review_id")
     public Long reviewId;
+
     public PullsSubmitReviewRequest withReviewId(Long reviewId) {
         this.reviewId = reviewId;
         return this;
     }
     
+    public PullsSubmitReviewRequest(@JsonProperty("RequestBody") PullsSubmitReviewRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("pull_number") Long pullNumber, @JsonProperty("repo") String repo, @JsonProperty("review_id") Long reviewId) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.pullNumber = pullNumber;
+        this.repo = repo;
+        this.reviewId = reviewId;
+  }
 }

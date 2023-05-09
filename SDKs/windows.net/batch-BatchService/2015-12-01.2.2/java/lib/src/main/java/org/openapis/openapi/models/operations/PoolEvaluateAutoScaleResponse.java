@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PoolEvaluateAutoScaleResponse {
     
     public org.openapis.openapi.models.shared.AutoScaleRun autoScaleRun;
+
     public PoolEvaluateAutoScaleResponse withAutoScaleRun(org.openapis.openapi.models.shared.AutoScaleRun autoScaleRun) {
         this.autoScaleRun = autoScaleRun;
         return this;
@@ -19,6 +21,7 @@ public class PoolEvaluateAutoScaleResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public PoolEvaluateAutoScaleResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -26,6 +29,7 @@ public class PoolEvaluateAutoScaleResponse {
     
     
     public String contentType;
+
     public PoolEvaluateAutoScaleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class PoolEvaluateAutoScaleResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PoolEvaluateAutoScaleResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class PoolEvaluateAutoScaleResponse {
     
     
     public Integer statusCode;
+
     public PoolEvaluateAutoScaleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class PoolEvaluateAutoScaleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PoolEvaluateAutoScaleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PoolEvaluateAutoScaleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

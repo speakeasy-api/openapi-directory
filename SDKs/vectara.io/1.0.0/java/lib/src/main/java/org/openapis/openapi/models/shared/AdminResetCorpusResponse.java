@@ -15,9 +15,11 @@ public class AdminResetCorpusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ComvectaraStatus status;
+
     public AdminResetCorpusResponse withStatus(ComvectaraStatus status) {
         this.status = status;
         return this;
     }
     
+    public AdminResetCorpusResponse(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConnectionInput {
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public GetConnectionInput withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
     }
     
+    public GetConnectionInput(@JsonProperty("ConnectionArn") String connectionArn) {
+        this.connectionArn = connectionArn;
+  }
 }

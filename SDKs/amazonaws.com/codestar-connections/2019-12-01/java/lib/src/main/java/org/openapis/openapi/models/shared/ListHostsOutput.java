@@ -15,6 +15,7 @@ public class ListHostsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hosts")
     public Host[] hosts;
+
     public ListHostsOutput withHosts(Host[] hosts) {
         this.hosts = hosts;
         return this;
@@ -23,9 +24,11 @@ public class ListHostsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHostsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHostsOutput(){}
 }

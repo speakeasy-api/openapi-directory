@@ -18,6 +18,7 @@ public class PositionedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public PositionedObject withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -29,6 +30,7 @@ public class PositionedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionedObjectProperties")
     public PositionedObjectProperties positionedObjectProperties;
+
     public PositionedObject withPositionedObjectProperties(PositionedObjectProperties positionedObjectProperties) {
         this.positionedObjectProperties = positionedObjectProperties;
         return this;
@@ -40,6 +42,7 @@ public class PositionedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public PositionedObject withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -51,6 +54,7 @@ public class PositionedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionId")
     public String suggestedInsertionId;
+
     public PositionedObject withSuggestedInsertionId(String suggestedInsertionId) {
         this.suggestedInsertionId = suggestedInsertionId;
         return this;
@@ -62,9 +66,11 @@ public class PositionedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedPositionedObjectPropertiesChanges")
     public java.util.Map<String, SuggestedPositionedObjectProperties> suggestedPositionedObjectPropertiesChanges;
+
     public PositionedObject withSuggestedPositionedObjectPropertiesChanges(java.util.Map<String, SuggestedPositionedObjectProperties> suggestedPositionedObjectPropertiesChanges) {
         this.suggestedPositionedObjectPropertiesChanges = suggestedPositionedObjectPropertiesChanges;
         return this;
     }
     
+    public PositionedObject(){}
 }

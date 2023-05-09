@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReviewsFormatRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-key")
     public String apiKey;
+
     public GETReviewsFormatRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -19,6 +21,7 @@ public class GETReviewsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
     public String author;
+
     public GETReviewsFormatRequest withAuthor(String author) {
         this.author = author;
         return this;
@@ -26,6 +29,7 @@ public class GETReviewsFormatRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public GETReviewsFormatFormatEnum format;
+
     public GETReviewsFormatRequest withFormat(GETReviewsFormatFormatEnum format) {
         this.format = format;
         return this;
@@ -36,6 +40,7 @@ public class GETReviewsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isbn")
     public Long isbn;
+
     public GETReviewsFormatRequest withIsbn(Long isbn) {
         this.isbn = isbn;
         return this;
@@ -46,9 +51,13 @@ public class GETReviewsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public GETReviewsFormatRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GETReviewsFormatRequest(@JsonProperty("format") GETReviewsFormatFormatEnum format) {
+        this.format = format;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorFilterResultTrafficMirrorFilter {
     
     public String description;
+
     public CreateTrafficMirrorFilterResultTrafficMirrorFilter withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateTrafficMirrorFilterResultTrafficMirrorFilter {
     
     
     public CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRules[] egressFilterRules;
+
     public CreateTrafficMirrorFilterResultTrafficMirrorFilter withEgressFilterRules(CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRules[] egressFilterRules) {
         this.egressFilterRules = egressFilterRules;
         return this;
@@ -26,6 +28,7 @@ public class CreateTrafficMirrorFilterResultTrafficMirrorFilter {
     
     
     public CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRules[] ingressFilterRules;
+
     public CreateTrafficMirrorFilterResultTrafficMirrorFilter withIngressFilterRules(CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRules[] ingressFilterRules) {
         this.ingressFilterRules = ingressFilterRules;
         return this;
@@ -33,6 +36,7 @@ public class CreateTrafficMirrorFilterResultTrafficMirrorFilter {
     
     
     public CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum[] networkServices;
+
     public CreateTrafficMirrorFilterResultTrafficMirrorFilter withNetworkServices(CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum[] networkServices) {
         this.networkServices = networkServices;
         return this;
@@ -40,6 +44,7 @@ public class CreateTrafficMirrorFilterResultTrafficMirrorFilter {
     
     
     public CreateTrafficMirrorFilterResultTrafficMirrorFilterTags[] tags;
+
     public CreateTrafficMirrorFilterResultTrafficMirrorFilter withTags(CreateTrafficMirrorFilterResultTrafficMirrorFilterTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +52,11 @@ public class CreateTrafficMirrorFilterResultTrafficMirrorFilter {
     
     
     public String trafficMirrorFilterId;
+
     public CreateTrafficMirrorFilterResultTrafficMirrorFilter withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
     }
     
+    public CreateTrafficMirrorFilterResultTrafficMirrorFilter(){}
 }

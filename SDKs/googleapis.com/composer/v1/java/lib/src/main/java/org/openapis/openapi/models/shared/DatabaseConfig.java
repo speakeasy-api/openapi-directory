@@ -18,9 +18,11 @@ public class DatabaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public DatabaseConfig withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
     }
     
+    public DatabaseConfig(){}
 }

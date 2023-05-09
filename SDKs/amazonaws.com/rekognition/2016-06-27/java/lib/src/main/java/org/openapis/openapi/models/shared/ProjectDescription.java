@@ -22,6 +22,7 @@ public class ProjectDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public ProjectDescription withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class ProjectDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Datasets")
     public DatasetMetadata[] datasets;
+
     public ProjectDescription withDatasets(DatasetMetadata[] datasets) {
         this.datasets = datasets;
         return this;
@@ -38,6 +40,7 @@ public class ProjectDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public ProjectDescription withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -46,9 +49,11 @@ public class ProjectDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProjectStatusEnum status;
+
     public ProjectDescription withStatus(ProjectStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ProjectDescription(){}
 }

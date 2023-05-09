@@ -15,6 +15,7 @@ public class AzureSubscriptionListForUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     public Boolean isBillable;
+
     public AzureSubscriptionListForUser200ApplicationJSON withIsBillable(Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
@@ -26,6 +27,7 @@ public class AzureSubscriptionListForUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billing")
     public Boolean isBilling;
+
     public AzureSubscriptionListForUser200ApplicationJSON withIsBilling(Boolean isBilling) {
         this.isBilling = isBilling;
         return this;
@@ -37,6 +39,7 @@ public class AzureSubscriptionListForUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_microsoft_internal")
     public Boolean isMicrosoftInternal;
+
     public AzureSubscriptionListForUser200ApplicationJSON withIsMicrosoftInternal(Boolean isMicrosoftInternal) {
         this.isMicrosoftInternal = isMicrosoftInternal;
         return this;
@@ -47,6 +50,7 @@ public class AzureSubscriptionListForUser200ApplicationJSON {
      */
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public AzureSubscriptionListForUser200ApplicationJSON withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -57,6 +61,7 @@ public class AzureSubscriptionListForUser200ApplicationJSON {
      */
     @JsonProperty("subscription_name")
     public String subscriptionName;
+
     public AzureSubscriptionListForUser200ApplicationJSON withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -67,9 +72,15 @@ public class AzureSubscriptionListForUser200ApplicationJSON {
      */
     @JsonProperty("tenant_id")
     public String tenantId;
+
     public AzureSubscriptionListForUser200ApplicationJSON withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public AzureSubscriptionListForUser200ApplicationJSON(@JsonProperty("subscription_id") String subscriptionId, @JsonProperty("subscription_name") String subscriptionName, @JsonProperty("tenant_id") String tenantId) {
+        this.subscriptionId = subscriptionId;
+        this.subscriptionName = subscriptionName;
+        this.tenantId = tenantId;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2IntentMessageText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String[] text;
+
     public GoogleCloudDialogflowV2IntentMessageText withText(String[] text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageText(){}
 }

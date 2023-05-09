@@ -15,6 +15,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpecDoubleValueSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Double maxValue;
+
     public GoogleCloudMlV1StudyConfigParameterSpecDoubleValueSpec withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -26,9 +27,11 @@ public class GoogleCloudMlV1StudyConfigParameterSpecDoubleValueSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Double minValue;
+
     public GoogleCloudMlV1StudyConfigParameterSpecDoubleValueSpec withMinValue(Double minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    public GoogleCloudMlV1StudyConfigParameterSpecDoubleValueSpec(){}
 }

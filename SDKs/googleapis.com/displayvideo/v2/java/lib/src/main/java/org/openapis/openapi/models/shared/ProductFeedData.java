@@ -18,6 +18,7 @@ public class ProductFeedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFeedDisabled")
     public Boolean isFeedDisabled;
+
     public ProductFeedData withIsFeedDisabled(Boolean isFeedDisabled) {
         this.isFeedDisabled = isFeedDisabled;
         return this;
@@ -29,6 +30,7 @@ public class ProductFeedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productMatchDimensions")
     public ProductMatchDimension[] productMatchDimensions;
+
     public ProductFeedData withProductMatchDimensions(ProductMatchDimension[] productMatchDimensions) {
         this.productMatchDimensions = productMatchDimensions;
         return this;
@@ -40,9 +42,11 @@ public class ProductFeedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productMatchType")
     public ProductFeedDataProductMatchTypeEnum productMatchType;
+
     public ProductFeedData withProductMatchType(ProductFeedDataProductMatchTypeEnum productMatchType) {
         this.productMatchType = productMatchType;
         return this;
     }
     
+    public ProductFeedData(){}
 }

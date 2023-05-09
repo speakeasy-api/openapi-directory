@@ -18,6 +18,7 @@ public class PropertyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public PropertyFilterOpEnum op;
+
     public PropertyFilter withOp(PropertyFilterOpEnum op) {
         this.op = op;
         return this;
@@ -29,6 +30,7 @@ public class PropertyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public PropertyReference property;
+
     public PropertyFilter withProperty(PropertyReference property) {
         this.property = property;
         return this;
@@ -40,9 +42,11 @@ public class PropertyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Value value;
+
     public PropertyFilter withValue(Value value) {
         this.value = value;
         return this;
     }
     
+    public PropertyFilter(){}
 }

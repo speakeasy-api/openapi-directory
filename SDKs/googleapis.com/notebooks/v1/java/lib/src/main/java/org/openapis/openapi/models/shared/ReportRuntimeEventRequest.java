@@ -18,6 +18,7 @@ public class ReportRuntimeEventRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public Event event;
+
     public ReportRuntimeEventRequest withEvent(Event event) {
         this.event = event;
         return this;
@@ -29,9 +30,11 @@ public class ReportRuntimeEventRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmId")
     public String vmId;
+
     public ReportRuntimeEventRequest withVmId(String vmId) {
         this.vmId = vmId;
         return this;
     }
     
+    public ReportRuntimeEventRequest(){}
 }

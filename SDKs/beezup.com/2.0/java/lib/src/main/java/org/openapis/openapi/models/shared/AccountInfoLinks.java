@@ -15,6 +15,7 @@ public class AccountInfoLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activateUserAccount")
     public LinksActivateUserAccountLink activateUserAccount;
+
     public AccountInfoLinks withActivateUserAccount(LinksActivateUserAccountLink activateUserAccount) {
         this.activateUserAccount = activateUserAccount;
         return this;
@@ -22,6 +23,7 @@ public class AccountInfoLinks {
     
     @JsonProperty("changeEmail")
     public LinksChangeEmailLink changeEmail;
+
     public AccountInfoLinks withChangeEmail(LinksChangeEmailLink changeEmail) {
         this.changeEmail = changeEmail;
         return this;
@@ -29,6 +31,7 @@ public class AccountInfoLinks {
     
     @JsonProperty("changePassword")
     public LinksChangePasswordLink changePassword;
+
     public AccountInfoLinks withChangePassword(LinksChangePasswordLink changePassword) {
         this.changePassword = changePassword;
         return this;
@@ -36,6 +39,7 @@ public class AccountInfoLinks {
     
     @JsonProperty("getCreditCardInfo")
     public LinksGetCreditCardInfoLink getCreditCardInfo;
+
     public AccountInfoLinks withGetCreditCardInfo(LinksGetCreditCardInfoLink getCreditCardInfo) {
         this.getCreditCardInfo = getCreditCardInfo;
         return this;
@@ -43,6 +47,7 @@ public class AccountInfoLinks {
     
     @JsonProperty("getProfilePictureInfo")
     public LinksGetProfilePictureInfoLink getProfilePictureInfo;
+
     public AccountInfoLinks withGetProfilePictureInfo(LinksGetProfilePictureInfoLink getProfilePictureInfo) {
         this.getProfilePictureInfo = getProfilePictureInfo;
         return this;
@@ -50,6 +55,7 @@ public class AccountInfoLinks {
     
     @JsonProperty("saveCompanyInfo")
     public LinksSaveCompanyInfoLink saveCompanyInfo;
+
     public AccountInfoLinks withSaveCompanyInfo(LinksSaveCompanyInfoLink saveCompanyInfo) {
         this.saveCompanyInfo = saveCompanyInfo;
         return this;
@@ -57,6 +63,7 @@ public class AccountInfoLinks {
     
     @JsonProperty("saveCreditCardInfo")
     public LinksSaveCreditCardInfoLink saveCreditCardInfo;
+
     public AccountInfoLinks withSaveCreditCardInfo(LinksSaveCreditCardInfoLink saveCreditCardInfo) {
         this.saveCreditCardInfo = saveCreditCardInfo;
         return this;
@@ -64,6 +71,7 @@ public class AccountInfoLinks {
     
     @JsonProperty("savePersonalInfo")
     public LinksSavePersonalInfoLink savePersonalInfo;
+
     public AccountInfoLinks withSavePersonalInfo(LinksSavePersonalInfoLink savePersonalInfo) {
         this.savePersonalInfo = savePersonalInfo;
         return this;
@@ -71,6 +79,7 @@ public class AccountInfoLinks {
     
     @JsonProperty("saveProfilePictureInfo")
     public LinksSaveProfilePictureInfoLink saveProfilePictureInfo;
+
     public AccountInfoLinks withSaveProfilePictureInfo(LinksSaveProfilePictureInfoLink saveProfilePictureInfo) {
         this.saveProfilePictureInfo = saveProfilePictureInfo;
         return this;
@@ -78,9 +87,21 @@ public class AccountInfoLinks {
     
     @JsonProperty("self")
     public LinksGetUserAccountInfoLink self;
+
     public AccountInfoLinks withSelf(LinksGetUserAccountInfoLink self) {
         this.self = self;
         return this;
     }
     
+    public AccountInfoLinks(@JsonProperty("changeEmail") LinksChangeEmailLink changeEmail, @JsonProperty("changePassword") LinksChangePasswordLink changePassword, @JsonProperty("getCreditCardInfo") LinksGetCreditCardInfoLink getCreditCardInfo, @JsonProperty("getProfilePictureInfo") LinksGetProfilePictureInfoLink getProfilePictureInfo, @JsonProperty("saveCompanyInfo") LinksSaveCompanyInfoLink saveCompanyInfo, @JsonProperty("saveCreditCardInfo") LinksSaveCreditCardInfoLink saveCreditCardInfo, @JsonProperty("savePersonalInfo") LinksSavePersonalInfoLink savePersonalInfo, @JsonProperty("saveProfilePictureInfo") LinksSaveProfilePictureInfoLink saveProfilePictureInfo, @JsonProperty("self") LinksGetUserAccountInfoLink self) {
+        this.changeEmail = changeEmail;
+        this.changePassword = changePassword;
+        this.getCreditCardInfo = getCreditCardInfo;
+        this.getProfilePictureInfo = getProfilePictureInfo;
+        this.saveCompanyInfo = saveCompanyInfo;
+        this.saveCreditCardInfo = saveCreditCardInfo;
+        this.savePersonalInfo = savePersonalInfo;
+        this.saveProfilePictureInfo = saveProfilePictureInfo;
+        this.self = self;
+  }
 }

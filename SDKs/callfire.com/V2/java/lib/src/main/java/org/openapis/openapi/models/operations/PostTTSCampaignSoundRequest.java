@@ -12,6 +12,7 @@ public class PostTTSCampaignSoundRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TextToSpeech textToSpeech;
+
     public PostTTSCampaignSoundRequest withTextToSpeech(org.openapis.openapi.models.shared.TextToSpeech textToSpeech) {
         this.textToSpeech = textToSpeech;
         return this;
@@ -22,9 +23,11 @@ public class PostTTSCampaignSoundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PostTTSCampaignSoundRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public PostTTSCampaignSoundRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAnswersRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
     public String lensAlias;
+
     public ListAnswersRequest withLensAlias(String lensAlias) {
         this.lensAlias = lensAlias;
         return this;
@@ -19,6 +21,7 @@ public class ListAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public ListAnswersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +29,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MilestoneNumber")
     public Long milestoneNumber;
+
     public ListAnswersRequest withMilestoneNumber(Long milestoneNumber) {
         this.milestoneNumber = milestoneNumber;
         return this;
@@ -33,6 +37,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListAnswersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -40,6 +45,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PillarId")
     public String pillarId;
+
     public ListAnswersRequest withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -47,6 +53,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
     public String workloadId;
+
     public ListAnswersRequest withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -54,6 +61,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAnswersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -61,6 +69,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAnswersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -68,6 +77,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAnswersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -75,6 +85,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAnswersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -82,6 +93,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAnswersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -89,6 +101,7 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAnswersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -96,9 +109,14 @@ public class ListAnswersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAnswersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListAnswersRequest(@JsonProperty("LensAlias") String lensAlias, @JsonProperty("WorkloadId") String workloadId) {
+        this.lensAlias = lensAlias;
+        this.workloadId = workloadId;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateChatTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public CreateChatTokenRequestBody withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class CreateChatTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public org.openapis.openapi.models.shared.ChatTokenCapabilityEnum[] capabilities;
+
     public CreateChatTokenRequestBody withCapabilities(org.openapis.openapi.models.shared.ChatTokenCapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -36,6 +38,7 @@ public class CreateChatTokenRequestBody {
      */
     @JsonProperty("roomIdentifier")
     public String roomIdentifier;
+
     public CreateChatTokenRequestBody withRoomIdentifier(String roomIdentifier) {
         this.roomIdentifier = roomIdentifier;
         return this;
@@ -47,6 +50,7 @@ public class CreateChatTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionDurationInMinutes")
     public Long sessionDurationInMinutes;
+
     public CreateChatTokenRequestBody withSessionDurationInMinutes(Long sessionDurationInMinutes) {
         this.sessionDurationInMinutes = sessionDurationInMinutes;
         return this;
@@ -57,9 +61,14 @@ public class CreateChatTokenRequestBody {
      */
     @JsonProperty("userId")
     public String userId;
+
     public CreateChatTokenRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CreateChatTokenRequestBody(@JsonProperty("roomIdentifier") String roomIdentifier, @JsonProperty("userId") String userId) {
+        this.roomIdentifier = roomIdentifier;
+        this.userId = userId;
+  }
 }

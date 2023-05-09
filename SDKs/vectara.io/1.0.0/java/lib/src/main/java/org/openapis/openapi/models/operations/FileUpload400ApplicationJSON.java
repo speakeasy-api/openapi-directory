@@ -18,9 +18,11 @@ public class FileUpload400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpCode")
     public Long httpCode;
+
     public FileUpload400ApplicationJSON withHttpCode(Long httpCode) {
         this.httpCode = httpCode;
         return this;
     }
     
+    public FileUpload400ApplicationJSON(){}
 }

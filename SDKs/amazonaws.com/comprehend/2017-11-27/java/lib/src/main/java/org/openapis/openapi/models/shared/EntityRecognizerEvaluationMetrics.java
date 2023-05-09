@@ -15,6 +15,7 @@ public class EntityRecognizerEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("F1Score")
     public Double f1Score;
+
     public EntityRecognizerEvaluationMetrics withF1Score(Double f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -23,6 +24,7 @@ public class EntityRecognizerEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Precision")
     public Double precision;
+
     public EntityRecognizerEvaluationMetrics withPrecision(Double precision) {
         this.precision = precision;
         return this;
@@ -31,9 +33,11 @@ public class EntityRecognizerEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recall")
     public Double recall;
+
     public EntityRecognizerEvaluationMetrics withRecall(Double recall) {
         this.recall = recall;
         return this;
     }
     
+    public EntityRecognizerEvaluationMetrics(){}
 }

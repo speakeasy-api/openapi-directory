@@ -15,9 +15,11 @@ public class ImportDataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceUrl")
     public String dataSourceUrl;
+
     public ImportDataSourceConfig withDataSourceUrl(String dataSourceUrl) {
         this.dataSourceUrl = dataSourceUrl;
         return this;
     }
     
+    public ImportDataSourceConfig(){}
 }

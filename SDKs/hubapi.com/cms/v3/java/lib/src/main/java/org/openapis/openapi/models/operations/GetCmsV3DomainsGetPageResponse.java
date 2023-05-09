@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCmsV3DomainsGetPageResponse {
     
     public byte[] body;
+
     public GetCmsV3DomainsGetPageResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetCmsV3DomainsGetPageResponse {
      */
     
     public org.openapis.openapi.models.shared.CollectionResponseWithTotalDomainForwardPaging collectionResponseWithTotalDomainForwardPaging;
+
     public GetCmsV3DomainsGetPageResponse withCollectionResponseWithTotalDomainForwardPaging(org.openapis.openapi.models.shared.CollectionResponseWithTotalDomainForwardPaging collectionResponseWithTotalDomainForwardPaging) {
         this.collectionResponseWithTotalDomainForwardPaging = collectionResponseWithTotalDomainForwardPaging;
         return this;
@@ -26,6 +29,7 @@ public class GetCmsV3DomainsGetPageResponse {
     
     
     public String contentType;
+
     public GetCmsV3DomainsGetPageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetCmsV3DomainsGetPageResponse {
     
     
     public Integer statusCode;
+
     public GetCmsV3DomainsGetPageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetCmsV3DomainsGetPageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCmsV3DomainsGetPageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCmsV3DomainsGetPageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

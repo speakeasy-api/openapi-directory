@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PlayMediaIntentHandlingInvocation {
     @JsonProperty("method")
     public String method;
+
     public PlayMediaIntentHandlingInvocation withMethod(String method) {
         this.method = method;
         return this;
@@ -18,6 +19,7 @@ public class PlayMediaIntentHandlingInvocation {
     
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public PlayMediaIntentHandlingInvocation withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
@@ -26,9 +28,14 @@ public class PlayMediaIntentHandlingInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session")
     public Session session;
+
     public PlayMediaIntentHandlingInvocation withSession(Session session) {
         this.session = session;
         return this;
     }
     
+    public PlayMediaIntentHandlingInvocation(@JsonProperty("method") String method, @JsonProperty("params") java.util.Map<String, Object> params) {
+        this.method = method;
+        this.params = params;
+  }
 }

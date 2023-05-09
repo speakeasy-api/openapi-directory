@@ -51,4 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudResourcesettings
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudResourcesettingsV1ListSettingsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

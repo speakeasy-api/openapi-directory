@@ -15,9 +15,11 @@ public class DeprovisionByoipCidrResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ByoipCidr")
     public ByoipCidr byoipCidr;
+
     public DeprovisionByoipCidrResponse withByoipCidr(ByoipCidr byoipCidr) {
         this.byoipCidr = byoipCidr;
         return this;
     }
     
+    public DeprovisionByoipCidrResponse(){}
 }

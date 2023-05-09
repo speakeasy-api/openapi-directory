@@ -22,6 +22,7 @@ public class ImpersonationRole {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateCreated")
     public OffsetDateTime dateCreated;
+
     public ImpersonationRole withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -32,6 +33,7 @@ public class ImpersonationRole {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateModified")
     public OffsetDateTime dateModified;
+
     public ImpersonationRole withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -40,6 +42,7 @@ public class ImpersonationRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImpersonationRoleId")
     public String impersonationRoleId;
+
     public ImpersonationRole withImpersonationRoleId(String impersonationRoleId) {
         this.impersonationRoleId = impersonationRoleId;
         return this;
@@ -48,6 +51,7 @@ public class ImpersonationRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ImpersonationRole withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,11 @@ public class ImpersonationRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ImpersonationRoleTypeEnum type;
+
     public ImpersonationRole withType(ImpersonationRoleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ImpersonationRole(){}
 }

@@ -52,11 +52,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolWebGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetConfigResponse(contentType, httpRes.statusCode()) {{
             configWEB = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolWebGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolWebGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolWebGetTraceResponse(contentType, httpRes.statusCode()) {{
             configWEB = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebPortAddResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortAddResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebPortAddResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortAddResponse(contentType, httpRes.statusCode()) {{
             protocolWebPortAdd200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +290,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebPortExistsResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortExistsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebPortExistsResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortExistsResponse(contentType, httpRes.statusCode()) {{
             protocolWebPortExists200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +330,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebPortRemoveResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortRemoveResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebPortRemoveResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortRemoveResponse(contentType, httpRes.statusCode()) {{
             protocolWebPortRemove200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +369,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebPortSetResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortSetResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebPortSetResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortSetResponse(contentType, httpRes.statusCode()) {{
             protocolWebPortSet200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,11 +408,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebPortStartResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortStartResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebPortStartResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortStartResponse(contentType, httpRes.statusCode()) {{
             protocolWebPortStart200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,11 +447,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebPortStopResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortStopResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebPortStopResponse res = new org.openapis.openapi.models.operations.ProtocolWebPortStopResponse(contentType, httpRes.statusCode()) {{
             protocolWebPortStop200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,11 +486,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolWebSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolWebSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolWebSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -549,11 +525,9 @@ public class Web {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolWebSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolWebSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolWebSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolWebSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolWebSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

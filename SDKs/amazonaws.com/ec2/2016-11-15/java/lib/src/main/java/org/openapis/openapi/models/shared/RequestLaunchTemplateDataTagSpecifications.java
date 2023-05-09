@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestLaunchTemplateDataTagSpecifications {
     
     public ResourceTypeEnum resourceType;
+
     public RequestLaunchTemplateDataTagSpecifications withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class RequestLaunchTemplateDataTagSpecifications {
     
     
     public RequestLaunchTemplateDataTagSpecificationsTags[] tags;
+
     public RequestLaunchTemplateDataTagSpecifications withTags(RequestLaunchTemplateDataTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RequestLaunchTemplateDataTagSpecifications(){}
 }

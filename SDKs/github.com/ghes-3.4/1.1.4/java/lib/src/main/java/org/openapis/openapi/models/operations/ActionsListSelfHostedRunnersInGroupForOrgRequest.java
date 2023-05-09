@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListSelfHostedRunnersInGroupForOrgRequest {
@@ -12,6 +13,7 @@ public class ActionsListSelfHostedRunnersInGroupForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsListSelfHostedRunnersInGroupForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,6 +24,7 @@ public class ActionsListSelfHostedRunnersInGroupForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListSelfHostedRunnersInGroupForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ActionsListSelfHostedRunnersInGroupForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListSelfHostedRunnersInGroupForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,14 @@ public class ActionsListSelfHostedRunnersInGroupForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
     public Long runnerGroupId;
+
     public ActionsListSelfHostedRunnersInGroupForOrgRequest withRunnerGroupId(Long runnerGroupId) {
         this.runnerGroupId = runnerGroupId;
         return this;
     }
     
+    public ActionsListSelfHostedRunnersInGroupForOrgRequest(@JsonProperty("org") String org, @JsonProperty("runner_group_id") Long runnerGroupId) {
+        this.org = org;
+        this.runnerGroupId = runnerGroupId;
+  }
 }

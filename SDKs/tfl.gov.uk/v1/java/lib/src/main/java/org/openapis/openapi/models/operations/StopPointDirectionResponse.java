@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPointDirectionResponse {
     
     public String contentType;
+
     public StopPointDirectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StopPointDirectionResponse {
     
     
     public Integer statusCode;
+
     public StopPointDirectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class StopPointDirectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPointDirectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class StopPointDirectionResponse {
      */
     
     public String stopPointDirection200ApplicationJSONString;
+
     public StopPointDirectionResponse withStopPointDirection200ApplicationJSONString(String stopPointDirection200ApplicationJSONString) {
         this.stopPointDirection200ApplicationJSONString = stopPointDirection200ApplicationJSONString;
         return this;
@@ -43,6 +48,7 @@ public class StopPointDirectionResponse {
      */
     
     public String stopPointDirection200ApplicationXMLString;
+
     public StopPointDirectionResponse withStopPointDirection200ApplicationXMLString(String stopPointDirection200ApplicationXMLString) {
         this.stopPointDirection200ApplicationXMLString = stopPointDirection200ApplicationXMLString;
         return this;
@@ -53,6 +59,7 @@ public class StopPointDirectionResponse {
      */
     
     public String stopPointDirection200TextJSONString;
+
     public StopPointDirectionResponse withStopPointDirection200TextJSONString(String stopPointDirection200TextJSONString) {
         this.stopPointDirection200TextJSONString = stopPointDirection200TextJSONString;
         return this;
@@ -63,9 +70,14 @@ public class StopPointDirectionResponse {
      */
     
     public String stopPointDirection200TextXMLString;
+
     public StopPointDirectionResponse withStopPointDirection200TextXMLString(String stopPointDirection200TextXMLString) {
         this.stopPointDirection200TextXMLString = stopPointDirection200TextXMLString;
         return this;
     }
     
+    public StopPointDirectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

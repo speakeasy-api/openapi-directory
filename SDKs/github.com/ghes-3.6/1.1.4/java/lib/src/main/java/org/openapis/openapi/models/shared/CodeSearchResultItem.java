@@ -20,6 +20,7 @@ public class CodeSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_size")
     public Long fileSize;
+
     public CodeSearchResultItem withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -27,6 +28,7 @@ public class CodeSearchResultItem {
     
     @JsonProperty("git_url")
     public String gitUrl;
+
     public CodeSearchResultItem withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -34,6 +36,7 @@ public class CodeSearchResultItem {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CodeSearchResultItem withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -42,6 +45,7 @@ public class CodeSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public CodeSearchResultItem withLanguage(String language) {
         this.language = language;
         return this;
@@ -52,6 +56,7 @@ public class CodeSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_modified_at")
     public OffsetDateTime lastModifiedAt;
+
     public CodeSearchResultItem withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -60,6 +65,7 @@ public class CodeSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_numbers")
     public String[] lineNumbers;
+
     public CodeSearchResultItem withLineNumbers(String[] lineNumbers) {
         this.lineNumbers = lineNumbers;
         return this;
@@ -67,6 +73,7 @@ public class CodeSearchResultItem {
     
     @JsonProperty("name")
     public String name;
+
     public CodeSearchResultItem withName(String name) {
         this.name = name;
         return this;
@@ -74,6 +81,7 @@ public class CodeSearchResultItem {
     
     @JsonProperty("path")
     public String path;
+
     public CodeSearchResultItem withPath(String path) {
         this.path = path;
         return this;
@@ -84,6 +92,7 @@ public class CodeSearchResultItem {
      */
     @JsonProperty("repository")
     public MinimalRepository repository;
+
     public CodeSearchResultItem withRepository(MinimalRepository repository) {
         this.repository = repository;
         return this;
@@ -91,6 +100,7 @@ public class CodeSearchResultItem {
     
     @JsonProperty("score")
     public Double score;
+
     public CodeSearchResultItem withScore(Double score) {
         this.score = score;
         return this;
@@ -98,6 +108,7 @@ public class CodeSearchResultItem {
     
     @JsonProperty("sha")
     public String sha;
+
     public CodeSearchResultItem withSha(String sha) {
         this.sha = sha;
         return this;
@@ -106,6 +117,7 @@ public class CodeSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_matches")
     public SearchResultTextMatches[] textMatches;
+
     public CodeSearchResultItem withTextMatches(SearchResultTextMatches[] textMatches) {
         this.textMatches = textMatches;
         return this;
@@ -113,9 +125,20 @@ public class CodeSearchResultItem {
     
     @JsonProperty("url")
     public String url;
+
     public CodeSearchResultItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CodeSearchResultItem(@JsonProperty("git_url") String gitUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("repository") MinimalRepository repository, @JsonProperty("score") Double score, @JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.gitUrl = gitUrl;
+        this.htmlUrl = htmlUrl;
+        this.name = name;
+        this.path = path;
+        this.repository = repository;
+        this.score = score;
+        this.sha = sha;
+        this.url = url;
+  }
 }

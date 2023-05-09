@@ -12,9 +12,13 @@ public class BankAccountIdentificationValidationRequest {
      */
     @JsonProperty("accountIdentification")
     public Object accountIdentification;
+
     public BankAccountIdentificationValidationRequest withAccountIdentification(Object accountIdentification) {
         this.accountIdentification = accountIdentification;
         return this;
     }
     
+    public BankAccountIdentificationValidationRequest(@JsonProperty("accountIdentification") Object accountIdentification) {
+        this.accountIdentification = accountIdentification;
+  }
 }

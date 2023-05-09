@@ -22,6 +22,7 @@ public class DateFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endInclusive")
     public OffsetDateTime endInclusive;
+
     public DateFilter withEndInclusive(OffsetDateTime endInclusive) {
         this.endInclusive = endInclusive;
         return this;
@@ -32,9 +33,11 @@ public class DateFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startInclusive")
     public OffsetDateTime startInclusive;
+
     public DateFilter withStartInclusive(OffsetDateTime startInclusive) {
         this.startInclusive = startInclusive;
         return this;
     }
     
+    public DateFilter(){}
 }

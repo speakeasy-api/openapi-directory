@@ -20,6 +20,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public WorkflowAttributes attributes;
+
     public GetWorkflowResponse withAttributes(WorkflowAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +29,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDescription")
     public String errorDescription;
+
     public GetWorkflowResponse withErrorDescription(String errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -38,6 +40,7 @@ public class GetWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetWorkflowResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -46,6 +49,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public WorkflowMetrics metrics;
+
     public GetWorkflowResponse withMetrics(WorkflowMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -56,6 +60,7 @@ public class GetWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDate")
     public OffsetDateTime startDate;
+
     public GetWorkflowResponse withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -64,6 +69,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public GetWorkflowResponse withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -72,6 +78,7 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public GetWorkflowResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -80,9 +87,11 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowType")
     public WorkflowTypeEnum workflowType;
+
     public GetWorkflowResponse withWorkflowType(WorkflowTypeEnum workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public GetWorkflowResponse(){}
 }

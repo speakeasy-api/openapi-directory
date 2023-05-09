@@ -15,9 +15,11 @@ public class ListS3BucketsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListS3BucketsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListS3BucketsRequestBody(){}
 }

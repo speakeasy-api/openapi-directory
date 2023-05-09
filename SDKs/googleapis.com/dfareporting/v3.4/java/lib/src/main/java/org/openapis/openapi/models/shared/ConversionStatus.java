@@ -18,6 +18,7 @@ public class ConversionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversion")
     public Conversion conversion;
+
     public ConversionStatus withConversion(Conversion conversion) {
         this.conversion = conversion;
         return this;
@@ -29,6 +30,7 @@ public class ConversionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ConversionError[] errors;
+
     public ConversionStatus withErrors(ConversionError[] errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class ConversionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ConversionStatus withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ConversionStatus(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTaskProtectionRequest {
     @JsonProperty("cluster")
     public String cluster;
+
     public UpdateTaskProtectionRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,6 +20,7 @@ public class UpdateTaskProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresInMinutes")
     public Long expiresInMinutes;
+
     public UpdateTaskProtectionRequest withExpiresInMinutes(Long expiresInMinutes) {
         this.expiresInMinutes = expiresInMinutes;
         return this;
@@ -26,6 +28,7 @@ public class UpdateTaskProtectionRequest {
     
     @JsonProperty("protectionEnabled")
     public Boolean protectionEnabled;
+
     public UpdateTaskProtectionRequest withProtectionEnabled(Boolean protectionEnabled) {
         this.protectionEnabled = protectionEnabled;
         return this;
@@ -33,9 +36,15 @@ public class UpdateTaskProtectionRequest {
     
     @JsonProperty("tasks")
     public String[] tasks;
+
     public UpdateTaskProtectionRequest withTasks(String[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public UpdateTaskProtectionRequest(@JsonProperty("cluster") String cluster, @JsonProperty("protectionEnabled") Boolean protectionEnabled, @JsonProperty("tasks") String[] tasks) {
+        this.cluster = cluster;
+        this.protectionEnabled = protectionEnabled;
+        this.tasks = tasks;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETReservedNodeExchangeConfigurationOptionsActionEnum action;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withAction(GETGETReservedNodeExchangeConfigurationOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ActionType")
     public GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum actionType;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withActionType(GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -29,6 +32,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -49,6 +54,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -59,6 +65,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
     public String snapshotIdentifier;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -66,6 +73,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETReservedNodeExchangeConfigurationOptionsVersionEnum version;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withVersion(GETGETReservedNodeExchangeConfigurationOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest(@JsonProperty("Action") GETGETReservedNodeExchangeConfigurationOptionsActionEnum action, @JsonProperty("ActionType") GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum actionType, @JsonProperty("Version") GETGETReservedNodeExchangeConfigurationOptionsVersionEnum version) {
+        this.action = action;
+        this.actionType = actionType;
+        this.version = version;
+  }
 }

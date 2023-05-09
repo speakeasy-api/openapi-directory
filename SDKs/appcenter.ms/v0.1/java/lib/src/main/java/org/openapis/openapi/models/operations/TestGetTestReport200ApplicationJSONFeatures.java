@@ -12,6 +12,7 @@ public class TestGetTestReport200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Double failed;
+
     public TestGetTestReport200ApplicationJSONFeatures withFailed(Double failed) {
         this.failed = failed;
         return this;
@@ -20,6 +21,7 @@ public class TestGetTestReport200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestGetTestReport200ApplicationJSONFeatures withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class TestGetTestReport200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peakDuration")
     public Double peakDuration;
+
     public TestGetTestReport200ApplicationJSONFeatures withPeakDuration(Double peakDuration) {
         this.peakDuration = peakDuration;
         return this;
@@ -36,6 +39,7 @@ public class TestGetTestReport200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peakMemory")
     public Double peakMemory;
+
     public TestGetTestReport200ApplicationJSONFeatures withPeakMemory(Double peakMemory) {
         this.peakMemory = peakMemory;
         return this;
@@ -44,6 +48,7 @@ public class TestGetTestReport200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipped")
     public Double skipped;
+
     public TestGetTestReport200ApplicationJSONFeatures withSkipped(Double skipped) {
         this.skipped = skipped;
         return this;
@@ -52,9 +57,11 @@ public class TestGetTestReport200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tests")
     public TestGetTestReport200ApplicationJSONFeaturesTests[] tests;
+
     public TestGetTestReport200ApplicationJSONFeatures withTests(TestGetTestReport200ApplicationJSONFeaturesTests[] tests) {
         this.tests = tests;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSONFeatures(){}
 }

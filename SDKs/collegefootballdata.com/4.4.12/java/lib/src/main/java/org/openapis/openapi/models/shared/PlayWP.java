@@ -12,6 +12,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("away")
     public String away;
+
     public PlayWP withAway(String away) {
         this.away = away;
         return this;
@@ -20,6 +21,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayId")
     public Long awayId;
+
     public PlayWP withAwayId(Long awayId) {
         this.awayId = awayId;
         return this;
@@ -28,6 +30,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayScore")
     public Long awayScore;
+
     public PlayWP withAwayScore(Long awayScore) {
         this.awayScore = awayScore;
         return this;
@@ -36,6 +39,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Long distance;
+
     public PlayWP withDistance(Long distance) {
         this.distance = distance;
         return this;
@@ -44,6 +48,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("down")
     public Long down;
+
     public PlayWP withDown(Long down) {
         this.down = down;
         return this;
@@ -52,6 +57,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gamesId")
     public Long gamesId;
+
     public PlayWP withGamesId(Long gamesId) {
         this.gamesId = gamesId;
         return this;
@@ -60,6 +66,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home")
     public String home;
+
     public PlayWP withHome(String home) {
         this.home = home;
         return this;
@@ -68,6 +75,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeBall")
     public Boolean homeBall;
+
     public PlayWP withHomeBall(Boolean homeBall) {
         this.homeBall = homeBall;
         return this;
@@ -76,6 +84,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeId")
     public Long homeId;
+
     public PlayWP withHomeId(Long homeId) {
         this.homeId = homeId;
         return this;
@@ -84,6 +93,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeScore")
     public Long homeScore;
+
     public PlayWP withHomeScore(Long homeScore) {
         this.homeScore = homeScore;
         return this;
@@ -92,6 +102,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeWinProb")
     public Double homeWinProb;
+
     public PlayWP withHomeWinProb(Double homeWinProb) {
         this.homeWinProb = homeWinProb;
         return this;
@@ -100,6 +111,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playId")
     public Long playId;
+
     public PlayWP withPlayId(Long playId) {
         this.playId = playId;
         return this;
@@ -108,6 +120,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playNumber")
     public Long playNumber;
+
     public PlayWP withPlayNumber(Long playNumber) {
         this.playNumber = playNumber;
         return this;
@@ -116,6 +129,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playText")
     public String playText;
+
     public PlayWP withPlayText(String playText) {
         this.playText = playText;
         return this;
@@ -124,6 +138,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spread")
     public Double spread;
+
     public PlayWP withSpread(Double spread) {
         this.spread = spread;
         return this;
@@ -132,6 +147,7 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeRemaining")
     public Long timeRemaining;
+
     public PlayWP withTimeRemaining(Long timeRemaining) {
         this.timeRemaining = timeRemaining;
         return this;
@@ -140,9 +156,11 @@ public class PlayWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yardLine")
     public Long yardLine;
+
     public PlayWP withYardLine(Long yardLine) {
         this.yardLine = yardLine;
         return this;
     }
     
+    public PlayWP(){}
 }

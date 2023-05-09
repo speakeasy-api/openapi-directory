@@ -18,6 +18,7 @@ public class GuestDiaryParametersResultsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Integer count;
+
     public GuestDiaryParametersResultsModel withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class GuestDiaryParametersResultsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public GuestDiaryParametersModel[] data;
+
     public GuestDiaryParametersResultsModel withData(GuestDiaryParametersModel[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class GuestDiaryParametersResultsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public BaseHypermediaLink[] links;
+
     public GuestDiaryParametersResultsModel withLinks(BaseHypermediaLink[] links) {
         this.links = links;
         return this;
     }
     
+    public GuestDiaryParametersResultsModel(){}
 }

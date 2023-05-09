@@ -132,4 +132,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ModelsPackageUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/ControllersAdvisoriesSystemsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ControllersSystemsAdvisoriesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ControllersSystemsAdvisoriesResponse.java
+docs/sdk/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class ReconfigureTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trust")
     public Trust trust;
+
     public ReconfigureTrustRequest withTrust(Trust trust) {
         this.trust = trust;
         return this;
     }
     
+    public ReconfigureTrustRequest(){}
 }

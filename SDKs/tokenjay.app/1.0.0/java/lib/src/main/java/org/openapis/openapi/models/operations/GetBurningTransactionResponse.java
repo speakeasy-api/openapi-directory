@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBurningTransactionResponse {
     
     public byte[] body;
+
     public GetBurningTransactionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetBurningTransactionResponse {
     
     
     public String contentType;
+
     public GetBurningTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetBurningTransactionResponse {
     
     
     public Integer statusCode;
+
     public GetBurningTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetBurningTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBurningTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetBurningTransactionResponse {
      */
     
     public String getBurningTransaction400WildcardString;
+
     public GetBurningTransactionResponse withGetBurningTransaction400WildcardString(String getBurningTransaction400WildcardString) {
         this.getBurningTransaction400WildcardString = getBurningTransaction400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class GetBurningTransactionResponse {
      */
     
     public String getBurningTransaction401WildcardString;
+
     public GetBurningTransactionResponse withGetBurningTransaction401WildcardString(String getBurningTransaction401WildcardString) {
         this.getBurningTransaction401WildcardString = getBurningTransaction401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class GetBurningTransactionResponse {
      */
     
     public String getBurningTransaction404WildcardString;
+
     public GetBurningTransactionResponse withGetBurningTransaction404WildcardString(String getBurningTransaction404WildcardString) {
         this.getBurningTransaction404WildcardString = getBurningTransaction404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class GetBurningTransactionResponse {
      */
     
     public String getBurningTransaction409WildcardString;
+
     public GetBurningTransactionResponse withGetBurningTransaction409WildcardString(String getBurningTransaction409WildcardString) {
         this.getBurningTransaction409WildcardString = getBurningTransaction409WildcardString;
         return this;
     }
     
+    public GetBurningTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

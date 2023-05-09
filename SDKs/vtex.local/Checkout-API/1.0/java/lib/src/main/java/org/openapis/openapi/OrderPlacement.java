@@ -72,11 +72,9 @@ public class OrderPlacement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceOrderResponse res = new org.openapis.openapi.models.operations.PlaceOrderResponse() {{
+        org.openapis.openapi.models.operations.PlaceOrderResponse res = new org.openapis.openapi.models.operations.PlaceOrderResponse(contentType, httpRes.statusCode()) {{
             placeOrder200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class OrderPlacement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceOrderFromExistingOrderFormResponse res = new org.openapis.openapi.models.operations.PlaceOrderFromExistingOrderFormResponse() {{
+        org.openapis.openapi.models.operations.PlaceOrderFromExistingOrderFormResponse res = new org.openapis.openapi.models.operations.PlaceOrderFromExistingOrderFormResponse(contentType, httpRes.statusCode()) {{
             placeOrderFromExistingOrderForm200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +170,9 @@ public class OrderPlacement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProcessOrderResponse res = new org.openapis.openapi.models.operations.ProcessOrderResponse() {{
+        org.openapis.openapi.models.operations.ProcessOrderResponse res = new org.openapis.openapi.models.operations.ProcessOrderResponse(contentType, httpRes.statusCode()) {{
             processOrder500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

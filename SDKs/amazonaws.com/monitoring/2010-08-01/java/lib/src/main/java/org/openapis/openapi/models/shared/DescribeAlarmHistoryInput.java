@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DescribeAlarmHistoryInput {
     
     public String alarmName;
+
     public DescribeAlarmHistoryInput withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAlarmHistoryInput {
     
     
     public AlarmTypeEnum[] alarmTypes;
+
     public DescribeAlarmHistoryInput withAlarmTypes(AlarmTypeEnum[] alarmTypes) {
         this.alarmTypes = alarmTypes;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAlarmHistoryInput {
     
     
     public OffsetDateTime endDate;
+
     public DescribeAlarmHistoryInput withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -30,6 +33,7 @@ public class DescribeAlarmHistoryInput {
     
     
     public HistoryItemTypeEnum historyItemType;
+
     public DescribeAlarmHistoryInput withHistoryItemType(HistoryItemTypeEnum historyItemType) {
         this.historyItemType = historyItemType;
         return this;
@@ -37,6 +41,7 @@ public class DescribeAlarmHistoryInput {
     
     
     public Long maxRecords;
+
     public DescribeAlarmHistoryInput withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -44,6 +49,7 @@ public class DescribeAlarmHistoryInput {
     
     
     public String nextToken;
+
     public DescribeAlarmHistoryInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,6 +57,7 @@ public class DescribeAlarmHistoryInput {
     
     
     public ScanByEnum scanBy;
+
     public DescribeAlarmHistoryInput withScanBy(ScanByEnum scanBy) {
         this.scanBy = scanBy;
         return this;
@@ -58,9 +65,11 @@ public class DescribeAlarmHistoryInput {
     
     
     public OffsetDateTime startDate;
+
     public DescribeAlarmHistoryInput withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public DescribeAlarmHistoryInput(){}
 }

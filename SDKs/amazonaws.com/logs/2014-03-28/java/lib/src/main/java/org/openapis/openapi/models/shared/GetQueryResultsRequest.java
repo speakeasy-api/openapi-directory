@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetQueryResultsRequest {
     @JsonProperty("queryId")
     public String queryId;
+
     public GetQueryResultsRequest withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
     }
     
+    public GetQueryResultsRequest(@JsonProperty("queryId") String queryId) {
+        this.queryId = queryId;
+  }
 }

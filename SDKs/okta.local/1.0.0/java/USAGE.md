@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ClearUserSessionsRequest;
 import org.openapis.openapi.models.operations.ClearUserSessionsResponse;
 
@@ -13,10 +12,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ClearUserSessionsRequest req = new ClearUserSessionsRequest() {{
-                requestBody = "corrupti".getBytes();
-                userId = "provident";
-            }}            
+            ClearUserSessionsRequest req = new ClearUserSessionsRequest("corrupti") {{
+                requestBody = "provident".getBytes();
+            }};            
 
             ClearUserSessionsResponse res = sdk.clearUserSessions(req);
 
@@ -26,5 +24,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

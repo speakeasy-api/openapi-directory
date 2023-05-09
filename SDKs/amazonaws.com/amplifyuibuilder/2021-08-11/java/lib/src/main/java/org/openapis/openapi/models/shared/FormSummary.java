@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FormSummary {
     @JsonProperty("appId")
     public String appId;
+
     public FormSummary withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -19,6 +20,7 @@ public class FormSummary {
     
     @JsonProperty("dataType")
     public FormDataTypeConfig dataType;
+
     public FormSummary withDataType(FormDataTypeConfig dataType) {
         this.dataType = dataType;
         return this;
@@ -26,6 +28,7 @@ public class FormSummary {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public FormSummary withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -33,6 +36,7 @@ public class FormSummary {
     
     @JsonProperty("formActionType")
     public FormActionTypeEnum formActionType;
+
     public FormSummary withFormActionType(FormActionTypeEnum formActionType) {
         this.formActionType = formActionType;
         return this;
@@ -40,6 +44,7 @@ public class FormSummary {
     
     @JsonProperty("id")
     public String id;
+
     public FormSummary withId(String id) {
         this.id = id;
         return this;
@@ -47,9 +52,18 @@ public class FormSummary {
     
     @JsonProperty("name")
     public String name;
+
     public FormSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FormSummary(@JsonProperty("appId") String appId, @JsonProperty("dataType") FormDataTypeConfig dataType, @JsonProperty("environmentName") String environmentName, @JsonProperty("formActionType") FormActionTypeEnum formActionType, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.appId = appId;
+        this.dataType = dataType;
+        this.environmentName = environmentName;
+        this.formActionType = formActionType;
+        this.id = id;
+        this.name = name;
+  }
 }

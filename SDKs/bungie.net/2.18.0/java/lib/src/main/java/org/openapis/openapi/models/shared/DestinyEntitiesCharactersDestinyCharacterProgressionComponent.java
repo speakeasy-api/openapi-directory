@@ -16,6 +16,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
      */
     
     public java.util.Map<String, java.util.Map<String, Boolean>> checklists;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent withChecklists(java.util.Map<String, java.util.Map<String, Boolean>> checklists) {
         this.checklists = checklists;
         return this;
@@ -26,6 +27,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
      */
     
     public java.util.Map<String, DestinyProgressionDestinyFactionProgression> factions;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent withFactions(java.util.Map<String, DestinyProgressionDestinyFactionProgression> factions) {
         this.factions = factions;
         return this;
@@ -36,6 +38,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
      */
     
     public java.util.Map<String, DestinyMilestonesDestinyMilestone> milestones;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent withMilestones(java.util.Map<String, DestinyMilestonesDestinyMilestone> milestones) {
         this.milestones = milestones;
         return this;
@@ -47,6 +50,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
      */
     
     public java.util.Map<String, DestinyDestinyProgression> progressions;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent withProgressions(java.util.Map<String, DestinyDestinyProgression> progressions) {
         this.progressions = progressions;
         return this;
@@ -59,6 +63,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
      */
     
     public DestinyQuestsDestinyQuestStatus[] quests;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent withQuests(DestinyQuestsDestinyQuestStatus[] quests) {
         this.quests = quests;
         return this;
@@ -69,6 +74,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
      */
     
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeasonalArtifact seasonalArtifact;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent withSeasonalArtifact(DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeasonalArtifact seasonalArtifact) {
         this.seasonalArtifact = seasonalArtifact;
         return this;
@@ -80,6 +86,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
      */
     
     public java.util.Map<String, DestinyQuestsDestinyObjectiveProgress[]> uninstancedItemObjectives;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent withUninstancedItemObjectives(java.util.Map<String, DestinyQuestsDestinyObjectiveProgress[]> uninstancedItemObjectives) {
         this.uninstancedItemObjectives = uninstancedItemObjectives;
         return this;
@@ -91,9 +98,11 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
      */
     
     public java.util.Map<String, DestinyEntitiesItemsDestinyItemPerksComponent> uninstancedItemPerks;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponent withUninstancedItemPerks(java.util.Map<String, DestinyEntitiesItemsDestinyItemPerksComponent> uninstancedItemPerks) {
         this.uninstancedItemPerks = uninstancedItemPerks;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterProgressionComponent(){}
 }

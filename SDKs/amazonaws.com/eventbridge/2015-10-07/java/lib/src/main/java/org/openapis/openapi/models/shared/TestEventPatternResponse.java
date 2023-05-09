@@ -15,9 +15,11 @@ public class TestEventPatternResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public Boolean result;
+
     public TestEventPatternResponse withResult(Boolean result) {
         this.result = result;
         return this;
     }
     
+    public TestEventPatternResponse(){}
 }

@@ -14,6 +14,7 @@ public class SearchRasterDataCollectionRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public SearchRasterDataCollectionRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class SearchRasterDataCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchRasterDataCollectionRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +37,14 @@ public class SearchRasterDataCollectionRequestBody {
      */
     @JsonProperty("RasterDataCollectionQuery")
     public SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery rasterDataCollectionQuery;
+
     public SearchRasterDataCollectionRequestBody withRasterDataCollectionQuery(SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery rasterDataCollectionQuery) {
         this.rasterDataCollectionQuery = rasterDataCollectionQuery;
         return this;
     }
     
+    public SearchRasterDataCollectionRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("RasterDataCollectionQuery") SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery rasterDataCollectionQuery) {
+        this.arn = arn;
+        this.rasterDataCollectionQuery = rasterDataCollectionQuery;
+  }
 }

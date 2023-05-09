@@ -21,6 +21,7 @@ public class SuggestedTagAndRegionQueryToken {
     @JsonProperty("continuation")
     @SpeakeasyMetadata("form:name=continuation")
     public String continuation;
+
     public SuggestedTagAndRegionQueryToken withContinuation(String continuation) {
         this.continuation = continuation;
         return this;
@@ -33,6 +34,7 @@ public class SuggestedTagAndRegionQueryToken {
     @JsonProperty("maxCount")
     @SpeakeasyMetadata("form:name=maxCount")
     public Integer maxCount;
+
     public SuggestedTagAndRegionQueryToken withMaxCount(Integer maxCount) {
         this.maxCount = maxCount;
         return this;
@@ -45,6 +47,7 @@ public class SuggestedTagAndRegionQueryToken {
     @JsonProperty("session")
     @SpeakeasyMetadata("form:name=session")
     public String session;
+
     public SuggestedTagAndRegionQueryToken withSession(String session) {
         this.session = session;
         return this;
@@ -57,6 +60,7 @@ public class SuggestedTagAndRegionQueryToken {
     @JsonProperty("sortBy")
     @SpeakeasyMetadata("form:name=sortBy")
     public SuggestedTagAndRegionQueryTokenSortByEnum sortBy;
+
     public SuggestedTagAndRegionQueryToken withSortBy(SuggestedTagAndRegionQueryTokenSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,6 +73,7 @@ public class SuggestedTagAndRegionQueryToken {
     @JsonProperty("tagIds")
     @SpeakeasyMetadata("form:name=tagIds")
     public String[] tagIds;
+
     public SuggestedTagAndRegionQueryToken withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
@@ -81,9 +86,11 @@ public class SuggestedTagAndRegionQueryToken {
     @JsonProperty("threshold")
     @SpeakeasyMetadata("form:name=threshold")
     public Double threshold;
+
     public SuggestedTagAndRegionQueryToken withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public SuggestedTagAndRegionQueryToken(){}
 }

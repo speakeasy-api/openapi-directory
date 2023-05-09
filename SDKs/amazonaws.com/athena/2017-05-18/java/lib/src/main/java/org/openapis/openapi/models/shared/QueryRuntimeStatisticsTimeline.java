@@ -15,6 +15,7 @@ public class QueryRuntimeStatisticsTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineExecutionTimeInMillis")
     public Long engineExecutionTimeInMillis;
+
     public QueryRuntimeStatisticsTimeline withEngineExecutionTimeInMillis(Long engineExecutionTimeInMillis) {
         this.engineExecutionTimeInMillis = engineExecutionTimeInMillis;
         return this;
@@ -23,6 +24,7 @@ public class QueryRuntimeStatisticsTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryPlanningTimeInMillis")
     public Long queryPlanningTimeInMillis;
+
     public QueryRuntimeStatisticsTimeline withQueryPlanningTimeInMillis(Long queryPlanningTimeInMillis) {
         this.queryPlanningTimeInMillis = queryPlanningTimeInMillis;
         return this;
@@ -31,6 +33,7 @@ public class QueryRuntimeStatisticsTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryQueueTimeInMillis")
     public Long queryQueueTimeInMillis;
+
     public QueryRuntimeStatisticsTimeline withQueryQueueTimeInMillis(Long queryQueueTimeInMillis) {
         this.queryQueueTimeInMillis = queryQueueTimeInMillis;
         return this;
@@ -39,6 +42,7 @@ public class QueryRuntimeStatisticsTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceProcessingTimeInMillis")
     public Long serviceProcessingTimeInMillis;
+
     public QueryRuntimeStatisticsTimeline withServiceProcessingTimeInMillis(Long serviceProcessingTimeInMillis) {
         this.serviceProcessingTimeInMillis = serviceProcessingTimeInMillis;
         return this;
@@ -47,9 +51,11 @@ public class QueryRuntimeStatisticsTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalExecutionTimeInMillis")
     public Long totalExecutionTimeInMillis;
+
     public QueryRuntimeStatisticsTimeline withTotalExecutionTimeInMillis(Long totalExecutionTimeInMillis) {
         this.totalExecutionTimeInMillis = totalExecutionTimeInMillis;
         return this;
     }
     
+    public QueryRuntimeStatisticsTimeline(){}
 }

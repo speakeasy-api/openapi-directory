@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ListExamplesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("examples")
     public GoogleCloudDatalabelingV1beta1Example[] examples;
+
     public GoogleCloudDatalabelingV1beta1ListExamplesResponse withExamples(GoogleCloudDatalabelingV1beta1Example[] examples) {
         this.examples = examples;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1ListExamplesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatalabelingV1beta1ListExamplesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ListExamplesResponse(){}
 }

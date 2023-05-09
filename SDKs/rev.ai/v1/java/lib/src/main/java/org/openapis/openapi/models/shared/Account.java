@@ -18,6 +18,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance_seconds")
     public Long balanceSeconds;
+
     public Account withBalanceSeconds(Long balanceSeconds) {
         this.balanceSeconds = balanceSeconds;
         return this;
@@ -29,9 +30,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Account withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public Account(){}
 }

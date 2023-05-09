@@ -15,6 +15,7 @@ public class SubscriptionSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignment")
     public String assignment;
+
     public SubscriptionSubmission withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -23,6 +24,7 @@ public class SubscriptionSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SubscriptionSubmission withEmail(String email) {
         this.email = email;
         return this;
@@ -30,6 +32,7 @@ public class SubscriptionSubmission {
     
     @JsonProperty("includeBody")
     public Boolean includeBody;
+
     public SubscriptionSubmission withIncludeBody(Boolean includeBody) {
         this.includeBody = includeBody;
         return this;
@@ -38,6 +41,7 @@ public class SubscriptionSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeThumbenail")
     public Boolean includeThumbenail;
+
     public SubscriptionSubmission withIncludeThumbenail(Boolean includeThumbenail) {
         this.includeThumbenail = includeThumbenail;
         return this;
@@ -46,6 +50,7 @@ public class SubscriptionSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slackChannel")
     public String slackChannel;
+
     public SubscriptionSubmission withSlackChannel(String slackChannel) {
         this.slackChannel = slackChannel;
         return this;
@@ -53,9 +58,14 @@ public class SubscriptionSubmission {
     
     @JsonProperty("types")
     public String[] types;
+
     public SubscriptionSubmission withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public SubscriptionSubmission(@JsonProperty("includeBody") Boolean includeBody, @JsonProperty("types") String[] types) {
+        this.includeBody = includeBody;
+        this.types = types;
+  }
 }

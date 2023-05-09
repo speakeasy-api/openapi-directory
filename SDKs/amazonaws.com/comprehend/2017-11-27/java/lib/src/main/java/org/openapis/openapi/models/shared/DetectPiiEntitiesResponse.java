@@ -15,9 +15,11 @@ public class DetectPiiEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entities")
     public PiiEntity[] entities;
+
     public DetectPiiEntitiesResponse withEntities(PiiEntity[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public DetectPiiEntitiesResponse(){}
 }

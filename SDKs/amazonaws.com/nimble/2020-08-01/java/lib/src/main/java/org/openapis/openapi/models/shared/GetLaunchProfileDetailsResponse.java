@@ -15,6 +15,7 @@ public class GetLaunchProfileDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfile")
     public LaunchProfile launchProfile;
+
     public GetLaunchProfileDetailsResponse withLaunchProfile(LaunchProfile launchProfile) {
         this.launchProfile = launchProfile;
         return this;
@@ -23,6 +24,7 @@ public class GetLaunchProfileDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingImages")
     public StreamingImage[] streamingImages;
+
     public GetLaunchProfileDetailsResponse withStreamingImages(StreamingImage[] streamingImages) {
         this.streamingImages = streamingImages;
         return this;
@@ -31,9 +33,11 @@ public class GetLaunchProfileDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponentSummaries")
     public StudioComponentSummary[] studioComponentSummaries;
+
     public GetLaunchProfileDetailsResponse withStudioComponentSummaries(StudioComponentSummary[] studioComponentSummaries) {
         this.studioComponentSummaries = studioComponentSummaries;
         return this;
     }
     
+    public GetLaunchProfileDetailsResponse(){}
 }

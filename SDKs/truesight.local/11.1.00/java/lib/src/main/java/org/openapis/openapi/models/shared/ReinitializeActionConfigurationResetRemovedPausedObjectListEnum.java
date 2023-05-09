@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetRemovedPausedObjectListEnum - When set to &lt;em&gt;1&lt;/em&gt;, reactivates the monitoring of all paused or removed objects.
  */
 public enum ReinitializeActionConfigurationResetRemovedPausedObjectListEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetRemovedPausedObjectListEnum(String value) {
+    private ReinitializeActionConfigurationResetRemovedPausedObjectListEnum(Integer value) {
         this.value = value;
     }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallRecordingByNameRequest {
@@ -12,6 +13,7 @@ public class GetCallRecordingByNameRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetCallRecordingByNameRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +24,7 @@ public class GetCallRecordingByNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetCallRecordingByNameRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,9 +35,14 @@ public class GetCallRecordingByNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public GetCallRecordingByNameRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetCallRecordingByNameRequest(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

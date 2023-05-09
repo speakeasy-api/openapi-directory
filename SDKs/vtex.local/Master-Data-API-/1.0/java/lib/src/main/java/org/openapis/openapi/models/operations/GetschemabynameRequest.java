@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetschemabynameRequest {
@@ -12,6 +13,7 @@ public class GetschemabynameRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetschemabynameRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class GetschemabynameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public GetschemabynameRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
@@ -32,9 +35,15 @@ public class GetschemabynameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schemaName")
     public String schemaName;
+
     public GetschemabynameRequest withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
     }
     
+    public GetschemabynameRequest(@JsonProperty("Content-Type") String contentType, @JsonProperty("dataEntityName") String dataEntityName, @JsonProperty("schemaName") String schemaName) {
+        this.contentType = contentType;
+        this.dataEntityName = dataEntityName;
+        this.schemaName = schemaName;
+  }
 }

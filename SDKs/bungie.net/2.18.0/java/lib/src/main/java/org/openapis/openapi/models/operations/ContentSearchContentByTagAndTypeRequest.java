@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentSearchContentByTagAndTypeRequest {
@@ -12,6 +13,7 @@ public class ContentSearchContentByTagAndTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
     public Integer currentpage;
+
     public ContentSearchContentByTagAndTypeRequest withCurrentpage(Integer currentpage) {
         this.currentpage = currentpage;
         return this;
@@ -22,6 +24,7 @@ public class ContentSearchContentByTagAndTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
     public Boolean head;
+
     public ContentSearchContentByTagAndTypeRequest withHead(Boolean head) {
         this.head = head;
         return this;
@@ -32,6 +35,7 @@ public class ContentSearchContentByTagAndTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsperpage")
     public Integer itemsperpage;
+
     public ContentSearchContentByTagAndTypeRequest withItemsperpage(Integer itemsperpage) {
         this.itemsperpage = itemsperpage;
         return this;
@@ -39,6 +43,7 @@ public class ContentSearchContentByTagAndTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locale")
     public String locale;
+
     public ContentSearchContentByTagAndTypeRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -46,6 +51,7 @@ public class ContentSearchContentByTagAndTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
     public String tag;
+
     public ContentSearchContentByTagAndTypeRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -53,9 +59,15 @@ public class ContentSearchContentByTagAndTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public ContentSearchContentByTagAndTypeRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ContentSearchContentByTagAndTypeRequest(@JsonProperty("locale") String locale, @JsonProperty("tag") String tag, @JsonProperty("type") String type) {
+        this.locale = locale;
+        this.tag = tag;
+        this.type = type;
+  }
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CompanyControllerGetBranchesRequest;
 import org.openapis.openapi.models.operations.CompanyControllerGetBranchesResponse;
 
@@ -26,20 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CompanyControllerGetBranchesRequest req = new CompanyControllerGetBranchesRequest() {{
-                count = 548814;
-                offset = 592845;
-                shortName = "distinctio";
-            }}            
+            CompanyControllerGetBranchesRequest req = new CompanyControllerGetBranchesRequest(548814, 592845, "distinctio");            
 
             CompanyControllerGetBranchesResponse res = sdk.companyController.companyControllerGetBranches(req);
 
-            if (res.advertisingBranchModelResults.isPresent()) {
+            if (res.advertisingBranchModelResults != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,30 +44,30 @@ public class Application {
 ## Available Resources and Operations
 
 
-### companyController
+### [companyController](docs/companycontroller/README.md)
 
-* `companyControllerGetBranches` - All branches defined for a company
-* `getV3DiaryShortNameCompanyBranchesBranchID` - Get a specific branch given its unique Object ID (OID)
+* [companyControllerGetBranches](docs/companycontroller/README.md#companycontrollergetbranches) - All branches defined for a company
+* [getV3DiaryShortNameCompanyBranchesBranchID](docs/companycontroller/README.md#getv3diaryshortnamecompanybranchesbranchid) - Get a specific branch given its unique Object ID (OID)
 
-### diaryController
+### [diaryController](docs/diarycontroller/README.md)
 
-* `diaryControllerAddFeedbackForm` - Submit appointment feedback
-* `diaryControllerAddFeedbackJson` - Submit appointment feedback
-* `diaryControllerAddFeedbackRaw` - Submit appointment feedback
-* `diaryControllerCancelAppointment` - Cancel an existing appointment using its unique identifier
-* `diaryControllerDeleteAppointment` - Delete an existing appointment using its unique identifier
-* `diaryControllerGetAllocations` - Get a list of all available allocations for a date + 7 days for a specified appointment type
-* `diaryControllerGetAppointment` - Get an appointment by ID
-* `diaryControllerGetAppointmentTypes` - A collection of all diary appointment types
-* `diaryControllerGetAppointmentsBetweenDates` - A collection of diary appointments linked to a company filtered between specific dates and by appointment type
-* `diaryControllerGetRecurringAppointments` - Retrieves all recurring appointments:-
-* `diaryControllerPostAppointmentForm` - Post an appointment into a valid diary allocation
-* `diaryControllerPostAppointmentJson` - Post an appointment into a valid diary allocation
-* `diaryControllerPostAppointmentRaw` - Post an appointment into a valid diary allocation
-* `diaryControllerPutAppointmentForm` - Update an existing appointment using its unique identifier
-* `diaryControllerPutAppointmentJson` - Update an existing appointment using its unique identifier
-* `diaryControllerPutAppointmentRaw` - Update an existing appointment using its unique identifier
-* `diaryControllerSearchGuest` - Match Guest Parameters with existing applicants
+* [diaryControllerAddFeedbackForm](docs/diarycontroller/README.md#diarycontrolleraddfeedbackform) - Submit appointment feedback
+* [diaryControllerAddFeedbackJson](docs/diarycontroller/README.md#diarycontrolleraddfeedbackjson) - Submit appointment feedback
+* [diaryControllerAddFeedbackRaw](docs/diarycontroller/README.md#diarycontrolleraddfeedbackraw) - Submit appointment feedback
+* [diaryControllerCancelAppointment](docs/diarycontroller/README.md#diarycontrollercancelappointment) - Cancel an existing appointment using its unique identifier
+* [diaryControllerDeleteAppointment](docs/diarycontroller/README.md#diarycontrollerdeleteappointment) - Delete an existing appointment using its unique identifier
+* [diaryControllerGetAllocations](docs/diarycontroller/README.md#diarycontrollergetallocations) - Get a list of all available allocations for a date + 7 days for a specified appointment type
+* [diaryControllerGetAppointment](docs/diarycontroller/README.md#diarycontrollergetappointment) - Get an appointment by ID
+* [diaryControllerGetAppointmentTypes](docs/diarycontroller/README.md#diarycontrollergetappointmenttypes) - A collection of all diary appointment types
+* [diaryControllerGetAppointmentsBetweenDates](docs/diarycontroller/README.md#diarycontrollergetappointmentsbetweendates) - A collection of diary appointments linked to a company filtered between specific dates and by appointment type
+* [diaryControllerGetRecurringAppointments](docs/diarycontroller/README.md#diarycontrollergetrecurringappointments) - Retrieves all recurring appointments:-
+* [diaryControllerPostAppointmentForm](docs/diarycontroller/README.md#diarycontrollerpostappointmentform) - Post an appointment into a valid diary allocation
+* [diaryControllerPostAppointmentJson](docs/diarycontroller/README.md#diarycontrollerpostappointmentjson) - Post an appointment into a valid diary allocation
+* [diaryControllerPostAppointmentRaw](docs/diarycontroller/README.md#diarycontrollerpostappointmentraw) - Post an appointment into a valid diary allocation
+* [diaryControllerPutAppointmentForm](docs/diarycontroller/README.md#diarycontrollerputappointmentform) - Update an existing appointment using its unique identifier
+* [diaryControllerPutAppointmentJson](docs/diarycontroller/README.md#diarycontrollerputappointmentjson) - Update an existing appointment using its unique identifier
+* [diaryControllerPutAppointmentRaw](docs/diarycontroller/README.md#diarycontrollerputappointmentraw) - Update an existing appointment using its unique identifier
+* [diaryControllerSearchGuest](docs/diarycontroller/README.md#diarycontrollersearchguest) - Match Guest Parameters with existing applicants
 <!-- End SDK Available Operations -->
 
 ### Maturity

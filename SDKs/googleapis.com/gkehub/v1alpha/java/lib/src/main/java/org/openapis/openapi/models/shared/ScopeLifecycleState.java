@@ -18,9 +18,11 @@ public class ScopeLifecycleState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ScopeLifecycleStateCodeEnum code;
+
     public ScopeLifecycleState withCode(ScopeLifecycleStateCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public ScopeLifecycleState(){}
 }

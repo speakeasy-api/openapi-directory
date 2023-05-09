@@ -16,6 +16,7 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=affiliation")
     public String affiliation;
+
     public ReposListForAuthenticatedUserRequest withAffiliation(String affiliation) {
         this.affiliation = affiliation;
         return this;
@@ -26,6 +27,7 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public OffsetDateTime before;
+
     public ReposListForAuthenticatedUserRequest withBefore(OffsetDateTime before) {
         this.before = before;
         return this;
@@ -36,6 +38,7 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public ReposListForAuthenticatedUserDirectionEnum direction;
+
     public ReposListForAuthenticatedUserRequest withDirection(ReposListForAuthenticatedUserDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -46,6 +49,7 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposListForAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -56,6 +60,7 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposListForAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -66,6 +71,7 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public ReposListForAuthenticatedUserRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
@@ -76,6 +82,7 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ReposListForAuthenticatedUserSortEnum sort;
+
     public ReposListForAuthenticatedUserRequest withSort(ReposListForAuthenticatedUserSortEnum sort) {
         this.sort = sort;
         return this;
@@ -88,6 +95,7 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public ReposListForAuthenticatedUserTypeEnum type;
+
     public ReposListForAuthenticatedUserRequest withType(ReposListForAuthenticatedUserTypeEnum type) {
         this.type = type;
         return this;
@@ -98,9 +106,11 @@ public class ReposListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
     public ReposListForAuthenticatedUserVisibilityEnum visibility;
+
     public ReposListForAuthenticatedUserRequest withVisibility(ReposListForAuthenticatedUserVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public ReposListForAuthenticatedUserRequest(){}
 }

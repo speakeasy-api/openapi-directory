@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RebootInstanceResponse {
@@ -12,6 +13,7 @@ public class RebootInstanceResponse {
      */
     
     public Object accessDeniedException;
+
     public RebootInstanceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RebootInstanceResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public RebootInstanceResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class RebootInstanceResponse {
     
     
     public String contentType;
+
     public RebootInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RebootInstanceResponse {
      */
     
     public Object invalidInputException;
+
     public RebootInstanceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class RebootInstanceResponse {
      */
     
     public Object notFoundException;
+
     public RebootInstanceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RebootInstanceResponse {
      */
     
     public Object operationFailureException;
+
     public RebootInstanceResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class RebootInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.RebootInstanceResult rebootInstanceResult;
+
     public RebootInstanceResponse withRebootInstanceResult(org.openapis.openapi.models.shared.RebootInstanceResult rebootInstanceResult) {
         this.rebootInstanceResult = rebootInstanceResult;
         return this;
@@ -79,6 +87,7 @@ public class RebootInstanceResponse {
      */
     
     public Object serviceException;
+
     public RebootInstanceResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class RebootInstanceResponse {
     
     
     public Integer statusCode;
+
     public RebootInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class RebootInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RebootInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class RebootInstanceResponse {
      */
     
     public Object unauthenticatedException;
+
     public RebootInstanceResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public RebootInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

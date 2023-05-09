@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SyncResourceResponse {
@@ -12,6 +13,7 @@ public class SyncResourceResponse {
      */
     
     public Object conflictException;
+
     public SyncResourceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class SyncResourceResponse {
     
     
     public String contentType;
+
     public SyncResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SyncResourceResponse {
      */
     
     public Object internalServerException;
+
     public SyncResourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class SyncResourceResponse {
     
     
     public Integer statusCode;
+
     public SyncResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class SyncResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SyncResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class SyncResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SyncResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class SyncResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.SyncResourceResponse syncResourceResponse;
+
     public SyncResourceResponse withSyncResourceResponse(org.openapis.openapi.models.shared.SyncResourceResponse syncResourceResponse) {
         this.syncResourceResponse = syncResourceResponse;
         return this;
@@ -73,6 +81,7 @@ public class SyncResourceResponse {
      */
     
     public Object throttlingException;
+
     public SyncResourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class SyncResourceResponse {
      */
     
     public Object validationException;
+
     public SyncResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SyncResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateTransformJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchStrategy")
     public BatchStrategyEnum batchStrategy;
+
     public CreateTransformJobRequest withBatchStrategy(BatchStrategyEnum batchStrategy) {
         this.batchStrategy = batchStrategy;
         return this;
@@ -20,6 +21,7 @@ public class CreateTransformJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCaptureConfig")
     public BatchDataCaptureConfig dataCaptureConfig;
+
     public CreateTransformJobRequest withDataCaptureConfig(BatchDataCaptureConfig dataCaptureConfig) {
         this.dataCaptureConfig = dataCaptureConfig;
         return this;
@@ -28,6 +30,7 @@ public class CreateTransformJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataProcessing")
     public DataProcessing dataProcessing;
+
     public CreateTransformJobRequest withDataProcessing(DataProcessing dataProcessing) {
         this.dataProcessing = dataProcessing;
         return this;
@@ -36,17 +39,19 @@ public class CreateTransformJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public CreateTransformJobRequest withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
     }
     
     /**
-     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html"&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html"&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentConfig")
     public ExperimentConfig experimentConfig;
+
     public CreateTransformJobRequest withExperimentConfig(ExperimentConfig experimentConfig) {
         this.experimentConfig = experimentConfig;
         return this;
@@ -55,6 +60,7 @@ public class CreateTransformJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentTransforms")
     public Long maxConcurrentTransforms;
+
     public CreateTransformJobRequest withMaxConcurrentTransforms(Long maxConcurrentTransforms) {
         this.maxConcurrentTransforms = maxConcurrentTransforms;
         return this;
@@ -63,6 +69,7 @@ public class CreateTransformJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPayloadInMB")
     public Long maxPayloadInMB;
+
     public CreateTransformJobRequest withMaxPayloadInMB(Long maxPayloadInMB) {
         this.maxPayloadInMB = maxPayloadInMB;
         return this;
@@ -71,6 +78,7 @@ public class CreateTransformJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelClientConfig")
     public ModelClientConfig modelClientConfig;
+
     public CreateTransformJobRequest withModelClientConfig(ModelClientConfig modelClientConfig) {
         this.modelClientConfig = modelClientConfig;
         return this;
@@ -78,6 +86,7 @@ public class CreateTransformJobRequest {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public CreateTransformJobRequest withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -86,6 +95,7 @@ public class CreateTransformJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateTransformJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -93,6 +103,7 @@ public class CreateTransformJobRequest {
     
     @JsonProperty("TransformInput")
     public TransformInput transformInput;
+
     public CreateTransformJobRequest withTransformInput(TransformInput transformInput) {
         this.transformInput = transformInput;
         return this;
@@ -100,6 +111,7 @@ public class CreateTransformJobRequest {
     
     @JsonProperty("TransformJobName")
     public String transformJobName;
+
     public CreateTransformJobRequest withTransformJobName(String transformJobName) {
         this.transformJobName = transformJobName;
         return this;
@@ -107,6 +119,7 @@ public class CreateTransformJobRequest {
     
     @JsonProperty("TransformOutput")
     public TransformOutput transformOutput;
+
     public CreateTransformJobRequest withTransformOutput(TransformOutput transformOutput) {
         this.transformOutput = transformOutput;
         return this;
@@ -114,9 +127,17 @@ public class CreateTransformJobRequest {
     
     @JsonProperty("TransformResources")
     public TransformResources transformResources;
+
     public CreateTransformJobRequest withTransformResources(TransformResources transformResources) {
         this.transformResources = transformResources;
         return this;
     }
     
+    public CreateTransformJobRequest(@JsonProperty("ModelName") String modelName, @JsonProperty("TransformInput") TransformInput transformInput, @JsonProperty("TransformJobName") String transformJobName, @JsonProperty("TransformOutput") TransformOutput transformOutput, @JsonProperty("TransformResources") TransformResources transformResources) {
+        this.modelName = modelName;
+        this.transformInput = transformInput;
+        this.transformJobName = transformJobName;
+        this.transformOutput = transformOutput;
+        this.transformResources = transformResources;
+  }
 }

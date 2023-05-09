@@ -15,6 +15,7 @@ public class DisassociateTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialArn")
     public String trialArn;
+
     public DisassociateTrialComponentResponse withTrialArn(String trialArn) {
         this.trialArn = trialArn;
         return this;
@@ -23,9 +24,11 @@ public class DisassociateTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentArn")
     public String trialComponentArn;
+
     public DisassociateTrialComponentResponse withTrialComponentArn(String trialComponentArn) {
         this.trialComponentArn = trialComponentArn;
         return this;
     }
     
+    public DisassociateTrialComponentResponse(){}
 }

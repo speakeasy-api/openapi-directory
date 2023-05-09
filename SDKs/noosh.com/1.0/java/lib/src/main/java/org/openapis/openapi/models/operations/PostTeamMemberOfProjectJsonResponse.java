@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostTeamMemberOfProjectJsonResponse {
     
     public byte[] body;
+
     public PostTeamMemberOfProjectJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostTeamMemberOfProjectJsonResponse {
     
     
     public String contentType;
+
     public PostTeamMemberOfProjectJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostTeamMemberOfProjectJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public PostTeamMemberOfProjectJsonResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class PostTeamMemberOfProjectJsonResponse {
     
     
     public Integer statusCode;
+
     public PostTeamMemberOfProjectJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class PostTeamMemberOfProjectJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostTeamMemberOfProjectJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class PostTeamMemberOfProjectJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.V1x1InvitedTeamMemberResultsVO v1x1InvitedTeamMemberResultsVO;
+
     public PostTeamMemberOfProjectJsonResponse withV1x1InvitedTeamMemberResultsVO(org.openapis.openapi.models.shared.V1x1InvitedTeamMemberResultsVO v1x1InvitedTeamMemberResultsVO) {
         this.v1x1InvitedTeamMemberResultsVO = v1x1InvitedTeamMemberResultsVO;
         return this;
     }
     
+    public PostTeamMemberOfProjectJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

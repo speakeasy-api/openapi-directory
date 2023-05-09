@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBulkInventoryRequestBody {
@@ -12,9 +13,13 @@ public class UpdateBulkInventoryRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public UpdateBulkInventoryRequestBodyFile file;
+
     public UpdateBulkInventoryRequestBody withFile(UpdateBulkInventoryRequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public UpdateBulkInventoryRequestBody(@JsonProperty("file") UpdateBulkInventoryRequestBodyFile file) {
+        this.file = file;
+  }
 }

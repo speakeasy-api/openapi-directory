@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ApplicationSummary {
     @JsonProperty("applicationArn")
     public String applicationArn;
+
     public ApplicationSummary withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -26,6 +27,7 @@ public class ApplicationSummary {
     
     @JsonProperty("applicationId")
     public String applicationId;
+
     public ApplicationSummary withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -33,6 +35,7 @@ public class ApplicationSummary {
     
     @JsonProperty("applicationVersion")
     public Long applicationVersion;
+
     public ApplicationSummary withApplicationVersion(Long applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -42,6 +45,7 @@ public class ApplicationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ApplicationSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -50,6 +54,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatus")
     public ApplicationDeploymentLifecycleEnum deploymentStatus;
+
     public ApplicationSummary withDeploymentStatus(ApplicationDeploymentLifecycleEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -58,6 +63,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApplicationSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +71,7 @@ public class ApplicationSummary {
     
     @JsonProperty("engineType")
     public EngineTypeEnum engineType;
+
     public ApplicationSummary withEngineType(EngineTypeEnum engineType) {
         this.engineType = engineType;
         return this;
@@ -73,6 +80,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public ApplicationSummary withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -83,6 +91,7 @@ public class ApplicationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStartTime")
     public OffsetDateTime lastStartTime;
+
     public ApplicationSummary withLastStartTime(OffsetDateTime lastStartTime) {
         this.lastStartTime = lastStartTime;
         return this;
@@ -90,6 +99,7 @@ public class ApplicationSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ApplicationSummary withName(String name) {
         this.name = name;
         return this;
@@ -97,6 +107,7 @@ public class ApplicationSummary {
     
     @JsonProperty("status")
     public ApplicationLifecycleEnum status;
+
     public ApplicationSummary withStatus(ApplicationLifecycleEnum status) {
         this.status = status;
         return this;
@@ -105,9 +116,19 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionStatus")
     public ApplicationVersionLifecycleEnum versionStatus;
+
     public ApplicationSummary withVersionStatus(ApplicationVersionLifecycleEnum versionStatus) {
         this.versionStatus = versionStatus;
         return this;
     }
     
+    public ApplicationSummary(@JsonProperty("applicationArn") String applicationArn, @JsonProperty("applicationId") String applicationId, @JsonProperty("applicationVersion") Long applicationVersion, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("engineType") EngineTypeEnum engineType, @JsonProperty("name") String name, @JsonProperty("status") ApplicationLifecycleEnum status) {
+        this.applicationArn = applicationArn;
+        this.applicationId = applicationId;
+        this.applicationVersion = applicationVersion;
+        this.creationTime = creationTime;
+        this.engineType = engineType;
+        this.name = name;
+        this.status = status;
+  }
 }

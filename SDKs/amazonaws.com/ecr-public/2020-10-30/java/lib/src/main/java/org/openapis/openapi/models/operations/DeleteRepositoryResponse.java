@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRepositoryResponse {
     
     public String contentType;
+
     public DeleteRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRepositoryResponse deleteRepositoryResponse;
+
     public DeleteRepositoryResponse withDeleteRepositoryResponse(org.openapis.openapi.models.shared.DeleteRepositoryResponse deleteRepositoryResponse) {
         this.deleteRepositoryResponse = deleteRepositoryResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteRepositoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object repositoryNotEmptyException;
+
     public DeleteRepositoryResponse withRepositoryNotEmptyException(Object repositoryNotEmptyException) {
         this.repositoryNotEmptyException = repositoryNotEmptyException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public DeleteRepositoryResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object serverException;
+
     public DeleteRepositoryResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteRepositoryResponse {
     
     
     public Integer statusCode;
+
     public DeleteRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteRepositoryResponse {
      */
     
     public Object unsupportedCommandException;
+
     public DeleteRepositoryResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public DeleteRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

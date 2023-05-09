@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4ThreatInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformTypes")
     public GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum[] platformTypes;
+
     public GoogleSecuritySafebrowsingV4ThreatInfo withPlatformTypes(GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum[] platformTypes) {
         this.platformTypes = platformTypes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSecuritySafebrowsingV4ThreatInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatEntries")
     public GoogleSecuritySafebrowsingV4ThreatEntry[] threatEntries;
+
     public GoogleSecuritySafebrowsingV4ThreatInfo withThreatEntries(GoogleSecuritySafebrowsingV4ThreatEntry[] threatEntries) {
         this.threatEntries = threatEntries;
         return this;
@@ -40,6 +42,7 @@ public class GoogleSecuritySafebrowsingV4ThreatInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatEntryTypes")
     public GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum[] threatEntryTypes;
+
     public GoogleSecuritySafebrowsingV4ThreatInfo withThreatEntryTypes(GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum[] threatEntryTypes) {
         this.threatEntryTypes = threatEntryTypes;
         return this;
@@ -51,9 +54,11 @@ public class GoogleSecuritySafebrowsingV4ThreatInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatTypes")
     public GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum[] threatTypes;
+
     public GoogleSecuritySafebrowsingV4ThreatInfo withThreatTypes(GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum[] threatTypes) {
         this.threatTypes = threatTypes;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ThreatInfo(){}
 }

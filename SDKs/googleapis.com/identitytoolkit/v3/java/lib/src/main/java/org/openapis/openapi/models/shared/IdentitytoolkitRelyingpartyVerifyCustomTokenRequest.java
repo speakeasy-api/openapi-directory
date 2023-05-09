@@ -18,6 +18,7 @@ public class IdentitytoolkitRelyingpartyVerifyCustomTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedProjectNumber")
     public String delegatedProjectNumber;
+
     public IdentitytoolkitRelyingpartyVerifyCustomTokenRequest withDelegatedProjectNumber(String delegatedProjectNumber) {
         this.delegatedProjectNumber = delegatedProjectNumber;
         return this;
@@ -29,6 +30,7 @@ public class IdentitytoolkitRelyingpartyVerifyCustomTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public IdentitytoolkitRelyingpartyVerifyCustomTokenRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +42,7 @@ public class IdentitytoolkitRelyingpartyVerifyCustomTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnSecureToken")
     public Boolean returnSecureToken;
+
     public IdentitytoolkitRelyingpartyVerifyCustomTokenRequest withReturnSecureToken(Boolean returnSecureToken) {
         this.returnSecureToken = returnSecureToken;
         return this;
@@ -51,9 +54,11 @@ public class IdentitytoolkitRelyingpartyVerifyCustomTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public IdentitytoolkitRelyingpartyVerifyCustomTokenRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyVerifyCustomTokenRequest(){}
 }

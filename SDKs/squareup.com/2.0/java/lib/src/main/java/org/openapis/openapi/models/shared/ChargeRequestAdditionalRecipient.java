@@ -21,6 +21,7 @@ public class ChargeRequestAdditionalRecipient {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public ChargeRequestAdditionalRecipient withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -31,6 +32,7 @@ public class ChargeRequestAdditionalRecipient {
      */
     @JsonProperty("description")
     public String description;
+
     public ChargeRequestAdditionalRecipient withDescription(String description) {
         this.description = description;
         return this;
@@ -41,9 +43,15 @@ public class ChargeRequestAdditionalRecipient {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public ChargeRequestAdditionalRecipient withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public ChargeRequestAdditionalRecipient(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("description") String description, @JsonProperty("location_id") String locationId) {
+        this.amountMoney = amountMoney;
+        this.description = description;
+        this.locationId = locationId;
+  }
 }

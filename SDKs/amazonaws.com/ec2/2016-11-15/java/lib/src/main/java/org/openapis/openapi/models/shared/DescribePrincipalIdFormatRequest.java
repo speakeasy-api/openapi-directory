@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePrincipalIdFormatRequest {
     
     public Boolean dryRun;
+
     public DescribePrincipalIdFormatRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribePrincipalIdFormatRequest {
     
     
     public Long maxResults;
+
     public DescribePrincipalIdFormatRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +25,7 @@ public class DescribePrincipalIdFormatRequest {
     
     
     public String nextToken;
+
     public DescribePrincipalIdFormatRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +33,11 @@ public class DescribePrincipalIdFormatRequest {
     
     
     public String[] resources;
+
     public DescribePrincipalIdFormatRequest withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public DescribePrincipalIdFormatRequest(){}
 }

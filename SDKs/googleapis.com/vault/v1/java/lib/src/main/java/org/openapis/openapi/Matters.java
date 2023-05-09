@@ -62,11 +62,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersAddPermissionsResponse res = new org.openapis.openapi.models.operations.VaultMattersAddPermissionsResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersAddPermissionsResponse res = new org.openapis.openapi.models.operations.VaultMattersAddPermissionsResponse(contentType, httpRes.statusCode()) {{
             matterPermission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersCloseResponse res = new org.openapis.openapi.models.operations.VaultMattersCloseResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersCloseResponse res = new org.openapis.openapi.models.operations.VaultMattersCloseResponse(contentType, httpRes.statusCode()) {{
             closeMatterResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersCountResponse res = new org.openapis.openapi.models.operations.VaultMattersCountResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersCountResponse res = new org.openapis.openapi.models.operations.VaultMattersCountResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersCreateResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersCreateResponse(contentType, httpRes.statusCode()) {{
             matter = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersDeleteResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersDeleteResponse(contentType, httpRes.statusCode()) {{
             matter = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersExportsCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersExportsCreateResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersExportsCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersExportsCreateResponse(contentType, httpRes.statusCode()) {{
             export = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersExportsDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersExportsDeleteResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersExportsDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersExportsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersExportsGetResponse res = new org.openapis.openapi.models.operations.VaultMattersExportsGetResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersExportsGetResponse res = new org.openapis.openapi.models.operations.VaultMattersExportsGetResponse(contentType, httpRes.statusCode()) {{
             export = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersExportsListResponse res = new org.openapis.openapi.models.operations.VaultMattersExportsListResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersExportsListResponse res = new org.openapis.openapi.models.operations.VaultMattersExportsListResponse(contentType, httpRes.statusCode()) {{
             listExportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersGetResponse res = new org.openapis.openapi.models.operations.VaultMattersGetResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersGetResponse res = new org.openapis.openapi.models.operations.VaultMattersGetResponse(contentType, httpRes.statusCode()) {{
             matter = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsAccountsCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsAccountsCreateResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsAccountsCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsAccountsCreateResponse(contentType, httpRes.statusCode()) {{
             heldAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsAccountsDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsAccountsDeleteResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsAccountsDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsAccountsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -624,11 +600,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsAccountsListResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsAccountsListResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsAccountsListResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsAccountsListResponse(contentType, httpRes.statusCode()) {{
             listHeldAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsAddHeldAccountsResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsAddHeldAccountsResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsAddHeldAccountsResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsAddHeldAccountsResponse(contentType, httpRes.statusCode()) {{
             addHeldAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsCreateResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsCreateResponse(contentType, httpRes.statusCode()) {{
             hold = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -766,11 +736,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsDeleteResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,11 +780,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsGetResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsGetResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsGetResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsGetResponse(contentType, httpRes.statusCode()) {{
             hold = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -858,11 +824,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsListResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsListResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsListResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsListResponse(contentType, httpRes.statusCode()) {{
             listHoldsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -906,11 +870,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsRemoveHeldAccountsResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsRemoveHeldAccountsResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsRemoveHeldAccountsResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsRemoveHeldAccountsResponse(contentType, httpRes.statusCode()) {{
             removeHeldAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -954,11 +916,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersHoldsUpdateResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsUpdateResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersHoldsUpdateResponse res = new org.openapis.openapi.models.operations.VaultMattersHoldsUpdateResponse(contentType, httpRes.statusCode()) {{
             hold = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1000,11 +960,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersListResponse res = new org.openapis.openapi.models.operations.VaultMattersListResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersListResponse res = new org.openapis.openapi.models.operations.VaultMattersListResponse(contentType, httpRes.statusCode()) {{
             listMattersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1048,11 +1006,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersRemovePermissionsResponse res = new org.openapis.openapi.models.operations.VaultMattersRemovePermissionsResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersRemovePermissionsResponse res = new org.openapis.openapi.models.operations.VaultMattersRemovePermissionsResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1096,11 +1052,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersReopenResponse res = new org.openapis.openapi.models.operations.VaultMattersReopenResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersReopenResponse res = new org.openapis.openapi.models.operations.VaultMattersReopenResponse(contentType, httpRes.statusCode()) {{
             reopenMatterResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1144,11 +1098,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersSavedQueriesCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersSavedQueriesCreateResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersSavedQueriesCreateResponse res = new org.openapis.openapi.models.operations.VaultMattersSavedQueriesCreateResponse(contentType, httpRes.statusCode()) {{
             savedQuery = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1190,11 +1142,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersSavedQueriesDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersSavedQueriesDeleteResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersSavedQueriesDeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersSavedQueriesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1236,11 +1186,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersSavedQueriesGetResponse res = new org.openapis.openapi.models.operations.VaultMattersSavedQueriesGetResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersSavedQueriesGetResponse res = new org.openapis.openapi.models.operations.VaultMattersSavedQueriesGetResponse(contentType, httpRes.statusCode()) {{
             savedQuery = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1282,11 +1230,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersSavedQueriesListResponse res = new org.openapis.openapi.models.operations.VaultMattersSavedQueriesListResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersSavedQueriesListResponse res = new org.openapis.openapi.models.operations.VaultMattersSavedQueriesListResponse(contentType, httpRes.statusCode()) {{
             listSavedQueriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1330,11 +1276,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersUndeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersUndeleteResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersUndeleteResponse res = new org.openapis.openapi.models.operations.VaultMattersUndeleteResponse(contentType, httpRes.statusCode()) {{
             matter = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1378,11 +1322,9 @@ public class Matters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VaultMattersUpdateResponse res = new org.openapis.openapi.models.operations.VaultMattersUpdateResponse() {{
+        org.openapis.openapi.models.operations.VaultMattersUpdateResponse res = new org.openapis.openapi.models.operations.VaultMattersUpdateResponse(contentType, httpRes.statusCode()) {{
             matter = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

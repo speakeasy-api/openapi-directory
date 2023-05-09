@@ -17,6 +17,7 @@ public class ListArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactType")
     public String artifactType;
+
     public ListArtifactsRequest withArtifactType(String artifactType) {
         this.artifactType = artifactType;
         return this;
@@ -27,6 +28,7 @@ public class ListArtifactsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public ListArtifactsRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -37,6 +39,7 @@ public class ListArtifactsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public ListArtifactsRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -45,6 +48,7 @@ public class ListArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListArtifactsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListArtifactsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,6 +66,7 @@ public class ListArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortArtifactsByEnum sortBy;
+
     public ListArtifactsRequest withSortBy(SortArtifactsByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,6 +75,7 @@ public class ListArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListArtifactsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -77,9 +84,11 @@ public class ListArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceUri")
     public String sourceUri;
+
     public ListArtifactsRequest withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ListArtifactsRequest(){}
 }

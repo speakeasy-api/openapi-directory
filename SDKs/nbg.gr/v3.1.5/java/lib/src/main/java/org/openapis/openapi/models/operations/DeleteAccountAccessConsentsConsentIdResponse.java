@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccountAccessConsentsConsentIdResponse {
     
     public String contentType;
+
     public DeleteAccountAccessConsentsConsentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAccountAccessConsentsConsentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public DeleteAccountAccessConsentsConsentIdResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -26,6 +29,7 @@ public class DeleteAccountAccessConsentsConsentIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccountAccessConsentsConsentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteAccountAccessConsentsConsentIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccountAccessConsentsConsentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAccountAccessConsentsConsentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataRetrievalPolicyResponse {
     
     public String contentType;
+
     public GetDataRetrievalPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDataRetrievalPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataRetrievalPolicyOutput getDataRetrievalPolicyOutput;
+
     public GetDataRetrievalPolicyResponse withGetDataRetrievalPolicyOutput(org.openapis.openapi.models.shared.GetDataRetrievalPolicyOutput getDataRetrievalPolicyOutput) {
         this.getDataRetrievalPolicyOutput = getDataRetrievalPolicyOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetDataRetrievalPolicyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetDataRetrievalPolicyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetDataRetrievalPolicyResponse {
      */
     
     public Object missingParameterValueException;
+
     public GetDataRetrievalPolicyResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -46,6 +51,7 @@ public class GetDataRetrievalPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetDataRetrievalPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDataRetrievalPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataRetrievalPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDataRetrievalPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetDataRetrievalPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetDataRetrievalPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

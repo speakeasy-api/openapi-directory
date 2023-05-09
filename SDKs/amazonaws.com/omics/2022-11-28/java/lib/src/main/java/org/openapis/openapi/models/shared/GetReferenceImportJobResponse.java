@@ -22,6 +22,7 @@ public class GetReferenceImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public GetReferenceImportJobResponse withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class GetReferenceImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetReferenceImportJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetReferenceImportJobResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetReferenceImportJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class GetReferenceImportJobResponse {
     
     @JsonProperty("referenceStoreId")
     public String referenceStoreId;
+
     public GetReferenceImportJobResponse withReferenceStoreId(String referenceStoreId) {
         this.referenceStoreId = referenceStoreId;
         return this;
@@ -52,6 +56,7 @@ public class GetReferenceImportJobResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public GetReferenceImportJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -59,6 +64,7 @@ public class GetReferenceImportJobResponse {
     
     @JsonProperty("sources")
     public ImportReferenceSourceItem[] sources;
+
     public GetReferenceImportJobResponse withSources(ImportReferenceSourceItem[] sources) {
         this.sources = sources;
         return this;
@@ -66,6 +72,7 @@ public class GetReferenceImportJobResponse {
     
     @JsonProperty("status")
     public ReferenceImportJobStatusEnum status;
+
     public GetReferenceImportJobResponse withStatus(ReferenceImportJobStatusEnum status) {
         this.status = status;
         return this;
@@ -74,9 +81,18 @@ public class GetReferenceImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetReferenceImportJobResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public GetReferenceImportJobResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("referenceStoreId") String referenceStoreId, @JsonProperty("roleArn") String roleArn, @JsonProperty("sources") ImportReferenceSourceItem[] sources, @JsonProperty("status") ReferenceImportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.referenceStoreId = referenceStoreId;
+        this.roleArn = roleArn;
+        this.sources = sources;
+        this.status = status;
+  }
 }

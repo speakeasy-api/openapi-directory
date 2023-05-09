@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ExportEarthObservationJobOutput {
     @JsonProperty("Arn")
     public String arn;
+
     public ExportEarthObservationJobOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ExportEarthObservationJobOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ExportEarthObservationJobOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class ExportEarthObservationJobOutput {
     
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public ExportEarthObservationJobOutput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -43,6 +46,7 @@ public class ExportEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportSourceImages")
     public Boolean exportSourceImages;
+
     public ExportEarthObservationJobOutput withExportSourceImages(Boolean exportSourceImages) {
         this.exportSourceImages = exportSourceImages;
         return this;
@@ -50,6 +54,7 @@ public class ExportEarthObservationJobOutput {
     
     @JsonProperty("ExportStatus")
     public EarthObservationJobExportStatusEnum exportStatus;
+
     public ExportEarthObservationJobOutput withExportStatus(EarthObservationJobExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -57,9 +62,17 @@ public class ExportEarthObservationJobOutput {
     
     @JsonProperty("OutputConfig")
     public OutputConfigInput outputConfig;
+
     public ExportEarthObservationJobOutput withOutputConfig(OutputConfigInput outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public ExportEarthObservationJobOutput(@JsonProperty("Arn") String arn, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("ExportStatus") EarthObservationJobExportStatusEnum exportStatus, @JsonProperty("OutputConfig") OutputConfigInput outputConfig) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.executionRoleArn = executionRoleArn;
+        this.exportStatus = exportStatus;
+        this.outputConfig = outputConfig;
+  }
 }

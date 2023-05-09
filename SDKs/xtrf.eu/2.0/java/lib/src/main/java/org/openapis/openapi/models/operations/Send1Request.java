@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Send1Request {
@@ -12,9 +13,13 @@ public class Send1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public Send1Request withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public Send1Request(@JsonProperty("quoteId") String quoteId) {
+        this.quoteId = quoteId;
+  }
 }

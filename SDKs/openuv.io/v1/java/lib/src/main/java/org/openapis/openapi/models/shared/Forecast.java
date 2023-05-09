@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Forecast {
     @JsonProperty("uv")
     public Double uv;
+
     public Forecast withUv(Double uv) {
         this.uv = uv;
         return this;
@@ -16,9 +17,14 @@ public class Forecast {
     
     @JsonProperty("uv_time")
     public String uvTime;
+
     public Forecast withUvTime(String uvTime) {
         this.uvTime = uvTime;
         return this;
     }
     
+    public Forecast(@JsonProperty("uv") Double uv, @JsonProperty("uv_time") String uvTime) {
+        this.uv = uv;
+        this.uvTime = uvTime;
+  }
 }

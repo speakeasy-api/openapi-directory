@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedBreak")
     public GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak detectedBreak;
+
     public GoogleCloudDocumentaiV1DocumentPageToken withDetectedBreak(GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak detectedBreak) {
         this.detectedBreak = detectedBreak;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1DocumentPageToken withDetectedLanguages(GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1DocumentPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1DocumentPageToken withLayout(GoogleCloudDocumentaiV1DocumentPageLayout layout) {
         this.layout = layout;
         return this;
@@ -51,9 +54,23 @@ public class GoogleCloudDocumentaiV1DocumentPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1DocumentProvenance provenance;
+
     public GoogleCloudDocumentaiV1DocumentPageToken withProvenance(GoogleCloudDocumentaiV1DocumentProvenance provenance) {
         this.provenance = provenance;
         return this;
     }
     
+    /**
+     * Font and other text style attributes.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("styleInfo")
+    public GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo styleInfo;
+
+    public GoogleCloudDocumentaiV1DocumentPageToken withStyleInfo(GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo styleInfo) {
+        this.styleInfo = styleInfo;
+        return this;
+    }
+    
+    public GoogleCloudDocumentaiV1DocumentPageToken(){}
 }

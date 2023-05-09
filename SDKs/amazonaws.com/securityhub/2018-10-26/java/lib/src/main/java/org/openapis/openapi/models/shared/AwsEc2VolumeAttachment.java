@@ -15,6 +15,7 @@ public class AwsEc2VolumeAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachTime")
     public String attachTime;
+
     public AwsEc2VolumeAttachment withAttachTime(String attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2VolumeAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteOnTermination")
     public Boolean deleteOnTermination;
+
     public AwsEc2VolumeAttachment withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2VolumeAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public AwsEc2VolumeAttachment withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,9 +42,11 @@ public class AwsEc2VolumeAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsEc2VolumeAttachment withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsEc2VolumeAttachment(){}
 }

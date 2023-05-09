@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaUsernameAndPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public GoogleCloudIntegrationsV1alphaUsernameAndPassword withPassword(String password) {
         this.password = password;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaUsernameAndPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public GoogleCloudIntegrationsV1alphaUsernameAndPassword withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaUsernameAndPassword(){}
 }

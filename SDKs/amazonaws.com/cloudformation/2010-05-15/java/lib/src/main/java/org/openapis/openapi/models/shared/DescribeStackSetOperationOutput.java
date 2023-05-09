@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeStackSetOperationOutput {
     
     public StackSetOperation stackSetOperation;
+
     public DescribeStackSetOperationOutput withStackSetOperation(StackSetOperation stackSetOperation) {
         this.stackSetOperation = stackSetOperation;
         return this;
     }
     
+    public DescribeStackSetOperationOutput(){}
 }

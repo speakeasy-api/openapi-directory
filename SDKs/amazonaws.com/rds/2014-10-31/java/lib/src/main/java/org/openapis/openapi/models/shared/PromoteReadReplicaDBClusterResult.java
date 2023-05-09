@@ -15,9 +15,11 @@ public class PromoteReadReplicaDBClusterResult {
      */
     
     public DBCluster dbCluster;
+
     public PromoteReadReplicaDBClusterResult withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public PromoteReadReplicaDBClusterResult(){}
 }

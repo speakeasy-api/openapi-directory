@@ -12,9 +12,13 @@ public class DeleteSourceServerRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public DeleteSourceServerRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public DeleteSourceServerRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

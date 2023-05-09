@@ -18,9 +18,11 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public OutputConfig withDestination(String destination) {
         this.destination = destination;
         return this;
     }
     
+    public OutputConfig(){}
 }

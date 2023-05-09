@@ -15,6 +15,7 @@ public class NetworkAccessConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EniId")
     public String eniId;
+
     public NetworkAccessConfiguration withEniId(String eniId) {
         this.eniId = eniId;
         return this;
@@ -23,9 +24,11 @@ public class NetworkAccessConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EniPrivateIpAddress")
     public String eniPrivateIpAddress;
+
     public NetworkAccessConfiguration withEniPrivateIpAddress(String eniPrivateIpAddress) {
         this.eniPrivateIpAddress = eniPrivateIpAddress;
         return this;
     }
     
+    public NetworkAccessConfiguration(){}
 }

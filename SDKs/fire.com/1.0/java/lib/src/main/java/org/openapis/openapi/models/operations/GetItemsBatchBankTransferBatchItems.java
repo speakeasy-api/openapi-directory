@@ -15,6 +15,7 @@ public class GetItemsBatchBankTransferBatchItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GetItemsBatchBankTransferBatchItemsBatchItem[] items;
+
     public GetItemsBatchBankTransferBatchItems withItems(GetItemsBatchBankTransferBatchItemsBatchItem[] items) {
         this.items = items;
         return this;
@@ -26,9 +27,11 @@ public class GetItemsBatchBankTransferBatchItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GetItemsBatchBankTransferBatchItems withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetItemsBatchBankTransferBatchItems(){}
 }

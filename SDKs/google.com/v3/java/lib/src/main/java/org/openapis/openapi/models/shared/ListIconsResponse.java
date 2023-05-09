@@ -18,9 +18,11 @@ public class ListIconsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icons")
     public Icon[] icons;
+
     public ListIconsResponse withIcons(Icon[] icons) {
         this.icons = icons;
         return this;
     }
     
+    public ListIconsResponse(){}
 }

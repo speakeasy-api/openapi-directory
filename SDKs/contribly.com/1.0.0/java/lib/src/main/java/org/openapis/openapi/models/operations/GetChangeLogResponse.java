@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChangeLogResponse {
@@ -12,6 +13,7 @@ public class GetChangeLogResponse {
      */
     
     public org.openapis.openapi.models.shared.ChangeLogItem[] changeLogItems;
+
     public GetChangeLogResponse withChangeLogItems(org.openapis.openapi.models.shared.ChangeLogItem[] changeLogItems) {
         this.changeLogItems = changeLogItems;
         return this;
@@ -19,6 +21,7 @@ public class GetChangeLogResponse {
     
     
     public String contentType;
+
     public GetChangeLogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChangeLogResponse {
     
     
     public Integer statusCode;
+
     public GetChangeLogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetChangeLogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChangeLogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetChangeLogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

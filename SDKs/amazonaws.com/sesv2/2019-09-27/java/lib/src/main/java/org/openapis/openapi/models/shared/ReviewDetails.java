@@ -15,6 +15,7 @@ public class ReviewDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaseId")
     public String caseId;
+
     public ReviewDetails withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -23,9 +24,11 @@ public class ReviewDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ReviewStatusEnum status;
+
     public ReviewDetails withStatus(ReviewStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReviewDetails(){}
 }

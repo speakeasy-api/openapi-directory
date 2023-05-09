@@ -12,9 +12,11 @@ public class PackageGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageId")
     public Integer packageId;
+
     public PackageGetRequest withPackageId(Integer packageId) {
         this.packageId = packageId;
         return this;
     }
     
+    public PackageGetRequest(){}
 }

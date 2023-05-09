@@ -15,9 +15,11 @@ public class UpdateLocationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public UpdateLocationRequest withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public UpdateLocationRequest(){}
 }

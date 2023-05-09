@@ -15,6 +15,7 @@ public class PutAccountDetailsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalContactEmailAddresses")
     public String[] additionalContactEmailAddresses;
+
     public PutAccountDetailsRequestBody withAdditionalContactEmailAddresses(String[] additionalContactEmailAddresses) {
         this.additionalContactEmailAddresses = additionalContactEmailAddresses;
         return this;
@@ -26,6 +27,7 @@ public class PutAccountDetailsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactLanguage")
     public PutAccountDetailsRequestBodyContactLanguageEnum contactLanguage;
+
     public PutAccountDetailsRequestBody withContactLanguage(PutAccountDetailsRequestBodyContactLanguageEnum contactLanguage) {
         this.contactLanguage = contactLanguage;
         return this;
@@ -36,6 +38,7 @@ public class PutAccountDetailsRequestBody {
      */
     @JsonProperty("MailType")
     public PutAccountDetailsRequestBodyMailTypeEnum mailType;
+
     public PutAccountDetailsRequestBody withMailType(PutAccountDetailsRequestBodyMailTypeEnum mailType) {
         this.mailType = mailType;
         return this;
@@ -47,6 +50,7 @@ public class PutAccountDetailsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductionAccessEnabled")
     public Boolean productionAccessEnabled;
+
     public PutAccountDetailsRequestBody withProductionAccessEnabled(Boolean productionAccessEnabled) {
         this.productionAccessEnabled = productionAccessEnabled;
         return this;
@@ -57,6 +61,7 @@ public class PutAccountDetailsRequestBody {
      */
     @JsonProperty("UseCaseDescription")
     public String useCaseDescription;
+
     public PutAccountDetailsRequestBody withUseCaseDescription(String useCaseDescription) {
         this.useCaseDescription = useCaseDescription;
         return this;
@@ -67,9 +72,15 @@ public class PutAccountDetailsRequestBody {
      */
     @JsonProperty("WebsiteURL")
     public String websiteURL;
+
     public PutAccountDetailsRequestBody withWebsiteURL(String websiteURL) {
         this.websiteURL = websiteURL;
         return this;
     }
     
+    public PutAccountDetailsRequestBody(@JsonProperty("MailType") PutAccountDetailsRequestBodyMailTypeEnum mailType, @JsonProperty("UseCaseDescription") String useCaseDescription, @JsonProperty("WebsiteURL") String websiteURL) {
+        this.mailType = mailType;
+        this.useCaseDescription = useCaseDescription;
+        this.websiteURL = websiteURL;
+  }
 }

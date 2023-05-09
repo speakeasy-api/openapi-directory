@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class SnapshotScheduleList {
     
     public Long associatedClusterCount;
+
     public SnapshotScheduleList withAssociatedClusterCount(Long associatedClusterCount) {
         this.associatedClusterCount = associatedClusterCount;
         return this;
@@ -19,6 +20,7 @@ public class SnapshotScheduleList {
     
     
     public AssociatedClusterList[] associatedClusters;
+
     public SnapshotScheduleList withAssociatedClusters(AssociatedClusterList[] associatedClusters) {
         this.associatedClusters = associatedClusters;
         return this;
@@ -26,6 +28,7 @@ public class SnapshotScheduleList {
     
     
     public OffsetDateTime[] nextInvocations;
+
     public SnapshotScheduleList withNextInvocations(OffsetDateTime[] nextInvocations) {
         this.nextInvocations = nextInvocations;
         return this;
@@ -33,6 +36,7 @@ public class SnapshotScheduleList {
     
     
     public String[] scheduleDefinitions;
+
     public SnapshotScheduleList withScheduleDefinitions(String[] scheduleDefinitions) {
         this.scheduleDefinitions = scheduleDefinitions;
         return this;
@@ -40,6 +44,7 @@ public class SnapshotScheduleList {
     
     
     public String scheduleDescription;
+
     public SnapshotScheduleList withScheduleDescription(String scheduleDescription) {
         this.scheduleDescription = scheduleDescription;
         return this;
@@ -47,6 +52,7 @@ public class SnapshotScheduleList {
     
     
     public String scheduleIdentifier;
+
     public SnapshotScheduleList withScheduleIdentifier(String scheduleIdentifier) {
         this.scheduleIdentifier = scheduleIdentifier;
         return this;
@@ -54,9 +60,11 @@ public class SnapshotScheduleList {
     
     
     public TagList[] tags;
+
     public SnapshotScheduleList withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public SnapshotScheduleList(){}
 }

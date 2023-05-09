@@ -15,6 +15,7 @@ public class GetImagesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Images")
     public Image[] images;
+
     public GetImagesOutput withImages(Image[] images) {
         this.images = images;
         return this;
@@ -23,9 +24,11 @@ public class GetImagesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetImagesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetImagesOutput(){}
 }

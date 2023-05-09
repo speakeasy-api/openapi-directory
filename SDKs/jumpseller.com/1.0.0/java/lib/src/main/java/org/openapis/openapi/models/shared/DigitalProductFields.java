@@ -15,6 +15,7 @@ public class DigitalProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_seconds")
     public Integer expirationSeconds;
+
     public DigitalProductFields withExpirationSeconds(Integer expirationSeconds) {
         this.expirationSeconds = expirationSeconds;
         return this;
@@ -26,6 +27,7 @@ public class DigitalProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public DigitalProductFields withId(Integer id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class DigitalProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public DigitalProductFields withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DigitalProductFields(){}
 }

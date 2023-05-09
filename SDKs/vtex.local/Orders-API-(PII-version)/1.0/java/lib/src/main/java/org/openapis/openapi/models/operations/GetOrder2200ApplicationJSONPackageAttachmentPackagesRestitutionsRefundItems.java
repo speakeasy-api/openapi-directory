@@ -15,6 +15,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutionsRef
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIndex")
     public String itemIndex;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutionsRefundItems withItemIndex(String itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -26,9 +27,11 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutionsRef
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutionsRefundItems withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutionsRefundItems(){}
 }

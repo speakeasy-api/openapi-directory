@@ -12,6 +12,7 @@ public class GETAuthorNameUsingGET200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorId")
     public String colorId;
+
     public GETAuthorNameUsingGET200ApplicationJSONDataInfo withColorId(String colorId) {
         this.colorId = colorId;
         return this;
@@ -20,6 +21,7 @@ public class GETAuthorNameUsingGET200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GETAuthorNameUsingGET200ApplicationJSONDataInfo withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class GETAuthorNameUsingGET200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GETAuthorNameUsingGET200ApplicationJSONDataInfo withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class GETAuthorNameUsingGET200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public GETAuthorNameUsingGET200ApplicationJSONDataInfo withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GETAuthorNameUsingGET200ApplicationJSONDataInfo(){}
 }

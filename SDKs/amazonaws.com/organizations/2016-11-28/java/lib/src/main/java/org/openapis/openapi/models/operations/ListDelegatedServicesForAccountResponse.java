@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDelegatedServicesForAccountResponse {
@@ -12,6 +13,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListDelegatedServicesForAccountResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDelegatedServicesForAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object accountNotFoundException;
+
     public ListDelegatedServicesForAccountResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object accountNotRegisteredException;
+
     public ListDelegatedServicesForAccountResponse withAccountNotRegisteredException(Object accountNotRegisteredException) {
         this.accountNotRegisteredException = accountNotRegisteredException;
         return this;
@@ -52,6 +57,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object constraintViolationException;
+
     public ListDelegatedServicesForAccountResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -59,6 +65,7 @@ public class ListDelegatedServicesForAccountResponse {
     
     
     public String contentType;
+
     public ListDelegatedServicesForAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object invalidInputException;
+
     public ListDelegatedServicesForAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDelegatedServicesForAccountResponse listDelegatedServicesForAccountResponse;
+
     public ListDelegatedServicesForAccountResponse withListDelegatedServicesForAccountResponse(org.openapis.openapi.models.shared.ListDelegatedServicesForAccountResponse listDelegatedServicesForAccountResponse) {
         this.listDelegatedServicesForAccountResponse = listDelegatedServicesForAccountResponse;
         return this;
@@ -89,6 +98,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object serviceException;
+
     public ListDelegatedServicesForAccountResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class ListDelegatedServicesForAccountResponse {
     
     
     public Integer statusCode;
+
     public ListDelegatedServicesForAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class ListDelegatedServicesForAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDelegatedServicesForAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDelegatedServicesForAccountResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class ListDelegatedServicesForAccountResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public ListDelegatedServicesForAccountResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public ListDelegatedServicesForAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

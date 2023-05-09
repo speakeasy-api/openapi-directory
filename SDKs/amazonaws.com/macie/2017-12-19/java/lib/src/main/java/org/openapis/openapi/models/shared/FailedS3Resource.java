@@ -15,6 +15,7 @@ public class FailedS3Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public FailedS3Resource withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class FailedS3Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public FailedS3Resource withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class FailedS3Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedItem")
     public S3Resource failedItem;
+
     public FailedS3Resource withFailedItem(S3Resource failedItem) {
         this.failedItem = failedItem;
         return this;
     }
     
+    public FailedS3Resource(){}
 }

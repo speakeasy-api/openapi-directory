@@ -18,9 +18,11 @@ public class ListTerminalsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Terminal[] data;
+
     public ListTerminalsResponse withData(Terminal[] data) {
         this.data = data;
         return this;
     }
     
+    public ListTerminalsResponse(){}
 }

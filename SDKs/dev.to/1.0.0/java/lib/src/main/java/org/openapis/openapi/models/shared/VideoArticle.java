@@ -15,6 +15,7 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudinary_video_url")
     public String cloudinaryVideoUrl;
+
     public VideoArticle withCloudinaryVideoUrl(String cloudinaryVideoUrl) {
         this.cloudinaryVideoUrl = cloudinaryVideoUrl;
         return this;
@@ -23,6 +24,7 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public VideoArticle withId(Long id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public VideoArticle withPath(String path) {
         this.path = path;
         return this;
@@ -39,6 +42,7 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public VideoArticle withTitle(String title) {
         this.title = title;
         return this;
@@ -47,6 +51,7 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_of")
     public String typeOf;
+
     public VideoArticle withTypeOf(String typeOf) {
         this.typeOf = typeOf;
         return this;
@@ -58,6 +63,7 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public VideoArticleUser user;
+
     public VideoArticle withUser(VideoArticleUser user) {
         this.user = user;
         return this;
@@ -66,6 +72,7 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public VideoArticle withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -74,6 +81,7 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video_duration_in_minutes")
     public String videoDurationInMinutes;
+
     public VideoArticle withVideoDurationInMinutes(String videoDurationInMinutes) {
         this.videoDurationInMinutes = videoDurationInMinutes;
         return this;
@@ -82,9 +90,11 @@ public class VideoArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video_source_url")
     public String videoSourceUrl;
+
     public VideoArticle withVideoSourceUrl(String videoSourceUrl) {
         this.videoSourceUrl = videoSourceUrl;
         return this;
     }
     
+    public VideoArticle(){}
 }

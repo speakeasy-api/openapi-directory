@@ -18,6 +18,7 @@ public class ApplicationWriteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_values")
     public CoverageValueWriteV1[] coverageValues;
+
     public ApplicationWriteV1 withCoverageValues(CoverageValueWriteV1[] coverageValues) {
         this.coverageValues = coverageValues;
         return this;
@@ -28,6 +29,7 @@ public class ApplicationWriteV1 {
      */
     @JsonProperty("products")
     public String[] products;
+
     public ApplicationWriteV1 withProducts(String[] products) {
         this.products = products;
         return this;
@@ -39,9 +41,13 @@ public class ApplicationWriteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk_values")
     public RiskValueWriteV1[] riskValues;
+
     public ApplicationWriteV1 withRiskValues(RiskValueWriteV1[] riskValues) {
         this.riskValues = riskValues;
         return this;
     }
     
+    public ApplicationWriteV1(@JsonProperty("products") String[] products) {
+        this.products = products;
+  }
 }

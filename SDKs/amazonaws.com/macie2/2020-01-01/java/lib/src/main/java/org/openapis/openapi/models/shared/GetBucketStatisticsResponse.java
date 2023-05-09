@@ -20,6 +20,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCount")
     public Long bucketCount;
+
     public GetBucketStatisticsResponse withBucketCount(Long bucketCount) {
         this.bucketCount = bucketCount;
         return this;
@@ -28,6 +29,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCountByEffectivePermission")
     public BucketCountByEffectivePermission bucketCountByEffectivePermission;
+
     public GetBucketStatisticsResponse withBucketCountByEffectivePermission(BucketCountByEffectivePermission bucketCountByEffectivePermission) {
         this.bucketCountByEffectivePermission = bucketCountByEffectivePermission;
         return this;
@@ -36,6 +38,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCountByEncryptionType")
     public BucketCountByEncryptionType bucketCountByEncryptionType;
+
     public GetBucketStatisticsResponse withBucketCountByEncryptionType(BucketCountByEncryptionType bucketCountByEncryptionType) {
         this.bucketCountByEncryptionType = bucketCountByEncryptionType;
         return this;
@@ -44,6 +47,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCountByObjectEncryptionRequirement")
     public BucketCountPolicyAllowsUnencryptedObjectUploads bucketCountByObjectEncryptionRequirement;
+
     public GetBucketStatisticsResponse withBucketCountByObjectEncryptionRequirement(BucketCountPolicyAllowsUnencryptedObjectUploads bucketCountByObjectEncryptionRequirement) {
         this.bucketCountByObjectEncryptionRequirement = bucketCountByObjectEncryptionRequirement;
         return this;
@@ -52,6 +56,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCountBySharedAccessType")
     public BucketCountBySharedAccessType bucketCountBySharedAccessType;
+
     public GetBucketStatisticsResponse withBucketCountBySharedAccessType(BucketCountBySharedAccessType bucketCountBySharedAccessType) {
         this.bucketCountBySharedAccessType = bucketCountBySharedAccessType;
         return this;
@@ -60,6 +65,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketStatisticsBySensitivity")
     public BucketStatisticsBySensitivity bucketStatisticsBySensitivity;
+
     public GetBucketStatisticsResponse withBucketStatisticsBySensitivity(BucketStatisticsBySensitivity bucketStatisticsBySensitivity) {
         this.bucketStatisticsBySensitivity = bucketStatisticsBySensitivity;
         return this;
@@ -68,6 +74,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifiableObjectCount")
     public Long classifiableObjectCount;
+
     public GetBucketStatisticsResponse withClassifiableObjectCount(Long classifiableObjectCount) {
         this.classifiableObjectCount = classifiableObjectCount;
         return this;
@@ -76,6 +83,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifiableSizeInBytes")
     public Long classifiableSizeInBytes;
+
     public GetBucketStatisticsResponse withClassifiableSizeInBytes(Long classifiableSizeInBytes) {
         this.classifiableSizeInBytes = classifiableSizeInBytes;
         return this;
@@ -86,6 +94,7 @@ public class GetBucketStatisticsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetBucketStatisticsResponse withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -94,6 +103,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectCount")
     public Long objectCount;
+
     public GetBucketStatisticsResponse withObjectCount(Long objectCount) {
         this.objectCount = objectCount;
         return this;
@@ -102,6 +112,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInBytes")
     public Long sizeInBytes;
+
     public GetBucketStatisticsResponse withSizeInBytes(Long sizeInBytes) {
         this.sizeInBytes = sizeInBytes;
         return this;
@@ -110,6 +121,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInBytesCompressed")
     public Long sizeInBytesCompressed;
+
     public GetBucketStatisticsResponse withSizeInBytesCompressed(Long sizeInBytesCompressed) {
         this.sizeInBytesCompressed = sizeInBytesCompressed;
         return this;
@@ -118,6 +130,7 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unclassifiableObjectCount")
     public ObjectLevelStatistics unclassifiableObjectCount;
+
     public GetBucketStatisticsResponse withUnclassifiableObjectCount(ObjectLevelStatistics unclassifiableObjectCount) {
         this.unclassifiableObjectCount = unclassifiableObjectCount;
         return this;
@@ -126,9 +139,11 @@ public class GetBucketStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unclassifiableObjectSizeInBytes")
     public ObjectLevelStatistics unclassifiableObjectSizeInBytes;
+
     public GetBucketStatisticsResponse withUnclassifiableObjectSizeInBytes(ObjectLevelStatistics unclassifiableObjectSizeInBytes) {
         this.unclassifiableObjectSizeInBytes = unclassifiableObjectSizeInBytes;
         return this;
     }
     
+    public GetBucketStatisticsResponse(){}
 }

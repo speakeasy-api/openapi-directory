@@ -15,6 +15,7 @@ public class ContentModerationDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModerationLabel")
     public ModerationLabel moderationLabel;
+
     public ContentModerationDetection withModerationLabel(ModerationLabel moderationLabel) {
         this.moderationLabel = moderationLabel;
         return this;
@@ -23,9 +24,11 @@ public class ContentModerationDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public Long timestamp;
+
     public ContentModerationDetection withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ContentModerationDetection(){}
 }

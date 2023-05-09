@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVolumesFsFlavorsJsonResponse {
     
     public String contentType;
+
     public GetVolumesFsFlavorsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetVolumesFsFlavorsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetVolumesFsFlavorsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetVolumesFsFlavorsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVolumesFsFlavorsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetVolumesFsFlavorsJsonResponse {
      */
     
     public Long[] getVolumesFsFlavorsJSON200ApplicationJSONIntegers;
+
     public GetVolumesFsFlavorsJsonResponse withGetVolumesFsFlavorsJSON200ApplicationJSONIntegers(Long[] getVolumesFsFlavorsJSON200ApplicationJSONIntegers) {
         this.getVolumesFsFlavorsJSON200ApplicationJSONIntegers = getVolumesFsFlavorsJSON200ApplicationJSONIntegers;
         return this;
     }
     
+    public GetVolumesFsFlavorsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

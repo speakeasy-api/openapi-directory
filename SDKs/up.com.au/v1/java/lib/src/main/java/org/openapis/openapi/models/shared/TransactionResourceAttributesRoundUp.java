@@ -19,6 +19,7 @@ public class TransactionResourceAttributesRoundUp {
      */
     @JsonProperty("amount")
     public MoneyObject amount;
+
     public TransactionResourceAttributesRoundUp withAmount(MoneyObject amount) {
         this.amount = amount;
         return this;
@@ -32,9 +33,14 @@ public class TransactionResourceAttributesRoundUp {
      */
     @JsonProperty("boostPortion")
     public TransactionResourceAttributesRoundUpBoostPortion boostPortion;
+
     public TransactionResourceAttributesRoundUp withBoostPortion(TransactionResourceAttributesRoundUpBoostPortion boostPortion) {
         this.boostPortion = boostPortion;
         return this;
     }
     
+    public TransactionResourceAttributesRoundUp(@JsonProperty("amount") MoneyObject amount, @JsonProperty("boostPortion") TransactionResourceAttributesRoundUpBoostPortion boostPortion) {
+        this.amount = amount;
+        this.boostPortion = boostPortion;
+  }
 }

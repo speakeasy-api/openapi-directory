@@ -15,6 +15,7 @@ public class GetInventory200ApplicationJSON {
      */
     @JsonProperty("quantity")
     public GetInventory200ApplicationJSONQuantity quantity;
+
     public GetInventory200ApplicationJSON withQuantity(GetInventory200ApplicationJSONQuantity quantity) {
         this.quantity = quantity;
         return this;
@@ -25,9 +26,14 @@ public class GetInventory200ApplicationJSON {
      */
     @JsonProperty("sku")
     public String sku;
+
     public GetInventory200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public GetInventory200ApplicationJSON(@JsonProperty("quantity") GetInventory200ApplicationJSONQuantity quantity, @JsonProperty("sku") String sku) {
+        this.quantity = quantity;
+        this.sku = sku;
+  }
 }

@@ -12,6 +12,7 @@ public class TransactGetItemsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public TransactGetItemsInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -19,9 +20,13 @@ public class TransactGetItemsInput {
     
     @JsonProperty("TransactItems")
     public TransactGetItem[] transactItems;
+
     public TransactGetItemsInput withTransactItems(TransactGetItem[] transactItems) {
         this.transactItems = transactItems;
         return this;
     }
     
+    public TransactGetItemsInput(@JsonProperty("TransactItems") TransactGetItem[] transactItems) {
+        this.transactItems = transactItems;
+  }
 }

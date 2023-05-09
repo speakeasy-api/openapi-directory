@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETResetSnapshotAttributeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETResetSnapshotAttributeActionEnum action;
+
     public GETResetSnapshotAttributeRequest withAction(GETResetSnapshotAttributeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETResetSnapshotAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Attribute")
     public GETResetSnapshotAttributeAttributeEnum attribute;
+
     public GETResetSnapshotAttributeRequest withAttribute(GETResetSnapshotAttributeAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -29,6 +32,7 @@ public class GETResetSnapshotAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETResetSnapshotAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETResetSnapshotAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotId")
     public String snapshotId;
+
     public GETResetSnapshotAttributeRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -46,6 +51,7 @@ public class GETResetSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETResetSnapshotAttributeVersionEnum version;
+
     public GETResetSnapshotAttributeRequest withVersion(GETResetSnapshotAttributeVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETResetSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETResetSnapshotAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETResetSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETResetSnapshotAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETResetSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETResetSnapshotAttributeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETResetSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETResetSnapshotAttributeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETResetSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETResetSnapshotAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETResetSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETResetSnapshotAttributeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETResetSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETResetSnapshotAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETResetSnapshotAttributeRequest(@JsonProperty("Action") GETResetSnapshotAttributeActionEnum action, @JsonProperty("Attribute") GETResetSnapshotAttributeAttributeEnum attribute, @JsonProperty("SnapshotId") String snapshotId, @JsonProperty("Version") GETResetSnapshotAttributeVersionEnum version) {
+        this.action = action;
+        this.attribute = attribute;
+        this.snapshotId = snapshotId;
+        this.version = version;
+  }
 }

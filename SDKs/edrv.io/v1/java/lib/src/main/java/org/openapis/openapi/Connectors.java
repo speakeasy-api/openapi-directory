@@ -52,10 +52,8 @@ public class Connectors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConnectorResponse res = new org.openapis.openapi.models.operations.DeleteConnectorResponse() {{
+        org.openapis.openapi.models.operations.DeleteConnectorResponse res = new org.openapis.openapi.models.operations.DeleteConnectorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,8 @@ public class Connectors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorResponse res = new org.openapis.openapi.models.operations.GetConnectorResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorResponse res = new org.openapis.openapi.models.operations.GetConnectorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,10 +126,8 @@ public class Connectors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorsResponse res = new org.openapis.openapi.models.operations.GetConnectorsResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorsResponse res = new org.openapis.openapi.models.operations.GetConnectorsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,11 +162,9 @@ public class Connectors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchConnectorResponse res = new org.openapis.openapi.models.operations.PatchConnectorResponse() {{
+        org.openapis.openapi.models.operations.PatchConnectorResponse res = new org.openapis.openapi.models.operations.PatchConnectorResponse(contentType, httpRes.statusCode()) {{
             patchConnector201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -214,11 +206,9 @@ public class Connectors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConnectorsResponse res = new org.openapis.openapi.models.operations.PostConnectorsResponse() {{
+        org.openapis.openapi.models.operations.PostConnectorsResponse res = new org.openapis.openapi.models.operations.PostConnectorsResponse(contentType, httpRes.statusCode()) {{
             postConnectors200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

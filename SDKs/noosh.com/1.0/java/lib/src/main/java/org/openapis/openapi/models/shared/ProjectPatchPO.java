@@ -17,6 +17,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_user_id")
     public Long clientUserId;
+
     public ProjectPatchPO withClientUserId(Long clientUserId) {
         this.clientUserId = clientUserId;
         return this;
@@ -25,6 +26,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_id")
     public Long clientWorkgroupId;
+
     public ProjectPatchPO withClientWorkgroupId(Long clientWorkgroupId) {
         this.clientWorkgroupId = clientWorkgroupId;
         return this;
@@ -33,6 +35,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public ProjectPatchPO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -42,6 +45,7 @@ public class ProjectPatchPO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public ProjectPatchPO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -50,6 +54,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public CustomFieldPersistVO[] customFields;
+
     public ProjectPatchPO withCustomFields(CustomFieldPersistVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -58,6 +63,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivation_reason_id")
     public Long deactivationReasonId;
+
     public ProjectPatchPO withDeactivationReasonId(Long deactivationReasonId) {
         this.deactivationReasonId = deactivationReasonId;
         return this;
@@ -66,6 +72,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public ProjectPatchPO withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -74,6 +81,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_hot")
     public Boolean isHot;
+
     public ProjectPatchPO withIsHot(Boolean isHot) {
         this.isHot = isHot;
         return this;
@@ -82,6 +90,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_category_id")
     public Long projectCategoryId;
+
     public ProjectPatchPO withProjectCategoryId(Long projectCategoryId) {
         this.projectCategoryId = projectCategoryId;
         return this;
@@ -90,6 +99,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_description")
     public String projectDescription;
+
     public ProjectPatchPO withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -98,6 +108,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_name")
     public String projectName;
+
     public ProjectPatchPO withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -106,6 +117,7 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_number")
     public String projectNumber;
+
     public ProjectPatchPO withProjectNumber(String projectNumber) {
         this.projectNumber = projectNumber;
         return this;
@@ -114,9 +126,11 @@ public class ProjectPatchPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_status_id")
     public Long projectStatusId;
+
     public ProjectPatchPO withProjectStatusId(Long projectStatusId) {
         this.projectStatusId = projectStatusId;
         return this;
     }
     
+    public ProjectPatchPO(){}
 }

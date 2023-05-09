@@ -15,6 +15,7 @@ public class V1PaymentTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public V1Money appliedMoney;
+
     public V1PaymentTax withAppliedMoney(V1Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -26,6 +27,7 @@ public class V1PaymentTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public V1PaymentTax withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -37,6 +39,7 @@ public class V1PaymentTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fee_id")
     public String feeId;
+
     public V1PaymentTax withFeeId(String feeId) {
         this.feeId = feeId;
         return this;
@@ -48,6 +51,7 @@ public class V1PaymentTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusion_type")
     public String inclusionType;
+
     public V1PaymentTax withInclusionType(String inclusionType) {
         this.inclusionType = inclusionType;
         return this;
@@ -59,6 +63,7 @@ public class V1PaymentTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1PaymentTax withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +75,11 @@ public class V1PaymentTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public String rate;
+
     public V1PaymentTax withRate(String rate) {
         this.rate = rate;
         return this;
     }
     
+    public V1PaymentTax(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeActionRequest {
     @JsonProperty("ActionName")
     public String actionName;
+
     public DescribeActionRequest withActionName(String actionName) {
         this.actionName = actionName;
         return this;
     }
     
+    public DescribeActionRequest(@JsonProperty("ActionName") String actionName) {
+        this.actionName = actionName;
+  }
 }

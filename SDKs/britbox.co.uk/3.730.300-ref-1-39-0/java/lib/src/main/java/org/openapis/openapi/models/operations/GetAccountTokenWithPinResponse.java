@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountTokenWithPinResponse {
@@ -12,6 +13,7 @@ public class GetAccountTokenWithPinResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessToken[] accessTokens;
+
     public GetAccountTokenWithPinResponse withAccessTokens(org.openapis.openapi.models.shared.AccessToken[] accessTokens) {
         this.accessTokens = accessTokens;
         return this;
@@ -19,6 +21,7 @@ public class GetAccountTokenWithPinResponse {
     
     
     public String contentType;
+
     public GetAccountTokenWithPinResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAccountTokenWithPinResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetAccountTokenWithPinResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetAccountTokenWithPinResponse {
     
     
     public Integer statusCode;
+
     public GetAccountTokenWithPinResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetAccountTokenWithPinResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountTokenWithPinResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAccountTokenWithPinResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

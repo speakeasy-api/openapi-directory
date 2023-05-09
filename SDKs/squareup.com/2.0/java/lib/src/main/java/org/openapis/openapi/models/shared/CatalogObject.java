@@ -41,6 +41,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absent_at_location_ids")
     public String[] absentAtLocationIds;
+
     public CatalogObject withAbsentAtLocationIds(String[] absentAtLocationIds) {
         this.absentAtLocationIds = absentAtLocationIds;
         return this;
@@ -54,6 +55,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_v1_ids")
     public CatalogV1Id[] catalogV1Ids;
+
     public CatalogObject withCatalogV1Ids(CatalogV1Id[] catalogV1Ids) {
         this.catalogV1Ids = catalogV1Ids;
         return this;
@@ -65,6 +67,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_data")
     public CatalogCategory categoryData;
+
     public CatalogObject withCategoryData(CatalogCategory categoryData) {
         this.categoryData = categoryData;
         return this;
@@ -80,6 +83,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_attribute_definition_data")
     public CatalogCustomAttributeDefinition customAttributeDefinitionData;
+
     public CatalogObject withCustomAttributeDefinitionData(CatalogCustomAttributeDefinition customAttributeDefinitionData) {
         this.customAttributeDefinitionData = customAttributeDefinitionData;
         return this;
@@ -106,6 +110,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_attribute_values")
     public java.util.Map<String, CatalogCustomAttributeValue> customAttributeValues;
+
     public CatalogObject withCustomAttributeValues(java.util.Map<String, CatalogCustomAttributeValue> customAttributeValues) {
         this.customAttributeValues = customAttributeValues;
         return this;
@@ -117,6 +122,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_data")
     public CatalogDiscount discountData;
+
     public CatalogObject withDiscountData(CatalogDiscount discountData) {
         this.discountData = discountData;
         return this;
@@ -133,6 +139,7 @@ public class CatalogObject {
      */
     @JsonProperty("id")
     public String id;
+
     public CatalogObject withId(String id) {
         this.id = id;
         return this;
@@ -145,6 +152,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_data")
     public CatalogImage imageData;
+
     public CatalogObject withImageData(CatalogImage imageData) {
         this.imageData = imageData;
         return this;
@@ -156,6 +164,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_id")
     public String imageId;
+
     public CatalogObject withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -168,6 +177,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_deleted")
     public Boolean isDeleted;
+
     public CatalogObject withIsDeleted(Boolean isDeleted) {
         this.isDeleted = isDeleted;
         return this;
@@ -179,6 +189,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_data")
     public CatalogItem itemData;
+
     public CatalogObject withItemData(CatalogItem itemData) {
         this.itemData = itemData;
         return this;
@@ -190,6 +201,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_data")
     public CatalogItemOption itemOptionData;
+
     public CatalogObject withItemOptionData(CatalogItemOption itemOptionData) {
         this.itemOptionData = itemOptionData;
         return this;
@@ -203,6 +215,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_value_data")
     public CatalogItemOptionValue itemOptionValueData;
+
     public CatalogObject withItemOptionValueData(CatalogItemOptionValue itemOptionValueData) {
         this.itemOptionValueData = itemOptionValueData;
         return this;
@@ -215,6 +228,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variation_data")
     public CatalogItemVariation itemVariationData;
+
     public CatalogObject withItemVariationData(CatalogItemVariation itemVariationData) {
         this.itemVariationData = itemVariationData;
         return this;
@@ -227,6 +241,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurement_unit_data")
     public CatalogMeasurementUnit measurementUnitData;
+
     public CatalogObject withMeasurementUnitData(CatalogMeasurementUnit measurementUnitData) {
         this.measurementUnitData = measurementUnitData;
         return this;
@@ -238,6 +253,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier_data")
     public CatalogModifier modifierData;
+
     public CatalogObject withModifierData(CatalogModifier modifierData) {
         this.modifierData = modifierData;
         return this;
@@ -254,6 +270,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier_list_data")
     public CatalogModifierList modifierListData;
+
     public CatalogObject withModifierListData(CatalogModifierList modifierListData) {
         this.modifierListData = modifierListData;
         return this;
@@ -267,6 +284,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("present_at_all_locations")
     public Boolean presentAtAllLocations;
+
     public CatalogObject withPresentAtAllLocations(Boolean presentAtAllLocations) {
         this.presentAtAllLocations = presentAtAllLocations;
         return this;
@@ -279,6 +297,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("present_at_location_ids")
     public String[] presentAtLocationIds;
+
     public CatalogObject withPresentAtLocationIds(String[] presentAtLocationIds) {
         this.presentAtLocationIds = presentAtLocationIds;
         return this;
@@ -291,6 +310,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_rule_data")
     public CatalogPricingRule pricingRuleData;
+
     public CatalogObject withPricingRuleData(CatalogPricingRule pricingRuleData) {
         this.pricingRuleData = pricingRuleData;
         return this;
@@ -306,6 +326,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_set_data")
     public CatalogProductSet productSetData;
+
     public CatalogObject withProductSetData(CatalogProductSet productSetData) {
         this.productSetData = productSetData;
         return this;
@@ -317,6 +338,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quick_amounts_settings_data")
     public CatalogQuickAmountsSettings quickAmountsSettingsData;
+
     public CatalogObject withQuickAmountsSettingsData(CatalogQuickAmountsSettings quickAmountsSettingsData) {
         this.quickAmountsSettingsData = quickAmountsSettingsData;
         return this;
@@ -329,6 +351,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_plan_data")
     public CatalogSubscriptionPlan subscriptionPlanData;
+
     public CatalogObject withSubscriptionPlanData(CatalogSubscriptionPlan subscriptionPlanData) {
         this.subscriptionPlanData = subscriptionPlanData;
         return this;
@@ -340,6 +363,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_data")
     public CatalogTax taxData;
+
     public CatalogObject withTaxData(CatalogTax taxData) {
         this.taxData = taxData;
         return this;
@@ -351,6 +375,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_period_data")
     public CatalogTimePeriod timePeriodData;
+
     public CatalogObject withTimePeriodData(CatalogTimePeriod timePeriodData) {
         this.timePeriodData = timePeriodData;
         return this;
@@ -362,6 +387,7 @@ public class CatalogObject {
      */
     @JsonProperty("type")
     public String type;
+
     public CatalogObject withType(String type) {
         this.type = type;
         return this;
@@ -374,6 +400,7 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public CatalogObject withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -386,9 +413,14 @@ public class CatalogObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public CatalogObject withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public CatalogObject(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

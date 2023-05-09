@@ -15,9 +15,11 @@ public class TargetLanguagesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageIds")
     public Long[] targetLanguageIds;
+
     public TargetLanguagesDTO withTargetLanguageIds(Long[] targetLanguageIds) {
         this.targetLanguageIds = targetLanguageIds;
         return this;
     }
     
+    public TargetLanguagesDTO(){}
 }

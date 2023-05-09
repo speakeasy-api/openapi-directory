@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1ListViolationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudAssuredworkloadsV1ListViolationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssuredworkloadsV1ListViolationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violations")
     public GoogleCloudAssuredworkloadsV1Violation[] violations;
+
     public GoogleCloudAssuredworkloadsV1ListViolationsResponse withViolations(GoogleCloudAssuredworkloadsV1Violation[] violations) {
         this.violations = violations;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1ListViolationsResponse(){}
 }

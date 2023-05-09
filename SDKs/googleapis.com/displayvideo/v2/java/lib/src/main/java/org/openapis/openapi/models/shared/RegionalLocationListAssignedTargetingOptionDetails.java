@@ -18,6 +18,7 @@ public class RegionalLocationListAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public RegionalLocationListAssignedTargetingOptionDetails withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -29,9 +30,11 @@ public class RegionalLocationListAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionalLocationListId")
     public String regionalLocationListId;
+
     public RegionalLocationListAssignedTargetingOptionDetails withRegionalLocationListId(String regionalLocationListId) {
         this.regionalLocationListId = regionalLocationListId;
         return this;
     }
     
+    public RegionalLocationListAssignedTargetingOptionDetails(){}
 }

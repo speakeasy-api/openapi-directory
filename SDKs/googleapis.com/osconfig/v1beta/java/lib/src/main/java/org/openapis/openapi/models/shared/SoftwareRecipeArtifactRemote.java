@@ -18,6 +18,7 @@ public class SoftwareRecipeArtifactRemote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checksum")
     public String checksum;
+
     public SoftwareRecipeArtifactRemote withChecksum(String checksum) {
         this.checksum = checksum;
         return this;
@@ -29,9 +30,11 @@ public class SoftwareRecipeArtifactRemote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public SoftwareRecipeArtifactRemote withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public SoftwareRecipeArtifactRemote(){}
 }

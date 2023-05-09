@@ -15,6 +15,7 @@ public class MatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfidenceScore")
     public Double confidenceScore;
+
     public MatchItem withConfidenceScore(Double confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -23,6 +24,7 @@ public class MatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchId")
     public String matchId;
+
     public MatchItem withMatchId(String matchId) {
         this.matchId = matchId;
         return this;
@@ -31,9 +33,11 @@ public class MatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileIds")
     public String[] profileIds;
+
     public MatchItem withProfileIds(String[] profileIds) {
         this.profileIds = profileIds;
         return this;
     }
     
+    public MatchItem(){}
 }

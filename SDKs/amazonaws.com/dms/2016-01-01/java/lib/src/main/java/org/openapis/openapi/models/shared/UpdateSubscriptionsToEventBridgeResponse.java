@@ -15,9 +15,11 @@ public class UpdateSubscriptionsToEventBridgeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public String result;
+
     public UpdateSubscriptionsToEventBridgeResponse withResult(String result) {
         this.result = result;
         return this;
     }
     
+    public UpdateSubscriptionsToEventBridgeResponse(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DisableVgwRoutePropagationRequest - Contains the parameters for DisableVgwRoutePropagation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisableVgwRoutePropagationRequest {
     
     public Boolean dryRun;
+
     public DisableVgwRoutePropagationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DisableVgwRoutePropagationRequest {
     
     
     public String gatewayId;
+
     public DisableVgwRoutePropagationRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -26,9 +28,14 @@ public class DisableVgwRoutePropagationRequest {
     
     
     public String routeTableId;
+
     public DisableVgwRoutePropagationRequest withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
     }
     
+    public DisableVgwRoutePropagationRequest(@JsonProperty("GatewayId") String gatewayId, @JsonProperty("RouteTableId") String routeTableId) {
+        this.gatewayId = gatewayId;
+        this.routeTableId = routeTableId;
+  }
 }

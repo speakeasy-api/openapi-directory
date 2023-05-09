@@ -15,6 +15,7 @@ public class SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvancedEventSelectors")
     public AdvancedEventSelector[] advancedEventSelectors;
+
     public SourceConfig withAdvancedEventSelectors(AdvancedEventSelector[] advancedEventSelectors) {
         this.advancedEventSelectors = advancedEventSelectors;
         return this;
@@ -23,9 +24,11 @@ public class SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyToAllRegions")
     public Boolean applyToAllRegions;
+
     public SourceConfig withApplyToAllRegions(Boolean applyToAllRegions) {
         this.applyToAllRegions = applyToAllRegions;
         return this;
     }
     
+    public SourceConfig(){}
 }

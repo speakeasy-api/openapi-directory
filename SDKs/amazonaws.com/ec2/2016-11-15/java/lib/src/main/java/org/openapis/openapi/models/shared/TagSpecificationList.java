@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TagSpecificationList {
     
     public TagSpecificationListResourceTypeEnum resourceType;
+
     public TagSpecificationList withResourceType(TagSpecificationListResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class TagSpecificationList {
     
     
     public TagSpecificationListTags[] tags;
+
     public TagSpecificationList withTags(TagSpecificationListTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagSpecificationList(){}
 }

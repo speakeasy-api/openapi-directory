@@ -12,6 +12,7 @@ public class CreateExperienceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateExperienceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateExperienceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public ExperienceConfiguration configuration;
+
     public CreateExperienceRequest withConfiguration(ExperienceConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -28,6 +30,7 @@ public class CreateExperienceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateExperienceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class CreateExperienceRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public CreateExperienceRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -42,6 +46,7 @@ public class CreateExperienceRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateExperienceRequest withName(String name) {
         this.name = name;
         return this;
@@ -50,9 +55,14 @@ public class CreateExperienceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateExperienceRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public CreateExperienceRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("Name") String name) {
+        this.indexId = indexId;
+        this.name = name;
+  }
 }

@@ -18,9 +18,11 @@ public class UpdateApplication200ApplicationJSONPrivacy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("improve_ai")
     public Boolean improveAi;
+
     public UpdateApplication200ApplicationJSONPrivacy withImproveAi(Boolean improveAi) {
         this.improveAi = improveAi;
         return this;
     }
     
+    public UpdateApplication200ApplicationJSONPrivacy(){}
 }

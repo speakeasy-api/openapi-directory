@@ -15,6 +15,7 @@ public class CustomArtifactConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactType")
     public ArtifactTypeEnum artifactType;
+
     public CustomArtifactConfigurationDescription withArtifactType(ArtifactTypeEnum artifactType) {
         this.artifactType = artifactType;
         return this;
@@ -23,6 +24,7 @@ public class CustomArtifactConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MavenReferenceDescription")
     public MavenReference mavenReferenceDescription;
+
     public CustomArtifactConfigurationDescription withMavenReferenceDescription(MavenReference mavenReferenceDescription) {
         this.mavenReferenceDescription = mavenReferenceDescription;
         return this;
@@ -34,9 +36,11 @@ public class CustomArtifactConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3ContentLocationDescription")
     public S3ContentLocation s3ContentLocationDescription;
+
     public CustomArtifactConfigurationDescription withS3ContentLocationDescription(S3ContentLocation s3ContentLocationDescription) {
         this.s3ContentLocationDescription = s3ContentLocationDescription;
         return this;
     }
     
+    public CustomArtifactConfigurationDescription(){}
 }

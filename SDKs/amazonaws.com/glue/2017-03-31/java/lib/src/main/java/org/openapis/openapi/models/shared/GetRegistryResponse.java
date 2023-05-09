@@ -15,6 +15,7 @@ public class GetRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedTime")
     public String createdTime;
+
     public GetRegistryResponse withCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -23,6 +24,7 @@ public class GetRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetRegistryResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class GetRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryArn")
     public String registryArn;
+
     public GetRegistryResponse withRegistryArn(String registryArn) {
         this.registryArn = registryArn;
         return this;
@@ -39,6 +42,7 @@ public class GetRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryName")
     public String registryName;
+
     public GetRegistryResponse withRegistryName(String registryName) {
         this.registryName = registryName;
         return this;
@@ -47,6 +51,7 @@ public class GetRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RegistryStatusEnum status;
+
     public GetRegistryResponse withStatus(RegistryStatusEnum status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class GetRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedTime")
     public String updatedTime;
+
     public GetRegistryResponse withUpdatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
         return this;
     }
     
+    public GetRegistryResponse(){}
 }

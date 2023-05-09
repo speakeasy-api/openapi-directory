@@ -12,6 +12,7 @@ public class PdfUploadAttributesContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public PdfUploadAttributesContentAttachments[] attachments;
+
     public PdfUploadAttributesContent withAttachments(PdfUploadAttributesContentAttachments[] attachments) {
         this.attachments = attachments;
         return this;
@@ -20,6 +21,7 @@ public class PdfUploadAttributesContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public PdfDimensionAttributes dimensions;
+
     public PdfUploadAttributesContent withDimensions(PdfDimensionAttributes dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -31,9 +33,11 @@ public class PdfUploadAttributesContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_count")
     public Long pageCount;
+
     public PdfUploadAttributesContent withPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
     }
     
+    public PdfUploadAttributesContent(){}
 }

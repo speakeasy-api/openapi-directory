@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PardotSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public PardotSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public PardotSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

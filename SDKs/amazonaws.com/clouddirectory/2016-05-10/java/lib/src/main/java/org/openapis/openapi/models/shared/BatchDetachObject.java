@@ -15,6 +15,7 @@ public class BatchDetachObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchReferenceName")
     public String batchReferenceName;
+
     public BatchDetachObject withBatchReferenceName(String batchReferenceName) {
         this.batchReferenceName = batchReferenceName;
         return this;
@@ -22,6 +23,7 @@ public class BatchDetachObject {
     
     @JsonProperty("LinkName")
     public String linkName;
+
     public BatchDetachObject withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -29,9 +31,14 @@ public class BatchDetachObject {
     
     @JsonProperty("ParentReference")
     public ObjectReference parentReference;
+
     public BatchDetachObject withParentReference(ObjectReference parentReference) {
         this.parentReference = parentReference;
         return this;
     }
     
+    public BatchDetachObject(@JsonProperty("LinkName") String linkName, @JsonProperty("ParentReference") ObjectReference parentReference) {
+        this.linkName = linkName;
+        this.parentReference = parentReference;
+  }
 }

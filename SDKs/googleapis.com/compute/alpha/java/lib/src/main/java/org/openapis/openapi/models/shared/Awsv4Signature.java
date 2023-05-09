@@ -18,6 +18,7 @@ public class Awsv4Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKey")
     public String accessKey;
+
     public Awsv4Signature withAccessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
@@ -29,6 +30,7 @@ public class Awsv4Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKeyId")
     public String accessKeyId;
+
     public Awsv4Signature withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -40,6 +42,7 @@ public class Awsv4Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKeyVersion")
     public String accessKeyVersion;
+
     public Awsv4Signature withAccessKeyVersion(String accessKeyVersion) {
         this.accessKeyVersion = accessKeyVersion;
         return this;
@@ -51,9 +54,11 @@ public class Awsv4Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originRegion")
     public String originRegion;
+
     public Awsv4Signature withOriginRegion(String originRegion) {
         this.originRegion = originRegion;
         return this;
     }
     
+    public Awsv4Signature(){}
 }

@@ -52,11 +52,9 @@ public class CodesOfConduct {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodesOfConductGetAllCodesOfConductResponse res = new org.openapis.openapi.models.operations.CodesOfConductGetAllCodesOfConductResponse() {{
+        org.openapis.openapi.models.operations.CodesOfConductGetAllCodesOfConductResponse res = new org.openapis.openapi.models.operations.CodesOfConductGetAllCodesOfConductResponse(contentType, httpRes.statusCode()) {{
             codeOfConducts = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,12 +91,10 @@ public class CodesOfConduct {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodesOfConductGetConductCodeResponse res = new org.openapis.openapi.models.operations.CodesOfConductGetConductCodeResponse() {{
+        org.openapis.openapi.models.operations.CodesOfConductGetConductCodeResponse res = new org.openapis.openapi.models.operations.CodesOfConductGetConductCodeResponse(contentType, httpRes.statusCode()) {{
             codeOfConduct = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

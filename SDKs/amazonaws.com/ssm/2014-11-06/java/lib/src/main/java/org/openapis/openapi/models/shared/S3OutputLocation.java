@@ -15,6 +15,7 @@ public class S3OutputLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3BucketName")
     public String outputS3BucketName;
+
     public S3OutputLocation withOutputS3BucketName(String outputS3BucketName) {
         this.outputS3BucketName = outputS3BucketName;
         return this;
@@ -23,6 +24,7 @@ public class S3OutputLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3KeyPrefix")
     public String outputS3KeyPrefix;
+
     public S3OutputLocation withOutputS3KeyPrefix(String outputS3KeyPrefix) {
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         return this;
@@ -31,9 +33,11 @@ public class S3OutputLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3Region")
     public String outputS3Region;
+
     public S3OutputLocation withOutputS3Region(String outputS3Region) {
         this.outputS3Region = outputS3Region;
         return this;
     }
     
+    public S3OutputLocation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CallTransferRequest {
@@ -12,6 +13,7 @@ public class CallTransferRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CallTransfer callTransfer;
+
     public CallTransferRequest withCallTransfer(org.openapis.openapi.models.shared.CallTransfer callTransfer) {
         this.callTransfer = callTransfer;
         return this;
@@ -22,9 +24,14 @@ public class CallTransferRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public CallTransferRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CallTransferRequest(@JsonProperty("CallTransfer") org.openapis.openapi.models.shared.CallTransfer callTransfer, @JsonProperty("id") String id) {
+        this.callTransfer = callTransfer;
+        this.id = id;
+  }
 }

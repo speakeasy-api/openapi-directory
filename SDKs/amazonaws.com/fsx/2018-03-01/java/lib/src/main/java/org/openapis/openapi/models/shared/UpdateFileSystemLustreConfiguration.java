@@ -15,6 +15,7 @@ public class UpdateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoImportPolicy")
     public AutoImportPolicyTypeEnum autoImportPolicy;
+
     public UpdateFileSystemLustreConfiguration withAutoImportPolicy(AutoImportPolicyTypeEnum autoImportPolicy) {
         this.autoImportPolicy = autoImportPolicy;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public UpdateFileSystemLustreConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -37,6 +39,7 @@ public class UpdateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public UpdateFileSystemLustreConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -45,6 +48,7 @@ public class UpdateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCompressionType")
     public DataCompressionTypeEnum dataCompressionType;
+
     public UpdateFileSystemLustreConfiguration withDataCompressionType(DataCompressionTypeEnum dataCompressionType) {
         this.dataCompressionType = dataCompressionType;
         return this;
@@ -53,6 +57,7 @@ public class UpdateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogConfiguration")
     public LustreLogCreateConfiguration logConfiguration;
+
     public UpdateFileSystemLustreConfiguration withLogConfiguration(LustreLogCreateConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -61,6 +66,7 @@ public class UpdateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootSquashConfiguration")
     public LustreRootSquashConfiguration rootSquashConfiguration;
+
     public UpdateFileSystemLustreConfiguration withRootSquashConfiguration(LustreRootSquashConfiguration rootSquashConfiguration) {
         this.rootSquashConfiguration = rootSquashConfiguration;
         return this;
@@ -69,9 +75,11 @@ public class UpdateFileSystemLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public UpdateFileSystemLustreConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public UpdateFileSystemLustreConfiguration(){}
 }

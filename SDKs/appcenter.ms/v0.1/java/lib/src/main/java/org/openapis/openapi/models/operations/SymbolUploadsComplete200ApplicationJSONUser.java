@@ -18,6 +18,7 @@ public class SymbolUploadsComplete200ApplicationJSONUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public SymbolUploadsComplete200ApplicationJSONUser withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class SymbolUploadsComplete200ApplicationJSONUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SymbolUploadsComplete200ApplicationJSONUser withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public SymbolUploadsComplete200ApplicationJSONUser(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSnapshotResponse {
@@ -12,6 +13,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object conflictException;
+
     public DeleteSnapshotResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSnapshotResponse {
     
     
     public String contentType;
+
     public DeleteSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSnapshotResponse deleteSnapshotResponse;
+
     public DeleteSnapshotResponse withDeleteSnapshotResponse(org.openapis.openapi.models.shared.DeleteSnapshotResponse deleteSnapshotResponse) {
         this.deleteSnapshotResponse = deleteSnapshotResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSnapshotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSnapshotResponse {
      */
     
     public Object validationException;
+
     public DeleteSnapshotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

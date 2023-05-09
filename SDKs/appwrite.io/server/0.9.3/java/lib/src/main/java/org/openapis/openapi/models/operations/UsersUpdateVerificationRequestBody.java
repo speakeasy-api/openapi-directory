@@ -12,9 +12,13 @@ public class UsersUpdateVerificationRequestBody {
      */
     @JsonProperty("emailVerification")
     public Boolean emailVerification;
+
     public UsersUpdateVerificationRequestBody withEmailVerification(Boolean emailVerification) {
         this.emailVerification = emailVerification;
         return this;
     }
     
+    public UsersUpdateVerificationRequestBody(@JsonProperty("emailVerification") Boolean emailVerification) {
+        this.emailVerification = emailVerification;
+  }
 }

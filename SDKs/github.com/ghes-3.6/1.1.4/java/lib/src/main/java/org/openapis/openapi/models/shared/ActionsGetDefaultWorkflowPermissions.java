@@ -15,6 +15,7 @@ public class ActionsGetDefaultWorkflowPermissions {
      */
     @JsonProperty("can_approve_pull_request_reviews")
     public Boolean canApprovePullRequestReviews;
+
     public ActionsGetDefaultWorkflowPermissions withCanApprovePullRequestReviews(Boolean canApprovePullRequestReviews) {
         this.canApprovePullRequestReviews = canApprovePullRequestReviews;
         return this;
@@ -25,9 +26,14 @@ public class ActionsGetDefaultWorkflowPermissions {
      */
     @JsonProperty("default_workflow_permissions")
     public ActionsDefaultWorkflowPermissionsEnum defaultWorkflowPermissions;
+
     public ActionsGetDefaultWorkflowPermissions withDefaultWorkflowPermissions(ActionsDefaultWorkflowPermissionsEnum defaultWorkflowPermissions) {
         this.defaultWorkflowPermissions = defaultWorkflowPermissions;
         return this;
     }
     
+    public ActionsGetDefaultWorkflowPermissions(@JsonProperty("can_approve_pull_request_reviews") Boolean canApprovePullRequestReviews, @JsonProperty("default_workflow_permissions") ActionsDefaultWorkflowPermissionsEnum defaultWorkflowPermissions) {
+        this.canApprovePullRequestReviews = canApprovePullRequestReviews;
+        this.defaultWorkflowPermissions = defaultWorkflowPermissions;
+  }
 }

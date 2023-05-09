@@ -18,6 +18,7 @@ public class MysqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowlist")
     public MysqlRdbms allowlist;
+
     public MysqlSourceConfig withAllowlist(MysqlRdbms allowlist) {
         this.allowlist = allowlist;
         return this;
@@ -29,9 +30,11 @@ public class MysqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejectlist")
     public MysqlRdbms rejectlist;
+
     public MysqlSourceConfig withRejectlist(MysqlRdbms rejectlist) {
         this.rejectlist = rejectlist;
         return this;
     }
     
+    public MysqlSourceConfig(){}
 }

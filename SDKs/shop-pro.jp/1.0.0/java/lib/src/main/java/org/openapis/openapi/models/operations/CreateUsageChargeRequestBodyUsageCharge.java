@@ -12,6 +12,7 @@ public class CreateUsageChargeRequestBodyUsageCharge {
      */
     @JsonProperty("description")
     public String description;
+
     public CreateUsageChargeRequestBodyUsageCharge withDescription(String description) {
         this.description = description;
         return this;
@@ -22,9 +23,14 @@ public class CreateUsageChargeRequestBodyUsageCharge {
      */
     @JsonProperty("point")
     public Long point;
+
     public CreateUsageChargeRequestBodyUsageCharge withPoint(Long point) {
         this.point = point;
         return this;
     }
     
+    public CreateUsageChargeRequestBodyUsageCharge(@JsonProperty("description") String description, @JsonProperty("point") Long point) {
+        this.description = description;
+        this.point = point;
+  }
 }

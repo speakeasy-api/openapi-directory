@@ -18,9 +18,11 @@ public class SafeHtmlProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateDoNotAccessOrElseSafeHtmlWrappedValue")
     public String privateDoNotAccessOrElseSafeHtmlWrappedValue;
+
     public SafeHtmlProto withPrivateDoNotAccessOrElseSafeHtmlWrappedValue(String privateDoNotAccessOrElseSafeHtmlWrappedValue) {
         this.privateDoNotAccessOrElseSafeHtmlWrappedValue = privateDoNotAccessOrElseSafeHtmlWrappedValue;
         return this;
     }
     
+    public SafeHtmlProto(){}
 }

@@ -15,6 +15,7 @@ public class CatalogDeltaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalDeltaOptions")
     public java.util.Map<String, String> additionalDeltaOptions;
+
     public CatalogDeltaSource withAdditionalDeltaOptions(java.util.Map<String, String> additionalDeltaOptions) {
         this.additionalDeltaOptions = additionalDeltaOptions;
         return this;
@@ -22,6 +23,7 @@ public class CatalogDeltaSource {
     
     @JsonProperty("Database")
     public String database;
+
     public CatalogDeltaSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -29,6 +31,7 @@ public class CatalogDeltaSource {
     
     @JsonProperty("Name")
     public String name;
+
     public CatalogDeltaSource withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class CatalogDeltaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public CatalogDeltaSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -44,9 +48,15 @@ public class CatalogDeltaSource {
     
     @JsonProperty("Table")
     public String table;
+
     public CatalogDeltaSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public CatalogDeltaSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

@@ -56,11 +56,9 @@ public class Developers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevelopersListResponse res = new org.openapis.openapi.models.operations.DevelopersListResponse() {{
+        org.openapis.openapi.models.operations.DevelopersListResponse res = new org.openapis.openapi.models.operations.DevelopersListResponse(contentType, httpRes.statusCode()) {{
             developersList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Developers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevelopersReadResponse res = new org.openapis.openapi.models.operations.DevelopersReadResponse() {{
+        org.openapis.openapi.models.operations.DevelopersReadResponse res = new org.openapis.openapi.models.operations.DevelopersReadResponse(contentType, httpRes.statusCode()) {{
             developerSingle = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

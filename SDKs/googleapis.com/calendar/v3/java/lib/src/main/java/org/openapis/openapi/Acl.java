@@ -59,10 +59,8 @@ public class Acl {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarAclDeleteResponse res = new org.openapis.openapi.models.operations.CalendarAclDeleteResponse() {{
+        org.openapis.openapi.models.operations.CalendarAclDeleteResponse res = new org.openapis.openapi.models.operations.CalendarAclDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Acl {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarAclGetResponse res = new org.openapis.openapi.models.operations.CalendarAclGetResponse() {{
+        org.openapis.openapi.models.operations.CalendarAclGetResponse res = new org.openapis.openapi.models.operations.CalendarAclGetResponse(contentType, httpRes.statusCode()) {{
             aclRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Acl {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarAclInsertResponse res = new org.openapis.openapi.models.operations.CalendarAclInsertResponse() {{
+        org.openapis.openapi.models.operations.CalendarAclInsertResponse res = new org.openapis.openapi.models.operations.CalendarAclInsertResponse(contentType, httpRes.statusCode()) {{
             aclRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Acl {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarAclListResponse res = new org.openapis.openapi.models.operations.CalendarAclListResponse() {{
+        org.openapis.openapi.models.operations.CalendarAclListResponse res = new org.openapis.openapi.models.operations.CalendarAclListResponse(contentType, httpRes.statusCode()) {{
             acl = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Acl {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarAclPatchResponse res = new org.openapis.openapi.models.operations.CalendarAclPatchResponse() {{
+        org.openapis.openapi.models.operations.CalendarAclPatchResponse res = new org.openapis.openapi.models.operations.CalendarAclPatchResponse(contentType, httpRes.statusCode()) {{
             aclRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Acl {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarAclUpdateResponse res = new org.openapis.openapi.models.operations.CalendarAclUpdateResponse() {{
+        org.openapis.openapi.models.operations.CalendarAclUpdateResponse res = new org.openapis.openapi.models.operations.CalendarAclUpdateResponse(contentType, httpRes.statusCode()) {{
             aclRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class Acl {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarAclWatchResponse res = new org.openapis.openapi.models.operations.CalendarAclWatchResponse() {{
+        org.openapis.openapi.models.operations.CalendarAclWatchResponse res = new org.openapis.openapi.models.operations.CalendarAclWatchResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

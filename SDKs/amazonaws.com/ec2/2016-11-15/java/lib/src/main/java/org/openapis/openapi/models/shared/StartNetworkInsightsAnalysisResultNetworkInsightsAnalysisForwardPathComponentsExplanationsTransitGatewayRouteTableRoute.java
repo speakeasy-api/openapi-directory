@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute {
     
     public String attachmentId;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -19,6 +20,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public String destinationCidr;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withDestinationCidr(String destinationCidr) {
         this.destinationCidr = destinationCidr;
         return this;
@@ -26,6 +28,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public String prefixListId;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -33,6 +36,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public String resourceId;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -40,6 +44,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public String resourceType;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,6 +52,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public String routeOrigin;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withRouteOrigin(String routeOrigin) {
         this.routeOrigin = routeOrigin;
         return this;
@@ -54,9 +60,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public String state;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute withState(String state) {
         this.state = state;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsTransitGatewayRouteTableRoute(){}
 }

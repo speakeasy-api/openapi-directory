@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUntagUserRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUntagUserActionEnum action;
+
     public GETUntagUserRequest withAction(GETUntagUserActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUntagUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
     public String[] tagKeys;
+
     public GETUntagUserRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -29,6 +32,7 @@ public class GETUntagUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETUntagUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -36,6 +40,7 @@ public class GETUntagUserRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUntagUserVersionEnum version;
+
     public GETUntagUserRequest withVersion(GETUntagUserVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUntagUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUntagUserRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUntagUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUntagUserRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUntagUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUntagUserRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUntagUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUntagUserRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUntagUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUntagUserRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUntagUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUntagUserRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUntagUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUntagUserRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUntagUserRequest(@JsonProperty("Action") GETUntagUserActionEnum action, @JsonProperty("TagKeys") String[] tagKeys, @JsonProperty("UserName") String userName, @JsonProperty("Version") GETUntagUserVersionEnum version) {
+        this.action = action;
+        this.tagKeys = tagKeys;
+        this.userName = userName;
+        this.version = version;
+  }
 }

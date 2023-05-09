@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public GoogleTypeColor backgroundColor;
+
     public GoogleCloudDocumentaiV1beta3DocumentStyle withBackgroundColor(GoogleTypeColor backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public GoogleTypeColor color;
+
     public GoogleCloudDocumentaiV1beta3DocumentStyle withColor(GoogleTypeColor color) {
         this.color = color;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontFamily")
     public String fontFamily;
+
     public GoogleCloudDocumentaiV1beta3DocumentStyle withFontFamily(String fontFamily) {
         this.fontFamily = fontFamily;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontSize")
     public GoogleCloudDocumentaiV1beta3DocumentStyleFontSize fontSize;
+
     public GoogleCloudDocumentaiV1beta3DocumentStyle withFontSize(GoogleCloudDocumentaiV1beta3DocumentStyleFontSize fontSize) {
         this.fontSize = fontSize;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontWeight")
     public String fontWeight;
+
     public GoogleCloudDocumentaiV1beta3DocumentStyle withFontWeight(String fontWeight) {
         this.fontWeight = fontWeight;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textAnchor")
     public GoogleCloudDocumentaiV1beta3DocumentTextAnchor textAnchor;
+
     public GoogleCloudDocumentaiV1beta3DocumentStyle withTextAnchor(GoogleCloudDocumentaiV1beta3DocumentTextAnchor textAnchor) {
         this.textAnchor = textAnchor;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textDecoration")
     public String textDecoration;
+
     public GoogleCloudDocumentaiV1beta3DocumentStyle withTextDecoration(String textDecoration) {
         this.textDecoration = textDecoration;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public String textStyle;
+
     public GoogleCloudDocumentaiV1beta3DocumentStyle withTextStyle(String textStyle) {
         this.textStyle = textStyle;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentStyle(){}
 }

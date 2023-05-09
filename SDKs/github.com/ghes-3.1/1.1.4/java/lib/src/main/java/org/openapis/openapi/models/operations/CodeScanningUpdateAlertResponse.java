@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodeScanningUpdateAlertResponse {
     
     public String contentType;
+
     public CodeScanningUpdateAlertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodeScanningUpdateAlertResponse {
     
     
     public Integer statusCode;
+
     public CodeScanningUpdateAlertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodeScanningUpdateAlertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodeScanningUpdateAlertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodeScanningUpdateAlertResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public CodeScanningUpdateAlertResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class CodeScanningUpdateAlertResponse {
      */
     
     public org.openapis.openapi.models.shared.CodeScanningAlert codeScanningAlert;
+
     public CodeScanningUpdateAlertResponse withCodeScanningAlert(org.openapis.openapi.models.shared.CodeScanningAlert codeScanningAlert) {
         this.codeScanningAlert = codeScanningAlert;
         return this;
@@ -53,9 +59,14 @@ public class CodeScanningUpdateAlertResponse {
      */
     
     public CodeScanningUpdateAlert503ApplicationJSON codeScanningUpdateAlert503ApplicationJSONObject;
+
     public CodeScanningUpdateAlertResponse withCodeScanningUpdateAlert503ApplicationJSONObject(CodeScanningUpdateAlert503ApplicationJSON codeScanningUpdateAlert503ApplicationJSONObject) {
         this.codeScanningUpdateAlert503ApplicationJSONObject = codeScanningUpdateAlert503ApplicationJSONObject;
         return this;
     }
     
+    public CodeScanningUpdateAlertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

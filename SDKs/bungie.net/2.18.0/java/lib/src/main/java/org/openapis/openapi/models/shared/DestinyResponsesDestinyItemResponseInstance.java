@@ -18,6 +18,7 @@ public class DestinyResponsesDestinyItemResponseInstance {
      */
     
     public DestinyEntitiesItemsDestinyItemInstanceComponent data;
+
     public DestinyResponsesDestinyItemResponseInstance withData(DestinyEntitiesItemsDestinyItemInstanceComponent data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class DestinyResponsesDestinyItemResponseInstance {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyItemResponseInstance withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -35,9 +37,11 @@ public class DestinyResponsesDestinyItemResponseInstance {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyItemResponseInstance withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyItemResponseInstance(){}
 }

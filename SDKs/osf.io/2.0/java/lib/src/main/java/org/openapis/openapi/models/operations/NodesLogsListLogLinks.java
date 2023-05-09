@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * NodesLogsListLogLinks - URLs to alternative representations of the log entity.
@@ -15,9 +15,13 @@ public class NodesLogsListLogLinks {
      */
     
     public String self;
+
     public NodesLogsListLogLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesLogsListLogLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

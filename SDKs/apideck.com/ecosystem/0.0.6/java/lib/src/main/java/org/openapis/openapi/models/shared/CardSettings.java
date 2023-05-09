@@ -12,6 +12,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background_color")
     public String backgroundColor;
+
     public CardSettings withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -20,6 +21,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("border_color")
     public String borderColor;
+
     public CardSettings withBorderColor(String borderColor) {
         this.borderColor = borderColor;
         return this;
@@ -28,6 +30,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("border_radius")
     public String borderRadius;
+
     public CardSettings withBorderRadius(String borderRadius) {
         this.borderRadius = borderRadius;
         return this;
@@ -36,6 +39,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("border_size")
     public String borderSize;
+
     public CardSettings withBorderSize(String borderSize) {
         this.borderSize = borderSize;
         return this;
@@ -44,6 +48,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public CardSettings withColor(String color) {
         this.color = color;
         return this;
@@ -52,6 +57,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Long columns;
+
     public CardSettings withColumns(Long columns) {
         this.columns = columns;
         return this;
@@ -60,6 +66,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description_lines")
     public Long descriptionLines;
+
     public CardSettings withDescriptionLines(Long descriptionLines) {
         this.descriptionLines = descriptionLines;
         return this;
@@ -68,6 +75,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_border_radius")
     public String iconBorderRadius;
+
     public CardSettings withIconBorderRadius(String iconBorderRadius) {
         this.iconBorderRadius = iconBorderRadius;
         return this;
@@ -76,6 +84,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_shadow_enabled")
     public Boolean iconShadowEnabled;
+
     public CardSettings withIconShadowEnabled(Boolean iconShadowEnabled) {
         this.iconShadowEnabled = iconShadowEnabled;
         return this;
@@ -84,6 +93,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_size")
     public Long iconSize;
+
     public CardSettings withIconSize(Long iconSize) {
         this.iconSize = iconSize;
         return this;
@@ -92,6 +102,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shadow_enabled")
     public Boolean shadowEnabled;
+
     public CardSettings withShadowEnabled(Boolean shadowEnabled) {
         this.shadowEnabled = shadowEnabled;
         return this;
@@ -100,6 +111,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_action")
     public Boolean showAction;
+
     public CardSettings withShowAction(Boolean showAction) {
         this.showAction = showAction;
         return this;
@@ -108,6 +120,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_badges")
     public Boolean showBadges;
+
     public CardSettings withShowBadges(Boolean showBadges) {
         this.showBadges = showBadges;
         return this;
@@ -116,6 +129,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_category")
     public Boolean showCategory;
+
     public CardSettings withShowCategory(Boolean showCategory) {
         this.showCategory = showCategory;
         return this;
@@ -124,6 +138,7 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_description")
     public Boolean showDescription;
+
     public CardSettings withShowDescription(Boolean showDescription) {
         this.showDescription = showDescription;
         return this;
@@ -132,9 +147,11 @@ public class CardSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public String style;
+
     public CardSettings withStyle(String style) {
         this.style = style;
         return this;
     }
     
+    public CardSettings(){}
 }

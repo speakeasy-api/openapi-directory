@@ -18,6 +18,7 @@ public class GetServiceAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GetServiceAccountResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class GetServiceAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GetServiceAccountResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public GetServiceAccountResponse(){}
 }

@@ -12,6 +12,7 @@ public class CreateArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactName")
     public String artifactName;
+
     public CreateArtifactRequest withArtifactName(String artifactName) {
         this.artifactName = artifactName;
         return this;
@@ -19,6 +20,7 @@ public class CreateArtifactRequest {
     
     @JsonProperty("ArtifactType")
     public String artifactType;
+
     public CreateArtifactRequest withArtifactType(String artifactType) {
         this.artifactType = artifactType;
         return this;
@@ -30,6 +32,7 @@ public class CreateArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public CreateArtifactRequest withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -38,6 +41,7 @@ public class CreateArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public CreateArtifactRequest withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -45,6 +49,7 @@ public class CreateArtifactRequest {
     
     @JsonProperty("Source")
     public ArtifactSource source;
+
     public CreateArtifactRequest withSource(ArtifactSource source) {
         this.source = source;
         return this;
@@ -53,9 +58,14 @@ public class CreateArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateArtifactRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateArtifactRequest(@JsonProperty("ArtifactType") String artifactType, @JsonProperty("Source") ArtifactSource source) {
+        this.artifactType = artifactType;
+        this.source = source;
+  }
 }

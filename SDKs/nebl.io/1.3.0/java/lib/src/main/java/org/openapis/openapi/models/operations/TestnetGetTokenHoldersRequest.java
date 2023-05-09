@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetTokenHoldersRequest {
@@ -12,9 +13,13 @@ public class TestnetGetTokenHoldersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenid")
     public String tokenid;
+
     public TestnetGetTokenHoldersRequest withTokenid(String tokenid) {
         this.tokenid = tokenid;
         return this;
     }
     
+    public TestnetGetTokenHoldersRequest(@JsonProperty("tokenid") String tokenid) {
+        this.tokenid = tokenid;
+  }
 }

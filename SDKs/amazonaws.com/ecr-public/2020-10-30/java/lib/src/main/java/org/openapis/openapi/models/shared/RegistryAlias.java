@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegistryAlias {
     @JsonProperty("defaultRegistryAlias")
     public Boolean defaultRegistryAlias;
+
     public RegistryAlias withDefaultRegistryAlias(Boolean defaultRegistryAlias) {
         this.defaultRegistryAlias = defaultRegistryAlias;
         return this;
@@ -19,6 +20,7 @@ public class RegistryAlias {
     
     @JsonProperty("name")
     public String name;
+
     public RegistryAlias withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class RegistryAlias {
     
     @JsonProperty("primaryRegistryAlias")
     public Boolean primaryRegistryAlias;
+
     public RegistryAlias withPrimaryRegistryAlias(Boolean primaryRegistryAlias) {
         this.primaryRegistryAlias = primaryRegistryAlias;
         return this;
@@ -33,9 +36,16 @@ public class RegistryAlias {
     
     @JsonProperty("status")
     public RegistryAliasStatusEnum status;
+
     public RegistryAlias withStatus(RegistryAliasStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RegistryAlias(@JsonProperty("defaultRegistryAlias") Boolean defaultRegistryAlias, @JsonProperty("name") String name, @JsonProperty("primaryRegistryAlias") Boolean primaryRegistryAlias, @JsonProperty("status") RegistryAliasStatusEnum status) {
+        this.defaultRegistryAlias = defaultRegistryAlias;
+        this.name = name;
+        this.primaryRegistryAlias = primaryRegistryAlias;
+        this.status = status;
+  }
 }

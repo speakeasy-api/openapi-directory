@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHostsRequest {
     
     public DescribeHostsRequestFilter[] filter;
+
     public DescribeHostsRequest withFilter(DescribeHostsRequestFilter[] filter) {
         this.filter = filter;
         return this;
@@ -16,6 +17,7 @@ public class DescribeHostsRequest {
     
     
     public String[] hostIds;
+
     public DescribeHostsRequest withHostIds(String[] hostIds) {
         this.hostIds = hostIds;
         return this;
@@ -23,6 +25,7 @@ public class DescribeHostsRequest {
     
     
     public Long maxResults;
+
     public DescribeHostsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,11 @@ public class DescribeHostsRequest {
     
     
     public String nextToken;
+
     public DescribeHostsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeHostsRequest(){}
 }

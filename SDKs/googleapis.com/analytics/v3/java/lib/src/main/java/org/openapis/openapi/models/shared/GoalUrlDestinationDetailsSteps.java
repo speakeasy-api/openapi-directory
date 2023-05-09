@@ -15,6 +15,7 @@ public class GoalUrlDestinationDetailsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoalUrlDestinationDetailsSteps withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class GoalUrlDestinationDetailsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public GoalUrlDestinationDetailsSteps withNumber(Integer number) {
         this.number = number;
         return this;
@@ -37,9 +39,11 @@ public class GoalUrlDestinationDetailsSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoalUrlDestinationDetailsSteps withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GoalUrlDestinationDetailsSteps(){}
 }

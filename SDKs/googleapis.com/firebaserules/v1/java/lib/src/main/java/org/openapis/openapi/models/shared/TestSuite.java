@@ -18,9 +18,11 @@ public class TestSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCases")
     public TestCase[] testCases;
+
     public TestSuite withTestCases(TestCase[] testCases) {
         this.testCases = testCases;
         return this;
     }
     
+    public TestSuite(){}
 }

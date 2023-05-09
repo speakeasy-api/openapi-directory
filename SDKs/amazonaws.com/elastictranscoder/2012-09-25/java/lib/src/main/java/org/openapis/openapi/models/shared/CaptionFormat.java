@@ -15,6 +15,7 @@ public class CaptionFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public Encryption encryption;
+
     public CaptionFormat withEncryption(Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -23,6 +24,7 @@ public class CaptionFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CaptionFormat withFormat(String format) {
         this.format = format;
         return this;
@@ -31,9 +33,11 @@ public class CaptionFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pattern")
     public String pattern;
+
     public CaptionFormat withPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
     
+    public CaptionFormat(){}
 }

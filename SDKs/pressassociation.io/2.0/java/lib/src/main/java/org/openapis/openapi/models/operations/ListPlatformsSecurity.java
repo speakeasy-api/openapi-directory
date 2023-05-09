@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPlatformsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=apikey")
     public String apikey;
+
     public ListPlatformsSecurity withApikey(String apikey) {
         this.apikey = apikey;
         return this;
     }
     
+    public ListPlatformsSecurity(@JsonProperty("apikey") String apikey) {
+        this.apikey = apikey;
+  }
 }

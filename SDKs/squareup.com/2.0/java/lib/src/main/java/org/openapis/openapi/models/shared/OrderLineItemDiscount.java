@@ -28,6 +28,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public OrderLineItemDiscount withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -44,6 +45,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public Money appliedMoney;
+
     public OrderLineItemDiscount withAppliedMoney(Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -55,6 +57,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public OrderLineItemDiscount withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -66,6 +69,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderLineItemDiscount withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -94,6 +98,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public OrderLineItemDiscount withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -105,6 +110,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderLineItemDiscount withName(String name) {
         this.name = name;
         return this;
@@ -119,6 +125,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public OrderLineItemDiscount withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -133,6 +140,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_rule_id")
     public String pricingRuleId;
+
     public OrderLineItemDiscount withPricingRuleId(String pricingRuleId) {
         this.pricingRuleId = pricingRuleId;
         return this;
@@ -148,6 +156,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reward_ids")
     public String[] rewardIds;
+
     public OrderLineItemDiscount withRewardIds(String[] rewardIds) {
         this.rewardIds = rewardIds;
         return this;
@@ -165,6 +174,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public OrderLineItemDiscount withScope(String scope) {
         this.scope = scope;
         return this;
@@ -179,6 +189,7 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderLineItemDiscount withType(String type) {
         this.type = type;
         return this;
@@ -190,9 +201,11 @@ public class OrderLineItemDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderLineItemDiscount withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderLineItemDiscount(){}
 }

@@ -15,6 +15,7 @@ public class VpcConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIdUpdates")
     public String[] securityGroupIdUpdates;
+
     public VpcConfigurationUpdate withSecurityGroupIdUpdates(String[] securityGroupIdUpdates) {
         this.securityGroupIdUpdates = securityGroupIdUpdates;
         return this;
@@ -23,6 +24,7 @@ public class VpcConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIdUpdates")
     public String[] subnetIdUpdates;
+
     public VpcConfigurationUpdate withSubnetIdUpdates(String[] subnetIdUpdates) {
         this.subnetIdUpdates = subnetIdUpdates;
         return this;
@@ -30,9 +32,13 @@ public class VpcConfigurationUpdate {
     
     @JsonProperty("VpcConfigurationId")
     public String vpcConfigurationId;
+
     public VpcConfigurationUpdate withVpcConfigurationId(String vpcConfigurationId) {
         this.vpcConfigurationId = vpcConfigurationId;
         return this;
     }
     
+    public VpcConfigurationUpdate(@JsonProperty("VpcConfigurationId") String vpcConfigurationId) {
+        this.vpcConfigurationId = vpcConfigurationId;
+  }
 }

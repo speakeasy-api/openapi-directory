@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChangeDiscoverabilityResponse {
     
     public String changeDiscoverability200TextPlainObject;
+
     public ChangeDiscoverabilityResponse withChangeDiscoverability200TextPlainObject(String changeDiscoverability200TextPlainObject) {
         this.changeDiscoverability200TextPlainObject = changeDiscoverability200TextPlainObject;
         return this;
@@ -16,6 +18,7 @@ public class ChangeDiscoverabilityResponse {
     
     
     public String contentType;
+
     public ChangeDiscoverabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ChangeDiscoverabilityResponse {
     
     
     public Integer statusCode;
+
     public ChangeDiscoverabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ChangeDiscoverabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChangeDiscoverabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChangeDiscoverabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

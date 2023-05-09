@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpnGatewaysResultVpnGateways {
     
     public Long amazonSideAsn;
+
     public DescribeVpnGatewaysResultVpnGateways withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpnGatewaysResultVpnGateways {
     
     
     public String availabilityZone;
+
     public DescribeVpnGatewaysResultVpnGateways withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpnGatewaysResultVpnGateways {
     
     
     public DescribeVpnGatewaysResultVpnGatewaysStateEnum state;
+
     public DescribeVpnGatewaysResultVpnGateways withState(DescribeVpnGatewaysResultVpnGatewaysStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpnGatewaysResultVpnGateways {
     
     
     public DescribeVpnGatewaysResultVpnGatewaysTags[] tags;
+
     public DescribeVpnGatewaysResultVpnGateways withTags(DescribeVpnGatewaysResultVpnGatewaysTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpnGatewaysResultVpnGateways {
     
     
     public DescribeVpnGatewaysResultVpnGatewaysTypeEnum type;
+
     public DescribeVpnGatewaysResultVpnGateways withType(DescribeVpnGatewaysResultVpnGatewaysTypeEnum type) {
         this.type = type;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVpnGatewaysResultVpnGateways {
     
     
     public DescribeVpnGatewaysResultVpnGatewaysVpcAttachments[] vpcAttachments;
+
     public DescribeVpnGatewaysResultVpnGateways withVpcAttachments(DescribeVpnGatewaysResultVpnGatewaysVpcAttachments[] vpcAttachments) {
         this.vpcAttachments = vpcAttachments;
         return this;
@@ -54,9 +60,11 @@ public class DescribeVpnGatewaysResultVpnGateways {
     
     
     public String vpnGatewayId;
+
     public DescribeVpnGatewaysResultVpnGateways withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public DescribeVpnGatewaysResultVpnGateways(){}
 }

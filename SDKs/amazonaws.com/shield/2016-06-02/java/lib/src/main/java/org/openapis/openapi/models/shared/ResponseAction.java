@@ -15,6 +15,7 @@ public class ResponseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Block")
     public java.util.Map<String, Object> block;
+
     public ResponseAction withBlock(java.util.Map<String, Object> block) {
         this.block = block;
         return this;
@@ -23,9 +24,11 @@ public class ResponseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public java.util.Map<String, Object> count;
+
     public ResponseAction withCount(java.util.Map<String, Object> count) {
         this.count = count;
         return this;
     }
     
+    public ResponseAction(){}
 }

@@ -15,6 +15,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionList")
     public ExecutionStatus[] executionList;
+
     public DescribeAnomalyDetectionExecutionsResponse withExecutionList(ExecutionStatus[] executionList) {
         this.executionList = executionList;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAnomalyDetectionExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAnomalyDetectionExecutionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAnomalyDetectionExecutionsResponse(){}
 }

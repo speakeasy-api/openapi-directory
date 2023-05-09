@@ -15,6 +15,7 @@ public class IsBinaryFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public Boolean base;
+
     public IsBinaryFile withBase(Boolean base) {
         this.base = base;
         return this;
@@ -23,6 +24,7 @@ public class IsBinaryFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Boolean destination;
+
     public IsBinaryFile withDestination(Boolean destination) {
         this.destination = destination;
         return this;
@@ -31,9 +33,11 @@ public class IsBinaryFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Boolean source;
+
     public IsBinaryFile withSource(Boolean source) {
         this.source = source;
         return this;
     }
     
+    public IsBinaryFile(){}
 }

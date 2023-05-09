@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetAccountUserPasswordRequest {
@@ -12,9 +13,13 @@ public class ResetAccountUserPasswordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public String userId;
+
     public ResetAccountUserPasswordRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ResetAccountUserPasswordRequest(@JsonProperty("user_id") String userId) {
+        this.userId = userId;
+  }
 }

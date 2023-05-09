@@ -18,9 +18,11 @@ public class BooleanPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorOptions")
     public BooleanOperatorOptions operatorOptions;
+
     public BooleanPropertyOptions withOperatorOptions(BooleanOperatorOptions operatorOptions) {
         this.operatorOptions = operatorOptions;
         return this;
     }
     
+    public BooleanPropertyOptions(){}
 }

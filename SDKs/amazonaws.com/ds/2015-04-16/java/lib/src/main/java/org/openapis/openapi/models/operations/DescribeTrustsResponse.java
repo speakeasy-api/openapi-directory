@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTrustsResponse {
@@ -12,6 +13,7 @@ public class DescribeTrustsResponse {
      */
     
     public Object clientException;
+
     public DescribeTrustsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTrustsResponse {
     
     
     public String contentType;
+
     public DescribeTrustsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTrustsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTrustsResult describeTrustsResult;
+
     public DescribeTrustsResponse withDescribeTrustsResult(org.openapis.openapi.models.shared.DescribeTrustsResult describeTrustsResult) {
         this.describeTrustsResult = describeTrustsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTrustsResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DescribeTrustsResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTrustsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeTrustsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeTrustsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeTrustsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeTrustsResponse {
      */
     
     public Object serviceException;
+
     public DescribeTrustsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeTrustsResponse {
     
     
     public Integer statusCode;
+
     public DescribeTrustsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeTrustsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTrustsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeTrustsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeTrustsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeTrustsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

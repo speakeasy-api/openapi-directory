@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SplitShardResponse {
@@ -12,6 +13,7 @@ public class SplitShardResponse {
      */
     
     public Object accessDeniedException;
+
     public SplitShardResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SplitShardResponse {
     
     
     public String contentType;
+
     public SplitShardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SplitShardResponse {
      */
     
     public Object invalidArgumentException;
+
     public SplitShardResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class SplitShardResponse {
      */
     
     public Object limitExceededException;
+
     public SplitShardResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class SplitShardResponse {
      */
     
     public Object resourceInUseException;
+
     public SplitShardResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class SplitShardResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SplitShardResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class SplitShardResponse {
     
     
     public Integer statusCode;
+
     public SplitShardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SplitShardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SplitShardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class SplitShardResponse {
      */
     
     public Object validationException;
+
     public SplitShardResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SplitShardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

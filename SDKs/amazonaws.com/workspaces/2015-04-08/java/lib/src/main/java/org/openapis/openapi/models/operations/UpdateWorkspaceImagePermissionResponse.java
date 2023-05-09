@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkspaceImagePermissionResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkspaceImagePermissionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkspaceImagePermissionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWorkspaceImagePermissionResponse {
     
     
     public String contentType;
+
     public UpdateWorkspaceImagePermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkspaceImagePermissionResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public UpdateWorkspaceImagePermissionResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWorkspaceImagePermissionResponse {
      */
     
     public Object operationNotSupportedException;
+
     public UpdateWorkspaceImagePermissionResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateWorkspaceImagePermissionResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkspaceImagePermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWorkspaceImagePermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkspaceImagePermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkspaceImagePermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkspaceImagePermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkspaceImagePermissionResponse {
      */
     
     public Object resourceUnavailableException;
+
     public UpdateWorkspaceImagePermissionResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateWorkspaceImagePermissionResponse {
      */
     
     public java.util.Map<String, Object> updateWorkspaceImagePermissionResult;
+
     public UpdateWorkspaceImagePermissionResponse withUpdateWorkspaceImagePermissionResult(java.util.Map<String, Object> updateWorkspaceImagePermissionResult) {
         this.updateWorkspaceImagePermissionResult = updateWorkspaceImagePermissionResult;
         return this;
     }
     
+    public UpdateWorkspaceImagePermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class SparkChartView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minAlignmentPeriod")
     public String minAlignmentPeriod;
+
     public SparkChartView withMinAlignmentPeriod(String minAlignmentPeriod) {
         this.minAlignmentPeriod = minAlignmentPeriod;
         return this;
@@ -29,9 +30,11 @@ public class SparkChartView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkChartType")
     public SparkChartViewSparkChartTypeEnum sparkChartType;
+
     public SparkChartView withSparkChartType(SparkChartViewSparkChartTypeEnum sparkChartType) {
         this.sparkChartType = sparkChartType;
         return this;
     }
     
+    public SparkChartView(){}
 }

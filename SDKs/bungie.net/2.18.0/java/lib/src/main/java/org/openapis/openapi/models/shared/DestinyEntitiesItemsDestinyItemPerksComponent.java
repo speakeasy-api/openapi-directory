@@ -17,9 +17,11 @@ public class DestinyEntitiesItemsDestinyItemPerksComponent {
      */
     
     public DestinyPerksDestinyPerkReference[] perks;
+
     public DestinyEntitiesItemsDestinyItemPerksComponent withPerks(DestinyPerksDestinyPerkReference[] perks) {
         this.perks = perks;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemPerksComponent(){}
 }

@@ -18,6 +18,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Member withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Member withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,9 +39,11 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public MemberSnippet snippet;
+
     public Member withSnippet(MemberSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public Member(){}
 }

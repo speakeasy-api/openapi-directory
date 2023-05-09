@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClusterDbRevisionsMessage {
     
     public String clusterIdentifier;
+
     public DescribeClusterDbRevisionsMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeClusterDbRevisionsMessage {
     
     
     public String marker;
+
     public DescribeClusterDbRevisionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,11 @@ public class DescribeClusterDbRevisionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeClusterDbRevisionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeClusterDbRevisionsMessage(){}
 }

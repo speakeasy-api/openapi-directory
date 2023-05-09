@@ -15,6 +15,7 @@ public class ServiceImageInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFileData")
     public String imageFileData;
+
     public ServiceImageInputModel withImageFileData(String imageFileData) {
         this.imageFileData = imageFileData;
         return this;
@@ -23,9 +24,11 @@ public class ServiceImageInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFileName")
     public String imageFileName;
+
     public ServiceImageInputModel withImageFileName(String imageFileName) {
         this.imageFileName = imageFileName;
         return this;
     }
     
+    public ServiceImageInputModel(){}
 }

@@ -12,6 +12,7 @@ public class CreateAnswerResponseSelectedDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Long document;
+
     public CreateAnswerResponseSelectedDocuments withDocument(Long document) {
         this.document = document;
         return this;
@@ -20,9 +21,11 @@ public class CreateAnswerResponseSelectedDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public CreateAnswerResponseSelectedDocuments withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CreateAnswerResponseSelectedDocuments(){}
 }

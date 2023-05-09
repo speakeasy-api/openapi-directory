@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFlowTemplateResponse {
     
     public String contentType;
+
     public GetFlowTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFlowTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFlowTemplateResponse getFlowTemplateResponse;
+
     public GetFlowTemplateResponse withGetFlowTemplateResponse(org.openapis.openapi.models.shared.GetFlowTemplateResponse getFlowTemplateResponse) {
         this.getFlowTemplateResponse = getFlowTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetFlowTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public GetFlowTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetFlowTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public GetFlowTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetFlowTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetFlowTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetFlowTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFlowTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetFlowTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFlowTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetFlowTemplateResponse {
      */
     
     public Object throttlingException;
+
     public GetFlowTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetFlowTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

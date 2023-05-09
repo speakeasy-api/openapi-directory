@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetDeploymentGroupsInput {
     @JsonProperty("applicationName")
     public String applicationName;
+
     public BatchGetDeploymentGroupsInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetDeploymentGroupsInput {
     
     @JsonProperty("deploymentGroupNames")
     public String[] deploymentGroupNames;
+
     public BatchGetDeploymentGroupsInput withDeploymentGroupNames(String[] deploymentGroupNames) {
         this.deploymentGroupNames = deploymentGroupNames;
         return this;
     }
     
+    public BatchGetDeploymentGroupsInput(@JsonProperty("applicationName") String applicationName, @JsonProperty("deploymentGroupNames") String[] deploymentGroupNames) {
+        this.applicationName = applicationName;
+        this.deploymentGroupNames = deploymentGroupNames;
+  }
 }

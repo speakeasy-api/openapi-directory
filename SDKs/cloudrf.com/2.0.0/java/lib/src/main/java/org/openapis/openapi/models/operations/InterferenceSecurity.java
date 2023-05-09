@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InterferenceSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=key")
     public String apiKeyAuth;
+
     public InterferenceSecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
     }
     
+    public InterferenceSecurity(@JsonProperty("ApiKeyAuth") String apiKeyAuth) {
+        this.apiKeyAuth = apiKeyAuth;
+  }
 }

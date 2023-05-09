@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataElasticGpuSpecificationSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEc2LaunchTemplateDataElasticGpuSpecificationSetDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataElasticGpuSpecificationSetDetails(){}
 }

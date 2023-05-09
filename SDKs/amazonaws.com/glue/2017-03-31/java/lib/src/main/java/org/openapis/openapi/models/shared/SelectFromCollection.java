@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SelectFromCollection {
     @JsonProperty("Index")
     public Long index;
+
     public SelectFromCollection withIndex(Long index) {
         this.index = index;
         return this;
@@ -19,6 +20,7 @@ public class SelectFromCollection {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public SelectFromCollection withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -26,9 +28,15 @@ public class SelectFromCollection {
     
     @JsonProperty("Name")
     public String name;
+
     public SelectFromCollection withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SelectFromCollection(@JsonProperty("Index") Long index, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name) {
+        this.index = index;
+        this.inputs = inputs;
+        this.name = name;
+  }
 }

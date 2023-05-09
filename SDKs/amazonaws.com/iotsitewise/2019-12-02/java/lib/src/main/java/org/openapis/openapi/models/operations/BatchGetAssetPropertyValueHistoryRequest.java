@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchGetAssetPropertyValueHistoryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BatchGetAssetPropertyValueHistoryRequestBody requestBody;
+
     public BatchGetAssetPropertyValueHistoryRequest withRequestBody(BatchGetAssetPropertyValueHistoryRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class BatchGetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public BatchGetAssetPropertyValueHistoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class BatchGetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public BatchGetAssetPropertyValueHistoryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class BatchGetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public BatchGetAssetPropertyValueHistoryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class BatchGetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public BatchGetAssetPropertyValueHistoryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class BatchGetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public BatchGetAssetPropertyValueHistoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class BatchGetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public BatchGetAssetPropertyValueHistoryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class BatchGetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public BatchGetAssetPropertyValueHistoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class BatchGetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public BatchGetAssetPropertyValueHistoryRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -78,9 +88,13 @@ public class BatchGetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public BatchGetAssetPropertyValueHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public BatchGetAssetPropertyValueHistoryRequest(@JsonProperty("RequestBody") BatchGetAssetPropertyValueHistoryRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

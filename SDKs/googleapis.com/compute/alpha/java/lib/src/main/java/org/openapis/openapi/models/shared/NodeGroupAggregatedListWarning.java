@@ -18,6 +18,7 @@ public class NodeGroupAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NodeGroupAggregatedListWarningCodeEnum code;
+
     public NodeGroupAggregatedListWarning withCode(NodeGroupAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class NodeGroupAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public NodeGroupAggregatedListWarningData[] data;
+
     public NodeGroupAggregatedListWarning withData(NodeGroupAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class NodeGroupAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NodeGroupAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NodeGroupAggregatedListWarning(){}
 }

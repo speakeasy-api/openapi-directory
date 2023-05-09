@@ -12,6 +12,7 @@ public class ListContributorRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public ListContributorRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
@@ -22,6 +23,7 @@ public class ListContributorRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public ListContributorRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,9 +34,11 @@ public class ListContributorRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
     public String updatedAfter;
+
     public ListContributorRequest withUpdatedAfter(String updatedAfter) {
         this.updatedAfter = updatedAfter;
         return this;
     }
     
+    public ListContributorRequest(){}
 }

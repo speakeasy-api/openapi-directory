@@ -15,6 +15,7 @@ public class ReplicationGroupUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Create")
     public CreateReplicationGroupMemberAction create;
+
     public ReplicationGroupUpdate withCreate(CreateReplicationGroupMemberAction create) {
         this.create = create;
         return this;
@@ -23,6 +24,7 @@ public class ReplicationGroupUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delete")
     public DeleteReplicationGroupMemberAction delete;
+
     public ReplicationGroupUpdate withDelete(DeleteReplicationGroupMemberAction delete) {
         this.delete = delete;
         return this;
@@ -31,9 +33,11 @@ public class ReplicationGroupUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Update")
     public UpdateReplicationGroupMemberAction update;
+
     public ReplicationGroupUpdate withUpdate(UpdateReplicationGroupMemberAction update) {
         this.update = update;
         return this;
     }
     
+    public ReplicationGroupUpdate(){}
 }

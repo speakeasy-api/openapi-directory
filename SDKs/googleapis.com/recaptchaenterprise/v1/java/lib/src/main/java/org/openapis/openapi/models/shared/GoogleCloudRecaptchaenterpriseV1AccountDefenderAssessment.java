@@ -18,9 +18,11 @@ public class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum[] labels;
+
     public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment withLabels(GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment(){}
 }

@@ -15,9 +15,11 @@ public class DeleteSqlInjectionMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteSqlInjectionMatchSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public DeleteSqlInjectionMatchSetResponse(){}
 }

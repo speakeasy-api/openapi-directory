@@ -18,6 +18,7 @@ public class DeviceMakeModelAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public DeviceMakeModelAssignedTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class DeviceMakeModelAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public DeviceMakeModelAssignedTargetingOptionDetails withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -40,9 +42,11 @@ public class DeviceMakeModelAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public DeviceMakeModelAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public DeviceMakeModelAssignedTargetingOptionDetails(){}
 }

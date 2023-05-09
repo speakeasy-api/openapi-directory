@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SSAByRoute {
     @JsonProperty("route")
     public java.util.Map<String, Object> route;
+
     public SSAByRoute withRoute(java.util.Map<String, Object> route) {
         this.route = route;
         return this;
     }
     
+    public SSAByRoute(@JsonProperty("route") java.util.Map<String, Object> route) {
+        this.route = route;
+  }
 }

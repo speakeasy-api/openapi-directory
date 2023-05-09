@@ -15,6 +15,7 @@ public class SortCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldName")
     public String fieldName;
+
     public SortCriterion withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -23,9 +24,11 @@ public class SortCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sort")
     public SortEnum sort;
+
     public SortCriterion withSort(SortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public SortCriterion(){}
 }

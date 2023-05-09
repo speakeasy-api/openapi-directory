@@ -18,6 +18,7 @@ public class VideoRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public VideoRatingRatingEnum rating;
+
     public VideoRating withRating(VideoRatingRatingEnum rating) {
         this.rating = rating;
         return this;
@@ -29,9 +30,11 @@ public class VideoRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoId")
     public String videoId;
+
     public VideoRating withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
     
+    public VideoRating(){}
 }

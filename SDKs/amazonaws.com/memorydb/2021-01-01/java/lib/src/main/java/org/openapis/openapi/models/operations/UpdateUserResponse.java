@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserResponse {
     
     public String contentType;
+
     public UpdateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUserResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public UpdateUserResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUserResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateUserResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserResponse {
      */
     
     public Object invalidUserStateFault;
+
     public UpdateUserResponse withInvalidUserStateFault(Object invalidUserStateFault) {
         this.invalidUserStateFault = invalidUserStateFault;
         return this;
@@ -46,6 +51,7 @@ public class UpdateUserResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateUserResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserResponse updateUserResponse;
+
     public UpdateUserResponse withUpdateUserResponse(org.openapis.openapi.models.shared.UpdateUserResponse updateUserResponse) {
         this.updateUserResponse = updateUserResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateUserResponse {
      */
     
     public Object userNotFoundFault;
+
     public UpdateUserResponse withUserNotFoundFault(Object userNotFoundFault) {
         this.userNotFoundFault = userNotFoundFault;
         return this;
     }
     
+    public UpdateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

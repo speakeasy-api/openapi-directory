@@ -20,6 +20,7 @@ public class HypervisorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Host")
     public String host;
+
     public HypervisorDetails withHost(String host) {
         this.host = host;
         return this;
@@ -28,6 +29,7 @@ public class HypervisorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public HypervisorDetails withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
@@ -36,6 +38,7 @@ public class HypervisorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public HypervisorDetails withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -46,6 +49,7 @@ public class HypervisorDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSuccessfulMetadataSyncTime")
     public OffsetDateTime lastSuccessfulMetadataSyncTime;
+
     public HypervisorDetails withLastSuccessfulMetadataSyncTime(OffsetDateTime lastSuccessfulMetadataSyncTime) {
         this.lastSuccessfulMetadataSyncTime = lastSuccessfulMetadataSyncTime;
         return this;
@@ -54,6 +58,7 @@ public class HypervisorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestMetadataSyncStatus")
     public SyncMetadataStatusEnum latestMetadataSyncStatus;
+
     public HypervisorDetails withLatestMetadataSyncStatus(SyncMetadataStatusEnum latestMetadataSyncStatus) {
         this.latestMetadataSyncStatus = latestMetadataSyncStatus;
         return this;
@@ -62,6 +67,7 @@ public class HypervisorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestMetadataSyncStatusMessage")
     public String latestMetadataSyncStatusMessage;
+
     public HypervisorDetails withLatestMetadataSyncStatusMessage(String latestMetadataSyncStatusMessage) {
         this.latestMetadataSyncStatusMessage = latestMetadataSyncStatusMessage;
         return this;
@@ -70,6 +76,7 @@ public class HypervisorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroupArn")
     public String logGroupArn;
+
     public HypervisorDetails withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
@@ -78,6 +85,7 @@ public class HypervisorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public HypervisorDetails withName(String name) {
         this.name = name;
         return this;
@@ -86,9 +94,11 @@ public class HypervisorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public HypervisorStateEnum state;
+
     public HypervisorDetails withState(HypervisorStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public HypervisorDetails(){}
 }

@@ -18,6 +18,7 @@ public class DeviceSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceRam")
     public DeviceRam deviceRam;
+
     public DeviceSelector withDeviceRam(DeviceRam deviceRam) {
         this.deviceRam = deviceRam;
         return this;
@@ -29,6 +30,7 @@ public class DeviceSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedDeviceIds")
     public DeviceId[] excludedDeviceIds;
+
     public DeviceSelector withExcludedDeviceIds(DeviceId[] excludedDeviceIds) {
         this.excludedDeviceIds = excludedDeviceIds;
         return this;
@@ -40,6 +42,7 @@ public class DeviceSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forbiddenSystemFeatures")
     public SystemFeature[] forbiddenSystemFeatures;
+
     public DeviceSelector withForbiddenSystemFeatures(SystemFeature[] forbiddenSystemFeatures) {
         this.forbiddenSystemFeatures = forbiddenSystemFeatures;
         return this;
@@ -51,6 +54,7 @@ public class DeviceSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedDeviceIds")
     public DeviceId[] includedDeviceIds;
+
     public DeviceSelector withIncludedDeviceIds(DeviceId[] includedDeviceIds) {
         this.includedDeviceIds = includedDeviceIds;
         return this;
@@ -62,9 +66,11 @@ public class DeviceSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredSystemFeatures")
     public SystemFeature[] requiredSystemFeatures;
+
     public DeviceSelector withRequiredSystemFeatures(SystemFeature[] requiredSystemFeatures) {
         this.requiredSystemFeatures = requiredSystemFeatures;
         return this;
     }
     
+    public DeviceSelector(){}
 }

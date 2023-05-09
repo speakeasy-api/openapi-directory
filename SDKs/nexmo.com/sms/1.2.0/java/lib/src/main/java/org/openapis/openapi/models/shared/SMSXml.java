@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SMSXml {
     
     public Message[] messages;
+
     public SMSXml withMessages(Message[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public SMSXml(){}
 }

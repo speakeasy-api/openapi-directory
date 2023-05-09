@@ -69,11 +69,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsResponse res = new org.openapis.openapi.models.operations.GetAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsResponse res = new org.openapis.openapi.models.operations.GetAccountsResponse(contentType, httpRes.statusCode()) {{
             listAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsIdResponse res = new org.openapis.openapi.models.operations.GetAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsIdResponse res = new org.openapis.openapi.models.operations.GetAccountsIdResponse(contentType, httpRes.statusCode()) {{
             getAccountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

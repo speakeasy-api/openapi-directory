@@ -15,6 +15,7 @@ public class ListEmailIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailIdentities")
     public IdentityInfo[] emailIdentities;
+
     public ListEmailIdentitiesResponse withEmailIdentities(IdentityInfo[] emailIdentities) {
         this.emailIdentities = emailIdentities;
         return this;
@@ -23,9 +24,11 @@ public class ListEmailIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEmailIdentitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEmailIdentitiesResponse(){}
 }

@@ -70,11 +70,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyResponse res = new org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyResponse res = new org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -120,11 +118,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse res = new org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse res = new org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -163,12 +159,10 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse(contentType, httpRes.statusCode()) {{
             project = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,12 +235,10 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse(contentType, httpRes.statusCode()) {{
             paginatedDefaultReviewerAndType = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,12 +292,10 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse(contentType, httpRes.statusCode()) {{
             user = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -407,12 +397,10 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsResponse res = new org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsResponse() {{
+        org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsResponse res = new org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsResponse(contentType, httpRes.statusCode()) {{
             project = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -484,12 +472,10 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyResponse res = new org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyResponse() {{
+        org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyResponse res = new org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyResponse(contentType, httpRes.statusCode()) {{
             project = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -544,12 +530,10 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse res = new org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse() {{
+        org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse res = new org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse(contentType, httpRes.statusCode()) {{
             user = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

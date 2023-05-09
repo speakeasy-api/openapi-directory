@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorldsResponse {
     
     public String contentType;
+
     public ListWorldsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWorldsResponse {
      */
     
     public Object internalServerException;
+
     public ListWorldsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListWorldsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListWorldsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorldsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorldsResponse listWorldsResponse;
+
     public ListWorldsResponse withListWorldsResponse(org.openapis.openapi.models.shared.ListWorldsResponse listWorldsResponse) {
         this.listWorldsResponse = listWorldsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListWorldsResponse {
     
     
     public Integer statusCode;
+
     public ListWorldsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListWorldsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorldsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListWorldsResponse {
      */
     
     public Object throttlingException;
+
     public ListWorldsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListWorldsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

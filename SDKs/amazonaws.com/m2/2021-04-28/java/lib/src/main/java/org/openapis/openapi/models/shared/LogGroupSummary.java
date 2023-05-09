@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LogGroupSummary {
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public LogGroupSummary withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -19,9 +20,14 @@ public class LogGroupSummary {
     
     @JsonProperty("logType")
     public String logType;
+
     public LogGroupSummary withLogType(String logType) {
         this.logType = logType;
         return this;
     }
     
+    public LogGroupSummary(@JsonProperty("logGroupName") String logGroupName, @JsonProperty("logType") String logType) {
+        this.logGroupName = logGroupName;
+        this.logType = logType;
+  }
 }

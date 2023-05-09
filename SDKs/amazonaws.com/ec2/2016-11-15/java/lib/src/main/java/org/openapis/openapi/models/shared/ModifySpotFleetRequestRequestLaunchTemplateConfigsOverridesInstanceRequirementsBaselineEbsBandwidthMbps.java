@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBaselineEbsBandwidthMbps {
     
     public Long max;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBaselineEbsBandwidthMbps withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public Long min;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBaselineEbsBandwidthMbps withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBaselineEbsBandwidthMbps(){}
 }

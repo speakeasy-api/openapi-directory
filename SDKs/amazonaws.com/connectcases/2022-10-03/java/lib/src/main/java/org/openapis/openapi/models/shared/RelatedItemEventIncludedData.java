@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RelatedItemEventIncludedData {
     @JsonProperty("includeContent")
     public Boolean includeContent;
+
     public RelatedItemEventIncludedData withIncludeContent(Boolean includeContent) {
         this.includeContent = includeContent;
         return this;
     }
     
+    public RelatedItemEventIncludedData(@JsonProperty("includeContent") Boolean includeContent) {
+        this.includeContent = includeContent;
+  }
 }

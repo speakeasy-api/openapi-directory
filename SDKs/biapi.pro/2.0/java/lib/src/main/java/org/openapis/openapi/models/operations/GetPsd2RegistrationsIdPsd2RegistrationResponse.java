@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPsd2RegistrationsIdPsd2RegistrationResponse {
     
     public String contentType;
+
     public GetPsd2RegistrationsIdPsd2RegistrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPsd2RegistrationsIdPsd2RegistrationResponse {
      */
     
     public org.openapis.openapi.models.shared.Psd2Registration psd2Registration;
+
     public GetPsd2RegistrationsIdPsd2RegistrationResponse withPsd2Registration(org.openapis.openapi.models.shared.Psd2Registration psd2Registration) {
         this.psd2Registration = psd2Registration;
         return this;
@@ -26,6 +29,7 @@ public class GetPsd2RegistrationsIdPsd2RegistrationResponse {
     
     
     public Integer statusCode;
+
     public GetPsd2RegistrationsIdPsd2RegistrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPsd2RegistrationsIdPsd2RegistrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPsd2RegistrationsIdPsd2RegistrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPsd2RegistrationsIdPsd2RegistrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicaGlobalSecondaryIndexSettingsUpdate {
     @JsonProperty("IndexName")
     public String indexName;
+
     public ReplicaGlobalSecondaryIndexSettingsUpdate withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -22,6 +23,7 @@ public class ReplicaGlobalSecondaryIndexSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedReadCapacityAutoScalingSettingsUpdate")
     public AutoScalingSettingsUpdate provisionedReadCapacityAutoScalingSettingsUpdate;
+
     public ReplicaGlobalSecondaryIndexSettingsUpdate withProvisionedReadCapacityAutoScalingSettingsUpdate(AutoScalingSettingsUpdate provisionedReadCapacityAutoScalingSettingsUpdate) {
         this.provisionedReadCapacityAutoScalingSettingsUpdate = provisionedReadCapacityAutoScalingSettingsUpdate;
         return this;
@@ -30,9 +32,13 @@ public class ReplicaGlobalSecondaryIndexSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedReadCapacityUnits")
     public Long provisionedReadCapacityUnits;
+
     public ReplicaGlobalSecondaryIndexSettingsUpdate withProvisionedReadCapacityUnits(Long provisionedReadCapacityUnits) {
         this.provisionedReadCapacityUnits = provisionedReadCapacityUnits;
         return this;
     }
     
+    public ReplicaGlobalSecondaryIndexSettingsUpdate(@JsonProperty("IndexName") String indexName) {
+        this.indexName = indexName;
+  }
 }

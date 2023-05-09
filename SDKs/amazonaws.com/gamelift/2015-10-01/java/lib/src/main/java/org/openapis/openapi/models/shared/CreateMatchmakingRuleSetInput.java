@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateMatchmakingRuleSetInput {
     @JsonProperty("Name")
     public String name;
+
     public CreateMatchmakingRuleSetInput withName(String name) {
         this.name = name;
         return this;
@@ -18,6 +19,7 @@ public class CreateMatchmakingRuleSetInput {
     
     @JsonProperty("RuleSetBody")
     public String ruleSetBody;
+
     public CreateMatchmakingRuleSetInput withRuleSetBody(String ruleSetBody) {
         this.ruleSetBody = ruleSetBody;
         return this;
@@ -26,9 +28,14 @@ public class CreateMatchmakingRuleSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateMatchmakingRuleSetInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMatchmakingRuleSetInput(@JsonProperty("Name") String name, @JsonProperty("RuleSetBody") String ruleSetBody) {
+        this.name = name;
+        this.ruleSetBody = ruleSetBody;
+  }
 }

@@ -15,9 +15,11 @@ public class StartDataCollectionByAgentIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentsConfigurationStatus")
     public AgentConfigurationStatus[] agentsConfigurationStatus;
+
     public StartDataCollectionByAgentIdsResponse withAgentsConfigurationStatus(AgentConfigurationStatus[] agentsConfigurationStatus) {
         this.agentsConfigurationStatus = agentsConfigurationStatus;
         return this;
     }
     
+    public StartDataCollectionByAgentIdsResponse(){}
 }

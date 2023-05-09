@@ -15,6 +15,7 @@ public class TransactGetItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity[] consumedCapacity;
+
     public TransactGetItemsOutput withConsumedCapacity(ConsumedCapacity[] consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -23,9 +24,11 @@ public class TransactGetItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Responses")
     public ItemResponse[] responses;
+
     public TransactGetItemsOutput withResponses(ItemResponse[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public TransactGetItemsOutput(){}
 }

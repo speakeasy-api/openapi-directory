@@ -12,6 +12,7 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public SeriesAttributes attributes;
+
     public Series withAttributes(SeriesAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Series withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public SeriesRelationships relationships;
+
     public Series withRelationships(SeriesRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -39,9 +42,11 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Series withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Series(){}
 }

@@ -15,6 +15,7 @@ public class ApplicationComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentName")
     public String componentName;
+
     public ApplicationComponent withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentRemarks")
     public String componentRemarks;
+
     public ApplicationComponent withComponentRemarks(String componentRemarks) {
         this.componentRemarks = componentRemarks;
         return this;
@@ -31,6 +33,7 @@ public class ApplicationComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectedWorkload")
     public java.util.Map<String, java.util.Map<String, String>> detectedWorkload;
+
     public ApplicationComponent withDetectedWorkload(java.util.Map<String, java.util.Map<String, String>> detectedWorkload) {
         this.detectedWorkload = detectedWorkload;
         return this;
@@ -39,6 +42,7 @@ public class ApplicationComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Monitor")
     public Boolean monitor;
+
     public ApplicationComponent withMonitor(Boolean monitor) {
         this.monitor = monitor;
         return this;
@@ -47,6 +51,7 @@ public class ApplicationComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OsType")
     public OsTypeEnum osType;
+
     public ApplicationComponent withOsType(OsTypeEnum osType) {
         this.osType = osType;
         return this;
@@ -55,6 +60,7 @@ public class ApplicationComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ApplicationComponent withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -63,9 +69,11 @@ public class ApplicationComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public TierEnum tier;
+
     public ApplicationComponent withTier(TierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public ApplicationComponent(){}
 }

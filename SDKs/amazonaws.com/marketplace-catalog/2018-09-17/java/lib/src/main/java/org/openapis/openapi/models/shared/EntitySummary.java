@@ -15,6 +15,7 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityArn")
     public String entityArn;
+
     public EntitySummary withEntityArn(String entityArn) {
         this.entityArn = entityArn;
         return this;
@@ -23,6 +24,7 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public EntitySummary withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -31,6 +33,7 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityType")
     public String entityType;
+
     public EntitySummary withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -39,6 +42,7 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public EntitySummary withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -47,6 +51,7 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EntitySummary withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Visibility")
     public String visibility;
+
     public EntitySummary withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public EntitySummary(){}
 }

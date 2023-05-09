@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreatedComment {
     
     public String body;
+
     public CreatedComment withBody(String body) {
         this.body = body;
         return this;
@@ -19,6 +20,7 @@ public class CreatedComment {
     
     
     public String bodyMarkdown;
+
     public CreatedComment withBodyMarkdown(String bodyMarkdown) {
         this.bodyMarkdown = bodyMarkdown;
         return this;
@@ -26,6 +28,7 @@ public class CreatedComment {
     
     
     public Boolean canFlag;
+
     public CreatedComment withCanFlag(Boolean canFlag) {
         this.canFlag = canFlag;
         return this;
@@ -33,6 +36,7 @@ public class CreatedComment {
     
     
     public Long commentId;
+
     public CreatedComment withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -40,6 +44,7 @@ public class CreatedComment {
     
     
     public Long creationDate;
+
     public CreatedComment withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -47,6 +52,7 @@ public class CreatedComment {
     
     
     public Boolean edited;
+
     public CreatedComment withEdited(Boolean edited) {
         this.edited = edited;
         return this;
@@ -54,6 +60,7 @@ public class CreatedComment {
     
     
     public String link;
+
     public CreatedComment withLink(String link) {
         this.link = link;
         return this;
@@ -61,6 +68,7 @@ public class CreatedComment {
     
     
     public CreatedCommentOwner owner;
+
     public CreatedComment withOwner(CreatedCommentOwner owner) {
         this.owner = owner;
         return this;
@@ -68,6 +76,7 @@ public class CreatedComment {
     
     
     public Long postId;
+
     public CreatedComment withPostId(Long postId) {
         this.postId = postId;
         return this;
@@ -75,6 +84,7 @@ public class CreatedComment {
     
     
     public String postType;
+
     public CreatedComment withPostType(String postType) {
         this.postType = postType;
         return this;
@@ -82,6 +92,7 @@ public class CreatedComment {
     
     
     public CreatedCommentReplyToUser replyToUser;
+
     public CreatedComment withReplyToUser(CreatedCommentReplyToUser replyToUser) {
         this.replyToUser = replyToUser;
         return this;
@@ -89,6 +100,7 @@ public class CreatedComment {
     
     
     public Long score;
+
     public CreatedComment withScore(Long score) {
         this.score = score;
         return this;
@@ -96,9 +108,11 @@ public class CreatedComment {
     
     
     public Boolean upvoted;
+
     public CreatedComment withUpvoted(Boolean upvoted) {
         this.upvoted = upvoted;
         return this;
     }
     
+    public CreatedComment(){}
 }

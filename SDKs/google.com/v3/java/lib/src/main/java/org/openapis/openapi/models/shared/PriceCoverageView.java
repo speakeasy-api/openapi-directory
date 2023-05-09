@@ -18,6 +18,7 @@ public class PriceCoverageView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculationDate")
     public Date calculationDate;
+
     public PriceCoverageView withCalculationDate(Date calculationDate) {
         this.calculationDate = calculationDate;
         return this;
@@ -29,6 +30,7 @@ public class PriceCoverageView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedPropertyCount")
     public Integer matchedPropertyCount;
+
     public PriceCoverageView withMatchedPropertyCount(Integer matchedPropertyCount) {
         this.matchedPropertyCount = matchedPropertyCount;
         return this;
@@ -40,6 +42,7 @@ public class PriceCoverageView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceCoverageBinaryPercent")
     public Double priceCoverageBinaryPercent;
+
     public PriceCoverageView withPriceCoverageBinaryPercent(Double priceCoverageBinaryPercent) {
         this.priceCoverageBinaryPercent = priceCoverageBinaryPercent;
         return this;
@@ -51,6 +54,7 @@ public class PriceCoverageView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceCoverageBuckets")
     public PriceCoverageBucket[] priceCoverageBuckets;
+
     public PriceCoverageView withPriceCoverageBuckets(PriceCoverageBucket[] priceCoverageBuckets) {
         this.priceCoverageBuckets = priceCoverageBuckets;
         return this;
@@ -62,9 +66,11 @@ public class PriceCoverageView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceCoveragePercent")
     public Double priceCoveragePercent;
+
     public PriceCoverageView withPriceCoveragePercent(Double priceCoveragePercent) {
         this.priceCoveragePercent = priceCoveragePercent;
         return this;
     }
     
+    public PriceCoverageView(){}
 }

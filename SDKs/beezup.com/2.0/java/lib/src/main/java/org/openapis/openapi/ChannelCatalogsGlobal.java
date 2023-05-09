@@ -58,12 +58,10 @@ public class ChannelCatalogsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddChannelCatalogResponse res = new org.openapis.openapi.models.operations.AddChannelCatalogResponse() {{
+        org.openapis.openapi.models.operations.AddChannelCatalogResponse res = new org.openapis.openapi.models.operations.AddChannelCatalogResponse(contentType, httpRes.statusCode()) {{
             linksGetChannelCatalogLink = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -106,11 +104,9 @@ public class ChannelCatalogsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteChannelCatalogResponse res = new org.openapis.openapi.models.operations.DeleteChannelCatalogResponse() {{
+        org.openapis.openapi.models.operations.DeleteChannelCatalogResponse res = new org.openapis.openapi.models.operations.DeleteChannelCatalogResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -146,12 +142,10 @@ public class ChannelCatalogsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogResponse(contentType, httpRes.statusCode()) {{
             channelCatalog = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,12 +185,10 @@ public class ChannelCatalogsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogFilterOperatorsResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogFilterOperatorsResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogFilterOperatorsResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogFilterOperatorsResponse(contentType, httpRes.statusCode()) {{
             filterOperators = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,12 +235,10 @@ public class ChannelCatalogsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogsResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogsResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogsResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogsResponse(contentType, httpRes.statusCode()) {{
             channelCatalogList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentRedaction")
     public ContentRedaction contentRedaction;
+
     public StartTranscriptionJobRequest withContentRedaction(ContentRedaction contentRedaction) {
         this.contentRedaction = contentRedaction;
         return this;
@@ -20,6 +21,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentifyLanguage")
     public Boolean identifyLanguage;
+
     public StartTranscriptionJobRequest withIdentifyLanguage(Boolean identifyLanguage) {
         this.identifyLanguage = identifyLanguage;
         return this;
@@ -28,6 +30,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentifyMultipleLanguages")
     public Boolean identifyMultipleLanguages;
+
     public StartTranscriptionJobRequest withIdentifyMultipleLanguages(Boolean identifyMultipleLanguages) {
         this.identifyMultipleLanguages = identifyMultipleLanguages;
         return this;
@@ -36,6 +39,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobExecutionSettings")
     public JobExecutionSettings jobExecutionSettings;
+
     public StartTranscriptionJobRequest withJobExecutionSettings(JobExecutionSettings jobExecutionSettings) {
         this.jobExecutionSettings = jobExecutionSettings;
         return this;
@@ -44,6 +48,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSEncryptionContext")
     public java.util.Map<String, String> kmsEncryptionContext;
+
     public StartTranscriptionJobRequest withKMSEncryptionContext(java.util.Map<String, String> kmsEncryptionContext) {
         this.kmsEncryptionContext = kmsEncryptionContext;
         return this;
@@ -52,6 +57,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartTranscriptionJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -60,6 +66,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageIdSettings")
     public java.util.Map<String, LanguageIdSettings> languageIdSettings;
+
     public StartTranscriptionJobRequest withLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
         this.languageIdSettings = languageIdSettings;
         return this;
@@ -68,6 +75,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageOptions")
     public LanguageCodeEnum[] languageOptions;
+
     public StartTranscriptionJobRequest withLanguageOptions(LanguageCodeEnum[] languageOptions) {
         this.languageOptions = languageOptions;
         return this;
@@ -75,6 +83,7 @@ public class StartTranscriptionJobRequest {
     
     @JsonProperty("Media")
     public Media media;
+
     public StartTranscriptionJobRequest withMedia(Media media) {
         this.media = media;
         return this;
@@ -83,6 +92,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaFormat")
     public MediaFormatEnum mediaFormat;
+
     public StartTranscriptionJobRequest withMediaFormat(MediaFormatEnum mediaFormat) {
         this.mediaFormat = mediaFormat;
         return this;
@@ -91,6 +101,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaSampleRateHertz")
     public Long mediaSampleRateHertz;
+
     public StartTranscriptionJobRequest withMediaSampleRateHertz(Long mediaSampleRateHertz) {
         this.mediaSampleRateHertz = mediaSampleRateHertz;
         return this;
@@ -99,6 +110,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelSettings")
     public ModelSettings modelSettings;
+
     public StartTranscriptionJobRequest withModelSettings(ModelSettings modelSettings) {
         this.modelSettings = modelSettings;
         return this;
@@ -107,6 +119,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputBucketName")
     public String outputBucketName;
+
     public StartTranscriptionJobRequest withOutputBucketName(String outputBucketName) {
         this.outputBucketName = outputBucketName;
         return this;
@@ -115,6 +128,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputEncryptionKMSKeyId")
     public String outputEncryptionKMSKeyId;
+
     public StartTranscriptionJobRequest withOutputEncryptionKMSKeyId(String outputEncryptionKMSKeyId) {
         this.outputEncryptionKMSKeyId = outputEncryptionKMSKeyId;
         return this;
@@ -123,6 +137,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKey")
     public String outputKey;
+
     public StartTranscriptionJobRequest withOutputKey(String outputKey) {
         this.outputKey = outputKey;
         return this;
@@ -131,6 +146,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public Settings settings;
+
     public StartTranscriptionJobRequest withSettings(Settings settings) {
         this.settings = settings;
         return this;
@@ -139,6 +155,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subtitles")
     public Subtitles subtitles;
+
     public StartTranscriptionJobRequest withSubtitles(Subtitles subtitles) {
         this.subtitles = subtitles;
         return this;
@@ -147,6 +164,7 @@ public class StartTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartTranscriptionJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -154,9 +172,14 @@ public class StartTranscriptionJobRequest {
     
     @JsonProperty("TranscriptionJobName")
     public String transcriptionJobName;
+
     public StartTranscriptionJobRequest withTranscriptionJobName(String transcriptionJobName) {
         this.transcriptionJobName = transcriptionJobName;
         return this;
     }
     
+    public StartTranscriptionJobRequest(@JsonProperty("Media") Media media, @JsonProperty("TranscriptionJobName") String transcriptionJobName) {
+        this.media = media;
+        this.transcriptionJobName = transcriptionJobName;
+  }
 }

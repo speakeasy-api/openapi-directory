@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisableFastSnapshotRestoresResultUnsuccessful {
     
     public DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreStateErrors[] fastSnapshotRestoreStateErrors;
+
     public DisableFastSnapshotRestoresResultUnsuccessful withFastSnapshotRestoreStateErrors(DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreStateErrors[] fastSnapshotRestoreStateErrors) {
         this.fastSnapshotRestoreStateErrors = fastSnapshotRestoreStateErrors;
         return this;
@@ -19,9 +20,11 @@ public class DisableFastSnapshotRestoresResultUnsuccessful {
     
     
     public String snapshotId;
+
     public DisableFastSnapshotRestoresResultUnsuccessful withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public DisableFastSnapshotRestoresResultUnsuccessful(){}
 }

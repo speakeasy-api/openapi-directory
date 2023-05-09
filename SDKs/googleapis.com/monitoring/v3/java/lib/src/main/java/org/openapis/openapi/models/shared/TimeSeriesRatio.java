@@ -18,6 +18,7 @@ public class TimeSeriesRatio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badServiceFilter")
     public String badServiceFilter;
+
     public TimeSeriesRatio withBadServiceFilter(String badServiceFilter) {
         this.badServiceFilter = badServiceFilter;
         return this;
@@ -29,6 +30,7 @@ public class TimeSeriesRatio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goodServiceFilter")
     public String goodServiceFilter;
+
     public TimeSeriesRatio withGoodServiceFilter(String goodServiceFilter) {
         this.goodServiceFilter = goodServiceFilter;
         return this;
@@ -40,9 +42,11 @@ public class TimeSeriesRatio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalServiceFilter")
     public String totalServiceFilter;
+
     public TimeSeriesRatio withTotalServiceFilter(String totalServiceFilter) {
         this.totalServiceFilter = totalServiceFilter;
         return this;
     }
     
+    public TimeSeriesRatio(){}
 }

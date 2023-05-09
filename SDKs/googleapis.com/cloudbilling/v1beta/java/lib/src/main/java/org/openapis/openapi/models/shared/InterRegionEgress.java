@@ -18,6 +18,7 @@ public class InterRegionEgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationRegion")
     public String destinationRegion;
+
     public InterRegionEgress withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -29,6 +30,7 @@ public class InterRegionEgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressRate")
     public Usage egressRate;
+
     public InterRegionEgress withEgressRate(Usage egressRate) {
         this.egressRate = egressRate;
         return this;
@@ -40,9 +42,11 @@ public class InterRegionEgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRegion")
     public String sourceRegion;
+
     public InterRegionEgress withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
     }
     
+    public InterRegionEgress(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecognizePrintedTextRequest {
@@ -12,6 +13,7 @@ public class RecognizePrintedTextRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public RecognizePrintedTextRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -22,6 +24,7 @@ public class RecognizePrintedTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detectOrientation")
     public Boolean detectOrientation;
+
     public RecognizePrintedTextRequest withDetectOrientation(Boolean detectOrientation) {
         this.detectOrientation = detectOrientation;
         return this;
@@ -32,9 +35,14 @@ public class RecognizePrintedTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.OcrLanguageEnum language;
+
     public RecognizePrintedTextRequest withLanguage(org.openapis.openapi.models.shared.OcrLanguageEnum language) {
         this.language = language;
         return this;
     }
     
+    public RecognizePrintedTextRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl, @JsonProperty("detectOrientation") Boolean detectOrientation) {
+        this.imageUrl = imageUrl;
+        this.detectOrientation = detectOrientation;
+  }
 }

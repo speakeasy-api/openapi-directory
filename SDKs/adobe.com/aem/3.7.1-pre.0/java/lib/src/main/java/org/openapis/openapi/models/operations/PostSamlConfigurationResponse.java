@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSamlConfigurationResponse {
     
     public String contentType;
+
     public PostSamlConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostSamlConfigurationResponse {
      */
     
     public String samlConfigurationInfo;
+
     public PostSamlConfigurationResponse withSamlConfigurationInfo(String samlConfigurationInfo) {
         this.samlConfigurationInfo = samlConfigurationInfo;
         return this;
@@ -26,6 +29,7 @@ public class PostSamlConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PostSamlConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PostSamlConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSamlConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class PostSamlConfigurationResponse {
      */
     
     public String postSamlConfiguration302TextPlainString;
+
     public PostSamlConfigurationResponse withPostSamlConfiguration302TextPlainString(String postSamlConfiguration302TextPlainString) {
         this.postSamlConfiguration302TextPlainString = postSamlConfiguration302TextPlainString;
         return this;
@@ -53,9 +59,14 @@ public class PostSamlConfigurationResponse {
      */
     
     public String postSamlConfigurationDefaultTextPlainString;
+
     public PostSamlConfigurationResponse withPostSamlConfigurationDefaultTextPlainString(String postSamlConfigurationDefaultTextPlainString) {
         this.postSamlConfigurationDefaultTextPlainString = postSamlConfigurationDefaultTextPlainString;
         return this;
     }
     
+    public PostSamlConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

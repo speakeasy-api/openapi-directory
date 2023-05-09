@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicenetworkingServicesDnsZonesAddSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesDnsZonesAddSecurityOption1 option1;
+
     public ServicenetworkingServicesDnsZonesAddSecurity withOption1(ServicenetworkingServicesDnsZonesAddSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServicenetworkingServicesDnsZonesAddSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesDnsZonesAddSecurityOption2 option2;
+
     public ServicenetworkingServicesDnsZonesAddSecurity withOption2(ServicenetworkingServicesDnsZonesAddSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServicenetworkingServicesDnsZonesAddSecurity(){}
 }

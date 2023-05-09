@@ -18,6 +18,7 @@ public class ServiceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public ServiceAccountKey key;
+
     public ServiceAccount withKey(ServiceAccountKey key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class ServiceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceAccount withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ServiceAccount(){}
 }

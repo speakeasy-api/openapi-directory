@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGroupByIdRequest {
@@ -12,9 +13,13 @@ public class DeleteGroupByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public DeleteGroupByIdRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public DeleteGroupByIdRequest(@JsonProperty("groupId") String groupId) {
+        this.groupId = groupId;
+  }
 }

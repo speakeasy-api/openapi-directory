@@ -15,6 +15,7 @@ public class ReposGetAllEnvironments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public org.openapis.openapi.models.shared.Environment[] environments;
+
     public ReposGetAllEnvironments200ApplicationJSON withEnvironments(org.openapis.openapi.models.shared.Environment[] environments) {
         this.environments = environments;
         return this;
@@ -26,9 +27,11 @@ public class ReposGetAllEnvironments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ReposGetAllEnvironments200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ReposGetAllEnvironments200ApplicationJSON(){}
 }

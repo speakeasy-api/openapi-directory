@@ -15,6 +15,7 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CognitoUserPoolId")
     public String cognitoUserPoolId;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings withCognitoUserPoolId(String cognitoUserPoolId) {
         this.cognitoUserPoolId = cognitoUserPoolId;
         return this;
@@ -23,6 +24,7 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationTime")
     public Double expirationTime;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings withExpirationTime(Double expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -39,6 +42,7 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenIDAuthTTL")
     public String openIDAuthTTL;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings withOpenIDAuthTTL(String openIDAuthTTL) {
         this.openIDAuthTTL = openIDAuthTTL;
         return this;
@@ -47,6 +51,7 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenIDClientId")
     public String openIDClientID;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings withOpenIDClientID(String openIDClientID) {
         this.openIDClientID = openIDClientID;
         return this;
@@ -55,6 +60,7 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenIDIatTTL")
     public String openIDIatTTL;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings withOpenIDIatTTL(String openIDIatTTL) {
         this.openIDIatTTL = openIDIatTTL;
         return this;
@@ -63,6 +69,7 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenIDIssueURL")
     public String openIDIssueURL;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings withOpenIDIssueURL(String openIDIssueURL) {
         this.openIDIssueURL = openIDIssueURL;
         return this;
@@ -71,9 +78,11 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenIDProviderName")
     public String openIDProviderName;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings withOpenIDProviderName(String openIDProviderName) {
         this.openIDProviderName = openIDProviderName;
         return this;
     }
     
+    public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings(){}
 }

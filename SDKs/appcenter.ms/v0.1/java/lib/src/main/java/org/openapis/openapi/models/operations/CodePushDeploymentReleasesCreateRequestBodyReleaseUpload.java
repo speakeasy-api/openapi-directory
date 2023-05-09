@@ -15,6 +15,7 @@ public class CodePushDeploymentReleasesCreateRequestBodyReleaseUpload {
      */
     @JsonProperty("id")
     public String id;
+
     public CodePushDeploymentReleasesCreateRequestBodyReleaseUpload withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class CodePushDeploymentReleasesCreateRequestBodyReleaseUpload {
      */
     @JsonProperty("token")
     public String token;
+
     public CodePushDeploymentReleasesCreateRequestBodyReleaseUpload withToken(String token) {
         this.token = token;
         return this;
@@ -35,9 +37,15 @@ public class CodePushDeploymentReleasesCreateRequestBodyReleaseUpload {
      */
     @JsonProperty("upload_domain")
     public String uploadDomain;
+
     public CodePushDeploymentReleasesCreateRequestBodyReleaseUpload withUploadDomain(String uploadDomain) {
         this.uploadDomain = uploadDomain;
         return this;
     }
     
+    public CodePushDeploymentReleasesCreateRequestBodyReleaseUpload(@JsonProperty("id") String id, @JsonProperty("token") String token, @JsonProperty("upload_domain") String uploadDomain) {
+        this.id = id;
+        this.token = token;
+        this.uploadDomain = uploadDomain;
+  }
 }

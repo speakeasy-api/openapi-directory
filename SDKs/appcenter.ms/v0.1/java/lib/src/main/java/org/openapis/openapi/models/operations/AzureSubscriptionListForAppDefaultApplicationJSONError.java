@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AzureSubscriptionListForAppDefaultApplicationJSONError {
     @JsonProperty("code")
     public AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum code;
+
     public AzureSubscriptionListForAppDefaultApplicationJSONError withCode(AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class AzureSubscriptionListForAppDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public AzureSubscriptionListForAppDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AzureSubscriptionListForAppDefaultApplicationJSONError(@JsonProperty("code") AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

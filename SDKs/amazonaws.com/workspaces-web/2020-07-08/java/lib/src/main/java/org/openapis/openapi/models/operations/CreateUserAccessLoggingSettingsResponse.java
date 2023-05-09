@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserAccessLoggingSettingsResponse {
@@ -12,6 +13,7 @@ public class CreateUserAccessLoggingSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateUserAccessLoggingSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateUserAccessLoggingSettingsResponse {
      */
     
     public Object conflictException;
+
     public CreateUserAccessLoggingSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserAccessLoggingSettingsResponse {
     
     
     public String contentType;
+
     public CreateUserAccessLoggingSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserAccessLoggingSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserAccessLoggingSettingsResponse createUserAccessLoggingSettingsResponse;
+
     public CreateUserAccessLoggingSettingsResponse withCreateUserAccessLoggingSettingsResponse(org.openapis.openapi.models.shared.CreateUserAccessLoggingSettingsResponse createUserAccessLoggingSettingsResponse) {
         this.createUserAccessLoggingSettingsResponse = createUserAccessLoggingSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserAccessLoggingSettingsResponse {
      */
     
     public Object internalServerException;
+
     public CreateUserAccessLoggingSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateUserAccessLoggingSettingsResponse {
     
     
     public Integer statusCode;
+
     public CreateUserAccessLoggingSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateUserAccessLoggingSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserAccessLoggingSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateUserAccessLoggingSettingsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateUserAccessLoggingSettingsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateUserAccessLoggingSettingsResponse {
      */
     
     public Object throttlingException;
+
     public CreateUserAccessLoggingSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateUserAccessLoggingSettingsResponse {
      */
     
     public Object validationException;
+
     public CreateUserAccessLoggingSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateUserAccessLoggingSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class PrismaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prismaCpeCode")
     public PrismaCpeCode prismaCpeCode;
+
     public PrismaConfig withPrismaCpeCode(PrismaCpeCode prismaCpeCode) {
         this.prismaCpeCode = prismaCpeCode;
         return this;
@@ -29,6 +30,7 @@ public class PrismaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prismaType")
     public PrismaConfigPrismaTypeEnum prismaType;
+
     public PrismaConfig withPrismaType(PrismaConfigPrismaTypeEnum prismaType) {
         this.prismaType = prismaType;
         return this;
@@ -40,9 +42,11 @@ public class PrismaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier")
     public String supplier;
+
     public PrismaConfig withSupplier(String supplier) {
         this.supplier = supplier;
         return this;
     }
     
+    public PrismaConfig(){}
 }

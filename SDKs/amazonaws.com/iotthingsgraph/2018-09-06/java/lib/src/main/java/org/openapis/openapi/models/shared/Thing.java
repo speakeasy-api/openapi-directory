@@ -15,6 +15,7 @@ public class Thing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingArn")
     public String thingArn;
+
     public Thing withThingArn(String thingArn) {
         this.thingArn = thingArn;
         return this;
@@ -23,9 +24,11 @@ public class Thing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public Thing withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public Thing(){}
 }

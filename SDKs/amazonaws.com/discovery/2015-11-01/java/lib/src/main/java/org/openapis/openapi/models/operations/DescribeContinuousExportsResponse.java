@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeContinuousExportsResponse {
@@ -12,6 +13,7 @@ public class DescribeContinuousExportsResponse {
      */
     
     public Object authorizationErrorException;
+
     public DescribeContinuousExportsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeContinuousExportsResponse {
     
     
     public String contentType;
+
     public DescribeContinuousExportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeContinuousExportsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeContinuousExportsResponse describeContinuousExportsResponse;
+
     public DescribeContinuousExportsResponse withDescribeContinuousExportsResponse(org.openapis.openapi.models.shared.DescribeContinuousExportsResponse describeContinuousExportsResponse) {
         this.describeContinuousExportsResponse = describeContinuousExportsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeContinuousExportsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DescribeContinuousExportsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeContinuousExportsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeContinuousExportsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeContinuousExportsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeContinuousExportsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeContinuousExportsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DescribeContinuousExportsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeContinuousExportsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeContinuousExportsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class DescribeContinuousExportsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public DescribeContinuousExportsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -96,6 +106,7 @@ public class DescribeContinuousExportsResponse {
     
     
     public Integer statusCode;
+
     public DescribeContinuousExportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class DescribeContinuousExportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeContinuousExportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeContinuousExportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

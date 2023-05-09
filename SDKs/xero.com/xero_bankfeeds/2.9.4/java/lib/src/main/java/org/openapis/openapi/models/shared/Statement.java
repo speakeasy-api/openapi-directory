@@ -20,6 +20,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endBalance")
     public EndBalance endBalance;
+
     public Statement withEndBalance(EndBalance endBalance) {
         this.endBalance = endBalance;
         return this;
@@ -32,6 +33,7 @@ public class Statement {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public Statement withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -40,6 +42,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public Statement withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -51,6 +54,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedConnectionId")
     public String feedConnectionId;
+
     public Statement withFeedConnectionId(String feedConnectionId) {
         this.feedConnectionId = feedConnectionId;
         return this;
@@ -62,6 +66,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Statement withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startBalance")
     public StartBalance startBalance;
+
     public Statement withStartBalance(StartBalance startBalance) {
         this.startBalance = startBalance;
         return this;
@@ -85,6 +91,7 @@ public class Statement {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public Statement withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -93,6 +100,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statementLineCount")
     public Long statementLineCount;
+
     public Statement withStatementLineCount(Long statementLineCount) {
         this.statementLineCount = statementLineCount;
         return this;
@@ -101,6 +109,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statementLines")
     public StatementLine[] statementLines;
+
     public Statement withStatementLines(StatementLine[] statementLines) {
         this.statementLines = statementLines;
         return this;
@@ -112,9 +121,11 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatementStatusEnum status;
+
     public Statement withStatus(StatementStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Statement(){}
 }

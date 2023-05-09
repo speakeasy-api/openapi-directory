@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SourceSecurityGroup {
     
     public String groupName;
+
     public SourceSecurityGroup withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -19,9 +20,11 @@ public class SourceSecurityGroup {
     
     
     public String ownerAlias;
+
     public SourceSecurityGroup withOwnerAlias(String ownerAlias) {
         this.ownerAlias = ownerAlias;
         return this;
     }
     
+    public SourceSecurityGroup(){}
 }

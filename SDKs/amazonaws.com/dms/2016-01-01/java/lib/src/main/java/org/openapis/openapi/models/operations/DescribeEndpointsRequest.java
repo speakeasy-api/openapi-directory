@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeEndpointsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeEndpointsMessage describeEndpointsMessage;
+
     public DescribeEndpointsRequest withDescribeEndpointsMessage(org.openapis.openapi.models.shared.DescribeEndpointsMessage describeEndpointsMessage) {
         this.describeEndpointsMessage = describeEndpointsMessage;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public DescribeEndpointsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public String maxRecords;
+
     public DescribeEndpointsRequest withMaxRecords(String maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -36,6 +40,7 @@ public class DescribeEndpointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeEndpointsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeEndpointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeEndpointsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeEndpointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeEndpointsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeEndpointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeEndpointsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeEndpointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeEndpointsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeEndpointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeEndpointsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeEndpointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeEndpointsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeEndpointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeEndpointsXAmzTargetEnum xAmzTarget;
+
     public DescribeEndpointsRequest withXAmzTarget(DescribeEndpointsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeEndpointsRequest(@JsonProperty("DescribeEndpointsMessage") org.openapis.openapi.models.shared.DescribeEndpointsMessage describeEndpointsMessage, @JsonProperty("X-Amz-Target") DescribeEndpointsXAmzTargetEnum xAmzTarget) {
+        this.describeEndpointsMessage = describeEndpointsMessage;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

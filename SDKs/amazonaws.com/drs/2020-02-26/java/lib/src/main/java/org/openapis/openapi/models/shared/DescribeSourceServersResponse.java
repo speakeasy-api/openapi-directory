@@ -15,6 +15,7 @@ public class DescribeSourceServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public SourceServer[] items;
+
     public DescribeSourceServersResponse withItems(SourceServer[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSourceServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeSourceServersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeSourceServersResponse(){}
 }

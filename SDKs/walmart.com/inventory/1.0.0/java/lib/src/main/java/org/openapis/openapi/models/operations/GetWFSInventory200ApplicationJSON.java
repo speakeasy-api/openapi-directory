@@ -15,6 +15,7 @@ public class GetWFSInventory200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public GetWFSInventory200ApplicationJSONHeaders headers;
+
     public GetWFSInventory200ApplicationJSON withHeaders(GetWFSInventory200ApplicationJSONHeaders headers) {
         this.headers = headers;
         return this;
@@ -23,9 +24,11 @@ public class GetWFSInventory200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public GetWFSInventory200ApplicationJSONPayload payload;
+
     public GetWFSInventory200ApplicationJSON withPayload(GetWFSInventory200ApplicationJSONPayload payload) {
         this.payload = payload;
         return this;
     }
     
+    public GetWFSInventory200ApplicationJSON(){}
 }

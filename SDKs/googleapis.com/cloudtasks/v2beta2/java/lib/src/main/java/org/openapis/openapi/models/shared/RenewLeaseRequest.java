@@ -18,6 +18,7 @@ public class RenewLeaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaseDuration")
     public String leaseDuration;
+
     public RenewLeaseRequest withLeaseDuration(String leaseDuration) {
         this.leaseDuration = leaseDuration;
         return this;
@@ -29,6 +30,7 @@ public class RenewLeaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseView")
     public RenewLeaseRequestResponseViewEnum responseView;
+
     public RenewLeaseRequest withResponseView(RenewLeaseRequestResponseViewEnum responseView) {
         this.responseView = responseView;
         return this;
@@ -40,9 +42,11 @@ public class RenewLeaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTime")
     public String scheduleTime;
+
     public RenewLeaseRequest withScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
     }
     
+    public RenewLeaseRequest(){}
 }

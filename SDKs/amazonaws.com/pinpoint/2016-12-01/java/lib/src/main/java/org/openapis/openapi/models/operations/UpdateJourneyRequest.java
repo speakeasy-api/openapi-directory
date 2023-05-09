@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateJourneyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateJourneyRequestBody requestBody;
+
     public UpdateJourneyRequest withRequestBody(UpdateJourneyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateJourneyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateJourneyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateJourneyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateJourneyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateJourneyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateJourneyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateJourneyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateJourneyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateJourneyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateJourneyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateJourneyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateJourneyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateJourneyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateJourneyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateJourneyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
     public String applicationId;
+
     public UpdateJourneyRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -78,9 +88,15 @@ public class UpdateJourneyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=journey-id")
     public String journeyId;
+
     public UpdateJourneyRequest withJourneyId(String journeyId) {
         this.journeyId = journeyId;
         return this;
     }
     
+    public UpdateJourneyRequest(@JsonProperty("RequestBody") UpdateJourneyRequestBody requestBody, @JsonProperty("application-id") String applicationId, @JsonProperty("journey-id") String journeyId) {
+        this.requestBody = requestBody;
+        this.applicationId = applicationId;
+        this.journeyId = journeyId;
+  }
 }

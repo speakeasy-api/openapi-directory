@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLogPatternRequest {
     @JsonProperty("PatternName")
     public String patternName;
+
     public DescribeLogPatternRequest withPatternName(String patternName) {
         this.patternName = patternName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLogPatternRequest {
     
     @JsonProperty("PatternSetName")
     public String patternSetName;
+
     public DescribeLogPatternRequest withPatternSetName(String patternSetName) {
         this.patternSetName = patternSetName;
         return this;
@@ -23,9 +25,15 @@ public class DescribeLogPatternRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public DescribeLogPatternRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public DescribeLogPatternRequest(@JsonProperty("PatternName") String patternName, @JsonProperty("PatternSetName") String patternSetName, @JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.patternName = patternName;
+        this.patternSetName = patternSetName;
+        this.resourceGroupName = resourceGroupName;
+  }
 }

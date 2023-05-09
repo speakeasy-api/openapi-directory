@@ -12,6 +12,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense")
     public String defense;
+
     public LivePlayByPlayDrives withDefense(String defense) {
         this.defense = defense;
         return this;
@@ -20,6 +21,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defenseId")
     public Long defenseId;
+
     public LivePlayByPlayDrives withDefenseId(Long defenseId) {
         this.defenseId = defenseId;
         return this;
@@ -28,6 +30,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public LivePlayByPlayDrives withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -36,6 +39,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endClock")
     public String endClock;
+
     public LivePlayByPlayDrives withEndClock(String endClock) {
         this.endClock = endClock;
         return this;
@@ -44,6 +48,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endPeriod")
     public Long endPeriod;
+
     public LivePlayByPlayDrives withEndPeriod(Long endPeriod) {
         this.endPeriod = endPeriod;
         return this;
@@ -52,6 +57,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endYardsToGoal")
     public Long endYardsToGoal;
+
     public LivePlayByPlayDrives withEndYardsToGoal(Long endYardsToGoal) {
         this.endYardsToGoal = endYardsToGoal;
         return this;
@@ -60,6 +66,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LivePlayByPlayDrives withId(Long id) {
         this.id = id;
         return this;
@@ -68,6 +75,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense")
     public String offense;
+
     public LivePlayByPlayDrives withOffense(String offense) {
         this.offense = offense;
         return this;
@@ -76,6 +84,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offenseId")
     public Long offenseId;
+
     public LivePlayByPlayDrives withOffenseId(Long offenseId) {
         this.offenseId = offenseId;
         return this;
@@ -84,6 +93,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playCount")
     public Long playCount;
+
     public LivePlayByPlayDrives withPlayCount(Long playCount) {
         this.playCount = playCount;
         return this;
@@ -92,6 +102,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plays")
     public LivePlayByPlayDrivesPlays[] plays;
+
     public LivePlayByPlayDrives withPlays(LivePlayByPlayDrivesPlays[] plays) {
         this.plays = plays;
         return this;
@@ -100,6 +111,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoringOpportunity")
     public Boolean scoringOpportunity;
+
     public LivePlayByPlayDrives withScoringOpportunity(Boolean scoringOpportunity) {
         this.scoringOpportunity = scoringOpportunity;
         return this;
@@ -108,6 +120,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startClock")
     public String startClock;
+
     public LivePlayByPlayDrives withStartClock(String startClock) {
         this.startClock = startClock;
         return this;
@@ -116,6 +129,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startPeriod")
     public Long startPeriod;
+
     public LivePlayByPlayDrives withStartPeriod(Long startPeriod) {
         this.startPeriod = startPeriod;
         return this;
@@ -124,6 +138,7 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startYardsToGoal")
     public Long startYardsToGoal;
+
     public LivePlayByPlayDrives withStartYardsToGoal(Long startYardsToGoal) {
         this.startYardsToGoal = startYardsToGoal;
         return this;
@@ -132,9 +147,11 @@ public class LivePlayByPlayDrives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yards")
     public Long yards;
+
     public LivePlayByPlayDrives withYards(Long yards) {
         this.yards = yards;
         return this;
     }
     
+    public LivePlayByPlayDrives(){}
 }

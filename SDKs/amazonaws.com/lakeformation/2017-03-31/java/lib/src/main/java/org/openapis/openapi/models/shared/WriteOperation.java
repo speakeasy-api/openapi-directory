@@ -15,6 +15,7 @@ public class WriteOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddObject")
     public AddObjectInput addObject;
+
     public WriteOperation withAddObject(AddObjectInput addObject) {
         this.addObject = addObject;
         return this;
@@ -23,9 +24,11 @@ public class WriteOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteObject")
     public DeleteObjectInput deleteObject;
+
     public WriteOperation withDeleteObject(DeleteObjectInput deleteObject) {
         this.deleteObject = deleteObject;
         return this;
     }
     
+    public WriteOperation(){}
 }

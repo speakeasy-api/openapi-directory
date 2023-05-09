@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainContactResponse {
     
     public String contentType;
+
     public UpdateDomainContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDomainContactResponse {
      */
     
     public Object duplicateRequest;
+
     public UpdateDomainContactResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDomainContactResponse {
      */
     
     public Object invalidInput;
+
     public UpdateDomainContactResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDomainContactResponse {
      */
     
     public Object operationLimitExceeded;
+
     public UpdateDomainContactResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDomainContactResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDomainContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDomainContactResponse {
      */
     
     public Object tldRulesViolation;
+
     public UpdateDomainContactResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDomainContactResponse {
      */
     
     public Object unsupportedTLD;
+
     public UpdateDomainContactResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDomainContactResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDomainContactResponse updateDomainContactResponse;
+
     public UpdateDomainContactResponse withUpdateDomainContactResponse(org.openapis.openapi.models.shared.UpdateDomainContactResponse updateDomainContactResponse) {
         this.updateDomainContactResponse = updateDomainContactResponse;
         return this;
     }
     
+    public UpdateDomainContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

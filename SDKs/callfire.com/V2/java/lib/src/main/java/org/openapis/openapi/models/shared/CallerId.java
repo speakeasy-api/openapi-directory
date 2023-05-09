@@ -18,9 +18,11 @@ public class CallerId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public CallerId withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public CallerId(){}
 }

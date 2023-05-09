@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageSelectItemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfo withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2IntentMessageSelectItemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synonyms")
     public String[] synonyms;
+
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfo withSynonyms(String[] synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageSelectItemInfo(){}
 }

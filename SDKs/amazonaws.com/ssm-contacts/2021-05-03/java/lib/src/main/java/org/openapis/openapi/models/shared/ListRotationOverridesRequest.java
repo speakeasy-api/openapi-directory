@@ -18,6 +18,7 @@ public class ListRotationOverridesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ListRotationOverridesRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class ListRotationOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListRotationOverridesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,6 +36,7 @@ public class ListRotationOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRotationOverridesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -41,6 +44,7 @@ public class ListRotationOverridesRequest {
     
     @JsonProperty("RotationId")
     public String rotationId;
+
     public ListRotationOverridesRequest withRotationId(String rotationId) {
         this.rotationId = rotationId;
         return this;
@@ -50,9 +54,15 @@ public class ListRotationOverridesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ListRotationOverridesRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListRotationOverridesRequest(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("RotationId") String rotationId, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.rotationId = rotationId;
+        this.startTime = startTime;
+  }
 }

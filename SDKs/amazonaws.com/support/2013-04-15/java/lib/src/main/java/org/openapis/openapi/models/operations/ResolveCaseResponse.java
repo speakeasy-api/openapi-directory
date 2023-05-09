@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResolveCaseResponse {
@@ -12,6 +13,7 @@ public class ResolveCaseResponse {
      */
     
     public Object caseIdNotFound;
+
     public ResolveCaseResponse withCaseIdNotFound(Object caseIdNotFound) {
         this.caseIdNotFound = caseIdNotFound;
         return this;
@@ -19,6 +21,7 @@ public class ResolveCaseResponse {
     
     
     public String contentType;
+
     public ResolveCaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ResolveCaseResponse {
      */
     
     public Object internalServerError;
+
     public ResolveCaseResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class ResolveCaseResponse {
      */
     
     public org.openapis.openapi.models.shared.ResolveCaseResponse resolveCaseResponse;
+
     public ResolveCaseResponse withResolveCaseResponse(org.openapis.openapi.models.shared.ResolveCaseResponse resolveCaseResponse) {
         this.resolveCaseResponse = resolveCaseResponse;
         return this;
@@ -46,6 +51,7 @@ public class ResolveCaseResponse {
     
     
     public Integer statusCode;
+
     public ResolveCaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ResolveCaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResolveCaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResolveCaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

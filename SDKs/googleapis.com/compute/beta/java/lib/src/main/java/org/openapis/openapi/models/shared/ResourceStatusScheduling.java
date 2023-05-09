@@ -15,9 +15,11 @@ public class ResourceStatusScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminationTimestamp")
     public String terminationTimestamp;
+
     public ResourceStatusScheduling withTerminationTimestamp(String terminationTimestamp) {
         this.terminationTimestamp = terminationTimestamp;
         return this;
     }
     
+    public ResourceStatusScheduling(){}
 }

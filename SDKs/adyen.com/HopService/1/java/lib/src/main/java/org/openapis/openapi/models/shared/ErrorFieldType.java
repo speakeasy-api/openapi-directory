@@ -15,6 +15,7 @@ public class ErrorFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public Integer errorCode;
+
     public ErrorFieldType withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,6 +27,7 @@ public class ErrorFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public String errorDescription;
+
     public ErrorFieldType withErrorDescription(String errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -34,9 +36,11 @@ public class ErrorFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldType")
     public FieldType fieldType;
+
     public ErrorFieldType withFieldType(FieldType fieldType) {
         this.fieldType = fieldType;
         return this;
     }
     
+    public ErrorFieldType(){}
 }

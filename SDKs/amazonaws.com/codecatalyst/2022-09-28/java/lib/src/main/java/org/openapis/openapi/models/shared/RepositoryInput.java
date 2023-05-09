@@ -15,6 +15,7 @@ public class RepositoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchName")
     public String branchName;
+
     public RepositoryInput withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -22,9 +23,13 @@ public class RepositoryInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public RepositoryInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public RepositoryInput(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -16,6 +17,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=birth_date")
     public OffsetDateTime birthDate;
+
     public CreateBehaviorInput withBirthDate(OffsetDateTime birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -26,6 +28,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=country")
     public CreateBehaviorInputCountryEnum country;
+
     public CreateBehaviorInput withCountry(CreateBehaviorInputCountryEnum country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=document_id")
     public String documentId;
+
     public CreateBehaviorInput withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -46,6 +50,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=document_type")
     public CreateBehaviorInputDocumentTypeEnum documentType;
+
     public CreateBehaviorInput withDocumentType(CreateBehaviorInputDocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -56,6 +61,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=email")
     public String email;
+
     public CreateBehaviorInput withEmail(String email) {
         this.email = email;
         return this;
@@ -66,6 +72,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=feedback_date")
     public OffsetDateTime feedbackDate;
+
     public CreateBehaviorInput withFeedbackDate(OffsetDateTime feedbackDate) {
         this.feedbackDate = feedbackDate;
         return this;
@@ -76,6 +83,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=first_name")
     public String firstName;
+
     public CreateBehaviorInput withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -86,6 +94,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=last_name")
     public String lastName;
+
     public CreateBehaviorInput withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -96,6 +105,7 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=phone_number")
     public String phoneNumber;
+
     public CreateBehaviorInput withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -106,9 +116,21 @@ public class CreateBehaviorInput {
      */
     @SpeakeasyMetadata("form:name=reason")
     public CreateBehaviorInputReasonEnum reason;
+
     public CreateBehaviorInput withReason(CreateBehaviorInputReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public CreateBehaviorInput(@JsonProperty("birth_date") OffsetDateTime birthDate, @JsonProperty("country") CreateBehaviorInputCountryEnum country, @JsonProperty("document_id") String documentId, @JsonProperty("document_type") CreateBehaviorInputDocumentTypeEnum documentType, @JsonProperty("email") String email, @JsonProperty("feedback_date") OffsetDateTime feedbackDate, @JsonProperty("first_name") String firstName, @JsonProperty("last_name") String lastName, @JsonProperty("reason") CreateBehaviorInputReasonEnum reason) {
+        this.birthDate = birthDate;
+        this.country = country;
+        this.documentId = documentId;
+        this.documentType = documentType;
+        this.email = email;
+        this.feedbackDate = feedbackDate;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.reason = reason;
+  }
 }

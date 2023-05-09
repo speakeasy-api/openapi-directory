@@ -23,6 +23,7 @@ public class CashPaymentDetails {
      */
     @JsonProperty("buyer_supplied_money")
     public Money buyerSuppliedMoney;
+
     public CashPaymentDetails withBuyerSuppliedMoney(Money buyerSuppliedMoney) {
         this.buyerSuppliedMoney = buyerSuppliedMoney;
         return this;
@@ -39,9 +40,13 @@ public class CashPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change_back_money")
     public Money changeBackMoney;
+
     public CashPaymentDetails withChangeBackMoney(Money changeBackMoney) {
         this.changeBackMoney = changeBackMoney;
         return this;
     }
     
+    public CashPaymentDetails(@JsonProperty("buyer_supplied_money") Money buyerSuppliedMoney) {
+        this.buyerSuppliedMoney = buyerSuppliedMoney;
+  }
 }

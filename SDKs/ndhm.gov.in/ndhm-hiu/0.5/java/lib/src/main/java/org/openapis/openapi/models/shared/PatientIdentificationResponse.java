@@ -17,6 +17,7 @@ public class PatientIdentificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public PatientIdentificationResponse withError(Error error) {
         this.error = error;
         return this;
@@ -25,6 +26,7 @@ public class PatientIdentificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public PatientIdentificationResponsePatient patient;
+
     public PatientIdentificationResponse withPatient(PatientIdentificationResponsePatient patient) {
         this.patient = patient;
         return this;
@@ -35,6 +37,7 @@ public class PatientIdentificationResponse {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientIdentificationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class PatientIdentificationResponse {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public PatientIdentificationResponse withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,9 +58,15 @@ public class PatientIdentificationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientIdentificationResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PatientIdentificationResponse(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

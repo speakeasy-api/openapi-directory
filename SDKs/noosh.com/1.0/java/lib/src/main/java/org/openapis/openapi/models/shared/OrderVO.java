@@ -15,6 +15,7 @@ public class OrderVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public Long orderId;
+
     public OrderVO withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -23,6 +24,7 @@ public class OrderVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public OrderVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class OrderVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public OrderVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public OrderVO(){}
 }

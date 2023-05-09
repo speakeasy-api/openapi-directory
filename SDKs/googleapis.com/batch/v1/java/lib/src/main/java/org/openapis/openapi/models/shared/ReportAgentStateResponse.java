@@ -18,6 +18,7 @@ public class ReportAgentStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultReportInterval")
     public String defaultReportInterval;
+
     public ReportAgentStateResponse withDefaultReportInterval(String defaultReportInterval) {
         this.defaultReportInterval = defaultReportInterval;
         return this;
@@ -29,6 +30,7 @@ public class ReportAgentStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minReportInterval")
     public String minReportInterval;
+
     public ReportAgentStateResponse withMinReportInterval(String minReportInterval) {
         this.minReportInterval = minReportInterval;
         return this;
@@ -40,9 +42,11 @@ public class ReportAgentStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public AgentTask[] tasks;
+
     public ReportAgentStateResponse withTasks(AgentTask[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public ReportAgentStateResponse(){}
 }

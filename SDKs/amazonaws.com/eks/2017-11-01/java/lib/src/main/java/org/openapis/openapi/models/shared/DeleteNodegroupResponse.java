@@ -15,9 +15,11 @@ public class DeleteNodegroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodegroup")
     public Nodegroup nodegroup;
+
     public DeleteNodegroupResponse withNodegroup(Nodegroup nodegroup) {
         this.nodegroup = nodegroup;
         return this;
     }
     
+    public DeleteNodegroupResponse(){}
 }

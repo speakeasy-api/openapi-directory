@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsRequest {
@@ -12,9 +13,13 @@ public class TeamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public TeamsFormatEnum format;
+
     public TeamsRequest withFormat(TeamsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public TeamsRequest(@JsonProperty("format") TeamsFormatEnum format) {
+        this.format = format;
+  }
 }

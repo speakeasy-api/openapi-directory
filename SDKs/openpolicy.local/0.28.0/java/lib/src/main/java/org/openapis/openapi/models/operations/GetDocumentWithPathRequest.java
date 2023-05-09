@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentWithPathRequest {
@@ -12,6 +13,7 @@ public class GetDocumentWithPathRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-yaml")
     public byte[] requestBody;
+
     public GetDocumentWithPathRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class GetDocumentWithPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
     public String explain;
+
     public GetDocumentWithPathRequest withExplain(String explain) {
         this.explain = explain;
         return this;
@@ -34,6 +37,7 @@ public class GetDocumentWithPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument")
     public Boolean instrument;
+
     public GetDocumentWithPathRequest withInstrument(Boolean instrument) {
         this.instrument = instrument;
         return this;
@@ -44,6 +48,7 @@ public class GetDocumentWithPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
     public Boolean metrics;
+
     public GetDocumentWithPathRequest withMetrics(Boolean metrics) {
         this.metrics = metrics;
         return this;
@@ -54,6 +59,7 @@ public class GetDocumentWithPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public GetDocumentWithPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -64,6 +70,7 @@ public class GetDocumentWithPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public GetDocumentWithPathRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
@@ -74,9 +81,14 @@ public class GetDocumentWithPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provenance")
     public Boolean provenance;
+
     public GetDocumentWithPathRequest withProvenance(Boolean provenance) {
         this.provenance = provenance;
         return this;
     }
     
+    public GetDocumentWithPathRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("path") String path) {
+        this.requestBody = requestBody;
+        this.path = path;
+  }
 }

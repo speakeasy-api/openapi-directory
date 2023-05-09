@@ -15,6 +15,7 @@ public class CreateReferenceStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateReferenceStoreRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateReferenceStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateReferenceStoreRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateReferenceStoreRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateReferenceStoreRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +50,7 @@ public class CreateReferenceStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sseConfig")
     public CreateReferenceStoreRequestBodySseConfig sseConfig;
+
     public CreateReferenceStoreRequestBody withSseConfig(CreateReferenceStoreRequestBodySseConfig sseConfig) {
         this.sseConfig = sseConfig;
         return this;
@@ -58,9 +62,13 @@ public class CreateReferenceStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateReferenceStoreRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateReferenceStoreRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

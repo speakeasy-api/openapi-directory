@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenerateServiceLastAccessedDetailsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGenerateServiceLastAccessedDetailsActionEnum action;
+
     public GETGenerateServiceLastAccessedDetailsRequest withAction(GETGenerateServiceLastAccessedDetailsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
     public String arn;
+
     public GETGenerateServiceLastAccessedDetailsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +32,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Granularity")
     public GETGenerateServiceLastAccessedDetailsGranularityEnum granularity;
+
     public GETGenerateServiceLastAccessedDetailsRequest withGranularity(GETGenerateServiceLastAccessedDetailsGranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -36,6 +40,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGenerateServiceLastAccessedDetailsVersionEnum version;
+
     public GETGenerateServiceLastAccessedDetailsRequest withVersion(GETGenerateServiceLastAccessedDetailsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGenerateServiceLastAccessedDetailsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGenerateServiceLastAccessedDetailsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGenerateServiceLastAccessedDetailsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGenerateServiceLastAccessedDetailsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGenerateServiceLastAccessedDetailsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGenerateServiceLastAccessedDetailsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETGenerateServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGenerateServiceLastAccessedDetailsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGenerateServiceLastAccessedDetailsRequest(@JsonProperty("Action") GETGenerateServiceLastAccessedDetailsActionEnum action, @JsonProperty("Arn") String arn, @JsonProperty("Version") GETGenerateServiceLastAccessedDetailsVersionEnum version) {
+        this.action = action;
+        this.arn = arn;
+        this.version = version;
+  }
 }

@@ -17,6 +17,7 @@ public class Client {
     @JsonProperty("application_type")
     @SpeakeasyMetadata("multipartForm:name=application_type")
     public String applicationType;
+
     public Client withApplicationType(String applicationType) {
         this.applicationType = applicationType;
         return this;
@@ -26,6 +27,7 @@ public class Client {
     @JsonProperty("client_id")
     @SpeakeasyMetadata("multipartForm:name=client_id")
     public String clientId;
+
     public Client withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -34,6 +36,7 @@ public class Client {
     @JsonProperty("client_name")
     @SpeakeasyMetadata("multipartForm:name=client_name")
     public String clientName;
+
     public Client withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -42,6 +45,7 @@ public class Client {
     @JsonProperty("client_uri")
     @SpeakeasyMetadata("multipartForm:name=client_uri")
     public String clientUri;
+
     public Client withClientUri(String clientUri) {
         this.clientUri = clientUri;
         return this;
@@ -51,6 +55,7 @@ public class Client {
     @JsonProperty("contacts")
     @SpeakeasyMetadata("multipartForm:name=contacts")
     public String[] contacts;
+
     public Client withContacts(String[] contacts) {
         this.contacts = contacts;
         return this;
@@ -60,6 +65,7 @@ public class Client {
     @JsonProperty("default_max_age")
     @SpeakeasyMetadata("multipartForm:name=default_max_age")
     public Long defaultMaxAge;
+
     public Client withDefaultMaxAge(Long defaultMaxAge) {
         this.defaultMaxAge = defaultMaxAge;
         return this;
@@ -69,6 +75,7 @@ public class Client {
     @JsonProperty("default_scopes")
     @SpeakeasyMetadata("multipartForm:name=default_scopes")
     public String[] defaultScopes;
+
     public Client withDefaultScopes(String[] defaultScopes) {
         this.defaultScopes = defaultScopes;
         return this;
@@ -78,6 +85,7 @@ public class Client {
     @JsonProperty("grant_types")
     @SpeakeasyMetadata("multipartForm:name=grant_types")
     public String[] grantTypes;
+
     public Client withGrantTypes(String[] grantTypes) {
         this.grantTypes = grantTypes;
         return this;
@@ -87,6 +95,7 @@ public class Client {
     @JsonProperty("logo_uri")
     @SpeakeasyMetadata("multipartForm:name=logo_uri")
     public String logoUri;
+
     public Client withLogoUri(String logoUri) {
         this.logoUri = logoUri;
         return this;
@@ -96,6 +105,7 @@ public class Client {
     @JsonProperty("policy_uri")
     @SpeakeasyMetadata("multipartForm:name=policy_uri")
     public String policyUri;
+
     public Client withPolicyUri(String policyUri) {
         this.policyUri = policyUri;
         return this;
@@ -105,6 +115,7 @@ public class Client {
     @JsonProperty("redirect_uris")
     @SpeakeasyMetadata("multipartForm:name=redirect_uris")
     public String[] redirectUris;
+
     public Client withRedirectUris(String[] redirectUris) {
         this.redirectUris = redirectUris;
         return this;
@@ -114,6 +125,7 @@ public class Client {
     @JsonProperty("response_types")
     @SpeakeasyMetadata("multipartForm:name=response_types")
     public String[] responseTypes;
+
     public Client withResponseTypes(String[] responseTypes) {
         this.responseTypes = responseTypes;
         return this;
@@ -123,9 +135,14 @@ public class Client {
     @JsonProperty("tos_uri")
     @SpeakeasyMetadata("multipartForm:name=tos_uri")
     public String tosUri;
+
     public Client withTosUri(String tosUri) {
         this.tosUri = tosUri;
         return this;
     }
     
+    public Client(@JsonProperty("client_name") String clientName, @JsonProperty("client_uri") String clientUri) {
+        this.clientName = clientName;
+        this.clientUri = clientUri;
+  }
 }

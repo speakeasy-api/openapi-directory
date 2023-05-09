@@ -15,6 +15,7 @@ public class SupportedEndpointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointType")
     public ReplicationEndpointTypeValueEnum endpointType;
+
     public SupportedEndpointType withEndpointType(ReplicationEndpointTypeValueEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -23,6 +24,7 @@ public class SupportedEndpointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineDisplayName")
     public String engineDisplayName;
+
     public SupportedEndpointType withEngineDisplayName(String engineDisplayName) {
         this.engineDisplayName = engineDisplayName;
         return this;
@@ -31,6 +33,7 @@ public class SupportedEndpointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineName")
     public String engineName;
+
     public SupportedEndpointType withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -39,6 +42,7 @@ public class SupportedEndpointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstanceEngineMinimumVersion")
     public String replicationInstanceEngineMinimumVersion;
+
     public SupportedEndpointType withReplicationInstanceEngineMinimumVersion(String replicationInstanceEngineMinimumVersion) {
         this.replicationInstanceEngineMinimumVersion = replicationInstanceEngineMinimumVersion;
         return this;
@@ -47,9 +51,11 @@ public class SupportedEndpointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportsCDC")
     public Boolean supportsCDC;
+
     public SupportedEndpointType withSupportsCDC(Boolean supportsCDC) {
         this.supportsCDC = supportsCDC;
         return this;
     }
     
+    public SupportedEndpointType(){}
 }

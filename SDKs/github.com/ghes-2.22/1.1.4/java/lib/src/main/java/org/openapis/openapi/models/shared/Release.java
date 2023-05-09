@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Release {
     @JsonProperty("assets")
     public ReleaseAsset[] assets;
+
     public Release withAssets(ReleaseAsset[] assets) {
         this.assets = assets;
         return this;
@@ -26,6 +27,7 @@ public class Release {
     
     @JsonProperty("assets_url")
     public String assetsUrl;
+
     public Release withAssetsUrl(String assetsUrl) {
         this.assetsUrl = assetsUrl;
         return this;
@@ -36,6 +38,7 @@ public class Release {
      */
     @JsonProperty("author")
     public SimpleUser author;
+
     public Release withAuthor(SimpleUser author) {
         this.author = author;
         return this;
@@ -44,6 +47,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Release withBody(String body) {
         this.body = body;
         return this;
@@ -52,6 +56,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public Release withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -60,6 +65,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public Release withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -69,6 +75,7 @@ public class Release {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Release withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -79,6 +86,7 @@ public class Release {
      */
     @JsonProperty("draft")
     public Boolean draft;
+
     public Release withDraft(Boolean draft) {
         this.draft = draft;
         return this;
@@ -86,6 +94,7 @@ public class Release {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Release withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -93,6 +102,7 @@ public class Release {
     
     @JsonProperty("id")
     public Long id;
+
     public Release withId(Long id) {
         this.id = id;
         return this;
@@ -100,6 +110,7 @@ public class Release {
     
     @JsonProperty("name")
     public String name;
+
     public Release withName(String name) {
         this.name = name;
         return this;
@@ -107,6 +118,7 @@ public class Release {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Release withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -117,6 +129,7 @@ public class Release {
      */
     @JsonProperty("prerelease")
     public Boolean prerelease;
+
     public Release withPrerelease(Boolean prerelease) {
         this.prerelease = prerelease;
         return this;
@@ -126,6 +139,7 @@ public class Release {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("published_at")
     public OffsetDateTime publishedAt;
+
     public Release withPublishedAt(OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -134,6 +148,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public Release withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -144,6 +159,7 @@ public class Release {
      */
     @JsonProperty("tag_name")
     public String tagName;
+
     public Release withTagName(String tagName) {
         this.tagName = tagName;
         return this;
@@ -151,6 +167,7 @@ public class Release {
     
     @JsonProperty("tarball_url")
     public String tarballUrl;
+
     public Release withTarballUrl(String tarballUrl) {
         this.tarballUrl = tarballUrl;
         return this;
@@ -161,6 +178,7 @@ public class Release {
      */
     @JsonProperty("target_commitish")
     public String targetCommitish;
+
     public Release withTargetCommitish(String targetCommitish) {
         this.targetCommitish = targetCommitish;
         return this;
@@ -168,6 +186,7 @@ public class Release {
     
     @JsonProperty("upload_url")
     public String uploadUrl;
+
     public Release withUploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
         return this;
@@ -175,6 +194,7 @@ public class Release {
     
     @JsonProperty("url")
     public String url;
+
     public Release withUrl(String url) {
         this.url = url;
         return this;
@@ -182,9 +202,29 @@ public class Release {
     
     @JsonProperty("zipball_url")
     public String zipballUrl;
+
     public Release withZipballUrl(String zipballUrl) {
         this.zipballUrl = zipballUrl;
         return this;
     }
     
+    public Release(@JsonProperty("assets") ReleaseAsset[] assets, @JsonProperty("assets_url") String assetsUrl, @JsonProperty("author") SimpleUser author, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("draft") Boolean draft, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("prerelease") Boolean prerelease, @JsonProperty("published_at") OffsetDateTime publishedAt, @JsonProperty("tag_name") String tagName, @JsonProperty("tarball_url") String tarballUrl, @JsonProperty("target_commitish") String targetCommitish, @JsonProperty("upload_url") String uploadUrl, @JsonProperty("url") String url, @JsonProperty("zipball_url") String zipballUrl) {
+        this.assets = assets;
+        this.assetsUrl = assetsUrl;
+        this.author = author;
+        this.createdAt = createdAt;
+        this.draft = draft;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.prerelease = prerelease;
+        this.publishedAt = publishedAt;
+        this.tagName = tagName;
+        this.tarballUrl = tarballUrl;
+        this.targetCommitish = targetCommitish;
+        this.uploadUrl = uploadUrl;
+        this.url = url;
+        this.zipballUrl = zipballUrl;
+  }
 }

@@ -78,13 +78,11 @@ public class Hotels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHotelsResponse res = new org.openapis.openapi.models.operations.ListHotelsResponse() {{
+        org.openapis.openapi.models.operations.ListHotelsResponse res = new org.openapis.openapi.models.operations.ListHotelsResponse(contentType, httpRes.statusCode()) {{
             listHotels200ApplicationJSONObject = null;
             validationError = null;
             genericError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,13 +152,11 @@ public class Hotels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveHotelResponse res = new org.openapis.openapi.models.operations.RetrieveHotelResponse() {{
+        org.openapis.openapi.models.operations.RetrieveHotelResponse res = new org.openapis.openapi.models.operations.RetrieveHotelResponse(contentType, httpRes.statusCode()) {{
             hotelFullDetail = null;
             validationError = null;
             genericError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

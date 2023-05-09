@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAttributeGroupResponse {
@@ -12,6 +13,7 @@ public class UpdateAttributeGroupResponse {
      */
     
     public Object conflictException;
+
     public UpdateAttributeGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAttributeGroupResponse {
     
     
     public String contentType;
+
     public UpdateAttributeGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAttributeGroupResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAttributeGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAttributeGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateAttributeGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAttributeGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAttributeGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAttributeGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAttributeGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAttributeGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAttributeGroupResponse updateAttributeGroupResponse;
+
     public UpdateAttributeGroupResponse withUpdateAttributeGroupResponse(org.openapis.openapi.models.shared.UpdateAttributeGroupResponse updateAttributeGroupResponse) {
         this.updateAttributeGroupResponse = updateAttributeGroupResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAttributeGroupResponse {
      */
     
     public Object validationException;
+
     public UpdateAttributeGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAttributeGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

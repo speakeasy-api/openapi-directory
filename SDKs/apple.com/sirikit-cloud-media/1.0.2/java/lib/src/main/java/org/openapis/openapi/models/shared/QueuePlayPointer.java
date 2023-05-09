@@ -12,6 +12,7 @@ public class QueuePlayPointer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentIdentifier")
     public String contentIdentifier;
+
     public QueuePlayPointer withContentIdentifier(String contentIdentifier) {
         this.contentIdentifier = contentIdentifier;
         return this;
@@ -20,9 +21,11 @@ public class QueuePlayPointer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetInMillis")
     public Long offsetInMillis;
+
     public QueuePlayPointer withOffsetInMillis(Long offsetInMillis) {
         this.offsetInMillis = offsetInMillis;
         return this;
     }
     
+    public QueuePlayPointer(){}
 }

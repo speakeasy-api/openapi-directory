@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IamcredentialsProjectsServiceAccountsSignBlobResponse {
     
     public String contentType;
+
     public IamcredentialsProjectsServiceAccountsSignBlobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IamcredentialsProjectsServiceAccountsSignBlobResponse {
      */
     
     public org.openapis.openapi.models.shared.SignBlobResponse signBlobResponse;
+
     public IamcredentialsProjectsServiceAccountsSignBlobResponse withSignBlobResponse(org.openapis.openapi.models.shared.SignBlobResponse signBlobResponse) {
         this.signBlobResponse = signBlobResponse;
         return this;
@@ -26,6 +29,7 @@ public class IamcredentialsProjectsServiceAccountsSignBlobResponse {
     
     
     public Integer statusCode;
+
     public IamcredentialsProjectsServiceAccountsSignBlobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IamcredentialsProjectsServiceAccountsSignBlobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IamcredentialsProjectsServiceAccountsSignBlobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IamcredentialsProjectsServiceAccountsSignBlobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

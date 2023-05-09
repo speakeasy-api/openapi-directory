@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComposerProjectsLocationsImageVersionsListResponse {
     
     public String contentType;
+
     public ComposerProjectsLocationsImageVersionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComposerProjectsLocationsImageVersionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImageVersionsResponse listImageVersionsResponse;
+
     public ComposerProjectsLocationsImageVersionsListResponse withListImageVersionsResponse(org.openapis.openapi.models.shared.ListImageVersionsResponse listImageVersionsResponse) {
         this.listImageVersionsResponse = listImageVersionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ComposerProjectsLocationsImageVersionsListResponse {
     
     
     public Integer statusCode;
+
     public ComposerProjectsLocationsImageVersionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComposerProjectsLocationsImageVersionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComposerProjectsLocationsImageVersionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComposerProjectsLocationsImageVersionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

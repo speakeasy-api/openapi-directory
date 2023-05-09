@@ -16,6 +16,7 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationInstructedAm
      */
     @JsonProperty("Amount")
     public String amount;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationInstructedAmount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -26,9 +27,14 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationInstructedAm
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationInstructedAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public OBWriteInternationalStandingOrderConsent6DataInitiationInstructedAmount(@JsonProperty("Amount") String amount, @JsonProperty("Currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

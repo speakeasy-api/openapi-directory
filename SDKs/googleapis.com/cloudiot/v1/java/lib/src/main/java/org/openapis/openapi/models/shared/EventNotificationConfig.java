@@ -18,6 +18,7 @@ public class EventNotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopicName")
     public String pubsubTopicName;
+
     public EventNotificationConfig withPubsubTopicName(String pubsubTopicName) {
         this.pubsubTopicName = pubsubTopicName;
         return this;
@@ -29,9 +30,11 @@ public class EventNotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subfolderMatches")
     public String subfolderMatches;
+
     public EventNotificationConfig withSubfolderMatches(String subfolderMatches) {
         this.subfolderMatches = subfolderMatches;
         return this;
     }
     
+    public EventNotificationConfig(){}
 }

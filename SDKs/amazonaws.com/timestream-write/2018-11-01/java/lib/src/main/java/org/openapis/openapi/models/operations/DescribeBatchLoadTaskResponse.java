@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBatchLoadTaskResponse {
@@ -12,6 +13,7 @@ public class DescribeBatchLoadTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeBatchLoadTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBatchLoadTaskResponse {
     
     
     public String contentType;
+
     public DescribeBatchLoadTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBatchLoadTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBatchLoadTaskResponse describeBatchLoadTaskResponse;
+
     public DescribeBatchLoadTaskResponse withDescribeBatchLoadTaskResponse(org.openapis.openapi.models.shared.DescribeBatchLoadTaskResponse describeBatchLoadTaskResponse) {
         this.describeBatchLoadTaskResponse = describeBatchLoadTaskResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBatchLoadTaskResponse {
      */
     
     public Object internalServerException;
+
     public DescribeBatchLoadTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBatchLoadTaskResponse {
      */
     
     public Object invalidEndpointException;
+
     public DescribeBatchLoadTaskResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeBatchLoadTaskResponse {
     
     
     public Integer statusCode;
+
     public DescribeBatchLoadTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeBatchLoadTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBatchLoadTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeBatchLoadTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeBatchLoadTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeBatchLoadTaskResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBatchLoadTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeBatchLoadTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

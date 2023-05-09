@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetChangessSchemaData {
     @JsonProperty("bucket")
     public String bucket;
+
     public GetChangessSchemaData withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -16,6 +17,7 @@ public class GetChangessSchemaData {
     
     @JsonProperty("collection")
     public String collection;
+
     public GetChangessSchemaData withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -23,9 +25,15 @@ public class GetChangessSchemaData {
     
     @JsonProperty("host")
     public String host;
+
     public GetChangessSchemaData withHost(String host) {
         this.host = host;
         return this;
     }
     
+    public GetChangessSchemaData(@JsonProperty("bucket") String bucket, @JsonProperty("collection") String collection, @JsonProperty("host") String host) {
+        this.bucket = bucket;
+        this.collection = collection;
+        this.host = host;
+  }
 }

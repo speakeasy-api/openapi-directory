@@ -12,6 +12,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
     public Boolean active;
+
     public GetV2UsersJsonRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,6 +23,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=group_id")
     public String[] groupId;
+
     public GetV2UsersJsonRequest withGroupId(String[] groupId) {
         this.groupId = groupId;
         return this;
@@ -32,6 +34,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=guid")
     public String[] guid;
+
     public GetV2UsersJsonRequest withGuid(String[] guid) {
         this.guid = guid;
         return this;
@@ -42,6 +45,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_crm_user")
     public Boolean hasCrmUser;
+
     public GetV2UsersJsonRequest withHasCrmUser(Boolean hasCrmUser) {
         this.hasCrmUser = hasCrmUser;
         return this;
@@ -52,6 +56,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2UsersJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -62,6 +67,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2UsersJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -72,6 +78,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2UsersJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -82,6 +89,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2UsersJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -92,6 +100,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=role_id")
     public String[] roleId;
+
     public GetV2UsersJsonRequest withRoleId(String[] roleId) {
         this.roleId = roleId;
         return this;
@@ -102,6 +111,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetV2UsersJsonRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -112,6 +122,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2UsersJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -122,6 +133,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2UsersJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -136,6 +148,7 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visible_only")
     public Boolean visibleOnly;
+
     public GetV2UsersJsonRequest withVisibleOnly(Boolean visibleOnly) {
         this.visibleOnly = visibleOnly;
         return this;
@@ -146,9 +159,11 @@ public class GetV2UsersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=work_country")
     public String[] workCountry;
+
     public GetV2UsersJsonRequest withWorkCountry(String[] workCountry) {
         this.workCountry = workCountry;
         return this;
     }
     
+    public GetV2UsersJsonRequest(){}
 }

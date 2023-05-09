@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class CreateDefaultVpcRequest {
     
     public Boolean dryRun;
+
     public CreateDefaultVpcRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public CreateDefaultVpcRequest(){}
 }

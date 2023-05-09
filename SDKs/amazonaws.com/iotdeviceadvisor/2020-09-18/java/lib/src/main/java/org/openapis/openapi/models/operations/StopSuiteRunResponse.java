@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopSuiteRunResponse {
     
     public String contentType;
+
     public StopSuiteRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopSuiteRunResponse {
      */
     
     public Object internalServerException;
+
     public StopSuiteRunResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class StopSuiteRunResponse {
     
     
     public Integer statusCode;
+
     public StopSuiteRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class StopSuiteRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopSuiteRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class StopSuiteRunResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopSuiteRunResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class StopSuiteRunResponse {
      */
     
     public java.util.Map<String, Object> stopSuiteRunResponse;
+
     public StopSuiteRunResponse withStopSuiteRunResponse(java.util.Map<String, Object> stopSuiteRunResponse) {
         this.stopSuiteRunResponse = stopSuiteRunResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopSuiteRunResponse {
      */
     
     public Object validationException;
+
     public StopSuiteRunResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopSuiteRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

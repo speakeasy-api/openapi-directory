@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSensorStatisticsResponse {
@@ -12,6 +13,7 @@ public class ListSensorStatisticsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSensorStatisticsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSensorStatisticsResponse {
     
     
     public String contentType;
+
     public ListSensorStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSensorStatisticsResponse {
      */
     
     public Object internalServerException;
+
     public ListSensorStatisticsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSensorStatisticsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSensorStatisticsResponse listSensorStatisticsResponse;
+
     public ListSensorStatisticsResponse withListSensorStatisticsResponse(org.openapis.openapi.models.shared.ListSensorStatisticsResponse listSensorStatisticsResponse) {
         this.listSensorStatisticsResponse = listSensorStatisticsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListSensorStatisticsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSensorStatisticsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListSensorStatisticsResponse {
     
     
     public Integer statusCode;
+
     public ListSensorStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListSensorStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSensorStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListSensorStatisticsResponse {
      */
     
     public Object throttlingException;
+
     public ListSensorStatisticsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListSensorStatisticsResponse {
      */
     
     public Object validationException;
+
     public ListSensorStatisticsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSensorStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

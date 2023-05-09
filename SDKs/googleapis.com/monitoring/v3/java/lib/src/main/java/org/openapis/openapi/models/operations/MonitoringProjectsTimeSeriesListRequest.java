@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MonitoringProjectsTimeSeriesListRequest {
@@ -12,6 +13,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public MonitoringProjectsTimeSeriesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public MonitoringProjectsTimeSeriesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregation.alignmentPeriod")
     public String aggregationAlignmentPeriod;
+
     public MonitoringProjectsTimeSeriesListRequest withAggregationAlignmentPeriod(String aggregationAlignmentPeriod) {
         this.aggregationAlignmentPeriod = aggregationAlignmentPeriod;
         return this;
@@ -42,6 +46,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregation.crossSeriesReducer")
     public MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum aggregationCrossSeriesReducer;
+
     public MonitoringProjectsTimeSeriesListRequest withAggregationCrossSeriesReducer(MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum aggregationCrossSeriesReducer) {
         this.aggregationCrossSeriesReducer = aggregationCrossSeriesReducer;
         return this;
@@ -52,6 +57,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregation.groupByFields")
     public String[] aggregationGroupByFields;
+
     public MonitoringProjectsTimeSeriesListRequest withAggregationGroupByFields(String[] aggregationGroupByFields) {
         this.aggregationGroupByFields = aggregationGroupByFields;
         return this;
@@ -62,6 +68,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregation.perSeriesAligner")
     public MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum aggregationPerSeriesAligner;
+
     public MonitoringProjectsTimeSeriesListRequest withAggregationPerSeriesAligner(MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum aggregationPerSeriesAligner) {
         this.aggregationPerSeriesAligner = aggregationPerSeriesAligner;
         return this;
@@ -72,6 +79,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MonitoringProjectsTimeSeriesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -82,6 +90,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public MonitoringProjectsTimeSeriesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -92,6 +101,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MonitoringProjectsTimeSeriesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -102,6 +112,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public MonitoringProjectsTimeSeriesListRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -112,6 +123,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime")
     public String intervalEndTime;
+
     public MonitoringProjectsTimeSeriesListRequest withIntervalEndTime(String intervalEndTime) {
         this.intervalEndTime = intervalEndTime;
         return this;
@@ -122,6 +134,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime")
     public String intervalStartTime;
+
     public MonitoringProjectsTimeSeriesListRequest withIntervalStartTime(String intervalStartTime) {
         this.intervalStartTime = intervalStartTime;
         return this;
@@ -132,6 +145,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MonitoringProjectsTimeSeriesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -142,6 +156,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public MonitoringProjectsTimeSeriesListRequest withName(String name) {
         this.name = name;
         return this;
@@ -152,6 +167,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MonitoringProjectsTimeSeriesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -162,6 +178,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public MonitoringProjectsTimeSeriesListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -172,6 +189,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public MonitoringProjectsTimeSeriesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -182,6 +200,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public MonitoringProjectsTimeSeriesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -192,6 +211,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MonitoringProjectsTimeSeriesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -202,6 +222,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MonitoringProjectsTimeSeriesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -212,6 +233,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondaryAggregation.alignmentPeriod")
     public String secondaryAggregationAlignmentPeriod;
+
     public MonitoringProjectsTimeSeriesListRequest withSecondaryAggregationAlignmentPeriod(String secondaryAggregationAlignmentPeriod) {
         this.secondaryAggregationAlignmentPeriod = secondaryAggregationAlignmentPeriod;
         return this;
@@ -222,6 +244,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondaryAggregation.crossSeriesReducer")
     public MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum secondaryAggregationCrossSeriesReducer;
+
     public MonitoringProjectsTimeSeriesListRequest withSecondaryAggregationCrossSeriesReducer(MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum secondaryAggregationCrossSeriesReducer) {
         this.secondaryAggregationCrossSeriesReducer = secondaryAggregationCrossSeriesReducer;
         return this;
@@ -232,6 +255,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondaryAggregation.groupByFields")
     public String[] secondaryAggregationGroupByFields;
+
     public MonitoringProjectsTimeSeriesListRequest withSecondaryAggregationGroupByFields(String[] secondaryAggregationGroupByFields) {
         this.secondaryAggregationGroupByFields = secondaryAggregationGroupByFields;
         return this;
@@ -242,6 +266,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondaryAggregation.perSeriesAligner")
     public MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum secondaryAggregationPerSeriesAligner;
+
     public MonitoringProjectsTimeSeriesListRequest withSecondaryAggregationPerSeriesAligner(MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum secondaryAggregationPerSeriesAligner) {
         this.secondaryAggregationPerSeriesAligner = secondaryAggregationPerSeriesAligner;
         return this;
@@ -252,6 +277,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public MonitoringProjectsTimeSeriesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -262,6 +288,7 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public MonitoringProjectsTimeSeriesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -272,9 +299,13 @@ public class MonitoringProjectsTimeSeriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public MonitoringProjectsTimeSeriesListViewEnum view;
+
     public MonitoringProjectsTimeSeriesListRequest withView(MonitoringProjectsTimeSeriesListViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public MonitoringProjectsTimeSeriesListRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

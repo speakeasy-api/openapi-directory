@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrganizationResource {
     @JsonProperty("attributes")
     public OrganizationResourceAttributes attributes;
+
     public OrganizationResource withAttributes(OrganizationResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -18,6 +19,7 @@ public class OrganizationResource {
     
     @JsonProperty("id")
     public String id;
+
     public OrganizationResource withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class OrganizationResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public OrganizationResourceLinks links;
+
     public OrganizationResource withLinks(OrganizationResourceLinks links) {
         this.links = links;
         return this;
@@ -33,9 +36,15 @@ public class OrganizationResource {
     
     @JsonProperty("type")
     public OrganizationResourceTypeEnum type;
+
     public OrganizationResource withType(OrganizationResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OrganizationResource(@JsonProperty("attributes") OrganizationResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("type") OrganizationResourceTypeEnum type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.type = type;
+  }
 }

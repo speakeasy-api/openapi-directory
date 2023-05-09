@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2ControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2ControlInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2ControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2ControlInput withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2ControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public GoogleCloudRetailV2Rule rule;
+
     public GoogleCloudRetailV2ControlInput withRule(GoogleCloudRetailV2Rule rule) {
         this.rule = rule;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2ControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchSolutionUseCase")
     public GoogleCloudRetailV2ControlSearchSolutionUseCaseEnum[] searchSolutionUseCase;
+
     public GoogleCloudRetailV2ControlInput withSearchSolutionUseCase(GoogleCloudRetailV2ControlSearchSolutionUseCaseEnum[] searchSolutionUseCase) {
         this.searchSolutionUseCase = searchSolutionUseCase;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRetailV2ControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionTypes")
     public GoogleCloudRetailV2ControlSolutionTypesEnum[] solutionTypes;
+
     public GoogleCloudRetailV2ControlInput withSolutionTypes(GoogleCloudRetailV2ControlSolutionTypesEnum[] solutionTypes) {
         this.solutionTypes = solutionTypes;
         return this;
     }
     
+    public GoogleCloudRetailV2ControlInput(){}
 }

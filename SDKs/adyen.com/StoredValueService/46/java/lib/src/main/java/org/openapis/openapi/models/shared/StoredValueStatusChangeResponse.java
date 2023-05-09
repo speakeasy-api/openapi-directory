@@ -20,6 +20,7 @@ public class StoredValueStatusChangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public StoredValueStatusChangeResponse withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -28,6 +29,7 @@ public class StoredValueStatusChangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBalance")
     public Amount currentBalance;
+
     public StoredValueStatusChangeResponse withCurrentBalance(Amount currentBalance) {
         this.currentBalance = currentBalance;
         return this;
@@ -39,6 +41,7 @@ public class StoredValueStatusChangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public StoredValueStatusChangeResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -52,6 +55,7 @@ public class StoredValueStatusChangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refusalReason")
     public String refusalReason;
+
     public StoredValueStatusChangeResponse withRefusalReason(String refusalReason) {
         this.refusalReason = refusalReason;
         return this;
@@ -69,6 +73,7 @@ public class StoredValueStatusChangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public StoredValueStatusChangeResponseResultCodeEnum resultCode;
+
     public StoredValueStatusChangeResponse withResultCode(StoredValueStatusChangeResponseResultCodeEnum resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -80,9 +85,11 @@ public class StoredValueStatusChangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyRefusalReason")
     public String thirdPartyRefusalReason;
+
     public StoredValueStatusChangeResponse withThirdPartyRefusalReason(String thirdPartyRefusalReason) {
         this.thirdPartyRefusalReason = thirdPartyRefusalReason;
         return this;
     }
     
+    public StoredValueStatusChangeResponse(){}
 }

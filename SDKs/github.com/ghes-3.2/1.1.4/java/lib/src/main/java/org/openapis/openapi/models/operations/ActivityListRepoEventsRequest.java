@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListRepoEventsRequest {
@@ -12,6 +13,7 @@ public class ActivityListRepoEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActivityListRepoEventsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class ActivityListRepoEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActivityListRepoEventsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ActivityListRepoEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActivityListRepoEventsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,14 @@ public class ActivityListRepoEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActivityListRepoEventsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActivityListRepoEventsRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

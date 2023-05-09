@@ -15,6 +15,7 @@ public class ListIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identities")
     public IdentityDescription[] identities;
+
     public ListIdentitiesResponse withIdentities(IdentityDescription[] identities) {
         this.identities = identities;
         return this;
@@ -23,6 +24,7 @@ public class ListIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public ListIdentitiesResponse withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -31,9 +33,11 @@ public class ListIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentitiesResponse(){}
 }

@@ -15,6 +15,7 @@ public class ConfigSYSLOG {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public String client;
+
     public ConfigSYSLOG withClient(String client) {
         this.client = client;
         return this;
@@ -23,6 +24,7 @@ public class ConfigSYSLOG {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public ConfigSYSLOG withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -31,6 +33,7 @@ public class ConfigSYSLOG {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localport")
     public Integer localport;
+
     public ConfigSYSLOG withLocalport(Integer localport) {
         this.localport = localport;
         return this;
@@ -39,6 +42,7 @@ public class ConfigSYSLOG {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("separator")
     public String separator;
+
     public ConfigSYSLOG withSeparator(String separator) {
         this.separator = separator;
         return this;
@@ -47,6 +51,7 @@ public class ConfigSYSLOG {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence")
     public Integer sequence;
+
     public ConfigSYSLOG withSequence(Integer sequence) {
         this.sequence = sequence;
         return this;
@@ -55,6 +60,7 @@ public class ConfigSYSLOG {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public String server;
+
     public ConfigSYSLOG withServer(String server) {
         this.server = server;
         return this;
@@ -63,6 +69,7 @@ public class ConfigSYSLOG {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverport")
     public Integer serverport;
+
     public ConfigSYSLOG withServerport(Integer serverport) {
         this.serverport = serverport;
         return this;
@@ -71,9 +78,11 @@ public class ConfigSYSLOG {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public ConfigSYSLOG withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ConfigSYSLOG(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventStreamResponse {
@@ -12,6 +13,7 @@ public class GetEventStreamResponse {
      */
     
     public Object badRequestException;
+
     public GetEventStreamResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetEventStreamResponse {
     
     
     public String contentType;
+
     public GetEventStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEventStreamResponse {
      */
     
     public Object forbiddenException;
+
     public GetEventStreamResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetEventStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEventStreamResponse getEventStreamResponse;
+
     public GetEventStreamResponse withGetEventStreamResponse(org.openapis.openapi.models.shared.GetEventStreamResponse getEventStreamResponse) {
         this.getEventStreamResponse = getEventStreamResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetEventStreamResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetEventStreamResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetEventStreamResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetEventStreamResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetEventStreamResponse {
      */
     
     public Object notFoundException;
+
     public GetEventStreamResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetEventStreamResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetEventStreamResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetEventStreamResponse {
     
     
     public Integer statusCode;
+
     public GetEventStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetEventStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetEventStreamResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetEventStreamResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetEventStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

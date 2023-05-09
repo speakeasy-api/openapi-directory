@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1FindInstalledAppDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public GoogleChromeManagementV1Device[] devices;
+
     public GoogleChromeManagementV1FindInstalledAppDevicesResponse withDevices(GoogleChromeManagementV1Device[] devices) {
         this.devices = devices;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1FindInstalledAppDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleChromeManagementV1FindInstalledAppDevicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1FindInstalledAppDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public GoogleChromeManagementV1FindInstalledAppDevicesResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GoogleChromeManagementV1FindInstalledAppDevicesResponse(){}
 }

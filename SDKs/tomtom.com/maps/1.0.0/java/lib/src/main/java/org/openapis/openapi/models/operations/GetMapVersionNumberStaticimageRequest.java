@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberStaticimageRequest {
@@ -15,6 +16,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
     public String bbox;
+
     public GetMapVersionNumberStaticimageRequest withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -28,6 +30,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=center")
     public String center;
+
     public GetMapVersionNumberStaticimageRequest withCenter(String center) {
         this.center = center;
         return this;
@@ -38,6 +41,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetMapVersionNumberStaticimageFormatEnum format;
+
     public GetMapVersionNumberStaticimageRequest withFormat(GetMapVersionNumberStaticimageFormatEnum format) {
         this.format = format;
         return this;
@@ -48,6 +52,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
     public Long height;
+
     public GetMapVersionNumberStaticimageRequest withHeight(Long height) {
         this.height = height;
         return this;
@@ -59,6 +64,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=layer")
     public GetMapVersionNumberStaticimageLayerEnum layer;
+
     public GetMapVersionNumberStaticimageRequest withLayer(GetMapVersionNumberStaticimageLayerEnum layer) {
         this.layer = layer;
         return this;
@@ -69,6 +75,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=style")
     public GetMapVersionNumberStaticimageStyleEnum style;
+
     public GetMapVersionNumberStaticimageRequest withStyle(GetMapVersionNumberStaticimageStyleEnum style) {
         this.style = style;
         return this;
@@ -79,6 +86,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public GetMapVersionNumberStaticimageVersionNumberEnum versionNumber;
+
     public GetMapVersionNumberStaticimageRequest withVersionNumber(GetMapVersionNumberStaticimageVersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -89,6 +97,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public GetMapVersionNumberStaticimageViewEnum view;
+
     public GetMapVersionNumberStaticimageRequest withView(GetMapVersionNumberStaticimageViewEnum view) {
         this.view = view;
         return this;
@@ -99,6 +108,7 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Long width;
+
     public GetMapVersionNumberStaticimageRequest withWidth(Long width) {
         this.width = width;
         return this;
@@ -109,9 +119,13 @@ public class GetMapVersionNumberStaticimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zoom")
     public GetMapVersionNumberStaticimageZoomEnum zoom;
+
     public GetMapVersionNumberStaticimageRequest withZoom(GetMapVersionNumberStaticimageZoomEnum zoom) {
         this.zoom = zoom;
         return this;
     }
     
+    public GetMapVersionNumberStaticimageRequest(@JsonProperty("versionNumber") GetMapVersionNumberStaticimageVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
+  }
 }

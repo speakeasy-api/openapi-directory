@@ -18,6 +18,7 @@ public class GceShieldedInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIntegrityMonitoring")
     public Boolean enableIntegrityMonitoring;
+
     public GceShieldedInstanceConfig withEnableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         return this;
@@ -29,6 +30,7 @@ public class GceShieldedInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSecureBoot")
     public Boolean enableSecureBoot;
+
     public GceShieldedInstanceConfig withEnableSecureBoot(Boolean enableSecureBoot) {
         this.enableSecureBoot = enableSecureBoot;
         return this;
@@ -40,9 +42,11 @@ public class GceShieldedInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableVtpm")
     public Boolean enableVtpm;
+
     public GceShieldedInstanceConfig withEnableVtpm(Boolean enableVtpm) {
         this.enableVtpm = enableVtpm;
         return this;
     }
     
+    public GceShieldedInstanceConfig(){}
 }

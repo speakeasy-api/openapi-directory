@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.Oauth2TokeninfoRequest;
 import org.openapis.openapi.models.operations.Oauth2TokeninfoResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -29,7 +28,7 @@ public class Application {
 
             Oauth2TokeninfoRequest req = new Oauth2TokeninfoRequest() {{
                 accessToken = "corrupti";
-                alt = "json";
+                alt = AltEnum.JSON;
                 fields = "provident";
                 idToken = "distinctio";
                 key = "quibusdam";
@@ -37,30 +36,32 @@ public class Application {
                 prettyPrint = false;
                 quotaUser = "nulla";
                 userIp = "corrupti";
-            }}            
+            }};            
 
             Oauth2TokeninfoResponse res = sdk.oauth2Tokeninfo(req);
 
-            if (res.tokeninfo.isPresent()) {
+            if (res.tokeninfo != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `oauth2Tokeninfo` - Get token info
+* [oauth2Tokeninfo](docs/sdk/README.md#oauth2tokeninfo) - Get token info
 
-### userinfo
+### [userinfo](docs/userinfo/README.md)
 
-* `oauth2UserinfoGet` - Get user info
-* `oauth2UserinfoV2MeGet` - Get user info
+* [oauth2UserinfoGet](docs/userinfo/README.md#oauth2userinfoget) - Get user info
+* [oauth2UserinfoV2MeGet](docs/userinfo/README.md#oauth2userinfov2meget) - Get user info
 <!-- End SDK Available Operations -->
 
 ### Maturity

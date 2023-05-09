@@ -67,14 +67,12 @@ public class VirtualMeterCalculateFormula {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualMeterCalculateFormulaGetResponse res = new org.openapis.openapi.models.operations.VirtualMeterCalculateFormulaGetResponse() {{
+        org.openapis.openapi.models.operations.VirtualMeterCalculateFormulaGetResponse res = new org.openapis.openapi.models.operations.VirtualMeterCalculateFormulaGetResponse(contentType, httpRes.statusCode()) {{
             device = null;
             device = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

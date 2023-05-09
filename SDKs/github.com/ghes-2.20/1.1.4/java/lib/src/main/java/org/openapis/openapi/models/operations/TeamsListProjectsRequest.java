@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListProjectsRequest {
@@ -12,6 +13,7 @@ public class TeamsListProjectsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public TeamsListProjectsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class TeamsListProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public TeamsListProjectsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class TeamsListProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public TeamsListProjectsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -39,9 +43,14 @@ public class TeamsListProjectsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsListProjectsRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsListProjectsRequest(@JsonProperty("accept") String accept, @JsonProperty("team_id") Long teamId) {
+        this.accept = accept;
+        this.teamId = teamId;
+  }
 }

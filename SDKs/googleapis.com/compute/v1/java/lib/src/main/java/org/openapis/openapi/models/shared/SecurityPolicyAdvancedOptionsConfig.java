@@ -12,6 +12,7 @@ public class SecurityPolicyAdvancedOptionsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonCustomConfig")
     public SecurityPolicyAdvancedOptionsConfigJsonCustomConfig jsonCustomConfig;
+
     public SecurityPolicyAdvancedOptionsConfig withJsonCustomConfig(SecurityPolicyAdvancedOptionsConfigJsonCustomConfig jsonCustomConfig) {
         this.jsonCustomConfig = jsonCustomConfig;
         return this;
@@ -20,6 +21,7 @@ public class SecurityPolicyAdvancedOptionsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonParsing")
     public SecurityPolicyAdvancedOptionsConfigJsonParsingEnum jsonParsing;
+
     public SecurityPolicyAdvancedOptionsConfig withJsonParsing(SecurityPolicyAdvancedOptionsConfigJsonParsingEnum jsonParsing) {
         this.jsonParsing = jsonParsing;
         return this;
@@ -28,9 +30,11 @@ public class SecurityPolicyAdvancedOptionsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevel")
     public SecurityPolicyAdvancedOptionsConfigLogLevelEnum logLevel;
+
     public SecurityPolicyAdvancedOptionsConfig withLogLevel(SecurityPolicyAdvancedOptionsConfigLogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
     }
     
+    public SecurityPolicyAdvancedOptionsConfig(){}
 }

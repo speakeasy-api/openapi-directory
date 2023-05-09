@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdDigitalProductsJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsIdDigitalProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsIdDigitalProductsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsIdDigitalProductsJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetProductsIdDigitalProductsJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -32,9 +35,15 @@ public class GetProductsIdDigitalProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsIdDigitalProductsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetProductsIdDigitalProductsJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

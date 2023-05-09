@@ -18,6 +18,7 @@ public class PaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCards")
     public Object[] giftCards;
+
     public PaymentData withGiftCards(Object[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -28,9 +29,13 @@ public class PaymentData {
      */
     @JsonProperty("transactions")
     public Transaction[] transactions;
+
     public PaymentData withTransactions(Transaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public PaymentData(@JsonProperty("transactions") Transaction[] transactions) {
+        this.transactions = transactions;
+  }
 }

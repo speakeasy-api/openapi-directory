@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HttpUrlDestinationConfiguration {
     @JsonProperty("confirmationUrl")
     public String confirmationUrl;
+
     public HttpUrlDestinationConfiguration withConfirmationUrl(String confirmationUrl) {
         this.confirmationUrl = confirmationUrl;
         return this;
     }
     
+    public HttpUrlDestinationConfiguration(@JsonProperty("confirmationUrl") String confirmationUrl) {
+        this.confirmationUrl = confirmationUrl;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleAppsDriveLabelsV2DeleteLabelPermissionRequest[] requests;
+
     public GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest withRequests(GoogleAppsDriveLabelsV2DeleteLabelPermissionRequest[] requests) {
         this.requests = requests;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAdminAccess")
     public Boolean useAdminAccess;
+
     public GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest(){}
 }

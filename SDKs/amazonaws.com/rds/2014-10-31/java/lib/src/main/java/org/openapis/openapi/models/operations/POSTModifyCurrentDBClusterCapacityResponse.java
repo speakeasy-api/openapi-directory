@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTModifyCurrentDBClusterCapacityResponse {
     
     public byte[] body;
+
     public POSTModifyCurrentDBClusterCapacityResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTModifyCurrentDBClusterCapacityResponse {
     
     
     public String contentType;
+
     public POSTModifyCurrentDBClusterCapacityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTModifyCurrentDBClusterCapacityResponse {
     
     
     public Integer statusCode;
+
     public POSTModifyCurrentDBClusterCapacityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTModifyCurrentDBClusterCapacityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTModifyCurrentDBClusterCapacityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTModifyCurrentDBClusterCapacityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

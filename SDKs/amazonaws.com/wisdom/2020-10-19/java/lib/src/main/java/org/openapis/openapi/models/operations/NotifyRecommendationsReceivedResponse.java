@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NotifyRecommendationsReceivedResponse {
@@ -12,6 +13,7 @@ public class NotifyRecommendationsReceivedResponse {
      */
     
     public Object accessDeniedException;
+
     public NotifyRecommendationsReceivedResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class NotifyRecommendationsReceivedResponse {
     
     
     public String contentType;
+
     public NotifyRecommendationsReceivedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class NotifyRecommendationsReceivedResponse {
      */
     
     public org.openapis.openapi.models.shared.NotifyRecommendationsReceivedResponse notifyRecommendationsReceivedResponse;
+
     public NotifyRecommendationsReceivedResponse withNotifyRecommendationsReceivedResponse(org.openapis.openapi.models.shared.NotifyRecommendationsReceivedResponse notifyRecommendationsReceivedResponse) {
         this.notifyRecommendationsReceivedResponse = notifyRecommendationsReceivedResponse;
         return this;
@@ -39,6 +43,7 @@ public class NotifyRecommendationsReceivedResponse {
      */
     
     public Object resourceNotFoundException;
+
     public NotifyRecommendationsReceivedResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class NotifyRecommendationsReceivedResponse {
     
     
     public Integer statusCode;
+
     public NotifyRecommendationsReceivedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class NotifyRecommendationsReceivedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NotifyRecommendationsReceivedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class NotifyRecommendationsReceivedResponse {
      */
     
     public Object validationException;
+
     public NotifyRecommendationsReceivedResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public NotifyRecommendationsReceivedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

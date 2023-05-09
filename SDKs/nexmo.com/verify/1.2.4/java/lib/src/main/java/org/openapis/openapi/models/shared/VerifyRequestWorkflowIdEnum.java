@@ -10,18 +10,18 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * VerifyRequestWorkflowIdEnum - Selects the predefined sequence of SMS and TTS (Text To Speech) actions to use in order to convey the PIN to your user. For example, an id of 1 identifies the workflow SMS - TTS - TTS. For a list of all workflows and their associated ids, please visit the [developer portal](https://developer.nexmo.com/verify/guides/workflows-and-events).
  */
 public enum VerifyRequestWorkflowIdEnum {
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4"),
-    FIVE("5"),
-    SIX("6"),
-    SEVEN("7");
+    ONE(1L),
+    TWO(2L),
+    THREE(3L),
+    FOUR(4L),
+    FIVE(5L),
+    SIX(6L),
+    SEVEN(7L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private VerifyRequestWorkflowIdEnum(String value) {
+    private VerifyRequestWorkflowIdEnum(Long value) {
         this.value = value;
     }
 }

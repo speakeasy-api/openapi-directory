@@ -17,6 +17,7 @@ public class LoyaltyProgramRewardTier {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public LoyaltyProgramRewardTier withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class LoyaltyProgramRewardTier {
      */
     @JsonProperty("definition")
     public LoyaltyProgramRewardDefinition definition;
+
     public LoyaltyProgramRewardTier withDefinition(LoyaltyProgramRewardDefinition definition) {
         this.definition = definition;
         return this;
@@ -39,6 +41,7 @@ public class LoyaltyProgramRewardTier {
      */
     @JsonProperty("id")
     public String id;
+
     public LoyaltyProgramRewardTier withId(String id) {
         this.id = id;
         return this;
@@ -49,6 +52,7 @@ public class LoyaltyProgramRewardTier {
      */
     @JsonProperty("name")
     public String name;
+
     public LoyaltyProgramRewardTier withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class LoyaltyProgramRewardTier {
      */
     @JsonProperty("points")
     public Long points;
+
     public LoyaltyProgramRewardTier withPoints(Long points) {
         this.points = points;
         return this;
@@ -72,9 +77,17 @@ public class LoyaltyProgramRewardTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_rule_reference")
     public CatalogObjectReference pricingRuleReference;
+
     public LoyaltyProgramRewardTier withPricingRuleReference(CatalogObjectReference pricingRuleReference) {
         this.pricingRuleReference = pricingRuleReference;
         return this;
     }
     
+    public LoyaltyProgramRewardTier(@JsonProperty("created_at") String createdAt, @JsonProperty("definition") LoyaltyProgramRewardDefinition definition, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("points") Long points) {
+        this.createdAt = createdAt;
+        this.definition = definition;
+        this.id = id;
+        this.name = name;
+        this.points = points;
+  }
 }

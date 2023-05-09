@@ -15,6 +15,7 @@ public class ComptageReponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nb_caractere")
     public String nbCaractere;
+
     public ComptageReponseEtatEtat withNbCaractere(String nbCaractere) {
         this.nbCaractere = nbCaractere;
         return this;
@@ -26,6 +27,7 @@ public class ComptageReponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nb_sms")
     public String nbSms;
+
     public ComptageReponseEtatEtat withNbSms(String nbSms) {
         this.nbSms = nbSms;
         return this;
@@ -37,9 +39,11 @@ public class ComptageReponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tel")
     public String tel;
+
     public ComptageReponseEtatEtat withTel(String tel) {
         this.tel = tel;
         return this;
     }
     
+    public ComptageReponseEtatEtat(){}
 }

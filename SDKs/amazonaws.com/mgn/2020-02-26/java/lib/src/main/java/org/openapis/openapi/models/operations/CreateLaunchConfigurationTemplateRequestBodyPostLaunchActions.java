@@ -15,6 +15,7 @@ public class CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogGroupName")
     public String cloudWatchLogGroupName;
+
     public CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions withCloudWatchLogGroupName(String cloudWatchLogGroupName) {
         this.cloudWatchLogGroupName = cloudWatchLogGroupName;
         return this;
@@ -23,6 +24,7 @@ public class CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment")
     public org.openapis.openapi.models.shared.PostLaunchActionsDeploymentTypeEnum deployment;
+
     public CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions withDeployment(org.openapis.openapi.models.shared.PostLaunchActionsDeploymentTypeEnum deployment) {
         this.deployment = deployment;
         return this;
@@ -31,6 +33,7 @@ public class CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3LogBucket")
     public String s3LogBucket;
+
     public CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions withS3LogBucket(String s3LogBucket) {
         this.s3LogBucket = s3LogBucket;
         return this;
@@ -39,6 +42,7 @@ public class CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3OutputKeyPrefix")
     public String s3OutputKeyPrefix;
+
     public CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions withS3OutputKeyPrefix(String s3OutputKeyPrefix) {
         this.s3OutputKeyPrefix = s3OutputKeyPrefix;
         return this;
@@ -47,9 +51,11 @@ public class CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmDocuments")
     public org.openapis.openapi.models.shared.SsmDocument[] ssmDocuments;
+
     public CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions withSsmDocuments(org.openapis.openapi.models.shared.SsmDocument[] ssmDocuments) {
         this.ssmDocuments = ssmDocuments;
         return this;
     }
     
+    public CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions(){}
 }

@@ -22,6 +22,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeWhatIfForecastResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTimeRemainingInMinutes")
     public Long estimatedTimeRemainingInMinutes;
+
     public DescribeWhatIfForecastResponse withEstimatedTimeRemainingInMinutes(Long estimatedTimeRemainingInMinutes) {
         this.estimatedTimeRemainingInMinutes = estimatedTimeRemainingInMinutes;
         return this;
@@ -38,6 +40,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastTypes")
     public String[] forecastTypes;
+
     public DescribeWhatIfForecastResponse withForecastTypes(String[] forecastTypes) {
         this.forecastTypes = forecastTypes;
         return this;
@@ -48,6 +51,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeWhatIfForecastResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -56,6 +60,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeWhatIfForecastResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -64,6 +69,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeWhatIfForecastResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -72,6 +78,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesReplacementsDataSource")
     public TimeSeriesReplacementsDataSource timeSeriesReplacementsDataSource;
+
     public DescribeWhatIfForecastResponse withTimeSeriesReplacementsDataSource(TimeSeriesReplacementsDataSource timeSeriesReplacementsDataSource) {
         this.timeSeriesReplacementsDataSource = timeSeriesReplacementsDataSource;
         return this;
@@ -80,6 +87,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesTransformations")
     public TimeSeriesTransformation[] timeSeriesTransformations;
+
     public DescribeWhatIfForecastResponse withTimeSeriesTransformations(TimeSeriesTransformation[] timeSeriesTransformations) {
         this.timeSeriesTransformations = timeSeriesTransformations;
         return this;
@@ -88,6 +96,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfAnalysisArn")
     public String whatIfAnalysisArn;
+
     public DescribeWhatIfForecastResponse withWhatIfAnalysisArn(String whatIfAnalysisArn) {
         this.whatIfAnalysisArn = whatIfAnalysisArn;
         return this;
@@ -96,6 +105,7 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastArn")
     public String whatIfForecastArn;
+
     public DescribeWhatIfForecastResponse withWhatIfForecastArn(String whatIfForecastArn) {
         this.whatIfForecastArn = whatIfForecastArn;
         return this;
@@ -104,9 +114,11 @@ public class DescribeWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastName")
     public String whatIfForecastName;
+
     public DescribeWhatIfForecastResponse withWhatIfForecastName(String whatIfForecastName) {
         this.whatIfForecastName = whatIfForecastName;
         return this;
     }
     
+    public DescribeWhatIfForecastResponse(){}
 }

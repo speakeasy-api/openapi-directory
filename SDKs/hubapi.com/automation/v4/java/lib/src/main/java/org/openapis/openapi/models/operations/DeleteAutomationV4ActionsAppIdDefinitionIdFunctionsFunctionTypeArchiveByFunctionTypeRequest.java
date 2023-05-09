@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArch
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
     public String definitionId;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
@@ -29,9 +32,15 @@ public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArch
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionType")
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeFunctionTypeEnum functionType;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest withFunctionType(DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeFunctionTypeEnum functionType) {
         this.functionType = functionType;
         return this;
     }
     
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest(@JsonProperty("appId") Integer appId, @JsonProperty("definitionId") String definitionId, @JsonProperty("functionType") DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeFunctionTypeEnum functionType) {
+        this.appId = appId;
+        this.definitionId = definitionId;
+        this.functionType = functionType;
+  }
 }

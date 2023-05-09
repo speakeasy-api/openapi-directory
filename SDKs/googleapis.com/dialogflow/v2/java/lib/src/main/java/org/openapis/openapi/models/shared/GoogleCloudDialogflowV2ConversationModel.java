@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ConversationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articleSuggestionModelMetadata")
     public GoogleCloudDialogflowV2ArticleSuggestionModelMetadata articleSuggestionModelMetadata;
+
     public GoogleCloudDialogflowV2ConversationModel withArticleSuggestionModelMetadata(GoogleCloudDialogflowV2ArticleSuggestionModelMetadata articleSuggestionModelMetadata) {
         this.articleSuggestionModelMetadata = articleSuggestionModelMetadata;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ConversationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2ConversationModel withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2ConversationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasets")
     public GoogleCloudDialogflowV2InputDataset[] datasets;
+
     public GoogleCloudDialogflowV2ConversationModel withDatasets(GoogleCloudDialogflowV2InputDataset[] datasets) {
         this.datasets = datasets;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2ConversationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2ConversationModel withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2ConversationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2ConversationModel withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2ConversationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2ConversationModel withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2ConversationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartReplyModelMetadata")
     public GoogleCloudDialogflowV2SmartReplyModelMetadata smartReplyModelMetadata;
+
     public GoogleCloudDialogflowV2ConversationModel withSmartReplyModelMetadata(GoogleCloudDialogflowV2SmartReplyModelMetadata smartReplyModelMetadata) {
         this.smartReplyModelMetadata = smartReplyModelMetadata;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDialogflowV2ConversationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDialogflowV2ConversationModelStateEnum state;
+
     public GoogleCloudDialogflowV2ConversationModel withState(GoogleCloudDialogflowV2ConversationModelStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationModel(){}
 }

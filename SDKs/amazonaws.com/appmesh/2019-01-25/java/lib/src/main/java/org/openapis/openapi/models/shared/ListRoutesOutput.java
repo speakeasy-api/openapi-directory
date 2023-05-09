@@ -15,6 +15,7 @@ public class ListRoutesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRoutesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListRoutesOutput {
     
     @JsonProperty("routes")
     public RouteRef[] routes;
+
     public ListRoutesOutput withRoutes(RouteRef[] routes) {
         this.routes = routes;
         return this;
     }
     
+    public ListRoutesOutput(@JsonProperty("routes") RouteRef[] routes) {
+        this.routes = routes;
+  }
 }

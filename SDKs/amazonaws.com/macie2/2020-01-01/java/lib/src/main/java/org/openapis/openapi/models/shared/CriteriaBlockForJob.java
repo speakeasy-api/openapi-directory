@@ -15,9 +15,11 @@ public class CriteriaBlockForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("and")
     public CriteriaForJob[] and;
+
     public CriteriaBlockForJob withAnd(CriteriaForJob[] and) {
         this.and = and;
         return this;
     }
     
+    public CriteriaBlockForJob(){}
 }

@@ -15,6 +15,7 @@ public class ListImportErrorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ImportTaskError[] items;
+
     public ListImportErrorsResponse withItems(ImportTaskError[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListImportErrorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImportErrorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportErrorsResponse(){}
 }

@@ -12,6 +12,7 @@ public class GetTerminalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brandModels")
     public String brandModels;
+
     public GetTerminalsRequest withBrandModels(String brandModels) {
         this.brandModels = brandModels;
         return this;
@@ -22,6 +23,7 @@ public class GetTerminalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countries")
     public String countries;
+
     public GetTerminalsRequest withCountries(String countries) {
         this.countries = countries;
         return this;
@@ -32,6 +34,7 @@ public class GetTerminalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merchantIds")
     public String merchantIds;
+
     public GetTerminalsRequest withMerchantIds(String merchantIds) {
         this.merchantIds = merchantIds;
         return this;
@@ -42,6 +45,7 @@ public class GetTerminalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetTerminalsRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -52,6 +56,7 @@ public class GetTerminalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetTerminalsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -62,6 +67,7 @@ public class GetTerminalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchQuery")
     public String searchQuery;
+
     public GetTerminalsRequest withSearchQuery(String searchQuery) {
         this.searchQuery = searchQuery;
         return this;
@@ -72,9 +78,11 @@ public class GetTerminalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeIds")
     public String storeIds;
+
     public GetTerminalsRequest withStoreIds(String storeIds) {
         this.storeIds = storeIds;
         return this;
     }
     
+    public GetTerminalsRequest(){}
 }

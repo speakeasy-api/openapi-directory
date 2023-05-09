@@ -15,9 +15,13 @@ public class FeaturedCollectionCoverItem {
      */
     @JsonProperty("url")
     public String url;
+
     public FeaturedCollectionCoverItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FeaturedCollectionCoverItem(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

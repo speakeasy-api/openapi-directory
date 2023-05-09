@@ -15,6 +15,7 @@ public class HyperbandStrategyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResource")
     public Long maxResource;
+
     public HyperbandStrategyConfig withMaxResource(Long maxResource) {
         this.maxResource = maxResource;
         return this;
@@ -23,9 +24,11 @@ public class HyperbandStrategyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinResource")
     public Long minResource;
+
     public HyperbandStrategyConfig withMinResource(Long minResource) {
         this.minResource = minResource;
         return this;
     }
     
+    public HyperbandStrategyConfig(){}
 }

@@ -12,6 +12,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Addresses")
     public Address[] addresses;
+
     public CreateUserRequest withAddresses(Address[] addresses) {
         this.addresses = addresses;
         return this;
@@ -20,6 +21,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateUserRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +30,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Emails")
     public Email[] emails;
+
     public CreateUserRequest withEmails(Email[] emails) {
         this.emails = emails;
         return this;
@@ -35,6 +38,7 @@ public class CreateUserRequest {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public CreateUserRequest withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -43,6 +47,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locale")
     public String locale;
+
     public CreateUserRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -51,6 +56,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public Name name;
+
     public CreateUserRequest withName(Name name) {
         this.name = name;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NickName")
     public String nickName;
+
     public CreateUserRequest withNickName(String nickName) {
         this.nickName = nickName;
         return this;
@@ -67,6 +74,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumbers")
     public PhoneNumber[] phoneNumbers;
+
     public CreateUserRequest withPhoneNumbers(PhoneNumber[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
@@ -75,6 +83,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredLanguage")
     public String preferredLanguage;
+
     public CreateUserRequest withPreferredLanguage(String preferredLanguage) {
         this.preferredLanguage = preferredLanguage;
         return this;
@@ -83,6 +92,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileUrl")
     public String profileUrl;
+
     public CreateUserRequest withProfileUrl(String profileUrl) {
         this.profileUrl = profileUrl;
         return this;
@@ -91,6 +101,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public CreateUserRequest withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -99,6 +110,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public CreateUserRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -107,6 +119,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public CreateUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -115,9 +128,13 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserType")
     public String userType;
+
     public CreateUserRequest withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public CreateUserRequest(@JsonProperty("IdentityStoreId") String identityStoreId) {
+        this.identityStoreId = identityStoreId;
+  }
 }

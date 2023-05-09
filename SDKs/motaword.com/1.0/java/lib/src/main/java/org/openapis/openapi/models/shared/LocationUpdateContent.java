@@ -14,6 +14,7 @@ public class LocationUpdateContent {
      */
     @JsonProperty("lat")
     public Float lat;
+
     public LocationUpdateContent withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -24,6 +25,7 @@ public class LocationUpdateContent {
      */
     @JsonProperty("lon")
     public Float lon;
+
     public LocationUpdateContent withLon(Float lon) {
         this.lon = lon;
         return this;
@@ -32,9 +34,14 @@ public class LocationUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public LocationUpdateContent withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public LocationUpdateContent(@JsonProperty("lat") Float lat, @JsonProperty("lon") Float lon) {
+        this.lat = lat;
+        this.lon = lon;
+  }
 }

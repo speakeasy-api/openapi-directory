@@ -14,6 +14,7 @@ public class ListEntitiesRequestBody {
      */
     @JsonProperty("Catalog")
     public String catalog;
+
     public ListEntitiesRequestBody withCatalog(String catalog) {
         this.catalog = catalog;
         return this;
@@ -24,6 +25,7 @@ public class ListEntitiesRequestBody {
      */
     @JsonProperty("EntityType")
     public String entityType;
+
     public ListEntitiesRequestBody withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -35,6 +37,7 @@ public class ListEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterList")
     public org.openapis.openapi.models.shared.Filter[] filterList;
+
     public ListEntitiesRequestBody withFilterList(org.openapis.openapi.models.shared.Filter[] filterList) {
         this.filterList = filterList;
         return this;
@@ -46,6 +49,7 @@ public class ListEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEntitiesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -57,8 +61,18 @@ public class ListEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntitiesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OwnershipType")
+    public ListEntitiesRequestBodyOwnershipTypeEnum ownershipType;
+
+    public ListEntitiesRequestBody withOwnershipType(ListEntitiesRequestBodyOwnershipTypeEnum ownershipType) {
+        this.ownershipType = ownershipType;
         return this;
     }
     
@@ -68,9 +82,14 @@ public class ListEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sort")
     public ListEntitiesRequestBodySort sort;
+
     public ListEntitiesRequestBody withSort(ListEntitiesRequestBodySort sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListEntitiesRequestBody(@JsonProperty("Catalog") String catalog, @JsonProperty("EntityType") String entityType) {
+        this.catalog = catalog;
+        this.entityType = entityType;
+  }
 }

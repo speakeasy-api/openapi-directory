@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSeverityLevelsResponse {
     
     public String contentType;
+
     public DescribeSeverityLevelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSeverityLevelsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSeverityLevelsResponse describeSeverityLevelsResponse;
+
     public DescribeSeverityLevelsResponse withDescribeSeverityLevelsResponse(org.openapis.openapi.models.shared.DescribeSeverityLevelsResponse describeSeverityLevelsResponse) {
         this.describeSeverityLevelsResponse = describeSeverityLevelsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSeverityLevelsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeSeverityLevelsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class DescribeSeverityLevelsResponse {
     
     
     public Integer statusCode;
+
     public DescribeSeverityLevelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeSeverityLevelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSeverityLevelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeSeverityLevelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

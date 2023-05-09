@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeJobRunResponse {
     
     public String contentType;
+
     public DescribeJobRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeJobRunResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeJobRunResponse describeJobRunResponse;
+
     public DescribeJobRunResponse withDescribeJobRunResponse(org.openapis.openapi.models.shared.DescribeJobRunResponse describeJobRunResponse) {
         this.describeJobRunResponse = describeJobRunResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeJobRunResponse {
      */
     
     public Object internalServerException;
+
     public DescribeJobRunResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeJobRunResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeJobRunResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeJobRunResponse {
     
     
     public Integer statusCode;
+
     public DescribeJobRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeJobRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeJobRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeJobRunResponse {
      */
     
     public Object validationException;
+
     public DescribeJobRunResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeJobRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

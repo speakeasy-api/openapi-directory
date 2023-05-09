@@ -15,6 +15,7 @@ public class ListMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public PaginationLinks links;
+
     public ListMerchantResponse withLinks(PaginationLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class ListMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Merchant[] data;
+
     public ListMerchantResponse withData(Merchant[] data) {
         this.data = data;
         return this;
@@ -36,6 +38,7 @@ public class ListMerchantResponse {
      */
     @JsonProperty("itemsTotal")
     public Integer itemsTotal;
+
     public ListMerchantResponse withItemsTotal(Integer itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -46,9 +49,14 @@ public class ListMerchantResponse {
      */
     @JsonProperty("pagesTotal")
     public Integer pagesTotal;
+
     public ListMerchantResponse withPagesTotal(Integer pagesTotal) {
         this.pagesTotal = pagesTotal;
         return this;
     }
     
+    public ListMerchantResponse(@JsonProperty("itemsTotal") Integer itemsTotal, @JsonProperty("pagesTotal") Integer pagesTotal) {
+        this.itemsTotal = itemsTotal;
+        this.pagesTotal = pagesTotal;
+  }
 }

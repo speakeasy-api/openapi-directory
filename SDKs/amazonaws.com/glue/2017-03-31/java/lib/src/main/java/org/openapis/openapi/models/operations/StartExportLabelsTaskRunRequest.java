@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartExportLabelsTaskRunRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StartExportLabelsTaskRunRequest startExportLabelsTaskRunRequest;
+
     public StartExportLabelsTaskRunRequest withStartExportLabelsTaskRunRequest(org.openapis.openapi.models.shared.StartExportLabelsTaskRunRequest startExportLabelsTaskRunRequest) {
         this.startExportLabelsTaskRunRequest = startExportLabelsTaskRunRequest;
         return this;
@@ -16,6 +18,7 @@ public class StartExportLabelsTaskRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartExportLabelsTaskRunRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StartExportLabelsTaskRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartExportLabelsTaskRunRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StartExportLabelsTaskRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartExportLabelsTaskRunRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StartExportLabelsTaskRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartExportLabelsTaskRunRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StartExportLabelsTaskRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartExportLabelsTaskRunRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StartExportLabelsTaskRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartExportLabelsTaskRunRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StartExportLabelsTaskRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartExportLabelsTaskRunRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class StartExportLabelsTaskRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public StartExportLabelsTaskRunXAmzTargetEnum xAmzTarget;
+
     public StartExportLabelsTaskRunRequest withXAmzTarget(StartExportLabelsTaskRunXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public StartExportLabelsTaskRunRequest(@JsonProperty("StartExportLabelsTaskRunRequest") org.openapis.openapi.models.shared.StartExportLabelsTaskRunRequest startExportLabelsTaskRunRequest, @JsonProperty("X-Amz-Target") StartExportLabelsTaskRunXAmzTargetEnum xAmzTarget) {
+        this.startExportLabelsTaskRunRequest = startExportLabelsTaskRunRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

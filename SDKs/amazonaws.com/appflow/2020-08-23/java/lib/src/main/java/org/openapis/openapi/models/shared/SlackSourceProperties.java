@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SlackSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public SlackSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public SlackSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

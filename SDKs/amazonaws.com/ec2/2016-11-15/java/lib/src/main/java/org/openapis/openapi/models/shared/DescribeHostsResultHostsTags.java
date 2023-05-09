@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHostsResultHostsTags {
     
     public String key;
+
     public DescribeHostsResultHostsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeHostsResultHostsTags {
     
     
     public String value;
+
     public DescribeHostsResultHostsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeHostsResultHostsTags(){}
 }

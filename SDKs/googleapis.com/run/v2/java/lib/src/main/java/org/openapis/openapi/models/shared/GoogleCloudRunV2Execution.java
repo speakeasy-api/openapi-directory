@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRunV2Execution {
     /**
-     * KRM-style annotations for the resource.
+     * Output only. Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public GoogleCloudRunV2Execution withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelledCount")
     public Integer cancelledCount;
+
     public GoogleCloudRunV2Execution withCancelledCount(Integer cancelledCount) {
         this.cancelledCount = cancelledCount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionTime")
     public String completionTime;
+
     public GoogleCloudRunV2Execution withCompletionTime(String completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GoogleCloudRunV2Condition[] conditions;
+
     public GoogleCloudRunV2Execution withConditions(GoogleCloudRunV2Condition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudRunV2Execution withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public GoogleCloudRunV2Execution withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudRunV2Execution withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GoogleCloudRunV2Execution withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedCount")
     public Integer failedCount;
+
     public GoogleCloudRunV2Execution withFailedCount(Integer failedCount) {
         this.failedCount = failedCount;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generation")
     public String generation;
+
     public GoogleCloudRunV2Execution withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -128,17 +138,19 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public String job;
+
     public GoogleCloudRunV2Execution withJob(String job) {
         this.job = job;
         return this;
     }
     
     /**
-     * KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+     * Output only. Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRunV2Execution withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStage")
     public GoogleCloudRunV2ExecutionLaunchStageEnum launchStage;
+
     public GoogleCloudRunV2Execution withLaunchStage(GoogleCloudRunV2ExecutionLaunchStageEnum launchStage) {
         this.launchStage = launchStage;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logUri")
     public String logUri;
+
     public GoogleCloudRunV2Execution withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2Execution withName(String name) {
         this.name = name;
         return this;
@@ -183,17 +198,19 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observedGeneration")
     public String observedGeneration;
+
     public GoogleCloudRunV2Execution withObservedGeneration(String observedGeneration) {
         this.observedGeneration = observedGeneration;
         return this;
     }
     
     /**
-     * Output only. Specifies the maximum desired number of tasks the execution should run at any given time. Must be &lt;= task_count. The actual number of tasks running in steady state will be less than this number when ((.spec.task_count - .status.successful) &lt; .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+     * Output only. Specifies the maximum desired number of tasks the execution should run at any given time. Must be &lt;= task_count. The actual number of tasks running in steady state will be less than this number when ((.spec.task_count - .status.successful) &lt; .spec.parallelism), i.e. when the work left to do is less than max parallelism.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelism")
     public Integer parallelism;
+
     public GoogleCloudRunV2Execution withParallelism(Integer parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconciling")
     public Boolean reconciling;
+
     public GoogleCloudRunV2Execution withReconciling(Boolean reconciling) {
         this.reconciling = reconciling;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retriedCount")
     public Integer retriedCount;
+
     public GoogleCloudRunV2Execution withRetriedCount(Integer retriedCount) {
         this.retriedCount = retriedCount;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runningCount")
     public Integer runningCount;
+
     public GoogleCloudRunV2Execution withRunningCount(Integer runningCount) {
         this.runningCount = runningCount;
         return this;
@@ -238,6 +258,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public GoogleCloudRunV2Execution withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -249,6 +270,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudRunV2Execution withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -260,17 +282,19 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("succeededCount")
     public Integer succeededCount;
+
     public GoogleCloudRunV2Execution withSucceededCount(Integer succeededCount) {
         this.succeededCount = succeededCount;
         return this;
     }
     
     /**
-     * Output only. Specifies the desired number of tasks the execution should run. Setting to 1 means that parallelism is limited to 1 and the success of that task signals the success of the execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+     * Output only. Specifies the desired number of tasks the execution should run. Setting to 1 means that parallelism is limited to 1 and the success of that task signals the success of the execution.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCount")
     public Integer taskCount;
+
     public GoogleCloudRunV2Execution withTaskCount(Integer taskCount) {
         this.taskCount = taskCount;
         return this;
@@ -282,6 +306,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public GoogleCloudRunV2TaskTemplate template;
+
     public GoogleCloudRunV2Execution withTemplate(GoogleCloudRunV2TaskTemplate template) {
         this.template = template;
         return this;
@@ -293,6 +318,7 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudRunV2Execution withUid(String uid) {
         this.uid = uid;
         return this;
@@ -304,9 +330,11 @@ public class GoogleCloudRunV2Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudRunV2Execution withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudRunV2Execution(){}
 }

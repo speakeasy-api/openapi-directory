@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBotsResponse {
     
     public String contentType;
+
     public ListBotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBotsResponse {
      */
     
     public Object internalServerException;
+
     public ListBotsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListBotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBotsResponse listBotsResponse;
+
     public ListBotsResponse withListBotsResponse(org.openapis.openapi.models.shared.ListBotsResponse listBotsResponse) {
         this.listBotsResponse = listBotsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListBotsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListBotsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class ListBotsResponse {
     
     
     public Integer statusCode;
+
     public ListBotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBotsResponse {
      */
     
     public Object throttlingException;
+
     public ListBotsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListBotsResponse {
      */
     
     public Object validationException;
+
     public ListBotsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListBotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class SlideProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSkipped")
     public Boolean isSkipped;
+
     public SlideProperties withIsSkipped(Boolean isSkipped) {
         this.isSkipped = isSkipped;
         return this;
@@ -29,6 +30,7 @@ public class SlideProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutObjectId")
     public String layoutObjectId;
+
     public SlideProperties withLayoutObjectId(String layoutObjectId) {
         this.layoutObjectId = layoutObjectId;
         return this;
@@ -40,6 +42,7 @@ public class SlideProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterObjectId")
     public String masterObjectId;
+
     public SlideProperties withMasterObjectId(String masterObjectId) {
         this.masterObjectId = masterObjectId;
         return this;
@@ -51,9 +54,11 @@ public class SlideProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notesPage")
     public Page notesPage;
+
     public SlideProperties withNotesPage(Page notesPage) {
         this.notesPage = notesPage;
         return this;
     }
     
+    public SlideProperties(){}
 }

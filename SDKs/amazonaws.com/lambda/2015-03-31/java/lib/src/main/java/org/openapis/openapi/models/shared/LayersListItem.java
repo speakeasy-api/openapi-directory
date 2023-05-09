@@ -15,6 +15,7 @@ public class LayersListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestMatchingVersion")
     public LayerVersionsListItem latestMatchingVersion;
+
     public LayersListItem withLatestMatchingVersion(LayerVersionsListItem latestMatchingVersion) {
         this.latestMatchingVersion = latestMatchingVersion;
         return this;
@@ -23,6 +24,7 @@ public class LayersListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerArn")
     public String layerArn;
+
     public LayersListItem withLayerArn(String layerArn) {
         this.layerArn = layerArn;
         return this;
@@ -31,9 +33,11 @@ public class LayersListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerName")
     public String layerName;
+
     public LayersListItem withLayerName(String layerName) {
         this.layerName = layerName;
         return this;
     }
     
+    public LayersListItem(){}
 }

@@ -15,6 +15,7 @@ public class DetectDocumentTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocks")
     public Block[] blocks;
+
     public DetectDocumentTextResponse withBlocks(Block[] blocks) {
         this.blocks = blocks;
         return this;
@@ -23,6 +24,7 @@ public class DetectDocumentTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectDocumentTextModelVersion")
     public String detectDocumentTextModelVersion;
+
     public DetectDocumentTextResponse withDetectDocumentTextModelVersion(String detectDocumentTextModelVersion) {
         this.detectDocumentTextModelVersion = detectDocumentTextModelVersion;
         return this;
@@ -31,9 +33,11 @@ public class DetectDocumentTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public DetectDocumentTextResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
     }
     
+    public DetectDocumentTextResponse(){}
 }

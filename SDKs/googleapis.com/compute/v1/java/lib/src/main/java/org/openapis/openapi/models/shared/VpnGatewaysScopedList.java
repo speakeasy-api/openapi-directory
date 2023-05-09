@@ -15,6 +15,7 @@ public class VpnGatewaysScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnGateways")
     public VpnGateway[] vpnGateways;
+
     public VpnGatewaysScopedList withVpnGateways(VpnGateway[] vpnGateways) {
         this.vpnGateways = vpnGateways;
         return this;
@@ -26,9 +27,11 @@ public class VpnGatewaysScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public VpnGatewaysScopedListWarning warning;
+
     public VpnGatewaysScopedList withWarning(VpnGatewaysScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public VpnGatewaysScopedList(){}
 }

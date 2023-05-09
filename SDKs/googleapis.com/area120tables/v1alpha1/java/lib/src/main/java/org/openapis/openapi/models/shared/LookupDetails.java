@@ -18,6 +18,7 @@ public class LookupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipColumn")
     public String relationshipColumn;
+
     public LookupDetails withRelationshipColumn(String relationshipColumn) {
         this.relationshipColumn = relationshipColumn;
         return this;
@@ -29,9 +30,11 @@ public class LookupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipColumnId")
     public String relationshipColumnId;
+
     public LookupDetails withRelationshipColumnId(String relationshipColumnId) {
         this.relationshipColumnId = relationshipColumnId;
         return this;
     }
     
+    public LookupDetails(){}
 }

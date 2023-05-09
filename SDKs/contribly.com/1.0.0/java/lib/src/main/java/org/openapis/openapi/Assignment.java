@@ -57,10 +57,8 @@ public class Assignment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAssignmentsIdResponse res = new org.openapis.openapi.models.operations.DeleteAssignmentsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAssignmentsIdResponse res = new org.openapis.openapi.models.operations.DeleteAssignmentsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -95,11 +93,9 @@ public class Assignment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssignmentsResponse res = new org.openapis.openapi.models.operations.GetAssignmentsResponse() {{
+        org.openapis.openapi.models.operations.GetAssignmentsResponse res = new org.openapis.openapi.models.operations.GetAssignmentsResponse(contentType, httpRes.statusCode()) {{
             assignments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class Assignment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssignmentsIdResponse res = new org.openapis.openapi.models.operations.GetAssignmentsIdResponse() {{
+        org.openapis.openapi.models.operations.GetAssignmentsIdResponse res = new org.openapis.openapi.models.operations.GetAssignmentsIdResponse(contentType, httpRes.statusCode()) {{
             assignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -180,12 +174,10 @@ public class Assignment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssignmentsResponse res = new org.openapis.openapi.models.operations.PostAssignmentsResponse() {{
+        org.openapis.openapi.models.operations.PostAssignmentsResponse res = new org.openapis.openapi.models.operations.PostAssignmentsResponse(contentType, httpRes.statusCode()) {{
             assignment = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

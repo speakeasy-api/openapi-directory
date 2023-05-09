@@ -15,6 +15,7 @@ public class WebhookFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeMatchedPattern")
     public Boolean excludeMatchedPattern;
+
     public WebhookFilter withExcludeMatchedPattern(Boolean excludeMatchedPattern) {
         this.excludeMatchedPattern = excludeMatchedPattern;
         return this;
@@ -22,6 +23,7 @@ public class WebhookFilter {
     
     @JsonProperty("pattern")
     public String pattern;
+
     public WebhookFilter withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -29,9 +31,14 @@ public class WebhookFilter {
     
     @JsonProperty("type")
     public WebhookFilterTypeEnum type;
+
     public WebhookFilter withType(WebhookFilterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public WebhookFilter(@JsonProperty("pattern") String pattern, @JsonProperty("type") WebhookFilterTypeEnum type) {
+        this.pattern = pattern;
+        this.type = type;
+  }
 }

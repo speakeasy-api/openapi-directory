@@ -18,6 +18,7 @@ public class SqlOutOfDiskReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlMinRecommendedIncreaseSizeGb")
     public Integer sqlMinRecommendedIncreaseSizeGb;
+
     public SqlOutOfDiskReport withSqlMinRecommendedIncreaseSizeGb(Integer sqlMinRecommendedIncreaseSizeGb) {
         this.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
         return this;
@@ -29,9 +30,11 @@ public class SqlOutOfDiskReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlOutOfDiskState")
     public SqlOutOfDiskReportSqlOutOfDiskStateEnum sqlOutOfDiskState;
+
     public SqlOutOfDiskReport withSqlOutOfDiskState(SqlOutOfDiskReportSqlOutOfDiskStateEnum sqlOutOfDiskState) {
         this.sqlOutOfDiskState = sqlOutOfDiskState;
         return this;
     }
     
+    public SqlOutOfDiskReport(){}
 }

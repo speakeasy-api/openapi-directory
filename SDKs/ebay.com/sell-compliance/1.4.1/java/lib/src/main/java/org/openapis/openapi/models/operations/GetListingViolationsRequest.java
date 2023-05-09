@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListingViolationsRequest {
@@ -12,6 +13,7 @@ public class GetListingViolationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetListingViolationsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,6 +24,7 @@ public class GetListingViolationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compliance_type")
     public String complianceType;
+
     public GetListingViolationsRequest withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -32,6 +35,7 @@ public class GetListingViolationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetListingViolationsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -42,6 +46,7 @@ public class GetListingViolationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetListingViolationsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class GetListingViolationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=listing_id")
     public String listingId;
+
     public GetListingViolationsRequest withListingId(String listingId) {
         this.listingId = listingId;
         return this;
@@ -62,9 +68,13 @@ public class GetListingViolationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetListingViolationsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetListingViolationsRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

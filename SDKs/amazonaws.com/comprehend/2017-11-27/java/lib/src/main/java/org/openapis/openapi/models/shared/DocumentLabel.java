@@ -15,6 +15,7 @@ public class DocumentLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DocumentLabel withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class DocumentLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Long page;
+
     public DocumentLabel withPage(Long page) {
         this.page = page;
         return this;
@@ -31,9 +33,11 @@ public class DocumentLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public DocumentLabel withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public DocumentLabel(){}
 }

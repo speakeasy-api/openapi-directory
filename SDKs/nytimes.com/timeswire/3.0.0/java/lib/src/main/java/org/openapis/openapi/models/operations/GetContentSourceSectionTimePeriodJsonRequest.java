@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentSourceSectionTimePeriodJsonRequest {
@@ -12,6 +13,7 @@ public class GetContentSourceSectionTimePeriodJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetContentSourceSectionTimePeriodJsonRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +24,7 @@ public class GetContentSourceSectionTimePeriodJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetContentSourceSectionTimePeriodJsonRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetContentSourceSectionTimePeriodJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section")
     public String section;
+
     public GetContentSourceSectionTimePeriodJsonRequest withSection(String section) {
         this.section = section;
         return this;
@@ -52,6 +56,7 @@ public class GetContentSourceSectionTimePeriodJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
     public GetContentSourceSectionTimePeriodJsonSourceEnum source;
+
     public GetContentSourceSectionTimePeriodJsonRequest withSource(GetContentSourceSectionTimePeriodJsonSourceEnum source) {
         this.source = source;
         return this;
@@ -62,9 +67,15 @@ public class GetContentSourceSectionTimePeriodJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=time-period")
     public Long timePeriod;
+
     public GetContentSourceSectionTimePeriodJsonRequest withTimePeriod(Long timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetContentSourceSectionTimePeriodJsonRequest(@JsonProperty("section") String section, @JsonProperty("source") GetContentSourceSectionTimePeriodJsonSourceEnum source, @JsonProperty("time-period") Long timePeriod) {
+        this.section = section;
+        this.source = source;
+        this.timePeriod = timePeriod;
+  }
 }

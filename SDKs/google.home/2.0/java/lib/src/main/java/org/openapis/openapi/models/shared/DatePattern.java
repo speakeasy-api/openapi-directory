@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatePattern {
     @JsonProperty("day")
     public Integer day;
+
     public DatePattern withDay(Integer day) {
         this.day = day;
         return this;
@@ -16,6 +17,7 @@ public class DatePattern {
     
     @JsonProperty("month")
     public Integer month;
+
     public DatePattern withMonth(Integer month) {
         this.month = month;
         return this;
@@ -23,9 +25,15 @@ public class DatePattern {
     
     @JsonProperty("year")
     public Integer year;
+
     public DatePattern withYear(Integer year) {
         this.year = year;
         return this;
     }
     
+    public DatePattern(@JsonProperty("day") Integer day, @JsonProperty("month") Integer month, @JsonProperty("year") Integer year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+  }
 }

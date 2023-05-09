@@ -12,6 +12,7 @@ public class MerchantLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCredentials")
     public LinksElement apiCredentials;
+
     public MerchantLinks withApiCredentials(LinksElement apiCredentials) {
         this.apiCredentials = apiCredentials;
         return this;
@@ -19,6 +20,7 @@ public class MerchantLinks {
     
     @JsonProperty("self")
     public LinksElement self;
+
     public MerchantLinks withSelf(LinksElement self) {
         this.self = self;
         return this;
@@ -27,6 +29,7 @@ public class MerchantLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public LinksElement users;
+
     public MerchantLinks withUsers(LinksElement users) {
         this.users = users;
         return this;
@@ -35,9 +38,13 @@ public class MerchantLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhooks")
     public LinksElement webhooks;
+
     public MerchantLinks withWebhooks(LinksElement webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public MerchantLinks(@JsonProperty("self") LinksElement self) {
+        this.self = self;
+  }
 }

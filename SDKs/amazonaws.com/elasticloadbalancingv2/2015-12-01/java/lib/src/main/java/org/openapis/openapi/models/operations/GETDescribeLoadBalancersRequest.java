@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeLoadBalancersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeLoadBalancersActionEnum action;
+
     public GETDescribeLoadBalancersRequest withAction(GETDescribeLoadBalancersActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeLoadBalancersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerArns")
     public String[] loadBalancerArns;
+
     public GETDescribeLoadBalancersRequest withLoadBalancerArns(String[] loadBalancerArns) {
         this.loadBalancerArns = loadBalancerArns;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeLoadBalancersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeLoadBalancersRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeLoadBalancersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Names")
     public String[] names;
+
     public GETDescribeLoadBalancersRequest withNames(String[] names) {
         this.names = names;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeLoadBalancersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public Long pageSize;
+
     public GETDescribeLoadBalancersRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -56,6 +62,7 @@ public class GETDescribeLoadBalancersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeLoadBalancersVersionEnum version;
+
     public GETDescribeLoadBalancersRequest withVersion(GETDescribeLoadBalancersVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDescribeLoadBalancersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeLoadBalancersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDescribeLoadBalancersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeLoadBalancersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDescribeLoadBalancersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeLoadBalancersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDescribeLoadBalancersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeLoadBalancersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDescribeLoadBalancersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeLoadBalancersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDescribeLoadBalancersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeLoadBalancersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETDescribeLoadBalancersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeLoadBalancersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeLoadBalancersRequest(@JsonProperty("Action") GETDescribeLoadBalancersActionEnum action, @JsonProperty("Version") GETDescribeLoadBalancersVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

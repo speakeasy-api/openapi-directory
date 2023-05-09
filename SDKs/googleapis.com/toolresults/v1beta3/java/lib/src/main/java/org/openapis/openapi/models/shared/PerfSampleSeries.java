@@ -18,6 +18,7 @@ public class PerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicPerfSampleSeries")
     public BasicPerfSampleSeries basicPerfSampleSeries;
+
     public PerfSampleSeries withBasicPerfSampleSeries(BasicPerfSampleSeries basicPerfSampleSeries) {
         this.basicPerfSampleSeries = basicPerfSampleSeries;
         return this;
@@ -29,6 +30,7 @@ public class PerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public PerfSampleSeries withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -40,6 +42,7 @@ public class PerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historyId")
     public String historyId;
+
     public PerfSampleSeries withHistoryId(String historyId) {
         this.historyId = historyId;
         return this;
@@ -51,6 +54,7 @@ public class PerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public PerfSampleSeries withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,6 +66,7 @@ public class PerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleSeriesId")
     public String sampleSeriesId;
+
     public PerfSampleSeries withSampleSeriesId(String sampleSeriesId) {
         this.sampleSeriesId = sampleSeriesId;
         return this;
@@ -73,9 +78,11 @@ public class PerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepId")
     public String stepId;
+
     public PerfSampleSeries withStepId(String stepId) {
         this.stepId = stepId;
         return this;
     }
     
+    public PerfSampleSeries(){}
 }

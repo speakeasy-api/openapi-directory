@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsGetTagRequest {
@@ -12,6 +13,7 @@ public class FunctionsGetTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
     public String functionId;
+
     public FunctionsGetTagRequest withFunctionId(String functionId) {
         this.functionId = functionId;
         return this;
@@ -22,9 +24,14 @@ public class FunctionsGetTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public String tagId;
+
     public FunctionsGetTagRequest withTagId(String tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public FunctionsGetTagRequest(@JsonProperty("functionId") String functionId, @JsonProperty("tagId") String tagId) {
+        this.functionId = functionId;
+        this.tagId = tagId;
+  }
 }

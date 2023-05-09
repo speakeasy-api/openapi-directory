@@ -15,9 +15,11 @@ public class CreateControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public Control control;
+
     public CreateControlResponse withControl(Control control) {
         this.control = control;
         return this;
     }
     
+    public CreateControlResponse(){}
 }

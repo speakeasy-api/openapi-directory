@@ -12,6 +12,7 @@ public class DocumentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_amount")
     public Float grossAmount;
+
     public DocumentItem withGrossAmount(Float grossAmount) {
         this.grossAmount = grossAmount;
         return this;
@@ -20,6 +21,7 @@ public class DocumentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DocumentItem withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class DocumentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_amount")
     public Float netAmount;
+
     public DocumentItem withNetAmount(Float netAmount) {
         this.netAmount = netAmount;
         return this;
@@ -36,6 +39,7 @@ public class DocumentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_unit_amount")
     public Float netUnitAmount;
+
     public DocumentItem withNetUnitAmount(Float netUnitAmount) {
         this.netUnitAmount = netUnitAmount;
         return this;
@@ -44,6 +48,7 @@ public class DocumentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_id")
     public Long productId;
+
     public DocumentItem withProductId(Long productId) {
         this.productId = productId;
         return this;
@@ -52,6 +57,7 @@ public class DocumentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Float quantity;
+
     public DocumentItem withQuantity(Float quantity) {
         this.quantity = quantity;
         return this;
@@ -60,6 +66,7 @@ public class DocumentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat")
     public VatEnum vat;
+
     public DocumentItem withVat(VatEnum vat) {
         this.vat = vat;
         return this;
@@ -68,9 +75,11 @@ public class DocumentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat_amount")
     public Float vatAmount;
+
     public DocumentItem withVatAmount(Float vatAmount) {
         this.vatAmount = vatAmount;
         return this;
     }
     
+    public DocumentItem(){}
 }

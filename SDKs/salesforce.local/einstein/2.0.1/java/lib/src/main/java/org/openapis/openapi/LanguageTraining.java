@@ -57,11 +57,9 @@ public class LanguageTraining {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainStatusAndProgressResponse res = new org.openapis.openapi.models.operations.GetTrainStatusAndProgressResponse() {{
+        org.openapis.openapi.models.operations.GetTrainStatusAndProgressResponse res = new org.openapis.openapi.models.operations.GetTrainStatusAndProgressResponse(contentType, httpRes.statusCode()) {{
             trainResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class LanguageTraining {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrainResponse res = new org.openapis.openapi.models.operations.RetrainResponse() {{
+        org.openapis.openapi.models.operations.RetrainResponse res = new org.openapis.openapi.models.operations.RetrainResponse(contentType, httpRes.statusCode()) {{
             trainResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class LanguageTraining {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TrainResponse res = new org.openapis.openapi.models.operations.TrainResponse() {{
+        org.openapis.openapi.models.operations.TrainResponse res = new org.openapis.openapi.models.operations.TrainResponse(contentType, httpRes.statusCode()) {{
             trainResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

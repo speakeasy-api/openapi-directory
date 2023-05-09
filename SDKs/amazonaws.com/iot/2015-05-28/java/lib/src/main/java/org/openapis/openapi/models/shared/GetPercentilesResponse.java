@@ -15,9 +15,11 @@ public class GetPercentilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentiles")
     public PercentPair[] percentiles;
+
     public GetPercentilesResponse withPercentiles(PercentPair[] percentiles) {
         this.percentiles = percentiles;
         return this;
     }
     
+    public GetPercentilesResponse(){}
 }

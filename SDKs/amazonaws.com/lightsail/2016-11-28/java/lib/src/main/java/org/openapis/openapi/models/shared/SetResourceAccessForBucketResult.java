@@ -15,9 +15,11 @@ public class SetResourceAccessForBucketResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public SetResourceAccessForBucketResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public SetResourceAccessForBucketResult(){}
 }

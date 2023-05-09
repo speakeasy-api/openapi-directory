@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TinVerificationComprehensiveCheckDefaultApplicationJSON {
     @JsonProperty("code")
     public Integer code;
+
     public TinVerificationComprehensiveCheckDefaultApplicationJSON withCode(Integer code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class TinVerificationComprehensiveCheckDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fault")
     public String fault;
+
     public TinVerificationComprehensiveCheckDefaultApplicationJSON withFault(String fault) {
         this.fault = fault;
         return this;
@@ -29,6 +31,7 @@ public class TinVerificationComprehensiveCheckDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public TinVerificationComprehensiveCheckDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,15 @@ public class TinVerificationComprehensiveCheckDefaultApplicationJSON {
     
     @JsonProperty("tag")
     public String tag;
+
     public TinVerificationComprehensiveCheckDefaultApplicationJSON withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public TinVerificationComprehensiveCheckDefaultApplicationJSON(@JsonProperty("code") Integer code, @JsonProperty("message") String message, @JsonProperty("tag") String tag) {
+        this.code = code;
+        this.message = message;
+        this.tag = tag;
+  }
 }

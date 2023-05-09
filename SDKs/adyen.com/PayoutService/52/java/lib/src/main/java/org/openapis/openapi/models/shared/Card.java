@@ -20,6 +20,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvc")
     public String cvc;
+
     public Card withCvc(String cvc) {
         this.cvc = cvc;
         return this;
@@ -31,8 +32,10 @@ public class Card {
      * * 03 = March
      * * 11 = November
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryMonth")
     public String expiryMonth;
+
     public Card withExpiryMonth(String expiryMonth) {
         this.expiryMonth = expiryMonth;
         return this;
@@ -42,8 +45,10 @@ public class Card {
      * The card expiry year.
      * Format: 4 digits. For example: 2020
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryYear")
     public String expiryYear;
+
     public Card withExpiryYear(String expiryYear) {
         this.expiryYear = expiryYear;
         return this;
@@ -52,8 +57,10 @@ public class Card {
     /**
      * The name of the cardholder, as printed on the card.
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holderName")
     public String holderName;
+
     public Card withHolderName(String holderName) {
         this.holderName = holderName;
         return this;
@@ -65,6 +72,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueNumber")
     public String issueNumber;
+
     public Card withIssueNumber(String issueNumber) {
         this.issueNumber = issueNumber;
         return this;
@@ -74,8 +82,10 @@ public class Card {
      * The card number (4-19 characters). Do not use any separators.
      * When this value is returned in a response, only the last 4 digits of the card number are returned.
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public Card withNumber(String number) {
         this.number = number;
         return this;
@@ -87,6 +97,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMonth")
     public String startMonth;
+
     public Card withStartMonth(String startMonth) {
         this.startMonth = startMonth;
         return this;
@@ -98,9 +109,11 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startYear")
     public String startYear;
+
     public Card withStartYear(String startYear) {
         this.startYear = startYear;
         return this;
     }
     
+    public Card(){}
 }

@@ -15,6 +15,7 @@ public class User {
      */
     
     public java.util.Map<String, Object> privateFields;
+
     public User withPrivateFields(java.util.Map<String, Object> privateFields) {
         this.privateFields = privateFields;
         return this;
@@ -25,6 +26,7 @@ public class User {
      */
     
     public Boolean active;
+
     public User withActive(Boolean active) {
         this.active = active;
         return this;
@@ -35,6 +37,7 @@ public class User {
      */
     
     public String bccEmailAddress;
+
     public User withBccEmailAddress(String bccEmailAddress) {
         this.bccEmailAddress = bccEmailAddress;
         return this;
@@ -45,6 +48,7 @@ public class User {
      */
     
     public Boolean clickToCallEnabled;
+
     public User withClickToCallEnabled(Boolean clickToCallEnabled) {
         this.clickToCallEnabled = clickToCallEnabled;
         return this;
@@ -55,6 +59,7 @@ public class User {
      */
     
     public OffsetDateTime createdAt;
+
     public User withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -65,6 +70,7 @@ public class User {
      */
     
     public Boolean crmConnected;
+
     public User withCrmConnected(Boolean crmConnected) {
         this.crmConnected = crmConnected;
         return this;
@@ -75,6 +81,7 @@ public class User {
      */
     
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -85,6 +92,7 @@ public class User {
      */
     
     public Boolean emailClientConfigured;
+
     public User withEmailClientConfigured(Boolean emailClientConfigured) {
         this.emailClientConfigured = emailClientConfigured;
         return this;
@@ -95,6 +103,7 @@ public class User {
      */
     
     public String emailClientEmailAddress;
+
     public User withEmailClientEmailAddress(String emailClientEmailAddress) {
         this.emailClientEmailAddress = emailClientEmailAddress;
         return this;
@@ -105,6 +114,7 @@ public class User {
      */
     
     public String emailSignature;
+
     public User withEmailSignature(String emailSignature) {
         this.emailSignature = emailSignature;
         return this;
@@ -115,6 +125,7 @@ public class User {
      */
     
     public Boolean emailSignatureClickTrackingDisabled;
+
     public User withEmailSignatureClickTrackingDisabled(Boolean emailSignatureClickTrackingDisabled) {
         this.emailSignatureClickTrackingDisabled = emailSignatureClickTrackingDisabled;
         return this;
@@ -125,6 +136,7 @@ public class User {
      */
     
     public String emailSignatureType;
+
     public User withEmailSignatureType(String emailSignatureType) {
         this.emailSignatureType = emailSignatureType;
         return this;
@@ -135,6 +147,7 @@ public class User {
      */
     
     public java.util.Map<String, Object> externalFeatureFlags;
+
     public User withExternalFeatureFlags(java.util.Map<String, Object> externalFeatureFlags) {
         this.externalFeatureFlags = externalFeatureFlags;
         return this;
@@ -145,6 +158,7 @@ public class User {
      */
     
     public String firstName;
+
     public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -155,6 +169,7 @@ public class User {
      */
     
     public String fromAddress;
+
     public User withFromAddress(String fromAddress) {
         this.fromAddress = fromAddress;
         return this;
@@ -165,6 +180,7 @@ public class User {
      */
     
     public String fullEmailAddress;
+
     public User withFullEmailAddress(String fullEmailAddress) {
         this.fullEmailAddress = fullEmailAddress;
         return this;
@@ -172,6 +188,7 @@ public class User {
     
     
     public EmbeddedResource group;
+
     public User withGroup(EmbeddedResource group) {
         this.group = group;
         return this;
@@ -182,6 +199,7 @@ public class User {
      */
     
     public String guid;
+
     public User withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -192,6 +210,7 @@ public class User {
      */
     
     public Long id;
+
     public User withId(Long id) {
         this.id = id;
         return this;
@@ -202,6 +221,7 @@ public class User {
      */
     
     public String jobRole;
+
     public User withJobRole(String jobRole) {
         this.jobRole = jobRole;
         return this;
@@ -212,6 +232,7 @@ public class User {
      */
     
     public String lastName;
+
     public User withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -222,6 +243,7 @@ public class User {
      */
     
     public Boolean localDialEnabled;
+
     public User withLocalDialEnabled(Boolean localDialEnabled) {
         this.localDialEnabled = localDialEnabled;
         return this;
@@ -232,6 +254,7 @@ public class User {
      */
     
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -239,6 +262,7 @@ public class User {
     
     
     public EmbeddedResource phoneClient;
+
     public User withPhoneClient(EmbeddedResource phoneClient) {
         this.phoneClient = phoneClient;
         return this;
@@ -246,6 +270,7 @@ public class User {
     
     
     public EmbeddedResource phoneNumberAssignment;
+
     public User withPhoneNumberAssignment(EmbeddedResource phoneNumberAssignment) {
         this.phoneNumberAssignment = phoneNumberAssignment;
         return this;
@@ -253,6 +278,7 @@ public class User {
     
     
     public EmbeddedResource role;
+
     public User withRole(EmbeddedResource role) {
         this.role = role;
         return this;
@@ -263,6 +289,7 @@ public class User {
      */
     
     public String sendingEmailAddress;
+
     public User withSendingEmailAddress(String sendingEmailAddress) {
         this.sendingEmailAddress = sendingEmailAddress;
         return this;
@@ -273,6 +300,7 @@ public class User {
      */
     
     public String slackUsername;
+
     public User withSlackUsername(String slackUsername) {
         this.slackUsername = slackUsername;
         return this;
@@ -280,6 +308,7 @@ public class User {
     
     
     public EmbeddedResource team;
+
     public User withTeam(EmbeddedResource team) {
         this.team = team;
         return this;
@@ -290,6 +319,7 @@ public class User {
      */
     
     public Boolean teamAdmin;
+
     public User withTeamAdmin(Boolean teamAdmin) {
         this.teamAdmin = teamAdmin;
         return this;
@@ -300,6 +330,7 @@ public class User {
      */
     
     public String timeZone;
+
     public User withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -310,6 +341,7 @@ public class User {
      */
     
     public String twitterHandle;
+
     public User withTwitterHandle(String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
@@ -320,6 +352,7 @@ public class User {
      */
     
     public OffsetDateTime updatedAt;
+
     public User withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -330,9 +363,11 @@ public class User {
      */
     
     public String workCountry;
+
     public User withWorkCountry(String workCountry) {
         this.workCountry = workCountry;
         return this;
     }
     
+    public User(){}
 }

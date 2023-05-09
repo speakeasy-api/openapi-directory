@@ -19,9 +19,11 @@ public class LoyaltyEventQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public LoyaltyEventFilter filter;
+
     public LoyaltyEventQuery withFilter(LoyaltyEventFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public LoyaltyEventQuery(){}
 }

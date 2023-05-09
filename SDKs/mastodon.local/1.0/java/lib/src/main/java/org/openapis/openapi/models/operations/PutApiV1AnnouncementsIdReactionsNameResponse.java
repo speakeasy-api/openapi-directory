@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutApiV1AnnouncementsIdReactionsNameResponse {
     
     public String contentType;
+
     public PutApiV1AnnouncementsIdReactionsNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutApiV1AnnouncementsIdReactionsNameResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PutApiV1AnnouncementsIdReactionsNameResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PutApiV1AnnouncementsIdReactionsNameResponse {
     
     
     public Integer statusCode;
+
     public PutApiV1AnnouncementsIdReactionsNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutApiV1AnnouncementsIdReactionsNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutApiV1AnnouncementsIdReactionsNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PutApiV1AnnouncementsIdReactionsNameResponse {
      */
     
     public java.util.Map<String, Object> putApiV1AnnouncementsIdReactionsName200ApplicationJSONObject;
+
     public PutApiV1AnnouncementsIdReactionsNameResponse withPutApiV1AnnouncementsIdReactionsName200ApplicationJSONObject(java.util.Map<String, Object> putApiV1AnnouncementsIdReactionsName200ApplicationJSONObject) {
         this.putApiV1AnnouncementsIdReactionsName200ApplicationJSONObject = putApiV1AnnouncementsIdReactionsName200ApplicationJSONObject;
         return this;
     }
     
+    public PutApiV1AnnouncementsIdReactionsNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

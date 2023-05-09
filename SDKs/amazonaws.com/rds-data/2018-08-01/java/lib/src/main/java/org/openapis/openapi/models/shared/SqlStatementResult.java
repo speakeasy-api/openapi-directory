@@ -15,6 +15,7 @@ public class SqlStatementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRecordsUpdated")
     public Long numberOfRecordsUpdated;
+
     public SqlStatementResult withNumberOfRecordsUpdated(Long numberOfRecordsUpdated) {
         this.numberOfRecordsUpdated = numberOfRecordsUpdated;
         return this;
@@ -23,9 +24,11 @@ public class SqlStatementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultFrame")
     public ResultFrame resultFrame;
+
     public SqlStatementResult withResultFrame(ResultFrame resultFrame) {
         this.resultFrame = resultFrame;
         return this;
     }
     
+    public SqlStatementResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RoadDisruptedStreetsResponse {
     
     public byte[] body;
+
     public RoadDisruptedStreetsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class RoadDisruptedStreetsResponse {
     
     
     public String contentType;
+
     public RoadDisruptedStreetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class RoadDisruptedStreetsResponse {
     
     
     public Integer statusCode;
+
     public RoadDisruptedStreetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class RoadDisruptedStreetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RoadDisruptedStreetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class RoadDisruptedStreetsResponse {
      */
     
     public java.util.Map<String, Object> systemObject;
+
     public RoadDisruptedStreetsResponse withSystemObject(java.util.Map<String, Object> systemObject) {
         this.systemObject = systemObject;
         return this;
     }
     
+    public RoadDisruptedStreetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuntimeHintValue {
     @JsonProperty("phrase")
     public String phrase;
+
     public RuntimeHintValue withPhrase(String phrase) {
         this.phrase = phrase;
         return this;
     }
     
+    public RuntimeHintValue(@JsonProperty("phrase") String phrase) {
+        this.phrase = phrase;
+  }
 }

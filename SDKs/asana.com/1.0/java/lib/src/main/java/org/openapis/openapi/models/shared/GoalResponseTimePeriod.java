@@ -18,6 +18,7 @@ public class GoalResponseTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public GoalResponseTimePeriod withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoalResponseTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_on")
     public String endOn;
+
     public GoalResponseTimePeriod withEndOn(String endOn) {
         this.endOn = endOn;
         return this;
@@ -40,6 +42,7 @@ public class GoalResponseTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public GoalResponseTimePeriod withGid(String gid) {
         this.gid = gid;
         return this;
@@ -51,6 +54,7 @@ public class GoalResponseTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public GoalResponseTimePeriodPeriodEnum period;
+
     public GoalResponseTimePeriod withPeriod(GoalResponseTimePeriodPeriodEnum period) {
         this.period = period;
         return this;
@@ -62,6 +66,7 @@ public class GoalResponseTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public GoalResponseTimePeriod withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -73,9 +78,11 @@ public class GoalResponseTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_on")
     public String startOn;
+
     public GoalResponseTimePeriod withStartOn(String startOn) {
         this.startOn = startOn;
         return this;
     }
     
+    public GoalResponseTimePeriod(){}
 }

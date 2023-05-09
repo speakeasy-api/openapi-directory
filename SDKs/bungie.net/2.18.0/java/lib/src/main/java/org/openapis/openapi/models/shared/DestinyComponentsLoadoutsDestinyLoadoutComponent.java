@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsLoadoutsDestinyLoadoutComponent {
     
     public Long colorHash;
+
     public DestinyComponentsLoadoutsDestinyLoadoutComponent withColorHash(Long colorHash) {
         this.colorHash = colorHash;
         return this;
@@ -16,6 +17,7 @@ public class DestinyComponentsLoadoutsDestinyLoadoutComponent {
     
     
     public Long iconHash;
+
     public DestinyComponentsLoadoutsDestinyLoadoutComponent withIconHash(Long iconHash) {
         this.iconHash = iconHash;
         return this;
@@ -23,6 +25,7 @@ public class DestinyComponentsLoadoutsDestinyLoadoutComponent {
     
     
     public DestinyComponentsLoadoutsDestinyLoadoutItemComponent[] items;
+
     public DestinyComponentsLoadoutsDestinyLoadoutComponent withItems(DestinyComponentsLoadoutsDestinyLoadoutItemComponent[] items) {
         this.items = items;
         return this;
@@ -30,9 +33,11 @@ public class DestinyComponentsLoadoutsDestinyLoadoutComponent {
     
     
     public Long nameHash;
+
     public DestinyComponentsLoadoutsDestinyLoadoutComponent withNameHash(Long nameHash) {
         this.nameHash = nameHash;
         return this;
     }
     
+    public DestinyComponentsLoadoutsDestinyLoadoutComponent(){}
 }

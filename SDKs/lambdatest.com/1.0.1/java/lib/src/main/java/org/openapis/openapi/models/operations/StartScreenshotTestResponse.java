@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartScreenshotTestResponse {
@@ -12,6 +13,7 @@ public class StartScreenshotTestResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDenied accessDenied;
+
     public StartScreenshotTestResponse withAccessDenied(org.openapis.openapi.models.shared.AccessDenied accessDenied) {
         this.accessDenied = accessDenied;
         return this;
@@ -19,6 +21,7 @@ public class StartScreenshotTestResponse {
     
     
     public String contentType;
+
     public StartScreenshotTestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartScreenshotTestResponse {
      */
     
     public org.openapis.openapi.models.shared.Forbidden forbidden;
+
     public StartScreenshotTestResponse withForbidden(org.openapis.openapi.models.shared.Forbidden forbidden) {
         this.forbidden = forbidden;
         return this;
@@ -36,6 +40,7 @@ public class StartScreenshotTestResponse {
     
     
     public Integer statusCode;
+
     public StartScreenshotTestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StartScreenshotTestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartScreenshotTestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StartScreenshotTestResponse {
      */
     
     public org.openapis.openapi.models.shared.StartScreenshotBadRequest startScreenshotBadRequest;
+
     public StartScreenshotTestResponse withStartScreenshotBadRequest(org.openapis.openapi.models.shared.StartScreenshotBadRequest startScreenshotBadRequest) {
         this.startScreenshotBadRequest = startScreenshotBadRequest;
         return this;
@@ -63,9 +70,14 @@ public class StartScreenshotTestResponse {
      */
     
     public org.openapis.openapi.models.shared.StartScreenshotSuccess startScreenshotSuccess;
+
     public StartScreenshotTestResponse withStartScreenshotSuccess(org.openapis.openapi.models.shared.StartScreenshotSuccess startScreenshotSuccess) {
         this.startScreenshotSuccess = startScreenshotSuccess;
         return this;
     }
     
+    public StartScreenshotTestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class DescribeImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DescribeImportResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReasons")
     public String[] failureReasons;
+
     public DescribeImportResponse withFailureReasons(String[] failureReasons) {
         this.failureReasons = failureReasons;
         return this;
@@ -38,6 +40,7 @@ public class DescribeImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importId")
     public String importId;
+
     public DescribeImportResponse withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -46,6 +49,7 @@ public class DescribeImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importStatus")
     public ImportStatusEnum importStatus;
+
     public DescribeImportResponse withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -54,6 +58,7 @@ public class DescribeImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedResourceId")
     public String importedResourceId;
+
     public DescribeImportResponse withImportedResourceId(String importedResourceId) {
         this.importedResourceId = importedResourceId;
         return this;
@@ -62,6 +67,7 @@ public class DescribeImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedResourceName")
     public String importedResourceName;
+
     public DescribeImportResponse withImportedResourceName(String importedResourceName) {
         this.importedResourceName = importedResourceName;
         return this;
@@ -72,6 +78,7 @@ public class DescribeImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DescribeImportResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -80,6 +87,7 @@ public class DescribeImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeStrategy")
     public MergeStrategyEnum mergeStrategy;
+
     public DescribeImportResponse withMergeStrategy(MergeStrategyEnum mergeStrategy) {
         this.mergeStrategy = mergeStrategy;
         return this;
@@ -88,9 +96,11 @@ public class DescribeImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSpecification")
     public ImportResourceSpecification resourceSpecification;
+
     public DescribeImportResponse withResourceSpecification(ImportResourceSpecification resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
         return this;
     }
     
+    public DescribeImportResponse(){}
 }

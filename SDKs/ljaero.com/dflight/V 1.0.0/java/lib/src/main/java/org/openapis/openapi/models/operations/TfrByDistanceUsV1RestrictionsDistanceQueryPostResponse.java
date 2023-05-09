@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse {
     
     public String contentType;
+
     public TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.NOTAMsDistanceResponse notaMsDistanceResponse;
+
     public TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse withNOTAMsDistanceResponse(org.openapis.openapi.models.shared.NOTAMsDistanceResponse notaMsDistanceResponse) {
         this.notaMsDistanceResponse = notaMsDistanceResponse;
         return this;
@@ -36,6 +40,7 @@ public class TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse {
     
     
     public Integer statusCode;
+
     public TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

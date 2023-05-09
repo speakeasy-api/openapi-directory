@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdBudgetSummaryRequest {
@@ -12,6 +13,7 @@ public class GetUsersIdBudgetSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public GetUsersIdBudgetSummaryRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -22,6 +24,7 @@ public class GetUsersIdBudgetSummaryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetUsersIdBudgetSummaryRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetUsersIdBudgetSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
     public Long interval;
+
     public GetUsersIdBudgetSummaryRequest withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -42,6 +46,7 @@ public class GetUsersIdBudgetSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public GetUsersIdBudgetSummaryPeriodEnum period;
+
     public GetUsersIdBudgetSummaryRequest withPeriod(GetUsersIdBudgetSummaryPeriodEnum period) {
         this.period = period;
         return this;
@@ -52,9 +57,17 @@ public class GetUsersIdBudgetSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public GetUsersIdBudgetSummaryRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GetUsersIdBudgetSummaryRequest(@JsonProperty("end_date") String endDate, @JsonProperty("id") Long id, @JsonProperty("interval") Long interval, @JsonProperty("period") GetUsersIdBudgetSummaryPeriodEnum period, @JsonProperty("start_date") String startDate) {
+        this.endDate = endDate;
+        this.id = id;
+        this.interval = interval;
+        this.period = period;
+        this.startDate = startDate;
+  }
 }

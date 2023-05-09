@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchLocalGatewayRoutesRequestFilters {
     
     public String name;
+
     public SearchLocalGatewayRoutesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class SearchLocalGatewayRoutesRequestFilters {
     
     
     public String[] values;
+
     public SearchLocalGatewayRoutesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SearchLocalGatewayRoutesRequestFilters(){}
 }

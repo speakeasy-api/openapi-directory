@@ -20,6 +20,7 @@ public class UpdatePriceRequestBodyPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonPrice")
     public UpdatePriceRequestBodyPricingComparisonPrice comparisonPrice;
+
     public UpdatePriceRequestBodyPricing withComparisonPrice(UpdatePriceRequestBodyPricingComparisonPrice comparisonPrice) {
         this.comparisonPrice = comparisonPrice;
         return this;
@@ -31,6 +32,7 @@ public class UpdatePriceRequestBodyPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonPriceType")
     public UpdatePriceRequestBodyPricingComparisonPriceTypeEnum comparisonPriceType;
+
     public UpdatePriceRequestBodyPricing withComparisonPriceType(UpdatePriceRequestBodyPricingComparisonPriceTypeEnum comparisonPriceType) {
         this.comparisonPriceType = comparisonPriceType;
         return this;
@@ -38,6 +40,7 @@ public class UpdatePriceRequestBodyPricing {
     
     @JsonProperty("currentPrice")
     public UpdatePriceRequestBodyPricingCurrentPrice currentPrice;
+
     public UpdatePriceRequestBodyPricing withCurrentPrice(UpdatePriceRequestBodyPricingCurrentPrice currentPrice) {
         this.currentPrice = currentPrice;
         return this;
@@ -48,6 +51,7 @@ public class UpdatePriceRequestBodyPricing {
      */
     @JsonProperty("currentPriceType")
     public UpdatePriceRequestBodyPricingCurrentPriceTypeEnum currentPriceType;
+
     public UpdatePriceRequestBodyPricing withCurrentPriceType(UpdatePriceRequestBodyPricingCurrentPriceTypeEnum currentPriceType) {
         this.currentPriceType = currentPriceType;
         return this;
@@ -61,6 +65,7 @@ public class UpdatePriceRequestBodyPricing {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("effectiveDate")
     public OffsetDateTime effectiveDate;
+
     public UpdatePriceRequestBodyPricing withEffectiveDate(OffsetDateTime effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -74,6 +79,7 @@ public class UpdatePriceRequestBodyPricing {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public UpdatePriceRequestBodyPricing withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -85,6 +91,7 @@ public class UpdatePriceRequestBodyPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDisplayCodes")
     public UpdatePriceRequestBodyPricingPriceDisplayCodesEnum priceDisplayCodes;
+
     public UpdatePriceRequestBodyPricing withPriceDisplayCodes(UpdatePriceRequestBodyPricingPriceDisplayCodesEnum priceDisplayCodes) {
         this.priceDisplayCodes = priceDisplayCodes;
         return this;
@@ -96,6 +103,7 @@ public class UpdatePriceRequestBodyPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processMode")
     public UpdatePriceRequestBodyPricingProcessModeEnum processMode;
+
     public UpdatePriceRequestBodyPricing withProcessMode(UpdatePriceRequestBodyPricingProcessModeEnum processMode) {
         this.processMode = processMode;
         return this;
@@ -107,9 +115,14 @@ public class UpdatePriceRequestBodyPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promoId")
     public String promoId;
+
     public UpdatePriceRequestBodyPricing withPromoId(String promoId) {
         this.promoId = promoId;
         return this;
     }
     
+    public UpdatePriceRequestBodyPricing(@JsonProperty("currentPrice") UpdatePriceRequestBodyPricingCurrentPrice currentPrice, @JsonProperty("currentPriceType") UpdatePriceRequestBodyPricingCurrentPriceTypeEnum currentPriceType) {
+        this.currentPrice = currentPrice;
+        this.currentPriceType = currentPriceType;
+  }
 }

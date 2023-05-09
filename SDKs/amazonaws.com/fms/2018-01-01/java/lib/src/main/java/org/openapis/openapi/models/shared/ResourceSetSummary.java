@@ -20,6 +20,7 @@ public class ResourceSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ResourceSetSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class ResourceSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResourceSetSummary withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class ResourceSetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public ResourceSetSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -46,9 +49,20 @@ public class ResourceSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResourceSetSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceSetStatus")
+    public ResourceSetStatusEnum resourceSetStatus;
+
+    public ResourceSetSummary withResourceSetStatus(ResourceSetStatusEnum resourceSetStatus) {
+        this.resourceSetStatus = resourceSetStatus;
+        return this;
+    }
+    
+    public ResourceSetSummary(){}
 }

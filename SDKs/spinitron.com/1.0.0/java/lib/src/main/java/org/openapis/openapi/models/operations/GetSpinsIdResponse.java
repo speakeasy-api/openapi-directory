@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSpinsIdResponse {
     
     public byte[] body;
+
     public GetSpinsIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetSpinsIdResponse {
     
     
     public String contentType;
+
     public GetSpinsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSpinsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetSpinsIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetSpinsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Spin spin;
+
     public GetSpinsIdResponse withSpin(org.openapis.openapi.models.shared.Spin spin) {
         this.spin = spin;
         return this;
@@ -43,6 +48,7 @@ public class GetSpinsIdResponse {
     
     
     public Integer statusCode;
+
     public GetSpinsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetSpinsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSpinsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSpinsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

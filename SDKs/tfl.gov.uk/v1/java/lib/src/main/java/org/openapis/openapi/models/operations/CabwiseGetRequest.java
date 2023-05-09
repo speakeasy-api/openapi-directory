@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CabwiseGetRequest {
@@ -12,6 +13,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceXml")
     public Boolean forceXml;
+
     public CabwiseGetRequest withForceXml(Boolean forceXml) {
         this.forceXml = forceXml;
         return this;
@@ -22,6 +24,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public Double lat;
+
     public CabwiseGetRequest withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -32,6 +35,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=legacyFormat")
     public Boolean legacyFormat;
+
     public CabwiseGetRequest withLegacyFormat(Boolean legacyFormat) {
         this.legacyFormat = legacyFormat;
         return this;
@@ -42,6 +46,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public Double lon;
+
     public CabwiseGetRequest withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -52,6 +57,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Integer maxResults;
+
     public CabwiseGetRequest withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public CabwiseGetRequest withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +79,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optype")
     public String optype;
+
     public CabwiseGetRequest withOptype(String optype) {
         this.optype = optype;
         return this;
@@ -82,6 +90,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Double radius;
+
     public CabwiseGetRequest withRadius(Double radius) {
         this.radius = radius;
         return this;
@@ -92,6 +101,7 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=twentyFourSevenOnly")
     public Boolean twentyFourSevenOnly;
+
     public CabwiseGetRequest withTwentyFourSevenOnly(Boolean twentyFourSevenOnly) {
         this.twentyFourSevenOnly = twentyFourSevenOnly;
         return this;
@@ -102,9 +112,14 @@ public class CabwiseGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wc")
     public String wc;
+
     public CabwiseGetRequest withWc(String wc) {
         this.wc = wc;
         return this;
     }
     
+    public CabwiseGetRequest(@JsonProperty("lat") Double lat, @JsonProperty("lon") Double lon) {
+        this.lat = lat;
+        this.lon = lon;
+  }
 }

@@ -54,4 +54,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/AddressWithTimeZone.java
 lib/src/main/java/org/openapis/openapi/models/shared/LocationsHalResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LocationsEmbeddedObject.java
+docs/sdk/README.md
 USAGE.md

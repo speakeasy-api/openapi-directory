@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaChangeHistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actorType")
     public GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum actorType;
+
     public GoogleAnalyticsAdminV1betaChangeHistoryEvent withActorType(GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum actorType) {
         this.actorType = actorType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaChangeHistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeTime")
     public String changeTime;
+
     public GoogleAnalyticsAdminV1betaChangeHistoryEvent withChangeTime(String changeTime) {
         this.changeTime = changeTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaChangeHistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public GoogleAnalyticsAdminV1betaChangeHistoryChange[] changes;
+
     public GoogleAnalyticsAdminV1betaChangeHistoryEvent withChanges(GoogleAnalyticsAdminV1betaChangeHistoryChange[] changes) {
         this.changes = changes;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1betaChangeHistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changesFiltered")
     public Boolean changesFiltered;
+
     public GoogleAnalyticsAdminV1betaChangeHistoryEvent withChangesFiltered(Boolean changesFiltered) {
         this.changesFiltered = changesFiltered;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1betaChangeHistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAnalyticsAdminV1betaChangeHistoryEvent withId(String id) {
         this.id = id;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAnalyticsAdminV1betaChangeHistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userActorEmail")
     public String userActorEmail;
+
     public GoogleAnalyticsAdminV1betaChangeHistoryEvent withUserActorEmail(String userActorEmail) {
         this.userActorEmail = userActorEmail;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaChangeHistoryEvent(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSetPasswordResponse {
     
     public String contentType;
+
     public PostSetPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostSetPasswordResponse {
     
     
     public Integer statusCode;
+
     public PostSetPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostSetPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSetPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostSetPasswordResponse {
      */
     
     public String postSetPasswordDefaultTextPlainString;
+
     public PostSetPasswordResponse withPostSetPasswordDefaultTextPlainString(String postSetPasswordDefaultTextPlainString) {
         this.postSetPasswordDefaultTextPlainString = postSetPasswordDefaultTextPlainString;
         return this;
     }
     
+    public PostSetPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

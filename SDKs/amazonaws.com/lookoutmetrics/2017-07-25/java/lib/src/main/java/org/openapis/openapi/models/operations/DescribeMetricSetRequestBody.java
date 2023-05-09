@@ -12,9 +12,13 @@ public class DescribeMetricSetRequestBody {
      */
     @JsonProperty("MetricSetArn")
     public String metricSetArn;
+
     public DescribeMetricSetRequestBody withMetricSetArn(String metricSetArn) {
         this.metricSetArn = metricSetArn;
         return this;
     }
     
+    public DescribeMetricSetRequestBody(@JsonProperty("MetricSetArn") String metricSetArn) {
+        this.metricSetArn = metricSetArn;
+  }
 }

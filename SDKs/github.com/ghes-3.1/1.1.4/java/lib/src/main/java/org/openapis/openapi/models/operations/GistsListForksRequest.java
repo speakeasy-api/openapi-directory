@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsListForksRequest {
@@ -12,6 +13,7 @@ public class GistsListForksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
     public String gistId;
+
     public GistsListForksRequest withGistId(String gistId) {
         this.gistId = gistId;
         return this;
@@ -22,6 +24,7 @@ public class GistsListForksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GistsListForksRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class GistsListForksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GistsListForksRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GistsListForksRequest(@JsonProperty("gist_id") String gistId) {
+        this.gistId = gistId;
+  }
 }

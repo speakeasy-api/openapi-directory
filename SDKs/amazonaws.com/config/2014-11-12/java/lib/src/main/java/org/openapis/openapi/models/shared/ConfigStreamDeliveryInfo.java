@@ -20,6 +20,7 @@ public class ConfigStreamDeliveryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastErrorCode")
     public String lastErrorCode;
+
     public ConfigStreamDeliveryInfo withLastErrorCode(String lastErrorCode) {
         this.lastErrorCode = lastErrorCode;
         return this;
@@ -28,6 +29,7 @@ public class ConfigStreamDeliveryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastErrorMessage")
     public String lastErrorMessage;
+
     public ConfigStreamDeliveryInfo withLastErrorMessage(String lastErrorMessage) {
         this.lastErrorMessage = lastErrorMessage;
         return this;
@@ -36,6 +38,7 @@ public class ConfigStreamDeliveryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStatus")
     public DeliveryStatusEnum lastStatus;
+
     public ConfigStreamDeliveryInfo withLastStatus(DeliveryStatusEnum lastStatus) {
         this.lastStatus = lastStatus;
         return this;
@@ -46,9 +49,11 @@ public class ConfigStreamDeliveryInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStatusChangeTime")
     public OffsetDateTime lastStatusChangeTime;
+
     public ConfigStreamDeliveryInfo withLastStatusChangeTime(OffsetDateTime lastStatusChangeTime) {
         this.lastStatusChangeTime = lastStatusChangeTime;
         return this;
     }
     
+    public ConfigStreamDeliveryInfo(){}
 }

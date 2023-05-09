@@ -12,6 +12,7 @@ public class OBFundsConfirmation1Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBFundsConfirmation1Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -22,6 +23,7 @@ public class OBFundsConfirmation1Data {
      */
     @JsonProperty("InstructedAmount")
     public OBFundsConfirmation1DataInstructedAmount instructedAmount;
+
     public OBFundsConfirmation1Data withInstructedAmount(OBFundsConfirmation1DataInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -32,9 +34,15 @@ public class OBFundsConfirmation1Data {
      */
     @JsonProperty("Reference")
     public String reference;
+
     public OBFundsConfirmation1Data withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public OBFundsConfirmation1Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("InstructedAmount") OBFundsConfirmation1DataInstructedAmount instructedAmount, @JsonProperty("Reference") String reference) {
+        this.consentId = consentId;
+        this.instructedAmount = instructedAmount;
+        this.reference = reference;
+  }
 }

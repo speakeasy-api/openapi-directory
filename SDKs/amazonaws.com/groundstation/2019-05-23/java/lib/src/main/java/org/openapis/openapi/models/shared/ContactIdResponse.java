@@ -15,9 +15,11 @@ public class ContactIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactId")
     public String contactId;
+
     public ContactIdResponse withContactId(String contactId) {
         this.contactId = contactId;
         return this;
     }
     
+    public ContactIdResponse(){}
 }

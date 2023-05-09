@@ -18,6 +18,7 @@ public class GitSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public GitSourceContext withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -29,9 +30,11 @@ public class GitSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GitSourceContext withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GitSourceContext(){}
 }

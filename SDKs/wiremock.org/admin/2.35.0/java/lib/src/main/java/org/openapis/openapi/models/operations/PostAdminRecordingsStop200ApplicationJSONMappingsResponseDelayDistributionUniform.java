@@ -15,6 +15,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lower")
     public Long lower;
+
     public PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniform withLower(Long lower) {
         this.lower = lower;
         return this;
@@ -23,6 +24,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum type;
+
     public PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniform withType(PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upper")
     public Long upper;
+
     public PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniform withUpper(Long upper) {
         this.upper = upper;
         return this;
     }
     
+    public PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniform(){}
 }

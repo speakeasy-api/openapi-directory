@@ -19,9 +19,11 @@ public class AddGroupToCustomerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public AddGroupToCustomerResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public AddGroupToCustomerResponse(){}
 }

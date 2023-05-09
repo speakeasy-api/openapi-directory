@@ -15,6 +15,7 @@ public class ServiceCalendarViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarId")
     public String calendarId;
+
     public ServiceCalendarViewModel withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -23,6 +24,7 @@ public class ServiceCalendarViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarName")
     public String calendarName;
+
     public ServiceCalendarViewModel withCalendarName(String calendarName) {
         this.calendarName = calendarName;
         return this;
@@ -31,6 +33,7 @@ public class ServiceCalendarViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ServiceCalendarViewModel withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class ServiceCalendarViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ServiceCalendarViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -47,6 +51,7 @@ public class ServiceCalendarViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public ServiceCalendarViewModel withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -55,9 +60,11 @@ public class ServiceCalendarViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ServiceCalendarViewModel withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ServiceCalendarViewModel(){}
 }

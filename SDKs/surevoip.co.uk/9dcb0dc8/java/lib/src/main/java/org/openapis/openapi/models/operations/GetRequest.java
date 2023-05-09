@@ -12,6 +12,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content-type")
     public GetContentTypeEnum contentType;
+
     public GetRequest withContentType(GetContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -22,9 +23,11 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hypermedia")
     public GetHypermediaEnum hypermedia;
+
     public GetRequest withHypermedia(GetHypermediaEnum hypermedia) {
         this.hypermedia = hypermedia;
         return this;
     }
     
+    public GetRequest(){}
 }

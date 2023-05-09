@@ -23,6 +23,7 @@ public class CommentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public User author;
+
     public CommentReply withAuthor(User author) {
         this.author = author;
         return this;
@@ -34,6 +35,7 @@ public class CommentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public CommentReply withContent(String content) {
         this.content = content;
         return this;
@@ -47,6 +49,7 @@ public class CommentReply {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public CommentReply withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -58,6 +61,7 @@ public class CommentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public CommentReply withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -69,6 +73,7 @@ public class CommentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("htmlContent")
     public String htmlContent;
+
     public CommentReply withHtmlContent(String htmlContent) {
         this.htmlContent = htmlContent;
         return this;
@@ -80,6 +85,7 @@ public class CommentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CommentReply withKind(String kind) {
         this.kind = kind;
         return this;
@@ -93,6 +99,7 @@ public class CommentReply {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedDate")
     public OffsetDateTime modifiedDate;
+
     public CommentReply withModifiedDate(OffsetDateTime modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -104,6 +111,7 @@ public class CommentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replyId")
     public String replyId;
+
     public CommentReply withReplyId(String replyId) {
         this.replyId = replyId;
         return this;
@@ -117,9 +125,11 @@ public class CommentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verb")
     public String verb;
+
     public CommentReply withVerb(String verb) {
         this.verb = verb;
         return this;
     }
     
+    public CommentReply(){}
 }

@@ -15,6 +15,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoricalValueSpec")
     public GoogleCloudMlV1StudyConfigParameterSpecCategoricalValueSpec categoricalValueSpec;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withCategoricalValueSpec(GoogleCloudMlV1StudyConfigParameterSpecCategoricalValueSpec categoricalValueSpec) {
         this.categoricalValueSpec = categoricalValueSpec;
         return this;
@@ -26,6 +27,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childParameterSpecs")
     public GoogleCloudMlV1StudyConfigParameterSpec[] childParameterSpecs;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withChildParameterSpecs(GoogleCloudMlV1StudyConfigParameterSpec[] childParameterSpecs) {
         this.childParameterSpecs = childParameterSpecs;
         return this;
@@ -34,6 +36,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discreteValueSpec")
     public GoogleCloudMlV1StudyConfigParameterSpecDiscreteValueSpec discreteValueSpec;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withDiscreteValueSpec(GoogleCloudMlV1StudyConfigParameterSpecDiscreteValueSpec discreteValueSpec) {
         this.discreteValueSpec = discreteValueSpec;
         return this;
@@ -42,6 +45,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValueSpec")
     public GoogleCloudMlV1StudyConfigParameterSpecDoubleValueSpec doubleValueSpec;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withDoubleValueSpec(GoogleCloudMlV1StudyConfigParameterSpecDoubleValueSpec doubleValueSpec) {
         this.doubleValueSpec = doubleValueSpec;
         return this;
@@ -50,6 +54,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValueSpec")
     public GoogleCloudMlV1StudyConfigParameterSpecIntegerValueSpec integerValueSpec;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withIntegerValueSpec(GoogleCloudMlV1StudyConfigParameterSpecIntegerValueSpec integerValueSpec) {
         this.integerValueSpec = integerValueSpec;
         return this;
@@ -61,6 +66,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -72,6 +78,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentCategoricalValues")
     public GoogleCloudMlV1StudyConfigParameterSpecMatchingParentCategoricalValueSpec parentCategoricalValues;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withParentCategoricalValues(GoogleCloudMlV1StudyConfigParameterSpecMatchingParentCategoricalValueSpec parentCategoricalValues) {
         this.parentCategoricalValues = parentCategoricalValues;
         return this;
@@ -83,6 +90,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentDiscreteValues")
     public GoogleCloudMlV1StudyConfigParameterSpecMatchingParentDiscreteValueSpec parentDiscreteValues;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withParentDiscreteValues(GoogleCloudMlV1StudyConfigParameterSpecMatchingParentDiscreteValueSpec parentDiscreteValues) {
         this.parentDiscreteValues = parentDiscreteValues;
         return this;
@@ -94,6 +102,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentIntValues")
     public GoogleCloudMlV1StudyConfigParameterSpecMatchingParentIntValueSpec parentIntValues;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withParentIntValues(GoogleCloudMlV1StudyConfigParameterSpecMatchingParentIntValueSpec parentIntValues) {
         this.parentIntValues = parentIntValues;
         return this;
@@ -105,6 +114,7 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleType")
     public GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum scaleType;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withScaleType(GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum scaleType) {
         this.scaleType = scaleType;
         return this;
@@ -116,9 +126,11 @@ public class GoogleCloudMlV1StudyConfigParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudMlV1StudyConfigParameterSpecTypeEnum type;
+
     public GoogleCloudMlV1StudyConfigParameterSpec withType(GoogleCloudMlV1StudyConfigParameterSpecTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudMlV1StudyConfigParameterSpec(){}
 }

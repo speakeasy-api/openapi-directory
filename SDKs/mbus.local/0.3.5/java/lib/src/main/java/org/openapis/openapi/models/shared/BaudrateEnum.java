@@ -10,17 +10,17 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * BaudrateEnum - Baudrate to use for the communication - valid values 300, 600, 1200, 2400, 4800, 9600
  */
 public enum BaudrateEnum {
-    THREE_HUNDRED("300"),
-    SIX_HUNDRED("600"),
-    ONE_THOUSAND_TWO_HUNDRED("1200"),
-    TWO_THOUSAND_FOUR_HUNDRED("2400"),
-    FOUR_THOUSAND_EIGHT_HUNDRED("4800"),
-    NINE_THOUSAND_SIX_HUNDRED("9600");
+    THREE_HUNDRED(300),
+    SIX_HUNDRED(600),
+    ONE_THOUSAND_TWO_HUNDRED(1200),
+    TWO_THOUSAND_FOUR_HUNDRED(2400),
+    FOUR_THOUSAND_EIGHT_HUNDRED(4800),
+    NINE_THOUSAND_SIX_HUNDRED(9600);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private BaudrateEnum(String value) {
+    private BaudrateEnum(Integer value) {
         this.value = value;
     }
 }

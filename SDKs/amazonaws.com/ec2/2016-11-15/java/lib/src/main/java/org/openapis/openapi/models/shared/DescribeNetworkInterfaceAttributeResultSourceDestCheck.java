@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfaceAttributeResultSourceDestCheck {
     
     public Boolean value;
+
     public DescribeNetworkInterfaceAttributeResultSourceDestCheck withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public DescribeNetworkInterfaceAttributeResultSourceDestCheck(){}
 }

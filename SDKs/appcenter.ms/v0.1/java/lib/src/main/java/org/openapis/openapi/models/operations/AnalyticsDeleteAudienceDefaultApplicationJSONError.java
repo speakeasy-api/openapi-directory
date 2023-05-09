@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyticsDeleteAudienceDefaultApplicationJSONError {
     @JsonProperty("code")
     public AnalyticsDeleteAudienceDefaultApplicationJSONErrorCodeEnum code;
+
     public AnalyticsDeleteAudienceDefaultApplicationJSONError withCode(AnalyticsDeleteAudienceDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class AnalyticsDeleteAudienceDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public AnalyticsDeleteAudienceDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AnalyticsDeleteAudienceDefaultApplicationJSONError(@JsonProperty("code") AnalyticsDeleteAudienceDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -15,6 +15,7 @@ public class Volumeseriesinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookDisplayNumber")
     public String bookDisplayNumber;
+
     public Volumeseriesinfo withBookDisplayNumber(String bookDisplayNumber) {
         this.bookDisplayNumber = bookDisplayNumber;
         return this;
@@ -26,6 +27,7 @@ public class Volumeseriesinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Volumeseriesinfo withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,6 +39,7 @@ public class Volumeseriesinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortSeriesBookTitle")
     public String shortSeriesBookTitle;
+
     public Volumeseriesinfo withShortSeriesBookTitle(String shortSeriesBookTitle) {
         this.shortSeriesBookTitle = shortSeriesBookTitle;
         return this;
@@ -45,9 +48,11 @@ public class Volumeseriesinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeSeries")
     public VolumeseriesinfoVolumeSeries[] volumeSeries;
+
     public Volumeseriesinfo withVolumeSeries(VolumeseriesinfoVolumeSeries[] volumeSeries) {
         this.volumeSeries = volumeSeries;
         return this;
     }
     
+    public Volumeseriesinfo(){}
 }

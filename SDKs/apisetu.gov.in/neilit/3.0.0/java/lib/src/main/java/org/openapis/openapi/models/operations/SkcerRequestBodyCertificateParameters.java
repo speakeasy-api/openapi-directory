@@ -12,6 +12,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SkcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SkcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,9 +34,15 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public SkcerRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
     }
     
+    public SkcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("UDF1") String udf1) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.udf1 = udf1;
+  }
 }

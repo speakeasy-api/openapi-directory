@@ -15,9 +15,11 @@ public class AutoMLResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestRecipeArn")
     public String bestRecipeArn;
+
     public AutoMLResult withBestRecipeArn(String bestRecipeArn) {
         this.bestRecipeArn = bestRecipeArn;
         return this;
     }
     
+    public AutoMLResult(){}
 }

@@ -14,6 +14,7 @@ public class CreateIntegrationWorkflowRequestBody {
      */
     @JsonProperty("IntegrationConfig")
     public CreateIntegrationWorkflowRequestBodyIntegrationConfig integrationConfig;
+
     public CreateIntegrationWorkflowRequestBody withIntegrationConfig(CreateIntegrationWorkflowRequestBodyIntegrationConfig integrationConfig) {
         this.integrationConfig = integrationConfig;
         return this;
@@ -24,6 +25,7 @@ public class CreateIntegrationWorkflowRequestBody {
      */
     @JsonProperty("ObjectTypeName")
     public String objectTypeName;
+
     public CreateIntegrationWorkflowRequestBody withObjectTypeName(String objectTypeName) {
         this.objectTypeName = objectTypeName;
         return this;
@@ -34,6 +36,7 @@ public class CreateIntegrationWorkflowRequestBody {
      */
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateIntegrationWorkflowRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -45,6 +48,7 @@ public class CreateIntegrationWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateIntegrationWorkflowRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -55,9 +59,16 @@ public class CreateIntegrationWorkflowRequestBody {
      */
     @JsonProperty("WorkflowType")
     public CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum workflowType;
+
     public CreateIntegrationWorkflowRequestBody withWorkflowType(CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public CreateIntegrationWorkflowRequestBody(@JsonProperty("IntegrationConfig") CreateIntegrationWorkflowRequestBodyIntegrationConfig integrationConfig, @JsonProperty("ObjectTypeName") String objectTypeName, @JsonProperty("RoleArn") String roleArn, @JsonProperty("WorkflowType") CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum workflowType) {
+        this.integrationConfig = integrationConfig;
+        this.objectTypeName = objectTypeName;
+        this.roleArn = roleArn;
+        this.workflowType = workflowType;
+  }
 }

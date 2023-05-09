@@ -12,6 +12,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drives")
     public Long drives;
+
     public LivePlayByPlayTeams withDrives(Long drives) {
         this.drives = drives;
         return this;
@@ -20,6 +21,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epaPerPass")
     public Double epaPerPass;
+
     public LivePlayByPlayTeams withEpaPerPass(Double epaPerPass) {
         this.epaPerPass = epaPerPass;
         return this;
@@ -28,6 +30,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epaPerPlay")
     public Double epaPerPlay;
+
     public LivePlayByPlayTeams withEpaPerPlay(Double epaPerPlay) {
         this.epaPerPlay = epaPerPlay;
         return this;
@@ -36,6 +39,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epaPerRush")
     public Double epaPerRush;
+
     public LivePlayByPlayTeams withEpaPerRush(Double epaPerRush) {
         this.epaPerRush = epaPerRush;
         return this;
@@ -44,6 +48,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explosiveness")
     public Double explosiveness;
+
     public LivePlayByPlayTeams withExplosiveness(Double explosiveness) {
         this.explosiveness = explosiveness;
         return this;
@@ -52,6 +57,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeAway")
     public String homeAway;
+
     public LivePlayByPlayTeams withHomeAway(String homeAway) {
         this.homeAway = homeAway;
         return this;
@@ -60,6 +66,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineYards")
     public Long lineYards;
+
     public LivePlayByPlayTeams withLineYards(Long lineYards) {
         this.lineYards = lineYards;
         return this;
@@ -68,6 +75,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineYardsPerRush")
     public Double lineYardsPerRush;
+
     public LivePlayByPlayTeams withLineYardsPerRush(Double lineYardsPerRush) {
         this.lineYardsPerRush = lineYardsPerRush;
         return this;
@@ -76,6 +84,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openFieldYards")
     public Long openFieldYards;
+
     public LivePlayByPlayTeams withOpenFieldYards(Long openFieldYards) {
         this.openFieldYards = openFieldYards;
         return this;
@@ -84,6 +93,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openFieldYardsPerRush")
     public Double openFieldYardsPerRush;
+
     public LivePlayByPlayTeams withOpenFieldYardsPerRush(Double openFieldYardsPerRush) {
         this.openFieldYardsPerRush = openFieldYardsPerRush;
         return this;
@@ -92,6 +102,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingDownSuccessRate")
     public Double passingDownSuccessRate;
+
     public LivePlayByPlayTeams withPassingDownSuccessRate(Double passingDownSuccessRate) {
         this.passingDownSuccessRate = passingDownSuccessRate;
         return this;
@@ -100,6 +111,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingEpa")
     public Double passingEpa;
+
     public LivePlayByPlayTeams withPassingEpa(Double passingEpa) {
         this.passingEpa = passingEpa;
         return this;
@@ -108,6 +120,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plays")
     public Long plays;
+
     public LivePlayByPlayTeams withPlays(Long plays) {
         this.plays = plays;
         return this;
@@ -116,6 +129,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Long points;
+
     public LivePlayByPlayTeams withPoints(Long points) {
         this.points = points;
         return this;
@@ -124,6 +138,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointsPerOpportunity")
     public Double pointsPerOpportunity;
+
     public LivePlayByPlayTeams withPointsPerOpportunity(Double pointsPerOpportunity) {
         this.pointsPerOpportunity = pointsPerOpportunity;
         return this;
@@ -132,6 +147,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushingEpa")
     public Double rushingEpa;
+
     public LivePlayByPlayTeams withRushingEpa(Double rushingEpa) {
         this.rushingEpa = rushingEpa;
         return this;
@@ -140,6 +156,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoringOpportunities")
     public Long scoringOpportunities;
+
     public LivePlayByPlayTeams withScoringOpportunities(Long scoringOpportunities) {
         this.scoringOpportunities = scoringOpportunities;
         return this;
@@ -148,6 +165,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondLevelYards")
     public Long secondLevelYards;
+
     public LivePlayByPlayTeams withSecondLevelYards(Long secondLevelYards) {
         this.secondLevelYards = secondLevelYards;
         return this;
@@ -156,6 +174,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondLevelYardsPerRush")
     public Double secondLevelYardsPerRush;
+
     public LivePlayByPlayTeams withSecondLevelYardsPerRush(Double secondLevelYardsPerRush) {
         this.secondLevelYardsPerRush = secondLevelYardsPerRush;
         return this;
@@ -164,6 +183,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDownSuccessRate")
     public Double standardDownSuccessRate;
+
     public LivePlayByPlayTeams withStandardDownSuccessRate(Double standardDownSuccessRate) {
         this.standardDownSuccessRate = standardDownSuccessRate;
         return this;
@@ -172,6 +192,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successRate")
     public Double successRate;
+
     public LivePlayByPlayTeams withSuccessRate(Double successRate) {
         this.successRate = successRate;
         return this;
@@ -180,6 +201,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public LivePlayByPlayTeams withTeam(String team) {
         this.team = team;
         return this;
@@ -188,6 +210,7 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamId")
     public Long teamId;
+
     public LivePlayByPlayTeams withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -196,9 +219,11 @@ public class LivePlayByPlayTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalEpa")
     public Double totalEpa;
+
     public LivePlayByPlayTeams withTotalEpa(Double totalEpa) {
         this.totalEpa = totalEpa;
         return this;
     }
     
+    public LivePlayByPlayTeams(){}
 }

@@ -18,6 +18,7 @@ public class AgentTaskInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runnable")
     public String runnable;
+
     public AgentTaskInfo withRunnable(String runnable) {
         this.runnable = runnable;
         return this;
@@ -29,6 +30,7 @@ public class AgentTaskInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public AgentTaskInfo withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -40,9 +42,11 @@ public class AgentTaskInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatus")
     public TaskStatus taskStatus;
+
     public AgentTaskInfo withTaskStatus(TaskStatus taskStatus) {
         this.taskStatus = taskStatus;
         return this;
     }
     
+    public AgentTaskInfo(){}
 }

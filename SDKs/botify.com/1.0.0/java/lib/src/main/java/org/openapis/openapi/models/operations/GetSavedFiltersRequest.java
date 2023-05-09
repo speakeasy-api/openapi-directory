@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSavedFiltersRequest {
@@ -12,6 +13,7 @@ public class GetSavedFiltersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSavedFiltersRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class GetSavedFiltersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetSavedFiltersRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -32,6 +35,7 @@ public class GetSavedFiltersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetSavedFiltersRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -42,9 +46,14 @@ public class GetSavedFiltersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetSavedFiltersRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetSavedFiltersRequest(@JsonProperty("project_slug") String projectSlug, @JsonProperty("username") String username) {
+        this.projectSlug = projectSlug;
+        this.username = username;
+  }
 }

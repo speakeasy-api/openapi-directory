@@ -18,6 +18,7 @@ public class GroupRegion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public GroupRegion withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -29,9 +30,11 @@ public class GroupRegion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GroupRegion withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GroupRegion(){}
 }

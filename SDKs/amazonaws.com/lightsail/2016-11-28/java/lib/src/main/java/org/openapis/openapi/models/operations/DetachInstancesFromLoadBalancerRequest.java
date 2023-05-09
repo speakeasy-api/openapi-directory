@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetachInstancesFromLoadBalancerRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DetachInstancesFromLoadBalancerRequest detachInstancesFromLoadBalancerRequest;
+
     public DetachInstancesFromLoadBalancerRequest withDetachInstancesFromLoadBalancerRequest(org.openapis.openapi.models.shared.DetachInstancesFromLoadBalancerRequest detachInstancesFromLoadBalancerRequest) {
         this.detachInstancesFromLoadBalancerRequest = detachInstancesFromLoadBalancerRequest;
         return this;
@@ -16,6 +18,7 @@ public class DetachInstancesFromLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DetachInstancesFromLoadBalancerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DetachInstancesFromLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DetachInstancesFromLoadBalancerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DetachInstancesFromLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DetachInstancesFromLoadBalancerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DetachInstancesFromLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DetachInstancesFromLoadBalancerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DetachInstancesFromLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DetachInstancesFromLoadBalancerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DetachInstancesFromLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DetachInstancesFromLoadBalancerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DetachInstancesFromLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DetachInstancesFromLoadBalancerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DetachInstancesFromLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DetachInstancesFromLoadBalancerXAmzTargetEnum xAmzTarget;
+
     public DetachInstancesFromLoadBalancerRequest withXAmzTarget(DetachInstancesFromLoadBalancerXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DetachInstancesFromLoadBalancerRequest(@JsonProperty("DetachInstancesFromLoadBalancerRequest") org.openapis.openapi.models.shared.DetachInstancesFromLoadBalancerRequest detachInstancesFromLoadBalancerRequest, @JsonProperty("X-Amz-Target") DetachInstancesFromLoadBalancerXAmzTargetEnum xAmzTarget) {
+        this.detachInstancesFromLoadBalancerRequest = detachInstancesFromLoadBalancerRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

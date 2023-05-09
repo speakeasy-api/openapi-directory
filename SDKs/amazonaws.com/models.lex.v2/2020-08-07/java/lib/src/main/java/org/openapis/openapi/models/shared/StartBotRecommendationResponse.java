@@ -20,6 +20,7 @@ public class StartBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public StartBotRecommendationResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class StartBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationId")
     public String botRecommendationId;
+
     public StartBotRecommendationResponse withBotRecommendationId(String botRecommendationId) {
         this.botRecommendationId = botRecommendationId;
         return this;
@@ -36,6 +38,7 @@ public class StartBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationStatus")
     public BotRecommendationStatusEnum botRecommendationStatus;
+
     public StartBotRecommendationResponse withBotRecommendationStatus(BotRecommendationStatusEnum botRecommendationStatus) {
         this.botRecommendationStatus = botRecommendationStatus;
         return this;
@@ -44,6 +47,7 @@ public class StartBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public StartBotRecommendationResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -54,6 +58,7 @@ public class StartBotRecommendationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public StartBotRecommendationResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -62,6 +67,7 @@ public class StartBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionSetting")
     public EncryptionSetting encryptionSetting;
+
     public StartBotRecommendationResponse withEncryptionSetting(EncryptionSetting encryptionSetting) {
         this.encryptionSetting = encryptionSetting;
         return this;
@@ -70,6 +76,7 @@ public class StartBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public StartBotRecommendationResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -78,9 +85,11 @@ public class StartBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcriptSourceSetting")
     public TranscriptSourceSetting transcriptSourceSetting;
+
     public StartBotRecommendationResponse withTranscriptSourceSetting(TranscriptSourceSetting transcriptSourceSetting) {
         this.transcriptSourceSetting = transcriptSourceSetting;
         return this;
     }
     
+    public StartBotRecommendationResponse(){}
 }

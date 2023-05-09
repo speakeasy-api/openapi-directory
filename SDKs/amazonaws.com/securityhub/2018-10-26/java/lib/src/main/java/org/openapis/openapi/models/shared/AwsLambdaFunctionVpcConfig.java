@@ -15,6 +15,7 @@ public class AwsLambdaFunctionVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public AwsLambdaFunctionVpcConfig withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,6 +24,7 @@ public class AwsLambdaFunctionVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public AwsLambdaFunctionVpcConfig withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -31,9 +33,11 @@ public class AwsLambdaFunctionVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsLambdaFunctionVpcConfig withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsLambdaFunctionVpcConfig(){}
 }

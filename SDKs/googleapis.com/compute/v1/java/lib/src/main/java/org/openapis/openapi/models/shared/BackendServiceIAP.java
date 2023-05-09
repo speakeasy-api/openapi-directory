@@ -18,6 +18,7 @@ public class BackendServiceIAP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BackendServiceIAP withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class BackendServiceIAP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2ClientId")
     public String oauth2ClientId;
+
     public BackendServiceIAP withOauth2ClientId(String oauth2ClientId) {
         this.oauth2ClientId = oauth2ClientId;
         return this;
@@ -40,6 +42,7 @@ public class BackendServiceIAP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2ClientSecret")
     public String oauth2ClientSecret;
+
     public BackendServiceIAP withOauth2ClientSecret(String oauth2ClientSecret) {
         this.oauth2ClientSecret = oauth2ClientSecret;
         return this;
@@ -51,9 +54,11 @@ public class BackendServiceIAP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2ClientSecretSha256")
     public String oauth2ClientSecretSha256;
+
     public BackendServiceIAP withOauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
         this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
         return this;
     }
     
+    public BackendServiceIAP(){}
 }

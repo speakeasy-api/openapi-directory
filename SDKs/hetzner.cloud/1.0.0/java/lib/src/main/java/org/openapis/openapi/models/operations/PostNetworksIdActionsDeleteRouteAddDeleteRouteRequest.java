@@ -12,6 +12,7 @@ public class PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest {
      */
     @JsonProperty("destination")
     public String destination;
+
     public PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -22,9 +23,14 @@ public class PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest {
      */
     @JsonProperty("gateway")
     public String gateway;
+
     public PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest withGateway(String gateway) {
         this.gateway = gateway;
         return this;
     }
     
+    public PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest(@JsonProperty("destination") String destination, @JsonProperty("gateway") String gateway) {
+        this.destination = destination;
+        this.gateway = gateway;
+  }
 }

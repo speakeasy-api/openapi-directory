@@ -15,6 +15,7 @@ public class SearchEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptions")
     public EntityDescription[] descriptions;
+
     public SearchEntitiesResponse withDescriptions(EntityDescription[] descriptions) {
         this.descriptions = descriptions;
         return this;
@@ -23,9 +24,11 @@ public class SearchEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchEntitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchEntitiesResponse(){}
 }

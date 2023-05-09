@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetFormatEnum;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
@@ -27,30 +26,30 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
-                format = "xml";
-                ip = "provident";
-                key = "distinctio";
+            GetRequest req = new GetRequest("corrupti", "provident") {{
+                format = GetFormatEnum.XML;
                 package_ = "quibusdam";
-            }}            
+            }};            
 
             GetResponse res = sdk.get(req);
 
-            if (res.get200TextHTMLString.isPresent()) {
+            if (res.get200TextHTMLString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `get` - Check if an IP address is proxy
+* [get](docs/sdk/README.md#get) - Check if an IP address is proxy
 <!-- End SDK Available Operations -->
 
 ### Maturity

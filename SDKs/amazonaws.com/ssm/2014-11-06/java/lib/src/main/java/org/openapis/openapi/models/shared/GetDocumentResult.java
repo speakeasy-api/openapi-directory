@@ -20,6 +20,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachmentsContent")
     public AttachmentContent[] attachmentsContent;
+
     public GetDocumentResult withAttachmentsContent(AttachmentContent[] attachmentsContent) {
         this.attachmentsContent = attachmentsContent;
         return this;
@@ -28,6 +29,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public GetDocumentResult withContent(String content) {
         this.content = content;
         return this;
@@ -38,6 +40,7 @@ public class GetDocumentResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public GetDocumentResult withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -46,6 +49,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public GetDocumentResult withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -54,6 +58,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentFormat")
     public DocumentFormatEnum documentFormat;
+
     public GetDocumentResult withDocumentFormat(DocumentFormatEnum documentFormat) {
         this.documentFormat = documentFormat;
         return this;
@@ -62,6 +67,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public DocumentTypeEnum documentType;
+
     public GetDocumentResult withDocumentType(DocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -70,6 +76,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public GetDocumentResult withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -78,6 +85,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetDocumentResult withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Requires")
     public DocumentRequires[] requires;
+
     public GetDocumentResult withRequires(DocumentRequires[] requires) {
         this.requires = requires;
         return this;
@@ -94,6 +103,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewStatus")
     public ReviewStatusEnum reviewStatus;
+
     public GetDocumentResult withReviewStatus(ReviewStatusEnum reviewStatus) {
         this.reviewStatus = reviewStatus;
         return this;
@@ -102,6 +112,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DocumentStatusEnum status;
+
     public GetDocumentResult withStatus(DocumentStatusEnum status) {
         this.status = status;
         return this;
@@ -110,6 +121,7 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusInformation")
     public String statusInformation;
+
     public GetDocumentResult withStatusInformation(String statusInformation) {
         this.statusInformation = statusInformation;
         return this;
@@ -118,9 +130,11 @@ public class GetDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public GetDocumentResult withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public GetDocumentResult(){}
 }

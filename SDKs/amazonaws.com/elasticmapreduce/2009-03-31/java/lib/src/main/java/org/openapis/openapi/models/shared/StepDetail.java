@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StepDetail {
     @JsonProperty("ExecutionStatusDetail")
     public StepExecutionStatusDetail executionStatusDetail;
+
     public StepDetail withExecutionStatusDetail(StepExecutionStatusDetail executionStatusDetail) {
         this.executionStatusDetail = executionStatusDetail;
         return this;
@@ -19,9 +20,14 @@ public class StepDetail {
     
     @JsonProperty("StepConfig")
     public StepConfig stepConfig;
+
     public StepDetail withStepConfig(StepConfig stepConfig) {
         this.stepConfig = stepConfig;
         return this;
     }
     
+    public StepDetail(@JsonProperty("ExecutionStatusDetail") StepExecutionStatusDetail executionStatusDetail, @JsonProperty("StepConfig") StepConfig stepConfig) {
+        this.executionStatusDetail = executionStatusDetail;
+        this.stepConfig = stepConfig;
+  }
 }

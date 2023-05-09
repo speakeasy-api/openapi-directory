@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppengineAppsAuthorizedDomainsListResponse {
     
     public String contentType;
+
     public AppengineAppsAuthorizedDomainsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsAuthorizedDomainsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAuthorizedDomainsResponse listAuthorizedDomainsResponse;
+
     public AppengineAppsAuthorizedDomainsListResponse withListAuthorizedDomainsResponse(org.openapis.openapi.models.shared.ListAuthorizedDomainsResponse listAuthorizedDomainsResponse) {
         this.listAuthorizedDomainsResponse = listAuthorizedDomainsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AppengineAppsAuthorizedDomainsListResponse {
     
     
     public Integer statusCode;
+
     public AppengineAppsAuthorizedDomainsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AppengineAppsAuthorizedDomainsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppengineAppsAuthorizedDomainsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AppengineAppsAuthorizedDomainsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

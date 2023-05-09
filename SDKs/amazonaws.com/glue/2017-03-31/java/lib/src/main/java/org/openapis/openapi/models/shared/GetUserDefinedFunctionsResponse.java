@@ -15,6 +15,7 @@ public class GetUserDefinedFunctionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetUserDefinedFunctionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetUserDefinedFunctionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserDefinedFunctions")
     public UserDefinedFunction[] userDefinedFunctions;
+
     public GetUserDefinedFunctionsResponse withUserDefinedFunctions(UserDefinedFunction[] userDefinedFunctions) {
         this.userDefinedFunctions = userDefinedFunctions;
         return this;
     }
     
+    public GetUserDefinedFunctionsResponse(){}
 }

@@ -18,9 +18,11 @@ public class ParentalStatusAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentalStatus")
     public ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum parentalStatus;
+
     public ParentalStatusAssignedTargetingOptionDetails withParentalStatus(ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum parentalStatus) {
         this.parentalStatus = parentalStatus;
         return this;
     }
     
+    public ParentalStatusAssignedTargetingOptionDetails(){}
 }

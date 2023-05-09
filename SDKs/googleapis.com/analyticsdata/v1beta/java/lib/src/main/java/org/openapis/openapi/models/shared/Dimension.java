@@ -18,6 +18,7 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionExpression")
     public DimensionExpression dimensionExpression;
+
     public Dimension withDimensionExpression(DimensionExpression dimensionExpression) {
         this.dimensionExpression = dimensionExpression;
         return this;
@@ -29,9 +30,11 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Dimension withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Dimension(){}
 }

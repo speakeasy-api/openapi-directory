@@ -15,6 +15,7 @@ public class OAuthConfigSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeOAuthOutputSpecification")
     public Object completeOAuthOutputSpecification;
+
     public OAuthConfigSpecification withCompleteOAuthOutputSpecification(Object completeOAuthOutputSpecification) {
         this.completeOAuthOutputSpecification = completeOAuthOutputSpecification;
         return this;
@@ -26,6 +27,7 @@ public class OAuthConfigSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeOAuthServerInputSpecification")
     public Object completeOAuthServerInputSpecification;
+
     public OAuthConfigSpecification withCompleteOAuthServerInputSpecification(Object completeOAuthServerInputSpecification) {
         this.completeOAuthServerInputSpecification = completeOAuthServerInputSpecification;
         return this;
@@ -37,6 +39,7 @@ public class OAuthConfigSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeOAuthServerOutputSpecification")
     public Object completeOAuthServerOutputSpecification;
+
     public OAuthConfigSpecification withCompleteOAuthServerOutputSpecification(Object completeOAuthServerOutputSpecification) {
         this.completeOAuthServerOutputSpecification = completeOAuthServerOutputSpecification;
         return this;
@@ -48,9 +51,11 @@ public class OAuthConfigSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauthUserInputFromConnectorConfigSpecification")
     public Object oauthUserInputFromConnectorConfigSpecification;
+
     public OAuthConfigSpecification withOauthUserInputFromConnectorConfigSpecification(Object oauthUserInputFromConnectorConfigSpecification) {
         this.oauthUserInputFromConnectorConfigSpecification = oauthUserInputFromConnectorConfigSpecification;
         return this;
     }
     
+    public OAuthConfigSpecification(){}
 }

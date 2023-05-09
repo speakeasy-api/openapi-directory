@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest {
@@ -12,6 +13,7 @@ public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -22,6 +24,7 @@ public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum format;
+
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withFormat(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=maxLat")
     public Double maxLat;
+
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withMaxLat(Double maxLat) {
         this.maxLat = maxLat;
         return this;
@@ -42,6 +46,7 @@ public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=maxLon")
     public Double maxLon;
+
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withMaxLon(Double maxLon) {
         this.maxLon = maxLon;
         return this;
@@ -52,6 +57,7 @@ public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minLat")
     public Double minLat;
+
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withMinLat(Double minLat) {
         this.minLat = minLat;
         return this;
@@ -62,6 +68,7 @@ public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minLon")
     public Double minLon;
+
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withMinLon(Double minLon) {
         this.minLon = minLon;
         return this;
@@ -72,9 +79,18 @@ public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum versionNumber;
+
     public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withVersionNumber(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest(@JsonProperty("format") GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum format, @JsonProperty("maxLat") Double maxLat, @JsonProperty("maxLon") Double maxLon, @JsonProperty("minLat") Double minLat, @JsonProperty("minLon") Double minLon, @JsonProperty("versionNumber") GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum versionNumber) {
+        this.format = format;
+        this.maxLat = maxLat;
+        this.maxLon = maxLon;
+        this.minLat = minLat;
+        this.minLon = minLon;
+        this.versionNumber = versionNumber;
+  }
 }

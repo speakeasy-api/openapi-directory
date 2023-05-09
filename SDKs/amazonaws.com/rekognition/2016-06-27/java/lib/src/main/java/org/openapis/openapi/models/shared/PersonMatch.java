@@ -15,6 +15,7 @@ public class PersonMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceMatches")
     public FaceMatch[] faceMatches;
+
     public PersonMatch withFaceMatches(FaceMatch[] faceMatches) {
         this.faceMatches = faceMatches;
         return this;
@@ -23,6 +24,7 @@ public class PersonMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Person")
     public PersonDetail person;
+
     public PersonMatch withPerson(PersonDetail person) {
         this.person = person;
         return this;
@@ -31,9 +33,11 @@ public class PersonMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public Long timestamp;
+
     public PersonMatch withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PersonMatch(){}
 }

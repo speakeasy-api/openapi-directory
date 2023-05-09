@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResolverQueryLogConfigResponse {
@@ -12,6 +13,7 @@ public class DeleteResolverQueryLogConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteResolverQueryLogConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResolverQueryLogConfigResponse {
     
     
     public String contentType;
+
     public DeleteResolverQueryLogConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResolverQueryLogConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteResolverQueryLogConfigResponse deleteResolverQueryLogConfigResponse;
+
     public DeleteResolverQueryLogConfigResponse withDeleteResolverQueryLogConfigResponse(org.openapis.openapi.models.shared.DeleteResolverQueryLogConfigResponse deleteResolverQueryLogConfigResponse) {
         this.deleteResolverQueryLogConfigResponse = deleteResolverQueryLogConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResolverQueryLogConfigResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteResolverQueryLogConfigResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResolverQueryLogConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteResolverQueryLogConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteResolverQueryLogConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteResolverQueryLogConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteResolverQueryLogConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteResolverQueryLogConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteResolverQueryLogConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteResolverQueryLogConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteResolverQueryLogConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResolverQueryLogConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DeleteResolverQueryLogConfigResponse {
      */
     
     public Object throttlingException;
+
     public DeleteResolverQueryLogConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteResolverQueryLogConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

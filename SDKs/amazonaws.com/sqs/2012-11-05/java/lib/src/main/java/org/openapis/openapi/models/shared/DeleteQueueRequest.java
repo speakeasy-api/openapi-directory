@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteQueueRequest - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteQueueRequest {
     
     public String queueUrl;
+
     public DeleteQueueRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public DeleteQueueRequest(@JsonProperty("QueueUrl") String queueUrl) {
+        this.queueUrl = queueUrl;
+  }
 }

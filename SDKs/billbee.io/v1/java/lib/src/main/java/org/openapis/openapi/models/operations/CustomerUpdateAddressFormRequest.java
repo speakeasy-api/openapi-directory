@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerUpdateAddressFormRequest {
@@ -12,6 +13,7 @@ public class CustomerUpdateAddressFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+
     public CustomerUpdateAddressFormRequest withBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel) {
         this.billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
         return this;
@@ -22,9 +24,14 @@ public class CustomerUpdateAddressFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public CustomerUpdateAddressFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public CustomerUpdateAddressFormRequest(@JsonProperty("Billbee.Interfaces.BillbeeAPI.Model.CustomerAddressApiModel") org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel, @JsonProperty("id") Long id) {
+        this.billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+        this.id = id;
+  }
 }

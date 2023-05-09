@@ -12,6 +12,7 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetProfileRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,11 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public String service;
+
     public GetProfileRequest withService(String service) {
         this.service = service;
         return this;
     }
     
+    public GetProfileRequest(){}
 }

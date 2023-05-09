@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DeferredMaintenanceWindowsList {
     
     public OffsetDateTime deferMaintenanceEndTime;
+
     public DeferredMaintenanceWindowsList withDeferMaintenanceEndTime(OffsetDateTime deferMaintenanceEndTime) {
         this.deferMaintenanceEndTime = deferMaintenanceEndTime;
         return this;
@@ -19,6 +20,7 @@ public class DeferredMaintenanceWindowsList {
     
     
     public String deferMaintenanceIdentifier;
+
     public DeferredMaintenanceWindowsList withDeferMaintenanceIdentifier(String deferMaintenanceIdentifier) {
         this.deferMaintenanceIdentifier = deferMaintenanceIdentifier;
         return this;
@@ -26,9 +28,11 @@ public class DeferredMaintenanceWindowsList {
     
     
     public OffsetDateTime deferMaintenanceStartTime;
+
     public DeferredMaintenanceWindowsList withDeferMaintenanceStartTime(OffsetDateTime deferMaintenanceStartTime) {
         this.deferMaintenanceStartTime = deferMaintenanceStartTime;
         return this;
     }
     
+    public DeferredMaintenanceWindowsList(){}
 }

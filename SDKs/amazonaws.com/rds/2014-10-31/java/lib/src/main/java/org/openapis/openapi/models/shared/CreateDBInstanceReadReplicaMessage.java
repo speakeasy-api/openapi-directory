@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBInstanceReadReplicaMessage {
     
     public Long allocatedStorage;
+
     public CreateDBInstanceReadReplicaMessage withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public CreateDBInstanceReadReplicaMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -23,6 +25,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String availabilityZone;
+
     public CreateDBInstanceReadReplicaMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -30,6 +33,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean copyTagsToSnapshot;
+
     public CreateDBInstanceReadReplicaMessage withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -37,6 +41,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String customIamInstanceProfile;
+
     public CreateDBInstanceReadReplicaMessage withCustomIamInstanceProfile(String customIamInstanceProfile) {
         this.customIamInstanceProfile = customIamInstanceProfile;
         return this;
@@ -44,6 +49,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String dbInstanceClass;
+
     public CreateDBInstanceReadReplicaMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -51,6 +57,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String dbInstanceIdentifier;
+
     public CreateDBInstanceReadReplicaMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -58,6 +65,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String dbParameterGroupName;
+
     public CreateDBInstanceReadReplicaMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -65,6 +73,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String dbSubnetGroupName;
+
     public CreateDBInstanceReadReplicaMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -72,6 +81,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean deletionProtection;
+
     public CreateDBInstanceReadReplicaMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -79,6 +89,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String domain;
+
     public CreateDBInstanceReadReplicaMessage withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -86,6 +97,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String domainIAMRoleName;
+
     public CreateDBInstanceReadReplicaMessage withDomainIAMRoleName(String domainIAMRoleName) {
         this.domainIAMRoleName = domainIAMRoleName;
         return this;
@@ -93,6 +105,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String[] enableCloudwatchLogsExports;
+
     public CreateDBInstanceReadReplicaMessage withEnableCloudwatchLogsExports(String[] enableCloudwatchLogsExports) {
         this.enableCloudwatchLogsExports = enableCloudwatchLogsExports;
         return this;
@@ -100,6 +113,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean enableCustomerOwnedIp;
+
     public CreateDBInstanceReadReplicaMessage withEnableCustomerOwnedIp(Boolean enableCustomerOwnedIp) {
         this.enableCustomerOwnedIp = enableCustomerOwnedIp;
         return this;
@@ -107,6 +121,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public CreateDBInstanceReadReplicaMessage withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -114,6 +129,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean enablePerformanceInsights;
+
     public CreateDBInstanceReadReplicaMessage withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
@@ -121,6 +137,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Long iops;
+
     public CreateDBInstanceReadReplicaMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -128,6 +145,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String kmsKeyId;
+
     public CreateDBInstanceReadReplicaMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -135,6 +153,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Long maxAllocatedStorage;
+
     public CreateDBInstanceReadReplicaMessage withMaxAllocatedStorage(Long maxAllocatedStorage) {
         this.maxAllocatedStorage = maxAllocatedStorage;
         return this;
@@ -142,6 +161,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Long monitoringInterval;
+
     public CreateDBInstanceReadReplicaMessage withMonitoringInterval(Long monitoringInterval) {
         this.monitoringInterval = monitoringInterval;
         return this;
@@ -149,6 +169,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String monitoringRoleArn;
+
     public CreateDBInstanceReadReplicaMessage withMonitoringRoleArn(String monitoringRoleArn) {
         this.monitoringRoleArn = monitoringRoleArn;
         return this;
@@ -156,6 +177,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean multiAZ;
+
     public CreateDBInstanceReadReplicaMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -163,6 +185,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String networkType;
+
     public CreateDBInstanceReadReplicaMessage withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -170,6 +193,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String optionGroupName;
+
     public CreateDBInstanceReadReplicaMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -177,6 +201,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String performanceInsightsKMSKeyId;
+
     public CreateDBInstanceReadReplicaMessage withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -184,6 +209,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Long performanceInsightsRetentionPeriod;
+
     public CreateDBInstanceReadReplicaMessage withPerformanceInsightsRetentionPeriod(Long performanceInsightsRetentionPeriod) {
         this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
         return this;
@@ -191,6 +217,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Long port;
+
     public CreateDBInstanceReadReplicaMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -198,6 +225,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String preSignedUrl;
+
     public CreateDBInstanceReadReplicaMessage withPreSignedUrl(String preSignedUrl) {
         this.preSignedUrl = preSignedUrl;
         return this;
@@ -205,6 +233,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public ProcessorFeatureList[] processorFeatures;
+
     public CreateDBInstanceReadReplicaMessage withProcessorFeatures(ProcessorFeatureList[] processorFeatures) {
         this.processorFeatures = processorFeatures;
         return this;
@@ -212,6 +241,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean publiclyAccessible;
+
     public CreateDBInstanceReadReplicaMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -219,6 +249,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public ReplicaModeEnum replicaMode;
+
     public CreateDBInstanceReadReplicaMessage withReplicaMode(ReplicaModeEnum replicaMode) {
         this.replicaMode = replicaMode;
         return this;
@@ -226,6 +257,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String sourceDBClusterIdentifier;
+
     public CreateDBInstanceReadReplicaMessage withSourceDBClusterIdentifier(String sourceDBClusterIdentifier) {
         this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
         return this;
@@ -233,6 +265,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String sourceDBInstanceIdentifier;
+
     public CreateDBInstanceReadReplicaMessage withSourceDBInstanceIdentifier(String sourceDBInstanceIdentifier) {
         this.sourceDBInstanceIdentifier = sourceDBInstanceIdentifier;
         return this;
@@ -240,6 +273,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String sourceRegion;
+
     public CreateDBInstanceReadReplicaMessage withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -247,6 +281,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Long storageThroughput;
+
     public CreateDBInstanceReadReplicaMessage withStorageThroughput(Long storageThroughput) {
         this.storageThroughput = storageThroughput;
         return this;
@@ -254,6 +289,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String storageType;
+
     public CreateDBInstanceReadReplicaMessage withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -264,6 +300,7 @@ public class CreateDBInstanceReadReplicaMessage {
      */
     
     public TagList[] tags;
+
     public CreateDBInstanceReadReplicaMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -271,6 +308,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean useDefaultProcessorFeatures;
+
     public CreateDBInstanceReadReplicaMessage withUseDefaultProcessorFeatures(Boolean useDefaultProcessorFeatures) {
         this.useDefaultProcessorFeatures = useDefaultProcessorFeatures;
         return this;
@@ -278,9 +316,13 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public CreateDBInstanceReadReplicaMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public CreateDBInstanceReadReplicaMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

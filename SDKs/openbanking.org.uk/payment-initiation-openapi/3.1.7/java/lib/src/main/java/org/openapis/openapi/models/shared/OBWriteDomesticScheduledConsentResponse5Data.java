@@ -20,6 +20,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteDomesticScheduledConsentResponse5DataAuthorisation authorisation;
+
     public OBWriteDomesticScheduledConsentResponse5Data withAuthorisation(OBWriteDomesticScheduledConsentResponse5DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -28,6 +29,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteDomesticScheduledConsentResponse5DataCharges[] charges;
+
     public OBWriteDomesticScheduledConsentResponse5Data withCharges(OBWriteDomesticScheduledConsentResponse5DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -38,6 +40,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteDomesticScheduledConsentResponse5Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteDomesticScheduledConsentResponse5Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -67,6 +71,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CutOffDateTime")
     public OffsetDateTime cutOffDateTime;
+
     public OBWriteDomesticScheduledConsentResponse5Data withCutOffDateTime(OffsetDateTime cutOffDateTime) {
         this.cutOffDateTime = cutOffDateTime;
         return this;
@@ -78,6 +83,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteDomesticScheduledConsentResponse5Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -93,6 +99,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedExecutionDateTime")
     public OffsetDateTime expectedExecutionDateTime;
+
     public OBWriteDomesticScheduledConsentResponse5Data withExpectedExecutionDateTime(OffsetDateTime expectedExecutionDateTime) {
         this.expectedExecutionDateTime = expectedExecutionDateTime;
         return this;
@@ -108,6 +115,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedSettlementDateTime")
     public OffsetDateTime expectedSettlementDateTime;
+
     public OBWriteDomesticScheduledConsentResponse5Data withExpectedSettlementDateTime(OffsetDateTime expectedSettlementDateTime) {
         this.expectedSettlementDateTime = expectedSettlementDateTime;
         return this;
@@ -118,6 +126,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
      */
     @JsonProperty("Initiation")
     public OBWriteDomesticScheduledConsentResponse5DataInitiation initiation;
+
     public OBWriteDomesticScheduledConsentResponse5Data withInitiation(OBWriteDomesticScheduledConsentResponse5DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -128,6 +137,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
      */
     @JsonProperty("Permission")
     public OBWriteDomesticScheduledConsentResponse5DataPermissionEnum permission;
+
     public OBWriteDomesticScheduledConsentResponse5Data withPermission(OBWriteDomesticScheduledConsentResponse5DataPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -139,6 +149,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteDomesticScheduledConsentResponse5Data withReadRefundAccount(OBWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -150,6 +161,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteDomesticScheduledConsentResponse5Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
@@ -160,6 +172,7 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
      */
     @JsonProperty("Status")
     public OBWriteDomesticScheduledConsentResponse5DataStatusEnum status;
+
     public OBWriteDomesticScheduledConsentResponse5Data withStatus(OBWriteDomesticScheduledConsentResponse5DataStatusEnum status) {
         this.status = status;
         return this;
@@ -174,9 +187,18 @@ public class OBWriteDomesticScheduledConsentResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteDomesticScheduledConsentResponse5Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteDomesticScheduledConsentResponse5Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Initiation") OBWriteDomesticScheduledConsentResponse5DataInitiation initiation, @JsonProperty("Permission") OBWriteDomesticScheduledConsentResponse5DataPermissionEnum permission, @JsonProperty("Status") OBWriteDomesticScheduledConsentResponse5DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.initiation = initiation;
+        this.permission = permission;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

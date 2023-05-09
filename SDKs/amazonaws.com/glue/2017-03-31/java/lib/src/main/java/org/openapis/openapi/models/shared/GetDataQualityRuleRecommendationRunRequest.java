@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDataQualityRuleRecommendationRunRequest {
     @JsonProperty("RunId")
     public String runId;
+
     public GetDataQualityRuleRecommendationRunRequest withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public GetDataQualityRuleRecommendationRunRequest(@JsonProperty("RunId") String runId) {
+        this.runId = runId;
+  }
 }

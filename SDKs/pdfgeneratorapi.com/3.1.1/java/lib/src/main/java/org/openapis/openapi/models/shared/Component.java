@@ -18,6 +18,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cls")
     public ComponentClsEnum cls;
+
     public Component withCls(ComponentClsEnum cls) {
         this.cls = cls;
         return this;
@@ -29,6 +30,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataIndex")
     public String dataIndex;
+
     public Component withDataIndex(String dataIndex) {
         this.dataIndex = dataIndex;
         return this;
@@ -40,6 +42,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public Component withHeight(Double height) {
         this.height = height;
         return this;
@@ -51,6 +54,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Component withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Double left;
+
     public Component withLeft(Double left) {
         this.left = left;
         return this;
@@ -73,6 +78,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Double top;
+
     public Component withTop(Double top) {
         this.top = top;
         return this;
@@ -84,6 +90,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Component withValue(String value) {
         this.value = value;
         return this;
@@ -95,6 +102,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public Component withWidth(Double width) {
         this.width = width;
         return this;
@@ -106,9 +114,11 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zindex")
     public Long zindex;
+
     public Component withZindex(Long zindex) {
         this.zindex = zindex;
         return this;
     }
     
+    public Component(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddressV1 {
     @JsonProperty("city")
     public String city;
+
     public AddressV1 withCity(String city) {
         this.city = city;
         return this;
@@ -21,6 +22,7 @@ public class AddressV1 {
     
     @JsonProperty("country_code")
     public AddressV1CountryCodeEnum countryCode;
+
     public AddressV1 withCountryCode(AddressV1CountryCodeEnum countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -31,6 +33,7 @@ public class AddressV1 {
      */
     @JsonProperty("line1")
     public String line1;
+
     public AddressV1 withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -42,6 +45,7 @@ public class AddressV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line2")
     public String line2;
+
     public AddressV1 withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -53,6 +57,7 @@ public class AddressV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line3")
     public String line3;
+
     public AddressV1 withLine3(String line3) {
         this.line3 = line3;
         return this;
@@ -64,6 +69,7 @@ public class AddressV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public AddressV1 withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -74,6 +80,7 @@ public class AddressV1 {
      */
     @JsonProperty("postal_code")
     public String postalCode;
+
     public AddressV1 withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -81,9 +88,17 @@ public class AddressV1 {
     
     @JsonProperty("state")
     public AddressV1StateEnum state;
+
     public AddressV1 withState(AddressV1StateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AddressV1(@JsonProperty("city") String city, @JsonProperty("country_code") AddressV1CountryCodeEnum countryCode, @JsonProperty("line1") String line1, @JsonProperty("postal_code") String postalCode, @JsonProperty("state") AddressV1StateEnum state) {
+        this.city = city;
+        this.countryCode = countryCode;
+        this.line1 = line1;
+        this.postalCode = postalCode;
+        this.state = state;
+  }
 }

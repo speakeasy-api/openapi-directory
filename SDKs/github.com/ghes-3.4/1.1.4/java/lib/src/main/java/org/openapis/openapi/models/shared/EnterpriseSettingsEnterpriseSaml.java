@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseSaml {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public String certificate;
+
     public EnterpriseSettingsEnterpriseSaml withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseSaml {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate_path")
     public String certificatePath;
+
     public EnterpriseSettingsEnterpriseSaml withCertificatePath(String certificatePath) {
         this.certificatePath = certificatePath;
         return this;
@@ -28,6 +30,7 @@ public class EnterpriseSettingsEnterpriseSaml {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable_admin_demote")
     public Boolean disableAdminDemote;
+
     public EnterpriseSettingsEnterpriseSaml withDisableAdminDemote(Boolean disableAdminDemote) {
         this.disableAdminDemote = disableAdminDemote;
         return this;
@@ -36,6 +39,7 @@ public class EnterpriseSettingsEnterpriseSaml {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idp_initiated_sso")
     public Boolean idpInitiatedSso;
+
     public EnterpriseSettingsEnterpriseSaml withIdpInitiatedSso(Boolean idpInitiatedSso) {
         this.idpInitiatedSso = idpInitiatedSso;
         return this;
@@ -44,6 +48,7 @@ public class EnterpriseSettingsEnterpriseSaml {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public EnterpriseSettingsEnterpriseSaml withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -52,9 +57,11 @@ public class EnterpriseSettingsEnterpriseSaml {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sso_url")
     public String ssoUrl;
+
     public EnterpriseSettingsEnterpriseSaml withSsoUrl(String ssoUrl) {
         this.ssoUrl = ssoUrl;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseSaml(){}
 }

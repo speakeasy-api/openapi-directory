@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CollectNowRequest;
 import org.openapis.openapi.models.operations.CollectNowResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CollectNowRequest req = new CollectNowRequest() {{
-                deviceId = 548814;
-                monitorClass = "provident";
-            }}            
+            CollectNowRequest req = new CollectNowRequest(548814, "provident");            
 
             CollectNowResponse res = sdk.actions.collectNow(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

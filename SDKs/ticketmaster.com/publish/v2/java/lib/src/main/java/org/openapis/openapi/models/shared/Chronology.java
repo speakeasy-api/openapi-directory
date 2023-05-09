@@ -12,9 +12,11 @@ public class Chronology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public DateTimeZone zone;
+
     public Chronology withZone(DateTimeZone zone) {
         this.zone = zone;
         return this;
     }
     
+    public Chronology(){}
 }

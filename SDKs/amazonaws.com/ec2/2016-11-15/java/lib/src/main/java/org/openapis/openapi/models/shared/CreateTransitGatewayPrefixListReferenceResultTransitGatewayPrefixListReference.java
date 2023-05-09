@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference {
     
     public Boolean blackhole;
+
     public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference withBlackhole(Boolean blackhole) {
         this.blackhole = blackhole;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixLi
     
     
     public String prefixListId;
+
     public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -26,6 +28,7 @@ public class CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixLi
     
     
     public String prefixListOwnerId;
+
     public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference withPrefixListOwnerId(String prefixListOwnerId) {
         this.prefixListOwnerId = prefixListOwnerId;
         return this;
@@ -33,6 +36,7 @@ public class CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixLi
     
     
     public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceStateEnum state;
+
     public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference withState(CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceStateEnum state) {
         this.state = state;
         return this;
@@ -40,6 +44,7 @@ public class CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixLi
     
     
     public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment transitGatewayAttachment;
+
     public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference withTransitGatewayAttachment(CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment transitGatewayAttachment) {
         this.transitGatewayAttachment = transitGatewayAttachment;
         return this;
@@ -47,9 +52,11 @@ public class CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixLi
     
     
     public String transitGatewayRouteTableId;
+
     public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public CreateTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference(){}
 }

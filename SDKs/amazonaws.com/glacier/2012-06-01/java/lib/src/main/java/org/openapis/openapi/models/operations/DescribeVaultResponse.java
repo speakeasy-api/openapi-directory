@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVaultResponse {
     
     public String contentType;
+
     public DescribeVaultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVaultResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVaultOutput describeVaultOutput;
+
     public DescribeVaultResponse withDescribeVaultOutput(org.openapis.openapi.models.shared.DescribeVaultOutput describeVaultOutput) {
         this.describeVaultOutput = describeVaultOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVaultResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeVaultResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVaultResponse {
      */
     
     public Object missingParameterValueException;
+
     public DescribeVaultResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeVaultResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeVaultResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeVaultResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeVaultResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeVaultResponse {
     
     
     public Integer statusCode;
+
     public DescribeVaultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeVaultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVaultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeVaultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

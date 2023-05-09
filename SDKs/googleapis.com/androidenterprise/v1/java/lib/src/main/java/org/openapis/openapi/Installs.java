@@ -59,10 +59,8 @@ public class Installs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseInstallsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseInstallsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseInstallsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseInstallsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Installs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseInstallsGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseInstallsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseInstallsGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseInstallsGetResponse(contentType, httpRes.statusCode()) {{
             install = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Installs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseInstallsListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseInstallsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseInstallsListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseInstallsListResponse(contentType, httpRes.statusCode()) {{
             installsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Installs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseInstallsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseInstallsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseInstallsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseInstallsUpdateResponse(contentType, httpRes.statusCode()) {{
             install = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

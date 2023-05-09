@@ -18,6 +18,7 @@ public class CreativeAssetId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreativeAssetId withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class CreativeAssetId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreativeAssetIdTypeEnum type;
+
     public CreativeAssetId withType(CreativeAssetIdTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreativeAssetId(){}
 }

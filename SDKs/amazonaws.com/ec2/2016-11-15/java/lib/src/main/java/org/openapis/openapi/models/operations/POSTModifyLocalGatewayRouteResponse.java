@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTModifyLocalGatewayRouteResponse {
     
     public byte[] body;
+
     public POSTModifyLocalGatewayRouteResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTModifyLocalGatewayRouteResponse {
     
     
     public String contentType;
+
     public POSTModifyLocalGatewayRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTModifyLocalGatewayRouteResponse {
     
     
     public Integer statusCode;
+
     public POSTModifyLocalGatewayRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTModifyLocalGatewayRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTModifyLocalGatewayRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTModifyLocalGatewayRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

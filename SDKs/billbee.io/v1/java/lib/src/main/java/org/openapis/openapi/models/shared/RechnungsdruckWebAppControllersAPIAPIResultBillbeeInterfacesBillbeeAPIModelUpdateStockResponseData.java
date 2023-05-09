@@ -15,6 +15,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbee
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData data;
+
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withData(BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbee
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseDataErrorCodeEnum errorCode;
+
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withErrorCode(RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseDataErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,6 +33,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbee
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDescription")
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseDataErrorDescriptionEnum errorDescription;
+
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withErrorDescription(RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseDataErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -39,9 +42,11 @@ public class RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbee
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData(){}
 }

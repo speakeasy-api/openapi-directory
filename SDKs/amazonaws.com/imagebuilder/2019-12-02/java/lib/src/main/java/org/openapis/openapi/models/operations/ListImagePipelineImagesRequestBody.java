@@ -15,6 +15,7 @@ public class ListImagePipelineImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListImagePipelineImagesRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class ListImagePipelineImagesRequestBody {
      */
     @JsonProperty("imagePipelineArn")
     public String imagePipelineArn;
+
     public ListImagePipelineImagesRequestBody withImagePipelineArn(String imagePipelineArn) {
         this.imagePipelineArn = imagePipelineArn;
         return this;
@@ -36,6 +38,7 @@ public class ListImagePipelineImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListImagePipelineImagesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,9 +50,13 @@ public class ListImagePipelineImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImagePipelineImagesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImagePipelineImagesRequestBody(@JsonProperty("imagePipelineArn") String imagePipelineArn) {
+        this.imagePipelineArn = imagePipelineArn;
+  }
 }

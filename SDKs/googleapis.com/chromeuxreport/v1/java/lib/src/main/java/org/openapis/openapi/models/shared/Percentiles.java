@@ -18,9 +18,11 @@ public class Percentiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p75")
     public Object p75;
+
     public Percentiles withP75(Object p75) {
         this.p75 = p75;
         return this;
     }
     
+    public Percentiles(){}
 }

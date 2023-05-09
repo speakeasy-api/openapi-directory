@@ -19,6 +19,7 @@ public class TimeWindow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public TimeWindow withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -28,9 +29,14 @@ public class TimeWindow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public TimeWindow withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimeWindow(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

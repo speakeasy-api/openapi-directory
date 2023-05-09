@@ -15,6 +15,7 @@ public class SourceCredentialsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public SourceCredentialsInfo withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class SourceCredentialsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authType")
     public AuthTypeEnum authType;
+
     public SourceCredentialsInfo withAuthType(AuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -31,9 +33,11 @@ public class SourceCredentialsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverType")
     public ServerTypeEnum serverType;
+
     public SourceCredentialsInfo withServerType(ServerTypeEnum serverType) {
         this.serverType = serverType;
         return this;
     }
     
+    public SourceCredentialsInfo(){}
 }

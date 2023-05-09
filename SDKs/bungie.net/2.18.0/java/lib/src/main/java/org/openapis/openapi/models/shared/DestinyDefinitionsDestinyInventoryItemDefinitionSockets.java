@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSockets {
      */
     
     public String detail;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSockets withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSockets {
      */
     
     public DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition[] intrinsicSockets;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSockets withIntrinsicSockets(DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition[] intrinsicSockets) {
         this.intrinsicSockets = intrinsicSockets;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSockets {
      */
     
     public DestinyDefinitionsDestinyItemSocketCategoryDefinition[] socketCategories;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSockets withSocketCategories(DestinyDefinitionsDestinyItemSocketCategoryDefinition[] socketCategories) {
         this.socketCategories = socketCategories;
         return this;
@@ -45,9 +48,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSockets {
      */
     
     public DestinyDefinitionsDestinyItemSocketEntryDefinition[] socketEntries;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSockets withSocketEntries(DestinyDefinitionsDestinyItemSocketEntryDefinition[] socketEntries) {
         this.socketEntries = socketEntries;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionSockets(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateOrUpdateFileContentsResponse {
     
     public String contentType;
+
     public ReposCreateOrUpdateFileContentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateOrUpdateFileContentsResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateOrUpdateFileContentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateOrUpdateFileContentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateOrUpdateFileContentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposCreateOrUpdateFileContentsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposCreateOrUpdateFileContentsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposCreateOrUpdateFileContentsResponse {
      */
     
     public org.openapis.openapi.models.shared.FileCommit fileCommit;
+
     public ReposCreateOrUpdateFileContentsResponse withFileCommit(org.openapis.openapi.models.shared.FileCommit fileCommit) {
         this.fileCommit = fileCommit;
         return this;
@@ -53,9 +59,14 @@ public class ReposCreateOrUpdateFileContentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateOrUpdateFileContentsResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateOrUpdateFileContentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

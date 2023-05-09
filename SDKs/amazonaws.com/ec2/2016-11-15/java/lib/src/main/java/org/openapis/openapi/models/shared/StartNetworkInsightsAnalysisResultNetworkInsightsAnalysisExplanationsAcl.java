@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAcl {
     
     public String arn;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAcl withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String id;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAcl withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String name;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAcl withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAcl(){}
 }

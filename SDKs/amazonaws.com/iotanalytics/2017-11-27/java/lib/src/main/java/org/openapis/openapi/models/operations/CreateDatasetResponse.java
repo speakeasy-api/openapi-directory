@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatasetResponse {
     
     public String contentType;
+
     public CreateDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDatasetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDatasetResponse createDatasetResponse;
+
     public CreateDatasetResponse withCreateDatasetResponse(org.openapis.openapi.models.shared.CreateDatasetResponse createDatasetResponse) {
         this.createDatasetResponse = createDatasetResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatasetResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDatasetResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatasetResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDatasetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDatasetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDatasetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDatasetResponse {
     
     
     public Integer statusCode;
+
     public CreateDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateDatasetResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDatasetResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreateDatasetResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateDatasetResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class CreateDatasetResponse {
      */
     
     public Object throttlingException;
+
     public CreateDatasetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

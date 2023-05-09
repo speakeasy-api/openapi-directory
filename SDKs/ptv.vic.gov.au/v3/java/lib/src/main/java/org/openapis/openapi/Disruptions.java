@@ -56,7 +56,7 @@ public class Disruptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisruptionsGetAllDisruptionsResponse res = new org.openapis.openapi.models.operations.DisruptionsGetAllDisruptionsResponse() {{
+        org.openapis.openapi.models.operations.DisruptionsGetAllDisruptionsResponse res = new org.openapis.openapi.models.operations.DisruptionsGetAllDisruptionsResponse(contentType, httpRes.statusCode()) {{
             v3DisruptionsResponse = null;
             v3DisruptionsResponse = null;
             body = null;
@@ -64,8 +64,6 @@ public class Disruptions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,7 +128,7 @@ public class Disruptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdResponse() {{
+        org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdResponse(contentType, httpRes.statusCode()) {{
             v3DisruptionResponse = null;
             v3DisruptionResponse = null;
             body = null;
@@ -138,8 +136,6 @@ public class Disruptions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,7 +200,7 @@ public class Disruptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisruptionsGetDisruptionModesResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionModesResponse() {{
+        org.openapis.openapi.models.operations.DisruptionsGetDisruptionModesResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionModesResponse(contentType, httpRes.statusCode()) {{
             v3DisruptionModesResponse = null;
             v3DisruptionModesResponse = null;
             body = null;
@@ -212,8 +208,6 @@ public class Disruptions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,7 +272,7 @@ public class Disruptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteResponse() {{
+        org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteResponse(contentType, httpRes.statusCode()) {{
             v3DisruptionsResponse = null;
             v3DisruptionsResponse = null;
             body = null;
@@ -286,8 +280,6 @@ public class Disruptions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -352,7 +344,7 @@ public class Disruptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopResponse() {{
+        org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopResponse(contentType, httpRes.statusCode()) {{
             v3DisruptionsResponse = null;
             v3DisruptionsResponse = null;
             body = null;
@@ -360,8 +352,6 @@ public class Disruptions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,7 +416,7 @@ public class Disruptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopResponse() {{
+        org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopResponse res = new org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopResponse(contentType, httpRes.statusCode()) {{
             v3DisruptionsResponse = null;
             v3DisruptionsResponse = null;
             body = null;
@@ -434,8 +424,6 @@ public class Disruptions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServicePerimeter withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServicePerimeter withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perimeterType")
     public ServicePerimeterPerimeterTypeEnum perimeterType;
+
     public ServicePerimeter withPerimeterType(ServicePerimeterPerimeterTypeEnum perimeterType) {
         this.perimeterType = perimeterType;
         return this;
@@ -51,6 +54,7 @@ public class ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public ServicePerimeterConfig spec;
+
     public ServicePerimeter withSpec(ServicePerimeterConfig spec) {
         this.spec = spec;
         return this;
@@ -62,6 +66,7 @@ public class ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ServicePerimeterConfig status;
+
     public ServicePerimeter withStatus(ServicePerimeterConfig status) {
         this.status = status;
         return this;
@@ -73,6 +78,7 @@ public class ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ServicePerimeter withTitle(String title) {
         this.title = title;
         return this;
@@ -84,9 +90,11 @@ public class ServicePerimeter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useExplicitDryRunSpec")
     public Boolean useExplicitDryRunSpec;
+
     public ServicePerimeter withUseExplicitDryRunSpec(Boolean useExplicitDryRunSpec) {
         this.useExplicitDryRunSpec = useExplicitDryRunSpec;
         return this;
     }
     
+    public ServicePerimeter(){}
 }

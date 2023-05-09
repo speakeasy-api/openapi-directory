@@ -15,6 +15,7 @@ public class DatasetEntityRecognizerDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormat")
     public InputFormatEnum inputFormat;
+
     public DatasetEntityRecognizerDocuments withInputFormat(InputFormatEnum inputFormat) {
         this.inputFormat = inputFormat;
         return this;
@@ -22,9 +23,13 @@ public class DatasetEntityRecognizerDocuments {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public DatasetEntityRecognizerDocuments withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public DatasetEntityRecognizerDocuments(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

@@ -22,6 +22,7 @@ public class AuditLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actor")
     public AuditLogEventActor actor;
+
     public AuditLogEvent withActor(AuditLogEventActor actor) {
         this.actor = actor;
         return this;
@@ -30,6 +31,7 @@ public class AuditLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public AuditLogEventContext context;
+
     public AuditLogEvent withContext(AuditLogEventContext context) {
         this.context = context;
         return this;
@@ -43,6 +45,7 @@ public class AuditLogEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public AuditLogEvent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -51,6 +54,7 @@ public class AuditLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public java.util.Map<String, Object> details;
+
     public AuditLogEvent withDetails(java.util.Map<String, Object> details) {
         this.details = details;
         return this;
@@ -62,6 +66,7 @@ public class AuditLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_category")
     public String eventCategory;
+
     public AuditLogEvent withEventCategory(String eventCategory) {
         this.eventCategory = eventCategory;
         return this;
@@ -73,6 +78,7 @@ public class AuditLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_type")
     public String eventType;
+
     public AuditLogEvent withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -84,6 +90,7 @@ public class AuditLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public AuditLogEvent withGid(String gid) {
         this.gid = gid;
         return this;
@@ -92,9 +99,11 @@ public class AuditLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public AuditLogEventResource resource;
+
     public AuditLogEvent withResource(AuditLogEventResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public AuditLogEvent(){}
 }

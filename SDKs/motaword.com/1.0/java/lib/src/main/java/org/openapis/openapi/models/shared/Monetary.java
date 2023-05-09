@@ -12,6 +12,7 @@ public class Monetary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Float amount;
+
     public Monetary withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -20,9 +21,11 @@ public class Monetary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Monetary withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public Monetary(){}
 }

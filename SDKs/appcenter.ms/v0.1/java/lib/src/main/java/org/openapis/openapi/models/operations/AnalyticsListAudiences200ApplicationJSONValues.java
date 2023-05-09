@@ -18,6 +18,7 @@ public class AnalyticsListAudiences200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public AnalyticsListAudiences200ApplicationJSONValues withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -29,6 +30,7 @@ public class AnalyticsListAudiences200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AnalyticsListAudiences200ApplicationJSONValues withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class AnalyticsListAudiences200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_count")
     public Long estimatedCount;
+
     public AnalyticsListAudiences200ApplicationJSONValues withEstimatedCount(Long estimatedCount) {
         this.estimatedCount = estimatedCount;
         return this;
@@ -51,6 +54,7 @@ public class AnalyticsListAudiences200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AnalyticsListAudiences200ApplicationJSONValues withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class AnalyticsListAudiences200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AnalyticsListAudiences200ApplicationJSONValuesStateEnum state;
+
     public AnalyticsListAudiences200ApplicationJSONValues withState(AnalyticsListAudiences200ApplicationJSONValuesStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AnalyticsListAudiences200ApplicationJSONValues(){}
 }

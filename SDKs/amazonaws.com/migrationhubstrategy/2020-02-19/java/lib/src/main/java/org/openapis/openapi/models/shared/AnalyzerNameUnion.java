@@ -15,6 +15,7 @@ public class AnalyzerNameUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryAnalyzerName")
     public BinaryAnalyzerNameEnum binaryAnalyzerName;
+
     public AnalyzerNameUnion withBinaryAnalyzerName(BinaryAnalyzerNameEnum binaryAnalyzerName) {
         this.binaryAnalyzerName = binaryAnalyzerName;
         return this;
@@ -23,6 +24,7 @@ public class AnalyzerNameUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runTimeAnalyzerName")
     public RunTimeAnalyzerNameEnum runTimeAnalyzerName;
+
     public AnalyzerNameUnion withRunTimeAnalyzerName(RunTimeAnalyzerNameEnum runTimeAnalyzerName) {
         this.runTimeAnalyzerName = runTimeAnalyzerName;
         return this;
@@ -31,9 +33,11 @@ public class AnalyzerNameUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCodeAnalyzerName")
     public SourceCodeAnalyzerNameEnum sourceCodeAnalyzerName;
+
     public AnalyzerNameUnion withSourceCodeAnalyzerName(SourceCodeAnalyzerNameEnum sourceCodeAnalyzerName) {
         this.sourceCodeAnalyzerName = sourceCodeAnalyzerName;
         return this;
     }
     
+    public AnalyzerNameUnion(){}
 }

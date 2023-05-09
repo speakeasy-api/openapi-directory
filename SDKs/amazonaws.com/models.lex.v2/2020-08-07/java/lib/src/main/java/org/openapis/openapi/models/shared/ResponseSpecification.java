@@ -15,6 +15,7 @@ public class ResponseSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInterrupt")
     public Boolean allowInterrupt;
+
     public ResponseSpecification withAllowInterrupt(Boolean allowInterrupt) {
         this.allowInterrupt = allowInterrupt;
         return this;
@@ -22,9 +23,13 @@ public class ResponseSpecification {
     
     @JsonProperty("messageGroups")
     public MessageGroup[] messageGroups;
+
     public ResponseSpecification withMessageGroups(MessageGroup[] messageGroups) {
         this.messageGroups = messageGroups;
         return this;
     }
     
+    public ResponseSpecification(@JsonProperty("messageGroups") MessageGroup[] messageGroups) {
+        this.messageGroups = messageGroups;
+  }
 }

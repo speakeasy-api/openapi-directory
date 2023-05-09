@@ -18,6 +18,7 @@ public class DeviceCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTime")
     public String expirationTime;
+
     public DeviceCredential withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -29,9 +30,11 @@ public class DeviceCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public PublicKeyCredential publicKey;
+
     public DeviceCredential withPublicKey(PublicKeyCredential publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public DeviceCredential(){}
 }

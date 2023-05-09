@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRule {
     
     public String cidr;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRule withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String direction;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRule withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -26,6 +28,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRulePortRange portRange;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRule withPortRange(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRulePortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -33,6 +36,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String prefixListId;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRule withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -40,6 +44,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String protocol;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -47,9 +52,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String securityGroupId;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRule withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsSecurityGroupRule(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Dimension - &lt;p&gt;A dimension is a name/value pair that is part of the identity of a metric. Because dimensions are part of the unique identifier for a metric, whenever you add a unique name/value pair to one of your metrics, you are creating a new variation of that metric. For example, many Amazon EC2 metrics publish &lt;code&gt;InstanceId&lt;/code&gt; as a dimension name, and the actual instance ID as the value for that dimension.&lt;/p&gt; &lt;p&gt;You can assign up to 30 dimensions to a metric.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Dimension {
     
     public String name;
+
     public Dimension withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class Dimension {
     
     
     public String value;
+
     public Dimension withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Dimension(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateQualificationWithWorkerResponse {
@@ -12,6 +13,7 @@ public class AssociateQualificationWithWorkerResponse {
      */
     
     public java.util.Map<String, Object> associateQualificationWithWorkerResponse;
+
     public AssociateQualificationWithWorkerResponse withAssociateQualificationWithWorkerResponse(java.util.Map<String, Object> associateQualificationWithWorkerResponse) {
         this.associateQualificationWithWorkerResponse = associateQualificationWithWorkerResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateQualificationWithWorkerResponse {
     
     
     public String contentType;
+
     public AssociateQualificationWithWorkerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateQualificationWithWorkerResponse {
      */
     
     public Object requestError;
+
     public AssociateQualificationWithWorkerResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class AssociateQualificationWithWorkerResponse {
      */
     
     public Object serviceFault;
+
     public AssociateQualificationWithWorkerResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class AssociateQualificationWithWorkerResponse {
     
     
     public Integer statusCode;
+
     public AssociateQualificationWithWorkerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AssociateQualificationWithWorkerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateQualificationWithWorkerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateQualificationWithWorkerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

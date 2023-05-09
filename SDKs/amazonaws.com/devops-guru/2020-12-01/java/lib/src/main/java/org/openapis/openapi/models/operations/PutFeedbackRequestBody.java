@@ -15,9 +15,11 @@ public class PutFeedbackRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightFeedback")
     public PutFeedbackRequestBodyInsightFeedback insightFeedback;
+
     public PutFeedbackRequestBody withInsightFeedback(PutFeedbackRequestBodyInsightFeedback insightFeedback) {
         this.insightFeedback = insightFeedback;
         return this;
     }
     
+    public PutFeedbackRequestBody(){}
 }

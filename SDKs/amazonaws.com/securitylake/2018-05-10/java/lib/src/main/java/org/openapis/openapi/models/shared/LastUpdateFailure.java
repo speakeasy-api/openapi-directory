@@ -15,6 +15,7 @@ public class LastUpdateFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public LastUpdateFailure withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class LastUpdateFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public LastUpdateFailure withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public LastUpdateFailure(){}
 }

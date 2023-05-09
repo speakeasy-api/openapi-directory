@@ -12,6 +12,7 @@ public class UpdateRequestBody {
      */
     @JsonProperty("couponCode")
     public String couponCode;
+
     public UpdateRequestBody withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -22,6 +23,7 @@ public class UpdateRequestBody {
      */
     @JsonProperty("expirationIntervalPerUse")
     public String expirationIntervalPerUse;
+
     public UpdateRequestBody withExpirationIntervalPerUse(String expirationIntervalPerUse) {
         this.expirationIntervalPerUse = expirationIntervalPerUse;
         return this;
@@ -32,6 +34,7 @@ public class UpdateRequestBody {
      */
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public UpdateRequestBody withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -42,6 +45,7 @@ public class UpdateRequestBody {
      */
     @JsonProperty("maxItemsPerClient")
     public Long maxItemsPerClient;
+
     public UpdateRequestBody withMaxItemsPerClient(Long maxItemsPerClient) {
         this.maxItemsPerClient = maxItemsPerClient;
         return this;
@@ -52,6 +56,7 @@ public class UpdateRequestBody {
      */
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public UpdateRequestBody withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -62,9 +67,18 @@ public class UpdateRequestBody {
      */
     @JsonProperty("utmSource")
     public String utmSource;
+
     public UpdateRequestBody withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
     }
     
+    public UpdateRequestBody(@JsonProperty("couponCode") String couponCode, @JsonProperty("expirationIntervalPerUse") String expirationIntervalPerUse, @JsonProperty("isArchived") Boolean isArchived, @JsonProperty("maxItemsPerClient") Long maxItemsPerClient, @JsonProperty("utmCampaign") String utmCampaign, @JsonProperty("utmSource") String utmSource) {
+        this.couponCode = couponCode;
+        this.expirationIntervalPerUse = expirationIntervalPerUse;
+        this.isArchived = isArchived;
+        this.maxItemsPerClient = maxItemsPerClient;
+        this.utmCampaign = utmCampaign;
+        this.utmSource = utmSource;
+  }
 }

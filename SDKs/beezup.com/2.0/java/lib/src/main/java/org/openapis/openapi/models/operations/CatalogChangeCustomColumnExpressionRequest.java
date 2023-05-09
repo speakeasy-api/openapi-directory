@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogChangeCustomColumnExpressionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ChangeCustomColumnExpressionRequest changeCustomColumnExpressionRequest;
+
     public CatalogChangeCustomColumnExpressionRequest withChangeCustomColumnExpressionRequest(org.openapis.openapi.models.shared.ChangeCustomColumnExpressionRequest changeCustomColumnExpressionRequest) {
         this.changeCustomColumnExpressionRequest = changeCustomColumnExpressionRequest;
         return this;
@@ -19,6 +21,7 @@ public class CatalogChangeCustomColumnExpressionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public CatalogChangeCustomColumnExpressionRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -29,9 +32,15 @@ public class CatalogChangeCustomColumnExpressionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public CatalogChangeCustomColumnExpressionRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CatalogChangeCustomColumnExpressionRequest(@JsonProperty("changeCustomColumnExpressionRequest") org.openapis.openapi.models.shared.ChangeCustomColumnExpressionRequest changeCustomColumnExpressionRequest, @JsonProperty("columnId") String columnId, @JsonProperty("storeId") String storeId) {
+        this.changeCustomColumnExpressionRequest = changeCustomColumnExpressionRequest;
+        this.columnId = columnId;
+        this.storeId = storeId;
+  }
 }

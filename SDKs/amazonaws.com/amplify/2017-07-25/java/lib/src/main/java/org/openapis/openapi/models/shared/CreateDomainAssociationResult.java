@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDomainAssociationResult {
     @JsonProperty("domainAssociation")
     public DomainAssociation domainAssociation;
+
     public CreateDomainAssociationResult withDomainAssociation(DomainAssociation domainAssociation) {
         this.domainAssociation = domainAssociation;
         return this;
     }
     
+    public CreateDomainAssociationResult(@JsonProperty("domainAssociation") DomainAssociation domainAssociation) {
+        this.domainAssociation = domainAssociation;
+  }
 }

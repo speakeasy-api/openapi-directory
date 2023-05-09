@@ -19,9 +19,11 @@ public class CatalogItemOptionForItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_id")
     public String itemOptionId;
+
     public CatalogItemOptionForItem withItemOptionId(String itemOptionId) {
         this.itemOptionId = itemOptionId;
         return this;
     }
     
+    public CatalogItemOptionForItem(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesState {
     
     public Long code;
+
     public DescribeInstancesResultReservationsInstancesState withCode(Long code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstancesResultReservationsInstancesState {
     
     
     public DescribeInstancesResultReservationsInstancesStateNameEnum name;
+
     public DescribeInstancesResultReservationsInstancesState withName(DescribeInstancesResultReservationsInstancesStateNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesState(){}
 }

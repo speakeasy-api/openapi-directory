@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldProperties
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldProperties
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleAppsDriveLabelsV2FieldProperties properties;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest withProperties(GoogleAppsDriveLabelsV2FieldProperties properties) {
         this.properties = properties;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldProperties
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest(){}
 }

@@ -12,6 +12,7 @@ public class VolumeseriesinfoVolumeSeriesIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueDisplayNumber")
     public String issueDisplayNumber;
+
     public VolumeseriesinfoVolumeSeriesIssue withIssueDisplayNumber(String issueDisplayNumber) {
         this.issueDisplayNumber = issueDisplayNumber;
         return this;
@@ -20,9 +21,11 @@ public class VolumeseriesinfoVolumeSeriesIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueOrderNumber")
     public Integer issueOrderNumber;
+
     public VolumeseriesinfoVolumeSeriesIssue withIssueOrderNumber(Integer issueOrderNumber) {
         this.issueOrderNumber = issueOrderNumber;
         return this;
     }
     
+    public VolumeseriesinfoVolumeSeriesIssue(){}
 }

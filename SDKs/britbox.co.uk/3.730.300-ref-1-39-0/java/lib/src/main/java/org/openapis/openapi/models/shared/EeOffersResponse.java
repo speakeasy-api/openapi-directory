@@ -15,9 +15,13 @@ public class EeOffersResponse {
      */
     @JsonProperty("eligibleOffers")
     public EeOfferItem[] eligibleOffers;
+
     public EeOffersResponse withEligibleOffers(EeOfferItem[] eligibleOffers) {
         this.eligibleOffers = eligibleOffers;
         return this;
     }
     
+    public EeOffersResponse(@JsonProperty("eligibleOffers") EeOfferItem[] eligibleOffers) {
+        this.eligibleOffers = eligibleOffers;
+  }
 }

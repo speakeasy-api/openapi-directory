@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCapacityProvidersResponse {
@@ -12,6 +13,7 @@ public class DescribeCapacityProvidersResponse {
      */
     
     public Object clientException;
+
     public DescribeCapacityProvidersResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCapacityProvidersResponse {
     
     
     public String contentType;
+
     public DescribeCapacityProvidersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCapacityProvidersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCapacityProvidersResponse describeCapacityProvidersResponse;
+
     public DescribeCapacityProvidersResponse withDescribeCapacityProvidersResponse(org.openapis.openapi.models.shared.DescribeCapacityProvidersResponse describeCapacityProvidersResponse) {
         this.describeCapacityProvidersResponse = describeCapacityProvidersResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCapacityProvidersResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeCapacityProvidersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCapacityProvidersResponse {
      */
     
     public Object serverException;
+
     public DescribeCapacityProvidersResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeCapacityProvidersResponse {
     
     
     public Integer statusCode;
+
     public DescribeCapacityProvidersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeCapacityProvidersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCapacityProvidersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCapacityProvidersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

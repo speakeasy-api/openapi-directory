@@ -50,14 +50,12 @@ public class BikePoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BikePointGetResponse res = new org.openapis.openapi.models.operations.BikePointGetResponse() {{
+        org.openapis.openapi.models.operations.BikePointGetResponse res = new org.openapis.openapi.models.operations.BikePointGetResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlace = null;
             tflApiPresentationEntitiesPlace = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,14 +101,12 @@ public class BikePoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BikePointGetAllResponse res = new org.openapis.openapi.models.operations.BikePointGetAllResponse() {{
+        org.openapis.openapi.models.operations.BikePointGetAllResponse res = new org.openapis.openapi.models.operations.BikePointGetAllResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaces = null;
             tflApiPresentationEntitiesPlaces = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,14 +159,12 @@ public class BikePoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BikePointSearchResponse res = new org.openapis.openapi.models.operations.BikePointSearchResponse() {{
+        org.openapis.openapi.models.operations.BikePointSearchResponse res = new org.openapis.openapi.models.operations.BikePointSearchResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaces = null;
             tflApiPresentationEntitiesPlaces = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

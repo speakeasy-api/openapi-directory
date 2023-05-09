@@ -15,6 +15,7 @@ public class ComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public ComponentSummary withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +24,7 @@ public class ComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentId")
     public String componentId;
+
     public ComponentSummary withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -31,6 +33,7 @@ public class ComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentType")
     public ComponentTypeEnum componentType;
+
     public ComponentSummary withComponentType(ComponentTypeEnum componentType) {
         this.componentType = componentType;
         return this;
@@ -39,9 +42,11 @@ public class ComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ComponentSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ComponentSummary(){}
 }

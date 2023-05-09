@@ -18,6 +18,7 @@ public class OSPolicyResourceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInsecure")
     public Boolean allowInsecure;
+
     public OSPolicyResourceFile withAllowInsecure(Boolean allowInsecure) {
         this.allowInsecure = allowInsecure;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcs")
     public OSPolicyResourceFileGcs gcs;
+
     public OSPolicyResourceFile withGcs(OSPolicyResourceFileGcs gcs) {
         this.gcs = gcs;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyResourceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPath")
     public String localPath;
+
     public OSPolicyResourceFile withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -51,9 +54,11 @@ public class OSPolicyResourceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remote")
     public OSPolicyResourceFileRemote remote;
+
     public OSPolicyResourceFile withRemote(OSPolicyResourceFileRemote remote) {
         this.remote = remote;
         return this;
     }
     
+    public OSPolicyResourceFile(){}
 }

@@ -18,6 +18,7 @@ public class SetcampaignconfigurationRequestBodyLastModified {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateUtc")
     public String dateUtc;
+
     public SetcampaignconfigurationRequestBodyLastModified withDateUtc(String dateUtc) {
         this.dateUtc = dateUtc;
         return this;
@@ -29,9 +30,11 @@ public class SetcampaignconfigurationRequestBodyLastModified {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public SetcampaignconfigurationRequestBodyLastModified withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public SetcampaignconfigurationRequestBodyLastModified(){}
 }

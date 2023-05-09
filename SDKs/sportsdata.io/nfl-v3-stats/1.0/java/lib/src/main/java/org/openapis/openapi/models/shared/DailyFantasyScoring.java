@@ -12,6 +12,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Date")
     public String date;
+
     public DailyFantasyScoring withDate(String date) {
         this.date = date;
         return this;
@@ -20,6 +21,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public DailyFantasyScoring withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -28,6 +30,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public DailyFantasyScoring withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -36,6 +39,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public DailyFantasyScoring withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -44,6 +48,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFantasyDraft")
     public Double fantasyPointsFantasyDraft;
+
     public DailyFantasyScoring withFantasyPointsFantasyDraft(Double fantasyPointsFantasyDraft) {
         this.fantasyPointsFantasyDraft = fantasyPointsFantasyDraft;
         return this;
@@ -52,6 +57,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsPPR")
     public Double fantasyPointsPPR;
+
     public DailyFantasyScoring withFantasyPointsPPR(Double fantasyPointsPPR) {
         this.fantasyPointsPPR = fantasyPointsPPR;
         return this;
@@ -60,6 +66,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public DailyFantasyScoring withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -68,6 +75,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasStarted")
     public Boolean hasStarted;
+
     public DailyFantasyScoring withHasStarted(Boolean hasStarted) {
         this.hasStarted = hasStarted;
         return this;
@@ -76,6 +84,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsInProgress")
     public Boolean isInProgress;
+
     public DailyFantasyScoring withIsInProgress(Boolean isInProgress) {
         this.isInProgress = isInProgress;
         return this;
@@ -84,6 +93,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsOver")
     public Boolean isOver;
+
     public DailyFantasyScoring withIsOver(Boolean isOver) {
         this.isOver = isOver;
         return this;
@@ -92,6 +102,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DailyFantasyScoring withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +111,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public DailyFantasyScoring withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -108,6 +120,7 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public DailyFantasyScoring withPosition(String position) {
         this.position = position;
         return this;
@@ -116,9 +129,11 @@ public class DailyFantasyScoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public DailyFantasyScoring withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public DailyFantasyScoring(){}
 }

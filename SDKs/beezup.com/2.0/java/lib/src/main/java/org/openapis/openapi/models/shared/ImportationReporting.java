@@ -23,6 +23,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoImported")
     public Boolean autoImported;
+
     public ImportationReporting withAutoImported(Boolean autoImported) {
         this.autoImported = autoImported;
         return this;
@@ -35,6 +36,7 @@ public class ImportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginUtcDate")
     public OffsetDateTime beginUtcDate;
+
     public ImportationReporting withBeginUtcDate(OffsetDateTime beginUtcDate) {
         this.beginUtcDate = beginUtcDate;
         return this;
@@ -48,6 +50,7 @@ public class ImportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endUtcDate")
     public OffsetDateTime endUtcDate;
+
     public ImportationReporting withEndUtcDate(OffsetDateTime endUtcDate) {
         this.endUtcDate = endUtcDate;
         return this;
@@ -59,6 +62,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BeezUPCommonUserErrorMessage[] errors;
+
     public ImportationReporting withErrors(BeezUPCommonUserErrorMessage[] errors) {
         this.errors = errors;
         return this;
@@ -69,6 +73,7 @@ public class ImportationReporting {
      */
     @JsonProperty("executionId")
     public String executionId;
+
     public ImportationReporting withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -80,6 +85,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfigurationUrl")
     public String inputConfigurationUrl;
+
     public ImportationReporting withInputConfigurationUrl(String inputConfigurationUrl) {
         this.inputConfigurationUrl = inputConfigurationUrl;
         return this;
@@ -92,6 +98,7 @@ public class ImportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateUtcDate")
     public OffsetDateTime lastUpdateUtcDate;
+
     public ImportationReporting withLastUpdateUtcDate(OffsetDateTime lastUpdateUtcDate) {
         this.lastUpdateUtcDate = lastUpdateUtcDate;
         return this;
@@ -100,6 +107,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ImportationReportingLinks links;
+
     public ImportationReporting withLinks(ImportationReportingLinks links) {
         this.links = links;
         return this;
@@ -111,6 +119,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepName")
     public String stepName;
+
     public ImportationReporting withStepName(String stepName) {
         this.stepName = stepName;
         return this;
@@ -121,6 +130,7 @@ public class ImportationReporting {
      */
     @JsonProperty("steps")
     public java.util.Map<String, Boolean> steps;
+
     public ImportationReporting withSteps(java.util.Map<String, Boolean> steps) {
         this.steps = steps;
         return this;
@@ -132,6 +142,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ImportationReporting withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -143,6 +154,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalProductCount")
     public Integer totalProductCount;
+
     public ImportationReporting withTotalProductCount(Integer totalProductCount) {
         this.totalProductCount = totalProductCount;
         return this;
@@ -154,6 +166,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalProductErrorCount")
     public Integer totalProductErrorCount;
+
     public ImportationReporting withTotalProductErrorCount(Integer totalProductErrorCount) {
         this.totalProductErrorCount = totalProductErrorCount;
         return this;
@@ -165,6 +178,7 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalProductSuccessCount")
     public Integer totalProductSuccessCount;
+
     public ImportationReporting withTotalProductSuccessCount(Integer totalProductSuccessCount) {
         this.totalProductSuccessCount = totalProductSuccessCount;
         return this;
@@ -176,9 +190,16 @@ public class ImportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public ImportationReporting withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ImportationReporting(@JsonProperty("beginUtcDate") OffsetDateTime beginUtcDate, @JsonProperty("executionId") String executionId, @JsonProperty("lastUpdateUtcDate") OffsetDateTime lastUpdateUtcDate, @JsonProperty("steps") java.util.Map<String, Boolean> steps) {
+        this.beginUtcDate = beginUtcDate;
+        this.executionId = executionId;
+        this.lastUpdateUtcDate = lastUpdateUtcDate;
+        this.steps = steps;
+  }
 }

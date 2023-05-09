@@ -15,9 +15,11 @@ public class GetConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrConfiguration")
     public EcrConfigurationState ecrConfiguration;
+
     public GetConfigurationResponse withEcrConfiguration(EcrConfigurationState ecrConfiguration) {
         this.ecrConfiguration = ecrConfiguration;
         return this;
     }
     
+    public GetConfigurationResponse(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateDataShareConsumerMessage {
     
     public String consumerArn;
+
     public DisassociateDataShareConsumerMessage withConsumerArn(String consumerArn) {
         this.consumerArn = consumerArn;
         return this;
@@ -16,6 +17,7 @@ public class DisassociateDataShareConsumerMessage {
     
     
     public String consumerRegion;
+
     public DisassociateDataShareConsumerMessage withConsumerRegion(String consumerRegion) {
         this.consumerRegion = consumerRegion;
         return this;
@@ -23,6 +25,7 @@ public class DisassociateDataShareConsumerMessage {
     
     
     public String dataShareArn;
+
     public DisassociateDataShareConsumerMessage withDataShareArn(String dataShareArn) {
         this.dataShareArn = dataShareArn;
         return this;
@@ -30,9 +33,13 @@ public class DisassociateDataShareConsumerMessage {
     
     
     public Boolean disassociateEntireAccount;
+
     public DisassociateDataShareConsumerMessage withDisassociateEntireAccount(Boolean disassociateEntireAccount) {
         this.disassociateEntireAccount = disassociateEntireAccount;
         return this;
     }
     
+    public DisassociateDataShareConsumerMessage(@JsonProperty("DataShareArn") String dataShareArn) {
+        this.dataShareArn = dataShareArn;
+  }
 }

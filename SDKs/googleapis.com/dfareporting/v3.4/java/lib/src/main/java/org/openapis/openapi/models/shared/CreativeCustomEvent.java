@@ -18,6 +18,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserCustomEventId")
     public String advertiserCustomEventId;
+
     public CreativeCustomEvent withAdvertiserCustomEventId(String advertiserCustomEventId) {
         this.advertiserCustomEventId = advertiserCustomEventId;
         return this;
@@ -29,6 +30,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserCustomEventName")
     public String advertiserCustomEventName;
+
     public CreativeCustomEvent withAdvertiserCustomEventName(String advertiserCustomEventName) {
         this.advertiserCustomEventName = advertiserCustomEventName;
         return this;
@@ -40,6 +42,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserCustomEventType")
     public CreativeCustomEventAdvertiserCustomEventTypeEnum advertiserCustomEventType;
+
     public CreativeCustomEvent withAdvertiserCustomEventType(CreativeCustomEventAdvertiserCustomEventTypeEnum advertiserCustomEventType) {
         this.advertiserCustomEventType = advertiserCustomEventType;
         return this;
@@ -51,6 +54,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artworkLabel")
     public String artworkLabel;
+
     public CreativeCustomEvent withArtworkLabel(String artworkLabel) {
         this.artworkLabel = artworkLabel;
         return this;
@@ -62,6 +66,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artworkType")
     public CreativeCustomEventArtworkTypeEnum artworkType;
+
     public CreativeCustomEvent withArtworkType(CreativeCustomEventArtworkTypeEnum artworkType) {
         this.artworkType = artworkType;
         return this;
@@ -73,6 +78,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitClickThroughUrl")
     public CreativeClickThroughUrl exitClickThroughUrl;
+
     public CreativeCustomEvent withExitClickThroughUrl(CreativeClickThroughUrl exitClickThroughUrl) {
         this.exitClickThroughUrl = exitClickThroughUrl;
         return this;
@@ -84,6 +90,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreativeCustomEvent withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +102,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("popupWindowProperties")
     public PopupWindowProperties popupWindowProperties;
+
     public CreativeCustomEvent withPopupWindowProperties(PopupWindowProperties popupWindowProperties) {
         this.popupWindowProperties = popupWindowProperties;
         return this;
@@ -106,6 +114,7 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetType")
     public CreativeCustomEventTargetTypeEnum targetType;
+
     public CreativeCustomEvent withTargetType(CreativeCustomEventTargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
@@ -117,9 +126,11 @@ public class CreativeCustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoReportingId")
     public String videoReportingId;
+
     public CreativeCustomEvent withVideoReportingId(String videoReportingId) {
         this.videoReportingId = videoReportingId;
         return this;
     }
     
+    public CreativeCustomEvent(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotifyApplicationStateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NotifyApplicationStateRequest notifyApplicationStateRequest;
+
     public NotifyApplicationStateRequest withNotifyApplicationStateRequest(org.openapis.openapi.models.shared.NotifyApplicationStateRequest notifyApplicationStateRequest) {
         this.notifyApplicationStateRequest = notifyApplicationStateRequest;
         return this;
@@ -16,6 +18,7 @@ public class NotifyApplicationStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public NotifyApplicationStateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class NotifyApplicationStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public NotifyApplicationStateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class NotifyApplicationStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public NotifyApplicationStateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class NotifyApplicationStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public NotifyApplicationStateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class NotifyApplicationStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public NotifyApplicationStateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class NotifyApplicationStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public NotifyApplicationStateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class NotifyApplicationStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public NotifyApplicationStateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class NotifyApplicationStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public NotifyApplicationStateXAmzTargetEnum xAmzTarget;
+
     public NotifyApplicationStateRequest withXAmzTarget(NotifyApplicationStateXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public NotifyApplicationStateRequest(@JsonProperty("NotifyApplicationStateRequest") org.openapis.openapi.models.shared.NotifyApplicationStateRequest notifyApplicationStateRequest, @JsonProperty("X-Amz-Target") NotifyApplicationStateXAmzTargetEnum xAmzTarget) {
+        this.notifyApplicationStateRequest = notifyApplicationStateRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

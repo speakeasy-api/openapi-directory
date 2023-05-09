@@ -18,9 +18,11 @@ public class BatchGetBusinessCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Category[] categories;
+
     public BatchGetBusinessCategoriesResponse withCategories(Category[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public BatchGetBusinessCategoriesResponse(){}
 }

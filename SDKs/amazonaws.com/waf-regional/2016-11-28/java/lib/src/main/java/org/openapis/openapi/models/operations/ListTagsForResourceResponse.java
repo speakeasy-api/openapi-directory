@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsForResourceResponse {
     
     public String contentType;
+
     public ListTagsForResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsForResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsForResourceResponse listTagsForResourceResponse;
+
     public ListTagsForResourceResponse withListTagsForResourceResponse(org.openapis.openapi.models.shared.ListTagsForResourceResponse listTagsForResourceResponse) {
         this.listTagsForResourceResponse = listTagsForResourceResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListTagsForResourceResponse {
     
     
     public Integer statusCode;
+
     public ListTagsForResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListTagsForResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsForResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object wafBadRequestException;
+
     public ListTagsForResourceResponse withWAFBadRequestException(Object wafBadRequestException) {
         this.wafBadRequestException = wafBadRequestException;
         return this;
@@ -53,6 +59,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListTagsForResourceResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public ListTagsForResourceResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,6 +81,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public ListTagsForResourceResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object wafTagOperationException;
+
     public ListTagsForResourceResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -93,9 +103,14 @@ public class ListTagsForResourceResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public ListTagsForResourceResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public ListTagsForResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

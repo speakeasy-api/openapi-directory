@@ -15,6 +15,7 @@ public class PatientCreateResourceRelationshipsGroupsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PatientCreateResourceRelationshipsGroupsData withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PatientCreateResourceRelationshipsGroupsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PatientCreateResourceRelationshipsGroupsDataMeta meta;
+
     public PatientCreateResourceRelationshipsGroupsData withMeta(PatientCreateResourceRelationshipsGroupsDataMeta meta) {
         this.meta = meta;
         return this;
@@ -33,9 +35,13 @@ public class PatientCreateResourceRelationshipsGroupsData {
     
     @JsonProperty("type")
     public PatientCreateResourceRelationshipsGroupsDataTypeEnum type;
+
     public PatientCreateResourceRelationshipsGroupsData withType(PatientCreateResourceRelationshipsGroupsDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PatientCreateResourceRelationshipsGroupsData(@JsonProperty("type") PatientCreateResourceRelationshipsGroupsDataTypeEnum type) {
+        this.type = type;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TextField {
     @JsonProperty("bbox")
     public BoundingBox bbox;
+
     public TextField withBbox(BoundingBox bbox) {
         this.bbox = bbox;
         return this;
@@ -19,6 +20,7 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cell_count")
     public Long cellCount;
+
     public TextField withCellCount(Long cellCount) {
         this.cellCount = cellCount;
         return this;
@@ -27,6 +29,7 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cell_offset")
     public Long cellOffset;
+
     public TextField withCellOffset(Long cellOffset) {
         this.cellOffset = cellOffset;
         return this;
@@ -35,6 +38,7 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cells")
     public Boolean cells;
+
     public TextField withCells(Boolean cells) {
         this.cells = cells;
         return this;
@@ -43,6 +47,7 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public TextField withColor(String color) {
         this.color = color;
         return this;
@@ -51,6 +56,7 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("font")
     public TextFieldFontEnum font;
+
     public TextField withFont(TextFieldFontEnum font) {
         this.font = font;
         return this;
@@ -59,6 +65,7 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("font_size")
     public Long fontSize;
+
     public TextField withFontSize(Long fontSize) {
         this.fontSize = fontSize;
         return this;
@@ -67,6 +74,7 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("h_align")
     public TextFieldHorizontalAlignEnum hAlign;
+
     public TextField withHAlign(TextFieldHorizontalAlignEnum hAlign) {
         this.hAlign = hAlign;
         return this;
@@ -74,6 +82,7 @@ public class TextField {
     
     @JsonProperty("name")
     public String name;
+
     public TextField withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +90,7 @@ public class TextField {
     
     @JsonProperty("page")
     public Long page;
+
     public TextField withPage(Long page) {
         this.page = page;
         return this;
@@ -89,6 +99,7 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public TextField withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -96,6 +107,7 @@ public class TextField {
     
     @JsonProperty("type")
     public TextFieldTypeEnum type;
+
     public TextField withType(TextFieldTypeEnum type) {
         this.type = type;
         return this;
@@ -104,9 +116,16 @@ public class TextField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v_align")
     public TextFieldVerticalAlignEnum vAlign;
+
     public TextField withVAlign(TextFieldVerticalAlignEnum vAlign) {
         this.vAlign = vAlign;
         return this;
     }
     
+    public TextField(@JsonProperty("bbox") BoundingBox bbox, @JsonProperty("name") String name, @JsonProperty("page") Long page, @JsonProperty("type") TextFieldTypeEnum type) {
+        this.bbox = bbox;
+        this.name = name;
+        this.page = page;
+        this.type = type;
+  }
 }

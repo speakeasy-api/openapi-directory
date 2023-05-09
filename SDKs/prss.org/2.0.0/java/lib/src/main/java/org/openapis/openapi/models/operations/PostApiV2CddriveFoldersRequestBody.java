@@ -12,6 +12,7 @@ public class PostApiV2CddriveFoldersRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PostApiV2CddriveFoldersRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,11 @@ public class PostApiV2CddriveFoldersRequestBody {
      */
     @SpeakeasyMetadata("form:name=parent-id")
     public Long parentId;
+
     public PostApiV2CddriveFoldersRequestBody withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
     }
     
+    public PostApiV2CddriveFoldersRequestBody(){}
 }

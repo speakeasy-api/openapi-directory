@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLendingAnalysisResponse {
@@ -12,6 +13,7 @@ public class GetLendingAnalysisResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLendingAnalysisResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLendingAnalysisResponse {
     
     
     public String contentType;
+
     public GetLendingAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLendingAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLendingAnalysisResponse getLendingAnalysisResponse;
+
     public GetLendingAnalysisResponse withGetLendingAnalysisResponse(org.openapis.openapi.models.shared.GetLendingAnalysisResponse getLendingAnalysisResponse) {
         this.getLendingAnalysisResponse = getLendingAnalysisResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetLendingAnalysisResponse {
      */
     
     public Object internalServerError;
+
     public GetLendingAnalysisResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetLendingAnalysisResponse {
      */
     
     public Object invalidJobIdException;
+
     public GetLendingAnalysisResponse withInvalidJobIdException(Object invalidJobIdException) {
         this.invalidJobIdException = invalidJobIdException;
         return this;
@@ -59,6 +65,7 @@ public class GetLendingAnalysisResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public GetLendingAnalysisResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -69,6 +76,7 @@ public class GetLendingAnalysisResponse {
      */
     
     public Object invalidParameterException;
+
     public GetLendingAnalysisResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class GetLendingAnalysisResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public GetLendingAnalysisResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class GetLendingAnalysisResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetLendingAnalysisResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class GetLendingAnalysisResponse {
     
     
     public Integer statusCode;
+
     public GetLendingAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetLendingAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLendingAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class GetLendingAnalysisResponse {
      */
     
     public Object throttlingException;
+
     public GetLendingAnalysisResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetLendingAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

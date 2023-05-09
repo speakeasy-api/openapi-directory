@@ -22,6 +22,7 @@ public class SnapshotDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public SnapshotDetails withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class SnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public SnapshotDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class SnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public SnapshotDetails withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class SnapshotDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public SnapshotDetails withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -56,9 +60,11 @@ public class SnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sections")
     public java.util.Map<String, Section> sections;
+
     public SnapshotDetails withSections(java.util.Map<String, Section> sections) {
         this.sections = sections;
         return this;
     }
     
+    public SnapshotDetails(){}
 }

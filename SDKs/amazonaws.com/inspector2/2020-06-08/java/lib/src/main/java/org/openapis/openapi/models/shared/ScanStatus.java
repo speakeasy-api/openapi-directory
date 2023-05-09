@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScanStatus {
     @JsonProperty("reason")
     public ScanStatusReasonEnum reason;
+
     public ScanStatus withReason(ScanStatusReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -19,9 +20,14 @@ public class ScanStatus {
     
     @JsonProperty("statusCode")
     public ScanStatusCodeEnum statusCode;
+
     public ScanStatus withStatusCode(ScanStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public ScanStatus(@JsonProperty("reason") ScanStatusReasonEnum reason, @JsonProperty("statusCode") ScanStatusCodeEnum statusCode) {
+        this.reason = reason;
+        this.statusCode = statusCode;
+  }
 }

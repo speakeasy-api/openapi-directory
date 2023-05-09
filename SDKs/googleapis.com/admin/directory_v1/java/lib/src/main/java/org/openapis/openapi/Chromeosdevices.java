@@ -62,10 +62,8 @@ public class Chromeosdevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionResponse() {{
+        org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Chromeosdevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetResponse(contentType, httpRes.statusCode()) {{
             chromeOsDevice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Chromeosdevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryChromeosdevicesListResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryChromeosdevicesListResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesListResponse(contentType, httpRes.statusCode()) {{
             chromeOsDevices = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,10 +190,8 @@ public class Chromeosdevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuResponse() {{
+        org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,11 +230,9 @@ public class Chromeosdevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchResponse(contentType, httpRes.statusCode()) {{
             chromeOsDevice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,11 +276,9 @@ public class Chromeosdevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateResponse(contentType, httpRes.statusCode()) {{
             chromeOsDevice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

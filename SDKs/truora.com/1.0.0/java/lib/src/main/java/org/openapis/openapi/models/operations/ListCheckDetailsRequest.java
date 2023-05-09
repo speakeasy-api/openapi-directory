@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCheckDetailsRequest {
@@ -12,6 +13,7 @@ public class ListCheckDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_id")
     public String checkId;
+
     public ListCheckDetailsRequest withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -22,6 +24,7 @@ public class ListCheckDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ListCheckDetailsRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -32,9 +35,13 @@ public class ListCheckDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_key")
     public String startKey;
+
     public ListCheckDetailsRequest withStartKey(String startKey) {
         this.startKey = startKey;
         return this;
     }
     
+    public ListCheckDetailsRequest(@JsonProperty("check_id") String checkId) {
+        this.checkId = checkId;
+  }
 }

@@ -15,9 +15,11 @@ public class ModifyReplicationSubnetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationSubnetGroup")
     public ReplicationSubnetGroup replicationSubnetGroup;
+
     public ModifyReplicationSubnetGroupResponse withReplicationSubnetGroup(ReplicationSubnetGroup replicationSubnetGroup) {
         this.replicationSubnetGroup = replicationSubnetGroup;
         return this;
     }
     
+    public ModifyReplicationSubnetGroupResponse(){}
 }

@@ -62,11 +62,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateResponse(contentType, httpRes.statusCode()) {{
             source = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateResponse(contentType, httpRes.statusCode()) {{
             finding = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -348,11 +336,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

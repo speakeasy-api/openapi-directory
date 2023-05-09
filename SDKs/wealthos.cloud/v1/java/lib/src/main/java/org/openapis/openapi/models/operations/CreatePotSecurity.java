@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePotSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
     public String apiSecretKey;
+
     public CreatePotSecurity withApiSecretKey(String apiSecretKey) {
         this.apiSecretKey = apiSecretKey;
         return this;
     }
     
+    public CreatePotSecurity(@JsonProperty("ApiSecretKey") String apiSecretKey) {
+        this.apiSecretKey = apiSecretKey;
+  }
 }

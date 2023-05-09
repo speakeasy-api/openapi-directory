@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateMonitoringScheduleResponse {
     @JsonProperty("MonitoringScheduleArn")
     public String monitoringScheduleArn;
+
     public UpdateMonitoringScheduleResponse withMonitoringScheduleArn(String monitoringScheduleArn) {
         this.monitoringScheduleArn = monitoringScheduleArn;
         return this;
     }
     
+    public UpdateMonitoringScheduleResponse(@JsonProperty("MonitoringScheduleArn") String monitoringScheduleArn) {
+        this.monitoringScheduleArn = monitoringScheduleArn;
+  }
 }

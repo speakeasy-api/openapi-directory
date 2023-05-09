@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseHostReservationRequestTagSpecificationsTags {
     
     public String key;
+
     public PurchaseHostReservationRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class PurchaseHostReservationRequestTagSpecificationsTags {
     
     
     public String value;
+
     public PurchaseHostReservationRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PurchaseHostReservationRequestTagSpecificationsTags(){}
 }

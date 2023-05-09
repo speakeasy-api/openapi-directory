@@ -12,6 +12,7 @@ public class GetUserDefinedFunctionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetUserDefinedFunctionsRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -20,6 +21,7 @@ public class GetUserDefinedFunctionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetUserDefinedFunctionsRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -28,6 +30,7 @@ public class GetUserDefinedFunctionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetUserDefinedFunctionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class GetUserDefinedFunctionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetUserDefinedFunctionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class GetUserDefinedFunctionsRequest {
     
     @JsonProperty("Pattern")
     public String pattern;
+
     public GetUserDefinedFunctionsRequest withPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
     
+    public GetUserDefinedFunctionsRequest(@JsonProperty("Pattern") String pattern) {
+        this.pattern = pattern;
+  }
 }

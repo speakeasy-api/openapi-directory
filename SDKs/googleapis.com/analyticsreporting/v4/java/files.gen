@@ -112,4 +112,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/SearchUserActivityRequestAc
 lib/src/main/java/org/openapis/openapi/models/shared/SearchUserActivityRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/User.java
+docs/sdk/README.md
+docs/reports/README.md
+docs/useractivity/README.md
 USAGE.md

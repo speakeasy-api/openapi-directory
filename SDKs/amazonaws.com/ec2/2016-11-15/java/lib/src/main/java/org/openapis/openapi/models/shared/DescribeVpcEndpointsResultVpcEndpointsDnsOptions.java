@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointsResultVpcEndpointsDnsOptions {
     
     public DescribeVpcEndpointsResultVpcEndpointsDnsOptionsDnsRecordIpTypeEnum dnsRecordIpType;
+
     public DescribeVpcEndpointsResultVpcEndpointsDnsOptions withDnsRecordIpType(DescribeVpcEndpointsResultVpcEndpointsDnsOptionsDnsRecordIpTypeEnum dnsRecordIpType) {
         this.dnsRecordIpType = dnsRecordIpType;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointsResultVpcEndpointsDnsOptions {
     
     
     public Boolean privateDnsOnlyForInboundResolverEndpoint;
+
     public DescribeVpcEndpointsResultVpcEndpointsDnsOptions withPrivateDnsOnlyForInboundResolverEndpoint(Boolean privateDnsOnlyForInboundResolverEndpoint) {
         this.privateDnsOnlyForInboundResolverEndpoint = privateDnsOnlyForInboundResolverEndpoint;
         return this;
     }
     
+    public DescribeVpcEndpointsResultVpcEndpointsDnsOptions(){}
 }

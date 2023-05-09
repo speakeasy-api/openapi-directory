@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * TrialComponentSummary - A summary of the properties of a trial component. To get all the properties, call the &lt;a&gt;DescribeTrialComponent&lt;/a&gt; API and provide the &lt;code&gt;TrialComponentName&lt;/code&gt;.
+ * TrialComponentSummary - A summary of the properties of a trial component. To get all the properties, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrialComponent.html"&gt;DescribeTrialComponent&lt;/a&gt; API and provide the &lt;code&gt;TrialComponentName&lt;/code&gt;.
  */
 public class TrialComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public TrialComponentSummary withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class TrialComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TrialComponentSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class TrialComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public TrialComponentSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -48,6 +51,7 @@ public class TrialComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public TrialComponentSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -56,6 +60,7 @@ public class TrialComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public TrialComponentSummary withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -66,6 +71,7 @@ public class TrialComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public TrialComponentSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -76,6 +82,7 @@ public class TrialComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public TrialComponentSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -84,6 +91,7 @@ public class TrialComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TrialComponentStatus status;
+
     public TrialComponentSummary withStatus(TrialComponentStatus status) {
         this.status = status;
         return this;
@@ -92,6 +100,7 @@ public class TrialComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentArn")
     public String trialComponentArn;
+
     public TrialComponentSummary withTrialComponentArn(String trialComponentArn) {
         this.trialComponentArn = trialComponentArn;
         return this;
@@ -100,6 +109,7 @@ public class TrialComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public TrialComponentSummary withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
@@ -111,9 +121,11 @@ public class TrialComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentSource")
     public TrialComponentSource trialComponentSource;
+
     public TrialComponentSummary withTrialComponentSource(TrialComponentSource trialComponentSource) {
         this.trialComponentSource = trialComponentSource;
         return this;
     }
     
+    public TrialComponentSummary(){}
 }

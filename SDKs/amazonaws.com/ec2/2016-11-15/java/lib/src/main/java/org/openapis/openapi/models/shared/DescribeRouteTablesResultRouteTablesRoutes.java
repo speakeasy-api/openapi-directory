@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeRouteTablesResultRouteTablesRoutes {
     
     public String carrierGatewayId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String coreNetworkArn;
+
     public DescribeRouteTablesResultRouteTablesRoutes withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String destinationCidrBlock;
+
     public DescribeRouteTablesResultRouteTablesRoutes withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -33,6 +36,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String destinationIpv6CidrBlock;
+
     public DescribeRouteTablesResultRouteTablesRoutes withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -40,6 +44,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String destinationPrefixListId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String egressOnlyInternetGatewayId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String gatewayId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String instanceId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String instanceOwnerId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withInstanceOwnerId(String instanceOwnerId) {
         this.instanceOwnerId = instanceOwnerId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String localGatewayId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -82,6 +92,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String natGatewayId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -89,6 +100,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String networkInterfaceId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -96,6 +108,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public DescribeRouteTablesResultRouteTablesRoutesOriginEnum origin;
+
     public DescribeRouteTablesResultRouteTablesRoutes withOrigin(DescribeRouteTablesResultRouteTablesRoutesOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -103,6 +116,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public DescribeRouteTablesResultRouteTablesRoutesStateEnum state;
+
     public DescribeRouteTablesResultRouteTablesRoutes withState(DescribeRouteTablesResultRouteTablesRoutesStateEnum state) {
         this.state = state;
         return this;
@@ -110,6 +124,7 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String transitGatewayId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -117,9 +132,11 @@ public class DescribeRouteTablesResultRouteTablesRoutes {
     
     
     public String vpcPeeringConnectionId;
+
     public DescribeRouteTablesResultRouteTablesRoutes withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DescribeRouteTablesResultRouteTablesRoutes(){}
 }

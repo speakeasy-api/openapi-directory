@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse {
     
     public String contentType;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResp
      */
     
     public org.openapis.openapi.models.shared.ListPythonPackagesResponse listPythonPackagesResponse;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse withListPythonPackagesResponse(org.openapis.openapi.models.shared.ListPythonPackagesResponse listPythonPackagesResponse) {
         this.listPythonPackagesResponse = listPythonPackagesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResp
     
     
     public Integer statusCode;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

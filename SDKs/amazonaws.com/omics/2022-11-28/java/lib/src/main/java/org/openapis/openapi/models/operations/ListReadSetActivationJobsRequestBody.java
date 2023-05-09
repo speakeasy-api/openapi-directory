@@ -15,9 +15,11 @@ public class ListReadSetActivationJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListReadSetActivationJobsRequestBodyFilter filter;
+
     public ListReadSetActivationJobsRequestBody withFilter(ListReadSetActivationJobsRequestBodyFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public ListReadSetActivationJobsRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class Computer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputerAttributes")
     public Attribute[] computerAttributes;
+
     public Computer withComputerAttributes(Attribute[] computerAttributes) {
         this.computerAttributes = computerAttributes;
         return this;
@@ -23,6 +24,7 @@ public class Computer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputerId")
     public String computerId;
+
     public Computer withComputerId(String computerId) {
         this.computerId = computerId;
         return this;
@@ -31,9 +33,11 @@ public class Computer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputerName")
     public String computerName;
+
     public Computer withComputerName(String computerName) {
         this.computerName = computerName;
         return this;
     }
     
+    public Computer(){}
 }

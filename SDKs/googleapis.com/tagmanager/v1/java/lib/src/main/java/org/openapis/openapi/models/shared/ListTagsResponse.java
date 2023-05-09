@@ -18,9 +18,11 @@ public class ListTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public ListTagsResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsResponse(){}
 }

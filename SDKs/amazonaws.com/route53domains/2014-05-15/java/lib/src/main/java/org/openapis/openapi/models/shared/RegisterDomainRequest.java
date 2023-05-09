@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterDomainRequest {
     @JsonProperty("AdminContact")
     public ContactDetail adminContact;
+
     public RegisterDomainRequest withAdminContact(ContactDetail adminContact) {
         this.adminContact = adminContact;
         return this;
@@ -22,6 +23,7 @@ public class RegisterDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoRenew")
     public Boolean autoRenew;
+
     public RegisterDomainRequest withAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -29,6 +31,7 @@ public class RegisterDomainRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public RegisterDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -36,6 +39,7 @@ public class RegisterDomainRequest {
     
     @JsonProperty("DurationInYears")
     public Long durationInYears;
+
     public RegisterDomainRequest withDurationInYears(Long durationInYears) {
         this.durationInYears = durationInYears;
         return this;
@@ -44,6 +48,7 @@ public class RegisterDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdnLangCode")
     public String idnLangCode;
+
     public RegisterDomainRequest withIdnLangCode(String idnLangCode) {
         this.idnLangCode = idnLangCode;
         return this;
@@ -52,6 +57,7 @@ public class RegisterDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivacyProtectAdminContact")
     public Boolean privacyProtectAdminContact;
+
     public RegisterDomainRequest withPrivacyProtectAdminContact(Boolean privacyProtectAdminContact) {
         this.privacyProtectAdminContact = privacyProtectAdminContact;
         return this;
@@ -60,6 +66,7 @@ public class RegisterDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivacyProtectRegistrantContact")
     public Boolean privacyProtectRegistrantContact;
+
     public RegisterDomainRequest withPrivacyProtectRegistrantContact(Boolean privacyProtectRegistrantContact) {
         this.privacyProtectRegistrantContact = privacyProtectRegistrantContact;
         return this;
@@ -68,6 +75,7 @@ public class RegisterDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivacyProtectTechContact")
     public Boolean privacyProtectTechContact;
+
     public RegisterDomainRequest withPrivacyProtectTechContact(Boolean privacyProtectTechContact) {
         this.privacyProtectTechContact = privacyProtectTechContact;
         return this;
@@ -75,6 +83,7 @@ public class RegisterDomainRequest {
     
     @JsonProperty("RegistrantContact")
     public ContactDetail registrantContact;
+
     public RegisterDomainRequest withRegistrantContact(ContactDetail registrantContact) {
         this.registrantContact = registrantContact;
         return this;
@@ -82,9 +91,17 @@ public class RegisterDomainRequest {
     
     @JsonProperty("TechContact")
     public ContactDetail techContact;
+
     public RegisterDomainRequest withTechContact(ContactDetail techContact) {
         this.techContact = techContact;
         return this;
     }
     
+    public RegisterDomainRequest(@JsonProperty("AdminContact") ContactDetail adminContact, @JsonProperty("DomainName") String domainName, @JsonProperty("DurationInYears") Long durationInYears, @JsonProperty("RegistrantContact") ContactDetail registrantContact, @JsonProperty("TechContact") ContactDetail techContact) {
+        this.adminContact = adminContact;
+        this.domainName = domainName;
+        this.durationInYears = durationInYears;
+        this.registrantContact = registrantContact;
+        this.techContact = techContact;
+  }
 }

@@ -15,6 +15,7 @@ public class VideoCategorySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignable")
     public Boolean assignable;
+
     public VideoCategorySnippet withAssignable(Boolean assignable) {
         this.assignable = assignable;
         return this;
@@ -26,6 +27,7 @@ public class VideoCategorySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public VideoCategorySnippet withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -37,9 +39,11 @@ public class VideoCategorySnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public VideoCategorySnippet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public VideoCategorySnippet(){}
 }

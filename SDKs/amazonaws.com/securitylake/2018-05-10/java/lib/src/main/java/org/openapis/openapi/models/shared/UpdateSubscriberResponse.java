@@ -15,9 +15,11 @@ public class UpdateSubscriberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber")
     public SubscriberResource subscriber;
+
     public UpdateSubscriberResponse withSubscriber(SubscriberResource subscriber) {
         this.subscriber = subscriber;
         return this;
     }
     
+    public UpdateSubscriberResponse(){}
 }

@@ -15,9 +15,11 @@ public class NodesIdentifiersListIdentifierRelationships {
      */
     
     public String referent;
+
     public NodesIdentifiersListIdentifierRelationships withReferent(String referent) {
         this.referent = referent;
         return this;
     }
     
+    public NodesIdentifiersListIdentifierRelationships(){}
 }

@@ -15,6 +15,7 @@ public class PutAutoScalingPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingPolicy")
     public AutoScalingPolicyDescription autoScalingPolicy;
+
     public PutAutoScalingPolicyOutput withAutoScalingPolicy(AutoScalingPolicyDescription autoScalingPolicy) {
         this.autoScalingPolicy = autoScalingPolicy;
         return this;
@@ -23,6 +24,7 @@ public class PutAutoScalingPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public PutAutoScalingPolicyOutput withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -31,6 +33,7 @@ public class PutAutoScalingPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public PutAutoScalingPolicyOutput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -39,9 +42,11 @@ public class PutAutoScalingPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroupId")
     public String instanceGroupId;
+
     public PutAutoScalingPolicyOutput withInstanceGroupId(String instanceGroupId) {
         this.instanceGroupId = instanceGroupId;
         return this;
     }
     
+    public PutAutoScalingPolicyOutput(){}
 }

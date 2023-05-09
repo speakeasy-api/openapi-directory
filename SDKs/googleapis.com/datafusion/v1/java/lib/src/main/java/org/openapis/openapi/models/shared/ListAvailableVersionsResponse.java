@@ -18,6 +18,7 @@ public class ListAvailableVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableVersions")
     public Version[] availableVersions;
+
     public ListAvailableVersionsResponse withAvailableVersions(Version[] availableVersions) {
         this.availableVersions = availableVersions;
         return this;
@@ -29,9 +30,11 @@ public class ListAvailableVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAvailableVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAvailableVersionsResponse(){}
 }

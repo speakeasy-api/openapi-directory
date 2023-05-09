@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRequest {
@@ -12,6 +13,7 @@ public class DeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
     public Long customerId;
+
     public DeleteRequest withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -19,9 +21,14 @@ public class DeleteRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VectaraDeleteDocumentRequest vectaraDeleteDocumentRequest;
+
     public DeleteRequest withVectaraDeleteDocumentRequest(org.openapis.openapi.models.shared.VectaraDeleteDocumentRequest vectaraDeleteDocumentRequest) {
         this.vectaraDeleteDocumentRequest = vectaraDeleteDocumentRequest;
         return this;
     }
     
+    public DeleteRequest(@JsonProperty("customer-id") Long customerId, @JsonProperty("vectaraDeleteDocumentRequest") org.openapis.openapi.models.shared.VectaraDeleteDocumentRequest vectaraDeleteDocumentRequest) {
+        this.customerId = customerId;
+        this.vectaraDeleteDocumentRequest = vectaraDeleteDocumentRequest;
+  }
 }

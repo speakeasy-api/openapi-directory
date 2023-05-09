@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLicenseManagerReportGeneratorResponse {
@@ -12,6 +13,7 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLicenseManagerReportGeneratorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public Object authorizationException;
+
     public GetLicenseManagerReportGeneratorResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class GetLicenseManagerReportGeneratorResponse {
     
     
     public String contentType;
+
     public GetLicenseManagerReportGeneratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLicenseManagerReportGeneratorResponse getLicenseManagerReportGeneratorResponse;
+
     public GetLicenseManagerReportGeneratorResponse withGetLicenseManagerReportGeneratorResponse(org.openapis.openapi.models.shared.GetLicenseManagerReportGeneratorResponse getLicenseManagerReportGeneratorResponse) {
         this.getLicenseManagerReportGeneratorResponse = getLicenseManagerReportGeneratorResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetLicenseManagerReportGeneratorResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public Object rateLimitExceededException;
+
     public GetLicenseManagerReportGeneratorResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public GetLicenseManagerReportGeneratorResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetLicenseManagerReportGeneratorResponse {
     
     
     public Integer statusCode;
+
     public GetLicenseManagerReportGeneratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetLicenseManagerReportGeneratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLicenseManagerReportGeneratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLicenseManagerReportGeneratorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public Object serverInternalException;
+
     public GetLicenseManagerReportGeneratorResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -113,9 +125,14 @@ public class GetLicenseManagerReportGeneratorResponse {
      */
     
     public Object validationException;
+
     public GetLicenseManagerReportGeneratorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLicenseManagerReportGeneratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

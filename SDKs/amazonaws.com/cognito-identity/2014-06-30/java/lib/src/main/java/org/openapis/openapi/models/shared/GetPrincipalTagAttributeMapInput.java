@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPrincipalTagAttributeMapInput {
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public GetPrincipalTagAttributeMapInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -16,9 +17,14 @@ public class GetPrincipalTagAttributeMapInput {
     
     @JsonProperty("IdentityProviderName")
     public String identityProviderName;
+
     public GetPrincipalTagAttributeMapInput withIdentityProviderName(String identityProviderName) {
         this.identityProviderName = identityProviderName;
         return this;
     }
     
+    public GetPrincipalTagAttributeMapInput(@JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("IdentityProviderName") String identityProviderName) {
+        this.identityPoolId = identityPoolId;
+        this.identityProviderName = identityProviderName;
+  }
 }

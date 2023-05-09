@@ -15,6 +15,7 @@ public class ZendeskConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public ZendeskConnectorProfileCredentials withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,6 +23,7 @@ public class ZendeskConnectorProfileCredentials {
     
     @JsonProperty("clientId")
     public String clientId;
+
     public ZendeskConnectorProfileCredentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +31,7 @@ public class ZendeskConnectorProfileCredentials {
     
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public ZendeskConnectorProfileCredentials withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -37,9 +40,14 @@ public class ZendeskConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthRequest")
     public ConnectorOAuthRequest oAuthRequest;
+
     public ZendeskConnectorProfileCredentials withOAuthRequest(ConnectorOAuthRequest oAuthRequest) {
         this.oAuthRequest = oAuthRequest;
         return this;
     }
     
+    public ZendeskConnectorProfileCredentials(@JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+  }
 }

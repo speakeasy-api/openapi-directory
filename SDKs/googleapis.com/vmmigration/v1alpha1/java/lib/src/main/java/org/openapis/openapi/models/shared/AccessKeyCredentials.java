@@ -18,6 +18,7 @@ public class AccessKeyCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKeyId")
     public String accessKeyId;
+
     public AccessKeyCredentials withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -29,6 +30,7 @@ public class AccessKeyCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretAccessKey")
     public String secretAccessKey;
+
     public AccessKeyCredentials withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -40,9 +42,11 @@ public class AccessKeyCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionToken")
     public String sessionToken;
+
     public AccessKeyCredentials withSessionToken(String sessionToken) {
         this.sessionToken = sessionToken;
         return this;
     }
     
+    public AccessKeyCredentials(){}
 }

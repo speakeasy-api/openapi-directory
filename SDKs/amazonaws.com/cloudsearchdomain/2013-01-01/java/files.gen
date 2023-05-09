@@ -59,4 +59,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UploadDocumentsResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentServiceWarning.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentServiceException.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

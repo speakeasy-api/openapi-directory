@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceEventNotificationAttributesResultInstanceTagAttribute {
     
     public Boolean includeAllTagsOfInstance;
+
     public DescribeInstanceEventNotificationAttributesResultInstanceTagAttribute withIncludeAllTagsOfInstance(Boolean includeAllTagsOfInstance) {
         this.includeAllTagsOfInstance = includeAllTagsOfInstance;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceEventNotificationAttributesResultInstanceTagAttribu
     
     
     public String[] instanceTagKeys;
+
     public DescribeInstanceEventNotificationAttributesResultInstanceTagAttribute withInstanceTagKeys(String[] instanceTagKeys) {
         this.instanceTagKeys = instanceTagKeys;
         return this;
     }
     
+    public DescribeInstanceEventNotificationAttributesResultInstanceTagAttribute(){}
 }

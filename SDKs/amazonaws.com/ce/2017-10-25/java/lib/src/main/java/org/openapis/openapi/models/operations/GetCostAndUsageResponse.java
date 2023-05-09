@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCostAndUsageResponse {
@@ -12,6 +13,7 @@ public class GetCostAndUsageResponse {
      */
     
     public Object billExpirationException;
+
     public GetCostAndUsageResponse withBillExpirationException(Object billExpirationException) {
         this.billExpirationException = billExpirationException;
         return this;
@@ -19,6 +21,7 @@ public class GetCostAndUsageResponse {
     
     
     public String contentType;
+
     public GetCostAndUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCostAndUsageResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetCostAndUsageResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class GetCostAndUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCostAndUsageResponse getCostAndUsageResponse;
+
     public GetCostAndUsageResponse withGetCostAndUsageResponse(org.openapis.openapi.models.shared.GetCostAndUsageResponse getCostAndUsageResponse) {
         this.getCostAndUsageResponse = getCostAndUsageResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetCostAndUsageResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetCostAndUsageResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetCostAndUsageResponse {
      */
     
     public Object limitExceededException;
+
     public GetCostAndUsageResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class GetCostAndUsageResponse {
      */
     
     public Object requestChangedException;
+
     public GetCostAndUsageResponse withRequestChangedException(Object requestChangedException) {
         this.requestChangedException = requestChangedException;
         return this;
@@ -76,6 +84,7 @@ public class GetCostAndUsageResponse {
     
     
     public Integer statusCode;
+
     public GetCostAndUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetCostAndUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCostAndUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCostAndUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

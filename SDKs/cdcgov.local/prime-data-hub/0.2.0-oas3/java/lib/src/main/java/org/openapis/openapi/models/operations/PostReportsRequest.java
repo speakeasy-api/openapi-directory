@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportsRequest {
@@ -12,6 +13,7 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/csv")
     public String requestBody;
+
     public PostReportsRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client")
     public String client;
+
     public PostReportsRequest withClient(String client) {
         this.client = client;
         return this;
@@ -32,6 +35,7 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=default")
     public String[] default_;
+
     public PostReportsRequest withDefault(String[] default_) {
         this.default_ = default_;
         return this;
@@ -42,6 +46,7 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=option")
     public PostReportsOptionEnum option;
+
     public PostReportsRequest withOption(PostReportsOptionEnum option) {
         this.option = option;
         return this;
@@ -52,9 +57,14 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeTo")
     public String[] routeTo;
+
     public PostReportsRequest withRouteTo(String[] routeTo) {
         this.routeTo = routeTo;
         return this;
     }
     
+    public PostReportsRequest(@JsonProperty("RequestBody") String requestBody, @JsonProperty("client") String client) {
+        this.requestBody = requestBody;
+        this.client = client;
+  }
 }

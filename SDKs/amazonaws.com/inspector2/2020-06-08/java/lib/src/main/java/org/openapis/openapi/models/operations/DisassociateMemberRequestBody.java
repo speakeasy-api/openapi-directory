@@ -12,9 +12,13 @@ public class DisassociateMemberRequestBody {
      */
     @JsonProperty("accountId")
     public String accountId;
+
     public DisassociateMemberRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public DisassociateMemberRequestBody(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

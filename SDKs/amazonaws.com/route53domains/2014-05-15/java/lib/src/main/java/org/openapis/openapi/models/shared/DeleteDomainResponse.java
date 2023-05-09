@@ -15,9 +15,11 @@ public class DeleteDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public DeleteDomainResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public DeleteDomainResponse(){}
 }

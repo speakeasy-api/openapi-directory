@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class HsmConfiguration {
     
     public String description;
+
     public HsmConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class HsmConfiguration {
     
     
     public String hsmConfigurationIdentifier;
+
     public HsmConfiguration withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class HsmConfiguration {
     
     
     public String hsmIpAddress;
+
     public HsmConfiguration withHsmIpAddress(String hsmIpAddress) {
         this.hsmIpAddress = hsmIpAddress;
         return this;
@@ -33,6 +36,7 @@ public class HsmConfiguration {
     
     
     public String hsmPartitionName;
+
     public HsmConfiguration withHsmPartitionName(String hsmPartitionName) {
         this.hsmPartitionName = hsmPartitionName;
         return this;
@@ -40,9 +44,11 @@ public class HsmConfiguration {
     
     
     public TagList[] tags;
+
     public HsmConfiguration withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public HsmConfiguration(){}
 }

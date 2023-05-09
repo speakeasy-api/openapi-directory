@@ -12,6 +12,7 @@ public class CreateApiVersionRequestBodyVersionSourceRelations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation")
     public Boolean documentation;
+
     public CreateApiVersionRequestBodyVersionSourceRelations withDocumentation(Boolean documentation) {
         this.documentation = documentation;
         return this;
@@ -20,6 +21,7 @@ public class CreateApiVersionRequestBodyVersionSourceRelations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public Boolean mock;
+
     public CreateApiVersionRequestBodyVersionSourceRelations withMock(Boolean mock) {
         this.mock = mock;
         return this;
@@ -28,9 +30,11 @@ public class CreateApiVersionRequestBodyVersionSourceRelations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitor")
     public Boolean monitor;
+
     public CreateApiVersionRequestBodyVersionSourceRelations withMonitor(Boolean monitor) {
         this.monitor = monitor;
         return this;
     }
     
+    public CreateApiVersionRequestBodyVersionSourceRelations(){}
 }

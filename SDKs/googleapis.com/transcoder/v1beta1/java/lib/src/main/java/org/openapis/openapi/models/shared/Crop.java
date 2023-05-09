@@ -18,6 +18,7 @@ public class Crop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bottomPixels")
     public Integer bottomPixels;
+
     public Crop withBottomPixels(Integer bottomPixels) {
         this.bottomPixels = bottomPixels;
         return this;
@@ -29,6 +30,7 @@ public class Crop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leftPixels")
     public Integer leftPixels;
+
     public Crop withLeftPixels(Integer leftPixels) {
         this.leftPixels = leftPixels;
         return this;
@@ -40,6 +42,7 @@ public class Crop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rightPixels")
     public Integer rightPixels;
+
     public Crop withRightPixels(Integer rightPixels) {
         this.rightPixels = rightPixels;
         return this;
@@ -51,9 +54,11 @@ public class Crop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topPixels")
     public Integer topPixels;
+
     public Crop withTopPixels(Integer topPixels) {
         this.topPixels = topPixels;
         return this;
     }
     
+    public Crop(){}
 }

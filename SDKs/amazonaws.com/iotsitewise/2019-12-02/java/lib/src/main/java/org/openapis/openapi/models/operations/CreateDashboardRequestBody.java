@@ -15,6 +15,7 @@ public class CreateDashboardRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateDashboardRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateDashboardRequestBody {
      */
     @JsonProperty("dashboardDefinition")
     public String dashboardDefinition;
+
     public CreateDashboardRequestBody withDashboardDefinition(String dashboardDefinition) {
         this.dashboardDefinition = dashboardDefinition;
         return this;
@@ -36,6 +38,7 @@ public class CreateDashboardRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboardDescription")
     public String dashboardDescription;
+
     public CreateDashboardRequestBody withDashboardDescription(String dashboardDescription) {
         this.dashboardDescription = dashboardDescription;
         return this;
@@ -46,6 +49,7 @@ public class CreateDashboardRequestBody {
      */
     @JsonProperty("dashboardName")
     public String dashboardName;
+
     public CreateDashboardRequestBody withDashboardName(String dashboardName) {
         this.dashboardName = dashboardName;
         return this;
@@ -56,6 +60,7 @@ public class CreateDashboardRequestBody {
      */
     @JsonProperty("projectId")
     public String projectId;
+
     public CreateDashboardRequestBody withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -67,9 +72,15 @@ public class CreateDashboardRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateDashboardRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDashboardRequestBody(@JsonProperty("dashboardDefinition") String dashboardDefinition, @JsonProperty("dashboardName") String dashboardName, @JsonProperty("projectId") String projectId) {
+        this.dashboardDefinition = dashboardDefinition;
+        this.dashboardName = dashboardName;
+        this.projectId = projectId;
+  }
 }

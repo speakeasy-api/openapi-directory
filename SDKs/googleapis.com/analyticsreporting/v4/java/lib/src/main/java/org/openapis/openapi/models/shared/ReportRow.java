@@ -18,6 +18,7 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public String[] dimensions;
+
     public ReportRow withDimensions(String[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,9 +30,11 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public DateRangeValues[] metrics;
+
     public ReportRow withMetrics(DateRangeValues[] metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public ReportRow(){}
 }

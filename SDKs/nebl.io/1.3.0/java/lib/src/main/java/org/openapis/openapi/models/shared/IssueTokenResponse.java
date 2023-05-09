@@ -18,6 +18,7 @@ public class IssueTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenId")
     public String tokenId;
+
     public IssueTokenResponse withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -29,9 +30,11 @@ public class IssueTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txHex")
     public String txHex;
+
     public IssueTokenResponse withTxHex(String txHex) {
         this.txHex = txHex;
         return this;
     }
     
+    public IssueTokenResponse(){}
 }

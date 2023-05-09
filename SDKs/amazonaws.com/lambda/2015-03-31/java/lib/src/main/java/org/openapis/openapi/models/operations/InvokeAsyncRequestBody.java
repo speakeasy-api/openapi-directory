@@ -12,9 +12,13 @@ public class InvokeAsyncRequestBody {
      */
     @JsonProperty("InvokeArgs")
     public String invokeArgs;
+
     public InvokeAsyncRequestBody withInvokeArgs(String invokeArgs) {
         this.invokeArgs = invokeArgs;
         return this;
     }
     
+    public InvokeAsyncRequestBody(@JsonProperty("InvokeArgs") String invokeArgs) {
+        this.invokeArgs = invokeArgs;
+  }
 }

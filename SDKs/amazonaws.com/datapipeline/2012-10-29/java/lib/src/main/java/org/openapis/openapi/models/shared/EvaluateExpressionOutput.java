@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EvaluateExpressionOutput {
     @JsonProperty("evaluatedExpression")
     public String evaluatedExpression;
+
     public EvaluateExpressionOutput withEvaluatedExpression(String evaluatedExpression) {
         this.evaluatedExpression = evaluatedExpression;
         return this;
     }
     
+    public EvaluateExpressionOutput(@JsonProperty("evaluatedExpression") String evaluatedExpression) {
+        this.evaluatedExpression = evaluatedExpression;
+  }
 }

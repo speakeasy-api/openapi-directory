@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateSettingsRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public UpdateSettingsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -16,9 +17,14 @@ public class UpdateSettingsRequest {
     
     @JsonProperty("Settings")
     public Setting[] settings;
+
     public UpdateSettingsRequest withSettings(Setting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public UpdateSettingsRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("Settings") Setting[] settings) {
+        this.directoryId = directoryId;
+        this.settings = settings;
+  }
 }

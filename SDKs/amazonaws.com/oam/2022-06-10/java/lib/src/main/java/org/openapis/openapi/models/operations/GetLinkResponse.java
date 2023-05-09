@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLinkResponse {
     
     public String contentType;
+
     public GetLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLinkOutput getLinkOutput;
+
     public GetLinkResponse withGetLinkOutput(org.openapis.openapi.models.shared.GetLinkOutput getLinkOutput) {
         this.getLinkOutput = getLinkOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetLinkResponse {
      */
     
     public Object internalServiceFault;
+
     public GetLinkResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -39,6 +43,7 @@ public class GetLinkResponse {
      */
     
     public Object invalidParameterException;
+
     public GetLinkResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetLinkResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetLinkResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetLinkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLinkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetLinkResponse {
     
     
     public Integer statusCode;
+
     public GetLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

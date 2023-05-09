@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
@@ -12,6 +13,7 @@ public class UntagResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public UntagResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UntagResourceResponse {
      */
     
     public Object badRequestException;
+
     public UntagResourceResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class UntagResourceResponse {
     
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UntagResourceResponse {
      */
     
     public Object internalServerErrorException;
+
     public UntagResourceResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UntagResourceResponse {
      */
     
     public Object notFoundException;
+
     public UntagResourceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UntagResourceResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UntagResourceResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class UntagResourceResponse {
      */
     
     public java.util.Map<String, Object> untagResourceOutput;
+
     public UntagResourceResponse withUntagResourceOutput(java.util.Map<String, Object> untagResourceOutput) {
         this.untagResourceOutput = untagResourceOutput;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

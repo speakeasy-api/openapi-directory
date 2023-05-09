@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsdataPropertiesBatchRunReportsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsdataPropertiesBatchRunReportsSecurityOption1 option1;
+
     public AnalyticsdataPropertiesBatchRunReportsSecurity withOption1(AnalyticsdataPropertiesBatchRunReportsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsdataPropertiesBatchRunReportsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsdataPropertiesBatchRunReportsSecurityOption2 option2;
+
     public AnalyticsdataPropertiesBatchRunReportsSecurity withOption2(AnalyticsdataPropertiesBatchRunReportsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsdataPropertiesBatchRunReportsSecurity(){}
 }

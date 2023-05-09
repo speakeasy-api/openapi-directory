@@ -15,6 +15,7 @@ public class ThrottlingSettings {
      */
     @JsonProperty("maxConcurrentRequests")
     public Integer maxConcurrentRequests;
+
     public ThrottlingSettings withMaxConcurrentRequests(Integer maxConcurrentRequests) {
         this.maxConcurrentRequests = maxConcurrentRequests;
         return this;
@@ -25,9 +26,14 @@ public class ThrottlingSettings {
      */
     @JsonProperty("period")
     public ThrottlingSettingsPeriodEnum period;
+
     public ThrottlingSettings withPeriod(ThrottlingSettingsPeriodEnum period) {
         this.period = period;
         return this;
     }
     
+    public ThrottlingSettings(@JsonProperty("maxConcurrentRequests") Integer maxConcurrentRequests, @JsonProperty("period") ThrottlingSettingsPeriodEnum period) {
+        this.maxConcurrentRequests = maxConcurrentRequests;
+        this.period = period;
+  }
 }

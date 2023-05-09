@@ -58,11 +58,9 @@ public class ProductsOnline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProductSlugResponse res = new org.openapis.openapi.models.operations.CreateProductSlugResponse() {{
+        org.openapis.openapi.models.operations.CreateProductSlugResponse res = new org.openapis.openapi.models.operations.CreateProductSlugResponse(contentType, httpRes.statusCode()) {{
             slugResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

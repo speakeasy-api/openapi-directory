@@ -15,6 +15,7 @@ public class ImportContextBakImportOptionsEncryptionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certPath")
     public String certPath;
+
     public ImportContextBakImportOptionsEncryptionOptions withCertPath(String certPath) {
         this.certPath = certPath;
         return this;
@@ -26,6 +27,7 @@ public class ImportContextBakImportOptionsEncryptionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pvkPassword")
     public String pvkPassword;
+
     public ImportContextBakImportOptionsEncryptionOptions withPvkPassword(String pvkPassword) {
         this.pvkPassword = pvkPassword;
         return this;
@@ -37,9 +39,11 @@ public class ImportContextBakImportOptionsEncryptionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pvkPath")
     public String pvkPath;
+
     public ImportContextBakImportOptionsEncryptionOptions withPvkPath(String pvkPath) {
         this.pvkPath = pvkPath;
         return this;
     }
     
+    public ImportContextBakImportOptionsEncryptionOptions(){}
 }

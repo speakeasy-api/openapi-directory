@@ -18,6 +18,7 @@ public class ConsumerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNumber")
     public String consumerNumber;
+
     public ConsumerInfo withConsumerNumber(String consumerNumber) {
         this.consumerNumber = consumerNumber;
         return this;
@@ -29,6 +30,7 @@ public class ConsumerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectNumber")
     public String projectNumber;
+
     public ConsumerInfo withProjectNumber(String projectNumber) {
         this.projectNumber = projectNumber;
         return this;
@@ -40,9 +42,11 @@ public class ConsumerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ConsumerInfoTypeEnum type;
+
     public ConsumerInfo withType(ConsumerInfoTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ConsumerInfo(){}
 }

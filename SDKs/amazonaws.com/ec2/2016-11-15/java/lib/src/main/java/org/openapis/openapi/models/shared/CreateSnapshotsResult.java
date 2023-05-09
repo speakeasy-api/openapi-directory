@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateSnapshotsResult {
     
     public CreateSnapshotsResultSnapshots[] snapshots;
+
     public CreateSnapshotsResult withSnapshots(CreateSnapshotsResultSnapshots[] snapshots) {
         this.snapshots = snapshots;
         return this;
     }
     
+    public CreateSnapshotsResult(){}
 }

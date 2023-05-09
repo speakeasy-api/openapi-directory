@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeEmailRequest {
@@ -12,6 +13,7 @@ public class ChangeEmailRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvChangeEmailRequest itvChangeEmailRequest;
+
     public ChangeEmailRequest withItvChangeEmailRequest(org.openapis.openapi.models.shared.ItvChangeEmailRequest itvChangeEmailRequest) {
         this.itvChangeEmailRequest = itvChangeEmailRequest;
         return this;
@@ -42,6 +44,7 @@ public class ChangeEmailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public ChangeEmailRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class ChangeEmailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ChangeEmailRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public ChangeEmailRequest(@JsonProperty("ItvChangeEmailRequest") org.openapis.openapi.models.shared.ItvChangeEmailRequest itvChangeEmailRequest) {
+        this.itvChangeEmailRequest = itvChangeEmailRequest;
+  }
 }

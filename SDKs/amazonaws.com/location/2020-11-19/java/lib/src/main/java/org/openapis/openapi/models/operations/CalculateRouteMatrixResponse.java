@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CalculateRouteMatrixResponse {
@@ -12,6 +13,7 @@ public class CalculateRouteMatrixResponse {
      */
     
     public Object accessDeniedException;
+
     public CalculateRouteMatrixResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CalculateRouteMatrixResponse {
      */
     
     public org.openapis.openapi.models.shared.CalculateRouteMatrixResponse calculateRouteMatrixResponse;
+
     public CalculateRouteMatrixResponse withCalculateRouteMatrixResponse(org.openapis.openapi.models.shared.CalculateRouteMatrixResponse calculateRouteMatrixResponse) {
         this.calculateRouteMatrixResponse = calculateRouteMatrixResponse;
         return this;
@@ -29,6 +32,7 @@ public class CalculateRouteMatrixResponse {
     
     
     public String contentType;
+
     public CalculateRouteMatrixResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CalculateRouteMatrixResponse {
      */
     
     public Object internalServerException;
+
     public CalculateRouteMatrixResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CalculateRouteMatrixResponse {
     
     
     public Integer statusCode;
+
     public CalculateRouteMatrixResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CalculateRouteMatrixResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CalculateRouteMatrixResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CalculateRouteMatrixResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CalculateRouteMatrixResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class CalculateRouteMatrixResponse {
      */
     
     public Object throttlingException;
+
     public CalculateRouteMatrixResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CalculateRouteMatrixResponse {
      */
     
     public Object validationException;
+
     public CalculateRouteMatrixResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CalculateRouteMatrixResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

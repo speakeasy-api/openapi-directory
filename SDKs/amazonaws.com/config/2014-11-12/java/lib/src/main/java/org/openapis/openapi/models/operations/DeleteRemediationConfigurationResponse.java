@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRemediationConfigurationResponse {
     
     public String contentType;
+
     public DeleteRemediationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRemediationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteRemediationConfigurationResponse;
+
     public DeleteRemediationConfigurationResponse withDeleteRemediationConfigurationResponse(java.util.Map<String, Object> deleteRemediationConfigurationResponse) {
         this.deleteRemediationConfigurationResponse = deleteRemediationConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRemediationConfigurationResponse {
      */
     
     public Object insufficientPermissionsException;
+
     public DeleteRemediationConfigurationResponse withInsufficientPermissionsException(Object insufficientPermissionsException) {
         this.insufficientPermissionsException = insufficientPermissionsException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRemediationConfigurationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteRemediationConfigurationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRemediationConfigurationResponse {
      */
     
     public Object noSuchRemediationConfigurationException;
+
     public DeleteRemediationConfigurationResponse withNoSuchRemediationConfigurationException(Object noSuchRemediationConfigurationException) {
         this.noSuchRemediationConfigurationException = noSuchRemediationConfigurationException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteRemediationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteRemediationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRemediationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRemediationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRemediationConfigurationResponse {
      */
     
     public Object remediationInProgressException;
+
     public DeleteRemediationConfigurationResponse withRemediationInProgressException(Object remediationInProgressException) {
         this.remediationInProgressException = remediationInProgressException;
         return this;
     }
     
+    public DeleteRemediationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

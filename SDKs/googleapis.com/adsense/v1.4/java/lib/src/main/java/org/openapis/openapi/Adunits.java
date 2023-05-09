@@ -58,11 +58,9 @@ public class Adunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAdunitsCustomchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseAdunitsCustomchannelsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAdunitsCustomchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseAdunitsCustomchannelsListResponse(contentType, httpRes.statusCode()) {{
             customChannels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Adunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAdunitsGetResponse res = new org.openapis.openapi.models.operations.AdsenseAdunitsGetResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAdunitsGetResponse res = new org.openapis.openapi.models.operations.AdsenseAdunitsGetResponse(contentType, httpRes.statusCode()) {{
             adUnit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Adunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAdunitsGetAdCodeResponse res = new org.openapis.openapi.models.operations.AdsenseAdunitsGetAdCodeResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAdunitsGetAdCodeResponse res = new org.openapis.openapi.models.operations.AdsenseAdunitsGetAdCodeResponse(contentType, httpRes.statusCode()) {{
             adCode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Adunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseAdunitsListResponse res = new org.openapis.openapi.models.operations.AdsenseAdunitsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseAdunitsListResponse res = new org.openapis.openapi.models.operations.AdsenseAdunitsListResponse(contentType, httpRes.statusCode()) {{
             adUnits = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

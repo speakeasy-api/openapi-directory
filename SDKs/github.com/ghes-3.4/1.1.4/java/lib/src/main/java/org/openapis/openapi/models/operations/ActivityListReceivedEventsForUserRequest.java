@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListReceivedEventsForUserRequest {
@@ -12,6 +13,7 @@ public class ActivityListReceivedEventsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActivityListReceivedEventsForUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class ActivityListReceivedEventsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActivityListReceivedEventsForUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +35,13 @@ public class ActivityListReceivedEventsForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public ActivityListReceivedEventsForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ActivityListReceivedEventsForUserRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

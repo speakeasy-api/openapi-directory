@@ -12,9 +12,11 @@ public class EnvironmentModelHaljsonLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public EnvironmentModelHaljsonLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public EnvironmentModelHaljsonLinks(){}
 }

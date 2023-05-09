@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWageSettingRequest {
@@ -14,6 +15,7 @@ public class UpdateWageSettingRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateWageSettingRequest updateWageSettingRequest;
+
     public UpdateWageSettingRequest withUpdateWageSettingRequest(org.openapis.openapi.models.shared.UpdateWageSettingRequest updateWageSettingRequest) {
         this.updateWageSettingRequest = updateWageSettingRequest;
         return this;
@@ -24,9 +26,14 @@ public class UpdateWageSettingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_member_id")
     public String teamMemberId;
+
     public UpdateWageSettingRequest withTeamMemberId(String teamMemberId) {
         this.teamMemberId = teamMemberId;
         return this;
     }
     
+    public UpdateWageSettingRequest(@JsonProperty("UpdateWageSettingRequest") org.openapis.openapi.models.shared.UpdateWageSettingRequest updateWageSettingRequest, @JsonProperty("team_member_id") String teamMemberId) {
+        this.updateWageSettingRequest = updateWageSettingRequest;
+        this.teamMemberId = teamMemberId;
+  }
 }

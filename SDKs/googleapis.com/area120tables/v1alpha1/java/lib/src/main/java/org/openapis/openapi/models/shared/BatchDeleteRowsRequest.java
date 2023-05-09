@@ -18,9 +18,11 @@ public class BatchDeleteRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public BatchDeleteRowsRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchDeleteRowsRequest(){}
 }

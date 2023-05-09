@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ParameterDeclaration {
     
     public String defaultValue;
+
     public ParameterDeclaration withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class ParameterDeclaration {
     
     
     public String description;
+
     public ParameterDeclaration withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ParameterDeclaration {
     
     
     public Boolean noEcho;
+
     public ParameterDeclaration withNoEcho(Boolean noEcho) {
         this.noEcho = noEcho;
         return this;
@@ -33,6 +36,7 @@ public class ParameterDeclaration {
     
     
     public ParameterConstraints parameterConstraints;
+
     public ParameterDeclaration withParameterConstraints(ParameterConstraints parameterConstraints) {
         this.parameterConstraints = parameterConstraints;
         return this;
@@ -40,6 +44,7 @@ public class ParameterDeclaration {
     
     
     public String parameterKey;
+
     public ParameterDeclaration withParameterKey(String parameterKey) {
         this.parameterKey = parameterKey;
         return this;
@@ -47,9 +52,11 @@ public class ParameterDeclaration {
     
     
     public String parameterType;
+
     public ParameterDeclaration withParameterType(String parameterType) {
         this.parameterType = parameterType;
         return this;
     }
     
+    public ParameterDeclaration(){}
 }

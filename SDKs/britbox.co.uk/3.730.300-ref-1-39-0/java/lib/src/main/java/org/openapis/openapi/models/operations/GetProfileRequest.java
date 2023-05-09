@@ -32,6 +32,7 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetProfileRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -52,9 +53,11 @@ public class GetProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetProfileRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetProfileRequest(){}
 }

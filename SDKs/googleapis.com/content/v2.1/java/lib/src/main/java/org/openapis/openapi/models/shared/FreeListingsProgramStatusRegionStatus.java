@@ -18,6 +18,7 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovalDate")
     public String disapprovalDate;
+
     public FreeListingsProgramStatusRegionStatus withDisapprovalDate(String disapprovalDate) {
         this.disapprovalDate = disapprovalDate;
         return this;
@@ -29,6 +30,7 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eligibilityStatus")
     public FreeListingsProgramStatusRegionStatusEligibilityStatusEnum eligibilityStatus;
+
     public FreeListingsProgramStatusRegionStatus withEligibilityStatus(FreeListingsProgramStatusRegionStatusEligibilityStatusEnum eligibilityStatus) {
         this.eligibilityStatus = eligibilityStatus;
         return this;
@@ -40,6 +42,7 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onboardingIssues")
     public String[] onboardingIssues;
+
     public FreeListingsProgramStatusRegionStatus withOnboardingIssues(String[] onboardingIssues) {
         this.onboardingIssues = onboardingIssues;
         return this;
@@ -51,6 +54,7 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCodes")
     public String[] regionCodes;
+
     public FreeListingsProgramStatusRegionStatus withRegionCodes(String[] regionCodes) {
         this.regionCodes = regionCodes;
         return this;
@@ -62,6 +66,7 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewEligibilityStatus")
     public FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum reviewEligibilityStatus;
+
     public FreeListingsProgramStatusRegionStatus withReviewEligibilityStatus(FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum reviewEligibilityStatus) {
         this.reviewEligibilityStatus = reviewEligibilityStatus;
         return this;
@@ -73,6 +78,7 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewIneligibilityReason")
     public FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum reviewIneligibilityReason;
+
     public FreeListingsProgramStatusRegionStatus withReviewIneligibilityReason(FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum reviewIneligibilityReason) {
         this.reviewIneligibilityReason = reviewIneligibilityReason;
         return this;
@@ -84,6 +90,7 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewIneligibilityReasonDescription")
     public String reviewIneligibilityReasonDescription;
+
     public FreeListingsProgramStatusRegionStatus withReviewIneligibilityReasonDescription(String reviewIneligibilityReasonDescription) {
         this.reviewIneligibilityReasonDescription = reviewIneligibilityReasonDescription;
         return this;
@@ -95,6 +102,7 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewIneligibilityReasonDetails")
     public FreeListingsProgramStatusReviewIneligibilityReasonDetails reviewIneligibilityReasonDetails;
+
     public FreeListingsProgramStatusRegionStatus withReviewIneligibilityReasonDetails(FreeListingsProgramStatusReviewIneligibilityReasonDetails reviewIneligibilityReasonDetails) {
         this.reviewIneligibilityReasonDetails = reviewIneligibilityReasonDetails;
         return this;
@@ -106,9 +114,11 @@ public class FreeListingsProgramStatusRegionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewIssues")
     public String[] reviewIssues;
+
     public FreeListingsProgramStatusRegionStatus withReviewIssues(String[] reviewIssues) {
         this.reviewIssues = reviewIssues;
         return this;
     }
     
+    public FreeListingsProgramStatusRegionStatus(){}
 }

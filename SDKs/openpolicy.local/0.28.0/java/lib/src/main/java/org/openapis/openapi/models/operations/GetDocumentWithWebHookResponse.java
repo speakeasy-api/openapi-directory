@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDocumentWithWebHookResponse {
@@ -12,6 +13,7 @@ public class GetDocumentWithWebHookResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundred fourHundred;
+
     public GetDocumentWithWebHookResponse withFourHundred(org.openapis.openapi.models.shared.FourHundred fourHundred) {
         this.fourHundred = fourHundred;
         return this;
@@ -22,6 +24,7 @@ public class GetDocumentWithWebHookResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFour fourHundredAndFour;
+
     public GetDocumentWithWebHookResponse withFourHundredAndFour(org.openapis.openapi.models.shared.FourHundredAndFour fourHundredAndFour) {
         this.fourHundredAndFour = fourHundredAndFour;
         return this;
@@ -29,6 +32,7 @@ public class GetDocumentWithWebHookResponse {
     
     
     public String contentType;
+
     public GetDocumentWithWebHookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetDocumentWithWebHookResponse {
     
     
     public Integer statusCode;
+
     public GetDocumentWithWebHookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetDocumentWithWebHookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDocumentWithWebHookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetDocumentWithWebHookResponse {
      */
     
     public GetDocumentWithWebHook200ApplicationJSON getDocumentWithWebHook200ApplicationJSONObject;
+
     public GetDocumentWithWebHookResponse withGetDocumentWithWebHook200ApplicationJSONObject(GetDocumentWithWebHook200ApplicationJSON getDocumentWithWebHook200ApplicationJSONObject) {
         this.getDocumentWithWebHook200ApplicationJSONObject = getDocumentWithWebHook200ApplicationJSONObject;
         return this;
     }
     
+    public GetDocumentWithWebHookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsDynamoDbTableBillingModeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingMode")
     public String billingMode;
+
     public AwsDynamoDbTableBillingModeSummary withBillingMode(String billingMode) {
         this.billingMode = billingMode;
         return this;
@@ -23,9 +24,11 @@ public class AwsDynamoDbTableBillingModeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateToPayPerRequestDateTime")
     public String lastUpdateToPayPerRequestDateTime;
+
     public AwsDynamoDbTableBillingModeSummary withLastUpdateToPayPerRequestDateTime(String lastUpdateToPayPerRequestDateTime) {
         this.lastUpdateToPayPerRequestDateTime = lastUpdateToPayPerRequestDateTime;
         return this;
     }
     
+    public AwsDynamoDbTableBillingModeSummary(){}
 }

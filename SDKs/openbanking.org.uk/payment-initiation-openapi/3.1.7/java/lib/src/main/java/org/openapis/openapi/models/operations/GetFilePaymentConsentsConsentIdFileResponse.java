@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFilePaymentConsentsConsentIdFileResponse {
     
     public byte[] body;
+
     public GetFilePaymentConsentsConsentIdFileResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetFilePaymentConsentsConsentIdFileResponse {
     
     
     public String contentType;
+
     public GetFilePaymentConsentsConsentIdFileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetFilePaymentConsentsConsentIdFileResponse {
      */
     
     public java.util.Map<String, Object> file;
+
     public GetFilePaymentConsentsConsentIdFileResponse withFile(java.util.Map<String, Object> file) {
         this.file = file;
         return this;
@@ -33,6 +37,7 @@ public class GetFilePaymentConsentsConsentIdFileResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetFilePaymentConsentsConsentIdFileResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class GetFilePaymentConsentsConsentIdFileResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetFilePaymentConsentsConsentIdFileResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -50,6 +56,7 @@ public class GetFilePaymentConsentsConsentIdFileResponse {
     
     
     public Integer statusCode;
+
     public GetFilePaymentConsentsConsentIdFileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class GetFilePaymentConsentsConsentIdFileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFilePaymentConsentsConsentIdFileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFilePaymentConsentsConsentIdFileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class ContentAttributesArtwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ContentAttributesArtwork withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ContentAttributesArtwork(){}
 }

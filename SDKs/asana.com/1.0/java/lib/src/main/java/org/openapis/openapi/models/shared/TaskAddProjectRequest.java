@@ -15,6 +15,7 @@ public class TaskAddProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_after")
     public String insertAfter;
+
     public TaskAddProjectRequest withInsertAfter(String insertAfter) {
         this.insertAfter = insertAfter;
         return this;
@@ -26,6 +27,7 @@ public class TaskAddProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_before")
     public String insertBefore;
+
     public TaskAddProjectRequest withInsertBefore(String insertBefore) {
         this.insertBefore = insertBefore;
         return this;
@@ -36,6 +38,7 @@ public class TaskAddProjectRequest {
      */
     @JsonProperty("project")
     public String project;
+
     public TaskAddProjectRequest withProject(String project) {
         this.project = project;
         return this;
@@ -47,9 +50,13 @@ public class TaskAddProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public String section;
+
     public TaskAddProjectRequest withSection(String section) {
         this.section = section;
         return this;
     }
     
+    public TaskAddProjectRequest(@JsonProperty("project") String project) {
+        this.project = project;
+  }
 }

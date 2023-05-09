@@ -18,6 +18,7 @@ public class ListAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public Account[] account;
+
     public ListAccountsResponse withAccount(Account[] account) {
         this.account = account;
         return this;
@@ -29,9 +30,11 @@ public class ListAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAccountsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAccountsResponse(){}
 }

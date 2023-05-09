@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetTaskStatusResponse {
     
     public String contentType;
+
     public SetTaskStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetTaskStatusResponse {
      */
     
     public Object internalServiceError;
+
     public SetTaskStatusResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class SetTaskStatusResponse {
      */
     
     public Object invalidRequestException;
+
     public SetTaskStatusResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SetTaskStatusResponse {
      */
     
     public Object pipelineDeletedException;
+
     public SetTaskStatusResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -49,6 +54,7 @@ public class SetTaskStatusResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public SetTaskStatusResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SetTaskStatusResponse {
      */
     
     public java.util.Map<String, Object> setTaskStatusOutput;
+
     public SetTaskStatusResponse withSetTaskStatusOutput(java.util.Map<String, Object> setTaskStatusOutput) {
         this.setTaskStatusOutput = setTaskStatusOutput;
         return this;
@@ -66,6 +73,7 @@ public class SetTaskStatusResponse {
     
     
     public Integer statusCode;
+
     public SetTaskStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SetTaskStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetTaskStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class SetTaskStatusResponse {
      */
     
     public Object taskNotFoundException;
+
     public SetTaskStatusResponse withTaskNotFoundException(Object taskNotFoundException) {
         this.taskNotFoundException = taskNotFoundException;
         return this;
     }
     
+    public SetTaskStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

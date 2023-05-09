@@ -18,6 +18,7 @@ public class RuntimeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approximateUsage")
     public UsageMetrics approximateUsage;
+
     public RuntimeInfo withApproximateUsage(UsageMetrics approximateUsage) {
         this.approximateUsage = approximateUsage;
         return this;
@@ -29,6 +30,7 @@ public class RuntimeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentUsage")
     public UsageSnapshot currentUsage;
+
     public RuntimeInfo withCurrentUsage(UsageSnapshot currentUsage) {
         this.currentUsage = currentUsage;
         return this;
@@ -40,6 +42,7 @@ public class RuntimeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnosticOutputUri")
     public String diagnosticOutputUri;
+
     public RuntimeInfo withDiagnosticOutputUri(String diagnosticOutputUri) {
         this.diagnosticOutputUri = diagnosticOutputUri;
         return this;
@@ -51,6 +54,7 @@ public class RuntimeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public java.util.Map<String, String> endpoints;
+
     public RuntimeInfo withEndpoints(java.util.Map<String, String> endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -62,9 +66,11 @@ public class RuntimeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUri")
     public String outputUri;
+
     public RuntimeInfo withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
     }
     
+    public RuntimeInfo(){}
 }

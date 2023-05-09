@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutEmailMonitoringConfigurationRequest {
     @JsonProperty("LogGroupArn")
     public String logGroupArn;
+
     public PutEmailMonitoringConfigurationRequest withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
@@ -16,6 +17,7 @@ public class PutEmailMonitoringConfigurationRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public PutEmailMonitoringConfigurationRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,9 +25,15 @@ public class PutEmailMonitoringConfigurationRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public PutEmailMonitoringConfigurationRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public PutEmailMonitoringConfigurationRequest(@JsonProperty("LogGroupArn") String logGroupArn, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("RoleArn") String roleArn) {
+        this.logGroupArn = logGroupArn;
+        this.organizationId = organizationId;
+        this.roleArn = roleArn;
+  }
 }

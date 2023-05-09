@@ -17,6 +17,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public TeamsUpdatePermissions200ApplicationJSON withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -25,6 +26,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public TeamsUpdatePermissions200ApplicationJSONAzureSubscription azureSubscription;
+
     public TeamsUpdatePermissions200ApplicationJSON withAzureSubscription(TeamsUpdatePermissions200ApplicationJSONAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -36,6 +38,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TeamsUpdatePermissions200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +50,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamsUpdatePermissions200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +61,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsUpdatePermissions200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -68,6 +73,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public TeamsUpdatePermissions200ApplicationJSON withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -79,6 +85,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public TeamsUpdatePermissions200ApplicationJSON withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -89,6 +96,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public TeamsUpdatePermissions200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum[] memberPermissions;
+
     public TeamsUpdatePermissions200ApplicationJSON withMemberPermissions(TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -110,6 +119,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsUpdatePermissions200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +130,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
      */
     @JsonProperty("origin")
     public TeamsUpdatePermissions200ApplicationJSONOriginEnum origin;
+
     public TeamsUpdatePermissions200ApplicationJSON withOrigin(TeamsUpdatePermissions200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -130,6 +141,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
      */
     @JsonProperty("os")
     public TeamsUpdatePermissions200ApplicationJSONOsEnum os;
+
     public TeamsUpdatePermissions200ApplicationJSON withOs(TeamsUpdatePermissions200ApplicationJSONOsEnum os) {
         this.os = os;
         return this;
@@ -140,6 +152,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
      */
     @JsonProperty("owner")
     public TeamsUpdatePermissions200ApplicationJSONOwner owner;
+
     public TeamsUpdatePermissions200ApplicationJSON withOwner(TeamsUpdatePermissions200ApplicationJSONOwner owner) {
         this.owner = owner;
         return this;
@@ -150,6 +163,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
      */
     @JsonProperty("platform")
     public TeamsUpdatePermissions200ApplicationJSONPlatformEnum platform;
+
     public TeamsUpdatePermissions200ApplicationJSON withPlatform(TeamsUpdatePermissions200ApplicationJSONPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -161,6 +175,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public TeamsUpdatePermissions200ApplicationJSON withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -172,6 +187,7 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_permissions")
     public TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum[] teamPermissions;
+
     public TeamsUpdatePermissions200ApplicationJSON withTeamPermissions(TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum[] teamPermissions) {
         this.teamPermissions = teamPermissions;
         return this;
@@ -183,9 +199,20 @@ public class TeamsUpdatePermissions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TeamsUpdatePermissions200ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TeamsUpdatePermissions200ApplicationJSON(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") TeamsUpdatePermissions200ApplicationJSONOriginEnum origin, @JsonProperty("os") TeamsUpdatePermissions200ApplicationJSONOsEnum os, @JsonProperty("owner") TeamsUpdatePermissions200ApplicationJSONOwner owner, @JsonProperty("platform") TeamsUpdatePermissions200ApplicationJSONPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

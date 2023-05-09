@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudChannelV1Plan {
     /**
-     * Reseller Billing account to charge after an offer transaction. Only present for Google Cloud Platform offers.
+     * Reseller Billing account to charge after an offer transaction. Only present for Google Cloud offers.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAccount")
     public String billingAccount;
+
     public GoogleCloudChannelV1Plan withBillingAccount(String billingAccount) {
         this.billingAccount = billingAccount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1Plan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentCycle")
     public GoogleCloudChannelV1Period paymentCycle;
+
     public GoogleCloudChannelV1Plan withPaymentCycle(GoogleCloudChannelV1Period paymentCycle) {
         this.paymentCycle = paymentCycle;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1Plan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentPlan")
     public GoogleCloudChannelV1PlanPaymentPlanEnum paymentPlan;
+
     public GoogleCloudChannelV1Plan withPaymentPlan(GoogleCloudChannelV1PlanPaymentPlanEnum paymentPlan) {
         this.paymentPlan = paymentPlan;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudChannelV1Plan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentType")
     public GoogleCloudChannelV1PlanPaymentTypeEnum paymentType;
+
     public GoogleCloudChannelV1Plan withPaymentType(GoogleCloudChannelV1PlanPaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudChannelV1Plan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialPeriod")
     public GoogleCloudChannelV1Period trialPeriod;
+
     public GoogleCloudChannelV1Plan withTrialPeriod(GoogleCloudChannelV1Period trialPeriod) {
         this.trialPeriod = trialPeriod;
         return this;
     }
     
+    public GoogleCloudChannelV1Plan(){}
 }

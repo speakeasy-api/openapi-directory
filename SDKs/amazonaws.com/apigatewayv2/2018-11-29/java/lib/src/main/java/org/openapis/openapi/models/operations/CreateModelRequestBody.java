@@ -15,6 +15,7 @@ public class CreateModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public CreateModelRequestBody withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +27,7 @@ public class CreateModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateModelRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateModelRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateModelRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,14 @@ public class CreateModelRequestBody {
      */
     @JsonProperty("schema")
     public String schema;
+
     public CreateModelRequestBody withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public CreateModelRequestBody(@JsonProperty("name") String name, @JsonProperty("schema") String schema) {
+        this.name = name;
+        this.schema = schema;
+  }
 }

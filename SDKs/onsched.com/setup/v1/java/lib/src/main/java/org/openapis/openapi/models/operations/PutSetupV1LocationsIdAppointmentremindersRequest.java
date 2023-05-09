@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1LocationsIdAppointmentremindersRequest {
@@ -12,6 +13,7 @@ public class PutSetupV1LocationsIdAppointmentremindersRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AppointmentRemindersInputModel appointmentRemindersInputModel;
+
     public PutSetupV1LocationsIdAppointmentremindersRequest withAppointmentRemindersInputModel(org.openapis.openapi.models.shared.AppointmentRemindersInputModel appointmentRemindersInputModel) {
         this.appointmentRemindersInputModel = appointmentRemindersInputModel;
         return this;
@@ -22,9 +24,13 @@ public class PutSetupV1LocationsIdAppointmentremindersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1LocationsIdAppointmentremindersRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutSetupV1LocationsIdAppointmentremindersRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

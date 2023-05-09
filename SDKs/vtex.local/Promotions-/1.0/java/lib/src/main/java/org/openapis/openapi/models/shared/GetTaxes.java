@@ -18,6 +18,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Campaigns")
     public String[] campaigns;
+
     public GetTaxes withCampaigns(String[] campaigns) {
         this.campaigns = campaigns;
         return this;
@@ -29,6 +30,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activateGiftsMultiplier")
     public Boolean activateGiftsMultiplier;
+
     public GetTaxes withActivateGiftsMultiplier(Boolean activateGiftsMultiplier) {
         this.activateGiftsMultiplier = activateGiftsMultiplier;
         return this;
@@ -40,6 +42,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areSalesChannelIdsExclusive")
     public Boolean areSalesChannelIdsExclusive;
+
     public GetTaxes withAreSalesChannelIdsExclusive(Boolean areSalesChannelIdsExclusive) {
         this.areSalesChannelIdsExclusive = areSalesChannelIdsExclusive;
         return this;
@@ -51,6 +54,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginDate")
     public String beginDate;
+
     public GetTaxes withBeginDate(String beginDate) {
         this.beginDate = beginDate;
         return this;
@@ -62,6 +66,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetTaxes withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public GetTaxes withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -84,6 +90,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMaxPricePerItem")
     public Boolean hasMaxPricePerItem;
+
     public GetTaxes withHasMaxPricePerItem(Boolean hasMaxPricePerItem) {
         this.hasMaxPricePerItem = hasMaxPricePerItem;
         return this;
@@ -95,6 +102,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idCalculatorConfiguration")
     public String idCalculatorConfiguration;
+
     public GetTaxes withIdCalculatorConfiguration(String idCalculatorConfiguration) {
         this.idCalculatorConfiguration = idCalculatorConfiguration;
         return this;
@@ -106,6 +114,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idsSalesChannel")
     public String[] idsSalesChannel;
+
     public GetTaxes withIdsSalesChannel(String[] idsSalesChannel) {
         this.idsSalesChannel = idsSalesChannel;
         return this;
@@ -117,6 +126,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public GetTaxes withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -128,6 +138,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public GetTaxes withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -139,6 +150,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTax")
     public Boolean isTax;
+
     public GetTaxes withIsTax(Boolean isTax) {
         this.isTax = isTax;
         return this;
@@ -150,6 +162,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedUtc")
     public String lastModifiedUtc;
+
     public GetTaxes withLastModifiedUtc(String lastModifiedUtc) {
         this.lastModifiedUtc = lastModifiedUtc;
         return this;
@@ -161,6 +174,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUsage")
     public Double maxUsage;
+
     public GetTaxes withMaxUsage(Double maxUsage) {
         this.maxUsage = maxUsage;
         return this;
@@ -172,6 +186,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetTaxes withName(String name) {
         this.name = name;
         return this;
@@ -183,6 +198,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualTax")
     public Double percentualTax;
+
     public GetTaxes withPercentualTax(Double percentualTax) {
         this.percentualTax = percentualTax;
         return this;
@@ -194,6 +210,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public GetTaxesScope scope;
+
     public GetTaxes withScope(GetTaxesScope scope) {
         this.scope = scope;
         return this;
@@ -205,6 +222,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetTaxes withStatus(String status) {
         this.status = status;
         return this;
@@ -216,6 +234,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetTaxes withType(String type) {
         this.type = type;
         return this;
@@ -227,6 +246,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampain")
     public String utmCampain;
+
     public GetTaxes withUtmCampain(String utmCampain) {
         this.utmCampain = utmCampain;
         return this;
@@ -238,6 +258,7 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public GetTaxes withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -249,9 +270,11 @@ public class GetTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiCampaign")
     public String utmiCampaign;
+
     public GetTaxes withUtmiCampaign(String utmiCampaign) {
         this.utmiCampaign = utmiCampaign;
         return this;
     }
     
+    public GetTaxes(){}
 }

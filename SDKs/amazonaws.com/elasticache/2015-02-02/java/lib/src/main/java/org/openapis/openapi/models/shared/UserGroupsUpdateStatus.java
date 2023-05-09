@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UserGroupsUpdateStatus {
     
     public String[] userGroupIdsToAdd;
+
     public UserGroupsUpdateStatus withUserGroupIdsToAdd(String[] userGroupIdsToAdd) {
         this.userGroupIdsToAdd = userGroupIdsToAdd;
         return this;
@@ -19,9 +20,11 @@ public class UserGroupsUpdateStatus {
     
     
     public String[] userGroupIdsToRemove;
+
     public UserGroupsUpdateStatus withUserGroupIdsToRemove(String[] userGroupIdsToRemove) {
         this.userGroupIdsToRemove = userGroupIdsToRemove;
         return this;
     }
     
+    public UserGroupsUpdateStatus(){}
 }

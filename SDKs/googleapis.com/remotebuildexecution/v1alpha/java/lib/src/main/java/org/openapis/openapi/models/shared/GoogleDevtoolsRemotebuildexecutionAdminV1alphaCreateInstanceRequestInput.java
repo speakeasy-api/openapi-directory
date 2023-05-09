@@ -18,6 +18,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput instance;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput withInstance(GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput instance) {
         this.instance = instance;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput(){}
 }

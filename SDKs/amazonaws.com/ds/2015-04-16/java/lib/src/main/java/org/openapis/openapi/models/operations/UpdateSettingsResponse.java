@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateSettingsResponse {
      */
     
     public Object clientException;
+
     public UpdateSettingsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSettingsResponse {
     
     
     public String contentType;
+
     public UpdateSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSettingsResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public UpdateSettingsResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSettingsResponse {
      */
     
     public Object directoryUnavailableException;
+
     public UpdateSettingsResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSettingsResponse {
      */
     
     public Object incompatibleSettingsException;
+
     public UpdateSettingsResponse withIncompatibleSettingsException(Object incompatibleSettingsException) {
         this.incompatibleSettingsException = incompatibleSettingsException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateSettingsResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateSettingsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSettingsResponse {
      */
     
     public Object serviceException;
+
     public UpdateSettingsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateSettingsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateSettingsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateSettingsResponse {
      */
     
     public Object unsupportedSettingsException;
+
     public UpdateSettingsResponse withUnsupportedSettingsException(Object unsupportedSettingsException) {
         this.unsupportedSettingsException = unsupportedSettingsException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSettingsResult updateSettingsResult;
+
     public UpdateSettingsResponse withUpdateSettingsResult(org.openapis.openapi.models.shared.UpdateSettingsResult updateSettingsResult) {
         this.updateSettingsResult = updateSettingsResult;
         return this;
     }
     
+    public UpdateSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

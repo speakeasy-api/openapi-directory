@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelCardExportArtifacts {
     @JsonProperty("S3ExportArtifacts")
     public String s3ExportArtifacts;
+
     public ModelCardExportArtifacts withS3ExportArtifacts(String s3ExportArtifacts) {
         this.s3ExportArtifacts = s3ExportArtifacts;
         return this;
     }
     
+    public ModelCardExportArtifacts(@JsonProperty("S3ExportArtifacts") String s3ExportArtifacts) {
+        this.s3ExportArtifacts = s3ExportArtifacts;
+  }
 }

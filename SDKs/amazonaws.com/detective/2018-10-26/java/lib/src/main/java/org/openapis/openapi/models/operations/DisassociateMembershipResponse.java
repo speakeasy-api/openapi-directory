@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateMembershipResponse {
@@ -12,6 +13,7 @@ public class DisassociateMembershipResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateMembershipResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateMembershipResponse {
      */
     
     public Object conflictException;
+
     public DisassociateMembershipResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateMembershipResponse {
     
     
     public String contentType;
+
     public DisassociateMembershipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateMembershipResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateMembershipResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateMembershipResponse {
     
     
     public Integer statusCode;
+
     public DisassociateMembershipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateMembershipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateMembershipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateMembershipResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateMembershipResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateMembershipResponse {
      */
     
     public Object validationException;
+
     public DisassociateMembershipResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateMembershipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

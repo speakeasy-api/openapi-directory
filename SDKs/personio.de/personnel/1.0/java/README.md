@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdRequest;
 import org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdResponse;
 
@@ -26,39 +25,39 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteCompanyAttendancesIdRequest req = new DeleteCompanyAttendancesIdRequest() {{
-                id = 548814;
-            }}            
+            DeleteCompanyAttendancesIdRequest req = new DeleteCompanyAttendancesIdRequest(548814);            
 
             DeleteCompanyAttendancesIdResponse res = sdk.deleteCompanyAttendancesId(req);
 
-            if (res.response.isPresent()) {
+            if (res.response != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteCompanyAttendancesId` - This endpoint is responsible for deleting attendance data for the company employees.
-* `deleteCompanyTimeOffsId` - This endpoint is responsible for deleting absence period data for the company employees.
-* `getCompanyAttendances` - This endpoint is responsible for fetching attendance data for the company employees. It is possible to paginate results, filter by period, the date and/or time it was updated, and/or specific employees. The result will contain a list of attendance periods, structured as defined here.
-* `getCompanyEmployees` - List Employees
-* `getCompanyEmployeesEmployeeId` - Show employee by ID
-* `getCompanyEmployeesEmployeeIdProfilePictureWidth` - Show employee profile picture
-* `getCompanyTimeOffTypes` - Provides a list of available time-off types, for example 'Paid vacation', 'Parental leave' or 'Home office'
-* `getCompanyTimeOffs` - This endpoint is responsible for fetching absence data for the company employees. It is possible to paginate results, filter by period and/or specific employees. The result will contain a list of absence periods, structured as defined here.
-* `getCompanyTimeOffsId` - Absence Period
-* `patchCompanyAttendancesId` - This endpoint is responsible for updating attendance data for the company employees. Attributes are not required and if not specified, the current value will be used. It is not possible to change the employee id.
-* `postCompanyAttendances` - This endpoint is responsible for adding attendance data for the company employees. It is possible to add attendances for one or many employees at the same time. The payload sent on the request should be a list of attendance periods, in the form of an array containing attendance period objects.
-* `postCompanyEmployees` - Create an employee
-* `postCompanyTimeOffs` - This endpoint is responsible for adding absence data for the company employees.
+* [deleteCompanyAttendancesId](docs/sdk/README.md#deletecompanyattendancesid) - This endpoint is responsible for deleting attendance data for the company employees.
+* [deleteCompanyTimeOffsId](docs/sdk/README.md#deletecompanytimeoffsid) - This endpoint is responsible for deleting absence period data for the company employees.
+* [getCompanyAttendances](docs/sdk/README.md#getcompanyattendances) - This endpoint is responsible for fetching attendance data for the company employees. It is possible to paginate results, filter by period, the date and/or time it was updated, and/or specific employees. The result will contain a list of attendance periods, structured as defined here.
+* [getCompanyEmployees](docs/sdk/README.md#getcompanyemployees) - List Employees
+* [getCompanyEmployeesEmployeeId](docs/sdk/README.md#getcompanyemployeesemployeeid) - Show employee by ID
+* [getCompanyEmployeesEmployeeIdProfilePictureWidth](docs/sdk/README.md#getcompanyemployeesemployeeidprofilepicturewidth) - Show employee profile picture
+* [getCompanyTimeOffTypes](docs/sdk/README.md#getcompanytimeofftypes) - Provides a list of available time-off types, for example 'Paid vacation', 'Parental leave' or 'Home office'
+* [getCompanyTimeOffs](docs/sdk/README.md#getcompanytimeoffs) - This endpoint is responsible for fetching absence data for the company employees. It is possible to paginate results, filter by period and/or specific employees. The result will contain a list of absence periods, structured as defined here.
+* [getCompanyTimeOffsId](docs/sdk/README.md#getcompanytimeoffsid) - Absence Period
+* [patchCompanyAttendancesId](docs/sdk/README.md#patchcompanyattendancesid) - This endpoint is responsible for updating attendance data for the company employees. Attributes are not required and if not specified, the current value will be used. It is not possible to change the employee id.
+* [postCompanyAttendances](docs/sdk/README.md#postcompanyattendances) - This endpoint is responsible for adding attendance data for the company employees. It is possible to add attendances for one or many employees at the same time. The payload sent on the request should be a list of attendance periods, in the form of an array containing attendance period objects.
+* [postCompanyEmployees](docs/sdk/README.md#postcompanyemployees) - Create an employee
+* [postCompanyTimeOffs](docs/sdk/README.md#postcompanytimeoffs) - This endpoint is responsible for adding absence data for the company employees.
 <!-- End SDK Available Operations -->
 
 ### Maturity

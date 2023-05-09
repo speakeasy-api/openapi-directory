@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsRecordsDestinyCharacterRecordsComponent {
     
     public Long[] featuredRecordHashes;
+
     public DestinyComponentsRecordsDestinyCharacterRecordsComponent withFeaturedRecordHashes(Long[] featuredRecordHashes) {
         this.featuredRecordHashes = featuredRecordHashes;
         return this;
@@ -19,6 +20,7 @@ public class DestinyComponentsRecordsDestinyCharacterRecordsComponent {
      */
     
     public Long recordCategoriesRootNodeHash;
+
     public DestinyComponentsRecordsDestinyCharacterRecordsComponent withRecordCategoriesRootNodeHash(Long recordCategoriesRootNodeHash) {
         this.recordCategoriesRootNodeHash = recordCategoriesRootNodeHash;
         return this;
@@ -29,6 +31,7 @@ public class DestinyComponentsRecordsDestinyCharacterRecordsComponent {
      */
     
     public Long recordSealsRootNodeHash;
+
     public DestinyComponentsRecordsDestinyCharacterRecordsComponent withRecordSealsRootNodeHash(Long recordSealsRootNodeHash) {
         this.recordSealsRootNodeHash = recordSealsRootNodeHash;
         return this;
@@ -36,9 +39,11 @@ public class DestinyComponentsRecordsDestinyCharacterRecordsComponent {
     
     
     public java.util.Map<String, DestinyComponentsRecordsDestinyRecordComponent> records;
+
     public DestinyComponentsRecordsDestinyCharacterRecordsComponent withRecords(java.util.Map<String, DestinyComponentsRecordsDestinyRecordComponent> records) {
         this.records = records;
         return this;
     }
     
+    public DestinyComponentsRecordsDestinyCharacterRecordsComponent(){}
 }

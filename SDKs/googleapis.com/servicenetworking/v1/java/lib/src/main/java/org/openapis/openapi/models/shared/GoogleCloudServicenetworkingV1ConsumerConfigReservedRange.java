@@ -18,6 +18,7 @@ public class GoogleCloudServicenetworkingV1ConsumerConfigReservedRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public GoogleCloudServicenetworkingV1ConsumerConfigReservedRange withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudServicenetworkingV1ConsumerConfigReservedRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipPrefixLength")
     public Integer ipPrefixLength;
+
     public GoogleCloudServicenetworkingV1ConsumerConfigReservedRange withIpPrefixLength(Integer ipPrefixLength) {
         this.ipPrefixLength = ipPrefixLength;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudServicenetworkingV1ConsumerConfigReservedRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudServicenetworkingV1ConsumerConfigReservedRange withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudServicenetworkingV1ConsumerConfigReservedRange(){}
 }

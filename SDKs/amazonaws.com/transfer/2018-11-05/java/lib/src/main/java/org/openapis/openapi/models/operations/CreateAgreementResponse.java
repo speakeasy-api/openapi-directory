@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAgreementResponse {
     
     public String contentType;
+
     public CreateAgreementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAgreementResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAgreementResponse createAgreementResponse;
+
     public CreateAgreementResponse withCreateAgreementResponse(org.openapis.openapi.models.shared.CreateAgreementResponse createAgreementResponse) {
         this.createAgreementResponse = createAgreementResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAgreementResponse {
      */
     
     public Object internalServiceError;
+
     public CreateAgreementResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class CreateAgreementResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAgreementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAgreementResponse {
      */
     
     public Object resourceExistsException;
+
     public CreateAgreementResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAgreementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAgreementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAgreementResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateAgreementResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class CreateAgreementResponse {
     
     
     public Integer statusCode;
+
     public CreateAgreementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateAgreementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAgreementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateAgreementResponse {
      */
     
     public Object throttlingException;
+
     public CreateAgreementResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateAgreementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

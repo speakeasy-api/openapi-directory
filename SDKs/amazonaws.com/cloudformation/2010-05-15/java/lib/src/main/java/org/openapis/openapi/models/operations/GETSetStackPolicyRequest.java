@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetStackPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetStackPolicyActionEnum action;
+
     public GETSetStackPolicyRequest withAction(GETSetStackPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetStackPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
     public String stackName;
+
     public GETSetStackPolicyRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -29,6 +32,7 @@ public class GETSetStackPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackPolicyBody")
     public String stackPolicyBody;
+
     public GETSetStackPolicyRequest withStackPolicyBody(String stackPolicyBody) {
         this.stackPolicyBody = stackPolicyBody;
         return this;
@@ -39,6 +43,7 @@ public class GETSetStackPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackPolicyURL")
     public String stackPolicyURL;
+
     public GETSetStackPolicyRequest withStackPolicyURL(String stackPolicyURL) {
         this.stackPolicyURL = stackPolicyURL;
         return this;
@@ -46,6 +51,7 @@ public class GETSetStackPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetStackPolicyVersionEnum version;
+
     public GETSetStackPolicyRequest withVersion(GETSetStackPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETSetStackPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetStackPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETSetStackPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetStackPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETSetStackPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetStackPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETSetStackPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetStackPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETSetStackPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetStackPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETSetStackPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetStackPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETSetStackPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetStackPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetStackPolicyRequest(@JsonProperty("Action") GETSetStackPolicyActionEnum action, @JsonProperty("StackName") String stackName, @JsonProperty("Version") GETSetStackPolicyVersionEnum version) {
+        this.action = action;
+        this.stackName = stackName;
+        this.version = version;
+  }
 }

@@ -14,6 +14,7 @@ public class GetNetworksId200ApplicationJSONNetworkSubnets {
      */
     @JsonProperty("gateway")
     public String gateway;
+
     public GetNetworksId200ApplicationJSONNetworkSubnets withGateway(String gateway) {
         this.gateway = gateway;
         return this;
@@ -25,6 +26,7 @@ public class GetNetworksId200ApplicationJSONNetworkSubnets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_range")
     public String ipRange;
+
     public GetNetworksId200ApplicationJSONNetworkSubnets withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -35,6 +37,7 @@ public class GetNetworksId200ApplicationJSONNetworkSubnets {
      */
     @JsonProperty("network_zone")
     public String networkZone;
+
     public GetNetworksId200ApplicationJSONNetworkSubnets withNetworkZone(String networkZone) {
         this.networkZone = networkZone;
         return this;
@@ -45,9 +48,15 @@ public class GetNetworksId200ApplicationJSONNetworkSubnets {
      */
     @JsonProperty("type")
     public GetNetworksId200ApplicationJSONNetworkSubnetsTypeEnum type;
+
     public GetNetworksId200ApplicationJSONNetworkSubnets withType(GetNetworksId200ApplicationJSONNetworkSubnetsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetNetworksId200ApplicationJSONNetworkSubnets(@JsonProperty("gateway") String gateway, @JsonProperty("network_zone") String networkZone, @JsonProperty("type") GetNetworksId200ApplicationJSONNetworkSubnetsTypeEnum type) {
+        this.gateway = gateway;
+        this.networkZone = networkZone;
+        this.type = type;
+  }
 }

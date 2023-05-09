@@ -12,6 +12,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarId")
     public String calendarId;
+
     public UnavailableTimeViewModel withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -20,6 +21,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public UnavailableTimeViewModel withDate(String date) {
         this.date = date;
         return this;
@@ -28,6 +30,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateTime")
     public String endDateTime;
+
     public UnavailableTimeViewModel withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -36,6 +39,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public Integer entityId;
+
     public UnavailableTimeViewModel withEntityId(Integer entityId) {
         this.entityId = entityId;
         return this;
@@ -44,6 +48,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public String entityType;
+
     public UnavailableTimeViewModel withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -52,6 +57,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromTime")
     public Integer fromTime;
+
     public UnavailableTimeViewModel withFromTime(Integer fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -60,6 +66,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public UnavailableTimeViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -68,6 +75,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectName")
     public String objectName;
+
     public UnavailableTimeViewModel withObjectName(String objectName) {
         this.objectName = objectName;
         return this;
@@ -76,6 +84,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public UnavailableTimeViewModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -84,6 +93,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCode")
     public String reasonCode;
+
     public UnavailableTimeViewModel withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
@@ -92,6 +102,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public UnavailableTimeViewModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -100,6 +111,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public UnavailableTimeViewModel withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -108,6 +120,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public UnavailableTimeViewModel withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -116,6 +129,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public UnavailableTimeViewModel withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -124,6 +138,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateTime")
     public String startDateTime;
+
     public UnavailableTimeViewModel withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -132,6 +147,7 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toTime")
     public Integer toTime;
+
     public UnavailableTimeViewModel withToTime(Integer toTime) {
         this.toTime = toTime;
         return this;
@@ -140,9 +156,11 @@ public class UnavailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tzOffset")
     public Integer tzOffset;
+
     public UnavailableTimeViewModel withTzOffset(Integer tzOffset) {
         this.tzOffset = tzOffset;
         return this;
     }
     
+    public UnavailableTimeViewModel(){}
 }

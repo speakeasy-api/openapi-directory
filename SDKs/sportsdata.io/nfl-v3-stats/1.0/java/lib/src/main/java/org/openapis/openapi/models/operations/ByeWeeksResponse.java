@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ByeWeeksResponse {
     
     public org.openapis.openapi.models.shared.Bye[] byes;
+
     public ByeWeeksResponse withByes(org.openapis.openapi.models.shared.Bye[] byes) {
         this.byes = byes;
         return this;
@@ -16,6 +18,7 @@ public class ByeWeeksResponse {
     
     
     public String contentType;
+
     public ByeWeeksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ByeWeeksResponse {
     
     
     public Integer statusCode;
+
     public ByeWeeksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ByeWeeksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ByeWeeksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ByeWeeksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

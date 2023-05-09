@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFindPathwaysByXrefRequest {
@@ -12,6 +13,7 @@ public class GetFindPathwaysByXrefRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=codes")
     public Object[] codes;
+
     public GetFindPathwaysByXrefRequest withCodes(Object[] codes) {
         this.codes = codes;
         return this;
@@ -19,6 +21,7 @@ public class GetFindPathwaysByXrefRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetFindPathwaysByXrefFormatEnum format;
+
     public GetFindPathwaysByXrefRequest withFormat(GetFindPathwaysByXrefFormatEnum format) {
         this.format = format;
         return this;
@@ -29,9 +32,13 @@ public class GetFindPathwaysByXrefRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Object[] ids;
+
     public GetFindPathwaysByXrefRequest withIds(Object[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public GetFindPathwaysByXrefRequest(@JsonProperty("ids") Object[] ids) {
+        this.ids = ids;
+  }
 }

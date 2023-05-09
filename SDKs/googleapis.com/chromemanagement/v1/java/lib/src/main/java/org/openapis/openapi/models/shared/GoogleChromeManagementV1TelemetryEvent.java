@@ -13,22 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleChromeManagementV1TelemetryEvent {
     /**
-     * `TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for more than 5 seconds.
+     * `TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for more than 5 seconds. * Granular permission needed: TELEMETRY_API_AUDIO_REPORT
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioSevereUnderrunEvent")
     public java.util.Map<String, Object> audioSevereUnderrunEvent;
+
     public GoogleChromeManagementV1TelemetryEvent withAudioSevereUnderrunEvent(java.util.Map<String, Object> audioSevereUnderrunEvent) {
         this.audioSevereUnderrunEvent = audioSevereUnderrunEvent;
         return this;
     }
     
     /**
-     * Information about a device associated with telemetry data.
+     * Information about a device associated with telemetry data. * Granular Permission needed: TELEMETRY_API_DEVICE
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public GoogleChromeManagementV1TelemetryDeviceInfo device;
+
     public GoogleChromeManagementV1TelemetryEvent withDevice(GoogleChromeManagementV1TelemetryDeviceInfo device) {
         this.device = device;
         return this;
@@ -40,17 +42,19 @@ public class GoogleChromeManagementV1TelemetryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public GoogleChromeManagementV1TelemetryEventEventTypeEnum eventType;
+
     public GoogleChromeManagementV1TelemetryEvent withEventType(GoogleChromeManagementV1TelemetryEventEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
     }
     
     /**
-     * Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem..
+     * Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem. * Granular permission needed: TELEMETRY_API_NETWORK_REPORT
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpsLatencyChangeEvent")
     public GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent httpsLatencyChangeEvent;
+
     public GoogleChromeManagementV1TelemetryEvent withHttpsLatencyChangeEvent(GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent httpsLatencyChangeEvent) {
         this.httpsLatencyChangeEvent = httpsLatencyChangeEvent;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1TelemetryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleChromeManagementV1TelemetryEvent withName(String name) {
         this.name = name;
         return this;
@@ -73,31 +78,35 @@ public class GoogleChromeManagementV1TelemetryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportTime")
     public String reportTime;
+
     public GoogleChromeManagementV1TelemetryEvent withReportTime(String reportTime) {
         this.reportTime = reportTime;
         return this;
     }
     
     /**
-     * `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed.
+     * `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usbPeripheralsEvent")
     public GoogleChromeManagementV1TelemetryUsbPeripheralsEvent usbPeripheralsEvent;
+
     public GoogleChromeManagementV1TelemetryEvent withUsbPeripheralsEvent(GoogleChromeManagementV1TelemetryUsbPeripheralsEvent usbPeripheralsEvent) {
         this.usbPeripheralsEvent = usbPeripheralsEvent;
         return this;
     }
     
     /**
-     * Information about a user associated with telemetry data.
+     * Information about a user associated with telemetry data. * Granular permission needed: TELEMETRY_API_USER
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public GoogleChromeManagementV1TelemetryUserInfo user;
+
     public GoogleChromeManagementV1TelemetryEvent withUser(GoogleChromeManagementV1TelemetryUserInfo user) {
         this.user = user;
         return this;
     }
     
+    public GoogleChromeManagementV1TelemetryEvent(){}
 }

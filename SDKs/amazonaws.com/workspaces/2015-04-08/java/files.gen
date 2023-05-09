@@ -403,4 +403,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateRulesOfIpGroupRequest
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkspaceBundleRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkspaceImagePermissionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

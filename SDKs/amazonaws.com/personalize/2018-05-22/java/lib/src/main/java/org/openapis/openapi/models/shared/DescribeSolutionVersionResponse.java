@@ -15,9 +15,11 @@ public class DescribeSolutionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionVersion")
     public SolutionVersion solutionVersion;
+
     public DescribeSolutionVersionResponse withSolutionVersion(SolutionVersion solutionVersion) {
         this.solutionVersion = solutionVersion;
         return this;
     }
     
+    public DescribeSolutionVersionResponse(){}
 }

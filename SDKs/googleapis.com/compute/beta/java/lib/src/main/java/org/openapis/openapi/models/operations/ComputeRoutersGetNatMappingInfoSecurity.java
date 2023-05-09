@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRoutersGetNatMappingInfoSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRoutersGetNatMappingInfoSecurityOption1 option1;
+
     public ComputeRoutersGetNatMappingInfoSecurity withOption1(ComputeRoutersGetNatMappingInfoSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeRoutersGetNatMappingInfoSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRoutersGetNatMappingInfoSecurityOption2 option2;
+
     public ComputeRoutersGetNatMappingInfoSecurity withOption2(ComputeRoutersGetNatMappingInfoSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeRoutersGetNatMappingInfoSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRoutersGetNatMappingInfoSecurityOption3 option3;
+
     public ComputeRoutersGetNatMappingInfoSecurity withOption3(ComputeRoutersGetNatMappingInfoSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeRoutersGetNatMappingInfoSecurity(){}
 }

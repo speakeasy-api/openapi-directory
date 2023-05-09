@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFirewallResponse {
     
     public String contentType;
+
     public CreateFirewallResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFirewallResponse createFirewallResponse;
+
     public CreateFirewallResponse withCreateFirewallResponse(org.openapis.openapi.models.shared.CreateFirewallResponse createFirewallResponse) {
         this.createFirewallResponse = createFirewallResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFirewallResponse {
      */
     
     public Object insufficientCapacityException;
+
     public CreateFirewallResponse withInsufficientCapacityException(Object insufficientCapacityException) {
         this.insufficientCapacityException = insufficientCapacityException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFirewallResponse {
      */
     
     public Object internalServerError;
+
     public CreateFirewallResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CreateFirewallResponse {
      */
     
     public Object invalidOperationException;
+
     public CreateFirewallResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFirewallResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateFirewallResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class CreateFirewallResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFirewallResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateFirewallResponse {
     
     
     public Integer statusCode;
+
     public CreateFirewallResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateFirewallResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFirewallResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateFirewallResponse {
      */
     
     public Object throttlingException;
+
     public CreateFirewallResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateFirewallResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

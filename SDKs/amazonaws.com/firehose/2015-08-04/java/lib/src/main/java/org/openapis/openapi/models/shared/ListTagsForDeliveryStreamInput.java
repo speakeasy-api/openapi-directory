@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTagsForDeliveryStreamInput {
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public ListTagsForDeliveryStreamInput withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -19,6 +20,7 @@ public class ListTagsForDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartTagKey")
     public String exclusiveStartTagKey;
+
     public ListTagsForDeliveryStreamInput withExclusiveStartTagKey(String exclusiveStartTagKey) {
         this.exclusiveStartTagKey = exclusiveStartTagKey;
         return this;
@@ -27,9 +29,13 @@ public class ListTagsForDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListTagsForDeliveryStreamInput withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public ListTagsForDeliveryStreamInput(@JsonProperty("DeliveryStreamName") String deliveryStreamName) {
+        this.deliveryStreamName = deliveryStreamName;
+  }
 }

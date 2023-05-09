@@ -18,9 +18,11 @@ public class AssetRenderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AssetResponseData[] data;
+
     public AssetRenderResponse withData(AssetResponseData[] data) {
         this.data = data;
         return this;
     }
     
+    public AssetRenderResponse(){}
 }

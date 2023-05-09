@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class UpdatePrice200ApplicationXML {
     
     public UpdatePrice200ApplicationXMLErrors[] errors;
+
     public UpdatePrice200ApplicationXML withErrors(UpdatePrice200ApplicationXMLErrors[] errors) {
         this.errors = errors;
         return this;
@@ -22,6 +23,7 @@ public class UpdatePrice200ApplicationXML {
      */
     
     public String mart;
+
     public UpdatePrice200ApplicationXML withMart(String mart) {
         this.mart = mart;
         return this;
@@ -32,6 +34,7 @@ public class UpdatePrice200ApplicationXML {
      */
     
     public String message;
+
     public UpdatePrice200ApplicationXML withMessage(String message) {
         this.message = message;
         return this;
@@ -42,6 +45,7 @@ public class UpdatePrice200ApplicationXML {
      */
     
     public String sku;
+
     public UpdatePrice200ApplicationXML withSku(String sku) {
         this.sku = sku;
         return this;
@@ -49,9 +53,11 @@ public class UpdatePrice200ApplicationXML {
     
     
     public Integer statusCode;
+
     public UpdatePrice200ApplicationXML withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public UpdatePrice200ApplicationXML(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiPostNewOrderFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelOrderInput billbeeInterfacesBillbeeAPIModelOrderInput;
+
     public OrderApiPostNewOrderFormRequest withBillbeeInterfacesBillbeeAPIModelOrderInput(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelOrderInput billbeeInterfacesBillbeeAPIModelOrderInput) {
         this.billbeeInterfacesBillbeeAPIModelOrderInput = billbeeInterfacesBillbeeAPIModelOrderInput;
         return this;
@@ -19,9 +21,13 @@ public class OrderApiPostNewOrderFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shopId")
     public Long shopId;
+
     public OrderApiPostNewOrderFormRequest withShopId(Long shopId) {
         this.shopId = shopId;
         return this;
     }
     
+    public OrderApiPostNewOrderFormRequest(@JsonProperty("Billbee.Interfaces.BillbeeAPI.Model.OrderInput") org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelOrderInput billbeeInterfacesBillbeeAPIModelOrderInput) {
+        this.billbeeInterfacesBillbeeAPIModelOrderInput = billbeeInterfacesBillbeeAPIModelOrderInput;
+  }
 }

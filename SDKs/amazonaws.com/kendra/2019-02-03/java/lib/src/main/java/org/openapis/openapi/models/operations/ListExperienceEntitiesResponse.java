@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExperienceEntitiesResponse {
@@ -12,6 +13,7 @@ public class ListExperienceEntitiesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListExperienceEntitiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListExperienceEntitiesResponse {
     
     
     public String contentType;
+
     public ListExperienceEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListExperienceEntitiesResponse {
      */
     
     public Object internalServerException;
+
     public ListExperienceEntitiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListExperienceEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExperienceEntitiesResponse listExperienceEntitiesResponse;
+
     public ListExperienceEntitiesResponse withListExperienceEntitiesResponse(org.openapis.openapi.models.shared.ListExperienceEntitiesResponse listExperienceEntitiesResponse) {
         this.listExperienceEntitiesResponse = listExperienceEntitiesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListExperienceEntitiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListExperienceEntitiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListExperienceEntitiesResponse {
     
     
     public Integer statusCode;
+
     public ListExperienceEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListExperienceEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExperienceEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListExperienceEntitiesResponse {
      */
     
     public Object throttlingException;
+
     public ListExperienceEntitiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListExperienceEntitiesResponse {
      */
     
     public Object validationException;
+
     public ListExperienceEntitiesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListExperienceEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

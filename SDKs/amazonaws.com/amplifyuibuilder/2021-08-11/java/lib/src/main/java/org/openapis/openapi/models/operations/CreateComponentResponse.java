@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateComponentResponse {
     
     public String contentType;
+
     public CreateComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateComponentResponse createComponentResponse;
+
     public CreateComponentResponse withCreateComponentResponse(org.openapis.openapi.models.shared.CreateComponentResponse createComponentResponse) {
         this.createComponentResponse = createComponentResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateComponentResponse {
      */
     
     public Object internalServerException;
+
     public CreateComponentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateComponentResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateComponentResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateComponentResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateComponentResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -59,6 +65,7 @@ public class CreateComponentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateComponentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateComponentResponse {
     
     
     public Integer statusCode;
+
     public CreateComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrUpdateReportRequest {
@@ -12,6 +13,7 @@ public class CreateOrUpdateReportRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CreateOrUpdateReportRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class CreateOrUpdateReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public CreateOrUpdateReportRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -32,6 +35,7 @@ public class CreateOrUpdateReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public CreateOrUpdateReportRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -42,6 +46,7 @@ public class CreateOrUpdateReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public String reportId;
+
     public CreateOrUpdateReportRequest withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -52,9 +57,17 @@ public class CreateOrUpdateReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public CreateOrUpdateReportRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public CreateOrUpdateReportRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("commit") String commit, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("reportId") String reportId, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.commit = commit;
+        this.repoSlug = repoSlug;
+        this.reportId = reportId;
+        this.workspace = workspace;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteIdentityPolicyRequest - Represents a request to delete a sending authorization policy for an identity. Sending authorization is an Amazon SES feature that enables you to authorize other senders to use your identities. For information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteIdentityPolicyRequest {
     
     public String identity;
+
     public DeleteIdentityPolicyRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -19,9 +20,14 @@ public class DeleteIdentityPolicyRequest {
     
     
     public String policyName;
+
     public DeleteIdentityPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public DeleteIdentityPolicyRequest(@JsonProperty("Identity") String identity, @JsonProperty("PolicyName") String policyName) {
+        this.identity = identity;
+        this.policyName = policyName;
+  }
 }

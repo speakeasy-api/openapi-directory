@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartImageScanResponse {
     
     public String contentType;
+
     public StartImageScanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartImageScanResponse {
      */
     
     public Object imageNotFoundException;
+
     public StartImageScanResponse withImageNotFoundException(Object imageNotFoundException) {
         this.imageNotFoundException = imageNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StartImageScanResponse {
      */
     
     public Object invalidParameterException;
+
     public StartImageScanResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StartImageScanResponse {
      */
     
     public Object limitExceededException;
+
     public StartImageScanResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartImageScanResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public StartImageScanResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartImageScanResponse {
      */
     
     public Object serverException;
+
     public StartImageScanResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -69,6 +76,7 @@ public class StartImageScanResponse {
      */
     
     public org.openapis.openapi.models.shared.StartImageScanResponse startImageScanResponse;
+
     public StartImageScanResponse withStartImageScanResponse(org.openapis.openapi.models.shared.StartImageScanResponse startImageScanResponse) {
         this.startImageScanResponse = startImageScanResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartImageScanResponse {
     
     
     public Integer statusCode;
+
     public StartImageScanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartImageScanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartImageScanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartImageScanResponse {
      */
     
     public Object unsupportedImageTypeException;
+
     public StartImageScanResponse withUnsupportedImageTypeException(Object unsupportedImageTypeException) {
         this.unsupportedImageTypeException = unsupportedImageTypeException;
         return this;
@@ -103,9 +114,14 @@ public class StartImageScanResponse {
      */
     
     public Object validationException;
+
     public StartImageScanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartImageScanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

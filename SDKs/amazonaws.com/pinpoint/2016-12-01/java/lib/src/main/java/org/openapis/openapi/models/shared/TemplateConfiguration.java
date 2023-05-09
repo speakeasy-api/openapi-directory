@@ -15,6 +15,7 @@ public class TemplateConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailTemplate")
     public Template emailTemplate;
+
     public TemplateConfiguration withEmailTemplate(Template emailTemplate) {
         this.emailTemplate = emailTemplate;
         return this;
@@ -23,6 +24,7 @@ public class TemplateConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PushTemplate")
     public Template pushTemplate;
+
     public TemplateConfiguration withPushTemplate(Template pushTemplate) {
         this.pushTemplate = pushTemplate;
         return this;
@@ -31,6 +33,7 @@ public class TemplateConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SMSTemplate")
     public Template smsTemplate;
+
     public TemplateConfiguration withSMSTemplate(Template smsTemplate) {
         this.smsTemplate = smsTemplate;
         return this;
@@ -39,9 +42,11 @@ public class TemplateConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoiceTemplate")
     public Template voiceTemplate;
+
     public TemplateConfiguration withVoiceTemplate(Template voiceTemplate) {
         this.voiceTemplate = voiceTemplate;
         return this;
     }
     
+    public TemplateConfiguration(){}
 }

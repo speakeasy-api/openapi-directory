@@ -18,6 +18,7 @@ public class IdentitytoolkitRelyingpartyEmailLinkSigninRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public IdentitytoolkitRelyingpartyEmailLinkSigninRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class IdentitytoolkitRelyingpartyEmailLinkSigninRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public IdentitytoolkitRelyingpartyEmailLinkSigninRequest withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -40,9 +42,11 @@ public class IdentitytoolkitRelyingpartyEmailLinkSigninRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oobCode")
     public String oobCode;
+
     public IdentitytoolkitRelyingpartyEmailLinkSigninRequest withOobCode(String oobCode) {
         this.oobCode = oobCode;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyEmailLinkSigninRequest(){}
 }

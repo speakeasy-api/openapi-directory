@@ -15,9 +15,11 @@ public class AcceptEulasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eulaAcceptances")
     public EulaAcceptance[] eulaAcceptances;
+
     public AcceptEulasResponse withEulaAcceptances(EulaAcceptance[] eulaAcceptances) {
         this.eulaAcceptances = eulaAcceptances;
         return this;
     }
     
+    public AcceptEulasResponse(){}
 }

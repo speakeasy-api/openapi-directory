@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ExperimentDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public GoogleCloudDialogflowCxV3beta1ExperimentDefinition withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1ExperimentDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionVariants")
     public GoogleCloudDialogflowCxV3beta1VersionVariants versionVariants;
+
     public GoogleCloudDialogflowCxV3beta1ExperimentDefinition withVersionVariants(GoogleCloudDialogflowCxV3beta1VersionVariants versionVariants) {
         this.versionVariants = versionVariants;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ExperimentDefinition(){}
 }

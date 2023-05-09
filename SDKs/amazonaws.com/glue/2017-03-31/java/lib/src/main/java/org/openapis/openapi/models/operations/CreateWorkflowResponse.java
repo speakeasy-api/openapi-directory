@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkflowResponse {
@@ -12,6 +13,7 @@ public class CreateWorkflowResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateWorkflowResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateWorkflowResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateWorkflowResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkflowResponse {
     
     
     public String contentType;
+
     public CreateWorkflowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkflowResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkflowResponse createWorkflowResponse;
+
     public CreateWorkflowResponse withCreateWorkflowResponse(org.openapis.openapi.models.shared.CreateWorkflowResponse createWorkflowResponse) {
         this.createWorkflowResponse = createWorkflowResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorkflowResponse {
      */
     
     public Object internalServiceException;
+
     public CreateWorkflowResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorkflowResponse {
      */
     
     public Object invalidInputException;
+
     public CreateWorkflowResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class CreateWorkflowResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateWorkflowResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class CreateWorkflowResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateWorkflowResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class CreateWorkflowResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkflowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateWorkflowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkflowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateWorkflowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

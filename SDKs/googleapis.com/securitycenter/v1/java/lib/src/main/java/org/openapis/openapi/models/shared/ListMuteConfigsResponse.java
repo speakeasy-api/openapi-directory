@@ -18,6 +18,7 @@ public class ListMuteConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("muteConfigs")
     public GoogleCloudSecuritycenterV1MuteConfig[] muteConfigs;
+
     public ListMuteConfigsResponse withMuteConfigs(GoogleCloudSecuritycenterV1MuteConfig[] muteConfigs) {
         this.muteConfigs = muteConfigs;
         return this;
@@ -29,9 +30,11 @@ public class ListMuteConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMuteConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListMuteConfigsResponse(){}
 }

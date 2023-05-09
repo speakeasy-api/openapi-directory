@@ -57,10 +57,8 @@ public class TypeTypePointIcebridgeAtmIcessn {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypePointIcebridgeAtmIcessnResponse res = new org.openapis.openapi.models.operations.SearchTypePointIcebridgeAtmIcessnResponse() {{
+        org.openapis.openapi.models.operations.SearchTypePointIcebridgeAtmIcessnResponse res = new org.openapis.openapi.models.operations.SearchTypePointIcebridgeAtmIcessnResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

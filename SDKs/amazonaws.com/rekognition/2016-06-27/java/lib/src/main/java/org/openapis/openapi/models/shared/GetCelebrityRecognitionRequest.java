@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCelebrityRecognitionRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public GetCelebrityRecognitionRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,6 +20,7 @@ public class GetCelebrityRecognitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetCelebrityRecognitionRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class GetCelebrityRecognitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetCelebrityRecognitionRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class GetCelebrityRecognitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public CelebrityRecognitionSortByEnum sortBy;
+
     public GetCelebrityRecognitionRequest withSortBy(CelebrityRecognitionSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetCelebrityRecognitionRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

@@ -15,6 +15,7 @@ public class QueryRuntimeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputStage")
     public QueryStage outputStage;
+
     public QueryRuntimeStatistics withOutputStage(QueryStage outputStage) {
         this.outputStage = outputStage;
         return this;
@@ -26,6 +27,7 @@ public class QueryRuntimeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rows")
     public QueryRuntimeStatisticsRows rows;
+
     public QueryRuntimeStatistics withRows(QueryRuntimeStatisticsRows rows) {
         this.rows = rows;
         return this;
@@ -37,9 +39,11 @@ public class QueryRuntimeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeline")
     public QueryRuntimeStatisticsTimeline timeline;
+
     public QueryRuntimeStatistics withTimeline(QueryRuntimeStatisticsTimeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public QueryRuntimeStatistics(){}
 }

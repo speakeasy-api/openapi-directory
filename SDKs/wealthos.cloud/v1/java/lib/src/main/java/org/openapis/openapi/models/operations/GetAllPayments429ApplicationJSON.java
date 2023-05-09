@@ -18,6 +18,7 @@ public class GetAllPayments429ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetAllPayments429ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetAllPayments429ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetAllPayments429ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetAllPayments429ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

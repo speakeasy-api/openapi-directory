@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetCollaboratorPermissionLevelResponse {
     
     public String contentType;
+
     public ReposGetCollaboratorPermissionLevelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetCollaboratorPermissionLevelResponse {
     
     
     public Integer statusCode;
+
     public ReposGetCollaboratorPermissionLevelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetCollaboratorPermissionLevelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetCollaboratorPermissionLevelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetCollaboratorPermissionLevelResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetCollaboratorPermissionLevelResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetCollaboratorPermissionLevelResponse {
      */
     
     public org.openapis.openapi.models.shared.RepositoryCollaboratorPermission repositoryCollaboratorPermission;
+
     public ReposGetCollaboratorPermissionLevelResponse withRepositoryCollaboratorPermission(org.openapis.openapi.models.shared.RepositoryCollaboratorPermission repositoryCollaboratorPermission) {
         this.repositoryCollaboratorPermission = repositoryCollaboratorPermission;
         return this;
     }
     
+    public ReposGetCollaboratorPermissionLevelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

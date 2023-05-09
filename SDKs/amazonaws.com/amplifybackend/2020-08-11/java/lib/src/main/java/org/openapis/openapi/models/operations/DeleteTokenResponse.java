@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTokenResponse {
@@ -12,6 +13,7 @@ public class DeleteTokenResponse {
      */
     
     public Object badRequestException;
+
     public DeleteTokenResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTokenResponse {
     
     
     public String contentType;
+
     public DeleteTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTokenResponse deleteTokenResponse;
+
     public DeleteTokenResponse withDeleteTokenResponse(org.openapis.openapi.models.shared.DeleteTokenResponse deleteTokenResponse) {
         this.deleteTokenResponse = deleteTokenResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTokenResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public DeleteTokenResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTokenResponse {
      */
     
     public Object notFoundException;
+
     public DeleteTokenResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteTokenResponse {
     
     
     public Integer statusCode;
+
     public DeleteTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTokenResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteTokenResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

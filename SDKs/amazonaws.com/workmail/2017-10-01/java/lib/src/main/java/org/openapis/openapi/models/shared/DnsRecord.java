@@ -15,6 +15,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public DnsRecord withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -23,6 +24,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DnsRecord withType(String type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public DnsRecord withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DnsRecord(){}
 }

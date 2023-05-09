@@ -18,6 +18,7 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computationTimeMillis")
     public String computationTimeMillis;
+
     public DataPoint withComputationTimeMillis(String computationTimeMillis) {
         this.computationTimeMillis = computationTimeMillis;
         return this;
@@ -29,6 +30,7 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTypeName")
     public String dataTypeName;
+
     public DataPoint withDataTypeName(String dataTypeName) {
         this.dataTypeName = dataTypeName;
         return this;
@@ -40,6 +42,7 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimeNanos")
     public String endTimeNanos;
+
     public DataPoint withEndTimeNanos(String endTimeNanos) {
         this.endTimeNanos = endTimeNanos;
         return this;
@@ -51,6 +54,7 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedTimeMillis")
     public String modifiedTimeMillis;
+
     public DataPoint withModifiedTimeMillis(String modifiedTimeMillis) {
         this.modifiedTimeMillis = modifiedTimeMillis;
         return this;
@@ -62,6 +66,7 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originDataSourceId")
     public String originDataSourceId;
+
     public DataPoint withOriginDataSourceId(String originDataSourceId) {
         this.originDataSourceId = originDataSourceId;
         return this;
@@ -73,6 +78,7 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawTimestampNanos")
     public String rawTimestampNanos;
+
     public DataPoint withRawTimestampNanos(String rawTimestampNanos) {
         this.rawTimestampNanos = rawTimestampNanos;
         return this;
@@ -84,6 +90,7 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeNanos")
     public String startTimeNanos;
+
     public DataPoint withStartTimeNanos(String startTimeNanos) {
         this.startTimeNanos = startTimeNanos;
         return this;
@@ -95,9 +102,11 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Value[] value;
+
     public DataPoint withValue(Value[] value) {
         this.value = value;
         return this;
     }
     
+    public DataPoint(){}
 }

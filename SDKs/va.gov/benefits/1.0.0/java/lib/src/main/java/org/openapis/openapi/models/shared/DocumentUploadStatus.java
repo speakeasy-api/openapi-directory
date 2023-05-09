@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentUploadStatus {
     @JsonProperty("attributes")
     public DocumentUploadStatusAttributes attributes;
+
     public DocumentUploadStatus withAttributes(DocumentUploadStatusAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class DocumentUploadStatus {
      */
     @JsonProperty("id")
     public String id;
+
     public DocumentUploadStatus withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,15 @@ public class DocumentUploadStatus {
      */
     @JsonProperty("type")
     public String type;
+
     public DocumentUploadStatus withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DocumentUploadStatus(@JsonProperty("attributes") DocumentUploadStatusAttributes attributes, @JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.type = type;
+  }
 }

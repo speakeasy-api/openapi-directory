@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mentionId")
     public String mentionId;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withMentionId(String mentionId) {
         this.mentionId = mentionId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mentionText")
     public String mentionText;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withMentionText(String mentionText) {
         this.mentionText = mentionText;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedValue")
     public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue normalizedValue;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withNormalizedValue(GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue normalizedValue) {
         this.normalizedValue = normalizedValue;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageAnchor")
     public GoogleCloudDocumentaiV1beta3DocumentPageAnchor pageAnchor;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withPageAnchor(GoogleCloudDocumentaiV1beta3DocumentPageAnchor pageAnchor) {
         this.pageAnchor = pageAnchor;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleCloudDocumentaiV1beta3DocumentEntity[] properties;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withProperties(GoogleCloudDocumentaiV1beta3DocumentEntity[] properties) {
         this.properties = properties;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1beta3DocumentProvenance provenance;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withProvenance(GoogleCloudDocumentaiV1beta3DocumentProvenance provenance) {
         this.provenance = provenance;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redacted")
     public Boolean redacted;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withRedacted(Boolean redacted) {
         this.redacted = redacted;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textAnchor")
     public GoogleCloudDocumentaiV1beta3DocumentTextAnchor textAnchor;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withTextAnchor(GoogleCloudDocumentaiV1beta3DocumentTextAnchor textAnchor) {
         this.textAnchor = textAnchor;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDocumentaiV1beta3DocumentEntity withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentEntity(){}
 }

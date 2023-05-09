@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRobotApplicationsResponse {
     
     public String contentType;
+
     public ListRobotApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRobotApplicationsResponse {
      */
     
     public Object internalServerException;
+
     public ListRobotApplicationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListRobotApplicationsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListRobotApplicationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListRobotApplicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRobotApplicationsResponse listRobotApplicationsResponse;
+
     public ListRobotApplicationsResponse withListRobotApplicationsResponse(org.openapis.openapi.models.shared.ListRobotApplicationsResponse listRobotApplicationsResponse) {
         this.listRobotApplicationsResponse = listRobotApplicationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListRobotApplicationsResponse {
     
     
     public Integer statusCode;
+
     public ListRobotApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRobotApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRobotApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListRobotApplicationsResponse {
      */
     
     public Object throttlingException;
+
     public ListRobotApplicationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListRobotApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

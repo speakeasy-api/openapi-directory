@@ -10,34 +10,41 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateResourceSharePermissionRequestBody {
     /**
-     * &lt;p&gt;Specifies a unique, case-sensitive identifier that you provide to ensure the idempotency of the request. This lets you safely retry the request without accidentally performing the same operation a second time. Passing the same value to a later call to an operation requires that you also pass the same value for all other parameters. We recommend that you use a &lt;a href="https://wikipedia.org/wiki/Universally_unique_identifier"&gt;UUID type of value.&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;If you don't provide this value, then Amazon Web Services generates a random one for you.&lt;/p&gt;
+     * &lt;p&gt;Specifies a unique, case-sensitive identifier that you provide to ensure the idempotency of the request. This lets you safely retry the request without accidentally performing the same operation a second time. Passing the same value to a later call to an operation requires that you also pass the same value for all other parameters. We recommend that you use a &lt;a href="https://wikipedia.org/wiki/Universally_unique_identifier"&gt;UUID type of value.&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;If you don't provide this value, then Amazon Web Services generates a random one for you.&lt;/p&gt; &lt;p&gt;If you retry the operation with the same &lt;code&gt;ClientToken&lt;/code&gt;, but with different parameters, the retry fails with an &lt;code&gt;IdempotentParameterMismatch&lt;/code&gt; error.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DisassociateResourceSharePermissionRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
     /**
-     * The &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the permission to disassociate from the resource share. Changes to permissions take effect immediately.
+     * The &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the managed permission to disassociate from the resource share. Changes to permissions take effect immediately.
      */
     @JsonProperty("permissionArn")
     public String permissionArn;
+
     public DisassociateResourceSharePermissionRequestBody withPermissionArn(String permissionArn) {
         this.permissionArn = permissionArn;
         return this;
     }
     
     /**
-     * The &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the resource share from which you want to disassociate a permission.
+     * The &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the resource share that you want to remove the managed permission from.
      */
     @JsonProperty("resourceShareArn")
     public String resourceShareArn;
+
     public DisassociateResourceSharePermissionRequestBody withResourceShareArn(String resourceShareArn) {
         this.resourceShareArn = resourceShareArn;
         return this;
     }
     
+    public DisassociateResourceSharePermissionRequestBody(@JsonProperty("permissionArn") String permissionArn, @JsonProperty("resourceShareArn") String resourceShareArn) {
+        this.permissionArn = permissionArn;
+        this.resourceShareArn = resourceShareArn;
+  }
 }

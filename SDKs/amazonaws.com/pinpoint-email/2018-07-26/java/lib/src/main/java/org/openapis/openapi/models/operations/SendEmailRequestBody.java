@@ -15,6 +15,7 @@ public class SendEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public SendEmailRequestBody withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -25,6 +26,7 @@ public class SendEmailRequestBody {
      */
     @JsonProperty("Content")
     public SendEmailRequestBodyContent content;
+
     public SendEmailRequestBody withContent(SendEmailRequestBodyContent content) {
         this.content = content;
         return this;
@@ -35,6 +37,7 @@ public class SendEmailRequestBody {
      */
     @JsonProperty("Destination")
     public SendEmailRequestBodyDestination destination;
+
     public SendEmailRequestBody withDestination(SendEmailRequestBodyDestination destination) {
         this.destination = destination;
         return this;
@@ -46,6 +49,7 @@ public class SendEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailTags")
     public org.openapis.openapi.models.shared.MessageTag[] emailTags;
+
     public SendEmailRequestBody withEmailTags(org.openapis.openapi.models.shared.MessageTag[] emailTags) {
         this.emailTags = emailTags;
         return this;
@@ -57,6 +61,7 @@ public class SendEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackForwardingEmailAddress")
     public String feedbackForwardingEmailAddress;
+
     public SendEmailRequestBody withFeedbackForwardingEmailAddress(String feedbackForwardingEmailAddress) {
         this.feedbackForwardingEmailAddress = feedbackForwardingEmailAddress;
         return this;
@@ -68,6 +73,7 @@ public class SendEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromEmailAddress")
     public String fromEmailAddress;
+
     public SendEmailRequestBody withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -79,9 +85,14 @@ public class SendEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplyToAddresses")
     public String[] replyToAddresses;
+
     public SendEmailRequestBody withReplyToAddresses(String[] replyToAddresses) {
         this.replyToAddresses = replyToAddresses;
         return this;
     }
     
+    public SendEmailRequestBody(@JsonProperty("Content") SendEmailRequestBodyContent content, @JsonProperty("Destination") SendEmailRequestBodyDestination destination) {
+        this.content = content;
+        this.destination = destination;
+  }
 }

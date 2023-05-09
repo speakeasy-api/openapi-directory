@@ -15,9 +15,11 @@ public class AuditCheckConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AuditCheckConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AuditCheckConfiguration(){}
 }

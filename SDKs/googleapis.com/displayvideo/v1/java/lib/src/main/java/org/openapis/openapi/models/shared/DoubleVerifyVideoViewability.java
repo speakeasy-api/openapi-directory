@@ -18,6 +18,7 @@ public class DoubleVerifyVideoViewability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playerImpressionRate")
     public DoubleVerifyVideoViewabilityPlayerImpressionRateEnum playerImpressionRate;
+
     public DoubleVerifyVideoViewability withPlayerImpressionRate(DoubleVerifyVideoViewabilityPlayerImpressionRateEnum playerImpressionRate) {
         this.playerImpressionRate = playerImpressionRate;
         return this;
@@ -29,6 +30,7 @@ public class DoubleVerifyVideoViewability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoIab")
     public DoubleVerifyVideoViewabilityVideoIabEnum videoIab;
+
     public DoubleVerifyVideoViewability withVideoIab(DoubleVerifyVideoViewabilityVideoIabEnum videoIab) {
         this.videoIab = videoIab;
         return this;
@@ -40,9 +42,11 @@ public class DoubleVerifyVideoViewability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoViewableRate")
     public DoubleVerifyVideoViewabilityVideoViewableRateEnum videoViewableRate;
+
     public DoubleVerifyVideoViewability withVideoViewableRate(DoubleVerifyVideoViewabilityVideoViewableRateEnum videoViewableRate) {
         this.videoViewableRate = videoViewableRate;
         return this;
     }
     
+    public DoubleVerifyVideoViewability(){}
 }

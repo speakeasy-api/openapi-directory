@@ -15,6 +15,7 @@ public class SecurityPolicyRuleRedirectOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public SecurityPolicyRuleRedirectOptions withTarget(String target) {
         this.target = target;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPolicyRuleRedirectOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SecurityPolicyRuleRedirectOptionsTypeEnum type;
+
     public SecurityPolicyRuleRedirectOptions withType(SecurityPolicyRuleRedirectOptionsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SecurityPolicyRuleRedirectOptions(){}
 }

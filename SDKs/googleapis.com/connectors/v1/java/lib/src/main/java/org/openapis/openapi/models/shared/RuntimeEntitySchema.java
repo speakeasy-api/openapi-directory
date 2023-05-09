@@ -18,6 +18,7 @@ public class RuntimeEntitySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public String entity;
+
     public RuntimeEntitySchema withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeEntitySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public Field[] fields;
+
     public RuntimeEntitySchema withFields(Field[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public RuntimeEntitySchema(){}
 }

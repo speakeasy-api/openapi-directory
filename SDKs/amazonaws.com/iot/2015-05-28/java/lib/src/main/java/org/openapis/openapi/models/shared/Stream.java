@@ -15,6 +15,7 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public Long fileId;
+
     public Stream withFileId(Long fileId) {
         this.fileId = fileId;
         return this;
@@ -23,9 +24,11 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public Stream withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
     }
     
+    public Stream(){}
 }

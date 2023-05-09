@@ -15,6 +15,7 @@ public class InventoryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptureTime")
     public String captureTime;
+
     public InventoryResultItem withCaptureTime(String captureTime) {
         this.captureTime = captureTime;
         return this;
@@ -22,6 +23,7 @@ public class InventoryResultItem {
     
     @JsonProperty("Content")
     public java.util.Map<String, String>[] content;
+
     public InventoryResultItem withContent(java.util.Map<String, String>[] content) {
         this.content = content;
         return this;
@@ -30,6 +32,7 @@ public class InventoryResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentHash")
     public String contentHash;
+
     public InventoryResultItem withContentHash(String contentHash) {
         this.contentHash = contentHash;
         return this;
@@ -37,6 +40,7 @@ public class InventoryResultItem {
     
     @JsonProperty("SchemaVersion")
     public String schemaVersion;
+
     public InventoryResultItem withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -44,9 +48,15 @@ public class InventoryResultItem {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public InventoryResultItem withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public InventoryResultItem(@JsonProperty("Content") java.util.Map<String, String>[] content, @JsonProperty("SchemaVersion") String schemaVersion, @JsonProperty("TypeName") String typeName) {
+        this.content = content;
+        this.schemaVersion = schemaVersion;
+        this.typeName = typeName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClassifyDocumentResponse {
@@ -12,6 +13,7 @@ public class ClassifyDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.ClassifyDocumentResponse classifyDocumentResponse;
+
     public ClassifyDocumentResponse withClassifyDocumentResponse(org.openapis.openapi.models.shared.ClassifyDocumentResponse classifyDocumentResponse) {
         this.classifyDocumentResponse = classifyDocumentResponse;
         return this;
@@ -19,6 +21,7 @@ public class ClassifyDocumentResponse {
     
     
     public String contentType;
+
     public ClassifyDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ClassifyDocumentResponse {
      */
     
     public Object internalServerException;
+
     public ClassifyDocumentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ClassifyDocumentResponse {
      */
     
     public Object invalidRequestException;
+
     public ClassifyDocumentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class ClassifyDocumentResponse {
     
     
     public Integer statusCode;
+
     public ClassifyDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ClassifyDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClassifyDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ClassifyDocumentResponse {
      */
     
     public Object resourceUnavailableException;
+
     public ClassifyDocumentResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class ClassifyDocumentResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public ClassifyDocumentResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
     }
     
+    public ClassifyDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

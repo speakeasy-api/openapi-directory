@@ -15,6 +15,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RecommendationSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndLine")
     public Long endLine;
+
     public RecommendationSummary withEndLine(Long endLine) {
         this.endLine = endLine;
         return this;
@@ -31,6 +33,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilePath")
     public String filePath;
+
     public RecommendationSummary withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -39,6 +42,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationCategory")
     public RecommendationCategoryEnum recommendationCategory;
+
     public RecommendationSummary withRecommendationCategory(RecommendationCategoryEnum recommendationCategory) {
         this.recommendationCategory = recommendationCategory;
         return this;
@@ -47,6 +51,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationId")
     public String recommendationId;
+
     public RecommendationSummary withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
@@ -55,6 +60,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleMetadata")
     public RuleMetadata ruleMetadata;
+
     public RecommendationSummary withRuleMetadata(RuleMetadata ruleMetadata) {
         this.ruleMetadata = ruleMetadata;
         return this;
@@ -63,6 +69,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public SeverityEnum severity;
+
     public RecommendationSummary withSeverity(SeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -71,9 +78,11 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartLine")
     public Long startLine;
+
     public RecommendationSummary withStartLine(Long startLine) {
         this.startLine = startLine;
         return this;
     }
     
+    public RecommendationSummary(){}
 }

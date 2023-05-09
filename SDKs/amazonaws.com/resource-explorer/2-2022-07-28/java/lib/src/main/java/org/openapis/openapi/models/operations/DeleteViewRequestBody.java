@@ -12,9 +12,13 @@ public class DeleteViewRequestBody {
      */
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public DeleteViewRequestBody withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public DeleteViewRequestBody(@JsonProperty("ViewArn") String viewArn) {
+        this.viewArn = viewArn;
+  }
 }

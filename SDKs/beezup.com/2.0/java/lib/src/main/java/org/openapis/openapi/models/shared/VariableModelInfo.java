@@ -15,6 +15,7 @@ public class VariableModelInfo {
      */
     @JsonProperty("clickIncludedAndVariablePrices")
     public ClickIncludedAndVariablePrice[] clickIncludedAndVariablePrices;
+
     public VariableModelInfo withClickIncludedAndVariablePrices(ClickIncludedAndVariablePrice[] clickIncludedAndVariablePrices) {
         this.clickIncludedAndVariablePrices = clickIncludedAndVariablePrices;
         return this;
@@ -25,6 +26,7 @@ public class VariableModelInfo {
      */
     @JsonProperty("overflowClickCount")
     public Integer overflowClickCount;
+
     public VariableModelInfo withOverflowClickCount(Integer overflowClickCount) {
         this.overflowClickCount = overflowClickCount;
         return this;
@@ -35,9 +37,15 @@ public class VariableModelInfo {
      */
     @JsonProperty("overflowClickPrice")
     public Double overflowClickPrice;
+
     public VariableModelInfo withOverflowClickPrice(Double overflowClickPrice) {
         this.overflowClickPrice = overflowClickPrice;
         return this;
     }
     
+    public VariableModelInfo(@JsonProperty("clickIncludedAndVariablePrices") ClickIncludedAndVariablePrice[] clickIncludedAndVariablePrices, @JsonProperty("overflowClickCount") Integer overflowClickCount, @JsonProperty("overflowClickPrice") Double overflowClickPrice) {
+        this.clickIncludedAndVariablePrices = clickIncludedAndVariablePrices;
+        this.overflowClickCount = overflowClickCount;
+        this.overflowClickPrice = overflowClickPrice;
+  }
 }

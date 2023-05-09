@@ -18,6 +18,7 @@ public class VideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoUrl")
     public String videoUrl;
+
     public VideoContent withVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
         return this;
@@ -29,9 +30,11 @@ public class VideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoVastXml")
     public String videoVastXml;
+
     public VideoContent withVideoVastXml(String videoVastXml) {
         this.videoVastXml = videoVastXml;
         return this;
     }
     
+    public VideoContent(){}
 }

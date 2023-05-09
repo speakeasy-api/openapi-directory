@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RebootInstanceRequest {
     @JsonProperty("instanceName")
     public String instanceName;
+
     public RebootInstanceRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public RebootInstanceRequest(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

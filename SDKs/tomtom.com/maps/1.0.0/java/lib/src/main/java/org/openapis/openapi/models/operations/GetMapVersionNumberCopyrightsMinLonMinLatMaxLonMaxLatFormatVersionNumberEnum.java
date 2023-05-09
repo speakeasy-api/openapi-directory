@@ -10,12 +10,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum - Version of the service to call. The current version is 1
  */
 public enum GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum {
-    ONE("1");
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum(String value) {
+    private GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum(Long value) {
         this.value = value;
     }
 }

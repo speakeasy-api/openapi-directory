@@ -155,6 +155,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -192,7 +197,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateUserResponse res = new org.openapis.openapi.models.operations.AssociateUserResponse() {{
+        org.openapis.openapi.models.operations.AssociateUserResponse res = new org.openapis.openapi.models.operations.AssociateUserResponse(contentType, httpRes.statusCode()) {{
             associateUserResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -202,8 +207,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,7 +303,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterIdentityProviderResponse res = new org.openapis.openapi.models.operations.DeregisterIdentityProviderResponse() {{
+        org.openapis.openapi.models.operations.DeregisterIdentityProviderResponse res = new org.openapis.openapi.models.operations.DeregisterIdentityProviderResponse(contentType, httpRes.statusCode()) {{
             deregisterIdentityProviderResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -310,8 +313,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -408,7 +409,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateUserResponse res = new org.openapis.openapi.models.operations.DisassociateUserResponse() {{
+        org.openapis.openapi.models.operations.DisassociateUserResponse res = new org.openapis.openapi.models.operations.DisassociateUserResponse(contentType, httpRes.statusCode()) {{
             disassociateUserResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -418,8 +419,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -522,7 +521,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListIdentityProvidersResponse res = new org.openapis.openapi.models.operations.ListIdentityProvidersResponse() {{
+        org.openapis.openapi.models.operations.ListIdentityProvidersResponse res = new org.openapis.openapi.models.operations.ListIdentityProvidersResponse(contentType, httpRes.statusCode()) {{
             listIdentityProvidersResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -532,8 +531,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -636,7 +633,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListInstancesResponse res = new org.openapis.openapi.models.operations.ListInstancesResponse() {{
+        org.openapis.openapi.models.operations.ListInstancesResponse res = new org.openapis.openapi.models.operations.ListInstancesResponse(contentType, httpRes.statusCode()) {{
             listInstancesResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -646,8 +643,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -750,7 +745,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListProductSubscriptionsResponse res = new org.openapis.openapi.models.operations.ListProductSubscriptionsResponse() {{
+        org.openapis.openapi.models.operations.ListProductSubscriptionsResponse res = new org.openapis.openapi.models.operations.ListProductSubscriptionsResponse(contentType, httpRes.statusCode()) {{
             listProductSubscriptionsResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -760,8 +755,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,7 +857,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListUserAssociationsResponse res = new org.openapis.openapi.models.operations.ListUserAssociationsResponse() {{
+        org.openapis.openapi.models.operations.ListUserAssociationsResponse res = new org.openapis.openapi.models.operations.ListUserAssociationsResponse(contentType, httpRes.statusCode()) {{
             listUserAssociationsResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -874,8 +867,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -972,7 +963,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterIdentityProviderResponse res = new org.openapis.openapi.models.operations.RegisterIdentityProviderResponse() {{
+        org.openapis.openapi.models.operations.RegisterIdentityProviderResponse res = new org.openapis.openapi.models.operations.RegisterIdentityProviderResponse(contentType, httpRes.statusCode()) {{
             registerIdentityProviderResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -982,8 +973,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1080,7 +1069,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartProductSubscriptionResponse res = new org.openapis.openapi.models.operations.StartProductSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.StartProductSubscriptionResponse res = new org.openapis.openapi.models.operations.StartProductSubscriptionResponse(contentType, httpRes.statusCode()) {{
             startProductSubscriptionResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -1090,8 +1079,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1188,7 +1175,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopProductSubscriptionResponse res = new org.openapis.openapi.models.operations.StopProductSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.StopProductSubscriptionResponse res = new org.openapis.openapi.models.operations.StopProductSubscriptionResponse(contentType, httpRes.statusCode()) {{
             stopProductSubscriptionResponse = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -1198,8 +1185,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1296,15 +1281,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateIdentityProviderSettingsResponse res = new org.openapis.openapi.models.operations.UpdateIdentityProviderSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateIdentityProviderSettingsResponse res = new org.openapis.openapi.models.operations.UpdateIdentityProviderSettingsResponse(contentType, httpRes.statusCode()) {{
             updateIdentityProviderSettingsResponse = null;
             validationException = null;
             throttlingException = null;
             internalServerException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

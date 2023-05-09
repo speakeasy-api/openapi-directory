@@ -15,6 +15,7 @@ public class CanaryRunConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveTracing")
     public Boolean activeTracing;
+
     public CanaryRunConfigOutput withActiveTracing(Boolean activeTracing) {
         this.activeTracing = activeTracing;
         return this;
@@ -23,6 +24,7 @@ public class CanaryRunConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryInMB")
     public Long memoryInMB;
+
     public CanaryRunConfigOutput withMemoryInMB(Long memoryInMB) {
         this.memoryInMB = memoryInMB;
         return this;
@@ -31,9 +33,11 @@ public class CanaryRunConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutInSeconds")
     public Long timeoutInSeconds;
+
     public CanaryRunConfigOutput withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public CanaryRunConfigOutput(){}
 }

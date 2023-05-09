@@ -18,6 +18,7 @@ public class AsyncOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodMatch")
     public String methodMatch;
+
     public AsyncOptions withMethodMatch(String methodMatch) {
         this.methodMatch = methodMatch;
         return this;
@@ -26,9 +27,11 @@ public class AsyncOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pollingOptions")
     public PollingOptions pollingOptions;
+
     public AsyncOptions withPollingOptions(PollingOptions pollingOptions) {
         this.pollingOptions = pollingOptions;
         return this;
     }
     
+    public AsyncOptions(){}
 }

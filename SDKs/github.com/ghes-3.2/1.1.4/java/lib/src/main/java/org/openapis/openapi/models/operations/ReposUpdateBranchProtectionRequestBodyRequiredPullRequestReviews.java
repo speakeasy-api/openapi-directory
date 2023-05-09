@@ -18,6 +18,7 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismiss_stale_reviews")
     public Boolean dismissStaleReviews;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews withDismissStaleReviews(Boolean dismissStaleReviews) {
         this.dismissStaleReviews = dismissStaleReviews;
         return this;
@@ -29,6 +30,7 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismissal_restrictions")
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions dismissalRestrictions;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews withDismissalRestrictions(ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions dismissalRestrictions) {
         this.dismissalRestrictions = dismissalRestrictions;
         return this;
@@ -40,6 +42,7 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("require_code_owner_reviews")
     public Boolean requireCodeOwnerReviews;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews withRequireCodeOwnerReviews(Boolean requireCodeOwnerReviews) {
         this.requireCodeOwnerReviews = requireCodeOwnerReviews;
         return this;
@@ -51,9 +54,11 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_approving_review_count")
     public Long requiredApprovingReviewCount;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews withRequiredApprovingReviewCount(Long requiredApprovingReviewCount) {
         this.requiredApprovingReviewCount = requiredApprovingReviewCount;
         return this;
     }
     
+    public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews(){}
 }

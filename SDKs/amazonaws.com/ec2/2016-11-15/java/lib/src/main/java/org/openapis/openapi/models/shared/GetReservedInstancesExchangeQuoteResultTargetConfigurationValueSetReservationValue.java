@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue {
     
     public String hourlyPrice;
+
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue withHourlyPrice(String hourlyPrice) {
         this.hourlyPrice = hourlyPrice;
         return this;
@@ -19,6 +20,7 @@ public class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetR
     
     
     public String remainingTotalValue;
+
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue withRemainingTotalValue(String remainingTotalValue) {
         this.remainingTotalValue = remainingTotalValue;
         return this;
@@ -26,9 +28,11 @@ public class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetR
     
     
     public String remainingUpfrontValue;
+
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue withRemainingUpfrontValue(String remainingUpfrontValue) {
         this.remainingUpfrontValue = remainingUpfrontValue;
         return this;
     }
     
+    public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue(){}
 }

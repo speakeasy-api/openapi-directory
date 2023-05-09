@@ -15,6 +15,7 @@ public class DistributedVirtualSwitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public DistributedVirtualSwitch withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class DistributedVirtualSwitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public DistributedVirtualSwitch withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -31,6 +33,7 @@ public class DistributedVirtualSwitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosts")
     public Reference[] hosts;
+
     public DistributedVirtualSwitch withHosts(Reference[] hosts) {
         this.hosts = hosts;
         return this;
@@ -39,6 +42,7 @@ public class DistributedVirtualSwitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DistributedVirtualSwitch withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class DistributedVirtualSwitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenter_manager")
     public Reference vcenterManager;
+
     public DistributedVirtualSwitch withVcenterManager(Reference vcenterManager) {
         this.vcenterManager = vcenterManager;
         return this;
@@ -55,9 +60,11 @@ public class DistributedVirtualSwitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_id")
     public String vendorId;
+
     public DistributedVirtualSwitch withVendorId(String vendorId) {
         this.vendorId = vendorId;
         return this;
     }
     
+    public DistributedVirtualSwitch(){}
 }

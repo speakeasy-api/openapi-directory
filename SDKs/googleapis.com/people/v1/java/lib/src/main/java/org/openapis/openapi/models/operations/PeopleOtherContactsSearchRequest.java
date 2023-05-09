@@ -12,6 +12,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public PeopleOtherContactsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public PeopleOtherContactsSearchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PeopleOtherContactsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PeopleOtherContactsSearchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PeopleOtherContactsSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PeopleOtherContactsSearchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PeopleOtherContactsSearchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public PeopleOtherContactsSearchRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -92,6 +100,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PeopleOtherContactsSearchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +111,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public PeopleOtherContactsSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -112,6 +122,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PeopleOtherContactsSearchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +133,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readMask")
     public String readMask;
+
     public PeopleOtherContactsSearchRequest withReadMask(String readMask) {
         this.readMask = readMask;
         return this;
@@ -132,6 +144,7 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public PeopleOtherContactsSearchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +155,11 @@ public class PeopleOtherContactsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public PeopleOtherContactsSearchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public PeopleOtherContactsSearchRequest(){}
 }

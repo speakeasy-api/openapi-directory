@@ -12,6 +12,7 @@ public class AllMocks200ApplicationJSONMocks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public String collection;
+
     public AllMocks200ApplicationJSONMocks withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -20,6 +21,7 @@ public class AllMocks200ApplicationJSONMocks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public AllMocks200ApplicationJSONMocks withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -28,6 +30,7 @@ public class AllMocks200ApplicationJSONMocks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AllMocks200ApplicationJSONMocks withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class AllMocks200ApplicationJSONMocks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mockUrl")
     public String mockUrl;
+
     public AllMocks200ApplicationJSONMocks withMockUrl(String mockUrl) {
         this.mockUrl = mockUrl;
         return this;
@@ -44,6 +48,7 @@ public class AllMocks200ApplicationJSONMocks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public AllMocks200ApplicationJSONMocks withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -52,9 +57,11 @@ public class AllMocks200ApplicationJSONMocks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public AllMocks200ApplicationJSONMocks withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public AllMocks200ApplicationJSONMocks(){}
 }

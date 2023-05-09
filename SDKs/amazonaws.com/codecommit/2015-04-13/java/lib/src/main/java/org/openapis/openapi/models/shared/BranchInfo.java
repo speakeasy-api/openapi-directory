@@ -15,6 +15,7 @@ public class BranchInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchName")
     public String branchName;
+
     public BranchInfo withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -23,9 +24,11 @@ public class BranchInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitId")
     public String commitId;
+
     public BranchInfo withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
     }
     
+    public BranchInfo(){}
 }

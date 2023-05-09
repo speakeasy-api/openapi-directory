@@ -18,6 +18,7 @@ public class VideoProcessingDetailsProcessingProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partsProcessed")
     public String partsProcessed;
+
     public VideoProcessingDetailsProcessingProgress withPartsProcessed(String partsProcessed) {
         this.partsProcessed = partsProcessed;
         return this;
@@ -29,6 +30,7 @@ public class VideoProcessingDetailsProcessingProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partsTotal")
     public String partsTotal;
+
     public VideoProcessingDetailsProcessingProgress withPartsTotal(String partsTotal) {
         this.partsTotal = partsTotal;
         return this;
@@ -40,9 +42,11 @@ public class VideoProcessingDetailsProcessingProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeLeftMs")
     public String timeLeftMs;
+
     public VideoProcessingDetailsProcessingProgress withTimeLeftMs(String timeLeftMs) {
         this.timeLeftMs = timeLeftMs;
         return this;
     }
     
+    public VideoProcessingDetailsProcessingProgress(){}
 }

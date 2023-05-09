@@ -12,6 +12,7 @@ public class GetNumbersRandomRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public GetNumbersRandomRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -22,6 +23,7 @@ public class GetNumbersRandomRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public Long min;
+
     public GetNumbersRandomRequest withMin(Long min) {
         this.min = min;
         return this;
@@ -32,9 +34,11 @@ public class GetNumbersRandomRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=total")
     public Long total;
+
     public GetNumbersRandomRequest withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetNumbersRandomRequest(){}
 }

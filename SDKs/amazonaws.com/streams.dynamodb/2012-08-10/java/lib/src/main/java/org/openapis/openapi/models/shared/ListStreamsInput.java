@@ -15,6 +15,7 @@ public class ListStreamsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartStreamArn")
     public String exclusiveStartStreamArn;
+
     public ListStreamsInput withExclusiveStartStreamArn(String exclusiveStartStreamArn) {
         this.exclusiveStartStreamArn = exclusiveStartStreamArn;
         return this;
@@ -23,6 +24,7 @@ public class ListStreamsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListStreamsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -31,9 +33,11 @@ public class ListStreamsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public ListStreamsInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public ListStreamsInput(){}
 }

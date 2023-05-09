@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EvaluateSessionResponse {
@@ -12,6 +13,7 @@ public class EvaluateSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public EvaluateSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class EvaluateSessionResponse {
      */
     
     public Object conflictException;
+
     public EvaluateSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class EvaluateSessionResponse {
     
     
     public String contentType;
+
     public EvaluateSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class EvaluateSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.EvaluateSessionResponse evaluateSessionResponse;
+
     public EvaluateSessionResponse withEvaluateSessionResponse(org.openapis.openapi.models.shared.EvaluateSessionResponse evaluateSessionResponse) {
         this.evaluateSessionResponse = evaluateSessionResponse;
         return this;
@@ -49,6 +54,7 @@ public class EvaluateSessionResponse {
      */
     
     public Object internalServerException;
+
     public EvaluateSessionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class EvaluateSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EvaluateSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class EvaluateSessionResponse {
     
     
     public Integer statusCode;
+
     public EvaluateSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class EvaluateSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EvaluateSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class EvaluateSessionResponse {
      */
     
     public Object throttlingException;
+
     public EvaluateSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class EvaluateSessionResponse {
      */
     
     public Object validationException;
+
     public EvaluateSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public EvaluateSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

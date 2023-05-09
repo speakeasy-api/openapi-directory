@@ -15,6 +15,7 @@ public class TranslateTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedSettings")
     public TranslationSettings appliedSettings;
+
     public TranslateTextResponse withAppliedSettings(TranslationSettings appliedSettings) {
         this.appliedSettings = appliedSettings;
         return this;
@@ -23,6 +24,7 @@ public class TranslateTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedTerminologies")
     public AppliedTerminology[] appliedTerminologies;
+
     public TranslateTextResponse withAppliedTerminologies(AppliedTerminology[] appliedTerminologies) {
         this.appliedTerminologies = appliedTerminologies;
         return this;
@@ -30,6 +32,7 @@ public class TranslateTextResponse {
     
     @JsonProperty("SourceLanguageCode")
     public String sourceLanguageCode;
+
     public TranslateTextResponse withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -37,6 +40,7 @@ public class TranslateTextResponse {
     
     @JsonProperty("TargetLanguageCode")
     public String targetLanguageCode;
+
     public TranslateTextResponse withTargetLanguageCode(String targetLanguageCode) {
         this.targetLanguageCode = targetLanguageCode;
         return this;
@@ -44,9 +48,15 @@ public class TranslateTextResponse {
     
     @JsonProperty("TranslatedText")
     public String translatedText;
+
     public TranslateTextResponse withTranslatedText(String translatedText) {
         this.translatedText = translatedText;
         return this;
     }
     
+    public TranslateTextResponse(@JsonProperty("SourceLanguageCode") String sourceLanguageCode, @JsonProperty("TargetLanguageCode") String targetLanguageCode, @JsonProperty("TranslatedText") String translatedText) {
+        this.sourceLanguageCode = sourceLanguageCode;
+        this.targetLanguageCode = targetLanguageCode;
+        this.translatedText = translatedText;
+  }
 }

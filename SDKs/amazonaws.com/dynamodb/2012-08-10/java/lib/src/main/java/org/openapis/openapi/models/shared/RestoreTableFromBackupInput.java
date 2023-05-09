@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RestoreTableFromBackupInput {
     @JsonProperty("BackupArn")
     public String backupArn;
+
     public RestoreTableFromBackupInput withBackupArn(String backupArn) {
         this.backupArn = backupArn;
         return this;
@@ -19,6 +20,7 @@ public class RestoreTableFromBackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingModeOverride")
     public BillingModeEnum billingModeOverride;
+
     public RestoreTableFromBackupInput withBillingModeOverride(BillingModeEnum billingModeOverride) {
         this.billingModeOverride = billingModeOverride;
         return this;
@@ -27,6 +29,7 @@ public class RestoreTableFromBackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexOverride")
     public GlobalSecondaryIndex[] globalSecondaryIndexOverride;
+
     public RestoreTableFromBackupInput withGlobalSecondaryIndexOverride(GlobalSecondaryIndex[] globalSecondaryIndexOverride) {
         this.globalSecondaryIndexOverride = globalSecondaryIndexOverride;
         return this;
@@ -35,6 +38,7 @@ public class RestoreTableFromBackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalSecondaryIndexOverride")
     public LocalSecondaryIndex[] localSecondaryIndexOverride;
+
     public RestoreTableFromBackupInput withLocalSecondaryIndexOverride(LocalSecondaryIndex[] localSecondaryIndexOverride) {
         this.localSecondaryIndexOverride = localSecondaryIndexOverride;
         return this;
@@ -43,6 +47,7 @@ public class RestoreTableFromBackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputOverride")
     public ProvisionedThroughput provisionedThroughputOverride;
+
     public RestoreTableFromBackupInput withProvisionedThroughputOverride(ProvisionedThroughput provisionedThroughputOverride) {
         this.provisionedThroughputOverride = provisionedThroughputOverride;
         return this;
@@ -51,6 +56,7 @@ public class RestoreTableFromBackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSESpecificationOverride")
     public SSESpecification sseSpecificationOverride;
+
     public RestoreTableFromBackupInput withSSESpecificationOverride(SSESpecification sseSpecificationOverride) {
         this.sseSpecificationOverride = sseSpecificationOverride;
         return this;
@@ -58,9 +64,14 @@ public class RestoreTableFromBackupInput {
     
     @JsonProperty("TargetTableName")
     public String targetTableName;
+
     public RestoreTableFromBackupInput withTargetTableName(String targetTableName) {
         this.targetTableName = targetTableName;
         return this;
     }
     
+    public RestoreTableFromBackupInput(@JsonProperty("BackupArn") String backupArn, @JsonProperty("TargetTableName") String targetTableName) {
+        this.backupArn = backupArn;
+        this.targetTableName = targetTableName;
+  }
 }

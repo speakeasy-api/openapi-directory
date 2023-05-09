@@ -18,6 +18,7 @@ public class SubmitEvidenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispute")
     public Dispute dispute;
+
     public SubmitEvidenceResponse withDispute(Dispute dispute) {
         this.dispute = dispute;
         return this;
@@ -29,9 +30,11 @@ public class SubmitEvidenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SubmitEvidenceResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public SubmitEvidenceResponse(){}
 }

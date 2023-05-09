@@ -15,6 +15,7 @@ public class ReplicationPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocatedStorage")
     public Long allocatedStorage;
+
     public ReplicationPendingModifiedValues withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -23,6 +24,7 @@ public class ReplicationPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public ReplicationPendingModifiedValues withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -31,6 +33,7 @@ public class ReplicationPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiAZ")
     public Boolean multiAZ;
+
     public ReplicationPendingModifiedValues withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -39,6 +42,7 @@ public class ReplicationPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkType")
     public String networkType;
+
     public ReplicationPendingModifiedValues withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -47,9 +51,11 @@ public class ReplicationPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstanceClass")
     public String replicationInstanceClass;
+
     public ReplicationPendingModifiedValues withReplicationInstanceClass(String replicationInstanceClass) {
         this.replicationInstanceClass = replicationInstanceClass;
         return this;
     }
     
+    public ReplicationPendingModifiedValues(){}
 }

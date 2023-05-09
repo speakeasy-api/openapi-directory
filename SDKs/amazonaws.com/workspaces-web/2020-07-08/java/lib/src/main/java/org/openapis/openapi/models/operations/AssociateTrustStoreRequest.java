@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateTrustStoreRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AssociateTrustStoreRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class AssociateTrustStoreRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AssociateTrustStoreRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class AssociateTrustStoreRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AssociateTrustStoreRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class AssociateTrustStoreRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AssociateTrustStoreRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class AssociateTrustStoreRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AssociateTrustStoreRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class AssociateTrustStoreRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AssociateTrustStoreRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class AssociateTrustStoreRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AssociateTrustStoreRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class AssociateTrustStoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portalArn")
     public String portalArn;
+
     public AssociateTrustStoreRequest withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
@@ -71,9 +80,14 @@ public class AssociateTrustStoreRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trustStoreArn")
     public String trustStoreArn;
+
     public AssociateTrustStoreRequest withTrustStoreArn(String trustStoreArn) {
         this.trustStoreArn = trustStoreArn;
         return this;
     }
     
+    public AssociateTrustStoreRequest(@JsonProperty("portalArn") String portalArn, @JsonProperty("trustStoreArn") String trustStoreArn) {
+        this.portalArn = portalArn;
+        this.trustStoreArn = trustStoreArn;
+  }
 }

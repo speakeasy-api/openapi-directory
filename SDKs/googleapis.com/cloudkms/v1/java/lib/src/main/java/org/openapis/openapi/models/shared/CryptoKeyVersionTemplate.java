@@ -18,6 +18,7 @@ public class CryptoKeyVersionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public CryptoKeyVersionTemplateAlgorithmEnum algorithm;
+
     public CryptoKeyVersionTemplate withAlgorithm(CryptoKeyVersionTemplateAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,9 +30,11 @@ public class CryptoKeyVersionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectionLevel")
     public CryptoKeyVersionTemplateProtectionLevelEnum protectionLevel;
+
     public CryptoKeyVersionTemplate withProtectionLevel(CryptoKeyVersionTemplateProtectionLevelEnum protectionLevel) {
         this.protectionLevel = protectionLevel;
         return this;
     }
     
+    public CryptoKeyVersionTemplate(){}
 }

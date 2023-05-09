@@ -15,6 +15,7 @@ public class ProjectsUpdateCardRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public ProjectsUpdateCardRequestBody withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -26,9 +27,11 @@ public class ProjectsUpdateCardRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public ProjectsUpdateCardRequestBody withNote(String note) {
         this.note = note;
         return this;
     }
     
+    public ProjectsUpdateCardRequestBody(){}
 }

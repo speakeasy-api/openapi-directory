@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreVolumeFromSnapshotRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public RestoreVolumeFromSnapshotRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -23,6 +24,7 @@ public class RestoreVolumeFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public RestoreOpenZFSVolumeOptionEnum[] options;
+
     public RestoreVolumeFromSnapshotRequest withOptions(RestoreOpenZFSVolumeOptionEnum[] options) {
         this.options = options;
         return this;
@@ -30,6 +32,7 @@ public class RestoreVolumeFromSnapshotRequest {
     
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public RestoreVolumeFromSnapshotRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -37,9 +40,14 @@ public class RestoreVolumeFromSnapshotRequest {
     
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public RestoreVolumeFromSnapshotRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public RestoreVolumeFromSnapshotRequest(@JsonProperty("SnapshotId") String snapshotId, @JsonProperty("VolumeId") String volumeId) {
+        this.snapshotId = snapshotId;
+        this.volumeId = volumeId;
+  }
 }

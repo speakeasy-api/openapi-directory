@@ -15,6 +15,7 @@ public class CancelMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskStatusTypeEnum status;
+
     public CancelMLTaskRunResponse withStatus(TaskStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -23,6 +24,7 @@ public class CancelMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRunId")
     public String taskRunId;
+
     public CancelMLTaskRunResponse withTaskRunId(String taskRunId) {
         this.taskRunId = taskRunId;
         return this;
@@ -31,9 +33,11 @@ public class CancelMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformId")
     public String transformId;
+
     public CancelMLTaskRunResponse withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public CancelMLTaskRunResponse(){}
 }

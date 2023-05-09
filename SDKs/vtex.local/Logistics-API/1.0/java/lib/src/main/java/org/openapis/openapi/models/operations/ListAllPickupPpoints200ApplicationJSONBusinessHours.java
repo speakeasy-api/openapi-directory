@@ -15,6 +15,7 @@ public class ListAllPickupPpoints200ApplicationJSONBusinessHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closingTime")
     public String closingTime;
+
     public ListAllPickupPpoints200ApplicationJSONBusinessHours withClosingTime(String closingTime) {
         this.closingTime = closingTime;
         return this;
@@ -26,6 +27,7 @@ public class ListAllPickupPpoints200ApplicationJSONBusinessHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public Long dayOfWeek;
+
     public ListAllPickupPpoints200ApplicationJSONBusinessHours withDayOfWeek(Long dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -37,9 +39,11 @@ public class ListAllPickupPpoints200ApplicationJSONBusinessHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openingTime")
     public String openingTime;
+
     public ListAllPickupPpoints200ApplicationJSONBusinessHours withOpeningTime(String openingTime) {
         this.openingTime = openingTime;
         return this;
     }
     
+    public ListAllPickupPpoints200ApplicationJSONBusinessHours(){}
 }

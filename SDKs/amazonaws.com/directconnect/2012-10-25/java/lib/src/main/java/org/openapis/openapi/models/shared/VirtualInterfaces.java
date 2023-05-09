@@ -15,9 +15,11 @@ public class VirtualInterfaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaces")
     public VirtualInterface[] virtualInterfaces;
+
     public VirtualInterfaces withVirtualInterfaces(VirtualInterface[] virtualInterfaces) {
         this.virtualInterfaces = virtualInterfaces;
         return this;
     }
     
+    public VirtualInterfaces(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyReplicationSubnetGroupResponse {
@@ -12,6 +13,7 @@ public class ModifyReplicationSubnetGroupResponse {
      */
     
     public Object accessDeniedFault;
+
     public ModifyReplicationSubnetGroupResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class ModifyReplicationSubnetGroupResponse {
     
     
     public String contentType;
+
     public ModifyReplicationSubnetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyReplicationSubnetGroupResponse {
      */
     
     public Object invalidSubnet;
+
     public ModifyReplicationSubnetGroupResponse withInvalidSubnet(Object invalidSubnet) {
         this.invalidSubnet = invalidSubnet;
         return this;
@@ -39,6 +43,7 @@ public class ModifyReplicationSubnetGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyReplicationSubnetGroupResponse modifyReplicationSubnetGroupResponse;
+
     public ModifyReplicationSubnetGroupResponse withModifyReplicationSubnetGroupResponse(org.openapis.openapi.models.shared.ModifyReplicationSubnetGroupResponse modifyReplicationSubnetGroupResponse) {
         this.modifyReplicationSubnetGroupResponse = modifyReplicationSubnetGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class ModifyReplicationSubnetGroupResponse {
      */
     
     public Object replicationSubnetGroupDoesNotCoverEnoughAZs;
+
     public ModifyReplicationSubnetGroupResponse withReplicationSubnetGroupDoesNotCoverEnoughAZs(Object replicationSubnetGroupDoesNotCoverEnoughAZs) {
         this.replicationSubnetGroupDoesNotCoverEnoughAZs = replicationSubnetGroupDoesNotCoverEnoughAZs;
         return this;
@@ -59,6 +65,7 @@ public class ModifyReplicationSubnetGroupResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public ModifyReplicationSubnetGroupResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
@@ -66,6 +73,7 @@ public class ModifyReplicationSubnetGroupResponse {
     
     
     public Integer statusCode;
+
     public ModifyReplicationSubnetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ModifyReplicationSubnetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyReplicationSubnetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ModifyReplicationSubnetGroupResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public ModifyReplicationSubnetGroupResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -93,9 +103,14 @@ public class ModifyReplicationSubnetGroupResponse {
      */
     
     public Object subnetAlreadyInUse;
+
     public ModifyReplicationSubnetGroupResponse withSubnetAlreadyInUse(Object subnetAlreadyInUse) {
         this.subnetAlreadyInUse = subnetAlreadyInUse;
         return this;
     }
     
+    public ModifyReplicationSubnetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

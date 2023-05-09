@@ -18,6 +18,7 @@ public class TflApiPresentationEntitiesStreet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closure")
     public String closure;
+
     public TflApiPresentationEntitiesStreet withClosure(String closure) {
         this.closure = closure;
         return this;
@@ -38,6 +39,7 @@ public class TflApiPresentationEntitiesStreet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directions")
     public String directions;
+
     public TflApiPresentationEntitiesStreet withDirections(String directions) {
         this.directions = directions;
         return this;
@@ -49,6 +51,7 @@ public class TflApiPresentationEntitiesStreet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesStreet withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +63,7 @@ public class TflApiPresentationEntitiesStreet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public TflApiPresentationEntitiesStreetSegment[] segments;
+
     public TflApiPresentationEntitiesStreet withSegments(TflApiPresentationEntitiesStreetSegment[] segments) {
         this.segments = segments;
         return this;
@@ -71,6 +75,7 @@ public class TflApiPresentationEntitiesStreet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSystemId")
     public Long sourceSystemId;
+
     public TflApiPresentationEntitiesStreet withSourceSystemId(Long sourceSystemId) {
         this.sourceSystemId = sourceSystemId;
         return this;
@@ -82,9 +87,11 @@ public class TflApiPresentationEntitiesStreet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSystemKey")
     public String sourceSystemKey;
+
     public TflApiPresentationEntitiesStreet withSourceSystemKey(String sourceSystemKey) {
         this.sourceSystemKey = sourceSystemKey;
         return this;
     }
     
+    public TflApiPresentationEntitiesStreet(){}
 }

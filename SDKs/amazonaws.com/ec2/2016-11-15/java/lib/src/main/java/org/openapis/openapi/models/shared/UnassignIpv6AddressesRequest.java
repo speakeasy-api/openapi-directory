@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UnassignIpv6AddressesRequest {
     
     public String[] ipv6Addresses;
+
     public UnassignIpv6AddressesRequest withIpv6Addresses(String[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -16,6 +17,7 @@ public class UnassignIpv6AddressesRequest {
     
     
     public String[] ipv6Prefixes;
+
     public UnassignIpv6AddressesRequest withIpv6Prefixes(String[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -23,9 +25,13 @@ public class UnassignIpv6AddressesRequest {
     
     
     public String networkInterfaceId;
+
     public UnassignIpv6AddressesRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
     
+    public UnassignIpv6AddressesRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+  }
 }

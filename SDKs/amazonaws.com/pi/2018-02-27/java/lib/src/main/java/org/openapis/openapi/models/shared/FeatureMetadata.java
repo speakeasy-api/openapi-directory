@@ -15,9 +15,11 @@ public class FeatureMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FeatureStatusEnum status;
+
     public FeatureMetadata withStatus(FeatureStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public FeatureMetadata(){}
 }

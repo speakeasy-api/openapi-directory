@@ -17,6 +17,7 @@ public class DescribeDimensionKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalMetrics")
     public String[] additionalMetrics;
+
     public DescribeDimensionKeysRequest withAdditionalMetrics(String[] additionalMetrics) {
         this.additionalMetrics = additionalMetrics;
         return this;
@@ -26,6 +27,7 @@ public class DescribeDimensionKeysRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DescribeDimensionKeysRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -34,6 +36,7 @@ public class DescribeDimensionKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public java.util.Map<String, String> filter;
+
     public DescribeDimensionKeysRequest withFilter(java.util.Map<String, String> filter) {
         this.filter = filter;
         return this;
@@ -41,6 +44,7 @@ public class DescribeDimensionKeysRequest {
     
     @JsonProperty("GroupBy")
     public DimensionGroup groupBy;
+
     public DescribeDimensionKeysRequest withGroupBy(DimensionGroup groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -48,6 +52,7 @@ public class DescribeDimensionKeysRequest {
     
     @JsonProperty("Identifier")
     public String identifier;
+
     public DescribeDimensionKeysRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -56,6 +61,7 @@ public class DescribeDimensionKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeDimensionKeysRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -63,6 +69,7 @@ public class DescribeDimensionKeysRequest {
     
     @JsonProperty("Metric")
     public String metric;
+
     public DescribeDimensionKeysRequest withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -71,6 +78,7 @@ public class DescribeDimensionKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDimensionKeysRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -79,6 +87,7 @@ public class DescribeDimensionKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionBy")
     public DimensionGroup partitionBy;
+
     public DescribeDimensionKeysRequest withPartitionBy(DimensionGroup partitionBy) {
         this.partitionBy = partitionBy;
         return this;
@@ -87,6 +96,7 @@ public class DescribeDimensionKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeriodInSeconds")
     public Long periodInSeconds;
+
     public DescribeDimensionKeysRequest withPeriodInSeconds(Long periodInSeconds) {
         this.periodInSeconds = periodInSeconds;
         return this;
@@ -94,6 +104,7 @@ public class DescribeDimensionKeysRequest {
     
     @JsonProperty("ServiceType")
     public ServiceTypeEnum serviceType;
+
     public DescribeDimensionKeysRequest withServiceType(ServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -103,9 +114,18 @@ public class DescribeDimensionKeysRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DescribeDimensionKeysRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeDimensionKeysRequest(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("GroupBy") DimensionGroup groupBy, @JsonProperty("Identifier") String identifier, @JsonProperty("Metric") String metric, @JsonProperty("ServiceType") ServiceTypeEnum serviceType, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.groupBy = groupBy;
+        this.identifier = identifier;
+        this.metric = metric;
+        this.serviceType = serviceType;
+        this.startTime = startTime;
+  }
 }

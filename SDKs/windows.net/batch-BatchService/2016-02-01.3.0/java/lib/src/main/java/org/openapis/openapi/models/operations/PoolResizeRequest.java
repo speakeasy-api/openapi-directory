@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolResizeRequest {
@@ -12,6 +13,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public PoolResizeRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public PoolResizeRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public PoolResizeRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -42,6 +46,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public PoolResizeRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PoolResizeParameter poolResizeParameter;
+
     public PoolResizeRequest withPoolResizeParameter(org.openapis.openapi.models.shared.PoolResizeParameter poolResizeParameter) {
         this.poolResizeParameter = poolResizeParameter;
         return this;
@@ -62,6 +68,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolResizeRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -72,6 +79,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolResizeRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -82,6 +90,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolResizeRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -92,6 +101,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public PoolResizeRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -102,6 +112,7 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolResizeRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -112,9 +123,15 @@ public class PoolResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolResizeRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolResizeRequest(@JsonProperty("PoolResizeParameter") org.openapis.openapi.models.shared.PoolResizeParameter poolResizeParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("poolId") String poolId) {
+        this.poolResizeParameter = poolResizeParameter;
+        this.apiVersion = apiVersion;
+        this.poolId = poolId;
+  }
 }

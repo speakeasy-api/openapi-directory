@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceEventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public String eventName;
+
     public GoogleAnalyticsAdminV1alphaAudienceEventFilter withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceEventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventParameterFilterExpression")
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression eventParameterFilterExpression;
+
     public GoogleAnalyticsAdminV1alphaAudienceEventFilter withEventParameterFilterExpression(GoogleAnalyticsAdminV1alphaAudienceFilterExpression eventParameterFilterExpression) {
         this.eventParameterFilterExpression = eventParameterFilterExpression;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceEventFilter(){}
 }

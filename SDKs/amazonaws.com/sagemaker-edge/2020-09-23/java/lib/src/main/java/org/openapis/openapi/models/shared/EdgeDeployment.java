@@ -15,6 +15,7 @@ public class EdgeDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definitions")
     public Definition[] definitions;
+
     public EdgeDeployment withDefinitions(Definition[] definitions) {
         this.definitions = definitions;
         return this;
@@ -23,6 +24,7 @@ public class EdgeDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentName")
     public String deploymentName;
+
     public EdgeDeployment withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -31,6 +33,7 @@ public class EdgeDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureHandlingPolicy")
     public FailureHandlingPolicyEnum failureHandlingPolicy;
+
     public EdgeDeployment withFailureHandlingPolicy(FailureHandlingPolicyEnum failureHandlingPolicy) {
         this.failureHandlingPolicy = failureHandlingPolicy;
         return this;
@@ -39,9 +42,11 @@ public class EdgeDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public DeploymentTypeEnum type;
+
     public EdgeDeployment withType(DeploymentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EdgeDeployment(){}
 }

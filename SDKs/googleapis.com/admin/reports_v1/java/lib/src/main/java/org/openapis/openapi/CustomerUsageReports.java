@@ -58,11 +58,9 @@ public class CustomerUsageReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetResponse res = new org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetResponse() {{
+        org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetResponse res = new org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetResponse(contentType, httpRes.statusCode()) {{
             usageReports = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

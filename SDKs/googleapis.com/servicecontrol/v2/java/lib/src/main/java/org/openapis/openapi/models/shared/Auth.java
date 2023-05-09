@@ -18,6 +18,7 @@ public class Auth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevels")
     public String[] accessLevels;
+
     public Auth withAccessLevels(String[] accessLevels) {
         this.accessLevels = accessLevels;
         return this;
@@ -29,6 +30,7 @@ public class Auth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audiences")
     public String[] audiences;
+
     public Auth withAudiences(String[] audiences) {
         this.audiences = audiences;
         return this;
@@ -40,6 +42,7 @@ public class Auth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("claims")
     public java.util.Map<String, Object> claims;
+
     public Auth withClaims(java.util.Map<String, Object> claims) {
         this.claims = claims;
         return this;
@@ -51,6 +54,7 @@ public class Auth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presenter")
     public String presenter;
+
     public Auth withPresenter(String presenter) {
         this.presenter = presenter;
         return this;
@@ -62,9 +66,11 @@ public class Auth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public String principal;
+
     public Auth withPrincipal(String principal) {
         this.principal = principal;
         return this;
     }
     
+    public Auth(){}
 }

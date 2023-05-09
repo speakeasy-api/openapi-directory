@@ -15,6 +15,7 @@ public class UnreserveItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public UnreserveItemsRequest withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -26,6 +27,7 @@ public class UnreserveItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public UnreserveItemsRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -37,9 +39,11 @@ public class UnreserveItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queue")
     public String queue;
+
     public UnreserveItemsRequest withQueue(String queue) {
         this.queue = queue;
         return this;
     }
     
+    public UnreserveItemsRequest(){}
 }

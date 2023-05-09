@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LabelingJobS3DataSource {
     @JsonProperty("ManifestS3Uri")
     public String manifestS3Uri;
+
     public LabelingJobS3DataSource withManifestS3Uri(String manifestS3Uri) {
         this.manifestS3Uri = manifestS3Uri;
         return this;
     }
     
+    public LabelingJobS3DataSource(@JsonProperty("ManifestS3Uri") String manifestS3Uri) {
+        this.manifestS3Uri = manifestS3Uri;
+  }
 }

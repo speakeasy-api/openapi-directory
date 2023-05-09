@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchOrderOperationResponse {
     @JsonProperty("operations")
     public OrderOperationResponse[] operations;
+
     public BatchOrderOperationResponse withOperations(OrderOperationResponse[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public BatchOrderOperationResponse(@JsonProperty("operations") OrderOperationResponse[] operations) {
+        this.operations = operations;
+  }
 }

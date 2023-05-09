@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClassifyImageUrlWithNoStoreRawResponse {
     
     public byte[] body;
+
     public ClassifyImageUrlWithNoStoreRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ClassifyImageUrlWithNoStoreRawResponse {
     
     
     public String contentType;
+
     public ClassifyImageUrlWithNoStoreRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClassifyImageUrlWithNoStoreRawResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public ClassifyImageUrlWithNoStoreRawResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class ClassifyImageUrlWithNoStoreRawResponse {
      */
     
     public org.openapis.openapi.models.shared.ImagePrediction imagePrediction;
+
     public ClassifyImageUrlWithNoStoreRawResponse withImagePrediction(org.openapis.openapi.models.shared.ImagePrediction imagePrediction) {
         this.imagePrediction = imagePrediction;
         return this;
@@ -43,6 +48,7 @@ public class ClassifyImageUrlWithNoStoreRawResponse {
     
     
     public Integer statusCode;
+
     public ClassifyImageUrlWithNoStoreRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class ClassifyImageUrlWithNoStoreRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClassifyImageUrlWithNoStoreRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClassifyImageUrlWithNoStoreRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

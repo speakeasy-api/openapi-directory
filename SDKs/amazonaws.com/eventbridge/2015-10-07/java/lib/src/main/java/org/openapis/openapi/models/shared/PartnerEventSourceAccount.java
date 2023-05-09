@@ -20,6 +20,7 @@ public class PartnerEventSourceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Account")
     public String account;
+
     public PartnerEventSourceAccount withAccount(String account) {
         this.account = account;
         return this;
@@ -30,6 +31,7 @@ public class PartnerEventSourceAccount {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public PartnerEventSourceAccount withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class PartnerEventSourceAccount {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationTime")
     public OffsetDateTime expirationTime;
+
     public PartnerEventSourceAccount withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -48,9 +51,11 @@ public class PartnerEventSourceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EventSourceStateEnum state;
+
     public PartnerEventSourceAccount withState(EventSourceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public PartnerEventSourceAccount(){}
 }

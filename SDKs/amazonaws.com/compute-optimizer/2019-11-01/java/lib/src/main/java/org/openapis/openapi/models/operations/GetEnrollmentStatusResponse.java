@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEnrollmentStatusResponse {
@@ -12,6 +13,7 @@ public class GetEnrollmentStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEnrollmentStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEnrollmentStatusResponse {
     
     
     public String contentType;
+
     public GetEnrollmentStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEnrollmentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEnrollmentStatusResponse getEnrollmentStatusResponse;
+
     public GetEnrollmentStatusResponse withGetEnrollmentStatusResponse(org.openapis.openapi.models.shared.GetEnrollmentStatusResponse getEnrollmentStatusResponse) {
         this.getEnrollmentStatusResponse = getEnrollmentStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEnrollmentStatusResponse {
      */
     
     public Object internalServerException;
+
     public GetEnrollmentStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEnrollmentStatusResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetEnrollmentStatusResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetEnrollmentStatusResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public GetEnrollmentStatusResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -66,6 +73,7 @@ public class GetEnrollmentStatusResponse {
     
     
     public Integer statusCode;
+
     public GetEnrollmentStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetEnrollmentStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEnrollmentStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetEnrollmentStatusResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetEnrollmentStatusResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class GetEnrollmentStatusResponse {
      */
     
     public Object throttlingException;
+
     public GetEnrollmentStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetEnrollmentStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

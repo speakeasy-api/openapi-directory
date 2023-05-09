@@ -15,6 +15,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPass
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryMethod")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum deliveryMethod;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPassword withDeliveryMethod(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum deliveryMethod) {
         this.deliveryMethod = deliveryMethod;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPass
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSettings")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordEmailSettings emailSettings;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPassword withEmailSettings(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordEmailSettings emailSettings) {
         this.emailSettings = emailSettings;
         return this;
@@ -31,9 +33,11 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPass
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsSettings")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordSmsSettings smsSettings;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPassword withSmsSettings(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordSmsSettings smsSettings) {
         this.smsSettings = smsSettings;
         return this;
     }
     
+    public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPassword(){}
 }

@@ -12,6 +12,7 @@ public class DescribeScalingPlansRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSources")
     public ApplicationSource[] applicationSources;
+
     public DescribeScalingPlansRequest withApplicationSources(ApplicationSource[] applicationSources) {
         this.applicationSources = applicationSources;
         return this;
@@ -20,6 +21,7 @@ public class DescribeScalingPlansRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeScalingPlansRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeScalingPlansRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScalingPlansRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeScalingPlansRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingPlanNames")
     public String[] scalingPlanNames;
+
     public DescribeScalingPlansRequest withScalingPlanNames(String[] scalingPlanNames) {
         this.scalingPlanNames = scalingPlanNames;
         return this;
@@ -44,9 +48,11 @@ public class DescribeScalingPlansRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingPlanVersion")
     public Long scalingPlanVersion;
+
     public DescribeScalingPlansRequest withScalingPlanVersion(Long scalingPlanVersion) {
         this.scalingPlanVersion = scalingPlanVersion;
         return this;
     }
     
+    public DescribeScalingPlansRequest(){}
 }

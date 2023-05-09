@@ -15,6 +15,7 @@ public class TeamsUpdateInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamsUpdateInOrgRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class TeamsUpdateInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamsUpdateInOrgRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class TeamsUpdateInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_team_id")
     public Long parentTeamId;
+
     public TeamsUpdateInOrgRequestBody withParentTeamId(Long parentTeamId) {
         this.parentTeamId = parentTeamId;
         return this;
@@ -48,6 +51,7 @@ public class TeamsUpdateInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public TeamsUpdateInOrgRequestBodyPermissionEnum permission;
+
     public TeamsUpdateInOrgRequestBody withPermission(TeamsUpdateInOrgRequestBodyPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -64,9 +68,11 @@ public class TeamsUpdateInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public TeamsUpdateInOrgRequestBodyPrivacyEnum privacy;
+
     public TeamsUpdateInOrgRequestBody withPrivacy(TeamsUpdateInOrgRequestBodyPrivacyEnum privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public TeamsUpdateInOrgRequestBody(){}
 }

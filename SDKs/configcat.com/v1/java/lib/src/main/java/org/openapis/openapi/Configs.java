@@ -65,12 +65,10 @@ public class Configs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateConfigResponse res = new org.openapis.openapi.models.operations.CreateConfigResponse() {{
+        org.openapis.openapi.models.operations.CreateConfigResponse res = new org.openapis.openapi.models.operations.CreateConfigResponse(contentType, httpRes.statusCode()) {{
             configModelHaljson = null;
             configModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -113,10 +111,8 @@ public class Configs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConfigResponse res = new org.openapis.openapi.models.operations.DeleteConfigResponse() {{
+        org.openapis.openapi.models.operations.DeleteConfigResponse res = new org.openapis.openapi.models.operations.DeleteConfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -148,12 +144,10 @@ public class Configs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigResponse res = new org.openapis.openapi.models.operations.GetConfigResponse() {{
+        org.openapis.openapi.models.operations.GetConfigResponse res = new org.openapis.openapi.models.operations.GetConfigResponse(contentType, httpRes.statusCode()) {{
             configModelHaljson = null;
             configModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,12 +191,10 @@ public class Configs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigsResponse res = new org.openapis.openapi.models.operations.GetConfigsResponse() {{
+        org.openapis.openapi.models.operations.GetConfigsResponse res = new org.openapis.openapi.models.operations.GetConfigsResponse(contentType, httpRes.statusCode()) {{
             configModelHaljsons = null;
             configModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,12 +242,10 @@ public class Configs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateConfigResponse res = new org.openapis.openapi.models.operations.UpdateConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateConfigResponse res = new org.openapis.openapi.models.operations.UpdateConfigResponse(contentType, httpRes.statusCode()) {{
             configModelHaljson = null;
             configModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

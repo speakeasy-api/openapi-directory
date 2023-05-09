@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServiceInstanceResponse {
@@ -12,6 +13,7 @@ public class GetServiceInstanceResponse {
      */
     
     public Object accessDeniedException;
+
     public GetServiceInstanceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetServiceInstanceResponse {
     
     
     public String contentType;
+
     public GetServiceInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetServiceInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServiceInstanceOutput getServiceInstanceOutput;
+
     public GetServiceInstanceResponse withGetServiceInstanceOutput(org.openapis.openapi.models.shared.GetServiceInstanceOutput getServiceInstanceOutput) {
         this.getServiceInstanceOutput = getServiceInstanceOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetServiceInstanceResponse {
      */
     
     public Object internalServerException;
+
     public GetServiceInstanceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetServiceInstanceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetServiceInstanceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetServiceInstanceResponse {
     
     
     public Integer statusCode;
+
     public GetServiceInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetServiceInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServiceInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetServiceInstanceResponse {
      */
     
     public Object throttlingException;
+
     public GetServiceInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetServiceInstanceResponse {
      */
     
     public Object validationException;
+
     public GetServiceInstanceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetServiceInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

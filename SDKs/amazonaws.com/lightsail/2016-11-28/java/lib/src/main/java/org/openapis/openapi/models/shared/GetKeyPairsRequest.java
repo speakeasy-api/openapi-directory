@@ -12,6 +12,7 @@ public class GetKeyPairsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeDefaultKeyPair")
     public Boolean includeDefaultKeyPair;
+
     public GetKeyPairsRequest withIncludeDefaultKeyPair(Boolean includeDefaultKeyPair) {
         this.includeDefaultKeyPair = includeDefaultKeyPair;
         return this;
@@ -20,9 +21,11 @@ public class GetKeyPairsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetKeyPairsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetKeyPairsRequest(){}
 }

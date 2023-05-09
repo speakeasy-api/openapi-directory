@@ -12,6 +12,7 @@ public class FactIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FactIn withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class FactIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FactIn withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FactIn(){}
 }

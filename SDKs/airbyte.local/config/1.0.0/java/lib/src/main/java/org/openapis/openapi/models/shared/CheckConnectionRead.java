@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CheckConnectionRead {
     @JsonProperty("jobInfo")
     public SynchronousJobRead jobInfo;
+
     public CheckConnectionRead withJobInfo(SynchronousJobRead jobInfo) {
         this.jobInfo = jobInfo;
         return this;
@@ -22,6 +23,7 @@ public class CheckConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CheckConnectionRead withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +31,14 @@ public class CheckConnectionRead {
     
     @JsonProperty("status")
     public CheckConnectionReadStatusEnum status;
+
     public CheckConnectionRead withStatus(CheckConnectionReadStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CheckConnectionRead(@JsonProperty("jobInfo") SynchronousJobRead jobInfo, @JsonProperty("status") CheckConnectionReadStatusEnum status) {
+        this.jobInfo = jobInfo;
+        this.status = status;
+  }
 }

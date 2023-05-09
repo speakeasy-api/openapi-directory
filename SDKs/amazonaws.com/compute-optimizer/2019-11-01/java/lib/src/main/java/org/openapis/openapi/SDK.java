@@ -167,6 +167,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -204,7 +209,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRecommendationPreferencesResponse res = new org.openapis.openapi.models.operations.DeleteRecommendationPreferencesResponse() {{
+        org.openapis.openapi.models.operations.DeleteRecommendationPreferencesResponse res = new org.openapis.openapi.models.operations.DeleteRecommendationPreferencesResponse(contentType, httpRes.statusCode()) {{
             deleteRecommendationPreferencesResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -215,8 +220,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -326,7 +329,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRecommendationExportJobsResponse res = new org.openapis.openapi.models.operations.DescribeRecommendationExportJobsResponse() {{
+        org.openapis.openapi.models.operations.DescribeRecommendationExportJobsResponse res = new org.openapis.openapi.models.operations.DescribeRecommendationExportJobsResponse(contentType, httpRes.statusCode()) {{
             describeRecommendationExportJobsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -337,8 +340,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,7 +443,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAutoScalingGroupRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportAutoScalingGroupRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.ExportAutoScalingGroupRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportAutoScalingGroupRecommendationsResponse(contentType, httpRes.statusCode()) {{
             exportAutoScalingGroupRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -453,8 +454,6 @@ public class SDK {
             throttlingException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -558,7 +557,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportEBSVolumeRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportEBSVolumeRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.ExportEBSVolumeRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportEBSVolumeRecommendationsResponse(contentType, httpRes.statusCode()) {{
             exportEBSVolumeRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -569,8 +568,6 @@ public class SDK {
             throttlingException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,7 +671,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportEc2InstanceRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportEc2InstanceRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.ExportEc2InstanceRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportEc2InstanceRecommendationsResponse(contentType, httpRes.statusCode()) {{
             exportEc2InstanceRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -685,8 +682,6 @@ public class SDK {
             throttlingException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -790,7 +785,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportECSServiceRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportECSServiceRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.ExportECSServiceRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportECSServiceRecommendationsResponse(contentType, httpRes.statusCode()) {{
             exportECSServiceRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -801,8 +796,6 @@ public class SDK {
             throttlingException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -906,7 +899,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportLambdaFunctionRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportLambdaFunctionRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.ExportLambdaFunctionRecommendationsResponse res = new org.openapis.openapi.models.operations.ExportLambdaFunctionRecommendationsResponse(contentType, httpRes.statusCode()) {{
             exportLambdaFunctionRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -917,8 +910,6 @@ public class SDK {
             throttlingException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1022,7 +1013,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutoScalingGroupRecommendationsResponse res = new org.openapis.openapi.models.operations.GetAutoScalingGroupRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.GetAutoScalingGroupRecommendationsResponse res = new org.openapis.openapi.models.operations.GetAutoScalingGroupRecommendationsResponse(contentType, httpRes.statusCode()) {{
             getAutoScalingGroupRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -1033,8 +1024,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1138,7 +1127,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEBSVolumeRecommendationsResponse res = new org.openapis.openapi.models.operations.GetEBSVolumeRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.GetEBSVolumeRecommendationsResponse res = new org.openapis.openapi.models.operations.GetEBSVolumeRecommendationsResponse(contentType, httpRes.statusCode()) {{
             getEBSVolumeRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -1149,8 +1138,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1254,7 +1241,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEc2InstanceRecommendationsResponse res = new org.openapis.openapi.models.operations.GetEc2InstanceRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.GetEc2InstanceRecommendationsResponse res = new org.openapis.openapi.models.operations.GetEc2InstanceRecommendationsResponse(contentType, httpRes.statusCode()) {{
             getEc2InstanceRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -1265,8 +1252,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1370,7 +1355,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEc2RecommendationProjectedMetricsResponse res = new org.openapis.openapi.models.operations.GetEc2RecommendationProjectedMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetEc2RecommendationProjectedMetricsResponse res = new org.openapis.openapi.models.operations.GetEc2RecommendationProjectedMetricsResponse(contentType, httpRes.statusCode()) {{
             getEc2RecommendationProjectedMetricsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -1381,8 +1366,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1486,7 +1469,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetECSServiceRecommendationProjectedMetricsResponse res = new org.openapis.openapi.models.operations.GetECSServiceRecommendationProjectedMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetECSServiceRecommendationProjectedMetricsResponse res = new org.openapis.openapi.models.operations.GetECSServiceRecommendationProjectedMetricsResponse(contentType, httpRes.statusCode()) {{
             getECSServiceRecommendationProjectedMetricsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -1497,8 +1480,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1602,7 +1583,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetECSServiceRecommendationsResponse res = new org.openapis.openapi.models.operations.GetECSServiceRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.GetECSServiceRecommendationsResponse res = new org.openapis.openapi.models.operations.GetECSServiceRecommendationsResponse(contentType, httpRes.statusCode()) {{
             getECSServiceRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -1613,8 +1594,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1718,7 +1697,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEffectiveRecommendationPreferencesResponse res = new org.openapis.openapi.models.operations.GetEffectiveRecommendationPreferencesResponse() {{
+        org.openapis.openapi.models.operations.GetEffectiveRecommendationPreferencesResponse res = new org.openapis.openapi.models.operations.GetEffectiveRecommendationPreferencesResponse(contentType, httpRes.statusCode()) {{
             getEffectiveRecommendationPreferencesResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -1729,8 +1708,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1834,7 +1811,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnrollmentStatusResponse res = new org.openapis.openapi.models.operations.GetEnrollmentStatusResponse() {{
+        org.openapis.openapi.models.operations.GetEnrollmentStatusResponse res = new org.openapis.openapi.models.operations.GetEnrollmentStatusResponse(contentType, httpRes.statusCode()) {{
             getEnrollmentStatusResponse = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -1843,8 +1820,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1940,7 +1915,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnrollmentStatusesForOrganizationResponse res = new org.openapis.openapi.models.operations.GetEnrollmentStatusesForOrganizationResponse() {{
+        org.openapis.openapi.models.operations.GetEnrollmentStatusesForOrganizationResponse res = new org.openapis.openapi.models.operations.GetEnrollmentStatusesForOrganizationResponse(contentType, httpRes.statusCode()) {{
             getEnrollmentStatusesForOrganizationResponse = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -1949,8 +1924,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2046,7 +2019,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLambdaFunctionRecommendationsResponse res = new org.openapis.openapi.models.operations.GetLambdaFunctionRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.GetLambdaFunctionRecommendationsResponse res = new org.openapis.openapi.models.operations.GetLambdaFunctionRecommendationsResponse(contentType, httpRes.statusCode()) {{
             getLambdaFunctionRecommendationsResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -2057,8 +2030,6 @@ public class SDK {
             throttlingException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2168,7 +2139,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecommendationPreferencesResponse res = new org.openapis.openapi.models.operations.GetRecommendationPreferencesResponse() {{
+        org.openapis.openapi.models.operations.GetRecommendationPreferencesResponse res = new org.openapis.openapi.models.operations.GetRecommendationPreferencesResponse(contentType, httpRes.statusCode()) {{
             getRecommendationPreferencesResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -2179,8 +2150,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2290,7 +2259,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecommendationSummariesResponse res = new org.openapis.openapi.models.operations.GetRecommendationSummariesResponse() {{
+        org.openapis.openapi.models.operations.GetRecommendationSummariesResponse res = new org.openapis.openapi.models.operations.GetRecommendationSummariesResponse(contentType, httpRes.statusCode()) {{
             getRecommendationSummariesResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -2300,8 +2269,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2398,7 +2365,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRecommendationPreferencesResponse res = new org.openapis.openapi.models.operations.PutRecommendationPreferencesResponse() {{
+        org.openapis.openapi.models.operations.PutRecommendationPreferencesResponse res = new org.openapis.openapi.models.operations.PutRecommendationPreferencesResponse(contentType, httpRes.statusCode()) {{
             putRecommendationPreferencesResponse = null;
             optInRequiredException = null;
             internalServerException = null;
@@ -2409,8 +2376,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2514,7 +2479,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEnrollmentStatusResponse res = new org.openapis.openapi.models.operations.UpdateEnrollmentStatusResponse() {{
+        org.openapis.openapi.models.operations.UpdateEnrollmentStatusResponse res = new org.openapis.openapi.models.operations.UpdateEnrollmentStatusResponse(contentType, httpRes.statusCode()) {{
             updateEnrollmentStatusResponse = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -2523,8 +2488,6 @@ public class SDK {
             missingAuthenticationToken = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

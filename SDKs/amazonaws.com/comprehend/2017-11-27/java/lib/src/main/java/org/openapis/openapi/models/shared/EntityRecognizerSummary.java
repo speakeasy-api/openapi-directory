@@ -22,6 +22,7 @@ public class EntityRecognizerSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestVersionCreatedAt")
     public OffsetDateTime latestVersionCreatedAt;
+
     public EntityRecognizerSummary withLatestVersionCreatedAt(OffsetDateTime latestVersionCreatedAt) {
         this.latestVersionCreatedAt = latestVersionCreatedAt;
         return this;
@@ -30,6 +31,7 @@ public class EntityRecognizerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersionName")
     public String latestVersionName;
+
     public EntityRecognizerSummary withLatestVersionName(String latestVersionName) {
         this.latestVersionName = latestVersionName;
         return this;
@@ -38,6 +40,7 @@ public class EntityRecognizerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersionStatus")
     public ModelStatusEnum latestVersionStatus;
+
     public EntityRecognizerSummary withLatestVersionStatus(ModelStatusEnum latestVersionStatus) {
         this.latestVersionStatus = latestVersionStatus;
         return this;
@@ -46,6 +49,7 @@ public class EntityRecognizerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfVersions")
     public Long numberOfVersions;
+
     public EntityRecognizerSummary withNumberOfVersions(Long numberOfVersions) {
         this.numberOfVersions = numberOfVersions;
         return this;
@@ -54,9 +58,11 @@ public class EntityRecognizerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecognizerName")
     public String recognizerName;
+
     public EntityRecognizerSummary withRecognizerName(String recognizerName) {
         this.recognizerName = recognizerName;
         return this;
     }
     
+    public EntityRecognizerSummary(){}
 }

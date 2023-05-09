@@ -12,6 +12,7 @@ public class UpdateExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateExperimentRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateExperimentRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,9 +29,13 @@ public class UpdateExperimentRequest {
     
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public UpdateExperimentRequest withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
     }
     
+    public UpdateExperimentRequest(@JsonProperty("ExperimentName") String experimentName) {
+        this.experimentName = experimentName;
+  }
 }

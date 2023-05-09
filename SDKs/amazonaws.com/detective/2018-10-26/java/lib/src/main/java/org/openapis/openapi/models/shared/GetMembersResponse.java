@@ -15,6 +15,7 @@ public class GetMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberDetails")
     public MemberDetail[] memberDetails;
+
     public GetMembersResponse withMemberDetails(MemberDetail[] memberDetails) {
         this.memberDetails = memberDetails;
         return this;
@@ -23,9 +24,11 @@ public class GetMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedAccounts")
     public UnprocessedAccount[] unprocessedAccounts;
+
     public GetMembersResponse withUnprocessedAccounts(UnprocessedAccount[] unprocessedAccounts) {
         this.unprocessedAccounts = unprocessedAccounts;
         return this;
     }
     
+    public GetMembersResponse(){}
 }

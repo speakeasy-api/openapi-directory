@@ -18,6 +18,7 @@ public class DeployModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageClassificationModelDeploymentMetadata")
     public ImageClassificationModelDeploymentMetadata imageClassificationModelDeploymentMetadata;
+
     public DeployModelRequest withImageClassificationModelDeploymentMetadata(ImageClassificationModelDeploymentMetadata imageClassificationModelDeploymentMetadata) {
         this.imageClassificationModelDeploymentMetadata = imageClassificationModelDeploymentMetadata;
         return this;
@@ -29,9 +30,11 @@ public class DeployModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageObjectDetectionModelDeploymentMetadata")
     public ImageObjectDetectionModelDeploymentMetadata imageObjectDetectionModelDeploymentMetadata;
+
     public DeployModelRequest withImageObjectDetectionModelDeploymentMetadata(ImageObjectDetectionModelDeploymentMetadata imageObjectDetectionModelDeploymentMetadata) {
         this.imageObjectDetectionModelDeploymentMetadata = imageObjectDetectionModelDeploymentMetadata;
         return this;
     }
     
+    public DeployModelRequest(){}
 }

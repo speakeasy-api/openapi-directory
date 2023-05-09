@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteAccessRestrictionsRequest {
@@ -12,6 +13,7 @@ public class ReposDeleteAccessRestrictionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public ReposDeleteAccessRestrictionsRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -22,6 +24,7 @@ public class ReposDeleteAccessRestrictionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposDeleteAccessRestrictionsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,9 +35,15 @@ public class ReposDeleteAccessRestrictionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposDeleteAccessRestrictionsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposDeleteAccessRestrictionsRequest(@JsonProperty("branch") String branch, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.branch = branch;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

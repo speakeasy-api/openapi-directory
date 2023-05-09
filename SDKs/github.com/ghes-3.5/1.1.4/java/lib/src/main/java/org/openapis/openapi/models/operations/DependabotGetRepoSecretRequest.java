@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotGetRepoSecretRequest {
@@ -12,6 +13,7 @@ public class DependabotGetRepoSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public DependabotGetRepoSecretRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class DependabotGetRepoSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public DependabotGetRepoSecretRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -32,9 +35,15 @@ public class DependabotGetRepoSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
     public String secretName;
+
     public DependabotGetRepoSecretRequest withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public DependabotGetRepoSecretRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("secret_name") String secretName) {
+        this.owner = owner;
+        this.repo = repo;
+        this.secretName = secretName;
+  }
 }

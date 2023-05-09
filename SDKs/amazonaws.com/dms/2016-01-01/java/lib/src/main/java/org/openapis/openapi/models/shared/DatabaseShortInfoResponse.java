@@ -15,6 +15,7 @@ public class DatabaseShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseEngine")
     public String databaseEngine;
+
     public DatabaseShortInfoResponse withDatabaseEngine(String databaseEngine) {
         this.databaseEngine = databaseEngine;
         return this;
@@ -23,6 +24,7 @@ public class DatabaseShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public DatabaseShortInfoResponse withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -31,6 +33,7 @@ public class DatabaseShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseIpAddress")
     public String databaseIpAddress;
+
     public DatabaseShortInfoResponse withDatabaseIpAddress(String databaseIpAddress) {
         this.databaseIpAddress = databaseIpAddress;
         return this;
@@ -39,9 +42,11 @@ public class DatabaseShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DatabaseShortInfoResponse withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     
+    public DatabaseShortInfoResponse(){}
 }

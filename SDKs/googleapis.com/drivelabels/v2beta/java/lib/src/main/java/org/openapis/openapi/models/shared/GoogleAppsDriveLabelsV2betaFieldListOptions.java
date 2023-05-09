@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2betaFieldListOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxEntries")
     public Integer maxEntries;
+
     public GoogleAppsDriveLabelsV2betaFieldListOptions withMaxEntries(Integer maxEntries) {
         this.maxEntries = maxEntries;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaFieldListOptions(){}
 }

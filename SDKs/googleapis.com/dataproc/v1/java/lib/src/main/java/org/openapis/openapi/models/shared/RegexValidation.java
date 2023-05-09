@@ -18,9 +18,11 @@ public class RegexValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexes")
     public String[] regexes;
+
     public RegexValidation withRegexes(String[] regexes) {
         this.regexes = regexes;
         return this;
     }
     
+    public RegexValidation(){}
 }

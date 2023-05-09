@@ -15,6 +15,7 @@ public class CheckDomainTransferabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthCode")
     public String authCode;
+
     public CheckDomainTransferabilityRequest withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -22,9 +23,13 @@ public class CheckDomainTransferabilityRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public CheckDomainTransferabilityRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public CheckDomainTransferabilityRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

@@ -15,6 +15,7 @@ public class RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppCont
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public RechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel data;
+
     public RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel withData(RechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppCont
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModelErrorCodeEnum errorCode;
+
     public RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel withErrorCode(RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModelErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,6 +33,7 @@ public class RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppCont
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDescription")
     public RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModelErrorDescriptionEnum errorDescription;
+
     public RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel withErrorDescription(RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModelErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -39,9 +42,11 @@ public class RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppCont
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel(){}
 }

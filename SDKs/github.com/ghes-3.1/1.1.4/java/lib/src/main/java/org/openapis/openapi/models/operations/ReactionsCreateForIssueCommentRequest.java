@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForIssueCommentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReactionsCreateForIssueCommentRequestBody requestBody;
+
     public ReactionsCreateForIssueCommentRequest withRequestBody(ReactionsCreateForIssueCommentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReactionsCreateForIssueCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public ReactionsCreateForIssueCommentRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -29,6 +32,7 @@ public class ReactionsCreateForIssueCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReactionsCreateForIssueCommentRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,16 @@ public class ReactionsCreateForIssueCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReactionsCreateForIssueCommentRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReactionsCreateForIssueCommentRequest(@JsonProperty("RequestBody") ReactionsCreateForIssueCommentRequestBody requestBody, @JsonProperty("comment_id") Long commentId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.commentId = commentId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

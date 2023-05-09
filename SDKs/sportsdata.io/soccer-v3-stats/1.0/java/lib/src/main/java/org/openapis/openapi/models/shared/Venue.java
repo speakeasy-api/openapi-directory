@@ -12,6 +12,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public Venue withAddress(String address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public Venue withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -28,6 +30,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Venue withCity(String city) {
         this.city = city;
         return this;
@@ -36,6 +39,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Venue withCountry(String country) {
         this.country = country;
         return this;
@@ -44,6 +48,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoLat")
     public Double geoLat;
+
     public Venue withGeoLat(Double geoLat) {
         this.geoLat = geoLat;
         return this;
@@ -52,6 +57,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoLong")
     public Double geoLong;
+
     public Venue withGeoLong(Double geoLong) {
         this.geoLong = geoLong;
         return this;
@@ -60,6 +66,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Venue withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +75,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nickname1")
     public String nickname1;
+
     public Venue withNickname1(String nickname1) {
         this.nickname1 = nickname1;
         return this;
@@ -76,6 +84,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nickname2")
     public String nickname2;
+
     public Venue withNickname2(String nickname2) {
         this.nickname2 = nickname2;
         return this;
@@ -84,6 +93,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Open")
     public Boolean open;
+
     public Venue withOpen(Boolean open) {
         this.open = open;
         return this;
@@ -92,6 +102,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opened")
     public Long opened;
+
     public Venue withOpened(Long opened) {
         this.opened = opened;
         return this;
@@ -100,6 +111,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Surface")
     public String surface;
+
     public Venue withSurface(String surface) {
         this.surface = surface;
         return this;
@@ -108,6 +120,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VenueId")
     public Long venueId;
+
     public Venue withVenueId(Long venueId) {
         this.venueId = venueId;
         return this;
@@ -116,9 +129,11 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zip")
     public String zip;
+
     public Venue withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public Venue(){}
 }

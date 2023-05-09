@@ -15,6 +15,7 @@ public class DeleteStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnforceConsumerDeletion")
     public Boolean enforceConsumerDeletion;
+
     public DeleteStreamInput withEnforceConsumerDeletion(Boolean enforceConsumerDeletion) {
         this.enforceConsumerDeletion = enforceConsumerDeletion;
         return this;
@@ -23,6 +24,7 @@ public class DeleteStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DeleteStreamInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -31,9 +33,11 @@ public class DeleteStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public DeleteStreamInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public DeleteStreamInput(){}
 }

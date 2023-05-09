@@ -20,6 +20,7 @@ public class StartIncidentRequestBodyTriggerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawData")
     public String rawData;
+
     public StartIncidentRequestBodyTriggerDetails withRawData(String rawData) {
         this.rawData = rawData;
         return this;
@@ -28,6 +29,7 @@ public class StartIncidentRequestBodyTriggerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public StartIncidentRequestBodyTriggerDetails withSource(String source) {
         this.source = source;
         return this;
@@ -38,6 +40,7 @@ public class StartIncidentRequestBodyTriggerDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public StartIncidentRequestBodyTriggerDetails withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -46,9 +49,11 @@ public class StartIncidentRequestBodyTriggerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerArn")
     public String triggerArn;
+
     public StartIncidentRequestBodyTriggerDetails withTriggerArn(String triggerArn) {
         this.triggerArn = triggerArn;
         return this;
     }
     
+    public StartIncidentRequestBodyTriggerDetails(){}
 }

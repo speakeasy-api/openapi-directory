@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPrimaryIpsIdActionsUnassignActionResponse {
     @JsonProperty("action")
     public PostPrimaryIpsIdActionsUnassignActionResponseAction action;
+
     public PostPrimaryIpsIdActionsUnassignActionResponse withAction(PostPrimaryIpsIdActionsUnassignActionResponseAction action) {
         this.action = action;
         return this;
     }
     
+    public PostPrimaryIpsIdActionsUnassignActionResponse(@JsonProperty("action") PostPrimaryIpsIdActionsUnassignActionResponseAction action) {
+        this.action = action;
+  }
 }

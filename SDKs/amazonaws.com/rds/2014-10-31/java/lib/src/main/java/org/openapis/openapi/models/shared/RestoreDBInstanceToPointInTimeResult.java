@@ -15,9 +15,11 @@ public class RestoreDBInstanceToPointInTimeResult {
      */
     
     public DBInstance dbInstance;
+
     public RestoreDBInstanceToPointInTimeResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public RestoreDBInstanceToPointInTimeResult(){}
 }

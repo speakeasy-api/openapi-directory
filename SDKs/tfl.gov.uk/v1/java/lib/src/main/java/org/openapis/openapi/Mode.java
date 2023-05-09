@@ -56,14 +56,12 @@ public class Mode {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModeArrivalsResponse res = new org.openapis.openapi.models.operations.ModeArrivalsResponse() {{
+        org.openapis.openapi.models.operations.ModeArrivalsResponse res = new org.openapis.openapi.models.operations.ModeArrivalsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPredictions = null;
             tflApiPresentationEntitiesPredictions = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,14 +107,12 @@ public class Mode {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModeGetActiveServiceTypesResponse res = new org.openapis.openapi.models.operations.ModeGetActiveServiceTypesResponse() {{
+        org.openapis.openapi.models.operations.ModeGetActiveServiceTypesResponse res = new org.openapis.openapi.models.operations.ModeGetActiveServiceTypesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesActiveServiceTypes = null;
             tflApiPresentationEntitiesActiveServiceTypes = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

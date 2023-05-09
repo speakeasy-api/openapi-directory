@@ -18,6 +18,7 @@ public class ExtendedProducerResponsibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledForVariations")
     public Boolean enabledForVariations;
+
     public ExtendedProducerResponsibility withEnabledForVariations(Boolean enabledForVariations) {
         this.enabledForVariations = enabledForVariations;
         return this;
@@ -29,6 +30,7 @@ public class ExtendedProducerResponsibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExtendedProducerResponsibility withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ExtendedProducerResponsibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public String usage;
+
     public ExtendedProducerResponsibility withUsage(String usage) {
         this.usage = usage;
         return this;
     }
     
+    public ExtendedProducerResponsibility(){}
 }

@@ -18,9 +18,11 @@ public class InstanceParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceManagerTags")
     public java.util.Map<String, String> resourceManagerTags;
+
     public InstanceParams withResourceManagerTags(java.util.Map<String, String> resourceManagerTags) {
         this.resourceManagerTags = resourceManagerTags;
         return this;
     }
     
+    public InstanceParams(){}
 }

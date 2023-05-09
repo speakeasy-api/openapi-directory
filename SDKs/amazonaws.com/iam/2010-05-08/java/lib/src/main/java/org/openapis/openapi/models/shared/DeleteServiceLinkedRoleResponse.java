@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteServiceLinkedRoleResponse - Success
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteServiceLinkedRoleResponse {
     
     public String deletionTaskId;
+
     public DeleteServiceLinkedRoleResponse withDeletionTaskId(String deletionTaskId) {
         this.deletionTaskId = deletionTaskId;
         return this;
     }
     
+    public DeleteServiceLinkedRoleResponse(@JsonProperty("DeletionTaskId") String deletionTaskId) {
+        this.deletionTaskId = deletionTaskId;
+  }
 }

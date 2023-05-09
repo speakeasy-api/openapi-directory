@@ -18,9 +18,11 @@ public class AppDevExperienceFeatureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkingInstallSucceeded")
     public Status networkingInstallSucceeded;
+
     public AppDevExperienceFeatureState withNetworkingInstallSucceeded(Status networkingInstallSucceeded) {
         this.networkingInstallSucceeded = networkingInstallSucceeded;
         return this;
     }
     
+    public AppDevExperienceFeatureState(){}
 }

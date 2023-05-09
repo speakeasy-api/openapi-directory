@@ -15,6 +15,7 @@ public class CheckoutCustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("area")
     public CheckoutCustomFieldEditFieldsAreaEnum area;
+
     public CheckoutCustomFieldEditFields withArea(CheckoutCustomFieldEditFieldsAreaEnum area) {
         this.area = area;
         return this;
@@ -26,6 +27,7 @@ public class CheckoutCustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_field_select_options")
     public String[] customFieldSelectOptions;
+
     public CheckoutCustomFieldEditFields withCustomFieldSelectOptions(String[] customFieldSelectOptions) {
         this.customFieldSelectOptions = customFieldSelectOptions;
         return this;
@@ -37,6 +39,7 @@ public class CheckoutCustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletable")
     public Boolean deletable;
+
     public CheckoutCustomFieldEditFields withDeletable(Boolean deletable) {
         this.deletable = deletable;
         return this;
@@ -48,6 +51,7 @@ public class CheckoutCustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CheckoutCustomFieldEditFields withLabel(String label) {
         this.label = label;
         return this;
@@ -59,6 +63,7 @@ public class CheckoutCustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public CheckoutCustomFieldEditFields withPosition(Integer position) {
         this.position = position;
         return this;
@@ -70,6 +75,7 @@ public class CheckoutCustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public CheckoutCustomFieldEditFields withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -81,9 +87,11 @@ public class CheckoutCustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CheckoutCustomFieldEditFieldsTypeEnum type;
+
     public CheckoutCustomFieldEditFields withType(CheckoutCustomFieldEditFieldsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CheckoutCustomFieldEditFields(){}
 }

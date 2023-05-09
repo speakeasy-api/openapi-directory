@@ -15,6 +15,7 @@ public class DetailBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Amount[] balance;
+
     public DetailBalance withBalance(Amount[] balance) {
         this.balance = balance;
         return this;
@@ -26,6 +27,7 @@ public class DetailBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onHoldBalance")
     public Amount[] onHoldBalance;
+
     public DetailBalance withOnHoldBalance(Amount[] onHoldBalance) {
         this.onHoldBalance = onHoldBalance;
         return this;
@@ -37,9 +39,11 @@ public class DetailBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingBalance")
     public Amount[] pendingBalance;
+
     public DetailBalance withPendingBalance(Amount[] pendingBalance) {
         this.pendingBalance = pendingBalance;
         return this;
     }
     
+    public DetailBalance(){}
 }

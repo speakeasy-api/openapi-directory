@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListNetworkResourcesResponse {
     
     public String contentType;
+
     public ListNetworkResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListNetworkResourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListNetworkResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListNetworkResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListNetworkResourcesResponse listNetworkResourcesResponse;
+
     public ListNetworkResourcesResponse withListNetworkResourcesResponse(org.openapis.openapi.models.shared.ListNetworkResourcesResponse listNetworkResourcesResponse) {
         this.listNetworkResourcesResponse = listNetworkResourcesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListNetworkResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListNetworkResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListNetworkResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListNetworkResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListNetworkResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListNetworkResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListNetworkResourcesResponse {
      */
     
     public Object validationException;
+
     public ListNetworkResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListNetworkResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

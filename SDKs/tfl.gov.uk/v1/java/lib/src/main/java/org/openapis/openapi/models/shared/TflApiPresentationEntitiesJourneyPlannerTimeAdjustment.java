@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerTimeAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment withDate(String date) {
         this.date = date;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesJourneyPlannerTimeAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment withTime(String time) {
         this.time = time;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesJourneyPlannerTimeAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeIs")
     public String timeIs;
+
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment withTimeIs(String timeIs) {
         this.timeIs = timeIs;
         return this;
@@ -36,9 +39,11 @@ public class TflApiPresentationEntitiesJourneyPlannerTimeAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerTimeAdjustment(){}
 }

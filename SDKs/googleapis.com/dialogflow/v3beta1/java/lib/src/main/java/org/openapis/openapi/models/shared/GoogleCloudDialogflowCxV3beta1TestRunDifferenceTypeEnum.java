@@ -14,7 +14,8 @@ public enum GoogleCloudDialogflowCxV3beta1TestRunDifferenceTypeEnum {
     INTENT("INTENT"),
     PAGE("PAGE"),
     PARAMETERS("PARAMETERS"),
-    UTTERANCE("UTTERANCE");
+    UTTERANCE("UTTERANCE"),
+    FLOW("FLOW");
 
     @JsonValue
     public final String value;

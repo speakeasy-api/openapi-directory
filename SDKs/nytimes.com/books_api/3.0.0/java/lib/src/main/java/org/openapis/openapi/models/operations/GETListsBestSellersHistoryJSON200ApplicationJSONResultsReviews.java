@@ -12,6 +12,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("article_chapter_link")
     public String articleChapterLink;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews withArticleChapterLink(String articleChapterLink) {
         this.articleChapterLink = articleChapterLink;
         return this;
@@ -20,6 +21,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("book_review_link")
     public String bookReviewLink;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews withBookReviewLink(String bookReviewLink) {
         this.bookReviewLink = bookReviewLink;
         return this;
@@ -28,6 +30,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_chapter_link")
     public String firstChapterLink;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews withFirstChapterLink(String firstChapterLink) {
         this.firstChapterLink = firstChapterLink;
         return this;
@@ -36,9 +39,11 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sunday_review_link")
     public String sundayReviewLink;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews withSundayReviewLink(String sundayReviewLink) {
         this.sundayReviewLink = sundayReviewLink;
         return this;
     }
     
+    public GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews(){}
 }

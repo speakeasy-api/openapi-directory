@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Profanity - Profanity found in this review
@@ -15,6 +15,7 @@ public class Profanity {
      */
     
     public Long end;
+
     public Profanity withEnd(Long end) {
         this.end = end;
         return this;
@@ -25,6 +26,7 @@ public class Profanity {
      */
     
     public Long start;
+
     public Profanity withStart(Long start) {
         this.start = start;
         return this;
@@ -35,9 +37,15 @@ public class Profanity {
      */
     
     public String word;
+
     public Profanity withWord(String word) {
         this.word = word;
         return this;
     }
     
+    public Profanity(@JsonProperty("end") Long end, @JsonProperty("start") Long start, @JsonProperty("word") String word) {
+        this.end = end;
+        this.start = start;
+        this.word = word;
+  }
 }

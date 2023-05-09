@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDiscountRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DiscountRequest discountRequest;
+
     public CreateDiscountRequest withDiscountRequest(org.openapis.openapi.models.shared.DiscountRequest discountRequest) {
         this.discountRequest = discountRequest;
         return this;
@@ -16,9 +18,13 @@ public class CreateDiscountRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public CreateDiscountRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
     }
     
+    public CreateDiscountRequest(@JsonProperty("organizationUuid") String organizationUuid) {
+        this.organizationUuid = organizationUuid;
+  }
 }

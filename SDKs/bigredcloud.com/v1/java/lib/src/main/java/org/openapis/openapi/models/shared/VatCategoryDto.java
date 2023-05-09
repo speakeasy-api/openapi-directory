@@ -12,6 +12,7 @@ public class VatCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public VatCategoryDto withDescription(String description) {
         this.description = description;
         return this;
@@ -20,9 +21,11 @@ public class VatCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public VatCategoryDto withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public VatCategoryDto(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateContinuousCheckRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.UpdateContinuousCheckInput updateContinuousCheckInput;
+
     public UpdateContinuousCheckRequest withUpdateContinuousCheckInput(org.openapis.openapi.models.shared.UpdateContinuousCheckInput updateContinuousCheckInput) {
         this.updateContinuousCheckInput = updateContinuousCheckInput;
         return this;
@@ -19,9 +21,14 @@ public class UpdateContinuousCheckRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=continuous_check_id")
     public Double continuousCheckId;
+
     public UpdateContinuousCheckRequest withContinuousCheckId(Double continuousCheckId) {
         this.continuousCheckId = continuousCheckId;
         return this;
     }
     
+    public UpdateContinuousCheckRequest(@JsonProperty("UpdateContinuousCheckInput") org.openapis.openapi.models.shared.UpdateContinuousCheckInput updateContinuousCheckInput, @JsonProperty("continuous_check_id") Double continuousCheckId) {
+        this.updateContinuousCheckInput = updateContinuousCheckInput;
+        this.continuousCheckId = continuousCheckId;
+  }
 }

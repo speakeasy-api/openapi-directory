@@ -21,6 +21,7 @@ public class DeploymentSimple {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public DeploymentSimple withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class DeploymentSimple {
     
     @JsonProperty("description")
     public String description;
+
     public DeploymentSimple withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class DeploymentSimple {
      */
     @JsonProperty("environment")
     public String environment;
+
     public DeploymentSimple withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -48,6 +51,7 @@ public class DeploymentSimple {
      */
     @JsonProperty("id")
     public Long id;
+
     public DeploymentSimple withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class DeploymentSimple {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public DeploymentSimple withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -63,6 +68,7 @@ public class DeploymentSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_environment")
     public String originalEnvironment;
+
     public DeploymentSimple withOriginalEnvironment(String originalEnvironment) {
         this.originalEnvironment = originalEnvironment;
         return this;
@@ -74,6 +80,7 @@ public class DeploymentSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public DeploymentSimple withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -85,6 +92,7 @@ public class DeploymentSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("production_environment")
     public Boolean productionEnvironment;
+
     public DeploymentSimple withProductionEnvironment(Boolean productionEnvironment) {
         this.productionEnvironment = productionEnvironment;
         return this;
@@ -92,6 +100,7 @@ public class DeploymentSimple {
     
     @JsonProperty("repository_url")
     public String repositoryUrl;
+
     public DeploymentSimple withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -99,6 +108,7 @@ public class DeploymentSimple {
     
     @JsonProperty("statuses_url")
     public String statusesUrl;
+
     public DeploymentSimple withStatusesUrl(String statusesUrl) {
         this.statusesUrl = statusesUrl;
         return this;
@@ -109,6 +119,7 @@ public class DeploymentSimple {
      */
     @JsonProperty("task")
     public String task;
+
     public DeploymentSimple withTask(String task) {
         this.task = task;
         return this;
@@ -120,6 +131,7 @@ public class DeploymentSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transient_environment")
     public Boolean transientEnvironment;
+
     public DeploymentSimple withTransientEnvironment(Boolean transientEnvironment) {
         this.transientEnvironment = transientEnvironment;
         return this;
@@ -129,6 +141,7 @@ public class DeploymentSimple {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public DeploymentSimple withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -136,9 +149,22 @@ public class DeploymentSimple {
     
     @JsonProperty("url")
     public String url;
+
     public DeploymentSimple withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DeploymentSimple(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("description") String description, @JsonProperty("environment") String environment, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("repository_url") String repositoryUrl, @JsonProperty("statuses_url") String statusesUrl, @JsonProperty("task") String task, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.description = description;
+        this.environment = environment;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.repositoryUrl = repositoryUrl;
+        this.statusesUrl = statusesUrl;
+        this.task = task;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

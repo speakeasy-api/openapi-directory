@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TwipcResponse {
     
     public String contentType;
+
     public TwipcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TwipcResponse {
     
     
     public Integer statusCode;
+
     public TwipcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TwipcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TwipcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TwipcResponse {
      */
     
     public Twipc400ApplicationJSON twipc400ApplicationJSONObject;
+
     public TwipcResponse withTwipc400ApplicationJSONObject(Twipc400ApplicationJSON twipc400ApplicationJSONObject) {
         this.twipc400ApplicationJSONObject = twipc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class TwipcResponse {
      */
     
     public Twipc401ApplicationJSON twipc401ApplicationJSONObject;
+
     public TwipcResponse withTwipc401ApplicationJSONObject(Twipc401ApplicationJSON twipc401ApplicationJSONObject) {
         this.twipc401ApplicationJSONObject = twipc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class TwipcResponse {
      */
     
     public Twipc404ApplicationJSON twipc404ApplicationJSONObject;
+
     public TwipcResponse withTwipc404ApplicationJSONObject(Twipc404ApplicationJSON twipc404ApplicationJSONObject) {
         this.twipc404ApplicationJSONObject = twipc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class TwipcResponse {
      */
     
     public Twipc500ApplicationJSON twipc500ApplicationJSONObject;
+
     public TwipcResponse withTwipc500ApplicationJSONObject(Twipc500ApplicationJSON twipc500ApplicationJSONObject) {
         this.twipc500ApplicationJSONObject = twipc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class TwipcResponse {
      */
     
     public Twipc502ApplicationJSON twipc502ApplicationJSONObject;
+
     public TwipcResponse withTwipc502ApplicationJSONObject(Twipc502ApplicationJSON twipc502ApplicationJSONObject) {
         this.twipc502ApplicationJSONObject = twipc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class TwipcResponse {
      */
     
     public Twipc503ApplicationJSON twipc503ApplicationJSONObject;
+
     public TwipcResponse withTwipc503ApplicationJSONObject(Twipc503ApplicationJSON twipc503ApplicationJSONObject) {
         this.twipc503ApplicationJSONObject = twipc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class TwipcResponse {
      */
     
     public Twipc504ApplicationJSON twipc504ApplicationJSONObject;
+
     public TwipcResponse withTwipc504ApplicationJSONObject(Twipc504ApplicationJSON twipc504ApplicationJSONObject) {
         this.twipc504ApplicationJSONObject = twipc504ApplicationJSONObject;
         return this;
     }
     
+    public TwipcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

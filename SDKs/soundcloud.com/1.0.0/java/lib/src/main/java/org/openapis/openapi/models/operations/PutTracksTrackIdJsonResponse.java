@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutTracksTrackIdJsonResponse {
     
     public String contentType;
+
     public PutTracksTrackIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutTracksTrackIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PutTracksTrackIdJsonResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PutTracksTrackIdJsonResponse {
     
     
     public Integer statusCode;
+
     public PutTracksTrackIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutTracksTrackIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutTracksTrackIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PutTracksTrackIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Track track;
+
     public PutTracksTrackIdJsonResponse withTrack(org.openapis.openapi.models.shared.Track track) {
         this.track = track;
         return this;
     }
     
+    public PutTracksTrackIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -61,11 +61,9 @@ public class Workers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenomicsWorkersCheckInResponse res = new org.openapis.openapi.models.operations.GenomicsWorkersCheckInResponse() {{
+        org.openapis.openapi.models.operations.GenomicsWorkersCheckInResponse res = new org.openapis.openapi.models.operations.GenomicsWorkersCheckInResponse(contentType, httpRes.statusCode()) {{
             checkInResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

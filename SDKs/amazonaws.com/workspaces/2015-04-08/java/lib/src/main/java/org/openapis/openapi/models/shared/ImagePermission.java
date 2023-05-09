@@ -15,9 +15,11 @@ public class ImagePermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedAccountId")
     public String sharedAccountId;
+
     public ImagePermission withSharedAccountId(String sharedAccountId) {
         this.sharedAccountId = sharedAccountId;
         return this;
     }
     
+    public ImagePermission(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveSubaccountResponse {
     
     public String contentType;
+
     public RetrieveSubaccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RetrieveSubaccountResponse {
     
     
     public Integer statusCode;
+
     public RetrieveSubaccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RetrieveSubaccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveSubaccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RetrieveSubaccountResponse {
      */
     
     public org.openapis.openapi.models.shared.SubaccountResponse subaccountResponse;
+
     public RetrieveSubaccountResponse withSubaccountResponse(org.openapis.openapi.models.shared.SubaccountResponse subaccountResponse) {
         this.subaccountResponse = subaccountResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveSubaccountResponse {
      */
     
     public org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse;
+
     public RetrieveSubaccountResponse withUnprovisionedErrorResponse(org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse) {
         this.unprovisionedErrorResponse = unprovisionedErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class RetrieveSubaccountResponse {
      */
     
     public RetrieveSubaccount401ApplicationJSON retrieveSubaccount401ApplicationJSONObject;
+
     public RetrieveSubaccountResponse withRetrieveSubaccount401ApplicationJSONObject(RetrieveSubaccount401ApplicationJSON retrieveSubaccount401ApplicationJSONObject) {
         this.retrieveSubaccount401ApplicationJSONObject = retrieveSubaccount401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class RetrieveSubaccountResponse {
      */
     
     public RetrieveSubaccount404ApplicationJSON retrieveSubaccount404ApplicationJSONObject;
+
     public RetrieveSubaccountResponse withRetrieveSubaccount404ApplicationJSONObject(RetrieveSubaccount404ApplicationJSON retrieveSubaccount404ApplicationJSONObject) {
         this.retrieveSubaccount404ApplicationJSONObject = retrieveSubaccount404ApplicationJSONObject;
         return this;
     }
     
+    public RetrieveSubaccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

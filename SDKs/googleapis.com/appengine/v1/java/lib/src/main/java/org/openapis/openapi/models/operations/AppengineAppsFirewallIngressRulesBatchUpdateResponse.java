@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppengineAppsFirewallIngressRulesBatchUpdateResponse {
@@ -12,6 +13,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchUpdateIngressRulesResponse batchUpdateIngressRulesResponse;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateResponse withBatchUpdateIngressRulesResponse(org.openapis.openapi.models.shared.BatchUpdateIngressRulesResponse batchUpdateIngressRulesResponse) {
         this.batchUpdateIngressRulesResponse = batchUpdateIngressRulesResponse;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateResponse {
     
     
     public String contentType;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateResponse {
     
     
     public Integer statusCode;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AppengineAppsFirewallIngressRulesBatchUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppengineAppsFirewallIngressRulesBatchUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AppengineAppsFirewallIngressRulesBatchUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TpuProjectsLocationsTensorflowVersionsListResponse {
     
     public String contentType;
+
     public TpuProjectsLocationsTensorflowVersionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TpuProjectsLocationsTensorflowVersionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTensorFlowVersionsResponse listTensorFlowVersionsResponse;
+
     public TpuProjectsLocationsTensorflowVersionsListResponse withListTensorFlowVersionsResponse(org.openapis.openapi.models.shared.ListTensorFlowVersionsResponse listTensorFlowVersionsResponse) {
         this.listTensorFlowVersionsResponse = listTensorFlowVersionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class TpuProjectsLocationsTensorflowVersionsListResponse {
     
     
     public Integer statusCode;
+
     public TpuProjectsLocationsTensorflowVersionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TpuProjectsLocationsTensorflowVersionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TpuProjectsLocationsTensorflowVersionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TpuProjectsLocationsTensorflowVersionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

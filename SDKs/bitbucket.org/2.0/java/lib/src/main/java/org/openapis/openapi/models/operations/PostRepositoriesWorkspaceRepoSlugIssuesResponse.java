@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRepositoriesWorkspaceRepoSlugIssuesResponse {
     
     public String contentType;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesResponse {
     
     
     public Integer statusCode;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -50,9 +56,14 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesResponse {
      */
     
     public java.util.Map<String, Object> issue;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesResponse withIssue(java.util.Map<String, Object> issue) {
         this.issue = issue;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugIssuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

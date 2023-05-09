@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConnectorProfilesResponse {
     
     public String contentType;
+
     public DescribeConnectorProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConnectorProfilesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConnectorProfilesResponse describeConnectorProfilesResponse;
+
     public DescribeConnectorProfilesResponse withDescribeConnectorProfilesResponse(org.openapis.openapi.models.shared.DescribeConnectorProfilesResponse describeConnectorProfilesResponse) {
         this.describeConnectorProfilesResponse = describeConnectorProfilesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConnectorProfilesResponse {
      */
     
     public Object internalServerException;
+
     public DescribeConnectorProfilesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeConnectorProfilesResponse {
     
     
     public Integer statusCode;
+
     public DescribeConnectorProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeConnectorProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConnectorProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeConnectorProfilesResponse {
      */
     
     public Object validationException;
+
     public DescribeConnectorProfilesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeConnectorProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

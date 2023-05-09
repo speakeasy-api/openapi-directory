@@ -18,6 +18,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregatorInfo")
     public GoogleAdsHomeservicesLocalservicesV1AggregatorInfo aggregatorInfo;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withAggregatorInfo(GoogleAdsHomeservicesLocalservicesV1AggregatorInfo aggregatorInfo) {
         this.aggregatorInfo = aggregatorInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingLead")
     public GoogleAdsHomeservicesLocalservicesV1BookingLead bookingLead;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withBookingLead(GoogleAdsHomeservicesLocalservicesV1BookingLead bookingLead) {
         this.bookingLead = bookingLead;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessName")
     public String businessName;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withBusinessName(String businessName) {
         this.businessName = businessName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeStatus")
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum chargeStatus;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withChargeStatus(GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum chargeStatus) {
         this.chargeStatus = chargeStatus;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disputeStatus")
     public String disputeStatus;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withDisputeStatus(String disputeStatus) {
         this.disputeStatus = disputeStatus;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geo")
     public String geo;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withGeo(String geo) {
         this.geo = geo;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadCategory")
     public String leadCategory;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withLeadCategory(String leadCategory) {
         this.leadCategory = leadCategory;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadCreationTimestamp")
     public String leadCreationTimestamp;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withLeadCreationTimestamp(String leadCreationTimestamp) {
         this.leadCreationTimestamp = leadCreationTimestamp;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadId")
     public String leadId;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withLeadId(String leadId) {
         this.leadId = leadId;
         return this;
@@ -139,6 +150,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadPrice")
     public Double leadPrice;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withLeadPrice(Double leadPrice) {
         this.leadPrice = leadPrice;
         return this;
@@ -150,6 +162,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadType")
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum leadType;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withLeadType(GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum leadType) {
         this.leadType = leadType;
         return this;
@@ -161,6 +174,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageLead")
     public GoogleAdsHomeservicesLocalservicesV1MessageLead messageLead;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withMessageLead(GoogleAdsHomeservicesLocalservicesV1MessageLead messageLead) {
         this.messageLead = messageLead;
         return this;
@@ -172,6 +186,7 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneLead")
     public GoogleAdsHomeservicesLocalservicesV1PhoneLead phoneLead;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withPhoneLead(GoogleAdsHomeservicesLocalservicesV1PhoneLead phoneLead) {
         this.phoneLead = phoneLead;
         return this;
@@ -183,9 +198,11 @@ public class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public GoogleTypeTimeZone timezone;
+
     public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport withTimezone(GoogleTypeTimeZone timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport(){}
 }

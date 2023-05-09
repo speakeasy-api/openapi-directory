@@ -12,6 +12,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public CvipcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public CvipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public CvipcRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -42,6 +45,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public CvipcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -52,9 +56,17 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyType")
     public String policyType;
+
     public CvipcRequestBodyCertificateParameters withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public CvipcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("PolicyNo") String policyNo, @JsonProperty("PolicyType") String policyType) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.policyNo = policyNo;
+        this.policyType = policyType;
+  }
 }

@@ -15,6 +15,7 @@ public class ListFirewallRuleGroupAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallRuleGroupAssociations")
     public FirewallRuleGroupAssociation[] firewallRuleGroupAssociations;
+
     public ListFirewallRuleGroupAssociationsResponse withFirewallRuleGroupAssociations(FirewallRuleGroupAssociation[] firewallRuleGroupAssociations) {
         this.firewallRuleGroupAssociations = firewallRuleGroupAssociations;
         return this;
@@ -23,9 +24,11 @@ public class ListFirewallRuleGroupAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFirewallRuleGroupAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFirewallRuleGroupAssociationsResponse(){}
 }

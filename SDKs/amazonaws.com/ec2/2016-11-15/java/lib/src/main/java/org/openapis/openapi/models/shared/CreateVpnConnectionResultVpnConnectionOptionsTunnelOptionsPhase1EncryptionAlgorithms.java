@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsPhase1EncryptionAlgorithms {
     
     public String value;
+
     public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsPhase1EncryptionAlgorithms withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsPhase1EncryptionAlgorithms(){}
 }

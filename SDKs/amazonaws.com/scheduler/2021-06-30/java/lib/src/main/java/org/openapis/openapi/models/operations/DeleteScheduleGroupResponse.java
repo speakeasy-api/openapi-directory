@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteScheduleGroupResponse {
@@ -12,6 +13,7 @@ public class DeleteScheduleGroupResponse {
      */
     
     public Object conflictException;
+
     public DeleteScheduleGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteScheduleGroupResponse {
     
     
     public String contentType;
+
     public DeleteScheduleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteScheduleGroupResponse {
      */
     
     public java.util.Map<String, Object> deleteScheduleGroupOutput;
+
     public DeleteScheduleGroupResponse withDeleteScheduleGroupOutput(java.util.Map<String, Object> deleteScheduleGroupOutput) {
         this.deleteScheduleGroupOutput = deleteScheduleGroupOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteScheduleGroupResponse {
      */
     
     public Object internalServerException;
+
     public DeleteScheduleGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteScheduleGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteScheduleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteScheduleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteScheduleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteScheduleGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteScheduleGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteScheduleGroupResponse {
      */
     
     public Object throttlingException;
+
     public DeleteScheduleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteScheduleGroupResponse {
      */
     
     public Object validationException;
+
     public DeleteScheduleGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteScheduleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

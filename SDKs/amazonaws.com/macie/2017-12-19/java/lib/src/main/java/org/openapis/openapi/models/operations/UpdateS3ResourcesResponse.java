@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateS3ResourcesResponse {
@@ -12,6 +13,7 @@ public class UpdateS3ResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateS3ResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateS3ResourcesResponse {
     
     
     public String contentType;
+
     public UpdateS3ResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateS3ResourcesResponse {
      */
     
     public Object internalException;
+
     public UpdateS3ResourcesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateS3ResourcesResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateS3ResourcesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateS3ResourcesResponse {
     
     
     public Integer statusCode;
+
     public UpdateS3ResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateS3ResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateS3ResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateS3ResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateS3ResourcesResult updateS3ResourcesResult;
+
     public UpdateS3ResourcesResponse withUpdateS3ResourcesResult(org.openapis.openapi.models.shared.UpdateS3ResourcesResult updateS3ResourcesResult) {
         this.updateS3ResourcesResult = updateS3ResourcesResult;
         return this;
     }
     
+    public UpdateS3ResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

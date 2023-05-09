@@ -17,6 +17,7 @@ public class GetServersId200ApplicationJSONServerPublicNetIpv4 {
      */
     @JsonProperty("blocked")
     public Boolean blocked;
+
     public GetServersId200ApplicationJSONServerPublicNetIpv4 withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -27,6 +28,7 @@ public class GetServersId200ApplicationJSONServerPublicNetIpv4 {
      */
     @JsonProperty("dns_ptr")
     public String dnsPtr;
+
     public GetServersId200ApplicationJSONServerPublicNetIpv4 withDnsPtr(String dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -38,6 +40,7 @@ public class GetServersId200ApplicationJSONServerPublicNetIpv4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetServersId200ApplicationJSONServerPublicNetIpv4 withId(Long id) {
         this.id = id;
         return this;
@@ -48,9 +51,15 @@ public class GetServersId200ApplicationJSONServerPublicNetIpv4 {
      */
     @JsonProperty("ip")
     public String ip;
+
     public GetServersId200ApplicationJSONServerPublicNetIpv4 withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public GetServersId200ApplicationJSONServerPublicNetIpv4(@JsonProperty("blocked") Boolean blocked, @JsonProperty("dns_ptr") String dnsPtr, @JsonProperty("ip") String ip) {
+        this.blocked = blocked;
+        this.dnsPtr = dnsPtr;
+        this.ip = ip;
+  }
 }

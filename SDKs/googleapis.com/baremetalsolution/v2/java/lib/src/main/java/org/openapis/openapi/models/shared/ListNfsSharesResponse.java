@@ -18,6 +18,7 @@ public class ListNfsSharesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListNfsSharesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListNfsSharesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nfsShares")
     public NfsShare[] nfsShares;
+
     public ListNfsSharesResponse withNfsShares(NfsShare[] nfsShares) {
         this.nfsShares = nfsShares;
         return this;
@@ -40,9 +42,11 @@ public class ListNfsSharesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListNfsSharesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListNfsSharesResponse(){}
 }

@@ -14,6 +14,7 @@ public class UpdateAccessPolicyRequestBody {
      */
     @JsonProperty("accessPolicyIdentity")
     public UpdateAccessPolicyRequestBodyAccessPolicyIdentity accessPolicyIdentity;
+
     public UpdateAccessPolicyRequestBody withAccessPolicyIdentity(UpdateAccessPolicyRequestBodyAccessPolicyIdentity accessPolicyIdentity) {
         this.accessPolicyIdentity = accessPolicyIdentity;
         return this;
@@ -24,6 +25,7 @@ public class UpdateAccessPolicyRequestBody {
      */
     @JsonProperty("accessPolicyPermission")
     public UpdateAccessPolicyRequestBodyAccessPolicyPermissionEnum accessPolicyPermission;
+
     public UpdateAccessPolicyRequestBody withAccessPolicyPermission(UpdateAccessPolicyRequestBodyAccessPolicyPermissionEnum accessPolicyPermission) {
         this.accessPolicyPermission = accessPolicyPermission;
         return this;
@@ -34,6 +36,7 @@ public class UpdateAccessPolicyRequestBody {
      */
     @JsonProperty("accessPolicyResource")
     public UpdateAccessPolicyRequestBodyAccessPolicyResource accessPolicyResource;
+
     public UpdateAccessPolicyRequestBody withAccessPolicyResource(UpdateAccessPolicyRequestBodyAccessPolicyResource accessPolicyResource) {
         this.accessPolicyResource = accessPolicyResource;
         return this;
@@ -45,9 +48,15 @@ public class UpdateAccessPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateAccessPolicyRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public UpdateAccessPolicyRequestBody(@JsonProperty("accessPolicyIdentity") UpdateAccessPolicyRequestBodyAccessPolicyIdentity accessPolicyIdentity, @JsonProperty("accessPolicyPermission") UpdateAccessPolicyRequestBodyAccessPolicyPermissionEnum accessPolicyPermission, @JsonProperty("accessPolicyResource") UpdateAccessPolicyRequestBodyAccessPolicyResource accessPolicyResource) {
+        this.accessPolicyIdentity = accessPolicyIdentity;
+        this.accessPolicyPermission = accessPolicyPermission;
+        this.accessPolicyResource = accessPolicyResource;
+  }
 }

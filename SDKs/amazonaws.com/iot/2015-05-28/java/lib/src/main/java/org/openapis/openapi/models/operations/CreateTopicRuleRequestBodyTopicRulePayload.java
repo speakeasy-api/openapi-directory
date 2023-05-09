@@ -15,6 +15,7 @@ public class CreateTopicRuleRequestBodyTopicRulePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public org.openapis.openapi.models.shared.Action[] actions;
+
     public CreateTopicRuleRequestBodyTopicRulePayload withActions(org.openapis.openapi.models.shared.Action[] actions) {
         this.actions = actions;
         return this;
@@ -23,6 +24,7 @@ public class CreateTopicRuleRequestBodyTopicRulePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsIotSqlVersion")
     public String awsIotSqlVersion;
+
     public CreateTopicRuleRequestBodyTopicRulePayload withAwsIotSqlVersion(String awsIotSqlVersion) {
         this.awsIotSqlVersion = awsIotSqlVersion;
         return this;
@@ -31,6 +33,7 @@ public class CreateTopicRuleRequestBodyTopicRulePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateTopicRuleRequestBodyTopicRulePayload withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class CreateTopicRuleRequestBodyTopicRulePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorAction")
     public org.openapis.openapi.models.shared.Action errorAction;
+
     public CreateTopicRuleRequestBodyTopicRulePayload withErrorAction(org.openapis.openapi.models.shared.Action errorAction) {
         this.errorAction = errorAction;
         return this;
@@ -47,6 +51,7 @@ public class CreateTopicRuleRequestBodyTopicRulePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleDisabled")
     public Boolean ruleDisabled;
+
     public CreateTopicRuleRequestBodyTopicRulePayload withRuleDisabled(Boolean ruleDisabled) {
         this.ruleDisabled = ruleDisabled;
         return this;
@@ -55,9 +60,11 @@ public class CreateTopicRuleRequestBodyTopicRulePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sql")
     public String sql;
+
     public CreateTopicRuleRequestBodyTopicRulePayload withSql(String sql) {
         this.sql = sql;
         return this;
     }
     
+    public CreateTopicRuleRequestBodyTopicRulePayload(){}
 }

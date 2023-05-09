@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLoginProfileRequest {
     
     public String password;
+
     public CreateLoginProfileRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -16,6 +17,7 @@ public class CreateLoginProfileRequest {
     
     
     public Boolean passwordResetRequired;
+
     public CreateLoginProfileRequest withPasswordResetRequired(Boolean passwordResetRequired) {
         this.passwordResetRequired = passwordResetRequired;
         return this;
@@ -23,9 +25,14 @@ public class CreateLoginProfileRequest {
     
     
     public String userName;
+
     public CreateLoginProfileRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public CreateLoginProfileRequest(@JsonProperty("UserName") String userName, @JsonProperty("Password") String password) {
+        this.userName = userName;
+        this.password = password;
+  }
 }

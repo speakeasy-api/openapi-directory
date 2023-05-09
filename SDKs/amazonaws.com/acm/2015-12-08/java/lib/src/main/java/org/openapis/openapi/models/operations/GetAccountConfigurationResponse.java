@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetAccountConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAccountConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAccountConfigurationResponse {
     
     
     public String contentType;
+
     public GetAccountConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAccountConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccountConfigurationResponse getAccountConfigurationResponse;
+
     public GetAccountConfigurationResponse withGetAccountConfigurationResponse(org.openapis.openapi.models.shared.GetAccountConfigurationResponse getAccountConfigurationResponse) {
         this.getAccountConfigurationResponse = getAccountConfigurationResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetAccountConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetAccountConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetAccountConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetAccountConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetAccountConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetAccountConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

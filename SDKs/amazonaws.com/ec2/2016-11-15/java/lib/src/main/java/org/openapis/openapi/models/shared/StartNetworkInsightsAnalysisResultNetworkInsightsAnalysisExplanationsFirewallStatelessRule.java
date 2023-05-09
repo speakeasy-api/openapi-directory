@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule {
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleDestinationPorts[] destinationPorts;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule withDestinationPorts(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleDestinationPorts[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -19,6 +20,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String[] destinations;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -26,6 +28,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public Long priority;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -33,6 +36,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public Long[] protocols;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule withProtocols(Long[] protocols) {
         this.protocols = protocols;
         return this;
@@ -40,6 +44,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String ruleAction;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule withRuleAction(String ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -47,6 +52,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String ruleGroupArn;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule withRuleGroupArn(String ruleGroupArn) {
         this.ruleGroupArn = ruleGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleSourcePorts[] sourcePorts;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule withSourcePorts(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleSourcePorts[] sourcePorts) {
         this.sourcePorts = sourcePorts;
         return this;
@@ -61,9 +68,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String[] sources;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule withSources(String[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule(){}
 }

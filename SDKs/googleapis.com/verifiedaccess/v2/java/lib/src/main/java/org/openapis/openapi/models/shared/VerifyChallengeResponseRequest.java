@@ -18,6 +18,7 @@ public class VerifyChallengeResponseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challengeResponse")
     public String challengeResponse;
+
     public VerifyChallengeResponseRequest withChallengeResponse(String challengeResponse) {
         this.challengeResponse = challengeResponse;
         return this;
@@ -29,9 +30,11 @@ public class VerifyChallengeResponseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedIdentity")
     public String expectedIdentity;
+
     public VerifyChallengeResponseRequest withExpectedIdentity(String expectedIdentity) {
         this.expectedIdentity = expectedIdentity;
         return this;
     }
     
+    public VerifyChallengeResponseRequest(){}
 }

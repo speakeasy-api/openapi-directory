@@ -18,6 +18,7 @@ public class RichLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("richLinkId")
     public String richLinkId;
+
     public RichLink withRichLinkId(String richLinkId) {
         this.richLinkId = richLinkId;
         return this;
@@ -29,6 +30,7 @@ public class RichLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("richLinkProperties")
     public RichLinkProperties richLinkProperties;
+
     public RichLink withRichLinkProperties(RichLinkProperties richLinkProperties) {
         this.richLinkProperties = richLinkProperties;
         return this;
@@ -40,6 +42,7 @@ public class RichLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public RichLink withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -51,6 +54,7 @@ public class RichLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public RichLink withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
@@ -62,6 +66,7 @@ public class RichLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedTextStyleChanges")
     public java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges;
+
     public RichLink withSuggestedTextStyleChanges(java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges) {
         this.suggestedTextStyleChanges = suggestedTextStyleChanges;
         return this;
@@ -73,9 +78,11 @@ public class RichLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public RichLink withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
     
+    public RichLink(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchInferenceJobInput {
     @JsonProperty("s3DataSource")
     public S3DataConfig s3DataSource;
+
     public BatchInferenceJobInput withS3DataSource(S3DataConfig s3DataSource) {
         this.s3DataSource = s3DataSource;
         return this;
     }
     
+    public BatchInferenceJobInput(@JsonProperty("s3DataSource") S3DataConfig s3DataSource) {
+        this.s3DataSource = s3DataSource;
+  }
 }

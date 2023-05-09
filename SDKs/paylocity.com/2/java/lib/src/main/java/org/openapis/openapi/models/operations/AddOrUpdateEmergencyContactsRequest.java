@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateEmergencyContactsRequest {
@@ -12,6 +13,7 @@ public class AddOrUpdateEmergencyContactsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public AddOrUpdateEmergencyContactsRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class AddOrUpdateEmergencyContactsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EmergencyContact emergencyContact;
+
     public AddOrUpdateEmergencyContactsRequest withEmergencyContact(org.openapis.openapi.models.shared.EmergencyContact emergencyContact) {
         this.emergencyContact = emergencyContact;
         return this;
@@ -32,9 +35,15 @@ public class AddOrUpdateEmergencyContactsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public AddOrUpdateEmergencyContactsRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
     }
     
+    public AddOrUpdateEmergencyContactsRequest(@JsonProperty("companyId") String companyId, @JsonProperty("emergencyContact") org.openapis.openapi.models.shared.EmergencyContact emergencyContact, @JsonProperty("employeeId") String employeeId) {
+        this.companyId = companyId;
+        this.emergencyContact = emergencyContact;
+        this.employeeId = employeeId;
+  }
 }

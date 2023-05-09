@@ -60,11 +60,9 @@ public class Debugger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Debugger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse() {{
+        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse(contentType, httpRes.statusCode()) {{
             getBreakpointResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Debugger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse() {{
+        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse(contentType, httpRes.statusCode()) {{
             listBreakpointsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Debugger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse() {{
+        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse(contentType, httpRes.statusCode()) {{
             setBreakpointResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Debugger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListResponse() {{
+        org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListResponse res = new org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListResponse(contentType, httpRes.statusCode()) {{
             listDebuggeesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

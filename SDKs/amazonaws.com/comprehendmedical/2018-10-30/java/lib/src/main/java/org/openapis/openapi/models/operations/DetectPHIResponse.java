@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectPHIResponse {
     
     public String contentType;
+
     public DetectPHIResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectPHIResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectPHIResponse detectPHIResponse;
+
     public DetectPHIResponse withDetectPHIResponse(org.openapis.openapi.models.shared.DetectPHIResponse detectPHIResponse) {
         this.detectPHIResponse = detectPHIResponse;
         return this;
@@ -29,6 +32,7 @@ public class DetectPHIResponse {
      */
     
     public Object internalServerException;
+
     public DetectPHIResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectPHIResponse {
      */
     
     public Object invalidEncodingException;
+
     public DetectPHIResponse withInvalidEncodingException(Object invalidEncodingException) {
         this.invalidEncodingException = invalidEncodingException;
         return this;
@@ -49,6 +54,7 @@ public class DetectPHIResponse {
      */
     
     public Object invalidRequestException;
+
     public DetectPHIResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DetectPHIResponse {
     
     
     public Integer statusCode;
+
     public DetectPHIResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DetectPHIResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectPHIResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DetectPHIResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DetectPHIResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class DetectPHIResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectPHIResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -93,9 +103,14 @@ public class DetectPHIResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DetectPHIResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DetectPHIResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

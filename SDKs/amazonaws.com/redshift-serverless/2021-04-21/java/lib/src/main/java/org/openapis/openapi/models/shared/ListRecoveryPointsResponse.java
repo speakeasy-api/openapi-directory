@@ -15,6 +15,7 @@ public class ListRecoveryPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRecoveryPointsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRecoveryPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryPoints")
     public RecoveryPoint[] recoveryPoints;
+
     public ListRecoveryPointsResponse withRecoveryPoints(RecoveryPoint[] recoveryPoints) {
         this.recoveryPoints = recoveryPoints;
         return this;
     }
     
+    public ListRecoveryPointsResponse(){}
 }

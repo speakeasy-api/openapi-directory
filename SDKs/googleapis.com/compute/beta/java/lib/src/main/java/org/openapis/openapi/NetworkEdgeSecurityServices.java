@@ -59,11 +59,9 @@ public class NetworkEdgeSecurityServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             networkEdgeSecurityServiceAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class NetworkEdgeSecurityServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class NetworkEdgeSecurityServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesGetResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesGetResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesGetResponse(contentType, httpRes.statusCode()) {{
             networkEdgeSecurityService = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class NetworkEdgeSecurityServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesInsertResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesInsertResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class NetworkEdgeSecurityServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesPatchResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesPatchResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEdgeSecurityServicesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

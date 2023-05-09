@@ -15,9 +15,11 @@ public class DuplicateTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskDuplicateRequest data;
+
     public DuplicateTaskRequestBody withData(org.openapis.openapi.models.shared.TaskDuplicateRequest data) {
         this.data = data;
         return this;
     }
     
+    public DuplicateTaskRequestBody(){}
 }

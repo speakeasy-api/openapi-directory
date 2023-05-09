@@ -15,9 +15,11 @@ public class DeregisterTaskDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinition")
     public TaskDefinition taskDefinition;
+
     public DeregisterTaskDefinitionResponse withTaskDefinition(TaskDefinition taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
     }
     
+    public DeregisterTaskDefinitionResponse(){}
 }

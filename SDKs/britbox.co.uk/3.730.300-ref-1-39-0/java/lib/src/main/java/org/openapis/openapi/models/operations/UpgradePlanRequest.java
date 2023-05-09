@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpgradePlanRequest {
@@ -12,6 +13,7 @@ public class UpgradePlanRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvUpgradePlanRequest itvUpgradePlanRequest;
+
     public UpgradePlanRequest withItvUpgradePlanRequest(org.openapis.openapi.models.shared.ItvUpgradePlanRequest itvUpgradePlanRequest) {
         this.itvUpgradePlanRequest = itvUpgradePlanRequest;
         return this;
@@ -32,6 +34,7 @@ public class UpgradePlanRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public UpgradePlanRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class UpgradePlanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public UpgradePlanRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public UpgradePlanRequest(@JsonProperty("ItvUpgradePlanRequest") org.openapis.openapi.models.shared.ItvUpgradePlanRequest itvUpgradePlanRequest, @JsonProperty("platform") String platform) {
+        this.itvUpgradePlanRequest = itvUpgradePlanRequest;
+        this.platform = platform;
+  }
 }

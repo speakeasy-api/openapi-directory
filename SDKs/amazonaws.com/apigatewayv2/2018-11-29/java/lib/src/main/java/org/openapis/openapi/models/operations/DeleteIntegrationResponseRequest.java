@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteIntegrationResponseRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteIntegrationResponseRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteIntegrationResponseRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteIntegrationResponseRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteIntegrationResponseRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteIntegrationResponseRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteIntegrationResponseRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteIntegrationResponseRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DeleteIntegrationResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public DeleteIntegrationResponseRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -71,6 +80,7 @@ public class DeleteIntegrationResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationId")
     public String integrationId;
+
     public DeleteIntegrationResponseRequest withIntegrationId(String integrationId) {
         this.integrationId = integrationId;
         return this;
@@ -81,9 +91,15 @@ public class DeleteIntegrationResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationResponseId")
     public String integrationResponseId;
+
     public DeleteIntegrationResponseRequest withIntegrationResponseId(String integrationResponseId) {
         this.integrationResponseId = integrationResponseId;
         return this;
     }
     
+    public DeleteIntegrationResponseRequest(@JsonProperty("apiId") String apiId, @JsonProperty("integrationId") String integrationId, @JsonProperty("integrationResponseId") String integrationResponseId) {
+        this.apiId = apiId;
+        this.integrationId = integrationId;
+        this.integrationResponseId = integrationResponseId;
+  }
 }

@@ -18,6 +18,7 @@ public class IsInstanceUpgradeableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeImage")
     public String upgradeImage;
+
     public IsInstanceUpgradeableResponse withUpgradeImage(String upgradeImage) {
         this.upgradeImage = upgradeImage;
         return this;
@@ -29,6 +30,7 @@ public class IsInstanceUpgradeableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeInfo")
     public String upgradeInfo;
+
     public IsInstanceUpgradeableResponse withUpgradeInfo(String upgradeInfo) {
         this.upgradeInfo = upgradeInfo;
         return this;
@@ -40,6 +42,7 @@ public class IsInstanceUpgradeableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeVersion")
     public String upgradeVersion;
+
     public IsInstanceUpgradeableResponse withUpgradeVersion(String upgradeVersion) {
         this.upgradeVersion = upgradeVersion;
         return this;
@@ -51,9 +54,11 @@ public class IsInstanceUpgradeableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeable")
     public Boolean upgradeable;
+
     public IsInstanceUpgradeableResponse withUpgradeable(Boolean upgradeable) {
         this.upgradeable = upgradeable;
         return this;
     }
     
+    public IsInstanceUpgradeableResponse(){}
 }

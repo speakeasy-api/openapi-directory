@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Impact {
     @JsonProperty("MaxImpact")
     public Double maxImpact;
+
     public Impact withMaxImpact(Double maxImpact) {
         this.maxImpact = maxImpact;
         return this;
@@ -22,6 +23,7 @@ public class Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalActualSpend")
     public Double totalActualSpend;
+
     public Impact withTotalActualSpend(Double totalActualSpend) {
         this.totalActualSpend = totalActualSpend;
         return this;
@@ -30,6 +32,7 @@ public class Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalExpectedSpend")
     public Double totalExpectedSpend;
+
     public Impact withTotalExpectedSpend(Double totalExpectedSpend) {
         this.totalExpectedSpend = totalExpectedSpend;
         return this;
@@ -38,6 +41,7 @@ public class Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalImpact")
     public Double totalImpact;
+
     public Impact withTotalImpact(Double totalImpact) {
         this.totalImpact = totalImpact;
         return this;
@@ -46,9 +50,13 @@ public class Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalImpactPercentage")
     public Double totalImpactPercentage;
+
     public Impact withTotalImpactPercentage(Double totalImpactPercentage) {
         this.totalImpactPercentage = totalImpactPercentage;
         return this;
     }
     
+    public Impact(@JsonProperty("MaxImpact") Double maxImpact) {
+        this.maxImpact = maxImpact;
+  }
 }

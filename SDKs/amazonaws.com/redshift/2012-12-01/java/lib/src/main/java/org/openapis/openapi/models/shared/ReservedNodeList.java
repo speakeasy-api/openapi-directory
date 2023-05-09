@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservedNodeList {
     
     public String currencyCode;
+
     public ReservedNodeList withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -19,6 +20,7 @@ public class ReservedNodeList {
     
     
     public Long duration;
+
     public ReservedNodeList withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class ReservedNodeList {
     
     
     public Double fixedPrice;
+
     public ReservedNodeList withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -33,6 +36,7 @@ public class ReservedNodeList {
     
     
     public Long nodeCount;
+
     public ReservedNodeList withNodeCount(Long nodeCount) {
         this.nodeCount = nodeCount;
         return this;
@@ -40,6 +44,7 @@ public class ReservedNodeList {
     
     
     public String nodeType;
+
     public ReservedNodeList withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -47,6 +52,7 @@ public class ReservedNodeList {
     
     
     public String offeringType;
+
     public ReservedNodeList withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -54,6 +60,7 @@ public class ReservedNodeList {
     
     
     public RecurringChargeList[] recurringCharges;
+
     public ReservedNodeList withRecurringCharges(RecurringChargeList[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -61,6 +68,7 @@ public class ReservedNodeList {
     
     
     public String reservedNodeId;
+
     public ReservedNodeList withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
@@ -68,6 +76,7 @@ public class ReservedNodeList {
     
     
     public String reservedNodeOfferingId;
+
     public ReservedNodeList withReservedNodeOfferingId(String reservedNodeOfferingId) {
         this.reservedNodeOfferingId = reservedNodeOfferingId;
         return this;
@@ -75,6 +84,7 @@ public class ReservedNodeList {
     
     
     public ReservedNodeOfferingTypeEnum reservedNodeOfferingType;
+
     public ReservedNodeList withReservedNodeOfferingType(ReservedNodeOfferingTypeEnum reservedNodeOfferingType) {
         this.reservedNodeOfferingType = reservedNodeOfferingType;
         return this;
@@ -82,6 +92,7 @@ public class ReservedNodeList {
     
     
     public OffsetDateTime startTime;
+
     public ReservedNodeList withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -89,6 +100,7 @@ public class ReservedNodeList {
     
     
     public String state;
+
     public ReservedNodeList withState(String state) {
         this.state = state;
         return this;
@@ -96,9 +108,11 @@ public class ReservedNodeList {
     
     
     public Double usagePrice;
+
     public ReservedNodeList withUsagePrice(Double usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public ReservedNodeList(){}
 }

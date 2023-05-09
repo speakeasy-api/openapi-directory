@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDataRetentionResponse {
@@ -12,6 +13,7 @@ public class UpdateDataRetentionResponse {
      */
     
     public Object clientLimitExceededException;
+
     public UpdateDataRetentionResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDataRetentionResponse {
     
     
     public String contentType;
+
     public UpdateDataRetentionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDataRetentionResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateDataRetentionResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDataRetentionResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateDataRetentionResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDataRetentionResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateDataRetentionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDataRetentionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDataRetentionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateDataRetentionResponse {
     
     
     public Integer statusCode;
+
     public UpdateDataRetentionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDataRetentionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDataRetentionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDataRetentionResponse {
      */
     
     public java.util.Map<String, Object> updateDataRetentionOutput;
+
     public UpdateDataRetentionResponse withUpdateDataRetentionOutput(java.util.Map<String, Object> updateDataRetentionOutput) {
         this.updateDataRetentionOutput = updateDataRetentionOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateDataRetentionResponse {
      */
     
     public Object versionMismatchException;
+
     public UpdateDataRetentionResponse withVersionMismatchException(Object versionMismatchException) {
         this.versionMismatchException = versionMismatchException;
         return this;
     }
     
+    public UpdateDataRetentionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

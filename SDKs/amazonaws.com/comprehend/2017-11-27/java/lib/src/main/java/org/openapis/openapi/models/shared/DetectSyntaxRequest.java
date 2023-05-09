@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectSyntaxRequest {
     @JsonProperty("LanguageCode")
     public SyntaxLanguageCodeEnum languageCode;
+
     public DetectSyntaxRequest withLanguageCode(SyntaxLanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -16,9 +17,14 @@ public class DetectSyntaxRequest {
     
     @JsonProperty("Text")
     public String text;
+
     public DetectSyntaxRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DetectSyntaxRequest(@JsonProperty("LanguageCode") SyntaxLanguageCodeEnum languageCode, @JsonProperty("Text") String text) {
+        this.languageCode = languageCode;
+        this.text = text;
+  }
 }

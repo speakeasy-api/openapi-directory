@@ -15,6 +15,7 @@ public class GetQuery200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetQuery200ApplicationJSONResultAstPackagePathTypeEnum type;
+
     public GetQuery200ApplicationJSONResultAstPackagePath withType(GetQuery200ApplicationJSONResultAstPackagePathTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class GetQuery200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetQuery200ApplicationJSONResultAstPackagePath withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetQuery200ApplicationJSONResultAstPackagePath(){}
 }

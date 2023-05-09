@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class YoutubeLiveChatModeratorsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public YoutubeLiveChatModeratorsListSecurityOption1 option1;
+
     public YoutubeLiveChatModeratorsListSecurity withOption1(YoutubeLiveChatModeratorsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class YoutubeLiveChatModeratorsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeLiveChatModeratorsListSecurityOption2 option2;
+
     public YoutubeLiveChatModeratorsListSecurity withOption2(YoutubeLiveChatModeratorsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class YoutubeLiveChatModeratorsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeLiveChatModeratorsListSecurityOption3 option3;
+
     public YoutubeLiveChatModeratorsListSecurity withOption3(YoutubeLiveChatModeratorsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public YoutubeLiveChatModeratorsListSecurity(){}
 }

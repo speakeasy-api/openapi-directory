@@ -18,6 +18,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attackComplexity")
     public CVSSv3AttackComplexityEnum attackComplexity;
+
     public CVSSv3 withAttackComplexity(CVSSv3AttackComplexityEnum attackComplexity) {
         this.attackComplexity = attackComplexity;
         return this;
@@ -29,6 +30,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attackVector")
     public CVSSv3AttackVectorEnum attackVector;
+
     public CVSSv3 withAttackVector(CVSSv3AttackVectorEnum attackVector) {
         this.attackVector = attackVector;
         return this;
@@ -40,6 +42,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityImpact")
     public CVSSv3AvailabilityImpactEnum availabilityImpact;
+
     public CVSSv3 withAvailabilityImpact(CVSSv3AvailabilityImpactEnum availabilityImpact) {
         this.availabilityImpact = availabilityImpact;
         return this;
@@ -51,6 +54,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseScore")
     public Float baseScore;
+
     public CVSSv3 withBaseScore(Float baseScore) {
         this.baseScore = baseScore;
         return this;
@@ -62,6 +66,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialityImpact")
     public CVSSv3ConfidentialityImpactEnum confidentialityImpact;
+
     public CVSSv3 withConfidentialityImpact(CVSSv3ConfidentialityImpactEnum confidentialityImpact) {
         this.confidentialityImpact = confidentialityImpact;
         return this;
@@ -73,6 +78,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exploitabilityScore")
     public Float exploitabilityScore;
+
     public CVSSv3 withExploitabilityScore(Float exploitabilityScore) {
         this.exploitabilityScore = exploitabilityScore;
         return this;
@@ -84,6 +90,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impactScore")
     public Float impactScore;
+
     public CVSSv3 withImpactScore(Float impactScore) {
         this.impactScore = impactScore;
         return this;
@@ -95,6 +102,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrityImpact")
     public CVSSv3IntegrityImpactEnum integrityImpact;
+
     public CVSSv3 withIntegrityImpact(CVSSv3IntegrityImpactEnum integrityImpact) {
         this.integrityImpact = integrityImpact;
         return this;
@@ -106,6 +114,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privilegesRequired")
     public CVSSv3PrivilegesRequiredEnum privilegesRequired;
+
     public CVSSv3 withPrivilegesRequired(CVSSv3PrivilegesRequiredEnum privilegesRequired) {
         this.privilegesRequired = privilegesRequired;
         return this;
@@ -117,6 +126,7 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public CVSSv3ScopeEnum scope;
+
     public CVSSv3 withScope(CVSSv3ScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -128,9 +138,11 @@ public class CVSSv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInteraction")
     public CVSSv3UserInteractionEnum userInteraction;
+
     public CVSSv3 withUserInteraction(CVSSv3UserInteractionEnum userInteraction) {
         this.userInteraction = userInteraction;
         return this;
     }
     
+    public CVSSv3(){}
 }

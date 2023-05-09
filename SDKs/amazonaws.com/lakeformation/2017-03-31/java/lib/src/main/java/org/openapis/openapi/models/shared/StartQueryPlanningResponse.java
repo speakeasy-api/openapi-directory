@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartQueryPlanningResponse {
     @JsonProperty("QueryId")
     public String queryId;
+
     public StartQueryPlanningResponse withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
     }
     
+    public StartQueryPlanningResponse(@JsonProperty("QueryId") String queryId) {
+        this.queryId = queryId;
+  }
 }

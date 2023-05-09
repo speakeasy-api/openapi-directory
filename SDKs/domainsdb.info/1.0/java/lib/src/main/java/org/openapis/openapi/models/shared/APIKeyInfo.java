@@ -18,6 +18,7 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_email")
     public String customerEmail;
+
     public APIKeyInfo withCustomerEmail(String customerEmail) {
         this.customerEmail = customerEmail;
         return this;
@@ -29,6 +30,7 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_name")
     public String customerName;
+
     public APIKeyInfo withCustomerName(String customerName) {
         this.customerName = customerName;
         return this;
@@ -40,6 +42,7 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public String expires;
+
     public APIKeyInfo withExpires(String expires) {
         this.expires = expires;
         return this;
@@ -51,6 +54,7 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     public String itemId;
+
     public APIKeyInfo withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -62,6 +66,7 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_name")
     public String itemName;
+
     public APIKeyInfo withItemName(String itemName) {
         this.itemName = itemName;
         return this;
@@ -73,6 +78,7 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public String license;
+
     public APIKeyInfo withLicense(String license) {
         this.license = license;
         return this;
@@ -84,6 +90,7 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license_limit")
     public String licenseLimit;
+
     public APIKeyInfo withLicenseLimit(String licenseLimit) {
         this.licenseLimit = licenseLimit;
         return this;
@@ -95,6 +102,7 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_id")
     public String priceId;
+
     public APIKeyInfo withPriceId(String priceId) {
         this.priceId = priceId;
         return this;
@@ -106,9 +114,11 @@ public class APIKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public APIKeyInfo withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public APIKeyInfo(){}
 }

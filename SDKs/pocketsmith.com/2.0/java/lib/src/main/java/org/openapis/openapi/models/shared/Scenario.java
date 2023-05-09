@@ -15,6 +15,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("achieve_date")
     public String achieveDate;
+
     public Scenario withAchieveDate(String achieveDate) {
         this.achieveDate = achieveDate;
         return this;
@@ -26,6 +27,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closing_balance")
     public Double closingBalance;
+
     public Scenario withClosingBalance(Double closingBalance) {
         this.closingBalance = closingBalance;
         return this;
@@ -37,6 +39,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closing_balance_date")
     public String closingBalanceDate;
+
     public Scenario withClosingBalanceDate(String closingBalanceDate) {
         this.closingBalanceDate = closingBalanceDate;
         return this;
@@ -48,6 +51,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Scenario withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -59,6 +63,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_balance")
     public Double currentBalance;
+
     public Scenario withCurrentBalance(Double currentBalance) {
         this.currentBalance = currentBalance;
         return this;
@@ -70,6 +75,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_balance_date")
     public String currentBalanceDate;
+
     public Scenario withCurrentBalanceDate(String currentBalanceDate) {
         this.currentBalanceDate = currentBalanceDate;
         return this;
@@ -81,6 +87,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_balance_exchange_rate")
     public Double currentBalanceExchangeRate;
+
     public Scenario withCurrentBalanceExchangeRate(Double currentBalanceExchangeRate) {
         this.currentBalanceExchangeRate = currentBalanceExchangeRate;
         return this;
@@ -92,6 +99,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_balance_in_base_currency")
     public Double currentBalanceInBaseCurrency;
+
     public Scenario withCurrentBalanceInBaseCurrency(Double currentBalanceInBaseCurrency) {
         this.currentBalanceInBaseCurrency = currentBalanceInBaseCurrency;
         return this;
@@ -103,6 +111,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Scenario withDescription(String description) {
         this.description = description;
         return this;
@@ -114,6 +123,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Scenario withId(Long id) {
         this.id = id;
         return this;
@@ -125,6 +135,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interest_rate")
     public Double interestRate;
+
     public Scenario withInterestRate(Double interestRate) {
         this.interestRate = interestRate;
         return this;
@@ -136,6 +147,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interest_rate_repeat_id")
     public Long interestRateRepeatId;
+
     public Scenario withInterestRateRepeatId(Long interestRateRepeatId) {
         this.interestRateRepeatId = interestRateRepeatId;
         return this;
@@ -144,6 +156,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum-value")
     public Double maximumValue;
+
     public Scenario withMaximumValue(Double maximumValue) {
         this.maximumValue = maximumValue;
         return this;
@@ -152,6 +165,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum-value")
     public Double minimumValue;
+
     public Scenario withMinimumValue(Double minimumValue) {
         this.minimumValue = minimumValue;
         return this;
@@ -163,6 +177,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safe_balance")
     public Double safeBalance;
+
     public Scenario withSafeBalance(Double safeBalance) {
         this.safeBalance = safeBalance;
         return this;
@@ -174,6 +189,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safe_balance_in_base_currency")
     public Double safeBalanceInBaseCurrency;
+
     public Scenario withSafeBalanceInBaseCurrency(Double safeBalanceInBaseCurrency) {
         this.safeBalanceInBaseCurrency = safeBalanceInBaseCurrency;
         return this;
@@ -185,6 +201,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starting_balance")
     public Double startingBalance;
+
     public Scenario withStartingBalance(Double startingBalance) {
         this.startingBalance = startingBalance;
         return this;
@@ -196,6 +213,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starting_balance_date")
     public String startingBalanceDate;
+
     public Scenario withStartingBalanceDate(String startingBalanceDate) {
         this.startingBalanceDate = startingBalanceDate;
         return this;
@@ -207,6 +225,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Scenario withTitle(String title) {
         this.title = title;
         return this;
@@ -218,6 +237,7 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ScenarioTypeEnum type;
+
     public Scenario withType(ScenarioTypeEnum type) {
         this.type = type;
         return this;
@@ -229,9 +249,11 @@ public class Scenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Scenario withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Scenario(){}
 }

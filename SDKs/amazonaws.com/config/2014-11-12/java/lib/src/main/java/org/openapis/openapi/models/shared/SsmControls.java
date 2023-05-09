@@ -15,6 +15,7 @@ public class SsmControls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConcurrentExecutionRatePercentage")
     public Long concurrentExecutionRatePercentage;
+
     public SsmControls withConcurrentExecutionRatePercentage(Long concurrentExecutionRatePercentage) {
         this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
         return this;
@@ -23,9 +24,11 @@ public class SsmControls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorPercentage")
     public Long errorPercentage;
+
     public SsmControls withErrorPercentage(Long errorPercentage) {
         this.errorPercentage = errorPercentage;
         return this;
     }
     
+    public SsmControls(){}
 }

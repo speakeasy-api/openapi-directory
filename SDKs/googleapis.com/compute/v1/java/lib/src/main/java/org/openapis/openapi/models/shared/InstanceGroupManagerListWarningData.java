@@ -15,6 +15,7 @@ public class InstanceGroupManagerListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public InstanceGroupManagerListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagerListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InstanceGroupManagerListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceGroupManagerListWarningData(){}
 }

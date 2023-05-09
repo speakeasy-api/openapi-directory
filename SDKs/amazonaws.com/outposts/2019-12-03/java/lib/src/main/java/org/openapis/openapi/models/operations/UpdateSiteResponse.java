@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSiteResponse {
@@ -12,6 +13,7 @@ public class UpdateSiteResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateSiteResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateSiteResponse {
      */
     
     public Object conflictException;
+
     public UpdateSiteResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSiteResponse {
     
     
     public String contentType;
+
     public UpdateSiteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSiteResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSiteResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSiteResponse {
      */
     
     public Object notFoundException;
+
     public UpdateSiteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSiteResponse {
     
     
     public Integer statusCode;
+
     public UpdateSiteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSiteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSiteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSiteResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSiteOutput updateSiteOutput;
+
     public UpdateSiteResponse withUpdateSiteOutput(org.openapis.openapi.models.shared.UpdateSiteOutput updateSiteOutput) {
         this.updateSiteOutput = updateSiteOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSiteResponse {
      */
     
     public Object validationException;
+
     public UpdateSiteResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSiteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

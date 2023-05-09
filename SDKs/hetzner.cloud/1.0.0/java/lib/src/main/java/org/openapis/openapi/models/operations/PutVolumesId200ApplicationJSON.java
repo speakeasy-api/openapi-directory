@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutVolumesId200ApplicationJSON {
     @JsonProperty("volume")
     public PutVolumesId200ApplicationJSONVolume volume;
+
     public PutVolumesId200ApplicationJSON withVolume(PutVolumesId200ApplicationJSONVolume volume) {
         this.volume = volume;
         return this;
     }
     
+    public PutVolumesId200ApplicationJSON(@JsonProperty("volume") PutVolumesId200ApplicationJSONVolume volume) {
+        this.volume = volume;
+  }
 }

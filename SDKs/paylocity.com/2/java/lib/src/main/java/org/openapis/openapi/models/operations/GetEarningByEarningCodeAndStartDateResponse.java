@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEarningByEarningCodeAndStartDateResponse {
     
     public String contentType;
+
     public GetEarningByEarningCodeAndStartDateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEarningByEarningCodeAndStartDateResponse {
     
     
     public Integer statusCode;
+
     public GetEarningByEarningCodeAndStartDateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetEarningByEarningCodeAndStartDateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEarningByEarningCodeAndStartDateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetEarningByEarningCodeAndStartDateResponse {
      */
     
     public org.openapis.openapi.models.shared.Earning earning;
+
     public GetEarningByEarningCodeAndStartDateResponse withEarning(org.openapis.openapi.models.shared.Earning earning) {
         this.earning = earning;
         return this;
@@ -43,9 +48,14 @@ public class GetEarningByEarningCodeAndStartDateResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetEarningByEarningCodeAndStartDateResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetEarningByEarningCodeAndStartDateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartShardId")
     public String exclusiveStartShardId;
+
     public DescribeStreamInput withExclusiveStartShardId(String exclusiveStartShardId) {
         this.exclusiveStartShardId = exclusiveStartShardId;
         return this;
@@ -23,6 +24,7 @@ public class DescribeStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeStreamInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -31,6 +33,7 @@ public class DescribeStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DescribeStreamInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -39,9 +42,11 @@ public class DescribeStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public DescribeStreamInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public DescribeStreamInput(){}
 }

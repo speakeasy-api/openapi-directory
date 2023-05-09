@@ -12,6 +12,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquirerIdDe32")
     public String acquirerIdDe32;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withAcquirerIdDe32(String acquirerIdDe32) {
         this.acquirerIdDe32 = acquirerIdDe32;
         return this;
@@ -20,6 +21,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAmtDe54")
     public String additionalAmtDe54;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withAdditionalAmtDe54(String additionalAmtDe54) {
         this.additionalAmtDe54 = additionalAmtDe54;
         return this;
@@ -28,6 +30,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalDataDe124")
     public String additionalDataDe124;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withAdditionalDataDe124(String additionalDataDe124) {
         this.additionalDataDe124 = additionalDataDe124;
         return this;
@@ -36,6 +39,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalDataDe48")
     public String additionalDataDe48;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withAdditionalDataDe48(String additionalDataDe48) {
         this.additionalDataDe48 = additionalDataDe48;
         return this;
@@ -44,6 +48,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCodeDe38")
     public String authCodeDe38;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withAuthCodeDe38(String authCodeDe38) {
         this.authCodeDe38 = authCodeDe38;
         return this;
@@ -52,6 +57,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorisedByGps")
     public String authorisedByGps;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withAuthorisedByGps(String authorisedByGps) {
         this.authorisedByGps = authorisedByGps;
         return this;
@@ -60,6 +66,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avsResult")
     public String avsResult;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withAvsResult(String avsResult) {
         this.avsResult = avsResult;
         return this;
@@ -68,6 +75,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billAmt")
     public Long billAmt;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withBillAmt(Long billAmt) {
         this.billAmt = billAmt;
         return this;
@@ -76,6 +84,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billCcy")
     public String billCcy;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withBillCcy(String billCcy) {
         this.billCcy = billCcy;
         return this;
@@ -84,6 +93,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryDate")
     public String expiryDate;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -92,6 +102,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mccCode")
     public String mccCode;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withMccCode(String mccCode) {
         this.mccCode = mccCode;
         return this;
@@ -100,6 +111,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchIdDe42")
     public String merchIdDe42;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withMerchIdDe42(String merchIdDe42) {
         this.merchIdDe42 = merchIdDe42;
         return this;
@@ -108,6 +120,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchNameDe43")
     public String merchNameDe43;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withMerchNameDe43(String merchNameDe43) {
         this.merchNameDe43 = merchNameDe43;
         return this;
@@ -116,6 +129,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtId")
     public String mtId;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withMtId(String mtId) {
         this.mtId = mtId;
         return this;
@@ -124,6 +138,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posDataDe22")
     public String posDataDe22;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withPosDataDe22(String posDataDe22) {
         this.posDataDe22 = posDataDe22;
         return this;
@@ -132,6 +147,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posDataDe61")
     public String posDataDe61;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withPosDataDe61(String posDataDe61) {
         this.posDataDe61 = posDataDe61;
         return this;
@@ -140,6 +156,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posTermnlDe41")
     public String posTermnlDe41;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withPosTermnlDe41(String posTermnlDe41) {
         this.posTermnlDe41 = posTermnlDe41;
         return this;
@@ -148,6 +165,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("procCode")
     public String procCode;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withProcCode(String procCode) {
         this.procCode = procCode;
         return this;
@@ -156,6 +174,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordDataDe120")
     public String recordDataDe120;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withRecordDataDe120(String recordDataDe120) {
         this.recordDataDe120 = recordDataDe120;
         return this;
@@ -164,6 +183,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("respCodeDe39")
     public String respCodeDe39;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withRespCodeDe39(String respCodeDe39) {
         this.respCodeDe39 = respCodeDe39;
         return this;
@@ -172,6 +192,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retRefNoDe37")
     public String retRefNoDe37;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withRetRefNoDe37(String retRefNoDe37) {
         this.retRefNoDe37 = retRefNoDe37;
         return this;
@@ -180,6 +201,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public String statusCode;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -188,6 +210,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withToken(String token) {
         this.token = token;
         return this;
@@ -196,6 +219,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnAmt4d")
     public Long txnAmt4d;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withTxnAmt4d(Long txnAmt4d) {
         this.txnAmt4d = txnAmt4d;
         return this;
@@ -204,6 +228,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnCcy")
     public String txnCcy;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withTxnCcy(String txnCcy) {
         this.txnCcy = txnCcy;
         return this;
@@ -212,6 +237,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnCtry")
     public String txnCtry;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withTxnCtry(String txnCtry) {
         this.txnCtry = txnCtry;
         return this;
@@ -220,6 +246,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnDesc")
     public String txnDesc;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withTxnDesc(String txnDesc) {
         this.txnDesc = txnDesc;
         return this;
@@ -228,6 +255,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnStatCode")
     public String txnStatCode;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withTxnStatCode(String txnStatCode) {
         this.txnStatCode = txnStatCode;
         return this;
@@ -236,9 +264,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnType")
     public String txnType;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant withTxnType(String txnType) {
         this.txnType = txnType;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyCardPaymentCardMerchant(){}
 }

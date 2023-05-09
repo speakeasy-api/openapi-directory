@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse {
     
     public String contentType;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
     
     
     public Integer statusCode;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
      */
     
     public org.openapis.openapi.models.shared.SingleComparisonTest singleComparisonTest;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse withSingleComparisonTest(org.openapis.openapi.models.shared.SingleComparisonTest singleComparisonTest) {
         this.singleComparisonTest = singleComparisonTest;
         return this;
     }
     
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class UpdateDataRetentionRequestBody {
      */
     @JsonProperty("CurrentVersion")
     public String currentVersion;
+
     public UpdateDataRetentionRequestBody withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -24,6 +25,7 @@ public class UpdateDataRetentionRequestBody {
      */
     @JsonProperty("DataRetentionChangeInHours")
     public Long dataRetentionChangeInHours;
+
     public UpdateDataRetentionRequestBody withDataRetentionChangeInHours(Long dataRetentionChangeInHours) {
         this.dataRetentionChangeInHours = dataRetentionChangeInHours;
         return this;
@@ -34,6 +36,7 @@ public class UpdateDataRetentionRequestBody {
      */
     @JsonProperty("Operation")
     public UpdateDataRetentionRequestBodyOperationEnum operation;
+
     public UpdateDataRetentionRequestBody withOperation(UpdateDataRetentionRequestBodyOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -45,6 +48,7 @@ public class UpdateDataRetentionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UpdateDataRetentionRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -56,9 +60,15 @@ public class UpdateDataRetentionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public UpdateDataRetentionRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public UpdateDataRetentionRequestBody(@JsonProperty("CurrentVersion") String currentVersion, @JsonProperty("DataRetentionChangeInHours") Long dataRetentionChangeInHours, @JsonProperty("Operation") UpdateDataRetentionRequestBodyOperationEnum operation) {
+        this.currentVersion = currentVersion;
+        this.dataRetentionChangeInHours = dataRetentionChangeInHours;
+        this.operation = operation;
+  }
 }

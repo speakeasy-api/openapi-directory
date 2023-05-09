@@ -15,6 +15,7 @@ public class Grred504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Grred504ApplicationJSONErrorEnum error;
+
     public Grred504ApplicationJSON withError(Grred504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Grred504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Grred504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Grred504ApplicationJSON withErrorDescription(Grred504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Grred504ApplicationJSON(){}
 }

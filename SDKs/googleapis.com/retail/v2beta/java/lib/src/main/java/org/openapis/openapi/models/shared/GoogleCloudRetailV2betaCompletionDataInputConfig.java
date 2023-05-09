@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2betaCompletionDataInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigQuerySource")
     public GoogleCloudRetailV2betaBigQuerySource bigQuerySource;
+
     public GoogleCloudRetailV2betaCompletionDataInputConfig withBigQuerySource(GoogleCloudRetailV2betaBigQuerySource bigQuerySource) {
         this.bigQuerySource = bigQuerySource;
         return this;
     }
     
+    public GoogleCloudRetailV2betaCompletionDataInputConfig(){}
 }

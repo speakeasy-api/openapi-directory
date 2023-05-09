@@ -3,14 +3,13 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity;
 import org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest;
 import org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse;
+import org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest;
-import org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo;
 import org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo;
+import org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -20,7 +19,7 @@ public class Application {
                 .build();
 
             IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest req = new IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest = new GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest() {{
                     displayName = "provident";
                     idToken = "distinctio";
@@ -29,15 +28,15 @@ public class Application {
                         code = "unde";
                         phoneNumber = "nulla";
                         sessionInfo = "corrupti";
-                    }};
+                    }};;
                     tenantId = "illum";
                     totpVerificationInfo = new GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo() {{
                         sessionInfo = "vel";
                         verificationCode = "error";
-                    }};
-                }};
+                    }};;
+                }};;
                 accessToken = "deserunt";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "iure";
                 fields = "magnam";
                 key = "debitis";
@@ -46,18 +45,20 @@ public class Application {
                 quotaUser = "delectus";
                 uploadType = "tempora";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
-            IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse res = sdk.accounts.identitytoolkitAccountsMfaEnrollmentFinalize(req, new IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity() {{
+            IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse res = sdk.accounts.identitytoolkitAccountsMfaEnrollmentFinalize(req, new IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity("molestiae", "minus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse.isPresent()) {
+            if (res.googleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

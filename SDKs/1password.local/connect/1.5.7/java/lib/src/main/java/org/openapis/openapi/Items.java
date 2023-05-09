@@ -59,12 +59,10 @@ public class Items {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVaultItemResponse res = new org.openapis.openapi.models.operations.CreateVaultItemResponse() {{
+        org.openapis.openapi.models.operations.CreateVaultItemResponse res = new org.openapis.openapi.models.operations.CreateVaultItemResponse(contentType, httpRes.statusCode()) {{
             fullItem = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Items {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVaultItemResponse res = new org.openapis.openapi.models.operations.DeleteVaultItemResponse() {{
+        org.openapis.openapi.models.operations.DeleteVaultItemResponse res = new org.openapis.openapi.models.operations.DeleteVaultItemResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -149,12 +145,10 @@ public class Items {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVaultItemByIdResponse res = new org.openapis.openapi.models.operations.GetVaultItemByIdResponse() {{
+        org.openapis.openapi.models.operations.GetVaultItemByIdResponse res = new org.openapis.openapi.models.operations.GetVaultItemByIdResponse(contentType, httpRes.statusCode()) {{
             fullItem = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,12 +197,10 @@ public class Items {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVaultItemsResponse res = new org.openapis.openapi.models.operations.GetVaultItemsResponse() {{
+        org.openapis.openapi.models.operations.GetVaultItemsResponse res = new org.openapis.openapi.models.operations.GetVaultItemsResponse(contentType, httpRes.statusCode()) {{
             items = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -257,12 +249,10 @@ public class Items {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchVaultItemResponse res = new org.openapis.openapi.models.operations.PatchVaultItemResponse() {{
+        org.openapis.openapi.models.operations.PatchVaultItemResponse res = new org.openapis.openapi.models.operations.PatchVaultItemResponse(contentType, httpRes.statusCode()) {{
             fullItem = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -307,12 +297,10 @@ public class Items {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVaultItemResponse res = new org.openapis.openapi.models.operations.UpdateVaultItemResponse() {{
+        org.openapis.openapi.models.operations.UpdateVaultItemResponse res = new org.openapis.openapi.models.operations.UpdateVaultItemResponse(contentType, httpRes.statusCode()) {{
             fullItem = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

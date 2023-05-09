@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetargetingPostFormRequest {
@@ -12,6 +13,7 @@ public class RetargetingPostFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript;
+
     public RetargetingPostFormRequest withApiCoreDtoRetargetingRetargetingScript(org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript) {
         this.apiCoreDtoRetargetingRetargetingScript = apiCoreDtoRetargetingRetargetingScript;
         return this;
@@ -22,9 +24,14 @@ public class RetargetingPostFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public RetargetingPostFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public RetargetingPostFormRequest(@JsonProperty("Api.Core.Dto.Retargeting.RetargetingScript") org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript, @JsonProperty("id") Long id) {
+        this.apiCoreDtoRetargetingRetargetingScript = apiCoreDtoRetargetingRetargetingScript;
+        this.id = id;
+  }
 }

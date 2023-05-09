@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkspaceStatus {
     @JsonProperty("statusCode")
     public WorkspaceStatusCodeEnum statusCode;
+
     public WorkspaceStatus withStatusCode(WorkspaceStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public WorkspaceStatus(@JsonProperty("statusCode") WorkspaceStatusCodeEnum statusCode) {
+        this.statusCode = statusCode;
+  }
 }

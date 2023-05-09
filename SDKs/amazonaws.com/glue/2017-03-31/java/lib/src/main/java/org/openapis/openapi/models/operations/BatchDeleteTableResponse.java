@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteTableResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteTableResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteTableResponse batchDeleteTableResponse;
+
     public BatchDeleteTableResponse withBatchDeleteTableResponse(org.openapis.openapi.models.shared.BatchDeleteTableResponse batchDeleteTableResponse) {
         this.batchDeleteTableResponse = batchDeleteTableResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDeleteTableResponse {
     
     
     public String contentType;
+
     public BatchDeleteTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteTableResponse {
      */
     
     public Object entityNotFoundException;
+
     public BatchDeleteTableResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteTableResponse {
      */
     
     public Object glueEncryptionException;
+
     public BatchDeleteTableResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDeleteTableResponse {
      */
     
     public Object internalServiceException;
+
     public BatchDeleteTableResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class BatchDeleteTableResponse {
      */
     
     public Object invalidInputException;
+
     public BatchDeleteTableResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class BatchDeleteTableResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchDeleteTableResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class BatchDeleteTableResponse {
      */
     
     public Object resourceNotReadyException;
+
     public BatchDeleteTableResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -86,6 +95,7 @@ public class BatchDeleteTableResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class BatchDeleteTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDeleteTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

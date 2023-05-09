@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSnapshotResponse {
@@ -12,6 +13,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public CreateSnapshotResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class CreateSnapshotResponse {
     
     
     public String contentType;
+
     public CreateSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSnapshotResponse createSnapshotResponse;
+
     public CreateSnapshotResponse withCreateSnapshotResponse(org.openapis.openapi.models.shared.CreateSnapshotResponse createSnapshotResponse) {
         this.createSnapshotResponse = createSnapshotResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public CreateSnapshotResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateSnapshotResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateSnapshotResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public CreateSnapshotResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -79,6 +87,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object snapshotAlreadyExistsFault;
+
     public CreateSnapshotResponse withSnapshotAlreadyExistsFault(Object snapshotAlreadyExistsFault) {
         this.snapshotAlreadyExistsFault = snapshotAlreadyExistsFault;
         return this;
@@ -89,6 +98,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object snapshotQuotaExceededFault;
+
     public CreateSnapshotResponse withSnapshotQuotaExceededFault(Object snapshotQuotaExceededFault) {
         this.snapshotQuotaExceededFault = snapshotQuotaExceededFault;
         return this;
@@ -96,6 +106,7 @@ public class CreateSnapshotResponse {
     
     
     public Integer statusCode;
+
     public CreateSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CreateSnapshotResponse {
      */
     
     public Object tagQuotaPerResourceExceeded;
+
     public CreateSnapshotResponse withTagQuotaPerResourceExceeded(Object tagQuotaPerResourceExceeded) {
         this.tagQuotaPerResourceExceeded = tagQuotaPerResourceExceeded;
         return this;
     }
     
+    public CreateSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientLinkReferenceRequestPatient {
     @JsonProperty("careContexts")
     public CareContext[] careContexts;
+
     public PatientLinkReferenceRequestPatient withCareContexts(CareContext[] careContexts) {
         this.careContexts = careContexts;
         return this;
@@ -16,6 +17,7 @@ public class PatientLinkReferenceRequestPatient {
     
     @JsonProperty("id")
     public String id;
+
     public PatientLinkReferenceRequestPatient withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +25,15 @@ public class PatientLinkReferenceRequestPatient {
     
     @JsonProperty("referenceNumber")
     public String referenceNumber;
+
     public PatientLinkReferenceRequestPatient withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
     }
     
+    public PatientLinkReferenceRequestPatient(@JsonProperty("careContexts") CareContext[] careContexts, @JsonProperty("id") String id, @JsonProperty("referenceNumber") String referenceNumber) {
+        this.careContexts = careContexts;
+        this.id = id;
+        this.referenceNumber = referenceNumber;
+  }
 }

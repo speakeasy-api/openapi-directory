@@ -18,6 +18,7 @@ public class ReportedParallelism {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInfinite")
     public Boolean isInfinite;
+
     public ReportedParallelism withIsInfinite(Boolean isInfinite) {
         this.isInfinite = isInfinite;
         return this;
@@ -29,9 +30,11 @@ public class ReportedParallelism {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public ReportedParallelism withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ReportedParallelism(){}
 }

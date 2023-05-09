@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsRecordsDestinyRecordIntervalRewards {
     
     public DestinyDestinyItemQuantity[] intervalRewardItems;
+
     public DestinyDefinitionsRecordsDestinyRecordIntervalRewards withIntervalRewardItems(DestinyDestinyItemQuantity[] intervalRewardItems) {
         this.intervalRewardItems = intervalRewardItems;
         return this;
     }
     
+    public DestinyDefinitionsRecordsDestinyRecordIntervalRewards(){}
 }

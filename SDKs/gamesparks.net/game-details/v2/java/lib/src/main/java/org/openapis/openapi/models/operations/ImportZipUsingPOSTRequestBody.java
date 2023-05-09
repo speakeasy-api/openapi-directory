@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportZipUsingPOSTRequestBody {
@@ -12,9 +13,13 @@ public class ImportZipUsingPOSTRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public ImportZipUsingPOSTRequestBodyFile file;
+
     public ImportZipUsingPOSTRequestBody withFile(ImportZipUsingPOSTRequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public ImportZipUsingPOSTRequestBody(@JsonProperty("file") ImportZipUsingPOSTRequestBodyFile file) {
+        this.file = file;
+  }
 }

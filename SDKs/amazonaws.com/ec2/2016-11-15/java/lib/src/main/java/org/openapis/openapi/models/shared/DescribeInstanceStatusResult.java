@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceStatusResult {
     
     public DescribeInstanceStatusResultInstanceStatuses[] instanceStatuses;
+
     public DescribeInstanceStatusResult withInstanceStatuses(DescribeInstanceStatusResultInstanceStatuses[] instanceStatuses) {
         this.instanceStatuses = instanceStatuses;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceStatusResult {
     
     
     public String nextToken;
+
     public DescribeInstanceStatusResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceStatusResult(){}
 }

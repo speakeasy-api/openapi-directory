@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * OwnershipPages - Pages of ownership results
@@ -15,6 +15,7 @@ public class OwnershipPages {
      */
     
     public Long count;
+
     public OwnershipPages withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class OwnershipPages {
      */
     
     public Ownership[] list;
+
     public OwnershipPages withList(Ownership[] list) {
         this.list = list;
         return this;
@@ -35,6 +37,7 @@ public class OwnershipPages {
      */
     
     public Long pageNumber;
+
     public OwnershipPages withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -45,9 +48,14 @@ public class OwnershipPages {
      */
     
     public Long pages;
+
     public OwnershipPages withPages(Long pages) {
         this.pages = pages;
         return this;
     }
     
+    public OwnershipPages(@JsonProperty("count") Long count, @JsonProperty("list") Ownership[] list) {
+        this.count = count;
+        this.list = list;
+  }
 }

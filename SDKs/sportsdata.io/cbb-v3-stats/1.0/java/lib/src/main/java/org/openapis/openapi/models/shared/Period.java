@@ -12,6 +12,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayScore")
     public Long awayScore;
+
     public Period withAwayScore(Long awayScore) {
         this.awayScore = awayScore;
         return this;
@@ -20,6 +21,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public Period withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -28,6 +30,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeScore")
     public Long homeScore;
+
     public Period withHomeScore(Long homeScore) {
         this.homeScore = homeScore;
         return this;
@@ -36,6 +39,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Period withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public Period withNumber(Long number) {
         this.number = number;
         return this;
@@ -52,6 +57,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeriodID")
     public Long periodID;
+
     public Period withPeriodID(Long periodID) {
         this.periodID = periodID;
         return this;
@@ -60,9 +66,11 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Period withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Period(){}
 }

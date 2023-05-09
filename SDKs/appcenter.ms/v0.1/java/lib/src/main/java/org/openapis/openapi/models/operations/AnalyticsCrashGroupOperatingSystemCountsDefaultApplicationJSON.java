@@ -15,9 +15,11 @@ public class AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONError error;
+
     public AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSON withError(AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSON(){}
 }

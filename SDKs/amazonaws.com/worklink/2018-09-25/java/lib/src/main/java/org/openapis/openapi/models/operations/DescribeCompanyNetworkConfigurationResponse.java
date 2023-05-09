@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCompanyNetworkConfigurationResponse {
     
     public String contentType;
+
     public DescribeCompanyNetworkConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCompanyNetworkConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCompanyNetworkConfigurationResponse describeCompanyNetworkConfigurationResponse;
+
     public DescribeCompanyNetworkConfigurationResponse withDescribeCompanyNetworkConfigurationResponse(org.openapis.openapi.models.shared.DescribeCompanyNetworkConfigurationResponse describeCompanyNetworkConfigurationResponse) {
         this.describeCompanyNetworkConfigurationResponse = describeCompanyNetworkConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCompanyNetworkConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeCompanyNetworkConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCompanyNetworkConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeCompanyNetworkConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeCompanyNetworkConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeCompanyNetworkConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeCompanyNetworkConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCompanyNetworkConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeCompanyNetworkConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCompanyNetworkConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeCompanyNetworkConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeCompanyNetworkConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeCompanyNetworkConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeCompanyNetworkConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeCompanyNetworkConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

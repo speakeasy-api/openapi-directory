@@ -15,6 +15,7 @@ public class CodeDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeCommit")
     public CodeCommitCodeDestination codeCommit;
+
     public CodeDestination withCodeCommit(CodeCommitCodeDestination codeCommit) {
         this.codeCommit = codeCommit;
         return this;
@@ -23,9 +24,11 @@ public class CodeDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitHub")
     public GitHubCodeDestination gitHub;
+
     public CodeDestination withGitHub(GitHubCodeDestination gitHub) {
         this.gitHub = gitHub;
         return this;
     }
     
+    public CodeDestination(){}
 }

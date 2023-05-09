@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListInstanceProfilesForRoleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListInstanceProfilesForRoleActionEnum action;
+
     public GETListInstanceProfilesForRoleRequest withAction(GETListInstanceProfilesForRoleActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListInstanceProfilesForRoleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETListInstanceProfilesForRoleRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class GETListInstanceProfilesForRoleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public GETListInstanceProfilesForRoleRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -39,6 +43,7 @@ public class GETListInstanceProfilesForRoleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleName")
     public String roleName;
+
     public GETListInstanceProfilesForRoleRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -46,6 +51,7 @@ public class GETListInstanceProfilesForRoleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListInstanceProfilesForRoleVersionEnum version;
+
     public GETListInstanceProfilesForRoleRequest withVersion(GETListInstanceProfilesForRoleVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETListInstanceProfilesForRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListInstanceProfilesForRoleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETListInstanceProfilesForRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListInstanceProfilesForRoleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETListInstanceProfilesForRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListInstanceProfilesForRoleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETListInstanceProfilesForRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListInstanceProfilesForRoleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETListInstanceProfilesForRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListInstanceProfilesForRoleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETListInstanceProfilesForRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListInstanceProfilesForRoleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETListInstanceProfilesForRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListInstanceProfilesForRoleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListInstanceProfilesForRoleRequest(@JsonProperty("Action") GETListInstanceProfilesForRoleActionEnum action, @JsonProperty("RoleName") String roleName, @JsonProperty("Version") GETListInstanceProfilesForRoleVersionEnum version) {
+        this.action = action;
+        this.roleName = roleName;
+        this.version = version;
+  }
 }

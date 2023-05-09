@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaUserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directRoles")
     public String[] directRoles;
+
     public GoogleAnalyticsAdminV1alphaUserLink withDirectRoles(String[] directRoles) {
         this.directRoles = directRoles;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaUserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public GoogleAnalyticsAdminV1alphaUserLink withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaUserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaUserLink withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaUserLink(){}
 }

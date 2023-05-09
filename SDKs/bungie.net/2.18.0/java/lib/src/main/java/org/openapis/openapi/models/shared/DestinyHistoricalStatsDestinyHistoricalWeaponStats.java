@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDestinyHistoricalWeaponStats {
      */
     
     public Long referenceId;
+
     public DestinyHistoricalStatsDestinyHistoricalWeaponStats withReferenceId(Long referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -22,9 +23,11 @@ public class DestinyHistoricalStatsDestinyHistoricalWeaponStats {
      */
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values;
+
     public DestinyHistoricalStatsDestinyHistoricalWeaponStats withValues(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values) {
         this.values = values;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyHistoricalWeaponStats(){}
 }

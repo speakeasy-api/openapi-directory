@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaIntegerLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public String maxValue;
+
     public GoogleAppsDriveLabelsV2betaIntegerLimits withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2betaIntegerLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public String minValue;
+
     public GoogleAppsDriveLabelsV2betaIntegerLimits withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaIntegerLimits(){}
 }

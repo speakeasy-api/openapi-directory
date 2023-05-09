@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaCustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleAnalyticsAdminV1alphaCustomMetric withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaCustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaCustomMetric withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaCustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementUnit")
     public GoogleAnalyticsAdminV1alphaCustomMetricMeasurementUnitEnum measurementUnit;
+
     public GoogleAnalyticsAdminV1alphaCustomMetric withMeasurementUnit(GoogleAnalyticsAdminV1alphaCustomMetricMeasurementUnitEnum measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaCustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaCustomMetric withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaCustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterName")
     public String parameterName;
+
     public GoogleAnalyticsAdminV1alphaCustomMetric withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaCustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedMetricType")
     public GoogleAnalyticsAdminV1alphaCustomMetricRestrictedMetricTypeEnum[] restrictedMetricType;
+
     public GoogleAnalyticsAdminV1alphaCustomMetric withRestrictedMetricType(GoogleAnalyticsAdminV1alphaCustomMetricRestrictedMetricTypeEnum[] restrictedMetricType) {
         this.restrictedMetricType = restrictedMetricType;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAnalyticsAdminV1alphaCustomMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public GoogleAnalyticsAdminV1alphaCustomMetricScopeEnum scope;
+
     public GoogleAnalyticsAdminV1alphaCustomMetric withScope(GoogleAnalyticsAdminV1alphaCustomMetricScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaCustomMetric(){}
 }

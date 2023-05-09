@@ -15,6 +15,7 @@ public class DescribeCanariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Canaries")
     public Canary[] canaries;
+
     public DescribeCanariesResponse withCanaries(Canary[] canaries) {
         this.canaries = canaries;
         return this;
@@ -23,9 +24,11 @@ public class DescribeCanariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeCanariesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCanariesResponse(){}
 }

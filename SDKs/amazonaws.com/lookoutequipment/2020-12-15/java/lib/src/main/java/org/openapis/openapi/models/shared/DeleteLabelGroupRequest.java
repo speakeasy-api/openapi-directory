@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteLabelGroupRequest {
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public DeleteLabelGroupRequest withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
     }
     
+    public DeleteLabelGroupRequest(@JsonProperty("LabelGroupName") String labelGroupName) {
+        this.labelGroupName = labelGroupName;
+  }
 }

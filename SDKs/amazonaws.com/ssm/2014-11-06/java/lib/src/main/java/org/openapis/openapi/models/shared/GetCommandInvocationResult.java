@@ -15,6 +15,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchOutputConfig")
     public CloudWatchOutputConfig cloudWatchOutputConfig;
+
     public GetCommandInvocationResult withCloudWatchOutputConfig(CloudWatchOutputConfig cloudWatchOutputConfig) {
         this.cloudWatchOutputConfig = cloudWatchOutputConfig;
         return this;
@@ -23,6 +24,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommandId")
     public String commandId;
+
     public GetCommandInvocationResult withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -31,6 +33,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public String comment;
+
     public GetCommandInvocationResult withComment(String comment) {
         this.comment = comment;
         return this;
@@ -39,6 +42,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentName")
     public String documentName;
+
     public GetCommandInvocationResult withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -47,6 +51,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public GetCommandInvocationResult withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -55,6 +60,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionElapsedTime")
     public String executionElapsedTime;
+
     public GetCommandInvocationResult withExecutionElapsedTime(String executionElapsedTime) {
         this.executionElapsedTime = executionElapsedTime;
         return this;
@@ -63,6 +69,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionEndDateTime")
     public String executionEndDateTime;
+
     public GetCommandInvocationResult withExecutionEndDateTime(String executionEndDateTime) {
         this.executionEndDateTime = executionEndDateTime;
         return this;
@@ -71,6 +78,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionStartDateTime")
     public String executionStartDateTime;
+
     public GetCommandInvocationResult withExecutionStartDateTime(String executionStartDateTime) {
         this.executionStartDateTime = executionStartDateTime;
         return this;
@@ -79,6 +87,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public GetCommandInvocationResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -87,6 +96,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PluginName")
     public String pluginName;
+
     public GetCommandInvocationResult withPluginName(String pluginName) {
         this.pluginName = pluginName;
         return this;
@@ -95,6 +105,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseCode")
     public Long responseCode;
+
     public GetCommandInvocationResult withResponseCode(Long responseCode) {
         this.responseCode = responseCode;
         return this;
@@ -103,6 +114,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardErrorContent")
     public String standardErrorContent;
+
     public GetCommandInvocationResult withStandardErrorContent(String standardErrorContent) {
         this.standardErrorContent = standardErrorContent;
         return this;
@@ -111,6 +123,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardErrorUrl")
     public String standardErrorUrl;
+
     public GetCommandInvocationResult withStandardErrorUrl(String standardErrorUrl) {
         this.standardErrorUrl = standardErrorUrl;
         return this;
@@ -119,6 +132,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardOutputContent")
     public String standardOutputContent;
+
     public GetCommandInvocationResult withStandardOutputContent(String standardOutputContent) {
         this.standardOutputContent = standardOutputContent;
         return this;
@@ -127,6 +141,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardOutputUrl")
     public String standardOutputUrl;
+
     public GetCommandInvocationResult withStandardOutputUrl(String standardOutputUrl) {
         this.standardOutputUrl = standardOutputUrl;
         return this;
@@ -135,6 +150,7 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CommandInvocationStatusEnum status;
+
     public GetCommandInvocationResult withStatus(CommandInvocationStatusEnum status) {
         this.status = status;
         return this;
@@ -143,9 +159,11 @@ public class GetCommandInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public GetCommandInvocationResult withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
     }
     
+    public GetCommandInvocationResult(){}
 }

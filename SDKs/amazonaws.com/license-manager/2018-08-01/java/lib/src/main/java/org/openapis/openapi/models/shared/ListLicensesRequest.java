@@ -12,6 +12,7 @@ public class ListLicensesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public ListLicensesRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListLicensesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseArns")
     public String[] licenseArns;
+
     public ListLicensesRequest withLicenseArns(String[] licenseArns) {
         this.licenseArns = licenseArns;
         return this;
@@ -28,6 +30,7 @@ public class ListLicensesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLicensesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListLicensesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLicensesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLicensesRequest(){}
 }

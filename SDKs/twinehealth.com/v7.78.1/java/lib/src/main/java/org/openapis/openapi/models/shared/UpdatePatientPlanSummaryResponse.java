@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePatientPlanSummaryResponse {
     @JsonProperty("data")
     public PatientPlanSummaryResource data;
+
     public UpdatePatientPlanSummaryResponse withData(PatientPlanSummaryResource data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class UpdatePatientPlanSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CreateOrUpdateMetaResponse meta;
+
     public UpdatePatientPlanSummaryResponse withMeta(CreateOrUpdateMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public UpdatePatientPlanSummaryResponse(@JsonProperty("data") PatientPlanSummaryResource data) {
+        this.data = data;
+  }
 }

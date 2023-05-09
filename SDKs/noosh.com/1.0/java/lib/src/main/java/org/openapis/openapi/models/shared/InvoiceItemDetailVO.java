@@ -15,6 +15,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public InvoiceItemDetailVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,6 +24,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_item_id")
     public Long invoiceItemId;
+
     public InvoiceItemDetailVO withInvoiceItemId(Long invoiceItemId) {
         this.invoiceItemId = invoiceItemId;
         return this;
@@ -34,6 +36,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_cost")
     public Object itemCost;
+
     public InvoiceItemDetailVO withItemCost(Object itemCost) {
         this.itemCost = itemCost;
         return this;
@@ -42,6 +45,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_quantity")
     public Long itemQuantity;
+
     public InvoiceItemDetailVO withItemQuantity(Long itemQuantity) {
         this.itemQuantity = itemQuantity;
         return this;
@@ -53,6 +57,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_shipping")
     public Object itemShipping;
+
     public InvoiceItemDetailVO withItemShipping(Object itemShipping) {
         this.itemShipping = itemShipping;
         return this;
@@ -64,6 +69,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_sub_total")
     public Object itemSubTotal;
+
     public InvoiceItemDetailVO withItemSubTotal(Object itemSubTotal) {
         this.itemSubTotal = itemSubTotal;
         return this;
@@ -75,6 +81,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_tax")
     public Object itemTax;
+
     public InvoiceItemDetailVO withItemTax(Object itemTax) {
         this.itemTax = itemTax;
         return this;
@@ -83,6 +90,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     public Long jobId;
+
     public InvoiceItemDetailVO withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -91,6 +99,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_id")
     public Long shipmentId;
+
     public InvoiceItemDetailVO withShipmentId(Long shipmentId) {
         this.shipmentId = shipmentId;
         return this;
@@ -99,6 +108,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public InvoiceItemDetailVO withSpecName(String specName) {
         this.specName = specName;
         return this;
@@ -110,6 +120,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_cost")
     public Object transactionalItemCost;
+
     public InvoiceItemDetailVO withTransactionalItemCost(Object transactionalItemCost) {
         this.transactionalItemCost = transactionalItemCost;
         return this;
@@ -121,6 +132,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_shipping")
     public Object transactionalItemShipping;
+
     public InvoiceItemDetailVO withTransactionalItemShipping(Object transactionalItemShipping) {
         this.transactionalItemShipping = transactionalItemShipping;
         return this;
@@ -132,6 +144,7 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_sub_total")
     public Object transactionalItemSubTotal;
+
     public InvoiceItemDetailVO withTransactionalItemSubTotal(Object transactionalItemSubTotal) {
         this.transactionalItemSubTotal = transactionalItemSubTotal;
         return this;
@@ -143,9 +156,11 @@ public class InvoiceItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_tax")
     public Object transactionalItemTax;
+
     public InvoiceItemDetailVO withTransactionalItemTax(Object transactionalItemTax) {
         this.transactionalItemTax = transactionalItemTax;
         return this;
     }
     
+    public InvoiceItemDetailVO(){}
 }

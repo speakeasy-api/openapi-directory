@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatabaseUpdateCollectionResponse {
     
     public String contentType;
+
     public DatabaseUpdateCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DatabaseUpdateCollectionResponse {
     
     
     public Integer statusCode;
+
     public DatabaseUpdateCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DatabaseUpdateCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatabaseUpdateCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DatabaseUpdateCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.Collection collection;
+
     public DatabaseUpdateCollectionResponse withCollection(org.openapis.openapi.models.shared.Collection collection) {
         this.collection = collection;
         return this;
     }
     
+    public DatabaseUpdateCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

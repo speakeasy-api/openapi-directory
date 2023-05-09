@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBankTransferBatchPaymentRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
     public String batchUuid;
+
     public DeleteBankTransferBatchPaymentRequest withBatchUuid(String batchUuid) {
         this.batchUuid = batchUuid;
         return this;
@@ -16,9 +18,14 @@ public class DeleteBankTransferBatchPaymentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
     public String itemUuid;
+
     public DeleteBankTransferBatchPaymentRequest withItemUuid(String itemUuid) {
         this.itemUuid = itemUuid;
         return this;
     }
     
+    public DeleteBankTransferBatchPaymentRequest(@JsonProperty("batchUuid") String batchUuid, @JsonProperty("itemUuid") String itemUuid) {
+        this.batchUuid = batchUuid;
+        this.itemUuid = itemUuid;
+  }
 }

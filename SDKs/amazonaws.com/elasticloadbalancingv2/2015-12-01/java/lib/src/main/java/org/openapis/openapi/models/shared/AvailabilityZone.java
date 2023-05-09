@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AvailabilityZone {
     
     public LoadBalancerAddress[] loadBalancerAddresses;
+
     public AvailabilityZone withLoadBalancerAddresses(LoadBalancerAddress[] loadBalancerAddresses) {
         this.loadBalancerAddresses = loadBalancerAddresses;
         return this;
@@ -19,6 +20,7 @@ public class AvailabilityZone {
     
     
     public String outpostId;
+
     public AvailabilityZone withOutpostId(String outpostId) {
         this.outpostId = outpostId;
         return this;
@@ -26,6 +28,7 @@ public class AvailabilityZone {
     
     
     public String subnetId;
+
     public AvailabilityZone withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -33,9 +36,11 @@ public class AvailabilityZone {
     
     
     public String zoneName;
+
     public AvailabilityZone withZoneName(String zoneName) {
         this.zoneName = zoneName;
         return this;
     }
     
+    public AvailabilityZone(){}
 }

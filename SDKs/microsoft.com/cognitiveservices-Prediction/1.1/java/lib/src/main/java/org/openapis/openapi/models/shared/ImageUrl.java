@@ -17,9 +17,11 @@ public class ImageUrl {
     @JsonProperty("Url")
     @SpeakeasyMetadata("form:name=Url")
     public String url;
+
     public ImageUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImageUrl(){}
 }

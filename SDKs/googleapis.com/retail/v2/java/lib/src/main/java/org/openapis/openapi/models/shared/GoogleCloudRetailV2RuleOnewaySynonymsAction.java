@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2RuleOnewaySynonymsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onewayTerms")
     public String[] onewayTerms;
+
     public GoogleCloudRetailV2RuleOnewaySynonymsAction withOnewayTerms(String[] onewayTerms) {
         this.onewayTerms = onewayTerms;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2RuleOnewaySynonymsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryTerms")
     public String[] queryTerms;
+
     public GoogleCloudRetailV2RuleOnewaySynonymsAction withQueryTerms(String[] queryTerms) {
         this.queryTerms = queryTerms;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2RuleOnewaySynonymsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synonyms")
     public String[] synonyms;
+
     public GoogleCloudRetailV2RuleOnewaySynonymsAction withSynonyms(String[] synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public GoogleCloudRetailV2RuleOnewaySynonymsAction(){}
 }

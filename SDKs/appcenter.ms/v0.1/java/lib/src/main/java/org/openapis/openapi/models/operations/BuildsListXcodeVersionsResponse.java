@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BuildsListXcodeVersionsResponse {
     
     public String contentType;
+
     public BuildsListXcodeVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BuildsListXcodeVersionsResponse {
     
     
     public Integer statusCode;
+
     public BuildsListXcodeVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BuildsListXcodeVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BuildsListXcodeVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BuildsListXcodeVersionsResponse {
      */
     
     public BuildsListXcodeVersions200ApplicationJSON[] buildsListXcodeVersions200ApplicationJSONObjects;
+
     public BuildsListXcodeVersionsResponse withBuildsListXcodeVersions200ApplicationJSONObjects(BuildsListXcodeVersions200ApplicationJSON[] buildsListXcodeVersions200ApplicationJSONObjects) {
         this.buildsListXcodeVersions200ApplicationJSONObjects = buildsListXcodeVersions200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class BuildsListXcodeVersionsResponse {
      */
     
     public BuildsListXcodeVersionsDefaultApplicationJSON buildsListXcodeVersionsDefaultApplicationJSONObject;
+
     public BuildsListXcodeVersionsResponse withBuildsListXcodeVersionsDefaultApplicationJSONObject(BuildsListXcodeVersionsDefaultApplicationJSON buildsListXcodeVersionsDefaultApplicationJSONObject) {
         this.buildsListXcodeVersionsDefaultApplicationJSONObject = buildsListXcodeVersionsDefaultApplicationJSONObject;
         return this;
     }
     
+    public BuildsListXcodeVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

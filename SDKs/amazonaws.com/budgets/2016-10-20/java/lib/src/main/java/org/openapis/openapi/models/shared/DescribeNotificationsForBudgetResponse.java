@@ -15,6 +15,7 @@ public class DescribeNotificationsForBudgetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeNotificationsForBudgetResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeNotificationsForBudgetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notifications")
     public Notification[] notifications;
+
     public DescribeNotificationsForBudgetResponse withNotifications(Notification[] notifications) {
         this.notifications = notifications;
         return this;
     }
     
+    public DescribeNotificationsForBudgetResponse(){}
 }

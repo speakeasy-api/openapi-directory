@@ -18,6 +18,7 @@ public class ProductDeliveryTimeAreaDeliveryTimeDeliveryTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxHandlingTimeDays")
     public Integer maxHandlingTimeDays;
+
     public ProductDeliveryTimeAreaDeliveryTimeDeliveryTime withMaxHandlingTimeDays(Integer maxHandlingTimeDays) {
         this.maxHandlingTimeDays = maxHandlingTimeDays;
         return this;
@@ -29,6 +30,7 @@ public class ProductDeliveryTimeAreaDeliveryTimeDeliveryTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTransitTimeDays")
     public Integer maxTransitTimeDays;
+
     public ProductDeliveryTimeAreaDeliveryTimeDeliveryTime withMaxTransitTimeDays(Integer maxTransitTimeDays) {
         this.maxTransitTimeDays = maxTransitTimeDays;
         return this;
@@ -40,6 +42,7 @@ public class ProductDeliveryTimeAreaDeliveryTimeDeliveryTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minHandlingTimeDays")
     public Integer minHandlingTimeDays;
+
     public ProductDeliveryTimeAreaDeliveryTimeDeliveryTime withMinHandlingTimeDays(Integer minHandlingTimeDays) {
         this.minHandlingTimeDays = minHandlingTimeDays;
         return this;
@@ -51,9 +54,11 @@ public class ProductDeliveryTimeAreaDeliveryTimeDeliveryTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTransitTimeDays")
     public Integer minTransitTimeDays;
+
     public ProductDeliveryTimeAreaDeliveryTimeDeliveryTime withMinTransitTimeDays(Integer minTransitTimeDays) {
         this.minTransitTimeDays = minTransitTimeDays;
         return this;
     }
     
+    public ProductDeliveryTimeAreaDeliveryTimeDeliveryTime(){}
 }

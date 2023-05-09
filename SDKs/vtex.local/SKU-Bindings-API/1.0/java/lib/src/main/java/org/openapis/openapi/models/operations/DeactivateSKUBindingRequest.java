@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeactivateSKUBindingRequest {
@@ -12,6 +13,7 @@ public class DeactivateSKUBindingRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DeactivateSKUBindingRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class DeactivateSKUBindingRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public DeactivateSKUBindingRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class DeactivateSKUBindingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public DeactivateSKUBindingRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -42,9 +46,16 @@ public class DeactivateSKUBindingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuSellerId")
     public String skuSellerId;
+
     public DeactivateSKUBindingRequest withSkuSellerId(String skuSellerId) {
         this.skuSellerId = skuSellerId;
         return this;
     }
     
+    public DeactivateSKUBindingRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("sellerId") String sellerId, @JsonProperty("skuSellerId") String skuSellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.sellerId = sellerId;
+        this.skuSellerId = skuSellerId;
+  }
 }

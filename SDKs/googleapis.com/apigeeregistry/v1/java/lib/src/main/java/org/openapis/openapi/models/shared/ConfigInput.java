@@ -18,9 +18,11 @@ public class ConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmekKeyName")
     public String cmekKeyName;
+
     public ConfigInput withCmekKeyName(String cmekKeyName) {
         this.cmekKeyName = cmekKeyName;
         return this;
     }
     
+    public ConfigInput(){}
 }

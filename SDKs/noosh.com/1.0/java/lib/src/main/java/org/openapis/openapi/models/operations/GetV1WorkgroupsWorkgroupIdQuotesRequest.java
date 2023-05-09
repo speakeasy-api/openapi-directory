@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1WorkgroupsWorkgroupIdQuotesRequest {
@@ -12,6 +13,7 @@ public class GetV1WorkgroupsWorkgroupIdQuotesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quote_state_id, use filters={\"quote_state_id\":111111}")
     public String quoteStateIdUseFiltersEqualQuoteStateId111111;
+
     public GetV1WorkgroupsWorkgroupIdQuotesRequest withQuoteStateIdUseFiltersEqualQuoteStateId111111(String quoteStateIdUseFiltersEqualQuoteStateId111111) {
         this.quoteStateIdUseFiltersEqualQuoteStateId111111 = quoteStateIdUseFiltersEqualQuoteStateId111111;
         return this;
@@ -19,9 +21,13 @@ public class GetV1WorkgroupsWorkgroupIdQuotesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public GetV1WorkgroupsWorkgroupIdQuotesRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public GetV1WorkgroupsWorkgroupIdQuotesRequest(@JsonProperty("workgroup_id") String workgroupId) {
+        this.workgroupId = workgroupId;
+  }
 }

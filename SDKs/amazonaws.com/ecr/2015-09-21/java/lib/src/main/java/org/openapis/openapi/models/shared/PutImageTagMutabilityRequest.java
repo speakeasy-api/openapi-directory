@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutImageTagMutabilityRequest {
     @JsonProperty("imageTagMutability")
     public ImageTagMutabilityEnum imageTagMutability;
+
     public PutImageTagMutabilityRequest withImageTagMutability(ImageTagMutabilityEnum imageTagMutability) {
         this.imageTagMutability = imageTagMutability;
         return this;
@@ -19,6 +20,7 @@ public class PutImageTagMutabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public PutImageTagMutabilityRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,9 +28,14 @@ public class PutImageTagMutabilityRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutImageTagMutabilityRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PutImageTagMutabilityRequest(@JsonProperty("imageTagMutability") ImageTagMutabilityEnum imageTagMutability, @JsonProperty("repositoryName") String repositoryName) {
+        this.imageTagMutability = imageTagMutability;
+        this.repositoryName = repositoryName;
+  }
 }

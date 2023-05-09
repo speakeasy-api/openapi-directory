@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeVpnGatewaysAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeVpnGatewaysAggregatedListSecurityOption1 option1;
+
     public ComputeVpnGatewaysAggregatedListSecurity withOption1(ComputeVpnGatewaysAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeVpnGatewaysAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeVpnGatewaysAggregatedListSecurityOption2 option2;
+
     public ComputeVpnGatewaysAggregatedListSecurity withOption2(ComputeVpnGatewaysAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeVpnGatewaysAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeVpnGatewaysAggregatedListSecurityOption3 option3;
+
     public ComputeVpnGatewaysAggregatedListSecurity withOption3(ComputeVpnGatewaysAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeVpnGatewaysAggregatedListSecurity(){}
 }

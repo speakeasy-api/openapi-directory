@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAssessmentTargetRequest {
     @JsonProperty("assessmentTargetArn")
     public String assessmentTargetArn;
+
     public DeleteAssessmentTargetRequest withAssessmentTargetArn(String assessmentTargetArn) {
         this.assessmentTargetArn = assessmentTargetArn;
         return this;
     }
     
+    public DeleteAssessmentTargetRequest(@JsonProperty("assessmentTargetArn") String assessmentTargetArn) {
+        this.assessmentTargetArn = assessmentTargetArn;
+  }
 }

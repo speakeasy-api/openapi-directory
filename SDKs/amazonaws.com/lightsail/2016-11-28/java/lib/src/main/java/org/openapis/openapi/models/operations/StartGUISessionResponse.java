@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartGUISessionResponse {
@@ -12,6 +13,7 @@ public class StartGUISessionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartGUISessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartGUISessionResponse {
     
     
     public String contentType;
+
     public StartGUISessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartGUISessionResponse {
      */
     
     public Object invalidInputException;
+
     public StartGUISessionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class StartGUISessionResponse {
      */
     
     public Object notFoundException;
+
     public StartGUISessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartGUISessionResponse {
      */
     
     public Object serviceException;
+
     public StartGUISessionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -59,6 +65,7 @@ public class StartGUISessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartGUISessionResult startGUISessionResult;
+
     public StartGUISessionResponse withStartGUISessionResult(org.openapis.openapi.models.shared.StartGUISessionResult startGUISessionResult) {
         this.startGUISessionResult = startGUISessionResult;
         return this;
@@ -66,6 +73,7 @@ public class StartGUISessionResponse {
     
     
     public Integer statusCode;
+
     public StartGUISessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartGUISessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartGUISessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartGUISessionResponse {
      */
     
     public Object unauthenticatedException;
+
     public StartGUISessionResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public StartGUISessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

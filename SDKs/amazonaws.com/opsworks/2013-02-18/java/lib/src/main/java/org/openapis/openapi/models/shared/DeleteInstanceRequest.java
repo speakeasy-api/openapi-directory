@@ -12,6 +12,7 @@ public class DeleteInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteElasticIp")
     public Boolean deleteElasticIp;
+
     public DeleteInstanceRequest withDeleteElasticIp(Boolean deleteElasticIp) {
         this.deleteElasticIp = deleteElasticIp;
         return this;
@@ -20,6 +21,7 @@ public class DeleteInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteVolumes")
     public Boolean deleteVolumes;
+
     public DeleteInstanceRequest withDeleteVolumes(Boolean deleteVolumes) {
         this.deleteVolumes = deleteVolumes;
         return this;
@@ -27,9 +29,13 @@ public class DeleteInstanceRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DeleteInstanceRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public DeleteInstanceRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

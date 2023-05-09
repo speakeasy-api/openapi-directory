@@ -18,6 +18,7 @@ public class FolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public FolderInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class FolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public FolderInput withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public FolderInput(){}
 }

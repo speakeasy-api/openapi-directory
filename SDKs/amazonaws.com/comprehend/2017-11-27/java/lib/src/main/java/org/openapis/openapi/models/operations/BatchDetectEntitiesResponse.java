@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDetectEntitiesResponse {
@@ -12,6 +13,7 @@ public class BatchDetectEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDetectEntitiesResponse batchDetectEntitiesResponse;
+
     public BatchDetectEntitiesResponse withBatchDetectEntitiesResponse(org.openapis.openapi.models.shared.BatchDetectEntitiesResponse batchDetectEntitiesResponse) {
         this.batchDetectEntitiesResponse = batchDetectEntitiesResponse;
         return this;
@@ -22,6 +24,7 @@ public class BatchDetectEntitiesResponse {
      */
     
     public Object batchSizeLimitExceededException;
+
     public BatchDetectEntitiesResponse withBatchSizeLimitExceededException(Object batchSizeLimitExceededException) {
         this.batchSizeLimitExceededException = batchSizeLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class BatchDetectEntitiesResponse {
     
     
     public String contentType;
+
     public BatchDetectEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDetectEntitiesResponse {
      */
     
     public Object internalServerException;
+
     public BatchDetectEntitiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDetectEntitiesResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchDetectEntitiesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDetectEntitiesResponse {
     
     
     public Integer statusCode;
+
     public BatchDetectEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDetectEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDetectEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchDetectEntitiesResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public BatchDetectEntitiesResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -83,9 +92,14 @@ public class BatchDetectEntitiesResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public BatchDetectEntitiesResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public BatchDetectEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -59,12 +59,10 @@ public class Experiments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateExperimentUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateExperimentUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateExperimentUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateExperimentUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             experimentModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -107,11 +105,9 @@ public class Experiments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DELETEExperimentUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETEExperimentUsingDELETEResponse() {{
+        org.openapis.openapi.models.operations.DELETEExperimentUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETEExperimentUsingDELETEResponse(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -147,12 +143,10 @@ public class Experiments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoActionExperimentUsingPOSTResponse res = new org.openapis.openapi.models.operations.DoActionExperimentUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.DoActionExperimentUsingPOSTResponse res = new org.openapis.openapi.models.operations.DoActionExperimentUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             experimentModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class Experiments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETExperimentUsingGETResponse res = new org.openapis.openapi.models.operations.GETExperimentUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETExperimentUsingGETResponse res = new org.openapis.openapi.models.operations.GETExperimentUsingGETResponse(contentType, httpRes.statusCode()) {{
             experimentModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,12 +235,10 @@ public class Experiments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETExperimentsUsingGETResponse res = new org.openapis.openapi.models.operations.GETExperimentsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETExperimentsUsingGETResponse res = new org.openapis.openapi.models.operations.GETExperimentsUsingGETResponse(contentType, httpRes.statusCode()) {{
             experimentModels = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,12 +286,10 @@ public class Experiments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateExperimentUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateExperimentUsingPUTResponse() {{
+        org.openapis.openapi.models.operations.UpdateExperimentUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateExperimentUsingPUTResponse(contentType, httpRes.statusCode()) {{
             experimentModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

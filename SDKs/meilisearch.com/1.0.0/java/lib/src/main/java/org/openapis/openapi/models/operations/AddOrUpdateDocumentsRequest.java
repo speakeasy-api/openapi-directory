@@ -9,16 +9,27 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AddOrUpdateDocumentsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddOrUpdateDocumentsRequestBody[] requestBody;
+
     public AddOrUpdateDocumentsRequest withRequestBody(AddOrUpdateDocumentsRequestBody[] requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=csvDelimiter")
+    public String csvDelimiter;
+
+    public AddOrUpdateDocumentsRequest withCsvDelimiter(String csvDelimiter) {
+        this.csvDelimiter = csvDelimiter;
+        return this;
+    }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primaryKey")
     public String primaryKey;
+
     public AddOrUpdateDocumentsRequest withPrimaryKey(String primaryKey) {
         this.primaryKey = primaryKey;
         return this;
     }
     
+    public AddOrUpdateDocumentsRequest(){}
 }

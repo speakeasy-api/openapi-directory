@@ -15,9 +15,11 @@ public class DescribeEntitiesDetectionV2JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComprehendMedicalAsyncJobProperties")
     public ComprehendMedicalAsyncJobProperties comprehendMedicalAsyncJobProperties;
+
     public DescribeEntitiesDetectionV2JobResponse withComprehendMedicalAsyncJobProperties(ComprehendMedicalAsyncJobProperties comprehendMedicalAsyncJobProperties) {
         this.comprehendMedicalAsyncJobProperties = comprehendMedicalAsyncJobProperties;
         return this;
     }
     
+    public DescribeEntitiesDetectionV2JobResponse(){}
 }

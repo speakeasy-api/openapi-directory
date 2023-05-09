@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResendFailedIPNRequest {
     @JsonProperty("id")
     public Integer id;
+
     public ResendFailedIPNRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public ResendFailedIPNRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

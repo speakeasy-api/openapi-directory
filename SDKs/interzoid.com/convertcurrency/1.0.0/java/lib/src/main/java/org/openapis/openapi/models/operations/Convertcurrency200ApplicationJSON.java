@@ -15,6 +15,7 @@ public class Convertcurrency200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Convertcurrency200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Convertcurrency200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Converted")
     public String converted;
+
     public Convertcurrency200ApplicationJSON withConverted(String converted) {
         this.converted = converted;
         return this;
@@ -31,6 +33,7 @@ public class Convertcurrency200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Convertcurrency200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -39,9 +42,11 @@ public class Convertcurrency200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public String currency;
+
     public Convertcurrency200ApplicationJSON withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public Convertcurrency200ApplicationJSON(){}
 }

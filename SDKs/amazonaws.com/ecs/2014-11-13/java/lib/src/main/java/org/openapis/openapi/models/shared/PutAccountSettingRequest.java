@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutAccountSettingRequest {
     @JsonProperty("name")
     public SettingNameEnum name;
+
     public PutAccountSettingRequest withName(SettingNameEnum name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class PutAccountSettingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalArn")
     public String principalArn;
+
     public PutAccountSettingRequest withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
@@ -26,9 +28,14 @@ public class PutAccountSettingRequest {
     
     @JsonProperty("value")
     public String value;
+
     public PutAccountSettingRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PutAccountSettingRequest(@JsonProperty("name") SettingNameEnum name, @JsonProperty("value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

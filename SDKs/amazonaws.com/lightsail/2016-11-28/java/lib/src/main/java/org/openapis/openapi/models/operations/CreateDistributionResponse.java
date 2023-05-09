@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDistributionResponse {
@@ -12,6 +13,7 @@ public class CreateDistributionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDistributionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDistributionResponse {
     
     
     public String contentType;
+
     public CreateDistributionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDistributionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDistributionResult createDistributionResult;
+
     public CreateDistributionResponse withCreateDistributionResult(org.openapis.openapi.models.shared.CreateDistributionResult createDistributionResult) {
         this.createDistributionResult = createDistributionResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateDistributionResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDistributionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDistributionResponse {
      */
     
     public Object notFoundException;
+
     public CreateDistributionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDistributionResponse {
      */
     
     public Object operationFailureException;
+
     public CreateDistributionResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDistributionResponse {
      */
     
     public Object serviceException;
+
     public CreateDistributionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDistributionResponse {
     
     
     public Integer statusCode;
+
     public CreateDistributionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDistributionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDistributionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateDistributionResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateDistributionResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateDistributionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

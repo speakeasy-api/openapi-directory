@@ -15,6 +15,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalConstraints")
     public AdditionalConstraintsElementEnum[] additionalConstraints;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy withAdditionalConstraints(AdditionalConstraintsElementEnum[] additionalConstraints) {
         this.additionalConstraints = additionalConstraints;
         return this;
@@ -22,9 +23,13 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy {
     
     @JsonProperty("MinimumLength")
     public Double minimumLength;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy withMinimumLength(Double minimumLength) {
         this.minimumLength = minimumLength;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy(@JsonProperty("MinimumLength") Double minimumLength) {
+        this.minimumLength = minimumLength;
+  }
 }

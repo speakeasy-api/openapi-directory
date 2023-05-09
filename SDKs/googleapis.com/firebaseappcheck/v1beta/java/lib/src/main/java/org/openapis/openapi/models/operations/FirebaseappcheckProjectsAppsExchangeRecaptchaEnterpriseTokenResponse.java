@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse {
     
     public String contentType;
+
     public FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRespons
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaAppCheckToken googleFirebaseAppcheckV1betaAppCheckToken;
+
     public FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse withGoogleFirebaseAppcheckV1betaAppCheckToken(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaAppCheckToken googleFirebaseAppcheckV1betaAppCheckToken) {
         this.googleFirebaseAppcheckV1betaAppCheckToken = googleFirebaseAppcheckV1betaAppCheckToken;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRespons
     
     
     public Integer statusCode;
+
     public FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

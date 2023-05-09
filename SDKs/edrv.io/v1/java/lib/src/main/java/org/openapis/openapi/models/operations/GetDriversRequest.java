@@ -13,6 +13,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
     public Boolean active;
+
     public GetDriversRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
     public OffsetDateTime createdAtDollarGte;
+
     public GetDriversRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
         this.createdAtDollarGte = createdAtDollarGte;
         return this;
@@ -33,6 +35,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
     public OffsetDateTime createdAtDollarLte;
+
     public GetDriversRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
         this.createdAtDollarLte = createdAtDollarLte;
         return this;
@@ -43,6 +46,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_group")
     public Boolean includeGroup;
+
     public GetDriversRequest withIncludeGroup(Boolean includeGroup) {
         this.includeGroup = includeGroup;
         return this;
@@ -53,6 +57,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetDriversRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
@@ -63,6 +68,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_tokens")
     public Boolean includeTokens;
+
     public GetDriversRequest withIncludeTokens(Boolean includeTokens) {
         this.includeTokens = includeTokens;
         return this;
@@ -73,6 +79,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
     public Boolean paginateEnabled;
+
     public GetDriversRequest withPaginateEnabled(Boolean paginateEnabled) {
         this.paginateEnabled = paginateEnabled;
         return this;
@@ -83,6 +90,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
     public Long paginateLimit;
+
     public GetDriversRequest withPaginateLimit(Long paginateLimit) {
         this.paginateLimit = paginateLimit;
         return this;
@@ -93,6 +101,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
     public String paginatePage;
+
     public GetDriversRequest withPaginatePage(String paginatePage) {
         this.paginatePage = paginatePage;
         return this;
@@ -103,6 +112,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetDriversRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -113,6 +123,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+
     public GetDriversRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -123,6 +134,7 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
     public OffsetDateTime updatedAtDollarGte;
+
     public GetDriversRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
         this.updatedAtDollarGte = updatedAtDollarGte;
         return this;
@@ -133,9 +145,11 @@ public class GetDriversRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
     public OffsetDateTime updatedAtDollarLte;
+
     public GetDriversRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
         this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     
+    public GetDriversRequest(){}
 }

@@ -18,6 +18,7 @@ public class AuthorityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public AuthorityInput withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -29,9 +30,11 @@ public class AuthorityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oidcJwks")
     public String oidcJwks;
+
     public AuthorityInput withOidcJwks(String oidcJwks) {
         this.oidcJwks = oidcJwks;
         return this;
     }
     
+    public AuthorityInput(){}
 }

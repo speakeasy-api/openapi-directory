@@ -15,9 +15,11 @@ public class GetIceServerConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IceServerList")
     public IceServer[] iceServerList;
+
     public GetIceServerConfigResponse withIceServerList(IceServer[] iceServerList) {
         this.iceServerList = iceServerList;
         return this;
     }
     
+    public GetIceServerConfigResponse(){}
 }

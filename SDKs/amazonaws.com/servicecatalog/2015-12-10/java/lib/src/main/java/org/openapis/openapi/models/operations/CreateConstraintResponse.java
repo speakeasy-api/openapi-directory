@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConstraintResponse {
     
     public String contentType;
+
     public CreateConstraintResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateConstraintResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConstraintOutput createConstraintOutput;
+
     public CreateConstraintResponse withCreateConstraintOutput(org.openapis.openapi.models.shared.CreateConstraintOutput createConstraintOutput) {
         this.createConstraintOutput = createConstraintOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateConstraintResponse {
      */
     
     public Object duplicateResourceException;
+
     public CreateConstraintResponse withDuplicateResourceException(Object duplicateResourceException) {
         this.duplicateResourceException = duplicateResourceException;
         return this;
@@ -39,6 +43,7 @@ public class CreateConstraintResponse {
      */
     
     public Object invalidParametersException;
+
     public CreateConstraintResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -49,6 +54,7 @@ public class CreateConstraintResponse {
      */
     
     public Object limitExceededException;
+
     public CreateConstraintResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConstraintResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateConstraintResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateConstraintResponse {
     
     
     public Integer statusCode;
+
     public CreateConstraintResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateConstraintResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConstraintResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateConstraintResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

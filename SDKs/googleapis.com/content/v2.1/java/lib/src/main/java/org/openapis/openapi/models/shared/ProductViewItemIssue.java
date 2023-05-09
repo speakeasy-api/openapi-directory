@@ -18,6 +18,7 @@ public class ProductViewItemIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueType")
     public ProductViewItemIssueItemIssueType issueType;
+
     public ProductViewItemIssue withIssueType(ProductViewItemIssueItemIssueType issueType) {
         this.issueType = issueType;
         return this;
@@ -29,6 +30,7 @@ public class ProductViewItemIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public ProductViewItemIssueResolutionEnum resolution;
+
     public ProductViewItemIssue withResolution(ProductViewItemIssueResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -40,9 +42,11 @@ public class ProductViewItemIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public ProductViewItemIssueItemIssueSeverity severity;
+
     public ProductViewItemIssue withSeverity(ProductViewItemIssueItemIssueSeverity severity) {
         this.severity = severity;
         return this;
     }
     
+    public ProductViewItemIssue(){}
 }

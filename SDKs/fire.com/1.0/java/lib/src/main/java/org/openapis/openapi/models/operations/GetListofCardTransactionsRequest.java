@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListofCardTransactionsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
     public Long cardId;
+
     public GetListofCardTransactionsRequest withCardId(Long cardId) {
         this.cardId = cardId;
         return this;
@@ -16,6 +18,7 @@ public class GetListofCardTransactionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetListofCardTransactionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,9 +26,13 @@ public class GetListofCardTransactionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetListofCardTransactionsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetListofCardTransactionsRequest(@JsonProperty("cardId") Long cardId) {
+        this.cardId = cardId;
+  }
 }

@@ -12,6 +12,7 @@ public class InputFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logFiles")
     public FileDTO[] logFiles;
+
     public InputFilesDTO withLogFiles(FileDTO[] logFiles) {
         this.logFiles = logFiles;
         return this;
@@ -20,6 +21,7 @@ public class InputFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceFiles")
     public FileDTO[] referenceFiles;
+
     public InputFilesDTO withReferenceFiles(FileDTO[] referenceFiles) {
         this.referenceFiles = referenceFiles;
         return this;
@@ -28,6 +30,7 @@ public class InputFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminology")
     public FileDTO[] terminology;
+
     public InputFilesDTO withTerminology(FileDTO[] terminology) {
         this.terminology = terminology;
         return this;
@@ -36,6 +39,7 @@ public class InputFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tm")
     public FileDTO[] tm;
+
     public InputFilesDTO withTm(FileDTO[] tm) {
         this.tm = tm;
         return this;
@@ -44,9 +48,11 @@ public class InputFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workFiles")
     public FileDTO[] workFiles;
+
     public InputFilesDTO withWorkFiles(FileDTO[] workFiles) {
         this.workFiles = workFiles;
         return this;
     }
     
+    public InputFilesDTO(){}
 }

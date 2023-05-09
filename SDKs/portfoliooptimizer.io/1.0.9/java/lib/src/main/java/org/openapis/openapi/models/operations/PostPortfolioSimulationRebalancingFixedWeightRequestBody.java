@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioSimulationRebalancingFixedWeightRequestBody {
     @JsonProperty("assets")
     public PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets[] assets;
+
     public PostPortfolioSimulationRebalancingFixedWeightRequestBody withAssets(PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
@@ -16,9 +17,14 @@ public class PostPortfolioSimulationRebalancingFixedWeightRequestBody {
     
     @JsonProperty("portfolios")
     public PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios[] portfolios;
+
     public PostPortfolioSimulationRebalancingFixedWeightRequestBody withPortfolios(PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioSimulationRebalancingFixedWeightRequestBody(@JsonProperty("assets") PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets[] assets, @JsonProperty("portfolios") PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios[] portfolios) {
+        this.assets = assets;
+        this.portfolios = portfolios;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAutoMLJobResponse {
     @JsonProperty("AutoMLJobArn")
     public String autoMLJobArn;
+
     public CreateAutoMLJobResponse withAutoMLJobArn(String autoMLJobArn) {
         this.autoMLJobArn = autoMLJobArn;
         return this;
     }
     
+    public CreateAutoMLJobResponse(@JsonProperty("AutoMLJobArn") String autoMLJobArn) {
+        this.autoMLJobArn = autoMLJobArn;
+  }
 }

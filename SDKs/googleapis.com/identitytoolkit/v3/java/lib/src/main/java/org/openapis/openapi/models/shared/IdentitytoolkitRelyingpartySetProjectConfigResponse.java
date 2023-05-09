@@ -18,9 +18,11 @@ public class IdentitytoolkitRelyingpartySetProjectConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public IdentitytoolkitRelyingpartySetProjectConfigResponse withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartySetProjectConfigResponse(){}
 }

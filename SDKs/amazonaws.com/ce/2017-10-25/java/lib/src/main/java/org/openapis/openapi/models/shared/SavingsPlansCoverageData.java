@@ -15,6 +15,7 @@ public class SavingsPlansCoverageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoveragePercentage")
     public String coveragePercentage;
+
     public SavingsPlansCoverageData withCoveragePercentage(String coveragePercentage) {
         this.coveragePercentage = coveragePercentage;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansCoverageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandCost")
     public String onDemandCost;
+
     public SavingsPlansCoverageData withOnDemandCost(String onDemandCost) {
         this.onDemandCost = onDemandCost;
         return this;
@@ -31,6 +33,7 @@ public class SavingsPlansCoverageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpendCoveredBySavingsPlans")
     public String spendCoveredBySavingsPlans;
+
     public SavingsPlansCoverageData withSpendCoveredBySavingsPlans(String spendCoveredBySavingsPlans) {
         this.spendCoveredBySavingsPlans = spendCoveredBySavingsPlans;
         return this;
@@ -39,9 +42,11 @@ public class SavingsPlansCoverageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCost")
     public String totalCost;
+
     public SavingsPlansCoverageData withTotalCost(String totalCost) {
         this.totalCost = totalCost;
         return this;
     }
     
+    public SavingsPlansCoverageData(){}
 }

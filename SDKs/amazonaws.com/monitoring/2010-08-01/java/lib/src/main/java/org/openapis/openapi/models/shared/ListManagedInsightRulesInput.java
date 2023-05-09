@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListManagedInsightRulesInput {
     
     public Long maxResults;
+
     public ListManagedInsightRulesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -16,6 +17,7 @@ public class ListManagedInsightRulesInput {
     
     
     public String nextToken;
+
     public ListManagedInsightRulesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +25,13 @@ public class ListManagedInsightRulesInput {
     
     
     public String resourceARN;
+
     public ListManagedInsightRulesInput withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public ListManagedInsightRulesInput(@JsonProperty("ResourceARN") String resourceARN) {
+        this.resourceARN = resourceARN;
+  }
 }

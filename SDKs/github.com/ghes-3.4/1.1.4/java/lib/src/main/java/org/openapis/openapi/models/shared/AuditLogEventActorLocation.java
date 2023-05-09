@@ -12,9 +12,11 @@ public class AuditLogEventActorLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_name")
     public String countryName;
+
     public AuditLogEventActorLocation withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
     }
     
+    public AuditLogEventActorLocation(){}
 }

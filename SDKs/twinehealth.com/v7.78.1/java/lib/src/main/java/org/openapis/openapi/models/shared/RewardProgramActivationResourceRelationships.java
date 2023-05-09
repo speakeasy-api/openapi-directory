@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RewardProgramActivationResourceRelationships {
     @JsonProperty("patient")
     public RewardProgramActivationResourceRelationshipsPatient patient;
+
     public RewardProgramActivationResourceRelationships withPatient(RewardProgramActivationResourceRelationshipsPatient patient) {
         this.patient = patient;
         return this;
@@ -16,9 +17,14 @@ public class RewardProgramActivationResourceRelationships {
     
     @JsonProperty("reward_program")
     public RewardProgramActivationResourceRelationshipsRewardProgram rewardProgram;
+
     public RewardProgramActivationResourceRelationships withRewardProgram(RewardProgramActivationResourceRelationshipsRewardProgram rewardProgram) {
         this.rewardProgram = rewardProgram;
         return this;
     }
     
+    public RewardProgramActivationResourceRelationships(@JsonProperty("patient") RewardProgramActivationResourceRelationshipsPatient patient, @JsonProperty("reward_program") RewardProgramActivationResourceRelationshipsRewardProgram rewardProgram) {
+        this.patient = patient;
+        this.rewardProgram = rewardProgram;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateSectionForProject201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.SectionResponse data;
+
     public CreateSectionForProject201ApplicationJSON withData(org.openapis.openapi.models.shared.SectionResponse data) {
         this.data = data;
         return this;
     }
     
+    public CreateSectionForProject201ApplicationJSON(){}
 }

@@ -14,6 +14,7 @@ public class SendMessageRequestBody2Video {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody2VideoChannelEnum channel;
+
     public SendMessageRequestBody2Video withChannel(SendMessageRequestBody2VideoChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody2Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody2Video withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -36,6 +38,7 @@ public class SendMessageRequestBody2Video {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody2Video withFrom(String from) {
         this.from = from;
         return this;
@@ -46,6 +49,7 @@ public class SendMessageRequestBody2Video {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody2VideoMessageTypeEnum messageType;
+
     public SendMessageRequestBody2Video withMessageType(SendMessageRequestBody2VideoMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -57,6 +61,7 @@ public class SendMessageRequestBody2Video {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody2Video withTo(String to) {
         this.to = to;
         return this;
@@ -64,9 +69,17 @@ public class SendMessageRequestBody2Video {
     
     @JsonProperty("video")
     public SendMessageRequestBody2VideoVideo video;
+
     public SendMessageRequestBody2Video withVideo(SendMessageRequestBody2VideoVideo video) {
         this.video = video;
         return this;
     }
     
+    public SendMessageRequestBody2Video(@JsonProperty("channel") SendMessageRequestBody2VideoChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody2VideoMessageTypeEnum messageType, @JsonProperty("to") String to, @JsonProperty("video") SendMessageRequestBody2VideoVideo video) {
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.to = to;
+        this.video = video;
+  }
 }

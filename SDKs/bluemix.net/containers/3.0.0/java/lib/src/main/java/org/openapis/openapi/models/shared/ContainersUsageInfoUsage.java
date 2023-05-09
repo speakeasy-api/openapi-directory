@@ -15,6 +15,7 @@ public class ContainersUsageInfoUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Integer containers;
+
     public ContainersUsageInfoUsage withContainers(Integer containers) {
         this.containers = containers;
         return this;
@@ -26,6 +27,7 @@ public class ContainersUsageInfoUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floating_ips")
     public Integer floatingIps;
+
     public ContainersUsageInfoUsage withFloatingIps(Integer floatingIps) {
         this.floatingIps = floatingIps;
         return this;
@@ -37,6 +39,7 @@ public class ContainersUsageInfoUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floating_ips_bound")
     public Integer floatingIpsBound;
+
     public ContainersUsageInfoUsage withFloatingIpsBound(Integer floatingIpsBound) {
         this.floatingIpsBound = floatingIpsBound;
         return this;
@@ -48,6 +51,7 @@ public class ContainersUsageInfoUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public Integer images;
+
     public ContainersUsageInfoUsage withImages(Integer images) {
         this.images = images;
         return this;
@@ -59,6 +63,7 @@ public class ContainersUsageInfoUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory_MB")
     public Integer memoryMB;
+
     public ContainersUsageInfoUsage withMemoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
         return this;
@@ -70,6 +75,7 @@ public class ContainersUsageInfoUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("running")
     public Integer running;
+
     public ContainersUsageInfoUsage withRunning(Integer running) {
         this.running = running;
         return this;
@@ -81,9 +87,11 @@ public class ContainersUsageInfoUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcpu")
     public Integer vcpu;
+
     public ContainersUsageInfoUsage withVcpu(Integer vcpu) {
         this.vcpu = vcpu;
         return this;
     }
     
+    public ContainersUsageInfoUsage(){}
 }

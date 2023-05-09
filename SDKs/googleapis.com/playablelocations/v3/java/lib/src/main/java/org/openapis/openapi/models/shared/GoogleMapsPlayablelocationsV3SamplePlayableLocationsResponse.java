@@ -18,6 +18,7 @@ public class GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationsPerGameObjectType")
     public java.util.Map<String, GoogleMapsPlayablelocationsV3SamplePlayableLocationList> locationsPerGameObjectType;
+
     public GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse withLocationsPerGameObjectType(java.util.Map<String, GoogleMapsPlayablelocationsV3SamplePlayableLocationList> locationsPerGameObjectType) {
         this.locationsPerGameObjectType = locationsPerGameObjectType;
         return this;
@@ -29,9 +30,11 @@ public class GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse(){}
 }

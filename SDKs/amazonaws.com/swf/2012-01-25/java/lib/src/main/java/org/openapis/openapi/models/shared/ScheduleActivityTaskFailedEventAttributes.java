@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScheduleActivityTaskFailedEventAttributes {
     @JsonProperty("activityId")
     public String activityId;
+
     public ScheduleActivityTaskFailedEventAttributes withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -19,6 +20,7 @@ public class ScheduleActivityTaskFailedEventAttributes {
     
     @JsonProperty("activityType")
     public ActivityType activityType;
+
     public ScheduleActivityTaskFailedEventAttributes withActivityType(ActivityType activityType) {
         this.activityType = activityType;
         return this;
@@ -26,6 +28,7 @@ public class ScheduleActivityTaskFailedEventAttributes {
     
     @JsonProperty("cause")
     public ScheduleActivityTaskFailedCauseEnum cause;
+
     public ScheduleActivityTaskFailedEventAttributes withCause(ScheduleActivityTaskFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -33,9 +36,16 @@ public class ScheduleActivityTaskFailedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public ScheduleActivityTaskFailedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
     }
     
+    public ScheduleActivityTaskFailedEventAttributes(@JsonProperty("activityId") String activityId, @JsonProperty("activityType") ActivityType activityType, @JsonProperty("cause") ScheduleActivityTaskFailedCauseEnum cause, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId) {
+        this.activityId = activityId;
+        this.activityType = activityType;
+        this.cause = cause;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+  }
 }

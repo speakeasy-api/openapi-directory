@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBucketRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public GetBucketRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -16,6 +18,7 @@ public class GetBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetBucketRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -23,6 +26,7 @@ public class GetBucketRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
     public String[] fields;
+
     public GetBucketRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -30,9 +34,13 @@ public class GetBucketRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetBucketRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetBucketRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

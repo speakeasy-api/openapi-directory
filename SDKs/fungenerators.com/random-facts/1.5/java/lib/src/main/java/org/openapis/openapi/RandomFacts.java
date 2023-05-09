@@ -59,10 +59,8 @@ public class RandomFacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactResponse res = new org.openapis.openapi.models.operations.GetFactResponse() {{
+        org.openapis.openapi.models.operations.GetFactResponse res = new org.openapis.openapi.models.operations.GetFactResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -99,10 +97,8 @@ public class RandomFacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactCategoriesResponse res = new org.openapis.openapi.models.operations.GetFactCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetFactCategoriesResponse res = new org.openapis.openapi.models.operations.GetFactCategoriesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -139,10 +135,8 @@ public class RandomFacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactRandomResponse res = new org.openapis.openapi.models.operations.GetFactRandomResponse() {{
+        org.openapis.openapi.models.operations.GetFactRandomResponse res = new org.openapis.openapi.models.operations.GetFactRandomResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -179,10 +173,8 @@ public class RandomFacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactSearchResponse res = new org.openapis.openapi.models.operations.GetFactSearchResponse() {{
+        org.openapis.openapi.models.operations.GetFactSearchResponse res = new org.openapis.openapi.models.operations.GetFactSearchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

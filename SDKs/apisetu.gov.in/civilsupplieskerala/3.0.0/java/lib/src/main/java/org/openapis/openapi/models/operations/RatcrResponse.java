@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RatcrResponse {
     
     public String contentType;
+
     public RatcrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RatcrResponse {
     
     
     public Integer statusCode;
+
     public RatcrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RatcrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RatcrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RatcrResponse {
      */
     
     public Ratcr400ApplicationJSON ratcr400ApplicationJSONObject;
+
     public RatcrResponse withRatcr400ApplicationJSONObject(Ratcr400ApplicationJSON ratcr400ApplicationJSONObject) {
         this.ratcr400ApplicationJSONObject = ratcr400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RatcrResponse {
      */
     
     public Ratcr401ApplicationJSON ratcr401ApplicationJSONObject;
+
     public RatcrResponse withRatcr401ApplicationJSONObject(Ratcr401ApplicationJSON ratcr401ApplicationJSONObject) {
         this.ratcr401ApplicationJSONObject = ratcr401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RatcrResponse {
      */
     
     public Ratcr404ApplicationJSON ratcr404ApplicationJSONObject;
+
     public RatcrResponse withRatcr404ApplicationJSONObject(Ratcr404ApplicationJSON ratcr404ApplicationJSONObject) {
         this.ratcr404ApplicationJSONObject = ratcr404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RatcrResponse {
      */
     
     public Ratcr500ApplicationJSON ratcr500ApplicationJSONObject;
+
     public RatcrResponse withRatcr500ApplicationJSONObject(Ratcr500ApplicationJSON ratcr500ApplicationJSONObject) {
         this.ratcr500ApplicationJSONObject = ratcr500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class RatcrResponse {
      */
     
     public Ratcr502ApplicationJSON ratcr502ApplicationJSONObject;
+
     public RatcrResponse withRatcr502ApplicationJSONObject(Ratcr502ApplicationJSON ratcr502ApplicationJSONObject) {
         this.ratcr502ApplicationJSONObject = ratcr502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class RatcrResponse {
      */
     
     public Ratcr503ApplicationJSON ratcr503ApplicationJSONObject;
+
     public RatcrResponse withRatcr503ApplicationJSONObject(Ratcr503ApplicationJSON ratcr503ApplicationJSONObject) {
         this.ratcr503ApplicationJSONObject = ratcr503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class RatcrResponse {
      */
     
     public Ratcr504ApplicationJSON ratcr504ApplicationJSONObject;
+
     public RatcrResponse withRatcr504ApplicationJSONObject(Ratcr504ApplicationJSON ratcr504ApplicationJSONObject) {
         this.ratcr504ApplicationJSONObject = ratcr504ApplicationJSONObject;
         return this;
     }
     
+    public RatcrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

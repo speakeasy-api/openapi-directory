@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudassetBatchGetAssetsHistoryRequest {
@@ -12,6 +13,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudassetBatchGetAssetsHistoryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudassetBatchGetAssetsHistoryRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudassetBatchGetAssetsHistoryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetNames")
     public String[] assetNames;
+
     public CloudassetBatchGetAssetsHistoryRequest withAssetNames(String[] assetNames) {
         this.assetNames = assetNames;
         return this;
@@ -52,6 +57,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudassetBatchGetAssetsHistoryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
     public CloudassetBatchGetAssetsHistoryContentTypeEnum contentType;
+
     public CloudassetBatchGetAssetsHistoryRequest withContentType(CloudassetBatchGetAssetsHistoryContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -72,6 +79,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudassetBatchGetAssetsHistoryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudassetBatchGetAssetsHistoryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudassetBatchGetAssetsHistoryRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public CloudassetBatchGetAssetsHistoryRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -112,6 +123,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudassetBatchGetAssetsHistoryRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudassetBatchGetAssetsHistoryRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readTimeWindow.endTime")
     public String readTimeWindowEndTime;
+
     public CloudassetBatchGetAssetsHistoryRequest withReadTimeWindowEndTime(String readTimeWindowEndTime) {
         this.readTimeWindowEndTime = readTimeWindowEndTime;
         return this;
@@ -142,6 +156,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readTimeWindow.startTime")
     public String readTimeWindowStartTime;
+
     public CloudassetBatchGetAssetsHistoryRequest withReadTimeWindowStartTime(String readTimeWindowStartTime) {
         this.readTimeWindowStartTime = readTimeWindowStartTime;
         return this;
@@ -152,6 +167,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relationshipTypes")
     public String[] relationshipTypes;
+
     public CloudassetBatchGetAssetsHistoryRequest withRelationshipTypes(String[] relationshipTypes) {
         this.relationshipTypes = relationshipTypes;
         return this;
@@ -162,6 +178,7 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudassetBatchGetAssetsHistoryRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,13 @@ public class CloudassetBatchGetAssetsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudassetBatchGetAssetsHistoryRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudassetBatchGetAssetsHistoryRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

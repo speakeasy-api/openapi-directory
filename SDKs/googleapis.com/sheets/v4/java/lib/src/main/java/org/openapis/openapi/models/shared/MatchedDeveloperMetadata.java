@@ -18,6 +18,7 @@ public class MatchedDeveloperMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFilters")
     public DataFilter[] dataFilters;
+
     public MatchedDeveloperMetadata withDataFilters(DataFilter[] dataFilters) {
         this.dataFilters = dataFilters;
         return this;
@@ -29,9 +30,11 @@ public class MatchedDeveloperMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMetadata")
     public DeveloperMetadata developerMetadata;
+
     public MatchedDeveloperMetadata withDeveloperMetadata(DeveloperMetadata developerMetadata) {
         this.developerMetadata = developerMetadata;
         return this;
     }
     
+    public MatchedDeveloperMetadata(){}
 }

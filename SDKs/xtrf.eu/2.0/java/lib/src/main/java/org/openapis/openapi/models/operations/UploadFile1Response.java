@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UploadFile1Response {
     
     public String contentType;
+
     public UploadFile1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UploadFile1Response {
      */
     
     public org.openapis.openapi.models.shared.FileDto1 fileDto;
+
     public UploadFile1Response withFileDto(org.openapis.openapi.models.shared.FileDto1 fileDto) {
         this.fileDto = fileDto;
         return this;
@@ -26,6 +29,7 @@ public class UploadFile1Response {
     
     
     public Integer statusCode;
+
     public UploadFile1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class UploadFile1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UploadFile1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UploadFile1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AlarmState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerAction")
     public CustomerAction customerAction;
+
     public AlarmState withCustomerAction(CustomerAction customerAction) {
         this.customerAction = customerAction;
         return this;
@@ -23,6 +24,7 @@ public class AlarmState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleEvaluation")
     public RuleEvaluation ruleEvaluation;
+
     public AlarmState withRuleEvaluation(RuleEvaluation ruleEvaluation) {
         this.ruleEvaluation = ruleEvaluation;
         return this;
@@ -31,6 +33,7 @@ public class AlarmState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateName")
     public AlarmStateNameEnum stateName;
+
     public AlarmState withStateName(AlarmStateNameEnum stateName) {
         this.stateName = stateName;
         return this;
@@ -39,9 +42,11 @@ public class AlarmState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemEvent")
     public SystemEvent systemEvent;
+
     public AlarmState withSystemEvent(SystemEvent systemEvent) {
         this.systemEvent = systemEvent;
         return this;
     }
     
+    public AlarmState(){}
 }

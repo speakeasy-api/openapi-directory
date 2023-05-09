@@ -18,6 +18,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("add_price")
     public Object addPrice;
+
     public EstimateItemPriceVO withAddPrice(Object addPrice) {
         this.addPrice = addPrice;
         return this;
@@ -26,6 +27,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakouts")
     public BreakoutVO[] breakouts;
+
     public EstimateItemPriceVO withBreakouts(BreakoutVO[] breakouts) {
         this.breakouts = breakouts;
         return this;
@@ -34,6 +36,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("em_estimate_item_price_id")
     public Long emEstimateItemPriceId;
+
     public EstimateItemPriceVO withEmEstimateItemPriceId(Long emEstimateItemPriceId) {
         this.emEstimateItemPriceId = emEstimateItemPriceId;
         return this;
@@ -45,6 +48,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option")
     public ItemOptionVO itemOption;
+
     public EstimateItemPriceVO withItemOption(ItemOptionVO itemOption) {
         this.itemOption = itemOption;
         return this;
@@ -56,6 +60,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Object price;
+
     public EstimateItemPriceVO withPrice(Object price) {
         this.price = price;
         return this;
@@ -67,6 +72,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Object shipping;
+
     public EstimateItemPriceVO withShipping(Object shipping) {
         this.shipping = shipping;
         return this;
@@ -78,6 +84,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Object tax;
+
     public EstimateItemPriceVO withTax(Object tax) {
         this.tax = tax;
         return this;
@@ -89,6 +96,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_price")
     public Object totalPrice;
+
     public EstimateItemPriceVO withTotalPrice(Object totalPrice) {
         this.totalPrice = totalPrice;
         return this;
@@ -100,6 +108,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_add_price")
     public Object transactionalAddPrice;
+
     public EstimateItemPriceVO withTransactionalAddPrice(Object transactionalAddPrice) {
         this.transactionalAddPrice = transactionalAddPrice;
         return this;
@@ -111,6 +120,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_price")
     public Object transactionalPrice;
+
     public EstimateItemPriceVO withTransactionalPrice(Object transactionalPrice) {
         this.transactionalPrice = transactionalPrice;
         return this;
@@ -122,6 +132,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_shipping")
     public Object transactionalShipping;
+
     public EstimateItemPriceVO withTransactionalShipping(Object transactionalShipping) {
         this.transactionalShipping = transactionalShipping;
         return this;
@@ -133,6 +144,7 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_tax")
     public Object transactionalTax;
+
     public EstimateItemPriceVO withTransactionalTax(Object transactionalTax) {
         this.transactionalTax = transactionalTax;
         return this;
@@ -144,9 +156,11 @@ public class EstimateItemPriceVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_total_price")
     public Object transactionalTotalPrice;
+
     public EstimateItemPriceVO withTransactionalTotalPrice(Object transactionalTotalPrice) {
         this.transactionalTotalPrice = transactionalTotalPrice;
         return this;
     }
     
+    public EstimateItemPriceVO(){}
 }

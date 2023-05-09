@@ -18,6 +18,7 @@ public class UninstallAndroidAppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public UninstallAndroidAppDetails withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,9 +30,11 @@ public class UninstallAndroidAppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UninstallAndroidAppDetailsTypeEnum type;
+
     public UninstallAndroidAppDetails withType(UninstallAndroidAppDetailsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UninstallAndroidAppDetails(){}
 }

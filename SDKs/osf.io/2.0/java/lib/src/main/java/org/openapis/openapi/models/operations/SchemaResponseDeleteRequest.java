@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SchemaResponseDeleteRequest {
@@ -12,9 +13,13 @@ public class SchemaResponseDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_response_id")
     public String schemaResponseId;
+
     public SchemaResponseDeleteRequest withSchemaResponseId(String schemaResponseId) {
         this.schemaResponseId = schemaResponseId;
         return this;
     }
     
+    public SchemaResponseDeleteRequest(@JsonProperty("schema_response_id") String schemaResponseId) {
+        this.schemaResponseId = schemaResponseId;
+  }
 }

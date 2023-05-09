@@ -22,6 +22,7 @@ public class ListWorkflowsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("QueryEndDate")
     public OffsetDateTime queryEndDate;
+
     public ListWorkflowsRequestBody withQueryEndDate(OffsetDateTime queryEndDate) {
         this.queryEndDate = queryEndDate;
         return this;
@@ -35,6 +36,7 @@ public class ListWorkflowsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("QueryStartDate")
     public OffsetDateTime queryStartDate;
+
     public ListWorkflowsRequestBody withQueryStartDate(OffsetDateTime queryStartDate) {
         this.queryStartDate = queryStartDate;
         return this;
@@ -46,6 +48,7 @@ public class ListWorkflowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ListWorkflowsRequestBodyStatusEnum status;
+
     public ListWorkflowsRequestBody withStatus(ListWorkflowsRequestBodyStatusEnum status) {
         this.status = status;
         return this;
@@ -57,9 +60,11 @@ public class ListWorkflowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowType")
     public ListWorkflowsRequestBodyWorkflowTypeEnum workflowType;
+
     public ListWorkflowsRequestBody withWorkflowType(ListWorkflowsRequestBodyWorkflowTypeEnum workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public ListWorkflowsRequestBody(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Item {
     @JsonProperty("id")
     public String id;
+
     public Item withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class Item {
     
     @JsonProperty("index")
     public Integer index;
+
     public Item withIndex(Integer index) {
         this.index = index;
         return this;
@@ -23,6 +25,7 @@ public class Item {
     
     @JsonProperty("isGift")
     public Boolean isGift;
+
     public Item withIsGift(Boolean isGift) {
         this.isGift = isGift;
         return this;
@@ -30,6 +33,7 @@ public class Item {
     
     @JsonProperty("logisticsInfos")
     public String[] logisticsInfos;
+
     public Item withLogisticsInfos(String[] logisticsInfos) {
         this.logisticsInfos = logisticsInfos;
         return this;
@@ -37,6 +41,7 @@ public class Item {
     
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public Item withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -44,6 +49,7 @@ public class Item {
     
     @JsonProperty("params")
     public Param[] params;
+
     public Item withParams(Param[] params) {
         this.params = params;
         return this;
@@ -51,6 +57,7 @@ public class Item {
     
     @JsonProperty("priceSheet")
     public String[] priceSheet;
+
     public Item withPriceSheet(String[] priceSheet) {
         this.priceSheet = priceSheet;
         return this;
@@ -58,6 +65,7 @@ public class Item {
     
     @JsonProperty("priceTags")
     public String[] priceTags;
+
     public Item withPriceTags(String[] priceTags) {
         this.priceTags = priceTags;
         return this;
@@ -65,6 +73,7 @@ public class Item {
     
     @JsonProperty("productSpecifications")
     public String[] productSpecifications;
+
     public Item withProductSpecifications(String[] productSpecifications) {
         this.productSpecifications = productSpecifications;
         return this;
@@ -72,6 +81,7 @@ public class Item {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -79,6 +89,7 @@ public class Item {
     
     @JsonProperty("sellerId")
     public String sellerId;
+
     public Item withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -86,9 +97,24 @@ public class Item {
     
     @JsonProperty("unitMultiplier")
     public Integer unitMultiplier;
+
     public Item withUnitMultiplier(Integer unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public Item(@JsonProperty("id") String id, @JsonProperty("index") Integer index, @JsonProperty("isGift") Boolean isGift, @JsonProperty("logisticsInfos") String[] logisticsInfos, @JsonProperty("measurementUnit") String measurementUnit, @JsonProperty("params") Param[] params, @JsonProperty("priceSheet") String[] priceSheet, @JsonProperty("priceTags") String[] priceTags, @JsonProperty("productSpecifications") String[] productSpecifications, @JsonProperty("quantity") Integer quantity, @JsonProperty("sellerId") String sellerId, @JsonProperty("unitMultiplier") Integer unitMultiplier) {
+        this.id = id;
+        this.index = index;
+        this.isGift = isGift;
+        this.logisticsInfos = logisticsInfos;
+        this.measurementUnit = measurementUnit;
+        this.params = params;
+        this.priceSheet = priceSheet;
+        this.priceTags = priceTags;
+        this.productSpecifications = productSpecifications;
+        this.quantity = quantity;
+        this.sellerId = sellerId;
+        this.unitMultiplier = unitMultiplier;
+  }
 }

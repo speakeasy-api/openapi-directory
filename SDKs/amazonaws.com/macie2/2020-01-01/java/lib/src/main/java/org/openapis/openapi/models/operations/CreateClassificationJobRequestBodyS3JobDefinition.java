@@ -15,6 +15,7 @@ public class CreateClassificationJobRequestBodyS3JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCriteria")
     public org.openapis.openapi.models.shared.S3BucketCriteriaForJob bucketCriteria;
+
     public CreateClassificationJobRequestBodyS3JobDefinition withBucketCriteria(org.openapis.openapi.models.shared.S3BucketCriteriaForJob bucketCriteria) {
         this.bucketCriteria = bucketCriteria;
         return this;
@@ -23,6 +24,7 @@ public class CreateClassificationJobRequestBodyS3JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketDefinitions")
     public org.openapis.openapi.models.shared.S3BucketDefinitionForJob[] bucketDefinitions;
+
     public CreateClassificationJobRequestBodyS3JobDefinition withBucketDefinitions(org.openapis.openapi.models.shared.S3BucketDefinitionForJob[] bucketDefinitions) {
         this.bucketDefinitions = bucketDefinitions;
         return this;
@@ -31,9 +33,11 @@ public class CreateClassificationJobRequestBodyS3JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoping")
     public org.openapis.openapi.models.shared.Scoping scoping;
+
     public CreateClassificationJobRequestBodyS3JobDefinition withScoping(org.openapis.openapi.models.shared.Scoping scoping) {
         this.scoping = scoping;
         return this;
     }
     
+    public CreateClassificationJobRequestBodyS3JobDefinition(){}
 }

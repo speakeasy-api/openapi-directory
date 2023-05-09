@@ -18,9 +18,11 @@ public class GkeBackupAgentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GkeBackupAgentConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GkeBackupAgentConfig(){}
 }

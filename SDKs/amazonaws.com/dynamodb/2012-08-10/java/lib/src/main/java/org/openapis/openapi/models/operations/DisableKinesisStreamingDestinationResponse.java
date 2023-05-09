@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableKinesisStreamingDestinationResponse {
     
     public String contentType;
+
     public DisableKinesisStreamingDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableKinesisStreamingDestinationResponse {
      */
     
     public Object internalServerError;
+
     public DisableKinesisStreamingDestinationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class DisableKinesisStreamingDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.KinesisStreamingDestinationOutput kinesisStreamingDestinationOutput;
+
     public DisableKinesisStreamingDestinationResponse withKinesisStreamingDestinationOutput(org.openapis.openapi.models.shared.KinesisStreamingDestinationOutput kinesisStreamingDestinationOutput) {
         this.kinesisStreamingDestinationOutput = kinesisStreamingDestinationOutput;
         return this;
@@ -39,6 +43,7 @@ public class DisableKinesisStreamingDestinationResponse {
      */
     
     public Object limitExceededException;
+
     public DisableKinesisStreamingDestinationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class DisableKinesisStreamingDestinationResponse {
     
     
     public Integer statusCode;
+
     public DisableKinesisStreamingDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisableKinesisStreamingDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableKinesisStreamingDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisableKinesisStreamingDestinationResponse {
      */
     
     public Object resourceInUseException;
+
     public DisableKinesisStreamingDestinationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -73,9 +81,14 @@ public class DisableKinesisStreamingDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableKinesisStreamingDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisableKinesisStreamingDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

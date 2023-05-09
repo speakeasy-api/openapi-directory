@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSavedFilterResponse {
     
     public String contentType;
+
     public GetSavedFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSavedFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetSavedFilterResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -29,6 +32,7 @@ public class GetSavedFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectSavedFilter projectSavedFilter;
+
     public GetSavedFilterResponse withProjectSavedFilter(org.openapis.openapi.models.shared.ProjectSavedFilter projectSavedFilter) {
         this.projectSavedFilter = projectSavedFilter;
         return this;
@@ -36,6 +40,7 @@ public class GetSavedFilterResponse {
     
     
     public Integer statusCode;
+
     public GetSavedFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetSavedFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSavedFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSavedFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

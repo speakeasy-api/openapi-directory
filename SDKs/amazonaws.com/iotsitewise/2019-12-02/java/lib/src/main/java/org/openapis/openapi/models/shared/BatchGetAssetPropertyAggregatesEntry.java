@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BatchGetAssetPropertyAggregatesEntry {
     @JsonProperty("aggregateTypes")
     public AggregateTypeEnum[] aggregateTypes;
+
     public BatchGetAssetPropertyAggregatesEntry withAggregateTypes(AggregateTypeEnum[] aggregateTypes) {
         this.aggregateTypes = aggregateTypes;
         return this;
@@ -27,6 +28,7 @@ public class BatchGetAssetPropertyAggregatesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetId")
     public String assetId;
+
     public BatchGetAssetPropertyAggregatesEntry withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -36,6 +38,7 @@ public class BatchGetAssetPropertyAggregatesEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public BatchGetAssetPropertyAggregatesEntry withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -43,6 +46,7 @@ public class BatchGetAssetPropertyAggregatesEntry {
     
     @JsonProperty("entryId")
     public String entryId;
+
     public BatchGetAssetPropertyAggregatesEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
@@ -51,6 +55,7 @@ public class BatchGetAssetPropertyAggregatesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyAlias")
     public String propertyAlias;
+
     public BatchGetAssetPropertyAggregatesEntry withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -59,6 +64,7 @@ public class BatchGetAssetPropertyAggregatesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyId")
     public String propertyId;
+
     public BatchGetAssetPropertyAggregatesEntry withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -67,6 +73,7 @@ public class BatchGetAssetPropertyAggregatesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualities")
     public QualityEnum[] qualities;
+
     public BatchGetAssetPropertyAggregatesEntry withQualities(QualityEnum[] qualities) {
         this.qualities = qualities;
         return this;
@@ -74,6 +81,7 @@ public class BatchGetAssetPropertyAggregatesEntry {
     
     @JsonProperty("resolution")
     public String resolution;
+
     public BatchGetAssetPropertyAggregatesEntry withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -83,6 +91,7 @@ public class BatchGetAssetPropertyAggregatesEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public BatchGetAssetPropertyAggregatesEntry withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -91,9 +100,17 @@ public class BatchGetAssetPropertyAggregatesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeOrdering")
     public TimeOrderingEnum timeOrdering;
+
     public BatchGetAssetPropertyAggregatesEntry withTimeOrdering(TimeOrderingEnum timeOrdering) {
         this.timeOrdering = timeOrdering;
         return this;
     }
     
+    public BatchGetAssetPropertyAggregatesEntry(@JsonProperty("aggregateTypes") AggregateTypeEnum[] aggregateTypes, @JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("entryId") String entryId, @JsonProperty("resolution") String resolution, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.aggregateTypes = aggregateTypes;
+        this.endDate = endDate;
+        this.entryId = entryId;
+        this.resolution = resolution;
+        this.startDate = startDate;
+  }
 }

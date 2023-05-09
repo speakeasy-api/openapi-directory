@@ -12,6 +12,7 @@ public class TripcRequestBodyCertificateParameters {
      */
     @JsonProperty("INSCODE")
     public String inscode;
+
     public TripcRequestBodyCertificateParameters withInscode(String inscode) {
         this.inscode = inscode;
         return this;
@@ -22,6 +23,7 @@ public class TripcRequestBodyCertificateParameters {
      */
     @JsonProperty("POLNO")
     public String polno;
+
     public TripcRequestBodyCertificateParameters withPolno(String polno) {
         this.polno = polno;
         return this;
@@ -32,9 +34,15 @@ public class TripcRequestBodyCertificateParameters {
      */
     @JsonProperty("STARTDT")
     public String startdt;
+
     public TripcRequestBodyCertificateParameters withStartdt(String startdt) {
         this.startdt = startdt;
         return this;
     }
     
+    public TripcRequestBodyCertificateParameters(@JsonProperty("INSCODE") String inscode, @JsonProperty("POLNO") String polno, @JsonProperty("STARTDT") String startdt) {
+        this.inscode = inscode;
+        this.polno = polno;
+        this.startdt = startdt;
+  }
 }

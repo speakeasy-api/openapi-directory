@@ -18,9 +18,11 @@ public class BumperAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonInStreamAttribute")
     public CommonInStreamAttribute commonInStreamAttribute;
+
     public BumperAd withCommonInStreamAttribute(CommonInStreamAttribute commonInStreamAttribute) {
         this.commonInStreamAttribute = commonInStreamAttribute;
         return this;
     }
     
+    public BumperAd(){}
 }

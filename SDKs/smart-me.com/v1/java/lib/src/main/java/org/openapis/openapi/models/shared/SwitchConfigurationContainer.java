@@ -18,6 +18,7 @@ public class SwitchConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanSwitchOff")
     public Boolean canSwitchOff;
+
     public SwitchConfigurationContainer withCanSwitchOff(Boolean canSwitchOff) {
         this.canSwitchOff = canSwitchOff;
         return this;
@@ -29,9 +30,11 @@ public class SwitchConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Integer number;
+
     public SwitchConfigurationContainer withNumber(Integer number) {
         this.number = number;
         return this;
     }
     
+    public SwitchConfigurationContainer(){}
 }

@@ -55,10 +55,8 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNotificationsIdResponse res = new org.openapis.openapi.models.operations.DeleteNotificationsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteNotificationsIdResponse res = new org.openapis.openapi.models.operations.DeleteNotificationsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNotificationsResponse res = new org.openapis.openapi.models.operations.GetNotificationsResponse() {{
+        org.openapis.openapi.models.operations.GetNotificationsResponse res = new org.openapis.openapi.models.operations.GetNotificationsResponse(contentType, httpRes.statusCode()) {{
             notificationEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNotificationsIdResponse res = new org.openapis.openapi.models.operations.GetNotificationsIdResponse() {{
+        org.openapis.openapi.models.operations.GetNotificationsIdResponse res = new org.openapis.openapi.models.operations.GetNotificationsIdResponse(contentType, httpRes.statusCode()) {{
             notificationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchNotificationsIdResponse res = new org.openapis.openapi.models.operations.PatchNotificationsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchNotificationsIdResponse res = new org.openapis.openapi.models.operations.PatchNotificationsIdResponse(contentType, httpRes.statusCode()) {{
             notificationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,11 +213,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNotificationsResponse res = new org.openapis.openapi.models.operations.PostNotificationsResponse() {{
+        org.openapis.openapi.models.operations.PostNotificationsResponse res = new org.openapis.openapi.models.operations.PostNotificationsResponse(contentType, httpRes.statusCode()) {{
             notificationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

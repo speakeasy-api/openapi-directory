@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAccessPointsOutput {
     
     public LoadBalancerDescription[] loadBalancerDescriptions;
+
     public DescribeAccessPointsOutput withLoadBalancerDescriptions(LoadBalancerDescription[] loadBalancerDescriptions) {
         this.loadBalancerDescriptions = loadBalancerDescriptions;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAccessPointsOutput {
     
     
     public String nextMarker;
+
     public DescribeAccessPointsOutput withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public DescribeAccessPointsOutput(){}
 }

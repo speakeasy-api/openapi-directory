@@ -333,4 +333,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/PaymentConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/SetsinglecustomfieldvalueRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PriceChangeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/cartattachments/README.md
+docs/configuration/README.md
+docs/customdata/README.md
+docs/fulfillment/README.md
+docs/orderplacement/README.md
+docs/region/README.md
+docs/shoppingcart/README.md
 USAGE.md

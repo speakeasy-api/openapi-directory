@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse {
     
     public String contentType;
+
     public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEnti
     
     
     public Integer statusCode;
+
     public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEnti
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEnti
      */
     
     public org.openapis.openapi.models.shared.UpdateEntitiesWithConditionsResponse updateEntitiesWithConditionsResponse;
+
     public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse withUpdateEntitiesWithConditionsResponse(org.openapis.openapi.models.shared.UpdateEntitiesWithConditionsResponse updateEntitiesWithConditionsResponse) {
         this.updateEntitiesWithConditionsResponse = updateEntitiesWithConditionsResponse;
         return this;
     }
     
+    public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

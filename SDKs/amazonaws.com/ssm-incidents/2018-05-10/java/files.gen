@@ -172,4 +172,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateReplicationSetAction.
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteRegionAction.java
 lib/src/main/java/org/openapis/openapi/models/shared/AddRegionAction.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

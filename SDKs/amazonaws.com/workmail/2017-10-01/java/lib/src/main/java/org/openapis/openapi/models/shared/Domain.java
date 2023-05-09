@@ -15,6 +15,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public Domain withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,9 +24,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostedZoneId")
     public String hostedZoneId;
+
     public Domain withHostedZoneId(String hostedZoneId) {
         this.hostedZoneId = hostedZoneId;
         return this;
     }
     
+    public Domain(){}
 }

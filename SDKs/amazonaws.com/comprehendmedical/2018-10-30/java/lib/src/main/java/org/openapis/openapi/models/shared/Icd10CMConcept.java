@@ -15,6 +15,7 @@ public class Icd10CMConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Icd10CMConcept withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Icd10CMConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Icd10CMConcept withDescription(String description) {
         this.description = description;
         return this;
@@ -31,9 +33,11 @@ public class Icd10CMConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public Icd10CMConcept withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public Icd10CMConcept(){}
 }

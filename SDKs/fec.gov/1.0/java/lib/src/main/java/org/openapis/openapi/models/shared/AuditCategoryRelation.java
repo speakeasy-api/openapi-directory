@@ -12,6 +12,7 @@ public class AuditCategoryRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_category_id")
     public String subCategoryId;
+
     public AuditCategoryRelation withSubCategoryId(String subCategoryId) {
         this.subCategoryId = subCategoryId;
         return this;
@@ -20,9 +21,11 @@ public class AuditCategoryRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_category_name")
     public String subCategoryName;
+
     public AuditCategoryRelation withSubCategoryName(String subCategoryName) {
         this.subCategoryName = subCategoryName;
         return this;
     }
     
+    public AuditCategoryRelation(){}
 }

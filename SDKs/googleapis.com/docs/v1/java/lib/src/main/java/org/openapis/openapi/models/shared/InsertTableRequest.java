@@ -18,6 +18,7 @@ public class InsertTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Integer columns;
+
     public InsertTableRequest withColumns(Integer columns) {
         this.columns = columns;
         return this;
@@ -29,6 +30,7 @@ public class InsertTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOfSegmentLocation")
     public EndOfSegmentLocation endOfSegmentLocation;
+
     public InsertTableRequest withEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
         this.endOfSegmentLocation = endOfSegmentLocation;
         return this;
@@ -40,6 +42,7 @@ public class InsertTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public InsertTableRequest withLocation(Location location) {
         this.location = location;
         return this;
@@ -51,9 +54,11 @@ public class InsertTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Integer rows;
+
     public InsertTableRequest withRows(Integer rows) {
         this.rows = rows;
         return this;
     }
     
+    public InsertTableRequest(){}
 }

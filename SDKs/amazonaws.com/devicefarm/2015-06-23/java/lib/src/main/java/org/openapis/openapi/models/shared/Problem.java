@@ -15,6 +15,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public Device device;
+
     public Problem withDevice(Device device) {
         this.device = device;
         return this;
@@ -23,6 +24,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public ProblemDetail job;
+
     public Problem withJob(ProblemDetail job) {
         this.job = job;
         return this;
@@ -31,6 +33,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Problem withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +42,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ExecutionResultEnum result;
+
     public Problem withResult(ExecutionResultEnum result) {
         this.result = result;
         return this;
@@ -47,6 +51,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run")
     public ProblemDetail run;
+
     public Problem withRun(ProblemDetail run) {
         this.run = run;
         return this;
@@ -55,6 +60,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suite")
     public ProblemDetail suite;
+
     public Problem withSuite(ProblemDetail suite) {
         this.suite = suite;
         return this;
@@ -63,9 +69,11 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test")
     public ProblemDetail test;
+
     public Problem withTest(ProblemDetail test) {
         this.test = test;
         return this;
     }
     
+    public Problem(){}
 }

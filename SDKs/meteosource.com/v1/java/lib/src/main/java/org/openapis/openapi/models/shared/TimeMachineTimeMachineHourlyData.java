@@ -21,6 +21,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cape")
     public Long cape;
+
     public TimeMachineTimeMachineHourlyData withCape(Long cape) {
         this.cape = cape;
         return this;
@@ -28,6 +29,7 @@ public class TimeMachineTimeMachineHourlyData {
     
     @JsonProperty("cloud_cover")
     public TimeMachineTimeMachineCloudCoverData cloudCover;
+
     public TimeMachineTimeMachineHourlyData withCloudCover(TimeMachineTimeMachineCloudCoverData cloudCover) {
         this.cloudCover = cloudCover;
         return this;
@@ -41,6 +43,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public TimeMachineTimeMachineHourlyData withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -52,6 +55,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dew_point")
     public Double dewPoint;
+
     public TimeMachineTimeMachineHourlyData withDewPoint(Double dewPoint) {
         this.dewPoint = dewPoint;
         return this;
@@ -64,6 +68,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaporation")
     public Long evaporation;
+
     public TimeMachineTimeMachineHourlyData withEvaporation(Long evaporation) {
         this.evaporation = evaporation;
         return this;
@@ -76,6 +81,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feels_like")
     public Double feelsLike;
+
     public TimeMachineTimeMachineHourlyData withFeelsLike(Double feelsLike) {
         this.feelsLike = feelsLike;
         return this;
@@ -88,6 +94,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humidity")
     public Long humidity;
+
     public TimeMachineTimeMachineHourlyData withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -138,6 +145,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public Long icon;
+
     public TimeMachineTimeMachineHourlyData withIcon(Long icon) {
         this.icon = icon;
         return this;
@@ -150,6 +158,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("irradiance")
     public Long irradiance;
+
     public TimeMachineTimeMachineHourlyData withIrradiance(Long irradiance) {
         this.irradiance = irradiance;
         return this;
@@ -162,6 +171,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ozone")
     public Long ozone;
+
     public TimeMachineTimeMachineHourlyData withOzone(Long ozone) {
         this.ozone = ozone;
         return this;
@@ -169,6 +179,7 @@ public class TimeMachineTimeMachineHourlyData {
     
     @JsonProperty("precipitation")
     public TimeMachineTimeMachinePrecipitationData precipitation;
+
     public TimeMachineTimeMachineHourlyData withPrecipitation(TimeMachineTimeMachinePrecipitationData precipitation) {
         this.precipitation = precipitation;
         return this;
@@ -181,6 +192,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pressure")
     public Double pressure;
+
     public TimeMachineTimeMachineHourlyData withPressure(Double pressure) {
         this.pressure = pressure;
         return this;
@@ -192,6 +204,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soil_temperature")
     public Double soilTemperature;
+
     public TimeMachineTimeMachineHourlyData withSoilTemperature(Double soilTemperature) {
         this.soilTemperature = soilTemperature;
         return this;
@@ -203,6 +216,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surface_temperature")
     public Double surfaceTemperature;
+
     public TimeMachineTimeMachineHourlyData withSurfaceTemperature(Double surfaceTemperature) {
         this.surfaceTemperature = surfaceTemperature;
         return this;
@@ -214,6 +228,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Double temperature;
+
     public TimeMachineTimeMachineHourlyData withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -225,6 +240,7 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weather")
     public String weather;
+
     public TimeMachineTimeMachineHourlyData withWeather(String weather) {
         this.weather = weather;
         return this;
@@ -232,6 +248,7 @@ public class TimeMachineTimeMachineHourlyData {
     
     @JsonProperty("wind")
     public TimeMachineTimeMachineWindData wind;
+
     public TimeMachineTimeMachineHourlyData withWind(TimeMachineTimeMachineWindData wind) {
         this.wind = wind;
         return this;
@@ -244,9 +261,15 @@ public class TimeMachineTimeMachineHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_chill")
     public Double windChill;
+
     public TimeMachineTimeMachineHourlyData withWindChill(Double windChill) {
         this.windChill = windChill;
         return this;
     }
     
+    public TimeMachineTimeMachineHourlyData(@JsonProperty("cloud_cover") TimeMachineTimeMachineCloudCoverData cloudCover, @JsonProperty("precipitation") TimeMachineTimeMachinePrecipitationData precipitation, @JsonProperty("wind") TimeMachineTimeMachineWindData wind) {
+        this.cloudCover = cloudCover;
+        this.precipitation = precipitation;
+        this.wind = wind;
+  }
 }

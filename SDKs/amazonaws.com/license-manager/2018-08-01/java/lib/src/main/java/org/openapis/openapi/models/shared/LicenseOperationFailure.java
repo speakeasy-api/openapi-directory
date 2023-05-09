@@ -20,6 +20,7 @@ public class LicenseOperationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public LicenseOperationFailure withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -30,6 +31,7 @@ public class LicenseOperationFailure {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FailureTime")
     public OffsetDateTime failureTime;
+
     public LicenseOperationFailure withFailureTime(OffsetDateTime failureTime) {
         this.failureTime = failureTime;
         return this;
@@ -38,6 +40,7 @@ public class LicenseOperationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataList")
     public Metadata[] metadataList;
+
     public LicenseOperationFailure withMetadataList(Metadata[] metadataList) {
         this.metadataList = metadataList;
         return this;
@@ -46,6 +49,7 @@ public class LicenseOperationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationName")
     public String operationName;
+
     public LicenseOperationFailure withOperationName(String operationName) {
         this.operationName = operationName;
         return this;
@@ -54,6 +58,7 @@ public class LicenseOperationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationRequestedBy")
     public String operationRequestedBy;
+
     public LicenseOperationFailure withOperationRequestedBy(String operationRequestedBy) {
         this.operationRequestedBy = operationRequestedBy;
         return this;
@@ -62,6 +67,7 @@ public class LicenseOperationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public LicenseOperationFailure withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -70,6 +76,7 @@ public class LicenseOperationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceOwnerId")
     public String resourceOwnerId;
+
     public LicenseOperationFailure withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -78,9 +85,11 @@ public class LicenseOperationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public LicenseOperationFailure withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public LicenseOperationFailure(){}
 }

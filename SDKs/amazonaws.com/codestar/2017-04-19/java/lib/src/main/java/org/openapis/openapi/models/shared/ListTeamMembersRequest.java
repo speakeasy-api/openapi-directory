@@ -12,6 +12,7 @@ public class ListTeamMembersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListTeamMembersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListTeamMembersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTeamMembersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListTeamMembersRequest {
     
     @JsonProperty("projectId")
     public String projectId;
+
     public ListTeamMembersRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public ListTeamMembersRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

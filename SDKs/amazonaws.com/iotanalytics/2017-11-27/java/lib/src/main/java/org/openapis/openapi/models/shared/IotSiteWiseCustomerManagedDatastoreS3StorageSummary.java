@@ -15,6 +15,7 @@ public class IotSiteWiseCustomerManagedDatastoreS3StorageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public IotSiteWiseCustomerManagedDatastoreS3StorageSummary withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,9 +24,11 @@ public class IotSiteWiseCustomerManagedDatastoreS3StorageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPrefix")
     public String keyPrefix;
+
     public IotSiteWiseCustomerManagedDatastoreS3StorageSummary withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
     }
     
+    public IotSiteWiseCustomerManagedDatastoreS3StorageSummary(){}
 }

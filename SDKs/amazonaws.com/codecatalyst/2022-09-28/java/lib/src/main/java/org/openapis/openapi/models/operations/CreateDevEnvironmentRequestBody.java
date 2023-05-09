@@ -15,6 +15,7 @@ public class CreateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public CreateDevEnvironmentRequestBody withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -26,6 +27,7 @@ public class CreateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateDevEnvironmentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -37,6 +39,7 @@ public class CreateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ides")
     public org.openapis.openapi.models.shared.IdeConfiguration[] ides;
+
     public CreateDevEnvironmentRequestBody withIdes(org.openapis.openapi.models.shared.IdeConfiguration[] ides) {
         this.ides = ides;
         return this;
@@ -48,6 +51,7 @@ public class CreateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inactivityTimeoutMinutes")
     public Long inactivityTimeoutMinutes;
+
     public CreateDevEnvironmentRequestBody withInactivityTimeoutMinutes(Long inactivityTimeoutMinutes) {
         this.inactivityTimeoutMinutes = inactivityTimeoutMinutes;
         return this;
@@ -58,6 +62,7 @@ public class CreateDevEnvironmentRequestBody {
      */
     @JsonProperty("instanceType")
     public CreateDevEnvironmentRequestBodyInstanceTypeEnum instanceType;
+
     public CreateDevEnvironmentRequestBody withInstanceType(CreateDevEnvironmentRequestBodyInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -68,6 +73,7 @@ public class CreateDevEnvironmentRequestBody {
      */
     @JsonProperty("persistentStorage")
     public CreateDevEnvironmentRequestBodyPersistentStorage persistentStorage;
+
     public CreateDevEnvironmentRequestBody withPersistentStorage(CreateDevEnvironmentRequestBodyPersistentStorage persistentStorage) {
         this.persistentStorage = persistentStorage;
         return this;
@@ -79,9 +85,14 @@ public class CreateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public org.openapis.openapi.models.shared.RepositoryInput[] repositories;
+
     public CreateDevEnvironmentRequestBody withRepositories(org.openapis.openapi.models.shared.RepositoryInput[] repositories) {
         this.repositories = repositories;
         return this;
     }
     
+    public CreateDevEnvironmentRequestBody(@JsonProperty("instanceType") CreateDevEnvironmentRequestBodyInstanceTypeEnum instanceType, @JsonProperty("persistentStorage") CreateDevEnvironmentRequestBodyPersistentStorage persistentStorage) {
+        this.instanceType = instanceType;
+        this.persistentStorage = persistentStorage;
+  }
 }

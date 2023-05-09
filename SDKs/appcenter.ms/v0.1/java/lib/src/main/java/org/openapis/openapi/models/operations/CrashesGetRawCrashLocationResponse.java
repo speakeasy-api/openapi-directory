@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrashesGetRawCrashLocationResponse {
     
     public String contentType;
+
     public CrashesGetRawCrashLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CrashesGetRawCrashLocationResponse {
     
     
     public Integer statusCode;
+
     public CrashesGetRawCrashLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CrashesGetRawCrashLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrashesGetRawCrashLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CrashesGetRawCrashLocationResponse {
      */
     
     public CrashesGetRawCrashLocation200ApplicationJSON crashesGetRawCrashLocation200ApplicationJSONObject;
+
     public CrashesGetRawCrashLocationResponse withCrashesGetRawCrashLocation200ApplicationJSONObject(CrashesGetRawCrashLocation200ApplicationJSON crashesGetRawCrashLocation200ApplicationJSONObject) {
         this.crashesGetRawCrashLocation200ApplicationJSONObject = crashesGetRawCrashLocation200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CrashesGetRawCrashLocationResponse {
      */
     
     public CrashesGetRawCrashLocationDefaultApplicationJSON crashesGetRawCrashLocationDefaultApplicationJSONObject;
+
     public CrashesGetRawCrashLocationResponse withCrashesGetRawCrashLocationDefaultApplicationJSONObject(CrashesGetRawCrashLocationDefaultApplicationJSON crashesGetRawCrashLocationDefaultApplicationJSONObject) {
         this.crashesGetRawCrashLocationDefaultApplicationJSONObject = crashesGetRawCrashLocationDefaultApplicationJSONObject;
         return this;
     }
     
+    public CrashesGetRawCrashLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

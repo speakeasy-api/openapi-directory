@@ -15,9 +15,11 @@ public class Tax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public TaxFields tax;
+
     public Tax withTax(TaxFields tax) {
         this.tax = tax;
         return this;
     }
     
+    public Tax(){}
 }

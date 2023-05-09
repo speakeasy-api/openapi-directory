@@ -12,6 +12,7 @@ public class FindCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public FindCredentials withKey(String key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class FindCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serial")
     public String serial;
+
     public FindCredentials withSerial(String serial) {
         this.serial = serial;
         return this;
     }
     
+    public FindCredentials(){}
 }

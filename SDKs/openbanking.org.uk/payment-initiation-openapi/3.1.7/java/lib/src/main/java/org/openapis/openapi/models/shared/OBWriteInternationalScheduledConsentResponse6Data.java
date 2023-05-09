@@ -20,6 +20,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteInternationalScheduledConsentResponse6DataAuthorisation authorisation;
+
     public OBWriteInternationalScheduledConsentResponse6Data withAuthorisation(OBWriteInternationalScheduledConsentResponse6DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -28,6 +29,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteInternationalScheduledConsentResponse6DataCharges[] charges;
+
     public OBWriteInternationalScheduledConsentResponse6Data withCharges(OBWriteInternationalScheduledConsentResponse6DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -38,6 +40,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteInternationalScheduledConsentResponse6Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteInternationalScheduledConsentResponse6Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -67,6 +71,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CutOffDateTime")
     public OffsetDateTime cutOffDateTime;
+
     public OBWriteInternationalScheduledConsentResponse6Data withCutOffDateTime(OffsetDateTime cutOffDateTime) {
         this.cutOffDateTime = cutOffDateTime;
         return this;
@@ -78,6 +83,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteInternationalScheduledConsentResponse6Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -89,6 +95,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRateInformation")
     public OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformation exchangeRateInformation;
+
     public OBWriteInternationalScheduledConsentResponse6Data withExchangeRateInformation(OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformation exchangeRateInformation) {
         this.exchangeRateInformation = exchangeRateInformation;
         return this;
@@ -104,6 +111,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedExecutionDateTime")
     public OffsetDateTime expectedExecutionDateTime;
+
     public OBWriteInternationalScheduledConsentResponse6Data withExpectedExecutionDateTime(OffsetDateTime expectedExecutionDateTime) {
         this.expectedExecutionDateTime = expectedExecutionDateTime;
         return this;
@@ -119,6 +127,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedSettlementDateTime")
     public OffsetDateTime expectedSettlementDateTime;
+
     public OBWriteInternationalScheduledConsentResponse6Data withExpectedSettlementDateTime(OffsetDateTime expectedSettlementDateTime) {
         this.expectedSettlementDateTime = expectedSettlementDateTime;
         return this;
@@ -129,6 +138,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalScheduledConsentResponse6DataInitiation initiation;
+
     public OBWriteInternationalScheduledConsentResponse6Data withInitiation(OBWriteInternationalScheduledConsentResponse6DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -139,6 +149,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
      */
     @JsonProperty("Permission")
     public OBWriteInternationalScheduledConsentResponse6DataPermissionEnum permission;
+
     public OBWriteInternationalScheduledConsentResponse6Data withPermission(OBWriteInternationalScheduledConsentResponse6DataPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -150,6 +161,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteInternationalScheduledConsentResponse6Data withReadRefundAccount(OBWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -161,6 +173,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteInternationalScheduledConsentResponse6Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
@@ -171,6 +184,7 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
      */
     @JsonProperty("Status")
     public OBWriteInternationalScheduledConsentResponse6DataStatusEnum status;
+
     public OBWriteInternationalScheduledConsentResponse6Data withStatus(OBWriteInternationalScheduledConsentResponse6DataStatusEnum status) {
         this.status = status;
         return this;
@@ -185,9 +199,18 @@ public class OBWriteInternationalScheduledConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteInternationalScheduledConsentResponse6Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteInternationalScheduledConsentResponse6Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Initiation") OBWriteInternationalScheduledConsentResponse6DataInitiation initiation, @JsonProperty("Permission") OBWriteInternationalScheduledConsentResponse6DataPermissionEnum permission, @JsonProperty("Status") OBWriteInternationalScheduledConsentResponse6DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.initiation = initiation;
+        this.permission = permission;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

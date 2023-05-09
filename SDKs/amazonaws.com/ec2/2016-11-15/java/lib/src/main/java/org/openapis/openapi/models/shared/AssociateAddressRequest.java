@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateAddressRequest {
     
     public String allocationId;
+
     public AssociateAddressRequest withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -16,6 +17,7 @@ public class AssociateAddressRequest {
     
     
     public Boolean allowReassociation;
+
     public AssociateAddressRequest withAllowReassociation(Boolean allowReassociation) {
         this.allowReassociation = allowReassociation;
         return this;
@@ -23,6 +25,7 @@ public class AssociateAddressRequest {
     
     
     public Boolean dryRun;
+
     public AssociateAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class AssociateAddressRequest {
     
     
     public String instanceId;
+
     public AssociateAddressRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -37,6 +41,7 @@ public class AssociateAddressRequest {
     
     
     public String networkInterfaceId;
+
     public AssociateAddressRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -44,6 +49,7 @@ public class AssociateAddressRequest {
     
     
     public String privateIpAddress;
+
     public AssociateAddressRequest withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -51,9 +57,11 @@ public class AssociateAddressRequest {
     
     
     public String publicIp;
+
     public AssociateAddressRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public AssociateAddressRequest(){}
 }

@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyUserAuthenticationMode {
     @SpeakeasyMetadata("queryParam:name=Passwords")
     public String[] passwords;
+
     public GETModifyUserAuthenticationMode withPasswords(String[] passwords) {
         this.passwords = passwords;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyUserAuthenticationMode {
     
     @SpeakeasyMetadata("queryParam:name=Type")
     public org.openapis.openapi.models.shared.InputAuthenticationTypeEnum type;
+
     public GETModifyUserAuthenticationMode withType(org.openapis.openapi.models.shared.InputAuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GETModifyUserAuthenticationMode(){}
 }

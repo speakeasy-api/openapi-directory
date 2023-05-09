@@ -18,6 +18,7 @@ public class MemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentLimitBytes")
     public String currentLimitBytes;
+
     public MemInfo withCurrentLimitBytes(String currentLimitBytes) {
         this.currentLimitBytes = currentLimitBytes;
         return this;
@@ -29,6 +30,7 @@ public class MemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentOoms")
     public String currentOoms;
+
     public MemInfo withCurrentOoms(String currentOoms) {
         this.currentOoms = currentOoms;
         return this;
@@ -40,6 +42,7 @@ public class MemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRssBytes")
     public String currentRssBytes;
+
     public MemInfo withCurrentRssBytes(String currentRssBytes) {
         this.currentRssBytes = currentRssBytes;
         return this;
@@ -51,6 +54,7 @@ public class MemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public MemInfo withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -62,9 +66,11 @@ public class MemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalGbMs")
     public String totalGbMs;
+
     public MemInfo withTotalGbMs(String totalGbMs) {
         this.totalGbMs = totalGbMs;
         return this;
     }
     
+    public MemInfo(){}
 }

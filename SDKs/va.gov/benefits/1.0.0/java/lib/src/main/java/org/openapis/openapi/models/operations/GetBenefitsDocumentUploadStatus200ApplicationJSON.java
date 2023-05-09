@@ -15,9 +15,13 @@ public class GetBenefitsDocumentUploadStatus200ApplicationJSON {
      */
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.DocumentUploadStatus data;
+
     public GetBenefitsDocumentUploadStatus200ApplicationJSON withData(org.openapis.openapi.models.shared.DocumentUploadStatus data) {
         this.data = data;
         return this;
     }
     
+    public GetBenefitsDocumentUploadStatus200ApplicationJSON(@JsonProperty("data") org.openapis.openapi.models.shared.DocumentUploadStatus data) {
+        this.data = data;
+  }
 }

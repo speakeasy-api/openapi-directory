@@ -22,6 +22,7 @@ public class BuildSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("added_at")
     public OffsetDateTime addedAt;
+
     public BuildSummary withAddedAt(OffsetDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
@@ -30,6 +31,7 @@ public class BuildSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_num")
     public Long buildNum;
+
     public BuildSummary withBuildNum(Long buildNum) {
         this.buildNum = buildNum;
         return this;
@@ -38,6 +40,7 @@ public class BuildSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome")
     public OutcomeEnum outcome;
+
     public BuildSummary withOutcome(OutcomeEnum outcome) {
         this.outcome = outcome;
         return this;
@@ -48,6 +51,7 @@ public class BuildSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pushed_at")
     public OffsetDateTime pushedAt;
+
     public BuildSummary withPushedAt(OffsetDateTime pushedAt) {
         this.pushedAt = pushedAt;
         return this;
@@ -56,6 +60,7 @@ public class BuildSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusEnum status;
+
     public BuildSummary withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -64,9 +69,11 @@ public class BuildSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcs_revision")
     public String vcsRevision;
+
     public BuildSummary withVcsRevision(String vcsRevision) {
         this.vcsRevision = vcsRevision;
         return this;
     }
     
+    public BuildSummary(){}
 }

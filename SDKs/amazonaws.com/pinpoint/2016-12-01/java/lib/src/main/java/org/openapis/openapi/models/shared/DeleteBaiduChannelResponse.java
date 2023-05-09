@@ -15,9 +15,13 @@ public class DeleteBaiduChannelResponse {
      */
     @JsonProperty("BaiduChannelResponse")
     public BaiduChannelResponse baiduChannelResponse;
+
     public DeleteBaiduChannelResponse withBaiduChannelResponse(BaiduChannelResponse baiduChannelResponse) {
         this.baiduChannelResponse = baiduChannelResponse;
         return this;
     }
     
+    public DeleteBaiduChannelResponse(@JsonProperty("BaiduChannelResponse") BaiduChannelResponse baiduChannelResponse) {
+        this.baiduChannelResponse = baiduChannelResponse;
+  }
 }

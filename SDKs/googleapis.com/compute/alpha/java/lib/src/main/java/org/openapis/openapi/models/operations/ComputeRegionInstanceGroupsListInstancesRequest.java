@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeRegionInstanceGroupsListInstancesRequest {
@@ -12,6 +13,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequest;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withRegionInstanceGroupsListInstancesRequest(org.openapis.openapi.models.shared.RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequest) {
         this.regionInstanceGroupsListInstancesRequest = regionInstanceGroupsListInstancesRequest;
         return this;
@@ -29,6 +32,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -79,6 +87,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceGroup")
     public String instanceGroup;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withInstanceGroup(String instanceGroup) {
         this.instanceGroup = instanceGroup;
         return this;
@@ -89,6 +98,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -109,6 +120,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -129,6 +142,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -139,6 +153,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -149,6 +164,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withProject(String project) {
         this.project = project;
         return this;
@@ -159,6 +175,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -169,6 +186,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -179,6 +197,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnPartialSuccess")
     public Boolean returnPartialSuccess;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withReturnPartialSuccess(Boolean returnPartialSuccess) {
         this.returnPartialSuccess = returnPartialSuccess;
         return this;
@@ -189,6 +208,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -199,6 +219,7 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -209,9 +230,15 @@ public class ComputeRegionInstanceGroupsListInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeRegionInstanceGroupsListInstancesRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeRegionInstanceGroupsListInstancesRequest(@JsonProperty("instanceGroup") String instanceGroup, @JsonProperty("project") String project, @JsonProperty("region") String region) {
+        this.instanceGroup = instanceGroup;
+        this.project = project;
+        this.region = region;
+  }
 }

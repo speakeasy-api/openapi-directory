@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddLayerVersionPermissionRequest {
@@ -12,6 +13,7 @@ public class AddLayerVersionPermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LayerName")
     public String layerName;
+
     public AddLayerVersionPermissionRequest withLayerName(String layerName) {
         this.layerName = layerName;
         return this;
@@ -19,6 +21,7 @@ public class AddLayerVersionPermissionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddLayerVersionPermissionRequestBody requestBody;
+
     public AddLayerVersionPermissionRequest withRequestBody(AddLayerVersionPermissionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class AddLayerVersionPermissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RevisionId")
     public String revisionId;
+
     public AddLayerVersionPermissionRequest withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -39,6 +43,7 @@ public class AddLayerVersionPermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=VersionNumber")
     public Long versionNumber;
+
     public AddLayerVersionPermissionRequest withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -46,6 +51,7 @@ public class AddLayerVersionPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AddLayerVersionPermissionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -53,6 +59,7 @@ public class AddLayerVersionPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AddLayerVersionPermissionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -60,6 +67,7 @@ public class AddLayerVersionPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AddLayerVersionPermissionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -67,6 +75,7 @@ public class AddLayerVersionPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AddLayerVersionPermissionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -74,6 +83,7 @@ public class AddLayerVersionPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AddLayerVersionPermissionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -81,6 +91,7 @@ public class AddLayerVersionPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AddLayerVersionPermissionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -88,9 +99,15 @@ public class AddLayerVersionPermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AddLayerVersionPermissionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public AddLayerVersionPermissionRequest(@JsonProperty("LayerName") String layerName, @JsonProperty("RequestBody") AddLayerVersionPermissionRequestBody requestBody, @JsonProperty("VersionNumber") Long versionNumber) {
+        this.layerName = layerName;
+        this.requestBody = requestBody;
+        this.versionNumber = versionNumber;
+  }
 }

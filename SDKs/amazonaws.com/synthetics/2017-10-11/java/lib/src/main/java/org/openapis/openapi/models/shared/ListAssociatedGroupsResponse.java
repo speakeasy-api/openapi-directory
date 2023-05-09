@@ -15,6 +15,7 @@ public class ListAssociatedGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public GroupSummary[] groups;
+
     public ListAssociatedGroupsResponse withGroups(GroupSummary[] groups) {
         this.groups = groups;
         return this;
@@ -23,9 +24,11 @@ public class ListAssociatedGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociatedGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociatedGroupsResponse(){}
 }

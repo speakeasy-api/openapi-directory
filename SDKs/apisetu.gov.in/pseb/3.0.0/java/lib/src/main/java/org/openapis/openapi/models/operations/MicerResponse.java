@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MicerResponse {
     
     public String contentType;
+
     public MicerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MicerResponse {
     
     
     public Integer statusCode;
+
     public MicerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MicerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MicerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MicerResponse {
      */
     
     public Micer400ApplicationJSON micer400ApplicationJSONObject;
+
     public MicerResponse withMicer400ApplicationJSONObject(Micer400ApplicationJSON micer400ApplicationJSONObject) {
         this.micer400ApplicationJSONObject = micer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MicerResponse {
      */
     
     public Micer401ApplicationJSON micer401ApplicationJSONObject;
+
     public MicerResponse withMicer401ApplicationJSONObject(Micer401ApplicationJSON micer401ApplicationJSONObject) {
         this.micer401ApplicationJSONObject = micer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MicerResponse {
      */
     
     public Micer404ApplicationJSON micer404ApplicationJSONObject;
+
     public MicerResponse withMicer404ApplicationJSONObject(Micer404ApplicationJSON micer404ApplicationJSONObject) {
         this.micer404ApplicationJSONObject = micer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MicerResponse {
      */
     
     public Micer500ApplicationJSON micer500ApplicationJSONObject;
+
     public MicerResponse withMicer500ApplicationJSONObject(Micer500ApplicationJSON micer500ApplicationJSONObject) {
         this.micer500ApplicationJSONObject = micer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MicerResponse {
      */
     
     public Micer502ApplicationJSON micer502ApplicationJSONObject;
+
     public MicerResponse withMicer502ApplicationJSONObject(Micer502ApplicationJSON micer502ApplicationJSONObject) {
         this.micer502ApplicationJSONObject = micer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class MicerResponse {
      */
     
     public Micer503ApplicationJSON micer503ApplicationJSONObject;
+
     public MicerResponse withMicer503ApplicationJSONObject(Micer503ApplicationJSON micer503ApplicationJSONObject) {
         this.micer503ApplicationJSONObject = micer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class MicerResponse {
      */
     
     public Micer504ApplicationJSON micer504ApplicationJSONObject;
+
     public MicerResponse withMicer504ApplicationJSONObject(Micer504ApplicationJSON micer504ApplicationJSONObject) {
         this.micer504ApplicationJSONObject = micer504ApplicationJSONObject;
         return this;
     }
     
+    public MicerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

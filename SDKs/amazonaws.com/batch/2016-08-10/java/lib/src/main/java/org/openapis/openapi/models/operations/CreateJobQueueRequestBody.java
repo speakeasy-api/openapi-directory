@@ -14,6 +14,7 @@ public class CreateJobQueueRequestBody {
      */
     @JsonProperty("computeEnvironmentOrder")
     public org.openapis.openapi.models.shared.ComputeEnvironmentOrder[] computeEnvironmentOrder;
+
     public CreateJobQueueRequestBody withComputeEnvironmentOrder(org.openapis.openapi.models.shared.ComputeEnvironmentOrder[] computeEnvironmentOrder) {
         this.computeEnvironmentOrder = computeEnvironmentOrder;
         return this;
@@ -24,6 +25,7 @@ public class CreateJobQueueRequestBody {
      */
     @JsonProperty("jobQueueName")
     public String jobQueueName;
+
     public CreateJobQueueRequestBody withJobQueueName(String jobQueueName) {
         this.jobQueueName = jobQueueName;
         return this;
@@ -34,6 +36,7 @@ public class CreateJobQueueRequestBody {
      */
     @JsonProperty("priority")
     public Long priority;
+
     public CreateJobQueueRequestBody withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -45,6 +48,7 @@ public class CreateJobQueueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPolicyArn")
     public String schedulingPolicyArn;
+
     public CreateJobQueueRequestBody withSchedulingPolicyArn(String schedulingPolicyArn) {
         this.schedulingPolicyArn = schedulingPolicyArn;
         return this;
@@ -56,6 +60,7 @@ public class CreateJobQueueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CreateJobQueueRequestBodyStateEnum state;
+
     public CreateJobQueueRequestBody withState(CreateJobQueueRequestBodyStateEnum state) {
         this.state = state;
         return this;
@@ -67,9 +72,15 @@ public class CreateJobQueueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateJobQueueRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateJobQueueRequestBody(@JsonProperty("computeEnvironmentOrder") org.openapis.openapi.models.shared.ComputeEnvironmentOrder[] computeEnvironmentOrder, @JsonProperty("jobQueueName") String jobQueueName, @JsonProperty("priority") Long priority) {
+        this.computeEnvironmentOrder = computeEnvironmentOrder;
+        this.jobQueueName = jobQueueName;
+        this.priority = priority;
+  }
 }

@@ -18,6 +18,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignee")
     public String assignee;
+
     public Assignment withAssignee(String assignee) {
         this.assignee = assignee;
         return this;
@@ -29,6 +30,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public AssignmentJobTypeEnum jobType;
+
     public Assignment withJobType(AssignmentJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -40,6 +42,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Assignment withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AssignmentStateEnum state;
+
     public Assignment withState(AssignmentStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Assignment(){}
 }

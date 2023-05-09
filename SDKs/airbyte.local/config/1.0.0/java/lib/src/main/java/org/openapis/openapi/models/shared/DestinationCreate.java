@@ -12,6 +12,7 @@ public class DestinationCreate {
      */
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public DestinationCreate withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class DestinationCreate {
     
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationCreate withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -26,6 +28,7 @@ public class DestinationCreate {
     
     @JsonProperty("name")
     public String name;
+
     public DestinationCreate withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,16 @@ public class DestinationCreate {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public DestinationCreate withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DestinationCreate(@JsonProperty("connectionConfiguration") Object connectionConfiguration, @JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("name") String name, @JsonProperty("workspaceId") String workspaceId) {
+        this.connectionConfiguration = connectionConfiguration;
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.name = name;
+        this.workspaceId = workspaceId;
+  }
 }

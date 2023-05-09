@@ -12,6 +12,7 @@ public class ElectioneeringByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ElectioneeringByCandidatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ElectioneeringByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ElectioneeringByCandidate[] results;
+
     public ElectioneeringByCandidatePage withResults(ElectioneeringByCandidate[] results) {
         this.results = results;
         return this;
     }
     
+    public ElectioneeringByCandidatePage(){}
 }

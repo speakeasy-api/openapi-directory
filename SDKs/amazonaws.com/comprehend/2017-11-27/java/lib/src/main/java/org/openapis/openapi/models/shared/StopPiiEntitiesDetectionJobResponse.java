@@ -15,6 +15,7 @@ public class StopPiiEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StopPiiEntitiesDetectionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -23,9 +24,11 @@ public class StopPiiEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StopPiiEntitiesDetectionJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StopPiiEntitiesDetectionJobResponse(){}
 }

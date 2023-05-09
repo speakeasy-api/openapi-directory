@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehose {
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatus deliveryStatus;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehose withDeliveryStatus(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatus deliveryStatus) {
         this.deliveryStatus = deliveryStatus;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public String deliveryStream;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehose withDeliveryStream(String deliveryStream) {
         this.deliveryStream = deliveryStream;
         return this;
@@ -26,9 +28,11 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public Boolean enabled;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehose withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehose(){}
 }

@@ -55,4 +55,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListLinuxSubscriptionsRespo
 lib/src/main/java/org/openapis/openapi/models/shared/Subscription.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateServiceSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

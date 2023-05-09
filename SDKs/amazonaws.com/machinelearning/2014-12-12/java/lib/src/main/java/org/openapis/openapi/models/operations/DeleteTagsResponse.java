@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTagsResponse {
     
     public String contentType;
+
     public DeleteTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTagsOutput deleteTagsOutput;
+
     public DeleteTagsResponse withDeleteTagsOutput(org.openapis.openapi.models.shared.DeleteTagsOutput deleteTagsOutput) {
         this.deleteTagsOutput = deleteTagsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTagsResponse {
      */
     
     public Object internalServerException;
+
     public DeleteTagsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTagsResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteTagsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTagsResponse {
      */
     
     public Object invalidTagException;
+
     public DeleteTagsResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteTagsResponse {
     
     
     public Integer statusCode;
+
     public DeleteTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTagsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTagsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

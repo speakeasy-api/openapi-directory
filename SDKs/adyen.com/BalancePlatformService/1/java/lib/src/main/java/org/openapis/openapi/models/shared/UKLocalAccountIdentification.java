@@ -15,6 +15,7 @@ public class UKLocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public UKLocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,6 +26,7 @@ public class UKLocalAccountIdentification {
      */
     @JsonProperty("sortCode")
     public String sortCode;
+
     public UKLocalAccountIdentification withSortCode(String sortCode) {
         this.sortCode = sortCode;
         return this;
@@ -35,9 +37,15 @@ public class UKLocalAccountIdentification {
      */
     @JsonProperty("type")
     public UKLocalAccountIdentificationTypeEnum type;
+
     public UKLocalAccountIdentification withType(UKLocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UKLocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("sortCode") String sortCode, @JsonProperty("type") UKLocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.sortCode = sortCode;
+        this.type = type;
+  }
 }

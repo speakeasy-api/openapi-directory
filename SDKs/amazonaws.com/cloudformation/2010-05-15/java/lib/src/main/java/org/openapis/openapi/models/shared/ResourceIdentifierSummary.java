@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourceIdentifierSummary {
     
     public String[] logicalResourceIds;
+
     public ResourceIdentifierSummary withLogicalResourceIds(String[] logicalResourceIds) {
         this.logicalResourceIds = logicalResourceIds;
         return this;
@@ -19,6 +20,7 @@ public class ResourceIdentifierSummary {
     
     
     public String[] resourceIdentifiers;
+
     public ResourceIdentifierSummary withResourceIdentifiers(String[] resourceIdentifiers) {
         this.resourceIdentifiers = resourceIdentifiers;
         return this;
@@ -26,9 +28,11 @@ public class ResourceIdentifierSummary {
     
     
     public String resourceType;
+
     public ResourceIdentifierSummary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceIdentifierSummary(){}
 }

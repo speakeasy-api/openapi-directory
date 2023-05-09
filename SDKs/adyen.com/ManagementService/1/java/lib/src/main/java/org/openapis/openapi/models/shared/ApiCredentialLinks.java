@@ -12,6 +12,7 @@ public class ApiCredentialLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrigins")
     public LinksElement allowedOrigins;
+
     public ApiCredentialLinks withAllowedOrigins(LinksElement allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -20,6 +21,7 @@ public class ApiCredentialLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public LinksElement company;
+
     public ApiCredentialLinks withCompany(LinksElement company) {
         this.company = company;
         return this;
@@ -28,6 +30,7 @@ public class ApiCredentialLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generateApiKey")
     public LinksElement generateApiKey;
+
     public ApiCredentialLinks withGenerateApiKey(LinksElement generateApiKey) {
         this.generateApiKey = generateApiKey;
         return this;
@@ -36,6 +39,7 @@ public class ApiCredentialLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generateClientKey")
     public LinksElement generateClientKey;
+
     public ApiCredentialLinks withGenerateClientKey(LinksElement generateClientKey) {
         this.generateClientKey = generateClientKey;
         return this;
@@ -44,6 +48,7 @@ public class ApiCredentialLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant")
     public LinksElement merchant;
+
     public ApiCredentialLinks withMerchant(LinksElement merchant) {
         this.merchant = merchant;
         return this;
@@ -51,9 +56,13 @@ public class ApiCredentialLinks {
     
     @JsonProperty("self")
     public LinksElement self;
+
     public ApiCredentialLinks withSelf(LinksElement self) {
         this.self = self;
         return this;
     }
     
+    public ApiCredentialLinks(@JsonProperty("self") LinksElement self) {
+        this.self = self;
+  }
 }

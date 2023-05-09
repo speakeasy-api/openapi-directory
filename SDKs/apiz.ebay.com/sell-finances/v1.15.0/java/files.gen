@@ -73,4 +73,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/TransferDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/Charge.java
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceAdjustment.java
 lib/src/main/java/org/openapis/openapi/models/shared/FundingSource.java
+docs/sdk/README.md
+docs/payout/README.md
+docs/sellerfundssummary/README.md
+docs/transaction/README.md
+docs/transfer/README.md
 USAGE.md

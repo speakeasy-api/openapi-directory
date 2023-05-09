@@ -59,11 +59,9 @@ public class PacketMirrorings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             packetMirroringAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class PacketMirrorings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class PacketMirrorings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePacketMirroringsGetResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputePacketMirroringsGetResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsGetResponse(contentType, httpRes.statusCode()) {{
             packetMirroring = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class PacketMirrorings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePacketMirroringsInsertResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputePacketMirroringsInsertResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class PacketMirrorings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePacketMirroringsListResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsListResponse() {{
+        org.openapis.openapi.models.operations.ComputePacketMirroringsListResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsListResponse(contentType, httpRes.statusCode()) {{
             packetMirroringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class PacketMirrorings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePacketMirroringsPatchResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputePacketMirroringsPatchResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class PacketMirrorings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

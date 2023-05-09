@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudprofilerProjectsProfilesPatchResponse {
     
     public String contentType;
+
     public CloudprofilerProjectsProfilesPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudprofilerProjectsProfilesPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.Profile profile;
+
     public CloudprofilerProjectsProfilesPatchResponse withProfile(org.openapis.openapi.models.shared.Profile profile) {
         this.profile = profile;
         return this;
@@ -26,6 +29,7 @@ public class CloudprofilerProjectsProfilesPatchResponse {
     
     
     public Integer statusCode;
+
     public CloudprofilerProjectsProfilesPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudprofilerProjectsProfilesPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudprofilerProjectsProfilesPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudprofilerProjectsProfilesPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class MatchPersonalFirstLastNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MatchPersonalFirstLastNameIn withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class MatchPersonalFirstLastNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name1")
     public FirstLastNameIn name1;
+
     public MatchPersonalFirstLastNameIn withName1(FirstLastNameIn name1) {
         this.name1 = name1;
         return this;
@@ -28,9 +30,11 @@ public class MatchPersonalFirstLastNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name2")
     public PersonalNameIn name2;
+
     public MatchPersonalFirstLastNameIn withName2(PersonalNameIn name2) {
         this.name2 = name2;
         return this;
     }
     
+    public MatchPersonalFirstLastNameIn(){}
 }

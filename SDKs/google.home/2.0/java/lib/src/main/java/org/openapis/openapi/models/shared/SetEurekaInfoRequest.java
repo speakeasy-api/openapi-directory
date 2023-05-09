@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetEurekaInfoRequest {
     @JsonProperty("name")
     public String name;
+
     public SetEurekaInfoRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +17,7 @@ public class SetEurekaInfoRequest {
     
     @JsonProperty("opt_in")
     public OptIn1 optIn;
+
     public SetEurekaInfoRequest withOptIn(OptIn1 optIn) {
         this.optIn = optIn;
         return this;
@@ -23,9 +25,15 @@ public class SetEurekaInfoRequest {
     
     @JsonProperty("settings")
     public Settings1 settings;
+
     public SetEurekaInfoRequest withSettings(Settings1 settings) {
         this.settings = settings;
         return this;
     }
     
+    public SetEurekaInfoRequest(@JsonProperty("name") String name, @JsonProperty("opt_in") OptIn1 optIn, @JsonProperty("settings") Settings1 settings) {
+        this.name = name;
+        this.optIn = optIn;
+        this.settings = settings;
+  }
 }

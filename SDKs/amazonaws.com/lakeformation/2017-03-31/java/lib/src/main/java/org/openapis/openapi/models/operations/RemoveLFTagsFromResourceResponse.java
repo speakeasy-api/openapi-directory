@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveLFTagsFromResourceResponse {
@@ -12,6 +13,7 @@ public class RemoveLFTagsFromResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public RemoveLFTagsFromResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RemoveLFTagsFromResourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public RemoveLFTagsFromResourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveLFTagsFromResourceResponse {
     
     
     public String contentType;
+
     public RemoveLFTagsFromResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RemoveLFTagsFromResourceResponse {
      */
     
     public Object entityNotFoundException;
+
     public RemoveLFTagsFromResourceResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveLFTagsFromResourceResponse {
      */
     
     public Object glueEncryptionException;
+
     public RemoveLFTagsFromResourceResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveLFTagsFromResourceResponse {
      */
     
     public Object internalServiceException;
+
     public RemoveLFTagsFromResourceResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class RemoveLFTagsFromResourceResponse {
      */
     
     public Object invalidInputException;
+
     public RemoveLFTagsFromResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class RemoveLFTagsFromResourceResponse {
      */
     
     public Object operationTimeoutException;
+
     public RemoveLFTagsFromResourceResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class RemoveLFTagsFromResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveLFTagsFromResourceResponse removeLFTagsFromResourceResponse;
+
     public RemoveLFTagsFromResourceResponse withRemoveLFTagsFromResourceResponse(org.openapis.openapi.models.shared.RemoveLFTagsFromResourceResponse removeLFTagsFromResourceResponse) {
         this.removeLFTagsFromResourceResponse = removeLFTagsFromResourceResponse;
         return this;
@@ -96,6 +106,7 @@ public class RemoveLFTagsFromResourceResponse {
     
     
     public Integer statusCode;
+
     public RemoveLFTagsFromResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class RemoveLFTagsFromResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveLFTagsFromResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveLFTagsFromResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

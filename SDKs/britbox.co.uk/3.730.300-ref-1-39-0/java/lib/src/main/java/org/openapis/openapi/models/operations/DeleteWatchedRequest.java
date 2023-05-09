@@ -32,6 +32,7 @@ public class DeleteWatchedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public DeleteWatchedRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -43,6 +44,7 @@ public class DeleteWatchedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=item_ids")
     public String[] itemIds;
+
     public DeleteWatchedRequest withItemIds(String[] itemIds) {
         this.itemIds = itemIds;
         return this;
@@ -63,9 +65,11 @@ public class DeleteWatchedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public DeleteWatchedRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public DeleteWatchedRequest(){}
 }

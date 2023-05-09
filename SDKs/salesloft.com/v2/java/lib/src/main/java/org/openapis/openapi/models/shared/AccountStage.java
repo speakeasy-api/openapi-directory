@@ -15,6 +15,7 @@ public class AccountStage {
      */
     
     public OffsetDateTime createdAt;
+
     public AccountStage withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class AccountStage {
      */
     
     public Long id;
+
     public AccountStage withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class AccountStage {
      */
     
     public String name;
+
     public AccountStage withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class AccountStage {
      */
     
     public Long order;
+
     public AccountStage withOrder(Long order) {
         this.order = order;
         return this;
@@ -55,9 +59,11 @@ public class AccountStage {
      */
     
     public OffsetDateTime updatedAt;
+
     public AccountStage withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AccountStage(){}
 }

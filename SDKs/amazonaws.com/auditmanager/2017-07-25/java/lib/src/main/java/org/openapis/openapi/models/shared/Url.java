@@ -15,6 +15,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hyperlinkName")
     public String hyperlinkName;
+
     public Url withHyperlinkName(String hyperlinkName) {
         this.hyperlinkName = hyperlinkName;
         return this;
@@ -23,9 +24,11 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Url withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public Url(){}
 }

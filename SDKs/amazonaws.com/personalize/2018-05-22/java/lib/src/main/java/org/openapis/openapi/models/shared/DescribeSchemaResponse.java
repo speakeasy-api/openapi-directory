@@ -15,9 +15,11 @@ public class DescribeSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public DatasetSchema schema;
+
     public DescribeSchemaResponse withSchema(DatasetSchema schema) {
         this.schema = schema;
         return this;
     }
     
+    public DescribeSchemaResponse(){}
 }

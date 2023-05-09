@@ -15,6 +15,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public S3Location withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleType")
     public BundleTypeEnum bundleType;
+
     public S3Location withBundleType(BundleTypeEnum bundleType) {
         this.bundleType = bundleType;
         return this;
@@ -31,6 +33,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public S3Location withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -39,6 +42,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public S3Location withKey(String key) {
         this.key = key;
         return this;
@@ -47,9 +51,11 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public S3Location withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public S3Location(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPlaybackKeyPairsResponse {
@@ -12,6 +13,7 @@ public class ListPlaybackKeyPairsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPlaybackKeyPairsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPlaybackKeyPairsResponse {
     
     
     public String contentType;
+
     public ListPlaybackKeyPairsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPlaybackKeyPairsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPlaybackKeyPairsResponse listPlaybackKeyPairsResponse;
+
     public ListPlaybackKeyPairsResponse withListPlaybackKeyPairsResponse(org.openapis.openapi.models.shared.ListPlaybackKeyPairsResponse listPlaybackKeyPairsResponse) {
         this.listPlaybackKeyPairsResponse = listPlaybackKeyPairsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListPlaybackKeyPairsResponse {
     
     
     public Integer statusCode;
+
     public ListPlaybackKeyPairsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListPlaybackKeyPairsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPlaybackKeyPairsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListPlaybackKeyPairsResponse {
      */
     
     public Object validationException;
+
     public ListPlaybackKeyPairsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPlaybackKeyPairsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

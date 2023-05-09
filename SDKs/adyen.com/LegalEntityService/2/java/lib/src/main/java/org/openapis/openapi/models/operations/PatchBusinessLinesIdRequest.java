@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchBusinessLinesIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BusinessLineInfoUpdateInput businessLineInfoUpdateInput;
+
     public PatchBusinessLinesIdRequest withBusinessLineInfoUpdateInput(org.openapis.openapi.models.shared.BusinessLineInfoUpdateInput businessLineInfoUpdateInput) {
         this.businessLineInfoUpdateInput = businessLineInfoUpdateInput;
         return this;
@@ -19,9 +21,13 @@ public class PatchBusinessLinesIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchBusinessLinesIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PatchBusinessLinesIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

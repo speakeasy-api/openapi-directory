@@ -15,6 +15,7 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregateComplianceByConformancePacks")
     public AggregateComplianceByConformancePack[] aggregateComplianceByConformancePacks;
+
     public DescribeAggregateComplianceByConformancePacksResponse withAggregateComplianceByConformancePacks(AggregateComplianceByConformancePack[] aggregateComplianceByConformancePacks) {
         this.aggregateComplianceByConformancePacks = aggregateComplianceByConformancePacks;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAggregateComplianceByConformancePacksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAggregateComplianceByConformancePacksResponse(){}
 }

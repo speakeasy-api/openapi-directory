@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchForPositionResult {
     @JsonProperty("Distance")
     public Double distance;
+
     public SearchForPositionResult withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -21,6 +22,7 @@ public class SearchForPositionResult {
     
     @JsonProperty("Place")
     public Place place;
+
     public SearchForPositionResult withPlace(Place place) {
         this.place = place;
         return this;
@@ -29,9 +31,14 @@ public class SearchForPositionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlaceId")
     public String placeId;
+
     public SearchForPositionResult withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
     }
     
+    public SearchForPositionResult(@JsonProperty("Distance") Double distance, @JsonProperty("Place") Place place) {
+        this.distance = distance;
+        this.place = place;
+  }
 }

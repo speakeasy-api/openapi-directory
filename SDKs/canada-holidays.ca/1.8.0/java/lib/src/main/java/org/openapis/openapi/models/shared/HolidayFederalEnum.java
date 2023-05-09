@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * HolidayFederalEnum - Whether this holiday is observed by federally-regulated industries.
  */
 public enum HolidayFederalEnum {
-    ONE("1"),
-    ZERO("0");
+    ONE(1L),
+    ZERO(0L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private HolidayFederalEnum(String value) {
+    private HolidayFederalEnum(Long value) {
         this.value = value;
     }
 }

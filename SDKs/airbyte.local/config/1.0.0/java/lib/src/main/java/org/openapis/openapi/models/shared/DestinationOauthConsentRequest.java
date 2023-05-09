@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationOauthConsentRequest {
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationOauthConsentRequest withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -19,6 +20,7 @@ public class DestinationOauthConsentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public DestinationOauthConsentRequest withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -30,6 +32,7 @@ public class DestinationOauthConsentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthInputConfiguration")
     public Object oAuthInputConfiguration;
+
     public DestinationOauthConsentRequest withOAuthInputConfiguration(Object oAuthInputConfiguration) {
         this.oAuthInputConfiguration = oAuthInputConfiguration;
         return this;
@@ -40,6 +43,7 @@ public class DestinationOauthConsentRequest {
      */
     @JsonProperty("redirectUrl")
     public String redirectUrl;
+
     public DestinationOauthConsentRequest withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -47,9 +51,15 @@ public class DestinationOauthConsentRequest {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public DestinationOauthConsentRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DestinationOauthConsentRequest(@JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("redirectUrl") String redirectUrl, @JsonProperty("workspaceId") String workspaceId) {
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.redirectUrl = redirectUrl;
+        this.workspaceId = workspaceId;
+  }
 }

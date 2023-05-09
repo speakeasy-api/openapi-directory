@@ -12,6 +12,7 @@ public class DescribeSenderIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public SenderIdFilter[] filters;
+
     public DescribeSenderIdsRequest withFilters(SenderIdFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeSenderIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeSenderIdsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeSenderIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSenderIdsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribeSenderIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SenderIds")
     public SenderIdAndCountry[] senderIds;
+
     public DescribeSenderIdsRequest withSenderIds(SenderIdAndCountry[] senderIds) {
         this.senderIds = senderIds;
         return this;
     }
     
+    public DescribeSenderIdsRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BranchShort {
     @JsonProperty("commit")
     public BranchShortCommit commit;
+
     public BranchShort withCommit(BranchShortCommit commit) {
         this.commit = commit;
         return this;
@@ -19,6 +20,7 @@ public class BranchShort {
     
     @JsonProperty("name")
     public String name;
+
     public BranchShort withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class BranchShort {
     
     @JsonProperty("protected")
     public Boolean protected_;
+
     public BranchShort withProtected(Boolean protected_) {
         this.protected_ = protected_;
         return this;
     }
     
+    public BranchShort(@JsonProperty("commit") BranchShortCommit commit, @JsonProperty("name") String name, @JsonProperty("protected") Boolean protected_) {
+        this.commit = commit;
+        this.name = name;
+        this.protected_ = protected_;
+  }
 }

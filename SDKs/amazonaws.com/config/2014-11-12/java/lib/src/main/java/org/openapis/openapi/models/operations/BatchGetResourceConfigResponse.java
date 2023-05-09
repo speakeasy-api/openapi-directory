@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetResourceConfigResponse {
@@ -12,6 +13,7 @@ public class BatchGetResourceConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetResourceConfigResponse batchGetResourceConfigResponse;
+
     public BatchGetResourceConfigResponse withBatchGetResourceConfigResponse(org.openapis.openapi.models.shared.BatchGetResourceConfigResponse batchGetResourceConfigResponse) {
         this.batchGetResourceConfigResponse = batchGetResourceConfigResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetResourceConfigResponse {
     
     
     public String contentType;
+
     public BatchGetResourceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetResourceConfigResponse {
      */
     
     public Object noAvailableConfigurationRecorderException;
+
     public BatchGetResourceConfigResponse withNoAvailableConfigurationRecorderException(Object noAvailableConfigurationRecorderException) {
         this.noAvailableConfigurationRecorderException = noAvailableConfigurationRecorderException;
         return this;
@@ -36,6 +40,7 @@ public class BatchGetResourceConfigResponse {
     
     
     public Integer statusCode;
+
     public BatchGetResourceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class BatchGetResourceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetResourceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class BatchGetResourceConfigResponse {
      */
     
     public Object validationException;
+
     public BatchGetResourceConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetResourceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

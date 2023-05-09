@@ -15,9 +15,11 @@ public class PostAdminRequestsCount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public PostAdminRequestsCount200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public PostAdminRequestsCount200ApplicationJSON(){}
 }

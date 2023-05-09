@@ -15,6 +15,7 @@ public class Money {
      */
     @JsonProperty("amount")
     public Long amount;
+
     public Money withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class Money {
      */
     @JsonProperty("currency")
     public MoneyCurrencyDetails currency;
+
     public Money withCurrency(MoneyCurrencyDetails currency) {
         this.currency = currency;
         return this;
     }
     
+    public Money(@JsonProperty("amount") Long amount, @JsonProperty("currency") MoneyCurrencyDetails currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

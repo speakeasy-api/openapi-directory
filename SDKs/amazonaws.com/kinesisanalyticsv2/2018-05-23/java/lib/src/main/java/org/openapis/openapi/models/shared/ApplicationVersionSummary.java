@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationVersionSummary {
     @JsonProperty("ApplicationStatus")
     public ApplicationStatusEnum applicationStatus;
+
     public ApplicationVersionSummary withApplicationStatus(ApplicationStatusEnum applicationStatus) {
         this.applicationStatus = applicationStatus;
         return this;
@@ -19,9 +20,14 @@ public class ApplicationVersionSummary {
     
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public ApplicationVersionSummary withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
     }
     
+    public ApplicationVersionSummary(@JsonProperty("ApplicationStatus") ApplicationStatusEnum applicationStatus, @JsonProperty("ApplicationVersionId") Long applicationVersionId) {
+        this.applicationStatus = applicationStatus;
+        this.applicationVersionId = applicationVersionId;
+  }
 }

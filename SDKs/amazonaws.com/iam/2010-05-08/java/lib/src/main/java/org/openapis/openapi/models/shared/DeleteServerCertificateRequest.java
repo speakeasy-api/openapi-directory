@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteServerCertificateRequest {
     
     public String serverCertificateName;
+
     public DeleteServerCertificateRequest withServerCertificateName(String serverCertificateName) {
         this.serverCertificateName = serverCertificateName;
         return this;
     }
     
+    public DeleteServerCertificateRequest(@JsonProperty("ServerCertificateName") String serverCertificateName) {
+        this.serverCertificateName = serverCertificateName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConnectionsIdConnectionSourcesIdSourceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public DeleteConnectionsIdConnectionSourcesIdSourceRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class DeleteConnectionsIdConnectionSourcesIdSourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public DeleteConnectionsIdConnectionSourcesIdSourceRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -23,9 +26,14 @@ public class DeleteConnectionsIdConnectionSourcesIdSourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_source")
     public Long idSource;
+
     public DeleteConnectionsIdConnectionSourcesIdSourceRequest withIdSource(Long idSource) {
         this.idSource = idSource;
         return this;
     }
     
+    public DeleteConnectionsIdConnectionSourcesIdSourceRequest(@JsonProperty("id_connection") Long idConnection, @JsonProperty("id_source") Long idSource) {
+        this.idConnection = idConnection;
+        this.idSource = idSource;
+  }
 }

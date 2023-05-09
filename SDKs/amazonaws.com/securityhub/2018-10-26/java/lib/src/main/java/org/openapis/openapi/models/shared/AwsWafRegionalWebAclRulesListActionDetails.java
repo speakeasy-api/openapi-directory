@@ -15,9 +15,11 @@ public class AwsWafRegionalWebAclRulesListActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsWafRegionalWebAclRulesListActionDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsWafRegionalWebAclRulesListActionDetails(){}
 }

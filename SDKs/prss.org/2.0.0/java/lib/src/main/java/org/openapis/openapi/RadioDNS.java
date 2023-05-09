@@ -102,11 +102,9 @@ public class RadioDNS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRadiodnsSpi31GIXmlResponse res = new org.openapis.openapi.models.operations.GetRadiodnsSpi31GIXmlResponse() {{
+        org.openapis.openapi.models.operations.GetRadiodnsSpi31GIXmlResponse res = new org.openapis.openapi.models.operations.GetRadiodnsSpi31GIXmlResponse(contentType, httpRes.statusCode()) {{
             getRadiodnsSpi31GIXML200ApplicationXMLRadioDNSGroupInformationGIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection8String = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +194,9 @@ public class RadioDNS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRadiodnsSpi31SIXmlResponse res = new org.openapis.openapi.models.operations.GetRadiodnsSpi31SIXmlResponse() {{
+        org.openapis.openapi.models.operations.GetRadiodnsSpi31SIXmlResponse res = new org.openapis.openapi.models.operations.GetRadiodnsSpi31SIXmlResponse(contentType, httpRes.statusCode()) {{
             getRadiodnsSpi31SIXML200ApplicationXMLRadioDNSServiceInformationSIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection6String = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +298,9 @@ public class RadioDNS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse res = new org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse() {{
+        org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse res = new org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse(contentType, httpRes.statusCode()) {{
             getRadiodnsSpi31IdFqdnSidDatePIXML200ApplicationXMLRadioDNSProgramInformationPIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection7String = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

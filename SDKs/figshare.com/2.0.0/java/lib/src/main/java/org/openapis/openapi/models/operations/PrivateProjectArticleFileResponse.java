@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateProjectArticleFileResponse {
     
     public String contentType;
+
     public PrivateProjectArticleFileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivateProjectArticleFileResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateProjectArticleFileResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,6 +32,7 @@ public class PrivateProjectArticleFileResponse {
      */
     
     public org.openapis.openapi.models.shared.PrivateFile privateFile;
+
     public PrivateProjectArticleFileResponse withPrivateFile(org.openapis.openapi.models.shared.PrivateFile privateFile) {
         this.privateFile = privateFile;
         return this;
@@ -36,6 +40,7 @@ public class PrivateProjectArticleFileResponse {
     
     
     public Integer statusCode;
+
     public PrivateProjectArticleFileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PrivateProjectArticleFileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateProjectArticleFileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateProjectArticleFileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

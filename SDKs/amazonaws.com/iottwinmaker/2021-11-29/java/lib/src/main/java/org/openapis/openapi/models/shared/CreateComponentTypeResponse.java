@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateComponentTypeResponse {
     @JsonProperty("arn")
     public String arn;
+
     public CreateComponentTypeResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class CreateComponentTypeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CreateComponentTypeResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -33,9 +35,15 @@ public class CreateComponentTypeResponse {
     
     @JsonProperty("state")
     public StateEnum state;
+
     public CreateComponentTypeResponse withState(StateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateComponentTypeResponse(@JsonProperty("arn") String arn, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("state") StateEnum state) {
+        this.arn = arn;
+        this.creationDateTime = creationDateTime;
+        this.state = state;
+  }
 }

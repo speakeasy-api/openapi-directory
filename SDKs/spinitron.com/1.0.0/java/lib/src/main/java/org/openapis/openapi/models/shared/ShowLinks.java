@@ -12,6 +12,7 @@ public class ShowLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personas")
     public Link[] personas;
+
     public ShowLinks withPersonas(Link[] personas) {
         this.personas = personas;
         return this;
@@ -20,6 +21,7 @@ public class ShowLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playlists")
     public Link playlists;
+
     public ShowLinks withPlaylists(Link playlists) {
         this.playlists = playlists;
         return this;
@@ -28,9 +30,11 @@ public class ShowLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Link self;
+
     public ShowLinks withSelf(Link self) {
         this.self = self;
         return this;
     }
     
+    public ShowLinks(){}
 }

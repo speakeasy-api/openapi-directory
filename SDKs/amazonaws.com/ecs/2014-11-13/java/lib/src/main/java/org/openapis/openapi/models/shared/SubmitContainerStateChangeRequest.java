@@ -12,6 +12,7 @@ public class SubmitContainerStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public SubmitContainerStateChangeRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -20,6 +21,7 @@ public class SubmitContainerStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerName")
     public String containerName;
+
     public SubmitContainerStateChangeRequest withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -28,6 +30,7 @@ public class SubmitContainerStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Long exitCode;
+
     public SubmitContainerStateChangeRequest withExitCode(Long exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -36,6 +39,7 @@ public class SubmitContainerStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkBindings")
     public NetworkBinding[] networkBindings;
+
     public SubmitContainerStateChangeRequest withNetworkBindings(NetworkBinding[] networkBindings) {
         this.networkBindings = networkBindings;
         return this;
@@ -44,6 +48,7 @@ public class SubmitContainerStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public SubmitContainerStateChangeRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -52,6 +57,7 @@ public class SubmitContainerStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeId")
     public String runtimeId;
+
     public SubmitContainerStateChangeRequest withRuntimeId(String runtimeId) {
         this.runtimeId = runtimeId;
         return this;
@@ -60,6 +66,7 @@ public class SubmitContainerStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SubmitContainerStateChangeRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -68,9 +75,11 @@ public class SubmitContainerStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public String task;
+
     public SubmitContainerStateChangeRequest withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public SubmitContainerStateChangeRequest(){}
 }

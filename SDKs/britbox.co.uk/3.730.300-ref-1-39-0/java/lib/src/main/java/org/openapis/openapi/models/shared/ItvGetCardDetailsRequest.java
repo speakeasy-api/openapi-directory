@@ -15,9 +15,13 @@ public class ItvGetCardDetailsRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvGetCardDetailsRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvGetCardDetailsRequest(@JsonProperty("profileToken") String profileToken) {
+        this.profileToken = profileToken;
+  }
 }

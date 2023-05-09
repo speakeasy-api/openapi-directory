@@ -12,9 +12,11 @@ public class GetAreasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetAreasFormatEnum format;
+
     public GetAreasRequest withFormat(GetAreasFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public GetAreasRequest(){}
 }

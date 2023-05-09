@@ -15,9 +15,11 @@ public class ServerError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverErrorCategory")
     public ServerErrorCategoryEnum serverErrorCategory;
+
     public ServerError withServerErrorCategory(ServerErrorCategoryEnum serverErrorCategory) {
         this.serverErrorCategory = serverErrorCategory;
         return this;
     }
     
+    public ServerError(){}
 }

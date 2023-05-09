@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDirectConnectGatewayResponse {
     
     public String contentType;
+
     public UpdateDirectConnectGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDirectConnectGatewayResponse {
      */
     
     public Object directConnectClientException;
+
     public UpdateDirectConnectGatewayResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDirectConnectGatewayResponse {
      */
     
     public Object directConnectServerException;
+
     public UpdateDirectConnectGatewayResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateDirectConnectGatewayResponse {
     
     
     public Integer statusCode;
+
     public UpdateDirectConnectGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateDirectConnectGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDirectConnectGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateDirectConnectGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDirectConnectGatewayResponse updateDirectConnectGatewayResponse;
+
     public UpdateDirectConnectGatewayResponse withUpdateDirectConnectGatewayResponse(org.openapis.openapi.models.shared.UpdateDirectConnectGatewayResponse updateDirectConnectGatewayResponse) {
         this.updateDirectConnectGatewayResponse = updateDirectConnectGatewayResponse;
         return this;
     }
     
+    public UpdateDirectConnectGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

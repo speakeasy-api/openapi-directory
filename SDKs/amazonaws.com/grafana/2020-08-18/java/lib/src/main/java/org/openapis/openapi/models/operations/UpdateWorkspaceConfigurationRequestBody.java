@@ -12,9 +12,13 @@ public class UpdateWorkspaceConfigurationRequestBody {
      */
     @JsonProperty("configuration")
     public String configuration;
+
     public UpdateWorkspaceConfigurationRequestBody withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public UpdateWorkspaceConfigurationRequestBody(@JsonProperty("configuration") String configuration) {
+        this.configuration = configuration;
+  }
 }

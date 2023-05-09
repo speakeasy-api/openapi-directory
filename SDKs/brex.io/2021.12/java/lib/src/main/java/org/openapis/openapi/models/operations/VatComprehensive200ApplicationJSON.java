@@ -15,6 +15,7 @@ public class VatComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate")
     public org.openapis.openapi.models.shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany[] candidate;
+
     public VatComprehensive200ApplicationJSON withCandidate(org.openapis.openapi.models.shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany[] candidate) {
         this.candidate = candidate;
         return this;
@@ -23,6 +24,7 @@ public class VatComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public org.openapis.openapi.models.shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany company;
+
     public VatComprehensive200ApplicationJSON withCompany(org.openapis.openapi.models.shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany company) {
         this.company = company;
         return this;
@@ -30,6 +32,7 @@ public class VatComprehensive200ApplicationJSON {
     
     @JsonProperty("confidenceScore")
     public Double confidenceScore;
+
     public VatComprehensive200ApplicationJSON withConfidenceScore(Double confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -37,9 +40,14 @@ public class VatComprehensive200ApplicationJSON {
     
     @JsonProperty("validationStatus")
     public Boolean validationStatus;
+
     public VatComprehensive200ApplicationJSON withValidationStatus(Boolean validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public VatComprehensive200ApplicationJSON(@JsonProperty("confidenceScore") Double confidenceScore, @JsonProperty("validationStatus") Boolean validationStatus) {
+        this.confidenceScore = confidenceScore;
+        this.validationStatus = validationStatus;
+  }
 }

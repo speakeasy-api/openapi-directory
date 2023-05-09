@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSshGetStatisticsRequest {
@@ -12,9 +13,13 @@ public class ProtocolSshGetStatisticsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSshGetStatisticsRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public ProtocolSshGetStatisticsRequest(@JsonProperty("agentNum") Integer agentNum) {
+        this.agentNum = agentNum;
+  }
 }

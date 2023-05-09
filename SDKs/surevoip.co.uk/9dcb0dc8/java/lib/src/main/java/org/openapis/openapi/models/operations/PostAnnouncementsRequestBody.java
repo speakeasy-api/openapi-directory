@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostAnnouncementsRequestBody {
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PostAnnouncementsRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,11 @@ public class PostAnnouncementsRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=file")
     public String file;
+
     public PostAnnouncementsRequestBody withFile(String file) {
         this.file = file;
         return this;
     }
     
+    public PostAnnouncementsRequestBody(){}
 }

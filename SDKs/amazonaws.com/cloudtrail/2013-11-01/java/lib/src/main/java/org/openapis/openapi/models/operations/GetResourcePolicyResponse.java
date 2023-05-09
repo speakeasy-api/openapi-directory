@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcePolicyResponse {
     
     public String contentType;
+
     public GetResourcePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourcePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourcePolicyResponse getResourcePolicyResponse;
+
     public GetResourcePolicyResponse withGetResourcePolicyResponse(org.openapis.openapi.models.shared.GetResourcePolicyResponse getResourcePolicyResponse) {
         this.getResourcePolicyResponse = getResourcePolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourcePolicyResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetResourcePolicyResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourcePolicyResponse {
      */
     
     public Object resourceARNNotValidException;
+
     public GetResourcePolicyResponse withResourceARNNotValidException(Object resourceARNNotValidException) {
         this.resourceARNNotValidException = resourceARNNotValidException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourcePolicyResponse {
      */
     
     public Object resourcePolicyNotFoundException;
+
     public GetResourcePolicyResponse withResourcePolicyNotFoundException(Object resourcePolicyNotFoundException) {
         this.resourcePolicyNotFoundException = resourcePolicyNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetResourcePolicyResponse {
     
     
     public Integer statusCode;
+
     public GetResourcePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetResourcePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetResourcePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetResourcePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class GetResourcePolicyResponse {
      */
     
     public Object resourceTypeNotSupportedException;
+
     public GetResourcePolicyResponse withResourceTypeNotSupportedException(Object resourceTypeNotSupportedException) {
         this.resourceTypeNotSupportedException = resourceTypeNotSupportedException;
         return this;
@@ -93,9 +103,14 @@ public class GetResourcePolicyResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetResourcePolicyResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetResourcePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

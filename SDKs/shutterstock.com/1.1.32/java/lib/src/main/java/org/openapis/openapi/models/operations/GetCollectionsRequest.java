@@ -12,6 +12,7 @@ public class GetCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetCollectionsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +23,7 @@ public class GetCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetCollectionsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,6 +34,7 @@ public class GetCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shared")
     public Boolean shared;
+
     public GetCollectionsRequest withShared(Boolean shared) {
         this.shared = shared;
         return this;
@@ -42,9 +45,11 @@ public class GetCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetCollectionsSortEnum sort;
+
     public GetCollectionsRequest withSort(GetCollectionsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetCollectionsRequest(){}
 }

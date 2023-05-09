@@ -15,9 +15,11 @@ public class BatchGetFrameMetricDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameMetrics")
     public org.openapis.openapi.models.shared.FrameMetric[] frameMetrics;
+
     public BatchGetFrameMetricDataRequestBody withFrameMetrics(org.openapis.openapi.models.shared.FrameMetric[] frameMetrics) {
         this.frameMetrics = frameMetrics;
         return this;
     }
     
+    public BatchGetFrameMetricDataRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class StructuredAggregationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregations")
     public Aggregation[] aggregations;
+
     public StructuredAggregationQuery withAggregations(Aggregation[] aggregations) {
         this.aggregations = aggregations;
         return this;
@@ -29,9 +30,11 @@ public class StructuredAggregationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredQuery")
     public StructuredQuery structuredQuery;
+
     public StructuredAggregationQuery withStructuredQuery(StructuredQuery structuredQuery) {
         this.structuredQuery = structuredQuery;
         return this;
     }
     
+    public StructuredAggregationQuery(){}
 }

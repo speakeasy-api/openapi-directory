@@ -15,6 +15,7 @@ public class UpdateMapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateMapRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateMapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public UpdateMapRequestBodyPricingPlanEnum pricingPlan;
+
     public UpdateMapRequestBody withPricingPlan(UpdateMapRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
     }
     
+    public UpdateMapRequestBody(){}
 }

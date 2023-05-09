@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLaunchConfigurationResponse {
     
     public String contentType;
+
     public GetLaunchConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLaunchConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.LaunchConfiguration launchConfiguration;
+
     public GetLaunchConfigurationResponse withLaunchConfiguration(org.openapis.openapi.models.shared.LaunchConfiguration launchConfiguration) {
         this.launchConfiguration = launchConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class GetLaunchConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLaunchConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetLaunchConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetLaunchConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetLaunchConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLaunchConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetLaunchConfigurationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public GetLaunchConfigurationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public GetLaunchConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

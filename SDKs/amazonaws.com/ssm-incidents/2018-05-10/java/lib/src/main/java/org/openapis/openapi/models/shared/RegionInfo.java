@@ -20,6 +20,7 @@ public class RegionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sseKmsKeyId")
     public String sseKmsKeyId;
+
     public RegionInfo withSseKmsKeyId(String sseKmsKeyId) {
         this.sseKmsKeyId = sseKmsKeyId;
         return this;
@@ -27,6 +28,7 @@ public class RegionInfo {
     
     @JsonProperty("status")
     public RegionStatusEnum status;
+
     public RegionInfo withStatus(RegionStatusEnum status) {
         this.status = status;
         return this;
@@ -35,6 +37,7 @@ public class RegionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public RegionInfo withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -44,9 +47,14 @@ public class RegionInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("statusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public RegionInfo withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public RegionInfo(@JsonProperty("status") RegionStatusEnum status, @JsonProperty("statusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

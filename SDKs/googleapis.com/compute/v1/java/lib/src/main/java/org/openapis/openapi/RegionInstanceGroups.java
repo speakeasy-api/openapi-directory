@@ -59,11 +59,9 @@ public class RegionInstanceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsGetResponse(contentType, httpRes.statusCode()) {{
             instanceGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionInstanceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsListResponse(contentType, httpRes.statusCode()) {{
             regionInstanceGroupList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionInstanceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsListInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsListInstancesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsListInstancesResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsListInstancesResponse(contentType, httpRes.statusCode()) {{
             regionInstanceGroupsListInstances = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class RegionInstanceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsSetNamedPortsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsSetNamedPortsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsSetNamedPortsResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceGroupsSetNamedPortsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

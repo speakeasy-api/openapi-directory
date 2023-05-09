@@ -20,6 +20,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeTrialComponentResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class DescribeTrialComponentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeTrialComponentResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DescribeTrialComponentResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -48,6 +51,7 @@ public class DescribeTrialComponentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DescribeTrialComponentResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -56,6 +60,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputArtifacts")
     public java.util.Map<String, TrialComponentArtifact> inputArtifacts;
+
     public DescribeTrialComponentResponse withInputArtifacts(java.util.Map<String, TrialComponentArtifact> inputArtifacts) {
         this.inputArtifacts = inputArtifacts;
         return this;
@@ -64,6 +69,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeTrialComponentResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -74,6 +80,7 @@ public class DescribeTrialComponentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeTrialComponentResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -82,6 +89,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupArn")
     public String lineageGroupArn;
+
     public DescribeTrialComponentResponse withLineageGroupArn(String lineageGroupArn) {
         this.lineageGroupArn = lineageGroupArn;
         return this;
@@ -93,6 +101,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public DescribeTrialComponentResponse withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -101,6 +110,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public TrialComponentMetricSummary[] metrics;
+
     public DescribeTrialComponentResponse withMetrics(TrialComponentMetricSummary[] metrics) {
         this.metrics = metrics;
         return this;
@@ -109,6 +119,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputArtifacts")
     public java.util.Map<String, TrialComponentArtifact> outputArtifacts;
+
     public DescribeTrialComponentResponse withOutputArtifacts(java.util.Map<String, TrialComponentArtifact> outputArtifacts) {
         this.outputArtifacts = outputArtifacts;
         return this;
@@ -117,6 +128,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, TrialComponentParameterValue> parameters;
+
     public DescribeTrialComponentResponse withParameters(java.util.Map<String, TrialComponentParameterValue> parameters) {
         this.parameters = parameters;
         return this;
@@ -125,6 +137,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public TrialComponentSource source;
+
     public DescribeTrialComponentResponse withSource(TrialComponentSource source) {
         this.source = source;
         return this;
@@ -133,6 +146,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sources")
     public TrialComponentSource[] sources;
+
     public DescribeTrialComponentResponse withSources(TrialComponentSource[] sources) {
         this.sources = sources;
         return this;
@@ -143,6 +157,7 @@ public class DescribeTrialComponentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DescribeTrialComponentResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -151,6 +166,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TrialComponentStatus status;
+
     public DescribeTrialComponentResponse withStatus(TrialComponentStatus status) {
         this.status = status;
         return this;
@@ -159,6 +175,7 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentArn")
     public String trialComponentArn;
+
     public DescribeTrialComponentResponse withTrialComponentArn(String trialComponentArn) {
         this.trialComponentArn = trialComponentArn;
         return this;
@@ -167,9 +184,11 @@ public class DescribeTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public DescribeTrialComponentResponse withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
     }
     
+    public DescribeTrialComponentResponse(){}
 }

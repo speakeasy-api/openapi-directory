@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelTopic")
     public String channelTopic;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withChannelTopic(String channelTopic) {
         this.channelTopic = channelTopic;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastReplayId")
     public String lastReplayId;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withLastReplayId(String lastReplayId) {
         this.lastReplayId = lastReplayId;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withName(String name) {
         this.name = name;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudIntegrationsV1alphaSfdcChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudIntegrationsV1alphaSfdcChannel withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSfdcChannel(){}
 }

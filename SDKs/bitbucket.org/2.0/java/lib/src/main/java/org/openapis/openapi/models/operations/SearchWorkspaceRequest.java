@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchWorkspaceRequest {
@@ -12,6 +13,7 @@ public class SearchWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public SearchWorkspaceRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class SearchWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagelen")
     public Integer pagelen;
+
     public SearchWorkspaceRequest withPagelen(Integer pagelen) {
         this.pagelen = pagelen;
         return this;
@@ -32,6 +35,7 @@ public class SearchWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_query")
     public String searchQuery;
+
     public SearchWorkspaceRequest withSearchQuery(String searchQuery) {
         this.searchQuery = searchQuery;
         return this;
@@ -42,9 +46,14 @@ public class SearchWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public SearchWorkspaceRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public SearchWorkspaceRequest(@JsonProperty("search_query") String searchQuery, @JsonProperty("workspace") String workspace) {
+        this.searchQuery = searchQuery;
+        this.workspace = workspace;
+  }
 }

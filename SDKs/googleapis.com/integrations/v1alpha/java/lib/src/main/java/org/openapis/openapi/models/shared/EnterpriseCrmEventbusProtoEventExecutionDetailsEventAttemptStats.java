@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -26,9 +27,11 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ReplaceNetworkAclAssociationResult {
     
     public String newAssociationId;
+
     public ReplaceNetworkAclAssociationResult withNewAssociationId(String newAssociationId) {
         this.newAssociationId = newAssociationId;
         return this;
     }
     
+    public ReplaceNetworkAclAssociationResult(){}
 }

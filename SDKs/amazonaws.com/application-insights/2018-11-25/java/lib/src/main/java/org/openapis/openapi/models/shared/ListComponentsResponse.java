@@ -15,6 +15,7 @@ public class ListComponentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationComponentList")
     public ApplicationComponent[] applicationComponentList;
+
     public ListComponentsResponse withApplicationComponentList(ApplicationComponent[] applicationComponentList) {
         this.applicationComponentList = applicationComponentList;
         return this;
@@ -23,9 +24,11 @@ public class ListComponentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComponentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListComponentsResponse(){}
 }

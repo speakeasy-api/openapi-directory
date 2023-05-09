@@ -13,6 +13,7 @@ public class GetEventsV3EventsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public GetEventsV3EventsGetPageRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -20,6 +21,7 @@ public class GetEventsV3EventsGetPageRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public String before;
+
     public GetEventsV3EventsGetPageRequest withBefore(String before) {
         this.before = before;
         return this;
@@ -30,6 +32,7 @@ public class GetEventsV3EventsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventType")
     public String eventType;
+
     public GetEventsV3EventsGetPageRequest withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -40,6 +43,7 @@ public class GetEventsV3EventsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetEventsV3EventsGetPageRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -50,6 +54,7 @@ public class GetEventsV3EventsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectId")
     public Long objectId;
+
     public GetEventsV3EventsGetPageRequest withObjectId(Long objectId) {
         this.objectId = objectId;
         return this;
@@ -60,6 +65,7 @@ public class GetEventsV3EventsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectType")
     public String objectType;
+
     public GetEventsV3EventsGetPageRequest withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -70,6 +76,7 @@ public class GetEventsV3EventsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredAfter")
     public OffsetDateTime occurredAfter;
+
     public GetEventsV3EventsGetPageRequest withOccurredAfter(OffsetDateTime occurredAfter) {
         this.occurredAfter = occurredAfter;
         return this;
@@ -80,6 +87,7 @@ public class GetEventsV3EventsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredBefore")
     public OffsetDateTime occurredBefore;
+
     public GetEventsV3EventsGetPageRequest withOccurredBefore(OffsetDateTime occurredBefore) {
         this.occurredBefore = occurredBefore;
         return this;
@@ -90,9 +98,11 @@ public class GetEventsV3EventsGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public GetEventsV3EventsGetPageRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetEventsV3EventsGetPageRequest(){}
 }

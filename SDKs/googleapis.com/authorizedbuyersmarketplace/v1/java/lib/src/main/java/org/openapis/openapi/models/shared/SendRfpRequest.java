@@ -18,6 +18,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerContacts")
     public Contact[] buyerContacts;
+
     public SendRfpRequest withBuyerContacts(Contact[] buyerContacts) {
         this.buyerContacts = buyerContacts;
         return this;
@@ -29,6 +30,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public String client;
+
     public SendRfpRequest withClient(String client) {
         this.client = client;
         return this;
@@ -40,6 +42,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SendRfpRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedGrossSpend")
     public Money estimatedGrossSpend;
+
     public SendRfpRequest withEstimatedGrossSpend(Money estimatedGrossSpend) {
         this.estimatedGrossSpend = estimatedGrossSpend;
         return this;
@@ -62,6 +66,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightEndTime")
     public String flightEndTime;
+
     public SendRfpRequest withFlightEndTime(String flightEndTime) {
         this.flightEndTime = flightEndTime;
         return this;
@@ -73,6 +78,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightStartTime")
     public String flightStartTime;
+
     public SendRfpRequest withFlightStartTime(String flightStartTime) {
         this.flightStartTime = flightStartTime;
         return this;
@@ -84,6 +90,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoTargeting")
     public CriteriaTargeting geoTargeting;
+
     public SendRfpRequest withGeoTargeting(CriteriaTargeting geoTargeting) {
         this.geoTargeting = geoTargeting;
         return this;
@@ -95,6 +102,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySizeTargeting")
     public InventorySizeTargeting inventorySizeTargeting;
+
     public SendRfpRequest withInventorySizeTargeting(InventorySizeTargeting inventorySizeTargeting) {
         this.inventorySizeTargeting = inventorySizeTargeting;
         return this;
@@ -106,6 +114,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public SendRfpRequest withNote(String note) {
         this.note = note;
         return this;
@@ -117,6 +126,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredDealTerms")
     public PreferredDealTerms preferredDealTerms;
+
     public SendRfpRequest withPreferredDealTerms(PreferredDealTerms preferredDealTerms) {
         this.preferredDealTerms = preferredDealTerms;
         return this;
@@ -128,6 +138,7 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("programmaticGuaranteedTerms")
     public ProgrammaticGuaranteedTerms programmaticGuaranteedTerms;
+
     public SendRfpRequest withProgrammaticGuaranteedTerms(ProgrammaticGuaranteedTerms programmaticGuaranteedTerms) {
         this.programmaticGuaranteedTerms = programmaticGuaranteedTerms;
         return this;
@@ -139,9 +150,11 @@ public class SendRfpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherProfile")
     public String publisherProfile;
+
     public SendRfpRequest withPublisherProfile(String publisherProfile) {
         this.publisherProfile = publisherProfile;
         return this;
     }
     
+    public SendRfpRequest(){}
 }

@@ -15,6 +15,7 @@ public class ActionRemotePortDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public ActionRemotePortDetails withPort(Long port) {
         this.port = port;
         return this;
@@ -23,9 +24,11 @@ public class ActionRemotePortDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortName")
     public String portName;
+
     public ActionRemotePortDetails withPortName(String portName) {
         this.portName = portName;
         return this;
     }
     
+    public ActionRemotePortDetails(){}
 }

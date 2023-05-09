@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse {
@@ -12,6 +13,7 @@ public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchResponseSubscriptionResponse batchResponseSubscriptionResponse;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse withBatchResponseSubscriptionResponse(org.openapis.openapi.models.shared.BatchResponseSubscriptionResponse batchResponseSubscriptionResponse) {
         this.batchResponseSubscriptionResponse = batchResponseSubscriptionResponse;
         return this;
@@ -22,6 +24,7 @@ public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchResponseSubscriptionResponseWithErrors batchResponseSubscriptionResponseWithErrors;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse withBatchResponseSubscriptionResponseWithErrors(org.openapis.openapi.models.shared.BatchResponseSubscriptionResponseWithErrors batchResponseSubscriptionResponseWithErrors) {
         this.batchResponseSubscriptionResponseWithErrors = batchResponseSubscriptionResponseWithErrors;
         return this;
@@ -29,6 +32,7 @@ public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse {
     
     
     public byte[] body;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -36,6 +40,7 @@ public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse {
     
     
     public String contentType;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -43,6 +48,7 @@ public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse {
     
     
     public Integer statusCode;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

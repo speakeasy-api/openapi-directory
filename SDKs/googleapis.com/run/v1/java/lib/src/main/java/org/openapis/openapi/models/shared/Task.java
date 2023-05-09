@@ -13,22 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Task {
     /**
-     * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public Task withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
     }
     
     /**
-     * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Task withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ObjectMeta metadata;
+
     public Task withMetadata(ObjectMeta metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public TaskSpec spec;
+
     public Task withSpec(TaskSpec spec) {
         this.spec = spec;
         return this;
@@ -62,9 +66,11 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TaskStatus status;
+
     public Task withStatus(TaskStatus status) {
         this.status = status;
         return this;
     }
     
+    public Task(){}
 }

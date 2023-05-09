@@ -12,6 +12,7 @@ public class CountryOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CountryOrders withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class CountryOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public CountryOrders withCount(Long count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class CountryOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public CountryOrders withCountry(String country) {
         this.country = country;
         return this;
@@ -42,9 +45,11 @@ public class CountryOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public RegionOrders[] orders;
+
     public CountryOrders withOrders(RegionOrders[] orders) {
         this.orders = orders;
         return this;
     }
     
+    public CountryOrders(){}
 }

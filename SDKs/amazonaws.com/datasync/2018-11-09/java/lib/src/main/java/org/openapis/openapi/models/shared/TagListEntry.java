@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagListEntry {
     @JsonProperty("Key")
     public String key;
+
     public TagListEntry withKey(String key) {
         this.key = key;
         return this;
@@ -22,9 +23,13 @@ public class TagListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public TagListEntry withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TagListEntry(@JsonProperty("Key") String key) {
+        this.key = key;
+  }
 }

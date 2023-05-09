@@ -15,9 +15,11 @@ public class DeleteAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeGroup")
     public AttributeGroupSummary attributeGroup;
+
     public DeleteAttributeGroupResponse withAttributeGroup(AttributeGroupSummary attributeGroup) {
         this.attributeGroup = attributeGroup;
         return this;
     }
     
+    public DeleteAttributeGroupResponse(){}
 }

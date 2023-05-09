@@ -20,6 +20,7 @@ public class ContinuousCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContinuousCheckID")
     public String continuousCheckID;
+
     public ContinuousCheck withContinuousCheckID(String continuousCheckID) {
         this.continuousCheckID = continuousCheckID;
         return this;
@@ -30,6 +31,7 @@ public class ContinuousCheck {
      */
     @JsonProperty("ContinuousCheckStatus")
     public ContinuousCheckContinuousCheckStatusEnum continuousCheckStatus;
+
     public ContinuousCheck withContinuousCheckStatus(ContinuousCheckContinuousCheckStatusEnum continuousCheckStatus) {
         this.continuousCheckStatus = continuousCheckStatus;
         return this;
@@ -42,6 +44,7 @@ public class ContinuousCheck {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("CreationDate")
     public LocalDate creationDate;
+
     public ContinuousCheck withCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -53,6 +56,7 @@ public class ContinuousCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public ContinuousCheck withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -63,6 +67,7 @@ public class ContinuousCheck {
      */
     @JsonProperty("Frequency")
     public String frequency;
+
     public ContinuousCheck withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -74,6 +79,7 @@ public class ContinuousCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("History")
     public ContinuousCheckEntry history;
+
     public ContinuousCheck withHistory(ContinuousCheckEntry history) {
         this.history = history;
         return this;
@@ -84,6 +90,7 @@ public class ContinuousCheck {
      */
     @JsonProperty("LastCheckID")
     public String lastCheckID;
+
     public ContinuousCheck withLastCheckID(String lastCheckID) {
         this.lastCheckID = lastCheckID;
         return this;
@@ -96,6 +103,7 @@ public class ContinuousCheck {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("NextRunDate")
     public LocalDate nextRunDate;
+
     public ContinuousCheck withNextRunDate(LocalDate nextRunDate) {
         this.nextRunDate = nextRunDate;
         return this;
@@ -107,6 +115,7 @@ public class ContinuousCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalCheck")
     public Check originalCheck;
+
     public ContinuousCheck withOriginalCheck(Check originalCheck) {
         this.originalCheck = originalCheck;
         return this;
@@ -119,9 +128,15 @@ public class ContinuousCheck {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("UpdateDate")
     public LocalDate updateDate;
+
     public ContinuousCheck withUpdateDate(LocalDate updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public ContinuousCheck(@JsonProperty("ContinuousCheckStatus") ContinuousCheckContinuousCheckStatusEnum continuousCheckStatus, @JsonProperty("Frequency") String frequency, @JsonProperty("LastCheckID") String lastCheckID) {
+        this.continuousCheckStatus = continuousCheckStatus;
+        this.frequency = frequency;
+        this.lastCheckID = lastCheckID;
+  }
 }

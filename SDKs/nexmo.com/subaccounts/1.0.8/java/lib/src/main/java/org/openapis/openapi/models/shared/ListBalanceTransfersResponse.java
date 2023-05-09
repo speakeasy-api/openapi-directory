@@ -15,9 +15,11 @@ public class ListBalanceTransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public ListBalanceTransfersResponseEmbedded embedded;
+
     public ListBalanceTransfersResponse withEmbedded(ListBalanceTransfersResponseEmbedded embedded) {
         this.embedded = embedded;
         return this;
     }
     
+    public ListBalanceTransfersResponse(){}
 }

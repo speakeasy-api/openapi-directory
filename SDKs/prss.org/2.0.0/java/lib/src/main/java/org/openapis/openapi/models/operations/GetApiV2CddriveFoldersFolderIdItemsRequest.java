@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2CddriveFoldersFolderIdItemsRequest {
@@ -12,6 +13,7 @@ public class GetApiV2CddriveFoldersFolderIdItemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folder-id")
     public Long folderId;
+
     public GetApiV2CddriveFoldersFolderIdItemsRequest withFolderId(Long folderId) {
         this.folderId = folderId;
         return this;
@@ -22,6 +24,7 @@ public class GetApiV2CddriveFoldersFolderIdItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetApiV2CddriveFoldersFolderIdItemsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,9 +35,13 @@ public class GetApiV2CddriveFoldersFolderIdItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetApiV2CddriveFoldersFolderIdItemsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetApiV2CddriveFoldersFolderIdItemsRequest(@JsonProperty("folder-id") Long folderId) {
+        this.folderId = folderId;
+  }
 }

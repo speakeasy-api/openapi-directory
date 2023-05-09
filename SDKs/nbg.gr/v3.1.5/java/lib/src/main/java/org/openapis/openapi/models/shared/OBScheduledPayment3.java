@@ -19,6 +19,7 @@ public class OBScheduledPayment3 {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public OBScheduledPayment3 withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -27,6 +28,7 @@ public class OBScheduledPayment3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorAccount")
     public OBCashAccount5 creditorAccount;
+
     public OBScheduledPayment3 withCreditorAccount(OBCashAccount5 creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -38,6 +40,7 @@ public class OBScheduledPayment3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorReference")
     public String debtorReference;
+
     public OBScheduledPayment3 withDebtorReference(String debtorReference) {
         this.debtorReference = debtorReference;
         return this;
@@ -45,6 +48,7 @@ public class OBScheduledPayment3 {
     
     @JsonProperty("InstructedAmount")
     public OBActiveOrHistoricCurrencyAndAmount instructedAmount;
+
     public OBScheduledPayment3 withInstructedAmount(OBActiveOrHistoricCurrencyAndAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -58,6 +62,7 @@ public class OBScheduledPayment3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public OBScheduledPayment3 withReference(String reference) {
         this.reference = reference;
         return this;
@@ -72,6 +77,7 @@ public class OBScheduledPayment3 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledPaymentDateTime")
     public OffsetDateTime scheduledPaymentDateTime;
+
     public OBScheduledPayment3 withScheduledPaymentDateTime(OffsetDateTime scheduledPaymentDateTime) {
         this.scheduledPaymentDateTime = scheduledPaymentDateTime;
         return this;
@@ -83,6 +89,7 @@ public class OBScheduledPayment3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduledPaymentId")
     public String scheduledPaymentId;
+
     public OBScheduledPayment3 withScheduledPaymentId(String scheduledPaymentId) {
         this.scheduledPaymentId = scheduledPaymentId;
         return this;
@@ -90,9 +97,16 @@ public class OBScheduledPayment3 {
     
     @JsonProperty("ScheduledType")
     public OBExternalScheduleType1CodeEnum scheduledType;
+
     public OBScheduledPayment3 withScheduledType(OBExternalScheduleType1CodeEnum scheduledType) {
         this.scheduledType = scheduledType;
         return this;
     }
     
+    public OBScheduledPayment3(@JsonProperty("AccountId") String accountId, @JsonProperty("InstructedAmount") OBActiveOrHistoricCurrencyAndAmount instructedAmount, @JsonProperty("ScheduledPaymentDateTime") OffsetDateTime scheduledPaymentDateTime, @JsonProperty("ScheduledType") OBExternalScheduleType1CodeEnum scheduledType) {
+        this.accountId = accountId;
+        this.instructedAmount = instructedAmount;
+        this.scheduledPaymentDateTime = scheduledPaymentDateTime;
+        this.scheduledType = scheduledType;
+  }
 }

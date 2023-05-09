@@ -12,6 +12,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drives")
     public Long drives;
+
     public AdvancedGameStatOffense withDrives(Long drives) {
         this.drives = drives;
         return this;
@@ -20,6 +21,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explosiveness")
     public Double explosiveness;
+
     public AdvancedGameStatOffense withExplosiveness(Double explosiveness) {
         this.explosiveness = explosiveness;
         return this;
@@ -28,6 +30,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineYards")
     public Double lineYards;
+
     public AdvancedGameStatOffense withLineYards(Double lineYards) {
         this.lineYards = lineYards;
         return this;
@@ -36,6 +39,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineYardsTotal")
     public Double lineYardsTotal;
+
     public AdvancedGameStatOffense withLineYardsTotal(Double lineYardsTotal) {
         this.lineYardsTotal = lineYardsTotal;
         return this;
@@ -44,6 +48,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openFieldYards")
     public Double openFieldYards;
+
     public AdvancedGameStatOffense withOpenFieldYards(Double openFieldYards) {
         this.openFieldYards = openFieldYards;
         return this;
@@ -52,6 +57,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openFieldYardsTotal")
     public Long openFieldYardsTotal;
+
     public AdvancedGameStatOffense withOpenFieldYardsTotal(Long openFieldYardsTotal) {
         this.openFieldYardsTotal = openFieldYardsTotal;
         return this;
@@ -60,6 +66,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingDowns")
     public AdvancedGameStatOffensePassingDowns passingDowns;
+
     public AdvancedGameStatOffense withPassingDowns(AdvancedGameStatOffensePassingDowns passingDowns) {
         this.passingDowns = passingDowns;
         return this;
@@ -68,6 +75,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingPlays")
     public AdvancedGameStatOffensePassingPlays passingPlays;
+
     public AdvancedGameStatOffense withPassingPlays(AdvancedGameStatOffensePassingPlays passingPlays) {
         this.passingPlays = passingPlays;
         return this;
@@ -76,6 +84,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plays")
     public Long plays;
+
     public AdvancedGameStatOffense withPlays(Long plays) {
         this.plays = plays;
         return this;
@@ -84,6 +93,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powerSuccess")
     public Double powerSuccess;
+
     public AdvancedGameStatOffense withPowerSuccess(Double powerSuccess) {
         this.powerSuccess = powerSuccess;
         return this;
@@ -92,6 +102,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ppa")
     public Double ppa;
+
     public AdvancedGameStatOffense withPpa(Double ppa) {
         this.ppa = ppa;
         return this;
@@ -100,6 +111,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushingPlays")
     public AdvancedGameStatOffenseRushingPlays rushingPlays;
+
     public AdvancedGameStatOffense withRushingPlays(AdvancedGameStatOffenseRushingPlays rushingPlays) {
         this.rushingPlays = rushingPlays;
         return this;
@@ -108,6 +120,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondLevelYards")
     public Double secondLevelYards;
+
     public AdvancedGameStatOffense withSecondLevelYards(Double secondLevelYards) {
         this.secondLevelYards = secondLevelYards;
         return this;
@@ -116,6 +129,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondLevelYardsTotal")
     public Long secondLevelYardsTotal;
+
     public AdvancedGameStatOffense withSecondLevelYardsTotal(Long secondLevelYardsTotal) {
         this.secondLevelYardsTotal = secondLevelYardsTotal;
         return this;
@@ -124,6 +138,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDowns")
     public AdvancedGameStatOffenseStandardDowns standardDowns;
+
     public AdvancedGameStatOffense withStandardDowns(AdvancedGameStatOffenseStandardDowns standardDowns) {
         this.standardDowns = standardDowns;
         return this;
@@ -132,6 +147,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stuffRate")
     public Double stuffRate;
+
     public AdvancedGameStatOffense withStuffRate(Double stuffRate) {
         this.stuffRate = stuffRate;
         return this;
@@ -140,6 +156,7 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successRate")
     public Double successRate;
+
     public AdvancedGameStatOffense withSuccessRate(Double successRate) {
         this.successRate = successRate;
         return this;
@@ -148,9 +165,11 @@ public class AdvancedGameStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPPA")
     public Double totalPPA;
+
     public AdvancedGameStatOffense withTotalPPA(Double totalPPA) {
         this.totalPPA = totalPPA;
         return this;
     }
     
+    public AdvancedGameStatOffense(){}
 }

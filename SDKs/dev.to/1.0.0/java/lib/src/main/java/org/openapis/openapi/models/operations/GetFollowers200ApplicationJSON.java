@@ -15,6 +15,7 @@ public class GetFollowers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public GetFollowers200ApplicationJSON withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class GetFollowers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetFollowers200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class GetFollowers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GetFollowers200ApplicationJSON withPath(String path) {
         this.path = path;
         return this;
@@ -48,6 +51,7 @@ public class GetFollowers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_image")
     public String profileImage;
+
     public GetFollowers200ApplicationJSON withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -59,6 +63,7 @@ public class GetFollowers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_of")
     public String typeOf;
+
     public GetFollowers200ApplicationJSON withTypeOf(String typeOf) {
         this.typeOf = typeOf;
         return this;
@@ -70,9 +75,11 @@ public class GetFollowers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Integer userId;
+
     public GetFollowers200ApplicationJSON withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetFollowers200ApplicationJSON(){}
 }

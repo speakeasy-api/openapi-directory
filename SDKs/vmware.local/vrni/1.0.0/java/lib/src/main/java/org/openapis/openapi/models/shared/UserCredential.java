@@ -15,6 +15,7 @@ public class UserCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public Domain domain;
+
     public UserCredential withDomain(Domain domain) {
         this.domain = domain;
         return this;
@@ -23,6 +24,7 @@ public class UserCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public UserCredential withPassword(String password) {
         this.password = password;
         return this;
@@ -31,9 +33,11 @@ public class UserCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public UserCredential withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UserCredential(){}
 }

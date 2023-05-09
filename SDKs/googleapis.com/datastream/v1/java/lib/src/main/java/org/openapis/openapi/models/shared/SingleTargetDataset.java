@@ -18,9 +18,11 @@ public class SingleTargetDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public SingleTargetDataset withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
     }
     
+    public SingleTargetDataset(){}
 }

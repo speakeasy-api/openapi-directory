@@ -20,6 +20,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Upload withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public UploadCategoryEnum category;
+
     public Upload withCategory(UploadCategoryEnum category) {
         this.category = category;
         return this;
@@ -36,6 +38,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public Upload withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -46,6 +49,7 @@ public class Upload {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Upload withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -54,6 +58,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Upload withMessage(String message) {
         this.message = message;
         return this;
@@ -62,6 +67,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public String metadata;
+
     public Upload withMetadata(String metadata) {
         this.metadata = metadata;
         return this;
@@ -70,6 +76,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Upload withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UploadStatusEnum status;
+
     public Upload withStatus(UploadStatusEnum status) {
         this.status = status;
         return this;
@@ -86,6 +94,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UploadTypeEnum type;
+
     public Upload withType(UploadTypeEnum type) {
         this.type = type;
         return this;
@@ -94,9 +103,11 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Upload withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Upload(){}
 }

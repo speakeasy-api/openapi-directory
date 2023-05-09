@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDrugByIDRequest {
@@ -12,6 +13,7 @@ public class GetDrugByIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DRUG_ID")
     public String drugIDPathParameter;
+
     public GetDrugByIDRequest withDRUGIDPathParameter(String drugIDPathParameter) {
         this.drugIDPathParameter = drugIDPathParameter;
         return this;
@@ -22,9 +24,14 @@ public class GetDrugByIDRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drug_id")
     public String drugIdQueryParameter;
+
     public GetDrugByIDRequest withDrugIdQueryParameter(String drugIdQueryParameter) {
         this.drugIdQueryParameter = drugIdQueryParameter;
         return this;
     }
     
+    public GetDrugByIDRequest(@JsonProperty("DRUG_IDPathParameter") String drugIDPathParameter, @JsonProperty("drug_idQueryParameter") String drugIdQueryParameter) {
+        this.drugIDPathParameter = drugIDPathParameter;
+        this.drugIdQueryParameter = drugIdQueryParameter;
+  }
 }

@@ -12,6 +12,7 @@ public class ClientStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_count")
     public Long documentCount;
+
     public ClientStats withDocumentCount(Long documentCount) {
         this.documentCount = documentCount;
         return this;
@@ -20,6 +21,7 @@ public class ClientStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nps")
     public Float nps;
+
     public ClientStats withNps(Float nps) {
         this.nps = nps;
         return this;
@@ -28,6 +30,7 @@ public class ClientStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_project_count")
     public Long startedProjectCount;
+
     public ClientStats withStartedProjectCount(Long startedProjectCount) {
         this.startedProjectCount = startedProjectCount;
         return this;
@@ -36,6 +39,7 @@ public class ClientStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_discounted")
     public Monetary totalDiscounted;
+
     public ClientStats withTotalDiscounted(Monetary totalDiscounted) {
         this.totalDiscounted = totalDiscounted;
         return this;
@@ -44,6 +48,7 @@ public class ClientStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_project_count")
     public Long totalProjectCount;
+
     public ClientStats withTotalProjectCount(Long totalProjectCount) {
         this.totalProjectCount = totalProjectCount;
         return this;
@@ -52,6 +57,7 @@ public class ClientStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_spending")
     public Float totalSpending;
+
     public ClientStats withTotalSpending(Float totalSpending) {
         this.totalSpending = totalSpending;
         return this;
@@ -60,9 +66,11 @@ public class ClientStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translator_count")
     public Long translatorCount;
+
     public ClientStats withTranslatorCount(Long translatorCount) {
         this.translatorCount = translatorCount;
         return this;
     }
     
+    public ClientStats(){}
 }

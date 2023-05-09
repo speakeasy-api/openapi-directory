@@ -61,11 +61,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeResponse() {{
+        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetResponse(contentType, httpRes.statusCode()) {{
             environment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyResponse() {{
+        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartResponse() {{
+        org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartResponse res = new org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

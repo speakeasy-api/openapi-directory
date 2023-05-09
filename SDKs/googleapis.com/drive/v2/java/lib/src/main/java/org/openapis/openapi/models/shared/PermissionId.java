@@ -18,6 +18,7 @@ public class PermissionId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PermissionId withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class PermissionId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PermissionId withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public PermissionId(){}
 }

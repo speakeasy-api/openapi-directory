@@ -18,6 +18,7 @@ public class PostServersCreateServerRequestPublicNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_ipv4")
     public Boolean enableIpv4;
+
     public PostServersCreateServerRequestPublicNet withEnableIpv4(Boolean enableIpv4) {
         this.enableIpv4 = enableIpv4;
         return this;
@@ -29,6 +30,7 @@ public class PostServersCreateServerRequestPublicNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_ipv6")
     public Boolean enableIpv6;
+
     public PostServersCreateServerRequestPublicNet withEnableIpv6(Boolean enableIpv6) {
         this.enableIpv6 = enableIpv6;
         return this;
@@ -40,6 +42,7 @@ public class PostServersCreateServerRequestPublicNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv4")
     public Long ipv4;
+
     public PostServersCreateServerRequestPublicNet withIpv4(Long ipv4) {
         this.ipv4 = ipv4;
         return this;
@@ -51,9 +54,11 @@ public class PostServersCreateServerRequestPublicNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6")
     public Long ipv6;
+
     public PostServersCreateServerRequestPublicNet withIpv6(Long ipv6) {
         this.ipv6 = ipv6;
         return this;
     }
     
+    public PostServersCreateServerRequestPublicNet(){}
 }

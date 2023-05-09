@@ -15,6 +15,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer currentProgress;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withCurrentProgress(Integer currentProgress) {
         this.currentProgress = currentProgress;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer currentResetCount;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withCurrentResetCount(Integer currentResetCount) {
         this.currentResetCount = currentResetCount;
         return this;
@@ -35,6 +37,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer dailyLimit;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withDailyLimit(Integer dailyLimit) {
         this.dailyLimit = dailyLimit;
         return this;
@@ -45,6 +48,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer dailyProgress;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withDailyProgress(Integer dailyProgress) {
         this.dailyProgress = dailyProgress;
         return this;
@@ -55,6 +59,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer level;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withLevel(Integer level) {
         this.level = level;
         return this;
@@ -65,6 +70,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer levelCap;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withLevelCap(Integer levelCap) {
         this.levelCap = levelCap;
         return this;
@@ -75,6 +81,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer nextLevelAt;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withNextLevelAt(Integer nextLevelAt) {
         this.nextLevelAt = nextLevelAt;
         return this;
@@ -85,6 +92,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer progressToNextLevel;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withProgressToNextLevel(Integer progressToNextLevel) {
         this.progressToNextLevel = progressToNextLevel;
         return this;
@@ -95,6 +103,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Long progressionHash;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withProgressionHash(Long progressionHash) {
         this.progressionHash = progressionHash;
         return this;
@@ -105,6 +114,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer[] rewardItemStates;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withRewardItemStates(Integer[] rewardItemStates) {
         this.rewardItemStates = rewardItemStates;
         return this;
@@ -115,6 +125,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public DestinyDestinyProgressionResetEntry[] seasonResets;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withSeasonResets(DestinyDestinyProgressionResetEntry[] seasonResets) {
         this.seasonResets = seasonResets;
         return this;
@@ -125,6 +136,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer stepIndex;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withStepIndex(Integer stepIndex) {
         this.stepIndex = stepIndex;
         return this;
@@ -135,6 +147,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer weeklyLimit;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withWeeklyLimit(Integer weeklyLimit) {
         this.weeklyLimit = weeklyLimit;
         return this;
@@ -145,9 +158,11 @@ public class DestinyEntitiesVendorsDestinyVendorComponentProgression {
      */
     
     public Integer weeklyProgress;
+
     public DestinyEntitiesVendorsDestinyVendorComponentProgression withWeeklyProgress(Integer weeklyProgress) {
         this.weeklyProgress = weeklyProgress;
         return this;
     }
     
+    public DestinyEntitiesVendorsDestinyVendorComponentProgression(){}
 }

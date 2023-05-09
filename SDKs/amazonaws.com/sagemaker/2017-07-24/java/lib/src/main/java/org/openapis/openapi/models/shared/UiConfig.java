@@ -15,6 +15,7 @@ public class UiConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanTaskUiArn")
     public String humanTaskUiArn;
+
     public UiConfig withHumanTaskUiArn(String humanTaskUiArn) {
         this.humanTaskUiArn = humanTaskUiArn;
         return this;
@@ -23,9 +24,11 @@ public class UiConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UiTemplateS3Uri")
     public String uiTemplateS3Uri;
+
     public UiConfig withUiTemplateS3Uri(String uiTemplateS3Uri) {
         this.uiTemplateS3Uri = uiTemplateS3Uri;
         return this;
     }
     
+    public UiConfig(){}
 }

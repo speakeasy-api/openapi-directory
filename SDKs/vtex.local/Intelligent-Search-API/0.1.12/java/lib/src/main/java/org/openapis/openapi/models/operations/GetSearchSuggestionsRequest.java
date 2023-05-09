@@ -12,6 +12,7 @@ public class GetSearchSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetSearchSuggestionsRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -22,9 +23,11 @@ public class GetSearchSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetSearchSuggestionsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetSearchSuggestionsRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeResourceGroupsResponse {
     @JsonProperty("failedItems")
     public java.util.Map<String, FailedItemDetails> failedItems;
+
     public DescribeResourceGroupsResponse withFailedItems(java.util.Map<String, FailedItemDetails> failedItems) {
         this.failedItems = failedItems;
         return this;
@@ -19,9 +20,14 @@ public class DescribeResourceGroupsResponse {
     
     @JsonProperty("resourceGroups")
     public ResourceGroup[] resourceGroups;
+
     public DescribeResourceGroupsResponse withResourceGroups(ResourceGroup[] resourceGroups) {
         this.resourceGroups = resourceGroups;
         return this;
     }
     
+    public DescribeResourceGroupsResponse(@JsonProperty("failedItems") java.util.Map<String, FailedItemDetails> failedItems, @JsonProperty("resourceGroups") ResourceGroup[] resourceGroups) {
+        this.failedItems = failedItems;
+        this.resourceGroups = resourceGroups;
+  }
 }

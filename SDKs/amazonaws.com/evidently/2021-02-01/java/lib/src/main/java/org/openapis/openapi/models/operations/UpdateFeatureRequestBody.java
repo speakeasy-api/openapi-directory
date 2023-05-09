@@ -15,6 +15,7 @@ public class UpdateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOrUpdateVariations")
     public org.openapis.openapi.models.shared.VariationConfig[] addOrUpdateVariations;
+
     public UpdateFeatureRequestBody withAddOrUpdateVariations(org.openapis.openapi.models.shared.VariationConfig[] addOrUpdateVariations) {
         this.addOrUpdateVariations = addOrUpdateVariations;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVariation")
     public String defaultVariation;
+
     public UpdateFeatureRequestBody withDefaultVariation(String defaultVariation) {
         this.defaultVariation = defaultVariation;
         return this;
@@ -37,6 +39,7 @@ public class UpdateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateFeatureRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class UpdateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityOverrides")
     public java.util.Map<String, String> entityOverrides;
+
     public UpdateFeatureRequestBody withEntityOverrides(java.util.Map<String, String> entityOverrides) {
         this.entityOverrides = entityOverrides;
         return this;
@@ -59,6 +63,7 @@ public class UpdateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationStrategy")
     public UpdateFeatureRequestBodyEvaluationStrategyEnum evaluationStrategy;
+
     public UpdateFeatureRequestBody withEvaluationStrategy(UpdateFeatureRequestBodyEvaluationStrategyEnum evaluationStrategy) {
         this.evaluationStrategy = evaluationStrategy;
         return this;
@@ -70,9 +75,11 @@ public class UpdateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeVariations")
     public String[] removeVariations;
+
     public UpdateFeatureRequestBody withRemoveVariations(String[] removeVariations) {
         this.removeVariations = removeVariations;
         return this;
     }
     
+    public UpdateFeatureRequestBody(){}
 }

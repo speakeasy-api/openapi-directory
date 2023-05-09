@@ -15,6 +15,7 @@ public class Cancelreservation201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Cancelreservation201ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class Cancelreservation201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public Cancelreservation201ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -31,9 +33,11 @@ public class Cancelreservation201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public Cancelreservation201ApplicationJSON withResult(java.util.Map<String, Object> result) {
         this.result = result;
         return this;
     }
     
+    public Cancelreservation201ApplicationJSON(){}
 }

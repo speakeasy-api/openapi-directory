@@ -15,6 +15,7 @@ public class PossibleRemediationActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Actions")
     public PossibleRemediationAction[] actions;
+
     public PossibleRemediationActions withActions(PossibleRemediationAction[] actions) {
         this.actions = actions;
         return this;
@@ -23,9 +24,11 @@ public class PossibleRemediationActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PossibleRemediationActions withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public PossibleRemediationActions(){}
 }

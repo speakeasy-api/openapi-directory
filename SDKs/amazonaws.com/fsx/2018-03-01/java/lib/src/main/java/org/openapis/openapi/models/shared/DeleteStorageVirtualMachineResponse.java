@@ -15,6 +15,7 @@ public class DeleteStorageVirtualMachineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public StorageVirtualMachineLifecycleEnum lifecycle;
+
     public DeleteStorageVirtualMachineResponse withLifecycle(StorageVirtualMachineLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -23,9 +24,11 @@ public class DeleteStorageVirtualMachineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachineId")
     public String storageVirtualMachineId;
+
     public DeleteStorageVirtualMachineResponse withStorageVirtualMachineId(String storageVirtualMachineId) {
         this.storageVirtualMachineId = storageVirtualMachineId;
         return this;
     }
     
+    public DeleteStorageVirtualMachineResponse(){}
 }

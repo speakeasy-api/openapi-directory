@@ -15,6 +15,7 @@ public class ExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageExecutionTimeMillis")
     public Long averageExecutionTimeMillis;
+
     public ExecutionStatistics withAverageExecutionTimeMillis(Long averageExecutionTimeMillis) {
         this.averageExecutionTimeMillis = averageExecutionTimeMillis;
         return this;
@@ -23,6 +24,7 @@ public class ExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataScannedBytes")
     public Long dataScannedBytes;
+
     public ExecutionStatistics withDataScannedBytes(Long dataScannedBytes) {
         this.dataScannedBytes = dataScannedBytes;
         return this;
@@ -31,9 +33,11 @@ public class ExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkUnitsExecutedCount")
     public Long workUnitsExecutedCount;
+
     public ExecutionStatistics withWorkUnitsExecutedCount(Long workUnitsExecutedCount) {
         this.workUnitsExecutedCount = workUnitsExecutedCount;
         return this;
     }
     
+    public ExecutionStatistics(){}
 }

@@ -22,6 +22,7 @@ public class GetMLTaskRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletedOn")
     public OffsetDateTime completedOn;
+
     public GetMLTaskRunResponse withCompletedOn(OffsetDateTime completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -30,6 +31,7 @@ public class GetMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorString")
     public String errorString;
+
     public GetMLTaskRunResponse withErrorString(String errorString) {
         this.errorString = errorString;
         return this;
@@ -38,6 +40,7 @@ public class GetMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionTime")
     public Long executionTime;
+
     public GetMLTaskRunResponse withExecutionTime(Long executionTime) {
         this.executionTime = executionTime;
         return this;
@@ -48,6 +51,7 @@ public class GetMLTaskRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedOn")
     public OffsetDateTime lastModifiedOn;
+
     public GetMLTaskRunResponse withLastModifiedOn(OffsetDateTime lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -56,6 +60,7 @@ public class GetMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroupName")
     public String logGroupName;
+
     public GetMLTaskRunResponse withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -64,6 +69,7 @@ public class GetMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public TaskRunProperties properties;
+
     public GetMLTaskRunResponse withProperties(TaskRunProperties properties) {
         this.properties = properties;
         return this;
@@ -74,6 +80,7 @@ public class GetMLTaskRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedOn")
     public OffsetDateTime startedOn;
+
     public GetMLTaskRunResponse withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
@@ -82,6 +89,7 @@ public class GetMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskStatusTypeEnum status;
+
     public GetMLTaskRunResponse withStatus(TaskStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -90,6 +98,7 @@ public class GetMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRunId")
     public String taskRunId;
+
     public GetMLTaskRunResponse withTaskRunId(String taskRunId) {
         this.taskRunId = taskRunId;
         return this;
@@ -98,9 +107,11 @@ public class GetMLTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformId")
     public String transformId;
+
     public GetMLTaskRunResponse withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public GetMLTaskRunResponse(){}
 }

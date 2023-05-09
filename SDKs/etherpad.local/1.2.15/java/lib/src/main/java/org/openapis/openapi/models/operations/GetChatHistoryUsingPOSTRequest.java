@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetChatHistoryUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public GetChatHistoryUsingPOSTRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -16,6 +17,7 @@ public class GetChatHistoryUsingPOSTRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public GetChatHistoryUsingPOSTRequest withPadID(String padID) {
         this.padID = padID;
         return this;
@@ -23,9 +25,11 @@ public class GetChatHistoryUsingPOSTRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public GetChatHistoryUsingPOSTRequest withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public GetChatHistoryUsingPOSTRequest(){}
 }

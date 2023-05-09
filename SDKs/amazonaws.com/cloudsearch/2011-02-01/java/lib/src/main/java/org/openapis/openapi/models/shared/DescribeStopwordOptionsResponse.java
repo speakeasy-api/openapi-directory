@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeStopwordOptionsResponse - A response message that contains the stopword options for a search domain.
@@ -15,9 +15,13 @@ public class DescribeStopwordOptionsResponse {
      */
     
     public StopwordOptionsStatus stopwords;
+
     public DescribeStopwordOptionsResponse withStopwords(StopwordOptionsStatus stopwords) {
         this.stopwords = stopwords;
         return this;
     }
     
+    public DescribeStopwordOptionsResponse(@JsonProperty("Stopwords") StopwordOptionsStatus stopwords) {
+        this.stopwords = stopwords;
+  }
 }

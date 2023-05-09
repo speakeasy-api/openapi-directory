@@ -15,6 +15,7 @@ public class RegistrationsFilesListFileLinks {
      */
     
     public String delete;
+
     public RegistrationsFilesListFileLinks withDelete(String delete) {
         this.delete = delete;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsFilesListFileLinks {
      */
     
     public String download;
+
     public RegistrationsFilesListFileLinks withDownload(String download) {
         this.download = download;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsFilesListFileLinks {
      */
     
     public String info;
+
     public RegistrationsFilesListFileLinks withInfo(String info) {
         this.info = info;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsFilesListFileLinks {
      */
     
     public String move;
+
     public RegistrationsFilesListFileLinks withMove(String move) {
         this.move = move;
         return this;
@@ -55,6 +59,7 @@ public class RegistrationsFilesListFileLinks {
      */
     
     public String newFolder;
+
     public RegistrationsFilesListFileLinks withNewFolder(String newFolder) {
         this.newFolder = newFolder;
         return this;
@@ -65,6 +70,7 @@ public class RegistrationsFilesListFileLinks {
      */
     
     public String self;
+
     public RegistrationsFilesListFileLinks withSelf(String self) {
         this.self = self;
         return this;
@@ -75,9 +81,11 @@ public class RegistrationsFilesListFileLinks {
      */
     
     public String upload;
+
     public RegistrationsFilesListFileLinks withUpload(String upload) {
         this.upload = upload;
         return this;
     }
     
+    public RegistrationsFilesListFileLinks(){}
 }

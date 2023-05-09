@@ -15,6 +15,7 @@ public class BlockPublicAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockPublicAcls")
     public Boolean blockPublicAcls;
+
     public BlockPublicAccess withBlockPublicAcls(Boolean blockPublicAcls) {
         this.blockPublicAcls = blockPublicAcls;
         return this;
@@ -23,6 +24,7 @@ public class BlockPublicAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockPublicPolicy")
     public Boolean blockPublicPolicy;
+
     public BlockPublicAccess withBlockPublicPolicy(Boolean blockPublicPolicy) {
         this.blockPublicPolicy = blockPublicPolicy;
         return this;
@@ -31,6 +33,7 @@ public class BlockPublicAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignorePublicAcls")
     public Boolean ignorePublicAcls;
+
     public BlockPublicAccess withIgnorePublicAcls(Boolean ignorePublicAcls) {
         this.ignorePublicAcls = ignorePublicAcls;
         return this;
@@ -39,9 +42,11 @@ public class BlockPublicAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictPublicBuckets")
     public Boolean restrictPublicBuckets;
+
     public BlockPublicAccess withRestrictPublicBuckets(Boolean restrictPublicBuckets) {
         this.restrictPublicBuckets = restrictPublicBuckets;
         return this;
     }
     
+    public BlockPublicAccess(){}
 }

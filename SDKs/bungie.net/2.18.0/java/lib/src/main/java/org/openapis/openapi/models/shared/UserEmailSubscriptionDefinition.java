@@ -15,6 +15,7 @@ public class UserEmailSubscriptionDefinition {
      */
     
     public java.util.Map<String, UserEMailSettingSubscriptionLocalization> localization;
+
     public UserEmailSubscriptionDefinition withLocalization(java.util.Map<String, UserEMailSettingSubscriptionLocalization> localization) {
         this.localization = localization;
         return this;
@@ -25,6 +26,7 @@ public class UserEmailSubscriptionDefinition {
      */
     
     public String name;
+
     public UserEmailSubscriptionDefinition withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,11 @@ public class UserEmailSubscriptionDefinition {
      */
     
     public Long value;
+
     public UserEmailSubscriptionDefinition withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public UserEmailSubscriptionDefinition(){}
 }

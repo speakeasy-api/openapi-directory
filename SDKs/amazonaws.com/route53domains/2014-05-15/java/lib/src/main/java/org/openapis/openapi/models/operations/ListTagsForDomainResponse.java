@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsForDomainResponse {
     
     public String contentType;
+
     public ListTagsForDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsForDomainResponse {
      */
     
     public Object invalidInput;
+
     public ListTagsForDomainResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsForDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsForDomainResponse listTagsForDomainResponse;
+
     public ListTagsForDomainResponse withListTagsForDomainResponse(org.openapis.openapi.models.shared.ListTagsForDomainResponse listTagsForDomainResponse) {
         this.listTagsForDomainResponse = listTagsForDomainResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsForDomainResponse {
      */
     
     public Object operationLimitExceeded;
+
     public ListTagsForDomainResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class ListTagsForDomainResponse {
     
     
     public Integer statusCode;
+
     public ListTagsForDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTagsForDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsForDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListTagsForDomainResponse {
      */
     
     public Object unsupportedTLD;
+
     public ListTagsForDomainResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public ListTagsForDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1SystemTimestamps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDatacatalogV1SystemTimestamps withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1SystemTimestamps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GoogleCloudDatacatalogV1SystemTimestamps withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1SystemTimestamps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDatacatalogV1SystemTimestamps withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1SystemTimestamps(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateHubResponse {
     @JsonProperty("HubArn")
     public String hubArn;
+
     public UpdateHubResponse withHubArn(String hubArn) {
         this.hubArn = hubArn;
         return this;
     }
     
+    public UpdateHubResponse(@JsonProperty("HubArn") String hubArn) {
+        this.hubArn = hubArn;
+  }
 }

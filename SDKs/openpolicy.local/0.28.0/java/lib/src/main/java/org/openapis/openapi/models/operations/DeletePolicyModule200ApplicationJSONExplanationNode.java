@@ -19,6 +19,7 @@ public class DeletePolicyModule200ApplicationJSONExplanationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public DeletePolicyModule200ApplicationJSONExplanationNode withIndex(Double index) {
         this.index = index;
         return this;
@@ -27,9 +28,11 @@ public class DeletePolicyModule200ApplicationJSONExplanationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public DeletePolicyModule200ApplicationJSONExplanationNodeTerms[] terms;
+
     public DeletePolicyModule200ApplicationJSONExplanationNode withTerms(DeletePolicyModule200ApplicationJSONExplanationNodeTerms[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONExplanationNode(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DatastoreProjectsCommitSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsCommitSecurityOption1 option1;
+
     public DatastoreProjectsCommitSecurity withOption1(DatastoreProjectsCommitSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DatastoreProjectsCommitSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsCommitSecurityOption2 option2;
+
     public DatastoreProjectsCommitSecurity withOption2(DatastoreProjectsCommitSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DatastoreProjectsCommitSecurity(){}
 }

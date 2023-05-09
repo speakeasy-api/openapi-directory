@@ -15,6 +15,7 @@ public class GrantConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionContextEquals")
     public java.util.Map<String, String> encryptionContextEquals;
+
     public GrantConstraints withEncryptionContextEquals(java.util.Map<String, String> encryptionContextEquals) {
         this.encryptionContextEquals = encryptionContextEquals;
         return this;
@@ -23,9 +24,11 @@ public class GrantConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionContextSubset")
     public java.util.Map<String, String> encryptionContextSubset;
+
     public GrantConstraints withEncryptionContextSubset(java.util.Map<String, String> encryptionContextSubset) {
         this.encryptionContextSubset = encryptionContextSubset;
         return this;
     }
     
+    public GrantConstraints(){}
 }

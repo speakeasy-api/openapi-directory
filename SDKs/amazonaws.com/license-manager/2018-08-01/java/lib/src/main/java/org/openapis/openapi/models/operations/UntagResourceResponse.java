@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
@@ -12,6 +13,7 @@ public class UntagResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public UntagResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UntagResourceResponse {
      */
     
     public Object authorizationException;
+
     public UntagResourceResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class UntagResourceResponse {
     
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UntagResourceResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UntagResourceResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class UntagResourceResponse {
      */
     
     public Object rateLimitExceededException;
+
     public UntagResourceResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UntagResourceResponse {
      */
     
     public Object serverInternalException;
+
     public UntagResourceResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -66,6 +73,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UntagResourceResponse {
      */
     
     public java.util.Map<String, Object> untagResourceResponse;
+
     public UntagResourceResponse withUntagResourceResponse(java.util.Map<String, Object> untagResourceResponse) {
         this.untagResourceResponse = untagResourceResponse;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

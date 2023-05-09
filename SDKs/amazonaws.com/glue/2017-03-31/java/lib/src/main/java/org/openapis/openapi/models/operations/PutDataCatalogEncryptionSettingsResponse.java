@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDataCatalogEncryptionSettingsResponse {
     
     public String contentType;
+
     public PutDataCatalogEncryptionSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutDataCatalogEncryptionSettingsResponse {
      */
     
     public Object internalServiceException;
+
     public PutDataCatalogEncryptionSettingsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class PutDataCatalogEncryptionSettingsResponse {
      */
     
     public Object invalidInputException;
+
     public PutDataCatalogEncryptionSettingsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class PutDataCatalogEncryptionSettingsResponse {
      */
     
     public Object operationTimeoutException;
+
     public PutDataCatalogEncryptionSettingsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class PutDataCatalogEncryptionSettingsResponse {
      */
     
     public java.util.Map<String, Object> putDataCatalogEncryptionSettingsResponse;
+
     public PutDataCatalogEncryptionSettingsResponse withPutDataCatalogEncryptionSettingsResponse(java.util.Map<String, Object> putDataCatalogEncryptionSettingsResponse) {
         this.putDataCatalogEncryptionSettingsResponse = putDataCatalogEncryptionSettingsResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutDataCatalogEncryptionSettingsResponse {
     
     
     public Integer statusCode;
+
     public PutDataCatalogEncryptionSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutDataCatalogEncryptionSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDataCatalogEncryptionSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutDataCatalogEncryptionSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

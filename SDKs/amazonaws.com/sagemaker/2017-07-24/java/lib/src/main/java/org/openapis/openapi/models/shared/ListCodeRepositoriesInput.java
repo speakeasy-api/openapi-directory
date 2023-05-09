@@ -19,6 +19,7 @@ public class ListCodeRepositoriesInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListCodeRepositoriesInput withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListCodeRepositoriesInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListCodeRepositoriesInput withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -39,6 +41,7 @@ public class ListCodeRepositoriesInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListCodeRepositoriesInput withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -49,6 +52,7 @@ public class ListCodeRepositoriesInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListCodeRepositoriesInput withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -57,6 +61,7 @@ public class ListCodeRepositoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCodeRepositoriesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -65,6 +70,7 @@ public class ListCodeRepositoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListCodeRepositoriesInput withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -73,6 +79,7 @@ public class ListCodeRepositoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCodeRepositoriesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +88,7 @@ public class ListCodeRepositoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public CodeRepositorySortByEnum sortBy;
+
     public ListCodeRepositoriesInput withSortBy(CodeRepositorySortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -89,9 +97,11 @@ public class ListCodeRepositoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public CodeRepositorySortOrderEnum sortOrder;
+
     public ListCodeRepositoriesInput withSortOrder(CodeRepositorySortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListCodeRepositoriesInput(){}
 }

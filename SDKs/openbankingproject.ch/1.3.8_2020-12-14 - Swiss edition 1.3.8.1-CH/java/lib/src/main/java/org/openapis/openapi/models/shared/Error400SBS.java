@@ -21,6 +21,7 @@ public class Error400SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error400SBS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error400SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error400SBSAdditionalErrors[] additionalErrors;
+
     public Error400SBS withAdditionalErrors(Error400SBSAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error400SBS {
      */
     @JsonProperty("code")
     public MessageCode400SBSEnum code;
+
     public Error400SBS withCode(MessageCode400SBSEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error400SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error400SBS withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error400SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error400SBS withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error400SBS {
      */
     @JsonProperty("type")
     public String type;
+
     public Error400SBS withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error400SBS(@JsonProperty("code") MessageCode400SBSEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

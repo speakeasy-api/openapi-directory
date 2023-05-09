@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListJobsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=APIVersion")
     public String apiVersion;
+
     public GETListJobsRequest withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -16,6 +18,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public GETListJobsRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -23,6 +26,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListJobsActionEnum action;
+
     public GETListJobsRequest withAction(GETListJobsActionEnum action) {
         this.action = action;
         return this;
@@ -30,6 +34,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETListJobsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +42,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxJobs")
     public Long maxJobs;
+
     public GETListJobsRequest withMaxJobs(Long maxJobs) {
         this.maxJobs = maxJobs;
         return this;
@@ -44,6 +50,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
     public GETListJobsOperationEnum operation;
+
     public GETListJobsRequest withOperation(GETListJobsOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -51,6 +58,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public GETListJobsRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -58,6 +66,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public GETListJobsRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -65,6 +74,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public GETListJobsRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -72,6 +82,7 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public GETListJobsRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -79,9 +90,20 @@ public class GETListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListJobsVersionEnum version;
+
     public GETListJobsRequest withVersion(GETListJobsVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public GETListJobsRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") GETListJobsActionEnum action, @JsonProperty("Operation") GETListJobsOperationEnum operation, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") GETListJobsVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.operation = operation;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

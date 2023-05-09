@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageCollectionItemsRequest {
@@ -12,6 +13,7 @@ public class GetImageCollectionItemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetImageCollectionItemsRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetImageCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetImageCollectionItemsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class GetImageCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetImageCollectionItemsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class GetImageCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=share_code")
     public String shareCode;
+
     public GetImageCollectionItemsRequest withShareCode(String shareCode) {
         this.shareCode = shareCode;
         return this;
@@ -52,9 +57,13 @@ public class GetImageCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetImageCollectionItemsSortEnum sort;
+
     public GetImageCollectionItemsRequest withSort(GetImageCollectionItemsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetImageCollectionItemsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

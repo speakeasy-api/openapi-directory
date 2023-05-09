@@ -15,6 +15,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public FindingEnum name;
+
     public Summary withName(FindingEnum name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCodeSummaries")
     public ReasonCodeSummary[] reasonCodeSummaries;
+
     public Summary withReasonCodeSummaries(ReasonCodeSummary[] reasonCodeSummaries) {
         this.reasonCodeSummaries = reasonCodeSummaries;
         return this;
@@ -31,9 +33,11 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public Summary withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Summary(){}
 }

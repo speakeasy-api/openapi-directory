@@ -18,6 +18,7 @@ public class ActivityObjectResharers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ActivityObjectResharers withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -29,9 +30,11 @@ public class ActivityObjectResharers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Long totalItems;
+
     public ActivityObjectResharers withTotalItems(Long totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public ActivityObjectResharers(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegistrationMetadataItem {
     @JsonProperty("Key")
     public String key;
+
     public RegistrationMetadataItem withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class RegistrationMetadataItem {
     
     @JsonProperty("Value")
     public String value;
+
     public RegistrationMetadataItem withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RegistrationMetadataItem(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

@@ -15,9 +15,11 @@ public class StartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public StartRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public StartRequest(){}
 }

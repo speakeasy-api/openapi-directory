@@ -52,12 +52,10 @@ public class GamesAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGamesEndpointsUsingGETResponse res = new org.openapis.openapi.models.operations.GETGamesEndpointsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGamesEndpointsUsingGETResponse res = new org.openapis.openapi.models.operations.GETGamesEndpointsUsingGETResponse(contentType, httpRes.statusCode()) {{
             gameEndpointsModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class GamesAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDeletedUsingGETResponse res = new org.openapis.openapi.models.operations.ListDeletedUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListDeletedUsingGETResponse res = new org.openapis.openapi.models.operations.ListDeletedUsingGETResponse(contentType, httpRes.statusCode()) {{
             deletedGameModels = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,12 +142,10 @@ public class GamesAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListUsingGETResponse res = new org.openapis.openapi.models.operations.ListUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListUsingGETResponse res = new org.openapis.openapi.models.operations.ListUsingGETResponse(contentType, httpRes.statusCode()) {{
             gameModels = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class GamesAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RestoreDeletedGameUsingPOSTResponse res = new org.openapis.openapi.models.operations.RestoreDeletedGameUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.RestoreDeletedGameUsingPOSTResponse res = new org.openapis.openapi.models.operations.RestoreDeletedGameUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {

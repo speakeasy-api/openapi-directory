@@ -18,9 +18,11 @@ public class TextSentimentAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentiment")
     public Integer sentiment;
+
     public TextSentimentAnnotation withSentiment(Integer sentiment) {
         this.sentiment = sentiment;
         return this;
     }
     
+    public TextSentimentAnnotation(){}
 }

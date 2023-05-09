@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeApcuRequest {
@@ -12,6 +13,7 @@ public class ChangeApcuRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdatePhpAPcuRequest updatePhpAPcuRequest;
+
     public ChangeApcuRequest withUpdatePhpAPcuRequest(org.openapis.openapi.models.shared.UpdatePhpAPcuRequest updatePhpAPcuRequest) {
         this.updatePhpAPcuRequest = updatePhpAPcuRequest;
         return this;
@@ -22,6 +24,7 @@ public class ChangeApcuRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public ChangeApcuRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -32,9 +35,14 @@ public class ChangeApcuRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public ChangeApcuRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     
+    public ChangeApcuRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+  }
 }

@@ -15,9 +15,11 @@ public class UpdateVirtualRouterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualRouter")
     public VirtualRouterData virtualRouter;
+
     public UpdateVirtualRouterOutput withVirtualRouter(VirtualRouterData virtualRouter) {
         this.virtualRouter = virtualRouter;
         return this;
     }
     
+    public UpdateVirtualRouterOutput(){}
 }

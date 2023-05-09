@@ -18,6 +18,7 @@ public class MoveAssignmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignmentId")
     public String assignmentId;
+
     public MoveAssignmentRequest withAssignmentId(String assignmentId) {
         this.assignmentId = assignmentId;
         return this;
@@ -29,9 +30,11 @@ public class MoveAssignmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public MoveAssignmentRequest withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
     }
     
+    public MoveAssignmentRequest(){}
 }

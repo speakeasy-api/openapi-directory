@@ -15,6 +15,7 @@ public class DescribeProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeProvisionedProductInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -23,6 +24,7 @@ public class DescribeProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeProvisionedProductInput withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class DescribeProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeProvisionedProductInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeProvisionedProductInput(){}
 }

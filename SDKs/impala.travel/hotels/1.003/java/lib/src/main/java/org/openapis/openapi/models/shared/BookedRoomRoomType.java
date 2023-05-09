@@ -15,6 +15,7 @@ public class BookedRoomRoomType {
      */
     @JsonProperty("name")
     public String name;
+
     public BookedRoomRoomType withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class BookedRoomRoomType {
      */
     @JsonProperty("roomTypeId")
     public String roomTypeId;
+
     public BookedRoomRoomType withRoomTypeId(String roomTypeId) {
         this.roomTypeId = roomTypeId;
         return this;
     }
     
+    public BookedRoomRoomType(@JsonProperty("name") String name, @JsonProperty("roomTypeId") String roomTypeId) {
+        this.name = name;
+        this.roomTypeId = roomTypeId;
+  }
 }

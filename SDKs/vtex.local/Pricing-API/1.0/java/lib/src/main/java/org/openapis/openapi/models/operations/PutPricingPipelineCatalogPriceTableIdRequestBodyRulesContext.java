@@ -17,6 +17,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext {
      */
     @JsonProperty("brands")
     public java.util.Map<String, String> brands;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext withBrands(java.util.Map<String, String> brands) {
         this.brands = brands;
         return this;
@@ -27,6 +28,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext {
      */
     @JsonProperty("categories")
     public java.util.Map<String, String> categories;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext withCategories(java.util.Map<String, String> categories) {
         this.categories = categories;
         return this;
@@ -37,6 +39,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext {
      */
     @JsonProperty("dateRange")
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextDateRange dateRange;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext withDateRange(PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextDateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -48,6 +51,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalCategories")
     public java.util.Map<String, Object> internalCategories;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext withInternalCategories(java.util.Map<String, Object> internalCategories) {
         this.internalCategories = internalCategories;
         return this;
@@ -58,6 +62,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext {
      */
     @JsonProperty("markupRange")
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextMarkupRange markupRange;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext withMarkupRange(PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextMarkupRange markupRange) {
         this.markupRange = markupRange;
         return this;
@@ -69,9 +74,16 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockStatuses")
     public java.util.Map<String, Object> stockStatuses;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext withStockStatuses(java.util.Map<String, Object> stockStatuses) {
         this.stockStatuses = stockStatuses;
         return this;
     }
     
+    public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContext(@JsonProperty("brands") java.util.Map<String, String> brands, @JsonProperty("categories") java.util.Map<String, String> categories, @JsonProperty("dateRange") PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextDateRange dateRange, @JsonProperty("markupRange") PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextMarkupRange markupRange) {
+        this.brands = brands;
+        this.categories = categories;
+        this.dateRange = dateRange;
+        this.markupRange = markupRange;
+  }
 }

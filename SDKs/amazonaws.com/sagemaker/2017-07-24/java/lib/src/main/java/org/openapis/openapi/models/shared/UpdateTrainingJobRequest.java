@@ -12,6 +12,7 @@ public class UpdateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfilerConfig")
     public ProfilerConfigForUpdate profilerConfig;
+
     public UpdateTrainingJobRequest withProfilerConfig(ProfilerConfigForUpdate profilerConfig) {
         this.profilerConfig = profilerConfig;
         return this;
@@ -20,6 +21,7 @@ public class UpdateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfilerRuleConfigurations")
     public ProfilerRuleConfiguration[] profilerRuleConfigurations;
+
     public UpdateTrainingJobRequest withProfilerRuleConfigurations(ProfilerRuleConfiguration[] profilerRuleConfigurations) {
         this.profilerRuleConfigurations = profilerRuleConfigurations;
         return this;
@@ -28,6 +30,7 @@ public class UpdateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceConfig")
     public ResourceConfigForUpdate resourceConfig;
+
     public UpdateTrainingJobRequest withResourceConfig(ResourceConfigForUpdate resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -35,9 +38,13 @@ public class UpdateTrainingJobRequest {
     
     @JsonProperty("TrainingJobName")
     public String trainingJobName;
+
     public UpdateTrainingJobRequest withTrainingJobName(String trainingJobName) {
         this.trainingJobName = trainingJobName;
         return this;
     }
     
+    public UpdateTrainingJobRequest(@JsonProperty("TrainingJobName") String trainingJobName) {
+        this.trainingJobName = trainingJobName;
+  }
 }

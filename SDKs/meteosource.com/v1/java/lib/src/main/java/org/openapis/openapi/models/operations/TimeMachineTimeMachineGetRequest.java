@@ -4,16 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TimeMachineTimeMachineGetRequest {
     /**
-     * The UTC day of the data in the past. Specify in `YYYY-MM-DD` format, e.g. `2021-08-24`.
+     * The day of the data in the past. Specify in `YYYY-MM-DD` format, e.g. `2021-08-24`.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public LocalDate date;
+
     public TimeMachineTimeMachineGetRequest withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -24,6 +26,7 @@ public class TimeMachineTimeMachineGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TimeMachineTimeMachineGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -34,6 +37,7 @@ public class TimeMachineTimeMachineGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public String lat;
+
     public TimeMachineTimeMachineGetRequest withLat(String lat) {
         this.lat = lat;
         return this;
@@ -44,6 +48,7 @@ public class TimeMachineTimeMachineGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public String lon;
+
     public TimeMachineTimeMachineGetRequest withLon(String lon) {
         this.lon = lon;
         return this;
@@ -54,6 +59,7 @@ public class TimeMachineTimeMachineGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=place_id")
     public String placeId;
+
     public TimeMachineTimeMachineGetRequest withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -68,6 +74,7 @@ public class TimeMachineTimeMachineGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timezone")
     public String timezone;
+
     public TimeMachineTimeMachineGetRequest withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -85,9 +92,13 @@ public class TimeMachineTimeMachineGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=units")
     public TimeMachineTimeMachineGetUnitsUnitsEnum units;
+
     public TimeMachineTimeMachineGetRequest withUnits(TimeMachineTimeMachineGetUnitsUnitsEnum units) {
         this.units = units;
         return this;
     }
     
+    public TimeMachineTimeMachineGetRequest(@JsonProperty("date") LocalDate date) {
+        this.date = date;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointProperties")
     public EndpointProperties endpointProperties;
+
     public DescribeEndpointResponse withEndpointProperties(EndpointProperties endpointProperties) {
         this.endpointProperties = endpointProperties;
         return this;
     }
     
+    public DescribeEndpointResponse(){}
 }

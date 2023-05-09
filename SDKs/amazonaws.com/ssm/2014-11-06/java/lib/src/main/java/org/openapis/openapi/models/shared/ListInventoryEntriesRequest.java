@@ -12,6 +12,7 @@ public class ListInventoryEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public InventoryFilter[] filters;
+
     public ListInventoryEntriesRequest withFilters(InventoryFilter[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class ListInventoryEntriesRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public ListInventoryEntriesRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -27,6 +29,7 @@ public class ListInventoryEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListInventoryEntriesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class ListInventoryEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInventoryEntriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class ListInventoryEntriesRequest {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public ListInventoryEntriesRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public ListInventoryEntriesRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("TypeName") String typeName) {
+        this.instanceId = instanceId;
+        this.typeName = typeName;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledActionType {
     
     public PauseClusterMessage pauseCluster;
+
     public ScheduledActionType withPauseCluster(PauseClusterMessage pauseCluster) {
         this.pauseCluster = pauseCluster;
         return this;
@@ -19,6 +20,7 @@ public class ScheduledActionType {
     
     
     public ResizeClusterMessage resizeCluster;
+
     public ScheduledActionType withResizeCluster(ResizeClusterMessage resizeCluster) {
         this.resizeCluster = resizeCluster;
         return this;
@@ -26,9 +28,11 @@ public class ScheduledActionType {
     
     
     public ResumeClusterMessage resumeCluster;
+
     public ScheduledActionType withResumeCluster(ResumeClusterMessage resumeCluster) {
         this.resumeCluster = resumeCluster;
         return this;
     }
     
+    public ScheduledActionType(){}
 }

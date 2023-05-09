@@ -15,6 +15,7 @@ public class DynamoDBTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public DynamoDBTarget withPath(String path) {
         this.path = path;
         return this;
@@ -23,6 +24,7 @@ public class DynamoDBTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanAll")
     public Boolean scanAll;
+
     public DynamoDBTarget withScanAll(Boolean scanAll) {
         this.scanAll = scanAll;
         return this;
@@ -31,9 +33,11 @@ public class DynamoDBTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanRate")
     public Double scanRate;
+
     public DynamoDBTarget withScanRate(Double scanRate) {
         this.scanRate = scanRate;
         return this;
     }
     
+    public DynamoDBTarget(){}
 }

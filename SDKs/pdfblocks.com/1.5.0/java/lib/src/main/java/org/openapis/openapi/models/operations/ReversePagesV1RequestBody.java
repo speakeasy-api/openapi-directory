@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReversePagesV1RequestBody {
@@ -12,9 +13,13 @@ public class ReversePagesV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public ReversePagesV1RequestBodyFile file;
+
     public ReversePagesV1RequestBody withFile(ReversePagesV1RequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public ReversePagesV1RequestBody(@JsonProperty("file") ReversePagesV1RequestBodyFile file) {
+        this.file = file;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateClusterSecurityGroupMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateClusterSecurityGroupMessage {
     
     public String clusterSecurityGroupName;
+
     public CreateClusterSecurityGroupMessage withClusterSecurityGroupName(String clusterSecurityGroupName) {
         this.clusterSecurityGroupName = clusterSecurityGroupName;
         return this;
@@ -19,6 +20,7 @@ public class CreateClusterSecurityGroupMessage {
     
     
     public String description;
+
     public CreateClusterSecurityGroupMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +28,14 @@ public class CreateClusterSecurityGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateClusterSecurityGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClusterSecurityGroupMessage(@JsonProperty("ClusterSecurityGroupName") String clusterSecurityGroupName, @JsonProperty("Description") String description) {
+        this.clusterSecurityGroupName = clusterSecurityGroupName;
+        this.description = description;
+  }
 }

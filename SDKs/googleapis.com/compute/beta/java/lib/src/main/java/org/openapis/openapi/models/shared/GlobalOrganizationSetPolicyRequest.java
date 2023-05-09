@@ -15,6 +15,7 @@ public class GlobalOrganizationSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public Binding[] bindings;
+
     public GlobalOrganizationSetPolicyRequest withBindings(Binding[] bindings) {
         this.bindings = bindings;
         return this;
@@ -26,6 +27,7 @@ public class GlobalOrganizationSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GlobalOrganizationSetPolicyRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -37,9 +39,11 @@ public class GlobalOrganizationSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public Policy policy;
+
     public GlobalOrganizationSetPolicyRequest withPolicy(Policy policy) {
         this.policy = policy;
         return this;
     }
     
+    public GlobalOrganizationSetPolicyRequest(){}
 }

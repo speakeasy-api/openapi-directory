@@ -12,6 +12,7 @@ public class ItemPriceDefinitionsSellingPrices {
      */
     @JsonProperty("quantity")
     public Long quantity;
+
     public ItemPriceDefinitionsSellingPrices withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -22,9 +23,14 @@ public class ItemPriceDefinitionsSellingPrices {
      */
     @JsonProperty("value")
     public Long value;
+
     public ItemPriceDefinitionsSellingPrices withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ItemPriceDefinitionsSellingPrices(@JsonProperty("quantity") Long quantity, @JsonProperty("value") Long value) {
+        this.quantity = quantity;
+        this.value = value;
+  }
 }

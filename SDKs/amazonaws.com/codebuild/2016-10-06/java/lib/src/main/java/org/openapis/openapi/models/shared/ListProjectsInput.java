@@ -12,6 +12,7 @@ public class ListProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListProjectsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -20,6 +21,7 @@ public class ListProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ProjectSortByTypeEnum sortBy;
+
     public ListProjectsInput withSortBy(ProjectSortByTypeEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -28,9 +30,11 @@ public class ListProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderTypeEnum sortOrder;
+
     public ListProjectsInput withSortOrder(SortOrderTypeEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListProjectsInput(){}
 }

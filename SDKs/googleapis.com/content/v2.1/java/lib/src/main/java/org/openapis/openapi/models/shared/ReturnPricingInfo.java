@@ -15,6 +15,7 @@ public class ReturnPricingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeReturnShippingFee")
     public Boolean chargeReturnShippingFee;
+
     public ReturnPricingInfo withChargeReturnShippingFee(Boolean chargeReturnShippingFee) {
         this.chargeReturnShippingFee = chargeReturnShippingFee;
         return this;
@@ -23,6 +24,7 @@ public class ReturnPricingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxReturnShippingFee")
     public MonetaryAmount maxReturnShippingFee;
+
     public ReturnPricingInfo withMaxReturnShippingFee(MonetaryAmount maxReturnShippingFee) {
         this.maxReturnShippingFee = maxReturnShippingFee;
         return this;
@@ -31,6 +33,7 @@ public class ReturnPricingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundableItemsTotalAmount")
     public MonetaryAmount refundableItemsTotalAmount;
+
     public ReturnPricingInfo withRefundableItemsTotalAmount(MonetaryAmount refundableItemsTotalAmount) {
         this.refundableItemsTotalAmount = refundableItemsTotalAmount;
         return this;
@@ -39,6 +42,7 @@ public class ReturnPricingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundableShippingAmount")
     public MonetaryAmount refundableShippingAmount;
+
     public ReturnPricingInfo withRefundableShippingAmount(MonetaryAmount refundableShippingAmount) {
         this.refundableShippingAmount = refundableShippingAmount;
         return this;
@@ -47,9 +51,11 @@ public class ReturnPricingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRefundedAmount")
     public MonetaryAmount totalRefundedAmount;
+
     public ReturnPricingInfo withTotalRefundedAmount(MonetaryAmount totalRefundedAmount) {
         this.totalRefundedAmount = totalRefundedAmount;
         return this;
     }
     
+    public ReturnPricingInfo(){}
 }

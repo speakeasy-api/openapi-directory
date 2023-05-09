@@ -15,6 +15,7 @@ public class MerchantUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorization")
     public String authorization;
+
     public MerchantUrls withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -26,6 +27,7 @@ public class MerchantUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmation")
     public String confirmation;
+
     public MerchantUrls withConfirmation(String confirmation) {
         this.confirmation = confirmation;
         return this;
@@ -37,6 +39,7 @@ public class MerchantUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public String notification;
+
     public MerchantUrls withNotification(String notification) {
         this.notification = notification;
         return this;
@@ -48,9 +51,11 @@ public class MerchantUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("push")
     public String push;
+
     public MerchantUrls withPush(String push) {
         this.push = push;
         return this;
     }
     
+    public MerchantUrls(){}
 }

@@ -50,10 +50,8 @@ public class Wikis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WikiContentResponse res = new org.openapis.openapi.models.operations.WikiContentResponse() {{
+        org.openapis.openapi.models.operations.WikiContentResponse res = new org.openapis.openapi.models.operations.WikiContentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,11 +86,9 @@ public class Wikis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WikiReadResponse res = new org.openapis.openapi.models.operations.WikiReadResponse() {{
+        org.openapis.openapi.models.operations.WikiReadResponse res = new org.openapis.openapi.models.operations.WikiReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SqlInjectionMatchSetSummary {
     @JsonProperty("Name")
     public String name;
+
     public SqlInjectionMatchSetSummary withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SqlInjectionMatchSetSummary {
     
     @JsonProperty("SqlInjectionMatchSetId")
     public String sqlInjectionMatchSetId;
+
     public SqlInjectionMatchSetSummary withSqlInjectionMatchSetId(String sqlInjectionMatchSetId) {
         this.sqlInjectionMatchSetId = sqlInjectionMatchSetId;
         return this;
     }
     
+    public SqlInjectionMatchSetSummary(@JsonProperty("Name") String name, @JsonProperty("SqlInjectionMatchSetId") String sqlInjectionMatchSetId) {
+        this.name = name;
+        this.sqlInjectionMatchSetId = sqlInjectionMatchSetId;
+  }
 }

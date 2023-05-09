@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListConfigurationsRequest {
     @JsonProperty("configurationType")
     public ConfigurationItemTypeEnum configurationType;
+
     public ListConfigurationsRequest withConfigurationType(ConfigurationItemTypeEnum configurationType) {
         this.configurationType = configurationType;
         return this;
@@ -19,6 +20,7 @@ public class ListConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public Filter[] filters;
+
     public ListConfigurationsRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class ListConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListConfigurationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class ListConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListConfigurationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class ListConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public OrderByElement[] orderBy;
+
     public ListConfigurationsRequest withOrderBy(OrderByElement[] orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public ListConfigurationsRequest(@JsonProperty("configurationType") ConfigurationItemTypeEnum configurationType) {
+        this.configurationType = configurationType;
+  }
 }

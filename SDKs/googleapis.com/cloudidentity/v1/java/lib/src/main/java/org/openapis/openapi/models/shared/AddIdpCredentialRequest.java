@@ -18,9 +18,11 @@ public class AddIdpCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pemData")
     public String pemData;
+
     public AddIdpCredentialRequest withPemData(String pemData) {
         this.pemData = pemData;
         return this;
     }
     
+    public AddIdpCredentialRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdmobAccountsAppsListResponse {
     
     public String contentType;
+
     public AdmobAccountsAppsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdmobAccountsAppsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppsResponse listAppsResponse;
+
     public AdmobAccountsAppsListResponse withListAppsResponse(org.openapis.openapi.models.shared.ListAppsResponse listAppsResponse) {
         this.listAppsResponse = listAppsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AdmobAccountsAppsListResponse {
     
     
     public Integer statusCode;
+
     public AdmobAccountsAppsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdmobAccountsAppsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdmobAccountsAppsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdmobAccountsAppsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

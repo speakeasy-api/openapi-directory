@@ -18,6 +18,7 @@ public class ListMigratingVmsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migratingVms")
     public MigratingVm[] migratingVms;
+
     public ListMigratingVmsResponse withMigratingVms(MigratingVm[] migratingVms) {
         this.migratingVms = migratingVms;
         return this;
@@ -29,6 +30,7 @@ public class ListMigratingVmsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMigratingVmsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListMigratingVmsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListMigratingVmsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListMigratingVmsResponse(){}
 }

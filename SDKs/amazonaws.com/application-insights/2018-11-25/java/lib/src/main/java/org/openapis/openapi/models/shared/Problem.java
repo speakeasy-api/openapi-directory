@@ -20,6 +20,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AffectedResource")
     public String affectedResource;
+
     public Problem withAffectedResource(String affectedResource) {
         this.affectedResource = affectedResource;
         return this;
@@ -30,6 +31,7 @@ public class Problem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public Problem withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Feedback")
     public java.util.Map<String, FeedbackValueEnum> feedback;
+
     public Problem withFeedback(java.util.Map<String, FeedbackValueEnum> feedback) {
         this.feedback = feedback;
         return this;
@@ -46,6 +49,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Problem withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Insights")
     public String insights;
+
     public Problem withInsights(String insights) {
         this.insights = insights;
         return this;
@@ -64,6 +69,7 @@ public class Problem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastRecurrenceTime")
     public OffsetDateTime lastRecurrenceTime;
+
     public Problem withLastRecurrenceTime(OffsetDateTime lastRecurrenceTime) {
         this.lastRecurrenceTime = lastRecurrenceTime;
         return this;
@@ -72,6 +78,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringCount")
     public Long recurringCount;
+
     public Problem withRecurringCount(Long recurringCount) {
         this.recurringCount = recurringCount;
         return this;
@@ -80,6 +87,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public Problem withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -88,6 +96,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeverityLevel")
     public SeverityLevelEnum severityLevel;
+
     public Problem withSeverityLevel(SeverityLevelEnum severityLevel) {
         this.severityLevel = severityLevel;
         return this;
@@ -98,6 +107,7 @@ public class Problem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public Problem withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -106,6 +116,7 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public Problem withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -114,9 +125,11 @@ public class Problem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Problem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Problem(){}
 }

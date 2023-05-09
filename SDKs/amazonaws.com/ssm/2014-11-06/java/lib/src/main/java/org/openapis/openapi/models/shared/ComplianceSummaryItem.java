@@ -15,6 +15,7 @@ public class ComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public String complianceType;
+
     public ComplianceSummaryItem withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,6 +24,7 @@ public class ComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantSummary")
     public CompliantSummary compliantSummary;
+
     public ComplianceSummaryItem withCompliantSummary(CompliantSummary compliantSummary) {
         this.compliantSummary = compliantSummary;
         return this;
@@ -31,9 +33,11 @@ public class ComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantSummary")
     public NonCompliantSummary nonCompliantSummary;
+
     public ComplianceSummaryItem withNonCompliantSummary(NonCompliantSummary nonCompliantSummary) {
         this.nonCompliantSummary = nonCompliantSummary;
         return this;
     }
     
+    public ComplianceSummaryItem(){}
 }

@@ -80,4 +80,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusUsage.java
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatus.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/CreateWorkflowMessageStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/CreateWorkflowFinalReportResponse.java
+docs/sdk/README.md
 USAGE.md

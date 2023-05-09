@@ -18,6 +18,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSONOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public AppsTransferOwnershipRaw200ApplicationJSONOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSONOwner {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsTransferOwnershipRaw200ApplicationJSONOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSONOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AppsTransferOwnershipRaw200ApplicationJSONOwner withEmail(String email) {
         this.email = email;
         return this;
@@ -49,6 +52,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSONOwner {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsTransferOwnershipRaw200ApplicationJSONOwner withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class AppsTransferOwnershipRaw200ApplicationJSONOwner {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsTransferOwnershipRaw200ApplicationJSONOwner withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,16 @@ public class AppsTransferOwnershipRaw200ApplicationJSONOwner {
      */
     @JsonProperty("type")
     public AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum type;
+
     public AppsTransferOwnershipRaw200ApplicationJSONOwner withType(AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AppsTransferOwnershipRaw200ApplicationJSONOwner(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum type) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

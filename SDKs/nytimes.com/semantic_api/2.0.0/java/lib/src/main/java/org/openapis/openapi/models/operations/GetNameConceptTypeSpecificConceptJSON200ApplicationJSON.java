@@ -15,6 +15,7 @@ public class GetNameConceptTypeSpecificConceptJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GetNameConceptTypeSpecificConceptJSON200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -23,6 +24,7 @@ public class GetNameConceptTypeSpecificConceptJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_results")
     public Long numResults;
+
     public GetNameConceptTypeSpecificConceptJSON200ApplicationJSON withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -31,6 +33,7 @@ public class GetNameConceptTypeSpecificConceptJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Concept[] results;
+
     public GetNameConceptTypeSpecificConceptJSON200ApplicationJSON withResults(org.openapis.openapi.models.shared.Concept[] results) {
         this.results = results;
         return this;
@@ -39,9 +42,11 @@ public class GetNameConceptTypeSpecificConceptJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetNameConceptTypeSpecificConceptJSON200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetNameConceptTypeSpecificConceptJSON200ApplicationJSON(){}
 }

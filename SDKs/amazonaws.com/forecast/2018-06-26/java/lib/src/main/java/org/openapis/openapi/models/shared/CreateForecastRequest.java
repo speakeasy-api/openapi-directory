@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateForecastRequest {
     @JsonProperty("ForecastName")
     public String forecastName;
+
     public CreateForecastRequest withForecastName(String forecastName) {
         this.forecastName = forecastName;
         return this;
@@ -19,6 +20,7 @@ public class CreateForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastTypes")
     public String[] forecastTypes;
+
     public CreateForecastRequest withForecastTypes(String[] forecastTypes) {
         this.forecastTypes = forecastTypes;
         return this;
@@ -26,6 +28,7 @@ public class CreateForecastRequest {
     
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public CreateForecastRequest withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
@@ -34,6 +37,7 @@ public class CreateForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateForecastRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -42,9 +46,14 @@ public class CreateForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesSelector")
     public TimeSeriesSelector timeSeriesSelector;
+
     public CreateForecastRequest withTimeSeriesSelector(TimeSeriesSelector timeSeriesSelector) {
         this.timeSeriesSelector = timeSeriesSelector;
         return this;
     }
     
+    public CreateForecastRequest(@JsonProperty("ForecastName") String forecastName, @JsonProperty("PredictorArn") String predictorArn) {
+        this.forecastName = forecastName;
+        this.predictorArn = predictorArn;
+  }
 }

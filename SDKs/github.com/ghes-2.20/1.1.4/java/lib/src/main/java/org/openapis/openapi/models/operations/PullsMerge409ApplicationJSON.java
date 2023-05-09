@@ -15,6 +15,7 @@ public class PullsMerge409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public PullsMerge409ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -23,9 +24,11 @@ public class PullsMerge409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PullsMerge409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PullsMerge409ApplicationJSON(){}
 }

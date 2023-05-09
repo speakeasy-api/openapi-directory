@@ -18,6 +18,7 @@ public class AzureVmPlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public AzureVmPlatformDetails withLocation(String location) {
         this.location = location;
         return this;
@@ -29,6 +30,7 @@ public class AzureVmPlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineTypeLabel")
     public String machineTypeLabel;
+
     public AzureVmPlatformDetails withMachineTypeLabel(String machineTypeLabel) {
         this.machineTypeLabel = machineTypeLabel;
         return this;
@@ -40,9 +42,11 @@ public class AzureVmPlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningState")
     public String provisioningState;
+
     public AzureVmPlatformDetails withProvisioningState(String provisioningState) {
         this.provisioningState = provisioningState;
         return this;
     }
     
+    public AzureVmPlatformDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RevokeTokenResponse {
     
     public String contentType;
+
     public RevokeTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RevokeTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.RevokeTokenResponse revokeTokenResponse;
+
     public RevokeTokenResponse withRevokeTokenResponse(org.openapis.openapi.models.shared.RevokeTokenResponse revokeTokenResponse) {
         this.revokeTokenResponse = revokeTokenResponse;
         return this;
@@ -26,6 +29,7 @@ public class RevokeTokenResponse {
     
     
     public Integer statusCode;
+
     public RevokeTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RevokeTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RevokeTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RevokeTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

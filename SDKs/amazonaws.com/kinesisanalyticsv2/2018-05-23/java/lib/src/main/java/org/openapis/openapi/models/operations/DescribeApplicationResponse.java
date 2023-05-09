@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeApplicationResponse {
     
     public String contentType;
+
     public DescribeApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeApplicationResponse describeApplicationResponse;
+
     public DescribeApplicationResponse withDescribeApplicationResponse(org.openapis.openapi.models.shared.DescribeApplicationResponse describeApplicationResponse) {
         this.describeApplicationResponse = describeApplicationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeApplicationResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeApplicationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeApplicationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeApplicationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeApplicationResponse {
     
     
     public Integer statusCode;
+
     public DescribeApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

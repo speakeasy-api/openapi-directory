@@ -18,6 +18,7 @@ public class GoogleHomeEnterpriseSdmV1ListStructuresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleHomeEnterpriseSdmV1ListStructuresResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleHomeEnterpriseSdmV1ListStructuresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structures")
     public GoogleHomeEnterpriseSdmV1Structure[] structures;
+
     public GoogleHomeEnterpriseSdmV1ListStructuresResponse withStructures(GoogleHomeEnterpriseSdmV1Structure[] structures) {
         this.structures = structures;
         return this;
     }
     
+    public GoogleHomeEnterpriseSdmV1ListStructuresResponse(){}
 }

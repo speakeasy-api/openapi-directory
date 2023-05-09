@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRuntimeManagementConfigResponse {
     
     public String contentType;
+
     public PutRuntimeManagementConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRuntimeManagementConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutRuntimeManagementConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class PutRuntimeManagementConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRuntimeManagementConfigResponse putRuntimeManagementConfigResponse;
+
     public PutRuntimeManagementConfigResponse withPutRuntimeManagementConfigResponse(org.openapis.openapi.models.shared.PutRuntimeManagementConfigResponse putRuntimeManagementConfigResponse) {
         this.putRuntimeManagementConfigResponse = putRuntimeManagementConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutRuntimeManagementConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public PutRuntimeManagementConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -49,6 +54,7 @@ public class PutRuntimeManagementConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutRuntimeManagementConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutRuntimeManagementConfigResponse {
      */
     
     public Object serviceException;
+
     public PutRuntimeManagementConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class PutRuntimeManagementConfigResponse {
     
     
     public Integer statusCode;
+
     public PutRuntimeManagementConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutRuntimeManagementConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRuntimeManagementConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutRuntimeManagementConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutRuntimeManagementConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutRuntimeManagementConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

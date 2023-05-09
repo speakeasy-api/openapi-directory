@@ -15,6 +15,7 @@ public class MarketData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_timestamp")
     public Long endTimestamp;
+
     public MarketData withEndTimestamp(Long endTimestamp) {
         this.endTimestamp = endTimestamp;
         return this;
@@ -26,6 +27,7 @@ public class MarketData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketprice")
     public Double marketprice;
+
     public MarketData withMarketprice(Double marketprice) {
         this.marketprice = marketprice;
         return this;
@@ -37,9 +39,11 @@ public class MarketData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_timestamp")
     public Long startTimestamp;
+
     public MarketData withStartTimestamp(Long startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
     }
     
+    public MarketData(){}
 }

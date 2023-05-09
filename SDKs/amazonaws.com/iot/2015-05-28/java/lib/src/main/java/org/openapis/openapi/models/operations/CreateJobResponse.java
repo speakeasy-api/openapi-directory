@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateJobResponse {
     
     public String contentType;
+
     public CreateJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateJobResponse createJobResponse;
+
     public CreateJobResponse withCreateJobResponse(org.openapis.openapi.models.shared.CreateJobResponse createJobResponse) {
         this.createJobResponse = createJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateJobResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class CreateJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateJobResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateJobResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateJobResponse {
     
     
     public Integer statusCode;
+
     public CreateJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class CreateJobResponse {
      */
     
     public Object throttlingException;
+
     public CreateJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

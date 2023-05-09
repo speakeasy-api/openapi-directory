@@ -12,9 +12,13 @@ public class Specifications {
      */
     @JsonProperty("Embalagem")
     public String embalagem;
+
     public Specifications withEmbalagem(String embalagem) {
         this.embalagem = embalagem;
         return this;
     }
     
+    public Specifications(@JsonProperty("Embalagem") String embalagem) {
+        this.embalagem = embalagem;
+  }
 }

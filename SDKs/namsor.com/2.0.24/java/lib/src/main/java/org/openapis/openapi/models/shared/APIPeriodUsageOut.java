@@ -18,6 +18,7 @@ public class APIPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriod")
     public APIBillingPeriodUsageOut billingPeriod;
+
     public APIPeriodUsageOut withBillingPeriod(APIBillingPeriodUsageOut billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -29,6 +30,7 @@ public class APIPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overageCurrency")
     public String overageCurrency;
+
     public APIPeriodUsageOut withOverageCurrency(String overageCurrency) {
         this.overageCurrency = overageCurrency;
         return this;
@@ -40,6 +42,7 @@ public class APIPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overageExclTax")
     public Double overageExclTax;
+
     public APIPeriodUsageOut withOverageExclTax(Double overageExclTax) {
         this.overageExclTax = overageExclTax;
         return this;
@@ -51,6 +54,7 @@ public class APIPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overageInclTax")
     public Double overageInclTax;
+
     public APIPeriodUsageOut withOverageInclTax(Double overageInclTax) {
         this.overageInclTax = overageInclTax;
         return this;
@@ -62,6 +66,7 @@ public class APIPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overageQuantity")
     public Long overageQuantity;
+
     public APIPeriodUsageOut withOverageQuantity(Long overageQuantity) {
         this.overageQuantity = overageQuantity;
         return this;
@@ -73,9 +78,11 @@ public class APIPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public APIPlanSubscriptionOut subscription;
+
     public APIPeriodUsageOut withSubscription(APIPlanSubscriptionOut subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public APIPeriodUsageOut(){}
 }

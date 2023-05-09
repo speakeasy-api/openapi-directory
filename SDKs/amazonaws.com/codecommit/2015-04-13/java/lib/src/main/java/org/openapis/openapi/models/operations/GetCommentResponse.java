@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommentResponse {
@@ -12,6 +13,7 @@ public class GetCommentResponse {
      */
     
     public Object commentDeletedException;
+
     public GetCommentResponse withCommentDeletedException(Object commentDeletedException) {
         this.commentDeletedException = commentDeletedException;
         return this;
@@ -22,6 +24,7 @@ public class GetCommentResponse {
      */
     
     public Object commentDoesNotExistException;
+
     public GetCommentResponse withCommentDoesNotExistException(Object commentDoesNotExistException) {
         this.commentDoesNotExistException = commentDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class GetCommentResponse {
      */
     
     public Object commentIdRequiredException;
+
     public GetCommentResponse withCommentIdRequiredException(Object commentIdRequiredException) {
         this.commentIdRequiredException = commentIdRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class GetCommentResponse {
     
     
     public String contentType;
+
     public GetCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class GetCommentResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetCommentResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -59,6 +65,7 @@ public class GetCommentResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetCommentResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -69,6 +76,7 @@ public class GetCommentResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetCommentResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -79,6 +87,7 @@ public class GetCommentResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetCommentResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class GetCommentResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetCommentResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class GetCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCommentOutput getCommentOutput;
+
     public GetCommentResponse withGetCommentOutput(org.openapis.openapi.models.shared.GetCommentOutput getCommentOutput) {
         this.getCommentOutput = getCommentOutput;
         return this;
@@ -109,6 +120,7 @@ public class GetCommentResponse {
      */
     
     public Object invalidCommentIdException;
+
     public GetCommentResponse withInvalidCommentIdException(Object invalidCommentIdException) {
         this.invalidCommentIdException = invalidCommentIdException;
         return this;
@@ -116,6 +128,7 @@ public class GetCommentResponse {
     
     
     public Integer statusCode;
+
     public GetCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class GetCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

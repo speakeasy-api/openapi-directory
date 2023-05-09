@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.OndemandscanningProjectsLocationsOperationsCancelSecurity;
 import org.openapis.openapi.models.operations.OndemandscanningProjectsLocationsOperationsCancelRequest;
 import org.openapis.openapi.models.operations.OndemandscanningProjectsLocationsOperationsCancelResponse;
+import org.openapis.openapi.models.operations.OndemandscanningProjectsLocationsOperationsCancelSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,32 +28,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            OndemandscanningProjectsLocationsOperationsCancelRequest req = new OndemandscanningProjectsLocationsOperationsCancelRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                name = "corrupti";
+            OndemandscanningProjectsLocationsOperationsCancelRequest req = new OndemandscanningProjectsLocationsOperationsCancelRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
                 oauthToken = "illum";
                 prettyPrint = false;
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            OndemandscanningProjectsLocationsOperationsCancelResponse res = sdk.projects.ondemandscanningProjectsLocationsOperationsCancel(req, new OndemandscanningProjectsLocationsOperationsCancelSecurity() {{
+            OndemandscanningProjectsLocationsOperationsCancelResponse res = sdk.projects.ondemandscanningProjectsLocationsOperationsCancel(req, new OndemandscanningProjectsLocationsOperationsCancelSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,15 +62,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `ondemandscanningProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `ondemandscanningProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `ondemandscanningProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `ondemandscanningProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `ondemandscanningProjectsLocationsOperationsWait` - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
-* `ondemandscanningProjectsLocationsScansAnalyzePackages` - Initiates an analysis of the provided packages.
-* `ondemandscanningProjectsLocationsScansVulnerabilitiesList` - Lists vulnerabilities resulting from a successfully completed scan.
+* [ondemandscanningProjectsLocationsOperationsCancel](docs/projects/README.md#ondemandscanningprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [ondemandscanningProjectsLocationsOperationsDelete](docs/projects/README.md#ondemandscanningprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [ondemandscanningProjectsLocationsOperationsGet](docs/projects/README.md#ondemandscanningprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [ondemandscanningProjectsLocationsOperationsList](docs/projects/README.md#ondemandscanningprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [ondemandscanningProjectsLocationsOperationsWait](docs/projects/README.md#ondemandscanningprojectslocationsoperationswait) - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
+* [ondemandscanningProjectsLocationsScansAnalyzePackages](docs/projects/README.md#ondemandscanningprojectslocationsscansanalyzepackages) - Initiates an analysis of the provided packages.
+* [ondemandscanningProjectsLocationsScansVulnerabilitiesList](docs/projects/README.md#ondemandscanningprojectslocationsscansvulnerabilitieslist) - Lists vulnerabilities resulting from a successfully completed scan.
 <!-- End SDK Available Operations -->
 
 ### Maturity

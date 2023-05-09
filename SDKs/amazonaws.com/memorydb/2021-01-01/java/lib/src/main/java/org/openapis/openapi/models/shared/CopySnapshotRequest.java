@@ -12,6 +12,7 @@ public class CopySnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CopySnapshotRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -19,6 +20,7 @@ public class CopySnapshotRequest {
     
     @JsonProperty("SourceSnapshotName")
     public String sourceSnapshotName;
+
     public CopySnapshotRequest withSourceSnapshotName(String sourceSnapshotName) {
         this.sourceSnapshotName = sourceSnapshotName;
         return this;
@@ -27,6 +29,7 @@ public class CopySnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CopySnapshotRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -35,6 +38,7 @@ public class CopySnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetBucket")
     public String targetBucket;
+
     public CopySnapshotRequest withTargetBucket(String targetBucket) {
         this.targetBucket = targetBucket;
         return this;
@@ -42,9 +46,14 @@ public class CopySnapshotRequest {
     
     @JsonProperty("TargetSnapshotName")
     public String targetSnapshotName;
+
     public CopySnapshotRequest withTargetSnapshotName(String targetSnapshotName) {
         this.targetSnapshotName = targetSnapshotName;
         return this;
     }
     
+    public CopySnapshotRequest(@JsonProperty("SourceSnapshotName") String sourceSnapshotName, @JsonProperty("TargetSnapshotName") String targetSnapshotName) {
+        this.sourceSnapshotName = sourceSnapshotName;
+        this.targetSnapshotName = targetSnapshotName;
+  }
 }

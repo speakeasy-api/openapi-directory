@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyTransitGatewayPrefixListReferenceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyTransitGatewayPrefixListReferenceActionEnum action;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withAction(GETModifyTransitGatewayPrefixListReferenceActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Blackhole")
     public Boolean blackhole;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withBlackhole(Boolean blackhole) {
         this.blackhole = blackhole;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrefixListId")
     public String prefixListId;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
     public String transitGatewayAttachmentId;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayRouteTableId")
     public String transitGatewayRouteTableId;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
@@ -66,6 +73,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyTransitGatewayPrefixListReferenceVersionEnum version;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withVersion(GETModifyTransitGatewayPrefixListReferenceVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,16 @@ public class GETModifyTransitGatewayPrefixListReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyTransitGatewayPrefixListReferenceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyTransitGatewayPrefixListReferenceRequest(@JsonProperty("Action") GETModifyTransitGatewayPrefixListReferenceActionEnum action, @JsonProperty("PrefixListId") String prefixListId, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId, @JsonProperty("Version") GETModifyTransitGatewayPrefixListReferenceVersionEnum version) {
+        this.action = action;
+        this.prefixListId = prefixListId;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+        this.version = version;
+  }
 }

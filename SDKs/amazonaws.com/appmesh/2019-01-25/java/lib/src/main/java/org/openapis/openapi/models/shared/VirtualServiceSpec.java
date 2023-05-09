@@ -15,9 +15,11 @@ public class VirtualServiceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public VirtualServiceProvider provider;
+
     public VirtualServiceSpec withProvider(VirtualServiceProvider provider) {
         this.provider = provider;
         return this;
     }
     
+    public VirtualServiceSpec(){}
 }

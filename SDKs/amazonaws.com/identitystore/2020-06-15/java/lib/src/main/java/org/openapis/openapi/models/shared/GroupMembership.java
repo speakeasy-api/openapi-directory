@@ -15,6 +15,7 @@ public class GroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public GroupMembership withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -22,6 +23,7 @@ public class GroupMembership {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public GroupMembership withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -30,6 +32,7 @@ public class GroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberId")
     public MemberId memberId;
+
     public GroupMembership withMemberId(MemberId memberId) {
         this.memberId = memberId;
         return this;
@@ -38,9 +41,13 @@ public class GroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MembershipId")
     public String membershipId;
+
     public GroupMembership withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
     }
     
+    public GroupMembership(@JsonProperty("IdentityStoreId") String identityStoreId) {
+        this.identityStoreId = identityStoreId;
+  }
 }

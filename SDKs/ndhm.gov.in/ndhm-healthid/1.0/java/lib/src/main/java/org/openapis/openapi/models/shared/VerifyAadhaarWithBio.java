@@ -15,6 +15,7 @@ public class VerifyAadhaarWithBio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aadhaar")
     public String aadhaar;
+
     public VerifyAadhaarWithBio withAadhaar(String aadhaar) {
         this.aadhaar = aadhaar;
         return this;
@@ -23,6 +24,7 @@ public class VerifyAadhaarWithBio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bioType")
     public String bioType;
+
     public VerifyAadhaarWithBio withBioType(String bioType) {
         this.bioType = bioType;
         return this;
@@ -31,6 +33,7 @@ public class VerifyAadhaarWithBio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public VerifyAadhaarWithBio withPid(String pid) {
         this.pid = pid;
         return this;
@@ -39,9 +42,11 @@ public class VerifyAadhaarWithBio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public String restrictions;
+
     public VerifyAadhaarWithBio withRestrictions(String restrictions) {
         this.restrictions = restrictions;
         return this;
     }
     
+    public VerifyAadhaarWithBio(){}
 }

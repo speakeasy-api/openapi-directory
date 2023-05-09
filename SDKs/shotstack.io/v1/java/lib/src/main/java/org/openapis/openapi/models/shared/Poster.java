@@ -15,9 +15,13 @@ public class Poster {
      */
     @JsonProperty("capture")
     public Double capture;
+
     public Poster withCapture(Double capture) {
         this.capture = capture;
         return this;
     }
     
+    public Poster(@JsonProperty("capture") Double capture) {
+        this.capture = capture;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartNotebookInstanceInput {
     @JsonProperty("NotebookInstanceName")
     public String notebookInstanceName;
+
     public StartNotebookInstanceInput withNotebookInstanceName(String notebookInstanceName) {
         this.notebookInstanceName = notebookInstanceName;
         return this;
     }
     
+    public StartNotebookInstanceInput(@JsonProperty("NotebookInstanceName") String notebookInstanceName) {
+        this.notebookInstanceName = notebookInstanceName;
+  }
 }

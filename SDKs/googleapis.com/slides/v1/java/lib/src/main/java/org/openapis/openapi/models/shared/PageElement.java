@@ -18,6 +18,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PageElement withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementGroup")
     public Group elementGroup;
+
     public PageElement withElementGroup(Group elementGroup) {
         this.elementGroup = elementGroup;
         return this;
@@ -40,6 +42,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public PageElement withImage(Image image) {
         this.image = image;
         return this;
@@ -51,6 +54,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Line line;
+
     public PageElement withLine(Line line) {
         this.line = line;
         return this;
@@ -62,6 +66,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public PageElement withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -73,6 +78,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shape")
     public Shape shape;
+
     public PageElement withShape(Shape shape) {
         this.shape = shape;
         return this;
@@ -84,6 +90,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetsChart")
     public SheetsChart sheetsChart;
+
     public PageElement withSheetsChart(SheetsChart sheetsChart) {
         this.sheetsChart = sheetsChart;
         return this;
@@ -95,6 +102,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Size size;
+
     public PageElement withSize(Size size) {
         this.size = size;
         return this;
@@ -106,6 +114,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public Table table;
+
     public PageElement withTable(Table table) {
         this.table = table;
         return this;
@@ -117,6 +126,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PageElement withTitle(String title) {
         this.title = title;
         return this;
@@ -128,6 +138,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transform")
     public AffineTransform transform;
+
     public PageElement withTransform(AffineTransform transform) {
         this.transform = transform;
         return this;
@@ -139,6 +150,7 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public Video video;
+
     public PageElement withVideo(Video video) {
         this.video = video;
         return this;
@@ -150,9 +162,11 @@ public class PageElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordArt")
     public WordArt wordArt;
+
     public PageElement withWordArt(WordArt wordArt) {
         this.wordArt = wordArt;
         return this;
     }
     
+    public PageElement(){}
 }

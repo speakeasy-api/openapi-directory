@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse {
     
     public String contentType;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRe
      */
     
     public org.openapis.openapi.models.shared.ListCertificateIssuanceConfigsResponse listCertificateIssuanceConfigsResponse;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse withListCertificateIssuanceConfigsResponse(org.openapis.openapi.models.shared.ListCertificateIssuanceConfigsResponse listCertificateIssuanceConfigsResponse) {
         this.listCertificateIssuanceConfigsResponse = listCertificateIssuanceConfigsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRe
     
     
     public Integer statusCode;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

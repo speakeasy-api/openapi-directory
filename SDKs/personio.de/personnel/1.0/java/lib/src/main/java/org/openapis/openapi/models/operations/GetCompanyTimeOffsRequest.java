@@ -13,6 +13,7 @@ public class GetCompanyTimeOffsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=employees")
     public Long[] employees;
+
     public GetCompanyTimeOffsRequest withEmployees(Long[] employees) {
         this.employees = employees;
         return this;
@@ -23,6 +24,7 @@ public class GetCompanyTimeOffsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public LocalDate endDate;
+
     public GetCompanyTimeOffsRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +35,7 @@ public class GetCompanyTimeOffsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetCompanyTimeOffsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -43,6 +46,7 @@ public class GetCompanyTimeOffsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetCompanyTimeOffsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -53,6 +57,7 @@ public class GetCompanyTimeOffsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public LocalDate startDate;
+
     public GetCompanyTimeOffsRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -63,6 +68,7 @@ public class GetCompanyTimeOffsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_from")
     public String updatedFrom;
+
     public GetCompanyTimeOffsRequest withUpdatedFrom(String updatedFrom) {
         this.updatedFrom = updatedFrom;
         return this;
@@ -73,9 +79,11 @@ public class GetCompanyTimeOffsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_to")
     public String updatedTo;
+
     public GetCompanyTimeOffsRequest withUpdatedTo(String updatedTo) {
         this.updatedTo = updatedTo;
         return this;
     }
     
+    public GetCompanyTimeOffsRequest(){}
 }

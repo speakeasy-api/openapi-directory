@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest {
@@ -12,6 +13,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1CompileSuggestionRequest googleCloudDialogflowV2beta1CompileSuggestionRequest;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withGoogleCloudDialogflowV2beta1CompileSuggestionRequest(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1CompileSuggestionRequest googleCloudDialogflowV2beta1CompileSuggestionRequest) {
         this.googleCloudDialogflowV2beta1CompileSuggestionRequest = googleCloudDialogflowV2beta1CompileSuggestionRequest;
         return this;
@@ -29,6 +32,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class DialogflowProjectsConversationsParticipantsSuggestionsCompileReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

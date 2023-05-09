@@ -18,6 +18,7 @@ public class GetResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDescription")
     public ResourceDescription resourceDescription;
+
     public GetResourceOutput withResourceDescription(ResourceDescription resourceDescription) {
         this.resourceDescription = resourceDescription;
         return this;
@@ -26,9 +27,11 @@ public class GetResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public GetResourceOutput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public GetResourceOutput(){}
 }

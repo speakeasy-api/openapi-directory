@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConfigResponse {
@@ -12,6 +13,7 @@ public class GetConfigResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public GetConfigResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class GetConfigResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public GetConfigResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class GetConfigResponse {
     
     
     public String contentType;
+
     public GetConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConfigResponse getConfigResponse;
+
     public GetConfigResponse withGetConfigResponse(org.openapis.openapi.models.shared.GetConfigResponse getConfigResponse) {
         this.getConfigResponse = getConfigResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public GetConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class GetConfigResponse {
     
     
     public Integer statusCode;
+
     public GetConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

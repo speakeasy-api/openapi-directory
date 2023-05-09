@@ -18,6 +18,7 @@ public class UpdateMember200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public UpdateMember200ApplicationJSON withHref(String href) {
         this.href = href;
         return this;
@@ -29,9 +30,11 @@ public class UpdateMember200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateMember200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateMember200ApplicationJSON(){}
 }

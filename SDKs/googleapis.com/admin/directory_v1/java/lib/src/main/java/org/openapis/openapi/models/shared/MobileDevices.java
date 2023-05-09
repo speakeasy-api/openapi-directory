@@ -18,6 +18,7 @@ public class MobileDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public MobileDevices withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class MobileDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MobileDevices withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class MobileDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobiledevices")
     public MobileDevice[] mobiledevices;
+
     public MobileDevices withMobiledevices(MobileDevice[] mobiledevices) {
         this.mobiledevices = mobiledevices;
         return this;
@@ -51,9 +54,11 @@ public class MobileDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public MobileDevices withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public MobileDevices(){}
 }

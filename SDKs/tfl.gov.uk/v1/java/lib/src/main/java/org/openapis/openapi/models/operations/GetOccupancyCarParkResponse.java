@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOccupancyCarParkResponse {
     
     public byte[] body;
+
     public GetOccupancyCarParkResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetOccupancyCarParkResponse {
     
     
     public String contentType;
+
     public GetOccupancyCarParkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetOccupancyCarParkResponse {
     
     
     public Integer statusCode;
+
     public GetOccupancyCarParkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetOccupancyCarParkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOccupancyCarParkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetOccupancyCarParkResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesCarParkOccupancy[] tflApiPresentationEntitiesCarParkOccupancies;
+
     public GetOccupancyCarParkResponse withTflApiPresentationEntitiesCarParkOccupancies(org.openapis.openapi.models.shared.TflApiPresentationEntitiesCarParkOccupancy[] tflApiPresentationEntitiesCarParkOccupancies) {
         this.tflApiPresentationEntitiesCarParkOccupancies = tflApiPresentationEntitiesCarParkOccupancies;
         return this;
     }
     
+    public GetOccupancyCarParkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

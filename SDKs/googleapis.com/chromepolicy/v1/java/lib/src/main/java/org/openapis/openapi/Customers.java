@@ -62,11 +62,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1ListGroupPriorityOrderingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -254,11 +246,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1DefineCertificateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +292,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1DefineNetworkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -350,11 +338,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1RemoveCertificateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,11 +384,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1RemoveNetworkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -446,11 +430,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -494,11 +476,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -542,11 +522,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1ResolveResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -588,11 +566,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1PolicySchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -634,11 +610,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListResponse() {{
+        org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListResponse res = new org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListResponse(contentType, httpRes.statusCode()) {{
             googleChromePolicyVersionsV1ListPolicySchemasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

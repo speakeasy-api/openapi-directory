@@ -18,6 +18,7 @@ public class ListSitesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSitesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSitesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sites")
     public Site[] sites;
+
     public ListSitesOutput withSites(Site[] sites) {
         this.sites = sites;
         return this;
     }
     
+    public ListSitesOutput(){}
 }

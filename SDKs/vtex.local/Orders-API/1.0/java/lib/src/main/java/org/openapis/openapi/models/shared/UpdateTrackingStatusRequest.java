@@ -12,6 +12,7 @@ public class UpdateTrackingStatusRequest {
      */
     @JsonProperty("deliveredDate")
     public String deliveredDate;
+
     public UpdateTrackingStatusRequest withDeliveredDate(String deliveredDate) {
         this.deliveredDate = deliveredDate;
         return this;
@@ -19,6 +20,7 @@ public class UpdateTrackingStatusRequest {
     
     @JsonProperty("events")
     public Event[] events;
+
     public UpdateTrackingStatusRequest withEvents(Event[] events) {
         this.events = events;
         return this;
@@ -26,9 +28,15 @@ public class UpdateTrackingStatusRequest {
     
     @JsonProperty("isDelivered")
     public Boolean isDelivered;
+
     public UpdateTrackingStatusRequest withIsDelivered(Boolean isDelivered) {
         this.isDelivered = isDelivered;
         return this;
     }
     
+    public UpdateTrackingStatusRequest(@JsonProperty("deliveredDate") String deliveredDate, @JsonProperty("events") Event[] events, @JsonProperty("isDelivered") Boolean isDelivered) {
+        this.deliveredDate = deliveredDate;
+        this.events = events;
+        this.isDelivered = isDelivered;
+  }
 }

@@ -19,6 +19,7 @@ public class BatchPutGeofenceSuccess {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public BatchPutGeofenceSuccess withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class BatchPutGeofenceSuccess {
     
     @JsonProperty("GeofenceId")
     public String geofenceId;
+
     public BatchPutGeofenceSuccess withGeofenceId(String geofenceId) {
         this.geofenceId = geofenceId;
         return this;
@@ -35,9 +37,15 @@ public class BatchPutGeofenceSuccess {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public BatchPutGeofenceSuccess withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public BatchPutGeofenceSuccess(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("GeofenceId") String geofenceId, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.geofenceId = geofenceId;
+        this.updateTime = updateTime;
+  }
 }

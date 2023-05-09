@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageBucketsSetIamPolicyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Policy policy;
+
     public StorageBucketsSetIamPolicyRequest withPolicy(org.openapis.openapi.models.shared.Policy policy) {
         this.policy = policy;
         return this;
@@ -19,6 +21,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageBucketsSetIamPolicyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
     public String bucket;
+
     public StorageBucketsSetIamPolicyRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -39,6 +43,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageBucketsSetIamPolicyRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageBucketsSetIamPolicyRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageBucketsSetIamPolicyRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageBucketsSetIamPolicyRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageBucketsSetIamPolicyRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -89,6 +98,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageBucketsSetIamPolicyRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -99,6 +109,7 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageBucketsSetIamPolicyRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -109,9 +120,13 @@ public class StorageBucketsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageBucketsSetIamPolicyRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageBucketsSetIamPolicyRequest(@JsonProperty("bucket") String bucket) {
+        this.bucket = bucket;
+  }
 }

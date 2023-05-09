@@ -15,6 +15,7 @@ public class GetConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public GetConversations200ApplicationJSONEmbedded embedded;
+
     public GetConversations200ApplicationJSON withEmbedded(GetConversations200ApplicationJSONEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class GetConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetConversations200ApplicationJSONLinks links;
+
     public GetConversations200ApplicationJSON withLinks(GetConversations200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -34,6 +36,7 @@ public class GetConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public GetConversations200ApplicationJSON withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -45,9 +48,11 @@ public class GetConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public GetConversations200ApplicationJSON withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetConversations200ApplicationJSON(){}
 }

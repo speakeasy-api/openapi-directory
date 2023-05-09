@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRewardEarningResponse {
     
     public String contentType;
+
     public CreateRewardEarningResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRewardEarningResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOrUpdateErrorResponse createOrUpdateErrorResponse;
+
     public CreateRewardEarningResponse withCreateOrUpdateErrorResponse(org.openapis.openapi.models.shared.CreateOrUpdateErrorResponse createOrUpdateErrorResponse) {
         this.createOrUpdateErrorResponse = createOrUpdateErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateRewardEarningResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRewardEarningResponse createRewardEarningResponse;
+
     public CreateRewardEarningResponse withCreateRewardEarningResponse(org.openapis.openapi.models.shared.CreateRewardEarningResponse createRewardEarningResponse) {
         this.createRewardEarningResponse = createRewardEarningResponse;
         return this;
@@ -36,6 +40,7 @@ public class CreateRewardEarningResponse {
     
     
     public Integer statusCode;
+
     public CreateRewardEarningResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateRewardEarningResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRewardEarningResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateRewardEarningResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

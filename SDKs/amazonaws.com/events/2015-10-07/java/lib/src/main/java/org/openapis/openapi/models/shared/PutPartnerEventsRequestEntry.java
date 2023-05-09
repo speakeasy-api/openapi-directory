@@ -20,6 +20,7 @@ public class PutPartnerEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Detail")
     public String detail;
+
     public PutPartnerEventsRequestEntry withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -28,6 +29,7 @@ public class PutPartnerEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailType")
     public String detailType;
+
     public PutPartnerEventsRequestEntry withDetailType(String detailType) {
         this.detailType = detailType;
         return this;
@@ -36,6 +38,7 @@ public class PutPartnerEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public String[] resources;
+
     public PutPartnerEventsRequestEntry withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -44,6 +47,7 @@ public class PutPartnerEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public PutPartnerEventsRequestEntry withSource(String source) {
         this.source = source;
         return this;
@@ -54,9 +58,11 @@ public class PutPartnerEventsRequestEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Time")
     public OffsetDateTime time;
+
     public PutPartnerEventsRequestEntry withTime(OffsetDateTime time) {
         this.time = time;
         return this;
     }
     
+    public PutPartnerEventsRequestEntry(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeThesaurusRequest {
     @JsonProperty("Id")
     public String id;
+
     public DescribeThesaurusRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class DescribeThesaurusRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeThesaurusRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DescribeThesaurusRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

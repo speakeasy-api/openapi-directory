@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1CustomersIdPrivacyResponse {
     
     public String contentType;
+
     public GetSetupV1CustomersIdPrivacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1CustomersIdPrivacyResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomerPrivacyViewModel customerPrivacyViewModel;
+
     public GetSetupV1CustomersIdPrivacyResponse withCustomerPrivacyViewModel(org.openapis.openapi.models.shared.CustomerPrivacyViewModel customerPrivacyViewModel) {
         this.customerPrivacyViewModel = customerPrivacyViewModel;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1CustomersIdPrivacyResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1CustomersIdPrivacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1CustomersIdPrivacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1CustomersIdPrivacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1CustomersIdPrivacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

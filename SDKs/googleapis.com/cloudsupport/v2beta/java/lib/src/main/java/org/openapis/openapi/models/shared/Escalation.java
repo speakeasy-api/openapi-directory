@@ -18,6 +18,7 @@ public class Escalation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("justification")
     public String justification;
+
     public Escalation withJustification(String justification) {
         this.justification = justification;
         return this;
@@ -29,9 +30,11 @@ public class Escalation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public EscalationReasonEnum reason;
+
     public Escalation withReason(EscalationReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public Escalation(){}
 }

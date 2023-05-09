@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateArticleEmbargoDetailsResponse {
@@ -12,6 +13,7 @@ public class PrivateArticleEmbargoDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.ArticleEmbargo articleEmbargo;
+
     public PrivateArticleEmbargoDetailsResponse withArticleEmbargo(org.openapis.openapi.models.shared.ArticleEmbargo articleEmbargo) {
         this.articleEmbargo = articleEmbargo;
         return this;
@@ -19,6 +21,7 @@ public class PrivateArticleEmbargoDetailsResponse {
     
     
     public String contentType;
+
     public PrivateArticleEmbargoDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PrivateArticleEmbargoDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateArticleEmbargoDetailsResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -36,6 +40,7 @@ public class PrivateArticleEmbargoDetailsResponse {
     
     
     public Integer statusCode;
+
     public PrivateArticleEmbargoDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PrivateArticleEmbargoDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateArticleEmbargoDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateArticleEmbargoDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

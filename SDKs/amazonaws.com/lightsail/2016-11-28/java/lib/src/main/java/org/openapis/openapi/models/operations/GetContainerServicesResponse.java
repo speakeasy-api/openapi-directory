@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContainerServicesResponse {
@@ -12,6 +13,7 @@ public class GetContainerServicesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContainerServicesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetContainerServicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ContainerServicesListResult containerServicesListResult;
+
     public GetContainerServicesResponse withContainerServicesListResult(org.openapis.openapi.models.shared.ContainerServicesListResult containerServicesListResult) {
         this.containerServicesListResult = containerServicesListResult;
         return this;
@@ -29,6 +32,7 @@ public class GetContainerServicesResponse {
     
     
     public String contentType;
+
     public GetContainerServicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetContainerServicesResponse {
      */
     
     public Object invalidInputException;
+
     public GetContainerServicesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetContainerServicesResponse {
      */
     
     public Object notFoundException;
+
     public GetContainerServicesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetContainerServicesResponse {
      */
     
     public Object serviceException;
+
     public GetContainerServicesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetContainerServicesResponse {
     
     
     public Integer statusCode;
+
     public GetContainerServicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetContainerServicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContainerServicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetContainerServicesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetContainerServicesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetContainerServicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

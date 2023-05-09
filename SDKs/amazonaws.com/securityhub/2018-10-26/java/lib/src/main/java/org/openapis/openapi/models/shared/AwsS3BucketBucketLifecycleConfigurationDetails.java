@@ -15,9 +15,11 @@ public class AwsS3BucketBucketLifecycleConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails[] rules;
+
     public AwsS3BucketBucketLifecycleConfigurationDetails withRules(AwsS3BucketBucketLifecycleConfigurationRulesDetails[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public AwsS3BucketBucketLifecycleConfigurationDetails(){}
 }

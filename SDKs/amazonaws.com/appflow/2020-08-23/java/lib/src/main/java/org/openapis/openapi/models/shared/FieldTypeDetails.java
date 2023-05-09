@@ -15,6 +15,7 @@ public class FieldTypeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldLengthRange")
     public Range fieldLengthRange;
+
     public FieldTypeDetails withFieldLengthRange(Range fieldLengthRange) {
         this.fieldLengthRange = fieldLengthRange;
         return this;
@@ -22,6 +23,7 @@ public class FieldTypeDetails {
     
     @JsonProperty("fieldType")
     public String fieldType;
+
     public FieldTypeDetails withFieldType(String fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -30,6 +32,7 @@ public class FieldTypeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldValueRange")
     public Range fieldValueRange;
+
     public FieldTypeDetails withFieldValueRange(Range fieldValueRange) {
         this.fieldValueRange = fieldValueRange;
         return this;
@@ -37,6 +40,7 @@ public class FieldTypeDetails {
     
     @JsonProperty("filterOperators")
     public OperatorEnum[] filterOperators;
+
     public FieldTypeDetails withFilterOperators(OperatorEnum[] filterOperators) {
         this.filterOperators = filterOperators;
         return this;
@@ -45,6 +49,7 @@ public class FieldTypeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedDateFormat")
     public String supportedDateFormat;
+
     public FieldTypeDetails withSupportedDateFormat(String supportedDateFormat) {
         this.supportedDateFormat = supportedDateFormat;
         return this;
@@ -53,6 +58,7 @@ public class FieldTypeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedValues")
     public String[] supportedValues;
+
     public FieldTypeDetails withSupportedValues(String[] supportedValues) {
         this.supportedValues = supportedValues;
         return this;
@@ -61,9 +67,14 @@ public class FieldTypeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueRegexPattern")
     public String valueRegexPattern;
+
     public FieldTypeDetails withValueRegexPattern(String valueRegexPattern) {
         this.valueRegexPattern = valueRegexPattern;
         return this;
     }
     
+    public FieldTypeDetails(@JsonProperty("fieldType") String fieldType, @JsonProperty("filterOperators") OperatorEnum[] filterOperators) {
+        this.fieldType = fieldType;
+        this.filterOperators = filterOperators;
+  }
 }

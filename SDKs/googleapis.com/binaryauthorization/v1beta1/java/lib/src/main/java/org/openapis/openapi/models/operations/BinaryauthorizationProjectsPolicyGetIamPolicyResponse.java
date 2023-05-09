@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BinaryauthorizationProjectsPolicyGetIamPolicyResponse {
     
     public String contentType;
+
     public BinaryauthorizationProjectsPolicyGetIamPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BinaryauthorizationProjectsPolicyGetIamPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.IamPolicy iamPolicy;
+
     public BinaryauthorizationProjectsPolicyGetIamPolicyResponse withIamPolicy(org.openapis.openapi.models.shared.IamPolicy iamPolicy) {
         this.iamPolicy = iamPolicy;
         return this;
@@ -26,6 +29,7 @@ public class BinaryauthorizationProjectsPolicyGetIamPolicyResponse {
     
     
     public Integer statusCode;
+
     public BinaryauthorizationProjectsPolicyGetIamPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BinaryauthorizationProjectsPolicyGetIamPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BinaryauthorizationProjectsPolicyGetIamPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BinaryauthorizationProjectsPolicyGetIamPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

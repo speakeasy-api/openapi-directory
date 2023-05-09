@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateInstanceMetadataOptionsResponse {
@@ -12,6 +13,7 @@ public class UpdateInstanceMetadataOptionsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateInstanceMetadataOptionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateInstanceMetadataOptionsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public UpdateInstanceMetadataOptionsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateInstanceMetadataOptionsResponse {
     
     
     public String contentType;
+
     public UpdateInstanceMetadataOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateInstanceMetadataOptionsResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateInstanceMetadataOptionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateInstanceMetadataOptionsResponse {
      */
     
     public Object notFoundException;
+
     public UpdateInstanceMetadataOptionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateInstanceMetadataOptionsResponse {
      */
     
     public Object operationFailureException;
+
     public UpdateInstanceMetadataOptionsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateInstanceMetadataOptionsResponse {
     
     
     public Integer statusCode;
+
     public UpdateInstanceMetadataOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateInstanceMetadataOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateInstanceMetadataOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateInstanceMetadataOptionsResponse {
      */
     
     public Object serviceException;
+
     public UpdateInstanceMetadataOptionsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateInstanceMetadataOptionsResponse {
      */
     
     public Object unauthenticatedException;
+
     public UpdateInstanceMetadataOptionsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateInstanceMetadataOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateInstanceMetadataOptionsResult updateInstanceMetadataOptionsResult;
+
     public UpdateInstanceMetadataOptionsResponse withUpdateInstanceMetadataOptionsResult(org.openapis.openapi.models.shared.UpdateInstanceMetadataOptionsResult updateInstanceMetadataOptionsResult) {
         this.updateInstanceMetadataOptionsResult = updateInstanceMetadataOptionsResult;
         return this;
     }
     
+    public UpdateInstanceMetadataOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

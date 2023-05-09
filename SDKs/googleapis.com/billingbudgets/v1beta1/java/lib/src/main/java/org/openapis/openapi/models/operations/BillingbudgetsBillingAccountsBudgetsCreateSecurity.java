@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BillingbudgetsBillingAccountsBudgetsCreateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1 option1;
+
     public BillingbudgetsBillingAccountsBudgetsCreateSecurity withOption1(BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class BillingbudgetsBillingAccountsBudgetsCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BillingbudgetsBillingAccountsBudgetsCreateSecurityOption2 option2;
+
     public BillingbudgetsBillingAccountsBudgetsCreateSecurity withOption2(BillingbudgetsBillingAccountsBudgetsCreateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public BillingbudgetsBillingAccountsBudgetsCreateSecurity(){}
 }

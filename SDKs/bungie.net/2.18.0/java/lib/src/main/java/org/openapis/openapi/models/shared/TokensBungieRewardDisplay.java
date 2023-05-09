@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TokensBungieRewardDisplay {
     
     public TokensRewardDisplayProperties objectiveDisplayProperties;
+
     public TokensBungieRewardDisplay withObjectiveDisplayProperties(TokensRewardDisplayProperties objectiveDisplayProperties) {
         this.objectiveDisplayProperties = objectiveDisplayProperties;
         return this;
@@ -16,6 +17,7 @@ public class TokensBungieRewardDisplay {
     
     
     public TokensRewardDisplayProperties rewardDisplayProperties;
+
     public TokensBungieRewardDisplay withRewardDisplayProperties(TokensRewardDisplayProperties rewardDisplayProperties) {
         this.rewardDisplayProperties = rewardDisplayProperties;
         return this;
@@ -23,9 +25,11 @@ public class TokensBungieRewardDisplay {
     
     
     public TokensUserRewardAvailabilityModel userRewardAvailabilityModel;
+
     public TokensBungieRewardDisplay withUserRewardAvailabilityModel(TokensUserRewardAvailabilityModel userRewardAvailabilityModel) {
         this.userRewardAvailabilityModel = userRewardAvailabilityModel;
         return this;
     }
     
+    public TokensBungieRewardDisplay(){}
 }

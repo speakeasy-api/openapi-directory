@@ -18,6 +18,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupAdId")
     public String adGroupAdId;
+
     public YoutubeAdGroupAd withAdGroupAdId(String adGroupAdId) {
         this.adGroupAdId = adGroupAdId;
         return this;
@@ -29,6 +30,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupId")
     public String adGroupId;
+
     public YoutubeAdGroupAd withAdGroupId(String adGroupId) {
         this.adGroupId = adGroupId;
         return this;
@@ -40,6 +42,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adUrls")
     public AdUrl[] adUrls;
+
     public YoutubeAdGroupAd withAdUrls(AdUrl[] adUrls) {
         this.adUrls = adUrls;
         return this;
@@ -51,6 +54,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public YoutubeAdGroupAd withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -62,6 +66,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioAd")
     public AudioAd audioAd;
+
     public YoutubeAdGroupAd withAudioAd(AudioAd audioAd) {
         this.audioAd = audioAd;
         return this;
@@ -73,6 +78,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bumperAd")
     public BumperAd bumperAd;
+
     public YoutubeAdGroupAd withBumperAd(BumperAd bumperAd) {
         this.bumperAd = bumperAd;
         return this;
@@ -84,6 +90,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public YoutubeAdGroupAd withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -95,6 +102,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayVideoSourceAd")
     public DisplayVideoSourceAd displayVideoSourceAd;
+
     public YoutubeAdGroupAd withDisplayVideoSourceAd(DisplayVideoSourceAd displayVideoSourceAd) {
         this.displayVideoSourceAd = displayVideoSourceAd;
         return this;
@@ -106,6 +114,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public YoutubeAdGroupAdEntityStatusEnum entityStatus;
+
     public YoutubeAdGroupAd withEntityStatus(YoutubeAdGroupAdEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
@@ -117,6 +126,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inStreamAd")
     public InStreamAd inStreamAd;
+
     public YoutubeAdGroupAd withInStreamAd(InStreamAd inStreamAd) {
         this.inStreamAd = inStreamAd;
         return this;
@@ -128,6 +138,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mastheadAd")
     public MastheadAd mastheadAd;
+
     public YoutubeAdGroupAd withMastheadAd(MastheadAd mastheadAd) {
         this.mastheadAd = mastheadAd;
         return this;
@@ -139,6 +150,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public YoutubeAdGroupAd withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonSkippableAd")
     public NonSkippableAd nonSkippableAd;
+
     public YoutubeAdGroupAd withNonSkippableAd(NonSkippableAd nonSkippableAd) {
         this.nonSkippableAd = nonSkippableAd;
         return this;
@@ -161,6 +174,7 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoDiscoverAd")
     public VideoDiscoveryAd videoDiscoverAd;
+
     public YoutubeAdGroupAd withVideoDiscoverAd(VideoDiscoveryAd videoDiscoverAd) {
         this.videoDiscoverAd = videoDiscoverAd;
         return this;
@@ -172,9 +186,11 @@ public class YoutubeAdGroupAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoPerformanceAd")
     public VideoPerformanceAd videoPerformanceAd;
+
     public YoutubeAdGroupAd withVideoPerformanceAd(VideoPerformanceAd videoPerformanceAd) {
         this.videoPerformanceAd = videoPerformanceAd;
         return this;
     }
     
+    public YoutubeAdGroupAd(){}
 }

@@ -12,6 +12,7 @@ public class SimpleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public SimpleModel withId(Long id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class SimpleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SimpleModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SimpleModel(){}
 }

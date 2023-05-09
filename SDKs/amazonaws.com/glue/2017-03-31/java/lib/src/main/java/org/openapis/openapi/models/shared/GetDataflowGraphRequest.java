@@ -12,9 +12,11 @@ public class GetDataflowGraphRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PythonScript")
     public String pythonScript;
+
     public GetDataflowGraphRequest withPythonScript(String pythonScript) {
         this.pythonScript = pythonScript;
         return this;
     }
     
+    public GetDataflowGraphRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcEndpointServiceConfigurationResult {
     
     public String clientToken;
+
     public CreateVpcEndpointServiceConfigurationResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpcEndpointServiceConfigurationResult {
     
     
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration serviceConfiguration;
+
     public CreateVpcEndpointServiceConfigurationResult withServiceConfiguration(CreateVpcEndpointServiceConfigurationResultServiceConfiguration serviceConfiguration) {
         this.serviceConfiguration = serviceConfiguration;
         return this;
     }
     
+    public CreateVpcEndpointServiceConfigurationResult(){}
 }

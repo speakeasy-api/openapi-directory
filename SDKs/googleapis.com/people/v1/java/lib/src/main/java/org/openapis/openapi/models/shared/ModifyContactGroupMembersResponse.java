@@ -18,6 +18,7 @@ public class ModifyContactGroupMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canNotRemoveLastContactGroupResourceNames")
     public String[] canNotRemoveLastContactGroupResourceNames;
+
     public ModifyContactGroupMembersResponse withCanNotRemoveLastContactGroupResourceNames(String[] canNotRemoveLastContactGroupResourceNames) {
         this.canNotRemoveLastContactGroupResourceNames = canNotRemoveLastContactGroupResourceNames;
         return this;
@@ -29,9 +30,11 @@ public class ModifyContactGroupMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notFoundResourceNames")
     public String[] notFoundResourceNames;
+
     public ModifyContactGroupMembersResponse withNotFoundResourceNames(String[] notFoundResourceNames) {
         this.notFoundResourceNames = notFoundResourceNames;
         return this;
     }
     
+    public ModifyContactGroupMembersResponse(){}
 }

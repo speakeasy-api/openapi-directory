@@ -15,9 +15,11 @@ public class OrgSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restricted_images")
     public RestrictedImages restrictedImages;
+
     public OrgSettings withRestrictedImages(RestrictedImages restrictedImages) {
         this.restrictedImages = restrictedImages;
         return this;
     }
     
+    public OrgSettings(){}
 }

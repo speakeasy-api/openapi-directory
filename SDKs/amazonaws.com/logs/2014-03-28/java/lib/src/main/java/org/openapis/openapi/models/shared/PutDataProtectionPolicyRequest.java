@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutDataProtectionPolicyRequest {
     @JsonProperty("logGroupIdentifier")
     public String logGroupIdentifier;
+
     public PutDataProtectionPolicyRequest withLogGroupIdentifier(String logGroupIdentifier) {
         this.logGroupIdentifier = logGroupIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class PutDataProtectionPolicyRequest {
     
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public PutDataProtectionPolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
     }
     
+    public PutDataProtectionPolicyRequest(@JsonProperty("logGroupIdentifier") String logGroupIdentifier, @JsonProperty("policyDocument") String policyDocument) {
+        this.logGroupIdentifier = logGroupIdentifier;
+        this.policyDocument = policyDocument;
+  }
 }

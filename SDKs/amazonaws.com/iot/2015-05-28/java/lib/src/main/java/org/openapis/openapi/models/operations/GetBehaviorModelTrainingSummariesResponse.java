@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBehaviorModelTrainingSummariesResponse {
     
     public String contentType;
+
     public GetBehaviorModelTrainingSummariesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBehaviorModelTrainingSummariesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBehaviorModelTrainingSummariesResponse getBehaviorModelTrainingSummariesResponse;
+
     public GetBehaviorModelTrainingSummariesResponse withGetBehaviorModelTrainingSummariesResponse(org.openapis.openapi.models.shared.GetBehaviorModelTrainingSummariesResponse getBehaviorModelTrainingSummariesResponse) {
         this.getBehaviorModelTrainingSummariesResponse = getBehaviorModelTrainingSummariesResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetBehaviorModelTrainingSummariesResponse {
      */
     
     public Object internalFailureException;
+
     public GetBehaviorModelTrainingSummariesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetBehaviorModelTrainingSummariesResponse {
      */
     
     public Object invalidRequestException;
+
     public GetBehaviorModelTrainingSummariesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetBehaviorModelTrainingSummariesResponse {
     
     
     public Integer statusCode;
+
     public GetBehaviorModelTrainingSummariesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetBehaviorModelTrainingSummariesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBehaviorModelTrainingSummariesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetBehaviorModelTrainingSummariesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetBehaviorModelTrainingSummariesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetBehaviorModelTrainingSummariesResponse {
      */
     
     public Object throttlingException;
+
     public GetBehaviorModelTrainingSummariesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetBehaviorModelTrainingSummariesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

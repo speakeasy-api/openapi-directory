@@ -18,6 +18,7 @@ public class IpMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public IpMapping withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -29,6 +30,7 @@ public class IpMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeToRetire")
     public String timeToRetire;
+
     public IpMapping withTimeToRetire(String timeToRetire) {
         this.timeToRetire = timeToRetire;
         return this;
@@ -40,9 +42,11 @@ public class IpMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public IpMappingTypeEnum type;
+
     public IpMapping withType(IpMappingTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public IpMapping(){}
 }

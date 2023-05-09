@@ -39,4 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCr
 lib/src/main/java/org/openapis/openapi/models/shared/MaintenanceIssueModelIssuePriorityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MaintenanceIssueModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/MaintenanceDocumentModel.java
+docs/sdk/README.md
+docs/maintenancecontroller/README.md
 USAGE.md

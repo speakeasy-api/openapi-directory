@@ -62,11 +62,9 @@ public class SavedQueries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetSavedQueriesCreateResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudassetSavedQueriesCreateResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesCreateResponse(contentType, httpRes.statusCode()) {{
             savedQuery = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class SavedQueries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetSavedQueriesDeleteResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudassetSavedQueriesDeleteResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class SavedQueries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetSavedQueriesGetResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesGetResponse() {{
+        org.openapis.openapi.models.operations.CloudassetSavedQueriesGetResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesGetResponse(contentType, httpRes.statusCode()) {{
             savedQuery = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class SavedQueries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetSavedQueriesListResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesListResponse() {{
+        org.openapis.openapi.models.operations.CloudassetSavedQueriesListResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesListResponse(contentType, httpRes.statusCode()) {{
             listSavedQueriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class SavedQueries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetSavedQueriesPatchResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudassetSavedQueriesPatchResponse res = new org.openapis.openapi.models.operations.CloudassetSavedQueriesPatchResponse(contentType, httpRes.statusCode()) {{
             savedQuery = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

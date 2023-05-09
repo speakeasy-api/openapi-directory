@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPointDisruptionResponse {
     
     public byte[] body;
+
     public StopPointDisruptionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class StopPointDisruptionResponse {
     
     
     public String contentType;
+
     public StopPointDisruptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class StopPointDisruptionResponse {
     
     
     public Integer statusCode;
+
     public StopPointDisruptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class StopPointDisruptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPointDisruptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class StopPointDisruptionResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesDisruptedPoint[] tflApiPresentationEntitiesDisruptedPoints;
+
     public StopPointDisruptionResponse withTflApiPresentationEntitiesDisruptedPoints(org.openapis.openapi.models.shared.TflApiPresentationEntitiesDisruptedPoint[] tflApiPresentationEntitiesDisruptedPoints) {
         this.tflApiPresentationEntitiesDisruptedPoints = tflApiPresentationEntitiesDisruptedPoints;
         return this;
     }
     
+    public StopPointDisruptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

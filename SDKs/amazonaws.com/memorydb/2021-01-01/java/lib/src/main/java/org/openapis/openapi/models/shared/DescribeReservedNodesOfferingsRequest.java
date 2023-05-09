@@ -12,6 +12,7 @@ public class DescribeReservedNodesOfferingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public String duration;
+
     public DescribeReservedNodesOfferingsRequest withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -20,6 +21,7 @@ public class DescribeReservedNodesOfferingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeReservedNodesOfferingsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeReservedNodesOfferingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeReservedNodesOfferingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeReservedNodesOfferingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeType")
     public String nodeType;
+
     public DescribeReservedNodesOfferingsRequest withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -44,6 +48,7 @@ public class DescribeReservedNodesOfferingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfferingType")
     public String offeringType;
+
     public DescribeReservedNodesOfferingsRequest withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -52,9 +57,11 @@ public class DescribeReservedNodesOfferingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedNodesOfferingId")
     public String reservedNodesOfferingId;
+
     public DescribeReservedNodesOfferingsRequest withReservedNodesOfferingId(String reservedNodesOfferingId) {
         this.reservedNodesOfferingId = reservedNodesOfferingId;
         return this;
     }
     
+    public DescribeReservedNodesOfferingsRequest(){}
 }

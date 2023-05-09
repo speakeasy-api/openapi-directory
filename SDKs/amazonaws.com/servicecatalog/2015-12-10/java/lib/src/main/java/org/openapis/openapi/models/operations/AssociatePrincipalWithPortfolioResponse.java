@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociatePrincipalWithPortfolioResponse {
@@ -12,6 +13,7 @@ public class AssociatePrincipalWithPortfolioResponse {
      */
     
     public java.util.Map<String, Object> associatePrincipalWithPortfolioOutput;
+
     public AssociatePrincipalWithPortfolioResponse withAssociatePrincipalWithPortfolioOutput(java.util.Map<String, Object> associatePrincipalWithPortfolioOutput) {
         this.associatePrincipalWithPortfolioOutput = associatePrincipalWithPortfolioOutput;
         return this;
@@ -19,6 +21,7 @@ public class AssociatePrincipalWithPortfolioResponse {
     
     
     public String contentType;
+
     public AssociatePrincipalWithPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociatePrincipalWithPortfolioResponse {
      */
     
     public Object invalidParametersException;
+
     public AssociatePrincipalWithPortfolioResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class AssociatePrincipalWithPortfolioResponse {
      */
     
     public Object limitExceededException;
+
     public AssociatePrincipalWithPortfolioResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class AssociatePrincipalWithPortfolioResponse {
     
     
     public Integer statusCode;
+
     public AssociatePrincipalWithPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AssociatePrincipalWithPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociatePrincipalWithPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class AssociatePrincipalWithPortfolioResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociatePrincipalWithPortfolioResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociatePrincipalWithPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

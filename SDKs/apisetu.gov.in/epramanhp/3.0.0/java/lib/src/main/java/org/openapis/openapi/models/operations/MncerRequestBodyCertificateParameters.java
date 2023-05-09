@@ -12,6 +12,7 @@ public class MncerRequestBodyCertificateParameters {
      */
     @JsonProperty("Name")
     public String name;
+
     public MncerRequestBodyCertificateParameters withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class MncerRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public MncerRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
     }
     
+    public MncerRequestBodyCertificateParameters(@JsonProperty("Name") String name, @JsonProperty("RefNo") String refNo) {
+        this.name = name;
+        this.refNo = refNo;
+  }
 }

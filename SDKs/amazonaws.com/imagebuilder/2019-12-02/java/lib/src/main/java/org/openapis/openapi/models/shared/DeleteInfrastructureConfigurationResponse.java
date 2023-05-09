@@ -15,6 +15,7 @@ public class DeleteInfrastructureConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureConfigurationArn")
     public String infrastructureConfigurationArn;
+
     public DeleteInfrastructureConfigurationResponse withInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
         this.infrastructureConfigurationArn = infrastructureConfigurationArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteInfrastructureConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DeleteInfrastructureConfigurationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public DeleteInfrastructureConfigurationResponse(){}
 }

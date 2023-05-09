@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProdTtSasportalInstallerGenerateSecretResponse {
     
     public String contentType;
+
     public ProdTtSasportalInstallerGenerateSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProdTtSasportalInstallerGenerateSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.SasPortalGenerateSecretResponse sasPortalGenerateSecretResponse;
+
     public ProdTtSasportalInstallerGenerateSecretResponse withSasPortalGenerateSecretResponse(org.openapis.openapi.models.shared.SasPortalGenerateSecretResponse sasPortalGenerateSecretResponse) {
         this.sasPortalGenerateSecretResponse = sasPortalGenerateSecretResponse;
         return this;
@@ -26,6 +29,7 @@ public class ProdTtSasportalInstallerGenerateSecretResponse {
     
     
     public Integer statusCode;
+
     public ProdTtSasportalInstallerGenerateSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProdTtSasportalInstallerGenerateSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProdTtSasportalInstallerGenerateSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProdTtSasportalInstallerGenerateSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

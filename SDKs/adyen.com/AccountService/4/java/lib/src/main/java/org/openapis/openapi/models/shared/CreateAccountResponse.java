@@ -18,6 +18,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public CreateAccountResponse withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -29,6 +30,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public CreateAccountResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -40,6 +42,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAccountResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSchedule")
     public PayoutScheduleResponse payoutSchedule;
+
     public CreateAccountResponse withPayoutSchedule(PayoutScheduleResponse payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
@@ -59,6 +63,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public CreateAccountResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -70,6 +75,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public CreateAccountResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -82,6 +88,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateAccountResponseStatusEnum status;
+
     public CreateAccountResponse withStatus(CreateAccountResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -95,9 +102,11 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public CreateAccountResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public CreateAccountResponse(){}
 }

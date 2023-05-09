@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TrendingTrendingDetail {
     
     public TrendingTrendingEntryCommunityCreation creation;
+
     public TrendingTrendingDetail withCreation(TrendingTrendingEntryCommunityCreation creation) {
         this.creation = creation;
         return this;
@@ -16,6 +17,7 @@ public class TrendingTrendingDetail {
     
     
     public TrendingTrendingEntryDestinyActivity destinyActivity;
+
     public TrendingTrendingDetail withDestinyActivity(TrendingTrendingEntryDestinyActivity destinyActivity) {
         this.destinyActivity = destinyActivity;
         return this;
@@ -23,6 +25,7 @@ public class TrendingTrendingDetail {
     
     
     public TrendingTrendingEntryDestinyItem destinyItem;
+
     public TrendingTrendingDetail withDestinyItem(TrendingTrendingEntryDestinyItem destinyItem) {
         this.destinyItem = destinyItem;
         return this;
@@ -30,6 +33,7 @@ public class TrendingTrendingDetail {
     
     
     public TrendingTrendingEntryDestinyRitual destinyRitual;
+
     public TrendingTrendingDetail withDestinyRitual(TrendingTrendingEntryDestinyRitual destinyRitual) {
         this.destinyRitual = destinyRitual;
         return this;
@@ -37,6 +41,7 @@ public class TrendingTrendingDetail {
     
     
     public Integer entityType;
+
     public TrendingTrendingDetail withEntityType(Integer entityType) {
         this.entityType = entityType;
         return this;
@@ -44,6 +49,7 @@ public class TrendingTrendingDetail {
     
     
     public String identifier;
+
     public TrendingTrendingDetail withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -51,6 +57,7 @@ public class TrendingTrendingDetail {
     
     
     public TrendingTrendingEntryNews news;
+
     public TrendingTrendingDetail withNews(TrendingTrendingEntryNews news) {
         this.news = news;
         return this;
@@ -58,9 +65,11 @@ public class TrendingTrendingDetail {
     
     
     public TrendingTrendingEntrySupportArticle support;
+
     public TrendingTrendingDetail withSupport(TrendingTrendingEntrySupportArticle support) {
         this.support = support;
         return this;
     }
     
+    public TrendingTrendingDetail(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFirewallsIdRequest {
@@ -12,9 +13,13 @@ public class GetFirewallsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetFirewallsIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetFirewallsIdRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

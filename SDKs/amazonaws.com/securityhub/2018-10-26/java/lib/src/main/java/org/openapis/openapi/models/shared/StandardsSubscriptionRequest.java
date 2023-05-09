@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StandardsSubscriptionRequest {
     @JsonProperty("StandardsArn")
     public String standardsArn;
+
     public StandardsSubscriptionRequest withStandardsArn(String standardsArn) {
         this.standardsArn = standardsArn;
         return this;
@@ -22,9 +23,13 @@ public class StandardsSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsInput")
     public java.util.Map<String, String> standardsInput;
+
     public StandardsSubscriptionRequest withStandardsInput(java.util.Map<String, String> standardsInput) {
         this.standardsInput = standardsInput;
         return this;
     }
     
+    public StandardsSubscriptionRequest(@JsonProperty("StandardsArn") String standardsArn) {
+        this.standardsArn = standardsArn;
+  }
 }

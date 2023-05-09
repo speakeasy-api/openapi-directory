@@ -15,6 +15,7 @@ public class AttributeValueList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValues")
     public Long[] integerValues;
+
     public AttributeValueList withIntegerValues(Long[] integerValues) {
         this.integerValues = integerValues;
         return this;
@@ -23,9 +24,11 @@ public class AttributeValueList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValues")
     public String[] stringValues;
+
     public AttributeValueList withStringValues(String[] stringValues) {
         this.stringValues = stringValues;
         return this;
     }
     
+    public AttributeValueList(){}
 }

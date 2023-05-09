@@ -15,6 +15,7 @@ public class EksAttemptContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Long exitCode;
+
     public EksAttemptContainerDetail withExitCode(Long exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -23,9 +24,11 @@ public class EksAttemptContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public EksAttemptContainerDetail withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public EksAttemptContainerDetail(){}
 }

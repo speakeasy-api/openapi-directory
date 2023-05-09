@@ -15,9 +15,11 @@ public class FileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_id")
     public String fileId;
+
     public FileResponse withFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
     
+    public FileResponse(){}
 }

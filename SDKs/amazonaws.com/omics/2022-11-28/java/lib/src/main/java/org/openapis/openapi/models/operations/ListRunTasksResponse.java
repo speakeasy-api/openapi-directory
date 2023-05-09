@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRunTasksResponse {
@@ -12,6 +13,7 @@ public class ListRunTasksResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRunTasksResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListRunTasksResponse {
      */
     
     public Object conflictException;
+
     public ListRunTasksResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListRunTasksResponse {
     
     
     public String contentType;
+
     public ListRunTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListRunTasksResponse {
      */
     
     public Object internalServerException;
+
     public ListRunTasksResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListRunTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRunTasksResponse listRunTasksResponse;
+
     public ListRunTasksResponse withListRunTasksResponse(org.openapis.openapi.models.shared.ListRunTasksResponse listRunTasksResponse) {
         this.listRunTasksResponse = listRunTasksResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListRunTasksResponse {
      */
     
     public Object requestTimeoutException;
+
     public ListRunTasksResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class ListRunTasksResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRunTasksResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ListRunTasksResponse {
     
     
     public Integer statusCode;
+
     public ListRunTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListRunTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRunTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListRunTasksResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListRunTasksResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -103,6 +114,7 @@ public class ListRunTasksResponse {
      */
     
     public Object throttlingException;
+
     public ListRunTasksResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class ListRunTasksResponse {
      */
     
     public Object validationException;
+
     public ListRunTasksResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRunTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

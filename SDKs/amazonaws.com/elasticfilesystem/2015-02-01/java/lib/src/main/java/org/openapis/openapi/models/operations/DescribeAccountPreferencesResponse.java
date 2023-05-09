@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAccountPreferencesResponse {
     
     public String contentType;
+
     public DescribeAccountPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAccountPreferencesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAccountPreferencesResponse describeAccountPreferencesResponse;
+
     public DescribeAccountPreferencesResponse withDescribeAccountPreferencesResponse(org.openapis.openapi.models.shared.DescribeAccountPreferencesResponse describeAccountPreferencesResponse) {
         this.describeAccountPreferencesResponse = describeAccountPreferencesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAccountPreferencesResponse {
      */
     
     public Object internalServerError;
+
     public DescribeAccountPreferencesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class DescribeAccountPreferencesResponse {
     
     
     public Integer statusCode;
+
     public DescribeAccountPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeAccountPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAccountPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAccountPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

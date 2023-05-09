@@ -17,6 +17,7 @@ public class PatientCareContextLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgement")
     public PatientCareContextLinkResponseAcknowledgement acknowledgement;
+
     public PatientCareContextLinkResponse withAcknowledgement(PatientCareContextLinkResponseAcknowledgement acknowledgement) {
         this.acknowledgement = acknowledgement;
         return this;
@@ -25,6 +26,7 @@ public class PatientCareContextLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public PatientCareContextLinkResponse withError(Error error) {
         this.error = error;
         return this;
@@ -35,6 +37,7 @@ public class PatientCareContextLinkResponse {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientCareContextLinkResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class PatientCareContextLinkResponse {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public PatientCareContextLinkResponse withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,9 +58,15 @@ public class PatientCareContextLinkResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientCareContextLinkResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PatientCareContextLinkResponse(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

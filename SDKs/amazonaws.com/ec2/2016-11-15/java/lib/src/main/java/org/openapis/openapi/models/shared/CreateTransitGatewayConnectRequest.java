@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTransitGatewayConnectRequest {
     
     public Boolean dryRun;
+
     public CreateTransitGatewayConnectRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayConnectRequest {
     
     
     public CreateTransitGatewayConnectRequestOptions options;
+
     public CreateTransitGatewayConnectRequest withOptions(CreateTransitGatewayConnectRequestOptions options) {
         this.options = options;
         return this;
@@ -23,6 +25,7 @@ public class CreateTransitGatewayConnectRequest {
     
     
     public CreateTransitGatewayConnectRequestTagSpecifications[] tagSpecifications;
+
     public CreateTransitGatewayConnectRequest withTagSpecifications(CreateTransitGatewayConnectRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -30,9 +33,14 @@ public class CreateTransitGatewayConnectRequest {
     
     
     public String transportTransitGatewayAttachmentId;
+
     public CreateTransitGatewayConnectRequest withTransportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
         this.transportTransitGatewayAttachmentId = transportTransitGatewayAttachmentId;
         return this;
     }
     
+    public CreateTransitGatewayConnectRequest(@JsonProperty("Options") CreateTransitGatewayConnectRequestOptions options, @JsonProperty("TransportTransitGatewayAttachmentId") String transportTransitGatewayAttachmentId) {
+        this.options = options;
+        this.transportTransitGatewayAttachmentId = transportTransitGatewayAttachmentId;
+  }
 }

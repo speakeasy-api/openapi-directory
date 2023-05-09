@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNamespacesRepositoriesImagesSummaryResponse {
     
     public String contentType;
+
     public GetNamespacesRepositoriesImagesSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNamespacesRepositoriesImagesSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetNamespacesRepositoriesImagesSummaryResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetNamespacesRepositoriesImagesSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetNamespaceRepositoryImagesSummaryResponse getNamespaceRepositoryImagesSummaryResponse;
+
     public GetNamespacesRepositoriesImagesSummaryResponse withGetNamespaceRepositoryImagesSummaryResponse(org.openapis.openapi.models.shared.GetNamespaceRepositoryImagesSummaryResponse getNamespaceRepositoryImagesSummaryResponse) {
         this.getNamespaceRepositoryImagesSummaryResponse = getNamespaceRepositoryImagesSummaryResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetNamespacesRepositoriesImagesSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetNamespacesRepositoriesImagesSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetNamespacesRepositoriesImagesSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNamespacesRepositoriesImagesSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNamespacesRepositoriesImagesSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

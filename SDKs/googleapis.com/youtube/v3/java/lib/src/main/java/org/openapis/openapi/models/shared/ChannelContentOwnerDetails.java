@@ -23,6 +23,7 @@ public class ChannelContentOwnerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentOwner")
     public String contentOwner;
+
     public ChannelContentOwnerDetails withContentOwner(String contentOwner) {
         this.contentOwner = contentOwner;
         return this;
@@ -36,9 +37,11 @@ public class ChannelContentOwnerDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeLinked")
     public OffsetDateTime timeLinked;
+
     public ChannelContentOwnerDetails withTimeLinked(OffsetDateTime timeLinked) {
         this.timeLinked = timeLinked;
         return this;
     }
     
+    public ChannelContentOwnerDetails(){}
 }

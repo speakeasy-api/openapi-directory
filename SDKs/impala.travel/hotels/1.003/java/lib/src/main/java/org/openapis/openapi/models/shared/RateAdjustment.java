@@ -15,6 +15,7 @@ public class RateAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustmentId")
     public String adjustmentId;
+
     public RateAdjustment withAdjustmentId(String adjustmentId) {
         this.adjustmentId = adjustmentId;
         return this;
@@ -25,6 +26,7 @@ public class RateAdjustment {
      */
     @JsonProperty("amount")
     public Double amount;
+
     public RateAdjustment withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -35,6 +37,7 @@ public class RateAdjustment {
      */
     @JsonProperty("conditions")
     public AdjustmentConditions[] conditions;
+
     public RateAdjustment withConditions(AdjustmentConditions[] conditions) {
         this.conditions = conditions;
         return this;
@@ -45,9 +48,15 @@ public class RateAdjustment {
      */
     @JsonProperty("type")
     public RateAdjustmentTypeEnum type;
+
     public RateAdjustment withType(RateAdjustmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RateAdjustment(@JsonProperty("amount") Double amount, @JsonProperty("conditions") AdjustmentConditions[] conditions, @JsonProperty("type") RateAdjustmentTypeEnum type) {
+        this.amount = amount;
+        this.conditions = conditions;
+        this.type = type;
+  }
 }

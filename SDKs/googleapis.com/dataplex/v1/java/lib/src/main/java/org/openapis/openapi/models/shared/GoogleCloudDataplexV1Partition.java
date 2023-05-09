@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudDataplexV1Partition withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleCloudDataplexV1Partition withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Partition withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public GoogleCloudDataplexV1Partition withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudDataplexV1Partition(){}
 }

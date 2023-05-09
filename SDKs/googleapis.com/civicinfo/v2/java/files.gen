@@ -78,4 +78,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/OfficeRolesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Office.java
 lib/src/main/java/org/openapis/openapi/models/shared/GeographicDivision.java
 lib/src/main/java/org/openapis/openapi/models/shared/RepresentativeInfoData.java
+docs/sdk/README.md
+docs/divisions/README.md
+docs/elections/README.md
+docs/representatives/README.md
 USAGE.md

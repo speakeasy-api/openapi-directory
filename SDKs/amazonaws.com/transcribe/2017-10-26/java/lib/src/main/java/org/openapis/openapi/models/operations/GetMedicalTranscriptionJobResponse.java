@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMedicalTranscriptionJobResponse {
@@ -12,6 +13,7 @@ public class GetMedicalTranscriptionJobResponse {
      */
     
     public Object badRequestException;
+
     public GetMedicalTranscriptionJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetMedicalTranscriptionJobResponse {
     
     
     public String contentType;
+
     public GetMedicalTranscriptionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMedicalTranscriptionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMedicalTranscriptionJobResponse getMedicalTranscriptionJobResponse;
+
     public GetMedicalTranscriptionJobResponse withGetMedicalTranscriptionJobResponse(org.openapis.openapi.models.shared.GetMedicalTranscriptionJobResponse getMedicalTranscriptionJobResponse) {
         this.getMedicalTranscriptionJobResponse = getMedicalTranscriptionJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMedicalTranscriptionJobResponse {
      */
     
     public Object internalFailureException;
+
     public GetMedicalTranscriptionJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetMedicalTranscriptionJobResponse {
      */
     
     public Object limitExceededException;
+
     public GetMedicalTranscriptionJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetMedicalTranscriptionJobResponse {
      */
     
     public Object notFoundException;
+
     public GetMedicalTranscriptionJobResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetMedicalTranscriptionJobResponse {
     
     
     public Integer statusCode;
+
     public GetMedicalTranscriptionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetMedicalTranscriptionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMedicalTranscriptionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMedicalTranscriptionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

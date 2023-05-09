@@ -18,9 +18,11 @@ public class CourseAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public CourseAlias withAlias(String alias) {
         this.alias = alias;
         return this;
     }
     
+    public CourseAlias(){}
 }

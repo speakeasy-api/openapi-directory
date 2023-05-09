@@ -18,6 +18,7 @@ public class RelevantLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeId")
     public String placeId;
+
     public RelevantLocation withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -29,9 +30,11 @@ public class RelevantLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationType")
     public RelevantLocationRelationTypeEnum relationType;
+
     public RelevantLocation withRelationType(RelevantLocationRelationTypeEnum relationType) {
         this.relationType = relationType;
         return this;
     }
     
+    public RelevantLocation(){}
 }

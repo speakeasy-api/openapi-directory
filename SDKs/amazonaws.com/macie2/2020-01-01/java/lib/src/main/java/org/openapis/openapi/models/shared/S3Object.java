@@ -20,6 +20,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketArn")
     public String bucketArn;
+
     public S3Object withBucketArn(String bucketArn) {
         this.bucketArn = bucketArn;
         return this;
@@ -28,6 +29,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public S3Object withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -36,6 +38,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public String extension;
+
     public S3Object withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -44,6 +47,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public S3Object withKey(String key) {
         this.key = key;
         return this;
@@ -54,6 +58,7 @@ public class S3Object {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public S3Object withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -62,6 +67,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public S3Object withPath(String path) {
         this.path = path;
         return this;
@@ -70,6 +76,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicAccess")
     public Boolean publicAccess;
+
     public S3Object withPublicAccess(Boolean publicAccess) {
         this.publicAccess = publicAccess;
         return this;
@@ -78,6 +85,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverSideEncryption")
     public ServerSideEncryption serverSideEncryption;
+
     public S3Object withServerSideEncryption(ServerSideEncryption serverSideEncryption) {
         this.serverSideEncryption = serverSideEncryption;
         return this;
@@ -86,6 +94,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public S3Object withSize(Long size) {
         this.size = size;
         return this;
@@ -94,6 +103,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageClass")
     public StorageClassEnum storageClass;
+
     public S3Object withStorageClass(StorageClassEnum storageClass) {
         this.storageClass = storageClass;
         return this;
@@ -102,6 +112,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public KeyValuePair[] tags;
+
     public S3Object withTags(KeyValuePair[] tags) {
         this.tags = tags;
         return this;
@@ -110,9 +121,11 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public S3Object withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public S3Object(){}
 }

@@ -18,6 +18,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardCodeMask")
     public String cardCodeMask;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator withCardCodeMask(String cardCodeMask) {
         this.cardCodeMask = cardCodeMask;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardCodeRegex")
     public String cardCodeRegex;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator withCardCodeRegex(String cardCodeRegex) {
         this.cardCodeRegex = cardCodeRegex;
         return this;
@@ -40,6 +42,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mask")
     public String mask;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator withMask(String mask) {
         this.mask = mask;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -59,9 +63,11 @@ public class PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weights")
     public Long[] weights;
+
     public PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator withWeights(Long[] weights) {
         this.weights = weights;
         return this;
     }
     
+    public PlaceOrderRequestBodyPaymentDataPaymentSystemsValidator(){}
 }

@@ -19,6 +19,7 @@ public class ListInferenceExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DataEndTimeBefore")
     public OffsetDateTime dataEndTimeBefore;
+
     public ListInferenceExecutionsRequest withDataEndTimeBefore(OffsetDateTime dataEndTimeBefore) {
         this.dataEndTimeBefore = dataEndTimeBefore;
         return this;
@@ -29,6 +30,7 @@ public class ListInferenceExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DataStartTimeAfter")
     public OffsetDateTime dataStartTimeAfter;
+
     public ListInferenceExecutionsRequest withDataStartTimeAfter(OffsetDateTime dataStartTimeAfter) {
         this.dataStartTimeAfter = dataStartTimeAfter;
         return this;
@@ -36,6 +38,7 @@ public class ListInferenceExecutionsRequest {
     
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public ListInferenceExecutionsRequest withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
@@ -44,6 +47,7 @@ public class ListInferenceExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListInferenceExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -52,6 +56,7 @@ public class ListInferenceExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -60,9 +65,13 @@ public class ListInferenceExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InferenceExecutionStatusEnum status;
+
     public ListInferenceExecutionsRequest withStatus(InferenceExecutionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListInferenceExecutionsRequest(@JsonProperty("InferenceSchedulerName") String inferenceSchedulerName) {
+        this.inferenceSchedulerName = inferenceSchedulerName;
+  }
 }

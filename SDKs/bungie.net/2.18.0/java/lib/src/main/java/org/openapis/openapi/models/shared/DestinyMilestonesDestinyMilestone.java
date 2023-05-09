@@ -16,6 +16,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public DestinyMilestonesDestinyMilestoneChallengeActivity[] activities;
+
     public DestinyMilestonesDestinyMilestone withActivities(DestinyMilestonesDestinyMilestoneChallengeActivity[] activities) {
         this.activities = activities;
         return this;
@@ -26,6 +27,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public DestinyMilestonesDestinyMilestoneQuest[] availableQuests;
+
     public DestinyMilestonesDestinyMilestone withAvailableQuests(DestinyMilestonesDestinyMilestoneQuest[] availableQuests) {
         this.availableQuests = availableQuests;
         return this;
@@ -36,6 +38,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public OffsetDateTime endDate;
+
     public DestinyMilestonesDestinyMilestone withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -46,6 +49,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public Long milestoneHash;
+
     public DestinyMilestonesDestinyMilestone withMilestoneHash(Long milestoneHash) {
         this.milestoneHash = milestoneHash;
         return this;
@@ -56,6 +60,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public Integer order;
+
     public DestinyMilestonesDestinyMilestone withOrder(Integer order) {
         this.order = order;
         return this;
@@ -66,6 +71,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public DestinyMilestonesDestinyMilestoneRewardCategory[] rewards;
+
     public DestinyMilestonesDestinyMilestone withRewards(DestinyMilestonesDestinyMilestoneRewardCategory[] rewards) {
         this.rewards = rewards;
         return this;
@@ -76,6 +82,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public OffsetDateTime startDate;
+
     public DestinyMilestonesDestinyMilestone withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -86,6 +93,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public java.util.Map<String, Float> values;
+
     public DestinyMilestonesDestinyMilestone withValues(java.util.Map<String, Float> values) {
         this.values = values;
         return this;
@@ -97,6 +105,7 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public Long[] vendorHashes;
+
     public DestinyMilestonesDestinyMilestone withVendorHashes(Long[] vendorHashes) {
         this.vendorHashes = vendorHashes;
         return this;
@@ -107,9 +116,11 @@ public class DestinyMilestonesDestinyMilestone {
      */
     
     public DestinyMilestonesDestinyMilestoneVendor[] vendors;
+
     public DestinyMilestonesDestinyMilestone withVendors(DestinyMilestonesDestinyMilestoneVendor[] vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestone(){}
 }

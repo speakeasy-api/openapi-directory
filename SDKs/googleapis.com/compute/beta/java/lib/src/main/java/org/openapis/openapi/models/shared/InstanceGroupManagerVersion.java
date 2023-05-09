@@ -15,6 +15,7 @@ public class InstanceGroupManagerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTemplate")
     public String instanceTemplate;
+
     public InstanceGroupManagerVersion withInstanceTemplate(String instanceTemplate) {
         this.instanceTemplate = instanceTemplate;
         return this;
@@ -26,6 +27,7 @@ public class InstanceGroupManagerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceGroupManagerVersion withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class InstanceGroupManagerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSize")
     public FixedOrPercent targetSize;
+
     public InstanceGroupManagerVersion withTargetSize(FixedOrPercent targetSize) {
         this.targetSize = targetSize;
         return this;
     }
     
+    public InstanceGroupManagerVersion(){}
 }

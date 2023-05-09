@@ -18,9 +18,11 @@ public class RestoreDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupId")
     public String backupId;
+
     public RestoreDomainRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
     }
     
+    public RestoreDomainRequest(){}
 }

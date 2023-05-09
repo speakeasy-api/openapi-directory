@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveIpRoutesResponse {
@@ -12,6 +13,7 @@ public class RemoveIpRoutesResponse {
      */
     
     public Object clientException;
+
     public RemoveIpRoutesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveIpRoutesResponse {
     
     
     public String contentType;
+
     public RemoveIpRoutesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveIpRoutesResponse {
      */
     
     public Object directoryUnavailableException;
+
     public RemoveIpRoutesResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveIpRoutesResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public RemoveIpRoutesResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveIpRoutesResponse {
      */
     
     public Object invalidParameterException;
+
     public RemoveIpRoutesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveIpRoutesResponse {
      */
     
     public java.util.Map<String, Object> removeIpRoutesResult;
+
     public RemoveIpRoutesResponse withRemoveIpRoutesResult(java.util.Map<String, Object> removeIpRoutesResult) {
         this.removeIpRoutesResult = removeIpRoutesResult;
         return this;
@@ -69,6 +76,7 @@ public class RemoveIpRoutesResponse {
      */
     
     public Object serviceException;
+
     public RemoveIpRoutesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class RemoveIpRoutesResponse {
     
     
     public Integer statusCode;
+
     public RemoveIpRoutesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RemoveIpRoutesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveIpRoutesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveIpRoutesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

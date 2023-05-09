@@ -15,6 +15,7 @@ public class KnowledgeBaseAssociationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBaseArn")
     public String knowledgeBaseArn;
+
     public KnowledgeBaseAssociationData withKnowledgeBaseArn(String knowledgeBaseArn) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         return this;
@@ -23,9 +24,11 @@ public class KnowledgeBaseAssociationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBaseId")
     public String knowledgeBaseId;
+
     public KnowledgeBaseAssociationData withKnowledgeBaseId(String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
         return this;
     }
     
+    public KnowledgeBaseAssociationData(){}
 }

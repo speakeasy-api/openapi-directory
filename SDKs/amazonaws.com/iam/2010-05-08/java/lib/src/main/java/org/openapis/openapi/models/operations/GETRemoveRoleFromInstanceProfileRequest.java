@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemoveRoleFromInstanceProfileRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRemoveRoleFromInstanceProfileActionEnum action;
+
     public GETRemoveRoleFromInstanceProfileRequest withAction(GETRemoveRoleFromInstanceProfileActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceProfileName")
     public String instanceProfileName;
+
     public GETRemoveRoleFromInstanceProfileRequest withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -29,6 +32,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleName")
     public String roleName;
+
     public GETRemoveRoleFromInstanceProfileRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -36,6 +40,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRemoveRoleFromInstanceProfileVersionEnum version;
+
     public GETRemoveRoleFromInstanceProfileRequest withVersion(GETRemoveRoleFromInstanceProfileVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRemoveRoleFromInstanceProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRemoveRoleFromInstanceProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRemoveRoleFromInstanceProfileRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRemoveRoleFromInstanceProfileRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRemoveRoleFromInstanceProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETRemoveRoleFromInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRemoveRoleFromInstanceProfileRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETRemoveRoleFromInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRemoveRoleFromInstanceProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRemoveRoleFromInstanceProfileRequest(@JsonProperty("Action") GETRemoveRoleFromInstanceProfileActionEnum action, @JsonProperty("InstanceProfileName") String instanceProfileName, @JsonProperty("RoleName") String roleName, @JsonProperty("Version") GETRemoveRoleFromInstanceProfileVersionEnum version) {
+        this.action = action;
+        this.instanceProfileName = instanceProfileName;
+        this.roleName = roleName;
+        this.version = version;
+  }
 }

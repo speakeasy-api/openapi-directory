@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletePermissionRequest {
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public DeletePermissionRequest withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -18,6 +19,7 @@ public class DeletePermissionRequest {
     
     @JsonProperty("Principal")
     public String principal;
+
     public DeletePermissionRequest withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -26,9 +28,14 @@ public class DeletePermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceAccount")
     public String sourceAccount;
+
     public DeletePermissionRequest withSourceAccount(String sourceAccount) {
         this.sourceAccount = sourceAccount;
         return this;
     }
     
+    public DeletePermissionRequest(@JsonProperty("CertificateAuthorityArn") String certificateAuthorityArn, @JsonProperty("Principal") String principal) {
+        this.certificateAuthorityArn = certificateAuthorityArn;
+        this.principal = principal;
+  }
 }

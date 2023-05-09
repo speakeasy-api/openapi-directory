@@ -12,9 +12,11 @@ public class GetResponsivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public GetResponsivityPeriodEnum period;
+
     public GetResponsivityRequest withPeriod(GetResponsivityPeriodEnum period) {
         this.period = period;
         return this;
     }
     
+    public GetResponsivityRequest(){}
 }

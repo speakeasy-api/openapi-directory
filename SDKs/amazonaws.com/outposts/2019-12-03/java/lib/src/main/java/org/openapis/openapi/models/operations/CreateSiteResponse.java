@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSiteResponse {
@@ -12,6 +13,7 @@ public class CreateSiteResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSiteResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSiteResponse {
      */
     
     public Object conflictException;
+
     public CreateSiteResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateSiteResponse {
     
     
     public String contentType;
+
     public CreateSiteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateSiteResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSiteOutput createSiteOutput;
+
     public CreateSiteResponse withCreateSiteOutput(org.openapis.openapi.models.shared.CreateSiteOutput createSiteOutput) {
         this.createSiteOutput = createSiteOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateSiteResponse {
      */
     
     public Object internalServerException;
+
     public CreateSiteResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateSiteResponse {
     
     
     public Integer statusCode;
+
     public CreateSiteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateSiteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSiteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateSiteResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSiteResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,9 +92,14 @@ public class CreateSiteResponse {
      */
     
     public Object validationException;
+
     public CreateSiteResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSiteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

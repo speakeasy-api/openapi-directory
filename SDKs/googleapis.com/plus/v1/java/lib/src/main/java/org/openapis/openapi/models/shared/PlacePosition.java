@@ -18,6 +18,7 @@ public class PlacePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public PlacePosition withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -29,9 +30,11 @@ public class PlacePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public PlacePosition withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public PlacePosition(){}
 }

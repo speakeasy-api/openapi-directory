@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkerConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public CreateWorkerConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public Object conflictException;
+
     public CreateWorkerConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkerConfigurationResponse {
     
     
     public String contentType;
+
     public CreateWorkerConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkerConfigurationResponse createWorkerConfigurationResponse;
+
     public CreateWorkerConfigurationResponse withCreateWorkerConfigurationResponse(org.openapis.openapi.models.shared.CreateWorkerConfigurationResponse createWorkerConfigurationResponse) {
         this.createWorkerConfigurationResponse = createWorkerConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public CreateWorkerConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateWorkerConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public CreateWorkerConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateWorkerConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class CreateWorkerConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkerConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateWorkerConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkerConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateWorkerConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class CreateWorkerConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateWorkerConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateWorkerConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

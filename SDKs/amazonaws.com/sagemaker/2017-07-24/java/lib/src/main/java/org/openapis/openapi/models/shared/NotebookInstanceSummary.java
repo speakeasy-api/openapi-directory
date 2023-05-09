@@ -20,6 +20,7 @@ public class NotebookInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalCodeRepositories")
     public String[] additionalCodeRepositories;
+
     public NotebookInstanceSummary withAdditionalCodeRepositories(String[] additionalCodeRepositories) {
         this.additionalCodeRepositories = additionalCodeRepositories;
         return this;
@@ -30,6 +31,7 @@ public class NotebookInstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public NotebookInstanceSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class NotebookInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultCodeRepository")
     public String defaultCodeRepository;
+
     public NotebookInstanceSummary withDefaultCodeRepository(String defaultCodeRepository) {
         this.defaultCodeRepository = defaultCodeRepository;
         return this;
@@ -46,6 +49,7 @@ public class NotebookInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public InstanceTypeEnum instanceType;
+
     public NotebookInstanceSummary withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -56,6 +60,7 @@ public class NotebookInstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public NotebookInstanceSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -63,6 +68,7 @@ public class NotebookInstanceSummary {
     
     @JsonProperty("NotebookInstanceArn")
     public String notebookInstanceArn;
+
     public NotebookInstanceSummary withNotebookInstanceArn(String notebookInstanceArn) {
         this.notebookInstanceArn = notebookInstanceArn;
         return this;
@@ -71,6 +77,7 @@ public class NotebookInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceLifecycleConfigName")
     public String notebookInstanceLifecycleConfigName;
+
     public NotebookInstanceSummary withNotebookInstanceLifecycleConfigName(String notebookInstanceLifecycleConfigName) {
         this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
         return this;
@@ -78,6 +85,7 @@ public class NotebookInstanceSummary {
     
     @JsonProperty("NotebookInstanceName")
     public String notebookInstanceName;
+
     public NotebookInstanceSummary withNotebookInstanceName(String notebookInstanceName) {
         this.notebookInstanceName = notebookInstanceName;
         return this;
@@ -86,6 +94,7 @@ public class NotebookInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceStatus")
     public NotebookInstanceStatusEnum notebookInstanceStatus;
+
     public NotebookInstanceSummary withNotebookInstanceStatus(NotebookInstanceStatusEnum notebookInstanceStatus) {
         this.notebookInstanceStatus = notebookInstanceStatus;
         return this;
@@ -94,9 +103,14 @@ public class NotebookInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public NotebookInstanceSummary withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NotebookInstanceSummary(@JsonProperty("NotebookInstanceArn") String notebookInstanceArn, @JsonProperty("NotebookInstanceName") String notebookInstanceName) {
+        this.notebookInstanceArn = notebookInstanceArn;
+        this.notebookInstanceName = notebookInstanceName;
+  }
 }

@@ -15,9 +15,11 @@ public class PutRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleArn")
     public String ruleArn;
+
     public PutRuleResponse withRuleArn(String ruleArn) {
         this.ruleArn = ruleArn;
         return this;
     }
     
+    public PutRuleResponse(){}
 }

@@ -15,6 +15,7 @@ public class OverallVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainIspPlacements")
     public DomainIspPlacement[] domainIspPlacements;
+
     public OverallVolume withDomainIspPlacements(DomainIspPlacement[] domainIspPlacements) {
         this.domainIspPlacements = domainIspPlacements;
         return this;
@@ -23,6 +24,7 @@ public class OverallVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRatePercent")
     public Double readRatePercent;
+
     public OverallVolume withReadRatePercent(Double readRatePercent) {
         this.readRatePercent = readRatePercent;
         return this;
@@ -31,9 +33,11 @@ public class OverallVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeStatistics")
     public VolumeStatistics volumeStatistics;
+
     public OverallVolume withVolumeStatistics(VolumeStatistics volumeStatistics) {
         this.volumeStatistics = volumeStatistics;
         return this;
     }
     
+    public OverallVolume(){}
 }

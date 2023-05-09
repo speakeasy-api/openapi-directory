@@ -18,6 +18,7 @@ public class GkeNodePoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscaling")
     public GkeNodePoolAutoscalingConfig autoscaling;
+
     public GkeNodePoolConfig withAutoscaling(GkeNodePoolAutoscalingConfig autoscaling) {
         this.autoscaling = autoscaling;
         return this;
@@ -29,6 +30,7 @@ public class GkeNodePoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GkeNodeConfig config;
+
     public GkeNodePoolConfig withConfig(GkeNodeConfig config) {
         this.config = config;
         return this;
@@ -40,9 +42,11 @@ public class GkeNodePoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public String[] locations;
+
     public GkeNodePoolConfig withLocations(String[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public GkeNodePoolConfig(){}
 }

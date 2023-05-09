@@ -15,6 +15,7 @@ public class CategoricalValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfCategory")
     public Long numberOfCategory;
+
     public CategoricalValues withNumberOfCategory(Long numberOfCategory) {
         this.numberOfCategory = numberOfCategory;
         return this;
@@ -22,9 +23,13 @@ public class CategoricalValues {
     
     @JsonProperty("Status")
     public StatisticalIssueStatusEnum status;
+
     public CategoricalValues withStatus(StatisticalIssueStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CategoricalValues(@JsonProperty("Status") StatisticalIssueStatusEnum status) {
+        this.status = status;
+  }
 }

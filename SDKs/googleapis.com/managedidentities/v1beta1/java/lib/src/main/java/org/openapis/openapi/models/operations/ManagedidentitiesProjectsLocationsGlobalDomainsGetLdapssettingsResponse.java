@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse {
     
     public String contentType;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResp
      */
     
     public org.openapis.openapi.models.shared.LDAPSSettings ldapsSettings;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse withLDAPSSettings(org.openapis.openapi.models.shared.LDAPSSettings ldapsSettings) {
         this.ldapsSettings = ldapsSettings;
         return this;
@@ -26,6 +29,7 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResp
     
     
     public Integer statusCode;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

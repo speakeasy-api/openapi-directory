@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendTextMessageResponse {
@@ -12,6 +13,7 @@ public class SendTextMessageResponse {
      */
     
     public Object accessDeniedException;
+
     public SendTextMessageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class SendTextMessageResponse {
      */
     
     public Object conflictException;
+
     public SendTextMessageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class SendTextMessageResponse {
     
     
     public String contentType;
+
     public SendTextMessageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SendTextMessageResponse {
      */
     
     public Object internalServerException;
+
     public SendTextMessageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class SendTextMessageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SendTextMessageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SendTextMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.SendTextMessageResult sendTextMessageResult;
+
     public SendTextMessageResponse withSendTextMessageResult(org.openapis.openapi.models.shared.SendTextMessageResult sendTextMessageResult) {
         this.sendTextMessageResult = sendTextMessageResult;
         return this;
@@ -69,6 +76,7 @@ public class SendTextMessageResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public SendTextMessageResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class SendTextMessageResponse {
     
     
     public Integer statusCode;
+
     public SendTextMessageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SendTextMessageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendTextMessageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class SendTextMessageResponse {
      */
     
     public Object throttlingException;
+
     public SendTextMessageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class SendTextMessageResponse {
      */
     
     public Object validationException;
+
     public SendTextMessageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SendTextMessageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

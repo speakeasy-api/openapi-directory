@@ -18,6 +18,7 @@ public class PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binarySizeThreshold")
     public String binarySizeThreshold;
+
     public PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria withBinarySizeThreshold(String binarySizeThreshold) {
         this.binarySizeThreshold = binarySizeThreshold;
         return this;
@@ -29,9 +30,11 @@ public class PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSizeThreshold")
     public String textSizeThreshold;
+
     public PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria withTextSizeThreshold(String textSizeThreshold) {
         this.textSizeThreshold = textSizeThreshold;
         return this;
     }
     
+    public PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria(){}
 }

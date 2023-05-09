@@ -20,6 +20,7 @@ public class LogAnomalyClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Explanation")
     public String explanation;
+
     public LogAnomalyClass withExplanation(String explanation) {
         this.explanation = explanation;
         return this;
@@ -28,6 +29,7 @@ public class LogAnomalyClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogAnomalyToken")
     public String logAnomalyToken;
+
     public LogAnomalyClass withLogAnomalyToken(String logAnomalyToken) {
         this.logAnomalyToken = logAnomalyToken;
         return this;
@@ -36,6 +38,7 @@ public class LogAnomalyClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogAnomalyType")
     public LogAnomalyTypeEnum logAnomalyType;
+
     public LogAnomalyClass withLogAnomalyType(LogAnomalyTypeEnum logAnomalyType) {
         this.logAnomalyType = logAnomalyType;
         return this;
@@ -44,6 +47,7 @@ public class LogAnomalyClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogEventId")
     public String logEventId;
+
     public LogAnomalyClass withLogEventId(String logEventId) {
         this.logEventId = logEventId;
         return this;
@@ -54,6 +58,7 @@ public class LogAnomalyClass {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LogEventTimestamp")
     public OffsetDateTime logEventTimestamp;
+
     public LogAnomalyClass withLogEventTimestamp(OffsetDateTime logEventTimestamp) {
         this.logEventTimestamp = logEventTimestamp;
         return this;
@@ -62,6 +67,7 @@ public class LogAnomalyClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogStreamName")
     public String logStreamName;
+
     public LogAnomalyClass withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
@@ -70,9 +76,11 @@ public class LogAnomalyClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfLogLinesOccurrences")
     public Long numberOfLogLinesOccurrences;
+
     public LogAnomalyClass withNumberOfLogLinesOccurrences(Long numberOfLogLinesOccurrences) {
         this.numberOfLogLinesOccurrences = numberOfLogLinesOccurrences;
         return this;
     }
     
+    public LogAnomalyClass(){}
 }

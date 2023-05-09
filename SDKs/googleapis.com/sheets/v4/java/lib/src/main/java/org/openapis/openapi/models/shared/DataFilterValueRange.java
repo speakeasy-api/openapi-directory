@@ -18,6 +18,7 @@ public class DataFilterValueRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFilter")
     public DataFilter dataFilter;
+
     public DataFilterValueRange withDataFilter(DataFilter dataFilter) {
         this.dataFilter = dataFilter;
         return this;
@@ -29,6 +30,7 @@ public class DataFilterValueRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorDimension")
     public DataFilterValueRangeMajorDimensionEnum majorDimension;
+
     public DataFilterValueRange withMajorDimension(DataFilterValueRangeMajorDimensionEnum majorDimension) {
         this.majorDimension = majorDimension;
         return this;
@@ -40,9 +42,11 @@ public class DataFilterValueRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Object[][] values;
+
     public DataFilterValueRange withValues(Object[][] values) {
         this.values = values;
         return this;
     }
     
+    public DataFilterValueRange(){}
 }

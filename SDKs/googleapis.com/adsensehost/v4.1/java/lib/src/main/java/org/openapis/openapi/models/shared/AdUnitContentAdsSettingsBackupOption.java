@@ -18,6 +18,7 @@ public class AdUnitContentAdsSettingsBackupOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public AdUnitContentAdsSettingsBackupOption withColor(String color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class AdUnitContentAdsSettingsBackupOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AdUnitContentAdsSettingsBackupOption withType(String type) {
         this.type = type;
         return this;
@@ -40,9 +42,11 @@ public class AdUnitContentAdsSettingsBackupOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AdUnitContentAdsSettingsBackupOption withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AdUnitContentAdsSettingsBackupOption(){}
 }

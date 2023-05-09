@@ -15,6 +15,7 @@ public class DestinyActivitiesDestinyPublicActivityStatus {
      */
     
     public Long[] challengeObjectiveHashes;
+
     public DestinyActivitiesDestinyPublicActivityStatus withChallengeObjectiveHashes(Long[] challengeObjectiveHashes) {
         this.challengeObjectiveHashes = challengeObjectiveHashes;
         return this;
@@ -25,6 +26,7 @@ public class DestinyActivitiesDestinyPublicActivityStatus {
      */
     
     public Long[] modifierHashes;
+
     public DestinyActivitiesDestinyPublicActivityStatus withModifierHashes(Long[] modifierHashes) {
         this.modifierHashes = modifierHashes;
         return this;
@@ -37,9 +39,11 @@ public class DestinyActivitiesDestinyPublicActivityStatus {
      */
     
     public DestinyDestinyItemQuantity[] rewardTooltipItems;
+
     public DestinyActivitiesDestinyPublicActivityStatus withRewardTooltipItems(DestinyDestinyItemQuantity[] rewardTooltipItems) {
         this.rewardTooltipItems = rewardTooltipItems;
         return this;
     }
     
+    public DestinyActivitiesDestinyPublicActivityStatus(){}
 }

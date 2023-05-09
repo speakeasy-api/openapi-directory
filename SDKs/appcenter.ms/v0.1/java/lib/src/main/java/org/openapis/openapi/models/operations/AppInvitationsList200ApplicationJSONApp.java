@@ -14,6 +14,7 @@ public class AppInvitationsList200ApplicationJSONApp {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public AppInvitationsList200ApplicationJSONApp withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -22,6 +23,7 @@ public class AppInvitationsList200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public AppInvitationsList200ApplicationJSONAppAzureSubscription azureSubscription;
+
     public AppInvitationsList200ApplicationJSONApp withAzureSubscription(AppInvitationsList200ApplicationJSONAppAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -33,6 +35,7 @@ public class AppInvitationsList200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public AppInvitationsList200ApplicationJSONApp withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class AppInvitationsList200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppInvitationsList200ApplicationJSONApp withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class AppInvitationsList200ApplicationJSONApp {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppInvitationsList200ApplicationJSONApp withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -65,6 +70,7 @@ public class AppInvitationsList200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public AppInvitationsList200ApplicationJSONApp withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -76,6 +82,7 @@ public class AppInvitationsList200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public AppInvitationsList200ApplicationJSONApp withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -86,6 +93,7 @@ public class AppInvitationsList200ApplicationJSONApp {
      */
     @JsonProperty("id")
     public String id;
+
     public AppInvitationsList200ApplicationJSONApp withId(String id) {
         this.id = id;
         return this;
@@ -97,6 +105,7 @@ public class AppInvitationsList200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public AppInvitationsList200ApplicationJSONAppMemberPermissionsEnum[] memberPermissions;
+
     public AppInvitationsList200ApplicationJSONApp withMemberPermissions(AppInvitationsList200ApplicationJSONAppMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -107,6 +116,7 @@ public class AppInvitationsList200ApplicationJSONApp {
      */
     @JsonProperty("name")
     public String name;
+
     public AppInvitationsList200ApplicationJSONApp withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +127,7 @@ public class AppInvitationsList200ApplicationJSONApp {
      */
     @JsonProperty("origin")
     public AppInvitationsList200ApplicationJSONAppOriginEnum origin;
+
     public AppInvitationsList200ApplicationJSONApp withOrigin(AppInvitationsList200ApplicationJSONAppOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -127,6 +138,7 @@ public class AppInvitationsList200ApplicationJSONApp {
      */
     @JsonProperty("os")
     public AppInvitationsList200ApplicationJSONAppOsEnum os;
+
     public AppInvitationsList200ApplicationJSONApp withOs(AppInvitationsList200ApplicationJSONAppOsEnum os) {
         this.os = os;
         return this;
@@ -137,6 +149,7 @@ public class AppInvitationsList200ApplicationJSONApp {
      */
     @JsonProperty("owner")
     public AppInvitationsList200ApplicationJSONAppOwner owner;
+
     public AppInvitationsList200ApplicationJSONApp withOwner(AppInvitationsList200ApplicationJSONAppOwner owner) {
         this.owner = owner;
         return this;
@@ -147,6 +160,7 @@ public class AppInvitationsList200ApplicationJSONApp {
      */
     @JsonProperty("platform")
     public AppInvitationsList200ApplicationJSONAppPlatformEnum platform;
+
     public AppInvitationsList200ApplicationJSONApp withPlatform(AppInvitationsList200ApplicationJSONAppPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -158,6 +172,7 @@ public class AppInvitationsList200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public AppInvitationsList200ApplicationJSONApp withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -169,9 +184,20 @@ public class AppInvitationsList200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public AppInvitationsList200ApplicationJSONApp withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AppInvitationsList200ApplicationJSONApp(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") AppInvitationsList200ApplicationJSONAppOriginEnum origin, @JsonProperty("os") AppInvitationsList200ApplicationJSONAppOsEnum os, @JsonProperty("owner") AppInvitationsList200ApplicationJSONAppOwner owner, @JsonProperty("platform") AppInvitationsList200ApplicationJSONAppPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

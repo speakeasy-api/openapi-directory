@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WxByDistance {
     @JsonProperty("distance")
     public Object distance;
+
     public WxByDistance withDistance(Object distance) {
         this.distance = distance;
         return this;
@@ -19,6 +20,7 @@ public class WxByDistance {
     
     @JsonProperty("hours")
     public Long hours;
+
     public WxByDistance withHours(Long hours) {
         this.hours = hours;
         return this;
@@ -26,6 +28,7 @@ public class WxByDistance {
     
     @JsonProperty("latitude")
     public Object latitude;
+
     public WxByDistance withLatitude(Object latitude) {
         this.latitude = latitude;
         return this;
@@ -33,6 +36,7 @@ public class WxByDistance {
     
     @JsonProperty("longitude")
     public Object longitude;
+
     public WxByDistance withLongitude(Object longitude) {
         this.longitude = longitude;
         return this;
@@ -40,9 +44,17 @@ public class WxByDistance {
     
     @JsonProperty("wxtypes")
     public String[] wxtypes;
+
     public WxByDistance withWxtypes(String[] wxtypes) {
         this.wxtypes = wxtypes;
         return this;
     }
     
+    public WxByDistance(@JsonProperty("distance") Object distance, @JsonProperty("hours") Long hours, @JsonProperty("latitude") Object latitude, @JsonProperty("longitude") Object longitude, @JsonProperty("wxtypes") String[] wxtypes) {
+        this.distance = distance;
+        this.hours = hours;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.wxtypes = wxtypes;
+  }
 }

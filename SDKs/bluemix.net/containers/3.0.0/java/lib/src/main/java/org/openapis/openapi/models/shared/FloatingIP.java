@@ -12,6 +12,7 @@ public class FloatingIP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bindings")
     public Binding bindings;
+
     public FloatingIP withBindings(Binding bindings) {
         this.bindings = bindings;
         return this;
@@ -23,9 +24,11 @@ public class FloatingIP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public FloatingIP withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    public FloatingIP(){}
 }

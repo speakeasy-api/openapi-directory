@@ -18,6 +18,7 @@ public class LegalEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public java.util.Map<String, LegalEntityCapability> capabilities;
+
     public LegalEntity withCapabilities(java.util.Map<String, LegalEntityCapability> capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -29,6 +30,7 @@ public class LegalEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public EntityReference[] documents;
+
     public LegalEntity withDocuments(EntityReference[] documents) {
         this.documents = documents;
         return this;
@@ -41,6 +43,7 @@ public class LegalEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityAssociations")
     public LegalEntityAssociation[] entityAssociations;
+
     public LegalEntity withEntityAssociations(LegalEntityAssociation[] entityAssociations) {
         this.entityAssociations = entityAssociations;
         return this;
@@ -51,6 +54,7 @@ public class LegalEntity {
      */
     @JsonProperty("id")
     public String id;
+
     public LegalEntity withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class LegalEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individual")
     public Individual individual;
+
     public LegalEntity withIndividual(Individual individual) {
         this.individual = individual;
         return this;
@@ -67,6 +72,7 @@ public class LegalEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public Organization organization;
+
     public LegalEntity withOrganization(Organization organization) {
         this.organization = organization;
         return this;
@@ -78,6 +84,7 @@ public class LegalEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public LegalEntity withReference(String reference) {
         this.reference = reference;
         return this;
@@ -89,6 +96,7 @@ public class LegalEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferInstruments")
     public TransferInstrumentReference[] transferInstruments;
+
     public LegalEntity withTransferInstruments(TransferInstrumentReference[] transferInstruments) {
         this.transferInstruments = transferInstruments;
         return this;
@@ -102,9 +110,13 @@ public class LegalEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LegalEntityTypeEnum type;
+
     public LegalEntity withType(LegalEntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LegalEntity(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

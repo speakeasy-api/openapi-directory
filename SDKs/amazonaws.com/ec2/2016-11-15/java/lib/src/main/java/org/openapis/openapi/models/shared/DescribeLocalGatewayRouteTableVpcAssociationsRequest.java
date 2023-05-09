@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayRouteTableVpcAssociationsRequest {
     
     public Boolean dryRun;
+
     public DescribeLocalGatewayRouteTableVpcAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLocalGatewayRouteTableVpcAssociationsRequest {
     
     
     public DescribeLocalGatewayRouteTableVpcAssociationsRequestFilters[] filters;
+
     public DescribeLocalGatewayRouteTableVpcAssociationsRequest withFilters(DescribeLocalGatewayRouteTableVpcAssociationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeLocalGatewayRouteTableVpcAssociationsRequest {
     
     
     public String[] localGatewayRouteTableVpcAssociationIds;
+
     public DescribeLocalGatewayRouteTableVpcAssociationsRequest withLocalGatewayRouteTableVpcAssociationIds(String[] localGatewayRouteTableVpcAssociationIds) {
         this.localGatewayRouteTableVpcAssociationIds = localGatewayRouteTableVpcAssociationIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeLocalGatewayRouteTableVpcAssociationsRequest {
     
     
     public Long maxResults;
+
     public DescribeLocalGatewayRouteTableVpcAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeLocalGatewayRouteTableVpcAssociationsRequest {
     
     
     public String nextToken;
+
     public DescribeLocalGatewayRouteTableVpcAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLocalGatewayRouteTableVpcAssociationsRequest(){}
 }

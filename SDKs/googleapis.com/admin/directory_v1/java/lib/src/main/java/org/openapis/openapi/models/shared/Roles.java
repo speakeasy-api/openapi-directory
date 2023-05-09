@@ -18,6 +18,7 @@ public class Roles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Roles withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Roles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Role[] items;
+
     public Roles withItems(Role[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class Roles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Roles withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,9 +51,11 @@ public class Roles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Roles withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public Roles(){}
 }

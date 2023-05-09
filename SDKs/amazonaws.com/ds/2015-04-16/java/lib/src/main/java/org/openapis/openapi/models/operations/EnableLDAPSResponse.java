@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableLDAPSResponse {
@@ -12,6 +13,7 @@ public class EnableLDAPSResponse {
      */
     
     public Object clientException;
+
     public EnableLDAPSResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class EnableLDAPSResponse {
     
     
     public String contentType;
+
     public EnableLDAPSResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableLDAPSResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public EnableLDAPSResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class EnableLDAPSResponse {
      */
     
     public Object directoryUnavailableException;
+
     public EnableLDAPSResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class EnableLDAPSResponse {
      */
     
     public java.util.Map<String, Object> enableLDAPSResult;
+
     public EnableLDAPSResponse withEnableLDAPSResult(java.util.Map<String, Object> enableLDAPSResult) {
         this.enableLDAPSResult = enableLDAPSResult;
         return this;
@@ -59,6 +65,7 @@ public class EnableLDAPSResponse {
      */
     
     public Object invalidLDAPSStatusException;
+
     public EnableLDAPSResponse withInvalidLDAPSStatusException(Object invalidLDAPSStatusException) {
         this.invalidLDAPSStatusException = invalidLDAPSStatusException;
         return this;
@@ -69,6 +76,7 @@ public class EnableLDAPSResponse {
      */
     
     public Object invalidParameterException;
+
     public EnableLDAPSResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class EnableLDAPSResponse {
      */
     
     public Object noAvailableCertificateException;
+
     public EnableLDAPSResponse withNoAvailableCertificateException(Object noAvailableCertificateException) {
         this.noAvailableCertificateException = noAvailableCertificateException;
         return this;
@@ -89,6 +98,7 @@ public class EnableLDAPSResponse {
      */
     
     public Object serviceException;
+
     public EnableLDAPSResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class EnableLDAPSResponse {
     
     
     public Integer statusCode;
+
     public EnableLDAPSResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class EnableLDAPSResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableLDAPSResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class EnableLDAPSResponse {
      */
     
     public Object unsupportedOperationException;
+
     public EnableLDAPSResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public EnableLDAPSResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

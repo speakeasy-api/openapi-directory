@@ -18,6 +18,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, Object> fields;
+
     public Entity withFields(java.util.Map<String, Object> fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Entity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Entity(){}
 }

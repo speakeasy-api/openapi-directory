@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public GoogleCloudIntegrationsV1alphaAccessToken accessToken;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withAccessToken(GoogleCloudIntegrationsV1alphaAccessToken accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyReauthPolicy")
     public Boolean applyReauthPolicy;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withApplyReauthPolicy(Boolean applyReauthPolicy) {
         this.applyReauthPolicy = applyReauthPolicy;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authEndpoint")
     public String authEndpoint;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withAuthEndpoint(String authEndpoint) {
         this.authEndpoint = authEndpoint;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authParams")
     public GoogleCloudIntegrationsV1alphaParameterMap authParams;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withAuthParams(GoogleCloudIntegrationsV1alphaParameterMap authParams) {
         this.authParams = authParams;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestType")
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCodeRequestTypeEnum requestType;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withRequestType(GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCodeRequestTypeEnum requestType) {
         this.requestType = requestType;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withScope(String scope) {
         this.scope = scope;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenEndpoint")
     public String tokenEndpoint;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenParams")
     public GoogleCloudIntegrationsV1alphaParameterMap tokenParams;
+
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode withTokenParams(GoogleCloudIntegrationsV1alphaParameterMap tokenParams) {
         this.tokenParams = tokenParams;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode(){}
 }

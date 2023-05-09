@@ -18,6 +18,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public File withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashes")
     public Hash[] hashes;
+
     public File withHashes(Hash[] hashes) {
         this.hashes = hashes;
         return this;
@@ -40,6 +42,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public File withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public File withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -62,6 +66,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public String sizeBytes;
+
     public File withSizeBytes(String sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -73,9 +78,11 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public File withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public File(){}
 }

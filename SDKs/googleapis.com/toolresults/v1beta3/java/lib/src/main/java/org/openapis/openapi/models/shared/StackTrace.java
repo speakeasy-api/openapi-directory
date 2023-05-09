@@ -18,9 +18,11 @@ public class StackTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception")
     public String exception;
+
     public StackTrace withException(String exception) {
         this.exception = exception;
         return this;
     }
     
+    public StackTrace(){}
 }

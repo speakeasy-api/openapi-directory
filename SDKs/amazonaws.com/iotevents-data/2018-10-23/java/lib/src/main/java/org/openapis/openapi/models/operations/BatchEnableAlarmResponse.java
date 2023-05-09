@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchEnableAlarmResponse {
@@ -12,6 +13,7 @@ public class BatchEnableAlarmResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchEnableAlarmResponse batchEnableAlarmResponse;
+
     public BatchEnableAlarmResponse withBatchEnableAlarmResponse(org.openapis.openapi.models.shared.BatchEnableAlarmResponse batchEnableAlarmResponse) {
         this.batchEnableAlarmResponse = batchEnableAlarmResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchEnableAlarmResponse {
     
     
     public String contentType;
+
     public BatchEnableAlarmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchEnableAlarmResponse {
      */
     
     public Object internalFailureException;
+
     public BatchEnableAlarmResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchEnableAlarmResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchEnableAlarmResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchEnableAlarmResponse {
     
     
     public Integer statusCode;
+
     public BatchEnableAlarmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchEnableAlarmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchEnableAlarmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchEnableAlarmResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchEnableAlarmResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class BatchEnableAlarmResponse {
      */
     
     public Object throttlingException;
+
     public BatchEnableAlarmResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchEnableAlarmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

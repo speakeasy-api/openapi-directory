@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPrope
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse withPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse(){}
 }

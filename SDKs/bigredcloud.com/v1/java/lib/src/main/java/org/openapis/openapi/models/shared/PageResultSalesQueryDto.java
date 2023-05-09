@@ -15,6 +15,7 @@ public class PageResultSalesQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultSalesQueryDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultSalesQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public SalesQueryDto[] items;
+
     public PageResultSalesQueryDto withItems(SalesQueryDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultSalesQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultSalesQueryDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultSalesQueryDto(){}
 }

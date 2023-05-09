@@ -15,6 +15,7 @@ public class InternalErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public InternalErrorMessage withCode(Integer code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class InternalErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InternalErrorMessage withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InternalErrorMessage(){}
 }

@@ -20,6 +20,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildArn")
     public String buildArn;
+
     public Build withBuildArn(String buildArn) {
         this.buildArn = buildArn;
         return this;
@@ -28,6 +29,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildId")
     public String buildId;
+
     public Build withBuildId(String buildId) {
         this.buildId = buildId;
         return this;
@@ -38,6 +40,7 @@ public class Build {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Build withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Build withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public Build withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -62,6 +67,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSdkVersion")
     public String serverSDKVersion;
+
     public Build withServerSDKVersion(String serverSDKVersion) {
         this.serverSDKVersion = serverSDKVersion;
         return this;
@@ -70,6 +76,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeOnDisk")
     public Long sizeOnDisk;
+
     public Build withSizeOnDisk(Long sizeOnDisk) {
         this.sizeOnDisk = sizeOnDisk;
         return this;
@@ -78,6 +85,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public BuildStatusEnum status;
+
     public Build withStatus(BuildStatusEnum status) {
         this.status = status;
         return this;
@@ -86,9 +94,11 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public Build withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Build(){}
 }

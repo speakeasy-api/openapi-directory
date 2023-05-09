@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictJsonSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String httpBearer;
+
     public PredictJsonSecurity withHTTPBearer(String httpBearer) {
         this.httpBearer = httpBearer;
         return this;
     }
     
+    public PredictJsonSecurity(@JsonProperty("HTTPBearer") String httpBearer) {
+        this.httpBearer = httpBearer;
+  }
 }

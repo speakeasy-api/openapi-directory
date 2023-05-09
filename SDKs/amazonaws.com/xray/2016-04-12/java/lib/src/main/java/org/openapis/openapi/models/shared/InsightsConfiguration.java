@@ -15,6 +15,7 @@ public class InsightsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightsEnabled")
     public Boolean insightsEnabled;
+
     public InsightsConfiguration withInsightsEnabled(Boolean insightsEnabled) {
         this.insightsEnabled = insightsEnabled;
         return this;
@@ -23,9 +24,11 @@ public class InsightsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationsEnabled")
     public Boolean notificationsEnabled;
+
     public InsightsConfiguration withNotificationsEnabled(Boolean notificationsEnabled) {
         this.notificationsEnabled = notificationsEnabled;
         return this;
     }
     
+    public InsightsConfiguration(){}
 }

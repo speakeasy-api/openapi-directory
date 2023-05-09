@@ -15,6 +15,7 @@ public class CreateFleetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateFleetRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -25,6 +26,7 @@ public class CreateFleetRequestBody {
      */
     @JsonProperty("FleetName")
     public String fleetName;
+
     public CreateFleetRequestBody withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
@@ -36,6 +38,7 @@ public class CreateFleetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizeForEndUserLocation")
     public Boolean optimizeForEndUserLocation;
+
     public CreateFleetRequestBody withOptimizeForEndUserLocation(Boolean optimizeForEndUserLocation) {
         this.optimizeForEndUserLocation = optimizeForEndUserLocation;
         return this;
@@ -47,9 +50,13 @@ public class CreateFleetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateFleetRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFleetRequestBody(@JsonProperty("FleetName") String fleetName) {
+        this.fleetName = fleetName;
+  }
 }

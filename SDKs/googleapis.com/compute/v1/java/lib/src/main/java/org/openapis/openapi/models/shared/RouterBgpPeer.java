@@ -15,6 +15,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiseMode")
     public RouterBgpPeerAdvertiseModeEnum advertiseMode;
+
     public RouterBgpPeer withAdvertiseMode(RouterBgpPeerAdvertiseModeEnum advertiseMode) {
         this.advertiseMode = advertiseMode;
         return this;
@@ -26,6 +27,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedGroups")
     public RouterBgpPeerAdvertisedGroupsEnum[] advertisedGroups;
+
     public RouterBgpPeer withAdvertisedGroups(RouterBgpPeerAdvertisedGroupsEnum[] advertisedGroups) {
         this.advertisedGroups = advertisedGroups;
         return this;
@@ -37,6 +39,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedIpRanges")
     public RouterAdvertisedIpRange[] advertisedIpRanges;
+
     public RouterBgpPeer withAdvertisedIpRanges(RouterAdvertisedIpRange[] advertisedIpRanges) {
         this.advertisedIpRanges = advertisedIpRanges;
         return this;
@@ -48,6 +51,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedRoutePriority")
     public Long advertisedRoutePriority;
+
     public RouterBgpPeer withAdvertisedRoutePriority(Long advertisedRoutePriority) {
         this.advertisedRoutePriority = advertisedRoutePriority;
         return this;
@@ -56,6 +60,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bfd")
     public RouterBgpPeerBfd bfd;
+
     public RouterBgpPeer withBfd(RouterBgpPeerBfd bfd) {
         this.bfd = bfd;
         return this;
@@ -67,6 +72,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public RouterBgpPeerEnableEnum enable;
+
     public RouterBgpPeer withEnable(RouterBgpPeerEnableEnum enable) {
         this.enable = enable;
         return this;
@@ -78,6 +84,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIpv6")
     public Boolean enableIpv6;
+
     public RouterBgpPeer withEnableIpv6(Boolean enableIpv6) {
         this.enableIpv6 = enableIpv6;
         return this;
@@ -89,6 +96,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interfaceName")
     public String interfaceName;
+
     public RouterBgpPeer withInterfaceName(String interfaceName) {
         this.interfaceName = interfaceName;
         return this;
@@ -100,6 +108,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public RouterBgpPeer withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -111,6 +120,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6NexthopAddress")
     public String ipv6NexthopAddress;
+
     public RouterBgpPeer withIpv6NexthopAddress(String ipv6NexthopAddress) {
         this.ipv6NexthopAddress = ipv6NexthopAddress;
         return this;
@@ -122,6 +132,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementType")
     public RouterBgpPeerManagementTypeEnum managementType;
+
     public RouterBgpPeer withManagementType(RouterBgpPeerManagementTypeEnum managementType) {
         this.managementType = managementType;
         return this;
@@ -133,6 +144,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5AuthenticationKeyName")
     public String md5AuthenticationKeyName;
+
     public RouterBgpPeer withMd5AuthenticationKeyName(String md5AuthenticationKeyName) {
         this.md5AuthenticationKeyName = md5AuthenticationKeyName;
         return this;
@@ -144,6 +156,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RouterBgpPeer withName(String name) {
         this.name = name;
         return this;
@@ -155,6 +168,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerAsn")
     public Long peerAsn;
+
     public RouterBgpPeer withPeerAsn(Long peerAsn) {
         this.peerAsn = peerAsn;
         return this;
@@ -166,6 +180,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerIpAddress")
     public String peerIpAddress;
+
     public RouterBgpPeer withPeerIpAddress(String peerIpAddress) {
         this.peerIpAddress = peerIpAddress;
         return this;
@@ -177,6 +192,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerIpv6NexthopAddress")
     public String peerIpv6NexthopAddress;
+
     public RouterBgpPeer withPeerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
         this.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
         return this;
@@ -188,9 +204,11 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routerApplianceInstance")
     public String routerApplianceInstance;
+
     public RouterBgpPeer withRouterApplianceInstance(String routerApplianceInstance) {
         this.routerApplianceInstance = routerApplianceInstance;
         return this;
     }
     
+    public RouterBgpPeer(){}
 }

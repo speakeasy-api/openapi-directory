@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse {
@@ -12,6 +13,7 @@ public class ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResp
      */
     
     public org.openapis.openapi.models.shared.ContactCenterQuota contactCenterQuota;
+
     public ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse withContactCenterQuota(org.openapis.openapi.models.shared.ContactCenterQuota contactCenterQuota) {
         this.contactCenterQuota = contactCenterQuota;
         return this;
@@ -19,6 +21,7 @@ public class ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResp
     
     
     public String contentType;
+
     public ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResp
     
     
     public Integer statusCode;
+
     public ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

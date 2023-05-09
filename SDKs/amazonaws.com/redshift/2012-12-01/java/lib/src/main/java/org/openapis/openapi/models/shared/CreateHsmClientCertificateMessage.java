@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateHsmClientCertificateMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateHsmClientCertificateMessage {
     
     public String hsmClientCertificateIdentifier;
+
     public CreateHsmClientCertificateMessage withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -19,9 +20,13 @@ public class CreateHsmClientCertificateMessage {
     
     
     public TagList[] tags;
+
     public CreateHsmClientCertificateMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateHsmClientCertificateMessage(@JsonProperty("HsmClientCertificateIdentifier") String hsmClientCertificateIdentifier) {
+        this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
+  }
 }

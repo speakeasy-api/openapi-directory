@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ScheduledInstancesMonitoring {
     
     public Boolean enabled;
+
     public ScheduledInstancesMonitoring withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ScheduledInstancesMonitoring(){}
 }

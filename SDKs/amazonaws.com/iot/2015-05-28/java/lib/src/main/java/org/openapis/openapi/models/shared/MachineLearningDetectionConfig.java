@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MachineLearningDetectionConfig {
     @JsonProperty("confidenceLevel")
     public ConfidenceLevelEnum confidenceLevel;
+
     public MachineLearningDetectionConfig withConfidenceLevel(ConfidenceLevelEnum confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
     }
     
+    public MachineLearningDetectionConfig(@JsonProperty("confidenceLevel") ConfidenceLevelEnum confidenceLevel) {
+        this.confidenceLevel = confidenceLevel;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutSubscriptionFilterRequest {
     @JsonProperty("destinationArn")
     public String destinationArn;
+
     public PutSubscriptionFilterRequest withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -19,6 +20,7 @@ public class PutSubscriptionFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution")
     public DistributionEnum distribution;
+
     public PutSubscriptionFilterRequest withDistribution(DistributionEnum distribution) {
         this.distribution = distribution;
         return this;
@@ -26,6 +28,7 @@ public class PutSubscriptionFilterRequest {
     
     @JsonProperty("filterName")
     public String filterName;
+
     public PutSubscriptionFilterRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -33,6 +36,7 @@ public class PutSubscriptionFilterRequest {
     
     @JsonProperty("filterPattern")
     public String filterPattern;
+
     public PutSubscriptionFilterRequest withFilterPattern(String filterPattern) {
         this.filterPattern = filterPattern;
         return this;
@@ -40,6 +44,7 @@ public class PutSubscriptionFilterRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public PutSubscriptionFilterRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -48,9 +53,16 @@ public class PutSubscriptionFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public PutSubscriptionFilterRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public PutSubscriptionFilterRequest(@JsonProperty("destinationArn") String destinationArn, @JsonProperty("filterName") String filterName, @JsonProperty("filterPattern") String filterPattern, @JsonProperty("logGroupName") String logGroupName) {
+        this.destinationArn = destinationArn;
+        this.filterName = filterName;
+        this.filterPattern = filterPattern;
+        this.logGroupName = logGroupName;
+  }
 }

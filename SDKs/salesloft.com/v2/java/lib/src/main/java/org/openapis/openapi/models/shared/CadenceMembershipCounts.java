@@ -12,6 +12,7 @@ public class CadenceMembershipCounts {
      */
     
     public Long bounces;
+
     public CadenceMembershipCounts withBounces(Long bounces) {
         this.bounces = bounces;
         return this;
@@ -22,6 +23,7 @@ public class CadenceMembershipCounts {
      */
     
     public Long calls;
+
     public CadenceMembershipCounts withCalls(Long calls) {
         this.calls = calls;
         return this;
@@ -32,6 +34,7 @@ public class CadenceMembershipCounts {
      */
     
     public Long clicks;
+
     public CadenceMembershipCounts withClicks(Long clicks) {
         this.clicks = clicks;
         return this;
@@ -42,6 +45,7 @@ public class CadenceMembershipCounts {
      */
     
     public Long replies;
+
     public CadenceMembershipCounts withReplies(Long replies) {
         this.replies = replies;
         return this;
@@ -52,6 +56,7 @@ public class CadenceMembershipCounts {
      */
     
     public Long sentEmails;
+
     public CadenceMembershipCounts withSentEmails(Long sentEmails) {
         this.sentEmails = sentEmails;
         return this;
@@ -62,9 +67,11 @@ public class CadenceMembershipCounts {
      */
     
     public Long views;
+
     public CadenceMembershipCounts withViews(Long views) {
         this.views = views;
         return this;
     }
     
+    public CadenceMembershipCounts(){}
 }

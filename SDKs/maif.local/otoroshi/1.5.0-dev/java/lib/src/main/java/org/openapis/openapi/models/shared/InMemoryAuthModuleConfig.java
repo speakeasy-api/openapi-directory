@@ -15,6 +15,7 @@ public class InMemoryAuthModuleConfig {
      */
     @JsonProperty("desc")
     public String desc;
+
     public InMemoryAuthModuleConfig withDesc(String desc) {
         this.desc = desc;
         return this;
@@ -25,6 +26,7 @@ public class InMemoryAuthModuleConfig {
      */
     @JsonProperty("id")
     public String id;
+
     public InMemoryAuthModuleConfig withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class InMemoryAuthModuleConfig {
      */
     @JsonProperty("name")
     public String name;
+
     public InMemoryAuthModuleConfig withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class InMemoryAuthModuleConfig {
      */
     @JsonProperty("sessionMaxAge")
     public String sessionMaxAge;
+
     public InMemoryAuthModuleConfig withSessionMaxAge(String sessionMaxAge) {
         this.sessionMaxAge = sessionMaxAge;
         return this;
@@ -55,6 +59,7 @@ public class InMemoryAuthModuleConfig {
      */
     @JsonProperty("type")
     public String type;
+
     public InMemoryAuthModuleConfig withType(String type) {
         this.type = type;
         return this;
@@ -65,9 +70,18 @@ public class InMemoryAuthModuleConfig {
      */
     @JsonProperty("users")
     public InMemoryUser[] users;
+
     public InMemoryAuthModuleConfig withUsers(InMemoryUser[] users) {
         this.users = users;
         return this;
     }
     
+    public InMemoryAuthModuleConfig(@JsonProperty("desc") String desc, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("sessionMaxAge") String sessionMaxAge, @JsonProperty("type") String type, @JsonProperty("users") InMemoryUser[] users) {
+        this.desc = desc;
+        this.id = id;
+        this.name = name;
+        this.sessionMaxAge = sessionMaxAge;
+        this.type = type;
+        this.users = users;
+  }
 }

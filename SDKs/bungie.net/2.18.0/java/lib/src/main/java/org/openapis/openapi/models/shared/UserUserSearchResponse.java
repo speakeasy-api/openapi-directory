@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class UserUserSearchResponse {
     
     public Boolean hasMore;
+
     public UserUserSearchResponse withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -16,6 +17,7 @@ public class UserUserSearchResponse {
     
     
     public Integer page;
+
     public UserUserSearchResponse withPage(Integer page) {
         this.page = page;
         return this;
@@ -23,9 +25,11 @@ public class UserUserSearchResponse {
     
     
     public UserUserSearchResponseDetail[] searchResults;
+
     public UserUserSearchResponse withSearchResults(UserUserSearchResponseDetail[] searchResults) {
         this.searchResults = searchResults;
         return this;
     }
     
+    public UserUserSearchResponse(){}
 }

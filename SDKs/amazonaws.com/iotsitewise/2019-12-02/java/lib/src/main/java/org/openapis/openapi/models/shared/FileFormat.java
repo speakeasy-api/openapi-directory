@@ -15,9 +15,11 @@ public class FileFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csv")
     public Csv csv;
+
     public FileFormat withCsv(Csv csv) {
         this.csv = csv;
         return this;
     }
     
+    public FileFormat(){}
 }

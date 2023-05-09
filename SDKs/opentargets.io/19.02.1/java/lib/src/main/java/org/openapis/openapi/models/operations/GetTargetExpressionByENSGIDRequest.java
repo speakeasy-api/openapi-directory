@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetExpressionByENSGIDRequest {
@@ -12,9 +13,13 @@ public class GetTargetExpressionByENSGIDRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gene")
     public String gene;
+
     public GetTargetExpressionByENSGIDRequest withGene(String gene) {
         this.gene = gene;
         return this;
     }
     
+    public GetTargetExpressionByENSGIDRequest(@JsonProperty("gene") String gene) {
+        this.gene = gene;
+  }
 }

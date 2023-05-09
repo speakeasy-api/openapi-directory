@@ -13,9 +13,13 @@ public class TransactionResourceRelationshipsTransferAccountLinks {
      */
     @JsonProperty("related")
     public String related;
+
     public TransactionResourceRelationshipsTransferAccountLinks withRelated(String related) {
         this.related = related;
         return this;
     }
     
+    public TransactionResourceRelationshipsTransferAccountLinks(@JsonProperty("related") String related) {
+        this.related = related;
+  }
 }

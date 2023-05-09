@@ -15,6 +15,7 @@ public class OrganizationResourceDetailedStatusFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public OrganizationResourceDetailedStatusFilters withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class OrganizationResourceDetailedStatusFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OrganizationResourceDetailedStatusEnum status;
+
     public OrganizationResourceDetailedStatusFilters withStatus(OrganizationResourceDetailedStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OrganizationResourceDetailedStatusFilters(){}
 }

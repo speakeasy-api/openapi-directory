@@ -15,6 +15,7 @@ public class ArrayPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Long index;
+
     public ArrayPropertiesDetail withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,6 +24,7 @@ public class ArrayPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public ArrayPropertiesDetail withSize(Long size) {
         this.size = size;
         return this;
@@ -31,9 +33,11 @@ public class ArrayPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusSummary")
     public java.util.Map<String, Long> statusSummary;
+
     public ArrayPropertiesDetail withStatusSummary(java.util.Map<String, Long> statusSummary) {
         this.statusSummary = statusSummary;
         return this;
     }
     
+    public ArrayPropertiesDetail(){}
 }

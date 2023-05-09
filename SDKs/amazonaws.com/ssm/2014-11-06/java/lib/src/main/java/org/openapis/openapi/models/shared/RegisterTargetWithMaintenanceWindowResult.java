@@ -15,9 +15,11 @@ public class RegisterTargetWithMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowTargetId")
     public String windowTargetId;
+
     public RegisterTargetWithMaintenanceWindowResult withWindowTargetId(String windowTargetId) {
         this.windowTargetId = windowTargetId;
         return this;
     }
     
+    public RegisterTargetWithMaintenanceWindowResult(){}
 }

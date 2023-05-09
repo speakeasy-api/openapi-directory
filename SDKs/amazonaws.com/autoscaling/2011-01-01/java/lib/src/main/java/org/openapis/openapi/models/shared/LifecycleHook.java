@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LifecycleHook {
     
     public String autoScalingGroupName;
+
     public LifecycleHook withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -19,6 +20,7 @@ public class LifecycleHook {
     
     
     public String defaultResult;
+
     public LifecycleHook withDefaultResult(String defaultResult) {
         this.defaultResult = defaultResult;
         return this;
@@ -26,6 +28,7 @@ public class LifecycleHook {
     
     
     public Long globalTimeout;
+
     public LifecycleHook withGlobalTimeout(Long globalTimeout) {
         this.globalTimeout = globalTimeout;
         return this;
@@ -33,6 +36,7 @@ public class LifecycleHook {
     
     
     public Long heartbeatTimeout;
+
     public LifecycleHook withHeartbeatTimeout(Long heartbeatTimeout) {
         this.heartbeatTimeout = heartbeatTimeout;
         return this;
@@ -40,6 +44,7 @@ public class LifecycleHook {
     
     
     public String lifecycleHookName;
+
     public LifecycleHook withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
@@ -47,6 +52,7 @@ public class LifecycleHook {
     
     
     public String lifecycleTransition;
+
     public LifecycleHook withLifecycleTransition(String lifecycleTransition) {
         this.lifecycleTransition = lifecycleTransition;
         return this;
@@ -54,6 +60,7 @@ public class LifecycleHook {
     
     
     public String notificationMetadata;
+
     public LifecycleHook withNotificationMetadata(String notificationMetadata) {
         this.notificationMetadata = notificationMetadata;
         return this;
@@ -61,6 +68,7 @@ public class LifecycleHook {
     
     
     public String notificationTargetARN;
+
     public LifecycleHook withNotificationTargetARN(String notificationTargetARN) {
         this.notificationTargetARN = notificationTargetARN;
         return this;
@@ -68,9 +76,11 @@ public class LifecycleHook {
     
     
     public String roleARN;
+
     public LifecycleHook withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public LifecycleHook(){}
 }

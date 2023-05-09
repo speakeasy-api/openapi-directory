@@ -13,6 +13,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public Integer[] applicableMembershipTypes;
+
     public DestinyResponsesDestinyProfileUserInfoCard withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -23,6 +24,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public String bungieGlobalDisplayName;
+
     public DestinyResponsesDestinyProfileUserInfoCard withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -33,6 +35,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public DestinyResponsesDestinyProfileUserInfoCard withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -43,6 +46,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public Integer crossSaveOverride;
+
     public DestinyResponsesDestinyProfileUserInfoCard withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -50,6 +54,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
     
     
     public OffsetDateTime dateLastPlayed;
+
     public DestinyResponsesDestinyProfileUserInfoCard withDateLastPlayed(OffsetDateTime dateLastPlayed) {
         this.dateLastPlayed = dateLastPlayed;
         return this;
@@ -60,6 +65,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public String displayName;
+
     public DestinyResponsesDestinyProfileUserInfoCard withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -70,6 +76,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public String iconPath;
+
     public DestinyResponsesDestinyProfileUserInfoCard withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -80,6 +87,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public Boolean isCrossSavePrimary;
+
     public DestinyResponsesDestinyProfileUserInfoCard withIsCrossSavePrimary(Boolean isCrossSavePrimary) {
         this.isCrossSavePrimary = isCrossSavePrimary;
         return this;
@@ -90,6 +98,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public Boolean isOverridden;
+
     public DestinyResponsesDestinyProfileUserInfoCard withIsOverridden(Boolean isOverridden) {
         this.isOverridden = isOverridden;
         return this;
@@ -100,6 +109,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public Boolean isPublic;
+
     public DestinyResponsesDestinyProfileUserInfoCard withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -110,6 +120,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public Long membershipId;
+
     public DestinyResponsesDestinyProfileUserInfoCard withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -120,6 +131,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public Integer membershipType;
+
     public DestinyResponsesDestinyProfileUserInfoCard withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -131,6 +143,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public DestinyResponsesDestinyProfileUserInfoCardPlatformSilver platformSilver;
+
     public DestinyResponsesDestinyProfileUserInfoCard withPlatformSilver(DestinyResponsesDestinyProfileUserInfoCardPlatformSilver platformSilver) {
         this.platformSilver = platformSilver;
         return this;
@@ -141,6 +154,7 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public String supplementalDisplayName;
+
     public DestinyResponsesDestinyProfileUserInfoCard withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
@@ -153,9 +167,11 @@ public class DestinyResponsesDestinyProfileUserInfoCard {
      */
     
     public DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum unpairedGameVersions;
+
     public DestinyResponsesDestinyProfileUserInfoCard withUnpairedGameVersions(DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum unpairedGameVersions) {
         this.unpairedGameVersions = unpairedGameVersions;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileUserInfoCard(){}
 }

@@ -15,9 +15,11 @@ public class ServiceUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceUpdateNameToApply")
     public String serviceUpdateNameToApply;
+
     public ServiceUpdateRequest withServiceUpdateNameToApply(String serviceUpdateNameToApply) {
         this.serviceUpdateNameToApply = serviceUpdateNameToApply;
         return this;
     }
     
+    public ServiceUpdateRequest(){}
 }

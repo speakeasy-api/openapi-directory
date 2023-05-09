@@ -18,9 +18,11 @@ public class Entrypoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shell")
     public String shell;
+
     public Entrypoint withShell(String shell) {
         this.shell = shell;
         return this;
     }
     
+    public Entrypoint(){}
 }

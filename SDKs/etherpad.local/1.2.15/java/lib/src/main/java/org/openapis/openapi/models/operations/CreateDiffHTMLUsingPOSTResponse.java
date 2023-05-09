@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDiffHTMLUsingPOSTResponse {
     
     public String contentType;
+
     public CreateDiffHTMLUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateDiffHTMLUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CreateDiffHTMLUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateDiffHTMLUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDiffHTMLUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateDiffHTMLUsingPOSTResponse {
      */
     
     public CreateDiffHTMLUsingPOST200ApplicationJSON createDiffHTMLUsingPOST200ApplicationJSONObject;
+
     public CreateDiffHTMLUsingPOSTResponse withCreateDiffHTMLUsingPOST200ApplicationJSONObject(CreateDiffHTMLUsingPOST200ApplicationJSON createDiffHTMLUsingPOST200ApplicationJSONObject) {
         this.createDiffHTMLUsingPOST200ApplicationJSONObject = createDiffHTMLUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateDiffHTMLUsingPOSTResponse {
      */
     
     public CreateDiffHTMLUsingPOST400ApplicationJSON createDiffHTMLUsingPOST400ApplicationJSONObject;
+
     public CreateDiffHTMLUsingPOSTResponse withCreateDiffHTMLUsingPOST400ApplicationJSONObject(CreateDiffHTMLUsingPOST400ApplicationJSON createDiffHTMLUsingPOST400ApplicationJSONObject) {
         this.createDiffHTMLUsingPOST400ApplicationJSONObject = createDiffHTMLUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateDiffHTMLUsingPOSTResponse {
      */
     
     public CreateDiffHTMLUsingPOST401ApplicationJSON createDiffHTMLUsingPOST401ApplicationJSONObject;
+
     public CreateDiffHTMLUsingPOSTResponse withCreateDiffHTMLUsingPOST401ApplicationJSONObject(CreateDiffHTMLUsingPOST401ApplicationJSON createDiffHTMLUsingPOST401ApplicationJSONObject) {
         this.createDiffHTMLUsingPOST401ApplicationJSONObject = createDiffHTMLUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateDiffHTMLUsingPOSTResponse {
      */
     
     public CreateDiffHTMLUsingPOST500ApplicationJSON createDiffHTMLUsingPOST500ApplicationJSONObject;
+
     public CreateDiffHTMLUsingPOSTResponse withCreateDiffHTMLUsingPOST500ApplicationJSONObject(CreateDiffHTMLUsingPOST500ApplicationJSON createDiffHTMLUsingPOST500ApplicationJSONObject) {
         this.createDiffHTMLUsingPOST500ApplicationJSONObject = createDiffHTMLUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CreateDiffHTMLUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

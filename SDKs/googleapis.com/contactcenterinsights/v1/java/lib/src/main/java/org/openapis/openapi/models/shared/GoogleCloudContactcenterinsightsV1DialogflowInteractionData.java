@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1DialogflowInteractionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudContactcenterinsightsV1DialogflowInteractionData withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1DialogflowInteractionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogflowIntentId")
     public String dialogflowIntentId;
+
     public GoogleCloudContactcenterinsightsV1DialogflowInteractionData withDialogflowIntentId(String dialogflowIntentId) {
         this.dialogflowIntentId = dialogflowIntentId;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1DialogflowInteractionData(){}
 }

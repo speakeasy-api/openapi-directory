@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePredictorBacktestExportJobResponse {
     
     public String contentType;
+
     public CreatePredictorBacktestExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePredictorBacktestExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePredictorBacktestExportJobResponse createPredictorBacktestExportJobResponse;
+
     public CreatePredictorBacktestExportJobResponse withCreatePredictorBacktestExportJobResponse(org.openapis.openapi.models.shared.CreatePredictorBacktestExportJobResponse createPredictorBacktestExportJobResponse) {
         this.createPredictorBacktestExportJobResponse = createPredictorBacktestExportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreatePredictorBacktestExportJobResponse {
      */
     
     public Object invalidInputException;
+
     public CreatePredictorBacktestExportJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePredictorBacktestExportJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePredictorBacktestExportJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePredictorBacktestExportJobResponse {
      */
     
     public Object resourceInUseException;
+
     public CreatePredictorBacktestExportJobResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePredictorBacktestExportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePredictorBacktestExportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreatePredictorBacktestExportJobResponse {
     
     
     public Integer statusCode;
+
     public CreatePredictorBacktestExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreatePredictorBacktestExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePredictorBacktestExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreatePredictorBacktestExportJobResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreatePredictorBacktestExportJobResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreatePredictorBacktestExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

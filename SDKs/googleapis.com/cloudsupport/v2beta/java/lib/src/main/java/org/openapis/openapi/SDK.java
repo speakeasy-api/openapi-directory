@@ -21,8 +21,7 @@ public class SDK {
   	
     public CaseClassifications caseClassifications;
     public Cases cases;
-    public Media media;
-    public Projects projects;	
+    public Media media;	
 
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
@@ -111,6 +110,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.caseClassifications = new CaseClassifications(
@@ -132,15 +136,6 @@ public class SDK {
 		);
 		
 		this.media = new Media(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion
-		);
-		
-		this.projects = new Projects(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

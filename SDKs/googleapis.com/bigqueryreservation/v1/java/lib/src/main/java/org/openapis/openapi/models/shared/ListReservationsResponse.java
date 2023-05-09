@@ -18,6 +18,7 @@ public class ListReservationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListReservationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListReservationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservations")
     public Reservation[] reservations;
+
     public ListReservationsResponse withReservations(Reservation[] reservations) {
         this.reservations = reservations;
         return this;
     }
     
+    public ListReservationsResponse(){}
 }

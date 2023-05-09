@@ -15,9 +15,11 @@ public class RemoveMembersForPortfolioRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.RemoveMembersRequest data;
+
     public RemoveMembersForPortfolioRequestBody withData(org.openapis.openapi.models.shared.RemoveMembersRequest data) {
         this.data = data;
         return this;
     }
     
+    public RemoveMembersForPortfolioRequestBody(){}
 }

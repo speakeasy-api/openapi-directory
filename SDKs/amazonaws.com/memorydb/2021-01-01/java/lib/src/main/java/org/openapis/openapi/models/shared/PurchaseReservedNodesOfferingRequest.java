@@ -12,6 +12,7 @@ public class PurchaseReservedNodesOfferingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeCount")
     public Long nodeCount;
+
     public PurchaseReservedNodesOfferingRequest withNodeCount(Long nodeCount) {
         this.nodeCount = nodeCount;
         return this;
@@ -20,6 +21,7 @@ public class PurchaseReservedNodesOfferingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservationId")
     public String reservationId;
+
     public PurchaseReservedNodesOfferingRequest withReservationId(String reservationId) {
         this.reservationId = reservationId;
         return this;
@@ -27,6 +29,7 @@ public class PurchaseReservedNodesOfferingRequest {
     
     @JsonProperty("ReservedNodesOfferingId")
     public String reservedNodesOfferingId;
+
     public PurchaseReservedNodesOfferingRequest withReservedNodesOfferingId(String reservedNodesOfferingId) {
         this.reservedNodesOfferingId = reservedNodesOfferingId;
         return this;
@@ -35,9 +38,13 @@ public class PurchaseReservedNodesOfferingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public PurchaseReservedNodesOfferingRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PurchaseReservedNodesOfferingRequest(@JsonProperty("ReservedNodesOfferingId") String reservedNodesOfferingId) {
+        this.reservedNodesOfferingId = reservedNodesOfferingId;
+  }
 }

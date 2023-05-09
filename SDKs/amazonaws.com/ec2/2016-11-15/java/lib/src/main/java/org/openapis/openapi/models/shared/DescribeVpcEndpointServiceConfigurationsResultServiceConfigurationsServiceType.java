@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsServiceType {
     
     public DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsServiceTypeServiceTypeEnum serviceType;
+
     public DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsServiceType withServiceType(DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsServiceTypeServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsServiceType(){}
 }

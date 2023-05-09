@@ -18,6 +18,7 @@ public class ArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public ArtifactInput withContents(String contents) {
         this.contents = contents;
         return this;
@@ -29,6 +30,7 @@ public class ArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ArtifactInput withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -40,9 +42,11 @@ public class ArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ArtifactInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ArtifactInput(){}
 }

@@ -18,6 +18,7 @@ public class MenuValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public MenuValue withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class MenuValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public MenuValue withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -43,9 +45,11 @@ public class MenuValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public MenuValue withState(String state) {
         this.state = state;
         return this;
     }
     
+    public MenuValue(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetScreenDataResponse {
@@ -12,6 +13,7 @@ public class GetScreenDataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetScreenDataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetScreenDataResponse {
     
     
     public String contentType;
+
     public GetScreenDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetScreenDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetScreenDataResult getScreenDataResult;
+
     public GetScreenDataResponse withGetScreenDataResult(org.openapis.openapi.models.shared.GetScreenDataResult getScreenDataResult) {
         this.getScreenDataResult = getScreenDataResult;
         return this;
@@ -39,6 +43,7 @@ public class GetScreenDataResponse {
      */
     
     public Object internalServerException;
+
     public GetScreenDataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetScreenDataResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetScreenDataResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class GetScreenDataResponse {
     
     
     public Integer statusCode;
+
     public GetScreenDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetScreenDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetScreenDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetScreenDataResponse {
      */
     
     public Object requestTimeoutException;
+
     public GetScreenDataResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -83,6 +92,7 @@ public class GetScreenDataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetScreenDataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class GetScreenDataResponse {
      */
     
     public Object throttlingException;
+
     public GetScreenDataResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetScreenDataResponse {
      */
     
     public Object validationException;
+
     public GetScreenDataResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetScreenDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

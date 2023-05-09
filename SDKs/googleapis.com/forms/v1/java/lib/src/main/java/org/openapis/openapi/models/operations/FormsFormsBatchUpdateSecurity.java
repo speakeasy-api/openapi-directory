@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FormsFormsBatchUpdateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FormsFormsBatchUpdateSecurityOption1 option1;
+
     public FormsFormsBatchUpdateSecurity withOption1(FormsFormsBatchUpdateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class FormsFormsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FormsFormsBatchUpdateSecurityOption2 option2;
+
     public FormsFormsBatchUpdateSecurity withOption2(FormsFormsBatchUpdateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class FormsFormsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FormsFormsBatchUpdateSecurityOption3 option3;
+
     public FormsFormsBatchUpdateSecurity withOption3(FormsFormsBatchUpdateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public FormsFormsBatchUpdateSecurity(){}
 }

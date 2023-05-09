@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityMarkRepoNotificationsAsReadResponse {
     
     public String contentType;
+
     public ActivityMarkRepoNotificationsAsReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityMarkRepoNotificationsAsReadResponse {
     
     
     public Integer statusCode;
+
     public ActivityMarkRepoNotificationsAsReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActivityMarkRepoNotificationsAsReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityMarkRepoNotificationsAsReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActivityMarkRepoNotificationsAsReadResponse {
      */
     
     public ActivityMarkRepoNotificationsAsRead202ApplicationJSON activityMarkRepoNotificationsAsRead202ApplicationJSONObject;
+
     public ActivityMarkRepoNotificationsAsReadResponse withActivityMarkRepoNotificationsAsRead202ApplicationJSONObject(ActivityMarkRepoNotificationsAsRead202ApplicationJSON activityMarkRepoNotificationsAsRead202ApplicationJSONObject) {
         this.activityMarkRepoNotificationsAsRead202ApplicationJSONObject = activityMarkRepoNotificationsAsRead202ApplicationJSONObject;
         return this;
     }
     
+    public ActivityMarkRepoNotificationsAsReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

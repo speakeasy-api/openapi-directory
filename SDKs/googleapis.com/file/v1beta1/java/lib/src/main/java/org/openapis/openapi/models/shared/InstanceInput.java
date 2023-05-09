@@ -18,6 +18,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityGb")
     public String capacityGb;
+
     public InstanceInput withCapacityGb(String capacityGb) {
         this.capacityGb = capacityGb;
         return this;
@@ -29,8 +30,21 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InstanceInput withDescription(String description) {
         this.description = description;
+        return this;
+    }
+    
+    /**
+     * Directory Services configuration for Kerberos-based authentication.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("directoryServices")
+    public DirectoryServicesConfig directoryServices;
+
+    public InstanceInput withDirectoryServices(DirectoryServicesConfig directoryServices) {
+        this.directoryServices = directoryServices;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public InstanceInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +66,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileShares")
     public FileShareConfig[] fileShares;
+
     public InstanceInput withFileShares(FileShareConfig[] fileShares) {
         this.fileShares = fileShares;
         return this;
@@ -62,6 +78,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public InstanceInput withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -73,8 +90,21 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public InstanceInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
+        return this;
+    }
+    
+    /**
+     * The max number of shares allowed.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxShareCount")
+    public String maxShareCount;
+
+    public InstanceInput withMaxShareCount(String maxShareCount) {
+        this.maxShareCount = maxShareCount;
         return this;
     }
     
@@ -84,6 +114,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiShareEnabled")
     public Boolean multiShareEnabled;
+
     public InstanceInput withMultiShareEnabled(Boolean multiShareEnabled) {
         this.multiShareEnabled = multiShareEnabled;
         return this;
@@ -95,6 +126,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public NetworkConfigInput[] networks;
+
     public InstanceInput withNetworks(NetworkConfigInput[] networks) {
         this.networks = networks;
         return this;
@@ -106,6 +138,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public InstanceProtocolEnum protocol;
+
     public InstanceInput withProtocol(InstanceProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -117,9 +150,11 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public InstanceTierEnum tier;
+
     public InstanceInput withTier(InstanceTierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public InstanceInput(){}
 }

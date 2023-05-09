@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApigatewayProjectsLocationsApisConfigsListRequest {
@@ -12,6 +13,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -72,6 +79,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -102,6 +112,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -132,6 +145,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +178,13 @@ public class ApigatewayProjectsLocationsApisConfigsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ApigatewayProjectsLocationsApisConfigsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ApigatewayProjectsLocationsApisConfigsListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

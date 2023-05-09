@@ -14,6 +14,7 @@ public class CreateApiCacheRequestBody {
      */
     @JsonProperty("apiCachingBehavior")
     public CreateApiCacheRequestBodyApiCachingBehaviorEnum apiCachingBehavior;
+
     public CreateApiCacheRequestBody withApiCachingBehavior(CreateApiCacheRequestBodyApiCachingBehaviorEnum apiCachingBehavior) {
         this.apiCachingBehavior = apiCachingBehavior;
         return this;
@@ -25,6 +26,7 @@ public class CreateApiCacheRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("atRestEncryptionEnabled")
     public Boolean atRestEncryptionEnabled;
+
     public CreateApiCacheRequestBody withAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
         return this;
@@ -36,6 +38,7 @@ public class CreateApiCacheRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitEncryptionEnabled")
     public Boolean transitEncryptionEnabled;
+
     public CreateApiCacheRequestBody withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
@@ -46,6 +49,7 @@ public class CreateApiCacheRequestBody {
      */
     @JsonProperty("ttl")
     public Long ttl;
+
     public CreateApiCacheRequestBody withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -56,9 +60,15 @@ public class CreateApiCacheRequestBody {
      */
     @JsonProperty("type")
     public CreateApiCacheRequestBodyTypeEnum type;
+
     public CreateApiCacheRequestBody withType(CreateApiCacheRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateApiCacheRequestBody(@JsonProperty("apiCachingBehavior") CreateApiCacheRequestBodyApiCachingBehaviorEnum apiCachingBehavior, @JsonProperty("ttl") Long ttl, @JsonProperty("type") CreateApiCacheRequestBodyTypeEnum type) {
+        this.apiCachingBehavior = apiCachingBehavior;
+        this.ttl = ttl;
+        this.type = type;
+  }
 }

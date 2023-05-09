@@ -18,6 +18,7 @@ public class PagespeedVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("major")
     public String major;
+
     public PagespeedVersion withMajor(String major) {
         this.major = major;
         return this;
@@ -29,9 +30,11 @@ public class PagespeedVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minor")
     public String minor;
+
     public PagespeedVersion withMinor(String minor) {
         this.minor = minor;
         return this;
     }
     
+    public PagespeedVersion(){}
 }

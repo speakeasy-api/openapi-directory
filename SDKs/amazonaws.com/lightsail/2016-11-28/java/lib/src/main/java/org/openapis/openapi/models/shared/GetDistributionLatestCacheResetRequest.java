@@ -12,9 +12,11 @@ public class GetDistributionLatestCacheResetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionName")
     public String distributionName;
+
     public GetDistributionLatestCacheResetRequest withDistributionName(String distributionName) {
         this.distributionName = distributionName;
         return this;
     }
     
+    public GetDistributionLatestCacheResetRequest(){}
 }

@@ -15,9 +15,11 @@ public class AnalyticsToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwt")
     public String jwt;
+
     public AnalyticsToken withJwt(String jwt) {
         this.jwt = jwt;
         return this;
     }
     
+    public AnalyticsToken(){}
 }

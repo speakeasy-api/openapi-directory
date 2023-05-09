@@ -22,6 +22,7 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeWhatIfAnalysisResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTimeRemainingInMinutes")
     public Long estimatedTimeRemainingInMinutes;
+
     public DescribeWhatIfAnalysisResponse withEstimatedTimeRemainingInMinutes(Long estimatedTimeRemainingInMinutes) {
         this.estimatedTimeRemainingInMinutes = estimatedTimeRemainingInMinutes;
         return this;
@@ -38,6 +40,7 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public DescribeWhatIfAnalysisResponse withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -48,6 +51,7 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeWhatIfAnalysisResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -56,6 +60,7 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeWhatIfAnalysisResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -64,6 +69,7 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeWhatIfAnalysisResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -75,6 +81,7 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesSelector")
     public TimeSeriesSelector timeSeriesSelector;
+
     public DescribeWhatIfAnalysisResponse withTimeSeriesSelector(TimeSeriesSelector timeSeriesSelector) {
         this.timeSeriesSelector = timeSeriesSelector;
         return this;
@@ -83,6 +90,7 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfAnalysisArn")
     public String whatIfAnalysisArn;
+
     public DescribeWhatIfAnalysisResponse withWhatIfAnalysisArn(String whatIfAnalysisArn) {
         this.whatIfAnalysisArn = whatIfAnalysisArn;
         return this;
@@ -91,9 +99,11 @@ public class DescribeWhatIfAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfAnalysisName")
     public String whatIfAnalysisName;
+
     public DescribeWhatIfAnalysisResponse withWhatIfAnalysisName(String whatIfAnalysisName) {
         this.whatIfAnalysisName = whatIfAnalysisName;
         return this;
     }
     
+    public DescribeWhatIfAnalysisResponse(){}
 }

@@ -106,12 +106,10 @@ public class BatchAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBatchRequestResponse res = new org.openapis.openapi.models.operations.CreateBatchRequestResponse() {{
+        org.openapis.openapi.models.operations.CreateBatchRequestResponse res = new org.openapis.openapi.models.operations.CreateBatchRequestResponse(contentType, httpRes.statusCode()) {{
             createBatchRequest200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

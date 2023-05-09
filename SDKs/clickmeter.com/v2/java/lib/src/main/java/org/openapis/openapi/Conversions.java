@@ -58,14 +58,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsCountResponse res = new org.openapis.openapi.models.operations.ConversionsCountResponse() {{
+        org.openapis.openapi.models.operations.ConversionsCountResponse res = new org.openapis.openapi.models.operations.ConversionsCountResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesCountResponce = null;
             apiCoreResponsesCountResponce = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,14 +113,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsDeleteResponse res = new org.openapis.openapi.models.operations.ConversionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ConversionsDeleteResponse res = new org.openapis.openapi.models.operations.ConversionsDeleteResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,12 +174,10 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsGetResponse res = new org.openapis.openapi.models.operations.ConversionsGetResponse() {{
+        org.openapis.openapi.models.operations.ConversionsGetResponse res = new org.openapis.openapi.models.operations.ConversionsGetResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,12 +225,10 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsGetDatapointsResponse res = new org.openapis.openapi.models.operations.ConversionsGetDatapointsResponse() {{
+        org.openapis.openapi.models.operations.ConversionsGetDatapointsResponse res = new org.openapis.openapi.models.operations.ConversionsGetDatapointsResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,14 +276,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsGetDatapointsCountResponse res = new org.openapis.openapi.models.operations.ConversionsGetDatapointsCountResponse() {{
+        org.openapis.openapi.models.operations.ConversionsGetDatapointsCountResponse res = new org.openapis.openapi.models.operations.ConversionsGetDatapointsCountResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesCountResponce = null;
             apiCoreResponsesCountResponce = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,12 +337,10 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsGetHitsResponse res = new org.openapis.openapi.models.operations.ConversionsGetHitsResponse() {{
+        org.openapis.openapi.models.operations.ConversionsGetHitsResponse res = new org.openapis.openapi.models.operations.ConversionsGetHitsResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoClickStreamHitListPage = null;
             apiCoreDtoClickStreamHitListPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -400,12 +388,10 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsGetStatisticsAllListResponse res = new org.openapis.openapi.models.operations.ConversionsGetStatisticsAllListResponse() {{
+        org.openapis.openapi.models.operations.ConversionsGetStatisticsAllListResponse res = new org.openapis.openapi.models.operations.ConversionsGetStatisticsAllListResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -453,12 +439,10 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsGetStatisticsListResponse res = new org.openapis.openapi.models.operations.ConversionsGetStatisticsListResponse() {{
+        org.openapis.openapi.models.operations.ConversionsGetStatisticsListResponse res = new org.openapis.openapi.models.operations.ConversionsGetStatisticsListResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,12 +490,10 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleResponse res = new org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleResponse() {{
+        org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleResponse res = new org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAggregatedAggregatedResult = null;
             apiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -558,14 +540,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPatchNotesFormResponse res = new org.openapis.openapi.models.operations.ConversionsPatchNotesFormResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPatchNotesFormResponse res = new org.openapis.openapi.models.operations.ConversionsPatchNotesFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -620,14 +600,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPatchNotesJsonResponse res = new org.openapis.openapi.models.operations.ConversionsPatchNotesJsonResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPatchNotesJsonResponse res = new org.openapis.openapi.models.operations.ConversionsPatchNotesJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -682,14 +660,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPatchNotesRawResponse res = new org.openapis.openapi.models.operations.ConversionsPatchNotesRawResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPatchNotesRawResponse res = new org.openapis.openapi.models.operations.ConversionsPatchNotesRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -744,14 +720,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPatchFormResponse res = new org.openapis.openapi.models.operations.ConversionsPatchFormResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPatchFormResponse res = new org.openapis.openapi.models.operations.ConversionsPatchFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -806,14 +780,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPatchJsonResponse res = new org.openapis.openapi.models.operations.ConversionsPatchJsonResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPatchJsonResponse res = new org.openapis.openapi.models.operations.ConversionsPatchJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -868,14 +840,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPatchRawResponse res = new org.openapis.openapi.models.operations.ConversionsPatchRawResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPatchRawResponse res = new org.openapis.openapi.models.operations.ConversionsPatchRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -930,14 +900,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPostFormResponse res = new org.openapis.openapi.models.operations.ConversionsPostFormResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPostFormResponse res = new org.openapis.openapi.models.operations.ConversionsPostFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -992,14 +960,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPostJsonResponse res = new org.openapis.openapi.models.operations.ConversionsPostJsonResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPostJsonResponse res = new org.openapis.openapi.models.operations.ConversionsPostJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,14 +1020,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPostRawResponse res = new org.openapis.openapi.models.operations.ConversionsPostRawResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPostRawResponse res = new org.openapis.openapi.models.operations.ConversionsPostRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1116,14 +1080,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPutFormResponse res = new org.openapis.openapi.models.operations.ConversionsPutFormResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPutFormResponse res = new org.openapis.openapi.models.operations.ConversionsPutFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1178,14 +1140,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPutJsonResponse res = new org.openapis.openapi.models.operations.ConversionsPutJsonResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPutJsonResponse res = new org.openapis.openapi.models.operations.ConversionsPutJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1240,14 +1200,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConversionsPutRawResponse res = new org.openapis.openapi.models.operations.ConversionsPutRawResponse() {{
+        org.openapis.openapi.models.operations.ConversionsPutRawResponse res = new org.openapis.openapi.models.operations.ConversionsPutRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1297,14 +1255,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConversionsConversionIdResponse res = new org.openapis.openapi.models.operations.GetConversionsConversionIdResponse() {{
+        org.openapis.openapi.models.operations.GetConversionsConversionIdResponse res = new org.openapis.openapi.models.operations.GetConversionsConversionIdResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoConversionsConversion = null;
             apiCoreDtoConversionsConversion = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1359,14 +1315,12 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConversionsConversionIdDatapointsBatchPatchResponse res = new org.openapis.openapi.models.operations.PutConversionsConversionIdDatapointsBatchPatchResponse() {{
+        org.openapis.openapi.models.operations.PutConversionsConversionIdDatapointsBatchPatchResponse res = new org.openapis.openapi.models.operations.PutConversionsConversionIdDatapointsBatchPatchResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

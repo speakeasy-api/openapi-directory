@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhookDeliveryLogResource {
     @JsonProperty("attributes")
     public WebhookDeliveryLogResourceAttributes attributes;
+
     public WebhookDeliveryLogResource withAttributes(WebhookDeliveryLogResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class WebhookDeliveryLogResource {
      */
     @JsonProperty("id")
     public String id;
+
     public WebhookDeliveryLogResource withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class WebhookDeliveryLogResource {
     
     @JsonProperty("relationships")
     public WebhookDeliveryLogResourceRelationships relationships;
+
     public WebhookDeliveryLogResource withRelationships(WebhookDeliveryLogResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -42,9 +45,16 @@ public class WebhookDeliveryLogResource {
      */
     @JsonProperty("type")
     public String type;
+
     public WebhookDeliveryLogResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public WebhookDeliveryLogResource(@JsonProperty("attributes") WebhookDeliveryLogResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("relationships") WebhookDeliveryLogResourceRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

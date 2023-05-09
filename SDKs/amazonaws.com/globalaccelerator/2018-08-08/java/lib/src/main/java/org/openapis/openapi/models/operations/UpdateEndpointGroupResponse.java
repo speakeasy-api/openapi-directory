@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEndpointGroupResponse {
@@ -12,6 +13,7 @@ public class UpdateEndpointGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateEndpointGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEndpointGroupResponse {
     
     
     public String contentType;
+
     public UpdateEndpointGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEndpointGroupResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public UpdateEndpointGroupResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEndpointGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateEndpointGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateEndpointGroupResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateEndpointGroupResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateEndpointGroupResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateEndpointGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateEndpointGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateEndpointGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateEndpointGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEndpointGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateEndpointGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEndpointGroupResponse updateEndpointGroupResponse;
+
     public UpdateEndpointGroupResponse withUpdateEndpointGroupResponse(org.openapis.openapi.models.shared.UpdateEndpointGroupResponse updateEndpointGroupResponse) {
         this.updateEndpointGroupResponse = updateEndpointGroupResponse;
         return this;
     }
     
+    public UpdateEndpointGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheParameterGroup {
     
     public String arn;
+
     public CacheParameterGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class CacheParameterGroup {
     
     
     public String cacheParameterGroupFamily;
+
     public CacheParameterGroup withCacheParameterGroupFamily(String cacheParameterGroupFamily) {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
@@ -26,6 +28,7 @@ public class CacheParameterGroup {
     
     
     public String cacheParameterGroupName;
+
     public CacheParameterGroup withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -33,6 +36,7 @@ public class CacheParameterGroup {
     
     
     public String description;
+
     public CacheParameterGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +44,11 @@ public class CacheParameterGroup {
     
     
     public Boolean isGlobal;
+
     public CacheParameterGroup withIsGlobal(Boolean isGlobal) {
         this.isGlobal = isGlobal;
         return this;
     }
     
+    public CacheParameterGroup(){}
 }

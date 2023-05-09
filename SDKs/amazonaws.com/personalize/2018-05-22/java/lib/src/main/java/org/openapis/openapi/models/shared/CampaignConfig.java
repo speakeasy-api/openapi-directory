@@ -15,9 +15,11 @@ public class CampaignConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemExplorationConfig")
     public java.util.Map<String, String> itemExplorationConfig;
+
     public CampaignConfig withItemExplorationConfig(java.util.Map<String, String> itemExplorationConfig) {
         this.itemExplorationConfig = itemExplorationConfig;
         return this;
     }
     
+    public CampaignConfig(){}
 }

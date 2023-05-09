@@ -15,6 +15,7 @@ public class VeevaSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentType")
     public String documentType;
+
     public VeevaSourceProperties withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -23,6 +24,7 @@ public class VeevaSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeAllVersions")
     public Boolean includeAllVersions;
+
     public VeevaSourceProperties withIncludeAllVersions(Boolean includeAllVersions) {
         this.includeAllVersions = includeAllVersions;
         return this;
@@ -31,6 +33,7 @@ public class VeevaSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeRenditions")
     public Boolean includeRenditions;
+
     public VeevaSourceProperties withIncludeRenditions(Boolean includeRenditions) {
         this.includeRenditions = includeRenditions;
         return this;
@@ -39,6 +42,7 @@ public class VeevaSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeSourceFiles")
     public Boolean includeSourceFiles;
+
     public VeevaSourceProperties withIncludeSourceFiles(Boolean includeSourceFiles) {
         this.includeSourceFiles = includeSourceFiles;
         return this;
@@ -46,9 +50,13 @@ public class VeevaSourceProperties {
     
     @JsonProperty("object")
     public String object;
+
     public VeevaSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public VeevaSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement {
     
     public String[] destinationAddresses;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement withDestinationAddresses(String[] destinationAddresses) {
         this.destinationAddresses = destinationAddresses;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeCon
     
     
     public String[] destinationPorts;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement withDestinationPorts(String[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeCon
     
     
     public String[] destinationPrefixLists;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement withDestinationPrefixLists(String[] destinationPrefixLists) {
         this.destinationPrefixLists = destinationPrefixLists;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeCon
     
     
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum[] protocols;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement withProtocols(CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -40,6 +44,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeCon
     
     
     public String[] sourceAddresses;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement withSourceAddresses(String[] sourceAddresses) {
         this.sourceAddresses = sourceAddresses;
         return this;
@@ -47,6 +52,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeCon
     
     
     public String[] sourcePorts;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement withSourcePorts(String[] sourcePorts) {
         this.sourcePorts = sourcePorts;
         return this;
@@ -54,9 +60,11 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeCon
     
     
     public String[] sourcePrefixLists;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement withSourcePrefixLists(String[] sourcePrefixLists) {
         this.sourcePrefixLists = sourcePrefixLists;
         return this;
     }
     
+    public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement(){}
 }

@@ -15,9 +15,11 @@ public class InstanceGroupManagerAllInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public InstancePropertiesPatch properties;
+
     public InstanceGroupManagerAllInstancesConfig withProperties(InstancePropertiesPatch properties) {
         this.properties = properties;
         return this;
     }
     
+    public InstanceGroupManagerAllInstancesConfig(){}
 }

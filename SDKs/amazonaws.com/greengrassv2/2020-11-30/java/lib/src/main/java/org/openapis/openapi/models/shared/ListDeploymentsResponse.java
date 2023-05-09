@@ -15,6 +15,7 @@ public class ListDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployments")
     public Deployment[] deployments;
+
     public ListDeploymentsResponse withDeployments(Deployment[] deployments) {
         this.deployments = deployments;
         return this;
@@ -23,9 +24,11 @@ public class ListDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeploymentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDeploymentsResponse(){}
 }

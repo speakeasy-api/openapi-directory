@@ -13,6 +13,7 @@ public class GistsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GistsListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -23,6 +24,7 @@ public class GistsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GistsListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -33,9 +35,11 @@ public class GistsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public GistsListRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
     }
     
+    public GistsListRequest(){}
 }

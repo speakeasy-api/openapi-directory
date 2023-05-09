@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetFactFodSecurity;
 import org.openapis.openapi.models.operations.GetFactFodRequest;
 import org.openapis.openapi.models.operations.GetFactFodResponse;
+import org.openapis.openapi.models.operations.GetFactFodSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,9 +28,9 @@ public class Application {
 
             GetFactFodRequest req = new GetFactFodRequest() {{
                 category = "corrupti";
-            }}            
+            }};            
 
-            GetFactFodResponse res = sdk.factOfTheDay.getFactFod(req, new GetFactFodSecurity() {{
+            GetFactFodResponse res = sdk.factOfTheDay.getFactFod(req, new GetFactFodSecurity("provident") {{
                 xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -41,6 +40,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,33 +49,33 @@ public class Application {
 ## Available Resources and Operations
 
 
-### factOfTheDay
+### [factOfTheDay](docs/factoftheday/README.md)
 
-* `getFactFod` - Get fact of the day for the given category.
-* `getFactFodCategories` - Get the list of supported fact of the day categories.
+* [getFactFod](docs/factoftheday/README.md#getfactfod) - Get fact of the day for the given category.
+* [getFactFodCategories](docs/factoftheday/README.md#getfactfodcategories) - Get the list of supported fact of the day categories.
 
-### numberFacts
+### [numberFacts](docs/numberfacts/README.md)
 
-* `getFactNumbers` - Get a random fact about a number
+* [getFactNumbers](docs/numberfacts/README.md#getfactnumbers) - Get a random fact about a number
 
-### onThisDay
+### [onThisDay](docs/onthisday/README.md)
 
-* `getFactOnthisdayBorn` - Returns a random ( famous/ relatively famous ) person born on a given day and month
-* `getFactOnthisdayDied` - Returns a random ( famous/ relatively famous ) person died on a given day and month
-* `getFactOnthisdayEvent` - Returns a random ( famous/ relatively famous ) historic event on a given day and month
+* [getFactOnthisdayBorn](docs/onthisday/README.md#getfactonthisdayborn) - Returns a random ( famous/ relatively famous ) person born on a given day and month
+* [getFactOnthisdayDied](docs/onthisday/README.md#getfactonthisdaydied) - Returns a random ( famous/ relatively famous ) person died on a given day and month
+* [getFactOnthisdayEvent](docs/onthisday/README.md#getfactonthisdayevent) - Returns a random ( famous/ relatively famous ) historic event on a given day and month
 
-### privateFacts
+### [privateFacts](docs/privatefacts/README.md)
 
-* `deleteFact` - Delete a Fact entry identified by the id.
-* `getFact` - Get a Fact belonging to the id.
-* `putFact` - Add a Fact entry to the database (private collection).
+* [deleteFact](docs/privatefacts/README.md#deletefact) - Delete a Fact entry identified by the id.
+* [getFact](docs/privatefacts/README.md#getfact) - Get a Fact belonging to the id.
+* [putFact](docs/privatefacts/README.md#putfact) - Add a Fact entry to the database (private collection).
 
-### randomFacts
+### [randomFacts](docs/randomfacts/README.md)
 
-* `getFact` - Get a Fact belonging to the id.
-* `getFactCategories` - Get a random Fact.
-* `getFactRandom` - Get a random Fact for a given category(optional) and subcategory(optional).
-* `getFactSearch` - Search for random Fact which has the text in the query, for a given category(optional) and subcategory(optional).
+* [getFact](docs/randomfacts/README.md#getfact) - Get a Fact belonging to the id.
+* [getFactCategories](docs/randomfacts/README.md#getfactcategories) - Get a random Fact.
+* [getFactRandom](docs/randomfacts/README.md#getfactrandom) - Get a random Fact for a given category(optional) and subcategory(optional).
+* [getFactSearch](docs/randomfacts/README.md#getfactsearch) - Search for random Fact which has the text in the query, for a given category(optional) and subcategory(optional).
 <!-- End SDK Available Operations -->
 
 ### Maturity

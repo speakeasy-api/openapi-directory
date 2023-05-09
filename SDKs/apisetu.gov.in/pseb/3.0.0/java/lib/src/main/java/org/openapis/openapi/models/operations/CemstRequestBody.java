@@ -15,6 +15,7 @@ public class CemstRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public CemstRequestBodyCertificateParameters certificateParameters;
+
     public CemstRequestBody withCertificateParameters(CemstRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class CemstRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public CemstRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class CemstRequestBody {
      */
     @JsonProperty("format")
     public CemstRequestBodyFormatEnum format;
+
     public CemstRequestBody withFormat(CemstRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class CemstRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public CemstRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public CemstRequestBody(@JsonProperty("format") CemstRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

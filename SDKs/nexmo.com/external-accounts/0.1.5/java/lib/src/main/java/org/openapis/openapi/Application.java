@@ -60,14 +60,12 @@ public class Application {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LinkApplicationResponse res = new org.openapis.openapi.models.operations.LinkApplicationResponse() {{
+        org.openapis.openapi.models.operations.LinkApplicationResponse res = new org.openapis.openapi.models.operations.LinkApplicationResponse(contentType, httpRes.statusCode()) {{
             accountResponse = null;
             fourHundredAndOneResponse = null;
             linkApplication403ApplicationJSONObject = null;
             linkApplication409ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,13 +122,11 @@ public class Application {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationResponse res = new org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationResponse() {{
+        org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationResponse res = new org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationResponse(contentType, httpRes.statusCode()) {{
             fourHundredAndOneResponse = null;
             unliWithoutApplicationnkApplication403ApplicationJSONObject = null;
             unliWithoutApplicationnkApplication409ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

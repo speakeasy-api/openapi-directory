@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineGetRequest {
@@ -12,9 +13,13 @@ public class LineGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public LineGetRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public LineGetRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

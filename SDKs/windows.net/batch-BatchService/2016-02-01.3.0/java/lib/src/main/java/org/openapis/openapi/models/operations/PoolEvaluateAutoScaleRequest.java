@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolEvaluateAutoScaleRequest {
@@ -12,6 +13,7 @@ public class PoolEvaluateAutoScaleRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PoolEvaluateAutoScaleParameter poolEvaluateAutoScaleParameter;
+
     public PoolEvaluateAutoScaleRequest withPoolEvaluateAutoScaleParameter(org.openapis.openapi.models.shared.PoolEvaluateAutoScaleParameter poolEvaluateAutoScaleParameter) {
         this.poolEvaluateAutoScaleParameter = poolEvaluateAutoScaleParameter;
         return this;
@@ -22,6 +24,7 @@ public class PoolEvaluateAutoScaleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolEvaluateAutoScaleRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class PoolEvaluateAutoScaleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolEvaluateAutoScaleRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class PoolEvaluateAutoScaleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolEvaluateAutoScaleRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class PoolEvaluateAutoScaleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public PoolEvaluateAutoScaleRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -62,6 +68,7 @@ public class PoolEvaluateAutoScaleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolEvaluateAutoScaleRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -72,9 +79,15 @@ public class PoolEvaluateAutoScaleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolEvaluateAutoScaleRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolEvaluateAutoScaleRequest(@JsonProperty("PoolEvaluateAutoScaleParameter") org.openapis.openapi.models.shared.PoolEvaluateAutoScaleParameter poolEvaluateAutoScaleParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("poolId") String poolId) {
+        this.poolEvaluateAutoScaleParameter = poolEvaluateAutoScaleParameter;
+        this.apiVersion = apiVersion;
+        this.poolId = poolId;
+  }
 }

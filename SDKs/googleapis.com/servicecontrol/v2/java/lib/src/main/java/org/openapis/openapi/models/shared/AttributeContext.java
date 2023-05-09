@@ -18,6 +18,7 @@ public class AttributeContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public Api api;
+
     public AttributeContext withApi(Api api) {
         this.api = api;
         return this;
@@ -29,6 +30,7 @@ public class AttributeContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Peer destination;
+
     public AttributeContext withDestination(Peer destination) {
         this.destination = destination;
         return this;
@@ -40,6 +42,7 @@ public class AttributeContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extensions")
     public java.util.Map<String, Object>[] extensions;
+
     public AttributeContext withExtensions(java.util.Map<String, Object>[] extensions) {
         this.extensions = extensions;
         return this;
@@ -51,6 +54,7 @@ public class AttributeContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public Peer origin;
+
     public AttributeContext withOrigin(Peer origin) {
         this.origin = origin;
         return this;
@@ -62,6 +66,7 @@ public class AttributeContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public Request request;
+
     public AttributeContext withRequest(Request request) {
         this.request = request;
         return this;
@@ -73,6 +78,7 @@ public class AttributeContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public Resource resource;
+
     public AttributeContext withResource(Resource resource) {
         this.resource = resource;
         return this;
@@ -84,6 +90,7 @@ public class AttributeContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public Response response;
+
     public AttributeContext withResponse(Response response) {
         this.response = response;
         return this;
@@ -95,9 +102,11 @@ public class AttributeContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Peer source;
+
     public AttributeContext withSource(Peer source) {
         this.source = source;
         return this;
     }
     
+    public AttributeContext(){}
 }

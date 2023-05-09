@@ -15,6 +15,7 @@ public class HidUpdateMobiletRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthIdNumber")
     public String healthIdNumber;
+
     public HidUpdateMobiletRequest withHealthIdNumber(String healthIdNumber) {
         this.healthIdNumber = healthIdNumber;
         return this;
@@ -23,9 +24,11 @@ public class HidUpdateMobiletRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public HidUpdateMobiletRequest withMobile(String mobile) {
         this.mobile = mobile;
         return this;
     }
     
+    public HidUpdateMobiletRequest(){}
 }

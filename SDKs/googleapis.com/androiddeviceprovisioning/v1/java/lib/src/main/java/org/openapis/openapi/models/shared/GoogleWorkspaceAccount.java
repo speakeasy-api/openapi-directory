@@ -18,6 +18,7 @@ public class GoogleWorkspaceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public GoogleWorkspaceAccount withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleWorkspaceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preProvisioningTokens")
     public String[] preProvisioningTokens;
+
     public GoogleWorkspaceAccount withPreProvisioningTokens(String[] preProvisioningTokens) {
         this.preProvisioningTokens = preProvisioningTokens;
         return this;
     }
     
+    public GoogleWorkspaceAccount(){}
 }

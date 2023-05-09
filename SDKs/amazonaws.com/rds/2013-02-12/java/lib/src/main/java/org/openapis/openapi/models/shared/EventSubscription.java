@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class EventSubscription {
     
     public String custSubscriptionId;
+
     public EventSubscription withCustSubscriptionId(String custSubscriptionId) {
         this.custSubscriptionId = custSubscriptionId;
         return this;
@@ -16,6 +17,7 @@ public class EventSubscription {
     
     
     public String customerAwsId;
+
     public EventSubscription withCustomerAwsId(String customerAwsId) {
         this.customerAwsId = customerAwsId;
         return this;
@@ -23,6 +25,7 @@ public class EventSubscription {
     
     
     public Boolean enabled;
+
     public EventSubscription withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -30,6 +33,7 @@ public class EventSubscription {
     
     
     public String[] eventCategoriesList;
+
     public EventSubscription withEventCategoriesList(String[] eventCategoriesList) {
         this.eventCategoriesList = eventCategoriesList;
         return this;
@@ -37,6 +41,7 @@ public class EventSubscription {
     
     
     public String snsTopicArn;
+
     public EventSubscription withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -44,6 +49,7 @@ public class EventSubscription {
     
     
     public String[] sourceIdsList;
+
     public EventSubscription withSourceIdsList(String[] sourceIdsList) {
         this.sourceIdsList = sourceIdsList;
         return this;
@@ -51,6 +57,7 @@ public class EventSubscription {
     
     
     public String sourceType;
+
     public EventSubscription withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -58,6 +65,7 @@ public class EventSubscription {
     
     
     public String status;
+
     public EventSubscription withStatus(String status) {
         this.status = status;
         return this;
@@ -65,9 +73,11 @@ public class EventSubscription {
     
     
     public String subscriptionCreationTime;
+
     public EventSubscription withSubscriptionCreationTime(String subscriptionCreationTime) {
         this.subscriptionCreationTime = subscriptionCreationTime;
         return this;
     }
     
+    public EventSubscription(){}
 }

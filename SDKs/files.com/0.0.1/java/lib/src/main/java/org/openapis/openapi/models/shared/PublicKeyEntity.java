@@ -25,6 +25,7 @@ public class PublicKeyEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public PublicKeyEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +37,7 @@ public class PublicKeyEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public PublicKeyEntity withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -47,6 +49,7 @@ public class PublicKeyEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public PublicKeyEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -58,9 +61,11 @@ public class PublicKeyEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PublicKeyEntity withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PublicKeyEntity(){}
 }

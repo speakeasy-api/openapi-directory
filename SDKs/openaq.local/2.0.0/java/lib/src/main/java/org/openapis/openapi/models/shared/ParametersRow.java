@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ParametersRow {
     @JsonProperty("description")
     public String description;
+
     public ParametersRow withDescription(String description) {
         this.description = description;
         return this;
@@ -18,6 +19,7 @@ public class ParametersRow {
     
     @JsonProperty("displayName")
     public String displayName;
+
     public ParametersRow withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -25,6 +27,7 @@ public class ParametersRow {
     
     @JsonProperty("id")
     public Long id;
+
     public ParametersRow withId(Long id) {
         this.id = id;
         return this;
@@ -33,6 +36,7 @@ public class ParametersRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCore")
     public Boolean isCore;
+
     public ParametersRow withIsCore(Boolean isCore) {
         this.isCore = isCore;
         return this;
@@ -41,6 +45,7 @@ public class ParametersRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxColorValue")
     public Double maxColorValue;
+
     public ParametersRow withMaxColorValue(Double maxColorValue) {
         this.maxColorValue = maxColorValue;
         return this;
@@ -48,6 +53,7 @@ public class ParametersRow {
     
     @JsonProperty("name")
     public String name;
+
     public ParametersRow withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +61,17 @@ public class ParametersRow {
     
     @JsonProperty("preferredUnit")
     public String preferredUnit;
+
     public ParametersRow withPreferredUnit(String preferredUnit) {
         this.preferredUnit = preferredUnit;
         return this;
     }
     
+    public ParametersRow(@JsonProperty("description") String description, @JsonProperty("displayName") String displayName, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("preferredUnit") String preferredUnit) {
+        this.description = description;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.preferredUnit = preferredUnit;
+  }
 }

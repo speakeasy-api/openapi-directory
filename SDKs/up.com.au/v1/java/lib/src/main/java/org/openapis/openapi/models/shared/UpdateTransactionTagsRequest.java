@@ -17,9 +17,13 @@ public class UpdateTransactionTagsRequest {
      */
     @JsonProperty("data")
     public TagInputResourceIdentifier[] data;
+
     public UpdateTransactionTagsRequest withData(TagInputResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public UpdateTransactionTagsRequest(@JsonProperty("data") TagInputResourceIdentifier[] data) {
+        this.data = data;
+  }
 }

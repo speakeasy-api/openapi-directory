@@ -15,6 +15,7 @@ public class EvaluateSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationResult")
     public AuthenticationResult authenticationResult;
+
     public EvaluateSessionResponse withAuthenticationResult(AuthenticationResult authenticationResult) {
         this.authenticationResult = authenticationResult;
         return this;
@@ -23,6 +24,7 @@ public class EvaluateSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public EvaluateSessionResponse withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -31,6 +33,7 @@ public class EvaluateSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FraudDetectionResult")
     public FraudDetectionResult fraudDetectionResult;
+
     public EvaluateSessionResponse withFraudDetectionResult(FraudDetectionResult fraudDetectionResult) {
         this.fraudDetectionResult = fraudDetectionResult;
         return this;
@@ -39,6 +42,7 @@ public class EvaluateSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public EvaluateSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -47,6 +51,7 @@ public class EvaluateSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionName")
     public String sessionName;
+
     public EvaluateSessionResponse withSessionName(String sessionName) {
         this.sessionName = sessionName;
         return this;
@@ -55,9 +60,11 @@ public class EvaluateSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingStatus")
     public StreamingStatusEnum streamingStatus;
+
     public EvaluateSessionResponse withStreamingStatus(StreamingStatusEnum streamingStatus) {
         this.streamingStatus = streamingStatus;
         return this;
     }
     
+    public EvaluateSessionResponse(){}
 }

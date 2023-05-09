@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCheckpointFirewallsResponse {
     
     public String contentType;
+
     public ListCheckpointFirewallsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCheckpointFirewallsResponse {
      */
     
     public org.openapis.openapi.models.shared.DataSourceListResponse dataSourceListResponse;
+
     public ListCheckpointFirewallsResponse withDataSourceListResponse(org.openapis.openapi.models.shared.DataSourceListResponse dataSourceListResponse) {
         this.dataSourceListResponse = dataSourceListResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListCheckpointFirewallsResponse {
     
     
     public Integer statusCode;
+
     public ListCheckpointFirewallsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListCheckpointFirewallsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCheckpointFirewallsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCheckpointFirewallsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

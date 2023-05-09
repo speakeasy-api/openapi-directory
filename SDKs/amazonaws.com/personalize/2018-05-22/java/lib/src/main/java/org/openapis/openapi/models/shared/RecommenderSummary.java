@@ -22,6 +22,7 @@ public class RecommenderSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public RecommenderSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class RecommenderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public RecommenderSummary withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -40,6 +42,7 @@ public class RecommenderSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public RecommenderSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class RecommenderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RecommenderSummary withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class RecommenderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public RecommenderSummary withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
@@ -64,6 +69,7 @@ public class RecommenderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public RecommenderSummary withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
@@ -72,6 +78,7 @@ public class RecommenderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderConfig")
     public RecommenderConfig recommenderConfig;
+
     public RecommenderSummary withRecommenderConfig(RecommenderConfig recommenderConfig) {
         this.recommenderConfig = recommenderConfig;
         return this;
@@ -80,9 +87,11 @@ public class RecommenderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RecommenderSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RecommenderSummary(){}
 }

@@ -15,6 +15,7 @@ public class AugmentedManifestsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnnotationDataS3Uri")
     public String annotationDataS3Uri;
+
     public AugmentedManifestsListItem withAnnotationDataS3Uri(String annotationDataS3Uri) {
         this.annotationDataS3Uri = annotationDataS3Uri;
         return this;
@@ -22,6 +23,7 @@ public class AugmentedManifestsListItem {
     
     @JsonProperty("AttributeNames")
     public String[] attributeNames;
+
     public AugmentedManifestsListItem withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -30,6 +32,7 @@ public class AugmentedManifestsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public AugmentedManifestsDocumentTypeFormatEnum documentType;
+
     public AugmentedManifestsListItem withDocumentType(AugmentedManifestsDocumentTypeFormatEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -37,6 +40,7 @@ public class AugmentedManifestsListItem {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public AugmentedManifestsListItem withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
@@ -45,6 +49,7 @@ public class AugmentedManifestsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDocumentsS3Uri")
     public String sourceDocumentsS3Uri;
+
     public AugmentedManifestsListItem withSourceDocumentsS3Uri(String sourceDocumentsS3Uri) {
         this.sourceDocumentsS3Uri = sourceDocumentsS3Uri;
         return this;
@@ -53,9 +58,14 @@ public class AugmentedManifestsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Split")
     public SplitEnum split;
+
     public AugmentedManifestsListItem withSplit(SplitEnum split) {
         this.split = split;
         return this;
     }
     
+    public AugmentedManifestsListItem(@JsonProperty("AttributeNames") String[] attributeNames, @JsonProperty("S3Uri") String s3Uri) {
+        this.attributeNames = attributeNames;
+        this.s3Uri = s3Uri;
+  }
 }

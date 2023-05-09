@@ -15,6 +15,7 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public Long creationTime;
+
     public MetricFilter withCreationTime(Long creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -23,6 +24,7 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterName")
     public String filterName;
+
     public MetricFilter withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -34,6 +36,7 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterPattern")
     public String filterPattern;
+
     public MetricFilter withFilterPattern(String filterPattern) {
         this.filterPattern = filterPattern;
         return this;
@@ -42,6 +45,7 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public MetricFilter withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -50,9 +54,11 @@ public class MetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricTransformations")
     public MetricTransformation[] metricTransformations;
+
     public MetricFilter withMetricTransformations(MetricTransformation[] metricTransformations) {
         this.metricTransformations = metricTransformations;
         return this;
     }
     
+    public MetricFilter(){}
 }

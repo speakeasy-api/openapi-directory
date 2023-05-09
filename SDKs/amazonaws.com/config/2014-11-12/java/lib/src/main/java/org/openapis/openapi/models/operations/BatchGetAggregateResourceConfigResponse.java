@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetAggregateResourceConfigResponse {
@@ -12,6 +13,7 @@ public class BatchGetAggregateResourceConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetAggregateResourceConfigResponse batchGetAggregateResourceConfigResponse;
+
     public BatchGetAggregateResourceConfigResponse withBatchGetAggregateResourceConfigResponse(org.openapis.openapi.models.shared.BatchGetAggregateResourceConfigResponse batchGetAggregateResourceConfigResponse) {
         this.batchGetAggregateResourceConfigResponse = batchGetAggregateResourceConfigResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetAggregateResourceConfigResponse {
     
     
     public String contentType;
+
     public BatchGetAggregateResourceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetAggregateResourceConfigResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public BatchGetAggregateResourceConfigResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -36,6 +40,7 @@ public class BatchGetAggregateResourceConfigResponse {
     
     
     public Integer statusCode;
+
     public BatchGetAggregateResourceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class BatchGetAggregateResourceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetAggregateResourceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class BatchGetAggregateResourceConfigResponse {
      */
     
     public Object validationException;
+
     public BatchGetAggregateResourceConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetAggregateResourceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

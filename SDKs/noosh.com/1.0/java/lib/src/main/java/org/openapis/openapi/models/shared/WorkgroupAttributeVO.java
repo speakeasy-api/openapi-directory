@@ -15,6 +15,7 @@ public class WorkgroupAttributeVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_checked")
     public Boolean isChecked;
+
     public WorkgroupAttributeVO withIsChecked(Boolean isChecked) {
         this.isChecked = isChecked;
         return this;
@@ -23,6 +24,7 @@ public class WorkgroupAttributeVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public WorkgroupAttributeVO withLabel(String label) {
         this.label = label;
         return this;
@@ -31,9 +33,11 @@ public class WorkgroupAttributeVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_type_id")
     public Long productTypeId;
+
     public WorkgroupAttributeVO withProductTypeId(Long productTypeId) {
         this.productTypeId = productTypeId;
         return this;
     }
     
+    public WorkgroupAttributeVO(){}
 }

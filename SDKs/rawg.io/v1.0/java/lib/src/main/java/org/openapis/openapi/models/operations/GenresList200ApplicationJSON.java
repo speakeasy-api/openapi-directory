@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GenresList200ApplicationJSON {
     @JsonProperty("count")
     public Long count;
+
     public GenresList200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class GenresList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public GenresList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -27,6 +29,7 @@ public class GenresList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public GenresList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -34,9 +37,14 @@ public class GenresList200ApplicationJSON {
     
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Genre[] results;
+
     public GenresList200ApplicationJSON withResults(org.openapis.openapi.models.shared.Genre[] results) {
         this.results = results;
         return this;
     }
     
+    public GenresList200ApplicationJSON(@JsonProperty("count") Long count, @JsonProperty("results") org.openapis.openapi.models.shared.Genre[] results) {
+        this.count = count;
+        this.results = results;
+  }
 }

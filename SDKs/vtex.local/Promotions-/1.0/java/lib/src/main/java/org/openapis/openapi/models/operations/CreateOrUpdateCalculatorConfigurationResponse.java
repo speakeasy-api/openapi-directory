@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOrUpdateCalculatorConfigurationResponse {
     
     public String contentType;
+
     public CreateOrUpdateCalculatorConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateOrUpdateCalculatorConfigurationResponse {
      */
     
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON createOrUpdateCalculatorConfiguration200ApplicationJSONObject;
+
     public CreateOrUpdateCalculatorConfigurationResponse withCreateOrUpdateCalculatorConfiguration200ApplicationJSONObject(CreateOrUpdateCalculatorConfiguration200ApplicationJSON createOrUpdateCalculatorConfiguration200ApplicationJSONObject) {
         this.createOrUpdateCalculatorConfiguration200ApplicationJSONObject = createOrUpdateCalculatorConfiguration200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class CreateOrUpdateCalculatorConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateOrUpdateCalculatorConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreateOrUpdateCalculatorConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOrUpdateCalculatorConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONBuild {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch_name")
     public String branchName;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONBuild withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -29,6 +30,7 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONBuild {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_hash")
     public String commitHash;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONBuild withCommitHash(String commitHash) {
         this.commitHash = commitHash;
         return this;
@@ -40,9 +42,11 @@ public class ReleasesGetLatestPrivateRelease200ApplicationJSONBuild {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_message")
     public String commitMessage;
+
     public ReleasesGetLatestPrivateRelease200ApplicationJSONBuild withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
     }
     
+    public ReleasesGetLatestPrivateRelease200ApplicationJSONBuild(){}
 }

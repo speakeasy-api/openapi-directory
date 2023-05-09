@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResponseOkNoneType {
     @JsonProperty("results")
     public Object results;
+
     public ResponseOkNoneType withResults(Object results) {
         this.results = results;
         return this;
     }
     
+    public ResponseOkNoneType(@JsonProperty("results") Object results) {
+        this.results = results;
+  }
 }

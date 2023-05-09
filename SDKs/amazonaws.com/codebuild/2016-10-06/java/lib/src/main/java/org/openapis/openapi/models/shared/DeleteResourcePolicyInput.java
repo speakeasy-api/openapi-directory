@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteResourcePolicyInput {
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public DeleteResourcePolicyInput withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DeleteResourcePolicyInput(@JsonProperty("resourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

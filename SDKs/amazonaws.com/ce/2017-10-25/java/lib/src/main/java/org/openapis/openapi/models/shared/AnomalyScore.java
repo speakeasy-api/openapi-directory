@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnomalyScore {
     @JsonProperty("CurrentScore")
     public Double currentScore;
+
     public AnomalyScore withCurrentScore(Double currentScore) {
         this.currentScore = currentScore;
         return this;
@@ -19,9 +20,14 @@ public class AnomalyScore {
     
     @JsonProperty("MaxScore")
     public Double maxScore;
+
     public AnomalyScore withMaxScore(Double maxScore) {
         this.maxScore = maxScore;
         return this;
     }
     
+    public AnomalyScore(@JsonProperty("CurrentScore") Double currentScore, @JsonProperty("MaxScore") Double maxScore) {
+        this.currentScore = currentScore;
+        this.maxScore = maxScore;
+  }
 }

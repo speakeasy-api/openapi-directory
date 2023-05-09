@@ -15,6 +15,7 @@ public class AlgorithmStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageScanStatuses")
     public AlgorithmStatusItem[] imageScanStatuses;
+
     public AlgorithmStatusDetails withImageScanStatuses(AlgorithmStatusItem[] imageScanStatuses) {
         this.imageScanStatuses = imageScanStatuses;
         return this;
@@ -23,9 +24,11 @@ public class AlgorithmStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationStatuses")
     public AlgorithmStatusItem[] validationStatuses;
+
     public AlgorithmStatusDetails withValidationStatuses(AlgorithmStatusItem[] validationStatuses) {
         this.validationStatuses = validationStatuses;
         return this;
     }
     
+    public AlgorithmStatusDetails(){}
 }

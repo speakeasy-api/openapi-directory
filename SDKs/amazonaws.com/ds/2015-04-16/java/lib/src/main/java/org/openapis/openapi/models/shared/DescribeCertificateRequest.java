@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeCertificateRequest {
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public DescribeCertificateRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -16,9 +17,14 @@ public class DescribeCertificateRequest {
     
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DescribeCertificateRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public DescribeCertificateRequest(@JsonProperty("CertificateId") String certificateId, @JsonProperty("DirectoryId") String directoryId) {
+        this.certificateId = certificateId;
+        this.directoryId = directoryId;
+  }
 }

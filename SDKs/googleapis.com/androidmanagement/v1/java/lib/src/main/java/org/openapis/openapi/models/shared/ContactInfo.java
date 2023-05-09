@@ -18,6 +18,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactEmail")
     public String contactEmail;
+
     public ContactInfo withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -29,6 +30,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataProtectionOfficerEmail")
     public String dataProtectionOfficerEmail;
+
     public ContactInfo withDataProtectionOfficerEmail(String dataProtectionOfficerEmail) {
         this.dataProtectionOfficerEmail = dataProtectionOfficerEmail;
         return this;
@@ -40,6 +42,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataProtectionOfficerName")
     public String dataProtectionOfficerName;
+
     public ContactInfo withDataProtectionOfficerName(String dataProtectionOfficerName) {
         this.dataProtectionOfficerName = dataProtectionOfficerName;
         return this;
@@ -51,6 +54,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataProtectionOfficerPhone")
     public String dataProtectionOfficerPhone;
+
     public ContactInfo withDataProtectionOfficerPhone(String dataProtectionOfficerPhone) {
         this.dataProtectionOfficerPhone = dataProtectionOfficerPhone;
         return this;
@@ -62,6 +66,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("euRepresentativeEmail")
     public String euRepresentativeEmail;
+
     public ContactInfo withEuRepresentativeEmail(String euRepresentativeEmail) {
         this.euRepresentativeEmail = euRepresentativeEmail;
         return this;
@@ -73,6 +78,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("euRepresentativeName")
     public String euRepresentativeName;
+
     public ContactInfo withEuRepresentativeName(String euRepresentativeName) {
         this.euRepresentativeName = euRepresentativeName;
         return this;
@@ -84,9 +90,11 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("euRepresentativePhone")
     public String euRepresentativePhone;
+
     public ContactInfo withEuRepresentativePhone(String euRepresentativePhone) {
         this.euRepresentativePhone = euRepresentativePhone;
         return this;
     }
     
+    public ContactInfo(){}
 }

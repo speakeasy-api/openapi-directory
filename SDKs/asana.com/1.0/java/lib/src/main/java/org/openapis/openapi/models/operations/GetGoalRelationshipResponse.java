@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGoalRelationshipResponse {
     
     public String contentType;
+
     public GetGoalRelationshipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetGoalRelationshipResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetGoalRelationshipResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetGoalRelationshipResponse {
     
     
     public Integer statusCode;
+
     public GetGoalRelationshipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetGoalRelationshipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGoalRelationshipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetGoalRelationshipResponse {
      */
     
     public GetGoalRelationship200ApplicationJSON getGoalRelationship200ApplicationJSONObject;
+
     public GetGoalRelationshipResponse withGetGoalRelationship200ApplicationJSONObject(GetGoalRelationship200ApplicationJSON getGoalRelationship200ApplicationJSONObject) {
         this.getGoalRelationship200ApplicationJSONObject = getGoalRelationship200ApplicationJSONObject;
         return this;
     }
     
+    public GetGoalRelationshipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

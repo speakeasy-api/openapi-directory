@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsVCpuCount {
     
     public Long max;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsVCpuCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstance
     
     
     public Long min;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsVCpuCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsVCpuCount(){}
 }

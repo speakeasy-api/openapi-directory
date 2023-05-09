@@ -12,6 +12,7 @@ public class PutImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDigest")
     public String imageDigest;
+
     public PutImageRequest withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -19,6 +20,7 @@ public class PutImageRequest {
     
     @JsonProperty("imageManifest")
     public String imageManifest;
+
     public PutImageRequest withImageManifest(String imageManifest) {
         this.imageManifest = imageManifest;
         return this;
@@ -27,6 +29,7 @@ public class PutImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageManifestMediaType")
     public String imageManifestMediaType;
+
     public PutImageRequest withImageManifestMediaType(String imageManifestMediaType) {
         this.imageManifestMediaType = imageManifestMediaType;
         return this;
@@ -35,6 +38,7 @@ public class PutImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTag")
     public String imageTag;
+
     public PutImageRequest withImageTag(String imageTag) {
         this.imageTag = imageTag;
         return this;
@@ -43,6 +47,7 @@ public class PutImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public PutImageRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -50,9 +55,14 @@ public class PutImageRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutImageRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PutImageRequest(@JsonProperty("imageManifest") String imageManifest, @JsonProperty("repositoryName") String repositoryName) {
+        this.imageManifest = imageManifest;
+        this.repositoryName = repositoryName;
+  }
 }

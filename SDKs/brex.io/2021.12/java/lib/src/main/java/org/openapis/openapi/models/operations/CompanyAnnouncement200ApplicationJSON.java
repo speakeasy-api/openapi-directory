@@ -14,6 +14,7 @@ public class CompanyAnnouncement200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public CompanyAnnouncement200ApplicationJSON withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -22,6 +23,7 @@ public class CompanyAnnouncement200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CompanyAnnouncement200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class CompanyAnnouncement200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public CompanyAnnouncement200ApplicationJSON withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -38,6 +41,7 @@ public class CompanyAnnouncement200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structured")
     public String structured;
+
     public CompanyAnnouncement200ApplicationJSON withStructured(String structured) {
         this.structured = structured;
         return this;
@@ -46,6 +50,7 @@ public class CompanyAnnouncement200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public CompanyAnnouncement200ApplicationJSON withText(String text) {
         this.text = text;
         return this;
@@ -55,6 +60,7 @@ public class CompanyAnnouncement200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("time")
     public LocalDate time;
+
     public CompanyAnnouncement200ApplicationJSON withTime(LocalDate time) {
         this.time = time;
         return this;
@@ -63,9 +69,11 @@ public class CompanyAnnouncement200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CompanyAnnouncement200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CompanyAnnouncement200ApplicationJSON(){}
 }

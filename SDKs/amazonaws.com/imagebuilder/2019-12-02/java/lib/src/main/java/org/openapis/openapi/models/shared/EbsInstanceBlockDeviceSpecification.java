@@ -15,6 +15,7 @@ public class EbsInstanceBlockDeviceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteOnTermination")
     public Boolean deleteOnTermination;
+
     public EbsInstanceBlockDeviceSpecification withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -23,6 +24,7 @@ public class EbsInstanceBlockDeviceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted")
     public Boolean encrypted;
+
     public EbsInstanceBlockDeviceSpecification withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -31,6 +33,7 @@ public class EbsInstanceBlockDeviceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iops")
     public Long iops;
+
     public EbsInstanceBlockDeviceSpecification withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -39,6 +42,7 @@ public class EbsInstanceBlockDeviceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public EbsInstanceBlockDeviceSpecification withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -47,6 +51,7 @@ public class EbsInstanceBlockDeviceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotId")
     public String snapshotId;
+
     public EbsInstanceBlockDeviceSpecification withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -55,6 +60,7 @@ public class EbsInstanceBlockDeviceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("throughput")
     public Long throughput;
+
     public EbsInstanceBlockDeviceSpecification withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -63,6 +69,7 @@ public class EbsInstanceBlockDeviceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeSize")
     public Long volumeSize;
+
     public EbsInstanceBlockDeviceSpecification withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -71,9 +78,11 @@ public class EbsInstanceBlockDeviceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeType")
     public EbsVolumeTypeEnum volumeType;
+
     public EbsInstanceBlockDeviceSpecification withVolumeType(EbsVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public EbsInstanceBlockDeviceSpecification(){}
 }

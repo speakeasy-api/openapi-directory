@@ -18,6 +18,7 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCustomErrorResponsePolicy")
     public CustomErrorResponsePolicy defaultCustomErrorResponsePolicy;
+
     public PathMatcher withDefaultCustomErrorResponsePolicy(CustomErrorResponsePolicy defaultCustomErrorResponsePolicy) {
         this.defaultCustomErrorResponsePolicy = defaultCustomErrorResponsePolicy;
         return this;
@@ -26,6 +27,7 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultRouteAction")
     public HttpRouteAction defaultRouteAction;
+
     public PathMatcher withDefaultRouteAction(HttpRouteAction defaultRouteAction) {
         this.defaultRouteAction = defaultRouteAction;
         return this;
@@ -37,6 +39,7 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultService")
     public String defaultService;
+
     public PathMatcher withDefaultService(String defaultService) {
         this.defaultService = defaultService;
         return this;
@@ -48,6 +51,7 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultUrlRedirect")
     public HttpRedirectAction defaultUrlRedirect;
+
     public PathMatcher withDefaultUrlRedirect(HttpRedirectAction defaultUrlRedirect) {
         this.defaultUrlRedirect = defaultUrlRedirect;
         return this;
@@ -59,6 +63,7 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PathMatcher withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +75,7 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerAction")
     public HttpHeaderAction headerAction;
+
     public PathMatcher withHeaderAction(HttpHeaderAction headerAction) {
         this.headerAction = headerAction;
         return this;
@@ -81,6 +87,7 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PathMatcher withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +99,7 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathRules")
     public PathRule[] pathRules;
+
     public PathMatcher withPathRules(PathRule[] pathRules) {
         this.pathRules = pathRules;
         return this;
@@ -103,9 +111,11 @@ public class PathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeRules")
     public HttpRouteRule[] routeRules;
+
     public PathMatcher withRouteRules(HttpRouteRule[] routeRules) {
         this.routeRules = routeRules;
         return this;
     }
     
+    public PathMatcher(){}
 }

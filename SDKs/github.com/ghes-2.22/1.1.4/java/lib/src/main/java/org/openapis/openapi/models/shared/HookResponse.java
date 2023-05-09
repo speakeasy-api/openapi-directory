@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HookResponse {
     @JsonProperty("code")
     public Long code;
+
     public HookResponse withCode(Long code) {
         this.code = code;
         return this;
@@ -16,6 +17,7 @@ public class HookResponse {
     
     @JsonProperty("message")
     public String message;
+
     public HookResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +25,15 @@ public class HookResponse {
     
     @JsonProperty("status")
     public String status;
+
     public HookResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public HookResponse(@JsonProperty("code") Long code, @JsonProperty("message") String message, @JsonProperty("status") String status) {
+        this.code = code;
+        this.message = message;
+        this.status = status;
+  }
 }

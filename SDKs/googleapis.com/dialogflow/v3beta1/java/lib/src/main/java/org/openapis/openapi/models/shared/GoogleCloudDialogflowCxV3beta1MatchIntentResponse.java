@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1MatchIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPage")
     public GoogleCloudDialogflowCxV3beta1Page currentPage;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentResponse withCurrentPage(GoogleCloudDialogflowCxV3beta1Page currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1MatchIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public GoogleCloudDialogflowCxV3beta1Match[] matches;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentResponse withMatches(GoogleCloudDialogflowCxV3beta1Match[] matches) {
         this.matches = matches;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1MatchIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentResponse withText(String text) {
         this.text = text;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1MatchIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcript")
     public String transcript;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentResponse withTranscript(String transcript) {
         this.transcript = transcript;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1MatchIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerEvent")
     public String triggerEvent;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentResponse withTriggerEvent(String triggerEvent) {
         this.triggerEvent = triggerEvent;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3beta1MatchIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerIntent")
     public String triggerIntent;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentResponse withTriggerIntent(String triggerIntent) {
         this.triggerIntent = triggerIntent;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1MatchIntentResponse(){}
 }

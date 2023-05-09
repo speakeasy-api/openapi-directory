@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContinuousBackupsResponse {
     
     public String contentType;
+
     public UpdateContinuousBackupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateContinuousBackupsResponse {
      */
     
     public Object continuousBackupsUnavailableException;
+
     public UpdateContinuousBackupsResponse withContinuousBackupsUnavailableException(Object continuousBackupsUnavailableException) {
         this.continuousBackupsUnavailableException = continuousBackupsUnavailableException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateContinuousBackupsResponse {
      */
     
     public Object internalServerError;
+
     public UpdateContinuousBackupsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class UpdateContinuousBackupsResponse {
     
     
     public Integer statusCode;
+
     public UpdateContinuousBackupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateContinuousBackupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContinuousBackupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateContinuousBackupsResponse {
      */
     
     public Object tableNotFoundException;
+
     public UpdateContinuousBackupsResponse withTableNotFoundException(Object tableNotFoundException) {
         this.tableNotFoundException = tableNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateContinuousBackupsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateContinuousBackupsOutput updateContinuousBackupsOutput;
+
     public UpdateContinuousBackupsResponse withUpdateContinuousBackupsOutput(org.openapis.openapi.models.shared.UpdateContinuousBackupsOutput updateContinuousBackupsOutput) {
         this.updateContinuousBackupsOutput = updateContinuousBackupsOutput;
         return this;
     }
     
+    public UpdateContinuousBackupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

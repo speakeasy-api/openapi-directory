@@ -18,6 +18,7 @@ public class NodeConfigDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcfsConfig")
     public GcfsConfig gcfsConfig;
+
     public NodeConfigDefaults withGcfsConfig(GcfsConfig gcfsConfig) {
         this.gcfsConfig = gcfsConfig;
         return this;
@@ -29,9 +30,11 @@ public class NodeConfigDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public NodePoolLoggingConfig loggingConfig;
+
     public NodeConfigDefaults withLoggingConfig(NodePoolLoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
     }
     
+    public NodeConfigDefaults(){}
 }

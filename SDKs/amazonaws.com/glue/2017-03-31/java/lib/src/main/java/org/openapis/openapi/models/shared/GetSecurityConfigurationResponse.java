@@ -15,9 +15,11 @@ public class GetSecurityConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public SecurityConfiguration securityConfiguration;
+
     public GetSecurityConfigurationResponse withSecurityConfiguration(SecurityConfiguration securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
     }
     
+    public GetSecurityConfigurationResponse(){}
 }

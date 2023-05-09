@@ -15,6 +15,7 @@ public class AwsEc2VpcPeeringConnectionVpcInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrBlock")
     public String cidrBlock;
+
     public AwsEc2VpcPeeringConnectionVpcInfoDetails withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2VpcPeeringConnectionVpcInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrBlockSet")
     public VpcInfoCidrBlockSetDetails[] cidrBlockSet;
+
     public AwsEc2VpcPeeringConnectionVpcInfoDetails withCidrBlockSet(VpcInfoCidrBlockSetDetails[] cidrBlockSet) {
         this.cidrBlockSet = cidrBlockSet;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2VpcPeeringConnectionVpcInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6CidrBlockSet")
     public VpcInfoIpv6CidrBlockSetDetails[] ipv6CidrBlockSet;
+
     public AwsEc2VpcPeeringConnectionVpcInfoDetails withIpv6CidrBlockSet(VpcInfoIpv6CidrBlockSetDetails[] ipv6CidrBlockSet) {
         this.ipv6CidrBlockSet = ipv6CidrBlockSet;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2VpcPeeringConnectionVpcInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public AwsEc2VpcPeeringConnectionVpcInfoDetails withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2VpcPeeringConnectionVpcInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeeringOptions")
     public VpcInfoPeeringOptionsDetails peeringOptions;
+
     public AwsEc2VpcPeeringConnectionVpcInfoDetails withPeeringOptions(VpcInfoPeeringOptionsDetails peeringOptions) {
         this.peeringOptions = peeringOptions;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2VpcPeeringConnectionVpcInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public AwsEc2VpcPeeringConnectionVpcInfoDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -63,9 +69,11 @@ public class AwsEc2VpcPeeringConnectionVpcInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsEc2VpcPeeringConnectionVpcInfoDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsEc2VpcPeeringConnectionVpcInfoDetails(){}
 }

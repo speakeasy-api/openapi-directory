@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBatchDeleteScheduledActionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETBatchDeleteScheduledActionActionEnum action;
+
     public GETBatchDeleteScheduledActionRequest withAction(GETBatchDeleteScheduledActionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETBatchDeleteScheduledActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETBatchDeleteScheduledActionRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETBatchDeleteScheduledActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduledActionNames")
     public String[] scheduledActionNames;
+
     public GETBatchDeleteScheduledActionRequest withScheduledActionNames(String[] scheduledActionNames) {
         this.scheduledActionNames = scheduledActionNames;
         return this;
@@ -36,6 +40,7 @@ public class GETBatchDeleteScheduledActionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETBatchDeleteScheduledActionVersionEnum version;
+
     public GETBatchDeleteScheduledActionRequest withVersion(GETBatchDeleteScheduledActionVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETBatchDeleteScheduledActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETBatchDeleteScheduledActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETBatchDeleteScheduledActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETBatchDeleteScheduledActionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETBatchDeleteScheduledActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETBatchDeleteScheduledActionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETBatchDeleteScheduledActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETBatchDeleteScheduledActionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETBatchDeleteScheduledActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETBatchDeleteScheduledActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETBatchDeleteScheduledActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETBatchDeleteScheduledActionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETBatchDeleteScheduledActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETBatchDeleteScheduledActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETBatchDeleteScheduledActionRequest(@JsonProperty("Action") GETBatchDeleteScheduledActionActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("ScheduledActionNames") String[] scheduledActionNames, @JsonProperty("Version") GETBatchDeleteScheduledActionVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.scheduledActionNames = scheduledActionNames;
+        this.version = version;
+  }
 }

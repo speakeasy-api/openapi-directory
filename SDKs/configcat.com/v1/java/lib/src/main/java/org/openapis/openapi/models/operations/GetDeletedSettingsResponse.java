@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeletedSettingsResponse {
     
     public String contentType;
+
     public GetDeletedSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetDeletedSettingsResponse {
     
     
     public org.openapis.openapi.models.shared.SettingModelHaljson[] settingModelHaljsons;
+
     public GetDeletedSettingsResponse withSettingModelHaljsons(org.openapis.openapi.models.shared.SettingModelHaljson[] settingModelHaljsons) {
         this.settingModelHaljsons = settingModelHaljsons;
         return this;
@@ -23,6 +26,7 @@ public class GetDeletedSettingsResponse {
     
     
     public org.openapis.openapi.models.shared.SettingModel[] settingModels;
+
     public GetDeletedSettingsResponse withSettingModels(org.openapis.openapi.models.shared.SettingModel[] settingModels) {
         this.settingModels = settingModels;
         return this;
@@ -30,6 +34,7 @@ public class GetDeletedSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetDeletedSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class GetDeletedSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeletedSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeletedSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

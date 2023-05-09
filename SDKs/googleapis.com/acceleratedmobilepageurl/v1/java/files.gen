@@ -40,4 +40,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchGetAmpUrlsRequestLookupStrategyEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchGetAmpUrlsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/ampurls/README.md
 USAGE.md

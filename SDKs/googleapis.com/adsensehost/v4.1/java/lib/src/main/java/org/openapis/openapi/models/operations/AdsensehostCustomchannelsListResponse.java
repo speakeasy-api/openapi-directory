@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdsensehostCustomchannelsListResponse {
     
     public String contentType;
+
     public AdsensehostCustomchannelsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdsensehostCustomchannelsListResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomChannels customChannels;
+
     public AdsensehostCustomchannelsListResponse withCustomChannels(org.openapis.openapi.models.shared.CustomChannels customChannels) {
         this.customChannels = customChannels;
         return this;
@@ -26,6 +29,7 @@ public class AdsensehostCustomchannelsListResponse {
     
     
     public Integer statusCode;
+
     public AdsensehostCustomchannelsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdsensehostCustomchannelsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdsensehostCustomchannelsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdsensehostCustomchannelsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

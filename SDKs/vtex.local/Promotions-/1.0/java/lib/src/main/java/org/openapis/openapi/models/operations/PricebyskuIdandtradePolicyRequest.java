@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PricebyskuIdandtradePolicyRequest {
@@ -12,6 +13,7 @@ public class PricebyskuIdandtradePolicyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PricebyskuIdandtradePolicyRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PricebyskuIdandtradePolicyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PricebyskuIdandtradePolicyRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PricebyskuIdandtradePolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
     public String an;
+
     public PricebyskuIdandtradePolicyRequest withAn(String an) {
         this.an = an;
         return this;
@@ -36,6 +40,7 @@ public class PricebyskuIdandtradePolicyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public PricebyskuIdandtradePolicyRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
@@ -43,9 +48,17 @@ public class PricebyskuIdandtradePolicyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tradePolicy")
     public String tradePolicy;
+
     public PricebyskuIdandtradePolicyRequest withTradePolicy(String tradePolicy) {
         this.tradePolicy = tradePolicy;
         return this;
     }
     
+    public PricebyskuIdandtradePolicyRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("an") String an, @JsonProperty("skuId") String skuId, @JsonProperty("tradePolicy") String tradePolicy) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.an = an;
+        this.skuId = skuId;
+        this.tradePolicy = tradePolicy;
+  }
 }

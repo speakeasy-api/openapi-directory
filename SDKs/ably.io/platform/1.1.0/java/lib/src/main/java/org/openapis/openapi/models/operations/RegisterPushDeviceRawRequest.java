@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class RegisterPushDeviceRawRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-msgpack")
     public byte[] requestBody;
+
     public RegisterPushDeviceRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +20,7 @@ public class RegisterPushDeviceRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public RegisterPushDeviceRawRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -29,9 +31,11 @@ public class RegisterPushDeviceRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public RegisterPushDeviceRawRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public RegisterPushDeviceRawRequest(){}
 }

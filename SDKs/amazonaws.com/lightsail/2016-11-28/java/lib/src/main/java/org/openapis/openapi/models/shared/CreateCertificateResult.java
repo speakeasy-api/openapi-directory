@@ -15,6 +15,7 @@ public class CreateCertificateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public CertificateSummary certificate;
+
     public CreateCertificateResult withCertificate(CertificateSummary certificate) {
         this.certificate = certificate;
         return this;
@@ -23,9 +24,11 @@ public class CreateCertificateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public CreateCertificateResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public CreateCertificateResult(){}
 }

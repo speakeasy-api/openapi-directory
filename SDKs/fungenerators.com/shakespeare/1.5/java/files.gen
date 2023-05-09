@@ -44,5 +44,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetShakespeareGenerateN
 lib/src/main/java/org/openapis/openapi/models/operations/GetShakespeareTranslateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShakespeareTranslateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShakespeareTranslateResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetShakespeareQuoteSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShakespeareQuoteResponse.java
+docs/sdk/README.md
+docs/generation/README.md
+docs/translation/README.md
+docs/works/README.md
 USAGE.md

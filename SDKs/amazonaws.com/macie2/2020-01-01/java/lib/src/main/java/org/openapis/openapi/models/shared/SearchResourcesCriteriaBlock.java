@@ -15,9 +15,11 @@ public class SearchResourcesCriteriaBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("and")
     public SearchResourcesCriteria[] and;
+
     public SearchResourcesCriteriaBlock withAnd(SearchResourcesCriteria[] and) {
         this.and = and;
         return this;
     }
     
+    public SearchResourcesCriteriaBlock(){}
 }

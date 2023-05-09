@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUnfilteredTableMetadataResponse {
     
     public String contentType;
+
     public GetUnfilteredTableMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,8 +21,31 @@ public class GetUnfilteredTableMetadataResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetUnfilteredTableMetadataResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceException
+     */
+    
+    public Object federationSourceException;
+
+    public GetUnfilteredTableMetadataResponse withFederationSourceException(Object federationSourceException) {
+        this.federationSourceException = federationSourceException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceRetryableException
+     */
+    
+    public Object federationSourceRetryableException;
+
+    public GetUnfilteredTableMetadataResponse withFederationSourceRetryableException(Object federationSourceRetryableException) {
+        this.federationSourceRetryableException = federationSourceRetryableException;
         return this;
     }
     
@@ -29,6 +54,7 @@ public class GetUnfilteredTableMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUnfilteredTableMetadataResponse getUnfilteredTableMetadataResponse;
+
     public GetUnfilteredTableMetadataResponse withGetUnfilteredTableMetadataResponse(org.openapis.openapi.models.shared.GetUnfilteredTableMetadataResponse getUnfilteredTableMetadataResponse) {
         this.getUnfilteredTableMetadataResponse = getUnfilteredTableMetadataResponse;
         return this;
@@ -39,6 +65,7 @@ public class GetUnfilteredTableMetadataResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetUnfilteredTableMetadataResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +76,7 @@ public class GetUnfilteredTableMetadataResponse {
      */
     
     public Object internalServiceException;
+
     public GetUnfilteredTableMetadataResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +87,7 @@ public class GetUnfilteredTableMetadataResponse {
      */
     
     public Object invalidInputException;
+
     public GetUnfilteredTableMetadataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +98,7 @@ public class GetUnfilteredTableMetadataResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetUnfilteredTableMetadataResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +109,7 @@ public class GetUnfilteredTableMetadataResponse {
      */
     
     public Object permissionTypeMismatchException;
+
     public GetUnfilteredTableMetadataResponse withPermissionTypeMismatchException(Object permissionTypeMismatchException) {
         this.permissionTypeMismatchException = permissionTypeMismatchException;
         return this;
@@ -86,6 +117,7 @@ public class GetUnfilteredTableMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetUnfilteredTableMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +125,14 @@ public class GetUnfilteredTableMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUnfilteredTableMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUnfilteredTableMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public EnhancedImageScanFinding withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -28,6 +29,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnhancedImageScanFinding withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingArn")
     public String findingArn;
+
     public EnhancedImageScanFinding withFindingArn(String findingArn) {
         this.findingArn = findingArn;
         return this;
@@ -46,6 +49,7 @@ public class EnhancedImageScanFinding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstObservedAt")
     public OffsetDateTime firstObservedAt;
+
     public EnhancedImageScanFinding withFirstObservedAt(OffsetDateTime firstObservedAt) {
         this.firstObservedAt = firstObservedAt;
         return this;
@@ -56,6 +60,7 @@ public class EnhancedImageScanFinding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastObservedAt")
     public OffsetDateTime lastObservedAt;
+
     public EnhancedImageScanFinding withLastObservedAt(OffsetDateTime lastObservedAt) {
         this.lastObservedAt = lastObservedAt;
         return this;
@@ -64,6 +69,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageVulnerabilityDetails")
     public PackageVulnerabilityDetails packageVulnerabilityDetails;
+
     public EnhancedImageScanFinding withPackageVulnerabilityDetails(PackageVulnerabilityDetails packageVulnerabilityDetails) {
         this.packageVulnerabilityDetails = packageVulnerabilityDetails;
         return this;
@@ -72,6 +78,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediation")
     public Remediation remediation;
+
     public EnhancedImageScanFinding withRemediation(Remediation remediation) {
         this.remediation = remediation;
         return this;
@@ -80,6 +87,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public Resource[] resources;
+
     public EnhancedImageScanFinding withResources(Resource[] resources) {
         this.resources = resources;
         return this;
@@ -88,6 +96,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public EnhancedImageScanFinding withScore(Double score) {
         this.score = score;
         return this;
@@ -96,6 +105,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoreDetails")
     public ScoreDetails scoreDetails;
+
     public EnhancedImageScanFinding withScoreDetails(ScoreDetails scoreDetails) {
         this.scoreDetails = scoreDetails;
         return this;
@@ -104,6 +114,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public EnhancedImageScanFinding withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -112,6 +123,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EnhancedImageScanFinding withStatus(String status) {
         this.status = status;
         return this;
@@ -120,6 +132,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EnhancedImageScanFinding withTitle(String title) {
         this.title = title;
         return this;
@@ -128,6 +141,7 @@ public class EnhancedImageScanFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public EnhancedImageScanFinding withType(String type) {
         this.type = type;
         return this;
@@ -138,9 +152,11 @@ public class EnhancedImageScanFinding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public EnhancedImageScanFinding withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public EnhancedImageScanFinding(){}
 }

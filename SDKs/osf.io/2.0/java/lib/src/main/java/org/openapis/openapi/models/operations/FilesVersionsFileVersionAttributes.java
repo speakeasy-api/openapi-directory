@@ -15,6 +15,7 @@ public class FilesVersionsFileVersionAttributes {
      */
     
     public java.util.Map<String, Object> contentType;
+
     public FilesVersionsFileVersionAttributes withContentType(java.util.Map<String, Object> contentType) {
         this.contentType = contentType;
         return this;
@@ -25,6 +26,7 @@ public class FilesVersionsFileVersionAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public FilesVersionsFileVersionAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -35,9 +37,11 @@ public class FilesVersionsFileVersionAttributes {
      */
     
     public Long size;
+
     public FilesVersionsFileVersionAttributes withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public FilesVersionsFileVersionAttributes(){}
 }

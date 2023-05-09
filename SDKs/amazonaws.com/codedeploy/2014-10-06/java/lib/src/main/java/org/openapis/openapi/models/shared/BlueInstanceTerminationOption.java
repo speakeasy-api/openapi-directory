@@ -15,6 +15,7 @@ public class BlueInstanceTerminationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public InstanceActionEnum action;
+
     public BlueInstanceTerminationOption withAction(InstanceActionEnum action) {
         this.action = action;
         return this;
@@ -23,9 +24,11 @@ public class BlueInstanceTerminationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminationWaitTimeInMinutes")
     public Long terminationWaitTimeInMinutes;
+
     public BlueInstanceTerminationOption withTerminationWaitTimeInMinutes(Long terminationWaitTimeInMinutes) {
         this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
         return this;
     }
     
+    public BlueInstanceTerminationOption(){}
 }

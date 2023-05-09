@@ -18,6 +18,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String[] brand;
+
     public PromotionInput withBrand(String[] brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandExclusion")
     public String[] brandExclusion;
+
     public PromotionInput withBrandExclusion(String[] brandExclusion) {
         this.brandExclusion = brandExclusion;
         return this;
@@ -40,6 +42,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLanguage")
     public String contentLanguage;
+
     public PromotionInput withContentLanguage(String contentLanguage) {
         this.contentLanguage = contentLanguage;
         return this;
@@ -51,6 +54,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("couponValueType")
     public PromotionCouponValueTypeEnum couponValueType;
+
     public PromotionInput withCouponValueType(PromotionCouponValueTypeEnum couponValueType) {
         this.couponValueType = couponValueType;
         return this;
@@ -62,6 +66,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeGiftDescription")
     public String freeGiftDescription;
+
     public PromotionInput withFreeGiftDescription(String freeGiftDescription) {
         this.freeGiftDescription = freeGiftDescription;
         return this;
@@ -73,6 +78,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeGiftItemId")
     public String freeGiftItemId;
+
     public PromotionInput withFreeGiftItemId(String freeGiftItemId) {
         this.freeGiftItemId = freeGiftItemId;
         return this;
@@ -84,6 +90,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeGiftValue")
     public PriceAmount freeGiftValue;
+
     public PromotionInput withFreeGiftValue(PriceAmount freeGiftValue) {
         this.freeGiftValue = freeGiftValue;
         return this;
@@ -95,6 +102,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genericRedemptionCode")
     public String genericRedemptionCode;
+
     public PromotionInput withGenericRedemptionCode(String genericRedemptionCode) {
         this.genericRedemptionCode = genericRedemptionCode;
         return this;
@@ -106,6 +114,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("getThisQuantityDiscounted")
     public Integer getThisQuantityDiscounted;
+
     public PromotionInput withGetThisQuantityDiscounted(Integer getThisQuantityDiscounted) {
         this.getThisQuantityDiscounted = getThisQuantityDiscounted;
         return this;
@@ -117,6 +126,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupId")
     public String[] itemGroupId;
+
     public PromotionInput withItemGroupId(String[] itemGroupId) {
         this.itemGroupId = itemGroupId;
         return this;
@@ -128,6 +138,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupIdExclusion")
     public String[] itemGroupIdExclusion;
+
     public PromotionInput withItemGroupIdExclusion(String[] itemGroupIdExclusion) {
         this.itemGroupIdExclusion = itemGroupIdExclusion;
         return this;
@@ -139,6 +150,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String[] itemId;
+
     public PromotionInput withItemId(String[] itemId) {
         this.itemId = itemId;
         return this;
@@ -150,6 +162,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIdExclusion")
     public String[] itemIdExclusion;
+
     public PromotionInput withItemIdExclusion(String[] itemIdExclusion) {
         this.itemIdExclusion = itemIdExclusion;
         return this;
@@ -161,6 +174,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitQuantity")
     public Integer limitQuantity;
+
     public PromotionInput withLimitQuantity(Integer limitQuantity) {
         this.limitQuantity = limitQuantity;
         return this;
@@ -172,6 +186,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitValue")
     public PriceAmount limitValue;
+
     public PromotionInput withLimitValue(PriceAmount limitValue) {
         this.limitValue = limitValue;
         return this;
@@ -183,6 +198,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longTitle")
     public String longTitle;
+
     public PromotionInput withLongTitle(String longTitle) {
         this.longTitle = longTitle;
         return this;
@@ -194,6 +210,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumPurchaseAmount")
     public PriceAmount minimumPurchaseAmount;
+
     public PromotionInput withMinimumPurchaseAmount(PriceAmount minimumPurchaseAmount) {
         this.minimumPurchaseAmount = minimumPurchaseAmount;
         return this;
@@ -205,6 +222,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumPurchaseQuantity")
     public Integer minimumPurchaseQuantity;
+
     public PromotionInput withMinimumPurchaseQuantity(Integer minimumPurchaseQuantity) {
         this.minimumPurchaseQuantity = minimumPurchaseQuantity;
         return this;
@@ -216,6 +234,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moneyBudget")
     public PriceAmount moneyBudget;
+
     public PromotionInput withMoneyBudget(PriceAmount moneyBudget) {
         this.moneyBudget = moneyBudget;
         return this;
@@ -227,6 +246,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moneyOffAmount")
     public PriceAmount moneyOffAmount;
+
     public PromotionInput withMoneyOffAmount(PriceAmount moneyOffAmount) {
         this.moneyOffAmount = moneyOffAmount;
         return this;
@@ -238,6 +258,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerType")
     public PromotionOfferTypeEnum offerType;
+
     public PromotionInput withOfferType(PromotionOfferTypeEnum offerType) {
         this.offerType = offerType;
         return this;
@@ -249,6 +270,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderLimit")
     public Integer orderLimit;
+
     public PromotionInput withOrderLimit(Integer orderLimit) {
         this.orderLimit = orderLimit;
         return this;
@@ -260,6 +282,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentOff")
     public Integer percentOff;
+
     public PromotionInput withPercentOff(Integer percentOff) {
         this.percentOff = percentOff;
         return this;
@@ -271,6 +294,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productApplicability")
     public PromotionProductApplicabilityEnum productApplicability;
+
     public PromotionInput withProductApplicability(PromotionProductApplicabilityEnum productApplicability) {
         this.productApplicability = productApplicability;
         return this;
@@ -282,6 +306,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productType")
     public String[] productType;
+
     public PromotionInput withProductType(String[] productType) {
         this.productType = productType;
         return this;
@@ -293,6 +318,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeExclusion")
     public String[] productTypeExclusion;
+
     public PromotionInput withProductTypeExclusion(String[] productTypeExclusion) {
         this.productTypeExclusion = productTypeExclusion;
         return this;
@@ -304,6 +330,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionDestinationIds")
     public String[] promotionDestinationIds;
+
     public PromotionInput withPromotionDestinationIds(String[] promotionDestinationIds) {
         this.promotionDestinationIds = promotionDestinationIds;
         return this;
@@ -315,6 +342,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionDisplayDates")
     public String promotionDisplayDates;
+
     public PromotionInput withPromotionDisplayDates(String promotionDisplayDates) {
         this.promotionDisplayDates = promotionDisplayDates;
         return this;
@@ -326,6 +354,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionDisplayTimePeriod")
     public TimePeriod promotionDisplayTimePeriod;
+
     public PromotionInput withPromotionDisplayTimePeriod(TimePeriod promotionDisplayTimePeriod) {
         this.promotionDisplayTimePeriod = promotionDisplayTimePeriod;
         return this;
@@ -337,6 +366,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionEffectiveDates")
     public String promotionEffectiveDates;
+
     public PromotionInput withPromotionEffectiveDates(String promotionEffectiveDates) {
         this.promotionEffectiveDates = promotionEffectiveDates;
         return this;
@@ -348,6 +378,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionEffectiveTimePeriod")
     public TimePeriod promotionEffectiveTimePeriod;
+
     public PromotionInput withPromotionEffectiveTimePeriod(TimePeriod promotionEffectiveTimePeriod) {
         this.promotionEffectiveTimePeriod = promotionEffectiveTimePeriod;
         return this;
@@ -359,6 +390,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionId")
     public String promotionId;
+
     public PromotionInput withPromotionId(String promotionId) {
         this.promotionId = promotionId;
         return this;
@@ -370,6 +402,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionStatus")
     public PromotionPromotionStatus promotionStatus;
+
     public PromotionInput withPromotionStatus(PromotionPromotionStatus promotionStatus) {
         this.promotionStatus = promotionStatus;
         return this;
@@ -381,6 +414,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionUrl")
     public String promotionUrl;
+
     public PromotionInput withPromotionUrl(String promotionUrl) {
         this.promotionUrl = promotionUrl;
         return this;
@@ -392,6 +426,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redemptionChannel")
     public PromotionRedemptionChannelEnum[] redemptionChannel;
+
     public PromotionInput withRedemptionChannel(PromotionRedemptionChannelEnum[] redemptionChannel) {
         this.redemptionChannel = redemptionChannel;
         return this;
@@ -403,6 +438,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingServiceNames")
     public String[] shippingServiceNames;
+
     public PromotionInput withShippingServiceNames(String[] shippingServiceNames) {
         this.shippingServiceNames = shippingServiceNames;
         return this;
@@ -414,6 +450,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeApplicability")
     public PromotionStoreApplicabilityEnum storeApplicability;
+
     public PromotionInput withStoreApplicability(PromotionStoreApplicabilityEnum storeApplicability) {
         this.storeApplicability = storeApplicability;
         return this;
@@ -425,6 +462,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCode")
     public String[] storeCode;
+
     public PromotionInput withStoreCode(String[] storeCode) {
         this.storeCode = storeCode;
         return this;
@@ -436,6 +474,7 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCodeExclusion")
     public String[] storeCodeExclusion;
+
     public PromotionInput withStoreCodeExclusion(String[] storeCodeExclusion) {
         this.storeCodeExclusion = storeCodeExclusion;
         return this;
@@ -447,9 +486,11 @@ public class PromotionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCountry")
     public String targetCountry;
+
     public PromotionInput withTargetCountry(String targetCountry) {
         this.targetCountry = targetCountry;
         return this;
     }
     
+    public PromotionInput(){}
 }

@@ -20,6 +20,7 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public JobTemplate withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class JobTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public JobTemplate withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public JobTemplate withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -46,6 +49,7 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decryptionError")
     public String decryptionError;
+
     public JobTemplate withDecryptionError(String decryptionError) {
         this.decryptionError = decryptionError;
         return this;
@@ -54,6 +58,7 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public JobTemplate withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +66,7 @@ public class JobTemplate {
     
     @JsonProperty("jobTemplateData")
     public JobTemplateData jobTemplateData;
+
     public JobTemplate withJobTemplateData(JobTemplateData jobTemplateData) {
         this.jobTemplateData = jobTemplateData;
         return this;
@@ -69,6 +75,7 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public JobTemplate withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -77,6 +84,7 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobTemplate withName(String name) {
         this.name = name;
         return this;
@@ -85,9 +93,13 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public JobTemplate withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public JobTemplate(@JsonProperty("jobTemplateData") JobTemplateData jobTemplateData) {
+        this.jobTemplateData = jobTemplateData;
+  }
 }

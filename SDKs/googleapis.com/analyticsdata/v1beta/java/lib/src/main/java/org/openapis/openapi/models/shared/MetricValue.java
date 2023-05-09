@@ -18,9 +18,11 @@ public class MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public MetricValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MetricValue(){}
 }

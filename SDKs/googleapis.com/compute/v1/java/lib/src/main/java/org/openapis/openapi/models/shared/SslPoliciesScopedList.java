@@ -15,6 +15,7 @@ public class SslPoliciesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslPolicies")
     public SslPolicy[] sslPolicies;
+
     public SslPoliciesScopedList withSslPolicies(SslPolicy[] sslPolicies) {
         this.sslPolicies = sslPolicies;
         return this;
@@ -26,9 +27,11 @@ public class SslPoliciesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public SslPoliciesScopedListWarning warning;
+
     public SslPoliciesScopedList withWarning(SslPoliciesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public SslPoliciesScopedList(){}
 }

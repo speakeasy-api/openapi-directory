@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnableVpcClassicLinkDnsSupportResult {
     
     public Boolean return_;
+
     public EnableVpcClassicLinkDnsSupportResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public EnableVpcClassicLinkDnsSupportResult(){}
 }

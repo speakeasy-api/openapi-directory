@@ -15,6 +15,7 @@ public class QueryExecutionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Catalog")
     public String catalog;
+
     public QueryExecutionContext withCatalog(String catalog) {
         this.catalog = catalog;
         return this;
@@ -23,9 +24,11 @@ public class QueryExecutionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public String database;
+
     public QueryExecutionContext withDatabase(String database) {
         this.database = database;
         return this;
     }
     
+    public QueryExecutionContext(){}
 }

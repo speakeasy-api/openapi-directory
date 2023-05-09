@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListLicenseVersionsRequest {
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public ListLicenseVersionsRequest withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -19,6 +20,7 @@ public class ListLicenseVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLicenseVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListLicenseVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLicenseVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLicenseVersionsRequest(@JsonProperty("LicenseArn") String licenseArn) {
+        this.licenseArn = licenseArn;
+  }
 }

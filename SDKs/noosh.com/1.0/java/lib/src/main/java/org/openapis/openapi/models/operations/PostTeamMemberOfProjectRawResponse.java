@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostTeamMemberOfProjectRawResponse {
     
     public byte[] body;
+
     public PostTeamMemberOfProjectRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostTeamMemberOfProjectRawResponse {
     
     
     public String contentType;
+
     public PostTeamMemberOfProjectRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostTeamMemberOfProjectRawResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public PostTeamMemberOfProjectRawResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class PostTeamMemberOfProjectRawResponse {
     
     
     public Integer statusCode;
+
     public PostTeamMemberOfProjectRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class PostTeamMemberOfProjectRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostTeamMemberOfProjectRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class PostTeamMemberOfProjectRawResponse {
      */
     
     public org.openapis.openapi.models.shared.V1x1InvitedTeamMemberResultsVO v1x1InvitedTeamMemberResultsVO;
+
     public PostTeamMemberOfProjectRawResponse withV1x1InvitedTeamMemberResultsVO(org.openapis.openapi.models.shared.V1x1InvitedTeamMemberResultsVO v1x1InvitedTeamMemberResultsVO) {
         this.v1x1InvitedTeamMemberResultsVO = v1x1InvitedTeamMemberResultsVO;
         return this;
     }
     
+    public PostTeamMemberOfProjectRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

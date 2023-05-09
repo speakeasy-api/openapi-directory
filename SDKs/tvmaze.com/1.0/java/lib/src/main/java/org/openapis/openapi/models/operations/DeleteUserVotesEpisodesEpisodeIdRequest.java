@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserVotesEpisodesEpisodeIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=episode_id")
     public Long episodeId;
+
     public DeleteUserVotesEpisodesEpisodeIdRequest withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
     }
     
+    public DeleteUserVotesEpisodesEpisodeIdRequest(@JsonProperty("episode_id") Long episodeId) {
+        this.episodeId = episodeId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStackResponse {
     
     public String contentType;
+
     public CreateStackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateStackResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStackResult createStackResult;
+
     public CreateStackResponse withCreateStackResult(org.openapis.openapi.models.shared.CreateStackResult createStackResult) {
         this.createStackResult = createStackResult;
         return this;
@@ -26,6 +29,7 @@ public class CreateStackResponse {
     
     
     public Integer statusCode;
+
     public CreateStackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateStackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CreateStackResponse {
      */
     
     public Object validationException;
+
     public CreateStackResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateStackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public java.util.Map<String, org.openapis.openapi.models.shared.ComponentRequest> components;
+
     public CreateEntityRequestBody withComponents(java.util.Map<String, org.openapis.openapi.models.shared.ComponentRequest> components) {
         this.components = components;
         return this;
@@ -26,6 +27,7 @@ public class CreateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateEntityRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CreateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public CreateEntityRequestBody withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -47,6 +50,7 @@ public class CreateEntityRequestBody {
      */
     @JsonProperty("entityName")
     public String entityName;
+
     public CreateEntityRequestBody withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -58,6 +62,7 @@ public class CreateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEntityId")
     public String parentEntityId;
+
     public CreateEntityRequestBody withParentEntityId(String parentEntityId) {
         this.parentEntityId = parentEntityId;
         return this;
@@ -69,9 +74,13 @@ public class CreateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateEntityRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEntityRequestBody(@JsonProperty("entityName") String entityName) {
+        this.entityName = entityName;
+  }
 }

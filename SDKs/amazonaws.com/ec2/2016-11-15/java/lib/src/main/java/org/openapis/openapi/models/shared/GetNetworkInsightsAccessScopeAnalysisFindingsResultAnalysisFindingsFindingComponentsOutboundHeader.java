@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader {
     
     public String[] destinationAddresses;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader withDestinationAddresses(String[] destinationAddresses) {
         this.destinationAddresses = destinationAddresses;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeaderDestinationPortRanges[] destinationPortRanges;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader withDestinationPortRanges(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeaderDestinationPortRanges[] destinationPortRanges) {
         this.destinationPortRanges = destinationPortRanges;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String protocol;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -33,6 +36,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String[] sourceAddresses;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader withSourceAddresses(String[] sourceAddresses) {
         this.sourceAddresses = sourceAddresses;
         return this;
@@ -40,9 +44,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeaderSourcePortRanges[] sourcePortRanges;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader withSourcePortRanges(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeaderSourcePortRanges[] sourcePortRanges) {
         this.sourcePortRanges = sourcePortRanges;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader(){}
 }

@@ -15,9 +15,11 @@ public class DescribeUserPoolClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolClient")
     public UserPoolClientType userPoolClient;
+
     public DescribeUserPoolClientResponse withUserPoolClient(UserPoolClientType userPoolClient) {
         this.userPoolClient = userPoolClient;
         return this;
     }
     
+    public DescribeUserPoolClientResponse(){}
 }

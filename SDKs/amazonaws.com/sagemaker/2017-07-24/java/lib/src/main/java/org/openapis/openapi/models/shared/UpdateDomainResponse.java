@@ -15,9 +15,11 @@ public class UpdateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainArn")
     public String domainArn;
+
     public UpdateDomainResponse withDomainArn(String domainArn) {
         this.domainArn = domainArn;
         return this;
     }
     
+    public UpdateDomainResponse(){}
 }

@@ -19,6 +19,7 @@ public class ListCatalogResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListCatalogResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -30,6 +31,7 @@ public class ListCatalogResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListCatalogResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -41,9 +43,11 @@ public class ListCatalogResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
     public CatalogObject[] objects;
+
     public ListCatalogResponse withObjects(CatalogObject[] objects) {
         this.objects = objects;
         return this;
     }
     
+    public ListCatalogResponse(){}
 }

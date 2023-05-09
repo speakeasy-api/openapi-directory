@@ -18,6 +18,7 @@ public class GoogleFactcheckingFactchecktoolsV1alpha1Publisher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFactcheckingFactchecktoolsV1alpha1Publisher withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFactcheckingFactchecktoolsV1alpha1Publisher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site")
     public String site;
+
     public GoogleFactcheckingFactchecktoolsV1alpha1Publisher withSite(String site) {
         this.site = site;
         return this;
     }
     
+    public GoogleFactcheckingFactchecktoolsV1alpha1Publisher(){}
 }

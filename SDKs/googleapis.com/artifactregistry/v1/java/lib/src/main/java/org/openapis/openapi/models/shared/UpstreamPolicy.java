@@ -18,6 +18,7 @@ public class UpstreamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpstreamPolicy withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class UpstreamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public UpstreamPolicy withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -40,9 +42,11 @@ public class UpstreamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public UpstreamPolicy withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public UpstreamPolicy(){}
 }

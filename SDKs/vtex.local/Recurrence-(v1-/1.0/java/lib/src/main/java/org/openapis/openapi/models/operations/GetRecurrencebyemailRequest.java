@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecurrencebyemailRequest {
@@ -12,6 +13,7 @@ public class GetRecurrencebyemailRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetRecurrencebyemailRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetRecurrencebyemailRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetRecurrencebyemailRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetRecurrencebyemailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycleStatus")
     public String cycleStatus;
+
     public GetRecurrencebyemailRequest withCycleStatus(String cycleStatus) {
         this.cycleStatus = cycleStatus;
         return this;
@@ -42,9 +46,14 @@ public class GetRecurrencebyemailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetRecurrencebyemailRequest withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public GetRecurrencebyemailRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

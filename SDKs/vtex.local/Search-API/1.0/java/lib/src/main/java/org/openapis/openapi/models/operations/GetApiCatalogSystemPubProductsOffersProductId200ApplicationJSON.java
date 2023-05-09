@@ -12,6 +12,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("EanId")
     public String eanId;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withEanId(String eanId) {
         this.eanId = eanId;
         return this;
@@ -22,6 +23,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -32,6 +34,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("LastModified")
     public String lastModified;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -42,6 +45,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("MainImage")
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONMainImage mainImage;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withMainImage(GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONMainImage mainImage) {
         this.mainImage = mainImage;
         return this;
@@ -52,6 +56,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("Name")
     public String name;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("NameComplete")
     public String nameComplete;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withNameComplete(String nameComplete) {
         this.nameComplete = nameComplete;
         return this;
@@ -72,6 +78,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("Offers")
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffers[] offers;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withOffers(GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffers[] offers) {
         this.offers = offers;
         return this;
@@ -82,6 +89,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("ProductId")
     public String productId;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -92,6 +100,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("RefId")
     public String refId;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -102,9 +111,22 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON {
      */
     @JsonProperty("SkuId")
     public String skuId;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON(@JsonProperty("EanId") String eanId, @JsonProperty("IsActive") Boolean isActive, @JsonProperty("LastModified") String lastModified, @JsonProperty("MainImage") GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONMainImage mainImage, @JsonProperty("Name") String name, @JsonProperty("NameComplete") String nameComplete, @JsonProperty("Offers") GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffers[] offers, @JsonProperty("ProductId") String productId, @JsonProperty("RefId") String refId, @JsonProperty("SkuId") String skuId) {
+        this.eanId = eanId;
+        this.isActive = isActive;
+        this.lastModified = lastModified;
+        this.mainImage = mainImage;
+        this.name = name;
+        this.nameComplete = nameComplete;
+        this.offers = offers;
+        this.productId = productId;
+        this.refId = refId;
+        this.skuId = skuId;
+  }
 }

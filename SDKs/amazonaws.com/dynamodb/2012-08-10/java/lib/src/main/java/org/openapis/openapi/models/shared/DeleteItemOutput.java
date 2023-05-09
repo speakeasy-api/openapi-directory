@@ -15,6 +15,7 @@ public class DeleteItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, AttributeValue> attributes;
+
     public DeleteItemOutput withAttributes(java.util.Map<String, AttributeValue> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class DeleteItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity consumedCapacity;
+
     public DeleteItemOutput withConsumedCapacity(ConsumedCapacity consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -31,9 +33,11 @@ public class DeleteItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCollectionMetrics")
     public ItemCollectionMetrics itemCollectionMetrics;
+
     public DeleteItemOutput withItemCollectionMetrics(ItemCollectionMetrics itemCollectionMetrics) {
         this.itemCollectionMetrics = itemCollectionMetrics;
         return this;
     }
     
+    public DeleteItemOutput(){}
 }

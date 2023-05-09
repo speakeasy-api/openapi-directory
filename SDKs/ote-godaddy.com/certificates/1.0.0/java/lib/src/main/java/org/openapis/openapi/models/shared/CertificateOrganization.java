@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CertificateOrganization {
     @JsonProperty("address")
     public CertificateAddress address;
+
     public CertificateOrganization withAddress(CertificateAddress address) {
         this.address = address;
         return this;
@@ -22,6 +23,7 @@ public class CertificateOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assumedName")
     public String assumedName;
+
     public CertificateOrganization withAssumedName(String assumedName) {
         this.assumedName = assumedName;
         return this;
@@ -30,6 +32,7 @@ public class CertificateOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jurisdictionOfIncorporation")
     public JurisdictionOfIncorporation jurisdictionOfIncorporation;
+
     public CertificateOrganization withJurisdictionOfIncorporation(JurisdictionOfIncorporation jurisdictionOfIncorporation) {
         this.jurisdictionOfIncorporation = jurisdictionOfIncorporation;
         return this;
@@ -40,6 +43,7 @@ public class CertificateOrganization {
      */
     @JsonProperty("name")
     public String name;
+
     public CertificateOrganization withName(String name) {
         this.name = name;
         return this;
@@ -50,6 +54,7 @@ public class CertificateOrganization {
      */
     @JsonProperty("phone")
     public String phone;
+
     public CertificateOrganization withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -61,6 +66,7 @@ public class CertificateOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationAgent")
     public String registrationAgent;
+
     public CertificateOrganization withRegistrationAgent(String registrationAgent) {
         this.registrationAgent = registrationAgent;
         return this;
@@ -72,9 +78,15 @@ public class CertificateOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public CertificateOrganization withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
     }
     
+    public CertificateOrganization(@JsonProperty("address") CertificateAddress address, @JsonProperty("name") String name, @JsonProperty("phone") String phone) {
+        this.address = address;
+        this.name = name;
+        this.phone = phone;
+  }
 }

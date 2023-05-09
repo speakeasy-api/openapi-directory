@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetpagedbySellerIdRequest {
@@ -12,6 +13,7 @@ public class GetpagedbySellerIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetpagedbySellerIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetpagedbySellerIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetpagedbySellerIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetpagedbySellerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetpagedbySellerIdRequest withPage(String page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class GetpagedbySellerIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public GetpagedbySellerIdRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -52,9 +57,17 @@ public class GetpagedbySellerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public GetpagedbySellerIdRequest withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public GetpagedbySellerIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("page") String page, @JsonProperty("sellerId") String sellerId, @JsonProperty("size") String size) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.page = page;
+        this.sellerId = sellerId;
+        this.size = size;
+  }
 }

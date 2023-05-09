@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOutpostsResponse {
@@ -12,6 +13,7 @@ public class ListOutpostsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListOutpostsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListOutpostsResponse {
     
     
     public String contentType;
+
     public ListOutpostsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListOutpostsResponse {
      */
     
     public Object internalServerException;
+
     public ListOutpostsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListOutpostsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOutpostsOutput listOutpostsOutput;
+
     public ListOutpostsResponse withListOutpostsOutput(org.openapis.openapi.models.shared.ListOutpostsOutput listOutpostsOutput) {
         this.listOutpostsOutput = listOutpostsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListOutpostsResponse {
     
     
     public Integer statusCode;
+
     public ListOutpostsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListOutpostsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOutpostsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListOutpostsResponse {
      */
     
     public Object validationException;
+
     public ListOutpostsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListOutpostsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

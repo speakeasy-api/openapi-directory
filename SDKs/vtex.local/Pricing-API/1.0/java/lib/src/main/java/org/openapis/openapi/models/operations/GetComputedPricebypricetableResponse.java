@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComputedPricebypricetableResponse {
     
     public String contentType;
+
     public GetComputedPricebypricetableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetComputedPricebypricetableResponse {
      */
     
     public org.openapis.openapi.models.shared.Getcomputedprice getcomputedprice;
+
     public GetComputedPricebypricetableResponse withGetcomputedprice(org.openapis.openapi.models.shared.Getcomputedprice getcomputedprice) {
         this.getcomputedprice = getcomputedprice;
         return this;
@@ -26,6 +29,7 @@ public class GetComputedPricebypricetableResponse {
     
     
     public Integer statusCode;
+
     public GetComputedPricebypricetableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetComputedPricebypricetableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComputedPricebypricetableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetComputedPricebypricetableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

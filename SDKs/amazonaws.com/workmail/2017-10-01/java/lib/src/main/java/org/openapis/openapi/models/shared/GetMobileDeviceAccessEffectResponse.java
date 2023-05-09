@@ -15,6 +15,7 @@ public class GetMobileDeviceAccessEffectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Effect")
     public MobileDeviceAccessRuleEffectEnum effect;
+
     public GetMobileDeviceAccessEffectResponse withEffect(MobileDeviceAccessRuleEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -23,9 +24,11 @@ public class GetMobileDeviceAccessEffectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchedRules")
     public MobileDeviceAccessMatchedRule[] matchedRules;
+
     public GetMobileDeviceAccessEffectResponse withMatchedRules(MobileDeviceAccessMatchedRule[] matchedRules) {
         this.matchedRules = matchedRules;
         return this;
     }
     
+    public GetMobileDeviceAccessEffectResponse(){}
 }

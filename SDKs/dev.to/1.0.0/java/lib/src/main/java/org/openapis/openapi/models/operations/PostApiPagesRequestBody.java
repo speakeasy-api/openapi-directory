@@ -15,6 +15,7 @@ public class PostApiPagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_json")
     public String bodyJson;
+
     public PostApiPagesRequestBody withBodyJson(String bodyJson) {
         this.bodyJson = bodyJson;
         return this;
@@ -26,6 +27,7 @@ public class PostApiPagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_markdown")
     public String bodyMarkdown;
+
     public PostApiPagesRequestBody withBodyMarkdown(String bodyMarkdown) {
         this.bodyMarkdown = bodyMarkdown;
         return this;
@@ -37,6 +39,7 @@ public class PostApiPagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PostApiPagesRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class PostApiPagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_top_level_path")
     public Boolean isTopLevelPath;
+
     public PostApiPagesRequestBody withIsTopLevelPath(Boolean isTopLevelPath) {
         this.isTopLevelPath = isTopLevelPath;
         return this;
@@ -59,6 +63,7 @@ public class PostApiPagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public PostApiPagesRequestBody withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -70,6 +75,7 @@ public class PostApiPagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public PostApiPagesRequestBodyTemplateEnum template;
+
     public PostApiPagesRequestBody withTemplate(PostApiPagesRequestBodyTemplateEnum template) {
         this.template = template;
         return this;
@@ -81,9 +87,11 @@ public class PostApiPagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PostApiPagesRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostApiPagesRequestBody(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTagsInput {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DeleteTagsInput withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -16,6 +17,7 @@ public class DeleteTagsInput {
     
     @JsonProperty("ResourceType")
     public TaggableResourceTypeEnum resourceType;
+
     public DeleteTagsInput withResourceType(TaggableResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -23,9 +25,15 @@ public class DeleteTagsInput {
     
     @JsonProperty("TagKeys")
     public String[] tagKeys;
+
     public DeleteTagsInput withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public DeleteTagsInput(@JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceType") TaggableResourceTypeEnum resourceType, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+        this.tagKeys = tagKeys;
+  }
 }

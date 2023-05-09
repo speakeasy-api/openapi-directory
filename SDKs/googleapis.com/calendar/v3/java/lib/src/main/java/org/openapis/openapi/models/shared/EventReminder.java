@@ -18,6 +18,7 @@ public class EventReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public EventReminder withMethod(String method) {
         this.method = method;
         return this;
@@ -30,9 +31,11 @@ public class EventReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutes")
     public Integer minutes;
+
     public EventReminder withMinutes(Integer minutes) {
         this.minutes = minutes;
         return this;
     }
     
+    public EventReminder(){}
 }

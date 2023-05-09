@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeConfigRulesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeConfigRulesRequest describeConfigRulesRequest;
+
     public DescribeConfigRulesRequest withDescribeConfigRulesRequest(org.openapis.openapi.models.shared.DescribeConfigRulesRequest describeConfigRulesRequest) {
         this.describeConfigRulesRequest = describeConfigRulesRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConfigRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public DescribeConfigRulesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,6 +29,7 @@ public class DescribeConfigRulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeConfigRulesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class DescribeConfigRulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeConfigRulesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class DescribeConfigRulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeConfigRulesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class DescribeConfigRulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeConfigRulesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class DescribeConfigRulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeConfigRulesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class DescribeConfigRulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeConfigRulesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class DescribeConfigRulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeConfigRulesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -75,9 +85,14 @@ public class DescribeConfigRulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeConfigRulesXAmzTargetEnum xAmzTarget;
+
     public DescribeConfigRulesRequest withXAmzTarget(DescribeConfigRulesXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeConfigRulesRequest(@JsonProperty("DescribeConfigRulesRequest") org.openapis.openapi.models.shared.DescribeConfigRulesRequest describeConfigRulesRequest, @JsonProperty("X-Amz-Target") DescribeConfigRulesXAmzTargetEnum xAmzTarget) {
+        this.describeConfigRulesRequest = describeConfigRulesRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

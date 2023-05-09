@@ -18,6 +18,7 @@ public class ConsolidationStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacy")
     public java.util.Map<String, Object> legacy;
+
     public ConsolidationStrategy withLegacy(java.util.Map<String, Object> legacy) {
         this.legacy = legacy;
         return this;
@@ -29,9 +30,11 @@ public class ConsolidationStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("none")
     public java.util.Map<String, Object> none;
+
     public ConsolidationStrategy withNone(java.util.Map<String, Object> none) {
         this.none = none;
         return this;
     }
     
+    public ConsolidationStrategy(){}
 }

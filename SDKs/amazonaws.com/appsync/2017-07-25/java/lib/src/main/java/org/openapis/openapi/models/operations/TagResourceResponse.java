@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagResourceResponse {
@@ -12,6 +13,7 @@ public class TagResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public TagResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class TagResourceResponse {
      */
     
     public Object badRequestException;
+
     public TagResourceResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class TagResourceResponse {
     
     
     public String contentType;
+
     public TagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class TagResourceResponse {
      */
     
     public Object internalFailureException;
+
     public TagResourceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class TagResourceResponse {
      */
     
     public Object limitExceededException;
+
     public TagResourceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class TagResourceResponse {
      */
     
     public Object notFoundException;
+
     public TagResourceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class TagResourceResponse {
     
     
     public Integer statusCode;
+
     public TagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class TagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class TagResourceResponse {
      */
     
     public java.util.Map<String, Object> tagResourceResponse;
+
     public TagResourceResponse withTagResourceResponse(java.util.Map<String, Object> tagResourceResponse) {
         this.tagResourceResponse = tagResourceResponse;
         return this;
@@ -93,9 +103,14 @@ public class TagResourceResponse {
      */
     
     public Object unauthorizedException;
+
     public TagResourceResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public TagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

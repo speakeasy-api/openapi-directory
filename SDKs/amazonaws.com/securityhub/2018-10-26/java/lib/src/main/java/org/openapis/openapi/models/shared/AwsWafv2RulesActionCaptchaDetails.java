@@ -15,9 +15,11 @@ public class AwsWafv2RulesActionCaptchaDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomRequestHandling")
     public AwsWafv2CustomRequestHandlingDetails customRequestHandling;
+
     public AwsWafv2RulesActionCaptchaDetails withCustomRequestHandling(AwsWafv2CustomRequestHandlingDetails customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
         return this;
     }
     
+    public AwsWafv2RulesActionCaptchaDetails(){}
 }

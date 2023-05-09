@@ -12,9 +12,11 @@ public class GetInventoryItemInventoryArrayV2Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public GetInventoryItemInventoryArrayV2MetaPaginationV2 pagination;
+
     public GetInventoryItemInventoryArrayV2Meta withPagination(GetInventoryItemInventoryArrayV2MetaPaginationV2 pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public GetInventoryItemInventoryArrayV2Meta(){}
 }

@@ -31,10 +31,11 @@ public class NumberOfTheDay {
 
     /**
      * Get the number of the day for current day
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersNodResponse getNumbersNod() throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersNodResponse getNumbersNod(org.openapis.openapi.models.operations.GetNumbersNodSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/nod");
         
@@ -43,15 +44,14 @@ public class NumberOfTheDay {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersNodResponse res = new org.openapis.openapi.models.operations.GetNumbersNodResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersNodResponse res = new org.openapis.openapi.models.operations.GetNumbersNodResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

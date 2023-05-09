@@ -15,6 +15,7 @@ public class ListAttachedLinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public ListAttachedLinksItem withLabel(String label) {
         this.label = label;
         return this;
@@ -23,6 +24,7 @@ public class ListAttachedLinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkArn")
     public String linkArn;
+
     public ListAttachedLinksItem withLinkArn(String linkArn) {
         this.linkArn = linkArn;
         return this;
@@ -31,9 +33,11 @@ public class ListAttachedLinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public String[] resourceTypes;
+
     public ListAttachedLinksItem withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public ListAttachedLinksItem(){}
 }

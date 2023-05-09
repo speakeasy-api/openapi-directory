@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAuthorIfNotExistsForUsingGETResponse {
     
     public String contentType;
+
     public CreateAuthorIfNotExistsForUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateAuthorIfNotExistsForUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CreateAuthorIfNotExistsForUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateAuthorIfNotExistsForUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAuthorIfNotExistsForUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateAuthorIfNotExistsForUsingGETResponse {
      */
     
     public CreateAuthorIfNotExistsForUsingGET200ApplicationJSON createAuthorIfNotExistsForUsingGET200ApplicationJSONObject;
+
     public CreateAuthorIfNotExistsForUsingGETResponse withCreateAuthorIfNotExistsForUsingGET200ApplicationJSONObject(CreateAuthorIfNotExistsForUsingGET200ApplicationJSON createAuthorIfNotExistsForUsingGET200ApplicationJSONObject) {
         this.createAuthorIfNotExistsForUsingGET200ApplicationJSONObject = createAuthorIfNotExistsForUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateAuthorIfNotExistsForUsingGETResponse {
      */
     
     public CreateAuthorIfNotExistsForUsingGET400ApplicationJSON createAuthorIfNotExistsForUsingGET400ApplicationJSONObject;
+
     public CreateAuthorIfNotExistsForUsingGETResponse withCreateAuthorIfNotExistsForUsingGET400ApplicationJSONObject(CreateAuthorIfNotExistsForUsingGET400ApplicationJSON createAuthorIfNotExistsForUsingGET400ApplicationJSONObject) {
         this.createAuthorIfNotExistsForUsingGET400ApplicationJSONObject = createAuthorIfNotExistsForUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateAuthorIfNotExistsForUsingGETResponse {
      */
     
     public CreateAuthorIfNotExistsForUsingGET401ApplicationJSON createAuthorIfNotExistsForUsingGET401ApplicationJSONObject;
+
     public CreateAuthorIfNotExistsForUsingGETResponse withCreateAuthorIfNotExistsForUsingGET401ApplicationJSONObject(CreateAuthorIfNotExistsForUsingGET401ApplicationJSON createAuthorIfNotExistsForUsingGET401ApplicationJSONObject) {
         this.createAuthorIfNotExistsForUsingGET401ApplicationJSONObject = createAuthorIfNotExistsForUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateAuthorIfNotExistsForUsingGETResponse {
      */
     
     public CreateAuthorIfNotExistsForUsingGET500ApplicationJSON createAuthorIfNotExistsForUsingGET500ApplicationJSONObject;
+
     public CreateAuthorIfNotExistsForUsingGETResponse withCreateAuthorIfNotExistsForUsingGET500ApplicationJSONObject(CreateAuthorIfNotExistsForUsingGET500ApplicationJSON createAuthorIfNotExistsForUsingGET500ApplicationJSONObject) {
         this.createAuthorIfNotExistsForUsingGET500ApplicationJSONObject = createAuthorIfNotExistsForUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CreateAuthorIfNotExistsForUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

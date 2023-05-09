@@ -22,6 +22,7 @@ public class Recommendation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public Recommendation withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Recommendation withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Impact")
     public RecommendationImpactEnum impact;
+
     public Recommendation withImpact(RecommendationImpactEnum impact) {
         this.impact = impact;
         return this;
@@ -48,6 +51,7 @@ public class Recommendation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public Recommendation withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -56,6 +60,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public Recommendation withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -64,6 +69,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RecommendationStatusEnum status;
+
     public Recommendation withStatus(RecommendationStatusEnum status) {
         this.status = status;
         return this;
@@ -72,9 +78,11 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RecommendationTypeEnum type;
+
     public Recommendation withType(RecommendationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Recommendation(){}
 }

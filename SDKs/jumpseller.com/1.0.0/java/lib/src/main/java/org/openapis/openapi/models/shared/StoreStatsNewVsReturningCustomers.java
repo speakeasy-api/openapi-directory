@@ -15,6 +15,7 @@ public class StoreStatsNewVsReturningCustomers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("global")
     public Long global;
+
     public StoreStatsNewVsReturningCustomers withGlobal(Long global) {
         this.global = global;
         return this;
@@ -26,9 +27,11 @@ public class StoreStatsNewVsReturningCustomers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_day")
     public NewVsReturning[] perDay;
+
     public StoreStatsNewVsReturningCustomers withPerDay(NewVsReturning[] perDay) {
         this.perDay = perDay;
         return this;
     }
     
+    public StoreStatsNewVsReturningCustomers(){}
 }

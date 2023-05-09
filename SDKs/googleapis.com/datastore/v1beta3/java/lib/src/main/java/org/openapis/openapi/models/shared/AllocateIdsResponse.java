@@ -18,9 +18,11 @@ public class AllocateIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public Key[] keys;
+
     public AllocateIdsResponse withKeys(Key[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public AllocateIdsResponse(){}
 }

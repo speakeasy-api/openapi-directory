@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BatchDeleteClusterSnapshotsRequest {
     
     public DeleteClusterSnapshotMessageList[] identifiers;
+
     public BatchDeleteClusterSnapshotsRequest withIdentifiers(DeleteClusterSnapshotMessageList[] identifiers) {
         this.identifiers = identifiers;
         return this;
     }
     
+    public BatchDeleteClusterSnapshotsRequest(@JsonProperty("Identifiers") DeleteClusterSnapshotMessageList[] identifiers) {
+        this.identifiers = identifiers;
+  }
 }

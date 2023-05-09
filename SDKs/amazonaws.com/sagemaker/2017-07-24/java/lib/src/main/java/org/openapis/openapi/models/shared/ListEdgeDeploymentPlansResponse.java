@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEdgeDeploymentPlansResponse {
     @JsonProperty("EdgeDeploymentPlanSummaries")
     public EdgeDeploymentPlanSummary[] edgeDeploymentPlanSummaries;
+
     public ListEdgeDeploymentPlansResponse withEdgeDeploymentPlanSummaries(EdgeDeploymentPlanSummary[] edgeDeploymentPlanSummaries) {
         this.edgeDeploymentPlanSummaries = edgeDeploymentPlanSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListEdgeDeploymentPlansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEdgeDeploymentPlansResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEdgeDeploymentPlansResponse(@JsonProperty("EdgeDeploymentPlanSummaries") EdgeDeploymentPlanSummary[] edgeDeploymentPlanSummaries) {
+        this.edgeDeploymentPlanSummaries = edgeDeploymentPlanSummaries;
+  }
 }

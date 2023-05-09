@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLinkResponse {
     
     public String contentType;
+
     public DeleteLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLinkResponse {
      */
     
     public java.util.Map<String, Object> deleteLinkOutput;
+
     public DeleteLinkResponse withDeleteLinkOutput(java.util.Map<String, Object> deleteLinkOutput) {
         this.deleteLinkOutput = deleteLinkOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLinkResponse {
      */
     
     public Object internalServiceFault;
+
     public DeleteLinkResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLinkResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteLinkResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLinkResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public DeleteLinkResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteLinkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLinkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteLinkResponse {
     
     
     public Integer statusCode;
+
     public DeleteLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateNetworkProfileRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downlinkBandwidthBits")
     public Long downlinkBandwidthBits;
+
     public CreateNetworkProfileRequest withDownlinkBandwidthBits(Long downlinkBandwidthBits) {
         this.downlinkBandwidthBits = downlinkBandwidthBits;
         return this;
@@ -28,6 +30,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downlinkDelayMs")
     public Long downlinkDelayMs;
+
     public CreateNetworkProfileRequest withDownlinkDelayMs(Long downlinkDelayMs) {
         this.downlinkDelayMs = downlinkDelayMs;
         return this;
@@ -36,6 +39,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downlinkJitterMs")
     public Long downlinkJitterMs;
+
     public CreateNetworkProfileRequest withDownlinkJitterMs(Long downlinkJitterMs) {
         this.downlinkJitterMs = downlinkJitterMs;
         return this;
@@ -44,6 +48,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downlinkLossPercent")
     public Long downlinkLossPercent;
+
     public CreateNetworkProfileRequest withDownlinkLossPercent(Long downlinkLossPercent) {
         this.downlinkLossPercent = downlinkLossPercent;
         return this;
@@ -51,6 +56,7 @@ public class CreateNetworkProfileRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateNetworkProfileRequest withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +64,7 @@ public class CreateNetworkProfileRequest {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public CreateNetworkProfileRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -66,6 +73,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NetworkProfileTypeEnum type;
+
     public CreateNetworkProfileRequest withType(NetworkProfileTypeEnum type) {
         this.type = type;
         return this;
@@ -74,6 +82,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkBandwidthBits")
     public Long uplinkBandwidthBits;
+
     public CreateNetworkProfileRequest withUplinkBandwidthBits(Long uplinkBandwidthBits) {
         this.uplinkBandwidthBits = uplinkBandwidthBits;
         return this;
@@ -82,6 +91,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkDelayMs")
     public Long uplinkDelayMs;
+
     public CreateNetworkProfileRequest withUplinkDelayMs(Long uplinkDelayMs) {
         this.uplinkDelayMs = uplinkDelayMs;
         return this;
@@ -90,6 +100,7 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkJitterMs")
     public Long uplinkJitterMs;
+
     public CreateNetworkProfileRequest withUplinkJitterMs(Long uplinkJitterMs) {
         this.uplinkJitterMs = uplinkJitterMs;
         return this;
@@ -98,9 +109,14 @@ public class CreateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkLossPercent")
     public Long uplinkLossPercent;
+
     public CreateNetworkProfileRequest withUplinkLossPercent(Long uplinkLossPercent) {
         this.uplinkLossPercent = uplinkLossPercent;
         return this;
     }
     
+    public CreateNetworkProfileRequest(@JsonProperty("name") String name, @JsonProperty("projectArn") String projectArn) {
+        this.name = name;
+        this.projectArn = projectArn;
+  }
 }

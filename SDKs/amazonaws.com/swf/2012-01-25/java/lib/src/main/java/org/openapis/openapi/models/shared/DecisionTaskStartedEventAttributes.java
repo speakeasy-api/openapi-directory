@@ -15,6 +15,7 @@ public class DecisionTaskStartedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public String identity;
+
     public DecisionTaskStartedEventAttributes withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -22,9 +23,13 @@ public class DecisionTaskStartedEventAttributes {
     
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public DecisionTaskStartedEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
     }
     
+    public DecisionTaskStartedEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId) {
+        this.scheduledEventId = scheduledEventId;
+  }
 }

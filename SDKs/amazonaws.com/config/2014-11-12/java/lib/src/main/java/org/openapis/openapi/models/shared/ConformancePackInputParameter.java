@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConformancePackInputParameter {
     @JsonProperty("ParameterName")
     public String parameterName;
+
     public ConformancePackInputParameter withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -19,9 +20,14 @@ public class ConformancePackInputParameter {
     
     @JsonProperty("ParameterValue")
     public String parameterValue;
+
     public ConformancePackInputParameter withParameterValue(String parameterValue) {
         this.parameterValue = parameterValue;
         return this;
     }
     
+    public ConformancePackInputParameter(@JsonProperty("ParameterName") String parameterName, @JsonProperty("ParameterValue") String parameterValue) {
+        this.parameterName = parameterName;
+        this.parameterValue = parameterValue;
+  }
 }

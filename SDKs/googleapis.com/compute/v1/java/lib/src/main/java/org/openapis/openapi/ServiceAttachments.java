@@ -59,11 +59,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             serviceAttachmentAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetResponse(contentType, httpRes.statusCode()) {{
             serviceAttachment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsListResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsListResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsListResponse(contentType, httpRes.statusCode()) {{
             serviceAttachmentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +419,9 @@ public class ServiceAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

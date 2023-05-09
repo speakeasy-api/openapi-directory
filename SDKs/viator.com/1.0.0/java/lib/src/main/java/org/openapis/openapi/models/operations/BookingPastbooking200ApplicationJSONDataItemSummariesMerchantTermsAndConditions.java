@@ -15,6 +15,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsA
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountRefundable")
     public String amountRefundable;
+
     public BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditions withAmountRefundable(String amountRefundable) {
         this.amountRefundable = amountRefundable;
         return this;
@@ -26,6 +27,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsA
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationFromTourDate")
     public BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate[] cancellationFromTourDate;
+
     public BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditions withCancellationFromTourDate(BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate[] cancellationFromTourDate) {
         this.cancellationFromTourDate = cancellationFromTourDate;
         return this;
@@ -37,9 +39,11 @@ public class BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsA
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsAndConditions")
     public String termsAndConditions;
+
     public BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditions withTermsAndConditions(String termsAndConditions) {
         this.termsAndConditions = termsAndConditions;
         return this;
     }
     
+    public BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditions(){}
 }

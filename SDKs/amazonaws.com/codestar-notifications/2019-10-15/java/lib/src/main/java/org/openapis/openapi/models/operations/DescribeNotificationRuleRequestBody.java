@@ -12,9 +12,13 @@ public class DescribeNotificationRuleRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public DescribeNotificationRuleRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DescribeNotificationRuleRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

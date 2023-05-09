@@ -18,9 +18,11 @@ public class CorsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowHttpOptions")
     public Boolean allowHttpOptions;
+
     public CorsSettings withAllowHttpOptions(Boolean allowHttpOptions) {
         this.allowHttpOptions = allowHttpOptions;
         return this;
     }
     
+    public CorsSettings(){}
 }

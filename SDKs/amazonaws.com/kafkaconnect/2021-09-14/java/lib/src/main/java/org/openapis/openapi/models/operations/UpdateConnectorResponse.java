@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConnectorResponse {
@@ -12,6 +13,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object badRequestException;
+
     public UpdateConnectorResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConnectorResponse {
     
     
     public String contentType;
+
     public UpdateConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateConnectorResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateConnectorResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object notFoundException;
+
     public UpdateConnectorResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateConnectorResponse {
     
     
     public Integer statusCode;
+
     public UpdateConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateConnectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateConnectorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateConnectorResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateConnectorResponse updateConnectorResponse;
+
     public UpdateConnectorResponse withUpdateConnectorResponse(org.openapis.openapi.models.shared.UpdateConnectorResponse updateConnectorResponse) {
         this.updateConnectorResponse = updateConnectorResponse;
         return this;
     }
     
+    public UpdateConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

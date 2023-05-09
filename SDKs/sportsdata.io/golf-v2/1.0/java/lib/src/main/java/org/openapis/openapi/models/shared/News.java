@@ -12,6 +12,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Author")
     public String author;
+
     public News withAuthor(String author) {
         this.author = author;
         return this;
@@ -20,6 +21,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Categories")
     public String categories;
+
     public News withCategories(String categories) {
         this.categories = categories;
         return this;
@@ -28,6 +30,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public News withContent(String content) {
         this.content = content;
         return this;
@@ -36,6 +39,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewsID")
     public Long newsID;
+
     public News withNewsID(Long newsID) {
         this.newsID = newsID;
         return this;
@@ -44,6 +48,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalSource")
     public String originalSource;
+
     public News withOriginalSource(String originalSource) {
         this.originalSource = originalSource;
         return this;
@@ -52,6 +57,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalSourceUrl")
     public String originalSourceUrl;
+
     public News withOriginalSourceUrl(String originalSourceUrl) {
         this.originalSourceUrl = originalSourceUrl;
         return this;
@@ -60,6 +66,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public News withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -68,6 +75,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public News withSource(String source) {
         this.source = source;
         return this;
@@ -76,6 +84,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TermsOfUse")
     public String termsOfUse;
+
     public News withTermsOfUse(String termsOfUse) {
         this.termsOfUse = termsOfUse;
         return this;
@@ -84,6 +93,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public News withTitle(String title) {
         this.title = title;
         return this;
@@ -92,6 +102,7 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public News withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -100,9 +111,11 @@ public class News {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public News withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public News(){}
 }

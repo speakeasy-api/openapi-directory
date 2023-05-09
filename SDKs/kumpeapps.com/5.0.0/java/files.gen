@@ -149,4 +149,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/InlineResponse202.java
 lib/src/main/java/org/openapis/openapi/models/shared/InlineResponse201.java
 lib/src/main/java/org/openapis/openapi/models/shared/InlineResponse2011.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/kkid/README.md
+docs/authentication/README.md
 USAGE.md

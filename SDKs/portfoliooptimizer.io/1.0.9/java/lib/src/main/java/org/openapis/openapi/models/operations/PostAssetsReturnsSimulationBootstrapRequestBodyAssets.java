@@ -12,9 +12,13 @@ public class PostAssetsReturnsSimulationBootstrapRequestBodyAssets {
      */
     @JsonProperty("assetReturns")
     public Double[] assetReturns;
+
     public PostAssetsReturnsSimulationBootstrapRequestBodyAssets withAssetReturns(Double[] assetReturns) {
         this.assetReturns = assetReturns;
         return this;
     }
     
+    public PostAssetsReturnsSimulationBootstrapRequestBodyAssets(@JsonProperty("assetReturns") Double[] assetReturns) {
+        this.assetReturns = assetReturns;
+  }
 }

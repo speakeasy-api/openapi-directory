@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CognitoConfig {
     @JsonProperty("ClientId")
     public String clientId;
+
     public CognitoConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -19,9 +20,14 @@ public class CognitoConfig {
     
     @JsonProperty("UserPool")
     public String userPool;
+
     public CognitoConfig withUserPool(String userPool) {
         this.userPool = userPool;
         return this;
     }
     
+    public CognitoConfig(@JsonProperty("ClientId") String clientId, @JsonProperty("UserPool") String userPool) {
+        this.clientId = clientId;
+        this.userPool = userPool;
+  }
 }

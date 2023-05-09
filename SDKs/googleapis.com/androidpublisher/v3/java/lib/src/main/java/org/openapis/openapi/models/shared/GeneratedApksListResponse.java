@@ -18,9 +18,11 @@ public class GeneratedApksListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedApks")
     public GeneratedApksPerSigningKey[] generatedApks;
+
     public GeneratedApksListResponse withGeneratedApks(GeneratedApksPerSigningKey[] generatedApks) {
         this.generatedApks = generatedApks;
         return this;
     }
     
+    public GeneratedApksListResponse(){}
 }

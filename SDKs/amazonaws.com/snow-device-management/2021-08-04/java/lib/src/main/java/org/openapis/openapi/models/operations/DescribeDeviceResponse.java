@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDeviceResponse {
@@ -12,6 +13,7 @@ public class DescribeDeviceResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeDeviceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDeviceResponse {
     
     
     public String contentType;
+
     public DescribeDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDeviceOutput describeDeviceOutput;
+
     public DescribeDeviceResponse withDescribeDeviceOutput(org.openapis.openapi.models.shared.DescribeDeviceOutput describeDeviceOutput) {
         this.describeDeviceOutput = describeDeviceOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDeviceResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDeviceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDeviceResponse {
     
     
     public Integer statusCode;
+
     public DescribeDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDeviceResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDeviceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDeviceResponse {
      */
     
     public Object validationException;
+
     public DescribeDeviceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

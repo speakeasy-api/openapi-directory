@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public GoogleCloudRetailV2betaSearchRequestQueryExpansionSpecConditionEnum condition;
+
     public GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec withCondition(GoogleCloudRetailV2betaSearchRequestQueryExpansionSpecConditionEnum condition) {
         this.condition = condition;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinUnexpandedResults")
     public Boolean pinUnexpandedResults;
+
     public GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec withPinUnexpandedResults(Boolean pinUnexpandedResults) {
         this.pinUnexpandedResults = pinUnexpandedResults;
         return this;
     }
     
+    public GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec(){}
 }

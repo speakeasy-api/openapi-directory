@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErcerResponse {
     
     public String contentType;
+
     public ErcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ErcerResponse {
     
     
     public Integer statusCode;
+
     public ErcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ErcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ErcerResponse {
      */
     
     public Ercer400ApplicationJSON ercer400ApplicationJSONObject;
+
     public ErcerResponse withErcer400ApplicationJSONObject(Ercer400ApplicationJSON ercer400ApplicationJSONObject) {
         this.ercer400ApplicationJSONObject = ercer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ErcerResponse {
      */
     
     public Ercer401ApplicationJSON ercer401ApplicationJSONObject;
+
     public ErcerResponse withErcer401ApplicationJSONObject(Ercer401ApplicationJSON ercer401ApplicationJSONObject) {
         this.ercer401ApplicationJSONObject = ercer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ErcerResponse {
      */
     
     public Ercer404ApplicationJSON ercer404ApplicationJSONObject;
+
     public ErcerResponse withErcer404ApplicationJSONObject(Ercer404ApplicationJSON ercer404ApplicationJSONObject) {
         this.ercer404ApplicationJSONObject = ercer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ErcerResponse {
      */
     
     public Ercer500ApplicationJSON ercer500ApplicationJSONObject;
+
     public ErcerResponse withErcer500ApplicationJSONObject(Ercer500ApplicationJSON ercer500ApplicationJSONObject) {
         this.ercer500ApplicationJSONObject = ercer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ErcerResponse {
      */
     
     public Ercer502ApplicationJSON ercer502ApplicationJSONObject;
+
     public ErcerResponse withErcer502ApplicationJSONObject(Ercer502ApplicationJSON ercer502ApplicationJSONObject) {
         this.ercer502ApplicationJSONObject = ercer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ErcerResponse {
      */
     
     public Ercer503ApplicationJSON ercer503ApplicationJSONObject;
+
     public ErcerResponse withErcer503ApplicationJSONObject(Ercer503ApplicationJSON ercer503ApplicationJSONObject) {
         this.ercer503ApplicationJSONObject = ercer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class ErcerResponse {
      */
     
     public Ercer504ApplicationJSON ercer504ApplicationJSONObject;
+
     public ErcerResponse withErcer504ApplicationJSONObject(Ercer504ApplicationJSON ercer504ApplicationJSONObject) {
         this.ercer504ApplicationJSONObject = ercer504ApplicationJSONObject;
         return this;
     }
     
+    public ErcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

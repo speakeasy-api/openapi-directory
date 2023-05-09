@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAlarmsResponse {
@@ -12,6 +13,7 @@ public class GetAlarmsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAlarmsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAlarmsResponse {
     
     
     public String contentType;
+
     public GetAlarmsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAlarmsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAlarmsResult getAlarmsResult;
+
     public GetAlarmsResponse withGetAlarmsResult(org.openapis.openapi.models.shared.GetAlarmsResult getAlarmsResult) {
         this.getAlarmsResult = getAlarmsResult;
         return this;
@@ -39,6 +43,7 @@ public class GetAlarmsResponse {
      */
     
     public Object invalidInputException;
+
     public GetAlarmsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetAlarmsResponse {
      */
     
     public Object notFoundException;
+
     public GetAlarmsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetAlarmsResponse {
      */
     
     public Object operationFailureException;
+
     public GetAlarmsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class GetAlarmsResponse {
      */
     
     public Object serviceException;
+
     public GetAlarmsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetAlarmsResponse {
     
     
     public Integer statusCode;
+
     public GetAlarmsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetAlarmsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAlarmsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetAlarmsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetAlarmsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetAlarmsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

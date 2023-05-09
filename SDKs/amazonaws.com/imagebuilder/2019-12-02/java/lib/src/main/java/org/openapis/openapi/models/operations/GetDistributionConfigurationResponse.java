@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistributionConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetDistributionConfigurationResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetDistributionConfigurationResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class GetDistributionConfigurationResponse {
      */
     
     public Object clientException;
+
     public GetDistributionConfigurationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class GetDistributionConfigurationResponse {
     
     
     public String contentType;
+
     public GetDistributionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDistributionConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public GetDistributionConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class GetDistributionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDistributionConfigurationResponse getDistributionConfigurationResponse;
+
     public GetDistributionConfigurationResponse withGetDistributionConfigurationResponse(org.openapis.openapi.models.shared.GetDistributionConfigurationResponse getDistributionConfigurationResponse) {
         this.getDistributionConfigurationResponse = getDistributionConfigurationResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetDistributionConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public GetDistributionConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class GetDistributionConfigurationResponse {
      */
     
     public Object serviceException;
+
     public GetDistributionConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetDistributionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetDistributionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetDistributionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistributionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetDistributionConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetDistributionConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetDistributionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

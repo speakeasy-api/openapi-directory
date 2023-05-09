@@ -15,6 +15,7 @@ public class GroupDetail {
      */
     
     public String arn;
+
     public GroupDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class GroupDetail {
     
     
     public AttachedPolicy[] attachedManagedPolicies;
+
     public GroupDetail withAttachedManagedPolicies(AttachedPolicy[] attachedManagedPolicies) {
         this.attachedManagedPolicies = attachedManagedPolicies;
         return this;
@@ -29,6 +31,7 @@ public class GroupDetail {
     
     
     public OffsetDateTime createDate;
+
     public GroupDetail withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -36,6 +39,7 @@ public class GroupDetail {
     
     
     public String groupId;
+
     public GroupDetail withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -43,6 +47,7 @@ public class GroupDetail {
     
     
     public String groupName;
+
     public GroupDetail withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -50,6 +55,7 @@ public class GroupDetail {
     
     
     public PolicyDetail[] groupPolicyList;
+
     public GroupDetail withGroupPolicyList(PolicyDetail[] groupPolicyList) {
         this.groupPolicyList = groupPolicyList;
         return this;
@@ -57,9 +63,11 @@ public class GroupDetail {
     
     
     public String path;
+
     public GroupDetail withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public GroupDetail(){}
 }

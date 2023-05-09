@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ReorderReceiptRuleSetRequest - Represents a request to reorder the receipt rules within a receipt rule set. You use receipt rule sets to receive email with Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReorderReceiptRuleSetRequest {
     
     public String[] ruleNames;
+
     public ReorderReceiptRuleSetRequest withRuleNames(String[] ruleNames) {
         this.ruleNames = ruleNames;
         return this;
@@ -19,9 +20,14 @@ public class ReorderReceiptRuleSetRequest {
     
     
     public String ruleSetName;
+
     public ReorderReceiptRuleSetRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public ReorderReceiptRuleSetRequest(@JsonProperty("RuleNames") String[] ruleNames, @JsonProperty("RuleSetName") String ruleSetName) {
+        this.ruleNames = ruleNames;
+        this.ruleSetName = ruleSetName;
+  }
 }

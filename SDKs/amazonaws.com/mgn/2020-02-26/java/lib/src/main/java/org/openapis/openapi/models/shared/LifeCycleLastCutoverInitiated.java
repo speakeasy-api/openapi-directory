@@ -15,6 +15,7 @@ public class LifeCycleLastCutoverInitiated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCallDateTime")
     public String apiCallDateTime;
+
     public LifeCycleLastCutoverInitiated withApiCallDateTime(String apiCallDateTime) {
         this.apiCallDateTime = apiCallDateTime;
         return this;
@@ -23,9 +24,11 @@ public class LifeCycleLastCutoverInitiated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobID")
     public String jobID;
+
     public LifeCycleLastCutoverInitiated withJobID(String jobID) {
         this.jobID = jobID;
         return this;
     }
     
+    public LifeCycleLastCutoverInitiated(){}
 }

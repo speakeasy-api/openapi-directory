@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddApplicationOutputResponse {
@@ -12,6 +13,7 @@ public class AddApplicationOutputResponse {
      */
     
     public java.util.Map<String, Object> addApplicationOutputResponse;
+
     public AddApplicationOutputResponse withAddApplicationOutputResponse(java.util.Map<String, Object> addApplicationOutputResponse) {
         this.addApplicationOutputResponse = addApplicationOutputResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddApplicationOutputResponse {
      */
     
     public Object concurrentModificationException;
+
     public AddApplicationOutputResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class AddApplicationOutputResponse {
     
     
     public String contentType;
+
     public AddApplicationOutputResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddApplicationOutputResponse {
      */
     
     public Object invalidArgumentException;
+
     public AddApplicationOutputResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class AddApplicationOutputResponse {
      */
     
     public Object resourceInUseException;
+
     public AddApplicationOutputResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class AddApplicationOutputResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddApplicationOutputResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AddApplicationOutputResponse {
     
     
     public Integer statusCode;
+
     public AddApplicationOutputResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AddApplicationOutputResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddApplicationOutputResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class AddApplicationOutputResponse {
      */
     
     public Object unsupportedOperationException;
+
     public AddApplicationOutputResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public AddApplicationOutputResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

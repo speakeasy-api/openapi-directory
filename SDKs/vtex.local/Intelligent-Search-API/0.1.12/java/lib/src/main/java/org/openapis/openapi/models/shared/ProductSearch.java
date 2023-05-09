@@ -18,6 +18,7 @@ public class ProductSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correction")
     public ProductSearchCorrection correction;
+
     public ProductSearch withCorrection(ProductSearchCorrection correction) {
         this.correction = correction;
         return this;
@@ -29,6 +30,7 @@ public class ProductSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fuzzy")
     public String fuzzy;
+
     public ProductSearch withFuzzy(String fuzzy) {
         this.fuzzy = fuzzy;
         return this;
@@ -42,6 +44,7 @@ public class ProductSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public ProductSearchOperatorEnum operator;
+
     public ProductSearch withOperator(ProductSearchOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -53,6 +56,7 @@ public class ProductSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public java.util.Map<String, Object>[] products;
+
     public ProductSearch withProducts(java.util.Map<String, Object>[] products) {
         this.products = products;
         return this;
@@ -64,6 +68,7 @@ public class ProductSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsFiltered")
     public Double recordsFiltered;
+
     public ProductSearch withRecordsFiltered(Double recordsFiltered) {
         this.recordsFiltered = recordsFiltered;
         return this;
@@ -75,9 +80,11 @@ public class ProductSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translated")
     public Boolean translated;
+
     public ProductSearch withTranslated(Boolean translated) {
         this.translated = translated;
         return this;
     }
     
+    public ProductSearch(){}
 }

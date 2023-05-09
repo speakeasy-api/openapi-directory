@@ -18,9 +18,11 @@ public class CreateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateImageResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public CreateImageResponse(){}
 }

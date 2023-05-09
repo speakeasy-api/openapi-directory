@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFlywheelsResponse {
     
     public String contentType;
+
     public ListFlywheelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFlywheelsResponse {
      */
     
     public Object internalServerException;
+
     public ListFlywheelsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListFlywheelsResponse {
      */
     
     public Object invalidFilterException;
+
     public ListFlywheelsResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListFlywheelsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListFlywheelsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListFlywheelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFlywheelsResponse listFlywheelsResponse;
+
     public ListFlywheelsResponse withListFlywheelsResponse(org.openapis.openapi.models.shared.ListFlywheelsResponse listFlywheelsResponse) {
         this.listFlywheelsResponse = listFlywheelsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListFlywheelsResponse {
     
     
     public Integer statusCode;
+
     public ListFlywheelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListFlywheelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFlywheelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListFlywheelsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListFlywheelsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListFlywheelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

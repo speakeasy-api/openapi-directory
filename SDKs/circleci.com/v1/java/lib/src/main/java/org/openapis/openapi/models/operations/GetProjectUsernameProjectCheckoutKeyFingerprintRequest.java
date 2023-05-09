@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectUsernameProjectCheckoutKeyFingerprintRequest {
@@ -13,6 +14,7 @@ public class GetProjectUsernameProjectCheckoutKeyFingerprintRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fingerprint")
     public String fingerprint;
+
     public GetProjectUsernameProjectCheckoutKeyFingerprintRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -24,6 +26,7 @@ public class GetProjectUsernameProjectCheckoutKeyFingerprintRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public GetProjectUsernameProjectCheckoutKeyFingerprintRequest withProject(String project) {
         this.project = project;
         return this;
@@ -35,9 +38,15 @@ public class GetProjectUsernameProjectCheckoutKeyFingerprintRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetProjectUsernameProjectCheckoutKeyFingerprintRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetProjectUsernameProjectCheckoutKeyFingerprintRequest(@JsonProperty("fingerprint") String fingerprint, @JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.fingerprint = fingerprint;
+        this.project = project;
+        this.username = username;
+  }
 }

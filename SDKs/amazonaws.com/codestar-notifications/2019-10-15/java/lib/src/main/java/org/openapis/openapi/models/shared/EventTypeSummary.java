@@ -15,6 +15,7 @@ public class EventTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTypeId")
     public String eventTypeId;
+
     public EventTypeSummary withEventTypeId(String eventTypeId) {
         this.eventTypeId = eventTypeId;
         return this;
@@ -23,6 +24,7 @@ public class EventTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTypeName")
     public String eventTypeName;
+
     public EventTypeSummary withEventTypeName(String eventTypeName) {
         this.eventTypeName = eventTypeName;
         return this;
@@ -31,6 +33,7 @@ public class EventTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public EventTypeSummary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -39,9 +42,11 @@ public class EventTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public EventTypeSummary withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public EventTypeSummary(){}
 }

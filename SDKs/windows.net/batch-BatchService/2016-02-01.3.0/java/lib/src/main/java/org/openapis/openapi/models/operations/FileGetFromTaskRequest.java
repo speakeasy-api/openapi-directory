@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileGetFromTaskRequest {
@@ -12,6 +13,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public FileGetFromTaskRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -22,6 +24,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public FileGetFromTaskRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public FileGetFromTaskRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -42,6 +46,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public FileGetFromTaskRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -52,6 +57,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
     public String fileName;
+
     public FileGetFromTaskRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -62,6 +68,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public FileGetFromTaskRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -72,6 +79,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public FileGetFromTaskRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -82,6 +90,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-range")
     public String ocpRange;
+
     public FileGetFromTaskRequest withOcpRange(String ocpRange) {
         this.ocpRange = ocpRange;
         return this;
@@ -92,6 +101,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public FileGetFromTaskRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -102,6 +112,7 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public FileGetFromTaskRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -112,9 +123,16 @@ public class FileGetFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public FileGetFromTaskRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public FileGetFromTaskRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("fileName") String fileName, @JsonProperty("jobId") String jobId, @JsonProperty("taskId") String taskId) {
+        this.apiVersion = apiVersion;
+        this.fileName = fileName;
+        this.jobId = jobId;
+        this.taskId = taskId;
+  }
 }

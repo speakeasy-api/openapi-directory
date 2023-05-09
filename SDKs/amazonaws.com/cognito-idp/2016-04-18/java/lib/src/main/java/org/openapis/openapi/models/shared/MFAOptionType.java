@@ -15,6 +15,7 @@ public class MFAOptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public MFAOptionType withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -23,9 +24,11 @@ public class MFAOptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryMedium")
     public DeliveryMediumTypeEnum deliveryMedium;
+
     public MFAOptionType withDeliveryMedium(DeliveryMediumTypeEnum deliveryMedium) {
         this.deliveryMedium = deliveryMedium;
         return this;
     }
     
+    public MFAOptionType(){}
 }

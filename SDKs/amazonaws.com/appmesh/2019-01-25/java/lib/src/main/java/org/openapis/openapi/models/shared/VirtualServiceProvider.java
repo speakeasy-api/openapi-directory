@@ -15,6 +15,7 @@ public class VirtualServiceProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualNode")
     public VirtualNodeServiceProvider virtualNode;
+
     public VirtualServiceProvider withVirtualNode(VirtualNodeServiceProvider virtualNode) {
         this.virtualNode = virtualNode;
         return this;
@@ -23,9 +24,11 @@ public class VirtualServiceProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualRouter")
     public VirtualRouterServiceProvider virtualRouter;
+
     public VirtualServiceProvider withVirtualRouter(VirtualRouterServiceProvider virtualRouter) {
         this.virtualRouter = virtualRouter;
         return this;
     }
     
+    public VirtualServiceProvider(){}
 }

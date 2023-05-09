@@ -15,6 +15,7 @@ public class AwsBackupBackupVaultNotificationsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupVaultEvents")
     public String[] backupVaultEvents;
+
     public AwsBackupBackupVaultNotificationsDetails withBackupVaultEvents(String[] backupVaultEvents) {
         this.backupVaultEvents = backupVaultEvents;
         return this;
@@ -23,9 +24,11 @@ public class AwsBackupBackupVaultNotificationsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public AwsBackupBackupVaultNotificationsDetails withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public AwsBackupBackupVaultNotificationsDetails(){}
 }

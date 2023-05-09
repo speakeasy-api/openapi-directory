@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcPeeringConnectionsRequest {
     
     public Boolean dryRun;
+
     public DescribeVpcPeeringConnectionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVpcPeeringConnectionsRequest {
     
     
     public DescribeVpcPeeringConnectionsRequestFilters[] filters;
+
     public DescribeVpcPeeringConnectionsRequest withFilters(DescribeVpcPeeringConnectionsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeVpcPeeringConnectionsRequest {
     
     
     public Long maxResults;
+
     public DescribeVpcPeeringConnectionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeVpcPeeringConnectionsRequest {
     
     
     public String nextToken;
+
     public DescribeVpcPeeringConnectionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeVpcPeeringConnectionsRequest {
     
     
     public String[] vpcPeeringConnectionIds;
+
     public DescribeVpcPeeringConnectionsRequest withVpcPeeringConnectionIds(String[] vpcPeeringConnectionIds) {
         this.vpcPeeringConnectionIds = vpcPeeringConnectionIds;
         return this;
     }
     
+    public DescribeVpcPeeringConnectionsRequest(){}
 }

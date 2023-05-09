@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListQueriesUsingGETRequest {
@@ -12,9 +13,13 @@ public class ListQueriesUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public ListQueriesUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public ListQueriesUsingGETRequest(@JsonProperty("apiKey") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

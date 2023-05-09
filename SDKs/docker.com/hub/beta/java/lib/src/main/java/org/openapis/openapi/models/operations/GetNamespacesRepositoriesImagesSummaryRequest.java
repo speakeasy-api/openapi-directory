@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespacesRepositoriesImagesSummaryRequest {
@@ -16,6 +17,7 @@ public class GetNamespacesRepositoriesImagesSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active_from")
     public String activeFrom;
+
     public GetNamespacesRepositoriesImagesSummaryRequest withActiveFrom(String activeFrom) {
         this.activeFrom = activeFrom;
         return this;
@@ -26,6 +28,7 @@ public class GetNamespacesRepositoriesImagesSummaryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public GetNamespacesRepositoriesImagesSummaryRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -36,9 +39,14 @@ public class GetNamespacesRepositoriesImagesSummaryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
     public String repository;
+
     public GetNamespacesRepositoriesImagesSummaryRequest withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public GetNamespacesRepositoriesImagesSummaryRequest(@JsonProperty("namespace") String namespace, @JsonProperty("repository") String repository) {
+        this.namespace = namespace;
+        this.repository = repository;
+  }
 }

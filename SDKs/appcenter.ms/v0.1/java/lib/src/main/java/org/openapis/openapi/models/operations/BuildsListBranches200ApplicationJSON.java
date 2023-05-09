@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BuildsListBranches200ApplicationJSON {
     @JsonProperty("configured")
     public Boolean configured;
+
     public BuildsListBranches200ApplicationJSON withConfigured(Boolean configured) {
         this.configured = configured;
         return this;
@@ -22,9 +23,13 @@ public class BuildsListBranches200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastBuild")
     public BuildsListBranches200ApplicationJSONLastBuild lastBuild;
+
     public BuildsListBranches200ApplicationJSON withLastBuild(BuildsListBranches200ApplicationJSONLastBuild lastBuild) {
         this.lastBuild = lastBuild;
         return this;
     }
     
+    public BuildsListBranches200ApplicationJSON(@JsonProperty("configured") Boolean configured) {
+        this.configured = configured;
+  }
 }

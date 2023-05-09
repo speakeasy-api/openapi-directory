@@ -18,6 +18,7 @@ public class TestUploadHashTestCloudFileHash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byte_range")
     public String byteRange;
+
     public TestUploadHashTestCloudFileHash withByteRange(String byteRange) {
         this.byteRange = byteRange;
         return this;
@@ -28,6 +29,7 @@ public class TestUploadHashTestCloudFileHash {
      */
     @JsonProperty("checksum")
     public String checksum;
+
     public TestUploadHashTestCloudFileHash withChecksum(String checksum) {
         this.checksum = checksum;
         return this;
@@ -38,6 +40,7 @@ public class TestUploadHashTestCloudFileHash {
      */
     @JsonProperty("file_type")
     public TestUploadHashTestCloudFileHashFileTypeEnum fileType;
+
     public TestUploadHashTestCloudFileHash withFileType(TestUploadHashTestCloudFileHashFileTypeEnum fileType) {
         this.fileType = fileType;
         return this;
@@ -48,9 +51,15 @@ public class TestUploadHashTestCloudFileHash {
      */
     @JsonProperty("relative_path")
     public String relativePath;
+
     public TestUploadHashTestCloudFileHash withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
     }
     
+    public TestUploadHashTestCloudFileHash(@JsonProperty("checksum") String checksum, @JsonProperty("file_type") TestUploadHashTestCloudFileHashFileTypeEnum fileType, @JsonProperty("relative_path") String relativePath) {
+        this.checksum = checksum;
+        this.fileType = fileType;
+        this.relativePath = relativePath;
+  }
 }

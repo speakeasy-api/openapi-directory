@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFHIRImportJobResponse {
     @JsonProperty("ImportJobProperties")
     public ImportJobProperties importJobProperties;
+
     public DescribeFHIRImportJobResponse withImportJobProperties(ImportJobProperties importJobProperties) {
         this.importJobProperties = importJobProperties;
         return this;
     }
     
+    public DescribeFHIRImportJobResponse(@JsonProperty("ImportJobProperties") ImportJobProperties importJobProperties) {
+        this.importJobProperties = importJobProperties;
+  }
 }

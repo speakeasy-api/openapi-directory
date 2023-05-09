@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateServiceAccessPoliciesRequest {
     /**
@@ -12,6 +12,7 @@ public class UpdateServiceAccessPoliciesRequest {
      */
     
     public String accessPolicies;
+
     public UpdateServiceAccessPoliciesRequest withAccessPolicies(String accessPolicies) {
         this.accessPolicies = accessPolicies;
         return this;
@@ -22,9 +23,14 @@ public class UpdateServiceAccessPoliciesRequest {
      */
     
     public String domainName;
+
     public UpdateServiceAccessPoliciesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public UpdateServiceAccessPoliciesRequest(@JsonProperty("AccessPolicies") String accessPolicies, @JsonProperty("DomainName") String domainName) {
+        this.accessPolicies = accessPolicies;
+        this.domainName = domainName;
+  }
 }

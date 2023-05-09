@@ -15,6 +15,7 @@ public class ServiceChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ServiceChange withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ServiceChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsConfig")
     public DnsConfigChange dnsConfig;
+
     public ServiceChange withDnsConfig(DnsConfigChange dnsConfig) {
         this.dnsConfig = dnsConfig;
         return this;
@@ -31,9 +33,11 @@ public class ServiceChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckConfig")
     public HealthCheckConfig healthCheckConfig;
+
     public ServiceChange withHealthCheckConfig(HealthCheckConfig healthCheckConfig) {
         this.healthCheckConfig = healthCheckConfig;
         return this;
     }
     
+    public ServiceChange(){}
 }

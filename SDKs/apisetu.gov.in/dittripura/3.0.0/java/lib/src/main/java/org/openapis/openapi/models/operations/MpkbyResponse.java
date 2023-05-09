@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MpkbyResponse {
     
     public String contentType;
+
     public MpkbyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MpkbyResponse {
     
     
     public Integer statusCode;
+
     public MpkbyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MpkbyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MpkbyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MpkbyResponse {
      */
     
     public Mpkby400ApplicationJSON mpkby400ApplicationJSONObject;
+
     public MpkbyResponse withMpkby400ApplicationJSONObject(Mpkby400ApplicationJSON mpkby400ApplicationJSONObject) {
         this.mpkby400ApplicationJSONObject = mpkby400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MpkbyResponse {
      */
     
     public Mpkby401ApplicationJSON mpkby401ApplicationJSONObject;
+
     public MpkbyResponse withMpkby401ApplicationJSONObject(Mpkby401ApplicationJSON mpkby401ApplicationJSONObject) {
         this.mpkby401ApplicationJSONObject = mpkby401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MpkbyResponse {
      */
     
     public Mpkby404ApplicationJSON mpkby404ApplicationJSONObject;
+
     public MpkbyResponse withMpkby404ApplicationJSONObject(Mpkby404ApplicationJSON mpkby404ApplicationJSONObject) {
         this.mpkby404ApplicationJSONObject = mpkby404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MpkbyResponse {
      */
     
     public Mpkby500ApplicationJSON mpkby500ApplicationJSONObject;
+
     public MpkbyResponse withMpkby500ApplicationJSONObject(Mpkby500ApplicationJSON mpkby500ApplicationJSONObject) {
         this.mpkby500ApplicationJSONObject = mpkby500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MpkbyResponse {
      */
     
     public Mpkby502ApplicationJSON mpkby502ApplicationJSONObject;
+
     public MpkbyResponse withMpkby502ApplicationJSONObject(Mpkby502ApplicationJSON mpkby502ApplicationJSONObject) {
         this.mpkby502ApplicationJSONObject = mpkby502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class MpkbyResponse {
      */
     
     public Mpkby503ApplicationJSON mpkby503ApplicationJSONObject;
+
     public MpkbyResponse withMpkby503ApplicationJSONObject(Mpkby503ApplicationJSON mpkby503ApplicationJSONObject) {
         this.mpkby503ApplicationJSONObject = mpkby503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class MpkbyResponse {
      */
     
     public Mpkby504ApplicationJSON mpkby504ApplicationJSONObject;
+
     public MpkbyResponse withMpkby504ApplicationJSONObject(Mpkby504ApplicationJSON mpkby504ApplicationJSONObject) {
         this.mpkby504ApplicationJSONObject = mpkby504ApplicationJSONObject;
         return this;
     }
     
+    public MpkbyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

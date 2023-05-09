@@ -15,6 +15,7 @@ public class UpdateParam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UpdateParamTypeEnum type;
+
     public UpdateParam withType(UpdateParamTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class UpdateParam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UpdateParam withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateParam(){}
 }

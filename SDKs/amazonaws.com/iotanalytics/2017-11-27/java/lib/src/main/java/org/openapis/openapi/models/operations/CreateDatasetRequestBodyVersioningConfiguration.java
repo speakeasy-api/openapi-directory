@@ -15,6 +15,7 @@ public class CreateDatasetRequestBodyVersioningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxVersions")
     public Long maxVersions;
+
     public CreateDatasetRequestBodyVersioningConfiguration withMaxVersions(Long maxVersions) {
         this.maxVersions = maxVersions;
         return this;
@@ -23,9 +24,11 @@ public class CreateDatasetRequestBodyVersioningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlimited")
     public Boolean unlimited;
+
     public CreateDatasetRequestBodyVersioningConfiguration withUnlimited(Boolean unlimited) {
         this.unlimited = unlimited;
         return this;
     }
     
+    public CreateDatasetRequestBodyVersioningConfiguration(){}
 }

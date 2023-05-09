@@ -18,6 +18,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkIntervalSec")
     public Integer checkIntervalSec;
+
     public HttpsHealthCheck1 withCheckIntervalSec(Integer checkIntervalSec) {
         this.checkIntervalSec = checkIntervalSec;
         return this;
@@ -29,6 +30,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public HttpsHealthCheck1 withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public HttpsHealthCheck1 withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthyThreshold")
     public Integer healthyThreshold;
+
     public HttpsHealthCheck1 withHealthyThreshold(Integer healthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         return this;
@@ -62,6 +66,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public HttpsHealthCheck1 withHost(String host) {
         this.host = host;
         return this;
@@ -73,6 +78,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public HttpsHealthCheck1 withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public HttpsHealthCheck1 withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HttpsHealthCheck1 withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public HttpsHealthCheck1 withPort(Integer port) {
         this.port = port;
         return this;
@@ -117,6 +126,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestPath")
     public String requestPath;
+
     public HttpsHealthCheck1 withRequestPath(String requestPath) {
         this.requestPath = requestPath;
         return this;
@@ -128,6 +138,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public HttpsHealthCheck1 withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -139,6 +150,7 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSec")
     public Integer timeoutSec;
+
     public HttpsHealthCheck1 withTimeoutSec(Integer timeoutSec) {
         this.timeoutSec = timeoutSec;
         return this;
@@ -150,9 +162,11 @@ public class HttpsHealthCheck1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unhealthyThreshold")
     public Integer unhealthyThreshold;
+
     public HttpsHealthCheck1 withUnhealthyThreshold(Integer unhealthyThreshold) {
         this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
     
+    public HttpsHealthCheck1(){}
 }

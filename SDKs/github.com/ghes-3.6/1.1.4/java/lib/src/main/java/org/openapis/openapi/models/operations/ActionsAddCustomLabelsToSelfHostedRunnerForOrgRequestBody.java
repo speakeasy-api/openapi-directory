@@ -12,9 +12,13 @@ public class ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody {
      */
     @JsonProperty("labels")
     public String[] labels;
+
     public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody withLabels(String[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody(@JsonProperty("labels") String[] labels) {
+        this.labels = labels;
+  }
 }

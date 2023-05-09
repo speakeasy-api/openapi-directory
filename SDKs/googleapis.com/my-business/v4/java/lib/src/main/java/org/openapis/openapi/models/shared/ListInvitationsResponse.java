@@ -18,9 +18,11 @@ public class ListInvitationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitations")
     public Invitation[] invitations;
+
     public ListInvitationsResponse withInvitations(Invitation[] invitations) {
         this.invitations = invitations;
         return this;
     }
     
+    public ListInvitationsResponse(){}
 }

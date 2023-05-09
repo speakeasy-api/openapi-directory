@@ -19,9 +19,11 @@ public class CreateMobileAuthorizationCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public CreateMobileAuthorizationCodeRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public CreateMobileAuthorizationCodeRequest(){}
 }

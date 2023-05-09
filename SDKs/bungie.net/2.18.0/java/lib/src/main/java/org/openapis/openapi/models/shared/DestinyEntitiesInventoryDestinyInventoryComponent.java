@@ -16,9 +16,11 @@ public class DestinyEntitiesInventoryDestinyInventoryComponent {
      */
     
     public DestinyEntitiesItemsDestinyItemComponent[] items;
+
     public DestinyEntitiesInventoryDestinyInventoryComponent withItems(DestinyEntitiesItemsDestinyItemComponent[] items) {
         this.items = items;
         return this;
     }
     
+    public DestinyEntitiesInventoryDestinyInventoryComponent(){}
 }

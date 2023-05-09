@@ -15,6 +15,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public ContainerDefinition withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public Long cpu;
+
     public ContainerDefinition withCpu(Long cpu) {
         this.cpu = cpu;
         return this;
@@ -31,6 +33,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependsOn")
     public ContainerDependency[] dependsOn;
+
     public ContainerDefinition withDependsOn(ContainerDependency[] dependsOn) {
         this.dependsOn = dependsOn;
         return this;
@@ -39,6 +42,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableNetworking")
     public Boolean disableNetworking;
+
     public ContainerDefinition withDisableNetworking(Boolean disableNetworking) {
         this.disableNetworking = disableNetworking;
         return this;
@@ -47,6 +51,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsSearchDomains")
     public String[] dnsSearchDomains;
+
     public ContainerDefinition withDnsSearchDomains(String[] dnsSearchDomains) {
         this.dnsSearchDomains = dnsSearchDomains;
         return this;
@@ -55,6 +60,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsServers")
     public String[] dnsServers;
+
     public ContainerDefinition withDnsServers(String[] dnsServers) {
         this.dnsServers = dnsServers;
         return this;
@@ -63,6 +69,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerLabels")
     public java.util.Map<String, String> dockerLabels;
+
     public ContainerDefinition withDockerLabels(java.util.Map<String, String> dockerLabels) {
         this.dockerLabels = dockerLabels;
         return this;
@@ -71,6 +78,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerSecurityOptions")
     public String[] dockerSecurityOptions;
+
     public ContainerDefinition withDockerSecurityOptions(String[] dockerSecurityOptions) {
         this.dockerSecurityOptions = dockerSecurityOptions;
         return this;
@@ -79,6 +87,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPoint")
     public String[] entryPoint;
+
     public ContainerDefinition withEntryPoint(String[] entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -87,6 +96,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public KeyValuePair[] environment;
+
     public ContainerDefinition withEnvironment(KeyValuePair[] environment) {
         this.environment = environment;
         return this;
@@ -95,6 +105,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentFiles")
     public EnvironmentFile[] environmentFiles;
+
     public ContainerDefinition withEnvironmentFiles(EnvironmentFile[] environmentFiles) {
         this.environmentFiles = environmentFiles;
         return this;
@@ -103,6 +114,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("essential")
     public Boolean essential;
+
     public ContainerDefinition withEssential(Boolean essential) {
         this.essential = essential;
         return this;
@@ -111,6 +123,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraHosts")
     public HostEntry[] extraHosts;
+
     public ContainerDefinition withExtraHosts(HostEntry[] extraHosts) {
         this.extraHosts = extraHosts;
         return this;
@@ -119,6 +132,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firelensConfiguration")
     public FirelensConfiguration firelensConfiguration;
+
     public ContainerDefinition withFirelensConfiguration(FirelensConfiguration firelensConfiguration) {
         this.firelensConfiguration = firelensConfiguration;
         return this;
@@ -127,6 +141,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public HealthCheck healthCheck;
+
     public ContainerDefinition withHealthCheck(HealthCheck healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -135,6 +150,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public ContainerDefinition withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -143,6 +159,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public ContainerDefinition withImage(String image) {
         this.image = image;
         return this;
@@ -151,6 +168,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactive")
     public Boolean interactive;
+
     public ContainerDefinition withInteractive(Boolean interactive) {
         this.interactive = interactive;
         return this;
@@ -159,6 +177,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public String[] links;
+
     public ContainerDefinition withLinks(String[] links) {
         this.links = links;
         return this;
@@ -167,6 +186,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linuxParameters")
     public LinuxParameters linuxParameters;
+
     public ContainerDefinition withLinuxParameters(LinuxParameters linuxParameters) {
         this.linuxParameters = linuxParameters;
         return this;
@@ -175,6 +195,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfiguration")
     public LogConfiguration logConfiguration;
+
     public ContainerDefinition withLogConfiguration(LogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -183,6 +204,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public ContainerDefinition withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -191,6 +213,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryReservation")
     public Long memoryReservation;
+
     public ContainerDefinition withMemoryReservation(Long memoryReservation) {
         this.memoryReservation = memoryReservation;
         return this;
@@ -199,6 +222,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPoints")
     public MountPoint[] mountPoints;
+
     public ContainerDefinition withMountPoints(MountPoint[] mountPoints) {
         this.mountPoints = mountPoints;
         return this;
@@ -207,6 +231,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerDefinition withName(String name) {
         this.name = name;
         return this;
@@ -215,6 +240,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portMappings")
     public PortMapping[] portMappings;
+
     public ContainerDefinition withPortMappings(PortMapping[] portMappings) {
         this.portMappings = portMappings;
         return this;
@@ -223,6 +249,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privileged")
     public Boolean privileged;
+
     public ContainerDefinition withPrivileged(Boolean privileged) {
         this.privileged = privileged;
         return this;
@@ -231,6 +258,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pseudoTerminal")
     public Boolean pseudoTerminal;
+
     public ContainerDefinition withPseudoTerminal(Boolean pseudoTerminal) {
         this.pseudoTerminal = pseudoTerminal;
         return this;
@@ -239,6 +267,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonlyRootFilesystem")
     public Boolean readonlyRootFilesystem;
+
     public ContainerDefinition withReadonlyRootFilesystem(Boolean readonlyRootFilesystem) {
         this.readonlyRootFilesystem = readonlyRootFilesystem;
         return this;
@@ -247,6 +276,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryCredentials")
     public RepositoryCredentials repositoryCredentials;
+
     public ContainerDefinition withRepositoryCredentials(RepositoryCredentials repositoryCredentials) {
         this.repositoryCredentials = repositoryCredentials;
         return this;
@@ -255,6 +285,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirement[] resourceRequirements;
+
     public ContainerDefinition withResourceRequirements(ResourceRequirement[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -263,6 +294,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secrets")
     public Secret[] secrets;
+
     public ContainerDefinition withSecrets(Secret[] secrets) {
         this.secrets = secrets;
         return this;
@@ -271,6 +303,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeout")
     public Long startTimeout;
+
     public ContainerDefinition withStartTimeout(Long startTimeout) {
         this.startTimeout = startTimeout;
         return this;
@@ -279,6 +312,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopTimeout")
     public Long stopTimeout;
+
     public ContainerDefinition withStopTimeout(Long stopTimeout) {
         this.stopTimeout = stopTimeout;
         return this;
@@ -287,6 +321,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemControls")
     public SystemControl[] systemControls;
+
     public ContainerDefinition withSystemControls(SystemControl[] systemControls) {
         this.systemControls = systemControls;
         return this;
@@ -295,6 +330,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ulimits")
     public Ulimit[] ulimits;
+
     public ContainerDefinition withUlimits(Ulimit[] ulimits) {
         this.ulimits = ulimits;
         return this;
@@ -303,6 +339,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public ContainerDefinition withUser(String user) {
         this.user = user;
         return this;
@@ -311,6 +348,7 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumesFrom")
     public VolumeFrom[] volumesFrom;
+
     public ContainerDefinition withVolumesFrom(VolumeFrom[] volumesFrom) {
         this.volumesFrom = volumesFrom;
         return this;
@@ -319,9 +357,11 @@ public class ContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workingDirectory")
     public String workingDirectory;
+
     public ContainerDefinition withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public ContainerDefinition(){}
 }

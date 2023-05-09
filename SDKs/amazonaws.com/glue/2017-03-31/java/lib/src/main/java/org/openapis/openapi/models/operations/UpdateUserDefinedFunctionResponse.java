@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserDefinedFunctionResponse {
     
     public String contentType;
+
     public UpdateUserDefinedFunctionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUserDefinedFunctionResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateUserDefinedFunctionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUserDefinedFunctionResponse {
      */
     
     public Object glueEncryptionException;
+
     public UpdateUserDefinedFunctionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserDefinedFunctionResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateUserDefinedFunctionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateUserDefinedFunctionResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateUserDefinedFunctionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateUserDefinedFunctionResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateUserDefinedFunctionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateUserDefinedFunctionResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserDefinedFunctionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateUserDefinedFunctionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserDefinedFunctionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateUserDefinedFunctionResponse {
      */
     
     public java.util.Map<String, Object> updateUserDefinedFunctionResponse;
+
     public UpdateUserDefinedFunctionResponse withUpdateUserDefinedFunctionResponse(java.util.Map<String, Object> updateUserDefinedFunctionResponse) {
         this.updateUserDefinedFunctionResponse = updateUserDefinedFunctionResponse;
         return this;
     }
     
+    public UpdateUserDefinedFunctionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

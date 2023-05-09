@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchDeleteImportDataRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchDeleteImportDataRequest batchDeleteImportDataRequest;
+
     public BatchDeleteImportDataRequest withBatchDeleteImportDataRequest(org.openapis.openapi.models.shared.BatchDeleteImportDataRequest batchDeleteImportDataRequest) {
         this.batchDeleteImportDataRequest = batchDeleteImportDataRequest;
         return this;
@@ -16,6 +18,7 @@ public class BatchDeleteImportDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public BatchDeleteImportDataRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class BatchDeleteImportDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public BatchDeleteImportDataRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class BatchDeleteImportDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public BatchDeleteImportDataRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class BatchDeleteImportDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public BatchDeleteImportDataRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class BatchDeleteImportDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public BatchDeleteImportDataRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class BatchDeleteImportDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public BatchDeleteImportDataRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class BatchDeleteImportDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public BatchDeleteImportDataRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class BatchDeleteImportDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public BatchDeleteImportDataXAmzTargetEnum xAmzTarget;
+
     public BatchDeleteImportDataRequest withXAmzTarget(BatchDeleteImportDataXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public BatchDeleteImportDataRequest(@JsonProperty("BatchDeleteImportDataRequest") org.openapis.openapi.models.shared.BatchDeleteImportDataRequest batchDeleteImportDataRequest, @JsonProperty("X-Amz-Target") BatchDeleteImportDataXAmzTargetEnum xAmzTarget) {
+        this.batchDeleteImportDataRequest = batchDeleteImportDataRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

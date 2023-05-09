@@ -18,6 +18,7 @@ public class Getcampaignaudiences200ApplicationJSONLastModified {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateUtc")
     public String dateUtc;
+
     public Getcampaignaudiences200ApplicationJSONLastModified withDateUtc(String dateUtc) {
         this.dateUtc = dateUtc;
         return this;
@@ -29,9 +30,11 @@ public class Getcampaignaudiences200ApplicationJSONLastModified {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public Getcampaignaudiences200ApplicationJSONLastModified withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public Getcampaignaudiences200ApplicationJSONLastModified(){}
 }

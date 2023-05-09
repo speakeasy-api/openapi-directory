@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class RuleGroupsNamespaceDescription {
     @JsonProperty("arn")
     public String arn;
+
     public RuleGroupsNamespaceDescription withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class RuleGroupsNamespaceDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public RuleGroupsNamespaceDescription withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class RuleGroupsNamespaceDescription {
     
     @JsonProperty("data")
     public String data;
+
     public RuleGroupsNamespaceDescription withData(String data) {
         this.data = data;
         return this;
@@ -44,6 +47,7 @@ public class RuleGroupsNamespaceDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedAt")
     public OffsetDateTime modifiedAt;
+
     public RuleGroupsNamespaceDescription withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -51,6 +55,7 @@ public class RuleGroupsNamespaceDescription {
     
     @JsonProperty("name")
     public String name;
+
     public RuleGroupsNamespaceDescription withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +63,7 @@ public class RuleGroupsNamespaceDescription {
     
     @JsonProperty("status")
     public RuleGroupsNamespaceStatus status;
+
     public RuleGroupsNamespaceDescription withStatus(RuleGroupsNamespaceStatus status) {
         this.status = status;
         return this;
@@ -66,9 +72,18 @@ public class RuleGroupsNamespaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public RuleGroupsNamespaceDescription withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public RuleGroupsNamespaceDescription(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("data") String data, @JsonProperty("modifiedAt") OffsetDateTime modifiedAt, @JsonProperty("name") String name, @JsonProperty("status") RuleGroupsNamespaceStatus status) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.data = data;
+        this.modifiedAt = modifiedAt;
+        this.name = name;
+        this.status = status;
+  }
 }

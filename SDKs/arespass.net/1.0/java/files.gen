@@ -43,4 +43,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/EcRepeatedChars.java
 lib/src/main/java/org/openapis/openapi/models/shared/EcTotal.java
 lib/src/main/java/org/openapis/openapi/models/shared/EcWords.java
 lib/src/main/java/org/openapis/openapi/models/shared/Ec.java
+docs/sdk/README.md
 USAGE.md

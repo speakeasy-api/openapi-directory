@@ -16,14 +16,14 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  */
 public enum SearchPatternEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2");
+    ZERO(0L),
+    ONE(1L),
+    TWO(2L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private SearchPatternEnum(String value) {
+    private SearchPatternEnum(Long value) {
         this.value = value;
     }
 }

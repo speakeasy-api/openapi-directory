@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest {
@@ -12,6 +13,7 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_response_block_id")
     public String schemaResponseBlockId;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest withSchemaResponseBlockId(String schemaResponseBlockId) {
         this.schemaResponseBlockId = schemaResponseBlockId;
         return this;
@@ -22,9 +24,14 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_response_id")
     public String schemaResponseId;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest withSchemaResponseId(String schemaResponseId) {
         this.schemaResponseId = schemaResponseId;
         return this;
     }
     
+    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest(@JsonProperty("schema_response_block_id") String schemaResponseBlockId, @JsonProperty("schema_response_id") String schemaResponseId) {
+        this.schemaResponseBlockId = schemaResponseBlockId;
+        this.schemaResponseId = schemaResponseId;
+  }
 }

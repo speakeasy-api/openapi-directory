@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAnomalySubscriptionRequest {
     @JsonProperty("AnomalySubscription")
     public AnomalySubscription anomalySubscription;
+
     public CreateAnomalySubscriptionRequest withAnomalySubscription(AnomalySubscription anomalySubscription) {
         this.anomalySubscription = anomalySubscription;
         return this;
@@ -19,9 +20,13 @@ public class CreateAnomalySubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public ResourceTag[] resourceTags;
+
     public CreateAnomalySubscriptionRequest withResourceTags(ResourceTag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
     }
     
+    public CreateAnomalySubscriptionRequest(@JsonProperty("AnomalySubscription") AnomalySubscription anomalySubscription) {
+        this.anomalySubscription = anomalySubscription;
+  }
 }

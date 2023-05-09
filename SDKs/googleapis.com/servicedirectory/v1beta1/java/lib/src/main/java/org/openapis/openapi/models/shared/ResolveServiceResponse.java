@@ -18,9 +18,11 @@ public class ResolveServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public Service service;
+
     public ResolveServiceResponse withService(Service service) {
         this.service = service;
         return this;
     }
     
+    public ResolveServiceResponse(){}
 }

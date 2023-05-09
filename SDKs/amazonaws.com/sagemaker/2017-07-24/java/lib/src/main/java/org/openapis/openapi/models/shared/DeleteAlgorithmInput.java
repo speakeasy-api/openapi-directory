@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAlgorithmInput {
     @JsonProperty("AlgorithmName")
     public String algorithmName;
+
     public DeleteAlgorithmInput withAlgorithmName(String algorithmName) {
         this.algorithmName = algorithmName;
         return this;
     }
     
+    public DeleteAlgorithmInput(@JsonProperty("AlgorithmName") String algorithmName) {
+        this.algorithmName = algorithmName;
+  }
 }

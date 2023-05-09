@@ -7,7 +7,9 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * PaymentWritePaymentTypeEnum - Payment Type
+ * PaymentWritePaymentTypeEnum - * `single-payment` - payment
+ * * `bulk-payment` - bulk-payments
+ * * `periodic-payment` - periodic-payments
  */
 public enum PaymentWritePaymentTypeEnum {
     SINGLE_PAYMENT("single-payment"),

@@ -15,9 +15,11 @@ public class GetApplicationComponentStrategiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationComponentStrategies")
     public ApplicationComponentStrategy[] applicationComponentStrategies;
+
     public GetApplicationComponentStrategiesResponse withApplicationComponentStrategies(ApplicationComponentStrategy[] applicationComponentStrategies) {
         this.applicationComponentStrategies = applicationComponentStrategies;
         return this;
     }
     
+    public GetApplicationComponentStrategiesResponse(){}
 }

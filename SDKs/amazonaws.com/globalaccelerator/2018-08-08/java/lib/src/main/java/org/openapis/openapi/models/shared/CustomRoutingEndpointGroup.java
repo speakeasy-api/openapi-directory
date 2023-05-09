@@ -15,6 +15,7 @@ public class CustomRoutingEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationDescriptions")
     public CustomRoutingDestinationDescription[] destinationDescriptions;
+
     public CustomRoutingEndpointGroup withDestinationDescriptions(CustomRoutingDestinationDescription[] destinationDescriptions) {
         this.destinationDescriptions = destinationDescriptions;
         return this;
@@ -23,6 +24,7 @@ public class CustomRoutingEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointDescriptions")
     public CustomRoutingEndpointDescription[] endpointDescriptions;
+
     public CustomRoutingEndpointGroup withEndpointDescriptions(CustomRoutingEndpointDescription[] endpointDescriptions) {
         this.endpointDescriptions = endpointDescriptions;
         return this;
@@ -31,6 +33,7 @@ public class CustomRoutingEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public CustomRoutingEndpointGroup withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
@@ -39,9 +42,11 @@ public class CustomRoutingEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroupRegion")
     public String endpointGroupRegion;
+
     public CustomRoutingEndpointGroup withEndpointGroupRegion(String endpointGroupRegion) {
         this.endpointGroupRegion = endpointGroupRegion;
         return this;
     }
     
+    public CustomRoutingEndpointGroup(){}
 }

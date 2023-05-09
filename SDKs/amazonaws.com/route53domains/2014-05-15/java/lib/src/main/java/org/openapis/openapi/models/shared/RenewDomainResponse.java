@@ -15,9 +15,11 @@ public class RenewDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public RenewDomainResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public RenewDomainResponse(){}
 }

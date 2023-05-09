@@ -15,6 +15,7 @@ public class NodesAddonReadNodeAddonAttributes {
      */
     
     public Boolean configured;
+
     public NodesAddonReadNodeAddonAttributes withConfigured(Boolean configured) {
         this.configured = configured;
         return this;
@@ -25,6 +26,7 @@ public class NodesAddonReadNodeAddonAttributes {
      */
     
     public Boolean enabled;
+
     public NodesAddonReadNodeAddonAttributes withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -35,6 +37,7 @@ public class NodesAddonReadNodeAddonAttributes {
      */
     
     public String externalAccountId;
+
     public NodesAddonReadNodeAddonAttributes withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -45,6 +48,7 @@ public class NodesAddonReadNodeAddonAttributes {
      */
     
     public String folderId;
+
     public NodesAddonReadNodeAddonAttributes withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -55,6 +59,7 @@ public class NodesAddonReadNodeAddonAttributes {
      */
     
     public String folderPath;
+
     public NodesAddonReadNodeAddonAttributes withFolderPath(String folderPath) {
         this.folderPath = folderPath;
         return this;
@@ -65,6 +70,7 @@ public class NodesAddonReadNodeAddonAttributes {
      */
     
     public String label;
+
     public NodesAddonReadNodeAddonAttributes withLabel(String label) {
         this.label = label;
         return this;
@@ -75,6 +81,7 @@ public class NodesAddonReadNodeAddonAttributes {
      */
     
     public Boolean nodeHasAuth;
+
     public NodesAddonReadNodeAddonAttributes withNodeHasAuth(Boolean nodeHasAuth) {
         this.nodeHasAuth = nodeHasAuth;
         return this;
@@ -85,9 +92,11 @@ public class NodesAddonReadNodeAddonAttributes {
      */
     
     public String url;
+
     public NodesAddonReadNodeAddonAttributes withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NodesAddonReadNodeAddonAttributes(){}
 }

@@ -12,9 +12,13 @@ public class GovidRequestBodyCertificateParameters {
      */
     @JsonProperty("_uniqueid")
     public String uniqueid;
+
     public GovidRequestBodyCertificateParameters withUniqueid(String uniqueid) {
         this.uniqueid = uniqueid;
         return this;
     }
     
+    public GovidRequestBodyCertificateParameters(@JsonProperty("_uniqueid") String uniqueid) {
+        this.uniqueid = uniqueid;
+  }
 }

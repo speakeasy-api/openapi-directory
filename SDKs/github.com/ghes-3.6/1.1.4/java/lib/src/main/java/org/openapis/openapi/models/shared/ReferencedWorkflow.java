@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReferencedWorkflow {
     @JsonProperty("path")
     public String path;
+
     public ReferencedWorkflow withPath(String path) {
         this.path = path;
         return this;
@@ -22,6 +23,7 @@ public class ReferencedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ref")
     public String ref;
+
     public ReferencedWorkflow withRef(String ref) {
         this.ref = ref;
         return this;
@@ -29,9 +31,14 @@ public class ReferencedWorkflow {
     
     @JsonProperty("sha")
     public String sha;
+
     public ReferencedWorkflow withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public ReferencedWorkflow(@JsonProperty("path") String path, @JsonProperty("sha") String sha) {
+        this.path = path;
+        this.sha = sha;
+  }
 }

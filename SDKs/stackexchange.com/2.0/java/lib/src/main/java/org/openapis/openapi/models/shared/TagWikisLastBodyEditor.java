@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TagWikisLastBodyEditor {
     
     public Long acceptRate;
+
     public TagWikisLastBodyEditor withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class TagWikisLastBodyEditor {
     
     
     public TagWikisLastBodyEditorBadgeCounts badgeCounts;
+
     public TagWikisLastBodyEditor withBadgeCounts(TagWikisLastBodyEditorBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class TagWikisLastBodyEditor {
     
     
     public String displayName;
+
     public TagWikisLastBodyEditor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class TagWikisLastBodyEditor {
     
     
     public String link;
+
     public TagWikisLastBodyEditor withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class TagWikisLastBodyEditor {
     
     
     public String profileImage;
+
     public TagWikisLastBodyEditor withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class TagWikisLastBodyEditor {
     
     
     public Long reputation;
+
     public TagWikisLastBodyEditor withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class TagWikisLastBodyEditor {
     
     
     public Long userId;
+
     public TagWikisLastBodyEditor withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class TagWikisLastBodyEditor {
     
     
     public String userType;
+
     public TagWikisLastBodyEditor withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public TagWikisLastBodyEditor(){}
 }

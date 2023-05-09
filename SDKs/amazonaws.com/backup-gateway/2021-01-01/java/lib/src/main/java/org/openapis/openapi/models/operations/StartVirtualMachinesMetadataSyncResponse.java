@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartVirtualMachinesMetadataSyncResponse {
@@ -12,6 +13,7 @@ public class StartVirtualMachinesMetadataSyncResponse {
      */
     
     public Object accessDeniedException;
+
     public StartVirtualMachinesMetadataSyncResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartVirtualMachinesMetadataSyncResponse {
     
     
     public String contentType;
+
     public StartVirtualMachinesMetadataSyncResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartVirtualMachinesMetadataSyncResponse {
      */
     
     public Object internalServerException;
+
     public StartVirtualMachinesMetadataSyncResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartVirtualMachinesMetadataSyncResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartVirtualMachinesMetadataSyncResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartVirtualMachinesMetadataSyncResponse {
      */
     
     public org.openapis.openapi.models.shared.StartVirtualMachinesMetadataSyncOutput startVirtualMachinesMetadataSyncOutput;
+
     public StartVirtualMachinesMetadataSyncResponse withStartVirtualMachinesMetadataSyncOutput(org.openapis.openapi.models.shared.StartVirtualMachinesMetadataSyncOutput startVirtualMachinesMetadataSyncOutput) {
         this.startVirtualMachinesMetadataSyncOutput = startVirtualMachinesMetadataSyncOutput;
         return this;
@@ -56,6 +62,7 @@ public class StartVirtualMachinesMetadataSyncResponse {
     
     
     public Integer statusCode;
+
     public StartVirtualMachinesMetadataSyncResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartVirtualMachinesMetadataSyncResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartVirtualMachinesMetadataSyncResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartVirtualMachinesMetadataSyncResponse {
      */
     
     public Object throttlingException;
+
     public StartVirtualMachinesMetadataSyncResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StartVirtualMachinesMetadataSyncResponse {
      */
     
     public Object validationException;
+
     public StartVirtualMachinesMetadataSyncResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartVirtualMachinesMetadataSyncResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

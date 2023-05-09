@@ -15,9 +15,11 @@ public class CreateControlPanelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanel")
     public ControlPanel controlPanel;
+
     public CreateControlPanelResponse withControlPanel(ControlPanel controlPanel) {
         this.controlPanel = controlPanel;
         return this;
     }
     
+    public CreateControlPanelResponse(){}
 }

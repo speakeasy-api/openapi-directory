@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSecretsResponse {
     
     public String contentType;
+
     public ListSecretsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSecretsResponse {
      */
     
     public Object internalServiceError;
+
     public ListSecretsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListSecretsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListSecretsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListSecretsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListSecretsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListSecretsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSecretsResponse listSecretsResponse;
+
     public ListSecretsResponse withListSecretsResponse(org.openapis.openapi.models.shared.ListSecretsResponse listSecretsResponse) {
         this.listSecretsResponse = listSecretsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListSecretsResponse {
     
     
     public Integer statusCode;
+
     public ListSecretsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListSecretsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSecretsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSecretsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

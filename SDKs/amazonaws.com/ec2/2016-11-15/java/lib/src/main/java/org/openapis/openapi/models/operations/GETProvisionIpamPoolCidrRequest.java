@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETProvisionIpamPoolCidrRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETProvisionIpamPoolCidrActionEnum action;
+
     public GETProvisionIpamPoolCidrRequest withAction(GETProvisionIpamPoolCidrActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETProvisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
     public String cidr;
+
     public GETProvisionIpamPoolCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -29,6 +32,7 @@ public class GETProvisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CidrAuthorizationContext")
     public GETProvisionIpamPoolCidrCidrAuthorizationContext cidrAuthorizationContext;
+
     public GETProvisionIpamPoolCidrRequest withCidrAuthorizationContext(GETProvisionIpamPoolCidrCidrAuthorizationContext cidrAuthorizationContext) {
         this.cidrAuthorizationContext = cidrAuthorizationContext;
         return this;
@@ -39,6 +43,7 @@ public class GETProvisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETProvisionIpamPoolCidrRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -49,6 +54,7 @@ public class GETProvisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETProvisionIpamPoolCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -59,6 +65,7 @@ public class GETProvisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamPoolId")
     public String ipamPoolId;
+
     public GETProvisionIpamPoolCidrRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -69,6 +76,7 @@ public class GETProvisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetmaskLength")
     public Long netmaskLength;
+
     public GETProvisionIpamPoolCidrRequest withNetmaskLength(Long netmaskLength) {
         this.netmaskLength = netmaskLength;
         return this;
@@ -76,6 +84,7 @@ public class GETProvisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETProvisionIpamPoolCidrVersionEnum version;
+
     public GETProvisionIpamPoolCidrRequest withVersion(GETProvisionIpamPoolCidrVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETProvisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETProvisionIpamPoolCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETProvisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETProvisionIpamPoolCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETProvisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETProvisionIpamPoolCidrRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETProvisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETProvisionIpamPoolCidrRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETProvisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETProvisionIpamPoolCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETProvisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETProvisionIpamPoolCidrRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,15 @@ public class GETProvisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETProvisionIpamPoolCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETProvisionIpamPoolCidrRequest(@JsonProperty("Action") GETProvisionIpamPoolCidrActionEnum action, @JsonProperty("IpamPoolId") String ipamPoolId, @JsonProperty("Version") GETProvisionIpamPoolCidrVersionEnum version) {
+        this.action = action;
+        this.ipamPoolId = ipamPoolId;
+        this.version = version;
+  }
 }

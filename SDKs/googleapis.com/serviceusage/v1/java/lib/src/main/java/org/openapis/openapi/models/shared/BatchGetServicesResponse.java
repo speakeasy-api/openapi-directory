@@ -18,9 +18,11 @@ public class BatchGetServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public GoogleApiServiceusageV1Service[] services;
+
     public BatchGetServicesResponse withServices(GoogleApiServiceusageV1Service[] services) {
         this.services = services;
         return this;
     }
     
+    public BatchGetServicesResponse(){}
 }

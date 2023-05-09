@@ -15,6 +15,7 @@ public class VirtualRouterRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public VirtualRouterRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class VirtualRouterRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualRouterRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -31,9 +33,11 @@ public class VirtualRouterRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualRouterName")
     public String virtualRouterName;
+
     public VirtualRouterRef withVirtualRouterName(String virtualRouterName) {
         this.virtualRouterName = virtualRouterName;
         return this;
     }
     
+    public VirtualRouterRef(){}
 }

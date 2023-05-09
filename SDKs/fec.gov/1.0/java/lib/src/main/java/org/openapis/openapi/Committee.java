@@ -72,11 +72,9 @@ public class Committee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesResponse() {{
+        org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesResponse(contentType, httpRes.statusCode()) {{
             committeeDetailPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -91,7 +89,7 @@ public class Committee {
     }
 
     /**
-     *  - Explore a filer's characteristics over time. This can be particularly useful if the - committees change treasurers, designation, or `committee_type`. - 
+     *  - Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`. - 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -117,11 +115,9 @@ public class Committee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryResponse(contentType, httpRes.statusCode()) {{
             committeeHistoryProfilePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -136,7 +132,7 @@ public class Committee {
     }
 
     /**
-     *  - Explore a filer's characteristics over time. This can be particularly useful if the - committees change treasurers, designation, or `committee_type`. - 
+     *  - Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`. - 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -162,11 +158,9 @@ public class Committee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleResponse() {{
+        org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleResponse(contentType, httpRes.statusCode()) {{
             committeeHistoryProfilePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -207,11 +201,9 @@ public class Committee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdResponse(contentType, httpRes.statusCode()) {{
             committeeDetailPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -226,7 +218,7 @@ public class Committee {
     }
 
     /**
-     *  - Explore a filer's characteristics over time. This can be particularly useful if the - committees change treasurers, designation, or `committee_type`. - 
+     *  - Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`. - 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -252,11 +244,9 @@ public class Committee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryResponse(contentType, httpRes.statusCode()) {{
             committeeHistoryProfilePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -271,7 +261,7 @@ public class Committee {
     }
 
     /**
-     *  - Explore a filer's characteristics over time. This can be particularly useful if the - committees change treasurers, designation, or `committee_type`. - 
+     *  - Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`. - 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -297,11 +287,9 @@ public class Committee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleResponse(contentType, httpRes.statusCode()) {{
             committeeHistoryProfilePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -342,11 +330,9 @@ public class Committee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteesResponse res = new org.openapis.openapi.models.operations.GetCommitteesResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteesResponse res = new org.openapis.openapi.models.operations.GetCommitteesResponse(contentType, httpRes.statusCode()) {{
             committeePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

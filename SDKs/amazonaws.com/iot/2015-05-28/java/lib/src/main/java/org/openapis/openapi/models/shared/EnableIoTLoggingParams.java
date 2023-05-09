@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnableIoTLoggingParams {
     @JsonProperty("logLevel")
     public LogLevelEnum logLevel;
+
     public EnableIoTLoggingParams withLogLevel(LogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -19,9 +20,14 @@ public class EnableIoTLoggingParams {
     
     @JsonProperty("roleArnForLogging")
     public String roleArnForLogging;
+
     public EnableIoTLoggingParams withRoleArnForLogging(String roleArnForLogging) {
         this.roleArnForLogging = roleArnForLogging;
         return this;
     }
     
+    public EnableIoTLoggingParams(@JsonProperty("logLevel") LogLevelEnum logLevel, @JsonProperty("roleArnForLogging") String roleArnForLogging) {
+        this.logLevel = logLevel;
+        this.roleArnForLogging = roleArnForLogging;
+  }
 }

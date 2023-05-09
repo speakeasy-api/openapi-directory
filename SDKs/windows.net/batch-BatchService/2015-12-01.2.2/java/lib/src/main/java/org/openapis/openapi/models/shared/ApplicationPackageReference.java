@@ -17,6 +17,7 @@ public class ApplicationPackageReference {
      */
     @JsonProperty("applicationId")
     public String applicationId;
+
     public ApplicationPackageReference withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -28,9 +29,13 @@ public class ApplicationPackageReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ApplicationPackageReference withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ApplicationPackageReference(@JsonProperty("applicationId") String applicationId) {
+        this.applicationId = applicationId;
+  }
 }

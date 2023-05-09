@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeSecurityGroupEgressRequestIpPermissions {
     
     public Long fromPort;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissions withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,6 +20,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissions {
     
     
     public String ipProtocol;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissions withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,6 +28,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissions {
     
     
     public AuthorizeSecurityGroupEgressRequestIpPermissionsIpRanges[] ipRanges;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissions withIpRanges(AuthorizeSecurityGroupEgressRequestIpPermissionsIpRanges[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -33,6 +36,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissions {
     
     
     public AuthorizeSecurityGroupEgressRequestIpPermissionsIpv6Ranges[] ipv6Ranges;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissions withIpv6Ranges(AuthorizeSecurityGroupEgressRequestIpPermissionsIpv6Ranges[] ipv6Ranges) {
         this.ipv6Ranges = ipv6Ranges;
         return this;
@@ -40,6 +44,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissions {
     
     
     public AuthorizeSecurityGroupEgressRequestIpPermissionsPrefixListIds[] prefixListIds;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissions withPrefixListIds(AuthorizeSecurityGroupEgressRequestIpPermissionsPrefixListIds[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -47,6 +52,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissions {
     
     
     public Long toPort;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissions withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
@@ -54,9 +60,11 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissions {
     
     
     public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs[] userIdGroupPairs;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissions withUserIdGroupPairs(AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs[] userIdGroupPairs) {
         this.userIdGroupPairs = userIdGroupPairs;
         return this;
     }
     
+    public AuthorizeSecurityGroupEgressRequestIpPermissions(){}
 }

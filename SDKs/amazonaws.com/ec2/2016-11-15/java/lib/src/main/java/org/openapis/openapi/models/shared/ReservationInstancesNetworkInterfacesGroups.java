@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesNetworkInterfacesGroups {
     
     public String groupId;
+
     public ReservationInstancesNetworkInterfacesGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class ReservationInstancesNetworkInterfacesGroups {
     
     
     public String groupName;
+
     public ReservationInstancesNetworkInterfacesGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public ReservationInstancesNetworkInterfacesGroups(){}
 }

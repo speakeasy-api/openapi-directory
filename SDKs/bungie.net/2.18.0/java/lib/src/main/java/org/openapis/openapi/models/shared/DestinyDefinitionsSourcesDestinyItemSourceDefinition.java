@@ -16,6 +16,7 @@ public class DestinyDefinitionsSourcesDestinyItemSourceDefinition {
      */
     
     public java.util.Map<String, DestinyDefinitionsDestinyInventoryItemStatDefinition> computedStats;
+
     public DestinyDefinitionsSourcesDestinyItemSourceDefinition withComputedStats(java.util.Map<String, DestinyDefinitionsDestinyInventoryItemStatDefinition> computedStats) {
         this.computedStats = computedStats;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsSourcesDestinyItemSourceDefinition {
      */
     
     public Integer level;
+
     public DestinyDefinitionsSourcesDestinyItemSourceDefinition withLevel(Integer level) {
         this.level = level;
         return this;
@@ -36,6 +38,7 @@ public class DestinyDefinitionsSourcesDestinyItemSourceDefinition {
      */
     
     public Integer maxLevelRequired;
+
     public DestinyDefinitionsSourcesDestinyItemSourceDefinition withMaxLevelRequired(Integer maxLevelRequired) {
         this.maxLevelRequired = maxLevelRequired;
         return this;
@@ -46,6 +49,7 @@ public class DestinyDefinitionsSourcesDestinyItemSourceDefinition {
      */
     
     public Integer maxQuality;
+
     public DestinyDefinitionsSourcesDestinyItemSourceDefinition withMaxQuality(Integer maxQuality) {
         this.maxQuality = maxQuality;
         return this;
@@ -56,6 +60,7 @@ public class DestinyDefinitionsSourcesDestinyItemSourceDefinition {
      */
     
     public Integer minLevelRequired;
+
     public DestinyDefinitionsSourcesDestinyItemSourceDefinition withMinLevelRequired(Integer minLevelRequired) {
         this.minLevelRequired = minLevelRequired;
         return this;
@@ -66,6 +71,7 @@ public class DestinyDefinitionsSourcesDestinyItemSourceDefinition {
      */
     
     public Integer minQuality;
+
     public DestinyDefinitionsSourcesDestinyItemSourceDefinition withMinQuality(Integer minQuality) {
         this.minQuality = minQuality;
         return this;
@@ -76,9 +82,11 @@ public class DestinyDefinitionsSourcesDestinyItemSourceDefinition {
      */
     
     public Long[] sourceHashes;
+
     public DestinyDefinitionsSourcesDestinyItemSourceDefinition withSourceHashes(Long[] sourceHashes) {
         this.sourceHashes = sourceHashes;
         return this;
     }
     
+    public DestinyDefinitionsSourcesDestinyItemSourceDefinition(){}
 }

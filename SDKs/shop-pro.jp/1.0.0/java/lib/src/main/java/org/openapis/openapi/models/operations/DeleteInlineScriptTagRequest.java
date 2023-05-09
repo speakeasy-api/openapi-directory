@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInlineScriptTagRequest {
@@ -12,9 +13,13 @@ public class DeleteInlineScriptTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inlineScriptTagId")
     public Long inlineScriptTagId;
+
     public DeleteInlineScriptTagRequest withInlineScriptTagId(Long inlineScriptTagId) {
         this.inlineScriptTagId = inlineScriptTagId;
         return this;
     }
     
+    public DeleteInlineScriptTagRequest(@JsonProperty("inlineScriptTagId") Long inlineScriptTagId) {
+        this.inlineScriptTagId = inlineScriptTagId;
+  }
 }

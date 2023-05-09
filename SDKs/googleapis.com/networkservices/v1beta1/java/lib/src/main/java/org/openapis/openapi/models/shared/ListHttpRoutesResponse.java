@@ -18,6 +18,7 @@ public class ListHttpRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRoutes")
     public HttpRoute[] httpRoutes;
+
     public ListHttpRoutesResponse withHttpRoutes(HttpRoute[] httpRoutes) {
         this.httpRoutes = httpRoutes;
         return this;
@@ -29,9 +30,11 @@ public class ListHttpRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListHttpRoutesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListHttpRoutesResponse(){}
 }

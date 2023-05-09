@@ -18,6 +18,7 @@ public class IntegerMean {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public SplitInt64 count;
+
     public IntegerMean withCount(SplitInt64 count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class IntegerMean {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public SplitInt64 sum;
+
     public IntegerMean withSum(SplitInt64 sum) {
         this.sum = sum;
         return this;
     }
     
+    public IntegerMean(){}
 }

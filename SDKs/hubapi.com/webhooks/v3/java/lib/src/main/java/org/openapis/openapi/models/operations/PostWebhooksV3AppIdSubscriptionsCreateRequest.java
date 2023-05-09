@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksV3AppIdSubscriptionsCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SubscriptionCreateRequest subscriptionCreateRequest;
+
     public PostWebhooksV3AppIdSubscriptionsCreateRequest withSubscriptionCreateRequest(org.openapis.openapi.models.shared.SubscriptionCreateRequest subscriptionCreateRequest) {
         this.subscriptionCreateRequest = subscriptionCreateRequest;
         return this;
@@ -16,9 +18,14 @@ public class PostWebhooksV3AppIdSubscriptionsCreateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PostWebhooksV3AppIdSubscriptionsCreateRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
     }
     
+    public PostWebhooksV3AppIdSubscriptionsCreateRequest(@JsonProperty("SubscriptionCreateRequest") org.openapis.openapi.models.shared.SubscriptionCreateRequest subscriptionCreateRequest, @JsonProperty("appId") Integer appId) {
+        this.subscriptionCreateRequest = subscriptionCreateRequest;
+        this.appId = appId;
+  }
 }

@@ -15,6 +15,7 @@ public class WebhookAuthConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedIPRange")
     public String allowedIPRange;
+
     public WebhookAuthConfiguration withAllowedIPRange(String allowedIPRange) {
         this.allowedIPRange = allowedIPRange;
         return this;
@@ -23,9 +24,11 @@ public class WebhookAuthConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretToken")
     public String secretToken;
+
     public WebhookAuthConfiguration withSecretToken(String secretToken) {
         this.secretToken = secretToken;
         return this;
     }
     
+    public WebhookAuthConfiguration(){}
 }

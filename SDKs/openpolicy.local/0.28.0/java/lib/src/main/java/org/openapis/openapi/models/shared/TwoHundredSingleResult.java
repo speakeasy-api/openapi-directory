@@ -15,9 +15,11 @@ public class TwoHundredSingleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public TwoHundredSingleResultResult result;
+
     public TwoHundredSingleResult withResult(TwoHundredSingleResultResult result) {
         this.result = result;
         return this;
     }
     
+    public TwoHundredSingleResult(){}
 }

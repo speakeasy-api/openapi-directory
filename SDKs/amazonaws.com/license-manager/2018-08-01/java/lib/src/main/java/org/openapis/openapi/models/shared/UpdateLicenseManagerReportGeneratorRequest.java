@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateLicenseManagerReportGeneratorRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public UpdateLicenseManagerReportGeneratorRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class UpdateLicenseManagerReportGeneratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateLicenseManagerReportGeneratorRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class UpdateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("LicenseManagerReportGeneratorArn")
     public String licenseManagerReportGeneratorArn;
+
     public UpdateLicenseManagerReportGeneratorRequest withLicenseManagerReportGeneratorArn(String licenseManagerReportGeneratorArn) {
         this.licenseManagerReportGeneratorArn = licenseManagerReportGeneratorArn;
         return this;
@@ -33,6 +36,7 @@ public class UpdateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("ReportContext")
     public ReportContext reportContext;
+
     public UpdateLicenseManagerReportGeneratorRequest withReportContext(ReportContext reportContext) {
         this.reportContext = reportContext;
         return this;
@@ -40,6 +44,7 @@ public class UpdateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("ReportFrequency")
     public ReportFrequency reportFrequency;
+
     public UpdateLicenseManagerReportGeneratorRequest withReportFrequency(ReportFrequency reportFrequency) {
         this.reportFrequency = reportFrequency;
         return this;
@@ -47,6 +52,7 @@ public class UpdateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("ReportGeneratorName")
     public String reportGeneratorName;
+
     public UpdateLicenseManagerReportGeneratorRequest withReportGeneratorName(String reportGeneratorName) {
         this.reportGeneratorName = reportGeneratorName;
         return this;
@@ -54,9 +60,18 @@ public class UpdateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("Type")
     public ReportTypeEnum[] type;
+
     public UpdateLicenseManagerReportGeneratorRequest withType(ReportTypeEnum[] type) {
         this.type = type;
         return this;
     }
     
+    public UpdateLicenseManagerReportGeneratorRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("LicenseManagerReportGeneratorArn") String licenseManagerReportGeneratorArn, @JsonProperty("ReportContext") ReportContext reportContext, @JsonProperty("ReportFrequency") ReportFrequency reportFrequency, @JsonProperty("ReportGeneratorName") String reportGeneratorName, @JsonProperty("Type") ReportTypeEnum[] type) {
+        this.clientToken = clientToken;
+        this.licenseManagerReportGeneratorArn = licenseManagerReportGeneratorArn;
+        this.reportContext = reportContext;
+        this.reportFrequency = reportFrequency;
+        this.reportGeneratorName = reportGeneratorName;
+        this.type = type;
+  }
 }

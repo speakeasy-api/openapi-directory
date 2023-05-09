@@ -15,6 +15,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public CreateAssociationRequest withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyOnlyAtCronInterval")
     public Boolean applyOnlyAtCronInterval;
+
     public CreateAssociationRequest withApplyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
         this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
         return this;
@@ -31,6 +33,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationName")
     public String associationName;
+
     public CreateAssociationRequest withAssociationName(String associationName) {
         this.associationName = associationName;
         return this;
@@ -39,6 +42,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationTargetParameterName")
     public String automationTargetParameterName;
+
     public CreateAssociationRequest withAutomationTargetParameterName(String automationTargetParameterName) {
         this.automationTargetParameterName = automationTargetParameterName;
         return this;
@@ -47,6 +51,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalendarNames")
     public String[] calendarNames;
+
     public CreateAssociationRequest withCalendarNames(String[] calendarNames) {
         this.calendarNames = calendarNames;
         return this;
@@ -55,6 +60,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSeverity")
     public AssociationComplianceSeverityEnum complianceSeverity;
+
     public CreateAssociationRequest withComplianceSeverity(AssociationComplianceSeverityEnum complianceSeverity) {
         this.complianceSeverity = complianceSeverity;
         return this;
@@ -63,6 +69,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public CreateAssociationRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -71,6 +78,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public CreateAssociationRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -79,6 +87,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public CreateAssociationRequest withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -87,6 +96,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public CreateAssociationRequest withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -94,6 +104,7 @@ public class CreateAssociationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateAssociationRequest withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +113,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public InstanceAssociationOutputLocation outputLocation;
+
     public CreateAssociationRequest withOutputLocation(InstanceAssociationOutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -110,6 +122,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public CreateAssociationRequest withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -118,6 +131,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public CreateAssociationRequest withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -126,6 +140,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public CreateAssociationRequest withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -134,6 +149,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncCompliance")
     public AssociationSyncComplianceEnum syncCompliance;
+
     public CreateAssociationRequest withSyncCompliance(AssociationSyncComplianceEnum syncCompliance) {
         this.syncCompliance = syncCompliance;
         return this;
@@ -142,6 +158,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAssociationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -150,6 +167,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocations")
     public TargetLocation[] targetLocations;
+
     public CreateAssociationRequest withTargetLocations(TargetLocation[] targetLocations) {
         this.targetLocations = targetLocations;
         return this;
@@ -158,6 +176,7 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public CreateAssociationRequest withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -166,9 +185,13 @@ public class CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public CreateAssociationRequest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public CreateAssociationRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class ListConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configList")
     public ConfigListItem[] configList;
+
     public ListConfigsResponse withConfigList(ConfigListItem[] configList) {
         this.configList = configList;
         return this;
@@ -23,9 +24,11 @@ public class ListConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListConfigsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConfigsResponse(){}
 }

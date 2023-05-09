@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeprecateFlowTemplateResponse {
     
     public String contentType;
+
     public DeprecateFlowTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeprecateFlowTemplateResponse {
      */
     
     public java.util.Map<String, Object> deprecateFlowTemplateResponse;
+
     public DeprecateFlowTemplateResponse withDeprecateFlowTemplateResponse(java.util.Map<String, Object> deprecateFlowTemplateResponse) {
         this.deprecateFlowTemplateResponse = deprecateFlowTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeprecateFlowTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public DeprecateFlowTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeprecateFlowTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public DeprecateFlowTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeprecateFlowTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeprecateFlowTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeprecateFlowTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeprecateFlowTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeprecateFlowTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeprecateFlowTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeprecateFlowTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DeprecateFlowTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeprecateFlowTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

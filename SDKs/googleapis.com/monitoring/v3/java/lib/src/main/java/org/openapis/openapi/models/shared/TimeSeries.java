@@ -18,6 +18,7 @@ public class TimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MonitoredResourceMetadata metadata;
+
     public TimeSeries withMetadata(MonitoredResourceMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class TimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public Metric metric;
+
     public TimeSeries withMetric(Metric metric) {
         this.metric = metric;
         return this;
@@ -40,6 +42,7 @@ public class TimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricKind")
     public TimeSeriesMetricKindEnum metricKind;
+
     public TimeSeries withMetricKind(TimeSeriesMetricKindEnum metricKind) {
         this.metricKind = metricKind;
         return this;
@@ -51,6 +54,7 @@ public class TimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Point[] points;
+
     public TimeSeries withPoints(Point[] points) {
         this.points = points;
         return this;
@@ -62,6 +66,7 @@ public class TimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public MonitoredResource resource;
+
     public TimeSeries withResource(MonitoredResource resource) {
         this.resource = resource;
         return this;
@@ -73,6 +78,7 @@ public class TimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public TimeSeries withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -84,9 +90,11 @@ public class TimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueType")
     public TimeSeriesValueTypeEnum valueType;
+
     public TimeSeries withValueType(TimeSeriesValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public TimeSeries(){}
 }

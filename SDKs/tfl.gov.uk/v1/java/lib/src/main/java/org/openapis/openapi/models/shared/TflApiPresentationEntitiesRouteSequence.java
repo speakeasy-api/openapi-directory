@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesRouteSequence withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -23,6 +24,7 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isOutboundOnly")
     public Boolean isOutboundOnly;
+
     public TflApiPresentationEntitiesRouteSequence withIsOutboundOnly(Boolean isOutboundOnly) {
         this.isOutboundOnly = isOutboundOnly;
         return this;
@@ -31,6 +33,7 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineId")
     public String lineId;
+
     public TflApiPresentationEntitiesRouteSequence withLineId(String lineId) {
         this.lineId = lineId;
         return this;
@@ -39,6 +42,7 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineName")
     public String lineName;
+
     public TflApiPresentationEntitiesRouteSequence withLineName(String lineName) {
         this.lineName = lineName;
         return this;
@@ -47,6 +51,7 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineStrings")
     public String[] lineStrings;
+
     public TflApiPresentationEntitiesRouteSequence withLineStrings(String[] lineStrings) {
         this.lineStrings = lineStrings;
         return this;
@@ -55,6 +60,7 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public TflApiPresentationEntitiesRouteSequence withMode(String mode) {
         this.mode = mode;
         return this;
@@ -63,6 +69,7 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderedLineRoutes")
     public TflApiPresentationEntitiesOrderedRoute[] orderedLineRoutes;
+
     public TflApiPresentationEntitiesRouteSequence withOrderedLineRoutes(TflApiPresentationEntitiesOrderedRoute[] orderedLineRoutes) {
         this.orderedLineRoutes = orderedLineRoutes;
         return this;
@@ -71,6 +78,7 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stations")
     public TflApiPresentationEntitiesMatchedStop[] stations;
+
     public TflApiPresentationEntitiesRouteSequence withStations(TflApiPresentationEntitiesMatchedStop[] stations) {
         this.stations = stations;
         return this;
@@ -79,9 +87,11 @@ public class TflApiPresentationEntitiesRouteSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopPointSequences")
     public TflApiPresentationEntitiesStopPointSequence[] stopPointSequences;
+
     public TflApiPresentationEntitiesRouteSequence withStopPointSequences(TflApiPresentationEntitiesStopPointSequence[] stopPointSequences) {
         this.stopPointSequences = stopPointSequences;
         return this;
     }
     
+    public TflApiPresentationEntitiesRouteSequence(){}
 }

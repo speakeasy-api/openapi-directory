@@ -12,6 +12,7 @@ public class ApplicationsApiUsage {
      */
     
     public ApplicationsSeries[] apiCalls;
+
     public ApplicationsApiUsage withApiCalls(ApplicationsSeries[] apiCalls) {
         this.apiCalls = apiCalls;
         return this;
@@ -22,9 +23,11 @@ public class ApplicationsApiUsage {
      */
     
     public ApplicationsSeries[] throttledRequests;
+
     public ApplicationsApiUsage withThrottledRequests(ApplicationsSeries[] throttledRequests) {
         this.throttledRequests = throttledRequests;
         return this;
     }
     
+    public ApplicationsApiUsage(){}
 }

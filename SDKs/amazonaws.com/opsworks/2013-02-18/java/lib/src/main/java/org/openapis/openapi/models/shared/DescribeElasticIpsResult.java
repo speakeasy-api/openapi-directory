@@ -15,9 +15,11 @@ public class DescribeElasticIpsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticIps")
     public ElasticIp[] elasticIps;
+
     public DescribeElasticIpsResult withElasticIps(ElasticIp[] elasticIps) {
         this.elasticIps = elasticIps;
         return this;
     }
     
+    public DescribeElasticIpsResult(){}
 }

@@ -46,7 +46,7 @@ public class Invoice {
      * 
      * &gt; The `Notify invoice` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
      * 
-     * &gt; \ud83d\udcd8 Onboarding guide 
+     * &gt; 📘 Onboarding guide 
      * &gt;
      * &gt; Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.
      * 
@@ -83,11 +83,9 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceNotificationResponse res = new org.openapis.openapi.models.operations.InvoiceNotificationResponse() {{
+        org.openapis.openapi.models.operations.InvoiceNotificationResponse res = new org.openapis.openapi.models.operations.InvoiceNotificationResponse(contentType, httpRes.statusCode()) {{
             invoiceNotification200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,11 +138,9 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatepartialinvoiceSendTrackingNumberResponse res = new org.openapis.openapi.models.operations.UpdatepartialinvoiceSendTrackingNumberResponse() {{
+        org.openapis.openapi.models.operations.UpdatepartialinvoiceSendTrackingNumberResponse res = new org.openapis.openapi.models.operations.UpdatepartialinvoiceSendTrackingNumberResponse(contentType, httpRes.statusCode()) {{
             updatepartialinvoiceSendTrackingNumber = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

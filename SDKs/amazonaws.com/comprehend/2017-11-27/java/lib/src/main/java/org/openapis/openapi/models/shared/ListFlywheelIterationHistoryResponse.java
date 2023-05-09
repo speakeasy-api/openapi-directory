@@ -15,6 +15,7 @@ public class ListFlywheelIterationHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelIterationPropertiesList")
     public FlywheelIterationProperties[] flywheelIterationPropertiesList;
+
     public ListFlywheelIterationHistoryResponse withFlywheelIterationPropertiesList(FlywheelIterationProperties[] flywheelIterationPropertiesList) {
         this.flywheelIterationPropertiesList = flywheelIterationPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListFlywheelIterationHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFlywheelIterationHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFlywheelIterationHistoryResponse(){}
 }

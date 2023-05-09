@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeImagesResponse {
     
     public String contentType;
+
     public DescribeImagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeImagesResponse describeImagesResponse;
+
     public DescribeImagesResponse withDescribeImagesResponse(org.openapis.openapi.models.shared.DescribeImagesResponse describeImagesResponse) {
         this.describeImagesResponse = describeImagesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeImagesResponse {
      */
     
     public Object imageNotFoundException;
+
     public DescribeImagesResponse withImageNotFoundException(Object imageNotFoundException) {
         this.imageNotFoundException = imageNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeImagesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeImagesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeImagesResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public DescribeImagesResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeImagesResponse {
      */
     
     public Object serverException;
+
     public DescribeImagesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeImagesResponse {
     
     
     public Integer statusCode;
+
     public DescribeImagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeImagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeImagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeImagesResponse {
      */
     
     public Object unsupportedCommandException;
+
     public DescribeImagesResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public DescribeImagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

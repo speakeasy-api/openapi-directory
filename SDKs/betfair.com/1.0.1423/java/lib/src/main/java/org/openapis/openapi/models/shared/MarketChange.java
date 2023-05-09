@@ -15,6 +15,7 @@ public class MarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("con")
     public Boolean con;
+
     public MarketChange withCon(Boolean con) {
         this.con = con;
         return this;
@@ -26,6 +27,7 @@ public class MarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MarketChange withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class MarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("img")
     public Boolean img;
+
     public MarketChange withImg(Boolean img) {
         this.img = img;
         return this;
@@ -45,6 +48,7 @@ public class MarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketDefinition")
     public MarketDefinition marketDefinition;
+
     public MarketChange withMarketDefinition(MarketDefinition marketDefinition) {
         this.marketDefinition = marketDefinition;
         return this;
@@ -56,6 +60,7 @@ public class MarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rc")
     public RunnerChange[] rc;
+
     public MarketChange withRc(RunnerChange[] rc) {
         this.rc = rc;
         return this;
@@ -67,9 +72,11 @@ public class MarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tv")
     public Double tv;
+
     public MarketChange withTv(Double tv) {
         this.tv = tv;
         return this;
     }
     
+    public MarketChange(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ReplicapoolPoolsUpdatetemplateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsUpdatetemplateSecurityOption1 option1;
+
     public ReplicapoolPoolsUpdatetemplateSecurity withOption1(ReplicapoolPoolsUpdatetemplateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ReplicapoolPoolsUpdatetemplateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsUpdatetemplateSecurityOption2 option2;
+
     public ReplicapoolPoolsUpdatetemplateSecurity withOption2(ReplicapoolPoolsUpdatetemplateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ReplicapoolPoolsUpdatetemplateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsUpdatetemplateSecurityOption3 option3;
+
     public ReplicapoolPoolsUpdatetemplateSecurity withOption3(ReplicapoolPoolsUpdatetemplateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ReplicapoolPoolsUpdatetemplateSecurity(){}
 }

@@ -12,6 +12,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers {
      */
     @JsonProperty("addToCartLink")
     public String addToCartLink;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers withAddToCartLink(String addToCartLink) {
         this.addToCartLink = addToCartLink;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers {
      */
     @JsonProperty("commertialOffer")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer commertialOffer;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers withCommertialOffer(ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer commertialOffer) {
         this.commertialOffer = commertialOffer;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers {
      */
     @JsonProperty("sellerDefault")
     public Boolean sellerDefault;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers withSellerDefault(Boolean sellerDefault) {
         this.sellerDefault = sellerDefault;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers {
      */
     @JsonProperty("sellerId")
     public String sellerId;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -52,9 +56,17 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers {
      */
     @JsonProperty("sellerName")
     public String sellerName;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers withSellerName(String sellerName) {
         this.sellerName = sellerName;
         return this;
     }
     
+    public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers(@JsonProperty("addToCartLink") String addToCartLink, @JsonProperty("commertialOffer") ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer commertialOffer, @JsonProperty("sellerDefault") Boolean sellerDefault, @JsonProperty("sellerId") String sellerId, @JsonProperty("sellerName") String sellerName) {
+        this.addToCartLink = addToCartLink;
+        this.commertialOffer = commertialOffer;
+        this.sellerDefault = sellerDefault;
+        this.sellerId = sellerId;
+        this.sellerName = sellerName;
+  }
 }

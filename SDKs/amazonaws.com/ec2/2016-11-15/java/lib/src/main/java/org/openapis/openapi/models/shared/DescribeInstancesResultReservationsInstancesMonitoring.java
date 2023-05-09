@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesMonitoring {
     
     public DescribeInstancesResultReservationsInstancesMonitoringStateEnum state;
+
     public DescribeInstancesResultReservationsInstancesMonitoring withState(DescribeInstancesResultReservationsInstancesMonitoringStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesMonitoring(){}
 }

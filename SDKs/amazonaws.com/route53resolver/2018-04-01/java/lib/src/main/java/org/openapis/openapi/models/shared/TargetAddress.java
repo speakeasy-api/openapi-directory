@@ -15,6 +15,7 @@ public class TargetAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ip")
     public String ip;
+
     public TargetAddress withIp(String ip) {
         this.ip = ip;
         return this;
@@ -23,6 +24,7 @@ public class TargetAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6")
     public String ipv6;
+
     public TargetAddress withIpv6(String ipv6) {
         this.ipv6 = ipv6;
         return this;
@@ -31,9 +33,11 @@ public class TargetAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public TargetAddress withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public TargetAddress(){}
 }

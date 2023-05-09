@@ -18,9 +18,11 @@ public class PolicyControllerMonitoringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backends")
     public PolicyControllerMonitoringConfigBackendsEnum[] backends;
+
     public PolicyControllerMonitoringConfig withBackends(PolicyControllerMonitoringConfigBackendsEnum[] backends) {
         this.backends = backends;
         return this;
     }
     
+    public PolicyControllerMonitoringConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRebootCacheClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRebootCacheClusterActionEnum action;
+
     public GETRebootCacheClusterRequest withAction(GETRebootCacheClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRebootCacheClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterId")
     public String cacheClusterId;
+
     public GETRebootCacheClusterRequest withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -29,6 +32,7 @@ public class GETRebootCacheClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheNodeIdsToReboot")
     public String[] cacheNodeIdsToReboot;
+
     public GETRebootCacheClusterRequest withCacheNodeIdsToReboot(String[] cacheNodeIdsToReboot) {
         this.cacheNodeIdsToReboot = cacheNodeIdsToReboot;
         return this;
@@ -36,6 +40,7 @@ public class GETRebootCacheClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRebootCacheClusterVersionEnum version;
+
     public GETRebootCacheClusterRequest withVersion(GETRebootCacheClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETRebootCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRebootCacheClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETRebootCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRebootCacheClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETRebootCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRebootCacheClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETRebootCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRebootCacheClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETRebootCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRebootCacheClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETRebootCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRebootCacheClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETRebootCacheClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRebootCacheClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRebootCacheClusterRequest(@JsonProperty("Action") GETRebootCacheClusterActionEnum action, @JsonProperty("CacheClusterId") String cacheClusterId, @JsonProperty("CacheNodeIdsToReboot") String[] cacheNodeIdsToReboot, @JsonProperty("Version") GETRebootCacheClusterVersionEnum version) {
+        this.action = action;
+        this.cacheClusterId = cacheClusterId;
+        this.cacheNodeIdsToReboot = cacheNodeIdsToReboot;
+        this.version = version;
+  }
 }

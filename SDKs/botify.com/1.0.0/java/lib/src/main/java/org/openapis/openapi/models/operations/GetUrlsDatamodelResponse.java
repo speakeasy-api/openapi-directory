@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUrlsDatamodelResponse {
     
     public String contentType;
+
     public GetUrlsDatamodelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUrlsDatamodelResponse {
      */
     
     public org.openapis.openapi.models.shared.CrawlDatamodel crawlDatamodel;
+
     public GetUrlsDatamodelResponse withCrawlDatamodel(org.openapis.openapi.models.shared.CrawlDatamodel crawlDatamodel) {
         this.crawlDatamodel = crawlDatamodel;
         return this;
@@ -29,6 +32,7 @@ public class GetUrlsDatamodelResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetUrlsDatamodelResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -36,6 +40,7 @@ public class GetUrlsDatamodelResponse {
     
     
     public Integer statusCode;
+
     public GetUrlsDatamodelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetUrlsDatamodelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUrlsDatamodelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUrlsDatamodelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

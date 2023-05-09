@@ -15,6 +15,7 @@ public class ListPresetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListPresetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPresetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Presets")
     public Preset[] presets;
+
     public ListPresetsResponse withPresets(Preset[] presets) {
         this.presets = presets;
         return this;
     }
     
+    public ListPresetsResponse(){}
 }

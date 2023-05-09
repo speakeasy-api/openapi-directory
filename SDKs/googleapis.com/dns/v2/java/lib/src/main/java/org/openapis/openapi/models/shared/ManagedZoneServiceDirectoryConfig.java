@@ -15,6 +15,7 @@ public class ManagedZoneServiceDirectoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedZoneServiceDirectoryConfig withKind(String kind) {
         this.kind = kind;
         return this;
@@ -23,9 +24,11 @@ public class ManagedZoneServiceDirectoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public ManagedZoneServiceDirectoryConfigNamespace namespace;
+
     public ManagedZoneServiceDirectoryConfig withNamespace(ManagedZoneServiceDirectoryConfigNamespace namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public ManagedZoneServiceDirectoryConfig(){}
 }

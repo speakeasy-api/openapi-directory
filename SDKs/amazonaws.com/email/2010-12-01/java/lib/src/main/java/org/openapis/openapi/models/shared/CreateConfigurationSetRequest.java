@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateConfigurationSetRequest - Represents a request to create a configuration set. Configuration sets enable you to publish email sending events. For information about using configuration sets, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateConfigurationSetRequest {
     
     public ConfigurationSet configurationSet;
+
     public CreateConfigurationSetRequest withConfigurationSet(ConfigurationSet configurationSet) {
         this.configurationSet = configurationSet;
         return this;
     }
     
+    public CreateConfigurationSetRequest(@JsonProperty("ConfigurationSet") ConfigurationSet configurationSet) {
+        this.configurationSet = configurationSet;
+  }
 }

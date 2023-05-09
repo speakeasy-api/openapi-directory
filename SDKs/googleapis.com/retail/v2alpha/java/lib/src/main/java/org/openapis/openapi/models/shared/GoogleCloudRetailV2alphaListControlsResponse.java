@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaListControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controls")
     public GoogleCloudRetailV2alphaControl[] controls;
+
     public GoogleCloudRetailV2alphaListControlsResponse withControls(GoogleCloudRetailV2alphaControl[] controls) {
         this.controls = controls;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaListControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRetailV2alphaListControlsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaListControlsResponse(){}
 }

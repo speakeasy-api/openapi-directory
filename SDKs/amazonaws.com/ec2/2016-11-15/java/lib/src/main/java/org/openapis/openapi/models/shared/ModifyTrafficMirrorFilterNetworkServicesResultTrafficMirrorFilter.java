@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter {
     
     public String description;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter {
     
     
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRules[] egressFilterRules;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter withEgressFilterRules(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRules[] egressFilterRules) {
         this.egressFilterRules = egressFilterRules;
         return this;
@@ -26,6 +28,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter {
     
     
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules[] ingressFilterRules;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter withIngressFilterRules(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules[] ingressFilterRules) {
         this.ingressFilterRules = ingressFilterRules;
         return this;
@@ -33,6 +36,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter {
     
     
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum[] networkServices;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter withNetworkServices(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum[] networkServices) {
         this.networkServices = networkServices;
         return this;
@@ -40,6 +44,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter {
     
     
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterTags[] tags;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter withTags(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +52,11 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter {
     
     
     public String trafficMirrorFilterId;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
     }
     
+    public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter(){}
 }

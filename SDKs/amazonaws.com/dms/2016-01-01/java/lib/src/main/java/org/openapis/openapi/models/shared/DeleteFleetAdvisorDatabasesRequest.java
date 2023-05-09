@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFleetAdvisorDatabasesRequest {
     @JsonProperty("DatabaseIds")
     public String[] databaseIds;
+
     public DeleteFleetAdvisorDatabasesRequest withDatabaseIds(String[] databaseIds) {
         this.databaseIds = databaseIds;
         return this;
     }
     
+    public DeleteFleetAdvisorDatabasesRequest(@JsonProperty("DatabaseIds") String[] databaseIds) {
+        this.databaseIds = databaseIds;
+  }
 }

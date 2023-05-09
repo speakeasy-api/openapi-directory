@@ -18,6 +18,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitmentInterval")
     public SubscriptionPlanCommitmentInterval commitmentInterval;
+
     public SubscriptionPlan withCommitmentInterval(SubscriptionPlanCommitmentInterval commitmentInterval) {
         this.commitmentInterval = commitmentInterval;
         return this;
@@ -29,6 +30,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCommitmentPlan")
     public Boolean isCommitmentPlan;
+
     public SubscriptionPlan withIsCommitmentPlan(Boolean isCommitmentPlan) {
         this.isCommitmentPlan = isCommitmentPlan;
         return this;
@@ -40,9 +42,11 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planName")
     public String planName;
+
     public SubscriptionPlan withPlanName(String planName) {
         this.planName = planName;
         return this;
     }
     
+    public SubscriptionPlan(){}
 }

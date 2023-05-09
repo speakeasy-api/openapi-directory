@@ -12,6 +12,7 @@ public class DescribeRetentionConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeRetentionConfigurationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -20,9 +21,11 @@ public class DescribeRetentionConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionConfigurationNames")
     public String[] retentionConfigurationNames;
+
     public DescribeRetentionConfigurationsRequest withRetentionConfigurationNames(String[] retentionConfigurationNames) {
         this.retentionConfigurationNames = retentionConfigurationNames;
         return this;
     }
     
+    public DescribeRetentionConfigurationsRequest(){}
 }

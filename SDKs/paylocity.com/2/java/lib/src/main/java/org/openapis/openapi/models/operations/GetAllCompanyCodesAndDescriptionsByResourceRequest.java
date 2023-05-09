@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllCompanyCodesAndDescriptionsByResourceRequest {
@@ -12,6 +13,7 @@ public class GetAllCompanyCodesAndDescriptionsByResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=codeResource")
     public String codeResource;
+
     public GetAllCompanyCodesAndDescriptionsByResourceRequest withCodeResource(String codeResource) {
         this.codeResource = codeResource;
         return this;
@@ -22,9 +24,14 @@ public class GetAllCompanyCodesAndDescriptionsByResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetAllCompanyCodesAndDescriptionsByResourceRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public GetAllCompanyCodesAndDescriptionsByResourceRequest(@JsonProperty("codeResource") String codeResource, @JsonProperty("companyId") String companyId) {
+        this.codeResource = codeResource;
+        this.companyId = companyId;
+  }
 }

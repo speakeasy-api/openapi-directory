@@ -18,9 +18,11 @@ public class ClearAppsDataParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageNames")
     public String[] packageNames;
+
     public ClearAppsDataParams withPackageNames(String[] packageNames) {
         this.packageNames = packageNames;
         return this;
     }
     
+    public ClearAppsDataParams(){}
 }

@@ -63,13 +63,11 @@ public class NameTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClassificationsNameTypesResponse res = new org.openapis.openapi.models.operations.GetClassificationsNameTypesResponse() {{
+        org.openapis.openapi.models.operations.GetClassificationsNameTypesResponse res = new org.openapis.openapi.models.operations.GetClassificationsNameTypesResponse(contentType, httpRes.statusCode()) {{
             nameTypes = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

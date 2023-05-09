@@ -15,6 +15,7 @@ public class UserListOfValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public BeezUPCommonListOfValueItem[] items;
+
     public UserListOfValuesResponse withItems(BeezUPCommonListOfValueItem[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class UserListOfValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public UserListOfValuesResponseLinks links;
+
     public UserListOfValuesResponse withLinks(UserListOfValuesResponseLinks links) {
         this.links = links;
         return this;
     }
     
+    public UserListOfValuesResponse(){}
 }

@@ -15,6 +15,7 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentArn")
     public String deploymentArn;
+
     public CreateDeploymentResponse withDeploymentArn(String deploymentArn) {
         this.deploymentArn = deploymentArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public CreateDeploymentResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
     
+    public CreateDeploymentResponse(){}
 }

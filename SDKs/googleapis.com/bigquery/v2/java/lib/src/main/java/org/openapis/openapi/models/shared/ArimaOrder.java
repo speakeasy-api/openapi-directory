@@ -18,6 +18,7 @@ public class ArimaOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("d")
     public String d;
+
     public ArimaOrder withD(String d) {
         this.d = d;
         return this;
@@ -29,6 +30,7 @@ public class ArimaOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p")
     public String p;
+
     public ArimaOrder withP(String p) {
         this.p = p;
         return this;
@@ -40,9 +42,11 @@ public class ArimaOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("q")
     public String q;
+
     public ArimaOrder withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public ArimaOrder(){}
 }

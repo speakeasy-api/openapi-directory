@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisableApiCredentialsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
     public String password;
+
     public DisableApiCredentialsSecurity withPassword(String password) {
         this.password = password;
         return this;
@@ -16,9 +18,14 @@ public class DisableApiCredentialsSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
     public String username;
+
     public DisableApiCredentialsSecurity withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public DisableApiCredentialsSecurity(@JsonProperty("Username") String username, @JsonProperty("Password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

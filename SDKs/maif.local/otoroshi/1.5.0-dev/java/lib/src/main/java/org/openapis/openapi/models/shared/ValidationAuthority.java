@@ -15,6 +15,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("alwaysValid")
     public Boolean alwaysValid;
+
     public ValidationAuthority withAlwaysValid(Boolean alwaysValid) {
         this.alwaysValid = alwaysValid;
         return this;
@@ -25,6 +26,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("badTtl")
     public Long badTtl;
+
     public ValidationAuthority withBadTtl(Long badTtl) {
         this.badTtl = badTtl;
         return this;
@@ -35,6 +37,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("description")
     public String description;
+
     public ValidationAuthority withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("goodTtl")
     public Long goodTtl;
+
     public ValidationAuthority withGoodTtl(Long goodTtl) {
         this.goodTtl = goodTtl;
         return this;
@@ -55,6 +59,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public ValidationAuthority withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -65,6 +70,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("host")
     public String host;
+
     public ValidationAuthority withHost(String host) {
         this.host = host;
         return this;
@@ -75,6 +81,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("id")
     public String id;
+
     public ValidationAuthority withId(String id) {
         this.id = id;
         return this;
@@ -85,6 +92,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("method")
     public String method;
+
     public ValidationAuthority withMethod(String method) {
         this.method = method;
         return this;
@@ -95,6 +103,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("name")
     public String name;
+
     public ValidationAuthority withName(String name) {
         this.name = name;
         return this;
@@ -105,6 +114,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("noCache")
     public Boolean noCache;
+
     public ValidationAuthority withNoCache(Boolean noCache) {
         this.noCache = noCache;
         return this;
@@ -115,6 +125,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("path")
     public String path;
+
     public ValidationAuthority withPath(String path) {
         this.path = path;
         return this;
@@ -125,6 +136,7 @@ public class ValidationAuthority {
      */
     @JsonProperty("timeout")
     public Long timeout;
+
     public ValidationAuthority withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -135,9 +147,25 @@ public class ValidationAuthority {
      */
     @JsonProperty("url")
     public String url;
+
     public ValidationAuthority withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ValidationAuthority(@JsonProperty("alwaysValid") Boolean alwaysValid, @JsonProperty("badTtl") Long badTtl, @JsonProperty("description") String description, @JsonProperty("goodTtl") Long goodTtl, @JsonProperty("headers") java.util.Map<String, String> headers, @JsonProperty("host") String host, @JsonProperty("id") String id, @JsonProperty("method") String method, @JsonProperty("name") String name, @JsonProperty("noCache") Boolean noCache, @JsonProperty("path") String path, @JsonProperty("timeout") Long timeout, @JsonProperty("url") String url) {
+        this.alwaysValid = alwaysValid;
+        this.badTtl = badTtl;
+        this.description = description;
+        this.goodTtl = goodTtl;
+        this.headers = headers;
+        this.host = host;
+        this.id = id;
+        this.method = method;
+        this.name = name;
+        this.noCache = noCache;
+        this.path = path;
+        this.timeout = timeout;
+        this.url = url;
+  }
 }

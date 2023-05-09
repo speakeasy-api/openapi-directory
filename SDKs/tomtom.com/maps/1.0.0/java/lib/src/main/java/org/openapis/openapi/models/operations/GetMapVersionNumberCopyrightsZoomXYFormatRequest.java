@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberCopyrightsZoomXYFormatRequest {
@@ -13,6 +14,7 @@ public class GetMapVersionNumberCopyrightsZoomXYFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=X")
     public Long x;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatRequest withX(Long x) {
         this.x = x;
         return this;
@@ -24,6 +26,7 @@ public class GetMapVersionNumberCopyrightsZoomXYFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Y")
     public Long y;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatRequest withY(Long y) {
         this.y = y;
         return this;
@@ -34,6 +37,7 @@ public class GetMapVersionNumberCopyrightsZoomXYFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -44,6 +48,7 @@ public class GetMapVersionNumberCopyrightsZoomXYFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum format;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatRequest withFormat(GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum format) {
         this.format = format;
         return this;
@@ -54,6 +59,7 @@ public class GetMapVersionNumberCopyrightsZoomXYFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum versionNumber;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatRequest withVersionNumber(GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -65,9 +71,17 @@ public class GetMapVersionNumberCopyrightsZoomXYFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zoom")
     public GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum zoom;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatRequest withZoom(GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum zoom) {
         this.zoom = zoom;
         return this;
     }
     
+    public GetMapVersionNumberCopyrightsZoomXYFormatRequest(@JsonProperty("X") Long x, @JsonProperty("Y") Long y, @JsonProperty("format") GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum format, @JsonProperty("versionNumber") GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum versionNumber, @JsonProperty("zoom") GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum zoom) {
+        this.x = x;
+        this.y = y;
+        this.format = format;
+        this.versionNumber = versionNumber;
+        this.zoom = zoom;
+  }
 }

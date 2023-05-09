@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResolverEndpointResponse {
     
     public String contentType;
+
     public CreateResolverEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateResolverEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResolverEndpointResponse createResolverEndpointResponse;
+
     public CreateResolverEndpointResponse withCreateResolverEndpointResponse(org.openapis.openapi.models.shared.CreateResolverEndpointResponse createResolverEndpointResponse) {
         this.createResolverEndpointResponse = createResolverEndpointResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateResolverEndpointResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateResolverEndpointResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateResolverEndpointResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateResolverEndpointResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateResolverEndpointResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateResolverEndpointResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResolverEndpointResponse {
      */
     
     public Object limitExceededException;
+
     public CreateResolverEndpointResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateResolverEndpointResponse {
     
     
     public Integer statusCode;
+
     public CreateResolverEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateResolverEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResolverEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateResolverEndpointResponse {
      */
     
     public Object resourceExistsException;
+
     public CreateResolverEndpointResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -93,6 +103,7 @@ public class CreateResolverEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateResolverEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class CreateResolverEndpointResponse {
      */
     
     public Object throttlingException;
+
     public CreateResolverEndpointResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateResolverEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

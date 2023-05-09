@@ -15,6 +15,7 @@ public class S3DeltaDirectTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public java.util.Map<String, String> additionalOptions;
+
     public S3DeltaDirectTarget withAdditionalOptions(java.util.Map<String, String> additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -22,6 +23,7 @@ public class S3DeltaDirectTarget {
     
     @JsonProperty("Compression")
     public DeltaTargetCompressionTypeEnum compression;
+
     public S3DeltaDirectTarget withCompression(DeltaTargetCompressionTypeEnum compression) {
         this.compression = compression;
         return this;
@@ -29,6 +31,7 @@ public class S3DeltaDirectTarget {
     
     @JsonProperty("Format")
     public TargetFormatEnum format;
+
     public S3DeltaDirectTarget withFormat(TargetFormatEnum format) {
         this.format = format;
         return this;
@@ -36,6 +39,7 @@ public class S3DeltaDirectTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public S3DeltaDirectTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -43,6 +47,7 @@ public class S3DeltaDirectTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public S3DeltaDirectTarget withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class S3DeltaDirectTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public String[][] partitionKeys;
+
     public S3DeltaDirectTarget withPartitionKeys(String[][] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -58,6 +64,7 @@ public class S3DeltaDirectTarget {
     
     @JsonProperty("Path")
     public String path;
+
     public S3DeltaDirectTarget withPath(String path) {
         this.path = path;
         return this;
@@ -66,9 +73,17 @@ public class S3DeltaDirectTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaChangePolicy")
     public DirectSchemaChangePolicy schemaChangePolicy;
+
     public S3DeltaDirectTarget withSchemaChangePolicy(DirectSchemaChangePolicy schemaChangePolicy) {
         this.schemaChangePolicy = schemaChangePolicy;
         return this;
     }
     
+    public S3DeltaDirectTarget(@JsonProperty("Compression") DeltaTargetCompressionTypeEnum compression, @JsonProperty("Format") TargetFormatEnum format, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Path") String path) {
+        this.compression = compression;
+        this.format = format;
+        this.inputs = inputs;
+        this.name = name;
+        this.path = path;
+  }
 }

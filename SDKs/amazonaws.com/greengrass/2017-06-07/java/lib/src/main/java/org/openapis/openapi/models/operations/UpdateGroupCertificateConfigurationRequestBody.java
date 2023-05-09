@@ -15,9 +15,11 @@ public class UpdateGroupCertificateConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateExpiryInMilliseconds")
     public String certificateExpiryInMilliseconds;
+
     public UpdateGroupCertificateConfigurationRequestBody withCertificateExpiryInMilliseconds(String certificateExpiryInMilliseconds) {
         this.certificateExpiryInMilliseconds = certificateExpiryInMilliseconds;
         return this;
     }
     
+    public UpdateGroupCertificateConfigurationRequestBody(){}
 }

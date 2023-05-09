@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterScalableTargetResponse {
@@ -12,6 +13,7 @@ public class DeregisterScalableTargetResponse {
      */
     
     public Object concurrentUpdateException;
+
     public DeregisterScalableTargetResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterScalableTargetResponse {
     
     
     public String contentType;
+
     public DeregisterScalableTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterScalableTargetResponse {
      */
     
     public java.util.Map<String, Object> deregisterScalableTargetResponse;
+
     public DeregisterScalableTargetResponse withDeregisterScalableTargetResponse(java.util.Map<String, Object> deregisterScalableTargetResponse) {
         this.deregisterScalableTargetResponse = deregisterScalableTargetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterScalableTargetResponse {
      */
     
     public Object internalServiceException;
+
     public DeregisterScalableTargetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterScalableTargetResponse {
      */
     
     public Object objectNotFoundException;
+
     public DeregisterScalableTargetResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeregisterScalableTargetResponse {
     
     
     public Integer statusCode;
+
     public DeregisterScalableTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeregisterScalableTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterScalableTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeregisterScalableTargetResponse {
      */
     
     public Object validationException;
+
     public DeregisterScalableTargetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeregisterScalableTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

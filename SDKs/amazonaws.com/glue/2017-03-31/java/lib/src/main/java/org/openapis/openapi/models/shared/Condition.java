@@ -15,6 +15,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlState")
     public CrawlStateEnum crawlState;
+
     public Condition withCrawlState(CrawlStateEnum crawlState) {
         this.crawlState = crawlState;
         return this;
@@ -23,6 +24,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlerName")
     public String crawlerName;
+
     public Condition withCrawlerName(String crawlerName) {
         this.crawlerName = crawlerName;
         return this;
@@ -31,6 +33,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public Condition withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -39,6 +42,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogicalOperator")
     public LogicalOperatorEnum logicalOperator;
+
     public Condition withLogicalOperator(LogicalOperatorEnum logicalOperator) {
         this.logicalOperator = logicalOperator;
         return this;
@@ -47,9 +51,11 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public JobRunStateEnum state;
+
     public Condition withState(JobRunStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Condition(){}
 }

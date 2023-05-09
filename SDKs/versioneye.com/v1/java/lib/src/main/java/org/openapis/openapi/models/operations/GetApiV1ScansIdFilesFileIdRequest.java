@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ScansIdFilesFileIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
     public String fileId;
+
     public GetApiV1ScansIdFilesFileIdRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -16,6 +18,7 @@ public class GetApiV1ScansIdFilesFileIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetApiV1ScansIdFilesFileIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +26,14 @@ public class GetApiV1ScansIdFilesFileIdRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public String perPage;
+
     public GetApiV1ScansIdFilesFileIdRequest withPerPage(String perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetApiV1ScansIdFilesFileIdRequest(@JsonProperty("file_id") String fileId, @JsonProperty("id") String id) {
+        this.fileId = fileId;
+        this.id = id;
+  }
 }

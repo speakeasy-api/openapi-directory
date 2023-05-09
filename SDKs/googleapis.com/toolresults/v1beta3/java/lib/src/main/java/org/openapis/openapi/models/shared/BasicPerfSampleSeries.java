@@ -15,6 +15,7 @@ public class BasicPerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perfMetricType")
     public BasicPerfSampleSeriesPerfMetricTypeEnum perfMetricType;
+
     public BasicPerfSampleSeries withPerfMetricType(BasicPerfSampleSeriesPerfMetricTypeEnum perfMetricType) {
         this.perfMetricType = perfMetricType;
         return this;
@@ -23,6 +24,7 @@ public class BasicPerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perfUnit")
     public BasicPerfSampleSeriesPerfUnitEnum perfUnit;
+
     public BasicPerfSampleSeries withPerfUnit(BasicPerfSampleSeriesPerfUnitEnum perfUnit) {
         this.perfUnit = perfUnit;
         return this;
@@ -31,9 +33,11 @@ public class BasicPerfSampleSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleSeriesLabel")
     public BasicPerfSampleSeriesSampleSeriesLabelEnum sampleSeriesLabel;
+
     public BasicPerfSampleSeries withSampleSeriesLabel(BasicPerfSampleSeriesSampleSeriesLabelEnum sampleSeriesLabel) {
         this.sampleSeriesLabel = sampleSeriesLabel;
         return this;
     }
     
+    public BasicPerfSampleSeries(){}
 }

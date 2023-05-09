@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeAutoRedirectRequest {
@@ -12,6 +13,7 @@ public class ChangeAutoRedirectRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AutoRedirectConfig autoRedirectConfig;
+
     public ChangeAutoRedirectRequest withAutoRedirectConfig(org.openapis.openapi.models.shared.AutoRedirectConfig autoRedirectConfig) {
         this.autoRedirectConfig = autoRedirectConfig;
         return this;
@@ -22,6 +24,7 @@ public class ChangeAutoRedirectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public ChangeAutoRedirectRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -32,6 +35,7 @@ public class ChangeAutoRedirectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public ChangeAutoRedirectRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -42,9 +46,15 @@ public class ChangeAutoRedirectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hostname")
     public String hostname;
+
     public ChangeAutoRedirectRequest withHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
     
+    public ChangeAutoRedirectRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("hostname") String hostname) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.hostname = hostname;
+  }
 }

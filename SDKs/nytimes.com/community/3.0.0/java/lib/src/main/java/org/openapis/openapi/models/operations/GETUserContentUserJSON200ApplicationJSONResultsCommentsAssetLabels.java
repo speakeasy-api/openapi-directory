@@ -12,6 +12,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetLabels 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelID")
     public Long labelID;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetLabels withLabelID(Long labelID) {
         this.labelID = labelID;
         return this;
@@ -20,9 +21,11 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetLabels 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelName")
     public String labelName;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetLabels withLabelName(String labelName) {
         this.labelName = labelName;
         return this;
     }
     
+    public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetLabels(){}
 }

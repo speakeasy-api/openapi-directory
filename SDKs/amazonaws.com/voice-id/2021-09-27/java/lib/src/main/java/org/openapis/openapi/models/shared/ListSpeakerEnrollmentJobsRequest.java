@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListSpeakerEnrollmentJobsRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public ListSpeakerEnrollmentJobsRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -19,6 +20,7 @@ public class ListSpeakerEnrollmentJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public SpeakerEnrollmentJobStatusEnum jobStatus;
+
     public ListSpeakerEnrollmentJobsRequest withJobStatus(SpeakerEnrollmentJobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -27,6 +29,7 @@ public class ListSpeakerEnrollmentJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListSpeakerEnrollmentJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListSpeakerEnrollmentJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSpeakerEnrollmentJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSpeakerEnrollmentJobsRequest(@JsonProperty("DomainId") String domainId) {
+        this.domainId = domainId;
+  }
 }

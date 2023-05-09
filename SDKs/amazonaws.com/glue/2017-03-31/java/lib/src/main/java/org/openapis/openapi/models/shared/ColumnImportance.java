@@ -15,6 +15,7 @@ public class ColumnImportance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnName")
     public String columnName;
+
     public ColumnImportance withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -23,9 +24,11 @@ public class ColumnImportance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Importance")
     public Double importance;
+
     public ColumnImportance withImportance(Double importance) {
         this.importance = importance;
         return this;
     }
     
+    public ColumnImportance(){}
 }

@@ -15,6 +15,7 @@ public class AuthWithMobileTxnAndUserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public AuthWithMobileTxnAndUserData withGender(String gender) {
         this.gender = gender;
         return this;
@@ -23,6 +24,7 @@ public class AuthWithMobileTxnAndUserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthId")
     public String healthId;
+
     public AuthWithMobileTxnAndUserData withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -31,6 +33,7 @@ public class AuthWithMobileTxnAndUserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuthWithMobileTxnAndUserData withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class AuthWithMobileTxnAndUserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public AuthWithMobileTxnAndUserData withToken(String token) {
         this.token = token;
         return this;
@@ -46,6 +50,7 @@ public class AuthWithMobileTxnAndUserData {
     
     @JsonProperty("txnId")
     public String txnId;
+
     public AuthWithMobileTxnAndUserData withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
@@ -54,9 +59,13 @@ public class AuthWithMobileTxnAndUserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearOfBirth")
     public String yearOfBirth;
+
     public AuthWithMobileTxnAndUserData withYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public AuthWithMobileTxnAndUserData(@JsonProperty("txnId") String txnId) {
+        this.txnId = txnId;
+  }
 }

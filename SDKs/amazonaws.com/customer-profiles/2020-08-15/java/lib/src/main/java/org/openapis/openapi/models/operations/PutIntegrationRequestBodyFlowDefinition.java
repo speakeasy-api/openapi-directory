@@ -15,6 +15,7 @@ public class PutIntegrationRequestBodyFlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PutIntegrationRequestBodyFlowDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class PutIntegrationRequestBodyFlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowName")
     public String flowName;
+
     public PutIntegrationRequestBodyFlowDefinition withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -31,6 +33,7 @@ public class PutIntegrationRequestBodyFlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsArn")
     public String kmsArn;
+
     public PutIntegrationRequestBodyFlowDefinition withKmsArn(String kmsArn) {
         this.kmsArn = kmsArn;
         return this;
@@ -39,6 +42,7 @@ public class PutIntegrationRequestBodyFlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceFlowConfig")
     public org.openapis.openapi.models.shared.SourceFlowConfig sourceFlowConfig;
+
     public PutIntegrationRequestBodyFlowDefinition withSourceFlowConfig(org.openapis.openapi.models.shared.SourceFlowConfig sourceFlowConfig) {
         this.sourceFlowConfig = sourceFlowConfig;
         return this;
@@ -47,6 +51,7 @@ public class PutIntegrationRequestBodyFlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tasks")
     public org.openapis.openapi.models.shared.Task[] tasks;
+
     public PutIntegrationRequestBodyFlowDefinition withTasks(org.openapis.openapi.models.shared.Task[] tasks) {
         this.tasks = tasks;
         return this;
@@ -55,9 +60,11 @@ public class PutIntegrationRequestBodyFlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggerConfig")
     public org.openapis.openapi.models.shared.TriggerConfig triggerConfig;
+
     public PutIntegrationRequestBodyFlowDefinition withTriggerConfig(org.openapis.openapi.models.shared.TriggerConfig triggerConfig) {
         this.triggerConfig = triggerConfig;
         return this;
     }
     
+    public PutIntegrationRequestBodyFlowDefinition(){}
 }

@@ -12,6 +12,7 @@ public class GetStudioSessionMappingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public GetStudioSessionMappingInput withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -20,6 +21,7 @@ public class GetStudioSessionMappingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityName")
     public String identityName;
+
     public GetStudioSessionMappingInput withIdentityName(String identityName) {
         this.identityName = identityName;
         return this;
@@ -27,6 +29,7 @@ public class GetStudioSessionMappingInput {
     
     @JsonProperty("IdentityType")
     public IdentityTypeEnum identityType;
+
     public GetStudioSessionMappingInput withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -34,9 +37,14 @@ public class GetStudioSessionMappingInput {
     
     @JsonProperty("StudioId")
     public String studioId;
+
     public GetStudioSessionMappingInput withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public GetStudioSessionMappingInput(@JsonProperty("IdentityType") IdentityTypeEnum identityType, @JsonProperty("StudioId") String studioId) {
+        this.identityType = identityType;
+        this.studioId = studioId;
+  }
 }

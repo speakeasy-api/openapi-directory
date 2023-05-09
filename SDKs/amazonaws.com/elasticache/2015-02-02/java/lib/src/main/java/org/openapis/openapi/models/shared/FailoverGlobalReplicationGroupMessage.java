@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class FailoverGlobalReplicationGroupMessage {
     
     public String globalReplicationGroupId;
+
     public FailoverGlobalReplicationGroupMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -16,6 +17,7 @@ public class FailoverGlobalReplicationGroupMessage {
     
     
     public String primaryRegion;
+
     public FailoverGlobalReplicationGroupMessage withPrimaryRegion(String primaryRegion) {
         this.primaryRegion = primaryRegion;
         return this;
@@ -23,9 +25,15 @@ public class FailoverGlobalReplicationGroupMessage {
     
     
     public String primaryReplicationGroupId;
+
     public FailoverGlobalReplicationGroupMessage withPrimaryReplicationGroupId(String primaryReplicationGroupId) {
         this.primaryReplicationGroupId = primaryReplicationGroupId;
         return this;
     }
     
+    public FailoverGlobalReplicationGroupMessage(@JsonProperty("GlobalReplicationGroupId") String globalReplicationGroupId, @JsonProperty("PrimaryRegion") String primaryRegion, @JsonProperty("PrimaryReplicationGroupId") String primaryReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        this.primaryRegion = primaryRegion;
+        this.primaryReplicationGroupId = primaryReplicationGroupId;
+  }
 }

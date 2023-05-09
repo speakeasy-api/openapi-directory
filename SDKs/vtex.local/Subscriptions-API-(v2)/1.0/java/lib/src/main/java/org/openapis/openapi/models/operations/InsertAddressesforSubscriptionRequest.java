@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertAddressesforSubscriptionRequest {
@@ -12,6 +13,7 @@ public class InsertAddressesforSubscriptionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InsertAddressesforSubscriptionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InsertAddressesforSubscriptionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InsertAddressesforSubscriptionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class InsertAddressesforSubscriptionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InsertAddressesforSubscriptionRequest[] requestBody;
+
     public InsertAddressesforSubscriptionRequest withRequestBody(org.openapis.openapi.models.shared.InsertAddressesforSubscriptionRequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,16 @@ public class InsertAddressesforSubscriptionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
     public String subscriptionId;
+
     public InsertAddressesforSubscriptionRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public InsertAddressesforSubscriptionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") org.openapis.openapi.models.shared.InsertAddressesforSubscriptionRequest[] requestBody, @JsonProperty("subscriptionId") String subscriptionId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.subscriptionId = subscriptionId;
+  }
 }

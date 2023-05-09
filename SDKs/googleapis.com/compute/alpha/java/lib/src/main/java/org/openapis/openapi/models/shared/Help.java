@@ -18,9 +18,11 @@ public class Help {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public HelpLink[] links;
+
     public Help withLinks(HelpLink[] links) {
         this.links = links;
         return this;
     }
     
+    public Help(){}
 }

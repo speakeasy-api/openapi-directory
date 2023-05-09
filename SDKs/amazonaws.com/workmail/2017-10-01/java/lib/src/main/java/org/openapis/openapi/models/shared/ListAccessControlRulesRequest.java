@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAccessControlRulesRequest {
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public ListAccessControlRulesRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public ListAccessControlRulesRequest(@JsonProperty("OrganizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

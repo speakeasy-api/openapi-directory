@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAvailableNumbersRequest {
@@ -12,6 +13,7 @@ public class GetAvailableNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetAvailableNumbersRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,6 +24,7 @@ public class GetAvailableNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=features")
     public GetAvailableNumbersFeaturesEnum features;
+
     public GetAvailableNumbersRequest withFeatures(GetAvailableNumbersFeaturesEnum features) {
         this.features = features;
         return this;
@@ -32,6 +35,7 @@ public class GetAvailableNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=index")
     public Long index;
+
     public GetAvailableNumbersRequest withIndex(Long index) {
         this.index = index;
         return this;
@@ -42,6 +46,7 @@ public class GetAvailableNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
     public String pattern;
+
     public GetAvailableNumbersRequest withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -58,6 +63,7 @@ public class GetAvailableNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_pattern")
     public org.openapis.openapi.models.shared.SearchPatternEnum searchPattern;
+
     public GetAvailableNumbersRequest withSearchPattern(org.openapis.openapi.models.shared.SearchPatternEnum searchPattern) {
         this.searchPattern = searchPattern;
         return this;
@@ -68,6 +74,7 @@ public class GetAvailableNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetAvailableNumbersRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -78,9 +85,13 @@ public class GetAvailableNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public org.openapis.openapi.models.shared.TypeEnum type;
+
     public GetAvailableNumbersRequest withType(org.openapis.openapi.models.shared.TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetAvailableNumbersRequest(@JsonProperty("country") String country) {
+        this.country = country;
+  }
 }

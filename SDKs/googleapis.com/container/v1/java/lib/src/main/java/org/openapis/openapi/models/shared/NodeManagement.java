@@ -18,6 +18,7 @@ public class NodeManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRepair")
     public Boolean autoRepair;
+
     public NodeManagement withAutoRepair(Boolean autoRepair) {
         this.autoRepair = autoRepair;
         return this;
@@ -29,6 +30,7 @@ public class NodeManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpgrade")
     public Boolean autoUpgrade;
+
     public NodeManagement withAutoUpgrade(Boolean autoUpgrade) {
         this.autoUpgrade = autoUpgrade;
         return this;
@@ -40,9 +42,11 @@ public class NodeManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeOptions")
     public AutoUpgradeOptions upgradeOptions;
+
     public NodeManagement withUpgradeOptions(AutoUpgradeOptions upgradeOptions) {
         this.upgradeOptions = upgradeOptions;
         return this;
     }
     
+    public NodeManagement(){}
 }

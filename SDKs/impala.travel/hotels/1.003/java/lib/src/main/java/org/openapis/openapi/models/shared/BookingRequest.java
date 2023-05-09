@@ -19,6 +19,7 @@ public class BookingRequest {
      */
     @JsonProperty("bookingContact")
     public PersonInfo bookingContact;
+
     public BookingRequest withBookingContact(PersonInfo bookingContact) {
         this.bookingContact = bookingContact;
         return this;
@@ -30,6 +31,7 @@ public class BookingRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("end")
     public LocalDate end;
+
     public BookingRequest withEnd(LocalDate end) {
         this.end = end;
         return this;
@@ -41,6 +43,7 @@ public class BookingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public NotesBooking notes;
+
     public BookingRequest withNotes(NotesBooking notes) {
         this.notes = notes;
         return this;
@@ -52,6 +55,7 @@ public class BookingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentType")
     public BookingRequestPaymentTypeEnum paymentType;
+
     public BookingRequest withPaymentType(BookingRequestPaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -62,6 +66,7 @@ public class BookingRequest {
      */
     @JsonProperty("rooms")
     public BookingRequestRooms[] rooms;
+
     public BookingRequest withRooms(BookingRequestRooms[] rooms) {
         this.rooms = rooms;
         return this;
@@ -73,9 +78,16 @@ public class BookingRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start")
     public LocalDate start;
+
     public BookingRequest withStart(LocalDate start) {
         this.start = start;
         return this;
     }
     
+    public BookingRequest(@JsonProperty("bookingContact") PersonInfo bookingContact, @JsonProperty("end") LocalDate end, @JsonProperty("rooms") BookingRequestRooms[] rooms, @JsonProperty("start") LocalDate start) {
+        this.bookingContact = bookingContact;
+        this.end = end;
+        this.rooms = rooms;
+        this.start = start;
+  }
 }

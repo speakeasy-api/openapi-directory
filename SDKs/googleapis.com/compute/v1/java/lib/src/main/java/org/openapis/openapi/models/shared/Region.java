@@ -18,6 +18,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Region withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public DeprecationStatus deprecated;
+
     public Region withDeprecated(DeprecationStatus deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -40,6 +42,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Region withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Region withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Region withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Region withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotas")
     public Quota[] quotas;
+
     public Region withQuotas(Quota[] quotas) {
         this.quotas = quotas;
         return this;
@@ -95,6 +102,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Region withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -106,6 +114,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RegionStatusEnum status;
+
     public Region withStatus(RegionStatusEnum status) {
         this.status = status;
         return this;
@@ -117,6 +126,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsPzs")
     public Boolean supportsPzs;
+
     public Region withSupportsPzs(Boolean supportsPzs) {
         this.supportsPzs = supportsPzs;
         return this;
@@ -128,9 +138,11 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zones")
     public String[] zones;
+
     public Region withZones(String[] zones) {
         this.zones = zones;
         return this;
     }
     
+    public Region(){}
 }

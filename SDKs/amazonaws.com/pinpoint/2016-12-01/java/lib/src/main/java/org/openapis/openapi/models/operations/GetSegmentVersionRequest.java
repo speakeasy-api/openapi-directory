@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSegmentVersionRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetSegmentVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetSegmentVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetSegmentVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetSegmentVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetSegmentVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetSegmentVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetSegmentVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetSegmentVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetSegmentVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetSegmentVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetSegmentVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetSegmentVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetSegmentVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetSegmentVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
     public String applicationId;
+
     public GetSegmentVersionRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -71,6 +80,7 @@ public class GetSegmentVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=segment-id")
     public String segmentId;
+
     public GetSegmentVersionRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -81,9 +91,15 @@ public class GetSegmentVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public GetSegmentVersionRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetSegmentVersionRequest(@JsonProperty("application-id") String applicationId, @JsonProperty("segment-id") String segmentId, @JsonProperty("version") String version) {
+        this.applicationId = applicationId;
+        this.segmentId = segmentId;
+        this.version = version;
+  }
 }

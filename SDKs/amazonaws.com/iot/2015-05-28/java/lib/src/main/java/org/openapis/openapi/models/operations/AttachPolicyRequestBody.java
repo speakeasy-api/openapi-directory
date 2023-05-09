@@ -12,9 +12,13 @@ public class AttachPolicyRequestBody {
      */
     @JsonProperty("target")
     public String target;
+
     public AttachPolicyRequestBody withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public AttachPolicyRequestBody(@JsonProperty("target") String target) {
+        this.target = target;
+  }
 }

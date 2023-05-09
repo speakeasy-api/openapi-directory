@@ -15,9 +15,11 @@ public class BatchGetAccountStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public BatchGetAccountStatusRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
     }
     
+    public BatchGetAccountStatusRequestBody(){}
 }

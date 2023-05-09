@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoggerDefinitionVersionRequest {
@@ -12,6 +13,7 @@ public class GetLoggerDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LoggerDefinitionId")
     public String loggerDefinitionId;
+
     public GetLoggerDefinitionVersionRequest withLoggerDefinitionId(String loggerDefinitionId) {
         this.loggerDefinitionId = loggerDefinitionId;
         return this;
@@ -22,6 +24,7 @@ public class GetLoggerDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LoggerDefinitionVersionId")
     public String loggerDefinitionVersionId;
+
     public GetLoggerDefinitionVersionRequest withLoggerDefinitionVersionId(String loggerDefinitionVersionId) {
         this.loggerDefinitionVersionId = loggerDefinitionVersionId;
         return this;
@@ -32,6 +35,7 @@ public class GetLoggerDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GetLoggerDefinitionVersionRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +43,7 @@ public class GetLoggerDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetLoggerDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class GetLoggerDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetLoggerDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class GetLoggerDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetLoggerDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class GetLoggerDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetLoggerDefinitionVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class GetLoggerDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetLoggerDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class GetLoggerDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetLoggerDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,14 @@ public class GetLoggerDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetLoggerDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GetLoggerDefinitionVersionRequest(@JsonProperty("LoggerDefinitionId") String loggerDefinitionId, @JsonProperty("LoggerDefinitionVersionId") String loggerDefinitionVersionId) {
+        this.loggerDefinitionId = loggerDefinitionId;
+        this.loggerDefinitionVersionId = loggerDefinitionVersionId;
+  }
 }

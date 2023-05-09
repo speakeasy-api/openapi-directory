@@ -18,6 +18,7 @@ public class CreateInstanceRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public java.util.Map<String, ClusterInput> clusters;
+
     public CreateInstanceRequestInput withClusters(java.util.Map<String, ClusterInput> clusters) {
         this.clusters = clusters;
         return this;
@@ -29,6 +30,7 @@ public class CreateInstanceRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public InstanceInput instance;
+
     public CreateInstanceRequestInput withInstance(InstanceInput instance) {
         this.instance = instance;
         return this;
@@ -40,6 +42,7 @@ public class CreateInstanceRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public CreateInstanceRequestInput withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -51,9 +54,11 @@ public class CreateInstanceRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public CreateInstanceRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public CreateInstanceRequestInput(){}
 }

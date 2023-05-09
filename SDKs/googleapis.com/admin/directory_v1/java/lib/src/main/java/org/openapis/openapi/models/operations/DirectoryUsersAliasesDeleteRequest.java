@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectoryUsersAliasesDeleteRequest {
@@ -12,6 +13,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DirectoryUsersAliasesDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DirectoryUsersAliasesDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
     public String alias;
+
     public DirectoryUsersAliasesDeleteRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -42,6 +46,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DirectoryUsersAliasesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DirectoryUsersAliasesDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DirectoryUsersAliasesDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DirectoryUsersAliasesDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DirectoryUsersAliasesDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DirectoryUsersAliasesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DirectoryUsersAliasesDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DirectoryUsersAliasesDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,6 +134,7 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DirectoryUsersAliasesDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -132,9 +145,14 @@ public class DirectoryUsersAliasesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userKey")
     public String userKey;
+
     public DirectoryUsersAliasesDeleteRequest withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }
     
+    public DirectoryUsersAliasesDeleteRequest(@JsonProperty("alias") String alias, @JsonProperty("userKey") String userKey) {
+        this.alias = alias;
+        this.userKey = userKey;
+  }
 }

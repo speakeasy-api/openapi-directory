@@ -21,6 +21,7 @@ public class ModelCardSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ModelCardSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +32,7 @@ public class ModelCardSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ModelCardSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -38,6 +40,7 @@ public class ModelCardSummary {
     
     @JsonProperty("ModelCardArn")
     public String modelCardArn;
+
     public ModelCardSummary withModelCardArn(String modelCardArn) {
         this.modelCardArn = modelCardArn;
         return this;
@@ -45,6 +48,7 @@ public class ModelCardSummary {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public ModelCardSummary withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -52,9 +56,16 @@ public class ModelCardSummary {
     
     @JsonProperty("ModelCardStatus")
     public ModelCardStatusEnum modelCardStatus;
+
     public ModelCardSummary withModelCardStatus(ModelCardStatusEnum modelCardStatus) {
         this.modelCardStatus = modelCardStatus;
         return this;
     }
     
+    public ModelCardSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelCardArn") String modelCardArn, @JsonProperty("ModelCardName") String modelCardName, @JsonProperty("ModelCardStatus") ModelCardStatusEnum modelCardStatus) {
+        this.creationTime = creationTime;
+        this.modelCardArn = modelCardArn;
+        this.modelCardName = modelCardName;
+        this.modelCardStatus = modelCardStatus;
+  }
 }

@@ -15,6 +15,7 @@ public class ListTargetsForSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTargetsForSecurityProfileResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTargetsForSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileTargets")
     public SecurityProfileTarget[] securityProfileTargets;
+
     public ListTargetsForSecurityProfileResponse withSecurityProfileTargets(SecurityProfileTarget[] securityProfileTargets) {
         this.securityProfileTargets = securityProfileTargets;
         return this;
     }
     
+    public ListTargetsForSecurityProfileResponse(){}
 }

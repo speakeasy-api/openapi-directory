@@ -20,6 +20,7 @@ public class GetAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetAttributeGroupResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class GetAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public String attributes;
+
     public GetAttributeGroupResponse withAttributes(String attributes) {
         this.attributes = attributes;
         return this;
@@ -36,6 +38,7 @@ public class GetAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public GetAttributeGroupResponse withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -46,6 +49,7 @@ public class GetAttributeGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetAttributeGroupResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class GetAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetAttributeGroupResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class GetAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAttributeGroupResponse withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +78,7 @@ public class GetAttributeGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public GetAttributeGroupResponse withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -80,6 +87,7 @@ public class GetAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAttributeGroupResponse withName(String name) {
         this.name = name;
         return this;
@@ -88,9 +96,11 @@ public class GetAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetAttributeGroupResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetAttributeGroupResponse(){}
 }

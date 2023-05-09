@@ -15,6 +15,7 @@ public class KinesisFirehoseOutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARNUpdate")
     public String resourceARNUpdate;
+
     public KinesisFirehoseOutputUpdate withResourceARNUpdate(String resourceARNUpdate) {
         this.resourceARNUpdate = resourceARNUpdate;
         return this;
@@ -23,9 +24,11 @@ public class KinesisFirehoseOutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARNUpdate")
     public String roleARNUpdate;
+
     public KinesisFirehoseOutputUpdate withRoleARNUpdate(String roleARNUpdate) {
         this.roleARNUpdate = roleARNUpdate;
         return this;
     }
     
+    public KinesisFirehoseOutputUpdate(){}
 }

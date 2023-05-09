@@ -18,6 +18,7 @@ public class DriverSchedulingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMb")
     public Integer memoryMb;
+
     public DriverSchedulingConfig withMemoryMb(Integer memoryMb) {
         this.memoryMb = memoryMb;
         return this;
@@ -29,9 +30,11 @@ public class DriverSchedulingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcores")
     public Integer vcores;
+
     public DriverSchedulingConfig withVcores(Integer vcores) {
         this.vcores = vcores;
         return this;
     }
     
+    public DriverSchedulingConfig(){}
 }

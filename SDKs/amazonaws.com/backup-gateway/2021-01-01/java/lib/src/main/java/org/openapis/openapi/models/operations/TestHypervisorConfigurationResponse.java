@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestHypervisorConfigurationResponse {
@@ -12,6 +13,7 @@ public class TestHypervisorConfigurationResponse {
      */
     
     public Object conflictException;
+
     public TestHypervisorConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class TestHypervisorConfigurationResponse {
     
     
     public String contentType;
+
     public TestHypervisorConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TestHypervisorConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public TestHypervisorConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class TestHypervisorConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TestHypervisorConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class TestHypervisorConfigurationResponse {
     
     
     public Integer statusCode;
+
     public TestHypervisorConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TestHypervisorConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestHypervisorConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TestHypervisorConfigurationResponse {
      */
     
     public java.util.Map<String, Object> testHypervisorConfigurationOutput;
+
     public TestHypervisorConfigurationResponse withTestHypervisorConfigurationOutput(java.util.Map<String, Object> testHypervisorConfigurationOutput) {
         this.testHypervisorConfigurationOutput = testHypervisorConfigurationOutput;
         return this;
@@ -73,6 +81,7 @@ public class TestHypervisorConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public TestHypervisorConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class TestHypervisorConfigurationResponse {
      */
     
     public Object validationException;
+
     public TestHypervisorConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public TestHypervisorConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

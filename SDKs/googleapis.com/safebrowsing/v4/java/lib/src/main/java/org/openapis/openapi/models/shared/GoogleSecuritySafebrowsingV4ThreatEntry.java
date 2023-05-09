@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4ThreatEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public GoogleSecuritySafebrowsingV4ThreatEntry withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSecuritySafebrowsingV4ThreatEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public GoogleSecuritySafebrowsingV4ThreatEntry withHash(String hash) {
         this.hash = hash;
         return this;
@@ -40,9 +42,11 @@ public class GoogleSecuritySafebrowsingV4ThreatEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoogleSecuritySafebrowsingV4ThreatEntry withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ThreatEntry(){}
 }

@@ -18,9 +18,11 @@ public class ListPopulationClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public ListPopulationTerm[] terms;
+
     public ListPopulationClause withTerms(ListPopulationTerm[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public ListPopulationClause(){}
 }

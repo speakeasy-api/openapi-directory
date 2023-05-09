@@ -17,6 +17,7 @@ public class TestStartTestRunTestCloudStartTestRunOptions {
      */
     @JsonProperty("device_selection")
     public String deviceSelection;
+
     public TestStartTestRunTestCloudStartTestRunOptions withDeviceSelection(String deviceSelection) {
         this.deviceSelection = deviceSelection;
         return this;
@@ -28,6 +29,7 @@ public class TestStartTestRunTestCloudStartTestRunOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public TestStartTestRunTestCloudStartTestRunOptions withLanguage(String language) {
         this.language = language;
         return this;
@@ -39,6 +41,7 @@ public class TestStartTestRunTestCloudStartTestRunOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public TestStartTestRunTestCloudStartTestRunOptions withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -49,6 +52,7 @@ public class TestStartTestRunTestCloudStartTestRunOptions {
      */
     @JsonProperty("test_framework")
     public String testFramework;
+
     public TestStartTestRunTestCloudStartTestRunOptions withTestFramework(String testFramework) {
         this.testFramework = testFramework;
         return this;
@@ -60,6 +64,7 @@ public class TestStartTestRunTestCloudStartTestRunOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test_parameters")
     public java.util.Map<String, Object> testParameters;
+
     public TestStartTestRunTestCloudStartTestRunOptions withTestParameters(java.util.Map<String, Object> testParameters) {
         this.testParameters = testParameters;
         return this;
@@ -71,9 +76,14 @@ public class TestStartTestRunTestCloudStartTestRunOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test_series")
     public String testSeries;
+
     public TestStartTestRunTestCloudStartTestRunOptions withTestSeries(String testSeries) {
         this.testSeries = testSeries;
         return this;
     }
     
+    public TestStartTestRunTestCloudStartTestRunOptions(@JsonProperty("device_selection") String deviceSelection, @JsonProperty("test_framework") String testFramework) {
+        this.deviceSelection = deviceSelection;
+        this.testFramework = testFramework;
+  }
 }

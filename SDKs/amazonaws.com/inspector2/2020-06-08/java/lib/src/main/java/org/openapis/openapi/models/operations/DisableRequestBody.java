@@ -15,6 +15,7 @@ public class DisableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public DisableRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -26,9 +27,11 @@ public class DisableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTypes")
     public org.openapis.openapi.models.shared.ResourceScanTypeEnum[] resourceTypes;
+
     public DisableRequestBody withResourceTypes(org.openapis.openapi.models.shared.ResourceScanTypeEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public DisableRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class PutEmailIdentityMailFromAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BehaviorOnMxFailure")
     public PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum behaviorOnMxFailure;
+
     public PutEmailIdentityMailFromAttributesRequestBody withBehaviorOnMxFailure(PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum behaviorOnMxFailure) {
         this.behaviorOnMxFailure = behaviorOnMxFailure;
         return this;
@@ -26,9 +27,11 @@ public class PutEmailIdentityMailFromAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MailFromDomain")
     public String mailFromDomain;
+
     public PutEmailIdentityMailFromAttributesRequestBody withMailFromDomain(String mailFromDomain) {
         this.mailFromDomain = mailFromDomain;
         return this;
     }
     
+    public PutEmailIdentityMailFromAttributesRequestBody(){}
 }

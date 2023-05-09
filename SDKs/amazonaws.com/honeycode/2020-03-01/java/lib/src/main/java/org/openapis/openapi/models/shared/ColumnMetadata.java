@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ColumnMetadata {
     @JsonProperty("format")
     public FormatEnum format;
+
     public ColumnMetadata withFormat(FormatEnum format) {
         this.format = format;
         return this;
@@ -19,9 +20,14 @@ public class ColumnMetadata {
     
     @JsonProperty("name")
     public String name;
+
     public ColumnMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ColumnMetadata(@JsonProperty("format") FormatEnum format, @JsonProperty("name") String name) {
+        this.format = format;
+        this.name = name;
+  }
 }

@@ -18,9 +18,11 @@ public class DeleteDimensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public DimensionRange range;
+
     public DeleteDimensionRequest withRange(DimensionRange range) {
         this.range = range;
         return this;
     }
     
+    public DeleteDimensionRequest(){}
 }

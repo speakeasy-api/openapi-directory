@@ -15,9 +15,11 @@ public class PrivateConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateConnectionName")
     public String privateConnectionName;
+
     public PrivateConnectivity withPrivateConnectionName(String privateConnectionName) {
         this.privateConnectionName = privateConnectionName;
         return this;
     }
     
+    public PrivateConnectivity(){}
 }

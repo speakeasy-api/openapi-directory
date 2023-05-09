@@ -15,6 +15,7 @@ public class MigratedAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public MigratedAccounts withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -26,9 +27,11 @@ public class MigratedAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualAccountCode")
     public String virtualAccountCode;
+
     public MigratedAccounts withVirtualAccountCode(String virtualAccountCode) {
         this.virtualAccountCode = virtualAccountCode;
         return this;
     }
     
+    public MigratedAccounts(){}
 }

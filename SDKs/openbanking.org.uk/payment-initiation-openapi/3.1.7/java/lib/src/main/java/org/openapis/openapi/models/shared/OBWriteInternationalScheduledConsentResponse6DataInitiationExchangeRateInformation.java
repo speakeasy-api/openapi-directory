@@ -18,6 +18,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataInitiationExchange
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContractIdentification")
     public String contractIdentification;
+
     public OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformation withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataInitiationExchange
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRate")
     public Double exchangeRate;
+
     public OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformation withExchangeRate(Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataInitiationExchange
      */
     @JsonProperty("RateType")
     public OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum rateType;
+
     public OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformation withRateType(OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -49,9 +52,14 @@ public class OBWriteInternationalScheduledConsentResponse6DataInitiationExchange
      */
     @JsonProperty("UnitCurrency")
     public String unitCurrency;
+
     public OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformation withUnitCurrency(String unitCurrency) {
         this.unitCurrency = unitCurrency;
         return this;
     }
     
+    public OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformation(@JsonProperty("RateType") OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum rateType, @JsonProperty("UnitCurrency") String unitCurrency) {
+        this.rateType = rateType;
+        this.unitCurrency = unitCurrency;
+  }
 }

@@ -15,6 +15,7 @@ public class RepositoryAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public StringFilter[] repositories;
+
     public RepositoryAggregation withRepositories(StringFilter[] repositories) {
         this.repositories = repositories;
         return this;
@@ -23,6 +24,7 @@ public class RepositoryAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public RepositorySortByEnum sortBy;
+
     public RepositoryAggregation withSortBy(RepositorySortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -31,9 +33,11 @@ public class RepositoryAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public RepositoryAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public RepositoryAggregation(){}
 }

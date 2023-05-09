@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PullsListReviewCommentsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public PullsListReviewCommentsForRepoDirectionEnum direction;
+
     public PullsListReviewCommentsForRepoRequest withDirection(PullsListReviewCommentsForRepoDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -23,6 +25,7 @@ public class PullsListReviewCommentsForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsListReviewCommentsForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -33,6 +36,7 @@ public class PullsListReviewCommentsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PullsListReviewCommentsForRepoRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -43,6 +47,7 @@ public class PullsListReviewCommentsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public PullsListReviewCommentsForRepoRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -53,6 +58,7 @@ public class PullsListReviewCommentsForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsListReviewCommentsForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -63,6 +69,7 @@ public class PullsListReviewCommentsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public PullsListReviewCommentsForRepoRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
@@ -70,9 +77,14 @@ public class PullsListReviewCommentsForRepoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public PullsListReviewCommentsForRepoSortEnum sort;
+
     public PullsListReviewCommentsForRepoRequest withSort(PullsListReviewCommentsForRepoSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public PullsListReviewCommentsForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

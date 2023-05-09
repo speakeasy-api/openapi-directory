@@ -52,12 +52,10 @@ public class Region {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGameRegionOptionsUsingGETResponse res = new org.openapis.openapi.models.operations.GETGameRegionOptionsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGameRegionOptionsUsingGETResponse res = new org.openapis.openapi.models.operations.GETGameRegionOptionsUsingGETResponse(contentType, httpRes.statusCode()) {{
             gameRegionOptionsDTO = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class Region {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETRegionOptionsUsingGETResponse res = new org.openapis.openapi.models.operations.GETRegionOptionsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETRegionOptionsUsingGETResponse res = new org.openapis.openapi.models.operations.GETRegionOptionsUsingGETResponse(contentType, httpRes.statusCode()) {{
             gameRegionOptionsDTO = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class Region {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetGameRegionUsingPOSTResponse res = new org.openapis.openapi.models.operations.SetGameRegionUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.SetGameRegionUsingPOSTResponse res = new org.openapis.openapi.models.operations.SetGameRegionUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             regionResult = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

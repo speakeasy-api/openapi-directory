@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptDomainTransferFromAnotherAwsAccountResponse {
@@ -12,6 +13,7 @@ public class AcceptDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.AcceptDomainTransferFromAnotherAwsAccountResponse acceptDomainTransferFromAnotherAwsAccountResponse;
+
     public AcceptDomainTransferFromAnotherAwsAccountResponse withAcceptDomainTransferFromAnotherAwsAccountResponse(org.openapis.openapi.models.shared.AcceptDomainTransferFromAnotherAwsAccountResponse acceptDomainTransferFromAnotherAwsAccountResponse) {
         this.acceptDomainTransferFromAnotherAwsAccountResponse = acceptDomainTransferFromAnotherAwsAccountResponse;
         return this;
@@ -19,6 +21,7 @@ public class AcceptDomainTransferFromAnotherAwsAccountResponse {
     
     
     public String contentType;
+
     public AcceptDomainTransferFromAnotherAwsAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AcceptDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public Object domainLimitExceeded;
+
     public AcceptDomainTransferFromAnotherAwsAccountResponse withDomainLimitExceeded(Object domainLimitExceeded) {
         this.domainLimitExceeded = domainLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class AcceptDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public Object invalidInput;
+
     public AcceptDomainTransferFromAnotherAwsAccountResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -49,6 +54,7 @@ public class AcceptDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public Object operationLimitExceeded;
+
     public AcceptDomainTransferFromAnotherAwsAccountResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -56,6 +62,7 @@ public class AcceptDomainTransferFromAnotherAwsAccountResponse {
     
     
     public Integer statusCode;
+
     public AcceptDomainTransferFromAnotherAwsAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AcceptDomainTransferFromAnotherAwsAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptDomainTransferFromAnotherAwsAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AcceptDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public Object unsupportedTLD;
+
     public AcceptDomainTransferFromAnotherAwsAccountResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public AcceptDomainTransferFromAnotherAwsAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

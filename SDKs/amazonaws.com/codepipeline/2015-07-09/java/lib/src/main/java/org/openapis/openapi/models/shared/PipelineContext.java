@@ -15,6 +15,7 @@ public class PipelineContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public ActionContext action;
+
     public PipelineContext withAction(ActionContext action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class PipelineContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineArn")
     public String pipelineArn;
+
     public PipelineContext withPipelineArn(String pipelineArn) {
         this.pipelineArn = pipelineArn;
         return this;
@@ -31,6 +33,7 @@ public class PipelineContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public PipelineContext withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
@@ -39,6 +42,7 @@ public class PipelineContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public PipelineContext withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -47,9 +51,11 @@ public class PipelineContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stage")
     public StageContext stage;
+
     public PipelineContext withStage(StageContext stage) {
         this.stage = stage;
         return this;
     }
     
+    public PipelineContext(){}
 }

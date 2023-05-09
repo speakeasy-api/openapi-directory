@@ -14,6 +14,7 @@ public class CreateSystemInstanceRequest {
      */
     @JsonProperty("definition")
     public DefinitionDocument definition;
+
     public CreateSystemInstanceRequest withDefinition(DefinitionDocument definition) {
         this.definition = definition;
         return this;
@@ -22,6 +23,7 @@ public class CreateSystemInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowActionsRoleArn")
     public String flowActionsRoleArn;
+
     public CreateSystemInstanceRequest withFlowActionsRoleArn(String flowActionsRoleArn) {
         this.flowActionsRoleArn = flowActionsRoleArn;
         return this;
@@ -30,6 +32,7 @@ public class CreateSystemInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrassGroupName")
     public String greengrassGroupName;
+
     public CreateSystemInstanceRequest withGreengrassGroupName(String greengrassGroupName) {
         this.greengrassGroupName = greengrassGroupName;
         return this;
@@ -41,6 +44,7 @@ public class CreateSystemInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricsConfiguration")
     public MetricsConfiguration metricsConfiguration;
+
     public CreateSystemInstanceRequest withMetricsConfiguration(MetricsConfiguration metricsConfiguration) {
         this.metricsConfiguration = metricsConfiguration;
         return this;
@@ -49,6 +53,7 @@ public class CreateSystemInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketName")
     public String s3BucketName;
+
     public CreateSystemInstanceRequest withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -57,6 +62,7 @@ public class CreateSystemInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateSystemInstanceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -64,9 +70,14 @@ public class CreateSystemInstanceRequest {
     
     @JsonProperty("target")
     public DeploymentTargetEnum target;
+
     public CreateSystemInstanceRequest withTarget(DeploymentTargetEnum target) {
         this.target = target;
         return this;
     }
     
+    public CreateSystemInstanceRequest(@JsonProperty("definition") DefinitionDocument definition, @JsonProperty("target") DeploymentTargetEnum target) {
+        this.definition = definition;
+        this.target = target;
+  }
 }

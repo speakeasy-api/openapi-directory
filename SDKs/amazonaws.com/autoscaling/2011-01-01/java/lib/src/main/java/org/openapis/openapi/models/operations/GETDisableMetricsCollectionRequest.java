@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisableMetricsCollectionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisableMetricsCollectionActionEnum action;
+
     public GETDisableMetricsCollectionRequest withAction(GETDisableMetricsCollectionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisableMetricsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETDisableMetricsCollectionRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETDisableMetricsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Metrics")
     public String[] metrics;
+
     public GETDisableMetricsCollectionRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -36,6 +40,7 @@ public class GETDisableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisableMetricsCollectionVersionEnum version;
+
     public GETDisableMetricsCollectionRequest withVersion(GETDisableMetricsCollectionVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDisableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisableMetricsCollectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDisableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisableMetricsCollectionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDisableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisableMetricsCollectionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDisableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisableMetricsCollectionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDisableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisableMetricsCollectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDisableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisableMetricsCollectionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDisableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisableMetricsCollectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisableMetricsCollectionRequest(@JsonProperty("Action") GETDisableMetricsCollectionActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("Version") GETDisableMetricsCollectionVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.version = version;
+  }
 }

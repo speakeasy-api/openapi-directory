@@ -12,6 +12,7 @@ public class CreateModelPackageGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupDescription")
     public String modelPackageGroupDescription;
+
     public CreateModelPackageGroupInput withModelPackageGroupDescription(String modelPackageGroupDescription) {
         this.modelPackageGroupDescription = modelPackageGroupDescription;
         return this;
@@ -19,6 +20,7 @@ public class CreateModelPackageGroupInput {
     
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public CreateModelPackageGroupInput withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -27,9 +29,13 @@ public class CreateModelPackageGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateModelPackageGroupInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateModelPackageGroupInput(@JsonProperty("ModelPackageGroupName") String modelPackageGroupName) {
+        this.modelPackageGroupName = modelPackageGroupName;
+  }
 }

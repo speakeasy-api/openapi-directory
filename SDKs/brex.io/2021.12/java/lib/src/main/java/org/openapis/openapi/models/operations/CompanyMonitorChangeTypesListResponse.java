@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyMonitorChangeTypesListResponse {
@@ -12,6 +13,7 @@ public class CompanyMonitorChangeTypesListResponse {
      */
     
     public String[] companyMonitorChangeTypesList200ApplicationJSONStrings;
+
     public CompanyMonitorChangeTypesListResponse withCompanyMonitorChangeTypesList200ApplicationJSONStrings(String[] companyMonitorChangeTypesList200ApplicationJSONStrings) {
         this.companyMonitorChangeTypesList200ApplicationJSONStrings = companyMonitorChangeTypesList200ApplicationJSONStrings;
         return this;
@@ -22,6 +24,7 @@ public class CompanyMonitorChangeTypesListResponse {
      */
     
     public CompanyMonitorChangeTypesListDefaultApplicationJSON companyMonitorChangeTypesListDefaultApplicationJSONObject;
+
     public CompanyMonitorChangeTypesListResponse withCompanyMonitorChangeTypesListDefaultApplicationJSONObject(CompanyMonitorChangeTypesListDefaultApplicationJSON companyMonitorChangeTypesListDefaultApplicationJSONObject) {
         this.companyMonitorChangeTypesListDefaultApplicationJSONObject = companyMonitorChangeTypesListDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyMonitorChangeTypesListResponse {
     
     
     public String contentType;
+
     public CompanyMonitorChangeTypesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyMonitorChangeTypesListResponse {
     
     
     public Integer statusCode;
+
     public CompanyMonitorChangeTypesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyMonitorChangeTypesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyMonitorChangeTypesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyMonitorChangeTypesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

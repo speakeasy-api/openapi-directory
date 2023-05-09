@@ -12,6 +12,7 @@ public class ProductAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceAmount")
     public Price priceAmount;
+
     public ProductAmount withPriceAmount(Price priceAmount) {
         this.priceAmount = priceAmount;
         return this;
@@ -20,6 +21,7 @@ public class ProductAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittedTaxAmount")
     public Price remittedTaxAmount;
+
     public ProductAmount withRemittedTaxAmount(Price remittedTaxAmount) {
         this.remittedTaxAmount = remittedTaxAmount;
         return this;
@@ -28,9 +30,11 @@ public class ProductAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxAmount")
     public Price taxAmount;
+
     public ProductAmount withTaxAmount(Price taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
     
+    public ProductAmount(){}
 }

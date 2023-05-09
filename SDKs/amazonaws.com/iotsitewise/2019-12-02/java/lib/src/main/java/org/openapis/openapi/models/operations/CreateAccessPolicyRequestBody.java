@@ -14,6 +14,7 @@ public class CreateAccessPolicyRequestBody {
      */
     @JsonProperty("accessPolicyIdentity")
     public CreateAccessPolicyRequestBodyAccessPolicyIdentity accessPolicyIdentity;
+
     public CreateAccessPolicyRequestBody withAccessPolicyIdentity(CreateAccessPolicyRequestBodyAccessPolicyIdentity accessPolicyIdentity) {
         this.accessPolicyIdentity = accessPolicyIdentity;
         return this;
@@ -24,6 +25,7 @@ public class CreateAccessPolicyRequestBody {
      */
     @JsonProperty("accessPolicyPermission")
     public CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum accessPolicyPermission;
+
     public CreateAccessPolicyRequestBody withAccessPolicyPermission(CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum accessPolicyPermission) {
         this.accessPolicyPermission = accessPolicyPermission;
         return this;
@@ -34,6 +36,7 @@ public class CreateAccessPolicyRequestBody {
      */
     @JsonProperty("accessPolicyResource")
     public CreateAccessPolicyRequestBodyAccessPolicyResource accessPolicyResource;
+
     public CreateAccessPolicyRequestBody withAccessPolicyResource(CreateAccessPolicyRequestBodyAccessPolicyResource accessPolicyResource) {
         this.accessPolicyResource = accessPolicyResource;
         return this;
@@ -45,6 +48,7 @@ public class CreateAccessPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAccessPolicyRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -56,9 +60,15 @@ public class CreateAccessPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAccessPolicyRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAccessPolicyRequestBody(@JsonProperty("accessPolicyIdentity") CreateAccessPolicyRequestBodyAccessPolicyIdentity accessPolicyIdentity, @JsonProperty("accessPolicyPermission") CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum accessPolicyPermission, @JsonProperty("accessPolicyResource") CreateAccessPolicyRequestBodyAccessPolicyResource accessPolicyResource) {
+        this.accessPolicyIdentity = accessPolicyIdentity;
+        this.accessPolicyPermission = accessPolicyPermission;
+        this.accessPolicyResource = accessPolicyResource;
+  }
 }

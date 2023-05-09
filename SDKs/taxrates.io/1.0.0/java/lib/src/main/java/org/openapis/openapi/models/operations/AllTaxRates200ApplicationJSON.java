@@ -12,6 +12,7 @@ public class AllTaxRates200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AllTaxRates200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class AllTaxRates200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AllTaxRates200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class AllTaxRates200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rates")
     public AllTaxRates200ApplicationJSONRates[] rates;
+
     public AllTaxRates200ApplicationJSON withRates(AllTaxRates200ApplicationJSONRates[] rates) {
         this.rates = rates;
         return this;
@@ -36,6 +39,7 @@ public class AllTaxRates200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public AllTaxRates200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
@@ -44,9 +48,11 @@ public class AllTaxRates200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public AllTaxRates200ApplicationJSON withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public AllTaxRates200ApplicationJSON(){}
 }

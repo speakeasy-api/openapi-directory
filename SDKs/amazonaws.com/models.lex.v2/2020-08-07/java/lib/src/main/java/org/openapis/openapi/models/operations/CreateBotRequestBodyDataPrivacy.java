@@ -15,9 +15,11 @@ public class CreateBotRequestBodyDataPrivacy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childDirected")
     public Boolean childDirected;
+
     public CreateBotRequestBodyDataPrivacy withChildDirected(Boolean childDirected) {
         this.childDirected = childDirected;
         return this;
     }
     
+    public CreateBotRequestBodyDataPrivacy(){}
 }

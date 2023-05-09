@@ -15,9 +15,11 @@ public class CreateCampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignArn")
     public String campaignArn;
+
     public CreateCampaignResponse withCampaignArn(String campaignArn) {
         this.campaignArn = campaignArn;
         return this;
     }
     
+    public CreateCampaignResponse(){}
 }

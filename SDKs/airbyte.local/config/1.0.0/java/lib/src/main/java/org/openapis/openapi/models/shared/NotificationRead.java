@@ -15,6 +15,7 @@ public class NotificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NotificationRead withMessage(String message) {
         this.message = message;
         return this;
@@ -22,9 +23,13 @@ public class NotificationRead {
     
     @JsonProperty("status")
     public NotificationReadStatusEnum status;
+
     public NotificationRead withStatus(NotificationReadStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public NotificationRead(@JsonProperty("status") NotificationReadStatusEnum status) {
+        this.status = status;
+  }
 }

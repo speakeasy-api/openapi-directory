@@ -12,6 +12,7 @@ public class CreateCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignConfig")
     public CampaignConfig campaignConfig;
+
     public CreateCampaignRequest withCampaignConfig(CampaignConfig campaignConfig) {
         this.campaignConfig = campaignConfig;
         return this;
@@ -20,6 +21,7 @@ public class CreateCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minProvisionedTPS")
     public Long minProvisionedTPS;
+
     public CreateCampaignRequest withMinProvisionedTPS(Long minProvisionedTPS) {
         this.minProvisionedTPS = minProvisionedTPS;
         return this;
@@ -27,6 +29,7 @@ public class CreateCampaignRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateCampaignRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class CreateCampaignRequest {
     
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public CreateCampaignRequest withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
@@ -42,9 +46,14 @@ public class CreateCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateCampaignRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCampaignRequest(@JsonProperty("name") String name, @JsonProperty("solutionVersionArn") String solutionVersionArn) {
+        this.name = name;
+        this.solutionVersionArn = solutionVersionArn;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePrivateDnsNamespaceResponse {
     
     public String contentType;
+
     public CreatePrivateDnsNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePrivateDnsNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePrivateDnsNamespaceResponse createPrivateDnsNamespaceResponse;
+
     public CreatePrivateDnsNamespaceResponse withCreatePrivateDnsNamespaceResponse(org.openapis.openapi.models.shared.CreatePrivateDnsNamespaceResponse createPrivateDnsNamespaceResponse) {
         this.createPrivateDnsNamespaceResponse = createPrivateDnsNamespaceResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreatePrivateDnsNamespaceResponse {
      */
     
     public Object duplicateRequest;
+
     public CreatePrivateDnsNamespaceResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -39,6 +43,7 @@ public class CreatePrivateDnsNamespaceResponse {
      */
     
     public Object invalidInput;
+
     public CreatePrivateDnsNamespaceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -49,6 +54,7 @@ public class CreatePrivateDnsNamespaceResponse {
      */
     
     public Object namespaceAlreadyExists;
+
     public CreatePrivateDnsNamespaceResponse withNamespaceAlreadyExists(Object namespaceAlreadyExists) {
         this.namespaceAlreadyExists = namespaceAlreadyExists;
         return this;
@@ -56,6 +62,7 @@ public class CreatePrivateDnsNamespaceResponse {
     
     
     public Integer statusCode;
+
     public CreatePrivateDnsNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreatePrivateDnsNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePrivateDnsNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreatePrivateDnsNamespaceResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreatePrivateDnsNamespaceResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -83,9 +92,14 @@ public class CreatePrivateDnsNamespaceResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreatePrivateDnsNamespaceResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreatePrivateDnsNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

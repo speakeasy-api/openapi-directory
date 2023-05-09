@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCheckoutRequest {
@@ -14,6 +15,7 @@ public class CreateCheckoutRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateCheckoutRequest createCheckoutRequest;
+
     public CreateCheckoutRequest withCreateCheckoutRequest(org.openapis.openapi.models.shared.CreateCheckoutRequest createCheckoutRequest) {
         this.createCheckoutRequest = createCheckoutRequest;
         return this;
@@ -24,9 +26,14 @@ public class CreateCheckoutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public CreateCheckoutRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public CreateCheckoutRequest(@JsonProperty("CreateCheckoutRequest") org.openapis.openapi.models.shared.CreateCheckoutRequest createCheckoutRequest, @JsonProperty("location_id") String locationId) {
+        this.createCheckoutRequest = createCheckoutRequest;
+        this.locationId = locationId;
+  }
 }

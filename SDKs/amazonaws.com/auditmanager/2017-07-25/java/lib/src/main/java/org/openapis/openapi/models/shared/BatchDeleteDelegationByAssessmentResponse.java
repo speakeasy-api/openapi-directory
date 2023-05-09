@@ -15,9 +15,11 @@ public class BatchDeleteDelegationByAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BatchDeleteDelegationByAssessmentError[] errors;
+
     public BatchDeleteDelegationByAssessmentResponse withErrors(BatchDeleteDelegationByAssessmentError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchDeleteDelegationByAssessmentResponse(){}
 }

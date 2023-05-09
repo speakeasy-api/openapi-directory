@@ -18,6 +18,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_resource")
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResource[] requestedResource;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema withRequestedResource(Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResource[] requestedResource) {
         this.requestedResource = requestedResource;
         return this;
@@ -29,9 +30,11 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_record_count")
     public Integer totalRecordCount;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema withTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
     }
     
+    public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema(){}
 }

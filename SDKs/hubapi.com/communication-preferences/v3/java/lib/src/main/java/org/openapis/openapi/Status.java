@@ -56,12 +56,10 @@ public class Status {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse res = new org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse() {{
+        org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse res = new org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse(contentType, httpRes.statusCode()) {{
             publicSubscriptionStatusesResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class Status {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCommunicationPreferencesV3SubscribeSubscribeResponse res = new org.openapis.openapi.models.operations.PostCommunicationPreferencesV3SubscribeSubscribeResponse() {{
+        org.openapis.openapi.models.operations.PostCommunicationPreferencesV3SubscribeSubscribeResponse res = new org.openapis.openapi.models.operations.PostCommunicationPreferencesV3SubscribeSubscribeResponse(contentType, httpRes.statusCode()) {{
             publicSubscriptionStatus = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,12 +158,10 @@ public class Status {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse res = new org.openapis.openapi.models.operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse() {{
+        org.openapis.openapi.models.operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse res = new org.openapis.openapi.models.operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse(contentType, httpRes.statusCode()) {{
             publicSubscriptionStatus = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

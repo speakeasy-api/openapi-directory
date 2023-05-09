@@ -18,6 +18,7 @@ public class ListRecommendedGoogleLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleLocations")
     public GoogleLocation[] googleLocations;
+
     public ListRecommendedGoogleLocationsResponse withGoogleLocations(GoogleLocation[] googleLocations) {
         this.googleLocations = googleLocations;
         return this;
@@ -29,6 +30,7 @@ public class ListRecommendedGoogleLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRecommendedGoogleLocationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListRecommendedGoogleLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListRecommendedGoogleLocationsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListRecommendedGoogleLocationsResponse(){}
 }

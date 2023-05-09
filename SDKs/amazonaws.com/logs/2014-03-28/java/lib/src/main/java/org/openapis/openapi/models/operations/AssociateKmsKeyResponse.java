@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateKmsKeyResponse {
     
     public String contentType;
+
     public AssociateKmsKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AssociateKmsKeyResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateKmsKeyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateKmsKeyResponse {
      */
     
     public Object operationAbortedException;
+
     public AssociateKmsKeyResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateKmsKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateKmsKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateKmsKeyResponse {
     
     
     public Integer statusCode;
+
     public AssociateKmsKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AssociateKmsKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateKmsKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class AssociateKmsKeyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AssociateKmsKeyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public AssociateKmsKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

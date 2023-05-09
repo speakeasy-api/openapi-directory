@@ -15,9 +15,11 @@ public class PostBenefitsDocumentUploadValidateDocument200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PostBenefitsDocumentUploadValidateDocument200ApplicationJSONData data;
+
     public PostBenefitsDocumentUploadValidateDocument200ApplicationJSON withData(PostBenefitsDocumentUploadValidateDocument200ApplicationJSONData data) {
         this.data = data;
         return this;
     }
     
+    public PostBenefitsDocumentUploadValidateDocument200ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public Entitlement withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -29,9 +30,11 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public EntitlementReasonEnum reason;
+
     public Entitlement withReason(EntitlementReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public Entitlement(){}
 }

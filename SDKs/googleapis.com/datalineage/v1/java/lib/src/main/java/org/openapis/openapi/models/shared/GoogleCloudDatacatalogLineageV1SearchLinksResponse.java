@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1SearchLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public GoogleCloudDatacatalogLineageV1Link[] links;
+
     public GoogleCloudDatacatalogLineageV1SearchLinksResponse withLinks(GoogleCloudDatacatalogLineageV1Link[] links) {
         this.links = links;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogLineageV1SearchLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogLineageV1SearchLinksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1SearchLinksResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeThingGroupResponse {
     
     public String contentType;
+
     public DescribeThingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeThingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeThingGroupResponse describeThingGroupResponse;
+
     public DescribeThingGroupResponse withDescribeThingGroupResponse(org.openapis.openapi.models.shared.DescribeThingGroupResponse describeThingGroupResponse) {
         this.describeThingGroupResponse = describeThingGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeThingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeThingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeThingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeThingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeThingGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeThingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeThingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeThingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeThingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeThingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeThingGroupResponse {
      */
     
     public Object throttlingException;
+
     public DescribeThingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeThingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

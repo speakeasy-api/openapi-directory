@@ -18,9 +18,11 @@ public class GoogleAdsHomeservicesLocalservicesV1AggregatorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregatorProviderId")
     public String aggregatorProviderId;
+
     public GoogleAdsHomeservicesLocalservicesV1AggregatorInfo withAggregatorProviderId(String aggregatorProviderId) {
         this.aggregatorProviderId = aggregatorProviderId;
         return this;
     }
     
+    public GoogleAdsHomeservicesLocalservicesV1AggregatorInfo(){}
 }

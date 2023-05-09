@@ -12,6 +12,7 @@ public class EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONErrors 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONErrors withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONErrors 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONErrors withMessage(String message) {
         this.message = message;
         return this;
@@ -28,9 +30,11 @@ public class EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONErrors 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONErrors withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONErrors(){}
 }

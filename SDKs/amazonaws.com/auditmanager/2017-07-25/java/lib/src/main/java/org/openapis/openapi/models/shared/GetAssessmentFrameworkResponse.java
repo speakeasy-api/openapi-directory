@@ -15,9 +15,11 @@ public class GetAssessmentFrameworkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framework")
     public Framework framework;
+
     public GetAssessmentFrameworkResponse withFramework(Framework framework) {
         this.framework = framework;
         return this;
     }
     
+    public GetAssessmentFrameworkResponse(){}
 }

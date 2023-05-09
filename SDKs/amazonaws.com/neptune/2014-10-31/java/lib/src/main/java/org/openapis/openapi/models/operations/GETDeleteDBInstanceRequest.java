@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteDBInstanceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteDBInstanceActionEnum action;
+
     public GETDeleteDBInstanceRequest withAction(GETDeleteDBInstanceActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
     public String dbInstanceIdentifier;
+
     public GETDeleteDBInstanceRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FinalDBSnapshotIdentifier")
     public String finalDBSnapshotIdentifier;
+
     public GETDeleteDBInstanceRequest withFinalDBSnapshotIdentifier(String finalDBSnapshotIdentifier) {
         this.finalDBSnapshotIdentifier = finalDBSnapshotIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SkipFinalSnapshot")
     public Boolean skipFinalSnapshot;
+
     public GETDeleteDBInstanceRequest withSkipFinalSnapshot(Boolean skipFinalSnapshot) {
         this.skipFinalSnapshot = skipFinalSnapshot;
         return this;
@@ -46,6 +51,7 @@ public class GETDeleteDBInstanceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteDBInstanceVersionEnum version;
+
     public GETDeleteDBInstanceRequest withVersion(GETDeleteDBInstanceVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDeleteDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteDBInstanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDeleteDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteDBInstanceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDeleteDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteDBInstanceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDeleteDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteDBInstanceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDeleteDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteDBInstanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDeleteDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteDBInstanceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETDeleteDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteDBInstanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteDBInstanceRequest(@JsonProperty("Action") GETDeleteDBInstanceActionEnum action, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("Version") GETDeleteDBInstanceVersionEnum version) {
+        this.action = action;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.version = version;
+  }
 }

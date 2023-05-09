@@ -15,6 +15,7 @@ public class LeaveType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentRecord")
     public Boolean currentRecord;
+
     public LeaveType withCurrentRecord(Boolean currentRecord) {
         this.currentRecord = currentRecord;
         return this;
@@ -26,6 +27,7 @@ public class LeaveType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsPaidLeave")
     public Boolean isPaidLeave;
+
     public LeaveType withIsPaidLeave(Boolean isPaidLeave) {
         this.isPaidLeave = isPaidLeave;
         return this;
@@ -37,6 +39,7 @@ public class LeaveType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveLoadingRate")
     public Double leaveLoadingRate;
+
     public LeaveType withLeaveLoadingRate(Double leaveLoadingRate) {
         this.leaveLoadingRate = leaveLoadingRate;
         return this;
@@ -48,6 +51,7 @@ public class LeaveType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveTypeID")
     public String leaveTypeID;
+
     public LeaveType withLeaveTypeID(String leaveTypeID) {
         this.leaveTypeID = leaveTypeID;
         return this;
@@ -59,6 +63,7 @@ public class LeaveType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public LeaveType withName(String name) {
         this.name = name;
         return this;
@@ -70,28 +75,31 @@ public class LeaveType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NormalEntitlement")
     public Double normalEntitlement;
+
     public LeaveType withNormalEntitlement(Double normalEntitlement) {
         this.normalEntitlement = normalEntitlement;
         return this;
     }
     
     /**
-     * Set this if you want a balance for this leave type to be shown on your employee\u2019s payslips
+     * Set this if you want a balance for this leave type to be shown on your employee’s payslips
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShowOnPayslip")
     public Boolean showOnPayslip;
+
     public LeaveType withShowOnPayslip(Boolean showOnPayslip) {
         this.showOnPayslip = showOnPayslip;
         return this;
     }
     
     /**
-     * The type of units by which leave entitlements are normally tracked. These are typically the same as the type of units used for the employee\u2019s ordinary earnings rate
+     * The type of units by which leave entitlements are normally tracked. These are typically the same as the type of units used for the employee’s ordinary earnings rate
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeOfUnits")
     public String typeOfUnits;
+
     public LeaveType withTypeOfUnits(String typeOfUnits) {
         this.typeOfUnits = typeOfUnits;
         return this;
@@ -103,9 +111,11 @@ public class LeaveType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedDateUTC")
     public String updatedDateUTC;
+
     public LeaveType withUpdatedDateUTC(String updatedDateUTC) {
         this.updatedDateUTC = updatedDateUTC;
         return this;
     }
     
+    public LeaveType(){}
 }

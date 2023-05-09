@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BuildsDistributeRequestBodyDestinations {
     @JsonProperty("id")
     public String id;
+
     public BuildsDistributeRequestBodyDestinations withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class BuildsDistributeRequestBodyDestinations {
     
     @JsonProperty("type")
     public BuildsDistributeRequestBodyDestinationsTypeEnum type;
+
     public BuildsDistributeRequestBodyDestinations withType(BuildsDistributeRequestBodyDestinationsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BuildsDistributeRequestBodyDestinations(@JsonProperty("id") String id, @JsonProperty("type") BuildsDistributeRequestBodyDestinationsTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

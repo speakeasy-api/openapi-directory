@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep {
     /**
-     * Optional. When set, this step must be satisfied within the constraint_duration of the previous step (i.e., t[i] - t[i-1] &lt;= constraint_duration). If not set, there is no duration requirement (the duration is effectively unlimited). It is ignored for the first step.
+     * Optional. When set, this step must be satisfied within the constraint_duration of the previous step (For example, t[i] - t[i-1] &lt;= constraint_duration). If not set, there is no duration requirement (the duration is effectively unlimited). It is ignored for the first step.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraintDuration")
     public String constraintDuration;
+
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep withConstraintDuration(String constraintDuration) {
         this.constraintDuration = constraintDuration;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceSt
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterExpression")
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression filterExpression;
+
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep withFilterExpression(GoogleAnalyticsAdminV1alphaAudienceFilterExpression filterExpression) {
         this.filterExpression = filterExpression;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceSt
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("immediatelyFollows")
     public Boolean immediatelyFollows;
+
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep withImmediatelyFollows(Boolean immediatelyFollows) {
         this.immediatelyFollows = immediatelyFollows;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceSt
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum scope;
+
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep withScope(GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep(){}
 }

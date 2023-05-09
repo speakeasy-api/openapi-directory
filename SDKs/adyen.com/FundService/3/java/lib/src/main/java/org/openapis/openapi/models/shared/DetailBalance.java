@@ -14,8 +14,9 @@ public class DetailBalance {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
-    public Amount[] balance;
-    public DetailBalance withBalance(Amount[] balance) {
+    public AmountWrapper[] balance;
+
+    public DetailBalance withBalance(AmountWrapper[] balance) {
         this.balance = balance;
         return this;
     }
@@ -25,10 +26,12 @@ public class DetailBalance {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingBalance")
-    public Amount[] pendingBalance;
-    public DetailBalance withPendingBalance(Amount[] pendingBalance) {
+    public AmountWrapper[] pendingBalance;
+
+    public DetailBalance withPendingBalance(AmountWrapper[] pendingBalance) {
         this.pendingBalance = pendingBalance;
         return this;
     }
     
+    public DetailBalance(){}
 }

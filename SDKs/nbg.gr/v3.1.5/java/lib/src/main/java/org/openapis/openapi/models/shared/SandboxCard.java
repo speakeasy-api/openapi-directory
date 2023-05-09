@@ -18,6 +18,7 @@ public class SandboxCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public SandboxCardInfo info;
+
     public SandboxCard withInfo(SandboxCardInfo info) {
         this.info = info;
         return this;
@@ -29,6 +30,7 @@ public class SandboxCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("party")
     public SandboxParty party;
+
     public SandboxCard withParty(SandboxParty party) {
         this.party = party;
         return this;
@@ -40,6 +42,7 @@ public class SandboxCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statements")
     public SandboxStatement[] statements;
+
     public SandboxCard withStatements(SandboxStatement[] statements) {
         this.statements = statements;
         return this;
@@ -51,9 +54,11 @@ public class SandboxCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public SandboxTransaction[] transactions;
+
     public SandboxCard withTransactions(SandboxTransaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public SandboxCard(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListApplicationRevisionsInput {
     @JsonProperty("applicationName")
     public String applicationName;
+
     public ListApplicationRevisionsInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -22,6 +23,7 @@ public class ListApplicationRevisionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployed")
     public ListStateFilterActionEnum deployed;
+
     public ListApplicationRevisionsInput withDeployed(ListStateFilterActionEnum deployed) {
         this.deployed = deployed;
         return this;
@@ -30,6 +32,7 @@ public class ListApplicationRevisionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListApplicationRevisionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -38,6 +41,7 @@ public class ListApplicationRevisionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public ListApplicationRevisionsInput withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -46,6 +50,7 @@ public class ListApplicationRevisionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3KeyPrefix")
     public String s3KeyPrefix;
+
     public ListApplicationRevisionsInput withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
@@ -54,6 +59,7 @@ public class ListApplicationRevisionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ApplicationRevisionSortByEnum sortBy;
+
     public ListApplicationRevisionsInput withSortBy(ApplicationRevisionSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -62,9 +68,13 @@ public class ListApplicationRevisionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public ListApplicationRevisionsInput withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListApplicationRevisionsInput(@JsonProperty("applicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

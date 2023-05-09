@@ -17,6 +17,7 @@ public class StartChangeRequestExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoApprove")
     public Boolean autoApprove;
+
     public StartChangeRequestExecutionRequest withAutoApprove(Boolean autoApprove) {
         this.autoApprove = autoApprove;
         return this;
@@ -25,6 +26,7 @@ public class StartChangeRequestExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeDetails")
     public String changeDetails;
+
     public StartChangeRequestExecutionRequest withChangeDetails(String changeDetails) {
         this.changeDetails = changeDetails;
         return this;
@@ -33,6 +35,7 @@ public class StartChangeRequestExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeRequestName")
     public String changeRequestName;
+
     public StartChangeRequestExecutionRequest withChangeRequestName(String changeRequestName) {
         this.changeRequestName = changeRequestName;
         return this;
@@ -41,6 +44,7 @@ public class StartChangeRequestExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartChangeRequestExecutionRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -48,6 +52,7 @@ public class StartChangeRequestExecutionRequest {
     
     @JsonProperty("DocumentName")
     public String documentName;
+
     public StartChangeRequestExecutionRequest withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -56,6 +61,7 @@ public class StartChangeRequestExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public StartChangeRequestExecutionRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -64,6 +70,7 @@ public class StartChangeRequestExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public StartChangeRequestExecutionRequest withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -71,6 +78,7 @@ public class StartChangeRequestExecutionRequest {
     
     @JsonProperty("Runbooks")
     public Runbook[] runbooks;
+
     public StartChangeRequestExecutionRequest withRunbooks(Runbook[] runbooks) {
         this.runbooks = runbooks;
         return this;
@@ -81,6 +89,7 @@ public class StartChangeRequestExecutionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledEndTime")
     public OffsetDateTime scheduledEndTime;
+
     public StartChangeRequestExecutionRequest withScheduledEndTime(OffsetDateTime scheduledEndTime) {
         this.scheduledEndTime = scheduledEndTime;
         return this;
@@ -91,6 +100,7 @@ public class StartChangeRequestExecutionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledTime")
     public OffsetDateTime scheduledTime;
+
     public StartChangeRequestExecutionRequest withScheduledTime(OffsetDateTime scheduledTime) {
         this.scheduledTime = scheduledTime;
         return this;
@@ -99,9 +109,14 @@ public class StartChangeRequestExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartChangeRequestExecutionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartChangeRequestExecutionRequest(@JsonProperty("DocumentName") String documentName, @JsonProperty("Runbooks") Runbook[] runbooks) {
+        this.documentName = documentName;
+        this.runbooks = runbooks;
+  }
 }

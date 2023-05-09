@@ -20,6 +20,7 @@ public class AlarmSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public AlarmSummary withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -28,6 +29,7 @@ public class AlarmSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelVersion")
     public String alarmModelVersion;
+
     public AlarmSummary withAlarmModelVersion(String alarmModelVersion) {
         this.alarmModelVersion = alarmModelVersion;
         return this;
@@ -38,6 +40,7 @@ public class AlarmSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AlarmSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class AlarmSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public AlarmSummary withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -56,6 +60,7 @@ public class AlarmSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public AlarmSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -64,9 +69,11 @@ public class AlarmSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateName")
     public AlarmStateNameEnum stateName;
+
     public AlarmSummary withStateName(AlarmStateNameEnum stateName) {
         this.stateName = stateName;
         return this;
     }
     
+    public AlarmSummary(){}
 }

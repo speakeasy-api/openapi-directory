@@ -18,6 +18,7 @@ public class NewNoteRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NewNoteRequestBodyTarget withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class NewNoteRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NewNoteRequestBodyTarget withType(String type) {
         this.type = type;
         return this;
@@ -40,9 +42,11 @@ public class NewNoteRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public NewNoteRequestBodyTarget withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NewNoteRequestBodyTarget(){}
 }

@@ -18,6 +18,7 @@ public class ParagraphMarker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bullet")
     public Bullet bullet;
+
     public ParagraphMarker withBullet(Bullet bullet) {
         this.bullet = bullet;
         return this;
@@ -29,9 +30,11 @@ public class ParagraphMarker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public ParagraphStyle style;
+
     public ParagraphMarker withStyle(ParagraphStyle style) {
         this.style = style;
         return this;
     }
     
+    public ParagraphMarker(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateAdditionalRatesRequest {
@@ -12,6 +13,7 @@ public class AddOrUpdateAdditionalRatesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AdditionalRate additionalRate;
+
     public AddOrUpdateAdditionalRatesRequest withAdditionalRate(org.openapis.openapi.models.shared.AdditionalRate additionalRate) {
         this.additionalRate = additionalRate;
         return this;
@@ -22,6 +24,7 @@ public class AddOrUpdateAdditionalRatesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public AddOrUpdateAdditionalRatesRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -32,9 +35,15 @@ public class AddOrUpdateAdditionalRatesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public AddOrUpdateAdditionalRatesRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
     }
     
+    public AddOrUpdateAdditionalRatesRequest(@JsonProperty("additionalRate") org.openapis.openapi.models.shared.AdditionalRate additionalRate, @JsonProperty("companyId") String companyId, @JsonProperty("employeeId") String employeeId) {
+        this.additionalRate = additionalRate;
+        this.companyId = companyId;
+        this.employeeId = employeeId;
+  }
 }

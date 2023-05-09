@@ -15,6 +15,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_provider_x509_cert_url")
     public String authProviderX509CertUrl;
+
     public GoogleServiceAccountCreds withAuthProviderX509CertUrl(String authProviderX509CertUrl) {
         this.authProviderX509CertUrl = authProviderX509CertUrl;
         return this;
@@ -23,6 +24,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_uri")
     public String authUri;
+
     public GoogleServiceAccountCreds withAuthUri(String authUri) {
         this.authUri = authUri;
         return this;
@@ -31,6 +33,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_email")
     public String clientEmail;
+
     public GoogleServiceAccountCreds withClientEmail(String clientEmail) {
         this.clientEmail = clientEmail;
         return this;
@@ -39,6 +42,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public GoogleServiceAccountCreds withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -47,6 +51,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_x509_cert_url")
     public String clientX509CertUrl;
+
     public GoogleServiceAccountCreds withClientX509CertUrl(String clientX509CertUrl) {
         this.clientX509CertUrl = clientX509CertUrl;
         return this;
@@ -55,6 +60,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_key")
     public String privateKey;
+
     public GoogleServiceAccountCreds withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -63,6 +69,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_key_id")
     public String privateKeyId;
+
     public GoogleServiceAccountCreds withPrivateKeyId(String privateKeyId) {
         this.privateKeyId = privateKeyId;
         return this;
@@ -71,6 +78,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public String projectId;
+
     public GoogleServiceAccountCreds withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -79,6 +87,7 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_uri")
     public String tokenUri;
+
     public GoogleServiceAccountCreds withTokenUri(String tokenUri) {
         this.tokenUri = tokenUri;
         return this;
@@ -87,9 +96,11 @@ public class GoogleServiceAccountCreds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleServiceAccountCreds withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleServiceAccountCreds(){}
 }

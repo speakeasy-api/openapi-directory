@@ -20,6 +20,7 @@ public class SystemInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public SystemInstanceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class SystemInstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SystemInstanceSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class SystemInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrassGroupId")
     public String greengrassGroupId;
+
     public SystemInstanceSummary withGreengrassGroupId(String greengrassGroupId) {
         this.greengrassGroupId = greengrassGroupId;
         return this;
@@ -46,6 +49,7 @@ public class SystemInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrassGroupName")
     public String greengrassGroupName;
+
     public SystemInstanceSummary withGreengrassGroupName(String greengrassGroupName) {
         this.greengrassGroupName = greengrassGroupName;
         return this;
@@ -54,6 +58,7 @@ public class SystemInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrassGroupVersionId")
     public String greengrassGroupVersionId;
+
     public SystemInstanceSummary withGreengrassGroupVersionId(String greengrassGroupVersionId) {
         this.greengrassGroupVersionId = greengrassGroupVersionId;
         return this;
@@ -62,6 +67,7 @@ public class SystemInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SystemInstanceSummary withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class SystemInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SystemInstanceDeploymentStatusEnum status;
+
     public SystemInstanceSummary withStatus(SystemInstanceDeploymentStatusEnum status) {
         this.status = status;
         return this;
@@ -78,6 +85,7 @@ public class SystemInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public DeploymentTargetEnum target;
+
     public SystemInstanceSummary withTarget(DeploymentTargetEnum target) {
         this.target = target;
         return this;
@@ -88,9 +96,11 @@ public class SystemInstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SystemInstanceSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SystemInstanceSummary(){}
 }

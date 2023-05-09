@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLanguagesResponse {
     @JsonProperty("languages")
     public String[] languages;
+
     public GetLanguagesResponse withLanguages(String[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public GetLanguagesResponse(@JsonProperty("languages") String[] languages) {
+        this.languages = languages;
+  }
 }

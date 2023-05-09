@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVoiceTemplateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateVoiceTemplateRequestBody requestBody;
+
     public UpdateVoiceTemplateRequest withRequestBody(UpdateVoiceTemplateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateVoiceTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateVoiceTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateVoiceTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateVoiceTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateVoiceTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateVoiceTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateVoiceTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateVoiceTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateVoiceTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateVoiceTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateVoiceTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateVoiceTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateVoiceTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateVoiceTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateVoiceTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=create-new-version")
     public Boolean createNewVersion;
+
     public UpdateVoiceTemplateRequest withCreateNewVersion(Boolean createNewVersion) {
         this.createNewVersion = createNewVersion;
         return this;
@@ -78,6 +88,7 @@ public class UpdateVoiceTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-name")
     public String templateName;
+
     public UpdateVoiceTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -88,9 +99,14 @@ public class UpdateVoiceTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public UpdateVoiceTemplateRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateVoiceTemplateRequest(@JsonProperty("RequestBody") UpdateVoiceTemplateRequestBody requestBody, @JsonProperty("template-name") String templateName) {
+        this.requestBody = requestBody;
+        this.templateName = templateName;
+  }
 }

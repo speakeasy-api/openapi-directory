@@ -15,6 +15,7 @@ public class AggregateConformancePackComplianceCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantConformancePackCount")
     public Long compliantConformancePackCount;
+
     public AggregateConformancePackComplianceCount withCompliantConformancePackCount(Long compliantConformancePackCount) {
         this.compliantConformancePackCount = compliantConformancePackCount;
         return this;
@@ -23,9 +24,11 @@ public class AggregateConformancePackComplianceCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantConformancePackCount")
     public Long nonCompliantConformancePackCount;
+
     public AggregateConformancePackComplianceCount withNonCompliantConformancePackCount(Long nonCompliantConformancePackCount) {
         this.nonCompliantConformancePackCount = nonCompliantConformancePackCount;
         return this;
     }
     
+    public AggregateConformancePackComplianceCount(){}
 }

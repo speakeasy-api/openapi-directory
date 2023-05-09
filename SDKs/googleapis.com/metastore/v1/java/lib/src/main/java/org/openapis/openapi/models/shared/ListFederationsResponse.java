@@ -18,6 +18,7 @@ public class ListFederationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federations")
     public Federation[] federations;
+
     public ListFederationsResponse withFederations(Federation[] federations) {
         this.federations = federations;
         return this;
@@ -29,6 +30,7 @@ public class ListFederationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFederationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListFederationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListFederationsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListFederationsResponse(){}
 }

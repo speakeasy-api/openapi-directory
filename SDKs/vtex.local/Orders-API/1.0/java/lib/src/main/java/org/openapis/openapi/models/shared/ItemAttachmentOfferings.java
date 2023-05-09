@@ -12,6 +12,7 @@ public class ItemAttachmentOfferings {
      */
     @JsonProperty("name")
     public String name;
+
     public ItemAttachmentOfferings withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class ItemAttachmentOfferings {
      */
     @JsonProperty("required")
     public Boolean required;
+
     public ItemAttachmentOfferings withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -32,9 +34,15 @@ public class ItemAttachmentOfferings {
      */
     @JsonProperty("schema")
     public java.util.Map<String, Object> schema;
+
     public ItemAttachmentOfferings withSchema(java.util.Map<String, Object> schema) {
         this.schema = schema;
         return this;
     }
     
+    public ItemAttachmentOfferings(@JsonProperty("name") String name, @JsonProperty("required") Boolean required, @JsonProperty("schema") java.util.Map<String, Object> schema) {
+        this.name = name;
+        this.required = required;
+        this.schema = schema;
+  }
 }

@@ -181,4 +181,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/SasPortalGetPolicyRequest.j
 lib/src/main/java/org/openapis/openapi/models/shared/SasPortalSetPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SasPortalTestPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SasPortalTestPermissionsRequest.java
+docs/sdk/README.md
+docs/customers/README.md
+docs/installer/README.md
+docs/nodes/README.md
+docs/policies/README.md
 USAGE.md

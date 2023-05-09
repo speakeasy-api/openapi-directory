@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CommitTransactionResponse {
@@ -12,6 +13,7 @@ public class CommitTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.CommitTransactionResponse commitTransactionResponse;
+
     public CommitTransactionResponse withCommitTransactionResponse(org.openapis.openapi.models.shared.CommitTransactionResponse commitTransactionResponse) {
         this.commitTransactionResponse = commitTransactionResponse;
         return this;
@@ -22,6 +24,7 @@ public class CommitTransactionResponse {
      */
     
     public Object concurrentModificationException;
+
     public CommitTransactionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CommitTransactionResponse {
     
     
     public String contentType;
+
     public CommitTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CommitTransactionResponse {
      */
     
     public Object entityNotFoundException;
+
     public CommitTransactionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class CommitTransactionResponse {
      */
     
     public Object internalServiceException;
+
     public CommitTransactionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CommitTransactionResponse {
      */
     
     public Object invalidInputException;
+
     public CommitTransactionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class CommitTransactionResponse {
      */
     
     public Object operationTimeoutException;
+
     public CommitTransactionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class CommitTransactionResponse {
     
     
     public Integer statusCode;
+
     public CommitTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CommitTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CommitTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CommitTransactionResponse {
      */
     
     public Object transactionCanceledException;
+
     public CommitTransactionResponse withTransactionCanceledException(Object transactionCanceledException) {
         this.transactionCanceledException = transactionCanceledException;
         return this;
     }
     
+    public CommitTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

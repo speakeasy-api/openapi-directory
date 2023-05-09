@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRegexPatternSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateRegexPatternSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,6 +17,7 @@ public class UpdateRegexPatternSetRequest {
     
     @JsonProperty("RegexPatternSetId")
     public String regexPatternSetId;
+
     public UpdateRegexPatternSetRequest withRegexPatternSetId(String regexPatternSetId) {
         this.regexPatternSetId = regexPatternSetId;
         return this;
@@ -23,9 +25,15 @@ public class UpdateRegexPatternSetRequest {
     
     @JsonProperty("Updates")
     public RegexPatternSetUpdate[] updates;
+
     public UpdateRegexPatternSetRequest withUpdates(RegexPatternSetUpdate[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public UpdateRegexPatternSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("RegexPatternSetId") String regexPatternSetId, @JsonProperty("Updates") RegexPatternSetUpdate[] updates) {
+        this.changeToken = changeToken;
+        this.regexPatternSetId = regexPatternSetId;
+        this.updates = updates;
+  }
 }

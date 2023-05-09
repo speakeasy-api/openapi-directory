@@ -12,6 +12,7 @@ public class SearchResultTextMatchesMatches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indices")
     public Long[] indices;
+
     public SearchResultTextMatchesMatches withIndices(Long[] indices) {
         this.indices = indices;
         return this;
@@ -20,9 +21,11 @@ public class SearchResultTextMatchesMatches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public SearchResultTextMatchesMatches withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SearchResultTextMatchesMatches(){}
 }

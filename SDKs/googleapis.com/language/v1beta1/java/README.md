@@ -16,17 +16,16 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1;
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption2;
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurity;
 import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesRequest;
 import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesResponse;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurity;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.AnalyzeEntitiesRequestEncodingTypeEnum;
 import org.openapis.openapi.models.shared.AnalyzeEntitiesRequest;
-import org.openapis.openapi.models.shared.DocumentTypeEnum;
+import org.openapis.openapi.models.shared.AnalyzeEntitiesRequestEncodingTypeEnum;
 import org.openapis.openapi.models.shared.Document;
+import org.openapis.openapi.models.shared.DocumentTypeEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -36,18 +35,18 @@ public class Application {
                 .build();
 
             LanguageDocumentsAnalyzeEntitiesRequest req = new LanguageDocumentsAnalyzeEntitiesRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 analyzeEntitiesRequest = new AnalyzeEntitiesRequest() {{
                     document = new Document() {{
                         content = "provident";
                         gcsContentUri = "distinctio";
                         language = "quibusdam";
-                        type = "PLAIN_TEXT";
-                    }};
-                    encodingType = "UTF32";
-                }};
+                        type = DocumentTypeEnum.PLAIN_TEXT;
+                    }};;
+                    encodingType = AnalyzeEntitiesRequestEncodingTypeEnum.UTF32;
+                }};;
                 accessToken = "corrupti";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "vel";
                 fields = "error";
                 key = "deserunt";
@@ -56,21 +55,23 @@ public class Application {
                 quotaUser = "iure";
                 uploadType = "magnam";
                 uploadProtocol = "debitis";
-            }}            
+            }};            
 
             LanguageDocumentsAnalyzeEntitiesResponse res = sdk.documents.languageDocumentsAnalyzeEntities(req, new LanguageDocumentsAnalyzeEntitiesSecurity() {{
-                option1 = new LanguageDocumentsAnalyzeEntitiesSecurityOption1() {{
+                option1 = new LanguageDocumentsAnalyzeEntitiesSecurityOption1("ipsa", "delectus") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.analyzeEntitiesResponse.isPresent()) {
+            if (res.analyzeEntitiesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -78,12 +79,12 @@ public class Application {
 ## Available Resources and Operations
 
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `languageDocumentsAnalyzeEntities` - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
-* `languageDocumentsAnalyzeSentiment` - Analyzes the sentiment of the provided text.
-* `languageDocumentsAnalyzeSyntax` - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
-* `languageDocumentsAnnotateText` - A convenience method that provides all the features that analyzeSentiment, analyzeEntities, and analyzeSyntax provide in one call.
+* [languageDocumentsAnalyzeEntities](docs/documents/README.md#languagedocumentsanalyzeentities) - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
+* [languageDocumentsAnalyzeSentiment](docs/documents/README.md#languagedocumentsanalyzesentiment) - Analyzes the sentiment of the provided text.
+* [languageDocumentsAnalyzeSyntax](docs/documents/README.md#languagedocumentsanalyzesyntax) - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
+* [languageDocumentsAnnotateText](docs/documents/README.md#languagedocumentsannotatetext) - A convenience method that provides all the features that analyzeSentiment, analyzeEntities, and analyzeSyntax provide in one call.
 <!-- End SDK Available Operations -->
 
 ### Maturity

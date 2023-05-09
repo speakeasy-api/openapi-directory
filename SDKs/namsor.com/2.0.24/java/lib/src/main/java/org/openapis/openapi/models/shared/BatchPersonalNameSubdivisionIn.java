@@ -15,6 +15,7 @@ public class BatchPersonalNameSubdivisionIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facts")
     public FactIn[] facts;
+
     public BatchPersonalNameSubdivisionIn withFacts(FactIn[] facts) {
         this.facts = facts;
         return this;
@@ -23,9 +24,11 @@ public class BatchPersonalNameSubdivisionIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public PersonalNameSubdivisionIn[] personalNames;
+
     public BatchPersonalNameSubdivisionIn withPersonalNames(PersonalNameSubdivisionIn[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchPersonalNameSubdivisionIn(){}
 }

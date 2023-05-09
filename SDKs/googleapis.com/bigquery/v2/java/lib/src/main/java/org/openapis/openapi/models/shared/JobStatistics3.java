@@ -15,6 +15,7 @@ public class JobStatistics3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badRecords")
     public String badRecords;
+
     public JobStatistics3 withBadRecords(String badRecords) {
         this.badRecords = badRecords;
         return this;
@@ -26,6 +27,7 @@ public class JobStatistics3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputFileBytes")
     public String inputFileBytes;
+
     public JobStatistics3 withInputFileBytes(String inputFileBytes) {
         this.inputFileBytes = inputFileBytes;
         return this;
@@ -37,6 +39,7 @@ public class JobStatistics3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputFiles")
     public String inputFiles;
+
     public JobStatistics3 withInputFiles(String inputFiles) {
         this.inputFiles = inputFiles;
         return this;
@@ -48,6 +51,7 @@ public class JobStatistics3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputBytes")
     public String outputBytes;
+
     public JobStatistics3 withOutputBytes(String outputBytes) {
         this.outputBytes = outputBytes;
         return this;
@@ -59,9 +63,11 @@ public class JobStatistics3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputRows")
     public String outputRows;
+
     public JobStatistics3 withOutputRows(String outputRows) {
         this.outputRows = outputRows;
         return this;
     }
     
+    public JobStatistics3(){}
 }

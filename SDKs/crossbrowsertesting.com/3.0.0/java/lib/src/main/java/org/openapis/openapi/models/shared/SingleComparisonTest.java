@@ -15,6 +15,7 @@ public class SingleComparisonTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public SingleComparisonTestBase base;
+
     public SingleComparisonTest withBase(SingleComparisonTestBase base) {
         this.base = base;
         return this;
@@ -23,9 +24,11 @@ public class SingleComparisonTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public Target target;
+
     public SingleComparisonTest withTarget(Target target) {
         this.target = target;
         return this;
     }
     
+    public SingleComparisonTest(){}
 }

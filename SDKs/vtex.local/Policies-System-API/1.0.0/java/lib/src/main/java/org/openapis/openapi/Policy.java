@@ -61,11 +61,9 @@ public class Policy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolicyCreateOrUpdateResponse res = new org.openapis.openapi.models.operations.PolicyCreateOrUpdateResponse() {{
+        org.openapis.openapi.models.operations.PolicyCreateOrUpdateResponse res = new org.openapis.openapi.models.operations.PolicyCreateOrUpdateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Policy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolicyDeleteResponse res = new org.openapis.openapi.models.operations.PolicyDeleteResponse() {{
+        org.openapis.openapi.models.operations.PolicyDeleteResponse res = new org.openapis.openapi.models.operations.PolicyDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,7 +117,7 @@ public class Policy {
 
     /**
      * Evaluate Policies
-     * This endpoint consults all policies and checks the ones that satisfy the request body\u2019s conditions.
+     * This endpoint consults all policies and checks the ones that satisfy the request body’s conditions.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -153,11 +149,9 @@ public class Policy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolicyEvaluateResponse res = new org.openapis.openapi.models.operations.PolicyEvaluateResponse() {{
+        org.openapis.openapi.models.operations.PolicyEvaluateResponse res = new org.openapis.openapi.models.operations.PolicyEvaluateResponse(contentType, httpRes.statusCode()) {{
             policyActionGetResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Policy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolicyGetResponse res = new org.openapis.openapi.models.operations.PolicyGetResponse() {{
+        org.openapis.openapi.models.operations.PolicyGetResponse res = new org.openapis.openapi.models.operations.PolicyGetResponse(contentType, httpRes.statusCode()) {{
             policyGetResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Policy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolicyListResponse res = new org.openapis.openapi.models.operations.PolicyListResponse() {{
+        org.openapis.openapi.models.operations.PolicyListResponse res = new org.openapis.openapi.models.operations.PolicyListResponse(contentType, httpRes.statusCode()) {{
             policyGetResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +289,9 @@ public class Policy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutApiPolicyEnginePoliciesIdResponse res = new org.openapis.openapi.models.operations.PutApiPolicyEnginePoliciesIdResponse() {{
+        org.openapis.openapi.models.operations.PutApiPolicyEnginePoliciesIdResponse res = new org.openapis.openapi.models.operations.PutApiPolicyEnginePoliciesIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

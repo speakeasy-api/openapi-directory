@@ -23,6 +23,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allotment")
     public Allotment allotment;
+
     public Subscription withAllotment(Allotment allotment) {
         this.allotment = allotment;
         return this;
@@ -34,6 +35,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset_type")
     public String assetType;
+
     public Subscription withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -45,6 +47,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Subscription withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +61,7 @@ public class Subscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiration_time")
     public OffsetDateTime expirationTime;
+
     public Subscription withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -69,6 +73,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formats")
     public LicenseFormat[] formats;
+
     public Subscription withFormats(LicenseFormat[] formats) {
         this.formats = formats;
         return this;
@@ -79,6 +84,7 @@ public class Subscription {
      */
     @JsonProperty("id")
     public String id;
+
     public Subscription withId(String id) {
         this.id = id;
         return this;
@@ -90,6 +96,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public String license;
+
     public Subscription withLicense(String license) {
         this.license = license;
         return this;
@@ -101,6 +108,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public Subscription withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -112,9 +120,13 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_per_download")
     public Price pricePerDownload;
+
     public Subscription withPricePerDownload(Price pricePerDownload) {
         this.pricePerDownload = pricePerDownload;
         return this;
     }
     
+    public Subscription(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

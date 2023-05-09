@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTRotateEncryptionKeyResponse {
     
     public byte[] body;
+
     public POSTRotateEncryptionKeyResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTRotateEncryptionKeyResponse {
     
     
     public String contentType;
+
     public POSTRotateEncryptionKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTRotateEncryptionKeyResponse {
     
     
     public Integer statusCode;
+
     public POSTRotateEncryptionKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTRotateEncryptionKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTRotateEncryptionKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTRotateEncryptionKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

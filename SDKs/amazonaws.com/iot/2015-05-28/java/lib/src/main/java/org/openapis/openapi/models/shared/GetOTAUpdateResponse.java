@@ -15,9 +15,11 @@ public class GetOTAUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateInfo")
     public OTAUpdateInfo otaUpdateInfo;
+
     public GetOTAUpdateResponse withOtaUpdateInfo(OTAUpdateInfo otaUpdateInfo) {
         this.otaUpdateInfo = otaUpdateInfo;
         return this;
     }
     
+    public GetOTAUpdateResponse(){}
 }

@@ -20,6 +20,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacity")
     public Long capacity;
+
     public VehicleSummary withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -31,6 +32,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public VehicleSummary withColor(String color) {
         this.color = color;
         return this;
@@ -42,6 +44,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license_plate")
     public String licensePlate;
+
     public VehicleSummary withLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
         return this;
@@ -53,6 +56,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public VehicleSummary withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -64,6 +68,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public VehicleSummary withModel(String model) {
         this.model = model;
         return this;
@@ -75,6 +80,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_of_doors")
     public Long numberOfDoors;
+
     public VehicleSummary withNumberOfDoors(Long numberOfDoors) {
         this.numberOfDoors = numberOfDoors;
         return this;
@@ -87,6 +93,7 @@ public class VehicleSummary {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("obligatory_insurance_expiration_date")
     public LocalDate obligatoryInsuranceExpirationDate;
+
     public VehicleSummary withObligatoryInsuranceExpirationDate(LocalDate obligatoryInsuranceExpirationDate) {
         this.obligatoryInsuranceExpirationDate = obligatoryInsuranceExpirationDate;
         return this;
@@ -98,6 +105,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obligatory_insurance_status")
     public String obligatoryInsuranceStatus;
+
     public VehicleSummary withObligatoryInsuranceStatus(String obligatoryInsuranceStatus) {
         this.obligatoryInsuranceStatus = obligatoryInsuranceStatus;
         return this;
@@ -109,6 +117,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_type")
     public String serviceType;
+
     public VehicleSummary withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -120,6 +129,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicle_category")
     public String vehicleCategory;
+
     public VehicleSummary withVehicleCategory(String vehicleCategory) {
         this.vehicleCategory = vehicleCategory;
         return this;
@@ -131,6 +141,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicle_id")
     public String vehicleId;
+
     public VehicleSummary withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
@@ -142,6 +153,7 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicle_type")
     public String vehicleType;
+
     public VehicleSummary withVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
         return this;
@@ -153,9 +165,11 @@ public class VehicleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public VehicleSummary withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public VehicleSummary(){}
 }

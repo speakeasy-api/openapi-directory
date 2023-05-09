@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dryRun")
     public Boolean dryRun;
+
     public GoogleCloudRecommendationengineV1beta1PredictRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommendationengineV1beta1PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudRecommendationengineV1beta1PredictRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommendationengineV1beta1PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRecommendationengineV1beta1PredictRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecommendationengineV1beta1PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudRecommendationengineV1beta1PredictRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecommendationengineV1beta1PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudRecommendationengineV1beta1PredictRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRecommendationengineV1beta1PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public GoogleCloudRecommendationengineV1beta1PredictRequest withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudRecommendationengineV1beta1PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEvent")
     public GoogleCloudRecommendationengineV1beta1UserEvent userEvent;
+
     public GoogleCloudRecommendationengineV1beta1PredictRequest withUserEvent(GoogleCloudRecommendationengineV1beta1UserEvent userEvent) {
         this.userEvent = userEvent;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1PredictRequest(){}
 }

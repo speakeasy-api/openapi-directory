@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class UserUserToUserContext {
     
     public OffsetDateTime globalIgnoreEndDate;
+
     public UserUserToUserContext withGlobalIgnoreEndDate(OffsetDateTime globalIgnoreEndDate) {
         this.globalIgnoreEndDate = globalIgnoreEndDate;
         return this;
@@ -16,6 +17,7 @@ public class UserUserToUserContext {
     
     
     public IgnoresIgnoreResponse ignoreStatus;
+
     public UserUserToUserContext withIgnoreStatus(IgnoresIgnoreResponse ignoreStatus) {
         this.ignoreStatus = ignoreStatus;
         return this;
@@ -23,9 +25,11 @@ public class UserUserToUserContext {
     
     
     public Boolean isFollowing;
+
     public UserUserToUserContext withIsFollowing(Boolean isFollowing) {
         this.isFollowing = isFollowing;
         return this;
     }
     
+    public UserUserToUserContext(){}
 }

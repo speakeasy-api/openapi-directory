@@ -15,6 +15,7 @@ public class WebhookConfigWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authToken")
     public String authToken;
+
     public WebhookConfigWrite withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -26,6 +27,7 @@ public class WebhookConfigWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WebhookConfigWrite withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class WebhookConfigWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationUrl")
     public String validationUrl;
+
     public WebhookConfigWrite withValidationUrl(String validationUrl) {
         this.validationUrl = validationUrl;
         return this;
     }
     
+    public WebhookConfigWrite(){}
 }

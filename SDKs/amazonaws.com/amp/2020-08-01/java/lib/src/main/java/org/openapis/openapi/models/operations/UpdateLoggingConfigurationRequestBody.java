@@ -15,6 +15,7 @@ public class UpdateLoggingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateLoggingConfigurationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class UpdateLoggingConfigurationRequestBody {
      */
     @JsonProperty("logGroupArn")
     public String logGroupArn;
+
     public UpdateLoggingConfigurationRequestBody withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
     }
     
+    public UpdateLoggingConfigurationRequestBody(@JsonProperty("logGroupArn") String logGroupArn) {
+        this.logGroupArn = logGroupArn;
+  }
 }

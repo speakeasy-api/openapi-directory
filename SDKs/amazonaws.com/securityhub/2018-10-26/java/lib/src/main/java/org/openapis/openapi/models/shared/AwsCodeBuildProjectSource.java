@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GitCloneDepth")
     public Long gitCloneDepth;
+
     public AwsCodeBuildProjectSource withGitCloneDepth(Long gitCloneDepth) {
         this.gitCloneDepth = gitCloneDepth;
         return this;
@@ -23,6 +24,7 @@ public class AwsCodeBuildProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsecureSsl")
     public Boolean insecureSsl;
+
     public AwsCodeBuildProjectSource withInsecureSsl(Boolean insecureSsl) {
         this.insecureSsl = insecureSsl;
         return this;
@@ -31,6 +33,7 @@ public class AwsCodeBuildProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public AwsCodeBuildProjectSource withLocation(String location) {
         this.location = location;
         return this;
@@ -39,9 +42,11 @@ public class AwsCodeBuildProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsCodeBuildProjectSource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsCodeBuildProjectSource(){}
 }

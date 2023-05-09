@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeDiskTypesAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeDiskTypesAggregatedListSecurityOption1 option1;
+
     public ComputeDiskTypesAggregatedListSecurity withOption1(ComputeDiskTypesAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeDiskTypesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeDiskTypesAggregatedListSecurityOption2 option2;
+
     public ComputeDiskTypesAggregatedListSecurity withOption2(ComputeDiskTypesAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeDiskTypesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeDiskTypesAggregatedListSecurityOption3 option3;
+
     public ComputeDiskTypesAggregatedListSecurity withOption3(ComputeDiskTypesAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeDiskTypesAggregatedListSecurity(){}
 }

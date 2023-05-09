@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountCategoriesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
     public Long idAccount;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountCategoriesRequest withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountCategoriesReq
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountCategoriesRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -26,9 +29,15 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountCategoriesReq
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountCategoriesRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountCategoriesRequest(@JsonProperty("id_account") Long idAccount, @JsonProperty("id_connection") Long idConnection, @JsonProperty("id_user") String idUser) {
+        this.idAccount = idAccount;
+        this.idConnection = idConnection;
+        this.idUser = idUser;
+  }
 }

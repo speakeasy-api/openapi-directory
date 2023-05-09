@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeSlotTypeRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeSlotTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DescribeSlotTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeSlotTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DescribeSlotTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeSlotTypeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DescribeSlotTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeSlotTypeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DescribeSlotTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeSlotTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DescribeSlotTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeSlotTypeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DescribeSlotTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeSlotTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DescribeSlotTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
     public String botId;
+
     public DescribeSlotTypeRequest withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -71,6 +80,7 @@ public class DescribeSlotTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
     public String botVersion;
+
     public DescribeSlotTypeRequest withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -81,6 +91,7 @@ public class DescribeSlotTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
     public String localeId;
+
     public DescribeSlotTypeRequest withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -91,9 +102,16 @@ public class DescribeSlotTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slotTypeId")
     public String slotTypeId;
+
     public DescribeSlotTypeRequest withSlotTypeId(String slotTypeId) {
         this.slotTypeId = slotTypeId;
         return this;
     }
     
+    public DescribeSlotTypeRequest(@JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion, @JsonProperty("localeId") String localeId, @JsonProperty("slotTypeId") String slotTypeId) {
+        this.botId = botId;
+        this.botVersion = botVersion;
+        this.localeId = localeId;
+        this.slotTypeId = slotTypeId;
+  }
 }

@@ -18,6 +18,7 @@ public class DateQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeTime")
     public Boolean includeTime;
+
     public DateQuestion withIncludeTime(Boolean includeTime) {
         this.includeTime = includeTime;
         return this;
@@ -29,9 +30,11 @@ public class DateQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeYear")
     public Boolean includeYear;
+
     public DateQuestion withIncludeYear(Boolean includeYear) {
         this.includeYear = includeYear;
         return this;
     }
     
+    public DateQuestion(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceServersResponse {
     
     public String contentType;
+
     public ListResourceServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceServersResponse {
      */
     
     public Object internalErrorException;
+
     public ListResourceServersResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceServersResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResourceServersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceServersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceServersResponse listResourceServersResponse;
+
     public ListResourceServersResponse withListResourceServersResponse(org.openapis.openapi.models.shared.ListResourceServersResponse listResourceServersResponse) {
         this.listResourceServersResponse = listResourceServersResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceServersResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListResourceServersResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListResourceServersResponse {
     
     
     public Integer statusCode;
+
     public ListResourceServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListResourceServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListResourceServersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListResourceServersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListResourceServersResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListResourceServersResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListResourceServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

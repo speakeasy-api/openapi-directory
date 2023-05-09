@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SnapshotCopyGrantMessage {
     
     public String marker;
+
     public SnapshotCopyGrantMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class SnapshotCopyGrantMessage {
     
     
     public SnapshotCopyGrantList[] snapshotCopyGrants;
+
     public SnapshotCopyGrantMessage withSnapshotCopyGrants(SnapshotCopyGrantList[] snapshotCopyGrants) {
         this.snapshotCopyGrants = snapshotCopyGrants;
         return this;
     }
     
+    public SnapshotCopyGrantMessage(){}
 }

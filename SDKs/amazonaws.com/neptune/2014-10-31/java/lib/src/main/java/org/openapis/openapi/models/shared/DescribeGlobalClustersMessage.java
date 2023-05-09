@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeGlobalClustersMessage {
     
     public String globalClusterIdentifier;
+
     public DescribeGlobalClustersMessage withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeGlobalClustersMessage {
     
     
     public String marker;
+
     public DescribeGlobalClustersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,11 @@ public class DescribeGlobalClustersMessage {
     
     
     public Long maxRecords;
+
     public DescribeGlobalClustersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeGlobalClustersMessage(){}
 }

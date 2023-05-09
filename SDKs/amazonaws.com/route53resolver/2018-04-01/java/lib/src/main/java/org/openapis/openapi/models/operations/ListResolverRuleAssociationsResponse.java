@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResolverRuleAssociationsResponse {
     
     public String contentType;
+
     public ListResolverRuleAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResolverRuleAssociationsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListResolverRuleAssociationsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListResolverRuleAssociationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResolverRuleAssociationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListResolverRuleAssociationsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResolverRuleAssociationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListResolverRuleAssociationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListResolverRuleAssociationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class ListResolverRuleAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResolverRuleAssociationsResponse listResolverRuleAssociationsResponse;
+
     public ListResolverRuleAssociationsResponse withListResolverRuleAssociationsResponse(org.openapis.openapi.models.shared.ListResolverRuleAssociationsResponse listResolverRuleAssociationsResponse) {
         this.listResolverRuleAssociationsResponse = listResolverRuleAssociationsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListResolverRuleAssociationsResponse {
     
     
     public Integer statusCode;
+
     public ListResolverRuleAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListResolverRuleAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResolverRuleAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListResolverRuleAssociationsResponse {
      */
     
     public Object throttlingException;
+
     public ListResolverRuleAssociationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListResolverRuleAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

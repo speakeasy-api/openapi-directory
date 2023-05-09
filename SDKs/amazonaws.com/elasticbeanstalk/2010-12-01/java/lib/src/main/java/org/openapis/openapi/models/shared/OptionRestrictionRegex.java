@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OptionRestrictionRegex {
     
     public String label;
+
     public OptionRestrictionRegex withLabel(String label) {
         this.label = label;
         return this;
@@ -19,9 +20,11 @@ public class OptionRestrictionRegex {
     
     
     public String pattern;
+
     public OptionRestrictionRegex withPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
     
+    public OptionRestrictionRegex(){}
 }

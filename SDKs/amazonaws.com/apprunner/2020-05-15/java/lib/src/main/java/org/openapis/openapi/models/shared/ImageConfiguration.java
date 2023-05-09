@@ -15,6 +15,7 @@ public class ImageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public String port;
+
     public ImageConfiguration withPort(String port) {
         this.port = port;
         return this;
@@ -23,6 +24,7 @@ public class ImageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeEnvironmentSecrets")
     public java.util.Map<String, String> runtimeEnvironmentSecrets;
+
     public ImageConfiguration withRuntimeEnvironmentSecrets(java.util.Map<String, String> runtimeEnvironmentSecrets) {
         this.runtimeEnvironmentSecrets = runtimeEnvironmentSecrets;
         return this;
@@ -31,6 +33,7 @@ public class ImageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeEnvironmentVariables")
     public java.util.Map<String, String> runtimeEnvironmentVariables;
+
     public ImageConfiguration withRuntimeEnvironmentVariables(java.util.Map<String, String> runtimeEnvironmentVariables) {
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         return this;
@@ -39,9 +42,11 @@ public class ImageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartCommand")
     public String startCommand;
+
     public ImageConfiguration withStartCommand(String startCommand) {
         this.startCommand = startCommand;
         return this;
     }
     
+    public ImageConfiguration(){}
 }

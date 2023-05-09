@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdUserTransactionsclustersIdTransactionsclusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class DeleteUsersIdUserTransactionsclustersIdTransactionsclusterRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
     public Long idTransactionscluster;
+
     public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
         this.idTransactionscluster = idTransactionscluster;
         return this;
@@ -26,9 +29,14 @@ public class DeleteUsersIdUserTransactionsclustersIdTransactionsclusterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterRequest(@JsonProperty("id_transactionscluster") Long idTransactionscluster, @JsonProperty("id_user") String idUser) {
+        this.idTransactionscluster = idTransactionscluster;
+        this.idUser = idUser;
+  }
 }

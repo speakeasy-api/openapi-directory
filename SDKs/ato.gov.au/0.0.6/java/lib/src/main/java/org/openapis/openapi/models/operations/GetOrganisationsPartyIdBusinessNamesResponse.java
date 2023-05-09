@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganisationsPartyIdBusinessNamesResponse {
     
     public String contentType;
+
     public GetOrganisationsPartyIdBusinessNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganisationsPartyIdBusinessNamesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrganisationsPartyIdBusinessNamesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganisationsPartyIdBusinessNamesResponse {
     
     
     public Integer statusCode;
+
     public GetOrganisationsPartyIdBusinessNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetOrganisationsPartyIdBusinessNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganisationsPartyIdBusinessNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetOrganisationsPartyIdBusinessNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessName[] businessNames;
+
     public GetOrganisationsPartyIdBusinessNamesResponse withBusinessNames(org.openapis.openapi.models.shared.BusinessName[] businessNames) {
         this.businessNames = businessNames;
         return this;
@@ -50,6 +56,7 @@ public class GetOrganisationsPartyIdBusinessNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetOrganisationsPartyIdBusinessNamesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetOrganisationsPartyIdBusinessNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetOrganisationsPartyIdBusinessNamesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetOrganisationsPartyIdBusinessNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

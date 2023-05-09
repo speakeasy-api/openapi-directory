@@ -17,6 +17,7 @@ public class PostOrdersOrderResponseV2StatusEventV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public org.openapis.openapi.models.shared.OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy createdBy;
+
     public PostOrdersOrderResponseV2StatusEventV2 withCreatedBy(org.openapis.openapi.models.shared.OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class PostOrdersOrderResponseV2StatusEventV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public PostOrdersOrderResponseV2StatusEventV2 withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -37,6 +39,7 @@ public class PostOrdersOrderResponseV2StatusEventV2 {
     
     @JsonProperty("id")
     public Long id;
+
     public PostOrdersOrderResponseV2StatusEventV2 withId(Long id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class PostOrdersOrderResponseV2StatusEventV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public PostOrdersOrderResponseV2StatusEventV2 withReason(String reason) {
         this.reason = reason;
         return this;
@@ -56,9 +60,13 @@ public class PostOrdersOrderResponseV2StatusEventV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 status;
+
     public PostOrdersOrderResponseV2StatusEventV2 withStatus(PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 status) {
         this.status = status;
         return this;
     }
     
+    public PostOrdersOrderResponseV2StatusEventV2(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

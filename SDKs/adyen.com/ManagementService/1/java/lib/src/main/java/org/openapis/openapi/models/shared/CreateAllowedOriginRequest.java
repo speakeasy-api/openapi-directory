@@ -12,6 +12,7 @@ public class CreateAllowedOriginRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public CreateAllowedOriginRequest withLinks(Links links) {
         this.links = links;
         return this;
@@ -22,6 +23,7 @@ public class CreateAllowedOriginRequest {
      */
     @JsonProperty("domain")
     public String domain;
+
     public CreateAllowedOriginRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -33,9 +35,13 @@ public class CreateAllowedOriginRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateAllowedOriginRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateAllowedOriginRequest(@JsonProperty("domain") String domain) {
+        this.domain = domain;
+  }
 }

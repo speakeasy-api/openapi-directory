@@ -18,6 +18,7 @@ public class RecommendedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCode")
     public RecommendedLocationGeoCode geoCode;
+
     public RecommendedLocation withGeoCode(RecommendedLocationGeoCode geoCode) {
         this.geoCode = geoCode;
         return this;
@@ -29,6 +30,7 @@ public class RecommendedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iataCode")
     public String iataCode;
+
     public RecommendedLocation withIataCode(String iataCode) {
         this.iataCode = iataCode;
         return this;
@@ -40,6 +42,7 @@ public class RecommendedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RecommendedLocation withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +56,7 @@ public class RecommendedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevance")
     public Double relevance;
+
     public RecommendedLocation withRelevance(Double relevance) {
         this.relevance = relevance;
         return this;
@@ -64,6 +68,7 @@ public class RecommendedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public String subtype;
+
     public RecommendedLocation withSubtype(String subtype) {
         this.subtype = subtype;
         return this;
@@ -75,9 +80,11 @@ public class RecommendedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public RecommendedLocation withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RecommendedLocation(){}
 }

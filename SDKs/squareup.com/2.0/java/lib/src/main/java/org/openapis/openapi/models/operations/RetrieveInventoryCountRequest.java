@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveInventoryCountRequest {
@@ -12,6 +13,7 @@ public class RetrieveInventoryCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalog_object_id")
     public String catalogObjectId;
+
     public RetrieveInventoryCountRequest withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -25,6 +27,7 @@ public class RetrieveInventoryCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public RetrieveInventoryCountRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -36,9 +39,13 @@ public class RetrieveInventoryCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_ids")
     public String locationIds;
+
     public RetrieveInventoryCountRequest withLocationIds(String locationIds) {
         this.locationIds = locationIds;
         return this;
     }
     
+    public RetrieveInventoryCountRequest(@JsonProperty("catalog_object_id") String catalogObjectId) {
+        this.catalogObjectId = catalogObjectId;
+  }
 }

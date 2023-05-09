@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteConnectionMessage {
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public DeleteConnectionMessage withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -19,9 +20,14 @@ public class DeleteConnectionMessage {
     
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public DeleteConnectionMessage withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
     }
     
+    public DeleteConnectionMessage(@JsonProperty("EndpointArn") String endpointArn, @JsonProperty("ReplicationInstanceArn") String replicationInstanceArn) {
+        this.endpointArn = endpointArn;
+        this.replicationInstanceArn = replicationInstanceArn;
+  }
 }

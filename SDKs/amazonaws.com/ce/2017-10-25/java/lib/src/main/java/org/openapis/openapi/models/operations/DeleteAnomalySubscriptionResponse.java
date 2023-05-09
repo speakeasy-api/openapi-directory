@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAnomalySubscriptionResponse {
     
     public String contentType;
+
     public DeleteAnomalySubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAnomalySubscriptionResponse {
      */
     
     public java.util.Map<String, Object> deleteAnomalySubscriptionResponse;
+
     public DeleteAnomalySubscriptionResponse withDeleteAnomalySubscriptionResponse(java.util.Map<String, Object> deleteAnomalySubscriptionResponse) {
         this.deleteAnomalySubscriptionResponse = deleteAnomalySubscriptionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAnomalySubscriptionResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteAnomalySubscriptionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteAnomalySubscriptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteAnomalySubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteAnomalySubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAnomalySubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteAnomalySubscriptionResponse {
      */
     
     public Object unknownSubscriptionException;
+
     public DeleteAnomalySubscriptionResponse withUnknownSubscriptionException(Object unknownSubscriptionException) {
         this.unknownSubscriptionException = unknownSubscriptionException;
         return this;
     }
     
+    public DeleteAnomalySubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

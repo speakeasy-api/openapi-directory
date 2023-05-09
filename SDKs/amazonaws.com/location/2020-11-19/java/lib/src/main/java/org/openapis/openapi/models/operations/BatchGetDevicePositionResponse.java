@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetDevicePositionResponse {
@@ -12,6 +13,7 @@ public class BatchGetDevicePositionResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetDevicePositionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetDevicePositionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetDevicePositionResponse batchGetDevicePositionResponse;
+
     public BatchGetDevicePositionResponse withBatchGetDevicePositionResponse(org.openapis.openapi.models.shared.BatchGetDevicePositionResponse batchGetDevicePositionResponse) {
         this.batchGetDevicePositionResponse = batchGetDevicePositionResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetDevicePositionResponse {
     
     
     public String contentType;
+
     public BatchGetDevicePositionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetDevicePositionResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetDevicePositionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetDevicePositionResponse {
     
     
     public Integer statusCode;
+
     public BatchGetDevicePositionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchGetDevicePositionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetDevicePositionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetDevicePositionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetDevicePositionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class BatchGetDevicePositionResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetDevicePositionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchGetDevicePositionResponse {
      */
     
     public Object validationException;
+
     public BatchGetDevicePositionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetDevicePositionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateNotificationRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public UpdateNotificationRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateNotificationRequest {
     
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public UpdateNotificationRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -26,6 +28,7 @@ public class UpdateNotificationRequest {
     
     @JsonProperty("NewNotification")
     public Notification newNotification;
+
     public UpdateNotificationRequest withNewNotification(Notification newNotification) {
         this.newNotification = newNotification;
         return this;
@@ -33,9 +36,16 @@ public class UpdateNotificationRequest {
     
     @JsonProperty("OldNotification")
     public Notification oldNotification;
+
     public UpdateNotificationRequest withOldNotification(Notification oldNotification) {
         this.oldNotification = oldNotification;
         return this;
     }
     
+    public UpdateNotificationRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("BudgetName") String budgetName, @JsonProperty("NewNotification") Notification newNotification, @JsonProperty("OldNotification") Notification oldNotification) {
+        this.accountId = accountId;
+        this.budgetName = budgetName;
+        this.newNotification = newNotification;
+        this.oldNotification = oldNotification;
+  }
 }

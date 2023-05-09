@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchStartRecommendationsResponse {
@@ -12,6 +13,7 @@ public class BatchStartRecommendationsResponse {
      */
     
     public Object accessDeniedFault;
+
     public BatchStartRecommendationsResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -22,6 +24,7 @@ public class BatchStartRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchStartRecommendationsResponse batchStartRecommendationsResponse;
+
     public BatchStartRecommendationsResponse withBatchStartRecommendationsResponse(org.openapis.openapi.models.shared.BatchStartRecommendationsResponse batchStartRecommendationsResponse) {
         this.batchStartRecommendationsResponse = batchStartRecommendationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchStartRecommendationsResponse {
     
     
     public String contentType;
+
     public BatchStartRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchStartRecommendationsResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public BatchStartRecommendationsResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -46,6 +51,7 @@ public class BatchStartRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public BatchStartRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchStartRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchStartRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class BatchStartRecommendationsResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public BatchStartRecommendationsResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
     }
     
+    public BatchStartRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

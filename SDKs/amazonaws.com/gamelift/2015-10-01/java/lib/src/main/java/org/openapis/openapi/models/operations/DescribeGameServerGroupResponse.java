@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGameServerGroupResponse {
     
     public String contentType;
+
     public DescribeGameServerGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGameServerGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGameServerGroupOutput describeGameServerGroupOutput;
+
     public DescribeGameServerGroupResponse withDescribeGameServerGroupOutput(org.openapis.openapi.models.shared.DescribeGameServerGroupOutput describeGameServerGroupOutput) {
         this.describeGameServerGroupOutput = describeGameServerGroupOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGameServerGroupResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeGameServerGroupResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGameServerGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeGameServerGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeGameServerGroupResponse {
      */
     
     public Object notFoundException;
+
     public DescribeGameServerGroupResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeGameServerGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeGameServerGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeGameServerGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGameServerGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeGameServerGroupResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeGameServerGroupResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeGameServerGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

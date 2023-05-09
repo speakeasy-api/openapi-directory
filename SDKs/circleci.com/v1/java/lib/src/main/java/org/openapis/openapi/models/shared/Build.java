@@ -23,6 +23,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Build withBody(String body) {
         this.body = body;
         return this;
@@ -31,6 +32,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public Build withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -39,6 +41,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_time_millis")
     public Long buildTimeMillis;
+
     public Build withBuildTimeMillis(Long buildTimeMillis) {
         this.buildTimeMillis = buildTimeMillis;
         return this;
@@ -47,6 +50,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_url")
     public String buildUrl;
+
     public Build withBuildUrl(String buildUrl) {
         this.buildUrl = buildUrl;
         return this;
@@ -55,6 +59,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committer_email")
     public String committerEmail;
+
     public Build withCommitterEmail(String committerEmail) {
         this.committerEmail = committerEmail;
         return this;
@@ -63,6 +68,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committer_name")
     public String committerName;
+
     public Build withCommitterName(String committerName) {
         this.committerName = committerName;
         return this;
@@ -74,6 +80,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dont_build")
     public String dontBuild;
+
     public Build withDontBuild(String dontBuild) {
         this.dontBuild = dontBuild;
         return this;
@@ -82,6 +89,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycle")
     public LifecycleEnum lifecycle;
+
     public Build withLifecycle(LifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -93,6 +101,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public PreviousBuild previous;
+
     public Build withPrevious(PreviousBuild previous) {
         this.previous = previous;
         return this;
@@ -106,6 +115,7 @@ public class Build {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("queued_at")
     public OffsetDateTime queuedAt;
+
     public Build withQueuedAt(OffsetDateTime queuedAt) {
         this.queuedAt = queuedAt;
         return this;
@@ -114,6 +124,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reponame")
     public String reponame;
+
     public Build withReponame(String reponame) {
         this.reponame = reponame;
         return this;
@@ -125,6 +136,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_of")
     public Long retryOf;
+
     public Build withRetryOf(Long retryOf) {
         this.retryOf = retryOf;
         return this;
@@ -138,6 +150,7 @@ public class Build {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start_time")
     public OffsetDateTime startTime;
+
     public Build withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -151,6 +164,7 @@ public class Build {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stop_time")
     public OffsetDateTime stopTime;
+
     public Build withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
@@ -159,6 +173,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public Build withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -167,6 +182,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public Build withUsername(String username) {
         this.username = username;
         return this;
@@ -175,6 +191,7 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcs_url")
     public String vcsUrl;
+
     public Build withVcsUrl(String vcsUrl) {
         this.vcsUrl = vcsUrl;
         return this;
@@ -186,9 +203,11 @@ public class Build {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("why")
     public String why;
+
     public Build withWhy(String why) {
         this.why = why;
         return this;
     }
     
+    public Build(){}
 }

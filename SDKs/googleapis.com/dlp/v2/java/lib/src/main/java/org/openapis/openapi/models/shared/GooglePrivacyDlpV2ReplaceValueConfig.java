@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2ReplaceValueConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newValue")
     public GooglePrivacyDlpV2Value newValue;
+
     public GooglePrivacyDlpV2ReplaceValueConfig withNewValue(GooglePrivacyDlpV2Value newValue) {
         this.newValue = newValue;
         return this;
     }
     
+    public GooglePrivacyDlpV2ReplaceValueConfig(){}
 }

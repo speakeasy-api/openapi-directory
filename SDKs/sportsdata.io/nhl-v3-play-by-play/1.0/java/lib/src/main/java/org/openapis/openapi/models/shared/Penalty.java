@@ -12,6 +12,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BenchPenaltyServedByPlayerID")
     public Long benchPenaltyServedByPlayerID;
+
     public Penalty withBenchPenaltyServedByPlayerID(Long benchPenaltyServedByPlayerID) {
         this.benchPenaltyServedByPlayerID = benchPenaltyServedByPlayerID;
         return this;
@@ -20,6 +21,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Penalty withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DrawnByPlayerID")
     public Long drawnByPlayerID;
+
     public Penalty withDrawnByPlayerID(Long drawnByPlayerID) {
         this.drawnByPlayerID = drawnByPlayerID;
         return this;
@@ -36,6 +39,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DrawnByTeamID")
     public Long drawnByTeamID;
+
     public Penalty withDrawnByTeamID(Long drawnByTeamID) {
         this.drawnByTeamID = drawnByTeamID;
         return this;
@@ -44,6 +48,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsBenchPenalty")
     public Boolean isBenchPenalty;
+
     public Penalty withIsBenchPenalty(Boolean isBenchPenalty) {
         this.isBenchPenalty = isBenchPenalty;
         return this;
@@ -52,6 +57,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenalizedPlayerID")
     public Long penalizedPlayerID;
+
     public Penalty withPenalizedPlayerID(Long penalizedPlayerID) {
         this.penalizedPlayerID = penalizedPlayerID;
         return this;
@@ -60,6 +66,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenalizedTeamID")
     public Long penalizedTeamID;
+
     public Penalty withPenalizedTeamID(Long penalizedTeamID) {
         this.penalizedTeamID = penalizedTeamID;
         return this;
@@ -68,6 +75,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenaltyID")
     public Long penaltyID;
+
     public Penalty withPenaltyID(Long penaltyID) {
         this.penaltyID = penaltyID;
         return this;
@@ -76,6 +84,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenaltyMinutes")
     public Long penaltyMinutes;
+
     public Penalty withPenaltyMinutes(Long penaltyMinutes) {
         this.penaltyMinutes = penaltyMinutes;
         return this;
@@ -84,6 +93,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeriodID")
     public Long periodID;
+
     public Penalty withPeriodID(Long periodID) {
         this.periodID = periodID;
         return this;
@@ -92,6 +102,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sequence")
     public Long sequence;
+
     public Penalty withSequence(Long sequence) {
         this.sequence = sequence;
         return this;
@@ -100,6 +111,7 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRemainingMinutes")
     public Long timeRemainingMinutes;
+
     public Penalty withTimeRemainingMinutes(Long timeRemainingMinutes) {
         this.timeRemainingMinutes = timeRemainingMinutes;
         return this;
@@ -108,9 +120,11 @@ public class Penalty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRemainingSeconds")
     public Long timeRemainingSeconds;
+
     public Penalty withTimeRemainingSeconds(Long timeRemainingSeconds) {
         this.timeRemainingSeconds = timeRemainingSeconds;
         return this;
     }
     
+    public Penalty(){}
 }

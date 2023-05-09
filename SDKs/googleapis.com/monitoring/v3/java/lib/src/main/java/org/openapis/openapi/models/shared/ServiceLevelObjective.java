@@ -18,6 +18,7 @@ public class ServiceLevelObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarPeriod")
     public ServiceLevelObjectiveCalendarPeriodEnum calendarPeriod;
+
     public ServiceLevelObjective withCalendarPeriod(ServiceLevelObjectiveCalendarPeriodEnum calendarPeriod) {
         this.calendarPeriod = calendarPeriod;
         return this;
@@ -29,6 +30,7 @@ public class ServiceLevelObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ServiceLevelObjective withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class ServiceLevelObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal")
     public Double goal;
+
     public ServiceLevelObjective withGoal(Double goal) {
         this.goal = goal;
         return this;
@@ -51,6 +54,7 @@ public class ServiceLevelObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceLevelObjective withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ServiceLevelObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollingPeriod")
     public String rollingPeriod;
+
     public ServiceLevelObjective withRollingPeriod(String rollingPeriod) {
         this.rollingPeriod = rollingPeriod;
         return this;
@@ -73,6 +78,7 @@ public class ServiceLevelObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceLevelIndicator")
     public ServiceLevelIndicator serviceLevelIndicator;
+
     public ServiceLevelObjective withServiceLevelIndicator(ServiceLevelIndicator serviceLevelIndicator) {
         this.serviceLevelIndicator = serviceLevelIndicator;
         return this;
@@ -84,9 +90,11 @@ public class ServiceLevelObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLabels")
     public java.util.Map<String, String> userLabels;
+
     public ServiceLevelObjective withUserLabels(java.util.Map<String, String> userLabels) {
         this.userLabels = userLabels;
         return this;
     }
     
+    public ServiceLevelObjective(){}
 }

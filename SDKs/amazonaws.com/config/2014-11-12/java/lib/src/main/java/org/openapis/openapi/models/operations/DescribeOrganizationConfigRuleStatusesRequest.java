@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeOrganizationConfigRuleStatusesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeOrganizationConfigRuleStatusesRequest describeOrganizationConfigRuleStatusesRequest;
+
     public DescribeOrganizationConfigRuleStatusesRequest withDescribeOrganizationConfigRuleStatusesRequest(org.openapis.openapi.models.shared.DescribeOrganizationConfigRuleStatusesRequest describeOrganizationConfigRuleStatusesRequest) {
         this.describeOrganizationConfigRuleStatusesRequest = describeOrganizationConfigRuleStatusesRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Limit")
     public String limit;
+
     public DescribeOrganizationConfigRuleStatusesRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -29,6 +32,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public DescribeOrganizationConfigRuleStatusesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeOrganizationConfigRuleStatusesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeOrganizationConfigRuleStatusesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeOrganizationConfigRuleStatusesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeOrganizationConfigRuleStatusesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeOrganizationConfigRuleStatusesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeOrganizationConfigRuleStatusesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeOrganizationConfigRuleStatusesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeOrganizationConfigRuleStatusesXAmzTargetEnum xAmzTarget;
+
     public DescribeOrganizationConfigRuleStatusesRequest withXAmzTarget(DescribeOrganizationConfigRuleStatusesXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeOrganizationConfigRuleStatusesRequest(@JsonProperty("DescribeOrganizationConfigRuleStatusesRequest") org.openapis.openapi.models.shared.DescribeOrganizationConfigRuleStatusesRequest describeOrganizationConfigRuleStatusesRequest, @JsonProperty("X-Amz-Target") DescribeOrganizationConfigRuleStatusesXAmzTargetEnum xAmzTarget) {
+        this.describeOrganizationConfigRuleStatusesRequest = describeOrganizationConfigRuleStatusesRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

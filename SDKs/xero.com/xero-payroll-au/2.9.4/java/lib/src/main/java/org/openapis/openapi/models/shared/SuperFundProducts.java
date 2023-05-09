@@ -15,9 +15,11 @@ public class SuperFundProducts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuperFundProducts")
     public SuperFundProduct[] superFundProducts;
+
     public SuperFundProducts withSuperFundProducts(SuperFundProduct[] superFundProducts) {
         this.superFundProducts = superFundProducts;
         return this;
     }
     
+    public SuperFundProducts(){}
 }

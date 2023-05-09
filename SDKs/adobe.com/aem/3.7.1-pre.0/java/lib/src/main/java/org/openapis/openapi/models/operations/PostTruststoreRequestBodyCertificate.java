@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTruststoreRequestBodyCertificate {
     @SpeakeasyMetadata("multipartForm:name=certificate")
     public String certificate;
+
     public PostTruststoreRequestBodyCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -16,9 +18,14 @@ public class PostTruststoreRequestBodyCertificate {
     
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public PostTruststoreRequestBodyCertificate withContent(byte[] content) {
         this.content = content;
         return this;
     }
     
+    public PostTruststoreRequestBodyCertificate(@JsonProperty("certificate") String certificate, @JsonProperty("content") byte[] content) {
+        this.certificate = certificate;
+        this.content = content;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetGroupRequest {
     @JsonProperty("GroupName")
     public String groupName;
+
     public GetGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -16,9 +17,14 @@ public class GetGroupRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public GetGroupRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public GetGroupRequest(@JsonProperty("GroupName") String groupName, @JsonProperty("UserPoolId") String userPoolId) {
+        this.groupName = groupName;
+        this.userPoolId = userPoolId;
+  }
 }

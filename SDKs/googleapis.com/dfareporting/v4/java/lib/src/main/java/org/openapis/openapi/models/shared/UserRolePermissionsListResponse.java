@@ -18,6 +18,7 @@ public class UserRolePermissionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UserRolePermissionsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class UserRolePermissionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRolePermissions")
     public UserRolePermission[] userRolePermissions;
+
     public UserRolePermissionsListResponse withUserRolePermissions(UserRolePermission[] userRolePermissions) {
         this.userRolePermissions = userRolePermissions;
         return this;
     }
     
+    public UserRolePermissionsListResponse(){}
 }

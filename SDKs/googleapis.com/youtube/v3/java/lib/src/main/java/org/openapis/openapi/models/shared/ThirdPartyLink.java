@@ -18,6 +18,7 @@ public class ThirdPartyLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ThirdPartyLink withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class ThirdPartyLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ThirdPartyLink withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class ThirdPartyLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkingToken")
     public String linkingToken;
+
     public ThirdPartyLink withLinkingToken(String linkingToken) {
         this.linkingToken = linkingToken;
         return this;
@@ -51,6 +54,7 @@ public class ThirdPartyLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public ThirdPartyLinkSnippet snippet;
+
     public ThirdPartyLink withSnippet(ThirdPartyLinkSnippet snippet) {
         this.snippet = snippet;
         return this;
@@ -62,9 +66,11 @@ public class ThirdPartyLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ThirdPartyLinkStatus status;
+
     public ThirdPartyLink withStatus(ThirdPartyLinkStatus status) {
         this.status = status;
         return this;
     }
     
+    public ThirdPartyLink(){}
 }

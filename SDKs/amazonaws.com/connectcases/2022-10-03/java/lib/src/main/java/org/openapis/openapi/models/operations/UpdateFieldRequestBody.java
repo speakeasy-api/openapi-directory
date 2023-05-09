@@ -15,6 +15,7 @@ public class UpdateFieldRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateFieldRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateFieldRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateFieldRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateFieldRequestBody(){}
 }

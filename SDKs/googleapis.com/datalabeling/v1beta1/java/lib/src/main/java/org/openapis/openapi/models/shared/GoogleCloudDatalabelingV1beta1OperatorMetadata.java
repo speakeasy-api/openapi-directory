@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1OperatorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String[] comments;
+
     public GoogleCloudDatalabelingV1beta1OperatorMetadata withComments(String[] comments) {
         this.comments = comments;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1OperatorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelVotes")
     public Integer labelVotes;
+
     public GoogleCloudDatalabelingV1beta1OperatorMetadata withLabelVotes(Integer labelVotes) {
         this.labelVotes = labelVotes;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatalabelingV1beta1OperatorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudDatalabelingV1beta1OperatorMetadata withScore(Float score) {
         this.score = score;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatalabelingV1beta1OperatorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalVotes")
     public Integer totalVotes;
+
     public GoogleCloudDatalabelingV1beta1OperatorMetadata withTotalVotes(Integer totalVotes) {
         this.totalVotes = totalVotes;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1OperatorMetadata(){}
 }

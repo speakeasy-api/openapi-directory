@@ -20,6 +20,7 @@ public class Alarm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public Alarm withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -28,6 +29,7 @@ public class Alarm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelVersion")
     public String alarmModelVersion;
+
     public Alarm withAlarmModelVersion(String alarmModelVersion) {
         this.alarmModelVersion = alarmModelVersion;
         return this;
@@ -36,6 +38,7 @@ public class Alarm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmState")
     public AlarmState alarmState;
+
     public Alarm withAlarmState(AlarmState alarmState) {
         this.alarmState = alarmState;
         return this;
@@ -46,6 +49,7 @@ public class Alarm {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public Alarm withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class Alarm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public Alarm withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -64,6 +69,7 @@ public class Alarm {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public Alarm withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -72,9 +78,11 @@ public class Alarm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public Long severity;
+
     public Alarm withSeverity(Long severity) {
         this.severity = severity;
         return this;
     }
     
+    public Alarm(){}
 }

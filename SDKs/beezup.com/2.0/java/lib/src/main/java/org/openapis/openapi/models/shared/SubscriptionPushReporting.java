@@ -22,6 +22,7 @@ public class SubscriptionPushReporting {
      */
     @JsonProperty("duration")
     public String duration;
+
     public SubscriptionPushReporting withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -30,6 +31,7 @@ public class SubscriptionPushReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public ErrorResponseMessage errorMessage;
+
     public SubscriptionPushReporting withErrorMessage(ErrorResponseMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,6 +42,7 @@ public class SubscriptionPushReporting {
      */
     @JsonProperty("eventId")
     public String eventId;
+
     public SubscriptionPushReporting withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -51,6 +54,7 @@ public class SubscriptionPushReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatus")
     public Integer httpStatus;
+
     public SubscriptionPushReporting withHttpStatus(Integer httpStatus) {
         this.httpStatus = httpStatus;
         return this;
@@ -63,6 +67,7 @@ public class SubscriptionPushReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastOrderModificationUtcDate")
     public OffsetDateTime lastOrderModificationUtcDate;
+
     public SubscriptionPushReporting withLastOrderModificationUtcDate(OffsetDateTime lastOrderModificationUtcDate) {
         this.lastOrderModificationUtcDate = lastOrderModificationUtcDate;
         return this;
@@ -74,6 +79,7 @@ public class SubscriptionPushReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRetryCount")
     public Long maxRetryCount;
+
     public SubscriptionPushReporting withMaxRetryCount(Long maxRetryCount) {
         this.maxRetryCount = maxRetryCount;
         return this;
@@ -87,6 +93,7 @@ public class SubscriptionPushReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextScheduledRetryUtcDate")
     public OffsetDateTime nextScheduledRetryUtcDate;
+
     public SubscriptionPushReporting withNextScheduledRetryUtcDate(OffsetDateTime nextScheduledRetryUtcDate) {
         this.nextScheduledRetryUtcDate = nextScheduledRetryUtcDate;
         return this;
@@ -97,6 +104,7 @@ public class SubscriptionPushReporting {
      */
     @JsonProperty("orderCount")
     public Integer orderCount;
+
     public SubscriptionPushReporting withOrderCount(Integer orderCount) {
         this.orderCount = orderCount;
         return this;
@@ -108,6 +116,7 @@ public class SubscriptionPushReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestUri")
     public String requestUri;
+
     public SubscriptionPushReporting withRequestUri(String requestUri) {
         this.requestUri = requestUri;
         return this;
@@ -119,6 +128,7 @@ public class SubscriptionPushReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseUri")
     public String responseUri;
+
     public SubscriptionPushReporting withResponseUri(String responseUri) {
         this.responseUri = responseUri;
         return this;
@@ -130,6 +140,7 @@ public class SubscriptionPushReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryCount")
     public Long retryCount;
+
     public SubscriptionPushReporting withRetryCount(Long retryCount) {
         this.retryCount = retryCount;
         return this;
@@ -140,6 +151,7 @@ public class SubscriptionPushReporting {
      */
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public SubscriptionPushReporting withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -150,9 +162,18 @@ public class SubscriptionPushReporting {
      */
     @JsonProperty("succeed")
     public Boolean succeed;
+
     public SubscriptionPushReporting withSucceed(Boolean succeed) {
         this.succeed = succeed;
         return this;
     }
     
+    public SubscriptionPushReporting(@JsonProperty("duration") String duration, @JsonProperty("eventId") String eventId, @JsonProperty("lastOrderModificationUtcDate") OffsetDateTime lastOrderModificationUtcDate, @JsonProperty("orderCount") Integer orderCount, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("succeed") Boolean succeed) {
+        this.duration = duration;
+        this.eventId = eventId;
+        this.lastOrderModificationUtcDate = lastOrderModificationUtcDate;
+        this.orderCount = orderCount;
+        this.subscriptionId = subscriptionId;
+        this.succeed = succeed;
+  }
 }

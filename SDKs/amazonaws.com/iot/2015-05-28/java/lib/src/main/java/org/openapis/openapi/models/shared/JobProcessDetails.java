@@ -15,6 +15,7 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfCanceledThings")
     public Long numberOfCanceledThings;
+
     public JobProcessDetails withNumberOfCanceledThings(Long numberOfCanceledThings) {
         this.numberOfCanceledThings = numberOfCanceledThings;
         return this;
@@ -23,6 +24,7 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfFailedThings")
     public Long numberOfFailedThings;
+
     public JobProcessDetails withNumberOfFailedThings(Long numberOfFailedThings) {
         this.numberOfFailedThings = numberOfFailedThings;
         return this;
@@ -31,6 +33,7 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfInProgressThings")
     public Long numberOfInProgressThings;
+
     public JobProcessDetails withNumberOfInProgressThings(Long numberOfInProgressThings) {
         this.numberOfInProgressThings = numberOfInProgressThings;
         return this;
@@ -39,6 +42,7 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfQueuedThings")
     public Long numberOfQueuedThings;
+
     public JobProcessDetails withNumberOfQueuedThings(Long numberOfQueuedThings) {
         this.numberOfQueuedThings = numberOfQueuedThings;
         return this;
@@ -47,6 +51,7 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRejectedThings")
     public Long numberOfRejectedThings;
+
     public JobProcessDetails withNumberOfRejectedThings(Long numberOfRejectedThings) {
         this.numberOfRejectedThings = numberOfRejectedThings;
         return this;
@@ -55,6 +60,7 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRemovedThings")
     public Long numberOfRemovedThings;
+
     public JobProcessDetails withNumberOfRemovedThings(Long numberOfRemovedThings) {
         this.numberOfRemovedThings = numberOfRemovedThings;
         return this;
@@ -63,6 +69,7 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfSucceededThings")
     public Long numberOfSucceededThings;
+
     public JobProcessDetails withNumberOfSucceededThings(Long numberOfSucceededThings) {
         this.numberOfSucceededThings = numberOfSucceededThings;
         return this;
@@ -71,6 +78,7 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfTimedOutThings")
     public Long numberOfTimedOutThings;
+
     public JobProcessDetails withNumberOfTimedOutThings(Long numberOfTimedOutThings) {
         this.numberOfTimedOutThings = numberOfTimedOutThings;
         return this;
@@ -79,9 +87,11 @@ public class JobProcessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingTargets")
     public String[] processingTargets;
+
     public JobProcessDetails withProcessingTargets(String[] processingTargets) {
         this.processingTargets = processingTargets;
         return this;
     }
     
+    public JobProcessDetails(){}
 }

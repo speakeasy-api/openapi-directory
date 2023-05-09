@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ObstaclesByPolygon {
     @JsonProperty("poly")
     public java.util.Map<String, Object> poly;
+
     public ObstaclesByPolygon withPoly(java.util.Map<String, Object> poly) {
         this.poly = poly;
         return this;
     }
     
+    public ObstaclesByPolygon(@JsonProperty("poly") java.util.Map<String, Object> poly) {
+        this.poly = poly;
+  }
 }

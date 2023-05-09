@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeStackResourceInput - The input for &lt;a&gt;DescribeStackResource&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStackResourceInput {
     
     public String logicalResourceId;
+
     public DescribeStackResourceInput withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -19,9 +20,14 @@ public class DescribeStackResourceInput {
     
     
     public String stackName;
+
     public DescribeStackResourceInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public DescribeStackResourceInput(@JsonProperty("LogicalResourceId") String logicalResourceId, @JsonProperty("StackName") String stackName) {
+        this.logicalResourceId = logicalResourceId;
+        this.stackName = stackName;
+  }
 }

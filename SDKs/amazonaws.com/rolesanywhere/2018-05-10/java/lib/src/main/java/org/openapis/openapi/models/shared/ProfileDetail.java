@@ -22,6 +22,7 @@ public class ProfileDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ProfileDetail withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public ProfileDetail withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -38,6 +40,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSeconds")
     public Long durationSeconds;
+
     public ProfileDetail withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -46,6 +49,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ProfileDetail withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -54,6 +58,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedPolicyArns")
     public String[] managedPolicyArns;
+
     public ProfileDetail withManagedPolicyArns(String[] managedPolicyArns) {
         this.managedPolicyArns = managedPolicyArns;
         return this;
@@ -62,6 +67,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProfileDetail withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileArn")
     public String profileArn;
+
     public ProfileDetail withProfileArn(String profileArn) {
         this.profileArn = profileArn;
         return this;
@@ -78,6 +85,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileId")
     public String profileId;
+
     public ProfileDetail withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -86,6 +94,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireInstanceProperties")
     public Boolean requireInstanceProperties;
+
     public ProfileDetail withRequireInstanceProperties(Boolean requireInstanceProperties) {
         this.requireInstanceProperties = requireInstanceProperties;
         return this;
@@ -94,6 +103,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArns")
     public String[] roleArns;
+
     public ProfileDetail withRoleArns(String[] roleArns) {
         this.roleArns = roleArns;
         return this;
@@ -102,6 +112,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionPolicy")
     public String sessionPolicy;
+
     public ProfileDetail withSessionPolicy(String sessionPolicy) {
         this.sessionPolicy = sessionPolicy;
         return this;
@@ -112,9 +123,11 @@ public class ProfileDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public ProfileDetail withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ProfileDetail(){}
 }

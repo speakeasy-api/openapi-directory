@@ -15,6 +15,7 @@ public class UserProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UserProfileSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -23,6 +24,7 @@ public class UserProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public UserProfileSummary withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -31,6 +33,7 @@ public class UserProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public String sshPublicKey;
+
     public UserProfileSummary withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -39,9 +42,11 @@ public class UserProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userArn")
     public String userArn;
+
     public UserProfileSummary withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public UserProfileSummary(){}
 }

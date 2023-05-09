@@ -15,6 +15,7 @@ public class AwsEc2SecurityGroupIpPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromPort")
     public Long fromPort;
+
     public AwsEc2SecurityGroupIpPermission withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2SecurityGroupIpPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpProtocol")
     public String ipProtocol;
+
     public AwsEc2SecurityGroupIpPermission withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2SecurityGroupIpPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpRanges")
     public AwsEc2SecurityGroupIpRange[] ipRanges;
+
     public AwsEc2SecurityGroupIpPermission withIpRanges(AwsEc2SecurityGroupIpRange[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2SecurityGroupIpPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6Ranges")
     public AwsEc2SecurityGroupIpv6Range[] ipv6Ranges;
+
     public AwsEc2SecurityGroupIpPermission withIpv6Ranges(AwsEc2SecurityGroupIpv6Range[] ipv6Ranges) {
         this.ipv6Ranges = ipv6Ranges;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2SecurityGroupIpPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrefixListIds")
     public AwsEc2SecurityGroupPrefixListId[] prefixListIds;
+
     public AwsEc2SecurityGroupIpPermission withPrefixListIds(AwsEc2SecurityGroupPrefixListId[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2SecurityGroupIpPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToPort")
     public Long toPort;
+
     public AwsEc2SecurityGroupIpPermission withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
@@ -63,9 +69,11 @@ public class AwsEc2SecurityGroupIpPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserIdGroupPairs")
     public AwsEc2SecurityGroupUserIdGroupPair[] userIdGroupPairs;
+
     public AwsEc2SecurityGroupIpPermission withUserIdGroupPairs(AwsEc2SecurityGroupUserIdGroupPair[] userIdGroupPairs) {
         this.userIdGroupPairs = userIdGroupPairs;
         return this;
     }
     
+    public AwsEc2SecurityGroupIpPermission(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Cancellations {
     @JsonProperty("href")
     public String href;
+
     public Cancellations withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public Cancellations(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTableRestoreStatusMessage {
     
     public String clusterIdentifier;
+
     public DescribeTableRestoreStatusMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTableRestoreStatusMessage {
     
     
     public String marker;
+
     public DescribeTableRestoreStatusMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTableRestoreStatusMessage {
     
     
     public Long maxRecords;
+
     public DescribeTableRestoreStatusMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,9 +36,11 @@ public class DescribeTableRestoreStatusMessage {
     
     
     public String tableRestoreRequestId;
+
     public DescribeTableRestoreStatusMessage withTableRestoreRequestId(String tableRestoreRequestId) {
         this.tableRestoreRequestId = tableRestoreRequestId;
         return this;
     }
     
+    public DescribeTableRestoreStatusMessage(){}
 }

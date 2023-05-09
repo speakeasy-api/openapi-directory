@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeImageAttributeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeImageAttributeActionEnum action;
+
     public GETDescribeImageAttributeRequest withAction(GETDescribeImageAttributeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeImageAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Attribute")
     public GETDescribeImageAttributeAttributeEnum attribute;
+
     public GETDescribeImageAttributeRequest withAttribute(GETDescribeImageAttributeAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeImageAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDescribeImageAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeImageAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ImageId")
     public String imageId;
+
     public GETDescribeImageAttributeRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -46,6 +51,7 @@ public class GETDescribeImageAttributeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeImageAttributeVersionEnum version;
+
     public GETDescribeImageAttributeRequest withVersion(GETDescribeImageAttributeVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDescribeImageAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeImageAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDescribeImageAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeImageAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDescribeImageAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeImageAttributeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDescribeImageAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeImageAttributeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDescribeImageAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeImageAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDescribeImageAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeImageAttributeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETDescribeImageAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeImageAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeImageAttributeRequest(@JsonProperty("Action") GETDescribeImageAttributeActionEnum action, @JsonProperty("Attribute") GETDescribeImageAttributeAttributeEnum attribute, @JsonProperty("ImageId") String imageId, @JsonProperty("Version") GETDescribeImageAttributeVersionEnum version) {
+        this.action = action;
+        this.attribute = attribute;
+        this.imageId = imageId;
+        this.version = version;
+  }
 }

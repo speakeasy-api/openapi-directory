@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssuredworkloadsOrganizationsLocationsWorkloadsListResponse {
     
     public String contentType;
+
     public AssuredworkloadsOrganizationsLocationsWorkloadsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AssuredworkloadsOrganizationsLocationsWorkloadsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1ListWorkloadsResponse googleCloudAssuredworkloadsV1ListWorkloadsResponse;
+
     public AssuredworkloadsOrganizationsLocationsWorkloadsListResponse withGoogleCloudAssuredworkloadsV1ListWorkloadsResponse(org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1ListWorkloadsResponse googleCloudAssuredworkloadsV1ListWorkloadsResponse) {
         this.googleCloudAssuredworkloadsV1ListWorkloadsResponse = googleCloudAssuredworkloadsV1ListWorkloadsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AssuredworkloadsOrganizationsLocationsWorkloadsListResponse {
     
     
     public Integer statusCode;
+
     public AssuredworkloadsOrganizationsLocationsWorkloadsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AssuredworkloadsOrganizationsLocationsWorkloadsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssuredworkloadsOrganizationsLocationsWorkloadsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssuredworkloadsOrganizationsLocationsWorkloadsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

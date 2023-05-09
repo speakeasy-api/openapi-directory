@@ -3,169 +3,199 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAutoPredictorXAmzTargetEnum;
 import org.openapis.openapi.models.operations.CreateAutoPredictorRequest;
 import org.openapis.openapi.models.operations.CreateAutoPredictorResponse;
-import org.openapis.openapi.models.shared.CreateAutoPredictorRequest;
-import org.openapis.openapi.models.shared.TimeAlignmentBoundary;
-import org.openapis.openapi.models.shared.MonthEnum;
-import org.openapis.openapi.models.shared.DayOfWeekEnum;
-import org.openapis.openapi.models.shared.Tag;
-import org.openapis.openapi.models.shared.OptimizationMetricEnum;
-import org.openapis.openapi.models.shared.MonitorConfig;
-import org.openapis.openapi.models.shared.EncryptionConfig;
-import org.openapis.openapi.models.shared.DataConfig;
-import org.openapis.openapi.models.shared.AttributeConfig;
+import org.openapis.openapi.models.operations.CreateAutoPredictorXAmzTargetEnum;
 import org.openapis.openapi.models.shared.AdditionalDataset;
+import org.openapis.openapi.models.shared.AttributeConfig;
+import org.openapis.openapi.models.shared.CreateAutoPredictorRequest;
+import org.openapis.openapi.models.shared.DataConfig;
+import org.openapis.openapi.models.shared.DayOfWeekEnum;
+import org.openapis.openapi.models.shared.EncryptionConfig;
+import org.openapis.openapi.models.shared.MonitorConfig;
+import org.openapis.openapi.models.shared.MonthEnum;
+import org.openapis.openapi.models.shared.OptimizationMetricEnum;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.TimeAlignmentBoundary;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateAutoPredictorRequest req = new CreateAutoPredictorRequest() {{
-                createAutoPredictorRequest = new CreateAutoPredictorRequest() {{
-                    dataConfig = new DataConfig() {{
-                        additionalDatasets = new org.openapis.openapi.models.shared.AdditionalDataset[]{{
-                            add(new AdditionalDataset() {{
-                                configuration = new java.util.HashMap<String, String[]>() {{
-                                    put("distinctio", new String[]{{
-                                        add("unde"),
-                                        add("nulla"),
-                                        add("corrupti"),
-                                        add("illum"),
-                                    }});
-                                    put("vel", new String[]{{
-                                        add("deserunt"),
-                                        add("suscipit"),
-                                        add("iure"),
-                                    }});
-                                    put("magnam", new String[]{{
-                                        add("ipsa"),
-                                        add("delectus"),
-                                        add("tempora"),
-                                        add("suscipit"),
-                                    }});
+            CreateAutoPredictorRequest req = new CreateAutoPredictorRequest(                new CreateAutoPredictorRequest("provident") {{
+                                dataConfig = new DataConfig("distinctio") {{
+                                    additionalDatasets = new org.openapis.openapi.models.shared.AdditionalDataset[]{{
+                                        add(new AdditionalDataset("voluptatum") {{
+                                            configuration = new java.util.HashMap<String, String[]>() {{
+                                                put("nulla", new String[]{{
+                                                    add("illum"),
+                                                    add("vel"),
+                                                    add("error"),
+                                                }});
+                                                put("deserunt", new String[]{{
+                                                    add("iure"),
+                                                    add("magnam"),
+                                                }});
+                                                put("debitis", new String[]{{
+                                                    add("delectus"),
+                                                }});
+                                            }};
+                                            name = "Laurie Kreiger";
+                                        }}),
+                                        add(new AdditionalDataset("odit") {{
+                                            configuration = new java.util.HashMap<String, String[]>() {{
+                                                put("excepturi", new String[]{{
+                                                    add("recusandae"),
+                                                    add("temporibus"),
+                                                }});
+                                                put("ab", new String[]{{
+                                                    add("veritatis"),
+                                                    add("deserunt"),
+                                                }});
+                                            }};
+                                            name = "Roberta Sipes";
+                                        }}),
+                                        add(new AdditionalDataset("ipsum") {{
+                                            configuration = new java.util.HashMap<String, String[]>() {{
+                                                put("at", new String[]{{
+                                                    add("molestiae"),
+                                                    add("quod"),
+                                                    add("quod"),
+                                                    add("esse"),
+                                                }});
+                                                put("totam", new String[]{{
+                                                    add("dolorum"),
+                                                    add("dicta"),
+                                                    add("nam"),
+                                                    add("officia"),
+                                                }});
+                                                put("occaecati", new String[]{{
+                                                    add("deleniti"),
+                                                }});
+                                                put("hic", new String[]{{
+                                                    add("totam"),
+                                                    add("beatae"),
+                                                    add("commodi"),
+                                                    add("molestiae"),
+                                                }});
+                                            }};
+                                            name = "Norma Ryan";
+                                        }}),
+                                        add(new AdditionalDataset("saepe") {{
+                                            configuration = new java.util.HashMap<String, String[]>() {{
+                                                put("aspernatur", new String[]{{
+                                                    add("ad"),
+                                                }});
+                                                put("natus", new String[]{{
+                                                    add("iste"),
+                                                }});
+                                                put("dolor", new String[]{{
+                                                    add("laboriosam"),
+                                                    add("hic"),
+                                                    add("saepe"),
+                                                }});
+                                            }};
+                                            name = "Harvey Hessel";
+                                        }}),
+                                    }};
+                                    attributeConfigs = new org.openapis.openapi.models.shared.AttributeConfig[]{{
+                                        add(new AttributeConfig("mollitia",                 new java.util.HashMap<String, String>() {{
+                                                            put("dolores", "dolorem");
+                                                            put("corporis", "explicabo");
+                                                            put("nobis", "enim");
+                                                        }}) {{
+                                            attributeName = "architecto";
+                                            transformations = new java.util.HashMap<String, String>() {{
+                                                put("reiciendis", "est");
+                                            }};
+                                        }}),
+                                        add(new AttributeConfig("culpa",                 new java.util.HashMap<String, String>() {{
+                                                            put("sapiente", "architecto");
+                                                            put("mollitia", "dolorem");
+                                                            put("culpa", "consequuntur");
+                                                            put("repellat", "mollitia");
+                                                        }}) {{
+                                            attributeName = "omnis";
+                                            transformations = new java.util.HashMap<String, String>() {{
+                                                put("minima", "excepturi");
+                                                put("accusantium", "iure");
+                                            }};
+                                        }}),
+                                        add(new AttributeConfig("error",                 new java.util.HashMap<String, String>() {{
+                                                            put("quis", "vitae");
+                                                        }}) {{
+                                            attributeName = "occaecati";
+                                            transformations = new java.util.HashMap<String, String>() {{
+                                                put("commodi", "quam");
+                                                put("molestiae", "velit");
+                                            }};
+                                        }}),
+                                    }};
+                                }};;
+                                encryptionConfig = new EncryptionConfig("laborum", "animi");;
+                                explainPredictor = false;
+                                forecastDimensions = new String[]{{
+                                    add("odit"),
+                                    add("quo"),
                                 }};
-                                name = "molestiae";
-                            }}),
-                            add(new AdditionalDataset() {{
-                                configuration = new java.util.HashMap<String, String[]>() {{
-                                    put("placeat", new String[]{{
-                                        add("iusto"),
-                                        add("excepturi"),
-                                        add("nisi"),
-                                    }});
-                                    put("recusandae", new String[]{{
-                                        add("ab"),
-                                        add("quis"),
-                                        add("veritatis"),
-                                        add("deserunt"),
-                                    }});
-                                    put("perferendis", new String[]{{
-                                        add("repellendus"),
-                                        add("sapiente"),
-                                    }});
-                                    put("quo", new String[]{{
-                                        add("at"),
-                                    }});
+                                forecastFrequency = "sequi";
+                                forecastHorizon = 949572L;
+                                forecastTypes = new String[]{{
+                                    add("id"),
+                                    add("possimus"),
                                 }};
-                                name = "at";
-                            }}),
-                            add(new AdditionalDataset() {{
-                                configuration = new java.util.HashMap<String, String[]>() {{
-                                    put("molestiae", new String[]{{
-                                        add("quod"),
-                                        add("esse"),
-                                        add("totam"),
-                                        add("porro"),
-                                    }});
-                                    put("dolorum", new String[]{{
-                                        add("nam"),
-                                    }});
-                                    put("officia", new String[]{{
-                                        add("fugit"),
-                                        add("deleniti"),
-                                        add("hic"),
-                                    }});
-                                    put("optio", new String[]{{
-                                        add("beatae"),
-                                        add("commodi"),
-                                        add("molestiae"),
-                                    }});
+                                monitorConfig = new MonitorConfig("aut");;
+                                optimizationMetric = OptimizationMetricEnum.WAPE;
+                                referencePredictorArn = "error";
+                                tags = new org.openapis.openapi.models.shared.Tag[]{{
+                                    add(new Tag("reiciendis", "voluptatibus") {{
+                                        key = "laborum";
+                                        value = "quasi";
+                                    }}),
+                                    add(new Tag("praesentium", "voluptatibus") {{
+                                        key = "vero";
+                                        value = "nihil";
+                                    }}),
+                                    add(new Tag("voluptate", "cum") {{
+                                        key = "ipsa";
+                                        value = "omnis";
+                                    }}),
+                                    add(new Tag("reprehenderit", "ut") {{
+                                        key = "perferendis";
+                                        value = "doloremque";
+                                    }}),
                                 }};
-                                name = "modi";
-                            }}),
-                        }};
-                        attributeConfigs = new org.openapis.openapi.models.shared.AttributeConfig[]{{
-                            add(new AttributeConfig() {{
-                                attributeName = "impedit";
-                                transformations = new java.util.HashMap<String, String>() {{
-                                    put("esse", "ipsum");
-                                    put("excepturi", "aspernatur");
-                                    put("perferendis", "ad");
-                                }};
-                            }}),
-                        }};
-                        datasetGroupArn = "natus";
-                    }};
-                    encryptionConfig = new EncryptionConfig() {{
-                        kmsKeyArn = "sed";
-                        roleArn = "iste";
-                    }};
-                    explainPredictor = false;
-                    forecastDimensions = new String[]{{
-                        add("natus"),
-                    }};
-                    forecastFrequency = "laboriosam";
-                    forecastHorizon = 943749;
-                    forecastTypes = new String[]{{
-                        add("fuga"),
-                        add("in"),
-                        add("corporis"),
-                        add("iste"),
-                    }};
-                    monitorConfig = new MonitorConfig() {{
-                        monitorName = "iure";
-                    }};
-                    optimizationMetric = "MAPE";
-                    predictorName = "quidem";
-                    referencePredictorArn = "architecto";
-                    tags = new org.openapis.openapi.models.shared.Tag[]{{
-                        add(new Tag() {{
-                            key = "reiciendis";
-                            value = "est";
-                        }}),
-                    }};
-                    timeAlignmentBoundary = new TimeAlignmentBoundary() {{
-                        dayOfMonth = 653140;
-                        dayOfWeek = "FRIDAY";
-                        hour = 170909;
-                        month = "MARCH";
-                    }};
-                }};
-                xAmzAlgorithm = "corporis";
-                xAmzContentSha256 = "explicabo";
-                xAmzCredential = "nobis";
+                                timeAlignmentBoundary = new TimeAlignmentBoundary() {{
+                                    dayOfMonth = 979587L;
+                                    dayOfWeek = DayOfWeekEnum.MONDAY;
+                                    hour = 359444L;
+                                    month = MonthEnum.APRIL;
+                                }};;
+                            }};, CreateAutoPredictorXAmzTargetEnum.AMAZON_FORECAST_CREATE_AUTO_PREDICTOR) {{
+                xAmzAlgorithm = "iusto";
+                xAmzContentSha256 = "dicta";
+                xAmzCredential = "harum";
                 xAmzDate = "enim";
-                xAmzSecurityToken = "omnis";
-                xAmzSignature = "nemo";
-                xAmzSignedHeaders = "minima";
-                xAmzTarget = "AmazonForecast.CreateAutoPredictor";
-            }}            
+                xAmzSecurityToken = "accusamus";
+                xAmzSignature = "commodi";
+                xAmzSignedHeaders = "repudiandae";
+            }};            
 
             CreateAutoPredictorResponse res = sdk.createAutoPredictor(req);
 
-            if (res.createAutoPredictorResponse.isPresent()) {
+            if (res.createAutoPredictorResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

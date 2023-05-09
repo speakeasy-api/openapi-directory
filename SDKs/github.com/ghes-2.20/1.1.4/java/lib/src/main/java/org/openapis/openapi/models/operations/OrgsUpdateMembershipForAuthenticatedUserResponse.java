@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgsUpdateMembershipForAuthenticatedUserResponse {
     
     public String contentType;
+
     public OrgsUpdateMembershipForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrgsUpdateMembershipForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public OrgsUpdateMembershipForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OrgsUpdateMembershipForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgsUpdateMembershipForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OrgsUpdateMembershipForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OrgsUpdateMembershipForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class OrgsUpdateMembershipForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.OrgMembership orgMembership;
+
     public OrgsUpdateMembershipForAuthenticatedUserResponse withOrgMembership(org.openapis.openapi.models.shared.OrgMembership orgMembership) {
         this.orgMembership = orgMembership;
         return this;
@@ -53,9 +59,14 @@ public class OrgsUpdateMembershipForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public OrgsUpdateMembershipForAuthenticatedUserResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public OrgsUpdateMembershipForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

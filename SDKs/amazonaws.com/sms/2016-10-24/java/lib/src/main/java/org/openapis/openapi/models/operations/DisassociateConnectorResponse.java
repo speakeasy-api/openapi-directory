@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateConnectorResponse {
     
     public String contentType;
+
     public DisassociateConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateConnectorResponse {
      */
     
     public java.util.Map<String, Object> disassociateConnectorResponse;
+
     public DisassociateConnectorResponse withDisassociateConnectorResponse(java.util.Map<String, Object> disassociateConnectorResponse) {
         this.disassociateConnectorResponse = disassociateConnectorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateConnectorResponse {
      */
     
     public Object invalidParameterException;
+
     public DisassociateConnectorResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateConnectorResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public DisassociateConnectorResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateConnectorResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DisassociateConnectorResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateConnectorResponse {
     
     
     public Integer statusCode;
+
     public DisassociateConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateConnectorResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public DisassociateConnectorResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public DisassociateConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

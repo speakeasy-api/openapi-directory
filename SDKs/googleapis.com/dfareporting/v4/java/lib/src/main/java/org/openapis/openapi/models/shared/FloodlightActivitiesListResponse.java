@@ -18,6 +18,7 @@ public class FloodlightActivitiesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightActivities")
     public FloodlightActivity[] floodlightActivities;
+
     public FloodlightActivitiesListResponse withFloodlightActivities(FloodlightActivity[] floodlightActivities) {
         this.floodlightActivities = floodlightActivities;
         return this;
@@ -29,6 +30,7 @@ public class FloodlightActivitiesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FloodlightActivitiesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class FloodlightActivitiesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public FloodlightActivitiesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public FloodlightActivitiesListResponse(){}
 }

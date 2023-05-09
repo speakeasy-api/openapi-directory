@@ -240,4 +240,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Footer.java
 lib/src/main/java/org/openapis/openapi/models/shared/FooterInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Body.java
 lib/src/main/java/org/openapis/openapi/models/shared/BodyInput.java
+docs/sdk/README.md
+docs/documents/README.md
 USAGE.md

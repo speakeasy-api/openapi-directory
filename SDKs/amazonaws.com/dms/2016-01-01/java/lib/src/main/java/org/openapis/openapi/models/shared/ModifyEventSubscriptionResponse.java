@@ -15,9 +15,11 @@ public class ModifyEventSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSubscription")
     public EventSubscription eventSubscription;
+
     public ModifyEventSubscriptionResponse withEventSubscription(EventSubscription eventSubscription) {
         this.eventSubscription = eventSubscription;
         return this;
     }
     
+    public ModifyEventSubscriptionResponse(){}
 }

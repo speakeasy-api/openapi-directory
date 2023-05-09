@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SensorsWithShortDateRange {
     @JsonProperty("AffectedSensorCount")
     public Long affectedSensorCount;
+
     public SensorsWithShortDateRange withAffectedSensorCount(Long affectedSensorCount) {
         this.affectedSensorCount = affectedSensorCount;
         return this;
     }
     
+    public SensorsWithShortDateRange(@JsonProperty("AffectedSensorCount") Long affectedSensorCount) {
+        this.affectedSensorCount = affectedSensorCount;
+  }
 }

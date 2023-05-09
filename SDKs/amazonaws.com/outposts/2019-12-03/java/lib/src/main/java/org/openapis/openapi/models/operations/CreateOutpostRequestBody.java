@@ -15,6 +15,7 @@ public class CreateOutpostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public CreateOutpostRequestBody withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +27,7 @@ public class CreateOutpostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneId")
     public String availabilityZoneId;
+
     public CreateOutpostRequestBody withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -37,6 +39,7 @@ public class CreateOutpostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateOutpostRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class CreateOutpostRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateOutpostRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +61,7 @@ public class CreateOutpostRequestBody {
      */
     @JsonProperty("SiteId")
     public String siteId;
+
     public CreateOutpostRequestBody withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
@@ -68,6 +73,7 @@ public class CreateOutpostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedHardwareType")
     public CreateOutpostRequestBodySupportedHardwareTypeEnum supportedHardwareType;
+
     public CreateOutpostRequestBody withSupportedHardwareType(CreateOutpostRequestBodySupportedHardwareTypeEnum supportedHardwareType) {
         this.supportedHardwareType = supportedHardwareType;
         return this;
@@ -79,9 +85,14 @@ public class CreateOutpostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateOutpostRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateOutpostRequestBody(@JsonProperty("Name") String name, @JsonProperty("SiteId") String siteId) {
+        this.name = name;
+        this.siteId = siteId;
+  }
 }

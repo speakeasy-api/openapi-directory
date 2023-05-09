@@ -17,6 +17,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public String config;
+
     public Analysis withConfig(String config) {
         this.config = config;
         return this;
@@ -27,6 +28,7 @@ public class Analysis {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_created")
     public OffsetDateTime dateCreated;
+
     public Analysis withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -37,6 +39,7 @@ public class Analysis {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_finished")
     public OffsetDateTime dateFinished;
+
     public Analysis withDateFinished(OffsetDateTime dateFinished) {
         this.dateFinished = dateFinished;
         return this;
@@ -50,6 +53,7 @@ public class Analysis {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_last_modified")
     public OffsetDateTime dateLastModified;
+
     public Analysis withDateLastModified(OffsetDateTime dateLastModified) {
         this.dateLastModified = dateLastModified;
         return this;
@@ -60,6 +64,7 @@ public class Analysis {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_launched")
     public OffsetDateTime dateLaunched;
+
     public Analysis withDateLaunched(OffsetDateTime dateLaunched) {
         this.dateLaunched = dateLaunched;
         return this;
@@ -68,6 +73,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String features;
+
     public Analysis withFeatures(String features) {
         this.features = features;
         return this;
@@ -76,6 +82,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Analysis withId(Long id) {
         this.id = id;
         return this;
@@ -84,6 +91,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Analysis withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +100,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Analysis withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -100,6 +109,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Analysis withStatus(String status) {
         this.status = status;
         return this;
@@ -108,6 +118,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Analysis withUrl(String url) {
         this.url = url;
         return this;
@@ -116,6 +127,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls_done")
     public String urlsDone;
+
     public Analysis withUrlsDone(String urlsDone) {
         this.urlsDone = urlsDone;
         return this;
@@ -124,6 +136,7 @@ public class Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls_in_queue")
     public String urlsInQueue;
+
     public Analysis withUrlsInQueue(String urlsInQueue) {
         this.urlsInQueue = urlsInQueue;
         return this;
@@ -131,9 +144,13 @@ public class Analysis {
     
     @JsonProperty("user")
     public User user;
+
     public Analysis withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public Analysis(@JsonProperty("user") User user) {
+        this.user = user;
+  }
 }

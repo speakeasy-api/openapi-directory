@@ -16,6 +16,7 @@ public class List {
      */
     @JsonProperty("id")
     public String id;
+
     public List withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class List {
      */
     @JsonProperty("replies_policy")
     public ListRepliesPolicyEnum repliesPolicy;
+
     public List withRepliesPolicy(ListRepliesPolicyEnum repliesPolicy) {
         this.repliesPolicy = repliesPolicy;
         return this;
@@ -36,9 +38,15 @@ public class List {
      */
     @JsonProperty("title")
     public String title;
+
     public List withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public List(@JsonProperty("id") String id, @JsonProperty("replies_policy") ListRepliesPolicyEnum repliesPolicy, @JsonProperty("title") String title) {
+        this.id = id;
+        this.repliesPolicy = repliesPolicy;
+        this.title = title;
+  }
 }

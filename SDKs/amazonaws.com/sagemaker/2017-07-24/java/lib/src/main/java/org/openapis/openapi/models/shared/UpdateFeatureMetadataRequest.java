@@ -12,6 +12,7 @@ public class UpdateFeatureMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateFeatureMetadataRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateFeatureMetadataRequest {
     
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public UpdateFeatureMetadataRequest withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -26,6 +28,7 @@ public class UpdateFeatureMetadataRequest {
     
     @JsonProperty("FeatureName")
     public String featureName;
+
     public UpdateFeatureMetadataRequest withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -34,6 +37,7 @@ public class UpdateFeatureMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterAdditions")
     public FeatureParameter[] parameterAdditions;
+
     public UpdateFeatureMetadataRequest withParameterAdditions(FeatureParameter[] parameterAdditions) {
         this.parameterAdditions = parameterAdditions;
         return this;
@@ -42,9 +46,14 @@ public class UpdateFeatureMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterRemovals")
     public String[] parameterRemovals;
+
     public UpdateFeatureMetadataRequest withParameterRemovals(String[] parameterRemovals) {
         this.parameterRemovals = parameterRemovals;
         return this;
     }
     
+    public UpdateFeatureMetadataRequest(@JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("FeatureName") String featureName) {
+        this.featureGroupName = featureGroupName;
+        this.featureName = featureName;
+  }
 }

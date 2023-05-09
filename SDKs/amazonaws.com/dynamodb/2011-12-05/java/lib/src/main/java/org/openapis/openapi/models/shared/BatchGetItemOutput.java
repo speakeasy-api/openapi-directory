@@ -18,6 +18,7 @@ public class BatchGetItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Responses")
     public java.util.Map<String, BatchResponse> responses;
+
     public BatchGetItemOutput withResponses(java.util.Map<String, BatchResponse> responses) {
         this.responses = responses;
         return this;
@@ -26,9 +27,11 @@ public class BatchGetItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedKeys")
     public java.util.Map<String, KeysAndAttributes> unprocessedKeys;
+
     public BatchGetItemOutput withUnprocessedKeys(java.util.Map<String, KeysAndAttributes> unprocessedKeys) {
         this.unprocessedKeys = unprocessedKeys;
         return this;
     }
     
+    public BatchGetItemOutput(){}
 }

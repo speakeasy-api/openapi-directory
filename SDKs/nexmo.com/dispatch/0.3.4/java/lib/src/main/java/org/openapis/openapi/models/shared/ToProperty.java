@@ -20,6 +20,7 @@ public class ToProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ToProperty withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +35,7 @@ public class ToProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public ToProperty withNumber(String number) {
         this.number = number;
         return this;
@@ -44,9 +46,13 @@ public class ToProperty {
      */
     @JsonProperty("type")
     public ToPropertyTypeEnum type;
+
     public ToProperty withType(ToPropertyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ToProperty(@JsonProperty("type") ToPropertyTypeEnum type) {
+        this.type = type;
+  }
 }

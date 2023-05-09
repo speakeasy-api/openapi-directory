@@ -18,9 +18,11 @@ public class I18nConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public String root;
+
     public I18nConfig withRoot(String root) {
         this.root = root;
         return this;
     }
     
+    public I18nConfig(){}
 }

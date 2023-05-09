@@ -55,11 +55,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChineseNameCandidatesResponse res = new org.openapis.openapi.models.operations.ChineseNameCandidatesResponse() {{
+        org.openapis.openapi.models.operations.ChineseNameCandidatesResponse res = new org.openapis.openapi.models.operations.ChineseNameCandidatesResponse(contentType, httpRes.statusCode()) {{
             nameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChineseNameCandidatesBatchResponse res = new org.openapis.openapi.models.operations.ChineseNameCandidatesBatchResponse() {{
+        org.openapis.openapi.models.operations.ChineseNameCandidatesBatchResponse res = new org.openapis.openapi.models.operations.ChineseNameCandidatesBatchResponse(contentType, httpRes.statusCode()) {{
             batchNameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChineseNameCandidatesGenderBatchResponse res = new org.openapis.openapi.models.operations.ChineseNameCandidatesGenderBatchResponse() {{
+        org.openapis.openapi.models.operations.ChineseNameCandidatesGenderBatchResponse res = new org.openapis.openapi.models.operations.ChineseNameCandidatesGenderBatchResponse(contentType, httpRes.statusCode()) {{
             batchNameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,11 +179,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChineseNameGenderCandidatesResponse res = new org.openapis.openapi.models.operations.ChineseNameGenderCandidatesResponse() {{
+        org.openapis.openapi.models.operations.ChineseNameGenderCandidatesResponse res = new org.openapis.openapi.models.operations.ChineseNameGenderCandidatesResponse(contentType, httpRes.statusCode()) {{
             nameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,11 +219,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChineseNameMatchResponse res = new org.openapis.openapi.models.operations.ChineseNameMatchResponse() {{
+        org.openapis.openapi.models.operations.ChineseNameMatchResponse res = new org.openapis.openapi.models.operations.ChineseNameMatchResponse(contentType, httpRes.statusCode()) {{
             nameMatchedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,11 +261,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChineseNameMatchBatchResponse res = new org.openapis.openapi.models.operations.ChineseNameMatchBatchResponse() {{
+        org.openapis.openapi.models.operations.ChineseNameMatchBatchResponse res = new org.openapis.openapi.models.operations.ChineseNameMatchBatchResponse(contentType, httpRes.statusCode()) {{
             batchNameMatchedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,11 +301,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderChineseNameResponse res = new org.openapis.openapi.models.operations.GenderChineseNameResponse() {{
+        org.openapis.openapi.models.operations.GenderChineseNameResponse res = new org.openapis.openapi.models.operations.GenderChineseNameResponse(contentType, httpRes.statusCode()) {{
             personalNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -357,11 +343,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderChineseNameBatchResponse res = new org.openapis.openapi.models.operations.GenderChineseNameBatchResponse() {{
+        org.openapis.openapi.models.operations.GenderChineseNameBatchResponse res = new org.openapis.openapi.models.operations.GenderChineseNameBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -399,11 +383,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderChineseNamePinyinResponse res = new org.openapis.openapi.models.operations.GenderChineseNamePinyinResponse() {{
+        org.openapis.openapi.models.operations.GenderChineseNamePinyinResponse res = new org.openapis.openapi.models.operations.GenderChineseNamePinyinResponse(contentType, httpRes.statusCode()) {{
             firstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,11 +425,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderChineseNamePinyinBatchResponse res = new org.openapis.openapi.models.operations.GenderChineseNamePinyinBatchResponse() {{
+        org.openapis.openapi.models.operations.GenderChineseNamePinyinBatchResponse res = new org.openapis.openapi.models.operations.GenderChineseNamePinyinBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +465,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParseChineseNameResponse res = new org.openapis.openapi.models.operations.ParseChineseNameResponse() {{
+        org.openapis.openapi.models.operations.ParseChineseNameResponse res = new org.openapis.openapi.models.operations.ParseChineseNameResponse(contentType, httpRes.statusCode()) {{
             personalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,11 +507,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParseChineseNameBatchResponse res = new org.openapis.openapi.models.operations.ParseChineseNameBatchResponse() {{
+        org.openapis.openapi.models.operations.ParseChineseNameBatchResponse res = new org.openapis.openapi.models.operations.ParseChineseNameBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,11 +547,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PinyinChineseNameResponse res = new org.openapis.openapi.models.operations.PinyinChineseNameResponse() {{
+        org.openapis.openapi.models.operations.PinyinChineseNameResponse res = new org.openapis.openapi.models.operations.PinyinChineseNameResponse(contentType, httpRes.statusCode()) {{
             personalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -615,11 +589,9 @@ public class Chinese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PinyinChineseNameBatchResponse res = new org.openapis.openapi.models.operations.PinyinChineseNameBatchResponse() {{
+        org.openapis.openapi.models.operations.PinyinChineseNameBatchResponse res = new org.openapis.openapi.models.operations.PinyinChineseNameBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

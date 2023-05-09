@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UntagServiceInventoryRequest {
@@ -12,6 +13,7 @@ public class UntagServiceInventoryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Tag[] requestBody;
+
     public UntagServiceInventoryRequest withRequestBody(org.openapis.openapi.models.shared.Tag[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class UntagServiceInventoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UntagServiceInventoryRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UntagServiceInventoryRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.Tag[] requestBody, @JsonProperty("id") String id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

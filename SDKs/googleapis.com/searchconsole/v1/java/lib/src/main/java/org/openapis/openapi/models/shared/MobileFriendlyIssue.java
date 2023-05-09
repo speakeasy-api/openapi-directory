@@ -18,9 +18,11 @@ public class MobileFriendlyIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public MobileFriendlyIssueRuleEnum rule;
+
     public MobileFriendlyIssue withRule(MobileFriendlyIssueRuleEnum rule) {
         this.rule = rule;
         return this;
     }
     
+    public MobileFriendlyIssue(){}
 }

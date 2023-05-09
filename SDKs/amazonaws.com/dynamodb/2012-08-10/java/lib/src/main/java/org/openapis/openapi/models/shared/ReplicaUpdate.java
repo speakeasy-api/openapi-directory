@@ -15,6 +15,7 @@ public class ReplicaUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Create")
     public CreateReplicaAction create;
+
     public ReplicaUpdate withCreate(CreateReplicaAction create) {
         this.create = create;
         return this;
@@ -23,9 +24,11 @@ public class ReplicaUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delete")
     public DeleteReplicaAction delete;
+
     public ReplicaUpdate withDelete(DeleteReplicaAction delete) {
         this.delete = delete;
         return this;
     }
     
+    public ReplicaUpdate(){}
 }

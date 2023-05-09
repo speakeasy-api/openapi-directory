@@ -15,6 +15,7 @@ public class ListJobsByStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jobs")
     public Job[] jobs;
+
     public ListJobsByStatusResponse withJobs(Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -23,9 +24,11 @@ public class ListJobsByStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListJobsByStatusResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListJobsByStatusResponse(){}
 }

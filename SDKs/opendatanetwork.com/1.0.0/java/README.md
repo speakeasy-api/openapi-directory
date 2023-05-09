@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateAMapRequest;
 import org.openapis.openapi.models.operations.CreateAMapResponse;
 
@@ -26,13 +25,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateAMapRequest req = new CreateAMapRequest() {{
-                xAppToken = "corrupti";
-                appToken = "provident";
-                constraint = "distinctio";
-                entityId = "quibusdam";
-                variable = "unde";
-            }}            
+            CreateAMapRequest req = new CreateAMapRequest("corrupti", "provident") {{
+                xAppToken = "distinctio";
+                appToken = "quibusdam";
+                constraint = "unde";
+            }};            
 
             CreateAMapResponse res = sdk.createAMap(req);
 
@@ -42,23 +39,25 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createAMap` - Create a map
-* `findAllAvailableDataForSomeEntities` - Find all available data for some entities
-* `findTheRelativesOfAnEntity` - Find the relatives of an entity
-* `getEntities` - Get Entities
-* `getConstraintPermutationsForEntities` - Get constraint permutations for entities
-* `getDatasets` - Get datasets
-* `getQuestions` - Get questions
-* `getSuggestions` - Get suggestions
-* `getValuesForVariables` - Get values for variables
+* [createAMap](docs/sdk/README.md#createamap) - Create a map
+* [findAllAvailableDataForSomeEntities](docs/sdk/README.md#findallavailabledataforsomeentities) - Find all available data for some entities
+* [findTheRelativesOfAnEntity](docs/sdk/README.md#findtherelativesofanentity) - Find the relatives of an entity
+* [getEntities](docs/sdk/README.md#getentities) - Get Entities
+* [getConstraintPermutationsForEntities](docs/sdk/README.md#getconstraintpermutationsforentities) - Get constraint permutations for entities
+* [getDatasets](docs/sdk/README.md#getdatasets) - Get datasets
+* [getQuestions](docs/sdk/README.md#getquestions) - Get questions
+* [getSuggestions](docs/sdk/README.md#getsuggestions) - Get suggestions
+* [getValuesForVariables](docs/sdk/README.md#getvaluesforvariables) - Get values for variables
 <!-- End SDK Available Operations -->
 
 ### Maturity

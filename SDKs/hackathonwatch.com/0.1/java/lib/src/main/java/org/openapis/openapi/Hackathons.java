@@ -50,10 +50,8 @@ public class Hackathons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETHackathonsIdFormatResponse res = new org.openapis.openapi.models.operations.GETHackathonsIdFormatResponse() {{
+        org.openapis.openapi.models.operations.GETHackathonsIdFormatResponse res = new org.openapis.openapi.models.operations.GETHackathonsIdFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,10 +86,8 @@ public class Hackathons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETHackathonsComingFormatResponse res = new org.openapis.openapi.models.operations.GETHackathonsComingFormatResponse() {{
+        org.openapis.openapi.models.operations.GETHackathonsComingFormatResponse res = new org.openapis.openapi.models.operations.GETHackathonsComingFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

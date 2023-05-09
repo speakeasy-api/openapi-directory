@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCrawlerRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteCrawlerRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteCrawlerRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

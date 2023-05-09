@@ -13,6 +13,7 @@ public class GETVersionLocationsMarkersFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public GETVersionLocationsMarkersFormatRequest withAll(Boolean all) {
         this.all = all;
         return this;
@@ -24,6 +25,7 @@ public class GETVersionLocationsMarkersFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incident_type")
     public GETVersionLocationsMarkersFormatIncidentTypeEnum incidentType;
+
     public GETVersionLocationsMarkersFormatRequest withIncidentType(GETVersionLocationsMarkersFormatIncidentTypeEnum incidentType) {
         this.incidentType = incidentType;
         return this;
@@ -35,6 +37,7 @@ public class GETVersionLocationsMarkersFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GETVersionLocationsMarkersFormatRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -46,6 +49,7 @@ public class GETVersionLocationsMarkersFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_after")
     public Integer occurredAfter;
+
     public GETVersionLocationsMarkersFormatRequest withOccurredAfter(Integer occurredAfter) {
         this.occurredAfter = occurredAfter;
         return this;
@@ -57,6 +61,7 @@ public class GETVersionLocationsMarkersFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_before")
     public Integer occurredBefore;
+
     public GETVersionLocationsMarkersFormatRequest withOccurredBefore(Integer occurredBefore) {
         this.occurredBefore = occurredBefore;
         return this;
@@ -68,6 +73,7 @@ public class GETVersionLocationsMarkersFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity")
     public String proximity;
+
     public GETVersionLocationsMarkersFormatRequest withProximity(String proximity) {
         this.proximity = proximity;
         return this;
@@ -79,6 +85,7 @@ public class GETVersionLocationsMarkersFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity_square")
     public Integer proximitySquare;
+
     public GETVersionLocationsMarkersFormatRequest withProximitySquare(Integer proximitySquare) {
         this.proximitySquare = proximitySquare;
         return this;
@@ -90,9 +97,11 @@ public class GETVersionLocationsMarkersFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GETVersionLocationsMarkersFormatRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GETVersionLocationsMarkersFormatRequest(){}
 }

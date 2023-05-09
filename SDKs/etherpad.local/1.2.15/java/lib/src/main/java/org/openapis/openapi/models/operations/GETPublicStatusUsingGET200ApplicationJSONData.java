@@ -12,9 +12,11 @@ public class GETPublicStatusUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicStatus")
     public Boolean publicStatus;
+
     public GETPublicStatusUsingGET200ApplicationJSONData withPublicStatus(Boolean publicStatus) {
         this.publicStatus = publicStatus;
         return this;
     }
     
+    public GETPublicStatusUsingGET200ApplicationJSONData(){}
 }

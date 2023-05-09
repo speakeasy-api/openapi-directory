@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeatureClassesRequest {
@@ -12,9 +13,13 @@ public class GetFeatureClassesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public GetFeatureClassesOutputFormatEnum outputFormat;
+
     public GetFeatureClassesRequest withOutputFormat(GetFeatureClassesOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
     }
     
+    public GetFeatureClassesRequest(@JsonProperty("outputFormat") GetFeatureClassesOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+  }
 }

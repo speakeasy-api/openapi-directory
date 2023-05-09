@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFunctionCodeSigningConfigResponse {
     @JsonProperty("CodeSigningConfigArn")
     public String codeSigningConfigArn;
+
     public GetFunctionCodeSigningConfigResponse withCodeSigningConfigArn(String codeSigningConfigArn) {
         this.codeSigningConfigArn = codeSigningConfigArn;
         return this;
@@ -19,9 +20,14 @@ public class GetFunctionCodeSigningConfigResponse {
     
     @JsonProperty("FunctionName")
     public String functionName;
+
     public GetFunctionCodeSigningConfigResponse withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
     }
     
+    public GetFunctionCodeSigningConfigResponse(@JsonProperty("CodeSigningConfigArn") String codeSigningConfigArn, @JsonProperty("FunctionName") String functionName) {
+        this.codeSigningConfigArn = codeSigningConfigArn;
+        this.functionName = functionName;
+  }
 }

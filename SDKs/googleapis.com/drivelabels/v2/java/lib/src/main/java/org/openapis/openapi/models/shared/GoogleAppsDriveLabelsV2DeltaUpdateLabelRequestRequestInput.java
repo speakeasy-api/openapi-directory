@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createField")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequestInput createField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withCreateField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequestInput createField) {
         this.createField = createField;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSelectionChoice")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequestInput createSelectionChoice;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withCreateSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequestInput createSelectionChoice) {
         this.createSelectionChoice = createSelectionChoice;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteField")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteFieldRequest deleteField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withDeleteField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteFieldRequest deleteField) {
         this.deleteField = deleteField;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteSelectionChoice")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest deleteSelectionChoice;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withDeleteSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest deleteSelectionChoice) {
         this.deleteSelectionChoice = deleteSelectionChoice;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableField")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest disableField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withDisableField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest disableField) {
         this.disableField = disableField;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSelectionChoice")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableSelectionChoiceRequest disableSelectionChoice;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withDisableSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableSelectionChoiceRequest disableSelectionChoice) {
         this.disableSelectionChoice = disableSelectionChoice;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableField")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableFieldRequest enableField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withEnableField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableFieldRequest enableField) {
         this.enableField = enableField;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSelectionChoice")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableSelectionChoiceRequest enableSelectionChoice;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withEnableSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableSelectionChoiceRequest enableSelectionChoice) {
         this.enableSelectionChoice = enableSelectionChoice;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateField")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest updateField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withUpdateField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest updateField) {
         this.updateField = updateField;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateFieldType")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequestInput updateFieldType;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withUpdateFieldType(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequestInput updateFieldType) {
         this.updateFieldType = updateFieldType;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateLabel")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelPropertiesRequest updateLabel;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withUpdateLabel(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelPropertiesRequest updateLabel) {
         this.updateLabel = updateLabel;
         return this;
@@ -139,9 +150,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateSelectionChoiceProperties")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest updateSelectionChoiceProperties;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput withUpdateSelectionChoiceProperties(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest updateSelectionChoiceProperties) {
         this.updateSelectionChoiceProperties = updateSelectionChoiceProperties;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput(){}
 }

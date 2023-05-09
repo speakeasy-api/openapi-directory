@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataQualityResultsResponse {
     
     public String contentType;
+
     public ListDataQualityResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDataQualityResultsResponse {
      */
     
     public Object internalServiceException;
+
     public ListDataQualityResultsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListDataQualityResultsResponse {
      */
     
     public Object invalidInputException;
+
     public ListDataQualityResultsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListDataQualityResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataQualityResultsResponse listDataQualityResultsResponse;
+
     public ListDataQualityResultsResponse withListDataQualityResultsResponse(org.openapis.openapi.models.shared.ListDataQualityResultsResponse listDataQualityResultsResponse) {
         this.listDataQualityResultsResponse = listDataQualityResultsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDataQualityResultsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListDataQualityResultsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListDataQualityResultsResponse {
     
     
     public Integer statusCode;
+
     public ListDataQualityResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListDataQualityResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataQualityResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDataQualityResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

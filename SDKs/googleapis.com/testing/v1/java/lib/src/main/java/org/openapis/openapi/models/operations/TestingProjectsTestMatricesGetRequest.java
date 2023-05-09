@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestingProjectsTestMatricesGetRequest {
@@ -12,6 +13,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TestingProjectsTestMatricesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TestingProjectsTestMatricesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TestingProjectsTestMatricesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TestingProjectsTestMatricesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TestingProjectsTestMatricesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TestingProjectsTestMatricesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TestingProjectsTestMatricesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TestingProjectsTestMatricesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public TestingProjectsTestMatricesGetRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -102,6 +112,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TestingProjectsTestMatricesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=testMatrixId")
     public String testMatrixId;
+
     public TestingProjectsTestMatricesGetRequest withTestMatrixId(String testMatrixId) {
         this.testMatrixId = testMatrixId;
         return this;
@@ -122,6 +134,7 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TestingProjectsTestMatricesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,9 +145,14 @@ public class TestingProjectsTestMatricesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TestingProjectsTestMatricesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TestingProjectsTestMatricesGetRequest(@JsonProperty("projectId") String projectId, @JsonProperty("testMatrixId") String testMatrixId) {
+        this.projectId = projectId;
+        this.testMatrixId = testMatrixId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETExportClientVpnClientCertificateRevocationListResponse {
     
     public byte[] body;
+
     public GETExportClientVpnClientCertificateRevocationListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETExportClientVpnClientCertificateRevocationListResponse {
     
     
     public String contentType;
+
     public GETExportClientVpnClientCertificateRevocationListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETExportClientVpnClientCertificateRevocationListResponse {
     
     
     public Integer statusCode;
+
     public GETExportClientVpnClientCertificateRevocationListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETExportClientVpnClientCertificateRevocationListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETExportClientVpnClientCertificateRevocationListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETExportClientVpnClientCertificateRevocationListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

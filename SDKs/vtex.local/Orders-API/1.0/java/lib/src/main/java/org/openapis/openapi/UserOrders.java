@@ -68,11 +68,9 @@ public class UserOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserorderdetailsResponse res = new org.openapis.openapi.models.operations.UserorderdetailsResponse() {{
+        org.openapis.openapi.models.operations.UserorderdetailsResponse res = new org.openapis.openapi.models.operations.UserorderdetailsResponse(contentType, httpRes.statusCode()) {{
             userorderdetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class UserOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserorderslistResponse res = new org.openapis.openapi.models.operations.UserorderslistResponse() {{
+        org.openapis.openapi.models.operations.UserorderslistResponse res = new org.openapis.openapi.models.operations.UserorderslistResponse(contentType, httpRes.statusCode()) {{
             userorderslist = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

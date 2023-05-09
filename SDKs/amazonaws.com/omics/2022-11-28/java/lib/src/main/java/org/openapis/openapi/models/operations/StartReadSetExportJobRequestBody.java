@@ -15,6 +15,7 @@ public class StartReadSetExportJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartReadSetExportJobRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class StartReadSetExportJobRequestBody {
      */
     @JsonProperty("destination")
     public String destination;
+
     public StartReadSetExportJobRequestBody withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -35,6 +37,7 @@ public class StartReadSetExportJobRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartReadSetExportJobRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -45,9 +48,15 @@ public class StartReadSetExportJobRequestBody {
      */
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.ExportReadSet[] sources;
+
     public StartReadSetExportJobRequestBody withSources(org.openapis.openapi.models.shared.ExportReadSet[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public StartReadSetExportJobRequestBody(@JsonProperty("destination") String destination, @JsonProperty("roleArn") String roleArn, @JsonProperty("sources") org.openapis.openapi.models.shared.ExportReadSet[] sources) {
+        this.destination = destination;
+        this.roleArn = roleArn;
+        this.sources = sources;
+  }
 }

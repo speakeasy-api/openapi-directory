@@ -15,9 +15,13 @@ public class PostFactorsResidualization200ApplicationJSON {
      */
     @JsonProperty("residualizedFactorReturns")
     public Double[] residualizedFactorReturns;
+
     public PostFactorsResidualization200ApplicationJSON withResidualizedFactorReturns(Double[] residualizedFactorReturns) {
         this.residualizedFactorReturns = residualizedFactorReturns;
         return this;
     }
     
+    public PostFactorsResidualization200ApplicationJSON(@JsonProperty("residualizedFactorReturns") Double[] residualizedFactorReturns) {
+        this.residualizedFactorReturns = residualizedFactorReturns;
+  }
 }

@@ -18,6 +18,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public String additionalData;
+
     public EnrollmentToken withAdditionalData(String additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -29,6 +30,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowPersonalUsage")
     public EnrollmentTokenAllowPersonalUsageEnum allowPersonalUsage;
+
     public EnrollmentToken withAllowPersonalUsage(EnrollmentTokenAllowPersonalUsageEnum allowPersonalUsage) {
         this.allowPersonalUsage = allowPersonalUsage;
         return this;
@@ -40,6 +42,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public EnrollmentToken withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -51,6 +54,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTimestamp")
     public String expirationTimestamp;
+
     public EnrollmentToken withExpirationTimestamp(String expirationTimestamp) {
         this.expirationTimestamp = expirationTimestamp;
         return this;
@@ -62,6 +66,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnrollmentToken withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneTimeOnly")
     public Boolean oneTimeOnly;
+
     public EnrollmentToken withOneTimeOnly(Boolean oneTimeOnly) {
         this.oneTimeOnly = oneTimeOnly;
         return this;
@@ -84,6 +90,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public EnrollmentToken withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -95,6 +102,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qrCode")
     public String qrCode;
+
     public EnrollmentToken withQrCode(String qrCode) {
         this.qrCode = qrCode;
         return this;
@@ -106,6 +114,7 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User user;
+
     public EnrollmentToken withUser(User user) {
         this.user = user;
         return this;
@@ -117,9 +126,11 @@ public class EnrollmentToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public EnrollmentToken withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EnrollmentToken(){}
 }

@@ -20,6 +20,7 @@ public class ResourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public ResourceDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ResourceDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ResourceDetail withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class ResourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ResourceDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class ResourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResourceDetail withId(String id) {
         this.id = id;
         return this;
@@ -54,9 +58,11 @@ public class ResourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResourceDetail withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ResourceDetail(){}
 }

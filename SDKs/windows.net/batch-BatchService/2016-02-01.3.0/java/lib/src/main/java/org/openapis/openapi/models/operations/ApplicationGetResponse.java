@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApplicationGetResponse {
     
     public org.openapis.openapi.models.shared.ApplicationSummary applicationSummary;
+
     public ApplicationGetResponse withApplicationSummary(org.openapis.openapi.models.shared.ApplicationSummary applicationSummary) {
         this.applicationSummary = applicationSummary;
         return this;
@@ -19,6 +21,7 @@ public class ApplicationGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public ApplicationGetResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -26,6 +29,7 @@ public class ApplicationGetResponse {
     
     
     public String contentType;
+
     public ApplicationGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class ApplicationGetResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ApplicationGetResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class ApplicationGetResponse {
     
     
     public Integer statusCode;
+
     public ApplicationGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class ApplicationGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApplicationGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApplicationGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

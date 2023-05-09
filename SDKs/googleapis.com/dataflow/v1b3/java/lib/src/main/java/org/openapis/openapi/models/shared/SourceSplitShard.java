@@ -18,6 +18,7 @@ public class SourceSplitShard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("derivationMode")
     public SourceSplitShardDerivationModeEnum derivationMode;
+
     public SourceSplitShard withDerivationMode(SourceSplitShardDerivationModeEnum derivationMode) {
         this.derivationMode = derivationMode;
         return this;
@@ -29,9 +30,11 @@ public class SourceSplitShard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public SourceSplitShard withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public SourceSplitShard(){}
 }

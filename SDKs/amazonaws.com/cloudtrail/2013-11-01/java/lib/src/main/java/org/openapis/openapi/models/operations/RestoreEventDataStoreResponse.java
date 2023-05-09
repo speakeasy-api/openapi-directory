@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreEventDataStoreResponse {
@@ -12,6 +13,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object cloudTrailAccessNotEnabledException;
+
     public RestoreEventDataStoreResponse withCloudTrailAccessNotEnabledException(Object cloudTrailAccessNotEnabledException) {
         this.cloudTrailAccessNotEnabledException = cloudTrailAccessNotEnabledException;
         return this;
@@ -19,6 +21,7 @@ public class RestoreEventDataStoreResponse {
     
     
     public String contentType;
+
     public RestoreEventDataStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public RestoreEventDataStoreResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object eventDataStoreMaxLimitExceededException;
+
     public RestoreEventDataStoreResponse withEventDataStoreMaxLimitExceededException(Object eventDataStoreMaxLimitExceededException) {
         this.eventDataStoreMaxLimitExceededException = eventDataStoreMaxLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public RestoreEventDataStoreResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public RestoreEventDataStoreResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -69,6 +76,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object invalidEventDataStoreStatusException;
+
     public RestoreEventDataStoreResponse withInvalidEventDataStoreStatusException(Object invalidEventDataStoreStatusException) {
         this.invalidEventDataStoreStatusException = invalidEventDataStoreStatusException;
         return this;
@@ -79,6 +87,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object invalidParameterException;
+
     public RestoreEventDataStoreResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public RestoreEventDataStoreResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -99,6 +109,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public RestoreEventDataStoreResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -109,6 +120,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object operationNotPermittedException;
+
     public RestoreEventDataStoreResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -119,6 +131,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object organizationNotInAllFeaturesModeException;
+
     public RestoreEventDataStoreResponse withOrganizationNotInAllFeaturesModeException(Object organizationNotInAllFeaturesModeException) {
         this.organizationNotInAllFeaturesModeException = organizationNotInAllFeaturesModeException;
         return this;
@@ -129,6 +142,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object organizationsNotInUseException;
+
     public RestoreEventDataStoreResponse withOrganizationsNotInUseException(Object organizationsNotInUseException) {
         this.organizationsNotInUseException = organizationsNotInUseException;
         return this;
@@ -139,6 +153,7 @@ public class RestoreEventDataStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreEventDataStoreResponse restoreEventDataStoreResponse;
+
     public RestoreEventDataStoreResponse withRestoreEventDataStoreResponse(org.openapis.openapi.models.shared.RestoreEventDataStoreResponse restoreEventDataStoreResponse) {
         this.restoreEventDataStoreResponse = restoreEventDataStoreResponse;
         return this;
@@ -146,6 +161,7 @@ public class RestoreEventDataStoreResponse {
     
     
     public Integer statusCode;
+
     public RestoreEventDataStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -153,6 +169,7 @@ public class RestoreEventDataStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreEventDataStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -163,9 +180,14 @@ public class RestoreEventDataStoreResponse {
      */
     
     public Object unsupportedOperationException;
+
     public RestoreEventDataStoreResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public RestoreEventDataStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

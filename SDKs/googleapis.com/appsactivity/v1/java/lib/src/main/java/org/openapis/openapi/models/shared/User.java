@@ -18,6 +18,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDeleted")
     public Boolean isDeleted;
+
     public User withIsDeleted(Boolean isDeleted) {
         this.isDeleted = isDeleted;
         return this;
@@ -29,6 +30,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMe")
     public Boolean isMe;
+
     public User withIsMe(Boolean isMe) {
         this.isMe = isMe;
         return this;
@@ -40,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionId")
     public String permissionId;
+
     public User withPermissionId(String permissionId) {
         this.permissionId = permissionId;
         return this;
@@ -62,9 +66,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photo")
     public Photo photo;
+
     public User withPhoto(Photo photo) {
         this.photo = photo;
         return this;
     }
     
+    public User(){}
 }

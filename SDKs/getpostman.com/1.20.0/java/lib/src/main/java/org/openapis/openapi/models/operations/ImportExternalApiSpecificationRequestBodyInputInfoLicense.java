@@ -12,9 +12,11 @@ public class ImportExternalApiSpecificationRequestBodyInputInfoLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportExternalApiSpecificationRequestBodyInputInfoLicense withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputInfoLicense(){}
 }

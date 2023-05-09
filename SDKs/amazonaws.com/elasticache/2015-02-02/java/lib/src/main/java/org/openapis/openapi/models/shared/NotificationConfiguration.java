@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NotificationConfiguration {
     
     public String topicArn;
+
     public NotificationConfiguration withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
@@ -19,9 +20,11 @@ public class NotificationConfiguration {
     
     
     public String topicStatus;
+
     public NotificationConfiguration withTopicStatus(String topicStatus) {
         this.topicStatus = topicStatus;
         return this;
     }
     
+    public NotificationConfiguration(){}
 }

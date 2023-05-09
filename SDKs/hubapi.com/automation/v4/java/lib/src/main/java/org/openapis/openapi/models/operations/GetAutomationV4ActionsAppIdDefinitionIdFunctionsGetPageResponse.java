@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse {
     
     public byte[] body;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse {
      */
     
     public org.openapis.openapi.models.shared.CollectionResponseActionFunctionIdentifierNoPaging collectionResponseActionFunctionIdentifierNoPaging;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse withCollectionResponseActionFunctionIdentifierNoPaging(org.openapis.openapi.models.shared.CollectionResponseActionFunctionIdentifierNoPaging collectionResponseActionFunctionIdentifierNoPaging) {
         this.collectionResponseActionFunctionIdentifierNoPaging = collectionResponseActionFunctionIdentifierNoPaging;
         return this;
@@ -26,6 +29,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse {
     
     
     public String contentType;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse {
     
     
     public Integer statusCode;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

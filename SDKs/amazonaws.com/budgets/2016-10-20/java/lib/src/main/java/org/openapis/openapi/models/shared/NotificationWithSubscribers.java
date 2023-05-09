@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotificationWithSubscribers {
     @JsonProperty("Notification")
     public Notification notification;
+
     public NotificationWithSubscribers withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -19,9 +20,14 @@ public class NotificationWithSubscribers {
     
     @JsonProperty("Subscribers")
     public Subscriber[] subscribers;
+
     public NotificationWithSubscribers withSubscribers(Subscriber[] subscribers) {
         this.subscribers = subscribers;
         return this;
     }
     
+    public NotificationWithSubscribers(@JsonProperty("Notification") Notification notification, @JsonProperty("Subscribers") Subscriber[] subscribers) {
+        this.notification = notification;
+        this.subscribers = subscribers;
+  }
 }

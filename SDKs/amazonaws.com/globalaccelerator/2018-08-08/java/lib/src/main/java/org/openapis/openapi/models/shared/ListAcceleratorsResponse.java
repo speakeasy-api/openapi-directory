@@ -15,6 +15,7 @@ public class ListAcceleratorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accelerators")
     public Accelerator[] accelerators;
+
     public ListAcceleratorsResponse withAccelerators(Accelerator[] accelerators) {
         this.accelerators = accelerators;
         return this;
@@ -23,9 +24,11 @@ public class ListAcceleratorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAcceleratorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAcceleratorsResponse(){}
 }

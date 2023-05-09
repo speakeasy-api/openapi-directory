@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCiscoSwitchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CiscoSwitchDataSource ciscoSwitchDataSource;
+
     public UpdateCiscoSwitchRequest withCiscoSwitchDataSource(org.openapis.openapi.models.shared.CiscoSwitchDataSource ciscoSwitchDataSource) {
         this.ciscoSwitchDataSource = ciscoSwitchDataSource;
         return this;
@@ -19,9 +21,13 @@ public class UpdateCiscoSwitchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateCiscoSwitchRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateCiscoSwitchRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

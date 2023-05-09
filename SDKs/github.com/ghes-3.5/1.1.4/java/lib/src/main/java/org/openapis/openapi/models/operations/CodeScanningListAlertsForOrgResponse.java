@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodeScanningListAlertsForOrgResponse {
     
     public String contentType;
+
     public CodeScanningListAlertsForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodeScanningListAlertsForOrgResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CodeScanningListAlertsForOrgResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class CodeScanningListAlertsForOrgResponse {
     
     
     public Integer statusCode;
+
     public CodeScanningListAlertsForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CodeScanningListAlertsForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodeScanningListAlertsForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class CodeScanningListAlertsForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public CodeScanningListAlertsForOrgResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class CodeScanningListAlertsForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.CodeScanningOrganizationAlertItems[] codeScanningOrganizationAlertItems;
+
     public CodeScanningListAlertsForOrgResponse withCodeScanningOrganizationAlertItems(org.openapis.openapi.models.shared.CodeScanningOrganizationAlertItems[] codeScanningOrganizationAlertItems) {
         this.codeScanningOrganizationAlertItems = codeScanningOrganizationAlertItems;
         return this;
@@ -60,9 +67,14 @@ public class CodeScanningListAlertsForOrgResponse {
      */
     
     public CodeScanningListAlertsForOrg503ApplicationJSON codeScanningListAlertsForOrg503ApplicationJSONObject;
+
     public CodeScanningListAlertsForOrgResponse withCodeScanningListAlertsForOrg503ApplicationJSONObject(CodeScanningListAlertsForOrg503ApplicationJSON codeScanningListAlertsForOrg503ApplicationJSONObject) {
         this.codeScanningListAlertsForOrg503ApplicationJSONObject = codeScanningListAlertsForOrg503ApplicationJSONObject;
         return this;
     }
     
+    public CodeScanningListAlertsForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

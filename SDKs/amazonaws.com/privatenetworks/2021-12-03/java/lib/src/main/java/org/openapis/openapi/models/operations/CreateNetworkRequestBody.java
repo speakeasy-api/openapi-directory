@@ -15,6 +15,7 @@ public class CreateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateNetworkRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateNetworkRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateNetworkRequestBody {
      */
     @JsonProperty("networkName")
     public String networkName;
+
     public CreateNetworkRequestBody withNetworkName(String networkName) {
         this.networkName = networkName;
         return this;
@@ -47,9 +50,13 @@ public class CreateNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateNetworkRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateNetworkRequestBody(@JsonProperty("networkName") String networkName) {
+        this.networkName = networkName;
+  }
 }

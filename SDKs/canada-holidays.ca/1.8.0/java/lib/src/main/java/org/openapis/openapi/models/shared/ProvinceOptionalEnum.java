@@ -10,12 +10,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ProvinceOptionalEnum - Whether this province optionally observes a given holiday.
  */
 public enum ProvinceOptionalEnum {
-    ONE("1");
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private ProvinceOptionalEnum(String value) {
+    private ProvinceOptionalEnum(Long value) {
         this.value = value;
     }
 }

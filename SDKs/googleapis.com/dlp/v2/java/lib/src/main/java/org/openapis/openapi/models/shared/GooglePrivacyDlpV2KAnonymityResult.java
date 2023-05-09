@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2KAnonymityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equivalenceClassHistogramBuckets")
     public GooglePrivacyDlpV2KAnonymityHistogramBucket[] equivalenceClassHistogramBuckets;
+
     public GooglePrivacyDlpV2KAnonymityResult withEquivalenceClassHistogramBuckets(GooglePrivacyDlpV2KAnonymityHistogramBucket[] equivalenceClassHistogramBuckets) {
         this.equivalenceClassHistogramBuckets = equivalenceClassHistogramBuckets;
         return this;
     }
     
+    public GooglePrivacyDlpV2KAnonymityResult(){}
 }

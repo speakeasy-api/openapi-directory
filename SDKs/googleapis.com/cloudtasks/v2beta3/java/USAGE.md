@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudtasksProjectsLocationsListSecurity;
 import org.openapis.openapi.models.operations.CloudtasksProjectsLocationsListRequest;
 import org.openapis.openapi.models.operations.CloudtasksProjectsLocationsListResponse;
+import org.openapis.openapi.models.operations.CloudtasksProjectsLocationsListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -16,34 +15,35 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CloudtasksProjectsLocationsListRequest req = new CloudtasksProjectsLocationsListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                name = "illum";
+            CloudtasksProjectsLocationsListRequest req = new CloudtasksProjectsLocationsListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
                 oauthToken = "vel";
-                pageSize = 623564;
+                pageSize = 623564L;
                 pageToken = "deserunt";
                 prettyPrint = false;
                 quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-            }}            
+            }};            
 
-            CloudtasksProjectsLocationsListResponse res = sdk.projects.cloudtasksProjectsLocationsList(req, new CloudtasksProjectsLocationsListSecurity() {{
+            CloudtasksProjectsLocationsListResponse res = sdk.projects.cloudtasksProjectsLocationsList(req, new CloudtasksProjectsLocationsListSecurity("debitis", "ipsa") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.listLocationsResponse.isPresent()) {
+            if (res.listLocationsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

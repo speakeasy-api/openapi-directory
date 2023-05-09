@@ -12,6 +12,7 @@ public class StartTargetedSentimentDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartTargetedSentimentDetectionJobRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartTargetedSentimentDetectionJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartTargetedSentimentDetectionJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -29,6 +31,7 @@ public class StartTargetedSentimentDetectionJobRequest {
      */
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartTargetedSentimentDetectionJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -37,6 +40,7 @@ public class StartTargetedSentimentDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartTargetedSentimentDetectionJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -44,6 +48,7 @@ public class StartTargetedSentimentDetectionJobRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartTargetedSentimentDetectionJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,6 +56,7 @@ public class StartTargetedSentimentDetectionJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartTargetedSentimentDetectionJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -59,6 +65,7 @@ public class StartTargetedSentimentDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartTargetedSentimentDetectionJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -67,6 +74,7 @@ public class StartTargetedSentimentDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public StartTargetedSentimentDetectionJobRequest withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -78,9 +86,16 @@ public class StartTargetedSentimentDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public StartTargetedSentimentDetectionJobRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public StartTargetedSentimentDetectionJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

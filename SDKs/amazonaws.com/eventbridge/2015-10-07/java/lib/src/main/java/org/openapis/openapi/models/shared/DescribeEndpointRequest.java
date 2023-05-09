@@ -12,6 +12,7 @@ public class DescribeEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public DescribeEndpointRequest withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -19,9 +20,13 @@ public class DescribeEndpointRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DescribeEndpointRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeEndpointRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -18,9 +18,11 @@ public class DestinyComponentsInventoryDestinyCurrenciesComponent {
      */
     
     public java.util.Map<String, Integer> itemQuantities;
+
     public DestinyComponentsInventoryDestinyCurrenciesComponent withItemQuantities(java.util.Map<String, Integer> itemQuantities) {
         this.itemQuantities = itemQuantities;
         return this;
     }
     
+    public DestinyComponentsInventoryDestinyCurrenciesComponent(){}
 }

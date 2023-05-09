@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelFineTuneRequest {
@@ -13,9 +14,13 @@ public class CancelFineTuneRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fine_tune_id")
     public String fineTuneId;
+
     public CancelFineTuneRequest withFineTuneId(String fineTuneId) {
         this.fineTuneId = fineTuneId;
         return this;
     }
     
+    public CancelFineTuneRequest(@JsonProperty("fine_tune_id") String fineTuneId) {
+        this.fineTuneId = fineTuneId;
+  }
 }

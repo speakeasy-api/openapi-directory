@@ -481,4 +481,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateUploadRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateVPCEConfigurationResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateVPCEConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

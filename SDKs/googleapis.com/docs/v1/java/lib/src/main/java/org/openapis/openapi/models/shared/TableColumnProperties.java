@@ -18,6 +18,7 @@ public class TableColumnProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Dimension width;
+
     public TableColumnProperties withWidth(Dimension width) {
         this.width = width;
         return this;
@@ -29,9 +30,11 @@ public class TableColumnProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widthType")
     public TableColumnPropertiesWidthTypeEnum widthType;
+
     public TableColumnProperties withWidthType(TableColumnPropertiesWidthTypeEnum widthType) {
         this.widthType = widthType;
         return this;
     }
     
+    public TableColumnProperties(){}
 }

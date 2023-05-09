@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReEncryptRequest {
     @JsonProperty("CiphertextBlob")
     public String ciphertextBlob;
+
     public ReEncryptRequest withCiphertextBlob(String ciphertextBlob) {
         this.ciphertextBlob = ciphertextBlob;
         return this;
@@ -19,6 +20,7 @@ public class ReEncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationEncryptionAlgorithm")
     public EncryptionAlgorithmSpecEnum destinationEncryptionAlgorithm;
+
     public ReEncryptRequest withDestinationEncryptionAlgorithm(EncryptionAlgorithmSpecEnum destinationEncryptionAlgorithm) {
         this.destinationEncryptionAlgorithm = destinationEncryptionAlgorithm;
         return this;
@@ -27,6 +29,7 @@ public class ReEncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationEncryptionContext")
     public java.util.Map<String, String> destinationEncryptionContext;
+
     public ReEncryptRequest withDestinationEncryptionContext(java.util.Map<String, String> destinationEncryptionContext) {
         this.destinationEncryptionContext = destinationEncryptionContext;
         return this;
@@ -34,6 +37,7 @@ public class ReEncryptRequest {
     
     @JsonProperty("DestinationKeyId")
     public String destinationKeyId;
+
     public ReEncryptRequest withDestinationKeyId(String destinationKeyId) {
         this.destinationKeyId = destinationKeyId;
         return this;
@@ -42,6 +46,7 @@ public class ReEncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public ReEncryptRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -50,6 +55,7 @@ public class ReEncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceEncryptionAlgorithm")
     public EncryptionAlgorithmSpecEnum sourceEncryptionAlgorithm;
+
     public ReEncryptRequest withSourceEncryptionAlgorithm(EncryptionAlgorithmSpecEnum sourceEncryptionAlgorithm) {
         this.sourceEncryptionAlgorithm = sourceEncryptionAlgorithm;
         return this;
@@ -58,6 +64,7 @@ public class ReEncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceEncryptionContext")
     public java.util.Map<String, String> sourceEncryptionContext;
+
     public ReEncryptRequest withSourceEncryptionContext(java.util.Map<String, String> sourceEncryptionContext) {
         this.sourceEncryptionContext = sourceEncryptionContext;
         return this;
@@ -66,9 +73,14 @@ public class ReEncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceKeyId")
     public String sourceKeyId;
+
     public ReEncryptRequest withSourceKeyId(String sourceKeyId) {
         this.sourceKeyId = sourceKeyId;
         return this;
     }
     
+    public ReEncryptRequest(@JsonProperty("CiphertextBlob") String ciphertextBlob, @JsonProperty("DestinationKeyId") String destinationKeyId) {
+        this.ciphertextBlob = ciphertextBlob;
+        this.destinationKeyId = destinationKeyId;
+  }
 }

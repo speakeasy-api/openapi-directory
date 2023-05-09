@@ -18,9 +18,11 @@ public class GcrDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUri")
     public String outputUri;
+
     public GcrDestination withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
     }
     
+    public GcrDestination(){}
 }

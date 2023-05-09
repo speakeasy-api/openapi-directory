@@ -15,6 +15,7 @@ public class WtrblRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public WtrblRequestBodyCertificateParameters certificateParameters;
+
     public WtrblRequestBody withCertificateParameters(WtrblRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class WtrblRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public WtrblRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class WtrblRequestBody {
      */
     @JsonProperty("format")
     public WtrblRequestBodyFormatEnum format;
+
     public WtrblRequestBody withFormat(WtrblRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class WtrblRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public WtrblRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public WtrblRequestBody(@JsonProperty("format") WtrblRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

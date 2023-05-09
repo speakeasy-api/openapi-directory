@@ -15,6 +15,7 @@ public class WorkflowExecutionCancelRequestedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public WorkflowExecutionCancelRequestedCauseEnum cause;
+
     public WorkflowExecutionCancelRequestedEventAttributes withCause(WorkflowExecutionCancelRequestedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -23,6 +24,7 @@ public class WorkflowExecutionCancelRequestedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalInitiatedEventId")
     public Long externalInitiatedEventId;
+
     public WorkflowExecutionCancelRequestedEventAttributes withExternalInitiatedEventId(Long externalInitiatedEventId) {
         this.externalInitiatedEventId = externalInitiatedEventId;
         return this;
@@ -31,9 +33,11 @@ public class WorkflowExecutionCancelRequestedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalWorkflowExecution")
     public WorkflowExecution externalWorkflowExecution;
+
     public WorkflowExecutionCancelRequestedEventAttributes withExternalWorkflowExecution(WorkflowExecution externalWorkflowExecution) {
         this.externalWorkflowExecution = externalWorkflowExecution;
         return this;
     }
     
+    public WorkflowExecutionCancelRequestedEventAttributes(){}
 }

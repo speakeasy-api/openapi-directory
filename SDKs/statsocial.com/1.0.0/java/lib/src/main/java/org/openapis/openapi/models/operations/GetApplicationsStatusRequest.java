@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApplicationsStatusRequest {
@@ -12,9 +13,13 @@ public class GetApplicationsStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetApplicationsStatusRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GetApplicationsStatusRequest(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

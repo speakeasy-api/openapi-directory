@@ -15,9 +15,11 @@ public class CacheBehavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behavior")
     public BehaviorEnumEnum behavior;
+
     public CacheBehavior withBehavior(BehaviorEnumEnum behavior) {
         this.behavior = behavior;
         return this;
     }
     
+    public CacheBehavior(){}
 }

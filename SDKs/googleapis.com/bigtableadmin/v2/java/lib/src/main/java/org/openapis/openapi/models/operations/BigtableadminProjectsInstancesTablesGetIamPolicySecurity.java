@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesTablesGetIamPolicySecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption1 option1;
+
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurity withOption1(BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesTablesGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption2 option2;
+
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurity withOption2(BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesTablesGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption3 option3;
+
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurity withOption3(BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesTablesGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption4 option4;
+
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurity withOption4(BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminProjectsInstancesTablesGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption5 option5;
+
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurity withOption5(BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class BigtableadminProjectsInstancesTablesGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption6 option6;
+
     public BigtableadminProjectsInstancesTablesGetIamPolicySecurity withOption6(BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public BigtableadminProjectsInstancesTablesGetIamPolicySecurity(){}
 }

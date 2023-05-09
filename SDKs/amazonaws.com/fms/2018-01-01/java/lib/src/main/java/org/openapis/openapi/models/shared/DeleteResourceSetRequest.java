@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteResourceSetRequest {
     @JsonProperty("Identifier")
     public String identifier;
+
     public DeleteResourceSetRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public DeleteResourceSetRequest(@JsonProperty("Identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

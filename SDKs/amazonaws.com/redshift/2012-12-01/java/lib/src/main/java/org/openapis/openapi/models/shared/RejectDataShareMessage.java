@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RejectDataShareMessage {
     
     public String dataShareArn;
+
     public RejectDataShareMessage withDataShareArn(String dataShareArn) {
         this.dataShareArn = dataShareArn;
         return this;
     }
     
+    public RejectDataShareMessage(@JsonProperty("DataShareArn") String dataShareArn) {
+        this.dataShareArn = dataShareArn;
+  }
 }

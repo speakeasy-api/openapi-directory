@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions {
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -22,6 +23,7 @@ public class CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -33,9 +35,13 @@ public class CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions(@JsonProperty("investment_product_id") String investmentProductId) {
+        this.investmentProductId = investmentProductId;
+  }
 }

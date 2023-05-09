@@ -18,6 +18,7 @@ public class ListAccountLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountLabels")
     public AccountLabel[] accountLabels;
+
     public ListAccountLabelsResponse withAccountLabels(AccountLabel[] accountLabels) {
         this.accountLabels = accountLabels;
         return this;
@@ -29,9 +30,11 @@ public class ListAccountLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAccountLabelsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAccountLabelsResponse(){}
 }

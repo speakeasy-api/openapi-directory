@@ -18,6 +18,7 @@ public class Categories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalCategories")
     public Category[] additionalCategories;
+
     public Categories withAdditionalCategories(Category[] additionalCategories) {
         this.additionalCategories = additionalCategories;
         return this;
@@ -29,9 +30,11 @@ public class Categories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCategory")
     public Category primaryCategory;
+
     public Categories withPrimaryCategory(Category primaryCategory) {
         this.primaryCategory = primaryCategory;
         return this;
     }
     
+    public Categories(){}
 }

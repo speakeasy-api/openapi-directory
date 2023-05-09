@@ -15,6 +15,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcode")
     public String barcode;
+
     public ProductEditFields withBarcode(String barcode) {
         this.barcode = barcode;
         return this;
@@ -23,6 +24,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public CategoryFields[] categories;
+
     public ProductEditFields withCategories(CategoryFields[] categories) {
         this.categories = categories;
         return this;
@@ -34,6 +36,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProductEditFields withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diameter")
     public Float diameter;
+
     public ProductEditFields withDiameter(Float diameter) {
         this.diameter = diameter;
         return this;
@@ -56,6 +60,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featured")
     public Boolean featured;
+
     public ProductEditFields withFeatured(Boolean featured) {
         this.featured = featured;
         return this;
@@ -67,6 +72,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("google_product_category")
     public String googleProductCategory;
+
     public ProductEditFields withGoogleProductCategory(String googleProductCategory) {
         this.googleProductCategory = googleProductCategory;
         return this;
@@ -78,6 +84,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Float height;
+
     public ProductEditFields withHeight(Float height) {
         this.height = height;
         return this;
@@ -89,6 +96,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Float length;
+
     public ProductEditFields withLength(Float length) {
         this.length = length;
         return this;
@@ -100,6 +108,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_description")
     public String metaDescription;
+
     public ProductEditFields withMetaDescription(String metaDescription) {
         this.metaDescription = metaDescription;
         return this;
@@ -110,6 +119,7 @@ public class ProductEditFields {
      */
     @JsonProperty("name")
     public String name;
+
     public ProductEditFields withName(String name) {
         this.name = name;
         return this;
@@ -121,6 +131,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_format")
     public ProductEditFieldsPackageFormatEnum packageFormat;
+
     public ProductEditFields withPackageFormat(ProductEditFieldsPackageFormatEnum packageFormat) {
         this.packageFormat = packageFormat;
         return this;
@@ -132,6 +143,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_title")
     public String pageTitle;
+
     public ProductEditFields withPageTitle(String pageTitle) {
         this.pageTitle = pageTitle;
         return this;
@@ -143,6 +155,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink")
     public String permalink;
+
     public ProductEditFields withPermalink(String permalink) {
         this.permalink = permalink;
         return this;
@@ -153,6 +166,7 @@ public class ProductEditFields {
      */
     @JsonProperty("price")
     public Float price;
+
     public ProductEditFields withPrice(Float price) {
         this.price = price;
         return this;
@@ -164,6 +178,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_required")
     public Boolean shippingRequired;
+
     public ProductEditFields withShippingRequired(Boolean shippingRequired) {
         this.shippingRequired = shippingRequired;
         return this;
@@ -175,6 +190,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public ProductEditFields withSku(String sku) {
         this.sku = sku;
         return this;
@@ -186,6 +202,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProductEditFieldsStatusEnum status;
+
     public ProductEditFields withStatus(ProductEditFieldsStatusEnum status) {
         this.status = status;
         return this;
@@ -197,6 +214,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock")
     public Integer stock;
+
     public ProductEditFields withStock(Integer stock) {
         this.stock = stock;
         return this;
@@ -208,6 +226,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock_unlimited")
     public Boolean stockUnlimited;
+
     public ProductEditFields withStockUnlimited(Boolean stockUnlimited) {
         this.stockUnlimited = stockUnlimited;
         return this;
@@ -219,6 +238,7 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Float weight;
+
     public ProductEditFields withWeight(Float weight) {
         this.weight = weight;
         return this;
@@ -230,9 +250,14 @@ public class ProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public ProductEditFields withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public ProductEditFields(@JsonProperty("name") String name, @JsonProperty("price") Float price) {
+        this.name = name;
+        this.price = price;
+  }
 }

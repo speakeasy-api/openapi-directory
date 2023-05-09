@@ -15,9 +15,11 @@ public class PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public Boolean delete;
+
     public PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest(){}
 }

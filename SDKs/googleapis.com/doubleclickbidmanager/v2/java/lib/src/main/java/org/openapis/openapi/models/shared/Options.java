@@ -18,6 +18,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeOnlyTargetedUserLists")
     public Boolean includeOnlyTargetedUserLists;
+
     public Options withIncludeOnlyTargetedUserLists(Boolean includeOnlyTargetedUserLists) {
         this.includeOnlyTargetedUserLists = includeOnlyTargetedUserLists;
         return this;
@@ -29,9 +30,11 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathQueryOptions")
     public PathQueryOptions pathQueryOptions;
+
     public Options withPathQueryOptions(PathQueryOptions pathQueryOptions) {
         this.pathQueryOptions = pathQueryOptions;
         return this;
     }
     
+    public Options(){}
 }

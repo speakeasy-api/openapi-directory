@@ -15,6 +15,7 @@ public class ErrorMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastType")
     public String forecastType;
+
     public ErrorMetric withForecastType(String forecastType) {
         this.forecastType = forecastType;
         return this;
@@ -23,6 +24,7 @@ public class ErrorMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MAPE")
     public Double mape;
+
     public ErrorMetric withMape(Double mape) {
         this.mape = mape;
         return this;
@@ -31,6 +33,7 @@ public class ErrorMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MASE")
     public Double mase;
+
     public ErrorMetric withMase(Double mase) {
         this.mase = mase;
         return this;
@@ -39,6 +42,7 @@ public class ErrorMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RMSE")
     public Double rmse;
+
     public ErrorMetric withRmse(Double rmse) {
         this.rmse = rmse;
         return this;
@@ -47,9 +51,11 @@ public class ErrorMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WAPE")
     public Double wape;
+
     public ErrorMetric withWape(Double wape) {
         this.wape = wape;
         return this;
     }
     
+    public ErrorMetric(){}
 }

@@ -15,9 +15,11 @@ public class ResultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result_file_url")
     public String resultFileUrl;
+
     public ResultResponse withResultFileUrl(String resultFileUrl) {
         this.resultFileUrl = resultFileUrl;
         return this;
     }
     
+    public ResultResponse(){}
 }

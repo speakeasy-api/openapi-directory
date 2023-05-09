@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLimitsOutput {
     @JsonProperty("OnDemandStreamCount")
     public Long onDemandStreamCount;
+
     public DescribeLimitsOutput withOnDemandStreamCount(Long onDemandStreamCount) {
         this.onDemandStreamCount = onDemandStreamCount;
         return this;
@@ -19,6 +20,7 @@ public class DescribeLimitsOutput {
     
     @JsonProperty("OnDemandStreamCountLimit")
     public Long onDemandStreamCountLimit;
+
     public DescribeLimitsOutput withOnDemandStreamCountLimit(Long onDemandStreamCountLimit) {
         this.onDemandStreamCountLimit = onDemandStreamCountLimit;
         return this;
@@ -26,6 +28,7 @@ public class DescribeLimitsOutput {
     
     @JsonProperty("OpenShardCount")
     public Long openShardCount;
+
     public DescribeLimitsOutput withOpenShardCount(Long openShardCount) {
         this.openShardCount = openShardCount;
         return this;
@@ -33,9 +36,16 @@ public class DescribeLimitsOutput {
     
     @JsonProperty("ShardLimit")
     public Long shardLimit;
+
     public DescribeLimitsOutput withShardLimit(Long shardLimit) {
         this.shardLimit = shardLimit;
         return this;
     }
     
+    public DescribeLimitsOutput(@JsonProperty("OnDemandStreamCount") Long onDemandStreamCount, @JsonProperty("OnDemandStreamCountLimit") Long onDemandStreamCountLimit, @JsonProperty("OpenShardCount") Long openShardCount, @JsonProperty("ShardLimit") Long shardLimit) {
+        this.onDemandStreamCount = onDemandStreamCount;
+        this.onDemandStreamCountLimit = onDemandStreamCountLimit;
+        this.openShardCount = openShardCount;
+        this.shardLimit = shardLimit;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetGatewayInput {
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public GetGatewayInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public GetGatewayInput(@JsonProperty("GatewayArn") String gatewayArn) {
+        this.gatewayArn = gatewayArn;
+  }
 }

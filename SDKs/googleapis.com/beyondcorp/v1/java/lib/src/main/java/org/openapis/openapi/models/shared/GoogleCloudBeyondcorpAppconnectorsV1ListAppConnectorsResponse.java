@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appConnectors")
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector[] appConnectors;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse withAppConnectors(GoogleCloudBeyondcorpAppconnectorsV1AppConnector[] appConnectors) {
         this.appConnectors = appConnectors;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse(){}
 }

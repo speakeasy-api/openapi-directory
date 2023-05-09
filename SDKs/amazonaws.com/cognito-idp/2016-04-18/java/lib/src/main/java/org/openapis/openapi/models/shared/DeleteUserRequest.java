@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteUserRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public DeleteUserRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
+    public DeleteUserRequest(@JsonProperty("AccessToken") String accessToken) {
+        this.accessToken = accessToken;
+  }
 }

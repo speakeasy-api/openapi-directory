@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeInterconnectLoaRequest {
     @JsonProperty("interconnectId")
     public String interconnectId;
+
     public DescribeInterconnectLoaRequest withInterconnectId(String interconnectId) {
         this.interconnectId = interconnectId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInterconnectLoaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loaContentType")
     public LoaContentTypeEnum loaContentType;
+
     public DescribeInterconnectLoaRequest withLoaContentType(LoaContentTypeEnum loaContentType) {
         this.loaContentType = loaContentType;
         return this;
@@ -27,9 +29,13 @@ public class DescribeInterconnectLoaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerName")
     public String providerName;
+
     public DescribeInterconnectLoaRequest withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
     }
     
+    public DescribeInterconnectLoaRequest(@JsonProperty("interconnectId") String interconnectId) {
+        this.interconnectId = interconnectId;
+  }
 }

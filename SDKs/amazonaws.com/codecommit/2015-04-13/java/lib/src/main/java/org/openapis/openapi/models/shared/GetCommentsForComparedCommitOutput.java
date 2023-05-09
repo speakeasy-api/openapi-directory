@@ -15,6 +15,7 @@ public class GetCommentsForComparedCommitOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentsForComparedCommitData")
     public CommentsForComparedCommit[] commentsForComparedCommitData;
+
     public GetCommentsForComparedCommitOutput withCommentsForComparedCommitData(CommentsForComparedCommit[] commentsForComparedCommitData) {
         this.commentsForComparedCommitData = commentsForComparedCommitData;
         return this;
@@ -23,9 +24,11 @@ public class GetCommentsForComparedCommitOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetCommentsForComparedCommitOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetCommentsForComparedCommitOutput(){}
 }

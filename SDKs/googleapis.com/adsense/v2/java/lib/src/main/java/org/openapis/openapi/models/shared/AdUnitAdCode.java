@@ -18,9 +18,11 @@ public class AdUnitAdCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adCode")
     public String adCode;
+
     public AdUnitAdCode withAdCode(String adCode) {
         this.adCode = adCode;
         return this;
     }
     
+    public AdUnitAdCode(){}
 }

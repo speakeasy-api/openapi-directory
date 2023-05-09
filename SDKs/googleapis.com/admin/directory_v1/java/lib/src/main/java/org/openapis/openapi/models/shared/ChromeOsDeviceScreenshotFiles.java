@@ -22,6 +22,7 @@ public class ChromeOsDeviceScreenshotFiles {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ChromeOsDeviceScreenshotFiles withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -33,6 +34,7 @@ public class ChromeOsDeviceScreenshotFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUrl")
     public String downloadUrl;
+
     public ChromeOsDeviceScreenshotFiles withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -44,6 +46,7 @@ public class ChromeOsDeviceScreenshotFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChromeOsDeviceScreenshotFiles withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +58,11 @@ public class ChromeOsDeviceScreenshotFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ChromeOsDeviceScreenshotFiles withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ChromeOsDeviceScreenshotFiles(){}
 }

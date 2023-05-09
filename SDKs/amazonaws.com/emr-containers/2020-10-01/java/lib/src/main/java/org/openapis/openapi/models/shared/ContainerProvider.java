@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContainerProvider {
     @JsonProperty("id")
     public String id;
+
     public ContainerProvider withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class ContainerProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public ContainerInfo info;
+
     public ContainerProvider withInfo(ContainerInfo info) {
         this.info = info;
         return this;
@@ -29,9 +31,14 @@ public class ContainerProvider {
     
     @JsonProperty("type")
     public ContainerProviderTypeEnum type;
+
     public ContainerProvider withType(ContainerProviderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ContainerProvider(@JsonProperty("id") String id, @JsonProperty("type") ContainerProviderTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

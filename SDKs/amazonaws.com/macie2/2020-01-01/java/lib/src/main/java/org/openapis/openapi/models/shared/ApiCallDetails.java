@@ -20,6 +20,7 @@ public class ApiCallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public String api;
+
     public ApiCallDetails withApi(String api) {
         this.api = api;
         return this;
@@ -28,6 +29,7 @@ public class ApiCallDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiServiceName")
     public String apiServiceName;
+
     public ApiCallDetails withApiServiceName(String apiServiceName) {
         this.apiServiceName = apiServiceName;
         return this;
@@ -38,6 +40,7 @@ public class ApiCallDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstSeen")
     public OffsetDateTime firstSeen;
+
     public ApiCallDetails withFirstSeen(OffsetDateTime firstSeen) {
         this.firstSeen = firstSeen;
         return this;
@@ -48,9 +51,11 @@ public class ApiCallDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSeen")
     public OffsetDateTime lastSeen;
+
     public ApiCallDetails withLastSeen(OffsetDateTime lastSeen) {
         this.lastSeen = lastSeen;
         return this;
     }
     
+    public ApiCallDetails(){}
 }

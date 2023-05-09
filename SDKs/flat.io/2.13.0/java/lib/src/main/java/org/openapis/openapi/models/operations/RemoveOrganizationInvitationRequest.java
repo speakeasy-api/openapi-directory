@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveOrganizationInvitationRequest {
@@ -12,9 +13,13 @@ public class RemoveOrganizationInvitationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation")
     public String invitation;
+
     public RemoveOrganizationInvitationRequest withInvitation(String invitation) {
         this.invitation = invitation;
         return this;
     }
     
+    public RemoveOrganizationInvitationRequest(@JsonProperty("invitation") String invitation) {
+        this.invitation = invitation;
+  }
 }

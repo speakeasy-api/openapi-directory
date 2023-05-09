@@ -14,6 +14,7 @@ public class UsersCreatePublicSshKeyForAuthenticatedRequestBody {
      */
     @JsonProperty("key")
     public String key;
+
     public UsersCreatePublicSshKeyForAuthenticatedRequestBody withKey(String key) {
         this.key = key;
         return this;
@@ -25,9 +26,13 @@ public class UsersCreatePublicSshKeyForAuthenticatedRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UsersCreatePublicSshKeyForAuthenticatedRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UsersCreatePublicSshKeyForAuthenticatedRequestBody(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

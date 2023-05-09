@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrlDetailResponse {
     @JsonProperty("crl")
     public CrlDetail crl;
+
     public CrlDetailResponse withCrl(CrlDetail crl) {
         this.crl = crl;
         return this;
     }
     
+    public CrlDetailResponse(@JsonProperty("crl") CrlDetail crl) {
+        this.crl = crl;
+  }
 }

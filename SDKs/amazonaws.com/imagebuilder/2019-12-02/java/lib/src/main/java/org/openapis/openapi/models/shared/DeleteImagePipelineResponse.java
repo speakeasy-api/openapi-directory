@@ -15,6 +15,7 @@ public class DeleteImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePipelineArn")
     public String imagePipelineArn;
+
     public DeleteImagePipelineResponse withImagePipelineArn(String imagePipelineArn) {
         this.imagePipelineArn = imagePipelineArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DeleteImagePipelineResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public DeleteImagePipelineResponse(){}
 }

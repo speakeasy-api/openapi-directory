@@ -15,6 +15,7 @@ public class ApplicationSummary {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public ApplicationSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -25,6 +26,7 @@ public class ApplicationSummary {
      */
     @JsonProperty("id")
     public String id;
+
     public ApplicationSummary withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,15 @@ public class ApplicationSummary {
     
     @JsonProperty("versions")
     public String[] versions;
+
     public ApplicationSummary withVersions(String[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ApplicationSummary(@JsonProperty("displayName") String displayName, @JsonProperty("id") String id, @JsonProperty("versions") String[] versions) {
+        this.displayName = displayName;
+        this.id = id;
+        this.versions = versions;
+  }
 }

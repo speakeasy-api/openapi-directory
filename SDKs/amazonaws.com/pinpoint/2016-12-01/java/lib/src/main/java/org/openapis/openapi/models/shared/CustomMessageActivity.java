@@ -15,6 +15,7 @@ public class CustomMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryUri")
     public String deliveryUri;
+
     public CustomMessageActivity withDeliveryUri(String deliveryUri) {
         this.deliveryUri = deliveryUri;
         return this;
@@ -23,6 +24,7 @@ public class CustomMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointTypes")
     public EndpointTypesElementEnum[] endpointTypes;
+
     public CustomMessageActivity withEndpointTypes(EndpointTypesElementEnum[] endpointTypes) {
         this.endpointTypes = endpointTypes;
         return this;
@@ -31,6 +33,7 @@ public class CustomMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfig")
     public JourneyCustomMessage messageConfig;
+
     public CustomMessageActivity withMessageConfig(JourneyCustomMessage messageConfig) {
         this.messageConfig = messageConfig;
         return this;
@@ -39,6 +42,7 @@ public class CustomMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public CustomMessageActivity withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
@@ -47,6 +51,7 @@ public class CustomMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateName")
     public String templateName;
+
     public CustomMessageActivity withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -55,9 +60,11 @@ public class CustomMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateVersion")
     public String templateVersion;
+
     public CustomMessageActivity withTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     
+    public CustomMessageActivity(){}
 }

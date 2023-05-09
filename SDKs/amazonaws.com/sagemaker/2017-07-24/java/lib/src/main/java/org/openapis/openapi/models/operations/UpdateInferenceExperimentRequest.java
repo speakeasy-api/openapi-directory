@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInferenceExperimentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateInferenceExperimentRequest updateInferenceExperimentRequest;
+
     public UpdateInferenceExperimentRequest withUpdateInferenceExperimentRequest(org.openapis.openapi.models.shared.UpdateInferenceExperimentRequest updateInferenceExperimentRequest) {
         this.updateInferenceExperimentRequest = updateInferenceExperimentRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdateInferenceExperimentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateInferenceExperimentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateInferenceExperimentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateInferenceExperimentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateInferenceExperimentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateInferenceExperimentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateInferenceExperimentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateInferenceExperimentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateInferenceExperimentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateInferenceExperimentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateInferenceExperimentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateInferenceExperimentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateInferenceExperimentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateInferenceExperimentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class UpdateInferenceExperimentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public UpdateInferenceExperimentXAmzTargetEnum xAmzTarget;
+
     public UpdateInferenceExperimentRequest withXAmzTarget(UpdateInferenceExperimentXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public UpdateInferenceExperimentRequest(@JsonProperty("UpdateInferenceExperimentRequest") org.openapis.openapi.models.shared.UpdateInferenceExperimentRequest updateInferenceExperimentRequest, @JsonProperty("X-Amz-Target") UpdateInferenceExperimentXAmzTargetEnum xAmzTarget) {
+        this.updateInferenceExperimentRequest = updateInferenceExperimentRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

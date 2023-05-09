@@ -60,10 +60,8 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsDeleteResponse res = new org.openapis.openapi.models.operations.CalendarEventsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsDeleteResponse res = new org.openapis.openapi.models.operations.CalendarEventsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsGetResponse res = new org.openapis.openapi.models.operations.CalendarEventsGetResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsGetResponse res = new org.openapis.openapi.models.operations.CalendarEventsGetResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsImportResponse res = new org.openapis.openapi.models.operations.CalendarEventsImportResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsImportResponse res = new org.openapis.openapi.models.operations.CalendarEventsImportResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsInsertResponse res = new org.openapis.openapi.models.operations.CalendarEventsInsertResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsInsertResponse res = new org.openapis.openapi.models.operations.CalendarEventsInsertResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsInstancesResponse res = new org.openapis.openapi.models.operations.CalendarEventsInstancesResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsInstancesResponse res = new org.openapis.openapi.models.operations.CalendarEventsInstancesResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +278,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsListResponse res = new org.openapis.openapi.models.operations.CalendarEventsListResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsListResponse res = new org.openapis.openapi.models.operations.CalendarEventsListResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsMoveResponse res = new org.openapis.openapi.models.operations.CalendarEventsMoveResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsMoveResponse res = new org.openapis.openapi.models.operations.CalendarEventsMoveResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +368,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsPatchResponse res = new org.openapis.openapi.models.operations.CalendarEventsPatchResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsPatchResponse res = new org.openapis.openapi.models.operations.CalendarEventsPatchResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,11 +412,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsQuickAddResponse res = new org.openapis.openapi.models.operations.CalendarEventsQuickAddResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsQuickAddResponse res = new org.openapis.openapi.models.operations.CalendarEventsQuickAddResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,11 +458,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsUpdateResponse res = new org.openapis.openapi.models.operations.CalendarEventsUpdateResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsUpdateResponse res = new org.openapis.openapi.models.operations.CalendarEventsUpdateResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -524,11 +504,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarEventsWatchResponse res = new org.openapis.openapi.models.operations.CalendarEventsWatchResponse() {{
+        org.openapis.openapi.models.operations.CalendarEventsWatchResponse res = new org.openapis.openapi.models.operations.CalendarEventsWatchResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

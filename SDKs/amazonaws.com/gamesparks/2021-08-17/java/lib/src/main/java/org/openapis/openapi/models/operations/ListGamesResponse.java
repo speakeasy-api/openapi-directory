@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGamesResponse {
@@ -12,6 +13,7 @@ public class ListGamesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListGamesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListGamesResponse {
     
     
     public String contentType;
+
     public ListGamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListGamesResponse {
      */
     
     public Object internalServerException;
+
     public ListGamesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListGamesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGamesResult listGamesResult;
+
     public ListGamesResponse withListGamesResult(org.openapis.openapi.models.shared.ListGamesResult listGamesResult) {
         this.listGamesResult = listGamesResult;
         return this;
@@ -46,6 +51,7 @@ public class ListGamesResponse {
     
     
     public Integer statusCode;
+
     public ListGamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListGamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListGamesResponse {
      */
     
     public Object throttlingException;
+
     public ListGamesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListGamesResponse {
      */
     
     public Object validationException;
+
     public ListGamesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListGamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

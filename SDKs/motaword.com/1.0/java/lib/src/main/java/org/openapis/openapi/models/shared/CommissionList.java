@@ -15,6 +15,7 @@ public class CommissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commissions")
     public Commission[] commissions;
+
     public CommissionList withCommissions(Commission[] commissions) {
         this.commissions = commissions;
         return this;
@@ -23,9 +24,11 @@ public class CommissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public CommissionList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public CommissionList(){}
 }

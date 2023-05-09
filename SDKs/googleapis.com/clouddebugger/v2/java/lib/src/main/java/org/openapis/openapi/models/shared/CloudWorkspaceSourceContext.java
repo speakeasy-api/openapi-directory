@@ -18,6 +18,7 @@ public class CloudWorkspaceSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotId")
     public String snapshotId;
+
     public CloudWorkspaceSourceContext withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -29,9 +30,11 @@ public class CloudWorkspaceSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public CloudWorkspaceId workspaceId;
+
     public CloudWorkspaceSourceContext withWorkspaceId(CloudWorkspaceId workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public CloudWorkspaceSourceContext(){}
 }

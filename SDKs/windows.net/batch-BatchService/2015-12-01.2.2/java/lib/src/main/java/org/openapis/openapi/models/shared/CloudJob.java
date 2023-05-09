@@ -23,6 +23,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonEnvironmentSettings")
     public EnvironmentSetting[] commonEnvironmentSettings;
+
     public CloudJob withCommonEnvironmentSettings(EnvironmentSetting[] commonEnvironmentSettings) {
         this.commonEnvironmentSettings = commonEnvironmentSettings;
         return this;
@@ -34,6 +35,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public JobConstraints constraints;
+
     public CloudJob withConstraints(JobConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -47,6 +49,7 @@ public class CloudJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CloudJob withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -58,6 +61,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CloudJob withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -69,6 +73,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public CloudJob withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -80,6 +85,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionInfo")
     public JobExecutionInformation executionInfo;
+
     public CloudJob withExecutionInfo(JobExecutionInformation executionInfo) {
         this.executionInfo = executionInfo;
         return this;
@@ -91,6 +97,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CloudJob withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +109,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobManagerTask")
     public JobManagerTask jobManagerTask;
+
     public CloudJob withJobManagerTask(JobManagerTask jobManagerTask) {
         this.jobManagerTask = jobManagerTask;
         return this;
@@ -113,6 +121,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobPreparationTask")
     public JobPreparationTask jobPreparationTask;
+
     public CloudJob withJobPreparationTask(JobPreparationTask jobPreparationTask) {
         this.jobPreparationTask = jobPreparationTask;
         return this;
@@ -124,6 +133,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReleaseTask")
     public JobReleaseTask jobReleaseTask;
+
     public CloudJob withJobReleaseTask(JobReleaseTask jobReleaseTask) {
         this.jobReleaseTask = jobReleaseTask;
         return this;
@@ -137,6 +147,7 @@ public class CloudJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public CloudJob withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -148,6 +159,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public CloudJob withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -159,6 +171,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolInfo")
     public PoolInformation poolInfo;
+
     public CloudJob withPoolInfo(PoolInformation poolInfo) {
         this.poolInfo = poolInfo;
         return this;
@@ -170,6 +183,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousState")
     public CloudJobPreviousStateEnum previousState;
+
     public CloudJob withPreviousState(CloudJobPreviousStateEnum previousState) {
         this.previousState = previousState;
         return this;
@@ -183,6 +197,7 @@ public class CloudJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("previousStateTransitionTime")
     public OffsetDateTime previousStateTransitionTime;
+
     public CloudJob withPreviousStateTransitionTime(OffsetDateTime previousStateTransitionTime) {
         this.previousStateTransitionTime = previousStateTransitionTime;
         return this;
@@ -194,6 +209,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public CloudJob withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -205,6 +221,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CloudJobStateEnum state;
+
     public CloudJob withState(CloudJobStateEnum state) {
         this.state = state;
         return this;
@@ -218,6 +235,7 @@ public class CloudJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateTransitionTime")
     public OffsetDateTime stateTransitionTime;
+
     public CloudJob withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
@@ -229,6 +247,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public JobStatistics stats;
+
     public CloudJob withStats(JobStatistics stats) {
         this.stats = stats;
         return this;
@@ -240,6 +259,7 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CloudJob withUrl(String url) {
         this.url = url;
         return this;
@@ -251,9 +271,11 @@ public class CloudJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usesTaskDependencies")
     public Boolean usesTaskDependencies;
+
     public CloudJob withUsesTaskDependencies(Boolean usesTaskDependencies) {
         this.usesTaskDependencies = usesTaskDependencies;
         return this;
     }
     
+    public CloudJob(){}
 }

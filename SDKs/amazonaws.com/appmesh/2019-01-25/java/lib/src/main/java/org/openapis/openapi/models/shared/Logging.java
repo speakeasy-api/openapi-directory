@@ -15,9 +15,11 @@ public class Logging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLog")
     public AccessLog accessLog;
+
     public Logging withAccessLog(AccessLog accessLog) {
         this.accessLog = accessLog;
         return this;
     }
     
+    public Logging(){}
 }

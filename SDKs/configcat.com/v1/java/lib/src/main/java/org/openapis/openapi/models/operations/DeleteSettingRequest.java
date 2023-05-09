@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSettingRequest {
@@ -12,9 +13,13 @@ public class DeleteSettingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
     public Integer settingId;
+
     public DeleteSettingRequest withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public DeleteSettingRequest(@JsonProperty("settingId") Integer settingId) {
+        this.settingId = settingId;
+  }
 }

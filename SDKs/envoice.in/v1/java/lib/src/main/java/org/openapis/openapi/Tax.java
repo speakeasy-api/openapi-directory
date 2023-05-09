@@ -58,15 +58,13 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiAllResponse res = new org.openapis.openapi.models.operations.TaxApiAllResponse() {{
+        org.openapis.openapi.models.operations.TaxApiAllResponse res = new org.openapis.openapi.models.operations.TaxApiAllResponse(contentType, httpRes.statusCode()) {{
             taxDetailsApiModels = null;
             taxDetailsApiModels = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,15 +128,13 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiDeleteFormResponse res = new org.openapis.openapi.models.operations.TaxApiDeleteFormResponse() {{
+        org.openapis.openapi.models.operations.TaxApiDeleteFormResponse res = new org.openapis.openapi.models.operations.TaxApiDeleteFormResponse(contentType, httpRes.statusCode()) {{
             taxApiDeleteForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             taxApiDeleteForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,15 +198,13 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.TaxApiDeleteJsonResponse() {{
+        org.openapis.openapi.models.operations.TaxApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.TaxApiDeleteJsonResponse(contentType, httpRes.statusCode()) {{
             taxApiDeleteJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             taxApiDeleteJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,15 +268,13 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiDeleteRawResponse res = new org.openapis.openapi.models.operations.TaxApiDeleteRawResponse() {{
+        org.openapis.openapi.models.operations.TaxApiDeleteRawResponse res = new org.openapis.openapi.models.operations.TaxApiDeleteRawResponse(contentType, httpRes.statusCode()) {{
             taxApiDeleteRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             taxApiDeleteRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,15 +338,13 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiNewFormResponse res = new org.openapis.openapi.models.operations.TaxApiNewFormResponse() {{
+        org.openapis.openapi.models.operations.TaxApiNewFormResponse res = new org.openapis.openapi.models.operations.TaxApiNewFormResponse(contentType, httpRes.statusCode()) {{
             taxApiNewForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             taxApiNewForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -418,15 +408,13 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiNewJsonResponse res = new org.openapis.openapi.models.operations.TaxApiNewJsonResponse() {{
+        org.openapis.openapi.models.operations.TaxApiNewJsonResponse res = new org.openapis.openapi.models.operations.TaxApiNewJsonResponse(contentType, httpRes.statusCode()) {{
             taxApiNewJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             taxApiNewJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -490,15 +478,13 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiNewRawResponse res = new org.openapis.openapi.models.operations.TaxApiNewRawResponse() {{
+        org.openapis.openapi.models.operations.TaxApiNewRawResponse res = new org.openapis.openapi.models.operations.TaxApiNewRawResponse(contentType, httpRes.statusCode()) {{
             taxApiNewRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             taxApiNewRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -562,10 +548,8 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiUpdateFormResponse res = new org.openapis.openapi.models.operations.TaxApiUpdateFormResponse() {{
+        org.openapis.openapi.models.operations.TaxApiUpdateFormResponse res = new org.openapis.openapi.models.operations.TaxApiUpdateFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -607,10 +591,8 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.TaxApiUpdateJsonResponse() {{
+        org.openapis.openapi.models.operations.TaxApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.TaxApiUpdateJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -652,10 +634,8 @@ public class Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxApiUpdateRawResponse res = new org.openapis.openapi.models.operations.TaxApiUpdateRawResponse() {{
+        org.openapis.openapi.models.operations.TaxApiUpdateRawResponse res = new org.openapis.openapi.models.operations.TaxApiUpdateRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

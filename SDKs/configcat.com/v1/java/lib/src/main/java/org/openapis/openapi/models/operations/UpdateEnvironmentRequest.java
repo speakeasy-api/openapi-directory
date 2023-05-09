@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEnvironmentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateEnvironmentModel updateEnvironmentModel;
+
     public UpdateEnvironmentRequest withUpdateEnvironmentModel(org.openapis.openapi.models.shared.UpdateEnvironmentModel updateEnvironmentModel) {
         this.updateEnvironmentModel = updateEnvironmentModel;
         return this;
@@ -19,9 +21,14 @@ public class UpdateEnvironmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
     public String environmentId;
+
     public UpdateEnvironmentRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     
+    public UpdateEnvironmentRequest(@JsonProperty("UpdateEnvironmentModel") org.openapis.openapi.models.shared.UpdateEnvironmentModel updateEnvironmentModel, @JsonProperty("environmentId") String environmentId) {
+        this.updateEnvironmentModel = updateEnvironmentModel;
+        this.environmentId = environmentId;
+  }
 }

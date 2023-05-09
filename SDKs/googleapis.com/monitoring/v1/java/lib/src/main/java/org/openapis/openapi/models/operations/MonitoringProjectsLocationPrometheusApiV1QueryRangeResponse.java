@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse {
     
     public String contentType;
+
     public MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse {
      */
     
     public org.openapis.openapi.models.shared.HttpBody httpBody;
+
     public MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse withHttpBody(org.openapis.openapi.models.shared.HttpBody httpBody) {
         this.httpBody = httpBody;
         return this;
@@ -26,6 +29,7 @@ public class MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse {
     
     
     public Integer statusCode;
+
     public MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

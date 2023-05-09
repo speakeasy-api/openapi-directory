@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCampaignsResponse {
@@ -12,6 +13,7 @@ public class ListCampaignsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCampaignsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCampaignsResponse {
     
     
     public String contentType;
+
     public ListCampaignsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCampaignsResponse {
      */
     
     public Object internalServerException;
+
     public ListCampaignsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCampaignsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCampaignsResponse listCampaignsResponse;
+
     public ListCampaignsResponse withListCampaignsResponse(org.openapis.openapi.models.shared.ListCampaignsResponse listCampaignsResponse) {
         this.listCampaignsResponse = listCampaignsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListCampaignsResponse {
     
     
     public Integer statusCode;
+
     public ListCampaignsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListCampaignsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCampaignsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListCampaignsResponse {
      */
     
     public Object validationException;
+
     public ListCampaignsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCampaignsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

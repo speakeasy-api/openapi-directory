@@ -15,6 +15,7 @@ public class AggregateConformancePackComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public AggregateConformancePackComplianceFilters withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class AggregateConformancePackComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegion")
     public String awsRegion;
+
     public AggregateConformancePackComplianceFilters withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -31,6 +33,7 @@ public class AggregateConformancePackComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public ConformancePackComplianceTypeEnum complianceType;
+
     public AggregateConformancePackComplianceFilters withComplianceType(ConformancePackComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -39,9 +42,11 @@ public class AggregateConformancePackComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public AggregateConformancePackComplianceFilters withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
     }
     
+    public AggregateConformancePackComplianceFilters(){}
 }

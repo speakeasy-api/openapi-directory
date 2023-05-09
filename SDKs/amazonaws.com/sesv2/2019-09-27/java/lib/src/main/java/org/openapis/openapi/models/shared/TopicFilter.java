@@ -15,6 +15,7 @@ public class TopicFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicName")
     public String topicName;
+
     public TopicFilter withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
@@ -23,9 +24,11 @@ public class TopicFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseDefaultIfPreferenceUnavailable")
     public Boolean useDefaultIfPreferenceUnavailable;
+
     public TopicFilter withUseDefaultIfPreferenceUnavailable(Boolean useDefaultIfPreferenceUnavailable) {
         this.useDefaultIfPreferenceUnavailable = useDefaultIfPreferenceUnavailable;
         return this;
     }
     
+    public TopicFilter(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TCPFlagField {
     @JsonProperty("Flags")
     public TCPFlagEnum[] flags;
+
     public TCPFlagField withFlags(TCPFlagEnum[] flags) {
         this.flags = flags;
         return this;
@@ -22,9 +23,13 @@ public class TCPFlagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Masks")
     public TCPFlagEnum[] masks;
+
     public TCPFlagField withMasks(TCPFlagEnum[] masks) {
         this.masks = masks;
         return this;
     }
     
+    public TCPFlagField(@JsonProperty("Flags") TCPFlagEnum[] flags) {
+        this.flags = flags;
+  }
 }

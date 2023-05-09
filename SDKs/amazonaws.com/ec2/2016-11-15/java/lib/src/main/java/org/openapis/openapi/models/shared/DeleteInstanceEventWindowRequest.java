@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteInstanceEventWindowRequest {
     
     public Boolean dryRun;
+
     public DeleteInstanceEventWindowRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DeleteInstanceEventWindowRequest {
     
     
     public Boolean forceDelete;
+
     public DeleteInstanceEventWindowRequest withForceDelete(Boolean forceDelete) {
         this.forceDelete = forceDelete;
         return this;
@@ -23,9 +25,13 @@ public class DeleteInstanceEventWindowRequest {
     
     
     public String instanceEventWindowId;
+
     public DeleteInstanceEventWindowRequest withInstanceEventWindowId(String instanceEventWindowId) {
         this.instanceEventWindowId = instanceEventWindowId;
         return this;
     }
     
+    public DeleteInstanceEventWindowRequest(@JsonProperty("InstanceEventWindowId") String instanceEventWindowId) {
+        this.instanceEventWindowId = instanceEventWindowId;
+  }
 }

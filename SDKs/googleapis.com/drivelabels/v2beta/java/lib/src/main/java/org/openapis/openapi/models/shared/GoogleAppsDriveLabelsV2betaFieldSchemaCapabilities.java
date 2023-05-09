@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDelete")
     public Boolean canDelete;
+
     public GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities withCanDelete(Boolean canDelete) {
         this.canDelete = canDelete;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDisable")
     public Boolean canDisable;
+
     public GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities withCanDisable(Boolean canDisable) {
         this.canDisable = canDisable;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canEnable")
     public Boolean canEnable;
+
     public GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities withCanEnable(Boolean canEnable) {
         this.canEnable = canEnable;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canUpdate")
     public Boolean canUpdate;
+
     public GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities withCanUpdate(Boolean canUpdate) {
         this.canUpdate = canUpdate;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities(){}
 }

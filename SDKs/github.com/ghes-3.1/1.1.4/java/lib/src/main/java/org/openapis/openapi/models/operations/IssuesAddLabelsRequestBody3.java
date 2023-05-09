@@ -12,9 +12,11 @@ public class IssuesAddLabelsRequestBody3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public IssuesAddLabelsRequestBody3Labels[] labels;
+
     public IssuesAddLabelsRequestBody3 withLabels(IssuesAddLabelsRequestBody3Labels[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public IssuesAddLabelsRequestBody3(){}
 }

@@ -15,9 +15,11 @@ public class GetStatusesForObject200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.StatusUpdateCompact[] data;
+
     public GetStatusesForObject200ApplicationJSON withData(org.openapis.openapi.models.shared.StatusUpdateCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetStatusesForObject200ApplicationJSON(){}
 }

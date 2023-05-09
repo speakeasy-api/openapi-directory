@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvokeEndpointResponse {
     
     public String contentType;
+
     public InvokeEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InvokeEndpointResponse {
      */
     
     public Object internalDependencyException;
+
     public InvokeEndpointResponse withInternalDependencyException(Object internalDependencyException) {
         this.internalDependencyException = internalDependencyException;
         return this;
@@ -29,6 +32,7 @@ public class InvokeEndpointResponse {
      */
     
     public Object internalFailure;
+
     public InvokeEndpointResponse withInternalFailure(Object internalFailure) {
         this.internalFailure = internalFailure;
         return this;
@@ -39,6 +43,7 @@ public class InvokeEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.InvokeEndpointOutput invokeEndpointOutput;
+
     public InvokeEndpointResponse withInvokeEndpointOutput(org.openapis.openapi.models.shared.InvokeEndpointOutput invokeEndpointOutput) {
         this.invokeEndpointOutput = invokeEndpointOutput;
         return this;
@@ -49,6 +54,7 @@ public class InvokeEndpointResponse {
      */
     
     public Object modelError;
+
     public InvokeEndpointResponse withModelError(Object modelError) {
         this.modelError = modelError;
         return this;
@@ -59,6 +65,7 @@ public class InvokeEndpointResponse {
      */
     
     public Object modelNotReadyException;
+
     public InvokeEndpointResponse withModelNotReadyException(Object modelNotReadyException) {
         this.modelNotReadyException = modelNotReadyException;
         return this;
@@ -66,6 +73,7 @@ public class InvokeEndpointResponse {
     
     
     public Integer statusCode;
+
     public InvokeEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class InvokeEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvokeEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class InvokeEndpointResponse {
      */
     
     public Object serviceUnavailable;
+
     public InvokeEndpointResponse withServiceUnavailable(Object serviceUnavailable) {
         this.serviceUnavailable = serviceUnavailable;
         return this;
@@ -93,9 +103,14 @@ public class InvokeEndpointResponse {
      */
     
     public Object validationError;
+
     public InvokeEndpointResponse withValidationError(Object validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public InvokeEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

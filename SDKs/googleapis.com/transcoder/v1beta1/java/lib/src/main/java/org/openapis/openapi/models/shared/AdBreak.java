@@ -18,9 +18,11 @@ public class AdBreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOffset")
     public String startTimeOffset;
+
     public AdBreak withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
     }
     
+    public AdBreak(){}
 }

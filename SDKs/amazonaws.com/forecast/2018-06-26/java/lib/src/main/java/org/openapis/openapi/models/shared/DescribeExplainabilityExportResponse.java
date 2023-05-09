@@ -22,6 +22,7 @@ public class DescribeExplainabilityExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeExplainabilityExportResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +34,7 @@ public class DescribeExplainabilityExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public DescribeExplainabilityExportResponse withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -41,6 +43,7 @@ public class DescribeExplainabilityExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityArn")
     public String explainabilityArn;
+
     public DescribeExplainabilityExportResponse withExplainabilityArn(String explainabilityArn) {
         this.explainabilityArn = explainabilityArn;
         return this;
@@ -49,6 +52,7 @@ public class DescribeExplainabilityExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityExportArn")
     public String explainabilityExportArn;
+
     public DescribeExplainabilityExportResponse withExplainabilityExportArn(String explainabilityExportArn) {
         this.explainabilityExportArn = explainabilityExportArn;
         return this;
@@ -57,6 +61,7 @@ public class DescribeExplainabilityExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityExportName")
     public String explainabilityExportName;
+
     public DescribeExplainabilityExportResponse withExplainabilityExportName(String explainabilityExportName) {
         this.explainabilityExportName = explainabilityExportName;
         return this;
@@ -65,6 +70,7 @@ public class DescribeExplainabilityExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public DescribeExplainabilityExportResponse withFormat(String format) {
         this.format = format;
         return this;
@@ -75,6 +81,7 @@ public class DescribeExplainabilityExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeExplainabilityExportResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -83,6 +90,7 @@ public class DescribeExplainabilityExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeExplainabilityExportResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -91,9 +99,11 @@ public class DescribeExplainabilityExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeExplainabilityExportResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DescribeExplainabilityExportResponse(){}
 }

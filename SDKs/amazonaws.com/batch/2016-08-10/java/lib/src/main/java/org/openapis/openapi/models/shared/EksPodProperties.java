@@ -15,6 +15,7 @@ public class EksPodProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public EksContainer[] containers;
+
     public EksPodProperties withContainers(EksContainer[] containers) {
         this.containers = containers;
         return this;
@@ -23,6 +24,7 @@ public class EksPodProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsPolicy")
     public String dnsPolicy;
+
     public EksPodProperties withDnsPolicy(String dnsPolicy) {
         this.dnsPolicy = dnsPolicy;
         return this;
@@ -31,6 +33,7 @@ public class EksPodProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostNetwork")
     public Boolean hostNetwork;
+
     public EksPodProperties withHostNetwork(Boolean hostNetwork) {
         this.hostNetwork = hostNetwork;
         return this;
@@ -39,6 +42,7 @@ public class EksPodProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public EksMetadata metadata;
+
     public EksPodProperties withMetadata(EksMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -47,6 +51,7 @@ public class EksPodProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountName")
     public String serviceAccountName;
+
     public EksPodProperties withServiceAccountName(String serviceAccountName) {
         this.serviceAccountName = serviceAccountName;
         return this;
@@ -55,9 +60,11 @@ public class EksPodProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public EksVolume[] volumes;
+
     public EksPodProperties withVolumes(EksVolume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public EksPodProperties(){}
 }

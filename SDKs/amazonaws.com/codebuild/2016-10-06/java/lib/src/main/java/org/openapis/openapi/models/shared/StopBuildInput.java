@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopBuildInput {
     @JsonProperty("id")
     public String id;
+
     public StopBuildInput withId(String id) {
         this.id = id;
         return this;
     }
     
+    public StopBuildInput(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

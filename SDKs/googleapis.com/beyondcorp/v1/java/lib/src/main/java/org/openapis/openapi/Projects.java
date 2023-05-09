@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreateResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreateResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreateResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsResolveResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsResolveResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsResolveResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsResolveResponse(contentType, httpRes.statusCode()) {{
             googleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsCreateResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsCreateResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsCreateResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsListResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,6 +250,52 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse.class);
                 res.googleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Updates the parameters of a single AppConnector.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsPatchResponse beyondcorpProjectsLocationsAppConnectorsPatch(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsPatchRequest request, org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsPatchSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudBeyondcorpAppconnectorsV1AppConnectorInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsPatchRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsPatchResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsPatchResponse(contentType, httpRes.statusCode()) {{
+            googleLongrunningOperation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleLongrunningOperation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleLongrunningOperation.class);
+                res.googleLongrunningOperation = out;
             }
         }
 
@@ -296,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse(contentType, httpRes.statusCode()) {{
             googleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppGatewaysCreateResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppGatewaysCreateResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppGatewaysCreateResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppGatewaysCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppGatewaysListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppGatewaysListResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppGatewaysListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppGatewaysListResponse(contentType, httpRes.statusCode()) {{
             listAppGatewaysResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,196 +476,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListAppGatewaysResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListAppGatewaysResponse.class);
                 res.listAppGatewaysResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Creates a new ClientConnectorService in a given project and location.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateResponse beyondcorpProjectsLocationsClientConnectorServicesCreate(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest request, org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest.class, baseUrl, "/v1/{parent}/clientConnectorServices", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clientConnectorServiceInput", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateResponse() {{
-            googleLongrunningOperation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.GoogleLongrunningOperation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleLongrunningOperation.class);
-                res.googleLongrunningOperation = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Lists ClientConnectorServices in a given project and location.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesListResponse beyondcorpProjectsLocationsClientConnectorServicesList(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesListRequest request, org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesListSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesListRequest.class, baseUrl, "/v1/{parent}/clientConnectorServices", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesListRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesListResponse() {{
-            listClientConnectorServicesResponse = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.ListClientConnectorServicesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListClientConnectorServicesResponse.class);
-                res.listClientConnectorServicesResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Updates the parameters of a single ClientConnectorService.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse beyondcorpProjectsLocationsClientConnectorServicesPatch(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest request, org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clientConnectorServiceInput", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse() {{
-            googleLongrunningOperation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.GoogleLongrunningOperation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleLongrunningOperation.class);
-                res.googleLongrunningOperation = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Creates a new ClientGateway in a given project and location.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysCreateResponse beyondcorpProjectsLocationsClientGatewaysCreate(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysCreateRequest request, org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysCreateSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysCreateRequest.class, baseUrl, "/v1/{parent}/clientGateways", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clientGatewayInput", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysCreateRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysCreateResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysCreateResponse() {{
-            googleLongrunningOperation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.GoogleLongrunningOperation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleLongrunningOperation.class);
-                res.googleLongrunningOperation = out;
             }
         }
 
@@ -672,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -684,52 +520,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleIamV1Policy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleIamV1Policy.class);
                 res.googleIamV1Policy = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Lists ClientGateways in a given project and location.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysListResponse beyondcorpProjectsLocationsClientGatewaysList(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysListRequest request, org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysListSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysListRequest.class, baseUrl, "/v1/{parent}/clientGateways", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysListRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysListResponse() {{
-            listClientGatewaysResponse = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.ListClientGatewaysResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListClientGatewaysResponse.class);
-                res.listClientGatewaysResponse = out;
             }
         }
 
@@ -766,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicyResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicyResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -814,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             googleIamV1TestIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudLocationListLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -908,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -954,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1000,11 +780,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1046,11 +824,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

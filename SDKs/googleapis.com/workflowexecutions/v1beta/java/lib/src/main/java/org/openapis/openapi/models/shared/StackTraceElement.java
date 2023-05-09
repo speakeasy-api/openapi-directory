@@ -18,6 +18,7 @@ public class StackTraceElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Position position;
+
     public StackTraceElement withPosition(Position position) {
         this.position = position;
         return this;
@@ -29,6 +30,7 @@ public class StackTraceElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routine")
     public String routine;
+
     public StackTraceElement withRoutine(String routine) {
         this.routine = routine;
         return this;
@@ -40,9 +42,11 @@ public class StackTraceElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step")
     public String step;
+
     public StackTraceElement withStep(String step) {
         this.step = step;
         return this;
     }
     
+    public StackTraceElement(){}
 }

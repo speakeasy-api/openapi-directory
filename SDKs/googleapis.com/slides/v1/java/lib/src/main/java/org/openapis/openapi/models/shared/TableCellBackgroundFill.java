@@ -18,6 +18,7 @@ public class TableCellBackgroundFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyState")
     public TableCellBackgroundFillPropertyStateEnum propertyState;
+
     public TableCellBackgroundFill withPropertyState(TableCellBackgroundFillPropertyStateEnum propertyState) {
         this.propertyState = propertyState;
         return this;
@@ -29,9 +30,11 @@ public class TableCellBackgroundFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solidFill")
     public SolidFill solidFill;
+
     public TableCellBackgroundFill withSolidFill(SolidFill solidFill) {
         this.solidFill = solidFill;
         return this;
     }
     
+    public TableCellBackgroundFill(){}
 }

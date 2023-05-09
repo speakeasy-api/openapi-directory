@@ -18,6 +18,7 @@ public class Point {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public Point withTime(String time) {
         this.time = time;
         return this;
@@ -29,9 +30,11 @@ public class Point {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public Point withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Point(){}
 }

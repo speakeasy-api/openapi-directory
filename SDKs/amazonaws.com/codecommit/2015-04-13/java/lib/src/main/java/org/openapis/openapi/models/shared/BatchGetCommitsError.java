@@ -15,6 +15,7 @@ public class BatchGetCommitsError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitId")
     public String commitId;
+
     public BatchGetCommitsError withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -23,6 +24,7 @@ public class BatchGetCommitsError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public BatchGetCommitsError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,9 +33,11 @@ public class BatchGetCommitsError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchGetCommitsError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public BatchGetCommitsError(){}
 }

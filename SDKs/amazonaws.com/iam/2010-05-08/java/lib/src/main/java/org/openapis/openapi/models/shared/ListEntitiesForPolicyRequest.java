@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListEntitiesForPolicyRequest {
     
     public EntityTypeEnum entityFilter;
+
     public ListEntitiesForPolicyRequest withEntityFilter(EntityTypeEnum entityFilter) {
         this.entityFilter = entityFilter;
         return this;
@@ -16,6 +17,7 @@ public class ListEntitiesForPolicyRequest {
     
     
     public String marker;
+
     public ListEntitiesForPolicyRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class ListEntitiesForPolicyRequest {
     
     
     public Long maxItems;
+
     public ListEntitiesForPolicyRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -30,6 +33,7 @@ public class ListEntitiesForPolicyRequest {
     
     
     public String pathPrefix;
+
     public ListEntitiesForPolicyRequest withPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
         return this;
@@ -37,6 +41,7 @@ public class ListEntitiesForPolicyRequest {
     
     
     public String policyArn;
+
     public ListEntitiesForPolicyRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -44,9 +49,13 @@ public class ListEntitiesForPolicyRequest {
     
     
     public PolicyUsageTypeEnum policyUsageFilter;
+
     public ListEntitiesForPolicyRequest withPolicyUsageFilter(PolicyUsageTypeEnum policyUsageFilter) {
         this.policyUsageFilter = policyUsageFilter;
         return this;
     }
     
+    public ListEntitiesForPolicyRequest(@JsonProperty("PolicyArn") String policyArn) {
+        this.policyArn = policyArn;
+  }
 }

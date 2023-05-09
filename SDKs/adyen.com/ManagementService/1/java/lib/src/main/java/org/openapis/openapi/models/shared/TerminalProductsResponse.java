@@ -18,9 +18,11 @@ public class TerminalProductsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TerminalProduct[] data;
+
     public TerminalProductsResponse withData(TerminalProduct[] data) {
         this.data = data;
         return this;
     }
     
+    public TerminalProductsResponse(){}
 }

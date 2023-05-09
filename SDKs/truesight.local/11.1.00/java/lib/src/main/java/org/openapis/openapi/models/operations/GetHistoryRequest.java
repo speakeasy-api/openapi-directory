@@ -12,6 +12,7 @@ public class GetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applicationId")
     public String applicationId;
+
     public GetHistoryRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,6 +23,7 @@ public class GetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Long from;
+
     public GetHistoryRequest withFrom(Long from) {
         this.from = from;
         return this;
@@ -32,6 +34,7 @@ public class GetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public String groupId;
+
     public GetHistoryRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -42,6 +45,7 @@ public class GetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
     public String serviceId;
+
     public GetHistoryRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -52,9 +56,11 @@ public class GetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public Long to;
+
     public GetHistoryRequest withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public GetHistoryRequest(){}
 }

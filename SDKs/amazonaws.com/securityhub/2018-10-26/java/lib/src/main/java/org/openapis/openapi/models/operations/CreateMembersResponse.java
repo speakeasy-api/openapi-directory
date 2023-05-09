@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMembersResponse {
     
     public String contentType;
+
     public CreateMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMembersResponse createMembersResponse;
+
     public CreateMembersResponse withCreateMembersResponse(org.openapis.openapi.models.shared.CreateMembersResponse createMembersResponse) {
         this.createMembersResponse = createMembersResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateMembersResponse {
      */
     
     public Object internalException;
+
     public CreateMembersResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMembersResponse {
      */
     
     public Object invalidAccessException;
+
     public CreateMembersResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMembersResponse {
      */
     
     public Object invalidInputException;
+
     public CreateMembersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMembersResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMembersResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateMembersResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateMembersResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -76,6 +84,7 @@ public class CreateMembersResponse {
     
     
     public Integer statusCode;
+
     public CreateMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsFetchAllRequest {
@@ -12,6 +13,7 @@ public class ContactsFetchAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public ContactsFetchAllRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class ContactsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public ContactsFetchAllRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +35,7 @@ public class ContactsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstName")
     public String firstName;
+
     public ContactsFetchAllRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -42,6 +46,7 @@ public class ContactsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastName")
     public String lastName;
+
     public ContactsFetchAllRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -52,6 +57,7 @@ public class ContactsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ContactsFetchAllRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -62,6 +68,7 @@ public class ContactsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mobile")
     public String mobile;
+
     public ContactsFetchAllRequest withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -72,6 +79,7 @@ public class ContactsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ContactsFetchAllRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -82,9 +90,13 @@ public class ContactsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public ContactsFetchAllRequest withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public ContactsFetchAllRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

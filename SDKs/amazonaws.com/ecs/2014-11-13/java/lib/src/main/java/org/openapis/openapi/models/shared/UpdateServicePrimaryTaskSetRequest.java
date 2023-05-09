@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateServicePrimaryTaskSetRequest {
     @JsonProperty("cluster")
     public String cluster;
+
     public UpdateServicePrimaryTaskSetRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -16,6 +17,7 @@ public class UpdateServicePrimaryTaskSetRequest {
     
     @JsonProperty("primaryTaskSet")
     public String primaryTaskSet;
+
     public UpdateServicePrimaryTaskSetRequest withPrimaryTaskSet(String primaryTaskSet) {
         this.primaryTaskSet = primaryTaskSet;
         return this;
@@ -23,9 +25,15 @@ public class UpdateServicePrimaryTaskSetRequest {
     
     @JsonProperty("service")
     public String service;
+
     public UpdateServicePrimaryTaskSetRequest withService(String service) {
         this.service = service;
         return this;
     }
     
+    public UpdateServicePrimaryTaskSetRequest(@JsonProperty("cluster") String cluster, @JsonProperty("primaryTaskSet") String primaryTaskSet, @JsonProperty("service") String service) {
+        this.cluster = cluster;
+        this.primaryTaskSet = primaryTaskSet;
+        this.service = service;
+  }
 }

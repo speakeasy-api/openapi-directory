@@ -15,6 +15,7 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("Fees")
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees fees;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndCharges withFees(GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees fees) {
         this.fees = fees;
         return this;
@@ -25,9 +26,14 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("ProductState")
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesProductStateEnum productState;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndCharges withProductState(GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesProductStateEnum productState) {
         this.productState = productState;
         return this;
     }
     
+    public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndCharges(@JsonProperty("Fees") GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees fees, @JsonProperty("ProductState") GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesProductStateEnum productState) {
+        this.fees = fees;
+        this.productState = productState;
+  }
 }

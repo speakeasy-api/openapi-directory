@@ -15,6 +15,7 @@ public class ConfirmForgotPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public ConfirmForgotPasswordRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class ConfirmForgotPasswordRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public ConfirmForgotPasswordRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -30,6 +32,7 @@ public class ConfirmForgotPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public ConfirmForgotPasswordRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -37,6 +40,7 @@ public class ConfirmForgotPasswordRequest {
     
     @JsonProperty("ConfirmationCode")
     public String confirmationCode;
+
     public ConfirmForgotPasswordRequest withConfirmationCode(String confirmationCode) {
         this.confirmationCode = confirmationCode;
         return this;
@@ -44,6 +48,7 @@ public class ConfirmForgotPasswordRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public ConfirmForgotPasswordRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -52,6 +57,7 @@ public class ConfirmForgotPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretHash")
     public String secretHash;
+
     public ConfirmForgotPasswordRequest withSecretHash(String secretHash) {
         this.secretHash = secretHash;
         return this;
@@ -60,6 +66,7 @@ public class ConfirmForgotPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextData")
     public UserContextDataType userContextData;
+
     public ConfirmForgotPasswordRequest withUserContextData(UserContextDataType userContextData) {
         this.userContextData = userContextData;
         return this;
@@ -67,9 +74,16 @@ public class ConfirmForgotPasswordRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public ConfirmForgotPasswordRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ConfirmForgotPasswordRequest(@JsonProperty("Username") String username, @JsonProperty("Password") String password, @JsonProperty("ClientId") String clientId, @JsonProperty("ConfirmationCode") String confirmationCode) {
+        this.username = username;
+        this.password = password;
+        this.clientId = clientId;
+        this.confirmationCode = confirmationCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceScore")
     public Double confidenceScore;
+
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData withConfidenceScore(Double confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryRecord")
     public String queryRecord;
+
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData withQueryRecord(String queryRecord) {
         this.queryRecord = queryRecord;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestion")
     public String suggestion;
+
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData withSuggestion(String suggestion) {
         this.suggestion = suggestion;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData(){}
 }

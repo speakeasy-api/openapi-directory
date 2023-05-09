@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdateHolidayRequest {
@@ -12,6 +13,7 @@ public class CreateUpdateHolidayRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateUpdateHolidayRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateUpdateHolidayRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateUpdateHolidayRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUpdateHolidayRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateUpdateHolidayCreateUpdateHolidayRequest requestBody;
+
     public CreateUpdateHolidayRequest withRequestBody(CreateUpdateHolidayCreateUpdateHolidayRequest requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,9 +40,16 @@ public class CreateUpdateHolidayRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holidayId")
     public String holidayId;
+
     public CreateUpdateHolidayRequest withHolidayId(String holidayId) {
         this.holidayId = holidayId;
         return this;
     }
     
+    public CreateUpdateHolidayRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") CreateUpdateHolidayCreateUpdateHolidayRequest requestBody, @JsonProperty("holidayId") String holidayId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.holidayId = holidayId;
+  }
 }

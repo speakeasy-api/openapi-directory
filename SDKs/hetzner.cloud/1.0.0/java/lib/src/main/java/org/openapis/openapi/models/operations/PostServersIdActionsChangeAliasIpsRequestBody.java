@@ -12,6 +12,7 @@ public class PostServersIdActionsChangeAliasIpsRequestBody {
      */
     @JsonProperty("alias_ips")
     public String[] aliasIps;
+
     public PostServersIdActionsChangeAliasIpsRequestBody withAliasIps(String[] aliasIps) {
         this.aliasIps = aliasIps;
         return this;
@@ -22,9 +23,14 @@ public class PostServersIdActionsChangeAliasIpsRequestBody {
      */
     @JsonProperty("network")
     public Long network;
+
     public PostServersIdActionsChangeAliasIpsRequestBody withNetwork(Long network) {
         this.network = network;
         return this;
     }
     
+    public PostServersIdActionsChangeAliasIpsRequestBody(@JsonProperty("alias_ips") String[] aliasIps, @JsonProperty("network") Long network) {
+        this.aliasIps = aliasIps;
+        this.network = network;
+  }
 }

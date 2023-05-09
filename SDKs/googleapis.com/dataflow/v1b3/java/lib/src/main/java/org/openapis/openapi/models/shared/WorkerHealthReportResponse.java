@@ -18,9 +18,11 @@ public class WorkerHealthReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportInterval")
     public String reportInterval;
+
     public WorkerHealthReportResponse withReportInterval(String reportInterval) {
         this.reportInterval = reportInterval;
         return this;
     }
     
+    public WorkerHealthReportResponse(){}
 }

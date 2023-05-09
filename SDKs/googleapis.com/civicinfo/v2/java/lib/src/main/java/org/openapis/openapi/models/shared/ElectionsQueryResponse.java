@@ -18,6 +18,7 @@ public class ElectionsQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elections")
     public Election[] elections;
+
     public ElectionsQueryResponse withElections(Election[] elections) {
         this.elections = elections;
         return this;
@@ -29,9 +30,11 @@ public class ElectionsQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ElectionsQueryResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ElectionsQueryResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContainerAgentResponse {
@@ -12,6 +13,7 @@ public class UpdateContainerAgentResponse {
      */
     
     public Object clientException;
+
     public UpdateContainerAgentResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateContainerAgentResponse {
      */
     
     public Object clusterNotFoundException;
+
     public UpdateContainerAgentResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateContainerAgentResponse {
     
     
     public String contentType;
+
     public UpdateContainerAgentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateContainerAgentResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateContainerAgentResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateContainerAgentResponse {
      */
     
     public Object missingVersionException;
+
     public UpdateContainerAgentResponse withMissingVersionException(Object missingVersionException) {
         this.missingVersionException = missingVersionException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateContainerAgentResponse {
      */
     
     public Object noUpdateAvailableException;
+
     public UpdateContainerAgentResponse withNoUpdateAvailableException(Object noUpdateAvailableException) {
         this.noUpdateAvailableException = noUpdateAvailableException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateContainerAgentResponse {
     
     
     public Integer statusCode;
+
     public UpdateContainerAgentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateContainerAgentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContainerAgentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateContainerAgentResponse {
      */
     
     public Object serverException;
+
     public UpdateContainerAgentResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateContainerAgentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateContainerAgentResponse updateContainerAgentResponse;
+
     public UpdateContainerAgentResponse withUpdateContainerAgentResponse(org.openapis.openapi.models.shared.UpdateContainerAgentResponse updateContainerAgentResponse) {
         this.updateContainerAgentResponse = updateContainerAgentResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateContainerAgentResponse {
      */
     
     public Object updateInProgressException;
+
     public UpdateContainerAgentResponse withUpdateInProgressException(Object updateInProgressException) {
         this.updateInProgressException = updateInProgressException;
         return this;
     }
     
+    public UpdateContainerAgentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

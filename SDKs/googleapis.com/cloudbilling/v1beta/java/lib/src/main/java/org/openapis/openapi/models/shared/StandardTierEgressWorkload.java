@@ -18,6 +18,7 @@ public class StandardTierEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressRate")
     public Usage egressRate;
+
     public StandardTierEgressWorkload withEgressRate(Usage egressRate) {
         this.egressRate = egressRate;
         return this;
@@ -29,9 +30,11 @@ public class StandardTierEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRegion")
     public String sourceRegion;
+
     public StandardTierEgressWorkload withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
     }
     
+    public StandardTierEgressWorkload(){}
 }

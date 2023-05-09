@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingBrowsersListResponse {
@@ -12,6 +13,7 @@ public class DfareportingBrowsersListResponse {
      */
     
     public org.openapis.openapi.models.shared.BrowsersListResponse browsersListResponse;
+
     public DfareportingBrowsersListResponse withBrowsersListResponse(org.openapis.openapi.models.shared.BrowsersListResponse browsersListResponse) {
         this.browsersListResponse = browsersListResponse;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingBrowsersListResponse {
     
     
     public String contentType;
+
     public DfareportingBrowsersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingBrowsersListResponse {
     
     
     public Integer statusCode;
+
     public DfareportingBrowsersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingBrowsersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingBrowsersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingBrowsersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

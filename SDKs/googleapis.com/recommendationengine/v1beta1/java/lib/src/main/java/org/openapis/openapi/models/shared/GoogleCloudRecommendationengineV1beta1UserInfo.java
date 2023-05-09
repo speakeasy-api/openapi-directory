@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directUserRequest")
     public Boolean directUserRequest;
+
     public GoogleCloudRecommendationengineV1beta1UserInfo withDirectUserRequest(Boolean directUserRequest) {
         this.directUserRequest = directUserRequest;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommendationengineV1beta1UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public GoogleCloudRecommendationengineV1beta1UserInfo withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommendationengineV1beta1UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public GoogleCloudRecommendationengineV1beta1UserInfo withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecommendationengineV1beta1UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GoogleCloudRecommendationengineV1beta1UserInfo withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRecommendationengineV1beta1UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitorId")
     public String visitorId;
+
     public GoogleCloudRecommendationengineV1beta1UserInfo withVisitorId(String visitorId) {
         this.visitorId = visitorId;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1UserInfo(){}
 }

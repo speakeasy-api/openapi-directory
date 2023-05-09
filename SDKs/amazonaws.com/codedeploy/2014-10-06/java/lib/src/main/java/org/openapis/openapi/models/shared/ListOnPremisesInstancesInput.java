@@ -15,6 +15,7 @@ public class ListOnPremisesInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListOnPremisesInstancesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListOnPremisesInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationStatus")
     public RegistrationStatusEnum registrationStatus;
+
     public ListOnPremisesInstancesInput withRegistrationStatus(RegistrationStatusEnum registrationStatus) {
         this.registrationStatus = registrationStatus;
         return this;
@@ -31,9 +33,11 @@ public class ListOnPremisesInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagFilters")
     public TagFilter[] tagFilters;
+
     public ListOnPremisesInstancesInput withTagFilters(TagFilter[] tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
     
+    public ListOnPremisesInstancesInput(){}
 }

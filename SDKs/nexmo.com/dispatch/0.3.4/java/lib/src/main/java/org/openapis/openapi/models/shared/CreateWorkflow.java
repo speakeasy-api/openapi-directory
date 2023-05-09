@@ -18,6 +18,7 @@ public class CreateWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public CreateWorkflowTemplateEnum template;
+
     public CreateWorkflow withTemplate(CreateWorkflowTemplateEnum template) {
         this.template = template;
         return this;
@@ -29,9 +30,11 @@ public class CreateWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflow")
     public Object[] workflow;
+
     public CreateWorkflow withWorkflow(Object[] workflow) {
         this.workflow = workflow;
         return this;
     }
     
+    public CreateWorkflow(){}
 }

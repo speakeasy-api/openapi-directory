@@ -15,6 +15,7 @@ public class BatchListAttachedIndicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexAttachments")
     public IndexAttachment[] indexAttachments;
+
     public BatchListAttachedIndicesResponse withIndexAttachments(IndexAttachment[] indexAttachments) {
         this.indexAttachments = indexAttachments;
         return this;
@@ -23,9 +24,11 @@ public class BatchListAttachedIndicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListAttachedIndicesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public BatchListAttachedIndicesResponse(){}
 }

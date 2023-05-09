@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AdminCustomersChromePrintServersListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AdminCustomersChromePrintServersListSecurityOption1 option1;
+
     public AdminCustomersChromePrintServersListSecurity withOption1(AdminCustomersChromePrintServersListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AdminCustomersChromePrintServersListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AdminCustomersChromePrintServersListSecurityOption2 option2;
+
     public AdminCustomersChromePrintServersListSecurity withOption2(AdminCustomersChromePrintServersListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AdminCustomersChromePrintServersListSecurity(){}
 }

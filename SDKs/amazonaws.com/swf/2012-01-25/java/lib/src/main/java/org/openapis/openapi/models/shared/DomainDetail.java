@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DomainDetail {
     @JsonProperty("configuration")
     public DomainConfiguration configuration;
+
     public DomainDetail withConfiguration(DomainConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -19,9 +20,14 @@ public class DomainDetail {
     
     @JsonProperty("domainInfo")
     public DomainInfo domainInfo;
+
     public DomainDetail withDomainInfo(DomainInfo domainInfo) {
         this.domainInfo = domainInfo;
         return this;
     }
     
+    public DomainDetail(@JsonProperty("configuration") DomainConfiguration configuration, @JsonProperty("domainInfo") DomainInfo domainInfo) {
+        this.configuration = configuration;
+        this.domainInfo = domainInfo;
+  }
 }

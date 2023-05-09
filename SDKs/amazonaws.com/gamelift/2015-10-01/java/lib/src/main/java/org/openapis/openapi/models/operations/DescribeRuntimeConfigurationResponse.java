@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRuntimeConfigurationResponse {
     
     public String contentType;
+
     public DescribeRuntimeConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRuntimeConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRuntimeConfigurationOutput describeRuntimeConfigurationOutput;
+
     public DescribeRuntimeConfigurationResponse withDescribeRuntimeConfigurationOutput(org.openapis.openapi.models.shared.DescribeRuntimeConfigurationOutput describeRuntimeConfigurationOutput) {
         this.describeRuntimeConfigurationOutput = describeRuntimeConfigurationOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRuntimeConfigurationResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeRuntimeConfigurationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRuntimeConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeRuntimeConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRuntimeConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public DescribeRuntimeConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeRuntimeConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeRuntimeConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRuntimeConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRuntimeConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeRuntimeConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeRuntimeConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeRuntimeConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

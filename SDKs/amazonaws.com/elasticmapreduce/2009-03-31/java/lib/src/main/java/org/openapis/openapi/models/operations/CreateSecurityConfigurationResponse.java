@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSecurityConfigurationResponse {
     
     public String contentType;
+
     public CreateSecurityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSecurityConfigurationOutput createSecurityConfigurationOutput;
+
     public CreateSecurityConfigurationResponse withCreateSecurityConfigurationOutput(org.openapis.openapi.models.shared.CreateSecurityConfigurationOutput createSecurityConfigurationOutput) {
         this.createSecurityConfigurationOutput = createSecurityConfigurationOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public CreateSecurityConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateSecurityConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSecurityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateSecurityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateSecurityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSecurityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSecurityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

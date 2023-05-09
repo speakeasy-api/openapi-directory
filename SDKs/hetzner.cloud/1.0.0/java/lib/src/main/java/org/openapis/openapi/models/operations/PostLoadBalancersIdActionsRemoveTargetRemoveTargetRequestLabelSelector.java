@@ -15,9 +15,13 @@ public class PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestLabelSelec
      */
     @JsonProperty("selector")
     public String selector;
+
     public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestLabelSelector withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestLabelSelector(@JsonProperty("selector") String selector) {
+        this.selector = selector;
+  }
 }

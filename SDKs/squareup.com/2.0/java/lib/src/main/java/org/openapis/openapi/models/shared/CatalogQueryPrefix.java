@@ -15,6 +15,7 @@ public class CatalogQueryPrefix {
      */
     @JsonProperty("attribute_name")
     public String attributeName;
+
     public CatalogQueryPrefix withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -25,9 +26,14 @@ public class CatalogQueryPrefix {
      */
     @JsonProperty("attribute_prefix")
     public String attributePrefix;
+
     public CatalogQueryPrefix withAttributePrefix(String attributePrefix) {
         this.attributePrefix = attributePrefix;
         return this;
     }
     
+    public CatalogQueryPrefix(@JsonProperty("attribute_name") String attributeName, @JsonProperty("attribute_prefix") String attributePrefix) {
+        this.attributeName = attributeName;
+        this.attributePrefix = attributePrefix;
+  }
 }

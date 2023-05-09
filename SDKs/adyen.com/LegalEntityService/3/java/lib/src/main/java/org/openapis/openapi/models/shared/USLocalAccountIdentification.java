@@ -17,6 +17,7 @@ public class USLocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public USLocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -30,6 +31,7 @@ public class USLocalAccountIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public USLocalAccountIdentificationAccountTypeEnum accountType;
+
     public USLocalAccountIdentification withAccountType(USLocalAccountIdentificationAccountTypeEnum accountType) {
         this.accountType = accountType;
         return this;
@@ -40,6 +42,7 @@ public class USLocalAccountIdentification {
      */
     @JsonProperty("routingNumber")
     public String routingNumber;
+
     public USLocalAccountIdentification withRoutingNumber(String routingNumber) {
         this.routingNumber = routingNumber;
         return this;
@@ -50,9 +53,15 @@ public class USLocalAccountIdentification {
      */
     @JsonProperty("type")
     public USLocalAccountIdentificationTypeEnum type;
+
     public USLocalAccountIdentification withType(USLocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public USLocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("routingNumber") String routingNumber, @JsonProperty("type") USLocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.routingNumber = routingNumber;
+        this.type = type;
+  }
 }

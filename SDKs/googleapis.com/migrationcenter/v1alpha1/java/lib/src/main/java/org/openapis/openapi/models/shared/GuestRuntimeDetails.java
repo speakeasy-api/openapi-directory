@@ -18,6 +18,7 @@ public class GuestRuntimeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public GuestRuntimeDetails withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -29,6 +30,7 @@ public class GuestRuntimeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installedApps")
     public GuestInstalledApplicationList installedApps;
+
     public GuestRuntimeDetails withInstalledApps(GuestInstalledApplicationList installedApps) {
         this.installedApps = installedApps;
         return this;
@@ -40,6 +42,7 @@ public class GuestRuntimeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUptime")
     public Date lastUptime;
+
     public GuestRuntimeDetails withLastUptime(Date lastUptime) {
         this.lastUptime = lastUptime;
         return this;
@@ -51,6 +54,7 @@ public class GuestRuntimeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineName")
     public String machineName;
+
     public GuestRuntimeDetails withMachineName(String machineName) {
         this.machineName = machineName;
         return this;
@@ -62,6 +66,7 @@ public class GuestRuntimeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInfo")
     public RuntimeNetworkInfo networkInfo;
+
     public GuestRuntimeDetails withNetworkInfo(RuntimeNetworkInfo networkInfo) {
         this.networkInfo = networkInfo;
         return this;
@@ -73,6 +78,7 @@ public class GuestRuntimeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openFileList")
     public OpenFileList openFileList;
+
     public GuestRuntimeDetails withOpenFileList(OpenFileList openFileList) {
         this.openFileList = openFileList;
         return this;
@@ -84,6 +90,7 @@ public class GuestRuntimeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processes")
     public RunningProcessList processes;
+
     public GuestRuntimeDetails withProcesses(RunningProcessList processes) {
         this.processes = processes;
         return this;
@@ -95,9 +102,11 @@ public class GuestRuntimeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public RunningServiceList services;
+
     public GuestRuntimeDetails withServices(RunningServiceList services) {
         this.services = services;
         return this;
     }
     
+    public GuestRuntimeDetails(){}
 }

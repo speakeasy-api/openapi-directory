@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest {
@@ -12,6 +13,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber batchInputMarketingEventEmailSubscriber;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withBatchInputMarketingEventEmailSubscriber(org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber batchInputMarketingEventEmailSubscriber) {
         this.batchInputMarketingEventEmailSubscriber = batchInputMarketingEventEmailSubscriber;
         return this;
@@ -22,6 +24,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
     public String externalAccountId;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -32,6 +35,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
     public String externalEventId;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
@@ -42,9 +46,15 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriberState")
     public String subscriberState;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withSubscriberState(String subscriberState) {
         this.subscriberState = subscriberState;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest(@JsonProperty("BatchInputMarketingEventEmailSubscriber") org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber batchInputMarketingEventEmailSubscriber, @JsonProperty("externalEventId") String externalEventId, @JsonProperty("subscriberState") String subscriberState) {
+        this.batchInputMarketingEventEmailSubscriber = batchInputMarketingEventEmailSubscriber;
+        this.externalEventId = externalEventId;
+        this.subscriberState = subscriberState;
+  }
 }

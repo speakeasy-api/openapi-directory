@@ -15,6 +15,7 @@ public class UpdatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePipeRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredState")
     public UpdatePipeRequestBodyDesiredStateEnum desiredState;
+
     public UpdatePipeRequestBody withDesiredState(UpdatePipeRequestBodyDesiredStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -37,6 +39,7 @@ public class UpdatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enrichment")
     public String enrichment;
+
     public UpdatePipeRequestBody withEnrichment(String enrichment) {
         this.enrichment = enrichment;
         return this;
@@ -48,6 +51,7 @@ public class UpdatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnrichmentParameters")
     public UpdatePipeRequestBodyEnrichmentParameters enrichmentParameters;
+
     public UpdatePipeRequestBody withEnrichmentParameters(UpdatePipeRequestBodyEnrichmentParameters enrichmentParameters) {
         this.enrichmentParameters = enrichmentParameters;
         return this;
@@ -58,6 +62,7 @@ public class UpdatePipeRequestBody {
      */
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdatePipeRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -69,6 +74,7 @@ public class UpdatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceParameters")
     public UpdatePipeRequestBodySourceParameters sourceParameters;
+
     public UpdatePipeRequestBody withSourceParameters(UpdatePipeRequestBodySourceParameters sourceParameters) {
         this.sourceParameters = sourceParameters;
         return this;
@@ -80,6 +86,7 @@ public class UpdatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public UpdatePipeRequestBody withTarget(String target) {
         this.target = target;
         return this;
@@ -91,9 +98,13 @@ public class UpdatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetParameters")
     public UpdatePipeRequestBodyTargetParameters targetParameters;
+
     public UpdatePipeRequestBody withTargetParameters(UpdatePipeRequestBodyTargetParameters targetParameters) {
         this.targetParameters = targetParameters;
         return this;
     }
     
+    public UpdatePipeRequestBody(@JsonProperty("RoleArn") String roleArn) {
+        this.roleArn = roleArn;
+  }
 }

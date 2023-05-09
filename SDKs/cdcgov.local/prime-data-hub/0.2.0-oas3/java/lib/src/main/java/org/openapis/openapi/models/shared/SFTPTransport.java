@@ -15,6 +15,7 @@ public class SFTPTransport {
      */
     @JsonProperty("filePath")
     public String filePath;
+
     public SFTPTransport withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -25,6 +26,7 @@ public class SFTPTransport {
      */
     @JsonProperty("host")
     public String host;
+
     public SFTPTransport withHost(String host) {
         this.host = host;
         return this;
@@ -35,6 +37,7 @@ public class SFTPTransport {
      */
     @JsonProperty("port")
     public Double port;
+
     public SFTPTransport withPort(Double port) {
         this.port = port;
         return this;
@@ -45,9 +48,16 @@ public class SFTPTransport {
      */
     @JsonProperty("type")
     public String type;
+
     public SFTPTransport withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SFTPTransport(@JsonProperty("filePath") String filePath, @JsonProperty("host") String host, @JsonProperty("port") Double port, @JsonProperty("type") String type) {
+        this.filePath = filePath;
+        this.host = host;
+        this.port = port;
+        this.type = type;
+  }
 }

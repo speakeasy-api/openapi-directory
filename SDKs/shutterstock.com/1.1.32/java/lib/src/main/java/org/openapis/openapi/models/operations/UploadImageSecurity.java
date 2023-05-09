@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class UploadImageSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
     public org.openapis.openapi.models.shared.SchemeBasic basic;
+
     public UploadImageSecurity withBasic(org.openapis.openapi.models.shared.SchemeBasic basic) {
         this.basic = basic;
         return this;
@@ -16,9 +17,11 @@ public class UploadImageSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String customerAccessCode;
+
     public UploadImageSecurity withCustomerAccessCode(String customerAccessCode) {
         this.customerAccessCode = customerAccessCode;
         return this;
     }
     
+    public UploadImageSecurity(){}
 }

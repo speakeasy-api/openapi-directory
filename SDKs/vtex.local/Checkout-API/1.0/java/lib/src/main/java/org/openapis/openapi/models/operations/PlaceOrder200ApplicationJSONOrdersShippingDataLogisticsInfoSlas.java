@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryChannel")
     public String deliveryChannel;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withDeliveryChannel(String deliveryChannel) {
         this.deliveryChannel = deliveryChannel;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryIds")
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasDeliveryIds[] deliveryIds;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withDeliveryIds(PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasDeliveryIds[] deliveryIds) {
         this.deliveryIds = deliveryIds;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Long listPrice;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withListPrice(Long listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockTTL")
     public String lockTTL;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withLockTTL(String lockTTL) {
         this.lockTTL = lockTTL;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupDistance")
     public Long pickupDistance;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withPickupDistance(Long pickupDistance) {
         this.pickupDistance = pickupDistance;
         return this;
@@ -92,6 +99,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupPointId")
     public String pickupPointId;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withPickupPointId(String pickupPointId) {
         this.pickupPointId = pickupPointId;
         return this;
@@ -103,6 +111,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupStoreInfo")
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfo pickupStoreInfo;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withPickupStoreInfo(PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfo pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -114,6 +123,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polygonName")
     public String polygonName;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withPolygonName(String polygonName) {
         this.polygonName = polygonName;
         return this;
@@ -125,6 +135,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withPrice(Long price) {
         this.price = price;
         return this;
@@ -136,6 +147,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingEstimate")
     public String shippingEstimate;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withShippingEstimate(String shippingEstimate) {
         this.shippingEstimate = shippingEstimate;
         return this;
@@ -147,6 +159,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingEstimateDate")
     public String shippingEstimateDate;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withShippingEstimateDate(String shippingEstimateDate) {
         this.shippingEstimateDate = shippingEstimateDate;
         return this;
@@ -158,6 +171,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Long tax;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withTax(Long tax) {
         this.tax = tax;
         return this;
@@ -169,9 +183,11 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitTime")
     public String transitTime;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas withTransitTime(String transitTime) {
         this.transitTime = transitTime;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas(){}
 }

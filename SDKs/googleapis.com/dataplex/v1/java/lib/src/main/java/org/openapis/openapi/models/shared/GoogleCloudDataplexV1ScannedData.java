@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1ScannedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incrementalField")
     public GoogleCloudDataplexV1ScannedDataIncrementalField incrementalField;
+
     public GoogleCloudDataplexV1ScannedData withIncrementalField(GoogleCloudDataplexV1ScannedDataIncrementalField incrementalField) {
         this.incrementalField = incrementalField;
         return this;
     }
     
+    public GoogleCloudDataplexV1ScannedData(){}
 }

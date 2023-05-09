@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamDiscoveredResourceCidrsResult {
     
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs[] ipamDiscoveredResourceCidrs;
+
     public GetIpamDiscoveredResourceCidrsResult withIpamDiscoveredResourceCidrs(GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs[] ipamDiscoveredResourceCidrs) {
         this.ipamDiscoveredResourceCidrs = ipamDiscoveredResourceCidrs;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamDiscoveredResourceCidrsResult {
     
     
     public String nextToken;
+
     public GetIpamDiscoveredResourceCidrsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetIpamDiscoveredResourceCidrsResult(){}
 }

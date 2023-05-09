@@ -15,6 +15,7 @@ public class SearchResourcesSimpleCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public SearchResourcesComparatorEnum comparator;
+
     public SearchResourcesSimpleCriterion withComparator(SearchResourcesComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,6 +24,7 @@ public class SearchResourcesSimpleCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public SearchResourcesSimpleCriterionKeyEnum key;
+
     public SearchResourcesSimpleCriterion withKey(SearchResourcesSimpleCriterionKeyEnum key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class SearchResourcesSimpleCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public SearchResourcesSimpleCriterion withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SearchResourcesSimpleCriterion(){}
 }

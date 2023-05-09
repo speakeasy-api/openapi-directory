@@ -15,6 +15,7 @@ public class ManagedJobTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ManagedJobTemplateSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ManagedJobTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public String[] environments;
+
     public ManagedJobTemplateSummary withEnvironments(String[] environments) {
         this.environments = environments;
         return this;
@@ -31,6 +33,7 @@ public class ManagedJobTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateArn")
     public String templateArn;
+
     public ManagedJobTemplateSummary withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
@@ -39,6 +42,7 @@ public class ManagedJobTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateName")
     public String templateName;
+
     public ManagedJobTemplateSummary withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -47,9 +51,11 @@ public class ManagedJobTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateVersion")
     public String templateVersion;
+
     public ManagedJobTemplateSummary withTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     
+    public ManagedJobTemplateSummary(){}
 }

@@ -18,6 +18,7 @@ public class CustomerIndexStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public CustomerIndexStats withDate(Date date) {
         this.date = date;
         return this;
@@ -29,9 +30,11 @@ public class CustomerIndexStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCountByStatus")
     public ItemCountByStatus[] itemCountByStatus;
+
     public CustomerIndexStats withItemCountByStatus(ItemCountByStatus[] itemCountByStatus) {
         this.itemCountByStatus = itemCountByStatus;
         return this;
     }
     
+    public CustomerIndexStats(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurityOption1 option1;
+
     public ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurity withOption1(ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfig
     
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurityOption2 option2;
+
     public ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurity withOption2(ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurity(){}
 }

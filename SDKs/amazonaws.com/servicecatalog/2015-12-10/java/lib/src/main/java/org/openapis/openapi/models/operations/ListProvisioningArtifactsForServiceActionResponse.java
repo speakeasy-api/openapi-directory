@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProvisioningArtifactsForServiceActionResponse {
     
     public String contentType;
+
     public ListProvisioningArtifactsForServiceActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProvisioningArtifactsForServiceActionResponse {
      */
     
     public Object invalidParametersException;
+
     public ListProvisioningArtifactsForServiceActionResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListProvisioningArtifactsForServiceActionResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionOutput listProvisioningArtifactsForServiceActionOutput;
+
     public ListProvisioningArtifactsForServiceActionResponse withListProvisioningArtifactsForServiceActionOutput(org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionOutput listProvisioningArtifactsForServiceActionOutput) {
         this.listProvisioningArtifactsForServiceActionOutput = listProvisioningArtifactsForServiceActionOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListProvisioningArtifactsForServiceActionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProvisioningArtifactsForServiceActionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListProvisioningArtifactsForServiceActionResponse {
     
     
     public Integer statusCode;
+
     public ListProvisioningArtifactsForServiceActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListProvisioningArtifactsForServiceActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProvisioningArtifactsForServiceActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListProvisioningArtifactsForServiceActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

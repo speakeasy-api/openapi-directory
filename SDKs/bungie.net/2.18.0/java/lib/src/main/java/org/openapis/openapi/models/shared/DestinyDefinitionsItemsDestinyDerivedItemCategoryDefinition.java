@@ -16,6 +16,7 @@ public class DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition {
      */
     
     public String categoryDescription;
+
     public DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition withCategoryDescription(String categoryDescription) {
         this.categoryDescription = categoryDescription;
         return this;
@@ -26,9 +27,11 @@ public class DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition {
      */
     
     public DestinyDefinitionsItemsDestinyDerivedItemDefinition[] items;
+
     public DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition withItems(DestinyDefinitionsItemsDestinyDerivedItemDefinition[] items) {
         this.items = items;
         return this;
     }
     
+    public DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition(){}
 }

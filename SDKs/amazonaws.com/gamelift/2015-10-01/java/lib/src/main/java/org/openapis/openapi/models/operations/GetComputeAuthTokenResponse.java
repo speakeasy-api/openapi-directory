@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComputeAuthTokenResponse {
     
     public String contentType;
+
     public GetComputeAuthTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetComputeAuthTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.GetComputeAuthTokenOutput getComputeAuthTokenOutput;
+
     public GetComputeAuthTokenResponse withGetComputeAuthTokenOutput(org.openapis.openapi.models.shared.GetComputeAuthTokenOutput getComputeAuthTokenOutput) {
         this.getComputeAuthTokenOutput = getComputeAuthTokenOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetComputeAuthTokenResponse {
      */
     
     public Object internalServiceException;
+
     public GetComputeAuthTokenResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetComputeAuthTokenResponse {
      */
     
     public Object invalidRequestException;
+
     public GetComputeAuthTokenResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetComputeAuthTokenResponse {
      */
     
     public Object notFoundException;
+
     public GetComputeAuthTokenResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetComputeAuthTokenResponse {
     
     
     public Integer statusCode;
+
     public GetComputeAuthTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetComputeAuthTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComputeAuthTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetComputeAuthTokenResponse {
      */
     
     public Object unauthorizedException;
+
     public GetComputeAuthTokenResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetComputeAuthTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

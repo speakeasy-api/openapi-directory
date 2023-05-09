@@ -15,6 +15,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeCode")
     public String gradeCode;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGrades withGradeCode(String gradeCode) {
         this.gradeCode = gradeCode;
         return this;
@@ -26,6 +27,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeTitle")
     public String gradeTitle;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGrades withGradeTitle(String gradeTitle) {
         this.gradeTitle = gradeTitle;
         return this;
@@ -37,6 +39,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingMatrix")
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrix[] pricingMatrix;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGrades withPricingMatrix(BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrix[] pricingMatrix) {
         this.pricingMatrix = pricingMatrix;
         return this;
@@ -48,9 +51,11 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGrades withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGrades(){}
 }

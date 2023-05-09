@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class CrashesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CrashesListRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -23,6 +25,7 @@ public class CrashesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_version")
     public String appVersion;
+
     public CrashesListRequest withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -33,6 +36,7 @@ public class CrashesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
     public String crashGroupId;
+
     public CrashesListRequest withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -40,6 +44,7 @@ public class CrashesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
     public OffsetDateTime dateFrom;
+
     public CrashesListRequest withDateFrom(OffsetDateTime dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -47,6 +52,7 @@ public class CrashesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
     public OffsetDateTime dateTo;
+
     public CrashesListRequest withDateTo(OffsetDateTime dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -54,6 +60,7 @@ public class CrashesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error_type")
     public CrashesListErrorTypeEnum errorType;
+
     public CrashesListRequest withErrorType(CrashesListErrorTypeEnum errorType) {
         this.errorType = errorType;
         return this;
@@ -64,6 +71,7 @@ public class CrashesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_log")
     public Boolean includeLog;
+
     public CrashesListRequest withIncludeLog(Boolean includeLog) {
         this.includeLog = includeLog;
         return this;
@@ -74,6 +82,7 @@ public class CrashesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_report")
     public Boolean includeReport;
+
     public CrashesListRequest withIncludeReport(Boolean includeReport) {
         this.includeReport = includeReport;
         return this;
@@ -84,9 +93,15 @@ public class CrashesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CrashesListRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CrashesListRequest(@JsonProperty("app_name") String appName, @JsonProperty("crash_group_id") String crashGroupId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.crashGroupId = crashGroupId;
+        this.ownerName = ownerName;
+  }
 }

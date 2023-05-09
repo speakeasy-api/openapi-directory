@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeScalingPlanResourcesResponse {
@@ -12,6 +13,7 @@ public class DescribeScalingPlanResourcesResponse {
      */
     
     public Object concurrentUpdateException;
+
     public DescribeScalingPlanResourcesResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeScalingPlanResourcesResponse {
     
     
     public String contentType;
+
     public DescribeScalingPlanResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeScalingPlanResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeScalingPlanResourcesResponse describeScalingPlanResourcesResponse;
+
     public DescribeScalingPlanResourcesResponse withDescribeScalingPlanResourcesResponse(org.openapis.openapi.models.shared.DescribeScalingPlanResourcesResponse describeScalingPlanResourcesResponse) {
         this.describeScalingPlanResourcesResponse = describeScalingPlanResourcesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeScalingPlanResourcesResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeScalingPlanResourcesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeScalingPlanResourcesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeScalingPlanResourcesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeScalingPlanResourcesResponse {
     
     
     public Integer statusCode;
+
     public DescribeScalingPlanResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeScalingPlanResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeScalingPlanResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeScalingPlanResourcesResponse {
      */
     
     public Object validationException;
+
     public DescribeScalingPlanResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeScalingPlanResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

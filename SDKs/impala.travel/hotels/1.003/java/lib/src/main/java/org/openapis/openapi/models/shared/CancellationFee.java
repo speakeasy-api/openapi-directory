@@ -18,6 +18,7 @@ public class CancellationFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public CancellationFee withCount(Double count) {
         this.count = count;
         return this;
@@ -28,6 +29,7 @@ public class CancellationFee {
      */
     @JsonProperty("price")
     public Money price;
+
     public CancellationFee withPrice(Money price) {
         this.price = price;
         return this;
@@ -38,9 +40,14 @@ public class CancellationFee {
      */
     @JsonProperty("type")
     public CancellationFeeTypeEnum type;
+
     public CancellationFee withType(CancellationFeeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CancellationFee(@JsonProperty("price") Money price, @JsonProperty("type") CancellationFeeTypeEnum type) {
+        this.price = price;
+        this.type = type;
+  }
 }

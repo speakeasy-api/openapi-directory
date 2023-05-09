@@ -15,9 +15,11 @@ public class RemoteSourceCodeAnalysisServerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteSourceCodeAnalysisServerConfigurationTimestamp")
     public String remoteSourceCodeAnalysisServerConfigurationTimestamp;
+
     public RemoteSourceCodeAnalysisServerInfo withRemoteSourceCodeAnalysisServerConfigurationTimestamp(String remoteSourceCodeAnalysisServerConfigurationTimestamp) {
         this.remoteSourceCodeAnalysisServerConfigurationTimestamp = remoteSourceCodeAnalysisServerConfigurationTimestamp;
         return this;
     }
     
+    public RemoteSourceCodeAnalysisServerInfo(){}
 }

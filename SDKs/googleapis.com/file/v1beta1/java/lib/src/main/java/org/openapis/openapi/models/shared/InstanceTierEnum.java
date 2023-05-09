@@ -16,7 +16,8 @@ public enum InstanceTierEnum {
     BASIC_HDD("BASIC_HDD"),
     BASIC_SSD("BASIC_SSD"),
     HIGH_SCALE_SSD("HIGH_SCALE_SSD"),
-    ENTERPRISE("ENTERPRISE");
+    ENTERPRISE("ENTERPRISE"),
+    ZONAL("ZONAL");
 
     @JsonValue
     public final String value;

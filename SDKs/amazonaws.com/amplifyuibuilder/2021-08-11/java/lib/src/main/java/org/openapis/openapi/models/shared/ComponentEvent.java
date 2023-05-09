@@ -15,6 +15,7 @@ public class ComponentEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public ComponentEvent withAction(String action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class ComponentEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindingEvent")
     public String bindingEvent;
+
     public ComponentEvent withBindingEvent(String bindingEvent) {
         this.bindingEvent = bindingEvent;
         return this;
@@ -31,9 +33,11 @@ public class ComponentEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public ActionParameters parameters;
+
     public ComponentEvent withParameters(ActionParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ComponentEvent(){}
 }

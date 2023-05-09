@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements {
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorCount acceleratorCount;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withAcceleratorCount(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorCount acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum[] acceleratorManufacturers;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withAcceleratorManufacturers(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum[] acceleratorManufacturers) {
         this.acceleratorManufacturers = acceleratorManufacturers;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum[] acceleratorNames;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withAcceleratorNames(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum[] acceleratorNames) {
         this.acceleratorNames = acceleratorNames;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTotalMemoryMiB acceleratorTotalMemoryMiB;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withAcceleratorTotalMemoryMiB(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTotalMemoryMiB acceleratorTotalMemoryMiB) {
         this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum[] acceleratorTypes;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withAcceleratorTypes(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -47,6 +52,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public String[] allowedInstanceTypes;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withAllowedInstanceTypes(String[] allowedInstanceTypes) {
         this.allowedInstanceTypes = allowedInstanceTypes;
         return this;
@@ -54,6 +60,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum bareMetal;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withBareMetal(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum bareMetal) {
         this.bareMetal = bareMetal;
         return this;
@@ -61,6 +68,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBaselineEbsBandwidthMbps baselineEbsBandwidthMbps;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withBaselineEbsBandwidthMbps(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBaselineEbsBandwidthMbps baselineEbsBandwidthMbps) {
         this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
         return this;
@@ -68,6 +76,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum burstablePerformance;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withBurstablePerformance(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum burstablePerformance) {
         this.burstablePerformance = burstablePerformance;
         return this;
@@ -75,6 +84,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCpuManufacturersEnum[] cpuManufacturers;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withCpuManufacturers(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCpuManufacturersEnum[] cpuManufacturers) {
         this.cpuManufacturers = cpuManufacturers;
         return this;
@@ -82,6 +92,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public String[] excludedInstanceTypes;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withExcludedInstanceTypes(String[] excludedInstanceTypes) {
         this.excludedInstanceTypes = excludedInstanceTypes;
         return this;
@@ -89,6 +100,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum[] instanceGenerations;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withInstanceGenerations(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum[] instanceGenerations) {
         this.instanceGenerations = instanceGenerations;
         return this;
@@ -96,6 +108,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum localStorage;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withLocalStorage(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum localStorage) {
         this.localStorage = localStorage;
         return this;
@@ -103,6 +116,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum[] localStorageTypes;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withLocalStorageTypes(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum[] localStorageTypes) {
         this.localStorageTypes = localStorageTypes;
         return this;
@@ -110,6 +124,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryGiBPerVCpu memoryGiBPerVCpu;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withMemoryGiBPerVCpu(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryGiBPerVCpu memoryGiBPerVCpu) {
         this.memoryGiBPerVCpu = memoryGiBPerVCpu;
         return this;
@@ -117,6 +132,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryMiB memoryMiB;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withMemoryMiB(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryMiB memoryMiB) {
         this.memoryMiB = memoryMiB;
         return this;
@@ -124,6 +140,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkBandwidthGbps networkBandwidthGbps;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withNetworkBandwidthGbps(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkBandwidthGbps networkBandwidthGbps) {
         this.networkBandwidthGbps = networkBandwidthGbps;
         return this;
@@ -131,6 +148,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkInterfaceCount networkInterfaceCount;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withNetworkInterfaceCount(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkInterfaceCount networkInterfaceCount) {
         this.networkInterfaceCount = networkInterfaceCount;
         return this;
@@ -138,6 +156,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public Long onDemandMaxPricePercentageOverLowestPrice;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withOnDemandMaxPricePercentageOverLowestPrice(Long onDemandMaxPricePercentageOverLowestPrice) {
         this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
         return this;
@@ -145,6 +164,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public Boolean requireHibernateSupport;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withRequireHibernateSupport(Boolean requireHibernateSupport) {
         this.requireHibernateSupport = requireHibernateSupport;
         return this;
@@ -152,6 +172,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public Long spotMaxPricePercentageOverLowestPrice;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withSpotMaxPricePercentageOverLowestPrice(Long spotMaxPricePercentageOverLowestPrice) {
         this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
         return this;
@@ -159,6 +180,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsTotalLocalStorageGB totalLocalStorageGB;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withTotalLocalStorageGB(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsTotalLocalStorageGB totalLocalStorageGB) {
         this.totalLocalStorageGB = totalLocalStorageGB;
         return this;
@@ -166,9 +188,11 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsVCpuCount vCpuCount;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements withVCpuCount(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsVCpuCount vCpuCount) {
         this.vCpuCount = vCpuCount;
         return this;
     }
     
+    public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements(){}
 }

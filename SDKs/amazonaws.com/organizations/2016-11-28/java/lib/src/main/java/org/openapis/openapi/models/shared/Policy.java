@@ -15,6 +15,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public Policy withContent(String content) {
         this.content = content;
         return this;
@@ -23,9 +24,11 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicySummary")
     public PolicySummary policySummary;
+
     public Policy withPolicySummary(PolicySummary policySummary) {
         this.policySummary = policySummary;
         return this;
     }
     
+    public Policy(){}
 }

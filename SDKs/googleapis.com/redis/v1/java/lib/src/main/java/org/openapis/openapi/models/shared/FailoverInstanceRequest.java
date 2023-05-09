@@ -18,9 +18,11 @@ public class FailoverInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataProtectionMode")
     public FailoverInstanceRequestDataProtectionModeEnum dataProtectionMode;
+
     public FailoverInstanceRequest withDataProtectionMode(FailoverInstanceRequestDataProtectionModeEnum dataProtectionMode) {
         this.dataProtectionMode = dataProtectionMode;
         return this;
     }
     
+    public FailoverInstanceRequest(){}
 }

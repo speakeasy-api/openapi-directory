@@ -15,6 +15,7 @@ public class FailedCreateWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public FailedCreateWorkspaceRequest withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class FailedCreateWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public FailedCreateWorkspaceRequest withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class FailedCreateWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceRequest")
     public WorkspaceRequest workspaceRequest;
+
     public FailedCreateWorkspaceRequest withWorkspaceRequest(WorkspaceRequest workspaceRequest) {
         this.workspaceRequest = workspaceRequest;
         return this;
     }
     
+    public FailedCreateWorkspaceRequest(){}
 }

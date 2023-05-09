@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryMiB {
     
     public Long max;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryMiB withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public Long min;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryMiB withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryMiB(){}
 }

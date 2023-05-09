@@ -15,9 +15,11 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoDelivery
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoDeliveryChannels withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoDeliveryChannels(){}
 }

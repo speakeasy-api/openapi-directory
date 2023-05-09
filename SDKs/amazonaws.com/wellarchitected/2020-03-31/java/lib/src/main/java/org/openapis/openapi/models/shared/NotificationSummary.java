@@ -15,6 +15,7 @@ public class NotificationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensUpgradeSummary")
     public LensUpgradeSummary lensUpgradeSummary;
+
     public NotificationSummary withLensUpgradeSummary(LensUpgradeSummary lensUpgradeSummary) {
         this.lensUpgradeSummary = lensUpgradeSummary;
         return this;
@@ -23,9 +24,11 @@ public class NotificationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public NotificationTypeEnum type;
+
     public NotificationSummary withType(NotificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NotificationSummary(){}
 }

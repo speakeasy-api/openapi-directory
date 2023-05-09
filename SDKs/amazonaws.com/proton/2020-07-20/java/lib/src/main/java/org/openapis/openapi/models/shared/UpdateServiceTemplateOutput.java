@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateServiceTemplateOutput {
     @JsonProperty("serviceTemplate")
     public ServiceTemplate serviceTemplate;
+
     public UpdateServiceTemplateOutput withServiceTemplate(ServiceTemplate serviceTemplate) {
         this.serviceTemplate = serviceTemplate;
         return this;
     }
     
+    public UpdateServiceTemplateOutput(@JsonProperty("serviceTemplate") ServiceTemplate serviceTemplate) {
+        this.serviceTemplate = serviceTemplate;
+  }
 }

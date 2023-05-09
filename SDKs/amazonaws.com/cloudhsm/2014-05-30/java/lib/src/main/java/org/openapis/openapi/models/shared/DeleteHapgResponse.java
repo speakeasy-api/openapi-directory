@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteHapgResponse {
     @JsonProperty("Status")
     public String status;
+
     public DeleteHapgResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DeleteHapgResponse(@JsonProperty("Status") String status) {
+        this.status = status;
+  }
 }

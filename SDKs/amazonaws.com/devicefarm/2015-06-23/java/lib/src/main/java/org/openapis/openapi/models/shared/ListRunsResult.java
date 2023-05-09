@@ -15,6 +15,7 @@ public class ListRunsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRunsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRunsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runs")
     public Run[] runs;
+
     public ListRunsResult withRuns(Run[] runs) {
         this.runs = runs;
         return this;
     }
     
+    public ListRunsResult(){}
 }

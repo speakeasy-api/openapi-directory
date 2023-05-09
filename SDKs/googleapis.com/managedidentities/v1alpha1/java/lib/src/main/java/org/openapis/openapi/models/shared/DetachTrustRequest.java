@@ -15,9 +15,11 @@ public class DetachTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trust")
     public Trust trust;
+
     public DetachTrustRequest withTrust(Trust trust) {
         this.trust = trust;
         return this;
     }
     
+    public DetachTrustRequest(){}
 }

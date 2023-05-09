@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunc
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
     public String definitionId;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunc
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
     public String functionId;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withFunctionId(String functionId) {
         this.functionId = functionId;
         return this;
@@ -39,9 +43,16 @@ public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunc
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionType")
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveFunctionTypeEnum functionType;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withFunctionType(DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveFunctionTypeEnum functionType) {
         this.functionType = functionType;
         return this;
     }
     
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest(@JsonProperty("appId") Integer appId, @JsonProperty("definitionId") String definitionId, @JsonProperty("functionId") String functionId, @JsonProperty("functionType") DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveFunctionTypeEnum functionType) {
+        this.appId = appId;
+        this.definitionId = definitionId;
+        this.functionId = functionId;
+        this.functionType = functionType;
+  }
 }

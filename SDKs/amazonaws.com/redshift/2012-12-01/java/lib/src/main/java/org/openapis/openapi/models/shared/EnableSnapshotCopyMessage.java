@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * EnableSnapshotCopyMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnableSnapshotCopyMessage {
     
     public String clusterIdentifier;
+
     public EnableSnapshotCopyMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class EnableSnapshotCopyMessage {
     
     
     public String destinationRegion;
+
     public EnableSnapshotCopyMessage withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -26,6 +28,7 @@ public class EnableSnapshotCopyMessage {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public EnableSnapshotCopyMessage withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -33,6 +36,7 @@ public class EnableSnapshotCopyMessage {
     
     
     public Long retentionPeriod;
+
     public EnableSnapshotCopyMessage withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -40,9 +44,14 @@ public class EnableSnapshotCopyMessage {
     
     
     public String snapshotCopyGrantName;
+
     public EnableSnapshotCopyMessage withSnapshotCopyGrantName(String snapshotCopyGrantName) {
         this.snapshotCopyGrantName = snapshotCopyGrantName;
         return this;
     }
     
+    public EnableSnapshotCopyMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("DestinationRegion") String destinationRegion) {
+        this.clusterIdentifier = clusterIdentifier;
+        this.destinationRegion = destinationRegion;
+  }
 }

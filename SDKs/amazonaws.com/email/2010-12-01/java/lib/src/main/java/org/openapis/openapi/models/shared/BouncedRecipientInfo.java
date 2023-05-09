@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * BouncedRecipientInfo - &lt;p&gt;Recipient-related information to include in the Delivery Status Notification (DSN) when an email that Amazon SES receives on your behalf bounces.&lt;/p&gt; &lt;p&gt;For information about receiving email through Amazon SES, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BouncedRecipientInfo {
     
     public BounceTypeEnum bounceType;
+
     public BouncedRecipientInfo withBounceType(BounceTypeEnum bounceType) {
         this.bounceType = bounceType;
         return this;
@@ -19,6 +20,7 @@ public class BouncedRecipientInfo {
     
     
     public String recipient;
+
     public BouncedRecipientInfo withRecipient(String recipient) {
         this.recipient = recipient;
         return this;
@@ -26,6 +28,7 @@ public class BouncedRecipientInfo {
     
     
     public String recipientArn;
+
     public BouncedRecipientInfo withRecipientArn(String recipientArn) {
         this.recipientArn = recipientArn;
         return this;
@@ -33,9 +36,13 @@ public class BouncedRecipientInfo {
     
     
     public RecipientDsnFields recipientDsnFields;
+
     public BouncedRecipientInfo withRecipientDsnFields(RecipientDsnFields recipientDsnFields) {
         this.recipientDsnFields = recipientDsnFields;
         return this;
     }
     
+    public BouncedRecipientInfo(@JsonProperty("Recipient") String recipient) {
+        this.recipient = recipient;
+  }
 }

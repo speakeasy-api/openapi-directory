@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestJob")
     public GoogleCloudDataplexV1Job latestJob;
+
     public GoogleCloudDataplexV1TaskExecutionStatus withLatestJob(GoogleCloudDataplexV1Job latestJob) {
         this.latestJob = latestJob;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1TaskExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1TaskExecutionStatus withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskExecutionStatus(){}
 }

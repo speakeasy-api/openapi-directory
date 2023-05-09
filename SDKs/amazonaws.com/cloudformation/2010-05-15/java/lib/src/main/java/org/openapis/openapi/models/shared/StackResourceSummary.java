@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class StackResourceSummary {
     
     public StackResourceDriftInformationSummary driftInformation;
+
     public StackResourceSummary withDriftInformation(StackResourceDriftInformationSummary driftInformation) {
         this.driftInformation = driftInformation;
         return this;
@@ -19,6 +21,7 @@ public class StackResourceSummary {
     
     
     public OffsetDateTime lastUpdatedTimestamp;
+
     public StackResourceSummary withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -26,6 +29,7 @@ public class StackResourceSummary {
     
     
     public String logicalResourceId;
+
     public StackResourceSummary withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -33,6 +37,7 @@ public class StackResourceSummary {
     
     
     public ModuleInfo moduleInfo;
+
     public StackResourceSummary withModuleInfo(ModuleInfo moduleInfo) {
         this.moduleInfo = moduleInfo;
         return this;
@@ -40,6 +45,7 @@ public class StackResourceSummary {
     
     
     public String physicalResourceId;
+
     public StackResourceSummary withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -47,6 +53,7 @@ public class StackResourceSummary {
     
     
     public ResourceStatusEnum resourceStatus;
+
     public StackResourceSummary withResourceStatus(ResourceStatusEnum resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -54,6 +61,7 @@ public class StackResourceSummary {
     
     
     public String resourceStatusReason;
+
     public StackResourceSummary withResourceStatusReason(String resourceStatusReason) {
         this.resourceStatusReason = resourceStatusReason;
         return this;
@@ -61,9 +69,16 @@ public class StackResourceSummary {
     
     
     public String resourceType;
+
     public StackResourceSummary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public StackResourceSummary(@JsonProperty("LastUpdatedTimestamp") OffsetDateTime lastUpdatedTimestamp, @JsonProperty("LogicalResourceId") String logicalResourceId, @JsonProperty("ResourceStatus") ResourceStatusEnum resourceStatus, @JsonProperty("ResourceType") String resourceType) {
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+        this.logicalResourceId = logicalResourceId;
+        this.resourceStatus = resourceStatus;
+        this.resourceType = resourceType;
+  }
 }

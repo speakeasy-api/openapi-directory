@@ -15,6 +15,7 @@ public class SSLHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public SSLHealthCheck withPort(Integer port) {
         this.port = port;
         return this;
@@ -26,6 +27,7 @@ public class SSLHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portName")
     public String portName;
+
     public SSLHealthCheck withPortName(String portName) {
         this.portName = portName;
         return this;
@@ -37,6 +39,7 @@ public class SSLHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portSpecification")
     public SSLHealthCheckPortSpecificationEnum portSpecification;
+
     public SSLHealthCheck withPortSpecification(SSLHealthCheckPortSpecificationEnum portSpecification) {
         this.portSpecification = portSpecification;
         return this;
@@ -48,6 +51,7 @@ public class SSLHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyHeader")
     public SSLHealthCheckProxyHeaderEnum proxyHeader;
+
     public SSLHealthCheck withProxyHeader(SSLHealthCheckProxyHeaderEnum proxyHeader) {
         this.proxyHeader = proxyHeader;
         return this;
@@ -59,6 +63,7 @@ public class SSLHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public String request;
+
     public SSLHealthCheck withRequest(String request) {
         this.request = request;
         return this;
@@ -70,9 +75,11 @@ public class SSLHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public SSLHealthCheck withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public SSLHealthCheck(){}
 }

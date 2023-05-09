@@ -18,6 +18,7 @@ public class TrafficSplit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocations")
     public java.util.Map<String, Double> allocations;
+
     public TrafficSplit withAllocations(java.util.Map<String, Double> allocations) {
         this.allocations = allocations;
         return this;
@@ -29,9 +30,11 @@ public class TrafficSplit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardBy")
     public TrafficSplitShardByEnum shardBy;
+
     public TrafficSplit withShardBy(TrafficSplitShardByEnum shardBy) {
         this.shardBy = shardBy;
         return this;
     }
     
+    public TrafficSplit(){}
 }

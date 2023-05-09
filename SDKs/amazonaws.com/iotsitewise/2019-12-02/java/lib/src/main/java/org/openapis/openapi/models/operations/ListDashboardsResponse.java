@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDashboardsResponse {
     
     public String contentType;
+
     public ListDashboardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDashboardsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDashboardsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDashboardsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDashboardsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDashboardsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDashboardsResponse listDashboardsResponse;
+
     public ListDashboardsResponse withListDashboardsResponse(org.openapis.openapi.models.shared.ListDashboardsResponse listDashboardsResponse) {
         this.listDashboardsResponse = listDashboardsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListDashboardsResponse {
     
     
     public Integer statusCode;
+
     public ListDashboardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDashboardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDashboardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListDashboardsResponse {
      */
     
     public Object throttlingException;
+
     public ListDashboardsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDashboardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class NotesProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speakerNotesObjectId")
     public String speakerNotesObjectId;
+
     public NotesProperties withSpeakerNotesObjectId(String speakerNotesObjectId) {
         this.speakerNotesObjectId = speakerNotesObjectId;
         return this;
     }
     
+    public NotesProperties(){}
 }

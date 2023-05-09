@@ -15,9 +15,11 @@ public class DestinyDefinitionsDestinyItemVersionDefinition {
      */
     
     public Long powerCapHash;
+
     public DestinyDefinitionsDestinyItemVersionDefinition withPowerCapHash(Long powerCapHash) {
         this.powerCapHash = powerCapHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemVersionDefinition(){}
 }

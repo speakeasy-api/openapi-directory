@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLogSubscriptionsResponse {
@@ -12,6 +13,7 @@ public class ListLogSubscriptionsResponse {
      */
     
     public Object clientException;
+
     public ListLogSubscriptionsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListLogSubscriptionsResponse {
     
     
     public String contentType;
+
     public ListLogSubscriptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListLogSubscriptionsResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public ListLogSubscriptionsResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class ListLogSubscriptionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListLogSubscriptionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListLogSubscriptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLogSubscriptionsResult listLogSubscriptionsResult;
+
     public ListLogSubscriptionsResponse withListLogSubscriptionsResult(org.openapis.openapi.models.shared.ListLogSubscriptionsResult listLogSubscriptionsResult) {
         this.listLogSubscriptionsResult = listLogSubscriptionsResult;
         return this;
@@ -59,6 +65,7 @@ public class ListLogSubscriptionsResponse {
      */
     
     public Object serviceException;
+
     public ListLogSubscriptionsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class ListLogSubscriptionsResponse {
     
     
     public Integer statusCode;
+
     public ListLogSubscriptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListLogSubscriptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLogSubscriptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListLogSubscriptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SimpleCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCondition")
     public EventCondition eventCondition;
+
     public SimpleCondition withEventCondition(EventCondition eventCondition) {
         this.eventCondition = eventCondition;
         return this;
@@ -23,6 +24,7 @@ public class SimpleCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentCondition")
     public SegmentCondition segmentCondition;
+
     public SimpleCondition withSegmentCondition(SegmentCondition segmentCondition) {
         this.segmentCondition = segmentCondition;
         return this;
@@ -31,9 +33,11 @@ public class SimpleCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentDimensions")
     public SimpleConditionSegmentDimensions segmentDimensions;
+
     public SimpleCondition withSegmentDimensions(SimpleConditionSegmentDimensions segmentDimensions) {
         this.segmentDimensions = segmentDimensions;
         return this;
     }
     
+    public SimpleCondition(){}
 }

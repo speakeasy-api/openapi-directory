@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Code {
     @JsonProperty("destination")
     public CodeDestination destination;
+
     public Code withDestination(CodeDestination destination) {
         this.destination = destination;
         return this;
@@ -19,9 +20,14 @@ public class Code {
     
     @JsonProperty("source")
     public CodeSource source;
+
     public Code withSource(CodeSource source) {
         this.source = source;
         return this;
     }
     
+    public Code(@JsonProperty("destination") CodeDestination destination, @JsonProperty("source") CodeSource source) {
+        this.destination = destination;
+        this.source = source;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateClusterResponse {
@@ -12,6 +13,7 @@ public class UpdateClusterResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateClusterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateClusterResponse {
      */
     
     public Object conflictException;
+
     public UpdateClusterResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClusterResponse {
     
     
     public String contentType;
+
     public UpdateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateClusterResponse {
      */
     
     public Object internalServerException;
+
     public UpdateClusterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateClusterResponse {
     
     
     public Integer statusCode;
+
     public UpdateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateClusterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateClusterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateClusterResponse {
      */
     
     public Object throttlingException;
+
     public UpdateClusterResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateClusterOutput updateClusterOutput;
+
     public UpdateClusterResponse withUpdateClusterOutput(org.openapis.openapi.models.shared.UpdateClusterOutput updateClusterOutput) {
         this.updateClusterOutput = updateClusterOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateClusterResponse {
      */
     
     public Object validationException;
+
     public UpdateClusterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

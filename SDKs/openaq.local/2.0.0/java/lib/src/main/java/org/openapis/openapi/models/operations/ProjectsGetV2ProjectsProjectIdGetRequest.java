@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsGetV2ProjectsProjectIdGetRequest {
@@ -14,6 +15,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String[] country;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -26,6 +28,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
     public String countryId;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withCountryId(String countryId) {
         this.countryId = countryId;
         return this;
@@ -33,6 +36,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity")
     public String entity;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -40,6 +44,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
     public Boolean isAnalysis;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withIsAnalysis(Boolean isAnalysis) {
         this.isAnalysis = isAnalysis;
         return this;
@@ -47,6 +52,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
     public Boolean isMobile;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withIsMobile(Boolean isMobile) {
         this.isMobile = isMobile;
         return this;
@@ -57,6 +63,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -64,6 +71,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -74,6 +82,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public ProjectsGetV2ProjectsProjectIdGetOrderByProjectsOrderEnum orderBy;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withOrderBy(ProjectsGetV2ProjectsProjectIdGetOrderByProjectsOrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -84,6 +93,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -91,6 +101,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
     public Object[] parameter;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withParameter(Object[] parameter) {
         this.parameter = parameter;
         return this;
@@ -98,6 +109,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter_id")
     public Long parameterId;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withParameterId(Long parameterId) {
         this.parameterId = parameterId;
         return this;
@@ -105,6 +117,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
     public Object[] project;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withProject(Object[] project) {
         this.project = project;
         return this;
@@ -112,6 +125,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -119,6 +133,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensorType")
     public String sensorType;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withSensorType(String sensorType) {
         this.sensorType = sensorType;
         return this;
@@ -129,6 +144,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ProjectsGetV2ProjectsProjectIdGetSortSortEnum sort;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withSort(ProjectsGetV2ProjectsProjectIdGetSortSortEnum sort) {
         this.sort = sort;
         return this;
@@ -136,6 +152,7 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceName")
     public String[] sourceName;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withSourceName(String[] sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -143,9 +160,13 @@ public class ProjectsGetV2ProjectsProjectIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public String[] unit;
+
     public ProjectsGetV2ProjectsProjectIdGetRequest withUnit(String[] unit) {
         this.unit = unit;
         return this;
     }
     
+    public ProjectsGetV2ProjectsProjectIdGetRequest(@JsonProperty("project_id") Long projectId) {
+        this.projectId = projectId;
+  }
 }

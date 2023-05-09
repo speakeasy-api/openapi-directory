@@ -18,6 +18,7 @@ public class FreeListingsProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalState")
     public FreeListingsProgramStatusGlobalStateEnum globalState;
+
     public FreeListingsProgramStatus withGlobalState(FreeListingsProgramStatusGlobalStateEnum globalState) {
         this.globalState = globalState;
         return this;
@@ -29,9 +30,11 @@ public class FreeListingsProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionStatuses")
     public FreeListingsProgramStatusRegionStatus[] regionStatuses;
+
     public FreeListingsProgramStatus withRegionStatuses(FreeListingsProgramStatusRegionStatus[] regionStatuses) {
         this.regionStatuses = regionStatuses;
         return this;
     }
     
+    public FreeListingsProgramStatus(){}
 }

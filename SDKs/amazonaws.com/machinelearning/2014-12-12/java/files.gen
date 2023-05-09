@@ -197,4 +197,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateEvaluationInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateMLModelOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateMLModelInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

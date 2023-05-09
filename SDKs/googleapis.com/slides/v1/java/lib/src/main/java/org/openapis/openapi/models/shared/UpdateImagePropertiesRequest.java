@@ -18,6 +18,7 @@ public class UpdateImagePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateImagePropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateImagePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageProperties")
     public ImageProperties imageProperties;
+
     public UpdateImagePropertiesRequest withImageProperties(ImageProperties imageProperties) {
         this.imageProperties = imageProperties;
         return this;
@@ -40,9 +42,11 @@ public class UpdateImagePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateImagePropertiesRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public UpdateImagePropertiesRequest(){}
 }

@@ -15,6 +15,7 @@ public class AcceleratorTypesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorTypes")
     public AcceleratorType[] acceleratorTypes;
+
     public AcceleratorTypesScopedList withAcceleratorTypes(AcceleratorType[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -26,9 +27,11 @@ public class AcceleratorTypesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public AcceleratorTypesScopedListWarning warning;
+
     public AcceleratorTypesScopedList withWarning(AcceleratorTypesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public AcceleratorTypesScopedList(){}
 }

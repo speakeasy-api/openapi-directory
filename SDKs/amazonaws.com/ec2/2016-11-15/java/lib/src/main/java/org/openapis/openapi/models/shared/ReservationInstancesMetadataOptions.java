@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesMetadataOptions {
     
     public ReservationInstancesMetadataOptionsHttpEndpointEnum httpEndpoint;
+
     public ReservationInstancesMetadataOptions withHttpEndpoint(ReservationInstancesMetadataOptionsHttpEndpointEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class ReservationInstancesMetadataOptions {
     
     
     public ReservationInstancesMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6;
+
     public ReservationInstancesMetadataOptions withHttpProtocolIpv6(ReservationInstancesMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -26,6 +28,7 @@ public class ReservationInstancesMetadataOptions {
     
     
     public Long httpPutResponseHopLimit;
+
     public ReservationInstancesMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -33,6 +36,7 @@ public class ReservationInstancesMetadataOptions {
     
     
     public ReservationInstancesMetadataOptionsHttpTokensEnum httpTokens;
+
     public ReservationInstancesMetadataOptions withHttpTokens(ReservationInstancesMetadataOptionsHttpTokensEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -40,6 +44,7 @@ public class ReservationInstancesMetadataOptions {
     
     
     public ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags;
+
     public ReservationInstancesMetadataOptions withInstanceMetadataTags(ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
@@ -47,9 +52,11 @@ public class ReservationInstancesMetadataOptions {
     
     
     public ReservationInstancesMetadataOptionsStateEnum state;
+
     public ReservationInstancesMetadataOptions withState(ReservationInstancesMetadataOptionsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ReservationInstancesMetadataOptions(){}
 }

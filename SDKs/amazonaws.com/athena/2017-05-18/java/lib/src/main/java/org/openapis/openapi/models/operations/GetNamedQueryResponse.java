@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNamedQueryResponse {
     
     public String contentType;
+
     public GetNamedQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNamedQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetNamedQueryOutput getNamedQueryOutput;
+
     public GetNamedQueryResponse withGetNamedQueryOutput(org.openapis.openapi.models.shared.GetNamedQueryOutput getNamedQueryOutput) {
         this.getNamedQueryOutput = getNamedQueryOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetNamedQueryResponse {
      */
     
     public Object internalServerException;
+
     public GetNamedQueryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetNamedQueryResponse {
      */
     
     public Object invalidRequestException;
+
     public GetNamedQueryResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetNamedQueryResponse {
     
     
     public Integer statusCode;
+
     public GetNamedQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetNamedQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNamedQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNamedQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

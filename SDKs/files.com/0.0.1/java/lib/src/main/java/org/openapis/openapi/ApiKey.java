@@ -54,10 +54,8 @@ public class ApiKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyDeleteCurrentResponse res = new org.openapis.openapi.models.operations.ApiKeyDeleteCurrentResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyDeleteCurrentResponse res = new org.openapis.openapi.models.operations.ApiKeyDeleteCurrentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -86,11 +84,9 @@ public class ApiKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyFindCurrentResponse res = new org.openapis.openapi.models.operations.ApiKeyFindCurrentResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyFindCurrentResponse res = new org.openapis.openapi.models.operations.ApiKeyFindCurrentResponse(contentType, httpRes.statusCode()) {{
             apiKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,11 +125,9 @@ public class ApiKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyUpdateCurrentResponse res = new org.openapis.openapi.models.operations.ApiKeyUpdateCurrentResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyUpdateCurrentResponse res = new org.openapis.openapi.models.operations.ApiKeyUpdateCurrentResponse(contentType, httpRes.statusCode()) {{
             apiKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

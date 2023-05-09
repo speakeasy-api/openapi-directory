@@ -15,9 +15,11 @@ public class DeleteMeshOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mesh")
     public MeshData mesh;
+
     public DeleteMeshOutput withMesh(MeshData mesh) {
         this.mesh = mesh;
         return this;
     }
     
+    public DeleteMeshOutput(){}
 }

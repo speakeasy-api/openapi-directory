@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCustomVocabularyMetadataResponse {
     
     public String contentType;
+
     public DescribeCustomVocabularyMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCustomVocabularyMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCustomVocabularyMetadataResponse describeCustomVocabularyMetadataResponse;
+
     public DescribeCustomVocabularyMetadataResponse withDescribeCustomVocabularyMetadataResponse(org.openapis.openapi.models.shared.DescribeCustomVocabularyMetadataResponse describeCustomVocabularyMetadataResponse) {
         this.describeCustomVocabularyMetadataResponse = describeCustomVocabularyMetadataResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCustomVocabularyMetadataResponse {
      */
     
     public Object internalServerException;
+
     public DescribeCustomVocabularyMetadataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCustomVocabularyMetadataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCustomVocabularyMetadataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCustomVocabularyMetadataResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DescribeCustomVocabularyMetadataResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeCustomVocabularyMetadataResponse {
     
     
     public Integer statusCode;
+
     public DescribeCustomVocabularyMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeCustomVocabularyMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCustomVocabularyMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeCustomVocabularyMetadataResponse {
      */
     
     public Object throttlingException;
+
     public DescribeCustomVocabularyMetadataResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeCustomVocabularyMetadataResponse {
      */
     
     public Object validationException;
+
     public DescribeCustomVocabularyMetadataResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeCustomVocabularyMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

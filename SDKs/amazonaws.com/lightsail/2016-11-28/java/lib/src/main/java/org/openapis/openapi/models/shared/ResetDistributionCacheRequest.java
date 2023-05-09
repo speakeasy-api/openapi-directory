@@ -12,9 +12,11 @@ public class ResetDistributionCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionName")
     public String distributionName;
+
     public ResetDistributionCacheRequest withDistributionName(String distributionName) {
         this.distributionName = distributionName;
         return this;
     }
     
+    public ResetDistributionCacheRequest(){}
 }

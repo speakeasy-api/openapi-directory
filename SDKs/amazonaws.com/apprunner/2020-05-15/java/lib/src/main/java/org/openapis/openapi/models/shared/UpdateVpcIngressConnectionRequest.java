@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateVpcIngressConnectionRequest {
     @JsonProperty("IngressVpcConfiguration")
     public IngressVpcConfiguration ingressVpcConfiguration;
+
     public UpdateVpcIngressConnectionRequest withIngressVpcConfiguration(IngressVpcConfiguration ingressVpcConfiguration) {
         this.ingressVpcConfiguration = ingressVpcConfiguration;
         return this;
@@ -16,9 +17,14 @@ public class UpdateVpcIngressConnectionRequest {
     
     @JsonProperty("VpcIngressConnectionArn")
     public String vpcIngressConnectionArn;
+
     public UpdateVpcIngressConnectionRequest withVpcIngressConnectionArn(String vpcIngressConnectionArn) {
         this.vpcIngressConnectionArn = vpcIngressConnectionArn;
         return this;
     }
     
+    public UpdateVpcIngressConnectionRequest(@JsonProperty("IngressVpcConfiguration") IngressVpcConfiguration ingressVpcConfiguration, @JsonProperty("VpcIngressConnectionArn") String vpcIngressConnectionArn) {
+        this.ingressVpcConfiguration = ingressVpcConfiguration;
+        this.vpcIngressConnectionArn = vpcIngressConnectionArn;
+  }
 }

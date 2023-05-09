@@ -18,6 +18,7 @@ public class CreateCallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversation_uuid")
     public String conversationUuid;
+
     public CreateCallResponse withConversationUuid(String conversationUuid) {
         this.conversationUuid = conversationUuid;
         return this;
@@ -29,6 +30,7 @@ public class CreateCallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public DirectionEnum direction;
+
     public CreateCallResponse withDirection(DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -40,6 +42,7 @@ public class CreateCallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CreateCallResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -51,9 +54,11 @@ public class CreateCallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public CreateCallResponse withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public CreateCallResponse(){}
 }

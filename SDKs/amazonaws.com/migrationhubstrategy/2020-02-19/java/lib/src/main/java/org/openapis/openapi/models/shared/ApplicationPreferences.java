@@ -15,9 +15,11 @@ public class ApplicationPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementPreference")
     public ManagementPreference managementPreference;
+
     public ApplicationPreferences withManagementPreference(ManagementPreference managementPreference) {
         this.managementPreference = managementPreference;
         return this;
     }
     
+    public ApplicationPreferences(){}
 }

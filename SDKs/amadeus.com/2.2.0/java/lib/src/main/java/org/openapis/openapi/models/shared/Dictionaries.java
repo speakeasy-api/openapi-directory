@@ -12,6 +12,7 @@ public class Dictionaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aircraft")
     public java.util.Map<String, String> aircraft;
+
     public Dictionaries withAircraft(java.util.Map<String, String> aircraft) {
         this.aircraft = aircraft;
         return this;
@@ -20,6 +21,7 @@ public class Dictionaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carriers")
     public java.util.Map<String, String> carriers;
+
     public Dictionaries withCarriers(java.util.Map<String, String> carriers) {
         this.carriers = carriers;
         return this;
@@ -28,6 +30,7 @@ public class Dictionaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencies")
     public java.util.Map<String, String> currencies;
+
     public Dictionaries withCurrencies(java.util.Map<String, String> currencies) {
         this.currencies = currencies;
         return this;
@@ -36,9 +39,11 @@ public class Dictionaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public java.util.Map<String, LocationValue> locations;
+
     public Dictionaries withLocations(java.util.Map<String, LocationValue> locations) {
         this.locations = locations;
         return this;
     }
     
+    public Dictionaries(){}
 }

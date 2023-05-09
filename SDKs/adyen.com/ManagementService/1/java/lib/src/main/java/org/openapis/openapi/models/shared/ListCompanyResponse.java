@@ -15,6 +15,7 @@ public class ListCompanyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public PaginationLinks links;
+
     public ListCompanyResponse withLinks(PaginationLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class ListCompanyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Company[] data;
+
     public ListCompanyResponse withData(Company[] data) {
         this.data = data;
         return this;
@@ -36,6 +38,7 @@ public class ListCompanyResponse {
      */
     @JsonProperty("itemsTotal")
     public Integer itemsTotal;
+
     public ListCompanyResponse withItemsTotal(Integer itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -46,9 +49,14 @@ public class ListCompanyResponse {
      */
     @JsonProperty("pagesTotal")
     public Integer pagesTotal;
+
     public ListCompanyResponse withPagesTotal(Integer pagesTotal) {
         this.pagesTotal = pagesTotal;
         return this;
     }
     
+    public ListCompanyResponse(@JsonProperty("itemsTotal") Integer itemsTotal, @JsonProperty("pagesTotal") Integer pagesTotal) {
+        this.itemsTotal = itemsTotal;
+        this.pagesTotal = pagesTotal;
+  }
 }

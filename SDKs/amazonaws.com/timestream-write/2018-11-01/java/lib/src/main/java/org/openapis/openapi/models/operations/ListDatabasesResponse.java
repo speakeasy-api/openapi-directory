@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatabasesResponse {
@@ -12,6 +13,7 @@ public class ListDatabasesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDatabasesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDatabasesResponse {
     
     
     public String contentType;
+
     public ListDatabasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDatabasesResponse {
      */
     
     public Object internalServerException;
+
     public ListDatabasesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListDatabasesResponse {
      */
     
     public Object invalidEndpointException;
+
     public ListDatabasesResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -49,6 +54,7 @@ public class ListDatabasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatabasesResponse listDatabasesResponse;
+
     public ListDatabasesResponse withListDatabasesResponse(org.openapis.openapi.models.shared.ListDatabasesResponse listDatabasesResponse) {
         this.listDatabasesResponse = listDatabasesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListDatabasesResponse {
     
     
     public Integer statusCode;
+
     public ListDatabasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDatabasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatabasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListDatabasesResponse {
      */
     
     public Object throttlingException;
+
     public ListDatabasesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListDatabasesResponse {
      */
     
     public Object validationException;
+
     public ListDatabasesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDatabasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

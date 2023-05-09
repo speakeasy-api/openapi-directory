@@ -18,6 +18,7 @@ public class PathFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventFilters")
     public EventFilter[] eventFilters;
+
     public PathFilter withEventFilters(EventFilter[] eventFilters) {
         this.eventFilters = eventFilters;
         return this;
@@ -29,9 +30,11 @@ public class PathFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathMatchPosition")
     public PathFilterPathMatchPositionEnum pathMatchPosition;
+
     public PathFilter withPathMatchPosition(PathFilterPathMatchPositionEnum pathMatchPosition) {
         this.pathMatchPosition = pathMatchPosition;
         return this;
     }
     
+    public PathFilter(){}
 }

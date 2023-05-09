@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVirtualClustersResponse {
     
     public String contentType;
+
     public ListVirtualClustersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListVirtualClustersResponse {
      */
     
     public Object internalServerException;
+
     public ListVirtualClustersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListVirtualClustersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVirtualClustersResponse listVirtualClustersResponse;
+
     public ListVirtualClustersResponse withListVirtualClustersResponse(org.openapis.openapi.models.shared.ListVirtualClustersResponse listVirtualClustersResponse) {
         this.listVirtualClustersResponse = listVirtualClustersResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListVirtualClustersResponse {
     
     
     public Integer statusCode;
+
     public ListVirtualClustersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListVirtualClustersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVirtualClustersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListVirtualClustersResponse {
      */
     
     public Object validationException;
+
     public ListVirtualClustersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListVirtualClustersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

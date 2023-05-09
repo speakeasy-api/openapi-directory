@@ -18,9 +18,11 @@ public class GetAuthValidate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("premium")
     public Long premium;
+
     public GetAuthValidate200ApplicationJSON withPremium(Long premium) {
         this.premium = premium;
         return this;
     }
     
+    public GetAuthValidate200ApplicationJSON(){}
 }

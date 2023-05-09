@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTrainingJobRequest {
     @JsonProperty("AlgorithmSpecification")
     public AlgorithmSpecification algorithmSpecification;
+
     public CreateTrainingJobRequest withAlgorithmSpecification(AlgorithmSpecification algorithmSpecification) {
         this.algorithmSpecification = algorithmSpecification;
         return this;
@@ -19,6 +20,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckpointConfig")
     public CheckpointConfig checkpointConfig;
+
     public CreateTrainingJobRequest withCheckpointConfig(CheckpointConfig checkpointConfig) {
         this.checkpointConfig = checkpointConfig;
         return this;
@@ -30,6 +32,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebugHookConfig")
     public DebugHookConfig debugHookConfig;
+
     public CreateTrainingJobRequest withDebugHookConfig(DebugHookConfig debugHookConfig) {
         this.debugHookConfig = debugHookConfig;
         return this;
@@ -38,6 +41,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebugRuleConfigurations")
     public DebugRuleConfiguration[] debugRuleConfigurations;
+
     public CreateTrainingJobRequest withDebugRuleConfigurations(DebugRuleConfiguration[] debugRuleConfigurations) {
         this.debugRuleConfigurations = debugRuleConfigurations;
         return this;
@@ -46,6 +50,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableInterContainerTrafficEncryption")
     public Boolean enableInterContainerTrafficEncryption;
+
     public CreateTrainingJobRequest withEnableInterContainerTrafficEncryption(Boolean enableInterContainerTrafficEncryption) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         return this;
@@ -54,6 +59,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableManagedSpotTraining")
     public Boolean enableManagedSpotTraining;
+
     public CreateTrainingJobRequest withEnableManagedSpotTraining(Boolean enableManagedSpotTraining) {
         this.enableManagedSpotTraining = enableManagedSpotTraining;
         return this;
@@ -62,6 +68,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableNetworkIsolation")
     public Boolean enableNetworkIsolation;
+
     public CreateTrainingJobRequest withEnableNetworkIsolation(Boolean enableNetworkIsolation) {
         this.enableNetworkIsolation = enableNetworkIsolation;
         return this;
@@ -70,17 +77,19 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public CreateTrainingJobRequest withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
     }
     
     /**
-     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html"&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html"&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentConfig")
     public ExperimentConfig experimentConfig;
+
     public CreateTrainingJobRequest withExperimentConfig(ExperimentConfig experimentConfig) {
         this.experimentConfig = experimentConfig;
         return this;
@@ -89,6 +98,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameters")
     public java.util.Map<String, String> hyperParameters;
+
     public CreateTrainingJobRequest withHyperParameters(java.util.Map<String, String> hyperParameters) {
         this.hyperParameters = hyperParameters;
         return this;
@@ -97,6 +107,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public Channel[] inputDataConfig;
+
     public CreateTrainingJobRequest withInputDataConfig(Channel[] inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -104,6 +115,7 @@ public class CreateTrainingJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public CreateTrainingJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -115,6 +127,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfilerConfig")
     public ProfilerConfig profilerConfig;
+
     public CreateTrainingJobRequest withProfilerConfig(ProfilerConfig profilerConfig) {
         this.profilerConfig = profilerConfig;
         return this;
@@ -123,6 +136,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfilerRuleConfigurations")
     public ProfilerRuleConfiguration[] profilerRuleConfigurations;
+
     public CreateTrainingJobRequest withProfilerRuleConfigurations(ProfilerRuleConfiguration[] profilerRuleConfigurations) {
         this.profilerRuleConfigurations = profilerRuleConfigurations;
         return this;
@@ -130,6 +144,7 @@ public class CreateTrainingJobRequest {
     
     @JsonProperty("ResourceConfig")
     public ResourceConfig resourceConfig;
+
     public CreateTrainingJobRequest withResourceConfig(ResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -138,6 +153,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryStrategy")
     public RetryStrategy retryStrategy;
+
     public CreateTrainingJobRequest withRetryStrategy(RetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
@@ -145,6 +161,7 @@ public class CreateTrainingJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateTrainingJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -152,6 +169,7 @@ public class CreateTrainingJobRequest {
     
     @JsonProperty("StoppingCondition")
     public StoppingCondition stoppingCondition;
+
     public CreateTrainingJobRequest withStoppingCondition(StoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -160,6 +178,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateTrainingJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -171,6 +190,7 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TensorBoardOutputConfig")
     public TensorBoardOutputConfig tensorBoardOutputConfig;
+
     public CreateTrainingJobRequest withTensorBoardOutputConfig(TensorBoardOutputConfig tensorBoardOutputConfig) {
         this.tensorBoardOutputConfig = tensorBoardOutputConfig;
         return this;
@@ -178,6 +198,7 @@ public class CreateTrainingJobRequest {
     
     @JsonProperty("TrainingJobName")
     public String trainingJobName;
+
     public CreateTrainingJobRequest withTrainingJobName(String trainingJobName) {
         this.trainingJobName = trainingJobName;
         return this;
@@ -186,9 +207,18 @@ public class CreateTrainingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public CreateTrainingJobRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateTrainingJobRequest(@JsonProperty("AlgorithmSpecification") AlgorithmSpecification algorithmSpecification, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig, @JsonProperty("ResourceConfig") ResourceConfig resourceConfig, @JsonProperty("RoleArn") String roleArn, @JsonProperty("StoppingCondition") StoppingCondition stoppingCondition, @JsonProperty("TrainingJobName") String trainingJobName) {
+        this.algorithmSpecification = algorithmSpecification;
+        this.outputDataConfig = outputDataConfig;
+        this.resourceConfig = resourceConfig;
+        this.roleArn = roleArn;
+        this.stoppingCondition = stoppingCondition;
+        this.trainingJobName = trainingJobName;
+  }
 }

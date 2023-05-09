@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateEnvironmentMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateEnvironmentMessage {
     
     public String applicationName;
+
     public CreateEnvironmentMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class CreateEnvironmentMessage {
     
     
     public String cnamePrefix;
+
     public CreateEnvironmentMessage withCNAMEPrefix(String cnamePrefix) {
         this.cnamePrefix = cnamePrefix;
         return this;
@@ -26,6 +28,7 @@ public class CreateEnvironmentMessage {
     
     
     public String description;
+
     public CreateEnvironmentMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class CreateEnvironmentMessage {
     
     
     public String environmentName;
+
     public CreateEnvironmentMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -40,6 +44,7 @@ public class CreateEnvironmentMessage {
     
     
     public String groupName;
+
     public CreateEnvironmentMessage withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -47,6 +52,7 @@ public class CreateEnvironmentMessage {
     
     
     public String operationsRole;
+
     public CreateEnvironmentMessage withOperationsRole(String operationsRole) {
         this.operationsRole = operationsRole;
         return this;
@@ -54,6 +60,7 @@ public class CreateEnvironmentMessage {
     
     
     public ConfigurationOptionSetting[] optionSettings;
+
     public CreateEnvironmentMessage withOptionSettings(ConfigurationOptionSetting[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -61,6 +68,7 @@ public class CreateEnvironmentMessage {
     
     
     public OptionSpecification[] optionsToRemove;
+
     public CreateEnvironmentMessage withOptionsToRemove(OptionSpecification[] optionsToRemove) {
         this.optionsToRemove = optionsToRemove;
         return this;
@@ -68,6 +76,7 @@ public class CreateEnvironmentMessage {
     
     
     public String platformArn;
+
     public CreateEnvironmentMessage withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -75,6 +84,7 @@ public class CreateEnvironmentMessage {
     
     
     public String solutionStackName;
+
     public CreateEnvironmentMessage withSolutionStackName(String solutionStackName) {
         this.solutionStackName = solutionStackName;
         return this;
@@ -82,6 +92,7 @@ public class CreateEnvironmentMessage {
     
     
     public Tag[] tags;
+
     public CreateEnvironmentMessage withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -89,6 +100,7 @@ public class CreateEnvironmentMessage {
     
     
     public String templateName;
+
     public CreateEnvironmentMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -96,6 +108,7 @@ public class CreateEnvironmentMessage {
     
     
     public EnvironmentTier tier;
+
     public CreateEnvironmentMessage withTier(EnvironmentTier tier) {
         this.tier = tier;
         return this;
@@ -103,9 +116,13 @@ public class CreateEnvironmentMessage {
     
     
     public String versionLabel;
+
     public CreateEnvironmentMessage withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public CreateEnvironmentMessage(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

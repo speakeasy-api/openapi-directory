@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTGetIpamPoolCidrsResponse {
     
     public byte[] body;
+
     public POSTGetIpamPoolCidrsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTGetIpamPoolCidrsResponse {
     
     
     public String contentType;
+
     public POSTGetIpamPoolCidrsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTGetIpamPoolCidrsResponse {
     
     
     public Integer statusCode;
+
     public POSTGetIpamPoolCidrsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTGetIpamPoolCidrsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTGetIpamPoolCidrsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTGetIpamPoolCidrsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AlarmConfiguration {
     @JsonProperty("Alarms")
     public Alarm[] alarms;
+
     public AlarmConfiguration withAlarms(Alarm[] alarms) {
         this.alarms = alarms;
         return this;
@@ -22,9 +23,13 @@ public class AlarmConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IgnorePollAlarmFailure")
     public Boolean ignorePollAlarmFailure;
+
     public AlarmConfiguration withIgnorePollAlarmFailure(Boolean ignorePollAlarmFailure) {
         this.ignorePollAlarmFailure = ignorePollAlarmFailure;
         return this;
     }
     
+    public AlarmConfiguration(@JsonProperty("Alarms") Alarm[] alarms) {
+        this.alarms = alarms;
+  }
 }

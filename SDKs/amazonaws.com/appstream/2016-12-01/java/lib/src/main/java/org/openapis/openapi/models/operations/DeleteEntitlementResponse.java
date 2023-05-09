@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEntitlementResponse {
@@ -12,6 +13,7 @@ public class DeleteEntitlementResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteEntitlementResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEntitlementResponse {
     
     
     public String contentType;
+
     public DeleteEntitlementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEntitlementResponse {
      */
     
     public java.util.Map<String, Object> deleteEntitlementResult;
+
     public DeleteEntitlementResponse withDeleteEntitlementResult(java.util.Map<String, Object> deleteEntitlementResult) {
         this.deleteEntitlementResult = deleteEntitlementResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEntitlementResponse {
      */
     
     public Object entitlementNotFoundException;
+
     public DeleteEntitlementResponse withEntitlementNotFoundException(Object entitlementNotFoundException) {
         this.entitlementNotFoundException = entitlementNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEntitlementResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteEntitlementResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteEntitlementResponse {
     
     
     public Integer statusCode;
+
     public DeleteEntitlementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteEntitlementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEntitlementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteEntitlementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEntitlementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteEntitlementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

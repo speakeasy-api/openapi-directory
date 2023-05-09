@@ -18,6 +18,7 @@ public class SettingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public String createdAt;
+
     public SettingMetadata withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class SettingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public SettingMetadata withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -40,9 +42,11 @@ public class SettingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Double version;
+
     public SettingMetadata withVersion(Double version) {
         this.version = version;
         return this;
     }
     
+    public SettingMetadata(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataIntegrationsResponse {
@@ -12,6 +13,7 @@ public class ListDataIntegrationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDataIntegrationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDataIntegrationsResponse {
     
     
     public String contentType;
+
     public ListDataIntegrationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDataIntegrationsResponse {
      */
     
     public Object internalServiceError;
+
     public ListDataIntegrationsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class ListDataIntegrationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDataIntegrationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListDataIntegrationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataIntegrationsResponse listDataIntegrationsResponse;
+
     public ListDataIntegrationsResponse withListDataIntegrationsResponse(org.openapis.openapi.models.shared.ListDataIntegrationsResponse listDataIntegrationsResponse) {
         this.listDataIntegrationsResponse = listDataIntegrationsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListDataIntegrationsResponse {
     
     
     public Integer statusCode;
+
     public ListDataIntegrationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDataIntegrationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataIntegrationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListDataIntegrationsResponse {
      */
     
     public Object throttlingException;
+
     public ListDataIntegrationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDataIntegrationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

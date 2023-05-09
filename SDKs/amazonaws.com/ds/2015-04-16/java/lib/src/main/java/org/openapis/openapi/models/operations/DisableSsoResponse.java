@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableSsoResponse {
@@ -12,6 +13,7 @@ public class DisableSsoResponse {
      */
     
     public Object authenticationFailedException;
+
     public DisableSsoResponse withAuthenticationFailedException(Object authenticationFailedException) {
         this.authenticationFailedException = authenticationFailedException;
         return this;
@@ -22,6 +24,7 @@ public class DisableSsoResponse {
      */
     
     public Object clientException;
+
     public DisableSsoResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DisableSsoResponse {
     
     
     public String contentType;
+
     public DisableSsoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisableSsoResponse {
      */
     
     public java.util.Map<String, Object> disableSsoResult;
+
     public DisableSsoResponse withDisableSsoResult(java.util.Map<String, Object> disableSsoResult) {
         this.disableSsoResult = disableSsoResult;
         return this;
@@ -49,6 +54,7 @@ public class DisableSsoResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DisableSsoResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class DisableSsoResponse {
      */
     
     public Object insufficientPermissionsException;
+
     public DisableSsoResponse withInsufficientPermissionsException(Object insufficientPermissionsException) {
         this.insufficientPermissionsException = insufficientPermissionsException;
         return this;
@@ -69,6 +76,7 @@ public class DisableSsoResponse {
      */
     
     public Object serviceException;
+
     public DisableSsoResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DisableSsoResponse {
     
     
     public Integer statusCode;
+
     public DisableSsoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DisableSsoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableSsoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisableSsoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

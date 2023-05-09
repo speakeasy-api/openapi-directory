@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * StatefulRule - A single Suricata rules specification, for use in a stateful rule group. Use this option to specify a simple Suricata rule with protocol, source and destination, ports, direction, and rule options. For information about the Suricata &lt;code&gt;Rules&lt;/code&gt; format, see &lt;a href="https://suricata.readthedocs.io/rules/intro.html#"&gt;Rules Format&lt;/a&gt;. 
+ * StatefulRule - A single Suricata rules specification, for use in a stateful rule group. Use this option to specify a simple Suricata rule with protocol, source and destination, ports, direction, and rule options. For information about the Suricata &lt;code&gt;Rules&lt;/code&gt; format, see &lt;a href="https://suricata.readthedocs.iorules/intro.html#"&gt;Rules Format&lt;/a&gt;. 
  */
 public class StatefulRule {
     @JsonProperty("Action")
     public StatefulActionEnum action;
+
     public StatefulRule withAction(StatefulActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class StatefulRule {
     
     @JsonProperty("Header")
     public Header header;
+
     public StatefulRule withHeader(Header header) {
         this.header = header;
         return this;
@@ -26,9 +28,15 @@ public class StatefulRule {
     
     @JsonProperty("RuleOptions")
     public RuleOption[] ruleOptions;
+
     public StatefulRule withRuleOptions(RuleOption[] ruleOptions) {
         this.ruleOptions = ruleOptions;
         return this;
     }
     
+    public StatefulRule(@JsonProperty("Action") StatefulActionEnum action, @JsonProperty("Header") Header header, @JsonProperty("RuleOptions") RuleOption[] ruleOptions) {
+        this.action = action;
+        this.header = header;
+        this.ruleOptions = ruleOptions;
+  }
 }

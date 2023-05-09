@@ -12,9 +12,13 @@ public class CancelSimulationJobBatchRequestBody {
      */
     @JsonProperty("batch")
     public String batch;
+
     public CancelSimulationJobBatchRequestBody withBatch(String batch) {
         this.batch = batch;
         return this;
     }
     
+    public CancelSimulationJobBatchRequestBody(@JsonProperty("batch") String batch) {
+        this.batch = batch;
+  }
 }

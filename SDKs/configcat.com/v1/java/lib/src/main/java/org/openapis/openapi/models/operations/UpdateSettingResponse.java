@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSettingResponse {
     
     public String contentType;
+
     public UpdateSettingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSettingResponse {
      */
     
     public org.openapis.openapi.models.shared.SettingModel settingModel;
+
     public UpdateSettingResponse withSettingModel(org.openapis.openapi.models.shared.SettingModel settingModel) {
         this.settingModel = settingModel;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSettingResponse {
      */
     
     public org.openapis.openapi.models.shared.SettingModelHaljson settingModelHaljson;
+
     public UpdateSettingResponse withSettingModelHaljson(org.openapis.openapi.models.shared.SettingModelHaljson settingModelHaljson) {
         this.settingModelHaljson = settingModelHaljson;
         return this;
@@ -36,6 +40,7 @@ public class UpdateSettingResponse {
     
     
     public Integer statusCode;
+
     public UpdateSettingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class UpdateSettingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSettingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateSettingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

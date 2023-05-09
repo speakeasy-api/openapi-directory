@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateWebACLRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateWebACLRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -19,6 +20,7 @@ public class UpdateWebACLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAction")
     public WafAction defaultAction;
+
     public UpdateWebACLRequest withDefaultAction(WafAction defaultAction) {
         this.defaultAction = defaultAction;
         return this;
@@ -27,6 +29,7 @@ public class UpdateWebACLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updates")
     public WebACLUpdate[] updates;
+
     public UpdateWebACLRequest withUpdates(WebACLUpdate[] updates) {
         this.updates = updates;
         return this;
@@ -34,9 +37,14 @@ public class UpdateWebACLRequest {
     
     @JsonProperty("WebACLId")
     public String webACLId;
+
     public UpdateWebACLRequest withWebACLId(String webACLId) {
         this.webACLId = webACLId;
         return this;
     }
     
+    public UpdateWebACLRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("WebACLId") String webACLId) {
+        this.changeToken = changeToken;
+        this.webACLId = webACLId;
+  }
 }

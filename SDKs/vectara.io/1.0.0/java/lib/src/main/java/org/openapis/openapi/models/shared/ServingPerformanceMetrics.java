@@ -18,6 +18,7 @@ public class ServingPerformanceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryEncodeMs")
     public Long queryEncodeMs;
+
     public ServingPerformanceMetrics withQueryEncodeMs(Long queryEncodeMs) {
         this.queryEncodeMs = queryEncodeMs;
         return this;
@@ -29,6 +30,7 @@ public class ServingPerformanceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rerankMs")
     public Long rerankMs;
+
     public ServingPerformanceMetrics withRerankMs(Long rerankMs) {
         this.rerankMs = rerankMs;
         return this;
@@ -40,6 +42,7 @@ public class ServingPerformanceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retrievalMs")
     public Long retrievalMs;
+
     public ServingPerformanceMetrics withRetrievalMs(Long retrievalMs) {
         this.retrievalMs = retrievalMs;
         return this;
@@ -51,9 +54,11 @@ public class ServingPerformanceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userdataRetrievalMs")
     public Long userdataRetrievalMs;
+
     public ServingPerformanceMetrics withUserdataRetrievalMs(Long userdataRetrievalMs) {
         this.userdataRetrievalMs = userdataRetrievalMs;
         return this;
     }
     
+    public ServingPerformanceMetrics(){}
 }

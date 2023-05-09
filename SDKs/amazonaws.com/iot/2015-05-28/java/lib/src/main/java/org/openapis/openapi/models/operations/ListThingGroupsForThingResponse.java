@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListThingGroupsForThingResponse {
     
     public String contentType;
+
     public ListThingGroupsForThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListThingGroupsForThingResponse {
      */
     
     public Object internalFailureException;
+
     public ListThingGroupsForThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListThingGroupsForThingResponse {
      */
     
     public Object invalidRequestException;
+
     public ListThingGroupsForThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListThingGroupsForThingResponse {
      */
     
     public org.openapis.openapi.models.shared.ListThingGroupsForThingResponse listThingGroupsForThingResponse;
+
     public ListThingGroupsForThingResponse withListThingGroupsForThingResponse(org.openapis.openapi.models.shared.ListThingGroupsForThingResponse listThingGroupsForThingResponse) {
         this.listThingGroupsForThingResponse = listThingGroupsForThingResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListThingGroupsForThingResponse {
     
     
     public Integer statusCode;
+
     public ListThingGroupsForThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListThingGroupsForThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListThingGroupsForThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListThingGroupsForThingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListThingGroupsForThingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListThingGroupsForThingResponse {
      */
     
     public Object throttlingException;
+
     public ListThingGroupsForThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListThingGroupsForThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

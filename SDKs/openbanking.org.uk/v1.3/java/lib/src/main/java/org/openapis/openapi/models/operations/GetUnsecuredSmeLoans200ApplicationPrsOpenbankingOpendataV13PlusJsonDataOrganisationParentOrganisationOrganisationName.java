@@ -15,9 +15,13 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("LegalName")
     public String legalName;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName withLegalName(String legalName) {
         this.legalName = legalName;
         return this;
     }
     
+    public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName(@JsonProperty("LegalName") String legalName) {
+        this.legalName = legalName;
+  }
 }

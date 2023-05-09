@@ -15,9 +15,11 @@ public class UploadArchiveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public UploadArchiveRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public UploadArchiveRequestBody(){}
 }

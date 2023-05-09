@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationExportConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetClassificationExportConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetClassificationExportConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetClassificationExportConfigurationResponse {
      */
     
     public Object conflictException;
+
     public GetClassificationExportConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetClassificationExportConfigurationResponse {
     
     
     public String contentType;
+
     public GetClassificationExportConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetClassificationExportConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetClassificationExportConfigurationResponse getClassificationExportConfigurationResponse;
+
     public GetClassificationExportConfigurationResponse withGetClassificationExportConfigurationResponse(org.openapis.openapi.models.shared.GetClassificationExportConfigurationResponse getClassificationExportConfigurationResponse) {
         this.getClassificationExportConfigurationResponse = getClassificationExportConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetClassificationExportConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetClassificationExportConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetClassificationExportConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetClassificationExportConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetClassificationExportConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetClassificationExportConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetClassificationExportConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationExportConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetClassificationExportConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationExportConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetClassificationExportConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetClassificationExportConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetClassificationExportConfigurationResponse {
      */
     
     public Object validationException;
+
     public GetClassificationExportConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetClassificationExportConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

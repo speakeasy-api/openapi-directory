@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountDeleteIpBlacklistRequest {
@@ -12,9 +13,13 @@ public class AccountDeleteIpBlacklistRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blacklistId")
     public String blacklistId;
+
     public AccountDeleteIpBlacklistRequest withBlacklistId(String blacklistId) {
         this.blacklistId = blacklistId;
         return this;
     }
     
+    public AccountDeleteIpBlacklistRequest(@JsonProperty("blacklistId") String blacklistId) {
+        this.blacklistId = blacklistId;
+  }
 }
